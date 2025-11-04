@@ -1,12 +1,12 @@
-$NetBSD: patch-extensions_renderer_bindings_api__binding__util.cc,v 1.8 2025/10/16 19:43:29 kikadf Exp $
+$NetBSD: patch-extensions_renderer_bindings_api__binding__util.cc,v 1.9 2025/11/04 14:55:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/renderer/bindings/api_binding_util.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- extensions/renderer/bindings/api_binding_util.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ extensions/renderer/bindings/api_binding_util.cc
-@@ -129,7 +129,7 @@ void InvalidateContext(v8::Local<v8::Con
+@@ -128,7 +128,7 @@ void InvalidateContext(v8::Local<v8::Con
  std::string GetPlatformString() {
  #if BUILDFLAG(IS_CHROMEOS)
    return "chromeos";

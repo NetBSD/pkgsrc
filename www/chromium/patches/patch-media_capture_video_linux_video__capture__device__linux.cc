@@ -1,10 +1,10 @@
-$NetBSD: patch-media_capture_video_linux_video__capture__device__linux.cc,v 1.8 2025/10/16 19:43:30 kikadf Exp $
+$NetBSD: patch-media_capture_video_linux_video__capture__device__linux.cc,v 1.9 2025/11/04 14:55:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/linux/video_capture_device_linux.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- media/capture/video/linux/video_capture_device_linux.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ media/capture/video/linux/video_capture_device_linux.cc
 @@ -15,7 +15,7 @@
  #include "build/build_config.h"

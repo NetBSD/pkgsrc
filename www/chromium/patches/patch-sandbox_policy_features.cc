@@ -1,19 +1,19 @@
-$NetBSD: patch-sandbox_policy_features.cc,v 1.8 2025/10/16 19:43:32 kikadf Exp $
+$NetBSD: patch-sandbox_policy_features.cc,v 1.9 2025/11/04 14:55:44 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/features.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- sandbox/policy/features.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ sandbox/policy/features.cc
-@@ -19,7 +19,11 @@ namespace sandbox::policy::features {
+@@ -17,7 +17,11 @@ namespace sandbox::policy::features {
+ #if !BUILDFLAG(IS_MAC) && !BUILDFLAG(IS_FUCHSIA)
+ // Enables network service sandbox.
  // (Only causes an effect when feature kNetworkServiceInProcess is disabled.)
- BASE_FEATURE(kNetworkServiceSandbox,
-              "NetworkServiceSandbox",
 +#if BUILDFLAG(IS_BSD)
-+             base::FEATURE_ENABLED_BY_DEFAULT);
++BASE_FEATURE(kNetworkServiceSandbox, base::FEATURE_ENABLED_BY_DEFAULT);
 +#else
-              base::FEATURE_DISABLED_BY_DEFAULT);
+ BASE_FEATURE(kNetworkServiceSandbox, base::FEATURE_DISABLED_BY_DEFAULT);
 +#endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

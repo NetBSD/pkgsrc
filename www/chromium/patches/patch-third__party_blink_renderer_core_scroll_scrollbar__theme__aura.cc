@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_blink_renderer_core_scroll_scrollbar__theme__aura.cc,v 1.8 2025/10/16 19:43:34 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_core_scroll_scrollbar__theme__aura.cc,v 1.9 2025/11/04 14:55:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/scroll/scrollbar_theme_aura.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- third_party/blink/renderer/core/scroll/scrollbar_theme_aura.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ third_party/blink/renderer/core/scroll/scrollbar_theme_aura.cc
-@@ -146,7 +146,7 @@ bool ScrollbarThemeAura::SupportsDragSna
+@@ -122,7 +122,7 @@ bool ScrollbarThemeAura::SupportsDragSna
  // Disable snapback on desktop Linux to better integrate with the desktop
  // behavior. Typically, Linux apps do not implement scrollbar snapback (this
  // is true for at least GTK and QT apps).
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_blink_renderer_core_scroll_scrollbar__theme__aura.cc
    return false;
  #else
    return true;
-@@ -423,7 +423,7 @@ ScrollbarPart ScrollbarThemeAura::PartsT
+@@ -396,7 +396,7 @@ ScrollbarPart ScrollbarThemeAura::PartsT
  
  bool ScrollbarThemeAura::ShouldCenterOnThumb(const Scrollbar& scrollbar,
                                               const WebMouseEvent& event) const {

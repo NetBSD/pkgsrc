@@ -1,12 +1,12 @@
-$NetBSD: patch-extensions_browser_api_management_management__api.cc,v 1.8 2025/10/16 19:43:29 kikadf Exp $
+$NetBSD: patch-extensions_browser_api_management_management__api.cc,v 1.9 2025/11/04 14:55:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/browser/api/management/management_api.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- extensions/browser/api/management/management_api.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ extensions/browser/api/management/management_api.cc
-@@ -284,7 +284,7 @@ void AddExtensionInfo(const Extension* s
+@@ -296,7 +296,7 @@ void AddExtensionInfo(const Extension* s
  
  bool PlatformSupportsApprovalFlowForExtensions() {
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

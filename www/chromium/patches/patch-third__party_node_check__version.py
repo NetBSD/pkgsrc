@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_node_check__version.py,v 1.6 2025/10/16 19:43:35 kikadf Exp $
+$NetBSD: patch-third__party_node_check__version.py,v 1.7 2025/11/04 14:55:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/node/check_version.py.orig	2025-10-13 21:41:26.000000000 +0000
+--- third_party/node/check_version.py.orig	2025-10-24 16:42:30.000000000 +0000
 +++ third_party/node/check_version.py
 @@ -17,11 +17,6 @@ def main(argv):
    parser.add_argument('--out_file', required=True)

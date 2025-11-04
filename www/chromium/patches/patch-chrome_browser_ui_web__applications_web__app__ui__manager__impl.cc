@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_web__applications_web__app__ui__manager__impl.cc,v 1.8 2025/10/16 19:43:24 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_web__applications_web__app__ui__manager__impl.cc,v 1.9 2025/11/04 14:55:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc
-@@ -574,7 +574,7 @@ void WebAppUiManagerImpl::MaybeShowIPHPr
+@@ -579,7 +579,7 @@ void WebAppUiManagerImpl::MaybeShowIPHPr
      Browser* browser,
      Profile* profile,
      const std::string& app_id) {
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_web__applications_web__app__ui__manager__impl.c
    WebAppProvider* provider = WebAppProvider::GetForWebApps(profile);
    CHECK(provider);
  
-@@ -803,7 +803,7 @@ void WebAppUiManagerImpl::ClearWebAppSit
+@@ -800,7 +800,7 @@ void WebAppUiManagerImpl::ClearWebAppSit
    }
  }
  
@@ -23,4 +23,4 @@ $NetBSD: patch-chrome_browser_ui_web__applications_web__app__ui__manager__impl.c
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  
  const base::Feature& GetPromoFeatureEngagementFromBrowser(
-     const Browser* browser) {
+     const BrowserWindowInterface* browser) {

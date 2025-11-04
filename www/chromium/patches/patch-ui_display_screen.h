@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_display_screen.h,v 1.8 2025/10/16 19:43:37 kikadf Exp $
+$NetBSD: patch-ui_display_screen.h,v 1.9 2025/11/04 14:55:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/display/screen.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- ui/display/screen.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ ui/display/screen.h
-@@ -140,7 +140,7 @@ class DISPLAY_EXPORT Screen {
+@@ -139,7 +139,7 @@ class DISPLAY_EXPORT Screen {
    // (both of which may or may not be `nearest_id`).
    display::ScreenInfos GetScreenInfosNearestDisplay(int64_t nearest_id) const;
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_display_screen.h,v 1.8 2025/10/16 19:43:37 kikadf Exp $
    // Object which suspends the platform-specific screensaver for the duration of
    // its existence.
    class ScreenSaverSuspender {
-@@ -246,7 +246,7 @@ class DISPLAY_EXPORT Screen {
+@@ -245,7 +245,7 @@ class DISPLAY_EXPORT Screen {
    int64_t display_id_for_new_windows_;
    int64_t scoped_display_id_for_new_windows_ = display::kInvalidDisplayId;
  

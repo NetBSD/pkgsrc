@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_chrome__browser__field__trials.cc,v 1.8 2025/10/16 19:43:20 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__browser__field__trials.cc,v 1.9 2025/11/04 14:55:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_field_trials.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/chrome_browser_field_trials.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/chrome_browser_field_trials.cc
-@@ -47,7 +47,7 @@
+@@ -48,7 +48,7 @@
  #include "chromeos/ash/services/multidevice_setup/public/cpp/first_run_field_trial.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__field__trials.cc,v 1.8 2025/10/16
  #include "base/nix/xdg_util.h"
  #include "ui/base/ui_base_features.h"
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -103,7 +103,7 @@ void ChromeBrowserFieldTrials::RegisterF
+@@ -104,7 +104,7 @@ void ChromeBrowserFieldTrials::RegisterF
      base::FeatureList* feature_list) {
    variations::FeatureOverrides feature_overrides(*feature_list);
  

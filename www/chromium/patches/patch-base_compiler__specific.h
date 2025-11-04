@@ -1,10 +1,10 @@
-$NetBSD: patch-base_compiler__specific.h,v 1.8 2025/10/16 19:43:18 kikadf Exp $
+$NetBSD: patch-base_compiler__specific.h,v 1.9 2025/11/04 14:55:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/compiler_specific.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- base/compiler_specific.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ base/compiler_specific.h
 @@ -733,6 +733,8 @@ inline constexpr bool AnalyzerAssumeTrue
  #if __has_cpp_attribute(clang::preserve_most) &&             \

@@ -1,0 +1,26 @@
+$NetBSD: patch-chrome_browser_ui_browser__window_internal_browser__window__features.cc,v 1.1 2025/11/04 14:55:34 kikadf Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- chrome/browser/ui/browser_window/internal/browser_window_features.cc.orig	2025-10-24 16:42:30.000000000 +0000
++++ chrome/browser/ui/browser_window/internal/browser_window_features.cc
+@@ -133,7 +133,7 @@
+ #include "chrome/browser/ui/startup/default_browser_prompt/pin_infobar/pin_infobar_controller.h"
+ #endif
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/ui/views/session_restore_infobar/session_restore_infobar_controller.h"
+ #endif
+ 
+@@ -373,7 +373,7 @@ void BrowserWindowFeatures::Init(Browser
+   browser_select_file_dialog_controller_ =
+       std::make_unique<BrowserSelectFileDialogController>(profile);
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   profile_customization_bubble_sync_controller_ =
+       std::make_unique<ProfileCustomizationBubbleSyncController>(browser,
+                                                                  profile);

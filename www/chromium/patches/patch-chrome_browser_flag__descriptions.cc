@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.8 2025/10/16 19:43:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.9 2025/11/04 14:55:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/flag_descriptions.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/flag_descriptions.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/flag_descriptions.cc
-@@ -696,7 +696,7 @@ const char kAutofillEnableAllowlistForBm
+@@ -710,7 +710,7 @@ const char kAutofillEnableAllowlistForBm
      "Autofill suggestions on the allowlisted merchant websites.";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.8 2025/10/16 19:43:21 ki
  const char kAutofillEnableAmountExtractionName[] =
      "Enable checkout amount extraction.";
  const char kAutofillEnableAmountExtractionDescription[] =
-@@ -719,7 +719,7 @@ const char kAutofillEnableAmountExtracti
+@@ -726,7 +726,7 @@ const char kAutofillEnableAmountExtracti
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.8 2025/10/16 19:43:21 ki
  const char kAutofillEnableBuyNowPayLaterName[] =
      "Enable buy now pay later on Autofill";
  const char kAutofillEnableBuyNowPayLaterDescription[] =
-@@ -1203,7 +1203,7 @@ const char kDevicePostureDescription[] =
+@@ -1206,7 +1206,7 @@ const char kDevicePostureDescription[] =
      "Enables Device Posture API (foldable devices)";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.8 2025/10/16 19:43:21 ki
  const char kDocumentPictureInPictureAnimateResizeName[] =
      "Document Picture-in-Picture Animate Resize";
  const char kDocumentPictureInPictureAnimateResizeDescription[] =
-@@ -1349,7 +1349,7 @@ const char kContextMenuEmptySpaceDescrip
+@@ -1330,7 +1330,7 @@ const char kContextMenuEmptySpaceDescrip
      "space, a context menu containing page-related items will be shown.";
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.8 2025/10/16 19:43:21 ki
  const char kContextualCueingName[] = "Contextual cueing";
  const char kContextualCueingDescription[] =
      "Enables the contextual cueing system to support showing actions.";
-@@ -1688,7 +1688,7 @@ const char kEnableIsolatedWebAppDevModeN
+@@ -1691,7 +1691,7 @@ const char kEnableIsolatedWebAppDevModeN
  const char kEnableIsolatedWebAppDevModeDescription[] =
      "Enables the installation of unverified Isolated Web Apps";
  
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.8 2025/10/16 19:43:21 ki
  const char kEnableIwaKeyDistributionComponentName[] =
      "Enable the Iwa Key Distribution component";
  const char kEnableIwaKeyDistributionComponentDescription[] =
-@@ -3637,14 +3637,14 @@ const char kReduceTransferSizeUpdatedIPC
+@@ -3660,14 +3660,14 @@ const char kReduceTransferSizeUpdatedIPC
      "When enabled, the network service will send TransferSizeUpdatedIPC IPC "
      "only when DevTools is attached or the request is for an ad request.";
  
@@ -68,7 +68,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.8 2025/10/16 19:43:21 ki
  const char kReplaceSyncPromosWithSignInPromosName[] =
      "Replace all sync-related UI with sign-in ones";
  const char kReplaceSyncPromosWithSignInPromosDescription[] =
-@@ -3678,7 +3678,7 @@ const char kRobustWindowManagementExperi
+@@ -3701,7 +3701,7 @@ const char kRobustWindowManagementExperi
      "switching and restoration, ensuring they never lose their work or "
      "context.";
  
@@ -77,7 +77,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.8 2025/10/16 19:43:21 ki
  const char kRootScrollbarFollowsTheme[] = "Make scrollbar follow theme";
  const char kRootScrollbarFollowsThemeDescription[] =
      "If enabled makes the root scrollbar follow the browser's theme color.";
-@@ -3934,7 +3934,7 @@ const char kDefaultSiteInstanceGroupsDes
+@@ -3950,7 +3950,7 @@ const char kDefaultSiteInstanceGroupsDes
      "SiteInstance.";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -86,16 +86,16 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.8 2025/10/16 19:43:21 ki
  const char kPwaNavigationCapturingName[] = "Desktop PWA Link Capturing";
  const char kPwaNavigationCapturingDescription[] =
      "Enables opening links from Chrome in an installed PWA. Currently under "
-@@ -4210,7 +4210,7 @@ const char kTouchTextEditingRedesignName
+@@ -4226,7 +4226,7 @@ const char kTouchTextEditingRedesignName
  const char kTouchTextEditingRedesignDescription[] =
      "Enables new touch text editing features.";
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- const char kEnableHistorySyncOptinName[] = "History Sync Opt-in";
- const char kEnableHistorySyncOptinDescription[] =
-     "Enables the History Sync Opt-in screen on Desktop platforms. The screen "
-@@ -7866,7 +7866,7 @@ const char kTetheringExperimentalFunctio
+ const char kTranslationAPIName[] = "Experimental translation API";
+ const char kTranslationAPIDescription[] =
+     "Enables the on-device language translation API. "
+@@ -7888,7 +7888,7 @@ const char kTetheringExperimentalFunctio
  
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -104,7 +104,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.8 2025/10/16 19:43:21 ki
  const char kGetAllScreensMediaName[] = "GetAllScreensMedia API";
  const char kGetAllScreensMediaDescription[] =
      "When enabled, the getAllScreensMedia API for capturing multiple screens "
-@@ -8090,7 +8090,7 @@ const char kEnableArmHwdrmDescription[] 
+@@ -8099,7 +8099,7 @@ const char kEnableArmHwdrmDescription[] 
  
  // Linux -----------------------------------------------------------------------
  
@@ -113,7 +113,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.8 2025/10/16 19:43:21 ki
  
  const char kPulseaudioLoopbackForCastName[] =
      "Linux System Audio Loopback for Cast (pulseaudio)";
-@@ -8122,6 +8122,19 @@ const char kWaylandSessionManagementName
+@@ -8131,6 +8131,19 @@ const char kWaylandSessionManagementName
  const char kWaylandSessionManagementDescription[] =
      "Enable Wayland's xx/xdg-session-management-v1 experimental support.";
  
@@ -133,7 +133,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.8 2025/10/16 19:43:21 ki
  #endif  // BUILDFLAG(IS_LINUX)
  
  // Random platform combinations -----------------------------------------------
-@@ -8171,7 +8184,7 @@ const char kGroupPromoPrototypeCpaDescri
+@@ -8187,7 +8200,7 @@ const char kGroupPromoPrototypeCpaDescri
      "Enables contextual toolbar button for group promo prototype.";
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -142,7 +142,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.8 2025/10/16 19:43:21 ki
  const char kEnableNetworkServiceSandboxName[] =
      "Enable the network service sandbox.";
  const char kEnableNetworkServiceSandboxDescription[] =
-@@ -8192,7 +8205,7 @@ const char kWebBluetoothConfirmPairingSu
+@@ -8208,7 +8221,7 @@ const char kWebBluetoothConfirmPairingSu
      "Bluetooth";
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
  
@@ -151,7 +151,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.8 2025/10/16 19:43:21 ki
  const char kCupsIppPrintingBackendName[] = "CUPS IPP Printing Backend";
  const char kCupsIppPrintingBackendDescription[] =
      "Use the CUPS IPP printing backend instead of the original CUPS backend "
-@@ -8328,7 +8341,7 @@ const char kElementCaptureDescription[] 
+@@ -8355,7 +8368,7 @@ const char kElementCaptureDescription[] 
      "media track into a track capturing just a specific DOM element.";
  #endif  // !BUILDFLAG(IS_ANDROID)
  
@@ -160,7 +160,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.8 2025/10/16 19:43:21 ki
  const char kUIDebugToolsName[] = "Debugging tools for UI";
  const char kUIDebugToolsDescription[] =
      "Enables additional keyboard shortcuts to help debugging.";
-@@ -8360,7 +8373,7 @@ const char kThirdPartyDisableChromeAutof
+@@ -8387,7 +8400,7 @@ const char kThirdPartyDisableChromeAutof
      "Chrome's Address and Payments Autofill are disabled in third party mode.";
  #endif  // IS_ANDROID
  
@@ -169,7 +169,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.8 2025/10/16 19:43:21 ki
  const char kGlicName[] = "Glic";
  const char kGlicDescription[] = "Enables glic";
  
-@@ -8485,7 +8498,7 @@ const char kSupervisedUserBlockInterstit
+@@ -8506,7 +8519,7 @@ const char kSupervisedUserBlockInterstit
  const char kSupervisedUserBlockInterstitialV3Description[] =
      "Enables URL filter interstitial V3 for Family Link users.";
  

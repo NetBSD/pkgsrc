@@ -1,13 +1,13 @@
-$NetBSD: patch-chrome_browser_metrics_chrome__browser__main__extra__parts__metrics.cc,v 1.8 2025/10/16 19:43:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_metrics_chrome__browser__main__extra__parts__metrics.cc,v 1.9 2025/11/04 14:55:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc
-@@ -82,7 +82,7 @@
- #include "chrome/browser/flags/android/chrome_session_state.h"
+@@ -80,7 +80,7 @@
+ #endif
  #endif  // BUILDFLAG(IS_ANDROID)
  
 -#if BUILDFLAG(IS_LINUX)
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__browser__main__extra__parts__metri
  #if defined(__GLIBC__)
  #include <gnu/libc-version.h>
  #endif  // defined(__GLIBC__)
-@@ -107,7 +107,7 @@
+@@ -105,7 +105,7 @@
  #include "chrome/installer/util/taskbar_util.h"
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__browser__main__extra__parts__metri
  #include "chrome/browser/metrics/pressure/pressure_metrics_reporter.h"
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -116,7 +116,7 @@
+@@ -114,7 +114,7 @@
  #include "components/user_manager/user_manager.h"
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__browser__main__extra__parts__metri
  #include "components/power_metrics/system_power_monitor.h"
  #endif
  
-@@ -897,7 +897,7 @@ void RecordStartupMetrics() {
+@@ -888,7 +888,7 @@ void RecordStartupMetrics() {
  
    // Record whether Chrome is the default browser or not.
    // Disabled on Linux due to hanging browser tests, see crbug.com/1216328.
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__browser__main__extra__parts__metri
    shell_integration::DefaultWebClientState default_state =
        shell_integration::GetDefaultBrowser();
    base::UmaHistogramEnumeration("DefaultBrowser.State", default_state,
-@@ -1208,11 +1208,11 @@ void ChromeBrowserMainExtraPartsMetrics:
+@@ -1119,11 +1119,11 @@ void ChromeBrowserMainExtraPartsMetrics:
        std::make_unique<web_app::SamplingMetricsProvider>();
  #endif  // !BUILDFLAG(IS_ANDROID)
  

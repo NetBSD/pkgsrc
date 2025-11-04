@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_component__updater_wasm__tts__engine__component__installer.cc,v 1.7 2025/10/16 19:43:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_component__updater_wasm__tts__engine__component__installer.cc,v 1.8 2025/11/04 14:55:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/wasm_tts_engine_component_installer.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/component_updater/wasm_tts_engine_component_installer.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/component_updater/wasm_tts_engine_component_installer.cc
 @@ -11,7 +11,7 @@
  #include "components/prefs/pref_registry_simple.h"
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_component__updater_wasm__tts__engine__component__i
  class WasmTTSEngineDirectory {
   public:
    static WasmTTSEngineDirectory* Get() {
-@@ -103,7 +103,7 @@ WasmTtsEngineComponentInstallerPolicy::W
+@@ -108,7 +108,7 @@ WasmTtsEngineComponentInstallerPolicy::W
  // static
  void WasmTtsEngineComponentInstallerPolicy::RegisterPrefs(
      PrefRegistrySimple* registry) {
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_component__updater_wasm__tts__engine__component__i
    registry->RegisterTimePref(prefs::kAccessibilityReadAnythingDateLastOpened,
                               base::Time());
    registry->RegisterBooleanPref(
-@@ -136,7 +136,7 @@ void WasmTtsEngineComponentInstallerPoli
+@@ -141,7 +141,7 @@ void WasmTtsEngineComponentInstallerPoli
    VLOG(1) << "Component ready, version " << version.GetString() << " in "
            << install_dir.value();
  
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_browser_component__updater_wasm__tts__engine__component__i
    if (!features::IsWasmTtsEngineAutoInstallDisabled()) {
      // Instead of installing the component extension as soon as it is ready,
      // store the install directory, so that the install can be triggered
-@@ -160,7 +160,7 @@ void WasmTtsEngineComponentInstallerPoli
+@@ -165,7 +165,7 @@ void WasmTtsEngineComponentInstallerPoli
  // be removed the next time Chrome is restarted.
  void WasmTtsEngineComponentInstallerPolicy::MaybeReinstallTtsEngine(
      const base::FilePath& install_dir) {
@@ -60,7 +60,7 @@ $NetBSD: patch-chrome_browser_component__updater_wasm__tts__engine__component__i
    const base::Time current_time = base::Time::Now();
    const base::Time date_last_opened =
        pref_service_->GetTime(prefs::kAccessibilityReadAnythingDateLastOpened);
-@@ -222,7 +222,7 @@ void WasmTtsEngineComponentInstallerPoli
+@@ -227,7 +227,7 @@ void WasmTtsEngineComponentInstallerPoli
  bool WasmTtsEngineComponentInstallerPolicy::VerifyInstallation(
      const base::Value::Dict& /* manifest */,
      const base::FilePath& install_dir) const {
@@ -69,7 +69,7 @@ $NetBSD: patch-chrome_browser_component__updater_wasm__tts__engine__component__i
    if (features::IsWasmTtsComponentUpdaterV3Enabled()) {
      return base::PathExists(install_dir.Append(kManifestV3FileName)) &&
             base::PathExists(install_dir.Append(kBindingsMainWasmFileName)) &&
-@@ -272,7 +272,7 @@ void RegisterWasmTtsEngineComponent(Comp
+@@ -277,7 +277,7 @@ void RegisterWasmTtsEngineComponent(Comp
  
  void WasmTtsEngineComponentInstallerPolicy::GetWasmTTSEngineDirectory(
      base::OnceCallback<void(const base::FilePath&)> callback) {
@@ -78,3 +78,12 @@ $NetBSD: patch-chrome_browser_component__updater_wasm__tts__engine__component__i
    WasmTTSEngineDirectory* wasm_directory = WasmTTSEngineDirectory::Get();
    wasm_directory->Get(std::move(callback));
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+@@ -285,7 +285,7 @@ void WasmTtsEngineComponentInstallerPoli
+ 
+ // static
+ bool WasmTtsEngineComponentInstallerPolicy::IsWasmTTSEngineDirectorySet() {
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   return WasmTTSEngineDirectory::Get()->IsSet();
+ #else
+   return false;

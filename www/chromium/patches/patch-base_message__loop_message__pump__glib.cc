@@ -1,10 +1,10 @@
-$NetBSD: patch-base_message__loop_message__pump__glib.cc,v 1.8 2025/10/16 19:43:18 kikadf Exp $
+$NetBSD: patch-base_message__loop_message__pump__glib.cc,v 1.9 2025/11/04 14:55:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/message_loop/message_pump_glib.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- base/message_loop/message_pump_glib.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ base/message_loop/message_pump_glib.cc
 @@ -8,6 +8,15 @@
  #include <glib.h>
@@ -21,8 +21,8 @@ $NetBSD: patch-base_message__loop_message__pump__glib.cc,v 1.8 2025/10/16 19:43:
 +
  #include "base/logging.h"
  #include "base/memory/raw_ptr.h"
- #include "base/notreached.h"
-@@ -52,9 +61,19 @@ int GetTimeIntervalMilliseconds(TimeTick
+ #include "base/message_loop/io_watcher.h"
+@@ -58,9 +67,19 @@ int GetTimeIntervalMilliseconds(TimeTick
  }
  
  bool RunningOnMainThread() {

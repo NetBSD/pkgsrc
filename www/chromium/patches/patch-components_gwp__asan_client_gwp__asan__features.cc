@@ -1,10 +1,10 @@
-$NetBSD: patch-components_gwp__asan_client_gwp__asan__features.cc,v 1.8 2025/10/16 19:43:26 kikadf Exp $
+$NetBSD: patch-components_gwp__asan_client_gwp__asan__features.cc,v 1.9 2025/11/04 14:55:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/gwp_asan/client/gwp_asan_features.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- components/gwp_asan/client/gwp_asan_features.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ components/gwp_asan/client/gwp_asan_features.cc
 @@ -9,7 +9,7 @@
  namespace gwp_asan::internal {

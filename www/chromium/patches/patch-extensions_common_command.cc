@@ -1,10 +1,10 @@
-$NetBSD: patch-extensions_common_command.cc,v 1.8 2025/10/16 19:43:29 kikadf Exp $
+$NetBSD: patch-extensions_common_command.cc,v 1.9 2025/11/04 14:55:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/common/command.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- extensions/common/command.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ extensions/common/command.cc
 @@ -117,7 +117,7 @@ std::string Command::CommandPlatform() {
    return ui::kKeybindingPlatformMac;

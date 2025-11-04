@@ -1,10 +1,10 @@
-$NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.8 2025/10/16 19:43:26 kikadf Exp $
+$NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.9 2025/11/04 14:55:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_list.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- components/feature_engagement/public/feature_list.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ components/feature_engagement/public/feature_list.h
 @@ -359,7 +359,7 @@ DEFINE_VARIATION_PARAM(kIPHiOSAIHubNewBa
  #endif  // BUILDFLAG(IS_IOS)
@@ -34,16 +34,16 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.8 2025/
  DEFINE_VARIATION_PARAM(kIPHDesktopPWAsLinkCapturingLaunch,
                         "IPH_DesktopPWAsLinkCapturingLaunch");
  DEFINE_VARIATION_PARAM(kIPHDesktopPWAsLinkCapturingLaunchAppInTab,
-@@ -776,7 +777,7 @@ inline constexpr flags_ui::FeatureEntry:
-         VARIATION_ENTRY(kIPHiOSSafariImportFeature),
+@@ -783,7 +784,7 @@ inline constexpr flags_ui::FeatureEntry:
          VARIATION_ENTRY(kIPHIOSPageActionMenu),
+         VARIATION_ENTRY(kIPHiOSAIHubNewBadge),
  #elif BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
          VARIATION_ENTRY(kIPHBatterySaverModeFeature),
          VARIATION_ENTRY(kIPHCompanionSidePanelFeature),
          VARIATION_ENTRY(kIPHCompanionSidePanelRegionSearchFeature),
-@@ -837,7 +838,8 @@ inline constexpr flags_ui::FeatureEntry:
+@@ -844,7 +845,8 @@ inline constexpr flags_ui::FeatureEntry:
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -53,7 +53,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.8 2025/
          VARIATION_ENTRY(kIPHAutofillAiOptInFeature),
          VARIATION_ENTRY(kIPHAutofillCreditCardBenefitFeature),
          VARIATION_ENTRY(kIPHAutofillCardInfoRetrievalSuggestionFeature),
-@@ -892,7 +894,7 @@ inline constexpr flags_ui::FeatureEntry:
+@@ -899,7 +901,7 @@ inline constexpr flags_ui::FeatureEntry:
          VARIATION_ENTRY(kIPHScalableIphGamingFeature),
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -61,4 +61,4 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.8 2025/
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
          VARIATION_ENTRY(kIPHDesktopPWAsLinkCapturingLaunch),
          VARIATION_ENTRY(kIPHDesktopPWAsLinkCapturingLaunchAppInTab),
-         VARIATION_ENTRY(kIPHSupervisedUserProfileSigninFeature),
+         VARIATION_ENTRY(kIPHSignInBenefitsFeature),

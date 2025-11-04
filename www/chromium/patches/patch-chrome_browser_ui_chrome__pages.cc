@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_chrome__pages.cc,v 1.8 2025/10/16 19:43:23 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_chrome__pages.cc,v 1.9 2025/11/04 14:55:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/chrome_pages.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/ui/chrome_pages.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/ui/chrome_pages.cc
-@@ -86,7 +86,7 @@
+@@ -86,12 +86,12 @@
  #include "components/signin/public/identity_manager/identity_manager.h"
  #endif
  
@@ -15,7 +15,22 @@ $NetBSD: patch-chrome_browser_ui_chrome__pages.cc,v 1.8 2025/10/16 19:43:23 kika
  #include "chrome/browser/web_applications/web_app_utils.h"
  #endif
  
-@@ -394,7 +394,7 @@ void ShowChromeTips(Browser* browser) {
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ #include "components/webapps/isolated_web_apps/scheme.h"
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
+         // BUILDFLAG(IS_CHROMEOS)
+@@ -253,7 +253,7 @@ bool SiteGURLIsValid(const GURL& url) {
+   return !site_origin.opaque() && (url.SchemeIsHTTPOrHTTPS() ||
+                                    url.SchemeIs(extensions::kExtensionScheme)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+                                    || url.SchemeIs(webapps::kIsolatedAppScheme)
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
+         // BUILDFLAG(IS_CHROMEOS)
+@@ -415,7 +415,7 @@ void ShowChromeTips(Browser* browser) {
    ShowSingletonTab(browser, GURL(kChromeTipsURL));
  }
  
@@ -24,7 +39,7 @@ $NetBSD: patch-chrome_browser_ui_chrome__pages.cc,v 1.8 2025/10/16 19:43:23 kika
  void ShowChromeWhatsNew(Browser* browser) {
    ShowSingletonTab(browser, GURL(kChromeUIWhatsNewURL));
  }
-@@ -719,7 +719,7 @@ void ShowShortcutCustomizationApp(Profil
+@@ -744,7 +744,7 @@ void ShowShortcutCustomizationApp(Profil
  }
  #endif  // BUILDFLAG(IS_CHROMEOS)
  

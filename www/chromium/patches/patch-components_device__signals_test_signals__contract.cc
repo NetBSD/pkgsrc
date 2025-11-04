@@ -1,10 +1,10 @@
-$NetBSD: patch-components_device__signals_test_signals__contract.cc,v 1.8 2025/10/16 19:43:26 kikadf Exp $
+$NetBSD: patch-components_device__signals_test_signals__contract.cc,v 1.9 2025/11/04 14:55:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/test/signals_contract.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- components/device_signals/test/signals_contract.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ components/device_signals/test/signals_contract.cc
 @@ -221,7 +221,7 @@ GetSignalsContract(bool is_av_signal_ena
        base::BindRepeating(VerifyUnset, names::kCrowdStrike);

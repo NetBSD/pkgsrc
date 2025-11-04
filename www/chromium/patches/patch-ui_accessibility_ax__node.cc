@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_accessibility_ax__node.cc,v 1.7 2025/10/16 19:43:36 kikadf Exp $
+$NetBSD: patch-ui_accessibility_ax__node.cc,v 1.8 2025/11/04 14:55:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/ax_node.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- ui/accessibility/ax_node.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ ui/accessibility/ax_node.cc
 @@ -1547,7 +1547,7 @@ AXNode::GetExtraMacNodes() const {
    return &table_info->extra_mac_nodes;

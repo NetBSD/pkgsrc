@@ -1,10 +1,10 @@
-$NetBSD: patch-components_content__settings_core_browser_website__settings__registry.cc,v 1.8 2025/10/16 19:43:26 kikadf Exp $
+$NetBSD: patch-components_content__settings_core_browser_website__settings__registry.cc,v 1.9 2025/11/04 14:55:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/content_settings/core/browser/website_settings_registry.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- components/content_settings/core/browser/website_settings_registry.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ components/content_settings/core/browser/website_settings_registry.cc
 @@ -66,7 +66,7 @@ const WebsiteSettingsInfo* WebsiteSettin
  #if BUILDFLAG(IS_WIN)

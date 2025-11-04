@@ -1,20 +1,22 @@
-$NetBSD: patch-components_gwp__asan_buildflags_buildflags.gni,v 1.7 2025/10/16 19:43:26 kikadf Exp $
+$NetBSD: patch-components_gwp__asan_buildflags_buildflags.gni,v 1.8 2025/11/04 14:55:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/gwp_asan/buildflags/buildflags.gni.orig	2025-10-13 21:41:26.000000000 +0000
+--- components/gwp_asan/buildflags/buildflags.gni.orig	2025-10-24 16:42:30.000000000 +0000
 +++ components/gwp_asan/buildflags/buildflags.gni
-@@ -10,10 +10,7 @@ import("//build/config/compiler/compiler
- # Android component builds are disabled due to https://crbug.com/976399
+@@ -11,10 +11,10 @@ import("//build/config/compiler/compiler
  # Android requires frame pointers for unwinding, unwind tables aren't shipped in
  # official builds.
+ # iOS is disabled when !use_partition_alloc due to https://crbug.com/446856826
 -supported_platform =
--    is_linux || is_chromeos || is_mac || is_ios ||
--    (is_win && (current_cpu == "x64" || current_cpu == "arm64")) ||
+-    is_linux || is_chromeos || is_mac || (is_ios && use_partition_alloc) ||
++supported_platform = !is_bsd &&
++    (is_linux || is_chromeos || is_mac || (is_ios && use_partition_alloc) ||
+     (is_win && (current_cpu == "x64" || current_cpu == "arm64")) ||
 -    (is_android && !is_component_build && enable_frame_pointers)
-+supported_platform = false
++    (is_android && !is_component_build && enable_frame_pointers))
  
  declare_args() {
    # Is GWP-ASan malloc/PartitionAlloc hooking enabled for chrome/ on a given

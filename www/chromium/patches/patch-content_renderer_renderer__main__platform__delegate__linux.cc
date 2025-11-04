@@ -1,10 +1,10 @@
-$NetBSD: patch-content_renderer_renderer__main__platform__delegate__linux.cc,v 1.8 2025/10/16 19:43:29 kikadf Exp $
+$NetBSD: patch-content_renderer_renderer__main__platform__delegate__linux.cc,v 1.9 2025/11/04 14:55:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/renderer/renderer_main_platform_delegate_linux.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- content/renderer/renderer_main_platform_delegate_linux.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ content/renderer/renderer_main_platform_delegate_linux.cc
 @@ -44,6 +44,7 @@ bool RendererMainPlatformDelegate::Enabl
    // any renderer has been started.

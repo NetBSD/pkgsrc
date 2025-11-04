@@ -1,10 +1,10 @@
-$NetBSD: patch-base_memory_discardable__memory__internal.h,v 1.8 2025/10/16 19:43:18 kikadf Exp $
+$NetBSD: patch-base_memory_discardable__memory__internal.h,v 1.9 2025/11/04 14:55:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/discardable_memory_internal.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- base/memory/discardable_memory_internal.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ base/memory/discardable_memory_internal.h
 @@ -12,7 +12,7 @@
  #include "base/metrics/field_trial_params.h"

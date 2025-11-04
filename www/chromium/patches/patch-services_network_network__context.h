@@ -1,12 +1,12 @@
-$NetBSD: patch-services_network_network__context.h,v 1.8 2025/10/16 19:43:33 kikadf Exp $
+$NetBSD: patch-services_network_network__context.h,v 1.9 2025/11/04 14:55:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_context.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- services/network/network_context.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ services/network/network_context.h
-@@ -749,7 +749,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
+@@ -751,7 +751,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
     public:
      explicit NetworkContextHttpAuthPreferences(NetworkService* network_service);
      ~NetworkContextHttpAuthPreferences() override;

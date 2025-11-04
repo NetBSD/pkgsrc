@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_ozone_platform_headless_ozone__platform__headless.cc,v 1.8 2025/10/16 19:43:38 kikadf Exp $
+$NetBSD: patch-ui_ozone_platform_headless_ozone__platform__headless.cc,v 1.9 2025/11/04 14:55:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/headless/ozone_platform_headless.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- ui/ozone/platform/headless/ozone_platform_headless.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ ui/ozone/platform/headless/ozone_platform_headless.cc
 @@ -108,7 +108,7 @@ class OzonePlatformHeadlessImpl : public
    }

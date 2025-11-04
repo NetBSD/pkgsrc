@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_blink_renderer_modules_webgpu_gpu__canvas__context.cc,v 1.7 2025/10/16 19:43:34 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_modules_webgpu_gpu__canvas__context.cc,v 1.8 2025/11/04 14:55:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/webgpu/gpu_canvas_context.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- third_party/blink/renderer/modules/webgpu/gpu_canvas_context.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ third_party/blink/renderer/modules/webgpu/gpu_canvas_context.cc
-@@ -250,7 +250,7 @@ CanvasResourceProvider* GPUCanvasContext
+@@ -255,7 +255,7 @@ GPUCanvasContext::PaintRenderingResultsT
  
    scoped_refptr<WebGPUMailboxTexture> front_buffer_texture;
    if (source_buffer == kFrontBuffer) {

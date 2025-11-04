@@ -1,10 +1,10 @@
-$NetBSD: patch-services_network_network__service.cc,v 1.8 2025/10/16 19:43:33 kikadf Exp $
+$NetBSD: patch-services_network_network__service.cc,v 1.9 2025/11/04 14:55:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_service.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- services/network/network_service.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ services/network/network_service.cc
 @@ -108,11 +108,11 @@
  #include "third_party/boringssl/src/include/openssl/cpu.h"

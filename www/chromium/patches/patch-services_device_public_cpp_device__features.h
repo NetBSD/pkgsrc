@@ -1,10 +1,10 @@
-$NetBSD: patch-services_device_public_cpp_device__features.h,v 1.7 2025/10/16 19:43:33 kikadf Exp $
+$NetBSD: patch-services_device_public_cpp_device__features.h,v 1.8 2025/11/04 14:55:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/public/cpp/device_features.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- services/device/public/cpp/device_features.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ services/device/public/cpp/device_features.h
 @@ -53,7 +53,7 @@ extern const DEVICE_FEATURES_EXPORT
  

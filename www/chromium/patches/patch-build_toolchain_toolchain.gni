@@ -1,12 +1,12 @@
-$NetBSD: patch-build_toolchain_toolchain.gni,v 1.8 2025/10/16 19:43:20 kikadf Exp $
+$NetBSD: patch-build_toolchain_toolchain.gni,v 1.9 2025/11/04 14:55:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/toolchain/toolchain.gni.orig	2025-10-13 21:41:26.000000000 +0000
+--- build/toolchain/toolchain.gni.orig	2025-10-24 16:42:30.000000000 +0000
 +++ build/toolchain/toolchain.gni
-@@ -63,7 +63,7 @@ if (host_os == "mac") {
+@@ -55,7 +55,7 @@ if (host_os == "mac") {
    host_shlib_extension = ".dylib"
  } else if (host_os == "win") {
    host_shlib_extension = ".dll"

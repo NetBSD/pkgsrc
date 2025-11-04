@@ -1,12 +1,12 @@
-$NetBSD: patch-base_files_file__util__unittest.cc,v 1.8 2025/10/16 19:43:18 kikadf Exp $
+$NetBSD: patch-base_files_file__util__unittest.cc,v 1.9 2025/11/04 14:55:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/file_util_unittest.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- base/files/file_util_unittest.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ base/files/file_util_unittest.cc
-@@ -4123,7 +4123,7 @@ TEST_F(FileUtilTest, ReadFileToStringWit
+@@ -4156,7 +4156,7 @@ TEST_F(FileUtilTest, ReadFileToStringWit
  }
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-base_files_file__util__unittest.cc,v 1.8 2025/10/16 19:43:18 kika
  TEST_F(FileUtilTest, ReadFileToStringWithProcFileSystem) {
    FilePath file_path("/proc/cpuinfo");
    std::string data = "temp";
-@@ -4708,6 +4708,19 @@ TEST_F(FileUtilTest, CreateDirectoryOnly
+@@ -4741,6 +4741,19 @@ TEST_F(FileUtilTest, CreateDirectoryOnly
  
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -35,7 +35,7 @@ $NetBSD: patch-base_files_file__util__unittest.cc,v 1.8 2025/10/16 19:43:18 kika
  #if BUILDFLAG(IS_WIN) && BUILDFLAG(GOOGLE_CHROME_BRANDING) && \
      defined(ARCH_CPU_32_BITS)
  // TODO(crbug.com/327582285): Re-enable these tests. They may be failing due to
-@@ -4874,7 +4887,7 @@ TEST(FileUtilMultiThreadedTest, MultiThr
+@@ -4907,7 +4920,7 @@ TEST(FileUtilMultiThreadedTest, MultiThr
                  NULL);
  #else
      size_t bytes_written =

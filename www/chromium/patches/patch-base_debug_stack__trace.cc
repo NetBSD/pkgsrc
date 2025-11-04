@@ -1,12 +1,12 @@
-$NetBSD: patch-base_debug_stack__trace.cc,v 1.8 2025/10/16 19:43:18 kikadf Exp $
+$NetBSD: patch-base_debug_stack__trace.cc,v 1.9 2025/11/04 14:55:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/debug/stack_trace.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- base/debug/stack_trace.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ base/debug/stack_trace.cc
-@@ -271,7 +271,7 @@ bool StackTrace::WillSymbolizeToStreamFo
+@@ -292,7 +292,7 @@ bool StackTrace::WillSymbolizeToStreamFo
    // Symbols are not expected to be reliable when gn args specifies
    // symbol_level=0.
    return false;
@@ -15,7 +15,7 @@ $NetBSD: patch-base_debug_stack__trace.cc,v 1.8 2025/10/16 19:43:18 kikadf Exp $
    // StackTrace::OutputToStream() is not implemented under uclibc, nor AIX.
    // See https://crbug.com/706728
    return false;
-@@ -324,7 +324,9 @@ void StackTrace::OutputToStreamWithPrefi
+@@ -357,7 +357,9 @@ void StackTrace::OutputToStreamWithPrefi
      }
      return;
    }
@@ -25,7 +25,7 @@ $NetBSD: patch-base_debug_stack__trace.cc,v 1.8 2025/10/16 19:43:18 kikadf Exp $
  }
  
  std::string StackTrace::ToString() const {
-@@ -333,7 +335,7 @@ std::string StackTrace::ToString() const
+@@ -366,7 +368,7 @@ std::string StackTrace::ToString() const
  
  std::string StackTrace::ToStringWithPrefix(cstring_view prefix_string) const {
    std::stringstream stream;
@@ -34,7 +34,7 @@ $NetBSD: patch-base_debug_stack__trace.cc,v 1.8 2025/10/16 19:43:18 kikadf Exp $
    OutputToStreamWithPrefix(&stream, prefix_string);
  #endif
    return stream.str();
-@@ -357,7 +359,7 @@ bool StackTrace::ShouldSuppressOutput() 
+@@ -390,7 +392,7 @@ bool StackTrace::ShouldSuppressOutput() 
  }
  
  std::ostream& operator<<(std::ostream& os, const StackTrace& s) {

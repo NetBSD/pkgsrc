@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.7 2025/10/16 19:43:20 kikadf Exp $
+$NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.8 2025/11/04 14:55:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/background/glic/glic_status_icon.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/background/glic/glic_status_icon.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/background/glic/glic_status_icon.cc
 @@ -89,7 +89,7 @@ GlicStatusIcon::GlicStatusIcon(GlicContr
      return;
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.7 2025/1
      status_icon_->RemoveObserver(this);
  #endif
      std::unique_ptr<StatusIcon> removed_icon =
-@@ -257,7 +257,7 @@ void GlicStatusIcon::UpdateHotkey(const 
+@@ -258,7 +258,7 @@ void GlicStatusIcon::UpdateHotkey(const 
  }
  
  void GlicStatusIcon::UpdateVisibilityOfExitInContextMenu() {
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.7 2025/1
    if (context_menu_) {
      const bool is_visible = BrowserList::GetInstance()->empty();
      const std::optional<size_t> index =
-@@ -321,7 +321,7 @@ std::unique_ptr<StatusIconMenuModel> Gli
+@@ -322,7 +322,7 @@ std::unique_ptr<StatusIconMenuModel> Gli
    menu->AddItem(IDC_GLIC_STATUS_ICON_MENU_SETTINGS,
                  l10n_util::GetStringUTF16(IDS_GLIC_STATUS_ICON_MENU_SETTINGS));
  

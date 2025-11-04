@@ -1,10 +1,10 @@
-$NetBSD: patch-services_tracing_public_cpp_perfetto_track__name__recorder.cc,v 1.4 2025/10/16 19:43:33 kikadf Exp $
+$NetBSD: patch-services_tracing_public_cpp_perfetto_track__name__recorder.cc,v 1.5 2025/11/04 14:55:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/tracing/public/cpp/perfetto/track_name_recorder.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- services/tracing/public/cpp/perfetto/track_name_recorder.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ services/tracing/public/cpp/perfetto/track_name_recorder.cc
 @@ -53,7 +53,7 @@ void FillThreadTrack(const perfetto::Thr
      desc.mutable_chrome_thread()->set_thread_type(

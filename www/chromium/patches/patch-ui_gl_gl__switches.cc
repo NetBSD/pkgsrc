@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gl_gl__switches.cc,v 1.8 2025/10/16 19:43:38 kikadf Exp $
+$NetBSD: patch-ui_gl_gl__switches.cc,v 1.9 2025/11/04 14:55:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/gl_switches.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- ui/gl/gl_switches.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ ui/gl/gl_switches.cc
 @@ -17,7 +17,7 @@
  #endif
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_gl_gl__switches.cc,v 1.8 2025/10/16 19:43:38 kikadf Exp $
  #include <vulkan/vulkan_core.h>
  #include "third_party/angle/src/gpu_info_util/SystemInfo.h"  // nogncheck
  #endif  // BUILDFLAG(ENABLE_VULKAN) && (BUILDFLAG(IS_LINUX) ||
-@@ -333,7 +333,7 @@ bool IsDefaultANGLEVulkan() {
+@@ -316,7 +316,7 @@ bool IsDefaultANGLEVulkan() {
    }
  #endif  // BUILDFLAG(IS_ANDROID)
  #if BUILDFLAG(ENABLE_VULKAN) && \
@@ -24,7 +24,7 @@ $NetBSD: patch-ui_gl_gl__switches.cc,v 1.8 2025/10/16 19:43:38 kikadf Exp $
    angle::SystemInfo system_info;
    {
      TRACE_EVENT("gpu,startup", "angle::GetSystemInfoVulkan");
-@@ -425,7 +425,7 @@ bool IsDefaultANGLEVulkan() {
+@@ -410,7 +410,7 @@ bool IsDefaultANGLEVulkan() {
    }
  #endif  // BUILDFLAG(IS_ANDROID)
  

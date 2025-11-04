@@ -1,12 +1,12 @@
-$NetBSD: patch-components_regional__capabilities_regional__capabilities__switches.h,v 1.7 2025/10/16 19:43:27 kikadf Exp $
+$NetBSD: patch-components_regional__capabilities_regional__capabilities__switches.h,v 1.8 2025/11/04 14:55:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/regional_capabilities/regional_capabilities_switches.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- components/regional_capabilities/regional_capabilities_switches.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ components/regional_capabilities/regional_capabilities_switches.h
-@@ -47,7 +47,7 @@ BASE_DECLARE_FEATURE(kMitigateLegacySear
+@@ -53,7 +53,7 @@ BASE_DECLARE_FEATURE(kRestrictLegacySear
  BASE_DECLARE_FEATURE(kResolveRegionalCapabilitiesFromDevice);
  #endif
  
