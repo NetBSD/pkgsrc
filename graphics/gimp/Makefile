@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.423 2025/10/23 20:37:29 wiz Exp $
+# $NetBSD: Makefile,v 1.424 2025/11/04 16:39:17 ryoon Exp $
 
-DISTNAME=	gimp-3.0.4
-PKGREVISION=	9
+DISTNAME=	gimp-3.0.6
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -89,7 +88,7 @@ PLIST_VARS+=	xmc
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../devel/appstream-glib/buildlink3.mk"
+.include "../../devel/appstream/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
