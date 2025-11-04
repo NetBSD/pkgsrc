@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6526 2025/11/04 16:43:22 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.6527 2025/11/04 16:48:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9459,3 +9459,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox to 144.0.2 [ryoon 2025-11-04]
 	Updated www/firefox-l10n to 144.0.2 [ryoon 2025-11-04]
 	Updated graphics/gimp to 3.0.6 [ryoon 2025-11-04]
+	Updated misc/libreoffice to 25.8.2.2 [ryoon 2025-11-04]
