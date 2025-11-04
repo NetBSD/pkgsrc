@@ -1,4 +1,4 @@
-$NetBSD: patch-bin_package,v 1.3 2025/11/03 21:47:14 vins Exp $
+$NetBSD: patch-bin_package,v 1.4 2025/11/04 18:21:47 vins Exp $
 
 install target fixes, for pkgsrc compatibility.
 
@@ -39,7 +39,7 @@ install target fixes, for pkgsrc compatibility.
 +			trace mkdir -p "$fundir" "$egdir" || exit
  			(set +o noglob; trace cp "$PACKAGEROOT"/src/cmd/ksh93/fun/* "$fundir/") || exit
 +			trace mv "$bindir/ksh" "$bindir/ksh93" || exit
-+			trace cp "$PACKAGEROOT/src/cmd/ksh93/kshrc.sh" "$egdir/kshrc" || exit
++			trace cp "$PACKAGEROOT/src/cmd/ksh93/kshrc" "$egdir/kshrc" || exit
 +
  			;;
  		*)	# AT&T --man, etc. is a glorified error message: writes to stderr and exits with status 2 :-/
