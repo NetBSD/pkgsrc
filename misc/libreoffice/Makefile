@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.369 2025/10/23 20:38:26 wiz Exp $
+# $NetBSD: Makefile,v 1.370 2025/11/04 16:48:06 ryoon Exp $
 
-VERREL=		25.8.1
-VERRC=		1
+VERREL=		25.8.2
+VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -111,7 +110,7 @@ MORE_DISTFILES= \
 	eeb2c7ddf0d302fba4bfc6e97eac9624-libbase-1.1.6.zip \
 	33e1e61fab06a547851ed308b4ffef42-dejavu-fonts-ttf-2.37.zip \
 	f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip \
-	mariadb-connector-c-3.3.15-src.tar.gz \
+	mariadb-connector-c-3.3.17-src.tar.gz \
 	rhino-1.7.15.zip \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
 	language-subtag-registry-2021-08-06.tar.bz2 \
