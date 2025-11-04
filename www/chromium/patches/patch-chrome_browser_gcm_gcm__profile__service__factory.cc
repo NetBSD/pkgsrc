@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_gcm_gcm__profile__service__factory.cc,v 1.8 2025/10/16 19:43:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_gcm_gcm__profile__service__factory.cc,v 1.9 2025/11/04 14:55:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/gcm/gcm_profile_service_factory.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/gcm/gcm_profile_service_factory.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/gcm/gcm_profile_service_factory.cc
-@@ -110,7 +110,7 @@ GCMProfileServiceFactory::ScopedTestingF
+@@ -109,7 +109,7 @@ GCMProfileServiceFactory::ScopedTestingF
  // static
  GCMProfileService* GCMProfileServiceFactory::GetForProfile(
      content::BrowserContext* profile) {
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_gcm_gcm__profile__service__factory.cc,v 1.8 2025/1
    // On desktop, incognito profiles are checked with IsIncognitoProfile().
    // It's possible for non-incognito profiles to also be off-the-record.
    bool is_profile_supported =
-@@ -153,7 +153,7 @@ std::unique_ptr<KeyedService>
+@@ -152,7 +152,7 @@ std::unique_ptr<KeyedService>
  GCMProfileServiceFactory::BuildServiceInstanceForBrowserContext(
      content::BrowserContext* context) const {
    Profile* profile = Profile::FromBrowserContext(context);

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_safe__browsing_content_resources_gen__file__type__proto.py,v 1.8 2025/10/16 19:43:27 kikadf Exp $
+$NetBSD: patch-components_safe__browsing_content_resources_gen__file__type__proto.py,v 1.9 2025/11/04 14:55:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/safe_browsing/content/resources/gen_file_type_proto.py.orig	2025-10-13 21:41:26.000000000 +0000
+--- components/safe_browsing/content/resources/gen_file_type_proto.py.orig	2025-10-24 16:42:30.000000000 +0000
 +++ components/safe_browsing/content/resources/gen_file_type_proto.py
 @@ -37,6 +37,8 @@ def PlatformTypes():
          "chromeos":

@@ -1,10 +1,10 @@
-$NetBSD: patch-sandbox_policy_sandbox.cc,v 1.8 2025/10/16 19:43:32 kikadf Exp $
+$NetBSD: patch-sandbox_policy_sandbox.cc,v 1.9 2025/11/04 14:55:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/sandbox.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- sandbox/policy/sandbox.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ sandbox/policy/sandbox.cc
 @@ -18,6 +18,10 @@
  #include "sandbox/policy/linux/sandbox_linux.h"

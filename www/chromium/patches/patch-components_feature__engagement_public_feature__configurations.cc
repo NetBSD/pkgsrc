@@ -1,10 +1,10 @@
-$NetBSD: patch-components_feature__engagement_public_feature__configurations.cc,v 1.8 2025/10/16 19:43:26 kikadf Exp $
+$NetBSD: patch-components_feature__engagement_public_feature__configurations.cc,v 1.9 2025/11/04 14:55:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_configurations.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- components/feature_engagement/public/feature_configurations.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ components/feature_engagement/public/feature_configurations.cc
 @@ -95,7 +95,7 @@ std::optional<FeatureConfig> CreateNewUs
  
@@ -24,7 +24,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__configurations.cc,
    if (kIPHPasswordsManagementBubbleAfterSaveFeature.name == feature->name) {
      FeatureConfig config;
      config.valid = true;
-@@ -1979,7 +1979,8 @@ std::optional<FeatureConfig> GetClientSi
+@@ -2045,7 +2045,8 @@ std::optional<FeatureConfig> GetClientSi
  #endif  // BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \

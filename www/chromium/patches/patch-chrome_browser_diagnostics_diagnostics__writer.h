@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_diagnostics_diagnostics__writer.h,v 1.8 2025/10/16 19:43:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_diagnostics_diagnostics__writer.h,v 1.9 2025/11/04 14:55:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/diagnostics/diagnostics_writer.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/diagnostics/diagnostics_writer.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/diagnostics/diagnostics_writer.h
 @@ -16,6 +16,8 @@ namespace diagnostics {
  // Console base class used internally.

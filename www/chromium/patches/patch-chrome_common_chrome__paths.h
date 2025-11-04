@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_chrome__paths.h,v 1.8 2025/10/16 19:43:25 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__paths.h,v 1.9 2025/11/04 14:55:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_paths.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/common/chrome_paths.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/common/chrome_paths.h
 @@ -58,7 +58,7 @@ enum {
                       // to set policies for chrome. This directory

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_global__features.cc,v 1.8 2025/10/16 19:43:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_global__features.cc,v 1.9 2025/11/04 14:55:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/global_features.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/global_features.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/global_features.cc
-@@ -24,7 +24,7 @@
+@@ -25,7 +25,7 @@
  #include "chrome/browser/glic/public/glic_enabling.h"               // nogncheck
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_global__features.cc,v 1.8 2025/10/16 19:43:21 kika
  // This causes a gn error on Android builds, because gn does not understand
  // buildflags, so we include it only on platforms where it is used.
  #include "chrome/browser/ui/webui/whats_new/whats_new_registrar.h"
-@@ -70,7 +70,7 @@ void GlobalFeatures::ReplaceGlobalFeatur
+@@ -71,7 +71,7 @@ void GlobalFeatures::ReplaceGlobalFeatur
  
  void GlobalFeatures::Init() {
    system_permissions_platform_handle_ = CreateSystemPermissionsPlatformHandle();
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_global__features.cc,v 1.8 2025/10/16 19:43:21 kika
    whats_new_registry_ = CreateWhatsNewRegistry();
  #endif
  
-@@ -119,7 +119,7 @@ GlobalFeatures::CreateSystemPermissionsP
+@@ -123,7 +123,7 @@ GlobalFeatures::CreateSystemPermissionsP
    return system_permission_settings::PlatformHandle::Create();
  }
  

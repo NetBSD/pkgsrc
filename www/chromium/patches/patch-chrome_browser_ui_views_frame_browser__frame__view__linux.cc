@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_browser__frame__view__linux.cc,v 1.8 2025/10/16 19:43:23 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_browser__frame__view__linux.cc,v 1.9 2025/11/04 14:55:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_frame_view_linux.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/ui/views/frame/browser_frame_view_linux.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/ui/views/frame/browser_frame_view_linux.cc
 @@ -70,7 +70,7 @@ gfx::ShadowValues BrowserFrameViewLinux:
  
@@ -12,7 +12,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_browser__frame__view__linux.cc,v 1.
      gfx::Canvas* canvas) const {
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   const bool tiled = frame()->tiled();
+   const bool tiled = browser_widget()->tiled();
  #else
    const bool tiled = false;
 @@ -125,7 +125,7 @@ int BrowserFrameViewLinux::NonClientHitT
@@ -21,6 +21,6 @@ $NetBSD: patch-chrome_browser_ui_views_frame_browser__frame__view__linux.cc,v 1.
  float BrowserFrameViewLinux::GetRestoredCornerRadiusDip() const {
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   const bool tiled = frame()->tiled();
+   const bool tiled = browser_widget()->tiled();
  #else
    const bool tiled = false;
