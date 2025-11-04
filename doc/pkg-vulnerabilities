@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.653 2025/11/03 09:53:03 adam Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.654 2025/11/04 16:19:35 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28824,3 +28824,9 @@ gstreamer1<1.22.8	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2023-5018
 gtar-base<1.35		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-39804
 opensmtpd>=7.7.0<7.8.0	denial-of-service	https://www.openwall.com/lists/oss-security/2025/10/31/3
 exim<4.99		privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2025-30232
+lighttpd>=1.4.80<1.4.81	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-12642
+mantis<2.27.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-46556
+mongodb<8.0.10	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-12657
+netsurf-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-51317
+netsurf-[0-9]*	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2025-29699
+netsurf-[0-9]*	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-45663
