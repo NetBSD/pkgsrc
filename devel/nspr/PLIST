@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2025/07/17 22:06:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/11/05 11:32:38 wiz Exp $
 ${PLIST.native}bin/compile-et.pl
 bin/nspr-config
 ${PLIST.native}bin/prerr.properties
@@ -6,8 +6,6 @@ include/nspr/md/_aix32.cfg
 include/nspr/md/_aix64.cfg
 include/nspr/md/_darwin.cfg
 include/nspr/md/_freebsd.cfg
-include/nspr/md/_hpux32.cfg
-include/nspr/md/_hpux64.cfg
 include/nspr/md/_linux.cfg
 include/nspr/md/_netbsd.cfg
 include/nspr/md/_nto.cfg
