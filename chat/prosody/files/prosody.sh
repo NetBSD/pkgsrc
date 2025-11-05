@@ -1,9 +1,10 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: prosody.sh,v 1.7 2025/10/15 10:34:42 sborrill Exp $
+# $NetBSD: prosody.sh,v 1.8 2025/11/05 09:17:44 sborrill Exp $
 #
 # PROVIDE: prosody
 # REQUIRE: DAEMON
+# KEYWORD: shutdown
 
 if [ -f @SYSCONFBASE@/rc.subr ]; then
   . @SYSCONFBASE@/rc.subr
