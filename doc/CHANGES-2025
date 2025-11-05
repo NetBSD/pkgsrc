@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6539 2025/11/05 13:12:15 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6540 2025/11/05 13:45:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9475,3 +9475,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/nspr to 4.38 [wiz 2025-11-05]
 	Updated net/libtorrent to 0.16.2 [adam 2025-11-05]
 	Updated net/rtorrent to 0.16.2 [adam 2025-11-05]
+	Updated devel/py-test-benchmark to 5.2.1 [adam 2025-11-05]
+	Updated devel/py-test-check to 2.6.0 [adam 2025-11-05]
