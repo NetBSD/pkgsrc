@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2025/07/01 13:41:40 adam Exp $
+# $NetBSD: Makefile,v 1.90 2025/11/05 14:37:53 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -56,6 +56,7 @@ SUBST_SED.fix-path+=	-e 's,/var/log,${VARBASE}/log,g'
 SUBST_NOOP_OK.fix-path=	yes
 
 # Contains hardcoded paths to find installed libraries.
+CHECK_WRKREF_SKIP+=	*/__pycache__/*
 CHECK_WRKREF_SKIP+=	*/salt/utils/rsax931.py
 CHECK_WRKREF_SKIP+=	*/smartos.*
 
