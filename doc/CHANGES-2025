@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6533 2025/11/05 07:52:02 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6534 2025/11/05 09:27:49 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9467,3 +9467,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/unison to 2.53.8 [gdt 2025-11-05]
 	Updated devel/wabt to 1.0.39 [adam 2025-11-05]
 	Updated converters/py-fastbencode to 0.3.7 [adam 2025-11-05]
+	Updated games/openrct2 to 0.4.28 [triaxx 2025-11-05]
