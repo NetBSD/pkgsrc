@@ -1,12 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2023/05/31 18:37:52 nikita Exp $
+# $NetBSD: options.mk,v 1.2 2025/11/05 09:59:30 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libcurl-gnutls
 PKG_SUPPORTED_OPTIONS=		inet6 libssh2 gssapi ldap rtmp idn http2
 PKG_SUGGESTED_OPTIONS=		http2 inet6 idn
 PKG_OPTIONS_LEGACY_OPTS=	libidn:idn
-
-# Kerberos is built in - no additional dependency
-PKG_SUGGESTED_OPTIONS.NetBSD+=	gssapi
 
 .include "../../mk/bsd.options.mk"
 
@@ -24,6 +21,8 @@ CONFIGURE_ARGS+=	--without-libssh2
 .endif
 
 .if !empty(PKG_OPTIONS:Mgssapi)
+# heimdal not supported after 8.17.0
+KRB5_ACCEPTED=		mit-krb5
 .include "../../mk/krb5.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gssapi=${KRB5BASE}
 CONFIGURE_ARGS+=	--with-gssapi-includes=${KRB5BASE}/include/gssapi
