@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/01/08 12:00:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/11/05 09:46:23 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -13,13 +13,13 @@ ${PYSITELIB}/jsonschema_specifications/schemas/draft201909/metaschema.json
 ${PYSITELIB}/jsonschema_specifications/schemas/draft201909/vocabularies/applicator
 ${PYSITELIB}/jsonschema_specifications/schemas/draft201909/vocabularies/content
 ${PYSITELIB}/jsonschema_specifications/schemas/draft201909/vocabularies/core
+${PYSITELIB}/jsonschema_specifications/schemas/draft201909/vocabularies/format
 ${PYSITELIB}/jsonschema_specifications/schemas/draft201909/vocabularies/meta-data
 ${PYSITELIB}/jsonschema_specifications/schemas/draft201909/vocabularies/validation
 ${PYSITELIB}/jsonschema_specifications/schemas/draft202012/metaschema.json
 ${PYSITELIB}/jsonschema_specifications/schemas/draft202012/vocabularies/applicator
 ${PYSITELIB}/jsonschema_specifications/schemas/draft202012/vocabularies/content
 ${PYSITELIB}/jsonschema_specifications/schemas/draft202012/vocabularies/core
-${PYSITELIB}/jsonschema_specifications/schemas/draft202012/vocabularies/format
 ${PYSITELIB}/jsonschema_specifications/schemas/draft202012/vocabularies/format-annotation
 ${PYSITELIB}/jsonschema_specifications/schemas/draft202012/vocabularies/format-assertion
 ${PYSITELIB}/jsonschema_specifications/schemas/draft202012/vocabularies/meta-data
