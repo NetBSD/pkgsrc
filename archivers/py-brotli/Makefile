@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/04/22 13:11:57 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/11/05 22:14:08 wiz Exp $
 
-DISTNAME=	Brotli-1.1.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+DISTNAME=	brotli-1.2.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/brotli/}
 # distfile is distinct from brotli's but filename differs only by case
@@ -16,8 +15,6 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_LANGUAGES=	c c++
-
-WHEEL_NAME=	${DISTNAME:tl}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
