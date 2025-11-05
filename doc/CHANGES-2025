@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6541 2025/11/05 22:14:22 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6542 2025/11/05 22:20:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9478,3 +9478,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-benchmark to 5.2.1 [adam 2025-11-05]
 	Updated devel/py-test-check to 2.6.0 [adam 2025-11-05]
 	Updated archivers/py-brotli to 1.2.0 [wiz 2025-11-05]
+	Updated lang/python314 to 3.14.0nb3 [wiz 2025-11-05]
