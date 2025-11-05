@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.172 2025/10/23 20:38:55 wiz Exp $
+# $NetBSD: Makefile,v 1.173 2025/11/05 00:21:39 gdt Exp $
 
-DISTNAME=	unison-2.53.7
-PKGREVISION=	5
+DISTNAME=	unison-2.53.8
+#PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +12,8 @@ HOMEPAGE=	https://github.com/bcpierce00/unison
 COMMENT=	File-synchronization tool
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	gmake bash
+USE_TOOLS+=	bash pkg-config
+# \todo Explain
 MAKE_FLAGS+=	CFLAGS=""
 ALL_ENV+=	PREFIX=${PREFIX}
 ALL_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
@@ -42,8 +43,6 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/CONTRIBUTING.md ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/INSTALL.md ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/NEWS.md ${DESTDIR}${PREFIX}/share/doc/unison
-	# \todo See fsmonitor above.
-	${RM} ${DESTDIR}${PREFIX}/bin/fsmonitor.py
 
 TEST_TARGET=		test
 
