@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/11/22 18:32:47 schmonz Exp $
+$NetBSD: distinfo,v 1.7 2025/11/05 22:14:08 wiz Exp $
 
-BLAKE2s (py-brotli/Brotli-1.1.0.tar.gz) = bf5e9f564bd25b1d2565e9c04416b1bcefa8c67d8f7bdb97a8dd6e33b4bbe04a
-SHA512 (py-brotli/Brotli-1.1.0.tar.gz) = af48fb2c00e05090c607385f0fcdec2aa813bec0214fb428a250740f1adb9a4b7bdfa46cb44aa450e524badc0334f9760bc4327a42b0254205884556343587ce
-Size (py-brotli/Brotli-1.1.0.tar.gz) = 7372270 bytes
+BLAKE2s (py-brotli/brotli-1.2.0.tar.gz) = 82658e37148bac6dea1aed78fdc3cfd104addb79212896bc6b1c8f0d7a1982f3
+SHA512 (py-brotli/brotli-1.2.0.tar.gz) = 1988be2dc6a0f26de7223598b0eba57aed0b52f9ba2bdc3054b7acb6cdb7ad4cbace3776d3ccc80f8c34948c42cc6f508e4efd0a283b81242dceb042c6e60d70
+Size (py-brotli/brotli-1.2.0.tar.gz) = 7388632 bytes
