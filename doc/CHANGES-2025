@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6531 2025/11/04 21:14:05 leot Exp $
+$NetBSD: CHANGES-2025,v 1.6532 2025/11/05 00:21:51 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9464,3 +9464,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/thunderbird-l10n to 144.0.1 [ryoon 2025-11-04]
 	Updated devel/ada-gnatcoll-bindings-25 to 25.2.0nb1 [dkazankov 2025-11-04]
 	Updated editors/neovim to 0.11.5 [leot 2025-11-04]
+	Updated net/unison to 2.53.8 [gdt 2025-11-05]
