@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.301 2025/10/24 04:01:11 riastradh Exp $
+# $NetBSD: Makefile,v 1.302 2025/11/05 09:30:18 wiz Exp $
 
 .include "Makefile.common"
-
-PKGREVISION=		2
 
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 
@@ -15,5 +13,11 @@ SUBST_MESSAGE.rpath=	Adding rpath to curl-config.
 SUPERSEDES+=		wcurl-[0-9]*
 
 .include "options.mk"
+
+# as of 8.17.0
+#TESTDONE: 1890 tests were considered during 498 seconds.
+#TESTDONE: 1622 tests out of 1623 reported OK: 99%
+#
+#FAIL 1510: 'HTTP GET connection cache limit (CURLOPT_MAXCONNECTS)' HTTP, verbose logs, flaky
 
 .include "../../mk/bsd.pkg.mk"
