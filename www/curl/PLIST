@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.106 2025/09/12 07:32:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.107 2025/11/05 09:30:18 wiz Exp $
 bin/curl
 bin/curl-config
 bin/wcurl
@@ -109,6 +109,8 @@ man/man3/CURLMOPT_MAX_HOST_CONNECTIONS.3
 man/man3/CURLMOPT_MAX_PIPELINE_LENGTH.3
 man/man3/CURLMOPT_MAX_TOTAL_CONNECTIONS.3
 man/man3/CURLMOPT_NETWORK_CHANGED.3
+man/man3/CURLMOPT_NOTIFYDATA.3
+man/man3/CURLMOPT_NOTIFYFUNCTION.3
 man/man3/CURLMOPT_PIPELINING.3
 man/man3/CURLMOPT_PIPELINING_SERVER_BL.3
 man/man3/CURLMOPT_PIPELINING_SITE_BL.3
@@ -486,6 +488,8 @@ man/man3/curl_multi_get_handles.3
 man/man3/curl_multi_get_offt.3
 man/man3/curl_multi_info_read.3
 man/man3/curl_multi_init.3
+man/man3/curl_multi_notify_disable.3
+man/man3/curl_multi_notify_enable.3
 man/man3/curl_multi_perform.3
 man/man3/curl_multi_poll.3
 man/man3/curl_multi_remove_handle.3
