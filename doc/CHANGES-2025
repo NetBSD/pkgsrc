@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6536 2025/11/05 09:47:47 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6537 2025/11/05 09:59:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9471,3 +9471,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/curl to 8.17.0 [wiz 2025-11-05]
 	Updated textproc/py-jsonschema-specifications to 2025.9.1 [adam 2025-11-05]
 	Updated misc/py-pbs-installer to 2025.10.31 [adam 2025-11-05]
+	Updated www/libcurl-gnutls to 8.17.0 [wiz 2025-11-05]
