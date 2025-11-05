@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.16 2024/10/22 12:52:02 ryoon Exp $
+$NetBSD: patch-ac,v 1.17 2025/11/05 11:32:38 wiz Exp $
 
 add runpath to Linux caught during check-shlibs-elf
 
---- nspr/configure.in.orig	2024-10-21 11:31:57.000000000 +0000
+--- nspr/configure.in.orig	2025-11-05 10:29:01.000000000 +0000
 +++ nspr/configure.in
 @@ -38,7 +38,7 @@ OBJDIR_NAME=.
  OBJDIR_SUFFIX=OBJ
@@ -22,8 +22,8 @@ add runpath to Linux caught during check-shlibs-elf
 +    fi
      ;;
  
- *-hpux*)
-@@ -1563,6 +1566,9 @@ tools are selected during the Xcode/Deve
+ *-linux*|*-gnu*|*-k*bsd*-gnu|*-android*|*-linuxandroid*)
+@@ -1421,6 +1424,9 @@ tools are selected during the Xcode/Deve
      MKSHLIB='$(CC) $(DSO_LDOPTS) -o $@'
      DSO_CFLAGS=-fPIC
      DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
@@ -33,7 +33,7 @@ add runpath to Linux caught during check-shlibs-elf
      _OPTIMIZE_FLAGS=-O2
      _DEBUG_FLAGS="-g -fno-inline"  # most people on linux use gcc/gdb, and that
                                     # combo is not yet good at debugging inlined
-@@ -1892,7 +1898,7 @@ tools are selected during the Xcode/Deve
+@@ -1746,7 +1752,7 @@ tools are selected during the Xcode/Deve
      AC_DEFINE(HAVE_POINTER_LOCALTIME_R)
      CFLAGS="$CFLAGS -ansi -Wall"
      CXXFLAGS="$CXXFLAGS -ansi -Wall"
@@ -42,7 +42,7 @@ add runpath to Linux caught during check-shlibs-elf
      DSO_CFLAGS=-fPIC
      MDCPUCFG_H=_openbsd.cfg
      PR_MD_CSRCS=openbsd.c
-@@ -1955,7 +1961,7 @@ tools are selected during the Xcode/Deve
+@@ -1809,7 +1815,7 @@ tools are selected during the Xcode/Deve
          if `$CC -print-prog-name=ld` -v 2>&1 | grep -c GNU >/dev/null; then
              GCC_USE_GNU_LD=1
          fi
