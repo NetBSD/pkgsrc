@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6534 2025/11/05 09:27:49 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.6535 2025/11/05 09:30:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9468,3 +9468,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/wabt to 1.0.39 [adam 2025-11-05]
 	Updated converters/py-fastbencode to 0.3.7 [adam 2025-11-05]
 	Updated games/openrct2 to 0.4.28 [triaxx 2025-11-05]
+	Updated www/curl to 8.17.0 [wiz 2025-11-05]
