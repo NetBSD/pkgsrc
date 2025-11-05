@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.72 2025/07/17 22:06:58 wiz Exp $
+$NetBSD: distinfo,v 1.73 2025/11/05 11:32:38 wiz Exp $
 
-BLAKE2s (nspr-4.37.tar.gz) = 6f62508710e391836269ee081a68a5e6098652bcb31afcc8d3687948378a6978
-SHA512 (nspr-4.37.tar.gz) = f8247f9891effea53f32912c9cfe36117f85528684d2e19e8f8df839e1d0bd376de4eb2855d72b8c10f2c7da6ee0de31b6b235d25c5612cd936719eda036dc4b
-Size (nspr-4.37.tar.gz) = 1057241 bytes
+BLAKE2s (nspr-4.38.tar.gz) = 61be48a43cd09afafce302d0d0a52da9320f49382876acbb422bb3e37ef5fa88
+SHA512 (nspr-4.38.tar.gz) = 689c059c799d792826a5b40236439b823d099f8621036e901c2d4d9af428f33cef3f29506c541af7f8e42ba003c169813ef2acfd64e263b231729c6d3455efe5
+Size (nspr-4.38.tar.gz) = 1024854 bytes
 SHA1 (patch-ab) = 008f5b84994ad20e3b1a0de1e0f7a028932d03d2
-SHA1 (patch-ac) = 710fcb021ab009a28d655703ac1bd909da1e896b
+SHA1 (patch-ac) = 6562282cc3d846a114f53ca53b9287fa64d69052
 SHA1 (patch-ba) = 5fe843946d301405e6a4550d14553cf8506ad269
 SHA1 (patch-nspr_pr_include_md___netbsd.cfg) = a3aba89d02cd61f748862ebb3b76050873ccdd69
 SHA1 (patch-nspr_pr_src_pthreads_ptsynch.c) = 2aaa26d4b99978557523a4ead45e944684d1611a
