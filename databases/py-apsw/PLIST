@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/06/30 18:41:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/11/06 16:15:46 adam Exp $
 bin/apsw-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -38,9 +38,15 @@ ${PYSITELIB}/apsw/speedtest.pyo
 ${PYSITELIB}/apsw/tests/__main__.py
 ${PYSITELIB}/apsw/tests/__main__.pyc
 ${PYSITELIB}/apsw/tests/__main__.pyo
+${PYSITELIB}/apsw/tests/carray.py
+${PYSITELIB}/apsw/tests/carray.pyc
+${PYSITELIB}/apsw/tests/carray.pyo
 ${PYSITELIB}/apsw/tests/ftstests.py
 ${PYSITELIB}/apsw/tests/ftstests.pyc
 ${PYSITELIB}/apsw/tests/ftstests.pyo
+${PYSITELIB}/apsw/tests/jsonb.py
+${PYSITELIB}/apsw/tests/jsonb.pyc
+${PYSITELIB}/apsw/tests/jsonb.pyo
 ${PYSITELIB}/apsw/tests/sessiontests.py
 ${PYSITELIB}/apsw/tests/sessiontests.pyc
 ${PYSITELIB}/apsw/tests/sessiontests.pyo
