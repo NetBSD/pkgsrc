@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.144 2025/08/02 09:29:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.145 2025/11/06 16:11:08 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -45,6 +45,7 @@ share/doc/sqlite3/c3ref/c_access_exists.html
 share/doc/sqlite3/c3ref/c_alter_table.html
 share/doc/sqlite3/c3ref/c_any.html
 share/doc/sqlite3/c3ref/c_blob.html
+share/doc/sqlite3/c3ref/c_carray_blob.html
 share/doc/sqlite3/c3ref/c_checkpoint_full.html
 share/doc/sqlite3/c3ref/c_config_covering_index_scan.html
 share/doc/sqlite3/c3ref/c_dbconfig_defensive.html
@@ -64,11 +65,11 @@ share/doc/sqlite3/c3ref/c_open_autoproxy.html
 share/doc/sqlite3/c3ref/c_prepare_dont_log.html
 share/doc/sqlite3/c3ref/c_scanstat_complex.html
 share/doc/sqlite3/c3ref/c_scanstat_est.html
+share/doc/sqlite3/c3ref/c_scm_branch.html
 share/doc/sqlite3/c3ref/c_serialize_nocopy.html
 share/doc/sqlite3/c3ref/c_setlk_block_on_connect.html
 share/doc/sqlite3/c3ref/c_shm_exclusive.html
 share/doc/sqlite3/c3ref/c_shm_nlock.html
-share/doc/sqlite3/c3ref/c_source_id.html
 share/doc/sqlite3/c3ref/c_static.html
 share/doc/sqlite3/c3ref/c_status_malloc_count.html
 share/doc/sqlite3/c3ref/c_stmtstatus_counter.html
@@ -79,6 +80,7 @@ share/doc/sqlite3/c3ref/c_txn_none.html
 share/doc/sqlite3/c3ref/c_vtab_constraint_support.html
 share/doc/sqlite3/c3ref/c_win32_data_directory_type.html
 share/doc/sqlite3/c3ref/cancel_auto_extension.html
+share/doc/sqlite3/c3ref/carray_bind.html
 share/doc/sqlite3/c3ref/changes.html
 share/doc/sqlite3/c3ref/clear_bindings.html
 share/doc/sqlite3/c3ref/close.html
@@ -172,6 +174,7 @@ share/doc/sqlite3/c3ref/result_blob.html
 share/doc/sqlite3/c3ref/result_subtype.html
 share/doc/sqlite3/c3ref/serialize.html
 share/doc/sqlite3/c3ref/set_authorizer.html
+share/doc/sqlite3/c3ref/set_errmsg.html
 share/doc/sqlite3/c3ref/set_last_insert_rowid.html
 share/doc/sqlite3/c3ref/setlk_timeout.html
 share/doc/sqlite3/c3ref/sleep.html
@@ -296,6 +299,7 @@ share/doc/sqlite3/fullsql.html
 share/doc/sqlite3/gencol.html
 share/doc/sqlite3/geopoly.html
 share/doc/sqlite3/getthecode.html
+share/doc/sqlite3/glossary.html
 share/doc/sqlite3/hirely.html
 share/doc/sqlite3/howitworks.html
 share/doc/sqlite3/howtocompile.html
@@ -714,6 +718,7 @@ share/doc/sqlite3/releaselog/3_50_1.html
 share/doc/sqlite3/releaselog/3_50_2.html
 share/doc/sqlite3/releaselog/3_50_3.html
 share/doc/sqlite3/releaselog/3_50_4.html
+share/doc/sqlite3/releaselog/3_51_0.html
 share/doc/sqlite3/releaselog/3_5_0.html
 share/doc/sqlite3/releaselog/3_5_1.html
 share/doc/sqlite3/releaselog/3_5_2.html
@@ -818,7 +823,6 @@ share/doc/sqlite3/releaselog/3_9_3.html
 share/doc/sqlite3/releaselog/current.html
 share/doc/sqlite3/requirements.html
 share/doc/sqlite3/rescode.html
-share/doc/sqlite3/robots.txt
 share/doc/sqlite3/rowidtable.html
 share/doc/sqlite3/rowvalue.html
 share/doc/sqlite3/rsync.html

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2025/06/30 18:39:24 adam Exp $
+# $NetBSD: Makefile,v 1.128 2025/11/06 16:11:08 adam Exp $
 
 .include "../../databases/sqlite3/Makefile.common"
 
@@ -19,10 +19,6 @@ INSTALL_TARGET=		install-core
 PLIST_SUBST+=		TCL_TRIM_DOTS=${PKGVERSION_NOREV:S/.//g}
 
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.6.10
-
-# avoid conflict with lang/tcl
-post-extract:
-	${MV} ${WRKSRC}/doc/sqlite3.n ${WRKSRC}/doc/sqlite3-tcl.n
 
 .include "../../mk/bsd.prefs.mk"
 
