@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2025/11/06 06:45:51 dkazankov Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/11/06 06:53:52 dkazankov Exp $
 
 BUILDLINK_TREE+=	libadalang-25
 
@@ -20,6 +20,9 @@ BUILDLINK_FNAME_TRANSFORM.libadalang-25+=	\
 .include "../../textproc/ada-prettier-ada-25/buildlink3.mk"
 .include "../../devel/ada-libgpr2-25/buildlink3.mk"
 .include "../../devel/ada-langkit-support-25/buildlink3.mk"
+
+.include "../../devel/gmp/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 
 .endif
 
