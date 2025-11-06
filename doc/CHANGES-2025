@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6543 2025/11/06 16:13:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6544 2025/11/06 16:22:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9484,3 +9484,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/sqlite3-tcl to 3.51.0 [adam 2025-11-06]
 	Updated databases/sqlite3-diff to 3.51.0 [adam 2025-11-06]
 	Updated devel/lemon to 1.0.3.51.0 [adam 2025-11-06]
+	Updated databases/py-apsw to 3.51.0.0 [adam 2025-11-06]
+	Updated fonts/harfbuzz to 12.2.0 [adam 2025-11-06]
+	Updated fonts/harfbuzz-icu to 12.2.0 [adam 2025-11-06]
