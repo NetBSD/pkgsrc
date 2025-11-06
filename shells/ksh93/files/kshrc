@@ -1,4 +1,13 @@
 #
+# Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
+# Use is subject to license terms.
+#
+
+# The contents of this file are subject to the terms of the
+# Common Development and Distribution License (the "License").
+# You may not use this file except in compliance with the License.
+
+#
 # This file is sourced by interactive ksh93 shells before ${HOME}/.kshrc
 #
 
@@ -9,12 +18,11 @@ if [[ "$(set +o)" != ~(Er)--(gmacs|emacs|vi)( .*|) ]] ; then
 	set -o gmacs
 	# enable multiline input mode
 	set -o multiline
-	# mark directories with a trailing slash
-	set -o markdirs
 	# enable globstar mode (match subdirs with **/)
 	set -o globstar
 fi
 
+#
 # Set a default prompt (<username>@<hostname>:<path><"($|#) ">) if
 # then variable does not exist in the environment.
 #
@@ -33,6 +41,7 @@ if [[ "$(set)" != ~(E)PS1= && -z "${PS1-}" ]] ; then
 		)'
 fi
 
+#
 # Source extentions (pushd, popd and others) provided with ksh93u+m
 #
 for fun in @PREFIX@/libexec/ksh93/*; do
@@ -51,7 +60,7 @@ cls() {
 	tput clear; echo $'\e[3J';
 }
 
-## kill process
+## kill job
 stop() {
 	kill -9 "${@:-%%}";
 }
