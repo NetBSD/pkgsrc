@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/07/27 09:17:06 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/11/06 15:59:39 adam Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl90-${TCL_VERSION}
@@ -32,9 +32,9 @@ HAS_CONFIGURE=			yes
 .  if !empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
 CONFIGURE_ARGS+=		--build=${NATIVE_MACHINE_GNU_PLATFORM:Q}
 .  else
-CONFIGURE_ARGS+=		--build=${MACHINE_GNU_PLATFORM:Q}
+CONFIGURE_ARGS+=		--build=${MACHINE_GNU_PLATFORM}
 .  endif
-CONFIGURE_ARGS+=		--host=${MACHINE_GNU_PLATFORM:Q}
+CONFIGURE_ARGS+=		--host=${MACHINE_GNU_PLATFORM}
 TCL_PREFIX=			${PREFIX}/${TCL_SUBDIR}
 CONFIGURE_ARGS+=		--prefix=${TCL_PREFIX:Q}
 CONFIGURE_ARGS+=		--infodir=${TCL_PREFIX:Q}/info
@@ -117,14 +117,13 @@ pre-fetch:
 
 .if ${OPSYS} == "Darwin"
 post-build:
-.  for lib in itcl${ITCL_VERSION}/libitcl${ITCL_VERSION}.dylib \
-	      sqlite${SQLITE3_VERSION}/libsqlite${SQLITE3_VERSION}.dylib \
-	      tdbc${TDBC_VERSION}/libtdbc${TDBC_VERSION}.dylib \
-	      tdbcmysql${TDBC_VERSION}/libtdbcmysql${TDBC_VERSION}.dylib \
-	      tdbcodbc${TDBC_VERSION}/libtdbcodbc${TDBC_VERSION}.dylib \
-	      tdbcpostgres${TDBC_VERSION}/libtdbcpostgres${TDBC_VERSION}.dylib \
-	      tdbcsqlite${TDBC_VERSION}/libtdbcsqlite${TDBC_VERSION}.dylib \
-	      thread${THREAD_VERSION}/libthread${THREAD_VERSION}.dylib
+.  for lib in itcl${ITCL_VERSION}/libtcl9itcl${ITCL_VERSION}.dylib \
+	      sqlite${SQLITE3_VERSION}/libtcl9sqlite${SQLITE3_VERSION}.dylib \
+	      tdbc${TDBC_VERSION}/libtcl9tdbc${TDBC_VERSION}.dylib \
+	      tdbcmysql${TDBC_VERSION}/libtcl9tdbcmysql${TDBC_VERSION}.dylib \
+	      tdbcodbc${TDBC_VERSION}/libtcl9tdbcodbc${TDBC_VERSION}.dylib \
+	      tdbcpostgres${TDBC_VERSION}/libtcl9tdbcpostgres${TDBC_VERSION}.dylib \
+	      thread${THREAD_VERSION}/libtcl9thread${THREAD_VERSION}.dylib
 	install_name_tool -id ${TCL_PREFIX}/lib/${lib} ${WRKSRC}/unix/pkgs/${lib}
 .  endfor
 .endif
