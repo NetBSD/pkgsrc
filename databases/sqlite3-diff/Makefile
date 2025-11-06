@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.1 2025/05/20 16:46:24 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2025/11/06 16:13:24 adam Exp $
 
 .include "../../databases/sqlite3/Makefile.common"
 
-DISTNAME=		sqlite-src-${SQLITE3_DISTVERSION}
-PKGNAME=		sqlite3-diff-${SQLITE3_VERSION}
-CATEGORIES=		databases
-EXTRACT_SUFX=		.zip
+DISTNAME=	sqlite-src-${SQLITE3_DISTVERSION}
+PKGNAME=	sqlite3-diff-${SQLITE3_VERSION}
+CATEGORIES=	databases
+EXTRACT_SUFX=	.zip
 
-MAINTAINER=		schmonz@NetBSD.org
-COMMENT=		Display content differences between SQLite databases
+MAINTAINER=	schmonz@NetBSD.org
+COMMENT=	Display content differences between SQLite databases
 
-HAS_CONFIGURE=		yes
+HAS_CONFIGURE=	yes
 
-BUILD_TARGET=		sqldiff
+BUILD_TARGET=	sqldiff
 
 INSTALLATION_DIRS=	bin
 
