@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2025/10/12 09:30:46 dkazankov Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2025/11/06 07:31:10 dkazankov Exp $
 
 BUILDLINK_TREE+=	prettier-ada-25
 
@@ -15,6 +15,9 @@ BUILDLINK_CONTENTS_FILTER.prettier-ada-25=	\
 
 BUILDLINK_FNAME_TRANSFORM.prettier-ada-25+=	\
 	-e "s|${BUILDLINK_DIR}/${GNAT_PKGBASE}/|${BUILDLINK_DIR}/|g"
+
+.include "../../devel/ada-gnatcoll-core-25/buildlink3.mk"
+.include "../../textproc/ada-vss-25/buildlink3.mk"
 
 .endif
 
