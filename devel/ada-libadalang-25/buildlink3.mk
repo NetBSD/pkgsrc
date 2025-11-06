@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/09/04 12:23:05 dkazankov Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/11/06 06:45:51 dkazankov Exp $
 
 BUILDLINK_TREE+=	libadalang-25
 
@@ -14,6 +14,12 @@ BUILDLINK_CONTENTS_FILTER.libadalang-25=	\
 
 BUILDLINK_FNAME_TRANSFORM.libadalang-25+=	\
 	-e "s|${BUILDLINK_DIR}/${GNAT_PKGBASE}/|${BUILDLINK_DIR}/|g"
+
+.include "../../devel/ada-gnatcoll-core-25/buildlink3.mk"
+.include "../../devel/ada-gnatcoll-bindings-25/buildlink3.mk"
+.include "../../textproc/ada-prettier-ada-25/buildlink3.mk"
+.include "../../devel/ada-libgpr2-25/buildlink3.mk"
+.include "../../devel/ada-langkit-support-25/buildlink3.mk"
 
 .endif
 
