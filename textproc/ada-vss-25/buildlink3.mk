@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2025/10/12 09:14:55 dkazankov Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2025/11/06 07:30:41 dkazankov Exp $
 
 BUILDLINK_TREE+=	vss-25
 
@@ -15,6 +15,8 @@ BUILDLINK_CONTENTS_FILTER.vss-25=	\
 
 BUILDLINK_FNAME_TRANSFORM.vss-25+=	\
 	-e "s|${BUILDLINK_DIR}/${GNAT_PKGBASE}/|${BUILDLINK_DIR}/|g"
+
+.include "../../textproc/ada-xmlada-25/buildlink3.mk"
 
 .endif
 
