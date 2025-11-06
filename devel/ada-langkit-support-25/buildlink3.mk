@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2025/10/12 09:55:03 dkazankov Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/11/06 06:45:21 dkazankov Exp $
 
 BUILDLINK_TREE+=	langkit-support-25
 
@@ -15,6 +15,11 @@ BUILDLINK_CONTENTS_FILTER.langkit-support-25=	\
 
 BUILDLINK_FNAME_TRANSFORM.langkit-support-25+=	\
 	-e "s|${BUILDLINK_DIR}/${GNAT_PKGBASE}/|${BUILDLINK_DIR}/|g"
+
+.include "../../math/ada-adasat-25/buildlink3.mk"
+.include "../../devel/ada-gnatcoll-core-25/buildlink3.mk"
+.include "../../devel/ada-gnatcoll-bindings-25/buildlink3.mk"
+.include "../../textproc/ada-prettier-ada-25/buildlink3.mk"
 
 .endif
 
