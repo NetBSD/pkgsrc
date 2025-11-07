@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2025/10/23 20:36:15 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2025/11/07 21:53:46 ryoon Exp $
 
-DISTNAME=	at-spi2-core-2.54.0
-PKGREVISION=	9
+DISTNAME=	at-spi2-core-2.58.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/at-spi2-core/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -41,7 +40,7 @@ MESON_BINARY.glib-genmarshal=	${TOOLBASE}/bin/glib-genmarshal
 MESON_BINARY.glib-mkenums=	${TOOLBASE}/bin/glib-mkenums
 .endif
 
-PYTHON_FOR_BUILD_ONLY=	tool
+PY_PATCHPLIST=	yes
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/*.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
@@ -51,4 +50,6 @@ PKGCONFIG_OVERRIDE_STAGE=	post-configure
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../lang/python/tool.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
