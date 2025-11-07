@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/11/07 09:18:43 adam Exp $
+
+BLAKE2s (gcem-1.18.0.tar.gz) = da5412cb71c9f23af8e49793f5b954fe637b8c23dbf91f49d405a7a7ad77d7b2
+SHA512 (gcem-1.18.0.tar.gz) = b9bbf16cfc3488a99ab371db36879bdde1699f0890db609278c03fb161cdffef0fbd34dbbf6004d6352e9e90c49e08e6b77357c4a424b0b5e174198b42dc049c
+Size (gcem-1.18.0.tar.gz) = 57834 bytes
