@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6548 2025/11/07 09:29:08 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6549 2025/11/07 09:53:21 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9492,3 +9492,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 27.5.2 [pin 2025-11-07]
 	Added math/gcem version 1.18.0 [adam 2025-11-07]
 	Updated audio/fluidsynth to 2.5.1 [adam 2025-11-07]
+	Updated devel/ast-grep to 0.39.9 [pin 2025-11-07]
