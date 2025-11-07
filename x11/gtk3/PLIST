@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2025/08/10 14:04:39 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.48 2025/11/07 22:15:56 ryoon Exp $
 bin/gtk-builder-tool
 bin/gtk-encode-symbolic-svg
 bin/gtk-launch
@@ -453,10 +453,10 @@ lib/libgailutil-3.so.0
 lib/libgailutil-3.so.0.0.0
 lib/libgdk-3.so
 lib/libgdk-3.so.0
-lib/libgdk-3.so.0.2418.32
+lib/libgdk-3.so.0.2419.32
 lib/libgtk-3.so
 lib/libgtk-3.so.0
-lib/libgtk-3.so.0.2418.32
+lib/libgtk-3.so.0.2419.32
 lib/pkgconfig/gail-3.0.pc
 lib/pkgconfig/gdk-3.0.pc
 ${PLIST.quartz}lib/pkgconfig/gdk-quartz-3.0.pc
