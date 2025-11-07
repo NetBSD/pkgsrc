@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6546 2025/11/07 06:25:04 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6547 2025/11/07 06:26:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9489,3 +9489,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/harfbuzz-icu to 12.2.0 [adam 2025-11-06]
 	Updated devel/jj to 0.35.0 [wiz 2025-11-06]
 	Updated devel/lazygit to 0.56.0 [pin 2025-11-07]
+	Updated shells/oh-my-posh to 27.5.2 [pin 2025-11-07]
