@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6551 2025/11/07 09:57:25 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6552 2025/11/07 10:32:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9495,3 +9495,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ast-grep to 0.39.9 [pin 2025-11-07]
 	Updated games/chess-tui to 1.6.2 [pin 2025-11-07]
 	Updated misc/tailspin to 5.5.0 [pin 2025-11-07]
+	Updated lang/py-libcst to 1.8.6 [adam 2025-11-07]
+	Updated devel/py-iniconfig to 2.3.0 [adam 2025-11-07]
