@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.20 2025/01/12 19:20:26 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/11/07 21:53:46 ryoon Exp $
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-accessible.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-action.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-application.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-collection.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-component.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-constants.h
+${PLIST.dbus}include/at-spi-2.0/atspi/atspi-device-a11y-manager.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-device-legacy.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-device-listener.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-device.h
@@ -72,7 +73,7 @@ ${PLIST.dbus}lib/gnome-settings-daemon-3.0/gtk-modules/at-spi2-atk.desktop
 ${PLIST.dbus}lib/gtk-2.0/modules/libatk-bridge.so
 lib/libatk-1.0.so
 lib/libatk-1.0.so.0
-lib/libatk-1.0.so.0.25409.1
+lib/libatk-1.0.so.0.25810.1
 ${PLIST.dbus}lib/libatk-bridge-2.0.so
 ${PLIST.dbus}lib/libatk-bridge-2.0.so.0
 ${PLIST.dbus}lib/libatk-bridge-2.0.so.0.0.0
@@ -82,6 +83,8 @@ ${PLIST.dbus}lib/libatspi.so.0.0.1
 ${PLIST.dbus}lib/pkgconfig/atk-bridge-2.0.pc
 lib/pkgconfig/atk.pc
 ${PLIST.dbus}lib/pkgconfig/atspi-2.pc
+${PYSITELIB}/gi/overrides/Atspi.py
+${PYSITELIB}/gi/overrides/Atspi.pyc
 ${PLIST.dbus}lib/systemd/user/at-spi-dbus-bus.service
 ${PLIST.dbus}libexec/at-spi-bus-launcher
 ${PLIST.dbus}libexec/at-spi2-registryd
@@ -185,6 +188,7 @@ share/locale/tr/LC_MESSAGES/at-spi2-core.mo
 share/locale/tt/LC_MESSAGES/at-spi2-core.mo
 share/locale/ug/LC_MESSAGES/at-spi2-core.mo
 share/locale/uk/LC_MESSAGES/at-spi2-core.mo
+share/locale/uz/LC_MESSAGES/at-spi2-core.mo
 share/locale/uz@cyrillic/LC_MESSAGES/at-spi2-core.mo
 share/locale/vi/LC_MESSAGES/at-spi2-core.mo
 share/locale/wa/LC_MESSAGES/at-spi2-core.mo

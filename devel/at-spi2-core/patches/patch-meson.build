@@ -1,4 +1,4 @@
-$NetBSD: patch-meson.build,v 1.2 2025/10/04 21:12:07 prlw1 Exp $
+$NetBSD: patch-meson.build,v 1.3 2025/11/07 21:53:47 ryoon Exp $
 
 tests/at-spi2-atk/atk_test_util.c calls putenv() which isn't part of
 POSIX_C_SOURCE. Later versions of at-spi2-core try _XOPEN_SOURCE and
@@ -12,14 +12,14 @@ Add _GNU_SOURCE for Linux as per
 
 https://mail-index.netbsd.org/tech-pkg/2025/10/03/msg031582.html
 
---- meson.build.orig	2024-09-14 18:26:17.000000000 +0000
+--- meson.build.orig	2025-10-23 11:48:35.146473287 +0000
 +++ meson.build
 @@ -8,7 +8,7 @@ project('at-spi2-core', 'c',
          ],
-         meson_version: '>= 0.63.0')
+         meson_version: '>= 0.64.0')
  
--add_project_arguments([ '-D_POSIX_C_SOURCE=200809L', '-D_DEFAULT_SOURCE' ], language: 'c')
-+add_project_arguments([ '-D_GNU_SOURCE' ], language: 'c')
+-add_project_arguments([ '-D_XOPEN_SOURCE=700', '-D_GNU_SOURCE' ], language: 'c')
++add_project_arguments(['-D_GNU_SOURCE' ], language: 'c')
  
  fs = import('fs')
  
