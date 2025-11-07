@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6549 2025/11/07 09:53:21 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6550 2025/11/07 09:55:22 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9493,3 +9493,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added math/gcem version 1.18.0 [adam 2025-11-07]
 	Updated audio/fluidsynth to 2.5.1 [adam 2025-11-07]
 	Updated devel/ast-grep to 0.39.9 [pin 2025-11-07]
+	Updated games/chess-tui to 1.6.2 [pin 2025-11-07]
