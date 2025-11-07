@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.8 2025/05/03 17:05:17 nia Exp $
+# $NetBSD: options.mk,v 1.9 2025/11/07 09:28:48 adam Exp $
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.fluidsynth
+PKG_OPTIONS_VAR=	PKG_OPTIONS.fluidsynth
 
 # Audio backends
 PKG_SUPPORTED_OPTIONS=		alsa jack portaudio pulseaudio sdl2 sdl3

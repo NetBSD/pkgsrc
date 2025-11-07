@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2025/10/23 20:35:42 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2025/11/07 09:28:48 adam Exp $
 
 BUILDLINK_TREE+=	fluidsynth
 
@@ -36,7 +36,6 @@ pkgbase := fluidsynth
 .  include "../../devel/SDL2/buildlink3.mk"
 .endif
 .include "../../audio/libsndfile/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .endif # FLUIDSYNTH_BUILDLINK3_MK
 
