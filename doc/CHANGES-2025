@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6552 2025/11/07 10:32:19 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6553 2025/11/07 17:43:47 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9497,3 +9497,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/tailspin to 5.5.0 [pin 2025-11-07]
 	Updated lang/py-libcst to 1.8.6 [adam 2025-11-07]
 	Updated devel/py-iniconfig to 2.3.0 [adam 2025-11-07]
+	Updated converters/dos2unix to 7.5.3 [ryoon 2025-11-07]
