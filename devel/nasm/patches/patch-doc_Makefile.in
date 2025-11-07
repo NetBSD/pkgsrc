@@ -1,46 +1,46 @@
-$NetBSD: patch-doc_Makefile.in,v 1.4 2020/08/08 18:35:10 nia Exp $
+$NetBSD: patch-doc_Makefile.in,v 1.5 2025/11/07 22:10:31 ryoon Exp $
 
 Use correct paths and tools.
 Do not build nasmdoc.pdf.
 Avoid cp -u, it is not portable.
 
---- doc/Makefile.in.orig	2020-07-18 01:04:07.000000000 +0000
+--- doc/Makefile.in.orig	2025-10-11 06:44:05.000000000 +0000
 +++ doc/Makefile.in
-@@ -20,7 +20,7 @@ INSTALL		= @INSTALL@
+@@ -33,7 +33,7 @@ INSTALL		= @INSTALL@
  INSTALL_PROGRAM	= @INSTALL_PROGRAM@
  INSTALL_DATA	= @INSTALL_DATA@
  
--PERL		= perl -I$(srcdir)
-+PERL		= ${PERL5} -I$(srcdir)
+-PERL		= perl
++PERL		= ${PERL5}
+ RUNPERL		= $(PERL) -I$(top_srcdir)/perllib -I$(srcdir)
  
  PDFOPT		= @PDFOPT@
+@@ -62,8 +62,8 @@ SRCS		= nasmdoc.src
+ # All input files (except auto-dependencies)
+ ALLSRCS		= $(SRCS) $(GENSRC)
  
-@@ -40,8 +40,8 @@ XZFILES         = @XZFILES@
- HTMLAUX		= nasmdoc.css local.css nasmlogw.png
- 
- SRCS		= nasmdoc.src inslist.src changes.src warnings.src version.src
 -OUT		= html nasmdoc.txt nasmdoc.pdf $(XZFILES)
 -XZOUT           = nasmdoc.pdf.xz
 +OUT		= html nasmdoc.txt $(XZFILES)
-+XZOUT           =
++XZOUT           = 
  
- .SUFFIXES:
- .SUFFIXES: .pfa .ph
-@@ -57,7 +57,7 @@ inslist.src: inslist.pl ../x86/insns.dat
+ # Use "make install PDFZ=.xz" to install pdf.xz
+ PDF             =
+@@ -91,7 +91,7 @@ htmltarget=html/nasm00.html
  
  html: $(HTMLAUX)
  	$(MKDIR_P) html
 -	for f in $(HTMLAUX); do $(CP_UF) "$(srcdir)/$$f" html/; done
 +	for f in $(HTMLAUX); do $(CP_F) "$(srcdir)/$$f" html/; done
- 	$(MAKE) html/nasmdoc0.html
+ 	$(MAKE) $(htmltarget)
  
- RDSRC = $(PERL) $(srcdir)/rdsrc.pl -I$(srcdir)/
-@@ -116,7 +116,7 @@ install: all
- 	$(MKDIR_P) $(DESTDIR)$(htmldir)
- 	$(INSTALL_DATA) html/* $(DESTDIR)$(htmldir)
- 	$(MKDIR_P) $(DESTDIR)$(docdir)
--	$(INSTALL_DATA) nasmdoc.pdf nasmdoc.txt $(DESTDIR)$(docdir)
-+	$(INSTALL_DATA) nasmdoc.txt $(DESTDIR)$(docdir)
+ RDSRC = $(RUNPERL) $(srcdir)/rdsrc.pl -I$(srcdir) -M$(@F).dep
+@@ -158,7 +158,7 @@ install_pdf: nasmdoc.pdf$(PDFZ)
+ 	$(MKDIR_P) $(DESTDIR)$(pdfdir)
+ 	$(INSTALL_DATA) nasmdoc.pdf$(PDFZ) $(DESTDIR)$(pdfdir)
+ 
+-install: install_html install_pdf
++install: install_html
  
  #
  # Dummy rules that changes make behavior
