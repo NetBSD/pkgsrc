@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.192 2025/10/21 18:46:02 tnn Exp $
+$NetBSD: distinfo,v 1.193 2025/11/07 09:40:55 jperkin Exp $
 
 BLAKE2s (rust-1.89.0-aarch64-apple-darwin.tar.gz) = f88fb0fd3e1204d91dc89948bc6ae38fd212d36d2973521bc3d47e72c6d13456
 SHA512 (rust-1.89.0-aarch64-apple-darwin.tar.gz) = e9ec8d8f60d1f38e01e389ec5d4f45f22c186b0fde9e2f68b7e869f4f2e54d049f7790d6863a85ad9335d317668dea52a39f055b2e30f17a0c3824d9f01d2ab8
@@ -114,6 +114,7 @@ SHA1 (patch-compiler_rustc__target_src_spec_targets_mipsel__unknown__netbsd.rs) 
 SHA1 (patch-libc-0.2.168_src_unix_bsd_netbsdlike_netbsd_mod.rs) = c5cd529719daee44aead47ffd97e682ca9d9a1ae
 SHA1 (patch-library_backtrace_src_symbolize_gimli.rs) = 9d5ef634c5a454e474ea5fee76da9bb768f5b3d9
 SHA1 (patch-library_backtrace_src_symbolize_gimli_elf.rs) = 8b18e1dbde59f3e8f20e93c7669618b2c7a13294
+SHA1 (patch-library_std_src_sys_fs_unix.rs) = 7c4055b51f51194c94005eb12c0be4e004858aa1
 SHA1 (patch-library_std_src_sys_pal_unix_mod.rs) = 2e68c3a71b221cb1bfeb313327f366758782fe51
 SHA1 (patch-src_bootstrap_bootstrap.py) = b2ccb6a2c3ca180a3a39493314d56285a7a6d8ea
 SHA1 (patch-src_bootstrap_src_core_build__steps_compile.rs) = e928203ed4734c93cc33c5a3f7879cf18dcecc83
