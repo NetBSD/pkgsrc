@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2025/04/21 07:02:42 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/11/07 10:32:02 adam Exp $
 
-DISTNAME=	iniconfig-2.1.0
+DISTNAME=	iniconfig-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/iniconfig/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/pytest-dev/iniconfig
 COMMENT=	Brain-dead simple config-ini parsing
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.26:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=77:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	# none
 
