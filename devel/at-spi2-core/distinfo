@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.35 2025/10/04 21:12:07 prlw1 Exp $
+$NetBSD: distinfo,v 1.36 2025/11/07 21:53:46 ryoon Exp $
 
-BLAKE2s (at-spi2-core-2.54.0.tar.xz) = 8a925502b14e14f5d0265a6e9acc50f208849cb880042d06f3e82385b8a9a6ff
-SHA512 (at-spi2-core-2.54.0.tar.xz) = ac697055f9e31b264da55dc1b7c92c85905bc6c32dcd6ac7a699f9cc0dec933f7bb1323098e7c2f6bdce91bc7195bd8b4625e39216d9671c85df25a0071f0a3e
-Size (at-spi2-core-2.54.0.tar.xz) = 575368 bytes
-SHA1 (patch-atk-adaptor_event.c) = 6d4c5f1669a40644a0787e6a88065959ec42a8f9
-SHA1 (patch-atspi_atspi-event-listener.c) = 7e980ab7ebb86592ff9a743b3f2f1ecc66c75bfd
-SHA1 (patch-atspi_atspi-misc.c) = ec309d8e6dfbdc4822ffc0c1b9a442c6f2fba0a8
-SHA1 (patch-meson.build) = 7aabe8c5e1ac076cfc0bae2997bc663ad7b5147d
+BLAKE2s (at-spi2-core-2.58.1.tar.xz) = 41f9e133828ebb94c4a9e87b56ef46354f74656c17ae67a278ded73661f03c59
+SHA512 (at-spi2-core-2.58.1.tar.xz) = 95ab458262b0e310f71760f68ec2247d0a6cc9349ca0919da4867815ff252a5820efb41f8b815b9d715a1836daaab6e03db0fd4a05ada420894c7383b47f410e
+Size (at-spi2-core-2.58.1.tar.xz) = 584916 bytes
+SHA1 (patch-meson.build) = 09823442683c0eadd7670a4ff06ef040a9e2f396
 SHA1 (patch-registryd_registry.c) = 69d8be4a54af1f3749d38ad4f1d6ad33296765fe
