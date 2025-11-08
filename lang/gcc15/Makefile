@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2025/08/09 15:53:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/11/08 07:04:02 mrg Exp $
 
 PKGNAME=	${GCC_PKGNAME}-${GCC15_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc15-libs needs to be bumped to be at least 1 more than the
 ## PKGREVISION of this package!
-#PKGREVISION=	1
+PKGREVISION=	1
 COMMENT=	The GNU Compiler Collection (GCC) - 15.0 Release Series
 
 LANGS=		c
