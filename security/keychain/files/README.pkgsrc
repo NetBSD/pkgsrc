@@ -37,9 +37,9 @@ GPGKEYS
 	single key ID or a space separated list of key IDs. If GPGKEYS is
 	unset, startkeychain will not attempt to load any.
 
-Defaults my be overridden by either setting these variable in a local
-session or inside a dedicated ~/.keychainrc configuration file. An
-example ~/.keychainrc may look as follows:
+Defaults my be overridden by either setting these variables on the 
+command line or inside a dedicated ~/.keychainrc configuration file. 
+An example ~/.keychainrc may look as follows:
 
 KCHOPTS="--gpg2 --noask"
 SSHKEYS="netbsd_rsa user_ed25519"
