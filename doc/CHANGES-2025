@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6560 2025/11/08 02:37:44 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.6561 2025/11/08 02:39:29 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9505,3 +9505,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/py-gdal to 3.12.0 [gdt 2025-11-08]
 	Updated lang/go124 to 1.24.10 [bsiegert 2025-11-08]
 	Updated lang/go125 to 1.25.4 [bsiegert 2025-11-08]
+	Updated net/gh to 2.83.0 [bsiegert 2025-11-08]
