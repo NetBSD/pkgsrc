@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2025/11/07 22:10:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.72 2025/11/08 01:43:44 ryoon Exp $
 
 DISTNAME=	nasm-3.01
 CATEGORIES=	devel lang
@@ -9,6 +9,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.nasm.us/
 COMMENT=	General-purpose x86 assembler
 LICENSE=	2-clause-bsd
+
+USE_LANGUAGE=		c
+USE_CC_FEATURES=	c17
+FORCE_C_STD=		c17
 
 USE_TOOLS+=		gmake makeinfo perl
 GNU_CONFIGURE=		yes
