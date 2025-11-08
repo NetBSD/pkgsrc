@@ -1,0 +1,68 @@
+.\" Written by Paolo Vincenzo Olivo <vins@NetBSD.org> (2025)
+.\" License: public domain 
+.Dd November 8, 2025
+.Dt STARTKEYCHAIN 1
+.Os
+.Sh NAME
+.Nm startkeychain 
+.Nd keychain launcher  
+.Sh SYNOPSIS
+.Nm
+.Op Fl cefh 
+.Sh DESCRIPTION
+.Pp
+.Xr keychain 1 is a manager for both ssh-agent and gpg-agent. It allows
+shells and cron jobs to share a single ssh-agent or gpg-agent
+process. keychain typically runs from the login shell environment
+setting, i.e ~/.shrc.
+.Pp
+.Nm
+is a companion script for keychain, designed to automate its usage. The
+script loads all SSH and GPG keys requested by the user, and updates the
+environment by sourcing the generated files found in the
+~/.keychain directory.
+.Sh OPTIONS
+ When used interactively, startkeychain accepts a number of options: 
+.Bl -tag -width Ds
+.It Fl c 
+wipes all existing cached keys/passphrases first.
+.It Fl e
+ensures that only the specified keys are loaded.
+.It Fl f
+allow keychain to use a forwarded ssh-agent connection.
+.It Fl h
+print usage.
+.Sh ENVIRONMENT
+The following environment variables affect the execution of
+.Nm :
+.Bl -tag -width KCHOPTS
+.It Ev KCHOPTS
+This variable takes options for keychain like "--nocolor" or "--noask".
+See the keychain manpage for a full list. By default, startkeychain will
+pass `--quiet' to the keychain command line, making keychain only print
+messages in case of warning, error or required interactivity.
+.It Ev SSHKEYS
+This variable contains the list of keys to be loaded by their file
+names. The key list has to be space separated. If SSHKEYS is unset,
+startkeychain will attempt to load all user's ssh keys found in ~/.ssh,
+to an ssh-agent process
+.It Ev GPKEYS
+gpg keys to be loaded by keychain have to be specified by their key ID.
+The user can get a full list of keys and IDs in his secret keyring by
+running `gpg2 --list-secret-keys'. GPGKEYS defines a single key ID or a
+space separated list of key IDs. If GPGKEYS is unset, startkeychain will
+not attempt to load any.
+.El
+.Pp
+Defaults my be overridden by either setting these variables on the
+command line or inside a dedicated ~/.keychainrc configuration file.
+An example ~/.keychainrc may look as follows:
+
+.Bd -literal -offset indent
+KCHOPTS="--gpg2 --noask --quiet"
+SSHKEYS="user_rsa user_ed25519"
+GPGKEYS="user@netbsd.org
+.Sh SEE ALSO
+.Xr keychain 1 ,
+.Xr ssh-agent 1 ,
+.Xr gpg-agent 1
