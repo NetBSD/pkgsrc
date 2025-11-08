@@ -14,12 +14,13 @@ variables:
 KCHOPTS
 	This variable takes options for keychain like "--nocolor" or
 	"--noask".  Please see the keychain manpage for a full list. By
-	default, startkeychain will pass `--eval --gpg2' to the keychain
-	command line. The script also accepts a number of arguments:
-    
-	* -q  makes keychain only print messages in case of warning, error
-	      or required interactivity.
+	default, startkeychain will pass `--quiet' to the keychain command
+	line, making keychain only print messages in case of warning, error
+	or required interactivity. When used interactively, startkeychain 
+	also accepts a number of arguments: 
+
 	* -c  wipes all existing cached keys/passphrases first.
+	* -e  ensures that only the specified keys are loaded.
 	* -f  allow keychain to use a forwarded ssh-agent connection.
 	* -h  print usage.
 

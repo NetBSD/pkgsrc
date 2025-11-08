@@ -12,13 +12,13 @@
 [ -n "$GPGKEYS" ] || GPGKEYS=""
 
 # Allow to pass a number of keychain options as first argument.
-# By deafult, use gpg2 and ensure that only the specified keys are loaded.
+# Silence output by default, to allow this to be sourced in login scripts.
 
-[ -n "$KCHOPTS" ] || KCHOPTS="--eval --gpg2"
+[ -n "$KCHOPTS" ] || KCHOPTS="--quiet"
 case $1 in
-    -f) KCHOPTS="$KCHOPTS --ssh-allow-forwarded" ;;
     -c) KCHOPTS="$KCHOPTS --clear" ;;
-    -q) KCHOPTS="$KCHOPTS --quiet" ;;
+    -e) KCHOPTS="$KCHOPTS --eval" ;;
+    -f) KCHOPTS="$KCHOPTS --ssh-allow-forwarded" ;;
     -h) echo "usage: keychain [-fcq]"
 	exit 0 ;;
     -*|--*)
