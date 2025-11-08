@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2025/10/27 12:17:48 pin Exp $
+# $NetBSD: Makefile,v 1.7 2025/11/08 15:14:34 pin Exp $
 
-DISTNAME=	kibi-0.3.0
+DISTNAME=	kibi-0.3.1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ilai-deutel/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
