@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6563 2025/11/08 15:13:56 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6564 2025/11/08 15:14:53 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9508,3 +9508,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/gh to 2.83.0 [bsiegert 2025-11-08]
 	Updated sysutils/broot to 1.53.0 [pin 2025-11-08]
 	Updated textproc/csvlens to 0.14.0 [pin 2025-11-08]
+	Updated editors/kibi to 0.3.1 [pin 2025-11-08]
