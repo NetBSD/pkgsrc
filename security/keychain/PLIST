@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2016/08/18 06:09:01 nonaka Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/11/08 12:36:13 vins Exp $
 bin/keychain
+bin/startkeychain
 man/man1/keychain.1
+share/bash-completion/completions/keychain.bash
 share/doc/keychain/README.md
+share/doc/keychain/README.pkgsrc

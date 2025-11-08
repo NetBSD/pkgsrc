@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2025/11/03 16:37:52 vins Exp $
+# $NetBSD: Makefile,v 1.47 2025/11/08 12:36:13 vins Exp $
 
 DISTNAME=	keychain-2.9.8
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=funtoo/}
 
@@ -28,13 +29,22 @@ ASKPASS_PROGRAM=	${PREFIX}/bin/ssh-askpass
 
 MAKE_ENV+=	ASKPASS=${ASKPASS_PROGRAM:Q}
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/${PKGBASE}
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/${PKGBASE} \
+			share/bash-completion/completions
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/keychain ${DESTDIR}${PREFIX}/bin/keychain
 	${INSTALL_MAN} ${WRKSRC}/keychain.1	\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/README.md	\
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+
+post-install:
+	$(INSTALL_DATA) ${WRKSRC}/completions/keychain.bash	\
+		${DESTDIR}${PREFIX}/share/bash-completion/completions
+	${INSTALL_SCRIPT} ${FILESDIR}/startkeychain.sh		\
+		${DESTDIR}${PREFIX}/bin/startkeychain
+	${INSTALL_DATA} ${FILESDIR}/README.pkgsrc		\
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../mk/bsd.pkg.mk"
