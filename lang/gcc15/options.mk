@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2025/07/14 17:44:53 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2025/11/08 07:04:02 mrg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
-PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
+PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-cobol gcc-fortran \
 			gcc-go gcc-objc gcc-objc++ gcc-graphite \
 			always-libgcc
 PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc gcc-objc++ \
@@ -11,6 +11,10 @@ PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc gcc-objc++ \
 
 .if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=	nls
+. if ${MACHINE_PLATFORM:M*-x86_64} || ${MACHINE_PLATFORM:M*-aarch64}
+# Test riscv64 as well, it should work.
+PKG_SUGGESTED_OPTIONS+=	gcc-cobol
+. endif
 .elif ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	nls
 .elif ${OPSYS} == "DragonFly"
@@ -150,6 +154,10 @@ LANGS+=			go
 
 .if !empty(PKG_OPTIONS:Mgcc-fortran)
 LANGS+=			fortran
+.endif
+
+.if !empty(PKG_OPTIONS:Mgcc-cobol)
+LANGS+=			cobol
 .endif
 
 .if !empty(PKG_OPTIONS:Mgcc-c++)

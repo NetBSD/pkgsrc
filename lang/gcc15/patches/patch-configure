@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2025/11/08 07:04:02 mrg Exp $
+
+Enable COBOL on NetBSD amd64/arm64/riscv64.
+
+
+--- configure.orig	2025-08-07 23:51:39.874338130 -0700
++++ configure	2025-11-05 19:28:09.763698065 -0800
+@@ -3581,14 +3581,14 @@ case ,${enable_languages}, in
+     ;;
+   *)
+     case "${target}" in
+-      aarch64-*-linux*|x86_64-*-linux*)
++      aarch64-*-linux*|x86_64-*-linux*|aarch64-*-netbsd*|x86_64-*-netbsd*|riscv64-*-netbsd*)
+         ;;
+       *-*-*)
+         unsupported_languages="$unsupported_languages cobol"
+         ;;
+     esac
+     case "${host}" in
+-      aarch64-*-linux*|x86_64-*-linux*)
++      aarch64-*-linux*|x86_64-*-linux*|aarch64-*-netbsd*|x86_64-*-netbsd*|riscv64-*-netbsd*)
+         ;;
+       *-*-*)
+         unsupported_languages="$unsupported_languages cobol"
