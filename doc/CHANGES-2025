@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6561 2025/11/08 02:39:29 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.6562 2025/11/08 15:12:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9506,3 +9506,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/go124 to 1.24.10 [bsiegert 2025-11-08]
 	Updated lang/go125 to 1.25.4 [bsiegert 2025-11-08]
 	Updated net/gh to 2.83.0 [bsiegert 2025-11-08]
+	Updated sysutils/broot to 1.53.0 [pin 2025-11-08]
