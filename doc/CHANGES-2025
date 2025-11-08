@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6557 2025/11/08 00:52:58 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.6558 2025/11/08 02:17:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9503,3 +9503,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/gtk3 to 3.24.51 [ryoon 2025-11-07]
 	Updated geography/gdal-lib to 3.12.0 [gdt 2025-11-08]
 	Updated geography/py-gdal to 3.12.0 [gdt 2025-11-08]
+	Updated multimedia/libaom to 3.12.1 [ryoon 2025-11-08]
