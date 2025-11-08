@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/05/10 11:38:35 gdt Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/11/08 00:52:41 gdt Exp $
 bin/gdal2tiles
 bin/gdal2tiles.py
 bin/gdal2xyz
@@ -214,21 +214,12 @@ ${PYSITELIB}/osgeo_utils/samples/gcps2vec.pyo
 ${PYSITELIB}/osgeo_utils/samples/gcps2wld.py
 ${PYSITELIB}/osgeo_utils/samples/gcps2wld.pyc
 ${PYSITELIB}/osgeo_utils/samples/gcps2wld.pyo
-${PYSITELIB}/osgeo_utils/samples/gdal2grd.py
-${PYSITELIB}/osgeo_utils/samples/gdal2grd.pyc
-${PYSITELIB}/osgeo_utils/samples/gdal2grd.pyo
 ${PYSITELIB}/osgeo_utils/samples/gdal_auth.py
 ${PYSITELIB}/osgeo_utils/samples/gdal_auth.pyc
 ${PYSITELIB}/osgeo_utils/samples/gdal_auth.pyo
-${PYSITELIB}/osgeo_utils/samples/gdal_cp.py
-${PYSITELIB}/osgeo_utils/samples/gdal_cp.pyc
-${PYSITELIB}/osgeo_utils/samples/gdal_cp.pyo
 ${PYSITELIB}/osgeo_utils/samples/gdal_create_pdf.py
 ${PYSITELIB}/osgeo_utils/samples/gdal_create_pdf.pyc
 ${PYSITELIB}/osgeo_utils/samples/gdal_create_pdf.pyo
-${PYSITELIB}/osgeo_utils/samples/gdal_ls.py
-${PYSITELIB}/osgeo_utils/samples/gdal_ls.pyc
-${PYSITELIB}/osgeo_utils/samples/gdal_ls.pyo
 ${PYSITELIB}/osgeo_utils/samples/gdal_lut.py
 ${PYSITELIB}/osgeo_utils/samples/gdal_lut.pyc
 ${PYSITELIB}/osgeo_utils/samples/gdal_lut.pyo
@@ -247,9 +238,6 @@ ${PYSITELIB}/osgeo_utils/samples/gdal_rm.pyo
 ${PYSITELIB}/osgeo_utils/samples/gdal_rmdir.py
 ${PYSITELIB}/osgeo_utils/samples/gdal_rmdir.pyc
 ${PYSITELIB}/osgeo_utils/samples/gdal_rmdir.pyo
-${PYSITELIB}/osgeo_utils/samples/gdal_vrtmerge.py
-${PYSITELIB}/osgeo_utils/samples/gdal_vrtmerge.pyc
-${PYSITELIB}/osgeo_utils/samples/gdal_vrtmerge.pyo
 ${PYSITELIB}/osgeo_utils/samples/gdalbuildvrtofvrt.py
 ${PYSITELIB}/osgeo_utils/samples/gdalbuildvrtofvrt.pyc
 ${PYSITELIB}/osgeo_utils/samples/gdalbuildvrtofvrt.pyo
@@ -280,9 +268,6 @@ ${PYSITELIB}/osgeo_utils/samples/get_soundg.pyo
 ${PYSITELIB}/osgeo_utils/samples/histrep.py
 ${PYSITELIB}/osgeo_utils/samples/histrep.pyc
 ${PYSITELIB}/osgeo_utils/samples/histrep.pyo
-${PYSITELIB}/osgeo_utils/samples/hsv_merge.py
-${PYSITELIB}/osgeo_utils/samples/hsv_merge.pyc
-${PYSITELIB}/osgeo_utils/samples/hsv_merge.pyo
 ${PYSITELIB}/osgeo_utils/samples/jpeg_in_tiff_extract.py
 ${PYSITELIB}/osgeo_utils/samples/jpeg_in_tiff_extract.pyc
 ${PYSITELIB}/osgeo_utils/samples/jpeg_in_tiff_extract.pyo
