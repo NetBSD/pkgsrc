@@ -1,0 +1,31 @@
+$NetBSD: patch-libgcobol_configure.tgt,v 1.1 2025/11/08 07:04:02 mrg Exp $
+
+Enable libgcobol on NetBSD amd64, arm64, and riscv64.
+
+
+--- libgcobol/configure.tgt.orig	2025-08-07 23:51:44.929422457 -0700
++++ libgcobol/configure.tgt	2025-11-06 11:01:55.070054980 -0800
+@@ -26,7 +26,7 @@
+ LIBGCOBOL_SUPPORTED=no
+ 
+ case "${target}" in
+-    aarch64*-*-linux*)
++    aarch64*-*-linux* | aarch64*-*-netbsd*)
+ 	LIBGCOBOL_SUPPORTED=yes
+ 	;;
+     powerpc64le-*-linux*)
+@@ -34,12 +34,12 @@ case "${target}" in
+ 		LIBGCOBOL_SUPPORTED=yes
+ 	fi
+ 	;;
+-    riscv64-*-linux*)
++    riscv64-*-linux* | riscv64-*-netbsd*)
+ 	if test x$ac_cv_sizeof_void_p = x8; then
+ 		LIBGCOBOL_SUPPORTED=yes
+ 	fi
+ 	;;
+-    x86_64-*-linux* | i?86-*-linux* | x86_64-*-darwin*)
++    x86_64-*-linux* | i?86-*-linux* | x86_64-*-darwin* | x86_64-*-netbsd*)
+ 	if test x$ac_cv_sizeof_void_p = x8; then
+ 		LIBGCOBOL_SUPPORTED=yes
+ 	fi

@@ -1,0 +1,15 @@
+$NetBSD: patch-libgcc_config.host,v 1.1 2025/11/08 07:04:02 mrg Exp $
+
+Fix NetBSD/arm64.
+
+
+--- libgcc/config.host.orig	2025-08-07 23:51:44.833420855 -0700
++++ libgcc/config.host	2025-11-07 03:15:28.811881325 -0800
+@@ -424,6 +424,7 @@ aarch64*-*-freebsd*)
+ aarch64*-*-netbsd*)
+ 	extra_parts="$extra_parts crtfastmath.o"
+ 	tmake_file="${tmake_file} ${cpu_type}/t-aarch64"
++	tmake_file="${tmake_file} ${cpu_type}/t-lse t-slibgcc-libgcc"
+ 	tmake_file="${tmake_file} ${cpu_type}/t-softfp t-softfp t-crtfm"
+ 	tmake_file="${tmake_file} t-dfprules"
+ 	md_unwind_def_header=aarch64/aarch64-unwind-def.h
