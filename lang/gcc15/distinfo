@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2025/08/09 15:53:10 wiz Exp $
+$NetBSD: distinfo,v 1.4 2025/11/08 07:04:02 mrg Exp $
 
 BLAKE2s (gcc-15.2.0.tar.xz) = ee9b2705b03ef8e6b5a41cf523dad26dcdaa8047be3743121b1673ce2fcc8832
 SHA512 (gcc-15.2.0.tar.xz) = 89047a2e07bd9da265b507b516ed3635adb17491c7f4f67cf090f0bd5b3fc7f2ee6e4cc4008beef7ca884b6b71dffe2bb652b21f01a702e17b468cca2d10b2de
@@ -6,6 +6,8 @@ Size (gcc-15.2.0.tar.xz) = 101056276 bytes
 BLAKE2s (isl-0.24.tar.xz) = a3013b0d39b7fe68a1b3e15dc7e925b347d555348ee946a80f5319a76973cd61
 SHA512 (isl-0.24.tar.xz) = ff6bdcff839e1cd473f2a0c1e4dd4a3612ec6fee4544ccbc62b530a7248db2cf93b4b99bf493a86ddf2aba00e768927265d5d411f92061ea85fd7929073428e8
 Size (isl-0.24.tar.xz) = 1930956 bytes
+SHA1 (patch-configure) = 8e33eda65a5a5ba212ebab8c26ca4dc2e5ae0c51
+SHA1 (patch-configure.ac) = b72e07578678926dca9ce5b008bacbfcecb68cbb
 SHA1 (patch-gcc_Makefile.in) = a31ddc27f1092cfdf5ac896ca79c8590b5aceb47
 SHA1 (patch-gcc_config.gcc) = 65126c56f0cd9027f66b5f677773dfa9973b451c
 SHA1 (patch-gcc_config.host) = bf95dd21bfdf79d173e745fbd35c9bb99fdf4087
@@ -16,10 +18,14 @@ SHA1 (patch-gcc_config_arm_elf.h) = 57748157084319cb92d892f2ea5b2f3355567551
 SHA1 (patch-gcc_config_arm_netbsd-eabi.h) = 85eb89de6f2e64fac50251f06d7e4eab35903dae
 SHA1 (patch-gcc_config_arm_netbsd-elf.h) = 568f537d624199ef9f9f56088fe4fff7e946b2e2
 SHA1 (patch-gcc_config_i386_t-netbsd64) = 914b4d2fd65f5e46681aa2ea592d0bc75299f09a
+SHA1 (patch-gcc_config_netbsd.h) = ada05409eacb33bc1e7a659f3090f2f43551a35d
 SHA1 (patch-isl_configure) = a6295c509bdc82e8b54d7dec5252994532463091
 SHA1 (patch-libffi_configure) = 919bbe094e3ce547a0186eeaddb20a662595f79a
 SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = 89e2dd6aaf2c1f75726f02362d8a8bf7178694ea
+SHA1 (patch-libgcc_config.host) = c9ea8bda0e6a1a8c4c39e4b8320a34b86e1da278
 SHA1 (patch-libgcc_crtstuff.c) = dd7808497b058bcac4aa8d91388d6a7685bb5e5c
+SHA1 (patch-libgcc_enable-execute-stack-mprotect.c) = 9cec951183f5092d14d7736f73f50523cdba7592
+SHA1 (patch-libgcobol_configure.tgt) = d5a0e35e03ff8c835cbcb6cf17725ae82fd727af
 SHA1 (patch-libgfortran_io_io.h) = d44676239a7f45e42054d24bd5224f43c20055c0
 SHA1 (patch-libquadmath_printf_quadmath-printf.c) = 78e09f1e6d61ee57cee83275093cf46b2335d204
 SHA1 (patch-libquadmath_strtod_strtod__l.c) = 6142c10d34174174cce7f06c37eab04dc431b2dc
