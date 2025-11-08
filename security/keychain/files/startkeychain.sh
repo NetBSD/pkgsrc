@@ -27,6 +27,8 @@ case $1 in
         exit 2 ;;
 esac
 
+# Files where keychain stores the updated environment for SSH and - 
+# GPG agents. 
 ssh_env="${HOME}/.keychain/${HOSTNAME}-sh"
 gpg_env="${HOME}/.keychain/${HOSTNAME}-sh-gpg"
 
@@ -38,8 +40,10 @@ if [ -z "$SSHKEYS" ] && [ -z "$GPGKEYS" ]; then
     "Use the SSHKEYS and GPGKEYS envinromental variables to specify one or more key to load."
     exit 1
 else
-    # Otherwise load both SSHKEYS and GPGKEYS
+    # Otherwise load both SSHKEYS and GPGKEYS.
     keychain $KCHOPTS $SSHKEYS $GPGKEYS
+    # Update environment. NOTE: This will only work if startkeychain is -
+    # sourced within a shell start-up script.
     for file in "$ssh_env" "$gpg_env"; do
         [ -f "$file" ] && . $file
     done
