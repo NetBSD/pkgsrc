@@ -26,9 +26,9 @@ case $1 in
 	exit 2 ;;
 esac
 
-host	= $(uname -n)
-ssh_env	= ${HOME}/.keychain/${host}-sh
-gpg_env	= ${HOME}/.keychain/${host}-sh-gpg
+host=$(uname -n)
+ssh_env="${HOME}/.keychain/${host}-sh"
+gpg_env="${HOME}/.keychain/${host}-sh-gpg"
 
 # Test for SSHKEYS first. If empty, try GPGKEYS as fallback.
 if [ -z "$SSHKEYS" ]; then
@@ -46,9 +46,14 @@ if [ -z "$SSHKEYS" ]; then
 else
 # Otherwise load both SSHKEYS and GPGKEYS (allow the latter to be empty).
     keychain $KCHOPTS $SSHKEYS $GPGKEYS
-    for file in ssh_env gpg_env; do
-	[ -f "$file" ] && . $file
+    for file in $ssh_env $gpg_env; do
+	if [ -f "$file" ]; then
+	    . $file
+	else
+	    printf '%s\n' "warning: $file not found"
+	fi
     done
+
 fi
 
 unset KCHOPTS SSHKEYS GPGKEYS host
