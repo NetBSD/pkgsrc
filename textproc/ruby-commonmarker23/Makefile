@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/11/03 05:29:24 taca Exp $
+# $NetBSD: Makefile,v 1.2 2025/11/09 22:58:35 wiz Exp $
 
 DISTNAME=	commonmarker-2.3.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/commonmarker/&23/}
@@ -22,4 +22,5 @@ RUBYGEM_OPTIONS+=	--format-executable
 #
 .include "../../lang/ruby/gem.mk"
 .include "../../lang/rust/cargo.mk"
+.include "../../lang/clang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
