@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2025/10/23 20:36:57 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2025/11/09 23:15:51 wiz Exp $
 
 DISTNAME=	asc-2.6.1.0
 PKGREVISION=	37
@@ -32,6 +32,7 @@ USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	c++11
+FORCE_CXX_STD=		c++11
 
 CPPFLAGS+=	-D__EXPORT__=
 MAKE_ENV+=	top_builddir=.
@@ -50,7 +51,7 @@ CONFIGURE_ARGS+=	--disable-oggtest
 CONFIGURE_ARGS+=	--disable-vorbistest
 CONFIGURE_ARGS+=	--disable-ft2test
 
-GNU_CONFIGURE_WX_VERSION= no
+GNU_CONFIGURE_WX_VERSION=	no
 
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/pixmaps
