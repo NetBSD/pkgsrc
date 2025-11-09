@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2025/10/23 20:36:37 wiz Exp $
+# $NetBSD: Makefile,v 1.141 2025/11/09 22:41:47 wiz Exp $
 
 DISTNAME=		rapidsvn-0.12.1
 PKGREVISION=		72
@@ -14,6 +14,9 @@ USE_TOOLS+=		gmake msgfmt
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
+
+# defaults to c++17 in some environments, but doesn't compile with that
+FORCE_CXX_STD=		c++11
 
 CONFIGURE_ARGS+=	--with-svn-include=${BUILDLINK_DIR}/include
 CONFIGURE_ARGS+=	--with-svn-lib=${BUILDLINK_DIR}/lib
