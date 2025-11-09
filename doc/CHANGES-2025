@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6572 2025/11/09 12:56:51 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6573 2025/11/09 13:53:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9518,3 +9518,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Test-Fatal to 0.018 [wiz 2025-11-09]
 	Updated net/haproxy to 3.2.8 [adam 2025-11-09]
 	Updated devel/re2 to 20251105 [adam 2025-11-09]
+	Added www/php-nextcloud31 version 31.0.10 [ryoon 2025-11-09]
