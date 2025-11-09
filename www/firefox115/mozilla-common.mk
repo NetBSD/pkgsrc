@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.12 2024/11/13 23:41:14 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.13 2025/11/09 21:31:37 wiz Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -7,7 +7,7 @@
 .include "../../mk/bsd.prefs.mk"
 
 # 3.13: ModuleNotFoundError: No module named 'pipes'
-PYTHON_VERSIONS_INCOMPATIBLE=	27 313
+PYTHON_VERSIONS_INCOMPATIBLE=	27 313 314
 PYTHON_FOR_BUILD_ONLY=		tool
 ALL_ENV+=			PYTHON3=${PYTHONBIN}
 
