@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1887 2025/11/09 13:53:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.1888 2025/11/09 14:08:17 ryoon Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -673,7 +673,6 @@ SUBDIR+=	php-http4
 SUBDIR+=	php-ja-wordpress
 SUBDIR+=	php-matomo
 SUBDIR+=	php-nextcloud
-SUBDIR+=	php-nextcloud29
 SUBDIR+=	php-nextcloud31
 SUBDIR+=	php-owncloud
 SUBDIR+=	php-phalcon
