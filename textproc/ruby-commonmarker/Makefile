@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/11/03 07:26:12 taca Exp $
+# $NetBSD: Makefile,v 1.8 2025/11/09 22:55:56 wiz Exp $
 
 DISTNAME=	commonmarker-2.5.0
 CATEGORIES=	textproc
@@ -21,4 +21,5 @@ RUBYGEM_OPTIONS+=	--format-executable
 #
 .include "../../lang/ruby/gem.mk"
 .include "../../lang/rust/cargo.mk"
+.include "../../lang/clang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
