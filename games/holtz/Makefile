@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2025/10/23 20:37:04 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2025/11/09 23:08:40 wiz Exp $
 
 DISTNAME=	holtz-1.5.0
 PKGREVISION=	17
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
+FORCE_CXX_STD=		c++11
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../x11/wxGTK32/buildlink3.mk"
