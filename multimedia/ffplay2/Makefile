@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2025/04/17 21:51:45 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2025/11/09 22:45:43 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffplay2/}
 PKGREVISION=	6
@@ -26,6 +26,7 @@ CONFIGURE_ARGS+=	--enable-ffplay
 CONFIGURE_ARGS+=	--enable-dct
 CONFIGURE_ARGS+=	--enable-mdct
 CONFIGURE_ARGS+=	--enable-rdft
+CONFIGURE_ARGS+=	--disable-yasm
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
