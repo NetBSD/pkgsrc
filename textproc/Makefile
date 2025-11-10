@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1548 2025/11/03 05:29:51 taca Exp $
+# $NetBSD: Makefile,v 1.1549 2025/11/10 09:39:30 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1490,6 +1490,7 @@ SUBDIR+=	tree-sitter-toml
 SUBDIR+=	tree-sitter-tsx
 SUBDIR+=	tree-sitter-typescript
 SUBDIR+=	tree-sitter-yaml
+SUBDIR+=	treemd
 SUBDIR+=	troffcvt
 SUBDIR+=	tuc
 SUBDIR+=	typst
