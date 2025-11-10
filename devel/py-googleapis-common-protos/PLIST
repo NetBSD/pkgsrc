@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/04/12 11:01:56 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.11 2025/11/10 09:37:00 wiz Exp $
 ${PYSITELIB}/google/api/annotations.proto
 ${PYSITELIB}/google/api/annotations_pb2.py
 ${PYSITELIB}/google/api/annotations_pb2.pyc
@@ -169,6 +164,11 @@ ${PYSITELIB}/google/api/visibility_pb2.py
 ${PYSITELIB}/google/api/visibility_pb2.pyc
 ${PYSITELIB}/google/api/visibility_pb2.pyi
 ${PYSITELIB}/google/api/visibility_pb2.pyo
+${PYSITELIB}/google/cloud/common_resources.proto
+${PYSITELIB}/google/cloud/common_resources_pb2.py
+${PYSITELIB}/google/cloud/common_resources_pb2.pyc
+${PYSITELIB}/google/cloud/common_resources_pb2.pyi
+${PYSITELIB}/google/cloud/common_resources_pb2.pyo
 ${PYSITELIB}/google/cloud/extended_operations.proto
 ${PYSITELIB}/google/cloud/extended_operations_pb2.py
 ${PYSITELIB}/google/cloud/extended_operations_pb2.pyc
@@ -329,3 +329,8 @@ ${PYSITELIB}/google/type/timeofday_pb2.py
 ${PYSITELIB}/google/type/timeofday_pb2.pyc
 ${PYSITELIB}/google/type/timeofday_pb2.pyi
 ${PYSITELIB}/google/type/timeofday_pb2.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
