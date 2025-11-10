@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/10 09:00:02 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/11/10 19:16:36 bsiegert Exp $
 
 DISTNAME=	crcmod-1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/crcmod/}
 
 MAINTAINER=	bsiegert@NetBSD.org
-HOMEPAGE=	http://crcmod.sourceforge.net/
+HOMEPAGE=	https://crcmod.sourceforge.net/
 COMMENT=	Cyclic Redundancy Checksums in Python
 LICENSE=	mit
 
