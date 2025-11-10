@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6598 2025/11/10 11:43:45 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6599 2025/11/10 12:29:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9546,3 +9546,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/texlab to 5.24.0 [wiz 2025-11-10]
 	Updated devel/py-coverage to 7.11.3 [adam 2025-11-10]
 	Updated time/py-types-python-dateutil to 2.9.0.20251108 [adam 2025-11-10]
+	Updated devel/carwash to 0.3.1 [pin 2025-11-10]
