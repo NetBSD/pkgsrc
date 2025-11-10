@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/10/23 15:29:17 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/11/10 13:40:23 adam Exp $
 
-DISTNAME=	pytokens-0.2.0
+DISTNAME=	pytokens-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytokens/}
