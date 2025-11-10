@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6601 2025/11/10 13:40:43 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6602 2025/11/10 13:53:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9551,3 +9551,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/sqlmap to 1.9.11 [adam 2025-11-10]
 	Updated sysutils/ansible to 12.2.0 [adam 2025-11-10]
 	Updated devel/py-pytokens to 0.3.0 [adam 2025-11-10]
+	Updated print/podofo to 1.0.2 [wiz 2025-11-10]
