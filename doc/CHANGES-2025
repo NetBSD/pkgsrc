@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6583 2025/11/10 09:25:33 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6584 2025/11/10 09:30:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9529,3 +9529,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/lgogdownloader to 3.18 [wiz 2025-11-10]
 	Updated x11/libxkbcommon to 1.13.0 [wiz 2025-11-10]
 	Updated sysutils/node_exporter to 1.10.2 [wiz 2025-11-10]
+	Updated devel/py-cython to 3.2.0 [wiz 2025-11-10]
