@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/11/10 09:38:13 pin Exp $
+bin/treemd
