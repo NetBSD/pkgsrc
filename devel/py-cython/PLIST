@@ -1,12 +1,7 @@
-@comment $NetBSD: PLIST,v 1.36 2025/10/24 07:30:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2025/11/10 09:30:14 wiz Exp $
 bin/cygdb-${PYVERSSUFFIX}
 bin/cython-${PYVERSSUFFIX}
 bin/cythonize-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/Cython/Build/BuildExecutable.py
 ${PYSITELIB}/Cython/Build/BuildExecutable.pyc
 ${PYSITELIB}/Cython/Build/BuildExecutable.pyo
@@ -385,6 +380,7 @@ ${PYSITELIB}/Cython/Includes/libcpp/bit.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/cast.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/cmath.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/complex.pxd
+${PYSITELIB}/Cython/Includes/libcpp/condition_variable.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/deque.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/exception.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/execution.pxd
@@ -538,13 +534,11 @@ ${PYSITELIB}/Cython/Utility/CppConvert.pyx
 ${PYSITELIB}/Cython/Utility/CppSupport.cpp
 ${PYSITELIB}/Cython/Utility/CythonFunction.c
 ${PYSITELIB}/Cython/Utility/Dataclasses.c
-${PYSITELIB}/Cython/Utility/Dataclasses.py
-${PYSITELIB}/Cython/Utility/Dataclasses.pyc
-${PYSITELIB}/Cython/Utility/Dataclasses.pyo
 ${PYSITELIB}/Cython/Utility/Embed.c
 ${PYSITELIB}/Cython/Utility/Exceptions.c
 ${PYSITELIB}/Cython/Utility/ExtensionTypes.c
 ${PYSITELIB}/Cython/Utility/FunctionArguments.c
+${PYSITELIB}/Cython/Utility/FusedFunction.pyx
 ${PYSITELIB}/Cython/Utility/ImportExport.c
 ${PYSITELIB}/Cython/Utility/MemoryView.pxd
 ${PYSITELIB}/Cython/Utility/MemoryView.pyx
@@ -558,6 +552,7 @@ ${PYSITELIB}/Cython/Utility/Printing.c
 ${PYSITELIB}/Cython/Utility/Profile.c
 ${PYSITELIB}/Cython/Utility/StringTools.c
 ${PYSITELIB}/Cython/Utility/Synchronization.c
+${PYSITELIB}/Cython/Utility/TString.c
 ${PYSITELIB}/Cython/Utility/TestCyUtilityLoader.pyx
 ${PYSITELIB}/Cython/Utility/TestCythonScope.pyx
 ${PYSITELIB}/Cython/Utility/TestUtilityLoader.c
@@ -577,6 +572,11 @@ ${PYSITELIB}/Cython/__init__.pyc
 ${PYSITELIB}/Cython/__init__.pyi
 ${PYSITELIB}/Cython/__init__.pyo
 ${PYSITELIB}/Cython/py.typed
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/cython.py
 ${PYSITELIB}/cython.pyc
 ${PYSITELIB}/cython.pyo
