@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6578 2025/11/10 07:37:04 jnemeth Exp $
+$NetBSD: CHANGES-2025,v 1.6579 2025/11/10 08:46:26 kim Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9524,3 +9524,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/R-terra to 1.8.80 [wiz 2025-11-09]
 	Updated graphics/chafa to 1.18.0 [ktnb 2025-11-10]
 	Updated databases/mysql-connector-c++ to 9.5.0 [jnemeth 2025-11-10]
+	Updated mail/py-postfix-mta-sts-resolver to 1.5.1 [kim 2025-11-10]
