@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2025/10/09 07:57:45 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/11/10 08:46:16 kim Exp $
 
-DISTNAME=	postfix_mta_sts_resolver-1.4.0
+DISTNAME=	postfix_mta_sts_resolver-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/postfix_mta_sts_resolver/}
