@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6580 2025/11/10 09:20:21 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6581 2025/11/10 09:22:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9526,3 +9526,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/mysql-connector-c++ to 9.5.0 [jnemeth 2025-11-10]
 	Updated mail/py-postfix-mta-sts-resolver to 1.5.1 [kim 2025-11-10]
 	Updated sysutils/hwdata to 0.401 [wiz 2025-11-10]
+	Updated games/lgogdownloader to 3.18 [wiz 2025-11-10]
