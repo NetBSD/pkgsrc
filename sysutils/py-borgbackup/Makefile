@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2025/10/16 21:30:21 he Exp $
+# $NetBSD: Makefile,v 1.60 2025/11/10 19:44:33 bsiegert Exp $
 
-DISTNAME=	borgbackup-1.4.1
+DISTNAME=	borgbackup-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/borgbackup/}
 
@@ -30,6 +29,12 @@ MAKE_ENV+=	BORG_LIBXXHASH_PREFIX=${BUILDLINK_PREFIX.xxhash}
 MAKE_ENV+=	BORG_LIBZSTD_PREFIX=${BUILDLINK_PREFIX.zstd}
 MAKE_ENV+=	BORG_OPENSSL_PREFIX=${SSLBASE:Q}
 
+.include "../../mk/bsd.fast.prefs.mk"
+.if ${OPSYS} == "Linux"
+. include "../../sysutils/acl/buildlink3.mk"
+MAKE_ENV+=	BORG_LIBACL_PREFIX={BUILDLINK_PREFIX.acl}
+.endif
+
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 post-install:
@@ -38,6 +43,7 @@ post-install:
 # TODO: as of 2.x, testing should work using this command line:
 # pytest -v -rs --benchmark-skip --pyargs borg.testsuite
 # see https://github.com/borgbackup/borg/issues/6386
+
 
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
