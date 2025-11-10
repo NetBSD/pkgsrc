@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/10/23 20:37:24 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/11/10 02:43:14 ktnb Exp $
 
-DISTNAME=	chafa-1.16.2
-PKGREVISION=	2
+DISTNAME=	chafa-1.18.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hpjansson/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -22,9 +21,10 @@ pre-configure:
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/libheif/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

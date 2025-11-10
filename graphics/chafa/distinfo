@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/07/07 12:40:14 ktnb Exp $
+$NetBSD: distinfo,v 1.6 2025/11/10 02:43:14 ktnb Exp $
 
-BLAKE2s (chafa-1.16.2.tar.gz) = 867295d1b8903b0f7b4af2d53be49bfc15937c36e3888fb72125898ec1af9ce0
-SHA512 (chafa-1.16.2.tar.gz) = e1b55c08ce3c9ea7ee38dfed5c5a96e19f29a87b612f86986d0b16f28af8267b97166800fbd0428078f272da3a303d54b51a4451fece7be6127289f4966c1739
-Size (chafa-1.16.2.tar.gz) = 1921340 bytes
+BLAKE2s (chafa-1.18.0.tar.gz) = 8f69cc3c59c6e12fee95e0af1ce9c0c3d3b95e5222a70ea2aacaddac53ea8265
+SHA512 (chafa-1.18.0.tar.gz) = 1fb74757551f7eb3ba3486af5df2e7bd5c87945f2d62dd06777db0f5cffe12d377f83ef5794081b5b5d0e9b1ebc5e945fbcb98c42e860157db4bb69c0bcc84b3
+Size (chafa-1.18.0.tar.gz) = 1937303 bytes
