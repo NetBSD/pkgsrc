@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2025/10/31 09:35:09 pin Exp $
+# $NetBSD: Makefile,v 1.2 2025/11/10 09:33:27 pin Exp $
 
-DISTNAME=	carwash-0.2.2
+DISTNAME=	carwash-0.3.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=epistates/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/epistates/carwash/
 COMMENT=	TUI for managing multiple Rust projects with ease
 LICENSE=	mit
