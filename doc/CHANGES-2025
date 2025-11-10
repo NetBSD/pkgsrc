@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6603 2025/11/10 13:56:43 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6604 2025/11/10 19:44:52 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9554,3 +9554,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/podofo to 1.0.2 [wiz 2025-11-10]
 	Removed print/scribus-qt5 [wiz 2025-11-10]
 	Added print/scribus version 1.7.0 [wiz 2025-11-10]
+	Updated sysutils/py-borgbackup to 1.4.2 [bsiegert 2025-11-10]
