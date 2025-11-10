@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6576 2025/11/09 22:38:22 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6577 2025/11/10 02:43:32 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9522,3 +9522,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed www/php-nextcloud29 [ryoon 2025-11-09]
 	Updated www/php-nextcloud to 32.0.1 [ryoon 2025-11-09]
 	Updated geography/R-terra to 1.8.80 [wiz 2025-11-09]
+	Updated graphics/chafa to 1.18.0 [ktnb 2025-11-10]
