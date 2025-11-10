@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26423 2025/11/09 12:56:52 adam Exp $
+$NetBSD: TODO,v 1.26424 2025/11/10 09:20:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -744,7 +744,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o howm-1.4.7
 	o hplip-3.25.6
 	o html2wml-0.4.11
-	o hwdata-0.401
 	o hwloc-2.11
 	o hydrogen-1.2.6
 	o ibus-hangul-1.5.4
