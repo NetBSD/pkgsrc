@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2025/09/27 09:57:11 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/11/10 07:36:57 jnemeth Exp $
 
-DISTNAME=	mysql-connector-c++-9.2.0-src
+DISTNAME=	mysql-connector-c++-9.5.0-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
 CATEGORIES=	databases
-MASTER_SITES=	https://dev.mysql.com/get/Downloads/Connector-C++/
+#MASTER_SITES=	https://dev.mysql.com/get/Downloads/Connector-C++/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mysql/}
+GITHUB_PROJECT=	mysql-connector-cpp
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://dev.mysql.com/downloads/connector/cpp/
@@ -24,4 +26,5 @@ post-install:
 .include "../../mk/atomic64.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
