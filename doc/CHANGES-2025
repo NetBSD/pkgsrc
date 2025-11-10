@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6593 2025/11/10 09:39:58 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6594 2025/11/10 09:50:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9539,3 +9539,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/py-icalendar to 6.3.2 [wiz 2025-11-10]
 	Updated textproc/py-markdown to 3.10 [wiz 2025-11-10]
 	Added textproc/treemd version 0.1.6 [pin 2025-11-10]
+	Updated x11/py-sip-qt5 to 12.17.1 [adam 2025-11-10]
+	Updated devel/py-zope.event to 6.1 [adam 2025-11-10]
