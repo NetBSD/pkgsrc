@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6600 2025/11/10 13:25:51 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6601 2025/11/10 13:40:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9549,3 +9549,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/carwash to 0.3.1 [pin 2025-11-10]
 	Updated multimedia/mkvtoolnix to 96.0 [adam 2025-11-10]
 	Updated security/sqlmap to 1.9.11 [adam 2025-11-10]
+	Updated sysutils/ansible to 12.2.0 [adam 2025-11-10]
+	Updated devel/py-pytokens to 0.3.0 [adam 2025-11-10]
