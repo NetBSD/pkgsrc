@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6596 2025/11/10 09:54:25 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6597 2025/11/10 09:57:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9543,3 +9543,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-zope.event to 6.1 [adam 2025-11-10]
 	Updated devel/py-ruff to 0.14.4 [wiz 2025-11-10]
 	Updated archivers/py-zopfli to 0.4.0 [wiz 2025-11-10]
+	Updated print/texlab to 5.24.0 [wiz 2025-11-10]
