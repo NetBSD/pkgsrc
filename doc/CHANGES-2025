@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6591 2025/11/10 09:38:39 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6592 2025/11/10 09:39:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9537,3 +9537,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-google-auth to 2.43.0 [wiz 2025-11-10]
 	Updated devel/py-googleapis-common-protos to 1.72.0 [wiz 2025-11-10]
 	Updated time/py-icalendar to 6.3.2 [wiz 2025-11-10]
+	Updated textproc/py-markdown to 3.10 [wiz 2025-11-10]
