@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2025/10/21 12:06:29 gdt Exp $
+@comment $NetBSD: PLIST,v 1.31 2025/11/10 08:51:53 adam Exp $
 bin/rfnoc_image_builder
 bin/rfnoc_modtool
 bin/uhd_adc_self_cal
@@ -521,7 +521,6 @@ lib/uhd/tests/error_c_test
 lib/uhd/tests/error_test
 lib/uhd/tests/expert_test
 lib/uhd/tests/fe_conn_test
-lib/uhd/tests/ferrum_radio_block_test
 lib/uhd/tests/fp_compare_delta_test
 lib/uhd/tests/fp_compare_epsilon_test
 lib/uhd/tests/gain_group_test
@@ -596,7 +595,6 @@ lib/uhd/tests/uhd_image_downloader_test.py
 lib/uhd/tests/verify_fbs_test.py
 lib/uhd/tests/vrt_test
 lib/uhd/tests/x400_rfdc_control_test
-lib/uhd/tests/x4xx_radio_block_test
 lib/uhd/tests/xport_adapter_ctrl_test
 lib/uhd/tests/zbx_cpld_test
 lib/uhd/utils/b2xx_fx3_utils
