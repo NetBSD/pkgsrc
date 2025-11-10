@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/22 19:52:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/11/10 09:54:12 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -20,4 +20,4 @@ ${PYSITELIB}/zopfli/png.pyo
 ${PYSITELIB}/zopfli/zlib.py
 ${PYSITELIB}/zopfli/zlib.pyc
 ${PYSITELIB}/zopfli/zlib.pyo
-${PYSITELIB}/zopfli/zopfli.so
+${PYSITELIB}/zopfli/zopfli.abi3.so
