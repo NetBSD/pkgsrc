@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.11 2025/04/15 08:15:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/11/11 14:09:00 adam Exp $
+bin/CheckLDAPStatus.py
 bin/DumpNTLMInfo-${PYVERSSUFFIX}.py
 bin/Get-GPPPassword-${PYVERSSUFFIX}.py
 bin/GetADComputers-${PYVERSSUFFIX}.py
@@ -8,6 +9,8 @@ bin/GetNPUsers-${PYVERSSUFFIX}.py
 bin/GetUserSPNs-${PYVERSSUFFIX}.py
 bin/addcomputer-${PYVERSSUFFIX}.py
 bin/atexec-${PYVERSSUFFIX}.py
+bin/attrib.py
+bin/badsuccessor.py
 bin/changepasswd-${PYVERSSUFFIX}.py
 bin/dacledit-${PYVERSSUFFIX}.py
 bin/dcomexec-${PYVERSSUFFIX}.py
@@ -15,6 +18,7 @@ bin/describeTicket-${PYVERSSUFFIX}.py
 bin/dpapi-${PYVERSSUFFIX}.py
 bin/esentutl-${PYVERSSUFFIX}.py
 bin/exchanger-${PYVERSSUFFIX}.py
+bin/filetime.py
 bin/findDelegation-${PYVERSSUFFIX}.py
 bin/getArch-${PYVERSSUFFIX}.py
 bin/getPac-${PYVERSSUFFIX}.py
@@ -43,9 +47,11 @@ bin/rbcd-${PYVERSSUFFIX}.py
 bin/rdp_check-${PYVERSSUFFIX}.py
 bin/reg-${PYVERSSUFFIX}.py
 bin/registry-read-${PYVERSSUFFIX}.py
+bin/regsecrets.py
 bin/rpcdump-${PYVERSSUFFIX}.py
 bin/rpcmap-${PYVERSSUFFIX}.py
 bin/sambaPipe-${PYVERSSUFFIX}.py
+bin/samedit.py
 bin/samrdump-${PYVERSSUFFIX}.py
 bin/secretsdump-${PYVERSSUFFIX}.py
 bin/services-${PYVERSSUFFIX}.py
@@ -162,6 +168,9 @@ ${PYSITELIB}/impacket/dcerpc/v5/even6.pyo
 ${PYSITELIB}/impacket/dcerpc/v5/gkdi.py
 ${PYSITELIB}/impacket/dcerpc/v5/gkdi.pyc
 ${PYSITELIB}/impacket/dcerpc/v5/gkdi.pyo
+${PYSITELIB}/impacket/dcerpc/v5/icpr.py
+${PYSITELIB}/impacket/dcerpc/v5/icpr.pyc
+${PYSITELIB}/impacket/dcerpc/v5/icpr.pyo
 ${PYSITELIB}/impacket/dcerpc/v5/iphlp.py
 ${PYSITELIB}/impacket/dcerpc/v5/iphlp.pyc
 ${PYSITELIB}/impacket/dcerpc/v5/iphlp.pyo
@@ -279,6 +288,12 @@ ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattacks/__init__.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattacks/adcsattack.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattacks/adcsattack.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattacks/adcsattack.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattacks/sccmdpattack.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattacks/sccmdpattack.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattacks/sccmdpattack.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattacks/sccmpoliciesattack.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattacks/sccmpoliciesattack.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattacks/sccmpoliciesattack.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/imapattack.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/imapattack.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/imapattack.pyo
@@ -294,6 +309,9 @@ ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/rpcattack.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/smbattack.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/smbattack.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/smbattack.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/winrmattack.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/winrmattack.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/winrmattack.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/clients/__init__.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/clients/__init__.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/clients/__init__.pyo
@@ -321,6 +339,9 @@ ${PYSITELIB}/impacket/examples/ntlmrelayx/clients/smbrelayclient.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/clients/smtprelayclient.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/clients/smtprelayclient.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/clients/smtprelayclient.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/clients/winrmrelayclient.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/clients/winrmrelayclient.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/clients/winrmrelayclient.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/__init__.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/__init__.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/__init__.pyo
@@ -330,6 +351,9 @@ ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/httprelayserver.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/rawrelayserver.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/rawrelayserver.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/rawrelayserver.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/rpcrelayserver.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/rpcrelayserver.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/rpcrelayserver.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/smbrelayserver.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/smbrelayserver.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/smbrelayserver.pyo
@@ -348,6 +372,12 @@ ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/socksplugins/imap.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/socksplugins/imaps.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/socksplugins/imaps.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/socksplugins/imaps.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/socksplugins/ldap.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/socksplugins/ldap.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/socksplugins/ldap.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/socksplugins/ldaps.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/socksplugins/ldaps.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/socksplugins/ldaps.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/socksplugins/mssql.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/socksplugins/mssql.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/socksplugins/mssql.pyo
@@ -363,6 +393,12 @@ ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/socksserver.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/wcfrelayserver.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/wcfrelayserver.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/wcfrelayserver.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/winrmrelayserver.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/winrmrelayserver.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/winrmrelayserver.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/winrmsrelayserver.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/winrmsrelayserver.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/winrmsrelayserver.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/__init__.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/__init__.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/__init__.pyo
@@ -372,6 +408,9 @@ ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/config.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/enum.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/enum.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/enum.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/utils/identity_log.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/utils/identity_log.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/utils/identity_log.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/shadow_credentials.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/shadow_credentials.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/shadow_credentials.pyo
@@ -387,6 +426,9 @@ ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/tcpshell.pyo
 ${PYSITELIB}/impacket/examples/os_ident.py
 ${PYSITELIB}/impacket/examples/os_ident.pyc
 ${PYSITELIB}/impacket/examples/os_ident.pyo
+${PYSITELIB}/impacket/examples/regsecrets.py
+${PYSITELIB}/impacket/examples/regsecrets.pyc
+${PYSITELIB}/impacket/examples/regsecrets.pyo
 ${PYSITELIB}/impacket/examples/remcomsvc.py
 ${PYSITELIB}/impacket/examples/remcomsvc.pyc
 ${PYSITELIB}/impacket/examples/remcomsvc.pyo
@@ -468,6 +510,9 @@ ${PYSITELIB}/impacket/mqtt.pyo
 ${PYSITELIB}/impacket/msada_guids.py
 ${PYSITELIB}/impacket/msada_guids.pyc
 ${PYSITELIB}/impacket/msada_guids.pyo
+${PYSITELIB}/impacket/mssql/version.py
+${PYSITELIB}/impacket/mssql/version.pyc
+${PYSITELIB}/impacket/mssql/version.pyo
 ${PYSITELIB}/impacket/nmb.py
 ${PYSITELIB}/impacket/nmb.pyc
 ${PYSITELIB}/impacket/nmb.pyo

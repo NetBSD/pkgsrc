@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2025/04/15 08:15:58 adam Exp $
+# $NetBSD: Makefile,v 1.16 2025/11/11 14:09:00 adam Exp $
 
-DISTNAME=	impacket-0.12.0
+DISTNAME=	impacket-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/impacket/}
 
