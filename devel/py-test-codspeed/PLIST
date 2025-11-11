@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/08/13 09:53:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/11/11 14:14:56 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -25,6 +25,9 @@ ${PYSITELIB}/pytest_codspeed/instruments/hooks/instrument-hooks/includes/callgri
 ${PYSITELIB}/pytest_codspeed/instruments/hooks/instrument-hooks/includes/core.h
 ${PYSITELIB}/pytest_codspeed/instruments/hooks/instrument-hooks/includes/valgrind.h
 ${PYSITELIB}/pytest_codspeed/instruments/hooks/instrument-hooks/includes/zig.h
+${PYSITELIB}/pytest_codspeed/instruments/hooks/instrument-hooks/scripts/release.py
+${PYSITELIB}/pytest_codspeed/instruments/hooks/instrument-hooks/scripts/release.pyc
+${PYSITELIB}/pytest_codspeed/instruments/hooks/instrument-hooks/scripts/release.pyo
 ${PYSITELIB}/pytest_codspeed/instruments/valgrind.py
 ${PYSITELIB}/pytest_codspeed/instruments/valgrind.pyc
 ${PYSITELIB}/pytest_codspeed/instruments/valgrind.pyo
