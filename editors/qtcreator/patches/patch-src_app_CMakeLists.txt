@@ -1,18 +1,20 @@
-$NetBSD: patch-src_app_CMakeLists.txt,v 1.2 2025/05/10 10:53:21 adam Exp $
+$NetBSD: patch-src_app_CMakeLists.txt,v 1.3 2025/11/11 12:35:49 adam Exp $
 
 Disable application bundle.
 
---- src/app/CMakeLists.txt.orig	2025-04-10 08:57:18.000000000 +0000
+--- src/app/CMakeLists.txt.orig	2025-10-28 11:28:21.000000000 +0000
 +++ src/app/CMakeLists.txt
-@@ -20,7 +20,6 @@ add_qtc_executable(qtcreator
-     ../tools/qtcreatorcrashhandler/crashhandlersetup.cpp ../tools/qtcreatorcrashhandler/crashhandlersetup.h
-   PROPERTIES
-     WIN32_EXECUTABLE ON
--    MACOSX_BUNDLE ON
-     OUTPUT_NAME "${IDE_APP_TARGET}"
-   DESTINATION "${IDE_APP_PATH}"
-   QTC_RUNNABLE
-@@ -98,7 +97,7 @@ if (WIN32)
+@@ -12,9 +12,6 @@ configure_file(app_logo.qrc.cmakein app_
+ # This needs to be explicit like this, to avoid issues with the path
+ # to the binary in generated SBOMs.
+ set(qtcreator_props "")
+-if(APPLE)
+-  list(APPEND qtcreator_props MACOSX_BUNDLE ON)
+-endif()
+ if(WIN32)
+   list(APPEND qtcreator_props WIN32_EXECUTABLE ON)
+ endif()
+@@ -106,7 +103,7 @@ if (WIN32)
    target_sources(qtcreator PRIVATE qtcreator.rc)
  endif()
  
@@ -21,7 +23,7 @@ Disable application bundle.
    if (CMAKE_OSX_DEPLOYMENT_TARGET)
      set(MACOSX_DEPLOYMENT_TARGET ${CMAKE_OSX_DEPLOYMENT_TARGET})
    endif()
-@@ -171,7 +170,7 @@ extend_qtc_executable(qtcreator
+@@ -201,7 +198,7 @@ extend_qtc_executable(qtcreator
      SENTRY_CRASHPAD_PATH="${SENTRY_CRASHPAD_PATH}"
  )
  
