@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/10/11 12:28:03 adam Exp $
+# $NetBSD: Makefile,v 1.15 2025/11/11 13:38:56 adam Exp $
 
-DISTNAME=	plumbum-1.9.0
+DISTNAME=	plumbum-1.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/plumbum/}
@@ -11,7 +11,7 @@ COMMENT=	Plumbum: shell combinators library
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27.0:../../devel/py-hatchling
 TEST_DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
 TEST_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
