@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2025/10/23 20:40:17 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2025/11/11 12:34:13 adam Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtbase-${QTVERSION}
-PKGREVISION=	2
 COMMENT=	C++ X GUI toolkit
 CATEGORIES=	x11
 
@@ -248,7 +247,7 @@ PLIST.x11=	yes
 PLIST.egl=	yes
 .    if exists(${X11BASE}/include/EGL/eglext.h)
 EGL_EXT_FILE=	cat ${X11BASE}/include/EGL/eglext.h
-.      if !empty(EGL_EXT_FILE:sh:MEGL_DRM_MASTER_FD_EXT)
+.      if ${EGL_EXT_FILE:sh} == EGL_DRM_MASTER_FD_EXT
 PLIST.egldevice=	yes
 .      endif
 .    endif

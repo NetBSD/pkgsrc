@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/07/02 22:31:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/11/11 12:34:17 adam Exp $
 lib/pkgconfig/Qt6TextToSpeech.pc
 qt6/include/QtTextToSpeech/${PKGVERSION}/QtTextToSpeech/private/qtexttospeech_p.h
 qt6/include/QtTextToSpeech/${PKGVERSION}/QtTextToSpeech/private/qttexttospeech-config_p.h
@@ -64,10 +64,10 @@ qt6/lib/cmake/Qt6TextToSpeechPrivate/Qt6TextToSpeechPrivateVersionlessAliasTarge
 qt6/lib/cmake/Qt6TextToSpeechPrivate/Qt6TextToSpeechPrivateVersionlessTargets.cmake
 qt6/lib/libQt6TextToSpeech.prl
 qt6/lib/libQt6TextToSpeech.so
-qt6/lib/libQt6TextToSpeech.so.6
 qt6/lib/libQt6TextToSpeech.so.${PKGVERSION}
+qt6/lib/libQt6TextToSpeech.so.6
 qt6/lib/pkgconfig/Qt6TextToSpeech.pc
-qt6/metatypes/qt6texttospeech_release_metatypes.json
+qt6/metatypes/qt6texttospeech_metatypes.json
 qt6/mkspecs/modules/qt_lib_texttospeech.pri
 qt6/mkspecs/modules/qt_lib_texttospeech_private.pri
 qt6/modules/TextToSpeech.json
