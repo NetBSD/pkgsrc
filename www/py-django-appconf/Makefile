@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/04/14 13:30:01 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/11/11 10:46:31 adam Exp $
 
-DISTNAME=	django-appconf-1.1.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	django_appconf-1.2.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-appconf/}
 
