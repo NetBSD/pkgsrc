@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2025/11/11 14:24:29 abs Exp $
+# $NetBSD: Makefile,v 1.62 2025/11/11 22:13:35 wiz Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtbase-${QTVERSION}
@@ -6,6 +6,8 @@ COMMENT=	C++ X GUI toolkit
 CATEGORIES=	x11
 
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
+
+CONFLICTS+=	qt6-qtwayland<6.10.0
 
 .include "Makefile.common"
 
