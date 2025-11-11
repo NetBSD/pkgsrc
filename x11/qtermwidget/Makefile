@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2025/10/23 20:40:18 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2025/11/11 02:55:26 gutteridge Exp $
 
-DISTNAME=	qtermwidget-2.2.0
-PKGREVISION=	1
+DISTNAME=	qtermwidget-2.3.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -23,7 +22,7 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	lib/qtermwidget.cpp
 SUBST_SED.prefix=	-e 's,/usr/share,${PREFIX}/share,g'
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.2.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.3.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"
