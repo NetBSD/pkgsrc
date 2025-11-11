@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2025/11/11 13:39:49 taca Exp $
+# $NetBSD: Makefile,v 1.90 2025/11/11 13:42:54 taca Exp $
 
 .include "../../sysutils/coreutils/Makefile.common"
 
@@ -10,9 +10,8 @@ CONFLICTS=	fileutils-[0-9]* gnuls-[0-9]* linuxls-[0-9]* sh-utils-[0-9]* textutil
 CONFLICTS+=		id-utils-[0-9]* gnome-utils<1.4.1.2nb2
 CONFLICTS+=		geneweb-[0-9]*
 CONFLICTS+=		graphviz<1.12
-# sysutils/coreutils installs a 'gstat' program, so conflict with it
-CONFLICTS+=		ganglia-[0-9]*
-
+# parallel/ganglia-monitor-core also installs a 'gstat' program
+CONFLICTS+=		ganglia-monitor-core-[0-9]*
 INFO_FILES=		yes
 
 # Exclude programs from PLIST which aren't built on a platform.
