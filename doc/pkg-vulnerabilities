@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.657 2025/11/05 22:22:26 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.658 2025/11/11 11:02:30 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28834,3 +28834,61 @@ mantis<2.27.2	authentication-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-4
 mantis<2.27.2	authorization-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-55155
 mantis<2.27.2	information-disclosure		https://nvd.nist.gov/vuln/detail/CVE-2025-62520
 redis<8.2.3	stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-62507
+calibre<8.14.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-64486
+chromium<141.0.7390.54	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-11205
+chromium<141.0.7390.54	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-11206
+chromium<141.0.7390.54	side-channel		https://nvd.nist.gov/vuln/detail/CVE-2025-11207
+chromium<141.0.7390.54	ui-spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-11208
+chromium<141.0.7390.54	side-channel		https://nvd.nist.gov/vuln/detail/CVE-2025-11210
+chromium<141.0.7390.54	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-11211
+chromium<141.0.7390.54	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-11215
+chromium<141.0.7390.54	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-11219
+chromium<141.0.7390.65	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-11458
+chromium<141.0.7390.65	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-11460
+chromium<141.0.7390.107	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-11756
+chromium<141.0.7390.122	out-of-bounds-access	https://nvd.nist.gov/vuln/detail/CVE-2025-12036
+chromium<142.0.7444.59	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-12428
+chromium<142.0.7444.59	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-12429
+chromium<142.0.7444.59	ui-spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-12430
+chromium<142.0.7444.59	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-12431
+chromium<142.0.7444.59	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-12432
+chromium<142.0.7444.59	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-12433
+chromium<142.0.7444.59	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-12436
+chromium<142.0.7444.59	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-12437
+chromium<142.0.7444.59	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-12438
+chromium<142.0.7444.59	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-12440
+chromium<142.0.7444.59	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-12441
+chromium<142.0.7444.59	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-12443
+chromium<142.0.7444.59	ui-spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-12444
+chromium<142.0.7444.59	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-12445
+chromium<142.0.7444.59	ui-spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-12446
+chromium<142.0.7444.137	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-12727
+chromium<140.0.7339.80	ui-spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-12906
+chromium<140.0.7339.80	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-12907
+chromium<140.0.7339.80	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-12909
+chromium<140.0.7339.80	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-12910
+chromium<140.0.7339.80	ui-spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-12911
+# wolfssh not supported in pkgsrc
+#curl<8.17.0	man-in-the-middle-attack	https://nvd.nist.gov/vuln/detail/CVE-2025-10966
+ffmpeg5<5.1.7	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-7700
+ffmpeg6<6.1.3	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-7700
+ffmpeg7<7.1.2	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-7700
+ffmpeg8<8.0	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-7700
+lasso<2.9.0	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-46404
+lasso<2.9.0	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-46705
+lasso<2.8.1	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-46784
+lasso<2.9.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-47151
+libarchive-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-60753
+libmicrohttpd<1.0.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-59777
+libmicrohttpd<1.0.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-62689
+libxml2-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-12863
+magento<20.16.0	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-64174
+openexr<3.4.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-64181
+openexr<3.4.3	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-64182
+openexr<3.4.3	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-64183
+py{27,39,310,311,312,313,314}-django<4.2.26	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-64458
+py{27,39,310,311,312,313,314}-django>=5<5.2.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-64458
+py{27,39,310,311,312,313,314}-django<4.2.26	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-64459
+py{27,39,310,311,312,313,314}-django>=5<5.2.8	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-64459
+py{27,39,310,311,312,313,314}-octoprint<1.11.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-64187
+quickjs-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-12745
