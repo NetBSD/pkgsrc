@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2025/10/30 13:35:25 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2025/11/11 13:41:55 adam Exp $
 
-DISTNAME=	pypdf-6.1.3
+DISTNAME=	pypdf-6.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypdf/}
