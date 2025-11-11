@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/15 08:15:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/11/11 14:07:13 adam Exp $
 bin/ldapdomaindump-${PYVERSSUFFIX}
 bin/ldd2bloodhound-${PYVERSSUFFIX}
 bin/ldd2pretty-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/ldapdomaindump/__init__.py
