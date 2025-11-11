@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6616 2025/11/11 02:55:39 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.6617 2025/11/11 02:56:22 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9567,3 +9567,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/pavucontrol-qt to 2.3.0 [gutteridge 2025-11-11]
 	Updated graphics/lximage-qt to 2.3.0 [gutteridge 2025-11-11]
 	Updated x11/qtermwidget to 2.3.0 [gutteridge 2025-11-11]
+	Updated x11/qterminal to 2.3.0 [gutteridge 2025-11-11]
