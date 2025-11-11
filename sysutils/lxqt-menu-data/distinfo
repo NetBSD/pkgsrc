@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2025/04/28 01:12:44 gutteridge Exp $
+$NetBSD: distinfo,v 1.5 2025/11/11 02:46:11 gutteridge Exp $
 
-BLAKE2s (lxqt-menu-data-2.2.0.tar.xz) = 61f3ab8dc6b11b10db6becd9c2a3a6280898b6f262b6a811c3a5f7ca70a33c82
-SHA512 (lxqt-menu-data-2.2.0.tar.xz) = 9afe61e7280e99e47dbc4fa156634dfc56908f5367d98f194834e61dc963850b188a3fb76088940724c726fcc695859a3f57f0381a5047a53264ff87585d0ee6
-Size (lxqt-menu-data-2.2.0.tar.xz) = 55208 bytes
-SHA1 (patch-menu_CMakeLists.txt) = 277c9687b20684313a1bf2cf9114ae494a204995
+BLAKE2s (lxqt-menu-data-2.3.0.tar.xz) = a4015a64ed39e10a3b24f0358ea35d6154b3da8a92ab301317ea8f5e8c19ca5e
+SHA512 (lxqt-menu-data-2.3.0.tar.xz) = 4b64267e39bddad3096402824ff482697eccd6d036ef66a8ca81918c06778819f4d0400e1c728b4e056be6a45d39e80f6e3a1fcad932112db521eb5eee68f683
+Size (lxqt-menu-data-2.3.0.tar.xz) = 55528 bytes
+SHA1 (patch-menu_CMakeLists.txt) = 7ae9350e753a96c582b9c4806a3775d15db989dd
