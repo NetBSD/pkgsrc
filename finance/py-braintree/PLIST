@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.31 2025/08/16 06:54:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2025/11/11 12:57:56 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/braintree/__init__.py
 ${PYSITELIB}/braintree/__init__.pyc
@@ -46,6 +45,15 @@ ${PYSITELIB}/braintree/attribute_getter.pyo
 ${PYSITELIB}/braintree/authorization_adjustment.py
 ${PYSITELIB}/braintree/authorization_adjustment.pyc
 ${PYSITELIB}/braintree/authorization_adjustment.pyo
+${PYSITELIB}/braintree/bank_account_instant_verification_gateway.py
+${PYSITELIB}/braintree/bank_account_instant_verification_gateway.pyc
+${PYSITELIB}/braintree/bank_account_instant_verification_gateway.pyo
+${PYSITELIB}/braintree/bank_account_instant_verification_jwt.py
+${PYSITELIB}/braintree/bank_account_instant_verification_jwt.pyc
+${PYSITELIB}/braintree/bank_account_instant_verification_jwt.pyo
+${PYSITELIB}/braintree/bank_account_instant_verification_jwt_request.py
+${PYSITELIB}/braintree/bank_account_instant_verification_jwt_request.pyc
+${PYSITELIB}/braintree/bank_account_instant_verification_jwt_request.pyo
 ${PYSITELIB}/braintree/bin_data.py
 ${PYSITELIB}/braintree/bin_data.pyc
 ${PYSITELIB}/braintree/bin_data.pyo
@@ -427,6 +435,9 @@ ${PYSITELIB}/braintree/plan_gateway.pyo
 ${PYSITELIB}/braintree/processor_response_types.py
 ${PYSITELIB}/braintree/processor_response_types.pyc
 ${PYSITELIB}/braintree/processor_response_types.pyo
+${PYSITELIB}/braintree/receiver.py
+${PYSITELIB}/braintree/receiver.pyc
+${PYSITELIB}/braintree/receiver.pyo
 ${PYSITELIB}/braintree/resource.py
 ${PYSITELIB}/braintree/resource.pyc
 ${PYSITELIB}/braintree/resource.pyo
@@ -445,6 +456,9 @@ ${PYSITELIB}/braintree/samsung_pay_card.pyo
 ${PYSITELIB}/braintree/search.py
 ${PYSITELIB}/braintree/search.pyc
 ${PYSITELIB}/braintree/search.pyo
+${PYSITELIB}/braintree/sender.py
+${PYSITELIB}/braintree/sender.pyc
+${PYSITELIB}/braintree/sender.pyo
 ${PYSITELIB}/braintree/sepa_direct_debit_account.py
 ${PYSITELIB}/braintree/sepa_direct_debit_account.pyc
 ${PYSITELIB}/braintree/sepa_direct_debit_account.pyo
@@ -536,6 +550,9 @@ ${PYSITELIB}/braintree/transaction_review.pyo
 ${PYSITELIB}/braintree/transaction_search.py
 ${PYSITELIB}/braintree/transaction_search.pyc
 ${PYSITELIB}/braintree/transaction_search.pyo
+${PYSITELIB}/braintree/transaction_us_bank_account_request.py
+${PYSITELIB}/braintree/transaction_us_bank_account_request.pyc
+${PYSITELIB}/braintree/transaction_us_bank_account_request.pyo
 ${PYSITELIB}/braintree/transfer.py
 ${PYSITELIB}/braintree/transfer.pyc
 ${PYSITELIB}/braintree/transfer.pyo
