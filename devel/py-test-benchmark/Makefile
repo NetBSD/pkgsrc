@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/11/05 13:43:48 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/11/11 13:43:39 adam Exp $
 
-DISTNAME=	pytest_benchmark-5.2.1
+DISTNAME=	pytest_benchmark-5.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pytest_/test-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-benchmark/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/ionelmc/pytest-benchmark
 COMMENT=	Pytest support for benchmarking
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=80:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cpuinfo-[0-9]*:../../sysutils/py-cpuinfo
 DEPENDS+=	${PYPKGPREFIX}-test>=8.1:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-elasticsearch-[0-9]*:../../databases/py-elasticsearch
