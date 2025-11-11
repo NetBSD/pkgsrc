@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2025/07/22 18:32:44 gdt Exp $
+# $NetBSD: Makefile,v 1.30 2025/11/11 12:37:45 adam Exp $
 
 # Before updating sip, geography/qgis (as the most demanding sip user
 # currently known) must be tested to build and run (with an actual
@@ -16,7 +16,7 @@
 # other packaging systems -- the MAINTAINER's decision is that lack of
 # trouble is more important than fast updates.
 
-DISTNAME=	sip-6.12.0
+DISTNAME=	sip-6.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/sip/sip6/}
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sip/}
@@ -29,8 +29,8 @@ HOMEPAGE=	https://github.com/Python-SIP/sip
 COMMENT=	Tool to create Python bindings for C++ libraries
 LICENSE=	sip-license OR gnu-gpl-v2 OR gnu-gpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8:../../devel/py-setuptools_scm
+DEPENDS+=	${PYPKGPREFIX}-packaging>=24.2:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	c c++
