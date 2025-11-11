@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/11/15 13:06:26 pin Exp $
+$NetBSD: distinfo,v 1.12 2025/11/11 11:12:24 pin Exp $
 
-BLAKE2s (obconf-qt-0.16.5.tar.xz) = b361e1c9f2f855709a920fc50c8f8fe4f75d1cc75815489d29bf122fa6d3d877
-SHA512 (obconf-qt-0.16.5.tar.xz) = 50f3ac70ad3e31239eedfc498fac0bbc14371c13f270a52b2a90295655fa17024d2f081f56e1b9e5ca4f172835348a4813691f19ff41ab81648a7a74a2f19398
-Size (obconf-qt-0.16.5.tar.xz) = 122908 bytes
+BLAKE2s (obconf-qt-0.16.6.tar.xz) = af6a8f922eb8fb432b9411f9df91d14aed338512b131064e0764cf888bc3a289
+SHA512 (obconf-qt-0.16.6.tar.xz) = e6845afbf1c3540840f5411d342d72fa39c1540f9f76243964a62a974271e50874188d65ce458a5e95af1ac2590b6730b4c0b4407615fae2f69c3942f3413b2e
+Size (obconf-qt-0.16.6.tar.xz) = 128948 bytes
