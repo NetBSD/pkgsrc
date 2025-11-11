@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6632 2025/11/11 03:12:20 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.6633 2025/11/11 03:13:00 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9583,3 +9583,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/lxqt-panel to 2.3.0 [gutteridge 2025-11-11]
 	Updated x11/lxqt-runner to 2.3.0 [gutteridge 2025-11-11]
 	Updated graphics/screengrab to 3.1.0 [gutteridge 2025-11-11]
+	Updated meta-pkgs/lxqt to 2.3.0 [gutteridge 2025-11-11]
