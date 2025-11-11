@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.105 2025/10/12 17:09:19 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2025/11/11 13:50:45 adam Exp $
 
-DISTNAME=	astroid-4.0.1
+DISTNAME=	astroid-4.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astroid/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	https://github.com/pycqa/astroid
+HOMEPAGE=	https://github.com/pylint-dev/astroid
 COMMENT=	Rebuild a new abstract syntax tree from Python's ast
 LICENSE=	gnu-lgpl-v2.1
 
