@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2018/09/02 00:52:50 maya Exp $
+# $NetBSD: options.mk,v 1.10 2025/11/11 20:40:56 vins Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -23,11 +23,11 @@ MAKE_FLAGS+=	IP=4
 ###
 .if !empty(PKG_OPTIONS:Mkerberos)
 .  include "../../mk/krb5.buildlink3.mk"
-MAKE_ENV+=	KRB5_TYPE=${KRB5_TYPE}
-MAKE_ENV+=	EXTRAAUTHENTICATORS=gss
-EXTRASPECIALS+=	GSSDIR=${KRB5BASE}
-CFLAGS.heimdal=	-DHEIMDAL_KRB5
-CFLAGS+=	${CFLAGS.${KRB5_TYPE}}
+MAKE_ENV+=		KRB5_TYPE=${KRB5_TYPE}
+MAKE_ENV+=		EXTRAAUTHENTICATORS=gss
+EXTRASPECIALS+=		GSSDIR=${KRB5BASE}
+CFLAGS.heimdal+=	-DHEIMDAL_KRB5
+CFLAGS+=		${CFLAGS.${KRB5_TYPE}}
 .endif
 
 ###
