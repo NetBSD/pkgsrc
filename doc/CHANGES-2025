@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6639 2025/11/11 10:27:51 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6640 2025/11/11 10:38:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9595,3 +9595,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-fakefs to 5.10.2 [adam 2025-11-11]
 	Updated devel/py-faker to 37.12.0 [adam 2025-11-11]
 	Updated devel/py-coveralls to 4.0.2 [adam 2025-11-11]
+	Updated math/py-asteval to 1.0.7 [adam 2025-11-11]
+	Updated net/py-aiodns to 3.5.0 [adam 2025-11-11]
+	Updated www/py-aiohttp-socks to 0.10.2 [adam 2025-11-11]
+	Updated devel/py-blessed to 1.23.0 [adam 2025-11-11]
