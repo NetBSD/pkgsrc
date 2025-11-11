@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6648 2025/11/11 13:37:11 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6649 2025/11/11 13:46:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9647,3 +9647,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/blosc2 to 2.22.0 [adam 2025-11-11]
 	Updated finance/py-braintree to 4.40.0 [adam 2025-11-11]
 	Updated databases/pear-DB to 1.12.3 [taca 2025-11-11]
+	Updated devel/py-plumbum to 1.10.0 [adam 2025-11-11]
+	Updated textproc/py-pdf to 6.2.0 [adam 2025-11-11]
+	Updated devel/py-test-benchmark to 5.2.3 [adam 2025-11-11]
+	Updated www/py-publicsuffixlist to 1.0.2.20251109 [adam 2025-11-11]
