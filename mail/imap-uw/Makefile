@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2025/10/26 17:28:47 vins Exp $
+# $NetBSD: Makefile,v 1.157 2025/11/11 20:40:56 vins Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -11,7 +11,7 @@
 
 DISTNAME=	imap-2007f
 PKGNAME=	${DISTNAME:S/-/-uw-/}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	mail
 #MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z
@@ -35,11 +35,11 @@ MAKE_JOBS_SAFE=	no
 .include "../../mk/bsd.prefs.mk"
 
 .include "../../mk/compiler.mk"
-.  if empty(CC_VERSION:Mgcc-)
+.if ${CC_VERSION} != gcc-
 BUILD_TARGET.SunOS=	soc
-.  else
+.else
 BUILD_TARGET.SunOS=	gso
-.  endif
+.endif
 .if ${OPSYS} == Linux && exists(/usr/include/security/pam_appl.h)
 BUILD_TARGET.Linux=	lnp
 .else
@@ -47,11 +47,11 @@ BUILD_TARGET.Linux=	slx
 .endif
 .if ${OPSYS} == Darwin
 LDFLAGS+=		-flat_namespace
-.   if exists(/usr/include/pam/pam_appl.h)
+.  if exists(/usr/include/pam/pam_appl.h)
 BUILD_TARGET.Darwin=	oxp
-.   else
+.  else
 BUILD_TARGET.Darwin=	osx
-.   endif
+.  endif
 .endif
 .if ${OPSYS} == "IRIX"
 .  if ${OPSYS_VERSION} >= 060500
@@ -113,13 +113,14 @@ SUBST_SED.man+=		-e "s|/etc/rimapd|${PREFIX}/sbin/rimapd|g"
 SUBST_SED.man+=		-e "s|/usr/etc/ipop2d|${PREFIX}/libexec/ipop2d|g"
 SUBST_SED.man+=		-e "s|/usr/etc/ipop3d|${PREFIX}/libexec/ipop3d|g"
 
-INSTALLATION_DIRS+=	bin lib libexec sbin				\
-			${PKGMANDIR}/man1 ${PKGMANDIR}/man8
+INSTALLATION_DIRS+=	bin lib libexec sbin			\
+			${PKGMANDIR}/man1 ${PKGMANDIR}/man8	\
+			include/c-client
 
 # Generate _pic.a library from shared objects.
 post-build:
 	cd ${WRKSRC}/c-client;						\
-	${LIBTOOL} --mode=link ${CC} -o ${CCLIENT_PICLIB:.a=.la} *.lo
+	${LIBTOOL} --tag=CC --mode=link ${CC} -o ${CCLIENT_PICLIB:.a=.la} *.lo
 
 do-install: install-headers install-lib install-doc
 	${LTINSTALL_PROGRAM} ${WRKSRC}/imapd/imapd ${DESTDIR}${PREFIX}/libexec
@@ -141,7 +142,6 @@ do-install: install-headers install-lib install-doc
 
 .PHONY: install-headers install-lib install-doc
 install-headers:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/c-client
 	${CAT} ${PKGDIR}/PLIST |					\
 	while read entry; do						\
 		case "$$entry" in					\
@@ -157,7 +157,7 @@ install-lib:
 	${INSTALL_LIB} ${WRKSRC}/c-client/.libs/${CCLIENT_PICLIB} ${DESTDIR}${PREFIX}/lib
 	${RANLIB} ${DESTDIR}${PREFIX}/lib/${CCLIENT_PICLIB}
 
-DOCDIR=	${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+DOCDIR= ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 install-doc:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${CP} -R ${WRKSRC}/docs/* ${DOCDIR}

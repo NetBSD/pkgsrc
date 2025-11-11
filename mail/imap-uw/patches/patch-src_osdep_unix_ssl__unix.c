@@ -1,14 +1,32 @@
-$NetBSD: patch-src_osdep_unix_ssl__unix.c,v 1.2 2018/04/16 21:27:57 christos Exp $
+$NetBSD: patch-src_osdep_unix_ssl__unix.c,v 1.3 2025/11/11 20:40:56 vins Exp $
 
-Description: Support OpenSSL 1.1
- When building with OpenSSL 1.1 and newer, use the new built-in
- hostname verification instead of code that doesn't compile due to
- structs having been made opaque.
-Bug-Debian: https://bugs.debian.org/828589
+* Description: Support OpenSSL 1.1
+    When building with OpenSSL 1.1 and newer, use the new built-in
+    hostname verification instead of code that doesn't compile due to
+    structs having been made opaque.
+    Bug-Debian: https://bugs.debian.org/828589
+
+* Enable OpenSSL 1.0 compatibility to build with OpenSSL 3.x. 
 
 --- src/osdep/unix/ssl_unix.c.orig	2011-07-23 00:20:10.000000000 +0000
-+++ src/osdep/unix/ssl_unix.c	2018-04-16 17:20:28.991950059 -0400
-@@ -219,16 +219,28 @@
++++ src/osdep/unix/ssl_unix.c
+@@ -26,6 +26,7 @@
+  * Last Edited:	13 January 2007
+  */
+ 
++#define OPENSSL_API_COMPAT 0x10100000
+ #define crypt ssl_private_crypt
+ #include <x509v3.h>
+ #include <ssl.h>
+@@ -40,7 +41,6 @@
+ #define SSLBUFLEN 8192
+ #define SSLCIPHERLIST "ALL:!LOW"
+ 
+-
+ /* SSL I/O stream */
+ 
+ typedef struct ssl_stream {
+@@ -219,16 +219,28 @@ static char *ssl_start_work (SSLSTREAM *
      (sslclientkey_t) mail_parameters (NIL,GET_SSLCLIENTKEY,NIL);
    if (ssl_last_error) fs_give ((void **) &ssl_last_error);
    ssl_last_host = host;
@@ -41,7 +59,7 @@ Bug-Debian: https://bugs.debian.org/828589
    SSL_CTX_set_default_verify_paths (stream->context);
  				/* ...unless a non-standard path desired */
    if (s = (char *) mail_parameters (NIL,GET_SSLCAPATH,NIL))
-@@ -266,6 +278,7 @@
+@@ -266,6 +278,7 @@ static char *ssl_start_work (SSLSTREAM *
    if (SSL_write (stream->con,"",0) < 0)
      return ssl_last_error ? ssl_last_error : "SSL negotiation failed";
  				/* need to validate host names? */
@@ -49,7 +67,7 @@ Bug-Debian: https://bugs.debian.org/828589
    if (!(flags & NET_NOVALIDATECERT) &&
        (err = ssl_validate_cert (cert = SSL_get_peer_certificate (stream->con),
  				host))) {
-@@ -275,6 +288,7 @@
+@@ -275,6 +288,7 @@ static char *ssl_start_work (SSLSTREAM *
      sprintf (tmp,"*%.128s: %.255s",err,cert ? cert->name : "???");
      return ssl_last_error = cpystr (tmp);
    }
@@ -57,7 +75,7 @@ Bug-Debian: https://bugs.debian.org/828589
    return NIL;
  }
  
-@@ -313,6 +327,7 @@
+@@ -313,6 +327,7 @@ static int ssl_open_verify (int ok,X509_
   * Returns: NIL if validated, else string of error message
   */
  
@@ -65,7 +83,7 @@ Bug-Debian: https://bugs.debian.org/828589
  static char *ssl_validate_cert (X509 *cert,char *host)
  {
    int i,n;
-@@ -342,6 +357,7 @@
+@@ -342,6 +357,7 @@ static char *ssl_validate_cert (X509 *ce
    else ret = "Unable to locate common name in certificate";
    return ret;
  }
@@ -73,7 +91,7 @@ Bug-Debian: https://bugs.debian.org/828589
  
  /* Case-independent wildcard pattern match
   * Accepts: base string
-@@ -702,9 +718,13 @@
+@@ -702,9 +718,13 @@ void ssl_server_init (char *server)
      if (stat (key,&sbuf)) strcpy (key,cert);
    }
  				/* create context */
@@ -90,7 +108,7 @@ Bug-Debian: https://bugs.debian.org/828589
      syslog (LOG_ALERT,"Unable to create SSL context, host=%.80s",
  	    tcp_clienthost ());
    else {			/* set context options */
-@@ -772,17 +792,35 @@
+@@ -772,17 +792,35 @@ static RSA *ssl_genkey (SSL *con,int exp
  {
    unsigned long i;
    static RSA *key = NIL;

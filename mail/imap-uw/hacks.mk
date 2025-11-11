@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.3 2025/10/26 17:28:47 vins Exp $
+# $NetBSD: hacks.mk,v 1.4 2025/11/11 20:40:56 vins Exp $
 
 .if !defined(IMAP_UW_HACKS_MK)
 IMAP_UW_HACKS_MK=	defined
@@ -10,7 +10,7 @@ IMAP_UW_HACKS_MK=	defined
 ### to free unreference scalar".  Remove optimisation flags as a
 ### workaround until GCC is fixed.
 ###
-.if !empty(CC_VERSION:Mgcc*) && !empty(MACHINE_PLATFORM:MNetBSD-*-alpha)
+.if ${CC_VERSION:Mgcc*} && ${MACHINE_PLATFORM:MNetBSD-*-alpha}
 PKG_HACKS+=		alpha-codegen
 BUILDLINK_TRANSFORM+=	opt:-O[0-9]*:-O
 .endif
@@ -38,5 +38,21 @@ SUBST_SED.hacks+=	-e "s:void \*d2:const void \*d2:g"
 SUBST_SED.hacks+=	-e "s:const struct direct \**d1:const void \*d1:g"
 SUBST_SED.hacks+=	-e "s:const struct direct \**d2:const void \*d2:g"
 
-.endif
+.elif ${OPSYS:M*BSD}
+
+PKG_HACKS+=		incompatible-pointer-types
+
+SUBST_CLASSES+=		hacks
+SUBST_STAGE.hacks=	pre-configure
+SUBST_MESSAGE.hacks=	Applying fixes for OS-dependent routines on *BSD.
+SUBST_FILES.hacks+=	src/osdep/unix/news.c src/osdep/unix/mh.c \
+			src/osdep/unix/mix.c src/osdep/unix/mx.c
+SUBST_SED.hacks+=	-e "s:char \*s = name:const char \*s = name:g"
+SUBST_SED.hacks+=	-e "s:char c,\*s;:char c; const char \*s;:g"
+SUBST_SED.hacks+=	-e "s:mix_dirfmttest (char \*name):mix_dirfmttest (const char \*name):g"
+SUBST_SED.hacks+=	-e "s:struct direct \*name:const struct direct \*name:g"
+SUBST_SED.hacks+=	-e "s:const void \*d1:const struct direct \**d1:g"
+SUBST_SED.hacks+=	-e "s:const void \*d2:const struct direct \**d2:g"
+
+.endif  # incompatible-pointer-types
 .endif  # IMAP_UW_HACKS_MK
