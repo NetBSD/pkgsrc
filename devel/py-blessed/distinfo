@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/10/03 09:19:30 adam Exp $
+$NetBSD: distinfo,v 1.5 2025/11/11 10:38:30 adam Exp $
 
-BLAKE2s (blessed-1.22.0.tar.gz) = 15e622da40cdec85f7c427b19e78441c6199d54033dc5dca8ef6192faa682032
-SHA512 (blessed-1.22.0.tar.gz) = 0bdb10332420ab078151790b4b090d4d8703659ce34cdf9465dc160feb03b51eed49c4f5226b29e9290918ba5a4311626efe18028717f454e3b73e7f6bad9695
-Size (blessed-1.22.0.tar.gz) = 6660050 bytes
+BLAKE2s (blessed-1.23.0.tar.gz) = 9a6e4861dd5996000a6c80711498a44ed9bc071fd6f17c66b9e26a747dfe34ca
+SHA512 (blessed-1.23.0.tar.gz) = 0b343d4b55df2aaa516e7c0ac41f0bf5ad00bdc282eeace219eb5515fe464770bb1d35fbed9f65705213394e679691c96aa957f93652d6dda6d1958d4074bfda
+Size (blessed-1.23.0.tar.gz) = 6745236 bytes
