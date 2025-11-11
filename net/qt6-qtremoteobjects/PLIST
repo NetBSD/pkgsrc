@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/06/30 15:18:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/11/11 12:34:16 adam Exp $
 lib/pkgconfig/Qt6RemoteObjects.pc
 lib/pkgconfig/Qt6RemoteObjectsQml.pc
 lib/pkgconfig/Qt6RepParser.pc
@@ -126,14 +126,6 @@ qt6/lib/cmake/Qt6RepParser/Qt6RepParserDependencies.cmake
 qt6/lib/cmake/Qt6RepParser/Qt6RepParserTargets.cmake
 qt6/lib/cmake/Qt6RepParser/Qt6RepParserVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6RepParser/Qt6RepParserVersionlessTargets.cmake
-qt6/lib/cmake/Qt6RepParserPrivate/Qt6RepParserPrivateAdditionalTargetInfo.cmake
-qt6/lib/cmake/Qt6RepParserPrivate/Qt6RepParserPrivateConfig.cmake
-qt6/lib/cmake/Qt6RepParserPrivate/Qt6RepParserPrivateConfigVersion.cmake
-qt6/lib/cmake/Qt6RepParserPrivate/Qt6RepParserPrivateConfigVersionImpl.cmake
-qt6/lib/cmake/Qt6RepParserPrivate/Qt6RepParserPrivateDependencies.cmake
-qt6/lib/cmake/Qt6RepParserPrivate/Qt6RepParserPrivateTargets.cmake
-qt6/lib/cmake/Qt6RepParserPrivate/Qt6RepParserPrivateVersionlessAliasTargets.cmake
-qt6/lib/cmake/Qt6RepParserPrivate/Qt6RepParserPrivateVersionlessTargets.cmake
 qt6/lib/libQt6RemoteObjects.prl
 qt6/lib/libQt6RemoteObjects.so
 qt6/lib/libQt6RemoteObjects.so.${PKGVERSION}
@@ -146,8 +138,8 @@ qt6/lib/pkgconfig/Qt6RemoteObjects.pc
 qt6/lib/pkgconfig/Qt6RemoteObjectsQml.pc
 qt6/lib/pkgconfig/Qt6RepParser.pc
 qt6/libexec/repc
-qt6/metatypes/qt6remoteobjects_release_metatypes.json
-qt6/metatypes/qt6remoteobjectsqml_release_metatypes.json
+qt6/metatypes/qt6remoteobjects_metatypes.json
+qt6/metatypes/qt6remoteobjectsqml_metatypes.json
 qt6/mkspecs/features/remoteobjects_repc.prf
 qt6/mkspecs/features/repcclient.pri
 qt6/mkspecs/features/repccommon.pri
@@ -159,7 +151,6 @@ qt6/mkspecs/modules/qt_lib_remoteobjects_private.pri
 qt6/mkspecs/modules/qt_lib_remoteobjectsqml.pri
 qt6/mkspecs/modules/qt_lib_remoteobjectsqml_private.pri
 qt6/mkspecs/modules/qt_lib_repparser.pri
-qt6/mkspecs/modules/qt_lib_repparser_private.pri
 qt6/modules/RemoteObjects.json
 qt6/modules/RemoteObjectsQml.json
 qt6/modules/RepParser.json

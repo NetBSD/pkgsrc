@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2025/06/30 15:18:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/11/11 12:34:14 adam Exp $
 lib/pkgconfig/Qt6HttpServer.pc
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qabstracthttpserver_p.h
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserver_p.h
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverhttp1protocolhandler_p.h
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverhttp2protocolhandler_p.h
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverliterals_p.h
+qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverparser_p.h
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverrequest_p.h
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverrequestfilter_p.h
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverresponder_p.h
@@ -62,7 +63,7 @@ qt6/lib/libQt6HttpServer.so
 qt6/lib/libQt6HttpServer.so.${PKGVERSION}
 qt6/lib/libQt6HttpServer.so.6
 qt6/lib/pkgconfig/Qt6HttpServer.pc
-qt6/metatypes/qt6httpserver_release_metatypes.json
+qt6/metatypes/qt6httpserver_metatypes.json
 qt6/mkspecs/modules/qt_lib_httpserver.pri
 qt6/mkspecs/modules/qt_lib_httpserver_private.pri
 qt6/modules/HttpServer.json

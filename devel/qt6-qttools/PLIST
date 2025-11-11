@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/10/01 07:25:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/11/11 12:34:17 adam Exp $
 lib/pkgconfig/Qt6Designer.pc
 lib/pkgconfig/Qt6Help.pc
 lib/pkgconfig/Qt6Linguist.pc
@@ -448,10 +448,10 @@ qt6/libexec/lrelease-pro
 qt6/libexec/lupdate-pro
 qt6/libexec/qhelpgenerator
 qt6/libexec/qtattributionsscanner
-qt6/metatypes/qt6designer_release_metatypes.json
-qt6/metatypes/qt6designercomponentsprivate_release_metatypes.json
-qt6/metatypes/qt6help_release_metatypes.json
-qt6/metatypes/qt6uitools_release_metatypes.json
+qt6/metatypes/qt6designer_metatypes.json
+qt6/metatypes/qt6designercomponentsprivate_metatypes.json
+qt6/metatypes/qt6help_metatypes.json
+qt6/metatypes/qt6uitools_metatypes.json
 qt6/mkspecs/modules/qt_lib_designer.pri
 qt6/mkspecs/modules/qt_lib_designer_private.pri
 qt6/mkspecs/modules/qt_lib_designercomponents_private.pri

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.openxr,v 1.3 2025/06/30 15:18:52 adam Exp $
+@comment $NetBSD: PLIST.openxr,v 1.4 2025/11/11 12:34:15 adam Exp $
 lib/pkgconfig/Qt6Quick3DXr.pc
 qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qabstractopenxrgraphics_p.h
 qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qopenxrgraphics_metal_p.h
@@ -70,7 +70,7 @@ qt6/lib/libQt6Quick3DXr.prl
 qt6/lib/libQt6Quick3DXr.so
 qt6/lib/libQt6Quick3DXr.so.6
 qt6/lib/pkgconfig/Qt6Quick3DXr.pc
-qt6/metatypes/qt6quick3dxr_release_metatypes.json
+qt6/metatypes/qt6quick3dxr_metatypes.json
 qt6/mkspecs/modules/qt_ext_openxr_loader.pri
 qt6/mkspecs/modules/qt_lib_quick3dxr.pri
 qt6/mkspecs/modules/qt_lib_quick3dxr_private.pri

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/10/01 07:25:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/11/11 12:34:13 adam Exp $
 lib/pkgconfig/Qt63DAnimation.pc
 lib/pkgconfig/Qt63DCore.pc
 lib/pkgconfig/Qt63DExtras.pc
@@ -1538,20 +1538,20 @@ qt6/lib/pkgconfig/Qt63DQuickRender.pc
 qt6/lib/pkgconfig/Qt63DQuickScene2D.pc
 qt6/lib/pkgconfig/Qt63DQuickScene3D.pc
 qt6/lib/pkgconfig/Qt63DRender.pc
-qt6/metatypes/qt63danimation_release_metatypes.json
-qt6/metatypes/qt63dcore_release_metatypes.json
-qt6/metatypes/qt63dextras_release_metatypes.json
-qt6/metatypes/qt63dinput_release_metatypes.json
-qt6/metatypes/qt63dlogic_release_metatypes.json
-qt6/metatypes/qt63dquick_release_metatypes.json
-qt6/metatypes/qt63dquickanimation_release_metatypes.json
-qt6/metatypes/qt63dquickextras_release_metatypes.json
-qt6/metatypes/qt63dquickinput_release_metatypes.json
-qt6/metatypes/qt63dquicklogic_release_metatypes.json
-qt6/metatypes/qt63dquickrender_release_metatypes.json
-qt6/metatypes/qt63dquickscene2d_release_metatypes.json
-qt6/metatypes/qt63dquickscene3d_release_metatypes.json
-qt6/metatypes/qt63drender_release_metatypes.json
+qt6/metatypes/qt63danimation_metatypes.json
+qt6/metatypes/qt63dcore_metatypes.json
+qt6/metatypes/qt63dextras_metatypes.json
+qt6/metatypes/qt63dinput_metatypes.json
+qt6/metatypes/qt63dlogic_metatypes.json
+qt6/metatypes/qt63dquick_metatypes.json
+qt6/metatypes/qt63dquickanimation_metatypes.json
+qt6/metatypes/qt63dquickextras_metatypes.json
+qt6/metatypes/qt63dquickinput_metatypes.json
+qt6/metatypes/qt63dquicklogic_metatypes.json
+qt6/metatypes/qt63dquickrender_metatypes.json
+qt6/metatypes/qt63dquickscene2d_metatypes.json
+qt6/metatypes/qt63dquickscene3d_metatypes.json
+qt6/metatypes/qt63drender_metatypes.json
 qt6/mkspecs/modules/qt_lib_3danimation.pri
 qt6/mkspecs/modules/qt_lib_3danimation_private.pri
 qt6/mkspecs/modules/qt_lib_3dcore.pri

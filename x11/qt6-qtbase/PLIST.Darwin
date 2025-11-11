@@ -1,4 +1,12 @@
-@comment $NetBSD: PLIST.Darwin,v 1.8 2025/09/22 05:43:25 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.9 2025/11/11 12:34:13 adam Exp $
+include/QtGui/${PKGVERSION}/QtGui/private/qmacstyle_p.h
+lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginAdditionalTargetInfo.cmake
+lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginConfig.cmake
+lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginConfigVersion.cmake
+lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginConfigVersionImpl.cmake
+lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginTargets-release.cmake
+lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginTargets.cmake
+plugins/networkinformation/libqapplenetworkinformation.so
 qt6/bin/macdeployqt
 qt6/bin/macdeployqt6
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcfsocketnotifier_p.h
@@ -18,6 +26,7 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgraphicsframecapture_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgraphicsframecapture_p_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgraphicsframecapturemetal_p_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qmacmimeregistry_p.h
+qt6/include/QtGui/${PKGVERSION}/QtGui/private/qmacstyle_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qmetallayer_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrasterbackingstore_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhibackingstore_p.h
@@ -84,12 +93,6 @@ qt6/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginTargets.cmake
-qt6/lib/cmake/Qt6Network/Qt6QSCNetworkReachabilityNetworkInformationPluginAdditionalTargetInfo.cmake
-qt6/lib/cmake/Qt6Network/Qt6QSCNetworkReachabilityNetworkInformationPluginConfig.cmake
-qt6/lib/cmake/Qt6Network/Qt6QSCNetworkReachabilityNetworkInformationPluginConfigVersion.cmake
-qt6/lib/cmake/Qt6Network/Qt6QSCNetworkReachabilityNetworkInformationPluginConfigVersionImpl.cmake
-qt6/lib/cmake/Qt6Network/Qt6QSCNetworkReachabilityNetworkInformationPluginTargets-release.cmake
-qt6/lib/cmake/Qt6Network/Qt6QSCNetworkReachabilityNetworkInformationPluginTargets.cmake
 qt6/lib/cmake/Qt6Network/Qt6QSecureTransportBackendPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Network/Qt6QSecureTransportBackendPluginConfig.cmake
 qt6/lib/cmake/Qt6Network/Qt6QSecureTransportBackendPluginConfigVersion.cmake

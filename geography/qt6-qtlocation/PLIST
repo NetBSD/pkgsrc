@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/06/30 15:18:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/11/11 12:34:15 adam Exp $
 lib/pkgconfig/Qt6Location.pc
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/error_messages_p.h
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qabstractgeotilecache_p.h
@@ -216,7 +216,7 @@ qt6/lib/libQt6Location.so
 qt6/lib/libQt6Location.so.${PKGVERSION}
 qt6/lib/libQt6Location.so.6
 qt6/lib/pkgconfig/Qt6Location.pc
-qt6/metatypes/qt6location_release_metatypes.json
+qt6/metatypes/qt6location_metatypes.json
 qt6/mkspecs/modules/qt_lib_location.pri
 qt6/mkspecs/modules/qt_lib_location_private.pri
 qt6/modules/Location.json

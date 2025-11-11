@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.6 2025/06/30 15:18:50 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.7 2025/11/11 12:34:14 adam Exp $
 lib/pkgconfig/Qt6QuickControls2IOSStyleImpl.pc
 lib/pkgconfig/Qt6QuickControls2MacOSStyleImpl.pc
 qt6/include/QtQuickControls2IOSStyleImpl/${PKGVERSION}/QtQuickControls2IOSStyleImpl/private/qquickioscursorflashtimer_p.h
@@ -67,15 +67,6 @@ qt6/lib/cmake/Qt6QuickControls2MacOSStyleImpl/Qt6QuickControls2MacOSStyleImplCon
 qt6/lib/cmake/Qt6QuickControls2MacOSStyleImpl/Qt6QuickControls2MacOSStyleImplTargets-release.cmake
 qt6/lib/cmake/Qt6QuickControls2MacOSStyleImpl/Qt6QuickControls2MacOSStyleImplTargets.cmake
 qt6/lib/cmake/Qt6QuickControls2MacOSStyleImpl/Qt6QuickControls2MacOSStyleImplVersionlessAliasTargets.cmake
-qt6/lib/cmake/Qt6QuickControls2MacOSStyleImpl/Qt6QuickControls2MacOSStyleImplVersionlessTargets.cmake
-qt6/lib/cmake/Qt6QuickControls2MacOSStyleImplPrivate/Qt6QuickControls2MacOSStyleImplPrivateAdditionalTargetInfo.cmake
-qt6/lib/cmake/Qt6QuickControls2MacOSStyleImplPrivate/Qt6QuickControls2MacOSStyleImplPrivateConfig.cmake
-qt6/lib/cmake/Qt6QuickControls2MacOSStyleImplPrivate/Qt6QuickControls2MacOSStyleImplPrivateConfigVersion.cmake
-qt6/lib/cmake/Qt6QuickControls2MacOSStyleImplPrivate/Qt6QuickControls2MacOSStyleImplPrivateConfigVersionImpl.cmake
-qt6/lib/cmake/Qt6QuickControls2MacOSStyleImplPrivate/Qt6QuickControls2MacOSStyleImplPrivateDependencies.cmake
-qt6/lib/cmake/Qt6QuickControls2MacOSStyleImplPrivate/Qt6QuickControls2MacOSStyleImplPrivateTargets.cmake
-qt6/lib/cmake/Qt6QuickControls2MacOSStyleImplPrivate/Qt6QuickControls2MacOSStyleImplPrivateVersionlessAliasTargets.cmake
-qt6/lib/cmake/Qt6QuickControls2MacOSStyleImplPrivate/Qt6QuickControls2MacOSStyleImplPrivateVersionlessTargets.cmake
 qt6/lib/libQt6QuickControls2IOSStyleImpl.${PKGVERSION}.so
 qt6/lib/libQt6QuickControls2IOSStyleImpl.prl
 qt6/lib/libQt6QuickControls2IOSStyleImpl.so
@@ -86,14 +77,14 @@ qt6/lib/libQt6QuickControls2MacOSStyleImpl.so
 qt6/lib/libQt6QuickControls2MacOSStyleImpl.so.6
 qt6/lib/pkgconfig/Qt6QuickControls2IOSStyleImpl.pc
 qt6/lib/pkgconfig/Qt6QuickControls2MacOSStyleImpl.pc
-qt6/metatypes/qt6quickcontrols2iosstyleimpl_release_metatypes.json
-qt6/metatypes/qt6quickcontrols2macosstyleimpl_release_metatypes.json
+qt6/metatypes/qt6quickcontrols2iosstyleimpl_metatypes.json
+qt6/metatypes/qt6quickcontrols2macosstyleimpl_metatypes.json
 qt6/mkspecs/modules/qt_lib_quickcontrols2iosstyleimpl.pri
 qt6/mkspecs/modules/qt_lib_quickcontrols2iosstyleimpl_private.pri
 qt6/mkspecs/modules/qt_lib_quickcontrols2macosstyleimpl.pri
-qt6/mkspecs/modules/qt_lib_quickcontrols2macosstyleimpl_private.pri
 qt6/modules/QuickControls2IOSStyleImpl.json
 qt6/modules/QuickControls2MacOSStyleImpl.json
+qt6/qml/QtQuick/Controls/iOS/ApplicationWindow.qml
 qt6/qml/QtQuick/Controls/iOS/BusyIndicator.qml
 qt6/qml/QtQuick/Controls/iOS/Button.qml
 qt6/qml/QtQuick/Controls/iOS/CheckBox.qml
@@ -107,6 +98,7 @@ qt6/qml/QtQuick/Controls/iOS/Drawer.qml
 qt6/qml/QtQuick/Controls/iOS/Frame.qml
 qt6/qml/QtQuick/Controls/iOS/GroupBox.qml
 qt6/qml/QtQuick/Controls/iOS/HorizontalHeaderView.qml
+qt6/qml/QtQuick/Controls/iOS/HorizontalHeaderViewDelegate.qml
 qt6/qml/QtQuick/Controls/iOS/ItemDelegate.qml
 qt6/qml/QtQuick/Controls/iOS/Menu.qml
 qt6/qml/QtQuick/Controls/iOS/MenuBar.qml
@@ -139,6 +131,7 @@ qt6/qml/QtQuick/Controls/iOS/ToolSeparator.qml
 qt6/qml/QtQuick/Controls/iOS/ToolTip.qml
 qt6/qml/QtQuick/Controls/iOS/TreeViewDelegate.qml
 qt6/qml/QtQuick/Controls/iOS/VerticalHeaderView.qml
+qt6/qml/QtQuick/Controls/iOS/VerticalHeaderViewDelegate.qml
 qt6/qml/QtQuick/Controls/iOS/impl/CursorDelegate.qml
 qt6/qml/QtQuick/Controls/iOS/impl/DialogButtonBoxDelegate.qml
 qt6/qml/QtQuick/Controls/iOS/impl/libqtquickcontrols2iosstyleimplplugin.so
@@ -171,6 +164,7 @@ qt6/qml/QtQuick/Controls/macOS/RangeSlider.qml
 qt6/qml/QtQuick/Controls/macOS/ScrollBar.qml
 qt6/qml/QtQuick/Controls/macOS/ScrollIndicator.qml
 qt6/qml/QtQuick/Controls/macOS/ScrollView.qml
+qt6/qml/QtQuick/Controls/macOS/SearchField.qml
 qt6/qml/QtQuick/Controls/macOS/SelectionRectangle.qml
 qt6/qml/QtQuick/Controls/macOS/Slider.qml
 qt6/qml/QtQuick/Controls/macOS/SpinBox.qml
@@ -212,6 +206,7 @@ qt6/qml/QtQuick/NativeStyle/controls/DefaultProgressBar.qml
 qt6/qml/QtQuick/NativeStyle/controls/DefaultRadioButton.qml
 qt6/qml/QtQuick/NativeStyle/controls/DefaultRadioDelegate.qml
 qt6/qml/QtQuick/NativeStyle/controls/DefaultScrollBar.qml
+qt6/qml/QtQuick/NativeStyle/controls/DefaultSearchField.qml
 qt6/qml/QtQuick/NativeStyle/controls/DefaultSlider.qml
 qt6/qml/QtQuick/NativeStyle/controls/DefaultSpinBox.qml
 qt6/qml/QtQuick/NativeStyle/controls/DefaultTextArea.qml
