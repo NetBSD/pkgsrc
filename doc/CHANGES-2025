@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6650 2025/11/11 13:47:14 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6651 2025/11/11 13:53:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9652,3 +9652,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-benchmark to 5.2.3 [adam 2025-11-11]
 	Updated www/py-publicsuffixlist to 1.0.2.20251109 [adam 2025-11-11]
 	Updated www/php-concrete-cms to 9.4.6 [taca 2025-11-11]
+	Updated security/py-nacl to 1.6.1 [adam 2025-11-11]
+	Updated math/py-astropy-iers-data to 0.2025.11.10.0.38.31 [adam 2025-11-11]
+	Updated devel/py-astroid to 4.0.2 [adam 2025-11-11]
+	Updated devel/py-hypothesis to 6.147.0 [adam 2025-11-11]
