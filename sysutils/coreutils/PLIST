@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2023/09/08 19:12:52 vins Exp $
+@comment $NetBSD: PLIST,v 1.24 2025/11/11 09:31:59 wiz Exp $
 bin/g[
 bin/gb2sum
 bin/gbase32
@@ -6,7 +6,6 @@ bin/gbase64
 bin/gbasename
 bin/gbasenc
 bin/gcat
-bin/gchcon
 bin/gchgrp
 bin/gchmod
 bin/gchown
@@ -66,7 +65,6 @@ bin/greadlink
 bin/grealpath
 bin/grm
 bin/grmdir
-bin/gruncon
 bin/gseq
 bin/gsha1sum
 bin/gsha224sum
@@ -111,7 +109,6 @@ gnu/bin/base32
 gnu/bin/base64
 gnu/bin/basename
 gnu/bin/cat
-gnu/bin/chcon
 gnu/bin/chgrp
 gnu/bin/chmod
 gnu/bin/chown
@@ -171,7 +168,6 @@ gnu/bin/readlink
 gnu/bin/realpath
 gnu/bin/rm
 gnu/bin/rmdir
-gnu/bin/runcon
 gnu/bin/seq
 gnu/bin/sha1sum
 gnu/bin/sha224sum
@@ -215,7 +211,6 @@ gnu/man/man1/base32.1
 gnu/man/man1/base64.1
 gnu/man/man1/basename.1
 gnu/man/man1/cat.1
-gnu/man/man1/chcon.1
 gnu/man/man1/chgrp.1
 gnu/man/man1/chmod.1
 gnu/man/man1/chown.1
@@ -275,7 +270,6 @@ gnu/man/man1/readlink.1
 gnu/man/man1/realpath.1
 gnu/man/man1/rm.1
 gnu/man/man1/rmdir.1
-gnu/man/man1/runcon.1
 gnu/man/man1/seq.1
 gnu/man/man1/sha1sum.1
 gnu/man/man1/sha224sum.1
@@ -322,7 +316,6 @@ man/man1/gbase64.1
 man/man1/gbasename.1
 man/man1/gbasenc.1
 man/man1/gcat.1
-man/man1/gchcon.1
 man/man1/gchgrp.1
 man/man1/gchmod.1
 man/man1/gchown.1
@@ -382,7 +375,6 @@ man/man1/greadlink.1
 man/man1/grealpath.1
 man/man1/grm.1
 man/man1/grmdir.1
-man/man1/gruncon.1
 man/man1/gseq.1
 man/man1/gsha1sum.1
 man/man1/gsha224sum.1
