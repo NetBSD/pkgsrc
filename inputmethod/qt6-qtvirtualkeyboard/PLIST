@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/07/03 19:27:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/11/11 12:34:17 adam Exp $
 lib/pkgconfig/Qt6VirtualKeyboard.pc
 lib/pkgconfig/Qt6VirtualKeyboardQml.pc
 lib/pkgconfig/Qt6VirtualKeyboardSettings.pc
@@ -71,9 +71,6 @@ qt6/lib/cmake/Qt6/FindCerenceXt9.cmake
 qt6/lib/cmake/Qt6/FindHunspell.cmake
 qt6/lib/cmake/Qt6/FindMyScript.cmake
 qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtVirtualKeyboardTestsConfig.cmake
-qt6/lib/cmake/Qt6BundledOpenwnn/Qt6BundledOpenwnnDependencies.cmake
-qt6/lib/cmake/Qt6BundledPinyin/Qt6BundledPinyinDependencies.cmake
-qt6/lib/cmake/Qt6BundledTcime/Qt6BundledTcimeDependencies.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginConfig.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginConfigVersion.cmake
@@ -211,22 +208,22 @@ qt6/lib/cmake/Qt6VirtualKeyboardSettingsPrivate/Qt6VirtualKeyboardSettingsPrivat
 qt6/lib/cmake/Qt6VirtualKeyboardSettingsPrivate/Qt6VirtualKeyboardSettingsPrivateVersionlessTargets.cmake
 qt6/lib/libQt6VirtualKeyboard.prl
 qt6/lib/libQt6VirtualKeyboard.so
-qt6/lib/libQt6VirtualKeyboard.so.6
 qt6/lib/libQt6VirtualKeyboard.so.${PKGVERSION}
+qt6/lib/libQt6VirtualKeyboard.so.6
 qt6/lib/libQt6VirtualKeyboardQml.prl
 qt6/lib/libQt6VirtualKeyboardQml.so
-qt6/lib/libQt6VirtualKeyboardQml.so.6
 qt6/lib/libQt6VirtualKeyboardQml.so.${PKGVERSION}
+qt6/lib/libQt6VirtualKeyboardQml.so.6
 qt6/lib/libQt6VirtualKeyboardSettings.prl
 qt6/lib/libQt6VirtualKeyboardSettings.so
-qt6/lib/libQt6VirtualKeyboardSettings.so.6
 qt6/lib/libQt6VirtualKeyboardSettings.so.${PKGVERSION}
+qt6/lib/libQt6VirtualKeyboardSettings.so.6
 qt6/lib/pkgconfig/Qt6VirtualKeyboard.pc
 qt6/lib/pkgconfig/Qt6VirtualKeyboardQml.pc
 qt6/lib/pkgconfig/Qt6VirtualKeyboardSettings.pc
-qt6/metatypes/qt6virtualkeyboard_release_metatypes.json
-qt6/metatypes/qt6virtualkeyboardqml_release_metatypes.json
-qt6/metatypes/qt6virtualkeyboardsettings_release_metatypes.json
+qt6/metatypes/qt6virtualkeyboard_metatypes.json
+qt6/metatypes/qt6virtualkeyboardqml_metatypes.json
+qt6/metatypes/qt6virtualkeyboardsettings_metatypes.json
 qt6/mkspecs/modules/qt_lib_virtualkeyboard.pri
 qt6/mkspecs/modules/qt_lib_virtualkeyboard_private.pri
 qt6/mkspecs/modules/qt_lib_virtualkeyboardqml.pri

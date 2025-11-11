@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/10/01 07:25:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/11/11 12:34:14 adam Exp $
 lib/pkgconfig/Qt6Bluetooth.pc
 lib/pkgconfig/Qt6Nfc.pc
 qt6/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/lecmaccalculator_p.h
@@ -155,8 +155,8 @@ qt6/lib/libQt6Nfc.so.${PKGVERSION}
 qt6/lib/libQt6Nfc.so.6
 qt6/lib/pkgconfig/Qt6Bluetooth.pc
 qt6/lib/pkgconfig/Qt6Nfc.pc
-qt6/metatypes/qt6bluetooth_release_metatypes.json
-qt6/metatypes/qt6nfc_release_metatypes.json
+qt6/metatypes/qt6bluetooth_metatypes.json
+qt6/metatypes/qt6nfc_metatypes.json
 qt6/mkspecs/modules/qt_lib_bluetooth.pri
 qt6/mkspecs/modules/qt_lib_bluetooth_private.pri
 qt6/mkspecs/modules/qt_lib_connectivity_private.pri
