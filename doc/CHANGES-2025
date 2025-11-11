@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6638 2025/11/11 09:32:33 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6639 2025/11/11 10:27:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9591,3 +9591,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/nspr to 4.38.2 [wiz 2025-11-11]
 	Updated sysutils/coreutils to 9.9 [wiz 2025-11-11]
 	Updated misc/gnuls to 9.9 [wiz 2025-11-11]
+	Updated sysutils/py-fsspec to 2025.10.0 [adam 2025-11-11]
+	Updated devel/py-fakefs to 5.10.2 [adam 2025-11-11]
+	Updated devel/py-faker to 37.12.0 [adam 2025-11-11]
+	Updated devel/py-coveralls to 4.0.2 [adam 2025-11-11]
