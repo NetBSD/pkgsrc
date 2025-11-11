@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2025/07/08 01:59:52 gutteridge Exp $
+$NetBSD: distinfo,v 1.17 2025/11/11 03:04:32 gutteridge Exp $
 
-BLAKE2s (lxqt-powermanagement-2.2.1.tar.xz) = d63eddf082dd9985c81dd68b0794bbc93edd3758b0c8d49d2a5bdd164fd51d56
-SHA512 (lxqt-powermanagement-2.2.1.tar.xz) = 038218713bad2d0a4bac792115cabeee3a6d4ed972dcb88e169c29ea95ec37ebd1d3c33a363a670cf20b4f4ed5a87dbd13955f5e03bc0c8df2aed7ced3b03c1a
-Size (lxqt-powermanagement-2.2.1.tar.xz) = 106884 bytes
+BLAKE2s (lxqt-powermanagement-2.3.0.tar.xz) = 7cb2955934c4323268e7076d98c1cebe897b20f777bea0cfd3db136f465ffb7b
+SHA512 (lxqt-powermanagement-2.3.0.tar.xz) = 057c8d59e959e0358956851f7dd51fc94f630761c0e70d2ab6cb5d5d38bf88f94cf191d4d2868effcd99d6ca9742659b2671428db5993f01792893bbd075c404
+Size (lxqt-powermanagement-2.3.0.tar.xz) = 109764 bytes
 SHA1 (patch-autostart_CMakeLists.txt) = c69057c7e6ca12ce0f5555110b20220a344d01ef
