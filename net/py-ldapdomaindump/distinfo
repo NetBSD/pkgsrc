@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/01/17 11:54:39 adam Exp $
+$NetBSD: distinfo,v 1.7 2025/11/11 14:07:13 adam Exp $
 
-BLAKE2s (ldapdomaindump-0.9.4.tar.gz) = 25d6f404cc181357272ae2a9217f7498f697656013d41354a6e99ed33430fa36
-SHA512 (ldapdomaindump-0.9.4.tar.gz) = c5f66dc73f77cae041329ac17018dfd82c155dc7c4cca3fed2175680baeb3797776488aab6199498eefc4869121f556ede8558c784e71f1ff9573dd9634abee9
-Size (ldapdomaindump-0.9.4.tar.gz) = 18933 bytes
+BLAKE2s (ldapdomaindump-0.10.0.tar.gz) = 7bdfe7f639c1d35eb23f28d61c967a93747538e8908f972e26200cf0aa192951
+SHA512 (ldapdomaindump-0.10.0.tar.gz) = 6503f4f00b06edae916ad897891b6238dadbaba03b2380857a386dd3b0a0daa86220aceea29d4f632032bc25c8e953614b616bb97bb4535d74a69057b6edca0f
+Size (ldapdomaindump-0.10.0.tar.gz) = 19445 bytes
