@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6634 2025/11/11 08:42:29 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6635 2025/11/11 08:56:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9586,3 +9586,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated meta-pkgs/lxqt to 2.3.0 [gutteridge 2025-11-11]
 	Updated devel/py-wrapt to 2.0.1 [adam 2025-11-11]
 	Updated net/py-python-socks to 2.7.3 [adam 2025-11-11]
+	Updated textproc/py-regex to 2025.11.3 [adam 2025-11-11]
+	Updated devel/py-zope.interface to 8.1 [adam 2025-11-11]
