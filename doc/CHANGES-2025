@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6643 2025/11/11 11:13:38 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6644 2025/11/11 11:15:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9605,3 +9605,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django-compressor to 4.6.0 [adam 2025-11-11]
 	Updated audio/librespot to 0.8.0 [pin 2025-11-11]
 	Updated wm/obconf-qt to 0.16.6 [pin 2025-11-11]
+	Updated textproc/treemd to 0.1.7 [pin 2025-11-11]
