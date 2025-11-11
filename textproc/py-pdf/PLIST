@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2025/09/28 20:37:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2025/11/11 13:41:55 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -129,6 +129,9 @@ ${PYSITELIB}/pypdf/filters.pyo
 ${PYSITELIB}/pypdf/generic/__init__.py
 ${PYSITELIB}/pypdf/generic/__init__.pyc
 ${PYSITELIB}/pypdf/generic/__init__.pyo
+${PYSITELIB}/pypdf/generic/_appearance_stream.py
+${PYSITELIB}/pypdf/generic/_appearance_stream.pyc
+${PYSITELIB}/pypdf/generic/_appearance_stream.pyo
 ${PYSITELIB}/pypdf/generic/_base.py
 ${PYSITELIB}/pypdf/generic/_base.pyc
 ${PYSITELIB}/pypdf/generic/_base.pyo
