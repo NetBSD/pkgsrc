@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/04/28 01:24:13 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/11/11 02:58:55 gutteridge Exp $
 bin/lxqt-admin-user
 bin/lxqt-admin-user-helper
 share/applications/lxqt-admin-user.desktop
@@ -40,6 +40,7 @@ share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_pt_BR.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_ru.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_si.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_sk.qm
+share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_sv.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_tr.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_uk.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_vi.qm
