@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6635 2025/11/11 08:56:32 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6636 2025/11/11 08:59:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9588,3 +9588,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-python-socks to 2.7.3 [adam 2025-11-11]
 	Updated textproc/py-regex to 2025.11.3 [adam 2025-11-11]
 	Updated devel/py-zope.interface to 8.1 [adam 2025-11-11]
+	Updated devel/nspr to 4.38.2 [wiz 2025-11-11]
