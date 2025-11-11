@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/10/01 07:25:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/11/11 12:34:16 adam Exp $
 lib/pkgconfig/Qt6Scxml.pc
 lib/pkgconfig/Qt6ScxmlQml.pc
 lib/pkgconfig/Qt6StateMachine.pc
@@ -235,10 +235,10 @@ qt6/lib/pkgconfig/Qt6ScxmlQml.pc
 qt6/lib/pkgconfig/Qt6StateMachine.pc
 qt6/lib/pkgconfig/Qt6StateMachineQml.pc
 qt6/libexec/qscxmlc
-qt6/metatypes/qt6scxml_release_metatypes.json
-qt6/metatypes/qt6scxmlqml_release_metatypes.json
-qt6/metatypes/qt6statemachine_release_metatypes.json
-qt6/metatypes/qt6statemachineqml_release_metatypes.json
+qt6/metatypes/qt6scxml_metatypes.json
+qt6/metatypes/qt6scxmlqml_metatypes.json
+qt6/metatypes/qt6statemachine_metatypes.json
+qt6/metatypes/qt6statemachineqml_metatypes.json
 qt6/mkspecs/features/qscxmlc.prf
 qt6/mkspecs/modules/qt_lib_scxml.pri
 qt6/mkspecs/modules/qt_lib_scxml_private.pri

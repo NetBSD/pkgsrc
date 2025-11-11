@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/06/30 15:18:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/11/11 12:34:17 adam Exp $
 lib/pkgconfig/Qt6WebSockets.pc
 qt6/include/QtWebSockets/${PKGVERSION}/QtWebSockets/private/qdefaultmaskgenerator_p.h
 qt6/include/QtWebSockets/${PKGVERSION}/QtWebSockets/private/qwebsocket_p.h
@@ -57,7 +57,7 @@ qt6/lib/libQt6WebSockets.so
 qt6/lib/libQt6WebSockets.so.${PKGVERSION}
 qt6/lib/libQt6WebSockets.so.6
 qt6/lib/pkgconfig/Qt6WebSockets.pc
-qt6/metatypes/qt6websockets_release_metatypes.json
+qt6/metatypes/qt6websockets_metatypes.json
 qt6/mkspecs/modules/qt_lib_websockets.pri
 qt6/mkspecs/modules/qt_lib_websockets_private.pri
 qt6/modules/WebSockets.json

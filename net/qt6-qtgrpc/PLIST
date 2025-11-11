@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/10/01 07:25:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/11/11 12:34:14 adam Exp $
 lib/pkgconfig/Qt6Grpc.pc
 lib/pkgconfig/Qt6GrpcQuick.pc
 lib/pkgconfig/Qt6Protobuf.pc
@@ -11,6 +11,7 @@ qt6/include/QtGrpc/${PKGVERSION}/QtGrpc/private/qgrpcoperation_p.h
 qt6/include/QtGrpc/${PKGVERSION}/QtGrpc/private/qgrpcoperationcontext_p.h
 qt6/include/QtGrpc/${PKGVERSION}/QtGrpc/private/qtgrpc-config_p.h
 qt6/include/QtGrpc/${PKGVERSION}/QtGrpc/private/qtgrpclogging_p.h
+qt6/include/QtGrpc/6.10.0/QtGrpc/private/qgrpccommonoptions_p.h
 qt6/include/QtGrpc/QAbstractGrpcChannel
 qt6/include/QtGrpc/QGrpcBidiStream
 qt6/include/QtGrpc/QGrpcCallOptions
@@ -355,13 +356,13 @@ qt6/lib/pkgconfig/Qt6ProtobufQuick.pc
 qt6/lib/pkgconfig/Qt6ProtobufWellKnownTypes.pc
 qt6/libexec/qtgrpcgen
 qt6/libexec/qtprotobufgen
-qt6/metatypes/qt6grpc_release_metatypes.json
-qt6/metatypes/qt6grpcquick_release_metatypes.json
-qt6/metatypes/qt6protobuf_release_metatypes.json
-qt6/metatypes/qt6protobufqtcoretypes_release_metatypes.json
-qt6/metatypes/qt6protobufqtguitypes_release_metatypes.json
-qt6/metatypes/qt6protobufquick_release_metatypes.json
-qt6/metatypes/qt6protobufwellknowntypes_release_metatypes.json
+qt6/metatypes/qt6grpc_metatypes.json
+qt6/metatypes/qt6grpcquick_metatypes.json
+qt6/metatypes/qt6protobuf_metatypes.json
+qt6/metatypes/qt6protobufqtcoretypes_metatypes.json
+qt6/metatypes/qt6protobufqtguitypes_metatypes.json
+qt6/metatypes/qt6protobufquick_metatypes.json
+qt6/metatypes/qt6protobufwellknowntypes_metatypes.json
 qt6/mkspecs/modules/qt_lib_grpc.pri
 qt6/mkspecs/modules/qt_lib_grpc_private.pri
 qt6/mkspecs/modules/qt_lib_grpcquick.pri

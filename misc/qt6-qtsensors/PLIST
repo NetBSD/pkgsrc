@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/06/30 15:18:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/11/11 12:34:16 adam Exp $
 lib/pkgconfig/Qt6Sensors.pc
 lib/pkgconfig/Qt6SensorsQuick.pc
 qt6/include/QtSensors/${PKGVERSION}/QtSensors/private/qaccelerometer_p.h
@@ -187,8 +187,8 @@ qt6/lib/libQt6SensorsQuick.so.${PKGVERSION}
 qt6/lib/libQt6SensorsQuick.so.6
 qt6/lib/pkgconfig/Qt6Sensors.pc
 qt6/lib/pkgconfig/Qt6SensorsQuick.pc
-qt6/metatypes/qt6sensors_release_metatypes.json
-qt6/metatypes/qt6sensorsquick_release_metatypes.json
+qt6/metatypes/qt6sensors_metatypes.json
+qt6/metatypes/qt6sensorsquick_metatypes.json
 qt6/mkspecs/modules/qt_lib_sensors.pri
 qt6/mkspecs/modules/qt_lib_sensors_private.pri
 qt6/mkspecs/modules/qt_lib_sensorsquick.pri

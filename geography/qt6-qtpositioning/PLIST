@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/06/30 15:18:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/11/11 12:34:15 adam Exp $
 lib/pkgconfig/Qt6Positioning.pc
 lib/pkgconfig/Qt6PositioningQuick.pc
 qt6/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qclipperutils_p.h
@@ -85,7 +85,6 @@ qt6/include/QtPositioningQuick/qtpositioningquickversion.h
 qt6/lib/cmake/Qt6/FindGconf.cmake
 qt6/lib/cmake/Qt6/FindGypsy.cmake
 qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtPositioningTestsConfig.cmake
-qt6/lib/cmake/Qt6Bundled_Clip2Tri/Qt6Bundled_Clip2TriDependencies.cmake
 qt6/lib/cmake/Qt6Positioning/Qt6PositioningAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Positioning/Qt6PositioningConfig.cmake
 qt6/lib/cmake/Qt6Positioning/Qt6PositioningConfigVersion.cmake
@@ -155,8 +154,8 @@ qt6/lib/libQt6PositioningQuick.so.${PKGVERSION}
 qt6/lib/libQt6PositioningQuick.so.6
 qt6/lib/pkgconfig/Qt6Positioning.pc
 qt6/lib/pkgconfig/Qt6PositioningQuick.pc
-qt6/metatypes/qt6positioning_release_metatypes.json
-qt6/metatypes/qt6positioningquick_release_metatypes.json
+qt6/metatypes/qt6positioning_metatypes.json
+qt6/metatypes/qt6positioningquick_metatypes.json
 qt6/mkspecs/modules/qt_lib_positioning.pri
 qt6/mkspecs/modules/qt_lib_positioning_private.pri
 qt6/mkspecs/modules/qt_lib_positioningquick.pri

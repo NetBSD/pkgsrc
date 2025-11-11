@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2025/10/01 07:25:06 adam Exp $
+$NetBSD: distinfo,v 1.20 2025/11/11 12:34:13 adam Exp $
 
-BLAKE2s (qtbase-everywhere-src-6.9.3.tar.xz) = f6c3ec7d0fe4ac95f75c35823c3cbe36684445f12a7ac3f7833e34664279215e
-SHA512 (qtbase-everywhere-src-6.9.3.tar.xz) = d49b6356869830b7421e8bb94354884c132dcb37b9b2d56c88671bff0fe60e51a4ee961a7db3f248da84d0eda64af1636f1bdf59fdc0bbf8e50147c370e901de
-Size (qtbase-everywhere-src-6.9.3.tar.xz) = 49856272 bytes
+BLAKE2s (qtbase-everywhere-src-6.10.0.tar.xz) = 7dad6a5ce7151353cfc57ff20c3efacfd607ba6a18f2878cf5ea9e4266a26ac9
+SHA512 (qtbase-everywhere-src-6.10.0.tar.xz) = bc3b98f8b2387ca207f6cd87478bdefa911442fd9981d38ecd8793856439e415ce9182b524dabc6b0a1ba5c27e22badfc7ca67a0a43e00186ee6865886937917
+Size (qtbase-everywhere-src-6.10.0.tar.xz) = 50194096 bytes
