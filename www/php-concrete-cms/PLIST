@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/10/22 16:16:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/11/11 13:46:55 taca Exp $
 ${CC_DOCDIR}/README
 ${CC_WEBDIR}/LICENSE.TXT
 ${CC_WEBDIR}/application/bootstrap/app.php
@@ -8523,6 +8523,8 @@ ${CC_WEBDIR}/concrete/src/Express/Command/ClearEntityIndexCommand.php
 ${CC_WEBDIR}/concrete/src/Express/Command/ClearEntityIndexCommandHandler.php
 ${CC_WEBDIR}/concrete/src/Express/Command/ExpressEntryCommandFactory.php
 ${CC_WEBDIR}/concrete/src/Express/Command/ExpressEntryCommandHandlerTrait.php
+${CC_WEBDIR}/concrete/src/Express/Command/PublishEntityCommand.php
+${CC_WEBDIR}/concrete/src/Express/Command/PublishEntityCommandHandler.php
 ${CC_WEBDIR}/concrete/src/Express/Command/RebuildEntityIndexCommand.php
 ${CC_WEBDIR}/concrete/src/Express/Command/RebuildEntityIndexCommandHandler.php
 ${CC_WEBDIR}/concrete/src/Express/Command/ReindexEntryTaskCommand.php
@@ -9539,6 +9541,7 @@ ${CC_WEBDIR}/concrete/src/Page/CustomStyle.php
 ${CC_WEBDIR}/concrete/src/Page/DeletePageEvent.php
 ${CC_WEBDIR}/concrete/src/Page/Desktop/DesktopList.php
 ${CC_WEBDIR}/concrete/src/Page/DisplayOrderUpdateEvent.php
+${CC_WEBDIR}/concrete/src/Page/DraftService.php
 ${CC_WEBDIR}/concrete/src/Page/DuplicatePageEvent.php
 ${CC_WEBDIR}/concrete/src/Page/EditResponse.php
 ${CC_WEBDIR}/concrete/src/Page/Event.php
