@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6641 2025/11/11 10:49:16 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6642 2025/11/11 11:11:25 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9603,3 +9603,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django4 to 4.2.26 [adam 2025-11-11]
 	Updated www/py-django-appconf to 1.2.0 [adam 2025-11-11]
 	Updated www/py-django-compressor to 4.6.0 [adam 2025-11-11]
+	Updated audio/librespot to 0.8.0 [pin 2025-11-11]
