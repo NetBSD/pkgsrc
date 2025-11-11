@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/07/22 04:55:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/11/11 12:43:58 adam Exp $
 bin/pylupdate6-${PYVERSSUFFIX}
 bin/pyuic6-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -149,6 +149,7 @@ ${PYSITELIB}/PyQt6/bindings/QtCore/qpluginloader.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qpoint.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qprocess.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qpropertyanimation.sip
+${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_native_interface.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_qhash.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_qlist.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_qmap.sip
@@ -158,6 +159,7 @@ ${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_std_optional.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_std_pair.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_virtual_error_handler.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qrandom.sip
+${PYSITELIB}/PyQt6/bindings/QtCore/qrangemodel.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qreadwritelock.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qrect.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qregularexpression.sip
@@ -255,6 +257,7 @@ ${PYSITELIB}/PyQt6/bindings/QtGui/QtGuimod.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/opengl_types.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qabstractfileiconprovider.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qabstracttextdocumentlayout.sip
+${PYSITELIB}/PyQt6/bindings/QtGui/qaccessibilityhints.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qaction.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qactiongroup.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qbackingstore.sip
@@ -311,6 +314,7 @@ ${PYSITELIB}/PyQt6/bindings/QtGui/qpixmap.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpixmapcache.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpointingdevice.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpolygon.sip
+${PYSITELIB}/PyQt6/bindings/QtGui/qpygui_native_interface.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpygui_qlist.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpygui_vulkan.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qquaternion.sip
@@ -387,6 +391,7 @@ ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qmediametadata.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qmediaplayer.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qmediarecorder.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qmediatimerange.sip
+${PYSITELIB}/PyQt6/bindings/QtMultimedia/qplaybackoptions.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qpymultimedia_qlist.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qscreencapture.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qsoundeffect.sip
