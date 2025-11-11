@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6619 2025/11/11 02:58:22 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.6620 2025/11/11 02:59:16 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9570,3 +9570,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/qterminal to 2.3.0 [gutteridge 2025-11-11]
 	Updated x11/lxqt-about to 2.3.0 [gutteridge 2025-11-11]
 	Updated security/lxqt-policykit to 2.3.0 [gutteridge 2025-11-11]
+	Updated x11/lxqt-admin to 2.3.0 [gutteridge 2025-11-11]
