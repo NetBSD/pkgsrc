@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6625 2025/11/11 03:04:51 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.6626 2025/11/11 03:05:49 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9576,3 +9576,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/lxqt-openssh-askpass to 2.3.0 [gutteridge 2025-11-11]
 	Updated x11/lxqt-notificationd to 2.3.0 [gutteridge 2025-11-11]
 	Updated sysutils/lxqt-powermanagement to 2.3.0 [gutteridge 2025-11-11]
+	Updated x11/lxqt-qtplugin to 2.3.0 [gutteridge 2025-11-11]
