@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6647 2025/11/11 12:58:14 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6648 2025/11/11 13:37:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9646,3 +9646,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/py-qt6 to 6.10.0 [adam 2025-11-11]
 	Updated devel/blosc2 to 2.22.0 [adam 2025-11-11]
 	Updated finance/py-braintree to 4.40.0 [adam 2025-11-11]
+	Updated databases/pear-DB to 1.12.3 [taca 2025-11-11]
