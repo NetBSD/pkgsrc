@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2025/04/28 01:35:37 gutteridge Exp $
+$NetBSD: distinfo,v 1.15 2025/11/11 03:07:03 gutteridge Exp $
 
-BLAKE2s (lxqt-sudo-2.2.0.tar.xz) = f01dea94b818f4d263c87a63b228feb7838c9014994e844d3904552052a92393
-SHA512 (lxqt-sudo-2.2.0.tar.xz) = 3412113c3eaf1dc4707f9d48c2018c684d31c3d9b0c2c0c4d6322a63433788ce6de34b1c0e5c6f5627160d33a36dcd393830f495eb9a22277d584e2b20cb5612
-Size (lxqt-sudo-2.2.0.tar.xz) = 36760 bytes
+BLAKE2s (lxqt-sudo-2.3.0.tar.xz) = 431bbf12f94921ef05ca2363f0b0db73003347bf593574f71d884b7b384c58d8
+SHA512 (lxqt-sudo-2.3.0.tar.xz) = 4e5cc330461bcd3090728041124b364169277943b574c3b2cfcf9591025d33c0534757129e5d9758a197390ace5c88b7f6186bc47c1e29b8e6c5bceb853d0dcf
+Size (lxqt-sudo-2.3.0.tar.xz) = 40480 bytes

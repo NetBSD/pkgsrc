@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2025/10/23 20:39:09 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2025/11/11 03:07:03 gutteridge Exp $
 
-DISTNAME=	lxqt-sudo-2.2.0
-PKGREVISION=	1
+DISTNAME=	lxqt-sudo-2.3.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -17,7 +16,7 @@ USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DMSK_INSTALL_INCLUDES=/include
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.2.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.3.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"
