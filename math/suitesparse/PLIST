@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/07/30 15:35:37 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/11/12 02:08:13 ktnb Exp $
 bin/suitesparse_mongoose
 include/suitesparse/GraphBLAS.h
 include/suitesparse/LAGraph.h
@@ -126,7 +126,11 @@ lib/cmake/SuiteSparse/SuiteSparseBLAS64.cmake
 lib/cmake/SuiteSparse/SuiteSparseLAPACK.cmake
 lib/cmake/SuiteSparse/SuiteSparsePolicy.cmake
 lib/cmake/SuiteSparse/SuiteSparseReport.cmake
+lib/cmake/SuiteSparse/SuiteSparse__blas_threading.cmake
 lib/cmake/SuiteSparse/SuiteSparse__thread.cmake
+lib/cmake/SuiteSparse/check_mkl.c
+lib/cmake/SuiteSparse/check_openblas_Apr2024.c
+lib/cmake/SuiteSparse/check_openblas_Mar2015.c
 lib/cmake/SuiteSparse_Mongoose/SuiteSparse_MongooseConfig.cmake
 lib/cmake/SuiteSparse_Mongoose/SuiteSparse_MongooseConfigVersion.cmake
 lib/cmake/SuiteSparse_Mongoose/SuiteSparse_MongooseTargets-release.cmake
@@ -175,7 +179,7 @@ lib/libcxsparse.so.4
 lib/libcxsparse.so.4.4.2
 lib/libgraphblas.so
 lib/libgraphblas.so.10
-lib/libgraphblas.so.10.1.1
+lib/libgraphblas.so.10.2.0
 lib/libklu.a
 lib/libklu.so
 lib/libklu.so.2
@@ -187,11 +191,11 @@ lib/libklu_cholmod.so.2.3.6
 lib/liblagraph.a
 lib/liblagraph.so
 lib/liblagraph.so.1
-lib/liblagraph.so.1.2.0
+lib/liblagraph.so.1.2.1
 lib/liblagraphx.a
 lib/liblagraphx.so
 lib/liblagraphx.so.1
-lib/liblagraphx.so.1.2.0
+lib/liblagraphx.so.1.2.1
 lib/libldl.a
 lib/libldl.so
 lib/libldl.so.3
@@ -199,7 +203,7 @@ lib/libldl.so.3.3.3
 lib/libparu.a
 lib/libparu.so
 lib/libparu.so.1
-lib/libparu.so.1.0.1
+lib/libparu.so.1.1.0
 lib/librbio.a
 lib/librbio.so
 lib/librbio.so.4
@@ -214,10 +218,11 @@ lib/libspexpython.so.3.2.4
 lib/libspqr.a
 lib/libspqr.so
 lib/libspqr.so.4
-lib/libspqr.so.4.3.5
+lib/libspqr.so.4.3.6
 lib/libsuitesparse_mongoose.a
 lib/libsuitesparse_mongoose.so
 lib/libsuitesparse_mongoose.so.3
+lib/libsuitesparse_mongoose.so.3.3.6
 lib/libsuitesparseconfig.a
 lib/libsuitesparseconfig.so
 lib/libsuitesparseconfig.so.7
@@ -225,7 +230,7 @@ lib/libsuitesparseconfig.so.${PKGVERSION}
 lib/libumfpack.a
 lib/libumfpack.so
 lib/libumfpack.so.6
-lib/libumfpack.so.6.3.6
+lib/libumfpack.so.6.3.7
 lib/pkgconfig/AMD.pc
 lib/pkgconfig/BTF.pc
 lib/pkgconfig/CAMD.pc
