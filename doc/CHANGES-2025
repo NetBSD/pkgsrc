@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6656 2025/11/12 07:29:47 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6657 2025/11/12 07:32:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9665,3 +9665,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/suitesparse to 7.12.1 [ktnb 2025-11-12]
 	Updated emulators/nono to 1.6.2 [jun 2025-11-12]
 	Updated meta-pkgs/bulk-test-boost to 20251112 [wiz 2025-11-12]
+	Updated devel/doxygen to 1.15.0 [adam 2025-11-12]
+	Updated security/libjwt to 3.2.3 [adam 2025-11-12]
