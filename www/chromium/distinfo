@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.16 2025/11/08 15:40:35 kikadf Exp $
+$NetBSD: distinfo,v 1.17 2025/11/12 19:12:00 kikadf Exp $
 
-BLAKE2s (chromium-142.0.7444.134-testdata.tar.xz) = e2e44cade2e8043ca4253e0396d160e05fbf3221056e5f8df4b567f503b7800c
-SHA512 (chromium-142.0.7444.134-testdata.tar.xz) = e29b230bf57bac7021acbd10a3ff51d1a001a045546eebd927d2048d8a1b38fefddadda435201b85c9ce841060f21d276ff9453ebdd9afbcf387b71686131e5f
-Size (chromium-142.0.7444.134-testdata.tar.xz) = 932545140 bytes
-BLAKE2s (chromium-142.0.7444.134.tar.xz) = 0401e465b564820b5b77e41b9458b8c5ba7d0297201e24b303bce9adbbbc5de0
-SHA512 (chromium-142.0.7444.134.tar.xz) = 9811de23d2ff481e8c6d349b327c2935c7726b875893989d65895cc220af96c977e2e90578181bdce46201d959c72f0f69873d6560baf71958fc573a5e777266
-Size (chromium-142.0.7444.134.tar.xz) = 7575816432 bytes
+BLAKE2s (chromium-142.0.7444.162-testdata.tar.xz) = bad7a21850d30892ec05ab5ea91aa0d451037c599397393e27ddf701dc72d02e
+SHA512 (chromium-142.0.7444.162-testdata.tar.xz) = a72cf835215ade745561dd8bbc58cd287737106f882b0d4b8fadae61f62314c4cf8af050daceb5195348256d3f4a5fdabd546145915fc511242414564b75ba7c
+Size (chromium-142.0.7444.162-testdata.tar.xz) = 932493864 bytes
+BLAKE2s (chromium-142.0.7444.162.tar.xz) = f3a4d01608feaa56000c2758f7323bb8dda5876c8ac6c602278025a2ed650d6a
+SHA512 (chromium-142.0.7444.162.tar.xz) = 0e843acfbbbadf7949db661cf180b7ebebe2e5d4337064963055431c82acfd7c6a0a7f0cde2c3c9fff7bb146d5b7cdeefd31351106437845ea5c5b6933a28de1
+Size (chromium-142.0.7444.162.tar.xz) = 7577065240 bytes
 BLAKE2s (kikadf-chromium-audioio-v140.0.tar.gz) = 063582b80823694cfa30c020d3378dae3c7dbb1d0b3ffc3b756ce26e9984504c
 SHA512 (kikadf-chromium-audioio-v140.0.tar.gz) = e986fd201969e2ce9e7c092497c34bca84771992a2c8d980556d2dc77002ff68f3d13b4144629e9a8bc41b8ad0d4d06650eafadbfde7c0fa91ed84fbcd74763b
 Size (kikadf-chromium-audioio-v140.0.tar.gz) = 8453 bytes
