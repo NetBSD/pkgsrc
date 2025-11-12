@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2025/11/11 12:34:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2025/11/12 16:39:03 leot Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -1257,7 +1257,7 @@ ${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgenericunixfontdataba
 ${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgenericunixtheme_p.h
 ${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qglxconvenience_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qglyphrun_p.h
-${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgnomeportalinterface_p.h
+${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgnomeportalinterface_p.h
 ${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgnometheme_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgrayraster_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgridlayoutengine_p.h
@@ -1279,7 +1279,7 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qinputdevicemanager_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qinputdevicemanager_p_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qinputmethod_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qinternalmimedata_p.h
-${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qkdetheme_p.h
+${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qkdetheme_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qkeymapper_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qkeysequence_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qktxhandler_p.h
@@ -3766,7 +3766,7 @@ qt6/libexec/tracepointgen
 qt6/libexec/uic
 qt6/metatypes/qt6concurrent_metatypes.json
 qt6/metatypes/qt6core_metatypes.json
-qt6/metatypes/qt6dbus_metatypes.json
+${PLIST.dbus}qt6/metatypes/qt6dbus_metatypes.json
 qt6/metatypes/qt6devicediscoverysupportprivate_metatypes.json
 ${PLIST.egl}qt6/metatypes/qt6eglfsdeviceintegrationprivate_metatypes.json
 ${PLIST.egl}qt6/metatypes/qt6eglfskmsgbmsupportprivate_metatypes.json
