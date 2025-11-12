@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6666 2025/11/12 11:58:26 leot Exp $
+$NetBSD: CHANGES-2025,v 1.6667 2025/11/12 13:33:30 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9682,3 +9682,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-reprotest to 0.7.32 [adam 2025-11-12]
 	Updated lang/quickjs to 20250913 [leot 2025-11-12]
 	Updated lang/quickjs to 20250913nb1 [leot 2025-11-12]
+	Updated mail/amavisd-new to 2.12.2nb2 [jperkin 2025-11-12]
