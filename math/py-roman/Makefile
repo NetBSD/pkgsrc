@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2025/07/20 10:28:08 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/11/12 09:03:52 adam Exp $
 
-DISTNAME=	roman-5.1
+DISTNAME=	roman-5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/roman/}

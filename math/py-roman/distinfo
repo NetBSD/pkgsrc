@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2025/07/20 10:28:08 wiz Exp $
+$NetBSD: distinfo,v 1.16 2025/11/12 09:03:52 adam Exp $
 
-BLAKE2s (roman-5.1.tar.gz) = 1caa39afc15913556a79ac1a15492a93898f5c912bc9676830257a1b5e8e7a2e
-SHA512 (roman-5.1.tar.gz) = f8a57d37b46d2f1fb11247d3c461848aac9696798111b3b4db32adfb23b97e3f06bdfa4dceb7a37023ee57552a93afba2bdafb5f6006846b45d4ea6004b80398
-Size (roman-5.1.tar.gz) = 8066 bytes
+BLAKE2s (roman-5.2.tar.gz) = b5b8075bb98922d79845720c1113614991af04655122d1db475957fe0181c49e
+SHA512 (roman-5.2.tar.gz) = 60d32796314fc04e5a0b79ef9660f15a850104d582dc1195de820bc5ce977294f9080da9ba2edb9ab6b8187122bc1abd01d46767d39746a64aad58c045b79bd1
+Size (roman-5.2.tar.gz) = 8185 bytes
