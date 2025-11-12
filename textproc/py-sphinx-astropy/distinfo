@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/08/21 15:16:50 adam Exp $
+$NetBSD: distinfo,v 1.3 2025/11/12 11:18:24 adam Exp $
 
-BLAKE2s (sphinx-astropy-1.9.1.tar.gz) = 4fb726a284462efb62920fe8f0645444faad6237e1eb75c9b58fa5f5a0891f71
-SHA512 (sphinx-astropy-1.9.1.tar.gz) = 8a7b1a657daf1b53693f1755c88f76b4ceff29a0c60033cac41e4097531bda83662cefb2d34a0a09d732fe9577253b62727c6f0b4036c569428fc9f2ec5f753b
-Size (sphinx-astropy-1.9.1.tar.gz) = 19277 bytes
+BLAKE2s (sphinx_astropy-1.10.tar.gz) = f0140eccda21f983cafd3c9eea2171ba422391320e1e48373e1644a981e98fa5
+SHA512 (sphinx_astropy-1.10.tar.gz) = bd43895fc6244cd11d23205bef602d90d46bf46e1570b27b0b8f3d7dc24c4d50608992cfce3050cea68654a071971e5d30700bc3da1d3bbf7e1f84ffd2a1904e
+Size (sphinx_astropy-1.10.tar.gz) = 20562 bytes

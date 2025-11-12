@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2025/10/09 07:58:03 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/11/12 11:18:24 adam Exp $
 
-DISTNAME=	sphinx-astropy-1.9.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	sphinx_astropy-1.10
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-astropy/}
 
@@ -12,12 +11,12 @@ COMMENT=	Sphinx extensions and configuration specific to the Astropy project
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8.0.0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-astropy-sphinx-theme-[0-9]*:../../textproc/py-astropy-sphinx-theme
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-numpydoc-[0-9]*:../../textproc/py-numpydoc
-DEPENDS+=	${PYPKGPREFIX}-sphinx>=3.0.0:../../textproc/py-sphinx
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=4.0.0:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-sphinx-automodapi-[0-9]*:../../textproc/py-sphinx-automodapi
 DEPENDS+=	${PYPKGPREFIX}-sphinx-gallery-[0-9]*:../../textproc/py-sphinx-gallery
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-jquery-[0-9]*:../../textproc/py-sphinxcontrib-jquery
