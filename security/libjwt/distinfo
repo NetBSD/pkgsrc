@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2025/09/01 11:29:06 adam Exp $
+$NetBSD: distinfo,v 1.7 2025/11/12 07:32:12 adam Exp $
 
-BLAKE2s (libjwt-3.2.2.tar.xz) = 61876e0e2cd6b7627d928c89f18fe931d4eacc91aff179de3cbbfa230d89c4a7
-SHA512 (libjwt-3.2.2.tar.xz) = ab7306d85199dd90cf98aa89d46438c60100f950ba63df185b77120303987cec943d9eeee7834f2a66cb056ffe4375e7178e2aeb84cca9ce71b3143d08fe2dd5
-Size (libjwt-3.2.2.tar.xz) = 518780 bytes
+BLAKE2s (libjwt-3.2.3.tar.xz) = af28a17cb0a94004194d5c75d4da922fe3ef5df3755ea2b256c8f5cf4857d9e3
+SHA512 (libjwt-3.2.3.tar.xz) = 223865583bfb69d8182a27c47da76a918e9c94751db800b395cdd126560dd398f78177512c526fedc79d0dde50874fdc4710723ef4ac4c3470510cdc7f23d95f
+Size (libjwt-3.2.3.tar.xz) = 519380 bytes
 SHA1 (patch-CMakeLists.txt) = dbbf7807ad3004d120d82dc0d53063d025e7d6ff
