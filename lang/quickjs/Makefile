@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/02/07 12:36:23 pho Exp $
+# $NetBSD: Makefile,v 1.15 2025/11/12 11:49:38 leot Exp $
 
 NAME=		quickjs
-QJS_DATE=	2024-01-13
+QJS_DATE=	2025-09-13
 VERSION=	${QJS_DATE:S/-//g}
 DISTNAME=	${NAME}-${QJS_DATE}
 PKGNAME=	${NAME}-${VERSION}
@@ -38,9 +38,17 @@ PLIST.lto=	yes
 MAKE_ENV+=	CONFIG_BIGNUM=yes
 .endif
 
+# Populate missing examples/message.json based on the file present in Git
+# repository that is missing in the distfile. Without it the build fails with:
+#
+#  ReferenceError: could not load module filename 'examples/message.json'
+#
+pre-configure:
+	${ECHO} '{ "x" : 1, "tab": [ 1, 2, 3 ] }' > ${WRKSRC}/examples/message.json
+
 post-install:
 	cd ${WRKSRC}/doc && ${INSTALL_DATA} *.html *.pdf ${DESTDIR}${PREFIX}/share/doc/quickjs/
-	cd ${WRKSRC}/examples && ${INSTALL_DATA} *.js *.c ${DESTDIR}${PREFIX}/share/doc/quickjs/examples/
+	cd ${WRKSRC}/examples && ${INSTALL_DATA} *.js *.c *.json ${DESTDIR}${PREFIX}/share/doc/quickjs/examples/
 	cd ${WRKSRC}/tests && ${INSTALL_DATA} *.js *.c ${DESTDIR}${PREFIX}/share/doc/quickjs/tests/
 
 .include "../../mk/bsd.pkg.mk"
