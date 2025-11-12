@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2024/08/25 06:18:33 wiz Exp $
+# $NetBSD: options.mk,v 1.20 2025/11/12 07:30:43 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.doxygen
 PKG_SUPPORTED_OPTIONS=	latex qt
@@ -9,8 +9,8 @@ PLIST_VARS+=		latex qt
 
 .if !empty(PKG_OPTIONS:Mlatex)
 CMAKE_CONFIGURE_ARGS+=	-Dbuild_doc=ON
-BUILD_TARGET=	all docs
-PLIST.latex=	yes
+BUILD_TARGET=		all docs
+PLIST.latex=		yes
 
 # XXX Clearly separate what is build time vs runtime, and move
 # build-time dependencies into USE_TOOLS framework.
