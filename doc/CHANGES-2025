@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6670 2025/11/12 14:12:23 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6671 2025/11/12 17:30:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9691,3 +9691,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-notebook to 7.4.7 [adam 2025-11-12]
 	Updated textproc/py-parsimonious to 0.11.0 [adam 2025-11-12]
 	Updated devel/py-cbor2 to 5.7.1 [adam 2025-11-12]
+	Updated converters/py-cloudpickle to 3.1.2 [adam 2025-11-12]
+	Updated mail/py-checkdmarc to 5.12.25 [adam 2025-11-12]
