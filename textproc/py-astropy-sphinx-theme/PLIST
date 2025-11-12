@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2022/01/17 09:19:45 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2025/11/12 11:14:12 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.rst
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/astropy_sphinx_theme/__init__.py
 ${PYSITELIB}/astropy_sphinx_theme/__init__.pyc
 ${PYSITELIB}/astropy_sphinx_theme/__init__.pyo
@@ -27,3 +27,6 @@ ${PYSITELIB}/astropy_sphinx_theme/tests/__init__.pyo
 ${PYSITELIB}/astropy_sphinx_theme/tests/test_basic.py
 ${PYSITELIB}/astropy_sphinx_theme/tests/test_basic.pyc
 ${PYSITELIB}/astropy_sphinx_theme/tests/test_basic.pyo
+${PYSITELIB}/astropy_sphinx_theme/version.py
+${PYSITELIB}/astropy_sphinx_theme/version.pyc
+${PYSITELIB}/astropy_sphinx_theme/version.pyo
