@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.140 2025/09/05 05:36:06 adam Exp $
+# $NetBSD: Makefile,v 1.141 2025/11/12 08:59:32 adam Exp $
 
-DISTNAME=	pytest-8.4.2
+DISTNAME=	pytest-9.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
@@ -12,8 +12,8 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2.3:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-iniconfig>=1:../../devel/py-iniconfig
-DEPENDS+=	${PYPKGPREFIX}-packaging>=20:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-iniconfig>=1.0.1:../../devel/py-iniconfig
+DEPENDS+=	${PYPKGPREFIX}-packaging>=22:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=1.5:../../devel/py-pluggy
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.7.2:../../textproc/py-pygments
 TEST_DEPENDS+=	${PYPKGPREFIX}-argcomplete-[0-9]*:../../devel/py-argcomplete
