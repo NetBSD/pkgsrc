@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/12 16:35:51 pgoyette Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/11/12 09:03:52 adam Exp $
 bin/roman-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
-${PYSITELIB}/roman.py
-${PYSITELIB}/roman.pyc
-${PYSITELIB}/roman.pyo
+${PYSITELIB}/roman/__init__.py
+${PYSITELIB}/roman/__init__.pyc
+${PYSITELIB}/roman/__init__.pyo
+${PYSITELIB}/roman/py.typed
