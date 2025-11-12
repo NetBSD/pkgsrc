@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6673 2025/11/12 19:48:15 leot Exp $
+$NetBSD: CHANGES-2025,v 1.6674 2025/11/12 19:49:04 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9695,3 +9695,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/py-checkdmarc to 5.12.25 [adam 2025-11-12]
 	Updated www/chromium to 142.0.7444.162 [kikadf 2025-11-12]
 	Updated www/firefox140 to 140.5.0 [leot 2025-11-12]
+	Updated www/firefox140-l10n to 140.5.0 [leot 2025-11-12]
