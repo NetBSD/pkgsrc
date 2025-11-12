@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/09/21 16:15:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/11/12 11:08:57 adam Exp $
 
-DISTNAME=	secretstorage-3.4.0
+DISTNAME=	secretstorage-3.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SecretStorage/}
