@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6657 2025/11/12 07:32:40 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6658 2025/11/12 09:04:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9667,3 +9667,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated meta-pkgs/bulk-test-boost to 20251112 [wiz 2025-11-12]
 	Updated devel/doxygen to 1.15.0 [adam 2025-11-12]
 	Updated security/libjwt to 3.2.3 [adam 2025-11-12]
+	Updated devel/py-test to 9.0.0 [adam 2025-11-12]
+	Updated security/py-certifi to 2025.11.12 [adam 2025-11-12]
+	Updated devel/py-frozendict to 2.4.7 [adam 2025-11-12]
+	Updated math/py-roman to 5.2 [adam 2025-11-12]
