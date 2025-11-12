@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.11 2022/09/17 09:26:12 spz Exp $
+$NetBSD: distinfo,v 1.12 2025/11/12 13:33:21 jperkin Exp $
 
 BLAKE2s (amavis-v2.12.2.tar.gz) = fd9dc23a2923bcbf198a5a7d7993dd90a426a056fd96bf28a6bf421c98ff3770
 SHA512 (amavis-v2.12.2.tar.gz) = 7ef5ba670b530bf19352ba8aebd57a171e32d90adffc0b248b93a39f740fe4bb8ddf1d5ecdd46d0c9e1b4ca1a9ff0a9e86e73900e73a1a2cac514656c3a7db01
 Size (amavis-v2.12.2.tar.gz) = 1097754 bytes
 SHA1 (patch-aa) = d9076df1115ca88cef2ccb586a6c5e15288130a5
+SHA1 (patch-amavisd) = 3692e0d148f967130040fe562d51f1642da8a9d9
