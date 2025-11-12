@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6662 2025/11/12 11:09:17 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6663 2025/11/12 11:18:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9676,3 +9676,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/spotify-player to 0.21.2 [pin 2025-11-12]
 	Updated x11/py-wxPython to 4.2.4 [adam 2025-11-12]
 	Updated security/py-secretstorage to 3.4.1 [adam 2025-11-12]
+	Updated textproc/py-astropy-sphinx-theme to 2.0 [adam 2025-11-12]
+	Updated textproc/py-sphinx-astropy to 1.10 [adam 2025-11-12]
