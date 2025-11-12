@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.28 2025/06/13 08:57:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2025/11/12 08:59:32 adam Exp $
 bin/py.test-${PYVERSSUFFIX}
 bin/pytest-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/_pytest/__init__.py
@@ -189,6 +188,9 @@ ${PYSITELIB}/_pytest/stash.pyo
 ${PYSITELIB}/_pytest/stepwise.py
 ${PYSITELIB}/_pytest/stepwise.pyc
 ${PYSITELIB}/_pytest/stepwise.pyo
+${PYSITELIB}/_pytest/subtests.py
+${PYSITELIB}/_pytest/subtests.pyc
+${PYSITELIB}/_pytest/subtests.pyo
 ${PYSITELIB}/_pytest/terminal.py
 ${PYSITELIB}/_pytest/terminal.pyc
 ${PYSITELIB}/_pytest/terminal.pyo
