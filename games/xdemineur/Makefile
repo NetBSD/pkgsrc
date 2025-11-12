@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2012/10/06 11:55:00 asau Exp $
+# $NetBSD: Makefile,v 1.29 2025/11/12 05:28:19 pgoyette Exp $
 #
 
 DISTNAME=	xdemineur-2.1.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=games/}
 
