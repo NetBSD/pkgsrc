@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2023/09/25 19:33:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.34 2025/11/12 13:33:21 jperkin Exp $
 
 # pkgname kept as amavisd-new even though that migrated to be amavis again
 PKGNAME=	amavisd-new-${VERSION}
 DISTNAME=	amavis-${GITLAB_TAG}
 VERSION=	2.12.2
-PKGREVISION=	1
+PKGREVISION=	2
 
 CATEGORIES=	mail security
 MASTER_SITES=	${MASTER_SITE_GITLAB:=amavis/}
