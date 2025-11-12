@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6658 2025/11/12 09:04:17 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6659 2025/11/12 09:37:10 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9671,3 +9671,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-certifi to 2025.11.12 [adam 2025-11-12]
 	Updated devel/py-frozendict to 2.4.7 [adam 2025-11-12]
 	Updated math/py-roman to 5.2 [adam 2025-11-12]
+	Updated devel/cargo-edit to 0.13.8 [pin 2025-11-12]
