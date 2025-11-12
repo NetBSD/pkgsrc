@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/11/12 18:44:10 vins Exp $
+# $NetBSD: Makefile,v 1.6 2025/11/12 19:08:39 vins Exp $
 
 DISTNAME=	fish-4.1.2
 PKGREVISION=	1
@@ -46,6 +46,8 @@ CMAKE_CONFIGURE_ARGS+=	-DBUILD_DOCS=OFF
 .include "options.mk"
 
 TEST_TARGET=		fish_run_tests
+TEST_DEPENDS+=		${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
+TEST_ENV+=		LC_ALL=C.UTF-8		# requires a UTF-8 locale
 
 post-patch:
 	@${STEP_MSG} "Patching vendor crates"
