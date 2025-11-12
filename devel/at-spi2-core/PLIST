@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2025/11/07 21:53:46 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.22 2025/11/12 12:05:52 leot Exp $
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-accessible.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-action.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-application.h
@@ -83,8 +83,8 @@ ${PLIST.dbus}lib/libatspi.so.0.0.1
 ${PLIST.dbus}lib/pkgconfig/atk-bridge-2.0.pc
 lib/pkgconfig/atk.pc
 ${PLIST.dbus}lib/pkgconfig/atspi-2.pc
-${PYSITELIB}/gi/overrides/Atspi.py
-${PYSITELIB}/gi/overrides/Atspi.pyc
+${PLIST.dbus}${PYSITELIB}/gi/overrides/Atspi.py
+${PLIST.dbus}${PYSITELIB}/gi/overrides/Atspi.pyc
 ${PLIST.dbus}lib/systemd/user/at-spi-dbus-bus.service
 ${PLIST.dbus}libexec/at-spi-bus-launcher
 ${PLIST.dbus}libexec/at-spi2-registryd
