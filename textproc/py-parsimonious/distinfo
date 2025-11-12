@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/09/12 10:57:05 adam Exp $
+$NetBSD: distinfo,v 1.6 2025/11/12 14:09:59 adam Exp $
 
-BLAKE2s (parsimonious-0.10.0.tar.gz) = 05f7b330f51cf567e7fc68bad8906efb61e5e428e5e07b3bc46caae2b64c373e
-SHA512 (parsimonious-0.10.0.tar.gz) = ea67461696cae69b888d2ff90e0627f225893ef4aeb36f347b26928a9717dead9c852f983db6268a446a6d3da50aeea4cc9877dd542c08193724212379a0c713
-Size (parsimonious-0.10.0.tar.gz) = 52172 bytes
+BLAKE2s (parsimonious-0.11.0.tar.gz) = 2d33b29e483f2ae1131fda534b0809e7552e541f175c6e4743c962168cc7d8e8
+SHA512 (parsimonious-0.11.0.tar.gz) = 4d4e54ba74f205c937771db4ccc93ecd2831fa030a767ec1af010d9f3905e1ad0620e0f0d07b2711bec6276f4f921c9851c31f6f29ef93490b0e765891d63239
+Size (parsimonious-0.11.0.tar.gz) = 54238 bytes
