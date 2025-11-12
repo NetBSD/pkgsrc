@@ -1,0 +1,27 @@
+$NetBSD: patch-amavisd,v 1.3 2025/11/12 13:33:21 jperkin Exp $
+
+https://gitlab.com/amavis/amavis/-/issues/128
+
+--- amavisd.orig	2025-11-12 13:25:33.638220968 +0000
++++ amavisd
+@@ -18789,8 +18789,7 @@ sub fetch_modules_extra() {
+                       auto::Net::SSLeay::ssl_read_until
+                       auto::Net::SSLeay::dump_peer_certificate));
+   }
+-  push(@modules, qw(Net::DNS::RR::TXT Text::ParseWords
+-         auto::Crypt::OpenSSL::RSA::new_public_key))  if $extra_code_dkim;
++  push(@modules, qw(Net::DNS::RR::TXT Text::ParseWords))  if $extra_code_dkim;
+   push(@modules, 'Anomy::Sanitizer')  if $enable_anomy_sanitizer;
+   Amavis::Boot::fetch_modules('REQUIRED ADDITIONAL MODULES', 1, @modules);
+ 
+@@ -30827,10 +30826,6 @@ sub getSAPlugins {
+       $mod_names{'Mail::SpamAssassin::Plugin::DKIM'}) {
+     push(@modules, qw(
+       Crypt::OpenSSL::RSA
+-      auto::Crypt::OpenSSL::RSA::new_public_key
+-      auto::Crypt::OpenSSL::RSA::new_key_from_parameters
+-      auto::Crypt::OpenSSL::RSA::get_key_parameters
+-      auto::Crypt::OpenSSL::RSA::import_random_seed
+       Digest::SHA Error));
+   }
+ # HTML/HeadParser.pm
