@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6671 2025/11/12 17:30:44 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6672 2025/11/12 19:12:15 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9693,3 +9693,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-cbor2 to 5.7.1 [adam 2025-11-12]
 	Updated converters/py-cloudpickle to 3.1.2 [adam 2025-11-12]
 	Updated mail/py-checkdmarc to 5.12.25 [adam 2025-11-12]
+	Updated www/chromium to 142.0.7444.162 [kikadf 2025-11-12]
