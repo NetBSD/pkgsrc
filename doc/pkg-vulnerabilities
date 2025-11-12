@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.658 2025/11/11 11:02:30 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.659 2025/11/12 09:38:57 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28892,3 +28892,6 @@ py{27,39,310,311,312,313,314}-django<4.2.26	sql-injection	https://nvd.nist.gov/v
 py{27,39,310,311,312,313,314}-django>=5<5.2.8	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-64459
 py{27,39,310,311,312,313,314}-octoprint<1.11.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-64187
 quickjs-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-12745
+firefox<145		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-87/
+firefox140<140.5	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-88/
+firefox115<115.30	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-89/
