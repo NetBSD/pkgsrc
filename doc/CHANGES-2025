@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6660 2025/11/12 09:39:38 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6661 2025/11/12 09:41:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9673,3 +9673,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-roman to 5.2 [adam 2025-11-12]
 	Updated devel/cargo-edit to 0.13.8 [pin 2025-11-12]
 	Updated audio/ncspot to 1.3.2 [pin 2025-11-12]
+	Updated audio/spotify-player to 0.21.2 [pin 2025-11-12]
