@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6677 2025/11/13 06:50:54 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6678 2025/11/13 12:05:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9701,3 +9701,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-ansible-compat to 25.11.0 [adam 2025-11-13]
 	Updated parallel/py-billiard to 4.2.2 [adam 2025-11-13]
 	Updated multimedia/libtheora-docs to 1.2.0nb2 [wiz 2025-11-13]
+	Updated net/py-ncclient to 0.7.0 [adam 2025-11-13]
+	Updated net/py-junos-eznc to 2.7.5 [adam 2025-11-13]
