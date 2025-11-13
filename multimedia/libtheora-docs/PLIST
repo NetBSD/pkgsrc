@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2025/06/14 05:47:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2025/11/13 06:50:43 wiz Exp $
 share/doc/libtheora/color.html
 share/doc/libtheora/doxygen-build.stamp
 share/doc/libtheora/draft-ietf-avt-rtp-theora-00.txt
@@ -80,6 +80,7 @@ share/doc/libtheora/latex/dir_0f91760d62c578de767c41a0aaae5482.tex
 share/doc/libtheora/latex/dir_5b2027f988bb10104ff6bde3c5145ee6.tex
 share/doc/libtheora/latex/dir_d436eb0fd9de10b54a828ce6435f7e81.tex
 share/doc/libtheora/latex/dir_d44c64559bbebec7f509842c48db8b23.tex
+share/doc/libtheora/latex/dirs.tex
 share/doc/libtheora/latex/doxygen.sty
 share/doc/libtheora/latex/etoc_doxygen.sty
 share/doc/libtheora/latex/files.tex
