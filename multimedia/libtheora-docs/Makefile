@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.19 2025/06/14 05:47:36 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/11/13 06:50:43 wiz Exp $
 
 .include "../../multimedia/libtheora/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/theora/theora-docs/}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Video codec for Ogg multimedia streaming (API documentation)
 
-TOOL_DEPENDS+=	doxygen>=1.14.0:../../devel/doxygen
+TOOL_DEPENDS+=	doxygen>=1.15.0:../../devel/doxygen
 
 CONFIGURE_ARGS+=	--disable-oggtest
 CONFIGURE_ARGS+=	--disable-vorbistest
