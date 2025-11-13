@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/03/03 20:29:29 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/11/13 01:33:13 mef Exp $
 
 DISTNAME=		sysmon-0.93
 PKGREVISION=		2
@@ -12,6 +12,13 @@ LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 
+# loadconfig.c: In function 'loadconfig':
+# loadconfig.c:843:9: error: implicit declaration of function 'sysmon_conf_yylex' [-Wimplicit-function-declaration]
+#   843 |         sysmon_conf_yylex();
+#       |         ^~~~~~~~~~~~~~~~~
+
+CFLAGS+=		-Wno-implicit-function-declaration
+
 BUILD_DEFS+=		IPV6_READY
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -23,7 +30,7 @@ CONF_FILES=		${EGDIR}/sysmon.conf.dist \
 			${PKG_SYSCONFDIR}/sysmon.conf
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	${WRKSRC}/autoconf/Makefile.in
+SUBST_FILES.paths=	autoconf/Makefile.in
 SUBST_STAGE.paths=	pre-configure
 SUBST_SED.paths=	-e 's,@destdir@,${DESTDIR},g'
 
