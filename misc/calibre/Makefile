@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.315 2025/10/23 20:38:18 wiz Exp $
+# $NetBSD: Makefile,v 1.316 2025/11/13 22:52:29 wiz Exp $
 
 # Needs update to 6.9.0
 DISTNAME=	calibre-5.44.0
-PKGREVISION=	34
+PKGREVISION=	35
 CATEGORIES=	misc
 MASTER_SITES=	https://download.calibre-ebook.com/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -144,7 +144,7 @@ _PYSETUPTOOLSINSTALLARGS=	# empty
 # Get rid of --root=${DESTDIR}, use our own version from above instead.
 # because the setup.py is not the standard one and behaves differently.
 _PYSETUPINSTALLARGS=	${PYSETUPINSTALLARGS} ${PYSETUPOPTARGS} ${_PYSETUPTOOLSINSTALLARGS}
-.include "../../print/podofo/buildlink3.mk"
+.include "../../print/podofo09/buildlink3.mk"
 BUILDLINK_API_DEPENDS.poppler+=	poppler>=0.20.2
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../print/poppler/buildlink3.mk"
