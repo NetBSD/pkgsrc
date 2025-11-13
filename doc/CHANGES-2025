@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6679 2025/11/13 12:29:17 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6680 2025/11/13 13:35:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9705,3 +9705,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-junos-eznc to 2.7.5 [adam 2025-11-13]
 	Updated textproc/py-jsonrpclib-pelix to 1.0.0 [adam 2025-11-13]
 	Updated math/py-photutils to 2.3.0 [adam 2025-11-13]
+	Updated net/py-lexicon to 3.23.0 [adam 2025-11-13]
+	Updated devel/py-dulwich to 0.24.10 [adam 2025-11-13]
