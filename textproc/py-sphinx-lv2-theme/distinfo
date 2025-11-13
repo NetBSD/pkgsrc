@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/11/05 16:46:19 adam Exp $
+$NetBSD: distinfo,v 1.2 2025/11/13 06:10:49 adam Exp $
 
-BLAKE2s (sphinx_lv2_theme-1.4.2.tar.gz) = 3031f710e0a2940e6ec71106411b7f7c640418d00099743b7ec7197963ff1e07
-SHA512 (sphinx_lv2_theme-1.4.2.tar.gz) = 51c9cca9cd28878496706a4716ec722b695257392ab09adfbfe70e3dadeb72c7620cdbb56562411e8b99d3af942cec63a346781512ead188c6b2d6eae3623336
-Size (sphinx_lv2_theme-1.4.2.tar.gz) = 14331 bytes
+BLAKE2s (sphinx_lv2_theme-1.4.4.tar.gz) = 969da723e24ccf1011025d878139f030f827932ec141232d2cbb4432451781f0
+SHA512 (sphinx_lv2_theme-1.4.4.tar.gz) = 0ac460a190ef5de3fc3056f3e1fea68df1468140824aebc6c253bdcc39435860676c454dd31447b820afa7e75cd3e2514a1b21dd29a221ef2dd9f12761c92414
+Size (sphinx_lv2_theme-1.4.4.tar.gz) = 15110 bytes
