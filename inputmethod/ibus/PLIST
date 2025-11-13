@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.26 2025/05/17 18:32:24 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.27 2025/11/13 17:21:11 tsutsui Exp $
 bin/ibus
 bin/ibus-daemon
 bin/ibus-setup
+include/ibus-1.0/ibus-visibility.h
 include/ibus-1.0/ibus.h
 include/ibus-1.0/ibusaccelgroup.h
 include/ibus-1.0/ibusattribute.h
@@ -25,6 +26,7 @@ include/ibus-1.0/ibuskeys.h
 include/ibus-1.0/ibuskeysyms-compat.h
 include/ibus-1.0/ibuskeysyms.h
 include/ibus-1.0/ibuslookuptable.h
+include/ibus-1.0/ibusmessage.h
 include/ibus-1.0/ibusobject.h
 include/ibus-1.0/ibusobservedpath.h
 include/ibus-1.0/ibuspanelservice.h
