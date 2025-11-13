@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6686 2025/11/13 16:55:33 bouyer Exp $
+$NetBSD: CHANGES-2025,v 1.6687 2025/11/13 17:21:35 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9717,3 +9717,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/slumber to 4.2.0 [pin 2025-11-13]
 	Updated sysutils/xenkernel420 to 20251113 [bouyer 2025-11-13]
 	Updated sysutils/xenkernel420 to 20251113 [bouyer 2025-11-13]
+	Updated inputmethod/ibus to 1.5.33 [tsutsui 2025-11-13]
