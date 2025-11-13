@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2025/10/09 07:57:48 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/11/13 12:28:35 adam Exp $
 
-DISTNAME=	photutils-2.2.0
+DISTNAME=	photutils-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/photutils/}
@@ -11,13 +11,12 @@ COMMENT=	Astropy coordinated module for astronomical photometry
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.0:../../devel/py-cython
-TOOL_DEPENDS+=	${PYPKGPREFIX}-extension-helpers>=1:../../devel/py-extension-helpers
+TOOL_DEPENDS+=	${PYPKGPREFIX}-extension-helpers>=1.3:../../devel/py-extension-helpers
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-astropy>=5.3:../../math/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-extension-helpers>=0.1:../../devel/py-extension-helpers
-DEPENDS+=	${PYPKGPREFIX}-gwcs>=0.12:../../math/py-gwcs
-DEPENDS+=	${PYPKGPREFIX}-scipy>=1.10:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.11.1:../../math/py-scipy
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
