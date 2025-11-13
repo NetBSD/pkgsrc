@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6675 2025/11/13 06:11:10 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6676 2025/11/13 06:27:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9698,3 +9698,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox140-l10n to 140.5.0 [leot 2025-11-12]
 	Updated devel/py-cython to 3.2.1 [adam 2025-11-13]
 	Updated textproc/py-sphinx-lv2-theme to 1.4.4 [adam 2025-11-13]
+	Updated sysutils/py-ansible-compat to 25.11.0 [adam 2025-11-13]
+	Updated parallel/py-billiard to 4.2.2 [adam 2025-11-13]
