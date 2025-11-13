@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.99 2025/10/09 07:57:52 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2025/11/13 13:32:02 adam Exp $
 
-DISTNAME=	dns_lexicon-3.21.1
+DISTNAME=	dns_lexicon-3.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/dns_//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dns-lexicon/}
@@ -13,13 +13,10 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-dns>=2:../../net/py-dns
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-otp>=2:../../security/py-otp
 DEPENDS+=	${PYPKGPREFIX}-requests>=2:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-tldextract>=2:../../net/py-tldextract
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3:../../textproc/py-yaml
-TEST_DEPENDS+=	${PYPKGPREFIX}-vcrpy-[0-9]*:../../www/py-vcrpy
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
