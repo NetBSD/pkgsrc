@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.772 2025/10/08 07:17:07 adam Exp $
+# $NetBSD: Makefile,v 1.773 2025/11/13 19:00:12 adam Exp $
 #
 
 COMMENT=	Programming languages
@@ -215,6 +215,7 @@ SUBDIR+=	njs
 SUBDIR+=	nodejs
 SUBDIR+=	nodejs20
 SUBDIR+=	nodejs22
+SUBDIR+=	nodejs24
 SUBDIR+=	nqp
 SUBDIR+=	nuitka
 SUBDIR+=	objc
