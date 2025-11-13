@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.335 2025/10/30 12:22:28 adam Exp $
+# $NetBSD: Makefile,v 1.336 2025/11/13 19:01:12 adam Exp $
 
-DISTNAME=	node-v24.11.0
+DISTNAME=	node-v25.2.0
 EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=	c c++
@@ -26,11 +26,6 @@ CHECK_PORTABILITY_SKIP+=	tools/macos-installer/pkgbuild/npm/scripts/preinstall
 # required for SSE2 code under i386.
 CXXFLAGS+=	-mstackrealign
 .endif
-
-.PHONY: minusx
-post-install: minusx
-minusx:
-	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/node_modules/corepack/shims/*.cmd
 
 .include "options.mk"
 
