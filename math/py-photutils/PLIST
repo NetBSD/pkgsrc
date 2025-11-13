@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/16 11:19:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/11/13 12:28:35 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -234,6 +234,7 @@ ${PYSITELIB}/photutils/isophote/__init__.pyo
 ${PYSITELIB}/photutils/isophote/ellipse.py
 ${PYSITELIB}/photutils/isophote/ellipse.pyc
 ${PYSITELIB}/photutils/isophote/ellipse.pyo
+${PYSITELIB}/photutils/isophote/ellipse_model.so
 ${PYSITELIB}/photutils/isophote/fitter.py
 ${PYSITELIB}/photutils/isophote/fitter.pyc
 ${PYSITELIB}/photutils/isophote/fitter.pyo
@@ -341,12 +342,18 @@ ${PYSITELIB}/photutils/profiles/tests/test_radial_profile.pyo
 ${PYSITELIB}/photutils/psf/__init__.py
 ${PYSITELIB}/photutils/psf/__init__.pyc
 ${PYSITELIB}/photutils/psf/__init__.pyo
+${PYSITELIB}/photutils/psf/_components.py
+${PYSITELIB}/photutils/psf/_components.pyc
+${PYSITELIB}/photutils/psf/_components.pyo
 ${PYSITELIB}/photutils/psf/epsf.py
 ${PYSITELIB}/photutils/psf/epsf.pyc
 ${PYSITELIB}/photutils/psf/epsf.pyo
 ${PYSITELIB}/photutils/psf/epsf_stars.py
 ${PYSITELIB}/photutils/psf/epsf_stars.pyc
 ${PYSITELIB}/photutils/psf/epsf_stars.pyo
+${PYSITELIB}/photutils/psf/flags.py
+${PYSITELIB}/photutils/psf/flags.pyc
+${PYSITELIB}/photutils/psf/flags.pyo
 ${PYSITELIB}/photutils/psf/functional_models.py
 ${PYSITELIB}/photutils/psf/functional_models.pyc
 ${PYSITELIB}/photutils/psf/functional_models.pyo
@@ -359,6 +366,9 @@ ${PYSITELIB}/photutils/psf/groupers.pyo
 ${PYSITELIB}/photutils/psf/image_models.py
 ${PYSITELIB}/photutils/psf/image_models.pyc
 ${PYSITELIB}/photutils/psf/image_models.pyo
+${PYSITELIB}/photutils/psf/iterative.py
+${PYSITELIB}/photutils/psf/iterative.pyc
+${PYSITELIB}/photutils/psf/iterative.pyo
 ${PYSITELIB}/photutils/psf/matching/__init__.py
 ${PYSITELIB}/photutils/psf/matching/__init__.pyc
 ${PYSITELIB}/photutils/psf/matching/__init__.pyo
@@ -404,12 +414,18 @@ ${PYSITELIB}/photutils/psf/tests/data/nircam_nrca1_f200w_fovp101_samp4_npsf16_mo
 ${PYSITELIB}/photutils/psf/tests/data/nircam_nrca1_f200w_fovp101_samp4_npsf4_mock.fits
 ${PYSITELIB}/photutils/psf/tests/data/nircam_nrca5_f444w_fovp101_samp4_npsf4_mock.fits
 ${PYSITELIB}/photutils/psf/tests/data/nircam_nrcb4_f150w_fovp101_samp4_npsf1_mock.fits
+${PYSITELIB}/photutils/psf/tests/test_components.py
+${PYSITELIB}/photutils/psf/tests/test_components.pyc
+${PYSITELIB}/photutils/psf/tests/test_components.pyo
 ${PYSITELIB}/photutils/psf/tests/test_epsf.py
 ${PYSITELIB}/photutils/psf/tests/test_epsf.pyc
 ${PYSITELIB}/photutils/psf/tests/test_epsf.pyo
 ${PYSITELIB}/photutils/psf/tests/test_epsf_stars.py
 ${PYSITELIB}/photutils/psf/tests/test_epsf_stars.pyc
 ${PYSITELIB}/photutils/psf/tests/test_epsf_stars.pyo
+${PYSITELIB}/photutils/psf/tests/test_flags.py
+${PYSITELIB}/photutils/psf/tests/test_flags.pyc
+${PYSITELIB}/photutils/psf/tests/test_flags.pyo
 ${PYSITELIB}/photutils/psf/tests/test_functional_models.py
 ${PYSITELIB}/photutils/psf/tests/test_functional_models.pyc
 ${PYSITELIB}/photutils/psf/tests/test_functional_models.pyo
@@ -422,6 +438,9 @@ ${PYSITELIB}/photutils/psf/tests/test_groupers.pyo
 ${PYSITELIB}/photutils/psf/tests/test_image_models.py
 ${PYSITELIB}/photutils/psf/tests/test_image_models.pyc
 ${PYSITELIB}/photutils/psf/tests/test_image_models.pyo
+${PYSITELIB}/photutils/psf/tests/test_iterative.py
+${PYSITELIB}/photutils/psf/tests/test_iterative.pyc
+${PYSITELIB}/photutils/psf/tests/test_iterative.pyo
 ${PYSITELIB}/photutils/psf/tests/test_model_helpers.py
 ${PYSITELIB}/photutils/psf/tests/test_model_helpers.pyc
 ${PYSITELIB}/photutils/psf/tests/test_model_helpers.pyo
@@ -554,6 +573,9 @@ ${PYSITELIB}/photutils/utils/tests/test_colormaps.pyo
 ${PYSITELIB}/photutils/utils/tests/test_convolution.py
 ${PYSITELIB}/photutils/utils/tests/test_convolution.pyc
 ${PYSITELIB}/photutils/utils/tests/test_convolution.pyo
+${PYSITELIB}/photutils/utils/tests/test_coords.py
+${PYSITELIB}/photutils/utils/tests/test_coords.pyc
+${PYSITELIB}/photutils/utils/tests/test_coords.pyo
 ${PYSITELIB}/photutils/utils/tests/test_cutouts.py
 ${PYSITELIB}/photutils/utils/tests/test_cutouts.pyc
 ${PYSITELIB}/photutils/utils/tests/test_cutouts.pyo
@@ -581,6 +603,9 @@ ${PYSITELIB}/photutils/utils/tests/test_parameters.pyo
 ${PYSITELIB}/photutils/utils/tests/test_quantity_helpers.py
 ${PYSITELIB}/photutils/utils/tests/test_quantity_helpers.pyc
 ${PYSITELIB}/photutils/utils/tests/test_quantity_helpers.pyo
+${PYSITELIB}/photutils/utils/tests/test_repr.py
+${PYSITELIB}/photutils/utils/tests/test_repr.pyc
+${PYSITELIB}/photutils/utils/tests/test_repr.pyo
 ${PYSITELIB}/photutils/utils/tests/test_round.py
 ${PYSITELIB}/photutils/utils/tests/test_round.pyc
 ${PYSITELIB}/photutils/utils/tests/test_round.pyo
