@@ -1,6 +1,7 @@
-$NetBSD: patch-filetype_oniguruma_src_regenc.h,v 1.1 2025/11/13 22:28:18 wiz Exp $
+$NetBSD: patch-filetype_oniguruma_src_regenc.h,v 1.2 2025/11/13 22:33:46 wiz Exp $
 
 Check for config.h before including it.
+https://github.com/soramimi/Guitar/issues/168
 
 --- filetype/oniguruma/src/regenc.h.orig	2025-11-13 22:03:27.734779409 +0000
 +++ filetype/oniguruma/src/regenc.h

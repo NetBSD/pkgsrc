@@ -1,6 +1,7 @@
-$NetBSD: patch-filetype_file-gcc_config.h,v 1.1 2025/11/13 22:28:17 wiz Exp $
+$NetBSD: patch-filetype_file-gcc_config.h,v 1.2 2025/11/13 22:33:46 wiz Exp $
 
 NetBSD does not have uselocale().
+https://github.com/soramimi/Guitar/issues/168
 
 --- filetype/file-gcc/config.h.orig	2025-11-13 22:15:18.574915697 +0000
 +++ filetype/file-gcc/config.h
