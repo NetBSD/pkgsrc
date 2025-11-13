@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2025/10/09 07:57:52 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2025/11/13 12:05:27 adam Exp $
 
-DISTNAME=	junos-eznc-2.7.4
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	junos_eznc-2.7.5
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/junos-eznc/}
 
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.7.1:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.2.4:../../textproc/py-lxml
-DEPENDS+=	${PYPKGPREFIX}-ncclient>=0.6.15:../../net/py-ncclient
+DEPENDS+=	${PYPKGPREFIX}-ncclient>=0.7.0:../../net/py-ncclient
 DEPENDS+=	${PYPKGPREFIX}-paramiko>=3.5.0:../../security/py-paramiko
 DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
