@@ -1,6 +1,7 @@
-$NetBSD: patch-filetype_liboniguruma.pro,v 1.1 2025/11/13 22:28:18 wiz Exp $
+$NetBSD: patch-filetype_liboniguruma.pro,v 1.2 2025/11/13 22:33:46 wiz Exp $
 
 config.h does not exist.
+https://github.com/soramimi/Guitar/issues/168
 
 --- filetype/liboniguruma.pro.orig	2025-10-31 14:38:04.000000000 +0000
 +++ filetype/liboniguruma.pro
