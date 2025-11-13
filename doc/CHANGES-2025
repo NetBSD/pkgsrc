@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6687 2025/11/13 17:21:35 tsutsui Exp $
+$NetBSD: CHANGES-2025,v 1.6688 2025/11/13 19:01:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9718,3 +9718,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/xenkernel420 to 20251113 [bouyer 2025-11-13]
 	Updated sysutils/xenkernel420 to 20251113 [bouyer 2025-11-13]
 	Updated inputmethod/ibus to 1.5.33 [tsutsui 2025-11-13]
+	Added lang/nodejs24 version 24.11.1 [adam 2025-11-13]
+	Updated lang/nodejs to 25.2.0 [adam 2025-11-13]
