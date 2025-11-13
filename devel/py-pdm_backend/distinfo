@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2025/07/07 04:53:57 wiz Exp $
+$NetBSD: distinfo,v 1.21 2025/11/13 13:51:04 adam Exp $
 
-BLAKE2s (pdm_backend-2.4.5.tar.gz) = 5f3e62b8a9fa20fb50dd6b8dd490d3a66995b99c92e2ad1152d451c9a31a6af8
-SHA512 (pdm_backend-2.4.5.tar.gz) = 301db44c5d58ab59515049822b003767920e6688c52b8aed4a61314805aba6bac0156d9b452df4cbc8bbbee58aad394746d3fae1deb48628be6aa1ebab43a26e
-Size (pdm_backend-2.4.5.tar.gz) = 118609 bytes
+BLAKE2s (pdm_backend-2.4.6.tar.gz) = 928378146f0173adfe04aa44af08bcb314dddbeb1d16051290269de18570f945
+SHA512 (pdm_backend-2.4.6.tar.gz) = 1e7e70338f53252aeed6ca43de1ab41091ba27d97dd09d45ab66e06ffaffc0070ddb6807046a065ba85b1b0a9198edcb004eefe10651176046d25d381d493fec
+Size (pdm_backend-2.4.6.tar.gz) = 118795 bytes
