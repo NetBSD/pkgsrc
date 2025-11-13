@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6678 2025/11/13 12:05:47 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6679 2025/11/13 12:29:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9703,3 +9703,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/libtheora-docs to 1.2.0nb2 [wiz 2025-11-13]
 	Updated net/py-ncclient to 0.7.0 [adam 2025-11-13]
 	Updated net/py-junos-eznc to 2.7.5 [adam 2025-11-13]
+	Updated textproc/py-jsonrpclib-pelix to 1.0.0 [adam 2025-11-13]
+	Updated math/py-photutils to 2.3.0 [adam 2025-11-13]
