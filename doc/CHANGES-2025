@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6684 2025/11/13 14:19:04 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6685 2025/11/13 14:21:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9714,3 +9714,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-cmudict to 1.1.2 [adam 2025-11-13]
 	Updated textproc/py-sphinxygen to 1.0.12 [adam 2025-11-13]
 	Updated devel/bacon to 3.20.1 [pin 2025-11-13]
+	Updated net/slumber to 4.2.0 [pin 2025-11-13]
