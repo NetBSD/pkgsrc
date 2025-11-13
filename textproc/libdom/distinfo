@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.1 2025/02/07 16:03:47 pho Exp $
+$NetBSD: distinfo,v 1.2 2025/11/13 22:26:26 wiz Exp $
 
 BLAKE2s (libdom-0.4.2-src.tar.gz) = 64ffd7f5ed1b7f88e943ae7cc6872634cd2321b62340eb8f6a7a99dd363d9e29
 SHA512 (libdom-0.4.2-src.tar.gz) = 85ce95a545c48af2cc082896d8153f016f7452315c67390884181cde19c999c7122c913846d404e40957d07abedc22c5ef8342d69eee139309e7c221d0580bb6
 Size (libdom-0.4.2-src.tar.gz) = 878706 bytes
+SHA1 (patch-bindings_xml_expat__xmlparser.c) = 16e7becbbdf540b489a457a4be17a909d6609721
+SHA1 (patch-src_core_node.c) = 0603d2d68723d394eead3cdda3a8a519fda9d19d
+SHA1 (patch-src_html_html__document.c) = d12ee97d5979ccadc1ca6b8108a0f953bc7014e2
