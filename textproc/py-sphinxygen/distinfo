@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/01/20 08:22:10 adam Exp $
+$NetBSD: distinfo,v 1.4 2025/11/13 14:04:28 adam Exp $
 
-BLAKE2s (sphinxygen-1.0.10.tar.gz) = cb38443fa86415f86e0a9416b088dc6162b3b6f833038c9a26d51eb73f42dfd9
-SHA512 (sphinxygen-1.0.10.tar.gz) = 98229122f44ec1beea64747743f64e922d70ca8cb062ba546e40caeb605d82939792a2d2beb7f17721ac5d4fb23b1cc0c5ca99522804ae87d44cf78ced2ed195
-Size (sphinxygen-1.0.10.tar.gz) = 14445 bytes
+BLAKE2s (sphinxygen-1.0.12.tar.gz) = 3fdb8f79b16c7a112d2b78e1759e3021f880a844274a9d4c589ed514cd5df3f8
+SHA512 (sphinxygen-1.0.12.tar.gz) = e4cfb1bb270699189dd54f350dcd5b51f8c694a6c45f9ca5ebcb43ecde455c88cf6039b8eb8ce3fbd184f39ea409d06a13f9883e0eba761991ba183a91ceb226
+Size (sphinxygen-1.0.12.tar.gz) = 14596 bytes
