@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2025/10/24 07:34:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2025/11/13 13:34:48 adam Exp $
 bin/dul-receive-pack-${PYVERSSUFFIX}
 bin/dul-upload-pack-${PYVERSSUFFIX}
 bin/dulwich-${PYVERSSUFFIX}
@@ -20,6 +20,9 @@ ${PYSITELIB}/dulwich/_pack.so
 ${PYSITELIB}/dulwich/annotate.py
 ${PYSITELIB}/dulwich/annotate.pyc
 ${PYSITELIB}/dulwich/annotate.pyo
+${PYSITELIB}/dulwich/approxidate.py
+${PYSITELIB}/dulwich/approxidate.pyc
+${PYSITELIB}/dulwich/approxidate.pyo
 ${PYSITELIB}/dulwich/archive.py
 ${PYSITELIB}/dulwich/archive.pyc
 ${PYSITELIB}/dulwich/archive.pyo
@@ -135,6 +138,9 @@ ${PYSITELIB}/dulwich/lru_cache.pyo
 ${PYSITELIB}/dulwich/mailmap.py
 ${PYSITELIB}/dulwich/mailmap.pyc
 ${PYSITELIB}/dulwich/mailmap.pyo
+${PYSITELIB}/dulwich/maintenance.py
+${PYSITELIB}/dulwich/maintenance.pyc
+${PYSITELIB}/dulwich/maintenance.pyo
 ${PYSITELIB}/dulwich/mbox.py
 ${PYSITELIB}/dulwich/mbox.pyc
 ${PYSITELIB}/dulwich/mbox.pyo
@@ -193,6 +199,9 @@ ${PYSITELIB}/dulwich/sparse_patterns.pyo
 ${PYSITELIB}/dulwich/stash.py
 ${PYSITELIB}/dulwich/stash.pyc
 ${PYSITELIB}/dulwich/stash.pyo
+${PYSITELIB}/dulwich/stripspace.py
+${PYSITELIB}/dulwich/stripspace.pyc
+${PYSITELIB}/dulwich/stripspace.pyo
 ${PYSITELIB}/dulwich/submodule.py
 ${PYSITELIB}/dulwich/submodule.pyc
 ${PYSITELIB}/dulwich/submodule.pyo
@@ -205,6 +214,9 @@ ${PYSITELIB}/dulwich/tests/test_object_store.pyo
 ${PYSITELIB}/dulwich/tests/utils.py
 ${PYSITELIB}/dulwich/tests/utils.pyc
 ${PYSITELIB}/dulwich/tests/utils.pyo
+${PYSITELIB}/dulwich/trailers.py
+${PYSITELIB}/dulwich/trailers.pyc
+${PYSITELIB}/dulwich/trailers.pyo
 ${PYSITELIB}/dulwich/walk.py
 ${PYSITELIB}/dulwich/walk.pyc
 ${PYSITELIB}/dulwich/walk.pyo
