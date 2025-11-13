@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/10/23 20:36:13 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/11/13 22:28:17 wiz Exp $
 
-DISTNAME=	Guitar-1.3.0
-PKGREVISION=	1
+DISTNAME=	Guitar-1.3.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=soramimi/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,10 +16,6 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	filetype/file/libmagic.pc.in
-PKGCONFIG_OVERRIDE+=	filetype/pcre2/libpcre2-16.pc.in
-PKGCONFIG_OVERRIDE+=	filetype/pcre2/libpcre2-32.pc.in
-PKGCONFIG_OVERRIDE+=	filetype/pcre2/libpcre2-8.pc.in
-PKGCONFIG_OVERRIDE+=	filetype/pcre2/libpcre2-posix.pc.in
 
 # fix qt warning
 MAKE_ENV+=	LANG=C.UTF-8
@@ -29,9 +24,12 @@ BUILD_DIRS=		filetype .
 INSTALLATION_DIRS+=	bin
 
 do-configure:
-	# avoid using pcre2, wants to build its own
-	${RM} ${BUILDLINK_DIR}/include/pcre2.h
+	cd ${WRKSRC}/filetype && ${QTDIR}/bin/qmake libfile.pro
+	cd ${WRKSRC}/filetype && ${SETENV} ${MAKE_ENV} ${MAKE}
 	cd ${WRKSRC}/filetype && ${QTDIR}/bin/qmake libfiletype.pro
+	cd ${WRKSRC}/filetype && ${SETENV} ${MAKE_ENV} ${MAKE}
+	cd ${WRKSRC}/filetype && ${QTDIR}/bin/qmake liboniguruma.pro
+	cd ${WRKSRC}/filetype && ${SETENV} ${MAKE_ENV} ${MAKE}
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake Guitar.pro
 	${LN} -s ${PREFIX}/bin/ruby34 ${BUILDLINK_DIR}/bin/ruby
 
