@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6682 2025/11/13 13:52:09 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6683 2025/11/13 14:04:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9711,3 +9711,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-subtests to 0.15.0 [adam 2025-11-13]
 	Updated devel/py-pdm_backend to 2.4.6 [adam 2025-11-13]
 	Updated lang/py-findpython to 0.7.1 [adam 2025-11-13]
+	Updated textproc/py-cmudict to 1.1.2 [adam 2025-11-13]
+	Updated textproc/py-sphinxygen to 1.0.12 [adam 2025-11-13]
