@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2025/04/21 07:40:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.52 2025/11/13 13:32:02 adam Exp $
 bin/lexicon-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -56,6 +56,9 @@ ${PYSITELIB}/lexicon/_private/providers/constellix.pyo
 ${PYSITELIB}/lexicon/_private/providers/ddns.py
 ${PYSITELIB}/lexicon/_private/providers/ddns.pyc
 ${PYSITELIB}/lexicon/_private/providers/ddns.pyo
+${PYSITELIB}/lexicon/_private/providers/desec.py
+${PYSITELIB}/lexicon/_private/providers/desec.pyc
+${PYSITELIB}/lexicon/_private/providers/desec.pyo
 ${PYSITELIB}/lexicon/_private/providers/devnomads.py
 ${PYSITELIB}/lexicon/_private/providers/devnomads.pyc
 ${PYSITELIB}/lexicon/_private/providers/devnomads.pyo
