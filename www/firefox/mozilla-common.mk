@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.302 2025/10/29 08:56:32 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.303 2025/11/14 17:17:18 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -22,9 +22,8 @@ OVERRIDE_DIRDEPTH=		4
 
 USE_LANGUAGES+=		c c++
 
-# XXX: As of 114.0.2
-# For nested constant initializer support in rlbox, requires 8.
-GCC_REQD+=		8
+# XXX: As of 145.0
+GCC_REQD+=		10
 
 TOOL_DEPENDS+=		cbindgen>=0.28.0:../../devel/cbindgen
 
