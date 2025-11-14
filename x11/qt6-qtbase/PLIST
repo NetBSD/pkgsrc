@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2025/11/12 16:39:03 leot Exp $
+@comment $NetBSD: PLIST,v 1.29 2025/11/14 15:41:13 adam Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -1209,14 +1209,14 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qcssparser_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qcssutil_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qcursor_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdatabuffer_p.h
-${PLIST.dbus}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbuslistener_p.h
+${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbuslistener_p.h
 ${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbusmenuadaptor_p.h
 ${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbusmenubar_p.h
 ${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbusmenuconnection_p.h
 ${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbusmenuregistrarproxy_p.h
 ${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbusmenutypes_p.h
 ${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbusplatformmenu_p.h
-${PLIST.dbus}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbussettings_p.h
+${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbussettings_p.h
 ${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbustrayicon_p.h
 ${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbustraytypes_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdesktopunixservices_p.h
