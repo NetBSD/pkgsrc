@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2025/10/23 20:36:15 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/11/14 09:46:31 adam Exp $
 
-DISTNAME=	appstream-1.0.6
-PKGREVISION=	2
+DISTNAME=	appstream-1.1.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ximion/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -41,6 +40,7 @@ SUBST_SED.paths=	-e 's,/usr/include,${PREFIX}/include,g'
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/meson/build.mk"
+.include "../../textproc/libfyaml/buildlink3.mk"
 .include "../../textproc/libstemmer/buildlink3.mk"
 .include "../../textproc/libxmlb/buildlink3.mk"
 .include "../../textproc/libyaml/buildlink3.mk"

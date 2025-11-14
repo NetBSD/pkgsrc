@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/08/18 15:01:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/11/14 09:46:31 adam Exp $
 bin/appstreamcli
 include/appstream/appstream.h
 include/appstream/as-agreement-section.h
@@ -53,6 +53,7 @@ share/gir-1.0/AppStream-1.0.gir
 share/installed-tests/appstream/metainfo-validate.test
 share/locale/ain/LC_MESSAGES/appstream.mo
 share/locale/ar/LC_MESSAGES/appstream.mo
+share/locale/bg/LC_MESSAGES/appstream.mo
 share/locale/bn/LC_MESSAGES/appstream.mo
 share/locale/bn_BD/LC_MESSAGES/appstream.mo
 share/locale/ca/LC_MESSAGES/appstream.mo
