@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.22 2025/07/11 07:58:12 pho Exp $
+# $NetBSD: mozilla-common.mk,v 1.23 2025/11/14 17:28:39 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -22,18 +22,14 @@ OVERRIDE_DIRDEPTH=		4
 
 USE_LANGUAGES+=		c c++
 
-# XXX: As of 114.0.2
-# For nested constant initializer support in rlbox, requires 8.
-GCC_REQD+=		8
+# XXX: As of 145.0
+GCC_REQD+=		10
 # To find vscanf, vfscanf, isblank and so on under NetBSD 9.
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 
-TOOL_DEPENDS+=		cbindgen>=0.26.0:../../devel/cbindgen
+TOOL_DEPENDS+=		cbindgen>=0.28.0:../../devel/cbindgen
 
 TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
-
-# malloc_usable_size()
-LDFLAGS.NetBSD+=	-ljemalloc
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		nasm>=2.14:../../devel/nasm
@@ -138,7 +134,7 @@ SUBST_MESSAGE.fix-libpci-soname=	Fixing libpci soname
 SUBST_FILES.fix-libpci-soname+=		${MOZILLA_DIR}toolkit/xre/glxtest/glxtest.cpp
 SUBST_SED.fix-libpci-soname+=		-e 's,"libpci.so, "lib${PCIUTILS_LIBNAME}.so,'
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
+.if ${MACHINE_PLATFORM:MNetBSD-*-i386}
 SQLITE3OPTFLAG=		'-O0',
 .else
 SQLITE3OPTFLAG=		# empty
@@ -246,10 +242,12 @@ CONFIGURE_ENV.NetBSD+=	ac_cv_clock_monotonic=
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
+# See build/moz.configure/nspr.configure
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.34
 .include "../../devel/nspr/buildlink3.mk"
 #.include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.101
+# See build/moz.configure/nss.configure
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.116
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
@@ -260,7 +258,7 @@ BUILDLINK_API_DEPENDS.libwebp+=	libwebp>=1.0.2
 .include "../../graphics/libwebp/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
-RUST_REQ=	1.76.0
+RUST_REQ=	1.82.0
 .include "../../lang/rust/rust.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
