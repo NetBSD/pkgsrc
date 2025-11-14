@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6692 2025/11/14 08:30:59 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6693 2025/11/14 09:46:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9724,3 +9724,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added print/podofo09 version 0.9.8nb7 [wiz 2025-11-13]
 	Updated misc/calibre to 5.44.0nb35 [wiz 2025-11-13]
 	Updated shells/oh-my-posh to 27.6.0 [pin 2025-11-14]
+	Updated textproc/libfyaml to 0.9 [adam 2025-11-14]
+	Updated devel/appstream to 1.1.1 [adam 2025-11-14]
