@@ -1,16 +1,15 @@
-@comment $NetBSD: PLIST,v 1.10 2025/09/21 15:23:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/11/14 13:38:33 adam Exp $
 bin/black-${PYVERSSUFFIX}
 bin/blackd-${PYVERSSUFFIX}
-${PYSITELIB}/_black_version.py
-${PYSITELIB}/_black_version.pyc
-${PYSITELIB}/_black_version.pyi
-${PYSITELIB}/_black_version.pyo
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.md
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/_black_version.py
+${PYSITELIB}/_black_version.pyc
+${PYSITELIB}/_black_version.pyi
+${PYSITELIB}/_black_version.pyo
 ${PYSITELIB}/black/__init__.py
 ${PYSITELIB}/black/__init__.pyc
 ${PYSITELIB}/black/__init__.pyo
@@ -94,6 +93,9 @@ ${PYSITELIB}/blackd/__init__.pyo
 ${PYSITELIB}/blackd/__main__.py
 ${PYSITELIB}/blackd/__main__.pyc
 ${PYSITELIB}/blackd/__main__.pyo
+${PYSITELIB}/blackd/client.py
+${PYSITELIB}/blackd/client.pyc
+${PYSITELIB}/blackd/client.pyo
 ${PYSITELIB}/blackd/middlewares.py
 ${PYSITELIB}/blackd/middlewares.pyc
 ${PYSITELIB}/blackd/middlewares.pyo
