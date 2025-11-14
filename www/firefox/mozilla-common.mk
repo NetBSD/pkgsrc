@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.303 2025/11/14 17:17:18 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.304 2025/11/14 20:47:01 tsutsui Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -260,7 +260,7 @@ BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.34
 BUILDLINK_API_DEPENDS.icu+=	icu>=76.1
 .include "../../textproc/icu/buildlink3.mk"
 # See build/moz.configure/nss.configure
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.116
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.117
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
