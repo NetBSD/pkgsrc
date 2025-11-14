@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.662 2025/11/13 18:59:22 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.663 2025/11/14 10:15:02 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28904,3 +28904,25 @@ cups-filters<2.1.2	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025
 libcupsfilters<1.28.18	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-64503
 duckdb<1.4.2		insecure-key-generation	https://nvd.nist.gov/vuln/detail/CVE-2025-64429
 py{27,39,310,311,312,313,314}-torch-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-63396
+chromium<128.0.6613.84	ui-spoofing		https://nvd.nist.gov/vuln/detail/CVE-2024-13178
+chromium<126.0.6478.182	sandbox-escape		https://nvd.nist.gov/vuln/detail/CVE-2024-7017
+chromium<136.0.7103.59	sandbox-escape		https://nvd.nist.gov/vuln/detail/CVE-2025-13097
+chromium<140.0.7339.80	ui-spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-13107
+chromium<133.0.6943.141	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-9479
+jitsi-meet<2.0.10532	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-64754
+php{56,74,81,82,83,84}-phppgadmin<9.10	remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2025-12762
+php{56,74,81,82,83,84}-phppgadmin<9.10	command-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-12763
+php{56,74,81,82,83,84}-phppgadmin<9.10	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-12764
+php{56,74,81,82,83,84}-phppgadmin<9.10	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-12765
+postgresql-client<13.23	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12818
+postgresql-client>=14<14.20	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12818
+postgresql-client>=15<15.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12818
+postgresql-client>=16<16.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12818
+postgresql-client>=17<17.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12818
+postgresql-client>=18<18.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12818
+postgresql-server<13.23		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12817
+postgresql-server>=14<14.20	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12817
+postgresql-server>=15<15.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12817
+postgresql-server>=16<16.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12817
+postgresql-server>=17<17.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12817
+postgresql-server>=18<18.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12817
