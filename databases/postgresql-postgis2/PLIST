@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2025/09/02 18:13:41 gdt Exp $
+@comment $NetBSD: PLIST,v 1.44 2025/11/14 14:12:31 gdt Exp $
 bin/pgsql2shp
 bin/pgtopo_export
 bin/pgtopo_import
@@ -149,12 +149,10 @@ share/postgresql/extension/address_standardizer--3.5.0--ANY.sql
 share/postgresql/extension/address_standardizer--3.5.1--ANY.sql
 share/postgresql/extension/address_standardizer--3.5.2--ANY.sql
 share/postgresql/extension/address_standardizer--3.5.3--ANY.sql
+share/postgresql/extension/address_standardizer--3.6.0--ANY.sql
 share/postgresql/extension/address_standardizer--${PKGVERSION}--ANY.sql
 share/postgresql/extension/address_standardizer--${PKGVERSION}.sql
-share/postgresql/extension/address_standardizer--${PKGVERSION}alpha1--ANY.sql
-share/postgresql/extension/address_standardizer--${PKGVERSION}beta1--ANY.sql
-share/postgresql/extension/address_standardizer--${PKGVERSION}rc1--ANY.sql
-share/postgresql/extension/address_standardizer--${PKGVERSION}rc2--ANY.sql
+share/postgresql/extension/address_standardizer--${PKGVERSION}dev--ANY.sql
 share/postgresql/extension/address_standardizer--ANY--${PKGVERSION}.sql
 share/postgresql/extension/address_standardizer--TEMPLATED--TO--ANY.sql
 share/postgresql/extension/address_standardizer.control
@@ -270,14 +268,12 @@ share/postgresql/extension/address_standardizer_data_us--3.5.0--ANY.sql
 share/postgresql/extension/address_standardizer_data_us--3.5.1--ANY.sql
 share/postgresql/extension/address_standardizer_data_us--3.5.2--ANY.sql
 share/postgresql/extension/address_standardizer_data_us--3.5.3--ANY.sql
+share/postgresql/extension/address_standardizer_data_us--3.6.0--ANY.sql
 share/postgresql/extension/address_standardizer_data_us--${PKGVERSION}--${PKGVERSION}next.sql
 share/postgresql/extension/address_standardizer_data_us--${PKGVERSION}--ANY.sql
 share/postgresql/extension/address_standardizer_data_us--${PKGVERSION}.sql
-share/postgresql/extension/address_standardizer_data_us--${PKGVERSION}alpha1--ANY.sql
-share/postgresql/extension/address_standardizer_data_us--${PKGVERSION}beta1--ANY.sql
+share/postgresql/extension/address_standardizer_data_us--${PKGVERSION}dev--ANY.sql
 share/postgresql/extension/address_standardizer_data_us--${PKGVERSION}next--${PKGVERSION}.sql
-share/postgresql/extension/address_standardizer_data_us--${PKGVERSION}rc1--ANY.sql
-share/postgresql/extension/address_standardizer_data_us--${PKGVERSION}rc2--ANY.sql
 share/postgresql/extension/address_standardizer_data_us--ANY--${PKGVERSION}.sql
 share/postgresql/extension/address_standardizer_data_us--TEMPLATED--TO--ANY.sql
 share/postgresql/extension/address_standardizer_data_us.control
@@ -393,12 +389,10 @@ share/postgresql/extension/postgis--3.5.0--ANY.sql
 share/postgresql/extension/postgis--3.5.1--ANY.sql
 share/postgresql/extension/postgis--3.5.2--ANY.sql
 share/postgresql/extension/postgis--3.5.3--ANY.sql
+share/postgresql/extension/postgis--3.6.0--ANY.sql
 share/postgresql/extension/postgis--${PKGVERSION}--ANY.sql
 share/postgresql/extension/postgis--${PKGVERSION}.sql
-share/postgresql/extension/postgis--${PKGVERSION}alpha1--ANY.sql
-share/postgresql/extension/postgis--${PKGVERSION}beta1--ANY.sql
-share/postgresql/extension/postgis--${PKGVERSION}rc1--ANY.sql
-share/postgresql/extension/postgis--${PKGVERSION}rc2--ANY.sql
+share/postgresql/extension/postgis--${PKGVERSION}dev--ANY.sql
 share/postgresql/extension/postgis--ANY--${PKGVERSION}.sql
 share/postgresql/extension/postgis--TEMPLATED--TO--ANY.sql
 share/postgresql/extension/postgis--unpackaged--${PKGVERSION}.sql
@@ -516,12 +510,10 @@ share/postgresql/extension/postgis_raster--3.5.0--ANY.sql
 share/postgresql/extension/postgis_raster--3.5.1--ANY.sql
 share/postgresql/extension/postgis_raster--3.5.2--ANY.sql
 share/postgresql/extension/postgis_raster--3.5.3--ANY.sql
+share/postgresql/extension/postgis_raster--3.6.0--ANY.sql
 share/postgresql/extension/postgis_raster--${PKGVERSION}--ANY.sql
 share/postgresql/extension/postgis_raster--${PKGVERSION}.sql
-share/postgresql/extension/postgis_raster--${PKGVERSION}alpha1--ANY.sql
-share/postgresql/extension/postgis_raster--${PKGVERSION}beta1--ANY.sql
-share/postgresql/extension/postgis_raster--${PKGVERSION}rc1--ANY.sql
-share/postgresql/extension/postgis_raster--${PKGVERSION}rc2--ANY.sql
+share/postgresql/extension/postgis_raster--${PKGVERSION}dev--ANY.sql
 share/postgresql/extension/postgis_raster--ANY--${PKGVERSION}.sql
 share/postgresql/extension/postgis_raster--TEMPLATED--TO--ANY.sql
 share/postgresql/extension/postgis_raster--unpackaged--${PKGVERSION}.sql
@@ -639,12 +631,10 @@ share/postgresql/extension/postgis_tiger_geocoder--3.5.0--ANY.sql
 share/postgresql/extension/postgis_tiger_geocoder--3.5.1--ANY.sql
 share/postgresql/extension/postgis_tiger_geocoder--3.5.2--ANY.sql
 share/postgresql/extension/postgis_tiger_geocoder--3.5.3--ANY.sql
+share/postgresql/extension/postgis_tiger_geocoder--3.6.0--ANY.sql
 share/postgresql/extension/postgis_tiger_geocoder--${PKGVERSION}--ANY.sql
 share/postgresql/extension/postgis_tiger_geocoder--${PKGVERSION}.sql
-share/postgresql/extension/postgis_tiger_geocoder--${PKGVERSION}alpha1--ANY.sql
-share/postgresql/extension/postgis_tiger_geocoder--${PKGVERSION}beta1--ANY.sql
-share/postgresql/extension/postgis_tiger_geocoder--${PKGVERSION}rc1--ANY.sql
-share/postgresql/extension/postgis_tiger_geocoder--${PKGVERSION}rc2--ANY.sql
+share/postgresql/extension/postgis_tiger_geocoder--${PKGVERSION}dev--ANY.sql
 share/postgresql/extension/postgis_tiger_geocoder--ANY--${PKGVERSION}.sql
 share/postgresql/extension/postgis_tiger_geocoder--TEMPLATED--TO--ANY.sql
 share/postgresql/extension/postgis_tiger_geocoder--unpackaged--${PKGVERSION}.sql
@@ -761,12 +751,10 @@ share/postgresql/extension/postgis_topology--3.5.0--ANY.sql
 share/postgresql/extension/postgis_topology--3.5.1--ANY.sql
 share/postgresql/extension/postgis_topology--3.5.2--ANY.sql
 share/postgresql/extension/postgis_topology--3.5.3--ANY.sql
+share/postgresql/extension/postgis_topology--3.6.0--ANY.sql
 share/postgresql/extension/postgis_topology--${PKGVERSION}--ANY.sql
 share/postgresql/extension/postgis_topology--${PKGVERSION}.sql
-share/postgresql/extension/postgis_topology--${PKGVERSION}alpha1--ANY.sql
-share/postgresql/extension/postgis_topology--${PKGVERSION}beta1--ANY.sql
-share/postgresql/extension/postgis_topology--${PKGVERSION}rc1--ANY.sql
-share/postgresql/extension/postgis_topology--${PKGVERSION}rc2--ANY.sql
+share/postgresql/extension/postgis_topology--${PKGVERSION}dev--ANY.sql
 share/postgresql/extension/postgis_topology--ANY--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology--TEMPLATED--TO--ANY.sql
 share/postgresql/extension/postgis_topology--unpackaged--${PKGVERSION}.sql
