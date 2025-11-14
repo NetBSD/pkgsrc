@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.183 2025/10/23 20:36:12 wiz Exp $
+# $NetBSD: Makefile,v 1.184 2025/11/14 14:12:31 gdt Exp $
 
 # Note that the PKGPATH remains "postgresql-postgis2", added during
 # postgis 1->2 migration, due to inertia and the pain of renaming.  So
@@ -9,7 +9,7 @@
 # up in file names.  Alpha/beta/rc are cleanly flavors of minor and
 # thus do not need accomodating.
 MAJOR=		3.6
-MINOR=		0
+MINOR=		1
 VERSION=	${MAJOR}.${MINOR}
 DISTNAME=	postgis-${VERSION}
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
