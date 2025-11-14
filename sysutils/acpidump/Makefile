@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/08/01 14:59:05 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/11/14 06:54:14 pgoyette Exp $
 #
 
 DISTNAME=	pacpidump
@@ -13,6 +13,11 @@ COMMENT=	Portable ACPI table dumper
 
 USE_TOOLS+=	gmake
 BUILD_TARGET=	# null
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+=	-Wno-error=implicit-function-declaration
+.endif
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
