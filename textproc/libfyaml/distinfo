@@ -1,17 +1,11 @@
-$NetBSD: distinfo,v 1.2 2022/12/14 15:38:59 wiz Exp $
+$NetBSD: distinfo,v 1.3 2025/11/14 09:45:24 adam Exp $
 
-BLAKE2s (libfyaml-0.7.12/libfyaml-0.7.12.tar.gz) = c43756b236e54d048fdbace52e60927875566b188d3247e5dac5977a13dcab2b
-SHA512 (libfyaml-0.7.12/libfyaml-0.7.12.tar.gz) = 568beadf007d002babd760abbf8153ef8c4191dface276d8614b30ffc0c9606eb7cffc2f63047042f843da5ded7ef4b302b36a36ed19a6f38e2c6e22f310aa29
-Size (libfyaml-0.7.12/libfyaml-0.7.12.tar.gz) = 757218 bytes
-SHA1 (patch-configure) = 75356f186f967f0048707153e5a051d18d8f0efa
-SHA1 (patch-include_libfyaml.h) = e50484d638d0fd0ab850d154249b9996cb3f5101
+BLAKE2s (libfyaml-0.9.tar.gz) = ceb29b020caf2bd4669cda49095325750947e68ea3e3bbea88145ede1f21c0c8
+SHA512 (libfyaml-0.9.tar.gz) = 95979361ed50a46acc6da698e4750562f6e3e46aa5d050180225d93afb74929981d9c1d1ca3b6a77fe21a1546a68a9e3df17cdfef5f93257ad5d0c7ad03ae2eb
+Size (libfyaml-0.9.tar.gz) = 875608 bytes
+SHA1 (patch-configure) = 737547863414f1b6e3a94ce8200fc87b73378bd6
+SHA1 (patch-src_internal_fy-b3sum.c) = 298d40016b11fd8c4d62d06637716b37493569d4
+SHA1 (patch-src_internal_fy-thread.c) = 8173aeefdfb03a7fd71afee477e6b93d728caac4
 SHA1 (patch-src_internal_libfyaml-parser.c) = 44567a6ee961bd304b4c3ea677d02d5516374281
-SHA1 (patch-src_lib_fy-atom.c) = 3a5390ea153bb8642cd8c6ebcae06a3d72e87be7
-SHA1 (patch-src_lib_fy-ctype.h) = c90a22b02ffeae77854a7307b400519f395d55fd
-SHA1 (patch-src_lib_fy-diag.c) = 21fd0747fba20c24d557aeaca556e706e5e264bf
-SHA1 (patch-src_lib_fy-event.c) = ac5831f8c65c22ff53577ccd657510f7077f23aa
-SHA1 (patch-src_lib_fy-token.c) = 4ce5422b00f684719d6ada366aa161b575c79c76
-SHA1 (patch-src_lib_fy-utf8.h) = a5249d029a17670928c7512b1a453d604d3befe1
 SHA1 (patch-src_tool_fy-tool.c) = 4ed718d9d0d4ce49cd5e4b4da90d1370c264389a
-SHA1 (patch-src_valgrind_fy-valgrind.h) = 3b2c611bdad32d807e10019c71814ec97f27a1f4
 SHA1 (patch-test_libfyaml-test.c) = 3dd36f405995c54cd157616f8a979c19d323a1c1
