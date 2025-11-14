@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.62 2025/11/13 19:01:12 adam Exp $
+# $NetBSD: Makefile.common,v 1.63 2025/11/14 13:47:00 wiz Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs18/Makefile
 # used by lang/nodejs20/Makefile
@@ -48,7 +48,6 @@ CONFIGURE_ENV+=		GYP_DEFINES="linux_use_gold_flags=0"
 # see patch-configure.py and patch-tools_gyp_pylib_gyp_input.py
 TOOL_DEPENDS+=		${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 
-REPLACE_NODEJS+=	deps/corepack/dist/*.js
 REPLACE_NODEJS+=	deps/npm/bin/*.js
 REPLACE_PYTHON+=	configure
 REPLACE_PYTHON+=	tools/gyp/pylib/gyp/flock_tool.py
