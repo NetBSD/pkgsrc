@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6699 2025/11/14 15:56:16 roy Exp $
+$NetBSD: CHANGES-2025,v 1.6700 2025/11/14 16:53:45 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9733,3 +9733,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django-import-export to 4.3.14 [adam 2025-11-14]
 	Updated databases/postgresql-postgis2 to 3.6.1 [gdt 2025-11-14]
 	Updated net/dhcpcd to 10.3.0 [roy 2025-11-14]
+	Updated geography/py-nmeagps to 1.0.56 [gdt 2025-11-14]
