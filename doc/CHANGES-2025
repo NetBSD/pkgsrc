@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6694 2025/11/14 13:00:46 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.6695 2025/11/14 13:40:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9727,3 +9727,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/libfyaml to 0.9 [adam 2025-11-14]
 	Updated devel/appstream to 1.1.1 [adam 2025-11-14]
 	Updated lang/joker to 1.5.7 [ktnb 2025-11-14]
+	Updated textproc/py-black to 25.11.0 [adam 2025-11-14]
+	Updated textproc/py-sphinx-lv2-theme to 1.4.6 [adam 2025-11-14]
