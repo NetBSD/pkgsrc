@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6700 2025/11/14 16:53:45 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.6701 2025/11/14 17:17:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9734,3 +9734,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/postgresql-postgis2 to 3.6.1 [gdt 2025-11-14]
 	Updated net/dhcpcd to 10.3.0 [roy 2025-11-14]
 	Updated geography/py-nmeagps to 1.0.56 [gdt 2025-11-14]
+	Updated www/firefox to 145.0 [ryoon 2025-11-14]
