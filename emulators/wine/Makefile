@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.274 2025/10/23 20:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.275 2025/11/14 19:04:36 pgoyette Exp $
 
 DISTNAME=	wine-9.0
 PKGREVISION=	10
@@ -15,6 +15,11 @@ LICENSE=	gnu-lgpl-v2.1
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bison flex gmake mktemp msgfmt perl pkg-config
 GNU_CONFIGURE=	yes
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+=	-Wno-error=implicit-function-declaration
+.endif
 
 REPLACE_PERL+=	tools/winemaker/winemaker
 REPLACE_PERL+=	tools/winedump/function_grep.pl
