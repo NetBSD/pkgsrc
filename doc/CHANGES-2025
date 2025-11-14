@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6697 2025/11/14 14:12:59 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.6698 2025/11/14 14:15:39 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9731,4 +9731,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-sphinx-lv2-theme to 1.4.6 [adam 2025-11-14]
 	Updated devel/py-pylint to 4.0.3 [adam 2025-11-14]
 	Updated www/py-django-import-export to 4.3.14 [adam 2025-11-14]
-	Updated databases/postgresql-postgis2 to 3.6.1nb3 [gdt 2025-11-14]
+	Updated databases/postgresql-postgis2 to 3.6.1 [gdt 2025-11-14]
