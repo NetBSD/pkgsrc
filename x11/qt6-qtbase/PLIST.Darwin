@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST.Darwin,v 1.9 2025/11/11 12:34:13 adam Exp $
-include/QtGui/${PKGVERSION}/QtGui/private/qmacstyle_p.h
-lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginAdditionalTargetInfo.cmake
-lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginConfig.cmake
-lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginConfigVersion.cmake
-lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginConfigVersionImpl.cmake
-lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginTargets-release.cmake
-lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginTargets.cmake
-plugins/networkinformation/libqapplenetworkinformation.so
+@comment $NetBSD: PLIST.Darwin,v 1.10 2025/11/14 15:41:13 adam Exp $
+qt6/include/QtGui/${PKGVERSION}/QtGui/private/qmacstyle_p.h
+qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginConfig.cmake
+qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginConfigVersion.cmake
+qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginTargets-release.cmake
+qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginTargets.cmake
+qt6/plugins/networkinformation/libqapplenetworkinformation.so
 qt6/bin/macdeployqt
 qt6/bin/macdeployqt6
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcfsocketnotifier_p.h
