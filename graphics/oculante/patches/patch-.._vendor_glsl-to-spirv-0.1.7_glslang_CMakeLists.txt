@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2025/08/21 18:46:33 wiz Exp $
+$NetBSD: patch-.._vendor_glsl-to-spirv-0.1.7_glslang_CMakeLists.txt,v 1.1 2025/11/14 10:19:18 pin Exp $
 
 Fix build with cmake 4.
 
---- ../vendor/glsl-to-spirv-0.1.7/glslang/CMakeLists.txt.orig	2025-08-21 18:34:18.969442426 +0000
+--- ../vendor/glsl-to-spirv-0.1.7/glslang/CMakeLists.txt.orig	2025-11-14 08:59:24.451378764 +0000
 +++ ../vendor/glsl-to-spirv-0.1.7/glslang/CMakeLists.txt
 @@ -1,6 +1,6 @@
  # increase to 3.1 once all major distributions
