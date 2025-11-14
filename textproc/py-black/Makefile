@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2025/10/09 07:57:58 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2025/11/14 13:38:33 adam Exp $
 
-DISTNAME=	black-25.9.0
+DISTNAME=	black-25.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/black/}
@@ -12,13 +12,13 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme-[0-9]*:../../devel/py-hatch-fancy-pypi-readme
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.20.0:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27.0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-click>=8.0.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-mypy_extensions>=0.4.3:../../lang/py-mypy_extensions
 DEPENDS+=	${PYPKGPREFIX}-packaging>=22.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.9.0:../../devel/py-pathspec
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2:../../misc/py-platformdirs
-DEPENDS+=	${PYPKGPREFIX}-pytokens>=0:../../devel/py-pytokens
+DEPENDS+=	${PYPKGPREFIX}-pytokens>=0.3.0:../../devel/py-pytokens
 # only needed for blackd:
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.10:../../www/py-aiohttp
 
