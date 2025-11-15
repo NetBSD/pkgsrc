@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4541 2025/11/15 03:59:11 wen Exp $
+# $NetBSD: Makefile,v 1.4542 2025/11/15 06:58:58 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -2320,6 +2320,7 @@ SUBDIR+=	p5-Test-Without-Module
 SUBDIR+=	p5-Test-YAML-Meta
 SUBDIR+=	p5-Test-YAML-Valid
 SUBDIR+=	p5-Test-utf8
+SUBDIR+=	p5-Test2-Plugin-MemUsage
 SUBDIR+=	p5-Test2-Plugin-NoWarnings
 SUBDIR+=	p5-Test2-Plugin-UUID
 SUBDIR+=	p5-Test2-Suite
