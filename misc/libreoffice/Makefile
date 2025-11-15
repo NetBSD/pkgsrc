@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.370 2025/11/04 16:48:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.371 2025/11/15 12:34:53 ryoon Exp $
 
-VERREL=		25.8.2
+VERREL=		25.8.3
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
@@ -92,7 +92,7 @@ MORE_DISTFILES= \
 	907d6e99f241876695c19ff3db0b8923-source-code-pro-2.030R-ro-1.050R-it.tar.gz \
 	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz \
 	source-serif-pro-3.000R.tar.gz \
-	xmlsec1-1.3.7.tar.gz \
+	xmlsec1-1.3.8.tar.gz \
 	3404ab6b1792ae5f16bbd603bd1e1d03-libformula-1.1.7.zip \
 	35c94d2df8893241173de1d16b6034c0-swingExSrc.zip \
 	39bb3fcea1514f1369fcfc87542390fd-sacjava-1.3.zip \
