@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.3 2025/03/08 21:26:36 vins Exp $
+# $NetBSD: go-modules.mk,v 1.4 2025/11/15 08:33:54 vins Exp $
 
 GO_MODULE_FILES+=	github.com/abiosoft/ishell/@v/v2.0.0+incompatible.mod
 GO_MODULE_FILES+=	github.com/abiosoft/ishell/@v/v2.0.0+incompatible.zip
@@ -60,5 +60,5 @@ GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v1.0.0-20201130134442-10cb98267c6c.zip
 GO_MODULE_FILES+=	gopkg.in/errgo.v2/@v/v2.1.0.mod
 GO_MODULE_FILES+=	gopkg.in/errgo.v2/@v/v2.1.0.zip
 GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.0-20200313102051-9f266ea9e77c.mod
-GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.0.mod
-GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.0.zip
+GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.1.mod
+GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.1.zip
