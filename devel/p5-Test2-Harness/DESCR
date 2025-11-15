@@ -1,0 +1,4 @@
+Test2::Harness is the backend code that handles running/processing
+the tests. In general a user will not use it directly, instead you
+should probably be looking at App::Yath which is the UI layer built
+around Test2::Harness.
