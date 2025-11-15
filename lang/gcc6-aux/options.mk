@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2025/03/30 21:10:44 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2025/11/15 11:53:24 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc6-aux
 PKG_SUPPORTED_OPTIONS=	fortran objc testsuite static bootstrap allstages
@@ -88,6 +88,7 @@ EXTRA_CONFARGS+= --with-gmp=${BUILDLINK_PREFIX.gmp}
 EXTRA_CONFARGS+= --with-mpfr=${BUILDLINK_PREFIX.mpfr}
 EXTRA_CONFARGS+= --with-mpc=${BUILDLINK_PREFIX.mpcomplex}
 .include "../../devel/gmp/buildlink3.mk"
+.include "../../math/isl/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../math/mpcomplex/buildlink3.mk"
 .endif

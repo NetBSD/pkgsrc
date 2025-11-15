@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2021/12/11 14:47:31 wiz Exp $
+$NetBSD: distinfo,v 1.4 2025/11/15 11:53:24 ryoon Exp $
 
 BLAKE2s (ada-bootstrap.i386.freebsd.100B.tar.bz2) = fd51ef15b9be6e53be673b19de0f93106b4b9639b80b6713a60295de2fa710fe
 SHA512 (ada-bootstrap.i386.freebsd.100B.tar.bz2) = ab4a32457f5febf2c854b7107abb8159754f5a5e8413598fb2ecf1ed0a755129c26aab0e0c2e09695d02cef5490b53a3b18c9fa37cec0b07476940c27fc76ae8
@@ -24,3 +24,7 @@ Size (ada-bootstrap.x86_64.solaris.511.tar.bz2) = 60110383 bytes
 BLAKE2s (gcc-6.2.0.tar.bz2) = a11b22cf9748a09cecfa7a688f5b4840986932c8617042b56db955c08eb54d89
 SHA512 (gcc-6.2.0.tar.bz2) = 1e8b826a3d44b9d5899309894e20c03abeb352bf3d273b8ad63af814c0ee2911f1a83ce1cd4cdd2d1cb0b3e3c34e9b7ae1b2ab83dfc649ee817ab05247c76198
 Size (gcc-6.2.0.tar.bz2) = 99778648 bytes
+SHA1 (patch-gcc_graphite-dependences.c) = 7409738b08d18672db9f91edc57ac198f1551601
+SHA1 (patch-gcc_graphite-isl-ast-to-gimple.c) = f85a6d3ab965c95a3dd8dda89e1d9c680848eee8
+SHA1 (patch-gcc_graphite-optimize-isl.c) = 51d680b32df75820cd54a44923c65b09e5a6bc7c
+SHA1 (patch-gcc_graphite-sese-to-poly.c) = 0cdfec6f6a67c849d9251222710fa222c27ea639
