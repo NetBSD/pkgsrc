@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2021/10/26 10:21:38 nia Exp $
+$NetBSD: distinfo,v 1.30 2025/11/15 13:41:07 pgoyette Exp $
 
 BLAKE2s (pine4.64.tar.bz2) = 94655ed08c9042a77b3ed8348fae0e2916bd4e4ae4a7b793d6b325698150dd94
 SHA512 (pine4.64.tar.bz2) = a5d62ad26fcd6d832441416dd3f781637dde61899cac5018e07232a7f80461f78d2efb4538be06e03792c1950181242fe0b1a5dc89737e05ea525cc7d37614c6
@@ -11,4 +11,4 @@ SHA1 (patch-af) = 59cc95b758dbdd03848bd3d17b5105f6bc909e09
 SHA1 (patch-ag) = 21c6474fed212cd3c45cf210d9b879c96ed4f0b8
 SHA1 (patch-ah) = bc26f6e3d7aed7e718ae924f0f348f448d495864
 SHA1 (patch-ai) = 7e2a70ee4322aa85de80089c2e4470ec12bfe110
-SHA1 (patch-aj) = fc44b6786797184c4323b40aa2a73960cc421f2d
+SHA1 (patch-aj) = f5355f0053e8ed38eb66c7fda3e56e4ea9e47ca2
