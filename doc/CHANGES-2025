@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6711 2025/11/15 01:09:00 wen Exp $
+$NetBSD: CHANGES-2025,v 1.6712 2025/11/15 01:13:10 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9745,3 +9745,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/nagios-plugin-dnsrbl to 0.6 [manu 2025-11-16]
 	Updated mail/p5-Mail-AuthenticationResults to 2.20250709 [wen 2025-11-15]
 	Updated mail/p5-Mail-DMARC to 1.20250805 [wen 2025-11-15]
+	Updated devel/appstream to 1.1.1nb1 [ryoon 2025-11-15]
