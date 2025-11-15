@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6721 2025/11/15 04:00:45 wen Exp $
+$NetBSD: CHANGES-2025,v 1.6722 2025/11/15 06:40:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9755,3 +9755,9 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Test-Unit to 0.27 [wen 2025-11-15]
 	Updated devel/p5-Test-MockModule to 0.180.0 [wen 2025-11-15]
 	Added devel/p5-Test2-Plugin-UUID version 0.002010 [wen 2025-11-15]
+	Updated databases/postgresql13 to 13.23 [adam 2025-11-15]
+	Updated databases/postgresql14 to 14.20 [adam 2025-11-15]
+	Updated databases/postgresql15 to 15.15 [adam 2025-11-15]
+	Updated databases/postgresql16 to 16.11 [adam 2025-11-15]
+	Updated databases/postgresql17 to 17.7 [adam 2025-11-15]
+	Updated databases/postgresql18 to 18.1 [adam 2025-11-15]
