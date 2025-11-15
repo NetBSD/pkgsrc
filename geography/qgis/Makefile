@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.260 2025/11/04 12:33:27 gdt Exp $
+# $NetBSD: Makefile,v 1.261 2025/11/15 18:16:06 gdt Exp $
 
 # This is intentionally 3.44, about to be Long Term Release.  Please
 # do not update to later branches without MAINTAINER consensus.  The
 # transition to 4.0/4.2 and qt6 will be particularly tricky.
 DISTNAME=	qgis-3.44.4
+PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	https://qgis.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
