@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.8 2025/09/08 07:05:27 vins Exp $
+# $NetBSD: options.mk,v 1.9 2025/11/15 08:33:54 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fvwm3
 PKG_SUPPORTED_OPTIONS=	doc go svg
-PKG_SUGGESTED_OPTIONS=	doc
+PKG_SUGGESTED_OPTIONS=	doc go
 
 .include "../../mk/bsd.options.mk"
 
