@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6708 2025/11/15 00:59:05 wen Exp $
+$NetBSD: CHANGES-2025,v 1.6709 2025/11/15 01:00:22 manu Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9742,3 +9742,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/p5-Dancer2 to 2.0.1 [wen 2025-11-15]
 	Updated www/p5-HTML-Form to 6.13 [wen 2025-11-15]
 	Updated math/p5-Math-Base-Convert to 0.13 [wen 2025-11-15]
+	Updated net/nagios-plugin-dnsrbl to 0.6 [manu 2025-11-16]
