@@ -1,13 +1,22 @@
-$NetBSD: patch-aj,v 1.1 2009/11/26 00:10:42 joerg Exp $
+$NetBSD: patch-aj,v 1.2 2025/11/15 13:41:07 pgoyette Exp $
 
 --- pico/osdep/makefile.orig	2009-11-26 01:05:39.000000000 +0100
 +++ pico/osdep/makefile
-@@ -21,7 +21,7 @@ ALL=	os-a32.c os-a41.c os-aix.c \
+@@ -2,6 +2,8 @@
+ #
+
+ RM=  rm -f
++CFLAGS+=	-Wno-error=implicit-int
++CFLAGS+=	-Wno-error=implicit-function-declaration
+
+ ALL=	os-a32.c os-a41.c os-aix.c \
+ 	os-aux.c os-bs2.c os-bsd.c os-bsf.c os-bsi.c os-bso.c \
+@@ -21,7 +23,7 @@ ALL=	os-a32.c os-a41.c os-aix.c \
  all:		includer $(ALL)
  
  includer:	includer.c
 -		$(CC) -o includer includer.c
-+		$(LDCC) -o includer includer.c
++		$(LDCC) $(CFLAGS) -o includer includer.c
  
  clean:
  		$(RM) $(ALL) includer
