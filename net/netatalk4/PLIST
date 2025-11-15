@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/08/13 09:03:26 hauke Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/11/15 15:21:42 hauke Exp $
 ${PLIST.ea}bin/ad
 bin/addump
 ${PLIST.appletalk}bin/aecho
@@ -70,7 +70,6 @@ ${PLIST.appletalk}man/man1/aecho.1
 man/man1/afpldaptest.1
 man/man1/afppasswd.1
 man/man1/afpstats.1
-man/man1/afptest.1
 man/man1/asip-status.1
 man/man1/dbd.1
 man/man1/fce_listen.1
