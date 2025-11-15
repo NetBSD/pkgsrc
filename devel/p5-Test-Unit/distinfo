@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:17:48 nia Exp $
+$NetBSD: distinfo,v 1.8 2025/11/15 03:33:32 wen Exp $
 
-BLAKE2s (Test-Unit-0.25.tar.gz) = 0d12db5055a479b7e52487f1302a04b64e006b06718cdd94e647e30f86a07e87
-SHA512 (Test-Unit-0.25.tar.gz) = 8f76583c7480eec825080eb6cd94d1b1a1c7c3bc7f297607414c95777e9a9f880b5a0d927a41521389ae50c2ba1b9ec3d76149da47d5997add739970df6b154d
-Size (Test-Unit-0.25.tar.gz) = 322322 bytes
+BLAKE2s (Test-Unit-0.27.tar.gz) = e518213438cb7b140d4ff70a578a69a092fddec88abeb2a732b92e72c8ffa584
+SHA512 (Test-Unit-0.27.tar.gz) = 15e6e06ad27f1de9c6613e777f1162f57843e1beca49ab7649d909289b1c469dacc98c9fa254038e55110ed50763db184a8659076f10b4888aaecce5bcbaa9c7
+Size (Test-Unit-0.27.tar.gz) = 325133 bytes
