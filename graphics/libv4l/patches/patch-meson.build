@@ -1,0 +1,12 @@
+$NetBSD: patch-meson.build,v 1.1 2025/11/15 11:57:44 ryoon Exp $
+
+--- meson.build.orig	2025-11-02 12:11:37.113321211 +0000
++++ meson.build
+@@ -45,7 +45,6 @@ common_arguments = [
+     '-Wno-psabi',
+     '-D_GNU_SOURCE',
+     '-DPROMOTED_MODE_T=int',
+-    '-DENABLE_NLS',
+     '-DGETSUBOPT_IGNORE_COMMA_IN_BRACKET',
+     '-include', meson.current_build_dir() / 'config.h',
+ ]
