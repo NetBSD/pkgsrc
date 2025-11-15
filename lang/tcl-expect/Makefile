@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2022/06/19 22:22:21 gdt Exp $
+# $NetBSD: Makefile,v 1.37 2025/11/15 17:15:58 pgoyette Exp $
 
 .include "Makefile.common"
 
@@ -17,6 +17,13 @@ CONFIGURE_ARGS+=	--with-tclconfig=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ARGS+=	--without-x
 
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR:Q}
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+=	-Wno-error=implicit-int
+CFLAGS+=	-Wno-error=incompatible-pointer-types
+CFLAGS+=	-Wno-error=implicit-function-declaration
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 
