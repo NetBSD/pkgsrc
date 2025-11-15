@@ -1,10 +1,16 @@
-# $NetBSD: options.mk,v 1.5 2025/03/17 17:42:44 hauke Exp $
+# $NetBSD: options.mk,v 1.6 2025/11/15 15:21:42 hauke Exp $
 #
 PKG_OPTIONS_VAR=		PKG_OPTIONS.netatalk
-PKG_SUPPORTED_OPTIONS=		debug dnssd kerberos ldap pam
+PKG_SUPPORTED_OPTIONS=		debug dnssd kerberos ldap pam mysql
 # Untested
 #PKG_SUPPORTED_OPTIONS+=	spotlight
-PKG_SUGGESTED_OPTIONS=		dnssd pam
+PKG_SUGGESTED_OPTIONS=		bdb dnssd pam
+
+PKG_OPTIONS_REQUIRED_GROUPS=	db
+PKG_OPTIONS_GROUP.db=		bdb last sqlite
+.if !empty(PKG_OPTIONS:Mmysql)
+PKG_OPTIONS_GROUP.db+=		mysql
+.endif
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -33,6 +39,18 @@ RCD_SCRIPT_SRC.${rs}=	${WRKSRC}/output/distrib/initscripts/${rs}
 .endfor
 .else
 MESON_ARGS+=		-Dwith-appletalk=false
+.endif
+
+# Default CNID database - depend on mysql only if selected
+.if !empty(PKG_OPTIONS:Mdbd)
+MESON_ARGS+=		-Dwith-cnid-default-backend=dbd
+.elif !empty(PKG_OPTIONS:Mlast)
+MESON_ARGS+=		-Dwith-cnid-default-backend=last
+.elif !empty(PKG_OPTIONS:Mmysql)
+.include "../../mk/mysql.buildlink3.mk"
+MESON_ARGS+=		-Dwith-cnid-default-backend=mysql
+.elif !empty(PKG_OPTIONS:Msqlite)
+MESON_ARGS+=		-Dwith-cnid-default-backend=sqlite
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
@@ -71,7 +89,7 @@ MESON_ARGS+=       	-Dwith-ldap=false
 .include "../../mk/pam.buildlink3.mk"
 PLIST.pam=		yes
 MESON_ARGS+=		-Dwith-pam=true
-MESSAGE_SRC+=		MESSAGE MESSAGE.pam
+MESSAGE_SRC+=		MESSAGE.pam
 .else
 MESON_ARGS+=		-Dwith-pam=false
 .endif
