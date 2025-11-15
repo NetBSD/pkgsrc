@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.444 2025/07/11 18:02:07 scole Exp $
+# $NetBSD: Makefile,v 1.445 2025/11/15 10:36:42 vins Exp $
 #
 
 COMMENT=	Fonts
@@ -122,6 +122,7 @@ SUBDIR+=	fontconfig
 SUBDIR+=	fontforge
 SUBDIR+=	freefont-ttf
 SUBDIR+=	freefonts
+SUBDIR+=	gallant
 SUBDIR+=	gbdfed
 SUBDIR+=	gentium-ttf
 SUBDIR+=	gentiumbasic-ttf
