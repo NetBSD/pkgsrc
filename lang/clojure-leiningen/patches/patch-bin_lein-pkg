@@ -1,12 +1,12 @@
-$NetBSD: patch-bin_lein-pkg,v 1.1 2025/08/16 01:49:03 ryoon Exp $
+$NetBSD: patch-bin_lein-pkg,v 1.2 2025/11/15 12:08:35 ryoon Exp $
 
 * POSIX shell portability.
 
---- bin/lein-pkg.orig	2024-02-14 00:41:31.000000000 +0000
+--- bin/lein-pkg.orig	2025-09-12 17:10:19.000000000 +0000
 +++ bin/lein-pkg
 @@ -6,39 +6,39 @@
  
- export LEIN_VERSION="2.11.2"
+ export LEIN_VERSION="2.12.0"
  
 -if [[ "$CLASSPATH" != "" ]]; then
 +if [ "$CLASSPATH" != "" ]; then
@@ -87,7 +87,7 @@ $NetBSD: patch-bin_lein-pkg,v 1.1 2025/08/16 01:49:03 ryoon Exp $
      if $cygwin; then
          # When running on Cygwin, use Windows-style paths for java
          ORIGINAL_PWD=$(cygpath -w "$ORIGINAL_PWD")
-@@ -162,9 +162,9 @@ done
+@@ -161,9 +161,9 @@ done
  # User init
  export LEIN_HOME="${LEIN_HOME:-"$HOME/.lein"}"
  
@@ -99,7 +99,7 @@ $NetBSD: patch-bin_lein-pkg,v 1.1 2025/08/16 01:49:03 ryoon Exp $
    fi
  done
  
-@@ -198,17 +198,17 @@ BIN_DIR="$(dirname "$SCRIPT")"
+@@ -197,17 +197,17 @@ BIN_DIR="$(dirname "$SCRIPT")"
  # If you're not using an uberjar you'll need to list each dependency
  # and add them individually to the classpath/bootclasspath as well.
  
@@ -121,7 +121,7 @@ $NetBSD: patch-bin_lein-pkg,v 1.1 2025/08/16 01:49:03 ryoon Exp $
          export SHASUM_CMD="sha256 -q"
      else
          command_not_found sha256sum
-@@ -221,16 +221,16 @@ grep -E -q '^\s*:eval-in\s+:classloader\
+@@ -220,16 +220,16 @@ grep -E -q '^\s*:eval-in\s+:classloader\
  
  run_from_checkout "$1"
  
