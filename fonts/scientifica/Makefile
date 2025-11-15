@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/11/15 11:09:36 vins Exp $
+# $NetBSD: Makefile,v 1.2 2025/11/15 11:13:39 vins Exp $
 
 DISTNAME=	${PKGBASE}
 PKGNAME=	scientifica-2.3
@@ -30,8 +30,6 @@ do-install:
 	${RUN}for f in ${FONTS}; do			\
 	${INSTALL_DATA} ${WRKSRC}/otb/$${f}.otb		\
 	  ${DESTDIR}${PREFIX}/share/fonts/X11/misc;	\
-	done
-	${RUN}for f in ${FONTS}; do 		\
 	${INSTALL_DATA} ${WRKSRC}/ttf/$${f}.ttf		\
 	  ${DESTDIR}${PREFIX}/share/fonts/X11/TTF;	\
 	done
