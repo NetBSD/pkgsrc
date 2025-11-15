@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6744 2025/11/15 13:11:49 wen Exp $
+$NetBSD: CHANGES-2025,v 1.6745 2025/11/15 13:13:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9783,3 +9783,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/mencoder to 1.5.0.38680 [ryoon 2025-11-15]
 	Updated sysutils/mencvcd to 1.5.0.38680 [ryoon 2025-11-15]
 	Added devel/p5-Test2-Harness version 1.000161 [wen 2025-11-25]
+	Updated converters/libiconv to 1.18 [ryoon 2025-11-15]
