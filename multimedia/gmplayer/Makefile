@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.176 2025/10/23 20:38:32 wiz Exp $
+# $NetBSD: Makefile,v 1.177 2025/11/15 12:43:17 ryoon Exp $
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
 # that *both* distinfo files contain the correct, up-to-date files and
@@ -8,11 +8,8 @@
 #
 
 PKGNAME=	gmplayer-${MPLAYER_VERSION}
-PKGREVISION=	16
 
-SKIN_SITES=	http://www1.mplayerhq.hu/MPlayer/skins/		\
-		http://www2.mplayerhq.hu/MPlayer/skins/		\
-		ftp://ftp1.mplayerhq.hu/MPlayer/skins/
+SKIN_SITES=	http://www.mplayerhq.hu/MPlayer/skins/
 
 .include "../../multimedia/mplayer-share/Makefile.common"
 SKIN_EXTRACT_SUFX=	.tar.bz2
@@ -106,7 +103,6 @@ DIST_SUBDIR=	mplayer
 USE_TOOLS+=		pax pkg-config
 CONFIGURE_ARGS+=	--enable-gui --enable-x11 --disable-mencoder \
 			--confdir=${PREFIX}/share/mplayer
-CONFIGURE_ARGS+=	--enable-xvmc
 
 INSTALLATION_DIRS=	bin share/mplayer/skins
 
@@ -141,7 +137,6 @@ do-install:
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
-.include "../../x11/libXvMC/buildlink3.mk"
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"

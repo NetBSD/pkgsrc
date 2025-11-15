@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.106 2025/10/23 20:38:38 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2025/11/15 12:43:17 ryoon Exp $
 
-PKGREVISION= 25
 .include "Makefile.common"
 
 PKGNAME=	mplayer-share-${MPLAYER_VERSION}
 COMMENT=	Documentation used by mplayer and gmplayer
 
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt # xsltproc
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 DEPENDS+=	mplayer-fonts-[0-9]*:../../fonts/mplayer-fonts
 
-USE_TOOLS+=	pax
-
-NO_BUILD=	YES
-NO_CONFIGURE=	YES
+USE_TOOLS+=	gmake pax
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/mplayer/DOCS
+
+CONFIGURE_ARGS+=	--language-doc=all
+CONFIGURE_ARGS+=	--language-man=all
+
+BUILD_TARGET=	doc
 
 do-install:
 	${INSTALL_MAN} ${WRKSRC}/DOCS/man/en/mplayer.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
@@ -26,4 +29,7 @@ do-install:
 	${FIND} ${DESTDIR}${PREFIX}/share/mplayer/DOCS -type f -print | \
 		${XARGS} ${CHMOD} ${SHAREMODE}
 
+# Only for configure script
+BUILDLINK_DEPMETHOD.ffmpeg7=	build
+.include "../../multimedia/ffmpeg7/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

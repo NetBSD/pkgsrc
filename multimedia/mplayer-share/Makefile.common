@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.70 2025/10/12 06:34:02 mrg Exp $
+# $NetBSD: Makefile.common,v 1.71 2025/11/15 12:43:17 ryoon Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
@@ -6,14 +6,15 @@
 # sysutils/mencvcd uses one file from the tarball, please update
 # it when updating this package.
 
-MPLAYER_VERSION=	1.5
+MPLAYER_VERSION=	1.5.0.38680
 
-DISTNAME=		MPlayer-${MPLAYER_VERSION}
+DISTNAME=		mplayer-r38680
 
 CATEGORIES?=		multimedia
 
-MASTER_SITES=		http://www.mplayerhq.hu/MPlayer/releases/
-EXTRACT_SUFX=		.tar.xz
+#MASTER_SITES=		http://www.mplayerhq.hu/MPlayer/releases/
+MASTER_SITES=		${MASTER_SITE_LOCAL}
+EXTRACT_SUFX=		.tar.bz2
 
 DIST_SUBDIR=		mplayer
 
@@ -54,9 +55,9 @@ CONFIGURE_ARGS+=	--target=${MACHINE_ARCH:Q}-${OPSYS:Q}
 # Reaching into the destdir with a -I flag to NATIVE_CC is kinda
 # sleazy, but this will probably work and it saves the trouble of
 # pulling in a gigantic tool dependency.
-CONFIGURE_ARGS+=	--host-cc=${NATIVE_CC:Q}\ -I${_CROSS_DESTDIR:Q}${LOCALBASE:Q}/include/ffmpeg5
-#TOOL_DEPENDS+=		ffmpeg5>=0:../../multimedia/ffmpeg5
-#CONFIGURE_ARGS+=	--host-cc=${NATIVE_CC:Q}\ -I${TOOLBASE:Q}/include/ffmpeg5
+CONFIGURE_ARGS+=	--host-cc=${NATIVE_CC:Q}\ -I${_CROSS_DESTDIR:Q}${LOCALBASE:Q}/include/ffmpeg7
+#TOOL_DEPENDS+=		ffmpeg7-[0-9]*:../../multimedia/ffmpeg7
+#CONFIGURE_ARGS+=	--host-cc=${NATIVE_CC:Q}\ -I${TOOLBASE:Q}/include/ffmpeg7
 .else
 CONFIGURE_ARGS+=	--host-cc=${CC:Q}\ ${BUILDLINK_CPPFLAGS:Q}
 .endif

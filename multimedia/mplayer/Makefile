@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.118 2025/10/23 20:38:38 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2025/11/15 12:43:17 ryoon Exp $
 
 PKGNAME=	mplayer-${MPLAYER_VERSION}
-PKGREVISION=	6
 
 COMMENT=	Fast, cross-platform movie player
 
@@ -12,8 +11,7 @@ USE_TOOLS+=	pkg-config
 CONFIGURE_ARGS+=	--disable-mencoder
 CONFIGURE_ARGS+=	--confdir=${PREFIX}/share/mplayer
 CONFIGURE_ARGS+=	--enable-x11
-CONFIGURE_ARGS+=	--enable-xvmc
-CONFIGURE_ARGS+=	--with-xvmclib=XvMCW
+CONFIGURE_ARGS+=	--disable-gif # giflib removes private API
 
 INSTALLATION_DIRS+=	bin
 
@@ -28,7 +26,7 @@ do-install:
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
-.include "../../x11/libXvMC/buildlink3.mk"
+#.include "../../x11/libXvMC/buildlink3.mk"
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"

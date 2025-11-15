@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.14 2019/06/04 13:39:38 nia Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/11/15 12:43:17 ryoon Exp $
 man/man1/mplayer.1
+share/mplayer/DOCS/HTML/cs/MPlayer.html
 share/mplayer/DOCS/HTML/cs/aalib.html
 share/mplayer/DOCS/HTML/cs/advaudio.html
 share/mplayer/DOCS/HTML/cs/aspect.html
@@ -86,6 +87,7 @@ share/mplayer/DOCS/HTML/cs/vidix.html
 share/mplayer/DOCS/HTML/cs/windows.html
 share/mplayer/DOCS/HTML/cs/x11.html
 share/mplayer/DOCS/HTML/cs/xv.html
+share/mplayer/DOCS/HTML/de/MPlayer.html
 share/mplayer/DOCS/HTML/de/aalib.html
 share/mplayer/DOCS/HTML/de/advaudio.html
 share/mplayer/DOCS/HTML/de/aspect.html
@@ -173,6 +175,7 @@ share/mplayer/DOCS/HTML/de/vidix.html
 share/mplayer/DOCS/HTML/de/windows.html
 share/mplayer/DOCS/HTML/de/x11.html
 share/mplayer/DOCS/HTML/de/xv.html
+share/mplayer/DOCS/HTML/en/MPlayer.html
 share/mplayer/DOCS/HTML/en/aalib.html
 share/mplayer/DOCS/HTML/en/advaudio-channels.html
 share/mplayer/DOCS/HTML/en/advaudio-surround.html
@@ -261,6 +264,7 @@ share/mplayer/DOCS/HTML/en/windows.html
 share/mplayer/DOCS/HTML/en/x11.html
 share/mplayer/DOCS/HTML/en/xv.html
 share/mplayer/DOCS/HTML/en/zr.html
+share/mplayer/DOCS/HTML/es/MPlayer.html
 share/mplayer/DOCS/HTML/es/aspect.html
 share/mplayer/DOCS/HTML/es/bsd.html
 share/mplayer/DOCS/HTML/es/bugreports.html
@@ -322,6 +326,7 @@ share/mplayer/DOCS/HTML/es/usage.html
 share/mplayer/DOCS/HTML/es/vcd.html
 share/mplayer/DOCS/HTML/es/video-dev.html
 share/mplayer/DOCS/HTML/es/windows.html
+share/mplayer/DOCS/HTML/fr/MPlayer.html
 share/mplayer/DOCS/HTML/fr/aalib.html
 share/mplayer/DOCS/HTML/fr/advaudio.html
 share/mplayer/DOCS/HTML/fr/aspect.html
@@ -410,6 +415,7 @@ share/mplayer/DOCS/HTML/fr/vidix.html
 share/mplayer/DOCS/HTML/fr/windows.html
 share/mplayer/DOCS/HTML/fr/x11.html
 share/mplayer/DOCS/HTML/fr/xv.html
+share/mplayer/DOCS/HTML/hu/MPlayer.html
 share/mplayer/DOCS/HTML/hu/aalib.html
 share/mplayer/DOCS/HTML/hu/advaudio-channels.html
 share/mplayer/DOCS/HTML/hu/advaudio-surround.html
@@ -502,6 +508,7 @@ share/mplayer/DOCS/HTML/hu/windows.html
 share/mplayer/DOCS/HTML/hu/x11.html
 share/mplayer/DOCS/HTML/hu/xv.html
 share/mplayer/DOCS/HTML/hu/zr.html
+share/mplayer/DOCS/HTML/it/MPlayer.html
 share/mplayer/DOCS/HTML/it/aalib.html
 share/mplayer/DOCS/HTML/it/advaudio.html
 share/mplayer/DOCS/HTML/it/aspect.html
@@ -589,6 +596,7 @@ share/mplayer/DOCS/HTML/it/vidix.html
 share/mplayer/DOCS/HTML/it/windows.html
 share/mplayer/DOCS/HTML/it/x11.html
 share/mplayer/DOCS/HTML/it/xv.html
+share/mplayer/DOCS/HTML/pl/MPlayer.html
 share/mplayer/DOCS/HTML/pl/advaudio.html
 share/mplayer/DOCS/HTML/pl/aspect.html
 share/mplayer/DOCS/HTML/pl/bsd.html
@@ -661,6 +669,7 @@ share/mplayer/DOCS/HTML/pl/usage.html
 share/mplayer/DOCS/HTML/pl/vcd.html
 share/mplayer/DOCS/HTML/pl/video.html
 share/mplayer/DOCS/HTML/pl/windows.html
+share/mplayer/DOCS/HTML/ru/MPlayer.html
 share/mplayer/DOCS/HTML/ru/aalib.html
 share/mplayer/DOCS/HTML/ru/advaudio.html
 share/mplayer/DOCS/HTML/ru/aspect.html
@@ -748,6 +757,7 @@ share/mplayer/DOCS/HTML/ru/vidix.html
 share/mplayer/DOCS/HTML/ru/windows.html
 share/mplayer/DOCS/HTML/ru/x11.html
 share/mplayer/DOCS/HTML/ru/xv.html
+share/mplayer/DOCS/HTML/zh_CN/MPlayer.html
 share/mplayer/DOCS/HTML/zh_CN/aalib.html
 share/mplayer/DOCS/HTML/zh_CN/advaudio-channels.html
 share/mplayer/DOCS/HTML/zh_CN/advaudio-surround.html
@@ -898,6 +908,7 @@ share/mplayer/DOCS/xml/cs/documentation.xml
 share/mplayer/DOCS/xml/cs/encoding-guide.xml
 share/mplayer/DOCS/xml/cs/faq.xml
 share/mplayer/DOCS/xml/cs/install.xml
+share/mplayer/DOCS/xml/cs/main.xml
 share/mplayer/DOCS/xml/cs/mencoder.xml
 share/mplayer/DOCS/xml/cs/ports.xml
 share/mplayer/DOCS/xml/cs/skin.xml
@@ -908,6 +919,7 @@ share/mplayer/DOCS/xml/de/documentation.xml
 share/mplayer/DOCS/xml/de/encoding-guide.xml
 share/mplayer/DOCS/xml/de/faq.xml
 share/mplayer/DOCS/xml/de/install.xml
+share/mplayer/DOCS/xml/de/main.xml
 share/mplayer/DOCS/xml/de/mencoder.xml
 share/mplayer/DOCS/xml/de/ports.xml
 share/mplayer/DOCS/xml/de/skin.xml
@@ -919,6 +931,7 @@ share/mplayer/DOCS/xml/en/documentation.xml
 share/mplayer/DOCS/xml/en/encoding-guide.xml
 share/mplayer/DOCS/xml/en/faq.xml
 share/mplayer/DOCS/xml/en/install.xml
+share/mplayer/DOCS/xml/en/main.xml
 share/mplayer/DOCS/xml/en/mencoder.xml
 share/mplayer/DOCS/xml/en/ports.xml
 share/mplayer/DOCS/xml/en/skin.xml
@@ -929,6 +942,7 @@ share/mplayer/DOCS/xml/es/documentation.xml
 share/mplayer/DOCS/xml/es/encoding-guide.xml
 share/mplayer/DOCS/xml/es/faq.xml
 share/mplayer/DOCS/xml/es/install.xml
+share/mplayer/DOCS/xml/es/main.xml
 share/mplayer/DOCS/xml/es/mencoder.xml
 share/mplayer/DOCS/xml/es/ports.xml
 share/mplayer/DOCS/xml/es/skin.xml
@@ -939,17 +953,21 @@ share/mplayer/DOCS/xml/fr/documentation.xml
 share/mplayer/DOCS/xml/fr/encoding-guide.xml
 share/mplayer/DOCS/xml/fr/faq.xml
 share/mplayer/DOCS/xml/fr/install.xml
+share/mplayer/DOCS/xml/fr/main.xml
 share/mplayer/DOCS/xml/fr/mencoder.xml
 share/mplayer/DOCS/xml/fr/ports.xml
 share/mplayer/DOCS/xml/fr/skin.xml
 share/mplayer/DOCS/xml/fr/usage.xml
 share/mplayer/DOCS/xml/fr/video.xml
+share/mplayer/DOCS/xml/html-chunk.xsl
 share/mplayer/DOCS/xml/html-common.xsl
+share/mplayer/DOCS/xml/html-single.xsl
 share/mplayer/DOCS/xml/hu/bugreports.xml
 share/mplayer/DOCS/xml/hu/documentation.xml
 share/mplayer/DOCS/xml/hu/encoding-guide.xml
 share/mplayer/DOCS/xml/hu/faq.xml
 share/mplayer/DOCS/xml/hu/install.xml
+share/mplayer/DOCS/xml/hu/main.xml
 share/mplayer/DOCS/xml/hu/mencoder.xml
 share/mplayer/DOCS/xml/hu/ports.xml
 share/mplayer/DOCS/xml/hu/skin.xml
@@ -960,6 +978,7 @@ share/mplayer/DOCS/xml/it/documentation.xml
 share/mplayer/DOCS/xml/it/encoding-guide.xml
 share/mplayer/DOCS/xml/it/faq.xml
 share/mplayer/DOCS/xml/it/install.xml
+share/mplayer/DOCS/xml/it/main.xml
 share/mplayer/DOCS/xml/it/mencoder.xml
 share/mplayer/DOCS/xml/it/ports.xml
 share/mplayer/DOCS/xml/it/skin.xml
@@ -971,6 +990,7 @@ share/mplayer/DOCS/xml/pl/documentation.xml
 share/mplayer/DOCS/xml/pl/encoding-guide.xml
 share/mplayer/DOCS/xml/pl/faq.xml
 share/mplayer/DOCS/xml/pl/install.xml
+share/mplayer/DOCS/xml/pl/main.xml
 share/mplayer/DOCS/xml/pl/mencoder.xml
 share/mplayer/DOCS/xml/pl/ports.xml
 share/mplayer/DOCS/xml/pl/skin.xml
@@ -981,6 +1001,7 @@ share/mplayer/DOCS/xml/ru/documentation.xml
 share/mplayer/DOCS/xml/ru/encoding-guide.xml
 share/mplayer/DOCS/xml/ru/faq.xml
 share/mplayer/DOCS/xml/ru/install.xml
+share/mplayer/DOCS/xml/ru/main.xml
 share/mplayer/DOCS/xml/ru/mencoder.xml
 share/mplayer/DOCS/xml/ru/ports.xml
 share/mplayer/DOCS/xml/ru/skin.xml
@@ -995,6 +1016,7 @@ share/mplayer/DOCS/xml/zh_CN/documentation.xml
 share/mplayer/DOCS/xml/zh_CN/encoding-guide.xml
 share/mplayer/DOCS/xml/zh_CN/faq.xml
 share/mplayer/DOCS/xml/zh_CN/install.xml
+share/mplayer/DOCS/xml/zh_CN/main.xml
 share/mplayer/DOCS/xml/zh_CN/mencoder.xml
 share/mplayer/DOCS/xml/zh_CN/ports.xml
 share/mplayer/DOCS/xml/zh_CN/skin.xml
