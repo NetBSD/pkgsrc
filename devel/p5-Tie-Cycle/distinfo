@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/12/25 01:32:11 wen Exp $
+$NetBSD: distinfo,v 1.12 2025/11/15 01:41:28 wen Exp $
 
-BLAKE2s (Tie-Cycle-1.228.tar.gz) = 2607a033ce10a20cb04ee7ec9e81be64a9451b3a559259503b779319d4fbf694
-SHA512 (Tie-Cycle-1.228.tar.gz) = 6ff75e2b6fe13860127dc75f127fd840ed5f2ee95f5173de494b0f6fd42862b9b2b33d05930bcdaa14e3647ad8c0e87e6f488108a01d301c01ef0df384f5ec31
-Size (Tie-Cycle-1.228.tar.gz) = 11687 bytes
+BLAKE2s (Tie-Cycle-1.231.tar.gz) = b2d9266446df12d581d3615ff278f2f7d3dfa93b333da5ca3a5d4033aeeab5df
+SHA512 (Tie-Cycle-1.231.tar.gz) = ab261b721495e35873356f383ffe2eda1c803c8fbfe9de1c0029c37ed9b12d2a686b6e705fa9be4389c113ab09f7ead07e0b6fc08a2d37ddbf4d29f09087a32a
+Size (Tie-Cycle-1.231.tar.gz) = 12675 bytes
