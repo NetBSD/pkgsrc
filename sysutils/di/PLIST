@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2025/03/08 10:19:04 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/11/15 20:11:48 bsiegert Exp $
 bin/di
 include/di.h
 lib/libdi.so
-lib/libdi.so.5
+lib/libdi.so.6
 lib/libdi.so.${PKGVERSION}
 lib/pkgconfig/di.pc
 man/man1/di.1
