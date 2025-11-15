@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6724 2025/11/15 08:37:10 vins Exp $
+$NetBSD: CHANGES-2025,v 1.6725 2025/11/15 10:38:17 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9763,3 +9763,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/postgresql18 to 18.1 [adam 2025-11-15]
 	Added devel/p5-Test2-Plugin-MemUsage version 0.002003 [wen 2025-11-15]
 	Updated wm/fvwm3 to 1.1.4 [vins 2025-11-15]
+	Added fonts/gallant version 0.1 [vins 2025-11-15]
