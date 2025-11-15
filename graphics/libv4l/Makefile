@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2023/03/13 13:18:35 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/11/15 11:57:44 ryoon Exp $
 
-LIBV4L_VERS=	1.24.1
+LIBV4L_VERS=	1.32.0
 DISTNAME=	v4l-utils-${LIBV4L_VERS}
 CATEGORIES=	graphics
 PKGNAME=	libv4l-${LIBV4L_VERS}
 MASTER_SITES=	https://www.linuxtv.org/downloads/v4l-utils/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://people.atrpms.net/~hdegoede/
@@ -13,21 +13,21 @@ COMMENT=	Video4Linux userspace library
 LICENSE=	gnu-gpl-v2
 
 FORTIFY_SUPPORTED=	no
-GNU_CONFIGURE=		yes
 USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 
-CONFIGURE_ARGS+=	--disable-libdvbv5
-CONFIGURE_ARGS+=	--disable-nls
-CONFIGURE_ARGS+=	--disable-v4l-utils
+MESON_ARGS+=	-Dlibdvbv5=disabled
+MESON_ARGS+=	-Dv4l-utils=false
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
 NEWHEADER!=	${GREP} V4L2_SEL_TGT_CROP /usr/include/sys/videoio.h > /dev/null 2>&1 || echo "no"
 .endif
+
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
 .if (${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly") && !exists(/usr/include/sys/videoio.h)
 PLIST.needs_videoio=	yes
@@ -72,5 +72,11 @@ CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=500
 .endif
 
+post-install:
+	# Meson does not handle -Dv4l-utils=false
+	${RM} -rf ${DESTDIR}${PREFIX}/share
+
+.include "../../devel/meson/build.mk"
+.include "../../devel/argp/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
