@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.37 2020/03/08 08:59:08 nros Exp $
+# $NetBSD: options.mk,v 1.38 2025/11/15 12:25:03 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
-PKG_SUPPORTED_OPTIONS=	gtk2 gtk3 qt5 xim
-PKG_SUGGESTED_OPTIONS=	gtk2 gtk3 qt5 xim
+PKG_SUPPORTED_OPTIONS=	gtk2 gtk3 gtk4 qt5 qt6 xim
+PKG_SUGGESTED_OPTIONS=	gtk2 gtk3 gtk4 qt5 qt6 xim
 
 PKG_OPTIONS_LEGACY_OPTS+=	gtk:gtk2
 
@@ -26,6 +26,14 @@ GTK3_IMMODULES=		YES
 CONFIGURE_ARGS+=	--without-gtk3
 .endif
 
+.if !empty(PKG_OPTIONS:Mgtk4)
+PLIST_SRC+=		PLIST.gtk4
+GTK4_IMMODULES=		YES
+.include "../../x11/gtk4/modules.mk"
+.else
+CONFIGURE_ARGS+=	--without-gtk4
+.endif
+
 .if !empty(PKG_OPTIONS:Mgtk3)
 CONFIGURE_ARGS+=	--enable-default-toolkit=gtk3
 UIM_PREF_PROGRAM=	uim-pref-gtk3
@@ -38,8 +46,38 @@ UIM_PREF_PROGRAM=	uim-pref-gtk
 PLIST_SRC+=		PLIST.qt5
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-qt5-immodule
+CONFIGURE_ENV+=		QMAKE5=${PREFIX}/qt5/bin/qmake
+CONFIGURE_ENV+=		ax_cv_path_QMAKE5=${PREFIX}/qt5/bin/qmake
+BUILDLINK_INCDIRS.qt5-qtx11extras=	# empty
+BUILDLINK_LIBDIRS.qt5-qtx11extras=	# empty
+BUILDLINK_INCDIRS.qt5-qtxmlpatterns=	# empty
+BUILDLINK_LIBDIRS.qt5-qtxmlpatterns=	# empty
+BUILDLINK_INCDIRS.qt5-qtbase=		# empty
+BUILDLINK_LIBDIRS.qt5-qtbase=		# empty
+
+BUILDLINK_TRANSFORM+=	R:${PREFIX}/qt5/lib:${PREFIX}/qt5/lib
 .else
 CONFIGURE_ARGS+=	--without-qt5-immodule
+.endif
+
+.if !empty(PKG_OPTIONS:Mqt6)
+PLIST_SRC+=		PLIST.qt6
+.include "../../devel/qt6-qt5compat/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-qt6-immodule
+CONFIGURE_ENV+=		QMAKE6=${PREFIX}/qt6/bin/qmake
+CONFIGURE_ENV+=		ax_cv_path_QMAKE6=${PREFIX}/qt6/bin/qmake
+BUILDLINK_INCDIRS.qt6-qtsvg=		# empty
+BUILDLINK_LIBDIRS.qt6-qtsvg=		# empty
+BUILDLINK_INCDIRS.qt6-qtdeclarative=	# empty
+BUILDLINK_LIBDIRS.qt6-qtdeclarative=	# empty
+BUILDLINK_INCDIRS.qt6-qtbase=		# empty
+BUILDLINK_LIBDIRS.qt6-qtbase=		# empty
+
+FORCE_CXX_STD=		gnu++17
+BUILDLINK_TRANSFORM+=	R:${PREFIX}/qt6/lib:${PREFIX}/qt6/lib
+.else
+CONFIGURE_ARGS+=	--without-qt6-immodule
+FORCE_CXX_STD=		gnu++11
 .endif
 
 .if !empty(PKG_OPTIONS:Mxim)

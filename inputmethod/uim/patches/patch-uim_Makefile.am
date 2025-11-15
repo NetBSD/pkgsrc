@@ -1,10 +1,10 @@
-$NetBSD: patch-uim_Makefile.am,v 1.3 2019/11/01 16:21:11 nia Exp $
+$NetBSD: patch-uim_Makefile.am,v 1.4 2025/11/15 12:25:04 ryoon Exp $
 
 https://github.com/uim/uim/pull/41
 
---- uim/Makefile.am.orig	2018-05-11 21:26:06.000000000 +0000
+--- uim/Makefile.am.orig	2025-08-15 11:59:24.000000000 +0000
 +++ uim/Makefile.am
-@@ -8,7 +8,8 @@ AUTOMAKE_OPTIONS = foreign
+@@ -13,7 +13,8 @@ AUTOMAKE_OPTIONS = foreign
  
  EXTRA_DIST = encoding-table.c test-gc.c version.h.in
  
@@ -14,12 +14,12 @@ https://github.com/uim/uim/pull/41
  # FIXME: $(UIM_SCM_CFLAGS) should only affect on uim-scm.c
  CFLAGS = @CFLAGS@ $(UIM_SCM_CFLAGS)
  CXXFLAGS = @CXXFLAGS@
-@@ -321,7 +322,7 @@ if LIBEDIT
+@@ -329,7 +330,7 @@ if LIBEDIT
  endif
  
  uim_module_manager_LIBS =
--uim_module_manager_CPPFLAGS = $(uim_defs) -I$(top_srcdir) -DUIM_DATADIR=\""$(datadir)/uim"\"
-+uim_module_manager_CPPFLAGS = $(uim_defs) -I$(top_srcdir) -DUIM_DATADIR=\""$(datadir)/uim"\" -DUIM_CONFDIR=\""$(sysconfdir)/uim"\"
+-uim_module_manager_CPPFLAGS = $(uim_defs) $(AM_CPPFLAGS) -DUIM_DATADIR=\""$(datadir)/uim"\"
++uim_module_manager_CPPFLAGS = $(uim_defs) $(AM_CPPFLAGS) -DUIM_DATADIR=\""$(datadir)/uim"\" -DUIM_CONFDIR=\""$(sysconfdir)/uim"\"
  uim_module_manager_CFLAGS =
  uim_module_manager_LDADD = libuim-scm.la libuim.la
  uim_module_manager_SOURCES = uim-module-manager.c

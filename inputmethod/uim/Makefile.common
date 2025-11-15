@@ -1,18 +1,18 @@
-# $NetBSD: Makefile.common,v 1.19 2023/02/25 17:20:16 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.20 2025/11/15 12:25:03 ryoon Exp $
 #
 # used by inputmethod/uim/Makefile
 # used by inputmethod/uim-elisp/Makefile
 
-DISTNAME=	uim-1.8.9
+DISTNAME=	uim-1.9.7pre20251027
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uim/}
 GITHUB_PROJECT=	uim
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
+GITHUB_TAG=	0dd88f748b7b11e81768ab13b424f995331a5bd6
 
 MAINTAINER=	VEG03617@nifty.com
 HOMEPAGE=	https://github.com/uim/uim/wiki
 
-GITHUB_SUBMODULES+=	uim sigscheme beb8fbdc69b523d14fc202a4d17375555a74c772 sigscheme
+GITHUB_SUBMODULES+=	uim sigscheme 5a05b7b3242bcc4e16b966acf4200985cd67ba88 sigscheme
 GITHUB_SUBMODULES+=	uim libgcroots d362356cc4c5f591695d2fbda7746918250c9e99 sigscheme/libgcroots
 EXTRACT_USING=		bsdtar
 
@@ -22,4 +22,5 @@ PATCHDIR=	${.CURDIR}/../../inputmethod/uim/patches
 USE_TOOLS+=	autoreconf autoconf automake
 
 pre-configure:
+	echo CFLAGS=${CFLAGS}
 	cd ${WRKSRC} && ${SH} autogen.sh
