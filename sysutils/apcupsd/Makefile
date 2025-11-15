@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2025/10/23 20:39:14 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2025/11/15 17:53:59 pgoyette Exp $
 
 DISTNAME=		apcupsd-3.14.14
 PKGREVISION=		9
@@ -20,6 +20,11 @@ PKG_SYSCONFSUBDIR=	apcupsd
 CTF_SUPPORTED=		no # https://smartos.org/bugview/OS-6533
 
 BUILD_DEFS+=		VARBASE
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+=	-Wno-error=implicit-function-declaration
+.endif
 
 .include "options.mk"
 
