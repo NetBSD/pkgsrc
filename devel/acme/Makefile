@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2024/10/07 16:35:59 rhialto Exp $
+# $NetBSD: Makefile,v 1.21 2025/11/15 14:48:22 rhialto Exp $
 #
 
-DISTNAME=	acme-crossass-code-0-r425-trunk
-PKGNAME=	acme-0.97.0.0.425
+DISTNAME=	acme-crossass-code-0-r448-trunk
+PKGNAME=	acme-0.97.0.0.448
 CATEGORIES=	devel
 #MASTER_SITES=	https://sourceforge.net/code-snapshots/svn/a/ac/acme-crossass/code-0/
 EXTRACT_SUFX=	.zip
