@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.6 2024/05/27 19:33:55 rjs Exp $
+$NetBSD: patch-configure,v 1.7 2025/11/15 12:43:17 ryoon Exp $
 
 o Handle properly sh3, evbarm, arm64, and m68k ports on NetBSD.
 o Fix CPU family detection on NetBSD with /proc mounted with "-o linux"
@@ -12,9 +12,9 @@ o Explicitly enable PIE to avoid text relocations on NetBSD/i386 8.x
 o use /dev/audio instead of /dev/sound for OSS audio device for NetBSD
   (see PR/54229) and OpenBSD (no /dev/sound since 6.1)
 
---- configure.orig	2022-02-27 09:09:00.000000000 +0000
+--- configure.orig	2025-04-01 19:53:08.000000000 +0000
 +++ configure
-@@ -1768,7 +1768,7 @@ else
+@@ -1778,7 +1778,7 @@ else
        cc_name=$cc_name_tmp
        echocheck "$_cc version"
        cc_vendor=gnu
@@ -23,7 +23,7 @@ o use /dev/audio instead of /dev/sound for OSS audio device for NetBSD
        case $cc_version in
          2.96*)
            cc_fail=yes
-@@ -1845,13 +1845,19 @@ if test -z "$_target" ; then
+@@ -1863,13 +1863,19 @@ if test -z "$_target" ; then
        sun4*|sparc*) host_arch=sparc ;;
        parisc*|hppa*|9000*) host_arch=hppa ;;
        aarch64*|ARM64) host_arch=aarch64 ;;
@@ -45,7 +45,7 @@ o use /dev/audio instead of /dev/sound for OSS audio device for NetBSD
        xtensa*) host_arch=xtensa ;;
        *) host_arch=UNKNOWN ;;
    esac
-@@ -2068,7 +2074,7 @@ if x86 ; then
+@@ -2086,7 +2092,7 @@ if x86 ; then
    # gather more CPU information
    pname=$($_cpuinfo | grep 'model name' | cut -d ':' -f 2 | head -n 1)
    pvendor=$($_cpuinfo | grep 'vendor_id' | cut -d ':' -f 2  | cut -d ' ' -f 2 | head -n 1)
@@ -54,7 +54,7 @@ o use /dev/audio instead of /dev/sound for OSS audio device for NetBSD
    pmodel=$($_cpuinfo | grep -v 'model name' | grep 'model' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -n 1)
    pstepping=$($_cpuinfo | grep 'stepping' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -n 1)
  
-@@ -2585,7 +2591,12 @@ case "$host_arch" in
+@@ -2614,7 +2620,12 @@ case "$host_arch" in
      test $_fast_clz = "auto" && _fast_clz=yes
      ;;
  
@@ -68,7 +68,7 @@ o use /dev/audio instead of /dev/sound for OSS audio device for NetBSD
      arch='sh4'
      iproc='sh4'
      ;;
-@@ -2823,6 +2834,11 @@ EOF
+@@ -2852,6 +2863,11 @@ EOF
      iproc='vax'
      ;;
  
@@ -80,7 +80,7 @@ o use /dev/audio instead of /dev/sound for OSS audio device for NetBSD
    xtensa)
      arch='xtensa'
      iproc='xtensa'
-@@ -2949,23 +2965,23 @@ else
+@@ -2982,22 +2998,22 @@ else
  fi
  if test -z "$CFLAGS" || test "$_profile" != "" || test "$_debug" != ""; then
    if test "$cc_vendor" = "intel" ; then
@@ -97,11 +97,10 @@ o use /dev/audio instead of /dev/sound for OSS audio device for NetBSD
 -    CFLAGS="-O2 $_march $_mcpu $_pipe"
 +    CFLAGS="$CFLAGS $_march $_mcpu $_pipe"
    else
--    CFLAGS="-O4 $_march $_mcpu $_pipe -ffast-math -fomit-frame-pointer"
-+    CFLAGS="$CFLAGS $_march $_mcpu $_pipe -ffast-math -fomit-frame-pointer"
+-    CFLAGS="-O4 $_march $_mcpu $_pipe -fomit-frame-pointer"
++    CFLAGS="$CFLAGS $_march $_mcpu $_pipe -fomit-frame-pointer"
      WARNFLAGS="-Wall -Wno-switch -Wno-parentheses -Wpointer-arith -Wredundant-decls -Werror=format-security"
      WARN_CFLAGS="-Werror-implicit-function-declaration"
-     extra_ldflags="$extra_ldflags -ffast-math"
    fi
  
    if test "$_profile" != "" || test "$_debug" != ""; then
@@ -110,7 +109,7 @@ o use /dev/audio instead of /dev/sound for OSS audio device for NetBSD
      WARNFLAGS="-W -Wall $WARNFLAGS"
      _install_strip=
    fi
-@@ -2973,8 +2989,8 @@ else
+@@ -3005,8 +3021,8 @@ else
    warn_cflags=yes
  fi
  
@@ -121,7 +120,7 @@ o use /dev/audio instead of /dev/sound for OSS audio device for NetBSD
  
  # On glibc, add some more CPPFLAGS for enabling required functionality.
  cpp_condition_check features.h "defined __GLIBC__" &&
-@@ -3030,10 +3046,11 @@ if test $relocatable = "auto" ; then
+@@ -3062,10 +3078,11 @@ if test $relocatable = "auto" ; then
    elif win32 && ! wine ; then
      relocatable=no
      res_comment="unnecessary and broken on win32"
@@ -135,7 +134,7 @@ o use /dev/audio instead of /dev/sound for OSS audio device for NetBSD
    elif x86_64 && cflag_check -fpie -pie ; then
      extra_ldflags="$extra_ldflags -fpie -pie"
      extra_cflags="$extra_cflags -fpie"
-@@ -4951,7 +4968,11 @@ if test "$_x11" = auto && test "$_x11_he
+@@ -4984,7 +5001,11 @@ if test "$_x11" = auto && test "$_x11_he
             -L/usr/X11/lib -L/usr/lib32 -L/usr/openwin/lib -L/usr/local/lib64 -L/usr/X11R6/lib64 \
             -L/usr/lib ; do
      if netbsd; then
@@ -148,7 +147,7 @@ o use /dev/audio instead of /dev/sound for OSS audio device for NetBSD
      else
        ld_tmp="$I -lXext -lX11 $ld_pthread"
      fi
-@@ -5354,6 +5375,8 @@ if test "$_aa" = yes ; then
+@@ -5356,6 +5377,8 @@ if test "$_aa" = yes ; then
    def_aa='#define CONFIG_AA 1'
    if cygwin ; then
      libs_mplayer="$libs_mplayer $(aalib-config --libs | cut -d " " -f 2,5,6)"
@@ -157,7 +156,7 @@ o use /dev/audio instead of /dev/sound for OSS audio device for NetBSD
    fi
    vomodules="aa $vomodules"
  else
-@@ -5441,7 +5464,6 @@ EOF
+@@ -5443,7 +5466,6 @@ EOF
        extra_cflags="$extra_cflags $inc_tmp" && break
    done
  fi
@@ -165,7 +164,7 @@ o use /dev/audio instead of /dev/sound for OSS audio device for NetBSD
  if test "$_dvb" = yes ; then
    _dvbin=yes
    inputmodules="dvb $inputmodules"
-@@ -5450,14 +5472,29 @@ if test "$_dvb" = yes ; then
+@@ -5452,14 +5474,29 @@ if test "$_dvb" = yes ; then
    aomodules="mpegpes(dvb) $aomodules"
    vomodules="mpegpes(dvb) $vomodules"
  else
@@ -201,7 +200,7 @@ o use /dev/audio instead of /dev/sound for OSS audio device for NetBSD
  
  if darwin; then
  
-@@ -6117,7 +6154,7 @@ if test "$_ossaudio" = yes ; then
+@@ -6118,7 +6155,7 @@ if test "$_ossaudio" = yes ; then
    if test "$_real_ossaudio" = yes; then
        def_ossaudio_devdsp='#define PATH_DEV_DSP "/dev/dsp"'
    elif netbsd ; then
@@ -210,7 +209,7 @@ o use /dev/audio instead of /dev/sound for OSS audio device for NetBSD
        extra_ldflags="$extra_ldflags -lossaudio"
    else
        def_ossaudio_devdsp='#define PATH_DEV_DSP "/dev/dsp"'
-@@ -7940,7 +7971,7 @@ echores "$_tv_v4l1"
+@@ -7942,7 +7979,7 @@ echores "$_tv_v4l1"
  
  
  echocheck "Video 4 Linux 2 TV interface"
@@ -219,3 +218,11 @@ o use /dev/audio instead of /dev/sound for OSS audio device for NetBSD
      _tv_v4l2=no
      if linux ; then
          header_check_broken sys/time.h linux/videodev2.h && _tv_v4l2=yes
+@@ -8473,6 +8510,7 @@ for try_chunk_xsl in \
+   /usr/share/docbook-xsl/html/chunk.xsl \
+   /usr/share/sgml/docbook/xsl-stylesheets*/html/chunk.xsl \
+   /usr/share/xml/docbook/stylesheet/nwalsh/current/html/chunk.xsl \
++  ${PREFIX}/share/xsl/docbook/html/chunk.xsl \
+   /opt/local/share/xsl/docbook-xsl/html/chunk.xsl; do
+   if test -f "$try_chunk_xsl"; then
+     chunk_xsl=$try_chunk_xsl
