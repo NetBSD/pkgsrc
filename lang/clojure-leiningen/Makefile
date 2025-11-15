@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/08/16 01:49:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2025/11/15 12:08:35 ryoon Exp $
 
-DISTNAME=	leiningen-2.11.2
+DISTNAME=	leiningen-2.12.0
 PKGNAME=	clojure-${DISTNAME}
 CATEGORIES=	lang
 MASTER_SITES=	-https://codeberg.org/leiningen/leiningen/archive/${PKGVERSION_NOREV}.tar.gz
@@ -11,8 +11,8 @@ COMMENT=	Automating Clojure projects
 LICENSE=	epl-v1.0
 
 LEINJAR=		leiningen-${PKGVERSION_NOREV}-standalone.jar
-SITES.${LEINJAR}=	https://codeberg.org/leiningen/leiningen/releases/download/${PKGVERSION_NOREV}/
 DISTFILES=		${DEFAULT_DISTFILES} ${LEINJAR}
+SITES.leiningen-2.12.0-standalone.jar=	https://codeberg.org/leiningen/leiningen/releases/download/${PKGVERSION_NOREV}/
 
 EXTACT_ONLY=	${DEFAULT_DISTFILES}
 
