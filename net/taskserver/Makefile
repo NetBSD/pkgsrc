@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/08/20 06:49:38 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/11/15 13:41:44 ryoon Exp $
 
 DISTNAME=	taskd-1.1.0
 PKGNAME=	${DISTNAME:S/taskd/taskserver/}
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	https://taskwarrior.org/download/
 
 MAINTAINER=	esg@sdf.org
-HOMEPAGE=	https://taskwarrior.org/download/
+HOMEPAGE=	https://taskwarrior.org/
 COMMENT=	Lightweight, secure server providing access to task data
 LICENSE=	mit
 
