@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/11/15 13:08:36 wen Exp $
+
+BLAKE2s (Test2-Harness-1.000161.tar.gz) = 685dbee47810b973429fa7ec872c7fa067ddfe89c947258c65cca6d6ac786678
+SHA512 (Test2-Harness-1.000161.tar.gz) = dbc03de3d057bc889748c578f649e096309efda7d0647087c189e8e7ad332279d60021d9d934f9999cb309969ba937ef6958be4cb76e23d5b7aade87c3b9b366
+Size (Test2-Harness-1.000161.tar.gz) = 386243 bytes
