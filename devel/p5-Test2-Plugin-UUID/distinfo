@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/11/15 03:58:12 wen Exp $
+
+BLAKE2s (Test2-Plugin-UUID-0.002010.tar.gz) = 37766811b041aa0c7f1ed889b7086779be52bfd3f3709dd59f61befedc0dbbe4
+SHA512 (Test2-Plugin-UUID-0.002010.tar.gz) = 3924683747f780c2776a3ac7937a0c553fe4317c2e4471f904f0ddce9a5278205d01f32a1f89620ddc60a0c68c9269a0e9c82f19bd5add17a75113ea1f8554f7
+Size (Test2-Plugin-UUID-0.002010.tar.gz) = 16018 bytes
