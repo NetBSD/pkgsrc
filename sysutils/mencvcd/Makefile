@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.18 2022/04/24 15:00:42 nia Exp $
+# $NetBSD: Makefile,v 1.19 2025/11/15 12:43:19 ryoon Exp $
 
-DISTNAME=	MPlayer-1.5
-PKGNAME=	${DISTNAME:S/MPlayer/mencvcd/}
+DISTNAME=	mplayer-r38680
+PKGNAME=	mencvcd-1.5.0.38680
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.mplayerhq.hu/MPlayer/releases/
+#MASTER_SITES=	http://www.mplayerhq.hu/MPlayer/releases/
+MASTER_SITES=	${MASTER_SITE_LOAL}
 DIST_SUBDIR=	mplayer
-EXTRACT_SUFX=	.tar.xz
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://hammelmann.gmxhome.de/projects_en.html

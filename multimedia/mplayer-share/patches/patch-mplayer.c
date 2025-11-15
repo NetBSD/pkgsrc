@@ -1,4 +1,4 @@
-$NetBSD: patch-mplayer.c,v 1.1 2019/06/04 13:39:38 nia Exp $
+$NetBSD: patch-mplayer.c,v 1.2 2025/11/15 12:43:18 ryoon Exp $
 
 NetBSD implements no "perfect audio delay measurement"
 (suggested to be required by mplayer's man page).
@@ -6,9 +6,9 @@ NetBSD implements no "perfect audio delay measurement"
 This allows video to be played at full speed without perfect
 audio delay measurement.
 
---- mplayer.c.orig	2018-06-10 15:53:58.000000000 +0000
+--- mplayer.c.orig	2024-09-21 09:30:15.000000000 +0000
 +++ mplayer.c
-@@ -213,7 +213,11 @@ static int loop_seek;
+@@ -209,7 +209,11 @@ static int loop_seek;
  static m_time_size_t end_at = { .type = END_AT_NONE, .pos = 0 };
  
  // A/V sync:
