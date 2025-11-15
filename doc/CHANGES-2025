@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6720 2025/11/15 03:43:02 wen Exp $
+$NetBSD: CHANGES-2025,v 1.6721 2025/11/15 04:00:45 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9754,3 +9754,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-TheSchwartz to 1.18 [wen 2025-11-15]
 	Updated devel/p5-Test-Unit to 0.27 [wen 2025-11-15]
 	Updated devel/p5-Test-MockModule to 0.180.0 [wen 2025-11-15]
+	Added devel/p5-Test2-Plugin-UUID version 0.002010 [wen 2025-11-15]
