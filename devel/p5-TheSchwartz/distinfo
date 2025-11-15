@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/10/01 14:36:38 wen Exp $
+$NetBSD: distinfo,v 1.6 2025/11/15 03:27:18 wen Exp $
 
-BLAKE2s (TheSchwartz-1.17.tar.gz) = 6d51aa46a4a7e9513e4116d68b84e7152317cbdf3babb15150efdf5aea3dbb65
-SHA512 (TheSchwartz-1.17.tar.gz) = 341d1f9349f7030e4b4983227187b3a709b78772daec18b7bfff7ef0ae8ad6282a2bfbde97159da7e1959d540310a0ae06a42b62a15b70154fbddfeb2bf4d312
-Size (TheSchwartz-1.17.tar.gz) = 54488 bytes
+BLAKE2s (TheSchwartz-1.18.tar.gz) = 912d535dd4a524d4d8b057d81348c9ff228d504484e0774790e257fd6075972e
+SHA512 (TheSchwartz-1.18.tar.gz) = 4ba307955949a7fbdc787b48b3fd043613bfa5d208c3472b1350b6fe9f966bee83c444b861377d3dd8c36ee80fda40fc27ca1a419af1813d72358f089f804848
+Size (TheSchwartz-1.18.tar.gz) = 54597 bytes
