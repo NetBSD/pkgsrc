@@ -1,0 +1,56 @@
+$NetBSD: patch-configure,v 1.1 2025/11/15 21:38:43 vins Exp $
+
+* Standardise configure options to avoid PLIST inconsistencies.
+* Enable OSS backend on NetBSD. 
+
+--- configure.orig	2024-08-01 15:36:54.000000000 +0000
++++ configure
+@@ -70,8 +70,9 @@ case `uname` in
+ 	Linux)
+ 		alsa=yes
+ 		ldadd="-lrt -lm"
+-		user=sndiod
+-		so_link="libsndio.so libsndio.so.\${MAJ} libsndio.so.\${MAJ}.0"
++		libbsd=yes
++		user=_sndio
++		so_link="libsndio.so libsndio.so.\${MAJ}"
+ 		so_ldflags="-Wl,-soname=libsndio.so.\${MAJ}"
+ 		defs='-D_GNU_SOURCE -DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME'
+ 		;;
+@@ -95,17 +96,21 @@ case `uname` in
+ 		;;
+ 	NetBSD)
+ 		sun=no
++		oss=yes
++		ldadd="-lossaudio -lm"
+ 		rmidi=yes
+ 		user=_sndio
+-		so_link="libsndio.so"
++		so_ldflags="-Wl,-soname=libsndio.so.\${MAJ}"
++		so_link="libsndio.so libsndio.so.\${MAJ}"
+ 		defs='-DHAVE_ARC4RANDOM -DHAVE_GETPEEREID -DHAVE_ISSETUGID \\\
+-		-DHAVE_STRLCAT -DHAVE_STRLCPY \\\
+-		-DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME'
++		-D_OPENBSD_SOURCE -DHAVE_STRLCAT -DHAVE_STRLCPY \\\
++		-DHAVE_STRTONUM -DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME'
+ 		;;
+ 	OpenBSD)
+ 		sun=yes
+ 		rmidi=yes
+-		user=_sndiop
++		user=_sndio
++		so_link="libsndio.so.\${MAJ}"
+ 		defs='-DHAVE_ARC4RANDOM -DHAVE_GETPEEREID -DHAVE_ISSETUGID \\\
+ 		-DHAVE_STRLCAT -DHAVE_STRLCPY -DHAVE_STRTONUM \\\
+ 		-DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME'
+@@ -114,8 +119,8 @@ case `uname` in
+ 		oss=yes
+ 		umidi=yes
+ 		user=_sndio
+-		so_ldflags="-Wl,-soname=libsndio.so.\${MAJ}.\${MIN}"
+-		so_link="libsndio.so"
++		so_ldflags="-Wl,-soname=libsndio.so.\${MAJ}"
++		so_link="libsndio.so libsndio.so.\${MAJ}"
+ 		defs='-DHAVE_ARC4RANDOM -DHAVE_GETPEEREID -DHAVE_ISSETUGID \\\
+ 		-DHAVE_STRLCAT -DHAVE_STRLCPY -DHAVE_STRTONUM \\\
+ 		-DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME'
