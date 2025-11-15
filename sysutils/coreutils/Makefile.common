@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2025/11/11 09:31:59 wiz Exp $
+# $NetBSD: Makefile.common,v 1.37 2025/11/15 13:11:18 ryoon Exp $
 #
 # used by sysutils/coreutils/Makefile
 # used by misc/gnuls/Makefile
@@ -63,6 +63,10 @@ CONFIGURE_ENV+=		ac_cv_header_sys_acl_h=no jm_cv_func_svid_putenv=yes
 # How can we determine the API version of the builtin gettext?
 .if ${OPSYS} != "Linux"
 CONFIGURE_ENV+=		gt_cv_func_gnugettext3_libintl=yes
+.else # Linux
+# To build chcon etc.
+CONFIGURE_ARGS+=	--with-selinux
+PLIST.linux=		yes
 .endif
 CONFIGURE_ENV+=		MKDIR_P=${MKDIR:Q}
 

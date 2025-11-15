@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2025/11/11 13:42:54 taca Exp $
+# $NetBSD: Makefile,v 1.91 2025/11/15 13:11:18 ryoon Exp $
 
 .include "../../sysutils/coreutils/Makefile.common"
 
@@ -15,7 +15,7 @@ CONFLICTS+=		ganglia-monitor-core-[0-9]*
 INFO_FILES=		yes
 
 # Exclude programs from PLIST which aren't built on a platform.
-PLIST_VARS+=		hostid stdbuf
+PLIST_VARS+=		hostid stdbuf linux
 PLIST.hostid=		yes
 
 # This should really only be defined if building stdbuf, however we cannot
