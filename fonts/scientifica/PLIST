@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2025/11/15 11:09:36 vins Exp $
+share/fonts/X11/TTF/scientifica.ttf
+share/fonts/X11/TTF/scientificaBold.ttf
+share/fonts/X11/TTF/scientificaItalic.ttf
+share/fonts/X11/misc/scientifica.otb
+share/fonts/X11/misc/scientificaBold.otb
+share/fonts/X11/misc/scientificaItalic.otb
