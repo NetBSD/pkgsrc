@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.715 2025/09/26 18:30:41 js Exp $
+# $NetBSD: Makefile,v 1.716 2025/11/15 21:40:17 vins Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -429,6 +429,7 @@ SUBDIR+=	sidplay2
 SUBDIR+=	snapcast
 SUBDIR+=	snd
 SUBDIR+=	sndfile-tools
+SUBDIR+=	sndio
 SUBDIR+=	solfege
 SUBDIR+=	sonata
 SUBDIR+=	sonic
