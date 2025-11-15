@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/11/15 12:14:32 wen Exp $
+
+BLAKE2s (igraph-1.0.0.tar.gz) = e1cfc6e50529e6b756a0a96396b3bea71fae79b450c5e3c7e3b3fc12b53fadbc
+SHA512 (igraph-1.0.0.tar.gz) = 8f433be0a6c4e030b1a97713ff9b0ad2c65217d03f674055ea9963f19bfde45d0d7aab9bc4bd9bcffd1549f60342e012e209c9f1ff80b93143a67f2345321517
+Size (igraph-1.0.0.tar.gz) = 4118891 bytes
