@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.445 2025/11/15 10:36:42 vins Exp $
+# $NetBSD: Makefile,v 1.446 2025/11/15 11:10:33 vins Exp $
 #
 
 COMMENT=	Fonts
@@ -257,6 +257,7 @@ SUBDIR+=	ricty-ttf
 SUBDIR+=	roboto-fonts
 SUBDIR+=	ruby-afm
 SUBDIR+=	ruby-ttfunk
+SUBDIR+=	scientifica
 SUBDIR+=	selawik-ttf
 SUBDIR+=	sgi-fonts
 SUBDIR+=	sourcecodepro-fonts
