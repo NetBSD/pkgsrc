@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6714 2025/11/15 01:34:17 wen Exp $
+$NetBSD: CHANGES-2025,v 1.6715 2025/11/15 01:36:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9748,3 +9748,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/appstream to 1.1.1nb1 [ryoon 2025-11-15]
 	Updated mail/p5-Mail-Sendmail to 0.82 [wen 2025-11-15]
 	Updated finance/p5-Finance-Quote to 1.67 [wen 2025-11-15]
+	Updated devel/p5-XS-Parse-Keyword to 0.49 [wen 2025-11-15]
