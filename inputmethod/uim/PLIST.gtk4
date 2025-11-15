@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.gtk4,v 1.1 2025/11/15 12:25:03 ryoon Exp $
+lib/gtk-4.0/4.0.0/immodules/libim-uim.la

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2021/03/30 17:01:49 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.29 2025/11/15 12:25:03 ryoon Exp $
 bin/uim-fep
 bin/uim-fep-tick
 bin/uim-help
@@ -52,7 +52,6 @@ libexec/uim-candwin-tbl-gtk
 libexec/uim-candwin-tbl-gtk3
 libexec/uim-helper-server
 man/man1/uim-xim.1
-qt5/plugins/platforminputcontexts/libuimplatforminputcontextplugin.${RUBY_DLEXT}
 share/applications/uim.desktop
 share/doc/uim/COMPATIBILITY
 share/doc/uim/CUSTOM

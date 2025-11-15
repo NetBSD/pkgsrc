@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.qt6,v 1.1 2025/11/15 12:25:03 ryoon Exp $
+qt6/plugins/platforminputcontexts/libuimplatforminputcontextplugin.so

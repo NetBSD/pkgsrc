@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.198 2025/10/23 20:38:03 wiz Exp $
+# $NetBSD: Makefile,v 1.199 2025/11/15 12:25:03 ryoon Exp $
 
-PKGREVISION= 21
 .include "../../inputmethod/uim/Makefile.common"
 
 COMMENT=	Multilingual input method library
@@ -23,7 +22,6 @@ USE_LANGUAGES=	c c++
 
 # alloca
 FORCE_C_STD=	gnu99
-FORCE_CXX_STD=	gnu++11
 
 # Avoid finding mono tool and breaking.
 MAKE_FLAGS+=	CSI=
