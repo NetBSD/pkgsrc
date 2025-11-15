@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2025/06/24 11:12:02 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/11/15 12:02:44 ryoon Exp $
 
-DISTNAME=	ghdl-4.1.0
-PKGREVISION=	5
+DISTNAME=	ghdl-5.1.1
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ghdl/}
 GITHUB_PROJECT=	ghdl
@@ -12,13 +11,11 @@ HOMEPAGE=	https://ghdl.github.io/ghdl/
 COMMENT=	Open-source simulator/compiler/analyzer for the VHDL
 LICENSE=	gnu-gpl-v2
 
-BROKEN=		"Does not support llvm 19."
-
 USE_TOOLS+=		bash:run gmake
 
 USE_LANGUAGES+=		c c++ # ada
 
-# lang/gcc10-aux does not support RELRO
+# lang/gcc14-aux does not support RELRO
 # and this package should use same condition.
 RELRO_SUPPORTED=	no
 MKPIE_SUPPORTED=	no
@@ -37,16 +34,18 @@ REPLACE_BASH=		scripts/vendors/*.sh
 #.endif
 
 HAS_CONFIGURE=		yes
-CONFIGURE_ENV+=		GNATMAKE=${PREFIX}/gcc10-aux/bin/gnatmake
+CONFIGURE_ENV+=		GNATMAKE=${PREFIX}/gcc14-gnat/bin/gnatmake
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--enable-synth
 CONFIGURE_ARGS+=	--enable-libghdl
 # Select LLVM backend
 CONFIGURE_ARGS+=	--with-llvm-config=${PREFIX}/bin/llvm-config
+CONFIGURE_ARGS+=	--with-llvm-jit
 
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gcc14-gnat=	full
 # GNAT 8.1 or later is required for --enable-synth.
-.include "../../lang/gcc10-aux/buildlink3.mk"
+.include "../../lang/gcc14-gnat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
