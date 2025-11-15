@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6717 2025/11/15 01:42:26 wen Exp $
+$NetBSD: CHANGES-2025,v 1.6718 2025/11/15 03:28:03 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9751,3 +9751,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-XS-Parse-Keyword to 0.49 [wen 2025-11-15]
 	Updated devel/p5-Tree-DAG_Node to 1.35 [wen 2025-11-15]
 	Updated devel/p5-Tie-Cycle to 1.231 [wen 2025-11-15]
+	Updated devel/p5-TheSchwartz to 1.18 [wen 2025-11-15]
