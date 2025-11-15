@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/11/15 10:35:14 vins Exp $
+
+BLAKE2s (gallant-0.1.tar.gz) = 637008694a1a752530ae3a9e5d7784e3f66f6e3acd8570a54302f3447b71212b
+SHA512 (gallant-0.1.tar.gz) = 6ddfa1a8cb8a99faab3f574ff5afd079456e63ef7cfe050bbfac75d70ac34d6c472387e802560f3ca79aa837d0cc07769798549b50e6716698f507728e4da53e
+Size (gallant-0.1.tar.gz) = 2972029 bytes
