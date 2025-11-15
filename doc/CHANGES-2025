@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6735 2025/11/15 12:19:07 wen Exp $
+$NetBSD: CHANGES-2025,v 1.6736 2025/11/15 12:25:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9774,3 +9774,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/openjdk17 to 1.17.0.17.10 [ryoon 2025-11-15]
 	Updated lang/openjdk21 to 1.21.0.9.10 [ryoon 2025-11-15]
 	Added math/igraph version 1.0.0 [wen 2025-11-15]
+	Updated inputmethod/uim to 1.9.7pre20251027 [ryoon 2025-11-15]
