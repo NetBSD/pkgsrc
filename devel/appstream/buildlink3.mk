@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2025/10/23 20:36:15 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2025/11/15 01:12:56 ryoon Exp $
 
 BUILDLINK_TREE+=	appstream
 
@@ -13,7 +13,7 @@ BUILDLINK_PKGSRCDIR.appstream?=		../../devel/appstream
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libstemmer/buildlink3.mk"
 .include "../../textproc/libxmlb/buildlink3.mk"
-.include "../../textproc/libyaml/buildlink3.mk"
+.include "../../textproc/libfyaml/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .endif	# APPSTREAM_BUILDLINK3_MK
 
