@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2023/10/24 22:09:49 wiz Exp $
+# $NetBSD: Makefile,v 1.143 2025/11/15 13:48:06 pgoyette Exp $
 
 DISTNAME=	pine4.64
 PKGNAME=	pine-4.64
@@ -16,6 +16,10 @@ LICENSE=	pine-license
 CONF_FILES=	${PREFIX}/share/examples/pine/pine.conf ${PKG_SYSCONFDIR}/pine.conf
 
 .include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+=	-Wno-error=implicit-function-declaration
+CFLAGS+=	-Wno-error=implicit-int
+.endif
 
 .if ${OPSYS} == "SunOS"
 BUILDNAME=	so5
