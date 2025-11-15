@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:54:18 nia Exp $
+$NetBSD: distinfo,v 1.9 2025/11/15 01:14:34 wen Exp $
 
-BLAKE2s (Mail-Sendmail-0.80.tar.gz) = 33f80e12649a369bc5d93d8a0daeb9716a7642055f44a793088417f4a6154511
-SHA512 (Mail-Sendmail-0.80.tar.gz) = 848ec471938d679645dfb4e032a33d35e49655a336dc6ff3a24ffa35606bff77e73162af672d1a60ad3a7bf571113e802fc42d6cb9a072cdca0d89f707f54a08
-Size (Mail-Sendmail-0.80.tar.gz) = 23537 bytes
+BLAKE2s (Mail-Sendmail-0.82.tar.gz) = 6097d7997c89c07f4111f76f8b832ffce81a5e0a1358cbe71c3db7444e5e8ac3
+SHA512 (Mail-Sendmail-0.82.tar.gz) = 5fe969d5de6da9534c81887283584e8385c483178411254d78fa484a180a3b3cb0e325c54553c71b615bd33a46b90fe4b39ec2752964f14422616e726917a240
+Size (Mail-Sendmail-0.82.tar.gz) = 23405 bytes
