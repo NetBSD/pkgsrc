@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6747 2025/11/15 14:49:00 rhialto Exp $
+$NetBSD: CHANGES-2025,v 1.6748 2025/11/15 15:22:13 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9786,3 +9786,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated converters/libiconv to 1.18 [ryoon 2025-11-15]
 	Updated devel/p5-Test-MockFile to 0.037 [wen 2025-11-15]
 	Updated devel/acme to 0.97.0.0.448 [rhialto 2025-11-15]
+	Updated net/netatalk4 to 4.3.2 [hauke 2025-11-15]
