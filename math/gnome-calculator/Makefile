@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2025/10/23 20:38:15 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2025/11/15 07:56:57 wiz Exp $
 
 DISTNAME=		gnome-calculator-45.0.2
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-calculator/${PKGVERSION_NOREV:R:R}/}
 EXTRACT_SUFX=		.tar.xz
