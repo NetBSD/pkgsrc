@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/11/16 02:43:54 scole Exp $
+
+BLAKE2s (App-a2p-1.013.tar.gz) = 8fb19f59eecd209493a75144bc3889602adcedbc185ceb9c3430358e9179e8b5
+SHA512 (App-a2p-1.013.tar.gz) = 15cc97771250ba466d38884ec8f2e9eb69665adcc61ca1ddeef81a24c77cd1c5c4cdf75c3688d89f3123121cce2c610333e356034f50c54f94ac423dd2da73b3
+Size (App-a2p-1.013.tar.gz) = 51590 bytes
