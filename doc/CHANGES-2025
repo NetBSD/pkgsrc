@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6776 2025/11/16 21:15:51 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6777 2025/11/16 21:18:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9828,3 +9828,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/scamper to 20251113 [hauke 2025-11-16]
 	Updated devel/py-ruff to 0.14.5 [wiz 2025-11-16]
 	Updated comms/py-textual to 6.6.0 [wiz 2025-11-16]
+	Updated www/miniflux to 2.2.14 [wiz 2025-11-16]
