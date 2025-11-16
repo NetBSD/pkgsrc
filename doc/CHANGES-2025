@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6762 2025/11/16 11:58:34 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6763 2025/11/16 16:56:27 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9814,3 +9814,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-mmh3 to 5.2.0 [adam 2025-11-16]
 	Updated devel/py-cachetools to 6.2.2 [adam 2025-11-16]
 	Updated devel/py-canvasapi to 3.4.0 [adam 2025-11-16]
+	Updated devel/ast-grep to 0.40.0 [pin 2025-11-16]
