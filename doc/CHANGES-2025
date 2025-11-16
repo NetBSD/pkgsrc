@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6756 2025/11/16 03:06:23 scole Exp $
+$NetBSD: CHANGES-2025,v 1.6757 2025/11/16 08:00:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9796,3 +9796,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-PPIx-Regexp to 0.091 [wen 2025-11-16]
 	Added devel/p5-App-a2p version 1.013 [scole 2025-11-16]
 	Added devel/p5-App-find2perl version 1.005 [scole 2025-11-16]
+	Updated math/py-pythran to 0.18.1 [adam 2025-11-16]
+	Updated devel/py-zope.interface to 8.1.1 [adam 2025-11-16]
+	Updated devel/py-click to 8.3.1 [adam 2025-11-16]
+	Updated lang/py-asttokens to 3.0.1 [adam 2025-11-16]
