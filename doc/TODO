@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26448 2025/11/16 19:20:42 wiz Exp $
+$NetBSD: TODO,v 1.26449 2025/11/16 20:13:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1295,7 +1295,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o units-2.21
 	o urlgrabber-3.10.2
 	o userppp-030706
-	o utf8proc-2.11.1
 	o utilisp-1.14
 	o uv-0.7.13
 	o varnish-8.0.0
