@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2025/11/10 12:29:03 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2025/11/16 16:57:10 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.21
