@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2025/09/14 06:55:07 adam Exp $
+# $NetBSD: Makefile,v 1.44 2025/11/16 10:37:54 adam Exp $
 
-DISTNAME=	trove_classifiers-2025.9.11.17
+DISTNAME=	trove_classifiers-2025.11.14.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trove-classifiers/}
@@ -17,10 +17,10 @@ USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} trove-classifiers trove-classifiers-${PYVERSSUFFIX} || ${TRUE}
+	${MV} trove-classifiers trove-classifiers-${PYVERSSUFFIX} || ${TRUE}
 
-# as of 2025.8.6.13
-# 3 failed, 15 passed
+# as of 2025.11.14.15
+# 2 failed, 16 passed
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
