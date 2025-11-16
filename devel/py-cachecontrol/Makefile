@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2025/05/04 13:19:08 adam Exp $
+# $NetBSD: Makefile,v 1.22 2025/11/16 20:50:53 wiz Exp $
 
-DISTNAME=	cachecontrol-0.14.3
+DISTNAME=	cachecontrol-0.14.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CacheControl/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/ionrock/cachecontrol
 COMMENT=	Port of httplib2's caching to requests
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-build>=0:../../devel/py-uv-build
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.2:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.16.0:../../devel/py-requests
 # optional
@@ -18,6 +18,9 @@ DEPENDS+=	${PYPKGPREFIX}-filelock>=3.8.0:../../devel/py-filelock
 TEST_DEPENDS+=	${PYPKGPREFIX}-cherrypy>=0:../../www/py-cherrypy
 
 USE_LANGUAGES=	# none
+
+pre-configure:
+	${LN} -sf ${PREFIX}/bin/uv-build-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/uv-build
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

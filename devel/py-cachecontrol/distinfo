@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/05/04 13:19:08 adam Exp $
+$NetBSD: distinfo,v 1.14 2025/11/16 20:50:53 wiz Exp $
 
-BLAKE2s (cachecontrol-0.14.3.tar.gz) = a4b98ef8cfb8c7775855b6e6085f6bc4890f23fd42b5b99d009c5077c85422a9
-SHA512 (cachecontrol-0.14.3.tar.gz) = 12205946ac78263148da4751a55d8c19356bdf055953a014cedfb3084869bb73034860592b5785d4e3e0bd3317c7dc80061105146460a1059eeef458ed5e8dfb
-Size (cachecontrol-0.14.3.tar.gz) = 28985 bytes
+BLAKE2s (cachecontrol-0.14.4.tar.gz) = 26503351f803175f1dd49dcb383a9cd59d829df3a4fe51e6c8441f6a99e6bca6
+SHA512 (cachecontrol-0.14.4.tar.gz) = 47123aa4985f117395777e79670d3d7c08ed4cc508a0fa0ca167d909128348c2b3711e21f8c447e4ad476e383b999932edcc0e019adfe027abf7799ddcedf645
+Size (cachecontrol-0.14.4.tar.gz) = 16150 bytes
