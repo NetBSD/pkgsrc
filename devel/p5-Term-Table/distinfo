@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2025/09/13 21:54:01 wiz Exp $
+$NetBSD: distinfo,v 1.17 2025/11/16 19:21:29 wiz Exp $
 
-BLAKE2s (Term-Table-0.025.tar.gz) = 39091e317de317883626fb6eb78cdb7ab166bdc6a9e51717f7f70214d847b0a8
-SHA512 (Term-Table-0.025.tar.gz) = 0d857d3b13822333a928eb85f7d4015de4fd66a63de2469d718917524dd94a1639a3d0589d9fb754e1d527cb7ea67a3a6f1368598094fdf4f23750e9567d3dc3
-Size (Term-Table-0.025.tar.gz) = 29889 bytes
+BLAKE2s (Term-Table-0.027.tar.gz) = 9f6607bdd30bd5c50b7d1233da782d5e598b05372341116b84f67ae4c915e12c
+SHA512 (Term-Table-0.027.tar.gz) = ebbfdd429801f3cc4cc26db8830dd80c2a5bab895bbf416c9793eab77b302e2135446408c561340be63166e8e928b150759dab809828417f1c120dc790bd2fd6
+Size (Term-Table-0.027.tar.gz) = 31146 bytes
