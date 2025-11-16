@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2025/10/12 17:02:36 wiz Exp $
+$NetBSD: distinfo,v 1.14 2025/11/16 20:55:38 wiz Exp $
 
-BLAKE2s (pycares-4.10.0.tar.gz) = 894af6e4ef77b1c87fabb9f1334fd48cbfdbf954dad527c76688a0d7b63bede6
-SHA512 (pycares-4.10.0.tar.gz) = e4f21c2fa08142f46fccb18f3ff1de106b567daba565375e2ef58e819a56a98a2950f9a396b19092a3b720269e7112509698c325d51ad52fd49d84c4e84d7ba5
-Size (pycares-4.10.0.tar.gz) = 654318 bytes
+BLAKE2s (pycares-4.11.0.tar.gz) = 34fcdc40a086bf37b58abb0cf288371ca1078a986c475082670b1c1c8234147d
+SHA512 (pycares-4.11.0.tar.gz) = 5ded9356942233f8c77792cdf5061018ec6c7ccc0ce144657c0ca7473d18fbd649699e4814047c41dec3ca393d4fc2402b1b60fbdbd947c05dc881f574edff4b
+Size (pycares-4.11.0.tar.gz) = 654473 bytes
 SHA1 (patch-deps_build-config_config__netbsd_ares__config.h) = 023150f022e84387b605722a63d4f5e439d671d6
