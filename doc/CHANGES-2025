@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6757 2025/11/16 08:00:21 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6758 2025/11/16 08:46:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9800,3 +9800,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-zope.interface to 8.1.1 [adam 2025-11-16]
 	Updated devel/py-click to 8.3.1 [adam 2025-11-16]
 	Updated lang/py-asttokens to 3.0.1 [adam 2025-11-16]
+	Updated graphics/libimagequant to 4.4.1 [adam 2025-11-16]
+	Updated devel/py-syrupy to 5.0.0 [adam 2025-11-16]
