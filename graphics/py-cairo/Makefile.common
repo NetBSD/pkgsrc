@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.5 2025/04/20 20:00:12 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2025/11/16 20:53:18 wiz Exp $
 #
 # used by graphics/py-cairo/Makefile
 # used by graphics/py-cairo-shared/Makefile
 
-PYCAIRO_VER=	1.28.0
+PYCAIRO_VER=	1.29.0
 DISTNAME=	pycairo-${PYCAIRO_VER}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycairo/}

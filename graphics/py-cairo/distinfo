@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.40 2025/04/20 20:00:12 wiz Exp $
+$NetBSD: distinfo,v 1.41 2025/11/16 20:53:18 wiz Exp $
 
-BLAKE2s (pycairo-1.28.0.tar.gz) = b00c0cd20b696f4b0f5be7919be7a0e02b0ef8565fcff54c73eabeb2dff6b7a1
-SHA512 (pycairo-1.28.0.tar.gz) = d3fcb6641ad6dcf9b804dbc2a372f653619512e139fb7a196bb1219b00f60e79e5d60fbbddc2e6a0afb959f9fcb37f1f3c460ad6331274581cb241434865b5a5
-Size (pycairo-1.28.0.tar.gz) = 662477 bytes
+BLAKE2s (pycairo-1.29.0.tar.gz) = e550a0c89e56e50b187a7e2f1cdbf30590665adf02657bc692a2b304c2f95acb
+SHA512 (pycairo-1.29.0.tar.gz) = c685fbdce764ca89e719ebcc8f966227a6c144c8e128945bf9c3411212a01759c016fd3267714328a5a242b37e3a5dd9aab4fc120193afdedb74596522a3cd2f
+Size (pycairo-1.29.0.tar.gz) = 665871 bytes
