@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.19 2025/10/27 12:21:57 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.20 2025/11/16 16:58:11 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -124,8 +124,8 @@ CARGO_CRATE_DEPENDS+=	lazy_static-1.5.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.166
 CARGO_CRATE_DEPENDS+=	libloading-0.8.5
 CARGO_CRATE_DEPENDS+=	libredox-0.1.3
-CARGO_CRATE_DEPENDS+=   lla_plugin_interface-0.5.0
-CARGO_CRATE_DEPENDS+=   lla_plugin_utils-0.5.0
+CARGO_CRATE_DEPENDS+=   lla_plugin_interface-0.5.1
+CARGO_CRATE_DEPENDS+=   lla_plugin_utils-0.5.1
 CARGO_CRATE_DEPENDS+=	linked-hash-map-0.5.6
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.4.14
 CARGO_CRATE_DEPENDS+=	litemap-0.8.0
@@ -216,6 +216,7 @@ CARGO_CRATE_DEPENDS+=	signal-hook-0.3.17
 CARGO_CRATE_DEPENDS+=	signal-hook-mio-0.2.4
 CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.4.2
 CARGO_CRATE_DEPENDS+=	simd-adler32-0.3.7
+CARGO_CRATE_DEPENDS+=	similar-2.7.0
 CARGO_CRATE_DEPENDS+=	slab-0.4.11
 CARGO_CRATE_DEPENDS+=	smallvec-1.13.2
 CARGO_CRATE_DEPENDS+=	socket2-0.5.8
