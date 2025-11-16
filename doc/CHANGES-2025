@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6774 2025/11/16 21:02:41 hauke Exp $
+$NetBSD: CHANGES-2025,v 1.6775 2025/11/16 21:08:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9826,3 +9826,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-cares to 4.11.0 [wiz 2025-11-16]
 	Updated devel/py-maturin to 1.10.1 [wiz 2025-11-16]
 	Updated net/scamper to 20251113 [hauke 2025-11-16]
+	Updated devel/py-ruff to 0.14.5 [wiz 2025-11-16]
