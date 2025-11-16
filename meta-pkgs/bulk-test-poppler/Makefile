@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/07/17 22:01:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/11/16 09:05:03 wiz Exp $
 
-DISTNAME=	bulk-test-poppler-20250717
+DISTNAME=	bulk-test-poppler-20251116
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -24,7 +24,7 @@ DEPENDS+=	krita-[0-9]*:../../graphics/krita
 DEPENDS+=	pdf2djvu-[0-9]*:../../print/pdf2djvu
 DEPENDS+=	pdf2svg-[0-9]*:../../converters/pdf2svg
 DEPENDS+=	pdfgrep-[0-9]*:../../textproc/pdfgrep
-DEPENDS+=	scribus-[0-9]*:../../print/scribus-qt5
+DEPENDS+=	scribus-[0-9]*:../../print/scribus
 DEPENDS+=	xpdf-[0-9]*:../../print/xpdf
 DEPENDS+=	xournalpp-[0-9]*:../../editors/xournalpp
 DEPENDS+=	zathura-pdf-poppler-[0-9]*:../../print/zathura-pdf-poppler
