@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/04/15 16:31:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/11/16 07:56:10 adam Exp $
 bin/pythran-${PYVERSSUFFIX}
 bin/pythran-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -3002,6 +3002,7 @@ ${PYSITELIB}/pythran/pythonic/include/numpy/fmin/reduce.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/fmod.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/fmod/accumulate.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/frexp.hpp
+${PYSITELIB}/pythran/pythonic/include/numpy/frombuffer.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/fromfile.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/fromfunction.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/fromiter.hpp
@@ -3444,6 +3445,7 @@ ${PYSITELIB}/pythran/pythonic/include/types/static_if.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/str.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/traits.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/tuple.hpp
+${PYSITELIB}/pythran/pythonic/include/types/type.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/uint16.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/uint32.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/uint64.hpp
@@ -3675,6 +3677,7 @@ ${PYSITELIB}/pythran/pythonic/numpy/fmin/reduce.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/fmod.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/fmod/accumulate.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/frexp.hpp
+${PYSITELIB}/pythran/pythonic/numpy/frombuffer.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/fromfile.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/fromfunction.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/fromiter.hpp
@@ -4119,6 +4122,7 @@ ${PYSITELIB}/pythran/pythonic/types/static_if.hpp
 ${PYSITELIB}/pythran/pythonic/types/str.hpp
 ${PYSITELIB}/pythran/pythonic/types/traits.hpp
 ${PYSITELIB}/pythran/pythonic/types/tuple.hpp
+${PYSITELIB}/pythran/pythonic/types/type.hpp
 ${PYSITELIB}/pythran/pythonic/types/uint16.hpp
 ${PYSITELIB}/pythran/pythonic/types/uint32.hpp
 ${PYSITELIB}/pythran/pythonic/types/uint64.hpp
