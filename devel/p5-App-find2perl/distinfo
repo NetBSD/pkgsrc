@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/11/16 02:56:10 scole Exp $
+
+BLAKE2s (App-find2perl-1.005.tar.gz) = 55abdf5050d2b052a14ebafbe110e0feb601112f3883ef48ffdb462ef2c93a36
+SHA512 (App-find2perl-1.005.tar.gz) = 5bd08eb3431a423b1eaf3bb79e11c3650c8212b8f222e16fbc613bbef86cd843d0ff1afb36b3513bb608e769bfe2966fc9325fa1b2c39c3594257d74c66d5255
+Size (App-find2perl-1.005.tar.gz) = 21365 bytes

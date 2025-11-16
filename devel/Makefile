@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4545 2025/11/16 02:43:53 scole Exp $
+# $NetBSD: Makefile,v 1.4546 2025/11/16 02:56:10 scole Exp $
 #
 
 COMMENT=	Development utilities
@@ -1422,6 +1422,7 @@ SUBDIR+=	p5-App-Prove-Plugin-ProgressBar-Each
 SUBDIR+=	p5-App-a2p
 SUBDIR+=	p5-App-cpanminus
 SUBDIR+=	p5-App-cpanoutdated
+SUBDIR+=	p5-App-find2perl
 SUBDIR+=	p5-App-perlbrew
 SUBDIR+=	p5-AppConfig
 SUBDIR+=	p5-AppConfig-Std
