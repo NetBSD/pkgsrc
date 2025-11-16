@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6761 2025/11/16 10:56:15 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6762 2025/11/16 11:58:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9810,3 +9810,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-protobuf to 6.33.1 [adam 2025-11-16]
 	Updated net/py-lexicon to 3.23.2 [adam 2025-11-16]
 	Updated devel/py-doctor to 25.10.1 [adam 2025-11-16]
+	Updated textproc/py-prettytable to 3.17.0 [adam 2025-11-16]
+	Updated devel/py-mmh3 to 5.2.0 [adam 2025-11-16]
+	Updated devel/py-cachetools to 6.2.2 [adam 2025-11-16]
+	Updated devel/py-canvasapi to 3.4.0 [adam 2025-11-16]
