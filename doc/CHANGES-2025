@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6755 2025/11/16 02:23:22 wen Exp $
+$NetBSD: CHANGES-2025,v 1.6756 2025/11/16 03:06:23 scole Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9794,3 +9794,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Perl-Version to 1.018 [wen 2025-11-16]
 	Updated devel/p5-PPI to 1.284 [wen 2025-11-16]
 	Updated devel/p5-PPIx-Regexp to 0.091 [wen 2025-11-16]
+	Added devel/p5-App-a2p version 1.013 [scole 2025-11-16]
+	Added devel/p5-App-find2perl version 1.005 [scole 2025-11-16]
