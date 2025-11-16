@@ -1,0 +1,3 @@
+a2p is a perl program which takes an awk script specified on the
+command line (or from standard input) and produces a comparable perl
+script on the standard output.
