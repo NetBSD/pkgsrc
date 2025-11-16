@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2025/04/14 10:04:42 adam Exp $
+# $NetBSD: Makefile,v 1.29 2025/11/16 07:59:58 adam Exp $
 
-DISTNAME=	asttokens-3.0.0
+DISTNAME=	asttokens-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asttokens/}
 
@@ -13,7 +12,7 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.3:../../devel/py-setuptools_scm
-TEST_DEPENDS+=	${PYPKGPREFIX}-astroid-[0-9]*:../../devel/py-astroid
+TEST_DEPENDS+=	${PYPKGPREFIX}-astroid>=2:../../devel/py-astroid
 
 USE_LANGUAGES=	# none
 
