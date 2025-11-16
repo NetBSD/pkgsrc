@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/11/12 11:58:19 leot Exp $
+# $NetBSD: Makefile,v 1.17 2025/11/16 11:21:57 adam Exp $
 
 NAME=		quickjs
 QJS_DATE=	2025-09-13
@@ -21,19 +21,15 @@ TEST_TARGET=	test
 AUTO_MKDIRS=	yes
 
 # Requires C11 atomics support
-USE_CC_FEATURES+=	c11
+USE_CC_FEATURES=	c11
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	lto
-
 .if ${OPSYS} == "NetBSD"
 HAS_ATOMIC_64!=	${CC} -E files/netbsd-has-atomic64.c | tail -1
-.  if (${HAS_ATOMIC_64} == "YES")
+.  if ${HAS_ATOMIC_64} == "YES"
 MAKE_ENV+=	CONFIG_BIGNUM=yes
 .  endif
-.elif ${OPSYS} == "Darwin" || ${OPSYS} == "Linux"
-PLIST.lto=	yes
 .else # Not NetBSD && not Linux
 # Presumed to be supported
 MAKE_ENV+=	CONFIG_BIGNUM=yes
