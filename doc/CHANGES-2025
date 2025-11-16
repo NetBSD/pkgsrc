@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6760 2025/11/16 10:46:50 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6761 2025/11/16 10:56:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9808,3 +9808,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/py-types-python-dateutil to 2.9.0.20251115 [adam 2025-11-16]
 	Updated devel/protobuf to 33.1 [adam 2025-11-16]
 	Updated devel/py-protobuf to 6.33.1 [adam 2025-11-16]
+	Updated net/py-lexicon to 3.23.2 [adam 2025-11-16]
+	Updated devel/py-doctor to 25.10.1 [adam 2025-11-16]
