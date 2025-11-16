@@ -1,10 +1,12 @@
-# $NetBSD: Makefile.common,v 1.4 2025/10/31 10:24:55 adam Exp $
+# $NetBSD: Makefile.common,v 1.5 2025/11/16 20:47:49 wiz Exp $
 # used by devel/py-uv/Makefile
 # used by devel/py-uv-build/Makefile
 
 UV_VERSION=	0.9.7
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+
+CFLAGS+=	-Wno-implicit-function-declaration
 
 PATCHDIR=	${.CURDIR}/../../devel/py-uv/patches
 
