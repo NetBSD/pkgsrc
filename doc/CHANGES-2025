@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6753 2025/11/16 02:10:54 wen Exp $
+$NetBSD: CHANGES-2025,v 1.6754 2025/11/16 02:20:08 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9792,3 +9792,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Perl-MinimumVersion to 1.44 [wen 2025-11-16]
 	Updated devel/p5-Perl-Tidy to 20250912 [wen 2025-11-16]
 	Updated devel/p5-Perl-Version to 1.018 [wen 2025-11-16]
+	Updated devel/p5-PPI to 1.284 [wen 2025-11-16]
