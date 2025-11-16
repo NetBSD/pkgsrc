@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2025/10/06 08:40:53 micha Exp $
+# $NetBSD: Makefile,v 1.23 2025/11/16 20:13:00 wiz Exp $
 
-DISTNAME=	utf8proc-2.11.0
+DISTNAME=	utf8proc-2.11.1
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=JuliaLang/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
