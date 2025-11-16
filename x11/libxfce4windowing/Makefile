@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/11/01 16:45:54 gutteridge Exp $
+# $NetBSD: Makefile,v 1.16 2025/11/16 21:54:55 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -12,6 +12,10 @@ USE_TOOLS+=		pkg-config
 REPLACE_PYTHON+=	xdt-gen-visibility
 
 MESON_ARGS+=		-Dx11=enabled
+# For build consistency; we don't need vala for our purposes, and if it happens
+# to be found in the environment, it will get auto-enabled and PLIST differences
+# occur.
+MESON_ARGS+=		-Dvala=disabled
 # Don't bother building tests as part of the general package. This causes build
 # failures on platforms with older GCC releases, e.g., NetBSD 9.x with GCC 7.5.
 MESON_ARGS+=		-Dtests=false
