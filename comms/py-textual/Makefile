@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2025/11/02 20:24:46 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2025/11/16 21:15:35 wiz Exp $
 
-DISTNAME=	textual-6.5.0
+DISTNAME=	textual-6.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	comms devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/textual/}
@@ -26,8 +26,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-textual-dev>=1.7:../../comms/py-textual-dev
 
 USE_LANGUAGES=	# none
 
-# as of 6.5.0
-# 33 failed, 3333 passed, 3 skipped, 4 xfailed, 1 xpassed, 1 warning
+# as of 6.6.0
+# 33 failed, 3338 passed, 3 skipped, 4 xfailed, 1 xpassed, 1 warning
 
 # https://github.com/Textualize/textual/issues/5854
 INSTALLATION_DIRS+=	${PYSITELIB}/resources
