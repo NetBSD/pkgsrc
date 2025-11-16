@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6758 2025/11/16 08:46:11 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6759 2025/11/16 10:42:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9802,3 +9802,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/py-asttokens to 3.0.1 [adam 2025-11-16]
 	Updated graphics/libimagequant to 4.4.1 [adam 2025-11-16]
 	Updated devel/py-syrupy to 5.0.0 [adam 2025-11-16]
+	Updated misc/py-trove-classifiers to 2025.11.14.15 [adam 2025-11-16]
+	Updated devel/py-inline-snapshot to 0.31.1 [adam 2025-11-16]
+	Updated textproc/py-types-docutils to 0.22.3.20251115 [adam 2025-11-16]
+	Updated time/py-types-python-dateutil to 2.9.0.20251115 [adam 2025-11-16]
