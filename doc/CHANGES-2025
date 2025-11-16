@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6779 2025/11/16 21:26:49 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6780 2025/11/16 21:40:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9831,3 +9831,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/miniflux to 2.2.14 [wiz 2025-11-16]
 	Updated graphics/openexr to 3.4.3 [wiz 2025-11-16]
 	Updated graphics/OpenJPH to 0.25.3 [wiz 2025-11-16]
+	Updated mail/rspamd to 3.14.0 [wiz 2025-11-16]
