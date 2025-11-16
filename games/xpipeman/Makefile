@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/08/22 17:36:13 tnn Exp $
+# $NetBSD: Makefile,v 1.26 2025/11/16 06:34:47 mrg Exp $
 #
 
 DISTNAME=	xpipeman-1.5
@@ -15,6 +15,11 @@ WRKSRC=		${WRKDIR}/xpipeman
 USE_IMAKE=	yes
 
 CPPFLAGS.SunOS+=	-DSYSV
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CPPFLAGS+=	-std=gnu89
+.endif
 
 SETGIDGAME=		yes
 CONF_FILES_PERMS=	share/xpipeman/xpipescores /var/games/xpipescores \
