@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2025/10/16 09:21:03 adam Exp $
+# $NetBSD: Makefile,v 1.75 2025/11/17 10:08:08 wiz Exp $
 
 DISTNAME=	cryptography_vectors-46.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,9 +13,6 @@ LICENSE=	apache-2.0 OR modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-build>=0.7.19:../../devel/py-uv-build
 
 USE_LANGUAGES=	# none
-
-pre-configure:
-	${LN} -sf ${PREFIX}/bin/uv-build-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/uv-build
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
