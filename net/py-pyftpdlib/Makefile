@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/04/20 12:32:50 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/11/17 09:48:50 adam Exp $
 
-DISTNAME=	pyftpdlib-2.0.1
+DISTNAME=	pyftpdlib-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyftpdlib/}
@@ -11,9 +11,9 @@ COMMENT=	Very fast asynchronous FTP server library
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
-TEST_DEPENDS+=	${PYPKGPREFIX}-pysendfile-[0-9]*:../../net/py-pysendfile
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-instafail-[0-9]*:../../devel/py-test-instafail
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} >= 312
@@ -27,7 +27,7 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} ftpbench ftpbench-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
 .include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
