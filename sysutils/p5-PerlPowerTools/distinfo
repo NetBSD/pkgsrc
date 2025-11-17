@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/11/17 04:44:45 scole Exp $
+
+BLAKE2s (PerlPowerTools-1.053.tar.gz) = 61176fe39ee977de6e21063301741d61af23dfdec42b17269b210db5a7e025ce
+SHA512 (PerlPowerTools-1.053.tar.gz) = a4b201be1ec3972c584824fc2ce6e79bffd437098f510852f3cdd9517cd12db94e61593dd72c80da4b9cba7cbe133f6a9d8b707f933deeb96d148f3fff577c0f
+Size (PerlPowerTools-1.053.tar.gz) = 420226 bytes

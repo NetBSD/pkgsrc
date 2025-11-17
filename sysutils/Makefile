@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1169 2025/10/21 13:42:55 bouyer Exp $
+# $NetBSD: Makefile,v 1.1170 2025/11/17 04:44:44 scole Exp $
 #
 
 COMMENT=	System utilities
@@ -550,6 +550,7 @@ SUBDIR+=	p5-Mac-AppleScript
 SUBDIR+=	p5-Mac-AppleScript-Glue
 SUBDIR+=	p5-Monitoring-Plugin
 SUBDIR+=	p5-Parse-Syslog
+SUBDIR+=	p5-PerlPowerTools
 SUBDIR+=	p5-Quota
 SUBDIR+=	p5-SSH-Batch
 SUBDIR+=	p5-Server-Starter
