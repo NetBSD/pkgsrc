@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6790 2025/11/17 11:24:14 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6791 2025/11/17 11:25:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9849,3 +9849,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-pyftpdlib to 2.1.0 [adam 2025-11-17]
 	Updated net/nextcloud-client to 3.17.3 [hauke 2025-11-17]
 	Updated devel/difftastic to 0.67.0 [pin 2025-11-17]
+	Updated devel/mise to 2025.11.5 [pin 2025-11-17]
