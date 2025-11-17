@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2025/11/15 11:57:44 ryoon Exp $
+$NetBSD: distinfo,v 1.27 2025/11/17 11:25:07 ryoon Exp $
 
 BLAKE2s (v4l-utils-1.32.0.tar.xz) = 6386fa6aff492060f49b3c44537b14a7f2b59c94b906e6a3e4b3049be4444a3f
 SHA512 (v4l-utils-1.32.0.tar.xz) = 5bf24c28ec66a7ac1a0c9ee976521d825d4c2f8abbbeb59c7ac55e89db10dde6ebb643d238d217d636d79fda363244558fee1effe8c5e8c573c1a3e957fe391f
@@ -16,4 +16,4 @@ SHA1 (patch-lib_libv4lconvert_control_libv4lcontrol.c) = e4a96570f22d837bbf72482
 SHA1 (patch-lib_libv4lconvert_libv4lconvert.c) = 3e248d1edbb52409a7d355ffd60e5b3cbe870fa7
 SHA1 (patch-lib_libv4lconvert_libv4lsyscall-priv.h) = c6dfcc4d84fb1553ebd0396e1b4a9e7e4f43417a
 SHA1 (patch-lib_libv4lconvert_processing_libv4lprocessing.h) = ecb02a055df546eb0f4bcea96f1a55e312495cdd
-SHA1 (patch-meson.build) = be1de5114fcc1f295701bb3a0e0e2ffae42b7eb8
+SHA1 (patch-meson.build) = a5d3be4215e8401af200c658b270445219a35b03
