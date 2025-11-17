@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2025/11/17 07:44:44 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/11/17 11:25:07 ryoon Exp $
 
 LIBV4L_VERS=	1.32.0
 DISTNAME=	v4l-utils-${LIBV4L_VERS}
+PKGREVISION=	1
 CATEGORIES=	graphics
 PKGNAME=	libv4l-${LIBV4L_VERS}
 MASTER_SITES=	https://www.linuxtv.org/downloads/v4l-utils/
@@ -16,7 +17,7 @@ FORTIFY_SUPPORTED=	no
 USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		bash gmake perl
+USE_TOOLS+=		gmake perl
 
 MESON_ARGS+=	-Dlibdvbv5=disabled
 MESON_ARGS+=	-Dv4l-utils=false
