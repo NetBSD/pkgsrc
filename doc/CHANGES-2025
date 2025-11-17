@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6794 2025/11/17 11:27:34 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6795 2025/11/17 13:44:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9853,3 +9853,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/libv4l to 1.32.0nb1 [ryoon 2025-11-17]
 	Updated multimedia/t-rec to 0.7.10 [pin 2025-11-17]
 	Updated textproc/television to 0.13.10 [pin 2025-11-17]
+	Updated net/nextcloud-client to 4.0.1 [adam 2025-11-17]
+	Updated net/py-minio to 7.2.18 [adam 2025-11-17]
