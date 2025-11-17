@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/11/15 11:57:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2025/11/17 07:44:44 wiz Exp $
 
 LIBV4L_VERS=	1.32.0
 DISTNAME=	v4l-utils-${LIBV4L_VERS}
@@ -16,7 +16,7 @@ FORTIFY_SUPPORTED=	no
 USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		bash gmake perl
 
 MESON_ARGS+=	-Dlibdvbv5=disabled
 MESON_ARGS+=	-Dv4l-utils=false
@@ -66,7 +66,7 @@ PLIST_VARS=	needs_videoio
 
 .include "../../mk/compiler.mk"
 
-.if !empty(PKGSRC_COMPILER:Mclang) || !empty(CC_VERSION:Mgcc-[6-9]*) || !empty(CC_VERSION:Mgcc-1[0-9].*)
+.if !empty(PKGSRC_COMPILER:Mclang) || ${CC_VERSION:Mgcc-[6-9]*} || ${CC_VERSION:Mgcc-1[0-9].*}
 CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 .else
 CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=500
