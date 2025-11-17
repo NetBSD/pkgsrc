@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/10/21 11:48:28 adam Exp $
+# $NetBSD: Makefile,v 1.28 2025/11/17 19:45:13 wiz Exp $
 
 DISTNAME=	node-v20.19.5
 EXTRACT_SUFX=	.tar.xz
@@ -45,6 +45,8 @@ minusx:
 .endif
 
 .include "../../lang/nodejs/Makefile.common"
+
+REPLACE_NODEJS+=	deps/corepack/dist/*.js
 
 .include "../../net/ngtcp2/buildlink3.mk"
 .include "../../www/nghttp3/buildlink3.mk"
