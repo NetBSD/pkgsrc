@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2025/11/17 07:36:03 adam Exp $
+# $NetBSD: Makefile.common,v 1.7 2025/11/17 08:11:23 adam Exp $
 # used by devel/py-uv/Makefile
 # used by devel/py-uv-build/Makefile
 
@@ -8,7 +8,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 CFLAGS+=	-Wno-implicit-function-declaration
 
-PATCHDIR=	${.CURDIR}/../../devel/py-uv/patches
+#PATCHDIR=	${.CURDIR}/../../devel/py-uv/patches
 
 # Depends on an unpublished crate. Can't use cargo.mk to fetch it.
 ASYNC_ZIP_REV=	f6a41d32866003c868d03ed791a89c794f61b703
