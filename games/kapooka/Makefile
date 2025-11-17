@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/01/06 21:49:14 ktnb Exp $
+# $NetBSD: Makefile,v 1.25 2025/11/17 11:00:50 wiz Exp $
 #
 
 DISTNAME=		kapooka_0.2
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kapooka/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://kapooka.sourceforge.net/
+HOMEPAGE=		https://kapooka.sourceforge.net/
 COMMENT=		Puzzle game
 
 WRKSRC=			${WRKDIR}/kapooka

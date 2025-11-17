@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/11/12 13:21:12 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/11/17 11:00:41 wiz Exp $
 
 DISTNAME=		vtcl-1.6.0
 PKGREVISION=		12
@@ -6,7 +6,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vtcl/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://vtcl.sourceforge.net/
+HOMEPAGE=		https://vtcl.sourceforge.net/
 COMMENT=		Visual Tcl/Tk application development environment
 
 USE_TOOLS+=	pax wish:run

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2025/10/23 20:40:19 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2025/11/17 11:01:41 wiz Exp $
 
 DISTNAME=	rox-session-0.28
 PKGREVISION=	69
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://rox.sourceforge.net/
+HOMEPAGE=	https://rox.sourceforge.net/
 COMMENT=	Very simple session manager
 
 DEPENDS+=	rox-lib>=2.0.2nb2:../../devel/rox-lib

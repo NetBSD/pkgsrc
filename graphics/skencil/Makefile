@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2025/04/24 14:14:40 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2025/11/17 11:00:59 wiz Exp $
 
 DISTNAME=	skencil-0.6.17
 PKGREVISION=	22
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sketch/}
 
 MAINTAINER=	uebayasi@NetBSD.org
-HOMEPAGE=	http://sketch.sourceforge.net/
+HOMEPAGE=	https://sketch.sourceforge.net/
 COMMENT=	Interactive drawing program
 
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/03/20 11:58:13 nia Exp $
+# $NetBSD: Makefile,v 1.24 2025/11/17 11:01:19 wiz Exp $
 
 DISTNAME=		clusterit-2.5
 PKGREVISION=		2
@@ -6,7 +6,7 @@ CATEGORIES=		parallel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clusterit/}
 
 MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://clusterit.sourceforge.net/
+HOMEPAGE=		https://clusterit.sourceforge.net/
 COMMENT=		Clustering package for unix
 
 GNU_CONFIGURE=		YES

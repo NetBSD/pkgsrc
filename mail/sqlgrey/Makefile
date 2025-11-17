@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/07/04 08:47:26 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/11/17 11:01:06 wiz Exp $
 
 DISTNAME=		sqlgrey-1.8.0
 PKGREVISION=		11
@@ -6,7 +6,7 @@ CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sqlgrey/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://sqlgrey.sourceforge.net/
+HOMEPAGE=		https://sqlgrey.sourceforge.net/
 COMMENT=		Postfix greylisting policy daemon
 LICENSE=		gnu-gpl-v2
 

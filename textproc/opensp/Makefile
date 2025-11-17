@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2024/09/12 22:31:17 gutteridge Exp $
+# $NetBSD: Makefile,v 1.55 2025/11/17 11:01:33 wiz Exp $
 #
 
 DISTNAME=	OpenSP-1.5.2
@@ -8,7 +8,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openjade/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://openjade.sourceforge.net/doc/index.htm
+HOMEPAGE=	https://openjade.sourceforge.net/doc/index.htm
 COMMENT=	SGML parser, successor to "sp"
 
 TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto

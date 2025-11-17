@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/03/20 11:57:45 nia Exp $
+# $NetBSD: Makefile,v 1.28 2025/11/17 11:00:54 wiz Exp $
 
 DISTNAME=	xtux-arena-src-nov-15
 PKGNAME=	xtux-0.2000.11.15
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xtux/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xtux.sourceforge.net/
+HOMEPAGE=	https://xtux.sourceforge.net/
 COMMENT=	2D multi-player shootout using images from the Open Software scene
 
 #--- server ---

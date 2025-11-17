@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/03/20 11:57:34 nia Exp $
+# $NetBSD: Makefile,v 1.17 2025/11/17 11:00:42 wiz Exp $
 #
 
 DISTNAME=	ex-040103
@@ -8,7 +8,7 @@ CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ex-vi/files/ex-vi/040103/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ex-vi.sourceforge.net/
+HOMEPAGE=	https://ex-vi.sourceforge.net/
 COMMENT=	Berkeley vi 3.7
 LICENSE=	original-bsd
 

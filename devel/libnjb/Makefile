@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2020/03/24 16:44:41 nia Exp $
+# $NetBSD: Makefile,v 1.12 2025/11/17 11:00:37 wiz Exp $
 
 DISTNAME=		libnjb-2.2.7
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libnjb/}
 
 MAINTAINER=		ku3@sl.aanet.ru
-HOMEPAGE=		http://libnjb.sourceforge.net/
+HOMEPAGE=		https://libnjb.sourceforge.net/
 COMMENT=		Communicating with some Creative and Dell audio players
 LICENSE=		modified-bsd
 

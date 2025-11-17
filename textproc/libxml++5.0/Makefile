@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/10/23 20:39:35 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/11/17 11:01:32 wiz Exp $
 
 DISTNAME=	libxml++-5.0.1
 PKGNAME=	${DISTNAME:S/libxml++/libxml++5.0/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml++/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	evaldo@gardenali.biz
-HOMEPAGE=	http://libxmlplusplus.sourceforge.net/
+HOMEPAGE=	https://libxmlplusplus.sourceforge.net/
 COMMENT=	C++ wrapper for the libxml XML parser library (5.0 API)
 LICENSE=	gnu-lgpl-v2.1
 

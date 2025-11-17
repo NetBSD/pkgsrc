@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/11/12 13:21:43 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2025/11/17 11:00:52 wiz Exp $
 #
 
 DISTNAME=		scid-3.6.1
@@ -7,7 +7,7 @@ CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scid/}
 
 MAINTAINER=		luapzz@gmail.com
-HOMEPAGE=		http://scid.sourceforge.net/
+HOMEPAGE=		https://scid.sourceforge.net/
 COMMENT=		Shane's Chess Information Database
 
 USE_PKGLOCALEDIR=	yes

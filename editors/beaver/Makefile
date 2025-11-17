@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2025/10/23 20:36:40 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2025/11/17 11:00:41 wiz Exp $
 
 DISTNAME=	beaver-0.4.1
 PKGREVISION=	17
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=beaver-editor/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	vincent.derrien@ahoup.net
-HOMEPAGE=	http://beaver-editor.sourceforge.net/
+HOMEPAGE=	https://beaver-editor.sourceforge.net/
 COMMENT=	Lightweight GTK+2 text editor with syntax highlighting
 LICENSE=	gnu-gpl-v2
 

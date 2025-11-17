@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2025/10/29 09:23:11 nia Exp $
+# $NetBSD: Makefile,v 1.28 2025/11/17 11:00:52 wiz Exp $
 
 DISTNAME=	quakespasm-0.96.3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quakespasm/}
 
 MAINTAINER=	snj@NetBSD.org
-HOMEPAGE=	http://quakespasm.sourceforge.net/
+HOMEPAGE=	https://quakespasm.sourceforge.net/
 COMMENT=	Enhanced Quake engine using SDL
 LICENSE=	gnu-gpl-v2
 

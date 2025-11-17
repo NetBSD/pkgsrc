@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2022/06/28 11:30:59 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2025/11/17 11:00:24 wiz Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
@@ -8,7 +8,7 @@ MASTER_SITES=		# ftp://ftp.kreonet.re.kr/tools/benchmark/lmbench/old/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://lmbench.sourceforge.net/
+HOMEPAGE=		https://lmbench.sourceforge.net/
 COMMENT=		Complete benchmark that gives a large amount of information
 
 USE_TOOLS+=		gmake perl:run

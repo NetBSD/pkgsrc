@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2025/09/21 21:22:39 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2025/11/17 11:00:26 wiz Exp $
 #
 # used by cad/wcalc/Makefile
 # used by cad/wcalc-docs/Makefile
@@ -15,7 +15,7 @@ CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wcalc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wcalc.sourceforge.net/
+HOMEPAGE=	https://wcalc.sourceforge.net/
 
 DISTINFO_FILE=	${.CURDIR}/../../cad/wcalc/distinfo
 PATCHDIR=	${.CURDIR}/../../cad/wcalc/patches

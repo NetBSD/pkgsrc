@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/26 05:26:12 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2025/11/17 11:00:21 wiz Exp $
 #
 
 DISTNAME=	mp3val-0.1.8-src
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3val/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mp3val.sourceforge.net/
+HOMEPAGE=	https://mp3val.sourceforge.net/
 COMMENT=	Checker for mp3
 LICENSE=	gnu-gpl-v2
 

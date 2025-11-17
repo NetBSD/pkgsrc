@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/03/20 11:58:10 nia Exp $
+# $NetBSD: Makefile,v 1.20 2025/11/17 11:01:16 wiz Exp $
 
 DISTNAME=	omniORBpy-3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=omniorb/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://omniorb.sourceforge.net/
+HOMEPAGE=	https://omniorb.sourceforge.net/
 COMMENT=	Python interface to omniORB
 
 PLIST_SUBST+=	PYINC=${PYINC} PYSITELIB=${PYSITELIB}

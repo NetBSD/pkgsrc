@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/22 18:41:21 pho Exp $
+# $NetBSD: Makefile,v 1.6 2025/11/17 11:00:45 wiz Exp $
 #
 
 DISTNAME=	httpfs_with_static_binaries_${DIST_VER}
@@ -8,7 +8,7 @@ CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=httpfs/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://httpfs.sourceforge.net/
+HOMEPAGE=	https://httpfs.sourceforge.net/
 COMMENT=	FUSE HTTP filesystem
 LICENSE=	gnu-gpl-v2
 

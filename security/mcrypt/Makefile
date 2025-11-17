@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/03/20 11:58:17 nia Exp $
+# $NetBSD: Makefile,v 1.30 2025/11/17 11:01:22 wiz Exp $
 
 DISTNAME=	mcrypt-2.6.8
 PKGREVISION=	4
@@ -6,7 +6,7 @@ CATEGORIES=	security devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcrypt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mcrypt.sourceforge.net/
+HOMEPAGE=	https://mcrypt.sourceforge.net/
 COMMENT=	Replacement to crypt(1), supports many crypto algorithms
 
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2025/04/17 21:49:43 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2025/11/17 11:00:16 wiz Exp $
 #
 
 DISTNAME=	cddb.bundle-0.2
@@ -8,7 +8,7 @@ CATEGORIES=	audio gnustep
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gsburn/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gsburn.sourceforge.net/
+HOMEPAGE=	https://gsburn.sourceforge.net/
 COMMENT=	CDDB client bundle
 LICENSE=	gnu-gpl-v2
 

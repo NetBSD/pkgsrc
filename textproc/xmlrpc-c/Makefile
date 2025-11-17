@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2025/10/05 19:26:24 js Exp $
+# $NetBSD: Makefile,v 1.81 2025/11/17 11:01:35 wiz Exp $
 
 DISTNAME=	xmlrpc-c-1.51.04
 # the "super stable" branch
@@ -15,7 +15,7 @@ EXTRACT_OPTS+=	-c none
 MAKE_JOBS_SAFE=	no
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xmlrpc-c.sourceforge.net/
+HOMEPAGE=	https://xmlrpc-c.sourceforge.net/
 COMMENT=	Library for writing an XML-RPC server or client in C or C++
 LICENSE=	modified-bsd
 

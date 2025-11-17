@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/01/10 20:37:22 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/11/17 11:01:16 wiz Exp $
 
 DISTNAME=	pylibpcap-0.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pylibpcap/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pylibpcap.sourceforge.net/
+HOMEPAGE=	https://pylibpcap.sourceforge.net/
 COMMENT=	Python wrapper for libpcap
 LICENSE=	modified-bsd
 

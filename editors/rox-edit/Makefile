@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/08/14 05:24:19 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/11/17 11:00:42 wiz Exp $
 #
 
 DISTNAME=	edit-2.0
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://rox.sourceforge.net/desktop/node/20
+HOMEPAGE=	https://rox.sourceforge.net/desktop/node/20
 COMMENT=	Simple text editor for ROX
 
 DEPENDS+=	rox-lib>=2.0.2nb2:../../devel/rox-lib

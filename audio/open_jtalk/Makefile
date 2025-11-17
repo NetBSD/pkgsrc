@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2020/06/28 02:33:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2025/11/17 11:00:22 wiz Exp $
 
 DISTNAME=	open_jtalk-1.11
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=open-jtalk/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://open-jtalk.sourceforge.net/
+HOMEPAGE=	https://open-jtalk.sourceforge.net/
 COMMENT=	Japanese text-to-speech system
 LICENSE=	modified-bsd
 

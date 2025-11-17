@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/03/20 11:57:30 nia Exp $
+# $NetBSD: Makefile,v 1.14 2025/11/17 11:00:38 wiz Exp $
 #
 
 DISTNAME=	pardiff-0.9.4
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pardiff/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pardiff.sourceforge.net/
+HOMEPAGE=	https://pardiff.sourceforge.net/
 COMMENT=	Converts diff output to paralleled (side-by-side) format
 
 GNU_CONFIGURE=	yes

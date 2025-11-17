@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/01/06 21:49:07 ktnb Exp $
+# $NetBSD: Makefile,v 1.28 2025/11/17 11:00:44 wiz Exp $
 
 DISTNAME=		pearpc-0.5
 PKGREVISION=		2
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pearpc/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://pearpc.sourceforge.net/
+HOMEPAGE=		https://pearpc.sourceforge.net/
 COMMENT=		PowerPC emulator
 
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2022/04/23 21:40:41 tnn Exp $
+# $NetBSD: Makefile.common,v 1.14 2025/11/17 11:01:10 wiz Exp $
 #
 # used by multimedia/flashplayer/Makefile
 
@@ -8,7 +8,7 @@ CATEGORIES=	multimedia
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gplflash.sourceforge.net/
+HOMEPAGE=	https://gplflash.sourceforge.net/
 
 USE_LANGUAGES=	c c++
 

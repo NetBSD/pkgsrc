@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2022/04/14 11:55:56 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2025/11/17 11:00:29 wiz Exp $
 
 DISTNAME=	latex2rtf-2.3.10
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=latex2rtf/}
 MASTER_SITES+=	${MASTER_SITE_TEX_CTAN:=support/latex2rtf/}
 
 MAINTAINER=	brook@nmsu.edu
-HOMEPAGE=	http://latex2rtf.sourceforge.net/
+HOMEPAGE=	https://latex2rtf.sourceforge.net/
 COMMENT=	LaTeX to RTF converter
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 

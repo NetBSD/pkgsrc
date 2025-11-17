@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2020/03/20 11:58:34 nia Exp $
+# $NetBSD: Makefile,v 1.5 2025/11/17 11:01:38 wiz Exp $
 
 DISTNAME=	htmlcxx-0.85
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=htmlcxx/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://htmlcxx.sourceforge.net/
+HOMEPAGE=	https://htmlcxx.sourceforge.net/
 COMMENT=	Simple non-validating CSS1 and HTML parser for C++
 LICENSE=	gnu-lgpl-v2 AND apache-2.0
 

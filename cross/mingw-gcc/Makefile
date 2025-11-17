@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/08/09 08:24:39 nia Exp $
+# $NetBSD: Makefile,v 1.14 2025/11/17 11:00:30 wiz Exp $
 
 DISTNAME=		mingw-gcc-${DIST_VERSION}
 PKGNAME=		${DISTNAME:S/-${DIST_VERSION}/-${GCC_VERSION}/}
@@ -10,7 +10,7 @@ DISTFILES=		gcc-core-${DIST_VERSION}-src.tar.gz \
 			gcc-objc-${DIST_VERSION}-src.tar.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://mingw.sourceforge.net/
+HOMEPAGE=		https://mingw.sourceforge.net/
 COMMENT=		GNU C Compiler for win32 cross-development
 
 USE_TOOLS+=		gmake
