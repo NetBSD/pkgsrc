@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6787 2025/11/17 09:35:47 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6788 2025/11/17 09:49:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9845,3 +9845,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django-allauth to 65.13.0 [adam 2025-11-17]
 	Updated devel/py-cucumber-tag-expressions to 8.0.0 [adam 2025-11-17]
 	Updated textproc/py-pdf to 6.3.0 [adam 2025-11-17]
+	Updated math/py-numpy to 2.3.5 [adam 2025-11-17]
+	Updated net/py-pyftpdlib to 2.1.0 [adam 2025-11-17]
