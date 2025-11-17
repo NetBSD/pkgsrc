@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2025/11/11 22:13:35 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2025/11/17 11:05:21 wiz Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtbase-${QTVERSION}
@@ -111,9 +111,6 @@ CWRAPPERS_APPEND.cc+=	-lgcc
 CWRAPPERS_APPEND.cxx+=	-lgcc
 .endif
 
-REPLACE_PERL+=		libexec/syncqt.pl
-REPLACE_PERL+=		mkspecs/features/data/unix/findclasslist.pl
-REPLACE_BASH+=		util/android/android_emulator_launcher.sh
 REPLACE_PYTHON+=	util/testrunner/sanitizer-testrunner.py
 REPLACE_PYTHON+=	util/testrunner/qt-testrunner.py
 
