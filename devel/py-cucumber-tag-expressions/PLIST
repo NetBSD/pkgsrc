@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2025/08/04 08:00:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/11/17 09:32:22 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/cucumber_tag_expressions/__init__.py
 ${PYSITELIB}/cucumber_tag_expressions/__init__.pyc
 ${PYSITELIB}/cucumber_tag_expressions/__init__.pyo
