@@ -1,15 +1,15 @@
-$NetBSD: patch-SCons_Platform_____init____.py,v 1.1 2023/06/07 18:25:04 wiz Exp $
+$NetBSD: patch-SCons_Platform_____init____.py,v 1.2 2025/11/17 07:43:46 adam Exp $
 
 Do not treat SunOS as non-posix, it causes massive breakage.
 
---- SCons/Platform/__init__.py.orig	2023-01-24 04:14:53.000000000 +0000
+--- SCons/Platform/__init__.py.orig	2025-11-16 22:02:53.000000000 +0000
 +++ SCons/Platform/__init__.py
-@@ -67,8 +67,6 @@ def platform_default():
+@@ -76,8 +76,6 @@ def platform_default():
              return 'cygwin'
-         elif sys.platform.find('irix') != -1:
+         elif 'irix' in sys.platform:
              return 'irix'
--        elif sys.platform.find('sunos') != -1:
+-        elif 'sunos' in sys.platform:
 -            return 'sunos'
-         elif sys.platform.find('hp-ux') != -1:
+         elif 'hp-ux' in sys.platform:
              return 'hpux'
-         elif sys.platform.find('aix') != -1:
+         elif 'aix' in sys.platform:
