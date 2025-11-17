@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2025/05/06 10:31:11 hauke Exp $
+$NetBSD: distinfo,v 1.6 2025/11/17 10:23:50 hauke Exp $
 
-BLAKE2s (nextcloud-client-3.16.4.tar.gz) = ffb9b7445191eaf6937f23dba7823712b24b9a9fea3985ffa62a7d2b46ea2f6a
-SHA512 (nextcloud-client-3.16.4.tar.gz) = 86ed8c390cc2e616b6d3dfdcb6756f0fd72228b259c69d498ca12c29107bb71c817832eb72d3c48823a7ea5167a0f40d5e5aaa27f14d63ea9808ca476cf2fdb5
-Size (nextcloud-client-3.16.4.tar.gz) = 15612642 bytes
+BLAKE2s (nextcloud-client-3.17.3.tar.gz) = 18dfd968de367726470eedec012a258a207c56c1bbd9da80c6078fd35f940996
+SHA512 (nextcloud-client-3.17.3.tar.gz) = 827de1fec1ca9874eb89bb8614a82f2ae6ba6f40f32dce59218204b449b3490469d30d2d3b5fc369720fa5acf38b8a254d1f33be50f97b801ae6911b29756aff
+Size (nextcloud-client-3.17.3.tar.gz) = 9553123 bytes
 SHA1 (patch-CMakeLists.txt) = 65c8cb765a3b0a05c95687426838a2f48ba65dfa
+SHA1 (patch-src_gui_CMakeLists.txt) = 0bda369d63d9b4a99388be4483ec1660e28a99e5

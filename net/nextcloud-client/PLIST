@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/03/31 06:20:58 plunky Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/11/17 10:23:50 hauke Exp $
 bin/nextcloud
 bin/nextcloudcmd
 include/nextcloudsync/creds/abstractcredentials.h
@@ -88,7 +88,6 @@ share/icons/hicolor/72x72/apps/Nextcloud_warn_shared.png
 share/mime/packages/nextcloud.xml
 share/nautilus-python/extensions/syncstate-Nextcloud.py
 share/nemo-python/extensions/syncstate-Nextcloud.py
-share/nextcloud/i18n/client_TW.qm
 share/nextcloud/i18n/client_af.qm
 share/nextcloud/i18n/client_ar.qm
 share/nextcloud/i18n/client_bg.qm
@@ -143,6 +142,7 @@ share/nextcloud/i18n/client_sk.qm
 share/nextcloud/i18n/client_sl.qm
 share/nextcloud/i18n/client_sr.qm
 share/nextcloud/i18n/client_sv.qm
+share/nextcloud/i18n/client_sw.qm
 share/nextcloud/i18n/client_th.qm
 share/nextcloud/i18n/client_tr.qm
 share/nextcloud/i18n/client_ug.qm
