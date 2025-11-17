@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2025/10/09 07:57:34 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2025/11/17 14:01:19 adam Exp $
 
-DISTNAME=	poetry-2.1.4
+DISTNAME=	poetry-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/poetry/}
 
@@ -14,13 +13,12 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-build>=1.2.1:../../devel/py-build
 DEPENDS+=	${PYPKGPREFIX}-cachecontrol>=0.14.0:../../devel/py-cachecontrol
 DEPENDS+=	${PYPKGPREFIX}-cleo>=2.1.0:../../comms/py-cleo
-DEPENDS+=	${PYPKGPREFIX}-crashtest>=0.4.1:../../misc/py-crashtest
-DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.22.6:../../devel/py-dulwich
+DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.24.0:../../devel/py-dulwich
 DEPENDS+=	${PYPKGPREFIX}-fastjsonschema>=2.18.0:../../textproc/py-fastjsonschema
 DEPENDS+=	${PYPKGPREFIX}-findpython>=0.6.2:../../lang/py-findpython
 DEPENDS+=	${PYPKGPREFIX}-installer>=0.7.0:../../misc/py-installer
 DEPENDS+=	${PYPKGPREFIX}-keyring>=25.1.0:../../security/py-keyring
-DEPENDS+=	${PYPKGPREFIX}-packaging>=24.0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-packaging>=24.2:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pbs-installer>=2025.1.6:../../misc/py-pbs-installer
 DEPENDS+=	${PYPKGPREFIX}-pkginfo>=1.12:../../devel/py-pkginfo
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.0.0:../../misc/py-platformdirs

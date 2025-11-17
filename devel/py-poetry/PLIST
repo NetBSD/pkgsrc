@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/09/30 14:23:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/11/17 14:01:19 adam Exp $
 bin/poetry-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -544,6 +544,9 @@ ${PYSITELIB}/poetry/utils/helpers.pyo
 ${PYSITELIB}/poetry/utils/isolated_build.py
 ${PYSITELIB}/poetry/utils/isolated_build.pyc
 ${PYSITELIB}/poetry/utils/isolated_build.pyo
+${PYSITELIB}/poetry/utils/log_utils.py
+${PYSITELIB}/poetry/utils/log_utils.pyc
+${PYSITELIB}/poetry/utils/log_utils.pyo
 ${PYSITELIB}/poetry/utils/password_manager.py
 ${PYSITELIB}/poetry/utils/password_manager.pyc
 ${PYSITELIB}/poetry/utils/password_manager.pyo
