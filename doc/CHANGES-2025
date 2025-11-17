@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6792 2025/11/17 11:25:19 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.6793 2025/11/17 11:26:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9851,3 +9851,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/difftastic to 0.67.0 [pin 2025-11-17]
 	Updated devel/mise to 2025.11.5 [pin 2025-11-17]
 	Updated graphics/libv4l to 1.32.0nb1 [ryoon 2025-11-17]
+	Updated multimedia/t-rec to 0.7.10 [pin 2025-11-17]
