@@ -1,19 +1,16 @@
-# $NetBSD: Makefile,v 1.1 2025/08/04 08:00:59 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/11/17 09:32:22 adam Exp $
 
-DISTNAME=	cucumber_tag_expressions-6.2.0
+DISTNAME=	cucumber_tag_expressions-8.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cucumber_tag_expressions/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.org/project/cucumber_tag_expressions/
+HOMEPAGE=	https://github.com/cucumber/tag-expressions
 COMMENT=	Provides a tag-expression parser and evaluation logic for cucumber/behave
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-html-[0-9]*:../../devel/py-test-html
-
-# TODO: Extract dependencies from pyproject.toml
+TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-build>=0.9.0:../../devel/py-uv-build
 
 USE_LANGUAGES=	# none
 
