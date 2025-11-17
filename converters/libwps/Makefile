@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2025/09/27 09:57:10 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2025/11/17 11:00:29 wiz Exp $
 
 DISTNAME=	libwps-0.4.12
 PKGREVISION=	10
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libwps/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libwps.sourceforge.net/
+HOMEPAGE=	https://libwps.sourceforge.net/
 COMMENT=	Library for importing Microsoft Works documents
 LICENSE=	gnu-lgpl-v2.1
 

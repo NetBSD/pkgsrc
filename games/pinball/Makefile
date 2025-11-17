@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/01/06 21:49:16 ktnb Exp $
+# $NetBSD: Makefile,v 1.3 2025/11/17 11:00:51 wiz Exp $
 
 DISTNAME=	pinball-0.3.20201218
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pinball/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pinball.sourceforge.net/
+HOMEPAGE=	https://pinball.sourceforge.net/
 COMMENT=	Pinball simulator for Unix systems
 LICENSE=	gnu-gpl-v2
 

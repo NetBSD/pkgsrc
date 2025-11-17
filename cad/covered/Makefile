@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2025/09/21 21:22:37 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2025/11/17 11:00:26 wiz Exp $
 #
 
 DISTNAME=	covered-0.7.10
@@ -7,7 +7,7 @@ CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=covered/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://covered.sourceforge.net/
+HOMEPAGE=	https://covered.sourceforge.net/
 COMMENT=	Verilog code coverage analyzer (stable release version)
 LICENSE=	gnu-gpl-v2
 

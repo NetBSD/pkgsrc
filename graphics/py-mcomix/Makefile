@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2025/10/23 20:37:44 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/11/17 11:00:58 wiz Exp $
 
 DISTNAME=	mcomix-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcomix/}
 
 MAINTAINER=	nonakap@gmail.com
-HOMEPAGE=	http://mcomix.sourceforge.net/
+HOMEPAGE=	https://mcomix.sourceforge.net/
 COMMENT=	GTK+ comic book viewer
 LICENSE=	gnu-gpl-v2
 

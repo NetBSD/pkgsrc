@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/10/24 22:10:14 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/11/17 11:01:12 wiz Exp $
 #
 
 DISTNAME=	echoping-6.0.2
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=echoping/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://echoping.sourceforge.net/
+#HOMEPAGE=	https://echoping.sourceforge.net/
 COMMENT=	Test performance of a remote TCP service
 
 .include "../../mk/bsd.prefs.mk"

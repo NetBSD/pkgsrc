@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/03/20 11:58:29 nia Exp $
+# $NetBSD: Makefile,v 1.13 2025/11/17 11:01:34 wiz Exp $
 #
 
 DISTNAME=	TclDOM-1.6
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 # newer releases are on sourceforge
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tclxml.sourceforge.net/tcldom.html
+HOMEPAGE=	https://tclxml.sourceforge.net/tcldom.html
 COMMENT=	DOM implementation for use with TclXML or TclExpat
 
 DEPENDS+=	tcl-xml-[0-9]*:../../textproc/tcl-xml

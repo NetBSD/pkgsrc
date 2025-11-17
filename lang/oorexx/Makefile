@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/08/20 11:35:04 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/11/17 11:01:02 wiz Exp $
 #
 
 DISTNAME=	oorexx-5.0.0-12583
@@ -11,7 +11,7 @@ DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	ooRexx-${PKGVERSION_NOREV}-pdf.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://oorexx.sourceforge.net/
+HOMEPAGE=	https://oorexx.sourceforge.net/
 COMMENT=	Powerful typeless object-oriented scripting language
 LICENSE=	gnu-gpl-v2 AND cpl-1.0
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2025/10/23 20:36:09 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2025/11/17 11:00:29 wiz Exp $
 #
 
 DISTNAME=		wv2-0.2.3
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wvware/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		markd@NetBSD.org
-HOMEPAGE=		http://wvware.sourceforge.net/
+HOMEPAGE=		https://wvware.sourceforge.net/
 COMMENT=		Library to access Microsoft Word files
 
 USE_PKGLOCALEDIR=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2025/10/23 20:36:54 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2025/11/17 11:00:45 wiz Exp $
 
 DISTNAME=	gphotofs-0.5
 PKGNAME=	fuse-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gphoto.sourceforge.net/proj/gphotofs/
+HOMEPAGE=	https://gphoto.sourceforge.net/proj/gphotofs/
 COMMENT=	FUSE filesystem for accessing digital cameras
 LICENSE=	gnu-gpl-v2
 

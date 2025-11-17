@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2025/01/06 21:49:04 ktnb Exp $
+# $NetBSD: Makefile,v 1.27 2025/11/17 11:00:41 wiz Exp $
 #
 
 DISTNAME=	biew-${BIEWVER:S/.//g}-src
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=beye/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://beye.sourceforge.net/en/beye.html
+#HOMEPAGE=	https://beye.sourceforge.net/en/beye.html
 COMMENT=	Binary viewer/editor
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/03/20 11:58:29 nia Exp $
+# $NetBSD: Makefile,v 1.7 2025/11/17 11:01:34 wiz Exp $
 #
 
 DISTNAME=	scrollkeeper-omf.dtd
@@ -8,7 +8,7 @@ MASTER_SITES=	http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/
 EXTRACT_SUFX=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://scrollkeeper.sourceforge.net/
+HOMEPAGE=	https://scrollkeeper.sourceforge.net/
 COMMENT=	DTD from the Scrollkeeper package
 #LICENSE=	# TODO: (see mk/license.mk)
 

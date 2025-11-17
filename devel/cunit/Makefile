@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/05/06 08:40:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2025/11/17 11:00:34 wiz Exp $
 
 DISTNAME=	CUnit-2.1-3
 PKGNAME=	CUnit-2.1.3
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cunit/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cunit.sourceforge.net/
+HOMEPAGE=	https://cunit.sourceforge.net/
 COMMENT=	C Unit checking test software
 LICENSE=	gnu-gpl-v2
 

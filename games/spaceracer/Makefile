@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/01/06 21:49:18 ktnb Exp $
+# $NetBSD: Makefile,v 1.19 2025/11/17 11:00:53 wiz Exp $
 #
 
 DISTNAME=		spaceracer-0.2.4
@@ -8,7 +8,7 @@ MASTER_SITES=		http://spaceracer.sourceforge.net/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://spaceracer.sourceforge.net/
+HOMEPAGE=		https://spaceracer.sourceforge.net/
 COMMENT=		3D car racing game
 
 USE_LANGUAGES=		c c++

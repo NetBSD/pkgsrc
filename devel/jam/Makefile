@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2021/02/05 08:08:59 schmonz Exp $
+# $NetBSD: Makefile,v 1.20 2025/11/17 11:00:36 wiz Exp $
 #
 
 DISTNAME=	ft${PKGNAME_NOREV}
@@ -10,8 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://freetype.sourceforge.net/jam/index.html
-#HOMEPAGE=	http://www.perforce.com/jam/jam.html
+HOMEPAGE=	https://freetype.sourceforge.net/jam/index.html
+#HOMEPAGE=	https://www.perforce.com/jam/jam.html
 COMMENT=	Program construction tool, like make(1)
 
 CONFLICTS=	acunia-jam-[0-9]*

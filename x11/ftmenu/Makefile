@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2025/10/23 20:39:53 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2025/11/17 11:01:40 wiz Exp $
 #
 
 DISTNAME=	ftmenu-0.3
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ftmenu/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ftmenu.sourceforge.net/
+HOMEPAGE=	https://ftmenu.sourceforge.net/
 COMMENT=	Fluxbox Tray Menu
 
 GNU_CONFIGURE=		YES

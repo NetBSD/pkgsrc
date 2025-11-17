@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.30 2024/05/08 12:08:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2025/11/17 11:00:34 wiz Exp $
 
 DISTNAME=	cgdb-0.7.1
 CATEGORIES=	devel
 MASTER_SITES=	http://cgdb.me/files/
 
 MAINTAINER=	kamil@NetBSD.org
-HOMEPAGE=	http://cgdb.sourceforge.net/
+HOMEPAGE=	https://cgdb.sourceforge.net/
 COMMENT=	Curses-based interface to the GNU Debugger (GDB)
 LICENSE=	gnu-gpl-v2
 

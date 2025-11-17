@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2024/04/24 14:39:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.54 2025/11/17 11:01:19 wiz Exp $
 
 DISTNAME=		trn-4.0-test77
 PKGNAME=		trn-4.77
@@ -7,7 +7,7 @@ CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=trn/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://trn.sourceforge.net/
+HOMEPAGE=		https://trn.sourceforge.net/
 COMMENT=		Threaded version of rn, the classic news reader
 LICENSE=		trn-license
 

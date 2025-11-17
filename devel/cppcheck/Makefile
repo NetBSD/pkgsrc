@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2025/10/23 20:36:17 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2025/11/17 11:00:34 wiz Exp $
 
 DISTNAME=	cppcheck-2.8
 PKGREVISION=	21
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cppcheck/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	http://cppcheck.sourceforge.net/
+HOMEPAGE=	https://cppcheck.sourceforge.net/
 COMMENT=	Tool for static C/C++ code analysis
 LICENSE=	gnu-gpl-v3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/01/26 05:26:22 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2025/11/17 11:00:33 wiz Exp $
 #
 
 DISTNAME=	cbrowser-0.8
@@ -7,7 +7,7 @@ CATEGORIES=	devel tk
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cbrowser/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cbrowser.sourceforge.net/
+HOMEPAGE=	https://cbrowser.sourceforge.net/
 COMMENT=	Graphical C/C++ source code browsing tool, and call graph viewer
 
 DEPENDS+=	cscope-[0-9]*:../../devel/cscope

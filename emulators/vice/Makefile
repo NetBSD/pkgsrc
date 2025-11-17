@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.201 2025/10/23 20:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.202 2025/11/17 11:00:44 wiz Exp $
 
 DISTNAME=	vice-3.9
 PKGREVISION=	8
@@ -6,7 +6,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vice-emu/}
 
 MAINTAINER=	rhialto@NetBSD.org
-HOMEPAGE=	http://vice-emu.sourceforge.net/
+HOMEPAGE=	https://vice-emu.sourceforge.net/
 COMMENT=	Emulator for C64, C128, CBM-II, PET, VIC20, Plus4 and C16
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2025/09/27 09:57:37 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2025/11/17 11:01:31 wiz Exp $
 
 DISTNAME=		clucene-core-2.3.3.4
 PKGNAME=		lib${DISTNAME:S/-core-/-/}
@@ -7,7 +7,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clucene/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://clucene.sourceforge.net/index.php/Main_Page
+HOMEPAGE=		https://clucene.sourceforge.net/index.php/Main_Page
 COMMENT=		Text search engine written in C++
 LICENSE=		gnu-lgpl-v2.1 OR apache-2.0
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/01/27 18:59:08 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2025/11/17 11:01:42 wiz Exp $
 
 DISTNAME=	BWidget-1.9.0
 PKGNAME=	tk-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcllib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tcllib.sourceforge.net/
+HOMEPAGE=	https://tcllib.sourceforge.net/
 COMMENT=	High-level Widget Set for Tcl/Tk
 LICENSE=	mit
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2025/10/23 20:35:50 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2025/11/17 11:00:20 wiz Exp $
 
 DISTNAME=	MP3Diags-unstable-1.5.01
 PKGNAME=	${DISTNAME:S/MP3D/mp3d/:C/-unsable//}
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3diags/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mp3diags.sourceforge.net/
+HOMEPAGE=	https://mp3diags.sourceforge.net/
 COMMENT=	MP3 diagnosis tool and tag editor
 LICENSE=	gnu-gpl-v2
 

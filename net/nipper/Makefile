@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/08/20 06:44:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/11/17 11:01:15 wiz Exp $
 
 DISTNAME=	nipper-cli-0.12.0
 PKGNAME=	${DISTNAME:S/-cli//}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nipper/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://nipper.sourceforge.net/
+#HOMEPAGE=	https://nipper.sourceforge.net/
 COMMENT=	Performs security audits of network device configuration
 
 USE_LANGUAGES=	c++ c

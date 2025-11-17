@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/05/05 19:12:34 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/11/17 11:00:27 wiz Exp $
 
 DISTNAME=		emacs-jabber-0.8.92
 CATEGORIES=		chat
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=emacs-jabber/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		aran@100acres.us
-HOMEPAGE=		http://emacs-jabber.sourceforge.net/
+HOMEPAGE=		https://emacs-jabber.sourceforge.net/
 COMMENT=		Jabber client for Emacs
 LICENSE=		gnu-gpl-v2 # or later
 

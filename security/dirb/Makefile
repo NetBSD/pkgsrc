@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2025/10/05 19:26:17 js Exp $
+# $NetBSD: Makefile,v 1.52 2025/11/17 11:01:21 wiz Exp $
 #
 
 DISTNAME=	dirb220
@@ -8,7 +8,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dirb/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dirb.sourceforge.net/
+HOMEPAGE=	https://dirb.sourceforge.net/
 COMMENT=	Web Content Scanner
 LICENSE=	gnu-gpl-v2
 

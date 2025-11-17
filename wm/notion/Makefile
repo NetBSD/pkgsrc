@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2023/07/21 12:29:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2025/11/17 11:01:37 wiz Exp $
 
 DISTNAME=	notion-3-2017050501
 PKGNAME=	${DISTNAME:S/3-/3./}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=raboof/}
 GITHUB_TAG=	${DISTNAME:S/notion-//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://notion.sourceforge.net/
+HOMEPAGE=	https://notion.sourceforge.net/
 COMMENT=	Tiling window manager based on ion3
 LICENSE=	ion-license AND gnu-lgpl-v2.1
 

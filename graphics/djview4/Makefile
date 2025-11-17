@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2025/10/23 20:37:26 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2025/11/17 11:00:55 wiz Exp $
 #
 
 DISTNAME=	djview-4.12
@@ -8,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=djvu/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://djvu.sourceforge.net/
+HOMEPAGE=	https://djvu.sourceforge.net/
 COMMENT=	Portable DjVu viewer and browser plugin
 LICENSE=	gnu-gpl-v2
 

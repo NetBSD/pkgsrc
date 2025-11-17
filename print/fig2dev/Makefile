@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/12/07 15:30:09 fcambus Exp $
+# $NetBSD: Makefile,v 1.11 2025/11/17 11:01:19 wiz Exp $
 
 DISTNAME=	fig2dev-3.2.8b
 CATEGORIES=	graphics print
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcj/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mcj.sourceforge.net/
+HOMEPAGE=	https://mcj.sourceforge.net/
 COMMENT=	Convert .fig files to graphical or printable formats
 
 GNU_CONFIGURE=	yes

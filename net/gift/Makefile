@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/06/28 11:35:00 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2025/11/17 11:01:12 wiz Exp $
 #
 
 DISTNAME=	gift-0.11.8.1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gift/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	alex@catbull.com
-HOMEPAGE=	http://gift.sourceforge.net/
+HOMEPAGE=	https://gift.sourceforge.net/
 COMMENT=	Modular daemon that abstracts filesharing protocols
 
 USE_TOOLS+=		perl:run pkg-config

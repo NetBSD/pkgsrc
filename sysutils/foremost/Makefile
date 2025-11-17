@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/03/20 11:58:21 nia Exp $
+# $NetBSD: Makefile,v 1.8 2025/11/17 11:01:25 wiz Exp $
 
 DISTNAME=	foremost-1.4
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://foremost.sourceforge.net/pkg/
 
 MAINTAINER=	lkundrak@skosi.org
-HOMEPAGE=	http://foremost.sourceforge.net/
+HOMEPAGE=	https://foremost.sourceforge.net/
 COMMENT=	Recover various formats of files using typical data structures
 
 EGDIR=		${PREFIX}/share/examples/foremost

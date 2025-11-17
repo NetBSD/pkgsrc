@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2025/01/06 21:49:05 ktnb Exp $
+# $NetBSD: Makefile,v 1.37 2025/11/17 11:00:43 wiz Exp $
 #
 
 DISTNAME=	dgen-sdl-1.33
@@ -7,7 +7,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dgen/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dgen.sourceforge.net/
+HOMEPAGE=	https://dgen.sourceforge.net/
 COMMENT=	Genesis/Megadrive emulator for Unix platforms
 
 .include "../../mk/bsd.prefs.mk"

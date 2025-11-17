@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2021/12/08 16:05:21 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/11/17 11:01:01 wiz Exp $
 #
 
 DISTNAME=		jamvm-1.5.4
@@ -7,7 +7,7 @@ CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jamvm/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://jamvm.sourceforge.net/
+HOMEPAGE=		https://jamvm.sourceforge.net/
 COMMENT=		Compact Java Virtual Machine
 LICENSE=		gnu-gpl-v2
 

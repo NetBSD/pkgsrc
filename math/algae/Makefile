@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/01/30 08:05:15 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/11/17 11:01:06 wiz Exp $
 
 DISTNAME=		algae-4.3.6
 PKGREVISION=		2
@@ -6,7 +6,7 @@ CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=algae/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://algae.sourceforge.net/
+HOMEPAGE=		https://algae.sourceforge.net/
 COMMENT=		Interpreted language for numerical analysis
 
 DEPENDS+=		gnuplot>=3.5:../../graphics/gnuplot

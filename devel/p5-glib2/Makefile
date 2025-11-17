@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2025/10/23 20:36:34 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2025/11/17 11:00:38 wiz Exp $
 
 DISTNAME=	Glib-1.3293
 PKGNAME=	p5-${DISTNAME:S/Glib/glib2/}
@@ -7,8 +7,8 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gtk2-perl.sourceforge.net/
-#HOMEPAGE=	http://search.cpan.org/dist/Glib/
+HOMEPAGE=	https://gtk2-perl.sourceforge.net/
+#HOMEPAGE=	https://search.cpan.org/dist/Glib/
 COMMENT=	Perl bindings for Glib 2
 LICENSE=	gnu-lgpl-v2.1
 

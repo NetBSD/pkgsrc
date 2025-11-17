@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/03/20 11:57:24 nia Exp $
+# $NetBSD: Makefile,v 1.6 2025/11/17 11:00:30 wiz Exp $
 
 DISTNAME=		mingw-3.3.1
 PKGREVISION=		1
@@ -7,7 +7,7 @@ MASTER_SITES=		# empty
 DISTFILES=		# empty
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://mingw.sourceforge.net/
+HOMEPAGE=		https://mingw.sourceforge.net/
 COMMENT=		GCC tools for win32 cross-development
 
 META_PACKAGE=		yes

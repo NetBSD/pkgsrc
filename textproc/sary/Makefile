@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/10/23 20:39:36 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/11/17 11:01:34 wiz Exp $
 #
 
 DISTNAME=	sary-1.2.0
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://sary.sourceforge.net/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sary.sourceforge.net/
+HOMEPAGE=	https://sary.sourceforge.net/
 COMMENT=	Suffix array library and tools
 LICENSE=	gnu-lgpl-v2.1
 

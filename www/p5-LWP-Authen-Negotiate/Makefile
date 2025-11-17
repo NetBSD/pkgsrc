@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/07/04 08:49:23 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/11/17 11:01:39 wiz Exp $
 
 DISTNAME=	LWP-Authen-Negotiate-0.08
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	perl5 www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LWP/}
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://perlgssapi.sourceforge.net/
+HOMEPAGE=	https://perlgssapi.sourceforge.net/
 COMMENT=	Library for enabling GSSAPI authentication in LWP
 LICENSE=	${PERL5_LICENSE}
 

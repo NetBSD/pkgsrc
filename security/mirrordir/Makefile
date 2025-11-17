@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/23 18:16:36 asau Exp $
+# $NetBSD: Makefile,v 1.16 2025/11/17 11:01:22 wiz Exp $
 #
 
 DISTNAME=	mirrordir-0.10.49
@@ -7,7 +7,7 @@ CATEGORIES=	security net
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	# http://mirrordir.sourceforge.net/
+HOMEPAGE=	# https://mirrordir.sourceforge.net/
 COMMENT=	Directory mirroring tool
 
 CONFLICTS=	qmail>=1.03nb7 netqmail>=1.05

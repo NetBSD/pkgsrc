@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2022/05/24 18:51:57 jaapb Exp $
+# $NetBSD: Makefile,v 1.40 2025/11/17 11:01:39 wiz Exp $
 
 DISTNAME=		swiftsurf-1.2.5
 PKGREVISION=		21
@@ -6,7 +6,7 @@ CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=swiftsurf/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://swiftsurf.sourceforge.net/
+HOMEPAGE=		https://swiftsurf.sourceforge.net/
 COMMENT=		Web proxy that can handle http and https
 
 USE_TOOLS+=		gmake

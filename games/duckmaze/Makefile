@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2025/01/06 21:49:11 ktnb Exp $
+# $NetBSD: Makefile,v 1.31 2025/11/17 11:00:48 wiz Exp $
 
 DISTNAME=	duckmaze-pc-0.2
 PKGNAME=	duckmaze-0.2
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=duckmaze/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://duckmaze.sourceforge.net/
+HOMEPAGE=	https://duckmaze.sourceforge.net/
 COMMENT=	Puzzle game
 
 USE_LANGUAGES=	# none

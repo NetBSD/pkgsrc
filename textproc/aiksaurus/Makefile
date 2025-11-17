@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2025/10/23 20:39:31 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2025/11/17 11:01:28 wiz Exp $
 
 DISTNAME=	aiksaurus-1.2.1
 PKGREVISION=	25
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aiksaurus/}
 
 MAINTAINER=	gutteridge@NetBSD.org
-HOMEPAGE=	http://aiksaurus.sourceforge.net/
+HOMEPAGE=	https://aiksaurus.sourceforge.net/
 COMMENT=	English-language thesaurus
 LICENSE=	gnu-gpl-v2
 

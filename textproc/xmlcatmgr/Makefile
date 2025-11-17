@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2024/07/25 05:41:53 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/11/17 11:01:35 wiz Exp $
 
 DISTNAME=	xmlcatmgr-2.2
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmlcatmgr/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xmlcatmgr.sourceforge.net/
+HOMEPAGE=	https://xmlcatmgr.sourceforge.net/
 COMMENT=	XML and SGML catalog manager
 LICENSE=	modified-bsd
 

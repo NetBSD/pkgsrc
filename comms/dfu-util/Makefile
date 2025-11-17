@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 05:26:17 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2025/11/17 11:00:27 wiz Exp $
 #
 
 DISTNAME=		dfu-util-0.9
@@ -6,7 +6,7 @@ CATEGORIES=		comms
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dfu-util/files/}
 
 MAINTAINER=		noud4@users.sourceforge.net
-HOMEPAGE=		http://dfu-util.sourceforge.net/
+HOMEPAGE=		https://dfu-util.sourceforge.net/
 COMMENT=		Host side implementation of the USB DFU protocol
 LICENSE=		gnu-gpl-v2
 

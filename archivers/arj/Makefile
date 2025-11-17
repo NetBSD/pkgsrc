@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2022/01/08 14:43:09 tnn Exp $
+# $NetBSD: Makefile,v 1.37 2025/11/17 11:00:15 wiz Exp $
 
 DISTNAME=	arj-3.10.22
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arj/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://arj.sourceforge.net/
+HOMEPAGE=	https://arj.sourceforge.net/
 COMMENT=	Open-source ARJ archiver
 LICENSE=	gnu-gpl-v2
 

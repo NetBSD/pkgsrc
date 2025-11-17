@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/04/12 06:54:14 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/11/17 11:00:24 wiz Exp $
 
 DISTNAME=	xjadeo-0.8.9
 PKGREVISION=	13
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=x42/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xjadeo.sourceforge.net/
+HOMEPAGE=	https://xjadeo.sourceforge.net/
 COMMENT=	X JAck viDEo mOnitor
 LICENSE=	gnu-gpl-v2
 

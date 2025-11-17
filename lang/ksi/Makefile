@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/03/27 23:29:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2025/11/17 11:01:02 wiz Exp $
 
 DISTNAME=		ksi-3.9.0
 PKGREVISION=		2
@@ -6,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ksi/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://ksi.sourceforge.net/
+HOMEPAGE=		https://ksi.sourceforge.net/
 COMMENT=		Portable, embeddable Scheme implementation written in C
 LICENSE=		gnu-lgpl-v2.1
 

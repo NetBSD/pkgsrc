@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2025/10/23 20:39:53 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2025/11/17 11:01:41 wiz Exp $
 
 DISTNAME=	gcolor2-0.4
 PKGREVISION=	30
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gcolor2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gcolor2.sourceforge.net/
+HOMEPAGE=	https://gcolor2.sourceforge.net/
 COMMENT=	Simple color selector
 LICENSE=	gnu-gpl-v2
 

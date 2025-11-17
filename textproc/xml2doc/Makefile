@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2025/08/30 22:46:25 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2025/11/17 11:01:34 wiz Exp $
 #
 
 DISTNAME=	xml2doc-20030510
@@ -8,7 +8,7 @@ MASTER_SITES=	http://xml2doc.sourceforge.net/src/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xml2doc.sourceforge.net/
+HOMEPAGE=	https://xml2doc.sourceforge.net/
 COMMENT=	Xml to document formats converter
 
 WRKSRC=			${WRKDIR}/xml2doc

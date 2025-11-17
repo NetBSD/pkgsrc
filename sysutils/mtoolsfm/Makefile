@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/03/20 11:58:22 nia Exp $
+# $NetBSD: Makefile,v 1.22 2025/11/17 11:01:26 wiz Exp $
 #
 
 DISTNAME=	MToolsFM-1.9-3
@@ -8,7 +8,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://www.core-coutainville.org/MToolsFM/archive/SOURCES/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mtoolsfm.sourceforge.net/
+HOMEPAGE=	https://mtoolsfm.sourceforge.net/
 COMMENT=	Easy MS-DOS disk access without learning MS-DOS commands
 
 DEPENDS+=	mtools>=3.9.7:../../sysutils/mtools

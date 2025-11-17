@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/10/23 20:37:00 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/11/17 11:00:48 wiz Exp $
 
 DISTNAME=		dunelegacy-0.96.4-src
 PKGNAME=		${DISTNAME:S/-src//}
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dunelegacy/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://dunelegacy.sourceforge.net/
+HOMEPAGE=		https://dunelegacy.sourceforge.net/
 COMMENT=		Open source Dune 2 clone
 LICENSE=		gnu-gpl-v2
 

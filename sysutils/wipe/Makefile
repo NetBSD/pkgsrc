@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/03/20 11:58:23 nia Exp $
+# $NetBSD: Makefile,v 1.13 2025/11/17 11:01:28 wiz Exp $
 #
 
 DISTNAME=		wipe-2.3.1
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wipe/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://wipe.sourceforge.net/
+HOMEPAGE=		https://wipe.sourceforge.net/
 COMMENT=		Secure data destruction
 LICENSE=		gnu-gpl-v2
 

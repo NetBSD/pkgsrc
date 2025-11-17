@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/03/20 11:58:24 nia Exp $
+# $NetBSD: Makefile,v 1.5 2025/11/17 11:01:28 wiz Exp $
 #
 
 DISTNAME=	aspell6-bg-4.1-0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=aspell/dict/bg/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://bgoffice.sourceforge.net/
+HOMEPAGE=	https://bgoffice.sourceforge.net/
 COMMENT=	Bulgarian language support for aspell
 LICENSE=	gnu-gpl-v2
 

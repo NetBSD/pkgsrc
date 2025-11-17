@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/04/24 14:15:42 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/11/17 11:01:24 wiz Exp $
 
 DISTNAME=		steghide-0.5.1
 PKGREVISION=		8
@@ -6,7 +6,7 @@ CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=steghide/}
 
 MAINTAINER=		agc@NetBSD.org
-HOMEPAGE=		http://steghide.sourceforge.net/
+HOMEPAGE=		https://steghide.sourceforge.net/
 COMMENT=		Hides data (steganography) in audio or graphics files
 LICENSE=		gnu-gpl-v2
 

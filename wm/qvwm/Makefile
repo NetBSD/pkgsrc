@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2025/01/24 20:41:13 riastradh Exp $
+# $NetBSD: Makefile,v 1.46 2025/11/17 11:01:37 wiz Exp $
 
 DISTNAME=	qvwm-1.1.12
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qvwm/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://qvwm.sourceforge.net/index_en.html
+HOMEPAGE=	https://qvwm.sourceforge.net/index_en.html
 COMMENT=	Windows 95-like window manager for X11
 LICENSE=	gnu-gpl-v2
 

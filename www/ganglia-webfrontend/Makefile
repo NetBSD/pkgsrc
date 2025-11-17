@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/08/31 14:00:58 taca Exp $
+# $NetBSD: Makefile,v 1.28 2025/11/17 11:01:38 wiz Exp $
 #
 
 DISTNAME=	ganglia-web-3.7.2
@@ -8,7 +8,7 @@ CATEGORIES=	www parallel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ganglia/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ganglia.sourceforge.net/
+HOMEPAGE=	https://ganglia.sourceforge.net/
 COMMENT=	PHP based frontend for the Ganglia Cluster Monitor
 LICENSE=	modified-bsd
 

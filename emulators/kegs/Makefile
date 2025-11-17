@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:33:50 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/11/17 11:00:44 wiz Exp $
 
 DISTNAME=	kegs.0.91
 PKGNAME=	kegs-0.91
@@ -7,7 +7,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	http://kegs.sourceforge.net/
 
 MAINTAINER=	christtrekker@users.sourceforge.net
-HOMEPAGE=	http://kegs.sourceforge.net/
+HOMEPAGE=	https://kegs.sourceforge.net/
 COMMENT=	Apple IIgs emulator for Mac OS X, Win32, Linux, and Unix/X11
 
 # These platforms are officially supported

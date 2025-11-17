@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2020/03/20 11:58:01 nia Exp $
+# $NetBSD: Makefile,v 1.5 2025/11/17 11:01:08 wiz Exp $
 
 DISTNAME=	cw-1.0.16
 CATEGORIES=	misc
 MASTER_SITES=	http://cwrapper.sourceforge.net/
 
 MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	http://cwrapper.sourceforge.net/
+HOMEPAGE=	https://cwrapper.sourceforge.net/
 COMMENT=	Non-intrusive color wrapper for common commands
 LICENSE=	gnu-gpl-v2
 

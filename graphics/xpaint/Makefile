@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2025/08/30 22:45:37 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2025/11/17 11:01:00 wiz Exp $
 
 DISTNAME=	xpaint-3.1.4
 PKGREVISION=	5
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sf-xpaint/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://sf-xpaint.sourceforge.net/
+HOMEPAGE=	https://sf-xpaint.sourceforge.net/
 COMMENT=	Simple paint program
 LICENSE=	gnu-gpl-v3
 

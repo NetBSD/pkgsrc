@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2023/08/14 05:24:15 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2025/11/17 11:00:39 wiz Exp $
 
 DISTNAME=	roundup-1.4.19
 PKGREVISION=	7
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/roundup/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://roundup.sourceforge.net/
+HOMEPAGE=	https://roundup.sourceforge.net/
 COMMENT=	Issue tracking system with command-line, web and email clients
 LICENSE=	mit AND zpl-2.0
 

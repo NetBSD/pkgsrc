@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/01/06 21:49:03 ktnb Exp $
+# $NetBSD: Makefile,v 1.21 2025/11/17 11:00:33 wiz Exp $
 #
 
 DISTNAME=	SDLmm-0.1.8
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sdlmm/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sdlmm.sourceforge.net/
+HOMEPAGE=	https://sdlmm.sourceforge.net/
 COMMENT=	C++ Wrapper for the Simple DirectMedia Layer
 
 GNU_CONFIGURE=	YES

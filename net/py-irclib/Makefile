@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/04/15 08:15:58 adam Exp $
+# $NetBSD: Makefile,v 1.24 2025/11/17 11:01:16 wiz Exp $
 
 DISTNAME=	irc-20.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/irc/irclib/}
@@ -7,7 +7,7 @@ CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/irc/}
 
 MAINTAINER=	imil@NetBSD.org
-HOMEPAGE=	http://python-irclib.sourceforge.net/
+HOMEPAGE=	https://python-irclib.sourceforge.net/
 COMMENT=	Internet Relay Chat (IRC) protocol client library
 LICENSE=	gnu-gpl-v2
 

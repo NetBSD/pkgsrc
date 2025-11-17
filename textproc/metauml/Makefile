@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/03/20 11:58:28 nia Exp $
+# $NetBSD: Makefile,v 1.7 2025/11/17 11:01:32 wiz Exp $
 #
 
 DISTNAME=	metauml_lib_0.2.5
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=metauml/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tonio@NetBSD.org
-HOMEPAGE=	http://metauml.sourceforge.net/
+HOMEPAGE=	https://metauml.sourceforge.net/
 COMMENT=	MetaPost library for typesetting UML diagrams
 
 NO_BUILD=	yes

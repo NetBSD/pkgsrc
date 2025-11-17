@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/10/23 06:37:50 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/11/17 11:01:16 wiz Exp $
 
 DISTNAME=		kenosis-0.96
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kenosis/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://kenosis.sourceforge.net/
+HOMEPAGE=		https://kenosis.sourceforge.net/
 COMMENT=		P2P RPC system
 LICENSE=		mit
 

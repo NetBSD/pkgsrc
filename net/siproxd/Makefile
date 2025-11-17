@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/04/17 21:52:03 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/11/17 11:01:17 wiz Exp $
 
 DISTNAME=	siproxd-0.8.3
 #PKGREVISION=	1
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=siproxd/}
 
 MAINTAINER=	schwarz@NetBSD.org
-HOMEPAGE=	http://siproxd.sourceforge.net/
+HOMEPAGE=	https://siproxd.sourceforge.net/
 COMMENT=	Session Initiation Protocol (SIP) Application-Level Gateway
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/01/10 18:30:42 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/11/17 11:00:22 wiz Exp $
 
 DISTNAME=	id3-py_1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py_//}
@@ -7,7 +7,7 @@ CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=id3-py/}
 
 MAINTAINER=	wes.chow@s7labs.com
-HOMEPAGE=	http://id3-py.sourceforge.net/
+HOMEPAGE=	https://id3-py.sourceforge.net/
 COMMENT=	Python module to manipulate ID3 tags in MP3 files
 LICENSE=	gnu-gpl-v2
 

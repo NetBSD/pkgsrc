@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/08/14 05:23:45 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/11/17 11:00:16 wiz Exp $
 #
 
 DISTNAME=	archive-2.0
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://rox.sourceforge.net/desktop/node/74
+HOMEPAGE=	https://rox.sourceforge.net/desktop/node/74
 COMMENT=	Simple archiver
 
 # no real libraries there

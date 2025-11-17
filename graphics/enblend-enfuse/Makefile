@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2025/09/27 09:57:19 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2025/11/17 11:00:55 wiz Exp $
 
 DISTNAME=	enblend-enfuse-4.2
 PKGREVISION=	49
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enblend/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://enblend.sourceforge.net/
+HOMEPAGE=	https://enblend.sourceforge.net/
 COMMENT=	Combines overlapping images without seams, with good exposure
 LICENSE=	gnu-gpl-v2
 

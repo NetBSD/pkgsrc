@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2025/10/23 20:40:23 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2025/11/17 11:01:43 wiz Exp $
 
 # The 1.3.1 release is a few years old, and upstream recommends that
 # the head of svn be used.  However, we follow pkgsrc norms of
@@ -9,7 +9,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xplanet/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xplanet.sourceforge.net/
+HOMEPAGE=	https://xplanet.sourceforge.net/
 COMMENT=	Rotating rendered map of the Earth in X11 root window
 LICENSE=	gnu-gpl-v2
 

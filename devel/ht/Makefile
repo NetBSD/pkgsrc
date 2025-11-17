@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2024/05/06 08:40:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2025/11/17 11:00:36 wiz Exp $
 #
 
 DISTNAME=	ht-2.1.0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hte/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://hte.sourceforge.net/
+HOMEPAGE=	https://hte.sourceforge.net/
 COMMENT=	Viewer, editor and analyzer for text, binary and executable files
 
 GNU_CONFIGURE=		YES

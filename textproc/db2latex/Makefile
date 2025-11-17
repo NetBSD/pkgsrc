@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/03/20 11:58:25 nia Exp $
+# $NetBSD: Makefile,v 1.22 2025/11/17 11:01:29 wiz Exp $
 
 DISTNAME=	db2latex-xsl-0.8pre1
 PKGNAME=	${DISTNAME:S/xsl-//}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=db2latex/}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://db2latex.sourceforge.net/
+HOMEPAGE=	https://db2latex.sourceforge.net/
 COMMENT=	Set of XSLT stylesheets converting DocBook to LaTeX2e
 
 NO_CONFIGURE=	yes

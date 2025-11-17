@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2020/03/20 11:57:55 nia Exp $
+# $NetBSD: Makefile,v 1.6 2025/11/17 11:01:01 wiz Exp $
 
 DISTNAME=	ficl-4.1.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ficl/}
 
 MAINTAINER=	asau@inbox.ru
-HOMEPAGE=	http://ficl.sourceforge.net/
+HOMEPAGE=	https://ficl.sourceforge.net/
 COMMENT=	Forth Inspired Command Language
 
 USE_GCC_RUNTIME=	yes

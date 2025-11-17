@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2021/04/23 22:25:36 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/11/17 11:01:00 wiz Exp $
 
 DISTNAME=	libtabe-0.2.6
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	chinese inputmethod
 #MASTER_SITES=	ftp://cle.linux.org.tw/pub/xcin/cvs/
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://libtabe.sourceforge.net/
+HOMEPAGE=	https://libtabe.sourceforge.net/
 COMMENT=	Library for Chinese language processing
 LICENSE=	modified-bsd
 

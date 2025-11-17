@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/03/20 11:58:19 nia Exp $
+# $NetBSD: Makefile,v 1.6 2025/11/17 11:01:24 wiz Exp $
 #
 
 DISTNAME=		heirloom-sh-050706
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=heirloom/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		cheusov@NetBSD.org
-HOMEPAGE=		http://heirloom.sourceforge.net/
+HOMEPAGE=		https://heirloom.sourceforge.net/
 COMMENT=		Traditional Unix shell derived from OpenSolaris code
 LICENSE=		cddl-1.0
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/03/20 11:58:33 nia Exp $
+# $NetBSD: Makefile,v 1.21 2025/11/17 11:01:37 wiz Exp $
 #
 
 DISTNAME=	wampager-0.9.1
@@ -7,7 +7,7 @@ CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=waimea/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://waimea.sourceforge.net/
+HOMEPAGE=	https://waimea.sourceforge.net/
 COMMENT=	Virtual pager dockapp for the Waimea Window Manager
 
 DEPENDS+=	waimea>=0.4.0:../../wm/waimea

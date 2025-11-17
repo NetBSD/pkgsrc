@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2025/10/23 20:38:14 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2025/11/17 11:01:07 wiz Exp $
 
 DISTNAME=		euler-1.61.0
 PKGNAME=		euler-1.61
@@ -8,7 +8,7 @@ CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=euler/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://euler.sourceforge.net/index.html
+HOMEPAGE=		https://euler.sourceforge.net/index.html
 COMMENT=		Interactive numerical analysis and graphics program
 
 USE_LANGUAGES=		c c++

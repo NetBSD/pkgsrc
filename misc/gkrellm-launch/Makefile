@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2025/10/23 20:38:19 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2025/11/17 11:01:08 wiz Exp $
 #
 
 DISTNAME=	gkrellmlaunch-0.5
@@ -8,7 +8,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gkrellmlaunch/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gkrellmlaunch.sourceforge.net/
+HOMEPAGE=	https://gkrellmlaunch.sourceforge.net/
 COMMENT=	GKrellM plugin to allow quick launch of applications
 
 BUILD_TARGET=	gkrellmlaunch.so

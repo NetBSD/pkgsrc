@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2020/03/20 11:58:09 nia Exp $
+# $NetBSD: Makefile,v 1.34 2025/11/17 11:01:15 wiz Exp $
 
 DISTNAME=	ngrep-1.45
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ngrep/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ngrep.sourceforge.net/
+HOMEPAGE=	https://ngrep.sourceforge.net/
 COMMENT=	Network grep
 
 MAKE_JOBS_SAFE=		no

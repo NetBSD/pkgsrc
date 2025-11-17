@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/01/26 05:26:20 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2025/11/17 11:00:31 wiz Exp $
 
 DISTNAME=	ipa_sdb-1.1.1
 CATEGORIES=	databases
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ipa-system/modules/ipa_sdb/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	simon@comsys.ntu-kpi.kiev.ua
-HOMEPAGE=	http://ipa-system.sourceforge.net/modules/ipa_sdb/
+HOMEPAGE=	https://ipa-system.sourceforge.net/modules/ipa_sdb/
 COMMENT=	IPA simple database module
 LICENSE=	2-clause-bsd
 

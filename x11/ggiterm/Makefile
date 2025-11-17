@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/05/06 08:40:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2025/11/17 11:01:41 wiz Exp $
 #
 
 DISTNAME=		ggiterm-0.7.1
@@ -7,7 +7,7 @@ CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ggiterm/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://ggiterm.sourceforge.net/
+HOMEPAGE=		https://ggiterm.sourceforge.net/
 COMMENT=		Libggi-based terminal emulator
 
 USE_PKGLOCALEDIR=	yes

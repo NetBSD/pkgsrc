@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/01/26 05:26:09 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2025/11/17 11:00:17 wiz Exp $
 
 DISTNAME=		easyh10-1.5
 PKGREVISION=		1
@@ -6,7 +6,7 @@ CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=easyh10/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://easyh10.sourceforge.net/
+HOMEPAGE=		https://easyh10.sourceforge.net/
 COMMENT=		Database tool for the iRiver H10 digital audio player
 LICENSE=		gnu-gpl-v2
 

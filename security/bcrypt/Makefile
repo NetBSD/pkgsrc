@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/03/20 11:58:16 nia Exp $
+# $NetBSD: Makefile,v 1.9 2025/11/17 11:01:21 wiz Exp $
 #
 
 DISTNAME=	bcrypt-1.1
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://bcrypt.sourceforge.net/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://bcrypt.sourceforge.net/
+HOMEPAGE=	https://bcrypt.sourceforge.net/
 COMMENT=	Cross platform file encryption utility
 
 BUILD_TARGET=	bcrypt

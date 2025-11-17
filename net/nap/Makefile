@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/03/20 11:58:08 nia Exp $
+# $NetBSD: Makefile,v 1.32 2025/11/17 11:01:14 wiz Exp $
 
 DISTNAME=	nap-1.4.4
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nap/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://nap.sourceforge.net/
+HOMEPAGE=	https://nap.sourceforge.net/
 COMMENT=	Terminal based Napster client similar to ircII
 
 GNU_CONFIGURE=		YES

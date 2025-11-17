@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/01/10 18:20:57 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2025/11/17 11:00:39 wiz Exp $
 
 DISTNAME=	optik-1.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/optik/Optik/}
@@ -7,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=optik/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://optik.sourceforge.net/
+HOMEPAGE=	https://optik.sourceforge.net/
 COMMENT=	Command line parsing library for Python
 LICENSE=	modified-bsd
 

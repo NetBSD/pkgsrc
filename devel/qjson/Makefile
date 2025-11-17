@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/10/23 20:36:36 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2025/11/17 11:00:39 wiz Exp $
 
 DISTNAME=	qjson-0.8.1
 PKGREVISION=	12
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qjson/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://qjson.sourceforge.net/
+HOMEPAGE=	https://qjson.sourceforge.net/
 COMMENT=	Qt library for handling JSON data
 LICENSE=	gnu-lgpl-v2
 

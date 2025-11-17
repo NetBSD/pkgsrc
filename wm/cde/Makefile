@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/04/24 14:15:59 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/11/17 11:01:36 wiz Exp $
 
 DISTNAME=	cde-2.5.2
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cdesktopenv/files/src/}
 
 MAINTAINER=	vins@NetBSD.org
-HOMEPAGE=	http://cdesktopenv.sourceforge.net/
+HOMEPAGE=	https://cdesktopenv.sourceforge.net/
 COMMENT=	Common Desktop Environment
 LICENSE=	gnu-lgpl-v2
 

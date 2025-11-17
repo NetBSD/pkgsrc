@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/01/26 05:26:12 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2025/11/17 11:00:21 wiz Exp $
 
 DISTNAME=	mpg321_0.3.2.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpg321/}
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://mpg321.sourceforge.net/
+HOMEPAGE=	https://mpg321.sourceforge.net/
 COMMENT=	Free replacement for mpg123
 LICENSE=	gnu-gpl-v2
 

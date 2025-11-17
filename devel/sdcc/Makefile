@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2023/08/02 19:20:19 nia Exp $
+# $NetBSD: Makefile,v 1.63 2025/11/17 11:00:40 wiz Exp $
 
 DISTNAME=	sdcc-src-2.8.0
 PKGNAME=	${DISTNAME:S/-src//}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sdcc/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sdcc.sourceforge.net/
+HOMEPAGE=	https://sdcc.sourceforge.net/
 COMMENT=	Cross compile 8051 code
 LICENSE=	gnu-gpl-v2
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2020/01/26 05:26:08 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2025/11/17 11:00:16 wiz Exp $
 
 DISTNAME=	sarab-1.0.0
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sarab/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sarab.sourceforge.net/
+HOMEPAGE=	https://sarab.sourceforge.net/
 COMMENT=	Schedule And Rotate Automatic Backups
 LICENSE=	gnu-gpl-v2
 

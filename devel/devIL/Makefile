@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2025/08/30 22:44:48 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2025/11/17 11:00:34 wiz Exp $
 #
 
 DISTNAME=	DevIL-${DEVIL_VERSION}
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openil/}
 DEVIL_VERSION=	1.7.8
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://openil.sourceforge.net/
+HOMEPAGE=	https://openil.sourceforge.net/
 COMMENT=	Developer's Image Library
 LICENSE=	gnu-lgpl-v2.1
 

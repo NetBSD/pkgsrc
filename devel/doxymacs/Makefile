@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2025/04/17 21:50:18 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/11/17 11:00:35 wiz Exp $
 #
 
 DISTNAME=	doxymacs-1.8.0
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=doxymacs/}
 
 MAINTAINER=	dsainty@NetBSD.org
-HOMEPAGE=	http://doxymacs.sourceforge.net/
+HOMEPAGE=	https://doxymacs.sourceforge.net/
 COMMENT=	Doxygen editing support for Emacs
 
 .include "../../editors/emacs/modules.mk"

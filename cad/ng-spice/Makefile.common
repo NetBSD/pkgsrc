@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2025/09/21 21:22:38 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2025/11/17 11:00:26 wiz Exp $
 #
 # used by can/ng-spice
 # used by can/ng-spice-shared
@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ngspice/}
 DISTINFO_FILE=  ${.CURDIR}/../../cad/ng-spice/distinfo
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ngspice.sourceforge.net/
+HOMEPAGE=	https://ngspice.sourceforge.net/
 LICENSE=	modified-bsd AND gnu-lgpl-v2.1 AND gnu-gpl-v2 AND mpl-2.0
 
 USE_LIBTOOL=		YES

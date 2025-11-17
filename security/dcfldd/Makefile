@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2025/03/03 20:29:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/11/17 11:01:21 wiz Exp $
 
 DISTNAME=	dcfldd-1.3.4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dcfldd/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dcfldd.sourceforge.net/
+HOMEPAGE=	https://dcfldd.sourceforge.net/
 COMMENT=	Enhanced version of GNU dd with features useful for forensics
 LICENSE=	gnu-gpl-v2
 

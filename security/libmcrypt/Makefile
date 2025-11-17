@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/07/16 09:58:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2025/11/17 11:01:22 wiz Exp $
 
 DISTNAME=	libmcrypt-2.5.8
 CATEGORIES=	security devel
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcrypt/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mcrypt.sourceforge.net/
+HOMEPAGE=	https://mcrypt.sourceforge.net/
 COMMENT=	Crypto algorithms library
 
 USE_LANGUAGES=		c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2025/08/30 22:45:25 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2025/11/17 11:00:56 wiz Exp $
 
 DISTNAME=	ivtools-2.0.4a1
 PKGREVISION=	4
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	ivtools
 GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ivtools.sourceforge.net/ivtools/index.html
+HOMEPAGE=	https://ivtools.sourceforge.net/ivtools/index.html
 COMMENT=	Drawing editors for PostScript, TeX, and web graphics
 LICENSE=	modified-bsd # close enough
 

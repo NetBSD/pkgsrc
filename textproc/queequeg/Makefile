@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/08/14 05:25:24 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/11/17 11:01:33 wiz Exp $
 
 DISTNAME=	queequeg-0.91
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=queequeg/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://queequeg.sourceforge.net/index-e.html
+HOMEPAGE=	https://queequeg.sourceforge.net/index-e.html
 COMMENT=	Tiny English grammar checker for non-native speakers
 LICENSE=	gnu-gpl-v2
 

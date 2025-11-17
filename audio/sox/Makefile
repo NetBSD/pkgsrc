@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2025/02/12 06:44:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.74 2025/11/17 11:00:23 wiz Exp $
 
 DISTNAME=	sox-14.4.2
 PKGREVISION=	8
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sox/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sox.sourceforge.net/
+HOMEPAGE=	https://sox.sourceforge.net/
 COMMENT=	SOund eXchange - universal sound sample translator
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 

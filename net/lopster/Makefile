@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/03/20 11:58:08 nia Exp $
+# $NetBSD: Makefile,v 1.28 2025/11/17 11:01:14 wiz Exp $
 #
 
 DISTNAME=	lopster-1.2.2
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lopster/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lopster.sourceforge.net/
+HOMEPAGE=	https://lopster.sourceforge.net/
 COMMENT=	Yet another Gtk+ Napster clone
 
 USE_TOOLS+=	gmake

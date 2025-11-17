@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/04/26 13:51:52 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2025/11/17 11:01:35 wiz Exp $
 #
 
 DISTNAME=	anacron-2.3
@@ -7,7 +7,7 @@ CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=anacron/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://anacron.sourceforge.net/
+HOMEPAGE=	https://anacron.sourceforge.net/
 COMMENT=	Periodic command scheduler
 LICENSE=	gnu-gpl-v2
 

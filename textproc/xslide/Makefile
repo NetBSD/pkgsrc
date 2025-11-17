@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/05/14 22:25:41 dholland Exp $
+# $NetBSD: Makefile,v 1.15 2025/11/17 11:01:35 wiz Exp $
 #
 
 DISTNAME=		xslide-0.2.2
@@ -8,7 +8,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xslide/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://xslide.sourceforge.net/
+HOMEPAGE=		https://xslide.sourceforge.net/
 COMMENT=		XSL major mode for emacs
 
 .include "../../editors/emacs/modules.mk"

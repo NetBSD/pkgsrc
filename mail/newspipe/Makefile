@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2025/10/09 10:59:53 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2025/11/17 11:01:05 wiz Exp $
 
 DISTNAME=		newspipe.1.1.9
 PKGNAME=		${DISTNAME:S/./-/}
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=newspipe/}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://newspipe.sourceforge.net/
+HOMEPAGE=		https://newspipe.sourceforge.net/
 COMMENT=		Read RSS/Atom feeds as email messages
 
 DEPENDS+=		${PYPKGPREFIX}-feedparser<6.0.0:../../textproc/py-feedparser5
