@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/07/10 15:58:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/11/17 08:13:20 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -28,6 +28,9 @@ ${PYSITELIB}/django_stubs_ext/patch.py
 ${PYSITELIB}/django_stubs_ext/patch.pyc
 ${PYSITELIB}/django_stubs_ext/patch.pyo
 ${PYSITELIB}/django_stubs_ext/py.typed
+${PYSITELIB}/django_stubs_ext/settings.py
+${PYSITELIB}/django_stubs_ext/settings.pyc
+${PYSITELIB}/django_stubs_ext/settings.pyo
 ${PYSITELIB}/django_stubs_ext/types.py
 ${PYSITELIB}/django_stubs_ext/types.pyc
 ${PYSITELIB}/django_stubs_ext/types.pyo
