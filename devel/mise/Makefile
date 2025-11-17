@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.97 2025/10/03 20:08:58 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2025/11/17 11:24:50 pin Exp $
 
-DISTNAME=		mise-2025.9.18
+DISTNAME=		mise-2025.11.5
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=jdx/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -10,7 +10,9 @@ HOMEPAGE=		https://mise.jdx.dev/
 COMMENT=		Polyglot tool version manager like asdf
 LICENSE=		mit
 
-RUST_REQ=		1.85.0
+CFLAGS+=		-Wno-implicit-function-declaration
+
+RUST_REQ=		1.88.0
 USE_LANGUAGES=		c
 USE_TOOLS+=		pkg-config
 
