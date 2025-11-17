@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6799 2025/11/17 17:49:16 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6800 2025/11/17 18:26:21 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9863,3 +9863,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/libdrm to 2.4.129 [wiz 2025-11-17]
 	Updated sysutils/open-vm-tools to 12.5.4 [adam 2025-11-17]
 	Updated devel/py-dirty-equals to 0.11 [adam 2025-11-17]
+	Updated geography/py-rtcm to 1.1.10 [gdt 2025-11-17]
