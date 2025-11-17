@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/05/06 12:07:35 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/11/17 11:01:17 wiz Exp $
 
 DISTNAME=	tsocks-1.8beta5
 PKGREVISION=	4
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tsocks/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tsocks.sourceforge.net/
+HOMEPAGE=	https://tsocks.sourceforge.net/
 COMMENT=	Transparent SOCKS proxying library
 LICENSE=	gnu-gpl-v2
 

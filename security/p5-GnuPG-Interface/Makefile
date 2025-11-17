@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2025/07/04 08:48:04 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2025/11/17 11:01:23 wiz Exp $
 
 DISTNAME=		GnuPG-Interface-1.04
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=GnuPG/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-#HOMEPAGE=		http://gnupg-interface.sourceforge.net/
+#HOMEPAGE=		https://gnupg-interface.sourceforge.net/
 HOMEPAGE=		https://metacpan.org/release/GnuPG-Interface
 COMMENT=		Perl interface to GnuPG
 LICENSE=		${PERL5_LICENSE}

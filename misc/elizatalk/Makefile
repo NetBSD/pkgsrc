@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/03/20 11:58:01 nia Exp $
+# $NetBSD: Makefile,v 1.13 2025/11/17 11:01:08 wiz Exp $
 
 DISTNAME=	elizatalk-0.4
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=elizatalk/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://elizatalk.sourceforge.net/
+HOMEPAGE=	https://elizatalk.sourceforge.net/
 COMMENT=	Eliza talkback program
 
 WRKSRC=		${WRKDIR}/elizatalk-src

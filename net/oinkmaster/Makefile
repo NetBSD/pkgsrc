@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2022/06/28 11:35:05 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/11/17 11:01:15 wiz Exp $
 
 DISTNAME=	oinkmaster-2.0
 PKGREVISION=	10
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oinkmaster/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://oinkmaster.sourceforge.net/
+HOMEPAGE=	https://oinkmaster.sourceforge.net/
 COMMENT=	Manage snort rule updates
 LICENSE=	modified-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2023/11/12 13:23:59 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/11/17 11:01:40 wiz Exp $
 
 DISTNAME=	BLT2.4z
 PKGNAME=	blt-2.4z
@@ -11,7 +11,7 @@ PATCHFILES=		blt2.4z-patch-2
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	brook@nmsu.edu
-HOMEPAGE=	http://blt.sourceforge.net/
+HOMEPAGE=	https://blt.sourceforge.net/
 COMMENT=	Extension to Tcl/Tk
 
 MAKE_JOBS_SAFE=	no

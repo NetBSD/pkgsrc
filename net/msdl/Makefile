@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/03/20 11:58:08 nia Exp $
+# $NetBSD: Makefile,v 1.16 2025/11/17 11:01:14 wiz Exp $
 #
 
 DISTNAME=	msdl-1.2.7-r2
@@ -7,7 +7,7 @@ CATEGORIES=	net multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=msdl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://msdl.sourceforge.net/
+HOMEPAGE=	https://msdl.sourceforge.net/
 COMMENT=	Media stream downloader
 LICENSE=	gnu-gpl-v3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2025/10/17 22:07:48 mrg Exp $
+# $NetBSD: Makefile,v 1.40 2025/11/17 11:01:17 wiz Exp $
 
 DISTNAME=	tf-40s1
 PKGNAME=	tf-4.0s1
@@ -7,7 +7,7 @@ CATEGORIES=	net games
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=tinyfugue/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tinyfugue.sourceforge.net/
+HOMEPAGE=	https://tinyfugue.sourceforge.net/
 COMMENT=	Popular programmable MUD client, with macro support and more
 
 MAKE_JOBS_SAFE=		no

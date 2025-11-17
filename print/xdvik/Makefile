@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2025/05/11 02:28:57 markd Exp $
+# $NetBSD: Makefile,v 1.40 2025/11/17 11:01:20 wiz Exp $
 
 .include "../../print/texlive/Makefile.common"
 
@@ -6,7 +6,7 @@ PKGNAME=	xdvik-22.87.06
 PKGREVISION=	5
 CATEGORIES=	print
 
-HOMEPAGE=	http://xdvi.sourceforge.net/
+HOMEPAGE=	https://xdvi.sourceforge.net/
 COMMENT=	Previewer for DVI files
 LICENSE=	x11
 

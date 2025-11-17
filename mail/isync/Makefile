@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2025/04/12 08:42:40 nia Exp $
+# $NetBSD: Makefile,v 1.60 2025/11/17 11:01:04 wiz Exp $
 
 DISTNAME=	isync-1.4.4
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	mail net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=isync/}
 
 MAINTAINER=	tonio@NetBSD.org
-HOMEPAGE=	http://isync.sourceforge.net/
+HOMEPAGE=	https://isync.sourceforge.net/
 COMMENT=	Synchronize a maildir with an imap server
 LICENSE=	gnu-gpl-v2
 

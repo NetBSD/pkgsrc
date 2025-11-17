@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/12/21 15:04:50 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/11/17 11:01:15 wiz Exp $
 #
 
 DISTNAME=	omniNotify-2.1
@@ -11,7 +11,7 @@ PATCHFILES=		omniNotify-jumbo-patch-20151224.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://omninotify.sourceforge.net/
+HOMEPAGE=	https://omninotify.sourceforge.net/
 COMMENT=	CORBA Notification Service
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/12/15 11:31:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2025/11/17 11:01:43 wiz Exp $
 
 DISTNAME=	xrootconsole-0.6
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xrootconsole/}
 
 MAINTAINER=	inittab@unixdev.net
-#HOMEPAGE=	http://xrootconsole.sourceforge.net/
+#HOMEPAGE=	https://xrootconsole.sourceforge.net/
 COMMENT=	Windowless XConsole
 LICENSE=	gnu-gpl-v2
 

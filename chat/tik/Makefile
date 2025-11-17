@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/01/26 05:26:17 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2025/11/17 11:00:27 wiz Exp $
 #
 
 DISTNAME=		tik-0.90
@@ -7,7 +7,7 @@ CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tik/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://tik.sourceforge.net/
+HOMEPAGE=		https://tik.sourceforge.net/
 COMMENT=		Tcl/Tk AOL Instant Messenger client
 
 WRKSRC=			${WRKDIR}/tik

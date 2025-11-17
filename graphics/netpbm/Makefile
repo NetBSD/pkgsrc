@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.258 2025/09/22 17:13:43 tnn Exp $
+# $NetBSD: Makefile,v 1.259 2025/11/17 11:00:57 wiz Exp $
 
 DISTNAME=	netpbm-11.02.09
 PKGREVISION=	7
@@ -17,7 +17,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} netpbm-docs-r4908${EXTRACT_SUFX}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://netpbm.sourceforge.net/
+HOMEPAGE=	https://netpbm.sourceforge.net/
 COMMENT=	Toolkit for conversion of images between different formats
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/07/04 08:47:54 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2025/11/17 11:01:22 wiz Exp $
 
 DISTNAME=	kpcli-3.3
 PKGREVISION=	9
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kpcli/}
 EXTRACT_SUFX=	.pl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://kpcli.sourceforge.net/
+HOMEPAGE=	https://kpcli.sourceforge.net/
 COMMENT=	Command line interface to KeePass password safes
 LICENSE=	${PERL5_LICENSE}
 

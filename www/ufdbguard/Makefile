@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/11/10 13:19:49 sborrill Exp $
+# $NetBSD: Makefile,v 1.10 2025/11/17 11:01:40 wiz Exp $
 
 DISTNAME=	ufdbGuard-${VERSION}
 VERSION=	1.35.5
@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ufdbguard/}
 
 MAINTAINER=	sborrill@NetBSD.org
-HOMEPAGE=	http://ufdbguard.sourceforge.net/
+HOMEPAGE=	https://ufdbguard.sourceforge.net/
 COMMENT=	URL filter for use with squid
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/01/06 21:49:22 ktnb Exp $
+# $NetBSD: Makefile,v 1.17 2025/11/17 11:01:02 wiz Exp $
 
 DISTNAME=	lush-1.2.1
 PKGREVISION=	6
@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lush/}
 
 MAINTAINER=	dauphin@enst.fr
-HOMEPAGE=	http://lush.sourceforge.net/
+HOMEPAGE=	https://lush.sourceforge.net/
 COMMENT=	Lisp interpreter/compiler with a seamless interface to C
 
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2024/09/18 23:02:59 nia Exp $
+# $NetBSD: Makefile.common,v 1.16 2025/11/17 11:00:55 wiz Exp $
 # used by graphics/giflib/Makefile
 # used by graphics/giflib-util/Makefile
 
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=giflib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://giflib.sourceforge.net/
+HOMEPAGE=	https://giflib.sourceforge.net/
 LICENSE=	mit
 
 PATCHDIR=	${.CURDIR}/../../graphics/giflib/patches

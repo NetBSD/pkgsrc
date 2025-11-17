@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2025/04/24 14:16:09 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2025/11/17 11:01:40 wiz Exp $
 #
 
 DISTNAME=	efltk-2.0.5
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ede/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ede.sourceforge.net/
+HOMEPAGE=	https://ede.sourceforge.net/
 COMMENT=	Extended Fast Light Toolkit
 LICENSE=	gnu-lgpl-v2 # or later
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2025/01/06 21:49:11 ktnb Exp $
+# $NetBSD: Makefile,v 1.48 2025/11/17 11:00:48 wiz Exp $
 #
 
 DISTNAME=		nethack_source_331_jtp_193
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=falconseye/}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://falconseye.sourceforge.net/
+HOMEPAGE=		https://falconseye.sourceforge.net/
 COMMENT=		Falcon's Eye NetHack
 
 PKG_DESTDIR_SUPPORT=	destdir

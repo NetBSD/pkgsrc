@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2021/05/15 06:48:04 nia Exp $
+# $NetBSD: Makefile,v 1.16 2025/11/17 11:01:10 wiz Exp $
 
 DISTNAME=	dvdbackup-0.4.2
 PKGREVISION=	3
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dvdbackup/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dvdbackup.sourceforge.net/
+HOMEPAGE=	https://dvdbackup.sourceforge.net/
 COMMENT=	DVD backup utility
 LICENSE=	gnu-gpl-v3
 

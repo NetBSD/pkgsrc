@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/07/04 08:48:07 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/11/17 11:01:26 wiz Exp $
 
 DISTNAME=	OpenIPMI-2.0.32
 PKGNAME=	${DISTNAME:S/OpenIPMI/openipmi/}
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	https://sourceforge.net/projects/openipmi/files/OpenIPMI%202.0%20Library/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://openipmi.sourceforge.net/
+HOMEPAGE=	https://openipmi.sourceforge.net/
 COMMENT=	User-level library that provides a higher-level abstraction of IPMI
 LICENSE=	gnu-lgpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/01/26 05:26:11 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2025/11/17 11:00:19 wiz Exp $
 #
 
 DISTNAME=	sidplay-libs-2.1.1
@@ -8,7 +8,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sidplay2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sidplay2.sourceforge.net/
+HOMEPAGE=	https://sidplay2.sourceforge.net/
 COMMENT=	Sidplay2 Library
 LICENSE=	gnu-gpl-v2
 

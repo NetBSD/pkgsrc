@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/11/04 13:29:42 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/11/17 11:00:22 wiz Exp $
 
 DISTNAME=	puddletag-2.0.1
 PKGREVISION=	1
@@ -8,7 +8,7 @@ GITHUB_RELEASE=	${PKGVERSION_NOREV}
 GITHUB_PROJECT=	puddletag
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://puddletag.sourceforge.net/
+HOMEPAGE=	https://puddletag.sourceforge.net/
 COMMENT=	Simple, powerful audio tag editor
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2020/03/20 11:57:55 nia Exp $
+# $NetBSD: Makefile,v 1.41 2025/11/17 11:01:02 wiz Exp $
 #
 
 DISTNAME=	jikes-1.22
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jikes/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://jikes.sourceforge.net/
+HOMEPAGE=	https://jikes.sourceforge.net/
 COMMENT=	Java source to byte-code compiler
 
 GNU_CONFIGURE=		yes

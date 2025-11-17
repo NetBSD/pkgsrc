@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/06/28 11:31:08 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/11/17 11:00:28 wiz Exp $
 #
 
 DISTNAME=	docx2txt-1.2
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docx2txt/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	is@NetBSD.org
-HOMEPAGE=	http://docx2txt.sourceforge.net/
+HOMEPAGE=	https://docx2txt.sourceforge.net/
 COMMENT=	Convert Microsoft .docx documents to simple text files
 LICENSE=	gnu-gpl-v3
 

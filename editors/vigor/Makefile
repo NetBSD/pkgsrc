@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2023/11/12 13:21:18 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2025/11/17 11:00:43 wiz Exp $
 #
 
 DISTNAME=	vigor-0.016
@@ -7,7 +7,7 @@ CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vigor/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://vigor.sourceforge.net/
+HOMEPAGE=	https://vigor.sourceforge.net/
 COMMENT=	Excessive online "help" version of nvi
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}

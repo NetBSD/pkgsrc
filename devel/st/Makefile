@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/03/20 11:57:32 nia Exp $
+# $NetBSD: Makefile,v 1.23 2025/11/17 11:00:41 wiz Exp $
 #
 
 DISTNAME=	st-1.9
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=state-threads/}
 
 MAINTAINER=	gson@NetBSD.org
-HOMEPAGE=	http://state-threads.sourceforge.net/
+HOMEPAGE=	https://state-threads.sourceforge.net/
 COMMENT=	Non-preemptive thread library for Internet applications
 LICENSE=	mpl-1.1
 

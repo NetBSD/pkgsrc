@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/01/26 05:26:29 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2025/11/17 11:01:42 wiz Exp $
 #
 
 DISTNAME=		Xlt-13.0.13
@@ -8,7 +8,7 @@ CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xlt/}
 
 MAINTAINER=		christos@NetBSD.org
-HOMEPAGE=		http://xlt.sourceforge.net/
+HOMEPAGE=		https://xlt.sourceforge.net/
 COMMENT=		OpenMotif/Lesstif Widget library
 LICENSE=		gnu-lgpl-v2
 

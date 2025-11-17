@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/10/24 22:10:36 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/11/17 11:01:17 wiz Exp $
 
 DISTNAME=	uftp-5.0
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://sourceforge.net/projects/uftp-multicast/files/source-tar/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://uftp-multicast.sourceforge.net/
+HOMEPAGE=	https://uftp-multicast.sourceforge.net/
 COMMENT=	Encrypted multicast file transfer program
 LICENSE=	gnu-gpl-v3
 

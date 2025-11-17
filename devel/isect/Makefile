@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2023/10/24 22:08:46 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2025/11/17 11:00:36 wiz Exp $
 #
 
 DISTNAME=	isect-1.6.2
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=isectd/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://isectd.sourceforge.net/
+HOMEPAGE=	https://isectd.sourceforge.net/
 COMMENT=	Open source middleware daemon
 
 GNU_CONFIGURE=	yes

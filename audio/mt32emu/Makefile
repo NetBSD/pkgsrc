@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/09/26 18:30:41 js Exp $
+# $NetBSD: Makefile,v 1.2 2025/11/17 11:00:21 wiz Exp $
 
 DISTNAME=	mt32emu-2.7.2
 CATEGORIES=	audio
@@ -7,7 +7,7 @@ GITHUB_PROJECT=	munt
 GITHUB_TAG=	libmt32emu_${PKGVERSION_NOREV:S/./_/g}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://munt.sourceforge.net/
+HOMEPAGE=	https://munt.sourceforge.net/
 COMMENT=	C/C++ library for emulating Roland MT-32, CM-32L and LAPC-I
 LICENSE=	gnu-lgpl-v2.1 AND modified-bsd
 

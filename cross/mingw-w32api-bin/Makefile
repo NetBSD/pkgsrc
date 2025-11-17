@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/12/14 00:40:10 dbj Exp $
+# $NetBSD: Makefile,v 1.9 2025/11/17 11:00:30 wiz Exp $
 
 DISTNAME=		w32api-3.11
 PKGNAME=		mingw-w32api-bin-3.11
@@ -7,7 +7,7 @@ CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_MINGW}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://mingw.sourceforge.net/
+HOMEPAGE=		https://mingw.sourceforge.net/
 COMMENT=		GCC libraries for win32 cross-development
 
 NO_BUILD=		yes

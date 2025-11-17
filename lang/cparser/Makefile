@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/04/03 11:30:59 nros Exp $
+# $NetBSD: Makefile,v 1.10 2025/11/17 11:01:01 wiz Exp $
 #
 
 DISTNAME=	cparser-0.9.14
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cparser/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cparser.sourceforge.net/
+HOMEPAGE=	https://cparser.sourceforge.net/
 COMMENT=	Recursive descent C99 parser
 LICENSE=	gnu-gpl-v2
 

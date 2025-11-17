@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/01/06 21:49:13 ktnb Exp $
+# $NetBSD: Makefile,v 1.25 2025/11/17 11:00:49 wiz Exp $
 #
 
 DISTNAME=		ivan-0.50
@@ -7,7 +7,7 @@ CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ivan/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://ivan.sourceforge.net/
+HOMEPAGE=		https://ivan.sourceforge.net/
 COMMENT=		Graphical roguelike featuring deep gameplay
 LICENSE=		gnu-gpl-v2 # or later
 

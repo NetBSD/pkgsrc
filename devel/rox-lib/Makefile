@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2023/10/23 06:37:44 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2025/11/17 11:00:39 wiz Exp $
 
 DISTNAME=	rox-lib-2.0.2
 PKGREVISION=	19
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://rox.sourceforge.net/desktop/node/46
+HOMEPAGE=	https://rox.sourceforge.net/desktop/node/46
 COMMENT=	Shared code for ROX applications
 
 DEPENDS+=	rox>=2.2.0:../../sysutils/rox

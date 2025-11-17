@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/01/06 21:49:14 ktnb Exp $
+# $NetBSD: Makefile,v 1.20 2025/11/17 11:00:51 wiz Exp $
 
 DISTNAME=	lmarbles-1.0.8
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lgames/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lgames.sourceforge.net/
+HOMEPAGE=	https://lgames.sourceforge.net/
 COMMENT=	Atomix-like puzzle
 
 GNU_CONFIGURE=		yes

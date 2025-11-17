@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/09/21 21:22:38 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/11/17 11:00:26 wiz Exp $
 #
 
 DISTNAME=	mcalc-1.6
@@ -6,7 +6,7 @@ CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcalc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mcalc.sourceforge.net/
+HOMEPAGE=	https://mcalc.sourceforge.net/
 COMMENT=	JavaScript based microstrip analysis/synthesis calculator
 
 NO_BUILD=	yes
