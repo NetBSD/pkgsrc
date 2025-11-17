@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.44 2025/05/13 03:50:40 adam Exp $
+$NetBSD: distinfo,v 1.45 2025/11/17 17:38:39 adam Exp $
 
-BLAKE2s (open-vm-tools-12.5.2-24697584.tar.gz) = 23114b60d349eef9c7159f93b4a97d42e75cc73f38d1458aa5f4d6fc0c11aadf
-SHA512 (open-vm-tools-12.5.2-24697584.tar.gz) = 19825e02f988b39134538dcb4f0365f8ccf3fae18e245bf61785ea885578881b5f6511aa544ca2b4b24f300a8a099f899a63178885b85ef4c808de18da331d54
-Size (open-vm-tools-12.5.2-24697584.tar.gz) = 4363141 bytes
+BLAKE2s (open-vm-tools-12.5.4-24964629.tar.gz) = 2bea849240363a2b4f256054dff95876bd8ed622e8f71d0e29e2881995c5cd15
+SHA512 (open-vm-tools-12.5.4-24964629.tar.gz) = 328265a8de09d0bf4922c24cd8165e671b331ae29613fce81948450b20588261faa7cc28357966e5ff27ebc266f001373ed9a94956c65a0febc9ae220a5fb9f3
+Size (open-vm-tools-12.5.4-24964629.tar.gz) = 4364808 bytes
 SHA1 (patch-Makefile.am) = 0f0345ea4d092c34a2b99beec43b64035c658433
 SHA1 (patch-ag) = a54f2a76e7b08c8c005a576d4e43ede3f0e0c9da
 SHA1 (patch-ah) = 2f59c9d650d378a84118991f75c59281a4836aaa
@@ -15,7 +15,6 @@ SHA1 (patch-at) = 6dbe029926e18075eedf9e2947807f8a4d593136
 SHA1 (patch-au) = bcacf757f1badbb1ef31dd6f7b438e974ac0d62c
 SHA1 (patch-ay) = ff2f26b43c5d74c3d6e6d816d5ac3177cfbe505d
 SHA1 (patch-az) = 971e3389db9d5d0a758ebe5b75cb45b419d50ba7
-SHA1 (patch-ba) = 77a57e736f3b02b8f942ae3543cee065a4c4e732
 SHA1 (patch-bb) = 5405e552faba3811d16df899baf4acd1cee466aa
 SHA1 (patch-bc) = 7d7ef35f6ab514c7818fcb80f070a325e4207b1f
 SHA1 (patch-be) = 4e4f88df81daf40769b38d1ddd49fbf5e8d8d1eb
@@ -36,6 +35,7 @@ SHA1 (patch-lib_include_sigPosixRegs.h) = 2d43d080d2dc33b7bb701d799760ab5d64fb31
 SHA1 (patch-lib_include_vmblock__user.h) = fedbed79f997ce1e2c5a9d834374734ed56be51a
 SHA1 (patch-lib_include_vmci__sockets.h) = fba82038daf87a08f04ddd541281122f0047e968
 SHA1 (patch-lib_lock_ulSema.c) = 6908d4b453cbdb74100c9419da95a07db532c624
+SHA1 (patch-lib_misc_codesetOld.c) = 925f5f3abdd475969f4cbcee31b0e0fd4856e620
 SHA1 (patch-lib_misc_hostinfoPosix.c) = 91f0540de32172c3d4049828f34f66c143dae857
 SHA1 (patch-lib_misc_vthreadBase.c) = 341ffe3d7d484cf952dace1daa127e2e0a82e35a
 SHA1 (patch-lib_nicInfo_nicInfoInt.h) = 81d5e8625496218a679c0a87f30a08cc2e3af7a7
@@ -47,7 +47,7 @@ SHA1 (patch-network) = 21a9196b4ce6101450bfd9ea6fcb283a9ba4f56e
 SHA1 (patch-scripts_Makefile.am) = 30ca9cef3fb39018cdee2e0b5847945abc98c160
 SHA1 (patch-scripts_netbsd_network) = 0bb7e6f71fa811e1c789a4d0825b4bd0181fb2cf
 SHA1 (patch-services_plugins_dndcp_dnd_dndLinux.c) = d959de9443581ad53de394079fb85bee1bdda8c3
-SHA1 (patch-services_plugins_guestInfo_perfMonLinux.c) = be7912f53989d298b5965cb566085cd0a0e5cc90
+SHA1 (patch-services_plugins_guestInfo_perfMonLinux.c) = 05ad0a1a290e104e6355b20d1f285594019e09b4
 SHA1 (patch-services_plugins_timeSync_Makefile.am) = ae246998326e5c7f6adb6d7eebc318ba8c8af786
 SHA1 (patch-services_plugins_vix_vixTools.c) = a7e9df7fde7997315ef0ea77c50bbf1d410a2d9d
 SHA1 (patch-services_vmtoolsd_Makefile.am) = 558ed58e8fc6d933f0a9698c865b33f88a91c51c

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.143 2025/10/23 20:39:25 wiz Exp $
+# $NetBSD: Makefile,v 1.144 2025/11/17 17:38:39 adam Exp $
 
-OVTVER=		12.5.2
-DISTNAME=	open-vm-tools-${OVTVER}-24697584
+OVTVER=		12.5.4
+DISTNAME=	open-vm-tools-${OVTVER}-24964629
 PKGNAME=	open-vm-tools-${OVTVER}
-PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vmware/}
 GITHUB_RELEASE=	stable-${OVTVER}
@@ -20,8 +19,8 @@ CXXFLAGS+=	-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
-USE_LANGUAGES=		c gnu++11
-USE_CXX_FEATURES+=	c++11
+USE_CXX_FEATURES=	gnu++11
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake pkg-config
 GNU_CONFIGURE=		yes
@@ -54,10 +53,11 @@ pre-configure:
 	cd ${WRKSRC} && autoreconf -f -i
 
 post-install:
-	mv ${DESTDIR}${PKG_SYSCONFDIR}/tools.conf.example \
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/tools.conf.example \
 		${DESTDIR}${EGDIR}/tools.conf
 
 .include "options.mk"
+
 .include "../../archivers/libmspack/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../net/libdnet/buildlink3.mk"
