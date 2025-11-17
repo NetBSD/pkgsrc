@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6788 2025/11/17 09:49:06 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6789 2025/11/17 10:24:02 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9847,3 +9847,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-pdf to 6.3.0 [adam 2025-11-17]
 	Updated math/py-numpy to 2.3.5 [adam 2025-11-17]
 	Updated net/py-pyftpdlib to 2.1.0 [adam 2025-11-17]
+	Updated net/nextcloud-client to 3.17.3 [hauke 2025-11-17]
