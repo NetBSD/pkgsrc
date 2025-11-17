@@ -1,0 +1,14 @@
+Collection of BSD utilities written in pure Perl.
+
+Includes the following:
+
+addbib apply ar arch arithmetic asa awk banner base64 basename bc cal
+cat chgrp ching chmod chown clear cmp col colrm comm cp cut date dc
+deroff diff dirname du echo ed env expand expr factor false
+file find fish fold fortune from glob grep hangman head hexdump id
+install join kill ln lock look ls mail maze mimedecode mkdir mkfifo
+moo morse nl od par paste patch pig ping pom ppt pr primes printenv
+printf pwd rain random rev rm rmdir robots rot13 shar seq sleep sort
+spell split strings sum tac tail tar tee test time touch tr true
+tcsort tty uname unexpand uniq units unlink unpar unshar
+uudecode uuencode wc what which whois words wump xargs yes
