@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6782 2025/11/17 05:28:00 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6783 2025/11/17 07:36:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9835,3 +9835,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added sysutils/p5-PerlPowerTools version 1.053 [scole 2025-11-17]
 	Updated devel/py-ruamel-yaml-clib to 0.2.15 [adam 2025-11-17]
 	Updated devel/py-blessed to 1.24.0 [adam 2025-11-17]
+	Updated devel/py-uv to 0.9.9 [adam 2025-11-17]
+	Updated devel/py-uv-build to 0.9.9 [adam 2025-11-17]
