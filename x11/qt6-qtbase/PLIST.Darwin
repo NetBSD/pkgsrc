@@ -1,12 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.10 2025/11/14 15:41:13 adam Exp $
-qt6/include/QtGui/${PKGVERSION}/QtGui/private/qmacstyle_p.h
-qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginAdditionalTargetInfo.cmake
-qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginConfig.cmake
-qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginConfigVersion.cmake
-qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginConfigVersionImpl.cmake
-qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginTargets-release.cmake
-qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginTargets.cmake
-qt6/plugins/networkinformation/libqapplenetworkinformation.so
+@comment $NetBSD: PLIST.Darwin,v 1.11 2025/11/17 11:04:53 wiz Exp $
 qt6/bin/macdeployqt
 qt6/bin/macdeployqt6
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcfsocketnotifier_p.h
@@ -26,6 +18,7 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgraphicsframecapture_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgraphicsframecapture_p_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgraphicsframecapturemetal_p_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qmacmimeregistry_p.h
+qt6/include/QtGui/${PKGVERSION}/QtGui/private/qmacstyle_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qmacstyle_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qmetallayer_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrasterbackingstore_p.h
@@ -93,6 +86,12 @@ qt6/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginTargets.cmake
+qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginConfig.cmake
+qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginConfigVersion.cmake
+qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginTargets-release.cmake
+qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginTargets.cmake
 qt6/lib/cmake/Qt6Network/Qt6QSecureTransportBackendPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Network/Qt6QSecureTransportBackendPluginConfig.cmake
 qt6/lib/cmake/Qt6Network/Qt6QSecureTransportBackendPluginConfigVersion.cmake
@@ -112,6 +111,7 @@ qt6/mkspecs/modules/qt_plugin_qdarwincontactspermission.pri
 qt6/mkspecs/modules/qt_plugin_qdarwinlocationpermission.pri
 qt6/mkspecs/modules/qt_plugin_qdarwinmicrophonepermission.pri
 qt6/plugins/bearer/libqcorewlanbearer.so
+qt6/plugins/networkinformation/libqapplenetworkinformation.so
 qt6/plugins/networkinformation/libqscnetworkreachability.so
 qt6/plugins/permissions/libqdarwinbluetoothpermission.a
 qt6/plugins/permissions/libqdarwinbluetoothpermission.prl
