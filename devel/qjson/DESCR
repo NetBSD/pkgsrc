@@ -6,6 +6,8 @@ QJson is a qt-based library that maps JSON data to QVariant objects: JSON
 arrays will be mapped to QVariantList instances, while JSON objects will
 be mapped to QVariantMap.
 
-Upstream is no longer maintaining this package and says that it is
-only to be used with qt4.
+The upstream repository is archived:
 
+  This project is archived. QJson was originally created when Qt3 and
+  Qt4 lacked robust JSON support.  Since Qt5, JSON support is included
+  in the native Qt library SDK, making this project obsolete.
