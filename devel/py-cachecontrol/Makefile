@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2025/11/16 20:50:53 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/11/17 10:07:17 wiz Exp $
 
 DISTNAME=	cachecontrol-0.14.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,9 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-filelock>=3.8.0:../../devel/py-filelock
 TEST_DEPENDS+=	${PYPKGPREFIX}-cherrypy>=0:../../www/py-cherrypy
 
 USE_LANGUAGES=	# none
-
-pre-configure:
-	${LN} -sf ${PREFIX}/bin/uv-build-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/uv-build
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
