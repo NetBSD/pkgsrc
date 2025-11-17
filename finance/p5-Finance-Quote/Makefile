@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2025/11/17 11:00:45 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2025/11/17 19:44:27 wiz Exp $
 
 DISTNAME=	Finance-Quote-1.67
 PKGNAME=	p5-${DISTNAME}
@@ -73,6 +73,7 @@ TEST_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
 
 REPLACE_PERL=	lib/Finance/Quote.pm
 REPLACE_PERL+=	lib/Finance/Quote/*.pm
+REPLACE_PERL+=	lib/Finance/Quote/*/*.pm
 
 CONFLICTS=	p5-finance-quote-[0-9]*
 
