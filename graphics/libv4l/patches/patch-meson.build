@@ -1,6 +1,6 @@
-$NetBSD: patch-meson.build,v 1.1 2025/11/15 11:57:44 ryoon Exp $
+$NetBSD: patch-meson.build,v 1.2 2025/11/17 11:25:07 ryoon Exp $
 
---- meson.build.orig	2025-11-02 12:11:37.113321211 +0000
+--- meson.build.orig	2025-10-05 09:51:26.000000000 +0000
 +++ meson.build
 @@ -45,7 +45,6 @@ common_arguments = [
      '-Wno-psabi',
@@ -10,3 +10,12 @@ $NetBSD: patch-meson.build,v 1.1 2025/11/15 11:57:44 ryoon Exp $
      '-DGETSUBOPT_IGNORE_COMMA_IN_BRACKET',
      '-include', meson.current_build_dir() / 'config.h',
  ]
+@@ -82,7 +81,7 @@ endif
+ 
+ v4l2_utils_incdir = include_directories(v4l2_utils_incdir_arr)
+ 
+-prog_bash = find_program('bash')
++prog_bash = find_program('sh')
+ prog_doxygen = find_program('doxygen', required : get_option('doxygen-doc'))
+ prog_grep = find_program('grep')
+ prog_perl = find_program('perl')
