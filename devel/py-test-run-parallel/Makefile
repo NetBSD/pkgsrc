@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2025/08/22 07:14:14 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/11/17 13:49:49 adam Exp $
 
-DISTNAME=	pytest_run_parallel-0.6.1
+DISTNAME=	pytest_run_parallel-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-run-parallel/}
@@ -12,8 +12,9 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-test>=6.2.0:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=5.0.0:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-order>=1.3.0:../../devel/py-test-order
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7.8:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-order>0:../../devel/py-test-order
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>0:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
