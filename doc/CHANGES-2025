@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6781 2025/11/17 04:49:24 scole Exp $
+$NetBSD: CHANGES-2025,v 1.6782 2025/11/17 05:28:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9833,3 +9833,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/OpenJPH to 0.25.3 [wiz 2025-11-16]
 	Updated mail/rspamd to 3.14.0 [wiz 2025-11-16]
 	Added sysutils/p5-PerlPowerTools version 1.053 [scole 2025-11-17]
+	Updated devel/py-ruamel-yaml-clib to 0.2.15 [adam 2025-11-17]
+	Updated devel/py-blessed to 1.24.0 [adam 2025-11-17]
