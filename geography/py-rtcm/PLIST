@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/09/04 13:04:52 gdt Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/11/17 18:23:35 gdt Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -37,6 +37,3 @@ ${PYSITELIB}/pyrtcm/rtcmtypes_get_igs.pyo
 ${PYSITELIB}/pyrtcm/rtcmtypes_get_msm.py
 ${PYSITELIB}/pyrtcm/rtcmtypes_get_msm.pyc
 ${PYSITELIB}/pyrtcm/rtcmtypes_get_msm.pyo
-${PYSITELIB}/pyrtcm/socketwrapper.py
-${PYSITELIB}/pyrtcm/socketwrapper.pyc
-${PYSITELIB}/pyrtcm/socketwrapper.pyo

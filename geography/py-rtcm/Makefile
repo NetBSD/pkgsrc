@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/09/08 10:11:22 gdt Exp $
+# $NetBSD: Makefile,v 1.5 2025/11/17 18:23:35 gdt Exp $
 
-VERSION=	1.1.9
+VERSION=	1.1.10
 DISTTAIL=	rtcm
 DISTNAME=	py${DISTTAIL}-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTTAIL}-${VERSION}
@@ -17,6 +17,7 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	# none
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-nmeagps-[0-9]*:../../geography/py-nmeagps
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
