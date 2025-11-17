@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6795 2025/11/17 13:44:41 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6796 2025/11/17 13:51:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9855,3 +9855,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/television to 0.13.10 [pin 2025-11-17]
 	Updated net/nextcloud-client to 4.0.1 [adam 2025-11-17]
 	Updated net/py-minio to 7.2.18 [adam 2025-11-17]
+	Updated devel/py-test-randomly to 4.0.1 [adam 2025-11-17]
+	Updated devel/py-test-run-parallel to 0.7.1 [adam 2025-11-17]
+	Updated devel/py-test-testmon to 2.1.4 [adam 2025-11-17]
