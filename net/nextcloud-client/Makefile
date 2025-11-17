@@ -1,6 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2025/11/17 13:41:53 adam Exp $
+# $NetBSD: Makefile,v 1.30 2025/11/17 20:24:10 hauke Exp $
+#
 
-DISTNAME=	nextcloud-client-4.0.1
+# Do NOT UPGRADE to Nextcloud 4 without making sure it is functional
+# As of 4.0.1, it still has serious quality issues
+# Since 3.17.x is compatible, there is no urgent need
+
+DISTNAME=	nextcloud-client-3.17.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nextcloud/}
 GITHUB_PROJECT=	desktop
@@ -11,8 +16,9 @@ HOMEPAGE=	https://nextcloud.com/clients
 COMMENT=	Nextcloud Desktop Client
 LICENSE=	gnu-gpl-v2
 
-USE_CXX_FEATURES=	c++17 filesystem
 USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	c++17 filesystem
+
 USE_TOOLS+=		pkg-config
 TOOL_DEPENDS+=		qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
@@ -23,29 +29,30 @@ CONF_FILES=	${EGDIR}/sync-exclude.lst ${PKG_SYSCONFDIR}/sync-exclude.lst
 
 CMAKE_CONFIGURE_ARGS+=	-DSYSCONF_EGDIR:PATH=${EGDIR}
 CMAKE_CONFIGURE_ARGS+=	-DSYSCONF_INSTALL_DIR:PATH=${PKG_SYSCONFDIR}
-CMAKE_CONFIGURE_ARGS+=	-DBUILD_OWNCLOUD_OSX_BUNDLE=OFF
-# Shell integration is not portable.
-CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHELL_INTEGRATION=OFF
-CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
+
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING:BOOL=OFF
 
 # QtWebEngine is not in pkgsrc
-CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_WEBENGINE=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_WEBENGINE:BOOL=OFF
 
 # force cmake to use rsvg-convert
 CMAKE_CONFIGURE_ARGS+=	-DSVG_CONVERTER:FILEPATH=rsvg-convert
 
 # cmake finds these even when we have not depended on them
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Doxygen=TRUE
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_PdfLatex=TRUE
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Sphinx=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Doxygen:BOOL=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_PdfLatex:BOOL=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Sphinx:BOOL=TRUE
+
+AUTO_MKDIRS=	yes
+
+.include "../../devel/cmake/build.mk"
 
 .include "../../archivers/kf6-karchive/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/cmake/build.mk"
 .include "../../devel/extra-cmake-modules/buildlink3.mk"
-#.include "../../devel/kf6-kio/buildlink3.mk"	# optional, adds most of KDE
 .include "../../devel/libinotify/buildlink3.mk"
+#.include "../../devel/kf6-kio/buildlink3.mk"	# optional, adds most of KDE
 .include "../../devel/qt6-qt5compat/buildlink3.mk"
 # In theory, qt6-qttools should be TOOL_DEPENDS only.
 .include "../../devel/qt6-qttools/buildlink3.mk"
@@ -54,8 +61,8 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Sphinx=TRUE
 .include "../../graphics/librsvg/tool.mk"
 .include "../../net/qt6-qtwebsockets/buildlink3.mk"
 .include "../../security/libp11/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../security/qt6-qtkeychain/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../x11/kf6-kguiaddons/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
