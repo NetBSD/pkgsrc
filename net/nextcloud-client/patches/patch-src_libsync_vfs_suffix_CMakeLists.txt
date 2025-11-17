@@ -1,0 +1,15 @@
+$NetBSD: patch-src_libsync_vfs_suffix_CMakeLists.txt,v 1.1 2025/11/17 13:41:54 adam Exp $
+
+Honour BUILD_OWNCLOUD_OSX_BUNDLE.
+
+--- src/libsync/vfs/suffix/CMakeLists.txt.orig	2025-11-17 10:40:11.791779168 +0000
++++ src/libsync/vfs/suffix/CMakeLists.txt
+@@ -24,7 +24,7 @@ set_target_properties(nextcloudsync_vfs_
+       ${APPLICATION_EXECUTABLE}sync_vfs_suffix
+ )
+ 
+-if(APPLE)
++if(APPLE AND BUILD_OWNCLOUD_OSX_BUNDLE)
+     # for being loadable when client run from build dir
+     set(vfs_buildoutputdir "${BIN_OUTPUT_DIRECTORY}/${OWNCLOUD_OSX_BUNDLE}/Contents/PlugIns/")
+     set_target_properties(nextcloudsync_vfs_suffix
