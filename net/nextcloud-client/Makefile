@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2025/10/23 20:38:52 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/11/17 10:23:50 hauke Exp $
 #
 
-DISTNAME=	nextcloud-client-3.16.4
-PKGREVISION=	1
+DISTNAME=	nextcloud-client-3.17.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nextcloud/}
 GITHUB_PROJECT=	desktop
@@ -47,9 +46,9 @@ AUTO_MKDIRS=	yes
 .include "../../archivers/kf6-karchive/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-#.include "../../devel/kf6-kio/buildlink3.mk"			# optional
 .include "../../devel/extra-cmake-modules/buildlink3.mk"
 .include "../../devel/libinotify/buildlink3.mk"
+#.include "../../devel/kf6-kio/buildlink3.mk"	# optional, adds most of KDE
 .include "../../devel/qt6-qt5compat/buildlink3.mk"
 # In theory, qt6-qttools should be TOOL_DEPENDS only.
 .include "../../devel/qt6-qttools/buildlink3.mk"
@@ -60,6 +59,6 @@ AUTO_MKDIRS=	yes
 .include "../../security/libp11/buildlink3.mk"
 .include "../../security/qt6-qtkeychain/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-#.include "../../x11/kf6-kguiaddons/buildlink3.mk"		# optional
+.include "../../x11/kf6-kguiaddons/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

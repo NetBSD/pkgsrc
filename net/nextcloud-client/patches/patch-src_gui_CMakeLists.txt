@@ -1,0 +1,16 @@
+$NetBSD: patch-src_gui_CMakeLists.txt,v 1.1 2025/11/17 10:23:50 hauke Exp $
+
+As of QT 6.10, GuiPrivate needs to be in the find_package() list, see
+<https://doc-snapshots.qt.io/qt6-6.10/qtguiprivate-module.html#details>
+
+--- src/gui/CMakeLists.txt.orig	2025-11-17 09:59:37.481497190 +0000
++++ src/gui/CMakeLists.txt
+@@ -2,7 +2,7 @@
+ # SPDX-FileCopyrightText: 2014 ownCloud GmbH
+ # SPDX-License-Identifier: GPL-2.0-or-later
+ project(gui)
+-find_package(Qt${QT_MAJOR_VERSION} REQUIRED COMPONENTS Widgets Svg Qml Quick QuickControls2 QuickWidgets Xml Network)
++find_package(Qt${QT_MAJOR_VERSION} REQUIRED COMPONENTS Widgets Svg Qml Quick QuickControls2 QuickWidgets Xml Network GuiPrivate)
+ find_package(KF6Archive REQUIRED)
+ find_package(KF6GuiAddons)
+ 
