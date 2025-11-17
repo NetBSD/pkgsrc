@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/04/15 09:51:04 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/11/17 14:03:40 adam Exp $
 
-DISTNAME=	python-subunit-1.4.4
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
-PKGREVISION=	1
+DISTNAME=	python_subunit-1.4.5
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python_//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-subunit/}
 
@@ -11,7 +10,7 @@ HOMEPAGE=	https://launchpad.net/subunit
 COMMENT=	Python implementation of subunit test streaming protocol
 LICENSE=	apache-2.0 OR modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=43.0.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-iso8601-[0-9]*:../../time/py-iso8601
 DEPENDS+=	${PYPKGPREFIX}-testtools>=0.9.34:../../devel/py-testtools
 TEST_DEPENDS+=	${PYPKGPREFIX}-fixtures-[0-9]*:../../devel/py-fixtures
