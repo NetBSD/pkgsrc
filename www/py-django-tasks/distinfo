@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2025/04/29 08:54:35 adam Exp $
+$NetBSD: distinfo,v 1.3 2025/11/17 08:31:40 adam Exp $
 
-BLAKE2s (django_tasks-0.7.0.tar.gz) = 66809077cb5b0529fa5a522f234970a7116602e8cd5a2a3e444f07aa8ff42a8d
-SHA512 (django_tasks-0.7.0.tar.gz) = 0556b4d75ef9788f4b375ff2428d04e256369fc8cb0bb27ac023e62d4d348e4c7c2c3cacfe6e7c05858376d6178bbfe1d4b864b127e286a43ee667fc683088e6
-Size (django_tasks-0.7.0.tar.gz) = 29581 bytes
+BLAKE2s (django_tasks-0.9.0.tar.gz) = 8ae7506f3c8ffef773a1377b3cb5882ebd984bdc2f677bb8c111f68745844b91
+SHA512 (django_tasks-0.9.0.tar.gz) = 348639e40d49010da868775b3a8d1e41e941b7137f341b6a6bcc478c70bce75bddb60c11e491c13fe0bd78e89928799590349d0278399e5fde37fcd8447a070b
+Size (django_tasks-0.9.0.tar.gz) = 32343 bytes

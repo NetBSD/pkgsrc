@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/04/29 08:54:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/11/17 08:31:40 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -79,12 +79,18 @@ ${PYSITELIB}/django_tasks/backends/database/migrations/0014_remove_dbtaskresult_
 ${PYSITELIB}/django_tasks/backends/database/migrations/0015_correctly_order_run_after.py
 ${PYSITELIB}/django_tasks/backends/database/migrations/0015_correctly_order_run_after.pyc
 ${PYSITELIB}/django_tasks/backends/database/migrations/0015_correctly_order_run_after.pyo
+${PYSITELIB}/django_tasks/backends/database/migrations/0016_remove_dbtaskresult_django_task_new_ordering_idx_and_more.py
+${PYSITELIB}/django_tasks/backends/database/migrations/0016_remove_dbtaskresult_django_task_new_ordering_idx_and_more.pyc
+${PYSITELIB}/django_tasks/backends/database/migrations/0016_remove_dbtaskresult_django_task_new_ordering_idx_and_more.pyo
 ${PYSITELIB}/django_tasks/backends/database/migrations/__init__.py
 ${PYSITELIB}/django_tasks/backends/database/migrations/__init__.pyc
 ${PYSITELIB}/django_tasks/backends/database/migrations/__init__.pyo
 ${PYSITELIB}/django_tasks/backends/database/models.py
 ${PYSITELIB}/django_tasks/backends/database/models.pyc
 ${PYSITELIB}/django_tasks/backends/database/models.pyo
+${PYSITELIB}/django_tasks/backends/database/signal_handlers.py
+${PYSITELIB}/django_tasks/backends/database/signal_handlers.pyc
+${PYSITELIB}/django_tasks/backends/database/signal_handlers.pyo
 ${PYSITELIB}/django_tasks/backends/database/utils.py
 ${PYSITELIB}/django_tasks/backends/database/utils.pyc
 ${PYSITELIB}/django_tasks/backends/database/utils.pyo
@@ -97,22 +103,22 @@ ${PYSITELIB}/django_tasks/backends/immediate.pyo
 ${PYSITELIB}/django_tasks/backends/rq.py
 ${PYSITELIB}/django_tasks/backends/rq.pyc
 ${PYSITELIB}/django_tasks/backends/rq.pyo
+${PYSITELIB}/django_tasks/base.py
+${PYSITELIB}/django_tasks/base.pyc
+${PYSITELIB}/django_tasks/base.pyo
 ${PYSITELIB}/django_tasks/checks.py
 ${PYSITELIB}/django_tasks/checks.pyc
 ${PYSITELIB}/django_tasks/checks.pyo
+${PYSITELIB}/django_tasks/compat.py
+${PYSITELIB}/django_tasks/compat.pyc
+${PYSITELIB}/django_tasks/compat.pyo
 ${PYSITELIB}/django_tasks/exceptions.py
 ${PYSITELIB}/django_tasks/exceptions.pyc
 ${PYSITELIB}/django_tasks/exceptions.pyo
 ${PYSITELIB}/django_tasks/py.typed
-${PYSITELIB}/django_tasks/signal_handlers.py
-${PYSITELIB}/django_tasks/signal_handlers.pyc
-${PYSITELIB}/django_tasks/signal_handlers.pyo
 ${PYSITELIB}/django_tasks/signals.py
 ${PYSITELIB}/django_tasks/signals.pyc
 ${PYSITELIB}/django_tasks/signals.pyo
-${PYSITELIB}/django_tasks/task.py
-${PYSITELIB}/django_tasks/task.pyc
-${PYSITELIB}/django_tasks/task.pyo
 ${PYSITELIB}/django_tasks/utils.py
 ${PYSITELIB}/django_tasks/utils.pyc
 ${PYSITELIB}/django_tasks/utils.pyo
