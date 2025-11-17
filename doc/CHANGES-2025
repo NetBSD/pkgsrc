@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6783 2025/11/17 07:36:27 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6784 2025/11/17 07:44:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9837,3 +9837,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-blessed to 1.24.0 [adam 2025-11-17]
 	Updated devel/py-uv to 0.9.9 [adam 2025-11-17]
 	Updated devel/py-uv-build to 0.9.9 [adam 2025-11-17]
+	Updated net/iperf3 to 3.20 [adam 2025-11-17]
+	Updated devel/scons4 to 4.10.1 [adam 2025-11-17]
