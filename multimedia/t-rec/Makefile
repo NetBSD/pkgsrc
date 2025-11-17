@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2025/10/23 20:38:40 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/11/17 11:25:57 pin Exp $
 
-DISTNAME=	t-rec-rs-0.7.9
-PKGNAME=	t-rec-0.7.9
-PKGREVISION=	7
+DISTNAME=	t-rec-rs-0.7.10
+PKGNAME=	t-rec-0.7.10
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sassman/}
 GITHUB_PROJECT=	t-rec-rs
@@ -13,15 +12,13 @@ HOMEPAGE=	https://github.com/sassman/t-rec-rs/
 COMMENT=	Terminal recorder
 LICENSE=	gnu-gpl-v3
 
-SITES.wasi-0.13.3+wasi-0.2.2.crate=		https://static.crates.io/crates/wasi/
-
 TOOL_DEPENDS+=	glib2-[0-9]*:../../devel/glib2
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.85.0
+#RUST_REQ=	1.91.1
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.85.0 on amd64
+#This package is confirmed to build with Rust 1.91.1 on amd64
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
