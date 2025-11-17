@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6780 2025/11/16 21:40:06 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6781 2025/11/17 04:49:24 scole Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9832,3 +9832,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/openexr to 3.4.3 [wiz 2025-11-16]
 	Updated graphics/OpenJPH to 0.25.3 [wiz 2025-11-16]
 	Updated mail/rspamd to 3.14.0 [wiz 2025-11-16]
+	Added sysutils/p5-PerlPowerTools version 1.053 [scole 2025-11-17]
