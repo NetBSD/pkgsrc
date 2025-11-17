@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.664 2025/11/15 10:06:30 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.665 2025/11/17 13:32:38 gdt Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28928,3 +28928,4 @@ postgresql-server>=17<17.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CV
 postgresql-server>=18<18.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12817
 radare2<6.0.5	null-pointer-derference	https://nvd.nist.gov/vuln/detail/CVE-2025-63744
 radare2<6.0.5	null-pointer-derference	https://nvd.nist.gov/vuln/detail/CVE-2025-63745
+qjson-*		eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
