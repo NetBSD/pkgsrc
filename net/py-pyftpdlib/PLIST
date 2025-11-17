@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/20 12:32:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/11/17 09:48:50 adam Exp $
 bin/ftpbench-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -32,32 +32,6 @@ ${PYSITELIB}/pyftpdlib/prefork.pyo
 ${PYSITELIB}/pyftpdlib/servers.py
 ${PYSITELIB}/pyftpdlib/servers.pyc
 ${PYSITELIB}/pyftpdlib/servers.pyo
-${PYSITELIB}/pyftpdlib/test/README
-${PYSITELIB}/pyftpdlib/test/__init__.py
-${PYSITELIB}/pyftpdlib/test/__init__.pyc
-${PYSITELIB}/pyftpdlib/test/__init__.pyo
-${PYSITELIB}/pyftpdlib/test/conftest.py
-${PYSITELIB}/pyftpdlib/test/conftest.pyc
-${PYSITELIB}/pyftpdlib/test/conftest.pyo
-${PYSITELIB}/pyftpdlib/test/keycert.pem
-${PYSITELIB}/pyftpdlib/test/test_authorizers.py
-${PYSITELIB}/pyftpdlib/test/test_authorizers.pyc
-${PYSITELIB}/pyftpdlib/test/test_authorizers.pyo
-${PYSITELIB}/pyftpdlib/test/test_cli.py
-${PYSITELIB}/pyftpdlib/test/test_cli.pyc
-${PYSITELIB}/pyftpdlib/test/test_cli.pyo
-${PYSITELIB}/pyftpdlib/test/test_filesystems.py
-${PYSITELIB}/pyftpdlib/test/test_filesystems.pyc
-${PYSITELIB}/pyftpdlib/test/test_filesystems.pyo
-${PYSITELIB}/pyftpdlib/test/test_functional.py
-${PYSITELIB}/pyftpdlib/test/test_functional.pyc
-${PYSITELIB}/pyftpdlib/test/test_functional.pyo
-${PYSITELIB}/pyftpdlib/test/test_functional_ssl.py
-${PYSITELIB}/pyftpdlib/test/test_functional_ssl.pyc
-${PYSITELIB}/pyftpdlib/test/test_functional_ssl.pyo
-${PYSITELIB}/pyftpdlib/test/test_ioloop.py
-${PYSITELIB}/pyftpdlib/test/test_ioloop.pyc
-${PYSITELIB}/pyftpdlib/test/test_ioloop.pyo
-${PYSITELIB}/pyftpdlib/test/test_servers.py
-${PYSITELIB}/pyftpdlib/test/test_servers.pyc
-${PYSITELIB}/pyftpdlib/test/test_servers.pyo
+${PYSITELIB}/pyftpdlib/utils.py
+${PYSITELIB}/pyftpdlib/utils.pyc
+${PYSITELIB}/pyftpdlib/utils.pyo
