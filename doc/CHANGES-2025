@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6797 2025/11/17 14:03:56 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6798 2025/11/17 15:29:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9860,3 +9860,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-testmon to 2.1.4 [adam 2025-11-17]
 	Updated devel/py-poetry to 2.2.1 [adam 2025-11-17]
 	Updated net/py-subunit to 1.4.5 [adam 2025-11-17]
+	Updated x11/libdrm to 2.4.129 [wiz 2025-11-17]
