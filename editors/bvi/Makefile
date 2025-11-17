@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2025/07/29 16:26:07 tsutsui Exp $
+# $NetBSD: Makefile,v 1.35 2025/11/17 11:00:42 wiz Exp $
 
 DISTNAME=	bvi-1.5.0.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -6,7 +6,7 @@ CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bvi/}
 
 MAINTAINER=	tsutsui@NetBSD.org
-HOMEPAGE=	http://bvi.sourceforge.net/
+HOMEPAGE=	https://bvi.sourceforge.net/
 COMMENT=	Vi-like editor for binary files
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}

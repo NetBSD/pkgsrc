@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2023/06/15 09:55:25 hauke Exp $
+# $NetBSD: Makefile,v 1.2 2025/11/17 11:01:24 wiz Exp $
 
 DISTNAME=	and-1.2.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=and/}
 
 MAINTAINER=	hauke@NetBSD.org
-HOMEPAGE=	http://and.sourceforge.net/
+HOMEPAGE=	https://and.sourceforge.net/
 COMMENT=	Renice or kill jobs based on priority database
 LICENSE=	gnu-gpl-v2
 

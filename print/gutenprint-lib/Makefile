@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2025/10/23 20:39:00 wiz Exp $
+# $NetBSD: Makefile,v 1.142 2025/11/17 11:01:19 wiz Exp $
 
 INSTALLVERSION=	5.3
 VERSION=	${INSTALLVERSION}.5
@@ -14,7 +14,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://gutenprint.sourceforge.net/
+HOMEPAGE=	https://gutenprint.sourceforge.net/
 COMMENT=	Drivers for Canon, Epson, Lexmark, and PCL printers
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2025/10/23 20:39:04 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2025/11/17 11:01:21 wiz Exp $
 
 DISTNAME=	xpp-1.5
 PKGREVISION=	54
@@ -6,7 +6,7 @@ CATEGORIES=	print x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cups/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cups.sourceforge.net/xpp/index.html
+HOMEPAGE=	https://cups.sourceforge.net/xpp/index.html
 COMMENT=	X Printing Panel
 
 USE_TOOLS+=	gmake

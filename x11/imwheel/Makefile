@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/01/26 05:26:27 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2025/11/17 11:01:41 wiz Exp $
 #
 
 DISTNAME=	imwheel-0.9.9
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=imwheel/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://imwheel.sourceforge.net/
+HOMEPAGE=	https://imwheel.sourceforge.net/
 COMMENT=	Tool which helps to use mousewheels
 
 GNU_CONFIGURE=		YES

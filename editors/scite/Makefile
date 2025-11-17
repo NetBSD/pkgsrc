@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2025/10/23 20:36:44 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2025/11/17 11:00:43 wiz Exp $
 #
 
 DISTNAME=	scite339
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scintilla/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://scintilla.sourceforge.net/
+HOMEPAGE=	https://scintilla.sourceforge.net/
 COMMENT=	Source code editor
 #LICENSE=	# TODO: (see mk/license.mk)
 

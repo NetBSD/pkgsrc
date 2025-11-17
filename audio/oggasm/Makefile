@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2022/06/28 11:30:55 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/11/17 11:00:21 wiz Exp $
 #
 
 DISTNAME=	oggasm_1.4.0
@@ -8,7 +8,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	rxg@NetBSD.org
-# HOMEPAGE=	http://oggasm.sourceforge.net/
+# HOMEPAGE=	https://oggasm.sourceforge.net/
 # but see http://us.geocities.com/pvachusk/programs/index.html
 COMMENT=	Perform batch conversion of mp3s into oggs
 LICENSE=	gnu-gpl-v2

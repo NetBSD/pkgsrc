@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2020/01/26 05:26:28 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2025/11/17 11:01:42 wiz Exp $
 #
 DISTNAME=	stalonetray-0.8.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=stalonetray/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://stalonetray.sourceforge.net/
+HOMEPAGE=	https://stalonetray.sourceforge.net/
 COMMENT=	Stand-alone system tray
 LICENSE=	gnu-gpl-v2
 

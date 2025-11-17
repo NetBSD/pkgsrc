@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2025/08/30 22:46:26 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/11/17 11:01:36 wiz Exp $
 #
 
 DISTNAME=	xonclock-0.0.9.4
@@ -7,7 +7,7 @@ CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xonclock/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xonclock.sourceforge.net/
+HOMEPAGE=	https://xonclock.sourceforge.net/
 COMMENT=	Analog clock
 LICENSE=	gnu-gpl-v2
 

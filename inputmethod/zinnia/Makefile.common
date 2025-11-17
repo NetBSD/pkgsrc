@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2020/03/20 11:57:54 nia Exp $
+# $NetBSD: Makefile.common,v 1.6 2025/11/17 11:01:01 wiz Exp $
 # used by inputmethod/p5-zinnia/Makefile
 # used by inputmethod/py-zinnia/Makefile
 # used by inputmethod/ruby-zinnia/Makefile
@@ -11,5 +11,5 @@ DISTINFO_FILE=	${.CURDIR}/../../inputmethod/zinnia/distinfo
 PATCHDIR=	${.CURDIR}/../../inputmethod/zinnia/patches
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://zinnia.sourceforge.net/
+HOMEPAGE=	https://zinnia.sourceforge.net/
 LICENSE=	modified-bsd

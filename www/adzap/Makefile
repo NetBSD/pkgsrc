@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2022/06/28 11:37:01 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2025/11/17 11:01:37 wiz Exp $
 
 DISTNAME=	adzap-20110915
 PKGREVISION=	9
@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	http://adzapper.sourceforge.net/
 
 MAINTAINER=	simonb@NetBSD.org
-HOMEPAGE=	http://adzapper.sourceforge.net/
+HOMEPAGE=	https://adzapper.sourceforge.net/
 COMMENT=	Filter out animated ad banners from web pages
 LICENSE=	2-clause-bsd
 

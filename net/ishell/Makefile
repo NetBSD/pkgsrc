@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/03/20 11:58:07 nia Exp $
+# $NetBSD: Makefile,v 1.14 2025/11/17 11:01:13 wiz Exp $
 #
 
 DISTNAME=	ish-v${VERSION}
@@ -8,7 +8,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=icmpshell/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://icmpshell.sourceforge.net/
+HOMEPAGE=	https://icmpshell.sourceforge.net/
 COMMENT=	Allow remote shell using ICMP
 
 VERSION=	0.2

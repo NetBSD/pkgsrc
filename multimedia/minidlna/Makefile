@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2025/04/24 14:15:18 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2025/11/17 11:01:10 wiz Exp $
 
 DISTNAME=	minidlna-1.3.0
 PKGREVISION=	18
@@ -6,7 +6,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=minidlna/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://minidlna.sourceforge.net/
+HOMEPAGE=	https://minidlna.sourceforge.net/
 COMMENT=	DLNA server
 LICENSE=	gnu-gpl-v2
 

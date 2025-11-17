@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/12/28 13:57:22 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/11/17 11:00:46 wiz Exp $
 
 DISTNAME=		monafont-ttf-2.90
 PKGNAME=		${DISTNAME:S/font/fonts/}
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=monafont/}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		yamajun@ofug.net
-HOMEPAGE=		http://monafont.sourceforge.net/index-e.html
+HOMEPAGE=		https://monafont.sourceforge.net/index-e.html
 COMMENT=		Japanese TrueType fonts for "Mona" seen at 2ch.net
 
 NO_BUILD=		YES

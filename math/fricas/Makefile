@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2022/12/21 13:33:59 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/11/17 11:01:07 wiz Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-full
 PKGNAME=		fricas-1.3.5
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fricas/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		asau@inbox.ru
-HOMEPAGE=		http://fricas.sourceforge.net/
+HOMEPAGE=		https://fricas.sourceforge.net/
 COMMENT=		Fork of the Axiom computer algebra system
 LICENSE=		modified-bsd
 

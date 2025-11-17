@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/04/11 18:21:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/11/17 11:00:25 wiz Exp $
 
 DISTNAME=	NUTsqlite-2.0.6
 PKGNAME=	${DISTNAME:tl}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nut/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://nut.sourceforge.net/
+HOMEPAGE=	https://nut.sourceforge.net/
 COMMENT=	Record what you eat and analyze your meals
 LICENSE=	gnu-gpl-v2
 

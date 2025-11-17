@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/03/03 09:33:17 fcambus Exp $
+# $NetBSD: Makefile,v 1.11 2025/11/17 11:00:53 wiz Exp $
 #
 
 DISTNAME=	wtf-20230301
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bsdwtf/}
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://bsdwtf.sourceforge.net/
+HOMEPAGE=	https://bsdwtf.sourceforge.net/
 COMMENT=	Translate common Internet acronyms
 LICENSE=	public-domain
 

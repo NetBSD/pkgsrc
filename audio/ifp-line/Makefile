@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/01/26 05:26:10 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2025/11/17 11:00:18 wiz Exp $
 
 DISTNAME=		ifp-line-0.3
 PKGREVISION=		1
@@ -6,7 +6,7 @@ CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ifp-driver/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://ifp-driver.sourceforge.net/
+HOMEPAGE=		https://ifp-driver.sourceforge.net/
 COMMENT=		Command-line interface to iRiver MP3 players
 LICENSE=		gnu-gpl-v2
 

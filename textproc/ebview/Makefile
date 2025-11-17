@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2025/10/23 20:39:31 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2025/11/17 11:01:30 wiz Exp $
 
 DISTNAME=		ebview-0.3.6
 PKGREVISION=		45
@@ -6,7 +6,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ebview/}
 
 MAINTAINER=		yamajun@ofug.net
-HOMEPAGE=		http://ebview.sourceforge.net/
+HOMEPAGE=		https://ebview.sourceforge.net/
 COMMENT=		GTK2 based EPWING dictionary browser
 
 USE_PKGLOCALEDIR=	YES

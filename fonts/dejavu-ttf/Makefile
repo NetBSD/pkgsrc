@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/07/23 12:25:59 hauke Exp $
+# $NetBSD: Makefile,v 1.27 2025/11/17 11:00:46 wiz Exp $
 
 DISTNAME=	dejavu-fonts-ttf-2.37
 PKGNAME=	${DISTNAME:S/fonts-//}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dejavu/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jakllsch@NetBSD.org
-#HOMEPAGE=	http://dejavu.sourceforge.net/
+#HOMEPAGE=	https://dejavu.sourceforge.net/
 COMMENT=	DejaVu family of TrueType fonts
 # LICENSE=	# complex of severals, see LICENSE file
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2022/01/10 22:36:51 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2025/11/17 11:00:31 wiz Exp $
 
 DISTNAME=	pyPgSQL-2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -7,7 +7,7 @@ CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pypgsql/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pypgsql.sourceforge.net/
+HOMEPAGE=	https://pypgsql.sourceforge.net/
 COMMENT=	Python DB-API 2.0 compliant interface to PostgreSQL
 
 WRKSRC=		${WRKDIR}/pypgsql

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2025/08/30 22:45:14 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2025/11/17 11:00:54 wiz Exp $
 
 DISTNAME=	autopano-sift-C-2.5.1
 PKGREVISION=	26
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hugin/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://hugin.sourceforge.net/
+HOMEPAGE=	https://hugin.sourceforge.net/
 COMMENT=	SIFT Feature Detection implementation
 LICENSE=	gnu-gpl-v2
 

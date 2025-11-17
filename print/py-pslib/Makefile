@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/01/10 21:30:50 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/11/17 11:01:20 wiz Exp $
 
 DISTNAME=	python-pslib_0.2.0.orig
 PKGNAME=	${PYPKGPREFIX}-pslib-0.2.0
@@ -7,7 +7,7 @@ CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pslib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pslib.sourceforge.net/
+HOMEPAGE=	https://pslib.sourceforge.net/
 COMMENT=	Python bindings for pslib
 
 

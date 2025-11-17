@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2025/04/24 14:14:21 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2025/11/17 11:00:55 wiz Exp $
 
 DISTNAME=	gphoto2-2.5.28
 PKGREVISION=	5
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gphoto.sourceforge.net/
+HOMEPAGE=	https://gphoto.sourceforge.net/
 COMMENT=	Digital camera access command line client
 LICENSE=	gnu-gpl-v2
 

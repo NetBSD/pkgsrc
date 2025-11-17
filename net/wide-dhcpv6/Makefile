@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/05/10 14:20:43 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2025/11/17 11:01:18 wiz Exp $
 
 DISTNAME=	wide-dhcpv6-20080615
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wide-dhcpv6/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wide-dhcpv6.sourceforge.net/
+HOMEPAGE=	https://wide-dhcpv6.sourceforge.net/
 COMMENT=	DHCP6 client, server and relay agent by WIDE project
 LICENSE=	modified-bsd
 

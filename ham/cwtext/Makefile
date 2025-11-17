@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/08/14 05:24:38 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2025/11/17 11:01:00 wiz Exp $
 
 DISTNAME=	cwtext-0.96
 PKGREVISION=	8
@@ -6,7 +6,7 @@ CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cwtext/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cwtext.sourceforge.net/
+HOMEPAGE=	https://cwtext.sourceforge.net/
 COMMENT=	Morse Code Generator
 
 MAKE_FILE=	makefile

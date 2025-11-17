@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/10/23 20:35:55 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/11/17 11:00:23 wiz Exp $
 
 DISTNAME=	streamripper-1.64.6
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=streamripper/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://streamripper.sourceforge.net/
+HOMEPAGE=	https://streamripper.sourceforge.net/
 COMMENT=	Splits SHOUTcast stream into tracks
 LICENSE=	gnu-gpl-v2
 

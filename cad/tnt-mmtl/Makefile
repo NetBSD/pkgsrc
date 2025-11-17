@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2025/09/21 21:22:39 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2025/11/17 11:00:26 wiz Exp $
 
 DISTNAME=	tnt-1.2.2
 PKGNAME=	${DISTNAME:S/tnt/tnt-mmtl/}
@@ -7,7 +7,7 @@ CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mmtl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mmtl.sourceforge.net/
+HOMEPAGE=	https://mmtl.sourceforge.net/
 COMMENT=	Multilayer Multiconductor Transmission Line 2-D and 2.5-D simulator
 
 TOOL_DEPENDS+=	latex2html-[0-9]*:../../textproc/latex2html

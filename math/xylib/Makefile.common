@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2023/06/07 06:58:46 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2025/11/17 11:01:07 wiz Exp $
 # used by math/xylib/Makefile
 # used by math/xyconvert/Makefile
 
@@ -9,7 +9,7 @@ GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xylib.sourceforge.net/
+HOMEPAGE=	https://xylib.sourceforge.net/
 
 LICENSE=	gnu-lgpl-v2
 

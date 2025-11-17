@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 11:34:34 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/11/17 11:01:06 wiz Exp $
 #
 
 DISTNAME=		sendymail-0.5.8
@@ -7,7 +7,7 @@ CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sendymail/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://sendymail.sourceforge.net/
+HOMEPAGE=		https://sendymail.sourceforge.net/
 COMMENT=		Send emails through Yahoo using your favorite email client
 LICENSE=		gnu-gpl-v2
 

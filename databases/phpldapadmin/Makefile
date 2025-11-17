@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2025/02/08 03:33:12 taca Exp $
+# $NetBSD: Makefile,v 1.50 2025/11/17 11:00:31 wiz Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_PROJECT=	phpLDAPadmin
 GITHUB_TAG=	${VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://phpldapadmin.sourceforge.net/
+HOMEPAGE=	https://phpldapadmin.sourceforge.net/
 COMMENT=	Set of PHP-scripts to administer an LDAP directory over the WWW
 LICENSE=	gnu-gpl-v2
 

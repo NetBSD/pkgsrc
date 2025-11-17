@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/09/30 16:07:39 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/11/17 11:01:24 wiz Exp $
 
 DISTNAME=	denyhosts-3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=denyhosts/}
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://denyhosts.sourceforge.net/
+HOMEPAGE=	https://denyhosts.sourceforge.net/
 COMMENT=	Watch auth log for invalid ssh login attempts and block hosts
 
 EGDIR=		share/examples/denyhosts

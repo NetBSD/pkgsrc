@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/03/20 11:58:11 nia Exp $
+# $NetBSD: Makefile,v 1.11 2025/11/17 11:01:17 wiz Exp $
 
 DISTNAME=	tcpick-0.2.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcpick/}
 
 MAINTAINER=	josediazfer@yahoo.es
-HOMEPAGE=	http://tcpick.sourceforge.net/
+HOMEPAGE=	https://tcpick.sourceforge.net/
 COMMENT=	Simple tcp sniffer with tcpdump-style rules
 
 GNU_CONFIGURE=	YES

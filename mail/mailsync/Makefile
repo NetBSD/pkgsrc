@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2023/10/24 22:09:46 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2025/11/17 11:01:05 wiz Exp $
 #
 
 DISTNAME=	mailsync_5.2.1.orig
@@ -8,7 +8,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mailsync/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mailsync.sourceforge.net/
+HOMEPAGE=	https://mailsync.sourceforge.net/
 COMMENT=	Mailsync is a way of synchronizing a collection of mailboxes
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
