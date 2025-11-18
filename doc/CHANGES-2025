@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6812 2025/11/18 16:33:38 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6813 2025/11/18 17:26:48 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9878,3 +9878,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/nss to 3.118.1 [wiz 2025-11-18]
 	Updated devel/git to 2.52.0 [adam 2025-11-18]
 	Updated devel/py-coverage to 7.12.0 [adam 2025-11-18]
+	Updated editors/abiword-plugins to 3.0.7 [nia 2025-11-18]
+	Updated editors/abiword to 3.0.7 [nia 2025-11-18]
