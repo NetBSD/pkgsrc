@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2025/11/18 11:08:20 ryoon Exp $
+${PYSITELIB}/yt_dlp_ejs/__init__.py
+${PYSITELIB}/yt_dlp_ejs/_version.py
+${PYSITELIB}/yt_dlp_ejs/yt/__init__.py
+${PYSITELIB}/yt_dlp_ejs/yt/solver/__init__.py
+${PYSITELIB}/yt_dlp_ejs/yt/solver/core.min.js
+${PYSITELIB}/yt_dlp_ejs/yt/solver/lib.min.js
