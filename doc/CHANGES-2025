@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6813 2025/11/18 17:26:48 nia Exp $
+$NetBSD: CHANGES-2025,v 1.6814 2025/11/18 20:53:00 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9880,3 +9880,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-coverage to 7.12.0 [adam 2025-11-18]
 	Updated editors/abiword-plugins to 3.0.7 [nia 2025-11-18]
 	Updated editors/abiword to 3.0.7 [nia 2025-11-18]
+	Updated x11/kitty to 0.44.0 [ktnb 2025-11-18]
