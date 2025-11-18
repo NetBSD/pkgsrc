@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1612 2025/10/30 04:01:58 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1613 2025/11/18 11:09:12 ryoon Exp $
 #
 
 COMMENT=	Networking tools
@@ -1100,6 +1100,7 @@ SUBDIR+=	yaydl
 SUBDIR+=	yaz
 SUBDIR+=	youtube-dl
 SUBDIR+=	yt-dlp
+SUBDIR+=	yt-dlp-ejs
 SUBDIR+=	ytalk
 SUBDIR+=	ywho
 SUBDIR+=	zenmap
