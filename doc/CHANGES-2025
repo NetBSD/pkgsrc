@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6810 2025/11/18 13:41:39 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6811 2025/11/18 15:37:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9875,3 +9875,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added net/yt-dlp-ejs version 0.3.1 [ryoon 2025-11-18]
 	Updated textproc/treemd to 0.2.3 [pin 2025-11-18]
 	Updated textproc/xan to 0.54.0 [pin 2025-11-18]
+	Updated devel/nss to 3.118.1 [wiz 2025-11-18]
