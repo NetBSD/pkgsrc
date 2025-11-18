@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/09/22 13:12:58 pin Exp $
+# $NetBSD: Makefile,v 1.4 2025/11/18 13:41:20 pin Exp $
 
-DISTNAME=	xan-0.53.0
+DISTNAME=	xan-0.54.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=medialab/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -10,9 +10,7 @@ HOMEPAGE=	https://github.com/medialab/xan/
 COMMENT=	CSV handling tool
 LICENSE=	unlicense
 
-#RUST_REQ=	1.90.0
-#Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.90.0 on amd64
+RUST_REQ=	1.83.0
 USE_LANGUAGES=	c
 USE_TOOLS+=	pax
 
