@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6804 2025/11/18 06:07:07 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6805 2025/11/18 08:25:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9869,3 +9869,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated parallel/py-billiard to 4.2.3 [adam 2025-11-18]
 	Updated devel/py-rpds-py to 0.29.0 [adam 2025-11-18]
 	Updated net/py-moto to 5.1.17 [adam 2025-11-18]
+	Updated x11/kf6-kguiaddons to 6.18.0nb2 [wiz 2025-11-18]
