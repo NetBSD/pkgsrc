@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.15 2024/04/01 15:41:08 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.16 2025/11/18 17:26:22 nia Exp $
 lib/abiword-3.0/plugins/aiksaurus.la
 lib/abiword-3.0/plugins/applix.la
-lib/abiword-3.0/plugins/babelfish.la
 lib/abiword-3.0/plugins/bmp.la
 lib/abiword-3.0/plugins/clarisworks.la
 lib/abiword-3.0/plugins/collab.la
@@ -9,9 +8,7 @@ lib/abiword-3.0/plugins/command.la
 lib/abiword-3.0/plugins/docbook.la
 lib/abiword-3.0/plugins/eml.la
 lib/abiword-3.0/plugins/epub.la
-lib/abiword-3.0/plugins/freetranslation.la
 lib/abiword-3.0/plugins/garble.la
-lib/abiword-3.0/plugins/gdict.la
 lib/abiword-3.0/plugins/gimp.la
 lib/abiword-3.0/plugins/goffice.la
 lib/abiword-3.0/plugins/google.la
