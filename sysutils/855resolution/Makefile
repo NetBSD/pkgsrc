@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/12/13 14:53:44 zafer Exp $
-#
+# $NetBSD: Makefile,v 1.13 2025/11/18 13:45:06 wiz Exp $
 
 DISTNAME=	855resolution-0.4
 PKGREVISION=	2
@@ -8,7 +7,7 @@ MASTER_SITES=	https://www.aydogan.net/distfiles/sysutils/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://perso.orange.fr/apoirier/
+#HOMEPAGE=	http://perso.orange.fr/apoirier/
 COMMENT=	BIOS VESA resolution utility for 855/865/915 Intel chips
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64 Linux-*-i386
