@@ -1,8 +1,14 @@
-# $NetBSD: options.mk,v 1.7 2018/01/01 06:56:01 ryoon Exp $
+# $NetBSD: options.mk,v 1.8 2025/11/18 07:01:19 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.open-vm-tools
 PKG_SUPPORTED_OPTIONS=	icu x11
-PKG_SUGGESTED_OPTIONS=	icu x11
+PKG_SUGGESTED_OPTIONS=	icu
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${OPSYS} != "Darwin"
+PKG_SUGGESTED_OPTIONS+=	x11
+.endif
 
 .include "../../mk/bsd.options.mk"
 
