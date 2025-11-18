@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2012/10/08 13:04:16 asau Exp $
+# $NetBSD: Makefile,v 1.3 2025/11/18 13:57:44 wiz Exp $
 
 DISTNAME=	abclock-1.0d
 CATEGORIES=	time
-MASTER_SITES=	http://odur.let.rug.nl/~kleiweg/abclock/
+#MASTER_SITES=	http://odur.let.rug.nl/~kleiweg/abclock/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://odur.let.rug.nl/~kleiweg/abclock/
+#HOMEPAGE=	http://odur.let.rug.nl/~kleiweg/abclock/
 COMMENT=	Analogue Bitmap Clock
 LICENSE=	gnu-gpl-v2
 
