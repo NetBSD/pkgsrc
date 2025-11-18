@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.24 2015/07/04 16:18:37 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.25 2025/11/18 14:01:33 wiz Exp $
 
 DISTNAME=	abs-src-0.8
 PKGNAME=	abs-0.8
 PKGREVISION=	2
 CATEGORIES=	math x11
-MASTER_SITES=	http://home.scarlet.be/~pin01858/
+#MASTER_SITES=	http://home.scarlet.be/~pin01858/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://home.scarlet.be/~pin01858/abs.html
+#HOMEPAGE=	http://home.scarlet.be/~pin01858/abs.html
 COMMENT=	Free spreadsheet with graphical user interface
 LICENSE=	gnu-gpl-v2
 
