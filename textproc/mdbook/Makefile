@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/08/25 17:43:30 adam Exp $
+# $NetBSD: Makefile,v 1.2 2025/11/18 05:53:31 adam Exp $
 
-DISTNAME=	mdBook-0.4.52
+DISTNAME=	mdBook-0.5.0
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rust-lang/}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/rust-lang/mdBook
 COMMENT=	Create modern online books from Markdown files
 LICENSE=	mpl-2.0
 
-RUST_REQ=	1.82
+RUST_REQ=	1.88
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 INSTALLATION_DIRS=	bin
