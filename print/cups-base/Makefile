@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2025/10/23 20:38:58 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2025/11/18 17:38:35 nia Exp $
 
 PKGREVISION= 1
 .include "../../print/cups/Makefile.common"
@@ -38,6 +38,9 @@ CONFIGURE_ARGS+=	--without-menudir
 CONFIGURE_ARGS+=	--with-tls=gnutls
 
 CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
+
+ALL_ENV.Darwin+=	STRIP= INSTALL_STRIP_LIB=
+MAKE_FLAGS.Darwin+=	STRIP= INSTALL_STRIP_LIB=
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
