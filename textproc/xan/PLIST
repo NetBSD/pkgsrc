@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/07/31 11:49:48 pin Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/11/18 13:41:20 pin Exp $
 bin/xan
 share/doc/xan/LOVE_LETTER.md
 share/doc/xan/NOTES.md
@@ -25,6 +25,7 @@ share/doc/xan/cmd/fmt.md
 share/doc/xan/cmd/frequency.md
 share/doc/xan/cmd/from.md
 share/doc/xan/cmd/fuzzy-join.md
+share/doc/xan/cmd/grep.md
 share/doc/xan/cmd/groupby.md
 share/doc/xan/cmd/head.md
 share/doc/xan/cmd/headers.md
@@ -50,6 +51,7 @@ share/doc/xan/cmd/sample.md
 share/doc/xan/cmd/scrape.md
 share/doc/xan/cmd/search.md
 share/doc/xan/cmd/select.md
+share/doc/xan/cmd/separate.md
 share/doc/xan/cmd/shuffle.md
 share/doc/xan/cmd/slice.md
 share/doc/xan/cmd/sort.md
