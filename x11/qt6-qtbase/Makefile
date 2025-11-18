@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2025/11/17 11:05:21 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2025/11/18 10:17:40 jperkin Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtbase-${QTVERSION}
@@ -66,7 +66,7 @@ CONFIGURE_ARGS+=	-no-rpath	# avoid @rpath in dylibs
 QMAKE_CONF=		qmake.conf.mac
 .endif
 
-PLIST_VARS+=	egl egldevice x11
+PLIST_VARS+=	egl egldevice wayland x11
 
 .include "../../mk/compiler.mk"
 
@@ -225,6 +225,7 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Xml.pc
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .if !empty(PLATFORM_SUPPORTS_WAYLAND:Myes)
+PLIST.wayland=	yes
 .include "../../devel/wayland/buildlink3.mk"
 .endif
 .include "../../devel/zlib/buildlink3.mk"
