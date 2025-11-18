@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6806 2025/11/18 08:43:51 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6807 2025/11/18 08:45:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9871,3 +9871,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-moto to 5.1.17 [adam 2025-11-18]
 	Updated x11/kf6-kguiaddons to 6.18.0nb2 [wiz 2025-11-18]
 	Updated textproc/lowdown to 2.0.3 [wiz 2025-11-18]
+	Updated textproc/lowdown to 2.0.4 [wiz 2025-11-18]
