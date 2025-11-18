@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6802 2025/11/17 21:08:58 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6803 2025/11/18 05:57:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9865,3 +9865,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-dirty-equals to 0.11 [adam 2025-11-17]
 	Updated geography/py-rtcm to 1.1.10 [gdt 2025-11-17]
 	Downgraded net/nextcloud-client to 3.17.3 [hauke 2025-11-17]
+	Updated textproc/mdbook to 0.5.0 [adam 2025-11-18]
+	Updated parallel/py-billiard to 4.2.3 [adam 2025-11-18]
