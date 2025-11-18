@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.169 2025/10/23 20:36:40 wiz Exp $
+# $NetBSD: Makefile,v 1.170 2025/11/18 17:26:22 nia Exp $
 
-PKGREVISION=	41
 .include	"../../editors/abiword/Makefile.common"
-DISTNAME=	abiword-${ABIVERSION}
+
 PKGNAME=	abiword-plugins-${ABIVERSION}
-CATEGORIES=	editors
-MASTER_SITES=	http://www.nl.abisource.com/downloads/abiword/${PKGVERSION_NOREV}/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.abisource.com/
@@ -41,7 +38,6 @@ CONFIGURE_ARGS+=	--with-evolution-data-server=no
 CONFIGURE_ARGS+=	--enable-plugins="\
 	aiksaurus \
 	applix \
-	babelfish \
 	bmp \
 	clarisworks \
 	collab \
@@ -49,9 +45,7 @@ CONFIGURE_ARGS+=	--enable-plugins="\
 	docbook \
 	eml \
 	epub \
-	freetranslation \
 	garble \
-	gdict \
 	gimp \
 	goffice \
 	google \
@@ -94,8 +88,7 @@ CONFIGURE_ARGS+=	--enable-collab-backend-service=no
 PKGCONFIG_OVERRIDE+=	libabiword.pc.in
 
 pre-configure:
-	cd ${WRKSRC}; \
-	autoreconf --force --install
+	cd ${WRKSRC} && ${ALL_ENV} ${SH} autogen.sh
 
 BUILDLINK_TRANSFORM+=	opt:-no-undefined:-Wl,--no-undefined
 
@@ -108,7 +101,6 @@ BUILDLINK_TRANSFORM+=	opt:-no-undefined:-Wl,--no-undefined
 .include "../../converters/libwps/buildlink3.mk"
 .include "../../chat/loudmouth/buildlink3.mk"
 .include "../../chat/telepathy-glib/buildlink3.mk"
-#.include "../../devel/asio/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
@@ -117,7 +109,6 @@ BUILDLINK_TRANSFORM+=	opt:-no-undefined:-Wl,--no-undefined
 .include "../../geography/libchamplain012/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../misc/goffice0.10/buildlink3.mk"
-#.include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"

@@ -1,7 +1,11 @@
-# $NetBSD: Makefile.common,v 1.52 2024/04/01 15:46:40 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.53 2025/11/18 17:26:21 nia Exp $
 # used by editors/abiword-plugins/Makefile
 
-ABIVERSION=	3.0.5
+ABIVERSION=	3.0.7
+
+DISTNAME=	AbiWord-release-${ABIVERSION}
+CATEGORIES=	editors
+MASTER_SITES=	https://gitlab.gnome.org/World/AbiWord/-/archive/release-${ABIVERSION}/
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++11

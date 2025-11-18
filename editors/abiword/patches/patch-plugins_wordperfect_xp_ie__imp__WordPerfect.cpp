@@ -1,9 +1,9 @@
-$NetBSD: patch-plugins_wordperfect_xp_ie__imp__WordPerfect.cpp,v 1.2 2019/06/08 10:40:53 rillig Exp $
+$NetBSD: patch-plugins_wordperfect_xp_ie__imp__WordPerfect.cpp,v 1.3 2025/11/18 17:26:21 nia Exp $
 
 * adapt wordperfect plugins to dependecies available in pkgsrc 
   from abiword svn date 2014-12-27
 
---- plugins/wordperfect/xp/ie_imp_WordPerfect.cpp.orig	2013-04-07 13:53:03.000000000 +0000
+--- plugins/wordperfect/xp/ie_imp_WordPerfect.cpp.orig	2025-07-31 01:33:21.000000000 +0000
 +++ plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 @@ -31,6 +31,8 @@
  #include <stdlib.h>
@@ -632,13 +632,15 @@ $NetBSD: patch-plugins_wordperfect_xp_ie__imp__WordPerfect.cpp,v 1.2 2019/06/08 
  			{
  				UT_DEBUGMSG(("AbiMSWorks: ERROR: %i!\n", (int)error));
  				return UT_IE_IMPORTERROR;
-@@ -1286,13 +1388,17 @@ UT_Confidence_t IE_Imp_MSWorks_Sniffer::
+@@ -1286,13 +1388,19 @@ UT_Confidence_t IE_Imp_MSWorks_Sniffer::
  {
  	AbiWordperfectInputStream gsfInput(input);
  
 -	WPSConfidence confidence = WPSDocument::isFileFormatSupported(&gsfInput);
 +	libwps::WPSKind kind;
-+	libwps::WPSConfidence confidence = libwps::WPSDocument::isFileFormatSupported(&gsfInput, kind);
++        libwps::WPSCreator creator;
++        bool needsEncoding = false;
++	libwps::WPSConfidence confidence = libwps::WPSDocument::isFileFormatSupported(&gsfInput, kind, creator, needsEncoding);
 +	
 +	if (kind != libwps::WPS_TEXT)
 +		confidence = libwps::WPS_CONFIDENCE_NONE;
