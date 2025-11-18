@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/06/30 19:10:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2025/11/18 16:24:48 adam Exp $
 man/man1/git-add.1
 man/man1/git-am.1
 man/man1/git-annotate.1
@@ -73,6 +73,7 @@ man/man1/git-init-db.1
 man/man1/git-init.1
 man/man1/git-instaweb.1
 man/man1/git-interpret-trailers.1
+man/man1/git-last-modified.1
 man/man1/git-log.1
 man/man1/git-ls-files.1
 man/man1/git-ls-remote.1
@@ -116,6 +117,7 @@ man/man1/git-remote.1
 man/man1/git-repack.1
 man/man1/git-replace.1
 man/man1/git-replay.1
+man/man1/git-repo.1
 man/man1/git-request-pull.1
 man/man1/git-rerere.1
 man/man1/git-reset.1
@@ -171,6 +173,7 @@ man/man5/gitformat-bundle.5
 man/man5/gitformat-chunk.5
 man/man5/gitformat-commit-graph.5
 man/man5/gitformat-index.5
+man/man5/gitformat-loose.5
 man/man5/gitformat-pack.5
 man/man5/gitformat-signature.5
 man/man5/githooks.5
