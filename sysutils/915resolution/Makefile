@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2024/10/05 08:02:56 nia Exp $
+# $NetBSD: Makefile,v 1.13 2025/11/18 13:46:12 wiz Exp $
 
 DISTNAME=	915resolution-0.5.3
 CATEGORIES=	sysutils
-MASTER_SITES=	${HOMEPAGE:Q}
+MASTER_SITES=	https://www.aydogan.net/distfiles/sysutils/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.aydogan.net/distfiles/sysutils/
 COMMENT=	BIOS VESA resolution utility for 8XX/9XX Intel chips
 LICENSE=	public-domain
 
