@@ -1,5 +1,6 @@
-$NetBSD: patch-srs-filter.c,v 1.3 2024/08/20 11:41:13 manu Exp $
+$NetBSD
 
+https://github.com/emsearcy/srs-milter/pull/7
 - Update pidfile after forking
 - Process addresses with or without enclosing brackets
 - Add -u/--user option to use unprivilegied user
@@ -7,8 +8,11 @@ $NetBSD: patch-srs-filter.c,v 1.3 2024/08/20 11:41:13 manu Exp $
 - Add -n/--reverse-null to ensable SRS reverse for null sender <>
 - Bug fix: test srs_milter_connection_data is set before using it
 
---- srs-filter.c.orig
-+++ srs-filter.c
+https://github.com/emsearcy/srs-milter/pull/13
+- Bug fix: properly handle recipients with no @
+
+--- srs-filter.c.orig	2025-11-18 10:17:06.243282665 +0100
++++ srs-filter.c	2025-11-18 10:16:49.061701842 +0100
 @@ -3,11 +3,13 @@
  #include <stdio.h>
  #include <stdlib.h>
@@ -84,7 +88,7 @@ $NetBSD: patch-srs-filter.c,v 1.3 2024/08/20 11:41:13 manu Exp $
  char *srs_milter_load_file_secrets(char ***CONFIG_srs_secrets, char *secrets_file) {
    int i, l;
    FILE *f;
-@@ -114,9 +156,9 @@
+@@ -114,16 +156,18 @@
  int is_local_addr(const char *addr) {
    int i, r;
    const char *dom;
@@ -95,7 +99,18 @@ $NetBSD: patch-srs-filter.c,v 1.3 2024/08/20 11:41:13 manu Exp $
  
    if (!CONFIG_domains)
      return 0;
-@@ -227,17 +269,21 @@
+ 
+-  dom  = strrchr(addr, '@')+1;
+-  if (!dom)
++  dom = strrchr(addr, '@');
++  if (dom)
++    dom++;
++  else
+     dom = addr;
+ 
+   for (i = 0; CONFIG_domains[i]; i++) {
+ 
+@@ -227,17 +271,21 @@
  static sfsistat
  xxfi_srs_milter_envfrom(SMFICTX* ctx, char** argv) {
    struct srs_milter_connection_data* cd =
@@ -118,7 +133,7 @@ $NetBSD: patch-srs-filter.c,v 1.3 2024/08/20 11:41:13 manu Exp $
      if (CONFIG_verbose)
        syslog(LOG_DEBUG, "conn# %d[%i] - xxfi_srs_milter_envfrom(\"%s\"): skipping \"MAIL FROM: %s\"",
               cd->num, cd->state, argv[0], argv[0]);
-@@ -272,16 +318,20 @@
+@@ -272,16 +320,20 @@
  
    cd->recip_remote = 0;
  
@@ -142,7 +157,7 @@ $NetBSD: patch-srs-filter.c,v 1.3 2024/08/20 11:41:13 manu Exp $
    // store MAIL FROM: arguments
    {
      int argc = 0;
-@@ -316,16 +366,30 @@
+@@ -316,16 +368,30 @@
      syslog(LOG_DEBUG, "conn# %d[%i] - xxfi_srs_milter_envrcpt(\"%s\")",
             cd->num, cd->state, argv[0]);
  
@@ -176,7 +191,7 @@ $NetBSD: patch-srs-filter.c,v 1.3 2024/08/20 11:41:13 manu Exp $
    if (!is_local_addr(recip)) {
      cd->recip_remote = 1;
    } else {
-@@ -345,9 +409,13 @@
+@@ -345,9 +411,13 @@
        if (!cd->recip) {
          // memory allocation problem
          cd->state |= SS_STATE_INVALID_MSG;
@@ -191,7 +206,7 @@ $NetBSD: patch-srs-filter.c,v 1.3 2024/08/20 11:41:13 manu Exp $
          if (!cd->recip[argc]) {
            // memory allocation problem
            cd->state |= SS_STATE_INVALID_MSG;
-@@ -600,15 +668,15 @@
+@@ -600,15 +670,15 @@
  xxfi_srs_milter_close(SMFICTX* ctx) {
    struct srs_milter_connection_data* cd =
            (struct srs_milter_connection_data*) smfi_getpriv(ctx);
@@ -210,7 +225,7 @@ $NetBSD: patch-srs-filter.c,v 1.3 2024/08/20 11:41:13 manu Exp $
  
    if (cd->sender)
      free(cd->sender);
-@@ -669,8 +737,23 @@
+@@ -669,8 +739,23 @@
      syslog(LOG_ERR, "exiting parent process");
      exit(EXIT_SUCCESS);
    }
@@ -234,7 +249,7 @@ $NetBSD: patch-srs-filter.c,v 1.3 2024/08/20 11:41:13 manu Exp $
    umask(0);
  
    /* Open any logs here */
-@@ -717,17 +800,27 @@
+@@ -717,17 +802,27 @@
    printf("  -s, --socket\n");
    printf("      {unix|local}:/path/to/file -- a named pipe.\n");
    printf("      inet:port@{hostname|ip-address} -- an IPV4 socket.\n");
@@ -262,7 +277,7 @@ $NetBSD: patch-srs-filter.c,v 1.3 2024/08/20 11:41:13 manu Exp $
    printf("      our SRS domain name\n");
    printf("  -c, --srs-secret\n");
    printf("      secret string for SRS hashing algorithm\n");
-@@ -770,12 +863,16 @@
+@@ -770,12 +865,16 @@
        {"debug",                  no_argument,       0, 'd'},
        {"verbose",                no_argument,       0, 'v'},
        {"pidfile",                required_argument, 0, 'P'},
@@ -279,7 +294,7 @@ $NetBSD: patch-srs-filter.c,v 1.3 2024/08/20 11:41:13 manu Exp $
        {"spf-heloname",           required_argument, 0, 'l'},
        {"spf-address",            required_argument, 0, 'a'},
        {"srs-domain",             required_argument, 0, 'o'},
-@@ -791,9 +888,9 @@
+@@ -791,9 +890,9 @@
      };
      /* getopt_long stores the option index here. */
      int option_index = 0;
@@ -290,7 +305,7 @@ $NetBSD: patch-srs-filter.c,v 1.3 2024/08/20 11:41:13 manu Exp $
  
      /* Detect the end of the options. */
      if (c == -1)
-@@ -823,17 +920,22 @@
+@@ -823,17 +922,22 @@
          CONFIG_verbose = 1;
          break;
  
@@ -314,7 +329,7 @@ $NetBSD: patch-srs-filter.c,v 1.3 2024/08/20 11:41:13 manu Exp $
          if (optarg == NULL || *optarg == '\0') {
            fprintf(stderr, "ERROR: illegal timeout %s\n", optarg);
            exit(EXIT_FAILURE);
-@@ -851,8 +953,12 @@
+@@ -851,8 +955,12 @@
        case 'r':
          CONFIG_reverse = 1;
          break;
@@ -327,7 +342,7 @@ $NetBSD: patch-srs-filter.c,v 1.3 2024/08/20 11:41:13 manu Exp $
          i = 0;
          if (!CONFIG_domains) {
            CONFIG_domains = (char **) malloc((i+2)*sizeof(char *));
-@@ -863,8 +969,16 @@
+@@ -863,8 +971,16 @@
          CONFIG_domains[i] = optarg;
          CONFIG_domains[i+1] = NULL;
          break;
@@ -344,7 +359,7 @@ $NetBSD: patch-srs-filter.c,v 1.3 2024/08/20 11:41:13 manu Exp $
          CONFIG_spf_check = 1;
          break;
  
-@@ -941,8 +1055,32 @@
+@@ -941,8 +1057,32 @@
        printf ("%s ", argv[optind++]);
      putchar ('\n');
    }
