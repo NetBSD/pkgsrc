@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.19 2025/10/09 07:57:52 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/11/18 06:06:49 adam Exp $
 
-DISTNAME=	moto-5.1.3
+DISTNAME=	moto-5.1.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/moto/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/spulec/moto
+HOMEPAGE=	https://github.com/getmoto/moto
 COMMENT=	Mock-up of the boto library
 LICENSE=	apache-2.0
 
