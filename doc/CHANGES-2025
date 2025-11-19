@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6821 2025/11/19 13:42:50 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6822 2025/11/19 13:57:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9890,3 +9890,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-zope.proxy to 7.1 [adam 2025-11-19]
 	Updated devel/py-zope.hookable to 8.2 [adam 2025-11-19]
 	Updated devel/py-zope.i18nmessageid to 8.2 [adam 2025-11-19]
+	Updated print/py-pikepdf to 10.0.2 [adam 2025-11-19]
