@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2021/06/24 19:00:32 rillig Exp $
+# $NetBSD: Makefile,v 1.67 2025/11/19 08:28:24 wiz Exp $
 
 DISTNAME=	afl-2.57b
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lcamtuf.coredump.cx/afl/
+HOMEPAGE=	https://lcamtuf.coredump.cx/afl/
 COMMENT=	American Fuzzy Lop, a fuzzing tool for finding bugs by random input
 LICENSE=	apache-2.0
 
