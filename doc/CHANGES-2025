@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6819 2025/11/19 11:46:09 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6820 2025/11/19 13:38:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9886,3 +9886,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/intel-microcode-netbsd to 20251111 [msaitoh 2025-11-19]
 	Updated security/pkcs11-helper to 1.31.0 [nia 2025-11-19]
 	Updated lang/nodejs to 25.2.1 [adam 2025-11-19]
+	Updated devel/py-maturin to 1.10.2 [adam 2025-11-19]
+	Updated www/py-zope.proxy to 7.1 [adam 2025-11-19]
