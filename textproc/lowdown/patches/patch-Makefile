@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.6 2025/11/18 08:45:26 wiz Exp $
+$NetBSD: patch-Makefile,v 1.7 2025/11/19 09:09:39 wiz Exp $
 
 Libtoolize for portable shared libraries.
 
@@ -25,18 +25,20 @@ Libtoolize for portable shared libraries.
  bins: lowdown lowdown-diff
  
  www: all $(HTMLS) $(PDFS) $(THUMBS) lowdown.tar.gz lowdown.tar.gz.sha512
-@@ -203,14 +209,19 @@ installwww: www
+@@ -202,15 +208,20 @@ installwww: www
+ 	$(INSTALL) -m 0444 lowdown.tar.gz $(WWWDIR)/snapshots
  	$(INSTALL) -m 0444 lowdown.tar.gz.sha512 $(WWWDIR)/snapshots
  
- lowdown: $(LIB_LOWDOWN) $(MAIN_OBJS) main.o
+-lowdown: $(LIB_LOWDOWN) $(MAIN_OBJS) main.o
 -	$(CC) -o $@ main.o $(MAIN_OBJS) $(LIB_LOWDOWN) $(LDFLAGS) $(LDADD_MD5) -lm $(LDADD)
-+	$(LIBTOOL) --mode=link $(CC) -o $@ main.o $(MAIN_OBJS) $(LIB_LOWDOWN) $(LDFLAGS) $(LDADD_MD5) -lm $(LDADD)
++lowdown: liblowdown.la $(MAIN_OBJS) main.o
++	$(LIBTOOL) --mode=link $(CC) -o $@ main.o $(MAIN_OBJS) liblowdown.la $(LDFLAGS) $(LDADD_MD5) -lm $(LDADD)
  
 +# For regress, we build this (just like lowdown) so that its libtool wrapper works.
 +# At install, we'll still just make a hard link to lowdown like upstream.
  lowdown-diff: lowdown
 -	ln -f lowdown lowdown-diff
-+	$(LIBTOOL) --mode=link $(CC) -o $@ main.o $(MAIN_OBJS) $(LIB_LOWDOWN) $(LDFLAGS) $(LDADD_MD5) -lm $(LDADD)
++	$(LIBTOOL) --mode=link $(CC) -o $@ main.o $(MAIN_OBJS) liblowdown.la $(LDFLAGS) $(LDADD_MD5) -lm $(LDADD)
  
  $(LIB_ST): $(OBJS) $(COMPAT_OBJS)
  	$(AR) rs $@ $(OBJS) $(COMPAT_OBJS)
