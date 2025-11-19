@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.36 2025/11/19 09:09:39 wiz Exp $
+$NetBSD: distinfo,v 1.37 2025/11/19 14:37:04 gutteridge Exp $
 
 BLAKE2s (lowdown-2.0.4.tar.gz) = 7d38d8b84eddc7587579c3a99880ac707c83fc067c1b2c16fa5afb95f4361da3
 SHA512 (lowdown-2.0.4.tar.gz) = db396f738c3effdd55f112f2f71183b32b45ae2f8ba999e03df5162612e26a313d7b3ca1c5840cb71805f4429a4a3b67fe61a731aadc5cc989b74ff2da2d5b7e
 Size (lowdown-2.0.4.tar.gz) = 697300 bytes
-SHA1 (patch-Makefile) = 54cdf8e9f70418d9b731baa3e7508fb6aabdb377
+SHA1 (patch-Makefile) = 27ccebda7d3e3770b4739e8bae27dd5b0692f5db
