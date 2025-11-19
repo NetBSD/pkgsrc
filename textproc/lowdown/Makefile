@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2025/11/19 14:36:03 gutteridge Exp $
+# $NetBSD: Makefile,v 1.38 2025/11/19 15:54:26 gutteridge Exp $
 
 DISTNAME=		lowdown-2.0.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=kristapsdz/}
 GITHUB_TAG=		refs/tags/VERSION_${PKGVERSION_NOREV:S/./_/g}
