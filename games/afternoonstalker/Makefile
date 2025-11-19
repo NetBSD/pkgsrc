@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2025/01/06 21:49:08 ktnb Exp $
+# $NetBSD: Makefile,v 1.5 2025/11/19 08:28:55 wiz Exp $
 
 DISTNAME=	afternoonstalker-1.1.6
 PKGREVISION=	1
 CATEGORIES=	games
-MASTER_SITES=	https://perso.b2b2c.ca/~sarrazip/dev/
+#MASTER_SITES=	https://perso.b2b2c.ca/~sarrazip/dev/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://perso.b2b2c.ca/~sarrazip/dev/afternoonstalker.html
+#HOMEPAGE=	https://perso.b2b2c.ca/~sarrazip/dev/afternoonstalker.html
 COMMENT=	Robot-killing video game
 LICENSE=	gnu-gpl-v2
 
