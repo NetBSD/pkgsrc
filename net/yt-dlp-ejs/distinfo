@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2025/11/18 11:08:20 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2025/11/19 15:42:57 ryoon Exp $
 
-BLAKE2s (yt-dlp_linux.zip) = ad64d20200f577a3c6967c45183bb1951fb631054ab5a396f073753d473854a2
-SHA512 (yt-dlp_linux.zip) = dda21924f662638a1867631a92a009ff12954e4179efd2db881b921226808a65b255834fd386c403f9acef569043f8d46fcb71f95764858767857313d63071df
-Size (yt-dlp_linux.zip) = 36246185 bytes
+BLAKE2s (yt_dlp_ejs-0.3.1-py3-none-any.whl) = c6dfc28332286e870c395f49ee97bd5eb90cdbe19f8c2850514ffe3b6322a189
+SHA512 (yt_dlp_ejs-0.3.1-py3-none-any.whl) = 9abbdf72a24cceccaa939c7419c6fa89afcfd7a0f36632588566a2a8075f39e91c1b952f42fcb525767e997090b526ba59fc7e91e4e5fc24ae25ffd2ad59b1ea
+Size (yt_dlp_ejs-0.3.1-py3-none-any.whl) = 53155 bytes
 BLAKE2s (yt_dlp_ejs-0.3.1.tar.gz) = acc13dafb6e142450960099d177ab16b9849caed86043b1319b95c78b41083ea
 SHA512 (yt_dlp_ejs-0.3.1.tar.gz) = 1693fd171dd62b15c7b686763d5d1bc70c43ae8ed81dd80e13e87c833ea00213624d64a34f6f3bcd409c52b7ee1401284a582a9782fa783063ce9da40a4c91e2
 Size (yt_dlp_ejs-0.3.1.tar.gz) = 33805 bytes

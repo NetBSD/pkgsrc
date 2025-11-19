@@ -1,20 +1,15 @@
-# $NetBSD: Makefile,v 1.1 2025/11/18 11:08:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2025/11/19 15:42:57 ryoon Exp $
 
-DISTNAME=	yt_dlp_ejs-0.3.1
+DISTNAME=	yt_dlp_ejs-0.3.1-py3-none-any
 PKGNAME=	${DISTNAME:S/_/-/g}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yt_dlp_ejs/}
+EXTRACT_SUFX=	.whl
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://pypi.org/project/yt_dlp_ejs/
 COMMENT=	External JavaScript for net/yt-dlp supporting many runtimes
 LICENSE=	unlicense
-
-# Do not rebuild support scripts in JavaScript.
-# Rebuilding from source requires many porting efforts for Node JS packages.
-YTDLPZIP=		yt-dlp_linux.zip
-SITES.${YTDLPZIP}=	https://github.com/yt-dlp/yt-dlp/releases/download/2025.11.12/
-DISTFILES=	${DEFAULT_DISTFILES} ${YTDLPZIP}
 
 DEPENDS+=	yt-dlp-[0-9]*:../../net/yt-dlp
 
@@ -26,14 +21,12 @@ INSTALLATION_DIRS+=	${PYSITELIB}/yt_dlp_ejs/yt/solver
 
 PLIST_SUBST=	PYSITELIB=${PYSITELIB}
 
-post-extract:
-	${CP} ${WRKDIR}/_internal/yt_dlp_ejs/yt/solver/*.js \
-		${WRKSRC}/yt_dlp_ejs/yt/solver
+do-extract:
+	${EXTRACTOR} -f zip ${DISTDIR}/${DISTFILES} -d ${WRKSRC}
 
 do-install:
-	${CP} -r ${WRKSRC}/yt_dlp_ejs \
+	${CP} -r ${WRKSRC}/* \
 		${DESTDIR}${PREFIX}/${PYSITELIB}
 
 .include "../../lang/python/pyversion.mk"
-.include "../../lang/nodejs/nodeversion.mk"
 .include "../../mk/bsd.pkg.mk"
