@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6817 2025/11/19 07:29:13 msaitoh Exp $
+$NetBSD: CHANGES-2025,v 1.6818 2025/11/19 08:47:40 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9884,3 +9884,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/openvpn to 2.6.16 [gdt 2025-11-19]
 	Updated lang/joker to 1.5.8 [ktnb 2025-11-19]
 	Updated sysutils/intel-microcode-netbsd to 20251111 [msaitoh 2025-11-19]
+	Updated security/pkcs11-helper to 1.31.0 [nia 2025-11-19]
