@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.667 2025/11/19 21:57:11 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.668 2025/11/19 21:57:39 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28926,8 +28926,8 @@ postgresql-server>=15<15.15	denial-of-service	https://nvd.nist.gov/vuln/detail/C
 postgresql-server>=16<16.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12817
 postgresql-server>=17<17.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12817
 postgresql-server>=18<18.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12817
-radare2<6.0.5	null-pointer-derference	https://nvd.nist.gov/vuln/detail/CVE-2025-63744
-radare2<6.0.5	null-pointer-derference	https://nvd.nist.gov/vuln/detail/CVE-2025-63745
+radare2<6.0.5	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-63744
+radare2<6.0.5	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-63745
 qjson-[0-9]*	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 chromium<142.0.7444.175	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-13223
 chromium<142.0.7444.175	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-13224
