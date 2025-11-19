@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2025/08/30 22:45:26 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2025/11/19 16:00:05 adam Exp $
 
-DISTNAME=	libpano13-2.9.22
-PKGREVISION=	2
+DISTNAME=	libpano13-2.9.23
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=panotools/}
 
@@ -10,14 +9,10 @@ HOMEPAGE=	https://panotools.sourceforge.net/
 COMMENT=	Cross-platform library behind Panorama Tools and other stitchers
 LICENSE=	gnu-gpl-v2
 
-MAKE_JOBS_SAFE=		no
-
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pod2man
 TOOLS_BROKEN+=		perl
 PKGCONFIG_OVERRIDE=	libpano13.pc.in
-
-CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../mk/bsd.prefs.mk"
 
