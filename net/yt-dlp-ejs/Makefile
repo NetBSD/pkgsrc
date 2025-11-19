@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/11/19 15:43:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2025/11/19 16:04:06 ryoon Exp $
 
 DISTNAME=	yt_dlp_ejs-0.3.1-py3-none-any
-PKGNAME=	${DISTNAME:S/_/-/g}
+PKGNAME=	${DISTNAME:S/_/-/g:C/-py3.*//}
 PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yt_dlp_ejs/}
