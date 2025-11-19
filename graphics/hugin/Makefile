@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.164 2025/10/23 20:37:33 wiz Exp $
+# $NetBSD: Makefile,v 1.165 2025/11/19 16:00:48 adam Exp $
 
-DISTNAME=	hugin-2024.0.1
-PKGREVISION=	7
+DISTNAME=	hugin-2025.0.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hugin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,6 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	p5-Image-ExifTool>=8.15:../../graphics/p5-Image-ExifTool
 
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		msgfmt pkg-config
 CONFIGURE_ENV+=		MANDIR=${PKGMANDIR}
@@ -37,13 +37,11 @@ SUBST_SED.apple=	-e 's,(APPLE),(ELPPA),g'
 
 # Doesn't define the ZLIB::ZLIB target needed by OpenEXR 3
 post-patch:
-	rm ${WRKSRC}/CMakeModules/FindZLIB.cmake
+	${RM} ${WRKSRC}/CMakeModules/FindZLIB.cmake
 
 .include "../../mk/bsd.prefs.mk"
 
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/boost-headers/buildlink3.mk"
-.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/swig3/buildlink3.mk"
 .include "../../devel/tclap/buildlink3.mk"
@@ -61,6 +59,7 @@ post-patch:
 .include "../../graphics/vigra/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../math/flann-lib/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/wxGTK32/buildlink3.mk"
