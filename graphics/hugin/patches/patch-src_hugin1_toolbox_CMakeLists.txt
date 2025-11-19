@@ -1,0 +1,24 @@
+$NetBSD: patch-src_hugin1_toolbox_CMakeLists.txt,v 1.1 2025/11/19 16:00:48 adam Exp $
+
+On Darwin, avoid application bundle.
+
+--- src/hugin1/toolbox/CMakeLists.txt.orig	2025-10-31 09:42:00.000000000 +0000
++++ src/hugin1/toolbox/CMakeLists.txt
+@@ -4,7 +4,7 @@ set(TOOLBOX_HEADER ToolboxApp.h ToolboxF
+ 
+ IF (WIN32)
+   add_executable(hugin_toolbox WIN32 ${TOOLBOX_SOURCE} ${TOOLBOX_HEADER} hugin_toolbox_rc.rc ${WINDOWS_DPI_MANIFEST})
+-ELSEIF(APPLE)
++ELSEIF(FALSE)
+ 
+   set( PROGNAME hugin_toolbox )
+ 
+@@ -81,7 +81,7 @@ ENDIF()
+ 
+ target_link_libraries(hugin_toolbox huginbasewx ${common_libs} ${image_libs} ${wxWidgets_LIBRARIES})
+ 
+-IF (APPLE)
++IF (FALSE)
+   IF (NOT MAC_SELF_CONTAINED_BUNDLE)
+     install(TARGETS hugin_toolbox
+             DESTINATION ${INSTALL_OSX_BUNDLE_DIR})
