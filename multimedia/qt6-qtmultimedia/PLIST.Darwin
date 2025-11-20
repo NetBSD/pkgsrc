@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.6 2025/09/22 05:43:26 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.7 2025/11/20 12:36:37 adam Exp $
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfcamera_p.h
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfsamplebufferdelegate_p.h
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfscreencapture_p.h
@@ -16,6 +16,7 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qdarwinaudiodevice_p
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qdarwinaudiodevices_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qdarwinaudiosink_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qdarwinaudiosource_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qdarwinintegrationfactory_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmacosaudiodatautils_p.h
 qt6/lib/cmake/Qt6Multimedia/Qt6QDarwinMediaPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6QDarwinMediaPluginConfig.cmake

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/11/11 12:34:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/11/20 12:36:37 adam Exp $
 lib/pkgconfig/Qt6Grpc.pc
 lib/pkgconfig/Qt6GrpcQuick.pc
 lib/pkgconfig/Qt6Protobuf.pc
@@ -7,11 +7,11 @@ lib/pkgconfig/Qt6ProtobufQtGuiTypes.pc
 lib/pkgconfig/Qt6ProtobufQuick.pc
 lib/pkgconfig/Qt6ProtobufWellKnownTypes.pc
 qt6/include/QtGrpc/${PKGVERSION}/QtGrpc/private/qabstractgrpcchannel_p.h
+qt6/include/QtGrpc/${PKGVERSION}/QtGrpc/private/qgrpccommonoptions_p.h
 qt6/include/QtGrpc/${PKGVERSION}/QtGrpc/private/qgrpcoperation_p.h
 qt6/include/QtGrpc/${PKGVERSION}/QtGrpc/private/qgrpcoperationcontext_p.h
 qt6/include/QtGrpc/${PKGVERSION}/QtGrpc/private/qtgrpc-config_p.h
 qt6/include/QtGrpc/${PKGVERSION}/QtGrpc/private/qtgrpclogging_p.h
-qt6/include/QtGrpc/6.10.0/QtGrpc/private/qgrpccommonoptions_p.h
 qt6/include/QtGrpc/QAbstractGrpcChannel
 qt6/include/QtGrpc/QGrpcBidiStream
 qt6/include/QtGrpc/QGrpcCallOptions
