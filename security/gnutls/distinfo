@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.168 2025/07/09 11:55:36 adam Exp $
+$NetBSD: distinfo,v 1.169 2025/11/20 20:55:29 wiz Exp $
 
-BLAKE2s (gnutls-3.8.10.tar.xz) = 33a7ef08a81bbecb5f66a5eb52a685bb018e8351e507bbd2fb03f0d25e001b21
-SHA512 (gnutls-3.8.10.tar.xz) = d453bd4527af95cb3905ce8753ceafd969e3f442ad1d148544a233ebf13285b999930553a805a0511293cc25390bb6a040260df5544a7c55019640f920ad3d92
-Size (gnutls-3.8.10.tar.xz) = 6909856 bytes
+BLAKE2s (gnutls-3.8.11.tar.xz) = ef0cf4a456a747a3dd396d0fdcede21358bf7ef56e714d12464fd438123f2370
+SHA512 (gnutls-3.8.11.tar.xz) = 68f9e5bec3aa6686fd3319cc9c88a5cc44e2a75144049fc9de5fb55fef2241b4e16996af4be5dd48308abbee8cfaed6c862903f6bb89aff5dfa5410075bd7386
+Size (gnutls-3.8.11.tar.xz) = 6939944 bytes
 SHA1 (patch-configure) = 866d8a365b8338348230e47518788f494279b139
