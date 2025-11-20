@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2025/11/18 05:53:31 adam Exp $
+$NetBSD: distinfo,v 1.3 2025/11/20 06:10:39 adam Exp $
 
 BLAKE2s (aho-corasick-1.1.4.crate) = 1419308c5b0745af6cfa18dd4c9639f7078f564e9dacbe2b17b03df42c393409
 SHA512 (aho-corasick-1.1.4.crate) = c77e35191b00546f5e499fab154170cedd619599e7250f92db9fba0a41c833eb426f214e58b00c5c39f8757406b33492b3241cb8cb233ce384ad0683c3ee4b62
@@ -297,9 +297,9 @@ Size (matchers-0.2.0.crate) = 7075 bytes
 BLAKE2s (matchit-0.8.4.crate) = 96d0fdbb52d7a63600d92f0a4f6dcbfc5c15da3671872b0dca96cdf55cbb1b10
 SHA512 (matchit-0.8.4.crate) = 62cd181bb866a874c5d403ed1b14ac54628ccd356d87c5479ea88febdef2ec58e60eb02a42e8eb19cc12f14483e5aef0158608143ac2d78548f1d892910fa8ac
 Size (matchit-0.8.4.crate) = 33986 bytes
-BLAKE2s (mdBook-0.5.0.tar.gz) = 4abc613fdb213d35bc6c2a8ff23afb5ef92557b6877dd0b9a34a34821974c36b
-SHA512 (mdBook-0.5.0.tar.gz) = 2b206e1120a778c43aaf7ba311f8e308a56ac0af877c54c01ff573b3b886cd5ddb894c7722f3cba0e54df281a521a6df59eefbafa11e5901020ffb519e034e89
-Size (mdBook-0.5.0.tar.gz) = 970041 bytes
+BLAKE2s (mdBook-0.5.1.tar.gz) = eaeb980856ab3ccd24e082b92951879ffbbeb4bd3ecef5f20435804ba6ffb282
+SHA512 (mdBook-0.5.1.tar.gz) = b652854279f0a7c323805fcbd7cc64ca8ee0d4e5ea34902acb1978f9c849aa2233b4255d1d5107826f1d662d76a5d96af2bfe99d7b375c6dbf938cff1dcb39c4
+Size (mdBook-0.5.1.tar.gz) = 971147 bytes
 BLAKE2s (memchr-2.7.6.crate) = a830db86394a8743df7c419957373ffa2ab158d6580c70556213bd109e985d93
 SHA512 (memchr-2.7.6.crate) = 38843817334da88ad74ce679b4401cf948cf8138815f3acc5eb0d005da3aabceb2216e20887e79344396569a2fa136e3aa1f7f3251a00d07dd6934cee79f4fad
 Size (memchr-2.7.6.crate) = 97616 bytes
