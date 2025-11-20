@@ -1,10 +1,10 @@
-$NetBSD: patch-content_utility_on__device__model_on__device__model__sandbox__init.h,v 1.5 2025/11/04 14:55:41 kikadf Exp $
+$NetBSD: patch-content_utility_on__device__model_on__device__model__sandbox__init.h,v 1.6 2025/11/20 08:36:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/on_device_model/on_device_model_sandbox_init.h.orig	2025-10-24 16:42:30.000000000 +0000
+--- content/utility/on_device_model/on_device_model_sandbox_init.h.orig	2025-11-14 20:31:45.000000000 +0000
 +++ content/utility/on_device_model/on_device_model_sandbox_init.h
 @@ -11,6 +11,10 @@
  #include "sandbox/policy/linux/sandbox_linux.h"

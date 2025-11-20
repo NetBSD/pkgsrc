@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_config_gpu__test__config.cc,v 1.9 2025/11/04 14:55:41 kikadf Exp $
+$NetBSD: patch-gpu_config_gpu__test__config.cc,v 1.10 2025/11/20 08:36:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_test_config.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- gpu/config/gpu_test_config.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ gpu/config/gpu_test_config.cc
 @@ -27,7 +27,7 @@ namespace {
  GPUTestConfig::OS GetCurrentOS() {

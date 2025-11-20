@@ -1,10 +1,10 @@
-$NetBSD: patch-base_trace__event_process__memory__dump.cc,v 1.9 2025/11/04 14:55:30 kikadf Exp $
+$NetBSD: patch-base_trace__event_process__memory__dump.cc,v 1.10 2025/11/20 08:36:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/trace_event/process_memory_dump.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- base/trace_event/process_memory_dump.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ base/trace_event/process_memory_dump.cc
 @@ -47,7 +47,7 @@
  #include <Psapi.h>

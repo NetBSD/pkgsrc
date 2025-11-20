@@ -1,10 +1,10 @@
-$NetBSD: patch-content_zygote_zygote__linux.cc,v 1.9 2025/11/04 14:55:41 kikadf Exp $
+$NetBSD: patch-content_zygote_zygote__linux.cc,v 1.10 2025/11/20 08:36:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/zygote/zygote_linux.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- content/zygote/zygote_linux.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ content/zygote/zygote_linux.cc
 @@ -1,6 +1,7 @@
  // Copyright 2012 The Chromium Authors

@@ -1,10 +1,10 @@
-$NetBSD: patch-media_video_video__encode__accelerator__adapter.cc,v 1.9 2025/11/04 14:55:43 kikadf Exp $
+$NetBSD: patch-media_video_video__encode__accelerator__adapter.cc,v 1.10 2025/11/20 08:36:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/video_encode_accelerator_adapter.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- media/video/video_encode_accelerator_adapter.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ media/video/video_encode_accelerator_adapter.cc
 @@ -468,7 +468,7 @@ void VideoEncodeAcceleratorAdapter::Init
  

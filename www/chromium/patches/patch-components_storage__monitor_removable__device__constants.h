@@ -1,10 +1,10 @@
-$NetBSD: patch-components_storage__monitor_removable__device__constants.h,v 1.9 2025/11/04 14:55:39 kikadf Exp $
+$NetBSD: patch-components_storage__monitor_removable__device__constants.h,v 1.10 2025/11/20 08:36:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/storage_monitor/removable_device_constants.h.orig	2025-10-24 16:42:30.000000000 +0000
+--- components/storage_monitor/removable_device_constants.h.orig	2025-11-14 20:31:45.000000000 +0000
 +++ components/storage_monitor/removable_device_constants.h
 @@ -15,7 +15,7 @@ namespace storage_monitor {
  extern COMPONENT_EXPORT(STORAGE_MONITOR) const char kFSUniqueIdPrefix[];

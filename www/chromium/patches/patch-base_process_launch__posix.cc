@@ -1,10 +1,10 @@
-$NetBSD: patch-base_process_launch__posix.cc,v 1.9 2025/11/04 14:55:29 kikadf Exp $
+$NetBSD: patch-base_process_launch__posix.cc,v 1.10 2025/11/20 08:36:04 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/launch_posix.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- base/process/launch_posix.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ base/process/launch_posix.cc
 @@ -218,6 +218,8 @@ static const char kFDDir[] = "/dev/fd";
  static const char kFDDir[] = "/dev/fd";

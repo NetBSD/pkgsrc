@@ -1,10 +1,10 @@
-$NetBSD: patch-components_discardable__memory_service_discardable__shared__memory__manager.cc,v 1.9 2025/11/04 14:55:37 kikadf Exp $
+$NetBSD: patch-components_discardable__memory_service_discardable__shared__memory__manager.cc,v 1.10 2025/11/20 08:36:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/discardable_memory/service/discardable_shared_memory_manager.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- components/discardable_memory/service/discardable_shared_memory_manager.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ components/discardable_memory/service/discardable_shared_memory_manager.cc
 @@ -172,7 +172,7 @@ uint64_t GetDefaultMemoryLimit() {
    // Limits the number of FDs used to 32, assuming a 4MB allocation size.

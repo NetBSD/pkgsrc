@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_settings_site__settings__handler.cc,v 1.1 2025/11/04 14:55:36 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_settings_site__settings__handler.cc,v 1.2 2025/11/20 08:36:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/settings/site_settings_handler.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- chrome/browser/ui/webui/settings/site_settings_handler.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ chrome/browser/ui/webui/settings/site_settings_handler.cc
 @@ -118,7 +118,7 @@
  #include "url/url_constants.h"

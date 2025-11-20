@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_views_controls_textfield_textfield.h,v 1.9 2025/11/04 14:55:51 kikadf Exp $
+$NetBSD: patch-ui_views_controls_textfield_textfield.h,v 1.10 2025/11/20 08:36:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/controls/textfield/textfield.h.orig	2025-10-24 16:42:30.000000000 +0000
+--- ui/views/controls/textfield/textfield.h.orig	2025-11-14 20:31:45.000000000 +0000
 +++ ui/views/controls/textfield/textfield.h
 @@ -48,7 +48,7 @@
  #include "ui/views/view_observer.h"

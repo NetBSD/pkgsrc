@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_chrome__features.cc,v 1.9 2025/11/04 14:55:36 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__features.cc,v 1.10 2025/11/20 08:36:11 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_features.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- chrome/common/chrome_features.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ chrome/common/chrome_features.cc
 @@ -86,7 +86,7 @@ BASE_FEATURE(kUseAdHocSigningForWebAppSh
  #endif  // BUILDFLAG(IS_MAC)
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_common_chrome__features.cc,v 1.9 2025/11/04 14:55:36 kikad
  // Controls whether Chrome Apps are supported. See https://crbug.com/1221251.
  // If the feature is disabled, Chrome Apps continue to work. If enabled, Chrome
  // Apps will not launch and will be marked in the UI as deprecated.
-@@ -627,7 +627,7 @@ BASE_FEATURE(kGlicDisableWarming, base::
+@@ -625,7 +625,7 @@ BASE_FEATURE(kGlicWarming, base::FEATURE
  // Killswitch that controls whether the guest WebContents visibility state is
  // set to hidden when the Glic panel is warming.
  BASE_FEATURE(kGlicGuestContentsVisibilityState,
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_common_chrome__features.cc,v 1.9 2025/11/04 14:55:36 kikad
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -1088,7 +1088,7 @@ BASE_FEATURE(kKAnonymityServiceOHTTPRequ
+@@ -1086,7 +1086,7 @@ BASE_FEATURE(kKAnonymityServiceOHTTPRequ
  // public keys.
  BASE_FEATURE(kKAnonymityServiceStorage, base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -60,7 +60,7 @@ $NetBSD: patch-chrome_common_chrome__features.cc,v 1.9 2025/11/04 14:55:36 kikad
  BASE_FEATURE(kLinuxLowMemoryMonitor, base::FEATURE_DISABLED_BY_DEFAULT);
  // Values taken from the low-memory-monitor documentation and also apply to the
  // portal API:
-@@ -1099,7 +1099,7 @@ constexpr base::FeatureParam<int> kLinux
+@@ -1097,7 +1097,7 @@ constexpr base::FeatureParam<int> kLinux
      &kLinuxLowMemoryMonitor, "critical_level", 255};
  #endif  // BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
  

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_views_location__bar_location__bar__view.cc,v 1.1 2025/11/04 14:55:35 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_location__bar_location__bar__view.cc,v 1.2 2025/11/20 08:36:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/location_bar/location_bar_view.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- chrome/browser/ui/views/location_bar/location_bar_view.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ chrome/browser/ui/views/location_bar/location_bar_view.cc
-@@ -527,7 +527,7 @@ bool LocationBarView::IsInitialized() co
+@@ -539,7 +539,7 @@ bool LocationBarView::IsInitialized() co
  }
  
  void LocationBarView::OnPopupOpened() {

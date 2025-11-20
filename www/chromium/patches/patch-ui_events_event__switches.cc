@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_events_event__switches.cc,v 1.9 2025/11/04 14:55:50 kikadf Exp $
+$NetBSD: patch-ui_events_event__switches.cc,v 1.10 2025/11/20 08:36:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/events/event_switches.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- ui/events/event_switches.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ ui/events/event_switches.cc
 @@ -21,7 +21,7 @@ const char kCompensateForUnstablePinchZo
  // value is a floating point number that is interpreted as a distance in pixels.

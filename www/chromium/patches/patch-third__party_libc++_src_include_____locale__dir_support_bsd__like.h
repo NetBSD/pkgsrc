@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_libc++_src_include_____locale__dir_support_bsd__like.h,v 1.8 2025/11/04 14:55:47 kikadf Exp $
+$NetBSD: patch-third__party_libc++_src_include_____locale__dir_support_bsd__like.h,v 1.9 2025/11/20 08:36:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libc++/src/include/__locale_dir/support/bsd_like.h.orig	2025-10-24 16:42:30.000000000 +0000
+--- third_party/libc++/src/include/__locale_dir/support/bsd_like.h.orig	2025-11-14 20:31:45.000000000 +0000
 +++ third_party/libc++/src/include/__locale_dir/support/bsd_like.h
 @@ -24,7 +24,11 @@
  #  include <wctype.h>

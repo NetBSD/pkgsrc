@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_startup_bad__flags__prompt.cc,v 1.9 2025/11/04 14:55:34 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_startup_bad__flags__prompt.cc,v 1.10 2025/11/20 08:36:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/startup/bad_flags_prompt.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- chrome/browser/ui/startup/bad_flags_prompt.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ chrome/browser/ui/startup/bad_flags_prompt.cc
 @@ -105,7 +105,7 @@ const char* const kBadFlags[] = {
      extensions::switches::kExtensionsOnExtensionURLs,

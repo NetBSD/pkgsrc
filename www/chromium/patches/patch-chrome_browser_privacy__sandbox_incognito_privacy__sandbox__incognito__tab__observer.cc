@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_privacy__sandbox_incognito_privacy__sandbox__incognito__tab__observer.cc,v 1.1 2025/11/04 14:55:33 kikadf Exp $
+$NetBSD: patch-chrome_browser_privacy__sandbox_incognito_privacy__sandbox__incognito__tab__observer.cc,v 1.2 2025/11/20 08:36:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/privacy_sandbox/incognito/privacy_sandbox_incognito_tab_observer.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- chrome/browser/privacy_sandbox/incognito/privacy_sandbox_incognito_tab_observer.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ chrome/browser/privacy_sandbox/incognito/privacy_sandbox_incognito_tab_observer.cc
 @@ -11,7 +11,7 @@
  #include "privacy_sandbox_incognito_survey_service.h"

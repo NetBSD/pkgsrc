@@ -1,10 +1,10 @@
-$NetBSD: patch-printing_printing__features.cc,v 1.9 2025/11/04 14:55:44 kikadf Exp $
+$NetBSD: patch-printing_printing__features.cc,v 1.10 2025/11/20 08:36:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/printing_features.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- printing/printing_features.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ printing/printing_features.cc
 @@ -22,7 +22,7 @@ BASE_FEATURE(kAddPrinterViaPrintscanmgr,
  BASE_FEATURE(kApiPrintingMarginsAndScale, base::FEATURE_DISABLED_BY_DEFAULT);
