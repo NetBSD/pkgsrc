@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/12 10:24:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/11/20 14:31:23 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -34,6 +34,7 @@ ${PYSITELIB}/stevedore/example/load_as_driver.pyo
 ${PYSITELIB}/stevedore/example/load_as_extension.py
 ${PYSITELIB}/stevedore/example/load_as_extension.pyc
 ${PYSITELIB}/stevedore/example/load_as_extension.pyo
+${PYSITELIB}/stevedore/example/pyproject.toml
 ${PYSITELIB}/stevedore/example/setup.py
 ${PYSITELIB}/stevedore/example/setup.pyc
 ${PYSITELIB}/stevedore/example/setup.pyo
@@ -46,6 +47,7 @@ ${PYSITELIB}/stevedore/example2/__init__.pyo
 ${PYSITELIB}/stevedore/example2/fields.py
 ${PYSITELIB}/stevedore/example2/fields.pyc
 ${PYSITELIB}/stevedore/example2/fields.pyo
+${PYSITELIB}/stevedore/example2/pyproject.toml
 ${PYSITELIB}/stevedore/example2/setup.py
 ${PYSITELIB}/stevedore/example2/setup.pyc
 ${PYSITELIB}/stevedore/example2/setup.pyo
@@ -61,6 +63,7 @@ ${PYSITELIB}/stevedore/hook.pyo
 ${PYSITELIB}/stevedore/named.py
 ${PYSITELIB}/stevedore/named.pyc
 ${PYSITELIB}/stevedore/named.pyo
+${PYSITELIB}/stevedore/py.typed
 ${PYSITELIB}/stevedore/sphinxext.py
 ${PYSITELIB}/stevedore/sphinxext.pyc
 ${PYSITELIB}/stevedore/sphinxext.pyo
