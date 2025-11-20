@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.3 2025/10/06 09:55:58 markd Exp $
+$NetBSD: distinfo,v 1.4 2025/11/20 20:34:49 wiz Exp $
 
 BLAKE2s (karchive-6.18.0.tar.xz) = 01d65b0bec863d11717acbeda2b226debffef185dc2ce93e7ceaaae18a97b2b3
 SHA512 (karchive-6.18.0.tar.xz) = ea52e813b8413eb77e456b1bd55f73c1981b5b204e2ca6594ff9f9270127cdce1fc1ceb337d0ec1e8d530bd1d4d054b8dbc8eb8f9ec0c71fc3ac491d03099508
 Size (karchive-6.18.0.tar.xz) = 1102260 bytes
+SHA1 (patch-src_kar.cpp) = d73061aa5b003c9f0f1e88a180d9df969b47f2c1
+SHA1 (patch-src_karchive.cpp) = 4560b460a6781115faa0abe8a3b66b41bacad65b
+SHA1 (patch-src_krcc.cpp) = afd117b4822836eaa16e286ca7f709ab2f538306
