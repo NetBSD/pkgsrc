@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2025/11/20 12:35:55 pin Exp $
+# $NetBSD: Makefile,v 1.4 2025/11/20 12:59:20 wiz Exp $
 
 DISTNAME=	cargo-nextest-0.9.114
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nextest-rs/}
 GITHUB_PROJECT=	nextest
-GITHUB_TAG=	cargo-nextest-0.9.114
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://nexte.st/
