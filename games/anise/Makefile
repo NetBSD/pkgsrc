@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/01/06 21:49:09 ktnb Exp $
-#
+# $NetBSD: Makefile,v 1.14 2025/11/20 13:47:46 wiz Exp $
 
 DISTNAME=	anise-beta10-20040307-linux
 PKGNAME=	anise-0beta10
@@ -8,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://kldp.net/download.php/1051/
 
 MAINTAINER=	pyrasis@chol.com
-HOMEPAGE=	http://www.tomyun.pe.kr/projectanise/
+HOMEPAGE=	https://www.tomyun.pe.kr/projectanise/
 COMMENT=	Adventure game scripting engine
 
 GNU_CONFIGURE=	yes
