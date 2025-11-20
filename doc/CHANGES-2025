@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6829 2025/11/20 08:47:11 kikadf Exp $
+$NetBSD: CHANGES-2025,v 1.6830 2025/11/20 10:17:56 he Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9900,3 +9900,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/qbittorrent to 5.1.4 [adam 2025-11-20]
 	Updated benchmarks/hyperfine to 1.20.0 [pin 2025-11-20]
 	Updated www/chromium to 142.0.7444.175 [kikadf 2025-11-20]
+	Updated net/bind918 to 9.18.42 [he 2025-11-20]
