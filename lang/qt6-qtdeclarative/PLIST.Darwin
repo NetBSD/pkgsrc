@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.8 2025/11/18 07:49:07 wiz Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.9 2025/11/20 12:36:36 adam Exp $
 lib/pkgconfig/Qt6QuickControls2IOSStyleImpl.pc
 lib/pkgconfig/Qt6QuickControls2MacOSStyleImpl.pc
 qt6/include/QtQuickControls2IOSStyleImpl/${PKGVERSION}/QtQuickControls2IOSStyleImpl/private/qquickioscursorflashtimer_p.h
@@ -188,6 +188,7 @@ qt6/qml/QtQuick/Controls/macOS/images/menuarrow@2x.png
 qt6/qml/QtQuick/Controls/macOS/images/menuarrow@3x.png
 qt6/qml/QtQuick/Controls/macOS/impl/CheckIndicator.qml
 qt6/qml/QtQuick/Controls/macOS/impl/QuickControls2MacOSStyleImpl.qmltypes
+qt6/qml/QtQuick/Controls/macOS/impl/SliderHandle.qml
 qt6/qml/QtQuick/Controls/macOS/impl/SwitchHandle.qml
 qt6/qml/QtQuick/Controls/macOS/impl/SwitchIndicator.qml
 qt6/qml/QtQuick/Controls/macOS/impl/libqtquickcontrols2macosstyleimplplugin.so
