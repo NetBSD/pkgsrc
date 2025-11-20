@@ -241,7 +241,7 @@ for setting is recommended.
 The function 
 '''archive_entry_size'''() 
 returns the file size, if it has been set, and 0 otherwise. 
-'''archive_entry_size'''() 
+'''archive_entry_size_is_set'''() 
 can be used to query that status. 
 '''archive_entry_set_size'''() 
 and 

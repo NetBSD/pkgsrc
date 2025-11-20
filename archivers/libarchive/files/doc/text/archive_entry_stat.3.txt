@@ -148,11 +148,11 @@
        1marchive_entry_set_perm22m() for setting is recommended.
 
        The function 1marchive_entry_size22m() returns the file size, if it has been
-       set,  and  0 otherwise.	1marchive_entry_size22m() can be used to query that
-       status.	1marchive_entry_set_size22m()  and  1marchive_entry_unset_size22m()  set
-       and unset the size, respectively.
+       set, and 0 otherwise.  1marchive_entry_size_is_set22m() can be used to query
+       that  status.   1marchive_entry_set_size22m() and 1marchive_entry_unset_size22m()
+       set and unset the size, respectively.
 
-       The  number  of	references  (hardlinks)	 can  be  obtained  by calling
+       The number  of  references  (hardlinks)	can  be	 obtained  by  calling
        1marchive_entry_nlink22m() and set with 1marchive_entry_set_nlink22m().
 
    1mIdentifying unique files0m
@@ -160,32 +160,32 @@
        4marchive_entry_linkify24m(3) to find hardlinks.	 The pair of device and in‐
        ode is supposed to identify hardlinked files.
 
-       The device major and minor number can be obtained  independently	 using
-       1marchive_entry_devmajor22m()  and 1marchive_entry_devminor22m().  The device can
-       be set either via 1marchive_entry_set_dev22m() or by the combination of	ma‐
+       The  device  major and minor number can be obtained independently using
+       1marchive_entry_devmajor22m() and 1marchive_entry_devminor22m().	 The device  can
+       be  set either via 1marchive_entry_set_dev22m() or by the combination of ma‐
        jor   and   minor   number   using   1marchive_entry_set_devmajor22m()	and
        1marchive_entry_set_devminor22m().
 
-       The inode number can be obtained using 1marchive_entry_ino22m().	 This is  a
+       The  inode number can be obtained using 1marchive_entry_ino22m().  This is a
        legacy interface that uses the platform 4mino_t24m, which may be very small.
        To set the inode number, 1marchive_entry_set_ino6422m() is the preferred in‐
        terface.
 
    1mAccessor functions for block and character devices0m
-       Block  and  character  devices  are characterised either using a device
+       Block and character devices are characterised  either  using  a	device
        number or a pair of major and minor number.  The combined device number
-       can   be	  obtained   with   1marchive_device_rdev22m()	 and	set    with
+       can    be    obtained   with   1marchive_device_rdev22m()   and	 set   with
        1marchive_device_set_rdev22m().	The major and minor numbers are accessed by
        1marchive_device_rdevmajor22m(),			 1marchive_device_rdevminor22m()
        1marchive_device_set_rdevmajor22m() and 1marchive_device_set_rdevminor22m().
 
-       The process of splitting the combined device number into major and  mi‐
-       nor  number  and	 the  reverse  process of combing them differs between
-       platforms.  Some archive formats use the	 combined  form,  while	 other
+       The  process of splitting the combined device number into major and mi‐
+       nor number and the reverse process  of  combing	them  differs  between
+       platforms.   Some  archive  formats  use the combined form, while other
        formats use the split form.
 
 1mSEE ALSO0m
-       4mstat24m(2),	      4marchive_entry_acl24m(3),	 4marchive_entry_perms24m(3),
+       4mstat24m(2),	     4marchive_entry_acl24m(3),		 4marchive_entry_perms24m(3),
        4marchive_entry_time24m(3), 4mlibarchive24m(3)
 
 Debian			       February 2, 2012		 4mARCHIVE_ENTRY_STAT24m(3)
