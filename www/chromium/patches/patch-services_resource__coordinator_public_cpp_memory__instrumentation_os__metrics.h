@@ -1,10 +1,10 @@
-$NetBSD: patch-services_resource__coordinator_public_cpp_memory__instrumentation_os__metrics.h,v 1.9 2025/11/04 14:55:45 kikadf Exp $
+$NetBSD: patch-services_resource__coordinator_public_cpp_memory__instrumentation_os__metrics.h,v 1.10 2025/11/20 08:36:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics.h.orig	2025-10-24 16:42:30.000000000 +0000
+--- services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics.h.orig	2025-11-14 20:31:45.000000000 +0000
 +++ services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics.h
 @@ -65,7 +65,7 @@ class COMPONENT_EXPORT(
    static std::vector<mojom::VmRegionPtr> GetProcessMemoryMaps(

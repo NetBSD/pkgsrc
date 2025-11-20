@@ -1,12 +1,12 @@
-$NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.9 2025/11/04 14:55:38 kikadf Exp $
+$NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.10 2025/11/20 08:36:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_list.h.orig	2025-10-24 16:42:30.000000000 +0000
+--- components/feature_engagement/public/feature_list.h.orig	2025-11-14 20:31:45.000000000 +0000
 +++ components/feature_engagement/public/feature_list.h
-@@ -359,7 +359,7 @@ DEFINE_VARIATION_PARAM(kIPHiOSAIHubNewBa
+@@ -357,7 +357,7 @@ DEFINE_VARIATION_PARAM(kIPHiOSAIHubNewBa
  #endif  // BUILDFLAG(IS_IOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.9 2025/
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
  DEFINE_VARIATION_PARAM(kEsbDownloadRowPromoFeature, "EsbDownloadRowPromo");
  #endif
-@@ -479,7 +479,8 @@ DEFINE_VARIATION_PARAM(kIPHTabGroupsShar
+@@ -478,7 +478,8 @@ DEFINE_VARIATION_PARAM(kIPHTabGroupsShar
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -25,7 +25,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.9 2025/
  DEFINE_VARIATION_PARAM(kIPHAutofillAiOptInFeature, "IPH_AutofillAiOptIn");
  DEFINE_VARIATION_PARAM(kIPHAutofillBnplAffirmOrZipSuggestionFeature,
                         "IPH_AutofillBnplAffirmOrZipSuggestion");
-@@ -581,7 +582,7 @@ DEFINE_VARIATION_PARAM(kIPHScalableIphHe
+@@ -580,7 +581,7 @@ DEFINE_VARIATION_PARAM(kIPHScalableIphHe
  DEFINE_VARIATION_PARAM(kIPHScalableIphGamingFeature, "IPH_ScalableIphGaming");
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -34,7 +34,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.9 2025/
  DEFINE_VARIATION_PARAM(kIPHDesktopPWAsLinkCapturingLaunch,
                         "IPH_DesktopPWAsLinkCapturingLaunch");
  DEFINE_VARIATION_PARAM(kIPHDesktopPWAsLinkCapturingLaunchAppInTab,
-@@ -783,7 +784,7 @@ inline constexpr flags_ui::FeatureEntry:
+@@ -782,7 +783,7 @@ inline constexpr flags_ui::FeatureEntry:
          VARIATION_ENTRY(kIPHIOSPageActionMenu),
          VARIATION_ENTRY(kIPHiOSAIHubNewBadge),
  #elif BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

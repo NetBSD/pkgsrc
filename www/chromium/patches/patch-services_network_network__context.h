@@ -1,10 +1,10 @@
-$NetBSD: patch-services_network_network__context.h,v 1.9 2025/11/04 14:55:45 kikadf Exp $
+$NetBSD: patch-services_network_network__context.h,v 1.10 2025/11/20 08:36:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_context.h.orig	2025-10-24 16:42:30.000000000 +0000
+--- services/network/network_context.h.orig	2025-11-14 20:31:45.000000000 +0000
 +++ services/network/network_context.h
 @@ -751,7 +751,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
     public:

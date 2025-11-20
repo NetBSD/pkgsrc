@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.27 2025/11/12 19:12:00 kikadf Exp $
+# $NetBSD: Makefile,v 1.28 2025/11/20 08:36:03 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			142.0.7444.162
+VERSION=			142.0.7444.175
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
 
-DISTFILES+=			${DISTNAME}${EXTRACT_SUFX_C}
+DISTFILES+=			${DISTNAME}-lite${EXTRACT_SUFX_C}
 
 # audioio source
 A_VERSION=			140.0
@@ -80,6 +80,8 @@ SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	Fixing pathes
 SUBST_FILES.path+=	base/base_paths_posix.cc
 SUBST_FILES.path+=	base/process/process_handle_openbsd.cc
+SUBST_FILES.path+=	build/config/rust.gni
+SUBST_FILES.path+=	build/linux/strip_binary.gni
 SUBST_FILES.path+=	build/rust/rust_bindgen.gni
 SUBST_FILES.path+=	build/rust/rust_bindgen_generator.gni
 SUBST_FILES.path+=	chrome/common/chrome_paths.cc
@@ -187,11 +189,9 @@ EXTRA_CXXFLAGS=	-Wno-unknown-warning-option \
 		-I${BUILDLINK_DIR}/include/nss
 
 # rust
-RUSTC_VERSION=	rustc -V
 MAKE_ENV+=	RUSTC_BOOTSTRAP=1
-GN_ARGS+=	enable_rust=true \
-		rust_sysroot_absolute=\"${PREFIX}\" \
-		rustc_version=\"${RUSTC_VERSION:sh}\"
+GN_ARGS+=	enable_rust=true
+GN_ARGS+=	rust_sysroot_absolute=\"${PREFIX}\"
 
 PLIST_VARS+=		swiftshader
 FFMPEG_PARTS=		config.h config_components.h libavcodec libavformat libavutil
@@ -234,6 +234,13 @@ post-extract:
 	${CP} ${FILESDIR}/chromium.sh.in ${WRKSRC}/chromium.sh
 
 pre-configure:
+	# Prepare dawn_commit_hash.h
+	@( \
+		echo "#ifndef GPU_WEBGPU_DAWN_COMMIT_HASH_H_" ;\
+		echo "#define GPU_WEBGPU_DAWN_COMMIT_HASH_H_" ;\
+		echo "#define DAWN_COMMIT_HASH \"$$(cat ${WRKSRC}/gpu/webgpu/DAWN_VERSION)\"" ;\
+		echo "#endif  // GPU_WEBGPU_DAWN_COMMIT_HASH_H_" \
+	) > ${WRKSRC}/gpu/webgpu/dawn_commit_hash.h
 	# Prepare internal ffmpeg
 	cd ${WRKSRC}/media/ffmpeg && \
 		${PYTHONBIN} scripts/build_ffmpeg.py \

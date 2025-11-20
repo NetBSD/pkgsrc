@@ -1,10 +1,10 @@
-$NetBSD: patch-content_shell_utility_shell__content__utility__client.cc,v 1.9 2025/11/04 14:55:41 kikadf Exp $
+$NetBSD: patch-content_shell_utility_shell__content__utility__client.cc,v 1.10 2025/11/20 08:36:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/shell/utility/shell_content_utility_client.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- content/shell/utility/shell_content_utility_client.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ content/shell/utility/shell_content_utility_client.cc
 @@ -39,7 +39,7 @@
  #include "sandbox/policy/sandbox.h"

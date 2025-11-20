@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_wtf_math__extras.h,v 1.9 2025/11/04 14:55:47 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_wtf_math__extras.h,v 1.10 2025/11/20 08:36:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/wtf/math_extras.h.orig	2025-10-24 16:42:30.000000000 +0000
+--- third_party/blink/renderer/platform/wtf/math_extras.h.orig	2025-11-14 20:31:45.000000000 +0000
 +++ third_party/blink/renderer/platform/wtf/math_extras.h
 @@ -130,6 +130,10 @@ constexpr float Grad2turn(float g) {
    return g * (1.0f / 400.0f);

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_task__manager_sampling_task__group__sampler.cc,v 1.9 2025/11/04 14:55:33 kikadf Exp $
+$NetBSD: patch-chrome_browser_task__manager_sampling_task__group__sampler.cc,v 1.10 2025/11/20 08:36:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/task_manager/sampling/task_group_sampler.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- chrome/browser/task_manager/sampling/task_group_sampler.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ chrome/browser/task_manager/sampling/task_group_sampler.cc
 @@ -45,7 +45,7 @@ TaskGroupSampler::TaskGroupSampler(
      const OnCpuRefreshCallback& on_cpu_refresh,
