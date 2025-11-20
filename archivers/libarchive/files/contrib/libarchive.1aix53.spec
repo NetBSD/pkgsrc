@@ -127,26 +127,20 @@ rm -fr %buildroot
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: libarchive.1aix53.spec,v $
-Revision 1.14  2024/04/30 06:05:17  adam
-libarchive: updated to 3.7.4
+Revision 1.15  2025/11/20 06:08:24  adam
+libarchive: updated to 3.8.3
 
-Libarchive 3.7.4 is a bugfix and security release
+Libarchive 3.8.3 is a bugfix and security release.
 
 Security fixes:
 
-rar: Fix OOB in rar e8 filter (CVE-2024-26256)
-zip: Fix out of boundary access
+lib: Create temporary files in the target directory
+lha: Fix for an out-of-bounds buffer overrun when using p[H_LEVEL_OFFSET]
+7-zip: Fix a buffer overrun when reading truncated 7zip headers
 
-Important bugfixes:
+Notable bugxies:
 
-7zip: Limit amount of properties
-bsdtar: Fix error handling around strtol() usages
-passphrase: Improve newline handling on Windows
-passphrase: Never allow empty passwords
-rar: Fix "File CRC Error" when extracting specific rar4 archives
-xar: Avoid infinite link loop
-zip: Update AppleDouble support for directories
-zstd: Implement core detection
+lz4 and zstd: Support both lz4 and zstd data with leading skippable frames
 
 Release 1aix53  2006/12/12 rm1023@dcx.com
 - tweak for aix-5.3
