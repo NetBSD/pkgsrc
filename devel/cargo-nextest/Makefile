@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/11/20 12:16:47 pin Exp $
+# $NetBSD: Makefile,v 1.2 2025/11/20 12:24:16 pin Exp $
 
 DISTNAME=	cargo-nextest-0.9.114
 CATEGORIES=	devel
@@ -24,7 +24,7 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 # Alpine and Arch Linux use '--no-default-features --features default-no-update' to build their packages.
 # See, https://gitlab.alpinelinux.org/alpine/aports/-/raw/master/main/cargo-nextest/APKBUILD
 # or, https://gitlab.archlinux.org/archlinux/packaging/packages/cargo-nextest/-/raw/main/PKGBUILD?ref_type=heads
-# 
+#
 # But, upstream states:
 # We specify default-no-update here because if users just run:
 # cargo build --no-default-features --features default-no-update then cargo will unify features for
@@ -32,9 +32,9 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 # We could ask distributors to always include `--package cargo-nextest` instead, but they're likely
 # to forget.
 # None of our current tests depend on self-update, so just don't include it by default.
-# 
+#
 # Reference, https://raw.githubusercontent.com/nextest-rs/nextest/refs/heads/main/Cargo.toml
-# 
+#
 # So, lets stick to what upstream recommends.
 # CARGO_NO_DEFAULT_FEATURES=	YES
 # CARGO_FEATURES+=		default-no-update
