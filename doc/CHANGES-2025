@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6825 2025/11/19 16:06:24 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.6826 2025/11/20 05:19:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9894,3 +9894,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/libpano13 to 2.9.23 [adam 2025-11-19]
 	Updated graphics/hugin to 2025.0.0 [adam 2025-11-19]
 	Updated net/yt-dlp-ejs to 0.3.1nb1 [ryoon 2025-11-19]
+	Updated audio/spotifyd to 0.4.2 [pin 2025-11-20]
