@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/08/14 05:24:23 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/11/20 13:51:55 wiz Exp $
 
 DISTNAME=	anjalioldlipi-${GITLAB_TAG}
 PKGREVISION=	2
@@ -9,7 +9,7 @@ GITLAB_PROJECT=	anjalioldlipi
 GITLAB_TAG=	Version7.1.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://smc.org.in/fonts/anjali
+HOMEPAGE=	https://gitlab.com/smc/fonts/anjalioldlipi
 COMMENT=	Sans Serif Malayalam font in TTF format
 LICENSE=	ofl-v1.1
 
