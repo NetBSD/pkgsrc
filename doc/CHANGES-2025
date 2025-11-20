@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6832 2025/11/20 12:37:50 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6833 2025/11/20 15:11:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9931,3 +9931,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/qt6-qttranslations to 6.10.1 [adam 2025-11-20]
 	Updated devel/qt6-qtwayland to 6.10.1 [adam 2025-11-20]
 	Updated meta-pkgs/qt6 to 6.10.1 [adam 2025-11-20]
+	Updated devel/py-stevedore to 5.6.0 [adam 2025-11-20]
+	Updated net/wireshark to 4.6.1 [adam 2025-11-20]
