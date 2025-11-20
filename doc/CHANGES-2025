@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6831 2025/11/20 12:18:05 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6832 2025/11/20 12:37:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9902,3 +9902,32 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/chromium to 142.0.7444.175 [kikadf 2025-11-20]
 	Updated net/bind918 to 9.18.42 [he 2025-11-20]
 	Added devel/cargo-nextest version 0.9.114 [pin 2025-11-20]
+	Updated databases/qt6-odbc to 6.10.1 [adam 2025-11-20]
+	Updated databases/qt6-psql to 6.10.1 [adam 2025-11-20]
+	Updated graphics/qt6-qt3d to 6.10.1 [adam 2025-11-20]
+	Updated devel/qt6-qt5compat to 6.10.1 [adam 2025-11-20]
+	Updated x11/qt6-qtbase to 6.10.1 [adam 2025-11-20]
+	Updated graphics/qt6-qtcharts to 6.10.1 [adam 2025-11-20]
+	Updated comms/qt6-qtconnectivity to 6.10.1 [adam 2025-11-20]
+	Updated graphics/qt6-qtdatavis3d to 6.10.1 [adam 2025-11-20]
+	Updated lang/qt6-qtdeclarative to 6.10.1 [adam 2025-11-20]
+	Updated net/qt6-qtgrpc to 6.10.1 [adam 2025-11-20]
+	Updated multimedia/qt6-qtmultimedia to 6.10.1 [adam 2025-11-20]
+	Updated security/qt6-qtnetworkauth to 6.10.1 [adam 2025-11-20]
+	Updated geography/qt6-qtpositioning to 6.10.1 [adam 2025-11-20]
+	Updated graphics/qt6-qtquick3d to 6.10.1 [adam 2025-11-20]
+	Updated graphics/qt6-qtquicktimeline to 6.10.1 [adam 2025-11-20]
+	Updated net/qt6-qtremoteobjects to 6.10.1 [adam 2025-11-20]
+	Updated lang/qt6-qtscxml to 6.10.1 [adam 2025-11-20]
+	Updated misc/qt6-qtsensors to 6.10.1 [adam 2025-11-20]
+	Updated x11/qt6-qtserialport to 6.10.1 [adam 2025-11-20]
+	Updated graphics/qt6-qtshadertools to 6.10.1 [adam 2025-11-20]
+	Updated audio/qt6-qtspeech to 6.10.1 [adam 2025-11-20]
+	Updated graphics/qt6-qtsvg to 6.10.1 [adam 2025-11-20]
+	Updated devel/qt6-qttools to 6.10.1 [adam 2025-11-20]
+	Updated inputmethod/qt6-qtvirtualkeyboard to 6.10.1 [adam 2025-11-20]
+	Updated www/qt6-qtwebchannel to 6.10.1 [adam 2025-11-20]
+	Updated net/qt6-qtwebsockets to 6.10.1 [adam 2025-11-20]
+	Updated x11/qt6-qttranslations to 6.10.1 [adam 2025-11-20]
+	Updated devel/qt6-qtwayland to 6.10.1 [adam 2025-11-20]
+	Updated meta-pkgs/qt6 to 6.10.1 [adam 2025-11-20]
