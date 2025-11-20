@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/11/11 12:34:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/11/20 12:36:36 adam Exp $
 lib/pkgconfig/Qt6Core5Compat.pc
 qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qbinaryjson_p.h
 qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qbinaryjsonarray_p.h
@@ -117,7 +117,6 @@ qt6/qml/Qt5Compat/GraphicalEffects/RecursiveBlur.qml
 qt6/qml/Qt5Compat/GraphicalEffects/ThresholdMask.qml
 qt6/qml/Qt5Compat/GraphicalEffects/ZoomBlur.qml
 qt6/qml/Qt5Compat/GraphicalEffects/libqtgraphicaleffectsplugin.so
-qt6/qml/Qt5Compat/GraphicalEffects/plugins.qmltypes
 qt6/qml/Qt5Compat/GraphicalEffects/private/DropShadowBase.qml
 qt6/qml/Qt5Compat/GraphicalEffects/private/FastGlow.qml
 qt6/qml/Qt5Compat/GraphicalEffects/private/FastInnerShadow.qml
@@ -129,4 +128,5 @@ qt6/qml/Qt5Compat/GraphicalEffects/private/libqtgraphicaleffectsprivateplugin.so
 qt6/qml/Qt5Compat/GraphicalEffects/private/plugins.qmltypes
 qt6/qml/Qt5Compat/GraphicalEffects/private/qmldir
 qt6/qml/Qt5Compat/GraphicalEffects/qmldir
+qt6/qml/Qt5Compat/GraphicalEffects/qtgraphicaleffectsplugin.qmltypes
 qt6/sbom/qt5compat-${PKGVERSION}.spdx

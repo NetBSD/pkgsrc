@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2025/11/11 12:34:17 adam Exp $
+# $NetBSD: Makefile,v 1.30 2025/11/20 12:36:39 adam Exp $
 
 DISTNAME=	qttools-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qttools-${QTVERSION}
@@ -12,7 +12,7 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Designer.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Help.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6UiTools.pc
 
-.include "../../lang/clang/buildlink3.mk"
+.include "../../wip/clang/buildlink3.mk"
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"
 .include "../../www/litehtml/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"

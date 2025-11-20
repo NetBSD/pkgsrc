@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/11/11 12:34:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/11/20 12:36:37 adam Exp $
 lib/pkgconfig/Qt6Lottie.pc
 lib/pkgconfig/Qt6LottieVectorImageHelpers.pc
 qt6/bin/lottietoqml
@@ -114,12 +114,12 @@ qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6LottiepluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6LottiepluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6LottiepluginTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6LottiepluginTargets.cmake
-qt6/lib/cmake/Qt6QuickVectorImageGeneratorPrivate/Qt6QLottieVectorImagePluginAdditionalTargetInfo.cmake
-qt6/lib/cmake/Qt6QuickVectorImageGeneratorPrivate/Qt6QLottieVectorImagePluginConfig.cmake
-qt6/lib/cmake/Qt6QuickVectorImageGeneratorPrivate/Qt6QLottieVectorImagePluginConfigVersion.cmake
-qt6/lib/cmake/Qt6QuickVectorImageGeneratorPrivate/Qt6QLottieVectorImagePluginConfigVersionImpl.cmake
-qt6/lib/cmake/Qt6QuickVectorImageGeneratorPrivate/Qt6QLottieVectorImagePluginTargets-release.cmake
-qt6/lib/cmake/Qt6QuickVectorImageGeneratorPrivate/Qt6QLottieVectorImagePluginTargets.cmake
+qt6/lib/cmake/Qt6Quick/Qt6QLottieVectorImagePluginAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6Quick/Qt6QLottieVectorImagePluginConfig.cmake
+qt6/lib/cmake/Qt6Quick/Qt6QLottieVectorImagePluginConfigVersion.cmake
+qt6/lib/cmake/Qt6Quick/Qt6QLottieVectorImagePluginConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6Quick/Qt6QLottieVectorImagePluginTargets-release.cmake
+qt6/lib/cmake/Qt6Quick/Qt6QLottieVectorImagePluginTargets.cmake
 qt6/lib/libQt6Lottie.prl
 qt6/lib/libQt6Lottie.so
 qt6/lib/libQt6Lottie.so.${PKGVERSION}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/11/11 12:34:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/11/20 12:36:39 adam Exp $
 lib/pkgconfig/Qt6VirtualKeyboard.pc
 lib/pkgconfig/Qt6VirtualKeyboardQml.pc
 lib/pkgconfig/Qt6VirtualKeyboardSettings.pc
@@ -13,6 +13,7 @@ qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/fallbackin
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/gesturerecognizer_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/handwritinggesturerecognizer_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/inputmethod_p.h
+qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/inputmethod_p_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/inputselectionhandle_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/inputview_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/plaininputmethod_p.h
@@ -23,6 +24,7 @@ qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/qvirtualke
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/qvirtualkeyboardfeatures_namespace_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/qvirtualkeyboardinputcontext_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/qvirtualkeyboardnamespace_p.h
+qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/recursivemethodguard_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/settings_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/shadowinputcontext_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/shifthandler_p.h

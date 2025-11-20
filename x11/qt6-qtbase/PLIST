@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2025/11/18 10:17:40 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.31 2025/11/20 12:36:36 adam Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -69,6 +69,7 @@ qt6/doc/global/app-examples-template/app-examples-template.qdoc
 qt6/doc/global/compat.qdocconf
 qt6/doc/global/config.qdocconf
 qt6/doc/global/cpp-doc-macros.qdocconf
+qt6/doc/global/disabledwarnings.qdocconf
 qt6/doc/global/externalsites.qdocconf
 qt6/doc/global/externalsites/external-resources.qdoc
 qt6/doc/global/externalsites/qt-webpages.qdoc
@@ -176,6 +177,7 @@ qt6/include/QtConcurrent/QtConcurrentDepends
 qt6/include/QtConcurrent/QtConcurrentFilter
 qt6/include/QtConcurrent/QtConcurrentMap
 qt6/include/QtConcurrent/QtConcurrentRun
+qt6/include/QtConcurrent/QtConcurrentTask
 qt6/include/QtConcurrent/QtConcurrentVersion
 qt6/include/QtConcurrent/qtaskbuilder.h
 qt6/include/QtConcurrent/qtconcurrent_global.h
@@ -201,7 +203,6 @@ qt6/include/QtCore/${PKGVERSION}/QtCore/private/qabstractfileengine_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qabstractitemmodel_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qabstractproxymodel_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qanimationgroup_p.h
-qt6/include/QtCore/${PKGVERSION}/QtCore/private/qbytedata_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcalendarbackend_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcalendarmath_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcborcommon_p.h
@@ -224,6 +225,7 @@ qt6/include/QtCore/${PKGVERSION}/QtCore/private/qendian_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qeventdispatcher_glib_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qeventdispatcher_unix_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qeventloop_p.h
+qt6/include/QtCore/${PKGVERSION}/QtCore/private/qexpected_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfactoryloader_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfile_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfiledevice_p.h
@@ -243,6 +245,7 @@ qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfunctions_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfutex_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfutureinterface_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfuturewatcher_p.h
+qt6/include/QtCore/${PKGVERSION}/QtCore/private/qgettid_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qglobal_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qgregoriancalendar_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qhijricalendar_p.h
@@ -252,7 +255,6 @@ qt6/include/QtCore/${PKGVERSION}/QtCore/private/qiodevice_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qipaddress_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qislamiccivilcalendar_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qitemselectionmodel_p.h
-qt6/include/QtCore/${PKGVERSION}/QtCore/private/qiterable_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qjalalicalendar_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qjson_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qjsonparser_p.h
@@ -266,6 +268,7 @@ qt6/include/QtCore/${PKGVERSION}/QtCore/private/qlocaltime_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qlockfile_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qlocking_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qlogging_p.h
+qt6/include/QtCore/${PKGVERSION}/QtCore/private/qloggingcategory_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qloggingregistry_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qmakearray_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qmetaobject_moc_p.h
@@ -352,9 +355,6 @@ qt6/include/QtCore/${PKGVERSION}/QtCore/private/qxmlutils_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qzipreader_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qzipwriter_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/wcharhelpers_win_p.h
-qt6/include/QtCore/${PKGVERSION}/QtCore/private/qexpected_p.h
-qt6/include/QtCore/${PKGVERSION}/QtCore/private/qgettid_p.h
-qt6/include/QtCore/${PKGVERSION}/QtCore/private/qloggingcategory_p.h
 qt6/include/QtCore/QAbstractAnimation
 qt6/include/QtCore/QAbstractEventDispatcher
 qt6/include/QtCore/QAbstractEventDispatcherV2
@@ -885,6 +885,7 @@ qt6/include/QtCore/qiodevice.h
 qt6/include/QtCore/qiodevicebase.h
 qt6/include/QtCore/qitemselectionmodel.h
 qt6/include/QtCore/qiterable.h
+qt6/include/QtCore/qiterable_impl.h
 qt6/include/QtCore/qiterator.h
 qt6/include/QtCore/qjsonarray.h
 qt6/include/QtCore/qjsondocument.h
@@ -1180,6 +1181,7 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qabstractfileiconengine_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qabstractfileiconprovider_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qabstractlayoutstyleinfo_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qabstracttextdocumentlayout_p.h
+qt6/include/QtGui/${PKGVERSION}/QtGui/private/qaccessibilityhints_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qaccessiblebridgeutils_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qaccessiblecache_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qaccessiblehelper_p.h
@@ -1410,7 +1412,6 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/rhi/qrhi.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/rhi/qrhi_platform.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/rhi/qshader.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/rhi/qshaderdescription.h
-qt6/include/QtGui/${PKGVERSION}/QtGui/private/qaccessibilityhints_p.h
 qt6/include/QtGui/QAbstractFileIconProvider
 qt6/include/QtGui/QAbstractTextDocumentLayout
 qt6/include/QtGui/QAbstractUndoItem
@@ -1770,6 +1771,7 @@ qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qabstractprotocolhandler_p
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qabstractsocket_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qabstractsocketengine_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qauthenticator_p.h
+qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qbytedatabuffer_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qdecompresshelper_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qdnslookup_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qdtls_p.h
@@ -1833,6 +1835,7 @@ qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qsslkey_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qsslpresharedkeyauthenticator_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qsslserver_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qsslsocket_p.h
+qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qtcontenttypeparser_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qtcpserver_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qtcpsocket_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qtldurl_p.h
@@ -2155,6 +2158,7 @@ qt6/include/QtSql/qtsqlexports.h
 qt6/include/QtSql/qtsqlglobal.h
 qt6/include/QtSql/qtsqlversion.h
 qt6/include/QtTest/${PKGVERSION}/QtTest/private/catch_p.h
+qt6/include/QtTest/${PKGVERSION}/QtTest/private/cycle_include_p.h
 qt6/include/QtTest/${PKGVERSION}/QtTest/private/cycle_p.h
 qt6/include/QtTest/${PKGVERSION}/QtTest/private/qabstracttestlogger_p.h
 qt6/include/QtTest/${PKGVERSION}/QtTest/private/qbenchmark_p.h
@@ -2185,7 +2189,6 @@ qt6/include/QtTest/${PKGVERSION}/QtTest/private/qtestresult_p.h
 qt6/include/QtTest/${PKGVERSION}/QtTest/private/qtesttable_p.h
 qt6/include/QtTest/${PKGVERSION}/QtTest/private/qttestlib-config_p.h
 qt6/include/QtTest/${PKGVERSION}/QtTest/private/qxmltestlogger_p.h
-qt6/include/QtTest/${PKGVERSION}/QtTest/private/cycle_include_p.h
 qt6/include/QtTest/QAbstractItemModelTester
 qt6/include/QtTest/QSignalSpy
 qt6/include/QtTest/QSpontaneKeyEvent
