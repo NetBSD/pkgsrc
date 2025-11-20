@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6827 2025/11/20 06:12:48 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6828 2025/11/20 08:44:11 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9898,3 +9898,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/libarchive to 3.8.3 [adam 2025-11-20]
 	Updated textproc/mdbook to 0.5.1 [adam 2025-11-20]
 	Updated net/qbittorrent to 5.1.4 [adam 2025-11-20]
+	Updated benchmarks/hyperfine to 1.20.0 [pin 2025-11-20]
