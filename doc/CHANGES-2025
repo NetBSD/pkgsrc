@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6834 2025/11/20 15:34:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6835 2025/11/20 20:55:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9935,3 +9935,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/wireshark to 4.6.1 [adam 2025-11-20]
 	Updated databases/py-barman to 3.16.2 [adam 2025-11-20]
 	Updated math/py-xarray to 2025.11.0 [adam 2025-11-20]
+	Updated security/gnutls to 3.8.11 [wiz 2025-11-20]
