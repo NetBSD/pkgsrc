@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2023/06/06 12:42:17 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.48 2025/11/20 13:46:58 wiz Exp $
 
 # used by sysutils/amanda-common/Makefile
 # used by sysutils/amanda-client/Makefile
@@ -13,7 +13,7 @@ CATEGORIES=		sysutils
 MASTER_SITES?=		${MASTER_SITE_SOURCEFORGE:=amanda/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.amanda.org/
+HOMEPAGE=		https://www.amanda.org/
 LICENSE=		modified-bsd AND gnu-gpl-v3
 
 DISTINFO_FILE=		${.CURDIR}/${COMMONDIR}/distinfo
