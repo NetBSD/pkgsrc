@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/04/02 17:49:44 pin Exp $
+# $NetBSD: Makefile,v 1.13 2025/11/20 08:43:40 pin Exp $
 
-DISTNAME=	hyperfine-1.19.0
+DISTNAME=	hyperfine-1.20.0
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sharkdp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,6 +11,8 @@ COMMENT=	Command-line benchmarking tool
 LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
+
+RUST_REQ=	1.88.0
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
