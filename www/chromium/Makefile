@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2025/11/20 08:36:03 kikadf Exp $
+# $NetBSD: Makefile,v 1.29 2025/11/20 09:19:26 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
 VERSION=			142.0.7444.175
@@ -235,11 +235,11 @@ post-extract:
 
 pre-configure:
 	# Prepare dawn_commit_hash.h
-	@( \
-		echo "#ifndef GPU_WEBGPU_DAWN_COMMIT_HASH_H_" ;\
-		echo "#define GPU_WEBGPU_DAWN_COMMIT_HASH_H_" ;\
-		echo "#define DAWN_COMMIT_HASH \"$$(cat ${WRKSRC}/gpu/webgpu/DAWN_VERSION)\"" ;\
-		echo "#endif  // GPU_WEBGPU_DAWN_COMMIT_HASH_H_" \
+	${RUN}( \
+		${ECHO} "#ifndef GPU_WEBGPU_DAWN_COMMIT_HASH_H_" ;\
+		${ECHO} "#define GPU_WEBGPU_DAWN_COMMIT_HASH_H_" ;\
+		${ECHO} "#define DAWN_COMMIT_HASH \""$$(cat ${WRKSRC}/gpu/webgpu/DAWN_VERSION)\""" ;\
+		${ECHO} "#endif  // GPU_WEBGPU_DAWN_COMMIT_HASH_H_" \
 	) > ${WRKSRC}/gpu/webgpu/dawn_commit_hash.h
 	# Prepare internal ffmpeg
 	cd ${WRKSRC}/media/ffmpeg && \
