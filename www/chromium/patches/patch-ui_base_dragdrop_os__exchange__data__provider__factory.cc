@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_dragdrop_os__exchange__data__provider__factory.cc,v 1.9 2025/11/04 14:55:49 kikadf Exp $
+$NetBSD: patch-ui_base_dragdrop_os__exchange__data__provider__factory.cc,v 1.10 2025/11/20 08:36:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/dragdrop/os_exchange_data_provider_factory.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- ui/base/dragdrop/os_exchange_data_provider_factory.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ ui/base/dragdrop/os_exchange_data_provider_factory.cc
 @@ -7,7 +7,7 @@
  #include "base/notreached.h"

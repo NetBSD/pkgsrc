@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_fonts_skia_font__cache__skia.cc,v 1.9 2025/11/04 14:55:46 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_fonts_skia_font__cache__skia.cc,v 1.10 2025/11/20 08:36:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/skia/font_cache_skia.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- third_party/blink/renderer/platform/fonts/skia/font_cache_skia.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/skia/font_cache_skia.cc
 @@ -66,7 +66,7 @@ AtomicString ToAtomicString(const SkStri
    return AtomicString::FromUTF8(std::string_view(str.begin(), str.end()));
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_fonts_skia_font__cache__skia
  // This function is called on android or when we are emulating android fonts on
  // linux and the embedder has overriden the default fontManager with
  // WebFontRendering::setSkiaFontMgr.
-@@ -259,7 +259,7 @@ const FontPlatformData* FontCache::Creat
+@@ -278,7 +278,7 @@ const FontPlatformData* FontCache::Creat
    std::string name;
  
    sk_sp<SkTypeface> typeface;

@@ -1,10 +1,10 @@
-$NetBSD: patch-base_system_sys__info.cc,v 1.9 2025/11/04 14:55:29 kikadf Exp $
+$NetBSD: patch-base_system_sys__info.cc,v 1.10 2025/11/20 08:36:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- base/system/sys_info.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ base/system/sys_info.cc
 @@ -222,7 +222,7 @@ std::string SysInfo::SocManufacturer() {
  #endif

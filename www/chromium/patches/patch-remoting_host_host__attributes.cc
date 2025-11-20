@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_host__attributes.cc,v 1.9 2025/11/04 14:55:44 kikadf Exp $
+$NetBSD: patch-remoting_host_host__attributes.cc,v 1.10 2025/11/20 08:36:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/host_attributes.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- remoting/host/host_attributes.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ remoting/host/host_attributes.cc
 @@ -102,7 +102,7 @@ std::string GetHostAttributes() {
    if (media::InitializeMediaFoundation()) {
