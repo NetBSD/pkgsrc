@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__image_external__vk__image__backing__factory.cc,v 1.9 2025/11/04 14:55:41 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__image_external__vk__image__backing__factory.cc,v 1.10 2025/11/20 08:36:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/external_vk_image_backing_factory.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- gpu/command_buffer/service/shared_image/external_vk_image_backing_factory.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/external_vk_image_backing_factory.cc
 @@ -140,7 +140,7 @@ bool IsFormatSupported(viz::SharedImageF
  

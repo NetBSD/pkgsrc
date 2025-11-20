@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_custom__handlers_chrome__protocol__handler__registry__delegate.cc,v 1.9 2025/11/04 14:55:31 kikadf Exp $
+$NetBSD: patch-chrome_browser_custom__handlers_chrome__protocol__handler__registry__delegate.cc,v 1.10 2025/11/20 08:36:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/custom_handlers/chrome_protocol_handler_registry_delegate.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- chrome/browser/custom_handlers/chrome_protocol_handler_registry_delegate.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ chrome/browser/custom_handlers/chrome_protocol_handler_registry_delegate.cc
 @@ -68,7 +68,7 @@ void ChromeProtocolHandlerRegistryDelega
  // If true default protocol handlers will be removed if the OS level

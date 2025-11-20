@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_sharing_sharing__handler__registry__impl.cc,v 1.9 2025/11/04 14:55:33 kikadf Exp $
+$NetBSD: patch-chrome_browser_sharing_sharing__handler__registry__impl.cc,v 1.10 2025/11/20 08:36:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sharing/sharing_handler_registry_impl.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- chrome/browser/sharing/sharing_handler_registry_impl.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ chrome/browser/sharing/sharing_handler_registry_impl.cc
 @@ -21,7 +21,7 @@
  #endif  // BUILDFLAG(IS_ANDROID)

@@ -1,10 +1,10 @@
-$NetBSD: patch-media_gpu_gpu__video__decode__accelerator__factory.cc,v 1.8 2025/11/04 14:55:42 kikadf Exp $
+$NetBSD: patch-media_gpu_gpu__video__decode__accelerator__factory.cc,v 1.9 2025/11/20 08:36:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/gpu_video_decode_accelerator_factory.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- media/gpu/gpu_video_decode_accelerator_factory.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ media/gpu/gpu_video_decode_accelerator_factory.cc
 @@ -13,7 +13,7 @@
  #include "media/gpu/media_gpu_export.h"

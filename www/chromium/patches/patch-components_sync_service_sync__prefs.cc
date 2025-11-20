@@ -1,10 +1,10 @@
-$NetBSD: patch-components_sync_service_sync__prefs.cc,v 1.5 2025/11/04 14:55:39 kikadf Exp $
+$NetBSD: patch-components_sync_service_sync__prefs.cc,v 1.6 2025/11/20 08:36:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync/service/sync_prefs.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- components/sync/service/sync_prefs.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ components/sync/service/sync_prefs.cc
 @@ -840,7 +840,7 @@ bool SyncPrefs::MaybeMigratePrefsForSync
            update_selected_types_dict->EnsureDict(

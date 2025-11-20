@@ -1,10 +1,10 @@
-$NetBSD: patch-components_feature__engagement_public_feature__configurations.cc,v 1.9 2025/11/04 14:55:38 kikadf Exp $
+$NetBSD: patch-components_feature__engagement_public_feature__configurations.cc,v 1.10 2025/11/20 08:36:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_configurations.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- components/feature_engagement/public/feature_configurations.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ components/feature_engagement/public/feature_configurations.cc
 @@ -95,7 +95,7 @@ std::optional<FeatureConfig> CreateNewUs
  

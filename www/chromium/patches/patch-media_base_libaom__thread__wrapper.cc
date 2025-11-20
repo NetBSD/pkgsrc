@@ -1,10 +1,10 @@
-$NetBSD: patch-media_base_libaom__thread__wrapper.cc,v 1.9 2025/11/04 14:55:42 kikadf Exp $
+$NetBSD: patch-media_base_libaom__thread__wrapper.cc,v 1.10 2025/11/20 08:36:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/libaom_thread_wrapper.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- media/base/libaom_thread_wrapper.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ media/base/libaom_thread_wrapper.cc
 @@ -5,17 +5,21 @@
  #include "base/logging.h"

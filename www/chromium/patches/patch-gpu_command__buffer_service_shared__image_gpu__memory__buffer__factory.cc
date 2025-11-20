@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__image_gpu__memory__buffer__factory.cc,v 1.1 2025/11/04 14:55:41 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__image_gpu__memory__buffer__factory.cc,v 1.2 2025/11/20 08:36:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/gpu_memory_buffer_factory.cc.orig	2025-10-24 16:42:30.000000000 +0000
+--- gpu/command_buffer/service/shared_image/gpu_memory_buffer_factory.cc.orig	2025-11-14 20:31:45.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/gpu_memory_buffer_factory.cc
 @@ -14,7 +14,7 @@
  #include "gpu/command_buffer/service/shared_image/gpu_memory_buffer_factory_io_surface.h"

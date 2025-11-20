@@ -1,10 +1,10 @@
-$NetBSD: patch-components_viz_test_mock__display__client.h,v 1.9 2025/11/04 14:55:39 kikadf Exp $
+$NetBSD: patch-components_viz_test_mock__display__client.h,v 1.10 2025/11/20 08:36:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/test/mock_display_client.h.orig	2025-10-24 16:42:30.000000000 +0000
+--- components/viz/test/mock_display_client.h.orig	2025-11-14 20:31:45.000000000 +0000
 +++ components/viz/test/mock_display_client.h
 @@ -45,7 +45,7 @@ class MockDisplayClient : public mojom::
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_CHROMEOS)
