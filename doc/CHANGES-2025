@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6826 2025/11/20 05:19:39 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6827 2025/11/20 06:12:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9895,3 +9895,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/hugin to 2025.0.0 [adam 2025-11-19]
 	Updated net/yt-dlp-ejs to 0.3.1nb1 [ryoon 2025-11-19]
 	Updated audio/spotifyd to 0.4.2 [pin 2025-11-20]
+	Updated archivers/libarchive to 3.8.3 [adam 2025-11-20]
+	Updated textproc/mdbook to 0.5.1 [adam 2025-11-20]
+	Updated net/qbittorrent to 5.1.4 [adam 2025-11-20]
