@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.13 2024/05/06 08:33:50 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.14 2025/11/20 13:41:52 wiz Exp $
 
 DISTNAME=		aliados-0.2.0
 PKGREVISION=		2
 CATEGORIES=		emulators
-MASTER_SITES=		http://www.arrakis.es/~ninsesabe/aliados/
+#MASTER_SITES=		http://www.arrakis.es/~ninsesabe/aliados/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		ivaniclixx@gmail.com
-HOMEPAGE=		http://www.arrakis.es/~ninsesabe/aliados/
+#HOMEPAGE=		http://www.arrakis.es/~ninsesabe/aliados/
 COMMENT=		CP/M 80 emulator
 
 GNU_CONFIGURE=		YES
