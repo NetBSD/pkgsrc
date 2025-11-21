@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6838 2025/11/21 09:25:34 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6839 2025/11/21 10:52:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9941,3 +9941,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-redis to 7.1.0 [adam 2025-11-21]
 	Updated devel/ninja-build to 1.13.2 [adam 2025-11-21]
 	Updated net/haproxy to 3.2.9 [adam 2025-11-21]
+	Updated sysutils/salt to 3007.9 [adam 2025-11-21]
+	Updated sysutils/salt-docs to 3007.9 [adam 2025-11-21]
