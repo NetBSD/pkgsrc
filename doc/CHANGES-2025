@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6842 2025/11/21 14:22:39 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6843 2025/11/21 14:56:03 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9950,3 +9950,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/ffplay8 to 8.0.1 [adam 2025-11-21]
 	Updated multimedia/ffmpeg7 to 7.1.3 [adam 2025-11-21]
 	Updated multimedia/ffplay7 to 7.1.3 [adam 2025-11-21]
+	Added devel/ada-aunit-25 version 25.2.0 [dkazankov 2025-11-21]
