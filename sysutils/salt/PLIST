@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2025/07/01 13:41:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2025/11/21 10:52:07 adam Exp $
 bin/salt
 bin/salt-api
 bin/salt-call
@@ -4475,6 +4475,9 @@ ${PYSITELIB}/salt/utils/ctx.pyo
 ${PYSITELIB}/salt/utils/data.py
 ${PYSITELIB}/salt/utils/data.pyc
 ${PYSITELIB}/salt/utils/data.pyo
+${PYSITELIB}/salt/utils/datastructures.py
+${PYSITELIB}/salt/utils/datastructures.pyc
+${PYSITELIB}/salt/utils/datastructures.pyo
 ${PYSITELIB}/salt/utils/dateutils.py
 ${PYSITELIB}/salt/utils/dateutils.pyc
 ${PYSITELIB}/salt/utils/dateutils.pyo
