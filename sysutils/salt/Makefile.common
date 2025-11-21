@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.7 2025/10/09 07:57:58 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2025/11/21 10:52:07 adam Exp $
 # used by sysutils/salt/Makefile
 # used by sysutils/salt-docs/Makefile
 
-DISTNAME=	salt-3007.5
+DISTNAME=	salt-3007.9
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/salt/}
 
@@ -42,4 +42,4 @@ DEPENDS+=	${PYPKGPREFIX}-zmq>=25.1.2:../../net/py-zmq
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	313
+PYTHON_VERSIONS_INCOMPATIBLE=	313 314
