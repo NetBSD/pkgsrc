@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.169 2025/11/20 20:55:29 wiz Exp $
+$NetBSD: distinfo,v 1.170 2025/11/21 16:44:12 manu Exp $
 
 BLAKE2s (gnutls-3.8.11.tar.xz) = ef0cf4a456a747a3dd396d0fdcede21358bf7ef56e714d12464fd438123f2370
 SHA512 (gnutls-3.8.11.tar.xz) = 68f9e5bec3aa6686fd3319cc9c88a5cc44e2a75144049fc9de5fb55fef2241b4e16996af4be5dd48308abbee8cfaed6c862903f6bb89aff5dfa5410075bd7386
 Size (gnutls-3.8.11.tar.xz) = 6939944 bytes
 SHA1 (patch-configure) = 866d8a365b8338348230e47518788f494279b139
+SHA1 (patch-doc_examples_tlsproxy_tlsproxy.c) = 5062df3a73e69abca25710d016b949eef62af453
+SHA1 (patch-lib_crau_crau.h) = 02c36d3cbb638de0c8ec3662f9688dfdce596fed
