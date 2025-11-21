@@ -1,0 +1,45 @@
+$NetBSD: patch-Makefile.in,v 1.1 2025/11/21 13:23:22 dkazankov Exp $
+
+Fix incorrect project directory
+Remove incorrect link
+
+--- Makefile.in.orig	2024-06-27 11:52:46.000000000 +0300
++++ Makefile.in
+@@ -26,7 +26,7 @@
+ PROCESSORS   = 0
+ 
+ # Location (under $prefix) where the project files should be copied
+-PRJDIR=lib/gnat
++PRJDIR=share/gpr
+ 
+ GPRBUILD_FULL = ${GPRBUILD} -j${PROCESSORS} -m -p ${GPRBUILD_SWITCHES}
+ GPRINSTALL_FULL = ${GPRINSTALL} -p -f --project-subdir=$(PRJDIR) \
+@@ -97,9 +97,9 @@
+ 		-Psrc/gtkada.gpr
+ 
+ install-clean:
+-ifneq (,$(wildcard $(prefix)/lib/gnat/manifests/gtkada))
++ifneq (,$(wildcard $(prefix)/$(PRJDIR)/manifests/gtkada))
+ 	-$(GPRINSTALL) --uninstall -f --prefix=$(prefix) \
+-		--project-subdir=lib/gnat gtkada
++		--project-subdir=$(PRJDIR) gtkada
+ endif
+ 
+ install: install-clean
+@@ -108,15 +108,12 @@
+ 	cd testgtk; ${GPRINSTALL_FULL} -XLIBRARY_TYPE=$(LIBRARY_TYPE_FOR_TOOLS) \
+ 		--mode=usage --exec-subdir=${DESTDIR}${exampledir} \
+ 		-Ptestgtk.gpr -aP ../src
+-ifneq ($(OS),Windows_NT)
+-	ln -s ${libdir} ${DESTDIR}${datadir}/examples/gtkada --force
+-endif
+ 	@echo '-----------------------------------------------------------------------'
+ 	@echo '--  GtkAda has now been installed.                                   --'
+ 	@echo '--  To use the library, you may need to update LD_LIBRARY_PATH       --'
+ 	@echo '--  or to run ldconfig. You may also need to update GPR_PROJECT_PATH --'
+ 	@echo '--  to include                                                       --'
+-	@echo '--  ${prefix}/lib/gnat'
++	@echo '--  ${prefix}/$(PRJDIR)'
+ 	@echo '-----------------------------------------------------------------------'
+ 
+ docs:
