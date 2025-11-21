@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1 2025/08/22 16:42:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2025/11/21 14:21:13 adam Exp $
 # used by multimedia/ffmpeg8/Makefile
 # used by multimedia/ffplay8/Makefile
 
-DISTNAME=	ffmpeg-8.0
+DISTNAME=	ffmpeg-8.0.1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://www.ffmpeg.org/releases/
 EXTRACT_SUFX=	.tar.xz
