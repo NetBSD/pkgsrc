@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2025/11/03 12:22:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2025/11/21 09:07:32 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -156,6 +156,9 @@ ${PYSITELIB}/redis/commands/json/decoders.pyo
 ${PYSITELIB}/redis/commands/json/path.py
 ${PYSITELIB}/redis/commands/json/path.pyc
 ${PYSITELIB}/redis/commands/json/path.pyo
+${PYSITELIB}/redis/commands/policies.py
+${PYSITELIB}/redis/commands/policies.pyc
+${PYSITELIB}/redis/commands/policies.pyo
 ${PYSITELIB}/redis/commands/redismodules.py
 ${PYSITELIB}/redis/commands/redismodules.pyc
 ${PYSITELIB}/redis/commands/redismodules.pyo
@@ -180,6 +183,12 @@ ${PYSITELIB}/redis/commands/search/document.pyo
 ${PYSITELIB}/redis/commands/search/field.py
 ${PYSITELIB}/redis/commands/search/field.pyc
 ${PYSITELIB}/redis/commands/search/field.pyo
+${PYSITELIB}/redis/commands/search/hybrid_query.py
+${PYSITELIB}/redis/commands/search/hybrid_query.pyc
+${PYSITELIB}/redis/commands/search/hybrid_query.pyo
+${PYSITELIB}/redis/commands/search/hybrid_result.py
+${PYSITELIB}/redis/commands/search/hybrid_result.pyc
+${PYSITELIB}/redis/commands/search/hybrid_result.pyo
 ${PYSITELIB}/redis/commands/search/index_definition.py
 ${PYSITELIB}/redis/commands/search/index_definition.pyc
 ${PYSITELIB}/redis/commands/search/index_definition.pyo
