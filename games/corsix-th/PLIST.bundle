@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.bundle,v 1.1 2025/09/27 09:16:58 triaxx Exp $
+@comment $NetBSD: PLIST.bundle,v 1.2 2025/11/21 08:26:54 triaxx Exp $
 Applications/CorsixTH.app/Contents/Frameworks/libSDL2-2.0.0.dylib
 Applications/CorsixTH.app/Contents/Frameworks/libSDL2_mixer-2.0.0.dylib
 Applications/CorsixTH.app/Contents/Frameworks/libaom.3.12.1.dylib
@@ -10,9 +10,9 @@ Applications/CorsixTH.app/Contents/Frameworks/libavformat.61.dylib
 Applications/CorsixTH.app/Contents/Frameworks/libavutil.59.39.100.dylib
 Applications/CorsixTH.app/Contents/Frameworks/libavutil.59.dylib
 Applications/CorsixTH.app/Contents/Frameworks/libbluray.2.dylib
-Applications/CorsixTH.app/Contents/Frameworks/libbrotlicommon.1.1.0.dylib
+Applications/CorsixTH.app/Contents/Frameworks/libbrotlicommon.1.2.0.dylib
 Applications/CorsixTH.app/Contents/Frameworks/libbrotlicommon.1.dylib
-Applications/CorsixTH.app/Contents/Frameworks/libbrotlidec.1.1.0.dylib
+Applications/CorsixTH.app/Contents/Frameworks/libbrotlidec.1.2.0.dylib
 Applications/CorsixTH.app/Contents/Frameworks/libbrotlidec.1.dylib
 Applications/CorsixTH.app/Contents/Frameworks/libbz2.0.dylib
 Applications/CorsixTH.app/Contents/Frameworks/libcrypto.3.dylib
