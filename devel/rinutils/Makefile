@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/03/16 08:06:13 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/11/21 15:00:34 adam Exp $
 
-DISTNAME=	rinutils-0.10.1
+DISTNAME=	rinutils-0.10.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shlomif/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
