@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6837 2025/11/21 09:08:03 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6838 2025/11/21 09:25:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9939,3 +9939,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/corsix-th to 0.69.1nb3 [triaxx 2025-11-21]
 	Updated databases/redis to 8.4.0 [adam 2025-11-21]
 	Updated databases/py-redis to 7.1.0 [adam 2025-11-21]
+	Updated devel/ninja-build to 1.13.2 [adam 2025-11-21]
+	Updated net/haproxy to 3.2.9 [adam 2025-11-21]
