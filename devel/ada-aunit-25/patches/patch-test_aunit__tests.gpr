@@ -1,0 +1,12 @@
+$NetBSD: patch-test_aunit__tests.gpr,v 1.1 2025/11/21 14:55:30 dkazankov Exp $
+
+Fix library project path
+
+--- test/aunit_tests.gpr.orig	2024-03-12 16:51:41.000000000 +0200
++++ test/aunit_tests.gpr
+@@ -1,4 +1,4 @@
+-with "aunit";
++with "../lib/gnat/aunit.gpr";
+ 
+ project Aunit_Tests is
+ 

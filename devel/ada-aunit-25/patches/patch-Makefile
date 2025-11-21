@@ -1,0 +1,56 @@
+$NetBSD: patch-Makefile,v 1.1 2025/11/21 14:55:29 dkazankov Exp $
+
+Fix install prefix
+Add gprbuild and gprinstall options
+
+--- Makefile.orig	2024-03-12 16:51:41.000000000 +0200
++++ Makefile
+@@ -5,6 +5,7 @@
+ GPRINSTALL = gprinstall
+ 
+ INSTALL:=$(shell exec=`which gprbuild`;if [ ! -x "$$exec" ]; then unset exec;fi;echo $$exec | sed -e 's/\/bin\/$(GPRBUILD).*//')
++PREFIX?=$(INSTALL)
+ 
+ ifeq ($(RTS),)
+    RTS=full
+@@ -35,14 +36,14 @@
+ ifeq (${RTS_CONF},)
+ # This covers the kernel RTS because for rtp, the RTS_OPT variable is defined to --RTS=rtp.
+ # kernel is the default and the RTS_OPT is not set in that case.
+-GPROPTS_EXTRA+=-cargs -mcmodel=large -largs -mcmodel=large
++GPROPTS_EXTRA+=-cargs -mcmodel=large -largs -mcmodel=large -gargs
+ endif
+ endif
+ 
+ .PHONY: all clean targets install_clean install
+ 
+ all:
+-	$(GPRBUILD) -p $(GPROPTS) lib/gnat/aunit.gpr ${GPROPTS_EXTRA}
++	$(GPRBUILD) -p $(GPROPTS) lib/gnat/aunit.gpr ${GPROPTS_EXTRA} $(GPRBUILD_OPTIONS)
+ 
+ clean-lib:
+ 	$(RM) -fr lib/aunit lib/aunit-obj
+@@ -52,18 +53,18 @@
+ 
+ install-clean-legacy:
+ ifneq (,$(wildcard $(INSTALL)/lib/gnat/manifests/aunit))
+-	-$(GPRINSTALL) $(GPROPTS) --uninstall --prefix=$(INSTALL) \
+-		--project-subdir=lib/gnat aunit
++	-$(GPRINSTALL) $(GPROPTS) --uninstall --prefix=$(PREFIX) \
++		--project-subdir=lib/gnat aunit $(GPRINSTALL_OPTIONS)
+ endif
+ 
+ install-clean: install-clean-legacy
+ ifneq (,$(wildcard $(INSTALL)/share/gpr/manifests/aunit))
+-	-$(GPRINSTALL) $(GPROPTS) --uninstall --prefix=$(INSTALL) aunit
++	-$(GPRINSTALL) $(GPROPTS) --uninstall --prefix=$(PREFIX) aunit $(GPRINSTALL_OPTIONS)
+ endif
+ 
+ install: install-clean
+-	$(GPRINSTALL) $(GPROPTS) -p -f --prefix=$(INSTALL) \
+-		--no-build-var lib/gnat/aunit.gpr
++	$(GPRINSTALL) $(GPROPTS) -p -f --prefix=$(PREFIX) \
++		--no-build-var lib/gnat/aunit.gpr $(GPRINSTALL_OPTIONS)
+ 
+ .PHONY: doc
+ doc:
