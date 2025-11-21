@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.185 2025/10/25 01:44:42 osa Exp $
+# $NetBSD: Makefile,v 1.186 2025/11/21 17:26:46 osa Exp $
 
 DISTNAME=	nginx-1.28.0
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -15,7 +15,7 @@ HOMEPAGE=	https://nginx.org/
 COMMENT=	Lightweight HTTP server and mail proxy server
 LICENSE=	2-clause-bsd
 
-CONFLICTS=	nginx-devel-[0-9]*
+CONFLICTS=	freenginx-devel-[0-9]* nginx-devel-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
