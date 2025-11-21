@@ -1,0 +1,5 @@
+Ada graphical toolkit based on Gtk+.
+
+Ada graphical library for the Gimp Toolkit, which means this is a set of
+packages to allow you to easily create some graphical interfaces under X11
+and Win32, using Ada as the programming language.

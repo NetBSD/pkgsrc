@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1066 2025/08/06 19:59:55 vins Exp $
+# $NetBSD: Makefile,v 1.1067 2025/11/21 13:23:21 dkazankov Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -7,6 +7,7 @@ SUBDIR+=	XaoS
 SUBDIR+=	Xaw-Xpm
 SUBDIR+=	Xbae
 SUBDIR+=	XmHTML
+SUBDIR+=	ada-gtkada-25
 SUBDIR+=	alacritty
 SUBDIR+=	appres
 SUBDIR+=	arandr
