@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.27 2017/07/12 12:54:28 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/11/21 08:57:35 wiz Exp $
 
 DISTNAME=	antiword-0.37
 PKGREVISION=	2
 CATEGORIES=	textproc converters print
-MASTER_SITES=	http://www.winfield.demon.nl/linux/
+#MASTER_SITES=	http://www.winfield.demon.nl/linux/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.winfield.demon.nl/index.html
+HOMEPAGE=	https://github.com/grobian/antiword
 COMMENT=	Free MS Word to text and PostScript converter
 LICENSE=	gnu-gpl-v2
 
