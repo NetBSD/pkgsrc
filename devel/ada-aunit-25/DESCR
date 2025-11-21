@@ -1,0 +1,5 @@
+Ada unit test framework.
+
+This is the Ada unit test framework AUnit, derived from the
+JUnit/CPPUnit frameworks for Java/C++. Read the AUnit Cookbook
+for installation and usage.
