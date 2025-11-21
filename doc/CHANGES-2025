@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6836 2025/11/21 08:27:27 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.6837 2025/11/21 09:08:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9937,3 +9937,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-xarray to 2025.11.0 [adam 2025-11-20]
 	Updated security/gnutls to 3.8.11 [wiz 2025-11-20]
 	Updated games/corsix-th to 0.69.1nb3 [triaxx 2025-11-21]
+	Updated databases/redis to 8.4.0 [adam 2025-11-21]
+	Updated databases/py-redis to 7.1.0 [adam 2025-11-21]
