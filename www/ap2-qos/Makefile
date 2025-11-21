@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/10/23 20:39:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/11/21 09:00:20 wiz Exp $
 
 DISTNAME=	mod_qos-11.76
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mod-qos/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://mod-qos.sourcweforge.net/
+HOMEPAGE=	https://mod-qos.sourceforge.net/
 COMMENT=	Quality of service Apache module
 LICENSE=	apache-2.0
 
