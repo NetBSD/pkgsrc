@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/12/23 20:51:24 zafer Exp $
+# $NetBSD: Makefile,v 1.5 2025/11/21 08:59:18 wiz Exp $
 
 DISTNAME=		mod_encoding-20021209
 PKGNAME=		${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
@@ -6,7 +6,7 @@ CATEGORIES=		www
 MASTER_SITES=		#
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://webdav.todo.gr.jp/
+#HOMEPAGE=		http://webdav.todo.gr.jp/
 COMMENT=		Non-ascii filename interoperability
 #LICENSE=		# Pending change from Internet Initiative Japan, Inc.
 
