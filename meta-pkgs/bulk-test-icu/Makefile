@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/11/16 09:05:03 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/11/21 09:04:37 wiz Exp $
 
 DISTNAME=	bulk-test-icu-20251116
 CATEGORIES=	meta-pkgs
@@ -93,7 +93,7 @@ DEPENDS+=	sword-[0-9]*:../../misc/sword
 DEPENDS+=	yaz-[0-9]*:../../net/yaz
 DEPENDS+=	tin-[0-9]*:../../news/tin
 DEPENDS+=	bibtexu-[0-9]*:../../print/bibtexu
-DEPENDS+=	scribus-qt5-[0-9]*:../../print/scribus
+DEPENDS+=	scribus-[0-9]*:../../print/scribus
 DEPENDS+=	sile-[0-9]*:../../print/sile
 DEPENDS+=	xetex-[0-9]*:../../print/xetex
 DEPENDS+=	gnome-tracker-[0-9]*:../../sysutils/gnome-tracker
