@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2025/11/21 14:55:29 dkazankov Exp $
+
+BLAKE2s (aunit-25.2.tar.gz) = 180edd327dd545eff1bcc302c923d4e37cd87d26b0121d2c1546432fd6473831
+SHA512 (aunit-25.2.tar.gz) = 8a805d57bc211a3fed345acb1a879304600b9fb87e8bd7f523579e20c38df69a0875806ff5155d19e61178a1754dec8c9afccdda1996f37e26a8dcb2bba566cd
+Size (aunit-25.2.tar.gz) = 137454 bytes
+SHA1 (patch-Makefile) = a8a8ebb31c171d74b78056b542b9f1ee520ca64e
+SHA1 (patch-test_aunit__tests.gpr) = ee9c7deb4ecb38149b8f47862def14f22fa23fb0
