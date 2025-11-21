@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/03/16 08:06:13 adam Exp $
+$NetBSD: distinfo,v 1.5 2025/11/21 15:00:34 adam Exp $
 
-BLAKE2s (rinutils-0.10.1.tar.xz) = a342adae9c4b4a1605b73a5b8d36b790f19f2d3d4bf360b76f8a6bf206199e7f
-SHA512 (rinutils-0.10.1.tar.xz) = e743ee02258132830e7fd4436c1e6bfda33cdd90835978ad5a233562f85848274846ba0b46a1402cd70054da4dffba78f7e3d6e8fe484d97c569b4f9c7459abd
-Size (rinutils-0.10.1.tar.xz) = 19160 bytes
+BLAKE2s (rinutils-0.10.3.tar.xz) = d0595c3aae1ddd616d3c758aafadea7949131d856f43f24b4e6a67cf3a8a1bc3
+SHA512 (rinutils-0.10.3.tar.xz) = fe9e774c597012bb0d86b867bb05d27d00234edcca89a61f715f96464e06d5985286328b2cb8960f1582ea25fb5b04eb37b6384b3d178b8dca959f4e3d86a0ff
+Size (rinutils-0.10.3.tar.xz) = 19192 bytes
