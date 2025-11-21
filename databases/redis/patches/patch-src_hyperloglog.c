@@ -1,12 +1,12 @@
-$NetBSD: patch-src_hyperloglog.c,v 1.3 2025/05/22 18:44:41 adam Exp $
+$NetBSD: patch-src_hyperloglog.c,v 1.4 2025/11/21 09:05:36 adam Exp $
 
 Fix the case of the missing llroundl on NetBSD. Patch by Matthias Petermann.
 
---- src/hyperloglog.c.orig	2025-05-13 13:28:36.000000000 +0000
+--- src/hyperloglog.c.orig	2025-11-18 14:58:24.000000000 +0000
 +++ src/hyperloglog.c
-@@ -26,6 +26,16 @@
- #include <immintrin.h>
- #endif
+@@ -33,6 +33,16 @@
+ #undef MAX
+ #define MAX(a, b) ((a) > (b) ? (a) : (b))
  
 +#ifdef __NetBSD__
 +#include <sys/param.h>
