@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2025/10/05 19:26:25 js Exp $
+# $NetBSD: Makefile,v 1.53 2025/11/21 08:58:29 wiz Exp $
 
 DISTNAME=	mod_authnz_crowd-2.2.2
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/}
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://downloads.atlassian.com/software/crowd/downloads/cwdapache/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://confluence.atlassian.com/display/CROWD/Integrating+Crowd+with+Apache
+HOMEPAGE=	https://confluence.atlassian.com/crowd031/integrating-crowd-with-apache-949753124.html
 COMMENT=	Apache module for Crowd authentication
 LICENSE=	apache-2.0
 
