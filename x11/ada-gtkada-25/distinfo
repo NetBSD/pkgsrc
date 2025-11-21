@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2025/11/21 13:23:22 dkazankov Exp $
+
+BLAKE2s (gtkada-25.2.0.tar.gz) = 3d42a6cd03c295ef08412784ec25134452a67a750b5e72b98db77e7fb5e712e0
+SHA512 (gtkada-25.2.0.tar.gz) = a75baad26c6c307f4a93cabba77d72ba9f9c94579da7e8523e38ba97161cb201a3055e670360d0422fd7d1bdba4defb112475cca21afbb14245e761683649eaa
+Size (gtkada-25.2.0.tar.gz) = 6078777 bytes
+SHA1 (patch-Makefile.in) = 17fc99005d36af6f34b8c6c8767ff43c2343a5de
+SHA1 (patch-src_misc.c) = 1a81f3de351aa43b5875388e3de6149ed96db290
