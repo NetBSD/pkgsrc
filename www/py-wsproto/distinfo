@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/11/12 13:51:25 adam Exp $
+$NetBSD: distinfo,v 1.11 2025/11/21 15:01:42 adam Exp $
 
-BLAKE2s (wsproto-1.3.1.tar.gz) = c0862496f0bc58bb6a0b3d4d797dbdda22c198841d41bb6c415563f3e53c61fb
-SHA512 (wsproto-1.3.1.tar.gz) = 266cab34ad4ddb0bc36e7d26df2422ba554459c58015a2e7bec0093dc014bbbf80ce628ad8e78be04ef224578966b30884c2a58f68a8d2470212fa7cfc33d8eb
-Size (wsproto-1.3.1.tar.gz) = 50083 bytes
+BLAKE2s (wsproto-1.3.2.tar.gz) = 11133e6d2f39838d88355f5eff7bea7fb97a97f94290e868fbc89f51c06ffbab
+SHA512 (wsproto-1.3.2.tar.gz) = 7b1901a145ecb41309098abe1d48c944c0ad84e6e86acdbcf780ce82e82c7d1efcafc0093cadd66607a80105dbbae94ba052a63db842db30992ca3413a2ae3bd
+Size (wsproto-1.3.2.tar.gz) = 50116 bytes
