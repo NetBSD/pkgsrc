@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6847 2025/11/22 08:08:13 tron Exp $
+$NetBSD: CHANGES-2025,v 1.6848 2025/11/22 08:08:58 tron Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9957,4 +9957,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/nginx to 1.28.0nb10 [osa 2025-11-21]
 	Updated www/nginx-devel to 1.29.1nb5 [osa 2025-11-21]
 	Updated graphics/png to 1.6.51 [wiz 2025-11-22]
+	Updated mail/mutt to 2.2.16 [tron 2025-11-22]
 	Updated mail/mutt to 2.2.16 [tron 2025-11-22]
