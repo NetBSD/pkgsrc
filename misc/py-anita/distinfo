@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.56 2024/07/12 12:31:25 gson Exp $
+$NetBSD: distinfo,v 1.57 2025/11/22 13:02:31 gson Exp $
 
-BLAKE2s (anita-2.15.tar.gz) = c7a0eaff98abac86367d55894d73ac32c5270ef993a4ff6bfb513dfc5d0112fb
-SHA512 (anita-2.15.tar.gz) = 27040c36e68ab3bcd34c1f4148199f772ef0e523d1fa775b69379789f913ca4c625e63f20878f3ad993c6f4bd91cb2caa4204247eab4651b865aeafb55961776
-Size (anita-2.15.tar.gz) = 46337 bytes
+BLAKE2s (anita-2.17.tar.gz) = cddbf03022b9257d342b8ff78625239a773fb3003f0cfc9f7662155cec33f78f
+SHA512 (anita-2.17.tar.gz) = 860c1ae80879bae3b521fd115e1cca9b07b69eb507cce6ce6e78f0d0522548a520d587982121c533e2a78a078271544a7b63e30780189bfbdec5da82d897f00d
+Size (anita-2.17.tar.gz) = 47044 bytes

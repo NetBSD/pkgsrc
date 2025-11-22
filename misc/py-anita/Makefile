@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2025/10/09 12:35:17 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2025/11/22 13:02:31 gson Exp $
 
-DISTNAME=	anita-2.15
+DISTNAME=	anita-2.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.gson.org/netbsd/anita/download/
 
@@ -18,9 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-pexpect>=2.1:../../devel/py-pexpect
 USE_LANGUAGES=	#none
 
 REPLACE_PYTHON+=	anita
-
-# AttributeError: module 'urllib.request' has no attribute 'FancyURLopener'
-PYTHON_VERSIONS_INCOMPATIBLE=	314
 
 .include "../../mk/bsd.prefs.mk"
 

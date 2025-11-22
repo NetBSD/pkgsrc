@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2023/12/07 17:27:17 gdt Exp $
+# $NetBSD: options.mk,v 1.16 2025/11/22 13:02:31 gson Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.py-anita
 PKG_SUPPORTED_OPTIONS=		gxemul qemu simh xen
@@ -30,8 +30,7 @@ DEPENDS+=	qemu>=3:../../emulators/qemu
 DEPENDS+=	open-simh>=3:../../emulators/open-simh
 .endif
 
-# Xen 415 is the standard approach, per the Xen HOWTO.
 .if !empty(PKG_OPTIONS:Mxen)
-DEPENDS+=	xenkernel415>=4.2:../../sysutils/xenkernel415
-DEPENDS+=	xentools415>=4.2:../../sysutils/xentools415
+DEPENDS+=	xenkernel418-[0-9]*:../../sysutils/xenkernel418
+DEPENDS+=	xentools418-[0-9]*:../../sysutils/xentools418
 .endif
