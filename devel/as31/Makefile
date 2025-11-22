@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/08/10 15:44:24 nia Exp $
+# $NetBSD: Makefile,v 1.25 2025/11/22 17:28:37 wiz Exp $
 
 DISTNAME=	as31_${PKGVERSION_NOREV}.orig
 PKGNAME=	as31-2.3.1
@@ -9,7 +9,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/a/as31/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wiki.erazor-zone.de/_media/wiki:projects:linux:as31
+#HOMEPAGE=	http://wiki.erazor-zone.de/_media/wiki:projects:linux:as31
 COMMENT=	8031/8051 assembler
 LICENSE=	modified-bsd # assumed, they say "BSD license"
 
