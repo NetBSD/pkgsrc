@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.669 2025/11/22 11:47:20 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.670 2025/11/22 20:51:38 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28952,3 +28952,18 @@ mongo-c-driver<1.30.6	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/
 php{56,74,81,82,83,84}-piwigo<15.6.0		account-impersonation		https://nvd.nist.gov/vuln/detail/CVE-2025-62406
 py{27,39,310,311,312,313,314}-cbor2<5.7.1	multiple-vulnerabilities	https://nvd.nist.gov/vuln/detail/CVE-2025-64076
 rsync-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-10158
+7-zip<25.00	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-11001
+cups-filters<2.0.2	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-64524
+php{56,74,81,82,83,84}-phppgadmin-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-60796
+php{56,74,81,82,83,84}-phppgadmin-[0-9]*	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-60797
+php{56,74,81,82,83,84}-phppgadmin-[0-9]*	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-60798
+php{56,74,81,82,83,84}-phppgadmin-[0-9]*	incorrect-access-controls	https://nvd.nist.gov/vuln/detail/CVE-2025-60799
+wireshark<4.6.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13499
+wolfssl<5.8.4	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-11931
+wolfssl<5.8.4	side-channel		https://nvd.nist.gov/vuln/detail/CVE-2025-11932
+wolfssl<5.8.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-11933
+wolfssl<5.8.4	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-11934
+wolfssl<5.8.4	weak-encryption		https://nvd.nist.gov/vuln/detail/CVE-2025-11935
+wolfssl<5.8.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-11936
+wolfssl<5.8.4	side-channel		https://nvd.nist.gov/vuln/detail/CVE-2025-12888
+wolfssl<5.8.4	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-12889
