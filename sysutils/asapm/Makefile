@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2023/12/22 18:06:53 zafer Exp $
-#
+# $NetBSD: Makefile,v 1.46 2025/11/22 17:29:24 wiz Exp $
 
 DISTNAME=	asapm-2.11
 PKGREVISION=	4
@@ -7,7 +6,7 @@ CATEGORIES=	sysutils x11
 MASTER_SITES=	ftp://ftp.afterstep.org/apps/asapm/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.tigr.net/afterstep/view.php?applet=asapm/data
+#HOMEPAGE=		http://www.tigr.net/afterstep/view.php?applet=asapm/data
 COMMENT=		Laptop battery status display for X11
 LICENSE=		gnu-gpl-v2
 
