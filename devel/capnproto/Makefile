@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/07/20 09:34:54 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/11/22 19:49:59 adam Exp $
 
-DISTNAME=	capnproto-c++-1.1.0
+DISTNAME=	capnproto-c++-1.2.0
 PKGNAME=	${DISTNAME:S/-c++-/-/}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://capnproto.org/
 
