@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.289 2025/11/14 17:28:39 ryoon Exp $
+$NetBSD: distinfo,v 1.290 2025/11/22 01:07:07 ryoon Exp $
 
 BLAKE2s (thunderbird-145.0.source.tar.xz) = 88880f965a7105fb87e159f77ad613af79c59dc343a69606b3bb23caf78e949b
 SHA512 (thunderbird-145.0.source.tar.xz) = f33835e4d740b32d072ac915124d988ef9d4cbe55d7c972c817991d19b64e8bc95b75b503ad3cb9abf4fd1d220fc7cb61720ea84dc49482faa13da1690d7d80e
@@ -37,7 +37,7 @@ SHA1 (patch-netwerk_protocol_http_nsHttpHandler.cpp) = 67493b4635041d21ff9fbfda8
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 753fd4d62088c870aefe7c4b739286259848446e
 SHA1 (patch-python_mozbuild_mozbuild_backend_recursivemake.py) = 5be4183d9075f5a3a3c6b3e0338473af185fb50e
 SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = 6cac13bc120d52b2c3628938d2fc1cba628b3a31
-SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc) = 4691eb3ad88134c9f6336b257246f1361f6a20a7
+SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc) = cc68e46f1b98bbcc064a4c61fc96a3c7ede8e6ba
 SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_vdso__support.cc) = f9c44d0d6fd952296f23c24f56053958b30d8e5c
 SHA1 (patch-third__party_js_cfworker_build.sh) = 46cdf97b99cf01080f290ae8d9a33b5f869fc3e4
 SHA1 (patch-third__party_libwebrtc_modules_audio__device_audio__device__impl.cc) = 927532138175f99f96433d24060f65a2a919d2d1
