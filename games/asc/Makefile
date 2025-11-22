@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2025/11/09 23:15:51 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2025/11/22 17:29:53 wiz Exp $
 
 DISTNAME=	asc-2.6.1.0
 PKGREVISION=	37
@@ -14,11 +14,11 @@ DISTFILES+=	machine_wars.ogg
 DISTFILES+=	time_to_strike.ogg
 
 .for file in frontiers.ogg machine_wars.ogg time_to_strike.ogg
-SITES.${file}=	http://www.asc-hq.org/music/
+SITES.${file}=	https://www.asc-hq.org/music/
 .endfor
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.asc-hq.org/
+HOMEPAGE=	https://www.asc-hq.org/
 COMMENT=	Turn based strategy game in the tradition of the Battle Isle series
 LICENSE=	gnu-gpl-v2
 
