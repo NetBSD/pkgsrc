@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.23 2025/11/14 17:28:39 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.24 2025/11/22 01:07:07 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -22,8 +22,9 @@ OVERRIDE_DIRDEPTH=		4
 
 USE_LANGUAGES+=		c c++
 
-# XXX: As of 145.0
-GCC_REQD+=		10
+# XXX: As of 145.0, Mozilla source code requires GCC 10.
+# XXX: Hoewever internal botan 3.8.1 requires GCC 11.
+GCC_REQD+=		11
 # To find vscanf, vfscanf, isblank and so on under NetBSD 9.
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 
