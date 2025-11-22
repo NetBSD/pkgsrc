@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6845 2025/11/21 18:53:41 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6846 2025/11/22 07:06:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9956,3 +9956,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/freenginx-devel version 1.29.3 [osa 2025-11-21]
 	Updated www/nginx to 1.28.0nb10 [osa 2025-11-21]
 	Updated www/nginx-devel to 1.29.1nb5 [osa 2025-11-21]
+	Updated graphics/png to 1.6.51 [wiz 2025-11-22]
