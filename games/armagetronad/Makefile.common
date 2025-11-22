@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2020/11/25 20:34:37 nia Exp $
+# $NetBSD: Makefile.common,v 1.7 2025/11/22 17:26:31 wiz Exp $
 #
 # used by games/armagetronad/Makefile
 # used by games/armagetronad-server/Makefile
@@ -8,7 +8,7 @@ CATEGORIES=	games
 MASTER_SITES=	https://launchpad.net/armagetronad/0.2.9/${PKGVERSION_NOREV}/+download/
 EXTRACT_SUFX=	.tbz
 
-HOMEPAGE=	http://www.armagetronad.org/
+HOMEPAGE=	https://www.armagetronad.org/
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/.src//}
