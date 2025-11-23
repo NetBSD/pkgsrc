@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2024/10/14 06:45:41 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/11/23 07:59:13 adam Exp $
 
-DISTNAME=	testtools-2.7.2
+DISTNAME=	testtools-2.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/testtools/}
@@ -16,6 +16,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-fixtures>=2.0:../../devel/py-fixtures
 # circular test dependency
 # https://github.com/testing-cabal/testscenarios/issues/4
+#TEST_DEPENDS+=	${PYPKGPREFIX}-testresources-[0-9]*:../../devel/py-testresources
 #TEST_DEPENDS+=	${PYPKGPREFIX}-testscenarios-[0-9]*:../../devel/py-testscenarios
 
 USE_LANGUAGES=	# none
