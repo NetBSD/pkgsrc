@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6855 2025/11/23 07:04:41 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6856 2025/11/23 07:10:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9966,3 +9966,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated converters/utf8proc to 2.11.2 [adam 2025-11-23]
 	Updated www/py-asgiref to 3.11.0 [adam 2025-11-23]
 	Updated sysutils/vcdimager to 2.0.1nb15 [wiz 2025-11-23]
+	Updated devel/p5-OLE-Storage_Lite to 0.24 [wiz 2025-11-23]
