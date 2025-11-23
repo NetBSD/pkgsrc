@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2025/11/23 16:29:44 christos Exp $
+$NetBSD: distinfo,v 1.2 2025/11/23 20:22:32 wiz Exp $
 
-BLAKE2s (mailman2-python3.tar.gz) = d3e9f5e6c47f97d18dbeb6c2947746c78079e280e2d86898d2a2203d96d09b25
-SHA512 (mailman2-python3.tar.gz) = d7f7e7d91f43cf9f5674658241b4e201e4b6987ce9e23af631864e5a8a3e71cd239039eaaa5ed0640a43e16f8de3b4895409711eb0835a3e0fb0e707f795c72e
-Size (mailman2-python3.tar.gz) = 9519687 bytes
+BLAKE2s (mailman2-python3-20251123.tar.gz) = d3e9f5e6c47f97d18dbeb6c2947746c78079e280e2d86898d2a2203d96d09b25
+SHA512 (mailman2-python3-20251123.tar.gz) = d7f7e7d91f43cf9f5674658241b4e201e4b6987ce9e23af631864e5a8a3e71cd239039eaaa5ed0640a43e16f8de3b4895409711eb0835a3e0fb0e707f795c72e
+Size (mailman2-python3-20251123.tar.gz) = 9519687 bytes
 SHA1 (patch-aa) = 9684b1caeb52f31ee6967eae3f9a464de214879e
 SHA1 (patch-ab) = 39f6294e53110bd1fd09b1e90ab46820f4d48e3f
 SHA1 (patch-ad) = 665884b9dd1789e4abd430c762bdbfd707d48d30
