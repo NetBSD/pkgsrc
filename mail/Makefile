@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.680 2025/11/03 07:15:50 taca Exp $
+# $NetBSD: Makefile,v 1.681 2025/11/23 20:22:43 wiz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -156,6 +156,7 @@ SUBDIR+=	mailgraph
 SUBDIR+=	mailhops
 SUBDIR+=	mailimporter
 SUBDIR+=	mailman
+SUBDIR+=	mailman2-python3
 SUBDIR+=	mailman3
 SUBDIR+=	mailsend
 SUBDIR+=	mailserv
