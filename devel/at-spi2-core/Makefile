@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2025/11/07 21:53:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.64 2025/11/23 08:08:43 wiz Exp $
 
 DISTNAME=	at-spi2-core-2.58.1
 CATEGORIES=	devel gnome
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/at-spi2-core/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	prlw1@cam.ac.uk
-HOMEPAGE=	https://www.linuxfoundation.org/collaborate/workgroups/accessibility/atk/at-spi/at-spi_on_d-bus
+HOMEPAGE=	https://gitlab.gnome.org/GNOME/at-spi2-core
 COMMENT=	Assistive Technology Service Provider Interface Core
 LICENSE=	gnu-lgpl-v2.1
 
