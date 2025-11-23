@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6867 2025/11/23 20:06:39 markd Exp $
+$NetBSD: CHANGES-2025,v 1.6868 2025/11/23 20:25:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9983,3 +9983,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/plasma6-libkscreen to 6.5.2 [markd 2025-11-23]
 	Added x11/plasma6-plasma-activities version 6.5.2 [markd 2025-11-23]
 	Added sysutils/plasma6-libksysguard version 6.5.2 [markd 2025-11-23]
+	Added mail/mailman2-python3 version 20251123 [christos 2025-11-23]
