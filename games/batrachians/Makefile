@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/01/06 21:49:09 ktnb Exp $
+# $NetBSD: Makefile,v 1.7 2025/11/23 08:12:20 wiz Exp $
 
 DISTNAME=	batrachians-0.1.7
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://perso.b2b2c.ca/~sarrazip/dev/batrachians.html
+#HOMEPAGE=	https://perso.b2b2c.ca/~sarrazip/dev/batrachians.html
 COMMENT=	Fly-eating frog game
 LICENSE=	gnu-gpl-v2
 
