@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6863 2025/11/23 13:24:40 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.6864 2025/11/23 16:30:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9975,3 +9975,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/php83 to 8.3.28 [taca 2025-11-23]
 	Updated lang/php84 to 8.4.15 [taca 2025-11-23]
 	Updated geography/gpsd to 3.27 [gdt 2025-11-23]
+	Updated textproc/television to 0.13.11 [pin 2025-11-23]
