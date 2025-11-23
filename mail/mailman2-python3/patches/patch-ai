@@ -1,0 +1,18 @@
+$NetBSD: patch-ai,v 1.1 2025/11/23 16:29:45 christos Exp $
+
+Install the sample crontab under share/examples/mailman, 
+not into a binaries directory.
+
+--- cron/Makefile.in.orig	2025-11-23 11:01:33.000000000 -0500
++++ cron/Makefile.in	2025-11-23 11:13:47.797865107 -0500
+@@ -59,10 +59,6 @@
+ all: $(PROGRAMS:%=$(BUILDDIR)/%)
+ 
+ install: all
+-	for f in $(FILES); \
+-	do \
+-	    $(INSTALL) -m $(FILEMODE) $$f $(DESTDIR)$(CRONDIR); \
+-	done
+ 	for f in $(PROGRAMS); \
+ 	do \
+ 	    $(INSTALL) -m $(EXEMODE) $(BUILDDIR)/$$f $(DESTDIR)$(CRONDIR); \

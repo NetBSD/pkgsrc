@@ -1,0 +1,60 @@
+$NetBSD: patch-configure,v 1.1 2025/11/23 16:29:45 christos Exp $
+
+Skip checks for user/group at configure time.
+
+--- configure.orig	2025-11-23 11:01:33.000000000 -0500
++++ configure	2025-11-23 11:15:58.268511654 -0500
+@@ -3581,25 +3581,7 @@
+ 
+ if test -z "$MAILMAN_USER"
+ then
+-    cat > conftest.py <<EOF
+-import pwd
+-uid = ''
+-for user in "$USERNAME".split():
+-    try:
+-        try:
+-            uname = pwd.getpwuid(int(user))[0]
+-            break
+-        except ValueError:
+-            uname = pwd.getpwnam(user)[0]
+-            break
+-    except KeyError:
+-        uname = ''
+-fp = open("conftest.out", "w")
+-fp.write("%s\n" % uname)
+-fp.close()
+-EOF
+-    $PYTHON conftest.py
+-    MAILMAN_USER=`cat conftest.out`
++    MAILMAN_USER=$USERNAME
+ fi
+ 
+ rm -f conftest.out conftest.py
+@@ -3648,25 +3630,7 @@
+ 
+ if test -z "$MAILMAN_GROUP"
+ then
+-    cat > conftest.py <<EOF
+-import grp
+-gid = ''
+-for group in "$GROUPNAME".split():
+-    try:
+-        try:
+-            gname = grp.getgrgid(int(group))[0]
+-            break
+-        except ValueError:
+-            gname = grp.getgrnam(group)[0]
+-            break
+-    except KeyError:
+-        gname = ''
+-fp = open("conftest.out", "w")
+-fp.write("%s\n" % gname)
+-fp.close()
+-EOF
+-    $PYTHON conftest.py
+-    MAILMAN_GROUP=`cat conftest.out`
++    MAILMAN_GROUP=$GROUPNAME
+ fi
+ 
+ rm -f conftest.out conftest.py
