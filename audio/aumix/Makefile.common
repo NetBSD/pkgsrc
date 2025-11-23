@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2023/12/13 02:47:33 zafer Exp $
+# $NetBSD: Makefile.common,v 1.15 2025/11/23 08:09:37 wiz Exp $
 # used by audio/aumix/Makefile
 # used by audio/aumix-gtk/Makefile
 
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aumix/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	trevor@jpj.net
-HOMEPAGE=	http://jpj.net/~trevor/aumix.html
+HOMEPAGE=	https://sourceforge.net/projects/aumix/
 COMMENT=	Set mix levels
 LICENSE=	gnu-gpl-v2
 
