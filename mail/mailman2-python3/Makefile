@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.1 2025/11/23 16:29:44 christos Exp $
+# $NetBSD: Makefile,v 1.2 2025/11/23 20:22:32 wiz Exp $
 
-DISTNAME=	mailman2-python3
+DISTNAME=	mailman2-python3-20251123
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zoulasc/}
-GITHUB_PROJECT=	mailman2-python3
-GITHUB_TAG= pkgsrc-20251123
-
-EXTRACT_SUFX=	.tar.gz
+GITHUB_TAG=	pkgsrc-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.list.org/
+HOMEPAGE=	https://github.com/jaredmauch/mailman2-python3
 COMMENT=	The GNU Mailing List Manager
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 
 .include "../../mk/bsd.prefs.mk"
@@ -35,11 +33,11 @@ MAILMAN_CGIGROUP?=	${APACHE_GROUP}
 MAILMAN_MAILGROUP?=	daemon	# group sendmail runs under; use 'nobody' for postfix
 MAILMAN_CGIEXT?=	.cgi
 
-MESSAGE_SUBST+=		EGDIR=${EGDIR}
-MESSAGE_SUBST+=		MAILMAN_USER=${MAILMAN_USER}
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
-PLIST_SUBST+=		MAILMAN_CGIEXT=${MAILMAN_CGIEXT:S/none//}
-PY_PATCHPLIST= yes
+MESSAGE_SUBST+=	EGDIR=${EGDIR}
+MESSAGE_SUBST+=	MAILMAN_USER=${MAILMAN_USER}
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+PLIST_SUBST+=	MAILMAN_CGIEXT=${MAILMAN_CGIEXT:S/none//}
+PY_PATCHPLIST=	yes
 
 
 PKG_GROUPS_VARS+=	MAILMAN_GROUP MAILMAN_CGIGROUP MAILMAN_MAILGROUP
@@ -73,6 +71,7 @@ DEINSTALL_TEMPLATES+=	${FILESDIR}/DEINSTALL
 
 REPLACE_PYTHON+=		Mailman/Archiver/pipermail.py
 REPLACE_PYTHON+=		Mailman/Post.py
+REPLACE_PYTHON+=		bin/dumpdb
 REPLACE_PYTHON+=		bin/msgfmt.py
 
 CONFIGURE_ARGS+=	--with-cgi-gid=${MAILMAN_CGIGROUP:Q}
