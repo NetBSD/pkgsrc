@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2025/11/02 23:02:53 gutteridge Exp $
+# $NetBSD: Makefile,v 1.63 2025/11/23 03:20:55 gutteridge Exp $
 
 DISTNAME=	musescore-4.6.3
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=musescore/}
 GITHUB_PROJECT=	MuseScore
@@ -14,6 +15,8 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++11
+
+DEPENDS+=	qt6-qttranslations-[0-9]*:../../x11/qt6-qttranslations
 
 CONFIGURE_DIRS=	bindir
 CMAKE_ARG_PATH=	..
