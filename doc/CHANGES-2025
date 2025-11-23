@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6862 2025/11/23 12:40:30 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6863 2025/11/23 13:24:40 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9974,3 +9974,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/treemd to 0.3.2 [pin 2025-11-23]
 	Updated lang/php83 to 8.3.28 [taca 2025-11-23]
 	Updated lang/php84 to 8.4.15 [taca 2025-11-23]
+	Updated geography/gpsd to 3.27 [gdt 2025-11-23]
