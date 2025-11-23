@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2023/05/20 06:34:53 wiz Exp $
+$NetBSD: distinfo,v 1.13 2025/11/23 07:10:07 wiz Exp $
 
-BLAKE2s (OLE-Storage_Lite-0.22.tar.gz) = 5a1bf55bfc40f2689c279ad9224629e4932283171a0b9a02bf8b3108fd760971
-SHA512 (OLE-Storage_Lite-0.22.tar.gz) = 672b44f033a8c13fcf6258c2ff08627bd6ed8fe3c105b2c20e9627e361df217511fdb2c7be117634883c5ec050894a64a4d06b21fac252602c0ac1b828bf1dd5
-Size (OLE-Storage_Lite-0.22.tar.gz) = 22846 bytes
+BLAKE2s (OLE-Storage_Lite-0.24.tar.gz) = 7633606b2041337563155e84817b9c71c662846356d31bc62b875d9780744aa0
+SHA512 (OLE-Storage_Lite-0.24.tar.gz) = 5c2fef782b406effae2d8cd1f20cfdded947c9f70e6803f3749eed48a5db57f19cfa956c2e67708437262fcc14c5b72cfbe7cccd12ff30a2ed9885bb6130f4d7
+Size (OLE-Storage_Lite-0.24.tar.gz) = 23809 bytes
