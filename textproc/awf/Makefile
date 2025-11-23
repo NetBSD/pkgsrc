@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.15 2020/04/26 13:58:32 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.16 2025/11/23 08:11:03 wiz Exp $
 
 DISTNAME=	nroff-clone
 PKGNAME=	awf-19900907
 PKGREVISION=	1
 CATEGORIES=	textproc
-MASTER_SITES=	http://www.scn.rain.com/pub/text/
+#MASTER_SITES=	http://www.scn.rain.com/pub/text/
 EXTRACT_SUFX=	.shar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.scn.rain.com/pub/text/
+#HOMEPAGE=	http://www.scn.rain.com/pub/text/
 COMMENT=	Text formatter (nroff-clone) written in awk
 
 EXTRACT_CMD=	${GZCAT} $$extract_file | ${SED} -e '1,/^\#!/d' | ${SH}
