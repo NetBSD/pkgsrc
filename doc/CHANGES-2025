@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6865 2025/11/23 16:31:45 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6866 2025/11/23 18:40:37 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9977,3 +9977,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/gpsd to 3.27 [gdt 2025-11-23]
 	Updated textproc/television to 0.13.11 [pin 2025-11-23]
 	Updated security/cargo-audit to 0.22.0 [pin 2025-11-23]
+	Updated emulators/PC6001VX to 4.3.0 [tsutsui 2025-11-23]
