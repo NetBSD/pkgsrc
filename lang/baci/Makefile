@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/01/26 17:31:26 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2025/11/23 08:11:57 wiz Exp $
 
 DISTNAME=	bacisrc
 PKGNAME=	baci-20000725
@@ -8,7 +8,7 @@ DISTFILES=	bacisrc.tar.gz \
 		bacidoc.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://inside.mines.edu/~tcamp/baci/baci_index.html
+#HOMEPAGE=	https://inside.mines.edu/~tcamp/baci/baci_index.html
 COMMENT=	Ben-Ari Concurrent Interpreter
 
 USE_TOOLS+=	flex bison:run
