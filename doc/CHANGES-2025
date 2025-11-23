@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6854 2025/11/23 06:59:18 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6855 2025/11/23 07:04:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9965,3 +9965,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/musescore to 4.6.3nb1 [gutteridge 2025-11-23]
 	Updated converters/utf8proc to 2.11.2 [adam 2025-11-23]
 	Updated www/py-asgiref to 3.11.0 [adam 2025-11-23]
+	Updated sysutils/vcdimager to 2.0.1nb15 [wiz 2025-11-23]
