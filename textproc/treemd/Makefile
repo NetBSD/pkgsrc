@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/11/18 13:40:18 pin Exp $
+# $NetBSD: Makefile,v 1.5 2025/11/23 09:12:47 pin Exp $
 
-DISTNAME=	treemd-0.2.3
+DISTNAME=	treemd-0.3.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Epistates/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,6 +14,8 @@ LICENSE=	mit
 
 RUST_REQ=	1.85.0
 USE_TOOLS+=	pkg-config
+
+DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
