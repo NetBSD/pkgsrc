@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 2025/11/23 16:29:45 christos Exp $
+
+--- Mailman/Makefile.in.orig	Mon Sep 15 14:37:14 2003
++++ Mailman/Makefile.in
+@@ -68,10 +68,6 @@ install-here: 
+ 	    $(INSTALL) -m $(FILEMODE) $$f $(DESTDIR)$(PACKAGEDIR); \
+ 	done
+ 	$(INSTALL) -m $(FILEMODE) mm_cfg.py.dist $(DESTDIR)$(PACKAGEDIR)
+-	if [ ! -f $(DESTDIR)$(PACKAGEDIR)/mm_cfg.py ]; \
+-	then \
+-	    $(INSTALL) -m $(FILEMODE) mm_cfg.py.dist $(DESTDIR)$(PACKAGEDIR)/mm_cfg.py; \
+-	fi
+ 
+ install: install-here
+ 	for d in $(SUBDIRS); \

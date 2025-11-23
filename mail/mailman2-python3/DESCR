@@ -1,0 +1,14 @@
+Mailman is software to help manage electronic mail discussion lists,
+much like Majordomo or Smartmail.  Mailman gives each mailing list a unique
+web page and allows users to subscribe, unsubscribe, and change their
+account options over the web.  Even the list manager can administer his or
+her list entirely via the web.  Mailman has most of the features that
+people want in a mailing list management system, including built-in
+archiving, mail-to-news gateways, spam filters, bounce detection, digest
+delivery, and so on.  See the features page (http://www.list.org/features.html)
+for more detail.
+
+This is Mailman 2, rather than the current version 3.  Mailman 2 is no
+longer maintained by the original authors; the last release was in 2021.  
+Jared Mauch ported to to python3 is is currently maintaining it.
+https://github.com/jaredmauch/mailman2-python3
