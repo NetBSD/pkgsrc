@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.116 2025/10/23 20:38:26 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2025/11/23 13:27:42 gdt Exp $
 
 DISTNAME=	marble-${KAPPSVER}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	misc
 
 HOMEPAGE=	https://marble.kde.org/
