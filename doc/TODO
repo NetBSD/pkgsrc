@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26466 2025/11/23 09:42:45 wiz Exp $
+$NetBSD: TODO,v 1.26467 2025/11/23 11:12:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -576,6 +576,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emerillon-0.1.90
+	o enchant2-2.8.14
 	o endless-sky-0.10.2
 	o enigma-1.30
 	o enlightenment-0.27.1
@@ -638,6 +639,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o frink-2.3.1a2
 	o ftplibpp-2.0.2
 	o fuse-unionfs-2.1
+	o fzf-0.67.0
 	o gallery3-3.0.9
 	o gammu-1.42.0
 	o ganglia-3.7.5
@@ -705,7 +707,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o grafana-11.1.0 [wip]
-	o grafana-12.2.1
+	o grafana-12.3.0
 	o grafx2-2.8.3137
 	o grantlee-5.0.0
 	o greed-4.2
@@ -921,7 +923,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mono-nat-1.1.0
 	o monocypher-3.1.2
 	o moodle-4.5.2 (LTS)
-	o moor-2.9.1
+	o moor-2.9.2
 	o mopher-0.6.0
 	o moserial-2.30.0
 	o mserv-devel-0.41
@@ -940,6 +942,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ncview-2.1.8
 	o netramet-50
 	o newmail-1.0.2
+	o nghttp3-1.13.0
 	o nicotine-plus-3.2.9
 	o nim-2.2.6
 	o nios2-binutils-2.36.1
@@ -976,6 +979,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencpn-plugin-draw-1.8.5.2
 	o opencsg-1.4.2
 	o opendnssec-2.1.8
+	o openexr-3.4.4
 	o opengrok-1.7.1
 	o openh323-1.19.1
 	o openmortal-0.7.1
@@ -1097,6 +1101,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-brotlicffi-1.2.0.0
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-cutadapt-5.2 [wip]
@@ -1106,9 +1111,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-gammu-3.1
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
+	o py-keyring-25.7.0
+	o py-lsp-server-1.13.2
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
+	o py-project-metadata-0.10.0
+	o py-ruff-0.14.6
 	o py-sbws-1.1.0
 	o py-simpletal-5.1
 	o py-sybase-0.37
