@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2025/07/07 01:41:21 gutteridge Exp $
+$NetBSD: distinfo,v 1.3 2025/11/23 19:52:14 markd Exp $
 
-BLAKE2s (layer-shell-qt-6.0.5.tar.xz) = 2496af6d69a355c790c5648f51cfa631df260a023d596bb70b024a74ea5987c4
-SHA512 (layer-shell-qt-6.0.5.tar.xz) = 8da7612be743e9445b492c3e9b19f62e8112a419d9686138aa9dc009b3ec02ac180c156f5bbe74bc71fc13453a00f7bbaf7caa0818985898463eb0d2d218d397
-Size (layer-shell-qt-6.0.5.tar.xz) = 20928 bytes
-SHA1 (patch-src_qwaylandlayersurface.cpp) = 1c3210719dcdecd384ad80261900d5d80cd5f31d
+BLAKE2s (layer-shell-qt-6.5.2.tar.xz) = 4c6a86f1ec63b2c96d271dd0a7debea7d138a60cfd8e28e788909c6db40d3117
+SHA512 (layer-shell-qt-6.5.2.tar.xz) = 4294853aedcb17a4b0e77eafeab257b2f74986ab2d45e4ed8c61d0493c1f5de614eeb2f4be2a93f5c6b950b7db1d18b81cb0a1a3c40f31d91a6484c1ad738d16
+Size (layer-shell-qt-6.5.2.tar.xz) = 36408 bytes
