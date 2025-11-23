@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26467 2025/11/23 11:12:08 wiz Exp $
+$NetBSD: TODO,v 1.26468 2025/11/23 12:43:07 taca Exp $
 
 Suggested new packages
 ======================
@@ -556,6 +556,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dnsbl-milter-6.78
 	o doclifter-2.19
 	o dotclear-2.53
+	o dovecot-2.4.2 [CVE-2025-30189]
+	o dovecot2-pigeonhole-2.4.2
 	o drawpile-2.1.20
 	o drivel-3.0.5
 	o drupal-10.0.5
@@ -1043,7 +1045,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pgbuildfarm-12
 	o pgpdump-0.33
 	o phoronix-9.2.1
-	o php-8.5
+	o php-8.5.0
 	o php-basercms-5.1.5
 	o php-composer-2.8.5
 	o php-dotclear-2.33
@@ -1165,7 +1167,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
-	o samba-4.23.2
+	o samba-4.23.3
 	o sarg-2.4.0
 	o sasm-3.12.1
 	o sbcl-2.5.9
