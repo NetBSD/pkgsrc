@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6857 2025/11/23 07:11:30 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6858 2025/11/23 08:00:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9968,3 +9968,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/vcdimager to 2.0.1nb15 [wiz 2025-11-23]
 	Updated devel/p5-OLE-Storage_Lite to 0.24 [wiz 2025-11-23]
 	Updated devel/p5-Type-Tiny to 2.008005 [wiz 2025-11-23]
+	Updated devel/py-pbr to 7.0.3 [adam 2025-11-23]
+	Updated devel/py-testtools to 2.8.0 [adam 2025-11-23]
