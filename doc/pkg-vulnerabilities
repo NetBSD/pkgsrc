@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.670 2025/11/22 20:51:38 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.671 2025/11/23 20:53:32 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28967,3 +28967,4 @@ wolfssl<5.8.4	weak-encryption		https://nvd.nist.gov/vuln/detail/CVE-2025-11935
 wolfssl<5.8.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-11936
 wolfssl<5.8.4	side-channel		https://nvd.nist.gov/vuln/detail/CVE-2025-12888
 wolfssl<5.8.4	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-12889
+nnn-[0-9]*	double-free		https://nvd.nist.gov/vuln/detail/CVE-2025-13566
