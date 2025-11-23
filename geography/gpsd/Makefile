@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2025/11/23 13:24:34 gdt Exp $
+# $NetBSD: Makefile,v 1.90 2025/11/23 13:26:03 gdt Exp $
 
 DISTNAME=	gpsd-3.27
 CATEGORIES=	geography
@@ -14,9 +14,10 @@ DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
 
-USE_TOOLS+=	pkg-config gmake
-USE_LIBTOOL=	yes
-USE_LANGUAGES=	c99 c++
+USE_TOOLS+=		pkg-config gmake
+USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++
+USE_CC_FEATURES=	c99
 
 PY_PATCHPLIST=			yes
 
