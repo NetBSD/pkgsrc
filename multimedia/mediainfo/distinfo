@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.19 2022/03/10 15:05:05 ryoon Exp $
+$NetBSD: distinfo,v 1.20 2025/11/23 23:13:21 wiz Exp $
 
 BLAKE2s (mediainfo_21.09_AllInclusive.7z) = 29ac47313bc39a1ea6f8be9c564485d0d69c2afa463d5cee4be4469a28e2548d
 SHA512 (mediainfo_21.09_AllInclusive.7z) = 8371b4f9b9a0a77c0b5a0930363266f1c236b6eff8acfd5873edde7a18bfd2e6305092742f9094a64252b6f13d339526ad153587d1f5d8b03a6b09594dbbf752
 Size (mediainfo_21.09_AllInclusive.7z) = 18232082 bytes
 SHA1 (patch-MediaInfoLib_Source_MediaInfo_MediaInfo__Config.h) = 19d6cba816c9e282e31fac527cbc39b9303f9f08
+SHA1 (patch-MediaInfoLib_Source_MediaInfo_MediaInfo__Internal.cpp) = 8e56de10a8b67dc3b676ca816308a45345425d60
 SHA1 (patch-wxWidgets_configure) = 1e66f21dd53cab7777650b82e0a030bd557c1de1
 SHA1 (patch-wxWidgets_src_tiff_configure) = 42c668792c114d17426f0c34ffff972bf1c90e0f
