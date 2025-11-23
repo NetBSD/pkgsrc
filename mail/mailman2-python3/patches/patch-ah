@@ -1,0 +1,45 @@
+$NetBSD: patch-ah,v 1.1 2025/11/23 16:29:45 christos Exp $
+
+--- Mailman/htmlformat.py.orig	2025-10-09 10:00:14.000000000 -0400
++++ Mailman/htmlformat.py	2025-10-09 10:55:11.995614738 -0400
+@@ -653,13 +653,15 @@
+ MAILMAN_URL = mm_cfg.MAILMAN_URL
+ # from Mailman.mm_cfg import MAILMAN_URL
+ PYTHON_URL  = 'http://www.python.org/'
+-GNU_URL     = 'http://www.gnu.org/'
+ 
+ # The names of the image logo files.  These are concatentated onto
+ # mm_cfg.IMAGE_LOGOS (not urljoined).
+ DELIVERED_BY = 'mailman.jpg'
+ PYTHON_POWERED = 'PythonPowered.png'
+-GNU_HEAD = 'gnu-head-tiny.jpg'
++
++from mm_cfg import IMAGE3_URL
++from mm_cfg import IMAGE3_IMG
++from mm_cfg import IMAGE3_ALT
+ 
+ 
+ def MailmanLogo():
+@@ -671,17 +673,17 @@
+                  '<br>version %s' % (logo(DELIVERED_BY), mm_cfg.VERSION)
+         pylink = '<img src="%s" alt="Python Powered" border=0>' % \
+                  logo(PYTHON_POWERED)
+-        gnulink = '<img src="%s" alt="GNU\'s Not Unix" border=0>' % \
+-                  logo(GNU_HEAD)
+-        t.AddRow([mmlink, pylink, gnulink])
++        image3link = '<img src="%s" alt="%s" border=0>' % \
++                  (logo(IMAGE3_IMG), IMAGE3_ALT)
++        t.AddRow([mmlink, pylink, image3link])
+     else:
+         # use only textual links
+         version = mm_cfg.VERSION
+         mmlink = Link(MAILMAN_URL,
+                       _('Delivered by Mailman<br>version %(version)s'))
+         pylink = Link(PYTHON_URL, _('Python Powered'))
+-        gnulink = Link(GNU_URL, _("Gnu's Not Unix"))
+-        t.AddRow([mmlink, pylink, gnulink])
++        image3link = Link(IMAGE3_URL, _(IMAGE3_ALT))
++        t.AddRow([mmlink, pylink, image3link])
+     return t
+ 
+ 
