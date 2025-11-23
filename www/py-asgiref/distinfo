@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.36 2025/10/31 10:50:59 adam Exp $
+$NetBSD: distinfo,v 1.37 2025/11/23 06:58:41 adam Exp $
 
-BLAKE2s (asgiref-3.10.0.tar.gz) = 90eea6967f40e9666243bb40ae474a6bc26ae1f212dc82e90be3404f20ee75ac
-SHA512 (asgiref-3.10.0.tar.gz) = cb7e691cf5c59f25f5e6389fccf6f601aee6efc034ceb74434dacb3e55cc8dd6836230fd2598a65e41b44737cf3a359791f2262acf50e092e04f5c214a67bbbd
-Size (asgiref-3.10.0.tar.gz) = 37483 bytes
+BLAKE2s (asgiref-3.11.0.tar.gz) = 6673c6517f9287e0fa90bd1dbc8abe5eea6d4715af70ed448d44048c80b26984
+SHA512 (asgiref-3.11.0.tar.gz) = d78573c73338cc03ea6531017f983bb387a47e67a81252e37d5a2852657c5a3913f7e0b6f69e91bb15963d6683cbce94726911397b1757d4d66cdf4a9b27d957
+Size (asgiref-3.11.0.tar.gz) = 37969 bytes
