@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6858 2025/11/23 08:00:11 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6859 2025/11/23 09:12:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9970,3 +9970,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Type-Tiny to 2.008005 [wiz 2025-11-23]
 	Updated devel/py-pbr to 7.0.3 [adam 2025-11-23]
 	Updated devel/py-testtools to 2.8.0 [adam 2025-11-23]
+	Updated devel/serie to 0.5.4 [pin 2025-11-23]
