@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.44 2025/05/30 22:16:09 tnn Exp $
+$NetBSD: distinfo,v 1.45 2025/11/23 13:24:34 gdt Exp $
 
-BLAKE2s (gpsd-3.26.1.tar.gz) = 9b6831e34335009d2a5fb8118a81a99d344e32486b79bae02bdea7ddb67a2bca
-SHA512 (gpsd-3.26.1.tar.gz) = f0d7af38a87ee5dc651b7f07ac365bff56baafcfb1e1feb8410a786549c23f898efc22ba6619a81bdd4f44653ec0d89af2b1ced92e24b4c545e51839b68db7d8
-Size (gpsd-3.26.1.tar.gz) = 5909502 bytes
+BLAKE2s (gpsd-3.27.tar.gz) = c1d4cb8fa9e5a2ef97b950727add525e69843e8a012773afb753f54e3d7714d0
+SHA512 (gpsd-3.27.tar.gz) = 15f494b2d8a1c864a011e1dec2914469269502024dc11d5bf6dfa654d8fba60d1ac7bc72e323e08f96ed1664a21c2fc0ae30398dc8f67eafc12d43a69c9ac442
+Size (gpsd-3.27.tar.gz) = 5990617 bytes
 SHA1 (patch-SConscript) = 15c1a17dcd35d654dab24b3eca931af8c876e528
