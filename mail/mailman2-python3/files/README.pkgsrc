@@ -1,0 +1,26 @@
+$NetBSD: README.pkgsrc,v 1.1 2025/11/23 16:29:45 christos Exp $
+
+(Probably, all of this is contained in the upstream documemtation.)
+
+Mailman needs to know your mail domain and Web server hostname.  Edit
+${PREFIX}/lib/mailman/Mailman/mm_cfg.py and insert your hostname
+in place of "localhost" in DEFAULT_EMAIL_HOST and DEFAULT_URL_HOST.
+
+You will need to make mailman accessible through your HTTP server.
+If you are running Apache, then you may add the following line to httpd.conf:
+
+	Include ${PKG_SYSCONFDIR}/mailman.conf
+
+to make mailman and its archive accessible through, respectively,
+
+	http://www.domain.com/mailman/
+	http://www.domain.com/pipermail/
+
+You will also need to add some crontab entries for the user ${MAILMAN_USER}.
+You can use ${EGDIR}/crontab.in as template.
+
+See the files in ${DOCDIR} for how to use mailman,
+especially the file ${DOCDIR}/mailman-install.txt.
+
+If you are upgrading an existing mailman installation,
+see ${DOCDIR}/UPGRADING.

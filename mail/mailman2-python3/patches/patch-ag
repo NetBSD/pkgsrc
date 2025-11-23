@@ -1,0 +1,24 @@
+$NetBSD: patch-ag,v 1.1 2025/11/23 16:29:45 christos Exp $
+
+Mandate setgid bits on directories only when we install
+on !BSD
+
+--- bin/check_perms.orig	2008-04-21 21:28:22.000000000 +0300
++++ bin/check_perms	2008-06-29 09:06:30.000000000 +0300
+@@ -70,8 +70,14 @@
+ 
+ STATE = State()
+ 
+-DIRPERMS = S_ISGID | S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH
+-QFILEPERMS = S_ISGID | S_IRWXU | S_IRWXG
++SysName = os.uname()[0]
++if SysName[-3:] == 'BSD':
++    DIRPERMS = S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH
++    QFILEPERMS = S_IRWXU | S_IRWXG
++else:
++    DIRPERMS = S_ISGID | S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH
++    QFILEPERMS = S_ISGID | S_IRWXU | S_IRWXG
++
+ PYFILEPERMS = S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH
+ ARTICLEFILEPERMS = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP
+ PRIVATEPERMS = QFILEPERMS
