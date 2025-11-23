@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6852 2025/11/23 00:44:59 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.6853 2025/11/23 03:21:09 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9962,3 +9962,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/capnproto to 1.2.0 [adam 2025-11-22]
 	Updated devel/py-exceptiongroup to 1.3.1 [adam 2025-11-22]
 	Updated geography/qgis to 3.44.5 [gdt 2025-11-23]
+	Updated audio/musescore to 4.6.3nb1 [gutteridge 2025-11-23]
