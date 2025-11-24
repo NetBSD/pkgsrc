@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6887 2025/11/24 14:58:58 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6888 2025/11/24 18:43:55 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10006,3 +10006,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-macholib to 1.16.4 [adam 2025-11-24]
 	Updated devel/py-msgspec to 0.20.0 [adam 2025-11-24]
 	Updated databases/py-orderedmultidict to 1.0.2 [adam 2025-11-24]
+	Updated shells/fish4 to 4.2.1 [vins 2025-11-24]
