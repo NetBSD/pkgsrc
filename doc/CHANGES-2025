@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6879 2025/11/24 09:53:15 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6880 2025/11/24 09:54:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9996,3 +9996,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/py-brotlicffi to 1.2.0.0 [wiz 2025-11-24]
 	Updated security/py-keyring to 25.7.0 [wiz 2025-11-24]
 	Updated lang/py-lsp-server to 1.13.2 [wiz 2025-11-24]
+	Updated devel/py-project-metadata to 0.10.0 [wiz 2025-11-24]
