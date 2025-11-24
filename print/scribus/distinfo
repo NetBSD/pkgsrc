@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2025/11/10 13:54:53 wiz Exp $
+$NetBSD: distinfo,v 1.31 2025/11/24 07:36:54 wiz Exp $
 
 BLAKE2s (scribus-1.7.0.tar.xz) = f7ab33b821bcc7da2f7906167bd0b347d559f95081ce9dc1b0f49ee270516d9a
 SHA512 (scribus-1.7.0.tar.xz) = c3a392d69e109165a9c28c2396e0e2e18df2d232099a6836f6a472fc3f899f50316e2b9227be40c3226dffc9f84e9db94dc2f353052fa06b35c776cd4f664448
@@ -12,5 +12,5 @@ SHA1 (patch-scribus_plugins_import_pdf_importpdfplugin.cpp) = 9b0e0ce2b073b0cc3a
 SHA1 (patch-scribus_plugins_import_pdf_importpdfplugin.h) = e1ab02eb9652cddfbddb14514a330b87f8a743ea
 SHA1 (patch-scribus_plugins_import_pdf_slaoutput.cpp) = aa7fa4aaa4251aa0423e499dca453cdbe71855e6
 SHA1 (patch-scribus_plugins_import_pdf_slaoutput.h) = f5635ccc381909e147fe827c416c2eb788f9d6a1
-SHA1 (patch-scribus_third__party_Qt-Advanced-Docking-System_src_CMakeLists.txt) = 3553f421f5a4f0e5298edda5f450a3e7d3397574
+SHA1 (patch-scribus_third__party_Qt-Advanced-Docking-System_src_CMakeLists.txt) = 0ca274a52983932fb94aead3ddf097bf81d295e4
 SHA1 (patch-scribus_util__text.cpp) = 58aed912f434474f7d87b5fab3f453a3509c2ef4
