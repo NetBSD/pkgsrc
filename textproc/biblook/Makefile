@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2012/10/25 06:55:42 asau Exp $
-#
+# $NetBSD: Makefile,v 1.16 2025/11/24 08:17:46 wiz Exp $
 
 DISTNAME=	biblook
 PKGNAME=	${DISTNAME}-2.9
 CATEGORIES=	textproc
-MASTER_SITES=	http://compgeom.cs.uiuc.edu/~jeffe/files/
+#MASTER_SITES=	http://compgeom.cs.uiuc.edu/~jeffe/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://compgeom.cs.uiuc.edu/~jeffe/biblook.html
+#HOMEPAGE=	http://compgeom.cs.uiuc.edu/~jeffe/biblook.html
 COMMENT=	Indexing and searching tools for BibTeX bibliography databases
 
 WRKSRC=		${WRKDIR}
