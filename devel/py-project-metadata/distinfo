@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/03/12 06:14:43 adam Exp $
+$NetBSD: distinfo,v 1.6 2025/11/24 09:54:04 wiz Exp $
 
-BLAKE2s (pyproject_metadata-0.9.1.tar.gz) = e557a6ee61c0a4c8a6851068a50bbe3521546df57fdde50ec6bf152303b57054
-SHA512 (pyproject_metadata-0.9.1.tar.gz) = df4623d0798d5203e085af3c13107a77c600c70c8e10c3a28c30ee78010e7deebce477b9b24fe91d5990450ba1d9935c55cf2484432caadad2edb3cf58114256
-Size (pyproject_metadata-0.9.1.tar.gz) = 38415 bytes
+BLAKE2s (pyproject_metadata-0.10.0.tar.gz) = 22d9345b1f785b7dc170ddd929c9d85cd8426e02acf96a5792441efa4a2dfeb4
+SHA512 (pyproject_metadata-0.10.0.tar.gz) = 78d912dcd0cdb969a543220231822db73da4a7a0dff40587c120484e7596794ee6544a133ae9f4c8f123d7854d0d75fa2ae1f41639544e96964c4cf20a2b5925
+Size (pyproject_metadata-0.10.0.tar.gz) = 40568 bytes
