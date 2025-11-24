@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2024/03/16 13:11:55 nia Exp $
+# $NetBSD: Makefile,v 1.67 2025/11/24 08:21:15 wiz Exp $
 
 DISTNAME=	bitchx-1.2.1
 PKGREVISION=	7
@@ -6,7 +6,7 @@ CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bitchx/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.bitchx.org/
+HOMEPAGE=	https://sourceforge.net/projects/bitchx/
 COMMENT=	IRC client based on ircII
 LICENSE=	modified-bsd
 
