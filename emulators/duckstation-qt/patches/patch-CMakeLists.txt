@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2023/11/14 17:57:41 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2025/11/24 07:44:28 wiz Exp $
 
 NetBSD (and more POSIX platforms) support.
 
@@ -28,3 +28,12 @@ NetBSD (and more POSIX platforms) support.
    option(USE_DRMKMS "Support DRM/KMS OpenGL contexts" OFF)
    option(USE_FBDEV "Support FBDev OpenGL contexts" OFF)
    option(USE_EVDEV "Support EVDev controller interface" OFF)
+@@ -106,7 +110,7 @@ if(NOT ANDROID)
+     find_package(CURL REQUIRED)
+   endif()
+   if(BUILD_QT_FRONTEND)
+-    find_package(Qt6 COMPONENTS Core Gui Widgets Network LinguistTools REQUIRED)
++    find_package(Qt6 COMPONENTS Core Gui GuiPrivate Widgets Network LinguistTools REQUIRED)
+   endif()
+ endif()
+ 

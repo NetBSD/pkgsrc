@@ -1,4 +1,4 @@
-$NetBSD: patch-src_duckstation-qt_CMakeLists.txt,v 1.1 2023/11/14 17:57:41 nia Exp $
+$NetBSD: patch-src_duckstation-qt_CMakeLists.txt,v 1.2 2025/11/24 07:44:28 wiz Exp $
 
 Unbundle dependencies.
 
@@ -9,7 +9,7 @@ Unbundle dependencies.
  add_executable(duckstation-qt ${SRCS} ${QM_FILES})
  target_include_directories(duckstation-qt PRIVATE "${Qt6Gui_PRIVATE_INCLUDE_DIRS}" "${CMAKE_CURRENT_SOURCE_DIR}")
 -target_link_libraries(duckstation-qt PRIVATE frontend-common core common imgui glad minizip scmversion Qt6::Core Qt6::Gui Qt6::Widgets Qt6::Network)
-+target_link_libraries(duckstation-qt PRIVATE frontend-common core common imgui glad ${MINIZIP_LIBRARIES} ${SOUNDTOUCH_LIBRARIES} scmversion Qt6::Core Qt6::Gui Qt6::Widgets Qt6::Network)
++target_link_libraries(duckstation-qt PRIVATE frontend-common core common imgui glad ${MINIZIP_LIBRARIES} ${SOUNDTOUCH_LIBRARIES} scmversion Qt6::Core Qt6::Gui Qt6::GuiPrivate Qt6::Widgets Qt6::Network)
  
  if(WIN32)
    # We want a Windows subsystem application not console.
