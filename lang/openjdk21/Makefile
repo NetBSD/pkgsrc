@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/11/15 12:17:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2025/11/24 21:00:20 tnn Exp $
 
 DISTNAME=	jdk21u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk21-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -139,41 +139,6 @@ SUBST_FILES.fontpaths=		src/java.desktop/bsd/data/fontconfig/fontconfig.properti
 SUBST_FILES.fontpaths+=		src/java.desktop/unix/native/common/awt/fontpath.c
 SUBST_VARS.fontpaths=		PREFIX BUILDLINK_PREFIX.fontconfig
 
-.if ${MACHINE_ARCH} == "aarch64"
-# See patches/patch-*threadWXSetters* for details.
-SUBST_CLASSES+=			aa64-membar
-SUBST_STAGE.aa64-membar=	pre-build
-SUBST_MESSAGE.aa64-membar=	Fixing cache coherency issues
-SUBST_SED.aa64-membar=		-e 's/MACOS_AARCH64_ONLY(ThreadWXEnable /AARCH64_ONLY(ThreadWXEnable /'
-SUBST_FILES.aa64-membar+=	src/hotspot/os/posix/signals_posix.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/c1/c1_Runtime1.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/code/nmethod.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/gc/shared/barrierSetNMethod.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/gc/shenandoah/shenandoahBarrierSetNMethod.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/gc/x/xBarrierSetNMethod.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/gc/z/zBarrierSetNMethod.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/interpreter/interpreterRuntime.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/jfr/instrumentation/jfrJvmtiAgent.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/jfr/jni/jfrJniMethod.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/jfr/recorder/storage/jfrStorage.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/jfr/support/jfrIntrinsics.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/jfr/writers/jfrJavaEventWriter.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/jvmci/jvmciCompilerToVM.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/prims/jniCheck.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/prims/jvmtiEnter.xsl
-SUBST_FILES.aa64-membar+=	src/hotspot/share/prims/jvmtiEnv.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/prims/jvmtiExport.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/prims/jvmtiExtensions.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/prims/unsafe.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/prims/upcallLinker.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/prims/whitebox.inline.hpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/runtime/continuationFreezeThaw.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/runtime/deoptimization.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/runtime/interfaceSupport.inline.hpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/runtime/javaThread.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/runtime/safepoint.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/runtime/sharedRuntime.cpp
-.endif
 
 .if ${OPSYS} == "NetBSD"
 # NetBSD's EVFILT_* EV_* are different from FreeBSD/OpenBSD's values.
