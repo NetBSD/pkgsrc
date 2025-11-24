@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 2018/11/30 13:06:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/11/24 12:52:24 adam Exp $
 bin/macho_dump-${PYVERSSUFFIX}
 bin/macho_find-${PYVERSSUFFIX}
 bin/macho_standalone-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
 ${PYSITELIB}/macholib/MachO.py
 ${PYSITELIB}/macholib/MachO.pyc
 ${PYSITELIB}/macholib/MachO.pyo
