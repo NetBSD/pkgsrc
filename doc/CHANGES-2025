@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6886 2025/11/24 12:52:46 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6887 2025/11/24 14:58:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10004,3 +10004,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added textproc/rucola version 0.8.0 [pin 2025-11-24]
 	Updated graphics/py-altgraph to 0.17.5 [adam 2025-11-24]
 	Updated devel/py-macholib to 1.16.4 [adam 2025-11-24]
+	Updated devel/py-msgspec to 0.20.0 [adam 2025-11-24]
+	Updated databases/py-orderedmultidict to 1.0.2 [adam 2025-11-24]
