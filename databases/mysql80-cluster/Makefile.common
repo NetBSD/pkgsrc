@@ -1,15 +1,16 @@
-# $NetBSD: Makefile.common,v 1.5 2025/10/22 07:21:48 jnemeth Exp $
+# $NetBSD: Makefile.common,v 1.6 2025/11/24 05:58:26 jnemeth Exp $
 #
 # used by databases/mysql-cluster/Makefile
 
-DISTNAME=	mysql-cluster-gpl-8.0.39
+DISTNAME=	mysql-cluster-8.0.44
 BOOSTVER=	1.77.0
 CATEGORIES=	databases
-#MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-Cluster-8.0/}
-MASTER_SITES=	https://dev.mysql.com/get/Downloads/MySQL-Cluster-8.0/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mysql/}
 MASTER_SITES+=	https://boostorg.jfrog.io/artifactory/main/release/${BOOSTVER}/source/
 DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	boost_${BOOSTVER:S/./_/g}.tar.bz2
+GITHUB_PROJECT=	mysql-server
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mysql.com/products/cluster/
@@ -77,7 +78,7 @@ CMAKE_CONFIGURE_ARGS+=		-DDEFAULT_CHARSET=${MYSQL_CHARSET}
 CMAKE_CONFIGURE_ARGS+=		-DDEFAULT_COLLATION=${MYSQL_COLLATION:Q}
 CMAKE_CONFIGURE_ARGS+=		-DWITH_EXTRA_CHARSETS=${MYSQL_EXTRA_CHARSET:Q}
 CMAKE_CONFIGURE_ARGS+=		-DWITH_NDB_JAVA=OFF
-CMAKE_CONFIGURE_ARGS+=		-UWITH_UNIT_TESTS
+CMAKE_CONFIGURE_ARGS+=		-DWITH_UNIT_TESTS=OFF
 CMAKE_CONFIGURE_ARGS+=		-DWITH_SSL=system
 CMAKE_CONFIGURE_ARGS+=		-DWITH_PROTOBUF="system"
 
