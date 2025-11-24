@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/04/13 12:41:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/11/24 09:23:18 wiz Exp $
 bin/keyring-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -59,9 +59,6 @@ ${PYSITELIB}/keyring/compat/properties.pyo
 ${PYSITELIB}/keyring/compat/py312.py
 ${PYSITELIB}/keyring/compat/py312.pyc
 ${PYSITELIB}/keyring/compat/py312.pyo
-${PYSITELIB}/keyring/compat/py38.py
-${PYSITELIB}/keyring/compat/py38.pyc
-${PYSITELIB}/keyring/compat/py38.pyo
 ${PYSITELIB}/keyring/completion.py
 ${PYSITELIB}/keyring/completion.pyc
 ${PYSITELIB}/keyring/completion.pyo
