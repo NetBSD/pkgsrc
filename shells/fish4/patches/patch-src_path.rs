@@ -1,23 +1,24 @@
-$NetBSD: patch-src_path.rs,v 1.1 2025/11/02 18:44:07 vins Exp $
+$NetBSD: patch-src_path.rs,v 1.2 2025/11/24 18:43:22 vins Exp $
 
 Use statvfs() on illumos.
 
---- src/path.rs.orig	2025-10-07 20:56:06.000000000 +0000
+--- src/path.rs.orig	2025-11-24 15:30:10.536505320 +0000
 +++ src/path.rs
-@@ -722,14 +722,14 @@ pub fn path_remoteness(path: &wstr) -> D
+@@ -694,7 +694,7 @@ pub fn path_remoteness(path: &wstr) -> D
+     }
+ 
+     // NetBSD doesn't have statfs, but MNT_LOCAL works for statvfs.
+-    #[cfg(target_os = "netbsd")]
++    #[cfg(any(target_os = "netbsd", target_os = "illumos"))]
+     {
+         let mut buf = MaybeUninit::uninit();
+         if unsafe { libc::statvfs(narrow.as_ptr(), buf.as_mut_ptr()) } < 0 {
+@@ -711,7 +711,7 @@ pub fn path_remoteness(path: &wstr) -> D
          }
-         // ST_LOCAL is a flag to statvfs, which is itself standardized.
-         // In practice the only system to define it is NetBSD.
--        #[cfg(target_os = "netbsd")]
-+        #[cfg(any(target_os = "netbsd", target_os = "illumos"))]
-         let remoteness = remoteness_via_statfs(
-             libc::statvfs,
-             |stat: &libc::statvfs| stat.f_flag,
-             crate::libc::ST_LOCAL(),
-             &narrow,
-         );
--        #[cfg(not(target_os = "netbsd"))]
-+        #[cfg(not(any(target_os = "netbsd", target_os = "illumos")))]
-         let remoteness = remoteness_via_statfs(
-             libc::statfs,
-             |stat: &libc::statfs| stat.f_flags,
+     }
+ 
+-    #[cfg(not(any(target_os = "linux", target_os = "netbsd", cygwin)))]
++    #[cfg(not(any(target_os = "linux", target_os = "netbsd", target_os = "illumos", cygwin)))]
+     {
+         let mut buf = MaybeUninit::uninit();
+         if unsafe { libc::statfs(narrow.as_ptr(), buf.as_mut_ptr()) } < 0 {

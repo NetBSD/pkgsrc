@@ -1,13 +1,13 @@
-$NetBSD: patch-src_wutil_dir__iter.rs,v 1.2 2025/11/12 18:44:11 vins Exp $
+$NetBSD: patch-src_wutil_dir__iter.rs,v 1.3 2025/11/24 18:43:22 vins Exp $
 
-* Struct dirent lacks d_type on SunOS. 
+Struct dirent lacks d_type on SunOS.
 
---- src/wutil/dir_iter.rs.orig	2025-10-07 20:56:06.000000000 +0000
+--- src/wutil/dir_iter.rs.orig	2025-11-13 12:09:28.000000000 +0000
 +++ src/wutil/dir_iter.rs
 @@ -293,6 +293,8 @@ impl DirIter {
-         {
-             self.entry.inode = dent.d_ino;
-         }
+                 self.entry.inode = dent.d_ino;
+             }
+         );
 +        #[cfg(not(target_os = "illumos"))]
 +        {
          let typ = dirent_type_to_entry_type(dent.d_type);
