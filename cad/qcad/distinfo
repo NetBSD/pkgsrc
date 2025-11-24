@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2025/08/19 13:57:11 wiz Exp $
+$NetBSD: distinfo,v 1.49 2025/11/24 09:51:27 wiz Exp $
 
 BLAKE2s (qcad-3.32.3.4.tar.gz) = 5dd55492b7e49e23182137e481fdcc6a6a0edc6c3da3452b7e25202138233502
 SHA512 (qcad-3.32.3.4.tar.gz) = 39135251f342224cf633c88257e9ebdcc7fad3607c0d32c09fc37b577173e5064f20c20a027402fdb44290ed8b0869698293c5154138ab1320458341a5519be9
@@ -20,6 +20,7 @@ SHA1 (patch-src_core_RS.cpp) = f8b7d6be3a2e822c04342b3490f2f99d47b57484
 SHA1 (patch-src_core_RSettings.cpp) = 8c5cba0026f727829c539195a0632224e3e51638
 SHA1 (patch-src_entity_CMakeLists.txt) = 6bf41871ea1df9b8534d2d9078ce441c2f57f68b
 SHA1 (patch-src_qcadjsapi_CMakeLists.txt) = a73eeb21ac7da58b27b7ea17153776060c632069
+SHA1 (patch-src_qtjsapi_CMakeLists.txt) = 24b395ada122717036d3859ffcfde90e50f8b573
 SHA1 (patch-src_qtjsapi_RJSTools.cpp) = 11bd60ffbb3d3c32ac9219844b912fcf02786ea2
 SHA1 (patch-src_run_CMakeInclude.txt) = f484ba9ff244196f2f80401b964f45cb7acc3963
 SHA1 (patch-src_run_main.cpp) = 2414fdbd6434c5a7d12647f9f964775b01fcee6a
