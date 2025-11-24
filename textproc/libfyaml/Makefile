@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/11/14 09:45:24 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/11/24 20:00:43 tnn Exp $
 
 DISTNAME=	libfyaml-0.9
 CATEGORIES=	textproc
@@ -11,7 +11,7 @@ COMMENT=	Feature-complete YAML parser and emitter
 LICENSE=	mit
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	bash:test
+USE_TOOLS+=	bash:test m4
 GNU_CONFIGURE=	yes
 TEST_TARGET=	check
 
