@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6874 2025/11/24 09:14:09 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6875 2025/11/24 09:16:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9991,3 +9991,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/wayland-protocols to 1.46 [wiz 2025-11-24]
 	Updated textproc/enchant2 to 2.8.14 [wiz 2025-11-24]
 	Updated sysutils/fzf to 0.67.0 [wiz 2025-11-24]
+	Updated www/nghttp3 to 1.13.1 [wiz 2025-11-24]
