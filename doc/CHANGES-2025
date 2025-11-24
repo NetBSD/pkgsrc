@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6882 2025/11/24 10:51:11 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6883 2025/11/24 10:53:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9999,3 +9999,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-project-metadata to 0.10.0 [wiz 2025-11-24]
 	Updated devel/py-ruff to 0.14.6 [wiz 2025-11-24]
 	Updated sysutils/lima to 2.0.1 [wiz 2025-11-24]
+	Updated textproc/moor to 2.9.2 [wiz 2025-11-24]
