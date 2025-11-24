@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.305 2025/10/23 20:37:31 wiz Exp $
+# $NetBSD: Makefile,v 1.306 2025/11/24 10:31:36 micha Exp $
 
 DISTNAME=	graphviz-12.2.1
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITLAB:=api/v4/projects/4207231/packages/generic/graphviz-releases/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	micha@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.graphviz.org/
 COMMENT=	Graph Drawing Programs from AT&T Research and Lucent Bell Labs
 LICENSE=	epl-v1.0
