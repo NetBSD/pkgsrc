@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2024/12/31 09:30:27 adam Exp $
+$NetBSD: distinfo,v 1.4 2025/11/24 07:48:51 wiz Exp $
 
 BLAKE2s (QXlsx-1.5.0.tar.gz) = c67e7c0568443c4e843c3a1e1db66f40cc196dc11cf2e140589794139efdbaa0
 SHA512 (QXlsx-1.5.0.tar.gz) = 6aa2bc848ce6a34d35e7483cd44f0503aa8be7c1a0087e3f6b4cb425501b79d636efca5ebf970a06bdc9c9a90c073f6fdcc5917eaff7751e238597393c49f038
 Size (QXlsx-1.5.0.tar.gz) = 4714070 bytes
+SHA1 (patch-QXlsx_CMakeLists.txt) = faaf2bf004c22d8873409ab29d12bcb88fbec02b
