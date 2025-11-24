@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2023/10/01 16:08:31 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/11/24 12:50:50 adam Exp $
 
-DISTNAME=	altgraph-0.17.4
+DISTNAME=	altgraph-0.17.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/altgraph/}
@@ -10,7 +10,9 @@ HOMEPAGE=	https://altgraph.readthedocs.io/
 COMMENT=	Graph (network) package for constructing graphs
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
