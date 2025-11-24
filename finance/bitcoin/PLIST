@@ -1,12 +1,16 @@
-@comment $NetBSD: PLIST,v 1.10 2025/07/17 11:22:59 adam Exp $
-bin/bench_bitcoin
+@comment $NetBSD: PLIST,v 1.11 2025/11/24 07:25:24 adam Exp $
+bin/bitcoin
 bin/bitcoin-cli
 ${PLIST.qt}bin/bitcoin-qt
 bin/bitcoin-util
 bin/bitcoin-wallet
 bin/bitcoind
+libexec/bench_bitcoin
+${PLIST.qt}libexec/bitcoin-gui
+libexec/bitcoin-node
 man/man1/bitcoin-cli.1
 ${PLIST.qt}man/man1/bitcoin-qt.1
 man/man1/bitcoin-util.1
 man/man1/bitcoin-wallet.1
+man/man1/bitcoin.1
 man/man1/bitcoind.1
