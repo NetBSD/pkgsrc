@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6868 2025/11/23 20:25:01 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6869 2025/11/24 05:58:45 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9984,3 +9984,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added x11/plasma6-plasma-activities version 6.5.2 [markd 2025-11-23]
 	Added sysutils/plasma6-libksysguard version 6.5.2 [markd 2025-11-23]
 	Added mail/mailman2-python3 version 20251123 [christos 2025-11-23]
+	Updated databases/mysql80-cluster to 8.0.44 [jnemeth 2025-11-24]
