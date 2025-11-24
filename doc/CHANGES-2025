@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6870 2025/11/24 06:43:58 iquiw Exp $
+$NetBSD: CHANGES-2025,v 1.6871 2025/11/24 07:26:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9986,3 +9986,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added mail/mailman2-python3 version 20251123 [christos 2025-11-23]
 	Updated databases/mysql80-cluster to 8.0.44 [jnemeth 2025-11-24]
 	Updated devel/task to 3.45.5 [iquiw 2025-11-24]
+	Updated www/py-channels to 4.3.2 [adam 2025-11-24]
+	Updated finance/bitcoin to 30.0 [adam 2025-11-24]
