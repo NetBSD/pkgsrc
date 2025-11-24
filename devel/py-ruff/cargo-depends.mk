@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.77 2025/11/16 21:08:11 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.78 2025/11/24 10:05:07 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -129,8 +129,8 @@ CARGO_CRATE_DEPENDS+=	fs-err-2.11.0
 CARGO_CRATE_DEPENDS+=	fsevent-sys-4.1.0
 CARGO_CRATE_DEPENDS+=	funty-2.0.0
 CARGO_CRATE_DEPENDS+=	generic-array-0.14.7
-CARGO_CRATE_DEPENDS+=	get-size-derive2-0.7.1
-CARGO_CRATE_DEPENDS+=	get-size2-0.7.1
+CARGO_CRATE_DEPENDS+=	get-size-derive2-0.7.2
+CARGO_CRATE_DEPENDS+=	get-size2-0.7.2
 CARGO_CRATE_DEPENDS+=	getopts-0.2.24
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.16
 CARGO_CRATE_DEPENDS+=	getrandom-0.3.4
@@ -161,7 +161,7 @@ CARGO_CRATE_DEPENDS+=	ignore-0.4.25
 CARGO_CRATE_DEPENDS+=	imara-diff-0.1.8
 CARGO_CRATE_DEPENDS+=	imperative-1.0.6
 CARGO_CRATE_DEPENDS+=	indexmap-2.12.0
-CARGO_CRATE_DEPENDS+=	indicatif-0.18.2
+CARGO_CRATE_DEPENDS+=	indicatif-0.18.3
 CARGO_CRATE_DEPENDS+=	indoc-2.0.7
 CARGO_CRATE_DEPENDS+=	inotify-0.11.0
 CARGO_CRATE_DEPENDS+=	inotify-sys-0.1.5
@@ -271,8 +271,8 @@ CARGO_CRATE_DEPENDS+=	proc-macro-crate-3.4.0
 CARGO_CRATE_DEPENDS+=	proc-macro-utils-0.10.0
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.103
 CARGO_CRATE_DEPENDS+=	pyproject-toml-0.13.7
-CARGO_CRATE_DEPENDS+=	quick-junit-0.5.1
-CARGO_CRATE_DEPENDS+=	quick-xml-0.37.5
+CARGO_CRATE_DEPENDS+=	quick-junit-0.5.2
+CARGO_CRATE_DEPENDS+=	quick-xml-0.38.4
 CARGO_CRATE_DEPENDS+=	quickcheck-1.0.3
 CARGO_CRATE_DEPENDS+=	quickcheck_macros-1.1.0
 CARGO_CRATE_DEPENDS+=	quote-1.0.42
@@ -338,6 +338,7 @@ CARGO_CRATE_DEPENDS+=	strip-ansi-escapes-0.2.1
 CARGO_CRATE_DEPENDS+=	strsim-0.11.1
 CARGO_CRATE_DEPENDS+=	strum-0.27.2
 CARGO_CRATE_DEPENDS+=	strum_macros-0.27.2
+CARGO_CRATE_DEPENDS+=	supports-hyperlinks-3.1.0
 CARGO_CRATE_DEPENDS+=	syn-2.0.110
 CARGO_CRATE_DEPENDS+=	synstructure-0.13.2
 CARGO_CRATE_DEPENDS+=	tap-1.0.1
