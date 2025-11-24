@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6871 2025/11/24 07:26:23 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6872 2025/11/24 09:05:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9988,3 +9988,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/task to 3.45.5 [iquiw 2025-11-24]
 	Updated www/py-channels to 4.3.2 [adam 2025-11-24]
 	Updated finance/bitcoin to 30.0 [adam 2025-11-24]
+	Updated devel/wayland-protocols to 1.46 [wiz 2025-11-24]
