@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6884 2025/11/24 11:44:13 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6885 2025/11/24 11:48:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10001,3 +10001,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/lima to 2.0.1 [wiz 2025-11-24]
 	Updated textproc/moor to 2.9.2 [wiz 2025-11-24]
 	Updated shells/oh-my-posh to 28.0.0 [pin 2025-11-24]
+	Added textproc/rucola version 0.8.0 [pin 2025-11-24]
