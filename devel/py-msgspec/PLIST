@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/04/12 12:08:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/11/24 14:56:15 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -12,6 +12,10 @@ ${PYSITELIB}/msgspec/_core.so
 ${PYSITELIB}/msgspec/_json_schema.py
 ${PYSITELIB}/msgspec/_json_schema.pyc
 ${PYSITELIB}/msgspec/_json_schema.pyo
+${PYSITELIB}/msgspec/_typing_utils.py
+${PYSITELIB}/msgspec/_typing_utils.pyc
+${PYSITELIB}/msgspec/_typing_utils.pyi
+${PYSITELIB}/msgspec/_typing_utils.pyo
 ${PYSITELIB}/msgspec/_utils.py
 ${PYSITELIB}/msgspec/_utils.pyc
 ${PYSITELIB}/msgspec/_utils.pyo
