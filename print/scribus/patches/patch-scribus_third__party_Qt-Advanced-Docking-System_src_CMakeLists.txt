@@ -1,4 +1,4 @@
-$NetBSD: patch-scribus_third__party_Qt-Advanced-Docking-System_src_CMakeLists.txt,v 1.1 2025/11/10 13:54:53 wiz Exp $
+$NetBSD: patch-scribus_third__party_Qt-Advanced-Docking-System_src_CMakeLists.txt,v 1.2 2025/11/24 07:36:55 wiz Exp $
 
 Don't install qt advanced docking system.
 From gentoo
@@ -6,7 +6,16 @@ https://gitweb.gentoo.org/repo/gentoo.git/tree/app-office/scribus/files/scribus-
 
 --- scribus/third_party/Qt-Advanced-Docking-System/src/CMakeLists.txt.orig	2025-01-25 21:57:22.000000000 +0000
 +++ scribus/third_party/Qt-Advanced-Docking-System/src/CMakeLists.txt
-@@ -71,13 +71,13 @@ if (UNIX AND NOT APPLE)
+@@ -6,7 +6,7 @@ if (${QT_VERSION_MAJOR})
+ else()
+   find_package(QT NAMES Qt6 Qt5 COMPONENTS Core REQUIRED)
+ endif()
+-find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Gui Widgets REQUIRED)
++find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Gui GuiPrivate Widgets REQUIRED)
+ if (UNIX AND NOT APPLE)
+     include_directories(${Qt${QT_VERSION_MAJOR}Gui_PRIVATE_INCLUDE_DIRS})
+ endif()
+@@ -71,18 +71,19 @@ if (UNIX AND NOT APPLE)
  endif()
  
  set(library_name "qt${QT_VERSION_MAJOR}advanceddocking")
@@ -25,7 +34,13 @@ https://gitweb.gentoo.org/repo/gentoo.git/tree/app-office/scribus/files/scribus-
  
  add_library(ads::${library_name} ALIAS ${library_name})
  
-@@ -119,35 +119,35 @@ write_basic_package_version_file(
+ target_link_libraries(${library_name} PUBLIC Qt${QT_VERSION_MAJOR}::Core 
+                                                Qt${QT_VERSION_MAJOR}::Gui 
++                                               Qt${QT_VERSION_MAJOR}::GuiPrivate 
+                                                Qt${QT_VERSION_MAJOR}::Widgets)
+ if (UNIX AND NOT APPLE)
+   if (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
+@@ -119,35 +120,35 @@ write_basic_package_version_file(
      VERSION ${VERSION_SHORT}
      COMPATIBILITY SameMajorVersion
  )
