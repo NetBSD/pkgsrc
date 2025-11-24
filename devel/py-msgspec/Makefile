@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/10/09 07:57:34 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/11/24 14:56:15 adam Exp $
 
-DISTNAME=	msgspec-0.19.0
+DISTNAME=	msgspec-0.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/msgspec/}
 
@@ -11,9 +10,12 @@ HOMEPAGE=	https://jcristharif.com/msgspec/
 COMMENT=	Fast serialization and validation library
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=80:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8:../../devel/py-setuptools_scm
+# toml
 DEPENDS+=	${PYPKGPREFIX}-tomli_w-[0-9]*:../../textproc/py-tomli_w
+# yaml
+DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
