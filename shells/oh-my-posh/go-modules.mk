@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.111 2025/11/14 08:29:49 pin Exp $
+# $NetBSD: go-modules.mk,v 1.112 2025/11/24 11:43:53 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -74,8 +74,8 @@ GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.6.0.mod
 GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.6.0.zip
 GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.6.0.mod
 GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.6.0.zip
-GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.7.1.mod
-GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.7.1.zip
+GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.7.2.mod
+GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.7.2.zip
 GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.24.0.mod
 GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.24.0.zip
 GO_MODULE_FILES+=	github.com/huandu/xstrings/@v/v1.5.0.mod
@@ -161,8 +161,8 @@ GO_MODULE_FILES+=	github.com/yusufpapurcu/wmi/@v/v1.2.4.mod
 GO_MODULE_FILES+=	github.com/yusufpapurcu/wmi/@v/v1.2.4.zip
 GO_MODULE_FILES+=	github.com/zclconf/go-cty/@v/v1.17.0.mod
 GO_MODULE_FILES+=	github.com/zclconf/go-cty/@v/v1.17.0.zip
-GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.42.0.mod
-GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.42.0.zip
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.45.0.mod
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.45.0.zip
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20241217172543-b2144cdd0a67.mod
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20241217172543-b2144cdd0a67.zip
 GO_MODULE_FILES+=	golang.org/x/image/@v/v0.33.0.mod
