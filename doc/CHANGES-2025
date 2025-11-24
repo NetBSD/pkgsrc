@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6876 2025/11/24 09:19:27 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6877 2025/11/24 09:22:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9993,3 +9993,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/fzf to 0.67.0 [wiz 2025-11-24]
 	Updated www/nghttp3 to 1.13.1 [wiz 2025-11-24]
 	Updated graphics/openexr to 3.4.4 [wiz 2025-11-24]
+	Updated archivers/py-brotlicffi to 1.2.0.0 [wiz 2025-11-24]
