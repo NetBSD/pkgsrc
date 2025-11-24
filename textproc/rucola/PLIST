@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2025/11/24 11:47:05 pin Exp $
+bin/rucola
+share/examples/rucola/config.toml
+share/examples/rucola/default_dark.css
+share/examples/rucola/default_dark.toml
+share/examples/rucola/default_light.css
+share/examples/rucola/default_light.toml
