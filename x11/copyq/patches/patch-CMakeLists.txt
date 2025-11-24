@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/11/24 07:57:11 wiz Exp $
+
+Fix build with qt6 6.10.
+
+--- CMakeLists.txt.orig	2025-10-22 07:58:33.000000000 +0000
++++ CMakeLists.txt
+@@ -46,6 +46,7 @@ set(CMAKE_AUTOMOC ON)
+ OPTION(WITH_QT6 "Enable Qt 6" ON)
+ if (WITH_QT6)
+     set(QT_DEFAULT_MAJOR_VERSION 6)
++    find_package(Qt6 COMPONENTS GuiPrivate REQUIRED)
+     find_package(Qt6Widgets 6.1.0 REQUIRED)
+     set(copyq_qt Qt6)
+     add_definitions( -DQT_DEPRECATED_WARNINGS_SINCE=0x051500 )

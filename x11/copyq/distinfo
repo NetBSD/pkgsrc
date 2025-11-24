@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2025/10/25 11:46:39 kikadf Exp $
+$NetBSD: distinfo,v 1.7 2025/11/24 07:57:11 wiz Exp $
 
 BLAKE2s (copyq-13.0.0.tar.gz) = 1c7434c36cae2b0d52f307f108a5018615a5f56caad7a74e3e8726116b43815a
 SHA512 (copyq-13.0.0.tar.gz) = 0962ed9e1a53782e36b4c5156e4a89a3057ce1ff54016c27a1c353272c0493a01b7d4403ab92c09ba39f0a13963057fcb7408cd3e30f8f7d17472c4148e400e6
 Size (copyq-13.0.0.tar.gz) = 3533218 bytes
+SHA1 (patch-CMakeLists.txt) = 1a114ef64c117215420e919543ef8b73372b12ba
