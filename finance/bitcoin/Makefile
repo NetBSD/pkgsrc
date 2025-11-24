@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.98 2025/10/23 20:36:55 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2025/11/24 07:25:24 adam Exp $
 
-DISTNAME=	bitcoin-29.1
-PKGREVISION=	1
+DISTNAME=	bitcoin-30.0
 CATEGORIES=	finance
 MASTER_SITES=	https://bitcoincore.org/bin/bitcoin-core-${PKGVERSION_NOREV}/
 
@@ -12,7 +11,7 @@ LICENSE=	mit
 
 RCD_SCRIPTS=	bitcoind
 
-USE_CXX_FEATURES+=	c++20 filesystem
+USE_CXX_FEATURES=	c++20 filesystem
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
@@ -51,6 +50,7 @@ BUILDLINK_TRANSFORM+=	l:db_cxx:db4_cxx
 .include "../../databases/db4/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/capnproto/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.21
 .include "../../devel/libevent/buildlink3.mk"
