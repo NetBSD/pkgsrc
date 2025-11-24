@@ -1,0 +1,32 @@
+$NetBSD: patch-cube_CMakeLists.txt,v 1.1 2025/11/24 20:52:56 tnn Exp $
+
+On NetBSD wayland-client.pc has:
+Libs: -Wl,-R${libdir} -L${libdir} -lwayland-client -lm
+
+We need to pull out the first library in the list for dlopen purposes
+and skip the rest.
+
+--- cube/CMakeLists.txt.orig	2025-11-24 20:44:04.253915997 +0000
++++ cube/CMakeLists.txt
+@@ -314,7 +314,9 @@ if (X11_LINK_LIBRARIES)
+     target_compile_definitions(vkcube PRIVATE "XLIB_LIBRARY=\"${X11_LINK_LIBRARIES}\"")
+ endif()
+ if (WAYLAND_CLIENT_LINK_LIBRARIES)
+-    target_compile_definitions(vkcube PRIVATE "WAYLAND_LIBRARY=\"${WAYLAND_CLIENT_LINK_LIBRARIES}\"")
++    #target_compile_definitions(vkcube PRIVATE "WAYLAND_LIBRARY=\"${WAYLAND_CLIENT_LINK_LIBRARIES}\"")
++    list(GET WAYLAND_CLIENT_LINK_LIBRARIES 0 WAYLAND_CLIENT_LIB)
++    target_compile_definitions(vkcube PRIVATE "WAYLAND_LIBRARY=\"${WAYLAND_CLIENT_LIB}\"")
+ endif()
+ 
+ # ----------------------------------------------------------------------------
+@@ -367,7 +369,9 @@ if (X11_LINK_LIBRARIES)
+     target_compile_definitions(vkcubepp PUBLIC "XLIB_LIBRARY=\"${X11_LINK_LIBRARIES}\"")
+ endif()
+ if (WAYLAND_CLIENT_LINK_LIBRARIES)
+-    target_compile_definitions(vkcubepp PUBLIC "WAYLAND_LIBRARY=\"${WAYLAND_CLIENT_LINK_LIBRARIES}\"")
++    #target_compile_definitions(vkcubepp PUBLIC "WAYLAND_LIBRARY=\"${WAYLAND_CLIENT_LINK_LIBRARIES}\"")
++    list(GET WAYLAND_CLIENT_LINK_LIBRARIES 0 WAYLAND_CLIENT_LIB)
++    target_compile_definitions(vkcubepp PUBLIC "WAYLAND_LIBRARY=\"${WAYLAND_CLIENT_LIB}\"")
+ endif()
+ 
+ if(APPLE)
