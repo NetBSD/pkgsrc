@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6872 2025/11/24 09:05:10 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6873 2025/11/24 09:13:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9989,3 +9989,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-channels to 4.3.2 [adam 2025-11-24]
 	Updated finance/bitcoin to 30.0 [adam 2025-11-24]
 	Updated devel/wayland-protocols to 1.46 [wiz 2025-11-24]
+	Updated textproc/enchant2 to 2.8.14 [wiz 2025-11-24]
