@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1549 2025/11/10 09:39:30 pin Exp $
+# $NetBSD: Makefile,v 1.1550 2025/11/24 11:48:06 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1400,6 +1400,7 @@ SUBDIR+=	ruby-xslt
 SUBDIR+=	ruby-yajl
 SUBDIR+=	ruby-yamcha
 SUBDIR+=	ruby-yard
+SUBDIR+=	rucola
 SUBDIR+=	sablotron
 SUBDIR+=	sary
 SUBDIR+=	saxon
