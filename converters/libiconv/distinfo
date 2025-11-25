@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.46 2025/11/15 13:12:46 ryoon Exp $
+$NetBSD: distinfo,v 1.47 2025/11/25 12:26:46 hauke Exp $
 
 BLAKE2s (libiconv-1.18.tar.gz) = 8b22e4e00213e4102f7a66cc2533f0bc4e62b537eda5c5214b9fc731c6d25c95
 SHA512 (libiconv-1.18.tar.gz) = a55eb3b7b785a78ab8918db8af541c9e11deb5ff4f89d54483287711ed797d87848ce0eafffa7ce26d9a7adb4b5a9891cb484f94bd4f51d3ce97a6a47b4c719a
 Size (libiconv-1.18.tar.gz) = 5822590 bytes
-SHA1 (patch-src_Makefile.in) = 404f0134fd27366a64217ead60041dc422431b40
+SHA1 (patch-src_Makefile.in) = c99ea1eb7e9ed9b841bdc3984dad951ece0ff661
