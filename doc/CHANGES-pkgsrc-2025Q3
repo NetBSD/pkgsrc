@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q3,v 1.1.2.12 2025/11/21 08:44:23 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q3,v 1.1.2.13 2025/11/25 08:38:58 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q3 branch:
 
@@ -79,4 +79,10 @@ www/squid7: Bug fix
 
 Pullup ticket #7032 - requested by nia
 security/pkcs11-helper: security fix
+
+Pullup ticket #7033 - requested by wiz
+misc/libreoffice: build fix
+
+Pullup ticket #7034 - requested by nia
+www/palemoon: sparc64 build fix
 
