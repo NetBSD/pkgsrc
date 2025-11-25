@@ -1,14 +1,8 @@
-@comment $NetBSD: PLIST,v 1.29 2025/11/20 12:36:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2025/11/25 06:12:39 wiz Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
 ${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/ffmpeg_pch.h
-${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfcamerafactory_p.h
-${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfcamerarotationtracker_p.h
-${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfcapturephotooutputdelegate_p.h
-${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfimagecapture_p.h
-${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfstillphotonotifier_p.h
-${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qcvimagevideobuffer_p.h
 ${PLIST.ffmpeg}${PLIST.x11}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qeglfsscreencapture_p.h
 ${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpeg_p.h
 ${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpegaudiodecoder_p.h

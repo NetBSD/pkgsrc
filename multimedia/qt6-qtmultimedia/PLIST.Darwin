@@ -1,9 +1,15 @@
-@comment $NetBSD: PLIST.Darwin,v 1.7 2025/11/20 12:36:37 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.8 2025/11/25 06:12:39 wiz Exp $
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfcamera_p.h
+qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfcamerafactory_p.h
+qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfcamerarotationtracker_p.h
+qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfcapturephotooutputdelegate_p.h
+qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfimagecapture_p.h
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfsamplebufferdelegate_p.h
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfscreencapture_p.h
+qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfstillphotonotifier_p.h
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qcgcapturablewindows_p.h
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qcgwindowcapture_p.h
+qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qcvimagevideobuffer_p.h
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpeghwaccel_videotoolbox_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qautoresetevent_kqueue_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qavfcamerabase_p.h
