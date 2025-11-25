@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2015/08/16 06:08:57 mef Exp $
-#
+# $NetBSD: Makefile,v 1.9 2025/11/25 07:01:48 wiz Exp $
 
 DISTNAME=	blogbench-1.1
 CATEGORIES=	benchmarks
-MASTER_SITES=	http://download.pureftpd.org/pub/blogbench/
+#MASTER_SITES=	http://download.pureftpd.org/pub/blogbench/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://blogbench.pureftpd.org/
+HOMEPAGE=	https://github.com/jedisct1/Blogbench
 COMMENT=	Portable filesystem benchmark
 
 GNU_CONFIGURE=		yes
