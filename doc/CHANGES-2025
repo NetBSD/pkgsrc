@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6890 2025/11/25 07:19:22 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6891 2025/11/25 08:09:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10010,3 +10010,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed audio/bml [wiz 2025-11-25]
 	Updated net/ngtcp2 to 1.18.0 [adam 2025-11-25]
 	Updated inputmethod/librime to 1.15.0 [adam 2025-11-25]
+	Updated www/py-hishel to 1.1.6 [adam 2025-11-25]
+	Updated devel/py-packageurl to 0.17.6 [adam 2025-11-25]
