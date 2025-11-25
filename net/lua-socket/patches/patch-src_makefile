@@ -1,27 +1,10 @@
-$NetBSD: patch-src_makefile,v 1.3 2024/02/05 13:23:16 tm Exp $
+$NetBSD: patch-src_makefile,v 1.4 2025/11/25 15:35:26 sborrill Exp $
 
-Pass our LDFLAGS.
 Build unix.so, serial.so and install them always.
 
---- src/makefile.orig	2013-06-14 11:27:32.000000000 +0000
-+++ src/makefile
-@@ -145,13 +145,13 @@ SOCKET_macosx=usocket.o
- SO_linux=so
- O_linux=o
- CC_linux=gcc
--DEF_linux=-DLUASOCKET_$(DEBUG) -DLUA_$(COMPAT)_MODULE \
-+DEF_linux=-DLUASOCKET_$(DEBUG) -DLUA_$(COMPAT)_MODULE -DLUA_COMPAT_APIINTCASTS \
- 	-DLUASOCKET_API='__attribute__((visibility("default")))' \
- 	-DUNIX_API='__attribute__((visibility("default")))' \
- 	-DMIME_API='__attribute__((visibility("default")))'
- CFLAGS_linux= -I$(LUAINC) $(DEF) -pedantic -Wall -Wshadow -Wextra \
- 	-Wimplicit -O2 -ggdb3 -fpic -fvisibility=hidden
--LDFLAGS_linux=-O -shared -fpic -o 
-+LDFLAGS_linux=-O -shared -fpic $(MYLDFLAGS) -o  
- LD_linux=gcc
- SOCKET_linux=usocket.o
- 
-@@ -307,7 +307,7 @@ none:
+--- src/makefile.orig	2022-07-27 08:07:00.000000000 +0100
++++ src/makefile	2025-11-25 13:23:54.489251390 +0000
+@@ -393,7 +393,7 @@
  	@echo "where PLATFORM is one of these:"
  	@echo "   $(PLATS)"
  
@@ -30,7 +13,7 @@ Build unix.so, serial.so and install them always.
  
  $(SOCKET_SO): $(SOCKET_OBJS)
  	$(LD) $(SOCKET_OBJS) $(LDFLAGS)$@
-@@ -332,6 +332,8 @@ install:
+@@ -418,6 +418,8 @@
  	$(INSTALL_EXEC) $(SOCKET_SO) $(INSTALL_SOCKET_CDIR)/core.$(SO)
  	$(INSTALL_DIR) $(INSTALL_MIME_CDIR)
  	$(INSTALL_EXEC) $(MIME_SO) $(INSTALL_MIME_CDIR)/core.$(SO)
