@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6893 2025/11/25 09:21:09 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.6894 2025/11/25 11:31:05 abs Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10014,3 +10014,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-packageurl to 0.17.6 [adam 2025-11-25]
 	Updated sysutils/duplicity to 3.0.6.2 [triaxx 2025-11-25]
 	Updated games/openrct2 to 0.4.29 [triaxx 2025-11-25]
+	Updated multimedia/mediainfo to 25.10 [abs 2025-11-25]
