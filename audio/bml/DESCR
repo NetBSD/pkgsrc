@@ -1,3 +1,0 @@
-The libbml is a library that loads buzz machines from the windows
-music composer Buzz, so that Linux apps can use them.  This lib is
-either using the libavifile wrapper or the libfst one.
