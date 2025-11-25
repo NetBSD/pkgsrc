@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2012/10/08 09:57:17 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2025/11/25 07:09:36 wiz Exp $
 
 DISTNAME=		bsdstats-5.3
 CATEGORIES=		sysutils misc
-MASTER_SITES=		# http://www.bsdstats.org/downloads/
+MASTER_SITES=		# https://www.bsdstats.org/downloads/
 DISTFILES=		# empty
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.bsdstats.org/
+#HOMEPAGE=		https://www.bsdstats.org/
 COMMENT=		BSD-Stats collector script
 
 DEPENDS+=		netcat-[0-9]*:../../net/netcat
