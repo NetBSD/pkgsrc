@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.716 2025/11/15 21:40:17 vins Exp $
+# $NetBSD: Makefile,v 1.717 2025/11/25 07:05:55 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -38,7 +38,6 @@ SUBDIR+=	aumix
 SUBDIR+=	aumix-gtk
 SUBDIR+=	bladeenc
 SUBDIR+=	blop
-SUBDIR+=	bml
 SUBDIR+=	bmp
 SUBDIR+=	bmp-crossfade
 SUBDIR+=	bmp-mac

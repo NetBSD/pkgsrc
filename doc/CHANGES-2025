@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6888 2025/11/24 18:43:55 vins Exp $
+$NetBSD: CHANGES-2025,v 1.6889 2025/11/25 07:05:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10007,3 +10007,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-msgspec to 0.20.0 [adam 2025-11-24]
 	Updated databases/py-orderedmultidict to 1.0.2 [adam 2025-11-24]
 	Updated shells/fish4 to 4.2.1 [vins 2025-11-24]
+	Removed audio/bml [wiz 2025-11-25]
