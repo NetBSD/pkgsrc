@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6898 2025/11/25 19:45:07 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6899 2025/11/25 20:41:23 jun Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10019,3 +10019,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/tokei to 13.0.0 [pin 2025-11-25]
 	Updated devel/feluda to 1.10.3 [pin 2025-11-25]
 	Updated textproc/scooter to 0.8.4 [pin 2025-11-25]
+	Updated emulators/nono to 1.6.3 [jun 2025-11-26]
