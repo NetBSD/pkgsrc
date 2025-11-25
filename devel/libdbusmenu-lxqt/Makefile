@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2025/10/23 20:36:29 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/11/25 22:54:01 gutteridge Exp $
+
+.include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	libdbusmenu-lxqt-0.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/lxqt/libdbusmenu-lxqt/
@@ -13,7 +12,6 @@ COMMENT=	Library providing a Qt implementation of the DBusMenu protocol
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 

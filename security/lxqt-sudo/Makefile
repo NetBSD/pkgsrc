@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.42 2025/11/11 03:07:03 gutteridge Exp $
+# $NetBSD: Makefile,v 1.43 2025/11/25 22:54:02 gutteridge Exp $
+
+.include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	lxqt-sudo-2.3.0
+PKGREVISION=	1
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/lxqt/lxqt-sudo/
@@ -12,7 +12,6 @@ COMMENT=	LXQt GUI frontend for sudo
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config perl
-USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DMSK_INSTALL_INCLUDES=/include
 
