@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: prosody.sh,v 1.8 2025/11/05 09:17:44 sborrill Exp $
+# $NetBSD: prosody.sh,v 1.9 2025/11/25 15:53:15 sborrill Exp $
 #
 # PROVIDE: prosody
 # REQUIRE: DAEMON
@@ -35,7 +35,9 @@ prosody_precmd()
 prosody_postcmd()
 {
     # Fix for failed socket clean-up which stops
-    # prosodyctl working after a restart
+    # prosodyctl working after a restart. This is caused
+    # by a potential build-time configuration error with
+    # lua-socket.
     if test -S "@PROSODY_RUN@/${name}.soc"; then
         rm -f "@PROSODY_RUN@/${name}.soc"
     fi
