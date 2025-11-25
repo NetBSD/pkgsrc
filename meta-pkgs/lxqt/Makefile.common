@@ -1,0 +1,38 @@
+# $NetBSD: Makefile.common,v 1.1 2025/11/25 22:54:01 gutteridge Exp $
+
+# used by archivers/lxqt-archiver/Makefile
+# used by audio/pavucontrol-qt/Makefile
+# used by devel/libdbusmenu-lxqt/Makefile
+# used by devel/lxqt-build-tools/Makefile
+# used by graphics/lximage-qt/Makefile
+# used by graphics/lxqt-themes/Makefile
+# used by graphics/screengrab/Makefile
+# used by security/lxqt-openssh-askpass/Makefile
+# used by security/lxqt-policykit/Makefile
+# used by security/lxqt-sudo/Makefile
+# used by sysutils/lxqt-menu-data/Makefile
+# used by sysutils/lxqt-powermanagement/Makefile
+# used by sysutils/pcmanfm-qt/Makefile
+# used by wm/obconf-qt/Makefile
+# used by x11/libfm-qt/Makefile
+# used by x11/liblxqt/Makefile
+# used by x11/libqtxdg/Makefile
+# used by x11/lxqt-about/Makefile
+# used by x11/lxqt-admin/Makefile
+# used by x11/lxqt-config/Makefile
+# used by x11/lxqt-globalkeys/Makefile
+# used by x11/lxqt-notificationd/Makefile
+# used by x11/lxqt-panel/Makefile
+# used by x11/lxqt-qtplugin/Makefile
+# used by x11/lxqt-runner/Makefile
+# used by x11/lxqt-session/Makefile
+# used by x11/qterminal/Makefile
+# used by x11/qtermwidget/Makefile
+# used by x11/qtxdg-tools/Makefile
+
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.xz
+
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++20

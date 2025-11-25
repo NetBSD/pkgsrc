@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.47 2025/11/11 03:06:15 gutteridge Exp $
+# $NetBSD: Makefile,v 1.48 2025/11/25 22:54:03 gutteridge Exp $
+
+.include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	lxqt-session-2.3.0
+PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/lxqt/lxqt-session/
@@ -12,7 +12,6 @@ COMMENT=	Session manager
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config perl
-USE_LANGUAGES=	c c++
 
 AUTOSTART_CONF=		share/examples/autostart
 PKG_SYSCONFSUBDIR=	xdg

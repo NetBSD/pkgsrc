@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.54 2025/11/11 02:50:13 gutteridge Exp $
+# $NetBSD: Makefile,v 1.55 2025/11/25 22:54:02 gutteridge Exp $
+
+.include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	libfm-qt-2.3.0
+PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/lxqt/libfm-qt/
@@ -12,7 +12,6 @@ COMMENT=	Core library of PCManFM-Qt
 LICENSE=	gnu-lgpl-v2.1 AND modified-bsd
 
 USE_TOOLS+=	pkg-config perl
-USE_LANGUAGES=	c c++
 
 PKG_SYSCONFSUBDIR=	xdg
 
