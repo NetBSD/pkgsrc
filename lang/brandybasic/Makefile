@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.19 2015/01/04 03:14:00 dholland Exp $
-#
+# $NetBSD: Makefile,v 1.20 2025/11/25 07:08:48 wiz Exp $
 
 DISTNAME=	b116
 PKGNAME=	brandybasic-1.0.16
 PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	http://jaguar.orpheusweb.co.uk/
+MASTER_SITES=	https://jaguar.orpheusweb.co.uk/
 # http://jaguar.orpheusweb.co.uk/brandy_119.tgz
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	http://jaguar.orpheusweb.co.uk/branpage.html
+HOMEPAGE=	https://jaguar.orpheusweb.co.uk/branpage.html
 COMMENT=	Brandy Basic V interpreter - Acorn ARM Computers BASIC dialect
 
 BROKEN_ON_PLATFORM=	SunOS-*-* # needs porting
