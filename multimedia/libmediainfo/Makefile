@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/03/10 15:05:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2025/11/25 11:30:34 abs Exp $
 
 .include "../../multimedia/mediainfo/Makefile.common"
 
@@ -22,7 +22,7 @@ LIBTOOL_OVERRIDE+=	${CONFIGURE_DIRS}/libtool
 
 .include "../../mk/bsd.prefs.mk"
 # Enable shared library
-.if empty(SHLIB_TYPE:Mnone)
+.if ${SHLIB_TYPE} != none
 CONFIGURE_ARGS+=	--enable-shared
 .endif
 
