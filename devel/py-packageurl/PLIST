@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2024/03/03 11:47:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/11/25 08:09:14 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/packageurl/__init__.py
 ${PYSITELIB}/packageurl/__init__.pyc
 ${PYSITELIB}/packageurl/__init__.pyo
@@ -33,7 +37,6 @@ ${PYSITELIB}/packageurl/py.typed
 ${PYSITELIB}/packageurl/utils.py
 ${PYSITELIB}/packageurl/utils.pyc
 ${PYSITELIB}/packageurl/utils.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/packageurl/validate.py
+${PYSITELIB}/packageurl/validate.pyc
+${PYSITELIB}/packageurl/validate.pyo
