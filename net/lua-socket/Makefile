@@ -1,18 +1,21 @@
-# $NetBSD: Makefile,v 1.14 2024/02/05 13:23:16 tm Exp $
+# $NetBSD: Makefile,v 1.15 2025/11/25 15:35:26 sborrill Exp $
 
-DISTNAME=		luasocket-3.0-rc1
-PKGNAME=		${LUA_PKGPREFIX}-${DISTNAME:S/lua//:S/-rc/rc/}
-PKGREVISION=		5
+DISTNAME=		luasocket-3.1.0
+PKGNAME=		${LUA_PKGPREFIX}-${DISTNAME:S/lua//}
 CATEGORIES=		net lua
-MASTER_SITES=		-https://github.com/diegonehab/luasocket/archive/v3.0-rc1.tar.gz
+MASTER_SITES=		-https://github.com/lunarmodules/luasocket/archive/v${PKGVERSION}.tar.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://w3.impa.br/~diego/software/luasocket/
+HOMEPAGE=		https://lunarmodules.github.io/luasocket/
 COMMENT=		Network support for the Lua language
 LICENSE=		mit
 
 MAKE_FILE=		makefile
 
+CFLAGS.Darwin=		-DUNIX_HAS_SUN_LEN
+CFLAGS.FreeBSD=		-DUNIX_HAS_SUN_LEN
+CFLAGS.NetBSD=		-DUNIX_HAS_SUN_LEN
+CFLAGS.SunOS=		-DUNIX_HAS_SUN_LEN
 LDFLAGS.SunOS=		-lrt -lresolv -lsocket -lnsl
 
 MAKE_FLAGS+=		LUAV=${_LUA_DOT_VERSION}
