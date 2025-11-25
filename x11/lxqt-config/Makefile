@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.52 2025/11/11 03:00:22 gutteridge Exp $
+# $NetBSD: Makefile,v 1.53 2025/11/25 22:54:03 gutteridge Exp $
+
+.include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	lxqt-config-2.3.0
+PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/lxqt/lxqt-config/
@@ -12,7 +12,6 @@ COMMENT=	System configuration control center
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config perl
-USE_LANGUAGES=	c c++
 
 # Requires xorg-libinput, which we lack in pkgsrc.
 CMAKE_CONFIGURE_ARGS+=	-DWITH_TOUCHPAD=OFF

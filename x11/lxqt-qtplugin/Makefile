@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2025/11/11 03:05:35 gutteridge Exp $
+# $NetBSD: Makefile,v 1.42 2025/11/25 22:54:03 gutteridge Exp $
+
+.include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	lxqt-qtplugin-2.3.0
+PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/lxqt/lxqt-qtplugin/
@@ -12,7 +12,6 @@ COMMENT=	LXQt platform integration plugin for Qt6
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths.

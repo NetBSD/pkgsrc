@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2025/11/11 03:12:07 gutteridge Exp $
+# $NetBSD: Makefile,v 1.42 2025/11/25 22:54:01 gutteridge Exp $
+
+.include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	screengrab-3.1.0
+PKGREVISION=	1
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/lxqt/screengrab/
@@ -12,7 +12,6 @@ COMMENT=	Crossplatform tool for grabbing screenshots of your desktop
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	pkg-config perl
-USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 

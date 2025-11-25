@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.42 2025/11/11 02:51:20 gutteridge Exp $
+# $NetBSD: Makefile,v 1.43 2025/11/25 22:54:00 gutteridge Exp $
+
+.include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	lxqt-archiver-1.3.0
+PKGREVISION=	1
 CATEGORIES=	archivers
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/lxqt/lxqt-archiver/
 COMMENT=	Simple and lightweight Qt file archiver
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config perl bsdtar:run gzip:run 7za:run gtar:run bzip2:run unzip:run zip:run xz:run
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
