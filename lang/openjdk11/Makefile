@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2025/11/15 12:13:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.81 2025/11/25 15:42:18 tnn Exp $
 
 DISTNAME=	jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -126,26 +126,6 @@ SUBST_MESSAGE.fontpaths=	fixing font paths
 SUBST_FILES.fontpaths=		make/data/fontconfig/bsd.fontconfig.properties
 SUBST_FILES.fontpaths+=		src/java.desktop/unix/native/common/awt/fontpath.c
 SUBST_VARS.fontpaths=		PREFIX BUILDLINK_PREFIX.fontconfig
-
-.if ${MACHINE_ARCH} == "aarch64"
-# See patches/patch-*threadWXSetters* for details.
-SUBST_CLASSES+=			aa64-membar
-SUBST_STAGE.aa64-membar=	pre-build
-SUBST_MESSAGE.aa64-membar=	Fixing cache coherency issues
-SUBST_SED.aa64-membar=		-e 's/MACOS_AARCH64_ONLY(ThreadWXEnable /AARCH64_ONLY(ThreadWXEnable /'
-SUBST_FILES.aa64-membar+=	src/hotspot/share/c1/c1_Runtime1.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/interpreter/interpreterRuntime.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/jvmci/jvmciEnv.hpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/opto/runtime.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/prims/jniCheck.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/prims/jvmtiEnter.xsl
-SUBST_FILES.aa64-membar+=	src/hotspot/share/prims/jvmtiEnv.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/prims/whitebox.inline.hpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/runtime/deoptimization.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/runtime/interfaceSupport.inline.hpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/runtime/safepoint.cpp
-SUBST_FILES.aa64-membar+=	src/hotspot/share/runtime/thread.cpp
-.endif
 
 .if ${OPSYS} == "NetBSD"
 # NetBSD's EVFILT_* EV_* are different from FreeBSD/OpenBSD's values.
