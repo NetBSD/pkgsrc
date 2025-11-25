@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2014/10/20 08:58:26 mef Exp $
-include/libbml/BuzzMachineLoader.h
-include/libbml/bml.h
-lib/bml/libbuzzmachineloader.la
-lib/libbml.la
-lib/pkgconfig/libbml.pc
