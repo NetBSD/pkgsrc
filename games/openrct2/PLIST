@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2025/10/11 09:39:55 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.31 2025/11/25 09:20:42 triaxx Exp $
 bin/openrct2
 bin/openrct2-cli
 lib/libopenrct2.a
@@ -1967,11 +1967,11 @@ share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.3x3hmsen.json
 share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.3x3mantr.json
 share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.50rocket.json
 share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.adultele.json
-share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.afrclion.json
-share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.afrrhino.json
-share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.afrzebra.json
+share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.afrclion.parkobj
+share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.afrrhino.parkobj
+share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.afrzebra.parkobj
 share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.atomium.json
-share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.atractor.json
+share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.atractor.parkobj
 share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.bamborf1.json
 share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.bamborf2.json
 share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.bamborf3.json
@@ -1998,8 +1998,8 @@ share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.goodsam.json
 share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.gwoctur1.json
 share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.gwoctur2.json
 share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.helipad.json
-share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.hippo01.json
-share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.hippo02.json
+share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.hippo01.parkobj
+share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.hippo02.parkobj
 share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.icefor01.json
 share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.icefor02.json
 share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.indianst.json
