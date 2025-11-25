@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/07/15 18:29:11 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/11/25 08:07:31 adam Exp $
 
-DISTNAME=	hishel-0.1.3
+DISTNAME=	hishel-1.1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hishel/}
@@ -12,7 +12,8 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme-[0-9]*:../../devel/py-hatch-fancy-pypi-readme
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-httpx>=0.28.0:../../www/py-httpx
+DEPENDS+=	${PYPKGPREFIX}-msgpack>=1.1.2:../../devel/py-msgpack
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.14.1:../../devel/py-typing-extensions
 
 USE_LANGUAGES=	# none
 
