@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.25 2023/10/24 22:08:19 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/11/25 07:06:49 wiz Exp $
 
 DISTNAME=	bnc2.9.4
 PKGNAME=	${DISTNAME:S/bnc/&-/}
 PKGREVISION=	7
 CATEGORIES=	chat
-MASTER_SITES=	http://www.ircadmin.net/bnc/
+#MASTER_SITES=	http://www.ircadmin.net/bnc/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gotbnc.com/
+#HOMEPAGE=	http://www.gotbnc.com/
 COMMENT=	Simple IRC relay proxy with support for virtual hosting
 
 DEPENDS+=	dialog-[0-9]*:../../misc/dialog
