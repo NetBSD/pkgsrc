@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6903 2025/11/26 08:31:31 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6904 2025/11/26 11:44:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10026,3 +10026,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-run-parallel to 0.8.0 [adam 2025-11-26]
 	Updated converters/bib2xml to 20021006nb4 [wiz 2025-11-26]
 	Removed textproc/btparse successor textproc/p5-Text-BibTeX [wiz 2025-11-26]
+	Updated databases/py-asyncpg to 0.31.0 [adam 2025-11-26]
+	Updated devel/py-construct-classes to 0.2.2 [adam 2025-11-26]
