@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2025/05/06 20:53:38 vins Exp $
+# $NetBSD: Makefile,v 1.29 2025/11/26 08:35:26 wiz Exp $
 
 BYOBUVER=	5.133
 DISTNAME=	byobu_${BYOBUVER}.orig
@@ -7,7 +7,7 @@ CATEGORIES=	misc
 MASTER_SITES=	https://launchpad.net/byobu/trunk/${BYOBUVER}/+download/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.byobu.org/
+HOMEPAGE=	https://www.byobu.org/
 COMMENT=	Open source text-based window manager and terminal multiplexer
 LICENSE=	gnu-gpl-v3
 
