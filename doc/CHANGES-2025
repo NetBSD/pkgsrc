@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6901 2025/11/26 06:47:59 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6902 2025/11/26 08:30:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10024,3 +10024,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/rtorrent to 0.16.4 [adam 2025-11-26]
 	Updated devel/py-blessed to 1.25.0 [adam 2025-11-26]
 	Updated devel/py-test-run-parallel to 0.8.0 [adam 2025-11-26]
+	Updated converters/bib2xml to 20021006nb4 [wiz 2025-11-26]
