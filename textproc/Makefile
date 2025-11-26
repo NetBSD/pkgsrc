@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1550 2025/11/24 11:48:06 pin Exp $
+# $NetBSD: Makefile,v 1.1551 2025/11/26 08:31:31 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -167,7 +167,6 @@ SUBDIR+=	biblook
 SUBDIR+=	bibparse
 SUBDIR+=	bk
 SUBDIR+=	bsdgrep-devel
-SUBDIR+=	btparse
 SUBDIR+=	c2html
 SUBDIR+=	cJSON
 SUBDIR+=	cabocha
