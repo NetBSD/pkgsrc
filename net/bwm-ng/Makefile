@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/06/02 16:49:07 vins Exp $
+# $NetBSD: Makefile,v 1.6 2025/11/26 08:33:34 wiz Exp $
 
 DISTNAME=	bwm-ng-0.6.3
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	https://www.gropp.org/bwm-ng/
 
 MAINTAINER=	vins@NetBSD.org
-HOMEPAGE=	https://www.gropp.org/bwm-ng/
+HOMEPAGE=	https://www.gropp.org/?id=projects&sub=bwm-ng
 COMMENT=	Console-based bandwidth monitor
 LICENSE=	gnu-gpl-v2
 
