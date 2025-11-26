@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2025/11/05 13:11:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/11/26 06:27:33 adam Exp $
 include/torrent/bitfield.h
 include/torrent/chunk_manager.h
 include/torrent/common.h
@@ -33,6 +33,7 @@ include/torrent/net/http_get.h
 include/torrent/net/http_stack.h
 include/torrent/net/network_config.h
 include/torrent/net/network_manager.h
+include/torrent/net/poll.h
 include/torrent/net/resolver.h
 include/torrent/net/socket_address.h
 include/torrent/net/socket_address_key.h
@@ -50,7 +51,6 @@ include/torrent/peer/connection_list.h
 include/torrent/peer/peer.h
 include/torrent/peer/peer_info.h
 include/torrent/peer/peer_list.h
-include/torrent/poll.h
 include/torrent/rate.h
 include/torrent/throttle.h
 include/torrent/torrent.h
