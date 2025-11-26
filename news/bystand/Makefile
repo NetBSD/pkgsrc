@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/05/28 09:35:18 zafer Exp $
+# $NetBSD: Makefile,v 1.22 2025/11/26 08:35:56 wiz Exp $
 
 DISTNAME=	bystand-1.2.0
 PKGREVISION=	11
@@ -7,7 +7,7 @@ MASTER_SITES=	#http://zzo38computer.org/prog/bystand/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	micha@NetBSD.org
-HOMEPAGE=	http://zzo38computer.org/fossil/bystand.ui/
+#HOMEPAGE=	http://zzo38computer.org/fossil/bystand.ui/
 COMMENT=	NNTP client software with command-line interface
 LICENSE=	public-domain
 
