@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6904 2025/11/26 11:44:28 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6905 2025/11/26 18:22:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10028,3 +10028,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed textproc/btparse successor textproc/p5-Text-BibTeX [wiz 2025-11-26]
 	Updated databases/py-asyncpg to 0.31.0 [adam 2025-11-26]
 	Updated devel/py-construct-classes to 0.2.2 [adam 2025-11-26]
+	Updated devel/py-uv to 0.9.13 [adam 2025-11-26]
+	Updated devel/py-uv-build to 0.9.13 [adam 2025-11-26]
