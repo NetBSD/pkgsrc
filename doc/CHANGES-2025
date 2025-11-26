@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6899 2025/11/25 20:41:23 jun Exp $
+$NetBSD: CHANGES-2025,v 1.6900 2025/11/26 06:27:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10020,3 +10020,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/feluda to 1.10.3 [pin 2025-11-25]
 	Updated textproc/scooter to 0.8.4 [pin 2025-11-25]
 	Updated emulators/nono to 1.6.3 [jun 2025-11-26]
+	Updated net/libtorrent to 0.16.4 [adam 2025-11-26]
+	Updated net/rtorrent to 0.16.4 [adam 2025-11-26]
