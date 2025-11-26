@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6900 2025/11/26 06:27:58 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6901 2025/11/26 06:47:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10022,3 +10022,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/nono to 1.6.3 [jun 2025-11-26]
 	Updated net/libtorrent to 0.16.4 [adam 2025-11-26]
 	Updated net/rtorrent to 0.16.4 [adam 2025-11-26]
+	Updated devel/py-blessed to 1.25.0 [adam 2025-11-26]
+	Updated devel/py-test-run-parallel to 0.8.0 [adam 2025-11-26]
