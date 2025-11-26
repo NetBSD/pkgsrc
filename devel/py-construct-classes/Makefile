@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2025/09/28 19:01:57 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/11/26 11:44:12 adam Exp $
 
-DISTNAME=	construct-classes-0.1.2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+DISTNAME=	construct_classes-0.2.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/construct-classes/}
 
@@ -11,7 +10,8 @@ HOMEPAGE=	https://github.com/matejcik/construct-classes
 COMMENT=	Parse your binary structs into dataclasses
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-build>=0.8.13:../../devel/py-uv-build
+DEPENDS+=	${PYPKGPREFIX}-construct>=2.10:../../devel/py-construct
 
 USE_LANGUAGES=	# none
 
