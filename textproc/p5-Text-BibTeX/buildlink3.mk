@@ -1,0 +1,12 @@
+# $NetBSD: buildlink3.mk,v 1.1 2025/11/26 08:30:03 wiz Exp $
+
+BUILDLINK_TREE+=	p5-Text-BibTeX
+
+.if !defined(P5_TEXT_BIBTEX_BUILDLINK3_MK)
+P5_TEXT_BIBTEX_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.p5-Text-BibTeX+=	p5-Text-BibTeX>=0.91nb1
+BUILDLINK_PKGSRCDIR.p5-Text-BibTeX?=	../../textproc/p5-Text-BibTeX
+.endif	# P5_TEXT_BIBTEX_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-p5-Text-BibTeX
