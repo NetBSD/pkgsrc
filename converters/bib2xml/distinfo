@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:06:38 nia Exp $
+$NetBSD: distinfo,v 1.7 2025/11/26 08:30:25 wiz Exp $
 
 BLAKE2s (bib2xml-10062002.tar.gz) = f3fd35176776f9ee36ad8e1e41aa557296e58203c0038277b3100594595a8377
 SHA512 (bib2xml-10062002.tar.gz) = 194d23f1cdb7949a122ddc15a923d065383356c882c1400e1f0c7939efbedc811ac06a8f33a8daf7659df7b288a5c54b39d33ff65ec484d1804a2f46d3fe0a74
 Size (bib2xml-10062002.tar.gz) = 302900 bytes
-SHA1 (patch-aa) = e7a4266d7320b6654d3efeccdf9e31b5ec0340e6
+SHA1 (patch-aa) = d70a7fd9fd63026cb5a239ec9fd0d398465d3a33
+SHA1 (patch-configure) = 54c914412fde36a2be742475166153ae4d58065c
+SHA1 (patch-progs_dumpnames.c) = 9e535b04a5ed89fb92028cea5a81c8f5f67e7fc0
+SHA1 (patch-progs_getopt.c) = f52fdb4677e4b356726bf60bf3c38817a584be0e
