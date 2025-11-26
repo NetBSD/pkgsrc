@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.14 2025/04/14 11:04:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/11/26 11:40:48 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/asyncpg/__init__.py
@@ -52,6 +51,7 @@ ${PYSITELIB}/asyncpg/pgproto/__init__.py
 ${PYSITELIB}/asyncpg/pgproto/__init__.pyc
 ${PYSITELIB}/asyncpg/pgproto/__init__.pyo
 ${PYSITELIB}/asyncpg/pgproto/buffer.pxd
+${PYSITELIB}/asyncpg/pgproto/buffer.pxi
 ${PYSITELIB}/asyncpg/pgproto/buffer.pyx
 ${PYSITELIB}/asyncpg/pgproto/codecs/__init__.pxd
 ${PYSITELIB}/asyncpg/pgproto/codecs/bits.pyx
@@ -117,7 +117,9 @@ ${PYSITELIB}/asyncpg/protocol/protocol.pxd
 ${PYSITELIB}/asyncpg/protocol/protocol.pyi
 ${PYSITELIB}/asyncpg/protocol/protocol.pyx
 ${PYSITELIB}/asyncpg/protocol/protocol.so
-${PYSITELIB}/asyncpg/protocol/record/__init__.pxd
+${PYSITELIB}/asyncpg/protocol/record.pyi
+${PYSITELIB}/asyncpg/protocol/record.so
+${PYSITELIB}/asyncpg/protocol/recordcapi.pxd
 ${PYSITELIB}/asyncpg/protocol/scram.pxd
 ${PYSITELIB}/asyncpg/protocol/scram.pyx
 ${PYSITELIB}/asyncpg/protocol/settings.pxd
