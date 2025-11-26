@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2025/11/17 13:49:49 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/11/26 06:47:41 adam Exp $
 
-DISTNAME=	pytest_run_parallel-0.7.1
+DISTNAME=	pytest_run_parallel-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-run-parallel/}
