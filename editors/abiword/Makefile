@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.243 2025/11/18 17:26:21 nia Exp $
+# $NetBSD: Makefile,v 1.244 2025/11/27 06:56:24 wiz Exp $
 
 .include 	"Makefile.common"
 
 PKGNAME=	${DISTNAME:tl:S/-release//1}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.abisource.com/
+HOMEPAGE=	https://gitlab.gnome.org/World/AbiWord
 COMMENT=	Open Source cross-platform word processor
 LICENSE=	gnu-gpl-v2
 
