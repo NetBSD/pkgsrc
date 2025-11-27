@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2025/04/21 16:21:39 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/11/27 08:56:46 wiz Exp $
 
 DISTNAME=	cd-discid-1.4
 CATEGORIES=	audio
-MASTER_SITES=	http://linukz.org/download/
+#MASTER_SITES=	http://linukz.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://linukz.org/cd-discid.shtml
+HOMEPAGE=	https://github.com/taem/cd-discid
 COMMENT=	Read CD to obtain CDDB discid information
 LICENSE=	gnu-gpl-v2
 
