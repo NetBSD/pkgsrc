@@ -1,10 +1,20 @@
-$NetBSD: patch-CMakeLists.txt,v 1.16 2025/09/30 13:05:43 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.17 2025/11/27 10:27:55 wiz Exp $
 
+Look for Qt6::GuiPrivate, needed by QXslx.
 Do not use application bundle on Darwin.
 Do not fetch fast_float.
 
 --- CMakeLists.txt.orig	2025-09-29 13:52:48.000000000 +0000
 +++ CMakeLists.txt
+@@ -26,7 +26,7 @@ SET(STELLARIUM_RELEASE_BUILD 1 CACHE BOO
+ ########### Detect Qt version
+ SET(ENABLE_QT6 1 CACHE BOOL "Whether to try building with Qt6. If Qt6 is not found, Qt5 will be used.")
+ IF(ENABLE_QT6)
+-    FIND_PACKAGE(Qt6 COMPONENTS Core QUIET)
++    FIND_PACKAGE(Qt6 COMPONENTS Core Gui GuiPrivate QUIET)
+ ENDIF()
+ if (NOT Qt6_FOUND)
+     FIND_PACKAGE(Qt5 REQUIRED COMPONENTS Core)
 @@ -252,7 +252,7 @@ IF(${CMAKE_BUILD_TYPE} MATCHES "Fuzzer")
       ENDIF()
  ENDIF()
