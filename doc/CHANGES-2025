@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6908 2025/11/27 09:45:20 leot Exp $
+$NetBSD: CHANGES-2025,v 1.6909 2025/11/27 09:56:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10033,3 +10033,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/opa to 1.11.0 [leot 2025-11-27]
 	Updated devel/conftest to 0.65.0 [leot 2025-11-27]
 	Updated devel/regal to 0.37.0 [leot 2025-11-27]
+	Updated devel/ccache to 4.12.2 [adam 2025-11-27]
+	Updated math/py-gmpy2 to 2.2.2 [adam 2025-11-27]
