@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6905 2025/11/26 18:22:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6906 2025/11/27 09:33:01 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10030,3 +10030,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-construct-classes to 0.2.2 [adam 2025-11-26]
 	Updated devel/py-uv to 0.9.13 [adam 2025-11-26]
 	Updated devel/py-uv-build to 0.9.13 [adam 2025-11-26]
+	Updated devel/opa to 1.11.0 [leot 2025-11-27]
