@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.7 2025/07/02 13:59:24 tnn Exp $
+@comment $NetBSD: PLIST.Linux,v 1.8 2025/11/27 12:48:09 tnn Exp $
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/minimum-linux_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfilesystemwatcher_inotify_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfutex_linux_p.h
@@ -71,7 +71,7 @@ qt6/lib/cmake/Qt6Network/Qt6QNetworkManagerNetworkInformationPluginTargets-relea
 qt6/lib/cmake/Qt6Network/Qt6QNetworkManagerNetworkInformationPluginTargets.cmake
 qt6/lib/libQt6InputSupport.a
 qt6/lib/libQt6InputSupport.prl
-qt6/metatypes/qt6inputsupportprivate_release_metatypes.json
+qt6/metatypes/qt6inputsupportprivate_metatypes.json
 qt6/mkspecs/modules/qt_lib_input_support_private.pri
 qt6/modules/InputSupportPrivate.json
 qt6/plugins/generic/libqevdevkeyboardplugin.so
