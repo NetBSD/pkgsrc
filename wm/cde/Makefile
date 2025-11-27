@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/11/17 11:01:36 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/11/27 20:31:27 vins Exp $
 
-DISTNAME=	cde-2.5.2
-PKGREVISION=	2
+DISTNAME=	cde-2.5.3
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cdesktopenv/files/src/}
 
@@ -60,7 +59,10 @@ REPLACE.tclsh.old=	.*/bin/tclsh
 REPLACE.tclsh.new=	${PREFIX}/bin/tclsh
 REPLACE_FILES.tclsh+=	programs/dtdocbook/tcl/docbook.tcl
 
-.if !empty(USE_BUILTIN.iconv:M[nN][oO])
+CHECK_BUILTIN.iconv:=   yes
+.include "../../converters/libiconv/builtin.mk"
+CHECK_BUILTIN.iconv:=   no
+.if ${USE_BUILTIN.iconv:tl} == no
 SUBST_CLASSES+=		iconv
 SUBST_STAGE.iconv=	pre-configure
 SUBST_FILES.iconv+=	programs/dtmail/libDtMail/Common/Session.C
@@ -80,7 +82,7 @@ SUBST_MESSAGE.paths=	Replacing path placeholders.
 MAKE_ENV+=	x_includes=${X11BASE}/include
 MAKE_FLAGS+=	YACC=${YACC:Q}
 MAKE_FLAGS+=	PERL=${PERL5:Q}
-MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:M*:Q}
 
 SPECIAL_PERMS+=	${PREFIX}/dt/bin/dtterm ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=	${PREFIX}/dt/bin/dtapppgather ${SETUID_ROOT_PERMS}
@@ -158,6 +160,7 @@ post-install: pam-install
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../databases/lmdb/buildlink3.mk"
 .include "../../textproc/opensp/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
