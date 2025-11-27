@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6917 2025/11/27 16:31:08 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6918 2025/11/27 17:11:06 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10044,3 +10044,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated meta-pkgs/xfce4 to 4.20.0nb12 [gutteridge 2025-11-27]
 	Updated net/libnice to 0.1.23 [adam 2025-11-27]
 	Updated devel/py-dotenv to 1.2.1 [adam 2025-11-27]
+	Updated www/hugo to 0.152.2 [triaxx 2025-11-27]
