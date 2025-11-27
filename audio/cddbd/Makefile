@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/01/06 00:06:25 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.19 2025/11/27 09:03:20 wiz Exp $
 
 DISTNAME=	cddbd-1.3.1
 PKGNAME=	cddbd-1.3.1p1
@@ -11,7 +10,7 @@ PATCH_SITES=	${MASTER_SITES}
 PATCHFILES=	cddbd-1.3.1.patch1.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.freedb.org/en/download__server_software.4.html
+HOMEPAGE=	https://sourceforge.net/projects/freedb/
 COMMENT=	Internet CD Database Server
 LICENSE=	gnu-gpl-v2
 
