@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/06/28 11:31:00 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/11/27 08:58:23 wiz Exp $
 
 DISTNAME=	cdhit-4.8.1
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=weizhongli/}
 GITHUB_TAG=	V${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://weizhong-lab.ucsd.edu/cd-hit/
+HOMEPAGE=	https://github.com/weizhongli/cdhit
 COMMENT=	Clustering and comparing protein or nucleotide sequences
 LICENSE=	gnu-gpl-v2
 
