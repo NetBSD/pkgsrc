@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6913 2025/11/27 13:56:43 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.6914 2025/11/27 13:58:13 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10039,3 +10039,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xfce4-settings to 4.20.2 [gutteridge 2025-11-27]
 	Updated x11/xfce4-session to 4.20.3 [gutteridge 2025-11-27]
 	Updated x11/xfce4-tumbler to 4.20.1 [gutteridge 2025-11-27]
+	Updated x11/xfce4-panel to 4.20.5 [gutteridge 2025-11-27]
