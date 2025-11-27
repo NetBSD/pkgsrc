@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.111 2025/10/23 20:39:30 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2025/11/27 13:59:42 gutteridge Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	thunar-4.20.3
+DISTNAME=	thunar-4.20.6
 PKGNAME=	xfce4-${DISTNAME}
 CATEGORIES=	sysutils
 MASTER_SITES=	https://archive.xfce.org/src/xfce/thunar/${PKGVERSION_NOREV:R}/
