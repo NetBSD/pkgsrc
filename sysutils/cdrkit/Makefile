@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.21 2025/08/20 07:17:36 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/11/27 10:08:17 wiz Exp $
 
 DISTNAME=	cdrkit-1.1.9
 PKGREVISION=	10
 CATEGORIES=	sysutils
-MASTER_SITES=	http://cdrkit.org/releases/
+#MASTER_SITES=	http://cdrkit.org/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cdrkit.org/
+#HOMEPAGE=	http://cdrkit.org/
 COMMENT=	Portable command-line CD/DVD recorder software
 
 CONFLICTS=	cdrtools-[0-9]*
