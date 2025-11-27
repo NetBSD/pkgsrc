@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6906 2025/11/27 09:33:01 leot Exp $
+$NetBSD: CHANGES-2025,v 1.6907 2025/11/27 09:40:35 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10031,3 +10031,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-uv to 0.9.13 [adam 2025-11-26]
 	Updated devel/py-uv-build to 0.9.13 [adam 2025-11-26]
 	Updated devel/opa to 1.11.0 [leot 2025-11-27]
+	Updated devel/conftest to 0.65.0 [leot 2025-11-27]
