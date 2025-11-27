@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2022/06/28 11:35:34 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2025/11/27 06:59:43 wiz Exp $
 
 VERSION=	2.11
 DISTNAME=	signing-party_${VERSION}.orig
@@ -8,7 +8,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/signing-party/}
 
 MAINTAINER=	tonio@NetBSD.org
-HOMEPAGE=	http://pgp-tools.alioth.debian.org/
+HOMEPAGE=	https://packages.debian.org/sid/signing-party
 COMMENT=	Various GnuPG related tools
 LICENSE=	gnu-gpl-v2 AND modified-bsd
 
