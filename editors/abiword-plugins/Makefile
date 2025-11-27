@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.170 2025/11/18 17:26:22 nia Exp $
+# $NetBSD: Makefile,v 1.171 2025/11/27 06:56:24 wiz Exp $
 
 .include	"../../editors/abiword/Makefile.common"
 
 PKGNAME=	abiword-plugins-${ABIVERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.abisource.com/
+HOMEPAGE=	https://gitlab.gnome.org/World/AbiWord
 COMMENT=	Open Source cross-platform word processor
 LICENSE=	gnu-gpl-v2
 
