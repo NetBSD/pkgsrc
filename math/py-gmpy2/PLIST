@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/16 11:28:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/11/27 09:56:06 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -9,6 +9,9 @@ ${PYSITELIB}/gmpy2/__init__.pxd
 ${PYSITELIB}/gmpy2/__init__.py
 ${PYSITELIB}/gmpy2/__init__.pyc
 ${PYSITELIB}/gmpy2/__init__.pyo
+${PYSITELIB}/gmpy2/gmp.h
 ${PYSITELIB}/gmpy2/gmpy2.h
 ${PYSITELIB}/gmpy2/gmpy2.pxd
 ${PYSITELIB}/gmpy2/gmpy2.so
+${PYSITELIB}/gmpy2/mpc.h
+${PYSITELIB}/gmpy2/mpfr.h
