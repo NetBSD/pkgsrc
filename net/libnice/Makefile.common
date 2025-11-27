@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.7 2024/03/06 18:46:27 adam Exp $
+# $NetBSD: Makefile.common,v 1.8 2025/11/27 16:27:47 adam Exp $
 #
 # used by net/libnice/Makefile
 # used by net/gst-plugins1-libnice/Makefile
 
-DISTNAME=	libnice-0.1.22
+DISTNAME=	libnice-0.1.23
 CATEGORIES=	net devel
 MASTER_SITES=	https://libnice.freedesktop.org/releases/
 
@@ -20,7 +20,7 @@ USE_TOOLS+=	pkg-config
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-USE_LANGUAGES+=	c99
+USE_CC_FEATURES+=	c99
 .endif
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.54.0
