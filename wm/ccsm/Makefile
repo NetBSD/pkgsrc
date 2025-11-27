@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2025/08/24 16:36:20 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2025/11/27 08:36:21 wiz Exp $
 
 PKGVER=			0.8.4
 DISTNAME=		ccsm-${PKGVER}
@@ -7,7 +7,7 @@ CATEGORIES=		wm gnome
 MASTER_SITES=		#
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://compiz.org/
+HOMEPAGE=		https://gitlab.com/compiz/ccsm
 COMMENT=		CompizConfig Settings Manager
 LICENSE=		gnu-gpl-v2
 
