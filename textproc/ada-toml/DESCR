@@ -1,0 +1,4 @@
+TOML parser for Ada
+
+Pure Ada library for parsing and creating TOML documents.
+It conforms to the version 1.0.0 of the format standard.
