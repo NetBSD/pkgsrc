@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6930 2025/11/28 20:36:05 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.6931 2025/11/28 21:04:04 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10060,3 +10060,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/anubis to 1.23.1 [ryoon 2025-11-28]
 	Added textproc/ada-toml version 0.5.0 [dkazankov 2025-11-28]
 	Added devel/ada-gnat_util14 version 14.3.0 [dkazankov 2025-11-28]
+	Added devel/gnatcoverage version 25.2.0 [dkazankov 2025-11-28]
