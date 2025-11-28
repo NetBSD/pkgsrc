@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6919 2025/11/27 20:32:29 vins Exp $
+$NetBSD: CHANGES-2025,v 1.6920 2025/11/28 11:46:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10046,3 +10046,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-dotenv to 1.2.1 [adam 2025-11-27]
 	Updated www/hugo to 0.152.2 [triaxx 2025-11-27]
 	Updated wm/cde to 2.5.3 [vins 2025-11-27]
+	Updated databases/py-sqlparse to 0.5.4 [adam 2025-11-28]
+	Updated databases/py-python-sql to 1.7.0 [adam 2025-11-28]
