@@ -1,0 +1,15 @@
+$NetBSD: patch-tools_gnatcov_trace__adapters_trace32_Makefile,v 1.1 2025/11/28 21:03:12 dkazankov Exp $
+
+Add options for gprbuild
+
+--- tools/gnatcov/trace_adapters/trace32/Makefile.orig	2025-06-02 17:05:39.000000000 +0300
++++ tools/gnatcov/trace_adapters/trace32/Makefile
+@@ -33,7 +33,7 @@
+  -largs $(LD_FLAGS) \
+  -cargs:c++ $(CXXFLAGS) \
+  $(EXTRA_ADAFLAGS) \
+- -gargs
++ -gargs $(GPRBUILD_OPTIONS)
+ 
+ bin: force
+ 	$(GPRBUILD) $(BIN_COMMON_BUILD_ARGS) -XPART=lib64

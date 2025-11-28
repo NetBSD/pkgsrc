@@ -1,0 +1,30 @@
+$NetBSD: patch-tools_gnatcov_stable__sloc.gpr,v 1.1 2025/11/28 21:03:12 dkazankov Exp $
+
+Create project file for stable_sloc package
+
+--- /dev/null
++++ tools/gnatcov/stable_sloc.gpr
+@@ -0,0 +1,23 @@
++with "gnatcoll_core";
++with "ada_toml";
++
++library project stable_sloc is
++
++   type Build_Mode_Type is ("dev", "prod");
++   Build_Mode : Build_Mode_Type := external ("BUILD_MODE", "dev");
++
++   type Library_Type_Type is ("relocatable", "static", "static-pic");
++   Library_Type : Library_Type_Type := External ("LIBRARY_TYPE", "static");
++
++   for Languages use ("Ada");
++   for Source_Dirs use ("stable_sloc");
++
++   for Library_Kind use Library_Type;
++
++   for Object_Dir use "obj/stable_sloc/" & Project'Library_Kind;
++
++   for Library_Dir use "lib/stable_sloc/" & Project'Library_Kind;
++
++   for Library_Name use "stable_sloc";
++
++end stable_sloc;
