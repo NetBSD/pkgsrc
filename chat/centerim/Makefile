@@ -1,15 +1,12 @@
-# $NetBSD: Makefile,v 1.84 2025/10/05 19:25:43 js Exp $
-#
+# $NetBSD: Makefile,v 1.85 2025/11/28 07:24:18 wiz Exp $
 
 DISTNAME=	centerim-4.22.10
 PKGREVISION=	50
 CATEGORIES=	chat
-MASTER_SITES=	https://transacid.de/centerim/releases/
-
-
+#MASTER_SITES=	https://transacid.de/centerim/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.centerim.org/
+HOMEPAGE=	https://github.com/petrpavlu/centerim5
 COMMENT=	Instant Messenger interface supporting many protocols
 LICENSE=	gnu-gpl-v2
 
