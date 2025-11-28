@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.290 2025/11/22 01:07:07 ryoon Exp $
+$NetBSD: distinfo,v 1.291 2025/11/28 14:47:05 ryoon Exp $
 
 BLAKE2s (thunderbird-145.0.source.tar.xz) = 88880f965a7105fb87e159f77ad613af79c59dc343a69606b3bb23caf78e949b
 SHA512 (thunderbird-145.0.source.tar.xz) = f33835e4d740b32d072ac915124d988ef9d4cbe55d7c972c817991d19b64e8bc95b75b503ad3cb9abf4fd1d220fc7cb61720ea84dc49482faa13da1690d7d80e
@@ -27,6 +27,7 @@ SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 00bd08bb68b9aad3c4478c8849b533
 SHA1 (patch-js-src-jit-arm64-vixl-MozCpu-vixl.cpp) = d90fca47d79551fd74214d47f8184670b901b792
 SHA1 (patch-js_public_Utility.h) = bb5464a0398b91693ab362e6b9b06d48429b9e7d
 SHA1 (patch-js_src_editline_editline.c) = ba44a33cc19d19aeaa777548ac74fc7144ea7d70
+SHA1 (patch-js_src_intgemm_moz.build) = 460d64d188e145dae2a917cef116e0483d86552e
 SHA1 (patch-js_src_jit_FlushICache.cpp) = f5d1fcb391c36a29fb71a78dbf731ee6a1cb17b6
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
 SHA1 (patch-js_src_vm_TypedArrayObject-inl.h) = e7913c8d4b2b05b67040baa64dae62d6ba40390e
