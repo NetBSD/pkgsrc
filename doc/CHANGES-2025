@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6920 2025/11/28 11:46:32 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6921 2025/11/28 12:13:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10048,3 +10048,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated wm/cde to 2.5.3 [vins 2025-11-27]
 	Updated databases/py-sqlparse to 0.5.4 [adam 2025-11-28]
 	Updated databases/py-python-sql to 1.7.0 [adam 2025-11-28]
+	Updated net/fping to 5.4 [adam 2025-11-28]
+	Updated devel/py-zconfig to 4.3 [adam 2025-11-28]
