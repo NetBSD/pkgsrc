@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2025/11/28 20:07:22 dkazankov Exp $
+${GNAT_PKGBASE}/include/ada-toml/toml-file_io.adb
+${GNAT_PKGBASE}/include/ada-toml/toml-file_io.ads
+${GNAT_PKGBASE}/include/ada-toml/toml-generic_dump.adb
+${GNAT_PKGBASE}/include/ada-toml/toml-generic_dump.ads
+${GNAT_PKGBASE}/include/ada-toml/toml-generic_parse.adb
+${GNAT_PKGBASE}/include/ada-toml/toml-generic_parse.ads
+${GNAT_PKGBASE}/include/ada-toml/toml.adb
+${GNAT_PKGBASE}/include/ada-toml/toml.ads
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/ada_toml.relocatable/libada_toml.so
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/ada_toml.relocatable/toml-file_io.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/ada_toml.relocatable/toml-generic_dump.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/ada_toml.relocatable/toml-generic_parse.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/ada_toml.relocatable/toml.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/ada_toml.static-pic/libada_toml.a
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/ada_toml.static-pic/toml-file_io.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/ada_toml.static-pic/toml-generic_dump.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/ada_toml.static-pic/toml-generic_parse.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/ada_toml.static-pic/toml.ali
+${GNAT_PKGBASE}/lib/ada_toml.static/libada_toml.a
+${GNAT_PKGBASE}/lib/ada_toml.static/toml-file_io.ali
+${GNAT_PKGBASE}/lib/ada_toml.static/toml-generic_dump.ali
+${GNAT_PKGBASE}/lib/ada_toml.static/toml-generic_parse.ali
+${GNAT_PKGBASE}/lib/ada_toml.static/toml.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libada_toml.so
+${GNAT_PKGBASE}/share/gpr/ada_toml.gpr
+${GNAT_PKGBASE}/share/gpr/manifests/ada_toml

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/11/28 20:07:22 dkazankov Exp $
+
+BLAKE2s (ada-toml-0.5.tar.gz) = bb9c49b123c6c33bed8f8120144d9e001a8301e13588d355d52b8d45607daf19
+SHA512 (ada-toml-0.5.tar.gz) = 33dcb0dddc8023fb3e7893d8c0790e6e30fbb007456dcc327ac0e2b64c20a4d67852c905f176d5e9ab62b5754f571e5d53b82f27d5f86e962ddb6b37949a5410
+Size (ada-toml-0.5.tar.gz) = 53363 bytes
+SHA1 (patch-Makefile) = e0ff2a7933196504ddd14d6b306efa1e374b3e3c
