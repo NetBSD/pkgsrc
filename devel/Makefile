@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4549 2025/11/28 20:35:14 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4550 2025/11/28 21:03:11 dkazankov Exp $
 #
 
 COMMENT=	Development utilities
@@ -481,6 +481,7 @@ SUBDIR+=	global
 SUBDIR+=	gmake
 SUBDIR+=	gmp
 SUBDIR+=	gmtk
+SUBDIR+=	gnatcoverage
 SUBDIR+=	gnatpython
 SUBDIR+=	gng
 SUBDIR+=	gnome-common

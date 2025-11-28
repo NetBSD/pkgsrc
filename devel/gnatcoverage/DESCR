@@ -1,0 +1,6 @@
+Tool to analyze and report program coverage
+
+Originally developed as part of the Couverture research project, GNATcoverage
+allows coverage analysis of both object code (instruction and branch coverage),
+and Ada or C language source code (Statement, Decision and Modified
+Condition/Decision Coverage - MC/DC).

@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2025/11/28 21:03:11 dkazankov Exp $
+
+BLAKE2s (gnatcoverage-25.2.tar.gz) = 783b684cb6dde7219daca16767631f0b9929c322be976cf7fb9dc989ad3275cd
+SHA512 (gnatcoverage-25.2.tar.gz) = 50a4e61a2948d7fa8b09db7f51e7c92781c029ec71121c745904dee1838d32a3709c1ba7220e40d619a2a52bf9a3e5fae7d796b57656cd105e1a6bd8c4186a31
+Size (gnatcoverage-25.2.tar.gz) = 6044168 bytes
+SHA1 (patch-tools_gnatcov_Makefile) = a4a5b4a80cf2a40395b689fe533793a45ee11916
+SHA1 (patch-tools_gnatcov_gnatcov.gpr) = e96b8f438f3cbe6816d540027f1468cb45d1a0a0
+SHA1 (patch-tools_gnatcov_host.mk) = 52f1340de1e3c7120bb71ee189b42faee95cbb32
+SHA1 (patch-tools_gnatcov_stable__sloc.gpr) = 5d858cf58f90b8612850f528afac800d649c0f4a
+SHA1 (patch-tools_gnatcov_stable__sloc_stable__sloc-toml__utils.adb) = e7ff4baa8e28e9527a8a052b122877c10462dc70
+SHA1 (patch-tools_gnatcov_stable__sloc_stable__sloc-toml__utils.ads) = 7047538d0aa9ceda9fbe1cbe8c8058f642527b0d
+SHA1 (patch-tools_gnatcov_stable__sloc_stable__sloc.adb) = 7f1970b1f6258f8da1d041c47c35c066f1e82d6a
+SHA1 (patch-tools_gnatcov_stable__sloc_stable__sloc.ads) = c5ec0a4332dfbebda58ac7c2a42786ceeb1cded0
+SHA1 (patch-tools_gnatcov_trace__adapters_trace32_Makefile) = 609f79dd9352a17b77a948ebecc22dd6ac1c7bea

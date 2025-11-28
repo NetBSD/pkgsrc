@@ -1,0 +1,21 @@
+$NetBSD: patch-tools_gnatcov_gnatcov.gpr,v 1.1 2025/11/28 21:03:12 dkazankov Exp $
+
+Fix old style dependency
+Add necessary library
+
+--- tools/gnatcov/gnatcov.gpr.orig	2025-06-02 17:05:39.000000000 +0300
++++ tools/gnatcov/gnatcov.gpr
+@@ -1,4 +1,4 @@
+-with "gnat_util", "gnatcoll", "gpr2", "libadalang", "libclang", "stable_sloc";
++with "gnat_util", "gnatcoll_core", "gpr2", "libadalang", "libclang", "stable_sloc";
+ 
+ project Gnatcov is
+ 
+@@ -255,6 +255,7 @@
+          "-l:libiberty.a",
+          "-l:libsframe.a",
+          "-l:libz.a",
++         "-l:libintl.a",
+          "-static-libstdc++",
+          "-static-libgcc");
+    end Linker;
