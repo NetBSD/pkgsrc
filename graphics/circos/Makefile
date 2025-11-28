@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 11:33:59 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.17 2025/11/28 07:30:23 wiz Exp $
 
 DISTNAME=	circos-0.49
 PKGREVISION=	11
 CATEGORIES=	graphics
-MASTER_SITES=	http://mkweb.bcgsc.ca/circos/distribution/
+MASTER_SITES=	https://circos.ca/distribution/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	http://mkweb.bcgsc.ca/circos/
+HOMEPAGE=	https://circos.ca/
 COMMENT=	Concise, explanatory, unique and print-ready data visualization
 #LICENSE=
 
