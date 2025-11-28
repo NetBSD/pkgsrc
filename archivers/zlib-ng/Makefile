@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/08/08 09:18:06 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/11/28 15:47:35 wiz Exp $
 
-DISTNAME=	zlib-ng-2.2.5
+DISTNAME=	zlib-ng-2.3.1
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zlib-ng/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

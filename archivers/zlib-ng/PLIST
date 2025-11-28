@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2024/06/19 15:19:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/11/28 15:47:35 wiz Exp $
 include/zconf-ng.h
 include/zlib-ng.h
 include/zlib_name_mangling-ng.h
 lib/cmake/zlib-ng/zlib-ng-config-version.cmake
 lib/cmake/zlib-ng/zlib-ng-config.cmake
-lib/cmake/zlib-ng/zlib-ng-release.cmake
-lib/cmake/zlib-ng/zlib-ng.cmake
+lib/cmake/zlib-ng/zlib-ng-targets-release.cmake
+lib/cmake/zlib-ng/zlib-ng-targets.cmake
 lib/libz-ng.a
 lib/libz-ng.so
-lib/libz-ng.so.${PKGVERSION}
 lib/libz-ng.so.2
+lib/libz-ng.so.${PKGVERSION}
 lib/pkgconfig/zlib-ng.pc
