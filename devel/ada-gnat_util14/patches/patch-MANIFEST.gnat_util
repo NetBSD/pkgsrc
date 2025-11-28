@@ -1,0 +1,358 @@
+$NetBSD: patch-MANIFEST.gnat_util,v 1.1 2025/11/28 20:35:15 dkazankov Exp $
+
+Update files list for newer GNAT
+
+--- MANIFEST.gnat_util.orig	2019-07-31 03:12:17.000000000 +0300
++++ MANIFEST.gnat_util
+@@ -1,6 +1,5 @@
+-Makefile.gnat_util
+-MANIFEST.gnat_util
+-README.gnat_util
++accessibility.adb
++accessibility.ads
+ ali-util.adb
+ ali-util.ads
+ ali.adb
+@@ -16,12 +15,20 @@
+ butil.ads
+ casing.adb
+ casing.ads
++checks.adb
++checks.ads
++contracts.adb
++contracts.ads
+ csets.adb
+ csets.ads
+ debug.adb
+ debug.ads
++debug_a.adb
++debug_a.ads
+ einfo.adb
+ einfo.ads
++einfo-utils.adb
++einfo-utils.ads
+ elists.adb
+ elists.ads
+ err_vars.ads
+@@ -31,68 +38,285 @@
+ erroutc.ads
+ errutil.adb
+ errutil.ads
++exp_aggr.adb
++exp_aggr.ads
++exp_attr.adb
++exp_attr.ads
++exp_atag.adb
++exp_atag.ads
++exp_cg.adb
++exp_cg.ads
++exp_ch11.adb
++exp_ch11.ads
++exp_ch12.adb
++exp_ch12.ads
++exp_ch13.adb
++exp_ch13.ads
++exp_ch2.adb
++exp_ch2.ads
++exp_ch3.adb
++exp_ch3.ads
++exp_ch4.adb
++exp_ch4.ads
++exp_ch5.adb
++exp_ch5.ads
++exp_ch6.adb
++exp_ch6.ads
++exp_ch7.adb
++exp_ch7.ads
++exp_ch8.adb
++exp_ch8.ads
++exp_ch9.adb
++exp_ch9.ads
++exp_code.adb
++exp_code.ads
++exp_dbug.adb
++exp_dbug.ads
++exp_dist.adb
++exp_dist.ads
++exp_disp.adb
++exp_disp.ads
++exp_fixd.adb
++exp_fixd.ads
++exp_imgv.adb
++exp_imgv.ads
++exp_intr.adb
++exp_intr.ads
++exp_pakd.adb
++exp_pakd.ads
++exp_prag.adb
++exp_prag.ads
++exp_put_image.adb
++exp_put_image.ads
++exp_sel.adb
++exp_sel.ads
++exp_smem.adb
++exp_smem.ads
++exp_spark.adb
++exp_spark.ads
++exp_strm.adb
++exp_strm.ads
++exp_tss.adb
++exp_tss.ads
++exp_util.adb
++exp_util.ads
++expander.adb
++expander.ads
++eval_fat.adb
++eval_fat.ads
+ fmap.adb
+ fmap.ads
+ fname.adb
+ fname.ads
+ fname-uf.ads
+ fname-uf.adb
++freeze.adb
++freeze.ads
++gen_il-fields.ads
++gen_il-gen-gen_entities.adb
++gen_il-gen-gen_nodes.adb
++gen_il-gen.adb
++gen_il-gen.ads
++gen_il-internals.adb
++gen_il-internals.ads
++gen_il-main.adb
++gen_il-types.ads
++gen_il.adb
++gen_il.ads
+ get_scos.adb
+ get_scos.ads
+-gnat_util.gpr
+-gnat_util_dummies.c
+-gnatvsn.adb
+-gnatvsn.ads
+-sdefault_adb.gnat_util
++get_targ.adb
++get_targ.ads
++gnat_cuda.adb
++gnat_cuda.ads
++ghost.adb
++ghost.ads
+ hostparm.ads
++impunit.adb
++impunit.ads
++inline.adb
++inline.ads
++itypes.adb
++itypes.ads
+ krunch.adb
+ krunch.ads
++layout.adb
++layout.ads
++lib-load.adb
++lib-load.ads
+ lib-list.adb
+ lib-sort.adb
++lib-util.adb
++lib-util.ads
++lib-writ.adb
++lib-writ.ads
++lib-xref-spark_specific.adb
++lib-xref.adb
++lib-xref.ads
+ lib.adb
+ lib.ads
+ link.c
++local_restrict.adb
++local_restrict.ads
++namet-sp.adb
++namet-sp.ads
+ namet.adb
+ namet.ads
+ nlists.adb
+ nlists.ads
+ opt.adb
+ opt.ads
++osint-c.adb
++osint-c.ads
+ osint.adb
+ osint.ads
+ output.adb
+ output.ads
++par-ch2.adb
++par-ch3.adb
++par-ch4.adb
++par-ch5.adb
++par-ch6.adb
++par-ch7.adb
++par-ch8.adb
++par-ch9.adb
++par-ch10.adb
++par-ch11.adb
++par-ch12.adb
++par-ch13.adb
++par-endh.adb
++par-labl.adb
++par-load.adb
++par-prag.adb
++par-sync.adb
++par-tchk.adb
++par-util.adb
++par.adb
++par.ads
++par_sco.adb
++par_sco.ads
++prep.adb
++prep.ads
++prepcomp.adb
++prepcomp.ads
+ put_scos.ads
+ put_scos.adb
+ repinfo-input.adb
+ repinfo-input.ads
+ repinfo.adb
+ repinfo.ads
+-restrict.ads
+ restrict.adb
++restrict.ads
+ rident.ads
++rtsfind.adb
++rtsfind.ads
+ scans.adb
+ scans.ads
++scil_ll.adb
++scil_ll.ads
++scn.adb
++scn.ads
+ scng.adb
+ scng.ads
+ scos.ads
+ scos.adb
+ sdefault.ads
++sem.adb
++sem.ads
++sem_aggr.adb
++sem_aggr.ads
+ sem_aux.adb
+ sem_aux.ads
++sem_attr.adb
++sem_attr.ads
++sem_cat.adb
++sem_cat.ads
++sem_case.adb
++sem_case.ads
++sem_ch10.adb
++sem_ch10.ads
++sem_ch11.adb
++sem_ch11.ads
++sem_ch12.adb
++sem_ch12.ads
++sem_ch13.adb
++sem_ch13.ads
++sem_ch2.adb
++sem_ch2.ads
++sem_ch3.adb
++sem_ch3.ads
++sem_ch4.ads
++sem_ch4.adb
++sem_ch5.adb
++sem_ch5.ads
++sem_ch6.adb
++sem_ch6.ads
++sem_ch7.adb
++sem_ch7.ads
++sem_ch8.adb
++sem_ch8.ads
++sem_ch9.adb
++sem_ch9.ads
++sem_dim.adb
++sem_dim.ads
++sem_disp.adb
++sem_disp.ads
++sem_dist.adb
++sem_dist.ads
++sem_elab.adb
++sem_elab.ads
++sem_elim.adb
++sem_elim.ads
++sem_eval.adb
++sem_eval.ads
++sem_intr.adb
++sem_intr.ads
++sem_mech.adb
++sem_mech.ads
++sem_prag.adb
++sem_prag.ads
++sem_res.adb
++sem_res.ads
++sem_scil.adb
++sem_scil.ads
++sem_smem.adb
++sem_smem.ads
++sem_type.adb
++sem_type.ads
++sem_util.adb
++sem_util.ads
++sem_warn.adb
++sem_warn.ads
++set_targ.adb
++set_targ.ads
++sinfo-cn.adb
++sinfo-cn.ads
++sinfo-utils.adb
++sinfo-utils.ads
+ sinfo.adb
+ sinfo.ads
+ sinput-c.adb
+ sinput-c.ads
++sinput-d.adb
++sinput-d.ads
++sinput-l.adb
++sinput-l.ads
+ sinput.adb
+ sinput.ads
+ snames.adb-tmpl
+ snames.ads-tmpl
+ snames.h-tmpl
+-stand.adb
++spark_xrefs.adb
++spark_xrefs.ads
++sprint.adb
++sprint.ads
+ stand.ads
+ stringt.adb
+ stringt.ads
++strub.adb
++strub.ads
++style.adb
++style.ads
+ styleg.adb
+ styleg.ads
+ stylesw.adb
+@@ -105,12 +329,13 @@
+ table.ads
+ targparm.adb
+ targparm.ads
++tbuild.adb
++tbuild.ads
+ tempdir.adb
+ tempdir.ads
+-tree_in.adb
+-tree_in.ads
+-tree_io.adb
+-tree_io.ads
++treepr.adb
++treepr.ads
++ttypes.ads
+ types.adb
+ types.ads
+ uintp.adb
+@@ -119,6 +344,10 @@
+ uname.ads
+ urealp.adb
+ urealp.ads
++validsw.adb
++validsw.ads
++warnsw.adb
++warnsw.ads
+ widechar.adb
+ widechar.ads
+ xsnamest.adb

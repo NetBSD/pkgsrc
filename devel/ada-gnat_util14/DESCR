@@ -1,0 +1,5 @@
+Library uniting a number of GNAT sources that are used by different
+tools.
+
+This version made by combining sources of version 20.0w (latest
+publicly available) with sources of FSF GNAT 14.3.
