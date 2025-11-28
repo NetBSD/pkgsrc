@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2025/11/28 20:35:15 dkazankov Exp $
+
+BLAKE2s (gcc-14.3.0.tar.xz) = 70036c7d07767bba3476d19a6fd52f0b09dc05651c6cf5d136afe18ffa3b63a9
+SHA512 (gcc-14.3.0.tar.xz) = cb4e3259640721bbd275c723fe4df53d12f9b1673afb3db274c22c6aa457865dccf2d6ea20b4fd4c591f6152e6d4b87516c402015900f06ce9d43af66d3b7a93
+Size (gcc-14.3.0.tar.xz) = 95212220 bytes
+BLAKE2s (gnat_util-20.0w-20190814-1532A-src.tar.gz) = 24bbd6b70a6f6ca1cd05006d7f7ca054b8ea286e55fe4d901f16cb9dcd6b2302
+SHA512 (gnat_util-20.0w-20190814-1532A-src.tar.gz) = c13a573d4f35ebd90a2e95cf19a3e402c80caf03bd27378488039c383559ef689a15b23ac31017801abfa112c4585bd28dc10c56d7f9b8ef3e457c1adb98873b
+Size (gnat_util-20.0w-20190814-1532A-src.tar.gz) = 908159 bytes
+SHA1 (patch-MANIFEST.gnat_util) = 1f1cc3406f911f7d7bcda4cff88b12a9bd688ab4
+SHA1 (patch-Makefile) = 169b3e0cf14d3d6a4dfb347bd8a544c661aa8f4d
+SHA1 (patch-gnat__util.gpr) = 75f1d01df48caeda1e64b32658f4f3019b800abb
