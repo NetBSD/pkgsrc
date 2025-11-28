@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2021/04/24 00:04:27 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2025/11/28 07:32:17 wiz Exp $
 
 DISTNAME=	citrix_ica-10.6.115659
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	# empty
 
 MAINTAINER=	sborrill@NetBSD.org
-HOMEPAGE=	http://www.citrix.com/English/ss/downloads/results.asp?productID=186&c1=sot2755
+#HOMEPAGE=	http://www.citrix.com/English/ss/downloads/results.asp?productID=186&c1=sot2755
 COMMENT=	Citrix(R) ICA client for the Citrix(R) Presentation Server(TM)
 LICENSE=	citrix_ica-license
 
