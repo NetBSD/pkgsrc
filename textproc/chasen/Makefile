@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/11/22 10:44:20 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/11/28 07:26:27 wiz Exp $
 
 DISTNAME=	chasen-${CHASEN_VERSION}
 CATEGORIES=	textproc japanese
@@ -6,7 +6,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=	https://chasen-legacy.osdn.jp/
+HOMEPAGE=	https://github.com/kazuma-t/chasen
 COMMENT=	Meta package of ChaSen, Japanese Morphological Analysis System
 
 META_PACKAGE=		yes
