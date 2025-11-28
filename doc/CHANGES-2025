@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6925 2025/11/28 14:44:51 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.6926 2025/11/28 14:47:25 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10055,3 +10055,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-pypika-tortoise to 0.6.3 [adam 2025-11-28]
 	Updated www/firefox to 145.0.2 [ryoon 2025-11-28]
 	Updated www/firefox-l10n to 145.0.2 [ryoon 2025-11-28]
+	Updated mail/thunderbird to 145.0nb1 [ryoon 2025-11-28]
