@@ -1,0 +1,47 @@
+$NetBSD: patch-Makefile,v 1.1 2025/11/28 20:07:22 dkazankov Exp $
+
+Fix DESTDIR usage
+Fix var name to comply with project file
+Add options for gprbuild and gprinstall
+
+--- Makefile.orig	2024-04-15 14:52:10.000000000 +0300
++++ Makefile
+@@ -1,5 +1,4 @@
+-prefix = /usr
+-DESTDIR = $(prefix)
++prefix ?= /usr
+ 
+ LIBRARY_TYPES = static static-pic relocatable
+ BUILD_MODE = prod
+@@ -11,25 +10,25 @@
+ build: build-static build-static-pic build-relocatable
+ build-%:
+ 	gprbuild -Pada_toml \
+-		-XBUILD_MODE=$(BUILD_MODE) \
++		-XADA_TOML_BUILD_MODE=$(BUILD_MODE) \
+ 		-XLIBRARY_TYPE=$* \
+-		-p -j$(PROCESSORS)
++		-p -j$(PROCESSORS) $(GPRBUILD_OPTIONS)
+ 
+ install: install-static install-static-pic install-relocatable
+ install-%: build-%
+ 	gprinstall -Pada_toml \
+-		-XBUILD_MODE=$(BUILD_MODE) \
++		-XADA_TOML_BUILD_MODE=$(BUILD_MODE) \
+ 		-XLIBRARY_TYPE=$* \
+ 		--sources-subdir=include/ada-toml \
+-		--prefix="$(DESTDIR)" \
++		--prefix="$(DESTDIR)$(prefix)" \
+ 		--build-name=$* \
+ 		--build-var=LIBRARY_TYPE \
+ 		--build-var=ADA_TOML_LIBRARY_TYPE \
+-		-p
++		-p $(GPRINSTALL_OPTIONS)
+ 
+ clean: clean-static clean-static-pic clean-relocatable
+ clean-%:
+ 	gprclean -Pada_toml \
+-		-XBUILD_MODE=$(BUILD_MODE) \
++		-XADA_TOML_BUILD_MODE=$(BUILD_MODE) \
+ 		-XLIBRARY_TYPE=$* \
+ 		-p
