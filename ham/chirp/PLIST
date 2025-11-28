@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2025/09/15 11:29:02 gdt Exp $
+@comment $NetBSD: PLIST,v 1.30 2025/11/28 12:53:32 gdt Exp $
 bin/chirp
 bin/chirpc
 bin/experttune
@@ -170,9 +170,6 @@ ${PYSITELIB}/chirp/drivers/ft857.pyo
 ${PYSITELIB}/chirp/drivers/ft90.py
 ${PYSITELIB}/chirp/drivers/ft90.pyc
 ${PYSITELIB}/chirp/drivers/ft90.pyo
-${PYSITELIB}/chirp/drivers/ftlx011.py
-${PYSITELIB}/chirp/drivers/ftlx011.pyc
-${PYSITELIB}/chirp/drivers/ftlx011.pyo
 ${PYSITELIB}/chirp/drivers/ftm3200d.py
 ${PYSITELIB}/chirp/drivers/ftm3200d.pyc
 ${PYSITELIB}/chirp/drivers/ftm3200d.pyo
@@ -386,12 +383,18 @@ ${PYSITELIB}/chirp/drivers/radtel_rt490.pyo
 ${PYSITELIB}/chirp/drivers/radtel_rt620.py
 ${PYSITELIB}/chirp/drivers/radtel_rt620.pyc
 ${PYSITELIB}/chirp/drivers/radtel_rt620.pyo
+${PYSITELIB}/chirp/drivers/radtel_rt900.py
+${PYSITELIB}/chirp/drivers/radtel_rt900.pyc
+${PYSITELIB}/chirp/drivers/radtel_rt900.pyo
 ${PYSITELIB}/chirp/drivers/radtel_t18.py
 ${PYSITELIB}/chirp/drivers/radtel_t18.pyc
 ${PYSITELIB}/chirp/drivers/radtel_t18.pyo
 ${PYSITELIB}/chirp/drivers/retevis_h777v4.py
 ${PYSITELIB}/chirp/drivers/retevis_h777v4.pyc
 ${PYSITELIB}/chirp/drivers/retevis_h777v4.pyo
+${PYSITELIB}/chirp/drivers/retevis_ha1g.py
+${PYSITELIB}/chirp/drivers/retevis_ha1g.pyc
+${PYSITELIB}/chirp/drivers/retevis_ha1g.pyo
 ${PYSITELIB}/chirp/drivers/retevis_ra25.py
 ${PYSITELIB}/chirp/drivers/retevis_ra25.pyc
 ${PYSITELIB}/chirp/drivers/retevis_ra25.pyo
@@ -584,9 +587,6 @@ ${PYSITELIB}/chirp/drivers/vx7.pyo
 ${PYSITELIB}/chirp/drivers/vx8.py
 ${PYSITELIB}/chirp/drivers/vx8.pyc
 ${PYSITELIB}/chirp/drivers/vx8.pyo
-${PYSITELIB}/chirp/drivers/vxa700.py
-${PYSITELIB}/chirp/drivers/vxa700.pyc
-${PYSITELIB}/chirp/drivers/vxa700.pyo
 ${PYSITELIB}/chirp/drivers/wouxun.py
 ${PYSITELIB}/chirp/drivers/wouxun.pyc
 ${PYSITELIB}/chirp/drivers/wouxun.pyo
