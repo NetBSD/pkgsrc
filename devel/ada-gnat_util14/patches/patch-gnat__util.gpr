@@ -1,0 +1,24 @@
+$NetBSD: patch-gnat__util.gpr,v 1.1 2025/11/28 20:35:15 dkazankov Exp $
+
+Remove generator source directory from build
+Fix compile switches for seinfo_tables.adb
+
+--- gnat_util.gpr.orig	2019-07-31 03:12:17.000000000 +0300
++++ gnat_util.gpr
+@@ -11,7 +11,7 @@
+ 
+    for Library_Name use "gnat_util";
+ 
+-   for Source_Dirs use (".", "gen_src");
++   for Source_Dirs use (".");
+ 
+    for Library_Kind use Gnat_Lib_Type;
+ 
+@@ -31,6 +31,7 @@
+             for Default_Switches ("Ada") use ("-O0", "-gnato", "-g", "-gnata");
+             for Default_Switches ("C") use ("-g");
+       end case;
++      for Switches ("seinfo_tables.adb") use ("-gnatU", "-gnatX");
+    end Compiler;
+ 
+    package Builder is
