@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/01/26 17:32:13 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.27 2025/11/28 07:26:52 wiz Exp $
 
 DISTNAME=		chasen-${CHASEN_VERSION}
 PKGNAME=		chasen-base-${CHASEN_VERSION}
@@ -7,7 +6,7 @@ CATEGORIES=		japanese textproc
 MASTER_SITES=		${MASTER_SITE_OSDN:=chasen-legacy/56305/}
 
 MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=		https://chasen-legacy.osdn.jp/
+HOMEPAGE=		https://github.com/kazuma-t/chasen
 COMMENT=		ChaSen, Japanese Morphological Analysis System
 LICENSE=		modified-bsd
 
