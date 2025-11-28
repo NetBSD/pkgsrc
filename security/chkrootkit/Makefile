@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2023/10/17 19:24:04 triaxx Exp $
+# $NetBSD: Makefile,v 1.28 2025/11/28 07:27:42 wiz Exp $
 
 DISTNAME=		chkrootkit-0.58b
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.chkrootkit.org/pub/seg/pac/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.chkrootkit.org/
+HOMEPAGE=		https://www.chkrootkit.org/
 COMMENT=		Locally checks for signs of a rootkit
 LICENSE=		modified-bsd
 
