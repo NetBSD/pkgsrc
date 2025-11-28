@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6922 2025/11/28 12:53:42 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.6923 2025/11/28 12:55:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10051,3 +10051,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/fping to 5.4 [adam 2025-11-28]
 	Updated devel/py-zconfig to 4.3 [adam 2025-11-28]
 	Updated ham/chirp to 20251128 [gdt 2025-11-28]
+	Updated games/freecell-solver to 6.16.0 [adam 2025-11-28]
+	Updated databases/py-pypika-tortoise to 0.6.3 [adam 2025-11-28]
