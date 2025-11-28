@@ -1,0 +1,91 @@
+$NetBSD: patch-Makefile,v 1.1 2025/11/28 20:35:15 dkazankov Exp $
+
+Add external options for gprbuild and gprinstall
+Add generated files from latest GNAT
+
+--- Makefile.orig	2019-07-31 03:12:17.000000000 +0300
++++ Makefile
+@@ -18,26 +18,45 @@
+ CP=cp -p
+ MKDIR=mkdir -p
+ SRC=gen_src
++MV=mv
+ 
+ .PHONY: all
+ all: generate_sources
+ 	${BUILDER} -m -XOS=$(OS_TYPE) -XBUILD=$(BUILD_TYPE) \
+-		-XLIBRARY_TYPE=static -Pgnat_util -p
++		-XLIBRARY_TYPE=static -Pgnat_util -p $(GPRBUILD_OPTIONS)
+ ifeq ($(ENABLE_SHARED), yes)
+ 	${BUILDER} -m -XOS=$(OS_TYPE) -XBUILD=$(BUILD_TYPE) \
+-		-XLIBRARY_TYPE=relocatable -Pgnat_util -p
+-endif
++		-XLIBRARY_TYPE=relocatable -Pgnat_util -p $(GPRBUILD_OPTIONS)
+ 	${BUILDER} -m -XOS=$(OS_TYPE) -XBUILD=$(BUILD_TYPE) \
+-		-XLIBRARY_TYPE=static-pic -Pgnat_util -p
++		-XLIBRARY_TYPE=static-pic -Pgnat_util -p $(GPRBUILD_OPTIONS)
++endif
+ 
+ .PHONY: generate_sources
+ generate_sources:
+-	$(MKDIR) $(SRC)
+-	$(CP) xsnamest.adb xutil.* snames.adb-tmpl snames.ads-tmpl snames.h-tmpl $(SRC)
+-	(cd $(SRC) && \
+-	   gnatmake -gnatf -gnatwae -gnatyg -gnatyS xsnamest && \
+-	   ./xsnamest && mv snames.ns snames.ads && mv snames.nb snames.adb)
+-	$(CP) sdefault_adb.gnat_util $(SRC)/sdefault.adb
++	$(MKDIR) gen_snames
++	$(MV) xsnamest.adb xutil.* snames.adb-tmpl snames.ads-tmpl snames.h-tmpl gen_snames
++	(cd gen_snames && \
++	    gnatmake -q xsnamest && \
++	    ./xsnamest && \
++		$(MV) snames.ns ../snames.ads && \
++		$(MV) snames.nb ../snames.adb)
++	$(CP) sdefault_adb.gnat_util sdefault.adb
++	$(MKDIR) gen_il-gen
++	$(MV) gen_il-gen-gen_entities.adb gen_il-gen-gen_nodes.adb gen_il-gen.adb gen_il-gen.ads gen_il-main.adb gen_il-gen
++	(cd gen_il-gen && \
++	    gnatmake -q -g -gnata -gnat2012 -gnatw.g -gnatyg -gnatU -I../ gen_il-main && \
++	    ./gen_il-main && \
++		$(MV) seinfo_tables.ads ../ && \
++		$(MV) seinfo_tables.adb ../ && \
++		$(MV) sinfo.h ../ && \
++		$(MV) einfo.h ../ && \
++		$(MV) nmake.ads ../ && \
++		$(MV) nmake.adb ../ && \
++		$(MV) seinfo.ads ../ && \
++		$(MV) sinfo-nodes.ads ../ && \
++		$(MV) sinfo-nodes.adb ../ && \
++		$(MV) einfo-entities.ads ../ && \
++		$(MV) einfo-entities.adb ../ )
+ 
+ install-clean:
+ ifneq (,$(wildcard $(prefix)/lib/gnat/manifests/gnat_util))
+@@ -53,7 +72,7 @@
+ 		--sources-subdir=include/gnat_util \
+ 		--lib-subdir=lib/gnat_util/static \
+ 		--project-subdir=lib/gnat \
+-		--build-var=LIBRARY_TYPE --build-name=static -Pgnat_util
++		--build-var=LIBRARY_TYPE --build-name=static -Pgnat_util $(GPRINSTALL_OPTIONS)
+ ifeq ($(ENABLE_SHARED), yes)
+ 	${INSTALLER} -p -f -m -XOS=$(OS_TYPE) -XBUILD=$(BUILD_TYPE) \
+ 		-XLIBRARY_TYPE=relocatable \
+@@ -61,15 +80,15 @@
+ 		--sources-subdir=include/gnat_util \
+ 		--lib-subdir=lib/gnat_util/relocatable \
+ 		--project-subdir=lib/gnat \
+-		--build-var=LIBRARY_TYPE --build-name=relocatable -Pgnat_util
+-endif
++		--build-var=LIBRARY_TYPE --build-name=relocatable -Pgnat_util $(GPRINSTALL_OPTIONS)
+ 	${INSTALLER} -p -f -m -XOS=$(OS_TYPE) -XBUILD=$(BUILD_TYPE) \
+ 		-XLIBRARY_TYPE=static-pic \
+ 		--prefix=$(prefix) \
+ 		--sources-subdir=include/gnat_util \
+ 		--lib-subdir=lib/gnat_util/static-pic \
+ 		--project-subdir=lib/gnat \
+-		--build-var=LIBRARY_TYPE --build-name=static-pic -Pgnat_util
++		--build-var=LIBRARY_TYPE --build-name=static-pic -Pgnat_util $(GPRINSTALL_OPTIONS)
++endif
+ 
+ .PHONY: clean
+ clean:
