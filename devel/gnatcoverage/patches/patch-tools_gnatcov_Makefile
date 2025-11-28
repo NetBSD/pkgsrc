@@ -1,0 +1,50 @@
+$NetBSD: patch-tools_gnatcov_Makefile,v 1.1 2025/11/28 21:03:12 dkazankov Exp $
+
+Add NetBSD support for adapters
+Add options for gprbuild
+Add NetBSD support
+
+--- tools/gnatcov/Makefile.orig	2025-06-02 17:05:39.000000000 +0300
++++ tools/gnatcov/Makefile
+@@ -119,6 +119,14 @@
+ endif
+ endif
+ 
++ifeq ($(HOST_OS), bsd)
++ifeq ($(BITS_ARCH), 32)
++DEFAULT_ADAPTERS =
++else
++DEFAULT_ADAPTERS = trace32
++endif
++endif
++
+ ADAPTERS_LIST=$(DEFAULT_ADAPTERS)
+ 
+ PROCESSORS=0
+@@ -149,7 +157,7 @@
+  $(EXTRA_ADAFLAGS) \
+  -largs $(LD_FLAGS) \
+  -cargs:c++ $(CXXFLAGS) \
+- -gargs
++ -gargs $(GPRBUILD_OPTIONS)
+ INSTR_COMMON_ARGS=\
+   -j$(PROCESSORS) \
+   -P gnatcov.gpr \
+@@ -309,7 +317,7 @@
+ # which has its own extra info embedded and eventually installs just all what
+ # the distrib tree contains. We don't want any toplevel item there.
+ 
+-.PHONY: distrib-linux-extra distrib-windows-extra distrib
++.PHONY: distrib-linux-extra distrib-windows-extra distrib-bsd-extra distrib
+ 
+ distrib-linux-extra:
+ 	[ -f COPYING3 ] || $(CP) ../../COPYING3 .
+@@ -321,6 +329,8 @@
+ 
+ distrib-windows-extra:
+ 
++distrib-bsd-extra:
++
+ distrib-common: install-adapters distrib-${HOST_OS}-extra
+ distrib-without-doc: distrib-common install-without-doc
+ distrib: distrib-without-doc
