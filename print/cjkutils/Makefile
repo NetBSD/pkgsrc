@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/05/11 02:48:46 markd Exp $
+# $NetBSD: Makefile,v 1.18 2025/11/28 07:33:29 wiz Exp $
 
 .include "../../print/texlive/Makefile.common"
 
@@ -7,7 +7,7 @@ PKGREVISION=	3
 CATEGORIES=	print
 
 MAINTAINER=	rxg@NetBSD.org,hubertf@NetBSD.org
-HOMEPAGE=	https://cjk.ffii.org/
+HOMEPAGE=	https://ctan.org/pkg/cjk
 COMMENT=	Utilities for CJK LaTeX
 LICENSE=	gnu-gpl-v2
 
