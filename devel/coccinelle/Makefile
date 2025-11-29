@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2023/08/14 05:24:05 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2025/11/29 07:14:59 wiz Exp $
 
 DISTNAME=	coccinelle-1.1.1
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coccinelle/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://coccinelle.lip6.fr/
+HOMEPAGE=	https://coccinelle.gitlabpages.inria.fr/website/
 COMMENT=	Tool for writing and applying semantic patches
 LICENSE=	gnu-gpl-v2
 
