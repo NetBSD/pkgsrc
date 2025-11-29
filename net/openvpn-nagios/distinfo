@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.46 2025/11/19 00:14:21 gdt Exp $
+$NetBSD: distinfo,v 1.47 2025/11/29 16:52:21 adam Exp $
 
-BLAKE2s (openvpn-2.6.16.tar.gz) = 5d4a83e4351b2f2c6c8a2475b6cdce492ebc9cad864320e7aa08d7f2a9d2e59d
-SHA512 (openvpn-2.6.16.tar.gz) = 63df1416dc70c34e20c3bc56b0f56ed7eadb788378fa585ed2b19fd1f1b9ce39f6f64b44ac08cb0f5c39a054b2e33ae62b31f83f72211c8f2ffa4d562bc5545b
-Size (openvpn-2.6.16.tar.gz) = 1933428 bytes
+BLAKE2s (openvpn-2.6.17.tar.gz) = fecafaaaf57ca4740d2cdfaf493a2c6985b677bdfa069412f0d808957021bca0
+SHA512 (openvpn-2.6.17.tar.gz) = c76e9dd6305b04143e382870a110b5781e8ef934e10d01c13a3b49eecacbe37fd19ca178056fd50848c2c6b07dd8ec27123bb8b3d1c0bab8e1dc85b563a579e0
+Size (openvpn-2.6.17.tar.gz) = 1934219 bytes
 BLAKE2s (openvpn-nagios-20130210.tgz) = 713b55e865350c44a314aa3b48694695f4d82b50883d1fae919f01e9545c7c34
 SHA512 (openvpn-nagios-20130210.tgz) = 80e565f32379c39eb6c7f3b4744af221ae882ff07dce9dae5bd7feb73b0edcfc7c7ac7f70d23fdcd4f492b66f095f09833deb122449840b36ea606ce91900358
 Size (openvpn-nagios-20130210.tgz) = 3034 bytes
