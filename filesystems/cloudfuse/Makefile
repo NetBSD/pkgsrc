@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2025/10/05 19:25:53 js Exp $
+# $NetBSD: Makefile,v 1.49 2025/11/29 07:13:38 wiz Exp $
 
 DISTNAME=	${PKGNAME_NOREV}
 PKGNAME=	cloudfuse-1.0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=redbo/}
 DIST_SUBDIR=	cloudfuse
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://redbo.github.com/cloudfuse/
+HOMEPAGE=	https://github.com/redbo/cloudfuse
 COMMENT=	Filesystem (fuse) implemented on Mosso's Cloud Files
 LICENSE=	mit
 
