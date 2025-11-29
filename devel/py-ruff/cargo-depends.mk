@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.78 2025/11/24 10:05:07 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.79 2025/11/29 16:29:54 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -48,8 +48,8 @@ CARGO_CRATE_DEPENDS+=	ciborium-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-io-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-ll-0.2.2
 CARGO_CRATE_DEPENDS+=	clang-sys-1.8.1
-CARGO_CRATE_DEPENDS+=	clap-4.5.51
-CARGO_CRATE_DEPENDS+=	clap_builder-4.5.51
+CARGO_CRATE_DEPENDS+=	clap-4.5.53
+CARGO_CRATE_DEPENDS+=	clap_builder-4.5.53
 CARGO_CRATE_DEPENDS+=	clap_complete-4.5.58
 CARGO_CRATE_DEPENDS+=	clap_complete_command-0.6.1
 CARGO_CRATE_DEPENDS+=	clap_complete_nushell-4.5.8
@@ -140,7 +140,7 @@ CARGO_CRATE_DEPENDS+=	globwalk-0.9.1
 CARGO_CRATE_DEPENDS+=	half-2.6.0
 CARGO_CRATE_DEPENDS+=	hashbrown-0.14.5
 CARGO_CRATE_DEPENDS+=	hashbrown-0.15.5
-CARGO_CRATE_DEPENDS+=	hashbrown-0.16.0
+CARGO_CRATE_DEPENDS+=	hashbrown-0.16.1
 CARGO_CRATE_DEPENDS+=	hashlink-0.10.0
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.5.2
@@ -160,7 +160,7 @@ CARGO_CRATE_DEPENDS+=	idna_adapter-1.2.1
 CARGO_CRATE_DEPENDS+=	ignore-0.4.25
 CARGO_CRATE_DEPENDS+=	imara-diff-0.1.8
 CARGO_CRATE_DEPENDS+=	imperative-1.0.6
-CARGO_CRATE_DEPENDS+=	indexmap-2.12.0
+CARGO_CRATE_DEPENDS+=	indexmap-2.12.1
 CARGO_CRATE_DEPENDS+=	indicatif-0.18.3
 CARGO_CRATE_DEPENDS+=	indoc-2.0.7
 CARGO_CRATE_DEPENDS+=	inotify-0.11.0
@@ -339,7 +339,7 @@ CARGO_CRATE_DEPENDS+=	strsim-0.11.1
 CARGO_CRATE_DEPENDS+=	strum-0.27.2
 CARGO_CRATE_DEPENDS+=	strum_macros-0.27.2
 CARGO_CRATE_DEPENDS+=	supports-hyperlinks-3.1.0
-CARGO_CRATE_DEPENDS+=	syn-2.0.110
+CARGO_CRATE_DEPENDS+=	syn-2.0.111
 CARGO_CRATE_DEPENDS+=	synstructure-0.13.2
 CARGO_CRATE_DEPENDS+=	tap-1.0.1
 CARGO_CRATE_DEPENDS+=	tempfile-3.23.0
