@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6937 2025/11/29 17:15:58 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6938 2025/11/29 17:50:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10072,3 +10072,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-werkzeug to 3.1.4 [adam 2025-11-29]
 	Updated net/openvpn to 2.6.17 [adam 2025-11-29]
 	Updated net/rclone to 1.72.0 [adam 2025-11-29]
+	Updated devel/py-anyio to 4.12.0 [adam 2025-11-29]
+	Updated devel/py-atpublic to 7.0.0 [adam 2025-11-29]
+	Updated devel/py-hypothesis to 6.148.3 [adam 2025-11-29]
