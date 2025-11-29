@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2025/11/18 13:41:20 pin Exp $
+$NetBSD: distinfo,v 1.5 2025/11/29 20:21:13 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -693,9 +693,9 @@ Size (shlex-1.3.0.crate) = 18713 bytes
 BLAKE2s (simd-adler32-0.3.7.crate) = 4e97d965efa10d40728db8210a078be56385eaa8c9226af960f1685713576ea7
 SHA512 (simd-adler32-0.3.7.crate) = 2976bb7fa153854ecd0d68ccdc108bf81d5da374839d53ce9dfb27e80d8db258bb817ea3dac73921e408541d75e2797b6d20fa63c42c1e8a935b6d75dee14bac
 Size (simd-adler32-0.3.7.crate) = 12086 bytes
-BLAKE2s (simd-csv-0.9.0.crate) = 5e9c8b8c10d3ac7d8cb45e599661ec55aa42c29a3ff7304bded1325d6892a9dd
-SHA512 (simd-csv-0.9.0.crate) = c810f6324ce52beeb12361004ebb8d1e20194e44df39c2d276a9c097e0406180e8673661d2c138aaae2fbbc7ff85bfef1db7ded9519fdaf8744e84e0bae91950
-Size (simd-csv-0.9.0.crate) = 40919 bytes
+BLAKE2s (simd-csv-0.10.2.crate) = 565622ddadc38785fbf6d5dcfe69b6db1ccec779ccc00eaa05b2eb52507a18e7
+SHA512 (simd-csv-0.10.2.crate) = a25af4c99fac7c3588aea7a171d435189416d2233f76c85419d74c6c547bf41bb61d9dfafe133dbd0ca873a2976dbc1eceeeab2a2bd1ee85a3d21d4b91f4d1ff
+Size (simd-csv-0.10.2.crate) = 44067 bytes
 BLAKE2s (simd-json-0.14.3.crate) = a9939b5ba238daf5c1f43b4f3eb021b031fe1b53142c7b272ae16fe700857a06
 SHA512 (simd-json-0.14.3.crate) = 8f12b4380be506e59dffda9d28aa52475b4d52e149bdb4e7e1dbff05a320d27bad014707b8966c0f74f74e297506edf8b2d9f1ffaf86efa1104ecc27376f6d28
 Size (simd-json-0.14.3.crate) = 169109 bytes
@@ -960,9 +960,9 @@ Size (wit-bindgen-0.46.0.crate) = 60508 bytes
 BLAKE2s (writeable-0.6.1.crate) = 9bf774d998fabc47fba2a73cb060d3ae04a8fe45be12f70d37db6896b7582f86
 SHA512 (writeable-0.6.1.crate) = 686ca04702815096ac529ae6b9b80a30338f42eb5d414331992518c467c1827462673fcbbeb293818bbe570bd2723e9c60324522071c1b790c862fa6652c1385
 Size (writeable-0.6.1.crate) = 24068 bytes
-BLAKE2s (xan-0.54.0.tar.gz) = e580af5a1899c2e8e1e797d13127b7f68c9ddda0e925d2df3b16aa43d69bdd13
-SHA512 (xan-0.54.0.tar.gz) = 9c748b8084d4adc5150d5a167b61e9dac1c094cf361fd3edf2d0594fc236a0d986c4e66966a521c96f02140f6869a39558c6dc8316e577d350bc32d170e88da0
-Size (xan-0.54.0.tar.gz) = 5933819 bytes
+BLAKE2s (xan-0.54.1.tar.gz) = 9419c4b57459f0fbb89e32a9345bfedcee5305ff4d862b09d4b292a155d86da2
+SHA512 (xan-0.54.1.tar.gz) = 3301995cf17b5471058cdb77bd9673599708cb97f58d3f75b12049019a824d8c95d7e3ec06debb2c738b8673118f2b82dc138137396c1e84150357ef41421b99
+Size (xan-0.54.1.tar.gz) = 5933938 bytes
 BLAKE2s (yoke-0.8.0.crate) = 58cbc8841faa0513fad28ecf83c1f39c9d0bea64e4d1474bac402361a77e6bbe
 SHA512 (yoke-0.8.0.crate) = 6b6efbfd2bcb7e06fd6f9ae7bd213a54fedc7550273e2613fee3b8791bbe1038a7e7209142cc673d71fd57b7184cbb1209115ecd15c647db1a74f2966d593276
 Size (yoke-0.8.0.crate) = 28726 bytes
