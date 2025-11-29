@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.3 2024/02/23 19:41:25 adam Exp $
+$NetBSD: distinfo,v 1.4 2025/11/29 19:16:03 martin Exp $
 
 BLAKE2s (x264-20231001.tar.bz2) = a040f4e3cdc3d225dc9a93d98f80a9313db49c4a765b113eae4bfdb9abd5e855
 SHA512 (x264-20231001.tar.bz2) = 260f7dc802bd7555c2fa787cf8f1f8e9010e7c0537ed678da2a40cb924c5fd1c2a922381b0bf25edcfb41e9aa7c27dbcf674f23ea3a4a9dc1671799f14025f44
 Size (x264-20231001.tar.bz2) = 777929 bytes
-SHA1 (patch-common_cpu.c) = 164f6962edb1eb8442247822eb80e508a2e72d77
+SHA1 (patch-common_cpu.c) = 6149ac200adc572766aa6ebe26d895a8726e40ca
+SHA1 (patch-common_ppc_pixel.c) = 5abd403a4bb673fc8e2f44841704877ff4a2421a
 SHA1 (patch-configure) = c986b2ad87f940bd2cf1a96f471bd497e075b872
 SHA1 (patch-encoder_analyse.c) = 2057583899e029a4c2173c511293e6a35cf80f78
