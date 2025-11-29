@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.666 2025/11/02 09:59:20 markd Exp $
+# $NetBSD: Makefile,v 1.667 2025/11/29 07:21:10 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -44,7 +44,6 @@ SUBDIR+=	chord
 SUBDIR+=	chordii
 SUBDIR+=	cksfv
 SUBDIR+=	color-theme
-SUBDIR+=	colorblind
 SUBDIR+=	colorize
 SUBDIR+=	colorless
 SUBDIR+=	colorls
