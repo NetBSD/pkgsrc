@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.145 2025/11/06 16:11:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.146 2025/11/29 14:19:05 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -420,6 +420,8 @@ share/doc/sqlite3/images/foreignlogos/sony.gif
 share/doc/sqlite3/images/foreignlogos/sunmicro.gif
 share/doc/sqlite3/images/foreignlogos/symbian.gif
 share/doc/sqlite3/images/foreignlogos/tcl.gif
+share/doc/sqlite3/images/foreignlogos/visualdb-txt.png
+share/doc/sqlite3/images/foreignlogos/visualdb.png
 share/doc/sqlite3/images/foreignlogos/xojo.png
 share/doc/sqlite3/images/fts3_doclist.png
 share/doc/sqlite3/images/fts3_doclist.svg
@@ -719,6 +721,7 @@ share/doc/sqlite3/releaselog/3_50_2.html
 share/doc/sqlite3/releaselog/3_50_3.html
 share/doc/sqlite3/releaselog/3_50_4.html
 share/doc/sqlite3/releaselog/3_51_0.html
+share/doc/sqlite3/releaselog/3_51_1.html
 share/doc/sqlite3/releaselog/3_5_0.html
 share/doc/sqlite3/releaselog/3_5_1.html
 share/doc/sqlite3/releaselog/3_5_2.html
