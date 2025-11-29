@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:14:26 nia Exp $
-
-BLAKE2s (cogito-0.18.2.tar.bz2) = d889ee084514d7251e5325555e448a820de981df8c729cacb64a0f646cb42d1c
-SHA512 (cogito-0.18.2.tar.bz2) = 85d631d0a68276e7ae90024713e71888b9bbda48947c7421471b79b42f5fec6ee02b72e1ce85959925b402e666d880252f0b1c0675292916831ca3d25fca0bbd
-Size (cogito-0.18.2.tar.bz2) = 109203 bytes
-SHA1 (patch-ab) = 5ba8bf1ca856198f734578d381cedf0427be733c
-SHA1 (patch-ac) = 15c8a0392445bdd3eba5446e8743a17e6df4a475
-SHA1 (patch-ad) = 98e724e2ada26cf7fcaacc2ff964a452e3109a2d

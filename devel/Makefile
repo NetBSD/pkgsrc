@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4550 2025/11/28 21:03:11 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4551 2025/11/29 07:17:37 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -287,7 +287,6 @@ SUBDIR+=	coccinelle
 SUBDIR+=	cocogitto
 SUBDIR+=	coconut
 SUBDIR+=	codeberg-cli
-SUBDIR+=	cogito
 SUBDIR+=	colordiff
 SUBDIR+=	commit-patch
 SUBDIR+=	compiledb-go
