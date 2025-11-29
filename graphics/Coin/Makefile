@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2025/08/30 22:45:13 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2025/11/29 07:18:01 wiz Exp $
 
 DISTNAME=		Coin-3.1.3
 PKGREVISION=		15
@@ -6,7 +6,7 @@ CATEGORIES=		graphics
 MASTER_SITES=		https://bitbucket.org/Coin3D/coin/downloads/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.coin3d.org/
+HOMEPAGE=		https://www.coin3d.org/
 COMMENT=		Free, portable, Open Inventor API implementation
 LICENSE=		modified-bsd
 # See https://bitbucket.org/Coin3D/coin/wiki/EndOfLifeLetter
