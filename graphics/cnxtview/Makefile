@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.36 2025/08/30 22:45:16 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2025/11/29 07:14:07 wiz Exp $
 
 DISTNAME=	cnxtutil-0.00-alpha
 PKGNAME=	cnxtview-0.00a
 PKGREVISION=	21
 CATEGORIES=	graphics x11
-MASTER_SITES=	http://home.384.jp/takam/bsd/
+#MASTER_SITES=	http://home.384.jp/takam/bsd/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://home.384.jp/takam/bsd/NetBSD.html#webcamnote
+#HOMEPAGE=	http://home.384.jp/takam/bsd/NetBSD.html#webcamnote
 COMMENT=	Creative WEBCAM Notebook Utility Programs
 
 NOT_FOR_PLATFORM=	SunOS-*-*	# needs <err.h> and <dev/usb/usb.h>
