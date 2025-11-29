@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/07/25 11:12:25 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/11/29 07:18:35 wiz Exp $
 
 DISTNAME=	CoinMP-1.8.4
 PKGNAME=	${DISTNAME:tl}
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.coin-or.org/download/source/CoinMP/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://projects.coin-or.org/CoinMP
+HOMEPAGE=	https://github.com/coin-or/CoinMP
 COMMENT=	Linear Programming solver library
 LICENSE=	cpl-1.0
 
