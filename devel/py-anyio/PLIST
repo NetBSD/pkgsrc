@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/08/05 05:53:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/11/29 17:47:22 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -92,6 +92,9 @@ ${PYSITELIB}/anyio/abc/_testing.pyo
 ${PYSITELIB}/anyio/from_thread.py
 ${PYSITELIB}/anyio/from_thread.pyc
 ${PYSITELIB}/anyio/from_thread.pyo
+${PYSITELIB}/anyio/functools.py
+${PYSITELIB}/anyio/functools.pyc
+${PYSITELIB}/anyio/functools.pyo
 ${PYSITELIB}/anyio/lowlevel.py
 ${PYSITELIB}/anyio/lowlevel.pyc
 ${PYSITELIB}/anyio/lowlevel.pyo

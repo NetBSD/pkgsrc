@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2025/10/09 08:08:24 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2025/11/29 17:47:22 adam Exp $
 
-DISTNAME=	anyio-4.11.0
+DISTNAME=	anyio-4.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/anyio/}
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=77:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.4:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.8:../../www/py-idna
-DEPENDS+=	${PYPKGPREFIX}-sniffio>=1.1:../../misc/py-sniffio
 #TODO:
 #TEST_DEPENDS+=	${PYPKGPREFIX}-blockbuster>=1.5.23
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7:../../devel/py-coverage
