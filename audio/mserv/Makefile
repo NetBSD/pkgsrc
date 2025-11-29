@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2022/06/28 11:30:55 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2025/11/29 09:54:52 martin Exp $
 
 DISTNAME=	mserv-0.35
 PKGREVISION=	25
@@ -39,5 +39,9 @@ post-install:
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-1[45]*)
+CFLAGS+=	-Wno-error=implicit-function-declaration
+.endif
 
 .include "../../mk/bsd.pkg.mk"
