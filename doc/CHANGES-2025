@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6934 2025/11/29 14:19:40 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6935 2025/11/29 15:12:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10067,3 +10067,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/sqlite3-docs to 3.51.1 [adam 2025-11-29]
 	Updated databases/sqlite3-tcl to 3.51.1 [adam 2025-11-29]
 	Updated devel/lemon to 1.0.3.51.1 [adam 2025-11-29]
+	Updated emulators/mame to 0.283 [wiz 2025-11-29]
