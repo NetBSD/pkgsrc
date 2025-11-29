@@ -1,4 +1,0 @@
-Cogito is a version control system layered on top of the git tree
-history storage system. It aims at seamless user interface and ease of
-use, providing generally smoother user experience than the "raw" Core
-GIT itself and indeed many other version control systems.
