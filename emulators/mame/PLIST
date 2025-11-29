@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.99 2025/11/02 12:39:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.100 2025/11/29 15:12:21 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -487,6 +487,7 @@ share/mame/hash/mz800_cass.xml
 share/mame/hash/mz800_rom.xml
 share/mame/hash/mz80b_cass.xml
 share/mame/hash/mz80b_flop.xml
+share/mame/hash/mz80k_cass.xml
 share/mame/hash/n64.xml
 share/mame/hash/n64_lodgenet.xml
 share/mame/hash/n64dd.xml
@@ -597,6 +598,7 @@ share/mame/hash/prof80.xml
 share/mame/hash/psi98.xml
 share/mame/hash/psion1.xml
 share/mame/hash/psion2.xml
+share/mame/hash/psion_flop.xml
 share/mame/hash/psion_ssd.xml
 share/mame/hash/psx.xml
 share/mame/hash/pt68k2.xml
@@ -637,6 +639,8 @@ share/mame/hash/sbrain.xml
 share/mame/hash/sc3000_cart.xml
 share/mame/hash/sc3000_cass.xml
 share/mame/hash/scv.xml
+share/mame/hash/sd132_flop.xml
+share/mame/hash/sd1_flop.xml
 share/mame/hash/sdk85.xml
 share/mame/hash/sega_beena_cart.xml
 share/mame/hash/segaai.xml
@@ -756,6 +760,7 @@ share/mame/hash/vc4000.xml
 share/mame/hash/vector06_cart.xml
 share/mame/hash/vector06_flop.xml
 share/mame/hash/vectrex.xml
+share/mame/hash/vfxsd_flop.xml
 share/mame/hash/vg5k.xml
 share/mame/hash/vgmplay.xml
 share/mame/hash/vic10.xml
@@ -786,6 +791,7 @@ share/mame/hash/waveterm.xml
 share/mame/hash/wicat.xml
 share/mame/hash/wizard_cart.xml
 share/mame/hash/wmbullet.xml
+share/mame/hash/wren_flop.xml
 share/mame/hash/wscolor.xml
 share/mame/hash/wswan.xml
 share/mame/hash/x07_card.xml
