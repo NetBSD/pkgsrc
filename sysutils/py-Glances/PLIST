@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2025/07/27 23:47:19 fox Exp $
+@comment $NetBSD: PLIST,v 1.18 2025/11/30 15:02:29 fox Exp $
 bin/glances-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -37,6 +37,9 @@ ${PYSITELIB}/glances/amps/systemv/__init__.pyo
 ${PYSITELIB}/glances/amps_list.py
 ${PYSITELIB}/glances/amps_list.pyc
 ${PYSITELIB}/glances/amps_list.pyo
+${PYSITELIB}/glances/api.py
+${PYSITELIB}/glances/api.pyc
+${PYSITELIB}/glances/api.pyo
 ${PYSITELIB}/glances/attribute.py
 ${PYSITELIB}/glances/attribute.pyc
 ${PYSITELIB}/glances/attribute.pyo
@@ -73,6 +76,9 @@ ${PYSITELIB}/glances/exports/glances_couchdb/__init__.pyo
 ${PYSITELIB}/glances/exports/glances_csv/__init__.py
 ${PYSITELIB}/glances/exports/glances_csv/__init__.pyc
 ${PYSITELIB}/glances/exports/glances_csv/__init__.pyo
+${PYSITELIB}/glances/exports/glances_duckdb/__init__.py
+${PYSITELIB}/glances/exports/glances_duckdb/__init__.pyc
+${PYSITELIB}/glances/exports/glances_duckdb/__init__.pyo
 ${PYSITELIB}/glances/exports/glances_elasticsearch/__init__.py
 ${PYSITELIB}/glances/exports/glances_elasticsearch/__init__.pyc
 ${PYSITELIB}/glances/exports/glances_elasticsearch/__init__.pyo
@@ -172,12 +178,18 @@ ${PYSITELIB}/glances/outputs/glances_sparklines.pyo
 ${PYSITELIB}/glances/outputs/glances_stdout.py
 ${PYSITELIB}/glances/outputs/glances_stdout.pyc
 ${PYSITELIB}/glances/outputs/glances_stdout.pyo
-${PYSITELIB}/glances/outputs/glances_stdout_apidoc.py
-${PYSITELIB}/glances/outputs/glances_stdout_apidoc.pyc
-${PYSITELIB}/glances/outputs/glances_stdout_apidoc.pyo
+${PYSITELIB}/glances/outputs/glances_stdout_api_doc.py
+${PYSITELIB}/glances/outputs/glances_stdout_api_doc.pyc
+${PYSITELIB}/glances/outputs/glances_stdout_api_doc.pyo
+${PYSITELIB}/glances/outputs/glances_stdout_api_restful_doc.py
+${PYSITELIB}/glances/outputs/glances_stdout_api_restful_doc.pyc
+${PYSITELIB}/glances/outputs/glances_stdout_api_restful_doc.pyo
 ${PYSITELIB}/glances/outputs/glances_stdout_csv.py
 ${PYSITELIB}/glances/outputs/glances_stdout_csv.pyc
 ${PYSITELIB}/glances/outputs/glances_stdout_csv.pyo
+${PYSITELIB}/glances/outputs/glances_stdout_fetch.py
+${PYSITELIB}/glances/outputs/glances_stdout_fetch.pyc
+${PYSITELIB}/glances/outputs/glances_stdout_fetch.pyo
 ${PYSITELIB}/glances/outputs/glances_stdout_issue.py
 ${PYSITELIB}/glances/outputs/glances_stdout_issue.pyc
 ${PYSITELIB}/glances/outputs/glances_stdout_issue.pyo
@@ -236,6 +248,9 @@ ${PYSITELIB}/glances/plugins/folders/__init__.pyo
 ${PYSITELIB}/glances/plugins/fs/__init__.py
 ${PYSITELIB}/glances/plugins/fs/__init__.pyc
 ${PYSITELIB}/glances/plugins/fs/__init__.pyo
+${PYSITELIB}/glances/plugins/fs/zfs.py
+${PYSITELIB}/glances/plugins/fs/zfs.pyc
+${PYSITELIB}/glances/plugins/fs/zfs.pyo
 ${PYSITELIB}/glances/plugins/gpu/__init__.py
 ${PYSITELIB}/glances/plugins/gpu/__init__.pyc
 ${PYSITELIB}/glances/plugins/gpu/__init__.pyo
@@ -278,6 +293,9 @@ ${PYSITELIB}/glances/plugins/percpu/__init__.pyo
 ${PYSITELIB}/glances/plugins/plugin/__init__.py
 ${PYSITELIB}/glances/plugins/plugin/__init__.pyc
 ${PYSITELIB}/glances/plugins/plugin/__init__.pyo
+${PYSITELIB}/glances/plugins/plugin/dag.py
+${PYSITELIB}/glances/plugins/plugin/dag.pyc
+${PYSITELIB}/glances/plugins/plugin/dag.pyo
 ${PYSITELIB}/glances/plugins/plugin/model.py
 ${PYSITELIB}/glances/plugins/plugin/model.pyc
 ${PYSITELIB}/glances/plugins/plugin/model.pyo
