@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6954 2025/11/30 11:25:19 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6955 2025/11/30 12:05:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10094,3 +10094,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/drawterm to 20251123 [vins 2025-11-30]
 	Added devel/py-gitlab version 7.0.0 [markd 2025-11-30]
 	Updated shells/nushell to 0.109.0 [pin 2025-11-30]
+	Updated devel/libdatrie to 0.2.14 [adam 2025-11-30]
+	Updated misc/py-pbs-installer to 2025.11.20 [adam 2025-11-30]
