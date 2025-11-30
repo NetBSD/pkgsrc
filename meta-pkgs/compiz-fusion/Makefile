@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/09/16 10:50:47 nia Exp $
+# $NetBSD: Makefile,v 1.5 2025/11/30 08:53:14 wiz Exp $
 
 DISTNAME=	compiz-fusion-0.6
 CATEGORIES=	meta-pkgs x11 gnome
@@ -6,7 +6,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.compiz-fusion.org/
+HOMEPAGE=	https://www.compiz-fusion.org/
 COMMENT=	Meta-package for compiz fusion
 
 META_PACKAGE=	yes
