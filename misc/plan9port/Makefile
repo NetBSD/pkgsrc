@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2025/01/28 17:41:20 vins Exp $
+# $NetBSD: Makefile,v 1.12 2025/11/30 12:54:00 vins Exp $
 
-DISTNAME=	plan9port-20240717
-PKGREVISION=	1
-CATEGORIES=	misc plan9
-MASTER_SITES=	${MASTER_SITE_GITHUB:=9fans/}
-GITHUB_TAG=	a2567fcac9851e5cc965a236679f568b0e79cff2
+DISTNAME=       plan9port-20251109
+CATEGORIES=     misc plan9
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=9fans/}
+GITHUB_TAG=     f39a2407b6e6ace6af68e466bfa2f362b9a9dd36
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://9fans.github.io/plan9port/
@@ -137,7 +136,8 @@ post-build:
 
 do-install:
 # Move everything to the PLAN9 target.
-	${RUN}cd ${WRKSRC} && ${PAX} -rw -pm . ${PLAN9_BUILD}
+	${RUN}cd ${WRKSRC} &&				\
+		${PAX} -s':.*/\.git.*::' -rw -pm . ${PLAN9_BUILD}
 # Rename hard-coded paths and builds mans.
 	${RUN}cd ${PLAN9_BUILD} &&			\
 	  ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${SH} ./INSTALL -c
