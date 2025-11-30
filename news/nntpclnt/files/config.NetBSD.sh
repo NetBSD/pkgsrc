@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: config.NetBSD.sh,v 1.4 2004/04/07 13:56:43 cube Exp $
+# $NetBSD: config.NetBSD.sh,v 1.5 2025/11/30 15:07:17 vins Exp $
 #
 # config.sh
 # This file was produced by running the Configure script
@@ -58,7 +58,7 @@ mansrc='@PREFIX@/man/man1'
 manext='1'
 rootid='0'
 strchr='define'
-memcpy='define'
+memcpy='undef'
 sunos4='undef'
 solaris='undef'
 portable='define'
