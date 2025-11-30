@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6943 2025/11/30 06:29:46 scole Exp $
+$NetBSD: CHANGES-2025,v 1.6944 2025/11/30 07:49:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10080,3 +10080,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Term-Table to 0.028 [wiz 2025-11-30]
 	Updated devel/p5-Type-Tiny to 2.008006 [wiz 2025-11-30]
 	Updated sysutils/p5-PerlPowerTools to 1.053nb1 [scole 2025-11-30]
+	Updated devel/py-tortoisehg to 7.0.1 [wiz 2025-11-30]
