@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/11/12 11:08:57 adam Exp $
+$NetBSD: distinfo,v 1.5 2025/11/30 14:10:27 wiz Exp $
 
-BLAKE2s (secretstorage-3.4.1.tar.gz) = 356d9a778bfa8c5b6d3f5a7d3a00d1c8beef1debf19a550a9dcecd780297ef2e
-SHA512 (secretstorage-3.4.1.tar.gz) = 2e15b1b0fea5bbda5dc51cdca0963b36099d9e2e9045e9b991e76f54add99b62debfaa8c9fea7e0a94f495a049c2c108a07e18125c1d5a7415ea2a242d2571d1
-Size (secretstorage-3.4.1.tar.gz) = 19871 bytes
+BLAKE2s (secretstorage-3.5.0.tar.gz) = af078285dfb4d3aade799cafa0761377374c5fc0cd6b522c662206335e77de08
+SHA512 (secretstorage-3.5.0.tar.gz) = c90d44f2907d30d28061822f484416688a1e7981f32678f1ae726312814019d1356292e4a35a82da5804c58d4197da3548cfb33eab67c944609710966e8f5d4a
+Size (secretstorage-3.5.0.tar.gz) = 19884 bytes
