@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2025/11/03 16:19:22 vins Exp $
+# $NetBSD: Makefile,v 1.41 2025/11/30 09:36:24 vins Exp $
 
-DISTNAME=	fastfetch-2.54.0
+DISTNAME=	fastfetch-2.55.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fastfetch-cli/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -38,7 +38,6 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release \
 			-DCUSTOM_PCI_IDS_PATH=${PREFIX}/share/hwdata/pci.ids \
 			-DCUSTOM_AMDGPU_IDS_PATH=${BUILDLINK_PREFIX.libdrm}/share/libdrm/amdgpu.ids \
 			-DENABLE_SYSTEM_YYJSON=ON \
-			-DENABLE_PCIACCES=ON \
 			-DBUILD_FLASHFETCH=OFF \
 			-DBUILD_TESTS=ON \
 			-DINSTALL_LICENSE=OFF
@@ -54,7 +53,6 @@ post-install:
 .include "../../lang/python/tool.mk"
 .include "../../lang/python/application.mk"
 .include "../../sysutils/hwdata/buildlink3.mk"
-.include "../../sysutils/libpciaccess/buildlink3.mk"
 .include "../../devel/yyjson/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../mk/dlopen.buildlink3.mk"
