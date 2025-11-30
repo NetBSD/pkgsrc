@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2025/10/23 20:39:40 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.94 2025/11/30 08:54:46 wiz Exp $
 
 PKGVER=		0.8.8
 PKGNAME=	compiz-fusion-plugins-main-${PKGVER}
@@ -9,7 +8,7 @@ CATEGORIES=	wm x11
 MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://compiz.org/
+HOMEPAGE=	https://launchpad.net/compiz-plugins-main
 COMMENT=	Compositing window manager - main plugins
 LICENSE=	gnu-gpl-v2
 
