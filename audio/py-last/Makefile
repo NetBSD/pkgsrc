@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2025/10/11 21:48:05 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/11/30 14:13:27 wiz Exp $
 
-DISTNAME=	pylast-6.0.0
+DISTNAME=	pylast-7.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylast/}
@@ -20,6 +20,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-random-order-[0-9]*:../../devel/py-test-rando
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
+
+.if make(test)
+ALLOW_NETWORK_ACCESS=	yes
+.endif
+# 93 failed, 44 passed, 9 skipped, 1 xfailed, 2 warnings
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
