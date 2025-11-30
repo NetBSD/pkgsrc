@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2025/03/04 11:09:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/11/30 13:59:59 wiz Exp $
 bin/proxy
 include/libproxy/proxy.h
 lib/girepository-1.0/Libproxy-1.0.typelib
+lib/libproxy.a
 lib/libproxy.so
 lib/libproxy.so.${PKGVERSION}
 lib/libproxy.so.1
