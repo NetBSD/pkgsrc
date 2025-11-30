@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.45 2025/11/18 17:38:35 nia Exp $
+$NetBSD: distinfo,v 1.46 2025/11/30 13:58:06 wiz Exp $
 
-BLAKE2s (cups-2.4.14-source.tar.gz) = 2ca241d55570f440fce3de4740b4f197300603989945f89d3b024aefcfc724b3
-SHA512 (cups-2.4.14-source.tar.gz) = c6d46b737e2fdf37a429947bc5cc3d752785187aa339bd6de94733576aead29929ae510f960c9842cb7ddc86697d7841e5aa6b9d9c9dece907a2b8f468d038a0
-Size (cups-2.4.14-source.tar.gz) = 8157729 bytes
+BLAKE2s (cups-2.4.15-source.tar.gz) = f3e77da1c0780a445a872119f185d6fb4679d9c461b2c8060059621d42f812cf
+SHA512 (cups-2.4.15-source.tar.gz) = 93bd679645e9cd0c8096f92ec6344268ad4e1536f4c011419b401124e513d458287b30faa42da90dfab87eb7cf18767af2eb71e316fd307e35ec85ec796d4c89
+Size (cups-2.4.15-source.tar.gz) = 8158215 bytes
 SHA1 (patch-ae) = 7f12aa886208f9e634d5c3fd3bc1fd4a385f22a6
 SHA1 (patch-ai) = d4aa1b59c77fa2cbf614eb661d9a791311b399c2
 SHA1 (patch-at) = 9517bff0bf2c892f0723a25f243ba188f7781393
@@ -14,11 +14,11 @@ SHA1 (patch-config-scripts_cups-directories.m4) = 272a10e2ae70c589a65d73fe788f62
 SHA1 (patch-config-scripts_cups-gssapi.m4) = 79de7d8c7bb8b2071817f505412d23fa8df5f68f
 SHA1 (patch-cups-tls.c) = b02bc528b6d551283373f271529d6f1956e1c7df
 SHA1 (patch-cups_thread.c) = 453f8bd9e13b7b824cc7add75ea9ef49b8e0c991
-SHA1 (patch-doc-help-man-cups-files.conf.html) = c26754104788eb619e69e49d6d51bf84ab047876
+SHA1 (patch-doc-help-man-cups-files.conf.html) = 1af4ff8b768d3c2fc5e5b5b11a77ca61804c962f
 SHA1 (patch-man_cups-files.conf.5) = 51c06d39e20bf8c39c784fec1f32f6c8100cf821
 SHA1 (patch-scheduler-conf.c) = 3e8dda2dc04c31a58a902c70161724a57bdc3e43
 SHA1 (patch-scheduler-conf.h) = cd5c49579795c69b50abbff2b0f9604ffe8bfa5a
 SHA1 (patch-scheduler-main.c) = 347df789f10b77e4594a3e1a6d586a4c5e7d3749
-SHA1 (patch-scheduler_auth.c) = 686b26286b7ad88363ddc7b394aefbfb3ad26c2d
+SHA1 (patch-scheduler_auth.c) = 63309d001f541f309ff1111abd54fc6b6527e6e1
 SHA1 (patch-scheduler_dirsvc.c) = 1dba98dc171df733acb99e5f31ad838845a917bc
 SHA1 (patch-tools_ippfind.c) = f0774fcf5ece380fd6fa09adb3c068910ddfa367
