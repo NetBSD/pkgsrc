@@ -1,20 +1,28 @@
-# $NetBSD: Makefile,v 1.6 2025/06/07 16:32:55 vins Exp $
+# $NetBSD: Makefile,v 1.7 2025/11/30 10:14:05 vins Exp $
 
-DISTNAME=	xtrlock-2.17
+DISTNAME=	xtrlock-2.18
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/x/xtrlock/}
 EXTRACT_SUFX=	.tar.xz
 DISTFILES=	${DEFAULT_DISTFILES:S/-/_/}
 
 MAINTAINER=	vins@NetBSD.org
+HOMEPAGE=	https://salsa.debian.org/debian/xtrlock
 COMMENT=	Simple X11 screen lock tool
 LICENSE=	gnu-gpl-v3
 
 USE_IMAKE=	yes
 
+FORCE_C_STD=	c99
+
+.include "../../mk/bsd.prefs.mk"
+
 # mitigate CVE-2016-10894
 CFLAGS+=	-DMULTITOUCH
-FORCE_C_STD=	c99
+.if exists(/etc/shadow) && !(${OPSYS:M*BSD} != "" || ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly")
+CFLAGS+=	-DSHADOW_PWD    #getspnam()
+.endif
+
 LDFLAGS+=	-lXi
 
 .include "../../mk/bsd.prefs.mk"
@@ -27,11 +35,7 @@ SUBST_SED.defs=		-e 's|-D_BSD_SOURCE[[:space:]]*-D_SVID_SOURCE|-D_DEFAULT_SOURCE
 SUBST_MESSAGE.defs=	Replacing deprecated preprocessor-defined macros.
 .endif
 
-.if exists(/etc/shadow) && !(${OPSYS:M*BSD} != "" || ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly")
-MAKE_FLAGS+=		CCOPTIONS="${CFLAGS} -DSHADOW_PWD"			#getspnam()
-.else
 MAKE_FLAGS+=		CCOPTIONS=${CFLAGS:Q}
-.endif
 MAKE_FLAGS+=		LOCAL_LDFLAGS=${LDFLAGS:Q}
 
 .if	${OPSYS} == "Linux"
@@ -42,19 +46,6 @@ SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} _shadow 2555
 SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} ${BINGRP} 4555
 .endif
 SPECIAL_PERMS+=		bin/xtrlock ${SETUID_ROOT_PERMS}
-
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}								\
-	${MAKE_PROGRAM} ${MAKE_FLAGS} xtrlock
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xtrlock								\
-	${DESTDIR}${PREFIX}/bin/xtrlock
-
-	${INSTALL_MAN} ${WRKSRC}/xtrlock.man								\
-	${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xtrlock.1
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
