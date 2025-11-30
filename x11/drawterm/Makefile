@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2025/10/12 13:42:33 vins Exp $
+# $NetBSD: Makefile,v 1.12 2025/11/30 10:31:25 vins Exp $
 
 DISTNAME=	snap
-PKGNAME=	drawterm-20240703
-PKGREVISION=	2
-SNAPSHOT=	f11139d4c918802a87730bc14d094670ee4ce572
+PKGNAME=	drawterm-20251123
+SNAPSHOT=	e551ef409ae2b004595f38323ce212ed152f6c3f
 CATEGORIES=	x11 plan9
 MASTER_SITES=	https://git.9front.org/git/plan9front/drawterm/${SNAPSHOT}/
 DIST_SUBDIR=	${PKGNAME_NOREV}
