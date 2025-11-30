@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/12/22 09:24:38 vins Exp $
+# $NetBSD: Makefile,v 1.7 2025/11/30 15:35:49 vins Exp $
 
 DISTNAME=	opendoas-6.8.2
 CATEGORIES=	security
@@ -55,7 +55,6 @@ PLIST_VARS+=	pam-conf
 .if ${OPSYS} == "Linux" && exists(/usr/include/security/pam_appl.h)
 PLIST.pam-conf=	yes
 REQD_FILES=	${EGDIR}/doas /etc/pam.d/doas
-.include "../../mk/pam.buildlink3.mk"
 .endif
 
 .if ${OPSYS} == "Darwin"
@@ -63,8 +62,5 @@ PLIST.pam-conf=	yes
 REQD_FILES=	${EGDIR}/doas /etc/pam.d/doas
 .endif
 
-.if ${OPSYS} != "Linux"
 .include "../../mk/pam.buildlink3.mk"
-.endif
-
 .include "../../mk/bsd.pkg.mk"
