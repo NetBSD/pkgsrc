@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6952 2025/11/30 10:34:20 vins Exp $
+$NetBSD: CHANGES-2025,v 1.6953 2025/11/30 10:36:32 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10092,3 +10092,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xtrlock to 2.18 [vins 2025-11-30]
 	Updated wm/emwm-utils to 1.3.1 [vins 2025-11-30]
 	Updated x11/drawterm to 20251123 [vins 2025-11-30]
+	Added devel/py-gitlab version 7.0.0 [markd 2025-11-30]
