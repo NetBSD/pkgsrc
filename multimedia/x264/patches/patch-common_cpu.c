@@ -1,9 +1,9 @@
-$NetBSD: patch-common_cpu.c,v 1.2 2025/11/29 19:16:03 martin Exp $
+$NetBSD: patch-common_cpu.c,v 1.3 2025/11/30 06:25:40 wiz Exp $
 
 Add support for NetBSD/macppc altivec discovery
 
---- cpu.c.orig	2023-10-01 16:28:26.000000000 +0200
-+++ cpu.c	2025-11-29 18:58:01.556075806 +0100
+--- common/cpu.c.orig	2023-10-01 16:28:26.000000000 +0200
++++ common/cpu.c	2025-11-29 18:58:01.556075806 +0100
 @@ -40,7 +40,7 @@
  #if SYS_BEOS
  #include <kernel/OS.h>
