@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: sndio.sh,v 1.2 2025/11/30 13:43:13 vins Exp $
+# $NetBSD: sndio.sh,v 1.3 2025/11/30 13:47:37 vins Exp $
 #
 # PROVIDE: sndio
 # REQUIRE: DAEMON
@@ -43,7 +43,7 @@ sndio_stop()
 {
 	echo "Stopping sndio server"
 	sndio_s=$(check_pidfile ${pidfile} ${command})
-	if [ -n "${sndio}" ]; then
+	if [ -n "${sndio_s}" ]; then
 		kill ${sig_stop} ${sndio_s}
 		wait_for_pids ${sndio_s}
 	fi
