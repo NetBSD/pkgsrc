@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2022/06/28 11:36:05 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/11/30 13:18:27 wiz Exp $
 
-DISTNAME=	rsnapshot-1.4.3
-PKGREVISION=	3
-CATEGORIES=	net
+DISTNAME=	rsnapshot-1.5.1
+CATEGORIES=	sysutils net
 MASTER_SITES=	https://rsnapshot.org/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

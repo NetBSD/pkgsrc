@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:20:08 nia Exp $
+$NetBSD: distinfo,v 1.13 2025/11/30 13:18:27 wiz Exp $
 
-BLAKE2s (rsnapshot-1.4.3.tar.gz) = 2a31f836795b680a1a70f1efb16f7f3592a2f7288e2fdf4de89668321415481f
-SHA512 (rsnapshot-1.4.3.tar.gz) = 606b5c195e609197ae6711a9764c07a0f0822fe228aba07014155636bd5caa7ad7dbf8f42316275a71490b5c9dd33bf04c42580b92f4910c38ef871694ae09e3
-Size (rsnapshot-1.4.3.tar.gz) = 370840 bytes
+BLAKE2s (rsnapshot-1.5.1.tar.gz) = ebcaa63d49f9dd7d752db059415c2e85f3f1b970eb4144a9104ca0545e6d8c12
+SHA512 (rsnapshot-1.5.1.tar.gz) = 332caba5ce063ad985555624e76d58dfd15bd8384ae4212385ae36dfd3433c307e871f0a97306e1d3051612ba34e5acb2b0226d284bfd44a6808126cbd34a600
+Size (rsnapshot-1.5.1.tar.gz) = 331049 bytes
