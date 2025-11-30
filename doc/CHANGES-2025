@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6955 2025/11/30 12:05:39 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6956 2025/11/30 12:55:35 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10096,3 +10096,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/nushell to 0.109.0 [pin 2025-11-30]
 	Updated devel/libdatrie to 0.2.14 [adam 2025-11-30]
 	Updated misc/py-pbs-installer to 2025.11.20 [adam 2025-11-30]
+	Updated misc/plan9port to 20251109 [vins 2025-11-30]
