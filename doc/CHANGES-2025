@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6970 2025/11/30 14:09:12 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6971 2025/11/30 14:10:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10111,3 +10111,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/py-fonttools to 4.61.0 [wiz 2025-11-30]
 	Updated devel/py-hatchling to 1.28.0 [wiz 2025-11-30]
 	Updated sysutils/lima to 2.0.2 [wiz 2025-11-30]
+	Updated security/py-secretstorage to 3.5.0 [wiz 2025-11-30]
