@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6948 2025/11/30 09:37:11 vins Exp $
+$NetBSD: CHANGES-2025,v 1.6949 2025/11/30 10:13:20 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10086,3 +10086,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/py-cxxheaderparser to 1.6.1 [adam 2025-11-30]
 	Updated audio/midish to 1.4.1 [vins 2025-11-30]
 	Updated sysutils/fastfetch to 2.55.1 [vins 2025-11-30]
+	Updated multimedia/mlt to 7.34.1 [markd 2025-11-30]
+	Added multimedia/mlt-qt5 version 7.34.1 [markd 2025-11-30]
+	Added multimedia/mlt-qt6 version 7.34.1 [markd 2025-11-30]
