@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26489 2025/11/29 13:42:17 wiz Exp $
+$NetBSD: TODO,v 1.26490 2025/11/30 11:03:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -499,7 +499,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cacti-spine-1.2.30
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-8.14.0
+	o calibre-8.15.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
 	o canna-3.7p5
@@ -618,6 +618,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o faces-1.7.7
 	o facter-2.4.5
 	o fakeroot-1.6.5
+	o fcgi-2.4.7
 	o fd-3.01j
 	o felt-3.07 [wip]
 	o fet-6.0.1
@@ -796,6 +797,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jed-0.99-18
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jjui-0.9.6
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -812,6 +814,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kdevplatform-1.7.1
 	o kdsoap-1.10.0
 	o kea-3.1.3
+	o keepassxc-2.7.11
 	o keybinder-0.3.2
 	o kfilemetadata-5.81.0
 	o kgb-bot-1.55
@@ -831,12 +834,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lgeneral-1.3.1
 	o libadwaita-1.8
 	o libatomic-15.1.0
+	o libatomic_ops-7.10.0
 	o libbaloo4-21.04.0
 	o libbpg-0.9.8
 	o libburn-1.5.4
 	o libcap-2.49
 	o libcarddav-14.0.13
 	o libcec-6.0.2
+	o libcups-2.4.15
 	o libdevq-0.0.4
 	o libdsk-1.5.19
 	o libflash-0.4.13
@@ -858,6 +863,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liboobs-2.32.0
 	o liboop-1.0.1
 	o libpgm-5.2.122
+	o libproxy-0.5.12
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librdkafka-1.6.1
 	o librelp-1.10.0
@@ -866,6 +872,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libtrace-4.0.16
 	o libvirt-11.0
 	o libxdg-basedir-1.2.3
+	o libxmlb-0.3.24
+	o lima-2.0.2
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
@@ -930,6 +938,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mono-nat-1.1.0
 	o monocypher-3.1.2
 	o moodle-4.5.2 (LTS)
+	o moor-2.9.3
 	o mopher-0.6.0
 	o moserial-2.30.0
 	o mserv-devel-0.41
@@ -1111,16 +1120,21 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
+	o py-fonttools-4.61.0
 	o py-gammu-3.1
+	o py-hatchling-1.28.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
+	o py-last-7.0.0
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
 	o py-sbws-1.1.0
+	o py-secretstorage-3.5.0
 	o py-simpletal-5.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
+	o py-textual-6.7.0
 	o py-tokyocabinet-0.6
 	o py-torch-2.9
 	o py-trezor-0.13.10
