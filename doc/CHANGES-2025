@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6966 2025/11/30 14:02:32 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6967 2025/11/30 14:04:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10107,3 +10107,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/cups to 2.4.15 [wiz 2025-11-30]
 	Updated security/keepassxc to 2.7.11 [wiz 2025-11-30]
 	Updated textproc/libxmlb to 0.3.24 [wiz 2025-11-30]
+	Updated textproc/moor to 2.9.3 [wiz 2025-11-30]
