@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.17 2025/10/15 03:52:37 jnemeth Exp $
+$NetBSD: distinfo,v 1.18 2025/11/30 14:13:09 jnemeth Exp $
 
-BLAKE2s (mysql-boost-8.0.40.tar.gz) = 4fba24ee573376052daa912a055c62341c88dc5f8e6e769487dde4ebf49e6bb8
-SHA512 (mysql-boost-8.0.40.tar.gz) = fcece6e3c09dc4733767effb5c22a55e4add1c9f6b6b911e1eccdd0444f08dc5714b3c8b2a40c85a75a63ff117b6c9881904b6b4732b5ca9bef96de1cb2e284a
-Size (mysql-boost-8.0.40.tar.gz) = 490502884 bytes
+BLAKE2s (mysql-boost-8.0.44.tar.gz) = 17489835c71b9be2ba352f1ac4bc56200696beff13b0c8f84216b2986ab5bbf3
+SHA512 (mysql-boost-8.0.44.tar.gz) = f6881d6f88a4060796e1eac47c1ffe3ea005c27f1b0509fd97774ba5b1e7bf86d0f8c4e13126750f0cc3dd86af92c26459ae8fecf9e8f0f058dab43e93bb3b42
+Size (mysql-boost-8.0.44.tar.gz) = 492448984 bytes
 SHA1 (patch-CMakeLists.txt) = ecca84044c0b5901918ed1a3b0d073584c19185e
-SHA1 (patch-client_CMakeLists.txt) = 4fbaf94d43b6c58aa14712213c08b897bd6227cf
+SHA1 (patch-client_CMakeLists.txt) = 2fd4a0146ccbab24a0c37f9b78e042c162f34024
 SHA1 (patch-cmake_ldap.cmake) = 46f0df1109ca0886e0d0903a39e25278139f1849
 SHA1 (patch-cmake_os_SunOS.cmake) = 66a7d4386f07c68ae85a94d467465e6d1bec6b57
 SHA1 (patch-cmake_pkg-config.cmake) = 82498a310f8f428e26b722a40031bc1d6d272242
@@ -22,17 +22,13 @@ SHA1 (patch-libmysql_CMakeLists.txt) = 7b83faf1751ad40f20bca1ebcdac0cebb1370443
 SHA1 (patch-mysys_kqueue__timers.cc) = 837474b779c24dd0af67444c2adbcf07b73e0d36
 SHA1 (patch-mysys_stacktrace.cc) = 6792ceaae3c3b0d70bd8b6c848a128d50397e6f4
 SHA1 (patch-packaging_solaris_CMakeLists.txt) = 135c4aa07d9b20a9b56b8f1616821abfedb52ecb
-SHA1 (patch-plugin_x_client_xprotocol__impl.cc) = 70d00b692b76d730758b72e3d3b6add16358543a
-SHA1 (patch-plugin_x_protocol_plugin_encoder__file__output.h) = 76355089db19408860bcf8fe64c2e5c11d4aa0a6
-SHA1 (patch-plugin_x_protocol_plugin_message__field__chain.cc) = 997b361b668b1fb8a1001422615c0cc8faadf9d2
-SHA1 (patch-plugin_x_protocol_plugin_messages__used__by__server.cc) = f43c64c4479fde3db0024e8d92c0ffd2e097b26b
-SHA1 (patch-plugin_x_protocol_stream_decompression__input__stream.h) = eaf27412d366b9862fe834ebc6ec579891d03f6b
-SHA1 (patch-plugin_x_src_io_vio__input__stream.h) = cee7b855eadffe4036ced2b44f7bbbc400ca5ec7
-SHA1 (patch-plugin_x_src_prepare__param__handler.cc) = 19371a41e8627568094faa7b7a4f75f415321511
-SHA1 (patch-plugin_x_tests_driver_connector_session__holder.cc) = 371ad64e391ac3a2e6ff08948e190eb85f44aa81
-SHA1 (patch-plugin_x_tests_driver_connector_warning.h) = 80d4cbe93b853348f98c54d96892648063e1f9f5
-SHA1 (patch-plugin_x_tests_driver_formatters_message__formatter.cc) = d9ebd6238844f291de7208a372e9bf6c91b359b3
-SHA1 (patch-plugin_x_tests_driver_processor_send__message__block__processor.cc) = 410f6a14e1a2320f14985f3ea99533e0cbcb3a92
+SHA1 (patch-plugin_x_protocol_plugin_message__field__chain.cc) = d114fcfdc80338674481af19fa428683aff3a527
+SHA1 (patch-plugin_x_protocol_stream_decompression__input__stream.h) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-plugin_x_src_io_vio__input__stream.h) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-plugin_x_src_prepare__param__handler.cc) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-plugin_x_tests_driver_connector_session__holder.cc) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-plugin_x_tests_driver_formatters_message__formatter.cc) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-plugin_x_tests_driver_processor_send__message__block__processor.cc) = adc83b19e793491b1c6ea0fd8b46cd9f32e592fc
 SHA1 (patch-router_CMakeLists.txt) = 9bfd1278c42070ada0606dfff34a66b8b95d0413
 SHA1 (patch-router_src_harness_include_mysql_harness_net_ts_impl_netif.h) = ade643148787438d6d6f1f7b2636bbd0af87d70f
 SHA1 (patch-router_src_harness_include_mysql_harness_net_ts_internet.h) = 29e019236423aaa77b71b273d009404e4fbafe73
