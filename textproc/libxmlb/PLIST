@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/15 07:50:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/11/30 14:02:20 wiz Exp $
 bin/xb-tool
 include/libxmlb-2/libxmlb/xb-builder-fixup.h
 include/libxmlb-2/libxmlb/xb-builder-node.h
 include/libxmlb-2/libxmlb/xb-builder-source-ctx.h
 include/libxmlb-2/libxmlb/xb-builder-source.h
 include/libxmlb-2/libxmlb/xb-builder.h
+include/libxmlb-2/libxmlb/xb-compile.h
 include/libxmlb-2/libxmlb/xb-machine.h
 include/libxmlb-2/libxmlb/xb-node-query.h
 include/libxmlb-2/libxmlb/xb-node-silo.h
@@ -30,7 +31,7 @@ libexec/installed-tests/libxmlb/test.quirk
 libexec/installed-tests/libxmlb/test.xml
 libexec/installed-tests/libxmlb/test.xml.gz.gz.gz
 libexec/installed-tests/libxmlb/test.xml.xz
-libexec/installed-tests/libxmlb/test.xml.zstd
+libexec/installed-tests/libxmlb/test.xml.zst
 libexec/installed-tests/libxmlb/xb-self-test
 man/man1/xb-tool.1
 share/gir-1.0/Xmlb-2.0.gir
