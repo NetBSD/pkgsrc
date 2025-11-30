@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/03/14 18:34:17 vins Exp $
+# $NetBSD: Makefile,v 1.10 2025/11/30 10:15:27 vins Exp $
 
-DISTNAME=	emwm-utils-src-1.3
+DISTNAME=	emwm-utils-src-1.3.1
 PKGNAME=	${DISTNAME:S,-src,,}
 CATEGORIES=	wm x11
 MASTER_SITES=	https://fastestcode.org/dl/
@@ -29,6 +29,8 @@ MAKE_FLAGS+=	CC=${CC:Q}
 MAKE_FLAGS+=	SED=${SED:Q}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
+
+.include "../../mk/bsd.prefs.mk"
 
 SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} ${BINGRP} 4755
 SPECIAL_PERMS+=		bin/xmsm ${SETUID_ROOT_PERMS}
