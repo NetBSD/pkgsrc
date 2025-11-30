@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: sndio.sh,v 1.1 2025/11/15 21:38:42 vins Exp $
+# $NetBSD: sndio.sh,v 1.2 2025/11/30 13:43:13 vins Exp $
 #
 # PROVIDE: sndio
 # REQUIRE: DAEMON
@@ -16,7 +16,7 @@ pidfile="@VARBASE@/run/sndio/pid"
 logfile="@VARBASE@/run/sndio/log"
 start_precmd=sndio_prestart
 start_cmd=sndio_start
-stop_cmd=":"
+stop_cmd="sndio_stop"
 
 sndio_prestart() {
 	dir="@VARBASE@/run/sndio"
@@ -36,6 +36,16 @@ sndio_start()
 			${command} ${command_args} ${sndio_flags}
 	else
 		${command} ${command_args} ${sndio_flags}
+	fi
+}
+
+sndio_stop()
+{
+	echo "Stopping sndio server"
+	sndio_s=$(check_pidfile ${pidfile} ${command})
+	if [ -n "${sndio}" ]; then
+		kill ${sig_stop} ${sndio_s}
+		wait_for_pids ${sndio_s}
 	fi
 }
 
