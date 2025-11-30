@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6940 2025/11/29 20:21:33 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6941 2025/11/30 06:26:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10077,3 +10077,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-hypothesis to 6.148.3 [adam 2025-11-29]
 	Updated net/slumber to 4.2.1 [pin 2025-11-29]
 	Updated textproc/xan to 0.54.1 [pin 2025-11-29]
+	Updated devel/p5-Term-Table to 0.028 [wiz 2025-11-30]
