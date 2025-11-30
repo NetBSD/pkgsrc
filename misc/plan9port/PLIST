@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/02/11 10:01:46 vins Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/11/30 12:54:00 vins Exp $
 bin/acme
 plan9/acid/386
 plan9/acid/68020
@@ -5465,6 +5465,7 @@ plan9/src/cmd/acme/acme.c
 plan9/src/cmd/acme/addr.c
 plan9/src/cmd/acme/buff.c
 plan9/src/cmd/acme/cols.c
+plan9/src/cmd/acme/dat.c
 plan9/src/cmd/acme/dat.h
 plan9/src/cmd/acme/disk.c
 plan9/src/cmd/acme/ecmd.c
