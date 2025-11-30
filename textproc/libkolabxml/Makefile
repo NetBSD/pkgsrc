@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2025/10/05 19:26:23 js Exp $
+# $NetBSD: Makefile,v 1.28 2025/11/30 13:51:05 wiz Exp $
 
 DISTNAME=	libkolabxml-1.1.6
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	textproc
 MASTER_SITES=	https://mirror.kolabenterprise.com/pub/releases/
 
@@ -15,6 +15,12 @@ USE_TOOLS+=	gmake
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTS=OFF
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+
+SUBST_CLASSES+=		bl3
+SUBST_SED.bl3+=		-e "s,${BUILDLINK_DIR},${PREFIX},g"
+SUBST_FILES.bl3+=	${CMAKE_BUILD_DIR}/CMakeFiles/Export/*/*.cmake
+SUBST_STAGE.bl3=	post-build
+SUBST_MESSAGE.bl3=	Fix paths to buildlink directories in installed files.
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
