@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/11/15 21:38:42 vins Exp $
+# $NetBSD: Makefile,v 1.2 2025/11/30 13:43:13 vins Exp $
 
 DISTNAME=	sndio-1.10.0
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.sndio.org/
 
