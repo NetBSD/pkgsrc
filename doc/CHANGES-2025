@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6957 2025/11/30 13:18:40 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6958 2025/11/30 13:51:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10098,3 +10098,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/py-pbs-installer to 2025.11.20 [adam 2025-11-30]
 	Updated misc/plan9port to 20251109 [vins 2025-11-30]
 	Updated sysutils/rsnapshot to 1.5.1 [wiz 2025-11-30]
+	Updated textproc/libkolabxml to 1.1.6nb24 [wiz 2025-11-30]
