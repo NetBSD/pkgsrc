@@ -1,0 +1,23 @@
+# $NetBSD: Makefile.common,v 1.1 2025/11/30 10:10:03 markd Exp $
+
+# used by multimedia/mlt/Makefile
+# used by multimedia/mlt-qt5/Makefile
+# used by multimedia/mlt-qt6/Makefile
+
+DISTNAME=	mlt-7.34.1
+CATEGORIES=	multimedia
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mltframework/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.mltframework.org/
+LICENSE=	gnu-lgpl-v2.1
+
+USE_TOOLS+=	pkg-config gmake
+USE_LANGUAGES=	c c++
+
+DISTINFO_FILE=	${.CURDIR}/../../multimedia/mlt/distinfo
+PATCHDIR=	${.CURDIR}/../../multimedia/mlt/patches
+WRKSRC=		${WRKDIR}/${DISTNAME}
+
+CFLAGS.NetBSD+=		-DHAVE_LOCALE_H -DHAVE_STRTOD_L -D__SETLOCALE_SOURCE__

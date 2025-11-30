@@ -1,28 +1,20 @@
-# $NetBSD: Makefile,v 1.154 2025/10/23 20:38:38 wiz Exp $
+# $NetBSD: Makefile,v 1.155 2025/11/30 10:10:03 markd Exp $
 
-DISTNAME=	mlt-7.32.0
-PKGREVISION=	2
-CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_GITHUB:=mltframework/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+.include "Makefile.common"
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.mltframework.org/
 COMMENT=	Open source multimedia framework
-LICENSE=	gnu-lgpl-v2.1
 
-USE_TOOLS+=	pkg-config gmake
-USE_LANGUAGES=	c c++
-
-CFLAGS.NetBSD+=		-DHAVE_LOCALE_H -DHAVE_STRTOD_L -D__SETLOCALE_SOURCE__
+CMAKE_CONFIGURE_ARGS+=	-DMOD_VIDSTAB=OFF
+CMAKE_CONFIGURE_ARGS+=	-DMOD_QT=OFF
+CMAKE_CONFIGURE_ARGS+=	-DMOD_QT6=OFF
 
 SUBST_CLASSES+=		frei0r
 SUBST_STAGE.frei0r=	pre-configure
 SUBST_FILES.frei0r=	src/modules/frei0r/factory.c
 SUBST_SED.frei0r=	-e 's^/usr/lib/frei0r-1.*:^${BUILDLINK_PREFIX.frei0r}/lib/frei0r-1:^'
 
-PKGCONFIG_OVERRIDE+=	mlt++.pc.in
-PKGCONFIG_OVERRIDE+=	mlt-framework.pc.in
+PKGCONFIG_OVERRIDE+=	src/framework/mlt-framework.pc.in
+PKGCONFIG_OVERRIDE+=	src/mlt++/mlt++.pc.in
 
 .include "../../devel/cmake/build.mk"
 .include "../../audio/alsa-lib/buildlink3.mk"
@@ -30,6 +22,7 @@ PKGCONFIG_OVERRIDE+=	mlt-framework.pc.in
 .include "../../audio/ladspa/buildlink3.mk"
 .include "../../audio/libebur128/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
+.include "../../audio/rubberband/buildlink3.mk"
 .include "../../audio/sox/buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"
 .if !empty(PKGSRC_COMPILER:M*gcc*)
@@ -39,12 +32,10 @@ PKGCONFIG_OVERRIDE+=	mlt-framework.pc.in
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
-.include "../../multimedia/ffmpeg5/buildlink3.mk"
+.include "../../multimedia/ffmpeg7/buildlink3.mk"
 .include "../../multimedia/frei0r/buildlink3.mk"
 .include "../../multimedia/libdv/buildlink3.mk"
 .include "../../multimedia/movit/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
