@@ -1,0 +1,33 @@
+$NetBSD: patch-bin_hangman,v 1.1 2025/11/30 06:24:16 scole Exp $
+
+try to use system dictionary if no wordlist
+
+--- bin/hangman.orig	2025-11-04 14:05:44.000000000 +0000
++++ bin/hangman
+@@ -13,6 +13,7 @@ License: gpl
+ 
+ 
+ use strict;
++use PerlPowerTools;
+ 
+ srand();
+ my( $cont ) = "y";
+@@ -72,7 +73,7 @@ while( $cont =~ /^y/io ) {
+ print "\nTHANKS FOR PLAYING!\n";
+ 
+ sub get_a_word {
+-	my $wordlist = "wordlist.txt";
++	my $wordlist = get_dictionary_path("wordlist.txt");
+ 	my( $fh, $word );
+ 	my( $random ) = rand();
+ 
+@@ -129,7 +130,8 @@ hangman's gallows.
+ =head1 FILES
+ 
+ F<wordlist.txt> - make a list of words you'd like to use and put it
+-in the current directory.
++in the current directory.  If F<wordlist.txt> not found, try to
++use system dictionary file.
+ 
+ =head1 AUTHOR
+ 
