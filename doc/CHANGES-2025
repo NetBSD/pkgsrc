@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6979 2025/11/30 15:02:59 fox Exp $
+$NetBSD: CHANGES-2025,v 1.6980 2025/11/30 19:58:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10120,3 +10120,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/py-textual to 6.7.0 [wiz 2025-11-30]
 	Updated audio/fasttracker2 to 2.00 [fox 2025-11-30]
 	Updated sysutils/py-Glances to 4.4.1 [fox 2025-11-30]
+	Updated devel/py-cython to 3.2.2 [wiz 2025-11-30]
