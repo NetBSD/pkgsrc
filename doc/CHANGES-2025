@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6942 2025/11/30 06:28:10 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6943 2025/11/30 06:29:46 scole Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10079,3 +10079,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/xan to 0.54.1 [pin 2025-11-29]
 	Updated devel/p5-Term-Table to 0.028 [wiz 2025-11-30]
 	Updated devel/p5-Type-Tiny to 2.008006 [wiz 2025-11-30]
+	Updated sysutils/p5-PerlPowerTools to 1.053nb1 [scole 2025-11-30]
