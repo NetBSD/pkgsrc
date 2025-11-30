@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2023/05/16 22:35:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/11/30 14:01:48 wiz Exp $
 bin/keepassxc
 bin/keepassxc-cli
 bin/keepassxc-proxy
@@ -15,6 +15,7 @@ share/icons/hicolor/scalable/apps/keepassxc.svg
 share/icons/hicolor/scalable/mimetypes/application-x-keepassxc.svg
 share/keepassxc/icons/application/256x256/apps/keepassxc.png
 share/keepassxc/translations/keepassxc_ar.qm
+share/keepassxc/translations/keepassxc_be.qm
 share/keepassxc/translations/keepassxc_bg.qm
 share/keepassxc/translations/keepassxc_ca.qm
 share/keepassxc/translations/keepassxc_cs.qm
