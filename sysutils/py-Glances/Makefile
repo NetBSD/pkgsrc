@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2025/08/01 06:50:05 fox Exp $
+# $NetBSD: Makefile,v 1.44 2025/11/30 15:02:29 fox Exp $
 
-DISTNAME=	glances-4.3.3
+DISTNAME=	glances-4.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/g/G/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/glances/}
@@ -14,6 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-psutil>=5.6.7:../../sysutils/py-psutil
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1.6:../../textproc/py-jinja2
 # optional
 DEPENDS+=	${PYPKGPREFIX}-orjson>=0:../../textproc/py-orjson
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
