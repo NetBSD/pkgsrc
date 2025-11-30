@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/11/30 19:17:09 vins Exp $
+# $NetBSD: Makefile,v 1.6 2025/11/30 20:41:38 gdt Exp $
 
 DISTNAME=	libtirpc-1.3.7
 CATEGORIES=	devel
@@ -10,7 +10,11 @@ HOMEPAGE=	https://sourceforge.net/projects/libtirpc/
 COMMENT=	Port of SUNs Transport-Independent RPC library
 LICENSE=	original-bsd
 
-ONLY_FOR_PLATFORM=	Linux-*-*	# makes heavy use of mutex_lock()
+# libtirpc makes heavy use of mutex_lock(), a Linux-only API.
+# While it is not currently useful to build this on most other
+# platforms, because they have an RPC implementation in libc, there is
+# no good reason for this to be unbuildable.
+BROKEN_EXCEPT_ON_PLATFORM=	Linux-*-*	
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

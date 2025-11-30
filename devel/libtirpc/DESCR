@@ -8,3 +8,7 @@ Transport Layer Interface (TLI) or an equivalent X/Open Transport Interface
 (XTI).  TI-RPC is on-the-wire compatible with the TS-RPC, which is supported
 by almost 70 vendors on all major operating systems.  TS-RPC source code
 (RPCSRC 4.0) remains available from several internet sites.
+
+This package only builds on Linux.  It is likely that no one has fixed
+that because almost all (all?) other systems have an RPC
+implementation in libc.
