@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/07/23 13:46:45 yhardy Exp $
+# $NetBSD: Makefile,v 1.8 2025/11/30 08:58:27 wiz Exp $
 
 DISTNAME=	ck-0.7.1
 CATEGORIES=	devel
@@ -7,7 +7,7 @@ GITHUB_PROJECT=	ck
 GITHUB_TAG=	0.7.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://concurrencykit.org/
+HOMEPAGE=	https://concurrencykit.org/
 COMMENT=	Concurrency primitives, safe memory reclamation & non-blocking data structures
 LICENSE=	2-clause-bsd
 
