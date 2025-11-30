@@ -1,14 +1,14 @@
-$NetBSD: patch-Make.pkgsrc,v 1.1 2025/10/12 13:42:33 vins Exp $
+$NetBSD: patch-Make.pkgsrc,v 1.2 2025/11/30 10:31:25 vins Exp $
 
 Standard configuration for pkgsrc.
 
---- Make.pkgsrc.orig	2025-10-12 13:31:59.820674338 +0000
+--- Make.pkgsrc.orig	2025-11-30 11:25:30.576799613 +0000
 +++ Make.pkgsrc
-@@ -0,0 +1,15 @@
+@@ -0,0 +1,11 @@
 +# pkgsrc
 +CFLAGS	+= -Wall -Wno-missing-braces -Wno-parentheses \
 +	-I$(ROOT) -I$(ROOT)/include -I$(ROOT)/kern \
-+	-c -I$(X11)/include -D_THREAD_SAFE
++	-c -I$(X11)/include -D_THREAD_SAFE $(PTHREAD)
 +O	= o
 +OS	= posix
 +GUI	= x11
@@ -16,7 +16,3 @@ Standard configuration for pkgsrc.
 +AUDIO	?= none
 +
 +all: default
-+
-+libmachdep.a:
-+	arch=`uname -m|sed 's/i.86/386/; s/Power Macintosh/power/; s/x86_64/amd64/; s/i86pc/amd64/; s/aarch64/arm64/; s/sparc64/sun4u/'`; \
-+	(cd posix-$$arch &&  make)
