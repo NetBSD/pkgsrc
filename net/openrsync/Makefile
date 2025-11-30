@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/04/07 09:18:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/11/30 11:46:38 vins Exp $
 
 DISTNAME=	openrsync-0.20250127
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kristapsdz/}
 GITHUB_TAG=	a257c0f495af2b5ee6b41efc6724850a445f87ed
