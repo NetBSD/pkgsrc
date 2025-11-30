@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6941 2025/11/30 06:26:40 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6942 2025/11/30 06:28:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10078,3 +10078,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/slumber to 4.2.1 [pin 2025-11-29]
 	Updated textproc/xan to 0.54.1 [pin 2025-11-29]
 	Updated devel/p5-Term-Table to 0.028 [wiz 2025-11-30]
+	Updated devel/p5-Type-Tiny to 2.008006 [wiz 2025-11-30]
