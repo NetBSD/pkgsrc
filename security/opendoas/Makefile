@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/11/30 15:35:49 vins Exp $
+# $NetBSD: Makefile,v 1.8 2025/11/30 16:57:34 vins Exp $
 
 DISTNAME=	opendoas-6.8.2
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=duncaen/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,8 +15,9 @@ CONFLICTS=	doas-[0-9]*
 
 WRKSRC=		${WRKDIR}/OpenDoas-${PKGVERSION_NOREV}
 
-CFLAGS.NetBSD+=		-D_OPENBSD_SOURCE
-LDFLAGS.NetBSD+=	-lutil
+USE_TOOLS=	gmake yacc
+
+HAS_CONFIGURE=	yes
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
@@ -27,20 +29,14 @@ EGDIR=	share/examples/${PKGBASE}
 
 .include "../../mk/bsd.prefs.mk"
 
-HAS_CONFIGURE=		yes
+CONFIGURE_ENV+=		OS=${LOWER_OPSYS}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/${EGDIR}
 
-.if ${OPSYS} == "Linux"
 .include "options.mk"
-.  if !exists(/usr/include/security/pam_appl.h)
-CONFIGURE_ARGS+=	--without-pam
-.  endif
-.endif
 
-USE_TOOLS=	gmake yacc
 MAKE_FILE=	GNUmakefile
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
@@ -48,19 +44,6 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 SPECIAL_PERMS+=		bin/doas ${SETUID_ROOT_PERMS}
 NOT_FOR_UNPRIVILEGED=	yes
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${EGDIR}
+AUTO_MKDIRS=	yes
 
-PLIST_VARS+=	pam-conf
-
-.if ${OPSYS} == "Linux" && exists(/usr/include/security/pam_appl.h)
-PLIST.pam-conf=	yes
-REQD_FILES=	${EGDIR}/doas /etc/pam.d/doas
-.endif
-
-.if ${OPSYS} == "Darwin"
-PLIST.pam-conf=	yes
-REQD_FILES=	${EGDIR}/doas /etc/pam.d/doas
-.endif
-
-.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
