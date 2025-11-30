@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.155 2025/10/23 20:37:37 wiz Exp $
+# $NetBSD: Makefile,v 1.156 2025/11/30 10:17:43 markd Exp $
 
 DISTNAME=	krita-5.2.11
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=krita/${PKGVERSION_NOREV}/}
 
@@ -18,6 +18,7 @@ USE_TOOLS+=		gmake
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_PyQt5:BOOL=true
 
 DEPENDS+=	kitemmodels-[0-9]*:../../devel/kitemmodels
+DEPENDS+=	mlt-qt5-[0-9]*:../../multimedia/mlt-qt5
 
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kritarc \
 		${PKG_SYSCONFDIR}/xdg/kritarc
