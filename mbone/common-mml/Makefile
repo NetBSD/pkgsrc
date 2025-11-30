@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2025/04/26 21:33:21 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/11/30 08:52:17 wiz Exp $
 
 DISTNAME=	common-1.2.16
 PKGNAME=	common-mml-1.2.16
@@ -7,7 +7,7 @@ CATEGORIES=	mbone
 MASTER_SITES=	#
 
 MAINTAINER=	psham@cs.nmsu.edu
-HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/common/
+#HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/common/
 COMMENT=	Common multimedia library required by mbone tools
 
 WRKSRC=		${WRKDIR}/common
