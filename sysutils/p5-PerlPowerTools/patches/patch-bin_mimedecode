@@ -1,0 +1,15 @@
+$NetBSD: patch-bin_mimedecode,v 1.1 2025/11/30 06:24:16 scole Exp $
+
+Use MIME::Parser directly in case of non-default path install
+
+--- bin/mimedecode.orig	2025-11-04 14:05:44.000000000 +0000
++++ bin/mimedecode
+@@ -43,7 +43,7 @@ my %opt = ( 'd' => '.' );
+ 
+ getopts('d:',\%opt);
+ 
+-my $parser = PerlPowerTools::MIME::Parser->new;
++my $parser = MIME::Parser->new;
+ $parser->output_dir($opt{'d'});
+ 
+ if (@ARGV)

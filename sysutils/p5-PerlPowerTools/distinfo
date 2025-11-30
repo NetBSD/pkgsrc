@@ -1,5 +1,11 @@
-$NetBSD: distinfo,v 1.1 2025/11/17 04:44:45 scole Exp $
+$NetBSD: distinfo,v 1.2 2025/11/30 06:24:16 scole Exp $
 
 BLAKE2s (PerlPowerTools-1.053.tar.gz) = 61176fe39ee977de6e21063301741d61af23dfdec42b17269b210db5a7e025ce
 SHA512 (PerlPowerTools-1.053.tar.gz) = a4b201be1ec3972c584824fc2ce6e79bffd437098f510852f3cdd9517cd12db94e61593dd72c80da4b9cba7cbe133f6a9d8b707f933deeb96d148f3fff577c0f
 Size (PerlPowerTools-1.053.tar.gz) = 420226 bytes
+SHA1 (patch-bin_fortune) = f6fbf8e4c67069b087a518252db55560ec31af7e
+SHA1 (patch-bin_hangman) = 450c8de4b8765bcb2285f8dde9a02548ffc426cb
+SHA1 (patch-bin_mimedecode) = f64affe71c894c3349bda1d10f96ef3826f8a392
+SHA1 (patch-bin_spell) = 8f0ffa7bf00ad861fd5bbaed7119caa1405ed884
+SHA1 (patch-bin_words) = e1d936d08d9e25432f1a7d85fab23c12cdc6db83
+SHA1 (patch-lib_PerlPowerTools.pm) = 53e301c769a03345593fc74df961dc13fa06aa5b
