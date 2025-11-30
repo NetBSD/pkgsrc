@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.18 2025/10/13 02:22:16 mrg Exp $
+$NetBSD: distinfo,v 1.19 2025/11/30 10:10:03 markd Exp $
 
-BLAKE2s (mlt-7.32.0.tar.gz) = fcade36ef52c4f8df8709cbbf652ea6bb8e06d3fe5a28d5aee3604ee1b3ada31
-SHA512 (mlt-7.32.0.tar.gz) = 50c261d2a1bf76fd3c83d52bfe989bf4e87b9a77198b721f9ce01b8a18abd3a827751c10810ea31e64f5a4a79633b924be5edbf31c4c5a842a54bdf1c041d7f3
-Size (mlt-7.32.0.tar.gz) = 1487407 bytes
+BLAKE2s (mlt-7.34.1.tar.gz) = 7751ed62346f078fa3e57faf60b74959ddf6386cd0398158b2d25cebf80301a7
+SHA512 (mlt-7.34.1.tar.gz) = d14145c033274c669f7437cad39f479e108509f7292a32f469acc146440d8c9b689b78b6cad4ad6da7c74f9e2e3f9041626d7513376943d91f1c85fcfb634f44
+Size (mlt-7.34.1.tar.gz) = 1511970 bytes
+SHA1 (patch-cmake_FindFFmpeg.cmake) = 493c8fb35a15a6079735e4cd8cf02272af7aa539
 SHA1 (patch-src_framework_mlt__properties.c) = 387866d6ad5ffb5888a5f12c970c1f3b40dac202
-SHA1 (patch-src_framework_mlt__property.c) = dada3132f6eab8a4d09d3a16413e4f8eb4d17c79
+SHA1 (patch-src_framework_mlt__property.c) = 288d6f128094b281b2037d5ac6403f7ef83d585a
