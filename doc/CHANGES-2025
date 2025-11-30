@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6959 2025/11/30 13:52:48 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6960 2025/11/30 13:54:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10100,3 +10100,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/rsnapshot to 1.5.1 [wiz 2025-11-30]
 	Updated textproc/libkolabxml to 1.1.6nb24 [wiz 2025-11-30]
 	Updated www/fcgi to 2.4.7 [wiz 2025-11-30]
+	Updated devel/jjui to 0.9.6 [wiz 2025-11-30]
