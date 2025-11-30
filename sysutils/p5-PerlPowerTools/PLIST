@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2025/11/17 04:44:45 scole Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/11/30 06:24:16 scole Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/PerlPowerTools.pm
+${PERL5_SUB_INSTALLVENDORLIB}/PerlPowerTools/SymbolicMode.pm
+${PERL5_SUB_INSTALLVENDORLIB}/ppt.pm
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/PerlPowerTools.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/ppt.3
 ${PPT_DNAME}/bin/addbib
 ${PPT_DNAME}/bin/apply
 ${PPT_DNAME}/bin/ar
@@ -122,9 +127,6 @@ ${PPT_DNAME}/bin/words
 ${PPT_DNAME}/bin/wump
 ${PPT_DNAME}/bin/xargs
 ${PPT_DNAME}/bin/yes
-${PPT_DNAME}/lib/perl5/PerlPowerTools.pm
-${PPT_DNAME}/lib/perl5/PerlPowerTools/SymbolicMode.pm
-${PPT_DNAME}/lib/perl5/ppt.pm
 ${PPT_DNAME}/man/man1/addbib.1
 ${PPT_DNAME}/man/man1/apply.1
 ${PPT_DNAME}/man/man1/ar.1
@@ -247,5 +249,3 @@ ${PPT_DNAME}/man/man1/words.1
 ${PPT_DNAME}/man/man1/wump.1
 ${PPT_DNAME}/man/man1/xargs.1
 ${PPT_DNAME}/man/man1/yes.1
-${PPT_DNAME}/man/man3/PerlPowerTools.3
-${PPT_DNAME}/man/man3/ppt.3
