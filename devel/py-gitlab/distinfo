@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/11/30 10:33:19 markd Exp $
+
+BLAKE2s (python_gitlab-7.0.0.tar.gz) = 607274057e929e92d686957e0756e18f7cc58ac1a1a556e2729224577eeab9d0
+SHA512 (python_gitlab-7.0.0.tar.gz) = e6d698a9b85e3d6cc7f89486b22fa7871749ead239bf25530734d1a2ffa30b83550ab81f13dcf53446f2d1c877c8294fbdcd6c949f4a2e115d990e46ab3b0854
+Size (python_gitlab-7.0.0.tar.gz) = 400568 bytes
