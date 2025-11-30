@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6949 2025/11/30 10:13:20 markd Exp $
+$NetBSD: CHANGES-2025,v 1.6950 2025/11/30 10:14:38 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10089,3 +10089,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/mlt to 7.34.1 [markd 2025-11-30]
 	Added multimedia/mlt-qt5 version 7.34.1 [markd 2025-11-30]
 	Added multimedia/mlt-qt6 version 7.34.1 [markd 2025-11-30]
+	Updated x11/xtrlock to 2.18 [vins 2025-11-30]
