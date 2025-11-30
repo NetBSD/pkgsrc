@@ -1,9 +1,9 @@
-$NetBSD: patch-src_common.mf,v 1.2 2025/03/14 18:34:17 vins Exp $
+$NetBSD: patch-src_common.mf,v 1.3 2025/11/30 10:15:27 vins Exp $
 
 * Use standard CFLAGS and LDFLAGS.
 * Provide a pkgsrc-compliant install target.
 
---- src/common.mf.orig	2024-08-02 18:13:58.000000000 +0000
+--- src/common.mf.orig	2025-09-05 16:43:17.000000000 +0000
 +++ src/common.mf
 @@ -1,6 +1,5 @@
  # Common Makefile part, included by platform specific makefiles
@@ -12,7 +12,7 @@ $NetBSD: patch-src_common.mf,v 1.2 2025/03/14 18:34:17 vins Exp $
  toolbox_libs =  -lXm -lXt -lX11
  xmsm_libs = -lXm -lXt -lXss -lXrandr -lXinerama -lX11 $(SYSLIBS)
  
-@@ -15,34 +14,33 @@ executables = xmsm xmtoolbox xmsession
+@@ -15,34 +14,34 @@ executables = xmsm xmtoolbox xmsession
  all: $(executables) $(app_defaults) 
  
  xmtoolbox: $(toolbox_objs) $(common_objs)
@@ -26,7 +26,7 @@ $NetBSD: patch-src_common.mf,v 1.2 2025/03/14 18:34:17 vins Exp $
  xmsession: xmsession.src
 -	sed s%PREFIX%$(PREFIX)%g xmsession.src > $@
 +	$(SED) s%PREFIX%$(PREFIX)%g xmsession.src > $@
- 	chmod 775 $@
+ 	chmod 755 $@
  
  XmSm.ad: XmSm.ad.src
 -	sed s%PREFIX%$(PREFIX)%g XmSm.ad.src > $@
@@ -58,10 +58,11 @@ $NetBSD: patch-src_common.mf,v 1.2 2025/03/14 18:34:17 vins Exp $
 +	$(BSD_INSTALL_DATA) toolboxrc $(DESTDIR)$(RCDIR)/toolboxrc
 +	$(BSD_INSTALL_DATA) XmSm.ad $(DESTDIR)$(APPLRESDIR)/XmSm
 +	$(BSD_INSTALL_DATA) XmToolbox.ad $(DESTDIR)$(APPLRESDIR)/XmToolbox
++
  
  uninstall:
  	rm -f $(PREFIX)/bin/xmsm
-@@ -60,4 +58,4 @@ clean:
+@@ -60,4 +59,4 @@ clean:
  	-rm .depend
  
  .depend:
