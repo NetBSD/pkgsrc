@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6969 2025/11/30 14:08:22 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6970 2025/11/30 14:09:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10110,3 +10110,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/moor to 2.9.3 [wiz 2025-11-30]
 	Updated fonts/py-fonttools to 4.61.0 [wiz 2025-11-30]
 	Updated devel/py-hatchling to 1.28.0 [wiz 2025-11-30]
+	Updated sysutils/lima to 2.0.2 [wiz 2025-11-30]
