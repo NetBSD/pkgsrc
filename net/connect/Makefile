@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.18 2019/11/03 11:45:33 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2025/11/30 08:59:39 wiz Exp $
 
 DISTNAME=	1.104
 PKGNAME=	connect-${DISTNAME}
 CATEGORIES=	net security
-MASTER_SITES=	http://bitbucket.org/gotoh/connect/get/
+#MASTER_SITES=	http://bitbucket.org/gotoh/connect/get/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/gotoh/connect/wiki/Home
+HOMEPAGE=	https://github.com/gotoh/ssh-connect
 COMMENT=	Open a TCP connection using a SOCKS4/5 or HTTP proxy server
 LICENSE=	gnu-gpl-v2
 
