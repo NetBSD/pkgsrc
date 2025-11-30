@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6945 2025/11/30 08:02:12 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6946 2025/11/30 08:19:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10082,3 +10082,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/p5-PerlPowerTools to 1.053nb1 [scole 2025-11-30]
 	Updated devel/py-tortoisehg to 7.0.1 [wiz 2025-11-30]
 	Updated textproc/py-pdf to 6.4.0 [wiz 2025-11-30]
+	Updated databases/py-apsw to 3.51.1.0 [adam 2025-11-30]
+	Updated lang/py-cxxheaderparser to 1.6.1 [adam 2025-11-30]
