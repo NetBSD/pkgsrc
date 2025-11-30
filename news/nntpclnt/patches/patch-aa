@@ -1,21 +1,22 @@
-$NetBSD: patch-aa,v 1.5 2005/04/01 03:32:07 kim Exp $
+$NetBSD: patch-aa,v 1.6 2025/11/30 15:07:17 vins Exp $
 
---- uname.c.orig	1994-08-11 17:37:53.000000000 -0400
-+++ uname.c	2005-03-31 22:30:11.000000000 -0500
-@@ -16,4 +16,5 @@
+--- uname.c.orig	1994-08-11 21:37:53.000000000 +0000
++++ uname.c
+@@ -16,4 +16,6 @@ static char	*rcsId = "@(#)$Id: uname.c,v
  
  #include <stdio.h>
 +#include <strings.h>
++#include <stdlib.h>
  #include "config.h"
  
-@@ -67,5 +68,5 @@
+@@ -67,5 +69,5 @@ char *uptr;
  {
      FILE * uucpf;
 -    char * hostname;
 +    char * p;
      if ((uucpf = fopen(HOSTFILE,"r")) == NULL) {
  	fprintf(stderr,"Couldn't open %s to determine hostname. Contact your system administrator.\n", 
-@@ -74,5 +75,4 @@
+@@ -74,5 +76,4 @@ char *uptr;
      } else {
  	fgets(uptr, 256, uucpf);
 -	fclose(tmpfp);
