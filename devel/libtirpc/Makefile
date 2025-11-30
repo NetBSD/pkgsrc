@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/09/28 16:22:15 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2025/11/30 19:17:09 vins Exp $
 
 DISTNAME=	libtirpc-1.3.7
 CATEGORIES=	devel
@@ -10,7 +10,7 @@ HOMEPAGE=	https://sourceforge.net/projects/libtirpc/
 COMMENT=	Port of SUNs Transport-Independent RPC library
 LICENSE=	original-bsd
 
-ONLY_FOR_PLATFORM=	Linux-*-*
+ONLY_FOR_PLATFORM=	Linux-*-*	# makes heavy use of mutex_lock()
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
