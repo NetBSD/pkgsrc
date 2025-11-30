@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2025/08/24 18:03:46 vins Exp $
+$NetBSD: distinfo,v 1.3 2025/11/30 09:27:01 vins Exp $
 
-BLAKE2s (midish-1.4.0.tar.gz) = 7334c45b8a9bad49064c6c87de62fccf76845b43b0e5c7dd5c27e36aa9d9c5b4
-SHA512 (midish-1.4.0.tar.gz) = 7945adf1f5b1bafa871dfe4284ff153dee62565561e595fb45090125f14c0275f9637b6d9deec704251ad907f5fda8bdf52c6b85428be354a7c86a21c5a0da8c
-Size (midish-1.4.0.tar.gz) = 189071 bytes
+BLAKE2s (midish-1.4.1.tar.gz) = b54a0f5c12031442f90aa34712adae462670231d8d4457fcb2eb767fea005ca8
+SHA512 (midish-1.4.1.tar.gz) = f8aa67f7dbc8b3c1eebc439937c8e1048faf82bdd0fb72f61ab86cabac1484c47cf911818b89c7747e1d73d86402c6e582ace93bd9e773d24387dc83aadbba20
+Size (midish-1.4.1.tar.gz) = 189187 bytes
