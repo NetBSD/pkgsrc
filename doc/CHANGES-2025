@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6961 2025/11/30 13:58:23 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6962 2025/11/30 13:58:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10102,3 +10102,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/fcgi to 2.4.7 [wiz 2025-11-30]
 	Updated devel/jjui to 0.9.6 [wiz 2025-11-30]
 	Updated print/libcups to 2.4.15 [wiz 2025-11-30]
+	Updated print/cups-base to 2.4.15 [wiz 2025-11-30]
