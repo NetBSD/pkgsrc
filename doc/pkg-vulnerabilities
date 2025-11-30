@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.671 2025/11/23 20:53:32 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.672 2025/11/30 16:48:41 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28968,3 +28968,33 @@ wolfssl<5.8.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-11936
 wolfssl<5.8.4	side-channel		https://nvd.nist.gov/vuln/detail/CVE-2025-12888
 wolfssl<5.8.4	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-12889
 nnn-[0-9]*	double-free		https://nvd.nist.gov/vuln/detail/CVE-2025-13566
+SOGo<5.12.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-63498
+cups-base<2.4.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58436
+cups-base<2.4.15	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-61915
+expat-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-66382
+#fail2ban-[0-9]*	insecure-file-permissions	https://nvd.nist.gov/vuln/detail/CVE-2025-45311 # disputed
+fluent-bit<4.0.14	authentication-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-12969
+fluent-bit<4.0.14	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-12970
+fluent-bit<4.0.14	directory-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-12972
+fluent-bit<4.0.14	directory-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-12977
+fluent-bit<4.0.14	security-bypass			https://nvd.nist.gov/vuln/detail/CVE-2025-12978
+glib2<2.86.3	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-13601
+krita<5.2.13	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-59820
+mongodb<7.0.26	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-12893
+mongodb<7.0.26	input-validation		https://nvd.nist.gov/vuln/detail/CVE-2025-13507
+mongodb<7.0.26	improper-authorization		https://nvd.nist.gov/vuln/detail/CVE-2025-13643
+mongodb<7.0.26	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-13644
+php{56,74,81,82,83,84}-orangehrm<5.8	code-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-66224
+php{56,74,81,82,83,84}-orangehrm<5.8	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-66225
+php{56,74,81,82,83,84}-orangehrm<5.8	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2025-66289
+php{56,74,81,82,83,84}-orangehrm<5.8	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-66290
+php{56,74,81,82,83,84}-orangehrm<5.8	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-66291
+png<1.6.51	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-64505
+png<1.6.51	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-64506
+png<1.6.51	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-64720
+png<1.6.51	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-65018
+py{27,39,310,311,312,313,314}-fonttools>=4.33.0<4.60.2	xml-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-66034
+py{27,39,310,311,312,313,314}-pdf<6.4.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-66019
+tinyproxy<1.11.3	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-63938
+webkit-gtk-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13502
+wireshark<4.6.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13674
