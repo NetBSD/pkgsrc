@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6972 2025/11/30 14:13:25 jnemeth Exp $
+$NetBSD: CHANGES-2025,v 1.6973 2025/11/30 14:13:39 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10113,3 +10113,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/lima to 2.0.2 [wiz 2025-11-30]
 	Updated security/py-secretstorage to 3.5.0 [wiz 2025-11-30]
 	Updated databases/mysql80-client to 8.0.44 [jnemeth 2025-11-30]
+	Updated databases/mysql80-server to 8.0.44 [jnemeth 2025-11-30]
