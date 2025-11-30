@@ -1,0 +1,32 @@
+$NetBSD: patch-bin_words,v 1.1 2025/11/30 06:24:16 scole Exp $
+
+try to use system dictionary if no wordlist
+
+--- bin/words.orig	2025-11-04 14:05:44.000000000 +0000
++++ bin/words
+@@ -16,6 +16,7 @@ use strict;
+ use File::Basename qw(basename dirname);
+ use File::Spec qw();
+ use Getopt::Std qw(getopts);
++use PerlPowerTools;
+ 
+ use constant EX_SUCCESS => 0;
+ use constant EX_FAILURE => 1;
+@@ -56,6 +57,7 @@ if (-d $wordlist) {
+     exit EX_FAILURE;
+ }
+ my $dict;
++$wordlist = get_dictionary_path($wordlist);
+ unless (open $dict, '<', $wordlist) {
+     warn "$Program: unable to open '$wordlist': $!\n";
+     exit EX_FAILURE;
+@@ -134,7 +136,8 @@ B<words> accepts the following options:
+ 
+ By default, B<words> looks for a word-file named 'wordlist' in the
+ same directory as the executable.  Use the B<-w> option to specify the
+-path to an alternate word list.
++path to an alternate word list.  If no word file found, attempt to use
++a system dictionary wordlist instead.
+ 
+ =item B<-m> I<min-length>
+ 

@@ -1,0 +1,45 @@
+$NetBSD: patch-bin_fortune,v 1.1 2025/11/30 06:24:16 scole Exp $
+
+Try to use system fortune, fix function name
+
+--- bin/fortune.orig	2025-11-04 14:05:44.000000000 +0000
++++ bin/fortune
+@@ -252,8 +252,16 @@ sub find_path
+ sub fortune_dirs
+ {
+     my @searchdirs;
+-    push @searchdirs, @FORTDIRS unless $opts{o};
+-    push @searchdirs, @OFFDIRS if ( $opts{o} || $opts{a} );
++    my $sys_fort = "/usr/share/games/fortune";
++    if ( -d "$home/fortunes" ) {
++	# non-offensive & offensive in separate dirs
++	push @searchdirs, @FORTDIRS unless $opts{o};
++	push @searchdirs, @OFFDIRS if ( $opts{a} || $opts{o} );
++    } elsif ( -d $sys_fort ) {
++	# non-offensive & offensive in same dir
++	push @searchdirs, $sys_fort;
++	@OFFDIRS = ();
++    }
+     return @searchdirs;
+ }
+ 
+@@ -293,7 +301,7 @@ sub is_fortune_file
+ 	    warn "$msg FALSE (no \".dat\" file)\n" if $debug;
+ 	    return 0;
+     }
+-    if ( $opts{o} and not offensive( $path ) ) {
++    if ( $opts{o} and not is_offensive( $path ) ) {
+ 	    warn "$msg FALSE (inoffensive files not allowed)\n" if $debug;
+ 	    return 0;
+     }
+@@ -1098,6 +1106,10 @@ readme
+ ./fortunes/startrek
+ ./fortunes/zippy
+ 
++  OR
++
++/usr/share/games/fortune/
++
+ =head1 BUGS
+ 
+ Currently there is no installer and the fortunes listed above are not
