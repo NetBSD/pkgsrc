@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2019/11/04 19:17:11 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2025/11/30 15:07:16 vins Exp $
 
 DISTNAME=	nntpclnt-1.6.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	news
 MASTER_SITES=	# http://ftp.sunet.se/pub/news/nntp/
 
@@ -16,6 +16,8 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 CONFLICTS+=	inn-[0-9]*
+
+FORCE_C_STD=	c89
 
 BUILD_TARGET=		inews
 PKG_GROUPS=		news
