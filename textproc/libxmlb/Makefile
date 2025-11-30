@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2025/10/23 20:39:35 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/11/30 11:01:57 wiz Exp $
 
 DISTNAME=	libxmlb-0.3.14
 PKGREVISION=	2
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GITHUB:=hughsie/libxmlb/releases/download/${PKGREVISION_NOREV}/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=hughsie/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
