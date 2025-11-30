@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2025/04/17 15:45:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/11/30 08:19:08 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/cxxheaderparser/__init__.py
 ${PYSITELIB}/cxxheaderparser/__init__.pyc
 ${PYSITELIB}/cxxheaderparser/__init__.pyo
