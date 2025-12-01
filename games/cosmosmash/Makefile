@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/01/06 21:49:10 ktnb Exp $
+# $NetBSD: Makefile,v 1.7 2025/12/01 09:14:36 wiz Exp $
 
 DISTNAME=	cosmosmash-1.4.8
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://perso.b2b2c.ca/~sarrazip/dev/cosmosmash.html
+HOMEPAGE=	http://gvlsywt.cluster051.hosting.ovh.net/dev/cosmosmash.html
 COMMENT=	Space rock shooting video game
 LICENSE=	gnu-gpl-v2
 
