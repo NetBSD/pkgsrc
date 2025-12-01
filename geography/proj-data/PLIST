@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/09/15 11:19:54 gdt Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/12/01 19:08:35 gdt Exp $
 share/proj/DK
 share/proj/FO
 share/proj/ISL
@@ -80,6 +80,7 @@ share/proj/ch_swisstopo_chgeo2004_ETRS89_LN02.tif
 share/proj/copyright_and_licenses.csv
 share/proj/cz_cuzk_CR-2005.tif
 share/proj/cz_cuzk_README.txt
+share/proj/cz_cuzk_table_-y-x_3_v1710.tif
 share/proj/de_adv_BETA2007.tif
 share/proj/de_adv_README.txt
 share/proj/de_bkg_README.txt
@@ -170,6 +171,7 @@ share/proj/fr_ign_ggguy15.tif
 share/proj/fr_ign_ggker08v2.tif
 share/proj/fr_ign_ggm00v2.tif
 share/proj/fr_ign_ggm04v1.tif
+share/proj/fr_ign_ggm23v2.tif
 share/proj/fr_ign_ggpf02-Bora.tif
 share/proj/fr_ign_ggpf02-Huahine.tif
 share/proj/fr_ign_ggpf02-Maiao.tif
@@ -228,6 +230,7 @@ share/proj/no_kv_CD_above_Ell_ETRS89_v2021a.tif
 share/proj/no_kv_CD_above_Ell_ETRS89_v2023b.tif
 share/proj/no_kv_ETRS89NO_NGO48_TIN.json
 share/proj/no_kv_HREF2018B_NN2000_EUREF89.tif
+share/proj/no_kv_HREF2018B_NN54_NN2000.tif
 share/proj/no_kv_NKGETRF14_EPSG7922_2000.tif
 share/proj/no_kv_README.txt
 share/proj/no_kv_Svalbard_EUREF89_SVD2024.tif
