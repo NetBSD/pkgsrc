@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/11/04 21:28:49 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.9 2025/12/01 09:08:13 wiz Exp $
 
 DISTNAME=	nvramtool-4.0-9989-gf2dfef0-08bda29
 PKGNAME=	nvramtool-0pre20150613
@@ -7,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_LOCAL:=nvramtool/}
 
 MAINTAINER=	jakllsch@kollasch.net
-HOMEPAGE=	https://www.coreboot.org/Nvramtool
+HOMEPAGE=	https://github.com/coreboot/coreboot/tree/main/util/nvramtool
 COMMENT=	Coreboot CMOS NVRAM manipulation utility
 LICENSE=	gnu-gpl-v2
 
