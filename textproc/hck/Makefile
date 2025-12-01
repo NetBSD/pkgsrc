@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2025/03/14 21:00:31 pin Exp $
+# $NetBSD: Makefile,v 1.15 2025/12/01 20:34:27 pin Exp $
 
-DISTNAME=	hck-0.11.4
+DISTNAME=	hck-0.11.5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sstadick/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,10 +12,7 @@ LICENSE=	unlicense OR mit
 
 TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 
-SITES.wasi-0.11.0+wasi-snapshop-preview1.crate=	https://static.crates.io/crates/wasi/
-SITES.wasi-0.13.3+wasi-0.2.2.crate=		https://static.crates.io/crates/wasi/
-
-RUST_REQ=	1.81.0
+RUST_REQ=	1.90.0
 
 .include "cargo-depends.mk"
 
