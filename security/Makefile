@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.985 2025/10/20 19:10:24 vins Exp $
+# $NetBSD: Makefile,v 1.986 2025/12/01 08:54:32 adam Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -25,6 +25,7 @@ SUBDIR+=	R-sodium
 SUBDIR+=	TweetNaCl
 SUBDIR+=	acme-client
 SUBDIR+=	acmesh
+SUBDIR+=	adguardhome
 SUBDIR+=	age
 SUBDIR+=	aide
 SUBDIR+=	aide06
