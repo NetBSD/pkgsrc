@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.50 2025/01/06 21:49:10 ktnb Exp $
+# $NetBSD: Makefile,v 1.51 2025/12/01 09:21:14 wiz Exp $
 
 DISTNAME=	crimson-0.5.3
 PKGNAME=	${DISTNAME:S/crimson/crimsonfields/}
 PKGREVISION=	3
 CATEGORIES=	games
-MASTER_SITES=	http://crimson.seul.org/files/
+MASTER_SITES=	https://crimson.seul.org/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://crimson.seul.org/
+HOMEPAGE=	https://crimson.seul.org/
 COMMENT=	Tactical war game in the tradition of Battle Isle
 LICENSE=	gnu-gpl-v2
 
