@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/10/08 15:20:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/12/01 20:09:09 adam Exp $
 bin/indi_Excalibur
 bin/indi_aaf2_focus
 bin/indi_aagsolo_weather
@@ -17,6 +17,7 @@ bin/indi_astrometry
 bin/indi_astrotrac_telescope
 bin/indi_baader_dome
 bin/indi_camelot_rotator
+bin/indi_celestron_dewpower
 bin/indi_celestron_gps
 bin/indi_celestron_sct_focus
 bin/indi_cheapodc
@@ -49,6 +50,8 @@ bin/indi_giotto
 bin/indi_gpusb
 bin/indi_hid_test
 bin/indi_hitecastrodc_focus
+bin/indi_hitech_weather
+bin/indi_iafscaa_focus
 bin/indi_ieaf_focus
 bin/indi_ieq_telescope
 bin/indi_ieqlegacy_telescope
@@ -100,7 +103,6 @@ bin/indi_onfocus_focus
 bin/indi_openweathermap_weather
 bin/indi_optec_wheel
 bin/indi_paramount_telescope
-bin/indi_pegasus_flatmaster
 bin/indi_pegasus_focuscube
 bin/indi_pegasus_focuscube3
 bin/indi_pegasus_ppb
@@ -108,7 +110,6 @@ bin/indi_pegasus_ppba
 bin/indi_pegasus_prodigyMF
 bin/indi_pegasus_scopsoag
 bin/indi_pegasus_spb
-bin/indi_pegasus_uch
 bin/indi_pegasus_upb
 bin/indi_pegasusindigo_wheel
 bin/indi_perfectstar_focus
@@ -127,6 +128,7 @@ bin/indi_rbfocus_focus
 bin/indi_rigel_dome
 bin/indi_robo_focus
 bin/indi_rolloff_dome
+bin/indi_safetymonitor
 bin/indi_scopedome_dome
 bin/indi_script_dome
 bin/indi_script_telescope
@@ -226,8 +228,10 @@ include/libindi/fits.h
 include/libindi/fits_extensions.h
 include/libindi/fitsidi.h
 include/libindi/fitskeyword.h
-include/libindi/hidapi.h
+include/libindi/hotplugcapabledevice.h
+include/libindi/hotplugmanager.h
 include/libindi/httplib.h
+include/libindi/indi_hidapi.h
 include/libindi/indiapi.h
 include/libindi/indibase.h
 include/libindi/indibasetypes.h
@@ -257,6 +261,7 @@ include/libindi/indilightboxinterface.h
 include/libindi/indilogger.h
 include/libindi/indimacros.h
 include/libindi/indioutputinterface.h
+include/libindi/indipowerinterface.h
 include/libindi/indiproperties.h
 include/libindi/indiproperty.h
 include/libindi/indipropertybasic.h
@@ -309,19 +314,19 @@ lib/indi/MathPlugins/libindi_Nearest_MathPlugin.so
 lib/indi/MathPlugins/libindi_SVD_MathPlugin.so
 lib/libindiAlignmentClient.a
 lib/libindiAlignmentDriver.so
+lib/libindiAlignmentDriver.so.${PKGVERSION}
 lib/libindiAlignmentDriver.so.2
-lib/libindiAlignmentDriver.so.2.1.5
 lib/libindiclient.a
 lib/libindiclient.so
+lib/libindiclient.so.${PKGVERSION}
 lib/libindiclient.so.2
-lib/libindiclient.so.2.1.5
 lib/libindidriver.a
 lib/libindidriver.so
+lib/libindidriver.so.${PKGVERSION}
 lib/libindidriver.so.2
-lib/libindidriver.so.2.1.5
 lib/libindilx200.so
+lib/libindilx200.so.${PKGVERSION}
 lib/libindilx200.so.2
-lib/libindilx200.so.2.1.5
 lib/pkgconfig/libindi.pc
 share/indi/drivers.xml
 share/indi/indi_tcfs_sk.xml
