@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6991 2025/12/01 20:34:50 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6992 2025/12/01 20:35:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10137,3 +10137,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-beautifulsoup4 to 4.14.3 [adam 2025-12-01]
 	Updated misc/indi to 2.1.7 [adam 2025-12-01]
 	Updated textproc/hck to 0.11.5 [pin 2025-12-01]
+	Updated textproc/treemd to 0.4.1 [pin 2025-12-01]
