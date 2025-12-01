@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/16 07:34:24 shattered Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/12/01 13:32:44 adam Exp $
 include/xmp.h
+lib/cmake/libxmp/libxmp-config-version.cmake
+lib/cmake/libxmp/libxmp-config.cmake
 lib/libxmp.so
-lib/libxmp.so.4
 lib/libxmp.so.${PKGVERSION}
+lib/libxmp.so.4
 lib/pkgconfig/libxmp.pc
