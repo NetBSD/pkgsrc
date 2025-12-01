@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.672 2025/11/30 16:48:41 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.673 2025/12/01 17:36:06 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28998,3 +28998,4 @@ py{27,39,310,311,312,313,314}-pdf<6.4.0	denial-of-service	https://nvd.nist.gov/v
 tinyproxy<1.11.3	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-63938
 webkit-gtk-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13502
 wireshark<4.6.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13674
+webkit-gtk<2.50.2	multiple-vulnerabilities	https://webkitgtk.org/security/WSA-2025-0008.html
