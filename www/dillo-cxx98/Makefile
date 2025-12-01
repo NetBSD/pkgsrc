@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/04/24 14:16:03 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/12/01 08:09:06 wiz Exp $
 
 DISTNAME=	dillo-3.1.0
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=dillo-browser/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://dillo-browser.github.io/
+HOMEPAGE=	https://dillo-browser.org/
 COMMENT=	Very small and fast graphical web-browser
 LICENSE=	gnu-gpl-v3
 
