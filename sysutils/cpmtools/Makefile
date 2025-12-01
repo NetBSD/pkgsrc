@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2023/01/15 15:41:46 thorpej Exp $
-#
+# $NetBSD: Makefile,v 1.10 2025/12/01 09:16:17 wiz Exp $
 
 DISTNAME=		cpmtools-2.23
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.moria.de/~michael/cpmtools/files/
+MASTER_SITES=		https://www.moria.de/~michael/cpmtools/files/
 
 MAINTAINER=		dgriffi@cs.csubak.edu
-HOMEPAGE=		http://www.moria.de/~michael/cpmtools/
+HOMEPAGE=		https://www.moria.de/~michael/cpmtools/
 COMMENT=		Similar to mtools, except for CP/M filesystems
 
 GNU_CONFIGURE=		yes
