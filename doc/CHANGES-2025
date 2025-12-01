@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6981 2025/12/01 03:56:39 jnemeth Exp $
+$NetBSD: CHANGES-2025,v 1.6982 2025/12/01 04:26:07 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10122,3 +10122,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-Glances to 4.4.1 [fox 2025-11-30]
 	Updated devel/py-cython to 3.2.2 [wiz 2025-11-30]
 	Updated comms/asterisk21 to 21.12.0 [jnemeth 2025-12-01]
+	Updated comms/asterisk23 to 23.1.0 [jnemeth 2025-12-01]
