@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6988 2025/12/01 18:25:07 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.6989 2025/12/01 19:08:40 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10133,3 +10133,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/libxmp to 4.6.3 [adam 2025-12-01]
 	Updated audio/xmp to 4.2.0 [adam 2025-12-01]
 	Updated geography/proj to 9.7.1 [gdt 2025-12-01]
+	Updated geography/proj-data to 1.24 [gdt 2025-12-01]
