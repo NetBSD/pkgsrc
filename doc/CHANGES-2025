@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6983 2025/12/01 08:41:36 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6984 2025/12/01 08:57:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10124,3 +10124,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/asterisk21 to 21.12.0 [jnemeth 2025-12-01]
 	Updated comms/asterisk23 to 23.1.0 [jnemeth 2025-12-01]
 	Removed net/corebird [wiz 2025-12-01]
+	Added security/adguardhome version 0.107.69 [adam 2025-12-01]
+	Updated devel/py-rpds-py to 0.30.0 [adam 2025-12-01]
