@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/11/20 15:30:42 adam Exp $
+$NetBSD: distinfo,v 1.12 2025/12/01 13:26:41 adam Exp $
 
-BLAKE2s (tinycss2-1.5.0.tar.gz) = a0fac35c08928265edd569fe0dd8bb41be0ceae5abb88e65d178cf1bd4de0237
-SHA512 (tinycss2-1.5.0.tar.gz) = 1478270757a9f09abcb1ffa1d41ab382061a427f629dc92b20473f78f57f59d8ca7dc9ae41154ae0b62cc6fbc923b118446293f87cc1e31d0747502e4b7413f9
-Size (tinycss2-1.5.0.tar.gz) = 35197 bytes
+BLAKE2s (tinycss2-1.5.1.tar.gz) = 59e0e6557b02bcea69ecff5c1f3ed7c7f3ae9795e15f6bc8bb528a51c3742c34
+SHA512 (tinycss2-1.5.1.tar.gz) = 1c2e1818c27c90f78b1e0af9b4c3c2a0944999691dcea678d0f5ed8a141d6ebd272b8b6763c1eac9d824db0d539e1e238f1e5e6abd2c02d97bb86002da637a10
+Size (tinycss2-1.5.1.tar.gz) = 88195 bytes
