@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/04/08 11:17:13 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.6 2025/12/01 09:17:52 wiz Exp $
 
 DISTNAME=	crack-attack-sounds-1.1.14-58.noarch
 PKGNAME=	crack-attack-sounds-1.1.14
@@ -8,7 +7,7 @@ MASTER_SITES=	http://download.opensuse.org/distribution/10.3/repo/oss/suse/noarc
 EXTRACT_SUFX=	.rpm
 
 MAINTAINER=	dsainty@NetBSD.org
-HOMEPAGE=	http://www.miguev.net/background-music-for-crack-attack-119-v05/
+#HOMEPAGE=	http://www.miguev.net/background-music-for-crack-attack-119-v05/
 COMMENT=	Music and sounds for crack-attack
 
 WRKSRC=		${WRKDIR}/usr/share/games/crack-attack
