@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/10/06 20:58:50 mrg Exp $
+# $NetBSD: Makefile,v 1.18 2025/12/01 09:25:58 wiz Exp $
 
 DISTNAME=		Csound${CSOUND_VERSION}_manual_html
 PKGNAME=		csound6-manual-${CSOUND_VERSION}
@@ -10,7 +10,7 @@ GITHUB_RELEASE=		${CSOUND_VERSION}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		mrg@eterna.com.au
-HOMEPAGE=		https://www.csounds.com/
+HOMEPAGE=		https://github.com/csound/csound
 COMMENT=		Csound6 Reference Manual
 LICENSE=		gnu-fdl-v1.2
 
