@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/04/14 12:06:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/12/01 09:04:06 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -13,6 +13,9 @@ ${PYSITELIB}/docx/api.pyo
 ${PYSITELIB}/docx/blkcntnr.py
 ${PYSITELIB}/docx/blkcntnr.pyc
 ${PYSITELIB}/docx/blkcntnr.pyo
+${PYSITELIB}/docx/comments.py
+${PYSITELIB}/docx/comments.pyc
+${PYSITELIB}/docx/comments.pyo
 ${PYSITELIB}/docx/dml/__init__.py
 ${PYSITELIB}/docx/dml/__init__.pyc
 ${PYSITELIB}/docx/dml/__init__.pyo
@@ -133,6 +136,9 @@ ${PYSITELIB}/docx/opc/spec.pyo
 ${PYSITELIB}/docx/oxml/__init__.py
 ${PYSITELIB}/docx/oxml/__init__.pyc
 ${PYSITELIB}/docx/oxml/__init__.pyo
+${PYSITELIB}/docx/oxml/comments.py
+${PYSITELIB}/docx/oxml/comments.pyc
+${PYSITELIB}/docx/oxml/comments.pyo
 ${PYSITELIB}/docx/oxml/coreprops.py
 ${PYSITELIB}/docx/oxml/coreprops.pyc
 ${PYSITELIB}/docx/oxml/coreprops.pyo
@@ -205,6 +211,9 @@ ${PYSITELIB}/docx/package.pyo
 ${PYSITELIB}/docx/parts/__init__.py
 ${PYSITELIB}/docx/parts/__init__.pyc
 ${PYSITELIB}/docx/parts/__init__.pyo
+${PYSITELIB}/docx/parts/comments.py
+${PYSITELIB}/docx/parts/comments.pyc
+${PYSITELIB}/docx/parts/comments.pyo
 ${PYSITELIB}/docx/parts/document.py
 ${PYSITELIB}/docx/parts/document.pyc
 ${PYSITELIB}/docx/parts/document.pyo
@@ -254,6 +263,7 @@ ${PYSITELIB}/docx/styles/styles.pyo
 ${PYSITELIB}/docx/table.py
 ${PYSITELIB}/docx/table.pyc
 ${PYSITELIB}/docx/table.pyo
+${PYSITELIB}/docx/templates/default-comments.xml
 ${PYSITELIB}/docx/templates/default-docx-template/[Content_Types].xml
 ${PYSITELIB}/docx/templates/default-docx-template/_rels/.rels
 ${PYSITELIB}/docx/templates/default-docx-template/customXml/_rels/item1.xml.rels
