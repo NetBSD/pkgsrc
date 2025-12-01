@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/11/28 20:35:14 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/12/01 04:52:24 dkazankov Exp $
 
 DISTNAME=	gnat_util-20.0w-20190814-1532A-src
 PKGNAME=	ada-gnat_util14-14.3.0
@@ -39,6 +39,8 @@ post-extract:
 	for f in stand.adb tree_in.adb tree_in.ads tree_io.adb tree_io.ads; do \
 	    ${MV} ${WRKSRC}/$$f ${WRKSRC}/$$f.orig; \
 	done
+
+pre-configure:
 # Update GNAT sources
 	for f in $$(cat ${WRKSRC}/MANIFEST.gnat_util); do \
 	    ${CP} ${WRKDIR}/${GCC_DISTNAME}/gcc/ada/$$f ${WRKSRC}; \
