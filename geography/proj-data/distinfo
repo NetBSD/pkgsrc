@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/09/15 11:19:54 gdt Exp $
+$NetBSD: distinfo,v 1.9 2025/12/01 19:08:35 gdt Exp $
 
-BLAKE2s (proj-data-1.23.tar.gz) = 3c74d31c5fd917c261703e78ab1a031db19bf3095ad1f7fc4030f7e853c7e88c
-SHA512 (proj-data-1.23.tar.gz) = 6397f2e956b609fe8b3bb3f0775f8f167ed2b2be800dd452f2bd6576588510c9bc8d6a2e1357b36690e9afdd3c8fe0936bcfa80e69de49d52489c173655bddbc
-Size (proj-data-1.23.tar.gz) = 791943741 bytes
+BLAKE2s (proj-data-1.24.tar.gz) = 350670ddd2bf25247a2479575a42cb6cb81010f97448d3ad858f1f6a14054eac
+SHA512 (proj-data-1.24.tar.gz) = 2e2ee9bc48933c0b2c695b2e98d51dfae745800796949c21575e0009ec1706631effc62c43f81a41a98ec6bdc09537489851626bfe2a721a2cbca1b8a965414e
+Size (proj-data-1.24.tar.gz) = 792584182 bytes
