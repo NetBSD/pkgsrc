@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:44:35 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/12/01 10:13:03 martin Exp $
 
 BLAKE2s (xsokoban-3.3c.tar.gz) = 55ca636a989421320ef4f7516854b83df5ebbc90d740595dd8646a74e35007aa
 SHA512 (xsokoban-3.3c.tar.gz) = b3f4a42697fa663515e6cfe8ac707e282e77380342b835f61067b0cf7032738d7ea05333d890486a3ec3f3299aacbcff6e42914908ed915e34e79d386d432fe2
 Size (xsokoban-3.3c.tar.gz) = 98961 bytes
 SHA1 (patch-aa) = ba21be16ffdf2640014a2a91a4e042bee3660cfc
-SHA1 (patch-ab) = 17791f14cfba86154b12eb3bef61fedf8c6e1f8c
+SHA1 (patch-ab) = cf4712f5490e992c3ce484c911ea5278d9fcfc62
 SHA1 (patch-ac) = eeaa85eb12c473b2703b55b1602eae4c89639a0f
 SHA1 (patch-ad) = 2338d0e6afac7709abfe55eb57e809247d42b6f1
 SHA1 (patch-ae) = 234e46167bf5b3786462488c99bf10de60736452

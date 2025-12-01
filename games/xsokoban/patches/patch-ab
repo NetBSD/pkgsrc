@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/04/08 16:31:56 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2025/12/01 10:13:03 martin Exp $
 
 --- configure.in.orig	1996-10-29 18:51:14.000000000 +0100
-+++ configure.in
-@@ -42,40 +42,7 @@ AC_FEATURE_CHECK(www, WWW, WWW scoring)
++++ configure.in	2025-12-01 10:55:47.608143673 +0100
+@@ -42,40 +42,7 @@
  if test $use_xpm = 1; then
      libxpm=1
      incxpm=1
@@ -44,7 +44,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2009/04/08 16:31:56 drochner Exp $
  fi
  rm -f tmp.$$.c tmp2.$$
  
-@@ -114,28 +81,6 @@ if test $www = 1; then
+@@ -114,28 +81,6 @@
  fi
  
  ##############
@@ -73,3 +73,23 @@ $NetBSD: patch-ab,v 1.1.1.1 2009/04/08 16:31:56 drochner Exp $
  # DEC bogosity
  
  AC_CHECK_LIB(dnet_stub,main)
+@@ -161,7 +106,8 @@
+ # Check for library functions and C++ prototypes
+ 
+ AC_MSG_CHECKING(function prototypes)
+-AC_TRY_LINK([#include <stdlib.h>],
++AC_TRY_LINK([#include <unistd.h>
++#include <stdlib.h>],
+ [char *s = getpass("prompt");],
+ AC_DEFINE(GETPASS_PROTO))
+ 
+@@ -210,7 +156,8 @@
+ AC_DEFINE(USLEEP_PROTO))
+ 
+ AC_TRY_LINK(
+-[#include <stdlib.h>],
++[#include <stdlib.h>
++#include <strings.h>],
+ [char *x; int l; bzero(x, l);],
+ AC_DEFINE(BZERO_PROTO))
+ 
