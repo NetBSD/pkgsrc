@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6984 2025/12/01 08:57:43 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6985 2025/12/01 09:37:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10126,3 +10126,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed net/corebird [wiz 2025-12-01]
 	Added security/adguardhome version 0.107.69 [adam 2025-12-01]
 	Updated devel/py-rpds-py to 0.30.0 [adam 2025-12-01]
+	Updated textproc/py-docx to 1.2.0 [adam 2025-12-01]
+	Updated devel/py-test-check to 2.6.2 [adam 2025-12-01]
