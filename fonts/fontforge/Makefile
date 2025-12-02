@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2025/10/23 20:36:56 wiz Exp $
+# $NetBSD: Makefile,v 1.161 2025/12/02 07:37:31 mef Exp $
 
 DISTNAME=	fontforge-20251009
 PKGREVISION=	1
@@ -14,6 +14,13 @@ COMMENT=	Postscript font editor
 LICENSE=	modified-bsd
 
 USE_CXX_FEATURES=	c++11
+
+# -- Configuring done (15.4s)
+# CMake Error in Unicode/CMakeLists.txt:
+#   Target "gunicode" requires the language dialect "C17" (with compiler
+#   extensions).  But the current compiler "GNU" does not support this, or
+#   CMake does not know the flags to enable it.
+USE_CC_FEATURES=	c17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake msgfmt pkg-config xgettext
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_DOCS=NO
