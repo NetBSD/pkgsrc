@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/11/30 10:10:04 markd Exp $
+# $NetBSD: Makefile,v 1.2 2025/12/02 08:04:00 wiz Exp $
 
 .include "../../multimedia/mlt/Makefile.common"
 
@@ -6,6 +6,8 @@ PKGNAME=	mlt-qt6-7.34.1
 COMMENT=	QT6 plugin for the MLT multimedia framework
 
 BUILD_DIRS=	src/modules/qt
+# due to BUILD_DIRS
+CMAKE_GENERATORS_INCOMPATIBLE=	ninja
 
 CMAKE_CONFIGURE_ARGS+=	-DMOD_QT=OFF
 CMAKE_CONFIGURE_ARGS+=	-DMOD_QT6=ON
