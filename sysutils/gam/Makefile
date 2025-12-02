@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2025/08/29 13:50:22 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/12/02 14:24:21 sborrill Exp $
 
-DISTNAME=	gam-7.19.02
+DISTNAME=	gam-7.29.01
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GAM-team/}
 GITHUB_PROJECT=	GAM
@@ -23,6 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.7.2:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-arrow-[0-9]*:../../time/py-arrow
 
 REPLACE_PYTHON+=	src/gam/__init__.py
 
