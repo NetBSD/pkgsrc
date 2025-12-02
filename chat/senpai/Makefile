@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2025/10/16 17:59:44 bsiegert Exp $
+# $NetBSD: Makefile,v 1.40 2025/12/02 19:25:03 bsiegert Exp $
 
 DISTNAME=	senpai-0.4.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=delthas/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
