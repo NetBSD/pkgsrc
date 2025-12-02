@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2025/10/16 17:59:52 bsiegert Exp $
+# $NetBSD: Makefile,v 1.28 2025/12/02 19:25:11 bsiegert Exp $
 
 DISTNAME=	bulk-test-essential-20230705
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
