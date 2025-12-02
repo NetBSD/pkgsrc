@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/10/16 18:00:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.15 2025/12/02 19:25:25 bsiegert Exp $
 
 DISTNAME=	reader-0.5.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mrusme/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

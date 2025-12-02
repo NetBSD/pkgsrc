@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2025/10/16 18:00:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.53 2025/12/02 19:25:25 bsiegert Exp $
 
 DISTNAME=	gotosocial-0.19.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=superseriousbusiness/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
