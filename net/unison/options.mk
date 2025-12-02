@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2025/11/05 00:21:39 gdt Exp $
+# $NetBSD: options.mk,v 1.11 2025/12/02 00:05:45 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unison
 PKG_SUPPORTED_OPTIONS=	lablgtk inotify
@@ -19,6 +19,8 @@ PKG_SUGGESTED_OPTIONS+=	inotify
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mlablgtk)
+BUILD_TARGET+=	gui
+
 PLIST.gtk3=	yes
 
 DEPENDS+=	font-schumacher-misc>=1.0:../../fonts/font-schumacher-misc
@@ -26,6 +28,8 @@ DEPENDS+=	font-schumacher-misc>=1.0:../../fonts/font-schumacher-misc
 .endif
 
 .if !empty(PKG_OPTIONS:Minotify)
+BUILD_TARGET+=	fsmonitor
+
 PLIST.monitor=	yes
 
 .include "../../devel/libinotify/buildlink3.mk"
