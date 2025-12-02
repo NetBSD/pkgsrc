@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6997 2025/12/02 14:25:02 sborrill Exp $
+$NetBSD: CHANGES-2025,v 1.6998 2025/12/02 19:25:57 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10145,3 +10145,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/haproxy to 3.3.0 [adam 2025-12-02]
 	Updated security/py-pip-audit to 2.10.0 [adam 2025-12-02]
 	Updated sysutils/gam to 7.29.01 [sborrill 2025-12-02]
+	Updated lang/go124 to 1.24.11 [bsiegert 2025-12-02]
+	Updated lang/go125 to 1.25.5 [bsiegert 2025-12-02]
