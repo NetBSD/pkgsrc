@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.173 2025/11/05 00:21:39 gdt Exp $
+# $NetBSD: Makefile,v 1.174 2025/12/02 00:05:45 gdt Exp $
 
 DISTNAME=	unison-2.53.8
 #PKGREVISION=	0
@@ -29,6 +29,10 @@ MAKE_FLAGS+=	NATIVE=true
 .else
 MAKE_FLAGS+=	NATIVE=false
 .endif
+
+# Avoid unison's build system auto-detecting lablgtk and trying to use
+# it, if not bl3ed.
+BUILD_TARGET=	tui manpage
 
 # bsd.prefs.mk, included also by options, must be after ocaml to get
 # _PKGSRC_MKPIE set correctly.
