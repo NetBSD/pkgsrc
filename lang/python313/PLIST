@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/10/08 05:55:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/12/02 21:33:05 adam Exp $
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1159,7 +1159,7 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-25.2-py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-25.3-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
