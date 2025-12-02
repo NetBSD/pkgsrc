@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/10/05 19:26:10 js Exp $
+# $NetBSD: Makefile,v 1.13 2025/12/02 09:12:34 wiz Exp $
 
 DISTNAME=	czmq-4.2.1
 PKGREVISION=	10
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	czmq
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://czmq.zeromq.org/
+HOMEPAGE=	http://czmq.zeromq.org/
 COMMENT=	High-level C binding for ZeroMQ
 LICENSE=	mpl-2.0
 
