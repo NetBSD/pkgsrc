@@ -1,0 +1,21 @@
+$NetBSD: patch-src_modules_qt_CMakeLists.txt,v 1.1 2025/12/02 20:32:27 markd Exp $
+
+Build with installed version of mlt
+
+--- src/modules/qt/CMakeLists.txt.orig	2025-11-05 15:41:13.000000000 +0000
++++ src/modules/qt/CMakeLists.txt
+@@ -48,11 +48,11 @@ function(mlt_add_qt_module ARG_TARGET)
+ 
+ 
+     generate_export_header(${ARG_TARGET})
+-    target_compile_options(${ARG_TARGET} PRIVATE ${MLT_COMPILE_OPTIONS})
++    target_compile_options(${ARG_TARGET} PRIVATE -I@PREFIX@/include/mlt-7 -I@PREFIX@/include/mlt-7/mlt++ ${MLT_COMPILE_OPTIONS})
+ 
+     target_link_libraries(${ARG_TARGET} PRIVATE
+-      mlt++
+-      mlt
++      -lmlt++-7
++      -lmlt-7
+       Threads::Threads
+       Qt${ARG_QT_VERSION}::Core
+       Qt${ARG_QT_VERSION}::Gui

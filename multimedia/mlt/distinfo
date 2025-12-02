@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2025/11/30 10:10:03 markd Exp $
+$NetBSD: distinfo,v 1.20 2025/12/02 20:32:27 markd Exp $
 
 BLAKE2s (mlt-7.34.1.tar.gz) = 7751ed62346f078fa3e57faf60b74959ddf6386cd0398158b2d25cebf80301a7
 SHA512 (mlt-7.34.1.tar.gz) = d14145c033274c669f7437cad39f479e108509f7292a32f469acc146440d8c9b689b78b6cad4ad6da7c74f9e2e3f9041626d7513376943d91f1c85fcfb634f44
@@ -6,3 +6,4 @@ Size (mlt-7.34.1.tar.gz) = 1511970 bytes
 SHA1 (patch-cmake_FindFFmpeg.cmake) = 493c8fb35a15a6079735e4cd8cf02272af7aa539
 SHA1 (patch-src_framework_mlt__properties.c) = 387866d6ad5ffb5888a5f12c970c1f3b40dac202
 SHA1 (patch-src_framework_mlt__property.c) = 288d6f128094b281b2037d5ac6403f7ef83d585a
+SHA1 (patch-src_modules_qt_CMakeLists.txt) = 42fbe0531f299a68c341b3259e718dac2ec5593d

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2025/12/02 08:02:58 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2025/12/02 20:32:27 markd Exp $
 
 # used by multimedia/mlt/Makefile
 # used by multimedia/mlt-qt5/Makefile
@@ -22,3 +22,8 @@ PATCHDIR=	${.CURDIR}/../../multimedia/mlt/patches
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 CFLAGS.NetBSD+=		-DHAVE_LOCALE_H -DHAVE_STRTOD_L -D__SETLOCALE_SOURCE__
+
+SUBST_CLASSES+=		mlt
+SUBST_STAGE.mlt=	pre-configure
+SUBST_FILES.mlt=	src/modules/qt/CMakeLists.txt 
+SUBST_VARS.mlt=		PREFIX
