@@ -1,0 +1,16 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2025/12/02 22:28:59 wiz Exp $
+
+Allow trace log level in release
+https://github.com/felfert/syncstorage-rs-rpm/blob/main/syncstorage-rs-allow-trace.patch
+
+--- Cargo.toml.orig	2025-09-23 20:12:34.000000000 +0000
++++ Cargo.toml
+@@ -78,7 +78,7 @@ serde_json = { version = "1.0", features
+ sha2 = "0.10"
+ slog = { version = "2.5", features = [
+   "max_level_trace",
+-  "release_max_level_info",
++  "release_max_level_trace",
+   "dynamic-keys",
+ ] }
+ slog-async = "2.5"
