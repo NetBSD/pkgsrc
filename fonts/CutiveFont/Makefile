@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/02 22:24:37 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2025/12/02 08:07:18 wiz Exp $
 
 DISTNAME=	CutiveFont-0.0.20121026
 CATEGORIES=	fonts
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=vernnobile/}
 GITHUB_TAG=	afb4dad38280ad7a63764b2b4a5795224cbcfbe2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.google.com/fonts/specimen/Cutive%20Mono
+HOMEPAGE=	https://fonts.google.com/specimen/Cutive+Mono
 COMMENT=	Classic typewriter typeface
 LICENSE=	ofl-v1.1
 
