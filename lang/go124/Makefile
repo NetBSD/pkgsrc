@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/02/25 20:09:16 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2025/12/02 19:24:16 bsiegert Exp $
 
 .include "../../lang/go/version.mk"
 GO_BOOTSTRAP_REQD=	122
@@ -9,7 +9,7 @@ GOVERSSUFFIX=	124
 DISTNAME=	go${GO${GOVERSSUFFIX}_VERSION}.src
 PKGNAME=	go${GOVERSSUFFIX}-${GO${GOVERSSUFFIX}_VERSION}
 CATEGORIES=	lang
-MASTER_SITES=	https://storage.googleapis.com/golang/
+MASTER_SITES=	https://go.dev/dl/
 
 MAINTAINER=	bsiegert@NetBSD.org
 HOMEPAGE=	https://golang.org/
