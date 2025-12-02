@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/12/30 01:24:25 zafer Exp $
+# $NetBSD: Makefile,v 1.19 2025/12/02 08:08:14 wiz Exp $
 
 DISTNAME=	cvsup-gui-static-16.1.h
 PKGNAME=	${DISTNAME:C/static/bin/}
@@ -8,7 +8,6 @@ MASTER_SITES=	https://motoyuki.bsdclub.org/data/NetBSD/CVSup/i386/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	motoyuki@bsdclub.org
-HOMEPAGE=	http://www.cvsup.org/
 COMMENT=	GUI client for cvsup
 
 CVSUP_VERSION=	${DISTNAME:S/cvsup-gui-static-//}
