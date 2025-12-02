@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2025/11/30 10:10:03 markd Exp $
+# $NetBSD: Makefile.common,v 1.2 2025/12/02 08:02:58 wiz Exp $
 
 # used by multimedia/mlt/Makefile
 # used by multimedia/mlt-qt5/Makefile
@@ -7,6 +7,7 @@
 DISTNAME=	mlt-7.34.1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mltframework/}
+GITHUB_PROJECT=	mlt
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
