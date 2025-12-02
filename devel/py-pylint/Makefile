@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.117 2025/11/14 13:48:36 adam Exp $
+# $NetBSD: Makefile,v 1.118 2025/12/02 07:13:01 adam Exp $
 
-DISTNAME=	pylint-4.0.3
+DISTNAME=	pylint-4.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint/}
