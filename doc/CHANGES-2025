@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6999 2025/12/02 20:40:00 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7000 2025/12/02 21:35:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10149,3 +10149,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/go125 to 1.25.5 [bsiegert 2025-12-02]
 	Updated www/py-django to 5.2.9 [adam 2025-12-02]
 	Updated www/py-django4 to 4.2.27 [adam 2025-12-02]
+	Updated lang/python313 to 3.13.10 [adam 2025-12-02]
+	Updated lang/python314 to 3.14.1 [adam 2025-12-02]
+	Updated lang/py313-html-docs to 3.13.10 [adam 2025-12-02]
+	Updated lang/py314-html-docs to 3.14.1 [adam 2025-12-02]
