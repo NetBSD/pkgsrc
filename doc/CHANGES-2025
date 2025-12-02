@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6995 2025/12/02 07:46:12 thorpej Exp $
+$NetBSD: CHANGES-2025,v 1.6996 2025/12/02 13:03:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10142,3 +10142,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/re2c to 4.3.1 [adam 2025-12-02]
 	Updated devel/py-pylint to 4.0.4 [adam 2025-12-02]
 	Updated sysutils/nabud to 1.4.1 [thorpej 2025-12-02]
+	Updated net/haproxy to 3.3.0 [adam 2025-12-02]
+	Updated security/py-pip-audit to 2.10.0 [adam 2025-12-02]
