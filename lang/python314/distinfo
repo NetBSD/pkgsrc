@@ -1,19 +1,14 @@
-$NetBSD: distinfo,v 1.3 2025/11/05 22:20:05 wiz Exp $
+$NetBSD: distinfo,v 1.4 2025/12/02 21:34:37 adam Exp $
 
-BLAKE2s (Python-3.14.0.tar.xz) = 8b0bc589285d6bb131423b9cc89e5c322eaa4aaa77c3ae12216a16d9b5235064
-SHA512 (Python-3.14.0.tar.xz) = 46e9e205c3a084cba68bf7f267ab2fd0862a05430165e0eb713f2d6b3a1a4452f72f563de5de55caea824be9df56f66dd568f4814941667a9bb0954229772c53
-Size (Python-3.14.0.tar.xz) = 23595844 bytes
+BLAKE2s (Python-3.14.1.tar.xz) = fcef40787764323e904d06a63e6f20ad5847a6fc44f678e67e378d1f2c0b068f
+SHA512 (Python-3.14.1.tar.xz) = b5ec011190536126fedade5c33a4afabc081a133ad5c734f4b872769d376735775219d63a482812d139fdd90c46707927065ab9dc733d0bce2d1ebc59fe705a2
+Size (Python-3.14.1.tar.xz) = 23563532 bytes
 SHA1 (patch-Include_pymacro.h) = 7611315fefc305a48b4965f2f2b9bee53ae3d987
 SHA1 (patch-Lib_ctypes_util.py) = 3dec1b6b7a36e46cbfa0dfcd71c5e7fac9f60764
-SHA1 (patch-Lib_ntpath.py) = bded5ab2f680253a281ad63c87d2794c198bfb9a
-SHA1 (patch-Lib_posixpath.py) = a8c17a3ea795885e4e18b921a2bc4c259edf80de
 SHA1 (patch-Lib_sysconfig_____init____.py) = 76a35b78b098978209f9bcc0e5357d439f281c6b
-SHA1 (patch-Lib_test_test__genericpath.py) = d5f50c0e92e8da690d738003d2eb2ff22c8cb458
-SHA1 (patch-Lib_test_test__ntpath.py) = 663d286d196b781b6f53dea2faf917b2c05d9cb0
-SHA1 (patch-Lib_test_test__zipfile_test__core.py) = 6d487c732bf055ce83d61c2f994f1cc90d2b70b3
-SHA1 (patch-Lib_zipfile_____init____.py) = a2c5ec38abc88318938e0496fd49c2aab5dc782c
 SHA1 (patch-Makefile.pre.in) = 620fa538eaebdf4e374eff0ed475a87775fb0a29
 SHA1 (patch-Modules_faulthandler.c) = ca59c378d25bfc0769a7f5da887369d8c913e70c
+SHA1 (patch-Modules_pyexpat.c) = 4962df07d97faa99f58310ae9b86dad9e9fc5318
 SHA1 (patch-Modules_readline.c) = 232f6ac43b5a0e87c915f13117bae91ef069a6c1
 SHA1 (patch-Modules_socketmodule.c) = 9d88a801af6e2cbd36b9935a46c8a86727222d56
 SHA1 (patch-configure) = 736817d8325c579a6d62e617c66d3806c3005c93

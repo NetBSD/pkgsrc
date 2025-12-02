@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/10/08 07:13:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/12/02 21:34:38 adam Exp $
 share/doc/python3.14/.buildinfo
 share/doc/python3.14/404.html
 share/doc/python3.14/_downloads/6dc1f3f4f0e6ca13cb42ddf4d6cbc8af/tzinfo_examples.py
@@ -38,6 +38,7 @@ share/doc/python3.14/_sources/c-api/concrete.rst.txt
 share/doc/python3.14/_sources/c-api/contextvars.rst.txt
 share/doc/python3.14/_sources/c-api/conversion.rst.txt
 share/doc/python3.14/_sources/c-api/coro.rst.txt
+share/doc/python3.14/_sources/c-api/curses.rst.txt
 share/doc/python3.14/_sources/c-api/datetime.rst.txt
 share/doc/python3.14/_sources/c-api/descriptor.rst.txt
 share/doc/python3.14/_sources/c-api/dict.rst.txt
@@ -72,6 +73,7 @@ share/doc/python3.14/_sources/c-api/number.rst.txt
 share/doc/python3.14/_sources/c-api/object.rst.txt
 share/doc/python3.14/_sources/c-api/objimpl.rst.txt
 share/doc/python3.14/_sources/c-api/perfmaps.rst.txt
+share/doc/python3.14/_sources/c-api/picklebuffer.rst.txt
 share/doc/python3.14/_sources/c-api/refcounting.rst.txt
 share/doc/python3.14/_sources/c-api/reflection.rst.txt
 share/doc/python3.14/_sources/c-api/sequence.rst.txt
@@ -540,6 +542,7 @@ share/doc/python3.14/_sources/whatsnew/3.8.rst.txt
 share/doc/python3.14/_sources/whatsnew/3.9.rst.txt
 share/doc/python3.14/_sources/whatsnew/changelog.rst.txt
 share/doc/python3.14/_sources/whatsnew/index.rst.txt
+share/doc/python3.14/_static/base-stemmer.js
 share/doc/python3.14/_static/basic.css
 share/doc/python3.14/_static/changelog_search.js
 share/doc/python3.14/_static/classic.css
@@ -547,6 +550,7 @@ share/doc/python3.14/_static/copybutton.js
 share/doc/python3.14/_static/default.css
 share/doc/python3.14/_static/doctools.js
 share/doc/python3.14/_static/documentation_options.js
+share/doc/python3.14/_static/english-stemmer.js
 share/doc/python3.14/_static/file.png
 share/doc/python3.14/_static/glossary.json
 share/doc/python3.14/_static/glossary_search.js
@@ -587,6 +591,7 @@ share/doc/python3.14/c-api/concrete.html
 share/doc/python3.14/c-api/contextvars.html
 share/doc/python3.14/c-api/conversion.html
 share/doc/python3.14/c-api/coro.html
+share/doc/python3.14/c-api/curses.html
 share/doc/python3.14/c-api/datetime.html
 share/doc/python3.14/c-api/descriptor.html
 share/doc/python3.14/c-api/dict.html
@@ -621,6 +626,7 @@ share/doc/python3.14/c-api/number.html
 share/doc/python3.14/c-api/object.html
 share/doc/python3.14/c-api/objimpl.html
 share/doc/python3.14/c-api/perfmaps.html
+share/doc/python3.14/c-api/picklebuffer.html
 share/doc/python3.14/c-api/refcounting.html
 share/doc/python3.14/c-api/reflection.html
 share/doc/python3.14/c-api/sequence.html

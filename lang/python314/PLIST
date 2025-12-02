@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/10/08 07:13:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/12/02 21:34:37 adam Exp $
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1237,7 +1237,7 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-25.2-py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-25.3-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -2030,6 +2030,9 @@ lib/python${PY_VER_SUFFIX}/os.pyo
 lib/python${PY_VER_SUFFIX}/pathlib/__init__.py
 lib/python${PY_VER_SUFFIX}/pathlib/__init__.pyc
 lib/python${PY_VER_SUFFIX}/pathlib/__init__.pyo
+lib/python${PY_VER_SUFFIX}/pathlib/_local.py
+lib/python${PY_VER_SUFFIX}/pathlib/_local.pyc
+lib/python${PY_VER_SUFFIX}/pathlib/_local.pyo
 lib/python${PY_VER_SUFFIX}/pathlib/_os.py
 lib/python${PY_VER_SUFFIX}/pathlib/_os.pyc
 lib/python${PY_VER_SUFFIX}/pathlib/_os.pyo
@@ -2680,6 +2683,9 @@ lib/python${PY_VER_SUFFIX}/test/mp_preload.pyo
 lib/python${PY_VER_SUFFIX}/test/mp_preload_flush.py
 lib/python${PY_VER_SUFFIX}/test/mp_preload_flush.pyc
 lib/python${PY_VER_SUFFIX}/test/mp_preload_flush.pyo
+lib/python${PY_VER_SUFFIX}/test/mp_preload_main.py
+lib/python${PY_VER_SUFFIX}/test/mp_preload_main.pyc
+lib/python${PY_VER_SUFFIX}/test/mp_preload_main.pyo
 lib/python${PY_VER_SUFFIX}/test/multibytecodec_support.py
 lib/python${PY_VER_SUFFIX}/test/multibytecodec_support.pyc
 lib/python${PY_VER_SUFFIX}/test/multibytecodec_support.pyo
@@ -3894,9 +3900,21 @@ lib/python${PY_VER_SUFFIX}/test/test_free_threading/__init__.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_bisect.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_bisect.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_bisect.pyo
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_capi.py
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_capi.pyc
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_capi.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_code.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_code.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_code.pyo
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_cprofile.py
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_cprofile.pyc
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_cprofile.pyo
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_csv.py
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_csv.pyc
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_csv.pyo
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_dbm_gnu.py
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_dbm_gnu.pyc
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_dbm_gnu.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_dict.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_dict.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_dict.pyo
@@ -3918,6 +3936,9 @@ lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_grp.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_heapq.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_heapq.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_heapq.pyo
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_io.py
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_io.pyc
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_io.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_iteration.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_iteration.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_iteration.pyo
@@ -3930,12 +3951,21 @@ lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_list.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_methodcaller.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_methodcaller.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_methodcaller.pyo
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_mmap.py
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_mmap.pyc
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_mmap.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_monitoring.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_monitoring.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_monitoring.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_races.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_races.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_races.pyo
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_re.py
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_re.pyc
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_re.pyo
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_resource.py
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_resource.pyc
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_resource.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_reversed.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_reversed.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_reversed.pyo
@@ -3954,6 +3984,9 @@ lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_tokenize.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_type.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_type.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_type.pyo
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_uuid.py
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_uuid.pyc
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_uuid.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_zip.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_zip.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_zip.pyo
