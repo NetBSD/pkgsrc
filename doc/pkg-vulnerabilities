@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.673 2025/12/01 17:36:06 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.674 2025/12/02 17:50:40 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28999,3 +28999,19 @@ tinyproxy<1.11.3	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-6393
 webkit-gtk-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13502
 wireshark<4.6.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13674
 webkit-gtk<2.50.2	multiple-vulnerabilities	https://webkitgtk.org/security/WSA-2025-0008.html
+kissfft-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-34297
+# Only alpha, beta and rc1 affected
+#openvpn>=2.7_alpha1<2.7rc2	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-12106
+python310-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13836
+python311-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13836
+python312-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13836
+python313-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13836
+python314-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13836
+python310-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13837
+python311-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13837
+python312-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13837
+python313-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13837
+python314-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13837
+zabbix-agent<6.0.40		arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-49642
+zabbix-frontend>=7.4<7.4.3	arbitrary-file-read		https://nvd.nist.gov/vuln/detail/CVE-2025-27232
+zabbix-frontend<6.0.42		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-49643
