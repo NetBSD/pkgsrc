@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2025/09/27 15:12:57 wiz Exp $
+$NetBSD: distinfo,v 1.12 2025/12/02 22:28:59 wiz Exp $
 
 BLAKE2s (actix-codec-0.5.2.crate) = dd059989f99593b1f5b01a1b433630ed2121ad1a30854b6de98ef0bca3e9af11
 SHA512 (actix-codec-0.5.2.crate) = 9fc455a3ae36b93b3b9358b1f0915934f7e52ea1486d4d1a943c47759ff7cb6b7733e3c423378725a3da456669dcca02150cf44033707affff756579d5adba15
@@ -1284,3 +1284,6 @@ Size (zstd-safe-7.2.4.crate) = 29350 bytes
 BLAKE2s (zstd-sys-2.0.15+zstd.1.5.7.crate) = ab7e4cb65c8b12350a87e0a2a325068c047c8b279d233fa0733951dbda370122
 SHA512 (zstd-sys-2.0.15+zstd.1.5.7.crate) = c684e3d966746dfac12947174d7786f528f2e26ed2802e24b457a751616a9b6e6a274d77f70f7e75a111caefdc4357257ed4c2e2137cd2f051206f56e9cd19cf
 Size (zstd-sys-2.0.15+zstd.1.5.7.crate) = 774847 bytes
+SHA1 (patch-Cargo.toml) = ac04261494bedd4ea1b58efe248d1a701b21bfc6
+SHA1 (patch-syncstorage-mysql_src_diesel__ext.rs) = fdcef6eb4f7bec05b74468df2600ce08bd2b75b4
+SHA1 (patch-syncstorage-mysql_src_models.rs) = 10594aa9ee21a76b1c8c6422487e242139ab2ebc
