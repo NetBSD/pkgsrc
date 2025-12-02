@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/12/02 08:04:00 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/12/02 19:53:03 markd Exp $
 
 .include "../../multimedia/mlt/Makefile.common"
 
@@ -38,6 +38,7 @@ CMAKE_CONFIGURE_ARGS+=	-DMOD_XML=OFF
 .  include "../../devel/libatomic/buildlink3.mk"
 .endif
 .include "../../graphics/libexif/buildlink3.mk"
+.include "../../multimedia/mlt/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
