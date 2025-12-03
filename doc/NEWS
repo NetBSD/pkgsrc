@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.32 2025/10/05 22:52:48 wiz Exp $
+# $NetBSD: NEWS,v 1.33 2025/12/03 21:57:26 leot Exp $
 
 PKGSRC NEWS
 ===========
@@ -6,6 +6,10 @@ PKGSRC NEWS
   This file contains information about important infrastructural changes in
   pkgsrc. The intended readers are the pkgsrc developers as well as anyone
   tracking pkgsrc-current.
+
+m68k softfloat (m68ksf) support [nat 2025-10-22]
+
+        Support for m68k softfloat was added to pkgsrc.
 
 Default versions bumped [wiz 2025-10-06]
 
