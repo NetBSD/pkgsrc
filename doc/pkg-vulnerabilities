@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.675 2025/12/03 07:40:33 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.676 2025/12/03 09:27:15 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29006,12 +29006,12 @@ python310-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-138
 python311-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13836
 python312-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13836
 python313-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13836
-python314-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13836
+python314<3.14.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13836
 python310-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13837
 python311-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13837
 python312-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13837
-python313-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13837
-python314-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13837
+python313<3.13.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13837
+python314<3.14.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13837
 zabbix-agent<6.0.40		arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-49642
 zabbix-frontend>=7.4<7.4.3	arbitrary-file-read		https://nvd.nist.gov/vuln/detail/CVE-2025-27232
 zabbix-frontend<6.0.42		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-49643
