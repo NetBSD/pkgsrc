@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2025/11/25 22:54:03 gutteridge Exp $
+# $NetBSD: Makefile,v 1.69 2025/12/03 04:22:26 gutteridge Exp $
 
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
-DISTNAME=	lxqt-panel-2.3.0
-PKGREVISION=	1
+DISTNAME=	lxqt-panel-2.3.1
 CATEGORIES=	x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -33,6 +32,7 @@ SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths.
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	plugin-directorymenu/directorymenuconfiguration.cpp
+SUBST_FILES.prefix+=	plugin-fancymenu/lxqtfancymenuconfiguration.cpp
 SUBST_FILES.prefix+=	plugin-mainmenu/lxqtmainmenuconfiguration.cpp
 SUBST_FILES.prefix+=	plugin-kbindicator/src/x11/kbdlayout.cpp
 SUBST_SED.prefix=	-e 's,/etc/xdg,${PKG_SYSCONFDIR},g'
