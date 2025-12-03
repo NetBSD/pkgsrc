@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7015 2025/12/03 09:21:02 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7016 2025/12/03 09:21:56 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10171,3 +10171,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/bat to 0.26.1 [pin 2025-12-03]
 	Updated devel/cargo-about to 0.8.3 [pin 2025-12-03]
 	Updated multimedia/t-rec to 0.8.1 [pin 2025-12-03]
+	Updated textproc/treemd to 0.4.2 [pin 2025-12-03]
