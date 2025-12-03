@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2025/10/26 23:08:46 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/12/03 09:18:16 pin Exp $
 
-DISTNAME=	bat-0.26.0
+DISTNAME=	bat-0.26.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sharkdp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,6 +14,7 @@ LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
 
+RUST_REQ=	1.87.0
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
