@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2024/02/09 21:01:40 wiz Exp $
+$NetBSD: distinfo,v 1.21 2025/12/03 07:38:29 wiz Exp $
 
-BLAKE2s (xkbcomp-1.4.7.tar.xz) = 2e0413aa06542549b4e715e57c72a02d868db6c46d63564987475ff4c998fab5
-SHA512 (xkbcomp-1.4.7.tar.xz) = 6f468dce9d2499ab1022f4288d46f66af149dac0a161fb5b9dc0c262bc70c2c3d254db2c6fb5df1e2793c822e2d55c6da5fd037ce523a555b7c3de23e35c49ef
-Size (xkbcomp-1.4.7.tar.xz) = 239324 bytes
+BLAKE2s (xkbcomp-1.5.0.tar.xz) = e84f0f3980b7b01b966f48c4c1e61c42f11e6e5de757a156e7287d3da696192a
+SHA512 (xkbcomp-1.5.0.tar.xz) = d8ef4906261251e2600b3650660fbe88ed99a44694f1e59b433e0811f1ab5234c4f2f0b3647fa5372fb0f46b56eac60c0219a762bf1af0ab06226b63e4a6b081
+Size (xkbcomp-1.5.0.tar.xz) = 247996 bytes
