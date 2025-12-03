@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7012 2025/12/03 08:56:19 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7013 2025/12/03 09:18:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10168,3 +10168,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-ansible-compat to 25.12.0 [adam 2025-12-03]
 	Updated net/libtorrent to 0.16.5 [adam 2025-12-03]
 	Updated net/rtorrent to 0.16.5 [adam 2025-12-03]
+	Updated textproc/bat to 0.26.1 [pin 2025-12-03]
