@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7018 2025/12/03 11:28:26 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7019 2025/12/03 12:15:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10176,3 +10176,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-localserver to 0.10.0 [adam 2025-12-03]
 	Updated sysutils/py-kubernetes to 34.1.0 [adam 2025-12-03]
 	Updated www/py-test-httpx to 0.36.0 [adam 2025-12-03]
+	Updated www/py-genshi to 0.7.10 [adam 2025-12-03]
+	Updated textproc/py-sphinxcontrib-spelling to 8.0.2 [adam 2025-12-03]
