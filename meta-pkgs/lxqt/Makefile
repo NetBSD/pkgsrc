@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2025/11/25 22:55:50 gutteridge Exp $
+# $NetBSD: Makefile,v 1.42 2025/12/03 04:25:56 gutteridge Exp $
 
 PKGNAME=	lxqt-2.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,7 +18,7 @@ DEPENDS+=	libqtxdg>=4.3.0:../../x11/libqtxdg
 DEPENDS+=	qtxdg-tools>=4.3.0:../../x11/qtxdg-tools
 DEPENDS+=	liblxqt>=2.3.0:../../x11/liblxqt
 DEPENDS+=	lxqt-menu-data>=2.3.0:../../sysutils/lxqt-menu-data
-DEPENDS+=	libfm-qt>=2.3.0:../../x11/libfm-qt
+DEPENDS+=	libfm-qt>=2.3.1:../../x11/libfm-qt
 DEPENDS+=	lxqt-themes>=2.3.0:../../graphics/lxqt-themes
 DEPENDS+=	pavucontrol-qt>=2.3.0:../../audio/pavucontrol-qt
 DEPENDS+=	qtermwidget>=2.3.0:../../x11/qtermwidget
@@ -37,7 +37,7 @@ DEPENDS+=	lxqt-session>=2.3.0:../../x11/lxqt-session
 DEPENDS+=	lxqt-sudo>=2.3.0:../../security/lxqt-sudo
 DEPENDS+=	pcmanfm-qt>=2.3.0:../../sysutils/pcmanfm-qt
 DEPENDS+=	qterminal>=2.3.0:../../x11/qterminal
-DEPENDS+=	lxqt-panel>=2.3.0:../../x11/lxqt-panel
+DEPENDS+=	lxqt-panel>=2.3.1:../../x11/lxqt-panel
 DEPENDS+=	lxqt-runner>=2.3.0:../../x11/lxqt-runner
 DEPENDS+=	screengrab>=3.1.0:../../graphics/screengrab
 DEPENDS+=	lxqt-archiver>=1.3.0:../../archivers/lxqt-archiver
