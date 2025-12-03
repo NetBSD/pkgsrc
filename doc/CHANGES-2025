@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7016 2025/12/03 09:21:56 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7017 2025/12/03 10:14:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10172,3 +10172,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cargo-about to 0.8.3 [pin 2025-12-03]
 	Updated multimedia/t-rec to 0.8.1 [pin 2025-12-03]
 	Updated textproc/treemd to 0.4.2 [pin 2025-12-03]
+	Updated devel/py-urwid to 3.0.4 [adam 2025-12-03]
+	Updated devel/py-test-localserver to 0.10.0 [adam 2025-12-03]
