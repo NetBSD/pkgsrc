@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2025/12/03 04:25:56 gutteridge Exp $
+# $NetBSD: Makefile,v 1.43 2025/12/03 05:18:02 gutteridge Exp $
 
 PKGNAME=	lxqt-2.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,7 +17,7 @@ TOOL_DEPENDS+=	lxqt-build-tools>=2.3.0:../../devel/lxqt-build-tools
 DEPENDS+=	libqtxdg>=4.3.0:../../x11/libqtxdg
 DEPENDS+=	qtxdg-tools>=4.3.0:../../x11/qtxdg-tools
 DEPENDS+=	liblxqt>=2.3.0:../../x11/liblxqt
-DEPENDS+=	lxqt-menu-data>=2.3.0:../../sysutils/lxqt-menu-data
+DEPENDS+=	lxqt-menu-data>=2.3.0nb2:../../sysutils/lxqt-menu-data
 DEPENDS+=	libfm-qt>=2.3.1:../../x11/libfm-qt
 DEPENDS+=	lxqt-themes>=2.3.0:../../graphics/lxqt-themes
 DEPENDS+=	pavucontrol-qt>=2.3.0:../../audio/pavucontrol-qt
