@@ -1,0 +1,1 @@
+bin/gitlab @PREFIX@/bin/gitlab-@PYVERSSUFFIX@
