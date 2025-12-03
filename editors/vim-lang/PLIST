@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2025/07/30 12:42:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.37 2025/12/03 22:52:01 morr Exp $
 man/da.ISO8859-1/man1/ex.1
 man/da.ISO8859-1/man1/rview.1
 man/da.ISO8859-1/man1/rvim.1
@@ -158,6 +158,7 @@ man/tr/man1/vimtutor.1
 share/vim/${VIM_SUBDIR}/keymap/README.txt
 share/vim/${VIM_SUBDIR}/keymap/accents.vim
 share/vim/${VIM_SUBDIR}/keymap/arabic.vim
+share/vim/${VIM_SUBDIR}/keymap/arabic_buckwalter.vim
 share/vim/${VIM_SUBDIR}/keymap/arabic_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/armenian-eastern_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/armenian-western_utf-8.vim

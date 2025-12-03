@@ -1,10 +1,10 @@
-$NetBSD: patch-vim.h,v 1.2 2025/07/20 10:06:36 morr Exp $
+$NetBSD: patch-vim.h,v 1.3 2025/12/03 22:52:01 morr Exp $
 
 Fix Tiger build.
 
---- src/vim.h.orig	2025-07-20 08:47:14.000000000 +0000
+--- src/vim.h.orig	2025-12-03 21:01:37.000000000 +0000
 +++ src/vim.h
-@@ -2356,7 +2356,7 @@ typedef struct stat stat_T;
+@@ -2385,7 +2385,7 @@ typedef struct soundcb_S soundcb_T;
  # define ATTRIBUTE_FORMAT_PRINTF(fmt_idx, arg_idx)
  #endif
  
