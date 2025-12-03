@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/11/25 08:07:31 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/12/03 13:36:44 adam Exp $
 
-DISTNAME=	hishel-1.1.6
+DISTNAME=	hishel-1.1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hishel/}
