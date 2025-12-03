@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2025/11/17 11:25:57 pin Exp $
+# $NetBSD: Makefile,v 1.40 2025/12/03 09:20:31 pin Exp $
 
-DISTNAME=	t-rec-rs-0.7.10
-PKGNAME=	t-rec-0.7.10
+DISTNAME=	t-rec-rs-0.8.1
+PKGNAME=	t-rec-0.8.1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sassman/}
 GITHUB_PROJECT=	t-rec-rs
@@ -19,6 +19,16 @@ TOOL_DEPENDS+=	glib2-[0-9]*:../../devel/glib2
 #RUST_REQ=	1.91.1
 #Upstream does not state the required MSRV.
 #This package is confirmed to build with Rust 1.91.1 on amd64
+
+# This package has an optional dependency on ffmpeg7.
+# If you would like to save recordings as mp4 files instead of gif,
+# please make sure you have ffmpeg7 installed.
+SUBST_CLASSES+=		ffmpeg
+SUBST_FILES.ffmpeg+=	src/generators/mp4.rs
+SUBST_SED.ffmpeg+=	-e 's,"ffmpeg","ffmpeg7",'
+SUBST_STAGE.ffmpeg=	pre-build
+SUBST_MESSAGE.ffmpeg=	Fixing path to ffmpeg binary.
+
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
