@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/10/31 09:37:03 adam Exp $
+$NetBSD: distinfo,v 1.4 2025/12/03 08:29:01 adam Exp $
 
-BLAKE2s (sdl12-compat-1.2.70.tar.gz) = 7028e230685c11f693f1cf54e718667a1f796631589e06ec7587ec62902f3ac0
-SHA512 (sdl12-compat-1.2.70.tar.gz) = b2c64530cca3df29e1616d6d4ad639ce800346afdb2b851572d97aede2fe19c2f52cf0c0e752cc08f39a05cf8a7c60f77ed1a88367aaf888b3e0f7d662661b20
-Size (sdl12-compat-1.2.70.tar.gz) = 495180 bytes
+BLAKE2s (sdl12-compat-1.2.72.tar.gz) = a5eb92648b7c00eaf04be6587d4a51bbbf20d72fba8736b3a945cb48e3840cac
+SHA512 (sdl12-compat-1.2.72.tar.gz) = a84373f744b055446c591f12364b5906bc32a59dc0a2f9452c43951aed6f7831cfed5e7e04ae0f012c7ffc08a44e51d285ac4ac43f1360b33d3f8afd622a7f9c
+Size (sdl12-compat-1.2.72.tar.gz) = 495714 bytes
