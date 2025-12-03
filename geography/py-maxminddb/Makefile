@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/08/10 09:10:30 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/12/03 14:18:11 adam Exp $
 
-DISTNAME=	maxminddb-2.8.2
+DISTNAME=	maxminddb-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/maxminddb/}
