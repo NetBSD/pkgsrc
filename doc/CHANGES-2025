@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7021 2025/12/03 14:14:56 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7022 2025/12/03 14:19:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10182,3 +10182,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/py-trove-classifiers to 2025.12.1.14 [adam 2025-12-03]
 	Updated net/unbound to 1.24.2 [adam 2025-12-03]
 	Updated security/py-bandit to 1.9.2 [adam 2025-12-03]
+	Updated geography/py-maxminddb to 3.0.0 [adam 2025-12-03]
+	Updated geography/py-geoip2 to 5.2.0 [adam 2025-12-03]
