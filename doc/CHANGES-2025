@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7026 2025/12/03 21:57:26 leot Exp $
+$NetBSD: CHANGES-2025,v 1.7027 2025/12/03 23:11:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10187,3 +10187,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-fsspec to 2025.12.0 [adam 2025-12-03]
 	Updated mail/py-mailsuite to 1.10.0 [adam 2025-12-03]
 	Updated sysutils/broot to 1.54.0 [pin 2025-12-03]
+	Updated graphics/png to 1.6.52 [wiz 2025-12-03]
