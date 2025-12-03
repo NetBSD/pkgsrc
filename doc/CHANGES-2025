@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7009 2025/12/03 07:38:38 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7010 2025/12/03 07:55:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10161,3 +10161,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/lxqt-menu-data to 2.3.0nb2 [gutteridge 2025-12-03]
 	Updated meta-pkgs/lxqt to 2.3.0nb3 [gutteridge 2025-12-03]
 	Updated x11/xkbcomp to 1.5.0 [wiz 2025-12-03]
+	Updated math/four-bar-rs to 7.0.5 [wiz 2025-12-03]
