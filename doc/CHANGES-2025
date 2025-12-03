@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7020 2025/12/03 13:38:21 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7021 2025/12/03 14:14:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10180,3 +10180,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-sphinxcontrib-spelling to 8.0.2 [adam 2025-12-03]
 	Updated www/py-hishel to 1.1.7 [adam 2025-12-03]
 	Updated misc/py-trove-classifiers to 2025.12.1.14 [adam 2025-12-03]
+	Updated net/unbound to 1.24.2 [adam 2025-12-03]
+	Updated security/py-bandit to 1.9.2 [adam 2025-12-03]
