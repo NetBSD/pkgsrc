@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.674 2025/12/02 17:50:40 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.675 2025/12/03 07:40:33 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29015,3 +29015,7 @@ python314-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-138
 zabbix-agent<6.0.40		arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-49642
 zabbix-frontend>=7.4<7.4.3	arbitrary-file-read		https://nvd.nist.gov/vuln/detail/CVE-2025-27232
 zabbix-frontend<6.0.42		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-49643
+xkbcomp<1.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-15853
+xkbcomp<1.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-15859
+xkbcomp<1.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-15861
+xkbcomp<1.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-15863
