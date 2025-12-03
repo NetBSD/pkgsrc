@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/11/02 08:37:36 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/12/03 20:18:02 adam Exp $
 
-DISTNAME=	mailsuite-1.9.18
+DISTNAME=	mailsuite-1.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mailsuite/}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-dns>=2.0.0:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-expiringdict>=1.2.2:../../devel/py-expiringdict
 DEPENDS+=	${PYPKGPREFIX}-html2text>=2020.1.16:../../textproc/py-html2text
 DEPENDS+=	${PYPKGPREFIX}-imapclient>=2.1.0:../../mail/py-imapclient
-DEPENDS+=	${PYPKGPREFIX}-mail-parser>=3.15.0:../../mail/py-mail-parser
+DEPENDS+=	${PYPKGPREFIX}-mail-parser>=4.1.2:../../mail/py-mail-parser
 DEPENDS+=	${PYPKGPREFIX}-publicsuffix2>=2.20190812:../../www/py-publicsuffix2
 
 USE_LANGUAGES=	# none
