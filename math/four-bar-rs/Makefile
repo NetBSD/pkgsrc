@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2025/10/23 20:38:14 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2025/12/03 07:55:38 wiz Exp $
 
-DISTNAME=	four-bar-rs-7.0.4
-PKGREVISION=	6
+DISTNAME=	four-bar-rs-7.0.5
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KmolYuan/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,14 +10,8 @@ HOMEPAGE=	https://github.com/KmolYuan/four-bar-rs/
 COMMENT=	Simulator and synthesizing tool for four-bar linkage mechanism
 LICENSE=	gnu-agpl-v3
 
-# https://github.com/KmolYuan/four-bar-rs/issues/7
-BROKEN=		"Does not build with rust 1.90"
-
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.79.0
-#Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.79.0 on amd64
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
