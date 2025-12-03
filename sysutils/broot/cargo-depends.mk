@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.104 2025/11/08 15:12:28 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.105 2025/12/03 20:20:31 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -178,7 +178,7 @@ CARGO_CRATE_DEPENDS+=	lazy-regex-3.4.2
 CARGO_CRATE_DEPENDS+=	lazy-regex-proc_macros-3.4.2
 CARGO_CRATE_DEPENDS+=	lazy_static-1.5.0
 CARGO_CRATE_DEPENDS+=	lebe-0.5.3
-CARGO_CRATE_DEPENDS+=	lfs-core-0.16.2
+CARGO_CRATE_DEPENDS+=	lfs-core-0.17.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.177
 CARGO_CRATE_DEPENDS+=	libfuzzer-sys-0.4.10
 CARGO_CRATE_DEPENDS+=	libgit2-sys-0.18.2+1.9.1

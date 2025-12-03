@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.120 2025/11/08 15:12:28 pin Exp $
+$NetBSD: distinfo,v 1.121 2025/12/03 20:20:31 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -102,9 +102,9 @@ Size (bitstream-io-2.6.0.crate) = 38256 bytes
 BLAKE2s (block2-0.5.1.crate) = f3e6a09a4c152a29eb9708eccc0fc7f0c1a2c021c1c6312958eb9799b0c60717
 SHA512 (block2-0.5.1.crate) = 084b15f06d005c9d4b78b20a85ed804ca10143e3bfc6b52c4c90f72b4b3455fd27bb02577a01f7c21e58a60d174c1b5d29b662da05b9e35688dcd266a988e045
 Size (block2-0.5.1.crate) = 24191 bytes
-BLAKE2s (broot-1.53.0.tar.gz) = 8e931b1ccf422f71a379254c8f21be774a69fe3026cb49c5b3a0d6fa3cd414a1
-SHA512 (broot-1.53.0.tar.gz) = 17d332d43d8a2e58382bd41d98b93b5100b5a2bbf5b572c4370820dee803046ed24293a01f80a3db5ab3bf5368de8426929aababbc2e268d90200549028aa7e5
-Size (broot-1.53.0.tar.gz) = 15379873 bytes
+BLAKE2s (broot-1.54.0.tar.gz) = f3b446c4d12ba283e63aece76a87af994b2d39b334725bcbd2bd8b8250e34830
+SHA512 (broot-1.54.0.tar.gz) = 3503446a30ed63471d703d68db136af22760c5bd4cd17af0fe207e083f3d7fa3672e9003de6ca87f0c2b418396a30cade791b4817c77c370403abc9a55a719b8
+Size (broot-1.54.0.tar.gz) = 13736739 bytes
 BLAKE2s (bstr-1.12.1.crate) = bf738250e22e04ffa6d9ae59e16bec4997bc7307983bb39e1672cea8cba81d6f
 SHA512 (bstr-1.12.1.crate) = 63a1e62d43c4dce00f287421b1ec76accbbab7f0897c8df26227f533af325896c0c8921a873f4125381e7b89fbb69a4358a96698ec6ee61191955464ff1c84ac
 Size (bstr-1.12.1.crate) = 354916 bytes
@@ -537,9 +537,9 @@ Size (lazy_static-1.5.0.crate) = 14025 bytes
 BLAKE2s (lebe-0.5.3.crate) = f0a54002daa5db9ac15e1a6244ce1f55be1e2b4d6b67714f99e135a0ee99ba53
 SHA512 (lebe-0.5.3.crate) = 525901bdf7ad9c73392e662b834fec766c8abe12069136cbb7e14101870f614436f145a7e4d984b975b8c35b528aa1a3cdbd6312dfac900075c805d8e16f54ac
 Size (lebe-0.5.3.crate) = 9439 bytes
-BLAKE2s (lfs-core-0.16.2.crate) = a4f985847f18ab6dc481743a3ab04325e09eac3f0de536e0479539970c7ac5d6
-SHA512 (lfs-core-0.16.2.crate) = 27fcd92d972cae1451dc1b3cbf279870698341961ded0a21c1c0199d37d182e3777cf1c17848d8eb5f1d7f20e38e110eb72ad707bed49aa60edc1f77717ac070
-Size (lfs-core-0.16.2.crate) = 25701 bytes
+BLAKE2s (lfs-core-0.17.0.crate) = c81537fdddfe36cfde869d304fb392ecca2ed343cf6ba6b86c6fe9fc6d5a1c01
+SHA512 (lfs-core-0.17.0.crate) = 84c8f9df3e1c22e25d56cd0ffe73ec771e4004bcd4042c82772ad3e411c6f2eedb42fba7f96f229ce2ab3cb7e9aa1a39319d7ca28690b5c7a4d4b363f48d4f35
+Size (lfs-core-0.17.0.crate) = 25832 bytes
 BLAKE2s (libc-0.2.177.crate) = 31f7dac9fe40422ec4ea5e1253bf5db38c751c4133e58fed2cd4df3fb7d991ed
 SHA512 (libc-0.2.177.crate) = 9d737091dba80244137987d06a52ffcd44a968c96b59ae9af9cfa40c38cb9675d023f6324fbf25c436ce1b9592ebf26248f85b0a7c97ee02360ca624b0efb3e0
 Size (libc-0.2.177.crate) = 792045 bytes
