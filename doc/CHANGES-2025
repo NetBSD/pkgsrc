@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7004 2025/12/03 04:22:46 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.7005 2025/12/03 04:23:55 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10156,3 +10156,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Downgraded sysutils/lima to 1.2.1nb1 [wiz 2025-12-02]
 	Updated www/syncstorage-rs to 0.21.1nb2 [wiz 2025-12-02]
 	Updated x11/lxqt-panel to 2.3.1 [gutteridge 2025-12-03]
+	Updated x11/libfm-qt to 2.3.1 [gutteridge 2025-12-03]
