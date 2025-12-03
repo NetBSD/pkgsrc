@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.676 2025/12/03 09:27:15 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.677 2025/12/03 10:36:26 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29019,3 +29019,25 @@ xkbcomp<1.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-15853
 xkbcomp<1.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-15859
 xkbcomp<1.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-15861
 xkbcomp<1.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-15863
+ImageMagick6<6.9.13.34	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-65955
+ImageMagick<7.1.2.9	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-65955
+cacti<1.22.29		remote-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-66399
+chromium<143.0.7499.41	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-13630
+chromium<143.0.7499.41	sandbox-escape		https://nvd.nist.gov/vuln/detail/CVE-2025-13632
+chromium<143.0.7499.41	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-13633
+chromium<143.0.7499.41	ui-spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-13635
+chromium<143.0.7499.41	ui-spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-13636
+chromium<143.0.7499.41	ui-spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-13637
+chromium<143.0.7499.41	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-13638
+chromium<143.0.7499.41	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-13639
+chromium<143.0.7499.41	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-13640
+chromium<143.0.7499.41	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-13720
+chromium<143.0.7499.41	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-13721
+go124<1.24.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61729
+go125<1.25.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61729
+py{27,39,310,311,312,313,314}-django<4.2.27	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-13372
+py{27,39,310,311,312,313,314}-django>=5<5.2.9	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-13372
+py{27,39,310,311,312,313,314}-django<4.2.27	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-64460
+py{27,39,310,311,312,313,314}-django>=5<5.2.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-64460
+wireshark<4.6.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13945
+wireshark<4.6.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13946
