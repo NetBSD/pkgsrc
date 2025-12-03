@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7025 2025/12/03 20:20:59 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7026 2025/12/03 21:57:26 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9001,7 +9001,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-types-docutils to 0.22.2.20251006 [adam 2025-10-22]
 	Added textproc/py-mdformat version 1.0.0 [adam 2025-10-22]
 	Updated devel/py-fakefs to 5.10.0 [adam 2025-10-22]
-	Added support for m68k softfloat (m68ksf). [nat 2025-10-22]
 	Updated textproc/py-pdf to 6.1.2 [adam 2025-10-22]
 	Updated math/py-patsy to 1.0.2 [adam 2025-10-22]
 	Updated net/unbound to 1.24.1 [he 2025-10-22]
