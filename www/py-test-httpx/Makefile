@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2025/04/14 20:28:03 adam Exp $
+# $NetBSD: Makefile,v 1.19 2025/12/03 11:28:10 adam Exp $
 
-DISTNAME=	pytest_httpx-0.35.0
+DISTNAME=	pytest_httpx-0.36.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-httpx/}
 
@@ -14,9 +13,9 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-httpx>=0.28:../../www/py-httpx
-DEPENDS+=	${PYPKGPREFIX}-test>=8.0:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.24:../../devel/py-test-asyncio
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=6:../../devel/py-test-cov
+DEPENDS+=	${PYPKGPREFIX}-test>=9.0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=1:../../devel/py-test-asyncio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=7:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
