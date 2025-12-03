@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7024 2025/12/03 20:18:23 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7025 2025/12/03 20:20:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10187,3 +10187,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/typst to 0.14.1 [pin 2025-12-03]
 	Updated sysutils/py-fsspec to 2025.12.0 [adam 2025-12-03]
 	Updated mail/py-mailsuite to 1.10.0 [adam 2025-12-03]
+	Updated sysutils/broot to 1.54.0 [pin 2025-12-03]
