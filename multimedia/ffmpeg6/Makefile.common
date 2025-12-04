@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.14 2025/09/22 14:23:24 adam Exp $
+# $NetBSD: Makefile.common,v 1.15 2025/12/04 16:23:55 adam Exp $
 # used by multimedia/ffmpeg6/Makefile
 # used by multimedia/ffplay6/Makefile
 
-DISTNAME=	ffmpeg-6.1.3
+DISTNAME=	ffmpeg-6.1.4
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.ffmpeg.org/releases/
 EXTRACT_SUFX=	.tar.xz
