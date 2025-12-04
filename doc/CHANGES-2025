@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7040 2025/12/04 18:45:29 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7041 2025/12/04 23:19:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10208,3 +10208,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/ffplay6 to 6.1.4 [adam 2025-12-04]
 	Updated devel/cargo-about to 0.8.4 [pin 2025-12-04]
 	Updated textproc/treemd to 0.4.4 [pin 2025-12-04]
+	Updated net/dnsdist to 2.0.2 [wiz 2025-12-04]
