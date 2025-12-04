@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/12/02 21:34:37 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/12/04 15:21:11 adam Exp $
 
 .include "dist.mk"
 
@@ -26,8 +26,8 @@ USE_CC_FEATURES+=	c11
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
-CONFIGURE_ARGS+=	--with-system-expat
 CONFIGURE_ARGS+=	--without-ensurepip
+CONFIGURE_ARGS+=	--without-system-expat # requires expat_config.h
 CONFIGURE_ENV+=		OPT=${CFLAGS:M*:Q}
 CONFIGURE_ENV+=		ac_cv_path_mkdir=${TOOLS_PATH.mkdir}
 CONFIGURE_ENV+=		py_cv_module__gdbm="n/a"
@@ -215,7 +215,6 @@ CONFIGURE_ENV+=		ac_cv_lib_intl_textdomain=yes
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../math/mpdecimal/buildlink3.mk"
-.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
