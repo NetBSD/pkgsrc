@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.107 2025/10/27 12:09:14 pin Exp $
+# $NetBSD: Makefile,v 1.108 2025/12/04 18:44:11 pin Exp $
 
 DISTNAME=	tp-note-1.25.16
+# tp-note >= 1.25.17 requires Rust >= 1.91.1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITLAB:=getreu/}
 GITLAB_RELEASE=	v${PKGVERSION_NOREV}
