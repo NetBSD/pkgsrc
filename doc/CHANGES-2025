@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7028 2025/12/03 23:27:52 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7029 2025/12/04 07:43:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10189,3 +10189,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/broot to 1.54.0 [pin 2025-12-03]
 	Updated graphics/png to 1.6.52 [wiz 2025-12-03]
 	Updated net/arti to 1.8.0 [wiz 2025-12-03]
+	Updated security/adguardhome to 0.107.70 [adam 2025-12-04]
+	Updated devel/py-cucumber-tag-expressions to 8.1.0 [adam 2025-12-04]
