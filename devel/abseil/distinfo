@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.35 2025/11/15 11:51:58 ryoon Exp $
+$NetBSD: distinfo,v 1.36 2025/12/04 15:37:41 ryoon Exp $
 
 BLAKE2s (abseil-20250814.1-20250814.1.tar.gz) = c7f7ab8bb9c06aa5f7bd955397fe313920bb60850409ba6751b28099490cb02b
 SHA512 (abseil-20250814.1-20250814.1.tar.gz) = 7083b73c3cf763f6f7a7edb70a5171f44d27045a0f5e52ca043e0a86379af2c50cf85dbfea30ebaa22a7bb2929452581d26b1ba18945023b057267d4c3bad2f7
 Size (abseil-20250814.1-20250814.1.tar.gz) = 2235716 bytes
 SHA1 (patch-absl_base_internal_sysinfo.cc) = c96dd302dde0f6071a8353a5877a3bac37949467
-SHA1 (patch-absl_debugging_internal_elf__mem__image.cc) = e64fc14e9569107c518c15dd3d361fd4bb417a76
+SHA1 (patch-absl_debugging_internal_elf__mem__image.cc) = 163decf88e1c39d94b3e93a7a9c758b18310fc5d
 SHA1 (patch-absl_debugging_internal_vdso__support.cc) = 2292c5b0f2b41679039a1697508343ff5b6cc401
 SHA1 (patch-absl_time_internal_cctz_src_time__zone__format.cc) = 7f3b84cd63f847ffa4c2fcb04b28d1535ea1454b
