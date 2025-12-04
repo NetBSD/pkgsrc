@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7036 2025/12/04 13:00:39 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7037 2025/12/04 16:04:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10200,3 +10200,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/nostui to 0.1.1 [pin 2025-12-04]
 	Removed sysutils/dbus-sharp-glib [wiz 2025-12-04]
 	Removed sysutils/dbus-sharp [wiz 2025-12-04]
+	Updated shells/nushell to 0.109.1 [adam 2025-12-04]
+	Updated www/py-scrapy to 2.13.4 [adam 2025-12-04]
