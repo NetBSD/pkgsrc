@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2025/08/20 11:35:11 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/12/04 13:03:39 wiz Exp $
 
 DISTNAME=	dfc-3.1.1
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://projects.gw-computing.net/attachments/download/615/
+#MASTER_SITES=	http://projects.gw-computing.net/attachments/download/615/
 # Note: the number at the end of the URL above changes for each release
 
 MAINTAINER=	mcy@lm7.fr
-HOMEPAGE=	https://projects.gw-computing.net/projects/dfc
+#HOMEPAGE=	https://projects.gw-computing.net/projects/dfc
 COMMENT=	Display file system space usage using graph and colors
 LICENSE=	modified-bsd
 
