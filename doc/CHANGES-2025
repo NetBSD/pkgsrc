@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7035 2025/12/04 12:12:37 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7036 2025/12/04 13:00:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10198,3 +10198,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/yaydl to 0.18.2 [pin 2025-12-04]
 	Updated x11/xterm to 404 [pin 2025-12-04]
 	Updated net/nostui to 0.1.1 [pin 2025-12-04]
+	Removed sysutils/dbus-sharp-glib [wiz 2025-12-04]
+	Removed sysutils/dbus-sharp [wiz 2025-12-04]
