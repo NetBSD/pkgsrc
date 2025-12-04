@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7033 2025/12/04 12:09:46 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7034 2025/12/04 12:10:51 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10196,3 +10196,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added textproc/tex-markdown version 3.12.0 [jperkin 2025-12-04]
 	Updated devel/cargo-release to 0.25.22 [pin 2025-12-04]
 	Updated net/yaydl to 0.18.2 [pin 2025-12-04]
+	Updated x11/xterm to 404 [pin 2025-12-04]
