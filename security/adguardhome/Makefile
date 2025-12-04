@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/12/02 19:25:17 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2025/12/04 07:42:04 adam Exp $
 
-DISTNAME=	adguardhome-0.107.69
-PKGREVISION=	1
+DISTNAME=	adguardhome-0.107.70
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdguardTeam/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,12 +11,16 @@ HOMEPAGE=	https://github.com/AdguardTeam/AdGuardHome
 COMMENT=	Powerful network-wide ads and trackers blocking DNS server
 LICENSE=	gnu-gpl-v3
 
-STATIC_DIST=		${PKGNAME_NOREV}-static${EXTRACT_SUFX}
-SITES.${STATIC_DIST}=	${MASTER_SITE_LOCAL}
+# Because frontend is not versioned, fetch it, rename to
+# adguardhome_frontend-${PKGVERSION_NOREV}.tar.gz
+# and upload to MASTER_SITE_LOCAL (make upload-distfiles).
+#FRONTEND=		AdGuardHome_frontend.tar.gz
+#SITES.${FRONTEND}=	${MASTER_SITE_GITHUB:=AdguardTeam/}${GITHUB_PROJECT}/releases/download/${GITHUB_TAG}/
+FRONTEND=		adguardhome_frontend-${PKGVERSION_NOREV}.tar.gz
+SITES.${FRONTEND}=	${MASTER_SITE_LOCAL}
 
-# comment out these for: make generate-static
-DISTFILES=	${DEFAULT_DISTFILES} ${STATIC_DIST}
-EXTRACT_ONLY=	${DEFAULT_DISTFILES} ${STATIC_DIST}
+DISTFILES=	${DEFAULT_DISTFILES} ${FRONTEND}
+EXTRACT_ONLY=	${DEFAULT_DISTFILES} ${FRONTEND}
 
 CHECK_RELRO_SKIP+=	bin/AdGuardHome
 
@@ -32,16 +35,10 @@ INSTALLATION_DIRS+=	libdata/adguardhome
 PKG_SYSCONFSUBDIR=	adguardhome
 RCD_SCRIPTS+=		adguardhome
 
-# Hack
+# Hack: see https://github.com/AdguardTeam/AdGuardHome/pull/8142
 post-patch:
 	${LN} ${WRKSRC}/internal/aghnet/net_freebsd.go ${WRKSRC}/internal/aghnet/net_netbsd.go
-
-# Install lang/nodejs and run this target.
-.PHONY: generate-static
-generate-static:
-	cd ${WRKSRC}/client && npm install && npm run build-prod
-	cd ${WRKDIR} && ${TAR} -zcf ${DISTDIR}/${PKGNAME_NOREV}-static.tar.gz AdGuardHome-${PKGVERSION_NOREV}/build/static
-	@${ECHO} "Run: make upload-distfiles"
+	${CP} -R ${WRKDIR}/build/static ${WRKSRC}/build/
 
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
