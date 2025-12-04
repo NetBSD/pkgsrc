@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2018/01/26 13:37:40 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.10 2025/12/04 12:57:54 wiz Exp $
 
 DISTNAME=	dbeacon-0.3.9.1
 PKGREVISION=	5
 CATEGORIES=	mbone
-MASTER_SITES=	http://fivebits.net/files/dbeacon/
+#MASTER_SITES=	http://fivebits.net/files/dbeacon/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fivebits.net/proj/dbeacon/
+#HOMEPAGE=	http://fivebits.net/proj/dbeacon/
 COMMENT=	Distributed IPv4/IPv6 multicast beacon
 LICENSE=	gnu-gpl-v2
 
