@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2025/12/04 11:05:10 jperkin Exp $
+share/texmf-dist/scripts/markdown/markdown-cli.lua
+share/texmf-dist/scripts/markdown/markdown2tex.lua
+share/texmf-dist/tex/context/third/markdown/t-markdown.tex
+share/texmf-dist/tex/context/third/markdown/t-markdownthemewitiko_markdown_defaults.tex
+share/texmf-dist/tex/generic/markdown/markdown.tex
+share/texmf-dist/tex/generic/markdown/markdownthemewitiko_markdown_defaults.tex
+share/texmf-dist/tex/latex/markdown/markdown.sty
+share/texmf-dist/tex/latex/markdown/markdownthemewitiko_markdown_defaults.sty
+share/texmf-dist/tex/luatex/markdown/markdown-parser.lua
+share/texmf-dist/tex/luatex/markdown/markdown-unicode-data.lua
+share/texmf-dist/tex/luatex/markdown/markdown.lua
