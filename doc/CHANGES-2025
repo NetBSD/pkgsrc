@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7029 2025/12/04 07:43:55 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7030 2025/12/04 07:48:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10191,3 +10191,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/arti to 1.8.0 [wiz 2025-12-03]
 	Updated security/adguardhome to 0.107.70 [adam 2025-12-04]
 	Updated devel/py-cucumber-tag-expressions to 8.1.0 [adam 2025-12-04]
+	Updated devel/py-faker to 38.2.0 [adam 2025-12-04]
+	Updated devel/py-sybil to 9.3.0 [adam 2025-12-04]
