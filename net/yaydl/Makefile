@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2025/10/27 12:02:54 pin Exp $
+# $NetBSD: Makefile,v 1.33 2025/12/04 12:09:24 pin Exp $
 
-DISTNAME=	yaydl-6372f8a382
-PKGNAME=	yaydl-0.18.1
+DISTNAME=	yaydl-86fe9ff73c
+PKGNAME=	yaydl-0.18.2
 CATEGORIES=	net
-MASTER_SITES=	https://code.rosaelefanten.org/yaydl/tarball/6372f8a382/
+MASTER_SITES=	https://code.rosaelefanten.org/yaydl/tarball/86fe9ff73c/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://code.rosaelefanten.org/yaydl/home
@@ -15,9 +15,9 @@ LICENSE=	cddl-1.0
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.87.0
+#RUST_REQ=	1.91.1
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.87.0 on amd64
+#This package is confirmed to build with Rust 1.91.1 on amd64
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
