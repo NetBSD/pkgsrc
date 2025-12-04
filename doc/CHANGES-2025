@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7037 2025/12/04 16:04:10 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7038 2025/12/04 16:24:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10202,3 +10202,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed sysutils/dbus-sharp [wiz 2025-12-04]
 	Updated shells/nushell to 0.109.1 [adam 2025-12-04]
 	Updated www/py-scrapy to 2.13.4 [adam 2025-12-04]
+	Updated multimedia/ffmpeg5 to 5.1.8 [adam 2025-12-04]
+	Updated multimedia/ffplay5 to 5.1.8 [adam 2025-12-04]
+	Updated multimedia/ffmpeg6 to 6.1.4 [adam 2025-12-04]
+	Updated multimedia/ffplay6 to 6.1.4 [adam 2025-12-04]
