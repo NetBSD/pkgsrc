@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.65 2025/11/30 11:24:53 pin Exp $
+$NetBSD: distinfo,v 1.66 2025/12/04 15:59:53 adam Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -1212,9 +1212,9 @@ Size (num_threads-0.1.7.crate) = 7455 bytes
 BLAKE2s (number_prefix-0.4.0.crate) = e2e6caf7fd792ec56ec5665184ed1b66469de944c998ee8e0eee92eb0f7105b5
 SHA512 (number_prefix-0.4.0.crate) = a43b668d7314218b86ca7451daa9dfef71f6c9f6616bc34c12d94ae6030f182bcca9da83905cb46f3d49d0aa81385a787e92e4f3ae239658067adc249f8174df
 Size (number_prefix-0.4.0.crate) = 6922 bytes
-BLAKE2s (nushell-0.109.0.tar.gz) = a284dc0c944d97afbaf492ebac49d1e88fcc77442e587f99eb102d54132afdca
-SHA512 (nushell-0.109.0.tar.gz) = 36d750d2b5dbb13f9a3c85c3c62b8518c9d3798f06a5e3bc57814e1261668eab7fab5831d26968db01c3935509f37346581a6c746e4473ee7dcc9bc005a05627
-Size (nushell-0.109.0.tar.gz) = 3669862 bytes
+BLAKE2s (nushell-0.109.1.tar.gz) = 5f09b03c5e151632dc3ac24ba4b68be61c6e1c33827b9074c054a1beb85461c7
+SHA512 (nushell-0.109.1.tar.gz) = f625f882bdecad448a54a9e0e63d64178723524b04b794c4c366ed824993d136855f5b93d99ac72dce37f6385322ff941e41ee1b378c885b75e3d01372de6dc2
+Size (nushell-0.109.1.tar.gz) = 3672021 bytes
 BLAKE2s (objc-sys-0.3.5.crate) = e8ca5ea722eecb7b5c4ec67cbdb0839fe7d12f671719e38ee380a1e50beff226
 SHA512 (objc-sys-0.3.5.crate) = caf19594c04d666f24c791b941346d31cc6fc03adedd6d0ff393910e9489d974afccb155400b618e2d62cd13885cc85b16a3c33e4e72409e3cebb0760ae34b99
 Size (objc-sys-0.3.5.crate) = 20560 bytes
