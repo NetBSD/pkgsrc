@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/12/03 09:19:11 pin Exp $
+# $NetBSD: Makefile,v 1.13 2025/12/04 18:42:27 pin Exp $
 
-DISTNAME=	cargo-about-0.8.3
+DISTNAME=	cargo-about-0.8.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=EmbarkStudios/}
 
