@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/04/11 09:04:29 pin Exp $
+# $NetBSD: Makefile,v 1.5 2025/12/04 12:12:19 pin Exp $
 
-DISTNAME=	nostui-0.1.0
+DISTNAME=	nostui-0.1.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=akiomik/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
