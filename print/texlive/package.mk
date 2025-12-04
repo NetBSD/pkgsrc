@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.27 2020/05/08 02:58:03 markd Exp $
+# $NetBSD: package.mk,v 1.28 2025/12/04 11:40:48 jperkin Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # TeX Live packages.
@@ -23,7 +23,8 @@
 #	packages do not have a revision number in the DISTNAME).
 #	To obtain information to be used as TEXLIVE_REV you should use the
 #	value of "revision" line usually available in
-#	${WRKSRC}/tlpkg/tlpobj/${DISTNAME}.tlpobj
+#	${WRKSRC}/tlpkg/tlpobj/${DISTNAME}.tlpobj, or
+#	https://mirrors.ctan.org/systems/texlive/tlnet/tlpkg/texlive.tlpdb
 #
 # TEXLIVE_UNVERSIONED
 #	The distfile is an oldstyle unversioned one, normally
