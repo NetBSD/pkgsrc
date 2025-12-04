@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7034 2025/12/04 12:10:51 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7035 2025/12/04 12:12:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10197,3 +10197,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cargo-release to 0.25.22 [pin 2025-12-04]
 	Updated net/yaydl to 0.18.2 [pin 2025-12-04]
 	Updated x11/xterm to 404 [pin 2025-12-04]
+	Updated net/nostui to 0.1.1 [pin 2025-12-04]
