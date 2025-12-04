@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.677 2025/12/03 10:36:26 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.678 2025/12/04 10:03:25 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29041,3 +29041,17 @@ py{27,39,310,311,312,313,314}-django<4.2.27	denial-of-service	https://nvd.nist.g
 py{27,39,310,311,312,313,314}-django>=5<5.2.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-64460
 wireshark<4.6.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13945
 wireshark<4.6.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13946
+chromium<139.0.7258.66	sandbox-escape	https://nvd.nist.gov/vuln/detail/CVE-2025-13992
+go124<1.24.11	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-61727
+go125<1.25.5	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-61727
+openvpn<2.6.16	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13086
+pgbouncer<1.25.1	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-12819
+png<1.6.52	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-66293
+python310-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12084
+python311-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12084
+python312-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12084
+python313-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12084
+python314-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12084
+qt5-qtdeclarative-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12385
+qt6-qtdeclarative<6.10.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12385
+webkit-gtk-[0-9]*	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-13947
