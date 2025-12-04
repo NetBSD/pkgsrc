@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:09:36 nia Exp $
+$NetBSD: distinfo,v 1.13 2025/12/04 20:11:22 vins Exp $
 
 BLAKE2s (nntpclnt-1.6.1.tar.gz) = 8997eaa2262565fe645de54f6d630c1778f55e25e16360583e4e6933d0d1c944
 SHA512 (nntpclnt-1.6.1.tar.gz) = 4e12e5d4503fe7bde37390ea33779f6dd22b56a9f3aa317ebcedb4c441e32a2eaed0875d4f383832d0b9e062dfff73cf9133173bbc4609eb3f6d40927a70bc01
 Size (nntpclnt-1.6.1.tar.gz) = 34369 bytes
-SHA1 (patch-aa) = e4c947e9acdd6f814437409e475b819588c444fa
+SHA1 (patch-aa) = 6a13fd78f647d7170371a5e4a5e5eeda18f9e6b3
 SHA1 (patch-ab) = 1727359c86283d24c34e6d161e4b3ee8fd873499
 SHA1 (patch-ac) = ed067e2f2c6c22e32ca388dc6f990aa720d762aa
 SHA1 (patch-ad) = bc44ff1539a4ab1129a2ea86ec08f5b61d6e41dd
