@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7055 2025/12/05 21:15:23 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7056 2025/12/05 21:16:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10229,3 +10229,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/py-hypercorn version 0.18.0 [wiz 2025-12-05]
 	Added www/py-quart version 0.20.0 [wiz 2025-12-05]
 	Added www/py-quart-trio version 0.12.0 [wiz 2025-12-05]
+	Updated www/py-urllib3 to 2.6.0 [wiz 2025-12-05]
