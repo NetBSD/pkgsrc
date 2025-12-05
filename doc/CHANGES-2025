@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7042 2025/12/05 06:26:05 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7043 2025/12/05 09:12:38 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10211,3 +10211,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/dnsdist to 2.0.2 [wiz 2025-12-04]
 	Updated net/wireshark to 4.6.2 [adam 2025-12-05]
 	Updated devel/meson to 1.9.2 [adam 2025-12-05]
+	Updated x11/xscreensaver to 6.13 [hauke 2025-12-05]
