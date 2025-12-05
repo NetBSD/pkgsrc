@@ -1,3 +1,3 @@
-# $NetBSD: version.mk,v 1.66 2025/09/23 00:24:57 joerg Exp $
+# $NetBSD: version.mk,v 1.67 2025/12/05 14:30:26 adam Exp $
 
-VERSION=	7.1.1
+VERSION=	7.1.2
