@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7054 2025/12/05 21:14:45 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7055 2025/12/05 21:15:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10228,3 +10228,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-trio to 0.8.0nb1 [wiz 2025-12-05]
 	Added www/py-hypercorn version 0.18.0 [wiz 2025-12-05]
 	Added www/py-quart version 0.20.0 [wiz 2025-12-05]
+	Added www/py-quart-trio version 0.12.0 [wiz 2025-12-05]
