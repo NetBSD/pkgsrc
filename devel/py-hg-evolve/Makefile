@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2025/09/23 00:27:13 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2025/12/05 14:34:53 adam Exp $
 #
 # Release notes:
 # https://lists.mercurial-scm.org/pipermail/mercurial/
 
-DISTNAME=	hg_evolve-11.1.9
+DISTNAME=	hg_evolve-11.1.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hg-evolve/}
@@ -13,11 +13,10 @@ HOMEPAGE=	https://www.mercurial-scm.org/doc/evolution/
 COMMENT=	Experimental Mercurial extensions from Facebook
 LICENSE=	gnu-gpl-v2
 
-PATCH_SITES=		https://foss.heptapod.net/mercurial/evolve/-/commit/
-PATCHFILES=		\
-    8ec80fb4b0ce4247b61051014a4fb891bf327a89.diff \
-    0144bd9214df0457a966177eb7217e2b2991965a.diff \
-    1c1cd671da5c3c547184b0b13dbb59b8c848d09c.diff
+PATCH_SITES=	https://foss.heptapod.net/mercurial/evolve/-/commit/
+PATCHFILES=	8ec80fb4b0ce4247b61051014a4fb891bf327a89.diff \
+		0144bd9214df0457a966177eb7217e2b2991965a.diff \
+		1c1cd671da5c3c547184b0b13dbb59b8c848d09c.diff
 PATCH_DIST_STRIP=	-p1
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
