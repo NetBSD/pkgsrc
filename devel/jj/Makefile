@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2025/11/06 19:39:40 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/12/05 10:19:03 wiz Exp $
 
-DISTNAME=	jj-0.35.0
+DISTNAME=	jj-0.36.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jj-vcs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,10 +12,10 @@ LICENSE=	apache-2.0
 
 # for 'cargo test', not connected to pkgsrc infrastructure
 #TEST_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
-# status as of 0.34.0
-# test result: FAILED. 842 passed; 1 failed; 1 ignored; 0 measured; 0 filtered out; finished in 44.86s
+# status as of 0.36.0
+# test result: FAILED. 904 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 53.52s
 
-RUST_REQ=	1.88
+RUST_REQ=	1.89
 
 .include "cargo-depends.mk"
 
