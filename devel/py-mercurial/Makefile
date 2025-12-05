@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2025/09/30 16:07:36 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2025/12/05 14:30:26 adam Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
@@ -13,7 +13,7 @@ COMMENT=	Fast, lightweight source control management system
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 # OR newer
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8.1.0:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
@@ -29,8 +29,7 @@ PYTHON_SELF_CONFLICT=		yes
 
 .include "version.mk"
 
-
-USE_TOOLS+=		bash:test
+USE_TOOLS+=	bash:test
 # Test status as of 7.1 as !root
 # tests/test-revlog-mmapindex.t (race condition / buffer)
 
