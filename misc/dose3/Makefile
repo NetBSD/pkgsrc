@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.22 2025/08/25 08:35:08 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/12/05 11:26:53 wiz Exp $
 
 DISTNAME=	dose3-5.0.1
 PKGREVISION=	7
 CATEGORIES=	misc
-MASTER_SITES=	https://gforge.inria.fr/frs/download.php/file/36063/
+#MASTER_SITES=	https://gforge.inria.fr/frs/download.php/file/36063/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gforge.inria.fr/projects/dose/
+HOMEPAGE=	https://www.mancoosi.org/software/
 COMMENT=	Package repository analysis toolkit
 LICENSE=	gnu-lgpl-v3
 
