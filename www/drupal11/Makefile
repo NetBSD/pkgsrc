@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/03/20 01:21:21 taca Exp $
+# $NetBSD: Makefile,v 1.7 2025/12/05 11:31:56 wiz Exp $
 
 DISTNAME=	drupal-11.1.5
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	https://ftp-origin.drupal.org/files/projects/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://drupal.org/
+HOMEPAGE=	https://new.drupal.org/home
 COMMENT=	Open source content management system
 LICENSE=	gnu-gpl-v2
 
