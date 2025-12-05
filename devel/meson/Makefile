@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.85 2025/10/09 16:55:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.86 2025/12/05 06:25:42 adam Exp $
 
-DISTNAME=	meson-1.9.1
-PKGREVISION=	1
+DISTNAME=	meson-1.9.2
 CATEGORIES=	devel python
 #MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson/}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mesonbuild/}
@@ -18,8 +17,8 @@ CONFLICTS+=	py[0-9]*-meson-[0-9]*
 SUPERSEDES+=	py[0-9]*-meson-[0-9]*
 
 USE_LANGUAGES=	c c++ # c++ for tests
-# XXX only needed for tests, but itstool:test didn't work
-USE_TOOLS+=	itstool
+# XXX both tools are only needed for tests, but itstool:test didn't work
+USE_TOOLS+=	itstool pkg-config
 
 SUBST_CLASSES+=		man
 SUBST_SED.man+=		-e "s,share/man,${PKGMANDIR},"
