@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7041 2025/12/04 23:19:15 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7042 2025/12/05 06:26:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10209,3 +10209,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cargo-about to 0.8.4 [pin 2025-12-04]
 	Updated textproc/treemd to 0.4.4 [pin 2025-12-04]
 	Updated net/dnsdist to 2.0.2 [wiz 2025-12-04]
+	Updated net/wireshark to 4.6.2 [adam 2025-12-05]
+	Updated devel/meson to 1.9.2 [adam 2025-12-05]
