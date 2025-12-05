@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7046 2025/12/05 11:24:11 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7047 2025/12/05 11:28:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10217,3 +10217,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-ruff to 0.14.8 [adam 2025-12-05]
 	Updated devel/jj to 0.36.0 [wiz 2025-12-05]
 	Removed net/dnscheck [wiz 2025-12-05]
+	Updated devel/py-ipython to 9.8.0 [adam 2025-12-05]
+	Updated mail/py-checkdmarc to 5.12.26 [adam 2025-12-05]
