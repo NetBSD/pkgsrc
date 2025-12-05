@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/12/05 21:14:29 wiz Exp $
+
+BLAKE2s (quart-0.20.0.tar.gz) = e91235bb3818f7a0243b0f4944bd0872cdf18878430d1be63ccb80bdc23a1717
+SHA512 (quart-0.20.0.tar.gz) = 4e9818b91a1e5710c0b01d6ff38c726e698610ec0fcc3ffbfa48bd1c67058dd5f3332ecc46e501261efdf1fdabaaf080812e35c4926839dd7c8ed35205e6904f
+Size (quart-0.20.0.tar.gz) = 63874 bytes
