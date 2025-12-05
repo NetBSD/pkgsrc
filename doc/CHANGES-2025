@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7053 2025/12/05 21:00:29 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7054 2025/12/05 21:14:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10227,3 +10227,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added textproc/xleak version 0.2.5 [pin 2025-12-05]
 	Updated devel/py-test-trio to 0.8.0nb1 [wiz 2025-12-05]
 	Added www/py-hypercorn version 0.18.0 [wiz 2025-12-05]
+	Added www/py-quart version 0.20.0 [wiz 2025-12-05]
