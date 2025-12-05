@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2025/06/22 17:41:13 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2025/12/05 21:16:38 wiz Exp $
 
-DISTNAME=	urllib3-2.5.0
+DISTNAME=	urllib3-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urllib3/}
@@ -29,14 +29,16 @@ PYTHON_VERSIONED_DEPENDENCIES+=	cryptography:test
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7.0.4:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun>=1.2.2:../../devel/py-freezegun
-#TEST_DEPENDS+=	${PYPKGPREFIX}-towncrier>=21.9.0:../../wip/py-towncrier
+TEST_DEPENDS+=	${PYPKGPREFIX}-httpx>=0:../../www/py-httpx
+TEST_DEPENDS+=	${PYPKGPREFIX}-quart>=0:../../www/py-quart
+TEST_DEPENDS+=	${PYPKGPREFIX}-quart-trio>=0:../../www/py-quart-trio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.1.0:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-tornado>=6.2:../../www/py-tornado
 TEST_DEPENDS+=	${PYPKGPREFIX}-trio>=0.26.2:../../devel/py-trio
 TEST_DEPENDS+=	${PYPKGPREFIX}-trustme>=0.9.0:../../security/py-trustme
-# quart
-#hypercorn @ git+https://github.com/urllib3/hypercorn@urllib3-changes
-#pytest-memray 1.5.0; sys_platform!="win32" and implementation_name=="cpython"
+
+# as of 2.6.0
+# 43 failed, 1681 passed, 523 skipped, 2 xfailed, 51 warnings, 1 error
 
 USE_LANGUAGES=	# none
 
