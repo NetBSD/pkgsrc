@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/12 11:18:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/12/05 12:06:39 adam Exp $
+bin/incremental-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/incremental/__init__.py
 ${PYSITELIB}/incremental/__init__.pyc
 ${PYSITELIB}/incremental/__init__.pyo
