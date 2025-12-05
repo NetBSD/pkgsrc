@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/12/05 11:25:07 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/12/05 17:35:40 gutteridge Exp $
 
 DISTNAME=	docbook2odf-0.244
 PKGREVISION=	5
@@ -7,7 +7,7 @@ MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/dmoonfire/docbook2odf
-COMMENT=	Convert DocBook documentation into ODF documents
+COMMENT=	Convert DocBook 4.x documentation into ODF documents
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 NO_BUILD=		yes
