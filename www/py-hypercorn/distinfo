@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/12/05 20:59:57 wiz Exp $
+
+BLAKE2s (hypercorn-0.18.0.tar.gz) = 46ee8b906dec5ba5836ce85ac888a6bc8165c78e653619d8dc0c05ac8ee3ad1e
+SHA512 (hypercorn-0.18.0.tar.gz) = 1ac689a39d57dc27af427f5a3ebe74c9ce1f05e151b546c84904230248b5b17b1e4ba83ab135bbbfa74f099c4538792467fc35709ccd588ba556e1d90f8494aa
+Size (hypercorn-0.18.0.tar.gz) = 68420 bytes
