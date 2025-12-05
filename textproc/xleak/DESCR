@@ -1,0 +1,8 @@
+Expose Excel files in your terminal - no Microsoft Excel required!
+
+Inspired by doxx, xleak brings Excel spreadsheets to your command line with
+beautiful rendering, powerful export capabilities, and a feature-rich
+interactive TUI.
+
+xleak features full-text search, formula display, lazy loading for large files,
+clipboard support, and export to CSV/JSON.
