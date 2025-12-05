@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7049 2025/12/05 14:35:10 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7050 2025/12/05 20:33:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10223,3 +10223,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-txaio to 25.12.1 [adam 2025-12-05]
 	Updated devel/py-mercurial to 7.1.2 [adam 2025-12-05]
 	Updated devel/py-hg-evolve to 11.1.10 [adam 2025-12-05]
+	Added textproc/doxx version 0.1.2 [pin 2025-12-05]
