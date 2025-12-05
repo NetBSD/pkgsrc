@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1889 2025/11/21 17:21:47 osa Exp $
+# $NetBSD: Makefile,v 1.1890 2025/12/05 21:00:15 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -852,6 +852,7 @@ SUBDIR+=	py-httpretty
 SUBDIR+=	py-httptools
 SUBDIR+=	py-httpx
 SUBDIR+=	py-httpx-socks
+SUBDIR+=	py-hypercorn
 SUBDIR+=	py-hyperframe
 SUBDIR+=	py-hyperkitty
 SUBDIR+=	py-hyperlink
