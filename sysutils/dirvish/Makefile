@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/06/27 17:40:34 abs Exp $
+# $NetBSD: Makefile,v 1.18 2025/12/05 11:20:40 wiz Exp $
 #
 
 DISTNAME=	dirvish-1.2.1
@@ -8,7 +8,7 @@ MASTER_SITES=	https://dirvish.org/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.dirvish.org/
+HOMEPAGE=	https://dirvish.org/
 COMMENT=	Fast, disk based, rotating network backup system
 #LICENSE=	osl-2.0
 
