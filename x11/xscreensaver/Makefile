@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.172 2025/10/31 14:56:38 abs Exp $
+# $NetBSD: Makefile,v 1.173 2025/12/05 09:12:03 hauke Exp $
 
-DISTNAME=		xscreensaver-6.12
+DISTNAME=		xscreensaver-6.13
 CATEGORIES=		x11
 MASTER_SITES=		https://www.jwz.org/xscreensaver/
 
@@ -8,12 +8,12 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Screen saver and locker for the X window system
 HOMEPAGE=		https://www.jwz.org/xscreensaver/
 
+LICENSE=		mit
+
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_CC_FEATURES=	c99
 USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
-# bsdtar fails with "Skipping hardlink pointing to itself: xscreensaver-6.12/driver/wayland-dpy.c: Unknown error: -1"
-EXTRACT_USING=		gtar
 
 CHECK_PORTABILITY_SKIP+=	OSX/fuzztest.sh
 CHECK_PORTABILITY_SKIP+=	OSX/installer.sh
@@ -31,7 +31,7 @@ CONFIGURE_ARGS.NetBSD+=	--without-kerberos
 
 CONFIGURE_ENV+=		ac_cv_x_app_defaults="${PREFIX}/lib/X11/app-defaults"
 
-CONFLICTS+=	xscreensaver-gnome<4.14 xscreensaver-demo-[0-9]*
+CONFLICTS+=		xscreensaver-gnome<4.14 xscreensaver-demo-[0-9]*
 
 .include "../../mk/compiler.mk"
 .if ${CC_VERSION:Mgcc*}
@@ -46,11 +46,12 @@ INSTALL_MAKE_FLAGS=	install_prefix=${DESTDIR}
 
 INSTALLATION_DIRS=	share/doc/${PKGBASE}
 
-REPLACE_PERL+=	hacks/*.pl hacks/*/*.pl
+REPLACE_PERL+=		hacks/*.pl hacks/*/*.pl
 
 post-install:
 	${CHMOD} a-x ${DESTDIR}${PREFIX}/share/applications/*.desktop
-	${INSTALL_DATA} ${FILESDIR}/README.pkgsrc ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${FILESDIR}/README.pkgsrc \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "options.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
