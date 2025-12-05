@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2025/07/08 16:00:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/12/05 12:08:55 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
 ${PYSITELIB}/txaio/__init__.py
 ${PYSITELIB}/txaio/__init__.pyc
 ${PYSITELIB}/txaio/__init__.pyo
@@ -29,6 +28,7 @@ ${PYSITELIB}/txaio/aio.pyo
 ${PYSITELIB}/txaio/interfaces.py
 ${PYSITELIB}/txaio/interfaces.pyc
 ${PYSITELIB}/txaio/interfaces.pyo
+${PYSITELIB}/txaio/py.typed
 ${PYSITELIB}/txaio/testutil.py
 ${PYSITELIB}/txaio/testutil.pyc
 ${PYSITELIB}/txaio/testutil.pyo
