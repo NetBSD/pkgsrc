@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7044 2025/12/05 10:09:46 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7045 2025/12/05 10:19:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10215,3 +10215,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-uv to 0.9.15 [adam 2025-12-05]
 	Updated devel/py-uv-build to 0.9.15 [adam 2025-12-05]
 	Updated devel/py-ruff to 0.14.8 [adam 2025-12-05]
+	Updated devel/jj to 0.36.0 [wiz 2025-12-05]
