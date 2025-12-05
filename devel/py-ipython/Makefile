@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.117 2025/11/12 13:58:46 adam Exp $
+# $NetBSD: Makefile,v 1.118 2025/12/05 11:25:41 adam Exp $
 
-DISTNAME=	ipython-9.7.0
+DISTNAME=	ipython-9.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython/}
@@ -11,14 +11,14 @@ COMMENT=	Interactive computing environment for Python
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
-DEPENDS+=	${PYPKGPREFIX}-ipython-pygments-lexers-[0-9]*:../../devel/py-ipython-pygments-lexers
-DEPENDS+=	${PYPKGPREFIX}-jedi>=0.16:../../editors/py-jedi
-DEPENDS+=	${PYPKGPREFIX}-matplotlib-inline-[0-9]*:../../graphics/py-matplotlib-inline
+DEPENDS+=	${PYPKGPREFIX}-decorator>=4.3.2:../../devel/py-decorator
+DEPENDS+=	${PYPKGPREFIX}-ipython-pygments-lexers>=1.0.0:../../devel/py-ipython-pygments-lexers
+DEPENDS+=	${PYPKGPREFIX}-jedi>=0.18.1:../../editors/py-jedi
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-inline>=0.1.5:../../graphics/py-matplotlib-inline
 DEPENDS+=	${PYPKGPREFIX}-pexpect>=4.4:../../devel/py-pexpect
 DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=3.0.41:../../devel/py-prompt_toolkit
-DEPENDS+=	${PYPKGPREFIX}-pygments>=2.4.0:../../textproc/py-pygments
-DEPENDS+=	${PYPKGPREFIX}-stack-data-[0-9]*:../../sysutils/py-stack-data
+DEPENDS+=	${PYPKGPREFIX}-pygments>=2.11.0:../../textproc/py-pygments
+DEPENDS+=	${PYPKGPREFIX}-stack-data>=0.6.0:../../sysutils/py-stack-data
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.13.0:../../devel/py-traitlets
 TEST_DEPENDS+=	${PYPKGPREFIX}-pickleshare-[0-9]*:../../databases/py-pickleshare
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
