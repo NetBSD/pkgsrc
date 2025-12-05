@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.79 2025/11/29 16:29:54 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.80 2025/12/05 10:09:24 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -201,7 +201,7 @@ CARGO_CRATE_DEPENDS+=	litemap-0.8.0
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.13
 CARGO_CRATE_DEPENDS+=	log-0.4.28
 CARGO_CRATE_DEPENDS+=	lsp-server-0.7.9
-CARGO_CRATE_DEPENDS+=	lsp-types-0.95.1
+#CARGO_CRATE_DEPENDS+=	lsp-types-0.95.1
 CARGO_CRATE_DEPENDS+=	manyhow-0.11.4
 CARGO_CRATE_DEPENDS+=	manyhow-macros-0.11.4
 CARGO_CRATE_DEPENDS+=	markdown-1.0.0
@@ -368,13 +368,13 @@ CARGO_CRATE_DEPENDS+=	toml_datetime-0.7.3
 CARGO_CRATE_DEPENDS+=	toml_edit-0.23.6
 CARGO_CRATE_DEPENDS+=	toml_parser-1.0.4
 CARGO_CRATE_DEPENDS+=	toml_writer-1.0.4
-CARGO_CRATE_DEPENDS+=	tracing-0.1.41
-CARGO_CRATE_DEPENDS+=	tracing-attributes-0.1.30
-CARGO_CRATE_DEPENDS+=	tracing-core-0.1.34
+CARGO_CRATE_DEPENDS+=	tracing-0.1.43
+CARGO_CRATE_DEPENDS+=	tracing-attributes-0.1.31
+CARGO_CRATE_DEPENDS+=	tracing-core-0.1.35
 CARGO_CRATE_DEPENDS+=	tracing-flame-0.2.0
 CARGO_CRATE_DEPENDS+=	tracing-indicatif-0.3.13
 CARGO_CRATE_DEPENDS+=	tracing-log-0.2.0
-CARGO_CRATE_DEPENDS+=	tracing-subscriber-0.3.20
+CARGO_CRATE_DEPENDS+=	tracing-subscriber-0.3.22
 CARGO_CRATE_DEPENDS+=	tryfn-0.2.3
 CARGO_CRATE_DEPENDS+=	typed-arena-2.0.2
 CARGO_CRATE_DEPENDS+=	typenum-1.18.0
