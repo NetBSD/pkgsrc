@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2020/11/11 11:11:30 nia Exp $
+# $NetBSD: options.mk,v 1.7 2025/12/05 08:57:54 martin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -72,6 +72,9 @@ CONFIGURE_ARGS+=	--disable-jemalloc
 # request them.
 O0TRACKING=-fvar-tracking-assignments -fvar-tracking
 .  endif
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+= -Wno-implicit-int -Wno-int-conversion
+.endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
