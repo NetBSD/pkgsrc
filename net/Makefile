@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1614 2025/12/01 08:41:35 wiz Exp $
+# $NetBSD: Makefile,v 1.1615 2025/12/05 11:24:11 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -115,7 +115,6 @@ SUBDIR+=	djbdnscurve6
 SUBDIR+=	dlint
 SUBDIR+=	dnc
 SUBDIR+=	dnscap
-SUBDIR+=	dnscheck
 SUBDIR+=	dnscontrol
 SUBDIR+=	dnscrypt-proxy2
 SUBDIR+=	dnsdist
