@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2018/08/13 15:53:49 nia Exp $
+# $NetBSD: Makefile,v 1.2 2025/12/06 07:38:36 wiz Exp $
 
 DISTNAME=	dsk2rom-0.80
 CATEGORIES=	converters
-MASTER_SITES=	http://home.kabelfoon.nl/~vincentd/download/
+#MASTER_SITES=	http://home.kabelfoon.nl/~vincentd/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://home.kabelfoon.nl/~vincentd/
+#HOMEPAGE=	http://home.kabelfoon.nl/~vincentd/
 COMMENT=	MSX disk image conversion utility
 LICENSE=	gnu-gpl-v2
 
