@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7058 2025/12/06 14:01:49 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7059 2025/12/06 17:24:00 fox Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10232,3 +10232,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-urllib3 to 2.6.0 [wiz 2025-12-05]
 	Updated devel/serie to 0.5.5 [pin 2025-12-06]
 	Updated textproc/treemd to 0.4.6 [pin 2025-12-06]
+	Updated audio/fasttracker2 to 2.01 [fox 2025-12-06]
