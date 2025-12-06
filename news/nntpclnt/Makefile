@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2025/11/30 15:07:16 vins Exp $
+# $NetBSD: Makefile,v 1.42 2025/12/06 18:15:43 wiz Exp $
 
 DISTNAME=	nntpclnt-1.6.1
 PKGREVISION=	7
@@ -40,7 +40,7 @@ do-configure:
 
 post-build:
 	cd ${WRKSRC} && \
-		${AR} clq libnntpclnt.a nntpclnt.o && ${RANLIB} libnntpclnt.a
+		${AR} cq libnntpclnt.a nntpclnt.o && ${RANLIB} libnntpclnt.a
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/inews ${DESTDIR}${PREFIX}/bin
