@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q3,v 1.1.2.13 2025/11/25 08:38:58 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q3,v 1.1.2.14 2025/12/06 21:36:38 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q3 branch:
 
@@ -86,3 +86,5 @@ misc/libreoffice: build fix
 Pullup ticket #7034 - requested by nia
 www/palemoon: sparc64 build fix
 
+Pullup ticket #7035 - requested by bsiegert
+graphics/png: Security fix
