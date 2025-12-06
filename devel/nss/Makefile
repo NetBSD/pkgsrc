@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.285 2025/11/18 15:37:04 wiz Exp $
+# $NetBSD: Makefile,v 1.286 2025/12/06 18:57:04 wiz Exp $
 #
 # release notes
 # https://firefox-source-docs.mozilla.org/security/nss/releases/index.html
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
-NSS_RELEASE=		3.118.1
+NSS_RELEASE=		3.119.0
 CATEGORIES=		devel security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_DIST_DIR_VERSION:S/_0$//}_RTM/src/}
 
@@ -21,7 +21,7 @@ CTF_SUPPORTED=		no # https://smartos.org/bugview/OS-6510
 
 USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c
-USE_TOOLS+=		gmake perl pax pkg-config
+USE_TOOLS+=		bash:test gmake perl pax pkg-config
 # Fails to detect jobserver on systems where /bin/make and /bin/gmake both
 # exist. This is because nss uses "gmake" explicitly rather than $MAKE to
 # launch subprocesses.
@@ -139,7 +139,7 @@ MOD_MINOR_VERSION=	${NSS_RELEASE:S/3.//:C/\.[0-9]*//}
 MOD_PATCH_VERSION=	${NSS_RELEASE:C/[0-9.]*\.//}
 NSS_DIST_DIR_VERSION=	${MOD_MAJOR_VERSION}_${MOD_MINOR_VERSION}_${MOD_PATCH_VERSION}
 
-NSPR_MINIMUM_VERSION=	4.37
+NSPR_MINIMUM_VERSION=	4.38
 
 PKGCONFIG_OVERRIDE=	nss.pc
 
@@ -185,6 +185,21 @@ do-install:
 .for cmd in ${INSTALL_CMDS}
 	${INSTALL_PROGRAM} ${WRKSRC}/dist/*_OPT.OBJ/bin/${cmd} ${DESTDIR}${PREFIX}/bin
 .endfor
+
+# needed if host is not in DNS
+#TEST_ENV+=	HOST=localhost DOMSUF=localdomain
+# as of 3.119
+# Tests summary:
+# --------------
+# Passed:             11530
+# Failed:             12
+# Failed with core:   0
+# ASan failures:      0
+# Unknown status:     25
+# TinderboxPrint:Unknown: 25
+
+do-test:
+	cd ${WRKSRC}/nss/tests && ${SETENV} ${TEST_ENV} bash ./all.sh
 
 # For consistency of libxul.so link in www/firefox.
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.8.4.2
