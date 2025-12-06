@@ -1,6 +1,6 @@
-The main objective of this is to develop an easy to use and
-customizable web interface for Collectd (Resource monitoring
-software). Two days of research where enough to realize that collectd
-didn't have a real frontend and the one bundled with the backend
-was really made for testing purposes, so much of the usability and
-strength of statistics was left aside.
+Collectd-web provides a sleek, intuitive, and customizable web
+interface for Collectd - the robust resource monitoring tool.
+Originally, Collectd's bundled frontend was designed only for
+testing, leaving its full potential untapped. Collectd-web bridges
+that gap by offering an efficient, user-centered experience for
+monitoring system statistics.
