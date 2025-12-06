@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7056 2025/12/05 21:16:53 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7057 2025/12/06 14:00:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10230,3 +10230,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/py-quart version 0.20.0 [wiz 2025-12-05]
 	Added www/py-quart-trio version 0.12.0 [wiz 2025-12-05]
 	Updated www/py-urllib3 to 2.6.0 [wiz 2025-12-05]
+	Updated devel/serie to 0.5.5 [pin 2025-12-06]
