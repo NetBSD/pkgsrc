@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7060 2025/12/06 17:35:51 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7061 2025/12/06 18:57:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10234,3 +10234,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/treemd to 0.4.6 [pin 2025-12-06]
 	Updated audio/fasttracker2 to 2.01 [fox 2025-12-06]
 	Updated graphics/png to 1.6.53 [wiz 2025-12-06]
+	Updated devel/nss to 3.119 [wiz 2025-12-06]
