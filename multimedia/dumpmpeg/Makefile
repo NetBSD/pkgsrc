@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/01/06 21:49:23 ktnb Exp $
-#
+# $NetBSD: Makefile,v 1.18 2025/12/06 07:39:19 wiz Exp $
 
 DISTNAME=	dumpmpeg-0.6
 PKGREVISION=	10
@@ -7,7 +6,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dumpmpeg/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://sourceforge.net/projects/dumpmpeg
+HOMEPAGE=	https://sourceforge.net/projects/dumpmpeg/
 COMMENT=	Splits an MPEG stream into single images
 
 GNU_CONFIGURE=		YES
