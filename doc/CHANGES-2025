@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7062 2025/12/06 20:10:44 leot Exp $
+$NetBSD: CHANGES-2025,v 1.7063 2025/12/06 22:24:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10236,3 +10236,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/png to 1.6.53 [wiz 2025-12-06]
 	Updated devel/nss to 3.119 [wiz 2025-12-06]
 	Updated emulators/qemu to 10.1.2nb2 [leot 2025-12-06]
+	Updated sysutils/collectd-web to 0.11.10 [wiz 2025-12-06]
