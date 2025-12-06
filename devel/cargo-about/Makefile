@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/12/04 18:42:27 pin Exp $
+# $NetBSD: Makefile,v 1.14 2025/12/06 10:54:30 he Exp $
 
 DISTNAME=	cargo-about-0.8.4
 CATEGORIES=	devel
@@ -18,4 +18,5 @@ RUST_REQ=	1.85.0
 USE_TOOLS+=	pkg-config
 
 .include "../../lang/rust/cargo.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
