@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/03/03 20:29:26 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/12/06 23:43:36 maya Exp $
 
 DISTNAME=	log4shib-1.0.9
 CATEGORIES=	devel
@@ -19,6 +19,9 @@ USE_TOOLS+=	pkg-config
 
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
+
+# Uses dynamic exceptions which are removed in C++17.
+FORCE_CXX_STD=	c++11
 
 PKGCONFIG_OVERRIDE+=	log4shib.pc.in
 
