@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/05/09 19:37:13 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/12/06 12:27:59 he Exp $
 
 PKGREVISION= 1
 .include "../../lang/llvm/version.mk"
@@ -22,4 +22,5 @@ CMAKE_CONFIGURE_ARGS+=	-DMLIR_BUILD_MLIR_C_DYLIB=YES
 
 .include "../../devel/cmake/build.mk"
 .include "../../lang/llvm/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
