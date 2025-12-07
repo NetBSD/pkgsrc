@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2025/12/02 19:25:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.42 2025/12/07 12:53:42 wiz Exp $
 
-DISTNAME=	fq-0.15.1
-PKGREVISION=	5
+DISTNAME=	fq-0.16.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wader/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
