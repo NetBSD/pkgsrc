@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2025/11/11 12:43:58 adam Exp $
+$NetBSD: distinfo,v 1.14 2025/12/07 13:33:03 adam Exp $
 
-BLAKE2s (pyqt6-6.10.0.tar.gz) = d953dc6c2c29650e477879d62ce662d6fde370838ce681b23f4d154b911a04b3
-SHA512 (pyqt6-6.10.0.tar.gz) = ef88adff167ea2ff7c946500371168c5dd9fc8d7c0f9d8ab8b43aedcbfa1bf80cf6d4ef3fc5f3969a1e3a76db90f9c1bd5755ae9739cb86b3f924c4ba8f66d96
-Size (pyqt6-6.10.0.tar.gz) = 1079921 bytes
+BLAKE2s (pyqt6-6.10.1.tar.gz) = 5bcf738ff45187eb64e491db5d5a3ea8e6fecc52c62c499f826ef78df8c98fbc
+SHA512 (pyqt6-6.10.1.tar.gz) = af9bb54b20fd177cf1dac5fe8fb0ff289e1e7e42716d09093d49dd99a7d8065c6b6f34784ed19e21e7e07ba0d550b270cb6be7273f7180e2bf886160fc773d01
+Size (pyqt6-6.10.1.tar.gz) = 1085250 bytes
 SHA1 (patch-designer_designer.pro-in) = 8b7d885c4a5c5336dbdbead2bd88a4da02026ee2
 SHA1 (patch-project.py) = 0317997dbf5d99f952b475db02123da4949c1bef
 SHA1 (patch-qmlscene_qmlscene.pro-in) = 055ad9670d9d67dd8fca2f293a0b8b8c71512a4d
