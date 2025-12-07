@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.158 2025/10/23 20:37:27 wiz Exp $
+# $NetBSD: Makefile,v 1.159 2025/12/07 10:11:49 wiz Exp $
 
 DISTNAME=	dx-4.4.4
 PKGREVISION=	106
 CATEGORIES=	graphics
-MASTER_SITES=	http://opendx.npaci.edu/source/
+#MASTER_SITES=	http://opendx.npaci.edu/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.opendx.org/
+#HOMEPAGE=	http://www.opendx.org/
 COMMENT=	Open Visualization Data Explorer
 
 MAKE_JOBS_SAFE=		no
