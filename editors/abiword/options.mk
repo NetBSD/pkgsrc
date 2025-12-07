@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2019/06/08 10:40:53 rillig Exp $
+# $NetBSD: options.mk,v 1.5 2025/12/07 10:44:54 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.abiword
 PKG_SUPPORTED_OPTIONS=		debug
@@ -15,4 +15,3 @@ CONFIGURE_ARGS+=	--enable-debug
 INSTALL_UNSTRIPPED=	yes
 CFLAGS+=		-O0
 .endif
-
