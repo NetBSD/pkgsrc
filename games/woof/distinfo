@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.44 2025/04/02 12:21:58 micha Exp $
+$NetBSD: distinfo,v 1.45 2025/12/07 13:32:30 adam Exp $
 
-BLAKE2s (woof_15.2.0.tar.gz) = 7ea0ec56288a6c5e7a619eaafde231004f92b1b248c3f05a7eb7cf3cc49fa764
-SHA512 (woof_15.2.0.tar.gz) = 30b7723bf0ba8f381ed3b3e63282acf57cb00a4f8c616dacee37549ec4ee09e4e487028657f4bf20d3c150f860805be79e10b61f1757a192292db1febb4b4045
-Size (woof_15.2.0.tar.gz) = 7569940 bytes
+BLAKE2s (woof_15.3.0.tar.gz) = f27d90b228239e31badad3d5b73fdd089dc8af2f192c92a5f572ce7ad66db93f
+SHA512 (woof_15.3.0.tar.gz) = fdbfc6534c3580ea43cd5f83f61e6c66c3fdc0d25ae72307b7bfad289d327561a4247e75f8a1b099f18de9dd1d53c9995379d97857d6890fea4efc666538cb85
+Size (woof_15.3.0.tar.gz) = 7573412 bytes
 SHA1 (patch-data_CMakeLists.txt) = 9fdbd587b364b0af1e58479451832154a46c6c35
 SHA1 (patch-man_CMakeLists.txt) = d5b2b30eb8a7efeddad29699c47801bc1c865403
 SHA1 (patch-man_WoofInstall.cmake.in) = fbbb75d201d53af8d68eeb29956d793eda465ffb
