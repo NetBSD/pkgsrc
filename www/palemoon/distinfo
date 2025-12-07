@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2025/12/04 19:35:01 martin Exp $
+$NetBSD: distinfo,v 1.33 2025/12/07 13:58:58 martin Exp $
 
 BLAKE2s (palemoon-33.9.1/icudt63b.dat.gz) = 609cc504b54df324a891aa9531ab069b3699591bf49b989e792479df33262a92
 SHA512 (palemoon-33.9.1/icudt63b.dat.gz) = 514b8bfe28fb54e1e26b9140d4b3065504a0b0284fded121f26c4e0f13697154a54da4a7c85a0fa0b9dae2e5b452aff4df138228c28ed80969ec0ac33b0ad0b2
@@ -15,14 +15,13 @@ Size (palemoon-33.9.1/uxp.tar.gz) = 264434768 bytes
 SHA1 (patch-palemoon_app_profile_palemoon.js) = 0687dccbb5adff1ee0ea71fef4ebd46174a434d4
 SHA1 (patch-platform__ipc__chromium__src__third__party__libevent__kqueue.c) = 82cbbcd23a193a5c27311380b795fc3ff9f82602
 SHA1 (patch-platform__media__ffvpx__config_unix_ppc.h) = 38a984034aa9e707659dea784e54016d7adc1900
-SHA1 (patch-platform__media__ffvpx__config_unix_sparc64.h) = 7bba17a04c3836dc8a02f438b3f3a49d211f9c59
 SHA1 (patch-platform_build_moz.build) = 7b45929d58ad0963423f7c859922df6d98413c67
 SHA1 (patch-platform_gfx_angle_src_libANGLE_renderer_gl_glx_FunctionsGLX.cpp) = 502d79eb3ef41e08328bbac9fbb5048b96660bbb
 SHA1 (patch-platform_intl_icu_source_configure) = 87d19e9212b4340d9b052b5a89be84432ad1cff2
 SHA1 (patch-platform_ipc_chromium_src_base_atomicops.h) = ab4b489e9f9c22a861a275924ef34a909d210828
 SHA1 (patch-platform_ipc_chromium_src_base_atomicops__internals__arm__gcc.h) = f33b6c391689c52d0a6855e29ff25d863a7f15e5
 SHA1 (patch-platform_media_ffvpx_config.h) = 7d42a3cbcb10818b2d2d890a6fcc9ec7b6b05ec1
-SHA1 (patch-platform_media_ffvpx_config__unix__sparc64.h) = 04526fe267652e6159ecd131d8d9504da17fe861
+SHA1 (patch-platform_media_ffvpx_config__unix__sparc64.h) = bbecefd480ab7bc20206bd46ef918fcedbd700f5
 SHA1 (patch-platform_media_libaom_config_linux_arm_config_aom__config.h) = 69ef22fe9892c2288accb6eb00b4533d8cee0299
 SHA1 (patch-platform_media_libcubeb_src_cubeb__sun.c) = ce27774d772d65fa60b6be5bee82fbe4f787f3d1
 SHA1 (patch-platform_media_libtheora_moz.build) = a7bad662dabb87c6a85542a4a50f8ed693064bc6
