@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.108 2025/12/02 19:25:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.109 2025/12/07 17:03:58 bsiegert Exp $
 
-DISTNAME=		tools-0.31.0
+DISTNAME=		tools-0.39.0
 PKGNAME=		go-${DISTNAME}
-PKGREVISION=		7
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		tools
@@ -41,18 +40,15 @@ CHECK_RELRO_SKIP+=	bin/stress
 CHECK_RELRO_SKIP+=	bin/stringer
 CHECK_RELRO_SKIP+=	bin/tip
 CHECK_RELRO_SKIP+=	bin/toolstash
-CHECK_RELRO_SKIP+=	bin/authtest
 CHECK_RELRO_SKIP+=	bin/benchcmp
 CHECK_RELRO_SKIP+=	bin/bundle
 CHECK_RELRO_SKIP+=	bin/callgraph
 CHECK_RELRO_SKIP+=	bin/compilebench
-CHECK_RELRO_SKIP+=	bin/cookieauth
 CHECK_RELRO_SKIP+=	bin/cover
 CHECK_RELRO_SKIP+=	bin/deadcode
 CHECK_RELRO_SKIP+=	bin/digraph
 CHECK_RELRO_SKIP+=	bin/eg
 CHECK_RELRO_SKIP+=	bin/fiximports
-CHECK_RELRO_SKIP+=	bin/gitauth
 CHECK_RELRO_SKIP+=	bin/go-contrib-init
 CHECK_RELRO_SKIP+=	bin/godex
 CHECK_RELRO_SKIP+=	bin/godoc
@@ -61,7 +57,6 @@ CHECK_RELRO_SKIP+=	bin/gomvpkg
 CHECK_RELRO_SKIP+=	bin/gotype
 CHECK_RELRO_SKIP+=	bin/goyacc
 CHECK_RELRO_SKIP+=	bin/html2article
-CHECK_RELRO_SKIP+=	bin/netrcauth
 CHECK_RELRO_SKIP+=	bin/present
 CHECK_RELRO_SKIP+=	bin/present2md
 CHECK_RELRO_SKIP+=	bin/server
