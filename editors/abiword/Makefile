@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.244 2025/11/27 06:56:24 wiz Exp $
+# $NetBSD: Makefile,v 1.245 2025/12/07 10:44:54 wiz Exp $
 
 .include 	"Makefile.common"
 
@@ -29,6 +29,11 @@ CONFIGURE_ARGS+=	--enable-plugins=""
 CONFIGURE_ARGS+=	--with-evolution-data-server=no
 
 PKGCONFIG_OVERRIDE+=	libabiword.pc.in
+
+.include "../../mk/compiler.mk"
+.if ${CC_VERSION:Mgcc-14.*} || ${CC_VERSION:Mgcc-15.*}
+CFLAGS+=	-Wno-incompatible-pointer-types
+.endif
 
 pre-configure:
 	cd ${WRKSRC} && ${ALL_ENV} ${SH} autogen.sh
