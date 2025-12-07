@@ -1,0 +1,43 @@
+$NetBSD: patch-configure,v 1.1 2025/12/07 12:21:56 vins Exp $
+
+* Correct value assignment to GID_MAX.
+* Fix compiler host detection, by renaming HOST variable.
+
+--- configure.orig	2022-01-26 16:01:11.000000000 +0000
++++ configure
+@@ -54,7 +54,7 @@ for x; do
+ 	--sysconfdir) SYSCONFDIR=$var ;;
+ 	--pamdir) PAMDIR=$var ;;
+ 	--build) BUILD=$var ;;
+-	--host) HOST=$var ;;
++	--host) HOSTCC=$var ;;
+ 	--target) TARGET=$var ;;
+ 	--enable-debug) DEBUG=yes ;;
+ 	--enable-static) BUILD_STATIC=yes ;;
+@@ -65,7 +65,7 @@ for x; do
+ 	--with-timestamp) WITHOUT_TIMESTAMP= ;;
+ 	--without-timestamp) WITHOUT_TIMESTAMP=yes ;;
+ 	--uid-max) UID_MAX=$var ;;
+-	--gid-max) UID_MAX=$var ;;
++	--gid-max) GID_MAX=$var ;;
+ 	--help|-h) usage ;;
+ 	*) die "Error: unknown option $opt" ;;
+ 	esac
+@@ -84,13 +84,13 @@ cat <<! >$CONFIG_H
+ if [ -z "$BUILD" ]; then
+ 	BUILD="$(uname -m)-unknown-$(uname -s | tr '[:upper:]' '[:lower:]')"
+ fi
+-if [ -z "$HOST" ]; then
++if [ -z "$HOSTCC" ]; then
+ 	[ -z "$TARGET" ] && TARGET=$BUILD
+-	HOST=$TARGET
++	HOSTCC=$TARGET
+ fi
+ if [ -z "$TARGET" ]; then
+-	[ -z "$HOST" ] && HOST=$BUILD
+-	TARGET=$HOST
++	[ -z "$HOSTCC" ] && HOSTCC=$BUILD
++	TARGET=$HOSTCC
+ fi
+ 
+ if [ -z "$OS" ]; then
