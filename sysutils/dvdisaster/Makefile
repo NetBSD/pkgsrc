@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.60 2025/10/23 20:39:17 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2025/12/07 10:10:13 wiz Exp $
 
 DISTNAME=	dvdisaster-0.79.5
 PKGREVISION=	21
 CATEGORIES=	sysutils
-MASTER_SITES=	http://dvdisaster.net/downloads/
+MASTER_SITES=	https://dvdisaster.jcea.es/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.dvdisaster.net/en/
+HOMEPAGE=	https://dvdisaster.jcea.es/
 COMMENT=	Protects data on optical media with error correcting codes
 LICENSE=	gnu-gpl-v2
 
