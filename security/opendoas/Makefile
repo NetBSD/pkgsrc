@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/11/30 16:57:34 vins Exp $
+# $NetBSD: Makefile,v 1.9 2025/12/07 12:21:56 vins Exp $
 
 DISTNAME=	opendoas-6.8.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=duncaen/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -29,7 +29,6 @@ EGDIR=	share/examples/${PKGBASE}
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ENV+=		OS=${LOWER_OPSYS}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
