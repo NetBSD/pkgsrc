@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7064 2025/12/07 08:23:47 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7065 2025/12/07 08:43:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10239,3 +10239,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/collectd-web to 0.11.10 [wiz 2025-12-06]
 	Updated graphics/oxipng to 10.0.0 [adam 2025-12-07]
 	Updated devel/py-test to 9.0.2 [adam 2025-12-07]
+	Updated time/p5-DateTime-Format-Strptime to 1.8000 [wiz 2025-12-07]
