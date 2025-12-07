@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7070 2025/12/07 15:56:17 taca Exp $
+$NetBSD: CHANGES-2025,v 1.7071 2025/12/07 17:04:12 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10262,3 +10262,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/woof to 15.3.0 [adam 2025-12-07]
 	Updated x11/py-qt6 to 6.10.1 [adam 2025-12-07]
 	Updated www/apache24 to 2.4.66 [taca 2025-12-07]
+	Updated devel/go-tools to 0.39.0 [bsiegert 2025-12-07]
