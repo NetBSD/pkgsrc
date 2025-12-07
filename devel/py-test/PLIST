@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2025/11/12 08:59:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2025/12/07 08:23:20 adam Exp $
 bin/py.test-${PYVERSSUFFIX}
 bin/pytest-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -194,6 +194,9 @@ ${PYSITELIB}/_pytest/subtests.pyo
 ${PYSITELIB}/_pytest/terminal.py
 ${PYSITELIB}/_pytest/terminal.pyc
 ${PYSITELIB}/_pytest/terminal.pyo
+${PYSITELIB}/_pytest/terminalprogress.py
+${PYSITELIB}/_pytest/terminalprogress.pyc
+${PYSITELIB}/_pytest/terminalprogress.pyo
 ${PYSITELIB}/_pytest/threadexception.py
 ${PYSITELIB}/_pytest/threadexception.pyc
 ${PYSITELIB}/_pytest/threadexception.pyo
