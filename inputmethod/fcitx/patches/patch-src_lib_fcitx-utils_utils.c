@@ -1,6 +1,7 @@
-$NetBSD: patch-src_lib_fcitx-utils_utils.c,v 1.2 2023/12/20 12:03:25 nros Exp $
+$NetBSD: patch-src_lib_fcitx-utils_utils.c,v 1.3 2025/12/07 03:00:55 maya Exp $
 
 Illumos has endian.h just like Linux
+Fix ctype abuse by casting to unsigned char
 
 --- src/lib/fcitx-utils/utils.c.orig	2017-12-22 18:02:24.000000000 +0000
 +++ src/lib/fcitx-utils/utils.c
@@ -22,3 +23,12 @@ Illumos has endian.h just like Linux
  #include <endian.h>
  #else
  #include <sys/endian.h>
+@@ -400,7 +402,7 @@ char* fcitx_utils_trim(const char* s)
+ 
+     s += strspn(s, "\f\n\r\t\v ");
+     end = s + (strlen(s) - 1);
+-    while (end >= s && isspace(*end))               /* skip trailing space */
++    while (end >= s && isspace((unsigned char)*end))               /* skip trailing space */
+         --end;
+ 
+     end++;

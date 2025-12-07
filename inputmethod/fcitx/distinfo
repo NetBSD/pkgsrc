@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2023/12/20 12:03:24 nros Exp $
+$NetBSD: distinfo,v 1.8 2025/12/07 03:00:55 maya Exp $
 
 BLAKE2s (en_dict-20121020.tar.gz) = 9945545f2402d0eb35bd46701e51f191da0b740854d0c8da11d7670aa1ad014f
 SHA512 (en_dict-20121020.tar.gz) = 8418bd02492bfd786c0fab93be4400ef027ec8e9fac02220cc1f653f5eb67f54573a6a84a15baba19bb34ab892745c87df16499d6304ea75009131e2ab3b97f2
@@ -21,10 +21,18 @@ Size (table.tar.gz) = 4144686 bytes
 SHA1 (patch-cmake_FcitxMacro.cmake) = e3dcba315711fc6b96f5620de1e03e096635bab2
 SHA1 (patch-cmake_FindEnchant.cmake) = e2a2572d60515c80ec736dd1d8d07779aa324da0
 SHA1 (patch-src_im_pinyin_data_CMakeLists.txt) = dd17df37a5b6781a645a4190cb8111811f804189
+SHA1 (patch-src_im_pinyin_sp.c) = 94b4d89ebd635726161b7743b3931d6003731c80
 SHA1 (patch-src_im_table_data_CMakeLists.txt) = 3ef3d05ee036f9bb845b69c97c50ac76cc11478e
-SHA1 (patch-src_lib_fcitx-utils_utils.c) = 6b555f159986a08645e36e27814111d59d71b0a8
+SHA1 (patch-src_lib_fcitx-config_hotkey.c) = bacd46f4d716c8175e5ab86cb08b95212e1e6df3
+SHA1 (patch-src_lib_fcitx-utils_utils.c) = 15c0f9d9123edd44b95aaf0b2f7b636779f98df6
+SHA1 (patch-src_module_quickphrase_quickphrase.c) = ad1284777bdcc2ed017cf1b1160e8e4de6e52d4e
 SHA1 (patch-src_module_spell_dict_CMakeLists.txt) = 98372bb2c160e9bb8917ea523465924edab2c1e3
 SHA1 (patch-src_module_spell_dict_comp__spell__dict.c) = 5f67983a9a96f6b6f61874a32ed3e70a9c66f083
 SHA1 (patch-src_module_spell_spell-custom-dict.c) = 374e5a7498c6a620f95199cdda40be615409a4ae
 SHA1 (patch-src_module_spell_spell-custom.c) = 6b677936dfdbe687a06e30703b309faa1bf6372f
-SHA1 (patch-src_module_unicode_charselectdata.c) = 8d771bdd934e5038f080f9cb87ae1e6a9be54e3e
+SHA1 (patch-src_module_unicode_charselectdata.c) = 548f2f73f790c438ba0df234ca3990d44c01ea56
+SHA1 (patch-src_module_vk_vk.c) = cc3f2170fa3b930baea59b806b7c2c1f3319d079
+SHA1 (patch-src_ui_classic_skin.c) = 7d14955a3503a6d866b0a6495722c78be0029e0d
+SHA1 (patch-src_ui_kimpanel_kimpanel.c) = a0325039b35271d297a1b2ec1eeaa10899072f48
+SHA1 (patch-tools_cli_mb2txt.c) = 3eb771cb13ed9b6f0dc28ec301460314a4966639
+SHA1 (patch-tools_cli_txt2mb.c) = ed63d58e88b4222927c05e280c21e9c9be24d1f7
