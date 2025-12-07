@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.986 2025/12/01 08:54:32 adam Exp $
+# $NetBSD: Makefile,v 1.987 2025/12/07 11:07:26 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -7,7 +7,6 @@ SUBDIR+=	2fa
 SUBDIR+=	Bastille
 SUBDIR+=	CSP
 SUBDIR+=	CoolKey
-SUBDIR+=	EasyPG
 SUBDIR+=	HElib
 SUBDIR+=	KeePass
 SUBDIR+=	PACK
