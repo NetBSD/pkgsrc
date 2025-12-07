@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.24 2025/09/25 07:03:33 adam Exp $
+# $NetBSD: builtin.mk,v 1.25 2025/12/07 08:40:04 wiz Exp $
 
 BUILTIN_PKG:=	expat
 
@@ -88,8 +88,8 @@ BUILDLINK_PREFIX.expat=	/boot/common
 # Fake pkg-config for builtin expat on NetBSD
 
 .if ${USE_BUILTIN.expat:tl} == yes
-.  if !empty(USE_TOOLS:C/:.*//:Mpkg-config)
-do-configure-pre-hook: override-expat-pkgconfig
+.  if !empty(USE_TOOLS:C/:[A-z]*//:Mpkg-config)
+pre-configure: override-expat-pkgconfig
 
 BLKDIR_PKGCFG=	${BUILDLINK_DIR}/lib/pkgconfig
 EXPAT_PKGCFGF=	expat.pc
