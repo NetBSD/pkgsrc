@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2025/01/24 08:57:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.38 2025/12/07 15:55:55 taca Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -684,6 +684,7 @@ share/httpd/manual/images/caching_fig1.tr.png
 share/httpd/manual/images/custom_errordocs.png
 share/httpd/manual/images/down.gif
 share/httpd/manual/images/favicon.ico
+share/httpd/manual/images/favicon.png
 share/httpd/manual/images/feather.gif
 share/httpd/manual/images/feather.png
 share/httpd/manual/images/filter_arch.png
