@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2025/10/23 20:37:17 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2025/12/07 13:32:30 adam Exp $
 
-DISTNAME=	woof_15.2.0
+DISTNAME=	woof_15.3.0
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fabiangreffrath/}
 GITHUB_TAG=	${DISTNAME}
@@ -71,5 +70,4 @@ BUILDLINK_API_DEPENDS.SDL2+=		SDL2>=2.0.18
 .include "../../lang/python/application.mk"
 .include "../../net/SDL2_net/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-
 .include "../../mk/bsd.pkg.mk"
