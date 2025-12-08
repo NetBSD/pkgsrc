@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7075 2025/12/08 10:05:25 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7076 2025/12/08 10:06:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10268,3 +10268,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/edbrowse version 3.8.15 [vins 2025-12-08]
 	Updated www/gitweb to 2.52.0nb1 [sborrill 2025-12-08]
 	Updated sysutils/hwdata to 0.402 [wiz 2025-12-08]
+	Updated devel/jjui to 0.9.7 [wiz 2025-12-08]
