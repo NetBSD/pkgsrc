@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.2 2025/12/04 07:42:04 adam Exp $
+# $NetBSD: go-modules.mk,v 1.3 2025/12/08 21:03:24 adam Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.123.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.123.0.zip
@@ -6,10 +6,10 @@ GO_MODULE_FILES+=	cloud.google.com/go/auth/@v/v0.17.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/auth/@v/v0.17.0.zip
 GO_MODULE_FILES+=	cloud.google.com/go/compute/metadata/@v/v0.9.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/compute/metadata/@v/v0.9.0.zip
-GO_MODULE_FILES+=	github.com/!adguard!team/dnsproxy/@v/v0.78.1.mod
-GO_MODULE_FILES+=	github.com/!adguard!team/dnsproxy/@v/v0.78.1.zip
-GO_MODULE_FILES+=	github.com/!adguard!team/golibs/@v/v0.35.2.mod
-GO_MODULE_FILES+=	github.com/!adguard!team/golibs/@v/v0.35.2.zip
+GO_MODULE_FILES+=	github.com/!adguard!team/dnsproxy/@v/v0.78.2.mod
+GO_MODULE_FILES+=	github.com/!adguard!team/dnsproxy/@v/v0.78.2.zip
+GO_MODULE_FILES+=	github.com/!adguard!team/golibs/@v/v0.35.3.mod
+GO_MODULE_FILES+=	github.com/!adguard!team/golibs/@v/v0.35.3.zip
 GO_MODULE_FILES+=	github.com/!adguard!team/urlfilter/@v/v0.22.1.mod
 GO_MODULE_FILES+=	github.com/!adguard!team/urlfilter/@v/v0.22.1.zip
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.5.0.mod
@@ -193,8 +193,8 @@ GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20210927094055-39ccf1dd6fa6.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20220209214540-3681064d5158.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.38.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.38.0.zip
-GO_MODULE_FILES+=	golang.org/x/telemetry/@v/v0.0.0-20251128220624-abf20d0e57ec.mod
-GO_MODULE_FILES+=	golang.org/x/telemetry/@v/v0.0.0-20251128220624-abf20d0e57ec.zip
+GO_MODULE_FILES+=	golang.org/x/telemetry/@v/v0.0.0-20251203150158-8fff8a5912fc.mod
+GO_MODULE_FILES+=	golang.org/x/telemetry/@v/v0.0.0-20251203150158-8fff8a5912fc.zip
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.0.0-20201126162022-7de9c90e9dd1.mod
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.37.0.mod
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.37.0.zip
@@ -212,8 +212,8 @@ GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20191011141410-1b5146add898.mod
 GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20191204190536-9bdfabe68543.mod
 GO_MODULE_FILES+=	gonum.org/v1/gonum/@v/v0.16.0.mod
 GO_MODULE_FILES+=	gonum.org/v1/gonum/@v/v0.16.0.zip
-GO_MODULE_FILES+=	google.golang.org/genai/@v/v1.36.0.mod
-GO_MODULE_FILES+=	google.golang.org/genai/@v/v1.36.0.zip
+GO_MODULE_FILES+=	google.golang.org/genai/@v/v1.37.0.mod
+GO_MODULE_FILES+=	google.golang.org/genai/@v/v1.37.0.zip
 GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/rpc/@v/v0.0.0-20251202230838-ff82c1b0f217.mod
 GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/rpc/@v/v0.0.0-20251202230838-ff82c1b0f217.zip
 GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.77.0.mod
