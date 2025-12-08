@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/12/08 07:25:22 vins Exp $
+
+BLAKE2s (edbrowse-3.8.15.tar.gz) = 50ba4d2896df378540db13cc3f3dc3ddd76b89578fe4f3ecaf7f3a668794e956
+SHA512 (edbrowse-3.8.15.tar.gz) = 9dbccf389ffa9aaf16cfb1000e768dcd94b19bf18384b248db8480464d6a69d7972d524f987cf20e9c459c1d78d9062568f78556bc6e6a4517f81631d10a5fd5
+Size (edbrowse-3.8.15.tar.gz) = 1099530 bytes
+SHA1 (patch-src_html.c) = 07e2ce6813d5a1eff3a0b89585cea33ffdd2a839

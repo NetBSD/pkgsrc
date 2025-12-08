@@ -1,0 +1,4 @@
+Edbrowse is a combination editor, browser, and mail client that is 100%
+text based. The interface is similar to /bin/ed, though there are many
+more features, such as editing multiple files simultaneously, and
+rendering html.
