@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2025/12/08 02:09:56 mrg Exp $
+# $NetBSD: Makefile,v 1.109 2025/12/08 02:10:37 mrg Exp $
 
 DISTNAME=	gc-8.2.4
 PKGNAME=	${DISTNAME:S/gc/boehm-gc/}
@@ -25,8 +25,6 @@ TEST_TARGET=		check
 .if ${MACHINE_PLATFORM:MDarwin-10.6.*}
 CFLAGS+=		-D_XOPEN_SOURCE
 .endif
-
-#CFLAGS+=		-O0 -g
 
 .include "options.mk"
 
