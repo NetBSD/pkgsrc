@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/11/17 08:11:23 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/12/08 19:43:55 bsiegert Exp $
 
 DISTNAME=	uv_build-${UV_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -13,7 +13,7 @@ LICENSE=	mit OR apache-2.0
 .include "../../devel/py-uv/Makefile.common"
 
 post-install:
-	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/uv_build/__init__.py.orig
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/uv_build/__init__.py.orig
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} uv-build uv-build-${PYVERSSUFFIX} || ${TRUE}
 
