@@ -1,0 +1,17 @@
+| hw-probe: hints and caveats
++-----------------------------------------------------------------------
+
+Hardware probe requires root privileges. To run the program as root
+while preserving the standard user environment, you can use
+security/sudo or security/opendoas.
+
+For example, to probe your computer and upload the results to the
+hardware database, you may alternatively run:
+
+	$ sudo -E hw-probe -all -upload
+	$ doas hw-probe -all -upload	# use 'keepenv' option in doas.conf
+
+Please be aware that running hw-probe with parameter "-upload" will
+upload a lot of information about your current OS and hardware
+configuration informationto the online database. This might include
+identifiable information like UIDs and hardware serial numbers.

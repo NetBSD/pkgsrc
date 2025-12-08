@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2025/10/05 19:26:19 js Exp $
+# $NetBSD: Makefile,v 1.16 2025/12/08 10:19:23 vins Exp $
 
 DISTNAME=	hw-probe-1.6.6
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linuxhw/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -42,18 +42,7 @@ DEPENDS+=	cpuid-[0-9]*:../../sysutils/cpuid
 .  endif
 .endif
 
-.if ${OPSYS:M*BSD} || ${OPSYS} == "DragonFly"
-SUBST_CLASSES+=		fetch
-SUBST_STAGE.fetch=	pre-configure
-SUBST_MESSAGE.fetch=	Using bsdfetch on *BSD.
-SUBST_FILES.fetch=	hw-probe.pl
-SUBST_SED.fetch+=	-e 's|neofetch|bsdfetch|g'
-
-DEPENDS+=	bsdfetch-[0-9]*:../../sysutils/bsdfetch
-.endif
-
 DOCDIR=		share/doc/${PKGBASE}
-MESSAGE_SUBST+=	DOCDIR=${DOCDIR:Q}
 
 REPLACE_PERL+=	hw-probe.pl
 
@@ -68,6 +57,8 @@ do-install:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md		\
 		${DESTDIR}${PREFIX}/${DOCDIR}/README
+	${INSTALL_DATA} ${FILESDIR}/README.pkgsrc	\
+		${DESTDIR}${PREFIX}/${DOCDIR}
 
 .include "../../sysutils/pciutils/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"

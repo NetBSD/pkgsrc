@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2025/01/13 19:20:35 vins Exp $
+$NetBSD: distinfo,v 1.4 2025/12/08 10:19:23 vins Exp $
 
 BLAKE2s (hw-probe-1.6.6.tar.gz) = 822c43f6f2aeb9d733949ba6d9114bfcb921866966454b1d2119dad054d27133
 SHA512 (hw-probe-1.6.6.tar.gz) = ca645549d0b8f8a8c1c8f69498dd8591b55a2a007850b508fe1d6a48cd7c6e3ee25102ed348cb9578989014b7f069c4b9453ed7e516ce57dcbded1166c6ad017
 Size (hw-probe-1.6.6.tar.gz) = 170004 bytes
-SHA1 (patch-hw-probe.pl) = d88c244b7e60bb7be98b7a57fdceecdfe385fb26
+SHA1 (patch-hw-probe.pl) = 5f1abee69f2dcb3fd4c3a03c4b475b782bfc9bcb
