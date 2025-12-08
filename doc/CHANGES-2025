@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7082 2025/12/08 21:06:06 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7083 2025/12/08 21:14:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10277,3 +10277,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-modulegraph to 0.19.7 [adam 2025-12-08]
 	Updated security/adguardhome to 0.107.71 [adam 2025-12-08]
 	Updated www/py-urllib3 to 2.6.1 [adam 2025-12-08]
+	Updated textproc/py-orjson to 3.11.5 [adam 2025-12-08]
+	Updated textproc/py-rapidjson to 1.23 [adam 2025-12-08]
