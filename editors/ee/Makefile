@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/05/06 08:40:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2025/12/08 10:00:20 wiz Exp $
 
 DISTNAME=	ee-1.5.2.src
 PKGNAME=	${DISTNAME:S,.src,,}
@@ -9,7 +9,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	vins@NetBSD.org
-HOMEPAGE=	https://www.ucl.ac.uk/~ccaabaa/is/unix/ee.htm
+#HOMEPAGE=	https://www.ucl.ac.uk/~ccaabaa/is/unix/ee.htm
 COMMENT=	EasyEdit, a classic curses text editor
 LICENSE=	2-clause-bsd
 
