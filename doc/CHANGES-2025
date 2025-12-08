@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7076 2025/12/08 10:06:35 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7077 2025/12/08 10:18:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10269,3 +10269,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/gitweb to 2.52.0nb1 [sborrill 2025-12-08]
 	Updated sysutils/hwdata to 0.402 [wiz 2025-12-08]
 	Updated devel/jjui to 0.9.7 [wiz 2025-12-08]
+	Updated x11/libxkbcommon to 1.13.1 [wiz 2025-12-08]
