@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/08 09:57:20 asau Exp $
+# $NetBSD: Makefile,v 1.11 2025/12/08 09:59:54 wiz Exp $
 #
 # Update instructions:
 # . bump PKGNAME to today's date
@@ -15,7 +15,7 @@ EXTRACT_SUFX=	.gz
 DISTFILES=	edict.gz edict_doc.html
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.csse.monash.edu.au/~jwb/edict.html
+#HOMEPAGE=	http://www.csse.monash.edu.au/~jwb/edict.html
 COMMENT=	Japanese-English dictionary file
 
 WRKSRC=		${WRKDIR}
