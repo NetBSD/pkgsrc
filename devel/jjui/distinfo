@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2025/11/30 13:54:18 wiz Exp $
+$NetBSD: distinfo,v 1.9 2025/12/08 10:06:24 wiz Exp $
 
 BLAKE2s (github.com__burnt_sushi_toml_@v_v1.5.0.mod) = 26f62b858e9ef333fa0b51b46ce83c2d385ddf010431d6415a115aef9a338b35
 SHA512 (github.com__burnt_sushi_toml_@v_v1.5.0.mod) = fb6b4ae74dfdcc39b915f1b5f84f8e52e830d273d29f9225dc5ed4f26e970d9f61921f6f3588249141a82404c3ba180f735b4f23e700050e76a740fbf541ac78
@@ -18,12 +18,6 @@ Size (github.com_aymanbagabas_go-osc52_v2_@v_v2.0.1.mod) = 52 bytes
 BLAKE2s (github.com_aymanbagabas_go-osc52_v2_@v_v2.0.1.zip) = fd8de91a86ff375b4df1fc18869128f48f57566c80d5b02b9b83237ceadaf050
 SHA512 (github.com_aymanbagabas_go-osc52_v2_@v_v2.0.1.zip) = eadd3e4eb8fd4317058aaeba0d61e3bd97dfa1a4f3512a98b9eb731acf6dfd0793a3d97423013f22725498f1106338f873137334cb854ac20d0097cd14506530
 Size (github.com_aymanbagabas_go-osc52_v2_@v_v2.0.1.zip) = 7855 bytes
-BLAKE2s (github.com_aymanbagabas_go-udiff_@v_v0.2.0.mod) = e4976fe6db0c6d59e1525f3800467bce17dc63676cea9bb8feb5e2a567235fa3
-SHA512 (github.com_aymanbagabas_go-udiff_@v_v0.2.0.mod) = 7b1040840ac69dc71a9465af5f52f1ee65961a4e880214aae71173a8bceaa9b9d4d738e81214d80d9012c114838754c0f8d6d82307b5cb20120b83c2f4a7b72e
-Size (github.com_aymanbagabas_go-udiff_@v_v0.2.0.mod) = 49 bytes
-BLAKE2s (github.com_aymanbagabas_go-udiff_@v_v0.2.0.zip) = c074fcd04efedac4de9d9a639f61ff5e3b7ad45c1d7b81e5fd9cab97766bba04
-SHA512 (github.com_aymanbagabas_go-udiff_@v_v0.2.0.zip) = 75a76c267e10cac188999a1f0e4481eac8fb24b5ab4b392948b9141074f85814dbd20e1fe2bb35b79bbedb6d9246a9422fec8c817a2d1b1df6f9b54f4bda9aeb
-Size (github.com_aymanbagabas_go-udiff_@v_v0.2.0.zip) = 41930 bytes
 BLAKE2s (github.com_charmbracelet_bubbles_@v_v0.21.0.mod) = c8df70d50f554f6073a8acb712e3998ea2074373857b4c478c412b8c5e19f24e
 SHA512 (github.com_charmbracelet_bubbles_@v_v0.21.0.mod) = 68fdfb523de0813f27c0b8f1cf0d07a3225ef9663a0d1b1fe7ad3a5c690cc6230d63188ebd005988ab0c613a8fe113eaf7dccdf19eaf071cc0594277f1c2dc35
 Size (github.com_charmbracelet_bubbles_@v_v0.21.0.mod) = 1493 bytes
@@ -60,18 +54,6 @@ Size (github.com_charmbracelet_x_cellbuf_@v_v0.0.14.mod) = 669 bytes
 BLAKE2s (github.com_charmbracelet_x_cellbuf_@v_v0.0.14.zip) = eb071261941d1afedd7e0684b4268fa851240d8d329edd05a2961c3af59da546
 SHA512 (github.com_charmbracelet_x_cellbuf_@v_v0.0.14.zip) = d619d018be5ba39d9ef78c8995d33106226e3053b663991ceac0ab8c26242799a79dff6a62475618acdfc1df8460ad67ff62cff3d20a6dcb232b5c35b99922e9
 Size (github.com_charmbracelet_x_cellbuf_@v_v0.0.14.zip) = 42691 bytes
-BLAKE2s (github.com_charmbracelet_x_exp_golden_@v_v0.0.0-20241011142426-46044092ad91.mod) = 4791b3c4cc946b365daad319a47f55488b38c8f850adc7039bf27eb722c0267a
-SHA512 (github.com_charmbracelet_x_exp_golden_@v_v0.0.0-20241011142426-46044092ad91.mod) = 134b8a7e6b81947f037d355a2ace5c77ae072babc8b2d6b76ef152be506b819ff41b4ee3cc788939f2cfef34dc3be1af668a879d49188a8304332bfeaf71cb0a
-Size (github.com_charmbracelet_x_exp_golden_@v_v0.0.0-20241011142426-46044092ad91.mod) = 103 bytes
-BLAKE2s (github.com_charmbracelet_x_exp_golden_@v_v0.0.0-20241011142426-46044092ad91.zip) = f2b21cb12935c8a36e1d08609e67fb4f72f3f71f42600abf1b2c5527746e46ea
-SHA512 (github.com_charmbracelet_x_exp_golden_@v_v0.0.0-20241011142426-46044092ad91.zip) = 67e11776d2c75ccd1de52c81f146d4b14d86e0bf3b1273f852d9486f7234a813cfaca5a1424192885ec6a89d2b998bbeb166ddbcb3efc1d465bc8a1b7881b04d
-Size (github.com_charmbracelet_x_exp_golden_@v_v0.0.0-20241011142426-46044092ad91.zip) = 3799 bytes
-BLAKE2s (github.com_charmbracelet_x_exp_teatest_@v_v0.0.0-20250131172436-6251e772efa1.mod) = b65ee7e6f42b4278b07fba7877b6129b776cf115a9081ce67c8c34d2d484d59f
-SHA512 (github.com_charmbracelet_x_exp_teatest_@v_v0.0.0-20250131172436-6251e772efa1.mod) = 8a60e9b89848673d190c92ea8f12dd310d1f719ad7a6448a5529d32e06546d77443469a6267ab5fb2b050db5f8a9f5c4155d080803b889c500fc72eaf643c1d4
-Size (github.com_charmbracelet_x_exp_teatest_@v_v0.0.0-20250131172436-6251e772efa1.mod) = 1079 bytes
-BLAKE2s (github.com_charmbracelet_x_exp_teatest_@v_v0.0.0-20250131172436-6251e772efa1.zip) = 140b6b22d6c090fd2c9a1797fd9abd9fcb89a0bda4be51cf0a9e4aed797df7df
-SHA512 (github.com_charmbracelet_x_exp_teatest_@v_v0.0.0-20250131172436-6251e772efa1.zip) = 7d6d86b33eca72e395d947b133282dba875499b8dd823768e7b61b014de423d67db34238351c6d590bc466e0e6d02468b21464ac299d058107aa5452ee3ea6e8
-Size (github.com_charmbracelet_x_exp_teatest_@v_v0.0.0-20250131172436-6251e772efa1.zip) = 11036 bytes
 BLAKE2s (github.com_charmbracelet_x_term_@v_v0.2.2.mod) = ec61162ca234d7544b18513f486502e3cf9bc0d3c0dd54f9ce398c551e7586a1
 SHA512 (github.com_charmbracelet_x_term_@v_v0.2.2.mod) = 349b165f23ad6cc6897059e88c22879b34692d15e36de6b652350723dbc712d1d6c31fdf7014d031e03084775385e6c3409299309116d4f391e79e328ac3ded9
 Size (github.com_charmbracelet_x_term_@v_v0.2.2.mod) = 84 bytes
@@ -207,6 +189,6 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (jjui-0.9.6.tar.gz) = 2f61a5f2138d98eb36aef68ce7581cfccdd7b977f87406dfc06f4216c06f32cc
-SHA512 (jjui-0.9.6.tar.gz) = 147059630bba2fc77df69b7f1bdc0bf87671552929a170b7a8a0f74947c2f2b307fceeaf819a83a4f862457f9376678761826ff71e09731b854ac9e9f9214d40
-Size (jjui-0.9.6.tar.gz) = 106842 bytes
+BLAKE2s (jjui-0.9.7.tar.gz) = 0cb66118e0b2b7edae4a72d67fd68f37278cb5005a70e680728d5e7aab405e63
+SHA512 (jjui-0.9.7.tar.gz) = 2c60c6891e09479fb1a4d2add969c31cf1e7ed9523e8cf4f7dbec279fb9206c64367202589667e6090657f4f7d27c8232f56788817b026d050661cb878f533a5
+Size (jjui-0.9.7.tar.gz) = 118738 bytes

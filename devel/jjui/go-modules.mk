@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.5 2025/11/30 13:54:18 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.6 2025/12/08 10:06:24 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.5.0.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.5.0.zip
@@ -6,8 +6,6 @@ GO_MODULE_FILES+=	github.com/atotto/clipboard/@v/v0.1.4.mod
 GO_MODULE_FILES+=	github.com/atotto/clipboard/@v/v0.1.4.zip
 GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.mod
 GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.zip
-GO_MODULE_FILES+=	github.com/aymanbagabas/go-udiff/@v/v0.2.0.mod
-GO_MODULE_FILES+=	github.com/aymanbagabas/go-udiff/@v/v0.2.0.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.21.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.21.0.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.3.10.mod
@@ -20,10 +18,6 @@ GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.11.1.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.11.1.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/x/cellbuf/@v/v0.0.14.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/x/cellbuf/@v/v0.0.14.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/x/exp/golden/@v/v0.0.0-20241011142426-46044092ad91.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/x/exp/golden/@v/v0.0.0-20241011142426-46044092ad91.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/x/exp/teatest/@v/v0.0.0-20250131172436-6251e772efa1.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/x/exp/teatest/@v/v0.0.0-20250131172436-6251e772efa1.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/x/term/@v/v0.2.2.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/x/term/@v/v0.2.2.zip
 GO_MODULE_FILES+=	github.com/clipperhouse/displaywidth/@v/v0.6.0.mod
