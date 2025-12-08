@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7083 2025/12/08 21:14:42 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7084 2025/12/08 23:37:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10279,3 +10279,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-urllib3 to 2.6.1 [adam 2025-12-08]
 	Updated textproc/py-orjson to 3.11.5 [adam 2025-12-08]
 	Updated textproc/py-rapidjson to 1.23 [adam 2025-12-08]
+	Updated net/libcares to 1.34.6 [wiz 2025-12-08]
