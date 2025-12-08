@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2022/06/28 11:36:10 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2025/12/08 09:57:33 wiz Exp $
 
 DISTNAME=	eb-4.3
 PKGREVISION=	13
@@ -9,7 +9,7 @@ DISTFILES=	${EB_DISTFILES} \
 		${EB_APPENDICES}
 
 MAINTAINER=	uebayasi@NetBSD.org
-HOMEPAGE=	http://www.sra.co.jp/people/m-kasahr/eb/
+#HOMEPAGE=	http://www.sra.co.jp/people/m-kasahr/eb/
 COMMENT=	C library for accessing EB, EBG, EBXA and EPWING CD-ROM dictionaries
 
 EB_DISTFILES=	${DISTNAME}.tar.bz2
