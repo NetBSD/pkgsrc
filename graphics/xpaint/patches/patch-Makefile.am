@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.am,v 1.1 2025/12/08 21:05:41 vins Exp $
+
+Fix race condition.
+
+--- Makefile.am.orig	2021-01-07 14:18:14.000000000 +0000
++++ Makefile.am
+@@ -100,7 +100,7 @@ DefaultRC.txt.h: substads DefaultRC
+ messages.h: preproc
+ 	./preproc > messages.h
+ 
+-XPaint.ad: app-defaults
++XPaint.ad: substads app-defaults
+ 	$(CC) $(CFLAGS) substads.c -o substads
+ 	cd app-defaults ; \
+ 	../substads -appdefs \

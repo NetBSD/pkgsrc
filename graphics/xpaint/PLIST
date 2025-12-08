@@ -1,10 +1,16 @@
-@comment $NetBSD: PLIST,v 1.8 2023/01/22 17:41:52 vins Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/12/08 21:05:41 vins Exp $
 bin/imgmerge
 bin/vxp2dkw
 bin/vxp2ps
 bin/vxp2tex
 bin/xpaint
 bin/xpaint_generate_toolicons
+lib/X11/app-defaults/XPaint
+lib/X11/app-defaults/XPaint.big
+lib/X11/app-defaults/XPaint.medium
+lib/X11/app-defaults/XPaint.small
+lib/X11/app-defaults/XPaint_es
+lib/X11/app-defaults/XPaint_fr
 lib/libxpaintrw.la
 man/man1/imgmerge.1
 man/man1/xpaint.1
