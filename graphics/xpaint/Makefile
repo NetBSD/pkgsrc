@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2025/11/17 11:01:00 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2025/12/08 21:05:41 vins Exp $
 
 DISTNAME=	xpaint-3.1.4
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sf-xpaint/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,40 +11,46 @@ HOMEPAGE=	https://sf-xpaint.sourceforge.net/
 COMMENT=	Simple paint program
 LICENSE=	gnu-gpl-v3
 
-MAKE_JOBS_SAFE=	no
-
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake autoreconf
-USE_TOOLS+=	bash gmake gunzip
+USE_TOOLS+=	bash gmake gunzip pkg-config
 
 REPLACE_BASH=	share/bin/imgmerge share/bin/xpaint_ocr
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "Linux"
-BUILDLINK_TRANSFORM+=	rm:-ldl
-.endif
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
 SUBST_CLASSES+=		ln
 SUBST_STAGE.ln=		pre-configure
 SUBST_MESSAGE.ln=	Linking to libXaw3dXft include directory.
-SUBST_FILES.ln=		Makefile.in
+SUBST_FILES.ln=		Makefile.am
 SUBST_SED.ln=		-e 's|/usr/include/X11/Xaw3dxft|${WRKDIR}/.buildlink/include/X11/Xaw3dxft|'
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_MESSAGE.paths=	Replacing hard-coded paths.
+SUBST_FILES.paths=	configure.ac Makefile.am xpaintrw/Makefile.am
+SUBST_SED.paths=	-e 's|/usr/bin/libtool|libtool --tag=CC|'
+SUBST_SED.paths+=	-e 's|/etc/X11/app-defaults|${PREFIX}/lib/X11/app-defaults|'
+SUBST_SED.paths+=	-e 's|freetype2/config/ftheader.h|freetype2/freetype/config/ftheader.h|'
+
+pre-configure:
+	set -e; cd ${WRKSRC} && autoreconf -fiv
 
 pre-install:
 	for file in ${WRKSRC}/bitmaps/toolicons/*.xpm.gz ; do \
 		${GUNZIP_CMD} $$file ; \
 	done
 
-.include "../../mk/jpeg.buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/netpbm/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXaw3dXft/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
