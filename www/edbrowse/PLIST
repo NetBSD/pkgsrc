@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2025/12/08 07:25:21 vins Exp $
+bin/edbrowse
+man/man1/edbrowse.1
+share/doc/edbrowse/usersguide.html
+share/examples/edbrowse/sample.ebrc
