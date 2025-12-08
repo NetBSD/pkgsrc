@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.177 2025/10/23 20:37:39 wiz Exp $
+# $NetBSD: Makefile,v 1.178 2025/12/08 12:40:15 adam Exp $
 
-DISTNAME=	librsvg-2.60.0
-PKGREVISION=	1
+DISTNAME=	librsvg-2.60.1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,14 +11,16 @@ COMMENT=	SVG library for GNOME
 LICENSE=	gnu-lgpl-v2.1
 
 # Requires rst2man to generate rsvg-convert.1
-TOOL_DEPENDS+=		${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 # Requires gi-docgen to generate HTML format API documentation
-TOOL_DEPENDS+=		${PYPKGPREFIX}-gi-docgen>=2022.1nb1:../../devel/py-gi-docgen
-TOOL_DEPENDS+=		cargo-c>=0.9.19:../../devel/cargo-c
+TOOL_DEPENDS+=	${PYPKGPREFIX}-gi-docgen>=2022.1nb1:../../devel/py-gi-docgen
+TOOL_DEPENDS+=	cargo-c>=0.9.19:../../devel/cargo-c
 
-USE_LANGUAGES+=		c c++
-USE_TOOLS+=		pkg-config
-TEST_TARGET=		check
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
+TEST_TARGET=	check
+MESON_REQD+=	1.3.0
+RUST_REQ=	1.85.1
 
 PYTHON_FOR_BUILD_ONLY=		tool
 
@@ -49,9 +50,7 @@ post-install:
 
 .include "cargo-depends.mk"
 
-MESON_REQD+=	1.3.0
 .include "../../devel/meson/build.mk"
-.include "../../lang/python/tool.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.50.0
@@ -62,11 +61,11 @@ BUILDLINK_API_DEPENDS.pango+=	pango>=1.48.11
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/loaders.mk"
+.include "../../lang/python/tool.mk"
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.9
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-RUST_REQ=	1.77.2
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,9 @@
-$NetBSD: patch-.._vendor_memchr-2.7.4_src_arch_aarch64_memchr.rs,v 1.2 2025/02/18 14:23:06 adam Exp $
+$NetBSD: patch-.._vendor_memchr-2.7.6_src_arch_aarch64_memchr.rs,v 1.1 2025/12/08 12:40:15 adam Exp $
 
 Don't try to do neon / SIMD on big-endian aarch64.
 
---- ../vendor/memchr-2.7.4/src/arch/aarch64/memchr.rs.orig	2025-02-15 20:48:25.871984028 +0000
-+++ ../vendor/memchr-2.7.4/src/arch/aarch64/memchr.rs
+--- ../vendor/memchr-2.7.6/src/arch/aarch64/memchr.rs.orig	2025-02-15 20:48:25.871984028 +0000
++++ ../vendor/memchr-2.7.6/src/arch/aarch64/memchr.rs
 @@ -8,7 +8,7 @@ available for `aarch64` targets.)
  
  macro_rules! defraw {

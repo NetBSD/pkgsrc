@@ -1,9 +1,9 @@
-$NetBSD: patch-.._vendor_zune-jpeg-0.4.14_src_idct.rs,v 1.1 2025/09/23 11:12:17 adam Exp $
+$NetBSD: patch-.._vendor_zune-jpeg-0.5.5_src_idct.rs,v 1.1 2025/12/08 12:40:17 adam Exp $
 
 Don't try to do neon / SIMD on big-endian aarch64.
 
---- ../vendor/zune-jpeg-0.4.14/src/idct.rs.orig	2025-02-15 21:55:11.774911146 +0000
-+++ ../vendor/zune-jpeg-0.4.14/src/idct.rs
+--- ../vendor/zune-jpeg-0.5.5/src/idct.rs.orig	2025-02-15 21:55:11.774911146 +0000
++++ ../vendor/zune-jpeg-0.5.5/src/idct.rs
 @@ -41,7 +41,7 @@ use crate::idct::scalar::idct_int;
  
  #[cfg(feature = "x86")]
