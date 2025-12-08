@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7074 2025/12/08 08:43:41 sborrill Exp $
+$NetBSD: CHANGES-2025,v 1.7075 2025/12/08 10:05:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10267,3 +10267,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-pdf to 6.4.1 [adam 2025-12-08]
 	Added www/edbrowse version 3.8.15 [vins 2025-12-08]
 	Updated www/gitweb to 2.52.0nb1 [sborrill 2025-12-08]
+	Updated sysutils/hwdata to 0.402 [wiz 2025-12-08]
