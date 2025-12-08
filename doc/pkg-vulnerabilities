@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.679 2025/12/08 12:02:16 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.680 2025/12/08 13:16:00 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29054,3 +29054,23 @@ python314-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-120
 qt5-qtdeclarative-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12385
 qt6-qtdeclarative<6.10.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12385
 webkit-gtk<2.50.3	multiple-vulnerabilities	https://webkitgtk.org/security/WSA-2025-0009.html
+SOGo<5.12.5	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-63499
+ansible<12.2.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-14010
+apache<2.4.66	integer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-55753
+apache<2.4.66	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-58098
+apache<2.4.66	server-side-request-forgery		https://nvd.nist.gov/vuln/detail/CVE-2025-59775
+apache<2.4.66	input-validation			https://nvd.nist.gov/vuln/detail/CVE-2025-65082
+apache<2.4.66	security-bypass				https://nvd.nist.gov/vuln/detail/CVE-2025-66200
+cpp-httplib<0.27.0	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-66570
+cpp-httplib<0.27.0	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-66577
+php{56,74,81,82,83,84}-nextcloud<31.0.10	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-59788
+php{56,74,81,82,83,84}-nextcloud>=32<32.0.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-59788
+php{56,74,81,82,83,84}-nextcloud<31.0.10	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-66510
+php{56,74,81,82,83,84}-nextcloud>=32<32.0.1	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-66510
+php{56,74,81,82,83,84}-nextcloud<31.0.12	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-66512
+php{56,74,81,82,83,84}-nextcloud>=32<32.0.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-66512
+php{56,74,81,82,83,84}-nextcloud<31.0.1		authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-66547
+php{56,74,81,82,83,84}-nextcloud<31.0.1		insufficient-logging	https://nvd.nist.gov/vuln/detail/CVE-2025-66552
+php{56,74,81,82,83,84}-nextcloud>=32<32.0.1	insufficient-logging	https://nvd.nist.gov/vuln/detail/CVE-2025-66552
+py{27,39,310,311,312,313,314}-urllib3<2.6.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-66418
+py{27,39,310,311,312,313,314}-urllib3<2.6.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-66471
