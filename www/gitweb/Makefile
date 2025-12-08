@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.47 2025/01/13 14:24:44 adam Exp $
+# $NetBSD: Makefile,v 1.48 2025/12/08 08:42:45 sborrill Exp $
 
 .include "../../devel/git/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/git/gitweb/}
+PKGREVISION=	1
 CATEGORIES=	www
 
 COMMENT=	Web interface for GIT repositories
@@ -15,6 +16,8 @@ USE_TOOLS+=	perl:run
 BUILD_TARGET=	gitweb
 INSTALL_TARGET=	install-gitweb
 MAKE_ENV+=	INSTALL=${INSTALL:Q}
+MAKE_FLAGS+=	GITWEB_CONFIG_COMMON=${PKG_SYSCONFDIR}/gitweb-common.conf
+MAKE_FLAGS+=	GITWEB_CONFIG_SYSTEM=${PKG_SYSCONFDIR}/gitweb.conf
 REPLACE_PERL+=	gitweb/gitweb.perl
 
 GITWEB_EGDIR=	${PREFIX}/share/examples/gitweb
