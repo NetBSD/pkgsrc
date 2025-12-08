@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2025/11/11 13:41:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2025/12/08 07:14:06 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -81,9 +81,6 @@ ${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_fixed_width_page.pyo
 ${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_font.py
 ${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_font.pyc
 ${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_font.pyo
-${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_font_widths.py
-${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_font_widths.pyc
-${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_font_widths.pyo
 ${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_text_state_manager.py
 ${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_text_state_manager.pyc
 ${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_text_state_manager.pyo
