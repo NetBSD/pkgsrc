@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26514 2025/12/08 10:05:26 wiz Exp $
+$NetBSD: TODO,v 1.26515 2025/12/08 10:06:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -798,7 +798,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jed-0.99-18
 	o jetty7-7.6.17
 	o jetty9-9.3.7
-	o jjui-0.9.7
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
