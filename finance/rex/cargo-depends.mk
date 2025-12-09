@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.12 2025/10/28 08:50:24 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.13 2025/12/09 11:37:15 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -52,7 +52,7 @@ CARGO_CRATE_DEPENDS+=	darling_macro-0.21.3
 CARGO_CRATE_DEPENDS+=	deranged-0.4.0
 CARGO_CRATE_DEPENDS+=	derive_more-2.0.1
 CARGO_CRATE_DEPENDS+=	derive_more-impl-2.0.1
-CARGO_CRATE_DEPENDS+=	diesel-2.3.2
+CARGO_CRATE_DEPENDS+=	diesel-2.3.3
 CARGO_CRATE_DEPENDS+=	diesel_derives-2.3.3
 CARGO_CRATE_DEPENDS+=	diesel_migrations-2.3.0
 CARGO_CRATE_DEPENDS+=	diesel_table_macro_syntax-0.3.0
@@ -138,7 +138,7 @@ CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.9.4
 CARGO_CRATE_DEPENDS+=	litemap-0.8.0
 CARGO_CRATE_DEPENDS+=	litrs-0.4.2
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.13
-CARGO_CRATE_DEPENDS+=	log-0.4.27
+CARGO_CRATE_DEPENDS+=	log-0.4.28
 CARGO_CRATE_DEPENDS+=	lru-0.12.5
 CARGO_CRATE_DEPENDS+=	memchr-2.7.5
 CARGO_CRATE_DEPENDS+=	memoffset-0.9.1
@@ -193,7 +193,7 @@ CARGO_CRATE_DEPENDS+=	raw-window-handle-0.6.2
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.5.17
 CARGO_CRATE_DEPENDS+=	redox_users-0.5.2
 CARGO_CRATE_DEPENDS+=	reqwest-0.12.23
-CARGO_CRATE_DEPENDS+=	rfd-0.15.4
+CARGO_CRATE_DEPENDS+=	rfd-0.16.0
 CARGO_CRATE_DEPENDS+=	ring-0.17.14
 CARGO_CRATE_DEPENDS+=	rustc-demangle-0.1.26
 CARGO_CRATE_DEPENDS+=	rustix-0.38.44
