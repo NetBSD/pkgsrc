@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:30:50 nia Exp $
+$NetBSD: distinfo,v 1.11 2025/12/09 09:31:14 adam Exp $
 
-BLAKE2s (webassets-2.0.tar.gz) = edd7cc537ca7ea09e12d42ae3b42a92db68c4b9d3ec7fe07691283437afdf5dc
-SHA512 (webassets-2.0.tar.gz) = 94f1f8fd5ef3e0e82a04a5dce085b0c326653aa2cd26b681809a071f649cec8bc09139d3f1dbd88047ced8848cae16c8d6459aafa95b018fbc0dcc59bb2528fb
-Size (webassets-2.0.tar.gz) = 288016 bytes
+BLAKE2s (webassets-3.0.0.tar.gz) = d8926eae057bfc51919041f66c687df670f571dcb07cf888a04c27c7c511f13b
+SHA512 (webassets-3.0.0.tar.gz) = b872b87bd0c6e6eb57f338bfb3185f9da1905c94380aa77eefd5e2f72d184d2deb9e3fe4e96aa75cc6929f4658db2855275ada04540a9ccc332ade667d347d75
+Size (webassets-3.0.0.tar.gz) = 295280 bytes
