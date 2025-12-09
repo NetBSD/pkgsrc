@@ -1,0 +1,1 @@
+Resolve strings containing dotted names into the appropriate Python object.

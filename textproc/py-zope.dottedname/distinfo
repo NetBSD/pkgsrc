@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/12/09 09:27:33 adam Exp $
+
+BLAKE2s (zope_dottedname-7.0.tar.gz) = 32d46fe6761e9624a3d390c4ebb37bba70eaf954391ed8a9da2716f080178fb8
+SHA512 (zope_dottedname-7.0.tar.gz) = 3fee8c686b26409b0a6ac1258ce87fc8cca45f01a95f6bbc61cd6232b8c770c662fe615976aca637946ff30f931e8c7de82549c3a7816e46788d7a150ff71606
+Size (zope_dottedname-7.0.tar.gz) = 18322 bytes

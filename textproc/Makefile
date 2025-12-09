@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1555 2025/12/05 20:36:40 pin Exp $
+# $NetBSD: Makefile,v 1.1556 2025/12/09 09:27:32 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1277,6 +1277,7 @@ SUBDIR+=	py-yaml
 SUBDIR+=	py-yamllint
 SUBDIR+=	py-yamlordereddictloader
 SUBDIR+=	py-yattag
+SUBDIR+=	py-zope.dottedname
 SUBDIR+=	qore-json-module
 SUBDIR+=	qore-xml-module
 SUBDIR+=	qore-yaml-module
