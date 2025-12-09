@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7092 2025/12/09 11:45:34 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7093 2025/12/09 11:46:51 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10286,7 +10286,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pdm-build-locked to 0.3.7 [adam 2025-12-09]
 	Updated shells/oh-my-posh to 28.1.1 [pin 2025-12-09]
 	Updated finance/rex to 0.2.3 [pin 2025-12-09]
-	Updated textproc/treemd to 0.4.7 [pin 2025-12-09]
 	Updated textproc/treemd to 0.4.7 [pin 2025-12-09]
 	Updated x11/libdrm to 2.4.130 [wiz 2025-12-09]
 	Updated www/wiki-tui to 0.9.2 [pin 2025-12-09]
