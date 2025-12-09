@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.217 2025/12/06 17:35:34 wiz Exp $
+# $NetBSD: Makefile,v 1.218 2025/12/09 10:39:35 nia Exp $
 
 DISTNAME=	libpng-1.6.53
 PKGNAME=	${DISTNAME:S/lib//}
 CATEGORIES=	graphics
-MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=libpng/files/libpng16/${PKGVERSION_NOREV}/}
+MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=libpng/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
