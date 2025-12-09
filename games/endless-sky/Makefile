@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/10/23 20:37:01 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/12/09 08:31:40 wiz Exp $
 
 DISTNAME=	endless-sky-0.9.14
 PKGREVISION=	11
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=endless-sky/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://endless-sky.github.io/
+HOMEPAGE=	https://endless-sky.github.io/
 COMMENT=	Side-scrolling space trading game
 LICENSE=	gnu-gpl-v3 AND cc-by-sa-v4.0 AND cc-by-sa-v3.0
 
