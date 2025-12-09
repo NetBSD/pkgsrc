@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2025/07/23 18:31:02 pin Exp $
+# $NetBSD: Makefile,v 1.65 2025/12/09 11:44:33 pin Exp $
 
-DISTNAME=	xplr-1.0.1
+DISTNAME=	xplr-1.1.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sayanarijit/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,9 +12,9 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.88.0
+#RUST_REQ=	1.91.1
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.88.0 on amd64
+#This package is confirmed to build with Rust 1.91.1 on amd64
 USE_TOOLS+=	pkg-config bash:run
 
 INSTALLATION_DIRS=	share/examples/xplr share/applications share/icons/hicolor/scalable/apps
