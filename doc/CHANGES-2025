@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7103 2025/12/09 14:07:46 taca Exp $
+$NetBSD: CHANGES-2025,v 1.7104 2025/12/09 14:22:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10302,3 +10302,11 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/rucola to 0.8.1 [wiz 2025-12-09]
 	Updated net/py-aiodns to 3.6.0 [wiz 2025-12-09]
 	Updated mail/rspamd to 3.14.1 [taca 2025-12-09]
+	Updated mail/postfix to 3.10.7 [taca 2025-12-09]
+	Updated mail/postfix-cdb to 3.10.7 [taca 2025-12-09]
+	Updated mail/postfix-ldap to 3.10.7 [taca 2025-12-09]
+	Updated mail/postfix-lmdb to 3.10.7 [taca 2025-12-09]
+	Updated mail/postfix-mysql to 3.10.7 [taca 2025-12-09]
+	Updated mail/postfix-pcre to 3.10.7 [taca 2025-12-09]
+	Updated mail/postfix-pgsql to 3.10.7 [taca 2025-12-09]
+	Updated mail/postfix-sqlite to 3.10.7 [taca 2025-12-09]
