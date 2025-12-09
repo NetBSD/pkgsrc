@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2025/10/05 19:26:24 js Exp $
+# $NetBSD: Makefile,v 1.68 2025/12/09 19:58:44 wiz Exp $
 
 DISTNAME=	xmltooling-3.3.0
-PKGREVISION=	
 PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://shibboleth.net/downloads/c++-opensaml/${PKGVERSION_NOREV}/
@@ -15,6 +14,7 @@ USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-doxygen-doc
+CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
 USE_TOOLS+=		pkg-config
 
 .include "../../devel/boost-libs/buildlink3.mk"
