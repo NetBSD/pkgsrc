@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7102 2025/12/09 14:06:26 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7103 2025/12/09 14:07:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10301,3 +10301,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/py-lsp-server to 1.14.0 [wiz 2025-12-09]
 	Updated textproc/rucola to 0.8.1 [wiz 2025-12-09]
 	Updated net/py-aiodns to 3.6.0 [wiz 2025-12-09]
+	Updated mail/rspamd to 3.14.1 [taca 2025-12-09]
