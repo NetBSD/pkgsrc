@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7089 2025/12/09 11:41:26 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7090 2025/12/09 11:41:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10288,3 +10288,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated finance/rex to 0.2.3 [pin 2025-12-09]
 	Updated textproc/treemd to 0.4.7 [pin 2025-12-09]
 	Updated textproc/treemd to 0.4.7 [pin 2025-12-09]
+	Updated x11/libdrm to 2.4.130 [wiz 2025-12-09]
