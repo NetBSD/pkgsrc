@@ -1,0 +1,16 @@
+$NetBSD: patch-meson.build,v 1.5 2025/12/09 11:41:36 wiz Exp $
+
+Fix build on NetBSD.
+https://gitlab.freedesktop.org/mesa/libdrm/-/merge_requests/444
+
+--- meson.build.orig	2025-12-08 13:15:17.000000000 +0000
++++ meson.build
+@@ -51,6 +51,8 @@ dep_threads = dependency('threads')
+ 
+ cc = meson.get_compiler('c')
+ 
++config.set10('HAVE_SECURE_GETENV', cc.has_function('secure_getenv'))
++
+ android = cc.compiles('''int func() { return __ANDROID__; }''')
+ 
+ # Solaris / Illumos
