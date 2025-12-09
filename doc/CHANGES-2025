@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7097 2025/12/09 13:46:14 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7098 2025/12/09 13:47:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10296,3 +10296,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-minio to 7.2.20 [adam 2025-12-09]
 	Updated www/libkiwix to 14.1.1 [wiz 2025-12-09]
 	Updated www/kiwix-tools to 3.8.1 [wiz 2025-12-09]
+	Updated www/restish to 0.21.1 [wiz 2025-12-09]
