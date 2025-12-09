@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2023/06/23 23:25:52 mrg Exp $
+# $NetBSD: Makefile,v 1.40 2025/12/09 08:33:07 wiz Exp $
 
 DISTNAME=	estd-r11
 PKGNAME=	estd-0.11
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://flpsed.org/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://flpsed.org/estd.html
+HOMEPAGE=	https://flpsed.org/estd.html
 COMMENT=	Dynamically sets the CPU-frequency on SpeedStep and PowerNow CPUs
 LICENSE=	2-clause-bsd
 
