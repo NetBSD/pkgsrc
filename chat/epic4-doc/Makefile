@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/05/31 23:47:48 zafer Exp $
+# $NetBSD: Makefile,v 1.16 2025/12/09 08:32:49 wiz Exp $
 
 DISTNAME=	epic4-help-20050315
 PKGNAME=	epic4-doc-1.0.20050315
@@ -6,7 +6,7 @@ CATEGORIES=	chat
 MASTER_SITES=	https://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.epicsol.org/
+HOMEPAGE=	https://www.epicsol.org/
 COMMENT=	Additional documentation for epic4 package
 
 DEPENDS+=	epic4>=2.0:../../chat/epic4
