@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7087 2025/12/09 11:36:27 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7088 2025/12/09 11:38:22 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10285,3 +10285,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-xarray to 2025.12.0 [adam 2025-12-09]
 	Updated devel/py-pdm-build-locked to 0.3.7 [adam 2025-12-09]
 	Updated shells/oh-my-posh to 28.1.1 [pin 2025-12-09]
+	Updated finance/rex to 0.2.3 [pin 2025-12-09]
