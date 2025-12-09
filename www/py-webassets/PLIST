@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/14 20:28:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/12/09 09:31:14 adam Exp $
 bin/webassets
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -172,6 +172,7 @@ ${PYSITELIB}/webassets/loaders.pyo
 ${PYSITELIB}/webassets/merge.py
 ${PYSITELIB}/webassets/merge.pyc
 ${PYSITELIB}/webassets/merge.pyo
+${PYSITELIB}/webassets/py.typed
 ${PYSITELIB}/webassets/script.py
 ${PYSITELIB}/webassets/script.pyc
 ${PYSITELIB}/webassets/script.pyo
