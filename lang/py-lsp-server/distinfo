@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2025/11/24 09:53:03 wiz Exp $
+$NetBSD: distinfo,v 1.17 2025/12/09 14:00:24 wiz Exp $
 
-BLAKE2s (python_lsp_server-1.13.2.tar.gz) = 6306ae7f1dcdebdd1fa2063ef2213fb16a87d116668a58bba0026b6d239f8a7b
-SHA512 (python_lsp_server-1.13.2.tar.gz) = 0be67a934dd700346227e17e6b695c4e593d04dc82b49153868617a81af949a9ee11b4ada5dffe031c64d1dbfc4d1864c4d9dbf94ade0be606abef8eb8b2eaaf
-Size (python_lsp_server-1.13.2.tar.gz) = 120665 bytes
+BLAKE2s (python_lsp_server-1.14.0.tar.gz) = 8f854e7af263ed985b28e459b46ce550e1c90096fca0fb1662941848387153e3
+SHA512 (python_lsp_server-1.14.0.tar.gz) = 6362bb87a1fc75751a37c42a899377bc420daa0bed4aa7206e956b41e09495a9d949820bcf789508ebe5b5646c6c1af8dba753b7cef06891c46b8ebed80d51dc
+Size (python_lsp_server-1.14.0.tar.gz) = 121536 bytes
