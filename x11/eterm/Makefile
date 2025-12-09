@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2024/01/12 12:05:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.93 2025/12/09 08:34:57 wiz Exp $
 
 DISTNAME=	Eterm-0.9.6
 PKGNAME=	${DISTNAME:S/^E/e/}
@@ -9,7 +9,7 @@ DISTFILES=	${DEFAULT_DISTFILES} ${PIXMAP_FILES}
 PIXMAP_FILES=	Eterm-bg-0.9.5.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.eterm.org/
+HOMEPAGE=	https://sourceforge.net/projects/eterm/
 COMMENT=	Enlightened terminal emulator for the X Window System
 LICENSE=	mit
 
