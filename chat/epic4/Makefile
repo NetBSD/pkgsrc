@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2025/07/04 08:44:47 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.57 2025/12/09 08:32:29 wiz Exp $
 
 DISTNAME=	epic4-2.10.2
 PKGREVISION=	14
@@ -8,7 +7,7 @@ MASTER_SITES=	https://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.epicsol.org/
+HOMEPAGE=	https://www.epicsol.org/
 COMMENT=	The (E)nhanced (P)rogrammable (I)RC-II (C)lient
 
 GNU_CONFIGURE=	YES
