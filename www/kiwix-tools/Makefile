@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/11/01 22:31:56 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/12/09 13:45:59 wiz Exp $
 
-DISTNAME=	kiwix-tools-3.8.0
+DISTNAME=	kiwix-tools-3.8.1
 CATEGORIES=	www textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kiwix/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
