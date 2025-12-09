@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2024/10/10 07:21:39 adam Exp $
+$NetBSD: distinfo,v 1.18 2025/12/09 12:06:29 adam Exp $
 
-BLAKE2s (xandikos-0.2.12.tar.gz) = 6ed8e6dba61230ff20bb99d5b865be43e7246e2c128c2f4e9a9828b3058a072a
-SHA512 (xandikos-0.2.12.tar.gz) = cc7f8dde4a7fba495d9381f8faa8b23de6b69b3e5b9b4e4a4436afe2cec5e9cb449f797a2fce29ce4574ca7b325111658f2baaf97585d664d035376cd8148c9b
-Size (xandikos-0.2.12.tar.gz) = 110931 bytes
+BLAKE2s (xandikos-0.3.0.tar.gz) = c4e978dbfa3b17a087ead4f017abb7c23fb0170f05a0e55c96478e3380963564
+SHA512 (xandikos-0.3.0.tar.gz) = cfba3abcce50ebbad386883dbfeab4d99bc4105deae7cbb0478e6949cdf969de024cee4d3399bbfe71a721443f32e507e2b3e8921ac8cb145773fd38b1429c72
+Size (xandikos-0.3.0.tar.gz) = 170183 bytes
