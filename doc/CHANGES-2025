@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7107 2025/12/09 18:01:55 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7108 2025/12/09 18:13:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10314,3 +10314,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/py-textual to 6.8.0 [wiz 2025-12-09]
 	Updated net/py-python-socks to 2.8.0 [adam 2025-12-09]
 	Updated www/py-aiohttp-socks to 0.11.0 [adam 2025-12-09]
+	Updated math/py-astropy-iers-data to 0.2025.12.8.0.38.44 [adam 2025-12-09]
+	Updated math/py-astropy to 7.2.0 [adam 2025-12-09]
