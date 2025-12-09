@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26521 2025/12/09 11:41:47 wiz Exp $
+$NetBSD: TODO,v 1.26522 2025/12/09 13:45:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -854,7 +854,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
 	o libkactivities4-5.81.0
-	o libkiwix-14.1.1
 	o liblzo-2.10
 	o libmcs-0.7.2
 	o libmilter-8.16.1
