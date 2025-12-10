@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/08/17 15:20:21 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/12/10 08:56:23 adam Exp $
 share/luajit-2.1/ngx/balancer.lua
 share/luajit-2.1/ngx/base64.lua
 share/luajit-2.1/ngx/errlog.lua
@@ -11,6 +11,7 @@ share/luajit-2.1/ngx/resp.lua
 share/luajit-2.1/ngx/semaphore.lua
 share/luajit-2.1/ngx/ssl.lua
 share/luajit-2.1/ngx/ssl/clienthello.lua
+share/luajit-2.1/ngx/ssl/proxysslverify.lua
 share/luajit-2.1/ngx/ssl/session.lua
 share/luajit-2.1/resty/core.lua
 share/luajit-2.1/resty/core/base.lua
