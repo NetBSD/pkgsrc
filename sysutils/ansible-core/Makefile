@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.54 2025/10/09 08:07:29 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2025/12/10 12:43:34 adam Exp $
 
 # When upgrading ansible-core, please also upgrade the ansible package
 # to a version that supports the new version of ansible-core.  At times
 # this may mean not upgrading ansible-core to its latest release branch.
 
-DISTNAME=	ansible_core-2.19.3
+DISTNAME=	ansible_core-2.20.1
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-core/}
@@ -20,7 +20,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1.0:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
-DEPENDS+=	${PYPKGPREFIX}-resolvelib>=0.5.3:../../devel/py-resolvelib
+DEPENDS+=	${PYPKGPREFIX}-resolvelib>=0.8.0:../../devel/py-resolvelib
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
 
 USE_TOOLS+=	gmake

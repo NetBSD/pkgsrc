@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2025/10/07 10:42:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2025/12/10 12:43:34 adam Exp $
 bin/ansible
 bin/ansible-config
 bin/ansible-console
@@ -581,6 +581,9 @@ ${PYSITELIB}/ansible/module_utils/_internal/_json/_profiles/_tagless.pyo
 ${PYSITELIB}/ansible/module_utils/_internal/_messages.py
 ${PYSITELIB}/ansible/module_utils/_internal/_messages.pyc
 ${PYSITELIB}/ansible/module_utils/_internal/_messages.pyo
+${PYSITELIB}/ansible/module_utils/_internal/_no_six.py
+${PYSITELIB}/ansible/module_utils/_internal/_no_six.pyc
+${PYSITELIB}/ansible/module_utils/_internal/_no_six.pyo
 ${PYSITELIB}/ansible/module_utils/_internal/_patches/__init__.py
 ${PYSITELIB}/ansible/module_utils/_internal/_patches/__init__.pyc
 ${PYSITELIB}/ansible/module_utils/_internal/_patches/__init__.pyo
@@ -1916,9 +1919,6 @@ ${PYSITELIB}/ansible/utils/path.pyo
 ${PYSITELIB}/ansible/utils/plugin_docs.py
 ${PYSITELIB}/ansible/utils/plugin_docs.pyc
 ${PYSITELIB}/ansible/utils/plugin_docs.pyo
-${PYSITELIB}/ansible/utils/py3compat.py
-${PYSITELIB}/ansible/utils/py3compat.pyc
-${PYSITELIB}/ansible/utils/py3compat.pyo
 ${PYSITELIB}/ansible/utils/sentinel.py
 ${PYSITELIB}/ansible/utils/sentinel.pyc
 ${PYSITELIB}/ansible/utils/sentinel.pyo
@@ -1983,7 +1983,6 @@ ${PYSITELIB}/ansible_test/_data/playbooks/windows_hosts_prepare.yml
 ${PYSITELIB}/ansible_test/_data/playbooks/windows_hosts_restore.ps1
 ${PYSITELIB}/ansible_test/_data/playbooks/windows_hosts_restore.yml
 ${PYSITELIB}/ansible_test/_data/pytest/config/default.ini
-${PYSITELIB}/ansible_test/_data/pytest/config/legacy.ini
 ${PYSITELIB}/ansible_test/_data/requirements/ansible-test.txt
 ${PYSITELIB}/ansible_test/_data/requirements/ansible.txt
 ${PYSITELIB}/ansible_test/_data/requirements/constraints.txt
