@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7110 2025/12/10 08:25:31 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7111 2025/12/10 08:33:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10318,3 +10318,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-astropy to 7.2.0 [adam 2025-12-09]
 	Updated audio/musescore to 4.6.4 [gutteridge 2025-12-09]
 	Updated net/powerdns-recursor to 5.3.3 [wiz 2025-12-10]
+	Updated graphics/viu to 1.6.0 [pin 2025-12-10]
