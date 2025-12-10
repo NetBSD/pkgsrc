@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7111 2025/12/10 08:33:39 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7112 2025/12/10 08:35:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10319,3 +10319,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/musescore to 4.6.4 [gutteridge 2025-12-09]
 	Updated net/powerdns-recursor to 5.3.3 [wiz 2025-12-10]
 	Updated graphics/viu to 1.6.0 [pin 2025-12-10]
+	Updated x11/lxqt-notificationd to 2.3.1 [pin 2025-12-10]
