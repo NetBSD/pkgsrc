@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7113 2025/12/10 09:09:40 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7114 2025/12/10 12:44:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10322,3 +10322,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/lxqt-notificationd to 2.3.1 [pin 2025-12-10]
 	Updated www/lua-resty-core to 0.1.32 [adam 2025-12-10]
 	Updated devel/libgsf to 1.14.54 [adam 2025-12-10]
+	Updated sysutils/ansible-core to 2.20.1 [adam 2025-12-10]
+	Updated sysutils/ansible to 13.1.0 [adam 2025-12-10]
