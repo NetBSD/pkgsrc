@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7116 2025/12/10 17:52:24 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7117 2025/12/10 20:59:54 jun Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10330,3 +10330,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/py313-html-docs to 3.13.11 [adam 2025-12-10]
 	Updated lang/python314 to 3.14.2 [adam 2025-12-10]
 	Updated lang/py314-html-docs to 3.14.2 [adam 2025-12-10]
+	Updated emulators/nono to 1.6.4 [jun 2025-12-11]
