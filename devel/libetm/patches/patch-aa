@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.2 2004/04/14 15:08:32 ben Exp $
+$NetBSD: patch-aa,v 1.3 2025/12/11 21:28:58 vins Exp $
 
---- Makefile.orig	1997-04-10 13:15:36.000000000 -0700
+--- Makefile.orig	1997-04-10 20:15:36.000000000 +0000
 +++ Makefile
+@@ -121,7 +121,7 @@ PROJECTMINORRELEASE = 09
+              MSUB = msub
+         MKDIRHIER = mkdirhier
+ 
+-               AR = ar clq
++               AR = ar cq
+                CC = cc
+               CPP = /lib/cpp $(STD_CPP_DEFINES)
+                LD = ld
 @@ -383,7 +383,8 @@ depend:: etm.h
  all:: etm.h.new
  etm.h.new:: etm.h.dist
@@ -31,6 +40,6 @@ $NetBSD: patch-aa,v 1.2 2004/04/14 15:08:32 ben Exp $
 -etm.o: /usr/include/stdarg.h /usr/include/varargs.h etm.internal.h etm.h
 -etm.o: /usr/include/stdlib.h
 -etmtest.o: /usr/include/stdio.h /usr/include/sys/stdsyms.h etm.h
-+etm.o: etm.internal.h etm.h
-+etmtest.o: etm.h
++etm.o: /usr/include/stdio.h /usr/include/stdlib.h /usr/include/string.h etm.internal.h etm.h
++etmtest.o: /usr/include/stdio.h etm.h
 +
