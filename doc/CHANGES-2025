@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7134 2025/12/11 11:53:50 leot Exp $
+$NetBSD: CHANGES-2025,v 1.7135 2025/12/11 14:51:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10367,3 +10367,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/termusic to 0.12.1 [pin 2025-12-11]
 	Updated www/firefox140 to 140.6.0 [leot 2025-12-11]
 	Updated www/firefox140-l10n to 140.6.0 [leot 2025-12-11]
+	Updated devel/lazygit to 0.57.0 [adam 2025-12-11]
+	Updated net/rclone to 1.72.1 [adam 2025-12-11]
