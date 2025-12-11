@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2025/08/09 06:04:31 adam Exp $
+$NetBSD: distinfo,v 1.10 2025/12/11 10:06:35 adam Exp $
 
-BLAKE2s (exifread-3.4.0.tar.gz) = 9cddbb1b4b4c544fc77425192d306ce823b4d44d6757f0bd5e306fb570c8a320
-SHA512 (exifread-3.4.0.tar.gz) = 878dd88c5be24ce13be646b2ba61e12efe8dd6d9339b31f5780febd4e0a2e511a0d65f4bf9bfd9a27042a4dfe1aa1a23d4e3b3229b560b6a7b6da2c69293118d
-Size (exifread-3.4.0.tar.gz) = 56236 bytes
+BLAKE2s (exifread-3.5.1.tar.gz) = 565ad8e776fbefef27b9c6d3b758e28ed62f46fd70b75837a5c4e0ae015164b0
+SHA512 (exifread-3.5.1.tar.gz) = 6d5cc6aa4f5ca989ac7edcd2f6a8de3de25e62422598fef806761794a1d8cd0a09fd396d5ba22ccf72c06a89234e895be4f9ee44381e011046a0cd167ab79093
+Size (exifread-3.5.1.tar.gz) = 56552 bytes
