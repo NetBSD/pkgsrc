@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2025/11/03 12:17:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/12/11 10:38:42 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/polymorphic/__init__.py
 ${PYSITELIB}/polymorphic/__init__.pyc
 ${PYSITELIB}/polymorphic/__init__.pyo
@@ -56,11 +54,8 @@ ${PYSITELIB}/polymorphic/formsets/models.pyo
 ${PYSITELIB}/polymorphic/formsets/utils.py
 ${PYSITELIB}/polymorphic/formsets/utils.pyc
 ${PYSITELIB}/polymorphic/formsets/utils.pyo
-${PYSITELIB}/polymorphic/locale/en/LC_MESSAGES/django.mo
 ${PYSITELIB}/polymorphic/locale/en/LC_MESSAGES/django.po
-${PYSITELIB}/polymorphic/locale/es/LC_MESSAGES/django.mo
 ${PYSITELIB}/polymorphic/locale/es/LC_MESSAGES/django.po
-${PYSITELIB}/polymorphic/locale/fr/LC_MESSAGES/django.mo
 ${PYSITELIB}/polymorphic/locale/fr/LC_MESSAGES/django.po
 ${PYSITELIB}/polymorphic/managers.py
 ${PYSITELIB}/polymorphic/managers.pyc
