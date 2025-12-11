@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7135 2025/12/11 14:51:45 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7136 2025/12/11 15:15:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10369,3 +10369,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox140-l10n to 140.6.0 [leot 2025-12-11]
 	Updated devel/lazygit to 0.57.0 [adam 2025-12-11]
 	Updated net/rclone to 1.72.1 [adam 2025-12-11]
+	Updated devel/py-txaio to 25.12.2 [adam 2025-12-11]
+	Updated www/py-autobahn to 25.12.1 [adam 2025-12-11]
