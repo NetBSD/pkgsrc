@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/08/09 06:04:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/12/11 10:06:35 adam Exp $
 bin/exifread-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -36,6 +36,9 @@ ${PYSITELIB}/exifread/core/ifd_tag.pyo
 ${PYSITELIB}/exifread/core/jpeg.py
 ${PYSITELIB}/exifread/core/jpeg.pyc
 ${PYSITELIB}/exifread/core/jpeg.pyo
+${PYSITELIB}/exifread/core/jxl.py
+${PYSITELIB}/exifread/core/jxl.pyc
+${PYSITELIB}/exifread/core/jxl.pyo
 ${PYSITELIB}/exifread/core/utils.py
 ${PYSITELIB}/exifread/core/utils.pyc
 ${PYSITELIB}/exifread/core/utils.pyo
