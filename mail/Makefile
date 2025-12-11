@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.681 2025/11/23 20:22:43 wiz Exp $
+# $NetBSD: Makefile,v 1.682 2025/12/11 00:48:27 manu Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -99,6 +99,7 @@ SUBDIR+=	feed2exec
 SUBDIR+=	fetchmail
 SUBDIR+=	fetchmailconf
 SUBDIR+=	fix-mime-charset
+SUBDIR+=	flowerysong-openarc
 SUBDIR+=	fml
 SUBDIR+=	fml4
 SUBDIR+=	fromto

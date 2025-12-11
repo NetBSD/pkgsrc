@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2025/12/11 00:48:27 manu Exp $
+bin/openarc-keygen
+include/openarc/arc.h
+lib/libopenarc.la
+lib/pkgconfig/openarc.pc
+man/man1/openarc-keygen.1
+man/man5/openarc.conf.5
+man/man8/openarc.8
+sbin/openarc
+share/doc/openarc/CHANGELOG.md
+share/doc/openarc/LICENSE
+share/doc/openarc/LICENSE.Sendmail
+share/doc/openarc/README.md
+share/doc/openarc/openarc
+share/doc/openarc/openarc.conf.sample
+share/doc/openarc/openarc.service
+share/doc/openarc/openarc.spec.in
+share/doc/openarc/openarc.xml
+share/examples/flowerysong-openarc/openarc.conf.sample
