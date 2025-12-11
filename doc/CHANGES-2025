@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7131 2025/12/11 11:48:33 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7132 2025/12/11 11:50:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10364,3 +10364,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django-polymorphic to 4.3.0 [adam 2025-12-11]
 	Updated www/py-django-modelcluster to 6.4.1 [adam 2025-12-11]
 	Updated devel/ast-grep to 0.40.1 [pin 2025-12-11]
+	Updated audio/termusic to 0.12.1 [pin 2025-12-11]
