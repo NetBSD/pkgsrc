@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2023/12/23 08:26:05 zafer Exp $
+# $NetBSD: Makefile,v 1.21 2025/12/11 21:28:58 vins Exp $
 #
 
 DISTNAME=		ETM-1.09
 PKGNAME=		libetm-1.09
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		https://www.aydogan.net/distfiles/devel/
 
@@ -15,7 +16,7 @@ MAKE_JOBS_SAFE=		no
 WRKSRC=			${WRKDIR}/etm
 INSTALLATION_DIRS=	include lib
 
-USE_TOOLS+=		groff
+USE_TOOLS+=		nroff
 
 post-patch:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.bak
