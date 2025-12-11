@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_views_user__education_browser__user__education__service.cc,v 1.10 2025/11/20 08:36:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_user__education_browser__user__education__service.cc,v 1.11 2025/12/11 09:13:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/ui/views/user_education/browser_user_education_service.cc
-@@ -1165,7 +1165,7 @@ void MaybeRegisterChromeFeaturePromos(
+@@ -1178,7 +1178,7 @@ void MaybeRegisterChromeFeaturePromos(
                  "Triggered when a shared tab becomes the active tab.")));
    }
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_views_user__education_browser__user__education_
    // kIPHSupervisedUserProfileSigninFeature:
    registry.RegisterFeature(std::move(
        FeaturePromoSpecification::CreateForCustomAction(
-@@ -1433,7 +1433,7 @@ void MaybeRegisterChromeFeaturePromos(
+@@ -1446,7 +1446,7 @@ void MaybeRegisterChromeFeaturePromos(
                         "Triggered to inform users of the availability of the "
                         "new translate screen feature on the Lens Overlay.")));
  

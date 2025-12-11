@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_webrtc_rtc__base_third__party_sigslot_sigslot.h,v 1.10 2025/11/20 08:36:24 kikadf Exp $
+$NetBSD: patch-third__party_webrtc_rtc__base_third__party_sigslot_sigslot.h,v 1.11 2025/12/11 09:13:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/rtc_base/third_party/sigslot/sigslot.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- third_party/webrtc/rtc_base/third_party/sigslot/sigslot.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ third_party/webrtc/rtc_base/third_party/sigslot/sigslot.h
 @@ -178,6 +178,10 @@ class multi_threaded_local {
  #endif  // _SIGSLOT_HAS_WIN32_THREADS

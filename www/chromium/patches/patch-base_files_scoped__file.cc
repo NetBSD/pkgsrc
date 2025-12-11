@@ -1,10 +1,10 @@
-$NetBSD: patch-base_files_scoped__file.cc,v 1.10 2025/11/20 08:36:04 kikadf Exp $
+$NetBSD: patch-base_files_scoped__file.cc,v 1.11 2025/12/11 09:13:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/scoped_file.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- base/files/scoped_file.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ base/files/scoped_file.cc
 @@ -32,7 +32,7 @@ void ScopedFDCloseTraits::Free(int fd) {
    int ret = IGNORE_EINTR(close(fd));

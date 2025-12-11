@@ -1,10 +1,10 @@
-$NetBSD: patch-mojo_core_channel.cc,v 1.10 2025/11/20 08:36:18 kikadf Exp $
+$NetBSD: patch-mojo_core_channel.cc,v 1.11 2025/12/11 09:13:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/core/channel.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- mojo/core/channel.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ mojo/core/channel.cc
 @@ -81,7 +81,11 @@ const size_t kMaxAttachedHandles = 64;
  const size_t kMaxAttachedHandles = 253;
@@ -18,7 +18,16 @@ $NetBSD: patch-mojo_core_channel.cc,v 1.10 2025/11/20 08:36:18 kikadf Exp $
  Channel::AlignedBuffer MakeAlignedBuffer(size_t size) {
    // Generic allocators (such as malloc) return a pointer that is suitably
    // aligned for storing any type of object with a fundamental alignment
-@@ -1121,7 +1125,7 @@ bool Channel::OnControlMessage(Message::
+@@ -274,7 +278,7 @@ bool ShouldRecordSubsampledHistograms() 
+ }  // namespace
+ 
+ #if BUILDFLAG(IS_ANDROID) || \
+-    (BUILDFLAG(IS_LINUX) && defined(FUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION))
++    ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && defined(FUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION))
+ 
+ namespace {
+ 
+@@ -1306,7 +1310,7 @@ bool Channel::OnControlMessage(Message::
  }
  
  // Currently only CrOs, Linux, and Android support upgrades.

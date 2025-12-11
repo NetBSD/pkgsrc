@@ -1,12 +1,12 @@
-$NetBSD: patch-media_base_video__frame.cc,v 1.10 2025/11/20 08:36:17 kikadf Exp $
+$NetBSD: patch-media_base_video__frame.cc,v 1.11 2025/12/11 09:13:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- media/base/video_frame.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ media/base/video_frame.cc
-@@ -86,7 +86,7 @@ std::string VideoFrame::StorageTypeToStr
+@@ -85,7 +85,7 @@ std::string VideoFrame::StorageTypeToStr
        return "OWNED_MEMORY";
      case VideoFrame::STORAGE_SHMEM:
        return "SHMEM";
@@ -15,7 +15,7 @@ $NetBSD: patch-media_base_video__frame.cc,v 1.10 2025/11/20 08:36:17 kikadf Exp 
      case VideoFrame::STORAGE_DMABUFS:
        return "DMABUFS";
  #endif
-@@ -100,7 +100,7 @@ std::string VideoFrame::StorageTypeToStr
+@@ -99,7 +99,7 @@ std::string VideoFrame::StorageTypeToStr
  // static
  bool VideoFrame::IsStorageTypeMappable(VideoFrame::StorageType storage_type) {
    return
@@ -24,7 +24,7 @@ $NetBSD: patch-media_base_video__frame.cc,v 1.10 2025/11/20 08:36:17 kikadf Exp 
        // This is not strictly needed but makes explicit that, at VideoFrame
        // level, DmaBufs are not mappable from userspace.
        storage_type != VideoFrame::STORAGE_DMABUFS &&
-@@ -395,7 +395,7 @@ scoped_refptr<VideoFrame> VideoFrame::Cr
+@@ -503,7 +503,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
          plane_size.width() * VideoFrame::BytesPerElement(*format, plane);
    }
    uint64_t modifier = gfx::NativePixmapHandle::kNoModifier;
@@ -33,7 +33,7 @@ $NetBSD: patch-media_base_video__frame.cc,v 1.10 2025/11/20 08:36:17 kikadf Exp 
    bool is_native_buffer = !shared_image->IsSharedMemoryForVideoFrame();
    if (is_native_buffer) {
      const auto gmb_handle = shared_image->CloneGpuMemoryBufferHandle();
-@@ -852,7 +852,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
+@@ -800,7 +800,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
  }
  #endif
  
@@ -42,7 +42,7 @@ $NetBSD: patch-media_base_video__frame.cc,v 1.10 2025/11/20 08:36:17 kikadf Exp 
  // static
  scoped_refptr<VideoFrame> VideoFrame::WrapExternalDmabufs(
      const VideoFrameLayout& layout,
-@@ -1539,7 +1539,7 @@ scoped_refptr<gpu::ClientSharedImage> Vi
+@@ -1492,7 +1492,7 @@ scoped_refptr<gpu::ClientSharedImage> Vi
    return wrapped_frame_ ? wrapped_frame_->shared_image() : shared_image_;
  }
  

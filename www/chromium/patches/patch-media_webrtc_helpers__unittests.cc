@@ -1,12 +1,12 @@
-$NetBSD: patch-media_webrtc_helpers__unittests.cc,v 1.10 2025/11/20 08:36:18 kikadf Exp $
+$NetBSD: patch-media_webrtc_helpers__unittests.cc,v 1.11 2025/12/11 09:13:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/webrtc/helpers_unittests.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- media/webrtc/helpers_unittests.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ media/webrtc/helpers_unittests.cc
-@@ -38,7 +38,7 @@ TEST(CreateWebRtcAudioProcessingModuleTe
+@@ -37,7 +37,7 @@ TEST(CreateWebRtcAudioProcessingModuleTe
    EXPECT_TRUE(config.echo_canceller.enabled);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-media_webrtc_helpers__unittests.cc,v 1.10 2025/11/20 08:36:18 kik
    EXPECT_FALSE(config.gain_controller1.enabled);
    EXPECT_TRUE(config.gain_controller2.enabled);
  #elif BUILDFLAG(IS_CASTOS) || BUILDFLAG(IS_CAST_ANDROID)
-@@ -65,7 +65,7 @@ TEST(CreateWebRtcAudioProcessingModuleTe
+@@ -63,7 +63,7 @@ TEST(CreateWebRtcAudioProcessingModuleTe
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-media_webrtc_helpers__unittests.cc,v 1.10 2025/11/20 08:36:18 kik
  TEST(CreateWebRtcAudioProcessingModuleTest,
       InputVolumeAdjustmentEnabledWithAgc2) {
    ::base::test::ScopedFeatureList feature_list;
-@@ -81,7 +81,7 @@ TEST(CreateWebRtcAudioProcessingModuleTe
+@@ -79,7 +79,7 @@ TEST(CreateWebRtcAudioProcessingModuleTe
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
  
@@ -33,7 +33,7 @@ $NetBSD: patch-media_webrtc_helpers__unittests.cc,v 1.10 2025/11/20 08:36:18 kik
  TEST(CreateWebRtcAudioProcessingModuleTest,
       CanDisableInputVolumeAdjustmentWithAgc2) {
    ::base::test::ScopedFeatureList feature_list;
-@@ -98,7 +98,7 @@ TEST(CreateWebRtcAudioProcessingModuleTe
+@@ -96,7 +96,7 @@ TEST(CreateWebRtcAudioProcessingModuleTe
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

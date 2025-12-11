@@ -1,10 +1,10 @@
-$NetBSD: patch-base_strings_safe__sprintf__unittest.cc,v 1.10 2025/11/20 08:36:04 kikadf Exp $
+$NetBSD: patch-base_strings_safe__sprintf__unittest.cc,v 1.11 2025/12/11 09:13:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/strings/safe_sprintf_unittest.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- base/strings/safe_sprintf_unittest.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ base/strings/safe_sprintf_unittest.cc
 @@ -747,6 +747,7 @@ TEST(SafeSPrintfTest, EmbeddedNul) {
  #endif

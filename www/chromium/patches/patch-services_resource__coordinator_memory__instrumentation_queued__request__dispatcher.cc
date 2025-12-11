@@ -1,12 +1,12 @@
-$NetBSD: patch-services_resource__coordinator_memory__instrumentation_queued__request__dispatcher.cc,v 1.10 2025/11/20 08:36:21 kikadf Exp $
+$NetBSD: patch-services_resource__coordinator_memory__instrumentation_queued__request__dispatcher.cc,v 1.11 2025/12/11 09:13:43 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/resource_coordinator/memory_instrumentation/queued_request_dispatcher.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- services/resource_coordinator/memory_instrumentation/queued_request_dispatcher.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ services/resource_coordinator/memory_instrumentation/queued_request_dispatcher.cc
-@@ -55,7 +55,7 @@ uint32_t CalculatePrivateFootprintKb(con
+@@ -56,7 +56,7 @@ uint32_t CalculatePrivateFootprintKb(con
                                       uint32_t shared_resident_kb) {
    DCHECK(os_dump.platform_private_footprint);
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-services_resource__coordinator_memory__instrumentation_queued__re
    uint64_t rss_anon_bytes = os_dump.platform_private_footprint->rss_anon_bytes;
    uint64_t vm_swap_bytes = os_dump.platform_private_footprint->vm_swap_bytes;
    return (rss_anon_bytes + vm_swap_bytes) / 1024;
-@@ -84,7 +84,7 @@ memory_instrumentation::mojom::OSMemDump
+@@ -85,7 +85,7 @@ memory_instrumentation::mojom::OSMemDump
    os_dump->is_peak_rss_resettable = internal_os_dump.is_peak_rss_resettable;
    os_dump->private_footprint_kb =
        CalculatePrivateFootprintKb(internal_os_dump, shared_resident_kb);
@@ -24,7 +24,7 @@ $NetBSD: patch-services_resource__coordinator_memory__instrumentation_queued__re
    os_dump->private_footprint_swap_kb =
        internal_os_dump.platform_private_footprint->vm_swap_bytes / 1024;
    os_dump->mappings_count = internal_os_dump.mappings_count;
-@@ -223,7 +223,7 @@ void QueuedRequestDispatcher::SetUpAndDi
+@@ -224,7 +224,7 @@ void QueuedRequestDispatcher::SetUpAndDi
  
  // On most platforms each process can dump data about their own process
  // so ask each process to do so Linux is special see below.
@@ -33,7 +33,7 @@ $NetBSD: patch-services_resource__coordinator_memory__instrumentation_queued__re
      request->pending_responses.insert({client_info.pid, ResponseType::kOSDump});
      client->RequestOSMemoryDump(
          request->memory_map_option(), request->memory_dump_flags(),
-@@ -238,7 +238,7 @@ void QueuedRequestDispatcher::SetUpAndDi
+@@ -239,7 +239,7 @@ void QueuedRequestDispatcher::SetUpAndDi
  
  // In some cases, OS stats can only be dumped from a privileged process to
  // get around to sandboxing/selinux restrictions (see crbug.com/461788).

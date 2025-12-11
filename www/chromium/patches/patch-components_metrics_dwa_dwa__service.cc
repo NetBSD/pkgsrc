@@ -1,12 +1,12 @@
-$NetBSD: patch-components_metrics_dwa_dwa__service.cc,v 1.10 2025/11/20 08:36:13 kikadf Exp $
+$NetBSD: patch-components_metrics_dwa_dwa__service.cc,v 1.11 2025/12/11 09:13:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/metrics/dwa/dwa_service.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- components/metrics/dwa/dwa_service.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/metrics/dwa/dwa_service.cc
-@@ -243,7 +243,7 @@ void DwaService::RecordCoarseSystemInfor
+@@ -244,7 +244,7 @@ void DwaService::RecordCoarseSystemInfor
    coarse_system_info->set_platform(::dwa::CoarseSystemInfo::PLATFORM_WINDOWS);
  #elif BUILDFLAG(IS_MAC)
    coarse_system_info->set_platform(::dwa::CoarseSystemInfo::PLATFORM_MACOS);

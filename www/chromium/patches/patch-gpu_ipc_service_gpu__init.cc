@@ -1,12 +1,12 @@
-$NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.10 2025/11/20 08:36:17 kikadf Exp $
+$NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.11 2025/12/11 09:13:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/ipc/service/gpu_init.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- gpu/ipc/service/gpu_init.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ gpu/ipc/service/gpu_init.cc
-@@ -155,7 +155,7 @@ void InitializePlatformOverlaySettings(G
+@@ -156,7 +156,7 @@ void InitializePlatformOverlaySettings(G
  
  #if !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_CASTOS)
  bool CanAccessDeviceFile(const GPUInfo& gpu_info) {
@@ -15,7 +15,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.10 2025/11/20 08:36:17 kikadf Ex
    if (gpu_info.gpu.vendor_id != 0x10de ||  // NVIDIA
        gpu_info.gpu.driver_vendor != "NVIDIA")
      return true;
-@@ -417,7 +417,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -418,7 +418,7 @@ bool GpuInit::InitializeAndStartSandbox(
    enable_watchdog = false;
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.10 2025/11/20 08:36:17 kikadf Ex
    bool gpu_sandbox_start_early = gpu_preferences_.gpu_sandbox_start_early;
  #else   // !(BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS))
    // For some reasons MacOSX's VideoToolbox might crash when called after
-@@ -455,7 +455,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -456,7 +456,7 @@ bool GpuInit::InitializeAndStartSandbox(
    }
  
    bool attempted_startsandbox = false;
@@ -33,7 +33,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.10 2025/11/20 08:36:17 kikadf Ex
    // On Chrome OS ARM Mali, GPU driver userspace creates threads when
    // initializing a GL context, so start the sandbox early.
    // TODO(zmo): Need to collect OS version before this.
-@@ -552,7 +552,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -553,7 +553,7 @@ bool GpuInit::InitializeAndStartSandbox(
      gpu_preferences_.gr_context_type = GrContextType::kGL;
    }
  
@@ -42,7 +42,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.10 2025/11/20 08:36:17 kikadf Ex
    // The ContentSandboxHelper is currently the only one implementation of
    // GpuSandboxHelper and it has no dependency. Except on Linux where
    // VaapiWrapper checks the GL implementation to determine which display
-@@ -610,7 +610,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -611,7 +611,7 @@ bool GpuInit::InitializeAndStartSandbox(
            command_line, gpu_feature_info_,
            gpu_preferences_.disable_software_rasterizer, false);
        if (gl_use_swiftshader_) {
@@ -51,7 +51,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.10 2025/11/20 08:36:17 kikadf Ex
          VLOG(1) << "Quit GPU process launch to fallback to SwiftShader cleanly "
                  << "on Linux";
          return false;
-@@ -778,7 +778,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -779,7 +779,7 @@ bool GpuInit::InitializeAndStartSandbox(
                ->GetSupportedFormatsForGLNativePixmapImport();
  #endif  // BUILDFLAG(IS_OZONE)
  
@@ -60,7 +60,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.10 2025/11/20 08:36:17 kikadf Ex
    // Driver may create a compatibility profile context when collect graphics
    // information on Linux platform. Try to collect graphics information
    // based on core profile context after disabling platform extensions.
-@@ -830,7 +830,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -831,7 +831,7 @@ bool GpuInit::InitializeAndStartSandbox(
        }
      }
    }
@@ -69,7 +69,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.10 2025/11/20 08:36:17 kikadf Ex
      (BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_CHROMEOS_DEVICE))
    if (!gl_disabled && !gl_use_swiftshader_ && std::getenv("RUNNING_UNDER_RR")) {
      // https://rr-project.org/ is a Linux-only record-and-replay debugger that
-@@ -1032,7 +1032,7 @@ void GpuInit::InitializeInProcess(base::
+@@ -1033,7 +1033,7 @@ void GpuInit::InitializeInProcess(base::
    }
    bool gl_disabled = gl::GetGLImplementation() == gl::kGLImplementationDisabled;
  
@@ -78,7 +78,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.10 2025/11/20 08:36:17 kikadf Ex
      (BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_CHROMEOS_DEVICE))
    if (!gl_disabled && !gl_use_swiftshader_ && std::getenv("RUNNING_UNDER_RR")) {
      // https://rr-project.org/ is a Linux-only record-and-replay debugger that
-@@ -1088,7 +1088,7 @@ void GpuInit::InitializeInProcess(base::
+@@ -1089,7 +1089,7 @@ void GpuInit::InitializeInProcess(base::
      }
    }
  

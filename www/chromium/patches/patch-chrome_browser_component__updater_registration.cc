@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_component__updater_registration.cc,v 1.10 2025/11/20 08:36:06 kikadf Exp $
+$NetBSD: patch-chrome_browser_component__updater_registration.cc,v 1.11 2025/12/11 09:13:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/registration.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/component_updater/registration.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/component_updater/registration.cc
-@@ -94,7 +94,7 @@
+@@ -95,7 +95,7 @@
  #endif  // BUILDFLAG(ENABLE_WIDEVINE_CDM_COMPONENT)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_component__updater_registration.cc,v 1.10 2025/11/
  #include "components/component_updater/installer_policies/amount_extraction_heuristic_regexes_component_installer.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
-@@ -107,7 +107,7 @@
+@@ -108,7 +108,7 @@
  #include "chrome/browser/component_updater/lacros_component_remover.h"
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_component__updater_registration.cc,v 1.10 2025/11/
  #include "chrome/browser/component_updater/wasm_tts_engine_component_installer.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
-@@ -245,7 +245,7 @@ void RegisterComponentsForUpdate() {
+@@ -247,7 +247,7 @@ void RegisterComponentsForUpdate() {
    RegisterCookieReadinessListComponent(cus);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_component__updater_registration.cc,v 1.10 2025/11/
    RegisterAmountExtractionHeuristicRegexesComponent(cus);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -257,7 +257,7 @@ void RegisterComponentsForUpdate() {
+@@ -259,7 +259,7 @@ void RegisterComponentsForUpdate() {
    }
  #endif  // BUIDLFLAG(IS_ANDROID)
  

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_browser__ui__prefs.cc,v 1.10 2025/11/20 08:36:09 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_browser__ui__prefs.cc,v 1.11 2025/12/11 09:13:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_ui_prefs.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/ui/browser_ui_prefs.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/ui/browser_ui_prefs.cc
-@@ -82,7 +82,7 @@ void RegisterBrowserPrefs(PrefRegistrySi
+@@ -85,7 +85,7 @@ void RegisterBrowserPrefs(PrefRegistrySi
    registry->RegisterTimePref(prefs::kPinInfoBarLastShown, base::Time());
    registry->RegisterIntegerPref(prefs::kPinInfoBarTimesShown, 0);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_browser__ui__prefs.cc,v 1.10 2025/11/20 08:36:0
    registry->RegisterStringPref(prefs::kEnterpriseCustomLabelForBrowser,
                                 std::string());
    registry->RegisterStringPref(prefs::kEnterpriseLogoUrlForBrowser,
-@@ -103,7 +103,7 @@ void RegisterBrowserUserPrefs(user_prefs
+@@ -106,7 +106,7 @@ void RegisterBrowserUserPrefs(user_prefs
        user_prefs::PrefRegistrySyncable::SYNCABLE_PREF;
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_browser__ui__prefs.cc,v 1.10 2025/11/20 08:36:0
    registry->RegisterIntegerPref(prefs::kSessionRestoreInfoBarTimesShown, 0);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
  
-@@ -216,7 +216,7 @@ void RegisterBrowserUserPrefs(user_prefs
+@@ -219,7 +219,7 @@ void RegisterBrowserUserPrefs(user_prefs
    registry->RegisterDictionaryPref(prefs::kHttpsUpgradeFallbacks);
    registry->RegisterDictionaryPref(prefs::kHttpsUpgradeNavigations);
    registry->RegisterBooleanPref(prefs::kHttpsOnlyModeAutoEnabled, false);

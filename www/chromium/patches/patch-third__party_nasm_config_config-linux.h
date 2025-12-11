@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_nasm_config_config-linux.h,v 1.10 2025/11/20 08:36:23 kikadf Exp $
+$NetBSD: patch-third__party_nasm_config_config-linux.h,v 1.11 2025/12/11 09:13:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/nasm/config/config-linux.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- third_party/nasm/config/config-linux.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ third_party/nasm/config/config-linux.h
 @@ -209,7 +209,7 @@
  #define HAVE_DECL_STRSEP 1

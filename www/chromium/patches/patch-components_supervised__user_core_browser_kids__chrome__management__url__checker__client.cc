@@ -1,10 +1,10 @@
-$NetBSD: patch-components_supervised__user_core_browser_kids__chrome__management__url__checker__client.cc,v 1.6 2025/11/20 08:36:14 kikadf Exp $
+$NetBSD: patch-components_supervised__user_core_browser_kids__chrome__management__url__checker__client.cc,v 1.7 2025/12/11 09:13:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/browser/kids_chrome_management_url_checker_client.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- components/supervised_user/core/browser/kids_chrome_management_url_checker_client.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/supervised_user/core/browser/kids_chrome_management_url_checker_client.cc
 @@ -66,7 +66,7 @@ void OnResponse(
  }
