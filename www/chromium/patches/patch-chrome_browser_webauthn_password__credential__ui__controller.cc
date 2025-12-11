@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_webauthn_password__credential__ui__controller.cc,v 1.3 2025/11/20 08:36:11 kikadf Exp $
+$NetBSD: patch-chrome_browser_webauthn_password__credential__ui__controller.cc,v 1.4 2025/12/11 09:13:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/webauthn/password_credential_ui_controller.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/webauthn/password_credential_ui_controller.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/webauthn/password_credential_ui_controller.cc
 @@ -26,7 +26,7 @@ using content::WebContents;
  namespace {

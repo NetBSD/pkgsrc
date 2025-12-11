@@ -1,17 +1,17 @@
-$NetBSD: patch-mojo_core_embedder_features.h,v 1.10 2025/11/20 08:36:18 kikadf Exp $
+$NetBSD: patch-mojo_core_embedder_features.h,v 1.11 2025/12/11 09:13:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/core/embedder/features.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- mojo/core/embedder/features.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ mojo/core/embedder/features.h
-@@ -15,7 +15,7 @@ namespace mojo {
+@@ -14,7 +14,7 @@
+ namespace mojo {
  namespace core {
  
- #if BUILDFLAG(IS_POSIX) && !BUILDFLAG(MOJO_USE_APPLE_CHANNEL)
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
  COMPONENT_EXPORT(MOJO_CORE_EMBEDDER_FEATURES)
- BASE_DECLARE_FEATURE(kMojoLinuxChannelSharedMem);
+ BASE_DECLARE_FEATURE(kMojoUseEventFd);
  

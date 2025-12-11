@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_webauthn_remote__webauthn__extension__notifier.cc,v 1.10 2025/11/20 08:36:20 kikadf Exp $
+$NetBSD: patch-remoting_host_webauthn_remote__webauthn__extension__notifier.cc,v 1.11 2025/12/11 09:13:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/webauthn/remote_webauthn_extension_notifier.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- remoting/host/webauthn/remote_webauthn_extension_notifier.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ remoting/host/webauthn/remote_webauthn_extension_notifier.cc
 @@ -27,7 +27,7 @@
  #include "base/task/thread_pool.h"

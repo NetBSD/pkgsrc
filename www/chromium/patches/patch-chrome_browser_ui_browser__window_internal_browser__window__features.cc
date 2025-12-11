@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_browser__window_internal_browser__window__features.cc,v 1.2 2025/11/20 08:36:09 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_browser__window_internal_browser__window__features.cc,v 1.3 2025/12/11 09:13:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_window/internal/browser_window_features.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/ui/browser_window/internal/browser_window_features.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/ui/browser_window/internal/browser_window_features.cc
-@@ -133,7 +133,7 @@
+@@ -145,7 +145,7 @@
  #include "chrome/browser/ui/startup/default_browser_prompt/pin_infobar/pin_infobar_controller.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_browser__window_internal_browser__window__featu
  #include "chrome/browser/ui/views/session_restore_infobar/session_restore_infobar_controller.h"
  #endif
  
-@@ -374,7 +374,7 @@ void BrowserWindowFeatures::Init(Browser
+@@ -391,7 +391,7 @@ void BrowserWindowFeatures::Init(Browser
    browser_select_file_dialog_controller_ =
        std::make_unique<BrowserSelectFileDialogController>(profile);
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__override__impl.h,v 1.10 2025/11/20 08:36:11 kikadf Exp $
+$NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__override__impl.h,v 1.11 2025/12/11 09:13:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/test/os_integration_test_override_impl.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/web_applications/test/os_integration_test_override_impl.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/web_applications/test/os_integration_test_override_impl.h
 @@ -40,7 +40,7 @@ class ShellLinkItem;
  

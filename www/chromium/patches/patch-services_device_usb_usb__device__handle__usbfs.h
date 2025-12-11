@@ -1,12 +1,12 @@
-$NetBSD: patch-services_device_usb_usb__device__handle__usbfs.h,v 1.9 2025/11/20 08:36:20 kikadf Exp $
+$NetBSD: patch-services_device_usb_usb__device__handle__usbfs.h,v 1.10 2025/12/11 09:13:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/usb/usb_device_handle_usbfs.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- services/device/usb/usb_device_handle_usbfs.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ services/device/usb/usb_device_handle_usbfs.h
-@@ -19,7 +19,7 @@
+@@ -20,7 +20,7 @@
  #include "base/threading/sequence_bound.h"
  #include "services/device/usb/usb_device_handle.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-services_device_usb_usb__device__handle__usbfs.h,v 1.9 2025/11/20
  #include "base/containers/flat_set.h"
  #endif  // BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
  
-@@ -215,7 +215,7 @@ class UsbDeviceHandleUsbfs::BlockingTask
+@@ -216,7 +216,7 @@ class UsbDeviceHandleUsbfs::BlockingTask
    bool ClearHalt(uint8_t endpoint_address);
    void DiscardUrb(Transfer* transfer);
  
@@ -24,7 +24,7 @@ $NetBSD: patch-services_device_usb_usb__device__handle__usbfs.h,v 1.9 2025/11/20
    // Detach the interface from a kernel driver before ClaimInterface
    virtual bool DetachInterface(int interface_number,
                                 const CombinedInterfaceInfo& interfaceInfo);
-@@ -228,7 +228,7 @@ class UsbDeviceHandleUsbfs::BlockingTask
+@@ -229,7 +229,7 @@ class UsbDeviceHandleUsbfs::BlockingTask
    // Called when |fd_| is writable without blocking.
    void OnFileCanWriteWithoutBlocking();
  
@@ -33,7 +33,7 @@ $NetBSD: patch-services_device_usb_usb__device__handle__usbfs.h,v 1.9 2025/11/20
    // Called from |DetachInterface|.
    std::string GetKernelDriver(int interface_number) const;
  #endif  // BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
-@@ -240,7 +240,7 @@ class UsbDeviceHandleUsbfs::BlockingTask
+@@ -241,7 +241,7 @@ class UsbDeviceHandleUsbfs::BlockingTask
    std::unique_ptr<base::FileDescriptorWatcher::Controller> watch_controller_;
    SEQUENCE_CHECKER(sequence_checker_);
  

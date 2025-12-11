@@ -1,10 +1,10 @@
-$NetBSD: patch-media_capture_video_linux_fake__v4l2__impl.h,v 1.10 2025/11/20 08:36:17 kikadf Exp $
+$NetBSD: patch-media_capture_video_linux_fake__v4l2__impl.h,v 1.11 2025/12/11 09:13:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/linux/fake_v4l2_impl.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- media/capture/video/linux/fake_v4l2_impl.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ media/capture/video/linux/fake_v4l2_impl.h
 @@ -8,7 +8,13 @@
  #include <map>

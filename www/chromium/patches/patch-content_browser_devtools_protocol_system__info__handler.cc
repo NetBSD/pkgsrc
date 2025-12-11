@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_devtools_protocol_system__info__handler.cc,v 1.10 2025/11/20 08:36:15 kikadf Exp $
+$NetBSD: patch-content_browser_devtools_protocol_system__info__handler.cc,v 1.11 2025/12/11 09:13:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/devtools/protocol/system_info_handler.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- content/browser/devtools/protocol/system_info_handler.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ content/browser/devtools/protocol/system_info_handler.cc
 @@ -52,7 +52,7 @@ std::unique_ptr<SystemInfo::Size> GfxSiz
  // 1046598, and 1153667.

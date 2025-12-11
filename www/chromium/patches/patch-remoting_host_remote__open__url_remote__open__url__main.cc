@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_remote__open__url_remote__open__url__main.cc,v 1.8 2025/11/20 08:36:19 kikadf Exp $
+$NetBSD: patch-remoting_host_remote__open__url_remote__open__url__main.cc,v 1.9 2025/12/11 09:13:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/remote_open_url/remote_open_url_main.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- remoting/host/remote_open_url/remote_open_url_main.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ remoting/host/remote_open_url/remote_open_url_main.cc
 @@ -27,7 +27,7 @@
  #include "remoting/host/usage_stats_consent.h"

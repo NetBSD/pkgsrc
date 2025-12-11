@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__controller__factory.cc,v 1.10 2025/11/20 08:36:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__controller__factory.cc,v 1.11 2025/12/11 09:13:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc
-@@ -116,18 +116,18 @@
+@@ -115,18 +115,18 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -28,7 +28,7 @@ $NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__controller__factory.cc,v
  #include "chrome/browser/ui/webui/whats_new/whats_new_ui.h"
  #endif
  
-@@ -276,7 +276,7 @@ void ChromeWebUIControllerFactory::GetFa
+@@ -275,7 +275,7 @@ void ChromeWebUIControllerFactory::GetFa
      const std::vector<int>& desired_sizes_in_pixel,
      favicon_base::FaviconResultsCallback callback) const {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -37,21 +37,21 @@ $NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__controller__factory.cc,v
    if (page_url.SchemeIs(webapps::kIsolatedAppScheme)) {
      ReadIsolatedWebAppFaviconsFromDisk(profile, page_url, std::move(callback));
      return;
-@@ -411,7 +411,7 @@ base::RefCountedMemory* ChromeWebUIContr
+@@ -410,7 +410,7 @@ base::RefCountedMemory* ChromeWebUIContr
      return NewTabPageUI::GetFaviconResourceBytes(scale_factor);
    }
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   if (page_url.host_piece() == chrome::kChromeUIWhatsNewHost) {
+   if (page_url.host() == chrome::kChromeUIWhatsNewHost) {
      return WhatsNewUI::GetFaviconResourceBytes(scale_factor);
    }
-@@ -450,7 +450,7 @@ base::RefCountedMemory* ChromeWebUIContr
+@@ -449,7 +449,7 @@ base::RefCountedMemory* ChromeWebUIContr
    }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   if (page_url.host_piece() == commerce::kChromeUICompareHost) {
+   if (page_url.host() == commerce::kChromeUICompareHost) {
      return commerce::ProductSpecificationsUI::GetFaviconResourceBytes(
          scale_factor);

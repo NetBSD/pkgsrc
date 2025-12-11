@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__context__state.cc,v 1.10 2025/11/20 08:36:16 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__context__state.cc,v 1.11 2025/12/11 09:13:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_context_state.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- gpu/command_buffer/service/shared_context_state.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ gpu/command_buffer/service/shared_context_state.cc
 @@ -65,7 +65,7 @@
  #include "gpu/vulkan/vulkan_implementation.h"

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 1.9 2025/11/20 08:36:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 1.10 2025/12/11 09:13:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc
-@@ -179,7 +179,7 @@ bool IsWindowDragUsingSystemDragDropAllo
+@@ -181,7 +181,7 @@ bool IsWindowDragUsingSystemDragDropAllo
  
  void UpdateSystemDnDDragImage(TabDragContext* attached_context,
                                const gfx::ImageSkia& image) {
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 
    VLOG(1) << __func__ << " image size=" << image.size().ToString();
    aura::Window* root_window =
        attached_context->GetWidget()->GetNativeWindow()->GetRootWindow();
-@@ -391,7 +391,7 @@ TabDragController::Liveness TabDragContr
+@@ -393,7 +393,7 @@ TabDragController::Liveness TabDragContr
    //     synchronous on desktop Linux, so use that.
    // - ChromeOS Ash
    //     Releasing capture on Ash cancels gestures so avoid it.
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 
    ref->can_release_capture_ = false;
  #endif
    ref->start_point_in_screen_ =
-@@ -982,7 +982,7 @@ TabDragController::Liveness TabDragContr
+@@ -984,7 +984,7 @@ TabDragController::Liveness TabDragContr
        CHECK_EQ(SetCapture(target_context), Liveness::ALIVE);
      }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 
      // EndMoveLoop is going to snap the window back to its original location.
      // Hide it so users don't see this. Hiding a window in Linux aura causes
      // it to lose capture so skip it.
-@@ -2135,7 +2135,7 @@ void TabDragController::CompleteDrag() {
+@@ -2115,7 +2115,7 @@ void TabDragController::CompleteDrag() {
      }
  
      // If source window was maximized - maximize the new window as well.
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 
      // Keeping maximized state breaks snap to Grid on Windows when dragging
      // tabs from maximized windows. TODO:(crbug.com/727051) Explore doing this
      // for other desktop OS's. kMaximizedStateRetainedOnTabDrag in
-@@ -2551,7 +2551,7 @@ TabDragController::Liveness TabDragContr
+@@ -2531,7 +2531,7 @@ TabDragController::Liveness TabDragContr
      }
    }
  

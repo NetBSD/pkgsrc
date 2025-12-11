@@ -1,10 +1,10 @@
-$NetBSD: patch-content_utility_on__device__model_on__device__model__sandbox__init.cc,v 1.6 2025/11/20 08:36:16 kikadf Exp $
+$NetBSD: patch-content_utility_on__device__model_on__device__model__sandbox__init.cc,v 1.7 2025/12/11 09:13:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/on_device_model/on_device_model_sandbox_init.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- content/utility/on_device_model/on_device_model_sandbox_init.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ content/utility/on_device_model/on_device_model_sandbox_init.cc
 @@ -17,16 +17,20 @@
  #include "services/on_device_model/ml/gpu_blocklist.h"  // nogncheck

@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_renderer__host_navigation__transitions_navigation__entry__screenshot.cc,v 1.2 2025/11/20 08:36:15 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_navigation__transitions_navigation__entry__screenshot.cc,v 1.3 2025/12/11 09:13:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/navigation_transitions/navigation_entry_screenshot.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- content/browser/renderer_host/navigation_transitions/navigation_entry_screenshot.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ content/browser/renderer_host/navigation_transitions/navigation_entry_screenshot.cc
-@@ -26,7 +26,7 @@
+@@ -28,7 +28,7 @@
  #include "third_party/skia/include/core/SkBitmap.h"
  #include "ui/gfx/skia_span_util.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-content_browser_renderer__host_navigation__transitions_navigation
  #include <sys/mman.h>
  
  #ifndef MADV_POPULATE_WRITE
-@@ -77,7 +77,7 @@ void CompressNavigationScreenshotOnWorke
+@@ -73,7 +73,7 @@ void CompressNavigationScreenshotOnWorke
  #endif  // BUILDFLAG(IS_ANDROID)
  
  void AdviseBitmap(SkBitmap& bitmap) {

@@ -1,12 +1,12 @@
-$NetBSD: patch-device_gamepad_gamepad__provider.cc,v 1.10 2025/11/20 08:36:16 kikadf Exp $
+$NetBSD: patch-device_gamepad_gamepad__provider.cc,v 1.11 2025/12/11 09:13:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- device/gamepad/gamepad_provider.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- device/gamepad/gamepad_provider.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ device/gamepad/gamepad_provider.cc
-@@ -160,7 +160,7 @@ void GamepadProvider::Initialize(std::un
+@@ -201,7 +201,7 @@ void GamepadProvider::Initialize(std::un
  
    if (!polling_thread_)
      polling_thread_ = std::make_unique<base::Thread>("Gamepad polling thread");

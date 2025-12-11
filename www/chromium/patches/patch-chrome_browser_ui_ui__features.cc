@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_ui__features.cc,v 1.10 2025/11/20 08:36:09 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_ui__features.cc,v 1.11 2025/12/11 09:13:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/ui_features.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/ui/ui_features.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/ui/ui_features.cc
-@@ -38,7 +38,7 @@ BASE_FEATURE(kCloseOmniboxPopupOnInactiv
+@@ -39,7 +39,7 @@ BASE_FEATURE(kCloseOmniboxPopupOnInactiv
  BASE_FEATURE(kCreateNewTabGroupAppMenuTopLevel,
               base::FEATURE_DISABLED_BY_DEFAULT);
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_ui__features.cc,v 1.10 2025/11/20 08:36:09 kika
  // Enables the feature to remove the last confirmation dialog when relaunching
  // to update Chrome.
  BASE_FEATURE(kFewerUpdateConfirmations, base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -148,7 +148,7 @@ BASE_FEATURE_PARAM(int,
+@@ -170,7 +170,7 @@ BASE_FEATURE_PARAM(int,
                     "drop_target_hide_for_os_width",
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN)
                     32
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_ui__features.cc,v 1.10 2025/11/20 08:36:09 kika
                     50
  #else
                     0
-@@ -434,7 +434,7 @@ BASE_FEATURE(kViewsFirstRunDialog, base:
+@@ -471,7 +471,7 @@ BASE_FEATURE(kViewsFirstRunDialog, base:
  BASE_FEATURE(kViewsJSAppModalDialog, base::FEATURE_DISABLED_BY_DEFAULT);
  #endif
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_ui__features.cc,v 1.10 2025/11/20 08:36:09 kika
  BASE_FEATURE(kUsePortalAccentColor, base::FEATURE_ENABLED_BY_DEFAULT);
  #endif
  
-@@ -634,7 +634,7 @@ bool IsBookmarkTabGroupConversionEnabled
+@@ -677,7 +677,7 @@ bool IsBookmarkTabGroupConversionEnabled
    return base::FeatureList::IsEnabled(kBookmarkTabGroupConversion);
  }
  

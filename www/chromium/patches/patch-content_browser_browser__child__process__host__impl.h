@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_browser__child__process__host__impl.h,v 1.10 2025/11/20 08:36:14 kikadf Exp $
+$NetBSD: patch-content_browser_browser__child__process__host__impl.h,v 1.11 2025/12/11 09:13:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/browser_child_process_host_impl.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- content/browser/browser_child_process_host_impl.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ content/browser/browser_child_process_host_impl.h
 @@ -36,7 +36,7 @@
  #include "base/win/object_watcher.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-content_browser_browser__child__process__host__impl.h,v 1.10 2025
  #include "content/browser/child_thread_type_switcher_linux.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
-@@ -276,7 +276,7 @@ class BrowserChildProcessHostImpl
+@@ -273,7 +273,7 @@ class BrowserChildProcessHostImpl
    std::unique_ptr<tracing::SystemTracingService> system_tracing_service_;
  #endif
  

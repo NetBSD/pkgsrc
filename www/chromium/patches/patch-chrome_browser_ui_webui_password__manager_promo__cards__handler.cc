@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_password__manager_promo__cards__handler.cc,v 1.10 2025/11/20 08:36:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_password__manager_promo__cards__handler.cc,v 1.11 2025/12/11 09:13:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/password_manager/promo_cards_handler.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/ui/webui/password_manager/promo_cards_handler.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/ui/webui/password_manager/promo_cards_handler.cc
 @@ -28,7 +28,7 @@
  #include "chrome/browser/ui/webui/password_manager/promo_cards/web_password_manager_promo.h"
@@ -12,15 +12,33 @@ $NetBSD: patch-chrome_browser_ui_webui_password__manager_promo__cards__handler.c
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/browser_process.h"
  #include "chrome/browser/ui/webui/password_manager/promo_cards/relaunch_chrome_promo.h"
- #endif
- 
-@@ -71,7 +71,7 @@ std::vector<std::unique_ptr<PasswordProm
+ #include "components/os_crypt/async/browser/os_crypt_async.h"
+@@ -74,7 +74,7 @@ PromoCardsHandler::PromoCardsHandler(Pro
            .get()));
  #endif
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   promo_cards.push_back(
-       std::make_unique<RelaunchChromePromo>(profile->GetPrefs()));
- #endif
+   auto relaunch_promo =
+       std::make_unique<RelaunchChromePromo>(profile->GetPrefs());
+   relaunch_chrome_promo_ = relaunch_promo.get();
+@@ -114,7 +114,7 @@ void PromoCardsHandler::HandleGetAvailab
+   CHECK_EQ(1U, args.size());
+   const base::Value& callback_id = args[0];
+ 
+-#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   if (relaunch_chrome_promo_ &&
+       !relaunch_chrome_promo_->is_encryption_available().has_value()) {
+     g_browser_process->os_crypt_async()->GetInstance(
+@@ -177,7 +177,7 @@ PasswordPromoCardBase* PromoCardsHandler
+   return promo_to_show;
+ }
+ 
+-#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ void PromoCardsHandler::OnEncryptorReceived(
+     base::Value callback_id,
+     os_crypt_async::Encryptor encryptor) {

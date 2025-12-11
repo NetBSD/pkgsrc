@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_vulkan_vulkan__image.h,v 1.10 2025/11/20 08:36:17 kikadf Exp $
+$NetBSD: patch-gpu_vulkan_vulkan__image.h,v 1.11 2025/12/11 09:13:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/vulkan/vulkan_image.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- gpu/vulkan/vulkan_image.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ gpu/vulkan/vulkan_image.h
 @@ -86,7 +86,7 @@ class COMPONENT_EXPORT(VULKAN) VulkanIma
        VkImageUsageFlags usage,

@@ -1,10 +1,10 @@
-$NetBSD: patch-services_shape__detection_shape__detection__sandbox__hook.h,v 1.6 2025/11/20 08:36:21 kikadf Exp $
+$NetBSD: patch-services_shape__detection_shape__detection__sandbox__hook.h,v 1.7 2025/12/11 09:13:43 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/shape_detection/shape_detection_sandbox_hook.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- services/shape_detection/shape_detection_sandbox_hook.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ services/shape_detection/shape_detection_sandbox_hook.h
 @@ -5,7 +5,13 @@
  #ifndef SERVICES_SHAPE_DETECTION_SHAPE_DETECTION_SANDBOX_HOOK_H_

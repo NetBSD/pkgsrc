@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_opaque__browser__frame__view.h,v 1.10 2025/11/20 08:36:09 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_opaque__browser__frame__view.h,v 1.11 2025/12/11 09:13:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/opaque_browser_frame_view.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/ui/views/frame/opaque_browser_frame_view.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/ui/views/frame/opaque_browser_frame_view.h
 @@ -109,7 +109,7 @@ class OpaqueBrowserFrameView : public Br
    FrameButtonStyle GetFrameButtonStyle() const override;
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_opaque__browser__frame__view.h,v 1.
    bool IsTiled() const override;
  #endif
    int WebAppButtonHeight() const override;
-@@ -229,7 +229,7 @@ class OpaqueBrowserFrameView : public Br
+@@ -232,7 +232,7 @@ class OpaqueBrowserFrameView : public Br
    // Background painter for the window frame.
    std::unique_ptr<views::FrameBackground> frame_background_;
  

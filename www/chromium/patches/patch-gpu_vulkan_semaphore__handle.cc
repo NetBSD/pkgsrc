@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_vulkan_semaphore__handle.cc,v 1.10 2025/11/20 08:36:17 kikadf Exp $
+$NetBSD: patch-gpu_vulkan_semaphore__handle.cc,v 1.11 2025/12/11 09:13:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/vulkan/semaphore_handle.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- gpu/vulkan/semaphore_handle.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ gpu/vulkan/semaphore_handle.cc
 @@ -39,7 +39,7 @@ SemaphoreHandle::SemaphoreHandle(gfx::Gp
    // https://fuchsia.dev/reference/fidl/fuchsia.ui.scenic.

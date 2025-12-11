@@ -1,10 +1,10 @@
-$NetBSD: patch-printing_backend_cups__weak__functions.h,v 1.6 2025/11/20 08:36:19 kikadf Exp $
+$NetBSD: patch-printing_backend_cups__weak__functions.h,v 1.7 2025/12/11 09:13:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/backend/cups_weak_functions.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- printing/backend/cups_weak_functions.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ printing/backend/cups_weak_functions.h
 @@ -6,7 +6,7 @@
  

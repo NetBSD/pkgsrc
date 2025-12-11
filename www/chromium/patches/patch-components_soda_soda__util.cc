@@ -1,10 +1,10 @@
-$NetBSD: patch-components_soda_soda__util.cc,v 1.10 2025/11/20 08:36:14 kikadf Exp $
+$NetBSD: patch-components_soda_soda__util.cc,v 1.11 2025/12/11 09:13:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/soda/soda_util.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- components/soda/soda_util.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/soda/soda_util.cc
 @@ -23,7 +23,7 @@
  #include "base/win/windows_version.h"
@@ -24,8 +24,8 @@ $NetBSD: patch-components_soda_soda__util.cc,v 1.10 2025/11/20 08:36:14 kikadf E
  bool IsSupportedLinux() {
  #if defined(ARCH_CPU_X86_FAMILY)
    // Check if the CPU has the required instruction set to run the Speech
-@@ -70,7 +70,7 @@ bool IsSupportedWin() {
- bool IsOnDeviceSpeechRecognitionSupported() {
+@@ -73,7 +73,7 @@ bool IsOnDeviceSpeechRecognitionSupporte
+   // support Gemini Nano.
  #if BUILDFLAG(IS_CHROMEOS)
    return IsSupportedChromeOS();
 -#elif BUILDFLAG(IS_LINUX)

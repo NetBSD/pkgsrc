@@ -1,21 +1,12 @@
-$NetBSD: patch-services_device_public_cpp_device__features.cc,v 1.9 2025/11/20 08:36:20 kikadf Exp $
+$NetBSD: patch-services_device_public_cpp_device__features.cc,v 1.10 2025/12/11 09:13:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/public/cpp/device_features.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- services/device/public/cpp/device_features.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ services/device/public/cpp/device_features.cc
-@@ -81,7 +81,7 @@ BASE_FEATURE(kBatteryStatusManagerBroadc
- // Modifies the internal allowlist behavior that enables privileged extensions
- // to bypass the HID blocklist when accessing FIDO devices. When enabled,
- // privileged extensions can access non-FIDO interfaces on known security keys.
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- BASE_FEATURE(kSecurityKeyHidInterfacesAreFido,
-              base::FEATURE_ENABLED_BY_DEFAULT);
- #else
-@@ -130,7 +130,7 @@ bool IsOsLevelGeolocationPermissionSuppo
+@@ -125,7 +125,7 @@ bool IsOsLevelGeolocationPermissionSuppo
  // a USB interface is busy.
  #if BUILDFLAG(IS_ANDROID)
  BASE_FEATURE(kAutomaticUsbDetach, base::FEATURE_ENABLED_BY_DEFAULT);

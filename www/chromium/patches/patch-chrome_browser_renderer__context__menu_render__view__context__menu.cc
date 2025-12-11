@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_renderer__context__menu_render__view__context__menu.cc,v 1.2 2025/11/20 08:36:08 kikadf Exp $
+$NetBSD: patch-chrome_browser_renderer__context__menu_render__view__context__menu.cc,v 1.3 2025/12/11 09:13:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/renderer_context_menu/render_view_context_menu.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/renderer_context_menu/render_view_context_menu.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/renderer_context_menu/render_view_context_menu.cc
-@@ -243,7 +243,7 @@
+@@ -248,7 +248,7 @@
  #include "url/origin.h"
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_renderer__context__menu_render__view__context__men
  #include "components/webapps/isolated_web_apps/scheme.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -4985,7 +4985,7 @@ void RenderViewContextMenu::OpenLinkInSp
+@@ -5024,7 +5024,7 @@ void RenderViewContextMenu::OpenLinkInSp
  #endif  // !BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

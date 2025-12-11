@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_feedback_system__logs_about__system__logs__fetcher.cc,v 1.9 2025/11/20 08:36:07 kikadf Exp $
+$NetBSD: patch-chrome_browser_feedback_system__logs_about__system__logs__fetcher.cc,v 1.10 2025/12/11 09:13:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/feedback/system_logs/about_system_logs_fetcher.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/feedback/system_logs/about_system_logs_fetcher.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/feedback/system_logs/about_system_logs_fetcher.cc
 @@ -38,7 +38,7 @@
  #include "chrome/browser/ash/system_logs/ui_hierarchy_log_source.h"

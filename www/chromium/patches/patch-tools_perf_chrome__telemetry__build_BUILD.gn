@@ -1,10 +1,10 @@
-$NetBSD: patch-tools_perf_chrome__telemetry__build_BUILD.gn,v 1.10 2025/11/20 08:36:24 kikadf Exp $
+$NetBSD: patch-tools_perf_chrome__telemetry__build_BUILD.gn,v 1.11 2025/12/11 09:13:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/perf/chrome_telemetry_build/BUILD.gn.orig	2025-11-14 20:31:45.000000000 +0000
+--- tools/perf/chrome_telemetry_build/BUILD.gn.orig	2025-11-19 21:40:05.000000000 +0000
 +++ tools/perf/chrome_telemetry_build/BUILD.gn
 @@ -56,7 +56,7 @@ group("telemetry_chrome_test") {
      data_deps += [ "//chrome:reorder_imports" ]

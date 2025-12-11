@@ -1,10 +1,10 @@
-$NetBSD: patch-build_config_gcc_BUILD.gn,v 1.9 2025/11/20 08:36:05 kikadf Exp $
+$NetBSD: patch-build_config_gcc_BUILD.gn,v 1.10 2025/12/11 09:13:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/gcc/BUILD.gn.orig	2025-11-14 20:31:45.000000000 +0000
+--- build/config/gcc/BUILD.gn.orig	2025-11-19 21:40:05.000000000 +0000
 +++ build/config/gcc/BUILD.gn
 @@ -32,7 +32,9 @@ declare_args() {
  # See http://gcc.gnu.org/wiki/Visibility

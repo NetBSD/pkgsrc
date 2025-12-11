@@ -1,10 +1,10 @@
-$NetBSD: patch-components_policy_core_browser_url__blocklist__manager.cc,v 1.8 2025/11/20 08:36:13 kikadf Exp $
+$NetBSD: patch-components_policy_core_browser_url__blocklist__manager.cc,v 1.9 2025/12/11 09:13:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/browser/url_blocklist_manager.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- components/policy/core/browser/url_blocklist_manager.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/policy/core/browser/url_blocklist_manager.cc
 @@ -377,7 +377,7 @@ void URLBlocklistManager::RegisterProfil
        policy_prefs::kSafeSitesFilterBehavior,

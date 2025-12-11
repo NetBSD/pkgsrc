@@ -1,10 +1,10 @@
-$NetBSD: patch-base_profiler_sampling__profiler__thread__token.h,v 1.10 2025/11/20 08:36:04 kikadf Exp $
+$NetBSD: patch-base_profiler_sampling__profiler__thread__token.h,v 1.11 2025/12/11 09:13:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/profiler/sampling_profiler_thread_token.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- base/profiler/sampling_profiler_thread_token.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ base/profiler/sampling_profiler_thread_token.h
 @@ -13,7 +13,7 @@
  
