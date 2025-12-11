@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7127 2025/12/11 09:51:48 kre Exp $
+$NetBSD: CHANGES-2025,v 1.7128 2025/12/11 10:10:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10358,3 +10358,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-certbot-dns-sakuracloud to 5.2.2 [adam 2025-12-11]
 	Updated security/py-certbot-nginx to 5.2.2 [adam 2025-12-11]
 	Updated shells/bash to 5.3.9 [kre 2025-12-11]
+	Updated www/py-httpx-socks to 0.11.0 [adam 2025-12-11]
+	Updated graphics/py-exifread to 3.5.1 [adam 2025-12-11]
