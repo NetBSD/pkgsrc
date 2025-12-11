@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2025/04/14 13:14:03 adam Exp $
+# $NetBSD: Makefile,v 1.44 2025/12/11 15:13:51 adam Exp $
 
-DISTNAME=	autobahn-24.4.2
+DISTNAME=	autobahn-25.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/autobahn/}
 
@@ -11,9 +10,14 @@ HOMEPAGE=	https://github.com/crossbario/autobahn-python
 COMMENT=	WebSocket client and server library, WAMP real-time framework
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-txaio>=21.2.1:../../devel/py-txaio
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-cbor2>=5.2.0:../../devel/py-cbor2
+DEPENDS+=	${PYPKGPREFIX}-cffi>=2.0.0:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-hyperlink>=21.0.0:../../www/py-hyperlink
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-msgpack>=1.0.2:../../devel/py-msgpack
+DEPENDS+=	${PYPKGPREFIX}-txaio>=25.12.2:../../devel/py-txaio
+DEPENDS+=	${PYPKGPREFIX}-ujson>=4.0.2:../../textproc/py-ujson
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=1.3.0:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-nacl>=0:../../security/py-nacl
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.8.6:../../devel/py-test
@@ -21,12 +25,14 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-twisted>=0:../../net/py-twisted
 
 BUILDLINK_TRANSFORM+=	rm:-march=native
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} wamp wamp-${PYVERSSUFFIX}
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} xbrnetwork xbrnetwork-${PYVERSSUFFIX}
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} xbrnetwork-ui xbrnetwork-ui-${PYVERSSUFFIX}
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
-.include "../../lang/python/wheel.mk"
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} wamp wamp-${PYVERSSUFFIX} || ${TRUE}
+	#cd ${DESTDIR}${PREFIX}/bin && ${MV} xbrnetwork xbrnetwork-${PYVERSSUFFIX}
+	#cd ${DESTDIR}${PREFIX}/bin && ${MV} xbrnetwork-ui xbrnetwork-ui-${PYVERSSUFFIX}
+
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 .include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,3 +1,1 @@
 bin/wamp @PREFIX@/bin/wamp-@PYVERSSUFFIX@
-bin/xbrnetwork @PREFIX@/bin/xbrnetwork-@PYVERSSUFFIX@
-bin/xbrnetwork-ui @PREFIX@/bin/xbrnetwork-ui-@PYVERSSUFFIX@

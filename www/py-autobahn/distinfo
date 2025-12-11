@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.33 2024/10/25 10:55:14 adam Exp $
+$NetBSD: distinfo,v 1.34 2025/12/11 15:13:51 adam Exp $
 
-BLAKE2s (autobahn-24.4.2.tar.gz) = 32a5751c7b9aae0ca0501c893448140ec124d5760a7303d47d04aa1595a3c363
-SHA512 (autobahn-24.4.2.tar.gz) = 2caffa9a49e3661e665a4e2641b96ff48581264654cb35ebc2e8a67620ce81bd330895bb12a098488676ab74c8275e601f45357840ca074c3c6a3d7247e563e9
-Size (autobahn-24.4.2.tar.gz) = 482700 bytes
+BLAKE2s (autobahn-25.12.1.tar.gz) = de1c728d37af706b71f559b6da2cd665af6f166eb6a7ec0c37df69fd4f68e042
+SHA512 (autobahn-25.12.1.tar.gz) = bc3f58c2bbacaa35f302170ae0fdadcd6f47f12c32509b35ed72ed7afdf82dd786928ad2e7fa823b52c151f99b895e96c9bc2e6f5f7741dca85e9fe4a72f4c8a
+Size (autobahn-25.12.1.tar.gz) = 13851285 bytes
