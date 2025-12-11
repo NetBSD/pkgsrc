@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/12/23 01:42:39 zafer Exp $
+# $NetBSD: Makefile,v 1.13 2025/12/11 09:28:44 wiz Exp $
 
 DISTNAME=	fio-3.19
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	benchmarks
 MASTER_SITES=	https://brick.kernel.dk/snaps/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://git.kernel.dk/?p=fio.git;a=summary
+HOMEPAGE=	https://git.kernel.org/pub/scm/linux/kernel/git/axboe/fio.git/
 COMMENT=	Flexible IO Tester
 LICENSE=	gnu-gpl-v2
 
