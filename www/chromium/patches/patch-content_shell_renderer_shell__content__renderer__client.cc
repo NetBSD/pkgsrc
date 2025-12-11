@@ -1,10 +1,10 @@
-$NetBSD: patch-content_shell_renderer_shell__content__renderer__client.cc,v 1.10 2025/11/20 08:36:16 kikadf Exp $
+$NetBSD: patch-content_shell_renderer_shell__content__renderer__client.cc,v 1.11 2025/12/11 09:13:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/shell/renderer/shell_content_renderer_client.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- content/shell/renderer/shell_content_renderer_client.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ content/shell/renderer/shell_content_renderer_client.cc
 @@ -50,7 +50,7 @@
  #include "media/base/media_switches.h"

@@ -1,12 +1,12 @@
-$NetBSD: patch-services_network_public_cpp_BUILD.gn,v 1.10 2025/11/20 08:36:20 kikadf Exp $
+$NetBSD: patch-services_network_public_cpp_BUILD.gn,v 1.11 2025/12/11 09:13:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/public/cpp/BUILD.gn.orig	2025-11-14 20:31:45.000000000 +0000
+--- services/network/public/cpp/BUILD.gn.orig	2025-11-19 21:40:05.000000000 +0000
 +++ services/network/public/cpp/BUILD.gn
-@@ -699,7 +699,7 @@ component("cpp_base") {
+@@ -721,7 +721,7 @@ component("cpp_base") {
      sources += [ "transferable_directory_fuchsia.cc" ]
    }
  
@@ -15,7 +15,7 @@ $NetBSD: patch-services_network_public_cpp_BUILD.gn,v 1.10 2025/11/20 08:36:20 k
      sources += [
        "network_interface_change_listener_mojom_traits.cc",
        "network_interface_change_listener_mojom_traits.h",
-@@ -826,7 +826,7 @@ source_set("tests") {
+@@ -850,7 +850,7 @@ source_set("tests") {
      "x_frame_options_parser_unittest.cc",
    ]
  

@@ -1,13 +1,13 @@
-$NetBSD: patch-services_network_public_mojom_BUILD.gn,v 1.10 2025/11/20 08:36:20 kikadf Exp $
+$NetBSD: patch-services_network_public_mojom_BUILD.gn,v 1.11 2025/12/11 09:13:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/public/mojom/BUILD.gn.orig	2025-11-14 20:31:45.000000000 +0000
+--- services/network/public/mojom/BUILD.gn.orig	2025-11-19 21:40:05.000000000 +0000
 +++ services/network/public/mojom/BUILD.gn
-@@ -690,11 +690,11 @@ mojom("url_loader_base") {
-   }
+@@ -719,11 +719,11 @@ mojom("url_loader_base") {
+   ]
  
    enabled_features = []
 -  if (is_android || is_chromeos || is_linux) {
@@ -20,7 +20,7 @@ $NetBSD: patch-services_network_public_mojom_BUILD.gn,v 1.10 2025/11/20 08:36:20
      # TODO(crbug.com/40263697): Remove this once is_linux in the mojom IDL does
      # not include lacros.
      enabled_features += [ "use_network_interface_change_listener" ]
-@@ -1007,7 +1007,7 @@ mojom("url_loader_base") {
+@@ -1044,7 +1044,7 @@ mojom("url_loader_base") {
      },
    ]
  
@@ -29,7 +29,7 @@ $NetBSD: patch-services_network_public_mojom_BUILD.gn,v 1.10 2025/11/20 08:36:20
      cpp_typemaps += [
        {
          types = [
-@@ -1797,7 +1797,7 @@ mojom("mojom") {
+@@ -1830,7 +1830,7 @@ mojom("mojom") {
      }
    }
  

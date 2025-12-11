@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_ozone_platform_x11_x11__window.cc,v 1.10 2025/11/20 08:36:25 kikadf Exp $
+$NetBSD: patch-ui_ozone_platform_x11_x11__window.cc,v 1.11 2025/12/11 09:13:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/x11/x11_window.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- ui/ozone/platform/x11/x11_window.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ ui/ozone/platform/x11/x11_window.cc
 @@ -1503,7 +1503,7 @@ void X11Window::OnXWindowStateChanged() 
    WindowTiledEdges tiled_state = GetTiledState();

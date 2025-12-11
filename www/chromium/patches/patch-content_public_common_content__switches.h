@@ -1,10 +1,10 @@
-$NetBSD: patch-content_public_common_content__switches.h,v 1.10 2025/11/20 08:36:15 kikadf Exp $
+$NetBSD: patch-content_public_common_content__switches.h,v 1.11 2025/12/11 09:13:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/common/content_switches.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- content/public/common/content_switches.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ content/public/common/content_switches.h
 @@ -108,6 +108,7 @@ CONTENT_EXPORT extern const char kEnable
  CONTENT_EXPORT extern const char kEnableIsolatedWebAppsInRenderer[];
@@ -14,7 +14,7 @@ $NetBSD: patch-content_public_common_content__switches.h,v 1.10 2025/11/20 08:36
  CONTENT_EXPORT extern const char kEnableNetworkInformationDownlinkMax[];
  CONTENT_EXPORT extern const char kEnableCanvas2DLayers[];
  CONTENT_EXPORT extern const char kEnablePluginPlaceholderTesting[];
-@@ -256,7 +257,7 @@ CONTENT_EXPORT extern const char kRender
+@@ -259,7 +260,7 @@ CONTENT_EXPORT extern const char kRender
  CONTENT_EXPORT extern const char kPreventResizingContentsForTesting[];
  #endif
  

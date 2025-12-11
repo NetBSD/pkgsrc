@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_enterprise_connectors_common.cc,v 1.10 2025/11/20 08:36:07 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_connectors_common.cc,v 1.11 2025/12/11 09:13:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/common.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/enterprise/connectors/common.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/enterprise/connectors/common.cc
-@@ -20,7 +20,7 @@
+@@ -19,7 +19,7 @@
  #include "components/user_manager/user.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_enterprise_connectors_common.cc,v 1.10 2025/11/20 
  #include "chrome/browser/enterprise/signin/enterprise_signin_prefs.h"
  #include "components/prefs/pref_service.h"
  #endif
-@@ -306,7 +306,7 @@ std::string GetProfileEmail(Profile* pro
+@@ -312,7 +312,7 @@ std::string GetProfileEmail(Profile* pro
    std::string email =
        GetProfileEmail(IdentityManagerFactory::GetForProfile(profile));
  

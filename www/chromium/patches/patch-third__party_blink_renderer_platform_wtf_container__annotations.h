@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_wtf_container__annotations.h,v 1.10 2025/11/20 08:36:22 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_wtf_container__annotations.h,v 1.11 2025/12/11 09:13:44 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/wtf/container_annotations.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- third_party/blink/renderer/platform/wtf/container_annotations.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ third_party/blink/renderer/platform/wtf/container_annotations.h
 @@ -11,7 +11,7 @@
  // TODO(ochang): Remove the ARCH_CPU_X86_64 condition to enable this for X86

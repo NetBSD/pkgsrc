@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_extensions_BUILD.gn,v 1.10 2025/11/20 08:36:07 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_BUILD.gn,v 1.11 2025/12/11 09:13:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/BUILD.gn.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/extensions/BUILD.gn.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/extensions/BUILD.gn
-@@ -1518,6 +1518,10 @@ source_set("extensions") {
+@@ -1516,6 +1516,10 @@ source_set("extensions") {
        deps += [ "//chrome/services/printing/public/mojom" ]
      }
  

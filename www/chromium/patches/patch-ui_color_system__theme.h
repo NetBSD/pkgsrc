@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_color_system__theme.h,v 1.10 2025/11/20 08:36:25 kikadf Exp $
+$NetBSD: patch-ui_color_system__theme.h,v 1.11 2025/12/11 09:13:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/color/system_theme.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- ui/color/system_theme.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ ui/color/system_theme.h
 @@ -15,7 +15,7 @@ namespace ui {
  enum class SystemTheme {

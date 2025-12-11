@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_ui__features.h,v 1.10 2025/11/20 08:36:09 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_ui__features.h,v 1.11 2025/12/11 09:13:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/ui_features.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/ui/ui_features.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/ui/ui_features.h
 @@ -30,7 +30,7 @@ BASE_DECLARE_FEATURE(kCloseOmniboxPopupO
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_ui__features.h,v 1.10 2025/11/20 08:36:09 kikad
  BASE_DECLARE_FEATURE(kFewerUpdateConfirmations);
  #endif
  
-@@ -63,7 +63,7 @@ enum class PdfInfoBarTrigger { kPdfLoad 
+@@ -61,7 +61,7 @@ enum class PdfInfoBarTrigger { kPdfLoad 
  BASE_DECLARE_FEATURE_PARAM(PdfInfoBarTrigger, kPdfInfoBarTrigger);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_ui__features.h,v 1.10 2025/11/20 08:36:09 kikad
  // When enabled, user may see the session restore UI flow.
  BASE_DECLARE_FEATURE(kSessionRestoreInfobar);
  
-@@ -345,7 +345,7 @@ BASE_DECLARE_FEATURE(kViewsFirstRunDialo
+@@ -366,7 +366,7 @@ BASE_DECLARE_FEATURE(kViewsFirstRunDialo
  BASE_DECLARE_FEATURE(kViewsJSAppModalDialog);
  #endif
  

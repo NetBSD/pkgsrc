@@ -1,10 +1,10 @@
-$NetBSD: patch-extensions_common_api___permission__features.json,v 1.10 2025/11/20 08:36:16 kikadf Exp $
+$NetBSD: patch-extensions_common_api___permission__features.json,v 1.11 2025/12/11 09:13:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/common/api/_permission_features.json.orig	2025-11-14 20:31:45.000000000 +0000
+--- extensions/common/api/_permission_features.json.orig	2025-11-19 21:40:05.000000000 +0000
 +++ extensions/common/api/_permission_features.json
 @@ -61,7 +61,7 @@
      "channel": "stable",
@@ -107,7 +107,7 @@ $NetBSD: patch-extensions_common_api___permission__features.json,v 1.10 2025/11/
      "allowlist": [
        "0DE0F05680A4A056BCEC864ED8DDA84296F82B40",  // http://crbug.com/434651
        "1C93BD3CF875F4A73C0B2A163BB8FBDA8B8B3D80",  // http://crbug.com/293683
-@@ -490,7 +490,7 @@
+@@ -484,7 +484,7 @@
      "channel": "stable",
      "extension_types": ["extension", "legacy_packaged_app", "platform_app"],
      // "desktop_android" is not supported.
@@ -116,7 +116,7 @@ $NetBSD: patch-extensions_common_api___permission__features.json,v 1.10 2025/11/
      "allowlist": [
        // DO NOT ADD ANY MORE ENTRIES HERE.
        // networkingPrivate is being migrated to networking.onc.
-@@ -570,7 +570,7 @@
+@@ -564,7 +564,7 @@
      "channel": "stable",
      "extension_types": ["extension", "platform_app" ],
      // "desktop_android" is not supported.
@@ -125,7 +125,7 @@ $NetBSD: patch-extensions_common_api___permission__features.json,v 1.10 2025/11/
    },
    // Note: runtime is not actually a permission, but some systems check these
    // values to verify restrictions.
-@@ -582,13 +582,13 @@
+@@ -576,13 +576,13 @@
      "channel": "stable",
      "extension_types": ["platform_app"],
      // "desktop_android" is not supported.
@@ -141,7 +141,7 @@ $NetBSD: patch-extensions_common_api___permission__features.json,v 1.10 2025/11/
    },
    "storage": [
      {
-@@ -678,13 +678,13 @@
+@@ -672,13 +672,13 @@
        "channel": "stable",
        "extension_types": ["extension", "legacy_packaged_app", "platform_app"],
        // "desktop_android" is not supported.
@@ -157,7 +157,7 @@ $NetBSD: patch-extensions_common_api___permission__features.json,v 1.10 2025/11/
        "allowlist": ["B44D08FD98F1523ED5837D78D0A606EA9D6206E5"]  // Web Store
      }
    ],
-@@ -693,13 +693,13 @@
+@@ -687,13 +687,13 @@
        "channel": "stable",
        "extension_types": ["extension", "legacy_packaged_app", "platform_app"],
        // "desktop_android" is not supported.
@@ -173,16 +173,16 @@ $NetBSD: patch-extensions_common_api___permission__features.json,v 1.10 2025/11/
        "allowlist": ["B44D08FD98F1523ED5837D78D0A606EA9D6206E5"]  // Web Store
      }
    ],
-@@ -727,7 +727,7 @@
-       "channel": "stable",
-       "extension_types": ["platform_app"],
-       // "desktop_android" is not supported.
--      "platforms": ["chromeos", "linux", "mac", "win"]
-+      "platforms": ["chromeos", "linux", "mac", "win", "openbsd", "freebsd", "netbsd"]
-     },
+@@ -720,7 +720,7 @@
+     "channel": "stable",
+     "extension_types": ["platform_app"],
+     // "desktop_android" is not supported.
+-    "platforms": ["chromeos", "linux", "mac", "win"]
++    "platforms": ["chromeos", "linux", "mac", "win", "openbsd", "freebsd", "netbsd"]
+   },
+   "usbDevices": [
      {
-       "channel": "dev",
-@@ -813,7 +813,7 @@
+@@ -788,7 +788,7 @@
      "channel": "stable",
      "extension_types": ["platform_app"],
      // "desktop_android" is not supported.

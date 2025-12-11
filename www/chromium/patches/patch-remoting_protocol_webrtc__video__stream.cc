@@ -1,12 +1,12 @@
-$NetBSD: patch-remoting_protocol_webrtc__video__stream.cc,v 1.10 2025/11/20 08:36:20 kikadf Exp $
+$NetBSD: patch-remoting_protocol_webrtc__video__stream.cc,v 1.11 2025/12/11 09:13:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/protocol/webrtc_video_stream.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- remoting/protocol/webrtc_video_stream.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ remoting/protocol/webrtc_video_stream.cc
-@@ -271,7 +271,7 @@ WebrtcVideoStream::WebrtcVideoStream(con
+@@ -276,7 +276,7 @@ WebrtcVideoStream::WebrtcVideoStream(con
      : session_options_(session_options) {
  // TODO(joedow): Dig into the threading model on other platforms to see if they
  // can also be updated to run on a dedicated thread.

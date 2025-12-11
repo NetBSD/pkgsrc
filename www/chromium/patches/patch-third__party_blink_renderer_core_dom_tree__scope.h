@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_core_dom_tree__scope.h,v 1.3 2025/11/20 08:36:21 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_core_dom_tree__scope.h,v 1.4 2025/12/11 09:13:43 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/dom/tree_scope.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- third_party/blink/renderer/core/dom/tree_scope.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ third_party/blink/renderer/core/dom/tree_scope.h
 @@ -28,6 +28,7 @@
  #define THIRD_PARTY_BLINK_RENDERER_CORE_DOM_TREE_SCOPE_H_

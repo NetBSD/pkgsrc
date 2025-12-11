@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_views_data__sharing_collaboration__controller__delegate__desktop.cc,v 1.2 2025/11/20 08:36:09 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_data__sharing_collaboration__controller__delegate__desktop.cc,v 1.3 2025/12/11 09:13:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/data_sharing/collaboration_controller_delegate_desktop.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/ui/views/data_sharing/collaboration_controller_delegate_desktop.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/ui/views/data_sharing/collaboration_controller_delegate_desktop.cc
-@@ -91,7 +91,7 @@ DialogText GetPromptDialogTextFromStatus
+@@ -94,7 +94,7 @@ DialogText GetPromptDialogTextFromStatus
        break;
    }
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_views_data__sharing_collaboration__controller__
    if (base::FeatureList::IsEnabled(
            syncer::kReplaceSyncPromosWithSignInPromos) &&
        status.signin_status != collaboration::SigninStatus::kSigninDisabled) {
-@@ -404,7 +404,7 @@ void CollaborationControllerDelegateDesk
+@@ -421,7 +421,7 @@ void CollaborationControllerDelegateDesk
        chrome::ShowBrowserModal(browser_, std::move(dialog_model));
  }
  
@@ -24,16 +24,25 @@ $NetBSD: patch-chrome_browser_ui_views_data__sharing_collaboration__controller__
  void CollaborationControllerDelegateDesktop::
      MaybeShowSignInUiForHistorySyncOptin() {
    collaboration::ServiceStatus status = GetServiceStatus();
-@@ -516,7 +516,7 @@ void CollaborationControllerDelegateDesk
-                 .SetLabel(dialog_text.ok_button_text)
-                 .SetEnabled(true));
+@@ -510,7 +510,7 @@ void CollaborationControllerDelegateDesk
+   }
+ 
+   AccountInfo account_for_promo =
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+       signin_ui_util::GetSingleAccountForPromos(
+           IdentityManagerFactory::GetForProfile(browser_->profile()));
+ #else
+@@ -545,7 +545,7 @@ void CollaborationControllerDelegateDesk
+               .SetLabel(dialog_text.ok_button_text)
+               .SetEnabled(true));
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-     AccountInfo account_for_promo = signin_ui_util::GetSingleAccountForPromos(
-         IdentityManagerFactory::GetForProfile(browser_->profile()));
- 
-@@ -569,7 +569,7 @@ void CollaborationControllerDelegateDesk
+   if (base::FeatureList::IsEnabled(
+           syncer::kReplaceSyncPromosWithSignInPromos)) {
+     dialog_builder.SetFootnote(ui::DialogModelLabel(dialog_text.footnote));
+@@ -598,7 +598,7 @@ void CollaborationControllerDelegateDesk
          .Run(CollaborationControllerDelegate::Outcome::kSuccess);
    }
  

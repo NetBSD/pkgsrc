@@ -1,10 +1,10 @@
-$NetBSD: patch-components_services_paint__preview__compositor_paint__preview__compositor__collection__impl.cc,v 1.10 2025/11/20 08:36:14 kikadf Exp $
+$NetBSD: patch-components_services_paint__preview__compositor_paint__preview__compositor__collection__impl.cc,v 1.11 2025/12/11 09:13:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/services/paint_preview_compositor/paint_preview_compositor_collection_impl.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- components/services/paint_preview_compositor/paint_preview_compositor_collection_impl.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/services/paint_preview_compositor/paint_preview_compositor_collection_impl.cc
 @@ -22,7 +22,7 @@
  

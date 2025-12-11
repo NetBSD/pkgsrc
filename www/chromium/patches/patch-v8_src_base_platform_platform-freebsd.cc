@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_base_platform_platform-freebsd.cc,v 1.10 2025/11/20 08:36:26 kikadf Exp $
+$NetBSD: patch-v8_src_base_platform_platform-freebsd.cc,v 1.11 2025/12/11 09:13:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/platform/platform-freebsd.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- v8/src/base/platform/platform-freebsd.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ v8/src/base/platform/platform-freebsd.cc
 @@ -43,14 +43,10 @@ TimezoneCache* OS::CreateTimezoneCache()
    return new PosixDefaultTimezoneCache();

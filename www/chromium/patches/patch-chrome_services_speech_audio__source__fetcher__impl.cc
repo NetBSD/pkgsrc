@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_services_speech_audio__source__fetcher__impl.cc,v 1.10 2025/11/20 08:36:11 kikadf Exp $
+$NetBSD: patch-chrome_services_speech_audio__source__fetcher__impl.cc,v 1.11 2025/12/11 09:13:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/services/speech/audio_source_fetcher_impl.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/services/speech/audio_source_fetcher_impl.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/services/speech/audio_source_fetcher_impl.cc
 @@ -132,7 +132,7 @@ void AudioSourceFetcherImpl::Start(
  
