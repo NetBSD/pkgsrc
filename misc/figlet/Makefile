@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/09/25 05:33:30 mrg Exp $
+# $NetBSD: Makefile,v 1.28 2025/12/11 09:26:46 wiz Exp $
 
 DISTNAME=	figlet-2.2.5
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.figlet.org/pub/figlet/program/unix/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.figlet.org/
+HOMEPAGE=	https://www.figlet.org/
 COMMENT=	Print text banners in fancy ASCII art characters
 LICENSE=	modified-bsd
 
