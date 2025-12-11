@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7130 2025/12/11 10:40:40 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7131 2025/12/11 11:48:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10363,3 +10363,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/jj-docs to 0.36.0 [wiz 2025-12-11]
 	Updated www/py-django-polymorphic to 4.3.0 [adam 2025-12-11]
 	Updated www/py-django-modelcluster to 6.4.1 [adam 2025-12-11]
+	Updated devel/ast-grep to 0.40.1 [pin 2025-12-11]
