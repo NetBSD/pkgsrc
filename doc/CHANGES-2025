@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7137 2025/12/11 15:23:15 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7138 2025/12/11 21:51:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10373,3 +10373,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-autobahn to 25.12.1 [adam 2025-12-11]
 	Updated databases/py-sqlalchemy to 2.0.45 [adam 2025-12-11]
 	Updated www/py-tornado to 6.5.3 [adam 2025-12-11]
+	Updated x11/libdrm to 2.4.131 [wiz 2025-12-11]
