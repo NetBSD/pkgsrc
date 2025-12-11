@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2025/09/02 14:32:34 adam Exp $
+# $NetBSD: Makefile,v 1.35 2025/12/11 15:14:55 adam Exp $
 
 DISTNAME=	daphne-4.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-autobahn
 
 # test fails with:
 # https://github.com/django/daphne/issues/522
