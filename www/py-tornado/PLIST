@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2025/04/14 20:28:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2025/12/11 15:22:58 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -6,6 +6,7 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/tornado/__init__.py
 ${PYSITELIB}/tornado/__init__.pyc
+${PYSITELIB}/tornado/__init__.pyi
 ${PYSITELIB}/tornado/__init__.pyo
 ${PYSITELIB}/tornado/_locale_data.py
 ${PYSITELIB}/tornado/_locale_data.pyc
@@ -87,6 +88,7 @@ ${PYSITELIB}/tornado/simple_httpclient.py
 ${PYSITELIB}/tornado/simple_httpclient.pyc
 ${PYSITELIB}/tornado/simple_httpclient.pyo
 ${PYSITELIB}/tornado/speedups.abi3.so
+${PYSITELIB}/tornado/speedups.pyi
 ${PYSITELIB}/tornado/tcpclient.py
 ${PYSITELIB}/tornado/tcpclient.pyc
 ${PYSITELIB}/tornado/tcpclient.pyo
