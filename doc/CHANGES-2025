@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7128 2025/12/11 10:10:14 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7129 2025/12/11 10:29:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10360,3 +10360,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/bash to 5.3.9 [kre 2025-12-11]
 	Updated www/py-httpx-socks to 0.11.0 [adam 2025-12-11]
 	Updated graphics/py-exifread to 3.5.1 [adam 2025-12-11]
+	Updated devel/jj-docs to 0.36.0 [wiz 2025-12-11]
