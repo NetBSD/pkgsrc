@@ -1,0 +1,30 @@
+$NetBSD: patch-inc_AWLUtilities.php.in,v 1.1 2025/12/11 14:14:12 hauke Exp $
+
+Pull fix for issue #39 from trunk
+<https://gitlab.com/davical-project/awl/-/merge_requests/39>:
+Perform null check on timezone_identifiers_list_cache in AWLUtilities
+
+--- inc/AWLUtilities.php.in.orig	2025-12-11 13:29:54.383427587 +0000
++++ inc/AWLUtilities.php.in
+@@ -623,8 +623,7 @@ if ( !function_exists("force_utf8") ) {
+ }
+ 
+ 
+-$timezone_identifiers_list_cache = timezone_identifiers_list();
+-$timezone_identifiers_list_cache = isset($timezone_identifiers_list_cache) ? $timezone_identifiers_list_cache : [];
++$timezone_identifiers_list_cache = timezone_identifiers_list() ?: [];
+ 
+ /**
+ * Try and extract something like "Pacific/Auckland" or "America/Indiana/Indianapolis" if possible.
+@@ -632,7 +631,11 @@ $timezone_identifiers_list_cache = isset
+ function olson_from_tzstring( $tzstring ) {
+   global $c, $timezone_identifiers_list_cache;
+ 
++  if ( !isset($timezone_identifiers_list_cache) ) {
++      $timezone_identifiers_list_cache = timezone_identifiers_list() ?: [];
++  }
+   if ( in_array($tzstring,$timezone_identifiers_list_cache) ) return $tzstring;
++
+   if ( preg_match( '{((Antarctica|America|Africa|Atlantic|Asia|Australia|Indian|Europe|Pacific)/(([^/]+)/)?[^/]+)$}', $tzstring, $matches ) ) {
+ //    dbg_error_log( 'INFO', 'Found timezone "%s" from string "%s"', $matches[1], $tzstring );
+     return $matches[1];
