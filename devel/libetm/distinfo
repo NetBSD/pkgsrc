@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:15:18 nia Exp $
+$NetBSD: distinfo,v 1.7 2025/12/11 21:28:58 vins Exp $
 
 BLAKE2s (ETM-1.09.tar.gz) = a1cefc124e878430dd63d9c53d5ad4d7f9713a560feea75fe0898f96b3802c75
 SHA512 (ETM-1.09.tar.gz) = 447d38f829fb4dc3bcf99e08786a869383e3753d2787769cd22665fea42933d2b5f50981f755d31759e2d33e168661c10fc0e4af1f1f1e4edeeea4526d7b25b6
 Size (ETM-1.09.tar.gz) = 25677 bytes
-SHA1 (patch-aa) = 73f77ee114db93ff1b4ca7c78aaffff2511f82b4
+SHA1 (patch-aa) = 46b6021d54a314a6fea40f4ac52993d3f9ddbda2
+SHA1 (patch-etm.c) = 5d640e9f78ca704c1cce89f1fa480d9a42f67c20
+SHA1 (patch-etmtest.c) = 653b6e3da1d0a9d0e37e5dd6a824f67802a4962d
