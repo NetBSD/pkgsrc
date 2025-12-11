@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_execution_isolate.cc,v 1.10 2025/11/20 08:36:26 kikadf Exp $
+$NetBSD: patch-v8_src_execution_isolate.cc,v 1.11 2025/12/11 09:13:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/execution/isolate.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- v8/src/execution/isolate.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ v8/src/execution/isolate.cc
 @@ -176,6 +176,10 @@
  #include "src/execution/simulator-base.h"
@@ -17,7 +17,7 @@ $NetBSD: patch-v8_src_execution_isolate.cc,v 1.10 2025/11/20 08:36:26 kikadf Exp
  extern "C" const uint8_t v8_Default_embedded_blob_code_[];
  extern "C" uint32_t v8_Default_embedded_blob_code_size_;
  extern "C" const uint8_t v8_Default_embedded_blob_data_[];
-@@ -5236,6 +5240,13 @@ void Isolate::InitializeDefaultEmbeddedB
+@@ -5252,6 +5256,13 @@ void Isolate::InitializeDefaultEmbeddedB
    const uint8_t* data = DefaultEmbeddedBlobData();
    uint32_t data_size = DefaultEmbeddedBlobDataSize();
  

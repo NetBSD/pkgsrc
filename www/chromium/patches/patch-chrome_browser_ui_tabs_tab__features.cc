@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_tabs_tab__features.cc,v 1.8 2025/11/20 08:36:09 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_tabs_tab__features.cc,v 1.9 2025/12/11 09:13:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/tabs/tab_features.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/ui/tabs/tab_features.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/ui/tabs/tab_features.cc
-@@ -80,7 +80,7 @@
+@@ -82,7 +82,7 @@
  #include "chrome/browser/ui/web_applications/pwa_install_page_action.h"
  #include "chrome/browser/ui/webui/webui_embedding_context.h"
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_tabs_tab__features.cc,v 1.8 2025/11/20 08:36:09
  #include "chrome/browser/wallet/chrome_walletable_pass_client.h"
  #endif
  #include "chrome/browser/web_applications/web_app_tab_helper.h"
-@@ -401,7 +401,7 @@ void TabFeatures::Init(TabInterface& tab
+@@ -419,7 +419,7 @@ void TabFeatures::Init(TabInterface& tab
    task_manager::WebContentsTags::CreateForTabContents(tab.GetContents());
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

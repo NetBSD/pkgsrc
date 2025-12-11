@@ -1,10 +1,10 @@
-$NetBSD: patch-base_files_drive__info__posix.cc,v 1.10 2025/11/20 08:36:03 kikadf Exp $
+$NetBSD: patch-base_files_drive__info__posix.cc,v 1.11 2025/12/11 09:13:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/drive_info_posix.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- base/files/drive_info_posix.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ base/files/drive_info_posix.cc
 @@ -27,7 +27,7 @@ namespace base {
  

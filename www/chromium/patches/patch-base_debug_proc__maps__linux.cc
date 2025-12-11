@@ -1,10 +1,10 @@
-$NetBSD: patch-base_debug_proc__maps__linux.cc,v 1.10 2025/11/20 08:36:03 kikadf Exp $
+$NetBSD: patch-base_debug_proc__maps__linux.cc,v 1.11 2025/12/11 09:13:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/debug/proc_maps_linux.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- base/debug/proc_maps_linux.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ base/debug/proc_maps_linux.cc
 @@ -22,7 +22,7 @@
  #include "base/strings/string_split.h"

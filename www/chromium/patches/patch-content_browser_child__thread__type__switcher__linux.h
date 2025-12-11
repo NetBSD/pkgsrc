@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_child__thread__type__switcher__linux.h,v 1.9 2025/11/20 08:36:14 kikadf Exp $
+$NetBSD: patch-content_browser_child__thread__type__switcher__linux.h,v 1.10 2025/12/11 09:13:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/child_thread_type_switcher_linux.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- content/browser/child_thread_type_switcher_linux.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ content/browser/child_thread_type_switcher_linux.h
 @@ -36,7 +36,7 @@ class ChildThreadTypeSwitcher : public m
    void SetPid(base::ProcessId child_pid);

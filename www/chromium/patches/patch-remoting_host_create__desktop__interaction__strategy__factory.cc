@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_create__desktop__interaction__strategy__factory.cc,v 1.6 2025/11/20 08:36:19 kikadf Exp $
+$NetBSD: patch-remoting_host_create__desktop__interaction__strategy__factory.cc,v 1.7 2025/12/11 09:13:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/create_desktop_interaction_strategy_factory.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- remoting/host/create_desktop_interaction_strategy_factory.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ remoting/host/create_desktop_interaction_strategy_factory.cc
 @@ -12,7 +12,7 @@
  #include "remoting/host/desktop_interaction_strategy.h"

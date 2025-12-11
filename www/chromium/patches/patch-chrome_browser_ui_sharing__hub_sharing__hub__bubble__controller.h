@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_sharing__hub_sharing__hub__bubble__controller.h,v 1.10 2025/11/20 08:36:09 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_sharing__hub_sharing__hub__bubble__controller.h,v 1.11 2025/12/11 09:13:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/sharing_hub/sharing_hub_bubble_controller.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- chrome/browser/ui/sharing_hub/sharing_hub_bubble_controller.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ chrome/browser/ui/sharing_hub/sharing_hub_bubble_controller.h
-@@ -36,7 +36,7 @@ class SharingHubBubbleController {
+@@ -39,7 +39,7 @@ class SharingHubBubbleController {
    // Returns true if the omnibox icon should be shown.
    virtual bool ShouldOfferOmniboxIcon() = 0;
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_libphonenumber_dist_cpp_src_phonenumbers_base_memory_singleton.h,v 1.10 2025/11/20 08:36:22 kikadf Exp $
+$NetBSD: patch-third__party_libphonenumber_dist_cpp_src_phonenumbers_base_memory_singleton.h,v 1.11 2025/12/11 09:13:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libphonenumber/dist/cpp/src/phonenumbers/base/memory/singleton.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- third_party/libphonenumber/dist/cpp/src/phonenumbers/base/memory/singleton.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ third_party/libphonenumber/dist/cpp/src/phonenumbers/base/memory/singleton.h
 @@ -22,7 +22,8 @@
  #elif (__cplusplus >= 201103L) && defined(I18N_PHONENUMBERS_USE_STDMUTEX)

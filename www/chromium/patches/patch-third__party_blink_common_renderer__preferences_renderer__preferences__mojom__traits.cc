@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_common_renderer__preferences_renderer__preferences__mojom__traits.cc,v 1.10 2025/11/20 08:36:21 kikadf Exp $
+$NetBSD: patch-third__party_blink_common_renderer__preferences_renderer__preferences__mojom__traits.cc,v 1.11 2025/12/11 09:13:43 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/common/renderer_preferences/renderer_preferences_mojom_traits.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- third_party/blink/common/renderer_preferences/renderer_preferences_mojom_traits.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ third_party/blink/common/renderer_preferences/renderer_preferences_mojom_traits.cc
 @@ -78,7 +78,7 @@ bool StructTraits<blink::mojom::Renderer
  

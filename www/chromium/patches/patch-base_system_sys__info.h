@@ -1,12 +1,12 @@
-$NetBSD: patch-base_system_sys__info.h,v 1.10 2025/11/20 08:36:05 kikadf Exp $
+$NetBSD: patch-base_system_sys__info.h,v 1.11 2025/12/11 09:13:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info.h.orig	2025-11-14 20:31:45.000000000 +0000
+--- base/system/sys_info.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ base/system/sys_info.h
-@@ -355,6 +355,8 @@ class BASE_EXPORT SysInfo {
+@@ -354,6 +354,8 @@ class BASE_EXPORT SysInfo {
    static void ResetCpuSecurityMitigationsEnabledForTesting();
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-base_system_sys__info.h,v 1.10 2025/11/20 08:36:05 kikadf Exp $
   private:
    friend class test::ScopedAmountOfPhysicalMemoryOverride;
    FRIEND_TEST_ALL_PREFIXES(SysInfoTest, AmountOfAvailablePhysicalMemory);
-@@ -367,7 +369,7 @@ class BASE_EXPORT SysInfo {
+@@ -366,7 +368,7 @@ class BASE_EXPORT SysInfo {
    static HardwareInfo GetHardwareInfoSync();
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \

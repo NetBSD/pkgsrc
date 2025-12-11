@@ -1,10 +1,10 @@
-$NetBSD: patch-net_socket_tcp__socket__posix.cc,v 1.10 2025/11/20 08:36:19 kikadf Exp $
+$NetBSD: patch-net_socket_tcp__socket__posix.cc,v 1.11 2025/12/11 09:13:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/tcp_socket_posix.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- net/socket/tcp_socket_posix.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ net/socket/tcp_socket_posix.cc
 @@ -6,6 +6,9 @@
  

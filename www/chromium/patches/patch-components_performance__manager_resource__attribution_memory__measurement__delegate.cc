@@ -1,10 +1,10 @@
-$NetBSD: patch-components_performance__manager_resource__attribution_memory__measurement__delegate.cc,v 1.2 2025/11/20 08:36:13 kikadf Exp $
+$NetBSD: patch-components_performance__manager_resource__attribution_memory__measurement__delegate.cc,v 1.3 2025/12/11 09:13:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/performance_manager/resource_attribution/memory_measurement_delegate.cc.orig	2025-11-14 20:31:45.000000000 +0000
+--- components/performance_manager/resource_attribution/memory_measurement_delegate.cc.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/performance_manager/resource_attribution/memory_measurement_delegate.cc
 @@ -100,7 +100,7 @@ void MemoryMeasurementDelegateImpl::OnMe
                  base::KiB(process_dump.os_dump().resident_set_kb),
