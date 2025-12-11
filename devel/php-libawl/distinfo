@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.19 2024/07/09 13:55:38 hauke Exp $
+$NetBSD: distinfo,v 1.20 2025/12/11 14:14:12 hauke Exp $
 
 BLAKE2s (libawl-0.65-a3b9ae16.tar.gz) = 0566455c63bff2ec8c27cf29a4fa5c49fda45691355edfa01b7889b909a1bd03
 SHA512 (libawl-0.65-a3b9ae16.tar.gz) = b4ee45623f21951b65507c2e8b5d081c906f0410f23a8a1d0c1a83f3dd70d786156c496d0664cca8f1ca5c3f45da25b651b939d0f6c06153b2a4fe45dec16125
 Size (libawl-0.65-a3b9ae16.tar.gz) = 606857 bytes
 SHA1 (patch-Makefile) = 288ef49b4af863f560bc6ec7754527a0b306bf9a
+SHA1 (patch-inc_AWLUtilities.php.in) = 78c71ac9028fe31db924dd4fb51e651db675fb2a

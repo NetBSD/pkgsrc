@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2025/02/08 03:41:13 taca Exp $
+# $NetBSD: Makefile,v 1.22 2025/12/11 14:14:12 hauke Exp $
 #
 
 LIBAWL_VERSION=	0.65
 DISTNAME=	libawl-${LIBAWL_VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITLAB:=davical-project/}
 GITLAB_PROJECT=	awl
@@ -31,13 +31,14 @@ do-install:
 	for f in *; do						\
 		${INSTALL_DATA} "$$f"				\
 		    ${DESTDIR}${PREFIX}/${LIBAWLDIR}/dba;	\
-	done;
+	done
 
 	cd ${WRKSRC}/inc;					\
+	rm *.orig;						\
 	for f in *; do						\
 		${INSTALL_DATA} "$$f"				\
 		    ${DESTDIR}${PREFIX}/${LIBAWLDIR}/inc;	\
-	done;
+	done
 
 .include "../../devel/php-libawl/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
