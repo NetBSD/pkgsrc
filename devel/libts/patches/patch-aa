@@ -1,8 +1,20 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/04/27 11:47:12 agc Exp $
+$NetBSD: patch-aa,v 1.2 2025/12/11 20:57:34 vins Exp $
 
---- Makefile.orig	Sun Apr  8 19:03:45 2001
-+++ Makefile	Sun Apr  8 19:03:59 2001
-@@ -402,5 +402,5 @@
+* The "l" modifier is unsupported as of binutils 2.36.
+* Remove non standard header.
+
+--- Makefile.orig	1996-07-10 04:00:17.000000000 +0000
++++ Makefile
+@@ -115,7 +115,7 @@ PROJECTMINORRELEASE = 08
+              MSUB = msub
+         MKDIRHIER = mkdirhier
+ 
+-               AR = ar clq
++               AR = ar cq
+                CC = cc
+               CPP = /lib/cpp $(STD_CPP_DEFINES)
+                LD = ld
+@@ -402,5 +402,5 @@ Makefiles::
  
  # DO NOT DELETE
  
