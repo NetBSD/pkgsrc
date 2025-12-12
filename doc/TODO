@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26532 2025/12/12 09:28:21 wiz Exp $
+$NetBSD: TODO,v 1.26533 2025/12/12 11:24:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -495,6 +495,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o box2d-3.1.1
 	o brandybasic-1.19
 	o bugzilla3-3.6.13
+	o burgerspace-1.10.0
 	o cacti-1.2.30
 	o cacti-spine-1.2.30
 	o calc-2.11.10.1
@@ -628,6 +629,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o firefox115-115.24.0
 	o flashplayer-0.4.13
 	o flatbuffers-1.12.0
+	o flatzebra-0.2.0
+	o flops-2.2
 	o flow-tools-0.411
 	o fluent-bit-1.7.4
 	o fortunes-calvin-0.3
@@ -1178,6 +1181,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
 	o rust-1.91.1 [wip]
+	o rust-1.92.0
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
