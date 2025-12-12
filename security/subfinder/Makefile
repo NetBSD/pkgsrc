@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2025/12/02 19:25:19 bsiegert Exp $
+# $NetBSD: Makefile,v 1.34 2025/12/12 11:10:58 leot Exp $
 
-DISTNAME=	subfinder-2.8.0
-PKGREVISION=	5
+DISTNAME=	subfinder-2.10.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=projectdiscovery/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,8 +11,6 @@ COMMENT=	Fast passive subdomain enumeration tool
 LICENSE=	mit
 
 GO_BUILD_PATTERN+=	./cmd/subfinder
-
-WRKSRC=		${WRKDIR}/${DISTNAME}/v2
 
 .include "go-modules.mk"
 
