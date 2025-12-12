@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.36 2025/11/01 18:41:46 leot Exp $
+$NetBSD: distinfo,v 1.37 2025/12/12 10:57:39 leot Exp $
 
-BLAKE2s (mitmproxy-12.2.0.tar.gz) = 7ac2ab2b77c2e62ad6f3fe367e56cf4f03da105dbb50f961e3fb00776d60cb15
-SHA512 (mitmproxy-12.2.0.tar.gz) = 12784faa271358bb9d933fdd6bf4cc0a6e0b9eee40894f93548070e15f05e60c335a5cef440ccb3bb24ca332f461b3599816551e8665bce5da71720e07a70b34
-Size (mitmproxy-12.2.0.tar.gz) = 1708830 bytes
+BLAKE2s (mitmproxy-12.2.1.tar.gz) = f5cdeab5dbc95265c948685314c6f7525f3b8eee80e4fe21b49310b92f3f026b
+SHA512 (mitmproxy-12.2.1.tar.gz) = c32261ffae4e285b538a88ee2537f90a596c49356f2aaf24355c9d765b4c71d42e6d17d828f345601e58026963fe9126160021f32d86e14717dadc1b1ae0269e
+Size (mitmproxy-12.2.1.tar.gz) = 1556376 bytes
