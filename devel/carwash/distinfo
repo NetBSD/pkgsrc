@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2025/12/11 04:29:15 pin Exp $
+$NetBSD: distinfo,v 1.6 2025/12/12 08:07:49 pin Exp $
 
 BLAKE2s (aho-corasick-1.1.4.crate) = 1419308c5b0745af6cfa18dd4c9639f7078f564e9dacbe2b17b03df42c393409
 SHA512 (aho-corasick-1.1.4.crate) = c77e35191b00546f5e499fab154170cedd619599e7250f92db9fba0a41c833eb426f214e58b00c5c39f8757406b33492b3241cb8cb233ce384ad0683c3ee4b62
@@ -51,9 +51,9 @@ Size (bytes-1.10.1.crate) = 76779 bytes
 BLAKE2s (cargo-lock-11.0.0.crate) = 73231b8ba407da5082a8fa0e3f9b7727cbb3dbdd2b05e4559826a478b7bba080
 SHA512 (cargo-lock-11.0.0.crate) = 3c3c63218fb856f38d0bc3daaa028f6c44370d4530f30fad7162d599f17004b7daf160a5f7079b150e5f818ff9df737deef8a2a0ae90da87eda8e03b5ae4156a
 Size (cargo-lock-11.0.0.crate) = 46233 bytes
-BLAKE2s (carwash-0.3.3.tar.gz) = c31e22ab57ccccc8248387320a2670b1b61c53d278dc91f3f9fd10553f26fb6c
-SHA512 (carwash-0.3.3.tar.gz) = af78b5cdfcd354e6eb0a1a3f1b80968b27c29409df45112c269ad6fc09b4d00fe63a9e1b3a93297416ac002a174f27714aaac589811543c5a024653fb6501953
-Size (carwash-0.3.3.tar.gz) = 393734 bytes
+BLAKE2s (carwash-0.3.4.crate) = 05786c025238fd52e21646e26e1f2b2483b8535e742c25190ebb91234990eb41
+SHA512 (carwash-0.3.4.crate) = 6267e97a6d0ff38b0dae72da5093f4b4651c499af26e2a4a8d47c848ddda6766d46d31a1359ec0c8ae1f38c56f8929b5d419bda6c11f0124c2e3bcc81858a567
+Size (carwash-0.3.4.crate) = 393690 bytes
 BLAKE2s (cassowary-0.3.0.crate) = b17facbc17a2111cef15ced2fdcbee59ae6747e942e059144b8b67ca7c13d9d2
 SHA512 (cassowary-0.3.0.crate) = 0838c0b79ed31f0c514fe4ac82633976e34b0d6cb08616313cda0e00623514fc6498c6c308cfef54ea029f1fdbaafe2991ca8ac3c38437a113ac62e37f9397f8
 Size (cassowary-0.3.0.crate) = 22876 bytes
