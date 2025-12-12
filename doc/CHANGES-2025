@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7158 2025/12/12 10:37:02 leot Exp $
+$NetBSD: CHANGES-2025,v 1.7159 2025/12/12 10:47:31 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10400,3 +10400,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/py-weasyprint to 67.0 [adam 2025-12-12]
 	Updated textproc/py-nltk to 3.9.2 [adam 2025-12-12]
 	Updated security/nuclei to 3.6.0 [leot 2025-12-12]
+	Updated net/k6 to 1.4.2 [leot 2025-12-12]
