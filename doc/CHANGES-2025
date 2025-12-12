@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7149 2025/12/12 09:29:52 leot Exp $
+$NetBSD: CHANGES-2025,v 1.7150 2025/12/12 09:35:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10387,3 +10387,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/cups-base to 2.4.16 [wiz 2025-12-12]
 	Updated print/cups to 2.4.16 [wiz 2025-12-12]
 	Updated security/tlsx to 1.2.2 [leot 2025-12-12]
+	Updated wm/oatbar to 0.2.0 [pin 2025-12-12]
