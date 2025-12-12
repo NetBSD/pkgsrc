@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7155 2025/12/12 10:25:32 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.7156 2025/12/12 10:27:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10396,3 +10396,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added textproc/py-tinyhtml5 version 2.0.0 [adam 2025-12-12]
 	Updated math/py-statsmodels to 0.14.6 [adam 2025-12-12]
 	Updated games/warzone2100 to 4.6.2 [triaxx 2025-12-12]
+	Updated shells/oh-my-posh to 28.2.1 [pin 2025-12-12]
