@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7144 2025/12/12 09:09:32 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7145 2025/12/12 09:26:00 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10382,3 +10382,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/perl5 to 5.42.0nb1 [wiz 2025-12-12]
 	Updated lang/nodejs20 to 20.19.6 [adam 2025-12-12]
 	Updated lang/nodejs24 to 24.12.0 [adam 2025-12-12]
+	Updated security/dnsx to 1.2.3 [leot 2025-12-12]
