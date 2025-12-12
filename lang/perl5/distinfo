@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.194 2025/07/04 08:58:56 wiz Exp $
+$NetBSD: distinfo,v 1.195 2025/12/12 08:11:40 wiz Exp $
 
 BLAKE2s (perl-5.42.0.tar.xz) = 0afd0ca2a31a2445d7232c451312717a72ceb208c4e2c39016a2d9924bde7601
 SHA512 (perl-5.42.0.tar.xz) = b10f74d1245a879ae51d3ad93ad519a148df126ec865715474c801548ccfc3f542ef3bbb1f59568cea2ec77302d428dc772aba605357d7faf13eb6a351917275
@@ -13,3 +13,5 @@ SHA1 (patch-hints_linux.sh) = 4baa8f80695687abb53d4f4e1830cf86db5b2bf7
 SHA1 (patch-hints_netbsd.sh) = cb498170c18f1f429eed9be245cd1df24c7ad628
 SHA1 (patch-hints_solaris__2.sh) = 83b20650435ea3b62314af6059f3d82c3dd6b0a2
 SHA1 (patch-installperl) = b129d64cc17b898b44fe6282b8b1df36e342d0ef
+SHA1 (patch-op.c) = 54ceab552d73583a0cc4a1e48839c866084f012f
+SHA1 (patch-t_op_for-many.t) = 9bd20c6b967960e82de1ce61a529cdcbb27e2243
