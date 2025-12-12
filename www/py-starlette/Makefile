@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/09/22 10:51:15 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/12/12 09:38:42 adam Exp $
 
-DISTNAME=	starlette-0.48.0
+DISTNAME=	starlette-0.50.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/starlette/}
