@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7163 2025/12/12 11:21:01 leot Exp $
+$NetBSD: CHANGES-2025,v 1.7164 2025/12/12 11:24:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10405,3 +10405,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/mitmproxy to 12.2.1 [leot 2025-12-12]
 	Updated security/subfinder to 2.10.1 [leot 2025-12-12]
 	Updated net/socat to 1.8.1.0 [leot 2025-12-12]
+	Updated mail/neomutt to 20251211 [wiz 2025-12-12]
