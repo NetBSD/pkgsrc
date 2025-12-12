@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7168 2025/12/12 20:53:05 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7169 2025/12/12 21:22:28 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10411,3 +10411,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/openresolv to 3.17.2 [roy 2025-12-12]
 	Updated graphics/ImageMagick to 7.1.2.10 [triaxx 2025-12-12]
 	Updated www/miniflux to 2.2.15 [wiz 2025-12-12]
+	Updated editors/nano to 8.7 [schwarz 2025-12-12]
