@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7150 2025/12/12 09:35:24 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7151 2025/12/12 09:39:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10388,3 +10388,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/cups to 2.4.16 [wiz 2025-12-12]
 	Updated security/tlsx to 1.2.2 [leot 2025-12-12]
 	Updated wm/oatbar to 0.2.0 [pin 2025-12-12]
+	Updated textproc/py-xml2rfc to 3.31.0 [adam 2025-12-12]
+	Updated www/py-starlette to 0.50.0 [adam 2025-12-12]
