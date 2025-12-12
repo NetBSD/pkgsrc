@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7165 2025/12/12 12:08:35 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7166 2025/12/12 14:03:17 roy Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10408,3 +10408,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/neomutt to 20251211 [wiz 2025-12-12]
 	Updated net/py-mitmproxy_rs to 0.12.8 [adam 2025-12-12]
 	Updated security/py-authlib to 1.6.6 [adam 2025-12-12]
+	Updated net/openresolv to 3.17.2 [roy 2025-12-12]
