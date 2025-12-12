@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7162 2025/12/12 11:11:04 leot Exp $
+$NetBSD: CHANGES-2025,v 1.7163 2025/12/12 11:21:01 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10404,3 +10404,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/gallery-dl to 1.30.10 [leot 2025-12-12]
 	Updated net/mitmproxy to 12.2.1 [leot 2025-12-12]
 	Updated security/subfinder to 2.10.1 [leot 2025-12-12]
+	Updated net/socat to 1.8.1.0 [leot 2025-12-12]
