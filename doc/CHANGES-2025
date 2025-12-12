@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7160 2025/12/12 10:52:35 leot Exp $
+$NetBSD: CHANGES-2025,v 1.7161 2025/12/12 10:57:45 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10402,3 +10402,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/nuclei to 3.6.0 [leot 2025-12-12]
 	Updated net/k6 to 1.4.2 [leot 2025-12-12]
 	Updated net/gallery-dl to 1.30.10 [leot 2025-12-12]
+	Updated net/mitmproxy to 12.2.1 [leot 2025-12-12]
