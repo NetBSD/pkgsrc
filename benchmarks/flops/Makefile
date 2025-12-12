@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/01/26 17:30:46 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2025/12/12 10:36:41 wiz Exp $
 
 DISTNAME=		flops
 PKGNAME=		flops-2.0
@@ -7,7 +7,7 @@ MASTER_SITES=		# http://ftp.sunet.se/pub/benchmark/aburto/flops/
 DISTFILES=		${DISTNAME}.c ${DISTNAME}.doc
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://performance.netlib.org/performance/html/flops.html
+#HOMEPAGE=		https://performance.netlib.org/performance/html/flops.html
 COMMENT=		Floating point benchmark to give your MFLOPS rating
 
 WRKSRC=			${WRKDIR}
