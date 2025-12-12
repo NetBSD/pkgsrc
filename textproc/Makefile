@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1557 2025/12/11 04:50:52 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1558 2025/12/12 09:51:54 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1246,6 +1246,7 @@ SUBDIR+=	py-textfsm
 SUBDIR+=	py-textile
 SUBDIR+=	py-texttable
 SUBDIR+=	py-tinycss2
+SUBDIR+=	py-tinyhtml5
 SUBDIR+=	py-toml
 SUBDIR+=	py-tomli
 SUBDIR+=	py-tomli_w

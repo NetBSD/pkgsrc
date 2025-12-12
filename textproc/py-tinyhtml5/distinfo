@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/12/12 09:51:54 adam Exp $
+
+BLAKE2s (tinyhtml5-2.0.0.tar.gz) = 9af2847c93e67ee9c1e4b6ed344b0f2741231734d23630c4f3a14bed04ec36cd
+SHA512 (tinyhtml5-2.0.0.tar.gz) = 79b78171d021a0cd7f6f56b2e5bd0d9bab422cbec4c601e19cb9c248eac0df74339290f0aaacc12eae4f733e92743a0a24e8caddf709f3bc86f3c022c4df3ded
+Size (tinyhtml5-2.0.0.tar.gz) = 179507 bytes
