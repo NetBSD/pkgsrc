@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.52 2025/10/05 19:26:10 js Exp $
+# $NetBSD: Makefile,v 1.53 2025/12/12 10:15:37 wiz Exp $
 
 DISTNAME=	flickcurl-1.26
 PKGREVISION=	37
 CATEGORIES=	net
-MASTER_SITES=	http://download.dajobe.org/flickcurl/
+MASTER_SITES=	https://download.dajobe.org/flickcurl/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://download.dajobe.org/flickcurl/
+HOMEPAGE=	https://download.dajobe.org/flickcurl/
 COMMENT=	Flickr API library
 LICENSE=	gnu-lgpl-v2.1 OR gnu-gpl-v2 OR apache-2.0
 
