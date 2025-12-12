@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2025/12/12 09:51:54 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/tinyhtml5/__init__.py
+${PYSITELIB}/tinyhtml5/__init__.pyc
+${PYSITELIB}/tinyhtml5/__init__.pyo
+${PYSITELIB}/tinyhtml5/constants.py
+${PYSITELIB}/tinyhtml5/constants.pyc
+${PYSITELIB}/tinyhtml5/constants.pyo
+${PYSITELIB}/tinyhtml5/inputstream.py
+${PYSITELIB}/tinyhtml5/inputstream.pyc
+${PYSITELIB}/tinyhtml5/inputstream.pyo
+${PYSITELIB}/tinyhtml5/parser.py
+${PYSITELIB}/tinyhtml5/parser.pyc
+${PYSITELIB}/tinyhtml5/parser.pyo
+${PYSITELIB}/tinyhtml5/tokenizer.py
+${PYSITELIB}/tinyhtml5/tokenizer.pyc
+${PYSITELIB}/tinyhtml5/tokenizer.pyo
+${PYSITELIB}/tinyhtml5/treebuilder.py
+${PYSITELIB}/tinyhtml5/treebuilder.pyc
+${PYSITELIB}/tinyhtml5/treebuilder.pyo
