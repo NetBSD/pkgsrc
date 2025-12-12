@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2025/11/01 18:41:46 leot Exp $
+# $NetBSD: Makefile,v 1.58 2025/12/12 10:57:39 leot Exp $
 
-DISTNAME=	mitmproxy-12.2.0
+DISTNAME=	mitmproxy-12.2.1
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.mitmproxy.org/${PKGVERSION_NOREV}/
 
