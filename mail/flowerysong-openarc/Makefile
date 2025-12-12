@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/12/11 00:48:27 manu Exp $
+# $NetBSD: Makefile,v 1.2 2025/12/12 03:00:28 manu Exp $
 DISTNAME=	OpenARC-1.3.0
 PKGNAME=	flowerysong-${DISTNAME:tl}
 CATEGORIES=	mail
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/flowerysong/OpenARC
 COMMENT=	Open source ARC library, MTA filter implementation and tools
 LICENSE=	modified-bsd
+
+CONFLICT+=	openarc-[0-9]*
 
 RCD_SCRIPTS=	openarc
 
