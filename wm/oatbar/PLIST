@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2024/07/18 09:58:29 pin Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/12/12 09:34:07 pin Exp $
 bin/oatbar
 bin/oatbar-desktop
 bin/oatbar-keyboard
+bin/oatbar-llm
 bin/oatbar-stats
 bin/oatctl
