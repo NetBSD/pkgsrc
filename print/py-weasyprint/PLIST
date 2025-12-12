@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/02/23 21:02:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/12/12 10:34:01 adam Exp $
 bin/weasyprint-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -23,6 +23,9 @@ ${PYSITELIB}/weasyprint/css/computed_values.pyo
 ${PYSITELIB}/weasyprint/css/counters.py
 ${PYSITELIB}/weasyprint/css/counters.pyc
 ${PYSITELIB}/weasyprint/css/counters.pyo
+${PYSITELIB}/weasyprint/css/functions.py
+${PYSITELIB}/weasyprint/css/functions.pyc
+${PYSITELIB}/weasyprint/css/functions.pyo
 ${PYSITELIB}/weasyprint/css/html5_ph.css
 ${PYSITELIB}/weasyprint/css/html5_ua.css
 ${PYSITELIB}/weasyprint/css/html5_ua_form.css
@@ -35,10 +38,12 @@ ${PYSITELIB}/weasyprint/css/properties.pyo
 ${PYSITELIB}/weasyprint/css/targets.py
 ${PYSITELIB}/weasyprint/css/targets.pyc
 ${PYSITELIB}/weasyprint/css/targets.pyo
-${PYSITELIB}/weasyprint/css/tests_ua.css
-${PYSITELIB}/weasyprint/css/utils.py
-${PYSITELIB}/weasyprint/css/utils.pyc
-${PYSITELIB}/weasyprint/css/utils.pyo
+${PYSITELIB}/weasyprint/css/tokens.py
+${PYSITELIB}/weasyprint/css/tokens.pyc
+${PYSITELIB}/weasyprint/css/tokens.pyo
+${PYSITELIB}/weasyprint/css/units.py
+${PYSITELIB}/weasyprint/css/units.pyc
+${PYSITELIB}/weasyprint/css/units.pyo
 ${PYSITELIB}/weasyprint/css/validation/__init__.py
 ${PYSITELIB}/weasyprint/css/validation/__init__.pyc
 ${PYSITELIB}/weasyprint/css/validation/__init__.pyo
@@ -54,9 +59,18 @@ ${PYSITELIB}/weasyprint/css/validation/properties.pyo
 ${PYSITELIB}/weasyprint/document.py
 ${PYSITELIB}/weasyprint/document.pyc
 ${PYSITELIB}/weasyprint/document.pyo
-${PYSITELIB}/weasyprint/draw.py
-${PYSITELIB}/weasyprint/draw.pyc
-${PYSITELIB}/weasyprint/draw.pyo
+${PYSITELIB}/weasyprint/draw/__init__.py
+${PYSITELIB}/weasyprint/draw/__init__.pyc
+${PYSITELIB}/weasyprint/draw/__init__.pyo
+${PYSITELIB}/weasyprint/draw/border.py
+${PYSITELIB}/weasyprint/draw/border.pyc
+${PYSITELIB}/weasyprint/draw/border.pyo
+${PYSITELIB}/weasyprint/draw/color.py
+${PYSITELIB}/weasyprint/draw/color.pyc
+${PYSITELIB}/weasyprint/draw/color.pyo
+${PYSITELIB}/weasyprint/draw/text.py
+${PYSITELIB}/weasyprint/draw/text.pyc
+${PYSITELIB}/weasyprint/draw/text.pyo
 ${PYSITELIB}/weasyprint/formatting_structure/boxes.py
 ${PYSITELIB}/weasyprint/formatting_structure/boxes.pyc
 ${PYSITELIB}/weasyprint/formatting_structure/boxes.pyo
@@ -129,6 +143,9 @@ ${PYSITELIB}/weasyprint/pdf/__init__.pyo
 ${PYSITELIB}/weasyprint/pdf/anchors.py
 ${PYSITELIB}/weasyprint/pdf/anchors.pyc
 ${PYSITELIB}/weasyprint/pdf/anchors.pyo
+${PYSITELIB}/weasyprint/pdf/debug.py
+${PYSITELIB}/weasyprint/pdf/debug.pyc
+${PYSITELIB}/weasyprint/pdf/debug.pyo
 ${PYSITELIB}/weasyprint/pdf/fonts.py
 ${PYSITELIB}/weasyprint/pdf/fonts.pyc
 ${PYSITELIB}/weasyprint/pdf/fonts.pyo
@@ -141,10 +158,16 @@ ${PYSITELIB}/weasyprint/pdf/pdfa.pyo
 ${PYSITELIB}/weasyprint/pdf/pdfua.py
 ${PYSITELIB}/weasyprint/pdf/pdfua.pyc
 ${PYSITELIB}/weasyprint/pdf/pdfua.pyo
+${PYSITELIB}/weasyprint/pdf/pdfx.py
+${PYSITELIB}/weasyprint/pdf/pdfx.pyc
+${PYSITELIB}/weasyprint/pdf/pdfx.pyo
 ${PYSITELIB}/weasyprint/pdf/sRGB2014.icc
 ${PYSITELIB}/weasyprint/pdf/stream.py
 ${PYSITELIB}/weasyprint/pdf/stream.pyc
 ${PYSITELIB}/weasyprint/pdf/stream.pyo
+${PYSITELIB}/weasyprint/pdf/tags.py
+${PYSITELIB}/weasyprint/pdf/tags.pyc
+${PYSITELIB}/weasyprint/pdf/tags.pyo
 ${PYSITELIB}/weasyprint/stacking.py
 ${PYSITELIB}/weasyprint/stacking.pyc
 ${PYSITELIB}/weasyprint/stacking.pyo
