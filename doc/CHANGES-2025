@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7147 2025/12/12 09:28:06 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7148 2025/12/12 09:28:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10385,3 +10385,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/dnsx to 1.2.3 [leot 2025-12-12]
 	Updated print/libcups to 2.4.16 [wiz 2025-12-12]
 	Updated print/cups-base to 2.4.16 [wiz 2025-12-12]
+	Updated print/cups to 2.4.16 [wiz 2025-12-12]
