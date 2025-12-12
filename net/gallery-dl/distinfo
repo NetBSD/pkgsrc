@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.91 2025/09/14 08:41:56 leot Exp $
+$NetBSD: distinfo,v 1.92 2025/12/12 10:52:30 leot Exp $
 
-BLAKE2s (gallery_dl-1.30.7.tar.gz) = cb88900ec7e1b2f3de467ba2d74997752d0e0e85b2f3ca3518bdf90d90256fd6
-SHA512 (gallery_dl-1.30.7.tar.gz) = f963ad68065e509894b444d6b656559893f429bdbed6612f0afff92b528ad44b97ec4fb5a401333b4b256f6efef643202c0ccc493c0c274ebc6b7a38a24a2b08
-Size (gallery_dl-1.30.7.tar.gz) = 600874 bytes
+BLAKE2s (gallery_dl-1.30.10.tar.gz) = 21a2a722c22fc03a84153a7e084bfc82417335b361b2bd389a3a8a96e0f41bd4
+SHA512 (gallery_dl-1.30.10.tar.gz) = a6e85ed5b83710895da36ef55762ffd087ade3e38608fcd3875b3e2867b58d49ada0d3f7d566810417ac3e7cd8cb8c550e604fcb86fa0f063ebc153670a15976
+Size (gallery_dl-1.30.10.tar.gz) = 615021 bytes
