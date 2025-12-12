@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/11/20 06:10:39 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/12/12 07:07:15 adam Exp $
 
-DISTNAME=	mdBook-0.5.1
+DISTNAME=	mdBook-0.5.2
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rust-lang/}
