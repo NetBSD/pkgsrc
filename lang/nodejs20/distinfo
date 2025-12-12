@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.23 2025/10/21 11:48:28 adam Exp $
+$NetBSD: distinfo,v 1.24 2025/12/12 09:07:16 adam Exp $
 
-BLAKE2s (node-v20.19.5.tar.xz) = 583f46f8e0885880b15d7dddac86e3cf7630cf2136f19f0a43b8b2672e0f37f5
-SHA512 (node-v20.19.5.tar.xz) = b585222636b0ed05567f99dba3312586ac64d0a1a751a471305f10e85a77ad32ed6c4a30b2fc0a876f1e9b4f6880c1ccf596346605f5298d882396b3677efe0f
-Size (node-v20.19.5.tar.xz) = 42505652 bytes
+BLAKE2s (node-v20.19.6.tar.xz) = 592656df80ecb5cd0275db77047c8d865839010666baea14b7db6f12a87553f7
+SHA512 (node-v20.19.6.tar.xz) = cf3a3813db814ffe23dd9c2c201b950522c4a115569d568cb3ef2f6b3f9a33cdd7d3f6d52f7d8970df6fadc0b8aa86dd2ef1fd34a4537cbdbe5d05363c47976d
+Size (node-v20.19.6.tar.xz) = 42530628 bytes
 SHA1 (patch-common.gypi) = f50615affd26c2c7902d2112c8e9f2704c057b9c
 SHA1 (patch-deps_cares_cares.gyp) = 22b44f2ac59963f694dfe4f4585e08960b3dec32
 SHA1 (patch-deps_uv_common.gypi) = 29f0c382b68f77749a71ce39fa2ca37338ca18ec
