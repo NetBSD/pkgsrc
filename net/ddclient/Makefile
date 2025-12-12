@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2025/07/22 22:43:32 abs Exp $
+# $NetBSD: Makefile,v 1.57 2025/12/12 18:22:51 vins Exp $
 
 DISTNAME=	ddclient-4.0.0
 CATEGORIES=	net
@@ -38,14 +38,16 @@ SUBST_STAGE.curlpath=	pre-configure
 SUBST_FILES.curlpath=	sample-get-ip-from-fritzbox
 SUBST_SED.curlpath=	-e "s,^curl ,${PREFIX}/bin/curl ,"
 
+BUILDLINK_TRANSFORM+=	rm:-Werror
+
 INSTALLATION_DIRS=	sbin share/doc/ddclient share/examples/ddclient
 
 pre-configure:
 	${RUN} set -e; cd ${WRKSRC} && autoreconf -fiv
 
 post-install:
-	${RM} -f ${DESTDIR}${PKG_SYSCONFDIR}/ddclient.conf
-	${INSTALL_DATA} ${WRKSRC}/ddclient.conf ${DESTDIR}${EGDIR}/ddclient.conf
+	${MV} -f ${DESTDIR}${PKG_SYSCONFDIR}/ddclient/ddclient.conf \
+		${DESTDIR}${EGDIR}/ddclient.conf
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.cisco ${DESTDIR}${DOCDIR}
