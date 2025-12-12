@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2025/10/23 20:37:51 wiz Exp $
+# $NetBSD: Makefile,v 1.156 2025/12/12 10:15:12 wiz Exp $
 
 DISTNAME=	fldigi-4.1.01
 PKGREVISION=	40
@@ -6,7 +6,7 @@ CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fldigi/}
 
 MAINTAINER=	makoto@ki.nu
-HOMEPAGE=	http://www.w1hkj.org/
+HOMEPAGE=	https://www.w1hkj.org/
 COMMENT=	Digital radio modem
 LICENSE=	gnu-gpl-v3
 
