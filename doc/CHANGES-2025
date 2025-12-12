@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7142 2025/12/12 08:11:40 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7143 2025/12/12 08:11:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10379,3 +10379,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-urllib3 to 2.6.2 [adam 2025-12-12]
 	Updated devel/carwash to 0.3.4 [pin 2025-12-12]
 	Updated shells/oh-my-posh to 28.2.0 [pin 2025-12-12]
+	Updated lang/perl5 to 5.42.0nb1 [wiz 2025-12-12]
