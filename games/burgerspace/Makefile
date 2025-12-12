@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/11/26 08:32:52 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/12/12 10:14:01 wiz Exp $
 
 DISTNAME=	burgerspace-1.9.4
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	games
 #MASTER_SITES=	http://perso.b2b2c.ca/~sarrazip/dev/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	https://perso.b2b2c.ca/~sarrazip/dev/burgerspace.html
+HOMEPAGE=	http://gvlsywt.cluster051.hosting.ovh.net/dev/burgerspace.html
 COMMENT=	Hamburger-smashing video game
 LICENSE=	gnu-gpl-v2
 
