@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.24 2024/05/06 13:46:13 wiz Exp $
+# $NetBSD: options.mk,v 1.25 2025/12/12 11:24:05 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.neomutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
@@ -66,7 +66,7 @@ CONFIGURE_ARGS+=	--disable-ssl
 PLIST_VARS+=		smime
 .if !empty(PKG_OPTIONS:Msmime)
 USE_TOOLS+=		perl:run
-REPLACE_PERL+=		contrib/smime_keys
+REPLACE_PERL+=		smime/smime_keys
 .  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--smime
 PLIST.smime=		yes
