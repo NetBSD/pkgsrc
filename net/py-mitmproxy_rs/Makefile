@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2025/10/09 07:57:52 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/12/12 12:07:03 adam Exp $
 #
 # When updating this, make sure that net/mitmproxy still
 # works - usually it also needs to be updated.
 
-DISTNAME=	mitmproxy_rs-0.12.7
+DISTNAME=	mitmproxy_rs-0.12.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mitmproxy_rs/}
@@ -17,6 +17,7 @@ LICENSE=	mit
 .include "../../mk/compiler/i386-sse2.mk"
 
 MAKE_ENV+=	CARGO_NET_OFFLINE=true
+RUST_REQ=	1.86
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
