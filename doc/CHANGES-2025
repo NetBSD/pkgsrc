@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7138 2025/12/11 21:51:45 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7139 2025/12/12 01:14:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10374,3 +10374,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-sqlalchemy to 2.0.45 [adam 2025-12-11]
 	Updated www/py-tornado to 6.5.3 [adam 2025-12-11]
 	Updated x11/libdrm to 2.4.131 [wiz 2025-12-11]
+	Updated mail/rspamd to 3.14.2 [taca 2025-12-12]
