@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q3,v 1.1.2.14 2025/12/06 21:36:38 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q3,v 1.1.2.15 2025/12/12 15:50:54 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q3 branch:
 
@@ -88,3 +88,6 @@ www/palemoon: sparc64 build fix
 
 Pullup ticket #7035 - requested by bsiegert
 graphics/png: Security fix
+
+Pullup ticket #7036 - requested by roy
+net/openresolv: Security fix
