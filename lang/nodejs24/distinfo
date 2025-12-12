@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2025/11/17 13:08:29 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2025/12/12 09:08:40 adam Exp $
 
-BLAKE2s (node-v24.11.1.tar.xz) = 0841f94d8533e9d3b690a3851d185597af694ff916c81ff5fc3abffd83e55fe8
-SHA512 (node-v24.11.1.tar.xz) = a41c9d53f8ab4f4642259c42e682fd58fc58d6d6657310544008e96e4113503eec82a185922360577c5a5739ba3fadd04e10798f805d7a3399ef4a3e1a233629
-Size (node-v24.11.1.tar.xz) = 51747676 bytes
+BLAKE2s (node-v24.12.0.tar.xz) = 39e2aff78eb1765bdb65072885c894664458c945d58753cc2bae531efeabeb8d
+SHA512 (node-v24.12.0.tar.xz) = 2f9285537cfbcfb4364b3337329c41198aaf11dd0046fa24ce83aac8b616b1bdd4bb6a42676217037b75cd7b9bd76d1fced1268ede4523c9cfa32d1c2fdad068
+Size (node-v24.12.0.tar.xz) = 51783952 bytes
 SHA1 (patch-common.gypi) = 4620bcaf4d953bc415319a957fe41e1a70b94357
 SHA1 (patch-configure) = 34959e3c01f7b3d814e9a81fa222e1dfca80093f
 SHA1 (patch-deps_cares_cares.gyp) = 22b44f2ac59963f694dfe4f4585e08960b3dec32
@@ -16,7 +16,7 @@ SHA1 (patch-deps_v8_src_base_platform_semaphore.cc) = 802a95f1b1d131e0d85c1f99c6
 SHA1 (patch-deps_v8_src_base_strings.h) = 4d2b37491f2f74f1a573f8c1942790204e23a8bb
 SHA1 (patch-deps_v8_src_codegen_arm_cpu-arm.cc) = 84c75d61bc99c2ff9adeac3152f5b11ebb0e582b
 SHA1 (patch-deps_v8_src_common_globals.h) = 86637724864389f2b24251904de41669a2f00fbc
-SHA1 (patch-deps_v8_third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc) = 24266eda94a14442a56fb8f7555c41b08dac7082
+SHA1 (patch-deps_v8_third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc) = 51bfbd80a8157d38e5da434ba6bd2f9b6f7762b2
 SHA1 (patch-deps_v8_tools_profiling_run-llprof.sh) = b19994d3195cc97424a3cc2ffd3ae02eacc6ffa8
 SHA1 (patch-node.gypi) = 4a104dba6c22702211009bc60a6be6f87554e2fa
 SHA1 (patch-src_compile__cache.cc) = 39a85bcb1ebe7c9bf7c431d6dc60dca5b9d63aaf
