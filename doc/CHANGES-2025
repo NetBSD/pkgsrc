@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7153 2025/12/12 09:45:07 leot Exp $
+$NetBSD: CHANGES-2025,v 1.7154 2025/12/12 09:55:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10393,3 +10393,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/qemu to 10.1.3 [adam 2025-12-12]
 	Updated sysutils/qemu-guest-agent to 10.1.3 [adam 2025-12-12]
 	Updated security/httpx to 1.7.4 [leot 2025-12-12]
+	Added textproc/py-tinyhtml5 version 2.0.0 [adam 2025-12-12]
+	Updated math/py-statsmodels to 0.14.6 [adam 2025-12-12]
