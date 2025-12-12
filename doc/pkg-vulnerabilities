@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.682 2025/12/10 10:09:08 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.683 2025/12/12 17:08:31 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29084,3 +29084,20 @@ thunderbird140<140.5		multiple-vulnerabilities	https://www.mozilla.org/en-US/sec
 firefox<146		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-92/
 firefox115<115.31	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-93/
 firefox140<140.6	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-94/
+ImageMagick<7.1.2.10	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-66628
+freeimage-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-65803
+glib2<2.86.3	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-14087
+glib2<2.86.3	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-14512
+jenkins<2.540	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-67635
+jenkins<2.540	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-67636
+jenkins<2.540	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-67637
+jenkins<2.540	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-67638
+jenkins<2.540	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-67639
+libsoup-[0-9]*	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-14523
+miniflux<2.2.15	open-redirect	https://nvd.nist.gov/vuln/detail/CVE-2025-67713
+php{56,74,81,82,83,84}-phppgadmin<9.11	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-13780
+py{27,39,310,311,312,313,314}-tornado<6.5.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-67724
+py{27,39,310,311,312,313,314}-tornado<6.5.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-67725
+py{27,39,310,311,312,313,314}-tornado<6.5.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-67726
+webmin<2.600	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-67738
+wolfssl<5.8.4	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2025-13912
