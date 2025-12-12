@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7154 2025/12/12 09:55:26 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7155 2025/12/12 10:25:32 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10395,3 +10395,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/httpx to 1.7.4 [leot 2025-12-12]
 	Added textproc/py-tinyhtml5 version 2.0.0 [adam 2025-12-12]
 	Updated math/py-statsmodels to 0.14.6 [adam 2025-12-12]
+	Updated games/warzone2100 to 4.6.2 [triaxx 2025-12-12]
