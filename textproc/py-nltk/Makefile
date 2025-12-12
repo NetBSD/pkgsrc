@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2025/10/09 07:58:01 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/12/12 10:35:30 adam Exp $
 
-DISTNAME=	nltk-3.9.1
+DISTNAME=	nltk-3.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nltk/}
 
