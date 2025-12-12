@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2023/12/24 14:23:05 zafer Exp $
+# $NetBSD: Makefile,v 1.46 2025/12/12 10:17:16 wiz Exp $
 
 DISTNAME=	flim-1.14.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	#
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=	http://git.chise.org/elisp/flim/
+#HOMEPAGE=	http://git.chise.org/elisp/flim/
 COMMENT=	Emacs lisp library for message representation/encoding
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
