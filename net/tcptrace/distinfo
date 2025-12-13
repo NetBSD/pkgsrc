@@ -1,11 +1,16 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:07:01 nia Exp $
+$NetBSD: distinfo,v 1.14 2025/12/13 16:42:03 vins Exp $
 
 BLAKE2s (tcptrace-6.6.7.tar.gz) = 615e4a864916ac7e85d2ccb8357294cb1ca81b029672892aeeab7fa0a34bba88
 SHA512 (tcptrace-6.6.7.tar.gz) = 3638770c342aea6c71aa556e758ed22e1fd44730f6c652cf82d3861eb1c31b186952c660071bd1df45020b80eaf9dd090a4ff58c979cc907eb8154dcb7b9b432
 Size (tcptrace-6.6.7.tar.gz) = 3773308 bytes
-SHA1 (patch-aa) = a17e39cd2a944c3f439849feeb0eb0b957cd97b2
+SHA1 (patch-aa) = 60d1de91eacf9a2006368fffae152268b20ec3ff
+SHA1 (patch-compress.c) = 81fb7c635ca78478f66ce0a14844f78bfd7e204f
+SHA1 (patch-configure.in) = 209029266083437ccd826c9f06ce907454ab329e
 SHA1 (patch-filt__parser.y) = ac7c510d6bf231496e9c6b459c7a97d98531dbaf
 SHA1 (patch-filter.c) = 3058ee8b08ceca99b38ae772b51d26df91de6d9c
 SHA1 (patch-filter.h) = 6e8170f63938e4e3b2c8c97ea9361d707af2f8bb
-SHA1 (patch-tcpdump.c) = 4079d257814d966aca2c290fc131bef82ad15fe2
-SHA1 (patch-trace.c) = 9a373fb586526301804cac283abda8031a15df0d
+SHA1 (patch-mod__http.c) = 932685c3356a099c80a0ef2767db92c0b0c5262a
+SHA1 (patch-tcpdump.c) = e59b49887f72aeb8fa344fe930c31e9cee721147
+SHA1 (patch-tcptrace.c) = 91f3ee82bbd76bb511f2b0a105fa57d0178b88e5
+SHA1 (patch-tcptrace.h) = 3c13947e31f25fbd1b4ea3f7728b3684f578fd16
+SHA1 (patch-trace.c) = e130a52c0dbc788825b3023e45e96dab83d11e81
