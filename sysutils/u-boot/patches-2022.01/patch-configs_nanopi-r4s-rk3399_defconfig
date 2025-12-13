@@ -1,0 +1,14 @@
+$NetBSD: patch-configs_nanopi-r4s-rk3399_defconfig,v 1.1 2025/12/13 01:10:23 gutteridge Exp $
+
+Load u-boot from 256KB.
+
+--- configs/nanopi-r4s-rk3399_defconfig.orig	2022-01-10 13:46:34.000000000 -0500
++++ configs/nanopi-r4s-rk3399_defconfig
+@@ -1,6 +1,7 @@
+ CONFIG_ARM=y
+ CONFIG_SKIP_LOWLEVEL_INIT=y
+ CONFIG_ARCH_ROCKCHIP=y
++CONFIG_SYS_MMCSD_RAW_MODE_U_BOOT_SECTOR=0x200
+ CONFIG_SYS_TEXT_BASE=0x00200000
+ CONFIG_NR_DRAM_BANKS=1
+ CONFIG_ENV_OFFSET=0x3F8000

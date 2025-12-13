@@ -1,0 +1,32 @@
+$NetBSD: patch-arch_arm_dts_rk3399-nanopi-r4s-u-boot.dtsi,v 1.1 2025/12/13 01:10:23 gutteridge Exp $
+
+Enable second USB port and fix crash.
+
+From ed073246e80a494fd4323da51dc70110c0b8b422 Mon Sep 17 00:00:00 2001
+From: Justin Klaassen <justin@tidylabs.net>
+Date: Fri, 31 Jan 2025 17:06:13 +0000
+Subject: [PATCH] rockchip: nanopi-r4s: Enable second usb port and fix crash
+
+The patch enables the second USB3.0 Type-A USB port on the NanoPi R4S
+board, which prevents a crash when initializing the usb system in U-Boot
+and allows both Type-A USB ports to be used for booting.
+
+=> usb start
+starting USB...
+Bus usb@fe380000: USB EHCI 1.00
+Bus usb@fe3c0000: "Synchronous Abort" handler, esr 0x96000010, far 0x0
+
+Signed-off-by: Justin Klaassen <justin@tidylabs.net>
+Reviewed-by: Kever Yang <kever.yang@rock-chips.com>
+
+--- arch/arm/dts/rk3399-nanopi-r4s-u-boot.dtsi.orig	2022-01-10 13:46:34.000000000 -0500
++++ arch/arm/dts/rk3399-nanopi-r4s-u-boot.dtsi
+@@ -14,3 +14,8 @@
+ 
+ #include "rk3399-nanopi4-u-boot.dtsi"
+ #include "rk3399-sdram-lpddr4-100.dtsi"
++
++&u2phy1_host {
++	phy-supply = <&vdd_5v>;
++	status = "okay";
++};
