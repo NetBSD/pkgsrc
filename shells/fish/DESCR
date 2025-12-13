@@ -1,7 +1,8 @@
-fish is a user friendly command line shell for UNIX-like operating
-systems, written mainly with interactive use in mind.  It differs
-from other shells in that it only provides as few commands as
-built-ins as possible and has a daemon which allows it to have
-shared variables and command-line history between shell instances.
-It also features feature-rich tab-completion and has command-line
-syntax highlighting.
+fish is a smart and user friendly command line shell for UNIX-like
+operating systems, written mainly with interactive use in mind.
+fish includes features like syntax highlighting, autosuggest-as-you-type,
+and fancy tab completions that just work, with no configuration required.
+
+This is the 4.* branch of the fish shell, rewritten from scratch in
+Rust, and actively maintained. Some features introduced in fish 4.*
+are described in https://fishshell.com/blog/new-in-40/
