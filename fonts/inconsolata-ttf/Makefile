@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/08/03 14:19:22 pin Exp $
+# $NetBSD: Makefile,v 1.17 2025/12/13 15:14:42 wiz Exp $
 
 PKGNAME=	inconsolata-ttf-3.001
 CATEGORIES=	fonts
@@ -8,7 +8,7 @@ DISTFILES+=	Inconsolata-Bold.ttf
 DISTFILES+=	Inconsolata-Regular.ttf
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.levien.com/type/myfonts/inconsolata.html
+HOMEPAGE=	https://levien.com/type/myfonts/inconsolata.html
 COMMENT=	Inconsolata TrueType font
 LICENSE=	ofl-v1.1
 
