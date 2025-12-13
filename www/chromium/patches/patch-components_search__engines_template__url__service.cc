@@ -1,4 +1,4 @@
-$NetBSD: patch-components_search__engines_template__url__service.cc,v 1.11 2025/12/11 09:13:36 kikadf Exp $
+$NetBSD: patch-components_search__engines_template__url__service.cc,v 1.12 2025/12/13 14:53:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

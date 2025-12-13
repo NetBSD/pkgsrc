@@ -1,4 +1,4 @@
-$NetBSD: patch-remoting_base_constants.h,v 1.9 2025/12/11 09:13:41 kikadf Exp $
+$NetBSD: patch-remoting_base_constants.h,v 1.10 2025/12/13 14:53:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

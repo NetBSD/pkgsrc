@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_extensions_api_webrtc__logging__private_webrtc__logging__private__api.cc,v 1.11 2025/12/11 09:13:30 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_api_webrtc__logging__private_webrtc__logging__private__api.cc,v 1.12 2025/12/13 14:53:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

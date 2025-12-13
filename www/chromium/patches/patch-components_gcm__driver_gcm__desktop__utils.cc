@@ -1,4 +1,4 @@
-$NetBSD: patch-components_gcm__driver_gcm__desktop__utils.cc,v 1.10 2025/12/11 09:13:35 kikadf Exp $
+$NetBSD: patch-components_gcm__driver_gcm__desktop__utils.cc,v 1.11 2025/12/13 14:53:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD: patch-components_password__manager_core_common_password__manager__pref__names.h,v 1.11 2025/12/11 09:13:36 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_common_password__manager__pref__names.h,v 1.12 2025/12/13 14:53:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

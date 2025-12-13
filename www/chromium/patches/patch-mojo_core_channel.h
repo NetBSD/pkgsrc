@@ -1,4 +1,4 @@
-$NetBSD: patch-mojo_core_channel.h,v 1.1 2025/12/11 09:13:40 kikadf Exp $
+$NetBSD: patch-mojo_core_channel.h,v 1.2 2025/12/13 14:53:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

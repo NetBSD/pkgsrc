@@ -1,4 +1,4 @@
-$NetBSD: patch-ui_views_controls_prefix__selector.cc,v 1.11 2025/12/11 09:13:48 kikadf Exp $
+$NetBSD: patch-ui_views_controls_prefix__selector.cc,v 1.12 2025/12/13 14:54:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

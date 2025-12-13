@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_web__applications_extension__status__utils.h,v 1.11 2025/12/11 09:13:34 kikadf Exp $
+$NetBSD: patch-chrome_browser_web__applications_extension__status__utils.h,v 1.12 2025/12/13 14:53:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

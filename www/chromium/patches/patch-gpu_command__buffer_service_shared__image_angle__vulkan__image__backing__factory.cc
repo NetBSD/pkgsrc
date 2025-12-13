@@ -1,4 +1,4 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__image_angle__vulkan__image__backing__factory.cc,v 1.11 2025/12/11 09:13:39 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__image_angle__vulkan__image__backing__factory.cc,v 1.12 2025/12/13 14:53:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_webauthn_password__credential__ui__controller.cc,v 1.4 2025/12/11 09:13:34 kikadf Exp $
+$NetBSD: patch-chrome_browser_webauthn_password__credential__ui__controller.cc,v 1.5 2025/12/13 14:53:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
