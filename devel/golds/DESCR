@@ -1,0 +1,9 @@
+Golds is a Go local docs server, a Go docs generator, and a Go code
+reader. It tries to extract as much information as possible from Go code
+to help gophers understand, study and use Go packages.
+
+JavaScript-off friendly, though the experience is a little richer when
+JavaScript is on.
+
+All functionalities are implemented locally, No tracing, no external
+websites visiting (except explicitly and manually required by you).
