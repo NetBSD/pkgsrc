@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_enterprise_profile__management_profile__management__navigation__throttle.cc,v 1.11 2025/12/11 09:13:30 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_profile__management_profile__management__navigation__throttle.cc,v 1.12 2025/12/13 14:53:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

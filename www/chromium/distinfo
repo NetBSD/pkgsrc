@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.19 2025/12/11 09:13:26 kikadf Exp $
+$NetBSD: distinfo,v 1.20 2025/12/13 14:53:45 kikadf Exp $
 
-BLAKE2s (chromium-143.0.7499.40-lite.tar.xz) = d4b758a007bccdb4d486a28887baf3906b1b6161e41130dbf0bff908969bbd4e
-SHA512 (chromium-143.0.7499.40-lite.tar.xz) = 072aa649082313819a01445a9c89c569f74f95fda7b9d49c0f0452086a2ae24cfb17280bd12cb2f130f6bc17fbd00dca65193226c60a2e5fe61a7a255097e4f0
-Size (chromium-143.0.7499.40-lite.tar.xz) = 1137895952 bytes
-BLAKE2s (chromium-143.0.7499.40-testdata.tar.xz) = 705e4dc84a72f84ecd81ac9fc81529aedf85a9c004a23b2740a36a826ab21b12
-SHA512 (chromium-143.0.7499.40-testdata.tar.xz) = c605f9fb24059aa53fff1f9b1284ca42901cee121c874e73dd12e8fa105226ffe7b278e0c0ab556a23d204ef86bcd0484daaaee7e8b5d81c3fa6e12ab818c91b
-Size (chromium-143.0.7499.40-testdata.tar.xz) = 1200244664 bytes
+BLAKE2s (chromium-143.0.7499.109-lite.tar.xz) = 124a140069cd599ff0f8801933dd4a56cdbb286f4bddaf55f7cc59fab81b5441
+SHA512 (chromium-143.0.7499.109-lite.tar.xz) = 9d9a24f9e424b8121c73edc8c5ad685447ccfc67d29878cc3b248eed86273702a0f26eb91ed501d492f165de1319bfdaed7a4071f2a9e7cfd7551f845b066f65
+Size (chromium-143.0.7499.109-lite.tar.xz) = 1140751164 bytes
+BLAKE2s (chromium-143.0.7499.109-testdata.tar.xz) = 87dd2a2e96129a2a737f593a7856e9cd4686678e98d31062963dd9c40ade4059
+SHA512 (chromium-143.0.7499.109-testdata.tar.xz) = 124d847be8bd4e3acdc312e34e5a1c61c2c899677d91eab6dc668b7c93890e93bf5db4eb2b5aaeb523a87d59e25861382f16a046f514c72a679fc3a4d6d264d9
+Size (chromium-143.0.7499.109-testdata.tar.xz) = 1155272172 bytes
 BLAKE2s (kikadf-chromium-audioio-v140.0.tar.gz) = 063582b80823694cfa30c020d3378dae3c7dbb1d0b3ffc3b756ce26e9984504c
 SHA512 (kikadf-chromium-audioio-v140.0.tar.gz) = e986fd201969e2ce9e7c092497c34bca84771992a2c8d980556d2dc77002ff68f3d13b4144629e9a8bc41b8ad0d4d06650eafadbfde7c0fa91ed84fbcd74763b
 Size (kikadf-chromium-audioio-v140.0.tar.gz) = 8453 bytes
@@ -529,6 +529,7 @@ SHA1 (patch-chrome_common_webui__url__constants.cc) = 238835423238b8ebf97ef22d6e
 SHA1 (patch-chrome_common_webui__url__constants.h) = 928a58082263c9f307b833962e5d077f0479c1ab
 SHA1 (patch-chrome_enterprise__companion_enterprise__companion__client.cc) = a82aa460d8258c21d0c326f2ddcc46981637e2a4
 SHA1 (patch-chrome_enterprise__companion_event__logger.cc) = 8c27a814ed762bf03558ec84b240b758dae49605
+SHA1 (patch-chrome_enterprise__companion_ipc__security__linux.cc) = f3f9399cf58d737a4a0115184df0330efaed4dc3
 SHA1 (patch-chrome_enterprise__companion_lock.cc) = 574a5b8fc42aa0f6fbebe6e800ebbe3767e877f7
 SHA1 (patch-chrome_renderer_chrome__content__renderer__client.cc) = b499a07d0ce083c57348c0b7d98f376f7093da24
 SHA1 (patch-chrome_services_printing_print__backend__service__impl.cc) = 0072dfd1fbf8b06053252be82eb7288ef2991ea2
@@ -541,6 +542,7 @@ SHA1 (patch-chrome_test_chromedriver_keycode__text__conversion__unittest.cc) = 8
 SHA1 (patch-chrome_test_supervised__user_google__auth__state__waiter__mixin.cc) = 23110b787b0d053986affd5a2b847b6ff03fc122
 SHA1 (patch-chrome_updater_app_app__uninstall.cc) = 53e787b1036f37c30441ddc77ef58ab3811670f0
 SHA1 (patch-chrome_updater_configurator.cc) = e1c35da3c2f9352a7efa0a302bd535a4d5d59906
+SHA1 (patch-chrome_updater_ipc_ipc__security__linux.cc) = fb5fa78d58f4ddc091fb986639478fe7133d422b
 SHA1 (patch-chrome_updater_lock.cc) = b618129aa9f9f58c9066e12b046b2e48c6e81429
 SHA1 (patch-chrome_updater_util_posix__util.cc) = 38f04ec3979304108188ea6718d562097c5961a2
 SHA1 (patch-chrome_utility_services.cc) = dc46c3e067f3943962693b3b87300c7db9167edc
@@ -619,9 +621,9 @@ SHA1 (patch-components_metrics_drive__metrics__provider.cc) = a357a0d1300b111dd9
 SHA1 (patch-components_metrics_dwa_dwa__service.cc) = abd5bf905dd7c6cec44c8b53851d618b45ba07d8
 SHA1 (patch-components_metrics_metrics__log.cc) = 1c1ab15ecab538ed44dfedb4e813a61746a42344
 SHA1 (patch-components_metrics_motherboard.cc) = eb64d8d298fa85481ea1646dbbe64d781498fb13
-SHA1 (patch-components_named__mojo__ipc__server_connection__info.h) = c1c2a6e198c5bebd9a3a86830bbb9e21fcb94bd6
+SHA1 (patch-components_named__mojo__ipc__server_connection__info.h) = 362c5e31f6638a261a4d4a4d491187f5498ecf99
 SHA1 (patch-components_named__mojo__ipc__server_named__mojo__ipc__server__client__util.cc) = 056e483b67dfd5aa60c8567199cf0b7163c68f20
-SHA1 (patch-components_named__mojo__ipc__server_named__mojo__server__endpoint__connector__linux.cc) = e61a51dd09c2287a3f85b2af6928de12f7eb7b0b
+SHA1 (patch-components_named__mojo__ipc__server_named__mojo__server__endpoint__connector__linux.cc) = 87624c0345f18deeaa77358c0980bc931efd3abb
 SHA1 (patch-components_named__system__lock_BUILD.gn) = 0e21a545aa0390eacda04d09bdd7f078e64ab9ac
 SHA1 (patch-components_named__system__lock_lock.h) = 32202068c40a0bd6a47adbed88be5d456ff65e85
 SHA1 (patch-components_named__system__lock_lock__unittest.cc) = fe0a8da5873f3f7fdd7299b950fa4228dd224b5c

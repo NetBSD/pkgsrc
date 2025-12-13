@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_ui_accelerator__table.cc,v 1.4 2025/12/11 09:13:32 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_accelerator__table.cc,v 1.5 2025/12/13 14:53:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

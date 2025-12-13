@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_sessions_session__restore.cc,v 1.11 2025/12/11 09:13:32 kikadf Exp $
+$NetBSD: patch-chrome_browser_sessions_session__restore.cc,v 1.12 2025/12/13 14:53:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
