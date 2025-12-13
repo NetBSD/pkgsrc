@@ -1,16 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/12/11 00:48:27 manu Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/12/13 12:41:21 wiz Exp $
 
-BUILDLINK_TREE+=	openarc
+BUILDLINK_TREE+=	flowerysong-openarc
 
-.if !defined(OPENARC_BUILDLINK3_MK)
-OPENARC_BUILDLINK3_MK:=
+.if !defined(FLOWERYSONG_OPENARC_BUILDLINK3_MK)
+FLOWERYSONG_OPENARC_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.openarc+=	openarc>=1.1.3nb2
-BUILDLINK_ABI_DEPENDS.openarc?=	openarc>=20180921nb2
-BUILDLINK_PKGSRCDIR.openarc?=	../../mail/openarc
+BUILDLINK_API_DEPENDS.flowerysong-openarc+=	flowerysong-openarc>=1.3.0
+BUILDLINK_PKGSRCDIR.flowerysong-openarc?=	../../mail/flowerysong-openarc
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mail/libmilter/buildlink3.mk"
-.endif	# OPENARC_BUILDLINK3_MK
+.endif	# FLOWERYSONG_OPENARC_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-openarc
+BUILDLINK_TREE+=	-flowerysong-openarc
