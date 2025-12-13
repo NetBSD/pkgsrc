@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2025/10/23 20:37:27 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2025/12/13 15:08:52 wiz Exp $
 
 DISTNAME=	fly-1.6.5
 PKGREVISION=	44
@@ -6,7 +6,7 @@ CATEGORIES=	graphics www
 MASTER_SITES=	# ftp://www.unimelb.edu.au/pub/www/tools/unix/fly/
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://www.unimelb.edu.au/fly/fly.html
+#HOMEPAGE=	http://www.unimelb.edu.au/fly/fly.html
 COMMENT=	Command-file interface for creating and modifying PNG images
 
 TOOL_DEPENDS+=	gif2png>=2.4.2:../../graphics/gif2png
