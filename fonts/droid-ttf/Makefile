@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/09/04 05:46:57 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/12/13 15:14:17 wiz Exp $
 
 DISTNAME=	droid-fonts-20111115
 PKGNAME=	${DISTNAME:S/fonts/ttf/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://fonts.google.com/specimen/Droid+Sans
+#HOMEPAGE=	https://fonts.google.com/specimen/Droid+Sans
 COMMENT=	The Droid fonts family from Ascender Corporation
 LICENSE=	apache-2.0
 
