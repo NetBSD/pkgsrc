@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2014/06/01 16:35:35 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.3 2025/12/13 15:15:44 wiz Exp $
 
 PKGNAME=	jsMath-fonts-20090709
 DISTNAME=	TeX-fonts-linux
 PKGREVISION=	1
 CATEGORIES=	fonts
-MASTER_SITES=	http://www.math.union.edu/~dpvc/jsMath/download/
+MASTER_SITES=	https://www.math.union.edu/~dpvc/jsMath/download/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.math.union.edu/~dpvc/jsMath/
+HOMEPAGE=	https://www.math.union.edu/~dpvc/jsMath/
 COMMENT=	Fonts for jsMath
 #LICENSE=	no-commercial-use? unclear; probably whatever the corresponding TeX font license is
 
