@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2025/12/03 18:23:52 pin Exp $
+# $NetBSD: Makefile,v 1.19 2025/12/13 19:55:16 pin Exp $
 
-DISTNAME=	typst-0.14.1
+DISTNAME=	typst-0.14.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=typst/}
 GITHUB_PROJECT=	typst
@@ -16,7 +16,7 @@ LICENSE=	apache-2.0
 RUST_REQ=	1.89.0
 
 # Depends on an unpublished crate. Can't use cargo.mk to fetch it.
-TYPST-DEV-ASSETS_REV=	03addcfb64f3f95209464a521e6aa49645bd271a
+TYPST-DEV-ASSETS_REV=	fe6cad916d8b20c20742512b2a3f3b247a2bc4f8
 DISTFILES=		${DEFAULT_DISTFILES}
 DISTFILES+=		typst-dev-assets-${TYPST-DEV-ASSETS_REV}.tar.gz
 SITES.typst-dev-assets-${TYPST-DEV-ASSETS_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=typst/}typst-dev-assets/archive/${TYPST-DEV-ASSETS_REV}.tar.gz

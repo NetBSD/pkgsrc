@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.18 2025/12/03 18:23:52 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.19 2025/12/13 19:55:16 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
@@ -311,8 +311,8 @@ CARGO_CRATE_DEPENDS+=	toml_edit-0.22.23
 CARGO_CRATE_DEPENDS+=	ttf-parser-0.25.1
 CARGO_CRATE_DEPENDS+=	two-face-0.4.3
 CARGO_CRATE_DEPENDS+=	typed-arena-2.0.2
-CARGO_CRATE_DEPENDS+=	typst-assets-0.14.1
-#CARGO_CRATE_DEPENDS+=	typst-dev-assets-0.14.1
+CARGO_CRATE_DEPENDS+=	typst-assets-0.14.2
+#CARGO_CRATE_DEPENDS+=	typst-dev-assets-0.14.2
 CARGO_CRATE_DEPENDS+=	unic-langid-0.9.6
 CARGO_CRATE_DEPENDS+=	unic-langid-impl-0.9.6
 CARGO_CRATE_DEPENDS+=	unic-langid-macros-0.9.6
@@ -347,10 +347,10 @@ CARGO_CRATE_DEPENDS+=	wasm-bindgen-backend-0.2.100
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-macro-0.2.100
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-macro-support-0.2.100
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-shared-0.2.100
-CARGO_CRATE_DEPENDS+=	wasmi-0.51.2
-CARGO_CRATE_DEPENDS+=	wasmi_collections-0.51.2
-CARGO_CRATE_DEPENDS+=	wasmi_core-0.51.2
-CARGO_CRATE_DEPENDS+=	wasmi_ir-0.51.2
+CARGO_CRATE_DEPENDS+=	wasmi-0.51.5
+CARGO_CRATE_DEPENDS+=	wasmi_collections-0.51.5
+CARGO_CRATE_DEPENDS+=	wasmi_core-0.51.5
+CARGO_CRATE_DEPENDS+=	wasmi_ir-0.51.5
 CARGO_CRATE_DEPENDS+=	wasmparser-0.228.0
 CARGO_CRATE_DEPENDS+=	web-sys-0.3.77
 CARGO_CRATE_DEPENDS+=	weezl-0.1.8
