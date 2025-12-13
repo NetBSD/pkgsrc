@@ -1,4 +1,4 @@
-$NetBSD: patch-services_network_network__context.cc,v 1.11 2025/12/11 09:13:42 kikadf Exp $
+$NetBSD: patch-services_network_network__context.cc,v 1.12 2025/12/13 14:54:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

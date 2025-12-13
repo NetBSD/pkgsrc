@@ -1,4 +1,4 @@
-$NetBSD: patch-ui_gfx_linux_dmabuf__uapi.h,v 1.11 2025/12/11 09:13:47 kikadf Exp $
+$NetBSD: patch-ui_gfx_linux_dmabuf__uapi.h,v 1.12 2025/12/13 14:54:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

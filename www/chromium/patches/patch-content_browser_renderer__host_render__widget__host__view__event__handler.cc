@@ -1,4 +1,4 @@
-$NetBSD: patch-content_browser_renderer__host_render__widget__host__view__event__handler.cc,v 1.11 2025/12/11 09:13:37 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_render__widget__host__view__event__handler.cc,v 1.12 2025/12/13 14:53:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
