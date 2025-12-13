@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/12/12 03:00:28 manu Exp $
+# $NetBSD: Makefile,v 1.10 2025/12/13 12:41:53 wiz Exp $
 
 DISTNAME=	openarc-20180921
 PKGREVISION=	5
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/trusteddomainproject/OpenARC
 COMMENT=	Open source ARC library, MTA filter implementation and tools
 LICENSE=	modified-bsd
 
-CONFLICT+=	flowerysong-openarc-[0-9]*
+CONFLICTS+=	flowerysong-openarc-[0-9]*
 
 RCD_SCRIPTS=	openarc
 

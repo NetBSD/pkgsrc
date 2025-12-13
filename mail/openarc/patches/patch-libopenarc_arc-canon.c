@@ -1,3 +1,5 @@
+$NetBSD: patch-libopenarc_arc-canon.c,v 1.3 2025/12/13 12:41:54 wiz Exp $
+
 From 5a93cd6620004a774ccc968894ed341c054f1be1 Mon Sep 17 00:00:00 2001
 From: Paul Arthur <paul.arthur@flowerysong.com>
 Date: Mon, 16 Apr 2018 14:30:35 +0000
