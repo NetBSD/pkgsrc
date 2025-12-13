@@ -1,6 +1,7 @@
-# $NetBSD: u-boot-rockchip.mk,v 1.19 2025/04/22 23:30:38 gutteridge Exp $
+# $NetBSD: u-boot-rockchip.mk,v 1.20 2025/12/13 01:10:23 gutteridge Exp $
 #
 # used by sysutils/u-boot-nanopi-r2s/Makefile
+# used by sysutils/u-boot-nanopi-r4s/Makefile
 # used by sysutils/u-boot-rock64/Makefile
 # used by sysutils/u-boot-rockpro64/Makefile
 # used by sysutils/u-boot-pinebook-pro/Makefile
@@ -45,7 +46,7 @@ post-build:
 .endif
 	dd if=${WRKSRC}/u-boot.itb seek=${UBOOT_RK_SPI_OFF} conv=notrunc of=${WRKSRC}/rkspi_loader.img
 
-BUILD_TARGET+= V=1
+BUILD_TARGET+=	V=1
 
 .include "../../sysutils/${TFA}-${UBOOT_IMAGE_TYPE}/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
