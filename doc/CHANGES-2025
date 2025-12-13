@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7170 2025/12/13 01:11:34 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.7171 2025/12/13 09:09:20 fox Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10413,3 +10413,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/miniflux to 2.2.15 [wiz 2025-12-12]
 	Updated editors/nano to 8.7 [schwarz 2025-12-12]
 	Added sysutils/u-boot-nanopi-r4s version 2022.01 [gutteridge 2025-12-13]
+	Added editors/msedit version 1.2.1 [fox 2025-12-13]
