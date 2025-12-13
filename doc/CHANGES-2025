@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7169 2025/12/12 21:22:28 schwarz Exp $
+$NetBSD: CHANGES-2025,v 1.7170 2025/12/13 01:11:34 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10412,3 +10412,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/ImageMagick to 7.1.2.10 [triaxx 2025-12-12]
 	Updated www/miniflux to 2.2.15 [wiz 2025-12-12]
 	Updated editors/nano to 8.7 [schwarz 2025-12-12]
+	Added sysutils/u-boot-nanopi-r4s version 2022.01 [gutteridge 2025-12-13]
