@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:34:21 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.24 2025/12/13 15:09:35 wiz Exp $
 
 DISTNAME=	fml-7.99.1
 PKGREVISION=	4
@@ -7,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.fml.org/pub/fml8/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.fml.org/software/fml8/index.html.en
+HOMEPAGE=	https://www.fml.org/software/fml8/index.html.en
 COMMENT=	FML mailing list server development version
 LICENSE=	gnu-gpl-v2 OR artistic
 
