@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2025/10/05 19:26:17 js Exp $
+# $NetBSD: Makefile,v 1.66 2025/12/13 12:47:10 wiz Exp $
 
 DISTNAME=	opensaml-3.3.1
 PKGREVISION=	3
@@ -14,6 +14,7 @@ USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-doxygen-doc
+CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
 USE_TOOLS+=		pkg-config
 
 .include "../../devel/boost-libs/buildlink3.mk"
