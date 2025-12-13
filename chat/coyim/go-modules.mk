@@ -1,7 +1,9 @@
-# $NetBSD: go-modules.mk,v 1.2 2025/06/04 20:29:52 fox Exp $
+# $NetBSD: go-modules.mk,v 1.3 2025/12/13 09:32:48 vins Exp $
 
 GO_MODULE_FILES+=	github.com/!the!creeper/go-notify/@v/v0.0.0-20160203001056-b5cd14745a5c.mod
 GO_MODULE_FILES+=	github.com/!the!creeper/go-notify/@v/v0.0.0-20160203001056-b5cd14745a5c.zip
+GO_MODULE_FILES+=	github.com/awnumar/memcall/@v/v0.1.2.mod
+GO_MODULE_FILES+=	github.com/awnumar/memcall/@v/v0.1.2.zip
 GO_MODULE_FILES+=	github.com/coyim/constbn/@v/v0.0.0-20200604221525-016aa3f280ca.mod
 GO_MODULE_FILES+=	github.com/coyim/constbn/@v/v0.0.0-20200604221525-016aa3f280ca.zip
 GO_MODULE_FILES+=	github.com/coyim/gosx-notifier/@v/v0.0.0-20160821204220-212122c14674.mod
