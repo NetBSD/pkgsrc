@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/12/13 09:06:55 fox Exp $
+# $NetBSD: Makefile,v 1.2 2025/12/13 09:23:52 fox Exp $
 
 DISTNAME=	edit-1.2.1
 PKGNAME=	ms${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=microsoft/}
 GITHUB_PROJECT=	edit
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	fox@NetBSD.org
 HOMEPAGE=	https://github.com/microsoft/edit/
 COMMENT=	Simple editor for simple needs
 LICENSE=	mit
