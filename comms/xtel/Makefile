@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.32 2025/04/24 14:13:24 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/12/13 12:38:09 wiz Exp $
 
-DISTNAME=	xtel-3.3.0
-PKGREVISION=	15
-CATEGORIES=	comms x11
-MASTER_SITES=	http://pficheux.free.fr/xtel/download/ # https times out
+DISTNAME=		xtel-3.3.0
+PKGREVISION=		15
+CATEGORIES=		comms x11
+MASTER_SITES=		http://pficheux.free.fr/xtel/download/ # https times out
 
-PATCHFILES=		xtel-jumbo-patch-20111008.gz
 PATCH_SITES=		http://www.NetBSD.org/~dholland/patchkits/xtel/
+PATCHFILES=		xtel-jumbo-patch-20111008.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	bouyer@NetBSD.org
@@ -26,7 +26,7 @@ SUBST_CLASSES+=		fontdir
 SUBST_STAGE.fontdir=	post-configure
 SUBST_MESSAGE.fontdir=	Fixing imake font directory.
 SUBST_FILES.fontdir=	fonts/Makefile
-SUBST_SED.fontdir=	's,^[^A-Z]*FONTDIR =.*,FONTDIR = '${FONTDIR:Q},
+SUBST_SED.fontdir=	-e 's,^[^A-Z]*FONTDIR =.*,FONTDIR = '${FONTDIR:Q},
 
 INSTALLATION_DIRS=	share/examples/xtel
 INSTALL_MAKE_FLAGS=	PPPDIR=${PREFIX}/share/examples/xtel
