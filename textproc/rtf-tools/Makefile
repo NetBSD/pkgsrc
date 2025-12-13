@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/12/22 18:17:22 zafer Exp $
-#
+# $NetBSD: Makefile,v 1.27 2025/12/13 12:46:24 wiz Exp $
 
 DISTNAME=		RTF-1.10
 PKGNAME=		rtf-tools-1.10
@@ -8,12 +7,12 @@ CATEGORIES=		textproc
 MASTER_SITES=		#
 EXTRACT_SUFX=		.tar.Z
 
-PATCHFILES=		rtf-tools-jumbo-patch-20111006.gz
 PATCH_SITES=		http://www.NetBSD.org/~dholland/patchkits/rtf-tools/
+PATCHFILES=		rtf-tools-jumbo-patch-20111006.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		${MASTER_SITES}
+#HOMEPAGE=		${MASTER_SITES}
 COMMENT=		RTF to troff/groff/text converter
 
 WRKSRC=			${WRKDIR}/rtf
@@ -36,6 +35,12 @@ SUBST_SED.rtf+=		-e 's|\(LOCALBINDIR =.*\)|\1/bin|'
 #SUBST_MESSAGE.warn=	Enabling lots of warnings.
 #SUBST_FILES.warn=	Makefile */Makefile
 #SUBST_SED.warn=	-e '/CDEBUGFLAGS/s/-O/${WARNFLAGS}/'
+
+SUBST_CLASSES+=		ar
+SUBST_STAGE.ar=		pre-build
+SUBST_MESSAGE.ar=	Fix ar arguments for portability.
+SUBST_FILES.ar=		Makefile */Makefile
+SUBST_SED.ar=		-e 's/ar clq/ar cq/'
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/h/standard-names ${DESTDIR}${PREFIX}/lib/rtf-tools
