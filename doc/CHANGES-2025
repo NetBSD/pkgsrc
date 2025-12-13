@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7171 2025/12/13 09:09:20 fox Exp $
+$NetBSD: CHANGES-2025,v 1.7172 2025/12/13 09:12:36 fox Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10414,3 +10414,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/nano to 8.7 [schwarz 2025-12-12]
 	Added sysutils/u-boot-nanopi-r4s version 2022.01 [gutteridge 2025-12-13]
 	Added editors/msedit version 1.2.1 [fox 2025-12-13]
+	Updated audio/fasttracker2 to 2.02 [fox 2025-12-13]
