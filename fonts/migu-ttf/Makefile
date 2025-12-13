@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/01/26 17:31:11 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.13 2025/12/13 15:18:12 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	migu-ttf-${VERSION}
@@ -11,7 +10,7 @@ DISTFILES=	migu-1p-${VERSION}.zip \
 		migu-2m-${VERSION}.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://mix-mplus-ipa.osdn.jp/
+#HOMEPAGE=	https://mix-mplus-ipa.osdn.jp/
 COMMENT=	Fonts generated from M+ and IPA Gothic (Universal Design)
 LICENSE=	ipafont
 
