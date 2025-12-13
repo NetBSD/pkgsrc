@@ -1,8 +1,27 @@
-$NetBSD: patch-tcpdump.c,v 1.1 2015/01/20 00:04:58 enami Exp $
+$NetBSD: patch-tcpdump.c,v 1.2 2025/12/13 16:42:03 vins Exp $
 
 --- tcpdump.c.orig	2004-10-07 20:07:30.000000000 +0000
 +++ tcpdump.c
-@@ -420,7 +420,14 @@ PcapSavePacket(
+@@ -68,9 +68,6 @@ static char const GCC_UNUSED rcsid[] =
+ 
+ 
+ 
+-/* external ref, in case missing in older version */
+-extern int pcap_offline_read(void *, int, pcap_handler, u_char *);
+-
+ /* global pointer, the pcap info header */
+ static pcap_t *pcap;
+ 
+@@ -248,7 +245,7 @@ pread_tcpdump(
+     int ret;
+ 
+     while (1) {
+-	if ((ret = pcap_offline_read(pcap,1,(pcap_handler)callback,0)) != 1) {
++	if ((ret = pcap_dispatch(pcap,1,(pcap_handler)callback,0)) != 1) {
+ 	    /* prob EOF */
+ 
+ 	    if (ret == -1) {
+@@ -420,7 +417,14 @@ PcapSavePacket(
      void *plast)
  {
      static MFILE *f_savefile = NULL;

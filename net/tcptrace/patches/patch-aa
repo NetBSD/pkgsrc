@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2011/12/07 15:18:51 joerg Exp $
+$NetBSD: patch-aa,v 1.10 2025/12/13 16:42:03 vins Exp $
 
 --- Makefile.in.orig	2004-03-04 20:33:56.000000000 +0000
 +++ Makefile.in
@@ -25,8 +25,8 @@ $NetBSD: patch-aa,v 1.9 2011/12/07 15:18:51 joerg Exp $
  # Pathname of directory to install the binary
 -BINDIR = /usr/local/bin
 -MANDIR = /usr/local/man/
-+BINDIR = ${PREFIX}/bin
-+MANDIR = ${PREFIX}/man
++BINDIR = @PREFIX@/bin
++MANDIR = @PREFIX@/@PKGMANDIR@
  
  
  ################################################################## 
@@ -44,7 +44,7 @@ $NetBSD: patch-aa,v 1.9 2011/12/07 15:18:51 joerg Exp $
  version.o: ${CFILES} Makefile
  	${CC} ${CFLAGS} -o version.o -c $(srcdir)/version.c \
 -	-DBUILT_USER="\"`whoami`\"" -DBUILT_HOST="\"`hostname`\"" -DBUILT_DATE="\"`date`\""
-+	-DBUILT_USER="\"${USER}\"" -DBUILT_HOST="\"${HOST}\"" -DBUILT_DATE="\"`date`\""
++	-DBUILT_USER="\"@USER@\"" -DBUILT_HOST="\"@HOST@\"" -DBUILT_DATE="\"`date`\""
  
  #
  # special rules for scanner/parser

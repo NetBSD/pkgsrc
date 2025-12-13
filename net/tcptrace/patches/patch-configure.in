@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.in,v 1.1 2025/12/13 16:42:03 vins Exp $
+
+Fix AC test by including headers for strcmp(3) and exit(3).
+
+--- configure.in.orig	2002-06-21 09:56:26.000000000 +0000
++++ configure.in
+@@ -51,6 +51,8 @@ dnl If strcmp returns 0, we are on an en
+ dnl we are on a MacOSX environment that uses %qu
+ AC_TRY_RUN([
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ 
+ #define NIX "%llu"
+ 
