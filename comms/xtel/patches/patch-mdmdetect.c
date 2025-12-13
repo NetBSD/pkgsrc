@@ -1,4 +1,4 @@
-$NetBSD: patch-mdmdetect.c,v 1.1 2012/02/16 18:00:20 hans Exp $
+$NetBSD: patch-mdmdetect.c,v 1.2 2025/12/13 12:38:10 wiz Exp $
 
 --- mdmdetect.c.orig	2012-01-27 10:38:52.533510304 +0100
 +++ mdmdetect.c	2012-01-27 10:46:55.339779068 +0100
@@ -20,3 +20,15 @@ $NetBSD: patch-mdmdetect.c,v 1.1 2012/02/16 18:00:20 hans Exp $
        the_end (1);
    }
    
+@@ -290,7 +290,11 @@ char **av;
+     check_and_lock (cp);
+ 
+     sprintf (buf, "/dev/%s", cp);
++#ifdef __NetBSD
++    if ((fd = open (buf, O_RDWR)) < 0) {
++#else
+     if ((fd = open (buf, O_RDWR|O_NDELAY)) < 0) {
++#endif
+       perror (buf);
+       exit (1);
+     }

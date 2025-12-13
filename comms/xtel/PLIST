@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/06/01 16:44:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/12/13 12:38:09 wiz Exp $
 bin/install_iminitel
 bin/make_xtel_lignes
 bin/mdmdetect
@@ -6,6 +6,14 @@ bin/xtel
 bin/xteld
 lib/X11/app-defaults/XTel
 lib/X11/app-defaults/XTel-msg
+lib/X11/xtel/connect_iminitel
+lib/X11/xtel/modem.list
+lib/X11/xtel/xtel.lignes
+lib/X11/xtel/xtel.services
+share/examples/xtel/chat-iminitel
+share/examples/xtel/ip-down.iminitel
+share/examples/xtel/ip-up.iminitel
+share/examples/xtel/peers/iminitel
 share/fonts/X11/xtel/fonts.alias
 share/fonts/X11/xtel/fonts.scale
 share/fonts/X11/xtel/g016x10.pcf.gz
@@ -27,13 +35,5 @@ share/fonts/X11/xtel/g18x10.pcf.gz
 share/fonts/X11/xtel/g1s16x20.pcf.gz
 share/fonts/X11/xtel/g1s8x10.pcf.gz
 share/fonts/X11/xtel/xteldigit.pcf.gz
-lib/X11/xtel/connect_iminitel
-lib/X11/xtel/modem.list
-lib/X11/xtel/xtel.lignes
-lib/X11/xtel/xtel.services
 ${IMAKE_MAN_DIR}/xtel.${IMAKE_MANNEWSUFFIX}
 ${IMAKE_MAN_DIR}/xteld.${IMAKE_MANNEWSUFFIX}
-share/examples/xtel/chat-iminitel
-share/examples/xtel/ip-down.iminitel
-share/examples/xtel/ip-up.iminitel
-share/examples/xtel/peers/iminitel
