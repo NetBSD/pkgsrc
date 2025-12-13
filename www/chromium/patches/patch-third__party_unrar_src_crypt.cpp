@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_unrar_src_crypt.cpp,v 1.11 2025/12/11 09:13:46 kikadf Exp $
+$NetBSD: patch-third__party_unrar_src_crypt.cpp,v 1.12 2025/12/13 14:54:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

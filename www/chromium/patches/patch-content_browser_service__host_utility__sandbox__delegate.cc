@@ -1,4 +1,4 @@
-$NetBSD: patch-content_browser_service__host_utility__sandbox__delegate.cc,v 1.10 2025/12/11 09:13:38 kikadf Exp $
+$NetBSD: patch-content_browser_service__host_utility__sandbox__delegate.cc,v 1.11 2025/12/13 14:53:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_policy_developer__tools__policy__checker__factory.cc,v 1.1 2025/12/11 09:13:31 kikadf Exp $
+$NetBSD: patch-chrome_browser_policy_developer__tools__policy__checker__factory.cc,v 1.2 2025/12/13 14:53:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

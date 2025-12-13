@@ -1,4 +1,4 @@
-$NetBSD: patch-ui_views_window_default__frame__view.cc,v 1.7 2025/12/11 09:13:48 kikadf Exp $
+$NetBSD: patch-ui_views_window_default__frame__view.cc,v 1.8 2025/12/13 14:54:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD: patch-content_utility_on__device__model_on__device__model__sandbox__init.h,v 1.7 2025/12/11 09:13:38 kikadf Exp $
+$NetBSD: patch-content_utility_on__device__model_on__device__model__sandbox__init.h,v 1.8 2025/12/13 14:53:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

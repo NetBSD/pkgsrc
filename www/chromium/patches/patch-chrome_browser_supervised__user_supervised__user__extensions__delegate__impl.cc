@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_supervised__user_supervised__user__extensions__delegate__impl.cc,v 1.11 2025/12/11 09:13:32 kikadf Exp $
+$NetBSD: patch-chrome_browser_supervised__user_supervised__user__extensions__delegate__impl.cc,v 1.12 2025/12/13 14:53:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

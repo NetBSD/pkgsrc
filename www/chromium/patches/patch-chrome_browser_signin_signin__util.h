@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_signin_signin__util.h,v 1.7 2025/12/11 09:13:32 kikadf Exp $
+$NetBSD: patch-chrome_browser_signin_signin__util.h,v 1.8 2025/12/13 14:53:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

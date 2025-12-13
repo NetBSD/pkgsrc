@@ -1,4 +1,4 @@
-$NetBSD: patch-content_browser_child__thread__type__switcher__linux.cc,v 1.11 2025/12/11 09:13:37 kikadf Exp $
+$NetBSD: patch-content_browser_child__thread__type__switcher__linux.cc,v 1.12 2025/12/13 14:53:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

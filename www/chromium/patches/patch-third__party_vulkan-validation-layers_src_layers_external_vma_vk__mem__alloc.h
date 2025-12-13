@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_vulkan-validation-layers_src_layers_external_vma_vk__mem__alloc.h,v 1.11 2025/12/11 09:13:46 kikadf Exp $
+$NetBSD: patch-third__party_vulkan-validation-layers_src_layers_external_vma_vk__mem__alloc.h,v 1.12 2025/12/13 14:54:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

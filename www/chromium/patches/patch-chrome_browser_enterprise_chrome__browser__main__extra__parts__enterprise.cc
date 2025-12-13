@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_enterprise_chrome__browser__main__extra__parts__enterprise.cc,v 1.1 2025/12/11 09:13:29 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_chrome__browser__main__extra__parts__enterprise.cc,v 1.2 2025/12/13 14:53:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

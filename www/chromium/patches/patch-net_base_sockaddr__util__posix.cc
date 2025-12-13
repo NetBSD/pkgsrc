@@ -1,4 +1,4 @@
-$NetBSD: patch-net_base_sockaddr__util__posix.cc,v 1.11 2025/12/11 09:13:40 kikadf Exp $
+$NetBSD: patch-net_base_sockaddr__util__posix.cc,v 1.12 2025/12/13 14:53:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

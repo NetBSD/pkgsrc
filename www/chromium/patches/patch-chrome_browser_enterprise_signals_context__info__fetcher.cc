@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_enterprise_signals_context__info__fetcher.cc,v 1.10 2025/12/11 09:13:30 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_signals_context__info__fetcher.cc,v 1.11 2025/12/13 14:53:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

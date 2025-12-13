@@ -1,4 +1,4 @@
-$NetBSD: patch-media_video_renderable__gpu__memory__buffer__video__frame__pool.cc,v 1.4 2025/12/11 09:13:40 kikadf Exp $
+$NetBSD: patch-media_video_renderable__gpu__memory__buffer__video__frame__pool.cc,v 1.5 2025/12/13 14:53:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

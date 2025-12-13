@@ -1,4 +1,4 @@
-$NetBSD: patch-components_autofill_core_browser_payments_amount__extraction__manager.cc,v 1.9 2025/12/11 09:13:35 kikadf Exp $
+$NetBSD: patch-components_autofill_core_browser_payments_amount__extraction__manager.cc,v 1.10 2025/12/13 14:53:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

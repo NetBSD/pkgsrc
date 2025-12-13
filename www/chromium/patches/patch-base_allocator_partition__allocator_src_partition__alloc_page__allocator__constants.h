@@ -1,4 +1,4 @@
-$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_page__allocator__constants.h,v 1.11 2025/12/11 09:13:27 kikadf Exp $
+$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_page__allocator__constants.h,v 1.12 2025/12/13 14:53:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

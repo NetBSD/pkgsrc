@@ -1,4 +1,4 @@
-$NetBSD: patch-components_autofill_core_browser_integrators_optimization__guide_autofill__optimization__guide__decider.cc,v 1.4 2025/12/11 09:13:35 kikadf Exp $
+$NetBSD: patch-components_autofill_core_browser_integrators_optimization__guide_autofill__optimization__guide__decider.cc,v 1.5 2025/12/13 14:53:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

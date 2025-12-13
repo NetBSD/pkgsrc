@@ -1,4 +1,4 @@
-$NetBSD: patch-components_enterprise_browser_reporting_report__util.cc,v 1.7 2025/12/11 09:13:35 kikadf Exp $
+$NetBSD: patch-components_enterprise_browser_reporting_report__util.cc,v 1.8 2025/12/13 14:53:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

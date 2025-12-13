@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_blink_public_common_renderer__preferences_renderer__preferences__mojom__traits.h,v 1.11 2025/12/11 09:13:43 kikadf Exp $
+$NetBSD: patch-third__party_blink_public_common_renderer__preferences_renderer__preferences__mojom__traits.h,v 1.12 2025/12/13 14:54:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

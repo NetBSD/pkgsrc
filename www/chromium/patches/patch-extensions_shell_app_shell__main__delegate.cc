@@ -1,4 +1,4 @@
-$NetBSD: patch-extensions_shell_app_shell__main__delegate.cc,v 1.11 2025/12/11 09:13:39 kikadf Exp $
+$NetBSD: patch-extensions_shell_app_shell__main__delegate.cc,v 1.12 2025/12/13 14:53:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

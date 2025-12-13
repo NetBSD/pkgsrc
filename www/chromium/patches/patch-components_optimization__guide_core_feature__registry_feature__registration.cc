@@ -1,4 +1,4 @@
-$NetBSD: patch-components_optimization__guide_core_feature__registry_feature__registration.cc,v 1.4 2025/12/11 09:13:36 kikadf Exp $
+$NetBSD: patch-components_optimization__guide_core_feature__registry_feature__registration.cc,v 1.5 2025/12/13 14:53:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

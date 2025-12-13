@@ -1,4 +1,4 @@
-$NetBSD: patch-components_sync__preferences_common__syncable__prefs__database.cc,v 1.10 2025/12/11 09:13:37 kikadf Exp $
+$NetBSD: patch-components_sync__preferences_common__syncable__prefs__database.cc,v 1.11 2025/12/13 14:53:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

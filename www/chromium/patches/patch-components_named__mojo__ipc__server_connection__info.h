@@ -1,4 +1,4 @@
-$NetBSD: patch-components_named__mojo__ipc__server_connection__info.h,v 1.11 2025/12/11 09:13:36 kikadf Exp $
+$NetBSD: patch-components_named__mojo__ipc__server_connection__info.h,v 1.12 2025/12/13 14:53:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
@@ -6,7 +6,7 @@ $NetBSD: patch-components_named__mojo__ipc__server_connection__info.h,v 1.11 202
 
 --- components/named_mojo_ipc_server/connection_info.h.orig	2025-11-19 21:40:05.000000000 +0000
 +++ components/named_mojo_ipc_server/connection_info.h
-@@ -12,8 +12,17 @@
+@@ -12,8 +12,16 @@
  #include "base/win/scoped_handle.h"
  #elif BUILDFLAG(IS_MAC)
  #include <bsm/libbsm.h>
@@ -20,17 +20,16 @@ $NetBSD: patch-components_named__mojo__ipc__server_connection__info.h,v 1.11 202
 +#include <sys/un.h>
 +#define ucred unpcbid
 +#define SO_PEERCRED LOCAL_PEEREID
-+#define pid unp_pid
 +#endif
  #endif
  
  namespace named_mojo_ipc_server {
-@@ -29,7 +38,7 @@ struct ConnectionInfo {
+@@ -29,7 +37,7 @@ struct ConnectionInfo {
    base::ProcessId pid{};
  #if BUILDFLAG(IS_MAC)
    audit_token_t audit_token{};
 -#elif BUILDFLAG(IS_LINUX)
-+#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_OPENBSD)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_OPENBSD) || BUILDFLAG(IS_NETBSD)
    ucred credentials{};
  #endif
  };

@@ -1,4 +1,4 @@
-$NetBSD: patch-build_linux_strip__binary.py,v 1.11 2025/12/11 09:13:28 kikadf Exp $
+$NetBSD: patch-build_linux_strip__binary.py,v 1.12 2025/12/13 14:53:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

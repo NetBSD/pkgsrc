@@ -1,4 +1,4 @@
-$NetBSD: patch-base_allocator_dispatcher_tls.h,v 1.11 2025/12/11 09:13:26 kikadf Exp $
+$NetBSD: patch-base_allocator_dispatcher_tls.h,v 1.12 2025/12/13 14:53:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

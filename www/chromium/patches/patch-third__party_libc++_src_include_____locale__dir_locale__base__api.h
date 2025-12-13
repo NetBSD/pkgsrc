@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_libc++_src_include_____locale__dir_locale__base__api.h,v 1.10 2025/12/11 09:13:45 kikadf Exp $
+$NetBSD: patch-third__party_libc++_src_include_____locale__dir_locale__base__api.h,v 1.11 2025/12/13 14:54:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

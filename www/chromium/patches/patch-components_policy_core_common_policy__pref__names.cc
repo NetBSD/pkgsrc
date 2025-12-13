@@ -1,4 +1,4 @@
-$NetBSD: patch-components_policy_core_common_policy__pref__names.cc,v 1.9 2025/12/11 09:13:36 kikadf Exp $
+$NetBSD: patch-components_policy_core_common_policy__pref__names.cc,v 1.10 2025/12/13 14:53:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

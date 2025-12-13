@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_net_profile__network__context__service__factory.cc,v 1.10 2025/12/11 09:13:31 kikadf Exp $
+$NetBSD: patch-chrome_browser_net_profile__network__context__service__factory.cc,v 1.11 2025/12/13 14:53:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

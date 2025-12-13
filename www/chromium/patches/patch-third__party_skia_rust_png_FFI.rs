@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_skia_rust_png_FFI.rs,v 1.3 2025/12/11 09:13:45 kikadf Exp $
+$NetBSD: patch-third__party_skia_rust_png_FFI.rs,v 1.4 2025/12/13 14:54:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

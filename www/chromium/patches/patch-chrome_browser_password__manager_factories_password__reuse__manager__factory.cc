@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_password__manager_factories_password__reuse__manager__factory.cc,v 1.7 2025/12/11 09:13:31 kikadf Exp $
+$NetBSD: patch-chrome_browser_password__manager_factories_password__reuse__manager__factory.cc,v 1.8 2025/12/13 14:53:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
