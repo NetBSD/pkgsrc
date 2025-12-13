@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.15 2020/01/26 17:31:11 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2025/12/13 15:18:42 wiz Exp $
 
 DISTNAME=		knj10-1.1
 PKGNAME=		ja-naga10-1.1
 PKGREVISION=		3
 CATEGORIES=		fonts x11 japanese
-MASTER_SITES=		http://hp.vector.co.jp/authors/VA013391/fonts/
+#MASTER_SITES=		http://hp.vector.co.jp/authors/VA013391/fonts/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			6x12${EXTRACT_SUFX}
 
 MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=		https://hp.vector.co.jp/authors/VA013391/fonts/#naga10
+#HOMEPAGE=		https://hp.vector.co.jp/authors/VA013391/fonts/#naga10
 COMMENT=		10x10 dots X11 bitmap font for JIS X 0208
 
 USE_TOOLS+=		bdftopcf gzip patch
