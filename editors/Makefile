@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.259 2025/04/28 08:29:21 wiz Exp $
+# $NetBSD: Makefile,v 1.260 2025/12/13 09:08:06 fox Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -97,6 +97,7 @@ SUBDIR+=	micro
 SUBDIR+=	mined
 SUBDIR+=	mle
 SUBDIR+=	moe
+SUBDIR+=	msedit
 SUBDIR+=	mule-ucs
 SUBDIR+=	nano
 SUBDIR+=	ne
