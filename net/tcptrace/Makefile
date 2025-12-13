@@ -1,32 +1,51 @@
-# $NetBSD: Makefile,v 1.36 2023/12/28 22:44:22 zafer Exp $
+# $NetBSD: Makefile,v 1.37 2025/12/13 16:42:03 vins Exp $
 
 DISTNAME=	tcptrace-6.6.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
-MASTER_SITES=	#
+MASTER_SITES=	https://distfiles.macports.org/tcptrace/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/blitz/tcptrace
+HOMEPAGE=	https://sourceforge.net/projects/open-tcptrace/
 COMMENT=	TCP dump file analysis tool
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 
-USE_TOOLS+=	bison flex
+USE_TOOLS+=		bison flex
 
 BUILD_TARGET=		tcptrace
 
-DOCFILES=		COPYRIGHT FAQ README README.tput_graphs
+PKGDOCS=		COPYRIGHT FAQ README README.tput_graphs README.tline_graphs
 
-LDFLAGS.SunOS+=		-lm
+LIBS+=			-lpcap -lm
+LIBS.SunOS+=		-lnsl -lsocket
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/tcptrace
+SUBST_CLASSES+=		pkgsrc
+SUBST_STAGE.pkgsrc=	pre-configure
+SUBST_FILES.pkgsrc=	Makefile.in
+SUBST_VARS.pkgsrc+=	HOST PREFIX PKGMANDIR USER
+SUBST_MESSAGE.pkgsrc=	Replacing pkgsrc placeholders
+
+SUBST_CLASSES+=		hacks
+SUBST_STAGE.hacks=	pre-configure
+SUBST_FILES.hacks=	erf.c gcache.c ipv6.c netscout.c \
+			print.c trace.c tcpdump.c tcptrace.c
+SUBST_SED.hacks=	-e 's|memcpy|_memcpy|g'
+
+MAKE_FLAGS+=		LDLIBS=${LIBS:M*:Q}
+
+AUTO_MKDIRS=		yes
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tcptrace ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/tcptrace.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/tcptrace.1
-.for f in ${DOCFILES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/tcptrace
-.endfor
+	${INSTALL_PROGRAM} ${WRKSRC}/tcptrace		\
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/tcptrace.man		\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/tcptrace.1
+	${INSTALL_DATA}  ${PKGDOCS:S|^|${WRKSRC}/|}	\
+		${DESTDIR}${PREFIX}/share/doc/tcptrace
+	${INSTALL_DATA} ${WRKSRC}/dot_tcptracerc	\
+		${DESTDIR}${PREFIX}/share/examples/tcptracerc
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
