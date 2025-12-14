@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2025/09/13 16:26:01 vins Exp $
+# $NetBSD: Makefile,v 1.35.2.1 2025/12/14 20:03:58 maya Exp $
 
-VERSION=	7.7.0p0
+VERSION=	7.8.0p0
 DISTNAME=	opensmtpd-${VERSION}
-PKGREVISION=	2
 CATEGORIES=	mail net
 MASTER_SITES=	https://www.opensmtpd.org/archives/
 
@@ -18,7 +17,7 @@ SMTPD_QUEUE=	_smtpq
 GNU_CONFIGURE=	yes
 USE_DB185=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	awk pkg-config yacc
+USE_TOOLS+=	awk groff pkg-config yacc
 USE_TOOLS+=	automake aclocal autoheader autoconf pkg-config
 
 CHECK_BUILTIN.openssl:= yes
@@ -87,7 +86,7 @@ SUBST_MESSAGE.pkgsrc=	Replacing pkgsrc placeholders.
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing hard-coded paths.
-SUBST_FILES.paths+=	configure mk/smtpd/Makefile.am usr.sbin/smtpd/smtpd.conf \
+SUBST_FILES.paths+=	mk/smtpd/Makefile.am usr.sbin/smtpd/smtpd.conf \
 			usr.sbin/smtpd/smtpd.h usr.sbin/smtpd/smtpd.8 \
 			usr.sbin/smtpd/smtpd.conf.5 usr.sbin/smtpd/aliases.5 \
 			usr.sbin/smtpd/makemap.8 usr.sbin/smtpd/newaliases.8
@@ -125,6 +124,6 @@ doc-install:
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libasr/buildlink3.mk"
-.include "../../security/libretls/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

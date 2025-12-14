@@ -1,20 +1,10 @@
-$NetBSD: patch-usr.sbin_smtpd_smtp__session.c,v 1.1 2023/08/24 15:26:40 vins Exp $
+$NetBSD: patch-usr.sbin_smtpd_smtp__session.c,v 1.1.18.1 2025/12/14 20:03:58 maya Exp $
 
-Add a patch to handle long usernames during SMTP authentication,
-e.g. often username exceeds the limit when it contains @host.name
-part.
+Add a patch to handle long usernames during SMTP authentication.
 
-From FreeBSD's ports.
-
-cf.http://svnweb.freebsd.org/ports?view=revision&revision=394424
-
-For update 6.7.1p1:
-Removed hunk to increase buffersize to LOGIN_NAME_MAX+HOST_NAME_MAX+1,
-this was already increased upstream to SMTPD_MAXMAILADDRSIZE.
-
---- usr.sbin/smtpd/smtp_session.c.orig	2020-05-21 19:06:04.000000000 +0000
+--- usr.sbin/smtpd/smtp_session.c.orig	2025-07-30 20:26:49.764391744 +0000
 +++ usr.sbin/smtpd/smtp_session.c
-@@ -84,6 +84,7 @@ enum {
+@@ -80,6 +80,7 @@ enum {
  	TX_ERROR_ENVELOPE,
  	TX_ERROR_SIZE,
  	TX_ERROR_IO,
@@ -22,7 +12,7 @@ this was already increased upstream to SMTPD_MAXMAILADDRSIZE.
  	TX_ERROR_LOOP,
  	TX_ERROR_MALFORMED,
  	TX_ERROR_RESOURCES,
-@@ -970,6 +971,15 @@ smtp_session_imsg(struct mproc *p, struc
+@@ -962,6 +963,15 @@ smtp_session_imsg(struct mproc *p, struc
  
  		s = tree_xpop(&wait_parent_auth, reqid);
  		strnvis(user, s->username, sizeof user, VIS_WHITE | VIS_SAFE);
@@ -38,16 +28,16 @@ this was already increased upstream to SMTPD_MAXMAILADDRSIZE.
  		if (success == LKA_OK) {
  			log_info("%016"PRIx64" smtp "
  			    "authentication user=%s "
-@@ -1967,7 +1977,7 @@ smtp_rfc4954_auth_plain(struct smtp_sess
- 		user++; /* skip NUL */
- 		if (strlcpy(s->username, user, sizeof(s->username))
- 		    >= sizeof(s->username))
+@@ -1964,7 +1974,7 @@ smtp_rfc4954_auth_plain(struct smtp_sess
+ 		/* String is not NUL terminated, leave room. */
+ 		if ((len = base64_decode(arg, (unsigned char *)buf,
+ 			    sizeof(buf) - 1)) == -1)
 -			goto abort;
 +			s->flags |= SF_USERTOOLONG;
+ 		/* buf is a byte string, NUL terminate. */
+ 		buf[len] = '\0';
  
- 		pass = memchr(user, '\0', len - (user - buf));
- 		if (pass == NULL || pass >= buf + len - 2)
-@@ -2011,9 +2021,12 @@ smtp_rfc4954_auth_login(struct smtp_sess
+@@ -2021,9 +2031,12 @@ smtp_rfc4954_auth_login(struct smtp_sess
  
  	case STATE_AUTH_USERNAME:
  		memset(s->username, 0, sizeof(s->username));
