@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/11/30 10:14:05 vins Exp $
+# $NetBSD: Makefile,v 1.8 2025/12/14 10:17:57 vins Exp $
 
 DISTNAME=	xtrlock-2.18
 CATEGORIES=	x11
@@ -37,6 +37,7 @@ SUBST_MESSAGE.defs=	Replacing deprecated preprocessor-defined macros.
 
 MAKE_FLAGS+=		CCOPTIONS=${CFLAGS:Q}
 MAKE_FLAGS+=		LOCAL_LDFLAGS=${LDFLAGS:Q}
+MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}/man1
 
 .if	${OPSYS} == "Linux"
 SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} shadow 2555
