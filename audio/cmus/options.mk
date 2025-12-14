@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.25 2024/10/24 15:36:10 jperkin Exp $
+# $NetBSD: options.mk,v 1.26 2025/12/14 12:06:40 vins Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cmus
 
 PKG_SUPPORTED_OPTIONS+=		alsa flac mad vorbis libao musepack faad
-PKG_SUPPORTED_OPTIONS+=		wavpack ffmpeg opus jack pulseaudio
+PKG_SUPPORTED_OPTIONS+=		wavpack ffmpeg opus jack pulseaudio sndio
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	mod
 PKG_OPTIONS_GROUP.mod=		modplug mikmod
@@ -167,4 +167,14 @@ CONFIGURE_ARGS+=	CONFIG_OPUS=y
 PLIST.opus=		yes
 .else
 CONFIGURE_ARGS+=	CONFIG_OPUS=n
+.endif
+
+# SNDIO support
+#
+.if !empty(PKG_OPTIONS:Msndio)
+.include "../../audio/sndio/buildlink3.mk"
+CONFIGURE_ARGS+=	CONFIG_SNDIO=y
+PLIST.sndio=		yes
+.else
+CONFIGURE_ARGS+=	CONFIG_SNDIO=n
 .endif
