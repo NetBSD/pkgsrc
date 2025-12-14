@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2022/09/30 13:07:09 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/12/14 12:06:40 vins Exp $
 bin/cmus
 bin/cmus-remote
 ${PLIST.faad}lib/cmus/ip/aac.so
@@ -21,6 +21,7 @@ ${PLIST.jack}lib/cmus/op/jack.so
 ${PLIST.oss}lib/cmus/op/oss.so
 ${PLIST.pulseaudio}lib/cmus/op/pulse.so
 ${PLIST.sunaudio}lib/cmus/op/sun.so
+${PLIST.sndio}lib/cmus/op/sndio.so
 man/man1/cmus-remote.1
 man/man1/cmus.1
 man/man7/cmus-tutorial.7
