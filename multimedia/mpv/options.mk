@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.38 2025/04/24 10:26:30 leot Exp $
+# $NetBSD: options.mk,v 1.39 2025/12/14 13:25:04 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
@@ -7,7 +7,7 @@ PKG_OPTIONS_OPTIONAL_GROUPS=	gl
 PKG_OPTIONS_GROUP.gl=		opengl rpi
 
 # audio outputs
-PKG_SUPPORTED_OPTIONS+=		alsa jack openal pulseaudio
+PKG_SUPPORTED_OPTIONS+=		alsa jack openal pulseaudio sndio
 # video outputs
 PKG_SUPPORTED_OPTIONS+=		caca libdrm sixel x11
 # audio/video outputs
@@ -122,6 +122,16 @@ MESON_ARGS+=	-Dpulse=enabled
 .include "../../audio/pulseaudio/buildlink3.mk"
 .else
 MESON_ARGS+=	-Dpulse=disabled
+.endif
+
+###
+### Sndio support (audio output)
+###
+.if !empty(PKG_OPTIONS:Msndio)
+MESON_ARGS+=	-Dsndio=enabled
+.include "../../audio/sndio/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dsndio=disabled
 .endif
 
 ###
