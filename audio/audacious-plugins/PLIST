@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2022/05/18 15:09:55 nia Exp $
+@comment $NetBSD: PLIST,v 1.26 2025/12/14 13:23:51 vins Exp $
 lib/audacious/Container/asx.so
 lib/audacious/Container/asx3.so
 lib/audacious/Container/audpl.so
@@ -62,6 +62,7 @@ ${PLIST.jack}lib/audacious/Output/jack-ng.so
 ${PLIST.oss4}lib/audacious/Output/oss4.so
 ${PLIST.pulse}lib/audacious/Output/pulse_audio.so
 lib/audacious/Output/sdlout.so
+${PLIST.sndio}lib/audacious/Output/sndio-ng.so
 lib/audacious/Transport/gio.so
 lib/audacious/Transport/mms.so
 lib/audacious/Transport/neon.so
