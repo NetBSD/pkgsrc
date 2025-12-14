@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.718 2025/12/14 12:37:05 vins Exp $
+# $NetBSD: Makefile,v 1.719 2025/12/14 12:58:10 vins Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -216,6 +216,7 @@ SUBDIR+=	libao-macosx
 SUBDIR+=	libao-nas
 SUBDIR+=	libao-oss
 SUBDIR+=	libao-pulse
+SUBDIR+=	libao-sndio
 SUBDIR+=	libao-sun
 SUBDIR+=	libaudec
 SUBDIR+=	libaudiofile
