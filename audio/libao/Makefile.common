@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2020/01/20 21:54:01 nia Exp $
+# $NetBSD: Makefile.common,v 1.43 2025/12/14 13:11:07 vins Exp $
 #
 # used by audio/libao-alsa/Makefile
 # used by audio/libao-arts/Makefile
@@ -7,6 +7,7 @@
 # used by audio/libao-oss/Makefile
 # used by audio/libao-sun/Makefile
 # used by audio/libao-pulse/Makefile
+# used by audio/libao-sndio/Makefile
 
 DISTNAME=	libao-1.2.2
 CATEGORIES=	audio devel
