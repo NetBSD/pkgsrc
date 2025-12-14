@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2025/12/14 13:41:22 vins Exp $
+# $NetBSD: builtin.mk,v 1.2 2025/12/14 19:02:51 vins Exp $
 
 BUILTIN_PKG:=	sndio
 
@@ -23,7 +23,7 @@ IS_BUILTIN.sndio=	yes
 IS_BUILTIN.sndio=	no
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.sndio
+MAKEVARS+=		IS_BUILTIN.sndio
 
 ###
 ### Determine whether we should use the built-in implementation.
