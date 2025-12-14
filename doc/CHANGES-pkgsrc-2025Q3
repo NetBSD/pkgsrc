@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q3,v 1.1.2.15 2025/12/12 15:50:54 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q3,v 1.1.2.16 2025/12/14 20:04:52 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q3 branch:
 
@@ -91,3 +91,6 @@ graphics/png: Security fix
 
 Pullup ticket #7036 - requested by roy
 net/openresolv: Security fix
+
+Pullup ticket #7037 - requested by bsiegert
+mail/opensmtpd: Security fix
