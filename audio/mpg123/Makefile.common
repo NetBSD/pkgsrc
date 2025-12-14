@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.82 2025/10/10 05:01:04 adam Exp $
+# $NetBSD: Makefile.common,v 1.83 2025/12/14 12:40:41 vins Exp $
 #
 # used by audio/mpg123-jack/Makefile
 # used by audio/mpg123-nas/Makefile
 # used by audio/mpg123-pulse/Makefile
+# used by audio/mpg123-sndio/Makefile
 
 DISTNAME=	mpg123-1.33.3
 PKGNAME?=	${DISTNAME:C/[[:alnum:]]*/&-${MPG123_MODULE}/}
