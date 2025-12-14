@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/12/14 18:16:47 vins Exp $
+
+BLAKE2s (gstreamer1-plugins-sndio-1.24.0.tar.gz) = ff2d540ee5f0728032ea5a7f4c185e4af153cca4f0d796bf19699738ce0c291c
+SHA512 (gstreamer1-plugins-sndio-1.24.0.tar.gz) = 5587db1f32b590f047cfac4382579c8088f5f927a314d76d798a78e9d9880fca172d29c6433c5c395921622d31e8aa22b8006090705ebe6a2755df49e253c133
+Size (gstreamer1-plugins-sndio-1.24.0.tar.gz) = 7584 bytes
