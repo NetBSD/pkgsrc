@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/12/14 12:34:45 vins Exp $
+lib/mpg123/output_sndio.la
