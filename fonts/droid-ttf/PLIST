@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.7 2025/12/14 10:19:54 leot Exp $
+share/doc/droid-ttf/NOTICE
+share/fonts/X11/TTF/DroidKufi-Bold.ttf
+share/fonts/X11/TTF/DroidKufi-Regular.ttf
+share/fonts/X11/TTF/DroidNaskh-Bold.ttf
+share/fonts/X11/TTF/DroidNaskh-Regular.ttf
+share/fonts/X11/TTF/DroidSans-Bold.ttf
+share/fonts/X11/TTF/DroidSans.ttf
+share/fonts/X11/TTF/DroidSansArmenian.ttf
+share/fonts/X11/TTF/DroidSansEthiopic-Bold.ttf
+share/fonts/X11/TTF/DroidSansEthiopic-Regular.ttf
+share/fonts/X11/TTF/DroidSansFallback.ttf
+share/fonts/X11/TTF/DroidSansFallbackFull.ttf
+share/fonts/X11/TTF/DroidSansFallbackLegacy.ttf
+share/fonts/X11/TTF/DroidSansGeorgian.ttf
+share/fonts/X11/TTF/DroidSansHebrew-Bold.ttf
+share/fonts/X11/TTF/DroidSansHebrew-Regular.ttf
+share/fonts/X11/TTF/DroidSansJapanese.ttf
+share/fonts/X11/TTF/DroidSansMono.ttf
+share/fonts/X11/TTF/DroidSansThai.ttf
+share/fonts/X11/TTF/DroidSerif-Bold.ttf
+share/fonts/X11/TTF/DroidSerif-BoldItalic.ttf
+share/fonts/X11/TTF/DroidSerif-Italic.ttf
+share/fonts/X11/TTF/DroidSerif-Regular.ttf
