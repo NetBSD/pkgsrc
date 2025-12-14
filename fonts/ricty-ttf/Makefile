@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.28 2023/06/06 12:41:23 riastradh Exp $
+# $NetBSD: Makefile,v 1.29 2025/12/14 09:02:16 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ricty-ttf-4.1.1
 CATEGORIES=	fonts japanese
-
 # The official distribution of Ricty is unfortunately not versioned.
+#MASTER_SITES=	http://www.yusa.lab.uec.ac.jp/~yusa/ricty/
 DIST_SUBDIR=	${PKGBASE}
 DISTFILES=	ricty_generator.sh os2version_reviser.sh
-MASTER_SITES=	http://www.yusa.lab.uec.ac.jp/~yusa/ricty/
 EXTRACT_CMD=	${CP} -f "$$extract_file" "${WRKSRC}"
 WRKSRC=		${WRKDIR}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.yusa.lab.uec.ac.jp/~yusa/ricty.html
+#HOMEPAGE=	http://www.yusa.lab.uec.ac.jp/~yusa/ricty.html
 COMMENT=	Migu 1M and Inconsolata based TrueType fonts for programming
 LICENSE=	ipafont AND ofl-v1.1 AND 2-clause-bsd
 
