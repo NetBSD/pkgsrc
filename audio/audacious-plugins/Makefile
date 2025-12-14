@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2025/10/23 20:35:39 wiz Exp $
+# $NetBSD: Makefile,v 1.170 2025/12/14 13:23:51 vins Exp $
 
 DISTNAME=	audacious-plugins-4.1
 PKGREVISION=	49
@@ -23,7 +23,6 @@ CONFIGURE_ARGS+=	--disable-cue
 CONFIGURE_ARGS+=	--disable-soxr
 CONFIGURE_ARGS+=	--disable-notify
 CONFIGURE_ARGS+=	--disable-qtaudio
-CONFIGURE_ARGS+=	--disable-sndio
 
 .include "../../mk/oss.buildlink3.mk"
 PLIST_VARS+=		oss4
