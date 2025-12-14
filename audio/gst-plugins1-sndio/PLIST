@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/12/14 18:16:47 vins Exp $
+lib/gstreamer-1.0/libgstsndio.so
