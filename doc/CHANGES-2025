@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7207 2025/12/14 18:19:00 vins Exp $
+$NetBSD: CHANGES-2025,v 1.7208 2025/12/14 19:59:10 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10452,3 +10452,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-yubikey-manager to 5.8.0nb1 [ryoon 2025-12-14]
 	Updated www/palemoon to 33.9.1nb2 [martin 2025-12-14]
 	Added audio/gst-plugins1-sndio version 1.24.0 [vins 2025-12-14]
+	Added audio/alsa-plugins-sndio version 0.2 [vins 2025-12-14]
