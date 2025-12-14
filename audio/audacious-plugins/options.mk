@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.12 2021/03/15 13:15:56 nia Exp $
+# $NetBSD: options.mk,v 1.13 2025/12/14 13:23:51 vins Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.audacious-plugins
-PKG_SUPPORTED_OPTIONS+=		alsa jack pulseaudio lirc
+PKG_SUPPORTED_OPTIONS+=		alsa jack pulseaudio lirc sndio
 PKG_SUPPORTED_OPTIONS+=		adplug sidplay fluidsynth libgme modplug wavpack
 PKG_SUGGESTED_OPTIONS+=		wavpack
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa lirc
@@ -87,4 +87,12 @@ PLIST_VARS+=	wavpack
 PLIST.wavpack=	yes
 .else
 CONFIGURE_ARGS+=	--disable-wavpack
+.endif
+
+PLIST_VARS+=	sndio
+.if !empty(PKG_OPTIONS:Msndio)
+.  include "../../audio/sndio/buildlink3.mk"
+PLIST.sndio=	yes
+.else
+CONFIGURE_ARGS+=	--disable-sndio
 .endif
