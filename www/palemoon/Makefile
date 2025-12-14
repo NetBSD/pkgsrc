@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2025/10/23 20:39:49 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2025/12/14 18:05:18 martin Exp $
 # for build instructions see
 # https://developer.palemoon.org/build/linux/
 
 PKGNAME=	palemoon-33.9.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 
 DIST_SUBDIR=	palemoon-${PKGVERSION_NOREV}
@@ -62,7 +62,10 @@ CONFIGURE_ARGS+=	--enable-jxl
 CONFIGURE_ARGS+=	--disable-webrtc
 CONFIGURE_ARGS+=	--disable-gamepad
 CONFIGURE_ARGS+=	--disable-tests
-CONFIGURE_ARGS+=	--disable-debug
+#CONFIGURE_ARGS+=	--disable-debug
+CONFIGURE_ARGS+=	--enable-debug-symbols
+CONFIGURE_ARGS+=	--enable-optimize=-O2
+CONFIGURE_ARGS+=	--disable-install-strip
 CONFIGURE_ARGS+=	--disable-necko-wifi
 CONFIGURE_ARGS+=	--disable-updater
 CONFIGURE_ARGS+=	--with-pthreads
