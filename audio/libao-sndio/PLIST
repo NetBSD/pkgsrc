@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/12/14 12:56:26 vins Exp $
+lib/ao/plugins-4/libsndio.la
