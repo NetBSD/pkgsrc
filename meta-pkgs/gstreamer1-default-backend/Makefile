@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/09/24 20:41:29 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/12/14 18:28:20 vins Exp $
 
-DISTNAME=	gstreamer1-default-backend-1.1
+DISTNAME=	gstreamer1-default-backend-1.2
 CATEGORIES=	meta-pkgs audio multimedia
 MASTER_SITES=	# empty
 
@@ -11,7 +11,7 @@ COMMENT=	Default audio backend for gstreamer1
 META_PACKAGE=	yes
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gstreamer1-default-backend
-PKG_SUPPORTED_OPTIONS=	alsa oss pulseaudio
+PKG_SUPPORTED_OPTIONS=	alsa oss pulseaudio sndio
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -21,6 +21,8 @@ PKG_SUPPORTED_OPTIONS=	alsa oss pulseaudio
 PKG_SUGGESTED_OPTIONS=	alsa
 .elif ${OSS_TYPE:tl} != "none"
 PKG_SUGGESTED_OPTIONS=	oss
+.elif ${OPSYS} == "OpenBSD"
+PKG_SUGGESTED_OPTIONS=	sndio
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -40,6 +42,10 @@ DEPENDS+=	gst-plugins1-osxvideo-[0-9]*:../../multimedia/gst-plugins1-osxvideo
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 DEPENDS+=	gst-plugins1-pulse-[0-9]*:../../audio/gst-plugins1-pulse
+.endif
+
+.if !empty(PKG_OPTIONS:Msndio)
+DEPENDS+=	gst-plugins1-sndio-[0-9]*:../../audio/gst-plugins1-sndio
 .endif
 
 .include "../../mk/bsd.pkg.mk"
