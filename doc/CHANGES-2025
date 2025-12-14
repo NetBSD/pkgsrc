@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7192 2025/12/14 07:05:54 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7193 2025/12/14 07:06:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10436,3 +10436,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/php-apcu to 5.1.28 [taca 2025-12-14]
 	Updated www/drupal11 to 11.1.9 [taca 2025-12-14]
 	Updated time/p5-DateTime-TimeZone to 2.66 [wiz 2025-12-14]
+	Updated devel/p5-Exporter-Tiny to 1.006003 [wiz 2025-12-14]
