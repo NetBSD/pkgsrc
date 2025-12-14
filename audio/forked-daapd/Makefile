@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2025/10/23 20:35:42 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2025/12/14 09:06:34 wiz Exp $
 
 DISTNAME=	forked-daapd-27.4
 PKGREVISION=	45
@@ -8,7 +8,8 @@ GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ejurgensen.github.io/forked-daapd
+# follow-up project, should be its own package?
+HOMEPAGE=	https://github.com/owntone/owntone-server
 COMMENT=	DAAP (iTunes), MPD (musicpd), and RSP (Roku) media server
 LICENSE=	gnu-gpl-v2
 
