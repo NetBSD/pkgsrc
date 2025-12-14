@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.717 2025/11/25 07:05:55 wiz Exp $
+# $NetBSD: Makefile,v 1.718 2025/12/14 12:37:05 vins Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -320,6 +320,7 @@ SUBDIR+=	mpg123
 SUBDIR+=	mpg123-jack
 SUBDIR+=	mpg123-nas
 SUBDIR+=	mpg123-pulse
+SUBDIR+=	mpg123-sndio
 SUBDIR+=	mpg321
 SUBDIR+=	mppenc
 SUBDIR+=	mserv
