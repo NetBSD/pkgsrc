@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/10/12 07:41:31 vins Exp $
+# $NetBSD: Makefile,v 1.4 2025/12/14 10:22:03 vins Exp $
 
 DISTNAME=	xbrightness-0.3
 PKGREVISION=	1
@@ -12,9 +12,11 @@ LICENSE=	mit
 
 USE_IMAKE=	yes
 
-MAKE_FLAGS+=	INSTALL=${INSTALL:Q}
-MAKE_FLAGS+=	CCOPTIONS=${CFLAGS:Q}
-MAKE_FLAGS+=	LOCAL_LDFLAGS=${LDFLAGS:Q}
+MAKE_FLAGS+=	INSTALL=${INSTALL:Q} PREFIX=${PREFIX} \
+		MANDIR=${PREFIX}/${PKGMANDIR}/man1	\
+		CCOPTIONS=${CFLAGS:Q}			\
+		LOCAL_LDFLAGS=${LDFLAGS:Q}		\
+
 
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
