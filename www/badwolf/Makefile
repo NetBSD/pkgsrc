@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2025/10/23 20:39:44 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/12/14 09:14:44 wiz Exp $
 
-DISTNAME=	badwolf-1.3.0
-PKGREVISION=	17
+DISTNAME=	badwolf-1.4.0
 CATEGORIES=	www
-MASTER_SITES=	https://hacktivis.me/releases/
+MASTER_SITES=	https://distfiles.hacktivis.me/releases/badwolf/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://hacktivis.me/projects/badwolf
@@ -28,6 +27,7 @@ do-install:
 		ninja -j ${MAKE_JOBS:U1} install
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
