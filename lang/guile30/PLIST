@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/05/22 09:22:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/12/14 21:28:25 gdt Exp $
 guile/3.0/bin/guild
 guile/3.0/bin/guile
 guile/3.0/bin/guile-config
@@ -94,13 +94,13 @@ guile/3.0/include/guile/3.0/libguile/scm.h
 guile/3.0/include/guile/3.0/libguile/scmconfig.h
 guile/3.0/include/guile/3.0/libguile/scmsigs.h
 guile/3.0/include/guile/3.0/libguile/script.h
+guile/3.0/include/guile/3.0/libguile/setjump-win.h
 guile/3.0/include/guile/3.0/libguile/simpos.h
 guile/3.0/include/guile/3.0/libguile/smob.h
 guile/3.0/include/guile/3.0/libguile/snarf.h
 guile/3.0/include/guile/3.0/libguile/socket.h
 guile/3.0/include/guile/3.0/libguile/sort.h
 guile/3.0/include/guile/3.0/libguile/srcprop.h
-guile/3.0/include/guile/3.0/libguile/srfi-1.h
 guile/3.0/include/guile/3.0/libguile/srfi-13.h
 guile/3.0/include/guile/3.0/libguile/srfi-14.h
 guile/3.0/include/guile/3.0/libguile/srfi-4.h
@@ -304,6 +304,7 @@ guile/3.0/lib/guile/3.0/ccache/oop/goops/active-slot.go
 guile/3.0/lib/guile/3.0/ccache/oop/goops/composite-slot.go
 guile/3.0/lib/guile/3.0/ccache/oop/goops/describe.go
 guile/3.0/lib/guile/3.0/ccache/oop/goops/internal.go
+guile/3.0/lib/guile/3.0/ccache/oop/goops/keyword-formals.go
 guile/3.0/lib/guile/3.0/ccache/oop/goops/save.go
 guile/3.0/lib/guile/3.0/ccache/oop/goops/simple.go
 guile/3.0/lib/guile/3.0/ccache/oop/goops/stklos.go
@@ -383,7 +384,10 @@ guile/3.0/lib/guile/3.0/ccache/srfi/srfi-171/gnu.go
 guile/3.0/lib/guile/3.0/ccache/srfi/srfi-171/meta.go
 guile/3.0/lib/guile/3.0/ccache/srfi/srfi-18.go
 guile/3.0/lib/guile/3.0/ccache/srfi/srfi-19.go
+guile/3.0/lib/guile/3.0/ccache/srfi/srfi-197.go
 guile/3.0/lib/guile/3.0/ccache/srfi/srfi-2.go
+guile/3.0/lib/guile/3.0/ccache/srfi/srfi-207.go
+guile/3.0/lib/guile/3.0/ccache/srfi/srfi-244.go
 guile/3.0/lib/guile/3.0/ccache/srfi/srfi-26.go
 guile/3.0/lib/guile/3.0/ccache/srfi/srfi-27.go
 guile/3.0/lib/guile/3.0/ccache/srfi/srfi-28.go
@@ -402,6 +406,7 @@ guile/3.0/lib/guile/3.0/ccache/srfi/srfi-45.go
 guile/3.0/lib/guile/3.0/ccache/srfi/srfi-6.go
 guile/3.0/lib/guile/3.0/ccache/srfi/srfi-60.go
 guile/3.0/lib/guile/3.0/ccache/srfi/srfi-64.go
+guile/3.0/lib/guile/3.0/ccache/srfi/srfi-64/automake.go
 guile/3.0/lib/guile/3.0/ccache/srfi/srfi-67.go
 guile/3.0/lib/guile/3.0/ccache/srfi/srfi-69.go
 guile/3.0/lib/guile/3.0/ccache/srfi/srfi-71.go
@@ -473,8 +478,8 @@ guile/3.0/lib/guile/3.0/ccache/web/server.go
 guile/3.0/lib/guile/3.0/ccache/web/server/http.go
 guile/3.0/lib/guile/3.0/ccache/web/uri.go
 guile/3.0/lib/guile/3.0/extensions/guile-readline.la
-guile/3.0/lib/libguile-3.0.${GUILE_LIBNAME}-gdb.scm
 guile/3.0/lib/libguile-3.0.la
+guile/3.0/lib/libguile-3.0.so.1.7.1-gdb.scm
 guile/3.0/lib/pkgconfig/guile-3.0.pc
 guile/3.0/man/man1/guile.1
 guile/3.0/share/aclocal/guile.m4
@@ -656,6 +661,7 @@ guile/3.0/share/guile/3.0/oop/goops/active-slot.scm
 guile/3.0/share/guile/3.0/oop/goops/composite-slot.scm
 guile/3.0/share/guile/3.0/oop/goops/describe.scm
 guile/3.0/share/guile/3.0/oop/goops/internal.scm
+guile/3.0/share/guile/3.0/oop/goops/keyword-formals.scm
 guile/3.0/share/guile/3.0/oop/goops/save.scm
 guile/3.0/share/guile/3.0/oop/goops/simple.scm
 guile/3.0/share/guile/3.0/oop/goops/stklos.scm
@@ -735,7 +741,12 @@ guile/3.0/share/guile/3.0/srfi/srfi-171/gnu.scm
 guile/3.0/share/guile/3.0/srfi/srfi-171/meta.scm
 guile/3.0/share/guile/3.0/srfi/srfi-18.scm
 guile/3.0/share/guile/3.0/srfi/srfi-19.scm
+guile/3.0/share/guile/3.0/srfi/srfi-197.scm
 guile/3.0/share/guile/3.0/srfi/srfi-2.scm
+guile/3.0/share/guile/3.0/srfi/srfi-207.scm
+guile/3.0/share/guile/3.0/srfi/srfi-207/upstream/base64.scm
+guile/3.0/share/guile/3.0/srfi/srfi-207/upstream/bytestrings-impl.scm
+guile/3.0/share/guile/3.0/srfi/srfi-244.scm
 guile/3.0/share/guile/3.0/srfi/srfi-26.scm
 guile/3.0/share/guile/3.0/srfi/srfi-27.scm
 guile/3.0/share/guile/3.0/srfi/srfi-28.scm
@@ -755,7 +766,7 @@ guile/3.0/share/guile/3.0/srfi/srfi-45.scm
 guile/3.0/share/guile/3.0/srfi/srfi-6.scm
 guile/3.0/share/guile/3.0/srfi/srfi-60.scm
 guile/3.0/share/guile/3.0/srfi/srfi-64.scm
-guile/3.0/share/guile/3.0/srfi/srfi-64/testing.scm
+guile/3.0/share/guile/3.0/srfi/srfi-64/automake.scm
 guile/3.0/share/guile/3.0/srfi/srfi-67.scm
 guile/3.0/share/guile/3.0/srfi/srfi-67/compare.scm
 guile/3.0/share/guile/3.0/srfi/srfi-69.scm
