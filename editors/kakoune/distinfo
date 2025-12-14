@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/12/11 14:27:25 wiz Exp $
+$NetBSD: distinfo,v 1.9 2025/12/14 10:04:32 wiz Exp $
 
-BLAKE2s (kakoune-2024.05.18.tar.bz2) = 53df8c13b713f0235479b57ad404ed91ed995967625b0c307eced570833fe2db
-SHA512 (kakoune-2024.05.18.tar.bz2) = 4feba6b9a75fd16c1c8151139ac5a98d113f2ab1a5c9e7d03ac194d9d6d67d7dfa25b4e6073546b8dafa241de5db4ddbce4405faa42d710bbc9200f3fab12e4b
-Size (kakoune-2024.05.18.tar.bz2) = 588347 bytes
+BLAKE2s (kakoune-2025.06.03.tar.bz2) = 463c5a60d3dd792063e0d7522e8a974116700a187eb1985bbd89f9524bf4d0b2
+SHA512 (kakoune-2025.06.03.tar.bz2) = 1fc397f29841d933cc3f768ee05aded111df4f3448099ef0603549455f158fc8ad4e0561a2d3e82f1862b8cd802e1c9cd24434c53bcd68b81e28cfa4b3a416e4
+Size (kakoune-2025.06.03.tar.bz2) = 603942 bytes
