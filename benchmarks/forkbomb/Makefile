@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2023/12/23 02:06:28 zafer Exp $
-#
+# $NetBSD: Makefile,v 1.9 2025/12/14 09:05:11 wiz Exp $
 
 DISTNAME=	forkbomb-1.4
 CATEGORIES=	benchmarks
 MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://home.tiscali.cz:8080/~cz210552/forkbomb.html
+#HOMEPAGE=	http://home.tiscali.cz:8080/~cz210552/forkbomb.html
 COMMENT=	Classic Unix fork() bomber
 
 INSTALLATION_DIRS+=	bin man/man8
