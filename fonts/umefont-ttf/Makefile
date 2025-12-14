@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2020/11/25 15:38:50 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.63 2025/12/14 09:03:37 wiz Exp $
 
 DISTNAME=	umefont_670
 PKGNAME=	${DISTNAME:S/_/-ttf-0./}
@@ -8,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_OSDN:=ume-font/22212/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://osdn.jp/projects/ume-font/wiki/FrontPage
+#HOMEPAGE=	http://osdn.jp/projects/ume-font/wiki/FrontPage
 COMMENT=	Ume 18 Japanese fonts (Mincho and Gothic)
 LICENSE=	mplusfont
 
