@@ -1,0 +1,4 @@
+The GStreamer sndio plugin allows applications that use GStreamer to
+play and record to/from an sndio server.
+It is directly derived from the patchset found in OpenBSD port:
+multimedia/gstreamer1/plugins-base
