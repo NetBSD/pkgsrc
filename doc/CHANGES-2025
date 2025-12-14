@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7194 2025/12/14 07:09:07 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7195 2025/12/14 08:41:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10438,3 +10438,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/p5-DateTime-TimeZone to 2.66 [wiz 2025-12-14]
 	Updated devel/p5-Exporter-Tiny to 1.006003 [wiz 2025-12-14]
 	Updated mail/p5-MIME-Types to 2.30 [wiz 2025-12-14]
+	Updated devel/py-cython to 3.2.3 [adam 2025-12-14]
+	Updated databases/py-aiosqlite to 0.22.0 [adam 2025-12-14]
