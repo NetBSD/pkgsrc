@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.332 2025/10/23 20:35:51 wiz Exp $
+# $NetBSD: Makefile,v 1.333 2025/12/14 13:12:02 vins Exp $
 
 DISTNAME=	mpd-0.23.16
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
@@ -40,7 +40,6 @@ MESON_ARGS+=	-Daudiofile=disabled
 # not available in pkgsrc?
 MESON_ARGS+=	-Dnfs=disabled
 MESON_ARGS+=	-Diso9660=disabled
-MESON_ARGS+=	-Dsndio=disabled
 
 .include "../../mk/bsd.prefs.mk"
 

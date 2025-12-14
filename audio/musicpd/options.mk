@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.47 2024/04/15 17:21:02 wiz Exp $
+# $NetBSD: options.mk,v 1.48 2025/12/14 13:12:02 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
 
 # audio outputs
-PKG_SUPPORTED_OPTIONS+=	jack openal libao pulseaudio
+PKG_SUPPORTED_OPTIONS+=	jack openal libao pulseaudio sndio
 # codecs
 PKG_SUPPORTED_OPTIONS+=	adplug faad ffmpeg fluidsynth libgme libwildmidi
 PKG_SUPPORTED_OPTIONS+=	mikmod modplug musepack sidplay wavpack
@@ -211,6 +211,12 @@ BUILDLINK_API_DEPENDS.libshout+=	libshout>=2.4.0
 .  include "../../audio/lame/buildlink3.mk"
 .else
 MESON_ARGS+=	-Dshout=disabled
+.endif
+
+.if !empty(PKG_OPTIONS:Msndio)
+.  include "../../audio/sndio/buildlink3.mk"
+.else
+MESON_ARGS+=    -Dsndio=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mtremor)
