@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7198 2025/12/14 09:15:00 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7199 2025/12/14 09:31:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10444,3 +10444,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/py-tifffile to 2025.12.12 [adam 2025-12-14]
 	Updated devel/py-test-testmon to 2.2.0 [adam 2025-12-14]
 	Updated www/badwolf to 1.4.0 [wiz 2025-12-14]
+	Updated devel/py-coverage to 7.13.0 [adam 2025-12-14]
+	Updated devel/py-cachetools to 6.2.3 [adam 2025-12-14]
