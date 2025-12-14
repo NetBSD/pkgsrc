@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2025/12/14 18:05:18 martin Exp $
+# $NetBSD: Makefile,v 1.45 2025/12/14 19:58:40 martin Exp $
 # for build instructions see
 # https://developer.palemoon.org/build/linux/
 
@@ -62,10 +62,7 @@ CONFIGURE_ARGS+=	--enable-jxl
 CONFIGURE_ARGS+=	--disable-webrtc
 CONFIGURE_ARGS+=	--disable-gamepad
 CONFIGURE_ARGS+=	--disable-tests
-#CONFIGURE_ARGS+=	--disable-debug
-CONFIGURE_ARGS+=	--enable-debug-symbols
-CONFIGURE_ARGS+=	--enable-optimize=-O2
-CONFIGURE_ARGS+=	--disable-install-strip
+CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-necko-wifi
 CONFIGURE_ARGS+=	--disable-updater
 CONFIGURE_ARGS+=	--with-pthreads
