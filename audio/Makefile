@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.720 2025/12/14 18:18:03 vins Exp $
+# $NetBSD: Makefile,v 1.721 2025/12/14 19:58:13 vins Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -20,6 +20,7 @@ SUBDIR+=	alacconvert
 SUBDIR+=	alsa-lib
 SUBDIR+=	alsa-plugins-oss
 SUBDIR+=	alsa-plugins-pulse
+SUBDIR+=	alsa-plugins-sndio
 SUBDIR+=	alsa-utils
 SUBDIR+=	alure
 SUBDIR+=	amarok
