@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.82 2025/10/23 20:37:27 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.83 2025/12/14 09:07:28 wiz Exp $
 
 DISTNAME=	fotoxx-16.02.1
 PKGREVISION=	27
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.kornelix.com/downloads/tarballs/
+#MASTER_SITES=	http://www.kornelix.com/downloads/tarballs/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.kornelix.com/fotoxx/fotoxx.html
+#HOMEPAGE=	http://www.kornelix.com/fotoxx/fotoxx.html
 COMMENT=	Program for editing image files from a digital camera
 LICENSE=	gnu-gpl-v3
 
