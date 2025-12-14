@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7196 2025/12/14 09:10:03 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7197 2025/12/14 09:13:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10441,3 +10441,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-cython to 3.2.3 [adam 2025-12-14]
 	Updated databases/py-aiosqlite to 0.22.0 [adam 2025-12-14]
 	Removed fonts/droid-ttf successor fonts/noto-ttf [wiz 2025-12-14]
+	Updated graphics/py-tifffile to 2025.12.12 [adam 2025-12-14]
+	Updated devel/py-test-testmon to 2.2.0 [adam 2025-12-14]
