@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2020/01/26 17:31:12 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.9 2025/12/14 09:03:19 wiz Exp $
 
 DISTNAME=	tamsyn-font-1.11
 CATEGORIES=	fonts x11
-MASTER_SITES=	http://www.fial.com/~scott/tamsyn-font/download/
+#MASTER_SITES=	http://www.fial.com/~scott/tamsyn-font/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.fial.com/~scott/tamsyn-font/
+#HOMEPAGE=	https://www.fial.com/~scott/tamsyn-font/
 COMMENT=	Monospaced programming font
 # even less restrictions than that
 LICENSE=	isc
