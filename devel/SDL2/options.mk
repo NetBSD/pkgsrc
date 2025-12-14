@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.21 2024/01/26 03:15:30 riastradh Exp $
+# $NetBSD: options.mk,v 1.22 2025/12/14 13:49:50 vins Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.SDL2
 PKG_OPTIONS_OPTIONAL_GROUPS=	gl
-PKG_SUPPORTED_OPTIONS=		alsa dbus nas jack pulseaudio wayland x11
+PKG_SUPPORTED_OPTIONS=		alsa dbus nas jack pulseaudio sndio wayland x11
 PKG_SUGGESTED_OPTIONS.Linux=	alsa
 PKG_OPTIONS_GROUP.gl=		opengl
 PKG_SUGGESTED_OPTIONS+=		opengl
@@ -81,6 +81,12 @@ SUBST_MESSAGE.vc=	Fixing path to VideoCore libraries.
 SUBST_FILES.vc=		configure
 SUBST_SED.vc+=		-e "s;/opt/vc;${PREFIX};g"
 .include "../../misc/raspberrypi-userland/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Msndio)
+.include "../../audio/sndio/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-sndio
 .endif
 
 .if !empty(PKG_OPTIONS:Mwayland)
