@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7190 2025/12/14 03:39:36 taca Exp $
+$NetBSD: CHANGES-2025,v 1.7191 2025/12/14 03:52:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10434,3 +10434,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/php-redis to 6.3.0 [taca 2025-12-14]
 	Updated devel/php-xdebug to 3.5.0 [taca 2025-12-14]
 	Updated www/php-apcu to 5.1.28 [taca 2025-12-14]
+	Updated www/drupal11 to 11.1.9 [taca 2025-12-14]
