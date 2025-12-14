@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.719 2025/12/14 12:58:10 vins Exp $
+# $NetBSD: Makefile,v 1.720 2025/12/14 18:18:03 vins Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -178,6 +178,7 @@ SUBDIR+=	gst-plugins1-osxaudio
 SUBDIR+=	gst-plugins1-pulse
 SUBDIR+=	gst-plugins1-sid
 SUBDIR+=	gst-plugins1-sndfile
+SUBDIR+=	gst-plugins1-sndio
 SUBDIR+=	gst-plugins1-soundtouch
 SUBDIR+=	gst-plugins1-speex
 SUBDIR+=	gst-plugins1-twolame
