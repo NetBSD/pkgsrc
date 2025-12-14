@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2025/09/10 14:07:23 vins Exp $
+# $NetBSD: Makefile,v 1.64 2025/12/14 11:50:30 vins Exp $
 
 DISTNAME=	alpine-2.26
 PKGREVISION=	6
@@ -38,8 +38,6 @@ USE_LIBTOOL=	yes
 
 MAKE_JOBS_SAFE=	no
 BUILD_DEFS+=	VARBASE
-
-#CFLAGS+=	-Werror
 
 .include "../../mk/bsd.prefs.mk"
 
