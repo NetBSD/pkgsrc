@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/03/20 01:21:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/12/14 03:52:33 taca Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -3151,6 +3151,7 @@ share/drupal/core/lib/Drupal/Core/Cache/CacheCollector.php
 share/drupal/core/lib/Drupal/Core/Cache/CacheCollectorInterface.php
 share/drupal/core/lib/Drupal/Core/Cache/CacheFactory.php
 share/drupal/core/lib/Drupal/Core/Cache/CacheFactoryInterface.php
+share/drupal/core/lib/Drupal/Core/Cache/CacheOptionalInterface.php
 share/drupal/core/lib/Drupal/Core/Cache/CacheRedirect.php
 share/drupal/core/lib/Drupal/Core/Cache/CacheTagsChecksumInterface.php
 share/drupal/core/lib/Drupal/Core/Cache/CacheTagsChecksumTrait.php
@@ -4007,9 +4008,21 @@ share/drupal/core/lib/Drupal/Core/GeneratedLink.php
 share/drupal/core/lib/Drupal/Core/GeneratedNoLink.php
 share/drupal/core/lib/Drupal/Core/GeneratedUrl.php
 share/drupal/core/lib/Drupal/Core/Hook/Attribute/Hook.php
+share/drupal/core/lib/Drupal/Core/Hook/Attribute/HookAttributeInterface.php
 share/drupal/core/lib/Drupal/Core/Hook/Attribute/LegacyHook.php
+share/drupal/core/lib/Drupal/Core/Hook/Attribute/LegacyModuleImplementsAlter.php
+share/drupal/core/lib/Drupal/Core/Hook/Attribute/RemoveHook.php
+share/drupal/core/lib/Drupal/Core/Hook/Attribute/ReorderHook.php
 share/drupal/core/lib/Drupal/Core/Hook/Attribute/StopProceduralHookScan.php
 share/drupal/core/lib/Drupal/Core/Hook/HookCollectorPass.php
+share/drupal/core/lib/Drupal/Core/Hook/Order/Order.php
+share/drupal/core/lib/Drupal/Core/Hook/Order/OrderAfter.php
+share/drupal/core/lib/Drupal/Core/Hook/Order/OrderBefore.php
+share/drupal/core/lib/Drupal/Core/Hook/Order/OrderInterface.php
+share/drupal/core/lib/Drupal/Core/Hook/Order/RelativeOrderBase.php
+share/drupal/core/lib/Drupal/Core/Hook/OrderOperation/BeforeOrAfter.php
+share/drupal/core/lib/Drupal/Core/Hook/OrderOperation/FirstOrLast.php
+share/drupal/core/lib/Drupal/Core/Hook/OrderOperation/OrderOperation.php
 share/drupal/core/lib/Drupal/Core/Http/ClientFactory.php
 share/drupal/core/lib/Drupal/Core/Http/Exception/CacheableAccessDeniedHttpException.php
 share/drupal/core/lib/Drupal/Core/Http/Exception/CacheableBadRequestHttpException.php
@@ -6094,6 +6107,7 @@ share/drupal/core/modules/config/tests/config_test/config_test.info.yml
 share/drupal/core/modules/config/tests/config_test/config_test.install
 share/drupal/core/modules/config/tests/config_test/config_test.links.action.yml
 share/drupal/core/modules/config/tests/config_test/config_test.links.task.yml
+share/drupal/core/modules/config/tests/config_test/config_test.permissions.yml
 share/drupal/core/modules/config/tests/config_test/config_test.routing.yml
 share/drupal/core/modules/config/tests/config_test/src/ConfigActionErrorEntity/DuplicatePluralizedMethodName.php
 share/drupal/core/modules/config/tests/config_test/src/ConfigActionErrorEntity/DuplicatePluralizedOtherMethodName.php
@@ -6102,6 +6116,7 @@ share/drupal/core/modules/config/tests/config_test/src/ConfigTestController.php
 share/drupal/core/modules/config/tests/config_test/src/ConfigTestForm.php
 share/drupal/core/modules/config/tests/config_test/src/ConfigTestInterface.php
 share/drupal/core/modules/config/tests/config_test/src/ConfigTestListBuilder.php
+share/drupal/core/modules/config/tests/config_test/src/ConfigTestPermissions.php
 share/drupal/core/modules/config/tests/config_test/src/ConfigTestStorage.php
 share/drupal/core/modules/config/tests/config_test/src/ConfigValidation.php
 share/drupal/core/modules/config/tests/config_test/src/Entity/ConfigQueryTest.php
@@ -9497,6 +9512,7 @@ share/drupal/core/modules/migrate/tests/src/Unit/MigrateStubTest.php
 share/drupal/core/modules/migrate/tests/src/Unit/MigrateTestCase.php
 share/drupal/core/modules/migrate/tests/src/Unit/MigrationPluginManagerTest.php
 share/drupal/core/modules/migrate/tests/src/Unit/MigrationTest.php
+share/drupal/core/modules/migrate/tests/src/Unit/Plugin/NoSourcePluginDecoratorTest.php
 share/drupal/core/modules/migrate/tests/src/Unit/Plugin/migrate/destination/CheckRequirementsTest.php
 share/drupal/core/modules/migrate/tests/src/Unit/Plugin/migrate/destination/EntityContentBaseTest.php
 share/drupal/core/modules/migrate/tests/src/Unit/Plugin/migrate/destination/EntityRevisionTest.php
@@ -10050,6 +10066,8 @@ share/drupal/core/modules/node/tests/modules/node_block_test/node_block_test.inf
 share/drupal/core/modules/node/tests/modules/node_block_test/src/Plugin/Block/NodeContextTestBlock.php
 share/drupal/core/modules/node/tests/modules/node_display_configurable_test/node_display_configurable_test.info.yml
 share/drupal/core/modules/node/tests/modules/node_display_configurable_test/src/Hook/NodeDisplayConfigurableTestHooks.php
+share/drupal/core/modules/node/tests/modules/node_no_default_author/node_no_default_author.info.yml
+share/drupal/core/modules/node/tests/modules/node_no_default_author/src/Hook/NodeNoDefaultAuthorHooks.php
 share/drupal/core/modules/node/tests/modules/node_test/node_test.info.yml
 share/drupal/core/modules/node/tests/modules/node_test/src/Hook/NodeTestHooks.php
 share/drupal/core/modules/node/tests/modules/node_test_config/config/install/node.type.default.yml
@@ -10087,6 +10105,7 @@ share/drupal/core/modules/node/tests/node_access_test_auto_bubbling/src/Controll
 share/drupal/core/modules/node/tests/src/Functional/GenericTest.php
 share/drupal/core/modules/node/tests/src/Functional/MultiStepNodeFormBasicOptionsTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeAccessBaseTableTest.php
+share/drupal/core/modules/node/tests/src/Functional/NodeAccessCacheRedirectWarningTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeAccessCacheabilityTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeAccessCacheabilityWithNodeGrants.php
 share/drupal/core/modules/node/tests/src/Functional/NodeAccessFieldTest.php
@@ -10114,6 +10133,7 @@ share/drupal/core/modules/node/tests/src/Functional/NodePreviewAnonymousTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeQueryAlterTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeRSSContentTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeRevisionsAllTest.php
+share/drupal/core/modules/node/tests/src/Functional/NodeRevisionsAuthorTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeRevisionsTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeRevisionsUiBypassAccessTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeRevisionsUiTest.php
@@ -12037,12 +12057,16 @@ share/drupal/core/modules/system/tests/modules/hold_test/hold_test.module
 share/drupal/core/modules/system/tests/modules/hold_test/hold_test.services.yml
 share/drupal/core/modules/system/tests/modules/hold_test/src/EventSubscriber/HoldTestSubscriber.php
 share/drupal/core/modules/system/tests/modules/hook_collector_hook_attribute/hook_collector_hook_attribute.info.yml
+share/drupal/core/modules/system/tests/modules/hook_collector_hook_attribute/hook_collector_hook_attribute.module
 share/drupal/core/modules/system/tests/modules/hook_collector_hook_attribute/src/Hook/HookAttributeInvokeHook.php
 share/drupal/core/modules/system/tests/modules/hook_collector_hook_attribute/src/Hook/HookAttributeNamedArgumentsHook.php
+share/drupal/core/modules/system/tests/modules/hook_collector_hook_attribute/src/Hook/PreprocessHook.php
 share/drupal/core/modules/system/tests/modules/hook_collector_on_behalf/hook_collector_on_behalf.info.yml
 share/drupal/core/modules/system/tests/modules/hook_collector_on_behalf/src/Hook/OnBehalfOfOtherModuleHook.php
 share/drupal/core/modules/system/tests/modules/hook_collector_on_behalf_procedural/hook_collector_on_behalf_procedural.info.yml
 share/drupal/core/modules/system/tests/modules/hook_collector_on_behalf_procedural/hook_collector_on_behalf_procedural.module
+share/drupal/core/modules/system/tests/modules/hook_collector_preprocess_no_function/hook_collector_preprocess_no_function.info.yml
+share/drupal/core/modules/system/tests/modules/hook_collector_preprocess_no_function/src/Hook/PreprocessHook.php
 share/drupal/core/modules/system/tests/modules/hook_collector_skip_procedural/hook_collector_skip_procedural.info.yml
 share/drupal/core/modules/system/tests/modules/hook_collector_skip_procedural/hook_collector_skip_procedural.module
 share/drupal/core/modules/system/tests/modules/hook_collector_skip_procedural/hook_collector_skip_procedural.services.yml
@@ -13864,6 +13888,9 @@ share/drupal/core/modules/user/tests/modules/user_access_test/user_access_test.p
 share/drupal/core/modules/user/tests/modules/user_auth_decorator_test/src/UserAuthDecorator.php
 share/drupal/core/modules/user/tests/modules/user_auth_decorator_test/user_auth_decorator_test.info.yml
 share/drupal/core/modules/user/tests/modules/user_auth_decorator_test/user_auth_decorator_test.services.yml
+share/drupal/core/modules/user/tests/modules/user_config_override_test/src/ConfigOverrider.php
+share/drupal/core/modules/user/tests/modules/user_config_override_test/user_config_override_test.info.yml
+share/drupal/core/modules/user/tests/modules/user_config_override_test/user_config_override_test.services.yml
 share/drupal/core/modules/user/tests/modules/user_custom_pass_hash_params_test/user_custom_pass_hash_params_test.info.yml
 share/drupal/core/modules/user/tests/modules/user_custom_pass_hash_params_test/user_custom_pass_hash_params_test.services.yml
 share/drupal/core/modules/user/tests/modules/user_form_test/src/Hook/UserFormTestHooks.php
@@ -14577,6 +14604,7 @@ share/drupal/core/modules/views/tests/modules/views_test_config/test_views/views
 share/drupal/core/modules/views/tests/modules/views_test_config/test_views/views.view.test_table.yml
 share/drupal/core/modules/views/tests/modules/views_test_config/test_views/views.view.test_tag_cache.yml
 share/drupal/core/modules/views/tests/modules/views_test_config/test_views/views.view.test_taxonomy_glossary.yml
+share/drupal/core/modules/views/tests/modules/views_test_config/test_views/views.view.test_third_party_uninstall.yml
 share/drupal/core/modules/views/tests/modules/views_test_config/test_views/views.view.test_token_view.yml
 share/drupal/core/modules/views/tests/modules/views_test_config/test_views/views.view.test_tokens.yml
 share/drupal/core/modules/views/tests/modules/views_test_config/test_views/views.view.test_ungroup_rows.yml
@@ -14664,6 +14692,8 @@ share/drupal/core/modules/views/tests/modules/views_test_render_cache/views_test
 share/drupal/core/modules/views/tests/modules/views_test_render_cache/views_test_render_cache.routing.yml
 share/drupal/core/modules/views/tests/modules/views_test_rss/views_test_rss.info.yml
 share/drupal/core/modules/views/tests/modules/views_test_rss/views_test_rss.module
+share/drupal/core/modules/views/tests/modules/views_third_party_settings_test/config/schema/views_third_party_settings_test.schema.yml
+share/drupal/core/modules/views/tests/modules/views_third_party_settings_test/views_third_party_settings_test.info.yml
 share/drupal/core/modules/views/tests/src/Functional/BulkFormTest.php
 share/drupal/core/modules/views/tests/src/Functional/DefaultViewsTest.php
 share/drupal/core/modules/views/tests/src/Functional/Entity/BaseFieldAccessTest.php
@@ -14857,6 +14887,7 @@ share/drupal/core/modules/views/tests/src/Kernel/PluginInstanceTest.php
 share/drupal/core/modules/views/tests/src/Kernel/QueryGroupByTest.php
 share/drupal/core/modules/views/tests/src/Kernel/RenderCacheIntegrationTest.php
 share/drupal/core/modules/views/tests/src/Kernel/TestViewsTest.php
+share/drupal/core/modules/views/tests/src/Kernel/ThirdPartyUninstallTest.php
 share/drupal/core/modules/views/tests/src/Kernel/TokenReplaceTest.php
 share/drupal/core/modules/views/tests/src/Kernel/ViewElementTest.php
 share/drupal/core/modules/views/tests/src/Kernel/ViewExecutableTest.php
@@ -15252,6 +15283,7 @@ share/drupal/core/modules/workspaces/tests/src/Functional/WorkspaceViewTest.php
 share/drupal/core/modules/workspaces/tests/src/Functional/WorkspaceViewsBulkFormTest.php
 share/drupal/core/modules/workspaces/tests/src/Functional/WorkspacesUninstallTest.php
 share/drupal/core/modules/workspaces/tests/src/FunctionalJavascript/WorkspacesLayoutBuilderIntegrationTest.php
+share/drupal/core/modules/workspaces/tests/src/FunctionalJavascript/WorkspacesMediaLibraryIntegrationTest.php
 share/drupal/core/modules/workspaces/tests/src/Kernel/EntityReferenceSupportedNewEntitiesConstraintValidatorTest.php
 share/drupal/core/modules/workspaces/tests/src/Kernel/EntityWorkspaceConflictConstraintValidatorTest.php
 share/drupal/core/modules/workspaces/tests/src/Kernel/WorkspaceAccessTest.php
@@ -17473,6 +17505,7 @@ share/drupal/core/tests/Drupal/Tests/Core/Form/OptGroupTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Form/SubformStateTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Form/fixtures/form_base_test.inc
 share/drupal/core/tests/Drupal/Tests/Core/GroupIncludesTestTrait.php
+share/drupal/core/tests/Drupal/Tests/Core/Hook/HookCollectorPassPreprocessTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Hook/HookCollectorPassTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Http/CacheableExceptionTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Http/ClientFactoryTest.php
@@ -20840,6 +20873,7 @@ share/drupal/vendor/symfony/http-kernel/Fragment/InlineFragmentRenderer.php
 share/drupal/vendor/symfony/http-kernel/Fragment/RoutableFragmentRenderer.php
 share/drupal/vendor/symfony/http-kernel/Fragment/SsiFragmentRenderer.php
 share/drupal/vendor/symfony/http-kernel/HttpCache/AbstractSurrogate.php
+share/drupal/vendor/symfony/http-kernel/HttpCache/CacheWasLockedException.php
 share/drupal/vendor/symfony/http-kernel/HttpCache/Esi.php
 share/drupal/vendor/symfony/http-kernel/HttpCache/HttpCache.php
 share/drupal/vendor/symfony/http-kernel/HttpCache/ResponseCacheStrategy.php
