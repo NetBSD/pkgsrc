@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.12 2025/10/31 14:56:39 ryoon Exp $
+$NetBSD: distinfo,v 1.13 2025/12/14 13:15:03 ryoon Exp $
 
 BLAKE2s (yubikey_manager-5.8.0.tar.gz) = c3b01d48edd26fbfa1b2c652f58ea2576eae9e094e32756265b7c3dd3655b110
 SHA512 (yubikey_manager-5.8.0.tar.gz) = 8c22dd65e37d4bc78a16c62b24244f2cd180237354d4b325d2786614ef75651104eb92a0ad751f66af7812746669b397e4cab7ed41c9016cb73081f6740ca604
 Size (yubikey_manager-5.8.0.tar.gz) = 228631 bytes
 SHA1 (patch-ykman_hid_____init____.py) = 916a119019484ae5d6dec3a0f499250bab86b774
-SHA1 (patch-ykman_hid_netbsd.py) = 473c0e8a0c2c945bc6135daec1c765b859c00cd8
+SHA1 (patch-ykman_hid_netbsd.py) = f97abae1ed3f9bebf48c58910a4b3030dcf75f01
