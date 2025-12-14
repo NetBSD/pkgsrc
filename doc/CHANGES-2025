@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7209 2025/12/14 20:51:42 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7210 2025/12/14 21:28:31 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10454,3 +10454,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added audio/gst-plugins1-sndio version 1.24.0 [vins 2025-12-14]
 	Added audio/alsa-plugins-sndio version 0.2 [vins 2025-12-14]
 	Updated finance/gnucash to 5.13nb2 [wiz 2025-12-14]
+	Updated lang/guile30 to 3.0.11 [gdt 2025-12-14]
