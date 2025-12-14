@@ -1,0 +1,2 @@
+The alsa-sndio plugin provides a PCM that connects to a sndio server
+as a fallback for applications that don't support sndio.
