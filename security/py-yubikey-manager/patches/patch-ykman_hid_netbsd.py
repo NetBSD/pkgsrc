@@ -1,10 +1,10 @@
-$NetBSD: patch-ykman_hid_netbsd.py,v 1.1 2025/10/31 14:56:39 ryoon Exp $
+$NetBSD: patch-ykman_hid_netbsd.py,v 1.2 2025/12/14 13:15:03 ryoon Exp $
 
 * For NetBSD. Copied from freebsd.py.
 
---- ykman/hid/netbsd.py.orig	2025-10-31 07:41:33.798174909 +0000
+--- ykman/hid/netbsd.py.orig	2025-12-14 00:19:41.651361866 +0000
 +++ ykman/hid/netbsd.py
-@@ -0,0 +1,188 @@
+@@ -0,0 +1,179 @@
 +# Original work Copyright 2016 Google Inc. All Rights Reserved.
 +#
 +# Licensed under the Apache License, Version 2.0 (the "License");
@@ -49,34 +49,29 @@ $NetBSD: patch-ykman_hid_netbsd.py,v 1.1 2025/10/31 14:56:39 ryoon Exp $
 +
 +devdir = "/dev/"
 +
-+# /usr/include/dev/usb/usb_ioctl.h
-+USB_GET_REPORT = 0xC0205517
-+USB_SET_REPORT = 0x80205518
-+USB_GET_REPORT_DESC = 0xC0205515
++# /usr/include/dev/usb/usb.h
++USB_GET_REPORT = 0xc4045517
++USB_SET_REPORT = 0x84045518
++USB_GET_REPORT_DESC = 0x44045515
++
++# /usr/src/sys/dev/usb/usbhid.h
++UHID_FEATURE_REPORT = 0x03
 +
 +# For UhidConnection
 +libc = ctypes.CDLL(find_library("c"))
 +
 +
-+class usb_gen_descriptor(ctypes.Structure):
++class usb_ctl_report(ctypes.Structure):
 +    _fields_ = [
-+        (
-+            "ugd_data",
-+            ctypes.c_void_p,
-+        ),
-+        ("ugd_lang_id", ctypes.c_uint16),
-+        ("ugd_maxlen", ctypes.c_uint16),
-+        ("ugd_actlen", ctypes.c_uint16),
-+        ("ugd_offset", ctypes.c_uint16),
-+        ("ugd_config_index", ctypes.c_uint8),
-+        ("ugd_string_index", ctypes.c_uint8),
-+        ("ugd_iface_index", ctypes.c_uint8),
-+        ("ugd_altif_index", ctypes.c_uint8),
-+        ("ugd_endpt_index", ctypes.c_uint8),
-+        ("ugd_report_type", ctypes.c_uint8),
-+        ("reserved", ctypes.c_uint8 * 8),
++        ("ucr_report", ctypes.c_int),
++        ("ucr_data", ctypes.c_ubyte),
 +    ]
 +
++class usb_ctl_report_desc(ctypes.Structure):
++    _fields_ = [
++        ("ucrd_size", ctypes.c_int),
++        ("ucrd_data", ctypes.c_ubyte),
++    ]
 +
 +class UhidConnection(OtpConnection):
 +    """
@@ -90,11 +85,10 @@ $NetBSD: patch-ykman_hid_netbsd.py,v 1.1 2025/10/31 14:56:39 ryoon Exp $
 +        os.close(self.fd)
 +
 +    def receive(self):
-+        buf = ctypes.create_string_buffer(9)
-+        desc = usb_gen_descriptor(
-+            ugd_data=ctypes.addressof(buf),
-+            ugd_maxlen=ctypes.sizeof(buf),
-+            ugd_report_type=3,
++        buf = ctypes.create_string_buffer(1024)
++        desc = usb_ctl_report(
++            ucr_report=UHID_FEATURE_REPORT,
++            ucr_data=ctypes.addressof(buf),
 +        )
 +        ret = libc.ioctl(self.fd, USB_GET_REPORT, ctypes.pointer(desc))
 +        if ret != 0:
@@ -103,14 +97,13 @@ $NetBSD: patch-ykman_hid_netbsd.py,v 1.1 2025/10/31 14:56:39 ryoon Exp $
 +        return buf.raw[:-1]
 +
 +    def send(self, data):
-+        buf = ctypes.create_string_buffer(8)
++        buf = ctypes.create_string_buffer(1024)
 +        for i in range(0, len(data)):
 +            buf[i] = data[i]
 +
-+        desc = usb_gen_descriptor(
-+            ugd_data=ctypes.addressof(buf),
-+            ugd_maxlen=len(buf),
-+            ugd_report_type=0x3,
++        desc = usb_ctl_report(
++            ucr_report=UHID_FEATURE_REPORT,
++            ucr_data=ctypes.addressof(buf),
 +        )
 +        ret = libc.ioctl(self.fd, USB_SET_REPORT, ctypes.pointer(desc))
 +        if ret != 0:
@@ -118,11 +111,9 @@ $NetBSD: patch-ykman_hid_netbsd.py,v 1.1 2025/10/31 14:56:39 ryoon Exp $
 +
 +    @staticmethod
 +    def get_usage(dev):
-+        c_data = ctypes.create_string_buffer(4096)
-+        desc = usb_gen_descriptor(
-+            ugd_data=ctypes.addressof(c_data),
-+            ugd_maxlen=ctypes.sizeof(c_data),
-+            ugd_report_type=3,
++        c_data = ctypes.create_string_buffer(1024)
++        desc = usb_ctl_report_desc(
++            ucrd_data=ctypes.addressof(c_data),
 +        )
 +        ret = libc.ioctl(dev, USB_GET_REPORT_DESC, ctypes.pointer(desc))
 +        if ret != 0:
