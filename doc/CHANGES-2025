@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7203 2025/12/14 12:37:51 vins Exp $
+$NetBSD: CHANGES-2025,v 1.7204 2025/12/14 12:59:02 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10448,3 +10448,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/kakoune to 2025.06.03 [wiz 2025-12-14]
 	Updated net/dhcpsd to 0.0.5 [roy 2025-12-14]
 	Added audio/mpg123-sndio version 1.33.0 [vins 2025-12-14]
+	Added audio/libao-sndio version 1.2.2 [vins 2025-12-14]
