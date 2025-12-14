@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7185 2025/12/13 20:27:30 roy Exp $
+$NetBSD: CHANGES-2025,v 1.7186 2025/12/14 03:23:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10429,3 +10429,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/treemd to 0.5.2 [pin 2025-12-13]
 	Updated textproc/typst to 0.14.2 [pin 2025-12-13]
 	Updated net/openresolv to 3.17.3 [roy 2025-12-13]
+	Updated databases/ruby-sequel to 5.99.0 [taca 2025-12-14]
