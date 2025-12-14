@@ -1,6 +1,14 @@
-$NetBSD: distinfo,v 1.132 2025/09/29 06:39:20 wiz Exp $
+$NetBSD: distinfo,v 1.133 2025/12/14 20:51:31 wiz Exp $
 
 BLAKE2s (gnucash-5.13.tar.bz2) = 690c934c79307a3ab512463ee85c0bdbd023253f660c087ee1017e17f1dec666
 SHA512 (gnucash-5.13.tar.bz2) = a6ee775a0b9f612f5db1bb22ef8571560d60e62e0c6e12aaaeef87129a17fc5f1e95bbdb9cb79bc2c68f9677b925e8e0d419291356f324d600e15d4493ac0d25
 Size (gnucash-5.13.tar.bz2) = 15343812 bytes
 SHA1 (patch-CMakeLists.txt) = 5f6a7786ad0a8a2aa0fcd01d652b2d2c35d39c80
+SHA1 (patch-bindings_guile_test_srfi64-extras.scm) = fd85d586dcc416a4eeac77bbbb5683b5ef6e8a43
+SHA1 (patch-bindings_guile_test_test-core-utils.scm) = 3b85bed9b105a8da8e512f74b1281f9f16a983e4
+SHA1 (patch-bindings_guile_test_test-gnc-optiondb.scm) = 189e42e79fd3d0f315af2dbb45067ab435b51ecc
+SHA1 (patch-gnucash_report_reports_standard_test_test-transaction.scm) = b229cba8a44215518e43e7f7c6032979a39dd7cb
+SHA1 (patch-gnucash_report_test_test-commodity-utils.scm) = 7e7042874ba091398e4b34be25bcb3e9621e06f7
+SHA1 (patch-gnucash_report_test_test-html-chart.scm) = 42627ef7a3237e1c8c2d8acf14e37df09408e947
+SHA1 (patch-gnucash_report_test_test-report-utilities.scm) = 6c85febc9f782f3707e5aed8c4a4e35b633776be
+SHA1 (patch-gnucash_report_test_test-report.scm) = d530365cdfd6de8bbd66de34234b858cc8dc33ff
