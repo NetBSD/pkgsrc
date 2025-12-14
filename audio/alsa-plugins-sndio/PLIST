@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2025/12/14 19:57:12 vins Exp $
+lib/alsa-lib/libasound_module_pcm_sndio.so
+share/doc/alsa-plugins-sndio/README
