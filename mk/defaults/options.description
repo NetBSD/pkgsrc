@@ -895,6 +895,7 @@ smokeping-speedycgi	Enable SpeedyCGI.
 smtputf8		Enable use of SMTPUTF8 SMTP protocol extension.
 snappy			Enable Snappy (de)compression support.
 sndfile			Enable sndfile support.
+sndio			Enable support for the Sndio audio and MIDI framework.
 snmp			Enable SNMP support.
 snort-flexresp		Flexible responses on hostile connection attempts.
 snort-flexresp2		Newer flexible responses on hostile connection attempts.
