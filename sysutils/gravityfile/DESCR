@@ -1,0 +1,15 @@
+Where mass accumulates, attention should follow.
+
+A file system analyzer with an interactive TUI, built in Rust.
+
+Features
+ - Interactive TUI - Beautiful terminal interface with vim-style navigation
+ - Parallel Scanning - Fast directory traversal using jwalk
+ - Duplicate Detection - Find duplicate files using BLAKE3 hashing with
+   partial-hash optimization
+ - Age Analysis - Identify stale directories and analyze file age distribution
+ - Drill-Down Navigation - Explore directories without rescanning
+ - Command Palette - Vim-style : commands for power users
+ - Multiple Themes - Dark and light theme support
+ - Library-First Design - Use as a library or standalone tool
+ - Export Support - Export scan results to JSON
