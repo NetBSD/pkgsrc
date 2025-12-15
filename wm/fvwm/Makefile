@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2025/10/23 20:39:41 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2025/12/15 07:48:43 wiz Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 PKGREVISION=	18
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=fvwmorg/}
 GITHUB_RELEASE=	${FVWM_VER}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.fvwm.org/
+HOMEPAGE=	https://www.fvwm.org/
 COMMENT=	Multiple large virtual desktop window manager (legacy version 2)
 LICENSE=	gnu-gpl-v2
 
