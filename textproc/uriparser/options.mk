@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2024/08/25 06:19:17 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2025/12/15 21:10:12 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uriparser
 
@@ -14,9 +14,10 @@ PKG_SUPPORTED_OPTIONS=	tests
 # Tests are default-off in order to help building this on systems
 # with older C++ compilers.
 #
-TEST_TARGET=	test
+TEST_TARGET=		test
 CMAKE_CONFIGURE_ARGS+=	-DURIPARSER_BUILD_TESTS=ON
-USE_LANGUAGES=	c c++14
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	c++14
 .  include "../../devel/googletest/buildlink3.mk"
 .else
 CMAKE_CONFIGURE_ARGS+=	-DURIPARSER_BUILD_TESTS=OFF
