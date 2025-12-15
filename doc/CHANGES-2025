@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7229 2025/12/15 21:10:22 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7230 2025/12/15 22:20:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10484,3 +10484,4 @@ Changes to the packages collection and infrastructure in 2025:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2025Q4 branch [maya 2025-12-15]
 	Updated graphics/pngcheck to 4.0.1 [wiz 2025-12-15]
 	Updated textproc/uriparser to 1.0.0 [wiz 2025-12-15]
+	Updated time/ruby-tzinfo-data to 1.2025.3 [taca 2025-12-15]
