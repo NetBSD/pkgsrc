@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2025/12/13 19:53:45 pin Exp $
+$NetBSD: distinfo,v 1.12 2025/12/15 13:17:36 pin Exp $
 
 BLAKE2s (addr2line-0.25.1.crate) = cc5c422ec48ccef5c2c46379d2f600644609490afafea5020f2020815d1146e6
 SHA512 (addr2line-0.25.1.crate) = c400f3b6ccaff8a1c0d7d82c708a1784b8fd5ba64b6e420e85819d59b1cadb55fa59c852925093b921469f272d1d5140cf12f013ae75d1e1bc85021097df8fc2
@@ -714,15 +714,15 @@ Size (tracing-subscriber-0.3.22.crate) = 212851 bytes
 BLAKE2s (tree_magic_mini-3.2.2.crate) = 963c1acb2d39fa2b75bdb48a69729bd11a709c45e4130e93e9dd0538eef09b9e
 SHA512 (tree_magic_mini-3.2.2.crate) = 37c627d440ae8e0ba9c2d0a322cc68252d6c1e56548483142a1e801c057521cb5a6387e8a7849c25de6d9dfcbaf579fa900b37d93ff023057591d3bbda843a3b
 Size (tree_magic_mini-3.2.2.crate) = 16074 bytes
-BLAKE2s (treemd-0.5.2.tar.gz) = fffc6b499c28517ce751629c3dce2898e282877e755298cae64be58e68ade2c4
-SHA512 (treemd-0.5.2.tar.gz) = 84c69e7be92e6085a8c0973cffa80ec3a9dee8f60739ed9ef81f3b629cac1acbe89358681384de82c765942273fc9e5ce95353f42244b649b627f63e7e921daa
-Size (treemd-0.5.2.tar.gz) = 420464 bytes
+BLAKE2s (treemd-0.5.3.tar.gz) = c0ca4dfd16633488e7e21ce02304365e078afa6f385d3a3bfc4f76ae92b1b262
+SHA512 (treemd-0.5.3.tar.gz) = 75045ab99f8da28937cb5bdff02b0e303e9ea85bc7735857d6a13ab3175aa83f5e62c4f57e53bbfddae603b9357dfe38c5d9d8eb560cfcf73ac96621b583dcb5
+Size (treemd-0.5.3.tar.gz) = 431297 bytes
 BLAKE2s (turbovault-core-1.2.4.crate) = d1e078c31f483c9e01b48c58b85381ba501037d831c645652f99a2761acb5cf5
 SHA512 (turbovault-core-1.2.4.crate) = 6b27a9aadbe1581be839c2e5d9360e450e9b3dd4552f9fa8e73161d31c7aa648a8bf78e178176e75107767a7d34907ffbd82ee77d23672b9eedd0c52050a467b
 Size (turbovault-core-1.2.4.crate) = 37367 bytes
-BLAKE2s (turbovault-parser-1.2.4.crate) = dadd9d8eae2bee391325e1bf23380e72ebd3f8d87d5b7234269e8f105e873024
-SHA512 (turbovault-parser-1.2.4.crate) = 7ba1e942e7bc71eb6d49ad4b88c7db12beaf06d836ede25762a7d7b48302dd04a0b94f47c29441b2e36a72dea0eb215417e2381cac4f9ae8207b826789950002
-Size (turbovault-parser-1.2.4.crate) = 43283 bytes
+BLAKE2s (turbovault-parser-1.2.5.crate) = f2a46a6660e7a6042d193f35ded4e0e6b3a717f36bc5adf63d45a766ab81202b
+SHA512 (turbovault-parser-1.2.5.crate) = d9a9f9cf25064285b74f3c9e3db9f9e4337f198598ac744a35c230ff3e35b59b77ec778edb0d371db0d71c28b94f7645c390f4a7b571261cf0caf4fad881c606
+Size (turbovault-parser-1.2.5.crate) = 43445 bytes
 BLAKE2s (typenum-1.19.0.crate) = 80b44dc55e4bf94091b8882ffecd8b65b421bee8fec93e878f36eab55aa58f68
 SHA512 (typenum-1.19.0.crate) = 09ebcd7a2cc11f422469cf4fe706f1988bcd81d628e2bab3f54ae82b0aa5486d03a4392187a3736c13dc0c2027053387f89ac656caff72f36365c8be38bc7ff4
 Size (typenum-1.19.0.crate) = 76414 bytes
