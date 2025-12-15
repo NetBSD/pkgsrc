@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2022/12/14 14:33:24 fcambus Exp $
+$NetBSD: distinfo,v 1.7 2025/12/15 21:06:01 wiz Exp $
 
-BLAKE2s (pngcheck-3.0.3.tar.gz) = b70f4828b5b096595a524f20bca5eb84746c5e9920459aacaa90d00cd212ae7d
-SHA512 (pngcheck-3.0.3.tar.gz) = cdb2620cb508f9df748bd3e9cb657d2c503a1f62171f497f1ff1e0f220287364829f03164869567c83b5797d8bc478495ad6c35860196812ef8262fce4cbff26
-Size (pngcheck-3.0.3.tar.gz) = 63766 bytes
+BLAKE2s (pngcheck-4.0.1.tar.gz) = d0656397193fdf8fa91f6228bd7fa9089117b5cd00721a745888c7505322c9ec
+SHA512 (pngcheck-4.0.1.tar.gz) = de4bf642e9f0856ba394d00f86439f4ed3fa2a6d50b962e5489f6e3217d3fbb9878813a22399180fb8d1cbda43d89ac915b2362bb5b52da7269bbe399ac3f552
+Size (pngcheck-4.0.1.tar.gz) = 59997 bytes
+SHA1 (patch-pngcheck.c) = 52f65dd026304ba38a9bf53be0b0943e73079790
