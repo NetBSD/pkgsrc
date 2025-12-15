@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/10/09 07:58:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/12/15 10:09:44 adam Exp $
 
-DISTNAME=	vcrpy-7.0.0
+DISTNAME=	vcrpy-8.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vcrpy/}
 
@@ -12,9 +11,10 @@ COMMENT=	VCR.py simplifies and speeds up tests that make HTTP requests
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-urllib3>0:../../www/py-urllib3
 DEPENDS+=	${PYPKGPREFIX}-wrapt>0:../../devel/py-wrapt
 DEPENDS+=	${PYPKGPREFIX}-yaml>0:../../textproc/py-yaml
+# Not mentioned in dependencies:
+DEPENDS+=	${PYPKGPREFIX}-urllib3>=2.0:../../www/py-urllib3
 DEPENDS+=	${PYPKGPREFIX}-yarl>0:../../www/py-yarl
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-aiohttp>0:../../www/py-test-aiohttp
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>0:../../devel/py-test-asyncio

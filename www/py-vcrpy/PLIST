@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/04/14 20:28:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/12/15 10:09:44 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -70,12 +70,12 @@ ${PYSITELIB}/vcr/stubs/boto3_stubs.pyo
 ${PYSITELIB}/vcr/stubs/compat.py
 ${PYSITELIB}/vcr/stubs/compat.pyc
 ${PYSITELIB}/vcr/stubs/compat.pyo
+${PYSITELIB}/vcr/stubs/httpcore_stubs.py
+${PYSITELIB}/vcr/stubs/httpcore_stubs.pyc
+${PYSITELIB}/vcr/stubs/httpcore_stubs.pyo
 ${PYSITELIB}/vcr/stubs/httplib2_stubs.py
 ${PYSITELIB}/vcr/stubs/httplib2_stubs.pyc
 ${PYSITELIB}/vcr/stubs/httplib2_stubs.pyo
-${PYSITELIB}/vcr/stubs/httpx_stubs.py
-${PYSITELIB}/vcr/stubs/httpx_stubs.pyc
-${PYSITELIB}/vcr/stubs/httpx_stubs.pyo
 ${PYSITELIB}/vcr/stubs/requests_stubs.py
 ${PYSITELIB}/vcr/stubs/requests_stubs.pyc
 ${PYSITELIB}/vcr/stubs/requests_stubs.pyo
