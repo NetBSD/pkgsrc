@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2025/12/15 21:37:46 wiz Exp $
+lib/suil-0/libsuil_cocoa_in_gtk2.dylib
