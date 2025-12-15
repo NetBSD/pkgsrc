@@ -1,4 +1,6 @@
-$NetBSD: patch-bin_CMakeLists.txt,v 1.1 2025/05/09 05:57:08 adam Exp $
+$NetBSD: patch-bin_CMakeLists.txt,v 1.2 2025/12/15 14:50:45 adam Exp $
+
+Install qtcreator.sh on all platforms.
 
 --- bin/CMakeLists.txt.orig	2025-04-04 11:08:24.626998674 +0000
 +++ bin/CMakeLists.txt
