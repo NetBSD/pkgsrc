@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2025/12/13 17:47:21 vins Exp $
+# $NetBSD: Makefile,v 1.58 2025/12/15 20:58:44 vins Exp $
 
 DISTNAME=	fish-4.2.1
+PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fish-shell/}
 GITHUB_PROJECT=	fish-shell
@@ -37,13 +38,14 @@ REPLACE_PYTHON+=	share/tools/*.py
 PKGSRC_MAKE_ENV+=	FISH_BUILD_VERSION=${PKGVERSION_NOREV}
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_SYSCONFDIR=${PKG_SYSCONFDIR}
-CMAKE_CONFIGURE_ARGS+=	-DSYS_PCRE2_INCLUDE_DIR=${BUILDLINK_PREFIX.pcre2}/include
-CMAKE_CONFIGURE_ARGS+=	-DFISH_USE_SYSTEM_PCRE2=ON
 CMAKE_CONFIGURE_ARGS+=	-DWITH_GETTEXT=ON
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_DOCS=OFF
 
-RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pcre2}/lib
-RUSTFLAGS+=		-C link-arg=-L${BUILDLINK_PREFIX.pcre2}/lib
+# Disable dynamic linking of fish shell with system pcre2.
+# Somehow CMAKE_INSTALL_RPATH doesn't work and fish ends up with
+# missing shared objects.
+CMAKE_CONFIGURE_ARGS+=	-DFISH_USE_SYSTEM_PCRE2=OFF
+#CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_RPATH=${BUILDLINK_PREFIX.pcre2}/lib
 
 TEST_TARGET=		fish_run_tests
 TEST_DEPENDS+=		${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
@@ -58,6 +60,7 @@ post-patch:
 		${PATCH} -b -p0 < ${VENDORSRC}/${i}
 .endfor
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../lang/python/application.mk"
