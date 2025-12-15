@@ -1,14 +1,14 @@
-# $NetBSD: Makefile.common,v 1.9 2019/11/04 21:28:45 rillig Exp $
+# $NetBSD: Makefile.common,v 1.10 2025/12/15 07:49:45 wiz Exp $
 #
 # used by sysutils/gamin/Makefile
 # used by sysutils/libgamin/Makefile
 
 DISTNAME=	gamin-0.1.10
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.gnome.org/~veillard/gamin/sources/
+#MASTER_SITES=	http://www.gnome.org/~veillard/gamin/sources/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.gnome.org/~veillard/gamin/
+#HOMEPAGE=	https://www.gnome.org/~veillard/gamin/
 COMMENT=	File alteration monitor
 LICENSE=	gnu-lgpl-v2
 
