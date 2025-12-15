@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/06/28 11:36:10 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/12/15 07:44:53 wiz Exp $
 
 DISTNAME=	freepwing-1.4.4
 PKGREVISION=	14
@@ -6,7 +6,7 @@ CATEGORIES=	japanese textproc
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/misc/freepwing/
 
 MAINTAINER=	uebayasi@NetBSD.org
-HOMEPAGE=	http://www.sra.co.jp/people/m-kasahr/freepwing/
+#HOMEPAGE=	http://www.sra.co.jp/people/m-kasahr/freepwing/
 COMMENT=	Free JIS X 4081 (subset of EPWING V1) formatter
 
 DEPENDS+=	p5-Jcode-[0-9]*:../../converters/p5-Jcode
