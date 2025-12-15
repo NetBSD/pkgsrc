@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2025/07/22 19:13:18 gdt Exp $
+$NetBSD: distinfo,v 1.15 2025/12/15 11:07:49 triaxx Exp $
 
-BLAKE2s (esptool-5.0.1.tar.gz) = 2169c6115850ba1ecb8979baa19d5936c6974d5ce920078cf93d9aa70702b30f
-SHA512 (esptool-5.0.1.tar.gz) = dc57f1a36ae0689c878d69c97e207e71f3dfc0b6cb551cc2425c0890329d6b2f1200158150c9a3c1f1d310296f07af4db47fe11b85f76e00140e49ade82eb7a2
-Size (esptool-5.0.1.tar.gz) = 373632 bytes
-SHA1 (patch-esptool_cli__util.py) = c65229eee5104d55b007fc7c38b4663a3ba37c16
+BLAKE2s (esptool-5.1.0.tar.gz) = abd74868b37d567ea2dfe0a50c1dc5ac075238581fcd7ed8b34c9daf6f1dd35a
+SHA512 (esptool-5.1.0.tar.gz) = b249a7637f8e0e373a2040bd541ad0e2e90cdcc4040c94747b6d6584bfb081ea69651fd980398eb80a90316ae7039fd6f5314db37b7b37f8ca0dba48deb518e3
+Size (esptool-5.1.0.tar.gz) = 383926 bytes
