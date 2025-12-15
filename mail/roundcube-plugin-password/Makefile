@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2025/07/04 08:47:26 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/12/15 14:30:13 taca Exp $
 
 PLUGIN=		password
 
 MAINTAINER=	taca@NetBSD.org
 COMMENT=	Password change plugin for roundcube
-PKGREVISION=	1
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	tcl-expect>=5.32.1:../../lang/tcl-expect
