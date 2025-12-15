@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/12/23 08:38:24 zafer Exp $
+# $NetBSD: Makefile,v 1.4 2025/12/15 07:46:16 wiz Exp $
 
 DISTNAME=	fsx-2009
 CATEGORIES=	filesystems
@@ -6,7 +6,7 @@ MASTER_SITES=	#
 DISTFILES=	fsx.c Makefile APPLE_LICENSE
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://codemonkey.org.uk/projects/fsx/
+#HOMEPAGE=	http://codemonkey.org.uk/projects/fsx/
 COMMENT=	File System Exerciser
 LICENSE=	apple-public-source-license
 
