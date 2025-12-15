@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2025/10/09 07:58:01 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/12/15 12:02:34 adam Exp $
 
-DISTNAME=	numpydoc-1.9.0
+DISTNAME=	numpydoc-1.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpydoc/}
