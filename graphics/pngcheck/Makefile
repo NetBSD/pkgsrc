@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/12/15 21:06:00 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/12/15 21:07:25 wiz Exp $
 
 DISTNAME=	pngcheck-4.0.1
 CATEGORIES=	graphics
@@ -12,7 +12,7 @@ COMMENT=	Verify the integrity of PNG, JNG, and MNG files
 INSTALLATION_DIRS=	bin share/doc/pngcheck ${PKGMANDIR}/man1
 
 do-build:
-	cd ${WRKSRC} && ${CC} ${CFLAGS} ${LDFLAGS} ${LIBS} -DUSE_ZLIB \
+	cd ${WRKSRC} && ${CC} ${CFLAGS} ${LDFLAGS} ${LIBS} \
 		-o pngcheck pngcheck.c -lz
 
 do-install:
