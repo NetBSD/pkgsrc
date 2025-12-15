@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7223 2025/12/15 14:02:49 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7224 2025/12/15 14:05:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10474,3 +10474,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/git-cliff to 2.11.0 [pin 2025-12-15]
 	Updated textproc/treemd to 0.5.3 [pin 2025-12-15]
 	Updated shells/oh-my-posh to 28.3.0 [pin 2025-12-15]
+	Added sysutils/gravityfile version 0.2.0 [pin 2025-12-15]
