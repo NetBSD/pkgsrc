@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7212 2025/12/15 08:14:12 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7213 2025/12/15 09:05:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10458,3 +10458,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/jjui to 0.9.8 [wiz 2025-12-15]
 	Updated lang/py-mypy to 1.19.1 [adam 2025-12-15]
 	Updated textproc/py-pdf to 6.4.2 [adam 2025-12-15]
+	Updated print/py-pydyf to 0.12.1 [adam 2025-12-15]
+	Updated devel/py-kgb to 7.3 [adam 2025-12-15]
