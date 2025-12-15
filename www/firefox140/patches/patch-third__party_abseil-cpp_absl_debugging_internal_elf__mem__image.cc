@@ -1,8 +1,9 @@
-$NetBSD: patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc,v 1.1 2025/10/19 11:56:56 leot Exp $
+$NetBSD: patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc,v 1.2 2025/12/15 21:04:49 gutteridge Exp $
 
 * NetBSD has no DT_GNU_HASH definition.
+* Fix builds with NetBSD >= 11.99.4, where ELF definitions were changed.
 
---- third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.cc.orig	2025-03-05 13:29:06.318414617 +0000
+--- third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.cc.orig	2025-12-01 18:15:45.000000000 +0000
 +++ third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.cc
 @@ -221,6 +221,10 @@ void ElfMemImage::Init(const void *base)
    for (; dynamic_entry->d_tag != DT_NULL; ++dynamic_entry) {
@@ -15,3 +16,12 @@ $NetBSD: patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.c
      switch (dynamic_entry->d_tag) {
        case DT_HASH:
          sysv_hash = reinterpret_cast<uint32_t *>(value);
+@@ -377,7 +381,7 @@ void ElfMemImage::SymbolIterator::Update
+   const ElfW(Versym) *version_symbol = image->GetVersym(index_);
+   ABSL_RAW_CHECK(symbol && version_symbol, "");
+   const char *const symbol_name = image->GetDynstr(symbol->st_name);
+-#if defined(__NetBSD__)
++#if defined(__NetBSD__) && ((_SYS_EXEC_ELF_H_ + 0) < 2)
+   const int version_index = version_symbol->vs_vers & VERSYM_VERSION;
+ #else
+   const ElfW(Versym) version_index = version_symbol[0] & VERSYM_VERSION;
