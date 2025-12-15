@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7214 2025/12/15 09:14:50 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7215 2025/12/15 09:50:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10462,3 +10462,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-kgb to 7.3 [adam 2025-12-15]
 	Updated net/tor to 0.4.8.21 [adam 2025-12-15]
 	Updated www/py-django-admin-rangefilter to 0.13.5 [adam 2025-12-15]
+	Updated www/py-flask-admin to 2.0.2 [wiz 2025-12-15]
