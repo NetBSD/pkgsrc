@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.11 2025/12/13 19:53:45 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.12 2025/12/15 13:17:36 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -239,7 +239,7 @@ CARGO_CRATE_DEPENDS+=	tracing-error-0.2.1
 CARGO_CRATE_DEPENDS+=	tracing-subscriber-0.3.22
 CARGO_CRATE_DEPENDS+=	tree_magic_mini-3.2.2
 CARGO_CRATE_DEPENDS+=	turbovault-core-1.2.4
-CARGO_CRATE_DEPENDS+=	turbovault-parser-1.2.4
+CARGO_CRATE_DEPENDS+=	turbovault-parser-1.2.5
 CARGO_CRATE_DEPENDS+=	typenum-1.19.0
 CARGO_CRATE_DEPENDS+=	unicase-2.8.1
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.22
