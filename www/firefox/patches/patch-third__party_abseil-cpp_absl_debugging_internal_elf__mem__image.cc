@@ -1,6 +1,7 @@
-$NetBSD: patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc,v 1.3 2025/11/17 13:07:13 ryoon Exp $
+$NetBSD: patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc,v 1.4 2025/12/15 21:09:16 gutteridge Exp $
 
 * NetBSD has no DT_GNU_HASH definition.
+* Fix builds with NetBSD >= 11.99.4, where ELF definitions were changed.
 
 --- third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.cc.orig	2025-11-06 22:07:37.000000000 +0000
 +++ third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.cc

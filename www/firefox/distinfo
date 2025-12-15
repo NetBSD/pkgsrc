@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.571 2025/11/28 14:44:02 ryoon Exp $
+$NetBSD: distinfo,v 1.572 2025/12/15 21:09:16 gutteridge Exp $
 
 BLAKE2s (firefox-145.0.2.source.tar.xz) = 5e6c16d0a55df4f928a6e77519bd9413fd82308d053a62c637b7af23406662fc
 SHA512 (firefox-145.0.2.source.tar.xz) = 99d28daf7054c80bc521c8b73d1cf5c1beb77ac9b66904fdbb5890f89ddf5b12a2715deaf867ed86a4806cf4f44952f7bcceb38cc5f2faf9290b0a07be823418
@@ -36,7 +36,7 @@ SHA1 (patch-modules_fdlibm_src_math__private.h) = e20b6c23011d7123cbbd64a500eb8c
 SHA1 (patch-netwerk_protocol_http_nsHttpHandler.cpp) = 67493b4635041d21ff9fbfda80b3197fed542a26
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 753fd4d62088c870aefe7c4b739286259848446e
 SHA1 (patch-python_mozbuild_mozbuild_backend_recursivemake.py) = 5be4183d9075f5a3a3c6b3e0338473af185fb50e
-SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc) = cc68e46f1b98bbcc064a4c61fc96a3c7ede8e6ba
+SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc) = b1067a6804470f7e365f347683b7d505853fd799
 SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_vdso__support.cc) = f9c44d0d6fd952296f23c24f56053958b30d8e5c
 SHA1 (patch-third__party_js_cfworker_build.sh) = 46cdf97b99cf01080f290ae8d9a33b5f869fc3e4
 SHA1 (patch-third__party_libwebrtc_modules_audio__device_audio__device__impl.cc) = 927532138175f99f96433d24060f65a2a919d2d1
