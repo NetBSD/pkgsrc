@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_upb_upb-bazel-clang.patch,v 1.1 2024/01/01 12:01:00 ryoon Exp $
+$NetBSD: patch-third__party_upb_upb-bazel-clang.patch,v 1.2 2025/12/15 03:37:01 maya Exp $
 
 --- third_party/upb/upb-bazel-clang.patch.orig	2023-12-14 08:14:28.011171125 +0000
 +++ third_party/upb/upb-bazel-clang.patch
@@ -18,7 +18,7 @@ $NetBSD: patch-third__party_upb_upb-bazel-clang.patch,v 1.1 2024/01/01 12:01:00 
 +     "-Werror=pedantic",
 +     "-Wall",
 +     "-Wstrict-prototypes",
-++    "-Wno-gnu-offsetof-extensions",
+++    "-Wno-gnu-offsetof-extensions", "-Wno-c23-extensions",
 +     # GCC (at least) emits spurious warnings for this that cannot be fixed
 +     # without introducing redundant initialization (with runtime cost):
 +     #   https://gcc.gnu.org/bugzilla/show_bug.cgi?id=80635

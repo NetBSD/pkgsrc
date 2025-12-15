@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/05/09 19:37:10 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/12/15 03:37:01 maya Exp $
 
 # Java project does not work as follows:
 # Error: could not find libjava.so
@@ -58,6 +58,8 @@ MAKE_ENV+=		EXTRA_BAZEL_ARGS=${EXTRA_BAZEL_ARGS:Q}
 INSTALLATION_DIRS+=	bin
 
 do-patch:
+	# TEMPORARY EXTRA PATCH until ryoon@ regenerates this distfile
+	${CP} ${FILESDIR}/upb-bazel-clang.patch ${WRKDIR}/third_party/upb/upb-bazel-clang.patch
 	# Do not perform patching. The tarball includes all patches.
 
 pre-configure:
