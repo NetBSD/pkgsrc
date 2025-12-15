@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7219 2025/12/15 12:27:14 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7220 2025/12/15 13:14:25 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10470,3 +10470,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-networkx to 3.6.1 [adam 2025-12-15]
 	Updated devel/cargo-c to 0.10.19 [adam 2025-12-15]
 	Updated devel/py-ruff to 0.14.9 [adam 2025-12-15]
+	Updated devel/ast-grep to 0.40.2 [pin 2025-12-15]
