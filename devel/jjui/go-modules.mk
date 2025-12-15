@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.6 2025/12/08 10:06:24 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.7 2025/12/15 08:06:55 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.5.0.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.5.0.zip
@@ -54,6 +54,8 @@ GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.11.1.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.11.1.zip
 GO_MODULE_FILES+=	github.com/xo/terminfo/@v/v0.0.0-20220910002029-abceb7e1c41e.mod
 GO_MODULE_FILES+=	github.com/xo/terminfo/@v/v0.0.0-20220910002029-abceb7e1c41e.zip
+GO_MODULE_FILES+=	github.com/yuin/gopher-lua/@v/v1.1.1.mod
+GO_MODULE_FILES+=	github.com/yuin/gopher-lua/@v/v1.1.1.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20210809222454-d867a43fc93e.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.38.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.38.0.zip
