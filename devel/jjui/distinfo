@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2025/12/08 10:06:24 wiz Exp $
+$NetBSD: distinfo,v 1.10 2025/12/15 08:06:55 wiz Exp $
 
 BLAKE2s (github.com__burnt_sushi_toml_@v_v1.5.0.mod) = 26f62b858e9ef333fa0b51b46ce83c2d385ddf010431d6415a115aef9a338b35
 SHA512 (github.com__burnt_sushi_toml_@v_v1.5.0.mod) = fb6b4ae74dfdcc39b915f1b5f84f8e52e830d273d29f9225dc5ed4f26e970d9f61921f6f3588249141a82404c3ba180f735b4f23e700050e76a740fbf541ac78
@@ -162,6 +162,12 @@ Size (github.com_xo_terminfo_@v_v0.0.0-20220910002029-abceb7e1c41e.mod) = 100 by
 BLAKE2s (github.com_xo_terminfo_@v_v0.0.0-20220910002029-abceb7e1c41e.zip) = 6b1227a331769c30d9b4b14e9d4504a8f624af91e62964dbdc3f78b51046e40d
 SHA512 (github.com_xo_terminfo_@v_v0.0.0-20220910002029-abceb7e1c41e.zip) = 2da62fe1d8fadb09c336732f4b8b1eb8697acb18565b3327a51a7ce80e1ec8efffcf13d773090fa9e2ab20b0574ad40db0dd936f430fd9e00c2f47a962c10582
 Size (github.com_xo_terminfo_@v_v0.0.0-20220910002029-abceb7e1c41e.zip) = 42016 bytes
+BLAKE2s (github.com_yuin_gopher-lua_@v_v1.1.1.mod) = 9e1b9b6cb55d733537073d3424ee9b0498eb949ebd6b4c8ab1ac95d22d04b54e
+SHA512 (github.com_yuin_gopher-lua_@v_v1.1.1.mod) = 14c518239bce2f2935d386b34d3b7fd2620a65693db6adedcb06c37069ad4817d0f1cfe49d4e423044a0be5d72338c72477c741ccc03300605fc3f9b63f8982b
+Size (github.com_yuin_gopher-lua_@v_v1.1.1.mod) = 308 bytes
+BLAKE2s (github.com_yuin_gopher-lua_@v_v1.1.1.zip) = cebcf47e2b5ee9925d57c4234eb395758402c03cc589eed6e0529826a9c0ee22
+SHA512 (github.com_yuin_gopher-lua_@v_v1.1.1.zip) = 157fa53763b254a46c2fc8a56b158b5356fd1c345a04fc218f487d597f29080320b2f22b04a6f7550af7f108f6a52fb2dede311de025812a0cafc374d0ac928a
+Size (github.com_yuin_gopher-lua_@v_v1.1.1.zip) = 201623 bytes
 BLAKE2s (golang.org_x_sys_@v_v0.0.0-20210809222454-d867a43fc93e.mod) = 66613eb38a59b8a7f75e1aaeb294a1c4ea290d4e9ae699137566025e50ed741c
 SHA512 (golang.org_x_sys_@v_v0.0.0-20210809222454-d867a43fc93e.mod) = 85e511b1261c1935f5ee4754ad31d1d946f9e10f0af9905f44c4348d6ce5104319c03fb38517dde616698f6487b0c62788cfa96bc0ffb3b6db80accd7e552655
 Size (golang.org_x_sys_@v_v0.0.0-20210809222454-d867a43fc93e.mod) = 33 bytes
@@ -189,6 +195,6 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (jjui-0.9.7.tar.gz) = 0cb66118e0b2b7edae4a72d67fd68f37278cb5005a70e680728d5e7aab405e63
-SHA512 (jjui-0.9.7.tar.gz) = 2c60c6891e09479fb1a4d2add969c31cf1e7ed9523e8cf4f7dbec279fb9206c64367202589667e6090657f4f7d27c8232f56788817b026d050661cb878f533a5
-Size (jjui-0.9.7.tar.gz) = 118738 bytes
+BLAKE2s (jjui-0.9.8.tar.gz) = d62fe762be2ac33aa5390c1b68d4dec8602dcedbc49c69e7ba295b673d90da5c
+SHA512 (jjui-0.9.8.tar.gz) = 6ed9c6752d2697f6f3b1e5ebc243acb3e19e118abbed607a03698fb84f92c819d720d447b6b1b7d03b0757e9e80a6f353bb69deab6e2490850153edca26ab73f
+Size (jjui-0.9.8.tar.gz) = 129818 bytes
