@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7218 2025/12/15 12:05:36 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7219 2025/12/15 12:27:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10468,3 +10468,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/py-esptool to 5.1.0 [triaxx 2025-12-15]
 	Updated textproc/py-numpydoc to 1.10.0 [adam 2025-12-15]
 	Updated math/py-networkx to 3.6.1 [adam 2025-12-15]
+	Updated devel/cargo-c to 0.10.19 [adam 2025-12-15]
+	Updated devel/py-ruff to 0.14.9 [adam 2025-12-15]
