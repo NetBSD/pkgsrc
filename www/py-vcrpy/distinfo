@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2025/02/26 09:51:35 adam Exp $
+$NetBSD: distinfo,v 1.3 2025/12/15 10:09:44 adam Exp $
 
-BLAKE2s (vcrpy-7.0.0.tar.gz) = ec2b41da09c009eb09ececff103b6a88fc4349ca3d4eb09641bd8b46c76db7f1
-SHA512 (vcrpy-7.0.0.tar.gz) = 5849872120e6a9383dbc5f3184a83c36effde3b00ece59d3954be3356d7f1740ea6e8b7baf2da7e840418036dedd086bfe9f245157a5b9919cbb1502db4afdb0
-Size (vcrpy-7.0.0.tar.gz) = 85502 bytes
+BLAKE2s (vcrpy-8.1.0.tar.gz) = a4bd7e1d32fa3e57850096ace9f0ed572cfbdbafdcb4811899b62661c3e4dcf5
+SHA512 (vcrpy-8.1.0.tar.gz) = 14ce3533bf4f1ae2a8ab8fc4893cb86039b29d0194bc42dde4e0db8cb6d2698c36dc9297434d6c3ea9ce2700a5882ecbb3de11bacd2c5816ad7556f7fcaf2c45
+Size (vcrpy-8.1.0.tar.gz) = 85930 bytes
