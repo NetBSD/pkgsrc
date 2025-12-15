@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.80 2025/12/05 10:09:24 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.81 2025/12/15 12:26:50 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -129,8 +129,8 @@ CARGO_CRATE_DEPENDS+=	fs-err-2.11.0
 CARGO_CRATE_DEPENDS+=	fsevent-sys-4.1.0
 CARGO_CRATE_DEPENDS+=	funty-2.0.0
 CARGO_CRATE_DEPENDS+=	generic-array-0.14.7
-CARGO_CRATE_DEPENDS+=	get-size-derive2-0.7.2
-CARGO_CRATE_DEPENDS+=	get-size2-0.7.2
+CARGO_CRATE_DEPENDS+=	get-size-derive2-0.7.3
+CARGO_CRATE_DEPENDS+=	get-size2-0.7.3
 CARGO_CRATE_DEPENDS+=	getopts-0.2.24
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.16
 CARGO_CRATE_DEPENDS+=	getrandom-0.3.4
@@ -232,7 +232,7 @@ CARGO_CRATE_DEPENDS+=	once_cell-1.21.3
 CARGO_CRATE_DEPENDS+=	once_cell_polyfill-1.70.1
 CARGO_CRATE_DEPENDS+=	oorandom-11.1.5
 CARGO_CRATE_DEPENDS+=	option-ext-0.2.0
-CARGO_CRATE_DEPENDS+=	ordermap-0.5.12
+CARGO_CRATE_DEPENDS+=	ordermap-1.0.0
 CARGO_CRATE_DEPENDS+=	os_pipe-1.2.2
 CARGO_CRATE_DEPENDS+=	os_str_bytes-7.1.1
 CARGO_CRATE_DEPENDS+=	parking_lot-0.12.4
