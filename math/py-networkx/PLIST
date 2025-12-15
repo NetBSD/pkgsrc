@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2025/06/04 12:32:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2025/12/15 12:05:15 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -401,6 +401,9 @@ ${PYSITELIB}/networkx/algorithms/community/__init__.pyo
 ${PYSITELIB}/networkx/algorithms/community/asyn_fluid.py
 ${PYSITELIB}/networkx/algorithms/community/asyn_fluid.pyc
 ${PYSITELIB}/networkx/algorithms/community/asyn_fluid.pyo
+${PYSITELIB}/networkx/algorithms/community/bipartitions.py
+${PYSITELIB}/networkx/algorithms/community/bipartitions.pyc
+${PYSITELIB}/networkx/algorithms/community/bipartitions.pyo
 ${PYSITELIB}/networkx/algorithms/community/centrality.py
 ${PYSITELIB}/networkx/algorithms/community/centrality.pyc
 ${PYSITELIB}/networkx/algorithms/community/centrality.pyo
@@ -413,9 +416,6 @@ ${PYSITELIB}/networkx/algorithms/community/divisive.pyo
 ${PYSITELIB}/networkx/algorithms/community/kclique.py
 ${PYSITELIB}/networkx/algorithms/community/kclique.pyc
 ${PYSITELIB}/networkx/algorithms/community/kclique.pyo
-${PYSITELIB}/networkx/algorithms/community/kernighan_lin.py
-${PYSITELIB}/networkx/algorithms/community/kernighan_lin.pyc
-${PYSITELIB}/networkx/algorithms/community/kernighan_lin.pyo
 ${PYSITELIB}/networkx/algorithms/community/label_propagation.py
 ${PYSITELIB}/networkx/algorithms/community/label_propagation.pyc
 ${PYSITELIB}/networkx/algorithms/community/label_propagation.pyo
@@ -443,6 +443,9 @@ ${PYSITELIB}/networkx/algorithms/community/tests/__init__.pyo
 ${PYSITELIB}/networkx/algorithms/community/tests/test_asyn_fluid.py
 ${PYSITELIB}/networkx/algorithms/community/tests/test_asyn_fluid.pyc
 ${PYSITELIB}/networkx/algorithms/community/tests/test_asyn_fluid.pyo
+${PYSITELIB}/networkx/algorithms/community/tests/test_bipartitions.py
+${PYSITELIB}/networkx/algorithms/community/tests/test_bipartitions.pyc
+${PYSITELIB}/networkx/algorithms/community/tests/test_bipartitions.pyo
 ${PYSITELIB}/networkx/algorithms/community/tests/test_centrality.py
 ${PYSITELIB}/networkx/algorithms/community/tests/test_centrality.pyc
 ${PYSITELIB}/networkx/algorithms/community/tests/test_centrality.pyo
@@ -452,9 +455,6 @@ ${PYSITELIB}/networkx/algorithms/community/tests/test_divisive.pyo
 ${PYSITELIB}/networkx/algorithms/community/tests/test_kclique.py
 ${PYSITELIB}/networkx/algorithms/community/tests/test_kclique.pyc
 ${PYSITELIB}/networkx/algorithms/community/tests/test_kclique.pyo
-${PYSITELIB}/networkx/algorithms/community/tests/test_kernighan_lin.py
-${PYSITELIB}/networkx/algorithms/community/tests/test_kernighan_lin.pyc
-${PYSITELIB}/networkx/algorithms/community/tests/test_kernighan_lin.pyo
 ${PYSITELIB}/networkx/algorithms/community/tests/test_label_propagation.py
 ${PYSITELIB}/networkx/algorithms/community/tests/test_label_propagation.pyc
 ${PYSITELIB}/networkx/algorithms/community/tests/test_label_propagation.pyo
@@ -826,6 +826,9 @@ ${PYSITELIB}/networkx/algorithms/operators/tests/test_unary.pyo
 ${PYSITELIB}/networkx/algorithms/operators/unary.py
 ${PYSITELIB}/networkx/algorithms/operators/unary.pyc
 ${PYSITELIB}/networkx/algorithms/operators/unary.pyo
+${PYSITELIB}/networkx/algorithms/perfect_graph.py
+${PYSITELIB}/networkx/algorithms/perfect_graph.pyc
+${PYSITELIB}/networkx/algorithms/perfect_graph.pyo
 ${PYSITELIB}/networkx/algorithms/planar_drawing.py
 ${PYSITELIB}/networkx/algorithms/planar_drawing.pyc
 ${PYSITELIB}/networkx/algorithms/planar_drawing.pyo
@@ -1012,6 +1015,9 @@ ${PYSITELIB}/networkx/algorithms/tests/test_node_classification.pyo
 ${PYSITELIB}/networkx/algorithms/tests/test_non_randomness.py
 ${PYSITELIB}/networkx/algorithms/tests/test_non_randomness.pyc
 ${PYSITELIB}/networkx/algorithms/tests/test_non_randomness.pyo
+${PYSITELIB}/networkx/algorithms/tests/test_perfect_graph.py
+${PYSITELIB}/networkx/algorithms/tests/test_perfect_graph.pyc
+${PYSITELIB}/networkx/algorithms/tests/test_perfect_graph.pyo
 ${PYSITELIB}/networkx/algorithms/tests/test_planar_drawing.py
 ${PYSITELIB}/networkx/algorithms/tests/test_planar_drawing.pyc
 ${PYSITELIB}/networkx/algorithms/tests/test_planar_drawing.pyo
@@ -1135,6 +1141,9 @@ ${PYSITELIB}/networkx/algorithms/tree/coding.pyo
 ${PYSITELIB}/networkx/algorithms/tree/decomposition.py
 ${PYSITELIB}/networkx/algorithms/tree/decomposition.pyc
 ${PYSITELIB}/networkx/algorithms/tree/decomposition.pyo
+${PYSITELIB}/networkx/algorithms/tree/distance_measures.py
+${PYSITELIB}/networkx/algorithms/tree/distance_measures.pyc
+${PYSITELIB}/networkx/algorithms/tree/distance_measures.pyo
 ${PYSITELIB}/networkx/algorithms/tree/mst.py
 ${PYSITELIB}/networkx/algorithms/tree/mst.pyc
 ${PYSITELIB}/networkx/algorithms/tree/mst.pyo
@@ -1156,6 +1165,9 @@ ${PYSITELIB}/networkx/algorithms/tree/tests/test_coding.pyo
 ${PYSITELIB}/networkx/algorithms/tree/tests/test_decomposition.py
 ${PYSITELIB}/networkx/algorithms/tree/tests/test_decomposition.pyc
 ${PYSITELIB}/networkx/algorithms/tree/tests/test_decomposition.pyo
+${PYSITELIB}/networkx/algorithms/tree/tests/test_distance_measures.py
+${PYSITELIB}/networkx/algorithms/tree/tests/test_distance_measures.pyc
+${PYSITELIB}/networkx/algorithms/tree/tests/test_distance_measures.pyo
 ${PYSITELIB}/networkx/algorithms/tree/tests/test_mst.py
 ${PYSITELIB}/networkx/algorithms/tree/tests/test_mst.pyc
 ${PYSITELIB}/networkx/algorithms/tree/tests/test_mst.pyo
@@ -1297,6 +1309,9 @@ ${PYSITELIB}/networkx/drawing/tests/baseline/test_house_with_colors.png
 ${PYSITELIB}/networkx/drawing/tests/test_agraph.py
 ${PYSITELIB}/networkx/drawing/tests/test_agraph.pyc
 ${PYSITELIB}/networkx/drawing/tests/test_agraph.pyo
+${PYSITELIB}/networkx/drawing/tests/test_image_comparison_pylab_mpl.py
+${PYSITELIB}/networkx/drawing/tests/test_image_comparison_pylab_mpl.pyc
+${PYSITELIB}/networkx/drawing/tests/test_image_comparison_pylab_mpl.pyo
 ${PYSITELIB}/networkx/drawing/tests/test_latex.py
 ${PYSITELIB}/networkx/drawing/tests/test_latex.pyc
 ${PYSITELIB}/networkx/drawing/tests/test_latex.pyo
@@ -1679,6 +1694,9 @@ ${PYSITELIB}/networkx/tests/test_lazy_imports.pyo
 ${PYSITELIB}/networkx/tests/test_relabel.py
 ${PYSITELIB}/networkx/tests/test_relabel.pyc
 ${PYSITELIB}/networkx/tests/test_relabel.pyo
+${PYSITELIB}/networkx/tests/test_removed_functions_exception_messages.py
+${PYSITELIB}/networkx/tests/test_removed_functions_exception_messages.pyc
+${PYSITELIB}/networkx/tests/test_removed_functions_exception_messages.pyo
 ${PYSITELIB}/networkx/utils/__init__.py
 ${PYSITELIB}/networkx/utils/__init__.pyc
 ${PYSITELIB}/networkx/utils/__init__.pyo
