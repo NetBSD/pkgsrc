@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/07/22 19:13:18 gdt Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/12/15 11:07:49 triaxx Exp $
 bin/esp_rfc2217_server
 bin/esp_rfc2217_server.py
 bin/espefuse
@@ -240,6 +240,7 @@ ${PYSITELIB}/espefuse/efuse_defs/esp32h21.yaml
 ${PYSITELIB}/espefuse/efuse_defs/esp32h2_v0.0_v1.1.yaml
 ${PYSITELIB}/espefuse/efuse_defs/esp32h4.yaml
 ${PYSITELIB}/espefuse/efuse_defs/esp32p4.yaml
+${PYSITELIB}/espefuse/efuse_defs/esp32p4_v3.0.yaml
 ${PYSITELIB}/espefuse/efuse_defs/esp32s2.yaml
 ${PYSITELIB}/espefuse/efuse_defs/esp32s3.yaml
 ${PYSITELIB}/espefuse/efuse_interface.py
@@ -332,7 +333,6 @@ ${PYSITELIB}/esptool/targets/esp32s3.pyo
 ${PYSITELIB}/esptool/targets/esp8266.py
 ${PYSITELIB}/esptool/targets/esp8266.pyc
 ${PYSITELIB}/esptool/targets/esp8266.pyo
-${PYSITELIB}/esptool/targets/stub_flasher/1/.DS_Store
 ${PYSITELIB}/esptool/targets/stub_flasher/1/README.md
 ${PYSITELIB}/esptool/targets/stub_flasher/1/esp32.json
 ${PYSITELIB}/esptool/targets/stub_flasher/1/esp32c2.json
@@ -342,6 +342,7 @@ ${PYSITELIB}/esptool/targets/stub_flasher/1/esp32c6.json
 ${PYSITELIB}/esptool/targets/stub_flasher/1/esp32c61.json
 ${PYSITELIB}/esptool/targets/stub_flasher/1/esp32h2.json
 ${PYSITELIB}/esptool/targets/stub_flasher/1/esp32p4.json
+${PYSITELIB}/esptool/targets/stub_flasher/1/esp32p4rc1.json
 ${PYSITELIB}/esptool/targets/stub_flasher/1/esp32s2.json
 ${PYSITELIB}/esptool/targets/stub_flasher/1/esp32s3.json
 ${PYSITELIB}/esptool/targets/stub_flasher/1/esp8266.json
