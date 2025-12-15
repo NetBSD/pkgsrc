@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7211 2025/12/15 08:07:11 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7212 2025/12/15 08:14:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10456,3 +10456,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated finance/gnucash to 5.13nb2 [wiz 2025-12-14]
 	Updated lang/guile30 to 3.0.11 [gdt 2025-12-14]
 	Updated devel/jjui to 0.9.8 [wiz 2025-12-15]
+	Updated lang/py-mypy to 1.19.1 [adam 2025-12-15]
+	Updated textproc/py-pdf to 6.4.2 [adam 2025-12-15]
