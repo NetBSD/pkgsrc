@@ -1,9 +1,10 @@
-$NetBSD: patch-src_dbinc_mutex_int.h,v 1.1 2019/02/19 15:18:19 hauke Exp $
+$NetBSD: patch-src_dbinc_mutex_int.h,v 1.2 2025/12/16 10:19:11 hauke Exp $
 
 * adds support for mutexes on aarch64
+* adds support for mutexes on sparc v[789]
 * fixes build failure on MIPS arch with -mips1.
 
---- src/dbinc/mutex_int.h.orig	2010-04-12 20:25:22.000000000 +0000
+--- src/dbinc/mutex_int.h.orig	2013-09-09 15:35:08.000000000 +0000
 +++ src/dbinc/mutex_int.h
 @@ -491,6 +491,43 @@ typedef unsigned char tsl_t;
  #endif
@@ -49,7 +50,33 @@ $NetBSD: patch-src_dbinc_mutex_int.h,v 1.1 2019/02/19 15:18:19 hauke Exp $
   * HPPA/gcc assembly.
   *********************************************************************/
  #ifdef HAVE_MUTEX_HPPA_GCC_ASSEMBLY
-@@ -778,10 +815,14 @@ MUTEX_SET(tsl_t *tsl) {
+@@ -714,14 +751,24 @@ typedef unsigned char tsl_t;
+ 	!__r;								\
+ })
+ 
++#if defined (__sparc_v9__)
+ #define	MUTEX_UNSET(tsl)	(*(tsl) = 0, MUTEX_MEMBAR(tsl))
+-#define	MUTEX_INIT(tsl)         (MUTEX_UNSET(tsl), 0)
+ #define	MUTEX_MEMBAR(x)	\
+ 	({ __asm__ volatile ("membar #StoreStore|#StoreLoad|#LoadStore"); })
+ #define	MEMBAR_ENTER() \
+ 	({ __asm__ volatile ("membar #StoreStore|#StoreLoad"); })
+ #define	MEMBAR_EXIT() \
+ 	({ __asm__ volatile ("membar #StoreStore|#LoadStore"); })
++#else
++#define	MUTEX_UNSET(tsl) ({						\
++	__asm__ volatile ("stbar");					\
++	*(tsl) = 0; })
++#define	MUTEX_MEMBAR(x) \
++	({ __asm__ volatile ("stbar"); })
++#define	MEMBAR_ENTER()
++#define	MEMBAR_EXIT()
++#endif
++#define	MUTEX_INIT(tsl)         (MUTEX_UNSET(tsl), 0)
+ #endif
+ #endif
+ 
+@@ -778,10 +825,14 @@ MUTEX_SET(tsl_t *tsl) {
  static inline void
  MUTEX_UNSET(tsl_t *tsl) {
  	__asm__ volatile(
