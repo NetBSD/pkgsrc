@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2025/10/05 19:25:46 js Exp $
+# $NetBSD: Makefile,v 1.102 2025/12/16 15:13:16 maya Exp $
 
 DISTNAME=	mongodb-src-r6.0.13
 PKGNAME=	${DISTNAME:S/src-r//}
@@ -65,6 +65,11 @@ CXXFLAGS+=		--param=destructive-interference-size=64
 INCL_PATH+=	${BUILDLINK_PREFIX.mongo-c-driver}/include/libbson-1.0
 INCL_PATH+=	${BUILDLINK_PREFIX.mongo-c-driver}/include/libmongoc-1.0
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib
+
+# Workaround for PR pkg/59842 - build fails with pkgsrc GCC
+# due to cwrappers bug. Tell mongodb we can handle very long commands
+# so `cc @args` syntax won't be used.
+SCONS_BUILD_ARGS+=	MAXLINELENGTH=262144
 
 # needed for linking against boost_log, otherwise some symbols are not found
 #SCONS_BUILD_ARGS+=	CPPDEFINES=-DBOOST_LOG_DYN_LINK=1
