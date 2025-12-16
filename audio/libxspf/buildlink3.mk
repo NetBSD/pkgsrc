@@ -1,15 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.2 2018/01/07 13:03:55 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/12/16 22:46:05 wiz Exp $
 
-BUILDLINK_TREE+=	libspiff
+BUILDLINK_TREE+=	libxspf
 
-.if !defined(LIBSPIFF_BUILDLINK3_MK)
-LIBSPIFF_BUILDLINK3_MK:=
+.if !defined(LIBXSPF_BUILDLINK3_MK)
+LIBXSPF_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libspiff+=	libxspf>=1.2.0
-BUILDLINK_PKGSRCDIR.libspiff?=		../../audio/libxspf
+BUILDLINK_API_DEPENDS.libxspf+=	libxspf>=1.2.0
+BUILDLINK_PKGSRCDIR.libxspf?=	../../audio/libxspf
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/uriparser/buildlink3.mk"
-.endif # LIBSPIFF_BUILDLINK3_MK
+.endif	# LIBXSPF_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-libspiff
+BUILDLINK_TREE+=	-libxspf
