@@ -1,10 +1,12 @@
-$NetBSD: patch-ab,v 1.8 2019/02/19 15:18:19 hauke Exp $
+$NetBSD: patch-ab,v 1.9 2025/12/16 10:19:11 hauke Exp $
 
 Fix bashisms.
 
 FreeBSD 10 is not FreeBSD 1.
 
 Add support for mutexes on aarch64 with GCC.
+
+Add support for mutexes on sparc v[789].
 
 --- dist/configure.orig	2013-09-09 15:35:02.000000000 +0000
 +++ dist/configure
@@ -107,7 +109,19 @@ Add support for mutexes on aarch64 with GCC.
  			LIBS="$LIBS -lpthread"
  
  if test "$cross_compiling" = yes; then :
-@@ -21796,6 +21796,31 @@ fi
+@@ -21444,7 +21444,11 @@ main ()
+ {
+ 
+ 	#if defined(__sparc__) && defined(__GNUC__)
++	#if defined(__sparc_v9__)
+ 		asm volatile ("membar #StoreStore|#StoreLoad|#LoadStore");
++	#else
++		asm volatile ("stbar");
++	#endif
+ 		exit(0);
+ 	#else
+ 		FAIL TO COMPILE/LINK
+@@ -21796,6 +21800,31 @@ fi
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  fi
  
@@ -139,7 +153,7 @@ Add support for mutexes on aarch64 with GCC.
  # MIPS/gcc: Linux
  if test "$db_cv_mutex" = no; then
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -22124,6 +22149,10 @@ ARM/gcc-assembly)	ADDITIONAL_OBJS="mut_t
+@@ -22124,6 +22153,10 @@ ARM/gcc-assembly)	ADDITIONAL_OBJS="mut_t
  			$as_echo "#define HAVE_MUTEX_ARM_GCC_ASSEMBLY 1" >>confdefs.h
  
  			;;
