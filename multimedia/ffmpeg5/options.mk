@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2023/11/09 16:31:18 nia Exp $
+# $NetBSD: options.mk,v 1.8 2025/12/16 14:57:46 vins Exp $
 
 # Global and legacy options
 
@@ -8,7 +8,7 @@ PKG_OPTIONS_GROUP.ssl=		gnutls mbedtls openssl
 
 PKG_SUPPORTED_OPTIONS=	ass aom bluray doc fdk-aac fontconfig freetype jack \
 			lame libvpx libwebp opencore-amr opus pulseaudio rav1e rpi rtmp \
-			speex tesseract theora vorbis x11 x264 x265 xvid
+			sndio speex tesseract theora vorbis x11 x264 x265 xvid
 PKG_SUGGESTED_OPTIONS=	ass aom bluray freetype fontconfig gnutls lame \
 			libvpx libwebp opus speex theora vorbis x264 x265 xvid
 
@@ -164,6 +164,13 @@ CONFIGURE_ARGS+=	--disable-libpulse
 .if !empty(PKG_OPTIONS:Mrtmp)
 CONFIGURE_ARGS+=	--enable-librtmp
 .include "../../net/rtmpdump/buildlink3.mk"
+.endif
+
+# sndio support
+.if !empty(PKG_OPTIONS:Msndio)
+.include "../../audio/sndio/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-sndio
 .endif
 
 # OCR filter using Tesseract
