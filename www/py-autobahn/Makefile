@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2025/12/13 10:27:06 abs Exp $
+# $NetBSD: Makefile,v 1.47 2025/12/16 10:43:46 adam Exp $
 
 DISTNAME=	autobahn-25.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,12 +26,14 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-twisted>=0:../../net/py-twisted
 
 BUILDLINK_TRANSFORM+=	rm:-march=native
 
+MAKE_ENV+=	PYUBJSON_NO_EXTENSION=1
+
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} wamp wamp-${PYVERSSUFFIX} || ${TRUE}
-	#cd ${DESTDIR}${PREFIX}/bin && ${MV} xbrnetwork xbrnetwork-${PYVERSSUFFIX}
-	#cd ${DESTDIR}${PREFIX}/bin && ${MV} xbrnetwork-ui xbrnetwork-ui-${PYVERSSUFFIX}
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/autobahn/nvx/_nvx_utf8validator.[co]
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/autobahn/nvx/_nvx_xormasker.[co]
 
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 .include "../../lang/python/versioned_dependencies.mk"
