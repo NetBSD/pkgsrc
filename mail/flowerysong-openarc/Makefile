@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/12/13 12:41:21 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/12/16 09:55:41 wiz Exp $
 
 DISTNAME=	OpenARC-1.3.0
 PKGNAME=	flowerysong-${DISTNAME:tl}
@@ -23,7 +23,8 @@ USE_TOOLS+=	aclocal autoconf automake pkg-config
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-milter=${BUILDLINK_PREFIX.libmilter}
+CONFIGURE_ENV+=		LIBMILTER_CPPFLAGS=-I${BUILDLINK_PREFIX.libmilter}/include
+CONFIGURE_ENV+=		LIBMILTER_LDPFLAGS=-L${BUILDLINK_PREFIX.libmilter}/lib
 
 SUBST_CLASSES+=			interpreter
 SUBST_STAGE.interpreter=	pre-configure
