@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7232 2025/12/16 10:01:13 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.7233 2025/12/16 22:29:09 roy Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10487,3 +10487,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/ruby-tzinfo-data to 1.2025.3 [taca 2025-12-15]
 	Updated graphics/ImageMagick to 7.1.2.11 [triaxx 2025-12-16]
 	Updated graphics/p5-PerlMagick to 7.1.2.11 [triaxx 2025-12-16]
+	Updated net/dhcpsd to 0.0.6 [roy 2025-12-16]
