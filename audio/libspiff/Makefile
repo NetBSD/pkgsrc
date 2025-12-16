@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/11/17 11:00:19 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.13 2025/12/16 22:43:49 wiz Exp $
 
 DISTNAME=	libspiff-1.0.0
 PKGREVISION=	1
@@ -21,7 +20,7 @@ CONFIGURE_ARGS+=	--with-uriparser=${BUILDLINK_PREFIX.uriparser:Q}
 
 TEST_TARGET=	check
 
-BUILDLINK_ABI_DEPENDS.expat+=		expat>=2.0.0nb1
+BUILDLINK_API_DEPENDS.expat+=		expat>=2.0.0nb1
 BUILDLINK_API_DEPENDS.uriparser+=	uriparser>=0.7.2
 
 .include "../../textproc/expat/buildlink3.mk"
