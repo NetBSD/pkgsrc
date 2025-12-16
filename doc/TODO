@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26536 2025/12/15 12:27:15 adam Exp $
+$NetBSD: TODO,v 1.26537 2025/12/16 16:30:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -571,6 +571,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dovecot2-pigeonhole-2.4.2 [needs dovecot2 2.4]
 	o drawpile-2.1.20
 	o drivel-3.0.5
+	o dropbear-2025.89
 	o drupal-10.0.5
 	o drupal-9.5.5
 	o dvdisaster-0.79.10
@@ -1344,6 +1345,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wMosaic-3.8.22
 	o wandio-4.2.3
 	o wap-utils-1.4.1
+	o wayland-protocols-1.47
 	o wbm-virtual-server-6.16
 	o wcalc-2.4
 	o webkit-gtk-2.50.1 [wip]
