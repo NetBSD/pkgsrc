@@ -1,9 +1,11 @@
-$NetBSD: patch-ab,v 1.27 2024/06/18 12:49:22 markd Exp $
+$NetBSD: patch-ab,v 1.28 2025/12/16 10:19:11 hauke Exp $
 
 Port the configure script to C99.  Add missing header files, avoid
 calling the undeclared exit function, and add missing return types
 main.  This improves compatibility with compilers which do not accept
 language features that were removed from C99.
+
+Add mutex implementation for sparc v[789].
 
 --- dist/configure.orig	2010-04-12 20:25:23.000000000 +0000
 +++ dist/configure
@@ -296,16 +298,21 @@ language features that were removed from C99.
  	#else
  		FAIL TO COMPILE/LINK
  	#endif
-@@ -19216,7 +19269,7 @@ main ()
+@@ -19215,8 +19268,12 @@ main ()
+ {
  
  	#if defined(__sparc__) && defined(__GNUC__)
++	#if defined(__sparc_v9__)
  		asm volatile ("membar #StoreStore|#StoreLoad|#LoadStore");
 -		exit(0);
++	#else
++		asm volatile ("stbar");
++	#endif
 +		return 0;
  	#else
  		FAIL TO COMPILE/LINK
  	#endif
-@@ -19287,7 +19340,7 @@ main ()
+@@ -19287,7 +19344,7 @@ main ()
  	msem_init(&x, 0);
  	msem_lock(&x, 0);
  	msem_unlock(&x, 0);
@@ -314,7 +321,7 @@ language features that were removed from C99.
  #else
  	FAIL TO COMPILE/LINK
  #endif
-@@ -19319,7 +19372,7 @@ main ()
+@@ -19319,7 +19376,7 @@ main ()
  	msem_init(&x, 0);
  	msem_lock(&x, 0);
  	msem_unlock(&x, 0);
@@ -323,7 +330,7 @@ language features that were removed from C99.
  
    ;
    return 0;
-@@ -19371,7 +19424,7 @@ main ()
+@@ -19371,7 +19428,7 @@ main ()
  {
  
  #if defined(__USLC__)
@@ -332,7 +339,7 @@ language features that were removed from C99.
  #else
  	FAIL TO COMPILE/LINK
  #endif
-@@ -19502,7 +19555,7 @@ main ()
+@@ -19502,7 +19559,7 @@ main ()
  {
  
  #if defined(__alpha) && defined(__DECC)
@@ -341,7 +348,7 @@ language features that were removed from C99.
  #else
  	FAIL TO COMPILE/LINK
  #endif
-@@ -19527,7 +19580,7 @@ main ()
+@@ -19527,7 +19584,7 @@ main ()
  {
  
  #if defined(__alpha) && defined(__GNUC__)
@@ -350,7 +357,7 @@ language features that were removed from C99.
  #else
  	FAIL TO COMPILE/LINK
  #endif
-@@ -19552,7 +19605,7 @@ main ()
+@@ -19552,7 +19609,7 @@ main ()
  {
  
  #if defined(__arm__) && defined(__GNUC__)
@@ -359,7 +366,7 @@ language features that were removed from C99.
  #else
  	FAIL TO COMPILE/LINK
  #endif
-@@ -19567,6 +19620,31 @@ fi
+@@ -19567,6 +19624,31 @@ fi
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  fi
  
@@ -391,7 +398,7 @@ language features that were removed from C99.
  # MIPS/gcc: Linux
  if test "$db_cv_mutex" = no; then
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -19577,7 +19655,7 @@ main ()
+@@ -19577,7 +19659,7 @@ main ()
  {
  
  #if (defined(__mips) || defined(__mips__)) && defined(__GNUC__)
@@ -400,7 +407,7 @@ language features that were removed from C99.
  #else
  	FAIL TO COMPILE/LINK
  #endif
-@@ -19602,7 +19680,7 @@ main ()
+@@ -19602,7 +19684,7 @@ main ()
  {
  
  #if (defined(__hppa) || defined(__hppa__)) && defined(__GNUC__)
@@ -409,7 +416,7 @@ language features that were removed from C99.
  #else
  	FAIL TO COMPILE/LINK
  #endif
-@@ -19627,7 +19705,7 @@ main ()
+@@ -19627,7 +19709,7 @@ main ()
  {
  
  #if (defined(__powerpc__) || defined(__ppc__)) && defined(__GNUC__)
@@ -418,7 +425,7 @@ language features that were removed from C99.
  #else
  	FAIL TO COMPILE/LINK
  #endif
-@@ -19652,7 +19730,7 @@ main ()
+@@ -19652,7 +19734,7 @@ main ()
  {
  
  #if (defined(mc68020) || defined(sun3)) && defined(__GNUC__)
@@ -427,7 +434,7 @@ language features that were removed from C99.
  #else
  	FAIL TO COMPILE/LINK
  #endif
-@@ -19677,7 +19755,7 @@ main ()
+@@ -19677,7 +19759,7 @@ main ()
  {
  
  #if defined(__MVS__) && defined(__IBMC__)
@@ -436,7 +443,7 @@ language features that were removed from C99.
  #else
  	FAIL TO COMPILE/LINK
  #endif
-@@ -19702,7 +19780,7 @@ main ()
+@@ -19702,7 +19784,7 @@ main ()
  {
  
  #if defined(__s390__) && defined(__GNUC__)
@@ -445,7 +452,7 @@ language features that were removed from C99.
  #else
  	FAIL TO COMPILE/LINK
  #endif
-@@ -19727,7 +19805,7 @@ main ()
+@@ -19727,7 +19809,7 @@ main ()
  {
  
  #if defined(__ia64) && defined(__GNUC__)
@@ -454,7 +461,7 @@ language features that were removed from C99.
  #else
  	FAIL TO COMPILE/LINK
  #endif
-@@ -19752,7 +19830,7 @@ main ()
+@@ -19752,7 +19834,7 @@ main ()
  {
  
  #if defined(_UTS)
@@ -463,7 +470,7 @@ language features that were removed from C99.
  #else
  	FAIL TO COMPILE/LINK
  #endif
-@@ -19862,6 +19940,10 @@ ARM/gcc-assembly)	ADDITIONAL_OBJS="mut_t
+@@ -19862,6 +19944,10 @@ ARM/gcc-assembly)	ADDITIONAL_OBJS="mut_t
  			$as_echo "#define HAVE_MUTEX_ARM_GCC_ASSEMBLY 1" >>confdefs.h
  
  			;;
@@ -474,7 +481,7 @@ language features that were removed from C99.
  HP/msem_init)		ADDITIONAL_OBJS="mut_tas${o} $ADDITIONAL_OBJS"
  			$as_echo "#define HAVE_MUTEX_HPPA_MSEM_INIT 1" >>confdefs.h
  
-@@ -20203,9 +20285,9 @@ main ()
+@@ -20203,9 +20289,9 @@ main ()
  {
  
  	#if ((defined(i386) || defined(__i386__)) && defined(__GNUC__))
@@ -486,7 +493,7 @@ language features that were removed from C99.
  	#else
  		FAIL TO COMPILE/LINK
  	#endif
-@@ -20720,6 +20802,7 @@ if test "$cross_compiling" = yes; then :
+@@ -20720,6 +20806,7 @@ if test "$cross_compiling" = yes; then :
  /* end confdefs.h.  */
  
  #include <sys/time.h>
@@ -494,7 +501,7 @@ language features that were removed from C99.
  int
  main ()
  {
-@@ -20743,7 +20826,8 @@ else
+@@ -20743,7 +20830,8 @@ else
  /* end confdefs.h.  */
  
  #include <sys/time.h>
@@ -504,7 +511,7 @@ language features that were removed from C99.
  	struct timespec t;
  	return (clock_gettime(CLOCK_MONOTONIC, &t) != 0);
  }
-@@ -21600,6 +21684,8 @@ $as_echo_n "checking for 64-bit integral
+@@ -21600,6 +21688,8 @@ $as_echo_n "checking for 64-bit integral
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
@@ -513,7 +520,7 @@ language features that were removed from C99.
  int
  main ()
  {
-@@ -21634,7 +21720,9 @@ else
+@@ -21634,7 +21724,9 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
