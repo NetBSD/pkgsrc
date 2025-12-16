@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 09:59:10 nia Exp $
+$NetBSD: distinfo,v 1.9 2025/12/16 22:43:49 wiz Exp $
 
 BLAKE2s (libspiff-1.0.0.tar.bz2) = 60056d0220e2931a57949fb2c6932140cd1bf096d055f364e4fc99cc86914a18
 SHA512 (libspiff-1.0.0.tar.bz2) = 2747132d44cfda0bc6dcd8feff7a8f3d9a0bfba9505d732b5b029b93e9953dc7e46182190627db1e3e7179c577fc55179e1bdf94666eeffd11b7bca3a0225090
 Size (libspiff-1.0.0.tar.bz2) = 385061 bytes
 SHA1 (patch-aa) = 16f441fd7662395244feae0bebf03497c1bba0ed
 SHA1 (patch-src_SpiffPropsWriter.cpp) = 20d1025408613bfb42878c21da8a987bbc8df1f3
+SHA1 (patch-src_SpiffReader.cpp) = 77d7b10b2c223152017a98529f200eaa35cf0c4a
 SHA1 (patch-src_SpiffWriter.cpp) = d245cf9772609dffa3f4b941219c67a5a3491b5d
 SHA1 (patch-src_SpiffXmlFormatter.cpp) = d9e488b980489639f6b6cfaa069713f4df2dca69
