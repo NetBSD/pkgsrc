@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/11/17 11:00:19 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/12/16 22:46:05 wiz Exp $
 
 DISTNAME=	libxspf-1.2.1
 PKGREVISION=	1
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat:Q}
 CONFIGURE_ARGS+=	--disable-test
 #TEST_TARGET=		check
 
-BUILDLINK_ABI_DEPENDS.expat+=		expat>=2.0.0nb1
+BUILDLINK_API_DEPENDS.expat+=		expat>=2.0.0nb1
 BUILDLINK_API_DEPENDS.uriparser+=	uriparser>=0.7.5
 
 .include "../../textproc/expat/buildlink3.mk"
