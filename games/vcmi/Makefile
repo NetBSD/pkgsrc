@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/10/23 20:37:16 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/12/17 22:56:12 nia Exp $
 
 DISTNAME=	vcmi-1.6.8
 PKGREVISION=	1
@@ -75,4 +75,5 @@ PLIST.desktop=	yes
 .include "../../multimedia/ffmpeg7/buildlink3.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
