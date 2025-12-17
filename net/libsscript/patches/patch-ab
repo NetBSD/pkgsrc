@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.3 2025/04/21 21:07:22 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2025/12/17 17:11:18 nia Exp $
 
---- sscript.c.orig	2000-02-02 02:21:05.000000000 +0100
+--- sscript.c.orig	2000-02-02 01:21:05.000000000 +0000
 +++ sscript.c
-@@ -34,8 +34,8 @@ char *sscript_lindex(char *input_string,
+@@ -13,6 +13,7 @@
+ #include <net/if.h>
+ #include <strings.h>
+ #include <sys/file.h>
++#include <fcntl.h>
+ #include <signal.h>
+ #include <unistd.h>
+ #include <netdb.h>
+@@ -34,8 +35,8 @@ char *sscript_lindex(char *input_string, int word_numb
   static char tmpstring[1024];
   int i;
   strncpy(tmpstring,input_string,1024);
@@ -13,7 +21,7 @@ $NetBSD: patch-ab,v 1.3 2025/04/21 21:07:22 wiz Exp $
   tokens[i] = NULL;
   return(tokens[word_number]);
  }
-@@ -231,8 +231,8 @@ char *sscript_lrange(char *input_string,
+@@ -231,8 +232,8 @@ char *sscript_lrange(char *input_string, int starting_
    strcpy(global_var[1],out_string);
    return global_var[1]; }
   strcpy(tmpstring,input_string);
