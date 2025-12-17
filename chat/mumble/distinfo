@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.12 2024/03/21 10:34:10 nia Exp $
+$NetBSD: distinfo,v 1.13 2025/12/17 16:25:39 nia Exp $
 
 BLAKE2s (mumble-1.4.287.tar.gz) = 3de53d3709cccb51c93c6efa192633e14b9bd48fe7f9c25f7782cbb9c020c86b
 SHA512 (mumble-1.4.287.tar.gz) = 34ed30c18257ba8deae6938009a90147c8bc3a0aca28e69bea7ec0262e8d2cdacb9a840fac7d3dd623a52ef8d5903ed5424b62b483af21d6df6aa9632eae9d82
 Size (mumble-1.4.287.tar.gz) = 9457292 bytes
+SHA1 (patch-cmake_compiler.cmake) = ebd1066e2efbe9ab66bfe92c7d8dcb338448a928
 SHA1 (patch-overlay__gl_init__unix.c) = e8db446ee6b62af5c8e580a3927664c9b52bf4f7
 SHA1 (patch-src_HostAddress.cpp) = 34ea0777f76dc236e96b83e43ba486952c676a1c
 SHA1 (patch-src_ProcessResolver.cpp) = f75286127d01c2f44308d6483e2af5b5e7bc1304
