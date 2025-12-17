@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2025/10/23 20:37:59 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2025/12/17 17:33:41 nia Exp $
 
 DISTNAME=	kasumi-2.5
 PKGREVISION=	44
@@ -15,6 +15,8 @@ USE_X11=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
+
+FORCE_CXX_STD=		gnu++98
 
 BUILDLINK_API_DEPENDS.anthy+=	anthy>=6520
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6
