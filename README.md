@@ -72,5 +72,4 @@ Additional links
 - [pkgsrc.se](https://pkgsrc.se/) - a searchable web index of pkgsrc
 - [pkgsrc-wip](https://pkgsrc.org/wip/) - a project to get more people actively involved with creating packages for pkgsrc
 - [pkgsrc on Twitter](https://twitter.com/pkgsrc) - announcements to the world
-- [pkgsrcCon](https://pkgsrc.org/pkgsrcCon) - we get together
 - [BulkTracker](https://releng.netbsd.org/bulktracker/) - a web application that tracks pkgsrc bulk builds
