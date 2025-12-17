@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.31 2025/10/05 19:26:09 js Exp $
+# $NetBSD: Makefile,v 1.32 2025/12/17 14:34:37 sjmulder Exp $
 
 DISTNAME=	nostt-1.3
 PKGREVISION=	10
 CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_GITHUB:=sjmulder/}
+MASTER_SITES=	https://codeberg.org/sjmulder/nostt/releases/download/${PKGVERSION_NOREV}/
 
 MAINTAINER=	sjmulder@NetBSD.org
-HOMEPAGE=	https://github.com/sjmulder/nostt/
+HOMEPAGE=	https://codeberg.org/sjmulder/nostt/
 COMMENT=	Command line NOS Teletekst reader
 LICENSE=	2-clause-bsd
 
