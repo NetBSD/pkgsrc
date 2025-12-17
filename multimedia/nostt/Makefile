@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2025/12/17 14:34:37 sjmulder Exp $
+# $NetBSD: Makefile,v 1.33 2025/12/17 22:59:02 wiz Exp $
 
 DISTNAME=	nostt-1.3
 PKGREVISION=	10
 CATEGORIES=	multimedia
 MASTER_SITES=	https://codeberg.org/sjmulder/nostt/releases/download/${PKGVERSION_NOREV}/
+# remove on next update
+DIST_SUBDIR=	nostt-1.3-codeberg
 
 MAINTAINER=	sjmulder@NetBSD.org
 HOMEPAGE=	https://codeberg.org/sjmulder/nostt/

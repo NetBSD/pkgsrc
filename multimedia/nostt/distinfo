@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/12/17 14:34:37 sjmulder Exp $
+$NetBSD: distinfo,v 1.9 2025/12/17 22:59:02 wiz Exp $
 
-BLAKE2s (nostt-1.3.tar.gz) = 611b55098e303c9cce48f3734ab07dd313f3839ee285be0f65a4b9c03945da29
-SHA512 (nostt-1.3.tar.gz) = 58764d83adc2313c6a5a5f07c58bed89eb6c6eb602fc4fb9616d7cbddb3d8db159e1ddb6af91e1ea1d2aab1cb4dc15c4d192ba7639e9657d4ba31ccf5cb9676c
-Size (nostt-1.3.tar.gz) = 11466 bytes
+BLAKE2s (nostt-1.3-codeberg/nostt-1.3.tar.gz) = 611b55098e303c9cce48f3734ab07dd313f3839ee285be0f65a4b9c03945da29
+SHA512 (nostt-1.3-codeberg/nostt-1.3.tar.gz) = 58764d83adc2313c6a5a5f07c58bed89eb6c6eb602fc4fb9616d7cbddb3d8db159e1ddb6af91e1ea1d2aab1cb4dc15c4d192ba7639e9657d4ba31ccf5cb9676c
+Size (nostt-1.3-codeberg/nostt-1.3.tar.gz) = 11466 bytes
