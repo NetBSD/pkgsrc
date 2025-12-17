@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2022/06/28 11:37:03 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/12/17 23:19:38 nia Exp $
 
 DISTNAME=	dansguardian-2.12.0.3
 PKGREVISION=	12
@@ -15,6 +15,8 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl pkg-config
 RCD_SCRIPTS+=	dansguardian
+
+FORCE_CXX_STD=	gnu++98
 
 # Fix bug in configure.ac: the paths are expanded too soon
 SUBST_CLASSES+=		pathfix
