@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2025/12/13 12:38:09 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2025/12/17 22:36:22 nia Exp $
 
 DISTNAME=		xtel-3.3.0
 PKGREVISION=		15
@@ -16,7 +16,7 @@ COMMENT=	Minitel(r) emulator
 MAKE_JOBS_SAFE=	no
 
 USE_IMAKE=	YES
-USE_TOOLS+=	mkfontdir bdftopcf
+USE_TOOLS+=	mkfontdir mkfontscale bdftopcf
 
 FONTDIR=	${PREFIX}/share/fonts/X11
 FONTS_DIRS.x11=	${FONTDIR}/xtel
