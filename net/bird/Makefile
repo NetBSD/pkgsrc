@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/09/30 13:05:18 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/12/17 22:53:00 nia Exp $
 
 DISTNAME=	bird-3.1.4
 CATEGORIES=	net
@@ -31,4 +31,5 @@ CONF_FILES=		${EGDIR}/bird.conf ${PKG_SYSCONFDIR}/bird.conf
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../security/libssh/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
