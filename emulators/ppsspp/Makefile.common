@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2025/08/20 11:34:55 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2025/12/17 22:59:13 nia Exp $
 # used by emulators/ppsspp/Makefile
 # used by emulators/ppsspp-qt/Makefile
 # used by emulators/libretro-ppsspp/Makefile
@@ -58,4 +58,5 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_PCH=OFF
 # don't change this, newer versions of ffmpeg break fmv
 .include "../../multimedia/ffmpeg2/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/pthread.buildlink3.mk"
