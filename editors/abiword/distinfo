@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.87 2025/11/18 17:26:21 nia Exp $
+$NetBSD: distinfo,v 1.88 2025/12/17 16:38:18 nia Exp $
 
 BLAKE2s (AbiWord-release-3.0.7.tar.gz) = 4bd4792637447aabf795ec079d8082509d58ddea8b54571bb84c9571aa8f6acc
 SHA512 (AbiWord-release-3.0.7.tar.gz) = 6e7bc42d80790a7979551f9403ec8a8b1d3ce438bfedcd3a4b96711af5c2ba74c1d6a1a994ccc4dc9768ed65316264b66d4758adbad78906370faf249742232d
@@ -6,6 +6,7 @@ Size (AbiWord-release-3.0.7.tar.gz) = 11490324 bytes
 SHA1 (patch-configure.ac) = 239c0635c2c616c7e0a986a5fd92428393af38b7
 SHA1 (patch-plugins_aiksaurus_Makefile.am) = 1529d5098b7fb798c428fe02cc50879374cb3e9d
 SHA1 (patch-plugins_command_Makefile.am) = e003a6bf9a6e0566abc85f09868fdf1aa93234d7
+SHA1 (patch-plugins_command_xp_AbiCommand.cpp) = e1f5a7c8dc057eac5b6f1a807c1a588c06535380
 SHA1 (patch-plugins_gdict_Makefile.am) = fd5afa1be1752ea1f5172e1585c91648b5b735e1
 SHA1 (patch-plugins_gimp_xp_AbiGimp.cpp) = 2b245de4beb2f4b9b8cd8593c811bb086bb2bde3
 SHA1 (patch-plugins_goffice_Makefile.am) = 1959eea3b4e19f085aeb56870f682ce44561d445
