@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2025/10/23 20:39:01 wiz Exp $
+# $NetBSD: Makefile,v 1.136 2025/12/17 13:59:16 nia Exp $
 
 DISTNAME=	mupdf-1.26.8-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -47,6 +47,14 @@ REPLACE_INTERPRETER+=	shell
 REPLACE.shell.old=	.*/bin/bash
 REPLACE.shell.new=	${SH}
 REPLACE_FILES.shell+=	scripts/hexdump.sh
+
+# Type names ending in _t are reserved for the system headers.
+# Indeed, SunOS defines index_t.
+SUBST_CLASSES+=		indext
+SUBST_STAGE.indext=	pre-configure
+SUBST_FILES.indext=	source/fitz/*.c
+SUBST_FILES.indext+=	source/fitz/*.h
+SUBST_SED.indext=	-e 's,index_t,mu_index_t,g'
 
 # Remove thirdparty directory in order to use the libraries provided by pkgsrc
 # thirdparty/lcms2 is not removed intentionally because ICC support requires
