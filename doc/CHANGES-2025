@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7233 2025/12/16 22:29:09 roy Exp $
+$NetBSD: CHANGES-2025,v 1.7234 2025/12/17 23:03:18 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8876,7 +8876,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 27.2.1 [pin 2025-10-16]
 	Updated textproc/ripgrep to 15.0.0 [pin 2025-10-16]
 	Updated textproc/scooter to 0.8.2 [pin 2025-10-16]
-	Updated textproc/typst to 0.13.1 [pin 2025-10-16]
 	Updated devel/serie to 0.5.2 [pin 2025-10-16]
 	Updated sysutils/treegrep to 1.2.1 [pin 2025-10-16]
 	Updated chat/synadm to 0.49.2 [adam 2025-10-16]
@@ -9261,8 +9260,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/py-gnssutils to 1.1.19 [gdt 2025-11-01]
 	Updated x11/libxfce4ui to 4.20.2 [gutteridge 2025-11-01]
 	Updated devel/py-hg-fastimport to 0.1.2 [roy 2025-11-01]
-	Updated archivers/libarchive to 3.8.2 [adam 2025-11-02]
-	Updated archivers/bsdtar to 3.8.2 [adam 2025-11-02]
 	Updated x11/libxfce4windowing to 4.20.4 [gutteridge 2025-11-01]
 	Updated sysutils/broot to 1.52.0 [pin 2025-11-01]
 	Updated shells/oh-my-posh to 27.4.4 [pin 2025-11-01]
@@ -9276,6 +9273,8 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/mozilla-rootcerts to 1.1.20251029 [wiz 2025-11-01]
 	Updated security/mozilla-rootcerts-openssl to 2.20 [wiz 2025-11-01]
 	Updated graphics/vtk to 9.5.2 [gdt 2025-11-01]
+	Updated archivers/libarchive to 3.8.2 [adam 2025-11-02]
+	Updated archivers/bsdtar to 3.8.2 [adam 2025-11-02]
 	Updated emulators/nono to 1.6.0 [jun 2025-11-02]
 	Added misc/kf6-kuserfeedback version 6.18.0 [markd 2025-11-02]
 	Updated x11/libdrm to 2.4.128 [wiz 2025-11-02]
@@ -9715,7 +9714,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/bacon to 3.20.1 [pin 2025-11-13]
 	Updated net/slumber to 4.2.0 [pin 2025-11-13]
 	Updated sysutils/xenkernel420 to 20251113 [bouyer 2025-11-13]
-	Updated sysutils/xenkernel420 to 20251113 [bouyer 2025-11-13]
 	Updated inputmethod/ibus to 1.5.33 [tsutsui 2025-11-13]
 	Added lang/nodejs24 version 24.11.1 [adam 2025-11-13]
 	Updated lang/nodejs to 25.2.0 [adam 2025-11-13]
@@ -9741,7 +9739,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/p5-Dancer2 to 2.0.1 [wen 2025-11-15]
 	Updated www/p5-HTML-Form to 6.13 [wen 2025-11-15]
 	Updated math/p5-Math-Base-Convert to 0.13 [wen 2025-11-15]
-	Updated net/nagios-plugin-dnsrbl to 0.6 [manu 2025-11-16]
+	Updated net/nagios-plugin-dnsrbl to 0.6 [manu 2025-11-15]
 	Updated mail/p5-Mail-AuthenticationResults to 2.20250709 [wen 2025-11-15]
 	Updated mail/p5-Mail-DMARC to 1.20250805 [wen 2025-11-15]
 	Updated devel/appstream to 1.1.1nb1 [ryoon 2025-11-15]
@@ -9781,7 +9779,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/mplayer to 1.5.0.38680 [ryoon 2025-11-15]
 	Updated multimedia/mencoder to 1.5.0.38680 [ryoon 2025-11-15]
 	Updated sysutils/mencvcd to 1.5.0.38680 [ryoon 2025-11-15]
-	Added devel/p5-Test2-Harness version 1.000161 [wen 2025-11-25]
+	Added devel/p5-Test2-Harness version 1.000161 [wen 2025-11-15]
 	Updated converters/libiconv to 1.18 [ryoon 2025-11-15]
 	Updated devel/p5-Test-MockFile to 0.037 [wen 2025-11-15]
 	Updated devel/acme to 0.97.0.0.448 [rhialto 2025-11-15]
@@ -10330,7 +10328,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/py313-html-docs to 3.13.11 [adam 2025-12-10]
 	Updated lang/python314 to 3.14.2 [adam 2025-12-10]
 	Updated lang/py314-html-docs to 3.14.2 [adam 2025-12-10]
-	Updated emulators/nono to 1.6.4 [jun 2025-12-11]
+	Updated emulators/nono to 1.6.4 [jun 2025-12-10]
 	Updated net/openresolv to 3.17.1 [roy 2025-12-10]
 	Updated devel/nss to 3.119.1 [wiz 2025-12-10]
 	Added mail/flowerysong-openarc version 1.3.0 [manu 2025-12-11]
