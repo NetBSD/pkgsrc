@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/11/24 20:00:43 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2025/12/17 23:10:06 nia Exp $
 
 DISTNAME=	libfyaml-0.9
 CATEGORIES=	textproc
@@ -17,6 +17,9 @@ TEST_TARGET=	check
 
 PKGCONFIG_OVERRIDE+=	libfyaml.pc.in
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "SunOS" && ${OPSYS} != "Linux"
 SUBST_CLASSES+=		alloca
 SUBST_STAGE.alloca=	pre-configure
 SUBST_MESSAGE.alloca=	Changing alloca.h to stdlib.h.
@@ -31,5 +34,7 @@ SUBST_FILES.alloca+=	src/thread/fy-thread.c
 SUBST_FILES.alloca+=	src/util/fy-utf8.h
 SUBST_FILES.alloca+=	test/libfyaml-test-private-id.c
 SUBST_SED.alloca=	-e 's,alloca.h,stdlib.h,'
+.endif
 
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
