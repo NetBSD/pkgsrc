@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2025/10/27 22:57:36 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/12/17 23:06:27 nia Exp $
 
 BLAKE2s (RetroAchievements-rcheevos-563230b1c249774b4852c944dc7cdcb952c9e8e8.tar.gz) = 7e9483ebad83562298b05474d1adca89fd76e4a1609bcfe6741b1b31d0dbc411
 SHA512 (RetroAchievements-rcheevos-563230b1c249774b4852c944dc7cdcb952c9e8e8.tar.gz) = e424ae35d1ac68320a3666f96a5c82baf83d7e862474b03fce2780ff21a4176126911f65f9ad6068718412b30d81798f2eac82ea4b0b9e04de6de292876ba08a
@@ -22,5 +22,6 @@ BLAKE2s (vkedwardli-Syphon-Framework-486dd8e4ef3bead482ea26de99770f4389e24e37.ta
 SHA512 (vkedwardli-Syphon-Framework-486dd8e4ef3bead482ea26de99770f4389e24e37.tar.gz) = a0ce6cb0f4b16a61f48020f80cd6526b16fbc857215a58155126343f6da78ba05f575de7625178049e42571f06402e90aea04c16470c6c965983e934e3b1e8d5
 Size (vkedwardli-Syphon-Framework-486dd8e4ef3bead482ea26de99770f4389e24e37.tar.gz) = 326352 bytes
 SHA1 (patch-CMakeLists.txt) = a07c8d8205e69913dd0f81541cedf4c5eedb92d8
+SHA1 (patch-core_linux_context.cpp) = 0edde0b5291e8e8e4ac79911e49be0f8a22c5906
 SHA1 (patch-core_sdl_sdl__gamepad.h) = 30ab8b6b07ed8f84874eeb7acac10312073d308d
 SHA1 (patch-core_ui_gui.cpp) = 0c204987aa02cb3a3419900668690e62cbf47bc4
