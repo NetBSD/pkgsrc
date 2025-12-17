@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2025/12/14 22:08:37 vins Exp $
+$NetBSD: distinfo,v 1.41 2025/12/17 19:05:30 vins Exp $
 
 BLAKE2s (0.2.9-utf32.tar.gz) = 52de08088cc288e5fd826066d3105a3826b524b4acfbd1a2afb45e2b8cdd2c12
 SHA512 (0.2.9-utf32.tar.gz) = d00577beee02edf3f35c4371e9a7fb35a2ed9225cd5bc4e539b6a2cd1f31f2a3c55a91832f3310afdeb004e4c59f24aa06c72c2e31ce1827d349b058a7a91a3c
@@ -309,9 +309,11 @@ Size (windows-sys-0.61.2.crate) = 2517186 bytes
 BLAKE2s (wit-bindgen-0.46.0.crate) = a4e3802e4182ff90b146fa8f8cfda0955eb91f42c0e5c58e1e8eaef3c755c75b
 SHA512 (wit-bindgen-0.46.0.crate) = 5d37ac5855797cfb906c983a70780d7cd29d70c4e5b6e54328fc18297feeb89ceda0aa732123280a12610015fbdb42bcd76aae12b1debb281b0a848016134548
 Size (wit-bindgen-0.46.0.crate) = 60508 bytes
+SHA1 (patch-CMakeLists.txt) = 1dbda3cd615afa10b42c16a0ab756830b1a251e8
 SHA1 (patch-Cargo.toml) = da9c54ccad77851725b6d0121252efc115d1653f
 SHA1 (patch-build.rs) = 875746d4569a62e6252bc6a79e72bc08d6a40a1e
 SHA1 (patch-cmake_Install.cmake) = 36f3074f7aa5ded118a2fe0182c35bfb013b58f2
+SHA1 (patch-cmake_Rust.cmake) = ee255662ffd36e1c5bc91093aba47b778d713b36
 SHA1 (patch-src_builtins_ulimit.rs) = 67fc3122f4c0e8b6a7c46185c41ca97dc6049a11
 SHA1 (patch-src_fork__exec_spawn.rs) = 1f71fe537f00bfb7dd646389ce0f66c3d752cf30
 SHA1 (patch-src_path.rs) = cbe8c4666dcbe5e0b54d5053902b6de8b88ab67f
