@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2025/12/10 08:14:10 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/12/17 16:34:03 sjmulder Exp $
 
 DISTNAME=	align-1.1.1
 CATEGORIES=	textproc
-#MASTER_SITES=	${MASTER_SITE_GITHUB:=sjmulder/}
+MASTER_SITES=	https://codeberg.org/sjmulder/align/releases/download/${PKGVERSION_NOREV}/
 
 MAINTAINER=	sjmulder@NetBSD.org
-#HOMEPAGE=	https://github.com/sjmulder/align
+HOMEPAGE=	https://codeberg.org/sjmulder/align
 COMMENT=	Center or right-align text files
 LICENSE=	2-clause-bsd
 
