@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2025/12/14 19:57:12 vins Exp $
+$NetBSD: distinfo,v 1.2 2025/12/17 16:33:11 vins Exp $
 
 BLAKE2s (alsa-sndio-0.2.tar.gz) = 1f7fd9fb125e873e9cc66f314466e9f3166fdcbe0809f525017204fea0821228
 SHA512 (alsa-sndio-0.2.tar.gz) = 50371881eaceb224703632df1078ea6d39eb51d9cc652029cc75a41f4b66f4a1d73f8f9b07cfbba27c11db5c6bcf5c4c9c80e26d0d7b8a305bc6a48f9f63e8c7
 Size (alsa-sndio-0.2.tar.gz) = 4119 bytes
+SHA1 (patch-pcm__sndio.c) = 7db6dc8ffbedcbc0d14d181fcdb259f9026b0af0

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/12/14 19:57:11 vins Exp $
+# $NetBSD: Makefile,v 1.2 2025/12/17 16:33:11 vins Exp $
 
 DISTNAME=	alsa-sndio-0.2
 PKGNAME=	${DISTNAME:S/sndio/plugins-sndio/}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Duncaen/}
 GITHUB_PROJECT=	alsa-sndio
