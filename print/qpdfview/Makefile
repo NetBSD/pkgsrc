@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2025/10/23 20:39:03 wiz Exp $
+# $NetBSD: Makefile,v 1.141 2025/12/17 17:16:14 nia Exp $
 
 DISTNAME=	qpdfview-0.4.18
 PKGREVISION=	57
@@ -16,6 +16,8 @@ USE_LANGUAGES=	c c++17
 GCC_REQD+=	8 # std::optional
 USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes
+
+LDFLAGS.SunOS+=	-lsocket
 
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
