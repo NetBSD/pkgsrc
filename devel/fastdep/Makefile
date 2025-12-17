@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/12/11 09:22:37 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/12/17 23:12:00 nia Exp $
 
 DISTNAME=	fastdep-0.16
 PKGREVISION=	1
@@ -12,6 +12,8 @@ COMMENT=	Dependency generator for C/C++ files
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
+
+FORCE_CXX_STD=	gnu++98
 
 INSTALLATION_DIRS=	bin
 
