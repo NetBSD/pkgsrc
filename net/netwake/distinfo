@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/12/17 15:37:35 sjmulder Exp $
+$NetBSD: distinfo,v 1.6 2025/12/17 22:59:58 wiz Exp $
 
-BLAKE2s (netwake-0.4.tar.gz) = 50c5736b9e759d4f71b3d200c63e8d67be659372bac2b3983f7039b6c5f1c7bb
-SHA512 (netwake-0.4.tar.gz) = 85598314c75878805d853a186cd41191375752af57e34f5b7a3f815555e4ad188b6febae9d3c56bcb5d16e960035dfdd21137762550656411cf3f2b41e9131f5
-Size (netwake-0.4.tar.gz) = 79944 bytes
+BLAKE2s (netwake-0.4-codeberg/netwake-0.4.tar.gz) = 50c5736b9e759d4f71b3d200c63e8d67be659372bac2b3983f7039b6c5f1c7bb
+SHA512 (netwake-0.4-codeberg/netwake-0.4.tar.gz) = 85598314c75878805d853a186cd41191375752af57e34f5b7a3f815555e4ad188b6febae9d3c56bcb5d16e960035dfdd21137762550656411cf3f2b41e9131f5
+Size (netwake-0.4-codeberg/netwake-0.4.tar.gz) = 79944 bytes
