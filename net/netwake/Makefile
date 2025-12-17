@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2025/12/17 15:37:35 sjmulder Exp $
+# $NetBSD: Makefile,v 1.5 2025/12/17 16:07:03 sjmulder Exp $
 
 DISTNAME=	netwake-0.4
 CATEGORIES=	net
 MASTER_SITES=	https://codeberg.org/sjmulder/netwake/releases/download/${PKGVERSION_NOREV}/
 
 MAINTAINER=	sjmulder@NetBSD.org
-HOMEPAGE=	https://github.com/sjmulder/netwake
+HOMEPAGE=	https://codeberg.org/sjmulder/netwake
 COMMENT=	Wake-on-LAN utility with lookup file support
 LICENSE=	2-clause-bsd
 
