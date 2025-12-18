@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/10/29 00:27:09 taca Exp $
+# $NetBSD: Makefile,v 1.5 2025/12/18 08:54:43 nia Exp $
 
 DISTNAME=	squid-${VERSION}
 CATEGORIES=	www
@@ -37,6 +37,8 @@ CONFIGURE_ARGS+=	--enable-translation
 CONFIGURE_ARGS+=	--with-aio
 CONFIGURE_ARGS+=	--with-default-user=${SQUID_USER}
 CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/squid.pid
+
+LDFLAGS.SunOS+=		-lsocket
 
 BUILD_DEFS=		VARBASE
 
