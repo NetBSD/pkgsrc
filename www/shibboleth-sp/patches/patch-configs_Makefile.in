@@ -1,3 +1,5 @@
+$NetBSD: patch-configs_Makefile.in,v 1.4 2025/12/18 00:19:08 wiz Exp $
+
 --- configs/Makefile.in.orig	2020-03-06 09:16:20.000000000 -0800
 +++ configs/Makefile.in	2020-07-07 12:59:05.660340097 -0700
 @@ -381,20 +381,13 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-shibsp_attribute_filtering_impl_XMLAttributeFilter.cpp,v 1.3 2025/12/18 00:19:08 wiz Exp $
+
 --- shibsp/attribute/filtering/impl/XMLAttributeFilter.cpp.orig	2020-04-01 16:27:44.000000000 -0700
 +++ shibsp/attribute/filtering/impl/XMLAttributeFilter.cpp	2020-07-07 12:23:32.612919412 -0700
 @@ -259,7 +259,7 @@
