@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/08/09 15:41:34 leot Exp $
+# $NetBSD: Makefile,v 1.14 2025/12/18 09:15:10 nia Exp $
 
 DISTNAME=		slock-1.6
 CATEGORIES=		x11
@@ -47,6 +47,7 @@ CPPFLAGS+=		-DHAVE_SHADOW_H
 LIBS+=	-lcrypt
 .endif
 
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 CPPFLAGS.NetBSD+=	-D_NETBSD_SOURCE	# needed for setgroups(2)
 
 SPECIAL_PERMS+=	bin/slock ${SETUID_ROOT_PERMS}
