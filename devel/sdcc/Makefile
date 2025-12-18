@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2025/11/17 11:00:40 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2025/12/18 15:43:41 ryoon Exp $
 
 DISTNAME=	sdcc-src-2.8.0
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sdcc/}
 EXTRACT_SUFX=	.tar.bz2
@@ -46,6 +46,9 @@ CONFIGURE_ENV+=		sdcc_cv_CCggdb="no"
 #              b[i] = strtol(resp,&resp,16);
 # Maybe fix this later.
 BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
+# error: initialization of 'const unsigned char *' from incompatible pointer type 'unsigned int *'
+BUILDLINK_TRANSFORM+=	rm:-Wall
+CFLAGS+=		-Wno-incompatible-pointer-types
 
 .include "../../mk/bsd.prefs.mk"
 

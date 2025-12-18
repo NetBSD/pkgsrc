@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2021/10/26 10:19:54 nia Exp $
+$NetBSD: distinfo,v 1.22 2025/12/18 15:43:41 ryoon Exp $
 
 BLAKE2s (sdcc-src-2.8.0.tar.bz2) = 854c361fded0251c002e28936f3c00f4c5efee8349be066039fe6b60e40690d1
 SHA512 (sdcc-src-2.8.0.tar.bz2) = 91f43ea275f4c27e5c475a9dbfe5e9c7d5804a530151420473cbc65a48ca15c65a6e38628e0bf927d89cd8ddb6b6030d5d65aa9cba7963e23ac18bde42951fd5
@@ -6,7 +6,23 @@ Size (sdcc-src-2.8.0.tar.bz2) = 3460693 bytes
 SHA1 (patch-Makefile_in) = 024ed627a88c2d17ac3981c59ec186a8a8ef48d3
 SHA1 (patch-aa) = 7ef1d2d005340b0e18039ff14334b889df5b8b3f
 SHA1 (patch-as_Makefile_in) = 1077722b49028e583f1cc82a2a027d09d59c71ad
+SHA1 (patch-as_asxxsrc_aslex.c) = 28db37480581003a5bfab1547d91c9fdda0bea13
+SHA1 (patch-as_hc08_asmain.c) = 1f7c959f3b53fca5346e2f4137efe5264f6260b6
+SHA1 (patch-as_hc08_asout.c) = 73d0fbd85725246644ec0f6dfff9b2cc88b6e973
 SHA1 (patch-as_link_Makefile_in) = 7e7a596ae5f6293669d1c30eab94215d68067670
+SHA1 (patch-as_link_hc08_lkihx.c) = 0b053eccf32dd25ea9d255bd9a3ea9987497b48c
+SHA1 (patch-as_link_hc08_lks19.c) = ec4713961d70d307ef1f1e6d5f914da30521cfa5
+SHA1 (patch-as_link_lkeval.c) = b740e3e260caa59eb44cb0c03fa4c25abc89f25a
+SHA1 (patch-as_link_mcs51_lkihx.c) = d5c162fccc68c26fc96746718d5294e82ef02643
+SHA1 (patch-as_link_mcs51_lks19.c) = 07bba74c2da4823d5434742f3eea9a40130b85d1
+SHA1 (patch-as_link_z80_lkihx.c) = a2d6987cbccebacc645b8ae9522660d07a70d04e
+SHA1 (patch-as_link_z80_lks19.c) = e45720e6f5180b9af84f55a8dc278702505d584d
+SHA1 (patch-as_mcs51_asmain.c) = aa44f210247015eaa566dab2fb42175e85ffd7e2
+SHA1 (patch-as_mcs51_asout.c) = eca38fd059acfa405d37730b2a0317f1e6810ec7
+SHA1 (patch-debugger_mcs51_cmd.c) = bdfc8098de00ed25010b990d05037a0728924331
+SHA1 (patch-debugger_mcs51_sdcdb.c) = e90197c5ac8926605e257efd65e01aee779936f0
+SHA1 (patch-debugger_mcs51_symtab.c) = a736d6dd6701109e4827e5198286a72810eca289
+SHA1 (patch-debugger_mcs51_symtab.h) = b072272a983f234b6b238ab573576cfdcd2da9f0
 SHA1 (patch-doc_Makefile_in) = bfb976234319c3623665da30dbfe40714499a6f1
 SHA1 (patch-sim_ucsim_cmd.src_Makefile.in) = 469680363f2e5b2d7e1e6384b7da5146dcb133ed
 SHA1 (patch-sim_ucsim_cmd.src_cmdlex.cc) = e02bdf0d70d060646f6473bad6477687c4360144
