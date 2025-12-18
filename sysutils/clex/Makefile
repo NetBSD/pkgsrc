@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/05/06 08:40:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2025/12/18 17:41:39 nia Exp $
 
 DISTNAME=		clex-4.6.4
 PKGREVISION=		2
@@ -12,6 +12,8 @@ LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c99
 GNU_CONFIGURE=		yes
+
+CFLAGS.SunOS+=		-D__EXTENSIONS__
 
 # for easy to maintain patches
 post-extract:
