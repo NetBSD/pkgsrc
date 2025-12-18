@@ -1,10 +1,20 @@
-$NetBSD: patch-widgets.c,v 1.1 2022/12/09 14:13:00 vins Exp $
+$NetBSD: patch-widgets.c,v 1.2 2025/12/18 13:18:18 nia Exp $
+
+Include <strings.h> for index(3).
 
 Fix sprintf() usage.
 
 --- widgets.c.orig	2011-07-09 09:51:18.000000000 +0000
 +++ widgets.c
-@@ -818,13 +818,13 @@ char *hint;
+@@ -3,6 +3,7 @@
+ #include <sys/timeb.h>
+ #include <sys/stat.h>
+ #include <string.h>
++#include <strings.h>
+ 
+ #include "sunclock.h"
+ #include "langdef.h"
+@@ -818,13 +819,13 @@ char *hint;
  	if (key == '=')
  	    sprintf(more+2, "(%c)", (do_sync)? '+' : '-');
  	if (key == '[' && do_root <= 0)
