@@ -1,0 +1,23 @@
+$NetBSD: patch-meson.build,v 1.1 2025/12/18 21:49:09 maya Exp $
+
+Check for -Wl,--version-script before using it
+Darwin doesn't support this flag.
+
+--- meson.build.orig	2024-06-20 16:36:17.000000000 +0000
++++ meson.build
+@@ -50,8 +50,14 @@ add_project_arguments(cc.get_supported_a
+ 	'-Werror=implicit',
+ ]), language: 'c')
+ 
++
+ symbols_file = 'libdisplay-info.map'
+-symbols_flag = '-Wl,--version-script,@0@'.format(meson.current_source_dir() / symbols_file)
++if meson.get_compiler('c').has_link_argument('-Wl,--version-script')
++	symbols_flag = '-Wl,--version-script,@0@'.format(meson.current_source_dir() / symbols_file)
++else
++	symbols_flag = ''
++endif
++
+ 
+ di_lib = library(
+ 	'display-info',
