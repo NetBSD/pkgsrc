@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2023/10/24 22:11:30 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/12/18 09:56:02 nia Exp $
 
 DISTNAME=	mini_httpd-1.30
 PKGREVISION=	2
@@ -24,6 +24,8 @@ MAKE_ENV+=		CRYPT_LIB=-lcrypt
 .endif
 
 MAKE_ENV.SunOS+=	SYSV_LIBS="-lnsl -lsocket -lsendfile"
+
+CFLAGS.SunOS+=		-D__EXTENSIONS__
 
 SUBST_CLASSES=		htpasswd
 SUBST_MESSAGE.htpasswd=	Fix name of (m)htpasswd in manual pages.
