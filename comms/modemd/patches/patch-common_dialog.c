@@ -1,9 +1,12 @@
-$NetBSD: patch-common_dialog.c,v 1.1 2013/09/10 18:24:10 joerg Exp $
+$NetBSD: patch-common_dialog.c,v 1.2 2025/12/18 13:32:20 nia Exp $
 
---- common/dialog.c.orig	2013-09-10 11:53:40.000000000 +0000
+--- common/dialog.c.orig	1996-04-30 07:02:36.000000000 +0000
 +++ common/dialog.c
-@@ -47,6 +47,7 @@ static char copyright[] =
+@@ -45,8 +45,10 @@ static char copyright[] =
+ #include "cdefs.h"
+ #include "global.h"
  #include <stdio.h>
++#include <string.h>
  #include <fcntl.h>
  #include <syslog.h>
 +#include <sys/ioctl.h>

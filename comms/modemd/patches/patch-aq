@@ -1,14 +1,15 @@
-$NetBSD: patch-aq,v 1.4 2013/09/10 14:15:11 joerg Exp $
+$NetBSD: patch-aq,v 1.5 2025/12/18 13:32:20 nia Exp $
 
 --- incoming/connect.c.orig	1996-04-30 07:02:43.000000000 +0000
 +++ incoming/connect.c
-@@ -49,14 +49,16 @@ static char copyright[] =
+@@ -49,14 +49,17 @@ static char copyright[] =
  #include <sys/fcntl.h>
  #include <sys/types.h>
  #include <sys/socket.h>
 +#include <arpa/inet.h>
  #include <netinet/in.h>
  #include <syslog.h>
++#include <fcntl.h>
  #include <unistd.h>
  #include <sys/time.h>
 -#include <sys/errno.h>
@@ -20,7 +21,7 @@ $NetBSD: patch-aq,v 1.4 2013/09/10 14:15:11 joerg Exp $
  
  static void pump PROTO ((int, int));
  
-@@ -85,7 +87,7 @@ int tcp_connect (tty)
+@@ -85,7 +88,7 @@ int tcp_connect (tty)
    name.sin_family = AF_INET;
  
    /* Allow numeric or symbolic port names... */
