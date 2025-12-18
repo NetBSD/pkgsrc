@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7238 2025/12/18 14:07:55 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.7239 2025/12/18 15:20:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10490,3 +10490,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/xymon to 4.3.30nb21 [wiz 2025-12-18]
 	Updated net/bind918 to 9.18.43 [he 2025-12-18]
 	Updated geography/gpsd to 3.27.1 [gdt 2025-12-18]
+	Updated mail/exim to 4.99.1 [adam 2025-12-18]
+	Updated mail/exim-html to 4.99.1 [adam 2025-12-18]
