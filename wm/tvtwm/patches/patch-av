@@ -1,4 +1,4 @@
-$NetBSD: patch-av,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+$NetBSD: patch-av,v 1.2 2025/12/18 13:12:06 nia Exp $
 
 Index: ssetroot.c
 ===================================================================
@@ -6,15 +6,16 @@ RCS file: /home/siren/src/tvtwm/ssetroot.c,v
 retrieving revision 1.1.1.1
 retrieving revision 1.2
 diff -u -r1.1.1.1 -r1.2
---- ssetroot.c	1999/08/08 05:46:52	1.1.1.1
-+++ ssetroot.c	1999/08/08 05:56:58	1.2
-@@ -37,11 +37,21 @@
+--- ssetroot.c.orig	1992-05-02 20:41:39.000000000 +0000
++++ ssetroot.c
+@@ -37,11 +37,22 @@
  #include <X11/Xlib.h>
  #include <X11/Xutil.h>
  #include <X11/Xatom.h>
 +#include <X11/Xmu/CurUtil.h>
  #include <stdio.h>
 +#include <stdlib.h>
++#include <string.h>
  #include "X11/bitmaps/gray"
  #include "X11/bitmaps/root_weave"
  
@@ -30,7 +31,7 @@ diff -u -r1.1.1.1 -r1.2
  
  #define Dynamic 1
  
-@@ -58,6 +68,7 @@
+@@ -58,6 +69,7 @@ Pixmap save_pixmap = (Pixmap)None;
  int unsave_past = 0;
  Pixmap save_pixmap = (Pixmap)None;
  
@@ -38,7 +39,7 @@ diff -u -r1.1.1.1 -r1.2
  usage()
  {
      fprintf(stderr, "usage: %s [options]\n", program_name);
-@@ -79,11 +90,8 @@
+@@ -79,11 +91,8 @@ usage()
      /*NOTREACHED*/
  }
  
@@ -51,7 +52,7 @@ diff -u -r1.1.1.1 -r1.2
  main(argc, argv) 
      int argc;
      char **argv;
-@@ -310,6 +318,7 @@
+@@ -310,6 +319,7 @@ main(argc, argv) 
  
  
  /* Free past incarnation if needed, and retain state if needed. */
@@ -59,7 +60,7 @@ diff -u -r1.1.1.1 -r1.2
  FixupState()
  {
      Atom prop, type;
-@@ -345,6 +354,7 @@
+@@ -345,6 +355,7 @@ FixupState()
   * SetBackgroundToBitmap: Set the root window background to a caller supplied 
   *                        bitmap.
   */
@@ -67,7 +68,7 @@ diff -u -r1.1.1.1 -r1.2
  SetBackgroundToBitmap(bitmap, width, height)
      Pixmap bitmap;
      unsigned int width, height;
-@@ -382,6 +392,7 @@
+@@ -382,6 +393,7 @@ SetBackgroundToBitmap(bitmap, width, height)
   */
  #define BITMAP_HOT_DEFAULT 8
  
