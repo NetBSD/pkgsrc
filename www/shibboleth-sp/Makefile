@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2025/10/05 19:26:28 js Exp $
+# $NetBSD: Makefile,v 1.68 2025/12/18 00:19:07 wiz Exp $
 
 DISTNAME=	shibboleth-sp-3.5.0
 PKGREVISION=	3
@@ -15,6 +15,7 @@ BUILD_DEFS+=	VARBASE
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-xmltooling=${PREFIX}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
 USE_TOOLS+=		pkg-config
 
 EGDIR=		${PREFIX}/share/examples/shibboleth
@@ -32,8 +33,8 @@ APACHE_MODULE=	YES
 PLIST_SUBST+=	PKG_APACHE_NUM=${PKG_APACHE:S/apache//}
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	${WRKSRC}/configs/Makefile.in
-SUBST_FILES.paths+=	${WRKSRC}/configs/keygen.sh
+SUBST_FILES.paths=	configs/Makefile.in
+SUBST_FILES.paths+=	configs/keygen.sh
 SUBST_STAGE.paths=	pre-configure
 SUBST_VARS.paths=	EGDIR
 SUBST_VARS.paths+=	SHIB_CONFDIR
