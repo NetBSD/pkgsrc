@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2025/10/23 20:36:16 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2025/12/18 21:28:40 nia Exp $
 
 # BUILD_DIRS
 CMAKE_GENERATORS_INCOMPATIBLE=	ninja
@@ -36,4 +36,5 @@ BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=3.3.3
 .include "../../textproc/jsoncpp/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
