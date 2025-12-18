@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/01/09 05:25:45 mef Exp $
+# $NetBSD: Makefile,v 1.3 2025/12/18 17:44:01 nia Exp $
 
 DISTNAME=	mcwm-20130209-2
 PKGNAME=	mcwm-20130209.2
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://hack.org/mc/hacks/mcwm/
 COMMENT=	Minimalist stacking X window manager based on XCB
 LICENSE=	isc
+
+FORCE_C_STD=	gnu99
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
