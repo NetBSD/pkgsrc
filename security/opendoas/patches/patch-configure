@@ -1,6 +1,6 @@
-$NetBSD: patch-configure,v 1.1 2025/12/07 12:21:56 vins Exp $
+$NetBSD: patch-configure,v 1.2 2025/12/18 19:46:12 vins Exp $
 
-* Correct value assignment to GID_MAX.
+* Fix value assignment to GID_MAX.
 * Fix compiler host detection, by renaming HOST variable.
 
 --- configure.orig	2022-01-26 16:01:11.000000000 +0000
