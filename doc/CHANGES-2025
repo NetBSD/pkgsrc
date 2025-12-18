@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7236 2025/12/18 10:09:36 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7237 2025/12/18 10:40:32 he Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10488,3 +10488,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/dhcpsd to 0.0.6 [roy 2025-12-16]
 	Updated devel/gitui to 0.28.0 [wiz 2025-12-18]
 	Updated net/xymon to 4.3.30nb21 [wiz 2025-12-18]
+	Updated net/bind918 to 9.18.43 [he 2025-12-18]
