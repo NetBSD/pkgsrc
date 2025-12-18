@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2025/11/14 15:51:42 roy Exp $
+# $NetBSD: Makefile,v 1.128 2025/12/18 08:15:03 nia Exp $
 
 DISTNAME=		dhcpcd-10.3.0
 CATEGORIES=		net
@@ -56,6 +56,10 @@ CONFIGURE_ARGS+=	--privsepuser=${DHCPCD_USER}
 .if ${USE_CROSS_COMPILE:tl} == "yes"
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
 CONFIGURE_ARGS+=	--build=${NATIVE_MACHINE_GNU_PLATFORM:Q}
+.endif
+
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 100000
+CFLAGS+=		-Dppoll=pollts
 .endif
 
 EGDIR=			${PREFIX}/share/examples/dhcpcd
