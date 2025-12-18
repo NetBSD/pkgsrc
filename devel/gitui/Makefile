@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2025/10/21 08:44:04 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/12/18 07:54:49 wiz Exp $
 
-DISTNAME=	gitui-0.27.0
+DISTNAME=	gitui-0.28.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=extrawurst/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,15 +10,12 @@ HOMEPAGE=	https://github.com/extrawurst/gitui/
 COMMENT=	Terminal UI for git
 LICENSE=	mit
 
-# https://github.com/gitui-org/gitui/issues/2742
-BROKEN=		"Does not build with rust 1.90"
-
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 .include "cargo-depends.mk"
 
-RUST_REQ=		1.70.0
+RUST_REQ=		1.82.0
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config perl gmake
 
