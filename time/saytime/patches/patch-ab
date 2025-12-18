@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.4 2022/11/20 18:26:21 is Exp $
+$NetBSD: patch-ab,v 1.5 2025/12/18 13:10:10 nia Exp $
 
 --- saytime.c.orig	2015-01-27 20:15:03.000000000 +0000
 +++ saytime.c
-@@ -502,10 +502,10 @@ saynumber( int n, int leadingzero )
+@@ -24,6 +24,7 @@
+ ** SUCH DAMAGE.
+ */
+ 
++#include <fcntl.h>
+ #include <unistd.h>
+ #include <stdlib.h>
+ #include <stdio.h>
+@@ -502,10 +503,10 @@ main( int argc, char** argv )
  int
  main( int argc, char** argv )
      {
