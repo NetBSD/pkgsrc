@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 10:23:46 nia Exp $
+$NetBSD: distinfo,v 1.19 2025/12/18 14:06:16 nia Exp $
 
 BLAKE2s (aranym_1.1.0.orig.tar.gz) = 05e5d7043d8a5aa64b0430cfbf0f552c298aaa24af31bf993043b028470b53ee
 SHA512 (aranym_1.1.0.orig.tar.gz) = 723b1a7c80532734e1dea288dbffd66746d9c7d1302ccb0259248a26aac5dedc7f66a134929de7064686af6c676d10918d90e2cf58cb010fd445979945177b51
@@ -10,3 +10,4 @@ SHA1 (patch-ab) = 471cd0af0571eb63142c7933911e70500afeba6d
 SHA1 (patch-ad) = 3f715630ead6f0cb10d0bf71751c07d12e58e0f3
 SHA1 (patch-ae) = 21fecc68e1b2a3548d57f2908264122ed950dfdb
 SHA1 (patch-configure) = 1520c311d534e3aae1d257279cecc5ff39be6a4b
+SHA1 (patch-src_hostscreen.cpp) = 8600eb8268830a057f54f217ec44849cc329b469
