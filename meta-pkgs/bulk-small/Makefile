@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2025/04/24 14:15:02 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2025/12/18 21:22:59 maya Exp $
 
 DISTNAME=	bulk-small-20231107
 PKGREVISION=	1
@@ -47,7 +47,6 @@ DEPENDS+=	ircII-[0-9]*:../../chat/ircII
 DEPENDS+=	irssi-[0-9]*:../../chat/irssi
 DEPENDS+=	base64-[0-9]*:../../converters/base64
 DEPENDS+=	mpack-[0-9]*:../../converters/mpack
-DEPENDS+=	emacs21-nox11>=21<22:../../editors/emacs21-nox11
 DEPENDS+=	nano-[0-9]*:../../editors/nano
 DEPENDS+=	vim-[0-9]*:../../editors/vim
 DEPENDS+=	vim-share-[0-9]*:../../editors/vim-share
@@ -71,6 +70,10 @@ DEPENDS+=	curl-[0-9]*:../../www/curl
 DEPENDS+=	lynx-[0-9]*:../../www/lynx
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Darwin"
+DEPENDS+=	emacs21-nox11>=21<22:../../editors/emacs21-nox11
+.endif
 
 # We do not want to build software that's already included.
 
