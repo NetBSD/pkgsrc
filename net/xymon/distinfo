@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2024/03/11 10:47:29 jperkin Exp $
+$NetBSD: distinfo,v 1.24 2025/12/18 10:09:22 wiz Exp $
 
 BLAKE2s (xymon-4.3.30.tar.gz) = 03a385a0e32188d4ca6fdbaa55bbb92d053ec706ee70ca0bcf483c3f5611a85f
 SHA512 (xymon-4.3.30.tar.gz) = f3f16ff55293d7d76cb0355151a82545a2b1ad708b59c031640c240379807228dca4ffa9c48a4e20ab75e270bda18b7306ea165b65eb18c9c6471b395fda7b62
@@ -24,10 +24,14 @@ SHA1 (patch-build_Makefile.generic) = e96d5ee29630c9133caebfa752880be90726607c
 SHA1 (patch-build_c-ares.sh) = c958992639b45431056d91939a345e703131ca2d
 SHA1 (patch-build_rrd.sh) = cfafece75defb13b413917bfddedb41cb9bb3c8b
 SHA1 (patch-build_snmp.sh) = 4141c6e2bebea078ac662b7585e579f2af8ee64f
+SHA1 (patch-build_test-rrd.c) = 7bf3c76e7a13afab975a2a66c108cff6358aaf62
 SHA1 (patch-common_Makefile) = 32b7da06cd9d22f98ee0f83bb36ed6441c066707
 SHA1 (patch-configure) = 3754b9056c365b8664e5fc9620b17c4e13453b2e
 SHA1 (patch-web_Makefile) = a27fbb7e97ce0c2f30093d5b05b0af2708fb594b
+SHA1 (patch-web_perfdata.c) = 17bd0467495400921d70add3e8a8db89f730afb2
+SHA1 (patch-web_showgraph.c) = 65c74d4ffbda88f9975ade15eca67b7632a1a30c
 SHA1 (patch-xymond_client_netbsd.c) = 9034777cbf12e3e168cf1598bfd444468e3a5086
+SHA1 (patch-xymond_do__rrd.c) = dc76f21c3ab7c85c5b2874f242bb1ec2e31b619f
 SHA1 (patch-xymond_rrd_do__disk.c) = e72cb0364e4e949e02a045da0abca46083624253
 SHA1 (patch-xymond_rrd_do__vmstat.c) = 8062acc24e9b0e767c5abd3373641aa7b9a5b2ae
 SHA1 (patch-xymonproxy_Makefile) = 8ecfa4ceb66f66b7d5f40c01339479b26865746e
