@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.33 2025/11/20 10:17:19 he Exp $
+$NetBSD: distinfo,v 1.34 2025/12/18 10:35:13 he Exp $
 
-BLAKE2s (bind-9.18.42.tar.xz) = 1a2b778ddd9c7e6b4f4637a7882b057ce74c105f64718cc2f82f96a933d0bd68
-SHA512 (bind-9.18.42.tar.xz) = 9133be987e2043aabf8cd7de58f62c41c632b92d9930a3644aaff80b23211e5a967a133080f6e61142408ef752f8a07d6b7c1e775ca8a495bb29ff9d167446c0
-Size (bind-9.18.42.tar.xz) = 5423412 bytes
+BLAKE2s (bind-9.18.43.tar.xz) = dd4256652d385e7d44ced6294c7bc3dee2ad58052e01fa1c56fcc32261e9ad09
+SHA512 (bind-9.18.43.tar.xz) = 4f0e6849e883110f275739a03de20465c91563f26be94d380d28454f27d7c68fdc3ba0e1eaa8d25a6790cadc8228ee981dceb0a6fcf46ab4ffd24b8c76f42e25
+Size (bind-9.18.43.tar.xz) = 5424860 bytes
 SHA1 (patch-bin_named_main.c) = 4e4a763c478f1fcecb7e65968cf6ca20dacf01f1
 SHA1 (patch-bin_named_os.c) = 5ecb0883076575d8ac5fcad68f9daad6c9be0d0b
 SHA1 (patch-bin_named_server.c) = 52190897c4c4b141d98ca5bca7cc3eb4c83ac584
@@ -33,4 +33,4 @@ SHA1 (patch-lib_ns_include_ns_pfilter.h) = cc86752971b4f9f7492283c4ad3ff29bc1bae
 SHA1 (patch-lib_ns_pfilter.c) = b0345f9b27e2bdd4f9a992cfc23616e027de4988
 SHA1 (patch-lib_ns_query.c) = 27bc6e5efc8ba0756d968d54e9ae1a3b2c3bc97e
 SHA1 (patch-lib_ns_update.c) = 941ca5601904e9b4cc5314148e955f5490a5d071
-SHA1 (patch-lib_ns_xfrout.c) = 79d9e4add58ffd75ea9718f5501f1517e67416e3
+SHA1 (patch-lib_ns_xfrout.c) = 2e5094ef2a657ba4ef1776446758dd7786e6089a
