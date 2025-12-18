@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/10/11 13:13:50 pin Exp $
+# $NetBSD: Makefile,v 1.9 2025/12/18 21:21:39 nia Exp $
 
 DISTNAME=		bspwm-0.9.12
 CATEGORIES=		wm
@@ -12,6 +12,7 @@ LICENSE=		2-clause-bsd
 
 USE_TOOLS+=		gmake bash:run
 
+CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
 EXAMPLESDIR=		${PREFIX}/share/examples/bspwm
