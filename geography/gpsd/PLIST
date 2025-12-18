@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2025/11/23 13:24:34 gdt Exp $
+@comment $NetBSD: PLIST,v 1.23 2025/12/18 14:07:48 gdt Exp $
 bin/cgps
 bin/gegps
 bin/gps2udp
@@ -83,6 +83,7 @@ share/doc/gpsd/AUTHORS
 share/doc/gpsd/COPYING
 share/doc/gpsd/NEWS
 share/doc/gpsd/README.adoc
+share/doc/gpsd/SECURITY.md
 share/doc/gpsd/SUPPORT.adoc
 share/doc/gpsd/build.adoc
 share/doc/gpsd/example1.c.txt
