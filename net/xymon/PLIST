@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/02/16 05:58:56 spz Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/12/18 10:09:22 wiz Exp $
 libexec/xymon/ackinfo.cgi
 libexec/xymon/acknowledge.cgi
 libexec/xymon/acknowledgements.cgi
@@ -29,10 +29,8 @@ libexec/xymon/cgi-bin/hostgraphs.sh
 libexec/xymon/cgi-bin/hostlist.sh
 libexec/xymon/cgi-bin/nongreen.sh
 libexec/xymon/cgi-bin/notifications.sh
-libexec/xymon/cgi-bin/perfdata.sh
 libexec/xymon/cgi-bin/report.sh
 libexec/xymon/cgi-bin/reportlog.sh
-libexec/xymon/cgi-bin/showgraph.sh
 libexec/xymon/cgi-bin/snapshot.sh
 libexec/xymon/cgi-bin/svcstatus.sh
 libexec/xymon/cgi-bin/topchanges.sh
@@ -61,11 +59,9 @@ libexec/xymon/hostgraphs.cgi
 libexec/xymon/hostlist.cgi
 libexec/xymon/moverrd.sh
 libexec/xymon/notifications.cgi
-libexec/xymon/perfdata.cgi
 libexec/xymon/report.cgi
 libexec/xymon/reportlog.cgi
 libexec/xymon/rrdcachectl
-libexec/xymon/showgraph.cgi
 libexec/xymon/snapshot.cgi
 libexec/xymon/statusreport.cgi
 libexec/xymon/svcstatus.cgi
@@ -176,7 +172,6 @@ share/examples/xymon/client-local.cfg
 share/examples/xymon/columndoc.csv
 share/examples/xymon/combo.cfg
 share/examples/xymon/critical.cfg
-share/examples/xymon/critical.cfg.bak
 share/examples/xymon/graphs.cfg
 share/examples/xymon/holidays.cfg
 share/examples/xymon/hosts.cfg
