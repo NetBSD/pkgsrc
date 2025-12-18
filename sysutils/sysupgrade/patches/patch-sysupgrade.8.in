@@ -1,0 +1,34 @@
+$NetBSD: patch-sysupgrade.8.in,v 1.1 2025/12/18 19:25:14 christos Exp $
+
+* Reorder, document reboot and add link to updating document
+
+--- sysupgrade.8.in.orig	2025-12-18 13:47:45.456528315 -0500
++++ sysupgrade.8.in	2025-12-18 13:50:11.462133159 -0500
+@@ -56,15 +56,16 @@
+ .Ar clean
+ .Nm
+ .Op common_flags
+-.Ar etcupdate
+-.Nm
+-.Op common_flags
+ .Ar fetch
+ .Op Ar releasedir
+ .Nm
+ .Op common_flags
++.Ar etcupdate
++.Nm
++.Op common_flags
+ .Ar kernel
+ .Op Ar kernel_name
++(reboot for major version upgrade)
+ .Nm
+ .Op common_flags
+ .Ar modules
+@@ -382,6 +383,7 @@
+ .Xr sysupgrade.conf 5 ,
+ .Xr etcupdate 8 ,
+ .Xr postinstall 8
++.Pa https://www.netbsd.org/docs/guide/en/chap-updating.html#updating-sysbuild-sysupgrade
+ .Sh AUTHORS
+ The
+ .Nm
