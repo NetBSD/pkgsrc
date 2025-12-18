@@ -1,3 +1,5 @@
+$NetBSD: patch-shibsp_attribute_resolver_impl_ChainingAttributeExtractor.cpp,v 1.4 2025/12/18 00:19:08 wiz Exp $
+
 --- shibsp/attribute/resolver/impl/ChainingAttributeExtractor.cpp.orig	2018-07-09 18:17:23.000000000 -0700
 +++ shibsp/attribute/resolver/impl/ChainingAttributeExtractor.cpp	2020-07-07 12:26:19.008490542 -0700
 @@ -139,7 +139,7 @@

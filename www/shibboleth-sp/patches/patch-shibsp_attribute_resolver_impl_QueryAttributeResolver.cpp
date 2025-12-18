@@ -1,3 +1,5 @@
+$NetBSD: patch-shibsp_attribute_resolver_impl_QueryAttributeResolver.cpp,v 1.3 2025/12/18 00:19:08 wiz Exp $
+
 --- shibsp/attribute/resolver/impl/QueryAttributeResolver.cpp.orig	2020-03-18 11:45:13.000000000 -0700
 +++ shibsp/attribute/resolver/impl/QueryAttributeResolver.cpp	2020-07-07 12:26:37.773204823 -0700
 @@ -266,7 +266,7 @@
