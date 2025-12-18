@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/10/05 19:26:24 js Exp $
+# $NetBSD: Makefile,v 1.26 2025/12/18 17:39:29 nia Exp $
 
 DISTNAME=	dateutils-0.4.11
 PKGREVISION=	8
@@ -17,6 +17,8 @@ USE_TOOLS+=	autoconf bison flex gmake makeinfo pkg-config
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
 TEST_TARGET=	check
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 # For patch-m4_sxe-compiler.m4
 pre-configure:
