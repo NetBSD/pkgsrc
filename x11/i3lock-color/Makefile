@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/10/23 20:39:58 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/12/18 14:19:23 nia Exp $
 
 DISTNAME=	i3lock-color-2.13.c.5
 PKGREVISION=	4
@@ -14,7 +14,12 @@ USE_TOOLS+=	gmake pkg-config autoconf automake autoreconf
 USE_LANGUAGES=	c99
 GNU_CONFIGURE=	yes
 
+CFLAGS.SunOS+=	-Du_int32_t=uint32_t
+LDFLAGS.SunOS+=	-lsocket
+
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+
+CONFIGURE_ENV+=		ac_cv_prog_ZSH_AVAILABLE=no
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/i3lock
 
