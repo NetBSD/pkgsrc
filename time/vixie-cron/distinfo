@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:24:44 nia Exp $
+$NetBSD: distinfo,v 1.8 2025/12/18 13:00:31 nia Exp $
 
 BLAKE2s (cron_4.1.shar) = 11761807393afe32680329334b0104afec6a44cfeeb952c790df27ec9a92f674
 SHA512 (cron_4.1.shar) = fa1b03591a5471238771249b4353bc456fa56c21340ecdac6480e907a8c5176b234e6bd6b8c486402a61764768e4cb75a466808d374bad125ce4b637f54ba89b
@@ -6,3 +6,4 @@ Size (cron_4.1.shar) = 205506 bytes
 SHA1 (patch-aa) = 98605040a8bd02b85b75baad1dabf53d807c5af8
 SHA1 (patch-ab) = 2d88ecfa9d3db6faf0951ad1a6e127a5e1e05054
 SHA1 (patch-entry.c) = c6f30866cb8416445a057c982d5fe755cc86cea2
+SHA1 (patch-externs.h) = 1054bccf999a1382b7fefa53678edd0d317b47e4
