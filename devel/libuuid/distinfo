@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2025/02/18 15:14:51 wiz Exp $
+$NetBSD: distinfo,v 1.29 2025/12/18 21:11:16 maya Exp $
 
 BLAKE2s (util-linux-2.40.2.tar.xz) = e83f6b7f6b202ca27e8829ed7d70c4a37054925652f72de810908c4590f9ae68
 SHA512 (util-linux-2.40.2.tar.xz) = ffe20b915a518a150401d429b0338bc7022190e4ca0ef91a6d9eea345db8c1e11ad01784163b8fcf978506f3f5cad473f29d5d4ef93a4c66a5ae0ebd9fb0c8f2
@@ -18,4 +18,5 @@ SHA1 (patch-libfdisk_docs_Makefile.in) = 9b6b61aa33833b57159f81b3c662e3d09787051
 SHA1 (patch-libmount_docs_Makefile.in) = cba6e071e4b26896ca6bae47ae47ebe662b2da4a
 SHA1 (patch-libsmartcols_docs_Makefile.in) = c3a77d42252be62b979467f0ad84ed0f44ef6f30
 SHA1 (patch-libuuid_src_gen__uuid.c) = 05dd91d2fe44f4cfd82120e52a7be1dab80d0ea2
+SHA1 (patch-libuuid_src_uuid__time.c) = 7a876b6bb2f4f043c34bfbfdbea1760435442fb8
 SHA1 (patch-tools_config-gen) = f36e05c517d625e5b0b3fce1d5a8b3f2b02c7def
