@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.7 2025/12/07 12:21:56 vins Exp $
+$NetBSD: distinfo,v 1.8 2025/12/18 19:46:12 vins Exp $
 
 BLAKE2s (opendoas-6.8.2.tar.gz) = c1d3b95656013d11fcf629f06dfeda6e80e33907ed25c9488d4d30755423c71f
 SHA512 (opendoas-6.8.2.tar.gz) = 4a93ff477413c859ba2702e688fa4f83248fff85e61e12336838a1e9aa1a8d9963a9782e4bc5e58e8d04b86c2c8ceb6b235ae9d3b32b3e548a2514a43653137d
 Size (opendoas-6.8.2.tar.gz) = 32430 bytes
 SHA1 (patch-GNUmakefile) = a4cbff5e9a20440db9a20a81f8b629df7230b1c2
-SHA1 (patch-configure) = 5e94ee35eb6a1392adf7e41b1524ab64cf4e6eb7
+SHA1 (patch-configure) = c149e8a75cf1f471f0b77c17dd921b0c4d8a1b8a
 SHA1 (patch-doas.c) = 9226e8a3a6e6766b5b884e493b8dccba0d8f31ff
 SHA1 (patch-doas.h) = 2c1088eac51aed8df485f509917d9c61416273d7
+SHA1 (patch-pam.c) = 49fc2b8746add906c3b0547bc131f854315a8b9f
