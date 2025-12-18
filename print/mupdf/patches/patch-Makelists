@@ -1,10 +1,11 @@
-$NetBSD: patch-Makelists,v 1.3 2023/08/03 03:57:28 ryoon Exp $
+$NetBSD: patch-Makelists,v 1.4 2025/12/18 17:45:58 nia Exp $
 
 * Disable JPEX XR support.
+* Fix compiling with a pre-c++20 compiler.
 
---- Makelists.orig	2021-10-05 10:44:43.000000000 +0000
+--- Makelists.orig	2025-09-10 12:15:25.000000000 +0000
 +++ Makelists
-@@ -130,7 +130,7 @@ HARFBUZZ_SRC += thirdparty/harfbuzz/src/
+@@ -140,7 +140,7 @@ JPEGXR_CFLAGS += -Ithirdparty/jpegxr/Software
  
  JPEGXR_CFLAGS += -Ithirdparty/jpegxr
  JPEGXR_CFLAGS += -Ithirdparty/jpegxr/Software
@@ -13,3 +14,13 @@ $NetBSD: patch-Makelists,v 1.3 2023/08/03 03:57:28 ryoon Exp $
  
  JPEGXR_BUILD_CFLAGS += -Wno-tautological-compare
  
+@@ -804,7 +804,9 @@ TESSERACT_BUILD_CFLAGS += $(TESSERACT_DEFINES)
+ 
+ # --- ZXINGCPP (optional) ---
+ 
++ifeq ($(barcode),yes)
+ ZXINGCPP_LANGFLAGS = -std=c++20
++endif
+ 
+ ZXINGCPP_CFLAGS += -Ithirdparty/zxing-cpp/core/src
+ ZXINGCPP_CFLAGS += -DZXING_EXPERIMENTAL_API
