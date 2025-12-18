@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2025/10/23 20:36:46 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2025/12/18 14:06:16 nia Exp $
 
 DISTNAME=	aranym_1.1.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -26,9 +26,10 @@ USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 MANCOMPRESSED=	yes
 
+FORCE_CXX_STD=	gnu++98
+
 CHECK_PORTABILITY_SKIP=	src/Unix/MacOSX/scripts/gen_machfiles.sh
 
-CONFIGURE_ARGS+=	--enable-fullmmu
 CONFIGURE_ARGS+=	--enable-atc=full
 CONFIGURE_ARGS+=	--disable-sdltest
 
@@ -71,7 +72,6 @@ CONFIGURE_ARGS+=	--disable-opengl
 .  endif
 .endif
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../math/mpfr/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
