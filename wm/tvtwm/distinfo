@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:25:19 nia Exp $
+$NetBSD: distinfo,v 1.10 2025/12/18 13:12:06 nia Exp $
 
 BLAKE2s (tvtwm.pl11.tar.gz) = 4656fbe952cab3601aa480fd778afff340e39660e7aa5c706aaae7650617127f
 SHA512 (tvtwm.pl11.tar.gz) = a754b4bc0307116d3c86b7f159bab47ff4cceb190567db793b9be61963280dd22050fa0041f60d394ca55d190dad92ba9a2859e592b05f25952592943ed59fa0
@@ -19,10 +19,10 @@ SHA1 (patch-ao) = 033a8c45601fb0804f365a92d67d2c98391c80a2
 SHA1 (patch-ap) = 2e5f81e4c586949f3c43ecdb09bf7463adc19dce
 SHA1 (patch-aq) = 171a4fbcf7a79608e77db8f8f925c80ca91167d2
 SHA1 (patch-ar) = d00034f3db33f5a01a855fccca1b22f3281829d2
-SHA1 (patch-as) = 05276c93e34536501a8cdf1d45b36c933bd67e91
+SHA1 (patch-as) = 1d25ec1c05aaca1635186e0401767f6ba819a165
 SHA1 (patch-at) = e697bb60cb7221f27dee7c26e8074608fbc02d06
 SHA1 (patch-au) = a42099d13320fcd89d748a7cc2b15c4ace84a10c
-SHA1 (patch-av) = d3c41a657780cfa1aba040206d8ac9e9c062147f
+SHA1 (patch-av) = f582b61e07cf46e779bab615928f9a84d0d28e6b
 SHA1 (patch-aw) = 0514ac63e1c1ffdb789309bd390847f683c9d267
 SHA1 (patch-ax) = 81b4be39b9bb54e1c1d23761177ef982ce1bbed0
 SHA1 (patch-ay) = 2f8cda02d1002d3c313bc92cec082cd37593395c
