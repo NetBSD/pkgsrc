@@ -1,0 +1,20 @@
+$NetBSD: patch-src_nautilus-enum-types.c.template,v 1.1 2025/12/19 03:55:50 maya Exp $
+
+Apply upstream build fix for error:
+rc/nautilus-enum-types.c: In function 'nautilus_query_search_type_get_type':  
+work/.buildlink/include/glib-2.0/glib/gatomic.h:131:5: error: argument 2 of
+'__atomic_load' discards 'volatile' qualifier
+
+https://gitlab.gnome.org/GNOME/nautilus/-/merge_requests/629/diffs
+
+--- src/nautilus-enum-types.c.template.orig	2025-12-18 23:46:30.715132051 +0000
++++ src/nautilus-enum-types.c.template
+@@ -13,7 +13,7 @@
+ GType
+ @enum_name@_get_type (void)
+ {
+-    static volatile GType type_once = 0;
++    static GType type_once = 0;
+ 
+     if (g_once_init_enter (&type_once))
+     {
