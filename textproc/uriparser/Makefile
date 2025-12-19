@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/12/15 21:10:12 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/12/19 12:30:04 nia Exp $
 
 DISTNAME=	uriparser-1.0.0
 CATEGORIES=	textproc
@@ -18,6 +18,7 @@ CMAKE_CONFIGURE_ARGS+=		-DURIPARSER_BUILD_DOCS=OFF
 
 # reallocarray etc
 CFLAGS.NetBSD+=		-D_OPENBSD_SOURCE
+CFLAGS.SunOS+=		-D__EXTENSIONS__
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
