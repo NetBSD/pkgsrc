@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7240 2025/12/18 15:43:58 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.7241 2025/12/19 13:14:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10493,3 +10493,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/exim to 4.99.1 [adam 2025-12-18]
 	Updated mail/exim-html to 4.99.1 [adam 2025-12-18]
 	Updated devel/sdcc to 2.8.0nb15 [ryoon 2025-12-18]
+	Updated shells/oh-my-posh to 28.3.1 [pin 2025-12-19]
