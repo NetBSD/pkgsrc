@@ -1,8 +1,14 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/17 23:32:13 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2025/12/19 12:24:42 nia Exp $
 
---- asclock.c.orig	Sat Sep 26 17:05:03 1998
-+++ asclock.c	Thu Oct 28 13:12:29 1999
-@@ -19,6 +19,7 @@
+--- asclock.c.orig	1998-09-26 21:05:03.000000000 +0000
++++ asclock.c
+@@ -1,4 +1,5 @@
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <X11/Xlib.h>
+ #include <X11/xpm.h>
+ #include <X11/extensions/shape.h>
+@@ -19,6 +20,7 @@ int ICONIFIED=0; /* default is not iconified */
  int ONLYSHAPE=0; /* default value is noshape */
  int ITBLINKS=1;  /* default is blinking */
  int ICONIFIED=0; /* default is not iconified */
@@ -10,7 +16,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/12/17 23:32:13 wiz Exp $
  int YEAR=0;      /* default is to show time, not year */
  /* led positions *************************************************************/
  int twelve[5]  = {5, 14, 24, 28, 37};
-@@ -85,14 +86,15 @@
+@@ -85,14 +87,15 @@ static char *help_message[] = {
  "    -24                     24 hour format",
  "    -exe <program>          program to start on click",
  "    -led <color>            color of the led",
@@ -28,7 +34,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/12/17 23:32:13 wiz Exp $
  NULL
  };
  
-@@ -173,6 +175,9 @@
+@@ -173,6 +176,9 @@ int main(int argc,char *argv[])
        case 'n':
          ITBLINKS = 0;
          continue;
@@ -38,7 +44,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/12/17 23:32:13 wiz Exp $
        case 'y':
  	YEAR = 1;
  	continue;
-@@ -256,13 +261,17 @@
+@@ -256,13 +262,17 @@ int main(int argc,char *argv[])
      XShapeCombineMask(dpy, iconwin, ShapeBounding, 0, 0, pixmask, ShapeSet);
    }
    
