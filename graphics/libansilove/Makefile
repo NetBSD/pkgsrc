@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2025/10/23 20:37:37 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2025/12/19 10:58:24 nia Exp $
 
 DISTNAME=	libansilove-1.4.2
 PKGREVISION=	3
@@ -11,8 +11,7 @@ HOMEPAGE=	https://www.ansilove.org/
 COMMENT=	Library for converting ANSI, ASCII, and other formats to PNG
 LICENSE=	2-clause-bsd
 
-USE_CC_FEATURES=	c99
-USE_LANGUAGES=		c
+FORCE_C_STD=		gnu99
 
 .include "../../devel/cmake/build.mk"
 .include "../../graphics/gd/buildlink3.mk"
