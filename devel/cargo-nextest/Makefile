@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/11/20 12:59:20 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/12/19 13:17:09 pin Exp $
 
-DISTNAME=	cargo-nextest-0.9.114
+DISTNAME=	cargo-nextest-0.9.115
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nextest-rs/}
 GITHUB_PROJECT=	nextest
@@ -13,7 +13,7 @@ LICENSE=	mit OR apache-2.0
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.88.0
+RUST_REQ=	1.89.0
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
