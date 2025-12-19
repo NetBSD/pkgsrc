@@ -1,6 +1,11 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:15:26 nia Exp $
+$NetBSD: distinfo,v 1.7 2025/12/19 10:46:08 nia Exp $
 
 BLAKE2s (portlib-1.01.tar.gz) = 369a7b83f8083b454336c01549198de7e38877d81e675dc5133812b0386850ad
 SHA512 (portlib-1.01.tar.gz) = d29d61244ecdebea3b716f29ad514142adbdd7f90438430b2b2aff4e888d5a065c90f691645cae90f1acea233c54fa8ff02104072fb74072c8887a0ab3aef001
 Size (portlib-1.01.tar.gz) = 12589 bytes
 SHA1 (patch-aa) = 9b6c846775e3fd15ff739198b749e7f3357c2b2a
+SHA1 (patch-atotest.c) = 656964aa31cc3f10fc84c3218dce24ca25d42386
+SHA1 (patch-dirtest.c) = b35de0ba8553c59463ac3ebf10563e4e2b76d978
+SHA1 (patch-fdtest.c) = bcc0b0f2e4b3bf38a9f7c3ccbed971d5cab6befe
+SHA1 (patch-locktest.c) = 07433dded82fb8c6bbd98bcceaab18de49b8b0ca
+SHA1 (patch-memtest.c) = c4bc1a9b683b7f2cf0243383806a10ceee24b317
