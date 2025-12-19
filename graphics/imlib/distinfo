@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.29 2022/07/27 18:38:48 wiz Exp $
+$NetBSD: distinfo,v 1.30 2025/12/19 11:31:26 nia Exp $
 
 BLAKE2s (imlib-1.9.15.tar.bz2) = 3122f6ca38839e9df0042d92d98502442914e85ac9e319156632b0274166ba38
 SHA512 (imlib-1.9.15.tar.bz2) = f50d9141b3c54b44921aa09c0a5ea848aefaa904efdd6da132dace42604671f8dbd3e4b71a596f054f0db4525ba2002864b5e5b21f8805cf1b5514b661ac254a
 Size (imlib-1.9.15.tar.bz2) = 683242 bytes
+SHA1 (patch-Imlib_colors.c) = d79ac076d09563ae2e7700a5097a95877acec261
 SHA1 (patch-aa) = fc990bb2278e6a848034f9c7be0170e1843b67b2
 SHA1 (patch-ab) = e46a4c5d971819cadac3b484f81b2418eb6c3ac3
 SHA1 (patch-ac) = 7dd08bde4e97614777bf4327db2e6045db04692d
