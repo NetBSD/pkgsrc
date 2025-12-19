@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.58 2025/10/26 20:48:28 wiz Exp $
+$NetBSD: distinfo,v 1.59 2025/12/19 12:07:47 nia Exp $
 
 BLAKE2s (sane-backends-1.4.0.tar.gz) = 414b7edbdedc6a9c0280b452792a1fa648de69046d0a96fe5bf3e2fb4ead908d
 SHA512 (sane-backends-1.4.0.tar.gz) = a5ec0cb9e12075be3c4d5eb445a290216c5699645bb6885845868a8323848cef3aafec30f0c380638195a0a8085a8cff4e190741e79ae8f2f70b4d71abeee572
@@ -6,5 +6,6 @@ Size (sane-backends-1.4.0.tar.gz) = 7505056 bytes
 SHA1 (patch-aa) = 6e2c605cbf6b437f4da2ba30d5e61c7d64e32bda
 SHA1 (patch-ab) = 0f5ceb8b2e80c354bc8661c0dbc80e23c4f80ebe
 SHA1 (patch-backend_pixma_pixma__bjnp.c) = c2e99ba6a4e6b177b0f8d151b65ece23cc44e3ef
+SHA1 (patch-backend_umax1220u-common.c) = 694ef980f0ec9bc9061a5e7fcd4563f3d1d8a61d
 SHA1 (patch-m4_byteorder.m4) = 9e44d6a14b4c9de681dedcfb64344d21f6b549fc
 SHA1 (patch-tools_umax__pp.c) = debe660184a1380a894e8a5414983f5fdb19cded
