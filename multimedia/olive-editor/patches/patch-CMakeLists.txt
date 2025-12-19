@@ -1,10 +1,19 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2023/10/15 19:57:54 ryoon Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2025/12/19 20:10:58 maya Exp $
 
 Don't try to find the git hash.
+Avoid erroring because of issues in headers (openimageio)
 
 --- CMakeLists.txt.orig	2023-09-24 11:40:23.000000000 +0000
 +++ CMakeLists.txt
-@@ -233,21 +233,6 @@ elseif(UNIX)
+@@ -59,7 +59,6 @@ else()
+   set(OLIVE_COMPILE_OPTIONS
+     "$<$<CONFIG:RELEASE>:-O2>"
+     -Wuninitialized
+-    -pedantic-errors
+     -Wall
+     -Wextra
+     -Wno-unused-parameter
+@@ -233,21 +232,6 @@ elseif(UNIX)
    list(APPEND OLIVE_LIBRARIES Qt${QT_VERSION_MAJOR}::DBus)
  endif()
  
