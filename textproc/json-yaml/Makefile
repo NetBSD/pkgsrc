@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/12/17 16:47:02 sjmulder Exp $
+# $NetBSD: Makefile,v 1.6 2025/12/19 14:21:11 sjmulder Exp $
 
-DISTNAME=	json-yaml-1.2.1
+DISTNAME=	json-yaml-1.2.2
 CATEGORIES=	textproc
 MASTER_SITES=	https://codeberg.org/sjmulder/json-yaml/releases/download/${PKGVERSION_NOREV}/
 
