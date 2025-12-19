@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 09:59:06 nia Exp $
+$NetBSD: distinfo,v 1.7 2025/12/19 12:46:46 nia Exp $
 
 BLAKE2s (liblo-0.31.tar.gz) = c314f882c6f880b174a27244d4cf79c43c0d8d1772ca85cb9238620fb1468dd7
 SHA512 (liblo-0.31.tar.gz) = 97f9561296c2e53f92db0cfee625687208b490f8bc229b6cffe88b43ca2a8da1ed3217aaa2151245ea483e54ad6c5e92b9cf10a20661766fa6d3bedb5a8cdd01
 Size (liblo-0.31.tar.gz) = 643928 bytes
+SHA1 (patch-src_server.c) = 8f96379976dd1cd85890d668cb100e8959d4902b
