@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:22:13 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/12/19 14:21:11 sjmulder Exp $
 
-BLAKE2s (json-yaml-1.2.1.tar.gz) = b50648ce6f34b5f57637975ea0c6137e0ed1e7d953ab732e26ad977da352cfba
-SHA512 (json-yaml-1.2.1.tar.gz) = b5fa09329205d4f8e2ff02f2a2e60085102af4d4c4b21fe3f4196bdf86a98c38fe4213da6ec52e3b15625d6254796541e1429b6728c076edb7d72e6cf30dc385
-Size (json-yaml-1.2.1.tar.gz) = 5409 bytes
+BLAKE2s (json-yaml-1.2.2.tar.gz) = 0d7922a8bb6559ef283bd2c8c6ad75268044c37b480763d890efd3528823be52
+SHA512 (json-yaml-1.2.2.tar.gz) = 50f2b970423436c2be74cd42423cfafd8d25df76c6eb45c7d48c29b0ed2e0a6dff212e36f841646e0e7d6d535711f3bfbce60d29322a7ee09d9ffb9c5ac49a20
+Size (json-yaml-1.2.2.tar.gz) = 5583 bytes
