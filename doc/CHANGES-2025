@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7243 2025/12/19 14:21:27 sjmulder Exp $
+$NetBSD: CHANGES-2025,v 1.7244 2025/12/19 14:28:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10496,3 +10496,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 28.3.1 [pin 2025-12-19]
 	Updated devel/cargo-nextest to 0.9.115 [pin 2025-12-19]
 	Updated textproc/json-yaml to 1.2.2 [sjmulder 2025-12-19]
+	Updated lang/php81 to 8.1.34 [taca 2025-12-19]
