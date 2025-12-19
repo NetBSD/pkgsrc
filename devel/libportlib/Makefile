@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/12/23 08:20:52 zafer Exp $
+# $NetBSD: Makefile,v 1.19 2025/12/19 10:46:08 nia Exp $
 #
 
 DISTNAME=		portlib-1.01
@@ -15,7 +15,7 @@ MAKE_JOBS_SAFE=		no
 WRKSRC=			${WRKDIR}/portlib-1.01
 INSTALLATION_DIRS=	include lib
 
-post-patch:
+pre-configure:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.bak
 	${SED} <${WRKSRC}/Makefile.bak >${WRKSRC}/Makefile \
 		-e 's|/usr/local|${PREFIX}|'
