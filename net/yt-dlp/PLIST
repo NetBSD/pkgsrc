@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2025/11/18 11:06:36 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.55 2025/12/20 22:35:14 wiz Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -161,6 +161,9 @@ ${PYSITELIB}/yt_dlp/extractor/aeonco.pyo
 ${PYSITELIB}/yt_dlp/extractor/afreecatv.py
 ${PYSITELIB}/yt_dlp/extractor/afreecatv.pyc
 ${PYSITELIB}/yt_dlp/extractor/afreecatv.pyo
+${PYSITELIB}/yt_dlp/extractor/agalega.py
+${PYSITELIB}/yt_dlp/extractor/agalega.pyc
+${PYSITELIB}/yt_dlp/extractor/agalega.pyo
 ${PYSITELIB}/yt_dlp/extractor/agora.py
 ${PYSITELIB}/yt_dlp/extractor/agora.pyc
 ${PYSITELIB}/yt_dlp/extractor/agora.pyo
@@ -170,6 +173,9 @@ ${PYSITELIB}/yt_dlp/extractor/airtv.pyo
 ${PYSITELIB}/yt_dlp/extractor/aitube.py
 ${PYSITELIB}/yt_dlp/extractor/aitube.pyc
 ${PYSITELIB}/yt_dlp/extractor/aitube.pyo
+${PYSITELIB}/yt_dlp/extractor/alibaba.py
+${PYSITELIB}/yt_dlp/extractor/alibaba.pyc
+${PYSITELIB}/yt_dlp/extractor/alibaba.pyo
 ${PYSITELIB}/yt_dlp/extractor/aliexpress.py
 ${PYSITELIB}/yt_dlp/extractor/aliexpress.pyc
 ${PYSITELIB}/yt_dlp/extractor/aliexpress.pyo
@@ -371,6 +377,9 @@ ${PYSITELIB}/yt_dlp/extractor/biobiochiletv.pyo
 ${PYSITELIB}/yt_dlp/extractor/bitchute.py
 ${PYSITELIB}/yt_dlp/extractor/bitchute.pyc
 ${PYSITELIB}/yt_dlp/extractor/bitchute.pyo
+${PYSITELIB}/yt_dlp/extractor/bitmovin.py
+${PYSITELIB}/yt_dlp/extractor/bitmovin.pyc
+${PYSITELIB}/yt_dlp/extractor/bitmovin.pyo
 ${PYSITELIB}/yt_dlp/extractor/blackboardcollaborate.py
 ${PYSITELIB}/yt_dlp/extractor/blackboardcollaborate.pyc
 ${PYSITELIB}/yt_dlp/extractor/blackboardcollaborate.pyo
@@ -947,6 +956,9 @@ ${PYSITELIB}/yt_dlp/extractor/freetv.pyo
 ${PYSITELIB}/yt_dlp/extractor/frontendmasters.py
 ${PYSITELIB}/yt_dlp/extractor/frontendmasters.pyc
 ${PYSITELIB}/yt_dlp/extractor/frontendmasters.pyo
+${PYSITELIB}/yt_dlp/extractor/frontro.py
+${PYSITELIB}/yt_dlp/extractor/frontro.pyc
+${PYSITELIB}/yt_dlp/extractor/frontro.pyo
 ${PYSITELIB}/yt_dlp/extractor/fujitv.py
 ${PYSITELIB}/yt_dlp/extractor/fujitv.pyc
 ${PYSITELIB}/yt_dlp/extractor/fujitv.pyo
@@ -1688,6 +1700,9 @@ ${PYSITELIB}/yt_dlp/extractor/nerdcubed.pyo
 ${PYSITELIB}/yt_dlp/extractor/nest.py
 ${PYSITELIB}/yt_dlp/extractor/nest.pyc
 ${PYSITELIB}/yt_dlp/extractor/nest.pyo
+${PYSITELIB}/yt_dlp/extractor/netapp.py
+${PYSITELIB}/yt_dlp/extractor/netapp.pyc
+${PYSITELIB}/yt_dlp/extractor/netapp.pyo
 ${PYSITELIB}/yt_dlp/extractor/neteasemusic.py
 ${PYSITELIB}/yt_dlp/extractor/neteasemusic.pyc
 ${PYSITELIB}/yt_dlp/extractor/neteasemusic.pyo
@@ -1778,6 +1793,9 @@ ${PYSITELIB}/yt_dlp/extractor/nova.pyo
 ${PYSITELIB}/yt_dlp/extractor/novaplay.py
 ${PYSITELIB}/yt_dlp/extractor/novaplay.pyc
 ${PYSITELIB}/yt_dlp/extractor/novaplay.pyo
+${PYSITELIB}/yt_dlp/extractor/nowcanal.py
+${PYSITELIB}/yt_dlp/extractor/nowcanal.pyc
+${PYSITELIB}/yt_dlp/extractor/nowcanal.pyo
 ${PYSITELIB}/yt_dlp/extractor/nowness.py
 ${PYSITELIB}/yt_dlp/extractor/nowness.pyc
 ${PYSITELIB}/yt_dlp/extractor/nowness.pyo
@@ -3089,6 +3107,9 @@ ${PYSITELIB}/yt_dlp/extractor/yapfiles.pyo
 ${PYSITELIB}/yt_dlp/extractor/yappy.py
 ${PYSITELIB}/yt_dlp/extractor/yappy.pyc
 ${PYSITELIB}/yt_dlp/extractor/yappy.pyo
+${PYSITELIB}/yt_dlp/extractor/yfanefa.py
+${PYSITELIB}/yt_dlp/extractor/yfanefa.pyc
+${PYSITELIB}/yt_dlp/extractor/yfanefa.pyo
 ${PYSITELIB}/yt_dlp/extractor/yle_areena.py
 ${PYSITELIB}/yt_dlp/extractor/yle_areena.pyc
 ${PYSITELIB}/yt_dlp/extractor/yle_areena.pyo
