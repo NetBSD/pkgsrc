@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 11:34:31 nia Exp $
+$NetBSD: distinfo,v 1.17 2025/12/20 15:54:13 nia Exp $
 
 BLAKE2s (wmweather-2.4.7.tar.gz) = 290e27abc9a01dfd4a434f77ff2827298828f693f70b1065b57c50db9a98cf1b
 SHA512 (wmweather-2.4.7.tar.gz) = d9d0c46e85a24aaa278aa75e0fcd51fc417c3c094d9e69c5820a288955c3ebdde21a24b26964824d9275a41ec053e3d942b185b24088d806e033e311e6e09108
 Size (wmweather-2.4.7.tar.gz) = 86220 bytes
 SHA1 (patch-aa) = a882d59ff36a5fb23822ab9288c48f62edc094d8
-SHA1 (patch-wmweather.c) = 7c5e0f3e379e82333dbdd7b6799e4398dc06e815
+SHA1 (patch-wmweather.c) = 71e7dbfc1a6f3a88ca90d27e7de34c69d45c235f
