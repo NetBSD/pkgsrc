@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26547 2025/12/20 22:35:24 wiz Exp $
+$NetBSD: TODO,v 1.26548 2025/12/20 22:39:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -566,7 +566,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dnsbl-milter-6.78
 	o doclifter-2.19
 	o dotclear-2.53
-	o double-conversion-3.4.0
 	o dovecot-2.4.2 [CVE-2025-30189]
 	o dovecot2-pigeonhole-2.4.2 [needs dovecot2 2.4]
 	o drawpile-2.1.20
