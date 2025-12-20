@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2025/11/24 09:04:56 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/12/20 22:18:14 wiz Exp $
 
-DISTNAME=	wayland-protocols-1.46
+DISTNAME=	wayland-protocols-1.47
 CATEGORIES=	devel
 MASTER_SITES=	https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/${PKGVERSION_NOREV}/downloads/
 EXTRACT_SUFX=	.tar.xz
