@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2021/10/26 10:06:02 nia Exp $
+$NetBSD: distinfo,v 1.22 2025/12/20 12:15:46 nia Exp $
 
 BLAKE2s (minicom-2.7.1.tar.gz) = 29cdcea2f22a02900abc2d13f11113486fea4b6b1a396eff3b9bf17febb19e89
 SHA512 (minicom-2.7.1.tar.gz) = b429b32d187c3ee915c5074a0d0f08b7e3951cb8528ecbdd889837ff301662c16740ad77bd2bf3baf759c0a84e779a8dc8fd888a4260a0ace15ebc4c2f697c82
@@ -8,4 +8,5 @@ SHA1 (patch-ad) = 407bf7e19ce4ca1aa8580f0b2e79c69d99ad0e6e
 SHA1 (patch-ae) = ea2fb58212de7caaaed4c0817290ca3612212b6c
 SHA1 (patch-ag) = 5f635b67e2e48d13c9df7f3ed4fdca83a1c7f7ef
 SHA1 (patch-ah) = ae6048f6a8e81134a459aaf21527e944c68ae07f
+SHA1 (patch-src_dial.c) = 4b0e057530ddcd6ff06d93f292f60f979c2fda62
 SHA1 (patch-src_script.c) = 239d4e1b17429dfa28c6445a0ab3468f6d6804b8
