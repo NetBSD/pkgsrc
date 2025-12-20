@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/11/19 22:50:23 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2025/12/20 22:33:49 wiz Exp $
 
-BLAKE2s (yt_dlp_ejs-0.3.1-py3-none-any.whl) = c6dfc28332286e870c395f49ee97bd5eb90cdbe19f8c2850514ffe3b6322a189
-SHA512 (yt_dlp_ejs-0.3.1-py3-none-any.whl) = 9abbdf72a24cceccaa939c7419c6fa89afcfd7a0f36632588566a2a8075f39e91c1b952f42fcb525767e997090b526ba59fc7e91e4e5fc24ae25ffd2ad59b1ea
-Size (yt_dlp_ejs-0.3.1-py3-none-any.whl) = 53155 bytes
+BLAKE2s (yt_dlp_ejs-0.3.2-py3-none-any.whl) = 0f67cb19374efc0749ddda43f7ed2b06b97238bcf5891ab205a8b06a32959566
+SHA512 (yt_dlp_ejs-0.3.2-py3-none-any.whl) = b904143b0bbd0d75ba167d26b163ae1680a1658d95d69065eda16d3adab547d230ab453f0d7562948ec100313d0289c3f971e4712dc14df24c8a5d5c0529ede2
+Size (yt_dlp_ejs-0.3.2-py3-none-any.whl) = 53252 bytes
