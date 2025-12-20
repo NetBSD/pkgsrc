@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7249 2025/12/19 22:14:37 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.7250 2025/12/20 19:45:40 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10502,3 +10502,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/php84 to 8.4.16 [taca 2025-12-19]
 	Updated www/php-concrete-cms to 9.4.7 [taca 2025-12-19]
 	Updated audio/musescore to 4.6.5 [gutteridge 2025-12-19]
+	Updated www/basilisk to 2025.10.10 [nia 2025-12-20]
