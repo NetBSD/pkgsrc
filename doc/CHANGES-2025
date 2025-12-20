@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7256 2025/12/20 22:17:11 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7257 2025/12/20 22:18:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10509,3 +10509,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/objfw to 1.4.3 [js 2025-12-20]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2025Q4 branch [maya 2025-12-20]
 	Updated x11/xorgproto to 2025.1 [wiz 2025-12-20]
+	Updated devel/wayland-protocols to 1.47 [wiz 2025-12-20]
