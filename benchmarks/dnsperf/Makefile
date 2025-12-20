@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2025/10/27 18:23:49 tron Exp $
+# $NetBSD: Makefile,v 1.35 2025/12/20 16:29:32 nia Exp $
 
 DISTNAME=	dnsperf-2.14.0
 CATEGORIES=	benchmarks net
@@ -30,4 +30,5 @@ REPLACE_SH+=	src/resperf-report
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
