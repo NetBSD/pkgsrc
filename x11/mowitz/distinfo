@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:34:15 nia Exp $
+$NetBSD: distinfo,v 1.9 2025/12/20 16:16:55 nia Exp $
 
 BLAKE2s (Mowitz-0.3.1.tar.gz) = 5698ee8fefe40ccd9a242f13ac446eace5b82c9e0279f397613a274de6fe8575
 SHA512 (Mowitz-0.3.1.tar.gz) = 99004c88cc667f3ae9e8de6afe2cd749d3c0a1ebae79dd5bde3903e37538fd997b3300c659e8d7e4cbfa1c2cc28b113626fda72335c384bf8b02dd0d12a17376
 Size (Mowitz-0.3.1.tar.gz) = 1150170 bytes
 SHA1 (patch-Mowitz_MwFilesel_c) = c83c1d6587506a18463eba3b8cef4fc96bfb6455
+SHA1 (patch-Mowitz_MwHandle.c) = 535da4187bea745f93a2b86500892c03234892b1
 SHA1 (patch-aa) = 5acdce4a2b3ef6681a8ab62219077115b102ead6
+SHA1 (patch-examples_Directory.h) = ced57cad24a8fc6c17a1cadb982f3fafcea8951b
+SHA1 (patch-examples_listtree2.c) = f0bbade6bdc7c4636cb175d6b7735b7f388be0ca
+SHA1 (patch-examples_rulerdemo.c) = 81a5ef86ba902419f2752c85daae496a910a8e1a
