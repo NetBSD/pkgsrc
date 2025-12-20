@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7250 2025/12/20 19:45:40 nia Exp $
+$NetBSD: CHANGES-2025,v 1.7251 2025/12/20 20:03:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10503,3 +10503,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/php-concrete-cms to 9.4.7 [taca 2025-12-19]
 	Updated audio/musescore to 4.6.5 [gutteridge 2025-12-19]
 	Updated www/basilisk to 2025.10.10 [nia 2025-12-20]
+	Updated devel/ast-grep to 0.40.3 [pin 2025-12-20]
