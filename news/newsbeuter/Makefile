@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2025/10/05 19:26:14 js Exp $
+# $NetBSD: Makefile,v 1.60 2025/12/20 22:11:54 nia Exp $
 
 DISTNAME=	newsbeuter-2.9
 PKGREVISION=	55
@@ -15,6 +15,8 @@ USE_TOOLS+=	gmake pkg-config msgfmt perl
 USE_GNU_ICONV=	yes
 
 REPLACE_PERL+=	txt2h.pl
+
+CXXFLAGS+=	-fpermissive
 
 INSTALL_MAKE_FLAGS+=	prefix=${PREFIX} mandir=${PREFIX}/${PKGMANDIR}
 
