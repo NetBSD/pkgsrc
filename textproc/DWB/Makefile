@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/07/13 06:38:43 nia Exp $
+# $NetBSD: Makefile,v 1.4 2025/12/20 16:02:04 wiz Exp $
 
 DISTNAME=	DWB3.3
 PKGNAME=	DWB-${GITHUB_TAG}
@@ -20,5 +20,10 @@ MAKE_JOBS_SAFE=	no
 
 MAKE_FLAGS+=	CFLGS=${CFLAGS:Q} LDFLGS=${LDFLAGS:Q}
 MAKE_FLAGS+=	OWNER=${ROOT_USER} GROUP=${ROOT_GROUP} ROOT=${DESTDIR}${PREFIX}/DWB
+.include "../../mk/compiler.mk"
+.if ${CC_VERSION:Mgcc-14.*} || ${CC_VERSION:Mgcc-15.*}
+CFLAGS+=	-Wno-implicit-function-declaration
+CFLAGS+=	-Wno-implicit-int
+.endif
 
 .include "../../mk/bsd.pkg.mk"
