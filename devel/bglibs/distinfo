@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2021/10/26 10:14:19 nia Exp $
+$NetBSD: distinfo,v 1.33 2025/12/20 12:29:23 nia Exp $
 
 BLAKE2s (bglibs-2.04.tar.gz) = 3949006d13b16feaf6d554825547e968b01d2ddb423c57b239410fc1594cfcee
 SHA512 (bglibs-2.04.tar.gz) = 094268cad7d4bacf65c0dd3d42fde2e6bac34da0fd6193b1c8202c018e752b3ef80a86c38e687467fb3a4e97130126fe74ee4a86063e4b25ee291de573984a6f
@@ -11,3 +11,6 @@ SHA1 (patch-crypto_hmac-sha384.c) = 1a6300ef2d8ab01e20853439ac578b862de19e7d
 SHA1 (patch-crypto_hmac-sha512.c) = 664430b6c21a3044be713af3770ac672212953d7
 SHA1 (patch-crypto_hmac.c) = 7699db75cdc269fb2fded70ed501bcef635691f6
 SHA1 (patch-include_hmac.h) = e0b113a73dfaf78327be5bf8a7001efd8896a8da
+SHA1 (patch-net_bindu.c) = 428d6ed9acb99a200f060d428b60df49d87007c3
+SHA1 (patch-net_connectu.c) = c9773ddf09beccc2ca899604c3f27341e8874354
+SHA1 (patch-str_sort.c) = ac6a0786d112ea26d4a98493d243a3b993efefef
