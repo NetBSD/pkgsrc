@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2025/10/23 20:39:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/12/20 19:45:27 nia Exp $
 # This package is mostly derived from www/palemoon since they use the
 # same backend.  However, several key things are different.
 
-PKGNAME=	basilisk-2025.07.04
-PKGREVISION=	2
+PKGNAME=	basilisk-2025.10.10
 CATEGORIES=	www
 
 DIST_SUBDIR=	basilisk-${PKGVERSION_NOREV}
@@ -15,7 +14,7 @@ SITES.basilisk.tar.gz= \
 	-https://repo.palemoon.org/Basilisk-Dev/Basilisk/archive/v${PKGVERSION_NOREV}.tar.gz
 
 SITES.uxp.tar.gz= \
-	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/05bae9bb7231eb6fd851802d097400542bba50a1.tar.gz
+	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/545d52572d4fe410bd0a776b59c7c7da27e1d0a1.tar.gz
 
 SITES.psutil.tar.gz= \
 	-https://files.pythonhosted.org/packages/7b/58/2675697b6831e6ac4b7b7bc4e5dcdb24a2f39f8411186573eb0de16eb6d5/psutil-3.4.2.tar.gz
@@ -100,7 +99,6 @@ LDFLAGS+=		-Wl,--no-keep-memory
 .endif
 
 PLIST_VARS+=		be le
-PLIST_VARS+=		ffvpx
 
 PM_BIG_ENDIAN?=	no
 .for plat in ${BIGENDIANPLATFORMS}
@@ -113,10 +111,6 @@ PM_BIG_ENDIAN=	yes
 PLIST.be=	yes
 .else
 PLIST.le=	yes
-.endif
-
-.if ${MACHINE_ARCH} == "x86_64"
-PLIST.ffvpx=		yes	# see platform/old-configure.in
 .endif
 
 SUBST_CLASSES+=		desktop
@@ -137,6 +131,8 @@ CHECK_PORTABILITY_SKIP+=	platform/security/nss/tests/*/*.sh
 
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		tool
+
+BUILDLINK_TRANSFORM+=	rm:-Werror=format
 
 pre-configure:
 	${MKDIR} ${CONFIGURE_DIRS}
@@ -185,7 +181,7 @@ post-install:
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
-.include "../../multimedia/ffmpeg6/buildlink3.mk"
+.include "../../multimedia/ffmpeg7/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .if ${OPSYS} == "Darwin"
