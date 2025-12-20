@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/12/15 17:58:52 zafer Exp $
+# $NetBSD: Makefile,v 1.24 2025/12/20 20:40:05 nia Exp $
 
 DISTNAME=	mp3check-0.8.7
 CATEGORIES=	audio
@@ -18,6 +18,8 @@ BUILD_TARGET=	mp3check
 
 # Fails with C++14 default language.
 FORCE_CXX_STD=	c++03
+
+CXXFLAGS+=	-fpermissive
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
