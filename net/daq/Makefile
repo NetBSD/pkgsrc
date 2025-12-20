@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/05/10 18:52:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2025/12/20 15:49:11 nia Exp $
 
 DISTNAME=	daq-2.0.7
 DIST_SUBDIR=	${DISTNAME}	# remove on next update
@@ -16,6 +16,10 @@ TOOL_DEPENDS+=	bison-[0-9]*:../../devel/bison
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+
+FORCE_C_STD=	gnu99
+
+BUILDLINK_TRANSFORM+=	rm:-pedantic
 
 CPPFLAGS.SunOS+=	-Du_int32_t=uint32_t
 
