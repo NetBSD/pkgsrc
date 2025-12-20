@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/02/18 10:05:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/12/20 22:39:14 wiz Exp $
 include/double-conversion/bignum-dtoa.h
 include/double-conversion/bignum.h
 include/double-conversion/cached-powers.h
@@ -17,4 +17,5 @@ lib/cmake/double-conversion/double-conversionTargets-noconfig.cmake
 lib/cmake/double-conversion/double-conversionTargets.cmake
 lib/libdouble-conversion.so
 lib/libdouble-conversion.so.3
-lib/libdouble-conversion.so.3.3.0
+lib/libdouble-conversion.so.3.4.0
+lib/pkgconfig/double-conversion.pc
