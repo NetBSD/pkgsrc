@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2025/08/25 18:06:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2025/12/20 22:49:17 wiz Exp $
 bin/meson
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -69,6 +69,9 @@ ${PYSITELIB}/mesonbuild/backend/vs2019backend.pyo
 ${PYSITELIB}/mesonbuild/backend/vs2022backend.py
 ${PYSITELIB}/mesonbuild/backend/vs2022backend.pyc
 ${PYSITELIB}/mesonbuild/backend/vs2022backend.pyo
+${PYSITELIB}/mesonbuild/backend/vs2026backend.py
+${PYSITELIB}/mesonbuild/backend/vs2026backend.pyc
+${PYSITELIB}/mesonbuild/backend/vs2026backend.pyo
 ${PYSITELIB}/mesonbuild/backend/xcodebackend.py
 ${PYSITELIB}/mesonbuild/backend/xcodebackend.pyc
 ${PYSITELIB}/mesonbuild/backend/xcodebackend.pyo
@@ -130,6 +133,9 @@ ${PYSITELIB}/mesonbuild/cmake/traceparser.pyo
 ${PYSITELIB}/mesonbuild/cmake/tracetargets.py
 ${PYSITELIB}/mesonbuild/cmake/tracetargets.pyc
 ${PYSITELIB}/mesonbuild/cmake/tracetargets.pyo
+${PYSITELIB}/mesonbuild/cmdline.py
+${PYSITELIB}/mesonbuild/cmdline.pyc
+${PYSITELIB}/mesonbuild/cmdline.pyo
 ${PYSITELIB}/mesonbuild/compilers/__init__.py
 ${PYSITELIB}/mesonbuild/compilers/__init__.pyc
 ${PYSITELIB}/mesonbuild/compilers/__init__.pyo
@@ -208,6 +214,9 @@ ${PYSITELIB}/mesonbuild/compilers/mixins/islinker.pyo
 ${PYSITELIB}/mesonbuild/compilers/mixins/metrowerks.py
 ${PYSITELIB}/mesonbuild/compilers/mixins/metrowerks.pyc
 ${PYSITELIB}/mesonbuild/compilers/mixins/metrowerks.pyo
+${PYSITELIB}/mesonbuild/compilers/mixins/microchip.py
+${PYSITELIB}/mesonbuild/compilers/mixins/microchip.pyc
+${PYSITELIB}/mesonbuild/compilers/mixins/microchip.pyo
 ${PYSITELIB}/mesonbuild/compilers/mixins/pgi.py
 ${PYSITELIB}/mesonbuild/compilers/mixins/pgi.pyc
 ${PYSITELIB}/mesonbuild/compilers/mixins/pgi.pyo
@@ -220,9 +229,6 @@ ${PYSITELIB}/mesonbuild/compilers/mixins/ti.pyo
 ${PYSITELIB}/mesonbuild/compilers/mixins/visualstudio.py
 ${PYSITELIB}/mesonbuild/compilers/mixins/visualstudio.pyc
 ${PYSITELIB}/mesonbuild/compilers/mixins/visualstudio.pyo
-${PYSITELIB}/mesonbuild/compilers/mixins/xc16.py
-${PYSITELIB}/mesonbuild/compilers/mixins/xc16.pyc
-${PYSITELIB}/mesonbuild/compilers/mixins/xc16.pyo
 ${PYSITELIB}/mesonbuild/compilers/objc.py
 ${PYSITELIB}/mesonbuild/compilers/objc.pyc
 ${PYSITELIB}/mesonbuild/compilers/objc.pyo
@@ -451,6 +457,9 @@ ${PYSITELIB}/mesonbuild/modules/_qt.pyo
 ${PYSITELIB}/mesonbuild/modules/cmake.py
 ${PYSITELIB}/mesonbuild/modules/cmake.pyc
 ${PYSITELIB}/mesonbuild/modules/cmake.pyo
+${PYSITELIB}/mesonbuild/modules/codegen.py
+${PYSITELIB}/mesonbuild/modules/codegen.pyc
+${PYSITELIB}/mesonbuild/modules/codegen.pyo
 ${PYSITELIB}/mesonbuild/modules/cuda.py
 ${PYSITELIB}/mesonbuild/modules/cuda.pyc
 ${PYSITELIB}/mesonbuild/modules/cuda.pyo
@@ -508,6 +517,9 @@ ${PYSITELIB}/mesonbuild/modules/rust.pyo
 ${PYSITELIB}/mesonbuild/modules/simd.py
 ${PYSITELIB}/mesonbuild/modules/simd.pyc
 ${PYSITELIB}/mesonbuild/modules/simd.pyo
+${PYSITELIB}/mesonbuild/modules/snippets.py
+${PYSITELIB}/mesonbuild/modules/snippets.pyc
+${PYSITELIB}/mesonbuild/modules/snippets.pyo
 ${PYSITELIB}/mesonbuild/modules/sourceset.py
 ${PYSITELIB}/mesonbuild/modules/sourceset.pyc
 ${PYSITELIB}/mesonbuild/modules/sourceset.pyo
@@ -608,6 +620,9 @@ ${PYSITELIB}/mesonbuild/scripts/meson_exe.pyo
 ${PYSITELIB}/mesonbuild/scripts/msgfmthelper.py
 ${PYSITELIB}/mesonbuild/scripts/msgfmthelper.pyc
 ${PYSITELIB}/mesonbuild/scripts/msgfmthelper.pyo
+${PYSITELIB}/mesonbuild/scripts/pickle_env.py
+${PYSITELIB}/mesonbuild/scripts/pickle_env.pyc
+${PYSITELIB}/mesonbuild/scripts/pickle_env.pyo
 ${PYSITELIB}/mesonbuild/scripts/pycompile.py
 ${PYSITELIB}/mesonbuild/scripts/pycompile.pyc
 ${PYSITELIB}/mesonbuild/scripts/pycompile.pyo
@@ -692,6 +707,9 @@ ${PYSITELIB}/mesonbuild/templates/sampleimpl.pyo
 ${PYSITELIB}/mesonbuild/templates/valatemplates.py
 ${PYSITELIB}/mesonbuild/templates/valatemplates.pyc
 ${PYSITELIB}/mesonbuild/templates/valatemplates.pyo
+${PYSITELIB}/mesonbuild/tooldetect.py
+${PYSITELIB}/mesonbuild/tooldetect.pyc
+${PYSITELIB}/mesonbuild/tooldetect.pyo
 ${PYSITELIB}/mesonbuild/utils/__init__.py
 ${PYSITELIB}/mesonbuild/utils/__init__.pyc
 ${PYSITELIB}/mesonbuild/utils/__init__.pyo
@@ -701,18 +719,12 @@ ${PYSITELIB}/mesonbuild/utils/core.pyo
 ${PYSITELIB}/mesonbuild/utils/platform.py
 ${PYSITELIB}/mesonbuild/utils/platform.pyc
 ${PYSITELIB}/mesonbuild/utils/platform.pyo
-${PYSITELIB}/mesonbuild/utils/posix.py
-${PYSITELIB}/mesonbuild/utils/posix.pyc
-${PYSITELIB}/mesonbuild/utils/posix.pyo
 ${PYSITELIB}/mesonbuild/utils/universal.py
 ${PYSITELIB}/mesonbuild/utils/universal.pyc
 ${PYSITELIB}/mesonbuild/utils/universal.pyo
 ${PYSITELIB}/mesonbuild/utils/vsenv.py
 ${PYSITELIB}/mesonbuild/utils/vsenv.pyc
 ${PYSITELIB}/mesonbuild/utils/vsenv.pyo
-${PYSITELIB}/mesonbuild/utils/win32.py
-${PYSITELIB}/mesonbuild/utils/win32.pyc
-${PYSITELIB}/mesonbuild/utils/win32.pyo
 ${PYSITELIB}/mesonbuild/wrap/__init__.py
 ${PYSITELIB}/mesonbuild/wrap/__init__.pyc
 ${PYSITELIB}/mesonbuild/wrap/__init__.pyo
