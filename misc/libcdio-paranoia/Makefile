@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/06/28 11:34:48 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/12/20 13:01:55 nia Exp $
 
 DISTNAME=	libcdio-paranoia-10.2+2.0.1
 PKGNAME=	libcdio-paranoia-2.0.1
@@ -22,6 +22,12 @@ INFO_FILES=		yes
 PKGCONFIG_OVERRIDE+=	libcdio_cdda.pc.in
 PKGCONFIG_OVERRIDE+=	libcdio_paranoia.pc.in
 TEST_TARGET=		check
+
+.include "../../mk/compiler.mk"
+
+.if ${CC_VERSION:Mgcc-*} || ${CC_VERSION:Mclang-*}
+CPPFLAGS.SunOS+=	-Dalloca=__builtin_alloca
+.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
