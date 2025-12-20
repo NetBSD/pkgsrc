@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.FreeBSD,v 1.1 2025/12/20 15:49:11 nia Exp $
+lib/daq/daq_netmap.la
