@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/10/24 22:10:38 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2025/12/20 20:53:09 nia Exp $
 #
 
 DISTNAME=		xorp-1.6
@@ -14,6 +14,8 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake flex
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl:Q}
+
+FORCE_CXX_STD=		gnu++98
 
 # The xorp people insist on their own PREFIX.
 # See http://www.xorp.org/bugzilla/show_bug.cgi?id=91
