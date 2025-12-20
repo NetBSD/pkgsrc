@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7261 2025/12/20 22:28:56 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7262 2025/12/20 22:34:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10514,3 +10514,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-aiodns to 3.6.1 [wiz 2025-12-20]
 	Updated www/restish to 0.21.2 [wiz 2025-12-20]
 	Updated textproc/tree-sitter to 0.26.3 [wiz 2025-12-20]
+	Updated net/yt-dlp-ejs to 0.3.2 [wiz 2025-12-20]
