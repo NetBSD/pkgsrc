@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7258 2025/12/20 22:21:40 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7259 2025/12/20 22:23:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10511,3 +10511,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xorgproto to 2025.1 [wiz 2025-12-20]
 	Updated devel/wayland-protocols to 1.47 [wiz 2025-12-20]
 	Updated audio/libopus to 1.6 [wiz 2025-12-20]
+	Updated net/py-aiodns to 3.6.1 [wiz 2025-12-20]
