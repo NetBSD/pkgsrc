@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.685 2025/12/15 21:44:50 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.686 2025/12/20 13:06:49 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29110,3 +29110,29 @@ elasticsearch<8.19.7	improper-authentication	https://nvd.nist.gov/vuln/detail/CV
 libreoffice>=25.2<25.2.4	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-14714
 openrsync-[0-9]*	remote-denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-67901
 uriparser<1.0.0		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-67899
+ImageMagick<7.1.1.14	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-68469
+avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-59529
+binaryen<126	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-14956
+binaryen<126	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-14957
+capstone-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-67873
+capstone-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-68114
+chromium<143.0.7499.147	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-14765
+chromium<143.0.7499.147	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-14766
+elasticsearch<8.19.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-68384
+elasticsearch<8.19.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-68390
+ffmpeg8<8.0.1	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-63757
+freerdp2<3.20.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-68118
+mongodb<7.0.28	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-14847
+php{56,74,81,82,83,84}-glpi-[0-9]*	username-enumeration	https://nvd.nist.gov/vuln/detail/CVE-2023-53943
+php{56,74,81,82,83,84}-glpi<10.0.21	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-59935
+php{56,74,81,82,83,84}-glpi<10.0.21	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-64520
+php{56,74,81,82,83,84}-avideo<20.1	code-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-34433
+php{56,74,81,82,83,84}-dotclear-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-53952
+py{27,39,310,311,312,313,314}-biopython-[0-9]*	xml-external-entity	https://nvd.nist.gov/vuln/detail/CVE-2025-68463
+py{27,39,310,311,312,313,314}-filelock<3.20.1	symlink-attack	https://nvd.nist.gov/vuln/detail/CVE-2025-68146
+php{56,74,81,82,83,84}-roundcube<1.6.12	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-68460
+php{56,74,81,82,83,84}-roundcube<1.6.12	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-68461
+ruby{32,33,34}-aws-sdk-s3<1.208.0	weak-cryptography	https://nvd.nist.gov/vuln/detail/CVE-2025-14762
+thunderbird<146		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-95/
+thunderbird140<140.6	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-96/
+firefox<146.0.1		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-98/
