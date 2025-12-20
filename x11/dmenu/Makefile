@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/08/09 15:36:00 leot Exp $
+# $NetBSD: Makefile,v 1.24 2025/12/20 15:52:04 nia Exp $
 
 DISTNAME=	dmenu-5.4
 CATEGORIES=	x11
@@ -12,7 +12,6 @@ LICENSE=	mit
 MAKE_JOBS_SAFE=	no
 
 NO_CONFIGURE=	yes
-USE_LANGUAGES=	c99
 
 # Adjust config.mk
 SUBST_CLASSES+=		makefile
@@ -27,6 +26,8 @@ SUBST_SED.makefile+=	-e 's,^LDFLAGS *= ,LDFLAGS += ,'
 SUBST_SED.makefile+=	-e 's/-I$${FREETYPEINC}/$${FREETYPEINC}/'
 SUBST_SED.makefile+=	-e 's,^FREETYPEINC *=.*,FREETYPEINC != freetype-config --cflags,'
 SUBST_SED.makefile+=	-e 's/cc/${CC:Q}/'
+
+CFLAGS.SunOS+=		-D__EXTENSIONS__
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
