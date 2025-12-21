@@ -1,16 +1,15 @@
-$NetBSD: patch-resources_CMakeLists.txt,v 1.1 2025/11/30 13:51:28 wiz Exp $
+$NetBSD: patch-resources_CMakeLists.txt,v 1.2 2025/12/21 14:02:15 markd Exp $
 
-Fix build with boost 1.89.
-https://github.com/KDE/kdepim-runtime/commit/1dd9b448f724e401f7a610f95a0fbfdcb40d8f7e
+No system module in latest Boost
 
---- resources/CMakeLists.txt.orig	2025-11-30 13:40:56.641220028 +0000
+--- resources/CMakeLists.txt.orig	2025-10-18 04:13:04.000000000 +0000
 +++ resources/CMakeLists.txt
-@@ -44,7 +44,7 @@ add_subdirectory( imap )
- if (Libkolabxml_FOUND)
+@@ -43,7 +43,7 @@ add_subdirectory(imap)
+ if(Libkolabxml_FOUND)
      # The boost-provided CMake files are unreliable
      set(Boost_NO_BOOST_CMAKE ON)
 -    find_package(Boost MODULE REQUIRED COMPONENTS atomic thread system)
 +    find_package(Boost MODULE REQUIRED COMPONENTS atomic thread)
      unset(Boost_NO_BOOST_CMAKE)
-     add_subdirectory( kolab )
+     add_subdirectory(kolab)
  endif()
