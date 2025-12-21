@@ -1,7 +1,7 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2025/12/10 08:32:27 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2025/12/21 17:41:59 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
-CARGO_CRATE_DEPENDS+=	aligned-0.4.2
+CARGO_CRATE_DEPENDS+=	aligned-0.4.3
 CARGO_CRATE_DEPENDS+=	aligned-vec-0.6.4
 CARGO_CRATE_DEPENDS+=	ansi_colours-1.2.3
 CARGO_CRATE_DEPENDS+=	anstream-0.6.21
@@ -83,7 +83,7 @@ CARGO_CRATE_DEPENDS+=	make-cmd-0.1.0
 CARGO_CRATE_DEPENDS+=	maybe-rayon-0.1.1
 CARGO_CRATE_DEPENDS+=	memchr-2.7.6
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.8.9
-CARGO_CRATE_DEPENDS+=	moxcms-0.7.10
+CARGO_CRATE_DEPENDS+=	moxcms-0.7.11
 CARGO_CRATE_DEPENDS+=	new_debug_unreachable-1.0.6
 CARGO_CRATE_DEPENDS+=	nix-0.30.1
 CARGO_CRATE_DEPENDS+=	nom-8.0.0
@@ -161,4 +161,4 @@ CARGO_CRATE_DEPENDS+=	zune-core-0.4.12
 CARGO_CRATE_DEPENDS+=	zune-core-0.5.0
 CARGO_CRATE_DEPENDS+=	zune-inflate-0.2.54
 CARGO_CRATE_DEPENDS+=	zune-jpeg-0.4.21
-CARGO_CRATE_DEPENDS+=	zune-jpeg-0.5.6
+CARGO_CRATE_DEPENDS+=	zune-jpeg-0.5.7
