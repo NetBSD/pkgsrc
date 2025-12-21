@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/02/06 11:17:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/12/21 13:56:19 markd Exp $
 bin/kbruch
 man/ca/man1/kbruch.1
 man/de/man1/kbruch.1
@@ -11,6 +11,7 @@ man/nl/man1/kbruch.1
 man/pt/man1/kbruch.1
 man/pt_BR/man1/kbruch.1
 man/ru/man1/kbruch.1
+man/sl/man1/kbruch.1
 man/sv/man1/kbruch.1
 man/uk/man1/kbruch.1
 share/applications/org.kde.kbruch.desktop
@@ -117,6 +118,8 @@ share/doc/HTML/ru/kbruch/percentage.png
 share/doc/HTML/ru/kbruch/reduced.png
 share/doc/HTML/ru/kbruch/settings.png
 share/doc/HTML/ru/kbruch/statistics.png
+share/doc/HTML/sl/kbruch/index.cache.bz2
+share/doc/HTML/sl/kbruch/index.docbook
 share/doc/HTML/sv/kbruch/checked.png
 share/doc/HTML/sv/kbruch/compare.png
 share/doc/HTML/sv/kbruch/convert.png
@@ -160,10 +163,8 @@ share/kbruch/pics/icon_learning.png
 share/kbruch/pics/icon_learning_1.png
 share/kbruch/pics/icon_test_case.png
 share/kbruch/pics/icon_test_case_1.png
-share/kxmlgui5/kbruch/AppMenuWidgetui.rc
-share/kxmlgui5/kbruch/FractionRingWidgetui.rc
-share/kxmlgui5/kbruch/kbruchui.rc
 share/locale/ar/LC_MESSAGES/kbruch.mo
+share/locale/ast/LC_MESSAGES/kbruch.mo
 share/locale/be/LC_MESSAGES/kbruch.mo
 share/locale/bg/LC_MESSAGES/kbruch.mo
 share/locale/bn/LC_MESSAGES/kbruch.mo
@@ -217,6 +218,7 @@ share/locale/pt/LC_MESSAGES/kbruch.mo
 share/locale/pt_BR/LC_MESSAGES/kbruch.mo
 share/locale/ro/LC_MESSAGES/kbruch.mo
 share/locale/ru/LC_MESSAGES/kbruch.mo
+share/locale/sa/LC_MESSAGES/kbruch.mo
 share/locale/se/LC_MESSAGES/kbruch.mo
 share/locale/si/LC_MESSAGES/kbruch.mo
 share/locale/sk/LC_MESSAGES/kbruch.mo
