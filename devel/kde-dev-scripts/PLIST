@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2023/08/03 02:30:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/12/21 10:10:02 markd Exp $
 bin/adddebug
+bin/addmocincludes
 bin/build-progress.sh
 bin/c++-copy-class-and-file
 bin/c++-rename-class-and-file
@@ -45,8 +46,8 @@ bin/nonsvnlist
 bin/optimizegraphics
 bin/package_crystalsvg
 bin/png2mng.pl
+bin/port_new_gitlab_ci_template.sh
 bin/pruneemptydirs
-bin/qtdoc
 bin/reviewboard-am
 bin/svn-clean
 bin/svnbackport
@@ -75,7 +76,6 @@ man/ca/man1/extend_dmalloc.1
 man/ca/man1/extractrc.1
 man/ca/man1/fixincludes.1
 man/ca/man1/pruneemptydirs.1
-man/ca/man1/qtdoc.1
 man/ca/man1/zonetab2pot.py.1
 man/da/man1/adddebug.1
 man/da/man1/cheatmake.1
@@ -90,7 +90,6 @@ man/da/man1/extend_dmalloc.1
 man/da/man1/extractrc.1
 man/da/man1/fixincludes.1
 man/da/man1/pruneemptydirs.1
-man/da/man1/qtdoc.1
 man/da/man1/zonetab2pot.py.1
 man/de/man1/adddebug.1
 man/de/man1/cheatmake.1
@@ -106,7 +105,6 @@ man/de/man1/extend_dmalloc.1
 man/de/man1/extractrc.1
 man/de/man1/fixincludes.1
 man/de/man1/pruneemptydirs.1
-man/de/man1/qtdoc.1
 man/de/man1/zonetab2pot.py.1
 man/es/man1/adddebug.1
 man/es/man1/cheatmake.1
@@ -122,9 +120,7 @@ man/es/man1/extend_dmalloc.1
 man/es/man1/extractrc.1
 man/es/man1/fixincludes.1
 man/es/man1/pruneemptydirs.1
-man/es/man1/qtdoc.1
 man/es/man1/zonetab2pot.py.1
-man/et/man1/qtdoc.1
 man/fr/man1/adddebug.1
 man/fr/man1/cheatmake.1
 man/fr/man1/create_cvsignore.1
@@ -139,7 +135,6 @@ man/fr/man1/extend_dmalloc.1
 man/fr/man1/extractrc.1
 man/fr/man1/fixincludes.1
 man/fr/man1/pruneemptydirs.1
-man/fr/man1/qtdoc.1
 man/fr/man1/zonetab2pot.py.1
 man/gl/man1/adddebug.1
 man/gl/man1/cheatmake.1
@@ -154,7 +149,6 @@ man/gl/man1/extend_dmalloc.1
 man/gl/man1/extractrc.1
 man/gl/man1/fixincludes.1
 man/gl/man1/pruneemptydirs.1
-man/gl/man1/qtdoc.1
 man/gl/man1/zonetab2pot.py.1
 man/it/man1/adddebug.1
 man/it/man1/cheatmake.1
@@ -170,7 +164,6 @@ man/it/man1/extend_dmalloc.1
 man/it/man1/extractrc.1
 man/it/man1/fixincludes.1
 man/it/man1/pruneemptydirs.1
-man/it/man1/qtdoc.1
 man/it/man1/zonetab2pot.py.1
 man/man1/adddebug.1
 man/man1/cheatmake.1
@@ -186,7 +179,6 @@ man/man1/extend_dmalloc.1
 man/man1/extractrc.1
 man/man1/fixincludes.1
 man/man1/pruneemptydirs.1
-man/man1/qtdoc.1
 man/man1/zonetab2pot.py.1
 man/nl/man1/adddebug.1
 man/nl/man1/cheatmake.1
@@ -202,7 +194,6 @@ man/nl/man1/extend_dmalloc.1
 man/nl/man1/extractrc.1
 man/nl/man1/fixincludes.1
 man/nl/man1/pruneemptydirs.1
-man/nl/man1/qtdoc.1
 man/nl/man1/zonetab2pot.py.1
 man/pt/man1/adddebug.1
 man/pt/man1/cheatmake.1
@@ -218,7 +209,6 @@ man/pt/man1/extend_dmalloc.1
 man/pt/man1/extractrc.1
 man/pt/man1/fixincludes.1
 man/pt/man1/pruneemptydirs.1
-man/pt/man1/qtdoc.1
 man/pt/man1/zonetab2pot.py.1
 man/pt_BR/man1/adddebug.1
 man/pt_BR/man1/cheatmake.1
@@ -234,7 +224,6 @@ man/pt_BR/man1/extend_dmalloc.1
 man/pt_BR/man1/extractrc.1
 man/pt_BR/man1/fixincludes.1
 man/pt_BR/man1/pruneemptydirs.1
-man/pt_BR/man1/qtdoc.1
 man/pt_BR/man1/zonetab2pot.py.1
 man/ru/man1/adddebug.1
 man/ru/man1/cheatmake.1
@@ -250,8 +239,22 @@ man/ru/man1/extend_dmalloc.1
 man/ru/man1/extractrc.1
 man/ru/man1/fixincludes.1
 man/ru/man1/pruneemptydirs.1
-man/ru/man1/qtdoc.1
 man/ru/man1/zonetab2pot.py.1
+man/sl/man1/adddebug.1
+man/sl/man1/cheatmake.1
+man/sl/man1/create_cvsignore.1
+man/sl/man1/create_makefile.1
+man/sl/man1/create_makefiles.1
+man/sl/man1/cvscheck.1
+man/sl/man1/cvslastchange.1
+man/sl/man1/cvslastlog.1
+man/sl/man1/cvsrevertlast.1
+man/sl/man1/cxxmetric.1
+man/sl/man1/extend_dmalloc.1
+man/sl/man1/extractrc.1
+man/sl/man1/fixincludes.1
+man/sl/man1/pruneemptydirs.1
+man/sl/man1/zonetab2pot.py.1
 man/sv/man1/adddebug.1
 man/sv/man1/cheatmake.1
 man/sv/man1/create_cvsignore.1
@@ -266,7 +269,6 @@ man/sv/man1/extend_dmalloc.1
 man/sv/man1/extractrc.1
 man/sv/man1/fixincludes.1
 man/sv/man1/pruneemptydirs.1
-man/sv/man1/qtdoc.1
 man/sv/man1/zonetab2pot.py.1
 man/uk/man1/adddebug.1
 man/uk/man1/cheatmake.1
@@ -282,7 +284,6 @@ man/uk/man1/extend_dmalloc.1
 man/uk/man1/extractrc.1
 man/uk/man1/fixincludes.1
 man/uk/man1/pruneemptydirs.1
-man/uk/man1/qtdoc.1
 man/uk/man1/zonetab2pot.py.1
 share/uncrustify/uncrustify-kf5.cfg
 share/uncrustify/uncrustify-qt.cfg

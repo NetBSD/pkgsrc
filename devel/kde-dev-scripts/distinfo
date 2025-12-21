@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.13 2024/02/06 11:05:14 markd Exp $
+$NetBSD: distinfo,v 1.14 2025/12/21 10:10:02 markd Exp $
 
-BLAKE2s (kde-dev-scripts-23.08.4.tar.xz) = cef04ccf1f3e1e11cd7170df8e0fa16d4789a1f54fce5f46118ff020e2ce9e0c
-SHA512 (kde-dev-scripts-23.08.4.tar.xz) = f7cc9a187d2a92139981054c66cd26a430ea376728468264c115cdd9b2f37550a97a72cbcda8fe909e9f8f28e924f185d3eba5012d8aee731c5221f26aead738
-Size (kde-dev-scripts-23.08.4.tar.xz) = 373928 bytes
-SHA1 (patch-cvsaddcurrentdir) = d86b706c848e845bb54364af7d619a6637265d97
+BLAKE2s (kde-dev-scripts-25.08.3.tar.xz) = c2d39e1d2fa8259fdca57212cedab99b9ab7144a81944a346b20c59157279855
+SHA512 (kde-dev-scripts-25.08.3.tar.xz) = a657d91749d2af36d1625c8d7422f1be9b07f9371ed327de4adf177c166ce6616ec07f75073125f2c2c5c34b78d618ec25f482d7d56eedf743c03dfdeeed3f3f
+Size (kde-dev-scripts-25.08.3.tar.xz) = 377004 bytes
+SHA1 (patch-cvsaddcurrentdir) = 4f2ff12917d28f0fba9b442b9ca80a121ae82d1f
 SHA1 (patch-kf6_port__plasma__kirigami.sh) = 999c6c5837c69dce10ca5596989b18dbf93cea9b
 SHA1 (patch-kf6_port__plasma__ksvg.sh) = 23682d2383ed62b7508284831b70064bf61b2420
 SHA1 (patch-kf6_remove__unused__qml__namespace.sh) = bffab50c139a96772f2e891bd5478f92c6b3e652

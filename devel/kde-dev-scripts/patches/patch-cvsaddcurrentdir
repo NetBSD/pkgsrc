@@ -1,4 +1,6 @@
-$NetBSD: patch-cvsaddcurrentdir,v 1.1 2013/11/07 10:42:26 markd Exp $
+$NetBSD: patch-cvsaddcurrentdir,v 1.2 2025/12/21 10:10:02 markd Exp $
+
+fix test
 
 --- cvsaddcurrentdir.orig	2006-10-18 21:16:48.000000000 +1300
 +++ cvsaddcurrentdir
