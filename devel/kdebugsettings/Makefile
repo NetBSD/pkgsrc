@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2025/10/23 20:36:22 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/12/21 10:14:23 markd Exp $
 
 DISTNAME=	kdebugsettings-${KAPPSVER}
-PKGREVISION=	9
 CATEGORIES=	devel
 
 HOMEPAGE=	https://utils.kde.org/
@@ -12,12 +11,13 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	msgmerge
 
-.include "../../devel/kcoreaddons/buildlink3.mk"
-.include "../../devel/ki18n/buildlink3.mk"
-.include "../../sysutils/kdbusaddons/buildlink3.mk"
+.include "../../devel/kf6-kcoreaddons/buildlink3.mk"
+.include "../../devel/kf6-kcrash/buildlink3.mk"
+.include "../../devel/kf6-ki18n/buildlink3.mk"
+.include "../../sysutils/kf6-kdbusaddons/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../textproc/kcompletion/buildlink3.mk"
-.include "../../x11/kitemviews/buildlink3.mk"
-.include "../../x11/kxmlgui/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../textproc/kf6-kcompletion/buildlink3.mk"
+.include "../../x11/kf6-kitemviews/buildlink3.mk"
+.include "../../x11/kf6-kxmlgui/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
