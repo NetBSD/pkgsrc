@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26558 2025/12/21 15:47:37 wiz Exp $
+$NetBSD: TODO,v 1.26559 2025/12/21 16:34:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1138,7 +1138,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-proto-plus-1.27.0
 	o py-qt-builder-1.19.1
 	o py-roman_numerals_py-4.1.0
-	o py-ruamel-yaml-0.18.17
 	o py-ruff-0.14.10
 	o py-sbws-1.1.0
 	o py-simpletal-5.1
