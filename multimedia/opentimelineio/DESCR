@@ -1,0 +1,8 @@
+OpenTimelineIO is an interchange format and API for editorial cut information.
+OTIO contains information about the order and length of cuts and
+references to external media. It is not however, a container format for media.
+
+For integration with applications, the core OTIO library is implemented in C++
+and provides an in-memory data model, as well as library functions for
+interpreting, manipulating, and serializing that data model. Within the core is
+a dependency-less library for dealing strictly with time, `opentime`.
