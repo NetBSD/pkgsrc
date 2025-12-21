@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/02/06 11:17:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/12/21 14:23:52 markd Exp $
 bin/kteatime
 share/applications/org.kde.kteatime.desktop
 share/doc/HTML/ca/kteatime/index.cache.bz2
@@ -25,6 +25,8 @@ share/doc/HTML/pt_BR/kteatime/index.cache.bz2
 share/doc/HTML/pt_BR/kteatime/index.docbook
 share/doc/HTML/ru/kteatime/index.cache.bz2
 share/doc/HTML/ru/kteatime/index.docbook
+share/doc/HTML/sl/kteatime/index.cache.bz2
+share/doc/HTML/sl/kteatime/index.docbook
 share/doc/HTML/sv/kteatime/config.png
 share/doc/HTML/sv/kteatime/index.cache.bz2
 share/doc/HTML/sv/kteatime/index.docbook
@@ -39,9 +41,10 @@ share/icons/hicolor/32x32/apps/kteatime.png
 share/icons/hicolor/48x48/apps/kteatime.png
 share/icons/hicolor/64x64/apps/kteatime.png
 share/icons/hicolor/scalable/apps/kteatime.svgz
-share/knotifications5/kteatime.notifyrc
+share/knotifications6/kteatime.notifyrc
 share/locale/af/LC_MESSAGES/kteatime.mo
 share/locale/ar/LC_MESSAGES/kteatime.mo
+share/locale/ast/LC_MESSAGES/kteatime.mo
 share/locale/be/LC_MESSAGES/kteatime.mo
 share/locale/bg/LC_MESSAGES/kteatime.mo
 share/locale/bn/LC_MESSAGES/kteatime.mo
@@ -96,6 +99,7 @@ share/locale/pt/LC_MESSAGES/kteatime.mo
 share/locale/pt_BR/LC_MESSAGES/kteatime.mo
 share/locale/ro/LC_MESSAGES/kteatime.mo
 share/locale/ru/LC_MESSAGES/kteatime.mo
+share/locale/sa/LC_MESSAGES/kteatime.mo
 share/locale/se/LC_MESSAGES/kteatime.mo
 share/locale/sk/LC_MESSAGES/kteatime.mo
 share/locale/sl/LC_MESSAGES/kteatime.mo

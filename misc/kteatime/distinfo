@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2024/02/06 11:17:36 markd Exp $
+$NetBSD: distinfo,v 1.14 2025/12/21 14:23:52 markd Exp $
 
-BLAKE2s (kteatime-23.08.4.tar.xz) = be42078001e5151e32619bdc349012228ae6c7680e7fdeec52d6653b54ee02cd
-SHA512 (kteatime-23.08.4.tar.xz) = 9de2a368d17f2e669bea9fa73b2bf29ba974813502bcdc8bb3e1ee2d085f5f36dc28d71d488e9432aadb43db2ddf0151963b05e3cef860eaf0659941712365f9
-Size (kteatime-23.08.4.tar.xz) = 315496 bytes
+BLAKE2s (kteatime-25.08.3.tar.xz) = 9f6b0dac46c3d3b9cb77fdead72ec2e2de66307d04a050af8ddbbbcfaf22ad32
+SHA512 (kteatime-25.08.3.tar.xz) = a90d01ff3ac2b8a5ff807f0fbff22f5833af701653e6e5231b31d2f8020214f24c0ca970a54ad5aa36115da7b1f7eff0e156fe22bc7db387076c14c11f2e63d6
+Size (kteatime-25.08.3.tar.xz) = 311732 bytes
