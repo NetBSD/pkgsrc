@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/02/06 11:05:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/12/21 11:15:22 markd Exp $
 bin/kgoldrunner
 share/applications/org.kde.kgoldrunner.desktop
 share/doc/HTML/ca/kgoldrunner/index.cache.bz2
@@ -34,6 +34,8 @@ share/doc/HTML/pt/kgoldrunner/index.cache.bz2
 share/doc/HTML/pt/kgoldrunner/index.docbook
 share/doc/HTML/pt_BR/kgoldrunner/index.cache.bz2
 share/doc/HTML/pt_BR/kgoldrunner/index.docbook
+share/doc/HTML/sl/kgoldrunner/index.cache.bz2
+share/doc/HTML/sl/kgoldrunner/index.docbook
 share/doc/HTML/sv/kgoldrunner/editbar.png
 share/doc/HTML/sv/kgoldrunner/index.cache.bz2
 share/doc/HTML/sv/kgoldrunner/index.docbook
@@ -118,6 +120,7 @@ share/kgoldrunner/themes/nostalgia/nostalgia.png
 share/kgoldrunner/themes/nostalgia/set.svgz
 share/knsrcfiles/kgoldrunner.knsrc
 share/locale/ar/LC_MESSAGES/kgoldrunner.mo
+share/locale/ast/LC_MESSAGES/kgoldrunner.mo
 share/locale/be/LC_MESSAGES/kgoldrunner.mo
 share/locale/bg/LC_MESSAGES/kgoldrunner.mo
 share/locale/bn/LC_MESSAGES/kgoldrunner.mo
@@ -144,6 +147,7 @@ share/locale/hi/LC_MESSAGES/kgoldrunner.mo
 share/locale/hne/LC_MESSAGES/kgoldrunner.mo
 share/locale/hr/LC_MESSAGES/kgoldrunner.mo
 share/locale/hu/LC_MESSAGES/kgoldrunner.mo
+share/locale/ia/LC_MESSAGES/kgoldrunner.mo
 share/locale/id/LC_MESSAGES/kgoldrunner.mo
 share/locale/is/LC_MESSAGES/kgoldrunner.mo
 share/locale/it/LC_MESSAGES/kgoldrunner.mo
@@ -170,6 +174,7 @@ share/locale/pt/LC_MESSAGES/kgoldrunner.mo
 share/locale/pt_BR/LC_MESSAGES/kgoldrunner.mo
 share/locale/ro/LC_MESSAGES/kgoldrunner.mo
 share/locale/ru/LC_MESSAGES/kgoldrunner.mo
+share/locale/sa/LC_MESSAGES/kgoldrunner.mo
 share/locale/se/LC_MESSAGES/kgoldrunner.mo
 share/locale/sk/LC_MESSAGES/kgoldrunner.mo
 share/locale/sl/LC_MESSAGES/kgoldrunner.mo
@@ -188,4 +193,5 @@ share/locale/uk/LC_MESSAGES/kgoldrunner.mo
 share/locale/zh_CN/LC_MESSAGES/kgoldrunner.mo
 share/locale/zh_TW/LC_MESSAGES/kgoldrunner.mo
 share/metainfo/org.kde.kgoldrunner.appdata.xml
-share/qlogging-categories5/kgoldrunner.categories
+share/qlogging-categories6/kgoldrunner.categories
+share/qlogging-categories6/kgoldrunner.renamecategories
