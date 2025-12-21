@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2025/10/23 20:38:30 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2025/12/21 14:50:32 markd Exp $
 
 DISTNAME=	dragon-${KAPPSVER}
-PKGREVISION=	10
 CATEGORIES=	multimedia
 
 HOMEPAGE=	https://apps.kde.org/dragonplayer/
@@ -10,22 +9,16 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
-USE_TOOLS+=	msgmerge
+USE_TOOLS+=	msgmerge pkg-config
 
-SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	pre-configure
-SUBST_MESSAGE.xdg=	Install via examples dir.
-SUBST_FILES.xdg=	misc/CMakeLists.txt
-SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
-
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/dragonplayerrc \
-		${PKG_SYSCONFDIR}/xdg/dragonplayerrc
-
-.include "../../devel/kparts/buildlink3.mk"
+.include "../../devel/kf6-kio/buildlink3.mk"
+.include "../../devel/kf6-kparts/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../multimedia/ffmpeg7/buildlink3.mk"
+.include "../../multimedia/qt6-qtmultimedia/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/kf6-kirigami/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
