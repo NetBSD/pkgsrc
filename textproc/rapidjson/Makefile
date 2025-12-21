@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2025/08/11 12:04:14 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/12/21 09:00:30 markd Exp $
 
-DISTNAME=	rapidjson-1.1.0
-PKGREVISION=	2
+DISTNAME=	rapidjson-1.1.0.20250205
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Tencent/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	24b5e7a8b27f42fa16b96fc70aade9106cf7102f
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://rapidjson.org/
@@ -22,7 +21,6 @@ PKGCONFIG_OVERRIDE+=	RapidJSON.pc.in
 BUILDLINK_TRANSFORM+=	rm:-march=native rm:-Werror
 
 post-install:
-	rm ${DESTDIR}${PREFIX}/include/rapidjson/*.orig
 	rm ${DESTDIR}${PREFIX}/share/doc/RapidJSON/examples/CMakeLists.txt.orig
 
 .include "../../devel/cmake/build.mk"
