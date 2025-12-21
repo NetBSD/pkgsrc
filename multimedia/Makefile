@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.355 2025/11/30 10:11:19 markd Exp $
+# $NetBSD: Makefile,v 1.356 2025/12/21 09:07:20 markd Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -159,6 +159,7 @@ SUBDIR+=	olive-editor
 SUBDIR+=	omxplayer
 SUBDIR+=	openh264
 SUBDIR+=	openquicktime
+SUBDIR+=	opentimelineio
 SUBDIR+=	p5-xmltv
 SUBDIR+=	phonon
 SUBDIR+=	phonon-backend-gstreamer-shared
