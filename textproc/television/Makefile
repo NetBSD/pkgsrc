@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/11/23 16:30:12 pin Exp $
+# $NetBSD: Makefile,v 1.10 2025/12/21 17:40:13 pin Exp $
 
-DISTNAME=	television-0.13.11
+DISTNAME=	television-0.14.1
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alexpasmantier/}
 
