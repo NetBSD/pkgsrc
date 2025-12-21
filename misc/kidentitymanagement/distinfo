@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/02/06 11:17:35 markd Exp $
+$NetBSD: distinfo,v 1.10 2025/12/21 14:11:35 markd Exp $
 
-BLAKE2s (kidentitymanagement-23.08.4.tar.xz) = 2db5d70ad1bea25146b8fa3c662ff47389791e14f7a01119de5285f5b1845884
-SHA512 (kidentitymanagement-23.08.4.tar.xz) = 118d01299429255525767a849b9e77c87d4442763b1360522b96e7234d01c90a25ec9457ac92b1f436b9114a849e5dfad86e4fdb94297d99e8d5bd5aa9aec3a8
-Size (kidentitymanagement-23.08.4.tar.xz) = 163940 bytes
+BLAKE2s (kidentitymanagement-25.08.3.tar.xz) = a7fccdca44902135ab74f52ff026c9751d76520201a62fcf1cfa84035aebc182
+SHA512 (kidentitymanagement-25.08.3.tar.xz) = 81aeec4c38e7ee3fe37e24be87e9b8373dadf8c103b3343014602173ea85077e70ead8fce3d260ad5a92a2b11e430aa97ac17eb0e91455c6a68ca93eb1da02d9
+Size (kidentitymanagement-25.08.3.tar.xz) = 200592 bytes
