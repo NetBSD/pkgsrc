@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2025/10/23 20:37:05 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2025/12/21 11:09:37 markd Exp $
 
 DISTNAME=	kdiamond-${KAPPSVER}
-PKGREVISION=	10
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kdiamond/
@@ -10,23 +9,13 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge
 
-#SUBST_CLASSES+=		xdg
-#SUBST_STAGE.xdg=	pre-configure
-#SUBST_MESSAGE.xdg=	Install via examples dir.
-#SUBST_FILES.xdg=	src/CMakeLists.txt
-#SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
-
-#MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
-#CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kdiamond.knsrc \
-#		${PKG_SYSCONFDIR}/xdg/kdiamond.knsrc
-
-.include "../../devel/knotifyconfig/buildlink3.mk"
+.include "../../devel/kf6-knotifyconfig/buildlink3.mk"
 .include "../../games/libkdegames/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
