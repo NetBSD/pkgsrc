@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/10/23 20:38:09 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/12/21 13:04:41 markd Exp $
 
 DISTNAME=	kmail-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	mail
 
 HOMEPAGE=	https://kontact.kde.org/
@@ -10,7 +9,7 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 DEPENDS+=	akonadi-import-wizard>=${KAPPSVER}:../../mail/akonadi-import-wizard
 DEPENDS+=	kmail-account-wizard>=${KAPPSVER}:../../mail/kmail-account-wizard
 DEPENDS+=	mbox-importer>=${KAPPSVER}:../../mail/mbox-importer
@@ -19,14 +18,14 @@ DEPENDS+=	pim-sieve-editor>=${KAPPSVER}:../../mail/pim-sieve-editor
 
 USE_TOOLS+=	msgmerge
 
-.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mail/ktnef/buildlink3.mk"
 .include "../../mail/libksieve/buildlink3.mk"
 .include "../../mail/mailcommon/buildlink3.mk"
 .include "../../misc/kdepim-runtime/buildlink3.mk"
 .include "../../misc/kontactinterface/buildlink3.mk"
-.include "../../misc/kuserfeedback/buildlink3.mk"
-.include "../../security/qt5-qtkeychain/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../misc/kf6-kstatusnotifieritem/buildlink3.mk"
+.include "../../misc/kf6-kuserfeedback/buildlink3.mk"
+.include "../../security/qt6-qtkeychain/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
