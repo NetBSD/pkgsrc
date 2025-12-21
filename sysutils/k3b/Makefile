@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.169 2025/10/23 20:39:20 wiz Exp $
+# $NetBSD: Makefile,v 1.170 2025/12/21 19:32:17 markd Exp $
 
 DISTNAME=	k3b-${KAPPSVER}
-PKGREVISION=	12
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://userbase.kde.org/K3b
@@ -10,7 +9,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.64.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 DEPENDS+=	cdrdao-[0-9]*:../../sysutils/cdrdao
 DEPENDS+=	{cdrtools,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrtools
 
@@ -50,15 +49,15 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 .include "../../audio/libsndfile/buildlink3.mk"
 #.include "../../audio/musepack/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
-.include "../../devel/kcmutils/buildlink3.mk"
-.include "../../devel/knotifyconfig/buildlink3.mk"
-.include "../../net/knewstuff/buildlink3.mk"
+.include "../../devel/kf6-kcmutils/buildlink3.mk"
+.include "../../devel/kf6-knotifyconfig/buildlink3.mk"
+.include "../../net/kf6-knewstuff/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../multimedia/ffmpeg5/buildlink3.mk"
+.include "../../multimedia/ffmpeg7/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libkcddb/buildlink3.mk"
-.include "../../sysutils/kfilemetadata5/buildlink3.mk"
+.include "../../sysutils/kf6-kfilemetadata/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtwebengine/buildlink3.mk"
+.include "../../wip/qt6-qtwebengine/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
