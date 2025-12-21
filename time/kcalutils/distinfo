@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/02/06 11:17:43 markd Exp $
+$NetBSD: distinfo,v 1.10 2025/12/21 20:00:09 markd Exp $
 
-BLAKE2s (kcalutils-23.08.4.tar.xz) = 69f1a33f208891c86ed3f25554df30f7a2b77fc8a8aa10b9995c73826f018864
-SHA512 (kcalutils-23.08.4.tar.xz) = 92743a2f18bbba757b74969742a2642182a4c129b76943d6f574edc3f0e736ad96f75f3e9c6d85637cfc20cfc477441216fe600f0c2f7991cc235d053e0a7e9f
-Size (kcalutils-23.08.4.tar.xz) = 353752 bytes
+BLAKE2s (kcalutils-25.08.3.tar.xz) = edc500891c8eadb1476362b390e72e896567f47af4bfafd69489aa52f165465f
+SHA512 (kcalutils-25.08.3.tar.xz) = b1b614b4e53b04f8c8cb5760a34c825572a90970fe50f94ed8b742feb2c8ce9b3240ea50550300144e92aaa451e95311feac7658019aa51eced2ed3dc3f95423
+Size (kcalutils-25.08.3.tar.xz) = 371840 bytes
