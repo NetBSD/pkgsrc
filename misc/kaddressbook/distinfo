@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/02/06 11:17:33 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/12/21 13:52:56 markd Exp $
 
-BLAKE2s (kaddressbook-23.08.4.tar.xz) = 134b76693e5cff49d2205d79ecf17ea8da3e82df912b90bfcc733677f6d7eec1
-SHA512 (kaddressbook-23.08.4.tar.xz) = 30633bf4e1fe86192779cc8380870d1c110259f38e81ba6a494ac44cd057442df72c68dbc177de4f8f1e1cdfbcb2e1c1740064de1d75bf05fc2e9f1048bb5a7b
-Size (kaddressbook-23.08.4.tar.xz) = 3458660 bytes
+BLAKE2s (kaddressbook-25.08.3.tar.xz) = 0baa69e0a8a6447be42e1941c83190f1b45ff56347d692888442ba1b696db957
+SHA512 (kaddressbook-25.08.3.tar.xz) = 46d49461b328f5f33249ed4dc2d19919dd953be1f29c141030597e3caa2aead3cf7d02330ad31a394775ac1d7d6774104267fc9c45c0b522a99d312051f403e9
+Size (kaddressbook-25.08.3.tar.xz) = 3444608 bytes
