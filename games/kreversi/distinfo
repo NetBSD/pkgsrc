@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2024/02/06 11:05:20 markd Exp $
+$NetBSD: distinfo,v 1.16 2025/12/21 11:38:03 markd Exp $
 
-BLAKE2s (kreversi-23.08.4.tar.xz) = e699ecea79ef4b2d45719bb6c3a7d67b43e81bb4de5ca755d69cc8dd5f201b5e
-SHA512 (kreversi-23.08.4.tar.xz) = 87028eb8533894120a578cb6e4efa3f8baf4556af0648a8a5a49d9fb9aa35e8d5a8b0c8dbd5efbb0e07bb7b47e6ed0896f3db4a9953e00c640b1fba84ea5cc80
-Size (kreversi-23.08.4.tar.xz) = 1079780 bytes
+BLAKE2s (kreversi-25.08.3.tar.xz) = fcd860ddd06f44e4ecb0dfef07425faf39ba7eabce0bc53e1d4e3f688aeedaee
+SHA512 (kreversi-25.08.3.tar.xz) = 97e394cb9b68e9bb752943c6bd26da5b63b0bacee2b602b655490e0fb370b5e4c834763d54f7e2f3b4c273fee0be28a42f851fdb39b8f3965dc91d4ce907ff78
+Size (kreversi-25.08.3.tar.xz) = 1037636 bytes
