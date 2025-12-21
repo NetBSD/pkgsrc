@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7297 2025/12/21 17:48:25 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7298 2025/12/21 17:50:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10557,3 +10557,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/slumber to 4.3.0 [wiz 2025-12-21]
 	Updated www/xh to 0.25.3 [pin 2025-12-21]
 	Updated textproc/ov to 0.50.2 [wiz 2025-12-21]
+	Updated comms/py-textual to 6.11.0 [wiz 2025-12-21]
