@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.138 2025/10/23 20:39:21 wiz Exp $
+# $NetBSD: Makefile,v 1.139 2025/12/21 19:42:17 markd Exp $
 
 DISTNAME=	kfilemetadata-${KF5VER}
 PKGNAME=	${DISTNAME:S/-/5-/}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -29,7 +29,6 @@ DEPENDS+=	catdoc-[0-9]*:../../textproc/catdoc
 .include "../../devel/kcoreaddons/buildlink3.mk"
 .include "../../devel/ki18n/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
-.include "../../graphics/kdegraphics-mobipocket/buildlink3.mk"
 .include "../../multimedia/ffmpeg7/buildlink3.mk"
 .include "../../print/poppler-qt5/buildlink3.mk"
 .include "../../textproc/ebook-tools/buildlink3.mk"
