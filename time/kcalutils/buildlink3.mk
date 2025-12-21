@@ -1,17 +1,18 @@
-# $NetBSD: buildlink3.mk,v 1.38 2025/10/23 20:39:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.39 2025/12/21 20:00:09 markd Exp $
 
 BUILDLINK_TREE+=	kcalutils
 
 .if !defined(KCALUTILS_BUILDLINK3_MK)
 KCALUTILS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.kcalutils+=	kcalutils>=17.12.1
-BUILDLINK_ABI_DEPENDS.kcalutils?=		kcalutils>=23.08.4nb10
+BUILDLINK_API_DEPENDS.kcalutils+=	kcalutils>=25.08.2
+BUILDLINK_ABI_DEPENDS.kcalutils?=	kcalutils>=25.08.2
 BUILDLINK_PKGSRCDIR.kcalutils?=		../../time/kcalutils
 
 .include "../../misc/kidentitymanagement/buildlink3.mk"
-.include "../../time/kcalendarcore/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../textproc/kf6-ktexttemplate/buildlink3.mk"
+.include "../../time/kf6-kcalendarcore/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .endif	# KCALUTILS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-kcalutils
