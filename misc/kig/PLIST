@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/08/03 04:14:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/12/21 14:12:53 markd Exp $
 bin/kig
 bin/pykig.py
 man/ca/man1/kig.1
@@ -13,7 +13,7 @@ man/pt_BR/man1/kig.1
 man/ru/man1/kig.1
 man/sv/man1/kig.1
 man/uk/man1/kig.1
-qt5/plugins/kf5/parts/kigpart.so
+qt6/plugins/kf6/parts/kigpart.so
 share/applications/org.kde.kig.desktop
 share/doc/HTML/ca/kig/index.cache.bz2
 share/doc/HTML/ca/kig/index.docbook
@@ -61,6 +61,8 @@ share/doc/HTML/es/kig/index.cache.bz2
 share/doc/HTML/es/kig/index.docbook
 share/doc/HTML/et/kig/index.cache.bz2
 share/doc/HTML/et/kig/index.docbook
+share/doc/HTML/fr/kig/index.cache.bz2
+share/doc/HTML/fr/kig/index.docbook
 share/doc/HTML/it/kig/index.cache.bz2
 share/doc/HTML/it/kig/index.docbook
 share/doc/HTML/nl/kig/index.cache.bz2
@@ -384,9 +386,6 @@ share/kig/icons/hicolor/scalable/actions/vector.svgz
 share/kig/icons/hicolor/scalable/actions/vectordifference.svgz
 share/kig/icons/hicolor/scalable/actions/vectorsum.svgz
 share/kig/icons/hicolor/scalable/actions/w.svgz
-share/kig/tips
-share/kxmlgui5/kig/kigpartui.rc
-share/kxmlgui5/kig/kigui.rc
 share/locale/ar/LC_MESSAGES/kig.mo
 share/locale/be/LC_MESSAGES/kig.mo
 share/locale/bg/LC_MESSAGES/kig.mo
@@ -453,4 +452,4 @@ share/locale/uk/LC_MESSAGES/kig.mo
 share/locale/xh/LC_MESSAGES/kig.mo
 share/locale/zh_CN/LC_MESSAGES/kig.mo
 share/locale/zh_TW/LC_MESSAGES/kig.mo
-share/metainfo/org.kde.kig.appdata.xml
+share/metainfo/org.kde.kig.metainfo.xml
