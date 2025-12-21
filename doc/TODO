@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26557 2025/12/21 15:45:54 wiz Exp $
+$NetBSD: TODO,v 1.26558 2025/12/21 15:47:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1144,7 +1144,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-simpletal-5.1
 	o py-sip-qt6-13.10.3
 	o py-sip6-6.15.1
-	o py-soupsieve-2.8.1
 	o py-sphinx-9.0.4
 	o py-sphinx-autodoc-typehints-3.6.0
 	o py-sybase-0.37
