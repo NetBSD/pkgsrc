@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.169 2025/10/23 20:39:01 wiz Exp $
+# $NetBSD: Makefile,v 1.170 2025/12/21 15:14:45 markd Exp $
 
 DISTNAME=	okular-${KAPPSVER}
-PKGREVISION=	19
 CATEGORIES=	print
 
 HOMEPAGE=	https://kde.org/applications/graphics/okular/
@@ -10,7 +9,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=5.19.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
@@ -26,24 +25,22 @@ SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
 .include "../../devel/chmlib/buildlink3.mk"
-.include "../../devel/kparts/buildlink3.mk"
-.include "../../devel/kpty/buildlink3.mk"
-.include "../../devel/purpose/buildlink3.mk"
-.include "../../devel/threadweaver/buildlink3.mk"
+.include "../../devel/kf6-kparts/buildlink3.mk"
+.include "../../devel/kf6-kpty/buildlink3.mk"
+.include "../../devel/kf6-purpose/buildlink3.mk"
+.include "../../devel/kf6-threadweaver/buildlink3.mk"
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/kdegraphics-mobipocket/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/libkexiv2/buildlink3.mk"
+.include "../../multimedia/phonon-qt6/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
-.include "../../print/poppler-qt5/buildlink3.mk"
-.include "../../security/qca2-qt5/buildlink3.mk"
+.include "../../print/poppler-qt6/buildlink3.mk"
+.include "../../security/qca2-qt6/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/discount/buildlink3.mk"
 .include "../../textproc/ebook-tools/buildlink3.mk"
-.include "../../www/kjs/buildlink3.mk"
-.include "../../www/khtml/buildlink3.mk"
-.include "../../x11/kactivities5/buildlink3.mk"
-.include "../../x11/kirigami2/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/plasma6-plasma-activities/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
