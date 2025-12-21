@@ -1,0 +1,26 @@
+$NetBSD: patch-src_3rdparty_chromium_base_allocator_partition__allocator_partition__alloc.gni,v 1.1 2025/12/21 09:38:12 markd Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/base/allocator/partition_allocator/partition_alloc.gni.orig	2025-10-02 00:36:39.000000000 +0000
++++ src/3rdparty/chromium/base/allocator/partition_allocator/partition_alloc.gni
+@@ -89,7 +89,7 @@ if (is_nacl) {
+ use_large_empty_slot_span_ring = true
+ 
+ has_memory_tagging =
+-    current_cpu == "arm64" && is_clang && !is_asan && (is_linux || is_android)
++    current_cpu == "arm64" && is_clang && !is_asan && !is_bsd (is_linux || is_android)
+ 
+ declare_args() {
+   # Debug configuration.
+@@ -490,7 +490,7 @@ assert(!use_asan_backup_ref_ptr || use_r
+ # dependencies that use partition_allocator are compiled in AOSP against a
+ # version of glibc that does not include pkeys syscall numbers.
+ is_pkeys_available =
+-    (is_linux || is_chromeos) && current_cpu == "x64" && !is_cronet_build
++    !is_bsd && (is_linux || is_chromeos) && current_cpu == "x64" && !is_cronet_build
+ declare_args() {
+   enable_pkeys = is_pkeys_available
+ }

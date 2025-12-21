@@ -1,0 +1,105 @@
+$NetBSD: patch-src_3rdparty_chromium_net_BUILD.gn,v 1.1 2025/12/21 09:38:33 markd Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/net/BUILD.gn.orig	2025-05-29 01:27:28.000000000 +0000
++++ src/3rdparty/chromium/net/BUILD.gn
+@@ -130,7 +130,7 @@ net_configs = [
+   "//build/config/compiler:wexit_time_destructors",
+ ]
+ 
+-if (is_linux || is_chromeos) {
++if ((is_linux || is_chromeos) && !is_bsd) {
+   net_configs += [ "//build/config/linux:libresolv" ]
+ }
+ 
+@@ -1294,6 +1294,23 @@ jumbo_component("net") {
+     ]
+   }
+ 
++  if (is_bsd) {
++    sources -= [
++      "base/address_map_cache_linux.cc",
++      "base/address_map_cache_linux.h",
++      "base/address_map_linux.cc",
++      "base/address_map_linux.h",
++      "base/address_tracker_linux.cc",
++      "base/address_tracker_linux.h",
++      "base/network_change_notifier_linux.cc",
++      "base/network_interfaces_linux.cc",
++    ]
++    jumbo_excluded_sources -= [
++      "base/address_tracker_linux.cc",
++      "base/network_interfaces_linux.cc",
++    ]
++  }   
++
+   if (is_mac) {
+     sources += [
+       "base/network_notification_thread_mac.cc",
+@@ -1458,7 +1471,7 @@ jumbo_component("net") {
+   }
+ 
+   # Use getifaddrs() on POSIX platforms, except Linux.
+-  if (is_posix && !is_linux && !is_chromeos) {
++  if ((is_posix && !is_linux && !is_chromeos) || is_bsd) {
+     sources += [
+       "base/network_interfaces_getifaddrs.cc",
+       "base/network_interfaces_getifaddrs.h",
+@@ -2125,7 +2138,7 @@ static_library("test_support") {
+     ]
+   }
+ 
+-  if (is_linux || is_chromeos || is_android) {
++  if ((is_linux || is_chromeos || is_android) && !is_bsd) {
+     sources += [
+       "base/address_tracker_linux_test_util.cc",
+       "base/address_tracker_linux_test_util.h",
+@@ -2934,14 +2947,14 @@ target(_test_target_type, "net_unittests
+     ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux && !is_bsd) {
+     sources += [
+       "base/network_change_notifier_linux_unittest.cc",
+       "proxy_resolution/proxy_config_service_linux_unittest.cc",
+     ]
+   }
+ 
+-  if (is_linux || is_chromeos) {
++  if ((is_linux || is_chromeos) && !is_bsd) {
+     sources += [
+       "base/address_tracker_linux_unittest.cc",
+       "base/network_interfaces_linux_unittest.cc",
+@@ -3034,6 +3047,10 @@ target(_test_target_type, "net_unittests
+     ]
+   }
+ 
++  if (is_bsd) {
++    deps += [ "//sandbox/policy" ]
++  }
++
+   if (enable_websockets) {
+     sources += [
+       "server/http_connection_unittest.cc",
+@@ -3100,7 +3117,7 @@ target(_test_target_type, "net_unittests
+     ]
+   }
+ 
+-  if (is_linux || is_chromeos) {
++  if ((is_linux || is_chromeos) && !is_bsd) {
+     sources += [ "tools/quic/quic_simple_server_test.cc" ]
+   }
+ 
+@@ -3239,7 +3256,7 @@ target(_test_target_type, "net_unittests
+   }
+ 
+   # Use getifaddrs() on POSIX platforms, except Linux.
+-  if (is_posix && !is_linux && !is_chromeos) {
++  if (is_posix && !is_linux && !is_chromeos && !is_bsd) {
+     sources += [ "base/network_interfaces_getifaddrs_unittest.cc" ]
+   }
+ 
