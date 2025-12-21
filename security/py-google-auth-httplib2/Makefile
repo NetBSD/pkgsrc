@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/11/02 20:03:19 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/12/21 17:13:26 wiz Exp $
 
-DISTNAME=	google_auth_httplib2-0.2.1
+DISTNAME=	google_auth_httplib2-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-auth-httplib2/}
@@ -18,8 +18,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-localserver>=0:../../devel/py-test-localserve
 
 USE_LANGUAGES=	# none
 
-# as of 0.2.1
-# 4 failed, 14 passed
+.if make(test)
+ALLOW_NETWORK_ACCESS=	yes
+.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
