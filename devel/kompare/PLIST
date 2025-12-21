@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2023/08/03 02:34:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/12/21 10:19:56 markd Exp $
 bin/kompare
 include/kompare/kompareinterface.h
-lib/libkomparedialogpages.so.5
+lib/libkomparedialogpages.so.6
 lib/libkompareinterface.so
-lib/libkompareinterface.so.5
-qt5/plugins/kf5/parts/komparenavtreepart.so
-qt5/plugins/kf5/parts/komparepart.so
+lib/libkompareinterface.so.6
+qt6/plugins/kf6/parts/komparenavtreepart.so
+qt6/plugins/kf6/parts/komparepart.so
 share/applications/org.kde.kompare.desktop
 share/doc/HTML/ca/kompare/index.cache.bz2
 share/doc/HTML/ca/kompare/index.docbook
@@ -41,6 +41,8 @@ share/doc/HTML/pt_BR/kompare/index.cache.bz2
 share/doc/HTML/pt_BR/kompare/index.docbook
 share/doc/HTML/ru/kompare/index.cache.bz2
 share/doc/HTML/ru/kompare/index.docbook
+share/doc/HTML/sl/kompare/index.cache.bz2
+share/doc/HTML/sl/kompare/index.docbook
 share/doc/HTML/sv/kompare/index.cache.bz2
 share/doc/HTML/sv/kompare/index.docbook
 share/doc/HTML/sv/kompare/settings-diff1.png
@@ -87,10 +89,12 @@ share/locale/fi/LC_MESSAGES/kompare.mo
 share/locale/fr/LC_MESSAGES/kompare.mo
 share/locale/ga/LC_MESSAGES/kompare.mo
 share/locale/gl/LC_MESSAGES/kompare.mo
+share/locale/he/LC_MESSAGES/kompare.mo
 share/locale/hi/LC_MESSAGES/kompare.mo
 share/locale/hne/LC_MESSAGES/kompare.mo
 share/locale/hr/LC_MESSAGES/kompare.mo
 share/locale/hu/LC_MESSAGES/kompare.mo
+share/locale/ia/LC_MESSAGES/kompare.mo
 share/locale/is/LC_MESSAGES/kompare.mo
 share/locale/it/LC_MESSAGES/kompare.mo
 share/locale/ja/LC_MESSAGES/kompare.mo
@@ -116,6 +120,7 @@ share/locale/pt/LC_MESSAGES/kompare.mo
 share/locale/pt_BR/LC_MESSAGES/kompare.mo
 share/locale/ro/LC_MESSAGES/kompare.mo
 share/locale/ru/LC_MESSAGES/kompare.mo
+share/locale/sa/LC_MESSAGES/kompare.mo
 share/locale/se/LC_MESSAGES/kompare.mo
 share/locale/sk/LC_MESSAGES/kompare.mo
 share/locale/sl/LC_MESSAGES/kompare.mo
@@ -134,4 +139,4 @@ share/locale/xh/LC_MESSAGES/kompare.mo
 share/locale/zh_CN/LC_MESSAGES/kompare.mo
 share/locale/zh_TW/LC_MESSAGES/kompare.mo
 share/metainfo/org.kde.kompare.appdata.xml
-share/qlogging-categories5/kompare.categories
+share/qlogging-categories6/kompare.categories
