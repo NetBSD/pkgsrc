@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.9 2023/08/03 04:15:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/12/21 14:14:02 markd Exp $
 bin/kiten
-bin/kitengen
 bin/kitenkanjibrowser
 bin/kitenradselect
 include/libkiten/DictEdict/dictfileedict.h
@@ -13,10 +12,9 @@ include/libkiten/dictquery.h
 include/libkiten/entry.h
 include/libkiten/entrylist.h
 include/libkiten/historyptrlist.h
-include/libkiten/kromajiedit.h
 lib/libkiten.so
-lib/libkiten.so.5
-lib/libkiten.so.5.0.0
+lib/libkiten.so.6
+lib/libkiten.so.6.0.0
 share/applications/org.kde.kiten.desktop
 share/applications/org.kde.kitenkanjibrowser.desktop
 share/applications/org.kde.kitenradselect.desktop
@@ -59,6 +57,8 @@ share/doc/HTML/pt_BR/kiten/index.cache.bz2
 share/doc/HTML/pt_BR/kiten/index.docbook
 share/doc/HTML/ru/kiten/index.cache.bz2
 share/doc/HTML/ru/kiten/index.docbook
+share/doc/HTML/sl/kiten/index.cache.bz2
+share/doc/HTML/sl/kiten/index.docbook
 share/doc/HTML/sv/kiten/index.cache.bz2
 share/doc/HTML/sv/kiten/index.docbook
 share/doc/HTML/sv/kiten/kiten1.png
@@ -92,11 +92,9 @@ share/kiten/kanjidic
 share/kiten/radkfile
 share/kiten/romkana.cnv
 share/kiten/vconj
-share/kxmlgui5/kiten/kitenui.rc
-share/kxmlgui5/kitenkanjibrowser/kanjibrowserui.rc
-share/kxmlgui5/kitenradselect/radselectui.rc
 share/locale/af/LC_MESSAGES/kiten.mo
 share/locale/ar/LC_MESSAGES/kiten.mo
+share/locale/ast/LC_MESSAGES/kiten.mo
 share/locale/be/LC_MESSAGES/kiten.mo
 share/locale/bg/LC_MESSAGES/kiten.mo
 share/locale/br/LC_MESSAGES/kiten.mo
@@ -118,10 +116,12 @@ share/locale/fi/LC_MESSAGES/kiten.mo
 share/locale/fr/LC_MESSAGES/kiten.mo
 share/locale/ga/LC_MESSAGES/kiten.mo
 share/locale/gl/LC_MESSAGES/kiten.mo
+share/locale/he/LC_MESSAGES/kiten.mo
 share/locale/hi/LC_MESSAGES/kiten.mo
 share/locale/hne/LC_MESSAGES/kiten.mo
 share/locale/hr/LC_MESSAGES/kiten.mo
 share/locale/hu/LC_MESSAGES/kiten.mo
+share/locale/ia/LC_MESSAGES/kiten.mo
 share/locale/is/LC_MESSAGES/kiten.mo
 share/locale/it/LC_MESSAGES/kiten.mo
 share/locale/ja/LC_MESSAGES/kiten.mo
@@ -146,6 +146,7 @@ share/locale/pt/LC_MESSAGES/kiten.mo
 share/locale/pt_BR/LC_MESSAGES/kiten.mo
 share/locale/ro/LC_MESSAGES/kiten.mo
 share/locale/ru/LC_MESSAGES/kiten.mo
+share/locale/sa/LC_MESSAGES/kiten.mo
 share/locale/se/LC_MESSAGES/kiten.mo
 share/locale/si/LC_MESSAGES/kiten.mo
 share/locale/sk/LC_MESSAGES/kiten.mo
