@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/10/06 09:56:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/12/21 19:39:45 markd Exp $
 bin/kfilemetadata_dump6
 include/KF6/KFileMetaData/KFileMetaData/EmbeddedImageData
 include/KF6/KFileMetaData/KFileMetaData/ExtractionResult
@@ -46,6 +46,7 @@ qt6/plugins/kf6/kfilemetadata/kfilemetadata_exiv2extractor.so
 qt6/plugins/kf6/kfilemetadata/kfilemetadata_fb2extractor.so
 qt6/plugins/kf6/kfilemetadata/kfilemetadata_ffmpegextractor.so
 qt6/plugins/kf6/kfilemetadata/kfilemetadata_krita.so
+qt6/plugins/kf6/kfilemetadata/kfilemetadata_mobiextractor.so
 qt6/plugins/kf6/kfilemetadata/kfilemetadata_odfextractor.so
 qt6/plugins/kf6/kfilemetadata/kfilemetadata_office2007extractor.so
 qt6/plugins/kf6/kfilemetadata/kfilemetadata_officeextractor.so
