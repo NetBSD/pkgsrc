@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/02/06 11:17:41 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/12/21 15:24:22 markd Exp $
 
-BLAKE2s (kleopatra-23.08.4.tar.xz) = 2710d5c2ebae57e717c235c1c8f7ac89ec710f3f6e9a776a9270e5f11ba46b07
-SHA512 (kleopatra-23.08.4.tar.xz) = 94cfb78ef42cd41bb32413b1d1355c450d4bab462ba966b2e895e2be500b6518ad50fc5eca56cf8a3cee61c8e3389d94b16978a8e234742d22b493aaada73478
-Size (kleopatra-23.08.4.tar.xz) = 2721028 bytes
+BLAKE2s (kleopatra-25.08.3.tar.xz) = b73c0b8ce2e7a10671c356382080f5d7793daa88e2c55ae7033d7bceaf5c6b72
+SHA512 (kleopatra-25.08.3.tar.xz) = 8fc5b2b0beec4d613e0ca30ecc9eccd3e4bbd6678b9465723ddc6cac42e3c0c777463e4ecb40d549fefc30361f4a0ffadcaa66584537d775749b52e6d4c529d4
+Size (kleopatra-25.08.3.tar.xz) = 2881980 bytes
