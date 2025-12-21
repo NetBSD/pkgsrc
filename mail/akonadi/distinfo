@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.28 2024/02/06 11:05:24 markd Exp $
+$NetBSD: distinfo,v 1.29 2025/12/21 12:56:08 markd Exp $
 
-BLAKE2s (akonadi-23.08.4.tar.xz) = 3756fb7d4f210b74c4886fb298a0ca766fab41bd1aabb46a2773e5699c671675
-SHA512 (akonadi-23.08.4.tar.xz) = 14094d320df5c0c512ce0da4ed94a3e1332c87e9abf7cc059b7cfcc2ee55efaea91e5c26817e1f1b3c0b2de79701a56ae81ac84ec54f0fd32a9099e2b09e94fe
-Size (akonadi-23.08.4.tar.xz) = 1662596 bytes
+BLAKE2s (akonadi-25.08.3.tar.xz) = 4583f3d782eb8425367566df17063f4bf673f836a2f9cdbd42aa6277ab63b34d
+SHA512 (akonadi-25.08.3.tar.xz) = cd142e4e0277e7c05907256e949c257aea435a7d210de6d39a844f18cb445bafefa16dfcd844b4c7d0ae4a1e188a2ae5aa91cc09e31269a61f6b7a7ad0247a28
+Size (akonadi-25.08.3.tar.xz) = 1767120 bytes
+SHA1 (patch-src_agentbase_agentbase.cpp) = 985f8279101e6488478bf7448cdc5e4152a8000a
+SHA1 (patch-src_agentbase_agentbase.h) = 05f224d316d132d43e80635a3b2cd95254043381
