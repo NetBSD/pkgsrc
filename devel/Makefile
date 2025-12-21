@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4553 2025/12/13 13:27:45 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4554 2025/12/21 21:43:46 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -257,7 +257,6 @@ SUBDIR+=	ccache3
 SUBDIR+=	ccls
 SUBDIR+=	cdecl
 SUBDIR+=	cdk
-SUBDIR+=	cervisia
 SUBDIR+=	cfitsio
 SUBDIR+=	cflow
 SUBDIR+=	cflow-mode
