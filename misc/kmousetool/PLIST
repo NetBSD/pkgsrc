@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/08/03 04:18:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/12/21 14:17:58 markd Exp $
 bin/kmousetool
 man/ca/man1/kmousetool.1
 man/de/man1/kmousetool.1
@@ -10,6 +10,7 @@ man/man1/kmousetool.1
 man/nl/man1/kmousetool.1
 man/pt/man1/kmousetool.1
 man/pt_BR/man1/kmousetool.1
+man/sl/man1/kmousetool.1
 man/sv/man1/kmousetool.1
 man/uk/man1/kmousetool.1
 share/applications/org.kde.kmousetool.desktop
@@ -33,6 +34,8 @@ share/doc/HTML/pt_BR/kmousetool/index.cache.bz2
 share/doc/HTML/pt_BR/kmousetool/index.docbook
 share/doc/HTML/ru/kmousetool/index.cache.bz2
 share/doc/HTML/ru/kmousetool/index.docbook
+share/doc/HTML/sl/kmousetool/index.cache.bz2
+share/doc/HTML/sl/kmousetool/index.docbook
 share/doc/HTML/sv/kmousetool/index.cache.bz2
 share/doc/HTML/sv/kmousetool/index.docbook
 share/doc/HTML/uk/kmousetool/index.cache.bz2
@@ -45,6 +48,7 @@ share/icons/hicolor/32x32/actions/kmousetool_on.png
 share/icons/hicolor/32x32/apps/kmousetool.png
 share/kmousetool/sounds/mousetool_tap.wav
 share/locale/ar/LC_MESSAGES/kmousetool.mo
+share/locale/ast/LC_MESSAGES/kmousetool.mo
 share/locale/be/LC_MESSAGES/kmousetool.mo
 share/locale/bg/LC_MESSAGES/kmousetool.mo
 share/locale/br/LC_MESSAGES/kmousetool.mo
@@ -98,6 +102,7 @@ share/locale/pt/LC_MESSAGES/kmousetool.mo
 share/locale/pt_BR/LC_MESSAGES/kmousetool.mo
 share/locale/ro/LC_MESSAGES/kmousetool.mo
 share/locale/ru/LC_MESSAGES/kmousetool.mo
+share/locale/sa/LC_MESSAGES/kmousetool.mo
 share/locale/se/LC_MESSAGES/kmousetool.mo
 share/locale/sk/LC_MESSAGES/kmousetool.mo
 share/locale/sl/LC_MESSAGES/kmousetool.mo
