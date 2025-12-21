@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2024/02/06 11:17:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/12/21 14:42:02 markd Exp $
 bin/pimdataexporter
 bin/pimdataexporterconsole
-lib/libpimdataexporterprivate.so.5
-lib/libpimdataexporterprivate.so.5.24.4
+lib/libpimdataexporterprivate.so.6
+lib/libpimdataexporterprivate.so.6.5.3
 share/applications/org.kde.pimdataexporter.desktop
 share/config.kcfg/pimdataexporterglobalconfig.kcfg
 share/doc/HTML/ca/pimsettingexporter/index.cache.bz2
@@ -27,11 +27,14 @@ share/doc/HTML/pt_BR/pimsettingexporter/index.cache.bz2
 share/doc/HTML/pt_BR/pimsettingexporter/index.docbook
 share/doc/HTML/ru/pimsettingexporter/index.cache.bz2
 share/doc/HTML/ru/pimsettingexporter/index.docbook
+share/doc/HTML/sl/pimsettingexporter/index.cache.bz2
+share/doc/HTML/sl/pimsettingexporter/index.docbook
 share/doc/HTML/sv/pimsettingexporter/index.cache.bz2
 share/doc/HTML/sv/pimsettingexporter/index.docbook
 share/doc/HTML/uk/pimsettingexporter/index.cache.bz2
 share/doc/HTML/uk/pimsettingexporter/index.docbook
 share/locale/ar/LC_MESSAGES/pimdataexporter.mo
+share/locale/ast/LC_MESSAGES/pimdataexporter.mo
 share/locale/az/LC_MESSAGES/pimdataexporter.mo
 share/locale/bg/LC_MESSAGES/pimdataexporter.mo
 share/locale/bs/LC_MESSAGES/pimdataexporter.mo
@@ -50,6 +53,8 @@ share/locale/fi/LC_MESSAGES/pimdataexporter.mo
 share/locale/fr/LC_MESSAGES/pimdataexporter.mo
 share/locale/ga/LC_MESSAGES/pimdataexporter.mo
 share/locale/gl/LC_MESSAGES/pimdataexporter.mo
+share/locale/he/LC_MESSAGES/pimdataexporter.mo
+share/locale/hi/LC_MESSAGES/pimdataexporter.mo
 share/locale/hu/LC_MESSAGES/pimdataexporter.mo
 share/locale/ia/LC_MESSAGES/pimdataexporter.mo
 share/locale/it/LC_MESSAGES/pimdataexporter.mo
@@ -69,6 +74,7 @@ share/locale/pt/LC_MESSAGES/pimdataexporter.mo
 share/locale/pt_BR/LC_MESSAGES/pimdataexporter.mo
 share/locale/ro/LC_MESSAGES/pimdataexporter.mo
 share/locale/ru/LC_MESSAGES/pimdataexporter.mo
+share/locale/sa/LC_MESSAGES/pimdataexporter.mo
 share/locale/sk/LC_MESSAGES/pimdataexporter.mo
 share/locale/sl/LC_MESSAGES/pimdataexporter.mo
 share/locale/sr/LC_MESSAGES/pimdataexporter.mo
@@ -76,11 +82,12 @@ share/locale/sr@ijekavian/LC_MESSAGES/pimdataexporter.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/pimdataexporter.mo
 share/locale/sr@latin/LC_MESSAGES/pimdataexporter.mo
 share/locale/sv/LC_MESSAGES/pimdataexporter.mo
+share/locale/ta/LC_MESSAGES/pimdataexporter.mo
 share/locale/tr/LC_MESSAGES/pimdataexporter.mo
 share/locale/ug/LC_MESSAGES/pimdataexporter.mo
 share/locale/uk/LC_MESSAGES/pimdataexporter.mo
 share/locale/zh_CN/LC_MESSAGES/pimdataexporter.mo
 share/locale/zh_TW/LC_MESSAGES/pimdataexporter.mo
 share/metainfo/org.kde.pimdataexporter.appdata.xml
-share/qlogging-categories5/pimdataexporter.categories
-share/qlogging-categories5/pimdataexporter.renamecategories
+share/qlogging-categories6/pimdataexporter.categories
+share/qlogging-categories6/pimdataexporter.renamecategories
