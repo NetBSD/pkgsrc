@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/02/06 11:17:43 markd Exp $
+$NetBSD: distinfo,v 1.6 2025/12/21 20:01:45 markd Exp $
 
-BLAKE2s (korganizer-23.08.4.tar.xz) = f518d12e96baca51706b66b4a885047fee0c5d464906338176fa02753ab58700
-SHA512 (korganizer-23.08.4.tar.xz) = f4637b29bd123a1bcf405f3e2d1ff75bfaded40b5004f3a976c1713d701a37bc0c3fa98862bd052a81be159ae9f63fed1ac56de18d6a284c1e3ef2175693883b
-Size (korganizer-23.08.4.tar.xz) = 2566568 bytes
+BLAKE2s (korganizer-25.08.3.tar.xz) = cb1e2043d68ef036727d181cc44b4eaa12a525e0fbcb121b8c1fe223e9dfa732
+SHA512 (korganizer-25.08.3.tar.xz) = b102aca867208eff26d2f6d427004b17d8fa227ff84ea884103545a42962aedae1b8c3afb34a1f445a9f54b4b984f1bcf4355863c5ca26ddc95661f06da86be9
+Size (korganizer-25.08.3.tar.xz) = 3056900 bytes
