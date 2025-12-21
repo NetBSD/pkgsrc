@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2025/10/23 20:38:31 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2025/12/21 14:51:43 markd Exp $
 
 DISTNAME=	ffmpegthumbs-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	multimedia
 
 HOMEPAGE=	https://kde.org/applications/multimedia/
@@ -13,7 +12,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2
 USE_TOOLS+=	pkg-config
 
 .include "../../audio/taglib/buildlink3.mk"
-.include "../../devel/kio/buildlink3.mk"
-.include "../../multimedia/ffmpeg5/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../devel/kf6-kio/buildlink3.mk"
+.include "../../multimedia/ffmpeg7/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
