@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/02/06 11:17:34 markd Exp $
+$NetBSD: distinfo,v 1.10 2025/12/21 13:59:24 markd Exp $
 
-BLAKE2s (kdeedu-data-23.08.4.tar.xz) = 35ee919cd2858560be082bc1f8fab6b2695de9d6e7f7cfcfb1b7e365f3dcd2df
-SHA512 (kdeedu-data-23.08.4.tar.xz) = 0c41aeb6bac9a45ff6d0022e7d38ba532c95efe01ea8109789d0f7e33b15d104f65941b3c9c6feef00db38c0dfac21c6818241e0642d46aba63f2fe5a9bcdb23
-Size (kdeedu-data-23.08.4.tar.xz) = 333520 bytes
+BLAKE2s (kdeedu-data-25.08.3.tar.xz) = f1b1bcb93dcd67a6358d8c50e990684e0b73d0d17d99c23373144ebdddff9f22
+SHA512 (kdeedu-data-25.08.3.tar.xz) = faa405dbbb5be8121e51dc9c6778ba1064dee5e794783a0d70068afe10b6ee6040d892b671d7431d74a7d6b7e1e3e91d0344a71dcfb953b15eddc342f37ed1d3
+Size (kdeedu-data-25.08.3.tar.xz) = 338840 bytes
