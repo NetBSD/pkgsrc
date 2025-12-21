@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/02/06 11:05:15 markd Exp $
+$NetBSD: distinfo,v 1.12 2025/12/21 10:25:40 markd Exp $
 
-BLAKE2s (libkomparediff2-23.08.4.tar.xz) = baade2fd4544abe85098729fe16193f2545591613096a9caa21869e1d77f09b7
-SHA512 (libkomparediff2-23.08.4.tar.xz) = 41cb1e0ed94406789093a2da805cc2762353a76c8a1b3ca6b89ec689d000069faf26095a90190a736ebc52636134138346976fdec3d531d7eb7c50c72c2844ce
-Size (libkomparediff2-23.08.4.tar.xz) = 188264 bytes
+BLAKE2s (libkomparediff2-25.08.3.tar.xz) = 02cc5860c2a45a11bf17bde5b7d535d58f0e4e981cfd8918d0b640eb36e16480
+SHA512 (libkomparediff2-25.08.3.tar.xz) = dc96c6eb74b2c538dc149d80539bc6d65d9cb9c325b9ced4373f03f1baaddce921cfbe48a262965618c43d4c76537b51986b36b4e8098471e4773092a872b125
+Size (libkomparediff2-25.08.3.tar.xz) = 186404 bytes
