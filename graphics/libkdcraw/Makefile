@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.103 2025/10/23 20:37:38 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2025/12/21 12:35:52 markd Exp $
 
 DISTNAME=	libkdcraw-${KAPPSVER}
-PKGREVISION=	8
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://kde.org/applications/graphics/
@@ -12,7 +11,9 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2
 
 USE_TOOLS+=	pkg-config
 
+CMAKE_CONFIGURE_ARGS+=	-DQT_MAJOR_VERSION=6
+
 BUILDLINK_API_DEPENDS.libraw+=	libraw>=0.18.0
 .include "../../graphics/libraw/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
