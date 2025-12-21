@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/02/06 11:17:37 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/12/21 14:32:11 markd Exp $
 
-BLAKE2s (libkdepim-23.08.4.tar.xz) = 7f47a267d5b7d7dd6a11c91184e1afb30047287690838fc79c2a18df20eb26d3
-SHA512 (libkdepim-23.08.4.tar.xz) = 1b1125c8f90b04646253b9d97c65f8d5d23d2faca74b545958fe8412937edc3c36966c78e778eee83e9938d8c355bfb93a82783700412b505a1b907e6a7411db
-Size (libkdepim-23.08.4.tar.xz) = 285312 bytes
+BLAKE2s (libkdepim-25.08.3.tar.xz) = 3c07ca0293933f763281c70a6ac81fc7a9370dbbec111b754a103fe3e5a7609b
+SHA512 (libkdepim-25.08.3.tar.xz) = c00392e3a344c5259620b54d241ea5c9513fc561ec4efd1a492564e61a6aa787eafb2a91e053568a14e21d1284e3604f6c66c0441e602064200f567bcd0b954a
+Size (libkdepim-25.08.3.tar.xz) = 285284 bytes
