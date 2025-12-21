@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/08/03 03:45:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/12/21 12:29:21 markd Exp $
 bin/kruler
 share/applications/org.kde.kruler.desktop
 share/doc/HTML/ca/kruler/index.cache.bz2
@@ -29,8 +29,12 @@ share/doc/HTML/pt_BR/kruler/kruler-settings.png
 share/doc/HTML/pt_BR/kruler/kruler.png
 share/doc/HTML/ru/kruler/index.cache.bz2
 share/doc/HTML/ru/kruler/index.docbook
+share/doc/HTML/sl/kruler/index.cache.bz2
+share/doc/HTML/sl/kruler/index.docbook
 share/doc/HTML/sv/kruler/index.cache.bz2
 share/doc/HTML/sv/kruler/index.docbook
+share/doc/HTML/tr/kruler/index.cache.bz2
+share/doc/HTML/tr/kruler/index.docbook
 share/doc/HTML/uk/kruler/index.cache.bz2
 share/doc/HTML/uk/kruler/index.docbook
 share/doc/HTML/uk/kruler/kruler-settings.png
@@ -48,10 +52,11 @@ share/icons/hicolor/22x22/apps/kruler.png
 share/icons/hicolor/32x32/apps/kruler.png
 share/icons/hicolor/48x48/apps/kruler.png
 share/icons/hicolor/64x64/apps/kruler.png
-share/knotifications5/kruler.notifyrc
+share/knotifications6/kruler.notifyrc
 share/kruler/sounds/move.wav
 share/locale/af/LC_MESSAGES/kruler.mo
 share/locale/ar/LC_MESSAGES/kruler.mo
+share/locale/ast/LC_MESSAGES/kruler.mo
 share/locale/be/LC_MESSAGES/kruler.mo
 share/locale/bg/LC_MESSAGES/kruler.mo
 share/locale/br/LC_MESSAGES/kruler.mo
@@ -106,6 +111,7 @@ share/locale/pt/LC_MESSAGES/kruler.mo
 share/locale/pt_BR/LC_MESSAGES/kruler.mo
 share/locale/ro/LC_MESSAGES/kruler.mo
 share/locale/ru/LC_MESSAGES/kruler.mo
+share/locale/sa/LC_MESSAGES/kruler.mo
 share/locale/se/LC_MESSAGES/kruler.mo
 share/locale/si/LC_MESSAGES/kruler.mo
 share/locale/sk/LC_MESSAGES/kruler.mo

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2024/02/06 11:05:23 markd Exp $
+$NetBSD: distinfo,v 1.20 2025/12/21 12:29:21 markd Exp $
 
-BLAKE2s (kruler-23.08.4.tar.xz) = eb5c46e8204b38989a49f83ac831cff901bd1dcc2ada0edebaa67ff16e5ead56
-SHA512 (kruler-23.08.4.tar.xz) = 9cb5831e156d8ce55164ec7c1f8ac39960f7334ed82b6202156560a65d398e33b5cf3ac6e4779eefa4ef6081267d28c75b781e8ddd3457c969a3a30eff1a6714
-Size (kruler-23.08.4.tar.xz) = 288464 bytes
+BLAKE2s (kruler-25.08.3.tar.xz) = 90c5c208c5859ced0b9ad953f22b0e1729d35ebc1045d66e9df323a3a79c2fa4
+SHA512 (kruler-25.08.3.tar.xz) = b3ef65b67efa5818842e8852242ff1db56ad889b820e6346571d6f8a81c80575a7ecd3c9b1c706e25c30b0d474de7f29844bcc5f28057b5d9ef0cf1f8dde4829
+Size (kruler-25.08.3.tar.xz) = 287432 bytes
