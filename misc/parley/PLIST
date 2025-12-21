@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/14 23:48:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/12/21 14:40:30 markd Exp $
 bin/parley
 share/applications/org.kde.parley.desktop
 share/config.kcfg/documentsettings.kcfg
@@ -168,6 +168,8 @@ share/doc/HTML/pt_BR/parley/index.cache.bz2
 share/doc/HTML/pt_BR/parley/index.docbook
 share/doc/HTML/ru/parley/index.cache.bz2
 share/doc/HTML/ru/parley/index.docbook
+share/doc/HTML/sl/parley/index.cache.bz2
+share/doc/HTML/sl/parley/index.docbook
 share/doc/HTML/sv/parley/index.cache.bz2
 share/doc/HTML/sv/parley/index.docbook
 share/doc/HTML/uk/parley/index.cache.bz2
@@ -250,20 +252,9 @@ share/icons/oxygen/scalable/actions/set-language.svgz
 share/icons/oxygen/scalable/actions/specific-setup.svgz
 share/knsrcfiles/parley-themes.knsrc
 share/knsrcfiles/parley.knsrc
-share/kxmlgui5/parley/dashboardui.rc
-share/kxmlgui5/parley/editorui.rc
-share/kxmlgui5/parley/parleyui.rc
-share/kxmlgui5/parley/practicesummaryui.rc
-share/kxmlgui5/parley/practiceui.rc
-share/kxmlgui5/parley/statisticsui.rc
-share/kxmlgui5/parley/themes/bees_theme.desktop
-share/kxmlgui5/parley/themes/bees_theme.svgz
-share/kxmlgui5/parley/themes/bees_theme_preview.jpg
-share/kxmlgui5/parley/themes/theme_reference.desktop
-share/kxmlgui5/parley/themes/theme_reference.svgz
-share/kxmlgui5/parley/themes/theme_reference_preview.jpg
 share/locale/af/LC_MESSAGES/parley.mo
 share/locale/ar/LC_MESSAGES/parley.mo
+share/locale/ast/LC_MESSAGES/parley.mo
 share/locale/be/LC_MESSAGES/parley.mo
 share/locale/bg/LC_MESSAGES/parley.mo
 share/locale/bn/LC_MESSAGES/parley.mo
@@ -316,6 +307,7 @@ share/locale/pt/LC_MESSAGES/parley.mo
 share/locale/pt_BR/LC_MESSAGES/parley.mo
 share/locale/ro/LC_MESSAGES/parley.mo
 share/locale/ru/LC_MESSAGES/parley.mo
+share/locale/sa/LC_MESSAGES/parley.mo
 share/locale/se/LC_MESSAGES/parley.mo
 share/locale/si/LC_MESSAGES/parley.mo
 share/locale/sk/LC_MESSAGES/parley.mo
