@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7274 2025/12/21 14:42:14 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7275 2025/12/21 14:43:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10534,3 +10534,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/libgee to 0.20.8 [prlw1 2025-12-21]
 	Updated converters/TECkit to 2.5.13 [wiz 2025-12-21]
 	Updated textproc/dasel to 3.1.4 [wiz 2025-12-21]
+	Updated devel/gopls to 0.21.0 [wiz 2025-12-21]
