@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.668 2025/12/21 21:36:45 markd Exp $
+# $NetBSD: Makefile,v 1.669 2025/12/21 22:05:21 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -168,7 +168,6 @@ SUBDIR+=	klettres
 SUBDIR+=	kmag
 SUBDIR+=	kmousetool
 SUBDIR+=	kmouth
-SUBDIR+=	knotes
 SUBDIR+=	kontact
 SUBDIR+=	kontactinterface
 SUBDIR+=	kp
