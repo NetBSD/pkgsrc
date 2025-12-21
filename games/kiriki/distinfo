@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2024/02/06 11:05:19 markd Exp $
+$NetBSD: distinfo,v 1.16 2025/12/21 11:21:15 markd Exp $
 
-BLAKE2s (kiriki-23.08.4.tar.xz) = 66f40fd64f8ee5056c34c15be141612e3ddf8aa539cc55d31fca6c137853c19e
-SHA512 (kiriki-23.08.4.tar.xz) = c76eb2c628acad96a1d6deb71f3fe8c95866e0ed7154e388361f22fdc23f36b046031706f0bb92423cf9d3ab9d71c52935a86ecdab635336f68056e4be7a594c
-Size (kiriki-23.08.4.tar.xz) = 371504 bytes
+BLAKE2s (kiriki-25.08.3.tar.xz) = 73ddcd3b38815f885fde487a30cc8b2fb40db436763f3ce9d944e1835c87001a
+SHA512 (kiriki-25.08.3.tar.xz) = a5ddf62f7f1ec3b81ef01de37f115bf3f7de93c1d772e4dde7f631c2d7950d07aadb8e2d5baef9e1cb276611f17f413fd3044bdda6a9764a84fb043928f8c2c1
+Size (kiriki-25.08.3.tar.xz) = 376216 bytes
