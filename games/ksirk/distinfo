@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2024/02/06 11:05:21 markd Exp $
+$NetBSD: distinfo,v 1.16 2025/12/21 11:40:58 markd Exp $
 
-BLAKE2s (ksirk-23.08.4.tar.xz) = 372d6c93df04ee6e887963d0bdab00c451971e5d8f533a81e88121ad24eb1f76
-SHA512 (ksirk-23.08.4.tar.xz) = f780c07eeae667b3c3b9c9af1dc011dc2704eb28f9773c24020c34d985c7c3f825d9b0c8bcddfec1c6a066a671e94391d7c4ce4f4c02c0cf48f9f6ea0d36660f
-Size (ksirk-23.08.4.tar.xz) = 7079372 bytes
+BLAKE2s (ksirk-25.08.3.tar.xz) = 82ff8c78e23b4f13bb0fb373c08412796dbb456bdfdc086301098852acbc1e24
+SHA512 (ksirk-25.08.3.tar.xz) = 4ee8afdba5599ed4df6ecc1cc1bae485d0790ef8f8aa163d3325a5951af35e02cfa7bac6343d5ab3224a0bb73f1973b3d605abc47a93bcfd0ea8bf2488cb7f53
+Size (ksirk-25.08.3.tar.xz) = 6722584 bytes
