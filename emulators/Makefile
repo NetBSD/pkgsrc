@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.376 2025/12/21 07:07:16 wiz Exp $
+# $NetBSD: Makefile,v 1.377 2025/12/21 10:01:55 nia Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -436,6 +436,7 @@ SUBDIR+=	vice
 SUBDIR+=	visualboyadvance-m
 SUBDIR+=	vmips
 SUBDIR+=	wine
+SUBDIR+=	wine5
 SUBDIR+=	x16-emulator
 SUBDIR+=	x16-rom
 SUBDIR+=	x48
