@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.102 2025/10/23 20:38:28 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2025/12/21 14:47:27 markd Exp $
 
 DISTNAME=	step-${KAPPSVER}
-PKGREVISION=	13
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/step/
@@ -10,21 +9,21 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		yes
 .include "../../lang/python/tool.mk"
 
-.include "../../graphics/kplotting/buildlink3.mk"
+.include "../../devel/kf6-kio/buildlink3.mk"
+.include "../../graphics/kf6-kplotting/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../math/qalculate/buildlink3.mk"
-.include "../../net/knewstuff/buildlink3.mk"
+.include "../../net/kf6-knewstuff/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../www/khtml/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/kf6-kxmlgui/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
