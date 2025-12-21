@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2025/10/23 20:37:28 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2025/12/21 07:39:23 wiz Exp $
 
 DISTNAME=	gdk-pixbuf-2.42.12
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdk-pixbuf/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://developer.gnome.org/gdk-pixbuf
+HOMEPAGE=	https://gitlab.gnome.org/GNOME/gdk-pixbuf
 COMMENT=	Library for image loading and manipulation
 LICENSE=	gnu-gpl-v2
 
