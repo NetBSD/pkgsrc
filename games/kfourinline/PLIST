@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/08/03 02:59:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/12/21 11:11:49 markd Exp $
 bin/kfourinline
 bin/kfourinlineproc
 share/applications/org.kde.kfourinline.desktop
@@ -29,6 +29,8 @@ share/doc/HTML/pt/kfourinline/index.cache.bz2
 share/doc/HTML/pt/kfourinline/index.docbook
 share/doc/HTML/pt_BR/kfourinline/index.cache.bz2
 share/doc/HTML/pt_BR/kfourinline/index.docbook
+share/doc/HTML/sl/kfourinline/index.cache.bz2
+share/doc/HTML/sl/kfourinline/index.docbook
 share/doc/HTML/sv/kfourinline/index.cache.bz2
 share/doc/HTML/sv/kfourinline/index.docbook
 share/doc/HTML/uk/kfourinline/gameboard.png
@@ -41,19 +43,20 @@ share/icons/hicolor/22x22/apps/kfourinline.png
 share/icons/hicolor/32x32/apps/kfourinline.png
 share/icons/hicolor/48x48/apps/kfourinline.png
 share/icons/hicolor/64x64/apps/kfourinline.png
-share/kfourinline/grafix/default.desktop
-share/kfourinline/grafix/default.rc
-share/kfourinline/grafix/default.svg
-share/kfourinline/grafix/gray_reflection.desktop
-share/kfourinline/grafix/gray_reflection.rc
-share/kfourinline/grafix/gray_reflection.svg
-share/kfourinline/grafix/yellow.desktop
-share/kfourinline/grafix/yellow.rc
-share/kfourinline/grafix/yellow.svg
-share/kfourinline/grafix/yellow_reflection.desktop
-share/kfourinline/grafix/yellow_reflection.rc
+share/kfourinline/themes/default.desktop
+share/kfourinline/themes/default.rc
+share/kfourinline/themes/default.svgz
+share/kfourinline/themes/gray_reflection.desktop
+share/kfourinline/themes/gray_reflection.rc
+share/kfourinline/themes/gray_reflection.svgz
+share/kfourinline/themes/yellow.desktop
+share/kfourinline/themes/yellow.rc
+share/kfourinline/themes/yellow.svgz
+share/kfourinline/themes/yellow_reflection.desktop
+share/kfourinline/themes/yellow_reflection.rc
 share/locale/af/LC_MESSAGES/kfourinline.mo
 share/locale/ar/LC_MESSAGES/kfourinline.mo
+share/locale/ast/LC_MESSAGES/kfourinline.mo
 share/locale/be/LC_MESSAGES/kfourinline.mo
 share/locale/bg/LC_MESSAGES/kfourinline.mo
 share/locale/br/LC_MESSAGES/kfourinline.mo
@@ -76,8 +79,10 @@ share/locale/fr/LC_MESSAGES/kfourinline.mo
 share/locale/ga/LC_MESSAGES/kfourinline.mo
 share/locale/gl/LC_MESSAGES/kfourinline.mo
 share/locale/he/LC_MESSAGES/kfourinline.mo
+share/locale/hi/LC_MESSAGES/kfourinline.mo
 share/locale/hr/LC_MESSAGES/kfourinline.mo
 share/locale/hu/LC_MESSAGES/kfourinline.mo
+share/locale/ia/LC_MESSAGES/kfourinline.mo
 share/locale/id/LC_MESSAGES/kfourinline.mo
 share/locale/is/LC_MESSAGES/kfourinline.mo
 share/locale/it/LC_MESSAGES/kfourinline.mo
@@ -104,6 +109,7 @@ share/locale/pt/LC_MESSAGES/kfourinline.mo
 share/locale/pt_BR/LC_MESSAGES/kfourinline.mo
 share/locale/ro/LC_MESSAGES/kfourinline.mo
 share/locale/ru/LC_MESSAGES/kfourinline.mo
+share/locale/sa/LC_MESSAGES/kfourinline.mo
 share/locale/sk/LC_MESSAGES/kfourinline.mo
 share/locale/sl/LC_MESSAGES/kfourinline.mo
 share/locale/sr/LC_MESSAGES/kfourinline.mo
@@ -122,4 +128,5 @@ share/locale/xh/LC_MESSAGES/kfourinline.mo
 share/locale/zh_CN/LC_MESSAGES/kfourinline.mo
 share/locale/zh_TW/LC_MESSAGES/kfourinline.mo
 share/metainfo/org.kde.kfourinline.appdata.xml
-share/qlogging-categories5/kfourinline.categories
+share/qlogging-categories6/kfourinline.categories
+share/qlogging-categories6/kfourinline.renamecategories
