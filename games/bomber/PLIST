@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/08/03 02:46:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/12/21 10:49:29 markd Exp $
 bin/bomber
 share/applications/org.kde.bomber.desktop
 share/bomber/sounds/bomb.ogg
@@ -37,6 +37,8 @@ share/doc/HTML/pt/bomber/index.cache.bz2
 share/doc/HTML/pt/bomber/index.docbook
 share/doc/HTML/pt_BR/bomber/index.cache.bz2
 share/doc/HTML/pt_BR/bomber/index.docbook
+share/doc/HTML/sl/bomber/index.cache.bz2
+share/doc/HTML/sl/bomber/index.docbook
 share/doc/HTML/sv/bomber/index.cache.bz2
 share/doc/HTML/sv/bomber/index.docbook
 share/doc/HTML/uk/bomber/index.cache.bz2
@@ -49,6 +51,7 @@ share/icons/hicolor/32x32/apps/bomber.png
 share/icons/hicolor/48x48/apps/bomber.png
 share/icons/hicolor/64x64/apps/bomber.png
 share/locale/ar/LC_MESSAGES/bomber.mo
+share/locale/ast/LC_MESSAGES/bomber.mo
 share/locale/bg/LC_MESSAGES/bomber.mo
 share/locale/bs/LC_MESSAGES/bomber.mo
 share/locale/ca/LC_MESSAGES/bomber.mo
@@ -68,8 +71,10 @@ share/locale/ga/LC_MESSAGES/bomber.mo
 share/locale/gl/LC_MESSAGES/bomber.mo
 share/locale/gu/LC_MESSAGES/bomber.mo
 share/locale/he/LC_MESSAGES/bomber.mo
+share/locale/hi/LC_MESSAGES/bomber.mo
 share/locale/hr/LC_MESSAGES/bomber.mo
 share/locale/hu/LC_MESSAGES/bomber.mo
+share/locale/ia/LC_MESSAGES/bomber.mo
 share/locale/id/LC_MESSAGES/bomber.mo
 share/locale/is/LC_MESSAGES/bomber.mo
 share/locale/it/LC_MESSAGES/bomber.mo
@@ -94,6 +99,7 @@ share/locale/pt/LC_MESSAGES/bomber.mo
 share/locale/pt_BR/LC_MESSAGES/bomber.mo
 share/locale/ro/LC_MESSAGES/bomber.mo
 share/locale/ru/LC_MESSAGES/bomber.mo
+share/locale/sa/LC_MESSAGES/bomber.mo
 share/locale/sk/LC_MESSAGES/bomber.mo
 share/locale/sl/LC_MESSAGES/bomber.mo
 share/locale/sq/LC_MESSAGES/bomber.mo
