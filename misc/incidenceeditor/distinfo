@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/02/06 11:17:33 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/12/21 13:51:08 markd Exp $
 
-BLAKE2s (incidenceeditor-23.08.4.tar.xz) = fa8d926c1c0587c519f94a004eab00819bd95251209b66615a4abcd28172d087
-SHA512 (incidenceeditor-23.08.4.tar.xz) = 101b4daf9c94afacce69725cb2e64f8d337844cb577d8b83d074a6cb50ec12c30bb5e97f87743a79964c691ebec16eec0a382306eb6f465e75108d86c421b24d
-Size (incidenceeditor-23.08.4.tar.xz) = 580832 bytes
+BLAKE2s (incidenceeditor-25.08.3.tar.xz) = 1ed18b0dc850c197b16498bbb053e559c2a08520283de5e9c3a7bf1c8eb40309
+SHA512 (incidenceeditor-25.08.3.tar.xz) = b7f219b86c90c39652df116e57576d8e8cee42dac4c5c0f59f17cc62a16664ff31432c7518cb0c13256d7b88de32fbe6b32d3bc3d815197b3827c93a2597a25c
+Size (incidenceeditor-25.08.3.tar.xz) = 606936 bytes
