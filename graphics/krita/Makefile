@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.156 2025/11/30 10:17:43 markd Exp $
+# $NetBSD: Makefile,v 1.157 2025/12/21 12:44:07 markd Exp $
 
 DISTNAME=	krita-5.2.11
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=krita/${PKGVERSION_NOREV}/}
 
@@ -10,6 +10,7 @@ HOMEPAGE=	https://www.krita.org/
 COMMENT=	Raster graphics editor for digital painting
 LICENSE=	gnu-gpl-v3
 
+STILL_QT5=	yes
 .include "../../meta-pkgs/kde/applications.mk"
 
 USE_TOOLS+=		msgfmt pkg-config perl
@@ -56,7 +57,7 @@ BUILDLINK_API_DEPENDS.boost-header+=	boost-headers>=1.73.0nb1
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libheif/buildlink3.mk"
 .include "../../graphics/libjxl/buildlink3.mk"
-.include "../../graphics/libkdcraw/buildlink3.mk"
+.include "../../graphics/libkdcraw-qt5/buildlink3.mk"
 .include "../../graphics/libmypaint/buildlink3.mk"
 .include "../../graphics/libraw/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
