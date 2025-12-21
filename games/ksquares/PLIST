@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/08/03 03:24:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/12/21 11:45:33 markd Exp $
 bin/ksquares
 share/applications/org.kde.ksquares.desktop
 share/config.kcfg/ksquares.kcfg
@@ -30,6 +30,8 @@ share/doc/HTML/pt/ksquares/index.cache.bz2
 share/doc/HTML/pt/ksquares/index.docbook
 share/doc/HTML/pt_BR/ksquares/index.cache.bz2
 share/doc/HTML/pt_BR/ksquares/index.docbook
+share/doc/HTML/sl/ksquares/index.cache.bz2
+share/doc/HTML/sl/ksquares/index.docbook
 share/doc/HTML/sv/ksquares/index.cache.bz2
 share/doc/HTML/sv/ksquares/index.docbook
 share/doc/HTML/uk/ksquares/configure-display.png
@@ -44,6 +46,7 @@ share/icons/hicolor/32x32/apps/ksquares.png
 share/icons/hicolor/48x48/apps/ksquares.png
 share/icons/hicolor/64x64/apps/ksquares.png
 share/locale/ar/LC_MESSAGES/ksquares.mo
+share/locale/ast/LC_MESSAGES/ksquares.mo
 share/locale/be/LC_MESSAGES/ksquares.mo
 share/locale/bg/LC_MESSAGES/ksquares.mo
 share/locale/bs/LC_MESSAGES/ksquares.mo
@@ -62,10 +65,12 @@ share/locale/fi/LC_MESSAGES/ksquares.mo
 share/locale/fr/LC_MESSAGES/ksquares.mo
 share/locale/ga/LC_MESSAGES/ksquares.mo
 share/locale/gl/LC_MESSAGES/ksquares.mo
+share/locale/he/LC_MESSAGES/ksquares.mo
 share/locale/hi/LC_MESSAGES/ksquares.mo
 share/locale/hne/LC_MESSAGES/ksquares.mo
 share/locale/hr/LC_MESSAGES/ksquares.mo
 share/locale/hu/LC_MESSAGES/ksquares.mo
+share/locale/ia/LC_MESSAGES/ksquares.mo
 share/locale/is/LC_MESSAGES/ksquares.mo
 share/locale/it/LC_MESSAGES/ksquares.mo
 share/locale/ja/LC_MESSAGES/ksquares.mo
@@ -88,6 +93,7 @@ share/locale/pt/LC_MESSAGES/ksquares.mo
 share/locale/pt_BR/LC_MESSAGES/ksquares.mo
 share/locale/ro/LC_MESSAGES/ksquares.mo
 share/locale/ru/LC_MESSAGES/ksquares.mo
+share/locale/sa/LC_MESSAGES/ksquares.mo
 share/locale/se/LC_MESSAGES/ksquares.mo
 share/locale/sk/LC_MESSAGES/ksquares.mo
 share/locale/sl/LC_MESSAGES/ksquares.mo
