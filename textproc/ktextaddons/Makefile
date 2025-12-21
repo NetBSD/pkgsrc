@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2025/10/23 20:39:34 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/12/21 19:49:16 markd Exp $
 
-DISTNAME=	ktextaddons-1.3.2
-PKGREVISION=	13
+DISTNAME=	ktextaddons-1.8.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_KDE:=ktextaddons/}
 
@@ -15,12 +14,14 @@ CMAKE_CONFIGURE_ARGS+=	-DKF_IGNORE_PLATFORM_CHECK=true
 
 USE_TOOLS+=	msgmerge
 
-.include "../../archivers/karchive/buildlink3.mk"
-.include "../../devel/kcoreaddons/buildlink3.mk"
-.include "../../devel/ki18n/buildlink3.mk"
-.include "../../security/qt5-qtkeychain/buildlink3.mk"
-.include "../../x11/kconfigwidgets/buildlink3.mk"
-.include "../../x11/kxmlgui/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qttools/buildlink3.mk"
+.include "../../archivers/kf6-karchive/buildlink3.mk"
+.include "../../devel/kf6-kcoreaddons/buildlink3.mk"
+.include "../../devel/kf6-ki18n/buildlink3.mk"
+.include "../../devel/kf6-kio/buildlink3.mk"
+.include "../../devel/qt6-qttools/buildlink3.mk"
+.include "../../security/qt6-qtkeychain/buildlink3.mk"
+.include "../../textproc/kf6-syntax-highlighting/buildlink3.mk"
+.include "../../x11/kf6-kconfigwidgets/buildlink3.mk"
+.include "../../x11/kf6-kxmlgui/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
