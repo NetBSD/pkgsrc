@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.95 2025/10/23 20:38:20 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2025/12/21 13:54:54 markd Exp $
 
 DISTNAME=	kalzium-${KAPPSVER}
-PKGREVISION=	10
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/kalzium/
@@ -10,19 +9,20 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=5.19.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
+.include "../../devel/kf6-kio/buildlink3.mk"
+.include "../../devel/qt6-qt5compat/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/kplotting/buildlink3.mk"
-#include "../../lang/ocaml/buildlink3.mk"
+.include "../../graphics/kf6-kplotting/buildlink3.mk"
 .include "../../lang/python/tool.mk"
+.include "../../lang/qt6-qtscxml/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
-.include "../../misc/kunitconversion/buildlink3.mk"
+.include "../../misc/kf6-kunitconversion/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../www/khtml/buildlink3.mk"
-.include "../../x11/kwidgetsaddons/buildlink3.mk"
-.include "../../x11/kxmlgui/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/kf6-kwidgetsaddons/buildlink3.mk"
+.include "../../x11/kf6-kxmlgui/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
