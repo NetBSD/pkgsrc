@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.41 2024/08/24 04:30:18 markd Exp $
+$NetBSD: distinfo,v 1.42 2025/12/21 12:02:24 markd Exp $
 
-BLAKE2s (gwenview-23.08.4.tar.xz) = 5598e668bbb67c1ec8abef4d25062d49a0158033d27edc80d4783c244b48fc63
-SHA512 (gwenview-23.08.4.tar.xz) = 60d2509ccc4c85cce206fbd4755a6b9a0ec6ab7ba094361705de972dc8a30f4ab2be3c7a163bd8113758efd93b3fef0feb98dc16b00e92ce4646ccd47db0b943
-Size (gwenview-23.08.4.tar.xz) = 6903120 bytes
-SHA1 (patch-CMakeLists.txt) = 3bc69611af88cab88b27439f6c57c634cf96adbb
-SHA1 (patch-app_CMakeLists.txt) = f6ef0755f4ec81a2e56c7efa9991b17581a3c60c
-SHA1 (patch-lib_CMakeLists.txt) = 0ed6963056d6e4137bd0cff76fea113124d45fe8
+BLAKE2s (gwenview-25.08.3.tar.xz) = 28d8a3a6988a25579737d752958a5f4cab7a2c2389d8f0f62eb0fed87ef824cf
+SHA512 (gwenview-25.08.3.tar.xz) = bc6f316dd13ed06682cf96af80182ec4d3d38f50d6ce75ea50cc000f3cddbe40e0000dcfca3ebd3efedbd0768ee1c5ce7c40309c6a6f69ff23c1d6defaf24ff9
+Size (gwenview-25.08.3.tar.xz) = 6534116 bytes
