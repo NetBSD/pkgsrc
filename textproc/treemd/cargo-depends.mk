@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.12 2025/12/15 13:17:36 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.13 2025/12/21 17:41:06 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -153,7 +153,7 @@ CARGO_CRATE_DEPENDS+=	once_cell_polyfill-1.70.2
 CARGO_CRATE_DEPENDS+=	onig-6.5.1
 CARGO_CRATE_DEPENDS+=	onig_sys-69.9.1
 CARGO_CRATE_DEPENDS+=	open-5.3.3
-CARGO_CRATE_DEPENDS+=	opensesame-0.1.0
+CARGO_CRATE_DEPENDS+=	opensesame-0.1.1
 CARGO_CRATE_DEPENDS+=	option-ext-0.2.0
 CARGO_CRATE_DEPENDS+=	os_pipe-1.2.3
 CARGO_CRATE_DEPENDS+=	owo-colors-4.2.3
@@ -238,8 +238,8 @@ CARGO_CRATE_DEPENDS+=	tracing-core-0.1.35
 CARGO_CRATE_DEPENDS+=	tracing-error-0.2.1
 CARGO_CRATE_DEPENDS+=	tracing-subscriber-0.3.22
 CARGO_CRATE_DEPENDS+=	tree_magic_mini-3.2.2
-CARGO_CRATE_DEPENDS+=	turbovault-core-1.2.4
-CARGO_CRATE_DEPENDS+=	turbovault-parser-1.2.5
+CARGO_CRATE_DEPENDS+=	turbovault-core-1.2.6
+CARGO_CRATE_DEPENDS+=	turbovault-parser-1.2.6
 CARGO_CRATE_DEPENDS+=	typenum-1.19.0
 CARGO_CRATE_DEPENDS+=	unicase-2.8.1
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.22
