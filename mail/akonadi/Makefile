@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.137 2025/10/23 20:38:07 wiz Exp $
+# $NetBSD: Makefile,v 1.138 2025/12/21 12:56:08 markd Exp $
 
 DISTNAME=	akonadi-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	mail
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM/Akonadi
@@ -11,17 +10,26 @@ LICENSE=	gnu-lgpl-v2
 .include "../../meta-pkgs/kde/applications.mk"
 
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-DEPENDS+=	kdesignerplugin-[0-9]*:../../x11/kdesignerplugin
+#DEPENDS+=	kf6-kdesignerplugin-[0-9]*:../../x11/kf6-kdesignerplugin
 
 CMAKE_CONFIGURE_ARGS+=	-DMYSQLD_EXECUTABLE="${PREFIX}/sbin/mysqld"
 CMAKE_CONFIGURE_ARGS+=	-DPOSTGRES_PATH="${PREFIX}/bin"
 CMAKE_CONFIGURE_ARGS+=	-DINSTALL_APPARMOR=FALSE
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
 
 USE_TOOLS+=	gmake msgmerge pkg-config
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "options.mk"
+
+# generation of kded.moc fails when ${PREFIX}/include in the moc include path
+SUBST_CLASSES+=		fix-moc
+SUBST_STAGE.fix-moc=	post-configure
+SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
+SUBST_FILES.fix-moc=	_KDE_build/src/agentbase/CMakeFiles/KPim6AkonadiAgentWidgetBase_autogen.dir/AutogenInfo.json
+SUBST_NOOP_OK.fix-moc=	yes
+SUBST_SED.fix-moc=	-e 's;"${PREFIX}/qt6/include/QtWidgets",;;g'
 
 SUBST_CLASSES+=		xdg
 SUBST_STAGE.xdg=	pre-configure
@@ -37,9 +45,11 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/akonadi/mysql-global-mobile.conf \
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
-.include "../../devel/kio/buildlink3.mk"
-.include "../../devel/kitemmodels/buildlink3.mk"
+.include "../../devel/kf6-kio/buildlink3.mk"
+.include "../../devel/kf6-kitemmodels/buildlink3.mk"
+.include "../../devel/qt6-qttools/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/kf6-kxmlgui/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
