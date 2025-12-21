@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2025/08/14 21:39:28 wiz Exp $
+$NetBSD: distinfo,v 1.3 2025/12/21 06:35:26 wiz Exp $
 
 BLAKE2s (emacs-30.2.tar.xz) = f88fd83bf4d3c4ef6c2240c50e23ca570c3219da9e9a463951aaf83ef9dc931f
 SHA512 (emacs-30.2.tar.xz) = 313432d11e95c74f8cd35c5b1da442e6223f5d40f9173c55883c0339ecbfb97a0bedf79177ef8902afd3e33c078a233777bed01f5caffa1e7524f17d58bfc9a2
 Size (emacs-30.2.tar.xz) = 55320324 bytes
+SHA1 (patch-src_treesit.c) = fc3165a2febcb4dda2e87d031524fa5b90721c38
