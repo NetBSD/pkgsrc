@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2024/02/06 11:17:34 markd Exp $
+$NetBSD: distinfo,v 1.21 2025/12/21 13:54:54 markd Exp $
 
-BLAKE2s (kalzium-23.08.4.tar.xz) = de0698b7ab213818014b9fa44a9ef114787ab9ac3a397d2d89fdf20037cbf3c9
-SHA512 (kalzium-23.08.4.tar.xz) = 70d599f47bd84c728fa7459c51890d2814591b91a3fb5d768145e5da57eb196832d3995f780e143166e67e0689f99d9497084a0f76ddd797358ad5129f7a82e6
-Size (kalzium-23.08.4.tar.xz) = 24642260 bytes
+BLAKE2s (kalzium-25.08.3.tar.xz) = cd1af7f65ab7cc63af9b3e50d8d96ad6e6ab3778af26040d40915ba4d9a147c9
+SHA512 (kalzium-25.08.3.tar.xz) = ef7b346d5c851389cefd2c30ab4a2f648e2851c6fd4bbc917f6cbbdb612545c5d594865bd48e147b7ba9a0d101b24e840017334fb28522d9602068e2d22c2590
+Size (kalzium-25.08.3.tar.xz) = 22663696 bytes
