@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.23 2025/11/02 20:00:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2025/12/21 17:15:35 wiz Exp $
 ${PYSITELIB}/google/auth/__init__.py
 ${PYSITELIB}/google/auth/__init__.pyc
 ${PYSITELIB}/google/auth/__init__.pyo
+${PYSITELIB}/google/auth/_agent_identity_utils.py
+${PYSITELIB}/google/auth/_agent_identity_utils.pyc
+${PYSITELIB}/google/auth/_agent_identity_utils.pyo
 ${PYSITELIB}/google/auth/_cloud_sdk.py
 ${PYSITELIB}/google/auth/_cloud_sdk.pyc
 ${PYSITELIB}/google/auth/_cloud_sdk.pyo
@@ -71,6 +74,9 @@ ${PYSITELIB}/google/auth/compute_engine/__init__.pyo
 ${PYSITELIB}/google/auth/compute_engine/_metadata.py
 ${PYSITELIB}/google/auth/compute_engine/_metadata.pyc
 ${PYSITELIB}/google/auth/compute_engine/_metadata.pyo
+${PYSITELIB}/google/auth/compute_engine/_mtls.py
+${PYSITELIB}/google/auth/compute_engine/_mtls.pyc
+${PYSITELIB}/google/auth/compute_engine/_mtls.pyo
 ${PYSITELIB}/google/auth/compute_engine/credentials.py
 ${PYSITELIB}/google/auth/compute_engine/credentials.pyc
 ${PYSITELIB}/google/auth/compute_engine/credentials.pyo
@@ -92,6 +98,9 @@ ${PYSITELIB}/google/auth/crypt/_python_rsa.pyo
 ${PYSITELIB}/google/auth/crypt/base.py
 ${PYSITELIB}/google/auth/crypt/base.pyc
 ${PYSITELIB}/google/auth/crypt/base.pyo
+${PYSITELIB}/google/auth/crypt/es.py
+${PYSITELIB}/google/auth/crypt/es.pyc
+${PYSITELIB}/google/auth/crypt/es.pyo
 ${PYSITELIB}/google/auth/crypt/es256.py
 ${PYSITELIB}/google/auth/crypt/es256.pyc
 ${PYSITELIB}/google/auth/crypt/es256.pyo
