@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/10/23 20:38:20 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/12/21 13:52:56 markd Exp $
 
 DISTNAME=	kaddressbook-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kontact.kde.org/
@@ -10,14 +9,16 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=5.19.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge
 
-.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../misc/kdepim-runtime/buildlink3.mk"
+.include "../../misc/akonadi-contacts/buildlink3.mk"
+.include "../../misc/akonadi-search/buildlink3.mk"
+.include "../../misc/kf6-kcontacts/buildlink3.mk"
+.include "../../misc/kf6-kuserfeedback/buildlink3.mk"
 .include "../../misc/kontactinterface/buildlink3.mk"
-.include "../../misc/kuserfeedback/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../misc/pimcommon/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
