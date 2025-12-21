@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.44 2024/02/06 11:05:23 markd Exp $
-
-BLAKE2s (kipi-plugins-23.08.4.tar.xz) = 078a9978a9263fed48c8a58b96c6ad3765341a8a45c816c282cbee2f85c523c2
-SHA512 (kipi-plugins-23.08.4.tar.xz) = 909f09b269352cf72be7b1907dc60465e1766e0b025199990b712fa341895b6abacadf4b25a692de89d4c217b2bec82d77892525176ec053bda9f51b5346654d
-Size (kipi-plugins-23.08.4.tar.xz) = 1569944 bytes
