@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2024/02/06 11:05:17 markd Exp $
+$NetBSD: distinfo,v 1.16 2025/12/21 11:01:01 markd Exp $
 
-BLAKE2s (katomic-23.08.4.tar.xz) = 553467d568dd01b9c6f5e6294d0bf1755866edb8409d2f5facff7ddfd48c7178
-SHA512 (katomic-23.08.4.tar.xz) = 80cf7f0ecaee20b9d407dc9bfbd13d8be56e9a902602e8f28fd5667c5f19223fb9c19aec31cf47fb8f9ac3130e7246b355629439497aea112ff5958e7c3799a4
-Size (katomic-23.08.4.tar.xz) = 1454340 bytes
+BLAKE2s (katomic-25.08.3.tar.xz) = ee2e3f8face97027c1962a17bda4bf2854e327bcd3fa89ffce419ca91d8e0334
+SHA512 (katomic-25.08.3.tar.xz) = 7da2d40dc1e7feb24ad707a6d89f5fd2ff5c06dd87016ce529b3a53c7e690ca3769500f69533d4f97763c8775d3bfbdd0d5445b53d2e2b1e40d151852f60e6b7
+Size (katomic-25.08.3.tar.xz) = 1450264 bytes
