@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2025/10/23 20:37:36 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/12/21 12:22:23 markd Exp $
 
 DISTNAME=	kimageannotator-0.7.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ksnip/}
 GITHUB_PROJECT=	kImageAnnotator
@@ -17,9 +17,10 @@ USE_LANGUAGES=	c c++
 .include "../../devel/cmake/build.mk"
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_QT6=ON
 
 .include "../../graphics/kcolorpicker/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qttools/buildlink3.mk"
-.include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "../../devel/qt6-qttools/buildlink3.mk"
+.include "../../graphics/qt6-qtsvg/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
