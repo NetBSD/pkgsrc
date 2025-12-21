@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/12/21 09:07:20 markd Exp $
+
+BLAKE2s (opentimelineio-0.18.1.tar.gz) = 85902548cfe6bd04c53677066dc1555fe0960a27781bc985fd9c7d3055b8e5bf
+SHA512 (opentimelineio-0.18.1.tar.gz) = 136f06ad7f9604b60d0463475f4a177ad8b7a18bc2ac74e5580a3f51fa728fa31cdb6e917c681d170460f685f4d1ec497f5e9ae8ed9952a3525fb69536a9412a
+Size (opentimelineio-0.18.1.tar.gz) = 1622906 bytes
