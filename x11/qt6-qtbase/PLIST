@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2025/11/20 12:36:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2025/12/21 09:19:19 markd Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -1190,6 +1190,7 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qactiongroup_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qastchandler_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qbackingstoredefaultcompositor_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qbackingstorerhisupport_p.h
+${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qbasicvulkanplatforminstance_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qbezier_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qblendfunctions_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qblittable_p.h
@@ -1326,6 +1327,7 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrgba64_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhi_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhigles2_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhinull_p.h
+${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhivulkan_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qscreen_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qsessionmanager_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qshader_p.h
@@ -1365,6 +1367,10 @@ ${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qtx11extras_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qundostack_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qunixeventdispatcher_qpa_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qvectorpath_p.h
+${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qvulkandefaultinstance_p.h
+${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qvulkanfunctions_p.h
+${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qvulkaninstance_p.h
+${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qvulkanwindow_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qwindow_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qxbmhandler_p.h
 ${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qxdgnotificationproxy_p.h
@@ -1404,6 +1410,7 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qplatformtheme.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qplatformtheme_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qplatformthemefactory_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qplatformthemeplugin.h
+${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qplatformvulkaninstance.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qplatformwindow.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qplatformwindow_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qwindowsysteminterface.h
@@ -1626,6 +1633,14 @@ qt6/include/QtGui/QValidator
 qt6/include/QtGui/QVector2D
 qt6/include/QtGui/QVector3D
 qt6/include/QtGui/QVector4D
+${PLIST.x11}qt6/include/QtGui/QVulkanDeviceFunctions
+${PLIST.x11}qt6/include/QtGui/QVulkanExtension
+${PLIST.x11}qt6/include/QtGui/QVulkanFunctions
+${PLIST.x11}qt6/include/QtGui/QVulkanInfoVector
+${PLIST.x11}qt6/include/QtGui/QVulkanInstance
+${PLIST.x11}qt6/include/QtGui/QVulkanLayer
+${PLIST.x11}qt6/include/QtGui/QVulkanWindow
+${PLIST.x11}qt6/include/QtGui/QVulkanWindowRenderer
 qt6/include/QtGui/QWhatsThisClickedEvent
 qt6/include/QtGui/QWheelEvent
 qt6/include/QtGui/QWidgetList
@@ -1752,6 +1767,9 @@ qt6/include/QtGui/qvector2d.h
 qt6/include/QtGui/qvector3d.h
 qt6/include/QtGui/qvector4d.h
 qt6/include/QtGui/qvectornd.h
+${PLIST.x11}qt6/include/QtGui/qvulkanfunctions.h
+${PLIST.x11}qt6/include/QtGui/qvulkaninstance.h
+${PLIST.x11}qt6/include/QtGui/qvulkanwindow.h
 qt6/include/QtGui/qwindow.h
 qt6/include/QtGui/qwindowdefs.h
 ${PLIST.x11}qt6/include/QtKmsSupport/${PKGVERSION}/QtKmsSupport/private/qkmsdevice_p.h
@@ -1973,6 +1991,7 @@ qt6/include/QtOpenGL/${PKGVERSION}/QtOpenGL/private/qopengltexturehelper_p.h
 qt6/include/QtOpenGL/${PKGVERSION}/QtOpenGL/private/qopengltextureuploader_p.h
 qt6/include/QtOpenGL/${PKGVERSION}/QtOpenGL/private/qopenglversionfunctions_p.h
 qt6/include/QtOpenGL/${PKGVERSION}/QtOpenGL/private/qopenglvertexarrayobject_p.h
+${PLIST.x11}qt6/include/QtOpenGL/${PKGVERSION}/QtOpenGL/private/qvkconvenience_p.h
 qt6/include/QtOpenGL/QOpenGLBuffer
 qt6/include/QtOpenGL/QOpenGLDebugLogger
 qt6/include/QtOpenGL/QOpenGLDebugMessage
@@ -2314,6 +2333,8 @@ ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandC
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandtextinputv2_p.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandtextinputv3_p.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandviewport_p.h
+${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandvulkaninstance_p.h
+${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandvulkanwindow_p.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandwindow_p.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandwindowmanagerintegration_p.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-appmenu-client-protocol.h
@@ -3303,6 +3324,12 @@ qt6/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets.cmake
+${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginAdditionalTargetInfo.cmake
+${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginConfig.cmake
+${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginConfigVersion.cmake
+${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginConfigVersionImpl.cmake
+${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginTargets-release.cmake
+${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginTargets.cmake
 ${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginAdditionalTargetInfo.cmake
 ${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginConfig.cmake
 ${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginConfigVersion.cmake
@@ -3553,6 +3580,12 @@ ${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6WaylandClient/Qt6ShmServerBufferPlu
 ${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6WaylandClient/Qt6ShmServerBufferPluginConfigVersionImpl.cmake
 ${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6WaylandClient/Qt6ShmServerBufferPluginTargets-release.cmake
 ${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6WaylandClient/Qt6ShmServerBufferPluginTargets.cmake
+${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6WaylandClient/Qt6VulkanServerBufferPluginAdditionalTargetInfo.cmake
+${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6WaylandClient/Qt6VulkanServerBufferPluginConfig.cmake
+${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6WaylandClient/Qt6VulkanServerBufferPluginConfigVersion.cmake
+${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6WaylandClient/Qt6VulkanServerBufferPluginConfigVersionImpl.cmake
+${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6WaylandClient/Qt6VulkanServerBufferPluginTargets-release.cmake
+${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6WaylandClient/Qt6VulkanServerBufferPluginTargets.cmake
 ${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6WaylandClient/Qt6WaylandClientAdditionalTargetInfo.cmake
 ${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6WaylandClient/Qt6WaylandClientConfig.cmake
 ${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6WaylandClient/Qt6WaylandClientConfigVersion.cmake
@@ -4314,6 +4347,7 @@ ${PLIST.egl}qt6/plugins/platforms/libqeglfs.so
 qt6/plugins/platforms/libqminimal.so
 ${PLIST.egl}qt6/plugins/platforms/libqminimalegl.so
 qt6/plugins/platforms/libqoffscreen.so
+${PLIST.x11}qt6/plugins/platforms/libqvkkhrdisplay.so
 qt6/plugins/platforms/libqvnc.so
 ${PLIST.wayland}${PLIST.x11}qt6/plugins/platforms/libqwayland.so
 qt6/plugins/platforms/libqxcb.so
@@ -4328,6 +4362,7 @@ ${PLIST.wayland}${PLIST.x11}qt6/plugins/wayland-graphics-integration-client/libd
 ${PLIST.wayland}${PLIST.x11}qt6/plugins/wayland-graphics-integration-client/libdrm-egl-server.so
 ${PLIST.wayland}${PLIST.x11}qt6/plugins/wayland-graphics-integration-client/libqt-plugin-wayland-egl.so
 ${PLIST.wayland}${PLIST.x11}qt6/plugins/wayland-graphics-integration-client/libshm-emulation-server.so
+${PLIST.wayland}${PLIST.x11}qt6/plugins/wayland-graphics-integration-client/libvulkan-server.so
 ${PLIST.wayland}${PLIST.x11}qt6/plugins/wayland-shell-integration/libfullscreen-shell-v1.so
 ${PLIST.wayland}${PLIST.x11}qt6/plugins/wayland-shell-integration/libwl-shell-plugin.so
 ${PLIST.wayland}${PLIST.x11}qt6/plugins/wayland-shell-integration/libxdg-shell.so
