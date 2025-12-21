@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/10/23 20:39:37 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/12/21 19:56:12 markd Exp $
 
 DISTNAME=	calendarsupport-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	time
 
 HOMEPAGE=	https://kontact.kde.org
@@ -12,10 +11,7 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
 
 USE_TOOLS+=	msgmerge
 
-.include "../../devel/boost-headers/buildlink3.mk"
-.include "../../misc/akonadi-notes/buildlink3.mk"
-.include "../../misc/pimcommon/buildlink3.mk"
 .include "../../time/akonadi-calendar/buildlink3.mk"
-.include "../../time/kholidays/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../time/kf6-kholidays/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
