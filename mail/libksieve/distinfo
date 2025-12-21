@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/02/06 11:05:26 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/12/21 13:18:48 markd Exp $
 
-BLAKE2s (libksieve-23.08.4.tar.xz) = 9982a894adb5ae5051f50a71ba53b3cfa3179cebe7e799efd3d144b672f220a5
-SHA512 (libksieve-23.08.4.tar.xz) = b7a762355da38e98c15df2f286ebc214cbff62a7463acdc0d0d4587358ece8b912f4d099b7fa06eaa51e44748237c91ebca07e3ab6388a11d672fd9b33b6201e
-Size (libksieve-23.08.4.tar.xz) = 579640 bytes
+BLAKE2s (libksieve-25.08.3.tar.xz) = cedbd2fb20ef31321e7bb5bead09c25803527f4cad7b07d49dfb494736d96b97
+SHA512 (libksieve-25.08.3.tar.xz) = 22cec3c3b544a03c55020c4e0e2ea2ae71c5f3d1c0140d28cab13f148252f0b517df1e42272a749bba3134626d6fbaa01257585f3b7714023e608bb55c35eaf6
+Size (libksieve-25.08.3.tar.xz) = 632984 bytes
