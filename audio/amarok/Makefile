@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.211 2025/10/23 20:35:38 wiz Exp $
+# $NetBSD: Makefile,v 1.212 2025/12/21 20:30:54 markd Exp $
 
-DISTNAME=	amarok-3.0.0
-PKGREVISION=	9
+DISTNAME=	amarok-3.3.1
 CATEGORIES=	audio multimedia
 MASTER_SITES=	${MASTER_SITE_KDE:=amarok/${PKGVERSION_NOREV}/}
 
@@ -14,18 +13,12 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2.1
 
 USE_TOOLS+=	msgfmt pkg-config perl:run
 
-REPLACE_PERL+=	src/kconf_update/amarok-2.4.1-tokens_syntax_update.pl
-
 #MYSQL_VERSIONS_ACCEPTED=	mariadb1011 mariadb106 mariadb105 mariadb104
 
 CONF_FILES+=	share/examples/amarok/xdg/amarok_homerc ${PKG_SYSCONFDIR}/xdg/amarok_homerc
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 
 INSTALLATION_DIRS+=	share/examples/amarok/xdg
-
-# due to googletest
-USE_CXX_FEATURES+=	c++17
-FORCE_CXX_STD=		c++17
 
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/xdg/amarok_homerc ${DESTDIR}${PREFIX}/share/examples/amarok/xdg
@@ -42,41 +35,42 @@ post-install:
 # * Ipod, Support Apple iPod/iPad/iPhone audio devices, <http://sourceforge.net/projects/gtkpod/>
 # * Loudmouth, Loudmouth is the communication backend needed by mp3tunes for syncing., <http://www.loudmouth-project.org>
 
-.include "../../archivers/karchive/buildlink3.mk"
+.include "../../archivers/kf6-karchive/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../databases/mariadb1011-embedded/buildlink3.mk"
 .include "../../devel/googletest/buildlink3.mk"
-.include "../../devel/kcmutils/buildlink3.mk"
-.include "../../devel/kconfig/buildlink3.mk"
-.include "../../devel/kcoreaddons/buildlink3.mk"
-.include "../../devel/kcrash/buildlink3.mk"
-.include "../../devel/kdeclarative/buildlink3.mk"
-.include "../../devel/kdoctools/buildlink3.mk"
-.include "../../devel/ki18n/buildlink3.mk"
-.include "../../devel/kio/buildlink3.mk"
-.include "../../devel/knotifications/buildlink3.mk"
-.include "../../devel/kpackage/buildlink3.mk"
-.include "../../devel/ktexteditor/buildlink3.mk"
+.include "../../devel/kf6-kcmutils/buildlink3.mk"
+.include "../../devel/kf6-kconfig/buildlink3.mk"
+.include "../../devel/kf6-kcoreaddons/buildlink3.mk"
+.include "../../devel/kf6-kcrash/buildlink3.mk"
+.include "../../devel/kf6-kdeclarative/buildlink3.mk"
+.include "../../devel/kf6-kdoctools/buildlink3.mk"
+.include "../../devel/kf6-ki18n/buildlink3.mk"
+.include "../../devel/kf6-kio/buildlink3.mk"
+.include "../../devel/kf6-knotifications/buildlink3.mk"
+.include "../../devel/kf6-kpackage/buildlink3.mk"
+.include "../../devel/kf6-ktexteditor/buildlink3.mk"
 .include "../../devel/libmtp/buildlink3.mk"
-.include "../../devel/threadweaver/buildlink3.mk"
+.include "../../devel/kf6-threadweaver/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/kiconthemes/buildlink3.mk"
+.include "../../graphics/kf6-kiconthemes/buildlink3.mk"
+.include "../../graphics/qt6-qtsvg/buildlink3.mk"
+.include "../../lang/qt6-qtdeclarative/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
-.include "../../misc/attica-qt5/buildlink3.mk"
-.include "../../net/kdnssd/buildlink3.mk"
-.include "../../net/knewstuff/buildlink3.mk"
+.include "../../misc/kf6-attica/buildlink3.mk"
+.include "../../misc/kf6-kstatusnotifieritem/buildlink3.mk"
+.include "../../net/kf6-kdnssd/buildlink3.mk"
+.include "../../net/kf6-knewstuff/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/kdbusaddons/buildlink3.mk"
-.include "../../sysutils/solid/buildlink3.mk"
-.include "../../textproc/kcodecs/buildlink3.mk"
-.include "../../x11/kconfigwidgets/buildlink3.mk"
-.include "../../x11/kglobalaccel/buildlink3.mk"
-.include "../../x11/kguiaddons/buildlink3.mk"
-.include "../../x11/kwidgetsaddons/buildlink3.mk"
-.include "../../x11/kwindowsystem/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtdeclarative/buildlink3.mk"
-.include "../../x11/qt5-qtsvg/buildlink3.mk"
-.include "../../x11/qt5-qtwebengine/buildlink3.mk"
+.include "../../sysutils/kf6-kdbusaddons/buildlink3.mk"
+.include "../../sysutils/kf6-solid/buildlink3.mk"
+.include "../../textproc/kf6-kcodecs/buildlink3.mk"
+.include "../../www/qt6-qtwebengine/buildlink3.mk"
+.include "../../x11/kf6-kconfigwidgets/buildlink3.mk"
+.include "../../x11/kf6-kglobalaccel/buildlink3.mk"
+.include "../../x11/kf6-kguiaddons/buildlink3.mk"
+.include "../../x11/kf6-kwidgetsaddons/buildlink3.mk"
+.include "../../x11/kf6-kwindowsystem/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 #.include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
