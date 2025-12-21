@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2025/10/23 20:36:32 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2025/12/21 10:27:39 markd Exp $
 
 DISTNAME=	lokalize-${KAPPSVER}
-PKGREVISION=	10
 CATEGORIES=	devel
 
 HOMEPAGE=	https://kde.org/applications/development/lokalize/
@@ -10,13 +9,14 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
-.include "../../devel/kross/buildlink3.mk"
+.include "../../devel/kf6-kio/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/kf6-kxmlgui/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/08/03 02:37:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/12/21 10:27:39 markd Exp $
 bin/lokalize
 share/applications/org.kde.lokalize.desktop
 share/config.kcfg/lokalize.kcfg
@@ -18,14 +18,8 @@ share/doc/HTML/en/lokalize/sync.png
 share/doc/HTML/en/lokalize/tmview.png
 share/doc/HTML/es/lokalize/index.cache.bz2
 share/doc/HTML/es/lokalize/index.docbook
-share/doc/HTML/et/lokalize/index.cache.bz2
-share/doc/HTML/et/lokalize/index.docbook
 share/doc/HTML/fr/lokalize/index.cache.bz2
 share/doc/HTML/fr/lokalize/index.docbook
-share/doc/HTML/hu/lokalize/index.cache.bz2
-share/doc/HTML/hu/lokalize/index.docbook
-share/doc/HTML/id/lokalize/index.cache.bz2
-share/doc/HTML/id/lokalize/index.docbook
 share/doc/HTML/it/lokalize/configure_shortcuts.png
 share/doc/HTML/it/lokalize/configure_toolbar.png
 share/doc/HTML/it/lokalize/default_editor_lokalize.png
@@ -38,12 +32,6 @@ share/doc/HTML/it/lokalize/sync.png
 share/doc/HTML/it/lokalize/tmview.png
 share/doc/HTML/nl/lokalize/index.cache.bz2
 share/doc/HTML/nl/lokalize/index.docbook
-share/doc/HTML/pt/lokalize/index.cache.bz2
-share/doc/HTML/pt/lokalize/index.docbook
-share/doc/HTML/pt_BR/lokalize/index.cache.bz2
-share/doc/HTML/pt_BR/lokalize/index.docbook
-share/doc/HTML/ru/lokalize/index.cache.bz2
-share/doc/HTML/ru/lokalize/index.docbook
 share/doc/HTML/sr/lokalize/glossary.png
 share/doc/HTML/sr/lokalize/index.cache.bz2
 share/doc/HTML/sr/lokalize/index.docbook
@@ -52,8 +40,6 @@ share/doc/HTML/sr/lokalize/sync.png
 share/doc/HTML/sr/lokalize/tmview.png
 share/doc/HTML/sr@latin/lokalize/index.cache.bz2
 share/doc/HTML/sr@latin/lokalize/index.docbook
-share/doc/HTML/sv/lokalize/index.cache.bz2
-share/doc/HTML/sv/lokalize/index.docbook
 share/doc/HTML/uk/lokalize/configure_shortcuts.png
 share/doc/HTML/uk/lokalize/configure_toolbar.png
 share/doc/HTML/uk/lokalize/default_editor_lokalize.png
@@ -68,13 +54,7 @@ share/icons/hicolor/128x128/apps/lokalize.png
 share/icons/hicolor/32x32/apps/lokalize.png
 share/icons/hicolor/64x64/apps/lokalize.png
 share/icons/hicolor/scalable/apps/lokalize.svgz
-share/knotifications5/lokalize.notifyrc
-share/kxmlgui5/lokalize/editorui.rc
-share/kxmlgui5/lokalize/filesearchtabui.rc
-share/kxmlgui5/lokalize/lokalizemainwindowui.rc
-share/kxmlgui5/lokalize/projectmanagerui.rc
-share/kxmlgui5/lokalize/scriptsui.rc
-share/kxmlgui5/lokalize/translationmemoryrui.rc
+share/knotifications6/lokalize.notifyrc
 share/locale/ar/LC_MESSAGES/lokalize.mo
 share/locale/az/LC_MESSAGES/lokalize.mo
 share/locale/be/LC_MESSAGES/lokalize.mo
@@ -97,6 +77,7 @@ share/locale/fr/LC_MESSAGES/lokalize.mo
 share/locale/ga/LC_MESSAGES/lokalize.mo
 share/locale/gl/LC_MESSAGES/lokalize.mo
 share/locale/he/LC_MESSAGES/lokalize.mo
+share/locale/hi/LC_MESSAGES/lokalize.mo
 share/locale/hr/LC_MESSAGES/lokalize.mo
 share/locale/hu/LC_MESSAGES/lokalize.mo
 share/locale/ia/LC_MESSAGES/lokalize.mo
@@ -106,6 +87,7 @@ share/locale/is/LC_MESSAGES/lokalize.mo
 share/locale/it/LC_MESSAGES/lokalize.mo
 share/locale/ja/LC_MESSAGES/lokalize.mo
 share/locale/ka/LC_MESSAGES/lokalize.mo
+share/locale/kab/LC_MESSAGES/lokalize.mo
 share/locale/kk/LC_MESSAGES/lokalize.mo
 share/locale/km/LC_MESSAGES/lokalize.mo
 share/locale/ko/LC_MESSAGES/lokalize.mo
@@ -126,6 +108,7 @@ share/locale/pt/LC_MESSAGES/lokalize.mo
 share/locale/pt_BR/LC_MESSAGES/lokalize.mo
 share/locale/ro/LC_MESSAGES/lokalize.mo
 share/locale/ru/LC_MESSAGES/lokalize.mo
+share/locale/sa/LC_MESSAGES/lokalize.mo
 share/locale/sk/LC_MESSAGES/lokalize.mo
 share/locale/sl/LC_MESSAGES/lokalize.mo
 share/locale/sq/LC_MESSAGES/lokalize.mo
@@ -259,12 +242,5 @@ share/lokalize/icons/locolor/32x32/actions/prevtemplate.png
 share/lokalize/icons/locolor/32x32/actions/prevuntranslated.png
 share/lokalize/icons/locolor/32x32/actions/search2msgstr.png
 share/lokalize/icons/locolor/32x32/actions/transsearch.png
-share/lokalize/scripts/find-gui-text.sh
-share/lokalize/scripts/msgmerge.py
-share/lokalize/scripts/msgmerge.rc
-share/lokalize/scripts/odf/xliff2odf-standalone.py
-share/lokalize/scripts/odf/xliff2odf.py
-share/lokalize/scripts/odf/xliff2odf.rc
-share/lokalize/scripts/odf/xliffmerge.py
 share/metainfo/org.kde.lokalize.appdata.xml
-share/qlogging-categories5/lokalize.categories
+share/qlogging-categories6/lokalize.categories
