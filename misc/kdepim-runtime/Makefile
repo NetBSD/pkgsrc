@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2025/10/23 20:38:21 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/12/21 14:02:15 markd Exp $
 
 DISTNAME=	kdepim-runtime-${KAPPSVER}
-PKGREVISION=	16
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM
@@ -13,23 +12,22 @@ CMAKE_GENERATORS_INCOMPATIBLE=	ninja
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
 .include "../../devel/boost-headers/buildlink3.mk"
-.include "../../devel/knotifyconfig/buildlink3.mk"
+.include "../../devel/kf6-knotifyconfig/buildlink3.mk"
 .include "../../devel/libkgapi/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mail/kmbox/buildlink3.mk"
-.include "../../misc/akonadi-notes/buildlink3.mk"
-.include "../../misc/kdav/buildlink3.mk"
+.include "../../misc/kf6-kdav/buildlink3.mk"
 .include "../../misc/pimcommon/buildlink3.mk"
-.include "../../security/qca2-qt5/buildlink3.mk"
-.include "../../security/qt5-qtkeychain/buildlink3.mk"
+.include "../../security/qca2-qt6/buildlink3.mk"
+.include "../../security/qt6-qtkeychain/buildlink3.mk"
+.include "../../security/qt6-qtnetworkauth/buildlink3.mk"
 .include "../../textproc/libkolabxml/buildlink3.mk"
 .include "../../time/akonadi-calendar/buildlink3.mk"
-.include "../../time/kholidays/buildlink3.mk"
-.include "../../x11/qt5-qtnetworkauth/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../time/kf6-kholidays/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
