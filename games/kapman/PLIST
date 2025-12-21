@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/08/03 02:52:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/12/21 10:59:07 markd Exp $
 bin/kapman
 share/applications/org.kde.kapman.desktop
 share/doc/HTML/ca/kapman/config.png
@@ -35,6 +35,8 @@ share/doc/HTML/pt_BR/kapman/config.png
 share/doc/HTML/pt_BR/kapman/index.cache.bz2
 share/doc/HTML/pt_BR/kapman/index.docbook
 share/doc/HTML/pt_BR/kapman/kapman.png
+share/doc/HTML/sl/kapman/index.cache.bz2
+share/doc/HTML/sl/kapman/index.docbook
 share/doc/HTML/sv/kapman/index.cache.bz2
 share/doc/HTML/sv/kapman/index.docbook
 share/doc/HTML/uk/kapman/config.png
@@ -54,7 +56,6 @@ share/kapman/themes/invisible_preview.png
 share/kapman/themes/matches.desktop
 share/kapman/themes/matches.svgz
 share/kapman/themes/matches_preview.png
-share/kapman/themes/mountain.copyright
 share/kapman/themes/mountain.desktop
 share/kapman/themes/mountain.svgz
 share/kapman/themes/mountain_preview.png
@@ -65,6 +66,7 @@ share/kapman/themes/retro.desktop
 share/kapman/themes/retro.svgz
 share/kapman/themes/retro_preview.png
 share/locale/ar/LC_MESSAGES/kapman.mo
+share/locale/ast/LC_MESSAGES/kapman.mo
 share/locale/bg/LC_MESSAGES/kapman.mo
 share/locale/bs/LC_MESSAGES/kapman.mo
 share/locale/ca/LC_MESSAGES/kapman.mo
@@ -83,9 +85,11 @@ share/locale/fr/LC_MESSAGES/kapman.mo
 share/locale/ga/LC_MESSAGES/kapman.mo
 share/locale/gl/LC_MESSAGES/kapman.mo
 share/locale/gu/LC_MESSAGES/kapman.mo
+share/locale/he/LC_MESSAGES/kapman.mo
 share/locale/hi/LC_MESSAGES/kapman.mo
 share/locale/hr/LC_MESSAGES/kapman.mo
 share/locale/hu/LC_MESSAGES/kapman.mo
+share/locale/ia/LC_MESSAGES/kapman.mo
 share/locale/id/LC_MESSAGES/kapman.mo
 share/locale/is/LC_MESSAGES/kapman.mo
 share/locale/it/LC_MESSAGES/kapman.mo
@@ -109,6 +113,7 @@ share/locale/pt/LC_MESSAGES/kapman.mo
 share/locale/pt_BR/LC_MESSAGES/kapman.mo
 share/locale/ro/LC_MESSAGES/kapman.mo
 share/locale/ru/LC_MESSAGES/kapman.mo
+share/locale/sa/LC_MESSAGES/kapman.mo
 share/locale/sk/LC_MESSAGES/kapman.mo
 share/locale/sl/LC_MESSAGES/kapman.mo
 share/locale/sq/LC_MESSAGES/kapman.mo
