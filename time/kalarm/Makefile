@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/10/23 20:39:38 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/12/21 19:58:34 markd Exp $
 
 DISTNAME=	kalarm-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	time
 
 HOMEPAGE=	https://kontact.kde.org/
@@ -10,9 +9,11 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge perl:run
+
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_LIBMPV=OFF
 
 SUBST_CLASSES+=         xdg
 SUBST_STAGE.xdg=        pre-configure
@@ -26,15 +27,16 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/autostart/kalarm.autostart.desktop
 
 REPLACE_PERL+=	src/kconf_update/*.pl
 
-.include "../../devel/boost-headers/buildlink3.mk"
-.include "../../devel/kidletime/buildlink3.mk"
-.include "../../devel/knotifyconfig/buildlink3.mk"
+.include "../../devel/kf6-kidletime/buildlink3.mk"
+.include "../../devel/kf6-knotifyconfig/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mail/akonadi/buildlink3.mk"
 .include "../../mail/kmailtransport/buildlink3.mk"
 .include "../../mail/mailcommon/buildlink3.mk"
+.include "../../misc/kf6-kstatusnotifieritem/buildlink3.mk"
 .include "../../misc/pimcommon/buildlink3.mk"
+.include "../../multimedia/vlc/buildlink3.mk"
 .include "../../time/kcalutils/buildlink3.mk"
-.include "../../time/kholidays/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../time/kf6-kholidays/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

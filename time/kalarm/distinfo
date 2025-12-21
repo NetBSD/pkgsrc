@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/02/06 11:17:43 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/12/21 19:58:34 markd Exp $
 
-BLAKE2s (kalarm-23.08.4.tar.xz) = 4e166e3f087717648adb5c2a8ec3b5bfee5e6fbe2de4d4b9d58851e891052e4d
-SHA512 (kalarm-23.08.4.tar.xz) = 3dc9afae1cdbacc73b7e01eed32078eb43f637d86a9a035432d36138bfc54ddd2f6066812e71ed2892c833e612b1a1b95b7ad154b8b34036739397cc0f437869
-Size (kalarm-23.08.4.tar.xz) = 2622400 bytes
+BLAKE2s (kalarm-25.08.3.tar.xz) = 22a9b010bb04302617f46e6971fcf0bed50ce53d0c89ca1a5f706bfd9c3e1eb6
+SHA512 (kalarm-25.08.3.tar.xz) = 9843f2f9881abf7a81a03344443bf28d7973be442d6838151f17fe6b919e2a123b371bd12a511dcfdf196ccee946a4618870b6f29dd217c9462c75e90ee88a28
+Size (kalarm-25.08.3.tar.xz) = 2690300 bytes
