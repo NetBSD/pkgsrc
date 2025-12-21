@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2025/10/23 20:37:29 wiz Exp $
+# $NetBSD: Makefile,v 1.155 2025/12/21 07:40:33 wiz Exp $
 
 DISTNAME=	gegl-0.4.62
 PKGREVISION=	5
@@ -7,7 +7,7 @@ MASTER_SITES=	https://download.gimp.org/pub/gegl/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://gegl.org/
+HOMEPAGE=	https://gegl.org/
 COMMENT=	Graph based image processing framework
 LICENSE=	gnu-gpl-v3
 
