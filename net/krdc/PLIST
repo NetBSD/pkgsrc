@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/02/06 11:17:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/12/21 15:06:25 markd Exp $
 bin/krdc
 include/krdc/hostpreferences.h
 include/krdc/remoteview.h
@@ -7,11 +7,9 @@ include/krdccore_export.h
 lib/libkrdccore.so
 lib/libkrdccore.so.${PKGVERSION}
 lib/libkrdccore.so.5
-qt5/plugins/krdc/kcms/libkcm_krdc_rdpplugin.so
-qt5/plugins/krdc/kcms/libkcm_krdc_vncplugin.so
-qt5/plugins/krdc/libkrdc_rdpplugin.so
-qt5/plugins/krdc/libkrdc_testplugin.so
-qt5/plugins/krdc/libkrdc_vncplugin.so
+qt6/plugins/krdc/kcms/libkcm_krdc_vncplugin.so
+qt6/plugins/krdc/krdc_testplugin.so
+qt6/plugins/krdc/krdc_vncplugin.so
 share/applications/org.kde.krdc.desktop
 share/config.kcfg/krdc.kcfg
 share/doc/HTML/ca/krdc/index.cache.bz2
@@ -77,6 +75,10 @@ share/doc/HTML/pt/krdc/index.cache.bz2
 share/doc/HTML/pt/krdc/index.docbook
 share/doc/HTML/pt_BR/krdc/index.cache.bz2
 share/doc/HTML/pt_BR/krdc/index.docbook
+share/doc/HTML/ru/krdc/index.cache.bz2
+share/doc/HTML/ru/krdc/index.docbook
+share/doc/HTML/sl/krdc/index.cache.bz2
+share/doc/HTML/sl/krdc/index.docbook
 share/doc/HTML/sr/krdc/index.cache.bz2
 share/doc/HTML/sr/krdc/index.docbook
 share/doc/HTML/sr@latin/krdc/index.cache.bz2
@@ -85,9 +87,10 @@ share/doc/HTML/sv/krdc/index.cache.bz2
 share/doc/HTML/sv/krdc/index.docbook
 share/doc/HTML/uk/krdc/index.cache.bz2
 share/doc/HTML/uk/krdc/index.docbook
-share/kio/servicemenus/smb2rdc.desktop
+share/icons/hicolor/scalable/apps/krdc.svg
 share/locale/af/LC_MESSAGES/krdc.mo
 share/locale/ar/LC_MESSAGES/krdc.mo
+share/locale/az/LC_MESSAGES/krdc.mo
 share/locale/be/LC_MESSAGES/krdc.mo
 share/locale/bg/LC_MESSAGES/krdc.mo
 share/locale/br/LC_MESSAGES/krdc.mo
@@ -141,6 +144,7 @@ share/locale/pt/LC_MESSAGES/krdc.mo
 share/locale/pt_BR/LC_MESSAGES/krdc.mo
 share/locale/ro/LC_MESSAGES/krdc.mo
 share/locale/ru/LC_MESSAGES/krdc.mo
+share/locale/sa/LC_MESSAGES/krdc.mo
 share/locale/se/LC_MESSAGES/krdc.mo
 share/locale/sk/LC_MESSAGES/krdc.mo
 share/locale/sl/LC_MESSAGES/krdc.mo
@@ -162,4 +166,5 @@ share/locale/zh_CN/LC_MESSAGES/krdc.mo
 share/locale/zh_HK/LC_MESSAGES/krdc.mo
 share/locale/zh_TW/LC_MESSAGES/krdc.mo
 share/metainfo/org.kde.krdc.appdata.xml
-share/qlogging-categories5/krdc.categories
+share/mime/packages/org.kde.krdc-mime.xml
+share/qlogging-categories6/krdc.categories
