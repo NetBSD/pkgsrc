@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7293 2025/12/21 17:41:25 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7294 2025/12/21 17:42:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10553,3 +10553,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/piratebay to 0.2.0 [pin 2025-12-21]
 	Updated textproc/television to 0.14.1 [pin 2025-12-21]
 	Updated textproc/treemd to 0.5.4 [pin 2025-12-21]
+	Updated graphics/viu to 1.6.1 [pin 2025-12-21]
