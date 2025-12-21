@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2024/02/06 11:05:15 markd Exp $
+$NetBSD: distinfo,v 1.14 2025/12/21 10:19:56 markd Exp $
 
-BLAKE2s (kompare-23.08.4.tar.xz) = f4983ff7170f17034824a22cb7335ea8dcc2ed8841341888538d06631c35cebe
-SHA512 (kompare-23.08.4.tar.xz) = 3131e5d3d7c158dfd7d07e96d48e1461de97e143d05daec6654333a4e0674cf2bd69f7debdabed3aa90073d5cc42a388b637e954f6db24a518cc238efb1e3abb
-Size (kompare-23.08.4.tar.xz) = 984888 bytes
+BLAKE2s (kompare-25.08.3.tar.xz) = 6d857268cac806bf0ee0390aaa40447a4361c3ad0b0e5bdb41e93bffd336377b
+SHA512 (kompare-25.08.3.tar.xz) = 737218bd2de9665e3d5853afac9149b1c83bfab7b7612ad6246b254edcda3e6641511db16d40c21f2d09cd877252d7d4c44aad5547b0783e8e1d599cbc1b4fe7
+Size (kompare-25.08.3.tar.xz) = 964056 bytes
