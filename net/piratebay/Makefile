@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/04/11 09:05:22 pin Exp $
+# $NetBSD: Makefile,v 1.10 2025/12/21 17:39:16 pin Exp $
 
-DISTNAME=	piratebay-0.1.9
+DISTNAME=	piratebay-0.2.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tsirysndr/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
