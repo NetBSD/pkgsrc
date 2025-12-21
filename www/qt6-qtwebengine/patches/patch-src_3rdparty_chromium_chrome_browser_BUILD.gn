@@ -1,0 +1,22 @@
+$NetBSD: patch-src_3rdparty_chromium_chrome_browser_BUILD.gn,v 1.1 2025/12/21 09:38:18 markd Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/chrome/browser/BUILD.gn.orig	2025-11-14 07:55:10.000000000 +0000
++++ src/3rdparty/chromium/chrome/browser/BUILD.gn
+@@ -6751,6 +6751,13 @@ static_library("browser") {
+           [ "//third_party/webrtc/modules/desktop_capture:pipewire_config" ]
+     }
+ 
++    if (is_bsd) {
++      sources -= [
++        "metrics/bluetooth_metrics_provider.cc",
++        "metrics/bluetooth_metrics_provider.h",
++      ]
++    }
++
+     if (use_dbus) {
+       sources += [
+         "dbus_memory_pressure_evaluator_linux.cc",

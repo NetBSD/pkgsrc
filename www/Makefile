@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1892 2025/12/08 07:26:45 vins Exp $
+# $NetBSD: Makefile,v 1.1893 2025/12/21 09:38:11 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -980,6 +980,7 @@ SUBDIR+=	py27-idna
 SUBDIR+=	qDecoder
 SUBDIR+=	qt6-qthttpserver
 SUBDIR+=	qt6-qtwebchannel
+SUBDIR+=	qt6-qtwebengine
 SUBDIR+=	qutebrowser
 SUBDIR+=	ramaze
 SUBDIR+=	reader

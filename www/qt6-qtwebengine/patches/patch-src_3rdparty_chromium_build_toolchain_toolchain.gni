@@ -1,0 +1,16 @@
+$NetBSD: patch-src_3rdparty_chromium_build_toolchain_toolchain.gni,v 1.1 2025/12/21 09:38:18 markd Exp $
+
+* Based on OpenBSD's qt6-qtwebengine patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/build/toolchain/toolchain.gni.orig	2025-05-29 01:27:28.000000000 +0000
++++ src/3rdparty/chromium/build/toolchain/toolchain.gni
+@@ -72,7 +72,7 @@ if (host_os == "mac") {
+   host_shlib_extension = ".dylib"
+ } else if (host_os == "win") {
+   host_shlib_extension = ".dll"
+-} else if (host_os == "linux" || host_os == "aix" || host_os == "zos") {
++} else if (host_os == "linux" || host_os == "aix" || host_os == "zos" || host_os == "openbsd" || host_os == "netbsd") {
+   host_shlib_extension = ".so"
+ } else {
+   assert(false, "Host platform not supported")

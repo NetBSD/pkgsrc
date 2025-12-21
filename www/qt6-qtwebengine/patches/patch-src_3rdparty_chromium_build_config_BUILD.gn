@@ -1,0 +1,19 @@
+$NetBSD: patch-src_3rdparty_chromium_build_config_BUILD.gn,v 1.1 2025/12/21 09:38:17 markd Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/build/config/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ src/3rdparty/chromium/build/config/BUILD.gn
+@@ -213,6 +213,10 @@ config("default_libs") {
+     # Targets should choose to explicitly link frameworks they require. Since
+     # linking can have run-time side effects, nothing should be listed here.
+     libs = []
++  } else if (is_bsd) {
++    libs = [
++      "pthread",
++    ]
+   } else if (is_linux || is_chromeos) {
+     libs = [
+       "dl",

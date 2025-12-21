@@ -1,0 +1,17 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_crashpad_crashpad_build_crashpad__buildconfig.gni,v 1.1 2025/12/21 09:38:41 markd Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/third_party/crashpad/crashpad/build/crashpad_buildconfig.gni.orig	2024-12-17 17:58:49.000000000 +0000
++++ src/3rdparty/chromium/third_party/crashpad/crashpad/build/crashpad_buildconfig.gni
+@@ -61,7 +61,7 @@ if (crashpad_is_in_chromium) {
+   crashpad_is_ios = is_ios
+   crashpad_is_apple = is_apple
+   crashpad_is_win = is_win
+-  crashpad_is_linux = is_linux || is_chromeos
++  crashpad_is_linux = (is_linux || is_chromeos) && !is_bsd
+   crashpad_is_android = is_android
+   crashpad_is_fuchsia = is_fuchsia
+ 
