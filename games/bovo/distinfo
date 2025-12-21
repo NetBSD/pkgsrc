@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2024/02/06 11:05:16 markd Exp $
+$NetBSD: distinfo,v 1.16 2025/12/21 10:51:29 markd Exp $
 
-BLAKE2s (bovo-23.08.4.tar.xz) = 2d4c4f9874751d7588063cdd690268f7b95ad77d339b528e901c465deea4014f
-SHA512 (bovo-23.08.4.tar.xz) = 94840c64e9bf536aea75d38e48fa3e57e780ebe13daacecd1397ff33f8f4018d7b6a45d31393276f486ca9695c19c6f738f2878df8ee077250e16d0dfedafbbc
-Size (bovo-23.08.4.tar.xz) = 216564 bytes
+BLAKE2s (bovo-25.08.3.tar.xz) = 4ff1ba9cd87cee84173407688c2d0f1b0a79973c0088449d567ad4bb14a6ffd0
+SHA512 (bovo-25.08.3.tar.xz) = b6a1b380d0829567cc6c762e87bb2f265205929c0f0bdfa3b262abebf198c5042116169fb5141ec25e526e702785dae63c95969bbdff5cd0bd58618871042390
+Size (bovo-25.08.3.tar.xz) = 221692 bytes
