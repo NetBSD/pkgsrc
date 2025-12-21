@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.97 2025/10/23 20:36:22 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2025/12/21 10:17:52 markd Exp $
 
 DISTNAME=	kdevelop-${KAPPSVER}
-PKGREVISION=	13
 CATEGORIES=	devel
 
 HOMEPAGE=	https://www.kdevelop.org/
@@ -10,7 +9,7 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	gmake gtar pkg-config #perl msgfmt
 
@@ -19,27 +18,34 @@ REPLACE_BASH+=	kdevplatform/util/kdevplatform_shell_environment.sh
 CHECK_INTERPRETER_SKIP=	share/kdevplatform/shellutils/.zshrc
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
+# dont build cmake plugin as odd static_assert fail
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_cmake=OFF -DBUILD_cmakebuilder=OFF
+
+# not set in boost and gcc complains
+CFLAGS+=	-D__NVCC___WORKAROUND_GUARD=0 -D__NVCC__=0
 
 pre-configure:
 	ln -s ${TOOLS_DIR}/bin/gtar ${TOOLS_DIR}/bin/tar
 
-.include "../../devel/grantlee-qt5/buildlink3.mk"
-.include "../../devel/kcmutils/buildlink3.mk"
-.include "../../devel/kitemmodels/buildlink3.mk"
-.include "../../devel/knotifyconfig/buildlink3.mk"
-.include "../../devel/krunner/buildlink3.mk"
-.include "../../devel/ktexteditor/buildlink3.mk"
-.include "../../devel/libkomparediff2/buildlink3.mk"
-.include "../../devel/purpose/buildlink3.mk"
-.include "../../lang/clang/buildlink3.mk"
-.include "../../net/knewstuff/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
-.include "../../devel/okteta/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/kf6-kcmutils/buildlink3.mk"
+.include "../../devel/kf6-kitemmodels/buildlink3.mk"
+.include "../../devel/kf6-knotifyconfig/buildlink3.mk"
+.include "../../devel/kf6-krunner/buildlink3.mk"
+.include "../../devel/kf6-ktexteditor/buildlink3.mk"
+.include "../../devel/kf6-purpose/buildlink3.mk"
+.include "../../devel/kf6-threadweaver/buildlink3.mk"
+.include "../../devel/libkomparediff2/buildlink3.mk"
+.include "../../devel/qt6-qt5compat/buildlink3.mk"
 .include "../../devel/subversion-base/buildlink3.mk"
-.include "../../sysutils/libksysguard/buildlink3.mk"
+.include "../../lang/clang/buildlink3.mk"
+.include "../../net/kf6-knewstuff/buildlink3.mk"
+.include "../../sysutils/plasma6-libksysguard/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/plasma-framework/buildlink3.mk"
-.include "../../x11/qt5-qtwebengine/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../textproc/kf6-ktexttemplate/buildlink3.mk"
+.include "../../www/qt6-qtwebengine/buildlink3.mk"
+.include "../../x11/kf6-kxmlgui/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
