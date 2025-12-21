@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.91 2025/10/23 20:37:38 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2025/12/21 12:48:34 markd Exp $
 
 DISTNAME=	libksane-${KAPPSVER}
-PKGREVISION=	10
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://kde.org/applications/graphics/
@@ -13,7 +12,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2
 USE_TOOLS+=	msgmerge
 
 .include "../../graphics/ksanecore/buildlink3.mk"
-.include "../../security/kwallet/buildlink3.mk"
-.include "../../x11/ktextwidgets/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../security/kf6-kwallet/buildlink3.mk"
+.include "../../x11/kf6-ktextwidgets/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
