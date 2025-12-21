@@ -1,0 +1,56 @@
+$NetBSD: patch-configure,v 1.1 2025/12/21 13:51:26 prlw1 Exp $
+
+Fix build:
+- C compiler cannot create executables
+- checking size of int... 0
+- checking size of long... 0
+- checking for working mmap... no
+
+--- configure.orig	2002-12-20 16:33:29.000000000 +0000
++++ configure
+@@ -855,7 +855,7 @@ cat > conftest.$ac_ext << EOF
+ #line 856 "configure"
+ #include "confdefs.h"
+ 
+-main(){return(0);}
++int main(){return(0);}
+ EOF
+ if { (eval echo configure:861: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+   ac_cv_prog_cc_works=yes
+@@ -1746,7 +1746,7 @@ cat > conftest.$ac_ext << EOF
+ #line 1747 "configure"
+ #include "confdefs.h"
+ 
+-main(){return(0);}
++int main(){return(0);}
+ EOF
+ if { (eval echo configure:1752: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+   ac_cv_prog_cc_works=yes
+@@ -4118,7 +4118,8 @@ else
+ #line 4119 "configure"
+ #include "confdefs.h"
+ #include <stdio.h>
+-main()
++#include <stdlib.h>
++int main()
+ {
+   FILE *f=fopen("conftestval", "w");
+   if (!f) exit(1);
+@@ -4157,7 +4158,8 @@ else
+ #line 4158 "configure"
+ #include "confdefs.h"
+ #include <stdio.h>
+-main()
++#include <stdlib.h>
++int main()
+ {
+   FILE *f=fopen("conftestval", "w");
+   if (!f) exit(1);
+@@ -4317,6 +4319,7 @@ else
+ #include <sys/types.h>
+ #include <fcntl.h>
+ #include <sys/mman.h>
++#include <stdlib.h>
+ 
+ /* This mess was copied from the GNU getpagesize.h.  */
+ #ifndef HAVE_GETPAGESIZE
