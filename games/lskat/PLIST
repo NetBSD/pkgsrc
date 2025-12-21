@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/08/03 03:31:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/12/21 11:55:33 markd Exp $
 bin/lskat
 share/applications/org.kde.lskat.desktop
 share/doc/HTML/ca/lskat/index.cache.bz2
@@ -27,6 +27,8 @@ share/doc/HTML/pt_BR/lskat/index.cache.bz2
 share/doc/HTML/pt_BR/lskat/index.docbook
 share/doc/HTML/ru/lskat/index.cache.bz2
 share/doc/HTML/ru/lskat/index.docbook
+share/doc/HTML/sl/lskat/index.cache.bz2
+share/doc/HTML/sl/lskat/index.docbook
 share/doc/HTML/sv/lskat/index.cache.bz2
 share/doc/HTML/sv/lskat/index.docbook
 share/doc/HTML/uk/lskat/index.cache.bz2
@@ -39,6 +41,7 @@ share/icons/hicolor/48x48/apps/lskat.png
 share/icons/hicolor/64x64/apps/lskat.png
 share/locale/af/LC_MESSAGES/lskat.mo
 share/locale/ar/LC_MESSAGES/lskat.mo
+share/locale/ast/LC_MESSAGES/lskat.mo
 share/locale/be/LC_MESSAGES/lskat.mo
 share/locale/bg/LC_MESSAGES/lskat.mo
 share/locale/br/LC_MESSAGES/lskat.mo
@@ -92,6 +95,7 @@ share/locale/pt/LC_MESSAGES/lskat.mo
 share/locale/pt_BR/LC_MESSAGES/lskat.mo
 share/locale/ro/LC_MESSAGES/lskat.mo
 share/locale/ru/LC_MESSAGES/lskat.mo
+share/locale/sa/LC_MESSAGES/lskat.mo
 share/locale/se/LC_MESSAGES/lskat.mo
 share/locale/sk/LC_MESSAGES/lskat.mo
 share/locale/sl/LC_MESSAGES/lskat.mo
@@ -109,14 +113,15 @@ share/locale/uk/LC_MESSAGES/lskat.mo
 share/locale/xh/LC_MESSAGES/lskat.mo
 share/locale/zh_CN/LC_MESSAGES/lskat.mo
 share/locale/zh_TW/LC_MESSAGES/lskat.mo
-share/lskat/grafix/blue.desktop
-share/lskat/grafix/blue.rc
-share/lskat/grafix/blue.svg
-share/lskat/grafix/egyptian.desktop
-share/lskat/grafix/egyptian.rc
-share/lskat/grafix/egyptian.svg
-share/lskat/grafix/oxygen.desktop
-share/lskat/grafix/oxygen.rc
-share/lskat/grafix/oxygen.svg
+share/lskat/themes/blue.desktop
+share/lskat/themes/blue.rc
+share/lskat/themes/blue.svgz
+share/lskat/themes/egyptian.desktop
+share/lskat/themes/egyptian.rc
+share/lskat/themes/egyptian.svgz
+share/lskat/themes/oxygen.desktop
+share/lskat/themes/oxygen.rc
+share/lskat/themes/oxygen.svgz
 share/metainfo/org.kde.lskat.appdata.xml
-share/qlogging-categories5/lskat.categories
+share/qlogging-categories6/lskat.categories
+share/qlogging-categories6/lskat.renamecategories
