@@ -1,18 +1,18 @@
-# $NetBSD: buildlink3.mk,v 1.46 2025/10/23 20:38:37 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.47 2025/12/21 14:58:48 markd Exp $
 
 BUILDLINK_TREE+=	libkcddb
 
 .if !defined(LIBKCDDB_BUILDLINK3_MK)
 LIBKCDDB_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libkcddb+=	libkcddb>=19.08.3
-BUILDLINK_ABI_DEPENDS.libkcddb?=	libkcddb>=23.08.4nb11
+BUILDLINK_API_DEPENDS.libkcddb+=	libkcddb>=25.08.2
+BUILDLINK_ABI_DEPENDS.libkcddb?=	libkcddb>=25.08.2
 BUILDLINK_PKGSRCDIR.libkcddb?=	../../multimedia/libkcddb
 
 .include "../../audio/libmusicbrainz5/buildlink3.mk"
-.include "../../devel/kcmutils/buildlink3.mk"
-.include "../../devel/kio/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../devel/kf6-kcmutils/buildlink3.mk"
+.include "../../devel/kf6-kio/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .endif	# LIBKCDDB_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libkcddb
