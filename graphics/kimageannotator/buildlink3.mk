@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2024/08/24 04:24:47 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/12/21 12:22:23 markd Exp $
 
 BUILDLINK_TREE+=	kimageannotator
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kimageannotator
 KIMAGEANNOTATOR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kimageannotator+=	kimageannotator>=0.6.0
-BUILDLINK_ABI_DEPENDS.kimageannotator?=	kimageannotator>=0.7.1
+BUILDLINK_ABI_DEPENDS.kimageannotator?=	kimageannotator>=0.7.1nb8
 BUILDLINK_PKGSRCDIR.kimageannotator?=	../../graphics/kimageannotator
 
 .include "../../graphics/kcolorpicker/buildlink3.mk"
