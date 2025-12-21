@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2025/10/23 20:35:58 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.91 2025/12/21 07:44:13 wiz Exp $
 
 DISTNAME=	gerbv-2.6.2
 PKGREVISION=	21
@@ -7,7 +6,7 @@ CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gerbv/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gerbv.geda-project.org/
+HOMEPAGE=	https://gerbv.github.io/
 COMMENT=	Gerber file viewer
 LICENSE=	gnu-gpl-v2
 
