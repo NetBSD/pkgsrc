@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7288 2025/12/21 17:34:38 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7289 2025/12/21 17:38:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10548,3 +10548,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-proto-plus to 1.27.0 [wiz 2025-12-21]
 	Updated devel/re2c to 4.4 [wiz 2025-12-21]
 	Updated textproc/py-sphinx-autodoc-typehints to 3.6.0 [wiz 2025-12-21]
+	Updated sysutils/gravityfile to 0.2.1 [pin 2025-12-21]
