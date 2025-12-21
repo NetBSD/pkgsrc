@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2025/08/17 21:30:39 wiz Exp $
+$NetBSD: distinfo,v 1.21 2025/12/21 10:34:36 markd Exp $
 
-BLAKE2s (umbrello-23.08.4.tar.xz) = 04dc8c05f8c04566b35fff84e519a52492798036c94e7240efc32359471849d7
-SHA512 (umbrello-23.08.4.tar.xz) = c45f581518a68e1314481e81d48577a140490a40de6a0f18ee21687ac1872fae5134fb057a191bdca7c5fee4fe9bcf6045578ab286d3a82bcda0e9bcba002d65
-Size (umbrello-23.08.4.tar.xz) = 5775132 bytes
-SHA1 (patch-CMakeLists.txt) = f3b9cafabe9c34eb6d2a0fdb6b484075d99c62fc
+BLAKE2s (umbrello-25.08.3.tar.xz) = 813035f815ee731adbaae80ab2ed76719e3906196965643f6f8e28faf299ff64
+SHA512 (umbrello-25.08.3.tar.xz) = d33a9f21850a16f48a7987b504d6c54ed3e3e7a2174920ddefc734f92052d16ffc3e829b9c1de8944e62aadc2c40ee3477fbc04c0984a8454ef0f98b7c7ca7ed
+Size (umbrello-25.08.3.tar.xz) = 5630544 bytes
