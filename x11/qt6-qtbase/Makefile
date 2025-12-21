@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2025/12/21 09:19:19 markd Exp $
+# $NetBSD: Makefile,v 1.66 2025/12/21 13:14:12 adam Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGREVISION=	1
@@ -62,7 +62,7 @@ QMAKE_CONF=		qmake.conf
 CONFIGURE_ARGS+=	-reduce-relocations
 .  endif
 .else
-CONFIGURE_ARGS+=	-no-vulcan	# needs MoltenVK on macOS
+CONFIGURE_ARGS+=	-no-vulkan	# needs MoltenVK on macOS
 CONFIGURE_ARGS+=	-no-rpath	# avoid @rpath in dylibs
 QMAKE_CONF=		qmake.conf.mac
 .endif
