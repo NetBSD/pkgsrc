@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.140 2025/10/23 20:38:49 wiz Exp $
+# $NetBSD: Makefile,v 1.141 2025/12/21 15:08:26 markd Exp $
 
 DISTNAME=	ktorrent-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	net
 
 HOMEPAGE=	https://apps.kde.org/ktorrent/
@@ -10,7 +9,7 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
@@ -18,16 +17,18 @@ USE_TOOLS+=	msgmerge pkg-config
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_LibKWorkspace=TRUE
 
 .include "../../audio/taglib/buildlink3.mk"
-.include "../../devel/kcmutils/buildlink3.mk"
-.include "../../devel/knotifyconfig/buildlink3.mk"
-.include "../../devel/kparts/buildlink3.mk"
+.include "../../devel/kf6-kcmutils/buildlink3.mk"
+.include "../../devel/kf6-knotifyconfig/buildlink3.mk"
+.include "../../devel/kf6-kparts/buildlink3.mk"
+.include "../../devel/qt6-qt5compat/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/kplotting/buildlink3.mk"
-.include "../../multimedia/phonon-qt5/buildlink3.mk"
-.include "../../net/kdnssd/buildlink3.mk"
+.include "../../graphics/kf6-kplotting/buildlink3.mk"
+.include "../../misc/kf6-kstatusnotifieritem/buildlink3.mk"
+.include "../../multimedia/phonon-qt6/buildlink3.mk"
+.include "../../net/kf6-kdnssd/buildlink3.mk"
 .include "../../net/libktorrent/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../www/syndication/buildlink3.mk"
-.include "../../x11/qt5-qtwebengine/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../www/kf6-syndication/buildlink3.mk"
+.include "../../wip/qt6-qtwebengine/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
