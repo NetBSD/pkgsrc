@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/02/06 11:17:41 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/12/21 15:28:04 markd Exp $
 
-BLAKE2s (libkleo-23.08.4.tar.xz) = 022ef7a0be97a5b55148ad1751a86747f8de9516840c88ac6e509b802a7cf9cd
-SHA512 (libkleo-23.08.4.tar.xz) = 18fea28b8a47539c7c1db95f5f7cc643552686f99ba75bb99f481d6ffe0d9acc6768dc9ffbf6834b90c1708aa51950153ac1035aa3fedbd52851161bf1ace9aa
-Size (libkleo-23.08.4.tar.xz) = 564896 bytes
+BLAKE2s (libkleo-25.08.3.tar.xz) = 2982a6cc8ba314b0552d2728ca415385d4722e71ff8a7923059a8f0771b563b2
+SHA512 (libkleo-25.08.3.tar.xz) = 156e72d0b6c9905e101bba179a7e880f75e1e6b2f17e72a1c72aa8a3dbadeaae02ed76a77de55039b7a3e220e9fecd1472d2f1c0d4bec122058ab5a93cfeb7f0
+Size (libkleo-25.08.3.tar.xz) = 668176 bytes
