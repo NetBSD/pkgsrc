@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2024/02/06 11:05:13 markd Exp $
+$NetBSD: distinfo,v 1.22 2025/12/21 09:53:41 markd Exp $
 
-BLAKE2s (konversation-23.08.4.tar.xz) = 1ad129543fc36a3c459dbde4ff4afe5f9bea6f70552a2bce457d0db2b107e742
-SHA512 (konversation-23.08.4.tar.xz) = 7fb40edcfeb234036893286f977f5a74c9c0e401f575eefb792c9087a66a39aa3f83a9259a518d3368c7d10e69238b04780dd5ff218792f820dcf80162c5b8d5
-Size (konversation-23.08.4.tar.xz) = 4483044 bytes
+BLAKE2s (konversation-25.08.3.tar.xz) = f349ae0984eb84872c8f128d558ddd640f50ce4553f7cbcb64c44dafc1318410
+SHA512 (konversation-25.08.3.tar.xz) = 0ea8710462b717218351daca850e1ecd561d1bbbdf3d170aff2a650d37662c14b5f63e8e906df036e44c1acbbf09deee344283a3d553187697cded61a03855c7
+Size (konversation-25.08.3.tar.xz) = 4480864 bytes

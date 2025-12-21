@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.143 2025/10/23 20:36:02 wiz Exp $
+# $NetBSD: Makefile,v 1.144 2025/12/21 09:53:41 markd Exp $
 
 DISTNAME=	konversation-${KAPPSVER}
-PKGREVISION=	10
 CATEGORIES=	chat
 
 HOMEPAGE=	https://konversation.kde.org/
@@ -10,12 +9,11 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge perl pkg-config
 
 REPLACE_BASH+=		data/scripts/*
-REPLACE_PERL+=		data/updaters/konversation-*.pl
 REPLACE_PERL+=		data/scripts/*
 REPLACE_PYTHON+=	data/scripts/*
 REPLACE_PYTHON+=	data/scripting_support/python/konversation/dbus.py
@@ -23,12 +21,15 @@ REPLACE_PYTHON+=	data/scripting_support/python/konversation/dbus.py
 USE_TOOLS+=		bash:run
 
 .include "../../lang/python/application.mk"
-.include "../../devel/kidletime/buildlink3.mk"
-.include "../../devel/knotifyconfig/buildlink3.mk"
-.include "../../devel/kparts/buildlink3.mk"
+.include "../../devel/kf6-kidletime/buildlink3.mk"
+.include "../../devel/kf6-knotifyconfig/buildlink3.mk"
+.include "../../devel/kf6-kparts/buildlink3.mk"
+.include "../../devel/qt6-qt5compat/buildlink3.mk"
+.include "../../devel/qt6-qttools/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../net/knewstuff/buildlink3.mk"
-.include "../../security/qca2-qt5/buildlink3.mk"
+.include "../../misc/kf6-kstatusnotifieritem/buildlink3.mk"
+.include "../../net/kf6-knewstuff/buildlink3.mk"
+.include "../../security/qca2-qt6/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
