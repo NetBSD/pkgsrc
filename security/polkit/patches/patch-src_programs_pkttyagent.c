@@ -1,6 +1,7 @@
-$NetBSD: patch-src_programs_pkttyagent.c,v 1.4 2025/01/15 08:41:38 adam Exp $
+$NetBSD: patch-src_programs_pkttyagent.c,v 1.5 2025/12/21 15:44:05 wiz Exp $
 
 Avoid %m usage in printf.
+https://github.com/polkit-org/polkit/pull/624
 
 --- src/programs/pkttyagent.c.orig	2024-08-08 13:12:35.000000000 +0000
 +++ src/programs/pkttyagent.c
