@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26551 2025/12/21 13:09:21 adam Exp $
+$NetBSD: TODO,v 1.26552 2025/12/21 14:33:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -401,7 +401,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o Sigil-2.7.0
 	o SOGo-5.12.4
 	o SOPE-5.12.4
-	o TECkit-2.5.13
 	o TiffIO-140a
 	o aarch64-none-elf-binutils-2.45
 	o aarch64-none-elf-gcc-14.3.0
