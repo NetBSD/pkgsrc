@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/02/06 11:17:40 markd Exp $
+$NetBSD: distinfo,v 1.10 2025/12/21 15:09:54 markd Exp $
 
-BLAKE2s (libktorrent-23.08.4.tar.xz) = f359be25e9e97b53e974f222dd1c88405eff333cb7cae8217b734c0d10a2095a
-SHA512 (libktorrent-23.08.4.tar.xz) = 9546ac6252f85eb12e2ad870d7da25e08ede1aab917e2bb8237cd5e975b1fe0d99ecfbbdda40a807ac96ebe23830cffbea59ebfac8d4e53b487520d7bf67ffbc
-Size (libktorrent-23.08.4.tar.xz) = 604128 bytes
+BLAKE2s (libktorrent-25.08.3.tar.xz) = c3b8b6192bad301a659c2bbe698d300870f679287eec8fe239567ddd3ea06c0e
+SHA512 (libktorrent-25.08.3.tar.xz) = 18cdac7194dcaab58568d844c48bd5ca21983bb99784f14f82d15aa620c24bfde27ef298e519cc5f5d2472fcba65288dc5458027faecf754a92b83e637404ae4
+Size (libktorrent-25.08.3.tar.xz) = 607156 bytes
