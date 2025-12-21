@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.114 2025/10/23 20:38:36 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2025/12/21 14:57:07 markd Exp $
 
 DISTNAME=	kmix-${KAPPSVER}
-PKGREVISION=	15
 CATEGORIES=	multimedia
 
 HOMEPAGE=	https://kde.org/applications/multimedia/kmix/
@@ -10,8 +9,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
-DEPENDS+=	kinit>=5.19.0:../../x11/kinit
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
@@ -44,8 +42,14 @@ SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/kf6-kcrash/buildlink3.mk"
+.include "../../devel/kf6-ki18n/buildlink3.mk"
+.include "../../devel/kf6-knotifications/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../misc/kf6-kstatusnotifieritem/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/plasma-framework/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../sysutils/kf6-kdbusaddons/buildlink3.mk"
+.include "../../sysutils/kf6-solid/buildlink3.mk"
+.include "../../x11/kf6-kxmlgui/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
