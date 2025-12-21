@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.80 2025/10/23 20:37:12 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2025/12/21 11:57:00 markd Exp $
 
 DISTNAME=	palapeli-${KAPPSVER}
-PKGREVISION=	10
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/palapeli/
@@ -10,7 +9,7 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge
 
@@ -24,8 +23,9 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/palapeli-collectionrc \
 		${PKG_SYSCONFDIR}/xdg/palapeli-collectionrc
 
+.include "../../devel/kf6-kio/buildlink3.mk"
 .include "../../games/libkdegames/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
