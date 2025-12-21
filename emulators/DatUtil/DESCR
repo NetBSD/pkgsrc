@@ -1,5 +1,0 @@
-DatUtil was created to aid in the creation of dat files for Rom
-Managers such as ClrMamePro and RomCenter (Roman Scherzer / Eric
-Bole-Feysot). It can convert between formats, extract individual
-games (and optionally their clones) and cleanse dats. It supports
-a variety of formats.
