@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2024/02/06 11:17:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/12/21 19:36:40 markd Exp $
 bin/kdf
 bin/kwikdisk
-lib/libkdfprivate.so.23
+lib/libkdfprivate.so.25
 lib/libkdfprivate.so.${PKGVERSION}
-qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kdf.so
+qt6/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kdf.so
 share/applications/kcm_kdf.desktop
 share/applications/org.kde.kdf.desktop
 share/applications/org.kde.kwikdisk.desktop
@@ -63,6 +63,10 @@ share/doc/HTML/ru/kcontrol/blockdevices/index.cache.bz2
 share/doc/HTML/ru/kcontrol/blockdevices/index.docbook
 share/doc/HTML/ru/kdf/index.cache.bz2
 share/doc/HTML/ru/kdf/index.docbook
+share/doc/HTML/sl/kcontrol/blockdevices/index.cache.bz2
+share/doc/HTML/sl/kcontrol/blockdevices/index.docbook
+share/doc/HTML/sl/kdf/index.cache.bz2
+share/doc/HTML/sl/kdf/index.docbook
 share/doc/HTML/sr/kcontrol/blockdevices/index.cache.bz2
 share/doc/HTML/sr/kcontrol/blockdevices/index.docbook
 share/doc/HTML/sr/kdf/index.cache.bz2
@@ -102,9 +106,9 @@ share/icons/hicolor/48x48/apps/kdf.png
 share/icons/hicolor/48x48/apps/kwikdisk.png
 share/icons/hicolor/64x64/apps/kdf.png
 share/icons/hicolor/64x64/apps/kwikdisk.png
-share/kxmlgui5/kdf/kdfui.rc
 share/locale/af/LC_MESSAGES/kdf.mo
 share/locale/ar/LC_MESSAGES/kdf.mo
+share/locale/ast/LC_MESSAGES/kdf.mo
 share/locale/be/LC_MESSAGES/kdf.mo
 share/locale/bg/LC_MESSAGES/kdf.mo
 share/locale/br/LC_MESSAGES/kdf.mo
@@ -157,6 +161,7 @@ share/locale/pt/LC_MESSAGES/kdf.mo
 share/locale/pt_BR/LC_MESSAGES/kdf.mo
 share/locale/ro/LC_MESSAGES/kdf.mo
 share/locale/ru/LC_MESSAGES/kdf.mo
+share/locale/sa/LC_MESSAGES/kdf.mo
 share/locale/se/LC_MESSAGES/kdf.mo
 share/locale/sk/LC_MESSAGES/kdf.mo
 share/locale/sl/LC_MESSAGES/kdf.mo
@@ -178,4 +183,4 @@ share/locale/xh/LC_MESSAGES/kdf.mo
 share/locale/zh_CN/LC_MESSAGES/kdf.mo
 share/locale/zh_TW/LC_MESSAGES/kdf.mo
 share/metainfo/org.kde.kdf.appdata.xml
-share/qlogging-categories5/kdf.categories
+share/qlogging-categories6/kdf.categories
