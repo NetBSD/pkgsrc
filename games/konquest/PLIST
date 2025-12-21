@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/08/03 03:17:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/12/21 11:35:27 markd Exp $
 bin/konquest
 share/applications/org.kde.konquest.desktop
 share/doc/HTML/ca/konquest/index.cache.bz2
@@ -33,6 +33,8 @@ share/doc/HTML/pt_BR/konquest/index.cache.bz2
 share/doc/HTML/pt_BR/konquest/index.docbook
 share/doc/HTML/ru/konquest/index.cache.bz2
 share/doc/HTML/ru/konquest/index.docbook
+share/doc/HTML/sl/konquest/index.cache.bz2
+share/doc/HTML/sl/konquest/index.docbook
 share/doc/HTML/sv/konquest/index.cache.bz2
 share/doc/HTML/sv/konquest/index.docbook
 share/doc/HTML/uk/konquest/index.cache.bz2
@@ -50,6 +52,7 @@ share/konquest/pics/default_theme.svgz
 share/konquest/pics/konquest-splash.png
 share/locale/af/LC_MESSAGES/konquest.mo
 share/locale/ar/LC_MESSAGES/konquest.mo
+share/locale/ast/LC_MESSAGES/konquest.mo
 share/locale/be/LC_MESSAGES/konquest.mo
 share/locale/bg/LC_MESSAGES/konquest.mo
 share/locale/br/LC_MESSAGES/konquest.mo
@@ -76,6 +79,7 @@ share/locale/hi/LC_MESSAGES/konquest.mo
 share/locale/hne/LC_MESSAGES/konquest.mo
 share/locale/hr/LC_MESSAGES/konquest.mo
 share/locale/hu/LC_MESSAGES/konquest.mo
+share/locale/ia/LC_MESSAGES/konquest.mo
 share/locale/is/LC_MESSAGES/konquest.mo
 share/locale/it/LC_MESSAGES/konquest.mo
 share/locale/ja/LC_MESSAGES/konquest.mo
@@ -101,6 +105,7 @@ share/locale/pt/LC_MESSAGES/konquest.mo
 share/locale/pt_BR/LC_MESSAGES/konquest.mo
 share/locale/ro/LC_MESSAGES/konquest.mo
 share/locale/ru/LC_MESSAGES/konquest.mo
+share/locale/sa/LC_MESSAGES/konquest.mo
 share/locale/se/LC_MESSAGES/konquest.mo
 share/locale/sk/LC_MESSAGES/konquest.mo
 share/locale/sl/LC_MESSAGES/konquest.mo
