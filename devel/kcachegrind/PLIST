@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/02/06 11:05:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/12/21 10:07:11 markd Exp $
 bin/dprof2calltree
 bin/hotshot2calltree
 bin/kcachegrind
@@ -30,6 +30,8 @@ share/doc/HTML/pt_BR/kcachegrind/index.cache.bz2
 share/doc/HTML/pt_BR/kcachegrind/index.docbook
 share/doc/HTML/ru/kcachegrind/index.cache.bz2
 share/doc/HTML/ru/kcachegrind/index.docbook
+share/doc/HTML/sl/kcachegrind/index.cache.bz2
+share/doc/HTML/sl/kcachegrind/index.docbook
 share/doc/HTML/sv/kcachegrind/index.cache.bz2
 share/doc/HTML/sv/kcachegrind/index.docbook
 share/doc/HTML/uk/kcachegrind/index.cache.bz2
@@ -46,6 +48,9 @@ share/kcachegrind/icons/hicolor/22x22/actions/percent.png
 share/kcachegrind/icons/hicolor/32x32/actions/percent.png
 share/kcachegrind/tips
 share/locale/ar/LC_MESSAGES/kcachegrind.mo
+share/locale/ar/LC_MESSAGES/kcachegrind_qt.qm
+share/locale/ast/LC_MESSAGES/kcachegrind.mo
+share/locale/ast/LC_MESSAGES/kcachegrind_qt.qm
 share/locale/be/LC_MESSAGES/kcachegrind.mo
 share/locale/bg/LC_MESSAGES/kcachegrind.mo
 share/locale/bg/LC_MESSAGES/kcachegrind_qt.qm
@@ -85,12 +90,16 @@ share/locale/ga/LC_MESSAGES/kcachegrind.mo
 share/locale/ga/LC_MESSAGES/kcachegrind_qt.qm
 share/locale/gl/LC_MESSAGES/kcachegrind.mo
 share/locale/gl/LC_MESSAGES/kcachegrind_qt.qm
+share/locale/he/LC_MESSAGES/kcachegrind.mo
 share/locale/hi/LC_MESSAGES/kcachegrind.mo
+share/locale/hi/LC_MESSAGES/kcachegrind_qt.qm
 share/locale/hne/LC_MESSAGES/kcachegrind.mo
 share/locale/hr/LC_MESSAGES/kcachegrind.mo
 share/locale/hr/LC_MESSAGES/kcachegrind_qt.qm
 share/locale/hu/LC_MESSAGES/kcachegrind.mo
 share/locale/hu/LC_MESSAGES/kcachegrind_qt.qm
+share/locale/ia/LC_MESSAGES/kcachegrind.mo
+share/locale/ia/LC_MESSAGES/kcachegrind_qt.qm
 share/locale/it/LC_MESSAGES/kcachegrind.mo
 share/locale/it/LC_MESSAGES/kcachegrind_qt.qm
 share/locale/ja/LC_MESSAGES/kcachegrind.mo
@@ -129,6 +138,8 @@ share/locale/pt_BR/LC_MESSAGES/kcachegrind_qt.qm
 share/locale/ro/LC_MESSAGES/kcachegrind.mo
 share/locale/ru/LC_MESSAGES/kcachegrind.mo
 share/locale/ru/LC_MESSAGES/kcachegrind_qt.qm
+share/locale/sa/LC_MESSAGES/kcachegrind.mo
+share/locale/sa/LC_MESSAGES/kcachegrind_qt.qm
 share/locale/se/LC_MESSAGES/kcachegrind.mo
 share/locale/se/LC_MESSAGES/kcachegrind_qt.qm
 share/locale/sk/LC_MESSAGES/kcachegrind.mo
