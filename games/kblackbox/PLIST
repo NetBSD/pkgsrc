@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/08/03 02:54:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/12/21 11:02:47 markd Exp $
 bin/kblackbox
 share/applications/org.kde.kblackbox.desktop
 share/doc/HTML/ca/kblackbox/gameboard.png
@@ -23,6 +23,8 @@ share/doc/HTML/pt/kblackbox/index.cache.bz2
 share/doc/HTML/pt/kblackbox/index.docbook
 share/doc/HTML/pt_BR/kblackbox/index.cache.bz2
 share/doc/HTML/pt_BR/kblackbox/index.docbook
+share/doc/HTML/sl/kblackbox/index.cache.bz2
+share/doc/HTML/sl/kblackbox/index.docbook
 share/doc/HTML/sv/kblackbox/index.cache.bz2
 share/doc/HTML/sv/kblackbox/index.docbook
 share/doc/HTML/uk/kblackbox/gameboard.png
@@ -34,9 +36,10 @@ share/icons/hicolor/22x22/apps/kblackbox.png
 share/icons/hicolor/32x32/apps/kblackbox.png
 share/icons/hicolor/48x48/apps/kblackbox.png
 share/icons/hicolor/64x64/apps/kblackbox.png
-share/kblackbox/pics/kblackbox.svgz
+share/kblackbox/themes/default.svgz
 share/locale/af/LC_MESSAGES/kblackbox.mo
 share/locale/ar/LC_MESSAGES/kblackbox.mo
+share/locale/ast/LC_MESSAGES/kblackbox.mo
 share/locale/be/LC_MESSAGES/kblackbox.mo
 share/locale/bg/LC_MESSAGES/kblackbox.mo
 share/locale/bn/LC_MESSAGES/kblackbox.mo
@@ -64,6 +67,7 @@ share/locale/hi/LC_MESSAGES/kblackbox.mo
 share/locale/hne/LC_MESSAGES/kblackbox.mo
 share/locale/hr/LC_MESSAGES/kblackbox.mo
 share/locale/hu/LC_MESSAGES/kblackbox.mo
+share/locale/ia/LC_MESSAGES/kblackbox.mo
 share/locale/id/LC_MESSAGES/kblackbox.mo
 share/locale/is/LC_MESSAGES/kblackbox.mo
 share/locale/it/LC_MESSAGES/kblackbox.mo
@@ -91,6 +95,7 @@ share/locale/pt/LC_MESSAGES/kblackbox.mo
 share/locale/pt_BR/LC_MESSAGES/kblackbox.mo
 share/locale/ro/LC_MESSAGES/kblackbox.mo
 share/locale/ru/LC_MESSAGES/kblackbox.mo
+share/locale/sa/LC_MESSAGES/kblackbox.mo
 share/locale/se/LC_MESSAGES/kblackbox.mo
 share/locale/sk/LC_MESSAGES/kblackbox.mo
 share/locale/sl/LC_MESSAGES/kblackbox.mo
