@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7300 2025/12/21 18:12:22 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7301 2025/12/21 18:29:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10560,3 +10560,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/py-textual to 6.11.0 [wiz 2025-12-21]
 	Updated devel/py-ruff to 0.14.10 [wiz 2025-12-21]
 	Updated finance/gnucash to 5.14 [wiz 2025-12-21]
+	Updated finance/gnucash-docs to 5.14 [wiz 2025-12-21]
