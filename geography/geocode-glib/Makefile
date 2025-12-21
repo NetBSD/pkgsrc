@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/10/23 20:37:18 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/12/21 07:42:44 wiz Exp $
 
 DISTNAME=	geocode-glib-3.26.2
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -7,7 +7,7 @@ CATEGORIES=	geography gnome
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://developer.gnome.org/geocode-glib/
+HOMEPAGE=	https://gitlab.gnome.org/GNOME/geocode-glib
 COMMENT=	GNOME convenience library for geocoding
 LICENSE=	gnu-lgpl-v2
 
