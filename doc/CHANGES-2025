@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7287 2025/12/21 17:28:27 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7288 2025/12/21 17:34:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10547,3 +10547,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed math/py-roman_numerals_py successor math/py-roman_numerals [wiz 2025-12-21]
 	Updated devel/py-proto-plus to 1.27.0 [wiz 2025-12-21]
 	Updated devel/re2c to 4.4 [wiz 2025-12-21]
+	Updated textproc/py-sphinx-autodoc-typehints to 3.6.0 [wiz 2025-12-21]
