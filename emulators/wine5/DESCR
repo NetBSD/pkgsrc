@@ -1,0 +1,11 @@
+Wine is a compatibility layer capable of running Windows applications on
+several POSIX-compliant operating systems. Instead of simulating internal
+Windows logic like a virtual machine or emulator, Wine translates Windows
+API calls into POSIX calls on-the-fly, eliminating the performance and memory
+penalties of other methods and allowing you to cleanly integrate Windows
+applications into your desktop.
+
+This package tracks the Wine stable branch.
+
+On 32-bit systems this package supports only 32-bit applications, and on
+64-bit systems it supports only 64-bit applications.
