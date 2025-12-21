@@ -1,18 +1,18 @@
-# $NetBSD: buildlink3.mk,v 1.27 2025/10/23 20:37:09 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2025/12/21 11:53:59 markd Exp $
 
 BUILDLINK_TREE+=	libkmahjongg
 
 .if !defined(LIBKMAHJONGG_BUILDLINK3_MK)
 LIBKMAHJONGG_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libkmahjongg+=	libkmahjongg>=19.08.3
-BUILDLINK_ABI_DEPENDS.libkmahjongg?=	libkmahjongg>=23.08.4nb8
+BUILDLINK_API_DEPENDS.libkmahjongg+=	libkmahjongg>=25.08.2
+BUILDLINK_ABI_DEPENDS.libkmahjongg?=	libkmahjongg>=25.08.2
 BUILDLINK_PKGSRCDIR.libkmahjongg?=	../../games/libkmahjongg
 
-.include "../../textproc/kcompletion/buildlink3.mk"
-.include "../../x11/kconfigwidgets/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "../../graphics/qt6-qtsvg/buildlink3.mk"
+.include "../../textproc/kf6-kcompletion/buildlink3.mk"
+.include "../../x11/kf6-kconfigwidgets/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .endif	# LIBKMAHJONGG_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libkmahjongg
