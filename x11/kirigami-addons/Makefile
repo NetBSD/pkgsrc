@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2025/10/23 20:40:02 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/12/21 20:17:06 markd Exp $
 
-DISTNAME=	kirigami-addons-0.11.0
-PKGREVISION=	9
+DISTNAME=	kirigami-addons-1.10.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_KDE:=kirigami-addons/}
 
@@ -11,12 +10,15 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-USE_TOOLS+=	msgmerge
+USE_TOOLS+=	gmake msgmerge
 
-.include "../../devel/ki18n/buildlink3.mk"
-.include "../../devel/kitemmodels/buildlink3.mk"
-.include "../../x11/kirigami2/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtdeclarative/buildlink3.mk"
-.include "../../x11/qt5-qtquickcontrols2/buildlink3.mk"
+.include "../../devel/kf6-kcrash/buildlink3.mk"
+.include "../../devel/kf6-ki18n/buildlink3.mk"
+.include "../../devel/kf6-kitemmodels/buildlink3.mk"
+.include "../../graphics/kf6-kiconthemes/buildlink3.mk"
+.include "../../lang/qt6-qtdeclarative/buildlink3.mk"
+.include "../../multimedia/qt6-qtmultimedia/buildlink3.mk"
+.include "../../x11/kf6-kglobalaccel/buildlink3.mk"
+.include "../../x11/kf6-kirigami/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
