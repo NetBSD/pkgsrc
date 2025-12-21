@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/08/03 03:22:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/12/21 11:44:04 markd Exp $
 bin/kspaceduel
 share/applications/org.kde.kspaceduel.desktop
 share/config.kcfg/kspaceduel.kcfg
@@ -36,6 +36,8 @@ share/doc/HTML/pt_BR/kspaceduel/index.docbook
 share/doc/HTML/pt_BR/kspaceduel/kspaceduel3.png
 share/doc/HTML/ru/kspaceduel/index.cache.bz2
 share/doc/HTML/ru/kspaceduel/index.docbook
+share/doc/HTML/sl/kspaceduel/index.cache.bz2
+share/doc/HTML/sl/kspaceduel/index.docbook
 share/doc/HTML/sv/kspaceduel/index.cache.bz2
 share/doc/HTML/sv/kspaceduel/index.docbook
 share/doc/HTML/sv/kspaceduel/kspaceduel3.png
@@ -72,6 +74,7 @@ share/kspaceduel/sprites/playerinfo/ship23.png
 share/kspaceduel/sprites/playerinfo/win.png
 share/locale/af/LC_MESSAGES/kspaceduel.mo
 share/locale/ar/LC_MESSAGES/kspaceduel.mo
+share/locale/ast/LC_MESSAGES/kspaceduel.mo
 share/locale/be/LC_MESSAGES/kspaceduel.mo
 share/locale/bg/LC_MESSAGES/kspaceduel.mo
 share/locale/br/LC_MESSAGES/kspaceduel.mo
@@ -98,6 +101,7 @@ share/locale/hi/LC_MESSAGES/kspaceduel.mo
 share/locale/hne/LC_MESSAGES/kspaceduel.mo
 share/locale/hr/LC_MESSAGES/kspaceduel.mo
 share/locale/hu/LC_MESSAGES/kspaceduel.mo
+share/locale/ia/LC_MESSAGES/kspaceduel.mo
 share/locale/is/LC_MESSAGES/kspaceduel.mo
 share/locale/it/LC_MESSAGES/kspaceduel.mo
 share/locale/ja/LC_MESSAGES/kspaceduel.mo
@@ -123,6 +127,7 @@ share/locale/pt/LC_MESSAGES/kspaceduel.mo
 share/locale/pt_BR/LC_MESSAGES/kspaceduel.mo
 share/locale/ro/LC_MESSAGES/kspaceduel.mo
 share/locale/ru/LC_MESSAGES/kspaceduel.mo
+share/locale/sa/LC_MESSAGES/kspaceduel.mo
 share/locale/se/LC_MESSAGES/kspaceduel.mo
 share/locale/sk/LC_MESSAGES/kspaceduel.mo
 share/locale/sl/LC_MESSAGES/kspaceduel.mo
