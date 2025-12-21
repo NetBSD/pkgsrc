@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/08/03 03:14:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/12/21 11:32:18 markd Exp $
 bin/kolf
 share/applications/org.kde.kolf.desktop
 share/doc/HTML/ca/kolf/index.cache.bz2
@@ -25,6 +25,8 @@ share/doc/HTML/pt_BR/kolf/index.cache.bz2
 share/doc/HTML/pt_BR/kolf/index.docbook
 share/doc/HTML/ru/kolf/index.cache.bz2
 share/doc/HTML/ru/kolf/index.docbook
+share/doc/HTML/sl/kolf/index.cache.bz2
+share/doc/HTML/sl/kolf/index.docbook
 share/doc/HTML/sv/kolf/index.cache.bz2
 share/doc/HTML/sv/kolf/index.docbook
 share/doc/HTML/uk/kolf/index.cache.bz2
@@ -45,7 +47,6 @@ share/kolf/courses/Practice
 share/kolf/courses/ReallyEasy
 share/kolf/courses/USApro
 share/kolf/intro
-share/kolf/pics/default_theme.svgz
 share/kolf/sounds/blackhole.wav
 share/kolf/sounds/blackholeeject.wav
 share/kolf/sounds/blackholeputin.wav
@@ -56,11 +57,12 @@ share/kolf/sounds/holeinone.wav
 share/kolf/sounds/puddle.wav
 share/kolf/sounds/wall.wav
 share/kolf/sounds/woohoo.wav
+share/kolf/themes/default.svgz
 share/kolf/tutorial.kolf
 share/kolf/tutorial.kolfgame
-share/kxmlgui5/kolf/kolfui.rc
 share/locale/af/LC_MESSAGES/kolf.mo
 share/locale/ar/LC_MESSAGES/kolf.mo
+share/locale/ast/LC_MESSAGES/kolf.mo
 share/locale/be/LC_MESSAGES/kolf.mo
 share/locale/bg/LC_MESSAGES/kolf.mo
 share/locale/br/LC_MESSAGES/kolf.mo
@@ -87,6 +89,7 @@ share/locale/hi/LC_MESSAGES/kolf.mo
 share/locale/hne/LC_MESSAGES/kolf.mo
 share/locale/hr/LC_MESSAGES/kolf.mo
 share/locale/hu/LC_MESSAGES/kolf.mo
+share/locale/ia/LC_MESSAGES/kolf.mo
 share/locale/is/LC_MESSAGES/kolf.mo
 share/locale/it/LC_MESSAGES/kolf.mo
 share/locale/ja/LC_MESSAGES/kolf.mo
@@ -113,6 +116,7 @@ share/locale/pt/LC_MESSAGES/kolf.mo
 share/locale/pt_BR/LC_MESSAGES/kolf.mo
 share/locale/ro/LC_MESSAGES/kolf.mo
 share/locale/ru/LC_MESSAGES/kolf.mo
+share/locale/sa/LC_MESSAGES/kolf.mo
 share/locale/se/LC_MESSAGES/kolf.mo
 share/locale/sk/LC_MESSAGES/kolf.mo
 share/locale/sl/LC_MESSAGES/kolf.mo
