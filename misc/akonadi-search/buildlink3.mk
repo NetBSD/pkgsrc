@@ -1,21 +1,22 @@
-# $NetBSD: buildlink3.mk,v 1.14 2025/10/23 20:38:17 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2025/12/21 13:42:03 markd Exp $
 
 BUILDLINK_TREE+=	akonadi-search
 
 .if !defined(AKONADI_SEARCH_BUILDLINK3_MK)
 AKONADI_SEARCH_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.akonadi-search+=	akonadi-search>=17.12.1
-BUILDLINK_ABI_DEPENDS.akonadi-search?=	akonadi-search>=23.08.4nb11
+BUILDLINK_API_DEPENDS.akonadi-search+=	akonadi-search>=25.08.2
+BUILDLINK_ABI_DEPENDS.akonadi-search?=	akonadi-search>=25.08.2
 BUILDLINK_PKGSRCDIR.akonadi-search?=	../../misc/akonadi-search
 
-.include "../../devel/kcmutils/buildlink3.mk"
-.include "../../devel/krunner/buildlink3.mk"
+.include "../../devel/kf6-kcmutils/buildlink3.mk"
+.include "../../devel/kf6-krunner/buildlink3.mk"
 .include "../../mail/akonadi-mime/buildlink3.mk"
-.include "../../misc/kcontacts/buildlink3.mk"
+.include "../../misc/kf6-kcontacts/buildlink3.mk"
+.include "../../textproc/ktextaddons/buildlink3.mk"
 .include "../../textproc/xapian/buildlink3.mk"
-.include "../../time/kcalendarcore/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../time/kf6-kcalendarcore/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .endif	# AKONADI_SEARCH_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-akonadi-search
