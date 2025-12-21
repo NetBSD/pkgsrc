@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/10/23 20:38:09 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/12/21 13:08:31 markd Exp $
 
 DISTNAME=	kmailtransport-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	mail
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM
@@ -10,7 +9,7 @@ LICENSE=	gnu-lgpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge
 
@@ -25,10 +24,10 @@ SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/libkgapi/buildlink3.mk"
-.include "../../devel/kcmutils/buildlink3.mk"
+.include "../../devel/kf6-kcmutils/buildlink3.mk"
 .include "../../mail/akonadi-mime/buildlink3.mk"
 .include "../../mail/ksmtp/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
-.include "../../security/qt5-qtkeychain/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../security/qt6-qtkeychain/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
