@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/12/21 10:01:55 nia Exp $
+# $NetBSD: Makefile,v 1.2 2025/12/21 10:10:40 nia Exp $
 
 DISTNAME=	wine-5.0.5
 CATEGORIES=	emulators
@@ -89,7 +89,7 @@ PLIST.desktop=	yes
 .include "../../audio/faudio/buildlink3.mk"
 .include "../../audio/gsm/buildlink3.mk"
 .include "../../audio/mpg123/buildlink3.mk"
-.include "../../audio/openal-soft-c/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
