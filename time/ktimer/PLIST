@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/08/03 05:00:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/12/21 20:03:24 markd Exp $
 bin/ktimer
 share/applications/org.kde.ktimer.desktop
 share/doc/HTML/ca/ktimer/index.cache.bz2
@@ -37,6 +37,8 @@ share/doc/HTML/pt_BR/ktimer/running.png
 share/doc/HTML/pt_BR/ktimer/two_at_once.png
 share/doc/HTML/ru/ktimer/index.cache.bz2
 share/doc/HTML/ru/ktimer/index.docbook
+share/doc/HTML/sl/ktimer/index.cache.bz2
+share/doc/HTML/sl/ktimer/index.docbook
 share/doc/HTML/sr/ktimer/index.cache.bz2
 share/doc/HTML/sr/ktimer/index.docbook
 share/doc/HTML/sr@latin/ktimer/index.cache.bz2
@@ -61,6 +63,7 @@ share/icons/hicolor/32x32/apps/ktimer.png
 share/icons/hicolor/48x48/apps/ktimer.png
 share/locale/af/LC_MESSAGES/ktimer.mo
 share/locale/ar/LC_MESSAGES/ktimer.mo
+share/locale/ast/LC_MESSAGES/ktimer.mo
 share/locale/be/LC_MESSAGES/ktimer.mo
 share/locale/bg/LC_MESSAGES/ktimer.mo
 share/locale/br/LC_MESSAGES/ktimer.mo
@@ -113,6 +116,7 @@ share/locale/pt/LC_MESSAGES/ktimer.mo
 share/locale/pt_BR/LC_MESSAGES/ktimer.mo
 share/locale/ro/LC_MESSAGES/ktimer.mo
 share/locale/ru/LC_MESSAGES/ktimer.mo
+share/locale/sa/LC_MESSAGES/ktimer.mo
 share/locale/se/LC_MESSAGES/ktimer.mo
 share/locale/sk/LC_MESSAGES/ktimer.mo
 share/locale/sl/LC_MESSAGES/ktimer.mo
