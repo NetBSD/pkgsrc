@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7302 2025/12/21 19:24:59 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7303 2025/12/21 21:41:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10563,3 +10563,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated finance/gnucash-docs to 5.14 [wiz 2025-12-21]
 	Updated devel/cmake to 4.2.1 [adam 2025-12-21]
 	Updated devel/cmake-gui to 4.2.1 [adam 2025-12-21]
+	Updated security/libgpg-error to 1.58 [adam 2025-12-21]
+	Updated x11/wxGTK32 to 3.2.9 [adam 2025-12-21]
