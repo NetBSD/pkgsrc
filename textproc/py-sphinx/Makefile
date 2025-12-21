@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.109 2025/10/09 07:58:04 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2025/12/21 17:22:57 wiz Exp $
 
 DISTNAME=	sphinx-8.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
 
@@ -19,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-packaging>=23.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.17:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.30.0:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-roman_numerals_py>=0:../../math/py-roman_numerals_py
+DEPENDS+=	${PYPKGPREFIX}-roman_numerals>=0:../../math/py-roman_numerals
 DEPENDS+=	${PYPKGPREFIX}-snowballstemmer>=2.2:../../textproc/py-snowballstemmer
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-applehelp>=1.0.7:../../textproc/py-sphinxcontrib-applehelp
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-devhelp>=1.0.6:../../textproc/py-sphinxcontrib-devhelp
