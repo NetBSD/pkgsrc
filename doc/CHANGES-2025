@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7269 2025/12/21 10:02:08 nia Exp $
+$NetBSD: CHANGES-2025,v 1.7270 2025/12/21 13:07:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10527,3 +10527,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed emulators/ZIPIdent [wiz 2025-12-21]
 	Updated devel/py-filelock to 3.20.1 [wiz 2025-12-21]
 	Added emulators/wine5 version 5.0.5 [nia 2025-12-21]
+	Updated archivers/xz to 5.8.2 [adam 2025-12-21]
+	Updated net/haproxy to 3.3.1 [adam 2025-12-21]
