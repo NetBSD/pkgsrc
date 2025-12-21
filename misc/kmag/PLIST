@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/08/03 04:17:55 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/12/21 14:16:40 markd Exp $
 bin/kmag
 man/ca/man1/kmag.1
 man/de/man1/kmag.1
@@ -11,6 +11,7 @@ man/nl/man1/kmag.1
 man/pt/man1/kmag.1
 man/pt_BR/man1/kmag.1
 man/ru/man1/kmag.1
+man/sl/man1/kmag.1
 man/sv/man1/kmag.1
 man/uk/man1/kmag.1
 share/applications/org.kde.kmag.desktop
@@ -43,6 +44,8 @@ share/doc/HTML/pt_BR/kmag/index.docbook
 share/doc/HTML/pt_BR/kmag/screenshot.png
 share/doc/HTML/ru/kmag/index.cache.bz2
 share/doc/HTML/ru/kmag/index.docbook
+share/doc/HTML/sl/kmag/index.cache.bz2
+share/doc/HTML/sl/kmag/index.docbook
 share/doc/HTML/sv/kmag/index.cache.bz2
 share/doc/HTML/sv/kmag/index.docbook
 share/doc/HTML/sv/kmag/screenshot.png
@@ -51,10 +54,12 @@ share/doc/HTML/uk/kmag/index.docbook
 share/doc/HTML/uk/kmag/screenshot.png
 share/icons/hicolor/16x16/apps/kmag.png
 share/icons/hicolor/32x32/apps/kmag.png
+share/icons/hicolor/scalable/apps/kmag.svg
 share/kmag/icons/hicolor/16x16/actions/followmouse.png
 share/kmag/icons/hicolor/16x16/actions/hidemouse.png
 share/kmag/icons/hicolor/16x16/actions/window.png
 share/locale/ar/LC_MESSAGES/kmag.mo
+share/locale/ast/LC_MESSAGES/kmag.mo
 share/locale/be/LC_MESSAGES/kmag.mo
 share/locale/bg/LC_MESSAGES/kmag.mo
 share/locale/br/LC_MESSAGES/kmag.mo
@@ -108,6 +113,7 @@ share/locale/pt/LC_MESSAGES/kmag.mo
 share/locale/pt_BR/LC_MESSAGES/kmag.mo
 share/locale/ro/LC_MESSAGES/kmag.mo
 share/locale/ru/LC_MESSAGES/kmag.mo
+share/locale/sa/LC_MESSAGES/kmag.mo
 share/locale/se/LC_MESSAGES/kmag.mo
 share/locale/sk/LC_MESSAGES/kmag.mo
 share/locale/sl/LC_MESSAGES/kmag.mo
@@ -126,4 +132,4 @@ share/locale/uk/LC_MESSAGES/kmag.mo
 share/locale/vi/LC_MESSAGES/kmag.mo
 share/locale/zh_CN/LC_MESSAGES/kmag.mo
 share/locale/zh_TW/LC_MESSAGES/kmag.mo
-share/metainfo/org.kde.kmag.appdata.xml
+share/metainfo/org.kde.kmag.metainfo.xml
