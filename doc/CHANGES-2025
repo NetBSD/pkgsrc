@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7303 2025/12/21 21:41:09 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7304 2025/12/21 21:50:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10565,3 +10565,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cmake-gui to 4.2.1 [adam 2025-12-21]
 	Updated security/libgpg-error to 1.58 [adam 2025-12-21]
 	Updated x11/wxGTK32 to 3.2.9 [adam 2025-12-21]
+	Updated devel/py-zope.testing to 6.1 [adam 2025-12-21]
+	Updated databases/py-sqlparse to 0.5.5 [adam 2025-12-21]
