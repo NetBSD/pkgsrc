@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26549 2025/12/20 22:49:28 wiz Exp $
+$NetBSD: TODO,v 1.26550 2025/12/21 11:05:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -401,6 +401,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o Sigil-2.7.0
 	o SOGo-5.12.4
 	o SOPE-5.12.4
+	o TECkit-2.5.13
 	o TiffIO-140a
 	o aarch64-none-elf-binutils-2.45
 	o aarch64-none-elf-gcc-14.3.0
@@ -416,7 +417,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o aide-0.19.2
 	o album-4.17
 	o alevt-1.6.2
-	o alsa-lib-1.2.15
+	o alsa-lib-1.2.15.1
 	o alsa-plugins-1.2.7.1
 	o amanda-3.5.2
 	o amarok-3.3
@@ -549,6 +550,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cygwin_lib-1.5.24.2
 	o cyrus-imapd-3.4.3
 	o dap-3.10
+	o dasel-3.1.4
 	o dcc-2.3.167
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
@@ -711,6 +713,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gok-2.30.1
 	o golem-0.0.6
 	o goocanvas-2.0.2
+	o gopls-0.21.0
 	o gossip-0.31
 	o gp-autpgrp-1.11
 	o gp-factint-1.6.3
@@ -721,7 +724,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o grafana-11.1.0 [wip]
-	o grafana-12.3.0
+	o grafana-12.3.1
 	o grafx2-2.8.3137
 	o grantlee-5.0.0
 	o greed-4.2
@@ -941,7 +944,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mono-nat-1.1.0
 	o monocypher-3.1.2
 	o moodle-4.5.2 (LTS)
-	o moor-2.9.5
+	o moor-2.9.6
 	o mopher-0.6.0
 	o moserial-2.30.0
 	o mserv-devel-0.41
@@ -1096,6 +1099,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o podcastdl-0.3.3
 	o poke-4.0
 	o policyd-weight-0.1.15.2
+	o polkit-127
 	o poppass-4.0.14
 	o portsentry-2.0.2 [wip]
 	o posh-0.14.1
@@ -1109,7 +1113,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o predict-2.2.7
 	o privoxy-3.0.33
 	o profit-2.5.3
-	o prometheus-3.8.0
+	o prometheus-3.8.1
 	o protobuf-33.2
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1120,34 +1124,45 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-cachetools-6.2.4
 	o py-cares-5.0.0
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-cutadapt-5.2 [wip]
+	o py-docutils-0.22.4
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
+	o py-google-auth-2.45.0
+	o py-google-auth-httplib2-0.3.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
+	o py-numpy-2.4.0
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
+	o py-proto-plus-1.27.0
 	o py-protobuf-6.33.2
 	o py-qt-builder-1.19.1
+	o py-roman_numerals_py-4.1.0
+	o py-ruamel-yaml-0.18.17
+	o py-ruff-0.14.10
 	o py-sbws-1.1.0
 	o py-simpletal-5.1
 	o py-sip-qt6-13.10.3
-	o py-sip6-6.15.0
+	o py-sip6-6.15.1
+	o py-soupsieve-2.8.1
 	o py-sphinx-9.0.4
 	o py-sphinx-autodoc-typehints-3.6.0
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
+	o py-textual-6.11.0
 	o py-tokyocabinet-0.6
 	o py-torch-2.9
 	o py-trezor-0.13.10
 	o py-uliweb-0.6
-	o py-uv-build-0.9.17
+	o py-uv-build-0.9.18
 	o py-wat-0.6.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1163,6 +1178,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o razor-qt-0.5.2
 	o rcs-5.10.0
 	o rdp-1.6
+	o re2c-4.4
 	o regionset-0.2
 	o remind-3.03.06
 	o rep-gtk-0.90.8.1
