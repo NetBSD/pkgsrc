@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.89 2025/10/23 20:37:48 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2025/12/21 12:50:47 markd Exp $
 
 DISTNAME=	svgpart-${KAPPSVER}
-PKGREVISION=	10
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://kde.org/applications/graphics/
@@ -12,6 +11,6 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2
 
 USE_TOOLS+=	msgmerge
 
-.include "../../devel/kparts/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../devel/kf6-kparts/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
