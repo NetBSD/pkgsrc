@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.89 2025/10/23 20:38:14 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2025/12/21 13:30:04 markd Exp $
 
 DISTNAME=	analitza-${KAPPSVER}
-PKGREVISION=	9
 CATEGORIES=	math
 
 HOMEPAGE=	https://edu.kde.org/
@@ -10,9 +9,9 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
+.include "../../devel/qt6-qttools/buildlink3.mk"
+.include "../../graphics/qt6-qtsvg/buildlink3.mk"
+.include "../../lang/qt6-qtdeclarative/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qttools/buildlink3.mk"
-.include "../../x11/qt5-qtsvg/buildlink3.mk"
-.include "../../x11/qt5-qtdeclarative/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
