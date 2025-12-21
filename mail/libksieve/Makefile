@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/10/23 20:38:10 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/12/21 13:18:48 markd Exp $
 
 DISTNAME=	libksieve-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	mail
 
 HOMEPAGE=	https://kontact.kde.org/
@@ -10,14 +9,13 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge
 
-.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../mail/kmailtransport/buildlink3.mk"
 .include "../../misc/kidentitymanagement/buildlink3.mk"
 .include "../../misc/pimcommon/buildlink3.mk"
-.include "../../x11/qt5-qtwebengine/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../www/qt6-qtwebengine/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
