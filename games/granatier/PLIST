@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/08/03 02:48:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/12/21 10:53:48 markd Exp $
 bin/granatier
 share/applications/org.kde.granatier.desktop
 share/config.kcfg/granatier.kcfg
@@ -62,6 +62,8 @@ share/doc/HTML/pt_BR/granatier/index.cache.bz2
 share/doc/HTML/pt_BR/granatier/index.docbook
 share/doc/HTML/ru/granatier/index.cache.bz2
 share/doc/HTML/ru/granatier/index.docbook
+share/doc/HTML/sl/granatier/index.cache.bz2
+share/doc/HTML/sl/granatier/index.docbook
 share/doc/HTML/sv/granatier/index.cache.bz2
 share/doc/HTML/sv/granatier/index.docbook
 share/doc/HTML/uk/granatier/config_arena.png
@@ -185,6 +187,7 @@ share/icons/hicolor/32x32/apps/granatier.png
 share/icons/hicolor/48x48/apps/granatier.png
 share/icons/hicolor/64x64/apps/granatier.png
 share/locale/ar/LC_MESSAGES/granatier.mo
+share/locale/ast/LC_MESSAGES/granatier.mo
 share/locale/bg/LC_MESSAGES/granatier.mo
 share/locale/bs/LC_MESSAGES/granatier.mo
 share/locale/ca/LC_MESSAGES/granatier.mo
@@ -202,8 +205,11 @@ share/locale/fi/LC_MESSAGES/granatier.mo
 share/locale/fr/LC_MESSAGES/granatier.mo
 share/locale/ga/LC_MESSAGES/granatier.mo
 share/locale/gl/LC_MESSAGES/granatier.mo
+share/locale/he/LC_MESSAGES/granatier.mo
+share/locale/hi/LC_MESSAGES/granatier.mo
 share/locale/hr/LC_MESSAGES/granatier.mo
 share/locale/hu/LC_MESSAGES/granatier.mo
+share/locale/ia/LC_MESSAGES/granatier.mo
 share/locale/id/LC_MESSAGES/granatier.mo
 share/locale/is/LC_MESSAGES/granatier.mo
 share/locale/it/LC_MESSAGES/granatier.mo
@@ -227,6 +233,7 @@ share/locale/pt/LC_MESSAGES/granatier.mo
 share/locale/pt_BR/LC_MESSAGES/granatier.mo
 share/locale/ro/LC_MESSAGES/granatier.mo
 share/locale/ru/LC_MESSAGES/granatier.mo
+share/locale/sa/LC_MESSAGES/granatier.mo
 share/locale/sk/LC_MESSAGES/granatier.mo
 share/locale/sl/LC_MESSAGES/granatier.mo
 share/locale/sr/LC_MESSAGES/granatier.mo
@@ -241,4 +248,5 @@ share/locale/uk/LC_MESSAGES/granatier.mo
 share/locale/zh_CN/LC_MESSAGES/granatier.mo
 share/locale/zh_TW/LC_MESSAGES/granatier.mo
 share/metainfo/org.kde.granatier.appdata.xml
-share/qlogging-categories5/granatier.categories
+share/qlogging-categories6/granatier.categories
+share/qlogging-categories6/granatier.renamecategories
