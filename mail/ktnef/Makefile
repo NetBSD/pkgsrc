@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2025/10/23 20:38:10 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/12/21 13:16:07 markd Exp $
 
 DISTNAME=	ktnef-${KAPPSVER}
-PKGREVISION=	10
 CATEGORIES=	mail
 
 HOMEPAGE=	https://kontact.kde.org/
@@ -12,7 +11,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	msgmerge
 
-.include "../../misc/kcontacts/buildlink3.mk"
+.include "../../misc/kf6-kcontacts/buildlink3.mk"
 .include "../../time/kcalutils/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
