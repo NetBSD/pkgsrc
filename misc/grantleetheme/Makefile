@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2025/10/23 20:38:20 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/12/21 13:49:08 markd Exp $
 
 DISTNAME=	grantleetheme-${KAPPSVER}
-PKGREVISION=	10
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kontact.kde.org/
@@ -12,7 +11,8 @@ LICENSE=	gnu-lgpl-v2
 
 USE_TOOLS+=	msgmerge
 
-.include "../../devel/grantlee-qt5/buildlink3.mk"
-.include "../../net/knewstuff/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../net/kf6-knewstuff/buildlink3.mk"
+.include "../../textproc/kf6-ktexttemplate/buildlink3.mk"
+.include "../../x11/kf6-kxmlgui/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
