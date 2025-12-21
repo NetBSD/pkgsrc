@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/08/03 03:11:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/12/21 11:28:16 markd Exp $
 bin/kmines
 share/applications/org.kde.kmines.desktop
 share/doc/HTML/ca/kmines/gameboard.png
@@ -33,6 +33,8 @@ share/doc/HTML/pt_BR/kmines/index.cache.bz2
 share/doc/HTML/pt_BR/kmines/index.docbook
 share/doc/HTML/ru/kmines/index.cache.bz2
 share/doc/HTML/ru/kmines/index.docbook
+share/doc/HTML/sl/kmines/index.cache.bz2
+share/doc/HTML/sl/kmines/index.docbook
 share/doc/HTML/sv/kmines/index.cache.bz2
 share/doc/HTML/sv/kmines/index.docbook
 share/doc/HTML/sv/kmines/kmines1.png
@@ -48,6 +50,10 @@ share/icons/hicolor/48x48/apps/kmines.png
 share/icons/hicolor/64x64/apps/kmines.png
 share/kmines/themes/classic.desktop
 share/kmines/themes/classic_preview.png
+share/kmines/themes/clean_blue.desktop
+share/kmines/themes/clean_blue_dark.desktop
+share/kmines/themes/clean_blue_dark_preview.png
+share/kmines/themes/clean_blue_preview.png
 share/kmines/themes/default.desktop
 share/kmines/themes/default_preview.png
 share/kmines/themes/graveyard-mayhem-preview.png
@@ -56,10 +62,13 @@ share/kmines/themes/graveyard-mayhem.svgz
 share/kmines/themes/green.desktop
 share/kmines/themes/green.png
 share/kmines/themes/kmines_classic.svgz
+share/kmines/themes/kmines_clean_blue.svgz
+share/kmines/themes/kmines_clean_blue_dark.svgz
 share/kmines/themes/kmines_green.svgz
 share/kmines/themes/kmines_oxygen.svgz
 share/locale/af/LC_MESSAGES/kmines.mo
 share/locale/ar/LC_MESSAGES/kmines.mo
+share/locale/ast/LC_MESSAGES/kmines.mo
 share/locale/be/LC_MESSAGES/kmines.mo
 share/locale/bg/LC_MESSAGES/kmines.mo
 share/locale/bn/LC_MESSAGES/kmines.mo
@@ -87,6 +96,7 @@ share/locale/hi/LC_MESSAGES/kmines.mo
 share/locale/hne/LC_MESSAGES/kmines.mo
 share/locale/hr/LC_MESSAGES/kmines.mo
 share/locale/hu/LC_MESSAGES/kmines.mo
+share/locale/ia/LC_MESSAGES/kmines.mo
 share/locale/id/LC_MESSAGES/kmines.mo
 share/locale/is/LC_MESSAGES/kmines.mo
 share/locale/it/LC_MESSAGES/kmines.mo
@@ -114,6 +124,7 @@ share/locale/pt/LC_MESSAGES/kmines.mo
 share/locale/pt_BR/LC_MESSAGES/kmines.mo
 share/locale/ro/LC_MESSAGES/kmines.mo
 share/locale/ru/LC_MESSAGES/kmines.mo
+share/locale/sa/LC_MESSAGES/kmines.mo
 share/locale/se/LC_MESSAGES/kmines.mo
 share/locale/sk/LC_MESSAGES/kmines.mo
 share/locale/sl/LC_MESSAGES/kmines.mo
@@ -134,4 +145,5 @@ share/locale/xh/LC_MESSAGES/kmines.mo
 share/locale/zh_CN/LC_MESSAGES/kmines.mo
 share/locale/zh_TW/LC_MESSAGES/kmines.mo
 share/metainfo/org.kde.kmines.appdata.xml
-share/qlogging-categories5/kmines.categories
+share/qlogging-categories6/kmines.categories
+share/qlogging-categories6/kmines.renamecategories
