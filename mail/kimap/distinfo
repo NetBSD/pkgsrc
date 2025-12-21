@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/02/06 11:05:25 markd Exp $
+$NetBSD: distinfo,v 1.10 2025/12/21 13:02:46 markd Exp $
 
-BLAKE2s (kimap-23.08.4.tar.xz) = a577e69499f6d88aa2b1ed875ce0de595cc96329f1bc7592aa65e9b30906965b
-SHA512 (kimap-23.08.4.tar.xz) = bc7f195fdc362ad52064135a65b84d8808100042acf818006ee8500abcb7a2d32d841e0cc6196bff529bc7c4348aa3e90dc7e2256fd908ebd62f35211f0b1dd4
-Size (kimap-23.08.4.tar.xz) = 131156 bytes
+BLAKE2s (kimap-25.08.3.tar.xz) = 7891b2cac24fa638e7e60b5fa2f99ed1d92ee10b205d5b4324fab2143d39fbbc
+SHA512 (kimap-25.08.3.tar.xz) = 972ae10c11571d928b312f3ffc08f126a8f8a42dfbb4a2724e81389a8bc79166d55fd2834d3a49caf7d59bea483c44a227e6d0cc6fd0f2c2c185f7a59bf25a3a
+Size (kimap-25.08.3.tar.xz) = 136240 bytes
