@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2025/10/26 12:26:20 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.17 2025/12/21 07:38:39 wiz Exp $
 #
 # used by databases/gdbm/Makefile
 # used by databases/gdbm_compat/Makefile
@@ -8,7 +8,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GNU:=gdbm/}
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.gnu.org/software/gdbm/gdbm.html
+HOMEPAGE=	https://www.gnu.org.ua/software/gdbm/
 COMMENT=	The GNU database manager
 LICENSE=	gnu-gpl-v3
 
