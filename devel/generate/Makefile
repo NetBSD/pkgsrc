@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2023/12/15 13:48:12 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2025/12/21 07:40:54 wiz Exp $
 
 DISTNAME=	generate-2.8
 CATEGORIES=	devel
@@ -6,7 +6,7 @@ MASTER_SITES=	http://darcy.druid.net/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://darcy.druid.net/readme-generate.html
+HOMEPAGE=	https://darcy.druid.net/readme-generate.html
 COMMENT=	Simple text pre-processor
 
 CONFLICTS+=	glimmer-[0-9]*
