@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/09/22 13:14:55 pin Exp $
+# $NetBSD: Makefile,v 1.18 2025/12/21 17:42:50 pin Exp $
 
-DISTNAME=	xh-0.25.0
+DISTNAME=	xh-0.25.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ducaale/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.82.0
+RUST_REQ=	1.83.0
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/xh/auto-completion
 
