@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/12/02 19:25:22 bsiegert Exp $
+# $NetBSD: Makefile,v 1.12 2025/12/21 14:41:57 wiz Exp $
 
-DISTNAME=	dasel-2.8.1
-PKGREVISION=	10
+DISTNAME=	dasel-3.1.4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TomWright/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,13 +11,6 @@ COMMENT=	Select, put and delete data from JSON, TOML, YAML, XML and CSV
 LICENSE=	mit
 
 USE_LANGUAGES=	c
-
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1
-
-post-install:
-	${MKDIR} ${WRKSRC}/man
-	${DESTDIR}${PREFIX}/bin/dasel man -o ${WRKSRC}/man
-	${INSTALL_DATA} ${WRKSRC}/man/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "go-modules.mk"
 
