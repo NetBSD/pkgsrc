@@ -1,16 +1,18 @@
-@comment $NetBSD: PLIST,v 1.6 2023/08/03 03:17:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/12/21 11:36:50 markd Exp $
 bin/kpat
 lib/libkcardgame.so
 man/ca/man6/kpat.6
 man/de/man6/kpat.6
 man/es/man6/kpat.6
 man/et/man6/kpat.6
+man/fr/man6/kpat.6
 man/it/man6/kpat.6
 man/man6/kpat.6
 man/nl/man6/kpat.6
 man/pt/man6/kpat.6
 man/pt_BR/man6/kpat.6
 man/ru/man6/kpat.6
+man/sl/man6/kpat.6
 man/sv/man6/kpat.6
 man/uk/man6/kpat.6
 share/applications/org.kde.kpat.desktop
@@ -51,6 +53,8 @@ share/doc/HTML/pt_BR/kpat/index.cache.bz2
 share/doc/HTML/pt_BR/kpat/index.docbook
 share/doc/HTML/ru/kpat/index.cache.bz2
 share/doc/HTML/ru/kpat/index.docbook
+share/doc/HTML/sl/kpat/index.cache.bz2
+share/doc/HTML/sl/kpat/index.docbook
 share/doc/HTML/sv/kpat/index.cache.bz2
 share/doc/HTML/sv/kpat/index.docbook
 share/doc/HTML/uk/kpat/index.cache.bz2
@@ -95,6 +99,7 @@ share/kpat/themes/royalhearts.png
 share/kpat/themes/royalhearts.svgz
 share/locale/af/LC_MESSAGES/kpat.mo
 share/locale/ar/LC_MESSAGES/kpat.mo
+share/locale/ast/LC_MESSAGES/kpat.mo
 share/locale/be/LC_MESSAGES/kpat.mo
 share/locale/bg/LC_MESSAGES/kpat.mo
 share/locale/br/LC_MESSAGES/kpat.mo
@@ -122,6 +127,7 @@ share/locale/hi/LC_MESSAGES/kpat.mo
 share/locale/hne/LC_MESSAGES/kpat.mo
 share/locale/hr/LC_MESSAGES/kpat.mo
 share/locale/hu/LC_MESSAGES/kpat.mo
+share/locale/ia/LC_MESSAGES/kpat.mo
 share/locale/id/LC_MESSAGES/kpat.mo
 share/locale/is/LC_MESSAGES/kpat.mo
 share/locale/it/LC_MESSAGES/kpat.mo
@@ -149,6 +155,7 @@ share/locale/pt/LC_MESSAGES/kpat.mo
 share/locale/pt_BR/LC_MESSAGES/kpat.mo
 share/locale/ro/LC_MESSAGES/kpat.mo
 share/locale/ru/LC_MESSAGES/kpat.mo
+share/locale/sa/LC_MESSAGES/kpat.mo
 share/locale/se/LC_MESSAGES/kpat.mo
 share/locale/sk/LC_MESSAGES/kpat.mo
 share/locale/sl/LC_MESSAGES/kpat.mo
@@ -170,4 +177,5 @@ share/locale/zh_CN/LC_MESSAGES/kpat.mo
 share/locale/zh_TW/LC_MESSAGES/kpat.mo
 share/metainfo/org.kde.kpat.appdata.xml
 share/mime/packages/kpatience.xml
-share/qlogging-categories5/kpat.categories
+share/qlogging-categories6/kpat.categories
+share/qlogging-categories6/kpat.renamecategories
