@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.14 2024/02/06 11:17:40 markd Exp $
+$NetBSD: distinfo,v 1.15 2025/12/21 15:06:25 markd Exp $
 
-BLAKE2s (krdc-23.08.4.tar.xz) = 594dab524292ed4ae56b3bb5f306b1de1e8bac865c40495ed4830def6c140300
-SHA512 (krdc-23.08.4.tar.xz) = d6fc4548e1f95e116725e149d13c03ff452ee1b3c7f189520ae41a8279b8852b84d522dd7372757da0ddaa47cd45f545dfdb5dfdc349adc63c1350273c3e3146
-Size (krdc-23.08.4.tar.xz) = 1630352 bytes
-SHA1 (patch-cmake_modules_FindLibVNCServer.cmake) = efc3f6a70f77bcbb2bde951b3108e91a91552613
+BLAKE2s (krdc-25.08.3.tar.xz) = 6204e34951e456ddb9cbfe0b832dc424ff9df6bf58ab195a50b87311f19bb997
+SHA512 (krdc-25.08.3.tar.xz) = 6528bea805bca71b57af20b0aed864337fb8586b0f172126bebdb3afc51d05c634d48541ab90f66393852116c2554e1d002703daf10970f50a21ad741539be1f
+Size (krdc-25.08.3.tar.xz) = 1598500 bytes
 SHA1 (patch-cmake_modules_Findxfreerdp.cmake) = 251ed54bf7b6fac98a290df5d451a08356509006
-SHA1 (patch-rdp_rdpview.cpp) = ae33d0996fa41bb5c9d3605c70f8f49b0d8ae343
-SHA1 (patch-rdp_rdpviewfactory.cpp) = cde8b0fef1e06cbc66fb6242022cc96229935856
