@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2024/02/06 11:17:42 markd Exp $
+$NetBSD: distinfo,v 1.26 2025/12/21 19:36:40 markd Exp $
 
-BLAKE2s (kdf-23.08.4.tar.xz) = b85977a2b81d1beaab0eb2e2c66fb8becd1eeb4bf4edf49c30622ab8b0926065
-SHA512 (kdf-23.08.4.tar.xz) = d084092ad5ca11922997fa723f4175a3c40ed492530eaa518178b5eb86dbbd01b910782f86fdd1c292071aca438b5121301d8349e4a8a5486ebdf4ab86e81775
-Size (kdf-23.08.4.tar.xz) = 495240 bytes
+BLAKE2s (kdf-25.08.3.tar.xz) = efc92d911788661911acb6fccf2f3f57f951e08e1638f36057de53bba633c514
+SHA512 (kdf-25.08.3.tar.xz) = f31b86e06bf483d6054d83a94a1fcf81fc04e1c52b311fcb67ce2c91bf4f230f4277138c1945c0402b1e77dffabf8524c4d883af3ffc224355b4173009bab531
+Size (kdf-25.08.3.tar.xz) = 481656 bytes
