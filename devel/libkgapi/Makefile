@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2025/10/23 20:36:31 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2025/12/21 10:23:01 markd Exp $
 
 DISTNAME=	libkgapi-${KAPPSVER}
 PKGREVISION=	10
@@ -14,10 +14,10 @@ CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 USE_TOOLS+=	msgmerge
 
-.include "../../devel/kio/buildlink3.mk"
-.include "../../misc/kcontacts/buildlink3.mk"
+.include "../../devel/kf6-kio/buildlink3.mk"
+.include "../../devel/qt6-qttools/buildlink3.mk"
+.include "../../misc/kf6-kcontacts/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
-.include "../../time/kcalendarcore/buildlink3.mk"
-.include "../../x11/qt5-qtwebengine/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../time/kf6-kcalendarcore/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

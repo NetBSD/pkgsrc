@@ -1,5 +1,5 @@
-LibKGAPI (previously called LibKGoogle) is a C++ library that implements APIs for
-various Google services.
+LibKGAPI (previously called LibKGoogle) is a C++ library that implements APIs
+for various Google services.
 
 Currently supported APIs:
  * Calendar API v3 (https://developers.google.com/google-apps/calendar)

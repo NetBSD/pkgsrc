@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/02/06 11:05:15 markd Exp $
+$NetBSD: distinfo,v 1.7 2025/12/21 10:23:01 markd Exp $
 
-BLAKE2s (libkgapi-23.08.4.tar.xz) = d01ec92a11b6eeb2e6a537aff988b2b2463e0062162886fbfdabc4a9d0e2d565
-SHA512 (libkgapi-23.08.4.tar.xz) = b2da67cc4c41abed5bba7c14bdc4e37262f60a92590b0565a0dd5c749914c213e7f9188c099549126f24d06ec6b41cd248a06c113c71e016f8b314c40a82069a
-Size (libkgapi-23.08.4.tar.xz) = 334960 bytes
+BLAKE2s (libkgapi-25.08.3.tar.xz) = 231d58f5b74e64743f30432494ee323c7b9a313ac6392e2267caf188402235cd
+SHA512 (libkgapi-25.08.3.tar.xz) = fe07ac32681ce7ac8ea5451ce2d73feb27ecd1f564cfc87218b2cefd732f266cabca47d12180c1a029014a380fcfa77fd654c4f8034d34bd427e0784730b36f9
+Size (libkgapi-25.08.3.tar.xz) = 341472 bytes
