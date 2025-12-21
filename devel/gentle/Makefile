@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2017/01/04 12:53:49 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.15 2025/12/21 07:42:14 wiz Exp $
 
 DISTNAME=		gentle-97
 PKGREVISION=		4
 CATEGORIES=		devel
-MASTER_SITES=		http://gentle.compilertools.net/
+#MASTER_SITES=		http://gentle.compilertools.net/
 
 MAINTAINER=		MarkoSchuetz@web.de
-HOMEPAGE=		http://gentle.compilertools.net/
+#HOMEPAGE=		http://gentle.compilertools.net/
 COMMENT=		Gentle Compiler Construction System
 
 BROKEN_ON_PLATFORM=	${LP64PLATFORMS}
