@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/08/03 03:19:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/12/21 11:39:31 markd Exp $
 bin/kshisen
 share/applications/org.kde.kshisen.desktop
 share/config.kcfg/kshisen.kcfg
@@ -39,6 +39,8 @@ share/doc/HTML/pt_BR/kshisen/index.cache.bz2
 share/doc/HTML/pt_BR/kshisen/index.docbook
 share/doc/HTML/ru/kshisen/index.cache.bz2
 share/doc/HTML/ru/kshisen/index.docbook
+share/doc/HTML/sl/kshisen/index.cache.bz2
+share/doc/HTML/sl/kshisen/index.docbook
 share/doc/HTML/sv/kshisen/index.cache.bz2
 share/doc/HTML/sv/kshisen/index.docbook
 share/doc/HTML/sv/kshisen/kshisen-configuration.png
@@ -54,6 +56,7 @@ share/icons/hicolor/48x48/apps/kshisen.png
 share/icons/hicolor/64x64/apps/kshisen.png
 share/locale/af/LC_MESSAGES/kshisen.mo
 share/locale/ar/LC_MESSAGES/kshisen.mo
+share/locale/ast/LC_MESSAGES/kshisen.mo
 share/locale/be/LC_MESSAGES/kshisen.mo
 share/locale/bg/LC_MESSAGES/kshisen.mo
 share/locale/bn/LC_MESSAGES/kshisen.mo
@@ -81,6 +84,7 @@ share/locale/hi/LC_MESSAGES/kshisen.mo
 share/locale/hne/LC_MESSAGES/kshisen.mo
 share/locale/hr/LC_MESSAGES/kshisen.mo
 share/locale/hu/LC_MESSAGES/kshisen.mo
+share/locale/ia/LC_MESSAGES/kshisen.mo
 share/locale/id/LC_MESSAGES/kshisen.mo
 share/locale/is/LC_MESSAGES/kshisen.mo
 share/locale/it/LC_MESSAGES/kshisen.mo
@@ -107,6 +111,7 @@ share/locale/pt/LC_MESSAGES/kshisen.mo
 share/locale/pt_BR/LC_MESSAGES/kshisen.mo
 share/locale/ro/LC_MESSAGES/kshisen.mo
 share/locale/ru/LC_MESSAGES/kshisen.mo
+share/locale/sa/LC_MESSAGES/kshisen.mo
 share/locale/se/LC_MESSAGES/kshisen.mo
 share/locale/sk/LC_MESSAGES/kshisen.mo
 share/locale/sl/LC_MESSAGES/kshisen.mo
@@ -126,6 +131,6 @@ share/locale/xh/LC_MESSAGES/kshisen.mo
 share/locale/zh_CN/LC_MESSAGES/kshisen.mo
 share/locale/zh_TW/LC_MESSAGES/kshisen.mo
 share/metainfo/org.kde.kshisen.appdata.xml
-share/qlogging-categories5/kshisen.categories
+share/qlogging-categories6/kshisen.categories
 share/sounds/kshisen/tile-fall-tile.ogg
 share/sounds/kshisen/tile-touch.ogg
