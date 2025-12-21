@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/08/03 02:41:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/12/21 10:34:35 markd Exp $
 bin/po2xmi5
 bin/umbrello5
 bin/xmi2pot5
@@ -124,6 +124,7 @@ share/doc/HTML/it/umbrello/index.cache.bz2
 share/doc/HTML/it/umbrello/index.docbook
 share/doc/HTML/it/umbrello/introduction.docbook
 share/doc/HTML/it/umbrello/other_features.docbook
+share/doc/HTML/it/umbrello/settings.docbook
 share/doc/HTML/it/umbrello/uml_basics.docbook
 share/doc/HTML/it/umbrello/working_with_umbrello.docbook
 share/doc/HTML/nl/umbrello/apphelp/index.cache.bz2
@@ -246,6 +247,7 @@ share/icons/hicolor/48x48/apps/umbrello.png
 share/icons/hicolor/64x64/apps/umbrello.png
 share/icons/hicolor/scalable/apps/umbrello.svgz
 share/locale/ar/LC_MESSAGES/umbrello.mo
+share/locale/ar/LC_MESSAGES/umbrello_kdevphp5.mo
 share/locale/be/LC_MESSAGES/umbrello.mo
 share/locale/bg/LC_MESSAGES/umbrello.mo
 share/locale/bg/LC_MESSAGES/umbrello_kdevphp5.mo
@@ -283,6 +285,7 @@ share/locale/ga/LC_MESSAGES/umbrello.mo
 share/locale/ga/LC_MESSAGES/umbrello_kdevphp5.mo
 share/locale/gl/LC_MESSAGES/umbrello.mo
 share/locale/gl/LC_MESSAGES/umbrello_kdevphp5.mo
+share/locale/he/LC_MESSAGES/umbrello_kdevphp5.mo
 share/locale/hi/LC_MESSAGES/umbrello.mo
 share/locale/hne/LC_MESSAGES/umbrello.mo
 share/locale/hr/LC_MESSAGES/umbrello.mo

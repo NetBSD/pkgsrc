@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.102 2025/10/23 20:36:39 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2025/12/21 10:34:35 markd Exp $
 
 DISTNAME=	umbrello-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	devel
 
 HOMEPAGE=	https://kde.org/applications/development/umbrello/
 COMMENT=	UML Modeller
 LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
+STILL_KF5=	yes
 .include "../../meta-pkgs/kde/applications.mk"
 
 TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
