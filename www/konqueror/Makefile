@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2025/10/23 20:39:47 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/12/21 20:11:09 markd Exp $
 
 DISTNAME=	konqueror-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	www
 
 HOMEPAGE=	https://konqueror.org/
@@ -10,8 +9,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
-DEPENDS+=	kinit>=5.19.0:../../x11/kinit
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge
 
@@ -26,6 +24,7 @@ SUBST_CLASSES+=		xdg
 SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
 SUBST_FILES.xdg=	CMakeLists.txt
+SUBST_FILES.xdg+=	src/CMakeLists.txt
 SUBST_FILES.xdg+=	settings/konqhtml/CMakeLists.txt
 SUBST_FILES.xdg+=	sidebar/CMakeLists.txt
 SUBST_FILES.xdg+=	plugins/babelfish/CMakeLists.txt
@@ -35,6 +34,8 @@ SUBST_SED.xdg+=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/autostart/konqy_preload.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/konqy_preload.desktop
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/konqautofiltersrc \
+		${PKG_SYSCONFDIR}/xdg/konqautofiltersrc
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/konqsidebartngrc \
 		${PKG_SYSCONFDIR}/xdg/konqsidebartngrc
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/translaterc \
@@ -52,14 +53,13 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_DICTIONARIES=YES
 #GENERATE_PLIST+=	${ECHO} share/konqueror/webengine_dictionaries/${dict}.bdic;
 #.endfor
 
-.include "../../devel/kcmutils/buildlink3.mk"
-.include "../../devel/kdoctools/buildlink3.mk"
-.include "../../devel/kparts/buildlink3.mk"
+.include "../../devel/kf6-kcmutils/buildlink3.mk"
+.include "../../devel/kf6-kdoctools/buildlink3.mk"
+.include "../../devel/kf6-kparts/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../security/kdesu/buildlink3.mk"
+.include "../../security/kf6-kdesu/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kactivities5/buildlink3.mk"
-.include "../../x11/qt5-qtscript/buildlink3.mk"
-.include "../../x11/qt5-qtwebengine/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../www/qt6-qtwebengine/buildlink3.mk"
+.include "../../x11/plasma6-plasma-activities/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
