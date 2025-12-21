@@ -1,16 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.38 2025/10/23 20:38:23 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.39 2025/12/21 14:11:35 markd Exp $
 
 BUILDLINK_TREE+=	kidentitymanagement
 
 .if !defined(KIDENTITYMANAGEMENT_BUILDLINK3_MK)
 KIDENTITYMANAGEMENT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.kidentitymanagement+=	kidentitymanagement>=17.12.1
-BUILDLINK_ABI_DEPENDS.kidentitymanagement?=	kidentitymanagement>=23.08.4nb10
+BUILDLINK_API_DEPENDS.kidentitymanagement+=	kidentitymanagement>=25.08.2
+BUILDLINK_ABI_DEPENDS.kidentitymanagement?=	kidentitymanagement>=25.08.2
 BUILDLINK_PKGSRCDIR.kidentitymanagement?=	../../misc/kidentitymanagement
 
 .include "../../textproc/kpimtextedit/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .endif	# KIDENTITYMANAGEMENT_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-kidentitymanagement
