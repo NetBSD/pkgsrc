@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2025/10/23 20:40:20 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2025/12/21 21:40:02 adam Exp $
 
-DISTNAME=	wxWidgets-3.2.8.1
+DISTNAME=	wxWidgets-3.2.9
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK32/}
-PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wxWidgets/}
 GITHUB_PROJECT=	wxWidgets
@@ -84,7 +83,6 @@ CONFIGURE_ARGS+=	--with-opengl
 CONFIGURE_ARGS+=	--with-expat=sys
 CONFIGURE_ARGS+=	--with-zlib=sys
 CONFIGURE_ARGS+=	--with-regex=sys
-#CONFIGURE_ARGS+=	--disable-webview
 CONFIGURE_ARGS+=	--enable-mediactrl
 CONFIGURE_ARGS+=	--disable-precomp-headers
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/libexec/wx-3.2
@@ -92,7 +90,6 @@ CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/share/wx-3.2
 CONFIGURE_ARGS.Darwin+=	--with-osx_cocoa
 CONFIGURE_ARGS.Darwin+=	--without-macosx-sdk
 CONFIGURE_ARGS.Darwin+=	--without-macosx-version-min
-CONFIGURE_ARGS.Darwin+=	--disable-precomp-headers
 CONFIGURE_ARGS.SunOS+=	--disable-xlocale
 
 CONFIGURE_ENV.SunOS+=	wx_cv_inotify_usable=no
