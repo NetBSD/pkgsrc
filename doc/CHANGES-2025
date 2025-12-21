@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7271 2025/12/21 13:09:20 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7272 2025/12/21 14:06:52 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10531,3 +10531,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/haproxy to 3.3.1 [adam 2025-12-21]
 	Updated devel/protobuf to 33.2 [adam 2025-12-21]
 	Updated devel/py-protobuf to 6.33.2 [adam 2025-12-21]
+	Updated devel/libgee to 0.20.8 [prlw1 2025-12-21]
