@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2025/12/21 10:01:55 nia Exp $
+
+In recent versions of NetBSD, disabling several security features
+is necessary to run WINE:
+
+# sysctl -w vm.user_va0_disable=0
+# sysctl -w machdep.user_ldt=1
+
+===========================================================================

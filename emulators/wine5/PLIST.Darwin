@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2025/12/21 10:01:55 nia Exp $
+bin/wine64-preloader
+lib/wine/fakedlls/winecoreaudio.drv
+lib/wine/fakedlls/winejoystick.drv
+lib/wine/fakedlls/winemac.drv
+lib/wine/winecoreaudio.drv.so
+lib/wine/winejoystick.drv.so
+lib/wine/winemac.drv.so
