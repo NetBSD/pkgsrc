@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/10/23 20:38:17 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/12/21 13:40:09 markd Exp $
 
 DISTNAME=	akonadi-contacts-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM
@@ -10,7 +9,7 @@ LICENSE=	gnu-lgpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-#TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
 
 USE_TOOLS+=	msgmerge
 
@@ -22,13 +21,14 @@ SUBST_FILES.fix-moc+=	_KDE_build/*/CMakeFiles/*_autogen.dir/AutogenInfo.json
 SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
-.include "../../devel/boost-headers/buildlink3.mk"
-.include "../../devel/kcmutils/buildlink3.mk"
-.include "../../graphics/prison/buildlink3.mk"
-.include "../../mail/akonadi-mime/buildlink3.mk"
+.include "../../devel/kf6-kcmutils/buildlink3.mk"
+.include "../../graphics/kf6-prison/buildlink3.mk"
+.include "../../mail/akonadi/buildlink3.mk"
 .include "../../mail/kmime/buildlink3.mk"
 .include "../../misc/grantleetheme/buildlink3.mk"
-.include "../../misc/kcontacts/buildlink3.mk"
-.include "../../security/libkleo/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../misc/kf6-kcontacts/buildlink3.mk"
+.include "../../textproc/ktextaddons/buildlink3.mk"
+.include "../../x11/kf6-ktextwidgets/buildlink3.mk"
+.include "../../x11/kf6-kxmlgui/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
