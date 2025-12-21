@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/08/03 03:03:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/12/21 11:18:17 markd Exp $
 bin/kigo
 share/applications/org.kde.kigo.desktop
 share/config.kcfg/kigo.kcfg
@@ -52,6 +52,8 @@ share/doc/HTML/ru/kigo/setup-general.png
 share/doc/HTML/ru/kigo/setup-theme.png
 share/doc/HTML/ru/kigo/start-loaded-game.png
 share/doc/HTML/ru/kigo/start-new-game.png
+share/doc/HTML/sl/kigo/index.cache.bz2
+share/doc/HTML/sl/kigo/index.docbook
 share/doc/HTML/sv/kigo/index.cache.bz2
 share/doc/HTML/sv/kigo/index.docbook
 share/doc/HTML/uk/kigo/get-new-games.png
@@ -80,6 +82,7 @@ share/kigo/themes/plain.desktop
 share/knsrcfiles/kigo-games.knsrc
 share/knsrcfiles/kigo.knsrc
 share/locale/ar/LC_MESSAGES/kigo.mo
+share/locale/ast/LC_MESSAGES/kigo.mo
 share/locale/bg/LC_MESSAGES/kigo.mo
 share/locale/bs/LC_MESSAGES/kigo.mo
 share/locale/ca/LC_MESSAGES/kigo.mo
@@ -97,9 +100,12 @@ share/locale/fi/LC_MESSAGES/kigo.mo
 share/locale/fr/LC_MESSAGES/kigo.mo
 share/locale/ga/LC_MESSAGES/kigo.mo
 share/locale/gl/LC_MESSAGES/kigo.mo
+share/locale/he/LC_MESSAGES/kigo.mo
+share/locale/hi/LC_MESSAGES/kigo.mo
 share/locale/hr/LC_MESSAGES/kigo.mo
 share/locale/hsb/LC_MESSAGES/kigo.mo
 share/locale/hu/LC_MESSAGES/kigo.mo
+share/locale/ia/LC_MESSAGES/kigo.mo
 share/locale/id/LC_MESSAGES/kigo.mo
 share/locale/is/LC_MESSAGES/kigo.mo
 share/locale/it/LC_MESSAGES/kigo.mo
@@ -123,6 +129,7 @@ share/locale/pt/LC_MESSAGES/kigo.mo
 share/locale/pt_BR/LC_MESSAGES/kigo.mo
 share/locale/ro/LC_MESSAGES/kigo.mo
 share/locale/ru/LC_MESSAGES/kigo.mo
+share/locale/sa/LC_MESSAGES/kigo.mo
 share/locale/sk/LC_MESSAGES/kigo.mo
 share/locale/sl/LC_MESSAGES/kigo.mo
 share/locale/sr/LC_MESSAGES/kigo.mo
@@ -137,4 +144,5 @@ share/locale/uk/LC_MESSAGES/kigo.mo
 share/locale/zh_CN/LC_MESSAGES/kigo.mo
 share/locale/zh_TW/LC_MESSAGES/kigo.mo
 share/metainfo/org.kde.kigo.appdata.xml
-share/qlogging-categories5/kigo.categories
+share/qlogging-categories6/kigo.categories
+share/qlogging-categories6/kigo.renamecategories
