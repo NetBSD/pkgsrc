@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/02/06 11:05:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/12/21 10:57:35 markd Exp $
 bin/kanagram
 share/applications/org.kde.kanagram.desktop
 share/config.kcfg/kanagram.kcfg
@@ -68,6 +68,8 @@ share/doc/HTML/pt_BR/kanagram/index.cache.bz2
 share/doc/HTML/pt_BR/kanagram/index.docbook
 share/doc/HTML/ru/kanagram/index.cache.bz2
 share/doc/HTML/ru/kanagram/index.docbook
+share/doc/HTML/sl/kanagram/index.cache.bz2
+share/doc/HTML/sl/kanagram/index.docbook
 share/doc/HTML/sv/kanagram/answer-highlight.png
 share/doc/HTML/sv/kanagram/general-settings.png
 share/doc/HTML/sv/kanagram/helpstates.png
@@ -97,6 +99,7 @@ share/icons/hicolor/64x64/apps/kanagram.png
 share/icons/hicolor/80x80/apps/kanagram-harmattan.png
 share/icons/hicolor/scalable/apps/kanagram.svgz
 share/kanagram/ui/Blackboard.qml
+share/kanagram/ui/IconButton.qml
 share/kanagram/ui/LetterButton.qml
 share/kanagram/ui/icons/1player.png
 share/kanagram/ui/icons/2player.png
@@ -126,6 +129,7 @@ share/kanagram/ui/sounds/wrong.ogg
 share/kanagram/ui/sounds/wrong.wav
 share/knsrcfiles/kanagram.knsrc
 share/locale/ar/LC_MESSAGES/kanagram.mo
+share/locale/ast/LC_MESSAGES/kanagram.mo
 share/locale/be/LC_MESSAGES/kanagram.mo
 share/locale/bg/LC_MESSAGES/kanagram.mo
 share/locale/bn/LC_MESSAGES/kanagram.mo
@@ -154,6 +158,7 @@ share/locale/hi/LC_MESSAGES/kanagram.mo
 share/locale/hne/LC_MESSAGES/kanagram.mo
 share/locale/hr/LC_MESSAGES/kanagram.mo
 share/locale/hu/LC_MESSAGES/kanagram.mo
+share/locale/ia/LC_MESSAGES/kanagram.mo
 share/locale/id/LC_MESSAGES/kanagram.mo
 share/locale/it/LC_MESSAGES/kanagram.mo
 share/locale/ja/LC_MESSAGES/kanagram.mo
@@ -179,6 +184,7 @@ share/locale/pt/LC_MESSAGES/kanagram.mo
 share/locale/pt_BR/LC_MESSAGES/kanagram.mo
 share/locale/ro/LC_MESSAGES/kanagram.mo
 share/locale/ru/LC_MESSAGES/kanagram.mo
+share/locale/sa/LC_MESSAGES/kanagram.mo
 share/locale/se/LC_MESSAGES/kanagram.mo
 share/locale/si/LC_MESSAGES/kanagram.mo
 share/locale/sk/LC_MESSAGES/kanagram.mo
