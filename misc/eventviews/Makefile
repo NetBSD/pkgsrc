@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/10/23 20:38:18 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/12/21 13:45:37 markd Exp $
 
 DISTNAME=	eventviews-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kontact.kde.org/
@@ -12,8 +11,7 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 USE_TOOLS+=	msgmerge
 
-.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../graphics/kdiagram/buildlink3.mk"
 .include "../../time/calendarsupport/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
