@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/08/03 03:12:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/12/21 11:29:38 markd Exp $
 bin/knavalbattle
 share/applications/org.kde.knavalbattle.desktop
 share/doc/HTML/ca/knavalbattle/gameboard.png
@@ -27,8 +27,8 @@ share/doc/HTML/pt/knavalbattle/index.cache.bz2
 share/doc/HTML/pt/knavalbattle/index.docbook
 share/doc/HTML/pt_BR/knavalbattle/index.cache.bz2
 share/doc/HTML/pt_BR/knavalbattle/index.docbook
-share/doc/HTML/ru/knavalbattle/index.cache.bz2
-share/doc/HTML/ru/knavalbattle/index.docbook
+share/doc/HTML/sl/knavalbattle/index.cache.bz2
+share/doc/HTML/sl/knavalbattle/index.docbook
 share/doc/HTML/sv/knavalbattle/index.cache.bz2
 share/doc/HTML/sv/knavalbattle/index.docbook
 share/doc/HTML/uk/knavalbattle/gameboard.png
@@ -40,14 +40,15 @@ share/icons/hicolor/22x22/apps/knavalbattle.png
 share/icons/hicolor/32x32/apps/knavalbattle.png
 share/icons/hicolor/48x48/apps/knavalbattle.png
 share/icons/hicolor/64x64/apps/knavalbattle.png
-share/knavalbattle/pictures/default.desktop
-share/knavalbattle/pictures/default_theme.svgz
 share/knavalbattle/sounds/ship-player-shoot-water.ogg
 share/knavalbattle/sounds/ship-player1-shoot.ogg
 share/knavalbattle/sounds/ship-player2-shoot.ogg
 share/knavalbattle/sounds/ship-sink.ogg
+share/knavalbattle/themes/default.desktop
+share/knavalbattle/themes/default.svgz
 share/locale/af/LC_MESSAGES/knavalbattle.mo
 share/locale/ar/LC_MESSAGES/knavalbattle.mo
+share/locale/ast/LC_MESSAGES/knavalbattle.mo
 share/locale/be/LC_MESSAGES/knavalbattle.mo
 share/locale/bg/LC_MESSAGES/knavalbattle.mo
 share/locale/bn/LC_MESSAGES/knavalbattle.mo
@@ -76,6 +77,7 @@ share/locale/hi/LC_MESSAGES/knavalbattle.mo
 share/locale/hne/LC_MESSAGES/knavalbattle.mo
 share/locale/hr/LC_MESSAGES/knavalbattle.mo
 share/locale/hu/LC_MESSAGES/knavalbattle.mo
+share/locale/ia/LC_MESSAGES/knavalbattle.mo
 share/locale/id/LC_MESSAGES/knavalbattle.mo
 share/locale/is/LC_MESSAGES/knavalbattle.mo
 share/locale/it/LC_MESSAGES/knavalbattle.mo
@@ -102,6 +104,7 @@ share/locale/pt/LC_MESSAGES/knavalbattle.mo
 share/locale/pt_BR/LC_MESSAGES/knavalbattle.mo
 share/locale/ro/LC_MESSAGES/knavalbattle.mo
 share/locale/ru/LC_MESSAGES/knavalbattle.mo
+share/locale/sa/LC_MESSAGES/knavalbattle.mo
 share/locale/se/LC_MESSAGES/knavalbattle.mo
 share/locale/sk/LC_MESSAGES/knavalbattle.mo
 share/locale/sl/LC_MESSAGES/knavalbattle.mo
@@ -122,4 +125,5 @@ share/locale/xh/LC_MESSAGES/knavalbattle.mo
 share/locale/zh_CN/LC_MESSAGES/knavalbattle.mo
 share/locale/zh_TW/LC_MESSAGES/knavalbattle.mo
 share/metainfo/org.kde.knavalbattle.appdata.xml
-share/qlogging-categories5/knavalbattle.categories
+share/qlogging-categories6/knavalbattle.categories
+share/qlogging-categories6/knavalbattle.renamecategories
