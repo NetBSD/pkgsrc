@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/08/03 03:15:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/12/21 11:33:54 markd Exp $
 bin/kollision
 share/applications/org.kde.kollision.desktop
 share/doc/HTML/ca/kollision/gameboard.png
@@ -33,6 +33,8 @@ share/doc/HTML/pt/kollision/index.cache.bz2
 share/doc/HTML/pt/kollision/index.docbook
 share/doc/HTML/pt_BR/kollision/index.cache.bz2
 share/doc/HTML/pt_BR/kollision/index.docbook
+share/doc/HTML/sl/kollision/index.cache.bz2
+share/doc/HTML/sl/kollision/index.docbook
 share/doc/HTML/sv/kollision/index.cache.bz2
 share/doc/HTML/sv/kollision/index.docbook
 share/doc/HTML/uk/kollision/gameboard.png
@@ -50,12 +52,13 @@ share/icons/oxygen/22x22/apps/kollision.png
 share/icons/oxygen/32x32/apps/kollision.png
 share/icons/oxygen/48x48/apps/kollision.png
 share/icons/oxygen/64x64/apps/kollision.png
-share/kollision/pictures/theme.svgz
 share/kollision/sounds/ball_leaving.ogg
 share/kollision/sounds/hit_wall.ogg
 share/kollision/sounds/start.ogg
 share/kollision/sounds/you_lose.ogg
+share/kollision/themes/default.svgz
 share/locale/ar/LC_MESSAGES/kollision.mo
+share/locale/ast/LC_MESSAGES/kollision.mo
 share/locale/bg/LC_MESSAGES/kollision.mo
 share/locale/bs/LC_MESSAGES/kollision.mo
 share/locale/ca/LC_MESSAGES/kollision.mo
@@ -74,8 +77,11 @@ share/locale/fr/LC_MESSAGES/kollision.mo
 share/locale/ga/LC_MESSAGES/kollision.mo
 share/locale/gl/LC_MESSAGES/kollision.mo
 share/locale/gu/LC_MESSAGES/kollision.mo
+share/locale/he/LC_MESSAGES/kollision.mo
+share/locale/hi/LC_MESSAGES/kollision.mo
 share/locale/hr/LC_MESSAGES/kollision.mo
 share/locale/hu/LC_MESSAGES/kollision.mo
+share/locale/ia/LC_MESSAGES/kollision.mo
 share/locale/id/LC_MESSAGES/kollision.mo
 share/locale/is/LC_MESSAGES/kollision.mo
 share/locale/it/LC_MESSAGES/kollision.mo
@@ -99,6 +105,7 @@ share/locale/pt/LC_MESSAGES/kollision.mo
 share/locale/pt_BR/LC_MESSAGES/kollision.mo
 share/locale/ro/LC_MESSAGES/kollision.mo
 share/locale/ru/LC_MESSAGES/kollision.mo
+share/locale/sa/LC_MESSAGES/kollision.mo
 share/locale/sk/LC_MESSAGES/kollision.mo
 share/locale/sl/LC_MESSAGES/kollision.mo
 share/locale/sq/LC_MESSAGES/kollision.mo
