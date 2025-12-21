@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2025/10/23 20:39:14 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2025/12/21 19:27:53 markd Exp $
 
 DISTNAME=	baloo-widgets-${KAPPSVER}
-PKGREVISION=	10
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://community.kde.org/Baloo
@@ -10,10 +9,10 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=5.19.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge
 
-.include "../../sysutils/baloo5/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../sysutils/kf6-baloo/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
