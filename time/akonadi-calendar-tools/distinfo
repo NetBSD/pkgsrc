@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/02/06 11:17:43 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/12/21 19:53:31 markd Exp $
 
-BLAKE2s (akonadi-calendar-tools-23.08.4.tar.xz) = 8880eb54c24bee324fc475ab0f2dd084b94fdf1196b723897af8712b1b40405e
-SHA512 (akonadi-calendar-tools-23.08.4.tar.xz) = d986575b10284a59f5222b7fa8faaeebe3f3a630259d0781aa9fad3f14ae6916ec1ef4d411bb32c9a56d30ada030269a944c79b4f06f612c54cad4a9eef5e1f7
-Size (akonadi-calendar-tools-23.08.4.tar.xz) = 255892 bytes
+BLAKE2s (akonadi-calendar-tools-25.08.3.tar.xz) = 588df165195131d02d71fee69e962e06ab801c22d67cc906d11981c5e5874c7b
+SHA512 (akonadi-calendar-tools-25.08.3.tar.xz) = 04c585bee5e746c10f62857621112560444e671208734dd4e037ec782b0703591a1dba65c9386a99acf4ccd3e06a8cc4a32624235f05cd658a1ddc1a88db3432
+Size (akonadi-calendar-tools-25.08.3.tar.xz) = 274436 bytes
