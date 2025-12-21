@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2024/02/06 11:05:22 markd Exp $
+$NetBSD: distinfo,v 1.21 2025/12/21 12:05:32 markd Exp $
 
-BLAKE2s (kcolorchooser-23.08.4.tar.xz) = f4eea09cc16f23018ee6ad472f30d47e8180d410a448b713d2fcd3b941624184
-SHA512 (kcolorchooser-23.08.4.tar.xz) = 772425bb8db6d0d9f232a0513920f75e0b649364fbff3602ce562ef8b91dc179a58e4b7679306e2a354ef101e6b6722e67f2523d6578d6c2f9c6f1ad446852f1
-Size (kcolorchooser-23.08.4.tar.xz) = 34880 bytes
+BLAKE2s (kcolorchooser-25.08.3.tar.xz) = 3f150594968b91ef7262b328ebe0f4df3b9475e8b8530a8f6b1650444d3d1571
+SHA512 (kcolorchooser-25.08.3.tar.xz) = 5bffbd33c992ab512f6979e275f378a4988532ecb7a4222d642a7c1c7f58ac2d7850cd95f8c42ae404f57346fec504de9bc6eb42b4c8ce16aafc744bd7435284
+Size (kcolorchooser-25.08.3.tar.xz) = 36352 bytes
