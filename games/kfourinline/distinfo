@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2024/02/06 11:05:18 markd Exp $
+$NetBSD: distinfo,v 1.16 2025/12/21 11:11:49 markd Exp $
 
-BLAKE2s (kfourinline-23.08.4.tar.xz) = a1d797c9ba6932e50b078c6ef93edc5ae1deb7471f32b520e8118a59073110fe
-SHA512 (kfourinline-23.08.4.tar.xz) = bc5cac83849c1ea9726550896ee001e51c6303cdf3f3291bdf01138ce29343f06c6f4186da5a92a0bac2668cc9b4f5c923d7629cc4d5cd0a4b4f0af16629aaad
-Size (kfourinline-23.08.4.tar.xz) = 740420 bytes
+BLAKE2s (kfourinline-25.08.3.tar.xz) = 3304e8b085bf8dad4148b5abd2fe6d322432eedb0655ac45505853fdf7fa7b4f
+SHA512 (kfourinline-25.08.3.tar.xz) = 07b8a9ca3f210611a83716b860396523f4674710e3f8a69fcb28f7bf4ea9d65ce8c20e1411cecd376e42b989d106518c67e9d1d522bdf559a8c2920694e7ff14
+Size (kfourinline-25.08.3.tar.xz) = 749176 bytes
