@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/08/16 09:43:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/12/21 15:21:58 markd Exp $
 bin/kgpg
 share/applications/org.kde.kgpg.desktop
 share/config.kcfg/kgpg.kcfg
@@ -68,6 +68,8 @@ share/doc/HTML/pt_BR/kgpg/select-secret-key.png
 share/doc/HTML/pt_BR/kgpg/systray.png
 share/doc/HTML/ru/kgpg/index.cache.bz2
 share/doc/HTML/ru/kgpg/index.docbook
+share/doc/HTML/sl/kgpg/index.cache.bz2
+share/doc/HTML/sl/kgpg/index.docbook
 share/doc/HTML/sr/kgpg/index.cache.bz2
 share/doc/HTML/sr/kgpg/index.docbook
 share/doc/HTML/sr@latin/kgpg/index.cache.bz2
@@ -79,6 +81,8 @@ share/doc/HTML/sv/kgpg/keygen.png
 share/doc/HTML/sv/kgpg/keymanage.png
 share/doc/HTML/sv/kgpg/keys.png
 share/doc/HTML/sv/kgpg/options.png
+share/doc/HTML/tr/kgpg/index.cache.bz2
+share/doc/HTML/tr/kgpg/index.docbook
 share/doc/HTML/uk/kgpg/editor.png
 share/doc/HTML/uk/kgpg/index.cache.bz2
 share/doc/HTML/uk/kgpg/index.docbook
@@ -129,13 +133,11 @@ share/icons/hicolor/scalable/apps/kgpg.svg
 share/icons/hicolor/scalable/status/key-group.svgz
 share/icons/hicolor/scalable/status/key-pair.svgz
 share/icons/hicolor/scalable/status/key-single.svgz
-share/kgpg/tips
 share/kio/servicemenus/kgpg_encryptfile.desktop
 share/kio/servicemenus/kgpg_encryptfolder.desktop
 share/kio/servicemenus/kgpg_viewdecrypted.desktop
-share/kxmlgui5/kgpg/keysmanager.rc
-share/kxmlgui5/kgpg/kgpgeditor.rc
 share/locale/ar/LC_MESSAGES/kgpg.mo
+share/locale/ast/LC_MESSAGES/kgpg.mo
 share/locale/be/LC_MESSAGES/kgpg.mo
 share/locale/bg/LC_MESSAGES/kgpg.mo
 share/locale/br/LC_MESSAGES/kgpg.mo
@@ -158,6 +160,7 @@ share/locale/fr/LC_MESSAGES/kgpg.mo
 share/locale/ga/LC_MESSAGES/kgpg.mo
 share/locale/gl/LC_MESSAGES/kgpg.mo
 share/locale/he/LC_MESSAGES/kgpg.mo
+share/locale/hi/LC_MESSAGES/kgpg.mo
 share/locale/hr/LC_MESSAGES/kgpg.mo
 share/locale/hu/LC_MESSAGES/kgpg.mo
 share/locale/ia/LC_MESSAGES/kgpg.mo
@@ -187,6 +190,7 @@ share/locale/pt/LC_MESSAGES/kgpg.mo
 share/locale/pt_BR/LC_MESSAGES/kgpg.mo
 share/locale/ro/LC_MESSAGES/kgpg.mo
 share/locale/ru/LC_MESSAGES/kgpg.mo
+share/locale/sa/LC_MESSAGES/kgpg.mo
 share/locale/se/LC_MESSAGES/kgpg.mo
 share/locale/sk/LC_MESSAGES/kgpg.mo
 share/locale/sl/LC_MESSAGES/kgpg.mo
@@ -204,4 +208,4 @@ share/locale/uk/LC_MESSAGES/kgpg.mo
 share/locale/zh_CN/LC_MESSAGES/kgpg.mo
 share/locale/zh_TW/LC_MESSAGES/kgpg.mo
 share/metainfo/org.kde.kgpg.appdata.xml
-share/qlogging-categories5/kgpg.categories
+share/qlogging-categories6/kgpg.categories
