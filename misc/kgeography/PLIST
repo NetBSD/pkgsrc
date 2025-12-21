@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/08/03 04:09:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/12/21 14:08:27 markd Exp $
 bin/kgeography
 share/applications/org.kde.kgeography.desktop
 share/config.kcfg/kgeography.kcfg
@@ -44,6 +44,22 @@ share/doc/HTML/es/kgeography/index.cache.bz2
 share/doc/HTML/es/kgeography/index.docbook
 share/doc/HTML/et/kgeography/index.cache.bz2
 share/doc/HTML/et/kgeography/index.docbook
+share/doc/HTML/fr/kgeography/first-start1.png
+share/doc/HTML/fr/kgeography/first-start10.png
+share/doc/HTML/fr/kgeography/first-start11.png
+share/doc/HTML/fr/kgeography/first-start12.png
+share/doc/HTML/fr/kgeography/first-start2.png
+share/doc/HTML/fr/kgeography/first-start3.png
+share/doc/HTML/fr/kgeography/first-start4.png
+share/doc/HTML/fr/kgeography/first-start5.png
+share/doc/HTML/fr/kgeography/first-start6.png
+share/doc/HTML/fr/kgeography/first-start7.png
+share/doc/HTML/fr/kgeography/first-start8.png
+share/doc/HTML/fr/kgeography/first-start9.png
+share/doc/HTML/fr/kgeography/index.cache.bz2
+share/doc/HTML/fr/kgeography/index.docbook
+share/doc/HTML/fr/kgeography/kgeography.png
+share/doc/HTML/fr/kgeography/zoom.png
 share/doc/HTML/it/kgeography/index.cache.bz2
 share/doc/HTML/it/kgeography/index.docbook
 share/doc/HTML/nl/kgeography/first-start1.png
@@ -73,6 +89,8 @@ share/doc/HTML/pt_BR/kgeography/kgeography.png
 share/doc/HTML/pt_BR/kgeography/zoom.png
 share/doc/HTML/ru/kgeography/index.cache.bz2
 share/doc/HTML/ru/kgeography/index.docbook
+share/doc/HTML/sl/kgeography/index.cache.bz2
+share/doc/HTML/sl/kgeography/index.docbook
 share/doc/HTML/sv/kgeography/first-start1.png
 share/doc/HTML/sv/kgeography/first-start10.png
 share/doc/HTML/sv/kgeography/first-start11.png
@@ -1147,8 +1165,9 @@ share/kgeography/zimbabwe.kgm
 share/kgeography/zimbabwe.png
 share/kgeography/zimbabwe_districts.kgm
 share/kgeography/zimbabwe_districts.png
-share/kxmlgui5/kgeography/kgeographyui.rc
 share/locale/ar/LC_MESSAGES/kgeography.mo
+share/locale/ast/LC_MESSAGES/kgeography.mo
+share/locale/az/LC_MESSAGES/kgeography.mo
 share/locale/be/LC_MESSAGES/kgeography.mo
 share/locale/bg/LC_MESSAGES/kgeography.mo
 share/locale/br/LC_MESSAGES/kgeography.mo
@@ -1180,6 +1199,7 @@ share/locale/hi/LC_MESSAGES/kgeography.mo
 share/locale/hne/LC_MESSAGES/kgeography.mo
 share/locale/hr/LC_MESSAGES/kgeography.mo
 share/locale/hu/LC_MESSAGES/kgeography.mo
+share/locale/ia/LC_MESSAGES/kgeography.mo
 share/locale/is/LC_MESSAGES/kgeography.mo
 share/locale/it/LC_MESSAGES/kgeography.mo
 share/locale/ja/LC_MESSAGES/kgeography.mo
@@ -1211,6 +1231,7 @@ share/locale/pt/LC_MESSAGES/kgeography.mo
 share/locale/pt_BR/LC_MESSAGES/kgeography.mo
 share/locale/ro/LC_MESSAGES/kgeography.mo
 share/locale/ru/LC_MESSAGES/kgeography.mo
+share/locale/sa/LC_MESSAGES/kgeography.mo
 share/locale/se/LC_MESSAGES/kgeography.mo
 share/locale/si/LC_MESSAGES/kgeography.mo
 share/locale/sk/LC_MESSAGES/kgeography.mo
