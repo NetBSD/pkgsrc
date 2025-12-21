@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2025/10/23 20:39:20 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2025/12/21 19:34:31 markd Exp $
 
 DISTNAME=	kcron-${KAPPSVER}
-PKGREVISION=	7
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://apps.kde.org/en-gb/kcron/
@@ -10,13 +9,14 @@ LICENSE=	cc0-1.0-universal AND gnu-gpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
-.include "../../devel/kcmutils/buildlink3.mk"
-.include "../../devel/kcoreaddons/buildlink3.mk"
-.include "../../security/kauth/buildlink3.mk"
-.include "../../x11/kconfigwidgets/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../devel/kf6-kcmutils/buildlink3.mk"
+.include "../../devel/kf6-kcoreaddons/buildlink3.mk"
+.include "../../security/kf6-kauth/buildlink3.mk"
+.include "../../x11/kf6-kconfigwidgets/buildlink3.mk"
+.include "../../x11/kirigami-addons/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
