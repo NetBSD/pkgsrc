@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2025/10/23 20:36:29 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2025/12/21 14:06:30 prlw1 Exp $
 
-DISTNAME=	libgee-0.20.6
-PKGREVISION=	2
+DISTNAME=	libgee-0.20.8
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgee/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -17,7 +16,7 @@ GNU_CONFIGURE=	yes
 TEST_TARGET=	check
 
 .include "../../mk/compiler.mk"
-.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+.if ${CC_VERSION:Mgcc-14.*} || ${CC_VERSION:Mgcc-15.*}
 CFLAGS+=	-Wno-incompatible-pointer-types
 .endif
 
