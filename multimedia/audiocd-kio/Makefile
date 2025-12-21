@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.88 2025/10/23 20:38:29 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2025/12/21 14:49:05 markd Exp $
 
 DISTNAME=	audiocd-kio-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	multimedia
 
 HOMEPAGE=	https://kde.org/applications/multimedia/
@@ -15,8 +14,8 @@ USE_TOOLS+=	msgmerge
 .include "../../audio/cdparanoia/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
-.include "../../devel/kcmutils/buildlink3.mk"
+.include "../../devel/kf6-kcmutils/buildlink3.mk"
 .include "../../multimedia/libkcddb/buildlink3.mk"
 .include "../../multimedia/libkcompactdisc/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
