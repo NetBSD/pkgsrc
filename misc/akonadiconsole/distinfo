@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/02/06 11:17:33 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/12/21 13:43:44 markd Exp $
 
-BLAKE2s (akonadiconsole-23.08.4.tar.xz) = a8c09c7aab676b555890127bf64c2b386bee2c07e4b4ba03b663de1de6356504
-SHA512 (akonadiconsole-23.08.4.tar.xz) = 3e701235fd5cd14a2c56ef78dcc193ece94fcf7d83e35a361560a55a73124f2656b23041a92e2c62139f137aa44d2c366ca640998b89c98a07eeb4808ced78f1
-Size (akonadiconsole-23.08.4.tar.xz) = 282184 bytes
+BLAKE2s (akonadiconsole-25.08.3.tar.xz) = 8db60b68dc764a3873b07a7dcb39c8f1255a4b4a23c87a56418572f631aa6bab
+SHA512 (akonadiconsole-25.08.3.tar.xz) = e736ce0fbe6d3763c67353db22d8e13bd87df41a7825d2cfa54ca3b975ab9989899dad4d026088ecc36741d11b1d83b955a32638f9cc5e9ce1f7ad0042dd9889
+Size (akonadiconsole-25.08.3.tar.xz) = 328508 bytes
