@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/08/03 02:55:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/12/21 11:04:16 markd Exp $
 bin/kblocks
 share/applications/org.kde.kblocks.desktop
 share/config.kcfg/kblocks.kcfg
@@ -28,6 +28,8 @@ share/doc/HTML/pt/kblocks/index.cache.bz2
 share/doc/HTML/pt/kblocks/index.docbook
 share/doc/HTML/pt_BR/kblocks/index.cache.bz2
 share/doc/HTML/pt_BR/kblocks/index.docbook
+share/doc/HTML/sl/kblocks/index.cache.bz2
+share/doc/HTML/sl/kblocks/index.docbook
 share/doc/HTML/sv/kblocks/index.cache.bz2
 share/doc/HTML/sv/kblocks/index.docbook
 share/doc/HTML/uk/kblocks/gameboard.png
@@ -52,6 +54,7 @@ share/kblocks/themes/oxygen.svgz
 share/kblocks/themes/oxygen_preview.png
 share/knsrcfiles/kblocks.knsrc
 share/locale/ar/LC_MESSAGES/kblocks.mo
+share/locale/ast/LC_MESSAGES/kblocks.mo
 share/locale/bg/LC_MESSAGES/kblocks.mo
 share/locale/bs/LC_MESSAGES/kblocks.mo
 share/locale/ca/LC_MESSAGES/kblocks.mo
@@ -70,9 +73,11 @@ share/locale/fr/LC_MESSAGES/kblocks.mo
 share/locale/ga/LC_MESSAGES/kblocks.mo
 share/locale/gl/LC_MESSAGES/kblocks.mo
 share/locale/gu/LC_MESSAGES/kblocks.mo
+share/locale/he/LC_MESSAGES/kblocks.mo
 share/locale/hi/LC_MESSAGES/kblocks.mo
 share/locale/hr/LC_MESSAGES/kblocks.mo
 share/locale/hu/LC_MESSAGES/kblocks.mo
+share/locale/ia/LC_MESSAGES/kblocks.mo
 share/locale/id/LC_MESSAGES/kblocks.mo
 share/locale/is/LC_MESSAGES/kblocks.mo
 share/locale/it/LC_MESSAGES/kblocks.mo
@@ -95,6 +100,7 @@ share/locale/pt/LC_MESSAGES/kblocks.mo
 share/locale/pt_BR/LC_MESSAGES/kblocks.mo
 share/locale/ro/LC_MESSAGES/kblocks.mo
 share/locale/ru/LC_MESSAGES/kblocks.mo
+share/locale/sa/LC_MESSAGES/kblocks.mo
 share/locale/sk/LC_MESSAGES/kblocks.mo
 share/locale/sl/LC_MESSAGES/kblocks.mo
 share/locale/sq/LC_MESSAGES/kblocks.mo
@@ -110,4 +116,5 @@ share/locale/uk/LC_MESSAGES/kblocks.mo
 share/locale/zh_CN/LC_MESSAGES/kblocks.mo
 share/locale/zh_TW/LC_MESSAGES/kblocks.mo
 share/metainfo/org.kde.kblocks.appdata.xml
-share/qlogging-categories5/kblocks.categories
+share/qlogging-categories6/kblocks.categories
+share/qlogging-categories6/kblocks.renamecategories
