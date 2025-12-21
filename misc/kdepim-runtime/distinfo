@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2025/11/30 13:51:28 wiz Exp $
+$NetBSD: distinfo,v 1.4 2025/12/21 14:02:15 markd Exp $
 
-BLAKE2s (kdepim-runtime-23.08.4.tar.xz) = c01d10ebd253160624ab3f15f54a3d527ddf236066a932e4af0948ab861dc11a
-SHA512 (kdepim-runtime-23.08.4.tar.xz) = 74ddf93b6e96c64737cea61ff729eb01d43f4c023626ad6e4e0e72aa0a3d105fab0a16a9943d00a9a2f2117066653dc9535032ba360a4a56b38b741280a90921
-Size (kdepim-runtime-23.08.4.tar.xz) = 1869568 bytes
-SHA1 (patch-resources_CMakeLists.txt) = 73079b780fdee1a382fdbb2b03f0c40e72ce1dc0
+BLAKE2s (kdepim-runtime-25.08.3.tar.xz) = 53413db8b22d9594bf4778214e0e4fd4dd01a21bd4a56757e9df6e9b4ff93f2b
+SHA512 (kdepim-runtime-25.08.3.tar.xz) = fabbe2563fe62ce0cea1479bb398e2fbb38914198a1f1c00964116b3a45d63a02fbb16d5f50c0172b3a5331c033a8f7efcfe5862dd15dd209d36a6198d0e2bf6
+Size (kdepim-runtime-25.08.3.tar.xz) = 2452864 bytes
+SHA1 (patch-resources_CMakeLists.txt) = 02c412c8406012fb4fa9814dee242963c12959db
