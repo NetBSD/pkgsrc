@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2025/10/23 20:35:58 wiz Exp $
+# $NetBSD: Makefile,v 1.153 2025/12/21 07:40:15 wiz Exp $
 
 DISTNAME=	geda-gaf-1.8.2
 PKGNAME=	${DISTNAME:S/-gaf-/-/}
@@ -7,7 +7,7 @@ CATEGORIES=	cad
 MASTER_SITES=	http://www.repo.hu/projects/geda-archive/ftp.geda-project.org/geda-gaf/stable/v1.8/1.8.2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.geda-project.org/
+HOMEPAGE=	http://www.repo.hu/projects/geda-archive/www.geda-project.org/
 COMMENT=	Toolset for automating electronic design
 LICENSE=	gnu-gpl-v2
 
