@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/10/23 20:38:09 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/12/21 13:06:40 markd Exp $
 
 DISTNAME=	kmail-account-wizard-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	mail
 
 HOMEPAGE=	https://kontact.kde.org/
@@ -10,17 +9,14 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge
 
-.include "../../devel/boost-headers/buildlink3.mk"
-.include "../../devel/knotifyconfig/buildlink3.mk"
-.include "../../devel/kross/buildlink3.mk"
-.include "../../devel/ktexteditor/buildlink3.mk"
+.include "../../devel/kf6-knotifyconfig/buildlink3.mk"
+.include "../../devel/kf6-ktexteditor/buildlink3.mk"
 .include "../../mail/kmailtransport/buildlink3.mk"
 .include "../../misc/kidentitymanagement/buildlink3.mk"
-.include "../../misc/pimcommon/buildlink3.mk"
 .include "../../security/libkleo/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

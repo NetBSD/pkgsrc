@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/02/06 11:05:25 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/12/21 13:06:41 markd Exp $
 
-BLAKE2s (kmail-account-wizard-23.08.4.tar.xz) = f6106fc69e474add0da33dbda9b55a02012a07ccda2be19be535b2eff0d447c0
-SHA512 (kmail-account-wizard-23.08.4.tar.xz) = 9d9712b40be276803f8cdc9f1d929502e3fcc1cb08b2c2439f3683e1e835ccc91f41c7c49eeb394a4accd397f227a5819150b0c78a5445caab1dde307a94c993
-Size (kmail-account-wizard-23.08.4.tar.xz) = 185668 bytes
+BLAKE2s (kmail-account-wizard-25.08.3.tar.xz) = e50ea0668bd27753f51ca4b34961710d9019df65652e929be275fae760497543
+SHA512 (kmail-account-wizard-25.08.3.tar.xz) = ea0a6e5c268998478d431e1660cdcfafbccce74f8ac8bcc81412e41ca3bb07069a517ae48b810528a3c55781f9d4d25c1431fa6b2f8282f5530297d70344dda0
+Size (kmail-account-wizard-25.08.3.tar.xz) = 172708 bytes
