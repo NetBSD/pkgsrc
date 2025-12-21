@@ -1,0 +1,17 @@
+$NetBSD: patch-src_3rdparty_chromium_extensions_renderer_bindings_api__binding__util.cc,v 1.1 2025/12/21 09:38:29 markd Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/extensions/renderer/bindings/api_binding_util.cc.orig	2025-10-02 00:36:39.000000000 +0000
++++ src/3rdparty/chromium/extensions/renderer/bindings/api_binding_util.cc
+@@ -129,7 +129,7 @@ void InvalidateContext(v8::Local<v8::Con
+ std::string GetPlatformString() {
+ #if BUILDFLAG(IS_CHROMEOS)
+   return "chromeos";
+-#elif BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   return "linux";
+ #elif BUILDFLAG(IS_MAC)
+   return "mac";

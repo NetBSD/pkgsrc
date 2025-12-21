@@ -1,0 +1,17 @@
+$NetBSD: patch-src_3rdparty_chromium_services_service__manager_BUILD.gn,v 1.1 2025/12/21 09:38:38 markd Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/services/service_manager/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ src/3rdparty/chromium/services/service_manager/BUILD.gn
+@@ -66,7 +66,7 @@ source_set("service_manager") {
+     ]
+   }
+ 
+-  if (is_linux || is_chromeos) {
++  if ((is_linux || is_chromeos) && !is_bsd) {
+     deps += [ "//sandbox/linux:sandbox_services" ]
+   }
+ }

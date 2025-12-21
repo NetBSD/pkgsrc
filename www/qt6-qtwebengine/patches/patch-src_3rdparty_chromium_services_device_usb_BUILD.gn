@@ -1,0 +1,31 @@
+$NetBSD: patch-src_3rdparty_chromium_services_device_usb_BUILD.gn,v 1.1 2025/12/21 09:38:37 markd Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/services/device/usb/BUILD.gn.orig	2025-05-29 01:27:28.000000000 +0000
++++ src/3rdparty/chromium/services/device/usb/BUILD.gn
+@@ -114,6 +114,13 @@ static_library("usb") {
+     deps += [ "//third_party/libusb" ]
+   }
+ 
++  if (is_freebsd || is_netbsd) {
++    sources += [
++      "usb_service_fake.cc",
++      "usb_service_fake.h",
++    ]
++  }
++
+   if (is_linux || is_chromeos) {
+     sources += [
+       "usb_device_linux.cc",
+@@ -135,7 +142,7 @@ static_library("usb") {
+     deps += [ "//device/udev_linux" ]
+   }
+ 
+-  if (is_android || is_chromeos || is_linux) {
++  if (is_android || is_chromeos || is_linux && !is_bsd) {
+     sources += [
+       "usb_device_handle_usbfs.cc",
+       "usb_device_handle_usbfs.h",

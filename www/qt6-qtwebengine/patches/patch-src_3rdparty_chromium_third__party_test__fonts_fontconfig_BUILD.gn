@@ -1,0 +1,21 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_test__fonts_fontconfig_BUILD.gn,v 1.1 2025/12/21 09:38:44 markd Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/third_party/test_fonts/fontconfig/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ src/3rdparty/chromium/third_party/test_fonts/fontconfig/BUILD.gn
+@@ -26,7 +26,11 @@ if (is_linux || is_chromeos) {
+ 
+   copy("fonts_conf") {
+     sources = [ "fonts.conf" ]
+-    outputs = [ "$root_out_dir/etc/fonts/{{source_file_part}}" ]
++    if (is_freebsd) {
++      outputs = [ "$root_out_dir/usr/local/etc/fonts/{{source_file_part}}" ]
++    } else {
++      outputs = [ "$root_out_dir/etc/fonts/{{source_file_part}}" ]
++    }
+   }
+ 
+   if (current_toolchain == host_toolchain) {

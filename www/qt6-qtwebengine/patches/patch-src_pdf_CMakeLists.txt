@@ -1,0 +1,33 @@
+$NetBSD: patch-src_pdf_CMakeLists.txt,v 1.1 2025/12/21 09:38:51 markd Exp $
+
+* Based on OpenBSD's qt6-qtwebengine patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/pdf/CMakeLists.txt.orig	2025-11-14 07:55:10.000000000 +0000
++++ src/pdf/CMakeLists.txt
+@@ -69,7 +69,7 @@ add_dependencies(prepare_docs_Pdf genera
+ #   TOOLCHAIN SETUP
+ ##
+ 
+-if(LINUX OR MINGW OR ANDROID OR WIN32)
++if(UNIX OR MINGW OR ANDROID OR WIN32)
+     setup_toolchains()
+ endif()
+ 
+@@ -114,6 +114,7 @@ foreach(arch ${archs})
+         append_pkg_config_setup(gnArgArg)
+ 
+         list(APPEND gnArgArg
++          extra_cxxflags="@EXTRA_CXXFLAGS@"
+           qtwebengine_target="${buildDir}/${config}/${arch}:QtPdf"
+           qt_libpng_config="${buildDir}/${config}/${arch}:qt_libpng_config"
+           qt_libjpeg_config="${buildDir}/${config}/${arch}:qt_libjpeg_config"
+@@ -144,7 +145,7 @@ foreach(arch ${archs})
+           webnn_use_tflite=false
+         )
+ 
+-        if(LINUX OR ANDROID)
++        if(UNIX OR ANDROID)
+             list(APPEND gnArgArg
+                 enable_vr=false
+                 is_cfi=false

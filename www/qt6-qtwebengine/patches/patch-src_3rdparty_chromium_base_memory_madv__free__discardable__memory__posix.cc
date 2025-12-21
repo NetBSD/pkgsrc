@@ -1,0 +1,27 @@
+$NetBSD: patch-src_3rdparty_chromium_base_memory_madv__free__discardable__memory__posix.cc,v 1.1 2025/12/21 09:38:14 markd Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/base/memory/madv_free_discardable_memory_posix.cc.orig	2025-10-02 00:36:39.000000000 +0000
++++ src/3rdparty/chromium/base/memory/madv_free_discardable_memory_posix.cc
+@@ -305,6 +305,10 @@ void MadvFreeDiscardableMemoryPosix::Set
+ 
+ bool MadvFreeDiscardableMemoryPosix::IsResident() const {
+   DFAKE_SCOPED_RECURSIVE_LOCK(thread_collision_warner_);
++// XXX mincore
++#if BUILDFLAG(IS_BSD)
++  return false;
++#else
+ #if BUILDFLAG(IS_APPLE)
+   std::vector<char> vec(allocated_pages_);
+ #else
+@@ -321,6 +325,7 @@ bool MadvFreeDiscardableMemoryPosix::IsR
+     }
+   }
+   return true;
++#endif
+ }
+ 
+ bool MadvFreeDiscardableMemoryPosix::IsDiscarded() const {

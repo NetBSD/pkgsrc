@@ -1,0 +1,16 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_pdfium_third__party_BUILD.gn,v 1.1 2025/12/21 09:38:43 markd Exp $
+
+The system library is libpng16.  (Otherwise gn writes -lpng into
+src/core/Release/x86_64/QtWebEngineCore_libs.rsp)
+
+--- src/3rdparty/chromium/third_party/pdfium/third_party/BUILD.gn.orig	2025-01-24 10:49:20.000000000 +0000
++++ src/3rdparty/chromium/third_party/pdfium/third_party/BUILD.gn
+@@ -441,7 +441,7 @@ source_set("fx_libopenjpeg") {
+ }
+ 
+ config("system_libpng_config") {
+-  libs = [ "png" ]
++  libs = [ "png16" ]
+   defines = [ "USE_SYSTEM_LIBPNG" ]
+ }
+ 

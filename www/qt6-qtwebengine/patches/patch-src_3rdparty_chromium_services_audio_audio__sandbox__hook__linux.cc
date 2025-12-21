@@ -1,0 +1,37 @@
+$NetBSD: patch-src_3rdparty_chromium_services_audio_audio__sandbox__hook__linux.cc,v 1.1 2025/12/21 09:38:36 markd Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/services/audio/audio_sandbox_hook_linux.cc.orig	2025-05-29 01:27:28.000000000 +0000
++++ src/3rdparty/chromium/services/audio/audio_sandbox_hook_linux.cc
+@@ -143,6 +143,7 @@ void AddPulseAudioFilePermissions(
+ }
+ #endif
+ 
++#if !BUILDFLAG(IS_BSD)
+ std::vector<BrokerFilePermission> GetAudioFilePermissions() {
+   std::vector<BrokerFilePermission> permissions{
+       BrokerFilePermission::ReadOnly("/dev/urandom"),
+@@ -171,10 +172,12 @@ void LoadAudioLibraries() {
+     }
+   }
+ }
++#endif
+ 
+ }  // namespace
+ 
+ bool AudioPreSandboxHook(sandbox::policy::SandboxLinux::Options options) {
++#if !BUILDFLAG(IS_BSD)
+   LoadAudioLibraries();
+   auto* instance = sandbox::policy::SandboxLinux::GetInstance();
+   instance->StartBrokerProcess(MakeBrokerCommandSet({
+@@ -192,6 +195,7 @@ bool AudioPreSandboxHook(sandbox::policy
+   // TODO(crbug.com/40579955) enable namespace sandbox. Currently, if
+   // enabled, connect() on pulse native socket fails with ENOENT (called from
+   // pa_context_connect).
++#endif
+ 
+   return true;
+ }

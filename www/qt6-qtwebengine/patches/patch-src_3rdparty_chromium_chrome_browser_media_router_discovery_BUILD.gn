@@ -1,0 +1,17 @@
+$NetBSD: patch-src_3rdparty_chromium_chrome_browser_media_router_discovery_BUILD.gn,v 1.1 2025/12/21 09:38:19 markd Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/chrome/browser/media/router/discovery/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ src/3rdparty/chromium/chrome/browser/media/router/discovery/BUILD.gn
+@@ -82,7 +82,7 @@ static_library("discovery") {
+   ]
+   configs += [ "//build/config/compiler:wexit_time_destructors" ]
+ 
+-  if (is_linux || is_chromeos) {
++  if ((is_linux || is_chromeos) && !is_bsd) {
+     sources += [ "discovery_network_list_wifi_linux.cc" ]
+   }
+ 
