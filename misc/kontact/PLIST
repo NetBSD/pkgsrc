@@ -1,15 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2024/02/06 11:17:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/12/21 14:20:46 markd Exp $
 bin/kontact
-lib/libkontactprivate.so.5
-lib/libkontactprivate.so.5.24.4
-qt5/plugins/pim5/kcms/kontact/kcm_kontact.so
+lib/libkontactprivate.so.6
+lib/libkontactprivate.so.6.5.3
+qt6/plugins/pim6/kcms/kontact/kcm_kontact.so
 share/applications/org.kde.kontact.desktop
 share/config.kcfg/kontact.kcfg
 share/dbus-1/services/org.kde.kontact.service
 share/doc/HTML/ca/kontact/index.cache.bz2
 share/doc/HTML/ca/kontact/index.docbook
-share/doc/HTML/de/kontact/index.cache.bz2
-share/doc/HTML/de/kontact/index.docbook
 share/doc/HTML/en/kontact/calendar-sidebar-icon.png
 share/doc/HTML/en/kontact/configuration-main.png
 share/doc/HTML/en/kontact/configuration-starting-component.png
@@ -39,25 +37,28 @@ share/doc/HTML/it/kontact/index.cache.bz2
 share/doc/HTML/it/kontact/index.docbook
 share/doc/HTML/nl/kontact/index.cache.bz2
 share/doc/HTML/nl/kontact/index.docbook
-share/doc/HTML/pt/kontact/index.cache.bz2
-share/doc/HTML/pt/kontact/index.docbook
 share/doc/HTML/pt_BR/kontact/index.cache.bz2
 share/doc/HTML/pt_BR/kontact/index.docbook
 share/doc/HTML/ru/kontact/index.cache.bz2
 share/doc/HTML/ru/kontact/index.docbook
+share/doc/HTML/sl/kontact/index.cache.bz2
+share/doc/HTML/sl/kontact/index.docbook
 share/doc/HTML/sv/kontact/index.cache.bz2
 share/doc/HTML/sv/kontact/index.docbook
 share/doc/HTML/uk/kontact/index.cache.bz2
 share/doc/HTML/uk/kontact/index.docbook
 share/icons/hicolor/128x128/apps/kontact.png
+share/icons/hicolor/144x144/apps/kontact.png
 share/icons/hicolor/16x16/apps/kontact.png
 share/icons/hicolor/22x22/apps/kontact.png
 share/icons/hicolor/32x32/apps/kontact.png
+share/icons/hicolor/44x44/apps/kontact.png
 share/icons/hicolor/48x48/apps/kontact.png
 share/icons/hicolor/64x64/apps/kontact.png
 share/icons/hicolor/scalable/apps/kontact.svg
 share/locale/af/LC_MESSAGES/kontact.mo
 share/locale/ar/LC_MESSAGES/kontact.mo
+share/locale/ast/LC_MESSAGES/kontact.mo
 share/locale/az/LC_MESSAGES/kontact.mo
 share/locale/be/LC_MESSAGES/kontact.mo
 share/locale/bg/LC_MESSAGES/kontact.mo
@@ -111,6 +112,7 @@ share/locale/pt/LC_MESSAGES/kontact.mo
 share/locale/pt_BR/LC_MESSAGES/kontact.mo
 share/locale/ro/LC_MESSAGES/kontact.mo
 share/locale/ru/LC_MESSAGES/kontact.mo
+share/locale/sa/LC_MESSAGES/kontact.mo
 share/locale/se/LC_MESSAGES/kontact.mo
 share/locale/si/LC_MESSAGES/kontact.mo
 share/locale/sk/LC_MESSAGES/kontact.mo
@@ -131,5 +133,5 @@ share/locale/zh_TW/LC_MESSAGES/kontact.mo
 share/messageviewer/about/default/introduction_kontact.html
 share/messageviewer/about/default/loading_kontact.html
 share/metainfo/org.kde.kontact.appdata.xml
-share/qlogging-categories5/kontact.categories
-share/qlogging-categories5/kontact.renamecategories
+share/qlogging-categories6/kontact.categories
+share/qlogging-categories6/kontact.renamecategories
