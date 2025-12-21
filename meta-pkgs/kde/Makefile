@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/08/28 20:07:48 markd Exp $
+# $NetBSD: Makefile,v 1.2 2025/12/21 21:46:13 markd Exp $
 
-DISTNAME=	kde-20240828
+DISTNAME=	kde-20251221
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -33,7 +33,6 @@ DEPENDS+=	blinken-[0-9]*:../../games/blinken
 DEPENDS+=	bomber-[0-9]*:../../games/bomber
 DEPENDS+=	bovo-[0-9]*:../../games/bovo
 DEPENDS+=	cantor-[0-9]*:../../math/cantor
-DEPENDS+=	cervisia-[0-9]*:../../devel/cervisia
 DEPENDS+=	dolphin-plugins-[0-9]*:../../devel/dolphin-plugins
 DEPENDS+=	dragon-[0-9]*:../../multimedia/dragon
 DEPENDS+=	ffmpegthumbs-[0-9]*:../../multimedia/ffmpegthumbs
@@ -97,7 +96,6 @@ DEPENDS+=	kmousetool-[0-9]*:../../misc/kmousetool
 DEPENDS+=	kmouth-[0-9]*:../../misc/kmouth
 DEPENDS+=	knavalbattle-[0-9]*:../../games/knavalbattle
 DEPENDS+=	knetwalk-[0-9]*:../../games/knetwalk
-DEPENDS+=	knotes-[0-9]*:../../misc/knotes
 DEPENDS+=	kolf-[0-9]*:../../games/kolf
 DEPENDS+=	kollision-[0-9]*:../../games/kollision
 DEPENDS+=	kolourpaint-[0-9]*:../../graphics/kolourpaint
@@ -105,7 +103,6 @@ DEPENDS+=	kompare-[0-9]*:../../devel/kompare
 DEPENDS+=	konquest-[0-9]*:../../games/konquest
 DEPENDS+=	konsole-[0-9]*:../../x11/konsole
 DEPENDS+=	kontact-[0-9]*:../../misc/kontact
-DEPENDS+=	kopete-[0-9]*:../../net/kopete
 DEPENDS+=	korganizer-[0-9]*:../../time/korganizer
 DEPENDS+=	kpat-[0-9]*:../../games/kpat
 DEPENDS+=	krdc-[0-9]*:../../net/krdc
