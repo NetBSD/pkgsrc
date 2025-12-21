@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.27 2025/08/21 18:20:45 wiz Exp $
+$NetBSD: distinfo,v 1.28 2025/12/21 20:34:01 markd Exp $
 
-BLAKE2s (kile-2.9.93.tar.bz2) = 3a6554603f03fac704579c57467ceb262d014a491519359c1d9a5b1e12d04812
-SHA512 (kile-2.9.93.tar.bz2) = d87277b8ef16c82cfd415dd191916641fa1a25e316e1eb2c463b275d3654dcfe180bea03027589ab30cd8b769d92d97005846a78aff8058bcfb20eed76287504
-Size (kile-2.9.93.tar.bz2) = 8580239 bytes
-SHA1 (patch-CMakeLists.txt) = f33aff963c49fd04b8bcb95ce7d29f89c208b7d0
+BLAKE2s (kile-2.9.94.tar.bz2) = 6dd24cf33c8596ae0ba62ab3f09ccb16c76274619da3cb4dad5950f25a20bcd4
+SHA512 (kile-2.9.94.tar.bz2) = 4638e81374243a8b2716183bf28cec02bcb455f2b1a9295e7e04f20833b77c962bddfeb81e527606209c338862af48a38d9f6009a9f7b96aac37f874ae3f725c
+Size (kile-2.9.94.tar.bz2) = 7505095 bytes
