@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.116 2025/10/23 20:39:18 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2025/12/21 19:30:20 markd Exp $
 
 DISTNAME=	filelight-${KAPPSVER}
-PKGREVISION=	10
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://kde.org/applications/utilities/org.kde.filelight/
@@ -10,11 +9,10 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
+DEPENDS+=	kf6-qqc2-desktop-style>=6.18.0:../../x11/kf6-qqc2-desktop-style
 
 USE_TOOLS+=	msgmerge
-
-USE_CXX_FEATURES+=	c++20
 
 SUBST_CLASSES+=		xdg
 SUBST_STAGE.xdg=	pre-configure
@@ -26,10 +24,9 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/filelightrc \
 		${PKG_SYSCONFDIR}/xdg/filelightrc
 
-.include "../../devel/kdeclarative/buildlink3.mk"
-.include "../../devel/kparts/buildlink3.mk"
+.include "../../devel/kf6-kdeclarative/buildlink3.mk"
+.include "../../devel/kf6-kparts/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/qt5-qtquickcontrols2/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
