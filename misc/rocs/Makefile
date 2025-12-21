@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.114 2025/10/23 20:38:28 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2025/12/21 14:46:00 markd Exp $
 
 DISTNAME=	rocs-${KAPPSVER}
-PKGREVISION=	14
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/rocs/
 COMMENT=	KDE graph theory IDE
 LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
+STILL_KF5=	yes
 .include "../../meta-pkgs/kde/applications.mk"
 
 TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
