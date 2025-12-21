@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2024/02/06 11:17:39 markd Exp $
+$NetBSD: distinfo,v 1.16 2025/12/21 14:50:32 markd Exp $
 
-BLAKE2s (dragon-23.08.4.tar.xz) = 6ae088b25bb194ea30111ee3870552573ec26435dfb634aa19b6d3457676fce1
-SHA512 (dragon-23.08.4.tar.xz) = 9a3bf1d29f0afcb8742375e926d0163214f4d9b02d4088652b6faecd86332e7adc71eafe249ce744d46c2a5fb7a032176b45fbe7c6ca3f9c49e73b965d3f24de
-Size (dragon-23.08.4.tar.xz) = 1671564 bytes
+BLAKE2s (dragon-25.08.3.tar.xz) = 82fd9b296db818bfc2ba5bc49872941a65c844758a2fbc90a324f2edce283a96
+SHA512 (dragon-25.08.3.tar.xz) = 4646dff00736215d2a60c7790bcb0d61630c7ee48bec4c2fc49b2924327efb80d9a8663fb13dfd4104798eed874c9b806771682c091d96122993e5dc5e130367
+Size (dragon-25.08.3.tar.xz) = 146476 bytes
