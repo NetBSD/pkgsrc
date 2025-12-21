@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.92 2025/10/23 20:38:50 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2025/12/21 15:09:54 markd Exp $
 
 DISTNAME=	libktorrent-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	net
 
 HOMEPAGE=	https://apps.kde.org/ktorrent/
@@ -16,7 +15,6 @@ LDFLAGS.SunOS+=	-lsocket
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../devel/kio/buildlink3.mk"
-.include "../../security/qca2-qt5/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../devel/kf6-kio/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
