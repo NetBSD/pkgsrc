@@ -1,15 +1,16 @@
-@comment $NetBSD: PLIST,v 1.16 2025/08/20 09:50:28 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.17 2025/12/21 16:34:13 wiz Exp $
 ${PYSITELIB}/ruamel/yaml/__init__.py
 ${PYSITELIB}/ruamel/yaml/__init__.pyc
 ${PYSITELIB}/ruamel/yaml/__init__.pyo
 ${PYSITELIB}/ruamel/yaml/anchor.py
 ${PYSITELIB}/ruamel/yaml/anchor.pyc
 ${PYSITELIB}/ruamel/yaml/anchor.pyo
+${PYSITELIB}/ruamel/yaml/clibz/__init__.py
+${PYSITELIB}/ruamel/yaml/clibz/__init__.pyc
+${PYSITELIB}/ruamel/yaml/clibz/__init__.pyo
+${PYSITELIB}/ruamel/yaml/clibz/setup.py
+${PYSITELIB}/ruamel/yaml/clibz/setup.pyc
+${PYSITELIB}/ruamel/yaml/clibz/setup.pyo
 ${PYSITELIB}/ruamel/yaml/comments.py
 ${PYSITELIB}/ruamel/yaml/comments.pyc
 ${PYSITELIB}/ruamel/yaml/comments.pyo
@@ -98,3 +99,8 @@ ${PYSITELIB}/ruamel/yaml/tokens.pyo
 ${PYSITELIB}/ruamel/yaml/util.py
 ${PYSITELIB}/ruamel/yaml/util.pyc
 ${PYSITELIB}/ruamel/yaml/util.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
