@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2025/10/23 20:37:08 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2025/12/21 11:47:04 markd Exp $
 
 DISTNAME=	ksudoku-${KAPPSVER}
-PKGREVISION=	10
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/ksudoku/
@@ -10,7 +9,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge
 
@@ -24,8 +23,10 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/ksudokurc \
 		${PKG_SYSCONFDIR}/xdg/ksudokurc
 
+.include "../../devel/kf6-kcrash/buildlink3.mk"
+.include "../../devel/kf6-kio/buildlink3.mk"
 .include "../../games/libkdegames/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
