@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2024/02/06 11:17:34 markd Exp $
+$NetBSD: distinfo,v 1.20 2025/12/21 13:56:19 markd Exp $
 
-BLAKE2s (kbruch-23.08.4.tar.xz) = 3087923fedb6f6c1b1a4e53ee7f625d61484994ea853b5b75a9d9b619a91f05c
-SHA512 (kbruch-23.08.4.tar.xz) = 85d3e1cb919307052a0852c62e49b45b00fd88568f69faf237b5266c1b073425a91187871d6928cbe0299bfaedf59c3540b51b66f24e2a67ba42cfcaaa99d4b7
-Size (kbruch-23.08.4.tar.xz) = 5662880 bytes
+BLAKE2s (kbruch-25.08.3.tar.xz) = 75b0e7c6728ee70d38780fd8ab65379cb5f10b60fecc5bda4ffb7019464e9445
+SHA512 (kbruch-25.08.3.tar.xz) = b637940c15755bdff403d86d90d754f727f394b9819af77ad1eb8a3f8825cd5476b27cc5667c70146b568243f9d92cce075494ea82fc7bad6c9ac14e6d394b44
+Size (kbruch-25.08.3.tar.xz) = 5163360 bytes
