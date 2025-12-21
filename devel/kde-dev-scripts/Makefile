@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2025/10/23 20:36:22 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2025/12/21 10:10:02 markd Exp $
 
 DISTNAME=	kde-dev-scripts-${KAPPSVER}
-PKGREVISION=	8
 CATEGORIES=	devel
 
 HOMEPAGE=	https://kde.org/applications/development/
@@ -12,11 +11,12 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge bash:run perl:run
 
 REPLACE_BASH+= \
+	addmocincludes \
 	create_makefile \
 	create_svnignore \
 	draw_lib_dependencies \
@@ -64,5 +64,5 @@ REPLACE_SH+= \
 	cvsaddcurrentdir
 
 .include "../../lang/python/application.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
