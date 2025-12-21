@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2025/11/18 10:17:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.65 2025/12/21 09:19:19 markd Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
+PKGREVISION=	1
 PKGNAME=	qt6-qtbase-${QTVERSION}
 COMMENT=	C++ X GUI toolkit
 CATEGORIES=	x11
@@ -33,7 +34,6 @@ CONFIGURE_ARGS+=	-no-sql-odbc
 CONFIGURE_ARGS+=	-no-sql-psql
 CONFIGURE_ARGS+=	-no-strip
 CONFIGURE_ARGS+=	-no-tslib
-CONFIGURE_ARGS+=	-no-vulkan
 CONFIGURE_ARGS+=	-no-use-gold-linker
 CONFIGURE_ARGS+=	-pkg-config
 CONFIGURE_ARGS+=	-qt-publicsuffix
@@ -62,6 +62,7 @@ QMAKE_CONF=		qmake.conf
 CONFIGURE_ARGS+=	-reduce-relocations
 .  endif
 .else
+CONFIGURE_ARGS+=	-no-vulcan	# needs MoltenVK on macOS
 CONFIGURE_ARGS+=	-no-rpath	# avoid @rpath in dylibs
 QMAKE_CONF=		qmake.conf.mac
 .endif
@@ -243,6 +244,7 @@ PLIST.wayland=	yes
 PLIST.x11=	yes
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/vulkan-headers/buildlink3.mk"
 .  if !empty(MESALIB_SUPPORTS_EGL:Myes)
 PLIST.egl=	yes
 .    if exists(${X11BASE}/include/EGL/eglext.h)

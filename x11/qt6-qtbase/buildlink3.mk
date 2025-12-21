@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2025/10/23 20:40:17 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2025/12/21 09:19:19 markd Exp $
 
 BUILDLINK_TREE+=	qt6-qtbase
 
@@ -48,6 +48,10 @@ PLIST_VARS+=	qt6dbus
 PLIST.qt6dbus=	yes
 .endif
 
+.if ${PKG_BUILD_OPTIONS.qt6-qtbase:Mcups}
+.include "../../print/libcups/buildlink3.mk"
+.endif
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -65,6 +69,7 @@ PLIST.qt6dbus=	yes
 .if ${OPSYS} != "Darwin"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/vulkan-headers/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
 .include "../../x11/xcb-util-image/buildlink3.mk"
