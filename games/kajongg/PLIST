@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/08/03 02:49:55 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/12/21 10:55:45 markd Exp $
 bin/kajongg
 bin/kajonggserver
 share/applications/org.kde.kajongg.desktop
@@ -36,6 +36,8 @@ share/doc/HTML/pt/kajongg/index.cache.bz2
 share/doc/HTML/pt/kajongg/index.docbook
 share/doc/HTML/pt_BR/kajongg/index.cache.bz2
 share/doc/HTML/pt_BR/kajongg/index.docbook
+share/doc/HTML/sl/kajongg/index.cache.bz2
+share/doc/HTML/sl/kajongg/index.docbook
 share/doc/HTML/sv/kajongg/index.cache.bz2
 share/doc/HTML/sv/kajongg/index.docbook
 share/doc/HTML/uk/kajongg/config_background.png
@@ -87,7 +89,6 @@ share/kajongg/__pycache__/kdestub.cpython-${PYPKGVER}.pyc
 share/kajongg/__pycache__/log.cpython-${PYPKGVER}.pyc
 share/kajongg/__pycache__/login.cpython-${PYPKGVER}.pyc
 share/kajongg/__pycache__/mainwindow.cpython-${PYPKGVER}.pyc
-share/kajongg/__pycache__/meld.cpython-${PYPKGVER}.pyc
 share/kajongg/__pycache__/message.cpython-${PYPKGVER}.pyc
 share/kajongg/__pycache__/mi18n.cpython-${PYPKGVER}.pyc
 share/kajongg/__pycache__/mjresource.cpython-${PYPKGVER}.pyc
@@ -96,6 +97,7 @@ share/kajongg/__pycache__/move.cpython-${PYPKGVER}.pyc
 share/kajongg/__pycache__/permutations.cpython-${PYPKGVER}.pyc
 share/kajongg/__pycache__/player.cpython-${PYPKGVER}.pyc
 share/kajongg/__pycache__/playerlist.cpython-${PYPKGVER}.pyc
+share/kajongg/__pycache__/point.cpython-${PYPKGVER}.pyc
 share/kajongg/__pycache__/predefined.cpython-${PYPKGVER}.pyc
 share/kajongg/__pycache__/qt.cpython-${PYPKGVER}.pyc
 share/kajongg/__pycache__/qtreactor.cpython-${PYPKGVER}.pyc
@@ -130,7 +132,6 @@ share/kajongg/animation.py
 share/kajongg/appversion.py
 share/kajongg/background.py
 share/kajongg/backgroundselector.py
-share/kajongg/backgroundselector.ui
 share/kajongg/board.py
 share/kajongg/chat.py
 share/kajongg/client.py
@@ -158,7 +159,6 @@ share/kajongg/kdestub.py
 share/kajongg/log.py
 share/kajongg/login.py
 share/kajongg/mainwindow.py
-share/kajongg/meld.py
 share/kajongg/message.py
 share/kajongg/mi18n.py
 share/kajongg/mjresource.py
@@ -167,6 +167,7 @@ share/kajongg/move.py
 share/kajongg/permutations.py
 share/kajongg/player.py
 share/kajongg/playerlist.py
+share/kajongg/point.py
 share/kajongg/predefined.py
 share/kajongg/qt.py
 share/kajongg/qtreactor.py
@@ -187,7 +188,6 @@ share/kajongg/tables.py
 share/kajongg/tile.py
 share/kajongg/tileset.py
 share/kajongg/tilesetselector.py
-share/kajongg/tilesetselector.ui
 share/kajongg/tilesource.py
 share/kajongg/tree.py
 share/kajongg/uitile.py
@@ -548,6 +548,7 @@ share/kajongg/voices/male2/ww.ogg
 share/kajongg/wall.py
 share/kajongg/wind.py
 share/locale/ar/LC_MESSAGES/kajongg.mo
+share/locale/ast/LC_MESSAGES/kajongg.mo
 share/locale/bg/LC_MESSAGES/kajongg.mo
 share/locale/bs/LC_MESSAGES/kajongg.mo
 share/locale/ca/LC_MESSAGES/kajongg.mo
@@ -565,7 +566,10 @@ share/locale/fi/LC_MESSAGES/kajongg.mo
 share/locale/fr/LC_MESSAGES/kajongg.mo
 share/locale/ga/LC_MESSAGES/kajongg.mo
 share/locale/gl/LC_MESSAGES/kajongg.mo
+share/locale/he/LC_MESSAGES/kajongg.mo
+share/locale/hi/LC_MESSAGES/kajongg.mo
 share/locale/hu/LC_MESSAGES/kajongg.mo
+share/locale/ia/LC_MESSAGES/kajongg.mo
 share/locale/is/LC_MESSAGES/kajongg.mo
 share/locale/it/LC_MESSAGES/kajongg.mo
 share/locale/ja/LC_MESSAGES/kajongg.mo
@@ -585,6 +589,7 @@ share/locale/pt/LC_MESSAGES/kajongg.mo
 share/locale/pt_BR/LC_MESSAGES/kajongg.mo
 share/locale/ro/LC_MESSAGES/kajongg.mo
 share/locale/ru/LC_MESSAGES/kajongg.mo
+share/locale/sa/LC_MESSAGES/kajongg.mo
 share/locale/sk/LC_MESSAGES/kajongg.mo
 share/locale/sl/LC_MESSAGES/kajongg.mo
 share/locale/sr/LC_MESSAGES/kajongg.mo
