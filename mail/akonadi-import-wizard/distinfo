@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/02/06 11:05:24 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/12/21 12:58:28 markd Exp $
 
-BLAKE2s (akonadi-import-wizard-23.08.4.tar.xz) = 472e74b2b87f8807d81228f4647377ae41b8ad12322e4cd85743e52f2e4996b5
-SHA512 (akonadi-import-wizard-23.08.4.tar.xz) = d3f77ea73ec5a4f04f09ee91d74a9c7ae8ccd35dfd1a37cd3021b59f19cd0e3ff5e14535515dc43047e5a2b56a26a9e50d52519a4623b0aa578c1ce31b128d5f
-Size (akonadi-import-wizard-23.08.4.tar.xz) = 515092 bytes
+BLAKE2s (akonadi-import-wizard-25.08.3.tar.xz) = a223b8ab0fc58b8dc0cdb33092c0af5210a1d990516eabb401a31c0f3e17f95f
+SHA512 (akonadi-import-wizard-25.08.3.tar.xz) = 23d9c0a02eb91928dad304354983125831b8b9778a13b0fd0299fcd3cc11977c0906f87ae65ac1f8f489a32eee66b76a5b8c0f1552952c2999521d2fffd671fd
+Size (akonadi-import-wizard-25.08.3.tar.xz) = 497940 bytes
