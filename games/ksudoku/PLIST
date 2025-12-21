@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/08/03 03:25:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/12/21 11:47:04 markd Exp $
 bin/ksudoku
 share/applications/org.kde.ksudoku.desktop
 share/doc/HTML/ca/ksudoku/index.cache.bz2
@@ -25,6 +25,8 @@ share/doc/HTML/pt_BR/ksudoku/index.cache.bz2
 share/doc/HTML/pt_BR/ksudoku/index.docbook
 share/doc/HTML/ru/ksudoku/index.cache.bz2
 share/doc/HTML/ru/ksudoku/index.docbook
+share/doc/HTML/sl/ksudoku/index.cache.bz2
+share/doc/HTML/sl/ksudoku/index.docbook
 share/doc/HTML/sv/ksudoku/index.cache.bz2
 share/doc/HTML/sv/ksudoku/index.docbook
 share/doc/HTML/uk/ksudoku/index.cache.bz2
@@ -144,15 +146,16 @@ share/ksudoku/icons/hicolor/64x64/actions/ksudoku-tiny_samurai.png
 share/ksudoku/icons/hicolor/64x64/actions/ksudoku-xsudoku.png
 share/ksudoku/icons/hicolor/64x64/actions/ksudoku.png
 share/ksudoku/themes/abstraction.desktop
-share/ksudoku/themes/abstraction.svg
+share/ksudoku/themes/abstraction.svgz
 share/ksudoku/themes/abstraction_preview.png
 share/ksudoku/themes/default.desktop
 share/ksudoku/themes/egyptian_preview.png
-share/ksudoku/themes/ksudoku_egyptian.svg
+share/ksudoku/themes/ksudoku_egyptian.svgz
 share/ksudoku/themes/ksudoku_scrible.desktop
-share/ksudoku/themes/ksudoku_scrible.svg
+share/ksudoku/themes/ksudoku_scrible.svgz
 share/ksudoku/themes/scribble_preview.png
 share/locale/ar/LC_MESSAGES/ksudoku.mo
+share/locale/ast/LC_MESSAGES/ksudoku.mo
 share/locale/be/LC_MESSAGES/ksudoku.mo
 share/locale/bg/LC_MESSAGES/ksudoku.mo
 share/locale/bs/LC_MESSAGES/ksudoku.mo
@@ -172,6 +175,7 @@ share/locale/fi/LC_MESSAGES/ksudoku.mo
 share/locale/fr/LC_MESSAGES/ksudoku.mo
 share/locale/ga/LC_MESSAGES/ksudoku.mo
 share/locale/gl/LC_MESSAGES/ksudoku.mo
+share/locale/he/LC_MESSAGES/ksudoku.mo
 share/locale/hi/LC_MESSAGES/ksudoku.mo
 share/locale/hne/LC_MESSAGES/ksudoku.mo
 share/locale/hr/LC_MESSAGES/ksudoku.mo
@@ -199,6 +203,7 @@ share/locale/pt/LC_MESSAGES/ksudoku.mo
 share/locale/pt_BR/LC_MESSAGES/ksudoku.mo
 share/locale/ro/LC_MESSAGES/ksudoku.mo
 share/locale/ru/LC_MESSAGES/ksudoku.mo
+share/locale/sa/LC_MESSAGES/ksudoku.mo
 share/locale/se/LC_MESSAGES/ksudoku.mo
 share/locale/si/LC_MESSAGES/ksudoku.mo
 share/locale/sk/LC_MESSAGES/ksudoku.mo
