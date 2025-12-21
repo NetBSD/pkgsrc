@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2024/02/06 11:05:16 markd Exp $
+$NetBSD: distinfo,v 1.14 2025/12/21 10:32:20 markd Exp $
 
-BLAKE2s (poxml-23.08.4.tar.xz) = ef2f2fe0460429bdcbbe50bc249ae2897e99ba317fe7e2036db529428615305f
-SHA512 (poxml-23.08.4.tar.xz) = a52821aedf0dcd0283946c8174f5c1fae7b36a093ade37de1cb5e8e811d11bf6f87e24d154798f2c8fe76e4b4ceb44541d9b1baad4fe41edd29ea5aa974c6e56
-Size (poxml-23.08.4.tar.xz) = 44312 bytes
+BLAKE2s (poxml-25.08.3.tar.xz) = bdb868f73263f20ce3a4bff8aa5977498021b3d78ce0fca0ca3ab67fab75cad0
+SHA512 (poxml-25.08.3.tar.xz) = fce6877e4f593661c412f8962e55a0e44f93096bae2234cb987625d5a49ef2206ac3329b1055287e35aaaa647df352f79178257b735bdec664526aa6de03d10f
+Size (poxml-25.08.3.tar.xz) = 45216 bytes
