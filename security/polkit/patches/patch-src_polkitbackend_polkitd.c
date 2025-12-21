@@ -1,6 +1,7 @@
-$NetBSD: patch-src_polkitbackend_polkitd.c,v 1.3 2025/01/15 08:41:38 adam Exp $
+$NetBSD: patch-src_polkitbackend_polkitd.c,v 1.4 2025/12/21 15:44:05 wiz Exp $
 
 Avoid %m usage in printf.
+https://github.com/polkit-org/polkit/pull/624
 
 --- src/polkitbackend/polkitd.c.orig	2025-01-13 14:54:22.000000000 +0000
 +++ src/polkitbackend/polkitd.c
