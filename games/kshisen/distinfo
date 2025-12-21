@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2024/02/06 11:05:20 markd Exp $
+$NetBSD: distinfo,v 1.16 2025/12/21 11:39:31 markd Exp $
 
-BLAKE2s (kshisen-23.08.4.tar.xz) = 7fd91102148a51c650ed83e785aebaf8c3738ce3b6cb8418ae1773926af355c9
-SHA512 (kshisen-23.08.4.tar.xz) = 665021cf270904c69bae3b76ec4d877dc86362b70545abfe75d11a897f58a6968f5133306ea86637236988db4aba1d0823737af2201b06bc83072d3fb4642274
-Size (kshisen-23.08.4.tar.xz) = 1008936 bytes
+BLAKE2s (kshisen-25.08.3.tar.xz) = fafe63124beb3dccd1cdfd3807724fac4152e4bc71d55d6d8f51e31f62a147e2
+SHA512 (kshisen-25.08.3.tar.xz) = 344dc21385c9cdbee9a7795fa7337aab3fbaf634a617bcdf8c14ea87b82ea767f65970b94ff752f3b7a7e8c8f9d3a798f6948509bf410fde543dcb0f44b449a2
+Size (kshisen-25.08.3.tar.xz) = 976540 bytes
