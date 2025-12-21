@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.19 2025/09/30 09:49:32 adam Exp $
+$NetBSD: distinfo,v 1.20 2025/12/21 21:40:02 adam Exp $
 
-BLAKE2s (wxWidgets-3.2.8.1.tar.bz2) = aa65b0f01120bf2695cdcd7d4856fbc82bfc0a898f164cfcc0a1d5c2aa9a8f70
-SHA512 (wxWidgets-3.2.8.1.tar.bz2) = 3f6492851e6f6794498ad5005df1283aa4f85f176738a24184645bd5d991da7ae7086d5c28d185b33ba490e713899ebe8217352726c0d121062d76e4b867286e
-Size (wxWidgets-3.2.8.1.tar.bz2) = 27449383 bytes
-SHA1 (patch-build_cmake_config.cmake) = 61ea8fe846de12d5bad6c1f4fa7fe8af6ab78152
-SHA1 (patch-build_cmake_install.cmake) = b14a0e4ddd52fd5d73c4453fa35e1db67c1c0806
-SHA1 (patch-build_cmake_utils_CMakeLists.txt) = dcf6165e260ed56a9908e9e3095c02d0537a4364
-SHA1 (patch-configure) = 2a2bc165ebf1e7c35f90302fed0aa6771dea1498
+BLAKE2s (wxWidgets-3.2.9.tar.bz2) = a33c26006e69a20d29b5a359222186d3d25d7f9572066be2711d5aa5b551c970
+SHA512 (wxWidgets-3.2.9.tar.bz2) = 6fe5caa3deaa02df0ef1891e417625b7719cffc9968a2d43e5fbca349ec9fdb8d4fc85fb422f835df751af3a816f946fb9d0d008163924be1669e54ce2346df7
+Size (wxWidgets-3.2.9.tar.bz2) = 27366567 bytes
+SHA1 (patch-configure) = fca343fc17c685c273df993ca86a57ac9898d0ae
 SHA1 (patch-src_unix_glegl.cpp) = 1610bc04a0f8155138b169eb68f4b03e60ccecd9
 SHA1 (patch-src_unix_utilsunx.cpp) = be61cc3931e8aa8cf790cfedf6f916a84970f074
