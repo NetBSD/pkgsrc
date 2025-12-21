@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.375 2025/09/26 18:31:50 js Exp $
+# $NetBSD: Makefile,v 1.376 2025/12/21 07:07:16 wiz Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -6,14 +6,8 @@ COMMENT=	Emulators for other machines and systems
 SUBDIR+=	8086tiny
 SUBDIR+=	BasiliskII
 SUBDIR+=	Cygne-SDL
-SUBDIR+=	DatLib
-SUBDIR+=	DatUtil
 SUBDIR+=	IshkurCPM
-SUBDIR+=	MAMEDiff
 SUBDIR+=	PC6001VX
-SUBDIR+=	ROMBuild
-SUBDIR+=	ROMInfo
-SUBDIR+=	ZIPIdent
 SUBDIR+=	advancemame
 SUBDIR+=	advancescan
 SUBDIR+=	aliados
