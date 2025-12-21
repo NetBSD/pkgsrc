@@ -1,0 +1,32 @@
+$NetBSD: patch-src_3rdparty_chromium_base_process_process__handle__freebsd.cc,v 1.1 2025/12/21 09:38:15 markd Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/base/process/process_handle_freebsd.cc.orig	2025-11-14 07:55:10.000000000 +0000
++++ src/3rdparty/chromium/base/process/process_handle_freebsd.cc
+@@ -3,6 +3,7 @@
+ // found in the LICENSE file.
+ 
+ #include "base/process/process_handle.h"
++#include "base/files/file_util.h"
+ 
+ #include <limits.h>
+ #include <stddef.h>
+@@ -20,11 +21,14 @@ namespace base {
+ 
+ ProcessId GetParentProcessId(ProcessHandle process) {
+   struct kinfo_proc info;
+-  size_t length;
++  size_t length = sizeof(struct kinfo_proc);
+   int mib[] = {CTL_KERN, KERN_PROC, KERN_PROC_PID, process};
+ 
+   if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0) {
+     return -1;
++
++  if (length < sizeof(struct kinfo_proc))
++    return -1;
+   }
+ 
+   return info.ki_ppid;
