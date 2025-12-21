@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2025/10/23 20:39:08 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/12/21 15:28:04 markd Exp $
 
 DISTNAME=	libkleo-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	security
 
 HOMEPAGE=	https://kontact.kde.org/
@@ -26,8 +25,9 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/libkleopatrarc \
 		${PKG_SYSCONFDIR}/xdg/libkleopatrarc
 
 .include "../../devel/boost-headers/buildlink3.mk"
-.include "../../devel/kitemmodels/buildlink3.mk"
+.include "../../devel/kf6-ki18n/buildlink3.mk"
+.include "../../devel/kf6-kitemmodels/buildlink3.mk"
 .include "../../security/qgpgme/buildlink3.mk"
 .include "../../textproc/kpimtextedit/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
