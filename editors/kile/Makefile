@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.168 2025/10/23 20:36:42 wiz Exp $
+# $NetBSD: Makefile,v 1.169 2025/12/21 20:34:01 markd Exp $
 
-DISTNAME=		kile-2.9.93
-PKGREVISION=		44
+DISTNAME=		kile-2.9.94
 CATEGORIES=		editors kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kile/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,8 +9,7 @@ MAINTAINER=		markd@NetBSD.org
 HOMEPAGE=		https://kile.sourceforge.io/
 COMMENT=		LaTeX source editor - TeX shell - Gnuplot front end
 
-TOOL_DEPENDS+=		kdoctools>=5.19.0:../../devel/kdoctools
-DEPENDS+=		kinit>=5.19.0:../../x11/kinit
+TOOL_DEPENDS+=		kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=		perl msgmerge pkg-config
 
@@ -25,24 +23,14 @@ REPLACE_PERL=		kile1.6_upd.pl \
 			kile2.0-4_upd.pl \
 			kile2.0-5_upd.pl
 
-SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	pre-configure
-SUBST_MESSAGE.xdg=	Install via examples dir.
-SUBST_FILES.xdg=	src/CMakeLists.txt
-SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
-
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kile.categories \
-		${PKG_SYSCONFDIR}/xdg/kile.categories
-
 .include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../devel/ktexteditor/buildlink3.mk"
+.include "../../devel/kf6-ktexteditor/buildlink3.mk"
+.include "../../devel/qt6-qt5compat/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../print/okular/buildlink3.mk"
-.include "../../print/poppler-qt5/buildlink3.mk"
+.include "../../print/poppler-qt6/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../www/khtml/buildlink3.mk"
-.include "../../x11/qt5-qtscript/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/kf6-kxmlgui/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
