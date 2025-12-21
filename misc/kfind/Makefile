@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2025/10/23 20:38:23 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/12/21 14:07:08 markd Exp $
 
 DISTNAME=	kfind-${KAPPSVER}
-PKGREVISION=	10
 CATEGORIES=	misc
 
 HOMEPAGE=	https://www.kde.org/applications/utilities/kfind/
@@ -10,13 +9,15 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge
 
-.include "../../devel/kio/buildlink3.mk"
+.include "../../devel/kf6-kio/buildlink3.mk"
+.include "../../devel/qt6-qt5compat/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/kfilemetadata5/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../sysutils/kf6-kfilemetadata/buildlink3.mk"
+.include "../../x11/kf6-kxmlgui/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
