@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/08/03 03:06:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/12/21 11:21:15 markd Exp $
 bin/kiriki
 share/applications/org.kde.kiriki.desktop
 share/doc/HTML/ca/kiriki/configuration.png
@@ -27,6 +27,8 @@ share/doc/HTML/pt/kiriki/index.cache.bz2
 share/doc/HTML/pt/kiriki/index.docbook
 share/doc/HTML/pt_BR/kiriki/index.cache.bz2
 share/doc/HTML/pt_BR/kiriki/index.docbook
+share/doc/HTML/sl/kiriki/index.cache.bz2
+share/doc/HTML/sl/kiriki/index.docbook
 share/doc/HTML/sv/kiriki/index.cache.bz2
 share/doc/HTML/sv/kiriki/index.docbook
 share/doc/HTML/uk/kiriki/configuration.png
@@ -47,6 +49,7 @@ share/kiriki/images/dice-5.png
 share/kiriki/images/dice-6.png
 share/kiriki/images/dice-none.png
 share/locale/ar/LC_MESSAGES/kiriki.mo
+share/locale/ast/LC_MESSAGES/kiriki.mo
 share/locale/be/LC_MESSAGES/kiriki.mo
 share/locale/bg/LC_MESSAGES/kiriki.mo
 share/locale/bs/LC_MESSAGES/kiriki.mo
@@ -66,10 +69,12 @@ share/locale/fi/LC_MESSAGES/kiriki.mo
 share/locale/fr/LC_MESSAGES/kiriki.mo
 share/locale/ga/LC_MESSAGES/kiriki.mo
 share/locale/gl/LC_MESSAGES/kiriki.mo
+share/locale/he/LC_MESSAGES/kiriki.mo
 share/locale/hi/LC_MESSAGES/kiriki.mo
 share/locale/hne/LC_MESSAGES/kiriki.mo
 share/locale/hr/LC_MESSAGES/kiriki.mo
 share/locale/hu/LC_MESSAGES/kiriki.mo
+share/locale/ia/LC_MESSAGES/kiriki.mo
 share/locale/id/LC_MESSAGES/kiriki.mo
 share/locale/is/LC_MESSAGES/kiriki.mo
 share/locale/it/LC_MESSAGES/kiriki.mo
@@ -93,6 +98,7 @@ share/locale/pt/LC_MESSAGES/kiriki.mo
 share/locale/pt_BR/LC_MESSAGES/kiriki.mo
 share/locale/ro/LC_MESSAGES/kiriki.mo
 share/locale/ru/LC_MESSAGES/kiriki.mo
+share/locale/sa/LC_MESSAGES/kiriki.mo
 share/locale/se/LC_MESSAGES/kiriki.mo
 share/locale/sk/LC_MESSAGES/kiriki.mo
 share/locale/sl/LC_MESSAGES/kiriki.mo
