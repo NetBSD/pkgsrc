@@ -1,17 +1,16 @@
-@comment $NetBSD: PLIST,v 1.7 2024/02/06 11:05:25 markd Exp $
-include/KPim5/KMbox/KMbox/MBox
-include/KPim5/KMbox/KMbox/MBoxEntry
-include/KPim5/KMbox/kmbox/kmbox_export.h
-include/KPim5/KMbox/kmbox/mbox.h
-include/KPim5/KMbox/kmbox/mboxentry.h
-include/KPim5/KMbox/kmbox_version.h
-lib/cmake/KPim5Mbox/KPim5MboxConfig.cmake
-lib/cmake/KPim5Mbox/KPim5MboxConfigVersion.cmake
-lib/cmake/KPim5Mbox/KPim5MboxTargets-noconfig.cmake
-lib/cmake/KPim5Mbox/KPim5MboxTargets.cmake
-lib/libKPim5Mbox.so
-lib/libKPim5Mbox.so.5
-lib/libKPim5Mbox.so.5.24.4
-qt5/mkspecs/modules/qt_KMbox.pri
-share/qlogging-categories5/kmbox.categories
-share/qlogging-categories5/kmbox.renamecategories
+@comment $NetBSD: PLIST,v 1.8 2025/12/21 13:10:00 markd Exp $
+include/KPim6/KMbox/KMbox/MBox
+include/KPim6/KMbox/KMbox/MBoxEntry
+include/KPim6/KMbox/kmbox/kmbox_export.h
+include/KPim6/KMbox/kmbox/mbox.h
+include/KPim6/KMbox/kmbox/mboxentry.h
+include/KPim6/KMbox/kmbox_version.h
+lib/cmake/KPim6Mbox/KPim6MboxConfig.cmake
+lib/cmake/KPim6Mbox/KPim6MboxConfigVersion.cmake
+lib/cmake/KPim6Mbox/KPim6MboxTargets-noconfig.cmake
+lib/cmake/KPim6Mbox/KPim6MboxTargets.cmake
+lib/libKPim6Mbox.so
+lib/libKPim6Mbox.so.6
+lib/libKPim6Mbox.so.6.5.3
+share/qlogging-categories6/kmbox.categories
+share/qlogging-categories6/kmbox.renamecategories
