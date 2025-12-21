@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.92 2025/10/23 20:39:07 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2025/12/21 15:21:58 markd Exp $
 
 DISTNAME=	kgpg-${KAPPSVER}
-PKGREVISION=	13
 CATEGORIES=	security
 
 HOMEPAGE=	https://kde.org/applications/utilities/kgpg/
@@ -10,7 +9,7 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
@@ -24,10 +23,9 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/autostart/org.kde.kgpg.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/org.kde.kgpg.desktop
 
-.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../misc/akonadi-contacts/buildlink3.mk"
+.include "../../misc/kf6-kstatusnotifieritem/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../security/gpgme/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
