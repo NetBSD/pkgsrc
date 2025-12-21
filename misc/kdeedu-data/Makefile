@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2025/10/23 20:38:21 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2025/12/21 13:59:24 markd Exp $
 
 DISTNAME=	kdeedu-data-${KAPPSVER}
-PKGREVISION=	8
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/
@@ -11,5 +10,5 @@ LICENSE=	gnu-gpl-v2
 .include "../../meta-pkgs/kde/applications.mk"
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
