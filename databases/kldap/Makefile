@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2025/10/23 20:36:09 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2025/12/21 09:57:46 markd Exp $
 
 DISTNAME=	kldap-${KAPPSVER}
-PKGREVISION=	10
 CATEGORIES=	databases
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM
@@ -10,16 +9,16 @@ LICENSE=	gnu-lgpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge
 
 LDFLAGS.SunOS+=	-lsocket
 
 .include "../../databases/openldap-client/buildlink3.mk"
-.include "../../devel/kio/buildlink3.mk"
+.include "../../devel/kf6-kio/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
-.include "../../security/qt5-qtkeychain/buildlink3.mk"
-.include "../../textproc/kcompletion/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../security/qt6-qtkeychain/buildlink3.mk"
+.include "../../textproc/kf6-kcompletion/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
