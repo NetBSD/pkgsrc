@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/08/03 04:23:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/12/21 14:19:28 markd Exp $
 bin/kmouth
 man/ca/man1/kmouth.1
 man/da/man1/kmouth.1
@@ -12,6 +12,7 @@ man/nl/man1/kmouth.1
 man/pt/man1/kmouth.1
 man/pt_BR/man1/kmouth.1
 man/ru/man1/kmouth.1
+man/sl/man1/kmouth.1
 man/sv/man1/kmouth.1
 man/uk/man1/kmouth.1
 share/applications/org.kde.kmouth.desktop
@@ -84,6 +85,8 @@ share/doc/HTML/pt_BR/kmouth/kmouthwizard2.png
 share/doc/HTML/pt_BR/kmouth/kmouthwizard3.png
 share/doc/HTML/ru/kmouth/index.cache.bz2
 share/doc/HTML/ru/kmouth/index.docbook
+share/doc/HTML/sl/kmouth/index.cache.bz2
+share/doc/HTML/sl/kmouth/index.docbook
 share/doc/HTML/sv/kmouth/index.cache.bz2
 share/doc/HTML/sv/kmouth/index.docbook
 share/doc/HTML/sv/kmouth/kmouthcpref.png
@@ -95,16 +98,14 @@ share/doc/HTML/sv/kmouth/kmouthwizard.png
 share/doc/HTML/uk/kmouth/index.cache.bz2
 share/doc/HTML/uk/kmouth/index.docbook
 share/examples/kde-xdg/kmouthrc
+share/icons/hicolor/128x128/apps/kmouth.png
 share/icons/hicolor/16x16/actions/phrase.png
 share/icons/hicolor/16x16/actions/phrasebook.png
-share/icons/hicolor/16x16/apps/kmouth.png
 share/icons/hicolor/22x22/actions/phrase.png
 share/icons/hicolor/22x22/actions/phrasebook.png
-share/icons/hicolor/22x22/apps/kmouth.png
 share/icons/hicolor/32x32/actions/phrase.png
 share/icons/hicolor/32x32/actions/phrasebook.png
-share/icons/hicolor/32x32/apps/kmouth.png
-share/icons/hicolor/48x48/apps/kmouth.png
+share/icons/hicolor/scalable/apps/kmouth.svg
 share/kmouth/books/ca/ca-courteousness.phrasebook
 share/kmouth/books/ca/ca-greetings.phrasebook
 share/kmouth/books/ca/ca-howareyou.phrasebook
@@ -125,9 +126,8 @@ share/kmouth/books/sv/sv-greetings.phrasebook
 share/kmouth/books/sv/sv-howareyou.phrasebook
 share/kmouth/books/sv/sv-personal.phrasebook
 share/kmouth/books/sv/sv.desktop
-share/kxmlgui5/kmouth/kmouthui.rc
-share/kxmlgui5/kmouth/phrasebookdialogui.rc
 share/locale/ar/LC_MESSAGES/kmouth.mo
+share/locale/ast/LC_MESSAGES/kmouth.mo
 share/locale/be/LC_MESSAGES/kmouth.mo
 share/locale/bg/LC_MESSAGES/kmouth.mo
 share/locale/br/LC_MESSAGES/kmouth.mo
@@ -182,6 +182,7 @@ share/locale/pt/LC_MESSAGES/kmouth.mo
 share/locale/pt_BR/LC_MESSAGES/kmouth.mo
 share/locale/ro/LC_MESSAGES/kmouth.mo
 share/locale/ru/LC_MESSAGES/kmouth.mo
+share/locale/sa/LC_MESSAGES/kmouth.mo
 share/locale/se/LC_MESSAGES/kmouth.mo
 share/locale/sk/LC_MESSAGES/kmouth.mo
 share/locale/sl/LC_MESSAGES/kmouth.mo
