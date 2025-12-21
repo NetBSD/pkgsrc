@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/08/03 02:56:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/12/21 11:05:43 markd Exp $
 bin/kbounce
 share/applications/org.kde.kbounce.desktop
 share/doc/HTML/ca/kbounce/index.cache.bz2
@@ -40,8 +40,12 @@ share/doc/HTML/pt_BR/kbounce/index.cache.bz2
 share/doc/HTML/pt_BR/kbounce/index.docbook
 share/doc/HTML/pt_BR/kbounce/kbounce_corridor1.png
 share/doc/HTML/pt_BR/kbounce/kbounce_corridor2.png
+share/doc/HTML/sl/kbounce/index.cache.bz2
+share/doc/HTML/sl/kbounce/index.docbook
 share/doc/HTML/sv/kbounce/index.cache.bz2
 share/doc/HTML/sv/kbounce/index.docbook
+share/doc/HTML/tr/kbounce/index.cache.bz2
+share/doc/HTML/tr/kbounce/index.docbook
 share/doc/HTML/uk/kbounce/index.cache.bz2
 share/doc/HTML/uk/kbounce/index.docbook
 share/doc/HTML/uk/kbounce/kbounce_corridor1.png
@@ -63,7 +67,7 @@ share/kbounce/themes/egyptian_bounce.png
 share/kbounce/themes/egyptian_bounce.svgz
 share/kbounce/themes/geometry.desktop
 share/kbounce/themes/geometry.png
-share/kbounce/themes/kbounce.svg
+share/kbounce/themes/kbounce.svgz
 share/kbounce/themes/oxygen.desktop
 share/kbounce/themes/oxygen.png
 share/kbounce/themes/oxygen.svgz
@@ -75,6 +79,7 @@ share/kbounce/themes/the_beach.svgz
 share/kbounce/themes/thebeach_preview.png
 share/locale/af/LC_MESSAGES/kbounce.mo
 share/locale/ar/LC_MESSAGES/kbounce.mo
+share/locale/ast/LC_MESSAGES/kbounce.mo
 share/locale/be/LC_MESSAGES/kbounce.mo
 share/locale/bg/LC_MESSAGES/kbounce.mo
 share/locale/bn/LC_MESSAGES/kbounce.mo
@@ -103,6 +108,7 @@ share/locale/hi/LC_MESSAGES/kbounce.mo
 share/locale/hne/LC_MESSAGES/kbounce.mo
 share/locale/hr/LC_MESSAGES/kbounce.mo
 share/locale/hu/LC_MESSAGES/kbounce.mo
+share/locale/ia/LC_MESSAGES/kbounce.mo
 share/locale/id/LC_MESSAGES/kbounce.mo
 share/locale/is/LC_MESSAGES/kbounce.mo
 share/locale/it/LC_MESSAGES/kbounce.mo
@@ -130,6 +136,7 @@ share/locale/pt/LC_MESSAGES/kbounce.mo
 share/locale/pt_BR/LC_MESSAGES/kbounce.mo
 share/locale/ro/LC_MESSAGES/kbounce.mo
 share/locale/ru/LC_MESSAGES/kbounce.mo
+share/locale/sa/LC_MESSAGES/kbounce.mo
 share/locale/se/LC_MESSAGES/kbounce.mo
 share/locale/sk/LC_MESSAGES/kbounce.mo
 share/locale/sl/LC_MESSAGES/kbounce.mo
@@ -151,4 +158,5 @@ share/locale/xh/LC_MESSAGES/kbounce.mo
 share/locale/zh_CN/LC_MESSAGES/kbounce.mo
 share/locale/zh_TW/LC_MESSAGES/kbounce.mo
 share/metainfo/org.kde.kbounce.appdata.xml
-share/qlogging-categories5/kbounce.categories
+share/qlogging-categories6/kbounce.categories
+share/qlogging-categories6/kbounce.renamecategories
