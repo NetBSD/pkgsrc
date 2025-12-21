@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/08/03 03:42:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/12/21 12:24:41 markd Exp $
 bin/kolourpaint
 lib/libkolourpaint_lgpl.so
 lib/libkolourpaint_lgpl.so.5
@@ -78,6 +78,7 @@ share/doc/HTML/en/kolourpaint/tool_rounded_rectangle.png
 share/doc/HTML/en/kolourpaint/tool_selections.png
 share/doc/HTML/en/kolourpaint/tool_spraycan.png
 share/doc/HTML/en/kolourpaint/tool_text.png
+share/doc/HTML/en/kolourpaint/tool_zoom.png
 share/doc/HTML/en/kolourpaint/view_thumbnails.png
 share/doc/HTML/es/kolourpaint/brush_shapes.png
 share/doc/HTML/es/kolourpaint/color_box.png
@@ -219,6 +220,8 @@ share/doc/HTML/ru/kolourpaint/index.cache.bz2
 share/doc/HTML/ru/kolourpaint/index.docbook
 share/doc/HTML/ru/kolourpaint/screenshot_acquiring.png
 share/doc/HTML/ru/kolourpaint/view_thumbnails.png
+share/doc/HTML/sl/kolourpaint/index.cache.bz2
+share/doc/HTML/sl/kolourpaint/index.docbook
 share/doc/HTML/sv/kolourpaint/image_balance.png
 share/doc/HTML/sv/kolourpaint/image_emboss.png
 share/doc/HTML/sv/kolourpaint/image_flatten.png
@@ -251,6 +254,11 @@ share/icons/hicolor/22x22/apps/kolourpaint.png
 share/icons/hicolor/32x32/apps/kolourpaint.png
 share/icons/hicolor/48x48/apps/kolourpaint.png
 share/icons/hicolor/scalable/apps/kolourpaint.svgz
+share/kolourpaint/colors/40.colors
+share/kolourpaint/colors/Oxygen.colors
+share/kolourpaint/colors/Rainbow.colors
+share/kolourpaint/colors/Royal.colors
+share/kolourpaint/colors/Web.colors
 share/kolourpaint/icons/hicolor/16x16/actions/tool_brush.png
 share/kolourpaint/icons/hicolor/16x16/actions/tool_color_eraser.png
 share/kolourpaint/icons/hicolor/16x16/actions/tool_color_picker.png
@@ -341,7 +349,6 @@ share/kolourpaint/icons/hicolor/scalable/actions/tool_rectangle.svgz
 share/kolourpaint/icons/hicolor/scalable/actions/tool_rounded_rectangle.svgz
 share/kolourpaint/icons/hicolor/scalable/actions/tool_spraycan.svgz
 share/kolourpaint/icons/hicolor/scalable/actions/tool_text.svgz
-share/kxmlgui5/kolourpaint/kolourpaintui.rc
 share/locale/ar/LC_MESSAGES/kolourpaint.mo
 share/locale/be/LC_MESSAGES/kolourpaint.mo
 share/locale/bg/LC_MESSAGES/kolourpaint.mo
@@ -397,6 +404,7 @@ share/locale/pt/LC_MESSAGES/kolourpaint.mo
 share/locale/pt_BR/LC_MESSAGES/kolourpaint.mo
 share/locale/ro/LC_MESSAGES/kolourpaint.mo
 share/locale/ru/LC_MESSAGES/kolourpaint.mo
+share/locale/sa/LC_MESSAGES/kolourpaint.mo
 share/locale/se/LC_MESSAGES/kolourpaint.mo
 share/locale/si/LC_MESSAGES/kolourpaint.mo
 share/locale/sk/LC_MESSAGES/kolourpaint.mo
