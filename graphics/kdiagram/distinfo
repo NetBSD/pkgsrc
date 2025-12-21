@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/08/18 23:20:33 wiz Exp $
+$NetBSD: distinfo,v 1.4 2025/12/21 12:17:43 markd Exp $
 
-BLAKE2s (kdiagram-2.8.0.tar.xz) = 7d65b20e44ca230f7538edd570f678a7f5170d4e33619b6374df1f3f1132a8fd
-SHA512 (kdiagram-2.8.0.tar.xz) = d981bce4feeb65038772125e5af1c096537ec87991fdb93d9a91dd5c9f089b1001647c8a63b209683a67b2d7b3aadeb7dd6279261eefaf6b6e046d0ab72723ec
-Size (kdiagram-2.8.0.tar.xz) = 691044 bytes
-SHA1 (patch-CMakeLists.txt) = 7691f3fca6ed922beae9f9a0b554bf9e61f3eb5d
+BLAKE2s (kdiagram-3.0.1.tar.xz) = 1f24f89964d253bb333c0a8e185fbe6d80bb85d0f4f85859db4c653492c8c322
+SHA512 (kdiagram-3.0.1.tar.xz) = 767c5ba0a4dfcc8b5a5bbf1c65b30bb391537024618b29ea5d5d09da04f85e2665cad60a7477e1cebeed0606e17c992cba0af7a89c76699063bb47e741ea8e20
+Size (kdiagram-3.0.1.tar.xz) = 693440 bytes
