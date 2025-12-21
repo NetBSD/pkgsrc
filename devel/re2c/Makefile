@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2025/12/02 07:10:42 adam Exp $
+# $NetBSD: Makefile,v 1.39 2025/12/21 17:28:17 wiz Exp $
 
-DISTNAME=	re2c-4.3.1
+DISTNAME=	re2c-4.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=skvadrik/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -14,7 +14,6 @@ LICENSE=	public-domain
 USE_CXX_FEATURES=	c++11
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison
-# needs 'make install'
 TEST_TARGET=		check
 PYTHON_FOR_BUILD_ONLY=	tool
 
