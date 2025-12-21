@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.101 2025/10/23 20:36:42 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2025/12/21 10:44:28 markd Exp $
 
 DISTNAME=	kate-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	editors
 
 HOMEPAGE=	https://www.kde.org/applications/utilities/kate/
@@ -10,7 +9,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge
 
@@ -36,12 +35,11 @@ post-install:
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../devel/kitemmodels/buildlink3.mk"
-.include "../../devel/ktexteditor/buildlink3.mk"
-.include "../../devel/threadweaver/buildlink3.mk"
-.include "../../misc/kuserfeedback/buildlink3.mk"
-.include "../../net/knewstuff/buildlink3.mk"
-.include "../../x11/kactivities5/buildlink3.mk"
-.include "../../x11/plasma-framework/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../devel/kf6-kitemmodels/buildlink3.mk"
+.include "../../devel/kf6-ktexteditor/buildlink3.mk"
+.include "../../devel/kf6-threadweaver/buildlink3.mk"
+.include "../../misc/kf6-kuserfeedback/buildlink3.mk"
+.include "../../net/kf6-knewstuff/buildlink3.mk"
+.include "../../security/qt6-qtkeychain/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
