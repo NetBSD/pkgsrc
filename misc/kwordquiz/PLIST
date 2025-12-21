@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/02/06 11:17:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/12/21 14:27:53 markd Exp $
 bin/kwordquiz
 share/applications/org.kde.kwordquiz.desktop
 share/config.kcfg/kwordquiz.kcfg
@@ -40,11 +40,6 @@ share/doc/HTML/en/kwordquiz/kwq-welcome.png
 share/doc/HTML/es/kwordquiz/index.cache.bz2
 share/doc/HTML/es/kwordquiz/index.docbook
 share/doc/HTML/es/kwordquiz/kwq-dlg-characters.png
-share/doc/HTML/es/kwordquiz/kwq-dlg-configure-appearance.png
-share/doc/HTML/es/kwordquiz/kwq-dlg-configure-characters.png
-share/doc/HTML/es/kwordquiz/kwq-dlg-configure-editor.png
-share/doc/HTML/es/kwordquiz/kwq-dlg-configure-general.png
-share/doc/HTML/es/kwordquiz/kwq-dlg-configure-quiz.png
 share/doc/HTML/es/kwordquiz/kwq-dlg-languages.png
 share/doc/HTML/es/kwordquiz/kwq-dlg-print-exam.png
 share/doc/HTML/es/kwordquiz/kwq-dlg-print-flashcard.png
@@ -56,6 +51,29 @@ share/doc/HTML/es/kwordquiz/kwq-multiple.png
 share/doc/HTML/es/kwordquiz/kwq-qanda.png
 share/doc/HTML/et/kwordquiz/index.cache.bz2
 share/doc/HTML/et/kwordquiz/index.docbook
+share/doc/HTML/fr/kwordquiz/index.cache.bz2
+share/doc/HTML/fr/kwordquiz/index.docbook
+share/doc/HTML/fr/kwordquiz/kwg-dlg-print-flashcard.png
+share/doc/HTML/fr/kwordquiz/kwg-dlg-print-list.png
+share/doc/HTML/fr/kwordquiz/kwordquiz-icon.png
+share/doc/HTML/fr/kwordquiz/kwq-dlg-characters.png
+share/doc/HTML/fr/kwordquiz/kwq-dlg-configure-appearance.png
+share/doc/HTML/fr/kwordquiz/kwq-dlg-configure-characters.png
+share/doc/HTML/fr/kwordquiz/kwq-dlg-configure-editor.png
+share/doc/HTML/fr/kwordquiz/kwq-dlg-configure-general.png
+share/doc/HTML/fr/kwordquiz/kwq-dlg-configure-quiz.png
+share/doc/HTML/fr/kwordquiz/kwq-dlg-languages.png
+share/doc/HTML/fr/kwordquiz/kwq-dlg-print-exam.png
+share/doc/HTML/fr/kwordquiz/kwq-dlg-print-type.png
+share/doc/HTML/fr/kwordquiz/kwq-editor.png
+share/doc/HTML/fr/kwordquiz/kwq-flashcard.png
+share/doc/HTML/fr/kwordquiz/kwq-multiple.png
+share/doc/HTML/fr/kwordquiz/kwq-qanda.png
+share/doc/HTML/fr/kwordquiz/kwq-tutor-popup-minimalistic.png
+share/doc/HTML/fr/kwordquiz/kwq-tutor-popup-native.png
+share/doc/HTML/fr/kwordquiz/kwq-tutor-settings.png
+share/doc/HTML/fr/kwordquiz/kwq-tutor-shortcuts.png
+share/doc/HTML/fr/kwordquiz/kwq-tutor-welcome.png
 share/doc/HTML/it/kwordquiz/index.cache.bz2
 share/doc/HTML/it/kwordquiz/index.docbook
 share/doc/HTML/ko/kwordquiz/index.cache.bz2
@@ -68,6 +86,8 @@ share/doc/HTML/pt_BR/kwordquiz/index.cache.bz2
 share/doc/HTML/pt_BR/kwordquiz/index.docbook
 share/doc/HTML/ru/kwordquiz/index.cache.bz2
 share/doc/HTML/ru/kwordquiz/index.docbook
+share/doc/HTML/sl/kwordquiz/index.cache.bz2
+share/doc/HTML/sl/kwordquiz/index.docbook
 share/doc/HTML/sv/kwordquiz/index.cache.bz2
 share/doc/HTML/sv/kwordquiz/index.docbook
 share/doc/HTML/sv/kwordquiz/kwq-dlg-characters.png
@@ -115,7 +135,6 @@ share/icons/hicolor/48x48/apps/kwordquiz.png
 share/icons/hicolor/48x48/mimetypes/application-x-kwordquiz.png
 share/icons/hicolor/64x64/apps/kwordquiz.png
 share/icons/hicolor/scalable/apps/org.kde.kwordquiz.svg
-share/knotifications5/kwordquiz.notifyrc
 share/knsrcfiles/kwordquiz.knsrc
 share/kwordquiz/examples/example.kvtml
 share/kwordquiz/examples/fill_in_the_blank.kvtml
@@ -270,6 +289,7 @@ share/kwordquiz/icons/hicolor/scalable/actions/qa.svgz
 share/kwordquiz/icons/hicolor/scalable/actions/question.svgz
 share/kwordquiz/icons/hicolor/scalable/actions/unmarkasblank.svgz
 share/locale/ar/LC_MESSAGES/kwordquiz.mo
+share/locale/ast/LC_MESSAGES/kwordquiz.mo
 share/locale/be/LC_MESSAGES/kwordquiz.mo
 share/locale/bg/LC_MESSAGES/kwordquiz.mo
 share/locale/bn/LC_MESSAGES/kwordquiz.mo
@@ -292,6 +312,7 @@ share/locale/fi/LC_MESSAGES/kwordquiz.mo
 share/locale/fr/LC_MESSAGES/kwordquiz.mo
 share/locale/ga/LC_MESSAGES/kwordquiz.mo
 share/locale/gl/LC_MESSAGES/kwordquiz.mo
+share/locale/he/LC_MESSAGES/kwordquiz.mo
 share/locale/hi/LC_MESSAGES/kwordquiz.mo
 share/locale/hne/LC_MESSAGES/kwordquiz.mo
 share/locale/hr/LC_MESSAGES/kwordquiz.mo
@@ -322,6 +343,7 @@ share/locale/pt/LC_MESSAGES/kwordquiz.mo
 share/locale/pt_BR/LC_MESSAGES/kwordquiz.mo
 share/locale/ro/LC_MESSAGES/kwordquiz.mo
 share/locale/ru/LC_MESSAGES/kwordquiz.mo
+share/locale/sa/LC_MESSAGES/kwordquiz.mo
 share/locale/se/LC_MESSAGES/kwordquiz.mo
 share/locale/si/LC_MESSAGES/kwordquiz.mo
 share/locale/sk/LC_MESSAGES/kwordquiz.mo
