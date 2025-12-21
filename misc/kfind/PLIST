@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/05 05:55:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/12/21 14:07:08 markd Exp $
 bin/kfind
 man/ca/man1/kfind.1
 man/de/man1/kfind.1
@@ -13,6 +13,7 @@ man/pl/man1/kfind.1
 man/pt/man1/kfind.1
 man/pt_BR/man1/kfind.1
 man/ru/man1/kfind.1
+man/sl/man1/kfind.1
 man/sr/man1/kfind.1
 man/sr@latin/man1/kfind.1
 man/sv/man1/kfind.1
@@ -21,40 +22,24 @@ man/uk/man1/kfind.1
 share/applications/org.kde.kfind.desktop
 share/doc/HTML/ca/kfind/index.cache.bz2
 share/doc/HTML/ca/kfind/index.docbook
-share/doc/HTML/de/kfind/index.cache.bz2
-share/doc/HTML/de/kfind/index.docbook
 share/doc/HTML/en/kfind/index.cache.bz2
 share/doc/HTML/en/kfind/index.docbook
 share/doc/HTML/es/kfind/index.cache.bz2
 share/doc/HTML/es/kfind/index.docbook
-share/doc/HTML/et/kfind/index.cache.bz2
-share/doc/HTML/et/kfind/index.docbook
 share/doc/HTML/fr/kfind/index.cache.bz2
 share/doc/HTML/fr/kfind/index.docbook
 share/doc/HTML/it/kfind/index.cache.bz2
 share/doc/HTML/it/kfind/index.docbook
-share/doc/HTML/lt/kfind/index.cache.bz2
-share/doc/HTML/lt/kfind/index.docbook
 share/doc/HTML/nl/kfind/index.cache.bz2
 share/doc/HTML/nl/kfind/index.docbook
-share/doc/HTML/pl/kfind/index.cache.bz2
-share/doc/HTML/pl/kfind/index.docbook
-share/doc/HTML/pt/kfind/index.cache.bz2
-share/doc/HTML/pt/kfind/index.docbook
-share/doc/HTML/pt_BR/kfind/index.cache.bz2
-share/doc/HTML/pt_BR/kfind/index.docbook
 share/doc/HTML/ru/kfind/index.cache.bz2
 share/doc/HTML/ru/kfind/index.docbook
-share/doc/HTML/sr/kfind/index.cache.bz2
-share/doc/HTML/sr/kfind/index.docbook
-share/doc/HTML/sr@latin/kfind/index.cache.bz2
-share/doc/HTML/sr@latin/kfind/index.docbook
-share/doc/HTML/sv/kfind/index.cache.bz2
-share/doc/HTML/sv/kfind/index.docbook
+share/doc/HTML/sl/kfind/index.cache.bz2
+share/doc/HTML/sl/kfind/index.docbook
+share/doc/HTML/tr/kfind/index.cache.bz2
+share/doc/HTML/tr/kfind/index.docbook
 share/doc/HTML/uk/kfind/index.cache.bz2
 share/doc/HTML/uk/kfind/index.docbook
-share/doc/HTML/zh_CN/kfind/index.cache.bz2
-share/doc/HTML/zh_CN/kfind/index.docbook
 share/icons/hicolor/128x128/apps/kfind.png
 share/icons/hicolor/16x16/apps/kfind.png
 share/icons/hicolor/22x22/apps/kfind.png
@@ -64,6 +49,7 @@ share/icons/hicolor/64x64/apps/kfind.png
 share/icons/hicolor/scalable/apps/kfind.svgz
 share/locale/af/LC_MESSAGES/kfind.mo
 share/locale/ar/LC_MESSAGES/kfind.mo
+share/locale/ast/LC_MESSAGES/kfind.mo
 share/locale/az/LC_MESSAGES/kfind.mo
 share/locale/be/LC_MESSAGES/kfind.mo
 share/locale/be@latin/LC_MESSAGES/kfind.mo
@@ -130,6 +116,7 @@ share/locale/pt/LC_MESSAGES/kfind.mo
 share/locale/pt_BR/LC_MESSAGES/kfind.mo
 share/locale/ro/LC_MESSAGES/kfind.mo
 share/locale/ru/LC_MESSAGES/kfind.mo
+share/locale/sa/LC_MESSAGES/kfind.mo
 share/locale/se/LC_MESSAGES/kfind.mo
 share/locale/si/LC_MESSAGES/kfind.mo
 share/locale/sk/LC_MESSAGES/kfind.mo
@@ -155,4 +142,4 @@ share/locale/xh/LC_MESSAGES/kfind.mo
 share/locale/zh_CN/LC_MESSAGES/kfind.mo
 share/locale/zh_TW/LC_MESSAGES/kfind.mo
 share/metainfo/org.kde.kfind.appdata.xml
-share/qlogging-categories5/kfind.categories
+share/qlogging-categories6/kfind.categories
