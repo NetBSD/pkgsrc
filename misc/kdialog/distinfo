@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/02/06 11:17:34 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/12/21 14:04:35 markd Exp $
 
-BLAKE2s (kdialog-23.08.4.tar.xz) = c163198da8a59ca9c27506373744567f844e0124708c903cccdf8b4e7d3e2dce
-SHA512 (kdialog-23.08.4.tar.xz) = cdae358779b13fed037626644a8508c0edee3e0baebf7aaa3f8d074f9cd55aa87ed241482fbcfa7eeaf8181ea80634c48b5570625d6aca68c5a1ea4230d3e556
-Size (kdialog-23.08.4.tar.xz) = 144352 bytes
+BLAKE2s (kdialog-25.08.3.tar.xz) = 81c6c9a63061694744f87be81d1ec19da798355423d4b82ec3dbe44664320e5e
+SHA512 (kdialog-25.08.3.tar.xz) = b8925adf8c0e405dc13608392531fefc533906f43faac1ada17707ec4a585f18f15a3804b2c150fa948833c04d9ec78853ecd2a03d112f031b9a2103fe785857
+Size (kdialog-25.08.3.tar.xz) = 149328 bytes

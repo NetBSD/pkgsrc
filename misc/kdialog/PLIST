@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/05 05:45:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/12/21 14:04:35 markd Exp $
 bin/kdialog
 bin/kdialog_progress_helper
 share/applications/org.kde.kdialog.desktop
 share/dbus-1/interfaces/org.kde.kdialog.ProgressDialog.xml
 share/locale/af/LC_MESSAGES/kdialog.mo
 share/locale/ar/LC_MESSAGES/kdialog.mo
+share/locale/ast/LC_MESSAGES/kdialog.mo
+share/locale/az/LC_MESSAGES/kdialog.mo
 share/locale/be/LC_MESSAGES/kdialog.mo
 share/locale/be@latin/LC_MESSAGES/kdialog.mo
 share/locale/bg/LC_MESSAGES/kdialog.mo
@@ -69,6 +71,7 @@ share/locale/pt/LC_MESSAGES/kdialog.mo
 share/locale/pt_BR/LC_MESSAGES/kdialog.mo
 share/locale/ro/LC_MESSAGES/kdialog.mo
 share/locale/ru/LC_MESSAGES/kdialog.mo
+share/locale/sa/LC_MESSAGES/kdialog.mo
 share/locale/se/LC_MESSAGES/kdialog.mo
 share/locale/si/LC_MESSAGES/kdialog.mo
 share/locale/sk/LC_MESSAGES/kdialog.mo
