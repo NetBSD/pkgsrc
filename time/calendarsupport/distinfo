@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/02/06 11:17:43 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/12/21 19:56:12 markd Exp $
 
-BLAKE2s (calendarsupport-23.08.4.tar.xz) = 7e7dc358d3ac7f2c0ebf273f351305acc57a833fcd2cfb50f7c096efe9494ba3
-SHA512 (calendarsupport-23.08.4.tar.xz) = 12f00768c663260fb5e1e242b685f3f20ac21a813eecbc6b7a678183e7f85ecfafcc349aa591df3a8b0a873cbbc110ea171648f52bb3702933a99cbcbc5e9e8c
-Size (calendarsupport-23.08.4.tar.xz) = 997880 bytes
+BLAKE2s (calendarsupport-25.08.3.tar.xz) = 4c6e6c7fae5b47a85b95241fda385f230862828f9947e5d709496d2d84848cf5
+SHA512 (calendarsupport-25.08.3.tar.xz) = 0d8c93b0963e3d804d80985a6560dd429fe6ceab3fbe28177a09d763ed9ffe3bef631f73d6cdee1692fd2c322b622d477294d22fa65fb10ee5c2b169aa76bbb0
+Size (calendarsupport-25.08.3.tar.xz) = 990792 bytes
