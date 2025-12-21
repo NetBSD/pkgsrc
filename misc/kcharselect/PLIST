@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/08/03 04:05:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/12/21 13:57:47 markd Exp $
 bin/kcharselect
 share/applications/org.kde.kcharselect.desktop
 share/doc/HTML/ca/kcharselect/index.cache.bz2
@@ -36,6 +36,8 @@ share/doc/HTML/pt_BR/kcharselect/index.docbook
 share/doc/HTML/pt_BR/kcharselect/kcharselect.png
 share/doc/HTML/ru/kcharselect/index.cache.bz2
 share/doc/HTML/ru/kcharselect/index.docbook
+share/doc/HTML/sl/kcharselect/index.cache.bz2
+share/doc/HTML/sl/kcharselect/index.docbook
 share/doc/HTML/sr/kcharselect/index.cache.bz2
 share/doc/HTML/sr/kcharselect/index.docbook
 share/doc/HTML/sr@latin/kcharselect/index.cache.bz2
@@ -50,6 +52,7 @@ share/doc/HTML/uk/kcharselect/index.docbook
 share/doc/HTML/uk/kcharselect/kcharselect.png
 share/locale/af/LC_MESSAGES/kcharselect.mo
 share/locale/ar/LC_MESSAGES/kcharselect.mo
+share/locale/ast/LC_MESSAGES/kcharselect.mo
 share/locale/be/LC_MESSAGES/kcharselect.mo
 share/locale/bg/LC_MESSAGES/kcharselect.mo
 share/locale/br/LC_MESSAGES/kcharselect.mo
@@ -103,6 +106,7 @@ share/locale/pt/LC_MESSAGES/kcharselect.mo
 share/locale/pt_BR/LC_MESSAGES/kcharselect.mo
 share/locale/ro/LC_MESSAGES/kcharselect.mo
 share/locale/ru/LC_MESSAGES/kcharselect.mo
+share/locale/sa/LC_MESSAGES/kcharselect.mo
 share/locale/se/LC_MESSAGES/kcharselect.mo
 share/locale/si/LC_MESSAGES/kcharselect.mo
 share/locale/sk/LC_MESSAGES/kcharselect.mo

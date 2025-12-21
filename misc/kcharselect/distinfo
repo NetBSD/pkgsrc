@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2024/02/06 11:17:34 markd Exp $
+$NetBSD: distinfo,v 1.19 2025/12/21 13:57:47 markd Exp $
 
-BLAKE2s (kcharselect-23.08.4.tar.xz) = 63aae22a4e7b3f8fe0868f296bc0f0643691efc8714e581377904873567837a1
-SHA512 (kcharselect-23.08.4.tar.xz) = 3c586d1a2bff3af367d6912fa0985aad4029837324d5bde104f7505160817354adb8cb9ae814ab8c5d6bb16de79331484acb019820abc4f9e227db5955ac831a
-Size (kcharselect-23.08.4.tar.xz) = 384524 bytes
+BLAKE2s (kcharselect-25.08.3.tar.xz) = 0fc7fd5716455096f54ebcf980a47d88c1145f3086fd172e72197c5a18512a34
+SHA512 (kcharselect-25.08.3.tar.xz) = d3dd8164a21e755156b30322cef737651dc52844fd9191ddb16ec39dd473e916b9f9822e1a20bf9fbcf5f77a159f08a28b7aeb3ab284137b76f1de353a55cda3
+Size (kcharselect-25.08.3.tar.xz) = 477884 bytes
