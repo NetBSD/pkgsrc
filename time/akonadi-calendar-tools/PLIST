@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/16 05:27:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/12/21 19:53:31 markd Exp $
 bin/calendarjanitor
 bin/konsolekalendar
 share/applications/konsolekalendar.desktop
@@ -22,6 +22,8 @@ share/doc/HTML/pt_BR/konsolekalendar/index.cache.bz2
 share/doc/HTML/pt_BR/konsolekalendar/index.docbook
 share/doc/HTML/ru/konsolekalendar/index.cache.bz2
 share/doc/HTML/ru/konsolekalendar/index.docbook
+share/doc/HTML/sl/konsolekalendar/index.cache.bz2
+share/doc/HTML/sl/konsolekalendar/index.docbook
 share/doc/HTML/sv/konsolekalendar/index.cache.bz2
 share/doc/HTML/sv/konsolekalendar/index.docbook
 share/doc/HTML/uk/konsolekalendar/index.cache.bz2
@@ -33,6 +35,8 @@ share/icons/hicolor/32x32/apps/konsolekalendar.png
 share/icons/hicolor/48x48/apps/konsolekalendar.png
 share/locale/ar/LC_MESSAGES/calendarjanitor.mo
 share/locale/ar/LC_MESSAGES/konsolekalendar.mo
+share/locale/ast/LC_MESSAGES/calendarjanitor.mo
+share/locale/ast/LC_MESSAGES/konsolekalendar.mo
 share/locale/az/LC_MESSAGES/calendarjanitor.mo
 share/locale/az/LC_MESSAGES/konsolekalendar.mo
 share/locale/be/LC_MESSAGES/konsolekalendar.mo
@@ -56,6 +60,7 @@ share/locale/el/LC_MESSAGES/calendarjanitor.mo
 share/locale/el/LC_MESSAGES/konsolekalendar.mo
 share/locale/en_GB/LC_MESSAGES/calendarjanitor.mo
 share/locale/en_GB/LC_MESSAGES/konsolekalendar.mo
+share/locale/eo/LC_MESSAGES/calendarjanitor.mo
 share/locale/eo/LC_MESSAGES/konsolekalendar.mo
 share/locale/es/LC_MESSAGES/calendarjanitor.mo
 share/locale/es/LC_MESSAGES/konsolekalendar.mo
@@ -72,6 +77,7 @@ share/locale/fy/LC_MESSAGES/konsolekalendar.mo
 share/locale/ga/LC_MESSAGES/konsolekalendar.mo
 share/locale/gl/LC_MESSAGES/calendarjanitor.mo
 share/locale/gl/LC_MESSAGES/konsolekalendar.mo
+share/locale/he/LC_MESSAGES/calendarjanitor.mo
 share/locale/he/LC_MESSAGES/konsolekalendar.mo
 share/locale/hi/LC_MESSAGES/calendarjanitor.mo
 share/locale/hi/LC_MESSAGES/konsolekalendar.mo
@@ -83,6 +89,7 @@ share/locale/ia/LC_MESSAGES/calendarjanitor.mo
 share/locale/ia/LC_MESSAGES/konsolekalendar.mo
 share/locale/id/LC_MESSAGES/calendarjanitor.mo
 share/locale/id/LC_MESSAGES/konsolekalendar.mo
+share/locale/is/LC_MESSAGES/calendarjanitor.mo
 share/locale/is/LC_MESSAGES/konsolekalendar.mo
 share/locale/it/LC_MESSAGES/calendarjanitor.mo
 share/locale/it/LC_MESSAGES/konsolekalendar.mo
@@ -97,6 +104,8 @@ share/locale/ko/LC_MESSAGES/calendarjanitor.mo
 share/locale/ko/LC_MESSAGES/konsolekalendar.mo
 share/locale/lt/LC_MESSAGES/calendarjanitor.mo
 share/locale/lt/LC_MESSAGES/konsolekalendar.mo
+share/locale/lv/LC_MESSAGES/calendarjanitor.mo
+share/locale/lv/LC_MESSAGES/konsolekalendar.mo
 share/locale/mk/LC_MESSAGES/konsolekalendar.mo
 share/locale/mr/LC_MESSAGES/konsolekalendar.mo
 share/locale/ms/LC_MESSAGES/konsolekalendar.mo
@@ -118,6 +127,8 @@ share/locale/pt_BR/LC_MESSAGES/konsolekalendar.mo
 share/locale/ro/LC_MESSAGES/konsolekalendar.mo
 share/locale/ru/LC_MESSAGES/calendarjanitor.mo
 share/locale/ru/LC_MESSAGES/konsolekalendar.mo
+share/locale/sa/LC_MESSAGES/calendarjanitor.mo
+share/locale/sa/LC_MESSAGES/konsolekalendar.mo
 share/locale/se/LC_MESSAGES/konsolekalendar.mo
 share/locale/sk/LC_MESSAGES/calendarjanitor.mo
 share/locale/sk/LC_MESSAGES/konsolekalendar.mo
@@ -126,6 +137,7 @@ share/locale/sl/LC_MESSAGES/konsolekalendar.mo
 share/locale/sq/LC_MESSAGES/konsolekalendar.mo
 share/locale/sv/LC_MESSAGES/calendarjanitor.mo
 share/locale/sv/LC_MESSAGES/konsolekalendar.mo
+share/locale/ta/LC_MESSAGES/calendarjanitor.mo
 share/locale/ta/LC_MESSAGES/konsolekalendar.mo
 share/locale/tg/LC_MESSAGES/konsolekalendar.mo
 share/locale/tr/LC_MESSAGES/calendarjanitor.mo
@@ -140,5 +152,5 @@ share/locale/zh_CN/LC_MESSAGES/calendarjanitor.mo
 share/locale/zh_CN/LC_MESSAGES/konsolekalendar.mo
 share/locale/zh_TW/LC_MESSAGES/calendarjanitor.mo
 share/locale/zh_TW/LC_MESSAGES/konsolekalendar.mo
-share/qlogging-categories5/console.categories
-share/qlogging-categories5/console.renamecategories
+share/qlogging-categories6/console.categories
+share/qlogging-categories6/console.renamecategories
