@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2025/10/23 20:38:51 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/12/21 15:12:21 markd Exp $
 
 DISTNAME=	messagelib-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	net
 
 HOMEPAGE=	https://kontact.kde.org/
@@ -14,7 +13,6 @@ USE_TOOLS+=	msgmerge
 
 .include "../../mk/bsd.prefs.mk"
 
-.include "../../devel/boost-headers/buildlink3.mk"
 .if ${OPSYS} != "Linux" && ${OPSYS} != "SunOS"
 .include "../../devel/libinotify/buildlink3.mk"
 .endif
@@ -22,7 +20,8 @@ USE_TOOLS+=	msgmerge
 .include "../../mail/kmbox/buildlink3.mk"
 .include "../../misc/kidentitymanagement/buildlink3.mk"
 .include "../../misc/libgravatar/buildlink3.mk"
-.include "../../security/qca2-qt5/buildlink3.mk"
-.include "../../x11/qt5-qtwebengine/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../misc/pimcommon/buildlink3.mk"
+.include "../../security/libkleo/buildlink3.mk"
+.include "../../www/qt6-qtwebengine/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

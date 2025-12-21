@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/02/06 11:17:40 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/12/21 15:12:21 markd Exp $
 
-BLAKE2s (messagelib-23.08.4.tar.xz) = b745c143c483875c8781557d2391333b2a064732a84e7ea3f9eda321488906a9
-SHA512 (messagelib-23.08.4.tar.xz) = 99bb35e6a33b9d1b0ff554d75e88b20f6ba8f4b3618f1ea0181febc5c604313a9ca6cc975b965b9100e4afee7b0507011dd88a161d351e0f259377ebe4f6df91
-Size (messagelib-23.08.4.tar.xz) = 11332580 bytes
+BLAKE2s (messagelib-25.08.3.tar.xz) = 7b066b3a05f84e561c521a49019b159231239045a6137d91215b124b0d2116db
+SHA512 (messagelib-25.08.3.tar.xz) = f96f14e413d3192be0780016063c4da44e5750791df0da349eb275417b2820bf75e4fcc1af11180f8df5e713adac5d3564e00ac9ffb74a3785bc94772563f22e
+Size (messagelib-25.08.3.tar.xz) = 7445392 bytes
