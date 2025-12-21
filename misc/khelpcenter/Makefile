@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2025/10/23 20:38:23 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2025/12/21 14:10:07 markd Exp $
 
 DISTNAME=	khelpcenter-${KAPPSVER}
-PKGREVISION=	10
 CATEGORIES=	misc
 
 HOMEPAGE=	https://userbase.kde.org/KHelpCenter
@@ -10,18 +9,19 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
-DEPENDS+=	kinit>=5.21.0:../../x11/kinit
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
-USE_TOOLS+=	msgmerge pkg-config perl:run
+USE_TOOLS+=	msgmerge pkg-config
 
-REPLACE_PERL+=	searchhandlers/khc_mansearch.pl
+REPLACE_PYTHON+=	searchhandlers/khc_mansearch.py
 
-.include "../../devel/grantlee-qt5/buildlink3.mk"
-.include "../../devel/kdoctools/buildlink3.mk"
-.include "../../devel/kio/buildlink3.mk"
+.include "../../devel/kf6-kdoctools/buildlink3.mk"
+.include "../../devel/kf6-kio/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/kf6-ktexttemplate/buildlink3.mk"
 .include "../../textproc/xapian/buildlink3.mk"
-.include "../../www/khtml/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../wip/qt6-qtwebengine/buildlink3.mk"
+.include "../../x11/kf6-kxmlgui/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
