@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7282 2025/12/21 17:13:39 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7283 2025/12/21 17:15:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10542,3 +10542,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-ruamel-yaml to 0.18.17 [wiz 2025-12-21]
 	Updated devel/py-cachetools to 6.2.4 [wiz 2025-12-21]
 	Updated security/py-google-auth-httplib2 to 0.3.0 [wiz 2025-12-21]
+	Updated security/py-google-auth to 2.45.0 [wiz 2025-12-21]
