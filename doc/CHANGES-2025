@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7324 2025/12/22 13:59:40 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7325 2025/12/22 14:01:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10793,3 +10793,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/mpg123 to 1.33.4 [adam 2025-12-22]
 	Updated x11/xterm to 406 [pin 2025-12-22]
 	Updated net/yaydl to 0.18.3 [pin 2025-12-22]
+	Updated x11/py-sip-qt5 to 12.17.2 [adam 2025-12-22]
+	Updated x11/py-sip-qt6 to 13.10.3 [adam 2025-12-22]
