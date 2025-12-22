@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2025/10/20 07:55:52 adam Exp $
+# $NetBSD: Makefile,v 1.38 2025/12/22 14:18:57 adam Exp $
 
-DISTNAME=	humanize-4.14.0
+DISTNAME=	humanize-4.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/humanize/}
