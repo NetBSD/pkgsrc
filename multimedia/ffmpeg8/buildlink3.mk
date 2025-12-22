@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/08/22 16:42:06 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/12/22 06:08:11 adam Exp $
 
 BUILDLINK_TREE+=	ffmpeg8
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ffmpeg8
 FFMPEG8_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ffmpeg8+=	ffmpeg8>=8.0
+BUILDLINK_ABI_DEPENDS.ffmpeg8?=	ffmpeg8>=8.0.1nb1
 BUILDLINK_PKGSRCDIR.ffmpeg8?=	../../multimedia/ffmpeg8
 
 pkgbase := ffmpeg8

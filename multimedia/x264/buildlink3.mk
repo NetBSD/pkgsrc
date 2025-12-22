@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2022/09/26 17:00:21 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/12/22 06:08:03 adam Exp $
 
 BUILDLINK_TREE+=	x264
 
@@ -10,7 +10,7 @@ X264_BUILDLINK3_MK:=
 #	dependency specification.  Perhaps we should incorporate this
 #	into the version number and/or pkg-config file?
 BUILDLINK_API_DEPENDS.x264+=	x264>=20220601 # X264_BUILD 164
-BUILDLINK_ABI_DEPENDS.x264+=	x264>=20220601
+BUILDLINK_ABI_DEPENDS.x264+=	x264>=20250608
 BUILDLINK_PKGSRCDIR.x264?=	../../multimedia/x264
 pkgbase:= x264
 .include "../../mk/pkg-build-options.mk"
