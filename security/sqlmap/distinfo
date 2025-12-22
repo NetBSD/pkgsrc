@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2025/11/10 13:25:26 adam Exp $
+$NetBSD: distinfo,v 1.26 2025/12/22 10:02:25 adam Exp $
 
-BLAKE2s (sqlmap-1.9.11.tar.gz) = e4ee25b318c4b264483f349ee31acf2cdf9300cf992cca1a7b45a9bce0a65f55
-SHA512 (sqlmap-1.9.11.tar.gz) = b23b2c3d0b727c0d213700deebaf934bf6504571492982167459539c5071b8569825247283a60683c5ca737a4ade73827da5b32a2e39caa398cc1e2438c85f30
-Size (sqlmap-1.9.11.tar.gz) = 7215898 bytes
+BLAKE2s (sqlmap-1.9.12.tar.gz) = 7a850764de85bd94f787916f180d1bc180b645d84b4544d7c177e703dc593f61
+SHA512 (sqlmap-1.9.12.tar.gz) = 8a28906b7b8a7cd7a20871082a644987960115c54a0061c82c6fd99f4d5c96ed82f18dfd104d1a9e8b2f8bc216d9546ae5becbae0e7b783ad1b9ab03c2b7f552
+Size (sqlmap-1.9.12.tar.gz) = 7216017 bytes
