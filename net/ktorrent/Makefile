@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2025/12/21 15:08:26 markd Exp $
+# $NetBSD: Makefile,v 1.142 2025/12/22 22:47:12 wiz Exp $
 
 DISTNAME=	ktorrent-${KAPPSVER}
 CATEGORIES=	net
@@ -29,6 +29,6 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_LibKWorkspace=TRUE
 .include "../../net/libktorrent/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../www/kf6-syndication/buildlink3.mk"
-.include "../../wip/qt6-qtwebengine/buildlink3.mk"
+.include "../../www/qt6-qtwebengine/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
