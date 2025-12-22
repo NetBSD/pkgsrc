@@ -1,15 +1,15 @@
-$NetBSD: patch-alc_alconfig.cpp,v 1.4 2025/01/30 11:08:40 adam Exp $
+$NetBSD: patch-alc_alconfig.cpp,v 1.5 2025/12/22 15:17:58 ryoon Exp $
 
 Allow the Makefile to specify the default config file path.
 
---- alc/alconfig.cpp.orig	2025-01-11 07:17:23.000000000 +0000
+--- alc/alconfig.cpp.orig	2025-12-22 09:17:45.000000000 +0000
 +++ alc/alconfig.cpp
-@@ -381,7 +381,7 @@ void ReadALConfig()
+@@ -426,7 +426,7 @@ void ReadALConfig()
  
  void ReadALConfig()
  {
--    fs::path path{"/etc/openal/alsoft.conf"};
-+    fs::path path{SYS_CONF_DIR "/alsoft.conf"};
+-    auto path = fs::path{"/etc/openal/alsoft.conf"};
++    auto path = fs::path{SYS_CONF_DIR "/alsoft.conf"};
  
      TRACE("Loading config {}...", al::u8_as_char(path.u8string()));
-     if(fs::ifstream f{path}; f.is_open())
+     if(auto f = fs::ifstream{path}; f.is_open())
