@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.28 2025/04/13 06:51:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2025/12/22 11:20:26 wiz Exp $
 bin/thg
+${PYSITELIB}/hgext3rd/thg.py
+${PYSITELIB}/hgext3rd/thg.pyc
+${PYSITELIB}/hgext3rd/thg.pyo
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/hgext3rd/thg.py
-${PYSITELIB}/hgext3rd/thg.pyc
-${PYSITELIB}/hgext3rd/thg.pyo
 ${PYSITELIB}/tortoisehg/__init__.py
 ${PYSITELIB}/tortoisehg/__init__.pyc
 ${PYSITELIB}/tortoisehg/__init__.pyo
@@ -474,10 +474,12 @@ share/doc/tortoisehg/html/_sources/sync.txt
 share/doc/tortoisehg/html/_sources/whatsnew.txt
 share/doc/tortoisehg/html/_sources/workbench.txt
 share/doc/tortoisehg/html/_static/alabaster.css
+share/doc/tortoisehg/html/_static/base-stemmer.js
 share/doc/tortoisehg/html/_static/basic.css
 share/doc/tortoisehg/html/_static/custom.css
 share/doc/tortoisehg/html/_static/doctools.js
 share/doc/tortoisehg/html/_static/documentation_options.js
+share/doc/tortoisehg/html/_static/english-stemmer.js
 share/doc/tortoisehg/html/_static/file.png
 share/doc/tortoisehg/html/_static/github-banner.svg
 share/doc/tortoisehg/html/_static/language_data.js
