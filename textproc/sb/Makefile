@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2025/08/26 13:22:46 pin Exp $
+# $NetBSD: Makefile,v 1.3 2025/12/22 06:08:16 adam Exp $
 
 DISTNAME=	sb-0.3.12
+PKGREVISION=	1
 CATEGORIES=	textproc
 #MASTER_SITES=	${MASTER_SITE_GITHUB:=dirvine/}
 MASTER_SITES=	https://static.crates.io/crates/sb/
