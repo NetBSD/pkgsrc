@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7323 2025/12/22 13:58:43 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7324 2025/12/22 13:59:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10792,3 +10792,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/swig4 to 4.4.1 [adam 2025-12-22]
 	Updated audio/mpg123 to 1.33.4 [adam 2025-12-22]
 	Updated x11/xterm to 406 [pin 2025-12-22]
+	Updated net/yaydl to 0.18.3 [pin 2025-12-22]
