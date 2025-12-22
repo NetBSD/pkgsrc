@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2025/12/03 09:20:31 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2025/12/22 21:02:54 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -58,7 +58,7 @@ CARGO_CRATE_DEPENDS+=	lazy_static-1.5.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.177
 CARGO_CRATE_DEPENDS+=	libredox-0.1.10
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.11.0
-CARGO_CRATE_DEPENDS+=	log-0.4.28
+CARGO_CRATE_DEPENDS+=	log-0.4.29
 CARGO_CRATE_DEPENDS+=	malloc_buf-0.0.6
 CARGO_CRATE_DEPENDS+=	memchr-2.7.6
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.8.9

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2025/12/03 09:20:31 pin Exp $
+# $NetBSD: Makefile,v 1.41 2025/12/22 21:02:54 pin Exp $
 
-DISTNAME=	t-rec-rs-0.8.1
-PKGNAME=	t-rec-0.8.1
+DISTNAME=	t-rec-rs-0.8.2
+PKGNAME=	t-rec-0.8.2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sassman/}
 GITHUB_PROJECT=	t-rec-rs
@@ -16,9 +16,9 @@ TOOL_DEPENDS+=	glib2-[0-9]*:../../devel/glib2
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.91.1
+#RUST_REQ=	1.92.0
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.91.1 on amd64
+#This package is confirmed to build with Rust 1.92.0 on amd64
 
 # This package has an optional dependency on ffmpeg7.
 # If you would like to save recordings as mp4 files instead of gif,
