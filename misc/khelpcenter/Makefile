@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2025/12/21 14:10:07 markd Exp $
+# $NetBSD: Makefile,v 1.54 2025/12/22 22:47:12 wiz Exp $
 
 DISTNAME=	khelpcenter-${KAPPSVER}
 CATEGORIES=	misc
@@ -21,7 +21,7 @@ REPLACE_PYTHON+=	searchhandlers/khc_mansearch.py
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/kf6-ktexttemplate/buildlink3.mk"
 .include "../../textproc/xapian/buildlink3.mk"
-.include "../../wip/qt6-qtwebengine/buildlink3.mk"
+.include "../../www/qt6-qtwebengine/buildlink3.mk"
 .include "../../x11/kf6-kxmlgui/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

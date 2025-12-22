@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2025/12/21 14:40:30 markd Exp $
+# $NetBSD: Makefile,v 1.80 2025/12/22 22:47:12 wiz Exp $
 
 DISTNAME=	parley-${KAPPSVER}
 CATEGORIES=	misc
@@ -21,5 +21,5 @@ USE_TOOLS+=	msgmerge pkg-config
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
-.include "../../wip/qt6-qtwebengine/buildlink3.mk"
+.include "../../www/qt6-qtwebengine/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

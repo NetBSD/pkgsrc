@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/12/21 14:20:46 markd Exp $
+# $NetBSD: Makefile,v 1.19 2025/12/22 22:47:12 wiz Exp $
 
 DISTNAME=	kontact-${KAPPSVER}
 CATEGORIES=	misc
@@ -18,6 +18,6 @@ USE_TOOLS+=	msgmerge
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../misc/kontactinterface/buildlink3.mk"
 .include "../../misc/pimcommon/buildlink3.mk"
-.include "../../wip/qt6-qtwebengine/buildlink3.mk"
+.include "../../www/qt6-qtwebengine/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

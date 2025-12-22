@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.171 2025/12/22 06:08:16 adam Exp $
+# $NetBSD: Makefile,v 1.172 2025/12/22 22:47:12 wiz Exp $
 
 DISTNAME=	k3b-${KAPPSVER}
 PKGREVISION=	1
@@ -59,6 +59,6 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 .include "../../multimedia/libkcddb/buildlink3.mk"
 .include "../../sysutils/kf6-kfilemetadata/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../wip/qt6-qtwebengine/buildlink3.mk"
+.include "../../www/qt6-qtwebengine/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
