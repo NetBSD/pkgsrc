@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1104 2025/12/22 10:13:47 adam Exp $
+# $NetBSD: Makefile,v 1.1105 2025/12/22 10:27:46 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -497,7 +497,6 @@ SUBDIR+=	py-cycler
 SUBDIR+=	py-dot
 SUBDIR+=	py-exifread
 SUBDIR+=	py-gdchart
-SUBDIR+=	py-gdmodule
 SUBDIR+=	py-ggplot
 SUBDIR+=	py-glad2
 SUBDIR+=	py-graphviz
