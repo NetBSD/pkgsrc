@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2025/10/23 20:38:38 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/12/22 06:08:13 adam Exp $
 
 DISTNAME=		MP4Tools-3.8
 PKGNAME=		${DISTNAME:tl}
-PKGREVISION=		19
+PKGREVISION=		20
 CATEGORIES=		multimedia x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mp4joiner/}
 EXTRACT_SUFX=		.tar.bz2
