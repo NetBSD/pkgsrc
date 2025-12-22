@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.560 2025/09/29 14:06:04 nia Exp $
+# $NetBSD: Makefile,v 1.561 2025/12/22 11:29:48 wiz Exp $
 #
 
 COMMENT=	Games
@@ -170,7 +170,6 @@ SUBDIR+=	gbrainy
 SUBDIR+=	gcompris-qt
 SUBDIR+=	gemdropx
 SUBDIR+=	gemrb
-SUBDIR+=	ggz-client-libs
 SUBDIR+=	glaxium
 SUBDIR+=	glickomania
 SUBDIR+=	gltron
@@ -258,7 +257,6 @@ SUBDIR+=	level9
 SUBDIR+=	lgeneral
 SUBDIR+=	lgeneral-data
 SUBDIR+=	lgogdownloader
-SUBDIR+=	libggz
 SUBDIR+=	libgnome-games-support
 SUBDIR+=	libgnome-games-support1
 SUBDIR+=	libkdegames
