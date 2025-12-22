@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7313 2025/12/22 09:42:23 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7314 2025/12/22 10:09:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10766,3 +10766,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-tornado to 6.5.4 [adam 2025-12-22]
 	Updated textproc/csvlens to 0.15.0 [pin 2025-12-22]
 	Updated sysutils/onefetch to 2.26.1 [pin 2025-12-22]
+	Updated security/sqlmap to 1.9.12 [adam 2025-12-22]
+	Updated graphics/py-tifffile to 2025.12.20 [adam 2025-12-22]
+	Updated time/py-time-machine to 3.2.0 [adam 2025-12-22]
+	Updated print/py-pikepdf to 10.0.3 [adam 2025-12-22]
