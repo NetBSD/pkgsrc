@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7329 2025/12/22 14:45:14 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7330 2025/12/22 15:18:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10803,3 +10803,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/gflags to 2.3.0 [adam 2025-12-22]
 	Updated graphics/vulkan-headers to 1.4.335 [adam 2025-12-22]
 	Updated devel/py-types-setuptools to 80.9.0.20251221 [adam 2025-12-22]
+	Updated audio/openal-soft to 1.25.0 [ryoon 2025-12-22]
