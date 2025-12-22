@@ -1,9 +1,9 @@
-$NetBSD: patch-Makefile,v 1.3 2021/02/17 14:20:35 wiz Exp $
+$NetBSD: patch-Makefile,v 1.4 2025/12/22 14:26:32 adam Exp $
 
 On Darwin, do not put GLU as required lib in glew.pc.
 Use LDFLAGS for linking.
 
---- Makefile.orig	2020-03-15 11:53:59.000000000 +0000
+--- Makefile.orig	2025-12-21 21:50:38.000000000 +0000
 +++ Makefile
 @@ -48,8 +48,10 @@ INCDIR    ?= $(GLEW_DEST)/include/GL
  PKGDIR    ?= $(GLEW_DEST)/lib/pkgconfig
@@ -25,10 +25,10 @@ Use LDFLAGS for linking.
  ifneq ($(LN),)
  	$(LN) $(LIB.SHARED) $(LIB.SHARED.DIR)/$(LIB.SONAME)
  	$(LN) $(LIB.SHARED) $(LIB.SHARED.DIR)/$(LIB.DEVLNK)
-@@ -180,13 +182,13 @@ bin:
- 	mkdir bin
+@@ -178,14 +180,14 @@ endif
  
  bin/$(GLEWINFO.BIN): $(GLEWINFO.BIN.OBJ) $(LIB.SHARED.DIR)/$(LIB.SHARED)
+ 	@mkdir -p $(dir $@)
 -	$(CC) $(CFLAGS) -o $@ $(GLEWINFO.BIN.OBJ) $(BIN.LIBS)
 +	$(CC) $(LDFLAGS) -o $@ $(GLEWINFO.BIN.OBJ) $(BIN.LIBS)
  ifneq ($(STRIP),)
@@ -36,6 +36,7 @@ Use LDFLAGS for linking.
  endif
  
  bin/$(VISUALINFO.BIN): $(VISUALINFO.BIN.OBJ) $(LIB.SHARED.DIR)/$(LIB.SHARED)
+ 	@mkdir -p $(dir $@)
 -	$(CC) $(CFLAGS) -o $@ $(VISUALINFO.BIN.OBJ) $(BIN.LIBS)
 +	$(CC) $(LDFLAGS) -o $@ $(VISUALINFO.BIN.OBJ) $(BIN.LIBS)
  ifneq ($(STRIP),)
