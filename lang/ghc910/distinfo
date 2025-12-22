@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2025/08/13 10:56:52 pho Exp $
+$NetBSD: distinfo,v 1.11 2025/12/22 11:12:21 wiz Exp $
 
 BLAKE2s (ghc-9.10.1-src.tar.xz) = 7e4433ead6349bd073d31803b63e6c39fb3833ad691e985e25bc5b027da7fb85
 SHA512 (ghc-9.10.1-src.tar.xz) = 46d47e7811a19dcce501002ab674d84ab2fcb842309b5094af52dc5ad26bf5b309b160c1b689f3342666013bf4b0587425c60fbd6c637e739839d41a6a96d990
@@ -27,6 +27,9 @@ Size (ghc-9.8.2-boot-x86_64-unknown-netbsd.tar.xz) = 78498024 bytes
 BLAKE2s (ghc-9.8.2-boot-x86_64-unknown-solaris2.tar.xz) = fb717a4654824bdbdfb91b90d2c874c75984707b4c058b76f9dcbffb5c89160c
 SHA512 (ghc-9.8.2-boot-x86_64-unknown-solaris2.tar.xz) = 82ea973cf4917378cb27315cd0ece4ec3a4c3b4169e51902d13b118d19e4d188fbf86e522083199be26185694c06bdb8d1a719536b951ed8020baeb62b59eedf
 Size (ghc-9.8.2-boot-x86_64-unknown-solaris2.tar.xz) = 123328852 bytes
+BLAKE2s (sphinx_rtd_theme-3.0.2.tar.gz) = a14145174dba2b2b32fa23050862895724670339072dc7660fac42718f4d8257
+SHA512 (sphinx_rtd_theme-3.0.2.tar.gz) = 280a2d80ce00df84cf2484e07da95040b62bd2d6dfc8d90222af1f86842a7a3921fb8f7e0677d03677a1376e879ef6ae43daef4c90076b266001a0f4c25b4848
+Size (sphinx_rtd_theme-3.0.2.tar.gz) = 7620463 bytes
 SHA1 (patch-compiler_GHC_SysTools_Process.hs) = 0448318ec3426bb070176c2e36f82af239aa58fa
 SHA1 (patch-compiler_ghc.cabal.in) = 70e9385d85f5538da944901457be383991ce586b
 SHA1 (patch-configure.ac) = 985482ae70830ddbf1334c9c82a2cec78a34bb4c
