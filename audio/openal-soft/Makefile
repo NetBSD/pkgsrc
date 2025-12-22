@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2025/10/23 20:35:51 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2025/12/22 15:17:58 ryoon Exp $
 
-DISTNAME=	openal-soft-1.24.3
-PKGREVISION=	1
+DISTNAME=	openal-soft-1.25.0
 CATEGORIES=	audio
 MASTER_SITES=	https://openal-soft.org/openal-releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +10,7 @@ HOMEPAGE=	https://openal-soft.org/
 COMMENT=	Software implementation of the OpenAL 3D audio API
 LICENSE=	gnu-lgpl-v2
 
-USE_CXX_FEATURES+=	c++17
+USE_CXX_FEATURES+=	c++20
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
 
