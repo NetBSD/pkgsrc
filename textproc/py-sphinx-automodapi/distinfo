@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/08/13 05:38:49 adam Exp $
+$NetBSD: distinfo,v 1.8 2025/12/22 08:46:07 adam Exp $
 
-BLAKE2s (sphinx_automodapi-0.20.0.tar.gz) = 342402ab0d37ba843fbbb9f7fe7634aa4c23edfeb4f80a325005626d546282fd
-SHA512 (sphinx_automodapi-0.20.0.tar.gz) = 499f0bdd52a9406be706e4f968269727be730a95c12fee8115a7332587cf095d3f94da3d6773966c08b72777e284a3a794c15ee3269f8e020323b7d8341a6f01
-Size (sphinx_automodapi-0.20.0.tar.gz) = 56675 bytes
+BLAKE2s (sphinx_automodapi-0.22.0.tar.gz) = f34050ecdaf3087573a702981c11785d44350e5685db9c1093db282af260b385
+SHA512 (sphinx_automodapi-0.22.0.tar.gz) = 3d7df0f316e78aaf617251af095e22e44cbf5e13a91330f76ce43a74c9f520c61296067d03506e37095f1d16222c148e53782e1a78a673e9a49a9125bc874ed4
+Size (sphinx_automodapi-0.22.0.tar.gz) = 56683 bytes
