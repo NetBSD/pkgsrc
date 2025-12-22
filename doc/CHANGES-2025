@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7305 2025/12/21 22:52:14 markd Exp $
+$NetBSD: CHANGES-2025,v 1.7306 2025/12/22 02:39:59 fox Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10753,3 +10753,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed devel/cervisia [markd 2025-12-21]
 	Removed net/kopete [markd 2025-12-21]
 	Removed misc/knotes [markd 2025-12-21]
+	Updated audio/fasttracker2 to 2.03 [fox 2025-12-22]
