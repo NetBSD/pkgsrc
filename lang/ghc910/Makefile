@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2025/08/13 10:56:52 pho Exp $
+# $NetBSD: Makefile,v 1.6 2025/12/22 11:12:21 wiz Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
 DISTNAME=	ghc-9.10.1-src
 PKGNAME=	${DISTNAME:S/-src$//}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	https://downloads.haskell.org/~ghc/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -35,17 +35,17 @@ PKGSRC_OVERRIDE_MKPIE=	yes
 # -----------------------------------------------------------------------------
 # Distfiles
 #
-DISTFILES=	${DEFAULT_DISTFILES}
+DISTFILES=	${DEFAULT_DISTFILES} sphinx_rtd_theme-3.0.2.tar.gz
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 # We don't want to extract all of the DISTFILEs.
-EXTRACT_ONLY=	${DEFAULT_DISTFILES}
+EXTRACT_ONLY=	${DEFAULT_DISTFILES} sphinx_rtd_theme-3.0.2.tar.gz
 
 
 # -----------------------------------------------------------------------------
 # Tools
 #
-USE_TOOLS+=			autoconf gmake
+USE_TOOLS+=			autoconf gmake pax
 USE_LANGUAGES+=			c c++
 GNU_CONFIGURE=			yes
 USE_GNU_CONFIGURE_HOST=		no
@@ -176,6 +176,7 @@ post-patch:
 	${RUN}cd ${WRKSRC} && autoreconf
 	${RUN}cd ${WRKSRC}/libraries/ghc-internal && autoreconf
 	${RUN}cd ${WRKSRC}/libraries/terminfo && autoreconf
+	${RUN}cd ${WRKDIR}/sphinx_rtd_theme-3.0.2/sphinx_rtd_theme && pax -pp -rw * ${WRKSRC}/docs/users_guide/rtd-theme
 
 # Define the target "pre-configure", "pre-build", and non-standard
 # "bootstrap".
