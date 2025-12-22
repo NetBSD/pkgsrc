@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/05/19 11:24:13 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/12/22 11:31:40 wiz Exp $
 
 DISTNAME=		create_spritesheet
 PKGNAME=		gimp-create-spritesheet-0.0.2019.11.27
@@ -9,7 +9,7 @@ DIST_SUBDIR=		${PKGNAME_NOREV}
 EXTRACT_SUFX=		.py
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://karnbianco.co.uk/blog/2018/04/10/tutorial-animated-spritesheets-with-gimp-and-unity/
+#HOMEPAGE=		https://karnbianco.co.uk/blog/2018/04/10/tutorial-animated-spritesheets-with-gimp-and-unity/
 COMMENT=		Spritesheet creation plugin for gimp
 LICENSE=		public-domain
 
