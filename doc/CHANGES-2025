@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7311 2025/12/22 09:06:11 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7312 2025/12/22 09:40:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10764,3 +10764,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-sphinx-automodapi to 0.22.0 [adam 2025-12-22]
 	Updated databases/py-tortoise-orm to 0.25.2 [adam 2025-12-22]
 	Updated www/py-tornado to 6.5.4 [adam 2025-12-22]
+	Updated textproc/csvlens to 0.15.0 [pin 2025-12-22]
