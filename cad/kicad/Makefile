@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.115 2025/10/23 20:35:58 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2025/12/22 15:33:09 adam Exp $
 
-V=		8.0.6
+V=		8.0.9
 DISTNAME=	kicad-${V}
-PKGREVISION=	10
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITLAB:=kicad/code/}
 GITLAB_PROJECT=	kicad
@@ -17,9 +16,9 @@ LICENSE=	gnu-gpl-v3
 TOOL_DEPENDS+=	swig4-[0-9]*:../../devel/swig4
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
+USE_CXX_FEATURES=	charconv filesystem c++17
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES+=	charconv filesystem c++17
 USE_TOOLS+=		pkg-config msgfmt msgmerge xgettext
 
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
@@ -36,6 +35,8 @@ CMAKE_CONFIGURE_ARGS+=		-DKICAD_USE_EGL=OFF
 
 PY_PATCHPLIST=		yes
 
+PYTHON_VERSIONS_INCOMPATIBLE=	314 # Fails to find Python libs
+
 # The package tries to build a native .app bundle. This doesn't work
 # in pkgsrc context because they don't support DESTDIR installation,
 # which is a requirement in pkgsrc. It also tries to use native Python
@@ -46,8 +47,6 @@ NOT_FOR_PLATFORM+=	Darwin-*-*
 
 .include "options.mk"
 
-# needs 64-bit CAS for std::atomic<size_t>
-.include "../../mk/atomic64.mk"
 .include "../../cad/occt/buildlink3.mk"
 .include "../../databases/unixodbc/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
@@ -56,15 +55,17 @@ NOT_FOR_PLATFORM+=	Darwin-*-*
 .include "../../devel/libgit2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glm+=	glm>=0.9.9.8
 .include "../../graphics/glm/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../security/libsecret/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/wxGTK32/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+# needs 64-bit CAS for std::atomic<size_t>
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
