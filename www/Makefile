@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1893 2025/12/21 09:38:11 markd Exp $
+# $NetBSD: Makefile,v 1.1894 2025/12/22 10:19:57 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -905,7 +905,6 @@ SUBDIR+=	py-pysaml2
 SUBDIR+=	py-pystache
 SUBDIR+=	py-python-mimeparse
 SUBDIR+=	py-python-multipart
-SUBDIR+=	py-python3-digest
 SUBDIR+=	py-quart
 SUBDIR+=	py-quart-trio
 SUBDIR+=	py-rcssmin
