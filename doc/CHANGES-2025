@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7332 2025/12/22 21:02:08 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7333 2025/12/22 21:03:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10806,3 +10806,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/openal-soft to 1.25.0 [ryoon 2025-12-22]
 	Updated cad/kicad to 8.0.9 [adam 2025-12-22]
 	Updated games/chess-tui to 2.2.0 [pin 2025-12-22]
+	Updated multimedia/t-rec to 0.8.2 [pin 2025-12-22]
