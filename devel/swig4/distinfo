@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/10/22 12:44:17 adam Exp $
+$NetBSD: distinfo,v 1.4 2025/12/22 13:53:53 adam Exp $
 
-BLAKE2s (swig-4.4.0.tar.gz) = 369854c16691ad6783d23fe28fbeca26696ec939f5bcc8877868846966de747c
-SHA512 (swig-4.4.0.tar.gz) = 0cd4625166240f73075c22e140336b8e39f0f98d4343caba472b8eb3fa64561152e6978d5735d883cf62af10b84a9f0e20b3bb40288341a82c68a4cb79e46f5f
-Size (swig-4.4.0.tar.gz) = 8658008 bytes
+BLAKE2s (swig-4.4.1.tar.gz) = 202ac99e6accf64286b3b8a76bc2c52a591df779c1b3c94263a23ddeac52bafc
+SHA512 (swig-4.4.1.tar.gz) = 103ddb4a5914f28e6739a006d35042c701e55ba05066acff3f3609befb5f43f253ea717fc41d06c93d8fb187ded4399c12c94665b93dc06d0fb835069391c7c7
+Size (swig-4.4.1.tar.gz) = 8658358 bytes
