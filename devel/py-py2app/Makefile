@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2025/04/12 20:03:45 adam Exp $
+# $NetBSD: Makefile,v 1.20 2025/12/22 06:21:17 adam Exp $
 
-DISTNAME=	py2app-0.28.8
+DISTNAME=	py2app-0.28.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/py2app/}
 
@@ -14,9 +13,10 @@ LICENSE=	mit
 ONLY_FOR_PLATFORM=	Darwin-*-*
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-altgraph>=0.17.3:../../graphics/py-altgraph
-DEPENDS+=	${PYPKGPREFIX}-modulegraph>=0.19.6:../../devel/py-modulegraph
-DEPENDS+=	${PYPKGPREFIX}-macholib>=1.16.2:../../devel/py-macholib
+DEPENDS+=	${PYPKGPREFIX}-altgraph>=0.17.5:../../graphics/py-altgraph
+DEPENDS+=	${PYPKGPREFIX}-modulegraph>=0.19.7:../../devel/py-modulegraph
+DEPENDS+=	${PYPKGPREFIX}-macholib>=1.16.4:../../devel/py-macholib
+DEPENDS+=	${PYPKGPREFIX}-packaging>0:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-pyobjc-core-[0-9]*:../../devel/py-pyobjc-core
 
 post-install:
