@@ -1,5 +1,0 @@
-This is a library for generating Excel 97/2000/XP/2003 and
-OpenOffice Calc compatible  spreadsheets. pyExcelerator has
-full-blown support for UNICODE in Excel and Calc spreadsheets,
-allows using variety of formatting features, provides interface
-to printing options of Excel and OpenOffice Calc.
