@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4555 2025/12/22 10:18:30 adam Exp $
+# $NetBSD: Makefile,v 1.4556 2025/12/22 23:42:19 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -480,7 +480,6 @@ SUBDIR+=	gmake
 SUBDIR+=	gmp
 SUBDIR+=	gmtk
 SUBDIR+=	gnatcoverage
-SUBDIR+=	gnatpython
 SUBDIR+=	gng
 SUBDIR+=	gnome-common
 SUBDIR+=	gnustep-base
