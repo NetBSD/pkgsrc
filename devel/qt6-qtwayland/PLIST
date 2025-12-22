@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/11/11 12:34:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/12/22 08:06:15 wiz Exp $
 lib/pkgconfig/Qt6WaylandCompositor.pc
 lib/pkgconfig/Qt6WaylandCompositorIviapplication.pc
 lib/pkgconfig/Qt6WaylandCompositorPresentationTime.pc
@@ -337,6 +337,12 @@ qt6/lib/cmake/Qt6WaylandCompositor/Qt6ShmServerBufferIntegrationPluginConfigVers
 qt6/lib/cmake/Qt6WaylandCompositor/Qt6ShmServerBufferIntegrationPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6WaylandCompositor/Qt6ShmServerBufferIntegrationPluginTargets-release.cmake
 qt6/lib/cmake/Qt6WaylandCompositor/Qt6ShmServerBufferIntegrationPluginTargets.cmake
+${PLIST.vulkan}qt6/lib/cmake/Qt6WaylandCompositor/Qt6VulkanServerBufferIntegrationPluginAdditionalTargetInfo.cmake
+${PLIST.vulkan}qt6/lib/cmake/Qt6WaylandCompositor/Qt6VulkanServerBufferIntegrationPluginConfig.cmake
+${PLIST.vulkan}qt6/lib/cmake/Qt6WaylandCompositor/Qt6VulkanServerBufferIntegrationPluginConfigVersion.cmake
+${PLIST.vulkan}qt6/lib/cmake/Qt6WaylandCompositor/Qt6VulkanServerBufferIntegrationPluginConfigVersionImpl.cmake
+${PLIST.vulkan}qt6/lib/cmake/Qt6WaylandCompositor/Qt6VulkanServerBufferIntegrationPluginTargets-release.cmake
+${PLIST.vulkan}qt6/lib/cmake/Qt6WaylandCompositor/Qt6VulkanServerBufferIntegrationPluginTargets.cmake
 qt6/lib/cmake/Qt6WaylandCompositor/Qt6WaylandCompositorAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6WaylandCompositor/Qt6WaylandCompositorConfig.cmake
 qt6/lib/cmake/Qt6WaylandCompositor/Qt6WaylandCompositorConfigVersion.cmake
@@ -490,6 +496,7 @@ qt6/plugins/wayland-decoration-client/libadwaita.so
 qt6/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-dmabuf-server-buffer.so
 qt6/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so
 qt6/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-shm-emulation-server.so
+${PLIST.vulkan}qt6/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-vulkan-server.so
 qt6/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-wayland-egl.so
 qt6/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-wayland-eglstream-controller.so
 qt6/plugins/wayland-shell-integration/libivi-shell.so
