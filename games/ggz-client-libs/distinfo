@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:44:01 nia Exp $
-
-BLAKE2s (ggz-client-libs-0.0.14.1.tar.gz) = 6c47a17df842c20c0471e572dfc28382d5e8c8be3ed2fd6248b2af51e9300225
-SHA512 (ggz-client-libs-0.0.14.1.tar.gz) = d11d3402d5013096cfbb517c765df31f39df6b4c6f303f6791a1a475645134c8e27e487135eea13ddd08eb56fa2510ce07c176c1d2d2af8dbd1ae54334f6cce6
-Size (ggz-client-libs-0.0.14.1.tar.gz) = 614117 bytes
-SHA1 (patch-aa) = e4cbdca57a8d2e82802228c851f97230698f9160
-SHA1 (patch-ab) = cd815b923b5d0992bf08d444afdb141c1c974c56
