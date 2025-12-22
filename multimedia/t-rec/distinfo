@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2025/12/03 09:20:31 pin Exp $
+$NetBSD: distinfo,v 1.7 2025/12/22 21:02:54 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -174,9 +174,9 @@ Size (libredox-0.1.10.crate) = 7332 bytes
 BLAKE2s (linux-raw-sys-0.11.0.crate) = 3d3d4fd40dceac1d554150a2e642934b441452c4acd3f05dee235eecb7cf4ea1
 SHA512 (linux-raw-sys-0.11.0.crate) = b16261142f3cbd1caa4e0a17ba06dea49f0d4514f583ca511d9c7ba6ef231f18322f37303b7ffacc73ae7f22b81dfd740584ef7bfaf67a9eaf43859d2de1f941
 Size (linux-raw-sys-0.11.0.crate) = 2659624 bytes
-BLAKE2s (log-0.4.28.crate) = ac7f11a003627df0bd605547768108fab3f4e9effa8c3757c245e01df250ffb2
-SHA512 (log-0.4.28.crate) = cea74c92c80f291360a7cdf022e3ce2f509b9051b415840ab2a159585384f3fe606289da00a6def0c3d666416c5fcda865e2ae4ad48df07618818e8486cd0209
-Size (log-0.4.28.crate) = 51131 bytes
+BLAKE2s (log-0.4.29.crate) = f4b8325b35fee411fa94521c97c0395b7f7566379491012fce21387017116c98
+SHA512 (log-0.4.29.crate) = 31bcf1669c27980f0a8500082c4d0cc500f6cc943518a3dacacc3ad4d8a0c238517f23c2c1969e5a22dbb5d25614adbf4e914c0557e45e1ebc8e7385b2ed14b3
+Size (log-0.4.29.crate) = 51515 bytes
 BLAKE2s (malloc_buf-0.0.6.crate) = fa2e78c89cf38b987feb7cc9114dedf22a0d8ea5611e9a44f8dd55b4b79adc7c
 SHA512 (malloc_buf-0.0.6.crate) = 463b3d7666cdd7de618abf0cc4e488060c84d6d93c56d4e922169511a0b03de380ea988cd998f5a162b244088902198763351ac16dea3762f0fa0840fc29d6ed
 Size (malloc_buf-0.0.6.crate) = 1239 bytes
@@ -276,9 +276,9 @@ Size (simplerand-1.6.0.crate) = 6063 bytes
 BLAKE2s (syn-2.0.111.crate) = 59e384935e8312b487a780865026ad631dfdc775720b9246d94b06af3e5751f4
 SHA512 (syn-2.0.111.crate) = f30fc819fc6c942cde044b6bbe608f96736070717f28da71ab4ff68aa9e780416829152da11a83513fbc0de88337c2157e4fd1e4a029ebcbb64daeaa54dbf768
 Size (syn-2.0.111.crate) = 302117 bytes
-BLAKE2s (t-rec-rs-0.8.1.tar.gz) = edd2370a1dc941d39c2d222f3929f8bf164b0e632d7e3081425ebf7daca94ac2
-SHA512 (t-rec-rs-0.8.1.tar.gz) = 327d10565eac28dbda6e98aafa4137fc2fb00684f29623bab74e54122a42d20c6318085bc472bdd5dd6464d14b075094cf3ac68baa5a7056a63c5874ad9c73b1
-Size (t-rec-rs-0.8.1.tar.gz) = 5627560 bytes
+BLAKE2s (t-rec-rs-0.8.2.tar.gz) = 55aa63471d2aa4fb6a0194edd199a632c04fc1ee2dcdaa66e59425a8741d8387
+SHA512 (t-rec-rs-0.8.2.tar.gz) = cf58ed26fe3f63a3597b729960e148c75f354c2fda5d5d1fcf731ef18e4202c87f6a4903b2e571cec0fc2bf37c43261d159c5519fc071f2c48ad9ba071602476
+Size (t-rec-rs-0.8.2.tar.gz) = 5627682 bytes
 BLAKE2s (tempfile-3.23.0.crate) = 03894a0b6e2c16a9462ea26eccb98f1cef6ee46f95d6a41761f2c3086c0fd692
 SHA512 (tempfile-3.23.0.crate) = 8e9f84400f714209eb713af5960d1de501c10520817299f0ba2fd53a7c5f0931b60d1053c2c84820aa627aa94bdefa1b0e82c787784b1960170930f0ed2d8753
 Size (tempfile-3.23.0.crate) = 43063 bytes
