@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2025/06/30 18:24:20 adam Exp $
+$NetBSD: distinfo,v 1.28 2025/12/22 13:24:44 adam Exp $
 
-BLAKE2s (qtspeech-everywhere-opensource-src-5.15.17.tar.xz) = 192b0b33896cede1758f0ff8af41889210563fd1dfb30013df255e67a7f4d07f
-SHA512 (qtspeech-everywhere-opensource-src-5.15.17.tar.xz) = 584fa104ee41b93cb7344ccdd3d0dc6cbfac6a7db623888b062479715f90205ea0aa4eea1c529eca80f7ebac955ba7e1b530eff49f30696fe180cb353ac12a60
-Size (qtspeech-everywhere-opensource-src-5.15.17.tar.xz) = 97644 bytes
+BLAKE2s (qtspeech-everywhere-opensource-src-5.15.18.tar.xz) = 7050a2bf02d2388fe5245ddb7ed7c8fcb4e936daccfc08f3fdfd7e3617efb92e
+SHA512 (qtspeech-everywhere-opensource-src-5.15.18.tar.xz) = f3a9e4782532ee62c455eda6e63a25e49392ea4cbb7e6801e6eb1bb9d58e9bd802769e26811c8afcebc0c6e106fe7d3c56b69ea83c28c1d89603ecc228c1c919
+Size (qtspeech-everywhere-opensource-src-5.15.18.tar.xz) = 81340 bytes

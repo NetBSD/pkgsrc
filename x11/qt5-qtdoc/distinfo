@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.38 2025/06/30 18:24:18 adam Exp $
+$NetBSD: distinfo,v 1.39 2025/12/22 13:24:42 adam Exp $
 
-BLAKE2s (qtdoc-everywhere-opensource-src-5.15.17.tar.xz) = 4aa6c862c7c31dbfa024d7609699a33bb4cab7fa249b7fd110d579b4483a11c8
-SHA512 (qtdoc-everywhere-opensource-src-5.15.17.tar.xz) = cfd9912ceb70f15fc92eaa79fb89f9274ea9ecacd0e707ffabe7cd21f32a9301151aa10e3724a7a9970ea9238c72fe0f664dee55b9911b38e3c96e4fa4d3a5d3
-Size (qtdoc-everywhere-opensource-src-5.15.17.tar.xz) = 5782072 bytes
+BLAKE2s (qtdoc-everywhere-opensource-src-5.15.18.tar.xz) = 35a15d04e3b6dcf55afb5dd4a2159814447affb9ac08b2c8001d89c5affd6190
+SHA512 (qtdoc-everywhere-opensource-src-5.15.18.tar.xz) = fa7a39b69778c96dccff2120544d0bdeccc03bf30c92a0f17bc6aa981ae5ee3589fecb3663a855ccde1a59068dde780fa76790d03e758e267efed5df37ae3cf3
+Size (qtdoc-everywhere-opensource-src-5.15.18.tar.xz) = 5766900 bytes

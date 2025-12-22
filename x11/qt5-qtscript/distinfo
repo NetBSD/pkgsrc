@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.41 2025/06/30 18:24:19 adam Exp $
+$NetBSD: distinfo,v 1.42 2025/12/22 13:24:43 adam Exp $
 
-BLAKE2s (qtscript-everywhere-opensource-src-5.15.17.tar.xz) = 2cdb15fd0a7618e2e76e37ae5a2aacc02e48e965f0d1a176676fc0c6a7538d6a
-SHA512 (qtscript-everywhere-opensource-src-5.15.17.tar.xz) = 8acfb38df7a1d925210179423347f478780ed651b2da63e9547c1d48984b9ca759cd258da8d813307f9843d746ede4942850dcf5c26b61fcaf49e8b67dd3b427
-Size (qtscript-everywhere-opensource-src-5.15.17.tar.xz) = 2659128 bytes
+BLAKE2s (qtscript-everywhere-opensource-src-5.15.18.tar.xz) = 7d376c7f24c145929a8b245e30eb9552c6692f33f1a79c085042695270f7e254
+SHA512 (qtscript-everywhere-opensource-src-5.15.18.tar.xz) = e4cd79deb2cba1f4216acb6744c50540e41c4a56dd37f4f49631cad7b520642292192ddc8b7cff1f741350e4b8b83aae0626ec3c546366bd4bcaf58c7f849923
+Size (qtscript-everywhere-opensource-src-5.15.18.tar.xz) = 2644892 bytes
 SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_config.h) = e46033a23803b4e27dcd7f5369730e046ad5e4cb
 SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_jit_JITStubs.h) = 155ac7bdf0d41a6ca8a8234a99886799c7275d4f
 SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_runtime_JSValue.h) = 6672e941f0ecbba35b5b932ab9f7b49a269fb6e6
