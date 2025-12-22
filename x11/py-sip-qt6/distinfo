@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/06/08 07:47:44 wiz Exp $
+$NetBSD: distinfo,v 1.8 2025/12/22 14:00:18 adam Exp $
 
-BLAKE2s (pyqt6_sip-13.10.2.tar.gz) = dcc45794e4ab1dd32bcb0d84b0a502ce6f521f12bfdbeb1af605f482f51de12c
-SHA512 (pyqt6_sip-13.10.2.tar.gz) = 19c990d76d095e3af0b18c5d7b5ea9ebdf23230643ec01aa1b4f1ab5ccc421c2b62a1bb44bc1ab6767b7ba5baa74c30e6e7bd2472ee4afb82a4e3db865cf78be
-Size (pyqt6_sip-13.10.2.tar.gz) = 92548 bytes
+BLAKE2s (pyqt6_sip-13.10.3.tar.gz) = e03152764bec9fd76aadae85eaa9b2abb388d03c30d6fa8b124d199a6f491baa
+SHA512 (pyqt6_sip-13.10.3.tar.gz) = 555b061eec3db6a66388fae07de21f58d756f6f12b13e4ede729c3348d2c8997ac5a59d3006ee45c3a09b5cde673f579265fa254bc583a4ba721748cf8f3a617
+Size (pyqt6_sip-13.10.3.tar.gz) = 92621 bytes
