@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/11/11 12:34:18 adam Exp $
+# $NetBSD: Makefile,v 1.20 2025/12/22 08:06:15 wiz Exp $
 
 DISTNAME=	qtwayland-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtwayland-${QTVERSION}
@@ -16,6 +16,13 @@ PKG_SKIP_REASON+=	"Platform does not support Wayland"
 
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6WaylandClient.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6WaylandCompositor.pc
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+PLIST_VARS+=	vulkan
+.if ${OPSYS} != "Darwin"
+PLIST.vulkan=	yes
+.endif
 
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"
