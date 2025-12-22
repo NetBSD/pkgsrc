@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7316 2025/12/22 10:30:30 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7317 2025/12/22 11:12:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10782,3 +10782,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed net/py-socketpool [adam 2025-12-22]
 	Removed graphics/py-gdmodule [adam 2025-12-22]
 	Removed textproc/py-pytoml [adam 2025-12-22]
+	Updated lang/ghc910 to 9.10.1nb5 [wiz 2025-12-22]
