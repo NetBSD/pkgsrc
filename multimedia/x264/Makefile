@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2024/05/14 17:39:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2025/12/22 05:56:46 adam Exp $
 
 # Download https://code.videolan.org/videolan/x264/-/archive/stable/x264-stable.tar.bz2
 # Rename to x264-<last-commit-date>.tar.bz2 and upload to MASTER_SITE_LOCAL.
 
-DISTNAME=	x264-20231001
+DISTNAME=	x264-20250608
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2

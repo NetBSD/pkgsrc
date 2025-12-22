@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2022/09/26 17:00:21 adam Exp $
+$NetBSD: patch-configure,v 1.2 2025/12/22 05:56:46 adam Exp $
 
 Add support for DragonFly.
 Use 'amd64' as a synonym for 'x86_64'.
@@ -7,9 +7,9 @@ Do not force compiler optimisations.
 If we fail an assembly test, continue as if --disable-asm
 was passed.
 
---- configure.orig	2022-09-13 09:25:28.000000000 +0000
+--- configure.orig	2025-06-08 16:24:23.000000000 +0000
 +++ configure
-@@ -664,6 +664,10 @@ case $host_os in
+@@ -686,6 +686,10 @@ case $host_os in
          SYS="FREEBSD"
          libm="-lm"
          ;;
@@ -20,7 +20,7 @@ was passed.
      kfreebsd*-gnu)
          SYS="FREEBSD"
          define HAVE_MALLOC_H
-@@ -764,7 +768,7 @@ case $host_cpu in
+@@ -786,7 +790,7 @@ case $host_cpu in
              ASFLAGS="$ASFLAGS -f elf32"
          fi
          ;;
@@ -29,7 +29,7 @@ was passed.
          ARCH="X86_64"
          AS="${AS-nasm}"
          AS_EXT=".asm"
-@@ -793,14 +797,15 @@ case $host_cpu in
+@@ -815,14 +819,15 @@ case $host_cpu in
          fi
          ;;
      powerpc*)
@@ -46,7 +46,7 @@ was passed.
                  CFLAGS="$CFLAGS -maltivec -mabi=altivec"
                  define HAVE_ALTIVEC_H
              fi
-@@ -839,6 +844,18 @@ case $host_cpu in
+@@ -867,6 +872,18 @@ case $host_cpu in
              AS="${AS-${CC}}"
          fi
          ;;
@@ -65,7 +65,7 @@ was passed.
      arm*)
          ARCH="ARM"
          if [ "$SYS" = MACOSX ] ; then
-@@ -985,8 +1002,8 @@ if [ $asm = auto -a $ARCH = ARM ] ; then
+@@ -1013,8 +1030,8 @@ if [ $asm = auto -a $ARCH = ARM ] ; then
          ASFLAGS="$ASFLAGS -c"
      else
          echo "You specified a pre-ARMv6 or Thumb-1 CPU in your CFLAGS."
@@ -76,8 +76,8 @@ was passed.
      fi
  fi
  
-@@ -1000,8 +1017,8 @@ if [ $asm = auto -a $ARCH = AARCH64 ] ; 
-         ASFLAGS="$ASFLAGS -c"
+@@ -1027,8 +1044,8 @@ if [ $asm = auto -a $ARCH = AARCH64 ] ;
+         define HAVE_NEON
      else
          echo "no NEON support, try adding -mfpu=neon to CFLAGS"
 -        echo "If you really want to run on such a CPU, configure with --disable-asm."
@@ -85,9 +85,9 @@ was passed.
 +	echo "Disabling asm"
 +	asm="no"
      fi
- fi
- 
-@@ -1019,8 +1036,8 @@ if [ $asm = auto -a $ARCH = MIPS ] ; the
+     # Check for higher .arch levels. We only need armv8.2-a in order to
+     # enable the extensions we want below - we primarily want to control
+@@ -1071,8 +1088,8 @@ if [ $asm = auto -a $ARCH = MIPS ] ; the
          define HAVE_MSA
      else
          echo "You specified a pre-MSA CPU in your CFLAGS."
@@ -98,7 +98,7 @@ was passed.
      fi
  fi
  
-@@ -1037,7 +1054,7 @@ ASFLAGS="$ASFLAGS -DSTACK_ALIGNMENT=$sta
+@@ -1096,7 +1113,7 @@ ASFLAGS="$ASFLAGS -DSTACK_ALIGNMENT=$sta
  CPU_ENDIAN="little-endian"
  if [ $compiler = GNU ]; then
      echo "int i[2] = {0x42494745,0}; double f[2] = {0x1.0656e6469616ep+102,0};" > conftest.c
@@ -107,7 +107,7 @@ was passed.
      if (${STRINGS} -a conftest.o | grep -q BIGE) && (${STRINGS} -a conftest.o | grep -q FPendian) ; then
          define WORDS_BIGENDIAN
          CPU_ENDIAN="big-endian"
-@@ -1060,7 +1077,7 @@ fi
+@@ -1119,7 +1136,7 @@ fi
  
  # autodetect options that weren't forced nor disabled
  
@@ -116,7 +116,7 @@ was passed.
  if [ "$SYS" = "WINDOWS" -a "$thread" = "posix" ] ; then
      if [ "$gpl" = "no" ] ; then
          echo "Warning: pthread-win32 is LGPL and is therefore not supported with --disable-gpl"
-@@ -1319,7 +1336,7 @@ if [ "$pic" = "yes" ] ; then
+@@ -1394,7 +1411,7 @@ if [ "$pic" = "yes" ] ; then
      [ "$SYS" != WINDOWS -a "$SYS" != CYGWIN ] && CFLAGS="$CFLAGS -fPIC"
      [[ "$ASFLAGS" != *"-DPIC"* ]] && ASFLAGS="$ASFLAGS -DPIC"
      # resolve textrels in the x86 asm
@@ -125,7 +125,7 @@ was passed.
      [ $SYS = SunOS -a "$ARCH" = "X86" ] && SOFLAGS="$SOFLAGS -mimpure-text"
  fi
  
-@@ -1335,7 +1352,6 @@ if [ "$debug" = "yes" ]; then
+@@ -1410,7 +1427,6 @@ if [ "$debug" = "yes" ]; then
      CFLAGS="-O1 -g $CFLAGS"
      RCFLAGS="$RCFLAGS -DDEBUG"
  else
