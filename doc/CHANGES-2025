@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7318 2025/12/22 11:20:35 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7319 2025/12/22 11:29:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10784,3 +10784,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed textproc/py-pytoml [adam 2025-12-22]
 	Updated lang/ghc910 to 9.10.1nb5 [wiz 2025-12-22]
 	Updated devel/py-tortoisehg to 7.0.1nb1 [wiz 2025-12-22]
+	Removed games/ggz-client-libs [wiz 2025-12-22]
+	Removed games/libggz [wiz 2025-12-22]
