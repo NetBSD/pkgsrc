@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2025/12/22 23:22:02 wiz Exp $
+
+Add missing 'int' to fix configure test.
+
+--- configure.orig	1999-03-08 17:42:12.000000000 +0000
++++ configure
+@@ -922,7 +922,7 @@ cat > conftest.$ac_ext << EOF
+ #line 923 "configure"
+ #include "confdefs.h"
+ 
+-main(){return(0);}
++int main(){return(0);}
+ EOF
+ if { (eval echo configure:928: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+   ac_cv_prog_cc_works=yes
