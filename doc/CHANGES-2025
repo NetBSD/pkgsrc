@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7315 2025/12/22 10:20:24 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7316 2025/12/22 10:30:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10776,3 +10776,9 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed devel/py-unit [adam 2025-12-22]
 	Removed devel/py-unitgui [adam 2025-12-22]
 	Removed www/py-python3-digest [adam 2025-12-22]
+	Removed security/py-mcrypt [adam 2025-12-22]
+	Removed archivers/py-bz2file [adam 2025-12-22]
+	Removed net/py-beanstalkc [adam 2025-12-22]
+	Removed net/py-socketpool [adam 2025-12-22]
+	Removed graphics/py-gdmodule [adam 2025-12-22]
+	Removed textproc/py-pytoml [adam 2025-12-22]
