@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7307 2025/12/22 06:01:21 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7308 2025/12/22 06:21:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10756,3 +10756,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/fasttracker2 to 2.03 [fox 2025-12-22]
 	Updated multimedia/x264 to 20250608 [adam 2025-12-22]
 	Updated mail/py-checkdmarc to 5.13.0 [adam 2025-12-22]
+	Updated devel/py-stdio-mgr to 1.0.1.1 [adam 2025-12-22]
+	Updated devel/py-py2app to 0.28.9 [adam 2025-12-22]
