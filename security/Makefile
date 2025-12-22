@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.987 2025/12/07 11:07:26 wiz Exp $
+# $NetBSD: Makefile,v 1.988 2025/12/22 10:23:40 adam Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -515,7 +515,6 @@ SUBDIR+=	py-lasso
 SUBDIR+=	py-libagent
 SUBDIR+=	py-libnacl
 SUBDIR+=	py-libtaxii
-SUBDIR+=	py-mcrypt
 SUBDIR+=	py-mohawk
 SUBDIR+=	py-nacl
 SUBDIR+=	py-ndg_httpsclient

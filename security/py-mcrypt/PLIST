@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/14 17:52:03 wiz Exp $
-${PYSITELIB}/mcrypt.so
-${PYSITELIB}/${EGG_INFODIR}
