@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2025/08/20 11:34:51 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/12/22 14:29:52 adam Exp $
 
-DISTNAME=	gflags-2.2.2
+DISTNAME=	gflags-2.3.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gflags/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,6 +13,9 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash:run
 TEST_TARGET=	test
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
+# For Darwin
+TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 
 REPLACE_BASH=	src/gflags_completions.sh
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE:STRING=Release

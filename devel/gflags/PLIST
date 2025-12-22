@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/03/21 22:14:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/12/22 14:29:52 adam Exp $
 bin/gflags_completions.sh
 include/gflags/gflags.h
 include/gflags/gflags_completions.h
@@ -12,9 +12,9 @@ lib/cmake/gflags/gflags-targets.cmake
 lib/libgflags.a
 lib/libgflags.so
 lib/libgflags.so.${PKGVERSION}
-lib/libgflags.so.2.2
+lib/libgflags.so.2.3
 lib/libgflags_nothreads.a
 lib/libgflags_nothreads.so
 lib/libgflags_nothreads.so.${PKGVERSION}
-lib/libgflags_nothreads.so.2.2
+lib/libgflags_nothreads.so.2.3
 lib/pkgconfig/gflags.pc
