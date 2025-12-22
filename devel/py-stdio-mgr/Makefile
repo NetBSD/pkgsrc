@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/05/06 08:52:25 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/12/22 06:18:07 adam Exp $
 
-DISTNAME=	stdio-mgr-1.0.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	stdio_mgr-1.0.1.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stdio-mgr/}
 
@@ -10,11 +10,10 @@ HOMEPAGE=	https://www.github.com/bskinn/stdio-mgr
 COMMENT=	Context manager for mocking/wrapping stdin/stdout/stderr
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.1:../../devel/py-attrs
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
