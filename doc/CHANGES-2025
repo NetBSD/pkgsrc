@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7334 2025/12/22 23:06:41 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7335 2025/12/22 23:18:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10808,3 +10808,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/chess-tui to 2.2.0 [pin 2025-12-22]
 	Updated multimedia/t-rec to 0.8.2 [pin 2025-12-22]
 	Updated graphics/digikam to 8.7.0nb9 [wiz 2025-12-22]
+	Updated audio/libopusenc to 0.2.1nb2 [wiz 2025-12-22]
