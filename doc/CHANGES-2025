@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7321 2025/12/22 13:37:37 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7322 2025/12/22 13:56:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10789,3 +10789,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/qt5 to 5.15.18 [adam 2025-12-22]
 	Updated math/py-asteval to 1.0.8 [adam 2025-12-22]
 	Updated devel/py-fakefs to 6.0.0 [adam 2025-12-22]
+	Updated devel/swig4 to 4.4.1 [adam 2025-12-22]
+	Updated audio/mpg123 to 1.33.4 [adam 2025-12-22]
