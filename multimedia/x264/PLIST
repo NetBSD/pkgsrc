@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2022/09/26 17:00:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/12/22 05:56:46 adam Exp $
 bin/x264
 include/x264.h
 include/x264_config.h
 lib/libx264.a
 lib/libx264.so
-lib/libx264.so.164
+lib/libx264.so.165
 lib/pkgconfig/x264.pc
