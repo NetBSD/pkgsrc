@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2025/10/04 12:42:18 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2025/12/22 14:43:12 adam Exp $
 
-DISTNAME=	vulkan-headers-1.4.321
+DISTNAME=	vulkan-headers-1.4.335
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
 GITHUB_PROJECT=	Vulkan-Headers
@@ -18,9 +18,13 @@ USE_LANGUAGES=	c c++
 REPLACE_PYTHON+=	registry/*.py
 REPLACE_PYTHON+=	registry/spec_tools/*.py
 
+.include "../../mk/bsd.prefs.mk"
+
 .include "../../devel/cmake/build.mk"
 .include "../../lang/python/application.mk"
+.if ${OPSYS} != "Darwin"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
