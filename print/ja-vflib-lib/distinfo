@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:12:08 nia Exp $
+$NetBSD: distinfo,v 1.10 2025/12/22 23:27:52 wiz Exp $
 
 BLAKE2s (VFlib2-2.24.2.tar.gz) = 483f5a7d922af0e67bcee14f7e26a150c0f40b312a3991c5739733b7e8d914d7
 SHA512 (VFlib2-2.24.2.tar.gz) = 49618f3b8dd9cd3b9e99a3b293b1b8317c2c24511a8d5943e2aa1fb11baf8e0b202c5923c5d953da1e9a355ae07085da595df4e79e0faead73572ca1a2aeb9f5
 Size (VFlib2-2.24.2.tar.gz) = 540093 bytes
-SHA1 (patch-aa) = c78284c8126b8a2f1ccf43360b9f2e0f0468c2e1
-SHA1 (patch-ab) = 1654d8a602097eed3a8fb4c146287eadbae0c3be
-SHA1 (patch-ac) = bf68e3561599c0e1840333fa719e88e0960ecbb9
+SHA1 (patch-aa) = d461cfa8d5908e4d2d9e778e4913dd2d2cc1ab6b
+SHA1 (patch-ab) = bd9f3909d2a80bdf167474f5ed7d1b7e6d860984
+SHA1 (patch-ac) = cbdc5d630d75314860a5fdd13b7c401a90d8baf6
 SHA1 (patch-ad) = e17a354d1fe1a999fd732779ded419f350ac7aab
 SHA1 (patch-ae) = 6b2512548bc122b915c15067791aeecfcb2ef8a6
-SHA1 (patch-af) = daae96f7c5218eb9fd22d297121a93f5bd266bed
+SHA1 (patch-af) = 0b77b8b28302985b5d67a77fc6a5820b4d7f191f
 SHA1 (patch-ag) = 909528fb09ac340f4b26b9a76d098ce185fd74a1
 SHA1 (patch-ah) = 594a4916c1a0d2c0292e702a7e11ac11cd1bcbba
 SHA1 (patch-ai) = cc7043ee2b807bed57c6ef6649af80a53736e57a
