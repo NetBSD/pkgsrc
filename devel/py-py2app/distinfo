@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/06/11 06:36:41 adam Exp $
+$NetBSD: distinfo,v 1.12 2025/12/22 06:21:17 adam Exp $
 
-BLAKE2s (py2app-0.28.8.tar.gz) = f31a1b1ccc02a8217c3be1e8713f874fc0220f9d5b47cf6310c658f04f720346
-SHA512 (py2app-0.28.8.tar.gz) = 35803318030bfeb3cdb4456719f38564197f9cc322c22d02d2e68dd00a1a45a2ca2fdebe5d630e8f4fd19a2421a571162f416a72ed54454076e242ed1d0b7db3
-Size (py2app-0.28.8.tar.gz) = 1173004 bytes
+BLAKE2s (py2app-0.28.9.tar.gz) = db3de012a34320ffb55073e8130c649580175cbcba2dfdfea09d6ace42af2f80
+SHA512 (py2app-0.28.9.tar.gz) = 1550ebb0fc501b451e2f55321889c03b2aeeff79e74b500393ea931c31d9ffa2b3949d16ac8423948a71bffa7bb3c02c49b0030996fcf73d017bcb9018325568
+Size (py2app-0.28.9.tar.gz) = 1236799 bytes
