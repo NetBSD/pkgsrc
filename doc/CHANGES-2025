@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7342 2025/12/23 05:53:12 markd Exp $
+$NetBSD: CHANGES-2025,v 1.7343 2025/12/23 05:59:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10816,3 +10816,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added mail/mimetreeparser version 25.08.3 [markd 2025-12-23]
 	Updated www/akregator to 25.08.3 [markd 2025-12-23]
 	Updated www/kimagemapeditor to 25.08.3 [markd 2025-12-23]
+	Updated shells/oh-my-posh to 28.5.0 [pin 2025-12-23]
