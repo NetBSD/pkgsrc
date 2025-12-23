@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/12/23 09:51:39 markd Exp $
+
+BLAKE2s (kgamma-6.5.2.tar.xz) = 2b1a37165a30480faefc24d6b27e439d08bf5f36bb193e95b9c7d744e5b58d20
+SHA512 (kgamma-6.5.2.tar.xz) = 1a1e147dc05ae598033025e67cdc66c9a533f30712545336bc60df5ed7d63e14ff1668ade98f2be09b656b0287bd980a5c2b3e55dba3d78f3504f2fe1cf88f9c
+Size (kgamma-6.5.2.tar.xz) = 87620 bytes
