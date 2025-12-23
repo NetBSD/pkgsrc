@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/12/23 21:40:13 markd Exp $
+
+BLAKE2s (kde-gtk-config-6.5.2.tar.xz) = d766fa213c55f35b8ab4c1ce0dafa13fd0ec3c48efe3204afc8d044a8fa77c38
+SHA512 (kde-gtk-config-6.5.2.tar.xz) = 9a44fd1713804494acc5ff1a9236587bfb3bcbbaa700d06984a1560a5d5c20ec65bfd2168ee05923e3e4074975f5567d5b5543351d70f07214d25a547257c0c6
+Size (kde-gtk-config-6.5.2.tar.xz) = 79228 bytes
