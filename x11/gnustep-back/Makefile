@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2025/10/23 20:39:54 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2025/12/23 07:49:03 wiz Exp $
 
 GITHUB_PROJECT=	libs-back
 GITHUB_TAG=	back-0_28_0
@@ -9,7 +9,7 @@ PKGNAME=	gnustep-${DISTNAME:S/_/./g}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gnustep/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnustep.org/
+HOMEPAGE=	https://www.gnustep.org/
 COMMENT=	X11 AppKit backend for GNUstep
 LICENSE=	gnu-gpl-v3
 
