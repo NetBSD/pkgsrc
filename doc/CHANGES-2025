@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7355 2025/12/23 09:43:38 markd Exp $
+$NetBSD: CHANGES-2025,v 1.7356 2025/12/23 09:52:30 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10830,3 +10830,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added x11/plasma6-kactivitymanagerd version 6.5.2 [markd 2025-12-23]
 	Added x11/plasma6-kscreen version 6.5.2 [markd 2025-12-23]
 	Added x11/plasma6-kscreenlocker version 6.5.2 [markd 2025-12-23]
+	Added x11/plasma6-kgamma version 6.5.2 [markd 2025-12-23]
