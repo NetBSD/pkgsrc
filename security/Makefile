@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.989 2025/12/23 09:12:08 markd Exp $
+# $NetBSD: Makefile,v 1.990 2025/12/23 09:17:26 markd Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -438,6 +438,7 @@ SUBDIR+=	pinepgp
 SUBDIR+=	pius
 SUBDIR+=	pkcs11-helper
 SUBDIR+=	pks
+SUBDIR+=	plasma6-ksshaskpass
 SUBDIR+=	plasma6-polkit-kde-agent
 SUBDIR+=	pleaser
 SUBDIR+=	polkit
