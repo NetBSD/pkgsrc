@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7339 2025/12/23 00:07:30 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7340 2025/12/23 03:33:56 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10813,3 +10813,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-xapian to 1.4.29nb1 [wiz 2025-12-22]
 	Removed devel/gnatpython successor devel/py-e3-core [wiz 2025-12-22]
 	Updated editors/neovim to 0.11.5nb1 [wiz 2025-12-23]
+	Added mail/mimetreeparser version 25.08.3 [markd 2025-12-23]
