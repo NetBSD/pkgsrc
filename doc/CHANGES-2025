@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7348 2025/12/23 08:49:28 markd Exp $
+$NetBSD: CHANGES-2025,v 1.7349 2025/12/23 09:00:18 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10823,3 +10823,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed sysutils/milou successor sysutils/plasma6-milou [markd 2025-12-23]
 	Added sysutils/plasma6-systemsettings version 6.5.2 [markd 2025-12-23]
 	Added sysutils/plasma6-kinfocenter version 6.5.2 [markd 2025-12-23]
+	Added sysutils/plasma6-kde-cli-tools version 6.5.2 [markd 2025-12-23]
