@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1178 2025/12/23 08:48:25 markd Exp $
+# $NetBSD: Makefile,v 1.1179 2025/12/23 08:56:32 markd Exp $
 #
 
 COMMENT=	System utilities
@@ -580,6 +580,7 @@ SUBDIR+=	pflogsumm
 SUBDIR+=	pfstat
 SUBDIR+=	pftop
 SUBDIR+=	pidof
+SUBDIR+=	plasma6-kde-cli-tools
 SUBDIR+=	plasma6-kinfocenter
 SUBDIR+=	plasma6-libksysguard
 SUBDIR+=	plasma6-milou
