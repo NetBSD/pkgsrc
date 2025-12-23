@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/12/23 03:30:31 markd Exp $
+
+BLAKE2s (mimetreeparser-25.08.3.tar.xz) = 35d1cd49fd0ef2d1457fe53923a585dbb52b14e46fcc21cf70063dc80a6a6920
+SHA512 (mimetreeparser-25.08.3.tar.xz) = 574631588014d68c2037ef92c301437082806017fcebff6b85f29ef6c26ae4d07ceedd5b385545f4cccc6c38f7e52b39ffd594eb8c7e623d054259c7e7c0140d
+Size (mimetreeparser-25.08.3.tar.xz) = 654232 bytes

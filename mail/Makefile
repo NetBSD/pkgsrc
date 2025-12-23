@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.682 2025/12/11 00:48:27 manu Exp $
+# $NetBSD: Makefile,v 1.683 2025/12/23 03:30:30 markd Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -182,6 +182,7 @@ SUBDIR+=	milter-manager
 SUBDIR+=	milter-regex
 SUBDIR+=	mime-construct
 SUBDIR+=	mimedefang
+SUBDIR+=	mimetreeparser
 SUBDIR+=	mimp
 SUBDIR+=	mini_sendmail
 SUBDIR+=	minimalist
