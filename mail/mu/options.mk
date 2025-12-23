@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2024/05/02 13:35:48 ktnb Exp $
+# $NetBSD: options.mk,v 1.2 2025/12/23 13:47:35 ktnb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mu
 PKG_SUPPORTED_OPTIONS=	mu-emacs guile
@@ -13,6 +13,7 @@ PLIST_SRC=	PLIST
 ###
 .if !empty(PKG_OPTIONS:Mmu-emacs)
 .include "../../editors/emacs/modules.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
 INFO_FILES=	yes
 USE_TOOLS+=	makeinfo
 PLIST_SRC+=	PLIST.emacs

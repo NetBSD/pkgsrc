@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/09/30 20:23:27 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/12/23 13:47:35 ktnb Exp $
 bin/mu
 info/mu4e.info
 man/man1/mu-add.1
@@ -38,6 +38,8 @@ ${EMACS_LISPPREFIX}/mu4e/mu4e-context.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-context.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-contrib.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-contrib.elc
+${EMACS_LISPPREFIX}/mu4e/mu4e-dbus.el
+${EMACS_LISPPREFIX}/mu4e/mu4e-dbus.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-draft.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-draft.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-folders.el
