@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7361 2025/12/23 10:29:04 markd Exp $
+$NetBSD: CHANGES-2025,v 1.7362 2025/12/23 10:36:16 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10836,3 +10836,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added x11/plasma6-plasma-integration version 6.5.2 [markd 2025-12-23]
 	Added graphics/plasma6-breeze version 6.5.2 [markd 2025-12-23]
 	Added graphics/plasma6-oxygen version 6.5.2 [markd 2025-12-23]
+	Added graphics/plasma6-breeze-gtk version 6.5.2 [markd 2025-12-23]
