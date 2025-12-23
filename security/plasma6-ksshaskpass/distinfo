@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/12/23 09:17:27 markd Exp $
+
+BLAKE2s (ksshaskpass-6.5.2.tar.xz) = b12f0594099c4b21049022d3fa4fda9c80c22a4f3fb8da017947c5e08df8f954
+SHA512 (ksshaskpass-6.5.2.tar.xz) = 27a51d743a8e99d7dee1ebe4560e57e18b4079df07267390ceff623498b32bf1b336672073b266a55bbe090d25db8b0dc1618a185cb7c3afbd15cb250e5640e9
+Size (ksshaskpass-6.5.2.tar.xz) = 31004 bytes
