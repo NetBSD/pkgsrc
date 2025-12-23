@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1074 2025/12/23 09:51:39 markd Exp $
+# $NetBSD: Makefile,v 1.1075 2025/12/23 10:13:26 markd Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -298,6 +298,7 @@ SUBDIR+=	plasma6-layer-shell-qt
 SUBDIR+=	plasma6-libkscreen
 SUBDIR+=	plasma6-libplasma
 SUBDIR+=	plasma6-plasma-activities
+SUBDIR+=	plasma6-plasma-integration
 SUBDIR+=	py-Tk
 SUBDIR+=	py-Xlib
 SUBDIR+=	py-gtk2
