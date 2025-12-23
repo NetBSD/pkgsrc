@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/05/31 06:50:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/12/23 07:48:01 wiz Exp $
 
 DISTNAME=	gnuit-4.9.5
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNU:=git/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://hulubei.net/tudor/git/
+HOMEPAGE=	https://www.gnu.org/software/gnuit/
 COMMENT=	GNU Interactive Tools - a file system browser for UNIX systems
 LICENSE=	gnu-gpl-v3
 
