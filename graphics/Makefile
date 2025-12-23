@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1106 2025/12/23 10:23:07 markd Exp $
+# $NetBSD: Makefile,v 1.1107 2025/12/23 10:28:20 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -461,6 +461,7 @@ SUBDIR+=	picat
 SUBDIR+=	pikchr
 SUBDIR+=	pixmap
 SUBDIR+=	plasma6-breeze
+SUBDIR+=	plasma6-oxygen
 SUBDIR+=	ploticus
 SUBDIR+=	ploticus-examples
 SUBDIR+=	plotmtv
