@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7366 2025/12/23 14:03:55 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7367 2025/12/23 19:20:37 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10842,3 +10842,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/mu to 1.12.14 [ktnb 2025-12-23]
 	Updated archivers/libarchive to 3.8.4 [adam 2025-12-23]
 	Updated archivers/bsdtar to 3.8.4 [adam 2025-12-23]
+	Updated lang/go-bin to 1.24.11 [bsiegert 2025-12-23]
