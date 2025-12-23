@@ -1,10 +1,10 @@
-$NetBSD: patch-components_sync__preferences_common__syncable__prefs__database.cc,v 1.11 2025/12/13 14:53:55 kikadf Exp $
+$NetBSD: patch-components_sync__preferences_common__syncable__prefs__database.cc,v 1.12 2025/12/23 13:22:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync_preferences/common_syncable_prefs_database.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- components/sync_preferences/common_syncable_prefs_database.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ components/sync_preferences/common_syncable_prefs_database.cc
 @@ -410,7 +410,7 @@ constexpr auto kCommonSyncablePrefsAllow
            syncer::PREFERENCES, PrefSensitivity::kNone, MergeBehavior::kNone}},

@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_swiftshader_src_WSI_libXCB.cpp,v 1.12 2025/12/13 14:54:03 kikadf Exp $
+$NetBSD: patch-third__party_swiftshader_src_WSI_libXCB.cpp,v 1.13 2025/12/23 13:22:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/swiftshader/src/WSI/libXCB.cpp.orig	2025-11-19 21:40:05.000000000 +0000
+--- third_party/swiftshader/src/WSI/libXCB.cpp.orig	2025-12-17 23:05:18.000000000 +0000
 +++ third_party/swiftshader/src/WSI/libXCB.cpp
 @@ -57,7 +57,7 @@ LibXcbExports *LibXCB::loadExports()
  		}

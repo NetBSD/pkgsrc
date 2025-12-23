@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_browser__window_internal_browser__window__features.cc,v 1.4 2025/12/13 14:53:50 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_browser__window_internal_browser__window__features.cc,v 1.5 2025/12/23 13:22:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_window/internal/browser_window_features.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- chrome/browser/ui/browser_window/internal/browser_window_features.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ chrome/browser/ui/browser_window/internal/browser_window_features.cc
 @@ -145,7 +145,7 @@
  #include "chrome/browser/ui/startup/default_browser_prompt/pin_infobar/pin_infobar_controller.h"

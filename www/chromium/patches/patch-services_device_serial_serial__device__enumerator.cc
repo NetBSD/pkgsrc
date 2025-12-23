@@ -1,10 +1,10 @@
-$NetBSD: patch-services_device_serial_serial__device__enumerator.cc,v 1.12 2025/12/13 14:54:00 kikadf Exp $
+$NetBSD: patch-services_device_serial_serial__device__enumerator.cc,v 1.13 2025/12/23 13:22:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/serial/serial_device_enumerator.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- services/device/serial/serial_device_enumerator.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ services/device/serial/serial_device_enumerator.cc
 @@ -12,7 +12,7 @@
  #include "build/build_config.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-services_device_geolocation_location__provider__manager.cc,v 1.12 2025/12/13 14:54:00 kikadf Exp $
+$NetBSD: patch-services_device_geolocation_location__provider__manager.cc,v 1.13 2025/12/23 13:22:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/geolocation/location_provider_manager.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- services/device/geolocation/location_provider_manager.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ services/device/geolocation/location_provider_manager.cc
 @@ -91,7 +91,7 @@ LocationProviderManager::LocationProvide
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_IOS)

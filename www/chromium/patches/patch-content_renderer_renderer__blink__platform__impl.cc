@@ -1,10 +1,10 @@
-$NetBSD: patch-content_renderer_renderer__blink__platform__impl.cc,v 1.12 2025/12/13 14:53:56 kikadf Exp $
+$NetBSD: patch-content_renderer_renderer__blink__platform__impl.cc,v 1.13 2025/12/23 13:22:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/renderer/renderer_blink_platform_impl.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- content/renderer/renderer_blink_platform_impl.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ content/renderer/renderer_blink_platform_impl.cc
 @@ -125,7 +125,7 @@
  

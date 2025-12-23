@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_base_switches.h,v 1.12 2025/12/13 14:53:59 kikadf Exp $
+$NetBSD: patch-remoting_host_base_switches.h,v 1.13 2025/12/23 13:22:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/base/switches.h.orig	2025-11-19 21:40:05.000000000 +0000
+--- remoting/host/base/switches.h.orig	2025-12-17 23:05:18.000000000 +0000
 +++ remoting/host/base/switches.h
 @@ -35,13 +35,13 @@ extern const char kProcessTypeRdpDesktop
  extern const char kProcessTypeEvaluateCapability[];

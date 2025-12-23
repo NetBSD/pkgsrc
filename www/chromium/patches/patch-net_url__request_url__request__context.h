@@ -1,10 +1,10 @@
-$NetBSD: patch-net_url__request_url__request__context.h,v 1.12 2025/12/13 14:53:59 kikadf Exp $
+$NetBSD: patch-net_url__request_url__request__context.h,v 1.13 2025/12/23 13:22:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/url_request/url_request_context.h.orig	2025-11-19 21:40:05.000000000 +0000
+--- net/url_request/url_request_context.h.orig	2025-12-17 23:05:18.000000000 +0000
 +++ net/url_request/url_request_context.h
 @@ -86,7 +86,7 @@ class NET_EXPORT URLRequestContext final
    // session.

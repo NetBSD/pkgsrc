@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_picture__in__picture_picture__in__picture__window__manager.cc,v 1.4 2025/12/13 14:53:49 kikadf Exp $
+$NetBSD: patch-chrome_browser_picture__in__picture_picture__in__picture__window__manager.cc,v 1.5 2025/12/23 13:22:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/picture_in_picture/picture_in_picture_window_manager.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- chrome/browser/picture_in_picture/picture_in_picture_window_manager.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ chrome/browser/picture_in_picture/picture_in_picture_window_manager.cc
 @@ -21,7 +21,7 @@
  #include "ui/gfx/geometry/resize_utils.h"
