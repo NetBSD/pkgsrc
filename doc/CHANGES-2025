@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7363 2025/12/23 11:01:52 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7364 2025/12/23 13:24:06 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10838,3 +10838,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added graphics/plasma6-oxygen version 6.5.2 [markd 2025-12-23]
 	Added graphics/plasma6-breeze-gtk version 6.5.2 [markd 2025-12-23]
 	Updated multimedia/gstreamer1 to 1.26.9 [adam 2025-12-23]
+	Updated www/chromium to 143.0.7499.169 [kikadf 2025-12-23]
