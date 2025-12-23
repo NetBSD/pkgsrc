@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7338 2025/12/22 23:42:19 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7339 2025/12/23 00:07:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10812,3 +10812,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/freetype-utils to 1.5nb3 [wiz 2025-12-22]
 	Updated textproc/py-xapian to 1.4.29nb1 [wiz 2025-12-22]
 	Removed devel/gnatpython successor devel/py-e3-core [wiz 2025-12-22]
+	Updated editors/neovim to 0.11.5nb1 [wiz 2025-12-23]
