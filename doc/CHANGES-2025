@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7368 2025/12/23 21:33:06 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7369 2025/12/23 21:41:40 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10845,3 +10845,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/go-bin to 1.24.11 [bsiegert 2025-12-23]
 	Updated games/rocksndiamonds to 4.4.1.1 [adam 2025-12-23]
 	Updated devel/py-importlib-metadata to 8.7.1 [adam 2025-12-23]
+	Added misc/plasma6-kde-gtk-config version 6.5.2 [markd 2025-12-23]
