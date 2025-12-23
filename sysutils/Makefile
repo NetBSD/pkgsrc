@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1174 2025/12/15 14:05:21 pin Exp $
+# $NetBSD: Makefile,v 1.1175 2025/12/23 08:26:54 markd Exp $
 #
 
 COMMENT=	System utilities
@@ -582,6 +582,7 @@ SUBDIR+=	pfstat
 SUBDIR+=	pftop
 SUBDIR+=	pidof
 SUBDIR+=	plasma6-libksysguard
+SUBDIR+=	plasma6-milou
 SUBDIR+=	pluged
 SUBDIR+=	podman
 SUBDIR+=	polysh
