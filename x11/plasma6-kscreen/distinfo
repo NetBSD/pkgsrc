@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/12/23 09:33:48 markd Exp $
+
+BLAKE2s (kscreen-6.5.2.tar.xz) = d1940334db98b75cdf43f9ef3f5b6e86590d2b944adfb313b263cd8bcc6f180d
+SHA512 (kscreen-6.5.2.tar.xz) = b8b82902376beeff2602a5e3d5f6383993286b5c2459bc0349f0ed080ab0457a1ff06f4b4d7ee389f8cc9d0c50d2453813ef18d6ad4c82514250cd7e3a7f5dc7
+Size (kscreen-6.5.2.tar.xz) = 1731288 bytes
