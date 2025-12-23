@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/12/22 22:49:19 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/12/23 03:31:41 markd Exp $
 
 DISTNAME=	kleopatra-${KAPPSVER}
 CATEGORIES=	security
@@ -18,7 +18,7 @@ USE_TOOLS+=	msgmerge pkg-config
 .include "../../devel/kf6-kcmutils/buildlink3.mk"
 .include "../../mail/kmailtransport/buildlink3.mk"
 .include "../../mail/kmime/buildlink3.mk"
-#.include "../../mail/mimetreeparser/buildlink3.mk"
+.include "../../mail/mimetreeparser/buildlink3.mk"
 .include "../../misc/kidentitymanagement/buildlink3.mk"
 .include "../../security/libassuan2/buildlink3.mk"
 .include "../../security/libkleo/buildlink3.mk"
