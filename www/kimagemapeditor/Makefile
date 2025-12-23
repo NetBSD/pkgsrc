@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2025/10/23 20:39:46 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2025/12/23 05:52:19 markd Exp $
 
 DISTNAME=	kimagemapeditor-${KAPPSVER}
-PKGREVISION=	10
 CATEGORIES=	www
 
 HOMEPAGE=	https://www.kde.org/
@@ -10,14 +9,13 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.1
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
-.include "../../devel/kparts/buildlink3.mk"
+.include "../../devel/kf6-kparts/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../www/khtml/buildlink3.mk"
-.include "../../x11/qt5-qtwebengine/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../www/qt6-qtwebengine/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
