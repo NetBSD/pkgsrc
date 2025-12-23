@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/12/23 10:23:07 markd Exp $
+
+BLAKE2s (breeze-6.5.2.tar.xz) = 6363e9879a639d7352ab81516cc738eaab72eac79318458cde1b68b87f4701c5
+SHA512 (breeze-6.5.2.tar.xz) = 08a5c6c65fbb62a936c6ff44c0fe972a253be6f0457b8cf327bf99d4362d5e6a9449d2d172c8719f87c7960bdf2832d332f3beb35ba6c8bcc57f4573ee35dee9
+Size (breeze-6.5.2.tar.xz) = 41797820 bytes
