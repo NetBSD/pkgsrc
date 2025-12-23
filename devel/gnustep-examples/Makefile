@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2025/04/17 21:50:20 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2025/12/23 07:49:41 wiz Exp $
 
 DISTNAME=	gnustep-examples-1.3.0
 PKGREVISION=	32
@@ -6,7 +6,7 @@ CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnustep.org/
+HOMEPAGE=	https://www.gnustep.org/
 COMMENT=	Some GUI programming examples for GNUstep
 LICENSE=	gnu-gpl-v2
 
