@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2024/02/06 10:49:54 markd Exp $
-
-BLAKE2s (milou-5.27.10.tar.xz) = 7fb4880134dc912600f3bfd49db95bdc5f0d849166e457e9c0e0db417c26bce0
-SHA512 (milou-5.27.10.tar.xz) = 3ce8bcb0db50dc7cc50ce0b07ef7c6edcab520c236608160eada23c69cb1b2842e6e1763ac8e9ba77c8375b2c9d0a467bc1a1635c164016f236ba8b2d8d390df
-Size (milou-5.27.10.tar.xz) = 58648 bytes
