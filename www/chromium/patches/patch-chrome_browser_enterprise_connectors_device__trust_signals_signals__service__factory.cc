@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_connectors_device__trust_signals_signals__service__factory.cc,v 1.12 2025/12/13 14:53:48 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_connectors_device__trust_signals_signals__service__factory.cc,v 1.13 2025/12/23 13:22:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/device_trust/signals/signals_service_factory.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- chrome/browser/enterprise/connectors/device_trust/signals/signals_service_factory.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ chrome/browser/enterprise/connectors/device_trust/signals/signals_service_factory.cc
 @@ -23,7 +23,7 @@
  #include "chrome/browser/enterprise/connectors/connectors_service.h"

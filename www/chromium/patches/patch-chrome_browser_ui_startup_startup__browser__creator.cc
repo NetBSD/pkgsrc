@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_startup_startup__browser__creator.cc,v 1.12 2025/12/13 14:53:51 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_startup_startup__browser__creator.cc,v 1.13 2025/12/23 13:22:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/startup/startup_browser_creator.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- chrome/browser/ui/startup/startup_browser_creator.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ chrome/browser/ui/startup/startup_browser_creator.cc
 @@ -135,7 +135,7 @@
  #include "chrome/credential_provider/common/gcp_strings.h"

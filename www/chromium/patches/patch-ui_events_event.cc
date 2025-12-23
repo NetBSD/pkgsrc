@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_events_event.cc,v 1.12 2025/12/13 14:54:05 kikadf Exp $
+$NetBSD: patch-ui_events_event.cc,v 1.13 2025/12/23 13:22:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/events/event.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- ui/events/event.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ ui/events/event.cc
 @@ -375,7 +375,7 @@ std::string LocatedEvent::ToString() con
  MouseEvent::MouseEvent(const PlatformEvent& native_event)

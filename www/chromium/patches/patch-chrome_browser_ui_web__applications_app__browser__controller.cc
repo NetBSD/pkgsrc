@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_web__applications_app__browser__controller.cc,v 1.4 2025/12/13 14:53:51 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_web__applications_app__browser__controller.cc,v 1.5 2025/12/23 13:22:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/web_applications/app_browser_controller.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- chrome/browser/ui/web_applications/app_browser_controller.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ chrome/browser/ui/web_applications/app_browser_controller.cc
 @@ -500,7 +500,7 @@ std::u16string AppBrowserController::Get
    // web bundle. The flash text is not needed on platforms that already display
