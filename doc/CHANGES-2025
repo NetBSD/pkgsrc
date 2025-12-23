@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7358 2025/12/23 10:09:14 markd Exp $
+$NetBSD: CHANGES-2025,v 1.7359 2025/12/23 10:14:30 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10833,3 +10833,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added x11/plasma6-kgamma version 6.5.2 [markd 2025-12-23]
 	Added misc/plasma6-kwrited version 6.5.2 [markd 2025-12-23]
 	Added misc/plasma6-xdg-desktop-portal-kde version 6.5.2 [markd 2025-12-23]
+	Added x11/plasma6-plasma-integration version 6.5.2 [markd 2025-12-23]
