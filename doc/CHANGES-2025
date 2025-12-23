@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7345 2025/12/23 06:23:45 markd Exp $
+$NetBSD: CHANGES-2025,v 1.7346 2025/12/23 08:30:48 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10819,3 +10819,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 28.5.0 [pin 2025-12-23]
 	Added x11/plasma6-libplasma version 6.5.2 [markd 2025-12-23]
 	Added x11/plasma6-kdecoration version 6.5.2 [markd 2025-12-23]
+	Added sysutils/plasma6-milou version 6.5.2 [markd 2025-12-23]
+	Removed sysutils/milou successor sysutils/plasma6-milou [markd 2025-12-23]
