@@ -1,9 +1,19 @@
-$NetBSD: patch-ab,v 1.4 2019/10/23 14:02:00 mef Exp $
+$NetBSD: patch-ab,v 1.5 2025/12/23 10:25:07 wiz Exp $
 
+Add missing int to fix build with gcc 14.
 support for new mules
 
---- configure.orig	2009-07-17 07:47:52.000000000 +0900
+--- configure.orig	2003-05-18 08:53:38.000000000 +0000
 +++ configure
+@@ -964,7 +964,7 @@ cat > conftest.$ac_ext << EOF
+ #line 965 "configure"
+ #include "confdefs.h"
+ 
+-main(){return(0);}
++int main(){return(0);}
+ EOF
+ if { (eval echo configure:970: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+   ac_cv_prog_cc_works=yes
 @@ -1227,7 +1227,7 @@ mule1)
  	ELC_FILES="tc-is18.elc"
  	NO_COMPILE_EL_FILES="tc-sysdep.el tc-is19.el tc-is20.el"

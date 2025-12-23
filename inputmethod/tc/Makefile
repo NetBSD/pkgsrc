@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2022/05/14 22:25:37 dholland Exp $
-#
+# $NetBSD: Makefile,v 1.23 2025/12/23 10:25:07 wiz Exp $
 
 DISTNAME=	tc-2.3.1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION=	5
-CATEGORIES=	japanese inputmethod
+CATEGORIES=	inputmethod japanese
 MASTER_SITES=	http://openlab.ring.gr.jp/tcode/resources/soft/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 MAKE_JOBS_SAFE=			no
 SUBST_CLASSES+=			string-to-int
 SUBST_STAGE.string-to-int=	pre-configure
-SUBST_FILES.string-to-int=	 \
+SUBST_FILES.string-to-int=	\
 	lisp/eelll.el	\
 	lisp/tc-is19.el	\
 	lisp/tc-is20.el	\
