@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/12/23 09:42:49 markd Exp $
+
+BLAKE2s (kscreenlocker-6.5.2.tar.xz) = d85f80813479af76ec25a6bc5182cdf8014bcb26032f9b0e14c16f3defccc493
+SHA512 (kscreenlocker-6.5.2.tar.xz) = b2b30c296705feaaa94c4f573bb807b8021d2e56d94bca6658f4399269c3f3b402dce7db143519df15f06501567ea71aec2049fa6ad85356d5665401a8245570
+Size (kscreenlocker-6.5.2.tar.xz) = 187596 bytes
