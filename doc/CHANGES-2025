@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7350 2025/12/23 09:04:10 markd Exp $
+$NetBSD: CHANGES-2025,v 1.7351 2025/12/23 09:13:27 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10825,3 +10825,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added sysutils/plasma6-kinfocenter version 6.5.2 [markd 2025-12-23]
 	Added sysutils/plasma6-kde-cli-tools version 6.5.2 [markd 2025-12-23]
 	Added sysutils/plasma6-kmenuedit version 6.5.2 [markd 2025-12-23]
+	Added security/plasma6-polkit-kde-agent version 6.5.2 [markd 2025-12-23]
