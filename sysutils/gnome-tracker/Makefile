@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2025/10/23 20:39:19 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2025/12/23 07:47:10 wiz Exp $
 
 DISTNAME=	tracker-3.0.1
 PKGNAME=	gnome-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/tracker/3.0/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://wiki.gnome.org/Projects/Tracker
+HOMEPAGE=	https://tracker.gnome.org/overview/
 COMMENT=	Desktop-neutral metadata-based search framework
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
