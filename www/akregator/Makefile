@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/10/23 20:39:44 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/12/23 05:48:07 markd Exp $
 
 DISTNAME=	akregator-${KAPPSVER}
-PKGREVISION=	11
 CATEGORIES=	www
 
 HOMEPAGE=	https://kontact.kde.org/
@@ -10,17 +9,17 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge
 
-.include "../../devel/boost-headers/buildlink3.mk"
-.include "../../devel/knotifyconfig/buildlink3.mk"
-.include "../../devel/ktexteditor/buildlink3.mk"
+.include "../../devel/kf6-knotifyconfig/buildlink3.mk"
+.include "../../devel/kf6-ktexteditor/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../misc/kontactinterface/buildlink3.mk"
-.include "../../misc/kuserfeedback/buildlink3.mk"
+.include "../../misc/kf6-kstatusnotifieritem/buildlink3.mk"
+.include "../../misc/kf6-kuserfeedback/buildlink3.mk"
 .include "../../net/messagelib/buildlink3.mk"
-.include "../../www/syndication/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../www/kf6-syndication/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
