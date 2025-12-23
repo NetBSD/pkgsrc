@@ -1,0 +1,4 @@
+This repository contains a parser for a MIME tree and is based on KMime. The
+goal is given a MIME tree to extract a list of parts (e.g. text, html) and a
+list of attachments, check the validity of the signatures and decrypt any
+encrypted part.
