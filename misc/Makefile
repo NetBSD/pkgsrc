@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.671 2025/12/23 10:08:19 markd Exp $
+# $NetBSD: Makefile,v 1.672 2025/12/23 21:40:12 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -275,6 +275,7 @@ SUBDIR+=	pimcommon
 SUBDIR+=	pinfo
 SUBDIR+=	pixd
 SUBDIR+=	plan9port
+SUBDIR+=	plasma6-kde-gtk-config
 SUBDIR+=	plasma6-kwrited
 SUBDIR+=	plasma6-xdg-desktop-portal-kde
 SUBDIR+=	ppower
