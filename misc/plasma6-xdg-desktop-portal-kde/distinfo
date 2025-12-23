@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/12/23 10:08:19 markd Exp $
+
+BLAKE2s (xdg-desktop-portal-kde-6.5.2.tar.xz) = bd2536242659220eae949a7702c5d21692af351f3a3a275c79cef98e4e1dc037
+SHA512 (xdg-desktop-portal-kde-6.5.2.tar.xz) = e069c17f8bb0f25d939041b323cfb3dc4a7a3d703550d60ed1e9015a84634b503a174178176d1dfa9ac35e87c14b856b344b0e37d234ee732103ab7d695dc3cb
+Size (xdg-desktop-portal-kde-6.5.2.tar.xz) = 210096 bytes
