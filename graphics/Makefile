@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1108 2025/12/23 10:35:14 markd Exp $
+# $NetBSD: Makefile,v 1.1109 2025/12/23 21:49:08 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -463,6 +463,7 @@ SUBDIR+=	pixmap
 SUBDIR+=	plasma6-breeze
 SUBDIR+=	plasma6-breeze-gtk
 SUBDIR+=	plasma6-oxygen
+SUBDIR+=	plasma6-plasma-workspace-wallpapers
 SUBDIR+=	ploticus
 SUBDIR+=	ploticus-examples
 SUBDIR+=	plotmtv
