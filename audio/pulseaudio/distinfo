@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.88 2024/01/30 13:54:32 ryoon Exp $
+$NetBSD: distinfo,v 1.89 2025/12/23 10:47:19 adam Exp $
 
 BLAKE2s (pulseaudio-17.0.tar.xz) = c024be2b80dac3f720d4245255578bc354096a94e47304a83efd31a7283e841d
 SHA512 (pulseaudio-17.0.tar.xz) = be0aec46204d9c9188a796fbe41b4cf6f0f5e6b16fa08ce359b8f0f51253f0ade364b89448bbf5faa2af7e59deb6c72194734c3233944250dcfd4f31968a5e97
 Size (pulseaudio-17.0.tar.xz) = 1566556 bytes
 SHA1 (patch-meson.build) = de85c2fd487dbc2cb2d401583b405112e662287e
 SHA1 (patch-src_daemon_meson.build) = 1747435b458d575abce44e21e39b4edeca2d4729
+SHA1 (patch-src_modules_gsettings_module-gsettings.c) = efd79599d8c165737fdb2caac5d38a13192ce553
 SHA1 (patch-src_modules_module-detect.c) = 72605c7d9392be7217dab2fbd9ecc85ed02021aa
 SHA1 (patch-src_modules_oss_module-oss.c) = d373b855138a931640be7bf5271a33b402b549e5
 SHA1 (patch-src_modules_raop_raop-client.h) = 9fb7ae86a6852022f53aee3765777bd136250ffb
