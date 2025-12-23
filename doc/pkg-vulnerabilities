@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.686 2025/12/20 13:06:49 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.687 2025/12/23 19:19:18 bsiegert Exp $
 #
 #FORMAT 1.0.0
 #
@@ -19557,7 +19557,7 @@ ruby{22,24,25,26,27}-rack<2.2.3			security-bypass			https://nvd.nist.gov/vuln/de
 ruby{22,24,25,26,27}-rack14-[0-9]*		security-bypass			https://nvd.nist.gov/vuln/detail/CVE-2020-8184
 ruby{22,24,25,26,27}-rack16-[0-9]*		security-bypass			https://nvd.nist.gov/vuln/detail/CVE-2020-8184
 go{19,110,113,114}-[0-9]*			denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-14040
-go-bin-[0-9]*					denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-14040
+go-bin<1.16					denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-14040
 alpine<2.23					weak-ssl-authentication		https://nvd.nist.gov/vuln/detail/CVE-2020-14929
 squirrelmail-[0-9]*				code-injection			https://nvd.nist.gov/vuln/detail/CVE-2020-14933
 squirrelmail-[0-9]*				code-injection			https://nvd.nist.gov/vuln/detail/CVE-2020-14932
