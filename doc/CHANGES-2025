@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7344 2025/12/23 06:15:21 markd Exp $
+$NetBSD: CHANGES-2025,v 1.7345 2025/12/23 06:23:45 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10818,3 +10818,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/kimagemapeditor to 25.08.3 [markd 2025-12-23]
 	Updated shells/oh-my-posh to 28.5.0 [pin 2025-12-23]
 	Added x11/plasma6-libplasma version 6.5.2 [markd 2025-12-23]
+	Added x11/plasma6-kdecoration version 6.5.2 [markd 2025-12-23]
