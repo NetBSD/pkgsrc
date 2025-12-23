@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_service_webgpu__decoder__impl.cc,v 1.12 2025/12/13 14:53:57 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_webgpu__decoder__impl.cc,v 1.13 2025/12/23 13:22:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/webgpu_decoder_impl.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- gpu/command_buffer/service/webgpu_decoder_impl.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ gpu/command_buffer/service/webgpu_decoder_impl.cc
 @@ -1758,7 +1758,7 @@ wgpu::Adapter WebGPUDecoderImpl::CreateP
        backend_types = {wgpu::BackendType::D3D12};

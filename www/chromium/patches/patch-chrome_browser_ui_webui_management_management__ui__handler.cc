@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_management_management__ui__handler.cc,v 1.12 2025/12/13 14:53:52 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_management_management__ui__handler.cc,v 1.13 2025/12/23 13:22:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/management/management_ui_handler.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- chrome/browser/ui/webui/management/management_ui_handler.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ chrome/browser/ui/webui/management/management_ui_handler.cc
 @@ -70,7 +70,7 @@
  #include "ui/base/l10n/l10n_util.h"

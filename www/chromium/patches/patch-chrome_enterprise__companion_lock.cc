@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_enterprise__companion_lock.cc,v 1.12 2025/12/13 14:53:53 kikadf Exp $
+$NetBSD: patch-chrome_enterprise__companion_lock.cc,v 1.13 2025/12/23 13:22:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/enterprise_companion/lock.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- chrome/enterprise_companion/lock.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ chrome/enterprise_companion/lock.cc
 @@ -17,7 +17,7 @@
  

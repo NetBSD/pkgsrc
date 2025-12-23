@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_angle_src_common_system__utils__linux.cpp,v 1.12 2025/12/13 14:54:01 kikadf Exp $
+$NetBSD: patch-third__party_angle_src_common_system__utils__linux.cpp,v 1.13 2025/12/23 13:22:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/common/system_utils_linux.cpp.orig	2025-11-19 21:40:05.000000000 +0000
+--- third_party/angle/src/common/system_utils_linux.cpp.orig	2025-12-17 23:05:18.000000000 +0000
 +++ third_party/angle/src/common/system_utils_linux.cpp
 @@ -19,10 +19,17 @@
  #include <sys/types.h>

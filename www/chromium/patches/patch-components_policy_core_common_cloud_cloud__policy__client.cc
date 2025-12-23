@@ -1,10 +1,10 @@
-$NetBSD: patch-components_policy_core_common_cloud_cloud__policy__client.cc,v 1.12 2025/12/13 14:53:54 kikadf Exp $
+$NetBSD: patch-components_policy_core_common_cloud_cloud__policy__client.cc,v 1.13 2025/12/23 13:22:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/common/cloud/cloud_policy_client.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- components/policy/core/common/cloud/cloud_policy_client.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ components/policy/core/common/cloud/cloud_policy_client.cc
 @@ -767,7 +767,7 @@ void CloudPolicyClient::FetchPolicy(Poli
          fetch_request->set_invalidation_payload(invalidation_payload_);

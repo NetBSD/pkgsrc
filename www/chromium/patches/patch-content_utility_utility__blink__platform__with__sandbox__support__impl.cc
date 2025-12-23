@@ -1,10 +1,10 @@
-$NetBSD: patch-content_utility_utility__blink__platform__with__sandbox__support__impl.cc,v 1.12 2025/12/13 14:53:57 kikadf Exp $
+$NetBSD: patch-content_utility_utility__blink__platform__with__sandbox__support__impl.cc,v 1.13 2025/12/23 13:22:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/utility_blink_platform_with_sandbox_support_impl.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- content/utility/utility_blink_platform_with_sandbox_support_impl.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ content/utility/utility_blink_platform_with_sandbox_support_impl.cc
 @@ -9,7 +9,7 @@
  

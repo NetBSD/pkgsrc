@@ -1,10 +1,10 @@
-$NetBSD: patch-content_child_child__process.cc,v 1.12 2025/12/13 14:53:56 kikadf Exp $
+$NetBSD: patch-content_child_child__process.cc,v 1.13 2025/12/23 13:22:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/child/child_process.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- content/child/child_process.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ content/child/child_process.cc
 @@ -37,7 +37,7 @@
  #include "content/common/android/cpu_time_metrics.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_remoting__me2me__host.cc,v 1.12 2025/12/13 14:54:00 kikadf Exp $
+$NetBSD: patch-remoting_host_remoting__me2me__host.cc,v 1.13 2025/12/23 13:22:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/remoting_me2me_host.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- remoting/host/remoting_me2me_host.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ remoting/host/remoting_me2me_host.cc
 @@ -140,7 +140,7 @@
  #include "remoting/host/mac/permission_utils.h"

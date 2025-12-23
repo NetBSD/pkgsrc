@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_renderer__context__menu_render__view__context__menu.cc,v 1.4 2025/12/13 14:53:50 kikadf Exp $
+$NetBSD: patch-chrome_browser_renderer__context__menu_render__view__context__menu.cc,v 1.5 2025/12/23 13:22:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/renderer_context_menu/render_view_context_menu.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- chrome/browser/renderer_context_menu/render_view_context_menu.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ chrome/browser/renderer_context_menu/render_view_context_menu.cc
 @@ -248,7 +248,7 @@
  #include "url/origin.h"

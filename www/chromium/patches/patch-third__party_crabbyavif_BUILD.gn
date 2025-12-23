@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_crabbyavif_BUILD.gn,v 1.4 2025/12/13 14:54:02 kikadf Exp $
+$NetBSD: patch-third__party_crabbyavif_BUILD.gn,v 1.5 2025/12/23 13:22:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crabbyavif/BUILD.gn.orig	2025-11-19 21:40:05.000000000 +0000
+--- third_party/crabbyavif/BUILD.gn.orig	2025-12-17 23:05:18.000000000 +0000
 +++ third_party/crabbyavif/BUILD.gn
 @@ -198,12 +198,11 @@ rust_static_library("crabbyavif") {
      "dav1d",

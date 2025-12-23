@@ -1,10 +1,10 @@
-$NetBSD: patch-base_posix_unix__domain__socket__unittest.cc,v 1.12 2025/12/13 14:53:46 kikadf Exp $
+$NetBSD: patch-base_posix_unix__domain__socket__unittest.cc,v 1.13 2025/12/23 13:22:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/posix/unix_domain_socket_unittest.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- base/posix/unix_domain_socket_unittest.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ base/posix/unix_domain_socket_unittest.cc
 @@ -15,6 +15,8 @@
  #include <sys/types.h>

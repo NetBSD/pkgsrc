@@ -1,10 +1,10 @@
-$NetBSD: patch-base_test_launcher_test__launcher.cc,v 1.12 2025/12/13 14:53:47 kikadf Exp $
+$NetBSD: patch-base_test_launcher_test__launcher.cc,v 1.13 2025/12/23 13:22:11 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/test/launcher/test_launcher.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- base/test/launcher/test_launcher.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ base/test/launcher/test_launcher.cc
 @@ -73,6 +73,7 @@
  #include "testing/gtest/include/gtest/gtest.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_connectors_reporting_realtime__reporting__client.h,v 1.12 2025/12/13 14:53:48 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_connectors_reporting_realtime__reporting__client.h,v 1.13 2025/12/23 13:22:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.h.orig	2025-11-19 21:40:05.000000000 +0000
+--- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.h.orig	2025-12-17 23:05:18.000000000 +0000
 +++ chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.h
 @@ -19,7 +19,7 @@
  #include "components/keyed_service/core/keyed_service.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_partition__root.cc,v 1.12 2025/12/13 14:53:46 kikadf Exp $
+$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_partition__root.cc,v 1.13 2025/12/23 13:22:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_root.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_root.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_root.cc
 @@ -51,7 +51,7 @@
  #include "wow64apiset.h"

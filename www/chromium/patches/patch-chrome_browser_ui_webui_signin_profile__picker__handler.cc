@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_signin_profile__picker__handler.cc,v 1.12 2025/12/13 14:53:52 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_signin_profile__picker__handler.cc,v 1.13 2025/12/23 13:22:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/signin/profile_picker_handler.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- chrome/browser/ui/webui/signin/profile_picker_handler.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ chrome/browser/ui/webui/signin/profile_picker_handler.cc
 @@ -173,7 +173,7 @@ base::Value::Dict CreateProfileState(con
        IDS_PROFILE_PICKER_PROFILE_CARD_LABEL, local_profile_name);

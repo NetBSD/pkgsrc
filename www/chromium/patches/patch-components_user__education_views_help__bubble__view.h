@@ -1,10 +1,10 @@
-$NetBSD: patch-components_user__education_views_help__bubble__view.h,v 1.11 2025/12/13 14:53:55 kikadf Exp $
+$NetBSD: patch-components_user__education_views_help__bubble__view.h,v 1.12 2025/12/23 13:22:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/user_education/views/help_bubble_view.h.orig	2025-11-19 21:40:05.000000000 +0000
+--- components/user_education/views/help_bubble_view.h.orig	2025-12-17 23:05:18.000000000 +0000
 +++ components/user_education/views/help_bubble_view.h
 @@ -160,7 +160,7 @@ class HelpBubbleView : public views::Bub
  // work around this problem by closing the bubble if the widget is minimized.

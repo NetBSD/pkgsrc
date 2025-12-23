@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_safe__browsing_cloud__content__scanning_binary__upload__service.cc,v 1.12 2025/12/13 14:53:50 kikadf Exp $
+$NetBSD: patch-chrome_browser_safe__browsing_cloud__content__scanning_binary__upload__service.cc,v 1.13 2025/12/23 13:22:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/safe_browsing/cloud_content_scanning/binary_upload_service.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- chrome/browser/safe_browsing/cloud_content_scanning/binary_upload_service.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ chrome/browser/safe_browsing/cloud_content_scanning/binary_upload_service.cc
 @@ -21,7 +21,7 @@
  #include "components/safe_browsing/core/common/safebrowsing_switches.h"

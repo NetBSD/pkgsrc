@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_libc++abi_src_src_cxa__guard__impl.h,v 1.12 2025/12/13 14:54:02 kikadf Exp $
+$NetBSD: patch-third__party_libc++abi_src_src_cxa__guard__impl.h,v 1.13 2025/12/23 13:22:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libc++abi/src/src/cxa_guard_impl.h.orig	2025-11-19 21:40:05.000000000 +0000
+--- third_party/libc++abi/src/src/cxa_guard_impl.h.orig	2025-12-17 23:05:18.000000000 +0000
 +++ third_party/libc++abi/src/src/cxa_guard_impl.h
 @@ -425,6 +425,17 @@ void PlatformFutexWake(int* addr) {
    __tsan_release(addr);

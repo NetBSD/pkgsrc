@@ -1,10 +1,10 @@
-$NetBSD: patch-sandbox_linux_services_init__process__reaper.cc,v 1.12 2025/12/13 14:54:00 kikadf Exp $
+$NetBSD: patch-sandbox_linux_services_init__process__reaper.cc,v 1.13 2025/12/23 13:22:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/linux/services/init_process_reaper.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- sandbox/linux/services/init_process_reaper.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ sandbox/linux/services/init_process_reaper.cc
 @@ -2,6 +2,7 @@
  // Use of this source code is governed by a BSD-style license that can be

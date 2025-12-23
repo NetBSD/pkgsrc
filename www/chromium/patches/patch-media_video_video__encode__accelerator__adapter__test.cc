@@ -1,10 +1,10 @@
-$NetBSD: patch-media_video_video__encode__accelerator__adapter__test.cc,v 1.12 2025/12/13 14:53:58 kikadf Exp $
+$NetBSD: patch-media_video_video__encode__accelerator__adapter__test.cc,v 1.13 2025/12/23 13:22:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/video_encode_accelerator_adapter_test.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- media/video/video_encode_accelerator_adapter_test.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ media/video/video_encode_accelerator_adapter_test.cc
 @@ -260,7 +260,7 @@ TEST_F(VideoEncodeAcceleratorAdapterTest
        });

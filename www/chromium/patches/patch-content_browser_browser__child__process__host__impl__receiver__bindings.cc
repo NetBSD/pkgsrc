@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_browser__child__process__host__impl__receiver__bindings.cc,v 1.12 2025/12/13 14:53:56 kikadf Exp $
+$NetBSD: patch-content_browser_browser__child__process__host__impl__receiver__bindings.cc,v 1.13 2025/12/23 13:22:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/browser_child_process_host_impl_receiver_bindings.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- content/browser/browser_child_process_host_impl_receiver_bindings.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ content/browser/browser_child_process_host_impl_receiver_bindings.cc
 @@ -64,7 +64,7 @@ void BrowserChildProcessHostImpl::BindHo
      }

@@ -1,10 +1,10 @@
-$NetBSD: patch-services_network_network__sandbox__hook__linux.cc,v 1.12 2025/12/13 14:54:00 kikadf Exp $
+$NetBSD: patch-services_network_network__sandbox__hook__linux.cc,v 1.13 2025/12/23 13:22:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_sandbox_hook_linux.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- services/network/network_sandbox_hook_linux.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ services/network/network_sandbox_hook_linux.cc
 @@ -15,11 +15,14 @@
  #include "sandbox/linux/syscall_broker/broker_file_permission.h"

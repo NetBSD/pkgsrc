@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_metrics_chrome__browser__main__extra__parts__metrics.cc,v 1.12 2025/12/13 14:53:49 kikadf Exp $
+$NetBSD: patch-chrome_browser_metrics_chrome__browser__main__extra__parts__metrics.cc,v 1.13 2025/12/23 13:22:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc
 @@ -80,7 +80,7 @@
  #endif

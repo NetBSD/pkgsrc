@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.3 2025/10/16 19:43:17 kikadf Exp $
+$NetBSD: README,v 1.4 2025/12/23 13:22:09 kikadf Exp $
 
 Some notes on chromium:
 
@@ -6,8 +6,7 @@ Some notes on chromium:
   The startup wrapper can read chromium flags
   from ~/.config/chromium-flags.conf.
   Example settings in chromium-flags.conf:
-    CHROMIUM_FLAGS="--disable-gpu"
-    CHROMIUM_FLAGS+=" --enable-logging=stderr --v=1"
+    CHROMIUM_FLAGS="--disable-gpu --enable-foo"
 
 2) Disabling WebAssembly
   WebAssembly is enabled by default, but it can be disabled by either:
@@ -29,4 +28,4 @@ Some notes on chromium:
      some content may not draw"
   start chromium with --force-gpu-mem-available-mb=128 flag.
   To make it permanent, add this flag to ~/.config/chromium-flags.conf:
-    CHROMIUM_FLAGS+=" --force-gpu-mem-available-mb=128"
+    CHROMIUM_FLAGS="${CHROMIUM_FLAGS} --force-gpu-mem-available-mb=128"

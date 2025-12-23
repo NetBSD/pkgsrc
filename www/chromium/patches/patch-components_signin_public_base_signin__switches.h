@@ -1,10 +1,10 @@
-$NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.11 2025/12/13 14:53:55 kikadf Exp $
+$NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.12 2025/12/23 13:22:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/signin/public/base/signin_switches.h.orig	2025-11-19 21:40:05.000000000 +0000
+--- components/signin/public/base/signin_switches.h.orig	2025-12-17 23:05:18.000000000 +0000
 +++ components/signin/public/base/signin_switches.h
 @@ -95,7 +95,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kChromeAndroidIdentitySurveyBookmarkPromo);

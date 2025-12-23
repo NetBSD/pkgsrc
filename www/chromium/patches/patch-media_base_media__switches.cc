@@ -1,10 +1,10 @@
-$NetBSD: patch-media_base_media__switches.cc,v 1.12 2025/12/13 14:53:58 kikadf Exp $
+$NetBSD: patch-media_base_media__switches.cc,v 1.13 2025/12/23 13:22:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/media_switches.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- media/base/media_switches.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ media/base/media_switches.cc
 @@ -19,7 +19,7 @@
  #include "ui/gl/gl_features.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_safe__browsing_core_browser_realtime_url__lookup__service__base.cc,v 1.12 2025/12/13 14:53:55 kikadf Exp $
+$NetBSD: patch-components_safe__browsing_core_browser_realtime_url__lookup__service__base.cc,v 1.13 2025/12/23 13:22:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/safe_browsing/core/browser/realtime/url_lookup_service_base.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- components/safe_browsing/core/browser/realtime/url_lookup_service_base.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ components/safe_browsing/core/browser/realtime/url_lookup_service_base.cc
 @@ -112,7 +112,7 @@ RTLookupRequest::OSType GetRTLookupReque
    return RTLookupRequest::OS_TYPE_CHROME_OS;

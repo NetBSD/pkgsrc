@@ -1,10 +1,10 @@
-$NetBSD: patch-sandbox_policy_features.cc,v 1.12 2025/12/13 14:54:00 kikadf Exp $
+$NetBSD: patch-sandbox_policy_features.cc,v 1.13 2025/12/23 13:22:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/features.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- sandbox/policy/features.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ sandbox/policy/features.cc
 @@ -17,7 +17,11 @@ namespace sandbox::policy::features {
  #if !BUILDFLAG(IS_MAC) && !BUILDFLAG(IS_FUCHSIA)

@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_graphics_gpu_image__layer__bridge.cc,v 1.12 2025/12/13 14:54:02 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_graphics_gpu_image__layer__bridge.cc,v 1.13 2025/12/23 13:22:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/graphics/gpu/image_layer_bridge.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- third_party/blink/renderer/platform/graphics/gpu/image_layer_bridge.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ third_party/blink/renderer/platform/graphics/gpu/image_layer_bridge.cc
 @@ -47,7 +47,7 @@ scoped_refptr<StaticBitmapImage> MakeAcc
  

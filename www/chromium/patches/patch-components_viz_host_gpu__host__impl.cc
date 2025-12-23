@@ -1,10 +1,10 @@
-$NetBSD: patch-components_viz_host_gpu__host__impl.cc,v 1.11 2025/12/13 14:53:55 kikadf Exp $
+$NetBSD: patch-components_viz_host_gpu__host__impl.cc,v 1.12 2025/12/23 13:22:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/host/gpu_host_impl.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- components/viz/host/gpu_host_impl.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ components/viz/host/gpu_host_impl.cc
 @@ -157,7 +157,7 @@ GpuHostImpl::GpuHostImpl(Delegate* deleg
        mojom::GpuServiceCreationParams::New();

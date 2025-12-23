@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_tools_run.py,v 1.12 2025/12/13 14:54:06 kikadf Exp $
+$NetBSD: patch-v8_tools_run.py,v 1.13 2025/12/23 13:22:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/tools/run.py.orig	2025-11-19 21:40:05.000000000 +0000
+--- v8/tools/run.py.orig	2025-12-17 23:05:18.000000000 +0000
 +++ v8/tools/run.py
 @@ -21,7 +21,7 @@ if cmd and cmd[0] == '--redirect-stdout'
    kwargs = dict(stdout=subprocess.PIPE)

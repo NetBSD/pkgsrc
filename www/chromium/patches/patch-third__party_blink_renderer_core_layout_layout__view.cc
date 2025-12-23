@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_core_layout_layout__view.cc,v 1.12 2025/12/13 14:54:01 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_core_layout_layout__view.cc,v 1.13 2025/12/23 13:22:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/layout/layout_view.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- third_party/blink/renderer/core/layout/layout_view.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ third_party/blink/renderer/core/layout/layout_view.cc
 @@ -75,7 +75,7 @@
  #include "ui/display/screen_info.h"

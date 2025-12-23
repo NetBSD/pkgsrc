@@ -1,10 +1,10 @@
-$NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.12 2025/12/13 14:53:46 kikadf Exp $
+$NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.13 2025/12/23 13:22:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/debug/stack_trace_posix.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- base/debug/stack_trace_posix.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ base/debug/stack_trace_posix.cc
 @@ -50,8 +50,8 @@
  // Surprisingly, uClibc defines __GLIBC__ in some build configs, but
