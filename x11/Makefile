@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1069 2025/12/23 06:14:01 markd Exp $
+# $NetBSD: Makefile,v 1.1070 2025/12/23 06:22:34 markd Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -289,6 +289,7 @@ SUBDIR+=	p5-gtk3
 SUBDIR+=	picom
 SUBDIR+=	pixman
 SUBDIR+=	plasma-framework
+SUBDIR+=	plasma6-kdecoration
 SUBDIR+=	plasma6-layer-shell-qt
 SUBDIR+=	plasma6-libkscreen
 SUBDIR+=	plasma6-libplasma
