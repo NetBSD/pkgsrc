@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2025/12/23 09:58:51 markd Exp $
+${PLIST.noutempter}bin/kwrited
+${PLIST.utempter}qt6/plugins/kf6/kded/kwrited.so
+${PLIST.noutempter}share/examples/kde-xdg/autostart/kwrited-autostart.desktop
+share/knotifications6/kwrited.notifyrc
