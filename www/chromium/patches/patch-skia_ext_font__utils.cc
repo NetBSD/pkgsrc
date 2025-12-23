@@ -1,10 +1,10 @@
-$NetBSD: patch-skia_ext_font__utils.cc,v 1.12 2025/12/13 14:54:01 kikadf Exp $
+$NetBSD: patch-skia_ext_font__utils.cc,v 1.13 2025/12/23 13:22:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- skia/ext/font_utils.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- skia/ext/font_utils.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ skia/ext/font_utils.cc
 @@ -21,7 +21,7 @@
  #include "third_party/skia/include/ports/SkFontMgr_mac_ct.h"

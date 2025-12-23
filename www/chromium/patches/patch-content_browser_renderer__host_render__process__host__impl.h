@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_renderer__host_render__process__host__impl.h,v 1.12 2025/12/13 14:53:56 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_render__process__host__impl.h,v 1.13 2025/12/23 13:22:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_process_host_impl.h.orig	2025-11-19 21:40:05.000000000 +0000
+--- content/browser/renderer_host/render_process_host_impl.h.orig	2025-12-17 23:05:18.000000000 +0000
 +++ content/browser/renderer_host/render_process_host_impl.h
 @@ -103,7 +103,7 @@
  #include "media/fuchsia_media_codec_provider_impl.h"

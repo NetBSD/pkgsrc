@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_remote__open__url_remote__open__url__client.cc,v 1.12 2025/12/13 14:54:00 kikadf Exp $
+$NetBSD: patch-remoting_host_remote__open__url_remote__open__url__client.cc,v 1.13 2025/12/23 13:22:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/remote_open_url/remote_open_url_client.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- remoting/host/remote_open_url/remote_open_url_client.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ remoting/host/remote_open_url/remote_open_url_client.cc
 @@ -18,7 +18,7 @@
  #include "remoting/host/mojom/chromoting_host_services.mojom.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-device_gamepad_gamepad__provider.cc,v 1.12 2025/12/13 14:53:57 kikadf Exp $
+$NetBSD: patch-device_gamepad_gamepad__provider.cc,v 1.13 2025/12/23 13:22:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- device/gamepad/gamepad_provider.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- device/gamepad/gamepad_provider.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ device/gamepad/gamepad_provider.cc
 @@ -201,7 +201,7 @@ void GamepadProvider::Initialize(std::un
  

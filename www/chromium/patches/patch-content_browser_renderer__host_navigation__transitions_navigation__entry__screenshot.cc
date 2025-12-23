@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_renderer__host_navigation__transitions_navigation__entry__screenshot.cc,v 1.4 2025/12/13 14:53:56 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_navigation__transitions_navigation__entry__screenshot.cc,v 1.5 2025/12/23 13:22:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/navigation_transitions/navigation_entry_screenshot.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- content/browser/renderer_host/navigation_transitions/navigation_entry_screenshot.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ content/browser/renderer_host/navigation_transitions/navigation_entry_screenshot.cc
 @@ -28,7 +28,7 @@
  #include "third_party/skia/include/core/SkBitmap.h"

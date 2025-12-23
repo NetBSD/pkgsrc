@@ -1,10 +1,10 @@
-$NetBSD: patch-components_autofill_core_browser_suggestions_payments_payments__suggestion__generator.cc,v 1.2 2025/12/13 14:53:53 kikadf Exp $
+$NetBSD: patch-components_autofill_core_browser_suggestions_payments_payments__suggestion__generator.cc,v 1.3 2025/12/23 13:22:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/suggestions/payments/payments_suggestion_generator.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- components/autofill/core/browser/suggestions/payments/payments_suggestion_generator.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ components/autofill/core/browser/suggestions/payments/payments_suggestion_generator.cc
 @@ -1462,7 +1462,7 @@ std::vector<Suggestion> GetCreditCardSug
                                   .GetBnplIssuers(),

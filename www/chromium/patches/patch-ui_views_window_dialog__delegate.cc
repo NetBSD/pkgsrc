@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_views_window_dialog__delegate.cc,v 1.12 2025/12/13 14:54:06 kikadf Exp $
+$NetBSD: patch-ui_views_window_dialog__delegate.cc,v 1.13 2025/12/23 13:22:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/window/dialog_delegate.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- ui/views/window/dialog_delegate.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ ui/views/window/dialog_delegate.cc
 @@ -108,7 +108,7 @@ Widget* DialogDelegate::CreateDialogWidg
  

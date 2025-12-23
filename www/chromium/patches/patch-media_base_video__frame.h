@@ -1,10 +1,10 @@
-$NetBSD: patch-media_base_video__frame.h,v 1.12 2025/12/13 14:53:58 kikadf Exp $
+$NetBSD: patch-media_base_video__frame.h,v 1.13 2025/12/23 13:22:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.h.orig	2025-11-19 21:40:05.000000000 +0000
+--- media/base/video_frame.h.orig	2025-12-17 23:05:18.000000000 +0000
 +++ media/base/video_frame.h
 @@ -41,7 +41,7 @@
  #include "ui/gfx/geometry/size.h"

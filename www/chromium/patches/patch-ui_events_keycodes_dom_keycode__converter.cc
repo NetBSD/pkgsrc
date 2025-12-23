@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_events_keycodes_dom_keycode__converter.cc,v 1.12 2025/12/13 14:54:05 kikadf Exp $
+$NetBSD: patch-ui_events_keycodes_dom_keycode__converter.cc,v 1.13 2025/12/23 13:22:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/events/keycodes/dom/keycode_converter.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- ui/events/keycodes/dom/keycode_converter.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ ui/events/keycodes/dom/keycode_converter.cc
 @@ -14,7 +14,7 @@
  #include "ui/events/keycodes/dom/dom_code.h"

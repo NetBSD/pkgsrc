@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_headless_headless__mode__util.cc,v 1.11 2025/12/13 14:53:49 kikadf Exp $
+$NetBSD: patch-chrome_browser_headless_headless__mode__util.cc,v 1.12 2025/12/23 13:22:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/headless/headless_mode_util.cc.orig	2025-11-19 21:40:05.000000000 +0000
+--- chrome/browser/headless/headless_mode_util.cc.orig	2025-12-17 23:05:18.000000000 +0000
 +++ chrome/browser/headless/headless_mode_util.cc
 @@ -12,7 +12,7 @@
  // New headless mode is available on Linux, Windows and Mac platforms.
