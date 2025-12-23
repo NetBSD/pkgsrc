@@ -1,0 +1,6 @@
+Foundational libraries, components, and tools of the Plasma workspaces
+
+libplasma provides the following:
+- QML components that can be used by any Plasma shell
+- A C++ library: `libplasma` itself
+- Script engines
