@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/12/23 09:27:50 markd Exp $
+
+BLAKE2s (kactivitymanagerd-6.5.2.tar.xz) = 1a8d2028f28dcf35c1bedb552e25790c32cb479ee470048d30039ce5253e1f2f
+SHA512 (kactivitymanagerd-6.5.2.tar.xz) = bccdfd9beceac782bb9c1ad7d7b3d18e0529ed9de202e9fd6654754ec3aa135f9b5edde80e19dd5eb987731c946c99639f4a5bd9bfb92cb645530619a9e75b28
+Size (kactivitymanagerd-6.5.2.tar.xz) = 99604 bytes
