@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2025/04/30 12:36:36 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.3 2025/12/24 22:21:00 wiz Exp $
 #
 # used by editors/emacs30/Makefile
 # used by editors/emacs30-nox11/Makefile
@@ -38,8 +38,6 @@ USE_GAMESGROUP=		yes
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		GAMEDATAMODE
 PLIST_SRC+=		../../editors/emacs30/PLIST
-# also used by the nox11 package, so needs to be set here
-PLIST_VARS+=		native
 
 MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores \

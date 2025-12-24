@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/04/28 08:29:13 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/12/24 22:21:00 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/emacs/emacs30/:S/-/-nox11-/}
 
@@ -14,8 +14,6 @@ CONFIGURE_ARGS+=	--without-all --without-x --without-ns
 # but we want to gzip installed files and have module support
 CONFIGURE_ARGS+=	--with-compress-install
 CONFIGURE_ARGS+=	--with-modules
-
-PLIST.native=	no
 
 .include "../../editors/emacs30/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
