@@ -1,11 +1,11 @@
-$NetBSD: patch-browser_app_profile_firefox.js,v 1.6 2025/04/30 03:47:13 ryoon Exp $
+$NetBSD: patch-browser_app_profile_firefox.js,v 1.7 2025/12/24 16:47:38 ryoon Exp $
 
 This patch modifies default Firefox settings - see the comments above
 each one.
 
---- browser/app/profile/firefox.js.orig	2024-03-08 13:19:26.000000000 +0000
+--- browser/app/profile/firefox.js.orig	2025-10-03 13:17:55.000000000 +0000
 +++ browser/app/profile/firefox.js
-@@ -2461,6 +2461,39 @@ pref("app.normandy.onsync_skew_sec", 600
+@@ -2842,6 +2842,39 @@ pref("app.normandy.onsync_skew_sec", 600
  pref("toolkit.coverage.enabled", false);
  pref("toolkit.coverage.endpoint.base", "https://coverage.mozilla.org");
  
