@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2025/12/21 09:38:11 markd Exp $
+$NetBSD: distinfo,v 1.2 2025/12/24 15:58:52 wiz Exp $
 
 BLAKE2s (kikadf-chromium-audioio-v130.0.tar.gz) = 45fe07cb8280f81b8ef490059002da426b59fe69b5ebd53951fe1dc3e9495a10
 SHA512 (kikadf-chromium-audioio-v130.0.tar.gz) = 840aed119dc69982f14fd5f4767e144bfc8a66672b660f0f05f5459070d7f6a36b8719ae7c0de049f7345dec39266759aedcdd5ee37aa4e98bcd2b44d06a3a4c
@@ -751,6 +751,7 @@ SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_build_scripts_run_
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_controller_blink__initializer.cc) = a00bef8e201666ae078324387dbbe09df7db483c
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_controller_memory__usage__monitor__posix.cc) = da609482ea0a82e6b9bcc95e666a143b6e6f0680
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_controller_memory__usage__monitor__posix.h) = b7dcb2da184995b5ba3f0785d7ea648a9b3a602f
+SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_core_css_css__unresolved__color__value.cc) = 19edde022922525498de5314f69a812a70eb0c87
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_core_css_properties_css__color__function__parser.cc) = e9b8a9954335bb944be3c212d08586f4752a02c5
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_core_editing_editing__behavior.cc) = 4e8b0a004e1fd44002d2453d7f5ac868bed7d604
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_core_execution__context_navigator__base.cc) = cd3d4a3358c7d6e0a6de4c96d7e28f6581984c82
