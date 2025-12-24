@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2025/04/17 21:50:15 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2025/12/24 08:14:43 wiz Exp $
 
 DISTNAME=	ProjectCenter-0.6.2
 PKGREVISION=	25
@@ -6,7 +6,7 @@ CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=dev-apps/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnustep.org/experience/ProjectCenter.html
+HOMEPAGE=	https://www.gnustep.org/experience/ProjectCenter.html
 COMMENT=	GNUstep Integrated Development Environment
 LICENSE=	gnu-gpl-v3
 
