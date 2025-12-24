@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7376 2025/12/24 15:34:30 leot Exp $
+$NetBSD: CHANGES-2025,v 1.7377 2025/12/24 15:37:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10852,4 +10852,9 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox to 146.0.1 [ryoon 2025-12-24]
 	Updated www/firefox-l10n to 146.0.1 [ryoon 2025-12-24]
 	Updated misc/libreoffice to 25.8.4.2 [ryoon 2025-12-24]
+<<<<<<< CHANGES-2025
+	Removed devel/sdcc3 [ryoon 2025-12-24]
+=======
 	Updated multimedia/mpv to 0.41.0 [leot 2025-12-24]
+>>>>>>> 1.7376
+	Updated devel/sdcc to 4.5.0 [ryoon 2025-12-24]
