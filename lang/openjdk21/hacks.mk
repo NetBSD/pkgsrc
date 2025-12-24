@@ -1,7 +1,7 @@
-# $NetBSD: hacks.mk,v 1.2 2025/08/11 18:06:32 pho Exp $
+# $NetBSD: hacks.mk,v 1.3 2025/12/24 16:11:56 ryoon Exp $
 
-.if !defined(OPENJDK17_HACKS_MK)
-OPENJDK17_HACKS_MK=	# empty
+.if !defined(OPENJDK21_HACKS_MK)
+OPENJDK21_HACKS_MK=	# empty
 
 ### Ensure we do not pickup external jpeg includes: openjdk uses an internal
 ### libjpeg with potentially conflicting defines, which breaks at least
