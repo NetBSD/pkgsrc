@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2025/02/20 14:34:52 manu Exp $
+# $NetBSD: Makefile,v 1.66 2025/12/24 08:14:20 wiz Exp $
 
 DISTNAME=	gnustep-make-2.9.3
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gnustep/}
@@ -9,7 +9,7 @@ WRKSRC=		${WRKDIR}/tools-make-make-2_9_3
 CATEGORIES=	devel gnustep
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnustep.org/
+HOMEPAGE=	https://www.gnustep.org/
 COMMENT=	GNUstep makefile package
 LICENSE=	gnu-gpl-v3
 
