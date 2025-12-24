@@ -1,0 +1,32 @@
+$NetBSD: patch-sim_ucsim_configure,v 1.1 2025/12/24 15:37:03 ryoon Exp $
+
+* POSIX shell portability.
+
+--- sim/ucsim/configure.orig	2025-01-23 16:26:02.000000000 +0000
++++ sim/ucsim/configure
+@@ -3238,13 +3238,13 @@ fi
+ 
+ in_sdcc="no"
+ src_root=$(dirname $0)
+-if test "$src_root"x == "x" -o "$src_root" == "." ; then
++if test "$src_root"x = "x" -o "$src_root" = "." ; then
+     src_root=$(pwd)
+ fi
+ last_root=$(basename $src_root)
+-if test $last_root == "ucsim" ; then
++if test $last_root = "ucsim" ; then
+     up_src=$(dirname $src_root)
+-    if test $(basename $up_src) == "sim" ; then
++    if test $(basename $up_src) = "sim" ; then
+ 	in_sdcc="yes"
+     fi
+ fi
+@@ -3703,7 +3703,7 @@ def_p1516="yes"
+ def_f8="yes"
+ def_oisc="yes"
+ 
+-if test $in_sdcc == "yes" ; then
++if test $in_sdcc = "yes" ; then
+     def_feapp="no"
+     def_serio="no"
+     def_i8048="no"

@@ -1,32 +1,39 @@
-$NetBSD: patch-aa,v 1.9 2012/05/05 21:33:55 dholland Exp $
+$NetBSD: patch-aa,v 1.10 2025/12/24 15:37:01 ryoon Exp $
 
  - avoid installing various trash files
  - use find correctly when doing so
  - stop on error when doing so
 
---- device/lib/Makefile.in.orig	2007-06-03 20:38:18.000000000 +0000
+--- device/lib/Makefile.in.orig	2024-08-04 11:36:41.000000000 +0000
 +++ device/lib/Makefile.in
-@@ -352,16 +352,18 @@ install: all installdirs
- 
- 	for src in $(MODELS) ds390 ds400 gbz80 z80 hc08 pic pic16; do \
- 	  find $(sdcc_libdir)/src/$$src -depth \
+@@ -685,30 +685,6 @@ clean_intermediate-pic14:
+ # ---------------------------------------------------
+ install: all installdirs
+ 	[ ! -d "$(BUILDDIR)" ] || $(CP_U) -r $(BUILDDIR)/* $(sdcc_libdir)
+-	$(CP_U) -r $(MODELS) $(srcdir)/mcs51 $(srcdir)/ds390 $(srcdir)/ds400 \
+-	                     $(srcdir)/z80 $(srcdir)/z180 $(srcdir)/ez80_z80 $(srcdir)/z80n $(srcdir)/r2k $(srcdir)/r2ka $(srcdir)/r3ka $(srcdir)/tlcs90 $(srcdir)/sm83 $(srcdir)/r800 \
+-	                     $(srcdir)/hc08 $(srcdir)/s08 \
+-	                     $(srcdir)/mos6502 $(srcdir)/mos65c02 \
+-	                     $(srcdir)/stm8 \
+-	                     $(srcdir)/pdk13 $(srcdir)/pdk14 $(srcdir)/pdk15 \
+-	                     $(srcdir)/f8 \
+-	                     $(srcdir)/pic14 $(srcdir)/pic16 $(srcdir)/*.c $(sdcc_libdir)/src
+-	$(CP_U) -r $(MODELS) mcs51 ds390 ds400 z80 z180 ez80_z80 z80n r2k r2ka r3ka tlcs90 sm83 r800 hc08 s08 stm8 pdk13 pdk14 pdk15 f8 $(sdcc_libdir)/src
+-
+-	for src in $(MODELS) ds390 ds400 z80 z180 ez80_z80 z80n r2k r2ka r3ka tlcs90 sm83 r800 hc08 s08 mos6502 mos65c02 stm8 pdk13 pdk14 pdk15 f8 pic14 pic16; do \
+-	  find $(sdcc_libdir)/src/$$src -depth \
 -	    \( -name '*.rel' -o -name '*.dump*' -o -name '*.sym' -o -name '*.o' -o -name '*.lib' -o \
--	    -name '*.lst' -o -name '*.asm' -o -name '.svn' -o -name 'build' -o -name 'bin' -o \
--	    -name 'Makefile*' \) \
--	    -exec rm -rf {}+ \; ; \
-+            \( -name '*.rel' -o -name '*.dump*' -o -name '*.sym' -o -name '*.o' -o -name '*.lib' -o \
-+            -name '*.lst' -o -name '*.asm' -o -name '.svn' -o -name 'autom4te.cache' -o \
-+            -name 'build' -o -name 'bin' -o -name 'Makefile*' -o -name 'config*' -o \
-+            -name 'depcomp' -o -name 'missing' -o -name 'install-sh' -o \
-+            -name 'bootstrap.sh' \) \
-+            -exec rm -rf {} + || exit 1; \
- 	done
- 	find $(sdcc_libdir)/src/mcs51 -depth \
- 	  \( -name '*.rel' -o -name '*.dump*' -o -name '*.sym' -o -name '*.o' -o -name '*.lib' -o \
- 	  -name '*.lst' -o -name '.svn' -o -name 'build' -o -name 'bin' -o \
- 	  -name 'Makefile*' \) \
--	  -exec rm -rf {}+ \;
-+	  -exec rm -rf {} +
+-	    -name '*.lst' -o -name '*.asm' -o -name '.svn' -o -name 'autom4te.cache' -o \
+-	    -name 'build' -o -name 'bin' -o -name 'Makefile*' -o -name 'config*' -o \
+-	    -name 'depcomp' -o -name 'missing' -o -name 'install-sh' -o \
+-	    -name 'bootstrap.sh' \) \
+-	    -exec rm -rf {} + ; \
+-	done
+-	find $(sdcc_libdir)/src/mcs51 -depth \
+-	  \( -name '*.rel' -o -name '*.dump*' -o -name '*.sym' -o -name '*.o' -o -name '*.lib' -o \
+-	  -name '*.lst' -o -name '.svn' -o -name 'build' -o -name 'bin' -o \
+-	  -name 'Makefile*' \) \
+-	  -exec rm -rf {} +
  
  # Deleting all the installed files
  # --------------------------------
