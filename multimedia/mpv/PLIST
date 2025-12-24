@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2025/04/24 10:26:30 leot Exp $
+@comment $NetBSD: PLIST,v 1.19 2025/12/24 15:34:22 leot Exp $
 bin/mpv
 include/mpv/client.h
 include/mpv/render.h
@@ -11,11 +11,11 @@ lib/pkgconfig/mpv.pc
 man/man1/mpv.1
 ${PLIST.desktop}share/applications/mpv.desktop
 share/bash-completion/completions/mpv
+share/doc/mpv/encoding-profiles.conf
 share/doc/mpv/input.conf
 share/doc/mpv/mplayer-input.conf
 share/doc/mpv/restore-old-bindings.conf
 share/doc/mpv/restore-osc-bindings.conf
-share/examples/mpv/encoding-profiles.conf
 share/examples/mpv/mpv.conf
 share/fish/vendor_completions.d/mpv.fish
 share/icons/hicolor/128x128/apps/mpv.png
