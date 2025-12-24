@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.181 2025/12/22 06:08:14 adam Exp $
+# $NetBSD: Makefile,v 1.182 2025/12/24 15:34:22 leot Exp $
 
-DISTNAME=	mpv-0.40.0
-PKGREVISION=	3
+DISTNAME=	mpv-0.41.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mpv-player/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -30,8 +29,6 @@ USE_TOOLS+=	perl pkg-config
 
 MAKE_DIRS=		${PKG_SYSCONFDIR}/mpv
 INSTALLATION_DIRS=	share/examples/mpv
-CONF_FILES+=		share/examples/mpv/encoding-profiles.conf \
-			${PKG_SYSCONFDIR}/mpv/encoding-profiles.conf
 CONF_FILES+=		share/examples/mpv/mpv.conf \
 			${PKG_SYSCONFDIR}/mpv/mpv.conf
 

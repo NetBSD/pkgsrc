@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.39 2025/12/14 13:25:04 vins Exp $
+# $NetBSD: options.mk,v 1.40 2025/12/24 15:34:22 leot Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
@@ -139,11 +139,13 @@ MESON_ARGS+=	-Dsndio=disabled
 ###
 .if !empty(PKG_OPTIONS:Msdl2)
 MESON_ARGS+=	-Dsdl2-audio=enabled
-MESON_ARGS+=	-Dsdl2=enabled
+MESON_ARGS+=	-Dsdl2-gamepad=enabled
+MESON_ARGS+=	-Dsdl2-video=enabled
 .include "../../devel/SDL2/buildlink3.mk"
 .else
 MESON_ARGS+=	-Dsdl2-audio=disabled
-MESON_ARGS+=	-Dsdl2=disabled
+MESON_ARGS+=	-Dsdl2-gamepad=disabled
+MESON_ARGS+=	-Dsdl2-video=disabled
 .endif
 
 ###
