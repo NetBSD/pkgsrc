@@ -1,0 +1,15 @@
+$NetBSD: patch-support_cpp_gcc_configure,v 1.1 2025/12/24 15:37:03 ryoon Exp $
+
+* POSIX shell portability.
+
+--- support/cpp/gcc/configure.orig	2022-12-24 04:45:20.000000000 +0000
++++ support/cpp/gcc/configure
+@@ -6017,7 +6017,7 @@ _ACEOF
+ if test "$enable_largefile" != no; then
+   case "$host, $build" in
+     *-*-aix*,*|*,*-*-aix*)
+-      if test "$ac_cv_sizeof_ino_t" == "4" -a "$ac_cv_sizeof_dev_t" == 4; then
++      if test "$ac_cv_sizeof_ino_t" = "4" -a "$ac_cv_sizeof_dev_t" = 4; then
+ 
+ $as_echo "#define HOST_STAT_FOR_64BIT_INODES stat64x" >>confdefs.h
+ 
