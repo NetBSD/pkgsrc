@@ -1,0 +1,40 @@
+$NetBSD: patch-third__party_libwebrtc_modules_video__capture_video__capture__internal__impl__gn_moz.build,v 1.1 2025/12/24 15:26:41 ryoon Exp $
+
+--- third_party/libwebrtc/modules/video_capture/video_capture_internal_impl_gn/moz.build.orig	2025-12-02 15:13:29.385557469 +0000
++++ third_party/libwebrtc/modules/video_capture/video_capture_internal_impl_gn/moz.build
+@@ -282,7 +282,7 @@ if CONFIG["OS_TARGET"] == "Android" and 
+         "-msse2"
+     ]
+ 
+-if CONFIG["TARGET_CPU"] == "aarch64" and (CONFIG["OS_TARGET"] == "Linux" or CONFIG["OS_TARGET"] == "NetBSD" or CONFIG["OS_TARGET"] == "OpenBSD" or CONFIG["OS_TARGET"] == "FreeBSD"):
++if CONFIG["TARGET_CPU"] == "aarch64" and CONFIG["OS_TARGET"] == "Linux":
+ 
+     DEFINES["WEBRTC_USE_PIPEWIRE"] = True
+     DEFINES["_GNU_SOURCE"] = True
+@@ -299,7 +299,7 @@ if CONFIG["TARGET_CPU"] == "aarch64" and
+         "/third_party/libwebrtc/modules/video_capture/linux/video_capture_pipewire.cc"
+     ]
+ 
+-if CONFIG["TARGET_CPU"] == "arm" and (CONFIG["OS_TARGET"] == "Linux" or CONFIG["OS_TARGET"] == "NetBSD" or CONFIG["OS_TARGET"] == "OpenBSD" or CONFIG["OS_TARGET"] == "FreeBSD"):
++if CONFIG["TARGET_CPU"] == "arm" and CONFIG["OS_TARGET"] == "Linux":
+ 
+     DEFINES["WEBRTC_USE_PIPEWIRE"] = True
+     DEFINES["_GNU_SOURCE"] = True
+@@ -316,7 +316,7 @@ if CONFIG["TARGET_CPU"] == "arm" and (CO
+         "/third_party/libwebrtc/modules/video_capture/linux/video_capture_pipewire.cc"
+     ]
+ 
+-if CONFIG["TARGET_CPU"] == "x86" and (CONFIG["OS_TARGET"] == "Linux" or CONFIG["OS_TARGET"] == "NetBSD" or CONFIG["OS_TARGET"] == "OpenBSD" or CONFIG["OS_TARGET"] == "FreeBSD"):
++if CONFIG["TARGET_CPU"] == "x86" and CONFIG["OS_TARGET"] == "Linux":
+ 
+     CXXFLAGS += [
+         "-msse2"
+@@ -337,7 +337,7 @@ if CONFIG["TARGET_CPU"] == "x86" and (CO
+         "/third_party/libwebrtc/modules/video_capture/linux/video_capture_pipewire.cc"
+     ]
+ 
+-if CONFIG["TARGET_CPU"] == "x86_64" and (CONFIG["OS_TARGET"] == "Linux" or CONFIG["OS_TARGET"] == "NetBSD" or CONFIG["OS_TARGET"] == "OpenBSD" or CONFIG["OS_TARGET"] == "FreeBSD"):
++if CONFIG["TARGET_CPU"] == "x86_64" and CONFIG["OS_TARGET"] == "Linux":
+ 
+     DEFINES["WEBRTC_USE_PIPEWIRE"] = True
+     DEFINES["_GNU_SOURCE"] = True

@@ -1,0 +1,29 @@
+$NetBSD: patch-third__party_libwebrtc_modules_portal_portal__gn_moz.build,v 1.1 2025/12/24 15:26:41 ryoon Exp $
+
+--- third_party/libwebrtc/modules/portal/portal_gn/moz.build.orig	2025-12-02 15:14:25.832556602 +0000
++++ third_party/libwebrtc/modules/portal/portal_gn/moz.build
+@@ -41,7 +41,8 @@ DEFINES["WEBRTC_MOZILLA_BUILD"] = True
+ DEFINES["WEBRTC_NON_STATIC_TRACE_EVENT_HANDLERS"] = "0"
+ DEFINES["WEBRTC_POSIX"] = True
+ DEFINES["WEBRTC_STRICT_FIELD_TRIALS"] = "0"
+-DEFINES["WEBRTC_USE_PIPEWIRE"] = True
++if CONFIG["OS_TARGET"] == "Linux":
++    DEFINES["WEBRTC_USE_PIPEWIRE"] = True
+ DEFINES["_FILE_OFFSET_BITS"] = "64"
+ DEFINES["_GLIBCXX_ASSERTIONS"] = "1"
+ DEFINES["_GNU_SOURCE"] = True
+@@ -67,10 +68,13 @@ LOCAL_INCLUDES += [
+ ]
+ 
+ UNIFIED_SOURCES += [
+-    "/third_party/libwebrtc/modules/portal/pipewire_utils.cc",
+     "/third_party/libwebrtc/modules/portal/scoped_glib.cc",
+     "/third_party/libwebrtc/modules/portal/xdg_desktop_portal_utils.cc"
+ ]
++if CONFIG["OS_TARGET"] == "Linux":
++    UNIFIED_SOURCES += [
++        "/third_party/libwebrtc/modules/portal/pipewire_utils.cc"
++    ]
+ 
+ if not CONFIG["MOZ_DEBUG"]:
+ 
