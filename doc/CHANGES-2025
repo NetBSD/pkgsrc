@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7371 2025/12/24 13:28:48 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.7372 2025/12/24 14:58:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10848,3 +10848,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added misc/plasma6-kde-gtk-config version 6.5.2 [markd 2025-12-23]
 	Added graphics/plasma6-plasma-workspace-wallpapers version 6.5.2 [markd 2025-12-23]
 	Updated x11/kitty to 0.45.0 [ktnb 2025-12-24]
+	Updated devel/cbindgen to 0.29.2 [ryoon 2025-12-24]
