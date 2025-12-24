@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.304 2025/11/14 20:47:01 tsutsui Exp $
+# $NetBSD: mozilla-common.mk,v 1.305 2025/12/24 15:26:40 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -25,7 +25,7 @@ USE_LANGUAGES+=		c c++
 # XXX: As of 145.0
 GCC_REQD+=		10
 
-TOOL_DEPENDS+=		cbindgen>=0.28.0:../../devel/cbindgen
+TOOL_DEPENDS+=		cbindgen>=0.29.1:../../devel/cbindgen
 
 .if defined(FIREFOX_MAINTAINER) && !defined(MAINTAINER_INTERNAL)
 TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
@@ -278,7 +278,7 @@ RUST_REQ=	1.82.0
 # TODO: check again, pkgsrc has hunspell 1.7
 # was: textproc/hunspell 1.3 is too old
 #.include "../../textproc/hunspell/buildlink3.mk"
-.include "../../multimedia/ffmpeg7/buildlink3.mk"
+.include "../../multimedia/ffmpeg8/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pixman+= pixman>=0.40
