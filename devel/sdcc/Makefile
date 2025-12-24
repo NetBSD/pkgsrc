@@ -1,34 +1,33 @@
-# $NetBSD: Makefile,v 1.64 2025/12/18 15:43:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.65 2025/12/24 15:37:01 ryoon Exp $
 
-DISTNAME=	sdcc-src-2.8.0
+DISTNAME=	sdcc-src-4.5.0
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	15
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sdcc/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	https://sdcc.sourceforge.net/
-COMMENT=	Cross compile 8051 code
+COMMENT=	Cross compile microcontroller code
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	gputils-[0-9]*:../../devel/gputils
 
-MAKE_JOBS_SAFE=		no
-
 USE_LANGUAGES=	c c++
+
+# Do not compile with -fPIE. See support/cpp/gcc/Makefile.
+PKGSRC_OVERRIDE_MKPIE=	yes
+CHECK_PIE_SUPPORTED=	no
 
 # XXX - This HACK circumvent a problem with the use of yacc that breaks the
 # XXX - building process of sdcc.  Use of bison fixes this problem for now.
 #
-USE_TOOLS+=	bison
+USE_TOOLS+=	bison makeinfo
+INFO_FILES=	yes
 
-BUILD_TARGET=	dep all
+#BUILD_TARGET=	dep all
 
-# Fails with C++14 default language
-FORCE_CXX_STD=	c++03
-
-WRKSRC=			${WRKDIR}/sdcc/
+WRKSRC=			${WRKDIR}/sdcc-${PKGVERSION_NOREV}
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake lex:run perl:run
 
@@ -38,23 +37,18 @@ CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/sdcc
 # needed for some arch's.  -fdollars-in-identifiers is enabled
 # by default on some, not on others
 CPPFLAGS+=		-fdollars-in-identifiers
-CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
-CONFIGURE_ENV+=		sdcc_cv_CCggdb="no"
+CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
+CONFIGURE_ENV+=		sdcc_cv_c_ggdb="no"
 
-# simi.c: In function 'simGetValue':
-# simi.c:616:14: error: array subscript has type 'char' [-Werror=char-subscripts]
-#              b[i] = strtol(resp,&resp,16);
-# Maybe fix this later.
-BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
-# error: initialization of 'const unsigned char *' from incompatible pointer type 'unsigned int *'
-BUILDLINK_TRANSFORM+=	rm:-Wall
-CFLAGS+=		-Wno-incompatible-pointer-types
+REPLACE_PYTHON=		support/scripts/as2gbmap.py
+MAKE_JOBS_SAFE=		NO
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
 CPPFLAGS+=		-DYY_NEVER_INTERACTIVE
 
+.PHONY: sys-endian-buildlink
 pre-configure: sys-endian-buildlink
 
 sys-endian-buildlink:
@@ -67,5 +61,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${PREFIX}/share/doc/sdcc
 
 .include "../../devel/boehm-gc/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

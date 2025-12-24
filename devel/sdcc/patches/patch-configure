@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2025/12/24 15:37:02 ryoon Exp $
+
+* POSIX shell portability.
+
+--- configure.orig	2025-06-17 23:37:05.518031790 +0000
++++ configure
+@@ -7300,7 +7300,7 @@ fi
+ 
+ # Check for c11
+ # -------------------------------------------------------------------------
+-if test "$ac_cv_prog_cc_c11" == "no"; then
++if test "$ac_cv_prog_cc_c11" = "no"; then
+   as_fn_error $? "Could not find C11-capable host compiler." "$LINENO" 5
+ fi
+ 
