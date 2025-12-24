@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.10 2022/07/25 11:12:20 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/12/24 16:52:27 ryoon Exp $
 
-DISTNAME=	verilator-4.100
-PKGREVISION=	2
+DISTNAME=	verilator-5.042
 CATEGORIES=	cad
-MASTER_SITES=	https://www.veripool.org/ftp/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=verilator/}
+GITHUB_PROJECT=	verilator
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://www.veripool.org/wiki/verilator
+HOMEPAGE=	https://www.veripool.org/verilator/
 COMMENT=	Verilog HDL simulator
 LICENSE=	gnu-lgpl-v3 OR artistic-2.0
 
 GNU_CONFIGURE=	yes
 FLEX_REQD=	2.6.4
-USE_TOOLS+=	bison flex gmake perl
+USE_TOOLS+=	autoconf automake autoreconf bison flex gmake:run perl
 USE_LANGUAGES=	c c++
 
 TOOLS_PLATFORM.flex=	# Use flex from pkgsrc
@@ -22,7 +23,12 @@ REPLACE_PERL+=	bin/*
 REPLACE_PERL+=	test_regress/*.pl
 REPLACE_PERL+=	test_regress/t/*.pl
 
-CONFIGURE_ENV+=		ac_cv_path_YACC=bison
+REPLACE_PYTHON+=	bin/*
+
+# Do not pass "bison -y" to bisonpre Python script.
+CONFIGURE_ENV+=		ac_cv_prog_YACC=${TOOLS_CMD.bison:Q}
+# Find PYTHONBIN at runtime
+CONFIGURE_ENV+=		PYTHON3=${PYTHONBIN}
 
 # for long tests
 TEST_DEPENDS+=		p5-Unix-Processors-[0-9]*:../../sysutils/p5-Unix-Processors
@@ -31,4 +37,11 @@ TEST_TARGET=		test
 
 PKGCONFIG_OVERRIDE+=	verilator.pc.in
 
+pre-configure:
+	# Do not regenerate src/config_package.h.
+	# Regenerated one is incorrect.
+	set -e; cd ${WRKSRC} && AUTOHEADER=true autoreconf -fi
+
+.include "../../lang/python/tool.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

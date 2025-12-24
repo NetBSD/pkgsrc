@@ -1,27 +1,33 @@
-$NetBSD: patch-Makefile.in,v 1.1 2018/12/16 09:05:13 ryoon Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2025/12/24 16:52:27 ryoon Exp $
 
 * Use BSD install command properly.
 
---- Makefile.in.orig	2018-10-27 12:25:41.000000000 +0000
+--- Makefile.in.orig	2025-12-12 17:21:25.306754577 +0000
 +++ Makefile.in
-@@ -299,15 +299,15 @@ VL_INST_DATA_SRCDIR_FILES = \
+@@ -276,7 +276,7 @@ mkbindirs:
+ installbin: | mkbindirs
+ 	cd $(srcdir)/bin; \
+ 	for p in $(VL_INST_PUBLIC_SCRIPT_FILES) ; do \
+-		$(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/$$p; \
++		$(BSD_INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/$$p; \
+ 	done
+ 	perl -p -i -e 'use File::Spec;' \
+ 	           -e' $$path = File::Spec->abs2rel("$(realpath $(DESTDIR)$(pkgdatadir))", "$(realpath $(DESTDIR)$(bindir))");' \
+@@ -288,7 +288,7 @@ installbin: | mkbindirs
+ 	done
+ 	cd $(srcdir)/bin; \
+ 	for p in $(VL_INST_PRIVATE_SCRIPT_FILES) ; do \
+-		$(INSTALL_PROGRAM) $$p $(DESTDIR)$(pkgdatadir)/bin/$$p; \
++		$(BSD_INSTALL_SCRIPT) $$p $(DESTDIR)$(pkgdatadir)/bin/$$p; \
+ 	done
  
- installbin:
- 	$(MKINSTALLDIRS) $(DESTDIR)$(bindir)
--	( cd ${srcdir}/bin ; $(INSTALL_PROGRAM) verilator $(DESTDIR)$(bindir)/verilator )
--	( cd ${srcdir}/bin ; $(INSTALL_PROGRAM) verilator_coverage $(DESTDIR)$(bindir)/verilator_coverage )
--	( cd ${srcdir}/bin ; $(INSTALL_PROGRAM) verilator_gantt $(DESTDIR)$(bindir)/verilator_gantt )
--	( cd ${srcdir}/bin ; $(INSTALL_PROGRAM) verilator_profcfunc $(DESTDIR)$(bindir)/verilator_profcfunc )
-+	( cd ${srcdir}/bin ; ${BSD_INSTALL_SCRIPT} verilator $(DESTDIR)$(bindir)/verilator )
-+	( cd ${srcdir}/bin ; ${BSD_INSTALL_SCRIPT} verilator_coverage $(DESTDIR)$(bindir)/verilator_coverage )
-+	( cd ${srcdir}/bin ; ${BSD_INSTALL_SCRIPT} verilator_gantt $(DESTDIR)$(bindir)/verilator_gantt )
-+	( cd ${srcdir}/bin ; ${BSD_INSTALL_SCRIPT} verilator_profcfunc $(DESTDIR)$(bindir)/verilator_profcfunc )
- 	( cd bin ; $(INSTALL_PROGRAM) verilator_bin $(DESTDIR)$(bindir)/verilator_bin )
- 	( cd bin ; $(INSTALL_PROGRAM) verilator_bin_dbg $(DESTDIR)$(bindir)/verilator_bin_dbg )
- 	( cd bin ; $(INSTALL_PROGRAM) verilator_coverage_bin_dbg $(DESTDIR)$(bindir)/verilator_coverage_bin_dbg )
- 	$(MKINSTALLDIRS) $(DESTDIR)$(pkgdatadir)/bin
--	( cd ${srcdir}/bin ; $(INSTALL_PROGRAM) verilator_includer $(DESTDIR)$(pkgdatadir)/bin/verilator_includer )
-+	( cd ${srcdir}/bin ; ${BSD_INSTALL_SCRIPT} verilator_includer $(DESTDIR)$(pkgdatadir)/bin/verilator_includer )
+ installredirect: installbin | mkbindirs
+@@ -298,7 +298,7 @@ installredirect: installbin | mkbindirs
+ 	           -e 's/RELPATH.*/"$$path";/g' -- "${srcdir}/bin/redirect.tmp"
+ 	cd $(srcdir)/bin; \
+ 	for p in $(VL_INST_PUBLIC_SCRIPT_FILES) $(VL_INST_PUBLIC_BIN_FILES) ; do \
+-		$(INSTALL_PROGRAM) redirect.tmp $(DESTDIR)$(pkgdatadir)/bin/$$p; \
++		$(BSD_INSTALL_SCRIPT) redirect.tmp $(DESTDIR)$(pkgdatadir)/bin/$$p; \
+ 	done
+ 	rm ${srcdir}/bin/redirect.tmp
  
- # Man files can either be part of the original kit, or built in current directory
- # So important we use $^ so VPATH is searched

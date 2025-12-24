@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2025/12/24 16:52:27 ryoon Exp $
+
+* -mt is not for non-Windows.
+  On NetBSD, configure misdetects -mt is acceptable.
+
+--- configure.ac.orig	2025-12-12 18:45:08.359604591 +0000
++++ configure.ac
+@@ -543,7 +543,6 @@ AC_SUBST(CFG_CXX_FLAGS_CMAKE)
+ 
+ # Find multithread linker flags
+ m4_foreach([ldflag], [
+-        [-mt],
+         [-pthread],
+         [-lpthread],
+         [-latomic]],[

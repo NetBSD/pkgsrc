@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:04:17 nia Exp $
+$NetBSD: distinfo,v 1.8 2025/12/24 16:52:27 ryoon Exp $
 
-BLAKE2s (verilator-4.100.tgz) = b2facd55d8e8e1d43796853fbb76e47ff4eca0e11fe02f4e40a54852dffcc0a4
-SHA512 (verilator-4.100.tgz) = 13f4547bfda1d8b4f251c1f6392f952a0d94e636844a72d4878a366e4d1feccea84cfaf24d6a3c4541e7d33c13ea6dab55d3dd7d646f79d7fb708656c722e316
-Size (verilator-4.100.tgz) = 2747140 bytes
-SHA1 (patch-Makefile.in) = 3c91715cdfaba04120ada7a328b46e0571767e06
+BLAKE2s (verilator-5.042.tar.gz) = 3fd37e15a5fb9cf143fca6884532e0a9f78801fbd1e7125846f77bfb171dd876
+SHA512 (verilator-5.042.tar.gz) = c9de0166211a6a4952d1dd9dbf3e32678e7ac7fd7373722edf106074e587873faacab4ecbaff56a72c38efb30388d723183f30ed4b586ab678b30d585f8736ae
+Size (verilator-5.042.tar.gz) = 4670033 bytes
+SHA1 (patch-Makefile.in) = 98a0a2324c720ecc00d0819420168a7836e838f3
+SHA1 (patch-configure.ac) = 4b7985a82439b627d7ae6db1e3d649d5e13a5dfe
+SHA1 (patch-src_V3Options.cpp) = 0612caf67e588000eeaa9ed84ebbfbb3cc052145
