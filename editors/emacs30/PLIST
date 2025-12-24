@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/04/28 08:28:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/12/24 22:21:00 wiz Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -1737,11 +1737,11 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-seq.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp-common.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp-common.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp-cstr.el.gz
-${PLIST.native}share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp-cstr.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp-cstr.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp-run.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp-run.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp.el.gz
-${PLIST.native}share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/compat.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/compat.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/copyright.el.gz
