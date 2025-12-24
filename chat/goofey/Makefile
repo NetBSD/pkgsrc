@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 00:02:36 asau Exp $
-#
+# $NetBSD: Makefile,v 1.13 2025/12/24 08:16:05 wiz Exp $
 
 DISTNAME=	goofey-3.15
 CATEGORIES=	chat
@@ -7,7 +6,7 @@ MASTER_SITES=	http://redback.spyda.net/~grant/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.csse.monash.edu.au/~tym/goofey.html
+#HOMEPAGE=	http://www.csse.monash.edu.au/~tym/goofey.html
 COMMENT=	Text-based client for goofey, a flexible short message system
 
 NO_CONFIGURE=	yes
