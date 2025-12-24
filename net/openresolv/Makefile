@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2025/12/13 20:26:50 roy Exp $
+# $NetBSD: Makefile,v 1.43 2025/12/24 22:46:50 roy Exp $
 
-DISTNAME=		openresolv-3.17.3
+DISTNAME=		openresolv-3.17.4
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=NetworkConfiguration/}
 GITHUB_PROJECT=		openresolv
