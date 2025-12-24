@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/12/23 10:28:20 markd Exp $
+# $NetBSD: Makefile,v 1.2 2025/12/24 23:05:19 wiz Exp $
 
 DISTNAME=	oxygen-${PLASMAVER}
 CATEGORIES=	graphics
@@ -15,7 +15,7 @@ CMAKE_CONFIGURE_ARGS+=	-DBUILD_QT5=OFF
 
 .include "../../devel/kf6-kcmutils/buildlink3.mk"
 .include "../../devel/plasma6-kwayland/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/kf6-frameworkintegration/buildlink3.mk"
 .include "../../x11/plasma6-kdecoration/buildlink3.mk"
 .include "../../x11/plasma6-libplasma/buildlink3.mk"
