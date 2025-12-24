@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.371 2025/11/15 12:34:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.372 2025/12/24 15:29:50 ryoon Exp $
 
-VERREL=		25.8.3
+VERREL=		25.8.4
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
@@ -92,7 +92,7 @@ MORE_DISTFILES= \
 	907d6e99f241876695c19ff3db0b8923-source-code-pro-2.030R-ro-1.050R-it.tar.gz \
 	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz \
 	source-serif-pro-3.000R.tar.gz \
-	xmlsec1-1.3.8.tar.gz \
+	xmlsec1-1.3.9.tar.gz \
 	3404ab6b1792ae5f16bbd603bd1e1d03-libformula-1.1.7.zip \
 	35c94d2df8893241173de1d16b6034c0-swingExSrc.zip \
 	39bb3fcea1514f1369fcfc87542390fd-sacjava-1.3.zip \
@@ -110,11 +110,11 @@ MORE_DISTFILES= \
 	eeb2c7ddf0d302fba4bfc6e97eac9624-libbase-1.1.6.zip \
 	33e1e61fab06a547851ed308b4ffef42-dejavu-fonts-ttf-2.37.zip \
 	f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip \
-	mariadb-connector-c-3.3.17-src.tar.gz \
-	rhino-1.7.15.zip \
+	mariadb-connector-c-3.3.18-src.tar.gz \
+	rhino-1.7.15.1.zip \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
 	language-subtag-registry-2021-08-06.tar.bz2 \
-	postgresql-15.14.tar.bz2 \
+	postgresql-15.15.tar.bz2 \
 	graphite2-minimal-1.3.14.tgz \
 	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
 	EmojiOneColor-SVGinOT-1.3.tar.gz \
@@ -127,7 +127,7 @@ MORE_DISTFILES= \
 	Scheherazade-2.100.zip \
 	lxml-4.1.1.tgz \
 	Amiri-1.001.zip \
-	ReemKufi-1.8.zip \
+	ReemKufi-2.0.zip \
 	pdfium-7012.tar.bz2 \
 	dtoa-20180411.tgz \
 	skia-m136-28685d899b0a35894743e2cedad4c9f525e90e1e.tar.xz \
