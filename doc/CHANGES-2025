@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7370 2025/12/23 21:50:24 markd Exp $
+$NetBSD: CHANGES-2025,v 1.7371 2025/12/24 13:28:48 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10847,3 +10847,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-importlib-metadata to 8.7.1 [adam 2025-12-23]
 	Added misc/plasma6-kde-gtk-config version 6.5.2 [markd 2025-12-23]
 	Added graphics/plasma6-plasma-workspace-wallpapers version 6.5.2 [markd 2025-12-23]
+	Updated x11/kitty to 0.45.0 [ktnb 2025-12-24]
