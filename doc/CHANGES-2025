@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7385 2025/12/25 15:06:22 rhialto Exp $
+$NetBSD: CHANGES-2025,v 1.7386 2025/12/25 15:37:53 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10862,3 +10862,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/hercules4sdl to 4.9.1 [rhialto 2025-12-24]
 	Removed audio/gospt [wiz 2025-12-25]
 	Updated lang/algol68g to 3.10.9 [rhialto 2025-12-25]
+	Updated devel/opa to 1.12.1 [leot 2025-12-25]
