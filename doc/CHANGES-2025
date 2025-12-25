@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7390 2025/12/25 16:33:17 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.7391 2025/12/25 16:35:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10870,3 +10870,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/ngtcp2 to 1.19.0 [adam 2025-12-25]
 	Updated www/nghttp3 to 1.14.0 [adam 2025-12-25]
 	Updated devel/nextpnr-ice40 to 0.9 [ryoon 2025-12-25]
+	Added devel/nextpnr-himbaechel version 0.9 [ryoon 2025-12-25]
