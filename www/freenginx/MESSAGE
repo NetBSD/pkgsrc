@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2025/12/25 18:57:20 osa Exp $
+
+Consider adding something like following lines to /etc/newsyslog.conf:
+
+${NGINX_LOGDIR}/access.log ${NGINX_USER}:${NGINX_GROUP} 640 7 * 24 ZB ${NGINX_PIDDIR}/nginx.pid SIGUSR1
+${NGINX_LOGDIR}/error.log  ${NGINX_USER}:${NGINX_GROUP} 640 7 * 24 ZB ${NGINX_PIDDIR}/nginx.pid SIGUSR1
+
+===========================================================================
