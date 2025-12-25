@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2025/09/02 12:57:49 adam Exp $
+$NetBSD: distinfo,v 1.24 2025/12/25 22:49:55 adam Exp $
 
-BLAKE2s (joblib-1.5.2.tar.gz) = 735fb52cb721e8474746fc349ce84af242c81435b2ac168dd15a8fd4184bfb4c
-SHA512 (joblib-1.5.2.tar.gz) = 481f742f6f5370be4f841b3d9e6d2a82e5870e5bb773c2af154d602a2cb3136f45dce1cb74d5f3f536703e563c1ea0253ad28bd70df7dd9461c199f7c0e69112
-Size (joblib-1.5.2.tar.gz) = 331077 bytes
+BLAKE2s (joblib-1.5.3.tar.gz) = ed56ec1f506ae331201208ea8ae4e675c45057d5f97d06ab45d71b7a98eaeed4
+SHA512 (joblib-1.5.3.tar.gz) = 221fe426aa4c90d75080b63bf6bb0b9c61e4ae90bd2a734d2b658013e9a00125bc14574d475789b4d8d246a1a5b5c6f67754e639080de6ecb9a481d1d124c0ed
+Size (joblib-1.5.3.tar.gz) = 331603 bytes
 SHA1 (patch-joblib_externals_loky_backend_context.py) = 58eeb077db797442d08725403ba4d6c0108acdd9
