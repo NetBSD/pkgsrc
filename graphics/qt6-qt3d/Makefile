@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2025/11/11 12:34:13 adam Exp $
+# $NetBSD: Makefile,v 1.34 2025/12/25 18:13:08 wiz Exp $
 
 DISTNAME=	qt3d-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qt3d-${QTVERSION}
@@ -27,6 +27,13 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DQuickScene2D.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DRender.pc
 
 PLIST_VARS+=	simd
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+PLIST_VARS+=	vulkan
+.if ${OPSYS} != "Darwin"
+PLIST.vulkan=	yes
+.endif
 
 .if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "i386"
 PLIST.simd=		yes
