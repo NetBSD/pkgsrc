@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2025/12/14 08:40:49 adam Exp $
+$NetBSD: distinfo,v 1.15 2025/12/25 16:33:39 adam Exp $
 
-BLAKE2s (aiosqlite-0.22.0.tar.gz) = 5bd32cc2637948a874932279a10eeb45dd86bc23b362565859fa0b42dd76cc15
-SHA512 (aiosqlite-0.22.0.tar.gz) = 3ecafae2a726c620e666abc5b14499305a294df7a7f69a9aa516755900debcefe1c58b7d59c4eaf1970035f882ef5a73e00be71bee2066845e791fd6dce08491
-Size (aiosqlite-0.22.0.tar.gz) = 14707 bytes
+BLAKE2s (aiosqlite-0.22.1.tar.gz) = 1a358795673535c8d0f148866de080921df6b514edbfa301d5e2261702c72554
+SHA512 (aiosqlite-0.22.1.tar.gz) = a207dc89b8e7d1dc6ae219a94f6f1f561b2c829739a5881025092a7247732e713ae71ce470787d9a38b02f3efbc617d1faf1ff62d8f45e9db1539d5ff3bd7943
+Size (aiosqlite-0.22.1.tar.gz) = 14821 bytes
