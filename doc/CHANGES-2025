@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7404 2025/12/25 22:47:31 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7405 2025/12/25 22:51:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10888,3 +10888,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/freenginx version 1.28.0 [osa 2025-12-25]
 	Updated meta-pkgs/boost to 1.90.0 [adam 2025-12-25]
 	Updated net/py-unearth to 0.18.2 [adam 2025-12-25]
+	Updated devel/py-joblib to 1.5.3 [adam 2025-12-25]
+	Updated devel/py-test-run-parallel to 0.8.1 [adam 2025-12-25]
