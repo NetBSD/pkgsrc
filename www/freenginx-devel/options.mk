@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2025/11/21 17:19:48 osa Exp $
+# $NetBSD: options.mk,v 1.2 2025/12/25 18:01:01 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -14,7 +14,7 @@ PKG_SUPPORTED_OPTIONS+=	nginx-stream-ssl-preread nginx-sts nginx-sub nginx-uploa
 PKG_SUGGESTED_OPTIONS=	nginx-auth-request nginx-brotli nginx-gzip nginx-http2 nginx-http3 nginx-memcache
 PKG_SUGGESTED_OPTIONS+=	nginx-realip nginx-slice nginx-status nginx-ssl nginx-uwsgi
 
-PLIST_VARS+=		arrayvar brotli cprg dav dso echo encses forminput geoip2
+PLIST_VARS+=		arrayvar brotli cprg dav dso echo encses forminput geoip geoip2
 PLIST_VARS+=		gssapi headmore imagefilter lua mail naxsi nchan ndk njs
 PLIST_VARS+=		perl redis rtmp setmisc stream sts upload uwsgi vts
 
@@ -140,12 +140,16 @@ CONFIGURE_ARGS+=	--with-http_flv_module
 
 .if !empty(PKG_OPTIONS:Mnginx-geoip)
 .include "../../net/GeoIP/buildlink3.mk"
+.include "../../geography/libmaxminddb/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-http_geoip_module
 SUBST_CLASSES+=		fix-geo
 SUBST_STAGE.fix-geo=	pre-configure
 SUBST_FILES.fix-geo=	auto/lib/geoip/conf
 SUBST_SED.fix-geo=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.GeoIP},g'
 SUBST_NOOP_OK.fix-geo=	yes
+DSO_BASEMODS+=		http_geoip_module
+DSO_BASEMODS+=		stream_geoip_module
+PLIST.geoip=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mnginx-http2)
