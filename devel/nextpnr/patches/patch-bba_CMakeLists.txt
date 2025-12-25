@@ -1,16 +1,16 @@
-$NetBSD: patch-bba_CMakeLists.txt,v 1.1 2025/10/17 07:48:44 wiz Exp $
+$NetBSD: patch-bba_CMakeLists.txt,v 1.2 2025/12/25 16:32:53 ryoon Exp $
 
 boost 1.89+ made system header-only.
 
---- bba/CMakeLists.txt.orig	2025-10-17 07:43:39.364952984 +0000
+--- bba/CMakeLists.txt.orig	2025-12-19 05:38:44.039584814 +0000
 +++ bba/CMakeLists.txt
-@@ -3,8 +3,7 @@ project(bba CXX)
+@@ -4,8 +4,7 @@ project(bba CXX)
+ set(CMAKE_CXX_STANDARD 17)
  
  find_package(Boost REQUIRED COMPONENTS
-     program_options
--    filesystem
+-    program_options
 -    system)
-+    filesystem)
++    program_options)
  
  add_executable(bbasm
      main.cc)
