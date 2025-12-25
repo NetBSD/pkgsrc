@@ -1,8 +1,11 @@
-# $NetBSD: Makefile,v 1.68 2023/01/07 22:36:23 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2025/12/25 18:00:39 gdt Exp $
 
 DISTNAME=	libcdio-2.1.0
 PKGREVISION=	5
 CATEGORIES=	misc
+# As of 2.2.0, upstream no longer provides releases at MASTER_SITE_GNU.
+# Thus this package needs Github Kool-Aid Accomodation.
+# Now https://github.com/libcdio/libcdio/releases/download/2.2.0/libcdio-2.2.0.tar.bz2
 MASTER_SITES=	${MASTER_SITE_GNU:=libcdio/}
 EXTRACT_SUFX=	.tar.bz2
 
