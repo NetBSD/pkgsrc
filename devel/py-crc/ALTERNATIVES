@@ -1,0 +1,1 @@
+bin/crc @PREFIX@/bin/crc-@PYVERSSUFFIX@
