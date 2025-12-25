@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/12/25 18:03:55 ryoon Exp $
+share/yosys/plugins/ghdl.so
