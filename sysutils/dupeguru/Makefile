@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2025/02/23 16:59:21 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/12/25 18:05:12 wiz Exp $
 
 DISTNAME=	dupeguru-src-4.0.4_RC
 PKGNAME=	${DISTNAME:S/-src//:S/_RC/rc1/}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils
 #MASTER_SITES=	https://github.com/arsenetar/dupeguru/releases/download/4.0.4/
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arsenetar/}
@@ -14,7 +14,7 @@ COMMENT=	Find duplicate files
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>=7.0.0:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>=9.0.0:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 DEPENDS+=	${PYPKGPREFIX}-hsaudiotag3k-[0-9]*:../../audio/py-hsaudiotag3k
 DEPENDS+=	${PYPKGPREFIX}-Send2Trash-[0-9]*:../../sysutils/py-Send2Trash
