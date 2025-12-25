@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/11/21 17:19:48 osa Exp $
+# $NetBSD: Makefile,v 1.2 2025/12/25 18:01:00 osa Exp $
 
-DISTNAME=	freenginx-1.29.3
+DISTNAME=	freenginx-1.29.4
 PKGNAME=	${DISTNAME:S/-/-devel-/1}
 CATEGORIES=	www
 MASTER_SITES=	https://freenginx.org/download/
