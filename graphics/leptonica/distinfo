@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.26 2024/10/22 18:37:59 adam Exp $
+$NetBSD: distinfo,v 1.27 2025/12/25 16:19:33 adam Exp $
 
-BLAKE2s (leptonica-1.85.0.tar.gz) = b6368963f3b95ed2b1963635532a1ab6b718db8ad623c6744291cd891a01c4d2
-SHA512 (leptonica-1.85.0.tar.gz) = ad097f8238bb88f044511bedb6debfb8a1492a4636348b21ce103034d3878ae1097e7ca8de9c39ef01f34589526d7e8aee68fb1b83aae5ffc0026c04360b882c
-Size (leptonica-1.85.0.tar.gz) = 14757419 bytes
-SHA1 (patch-CMakeLists.txt) = 9cc561f6daa7c960a681e6b695f1e6fb2cf655d2
+BLAKE2s (leptonica-1.87.0.tar.gz) = a4ed7279f714d9bd23596a50edb3a804d075303a83d12a70057b81ce58f2ab16
+SHA512 (leptonica-1.87.0.tar.gz) = b689b1cfe4d5b884e7ede9d949149410117bbfbb85a1790c0516919f27e8746783c8a04cac9300c761d2736184fb4b2337ab6c3a2653fa9f69f82ba19b493a2d
+Size (leptonica-1.87.0.tar.gz) = 14802808 bytes
 SHA1 (patch-src_environ.h) = 4170fe05038704412cd100c1179397c89ab3a44b
