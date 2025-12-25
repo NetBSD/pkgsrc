@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.1 2023/12/01 18:35:12 rhialto Exp $
+$NetBSD: patch-configure,v 1.2 2025/12/25 15:06:11 rhialto Exp $
 
 * don't assume glibc is required for --enable-long-types.
 * Unconditionally use -I ${PREFIX}/include for the compiler.
 
---- configure.orig	2023-10-27 20:16:54.000000000 +0000
+--- configure.orig	2025-12-02 18:00:24.000000000 +0000
 +++ configure
-@@ -5689,7 +5689,7 @@ fi
+@@ -5889,7 +5889,7 @@ fi
  
  if test "x$enable_generic" = "xyes"; then
    enable_standard_types=yes
@@ -14,20 +14,20 @@ $NetBSD: patch-configure,v 1.1 2023/12/01 18:35:12 rhialto Exp $
  fi
  
  if test "x$enable_core" = "xyes"; then
-@@ -5717,11 +5717,11 @@ EXTRA_INCLUDES=""
- 
+@@ -5920,11 +5920,11 @@ else
+ printf "%s\n" "$as_me: ... $prefix/include" >&6;}
+   EXTRA_INCLUDES="-I$prefix/include"
  # Set -I/usr/local/include for *BSD
- 
--if test "x$bsd_include_dirs" = "xyes"; then
--  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: ... /usr/local/include" >&5
+-  if test "x$bsd_include_dirs" = "xyes"; then
+-    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: ... /usr/local/include" >&5
 -printf "%s\n" "$as_me: ... /usr/local/include" >&6;}
--  EXTRA_INCLUDES="-I/usr/local/include"
--fi
-+#if test "x$bsd_include_dirs" = "xyes"; then
-+  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: ... @PREFIX@/include" >&5
+-    EXTRA_INCLUDES="$EXTRA_INCLUDES -I/usr/local/include"
+-  fi
++  #if test "x$bsd_include_dirs" = "xyes"; then
++    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: ... @PREFIX@/include" >&5
 +printf "%s\n" "$as_me: ... @PREFIX@/include" >&6;}
-+  EXTRA_INCLUDES="-I@PREFIX@/include"
-+#fi
++    EXTRA_INCLUDES="$EXTRA_INCLUDES -I@PREFIX@/include"
++  #fi
+ fi
  
- # Homebrew on macOS
  
