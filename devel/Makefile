@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4559 2025/12/25 17:01:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.4560 2025/12/25 17:02:54 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -2521,6 +2521,7 @@ SUBDIR+=	py-apipkg
 SUBDIR+=	py-appdirs
 SUBDIR+=	py-approval-utilities
 SUBDIR+=	py-approvaltests
+SUBDIR+=	py-apycula
 SUBDIR+=	py-archinfo
 SUBDIR+=	py-argcomplete
 SUBDIR+=	py-argparse
