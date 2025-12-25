@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.163 2025/11/21 17:27:32 osa Exp $
+# $NetBSD: Makefile,v 1.164 2025/12/25 19:01:14 osa Exp $
 
 DISTNAME=	nginx-1.29.1
 PKGNAME=	${DISTNAME:S/-/-devel-/1}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://nginx.org/
 COMMENT=	Lightweight HTTP server and mail proxy server
 LICENSE=	2-clause-bsd
 
-CONFLICTS=	freenginx-devel-[0-9]* nginx-[0-9]*
+CONFLICTS=	freenginx-[0-9]* freenginx-devel-[0-9]* nginx-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
