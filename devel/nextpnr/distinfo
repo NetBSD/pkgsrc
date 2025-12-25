@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.5 2025/10/17 07:48:44 wiz Exp $
+$NetBSD: distinfo,v 1.6 2025/12/25 16:32:53 ryoon Exp $
 
-BLAKE2s (nextpnr-0.7.tar.gz) = 27dfd76a6c8bc84b3178083a1b21bf4d542387a29ebaf533553121ac6c31a486
-SHA512 (nextpnr-0.7.tar.gz) = feb190d3a656c7bcdd2bcc1def9972e2c9bec7171a064308b16260240ce9f552eb03d907ef7d032a17ae7ef7e869950e7399c61df22ba36484a4cf2ef7ce7de2
-Size (nextpnr-0.7.tar.gz) = 4711765 bytes
-SHA1 (patch-3rdparty_json11_json11.cpp) = 64ace14d1cea195302debecc4a7824b6242a677e
-SHA1 (patch-CMakeLists.txt) = 9966c084201720c112d6702f179c1e099d1b4492
-SHA1 (patch-bba_CMakeLists.txt) = 17ebe7013fbbc5bc84cf5ff0fb7c3fca552f110b
-SHA1 (patch-bba_main.cc) = e3713835b14ac9155d0465d8102636ac02fa7c16
-SHA1 (patch-common_kernel_command.cc) = bbb8e02cf0d79092d4517bf492fc1d91ea7e3ad6
+BLAKE2s (nextpnr-0.9.tar.gz) = a6cf76a56e5386aef9b1c9e10af12d18cc1c3bd443b95c1d2aa528d56c97165e
+SHA512 (nextpnr-0.9.tar.gz) = 33fa5a0eab38b30fc3c1a180bdde8d2721afacc83746b9540dac1799dbc78bc6974c0d32455455fe9118a820d4ee0b4a34c26888658fdfe5456ffd4a75c9ff1b
+Size (nextpnr-0.9.tar.gz) = 4744423 bytes
+SHA1 (patch-CMakeLists.txt) = 75bc9c144429373e8b836053a9412c8742707d23
+SHA1 (patch-bba_CMakeLists.txt) = 50ff854a0cd649c5b0e62eeb25e3396fad4f3b71
