@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2025/11/22 19:49:59 adam Exp $
+$NetBSD: distinfo,v 1.7 2025/12/25 23:09:42 adam Exp $
 
-BLAKE2s (capnproto-c++-1.2.0.tar.gz) = 4a7243d78db84fb3807ba35fab11d73cf18babcc1efe728ba6d8da408c64237d
-SHA512 (capnproto-c++-1.2.0.tar.gz) = 5fc378e0c7ac78d48cffee58f30c9dd3e408d566d9cf5649b60aa33fac4be8d348cf8e3981932cd4bfbea38e21385c507d27bda6649a05d1a119c27ab7725ff4
-Size (capnproto-c++-1.2.0.tar.gz) = 1769091 bytes
+BLAKE2s (capnproto-c++-1.3.0.tar.gz) = 8393e98539087b70f12ed91e3414d9b6b267f69b5fe3bbcbfc627ebab3c5e71d
+SHA512 (capnproto-c++-1.3.0.tar.gz) = 8135a2b01c42dfbdd49c595171f759d0a3aaf0054579c57debe95d7d8c5a69dd0384aa5ca9d8a69c49ed49a7f7ae0d3be7f8d0456d389432eb81785bfd93cee4
+Size (capnproto-c++-1.3.0.tar.gz) = 1847292 bytes
 SHA1 (patch-src_kj_async-io-unix.c++) = b2bbb22bcb287850f8e4893ce7e2b51e4987965b
