@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7402 2025/12/25 18:36:28 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7403 2025/12/25 18:59:39 osa Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10885,3 +10885,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/kiwix-desktop to 2.4.1nb3 [wiz 2025-12-25]
 	Updated graphics/digikam to 8.8.0 [wiz 2025-12-25]
 	Updated graphics/digikam-gmic-qt to 3.6.0.20251021 [wiz 2025-12-25]
+	Added www/freenginx version 1.28.0 [osa 2025-12-25]
