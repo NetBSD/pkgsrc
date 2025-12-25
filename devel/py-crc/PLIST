@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2025/12/25 17:00:07 ryoon Exp $
+bin/crc-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
+${PYSITELIB}/crc/__init__.py
+${PYSITELIB}/crc/__init__.pyc
+${PYSITELIB}/crc/__init__.pyo
+${PYSITELIB}/crc/__main__.py
+${PYSITELIB}/crc/__main__.pyc
+${PYSITELIB}/crc/__main__.pyo
+${PYSITELIB}/crc/_crc.py
+${PYSITELIB}/crc/_crc.pyc
+${PYSITELIB}/crc/_crc.pyo
+${PYSITELIB}/crc/py.typed
