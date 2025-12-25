@@ -1,13 +1,13 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2025/10/17 07:48:44 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2025/12/25 16:32:53 ryoon Exp $
 
 boost 1.89+ made system header-only.
 
---- CMakeLists.txt.orig	2024-01-23 13:00:29.000000000 +0000
+--- CMakeLists.txt.orig	2025-12-19 05:38:32.861154400 +0000
 +++ CMakeLists.txt
-@@ -179,7 +179,7 @@ endif()
- find_package(Sanitizers)
+@@ -169,7 +169,7 @@ else()
+     endif()
+ endif()
  
- # List of Boost libraries to include
 -set(boost_libs filesystem program_options iostreams system)
 +set(boost_libs filesystem program_options iostreams)
  if (Threads_FOUND)
