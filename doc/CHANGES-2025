@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7384 2025/12/25 09:17:19 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7385 2025/12/25 15:06:22 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10861,3 +10861,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated cad/verilator to 5.042 [ryoon 2025-12-24]
 	Updated emulators/hercules4sdl to 4.9.1 [rhialto 2025-12-24]
 	Removed audio/gospt [wiz 2025-12-25]
+	Updated lang/algol68g to 3.10.9 [rhialto 2025-12-25]
