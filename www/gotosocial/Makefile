@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2025/12/02 19:25:25 bsiegert Exp $
+# $NetBSD: Makefile,v 1.54 2025/12/25 09:18:22 wiz Exp $
 
 DISTNAME=	gotosocial-0.19.0
 PKGREVISION=	5
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=superseriousbusiness/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	nikita@NetBSD.org
-HOMEPAGE=	https://github.com/superseriousbusiness/gotosocial/
+HOMEPAGE=	https://gotosocial.org/
 COMMENT=	Fediverse server written in Go
 LICENSE=	gnu-agpl-v3
 
