@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4560 2025/12/25 17:02:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.4561 2025/12/25 18:05:11 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -447,6 +447,7 @@ SUBDIR+=	gettext-m4
 SUBDIR+=	gettext-tools
 SUBDIR+=	gflags
 SUBDIR+=	gflib
+SUBDIR+=	ghdl-yosys-plugin
 SUBDIR+=	giblib
 SUBDIR+=	gindent
 SUBDIR+=	git
