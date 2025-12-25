@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2023/12/01 18:35:11 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/12/25 15:06:11 rhialto Exp $
 bin/a68g
 include/algol68g/a68g-common.h
 include/algol68g/a68g-config.h
 include/algol68g/a68g-config.win32.h
+include/algol68g/a68g-config.win64.h
 include/algol68g/a68g-defines.h
 include/algol68g/a68g-diagnostics.h
 include/algol68g/a68g-double.h
