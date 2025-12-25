@@ -1,6 +1,7 @@
-$NetBSD: patch-core_libs_threads_actionthreadbase.cpp,v 1.1 2025/12/25 18:35:20 wiz Exp $
+$NetBSD: patch-core_libs_threads_actionthreadbase.cpp,v 1.2 2025/12/25 19:00:04 wiz Exp $
 
 Add NetBSD support for setting thread name.
+https://invent.kde.org/graphics/digikam/-/merge_requests/379
 
 --- core/libs/threads/actionthreadbase.cpp.orig	2025-10-17 07:26:12.000000000 +0000
 +++ core/libs/threads/actionthreadbase.cpp
