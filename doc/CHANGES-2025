@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7387 2025/12/25 15:42:04 leot Exp $
+$NetBSD: CHANGES-2025,v 1.7388 2025/12/25 16:23:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10864,3 +10864,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/algol68g to 3.10.9 [rhialto 2025-12-25]
 	Updated devel/opa to 1.12.1 [leot 2025-12-25]
 	Updated devel/conftest to 0.66.0 [leot 2025-12-25]
+	Updated graphics/vigra to 1.12.3 [adam 2025-12-25]
+	Updated graphics/leptonica to 1.87.0 [adam 2025-12-25]
+	Updated audio/fluidsynth to 2.5.2 [adam 2025-12-25]
