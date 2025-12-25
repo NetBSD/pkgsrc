@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7403 2025/12/25 18:59:39 osa Exp $
+$NetBSD: CHANGES-2025,v 1.7404 2025/12/25 22:47:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10886,3 +10886,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/digikam to 8.8.0 [wiz 2025-12-25]
 	Updated graphics/digikam-gmic-qt to 3.6.0.20251021 [wiz 2025-12-25]
 	Added www/freenginx version 1.28.0 [osa 2025-12-25]
+	Updated meta-pkgs/boost to 1.90.0 [adam 2025-12-25]
+	Updated net/py-unearth to 0.18.2 [adam 2025-12-25]
