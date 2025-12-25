@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2021/05/20 19:24:15 nia Exp $
-#
+# $NetBSD: Makefile,v 1.23 2025/12/25 09:20:42 wiz Exp $
 
 DISTNAME=	gramofile-1.6P
 CATEGORIES=	audio
-MASTER_SITES=	https://www.opensourcepartners.nl/~costar/gramofile/
+MASTER_SITES=	http://www.opensourcepartners.nl/~costar/gramofile/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.opensourcepartners.nl/~costar/gramofile/
+HOMEPAGE=	http://www.opensourcepartners.nl/~costar/gramofile/
 COMMENT=	Tool for ripping audio from vinyl
 LICENSE=	gnu-gpl-v2
 
