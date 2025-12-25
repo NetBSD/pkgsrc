@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4557 2025/12/25 10:06:41 wiz Exp $
+# $NetBSD: Makefile,v 1.4558 2025/12/25 16:35:58 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -1245,6 +1245,7 @@ SUBDIR+=	netcdf-cxx
 SUBDIR+=	netcdf-fortran
 SUBDIR+=	netsurf-buildsystem
 SUBDIR+=	newfile
+SUBDIR+=	nextpnr-himbaechel
 SUBDIR+=	nextpnr-ice40
 SUBDIR+=	ninja-build
 SUBDIR+=	ninka
