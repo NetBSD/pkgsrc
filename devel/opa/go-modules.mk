@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.33 2025/11/27 09:32:55 leot Exp $
+# $NetBSD: go-modules.mk,v 1.34 2025/12/25 15:37:48 leot Exp $
 
 GO_MODULE_FILES+=	github.com/agnivade/levenshtein/@v/v1.2.1.mod
 GO_MODULE_FILES+=	github.com/agnivade/levenshtein/@v/v1.2.1.zip
@@ -155,8 +155,8 @@ GO_MODULE_FILES+=	github.com/rcrowley/go-metrics/@v/v0.0.0-20250401214520-65e299
 GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.2.0.mod
 GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.4.7.mod
 GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.4.7.zip
-GO_MODULE_FILES+=	github.com/rogpeppe/go-internal/@v/v1.13.1.mod
-GO_MODULE_FILES+=	github.com/rogpeppe/go-internal/@v/v1.13.1.zip
+GO_MODULE_FILES+=	github.com/rogpeppe/go-internal/@v/v1.14.1.mod
+GO_MODULE_FILES+=	github.com/rogpeppe/go-internal/@v/v1.14.1.zip
 GO_MODULE_FILES+=	github.com/rogpeppe/go-internal/@v/v1.9.0.mod
 GO_MODULE_FILES+=	github.com/russross/blackfriday/v2/@v/v2.1.0.mod
 GO_MODULE_FILES+=	github.com/russross/blackfriday/v2/@v/v2.1.0.zip
@@ -203,8 +203,8 @@ GO_MODULE_FILES+=	github.com/yashtewari/glob-intersection/@v/v0.2.0.zip
 GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.1.27.mod
 GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.2.1.mod
 GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.4.13.mod
-GO_MODULE_FILES+=	go.opentelemetry.io/auto/sdk/@v/v1.1.0.mod
-GO_MODULE_FILES+=	go.opentelemetry.io/auto/sdk/@v/v1.1.0.zip
+GO_MODULE_FILES+=	go.opentelemetry.io/auto/sdk/@v/v1.2.1.mod
+GO_MODULE_FILES+=	go.opentelemetry.io/auto/sdk/@v/v1.2.1.zip
 GO_MODULE_FILES+=	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp/@v/v0.63.0.mod
 GO_MODULE_FILES+=	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp/@v/v0.63.0.zip
 GO_MODULE_FILES+=	go.opentelemetry.io/otel/@v/v1.38.0.mod
@@ -319,12 +319,12 @@ GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20190717185122-a985d3407aa7.mod
 GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20191011141410-1b5146add898.mod
 GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20191204190536-9bdfabe68543.mod
 GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20200804184101-5ec99f83aff1.mod
-GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/api/@v/v0.0.0-20250825161204-c5933d9347a5.mod
-GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/api/@v/v0.0.0-20250825161204-c5933d9347a5.zip
-GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/rpc/@v/v0.0.0-20250825161204-c5933d9347a5.mod
-GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/rpc/@v/v0.0.0-20250825161204-c5933d9347a5.zip
-GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.76.0.mod
-GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.76.0.zip
+GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/api/@v/v0.0.0-20251022142026-3a174f9686a8.mod
+GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/api/@v/v0.0.0-20251022142026-3a174f9686a8.zip
+GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/rpc/@v/v0.0.0-20251022142026-3a174f9686a8.mod
+GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/rpc/@v/v0.0.0-20251022142026-3a174f9686a8.zip
+GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.77.0.mod
+GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.77.0.zip
 GO_MODULE_FILES+=	google.golang.org/protobuf/@v/v1.36.10.mod
 GO_MODULE_FILES+=	google.golang.org/protobuf/@v/v1.36.10.zip
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.mod
