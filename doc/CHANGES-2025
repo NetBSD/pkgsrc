@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7386 2025/12/25 15:37:53 leot Exp $
+$NetBSD: CHANGES-2025,v 1.7387 2025/12/25 15:42:04 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10863,3 +10863,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed audio/gospt [wiz 2025-12-25]
 	Updated lang/algol68g to 3.10.9 [rhialto 2025-12-25]
 	Updated devel/opa to 1.12.1 [leot 2025-12-25]
+	Updated devel/conftest to 0.66.0 [leot 2025-12-25]
