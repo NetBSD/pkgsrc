@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7391 2025/12/25 16:35:14 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.7392 2025/12/25 16:47:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10871,3 +10871,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/nghttp3 to 1.14.0 [adam 2025-12-25]
 	Updated devel/nextpnr-ice40 to 0.9 [ryoon 2025-12-25]
 	Added devel/nextpnr-himbaechel version 0.9 [ryoon 2025-12-25]
+	Updated databases/py-tortoise-orm to 0.25.3 [adam 2025-12-25]
+	Updated databases/py-aiosqlite to 0.22.1 [adam 2025-12-25]
+	Updated shells/dash to 0.5.13.1 [adam 2025-12-25]
+	Updated textproc/py-sphinx-inline-tabs to 2025.12.21.14 [adam 2025-12-25]
