@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.263 2025/12/22 23:06:24 wiz Exp $
+# $NetBSD: Makefile,v 1.264 2025/12/25 18:35:20 wiz Exp $
 
-DISTNAME=	digiKam-8.7.0
+DISTNAME=	digiKam-8.8.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	9
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=digikam/${PKGVERSION_NOREV}/}
 
@@ -20,58 +19,54 @@ WRKSRC=		${WRKDIR}/${DISTNAME:tl}
 REPLACE_PERL=	core/data/scripts/digitaglinktree/digitaglinktree
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_QT6=TRUE
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_KFILEMETADATASUPPORT=ON
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_KF5AkonadiContact:BOOL=TRUE
 
 USE_TOOLS+=	flex bison msgmerge perl:run pkg-config
 
-CXXFLAGS.NetBSD+=	-D_KERNTYPES
-
-CHECK_PORTABILITY_SKIP+=	*.desktop.cmake.in
-
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/knotifications/buildlink3.mk"
-.include "../../devel/knotifyconfig/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
-.include "../../devel/threadweaver/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
-.include "../../graphics/kiconthemes/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/lensfun/buildlink3.mk"
 .include "../../graphics/libheif/buildlink3.mk"
 .include "../../graphics/libjxl/buildlink3.mk"
-.include "../../graphics/libksane/buildlink3.mk"
 .include "../../graphics/liblqr/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/opencv/buildlink3.mk"
 .include "../../graphics/opencv-contrib-face/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
-.include "../../misc/marble/buildlink3.mk"
-.include "../../multimedia/ffmpeg7/buildlink3.mk"
+#.include "../../multimedia/ffmpeg7/buildlink3.mk"
+.include "../../multimedia/ffmpeg8/buildlink3.mk"
 .include "../../multimedia/x265/buildlink3.mk"
-.include "../../sysutils/kfilemetadata5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 # does not provide the library libakonadicontact that digikam is looking for
 #.include "../../misc/akonadi-contacts/buildlink3.mk"
-.include "../../time/kcalendarcore/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtwebengine/buildlink3.mk"
-# not recognized by configure step
-#.include "../../x11/qt5-qtmultimedia/buildlink3.mk"
-.include "../../x11/qt5-qtnetworkauth/buildlink3.mk"
-# unpackaged: qtav - libXv is required by qtav
 .include "../../x11/libXv/buildlink3.mk"
-#
-# for qt6 - not possible yet, needs unpackaged Qt6WebEngineWidgets
-#CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_QT6=TRUE
-#.include "../../devel/kf6-ki18n/buildlink3.mk"
-#.include "../../graphics/qt6-qtsvg/buildlink3.mk"
-#.include "../../security/qt6-qtnetworkauth/buildlink3.mk"
-#.include "../../x11/qt6-qtbase/buildlink3.mk"
+.include "../../devel/kf6-ki18n/buildlink3.mk"
+.include "../../graphics/qt6-qtsvg/buildlink3.mk"
+.include "../../lang/qt6-qtscxml/buildlink3.mk"
+.include "../../security/qt6-qtnetworkauth/buildlink3.mk"
+.include "../../www/qt6-qtwebengine/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../multimedia/libass/buildlink3.mk"
+.include "../../x11/kf6-kxmlgui/buildlink3.mk"
+.include "../../devel/kf6-kcoreaddons/buildlink3.mk"
+.include "../../devel/kf6-kconfig/buildlink3.mk"
+.include "../../x11/kf6-kwindowsystem/buildlink3.mk"
+.include "../../devel/kf6-kservice/buildlink3.mk"
+.include "../../sysutils/kf6-solid/buildlink3.mk"
+# these ones are optional
+.include "../../devel/kf6-kio/buildlink3.mk"
+.include "../../devel/kf6-threadweaver/buildlink3.mk"
+.include "../../devel/kf6-knotifyconfig/buildlink3.mk"
+.include "../../devel/kf6-knotifications/buildlink3.mk"
+.include "../../graphics/libksane/buildlink3.mk"
+.include "../../sysutils/kf6-kfilemetadata/buildlink3.mk"
+.include "../../time/kf6-kcalendarcore/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
