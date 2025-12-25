@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/12/25 17:00:07 ryoon Exp $
+
+BLAKE2s (crc-7.1.0.tar.gz) = 38ea66f48221a330c29106891d4e0bc381562c4818db0f99f537e72aa52ee898
+SHA512 (crc-7.1.0.tar.gz) = 8ce25852c6b67f4e59bdeac2b21bdcc045516c7060196e786b326cc479f8a5449d9982c750a227378adace508621bf127c8aa4e299e66c555f503bd4e5cd0553
+Size (crc-7.1.0.tar.gz) = 9888 bytes
