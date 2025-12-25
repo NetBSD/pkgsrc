@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2025/11/07 09:28:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.42 2025/12/25 16:22:45 adam Exp $
 bin/fluidsynth
 include/fluidsynth.h
 include/fluidsynth/audio.h
@@ -24,6 +24,6 @@ lib/cmake/fluidsynth/FluidSynthConfig.cmake
 lib/cmake/fluidsynth/FluidSynthConfigVersion.cmake
 lib/libfluidsynth.so
 lib/libfluidsynth.so.3
-lib/libfluidsynth.so.3.5.0
+lib/libfluidsynth.so.3.5.1
 lib/pkgconfig/fluidsynth.pc
 man/man1/fluidsynth.1
