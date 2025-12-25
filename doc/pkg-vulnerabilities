@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.688 2025/12/24 21:19:05 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.689 2025/12/25 15:10:06 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29157,3 +29157,6 @@ openexr<3.4.3	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-12495
 openexr<3.4.3	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-12839
 openexr<3.4.3	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-12840
 ruby{32,33,34}-httparty-[0-9]*	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-68696
+barcode-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-25153
+barcode-[0-9]*	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2018-25154
+kermit-[0-9]*	arbitrary-file-read	https://nvd.nist.gov/vuln/detail/CVE-2025-68920
