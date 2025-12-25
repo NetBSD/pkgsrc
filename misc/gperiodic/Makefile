@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.92 2025/10/23 20:38:20 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2025/12/25 09:19:29 wiz Exp $
 
 DISTNAME=		gperiodic-2.0.10
 PKGREVISION=		42
 CATEGORIES=		misc x11
-MASTER_SITES=		http://www.frantz.fi/software/
+#MASTER_SITES=		http://www.frantz.fi/software/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.frantz.fi/software/gperiodic.php
+#HOMEPAGE=		http://www.frantz.fi/software/gperiodic.php
 COMMENT=		Displays a periodic table of the elements
 LICENSE=		gnu-gpl-v2
 
