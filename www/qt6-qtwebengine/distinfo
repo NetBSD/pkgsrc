@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2025/12/24 15:58:52 wiz Exp $
+$NetBSD: distinfo,v 1.3 2025/12/25 23:29:16 adam Exp $
 
 BLAKE2s (kikadf-chromium-audioio-v130.0.tar.gz) = 45fe07cb8280f81b8ef490059002da426b59fe69b5ebd53951fe1dc3e9495a10
 SHA512 (kikadf-chromium-audioio-v130.0.tar.gz) = 840aed119dc69982f14fd5f4767e144bfc8a66672b660f0f05f5459070d7f6a36b8719ae7c0de049f7345dec39266759aedcdd5ee37aa4e98bcd2b44d06a3a4c
@@ -13,7 +13,7 @@ SHA1 (patch-configure.cmake) = 7660164b3e2188d1e0ec350fef889ddf005fdf17
 SHA1 (patch-src_3rdparty_chromium_BUILD.gn) = 1861d3e5ab9f5299a1ffa7a73afde5d9991fe498
 SHA1 (patch-src_3rdparty_chromium_base_BUILD.gn) = 3ad59705263549a289f01c3a2842a8b174deb837
 SHA1 (patch-src_3rdparty_chromium_base_allocator_dispatcher_tls.h) = ffad5ba28a141d30eea44b0b38964f8302f24bfd
-SHA1 (patch-src_3rdparty_chromium_base_allocator_partition__allocator_partition__alloc.gni) = f11d3fb8835efd4270e5a8107faf7c7f34e10095
+SHA1 (patch-src_3rdparty_chromium_base_allocator_partition__allocator_partition__alloc.gni) = 29c94f72b8b76240f16dd789d428c4a24484753b
 SHA1 (patch-src_3rdparty_chromium_base_allocator_partition__allocator_src_partition__alloc_BUILD.gn) = ab01e593235b68fc91ac934fb3382a8548191f69
 SHA1 (patch-src_3rdparty_chromium_base_allocator_partition__allocator_src_partition__alloc_address__space__randomization.h) = 14e58a90e47e659f860eee5c356bd045bec9563f
 SHA1 (patch-src_3rdparty_chromium_base_allocator_partition__allocator_src_partition__alloc_page__allocator.h) = 304ef2f02a8cf7cb57ded4166368eb202dedf608

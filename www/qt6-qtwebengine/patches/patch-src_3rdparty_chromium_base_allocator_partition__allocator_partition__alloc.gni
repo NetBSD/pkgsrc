@@ -1,4 +1,4 @@
-$NetBSD: patch-src_3rdparty_chromium_base_allocator_partition__allocator_partition__alloc.gni,v 1.1 2025/12/21 09:38:12 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_allocator_partition__allocator_partition__alloc.gni,v 1.2 2025/12/25 23:29:16 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
@@ -11,7 +11,7 @@ $NetBSD: patch-src_3rdparty_chromium_base_allocator_partition__allocator_partiti
  
  has_memory_tagging =
 -    current_cpu == "arm64" && is_clang && !is_asan && (is_linux || is_android)
-+    current_cpu == "arm64" && is_clang && !is_asan && !is_bsd (is_linux || is_android)
++    current_cpu == "arm64" && is_clang && !is_asan && !is_bsd && (is_linux || is_android)
  
  declare_args() {
    # Debug configuration.
