@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/10/23 20:39:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/12/25 18:30:51 wiz Exp $
 
 DISTNAME=	kiwix-desktop-2.4.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kiwix/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -13,16 +13,19 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c++
 USE_TOOLS+=	pkg-config
+MAKE_ENV+=	QT_SELECT=qt6
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 do-configure:
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake PREFIX=${DESTDIR}${PREFIX} .
 
+.include "../../devel/qt6-qttools/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/qt6-qtsvg/buildlink3.mk"
 .include "../../net/aria2/buildlink3.mk"
 .include "../../textproc/libzim/buildlink3.mk"
 .include "../../www/libkiwix/buildlink3.mk"
-.include "../../x11/qt5-qtwebengine/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtsvg/buildlink3.mk"
-.include "../../x11/qt5-qttools/buildlink3.mk"
+.include "../../www/qt6-qtwebengine/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
