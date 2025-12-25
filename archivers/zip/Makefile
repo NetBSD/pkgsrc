@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2023/08/28 13:55:59 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2025/12/25 15:41:51 tsutsui Exp $
 
 DISTNAME=	zip30
 PKGNAME=	zip-3.0
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.info-zip.org/Zip.html
+HOMEPAGE=	https://infozip.sourceforge.net/Zip.html
 COMMENT=	Create/update ZIP files compatible with pkzip
 LICENSE=	info-zip
 
