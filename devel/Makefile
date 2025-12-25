@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4558 2025/12/25 16:35:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.4559 2025/12/25 17:01:18 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -2627,6 +2627,7 @@ SUBDIR+=	py-cpplint
 SUBDIR+=	py-cppy
 SUBDIR+=	py-cram
 SUBDIR+=	py-crayons
+SUBDIR+=	py-crc
 SUBDIR+=	py-cucumber-expressions
 SUBDIR+=	py-cucumber-tag-expressions
 SUBDIR+=	py-curtsies
