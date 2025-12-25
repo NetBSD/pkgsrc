@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2025/12/22 06:08:12 adam Exp $
+# $NetBSD: Makefile,v 1.114 2025/12/25 09:18:42 wiz Exp $
 
 DISTNAME=	gpac-2.4.0
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=gpac/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gpac.io/
+HOMEPAGE=	https://gpac.io/
 COMMENT=	Open source multimedia framework
 LICENSE=	gnu-lgpl-v2.1
 
