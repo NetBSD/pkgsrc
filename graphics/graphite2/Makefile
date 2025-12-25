@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/08/11 08:26:09 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/12/25 09:21:47 wiz Exp $
 
 DISTNAME=	graphite2-1.3.14
 PKGREVISION=	3
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=silgraphite/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://graphite.sil.org/
+HOMEPAGE=	https://graphite.sil.org/
 COMMENT=	Cross-platform rendering for complex writing systems
 LICENSE=	gnu-lgpl-v2
 
