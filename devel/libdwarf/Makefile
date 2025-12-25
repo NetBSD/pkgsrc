@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/03/19 08:47:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/12/25 16:57:54 ryoon Exp $
 
-DISTNAME=	libdwarf-0.3.4
+DISTNAME=	libdwarf-2.2.0
 CATEGORIES=	devel
 MASTER_SITES=	https://www.prevanders.net/
 EXTRACT_SUFX=	.tar.xz
