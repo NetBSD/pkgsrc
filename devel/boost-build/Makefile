@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2023/08/22 20:16:09 adam Exp $
+# $NetBSD: Makefile,v 1.20 2025/12/25 22:45:27 adam Exp $
 
-BOOST_PACKAGE=		build
-BOOST_COMMENT=		(Boost.Build framework)
-BOOST_CONFIG=		no
+BOOST_PACKAGE=	build
+BOOST_COMMENT=	(Boost.Build framework)
+BOOST_CONFIG=	no
 
 USE_TOOLS+=	pax
 
@@ -14,9 +14,9 @@ SUBST_STAGE.confdir=	pre-build
 SUBST_FILES.confdir=	tools/build/src/build-system.jam
 SUBST_SED.confdir=	-e 's,/etc,${PKG_SYSCONFDIR},g'
 
-EGDIR=			${PREFIX}/share/examples/boost-build
-CONF_FILES=		${EGDIR}/site-config.jam \
-			${PKG_SYSCONFDIR}/site-config.jam
+EGDIR=		${PREFIX}/share/examples/boost-build
+CONF_FILES=	${EGDIR}/site-config.jam \
+		${PKG_SYSCONFDIR}/site-config.jam
 
 # contains /usr/bin/python
 CHECK_INTERPRETER_SKIP=		share/boost-build/example/customization/inline_file.py
@@ -26,7 +26,7 @@ CHECK_INTERPRETER_SKIP+=	share/boost-build/test/*.py
 CHECK_INTERPRETER_SKIP+=	share/boost-build/nightly.sh
 CHECK_INTERPRETER_SKIP+=	share/boost-build/roll.sh
 
-INSTALLATION_DIRS+=	share/boost-build
+INSTALLATION_DIRS+=	share/b2
 
 .include "toolset.mk"
 
@@ -41,7 +41,7 @@ do-build:
 
 do-install:
 	cd ${WRKSRC}/tools/build/src && pax -r -w -p pm -s ':^./engine.*$$::' \
-		-s ':^.*\.orig$$::' . ${DESTDIR}${PREFIX}/share/boost-build
+		-s ':^.*\.orig$$::' . ${DESTDIR}${PREFIX}/share/b2
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/site-config.jam ${DESTDIR}${EGDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2025/09/27 09:57:14 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2025/12/25 22:45:28 adam Exp $
 
 BUILDLINK_TREE+=	py-boost
 
@@ -8,8 +8,8 @@ PY_BOOST_BUILDLINK3_MK:=
 .include "../../lang/python/pyversion.mk"
 
 # Use a dependency pattern that guarantees the proper ABI.
-BUILDLINK_API_DEPENDS.py-boost+=	${PYPKGPREFIX}-boost-1.89.*
-BUILDLINK_ABI_DEPENDS.py-boost+=	${PYPKGPREFIX}-boost>=1.89.0nb1
+BUILDLINK_API_DEPENDS.py-boost+=	${PYPKGPREFIX}-boost-1.90.*
+BUILDLINK_ABI_DEPENDS.py-boost+=	${PYPKGPREFIX}-boost>=1.90.0
 BUILDLINK_PKGSRCDIR.py-boost?=		../../devel/py-boost
 
 .include "../../devel/boost-headers/buildlink3.mk"

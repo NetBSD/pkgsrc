@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/09/27 09:57:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/12/25 22:45:28 adam Exp $
 
 BOOST_PACKAGE=		mpi
 BOOST_COMMENT=		(Boost.MPI binary library)
@@ -6,7 +6,6 @@ BOOST_CONFIG=		installed
 
 INSTALLATION_DIRS+=	lib
 
-PKGREVISION= 1
 .include "../../meta-pkgs/boost/Makefile.common"
 
 BJAM_ARGS+=		--user-config=${WRKSRC}/user-config.jam
