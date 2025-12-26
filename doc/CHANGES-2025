@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7428 2025/12/26 16:38:38 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7429 2025/12/26 16:49:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10957,3 +10957,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-arviz to 0.23.0 [adam 2025-12-26]
 	Updated math/py-xgboost to 3.1.2 [adam 2025-12-26]
 	Updated devel/py-rich-click to 1.9.5 [adam 2025-12-26]
+	Updated www/py-django-phonenumber-field to 8.4.0 [adam 2025-12-26]
+	Updated www/py-django-countries to 8.2.0 [adam 2025-12-26]
+	Updated www/py-django-polymorphic to 4.5.1 [adam 2025-12-26]
+	Updated www/py-django-timezone-field to 7.2.1 [adam 2025-12-26]
