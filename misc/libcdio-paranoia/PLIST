@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/08/25 14:40:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/12/26 11:10:46 adam Exp $
 bin/cd-paranoia
 include/cdio/paranoia/cdda.h
 include/cdio/paranoia/paranoia.h
@@ -7,5 +7,5 @@ lib/libcdio_cdda.la
 lib/libcdio_paranoia.la
 lib/pkgconfig/libcdio_cdda.pc
 lib/pkgconfig/libcdio_paranoia.pc
-man/jp/man1/cd-paranoia.1
+man/ja/man1/cd-paranoia.1
 man/man1/cd-paranoia.1
