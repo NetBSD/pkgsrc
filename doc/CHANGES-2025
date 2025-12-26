@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7410 2025/12/26 09:44:48 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7411 2025/12/26 09:51:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10904,3 +10904,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-uv to 0.9.18 [adam 2025-12-26]
 	Updated devel/py-uv-build to 0.9.18 [adam 2025-12-26]
 	Updated www/py-django-stubs-ext to 5.2.8 [adam 2025-12-26]
+	Updated www/py-django-picklefield to 3.4.0 [adam 2025-12-26]
+	Updated www/py-django-treebeard to 4.8.0 [adam 2025-12-26]
