@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.12 2025/04/14 13:30:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/12/26 16:45:03 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/django_countries/__init__.py
 ${PYSITELIB}/django_countries/__init__.pyc
 ${PYSITELIB}/django_countries/__init__.pyo
@@ -16,8 +14,12 @@ ${PYSITELIB}/django_countries/conf.pyo
 ${PYSITELIB}/django_countries/data.py
 ${PYSITELIB}/django_countries/data.pyc
 ${PYSITELIB}/django_countries/data.pyo
+${PYSITELIB}/django_countries/django_filters.py
+${PYSITELIB}/django_countries/django_filters.pyc
+${PYSITELIB}/django_countries/django_filters.pyo
 ${PYSITELIB}/django_countries/fields.py
 ${PYSITELIB}/django_countries/fields.pyc
+${PYSITELIB}/django_countries/fields.pyi
 ${PYSITELIB}/django_countries/fields.pyo
 ${PYSITELIB}/django_countries/filters.py
 ${PYSITELIB}/django_countries/filters.pyc
@@ -31,6 +33,7 @@ ${PYSITELIB}/django_countries/graphql/types.pyo
 ${PYSITELIB}/django_countries/ioc_data.py
 ${PYSITELIB}/django_countries/ioc_data.pyc
 ${PYSITELIB}/django_countries/ioc_data.pyo
+${PYSITELIB}/django_countries/iso3166-1.csv
 ${PYSITELIB}/django_countries/locale/af/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/af/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/ar/LC_MESSAGES/django.mo
@@ -47,6 +50,7 @@ ${PYSITELIB}/django_countries/locale/de/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/de/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/el/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/el/LC_MESSAGES/django.po
+${PYSITELIB}/django_countries/locale/en/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/en@test/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/en@test/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/eo/LC_MESSAGES/django.mo
@@ -79,6 +83,8 @@ ${PYSITELIB}/django_countries/locale/it/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/it/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/ja/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/ja/LC_MESSAGES/django.po
+${PYSITELIB}/django_countries/locale/ka_GE/LC_MESSAGES/django.mo
+${PYSITELIB}/django_countries/locale/ka_GE/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/ko_KR/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/ko_KR/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/lt/LC_MESSAGES/django.mo
@@ -136,9 +142,6 @@ ${PYSITELIB}/django_countries/models.py
 ${PYSITELIB}/django_countries/models.pyc
 ${PYSITELIB}/django_countries/models.pyo
 ${PYSITELIB}/django_countries/py.typed
-${PYSITELIB}/django_countries/release.py
-${PYSITELIB}/django_countries/release.pyc
-${PYSITELIB}/django_countries/release.pyo
 ${PYSITELIB}/django_countries/serializer_fields.py
 ${PYSITELIB}/django_countries/serializer_fields.pyc
 ${PYSITELIB}/django_countries/serializer_fields.pyo
@@ -440,6 +443,9 @@ ${PYSITELIB}/django_countries/tests/settings.pyo
 ${PYSITELIB}/django_countries/tests/settings_noi18n.py
 ${PYSITELIB}/django_countries/tests/settings_noi18n.pyc
 ${PYSITELIB}/django_countries/tests/settings_noi18n.pyo
+${PYSITELIB}/django_countries/tests/test_admin_display.py
+${PYSITELIB}/django_countries/tests/test_admin_display.pyc
+${PYSITELIB}/django_countries/tests/test_admin_display.pyo
 ${PYSITELIB}/django_countries/tests/test_admin_filters.py
 ${PYSITELIB}/django_countries/tests/test_admin_filters.pyc
 ${PYSITELIB}/django_countries/tests/test_admin_filters.pyo
@@ -449,9 +455,15 @@ ${PYSITELIB}/django_countries/tests/test_countries.pyo
 ${PYSITELIB}/django_countries/tests/test_drf.py
 ${PYSITELIB}/django_countries/tests/test_drf.pyc
 ${PYSITELIB}/django_countries/tests/test_drf.pyo
+${PYSITELIB}/django_countries/tests/test_dynamic_first.py
+${PYSITELIB}/django_countries/tests/test_dynamic_first.pyc
+${PYSITELIB}/django_countries/tests/test_dynamic_first.pyo
 ${PYSITELIB}/django_countries/tests/test_fields.py
 ${PYSITELIB}/django_countries/tests/test_fields.pyc
 ${PYSITELIB}/django_countries/tests/test_fields.pyo
+${PYSITELIB}/django_countries/tests/test_null_support.py
+${PYSITELIB}/django_countries/tests/test_null_support.pyc
+${PYSITELIB}/django_countries/tests/test_null_support.pyo
 ${PYSITELIB}/django_countries/tests/test_settings.py
 ${PYSITELIB}/django_countries/tests/test_settings.pyc
 ${PYSITELIB}/django_countries/tests/test_settings.pyo

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2024/04/12 07:54:31 adam Exp $
+$NetBSD: distinfo,v 1.18 2025/12/26 16:45:03 adam Exp $
 
-BLAKE2s (django-countries-7.6.1.tar.gz) = b052abd1f5c31ede2b5231e8a6ebb615653327f30f7b095109541b2551c2ddf3
-SHA512 (django-countries-7.6.1.tar.gz) = 2eb83edb3d50e37c1fae7070588f56432111c25f85b98f4c39e8162f0c81e8049ca0b6235a90b871973d809b859eb6abbda5d4a3b1f2f7c4c4cb27e723332871
-Size (django-countries-7.6.1.tar.gz) = 675623 bytes
+BLAKE2s (django_countries-8.2.0.tar.gz) = 630ceb271e650199a8f0a066a7f82f8492324ba75cdb2bf9db064065069cdb2b
+SHA512 (django_countries-8.2.0.tar.gz) = 71f7f3dc6ac5b8fb46bb5b34ec08fbae305a57e8a3464a3ad2cbfebb94cf80b157b87afe92626cd956db4db7cb24c335f6f410569f26373bc34247f90b7e9346
+Size (django_countries-8.2.0.tar.gz) = 2455542 bytes
