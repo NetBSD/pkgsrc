@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2025/11/13 13:34:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2025/12/26 11:36:46 adam Exp $
 bin/dul-receive-pack-${PYVERSSUFFIX}
 bin/dul-upload-pack-${PYVERSSUFFIX}
 bin/dulwich-${PYVERSSUFFIX}
@@ -17,6 +17,9 @@ ${PYSITELIB}/dulwich/__main__.pyo
 ${PYSITELIB}/dulwich/_diff_tree.so
 ${PYSITELIB}/dulwich/_objects.so
 ${PYSITELIB}/dulwich/_pack.so
+${PYSITELIB}/dulwich/_typing.py
+${PYSITELIB}/dulwich/_typing.pyc
+${PYSITELIB}/dulwich/_typing.pyo
 ${PYSITELIB}/dulwich/annotate.py
 ${PYSITELIB}/dulwich/annotate.pyc
 ${PYSITELIB}/dulwich/annotate.pyo
@@ -60,9 +63,9 @@ ${PYSITELIB}/dulwich/contrib/README.swift.rst
 ${PYSITELIB}/dulwich/contrib/__init__.py
 ${PYSITELIB}/dulwich/contrib/__init__.pyc
 ${PYSITELIB}/dulwich/contrib/__init__.pyo
-${PYSITELIB}/dulwich/contrib/diffstat.py
-${PYSITELIB}/dulwich/contrib/diffstat.pyc
-${PYSITELIB}/dulwich/contrib/diffstat.pyo
+${PYSITELIB}/dulwich/contrib/greenthreads.py
+${PYSITELIB}/dulwich/contrib/greenthreads.pyc
+${PYSITELIB}/dulwich/contrib/greenthreads.pyo
 ${PYSITELIB}/dulwich/contrib/paramiko_vendor.py
 ${PYSITELIB}/dulwich/contrib/paramiko_vendor.pyc
 ${PYSITELIB}/dulwich/contrib/paramiko_vendor.pyo
@@ -84,6 +87,9 @@ ${PYSITELIB}/dulwich/diff.pyo
 ${PYSITELIB}/dulwich/diff_tree.py
 ${PYSITELIB}/dulwich/diff_tree.pyc
 ${PYSITELIB}/dulwich/diff_tree.pyo
+${PYSITELIB}/dulwich/diffstat.py
+${PYSITELIB}/dulwich/diffstat.pyc
+${PYSITELIB}/dulwich/diffstat.pyo
 ${PYSITELIB}/dulwich/dumb.py
 ${PYSITELIB}/dulwich/dumb.pyc
 ${PYSITELIB}/dulwich/dumb.pyo
@@ -108,9 +114,6 @@ ${PYSITELIB}/dulwich/gc.pyo
 ${PYSITELIB}/dulwich/graph.py
 ${PYSITELIB}/dulwich/graph.pyc
 ${PYSITELIB}/dulwich/graph.pyo
-${PYSITELIB}/dulwich/greenthreads.py
-${PYSITELIB}/dulwich/greenthreads.pyc
-${PYSITELIB}/dulwich/greenthreads.pyo
 ${PYSITELIB}/dulwich/hooks.py
 ${PYSITELIB}/dulwich/hooks.pyc
 ${PYSITELIB}/dulwich/hooks.pyo
@@ -150,9 +153,15 @@ ${PYSITELIB}/dulwich/merge.pyo
 ${PYSITELIB}/dulwich/merge_drivers.py
 ${PYSITELIB}/dulwich/merge_drivers.pyc
 ${PYSITELIB}/dulwich/merge_drivers.pyo
+${PYSITELIB}/dulwich/midx.py
+${PYSITELIB}/dulwich/midx.pyc
+${PYSITELIB}/dulwich/midx.pyo
 ${PYSITELIB}/dulwich/notes.py
 ${PYSITELIB}/dulwich/notes.pyc
 ${PYSITELIB}/dulwich/notes.pyo
+${PYSITELIB}/dulwich/object_format.py
+${PYSITELIB}/dulwich/object_format.pyc
+${PYSITELIB}/dulwich/object_format.pyo
 ${PYSITELIB}/dulwich/object_store.py
 ${PYSITELIB}/dulwich/object_store.pyc
 ${PYSITELIB}/dulwich/object_store.pyo
@@ -168,9 +177,24 @@ ${PYSITELIB}/dulwich/pack.pyo
 ${PYSITELIB}/dulwich/patch.py
 ${PYSITELIB}/dulwich/patch.pyc
 ${PYSITELIB}/dulwich/patch.pyo
-${PYSITELIB}/dulwich/porcelain.py
-${PYSITELIB}/dulwich/porcelain.pyc
-${PYSITELIB}/dulwich/porcelain.pyo
+${PYSITELIB}/dulwich/porcelain/__init__.py
+${PYSITELIB}/dulwich/porcelain/__init__.pyc
+${PYSITELIB}/dulwich/porcelain/__init__.pyo
+${PYSITELIB}/dulwich/porcelain/lfs.py
+${PYSITELIB}/dulwich/porcelain/lfs.pyc
+${PYSITELIB}/dulwich/porcelain/lfs.pyo
+${PYSITELIB}/dulwich/porcelain/notes.py
+${PYSITELIB}/dulwich/porcelain/notes.pyc
+${PYSITELIB}/dulwich/porcelain/notes.pyo
+${PYSITELIB}/dulwich/porcelain/submodule.py
+${PYSITELIB}/dulwich/porcelain/submodule.pyc
+${PYSITELIB}/dulwich/porcelain/submodule.pyo
+${PYSITELIB}/dulwich/porcelain/tag.py
+${PYSITELIB}/dulwich/porcelain/tag.pyc
+${PYSITELIB}/dulwich/porcelain/tag.pyo
+${PYSITELIB}/dulwich/porcelain/worktree.py
+${PYSITELIB}/dulwich/porcelain/worktree.pyc
+${PYSITELIB}/dulwich/porcelain/worktree.pyo
 ${PYSITELIB}/dulwich/protocol.py
 ${PYSITELIB}/dulwich/protocol.pyc
 ${PYSITELIB}/dulwich/protocol.pyo
@@ -190,6 +214,9 @@ ${PYSITELIB}/dulwich/reftable.pyo
 ${PYSITELIB}/dulwich/repo.py
 ${PYSITELIB}/dulwich/repo.pyc
 ${PYSITELIB}/dulwich/repo.pyo
+${PYSITELIB}/dulwich/rerere.py
+${PYSITELIB}/dulwich/rerere.pyc
+${PYSITELIB}/dulwich/rerere.pyo
 ${PYSITELIB}/dulwich/server.py
 ${PYSITELIB}/dulwich/server.pyc
 ${PYSITELIB}/dulwich/server.pyo
