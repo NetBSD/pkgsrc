@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:44:21 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/12/26 19:44:53 adam Exp $
 
-BLAKE2s (easyAI-1.0.0.4.tar.gz) = 544876b62e0a50242a4ea5aca28f5bdc268c57d042ba1129c2b7dfd3f0b6b5fa
-SHA512 (easyAI-1.0.0.4.tar.gz) = 5bd600dc8aab0ab033d660a3ccb720b3870da693d062f5fd19e997ddae8087dd331ee081e614181a5366b0dbbd21c972994a9a173fd3ad96f0657c34dbc9814f
-Size (easyAI-1.0.0.4.tar.gz) = 27605 bytes
+BLAKE2s (easyAI-2.0.12.tar.gz) = feeb7e2929edf388210602bd0aabb2b297c2cd6884893e5d3223d5157d99205b
+SHA512 (easyAI-2.0.12.tar.gz) = b417f9842bef379a67ee64515f419f2579874c206bbb204591f3cd96b81f5f5a39d296981dd5f894085272aa4c7e15bf040af5db42e7b173574e2132c554b01d
+Size (easyAI-2.0.12.tar.gz) = 29263 bytes
