@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/12/11 10:38:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/12/26 16:47:16 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -30,6 +30,9 @@ ${PYSITELIB}/polymorphic/admin/inlines.pyo
 ${PYSITELIB}/polymorphic/admin/parentadmin.py
 ${PYSITELIB}/polymorphic/admin/parentadmin.pyc
 ${PYSITELIB}/polymorphic/admin/parentadmin.pyo
+${PYSITELIB}/polymorphic/apps.py
+${PYSITELIB}/polymorphic/apps.pyc
+${PYSITELIB}/polymorphic/apps.pyo
 ${PYSITELIB}/polymorphic/base.py
 ${PYSITELIB}/polymorphic/base.pyc
 ${PYSITELIB}/polymorphic/base.pyo
@@ -42,6 +45,9 @@ ${PYSITELIB}/polymorphic/contrib/extra_views.pyo
 ${PYSITELIB}/polymorphic/contrib/guardian.py
 ${PYSITELIB}/polymorphic/contrib/guardian.pyc
 ${PYSITELIB}/polymorphic/contrib/guardian.pyo
+${PYSITELIB}/polymorphic/deletion.py
+${PYSITELIB}/polymorphic/deletion.pyc
+${PYSITELIB}/polymorphic/deletion.pyo
 ${PYSITELIB}/polymorphic/formsets/__init__.py
 ${PYSITELIB}/polymorphic/formsets/__init__.pyc
 ${PYSITELIB}/polymorphic/formsets/__init__.pyo
