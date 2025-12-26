@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2025/04/14 18:39:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.42 2025/12/26 10:08:46 adam Exp $
 bin/djangocms-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -691,6 +691,21 @@ ${PYSITELIB}/cms/migrations/0035_auto_20230822_2208_squashed_0036_auto_20240311_
 ${PYSITELIB}/cms/migrations/0036_auto_20240311_1028.py
 ${PYSITELIB}/cms/migrations/0036_auto_20240311_1028.pyc
 ${PYSITELIB}/cms/migrations/0036_auto_20240311_1028.pyo
+${PYSITELIB}/cms/migrations/0037_merge_page_treenode.py
+${PYSITELIB}/cms/migrations/0037_merge_page_treenode.pyc
+${PYSITELIB}/cms/migrations/0037_merge_page_treenode.pyo
+${PYSITELIB}/cms/migrations/0038_alter_page_site.py
+${PYSITELIB}/cms/migrations/0038_alter_page_site.pyc
+${PYSITELIB}/cms/migrations/0038_alter_page_site.pyo
+${PYSITELIB}/cms/migrations/0039_remove_page_languages_alter_pageurl_unique_together.py
+${PYSITELIB}/cms/migrations/0039_remove_page_languages_alter_pageurl_unique_together.pyc
+${PYSITELIB}/cms/migrations/0039_remove_page_languages_alter_pageurl_unique_together.pyo
+${PYSITELIB}/cms/migrations/0040_alter_pageuser_created_by_and_more.py
+${PYSITELIB}/cms/migrations/0040_alter_pageuser_created_by_and_more.pyc
+${PYSITELIB}/cms/migrations/0040_alter_pageuser_created_by_and_more.pyo
+${PYSITELIB}/cms/migrations/0041_alter_pageurl_unique_together_pageurl_site_and_more.py
+${PYSITELIB}/cms/migrations/0041_alter_pageurl_unique_together_pageurl_site_and_more.pyc
+${PYSITELIB}/cms/migrations/0041_alter_pageurl_unique_together_pageurl_site_and_more.pyo
 ${PYSITELIB}/cms/migrations/__init__.py
 ${PYSITELIB}/cms/migrations/__init__.pyc
 ${PYSITELIB}/cms/migrations/__init__.pyo
@@ -780,6 +795,7 @@ ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.base.css
 ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.pagetree.css
 ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.welcome.css
 ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.wizard.css
+${PYSITELIB}/cms/static/cms/css/5.0.5/cms.headless.css
 ${PYSITELIB}/cms/static/cms/fonts/${PKGVERSION}/django-cms-iconfont.eot
 ${PYSITELIB}/cms/static/cms/fonts/${PKGVERSION}/django-cms-iconfont.svg
 ${PYSITELIB}/cms/static/cms/fonts/${PKGVERSION}/django-cms-iconfont.ttf
@@ -1003,6 +1019,7 @@ ${PYSITELIB}/cms/static/cms/js/widgets/forms.slugwidget.js
 ${PYSITELIB}/cms/static/cms/js/widgets/wizard.pagetypeselect.js
 ${PYSITELIB}/cms/static/cms/sass/cms.admin.scss
 ${PYSITELIB}/cms/static/cms/sass/cms.base.scss
+${PYSITELIB}/cms/static/cms/sass/cms.headless.scss
 ${PYSITELIB}/cms/static/cms/sass/cms.pagetree.scss
 ${PYSITELIB}/cms/static/cms/sass/cms.welcome.scss
 ${PYSITELIB}/cms/static/cms/sass/cms.wizard.scss
@@ -1056,6 +1073,8 @@ ${PYSITELIB}/cms/templates/admin/cms/mail/page_user_change.html
 ${PYSITELIB}/cms/templates/admin/cms/mail/page_user_change.txt
 ${PYSITELIB}/cms/templates/admin/cms/page/change_form.html
 ${PYSITELIB}/cms/templates/admin/cms/page/close_frame.html
+${PYSITELIB}/cms/templates/admin/cms/page/delete_confirmation.html
+${PYSITELIB}/cms/templates/admin/cms/page/delete_summary.html
 ${PYSITELIB}/cms/templates/admin/cms/page/includes/fieldset.html
 ${PYSITELIB}/cms/templates/admin/cms/page/permissions.html
 ${PYSITELIB}/cms/templates/admin/cms/page/plugin/change_form.html
@@ -1075,6 +1094,7 @@ ${PYSITELIB}/cms/templates/admin/cms/page/tree/menu.html
 ${PYSITELIB}/cms/templates/admin/cms/usersettings/change_form.html
 ${PYSITELIB}/cms/templates/cms/content.html
 ${PYSITELIB}/cms/templates/cms/dummy.html
+${PYSITELIB}/cms/templates/cms/headless/placeholder.html
 ${PYSITELIB}/cms/templates/cms/noapphook.html
 ${PYSITELIB}/cms/templates/cms/plugins/alias.html
 ${PYSITELIB}/cms/templates/cms/toolbar/clipboard.html
@@ -1111,7 +1131,6 @@ ${PYSITELIB}/cms/templates/cms/widgets/pageselectwidget.html
 ${PYSITELIB}/cms/templates/cms/widgets/pagesmartlinkwidget.html
 ${PYSITELIB}/cms/templates/cms/wizards/base.html
 ${PYSITELIB}/cms/templates/cms/wizards/create.html
-${PYSITELIB}/cms/templates/cms/wizards/done.html
 ${PYSITELIB}/cms/templates/cms/wizards/includes/form_fields.html
 ${PYSITELIB}/cms/templates/cms/wizards/start.html
 ${PYSITELIB}/cms/templates/cms/wizards/wizardoptionwidget.html
@@ -1667,6 +1686,9 @@ ${PYSITELIB}/cms/test_utils/project/second_cms_urls_for_apphook_tests.pyo
 ${PYSITELIB}/cms/test_utils/project/second_urls_for_apphook_tests.py
 ${PYSITELIB}/cms/test_utils/project/second_urls_for_apphook_tests.pyc
 ${PYSITELIB}/cms/test_utils/project/second_urls_for_apphook_tests.pyo
+${PYSITELIB}/cms/test_utils/project/template_backends.py
+${PYSITELIB}/cms/test_utils/project/template_backends.pyc
+${PYSITELIB}/cms/test_utils/project/template_backends.pyo
 ${PYSITELIB}/cms/test_utils/project/third_cms_urls_for_apphook_tests.py
 ${PYSITELIB}/cms/test_utils/project/third_cms_urls_for_apphook_tests.pyc
 ${PYSITELIB}/cms/test_utils/project/third_cms_urls_for_apphook_tests.pyo
