@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7423 2025/12/26 12:45:08 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7424 2025/12/26 12:54:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10945,3 +10945,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-debugpy to 1.8.19 [adam 2025-12-26]
 	Updated audio/eyeD3 to 0.9.9 [adam 2025-12-26]
 	Updated www/py-django-tasks to 0.10.0 [adam 2025-12-26]
+	Updated lang/py-cxxheaderparser to 1.6.2 [adam 2025-12-26]
+	Updated devel/py-jupyter_client to 8.7.0 [adam 2025-12-26]
+	Updated www/py-test-jupyter to 0.11.0 [adam 2025-12-26]
