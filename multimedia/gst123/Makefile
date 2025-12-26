@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.61 2025/10/23 20:38:35 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2025/12/26 10:17:36 wiz Exp $
 
 DISTNAME=	gst123-0.3.5
 PKGREVISION=	21
 CATEGORIES=	multimedia
-MASTER_SITES=	http://space.twc.de/~stefan/gst123/
+MASTER_SITES=	https://space.twc.de/~stefan/gst123/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://space.twc.de/~stefan/gst123.php
+HOMEPAGE=	https://space.twc.de/~stefan/gst123.php
 COMMENT=	Flexible command line player based on gstreamer
 LICENSE=	gnu-lgpl-v2
 
