@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/11/17 08:13:20 adam Exp $
+$NetBSD: distinfo,v 1.6 2025/12/26 09:44:24 adam Exp $
 
-BLAKE2s (django_stubs_ext-5.2.7.tar.gz) = df51e69a79a75d56b5708d089c8ffa9b5990b2c0957dd58140f5741245861d8c
-SHA512 (django_stubs_ext-5.2.7.tar.gz) = 3c620374cacd987045dbf512ee767089de34a5fa3d867cf9319894c1d7126b972d153bdad70064958a069cea38b457a7771b492bd412f1dd06a262de5223c8db
-Size (django_stubs_ext-5.2.7.tar.gz) = 6524 bytes
+BLAKE2s (django_stubs_ext-5.2.8.tar.gz) = caa08f88af4040e43f19d5e9580575a2c642654bb15da7bc96b313fe9e6f0ed3
+SHA512 (django_stubs_ext-5.2.8.tar.gz) = b96882ce308a660000d47abb26da3b0513c75dc57cc03c78d915fb68134a6281f2f698ff96266d2cab9b0e10a5a2b553da861c1eb42da9f4643c6e5f36c60b53
+Size (django_stubs_ext-5.2.8.tar.gz) = 6487 bytes
