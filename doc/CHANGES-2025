@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7426 2025/12/26 14:45:03 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7427 2025/12/26 16:15:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10950,3 +10950,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-test-jupyter to 0.11.0 [adam 2025-12-26]
 	Updated meta-pkgs/bulk-test-go to 20251226 [wiz 2025-12-26]
 	Removed devel/guile-gcrypt [wiz 2025-12-26]
+	Updated devel/py-gcovr to 8.4 [adam 2025-12-26]
+	Updated devel/py-jaraco.test to 5.6.0 [adam 2025-12-26]
+	Updated devel/py-doc8 to 2.0.0 [adam 2025-12-26]
+	Updated textproc/py-phonenumbers to 9.0.21 [adam 2025-12-26]
