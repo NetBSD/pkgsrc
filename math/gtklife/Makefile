@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.59 2025/10/23 20:38:15 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2025/12/26 10:22:09 wiz Exp $
 
 DISTNAME=	gtklife-5.1
 PKGREVISION=	45
 CATEGORIES=	math
-MASTER_SITES=	http://ironphoenix.org/tril/gtklife/
+#MASTER_SITES=	http://ironphoenix.org/tril/gtklife/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ironphoenix.org/tril/gtklife/
+HOMEPAGE=	https://homeforaday.org/gtklife/
 COMMENT=	The game of life
 
 GNU_CONFIGURE=		yes
