@@ -1,1 +1,2 @@
+bin/flatc @PREFIX@/bin/flatc-@PYVERSSUFFIX@
 bin/wamp @PREFIX@/bin/wamp-@PYVERSSUFFIX@
