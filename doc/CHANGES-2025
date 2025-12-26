@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7420 2025/12/26 11:46:31 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7421 2025/12/26 11:57:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10933,3 +10933,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-geventhttpclient to 2.3.7 [adam 2025-12-26]
 	Updated devel/py-pydantic-settings to 2.12.0 [adam 2025-12-26]
 	Updated security/py-omemo-dr to 1.1.0 [adam 2025-12-26]
+	Updated devel/py-jaraco.context to 6.0.2 [adam 2025-12-26]
+	Updated devel/py-jaraco.functools to 4.4.0 [adam 2025-12-26]
+	Updated time/py-ligotimegps to 2.1.0 [adam 2025-12-26]
+	Updated finance/py-crytic-compile to 0.3.11 [adam 2025-12-26]
