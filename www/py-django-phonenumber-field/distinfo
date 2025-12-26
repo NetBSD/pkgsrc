@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/04/14 18:45:20 adam Exp $
+$NetBSD: distinfo,v 1.8 2025/12/26 16:40:40 adam Exp $
 
-BLAKE2s (django_phonenumber_field-8.1.0.tar.gz) = 12a0da835e0bf88a3930746fd9fbcaaa42cdf5d67573b0ebb4751b11390e3cd5
-SHA512 (django_phonenumber_field-8.1.0.tar.gz) = ccd40c11e54b78938d8bb59880517d2c144700b85424b5376cf38a6184418a7a284efa32cb4a97a54b2a7fa877acb0f956b586ddb7710ed2087d8b1514da122f
-Size (django_phonenumber_field-8.1.0.tar.gz) = 43854 bytes
+BLAKE2s (django_phonenumber_field-8.4.0.tar.gz) = f492f80fa74e30b5f9bc819a9ad1ca6baadd0e18ee444ea8e212f518a69c5184
+SHA512 (django_phonenumber_field-8.4.0.tar.gz) = 2173d24f721ca37b2d5ef8e77b9261b63d220f80e60aeeca9301f23ee7b7af587a32f81967e9a14ab257dd1a159f010bffb8968eab0082e2a9df225fcc92bea6
+Size (django_phonenumber_field-8.4.0.tar.gz) = 45512 bytes
