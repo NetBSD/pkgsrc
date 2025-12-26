@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/14 14:16:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/12/26 10:10:27 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -10,9 +10,22 @@ ${PYSITELIB}/djangocms_attributes_field/__init__.pyo
 ${PYSITELIB}/djangocms_attributes_field/fields.py
 ${PYSITELIB}/djangocms_attributes_field/fields.pyc
 ${PYSITELIB}/djangocms_attributes_field/fields.pyo
+${PYSITELIB}/djangocms_attributes_field/locale/de/LC_MESSAGES/django.mo
+${PYSITELIB}/djangocms_attributes_field/locale/de/LC_MESSAGES/django.po
+${PYSITELIB}/djangocms_attributes_field/locale/en/LC_MESSAGES/django.mo
+${PYSITELIB}/djangocms_attributes_field/locale/en/LC_MESSAGES/django.po
+${PYSITELIB}/djangocms_attributes_field/locale/es/LC_MESSAGES/django.mo
+${PYSITELIB}/djangocms_attributes_field/locale/es/LC_MESSAGES/django.po
+${PYSITELIB}/djangocms_attributes_field/locale/fr/LC_MESSAGES/django.mo
+${PYSITELIB}/djangocms_attributes_field/locale/fr/LC_MESSAGES/django.po
 ${PYSITELIB}/djangocms_attributes_field/models.py
 ${PYSITELIB}/djangocms_attributes_field/models.pyc
 ${PYSITELIB}/djangocms_attributes_field/models.pyo
+${PYSITELIB}/djangocms_attributes_field/static/djangocms_attributes_field/widget.css
+${PYSITELIB}/djangocms_attributes_field/static/djangocms_attributes_field/widget.js
+${PYSITELIB}/djangocms_attributes_field/utils.py
+${PYSITELIB}/djangocms_attributes_field/utils.pyc
+${PYSITELIB}/djangocms_attributes_field/utils.pyo
 ${PYSITELIB}/djangocms_attributes_field/widgets.py
 ${PYSITELIB}/djangocms_attributes_field/widgets.pyc
 ${PYSITELIB}/djangocms_attributes_field/widgets.pyo
