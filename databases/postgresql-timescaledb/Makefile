@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2025/08/19 07:33:33 adam Exp $
+# $NetBSD: Makefile,v 1.47 2025/12/26 09:21:02 adam Exp $
 
-DISTNAME=	timescaledb-2.21.3
+DISTNAME=	timescaledb-2.24.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=timescale/}
@@ -16,7 +16,7 @@ DEPENDS+=	postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL
 CMAKE_CONFIGURE_ARGS+=	-DUSE_OPENSSL=ON
 CMAKE_CONFIGURE_ARGS+=	-DREGRESS_CHECKS=OFF
 
-PGSQL_VERSIONS_ACCEPTED=	17 16 15
+PGSQL_VERSIONS_ACCEPTED=	18 17 16 15
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.timescaledb
 PKG_SUPPORTED_OPTIONS+=		timescale-license
@@ -27,7 +27,7 @@ PKG_SUGGESTED_OPTIONS+=		timescale-license
 PLIST_VARS+=		tsl
 .if !empty(PKG_OPTIONS:Mtimescale-license)
 LICENSE+=		AND timescale-license
-CMAKE_CONFIGURE_ARGS+=		-DAPACHE_ONLY=OFF
+CMAKE_CONFIGURE_ARGS+=	-DAPACHE_ONLY=OFF
 RESTRICTED=		No clear permission granted to distribute
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -35,7 +35,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 PLIST.tsl=		yes
 .else
-CMAKE_CONFIGURE_ARGS+=		-DAPACHE_ONLY=ON
+CMAKE_CONFIGURE_ARGS+=	-DAPACHE_ONLY=ON
 .endif
 
 .include "../../devel/cmake/build.mk"
