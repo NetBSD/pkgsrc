@@ -1,3 +1,7 @@
-$NetBSD: CHANGES-pkgsrc-2025Q4,v 1.1.2.1 2025/12/20 22:06:56 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q4,v 1.1.2.2 2025/12/26 10:42:53 bsiegert Exp $
 
-Changes to packages and infrastructure on the $BRANCH branch:
+Changes to packages and infrastructure on the pkgsrc-2025Q4 branch:
+
+Pullup ticket #7038 - requested by gutteridge
+www/firefox140: build fix
+
