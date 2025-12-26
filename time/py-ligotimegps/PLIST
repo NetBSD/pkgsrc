@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/14 08:49:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/12/26 11:55:20 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -10,6 +10,15 @@ ${PYSITELIB}/ligotimegps/__init__.pyo
 ${PYSITELIB}/ligotimegps/_version.py
 ${PYSITELIB}/ligotimegps/_version.pyc
 ${PYSITELIB}/ligotimegps/_version.pyo
-${PYSITELIB}/ligotimegps/test_ligotimegps.py
-${PYSITELIB}/ligotimegps/test_ligotimegps.pyc
-${PYSITELIB}/ligotimegps/test_ligotimegps.pyo
+${PYSITELIB}/ligotimegps/ligotimegps.py
+${PYSITELIB}/ligotimegps/ligotimegps.pyc
+${PYSITELIB}/ligotimegps/ligotimegps.pyo
+${PYSITELIB}/ligotimegps/protocol.py
+${PYSITELIB}/ligotimegps/protocol.pyc
+${PYSITELIB}/ligotimegps/protocol.pyo
+${PYSITELIB}/ligotimegps/tests/__init__.py
+${PYSITELIB}/ligotimegps/tests/__init__.pyc
+${PYSITELIB}/ligotimegps/tests/__init__.pyo
+${PYSITELIB}/ligotimegps/tests/test_ligotimegps.py
+${PYSITELIB}/ligotimegps/tests/test_ligotimegps.pyc
+${PYSITELIB}/ligotimegps/tests/test_ligotimegps.pyo

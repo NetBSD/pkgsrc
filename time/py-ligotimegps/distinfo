@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/11/05 20:25:22 wiz Exp $
+$NetBSD: distinfo,v 1.7 2025/12/26 11:55:20 adam Exp $
 
-BLAKE2s (ligotimegps-2.0.1.tar.gz) = b629a3253132d170c72d0f7ef599edbccd9a9daae5a162554d3af0da56cc1389
-SHA512 (ligotimegps-2.0.1.tar.gz) = 075dfe98d588305aa3fbad47895d54f26d72fc756d175b607fff51913a40b1219f50602c86da35bb47b335b9275775b903bdcfbd053d7df519f3c6df5f71c997
-Size (ligotimegps-2.0.1.tar.gz) = 35191 bytes
-SHA1 (patch-versioneer.py) = f0a75391fa70ed6f7f1e18079bbf57a80ee5ca94
+BLAKE2s (ligotimegps-2.1.0.tar.gz) = ccfdad39330289a02e0d8b53d17f9765c45cfa3fa254c7306b384f5465eea0cc
+SHA512 (ligotimegps-2.1.0.tar.gz) = f0984bd8b7eeed6171ac54641bb2e9be33988843a0ce8b1570ccf00d559ab0ea5983045cb50ae6aec0482bf7ccadcf2601e9f5826d842ef63aada03c9da1c31e
+Size (ligotimegps-2.1.0.tar.gz) = 28069 bytes
