@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7406 2025/12/25 23:11:38 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7407 2025/12/26 02:57:58 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10892,3 +10892,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-run-parallel to 0.8.1 [adam 2025-12-25]
 	Updated devel/capnproto to 1.3.0 [adam 2025-12-25]
 	Updated multimedia/libva to 2.23.0 [adam 2025-12-25]
+	Updated lang/gambc to 4.9.7 [ktnb 2025-12-26]
