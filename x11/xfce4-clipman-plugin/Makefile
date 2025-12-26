@@ -1,15 +1,19 @@
-# $NetBSD: Makefile,v 1.82 2025/10/23 20:40:21 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2025/12/26 21:32:36 gutteridge Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	1.6.7
+VERSION=	1.7.0
 DISTNAME=	xfce4-clipman-plugin-${VERSION}
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-clipman-plugin/${VERSION:R}/
 
 HOMEPAGE=	https://goodies.xfce.org/projects/panel-plugins/xfce4-clipman-plugin
 COMMENT=	Xfce clipboard plugin
+EXTRACT_SUFX=	.tar.xz
+
+USE_TOOLS+=	autoconf automake autoreconf
+
+TOOL_DEPENDS+=	xfce4-dev-tools>=4.20.0:../../devel/xfce4-dev-tools
 
 # Will otherwise potentially pick up Wayland libraries in the environment.
 # Not ready for use with current state of Xfce in pkgsrc.
@@ -23,6 +27,9 @@ CONF_FILES=		${XFCE4_EGBASE}/autostart/xfce4-clipman-plugin-autostart.desktop \
 
 MAKE_DIRS+=	${XFCE4_EGBASE}/autostart \
 		${XFCE4_EGBASE}/panel
+
+pre-patch:
+	cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
