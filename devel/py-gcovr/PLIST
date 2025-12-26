@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/02/12 13:08:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/12/26 16:08:04 adam Exp $
 bin/gcovr-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -14,9 +14,27 @@ ${PYSITELIB}/gcovr/__main__.pyo
 ${PYSITELIB}/gcovr/configuration.py
 ${PYSITELIB}/gcovr/configuration.pyc
 ${PYSITELIB}/gcovr/configuration.pyo
-${PYSITELIB}/gcovr/coverage.py
-${PYSITELIB}/gcovr/coverage.pyc
-${PYSITELIB}/gcovr/coverage.pyo
+${PYSITELIB}/gcovr/data_model/__init__.py
+${PYSITELIB}/gcovr/data_model/__init__.pyc
+${PYSITELIB}/gcovr/data_model/__init__.pyo
+${PYSITELIB}/gcovr/data_model/container.py
+${PYSITELIB}/gcovr/data_model/container.pyc
+${PYSITELIB}/gcovr/data_model/container.pyo
+${PYSITELIB}/gcovr/data_model/coverage.py
+${PYSITELIB}/gcovr/data_model/coverage.pyc
+${PYSITELIB}/gcovr/data_model/coverage.pyo
+${PYSITELIB}/gcovr/data_model/coverage_dict.py
+${PYSITELIB}/gcovr/data_model/coverage_dict.pyc
+${PYSITELIB}/gcovr/data_model/coverage_dict.pyo
+${PYSITELIB}/gcovr/data_model/merging.py
+${PYSITELIB}/gcovr/data_model/merging.pyc
+${PYSITELIB}/gcovr/data_model/merging.pyo
+${PYSITELIB}/gcovr/data_model/stats.py
+${PYSITELIB}/gcovr/data_model/stats.pyc
+${PYSITELIB}/gcovr/data_model/stats.pyo
+${PYSITELIB}/gcovr/data_model/version.py
+${PYSITELIB}/gcovr/data_model/version.pyc
+${PYSITELIB}/gcovr/data_model/version.pyo
 ${PYSITELIB}/gcovr/decision_analysis.py
 ${PYSITELIB}/gcovr/decision_analysis.pyc
 ${PYSITELIB}/gcovr/decision_analysis.pyo
@@ -146,9 +164,6 @@ ${PYSITELIB}/gcovr/formats/json/__init__.pyo
 ${PYSITELIB}/gcovr/formats/json/read.py
 ${PYSITELIB}/gcovr/formats/json/read.pyc
 ${PYSITELIB}/gcovr/formats/json/read.pyo
-${PYSITELIB}/gcovr/formats/json/versions.py
-${PYSITELIB}/gcovr/formats/json/versions.pyc
-${PYSITELIB}/gcovr/formats/json/versions.pyo
 ${PYSITELIB}/gcovr/formats/json/write.py
 ${PYSITELIB}/gcovr/formats/json/write.pyc
 ${PYSITELIB}/gcovr/formats/json/write.pyo
@@ -158,6 +173,13 @@ ${PYSITELIB}/gcovr/formats/lcov/__init__.pyo
 ${PYSITELIB}/gcovr/formats/lcov/write.py
 ${PYSITELIB}/gcovr/formats/lcov/write.pyc
 ${PYSITELIB}/gcovr/formats/lcov/write.pyo
+${PYSITELIB}/gcovr/formats/markdown/__init__.py
+${PYSITELIB}/gcovr/formats/markdown/__init__.pyc
+${PYSITELIB}/gcovr/formats/markdown/__init__.pyo
+${PYSITELIB}/gcovr/formats/markdown/default/report_template.md.j2
+${PYSITELIB}/gcovr/formats/markdown/write.py
+${PYSITELIB}/gcovr/formats/markdown/write.pyc
+${PYSITELIB}/gcovr/formats/markdown/write.pyo
 ${PYSITELIB}/gcovr/formats/sonarqube/__init__.py
 ${PYSITELIB}/gcovr/formats/sonarqube/__init__.pyc
 ${PYSITELIB}/gcovr/formats/sonarqube/__init__.pyo
@@ -173,9 +195,6 @@ ${PYSITELIB}/gcovr/formats/txt/write.pyo
 ${PYSITELIB}/gcovr/logging.py
 ${PYSITELIB}/gcovr/logging.pyc
 ${PYSITELIB}/gcovr/logging.pyo
-${PYSITELIB}/gcovr/merging.py
-${PYSITELIB}/gcovr/merging.pyc
-${PYSITELIB}/gcovr/merging.pyo
 ${PYSITELIB}/gcovr/options.py
 ${PYSITELIB}/gcovr/options.pyc
 ${PYSITELIB}/gcovr/options.pyo
