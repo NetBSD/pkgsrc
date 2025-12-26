@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/04/19 19:11:00 adam Exp $
+$NetBSD: distinfo,v 1.8 2025/12/26 09:02:54 adam Exp $
 
-BLAKE2s (restructuredtext_lint-1.4.0.tar.gz) = cd98953908c0fafa8654720403616a96a58c4a5863ce708fcac7d5b0d234c0fe
-SHA512 (restructuredtext_lint-1.4.0.tar.gz) = 8e16e2a43cb1e52bb3b4ac60da53130bd4a8d0b823fc95b32e62068bed95728084de3b55820cfcaba70eecaaa93bdf3f956b8bb6c55155115b40c7151ef58a2c
-Size (restructuredtext_lint-1.4.0.tar.gz) = 16723 bytes
+BLAKE2s (restructuredtext_lint-2.0.2.tar.gz) = b512435bf8915a861c2a2666e42d5fc0d87a63ed3db3582740cad3a8dff3619a
+SHA512 (restructuredtext_lint-2.0.2.tar.gz) = 2f5a6a3e8095daed3bbe5e9d0f89291ac539065cc838a99e50b6160d701297ca4d2db9bed5e98094b9d17baecebe126f1c5c4bab959394a4cbfe86f59c7708c1
+Size (restructuredtext_lint-2.0.2.tar.gz) = 17494 bytes
