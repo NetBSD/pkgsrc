@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/04/19 16:06:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/12/26 11:44:16 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -43,6 +43,9 @@ ${PYSITELIB}/pydantic_settings/sources/providers/gcp.pyo
 ${PYSITELIB}/pydantic_settings/sources/providers/json.py
 ${PYSITELIB}/pydantic_settings/sources/providers/json.pyc
 ${PYSITELIB}/pydantic_settings/sources/providers/json.pyo
+${PYSITELIB}/pydantic_settings/sources/providers/nested_secrets.py
+${PYSITELIB}/pydantic_settings/sources/providers/nested_secrets.pyc
+${PYSITELIB}/pydantic_settings/sources/providers/nested_secrets.pyo
 ${PYSITELIB}/pydantic_settings/sources/providers/pyproject.py
 ${PYSITELIB}/pydantic_settings/sources/providers/pyproject.pyc
 ${PYSITELIB}/pydantic_settings/sources/providers/pyproject.pyo
