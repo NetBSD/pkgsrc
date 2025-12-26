@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/04/28 07:17:13 adam Exp $
+$NetBSD: distinfo,v 1.11 2025/12/26 12:42:32 adam Exp $
 
-BLAKE2s (eyed3-0.9.8.tar.gz) = 6762eabc9560bfe93dc18910b8551927b8e74ac6a19aabc6ecfbcaf77decb896
-SHA512 (eyed3-0.9.8.tar.gz) = 0470e2109ae71bae4793729abd38f9849b0b61ca5e6ef8ee4b586a2a12c6b6c4fe088934aa0253a6b93c5f111ddea446304b83b03b983442323adf51d0565efe
-Size (eyed3-0.9.8.tar.gz) = 216275 bytes
+BLAKE2s (eyed3-0.9.9.tar.gz) = 161127937453c253f79cdb750403355f9b379cf36af61d84950bfce6bcc92399
+SHA512 (eyed3-0.9.9.tar.gz) = 2b36f0b17b79a065ae48894f59fc411e1c39068213ea4a9db97f5236b77499a118c57ae3ee8079ec705edb84a9989fd5d5ff661f6b72ea12803cefae306c198a
+Size (eyed3-0.9.9.tar.gz) = 216352 bytes
