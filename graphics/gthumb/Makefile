@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2025/10/23 20:37:32 wiz Exp $
+# $NetBSD: Makefile,v 1.134 2025/12/26 10:18:25 wiz Exp $
 
 DISTNAME=	gthumb-3.12.2
 PKGREVISION=	18
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gthumb/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://wiki.gnome.org/action/show/Apps/Gthumb
+HOMEPAGE=	https://wiki.gnome.org/Apps/Gthumb
 COMMENT=	Image viewer and browser for the GNOME Desktop
 LICENSE=	gnu-gpl-v2
 
