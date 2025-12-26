@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/04/11 15:19:11 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/12/26 02:57:44 ktnb Exp $
 bin/gambdoc
 bin/gambuild-C
 bin/gambuild-arm
@@ -33,6 +33,10 @@ lib/_base64/_base64.scm
 lib/_base64/_base64.sld
 lib/_base64/test/test.scm
 lib/_codegen#.scm
+lib/_csv/_csv#.scm
+lib/_csv/_csv.scm
+lib/_csv/_csv.sld
+lib/_csv/test/test.scm
 lib/_define-library/_define-library#.scm
 lib/_define-library/_define-library.scm
 lib/_define-library/debug.scm
@@ -62,6 +66,20 @@ lib/_http/_http#.scm
 lib/_http/_http.scm
 lib/_http/test/test.scm
 lib/_io#.scm
+lib/_irregex/_irregex#.scm
+lib/_irregex/_irregex.scm
+lib/_irregex/_irregex.sld
+lib/_irregex/irregex.scm
+lib/_irregex/test/irregex-utils.scm
+lib/_irregex/test/test-irregex-from-gauche.scm
+lib/_irregex/test/test-irregex-pcre.scm
+lib/_irregex/test/test-irregex-scsh.scm
+lib/_irregex/test/test-irregex-utf8.scm
+lib/_irregex/test/test.scm
+lib/_json/_json#.scm
+lib/_json/_json.scm
+lib/_json/_json.sld
+lib/_json/test/test.scm
 lib/_kernel#.scm
 lib/_match/_match#.scm
 lib/_match/_match.scm
@@ -151,6 +169,7 @@ lib/gambit/prim/bytevector#.scm
 lib/gambit/prim/bytevector-r7rs#.scm
 lib/gambit/prim/bytevector.sld
 lib/gambit/prim/char#.scm
+lib/gambit/prim/char-gambit#.scm
 lib/gambit/prim/char-r4rs#.scm
 lib/gambit/prim/char-r7rs#.scm
 lib/gambit/prim/char.sld
