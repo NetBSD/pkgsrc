@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.689 2025/12/25 15:10:06 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.690 2025/12/26 11:49:38 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29160,3 +29160,13 @@ ruby{32,33,34}-httparty-[0-9]*	server-side-request-forgery	https://nvd.nist.gov/
 barcode-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-25153
 barcode-[0-9]*	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2018-25154
 kermit-[0-9]*	arbitrary-file-read	https://nvd.nist.gov/vuln/detail/CVE-2025-68920
+gitea<1.25.2	incorrect-authorization			https://nvd.nist.gov/vuln/detail/CVE-2025-68938
+gitea<1.23.0	invalid-validation			https://nvd.nist.gov/vuln/detail/CVE-2025-68939
+gitea<1.22.5	incorrect-authorization			https://nvd.nist.gov/vuln/detail/CVE-2025-68940
+gitea<1.22.3	incorrect-authorization			https://nvd.nist.gov/vuln/detail/CVE-2025-68941
+gitea<1.22.2	cross-site-scripting			https://nvd.nist.gov/vuln/detail/CVE-2025-68942
+gitea<1.21.8	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-68943
+gitea<1.22.2	improper-access-control			https://nvd.nist.gov/vuln/detail/CVE-2025-68944
+gitea<1.21.2	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-68945
+gitea<1.20.1	cross-site-scripting			https://nvd.nist.gov/vuln/detail/CVE-2025-68946
+py{27,39,310,311,312,313,314}-httpbin-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-15095
