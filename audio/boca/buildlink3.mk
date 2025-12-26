@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2025/10/23 20:35:40 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2025/12/26 11:12:06 adam Exp $
 
 BUILDLINK_TREE+=	boca
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	boca
 BOCA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.boca+=	boca>=1.0.7
-BUILDLINK_ABI_DEPENDS.boca?=	boca>=1.0.7nb3
+BUILDLINK_ABI_DEPENDS.boca?=	boca>=1.0.7nb4
 BUILDLINK_PKGSRCDIR.boca?=	../../audio/boca
 
 .include "../../devel/smooth/buildlink3.mk"
