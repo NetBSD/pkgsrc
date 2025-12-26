@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2025/10/09 07:57:51 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/12/26 11:40:54 adam Exp $
 
-DISTNAME=	gevent-25.8.2
+DISTNAME=	gevent-25.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gevent/}

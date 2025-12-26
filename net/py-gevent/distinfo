@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2025/09/01 13:09:56 adam Exp $
+$NetBSD: distinfo,v 1.22 2025/12/26 11:40:54 adam Exp $
 
-BLAKE2s (gevent-25.8.2.tar.gz) = e7d7d3bf276e83a933a53039cd8ad045e90c04497c8c1869c0170b6ac8d9af70
-SHA512 (gevent-25.8.2.tar.gz) = 3ff20b9c63d608038e305fc161e3e75ce6762d69e191fdcc550189305fe26f0783b165cd679cf34ce24ca8bad6da0550b525ede9bb07e66a9569c7975f37fb49
-Size (gevent-25.8.2.tar.gz) = 6422843 bytes
+BLAKE2s (gevent-25.9.1.tar.gz) = 7b9c25e3e5ad6564e8fc2541b128621771184c13b1323067d9f39ed2f65482db
+SHA512 (gevent-25.9.1.tar.gz) = 8c7f6030020fd6d762ebb1afccb7fb8306e2cf1a45dabf8a471709264acc35003ea2be44f4e0733a75c703256776b4f22a96be50e926c9dc053f453f0b1f3522
+Size (gevent-25.9.1.tar.gz) = 5059025 bytes
