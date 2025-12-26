@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7409 2025/12/26 09:26:59 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7410 2025/12/26 09:44:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10900,3 +10900,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/postgresql-timescaledb to 2.24.0 [adam 2025-12-26]
 	Updated databases/timescaledb-tune to 0.18.2 [adam 2025-12-26]
 	Updated textproc/py-rdflib to 7.5.0 [adam 2025-12-26]
+	Updated www/py-django-reversion to 6.1.0 [adam 2025-12-26]
+	Updated devel/py-uv to 0.9.18 [adam 2025-12-26]
+	Updated devel/py-uv-build to 0.9.18 [adam 2025-12-26]
+	Updated www/py-django-stubs-ext to 5.2.8 [adam 2025-12-26]
