@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/04/12 11:44:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/12/26 10:21:29 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -9,6 +9,16 @@ ${PYSITELIB}/pyparsing/__init__.pyo
 ${PYSITELIB}/pyparsing/actions.py
 ${PYSITELIB}/pyparsing/actions.pyc
 ${PYSITELIB}/pyparsing/actions.pyo
+${PYSITELIB}/pyparsing/ai/__init__.py
+${PYSITELIB}/pyparsing/ai/__init__.pyc
+${PYSITELIB}/pyparsing/ai/__init__.pyo
+${PYSITELIB}/pyparsing/ai/best_practices.md
+${PYSITELIB}/pyparsing/ai/show_best_practices/__init__.py
+${PYSITELIB}/pyparsing/ai/show_best_practices/__init__.pyc
+${PYSITELIB}/pyparsing/ai/show_best_practices/__init__.pyo
+${PYSITELIB}/pyparsing/ai/show_best_practices/__main__.py
+${PYSITELIB}/pyparsing/ai/show_best_practices/__main__.pyc
+${PYSITELIB}/pyparsing/ai/show_best_practices/__main__.pyo
 ${PYSITELIB}/pyparsing/common.py
 ${PYSITELIB}/pyparsing/common.pyc
 ${PYSITELIB}/pyparsing/common.pyo
