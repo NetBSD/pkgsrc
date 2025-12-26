@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.39 2025/04/28 16:16:16 tnn Exp $
+# $NetBSD: Makefile,v 1.40 2025/12/26 10:17:11 wiz Exp $
 
 DISTNAME=	gsm-1.0.22
 CATEGORIES=	audio
 MASTER_SITES=	https://www.quut.com/gsm/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.quut.com/gsm/
+HOMEPAGE=	https://www.quut.com/gsm/
 COMMENT=	Audio converter and library for converting u-law to gsm encoding
 LICENSE=	mit
 
