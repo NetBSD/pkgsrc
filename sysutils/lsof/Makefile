@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2022/06/28 11:35:58 wiz Exp $
+# $NetBSD: Makefile,v 1.143 2025/12/26 08:20:59 kim Exp $
 
 DISTNAME=		lsof_4.91
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -39,6 +39,11 @@ USE_TOOLS+=	digest perl:run
 TEST_DIRS=		tests
 TEST_TARGET=		test
 INTERACTIVE_STAGE+=	test
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+=		-Wno-implicit-function-declaration
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"

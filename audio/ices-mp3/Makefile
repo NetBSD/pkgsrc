@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2025/08/18 05:26:28 kim Exp $
+# $NetBSD: Makefile,v 1.65 2025/12/26 08:21:31 kim Exp $
 #
 
 DISTNAME=		ices-${ICES_VERSION}
@@ -35,6 +35,13 @@ EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 MODDIR=			${PREFIX}/share/${PKGBASE}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+=		-Wno-incompatible-pointer-types
+CFLAGS+=		-Wno-implicit-function-declaration
+CFLAGS+=		-Wno-pointer-sign
+.endif
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf --force -i
