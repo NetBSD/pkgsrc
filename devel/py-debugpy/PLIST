@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/04/12 10:41:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/12/26 12:40:39 adam Exp $
 bin/debugpy-${PYVERSSUFFIX}
 bin/debugpy-adapter-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -753,6 +753,7 @@ ${PYSITELIB}/debugpy/launcher/winapi.pyo
 ${PYSITELIB}/debugpy/public_api.py
 ${PYSITELIB}/debugpy/public_api.pyc
 ${PYSITELIB}/debugpy/public_api.pyo
+${PYSITELIB}/debugpy/py.typed
 ${PYSITELIB}/debugpy/server/__init__.py
 ${PYSITELIB}/debugpy/server/__init__.pyc
 ${PYSITELIB}/debugpy/server/__init__.pyo
