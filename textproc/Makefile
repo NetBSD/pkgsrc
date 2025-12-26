@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1560 2025/12/22 10:29:46 adam Exp $
+# $NetBSD: Makefile,v 1.1561 2025/12/26 21:44:20 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -194,7 +194,6 @@ SUBDIR+=	csharp-xapian
 SUBDIR+=	csview
 SUBDIR+=	csvkit
 SUBDIR+=	csvlens
-SUBDIR+=	csvtomd
 SUBDIR+=	csvutils
 SUBDIR+=	cwdiff
 SUBDIR+=	dadadodo
