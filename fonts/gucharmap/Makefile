@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2025/10/23 20:36:56 wiz Exp $
+# $NetBSD: Makefile,v 1.131 2025/12/26 10:25:48 wiz Exp $
 
 DISTNAME=	gucharmap-15.1.2
 PKGREVISION=	11
@@ -7,7 +7,7 @@ MASTER_SITES=	https://gitlab.gnome.org/GNOME/gucharmap/-/archive/${PKGVERSION_NO
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://wiki.gnome.org/action/show/Apps/Gucharmap
+HOMEPAGE=	https://wiki.gnome.org/Apps/Gucharmap
 COMMENT=	Unicode/ISO10646 character map and font viewer
 LICENSE=	gnu-gpl-v3 AND unicode
 
