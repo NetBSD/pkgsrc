@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/14 18:45:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/12/26 16:40:40 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -39,6 +39,8 @@ ${PYSITELIB}/phonenumber_field/locale/fr/LC_MESSAGES/django.mo
 ${PYSITELIB}/phonenumber_field/locale/fr/LC_MESSAGES/django.po
 ${PYSITELIB}/phonenumber_field/locale/he/LC_MESSAGES/django.mo
 ${PYSITELIB}/phonenumber_field/locale/he/LC_MESSAGES/django.po
+${PYSITELIB}/phonenumber_field/locale/hu/LC_MESSAGES/django.mo
+${PYSITELIB}/phonenumber_field/locale/hu/LC_MESSAGES/django.po
 ${PYSITELIB}/phonenumber_field/locale/hy/LC_MESSAGES/django.mo
 ${PYSITELIB}/phonenumber_field/locale/hy/LC_MESSAGES/django.po
 ${PYSITELIB}/phonenumber_field/locale/id/LC_MESSAGES/django.mo

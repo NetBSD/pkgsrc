@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/04/14 18:45:20 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/12/26 16:40:40 adam Exp $
 
-DISTNAME=	django_phonenumber_field-8.1.0
+DISTNAME=	django_phonenumber_field-8.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-phonenumber-field/}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
 # phonenumbers
 DEPENDS+=	${PYPKGPREFIX}-phonenumbers>=7.0.2:../../textproc/py-phonenumbers
 
