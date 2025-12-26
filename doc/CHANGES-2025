@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7424 2025/12/26 12:54:59 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7425 2025/12/26 14:07:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10948,3 +10948,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/py-cxxheaderparser to 1.6.2 [adam 2025-12-26]
 	Updated devel/py-jupyter_client to 8.7.0 [adam 2025-12-26]
 	Updated www/py-test-jupyter to 0.11.0 [adam 2025-12-26]
+	Updated meta-pkgs/bulk-test-go to 20251226 [wiz 2025-12-26]
