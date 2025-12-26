@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7417 2025/12/26 11:11:05 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7418 2025/12/26 11:15:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10923,3 +10923,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pydantic to 2.12.5 [adam 2025-12-26]
 	Updated misc/libcdio to 2.3.0 [adam 2025-12-26]
 	Updated misc/libcdio-paranoia to 2.0.2 [adam 2025-12-26]
+	Updated devel/py-faker to 39.0.0 [adam 2025-12-26]
+	Updated finance/py-braintree to 4.41.0 [adam 2025-12-26]
