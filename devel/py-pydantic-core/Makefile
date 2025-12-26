@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2025/06/30 18:55:44 adam Exp $
+# $NetBSD: Makefile,v 1.34 2025/12/26 10:40:35 adam Exp $
 
-DISTNAME=	pydantic_core-2.35.2
+DISTNAME=	pydantic_core-2.41.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydantic-core/}
@@ -11,12 +11,15 @@ COMMENT=	Core functionality for pydantic
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.13.0:../../devel/py-typing-extensions
+TEST_DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 TEST_DEPENDS+=	${PYPKGPREFIX}-dirty-equals>=0.7.1.post0:../../devel/py-dirty-equals
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.92.9:../../devel/py-hypothesis
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.2.0:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-inline-snapshot>=0:../../devel/py-inline-snapshot
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-run-parallel-[0-9]*:../../devel/py-test-run-parallel
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.2.0:../../devel/py-test-timeout
+TEST_DEPENDS+=	${PYPKGPREFIX}-typing-inspection>=0.4.1:../../devel/py-typing-inspection
+TEST_DEPENDS+=	${PYPKGPREFIX}-tzdata-[0-9]*:../../time/py-tzdata
 
 # as of 2.27.0
 # 4545 passed, 68 skipped, 2 xfailed
