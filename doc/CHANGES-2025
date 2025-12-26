@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7431 2025/12/26 19:48:28 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7432 2025/12/26 20:07:39 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10965,3 +10965,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-nbclient to 0.10.4 [adam 2025-12-26]
 	Updated games/py-easyAI to 2.0.12 [adam 2025-12-26]
 	Updated devel/py-lupa to 2.6 [adam 2025-12-26]
+	Updated lang/janet to 1.40.1 [ktnb 2025-12-26]
