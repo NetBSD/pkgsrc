@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/04/14 12:56:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/12/26 10:25:33 adam Exp $
 bin/sphinx_gallery_py2jupyter-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -61,6 +61,9 @@ ${PYSITELIB}/sphinx_gallery/py_source_parser.pyo
 ${PYSITELIB}/sphinx_gallery/recommender.py
 ${PYSITELIB}/sphinx_gallery/recommender.pyc
 ${PYSITELIB}/sphinx_gallery/recommender.pyo
+${PYSITELIB}/sphinx_gallery/rst_source_parser.py
+${PYSITELIB}/sphinx_gallery/rst_source_parser.pyc
+${PYSITELIB}/sphinx_gallery/rst_source_parser.pyo
 ${PYSITELIB}/sphinx_gallery/scrapers.py
 ${PYSITELIB}/sphinx_gallery/scrapers.pyc
 ${PYSITELIB}/sphinx_gallery/scrapers.pyo
@@ -110,6 +113,9 @@ ${PYSITELIB}/sphinx_gallery/tests/test_py_source_parser.pyo
 ${PYSITELIB}/sphinx_gallery/tests/test_recommender.py
 ${PYSITELIB}/sphinx_gallery/tests/test_recommender.pyc
 ${PYSITELIB}/sphinx_gallery/tests/test_recommender.pyo
+${PYSITELIB}/sphinx_gallery/tests/test_rst_source_parser.py
+${PYSITELIB}/sphinx_gallery/tests/test_rst_source_parser.pyc
+${PYSITELIB}/sphinx_gallery/tests/test_rst_source_parser.pyo
 ${PYSITELIB}/sphinx_gallery/tests/test_scrapers.py
 ${PYSITELIB}/sphinx_gallery/tests/test_scrapers.pyc
 ${PYSITELIB}/sphinx_gallery/tests/test_scrapers.pyo
@@ -229,6 +235,7 @@ ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_svg.pyo
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_webp.py
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_webp.pyc
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_webp.pyo
+${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/rst_gallery_entry.rst
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples_README_header/README.txt
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples_README_header/plot_exp.py
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples_README_header/plot_exp.pyc

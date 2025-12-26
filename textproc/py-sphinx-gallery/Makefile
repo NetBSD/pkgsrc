@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/10/09 07:58:03 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/12/26 10:25:33 adam Exp $
 
-DISTNAME=	sphinx_gallery-0.19.0
+DISTNAME=	sphinx_gallery-0.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-gallery/}
 
