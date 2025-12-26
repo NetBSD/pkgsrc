@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7418 2025/12/26 11:15:03 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7419 2025/12/26 11:37:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10925,3 +10925,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/libcdio-paranoia to 2.0.2 [adam 2025-12-26]
 	Updated devel/py-faker to 39.0.0 [adam 2025-12-26]
 	Updated finance/py-braintree to 4.41.0 [adam 2025-12-26]
+	Updated textproc/py-mistune to 3.2.0 [adam 2025-12-26]
+	Updated devel/py-fixtures to 4.2.8 [adam 2025-12-26]
+	Updated www/py-python-multipart to 0.0.21 [adam 2025-12-26]
+	Updated devel/py-dulwich to 0.25.0 [adam 2025-12-26]
