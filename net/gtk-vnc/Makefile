@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2025/10/23 20:38:46 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2025/12/26 10:19:25 wiz Exp $
 
 DISTNAME=	gtk-vnc-1.3.1
 PKGREVISION=	15
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-vnc/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://wiki.gnome.org/Projects/gtk-vnc
+HOMEPAGE=	https://gitlab.gnome.org/GNOME/gtk-vnc/
 COMMENT=	VNC viewer widget for GTK
 LICENSE=	gnu-lgpl-v2.1
 
