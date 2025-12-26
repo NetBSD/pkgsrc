@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2025/10/31 10:32:29 adam Exp $
+# $NetBSD: Makefile,v 1.21 2025/12/26 09:26:37 adam Exp $
 
-DISTNAME=	rdflib-7.4.0
+DISTNAME=	rdflib-7.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdflib/}
@@ -30,7 +30,7 @@ REPLACE_PYTHON+=	rdflib/plugins/parsers/structureddata.py
 REPLACE_PYTHON+=	rdflib/tools/rdfpipe.py
 
 post-install:
-.for bin in csv2rdf rdf2dot rdfgraphisomorphism rdfpipe rdfs2dot
+.for bin in csv2rdf rdf2dot rdfgraphisomorphism rdfpipe rdfs2dot sq
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
