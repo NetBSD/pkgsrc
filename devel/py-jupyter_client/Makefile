@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2025/10/09 07:57:33 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2025/12/26 12:52:29 adam Exp $
 
-DISTNAME=	jupyter_client-8.6.3
+DISTNAME=	jupyter_client-8.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_client/}
@@ -12,10 +12,10 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.5:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.2:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.12:../../devel/py-jupyter_core
-DEPENDS+=	${PYPKGPREFIX}-tornado>=6.2:../../www/py-tornado
+DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=5.1:../../devel/py-jupyter_core
+DEPENDS+=	${PYPKGPREFIX}-tornado>=6.4.1:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.3:../../devel/py-traitlets
-DEPENDS+=	${PYPKGPREFIX}-zmq>=23.0:../../net/py-zmq
+DEPENDS+=	${PYPKGPREFIX}-zmq>=25.0:../../net/py-zmq
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel>=6.14:../../devel/py-ipykernel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-jupyter>=0.4.1:../../www/py-test-jupyter
