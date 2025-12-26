@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2025/09/28 19:56:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/12/26 09:26:38 adam Exp $
 bin/csv2rdf-${PYVERSSUFFIX}
 bin/rdf2dot-${PYVERSSUFFIX}
 bin/rdfgraphisomorphism-${PYVERSSUFFIX}
 bin/rdfpipe-${PYVERSSUFFIX}
 bin/rdfs2dot-${PYVERSSUFFIX}
+bin/sq-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -30,6 +31,27 @@ ${PYSITELIB}/rdflib/compat.pyo
 ${PYSITELIB}/rdflib/container.py
 ${PYSITELIB}/rdflib/container.pyc
 ${PYSITELIB}/rdflib/container.pyo
+${PYSITELIB}/rdflib/contrib/__init__.py
+${PYSITELIB}/rdflib/contrib/__init__.pyc
+${PYSITELIB}/rdflib/contrib/__init__.pyo
+${PYSITELIB}/rdflib/contrib/graphdb/__init__.py
+${PYSITELIB}/rdflib/contrib/graphdb/__init__.pyc
+${PYSITELIB}/rdflib/contrib/graphdb/__init__.pyo
+${PYSITELIB}/rdflib/contrib/graphdb/client.py
+${PYSITELIB}/rdflib/contrib/graphdb/client.pyc
+${PYSITELIB}/rdflib/contrib/graphdb/client.pyo
+${PYSITELIB}/rdflib/contrib/rdf4j/__init__.py
+${PYSITELIB}/rdflib/contrib/rdf4j/__init__.pyc
+${PYSITELIB}/rdflib/contrib/rdf4j/__init__.pyo
+${PYSITELIB}/rdflib/contrib/rdf4j/client.py
+${PYSITELIB}/rdflib/contrib/rdf4j/client.pyc
+${PYSITELIB}/rdflib/contrib/rdf4j/client.pyo
+${PYSITELIB}/rdflib/contrib/rdf4j/exceptions.py
+${PYSITELIB}/rdflib/contrib/rdf4j/exceptions.pyc
+${PYSITELIB}/rdflib/contrib/rdf4j/exceptions.pyo
+${PYSITELIB}/rdflib/contrib/rdf4j/util.py
+${PYSITELIB}/rdflib/contrib/rdf4j/util.pyc
+${PYSITELIB}/rdflib/contrib/rdf4j/util.pyo
 ${PYSITELIB}/rdflib/events.py
 ${PYSITELIB}/rdflib/events.pyc
 ${PYSITELIB}/rdflib/events.pyo
@@ -321,6 +343,9 @@ ${PYSITELIB}/rdflib/plugins/stores/concurrent.pyo
 ${PYSITELIB}/rdflib/plugins/stores/memory.py
 ${PYSITELIB}/rdflib/plugins/stores/memory.pyc
 ${PYSITELIB}/rdflib/plugins/stores/memory.pyo
+${PYSITELIB}/rdflib/plugins/stores/rdf4j.py
+${PYSITELIB}/rdflib/plugins/stores/rdf4j.pyc
+${PYSITELIB}/rdflib/plugins/stores/rdf4j.pyo
 ${PYSITELIB}/rdflib/plugins/stores/regexmatching.py
 ${PYSITELIB}/rdflib/plugins/stores/regexmatching.pyc
 ${PYSITELIB}/rdflib/plugins/stores/regexmatching.pyo
@@ -370,6 +395,9 @@ ${PYSITELIB}/rdflib/tools/rdfpipe.pyo
 ${PYSITELIB}/rdflib/tools/rdfs2dot.py
 ${PYSITELIB}/rdflib/tools/rdfs2dot.pyc
 ${PYSITELIB}/rdflib/tools/rdfs2dot.pyo
+${PYSITELIB}/rdflib/tools/sparqlquery.py
+${PYSITELIB}/rdflib/tools/sparqlquery.pyc
+${PYSITELIB}/rdflib/tools/sparqlquery.pyo
 ${PYSITELIB}/rdflib/util.py
 ${PYSITELIB}/rdflib/util.pyc
 ${PYSITELIB}/rdflib/util.pyo
