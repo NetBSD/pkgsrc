@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2025/10/12 18:21:58 wiz Exp $
+$NetBSD: distinfo,v 1.23 2025/12/26 12:00:13 adam Exp $
 
-BLAKE2s (pyqt_builder-1.19.0.tar.gz) = 3b7451f046108f44bc061ca0ad068412c4e2f4affb02952002db9cdfe8935e1c
-SHA512 (pyqt_builder-1.19.0.tar.gz) = 17dff686795e1b1f41a9c575c85c94a8d2d4ba95785dc723ec8f03fbb88e44472b70eb0e4ef9139580f1be0232d0ad324fedb088da3e9518d908587a0d619aa8
-Size (pyqt_builder-1.19.0.tar.gz) = 3672333 bytes
+BLAKE2s (pyqt_builder-1.19.1.tar.gz) = 80face78c1e4c907eb5667db4323245a80444723ff72b9ef1591e2677da6a6e7
+SHA512 (pyqt_builder-1.19.1.tar.gz) = 2308c51f93c37b1d13f312e4f2475d26b22d374ef284925fead9eab4aa89b994770431aca45170ac2154b4813fff151798f113f56d4cbf6c6e544fb463104a6d
+Size (pyqt_builder-1.19.1.tar.gz) = 5247679 bytes
 SHA1 (patch-pyqtbuild_builder.py) = a5ef0e02949ac48d78f1c3cf20d7dd32edbf8028
