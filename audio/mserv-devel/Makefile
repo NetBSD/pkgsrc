@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2025/04/12 06:54:13 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/12/26 09:01:56 kim Exp $
 
 DISTNAME=	mserv-0.39a
 PKGREVISION=	15
@@ -20,6 +20,11 @@ REPLACE_PERL=		support/mservedit webclient/main.cgi \
 USE_TOOLS+=		perl:run pkg-config
 
 INSTALLATION_DIRS+=	share/doc/mserv share/mserv/webclient
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-1[45]*)
+CFLAGS+=		-Wno-error=implicit-function-declaration
+.endif
 
 post-configure:
 	${MV} ${WRKSRC}/mserv/soundcard.h ${WRKSRC}/mserv/mservsoundcard.h
