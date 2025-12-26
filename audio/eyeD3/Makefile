@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2025/04/28 07:17:13 adam Exp $
+# $NetBSD: Makefile,v 1.25 2025/12/26 12:42:32 adam Exp $
 
-DISTNAME=	eyed3-0.9.8
+DISTNAME=	eyed3-0.9.9
 PKGNAME=	${DISTNAME:S/d3/D3/}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/eyed3/}
