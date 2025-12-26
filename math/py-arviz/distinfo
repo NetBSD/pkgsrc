@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2025/09/02 07:16:31 adam Exp $
+$NetBSD: distinfo,v 1.10 2025/12/26 16:30:18 adam Exp $
 
-BLAKE2s (arviz-0.22.0.tar.gz) = fe0110848ef4ded5ef87c1fba871869bd601c63ddef34a9757fc3e29b744526d
-SHA512 (arviz-0.22.0.tar.gz) = f6d20f96b435f0a05733a1434064ceab39346878871b0e1a29e6e9422c1304dc47ee037b3dba6df615025d1fc67ab990a09c5380d64564d0f48ad56de1872a51
-Size (arviz-0.22.0.tar.gz) = 1591019 bytes
+BLAKE2s (arviz-0.23.0.tar.gz) = 0e67646d1c105acb7c885542e913745cf4c107a004a9886af9ab003ffbf6830e
+SHA512 (arviz-0.23.0.tar.gz) = 6a22baa65e0920a9be40ef3f79ee9a005fda068131a14f18b21feca9c3afd74aeb0d4f562a84668c5aab7c86041ee17f610e82908d243eb98693c2367d6da72b
+Size (arviz-0.23.0.tar.gz) = 1593073 bytes
