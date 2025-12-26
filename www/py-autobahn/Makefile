@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2025/12/16 10:43:46 adam Exp $
+# $NetBSD: Makefile,v 1.48 2025/12/26 08:57:30 adam Exp $
 
-DISTNAME=	autobahn-25.12.1
+DISTNAME=	autobahn-25.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/autobahn/}
 
@@ -31,7 +30,9 @@ MAKE_ENV+=	PYUBJSON_NO_EXTENSION=1
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} wamp wamp-${PYVERSSUFFIX} || ${TRUE}
+.for bin in flatc wamp
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/autobahn/nvx/_nvx_utf8validator.[co]
 	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/autobahn/nvx/_nvx_xormasker.[co]
 
