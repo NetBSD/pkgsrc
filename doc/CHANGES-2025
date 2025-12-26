@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7435 2025/12/26 21:44:44 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7436 2025/12/26 22:02:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10970,3 +10970,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xfce4-clipman-plugin to 1.7.0 [gutteridge 2025-12-26]
 	Updated devel/py-testfixtures to 10.0.0 [adam 2025-12-26]
 	Removed textproc/csvtomd [adam 2025-12-26]
+	Updated sysutils/salt to 3007.10 [adam 2025-12-26]
+	Updated sysutils/salt-docs to 3007.10 [adam 2025-12-26]
