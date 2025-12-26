@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2023/02/08 21:39:54 nikita Exp $
-
-BLAKE2s (guile-gcrypt-0.4.0.tar.gz) = ea16e06657576a76a50098f92068179076788ce39cd6c13d97055954e617b7cc
-SHA512 (guile-gcrypt-0.4.0.tar.gz) = 5dbb5ca9f00a607200c600d438f5d96db271a5e889f4e92d361793073ef618b1f731c3bc31dc39c7b939c2e9111da7905ed68845f55fe7fd24b064496e9d2677
-Size (guile-gcrypt-0.4.0.tar.gz) = 56915 bytes
