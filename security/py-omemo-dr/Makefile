@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/10/09 08:01:58 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/12/26 11:46:00 adam Exp $
 
-DISTNAME=	omemo-dr-1.0.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	omemo_dr-1.1.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/omemo-dr/}
 
