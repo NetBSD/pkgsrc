@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7415 2025/12/26 10:31:07 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7416 2025/12/26 10:49:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10919,3 +10919,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-sphinx-gallery to 0.20.0 [adam 2025-12-26]
 	Updated sysutils/py-psutil to 7.2.0 [adam 2025-12-26]
 	Updated graphics/py-pygal to 3.1.0 [adam 2025-12-26]
+	Updated devel/py-pydantic-core to 2.41.5 [adam 2025-12-26]
+	Updated devel/py-pydantic to 2.12.5 [adam 2025-12-26]
