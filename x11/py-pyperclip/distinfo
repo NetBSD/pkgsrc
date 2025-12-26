@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/07/29 07:24:26 wiz Exp $
+$NetBSD: distinfo,v 1.10 2025/12/26 10:23:46 adam Exp $
 
-BLAKE2s (pyperclip-1.9.0.tar.gz) = b2877d75feb004ac30b835cff5ee200b8a1ea8504623211ddad67b3c6e356e77
-SHA512 (pyperclip-1.9.0.tar.gz) = 19865ebdcce99817f92994d14e26e1cd321d85da89f3177794a93981321ac3e39c937cccbcd00c866ccb30591d4720cd97a39fd266ef8378e3a21471ee69606f
-Size (pyperclip-1.9.0.tar.gz) = 20961 bytes
+BLAKE2s (pyperclip-1.11.0.tar.gz) = 7f9b30939d50a15467f826384a1682c475b1e365fa7027aa5fe5d8657ed45404
+SHA512 (pyperclip-1.11.0.tar.gz) = 3756e75db1dc321dafe3677956d6d84b7c730bfd282f0293931e7dc5a468f3abaf8397a5f02bee4473953026d0ac373b835fe1972b7f5fe69e661195007901ab
+Size (pyperclip-1.11.0.tar.gz) = 12185 bytes
