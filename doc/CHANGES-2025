@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7434 2025/12/26 21:33:09 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.7435 2025/12/26 21:44:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10968,3 +10968,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/janet to 1.40.1 [ktnb 2025-12-26]
 	Updated lang/fennel to 1.6.0 [ktnb 2025-12-26]
 	Updated x11/xfce4-clipman-plugin to 1.7.0 [gutteridge 2025-12-26]
+	Updated devel/py-testfixtures to 10.0.0 [adam 2025-12-26]
+	Removed textproc/csvtomd [adam 2025-12-26]
