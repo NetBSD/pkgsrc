@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/08/22 07:19:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/12/26 10:19:44 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -66,9 +66,24 @@ ${PYSITELIB}/pikepdf/models/encryption.pyo
 ${PYSITELIB}/pikepdf/models/image.py
 ${PYSITELIB}/pikepdf/models/image.pyc
 ${PYSITELIB}/pikepdf/models/image.pyo
-${PYSITELIB}/pikepdf/models/metadata.py
-${PYSITELIB}/pikepdf/models/metadata.pyc
-${PYSITELIB}/pikepdf/models/metadata.pyo
+${PYSITELIB}/pikepdf/models/metadata/__init__.py
+${PYSITELIB}/pikepdf/models/metadata/__init__.pyc
+${PYSITELIB}/pikepdf/models/metadata/__init__.pyo
+${PYSITELIB}/pikepdf/models/metadata/_constants.py
+${PYSITELIB}/pikepdf/models/metadata/_constants.pyc
+${PYSITELIB}/pikepdf/models/metadata/_constants.pyo
+${PYSITELIB}/pikepdf/models/metadata/_converters.py
+${PYSITELIB}/pikepdf/models/metadata/_converters.pyc
+${PYSITELIB}/pikepdf/models/metadata/_converters.pyo
+${PYSITELIB}/pikepdf/models/metadata/_core.py
+${PYSITELIB}/pikepdf/models/metadata/_core.pyc
+${PYSITELIB}/pikepdf/models/metadata/_core.pyo
+${PYSITELIB}/pikepdf/models/metadata/_docinfo.py
+${PYSITELIB}/pikepdf/models/metadata/_docinfo.pyc
+${PYSITELIB}/pikepdf/models/metadata/_docinfo.pyo
+${PYSITELIB}/pikepdf/models/metadata/_xmp.py
+${PYSITELIB}/pikepdf/models/metadata/_xmp.pyc
+${PYSITELIB}/pikepdf/models/metadata/_xmp.pyo
 ${PYSITELIB}/pikepdf/models/outlines.py
 ${PYSITELIB}/pikepdf/models/outlines.pyc
 ${PYSITELIB}/pikepdf/models/outlines.pyo
