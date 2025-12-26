@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7433 2025/12/26 20:19:40 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.7434 2025/12/26 21:33:09 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10967,3 +10967,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-lupa to 2.6 [adam 2025-12-26]
 	Updated lang/janet to 1.40.1 [ktnb 2025-12-26]
 	Updated lang/fennel to 1.6.0 [ktnb 2025-12-26]
+	Updated x11/xfce4-clipman-plugin to 1.7.0 [gutteridge 2025-12-26]
