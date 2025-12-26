@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2025/10/09 07:57:50 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/12/26 16:36:54 adam Exp $
 
-DISTNAME=	xgboost-2.1.4
+DISTNAME=	xgboost-3.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xgboost/}
@@ -11,11 +11,13 @@ COMMENT=	XGBoost Python Package
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.12.1:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 
-USE_LANGUAGES=	c gnu++17
-USE_TOOLS+=	cmake ninja
-GCC_REQD+=	8.1
+USE_CXX_FEATURES=	c++17
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		cmake ninja
+GCC_REQD+=		8.1
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
