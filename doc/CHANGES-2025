@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7413 2025/12/26 10:21:54 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7414 2025/12/26 10:25:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10914,3 +10914,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-intervaltree to 3.2.1 [adam 2025-12-26]
 	Updated print/py-pikepdf to 10.1.0 [adam 2025-12-26]
 	Updated devel/py-pyparsing to 3.3.1 [adam 2025-12-26]
+	Removed devel/gtl [wiz 2025-12-26]
