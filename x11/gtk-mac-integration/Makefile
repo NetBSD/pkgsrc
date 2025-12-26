@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2025/10/23 20:39:55 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2025/12/26 10:18:59 wiz Exp $
 
 DISTNAME=	gtk-mac-integration-3.0.1
 PKGREVISION=	15
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-mac-integration/${PKGVERSION_NORE
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	https://www.gtk.org/download/macos.php
+HOMEPAGE=	https://gitlab.gnome.org/GNOME/gtk-mac-integration
 COMMENT=	OS X integration for GTK
 LICENSE=	gnu-lgpl-v2.1
 
