@@ -1,18 +1,21 @@
-# $NetBSD: Makefile,v 1.12 2022/01/04 20:54:01 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/12/26 19:44:53 adam Exp $
 
-DISTNAME=	easyAI-1.0.0.4
+DISTNAME=	easyAI-2.0.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
-CATEGORIES=	games
+CATEGORIES=	games python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/easyAI/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/easyAI
+HOMEPAGE=	https://zulko.github.io/easyAI/
 COMMENT=	Easy-to-use game AI algorithms
 LICENSE=	mit
 
-USE_LANGUAGES=			# none
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.0.0.4
+WHEEL_NAME=	${DISTNAME:tl}
 
-.include "../../lang/python/egg.mk"
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-numpy>0:../../math/py-numpy
+
+USE_LANGUAGES=	# none
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

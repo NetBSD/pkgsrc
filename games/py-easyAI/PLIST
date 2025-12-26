@@ -1,17 +1,18 @@
-@comment $NetBSD: PLIST,v 1.2 2017/08/14 19:25:01 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2025/12/26 19:44:53 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENCE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/easyAI/AI/DUAL.py
 ${PYSITELIB}/easyAI/AI/DUAL.pyc
 ${PYSITELIB}/easyAI/AI/DUAL.pyo
-${PYSITELIB}/easyAI/AI/DictTT.py
-${PYSITELIB}/easyAI/AI/DictTT.pyc
-${PYSITELIB}/easyAI/AI/DictTT.pyo
-${PYSITELIB}/easyAI/AI/HashTT.py
-${PYSITELIB}/easyAI/AI/HashTT.pyc
-${PYSITELIB}/easyAI/AI/HashTT.pyo
+${PYSITELIB}/easyAI/AI/DictTranspositionTable.py
+${PYSITELIB}/easyAI/AI/DictTranspositionTable.pyc
+${PYSITELIB}/easyAI/AI/DictTranspositionTable.pyo
+${PYSITELIB}/easyAI/AI/HashTranspositionTable.py
+${PYSITELIB}/easyAI/AI/HashTranspositionTable.pyc
+${PYSITELIB}/easyAI/AI/HashTranspositionTable.pyo
 ${PYSITELIB}/easyAI/AI/Hashes.py
 ${PYSITELIB}/easyAI/AI/Hashes.pyc
 ${PYSITELIB}/easyAI/AI/Hashes.pyo
@@ -27,12 +28,9 @@ ${PYSITELIB}/easyAI/AI/NonRecursiveNegamax.pyo
 ${PYSITELIB}/easyAI/AI/SSS.py
 ${PYSITELIB}/easyAI/AI/SSS.pyc
 ${PYSITELIB}/easyAI/AI/SSS.pyo
-${PYSITELIB}/easyAI/AI/StubbornGreedy.py
-${PYSITELIB}/easyAI/AI/StubbornGreedy.pyc
-${PYSITELIB}/easyAI/AI/StubbornGreedy.pyo
-${PYSITELIB}/easyAI/AI/TT.py
-${PYSITELIB}/easyAI/AI/TT.pyc
-${PYSITELIB}/easyAI/AI/TT.pyo
+${PYSITELIB}/easyAI/AI/TranspositionTable.py
+${PYSITELIB}/easyAI/AI/TranspositionTable.pyc
+${PYSITELIB}/easyAI/AI/TranspositionTable.pyo
 ${PYSITELIB}/easyAI/AI/__init__.py
 ${PYSITELIB}/easyAI/AI/__init__.pyc
 ${PYSITELIB}/easyAI/AI/__init__.pyo
@@ -42,9 +40,9 @@ ${PYSITELIB}/easyAI/AI/solving.pyo
 ${PYSITELIB}/easyAI/Player.py
 ${PYSITELIB}/easyAI/Player.pyc
 ${PYSITELIB}/easyAI/Player.pyo
-${PYSITELIB}/easyAI/TwoPlayersGame.py
-${PYSITELIB}/easyAI/TwoPlayersGame.pyc
-${PYSITELIB}/easyAI/TwoPlayersGame.pyo
+${PYSITELIB}/easyAI/TwoPlayerGame.py
+${PYSITELIB}/easyAI/TwoPlayerGame.pyc
+${PYSITELIB}/easyAI/TwoPlayerGame.pyo
 ${PYSITELIB}/easyAI/__init__.py
 ${PYSITELIB}/easyAI/__init__.pyc
 ${PYSITELIB}/easyAI/__init__.pyo
@@ -93,3 +91,6 @@ ${PYSITELIB}/easyAI/games/TicTacToe.pyo
 ${PYSITELIB}/easyAI/games/__init__.py
 ${PYSITELIB}/easyAI/games/__init__.pyc
 ${PYSITELIB}/easyAI/games/__init__.pyo
+${PYSITELIB}/easyAI/version.py
+${PYSITELIB}/easyAI/version.pyc
+${PYSITELIB}/easyAI/version.pyo
