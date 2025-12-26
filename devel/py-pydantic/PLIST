@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/04/18 12:29:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/12/26 10:49:13 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -162,6 +162,9 @@ ${PYSITELIB}/pydantic/experimental/__init__.pyo
 ${PYSITELIB}/pydantic/experimental/arguments_schema.py
 ${PYSITELIB}/pydantic/experimental/arguments_schema.pyc
 ${PYSITELIB}/pydantic/experimental/arguments_schema.pyo
+${PYSITELIB}/pydantic/experimental/missing_sentinel.py
+${PYSITELIB}/pydantic/experimental/missing_sentinel.pyc
+${PYSITELIB}/pydantic/experimental/missing_sentinel.pyo
 ${PYSITELIB}/pydantic/experimental/pipeline.py
 ${PYSITELIB}/pydantic/experimental/pipeline.pyc
 ${PYSITELIB}/pydantic/experimental/pipeline.pyo

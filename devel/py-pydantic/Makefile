@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2025/06/15 08:28:01 adam Exp $
+# $NetBSD: Makefile,v 1.36 2025/12/26 10:49:13 adam Exp $
 
-DISTNAME=	pydantic-2.11.7
+DISTNAME=	pydantic-2.12.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydantic/}
@@ -13,8 +13,9 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=22.5.0:../../devel/py-hatch-fancy-pypi-readme
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-annotated-types>=0.6.0:../../lang/py-annotated-types
-DEPENDS+=	${PYPKGPREFIX}-pydantic-core>=2.33.1:../../devel/py-pydantic-core
-DEPENDS+=	${PYPKGPREFIX}-typing-inspection>=0.4.0:../../devel/py-typing-inspection
+DEPENDS+=	${PYPKGPREFIX}-pydantic-core>=2.41.5:../../devel/py-pydantic-core
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.14.1:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-inspection>=0.4.2:../../devel/py-typing-inspection
 TEST_DEPENDS+=	${PYPKGPREFIX}-cloudpickle-[0-9]*:../../converters/py-cloudpickle
 TEST_DEPENDS+=	${PYPKGPREFIX}-dirty-equals-[0-9]*:../../devel/py-dirty-equals
 TEST_DEPENDS+=	${PYPKGPREFIX}-email_validator>=2.0.0:../../mail/py-email_validator
