@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/08/20 07:52:02 adam Exp $
+$NetBSD: distinfo,v 1.14 2025/12/26 11:42:29 adam Exp $
 
-BLAKE2s (geventhttpclient-2.3.4.tar.gz) = 70d6e115312749bf196ad884a9e6c405531a6c47bc3de33362d85ae80586cfd7
-SHA512 (geventhttpclient-2.3.4.tar.gz) = a2c842d04f9b12b6dfdd64ab3c1a9c80a60aa873e0d840b1e8cba62001ac60b1d357bcbc6429b7af645d01088a8f56c33acb991083f7b762cce563929e296322
-Size (geventhttpclient-2.3.4.tar.gz) = 83545 bytes
+BLAKE2s (geventhttpclient-2.3.7.tar.gz) = 928cce4a65f34bc63ce5e33779cc6bd52d87d03670159b2d2a9e2672e1373912
+SHA512 (geventhttpclient-2.3.7.tar.gz) = b64149d72f6227eb8a2e4493a4648b4f13f5bbd980784e7ce246e05cd30f2432880a98f90cb7b6a009f7ad1bf34fdcb86f0d4426f64aa34b6a1e35c75871a70f
+Size (geventhttpclient-2.3.7.tar.gz) = 83708 bytes
