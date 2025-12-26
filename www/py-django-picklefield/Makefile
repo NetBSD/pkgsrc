@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/04/14 14:16:21 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/12/26 09:46:55 adam Exp $
 
-DISTNAME=	django-picklefield-3.3
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	django_picklefield-3.4.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-picklefield/}
 
