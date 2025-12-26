@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/09/28 19:57:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/12/26 19:36:12 adam Exp $
 
-DISTNAME=	django_q2-1.8.0
+DISTNAME=	django_q2-1.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-q2/}
 
@@ -12,8 +11,8 @@ COMMENT=	Multiprocessing distributed task queue for Django
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
-DEPENDS+=	${PYPKGPREFIX}-django>=4:../../www/py-django
-DEPENDS+=	${PYPKGPREFIX}-django-picklefield>=3.0.1:../../www/py-django-picklefield
+DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django-picklefield>=3.1:../../www/py-django-picklefield
 
 USE_LANGUAGES=	# none
 
