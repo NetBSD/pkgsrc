@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/10/09 07:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/12/26 16:08:04 adam Exp $
 
-DISTNAME=	gcovr-8.3
+DISTNAME=	gcovr-8.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gcovr/}
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=24.1.0:../../devel/py-hatch-fancy-pypi-readme
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.4.0:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.26.1:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.26.3:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-colorlog-[0-9]*:../../devel/py-colorlog
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
