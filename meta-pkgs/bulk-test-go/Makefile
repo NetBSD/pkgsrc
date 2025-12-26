@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2025/06/15 09:41:03 bsiegert Exp $
+# $NetBSD: Makefile,v 1.15 2025/12/26 14:07:06 wiz Exp $
 
-DISTNAME=	bulk-test-go-20250615
+DISTNAME=	bulk-test-go-20251226
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -14,7 +14,6 @@ RESTRICTED=		Just for test build purposes
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-DEPENDS+=	gospt-[0-9]*:../../audio/gospt
 DEPENDS+=	sptui-[0-9]*:../../audio/sptui
 DEPENDS+=	ymuse-[0-9]*:../../audio/ymuse
 # Broken on many platforms, which decreases signal
