@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2025/12/27 18:58:25 gutteridge Exp $
+# $NetBSD: Makefile,v 1.64 2025/12/27 19:04:48 gutteridge Exp $
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-${PHP_VERSION}
 PKGREVISION=		13
@@ -32,6 +32,7 @@ INSTALLATION_DIRS=	lib/httpd
 
 .include "../../mk/compiler.mk"
 
+# Needed for PHP 5.6 with GCC >= 14 on NetBSD.
 .if ${PKGSRC_COMPILER:Mgcc}
 CFLAGS+=	-Wno-error=incompatible-pointer-types -Wno-error=int-conversion
 .endif
