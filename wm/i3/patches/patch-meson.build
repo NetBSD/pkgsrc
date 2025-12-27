@@ -1,6 +1,9 @@
-$NetBSD: patch-meson.build,v 1.1 2021/09/12 07:22:47 nia Exp $
+$NetBSD: patch-meson.build,v 1.2 2025/12/27 15:37:50 wiz Exp $
 
 Install config files to examples, per pkgsrc policy.
+
+Check for uselocale() before using it.
+https://github.com/i3/i3/issues/6566
 
 --- meson.build.orig	2021-02-27 09:37:58.753311900 +0000
 +++ meson.build
@@ -13,7 +16,15 @@ Install config files to examples, per pkgsrc policy.
  
  if get_option('b_sanitize').split(',').contains('address')
    cdata.set('I3_ASAN_ENABLED', 1)
-@@ -580,7 +580,7 @@ install_data(
+@@ -52,6 +52,7 @@ endif
+ 
+ cdata.set('HAVE_STRNDUP', cc.has_function('strndup'))
+ cdata.set('HAVE_MKDIRP', cc.has_function('mkdirp'))
++cdata.set('HAVE_USELOCALE', cc.has_function('uselocale'))
+ 
+ # Instead of generating config.h directly, make vcs_tag generate it so that
+ # @VCS_TAG@ is replaced.
+@@ -580,7 +581,7 @@ install_data(
  install_subdir(
    'etc',
    strip_directory: true,
