@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/04/12 09:39:48 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/12/27 14:35:09 adam Exp $
 
-DISTNAME=	beniget-0.4.2.post1
+DISTNAME=	beniget-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beniget/}
 
@@ -12,7 +11,7 @@ COMMENT=	Extract semantic information about static Python code
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-gast>=0.5.0:../../devel/py-gast
+DEPENDS+=	${PYPKGPREFIX}-gast>=0.7.0:../../devel/py-gast
 
 USE_LANGUAGES=	# none
 
