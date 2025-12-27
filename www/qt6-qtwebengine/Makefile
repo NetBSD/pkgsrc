@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/12/22 06:08:17 adam Exp $
+# $NetBSD: Makefile,v 1.3 2025/12/27 08:26:08 adam Exp $
 
 DISTNAME=	qtwebengine-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtwebengine-${QTVERSION}
@@ -23,11 +23,10 @@ TOOL_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
 TOOL_DEPENDS+=		${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 
+USE_CXX_FEATURES=	c++20
 USE_TOOLS+=		bison
 
 UNLIMIT_RESOURCES+=	datasize
-
-USE_CXX_FEATURES+=	c++20
 
 EXTRA_CXXFLAGS=		-I${BUILDLINK_DIR}/include/libepoll-shim
 
@@ -46,6 +45,7 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6WebEngineWidgets.pc
 .include "../../mk/bsd.prefs.mk"
 
 CMAKE_CONFIGURE_ARGS+=		-G Ninja
+CMAKE_CONFIGURE_ARGS+=		-DPython3_EXECUTABLE=${PYTHONBIN}
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_pdf_v8=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_proprietary_codecs=ON
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_ffmpeg=ON
@@ -150,10 +150,9 @@ BUILDLINK_TRANSFORM+=   l:pci:${PCIUTILS_LIBNAME}
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
 .endif
-.include "../../geography/qt6-qtpositioning/buildlink3.mk"
 .include "../../devel/qt6-qttools/buildlink3.mk"
+.include "../../geography/qt6-qtpositioning/buildlink3.mk"
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"
 .include "../../www/qt6-qtwebchannel/buildlink3.mk"
-.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
