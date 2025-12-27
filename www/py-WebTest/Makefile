@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2025/10/09 07:58:07 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/12/27 21:02:04 adam Exp $
 
-DISTNAME=	webtest-3.0.4
+DISTNAME=	webtest-3.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/webt/WebT/}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/WebTest/}
 
@@ -14,7 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-WebOb>=1.2:../../www/py-WebOb
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
-DEPENDS+=	${PYPKGPREFIX}-waitress>=0.8.5:../../www/py-waitress
+DEPENDS+=	${PYPKGPREFIX}-waitress>=3.0.2:../../www/py-waitress
 TEST_DEPENDS+=	${PYPKGPREFIX}-PasteDeploy-[0-9]*:../../www/py-PasteDeploy
 TEST_DEPENDS+=	${PYPKGPREFIX}-WSGIProxy2-[0-9]*:../../www/py-WSGIProxy2
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
