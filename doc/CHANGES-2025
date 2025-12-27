@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7448 2025/12/27 21:20:17 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.7449 2025/12/27 22:17:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10994,3 +10994,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/py-Willow to 1.12.0 [adam 2025-12-27]
 	Updated www/py-WebTest to 3.0.7 [adam 2025-12-27]
 	Updated www/hugo to 0.153.3 [triaxx 2025-12-27]
+	Added www/py-modelsearch version 1.1.1 [adam 2025-12-27]
+	Updated devel/py-ninja to 1.13.0 [adam 2025-12-27]
