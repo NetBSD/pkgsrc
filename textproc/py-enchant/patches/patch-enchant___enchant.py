@@ -1,13 +1,13 @@
-$NetBSD: patch-enchant___enchant.py,v 1.1 2024/04/15 05:27:47 adam Exp $
+$NetBSD: patch-enchant___enchant.py,v 1.2 2025/12/27 14:27:04 adam Exp $
 
 Always return a path to libenchant2 from pkgsrc.
 
---- enchant/_enchant.py.orig	2024-04-15 05:19:38.294407367 +0000
+--- enchant/_enchant.py.orig	2025-09-14 16:18:17.000000000 +0000
 +++ enchant/_enchant.py
-@@ -124,24 +124,7 @@ def find_message(*args):
+@@ -134,24 +134,7 @@ def find_message(*args: str) -> None:
  
  
- def find_c_enchant_lib():
+ def find_c_enchant_lib() -> Optional[str]:
 -    verbose = os.environ.get("PYENCHANT_VERBOSE_FIND")
 -    if verbose:
 -        global VERBOSE_FIND
