@@ -307,8 +307,8 @@ glib2			Enable libGIO support.
 gmp			Enable gmp (GNU Multiple Precision Arithmetic Library) support.
 gmp-fat			Build-in all x86 assembler code, detecting CPU at run-time.
 gnatcoll-all2ada	Build gnatcoll-db with all2ada tool.
-gnatcoll-db2ada		Build gnatcoll-db with db2ada tool.
 gnatcoll-cpp		Enable GNATCOLL C++ strings binding.
+gnatcoll-db2ada		Build gnatcoll-db with db2ada tool.
 gnatcoll-gnatinspect	Build gnatcoll-db with gnatinspect tool.
 gnatcoll-postgres	Build gnatcoll-db with postgres support.
 gnatcoll-postgres2ada	Build gnatcoll-db with postgres2ada tool.
@@ -771,20 +771,20 @@ pkgin-static		Link all pkgsrc libraries statically.
 plotutils		Enable plotutils support.
 png			Enable PNG support.
 polkit                  Enable Polkit support.
+polyorb-ap-aws		Build PolyORB with AWS application personality.
 polyorb-ap-corba	Build PolyORB with CORBA application personality.
 polyorb-ap-dsa		Build PolyORB with DSA application personality.
 polyorb-ap-moma		Build PolyORB with MOMA application personality.
-polyorb-ap-aws		Build PolyORB with AWS application personality.
 polyorb-cs-event	Build PolyORB with Event COS service.
 polyorb-cs-ir		Build PolyORB with Interface Repository COS service.
 polyorb-cs-naming	Build PolyORB with Naming COS service.
 polyorb-cs-notification	Build PolyORB with Notification COS service.
 polyorb-cs-time		Build PolyORB with Time COS service.
 polyorb-gnatcoll	Build PolyORB with GNATCOLL support.
+polyorb-pp-dns		Build PolyORB with DNS protocol personality.
 polyorb-pp-giop		Build PolyORB with GIOP protocol personality.
 polyorb-pp-soap		Build PolyORB with SOAP protocol personality.
 polyorb-pp-srp		Build PolyORB with SRP protocol personality.
-polyorb-pp-dns		Build PolyORB with DNS protocol personality.
 poppler			Enable poppler-utils support.
 portals			Enable BSD Portals support
 portaudio		Enable PortAudio audio library support.
@@ -887,8 +887,8 @@ skey			Enable S/Key support.
 skk			Use SKK for Kana-to-Kanji conversion.
 skkdic-expr2		Enable fast skkdic-expr tool.
 slang			Enable S-Lang support.
-slp			Enable Service Location Protocol support.
 slirp			Support userspace TCP/IP emulation with libslirp.
+slp			Enable Service Location Protocol support.
 slurm			Support Slurm batch scheduler.
 small-net		Tune for a smaller networks.
 smime			Enable S/MIME support.
@@ -1100,6 +1100,7 @@ xvideo			Enable X-Video Motion Compensation library support.
 z3			Enable support for the Z3 theorem prover.
 zbar			Enable support for zbar.
 zenmap			Enable nmap GUI frontend.
+zeromq			Enable zeromq support.
 zip			Support zip archives.
 ziplinks		Compress data before transmitting it between servers.
 zlib			Enable support for zlib compression.
