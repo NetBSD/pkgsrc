@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26585 2025/12/27 15:38:05 wiz Exp $
+$NetBSD: TODO,v 1.26586 2025/12/27 22:30:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -876,7 +876,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
-	o llvm-21.1.7 [wip]
+	o llvm-21.1.8 [wip]
 	o lmbench-3
 	o lnav-0.12.4 [wip]
 	o log4cxx-0.11.0
