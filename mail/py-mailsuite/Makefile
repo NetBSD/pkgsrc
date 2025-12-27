@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/12/03 20:18:02 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/12/27 14:29:22 adam Exp $
 
-DISTNAME=	mailsuite-1.10.0
+DISTNAME=	mailsuite-1.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mailsuite/}
