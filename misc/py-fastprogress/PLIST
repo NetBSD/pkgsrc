@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/04/12 07:43:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/12/27 08:28:39 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -7,6 +7,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/fastprogress/__init__.py
 ${PYSITELIB}/fastprogress/__init__.pyc
 ${PYSITELIB}/fastprogress/__init__.pyo
+${PYSITELIB}/fastprogress/_modidx.py
+${PYSITELIB}/fastprogress/_modidx.pyc
+${PYSITELIB}/fastprogress/_modidx.pyo
 ${PYSITELIB}/fastprogress/_nbdev.py
 ${PYSITELIB}/fastprogress/_nbdev.pyc
 ${PYSITELIB}/fastprogress/_nbdev.pyo

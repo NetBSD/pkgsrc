@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2025/04/12 07:43:08 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/12/27 08:28:39 adam Exp $
 
-DISTNAME=	fastprogress-1.0.3
+DISTNAME=	fastprogress-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fastprogress/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/fastai/fastprogress
+HOMEPAGE=	https://github.com/AnswerDotAI/fastprogress
 COMMENT=	Nested progress with plotting options for fastai
 LICENSE=	apache-2.0
 
