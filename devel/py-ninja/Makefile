@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2025/04/02 15:12:07 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/12/27 22:17:02 adam Exp $
 
-DISTNAME=	ninja-1.11.1.4
+DISTNAME=	ninja-1.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/ninja/}
-DISTFILES=	${DEFAULT_DISTFILES} ninja-1.11.1.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/scikit-build/ninja-python-distributions
@@ -23,13 +22,10 @@ USE_LANGUAGES=	c c++
 
 INSTALLATION_DIRS+=	${PYSITELIB}/ninja/data/bin
 
-# avoid building ninja again, just provide source code so CMake is happy
-post-extract:
-	cd ${WRKSRC} && ${LN} -s ../ninja-1.11.1 Ninja-src
-
 # add symlink where the normal build system would put the freshly-compiled ninja binary
 post-install:
 	cd ${DESTDIR}${PREFIX}/${PYSITELIB}/ninja/data/bin && ${LN} -s ${PREFIX}/bin/ninja .
 
+.include "../../devel/googletest/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
