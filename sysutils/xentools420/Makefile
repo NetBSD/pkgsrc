@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/11/13 16:54:19 bouyer Exp $
+# $NetBSD: Makefile,v 1.5 2025/12/27 19:19:13 prlw1 Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 #PKGREVISION=        1
@@ -19,6 +19,7 @@ TOOL_DEPENDS+=	acpica-utils-[0-9]*:../../sysutils/acpica-utils
 .endif
 
 TOOL_DEPENDS+=  ninja-build-[0-9]*:../../devel/ninja-build
+TOOL_DEPENDS+=  ${PYPKGPREFIX}-distlib-[0-9]*:../../devel/py-distlib
 TOOL_DEPENDS+=  ${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
