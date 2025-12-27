@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7437 2025/12/27 08:18:33 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7438 2025/12/27 08:24:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10974,3 +10974,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/salt-docs to 3007.10 [adam 2025-12-26]
 	Updated graphics/gnuplot to 6.0.4 [adam 2025-12-27]
 	Updated graphics/tesseract to 5.5.2 [adam 2025-12-27]
+	Updated graphics/py-leather to 0.4.1 [adam 2025-12-27]
+	Updated devel/py-tracerite to 2.2.0 [adam 2025-12-27]
