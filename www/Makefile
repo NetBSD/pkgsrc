@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1894 2025/12/22 10:19:57 adam Exp $
+# $NetBSD: Makefile,v 1.1895 2025/12/27 22:02:50 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -878,6 +878,7 @@ SUBDIR+=	py-meinheld
 SUBDIR+=	py-mezzanine
 SUBDIR+=	py-mod_wsgi
 SUBDIR+=	py-model_mommy
+SUBDIR+=	py-modelsearch
 SUBDIR+=	py-moin
 SUBDIR+=	py-multipart
 SUBDIR+=	py-nbclassic
