@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/03/14 13:37:32 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/12/27 08:10:26 wiz Exp $
 
 SLIBVERSION=	3.2.6
 DISTNAME=	guile-slib-${SLIBVERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://people.csail.mit.edu/jaffer/SLIB
+HOMEPAGE=	https://people.csail.mit.edu/jaffer/SLIB
 COMMENT=	SLIB glue files for guile
 
 GUILE_VERSION=	guile30
