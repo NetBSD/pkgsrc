@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2025/12/21 12:18:01 mef Exp $
+# $NetBSD: Makefile,v 1.29 2025/12/27 19:12:18 gutteridge Exp $
 
 DISTNAME=	pangox-compat-0.0.2
 PKGREVISION=	18
@@ -16,11 +16,15 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 
-# work arround for older style programming (for gcc-14.3.0)
-CFLAGS+=		-Wno-deprecated-declarations
-CFLAGS+=		-Wno-implicit-function-declaration
-CFLAGS+=		-Wno-int-conversion
-CFLAGS+=		-Wno-incompatible-pointer-types
+.include "../../mk/compiler.mk"
+
+# workaround for older-style programming (GCC >= 14)
+.if ${PKGSRC_COMPILER:Mgcc}
+CFLAGS+=	-Wno-error=deprecated-declarations
+CFLAGS+=	-Wno-error=implicit-function-declaration
+CFLAGS+=	-Wno-error=int-conversion
+CFLAGS+=	-Wno-error=incompatible-pointer-types
+.endif
 
 PKGCONFIG_OVERRIDE=	pangox.pc.in
 
