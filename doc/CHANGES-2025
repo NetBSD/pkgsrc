@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7447 2025/12/27 21:02:23 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7448 2025/12/27 21:20:17 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10993,3 +10993,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/powerdns to 5.0.2 [wiz 2025-12-27]
 	Updated graphics/py-Willow to 1.12.0 [adam 2025-12-27]
 	Updated www/py-WebTest to 3.0.7 [adam 2025-12-27]
+	Updated www/hugo to 0.153.3 [triaxx 2025-12-27]
