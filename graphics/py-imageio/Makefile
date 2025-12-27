@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2025/10/09 07:57:42 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/12/27 08:42:45 adam Exp $
 
-DISTNAME=	imageio-2.37.0
+DISTNAME=	imageio-2.37.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/imageio/}
 
