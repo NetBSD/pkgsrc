@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7439 2025/12/27 08:34:29 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7440 2025/12/27 08:43:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10978,3 +10978,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-tracerite to 2.2.0 [adam 2025-12-27]
 	Updated misc/py-fastprogress to 1.0.5 [adam 2025-12-27]
 	Updated devel/py-falcon to 4.2.0 [adam 2025-12-27]
+	Updated textproc/py-json-logger to 4.0.0 [adam 2025-12-27]
+	Updated graphics/py-imageio to 2.37.2 [adam 2025-12-27]
