@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/12/09 21:11:43 wiz Exp $
+$NetBSD: distinfo,v 1.11 2025/12/27 08:33:48 adam Exp $
 
-BLAKE2s (falcon-4.0.2.tar.gz) = 43ef3162cee250a5851445b9a91677c9a7b08d5057b4ccf7c20c56c7e61f9a1d
-SHA512 (falcon-4.0.2.tar.gz) = 08868316dbcfbfd761d2bce0941c86c83ebd8e23a2067227fd904420eed36cf2eeab72aea58e378da187559030ef83979b05cc303e2ccdbbfc107846413e9bc7
-Size (falcon-4.0.2.tar.gz) = 630121 bytes
+BLAKE2s (falcon-4.2.0.tar.gz) = 9ffe7d1f60759d50dedb5fd164e1b6d63f663ed7d34e2cab92fc485929ea551d
+SHA512 (falcon-4.2.0.tar.gz) = 8fdd53b5aaf01e0073ee97255bb5d562ce73214e64a339ca104d27339f489d8c28b19b3a33cfbae645ae792a0ed42fdc3d84117bb8d680aa14ad319bb47353c9
+Size (falcon-4.2.0.tar.gz) = 665894 bytes
