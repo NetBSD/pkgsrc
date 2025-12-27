@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/09/28 19:47:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/12/27 08:56:26 adam Exp $
 bin/cyclonedx-py-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -30,6 +30,15 @@ ${PYSITELIB}/cyclonedx_py/_internal/pipenv.pyo
 ${PYSITELIB}/cyclonedx_py/_internal/poetry.py
 ${PYSITELIB}/cyclonedx_py/_internal/poetry.pyc
 ${PYSITELIB}/cyclonedx_py/_internal/poetry.pyo
+${PYSITELIB}/cyclonedx_py/_internal/py_interop/__init__.py
+${PYSITELIB}/cyclonedx_py/_internal/py_interop/__init__.pyc
+${PYSITELIB}/cyclonedx_py/_internal/py_interop/__init__.pyo
+${PYSITELIB}/cyclonedx_py/_internal/py_interop/glob.py
+${PYSITELIB}/cyclonedx_py/_internal/py_interop/glob.pyc
+${PYSITELIB}/cyclonedx_py/_internal/py_interop/glob.pyo
+${PYSITELIB}/cyclonedx_py/_internal/py_interop/packagemetadata.py
+${PYSITELIB}/cyclonedx_py/_internal/py_interop/packagemetadata.pyc
+${PYSITELIB}/cyclonedx_py/_internal/py_interop/packagemetadata.pyo
 ${PYSITELIB}/cyclonedx_py/_internal/requirements.py
 ${PYSITELIB}/cyclonedx_py/_internal/requirements.pyc
 ${PYSITELIB}/cyclonedx_py/_internal/requirements.pyo
@@ -39,6 +48,9 @@ ${PYSITELIB}/cyclonedx_py/_internal/utils/__init__.pyo
 ${PYSITELIB}/cyclonedx_py/_internal/utils/args.py
 ${PYSITELIB}/cyclonedx_py/_internal/utils/args.pyc
 ${PYSITELIB}/cyclonedx_py/_internal/utils/args.pyo
+${PYSITELIB}/cyclonedx_py/_internal/utils/bytes.py
+${PYSITELIB}/cyclonedx_py/_internal/utils/bytes.pyc
+${PYSITELIB}/cyclonedx_py/_internal/utils/bytes.pyo
 ${PYSITELIB}/cyclonedx_py/_internal/utils/cdx.py
 ${PYSITELIB}/cyclonedx_py/_internal/utils/cdx.pyc
 ${PYSITELIB}/cyclonedx_py/_internal/utils/cdx.pyo
