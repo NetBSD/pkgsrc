@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.7 2025/04/14 20:41:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/12/27 14:32:48 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/limits/__init__.py
 ${PYSITELIB}/limits/__init__.pyc
 ${PYSITELIB}/limits/__init__.pyo
 ${PYSITELIB}/limits/_version.py
 ${PYSITELIB}/limits/_version.pyc
+${PYSITELIB}/limits/_version.pyi
 ${PYSITELIB}/limits/_version.pyo
 ${PYSITELIB}/limits/aio/__init__.py
 ${PYSITELIB}/limits/aio/__init__.pyc
@@ -19,12 +19,18 @@ ${PYSITELIB}/limits/aio/storage/__init__.pyo
 ${PYSITELIB}/limits/aio/storage/base.py
 ${PYSITELIB}/limits/aio/storage/base.pyc
 ${PYSITELIB}/limits/aio/storage/base.pyo
-${PYSITELIB}/limits/aio/storage/etcd.py
-${PYSITELIB}/limits/aio/storage/etcd.pyc
-${PYSITELIB}/limits/aio/storage/etcd.pyo
-${PYSITELIB}/limits/aio/storage/memcached.py
-${PYSITELIB}/limits/aio/storage/memcached.pyc
-${PYSITELIB}/limits/aio/storage/memcached.pyo
+${PYSITELIB}/limits/aio/storage/memcached/__init__.py
+${PYSITELIB}/limits/aio/storage/memcached/__init__.pyc
+${PYSITELIB}/limits/aio/storage/memcached/__init__.pyo
+${PYSITELIB}/limits/aio/storage/memcached/bridge.py
+${PYSITELIB}/limits/aio/storage/memcached/bridge.pyc
+${PYSITELIB}/limits/aio/storage/memcached/bridge.pyo
+${PYSITELIB}/limits/aio/storage/memcached/emcache.py
+${PYSITELIB}/limits/aio/storage/memcached/emcache.pyc
+${PYSITELIB}/limits/aio/storage/memcached/emcache.pyo
+${PYSITELIB}/limits/aio/storage/memcached/memcachio.py
+${PYSITELIB}/limits/aio/storage/memcached/memcachio.pyc
+${PYSITELIB}/limits/aio/storage/memcached/memcachio.pyo
 ${PYSITELIB}/limits/aio/storage/memory.py
 ${PYSITELIB}/limits/aio/storage/memory.pyc
 ${PYSITELIB}/limits/aio/storage/memory.pyo
@@ -68,9 +74,6 @@ ${PYSITELIB}/limits/storage/__init__.pyo
 ${PYSITELIB}/limits/storage/base.py
 ${PYSITELIB}/limits/storage/base.pyc
 ${PYSITELIB}/limits/storage/base.pyo
-${PYSITELIB}/limits/storage/etcd.py
-${PYSITELIB}/limits/storage/etcd.pyc
-${PYSITELIB}/limits/storage/etcd.pyo
 ${PYSITELIB}/limits/storage/memcached.py
 ${PYSITELIB}/limits/storage/memcached.pyc
 ${PYSITELIB}/limits/storage/memcached.pyo
@@ -101,6 +104,3 @@ ${PYSITELIB}/limits/typing.pyo
 ${PYSITELIB}/limits/util.py
 ${PYSITELIB}/limits/util.pyc
 ${PYSITELIB}/limits/util.pyo
-${PYSITELIB}/limits/version.py
-${PYSITELIB}/limits/version.pyc
-${PYSITELIB}/limits/version.pyo
