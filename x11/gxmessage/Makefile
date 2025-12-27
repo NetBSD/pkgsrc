@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.33 2025/10/23 20:39:58 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.34 2025/12/27 08:12:31 wiz Exp $
 
 DISTNAME=	gxmessage-2.20.0
 PKGREVISION=	32
 CATEGORIES=	x11
-MASTER_SITES=	http://homepages.ihug.co.nz/~trmusson/stuff/
+#MASTER_SITES=	http://homepages.ihug.co.nz/~trmusson/stuff/
 MASTER_SITES+=	${MASTER_SITE_GNU:=gxmessage/}
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	http://homepages.ihug.co.nz/~trmusson/programs.html
+#HOMEPAGE=	http://homepages.ihug.co.nz/~trmusson/programs.html
 COMMENT=	GTK2+ based xmessage clone
 LICENSE=	gnu-gpl-v3
 
