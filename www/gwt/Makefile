@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/07/05 19:27:02 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.4 2025/12/27 08:11:19 wiz Exp $
 
 DISTNAME=	gwt-2.7.0
 CATEGORIES=	www
@@ -7,7 +6,7 @@ MASTER_SITES=	http://storage.googleapis.com/gwt-releases/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.gwtproject.org/
+HOMEPAGE=	https://www.gwtproject.org/
 COMMENT=	Google Web Toolkit
 LICENSE=	apache-2.0
 
