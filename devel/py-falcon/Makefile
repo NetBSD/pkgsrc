@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2025/10/09 07:57:31 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/12/27 08:33:48 adam Exp $
 
-DISTNAME=	falcon-4.0.2
+DISTNAME=	falcon-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/falcon/}
 
@@ -11,8 +10,8 @@ HOMEPAGE=	https://falconframework.org/
 COMMENT=	Unladen web framework for building APIs and app backends
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.8:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.21:../../devel/py-cython
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
