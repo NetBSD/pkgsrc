@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2025/10/23 20:39:06 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2025/12/27 14:43:17 prlw1 Exp $
 
 DISTNAME=	gcr-3.40.0
 PKGREVISION=	7
@@ -18,6 +18,7 @@ USE_TOOLS+=	gdbus-codegen intltool msgfmt perl pkg-config readlink
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gck
 TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/gck
 
+CPPFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 LDFLAGS.SunOS+=		-lsocket
 
