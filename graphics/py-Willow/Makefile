@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2025/09/21 15:11:40 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2025/12/27 21:00:00 adam Exp $
 
-DISTNAME=	willow-1.10.0
+DISTNAME=	willow-1.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^w/W/}
-PKGREVISION=	6
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/Willow/}
 
@@ -15,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0.7:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-filetype>=1.1.1:../../sysutils/py-filetype
 # heif
-DEPENDS+=	${PYPKGPREFIX}-pillow_heif>=0.13.0:../../graphics/py-pillow_heif
+DEPENDS+=	${PYPKGPREFIX}-pillow_heif>=1.0.0:../../graphics/py-pillow_heif
 
 .include "../../graphics/opencv/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
