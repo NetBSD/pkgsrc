@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26584 2025/12/26 12:03:37 adam Exp $
+$NetBSD: TODO,v 1.26585 2025/12/27 15:38:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -761,7 +761,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o html2wml-0.4.11
 	o hwloc-2.11
 	o hydrogen-1.2.6
-	o i3-4.25
 	o ibus-hangul-1.5.4
 	o icdprog-0.5
 	o icedtea-web-1.6.2
@@ -1336,8 +1335,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wap-utils-1.4.1
 	o wbm-virtual-server-6.16
 	o wcalc-2.4
-	o webkit-gtk-2.50.1 [wip]
-	o webkit-gtk-2.50.4
+	o webkit-gtk-2.50.4 [wip]
 	o webmin-2.600
 	o websvn-2.6.0
 	o wgetpaste-2.30
