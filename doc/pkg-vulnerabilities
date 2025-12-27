@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.690 2025/12/26 11:49:38 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.691 2025/12/27 21:45:49 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29170,3 +29170,15 @@ gitea<1.22.2	improper-access-control			https://nvd.nist.gov/vuln/detail/CVE-2025
 gitea<1.21.2	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-68945
 gitea<1.20.1	cross-site-scripting			https://nvd.nist.gov/vuln/detail/CVE-2025-68946
 py{27,39,310,311,312,313,314}-httpbin-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-15095
+php81<8.1.34	memory-leak			https://nvd.nist.gov/vuln/detail/CVE-2025-14177
+php82<8.2.30	memory-leak			https://nvd.nist.gov/vuln/detail/CVE-2025-14177
+php83<8.3.29	memory-leak			https://nvd.nist.gov/vuln/detail/CVE-2025-14177
+php84<8.4.16	memory-leak			https://nvd.nist.gov/vuln/detail/CVE-2025-14177
+php81<8.1.34	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-14178
+php82<8.2.30	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-14178
+php83<8.3.29	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-14178
+php84<8.4.16	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-14178
+php81<8.1.34	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-14180
+php82<8.2.30	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-14180
+php83<8.3.29	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-14180
+php84<8.4.16	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-14180
