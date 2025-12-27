@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2025/07/09 10:22:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.46 2025/12/27 18:02:13 gutteridge Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -48,6 +48,7 @@ CFLAGS+=	-DSQLITE_ENABLE_LOCKING_STYLE=0 -DSQLITE_WITHOUT_ZONEMALLOC
 
 .if ${PKGSRC_COMPILER:Mgcc}
 CFLAGS+=	-Wno-error=incompatible-pointer-types   # libxml2 API
+CFLAGS+=	-Wno-error=int-conversion  # GCC >= 14 default
 .endif
 
 pre-configure:
