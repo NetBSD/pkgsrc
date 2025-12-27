@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/08/21 08:37:18 adam Exp $
+$NetBSD: distinfo,v 1.5 2025/12/27 14:35:09 adam Exp $
 
-BLAKE2s (beniget-0.4.2.post1.tar.gz) = 713370a67b1bb8bbbdfe11c1fc72f03807e978f66c8a952907381f53e1c71b05
-SHA512 (beniget-0.4.2.post1.tar.gz) = 7270d36e2ae98bd984b7f7e90f43c0dbf7b06601370ae71064a8b0a1babe4ca91e78ec8564a6836221c9a331835834e97670f5c7c0f4d40ff22835338b1ef3db
-Size (beniget-0.4.2.post1.tar.gz) = 32274 bytes
+BLAKE2s (beniget-0.5.0.tar.gz) = 4c8d5498d02803fe8d75895e123e630f87cf9f298720f9086597df07750cd82e
+SHA512 (beniget-0.5.0.tar.gz) = 7094e5c0759d54738aa10923e96e3b20a50dc7736311e36fda757d16eb47838eae8372da53fb794a6871d0f92a38726889665b78b364a430e253b44de795cb6e
+Size (beniget-0.5.0.tar.gz) = 37097 bytes
