@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/04/18 10:38:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/12/27 14:40:43 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -28,9 +28,6 @@ ${PYSITELIB}/nbxmpp/errors.pyo
 ${PYSITELIB}/nbxmpp/exceptions.py
 ${PYSITELIB}/nbxmpp/exceptions.pyc
 ${PYSITELIB}/nbxmpp/exceptions.pyo
-${PYSITELIB}/nbxmpp/http.py
-${PYSITELIB}/nbxmpp/http.pyc
-${PYSITELIB}/nbxmpp/http.pyo
 ${PYSITELIB}/nbxmpp/language.py
 ${PYSITELIB}/nbxmpp/language.pyc
 ${PYSITELIB}/nbxmpp/language.pyo
@@ -169,6 +166,9 @@ ${PYSITELIB}/nbxmpp/modules/muclumbus.pyo
 ${PYSITELIB}/nbxmpp/modules/nickname.py
 ${PYSITELIB}/nbxmpp/modules/nickname.pyc
 ${PYSITELIB}/nbxmpp/modules/nickname.pyo
+${PYSITELIB}/nbxmpp/modules/ogp.py
+${PYSITELIB}/nbxmpp/modules/ogp.pyc
+${PYSITELIB}/nbxmpp/modules/ogp.pyo
 ${PYSITELIB}/nbxmpp/modules/omemo.py
 ${PYSITELIB}/nbxmpp/modules/omemo.pyc
 ${PYSITELIB}/nbxmpp/modules/omemo.pyo
