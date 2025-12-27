@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2025/08/06 04:43:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/12/27 08:24:29 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/tracerite/__init__.py
 ${PYSITELIB}/tracerite/__init__.pyc
 ${PYSITELIB}/tracerite/__init__.pyo
+${PYSITELIB}/tracerite/fastapi.py
+${PYSITELIB}/tracerite/fastapi.pyc
+${PYSITELIB}/tracerite/fastapi.pyo
 ${PYSITELIB}/tracerite/html.py
 ${PYSITELIB}/tracerite/html.pyc
 ${PYSITELIB}/tracerite/html.pyo
@@ -19,7 +20,17 @@ ${PYSITELIB}/tracerite/logging.pyo
 ${PYSITELIB}/tracerite/notebook.py
 ${PYSITELIB}/tracerite/notebook.pyc
 ${PYSITELIB}/tracerite/notebook.pyo
+${PYSITELIB}/tracerite/script.js
 ${PYSITELIB}/tracerite/style.css
+${PYSITELIB}/tracerite/syntaxerror.py
+${PYSITELIB}/tracerite/syntaxerror.pyc
+${PYSITELIB}/tracerite/syntaxerror.pyo
 ${PYSITELIB}/tracerite/trace.py
 ${PYSITELIB}/tracerite/trace.pyc
 ${PYSITELIB}/tracerite/trace.pyo
+${PYSITELIB}/tracerite/trace_cpy.py
+${PYSITELIB}/tracerite/trace_cpy.pyc
+${PYSITELIB}/tracerite/trace_cpy.pyo
+${PYSITELIB}/tracerite/tty.py
+${PYSITELIB}/tracerite/tty.pyc
+${PYSITELIB}/tracerite/tty.pyo
