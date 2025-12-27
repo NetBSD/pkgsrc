@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2024/06/30 22:23:13 mef Exp $
+# $NetBSD: Makefile,v 1.44 2025/12/27 08:18:20 mef Exp $
 
 DISTNAME=	apel-10.8.0.20201107
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wanderlust/}
 GITHUB_PROJECT=	apel
@@ -30,6 +30,7 @@ EMACS_VERSIONS_ACCEPTED=	emacs26 emacs26nox
 EMACS_VERSIONS_ACCEPTED+=	emacs27 emacs27nox
 EMACS_VERSIONS_ACCEPTED+=	emacs28 emacs28nox
 EMACS_VERSIONS_ACCEPTED+=	emacs29 emacs29nox
+EMACS_VERSIONS_ACCEPTED+=	emacs30 emacs30nox
 
 BUILD_TARGET.emacs=	elc
 BUILD_TARGET.xemacs=	package
@@ -42,7 +43,7 @@ MAKE_FLAGS.xemacs=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 
 PLIST_VARS+=	emacs23 emacs19
 .if empty(EMACS_TYPE:Mxemacs)
-.  if !empty(EMACS_TYPE:Memacs2[3-9]*)
+.  if !empty(EMACS_TYPE:Memacs2[3-9]*) || !empty(EMACS_TYPE:Memacs3[0-9]*)
 PLIST.emacs23=	yes
 .  else
 PLIST.emacs19=	yes
