@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2025/06/04 11:10:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.63 2025/12/27 18:58:25 gutteridge Exp $
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-${PHP_VERSION}
 PKGREVISION=		13
@@ -29,6 +29,12 @@ USE_TOOLS+=		autoconf
 CONFIGURE_ENV+=		EXTRA_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:M*:Q}
 
 INSTALLATION_DIRS=	lib/httpd
+
+.include "../../mk/compiler.mk"
+
+.if ${PKGSRC_COMPILER:Mgcc}
+CFLAGS+=	-Wno-error=incompatible-pointer-types -Wno-error=int-conversion
+.endif
 
 pre-configure:
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${CONFIGURE_ENV} autoconf -f
