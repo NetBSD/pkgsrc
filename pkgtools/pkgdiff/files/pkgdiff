@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: pkgdiff,v 1.24 2024/08/06 03:56:10 tnn Exp $
+# $NetBSD: pkgdiff,v 1.25 2025/12/27 16:10:45 nia Exp $
 #
 # Usage: pkgdiff newfile
 #        pkgdiff oldfile newfile
@@ -126,7 +126,7 @@ PKGDIFF_FMT="${PKGDIFF_FMT} -U $lines"
 ;;
 esac # PKGDIFF_FMT unset or null
 
-if dodiff -q $PKGDIFF_FMT "$old" "$new" > /dev/null
+if dodiff -q "$old" "$new" > /dev/null
 then
 	:
 else
