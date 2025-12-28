@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2025/11/30 08:58:27 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/12/28 12:13:01 yhardy Exp $
 
-DISTNAME=	ck-0.7.1
+DISTNAME=	ck-0.7.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=concurrencykit/}
 GITHUB_PROJECT=	ck
-GITHUB_TAG=	0.7.1
+GITHUB_TAG=	0.7.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://concurrencykit.org/
