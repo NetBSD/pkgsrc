@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7463 2025/12/28 15:14:15 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7464 2025/12/28 16:09:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11021,3 +11021,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django-filer to 3.4.1 [adam 2025-12-28]
 	Updated www/py-django-admin-sortable2 to 2.3 [adam 2025-12-28]
 	Updated net/kea to 3.1.4 [adam 2025-12-28]
+	Updated wm/marswm to 0.6.2 [pin 2025-12-28]
