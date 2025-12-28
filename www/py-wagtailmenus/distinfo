@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/04/22 15:30:20 adam Exp $
+$NetBSD: distinfo,v 1.6 2025/12/28 08:28:01 adam Exp $
 
-BLAKE2s (wagtailmenus-4.0.2.tar.gz) = 117deb20e0d581518065930c35d8ddc0c08308602295106972a4bf7292055500
-SHA512 (wagtailmenus-4.0.2.tar.gz) = 886cf3e684ff22165445de78dc8e6be7cb71d2a33469d60dc8b13fd358fbc28de6e345b7388ade82fc8093431008d578c083edc045c06412ccaecba37e79d4a1
-Size (wagtailmenus-4.0.2.tar.gz) = 117941 bytes
+BLAKE2s (wagtailmenus-4.0.5.tar.gz) = 526d651de9415a9ae3782577ff1a3e5c7b6a7df93f4a3713e83df0bf76fb2af1
+SHA512 (wagtailmenus-4.0.5.tar.gz) = 0e8be1efd937df4780dec4af7ae625a3a99f814a1014c7aabeaee987ab83c6878c10e973e09e103801061530566a2fd9fd6d72eb6c27d47a44a135964ac634e0
+Size (wagtailmenus-4.0.5.tar.gz) = 116810 bytes
