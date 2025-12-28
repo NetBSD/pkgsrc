@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2023/11/12 13:23:20 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2025/12/28 14:24:06 adam Exp $
 
-DISTNAME=	reportlab-3.6.12
+DISTNAME=	reportlab-4.4.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/reportlab/}
 
@@ -11,16 +10,14 @@ HOMEPAGE=	https://www.reportlab.com/
 COMMENT=	Powerful PDF-generating toolkit for Python
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-pyphen-[0-9]*:../../textproc/py-pyphen
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.0.0:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-charset-normalizer-[0-9]*:../../converters/py-charset-normalizer
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+USE_LANGUAGES=	# none
 
-PYSETUPARGS+=	--no-download-t1-files
-PYSETUPARGS+=	--use-system-libart
+# The files should already be included in the distfile.
+WHEEL_ARGS+=	-C=--no-download-t1-files
 
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/libart/buildlink3.mk"
-.include "../../lang/python/batteries-included.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
