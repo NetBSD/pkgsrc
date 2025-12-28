@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.26 2014/10/09 14:05:59 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/12/28 08:29:15 wiz Exp $
 
 DISTNAME=	hint_unix_serial
 PKGNAME=	hint.serial-98.06.12
 CATEGORIES=	benchmarks
-MASTER_SITES=	http://hint.byu.edu/pub/HINT/source/tar/
+#MASTER_SITES=	http://hint.byu.edu/pub/HINT/source/tar/
 EXTRACT_SUFX=	.tar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://hint.byu.edu/
+#HOMEPAGE=	http://hint.byu.edu/
 COMMENT=	Scalable benchmark for testing CPU and memory performance
 
 BUILD_TARGET=	DOUBLE INT
