@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2025/10/27 15:46:56 adam Exp $
+# $NetBSD: Makefile,v 1.20 2025/12/28 15:13:53 adam Exp $
 
-DISTNAME=	kea-3.1.2
+DISTNAME=	kea-3.1.4
 COMMENT=	Next-generation ISC Dynamic Host Configuration Protocol (DHCP) Server
 
 .include "options.mk"
