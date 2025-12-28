@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2025/10/16 15:01:51 adam Exp $
+$NetBSD: distinfo,v 1.9 2025/12/28 22:40:03 adam Exp $
 
 BLAKE2s (lucene++-3.0.9.tar.gz) = 3dcc3352e3c0e1f13c093be12f982f6ef9107a9250884c22288fc568d7205f69
 SHA512 (lucene++-3.0.9.tar.gz) = 220fe1b46518018d176ae16434f03b1453fc345d8d552a294d1af927ea4ab69a83ee4b03c82938e648edaa3e7064526ca047fc86e1c71743b0958b520d59e225
@@ -6,11 +6,13 @@ Size (lucene++-3.0.9.tar.gz) = 2458287 bytes
 SHA1 (patch-CMakeLists.txt) = db25e72a4c4d5dc38b9c805b75bf7c4469f7029d
 SHA1 (patch-cmake_cotire.cmake) = a0a8416e54054ae9c4871ed987f8a2cb51848daa
 SHA1 (patch-cmake_dependencies.cmake) = 26275630ce9cd2766eb01be6fffc0673f12634c0
+SHA1 (patch-include_lucene++_BitSet.h) = 8a5a70fb94101b33477485473dc81a5d73f70d95
 SHA1 (patch-include_lucene++_Collection.h) = 1fbfbcc8128ed1379fcde791e60b94249dfdfbf2
 SHA1 (patch-include_lucene++_Set.h) = 5ef271985b1fe69515c515603b9386b161eb1c36
 SHA1 (patch-include_lucene++_ThreadPool.h) = f7038f90852b45ff4ffe9775cd2878150bb996a9
 SHA1 (patch-src_contrib_CMakeLists.txt) = 34ff1ed5c2b4c4b6a44c7f3a69029f1881c93747
 SHA1 (patch-src_core_CMakeLists.txt) = d06080834aaa77a8d14b5c5bcd094e3cdb6784b3
 SHA1 (patch-src_core_store_MMapDirectory.cpp) = b71a9f30cef213beb8f777f5bcbde721281e5f6c
+SHA1 (patch-src_core_util_BitSet.cpp) = 84b2db15dd3bc390a60ba6a431b722b4a8f5578d
 SHA1 (patch-src_core_util_FileUtils.cpp) = e77b05f575cdcc56d5e4b85fad8411b11b53be26
 SHA1 (patch-src_core_util_ThreadPool.cpp) = 6ce4b1f0333c420a83a69fe3f2d8e89acb51e3e2
