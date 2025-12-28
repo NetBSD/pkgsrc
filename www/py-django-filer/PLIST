@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/09/05 05:39:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/12/28 14:50:22 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -292,7 +292,6 @@ ${PYSITELIB}/filer/static/filer/css/admin_folderpermissions.css
 ${PYSITELIB}/filer/static/filer/css/maps/admin_filer.cms.icons.css.map
 ${PYSITELIB}/filer/static/filer/css/maps/admin_filer.css.map
 ${PYSITELIB}/filer/static/filer/css/maps/admin_filer.fa.icons.css.map
-${PYSITELIB}/filer/static/filer/css/maps/admin_filer.icons.css.map
 ${PYSITELIB}/filer/static/filer/fonts/FontAwesome.otf
 ${PYSITELIB}/filer/static/filer/fonts/django-filer-iconfont.eot
 ${PYSITELIB}/filer/static/filer/fonts/django-filer-iconfont.svg
@@ -352,13 +351,11 @@ ${PYSITELIB}/filer/static/filer/js/addons/tooltip.js
 ${PYSITELIB}/filer/static/filer/js/addons/upload-button.js
 ${PYSITELIB}/filer/static/filer/js/addons/widget.js
 ${PYSITELIB}/filer/static/filer/js/base.js
-${PYSITELIB}/filer/static/filer/js/libs/class.min.js
-${PYSITELIB}/filer/static/filer/js/libs/dropzone.min.js
-${PYSITELIB}/filer/static/filer/js/libs/fileuploader.min.js
-${PYSITELIB}/filer/static/filer/js/libs/jquery-ui.min.js
-${PYSITELIB}/filer/static/filer/js/libs/jquery.cookie.min.js
-${PYSITELIB}/filer/static/filer/js/libs/jquery.min.js
-${PYSITELIB}/filer/static/filer/js/libs/mediator.min.js
+${PYSITELIB}/filer/static/filer/js/dist/LICENSES.txt
+${PYSITELIB}/filer/static/filer/js/dist/admin-file-widget.bundle.js
+${PYSITELIB}/filer/static/filer/js/dist/filer-base.bundle.js
+${PYSITELIB}/filer/static/filer/js/widgets/admin-file-widget.js
+${PYSITELIB}/filer/static/filer/js/widgets/admin-folder-widget.js
 ${PYSITELIB}/filer/storage.py
 ${PYSITELIB}/filer/storage.pyc
 ${PYSITELIB}/filer/storage.pyo
