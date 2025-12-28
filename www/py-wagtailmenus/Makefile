@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/10/09 07:58:13 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/12/28 08:28:01 adam Exp $
 
-DISTNAME=	wagtailmenus-4.0.2
+DISTNAME=	wagtailmenus-4.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wagtailmenus/}
@@ -12,9 +12,9 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-django-cogwheels>=0.3:../../www/py-django-cogwheels
-DEPENDS+=	${PYPKGPREFIX}-wagtail>=5.2:../../www/py-wagtail
+DEPENDS+=	${PYPKGPREFIX}-wagtail>=6.3:../../www/py-wagtail
 TEST_DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.8:../../www/py-beautifulsoup4
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.5:../../devel/py-coverage
 #TEST_DEPENDS+=	${PYPKGPREFIX}-django-webtest>=1.9
 
 USE_LANGUAGES=	# none
