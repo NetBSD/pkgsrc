@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2025/11/03 11:59:57 adam Exp $
+# $NetBSD: Makefile,v 1.21 2025/12/28 08:21:22 adam Exp $
 
-DISTNAME=	jupyterlab-4.4.10
+DISTNAME=	jupyterlab-4.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyterlab/}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0.3:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-jupyter-lsp>=2.0.0:../../www/py-jupyter-lsp
 DEPENDS+=	${PYPKGPREFIX}-jupyter_core-[0-9]*:../../devel/py-jupyter_core
 DEPENDS+=	${PYPKGPREFIX}-jupyter_server>=2.4.0:../../www/py-jupyter_server
-DEPENDS+=	${PYPKGPREFIX}-jupyterlab-server>=2.27.1:../../www/py-jupyterlab-server
+DEPENDS+=	${PYPKGPREFIX}-jupyterlab-server>=2.28.0:../../www/py-jupyterlab-server
 DEPENDS+=	${PYPKGPREFIX}-notebook_shim>=0.2:../../www/py-notebook_shim
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=41.1.0:../../devel/py-setuptools
