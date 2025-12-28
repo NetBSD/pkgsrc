@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2025/06/01 21:28:06 thor Exp $
+# $NetBSD: Makefile,v 1.25 2025/12/28 10:06:59 adam Exp $
 
-DISTNAME=	tevent-0.16.2
+DISTNAME=	tevent-0.17.1
 CATEGORIES=	devel
 MASTER_SITES=	https://www.samba.org/ftp/tevent/
 
@@ -44,4 +44,5 @@ BUILDLINK_API_DEPENDS.talloc+=	talloc>=2.4.0
 .include "../../devel/talloc/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
