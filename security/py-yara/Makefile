@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.17 2025/07/16 10:27:19 adam Exp $
+# $NetBSD: Makefile,v 1.18 2025/12/28 08:15:02 adam Exp $
 
 .include "../../security/yara/Makefile.common"
 
-DISTNAME=	yara_python-${YARA_VERSION}
-PKGNAME=	${PYPKGPREFIX}-yara-${YARA_VERSION}
+DISTNAME=	yara_python-4.5.4
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_python//}
 CATEGORIES=	security python
 GITHUB_PROJECT=	yara-python
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 COMMENT=	Yara Python bindings
 LICENSE=	apache-2.0
