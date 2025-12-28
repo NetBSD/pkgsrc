@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7454 2025/12/28 08:28:20 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7455 2025/12/28 08:58:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11005,3 +11005,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-jupyterlab to 4.5.1 [adam 2025-12-28]
 	Updated www/py-wagtail to 7.2.1 [adam 2025-12-28]
 	Updated www/py-wagtailmenus to 4.0.5 [adam 2025-12-28]
+	Updated math/py-ephem to 4.2 [adam 2025-12-28]
+	Updated security/py-krb5 to 0.9.0 [adam 2025-12-28]
