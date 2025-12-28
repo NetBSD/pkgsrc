@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.22 2025/02/06 14:31:55 adam Exp $
+$NetBSD: distinfo,v 1.23 2025/12/28 10:06:59 adam Exp $
 
-BLAKE2s (tevent-0.16.2.tar.gz) = 0e945ae45ae58b4e1dc8a5fbe2b6b0be1fac149c5a5e6759bc4502244b17cdba
-SHA512 (tevent-0.16.2.tar.gz) = c644771227fd1ee9f221e8cac1be9db97043953670a29415a20f3f8933d4fa93c7421b991a4ecaac0b9b29e922d1ec2f436160f2d2eaf77c6d392f1dec212417
-Size (tevent-0.16.2.tar.gz) = 897447 bytes
+BLAKE2s (tevent-0.17.1.tar.gz) = 32787830d7a01b199fff3aa455143cc54821516c39c0bbed57d872c842bc12a2
+SHA512 (tevent-0.17.1.tar.gz) = 781f8aced9ad135e64ce3953a013434feb84a6945ccfbce58a6ff21cb3da48af1e32324a5a950a55256a02545c2e1808a4cd8b209a3f970375347c8b390df258
+Size (tevent-0.17.1.tar.gz) = 902444 bytes
 SHA1 (patch-buildtools_wafsamba_samba__conftests.py) = 50ff76f5b085f770751ca8bb93c8544cfdcd40d9
 SHA1 (patch-buildtools_wafsamba_samba__install.py) = d801340617da325e3bb70a90350e45cc8e383c2d
 SHA1 (patch-buildtools_wafsamba_samba__utils.py) = 0a587421870c1974175fadbb02dde215f35938f2
+SHA1 (patch-third__party_waf_waflib_Tools_python.py) = 3972a15c4b9e48577579fa84b390ba28b3634640
 SHA1 (patch-wscript) = 5ef57da7398e66f02abb4f8897447c937de3d8e3
