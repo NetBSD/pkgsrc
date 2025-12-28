@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2025/05/11 10:18:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/12/28 02:25:17 fox Exp $
 bin/btop
 man/man1/btop.1
 share/applications/btop.desktop
-share/btop/README.md
 share/btop/themes/HotPurpleTrafficLight.theme
 share/btop/themes/adapta.theme
 share/btop/themes/adwaita-dark.theme
@@ -16,6 +15,7 @@ share/btop/themes/everforest-dark-medium.theme
 share/btop/themes/everforest-light-medium.theme
 share/btop/themes/flat-remix-light.theme
 share/btop/themes/flat-remix.theme
+share/btop/themes/gotham.theme
 share/btop/themes/greyscale.theme
 share/btop/themes/gruvbox_dark.theme
 share/btop/themes/gruvbox_dark_v2.theme
@@ -38,5 +38,6 @@ share/btop/themes/tokyo-night.theme
 share/btop/themes/tokyo-storm.theme
 share/btop/themes/tomorrow-night.theme
 share/btop/themes/whiteout.theme
+share/doc/btop/README.md
 share/icons/hicolor/48x48/apps/btop.png
 share/icons/hicolor/scalable/apps/btop.svg
