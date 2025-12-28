@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/12/27 08:24:29 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/12/28 08:16:09 adam Exp $
 
-DISTNAME=	tracerite-2.2.0
+DISTNAME=	tracerite-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tracerite/}
