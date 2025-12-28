@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.278 2025/12/23 05:59:20 pin Exp $
+$NetBSD: distinfo,v 1.279 2025/12/28 16:10:23 pin Exp $
 
 BLAKE2s (dario.cat_mergo_@v_v1.0.2.mod) = 7b465f298a2de57c12f0f78180f97e8de899412ad8639d2d72653c98d550d78f
 SHA512 (dario.cat_mergo_@v_v1.0.2.mod) = 7ce66ba65c020143c4a7d000bbe82ad40dcef6602b462cbe81a4cb79bb948decae6e3dee7dfc7f580f09573efe37e1380d8e14a0e8c37b1dc2d32d0b8c1adbb6
@@ -222,12 +222,12 @@ Size (github.com_gookit_color_@v_v1.6.0.mod) = 171 bytes
 BLAKE2s (github.com_gookit_color_@v_v1.6.0.zip) = 5d200a6218d09bc19bbb3a3f95bbed180b93c5cf39fef2fa8d8b9cfe08becf88
 SHA512 (github.com_gookit_color_@v_v1.6.0.zip) = bb789126c91c95914cce278f5d36e24d1c37a1b298ab024b08dd704eeef7819154d2f1060f7c48165ce715f41275ad79ac9f74edf679996e23a0ecc8f08325fc
 Size (github.com_gookit_color_@v_v1.6.0.zip) = 78068 bytes
-BLAKE2s (github.com_gookit_goutil_@v_v0.7.2.mod) = 226419ea05049b28d99fdad71c637f94c2bc73fcbbe92c477e0d2ab0bbc36507
-SHA512 (github.com_gookit_goutil_@v_v0.7.2.mod) = 88ffaaf76eeb11c53d89fd6a1e79be9f32b233153b110281a9915b70cfb56587a5f02b0492efbe7b79fd59a8860d642f81bf13d7b07142182b0d328e4ba30b65
-Size (github.com_gookit_goutil_@v_v0.7.2.mod) = 161 bytes
-BLAKE2s (github.com_gookit_goutil_@v_v0.7.2.zip) = 965f10fb5fcd26dace827cf697d43ff147e477da9104eb931e921ebf63513937
-SHA512 (github.com_gookit_goutil_@v_v0.7.2.zip) = a0fcfe484e52aaef6a243b482a12db37539d8b334cb7b0911b6926a2bae123abef7d571ecb6e06939ae69c49974ccf60cac4aea1ae18903e413649186cbcb61d
-Size (github.com_gookit_goutil_@v_v0.7.2.zip) = 831589 bytes
+BLAKE2s (github.com_gookit_goutil_@v_v0.7.3.mod) = 226419ea05049b28d99fdad71c637f94c2bc73fcbbe92c477e0d2ab0bbc36507
+SHA512 (github.com_gookit_goutil_@v_v0.7.3.mod) = 88ffaaf76eeb11c53d89fd6a1e79be9f32b233153b110281a9915b70cfb56587a5f02b0492efbe7b79fd59a8860d642f81bf13d7b07142182b0d328e4ba30b65
+Size (github.com_gookit_goutil_@v_v0.7.3.mod) = 161 bytes
+BLAKE2s (github.com_gookit_goutil_@v_v0.7.3.zip) = 36ec3ef7b2e97106f1941212aa8ce0158848a387891589edb4afd2e5edd3702a
+SHA512 (github.com_gookit_goutil_@v_v0.7.3.zip) = 4ea226500b3b89917dfbba46f89b050f9bce26f6dd83a3fb146cf77a62502615c33b59aa08892610db66df3af62da7dd5a843c30610d5047ed9ee5d1f4e1a854
+Size (github.com_gookit_goutil_@v_v0.7.3.zip) = 837958 bytes
 BLAKE2s (github.com_hashicorp_hcl_v2_@v_v2.24.0.mod) = b7e5731dc1b713687d8962da60c857621785cc5ff6ff48e8d88893689e1e4d50
 SHA512 (github.com_hashicorp_hcl_v2_@v_v2.24.0.mod) = 3d84ef0c0ac8d78994425943bb6c45e99c12debffb4a2712678f02f3fbc964cf60931e2000c11e78541b48cc5350cfc6eff42344f7ddba8e4e6ac20ca0981d85
 Size (github.com_hashicorp_hcl_v2_@v_v2.24.0.mod) = 714 bytes
@@ -585,9 +585,9 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (oh-my-posh-28.5.0.tar.gz) = 4909649e1bd2f27caeb59f65bcda08787b3120f1088df553a456e067f0570ce6
-SHA512 (oh-my-posh-28.5.0.tar.gz) = 8a010a2647de4d11a4dc2f10317537cff9766971c1c42b9b01883dfd441674d3d21d21a62c07d0947189b5db15e33e4c1d1ee0e4fc3a35b716fba424f526ec42
-Size (oh-my-posh-28.5.0.tar.gz) = 6817226 bytes
+BLAKE2s (oh-my-posh-28.7.0.tar.gz) = 7347ed6a68f88b34f118dc5cbe32825e28be9981223dd7338f4d40e579d21683
+SHA512 (oh-my-posh-28.7.0.tar.gz) = 1644ac4aad6ffa9c53638b5fc18fe34d127c6ec814485d265fac558abc07266f74db8abfa514f15dc4f90e56e9bd966fa7d797a90ade65db19d131fa2767c992
+Size (oh-my-posh-28.7.0.tar.gz) = 6823703 bytes
 SHA1 (patch-go.mod) = f02ebe53cae01005f81d0e9abfe06cf756bac9b2
 SHA1 (patch-runtime_battery_battery__solaris.go) = 9e8f8fa10006cadfc7fb9d2b95e7a85bc271315a
 SHA1 (patch-runtime_battery_battery__windows__nix.go) = 8e8863cf8c925a1e409b135e5abf113640f0e708
