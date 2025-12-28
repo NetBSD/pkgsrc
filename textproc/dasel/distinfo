@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2025/12/21 14:41:57 wiz Exp $
+$NetBSD: distinfo,v 1.3 2025/12/28 21:26:02 wiz Exp $
 
-BLAKE2s (dasel-3.1.4.tar.gz) = b293e36b08286d514c29ad0cebdcf3c62f04f6ed55023d398ad74011771b6be8
-SHA512 (dasel-3.1.4.tar.gz) = b807fbe0d458dbf43179f49330564cd094ebc9b0fe6f8695306d2d612909d96ed2c0d30fe61bf2c76e4214d1ce079188676f5c05ad88268b3314b1faf497cb76
-Size (dasel-3.1.4.tar.gz) = 1753632 bytes
+BLAKE2s (dasel-3.2.0.tar.gz) = b0109e6021390f64e04527c5a1e45ab4639bf163f1d748321e2386ea914b43e8
+SHA512 (dasel-3.2.0.tar.gz) = 47e9874aff79798f1d4eb5bf84498b7768f5b42e42503e66f04156c25f2a84158715c6de21e2540ad857a4c20e56f6834424ae3467e2f03114fa99eef0272a63
+Size (dasel-3.2.0.tar.gz) = 3107838 bytes
 BLAKE2s (github.com_agext_levenshtein_@v_v1.2.1.mod) = c9ffb48293dfe0abeca1b0ec1a4cb6d32ea841d9300ef233e40db5a1acef022d
 SHA512 (github.com_agext_levenshtein_@v_v1.2.1.mod) = b84b0edbabf81d86e47e159c035e900dfb0a2d640ef0f3eb6cd7c1934a301ef146492fee7742295ee0942f1cd41c175dd059d269b10780d5f11c18e405cce605
 Size (github.com_agext_levenshtein_@v_v1.2.1.mod) = 36 bytes
