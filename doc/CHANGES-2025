@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7460 2025/12/28 14:29:17 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7461 2025/12/28 14:47:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11016,3 +11016,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added print/py-rlpycairo version 0.4.0 [adam 2025-12-28]
 	Updated print/py-reportlab to 4.4.7 [adam 2025-12-28]
 	Added graphics/py-svglib version 1.6.0 [adam 2025-12-28]
+	Updated textproc/py-rst2pdf to 0.103.1 [adam 2025-12-28]
+	Updated audio/py-mediafile to 0.14.0 [adam 2025-12-28]
