@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7452 2025/12/28 08:06:11 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7453 2025/12/28 08:21:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11000,3 +11000,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Added cad/nvc version 1.18.2 [ryoon 2025-12-28]
 	Updated fonts/harfbuzz to 12.3.0 [adam 2025-12-28]
 	Updated fonts/harfbuzz-icu to 12.3.0 [adam 2025-12-28]
+	Updated security/yara to 4.5.5 [adam 2025-12-28]
+	Updated devel/py-tracerite to 2.2.1 [adam 2025-12-28]
+	Updated www/py-jupyterlab to 4.5.1 [adam 2025-12-28]
