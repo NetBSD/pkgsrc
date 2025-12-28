@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.4 2025/12/28 05:16:50 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.5 2025/12/28 07:30:17 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis. See
 # ./files/BOOTSTRAP.md for details.
@@ -242,6 +242,7 @@ BOOT_GHC_VERSION!=	(${BOOT_GHC_VERSION_CMD}) 2>/dev/null || ${ECHO}
 HADRIAN_BOOT_SOURCE:=	${HADRIAN_BOOT_SOURCE:S/${BOOT_VERSION}/${BOOT_GHC_VERSION}/}
 
 # Needed because of our patch to Rules.BinaryDist
+ALL_ENV+=		BUILDING_BOOTKIT=YES
 ALL_ENV+=		SYSTEM_DEFAULT_RPATH=${SYSTEM_DEFAULT_RPATH:Q}
 
 # On ELF platforms we use readelf and patchelf to embed relative rpaths
