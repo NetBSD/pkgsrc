@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2025/10/15 23:22:28 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/12/28 02:25:17 fox Exp $
 
-DISTNAME=	btop-1.4.5
-PKGREVISION=	2
+DISTNAME=	btop-1.4.6
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aristocratos/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,6 +9,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/aristocratos/btop
 COMMENT=	Colorful TTY resource monitor
 LICENSE=	apache-2.0
+
+# gcc 10 support was removed from the code base.
+# https://github.com/aristocratos/btop/pull/1106
+GCC_REQD+=	14
 
 TOOL_DEPENDS+=	lowdown-[0-9]*:../../textproc/lowdown
 
@@ -30,6 +33,10 @@ SUBST_FILES.themes+=	src/btop_menu.cpp
 SUBST_FILES.themes+=	src/btop.cpp
 SUBST_STAGE.themes=	pre-configure
 SUBST_MESSAGE.themes=	Fixing hardcoded paths to themes.
+
+post-extract:
+	# Fix permission issues.
+	${CHMOD} -R go-w ${WRKSRC}
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/atomic64.mk"
