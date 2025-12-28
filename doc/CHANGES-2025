@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7453 2025/12/28 08:21:46 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7454 2025/12/28 08:28:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11003,3 +11003,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/yara to 4.5.5 [adam 2025-12-28]
 	Updated devel/py-tracerite to 2.2.1 [adam 2025-12-28]
 	Updated www/py-jupyterlab to 4.5.1 [adam 2025-12-28]
+	Updated www/py-wagtail to 7.2.1 [adam 2025-12-28]
+	Updated www/py-wagtailmenus to 4.0.5 [adam 2025-12-28]
