@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.208 2025/10/23 20:38:54 wiz Exp $
+# $NetBSD: Makefile,v 1.209 2025/12/28 10:07:56 adam Exp $
 
-DISTNAME=	samba-4.21.9
-PKGREVISION=	1
+# XXX: Fails to build when mit-krb5 is installed.
+DISTNAME=	samba-4.23.4
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
@@ -222,6 +222,7 @@ BUILDLINK_API_DEPENDS.talloc+=	talloc>=2.4.0
 .include "../../lang/python/application.mk"
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/tool.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
