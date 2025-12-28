@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/22 15:30:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/12/28 08:28:01 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -31,9 +31,6 @@ ${PYSITELIB}/wagtailmenus/conf/tests/test_menuadmin_disable_settings.pyo
 ${PYSITELIB}/wagtailmenus/context_processors.py
 ${PYSITELIB}/wagtailmenus/context_processors.pyc
 ${PYSITELIB}/wagtailmenus/context_processors.pyo
-${PYSITELIB}/wagtailmenus/copyable_snippetviewset.py
-${PYSITELIB}/wagtailmenus/copyable_snippetviewset.pyc
-${PYSITELIB}/wagtailmenus/copyable_snippetviewset.pyo
 ${PYSITELIB}/wagtailmenus/errors.py
 ${PYSITELIB}/wagtailmenus/errors.pyc
 ${PYSITELIB}/wagtailmenus/errors.pyo
@@ -196,8 +193,6 @@ ${PYSITELIB}/wagtailmenus/templates/wagtailmenus/flatmenu_index.html
 ${PYSITELIB}/wagtailmenus/templates/wagtailmenus/includes/header.html
 ${PYSITELIB}/wagtailmenus/templates/wagtailmenus/includes/header_with_site_switcher.html
 ${PYSITELIB}/wagtailmenus/templates/wagtailmenus/mainmenu_edit.html
-${PYSITELIB}/wagtailmenus/templates/wagtailmenus/wagtail_before_63/includes/header_with_site_switcher.html
-${PYSITELIB}/wagtailmenus/templates/wagtailmenus/wagtail_before_63/mainmenu_edit.html
 ${PYSITELIB}/wagtailmenus/templates/wagtailsnippets/snippets/copy.html
 ${PYSITELIB}/wagtailmenus/templatetags/__init__.py
 ${PYSITELIB}/wagtailmenus/templatetags/__init__.pyc
