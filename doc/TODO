@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26587 2025/12/28 10:10:47 adam Exp $
+$NetBSD: TODO,v 1.26588 2025/12/28 11:13:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -390,6 +390,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o MesaLib-25.2.7 [wip]
 	o MesaLib-25.3.1
 	o OdfConverter-4.0
+	o OpenJPH-0.26.0
 	o PACK-0.0.4
 	o PageEdit-2.7.0
 	o QuantLib-1.22
@@ -550,6 +551,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cyrus-imapd-3.4.3
 	o dap-3.10
 	o darktable-5.4
+	o dasel-3.2.0
 	o dcc-2.3.167
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
@@ -719,6 +721,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gperiodic-3.0.3
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
+	o gpsd-3.27.2
 	o grafana-11.1.0 [wip]
 	o grafana-12.3.1
 	o grafx2-2.8.3137
@@ -754,6 +757,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o heyu-2.9.0
 	o hivex-1.3.19
 	o hmmer-3.1b2
+	o homebank-5.9.7
 	o honggfuzz-2.5
 	o horde-5.2.9
 	o howm-1.4.7
@@ -833,6 +837,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o latexmk-486
 	o lbdb-49
 	o lcc-4.2
+	o lcov-2.4
 	o ldapsdk-6.0.7
 	o lgeneral-1.3.1
 	o libadwaita-1.8
@@ -872,7 +877,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libtrace-4.0.16
 	o libvirt-11.0
 	o libxdg-basedir-1.2.3
-	o lima-2.0.2
+	o lima-2.0.3
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
