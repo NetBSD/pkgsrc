@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/18 11:28:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/12/28 10:27:08 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -229,6 +229,12 @@ ${PYSITELIB}/mautrix/crypto/attachments/attachments_test.pyo
 ${PYSITELIB}/mautrix/crypto/base.py
 ${PYSITELIB}/mautrix/crypto/base.pyc
 ${PYSITELIB}/mautrix/crypto/base.pyo
+${PYSITELIB}/mautrix/crypto/cross_signing.py
+${PYSITELIB}/mautrix/crypto/cross_signing.pyc
+${PYSITELIB}/mautrix/crypto/cross_signing.pyo
+${PYSITELIB}/mautrix/crypto/cross_signing_key.py
+${PYSITELIB}/mautrix/crypto/cross_signing_key.pyc
+${PYSITELIB}/mautrix/crypto/cross_signing_key.pyo
 ${PYSITELIB}/mautrix/crypto/decrypt_megolm.py
 ${PYSITELIB}/mautrix/crypto/decrypt_megolm.pyc
 ${PYSITELIB}/mautrix/crypto/decrypt_megolm.pyo
@@ -256,6 +262,30 @@ ${PYSITELIB}/mautrix/crypto/machine.pyo
 ${PYSITELIB}/mautrix/crypto/sessions.py
 ${PYSITELIB}/mautrix/crypto/sessions.pyc
 ${PYSITELIB}/mautrix/crypto/sessions.pyo
+${PYSITELIB}/mautrix/crypto/signature.py
+${PYSITELIB}/mautrix/crypto/signature.pyc
+${PYSITELIB}/mautrix/crypto/signature.pyo
+${PYSITELIB}/mautrix/crypto/signature_test.py
+${PYSITELIB}/mautrix/crypto/signature_test.pyc
+${PYSITELIB}/mautrix/crypto/signature_test.pyo
+${PYSITELIB}/mautrix/crypto/ssss/__init__.py
+${PYSITELIB}/mautrix/crypto/ssss/__init__.pyc
+${PYSITELIB}/mautrix/crypto/ssss/__init__.pyo
+${PYSITELIB}/mautrix/crypto/ssss/key.py
+${PYSITELIB}/mautrix/crypto/ssss/key.pyc
+${PYSITELIB}/mautrix/crypto/ssss/key.pyo
+${PYSITELIB}/mautrix/crypto/ssss/key_test.py
+${PYSITELIB}/mautrix/crypto/ssss/key_test.pyc
+${PYSITELIB}/mautrix/crypto/ssss/key_test.pyo
+${PYSITELIB}/mautrix/crypto/ssss/machine.py
+${PYSITELIB}/mautrix/crypto/ssss/machine.pyc
+${PYSITELIB}/mautrix/crypto/ssss/machine.pyo
+${PYSITELIB}/mautrix/crypto/ssss/types.py
+${PYSITELIB}/mautrix/crypto/ssss/types.pyc
+${PYSITELIB}/mautrix/crypto/ssss/types.pyo
+${PYSITELIB}/mautrix/crypto/ssss/util.py
+${PYSITELIB}/mautrix/crypto/ssss/util.pyc
+${PYSITELIB}/mautrix/crypto/ssss/util.pyo
 ${PYSITELIB}/mautrix/crypto/store/__init__.py
 ${PYSITELIB}/mautrix/crypto/store/__init__.pyc
 ${PYSITELIB}/mautrix/crypto/store/__init__.pyo
@@ -425,6 +455,7 @@ ${PYSITELIB}/mautrix/util/async_db/asyncpg.pyc
 ${PYSITELIB}/mautrix/util/async_db/asyncpg.pyo
 ${PYSITELIB}/mautrix/util/async_db/connection.py
 ${PYSITELIB}/mautrix/util/async_db/connection.pyc
+${PYSITELIB}/mautrix/util/async_db/connection.pyi
 ${PYSITELIB}/mautrix/util/async_db/connection.pyo
 ${PYSITELIB}/mautrix/util/async_db/database.py
 ${PYSITELIB}/mautrix/util/async_db/database.pyc
