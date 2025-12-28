@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2025/10/09 07:58:02 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/12/28 14:44:20 adam Exp $
 
-DISTNAME=	rst2pdf-0.102
+DISTNAME=	rst2pdf-0.103.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rst2pdf/}
 
@@ -12,17 +11,18 @@ COMMENT=	Convert restructured text to PDF via reportlab
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
-DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
-DEPENDS+=	${PYPKGPREFIX}-reportlab-[0-9]*:../../print/py-reportlab
-DEPENDS+=	${PYPKGPREFIX}-smartypants-[0-9]*:../../textproc/py-smartypants
-DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
-# TODO:
-#TEST_DEPENDS+=	${PYPKGPREFIX}-mupdf-[0-9]*:../../print/py-mupdf
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8:../../devel/py-setuptools_scm
+DEPENDS+=	${PYPKGPREFIX}-docutils>=0.21.2:../../textproc/py-docutils
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=8.0:../../devel/py-importlib-metadata
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-packaging>=24.0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-pygments>=2.0:../../textproc/py-pygments
+DEPENDS+=	${PYPKGPREFIX}-reportlab>=4.0:../../print/py-reportlab
+DEPENDS+=	${PYPKGPREFIX}-smartypants>=2.0:../../textproc/py-smartypants
+DEPENDS+=	${PYPKGPREFIX}-yaml>=6.0:../../textproc/py-yaml
+# not mentioned by needed: https://github.com/rst2pdf/rst2pdf/issues/1283
+DEPENDS+=	${PYPKGPREFIX}-roman>0:../../math/py-roman
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.0:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
