@@ -1,4 +1,4 @@
-$NetBSD: patch-hadrian_src_Rules_BinaryDist.hs,v 1.2 2025/12/28 05:16:51 pho Exp $
+$NetBSD: patch-hadrian_src_Rules_BinaryDist.hs,v 1.3 2025/12/28 07:30:17 pho Exp $
 
 Hunk #1, #2, #4:
     Distinguish bootstrapping bindists from regular ones. This is
@@ -56,7 +56,7 @@ Hunk #0, #6:
              rtsIncludeDir    = ghcBuildDir -/- "lib" -/- distDir -/- rtsDir
                                 -/- "include"
  
-@@ -232,16 +237,7 @@ bindistRules = do
+@@ -232,16 +237,9 @@ bindistRules = do
          copyDirectory (rtsIncludeDir)         bindistFilesDir
          when windowsHost $ createGhcii (bindistFilesDir -/- "bin")
  
@@ -70,11 +70,13 @@ Hunk #0, #6:
 -        cmd_ (bindistFilesDir -/- "bin" -/- ghcPkgName) ["recache"]
 -
 -
-+        bundleVendorLibs bindistFilesDir
++        bootkitRequested <- liftIO $ IO.lookupEnv "BUILDING_BOOTKIT"
++        when (isJust bootkitRequested) $
++          bundleVendorLibs bindistFilesDir
  
          -- TODO: we should only embed the docs that have been generated
          -- depending on the current settings (flavours' "ghcDocs" field and
-@@ -319,7 +315,7 @@ bindistRules = do
+@@ -319,7 +317,7 @@ bindistRules = do
              version        <- setting ProjectVersion
              targetPlatform <- setting TargetPlatformFull
  
@@ -83,7 +85,7 @@ Hunk #0, #6:
  
              -- Finally, we create the archive <root>/bindist/ghc-X.Y.Z-platform.tar.xz
              tarPath <- builderPath (Tar Create)
-@@ -388,7 +384,7 @@ generateBuildMk = do
+@@ -388,7 +386,7 @@ generateBuildMk = do
  -- | Flag to pass to tar to use the given 'Compressor'.
  compressorTarFlag :: Compressor -> String
  compressorTarFlag Gzip  = "--gzip"
@@ -92,7 +94,7 @@ Hunk #0, #6:
  compressorTarFlag Bzip2 = "--bzip"
  
  -- | File extension to use for archives compressed with the given 'Compressor'.
-@@ -556,3 +552,248 @@ createGhcii outDir = do
+@@ -556,3 +554,248 @@ createGhcii outDir = do
        , "exec \"$(dirname \"$0\")\"/ghc --interactive \"$@\""
        ]
  
