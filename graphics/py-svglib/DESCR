@@ -1,0 +1,2 @@
+Svglib is a Python library for reading SVG files and converting them (to a
+reasonable degree) to other formats using the ReportLab Open Source toolkit.
