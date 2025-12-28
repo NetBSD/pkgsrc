@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2025/12/28 14:28:55 adam Exp $
+bin/svg2pdf-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
+${PYSITELIB}/svglib/__init__.py
+${PYSITELIB}/svglib/__init__.pyc
+${PYSITELIB}/svglib/__init__.pyo
+${PYSITELIB}/svglib/fonts.py
+${PYSITELIB}/svglib/fonts.pyc
+${PYSITELIB}/svglib/fonts.pyo
+${PYSITELIB}/svglib/py.typed
+${PYSITELIB}/svglib/svglib.py
+${PYSITELIB}/svglib/svglib.pyc
+${PYSITELIB}/svglib/svglib.pyo
+${PYSITELIB}/svglib/utils.py
+${PYSITELIB}/svglib/utils.pyc
+${PYSITELIB}/svglib/utils.pyo
