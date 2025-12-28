@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/08/14 11:38:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/12/28 21:28:48 wiz Exp $
 bin/gendesc
 bin/genhtml
 bin/geninfo
@@ -35,5 +35,6 @@ share/lcov/support-scripts/p4annotate
 share/lcov/support-scripts/p4annotate.pm
 share/lcov/support-scripts/p4udiff
 share/lcov/support-scripts/select.pm
+share/lcov/support-scripts/simplify.pm
 share/lcov/support-scripts/spreadsheet.py
 share/lcov/support-scripts/threshold.pm
