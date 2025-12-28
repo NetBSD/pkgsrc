@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/10/12 21:52:02 bacon Exp $
+# $NetBSD: Makefile,v 1.6 2025/12/28 08:22:59 wiz Exp $
 
 DISTNAME=	harminv-1.3.1
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://ab-initio.mit.edu/harminv/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ab-initio.mit.edu/wiki/index.php/Harminv
+HOMEPAGE=	https://github.com/NanoComp/harminv/blob/master/README.md
 COMMENT=	Solver of harmonic inversion
 LICENSE=	gnu-gpl-v2
 
