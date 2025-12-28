@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2025/12/28 14:20:03 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/rlPyCairo/__init__.py
+${PYSITELIB}/rlPyCairo/__init__.pyc
+${PYSITELIB}/rlPyCairo/__init__.pyo
+${PYSITELIB}/rlPyCairo/gstate.py
+${PYSITELIB}/rlPyCairo/gstate.pyc
+${PYSITELIB}/rlPyCairo/gstate.pyo
+${PYSITELIB}/rlPyCairo/pil2pict.py
+${PYSITELIB}/rlPyCairo/pil2pict.pyc
+${PYSITELIB}/rlPyCairo/pil2pict.pyo

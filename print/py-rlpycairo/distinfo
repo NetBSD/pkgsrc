@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/12/28 14:20:03 adam Exp $
+
+BLAKE2s (rlpycairo-0.4.0.tar.gz) = 79adec6949590449b13e87678aeb7e3b3cd8ab4627cd30ea6e79b27759c48066
+SHA512 (rlpycairo-0.4.0.tar.gz) = e239221b8c8cad9f3a5942c18ad426009a6d1d76e344dcc15f735357458b93c180b4d9c0975a1a905bca5fce0ae187d29f7a17d830606d25652b3db5ef8278f7
+Size (rlpycairo-0.4.0.tar.gz) = 7692 bytes
