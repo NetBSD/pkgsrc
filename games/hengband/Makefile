@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/11/17 11:00:49 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/12/28 08:26:55 wiz Exp $
 
 DISTNAME=	hengband-2.2.1r
 PKGREVISION=	3
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_OSDN:=hengband/72520/}
 EXTRACT_DIR=	${WRKSRC}
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	https://hengband.sourceforge.jp/en/index.html
+#HOMEPAGE=	https://hengband.sourceforge.jp/en/index.html
 COMMENT=	Rogue-like game derived from Zangband
 LICENSE=	gnu-gpl-v2
 
