@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2017/08/16 20:21:09 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.15 2025/12/28 08:25:47 wiz Exp $
 
 DISTNAME=		heme-0.4.2
 PKGREVISION=		3
 CATEGORIES=		editors
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=heme/}
+#MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=heme/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://sourceforge.net/projects/heme/
+#HOMEPAGE=		https://sourceforge.net/projects/heme/
 COMMENT=		Fast and portable console hex editor
 LICENSE=		gnu-gpl-v2
 
