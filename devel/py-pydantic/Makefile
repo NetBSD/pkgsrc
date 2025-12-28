@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2025/12/28 15:39:43 gdt Exp $
+# $NetBSD: Makefile,v 1.38 2025/12/28 15:52:39 gdt Exp $
 
 # NB: pydantic expresses an exact dependency on pydantic-core.  While
 # unfortunate, it is actually true, and pydantic with non-matching
@@ -17,7 +17,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=22.5.0:../../devel/py-hatch-fancy-pypi-readme
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-annotated-types>=0.6.0:../../lang/py-annotated-types
-DEPENDS+=	${PYPKGPREFIX}-pydantic-core>=2.41.5:../../devel/py-pydantic-core
+DEPENDS+=	${PYPKGPREFIX}-pydantic-core-2.41.5:../../devel/py-pydantic-core
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.14.1:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-typing-inspection>=0.4.2:../../devel/py-typing-inspection
 TEST_DEPENDS+=	${PYPKGPREFIX}-cloudpickle-[0-9]*:../../converters/py-cloudpickle
