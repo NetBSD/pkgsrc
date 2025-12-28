@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2025/12/28 15:52:39 gdt Exp $
+# $NetBSD: Makefile,v 1.39 2025/12/28 16:07:06 gdt Exp $
 
 # NB: pydantic expresses an exact dependency on pydantic-core.  While
 # unfortunate, it is actually true, and pydantic with non-matching
@@ -16,10 +16,14 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=22.5.0:../../devel/py-hatch-fancy-pypi-readme
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+
 DEPENDS+=	${PYPKGPREFIX}-annotated-types>=0.6.0:../../lang/py-annotated-types
-DEPENDS+=	${PYPKGPREFIX}-pydantic-core-2.41.5:../../devel/py-pydantic-core
+# We must express the exact dependency from pyproject.toml with
+# respect to upstream's version, but allow for possible nbN versions.
+DEPENDS+=	${PYPKGPREFIX}-pydantic-core>=2.41.5<2.41.6:../../devel/py-pydantic-core
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.14.1:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-typing-inspection>=0.4.2:../../devel/py-typing-inspection
+
 TEST_DEPENDS+=	${PYPKGPREFIX}-cloudpickle-[0-9]*:../../converters/py-cloudpickle
 TEST_DEPENDS+=	${PYPKGPREFIX}-dirty-equals-[0-9]*:../../devel/py-dirty-equals
 TEST_DEPENDS+=	${PYPKGPREFIX}-email_validator>=2.0.0:../../mail/py-email_validator
