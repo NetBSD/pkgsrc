@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.54 2025/10/23 20:36:55 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2025/12/28 08:30:24 wiz Exp $
 
 DISTNAME=	homebank-5.5.5
 PKGREVISION=	25
 CATEGORIES=	finance
-MASTER_SITES=	http://homebank.free.fr/public/
+MASTER_SITES=	https://www.gethomebank.org/public/sources/
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://homebank.free.fr/
+HOMEPAGE=	https://www.gethomebank.org/en/index.php
 COMMENT=	HomeBank is to manage your personal accounts at home
 LICENSE=	gnu-gpl-v2
 
