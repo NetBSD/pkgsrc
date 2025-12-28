@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2025/12/28 05:42:54 ryoon Exp $
+
+BLAKE2s (nvc-1.18.2.tar.gz) = 6ac11d29eceb288531f356351a7cf32d07f2bd661f67cc77f7e63cc00fd967e0
+SHA512 (nvc-1.18.2.tar.gz) = 107f757114c5e8a97c553af91b5778367419ef6aae1be74a5b782491a60baca37bf1a5ad8342383c856c7a29da2f1d6e93581b50ef30d0b4ffb1a3fc211a091b
+Size (nvc-1.18.2.tar.gz) = 2601236 bytes
+SHA1 (patch-src_lib.c) = 787bb41f45a32b2f0f329fd9a32c702db755c005
+SHA1 (patch-thirdparty_cpustate.c) = f4ae833e8b2c1b3909c84b16673ff0fb5f089e6d
