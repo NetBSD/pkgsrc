@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2025/07/27 09:04:35 wiz Exp $
+$NetBSD: distinfo,v 1.2 2025/12/28 21:22:50 wiz Exp $
 
 BLAKE2s (sphinx_argparse-0.5.2.tar.gz) = 66be57831ec4c0ebc4f177a5ca1aec746aceda975fa55aaeca96dee812f52bb5
 SHA512 (sphinx_argparse-0.5.2.tar.gz) = d200099392f7ab657f98b98bf0a02992baa5e2762805f4b066cc971a8181fb53ea20c522fbc1927e7be73cb69725c31a0aa9433b59a1deea0d1a805321fa77dd
 Size (sphinx_argparse-0.5.2.tar.gz) = 27838 bytes
+SHA1 (patch-sphinxarg_ext.py) = b935bedaeb9a77fcaa77683084e688c1817d6eb5
