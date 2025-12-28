@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2025/10/09 07:58:13 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2025/12/28 08:25:44 adam Exp $
 
-DISTNAME=	wagtail-6.4.1
+DISTNAME=	wagtail-7.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wagtail/}
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.1.0:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-Willow>=1.8.0:../../graphics/py-Willow
+DEPENDS+=	${PYPKGPREFIX}-Willow>=1.11.0:../../graphics/py-Willow
 DEPENDS+=	${PYPKGPREFIX}-anyascii>=0.1.5:../../textproc/py-anyascii
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.8:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
@@ -20,11 +20,12 @@ DEPENDS+=	${PYPKGPREFIX}-django-filter>=23.3:../../www/py-django-filter
 DEPENDS+=	${PYPKGPREFIX}-django-modelcluster>=6.2.1:../../www/py-django-modelcluster
 DEPENDS+=	${PYPKGPREFIX}-django-permissionedforms>=0.1:../../www/py-django-permissionedforms
 DEPENDS+=	${PYPKGPREFIX}-django-taggit>=5.0:../../www/py-django-taggit
-DEPENDS+=	${PYPKGPREFIX}-django-tasks>=0.6.1:../../www/py-django-tasks
+DEPENDS+=	${PYPKGPREFIX}-django-tasks>=0.8:../../www/py-django-tasks
 DEPENDS+=	${PYPKGPREFIX}-django-treebeard>=4.5.1:../../www/py-django-treebeard
 DEPENDS+=	${PYPKGPREFIX}-djangorestframework>=3.15.1:../../www/py-djangorestframework
 DEPENDS+=	${PYPKGPREFIX}-draftjs_exporter>=2.1.5:../../www/py-draftjs_exporter
 DEPENDS+=	${PYPKGPREFIX}-laces>=0.1:../../www/py-laces
+DEPENDS+=	${PYPKGPREFIX}-modelsearch>=1.1:../../www/py-modelsearch
 DEPENDS+=	${PYPKGPREFIX}-openpyxl>=3.0.10:../../textproc/py-openpyxl
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.11.1:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-telepath>=0.3.1:../../www/py-telepath
@@ -53,7 +54,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
-REPLACE_PYTHON+=	wagtail/project_template/manage.py
+REPLACE_PYTHON+=	wagtail/project_template/manage.py-tpl
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
