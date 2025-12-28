@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2022/01/14 11:29:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/12/28 08:51:20 adam Exp $
 ${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/ephem/__init__.py
 ${PYSITELIB}/ephem/__init__.pyc
 ${PYSITELIB}/ephem/__init__.pyo
@@ -21,8 +22,8 @@ ${PYSITELIB}/ephem/doc/index.rst
 ${PYSITELIB}/ephem/doc/newton.rst
 ${PYSITELIB}/ephem/doc/quick.rst
 ${PYSITELIB}/ephem/doc/radec.rst
-${PYSITELIB}/ephem/doc/reference.rst
 ${PYSITELIB}/ephem/doc/rise-set.rst
+${PYSITELIB}/ephem/doc/toc.rst
 ${PYSITELIB}/ephem/doc/tutorial.rst
 ${PYSITELIB}/ephem/stars.py
 ${PYSITELIB}/ephem/stars.pyc
@@ -69,9 +70,15 @@ ${PYSITELIB}/ephem/tests/test_launchpad_244811.pyo
 ${PYSITELIB}/ephem/tests/test_locales.py
 ${PYSITELIB}/ephem/tests/test_locales.pyc
 ${PYSITELIB}/ephem/tests/test_locales.pyo
+${PYSITELIB}/ephem/tests/test_mag.py
+${PYSITELIB}/ephem/tests/test_mag.pyc
+${PYSITELIB}/ephem/tests/test_mag.pyo
 ${PYSITELIB}/ephem/tests/test_observers.py
 ${PYSITELIB}/ephem/tests/test_observers.pyc
 ${PYSITELIB}/ephem/tests/test_observers.pyo
+${PYSITELIB}/ephem/tests/test_rise_set.py
+${PYSITELIB}/ephem/tests/test_rise_set.pyc
+${PYSITELIB}/ephem/tests/test_rise_set.pyo
 ${PYSITELIB}/ephem/tests/test_rst.py
 ${PYSITELIB}/ephem/tests/test_rst.pyc
 ${PYSITELIB}/ephem/tests/test_rst.pyo
@@ -102,3 +109,6 @@ ${PYSITELIB}/ephem/tests/usno/riset_moon.txt
 ${PYSITELIB}/ephem/tests/usno/riset_sun.txt
 ${PYSITELIB}/ephem/tests/usno/risettran_moon.txt
 ${PYSITELIB}/ephem/tests/usno/risettran_rigel.txt
+${PYSITELIB}/ephem/tests/wulfgar.py
+${PYSITELIB}/ephem/tests/wulfgar.pyc
+${PYSITELIB}/ephem/tests/wulfgar.pyo
