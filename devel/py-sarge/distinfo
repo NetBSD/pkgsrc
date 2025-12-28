@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/12/11 20:03:05 adam Exp $
+$NetBSD: distinfo,v 1.5 2025/12/28 20:56:52 adam Exp $
 
-BLAKE2s (sarge-0.1.7.tar.gz) = c667c03fcd47385a0a8603548febe85cd618fb7f4ee31959d6f696d9b905c566
-SHA512 (sarge-0.1.7.tar.gz) = dc5b3d46f3876e4f545cd4bb2380213aa0af113782ec8b7a8836b63a3a0db04e213db783f237764c233b560b16a7c90d59401ae72b78bd578fd86df823fd9fab
-Size (sarge-0.1.7.tar.gz) = 26522 bytes
+BLAKE2s (sarge-0.1.7.post1.tar.gz) = 008c6f9a0b618c7a7ed9fd97800b3b16372a9c92681b1b992a01119e532496c6
+SHA512 (sarge-0.1.7.post1.tar.gz) = e49ac7ba98b8a6b0ed8ac789b1e7f869611eb9b11c9761f82959ca1fef2130a371c6638c8485423f76d6b005a042ec05938e17330110f03b0924743095f23fcf
+Size (sarge-0.1.7.post1.tar.gz) = 25736 bytes
