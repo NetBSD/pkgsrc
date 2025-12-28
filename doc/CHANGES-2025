@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7459 2025/12/28 14:20:27 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7460 2025/12/28 14:29:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11014,3 +11014,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/concurrencykit to 0.7.2 [yhardy 2025-12-28]
 	Added graphics/py-freetype-py version 2.5.1 [adam 2025-12-28]
 	Added print/py-rlpycairo version 0.4.0 [adam 2025-12-28]
+	Updated print/py-reportlab to 4.4.7 [adam 2025-12-28]
+	Added graphics/py-svglib version 1.6.0 [adam 2025-12-28]
