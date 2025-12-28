@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.62 2025/06/04 14:43:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.63 2025/12/28 10:07:56 adam Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -133,8 +133,8 @@ lib/libndr-standard.so
 lib/libndr-standard.so.0
 lib/libndr-standard.so.0.0.1
 lib/libndr.so
-lib/libndr.so.5
-lib/libndr.so.5.0.0
+lib/libndr.so.6
+lib/libndr.so.6.0.0
 lib/libnetapi.so
 lib/libnetapi.so.1
 lib/libnetapi.so.1.0.0
@@ -144,13 +144,13 @@ lib/libsamba-errors.so.1
 lib/libsamba-errors.so.1.0.0
 lib/libsamba-passdb.so
 lib/libsamba-passdb.so.0
-lib/libsamba-passdb.so.0.29.0
+lib/libsamba-passdb.so.0.30.0
 lib/libsamba-util.so
 lib/libsamba-util.so.0
 lib/libsamba-util.so.0.0.1
 lib/libsmbclient.so
 lib/libsmbclient.so.0
-lib/libsmbclient.so.0.8.0
+lib/libsmbclient.so.0.8.1
 lib/libsmbconf.so
 lib/libsmbconf.so.0
 lib/libsmbconf.so.0.0.1
@@ -185,6 +185,7 @@ ${PYSITELIB}/samba/dcerpc/__init__.py
 ${PYSITELIB}/samba/dcerpc/atsvc.so
 ${PYSITELIB}/samba/dcerpc/auth.so
 ${PYSITELIB}/samba/dcerpc/base.so
+${PYSITELIB}/samba/dcerpc/bcrypt_rsakey_blob.so
 ${PYSITELIB}/samba/dcerpc/claims.so
 ${PYSITELIB}/samba/dcerpc/conditional_ace.so
 ${PYSITELIB}/samba/dcerpc/dcerpc.so
@@ -201,6 +202,7 @@ ${PYSITELIB}/samba/dcerpc/gmsa.so
 ${PYSITELIB}/samba/dcerpc/idmap.so
 ${PYSITELIB}/samba/dcerpc/initshutdown.so
 ${PYSITELIB}/samba/dcerpc/irpc.so
+${PYSITELIB}/samba/dcerpc/keycredlink.so
 ${PYSITELIB}/samba/dcerpc/krb5ccache.so
 ${PYSITELIB}/samba/dcerpc/krb5pac.so
 ${PYSITELIB}/samba/dcerpc/lsa.so
@@ -222,6 +224,7 @@ ${PYSITELIB}/samba/dcerpc/smb_acl.so
 ${PYSITELIB}/samba/dcerpc/spoolss.so
 ${PYSITELIB}/samba/dcerpc/srvsvc.so
 ${PYSITELIB}/samba/dcerpc/svcctl.so
+${PYSITELIB}/samba/dcerpc/tpm20_rsakey_blob.so
 ${PYSITELIB}/samba/dcerpc/unixinfo.so
 ${PYSITELIB}/samba/dcerpc/winbind.so
 ${PYSITELIB}/samba/dcerpc/windows_event_ids.so
@@ -465,6 +468,7 @@ ${PYSITELIB}/samba/tests/auth_log_netlogon_bad_creds.py
 ${PYSITELIB}/samba/tests/auth_log_pass_change.py
 ${PYSITELIB}/samba/tests/auth_log_samlogon.py
 ${PYSITELIB}/samba/tests/auth_log_winbind.py
+${PYSITELIB}/samba/tests/bcrypt_rsakey_blob.py
 ${PYSITELIB}/samba/tests/blackbox/__init__.py
 ${PYSITELIB}/samba/tests/blackbox/bug13653.py
 ${PYSITELIB}/samba/tests/blackbox/check_output.py
@@ -503,6 +507,7 @@ ${PYSITELIB}/samba/tests/dcerpc/__init__.py
 ${PYSITELIB}/samba/tests/dcerpc/array.py
 ${PYSITELIB}/samba/tests/dcerpc/bare.py
 ${PYSITELIB}/samba/tests/dcerpc/binding.py
+${PYSITELIB}/samba/tests/dcerpc/dfs.py
 ${PYSITELIB}/samba/tests/dcerpc/dnsserver.py
 ${PYSITELIB}/samba/tests/dcerpc/integer.py
 ${PYSITELIB}/samba/tests/dcerpc/lsa.py
@@ -561,6 +566,7 @@ ${PYSITELIB}/samba/tests/kcc/graph.py
 ${PYSITELIB}/samba/tests/kcc/graph_utils.py
 ${PYSITELIB}/samba/tests/kcc/kcc_utils.py
 ${PYSITELIB}/samba/tests/kcc/ldif_import_export.py
+${PYSITELIB}/samba/tests/key_credential_link.py
 ${PYSITELIB}/samba/tests/krb5/alias_tests.py
 ${PYSITELIB}/samba/tests/krb5/as_canonicalization_tests.py
 ${PYSITELIB}/samba/tests/krb5/as_req_tests.py
@@ -583,6 +589,7 @@ ${PYSITELIB}/samba/tests/krb5/kdc_tgt_tests.py
 ${PYSITELIB}/samba/tests/krb5/kpasswd_tests.py
 ${PYSITELIB}/samba/tests/krb5/lockout_tests.py
 ${PYSITELIB}/samba/tests/krb5/ms_kile_client_principal_lookup_tests.py
+${PYSITELIB}/samba/tests/krb5/netlogon.py
 ${PYSITELIB}/samba/tests/krb5/nt_hash_tests.py
 ${PYSITELIB}/samba/tests/krb5/pac_align_tests.py
 ${PYSITELIB}/samba/tests/krb5/pkinit_tests.py
@@ -624,6 +631,8 @@ ${PYSITELIB}/samba/tests/net_join_no_spnego.py
 ${PYSITELIB}/samba/tests/netbios.py
 ${PYSITELIB}/samba/tests/netcmd.py
 ${PYSITELIB}/samba/tests/netlogonsvc.py
+${PYSITELIB}/samba/tests/nss/base.py
+${PYSITELIB}/samba/tests/nss/group.py
 ${PYSITELIB}/samba/tests/ntacls.py
 ${PYSITELIB}/samba/tests/ntacls_backup.py
 ${PYSITELIB}/samba/tests/ntlm_auth.py
@@ -651,6 +660,7 @@ ${PYSITELIB}/samba/tests/pso.py
 ${PYSITELIB}/samba/tests/py_credentials.py
 ${PYSITELIB}/samba/tests/registry.py
 ${PYSITELIB}/samba/tests/reparsepoints.py
+${PYSITELIB}/samba/tests/rust.py
 ${PYSITELIB}/samba/tests/s3_net_join.py
 ${PYSITELIB}/samba/tests/s3idmapdb.py
 ${PYSITELIB}/samba/tests/s3param.py
@@ -732,10 +742,15 @@ ${PYSITELIB}/samba/tests/strings.py
 ${PYSITELIB}/samba/tests/subunitrun.py
 ${PYSITELIB}/samba/tests/tdb_util.py
 ${PYSITELIB}/samba/tests/token_factory.py
+${PYSITELIB}/samba/tests/tpm20_rsakey_blob.py
 ${PYSITELIB}/samba/tests/upgrade.py
 ${PYSITELIB}/samba/tests/upgradeprovision.py
 ${PYSITELIB}/samba/tests/upgradeprovisionneeddc.py
 ${PYSITELIB}/samba/tests/usage.py
+${PYSITELIB}/samba/tests/varlink/base.py
+${PYSITELIB}/samba/tests/varlink/getgrouprecord.py
+${PYSITELIB}/samba/tests/varlink/getmemberships.py
+${PYSITELIB}/samba/tests/varlink/getuserrecord.py
 ${PYSITELIB}/samba/tests/xattr.py
 ${PYSITELIB}/samba/upgrade.py
 ${PYSITELIB}/samba/upgradehelpers.py
@@ -812,6 +827,7 @@ ${PLIST.ads}lib/samba/ldb/subtree_delete.${SHLIB_EXT}
 ${PLIST.ads}lib/samba/ldb/subtree_rename.${SHLIB_EXT}
 ${PLIST.ads}lib/samba/ldb/tdb.${SHLIB_EXT}
 ${PLIST.ads}lib/samba/ldb/tombstone_reanimate.${SHLIB_EXT}
+${PLIST.ads}lib/samba/ldb/trust_notify.${SHLIB_EXT}
 ${PLIST.ads}lib/samba/ldb/unique_object_sids.${SHLIB_EXT}
 ${PLIST.ads}lib/samba/ldb/update_keytab.${SHLIB_EXT}
 ${PLIST.ads}lib/samba/ldb/vlv.${SHLIB_EXT}
@@ -925,6 +941,7 @@ lib/samba/private/libsamba-net-private-samba.so
 lib/samba/private/libsamba-policy-private-samba.so
 lib/samba/private/libsamba-python-private-samba.so
 lib/samba/private/libsamba-security-private-samba.so
+lib/samba/private/libsamba-security-trusts-private-samba.so
 lib/samba/private/libsamba-sockets-private-samba.so
 lib/samba/private/libsamba3-util-private-samba.so
 lib/samba/private/libsamdb-common-private-samba.so
@@ -935,7 +952,6 @@ lib/samba/private/libserver-id-db-private-samba.so
 lib/samba/private/libserver-role-private-samba.so
 lib/samba/private/libservice-private-samba.so
 lib/samba/private/libshares-private-samba.so
-lib/samba/private/libsmb-transport-private-samba.so
 lib/samba/private/libsmbclient-raw-private-samba.so
 lib/samba/private/libsmbd-base-private-samba.so
 lib/samba/private/libsmbd-shim-private-samba.so
@@ -964,6 +980,7 @@ ${PLIST.ads}lib/samba/service/dcerpc.${SHLIB_EXT}
 ${PLIST.ads}lib/samba/service/dns.${SHLIB_EXT}
 ${PLIST.ads}lib/samba/service/dns_update.${SHLIB_EXT}
 ${PLIST.ads}lib/samba/service/drepl.${SHLIB_EXT}
+${PLIST.ads}lib/samba/service/ft_scanner.${SHLIB_EXT}
 ${PLIST.ads}lib/samba/service/kcc.${SHLIB_EXT}
 ${PLIST.ads}lib/samba/service/kdc.${SHLIB_EXT}
 ${PLIST.ads}lib/samba/service/ldap.${SHLIB_EXT}
@@ -1159,6 +1176,27 @@ share/examples/samba/deluser.sh
 @pkgdir share/examples/samba/pam_smbpass
 share/examples/samba/samba.schema
 share/examples/samba/smb.conf.default
+share/locale/ar/LC_MESSAGES/pam_winbind.mo
+share/locale/cs/LC_MESSAGES/pam_winbind.mo
+share/locale/da/LC_MESSAGES/pam_winbind.mo
+share/locale/de/LC_MESSAGES/net.mo
+share/locale/de/LC_MESSAGES/pam_winbind.mo
+share/locale/es/LC_MESSAGES/pam_winbind.mo
+share/locale/fi/LC_MESSAGES/pam_winbind.mo
+share/locale/fr/LC_MESSAGES/pam_winbind.mo
+share/locale/hu/LC_MESSAGES/pam_winbind.mo
+share/locale/it/LC_MESSAGES/pam_winbind.mo
+share/locale/ja/LC_MESSAGES/pam_winbind.mo
+share/locale/ko/LC_MESSAGES/pam_winbind.mo
+share/locale/nb/LC_MESSAGES/pam_winbind.mo
+share/locale/nl/LC_MESSAGES/pam_winbind.mo
+share/locale/pl/LC_MESSAGES/pam_winbind.mo
+share/locale/pt_BR/LC_MESSAGES/pam_winbind.mo
+share/locale/ru/LC_MESSAGES/pam_winbind.mo
+share/locale/sv/LC_MESSAGES/pam_winbind.mo
+share/locale/tr/LC_MESSAGES/pam_winbind.mo
+share/locale/zh_CN/LC_MESSAGES/pam_winbind.mo
+share/locale/zh_TW/LC_MESSAGES/pam_winbind.mo
 ${PLIST.ads}share/samba/samba/admx/GNOME_Settings.admx
 ${PLIST.ads}share/samba/samba/admx/en-US/GNOME_Settings.adml
 ${PLIST.ads}share/samba/samba/admx/en-US/samba.adml
