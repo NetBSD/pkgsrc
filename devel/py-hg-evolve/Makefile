@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2025/12/05 14:34:53 adam Exp $
+# $NetBSD: Makefile,v 1.51 2025/12/28 08:28:08 wiz Exp $
 #
 # Release notes:
 # https://lists.mercurial-scm.org/pipermail/mercurial/
@@ -9,7 +9,7 @@ CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hg-evolve/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.mercurial-scm.org/doc/evolution/
+HOMEPAGE=	https://wiki.mercurial-scm.org/EvolveExtension
 COMMENT=	Experimental Mercurial extensions from Facebook
 LICENSE=	gnu-gpl-v2
 
