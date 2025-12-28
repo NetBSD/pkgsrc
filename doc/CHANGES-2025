@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7469 2025/12/28 21:28:57 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7470 2025/12/28 21:36:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11028,3 +11028,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-sphinx-argparse to 0.5.2nb1 [wiz 2025-12-28]
 	Updated textproc/dasel to 3.2.0 [wiz 2025-12-28]
 	Updated devel/lcov to 2.4 [wiz 2025-12-28]
+	Updated graphics/OpenJPH to 0.26.0 [wiz 2025-12-28]
