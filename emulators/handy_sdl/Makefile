@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/01/06 21:49:07 ktnb Exp $
-#
+# $NetBSD: Makefile,v 1.11 2025/12/28 08:22:35 wiz Exp $
 
 DISTNAME=	handy_sdl-0.5-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -9,7 +8,7 @@ MASTER_SITES=	https://shalafi.home.xs4all.nl/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sdlemu.ngemu.com/handysdl.php
+#HOMEPAGE=	http://sdlemu.ngemu.com/handysdl.php
 COMMENT=	Atari Lynx emulator
 
 MAKE_JOBS_SAFE=		no
