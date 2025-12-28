@@ -1,0 +1,1 @@
+bin/svg2pdf @PREFIX@/bin/svg2pdf-@PYVERSSUFFIX@
