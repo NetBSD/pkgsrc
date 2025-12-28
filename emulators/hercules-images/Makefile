@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/12/30 20:10:13 zafer Exp $
+# $NetBSD: Makefile,v 1.14 2025/12/28 08:27:14 wiz Exp $
 
 DISTNAME=		mftr33
 PKGNAME=		hercules-images-20010222
@@ -6,7 +6,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		#
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.conmicro.cx/hercules/
+#HOMEPAGE=		http://www.conmicro.cx/hercules/
 COMMENT=		Images to IPL the Hercules emulator
 
 WRKSRC=			${WRKDIR}
