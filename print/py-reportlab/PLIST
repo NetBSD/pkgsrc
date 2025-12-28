@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.24 2021/03/28 04:02:19 mef Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.25 2025/12/28 14:24:06 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/reportlab/__init__.py
 ${PYSITELIB}/reportlab/__init__.pyc
 ${PYSITELIB}/reportlab/__init__.pyo
@@ -34,6 +34,7 @@ ${PYSITELIB}/reportlab/fonts/cob_____.pfb
 ${PYSITELIB}/reportlab/fonts/cobo____.pfb
 ${PYSITELIB}/reportlab/fonts/com_____.pfb
 ${PYSITELIB}/reportlab/fonts/coo_____.pfb
+${PYSITELIB}/reportlab/fonts/hb-test.ttf
 ${PYSITELIB}/reportlab/fonts/sy______.pfb
 ${PYSITELIB}/reportlab/fonts/zd______.pfb
 ${PYSITELIB}/reportlab/fonts/zx______.pfb
@@ -41,7 +42,6 @@ ${PYSITELIB}/reportlab/fonts/zy______.pfb
 ${PYSITELIB}/reportlab/graphics/__init__.py
 ${PYSITELIB}/reportlab/graphics/__init__.pyc
 ${PYSITELIB}/reportlab/graphics/__init__.pyo
-${PYSITELIB}/reportlab/graphics/_renderPM.so
 ${PYSITELIB}/reportlab/graphics/barcode/__init__.py
 ${PYSITELIB}/reportlab/graphics/barcode/__init__.pyc
 ${PYSITELIB}/reportlab/graphics/barcode/__init__.pyo
@@ -207,6 +207,9 @@ ${PYSITELIB}/reportlab/graphics/samples/stacked_column.pyo
 ${PYSITELIB}/reportlab/graphics/shapes.py
 ${PYSITELIB}/reportlab/graphics/shapes.pyc
 ${PYSITELIB}/reportlab/graphics/shapes.pyo
+${PYSITELIB}/reportlab/graphics/svgpath.py
+${PYSITELIB}/reportlab/graphics/svgpath.pyc
+${PYSITELIB}/reportlab/graphics/svgpath.pyo
 ${PYSITELIB}/reportlab/graphics/testdrawings.py
 ${PYSITELIB}/reportlab/graphics/testdrawings.pyc
 ${PYSITELIB}/reportlab/graphics/testdrawings.pyo
@@ -252,7 +255,6 @@ ${PYSITELIB}/reportlab/lib/PyFontify.pyo
 ${PYSITELIB}/reportlab/lib/__init__.py
 ${PYSITELIB}/reportlab/lib/__init__.pyc
 ${PYSITELIB}/reportlab/lib/__init__.pyo
-${PYSITELIB}/reportlab/lib/_rl_accel.so
 ${PYSITELIB}/reportlab/lib/abag.py
 ${PYSITELIB}/reportlab/lib/abag.pyc
 ${PYSITELIB}/reportlab/lib/abag.pyo
@@ -292,7 +294,6 @@ ${PYSITELIB}/reportlab/lib/formatters.pyo
 ${PYSITELIB}/reportlab/lib/geomutils.py
 ${PYSITELIB}/reportlab/lib/geomutils.pyc
 ${PYSITELIB}/reportlab/lib/geomutils.pyo
-${PLIST.py2x}${PYSITELIB}/reportlab/lib/hyphen.mashed
 ${PYSITELIB}/reportlab/lib/logger.py
 ${PYSITELIB}/reportlab/lib/logger.pyc
 ${PYSITELIB}/reportlab/lib/logger.pyo
@@ -305,7 +306,6 @@ ${PYSITELIB}/reportlab/lib/pagesizes.pyo
 ${PYSITELIB}/reportlab/lib/pdfencrypt.py
 ${PYSITELIB}/reportlab/lib/pdfencrypt.pyc
 ${PYSITELIB}/reportlab/lib/pdfencrypt.pyo
-${PLIST.py2x}${PYSITELIB}/reportlab/lib/pyHnj.so
 ${PYSITELIB}/reportlab/lib/pygments2xpre.py
 ${PYSITELIB}/reportlab/lib/pygments2xpre.pyc
 ${PYSITELIB}/reportlab/lib/pygments2xpre.pyo
