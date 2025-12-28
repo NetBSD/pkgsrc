@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2025/10/27 22:50:18 gdt Exp $
+@comment $NetBSD: PLIST,v 1.65 2025/12/28 15:47:50 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -21,9 +21,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE-COMMERCIAL
 ${PYSITELIB}/synapse/__init__.py
 ${PYSITELIB}/synapse/__init__.pyc
 ${PYSITELIB}/synapse/__init__.pyo
-${PYSITELIB}/synapse/_pydantic_compat.py
-${PYSITELIB}/synapse/_pydantic_compat.pyc
-${PYSITELIB}/synapse/_pydantic_compat.pyo
 ${PYSITELIB}/synapse/_scripts/__init__.py
 ${PYSITELIB}/synapse/_scripts/__init__.pyc
 ${PYSITELIB}/synapse/_scripts/__init__.pyo
@@ -1987,6 +1984,7 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/92/08_room_ban_redactions.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/92/08_thread_subscriptions_seq_fixup.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/92/09_thread_subscriptions_update.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/92/09_thread_subscriptions_update.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/93/01_add_delayed_events.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/state/delta/23/drop_state_index.sql
@@ -2067,6 +2065,9 @@ ${PYSITELIB}/synapse/util/__init__.pyo
 ${PYSITELIB}/synapse/util/async_helpers.py
 ${PYSITELIB}/synapse/util/async_helpers.pyc
 ${PYSITELIB}/synapse/util/async_helpers.pyo
+${PYSITELIB}/synapse/util/background_queue.py
+${PYSITELIB}/synapse/util/background_queue.pyc
+${PYSITELIB}/synapse/util/background_queue.pyo
 ${PYSITELIB}/synapse/util/batching_queue.py
 ${PYSITELIB}/synapse/util/batching_queue.pyc
 ${PYSITELIB}/synapse/util/batching_queue.pyo
