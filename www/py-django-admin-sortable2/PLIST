@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/07/07 08:02:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/12/28 14:54:34 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -42,6 +42,11 @@ ${PYSITELIB}/adminsortable2/models.pyc
 ${PYSITELIB}/adminsortable2/models.pyo
 ${PYSITELIB}/adminsortable2/static/adminsortable2/css/sortable.css
 ${PYSITELIB}/adminsortable2/static/adminsortable2/icons/drag.png
+${PYSITELIB}/adminsortable2/static/adminsortable2/js/actions-4.2.js
+${PYSITELIB}/adminsortable2/static/adminsortable2/js/actions-5.0.js
+${PYSITELIB}/adminsortable2/static/adminsortable2/js/actions-5.1.js
+${PYSITELIB}/adminsortable2/static/adminsortable2/js/actions-5.2.js
+${PYSITELIB}/adminsortable2/static/adminsortable2/js/actions-6.0.js
 ${PYSITELIB}/adminsortable2/static/adminsortable2/js/adminsortable2.js
 ${PYSITELIB}/adminsortable2/static/adminsortable2/js/adminsortable2.min.js
 ${PYSITELIB}/adminsortable2/templates/adminsortable2/change_list.html
@@ -51,6 +56,8 @@ ${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/stacked-django-
 ${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/stacked-django-5.1.html.orig
 ${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/stacked-django-5.2.html
 ${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/stacked-django-5.2.html.orig
+${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/stacked-django-6.0.html
+${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/stacked-django-6.0.html.orig
 ${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/tabular-django-4.2.html
 ${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/tabular-django-4.2.html.orig
 ${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/tabular-django-5.0.html
@@ -59,3 +66,5 @@ ${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/tabular-django-
 ${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/tabular-django-5.1.html.orig
 ${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/tabular-django-5.2.html
 ${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/tabular-django-5.2.html.orig
+${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/tabular-django-6.0.html
+${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/tabular-django-6.0.html.orig
