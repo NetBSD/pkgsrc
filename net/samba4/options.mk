@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2024/10/24 17:23:43 adam Exp $
+# $NetBSD: options.mk,v 1.21 2025/12/28 10:07:56 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba4
 # As of 4.21.1, samba4 fails to build without "ads" and "ldap" options:
@@ -12,10 +12,6 @@ SAMBA_ACL_OPSYS=	AIX Darwin FreeBSD HPUX IRIX Linux NetBSD OSF1 SunOS
 .if !empty(SAMBA_ACL_OPSYS:M${OPSYS})
 PKG_SUPPORTED_OPTIONS+=	acl
 .endif
-
-#.if !${MACHINE_PLATFORM:MDarwin-1[1-9].*}
-#PKG_SUGGESTED_OPTIONS+=	ads
-#.endif
 
 .if ${OPSYS} == "Linux"
 PKG_SUPPORTED_OPTIONS+=	snapper
