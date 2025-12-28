@@ -1,5 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2025/12/26 10:40:35 adam Exp $
+# $NetBSD: Makefile,v 1.35 2025/12/28 15:39:43 gdt Exp $
 
+# NB: pydantic expresses an exact dependency on pydantic-core.  While
+# unfortunate, it is actually true, and pydantic with non-matching
+# versions of pydantic-core fail to build matrix-synapse.
+# https://github.com/pydantic/pydantic/issues/12189#issuecomment-3227083571
 DISTNAME=	pydantic_core-2.41.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
