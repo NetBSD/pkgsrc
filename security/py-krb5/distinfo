@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2025/09/03 07:51:39 adam Exp $
+$NetBSD: distinfo,v 1.7 2025/12/28 08:57:52 adam Exp $
 
-BLAKE2s (krb5-0.8.0.tar.gz) = 5cb2abffbf9a07bf7870d33d1ba00c8469da342ed33ef68f2e7aa95ebe725640
-SHA512 (krb5-0.8.0.tar.gz) = de4ea8b86acc31b88de5c47454be0901614cb9fe0f53516b96616e46324f689723beee56c49c4fb0bbff97ea7b85a15a0874c69670b5e8bf741a9963439af712
-Size (krb5-0.8.0.tar.gz) = 235540 bytes
+BLAKE2s (krb5-0.9.0.tar.gz) = b1b100537481e219f031f562c9fc10a7d20e2c8d14f9af51a4609662e1b9ac18
+SHA512 (krb5-0.9.0.tar.gz) = 6f0325ab3415d1719dcc5530f6ee42082ba52035fa13ba23748d399fb1c2f5c92378064517d8b0f58909f1c10d1516b8745eb5911c8f285ce7dba7ecb1a6d797
+Size (krb5-0.9.0.tar.gz) = 236761 bytes
