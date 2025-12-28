@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7465 2025/12/28 16:10:41 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7466 2025/12/28 21:00:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11023,3 +11023,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/kea to 3.1.4 [adam 2025-12-28]
 	Updated wm/marswm to 0.6.2 [pin 2025-12-28]
 	Updated shells/oh-my-posh to 28.7.0 [pin 2025-12-28]
+	Updated devel/py-sarge to 0.1.7.post1 [adam 2025-12-28]
+	Updated devel/py-sentry-sdk to 2.48.0 [adam 2025-12-28]
