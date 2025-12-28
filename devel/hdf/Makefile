@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2025/04/24 14:13:30 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2025/12/28 08:24:28 wiz Exp $
 
 DISTNAME=	hdf-4.2.15
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	https://support.hdfgroup.org/ftp/HDF/releases/HDF${PKGVERSION_NORE
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://support.hdfgroup.org/products/hdf4/
+HOMEPAGE=	https://www.hdfgroup.org/solutions/hdf4/
 COMMENT=	NCSA Hierarchical Data Format
 
 USE_LIBTOOL=		yes
