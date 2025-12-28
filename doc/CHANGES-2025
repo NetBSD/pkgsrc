@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7458 2025/12/28 12:13:21 yhardy Exp $
+$NetBSD: CHANGES-2025,v 1.7459 2025/12/28 14:20:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11012,3 +11012,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/py-mautrix to 0.21.0 [adam 2025-12-28]
 	Updated finance/py-eth-utils to 5.3.1 [adam 2025-12-28]
 	Updated devel/concurrencykit to 0.7.2 [yhardy 2025-12-28]
+	Added graphics/py-freetype-py version 2.5.1 [adam 2025-12-28]
+	Added print/py-rlpycairo version 0.4.0 [adam 2025-12-28]
