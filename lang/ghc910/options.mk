@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.4 2025/10/09 07:57:43 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2025/12/28 11:14:01 pho Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghc
-PKG_SUPPORTED_OPTIONS=	doc
-PKG_SUGGESTED_OPTIONS=	doc
+PKG_SUPPORTED_OPTIONS=	# empty
+PKG_SUGGESTED_OPTIONS=	# empty
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -68,24 +68,3 @@ CONFIGURE_ARGS.common+=	OPT=${FALSE:Q}
 CONFIGURE_ARGS.common+=	CLANG=${FALSE:Q}
 CONFIGURE_ARGS.common+=	CC=${CC:Q}
 .endif
-
-###
-### HTML users' guide and man pages, built with Sphinx.
-###
-### In fact we are very reluctant to rely on Sphinx, but no Sphinx means no
-### man pages. You don't like it when you type "man ghc" and it says "no
-### entry for ghc" do you? But don't hesitate to turn it off if you find
-### GHC stop building because of this.
-###
-PLIST_VARS+=			doc
-.if !empty(PKG_OPTIONS:Mdoc)
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
-TOOL_DEPENDS+=			${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-CONFIGURE_ARGS+=		SPHINXBUILD=${PREFIX:Q}/bin/sphinx-build-${PYVERSSUFFIX}
-PLIST.doc=			yes
-.else
-HADRIAN_ARGS+=			--docs=no-sphinx
-.endif
-# But don't even think of PDF either way. It's absolutely unacceptable for
-# GHC to stop building just because of fragility in Sphinx-TeX interaction.
-HADRIAN_ARGS+=			--docs=no-sphinx-pdfs

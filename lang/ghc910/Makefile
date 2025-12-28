@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2025/12/22 11:12:21 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/12/28 11:14:01 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
 DISTNAME=	ghc-9.10.1-src
 PKGNAME=	${DISTNAME:S/-src$//}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	lang
 MASTER_SITES=	https://downloads.haskell.org/~ghc/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -35,11 +35,11 @@ PKGSRC_OVERRIDE_MKPIE=	yes
 # -----------------------------------------------------------------------------
 # Distfiles
 #
-DISTFILES=	${DEFAULT_DISTFILES} sphinx_rtd_theme-3.0.2.tar.gz
+DISTFILES=	${DEFAULT_DISTFILES}
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 # We don't want to extract all of the DISTFILEs.
-EXTRACT_ONLY=	${DEFAULT_DISTFILES} sphinx_rtd_theme-3.0.2.tar.gz
+EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 
 
 # -----------------------------------------------------------------------------
@@ -176,7 +176,6 @@ post-patch:
 	${RUN}cd ${WRKSRC} && autoreconf
 	${RUN}cd ${WRKSRC}/libraries/ghc-internal && autoreconf
 	${RUN}cd ${WRKSRC}/libraries/terminfo && autoreconf
-	${RUN}cd ${WRKDIR}/sphinx_rtd_theme-3.0.2/sphinx_rtd_theme && pax -pp -rw * ${WRKSRC}/docs/users_guide/rtd-theme
 
 # Define the target "pre-configure", "pre-build", and non-standard
 # "bootstrap".
@@ -190,6 +189,14 @@ post-patch:
 # relative ones (i.e. $ORIGIN). The patched Hadrian expects that --prefix
 # is given at build time, not only at install time.
 HADRIAN_ARGS+=	--prefix=${PREFIX:Q}
+
+# Don't build users' guide or man pages. They are of course nice to
+# have. You don't like it when you type "man ghc" and it says "no entry for
+# ghc" do you? But they require Sphinx to build. Interaction of Sphinx with
+# GHC is very, very fragile. It has a notorious history of breaking over
+# and over again due to version differences in GHC's expectation and what
+# pkgsrc provides. We cannot pay the unreasonably high cost of babysitting.
+HADRIAN_ARGS+=	--docs=no-sphinx # No sphinx but we still want Haddock.
 
 # Enable -fsplit-sections on platforms that support it.
 .if ${OPSYS} == "FreeBSD"
@@ -296,10 +303,6 @@ GHC_PLATFORM.sh=	\
 # produce a broken PLIST on Darwin without this substitution. This should
 # be probably moved somewhere in ../../mk.
 PRINT_PLIST_AWK+=	{ sub(/\.dylib$$/, ".so") }
-
-# Users' guide and man pages are conditionally built. See options.mk
-PRINT_PLIST_AWK+=	/^share\/doc\// && /\/users_guide\// { $$0 = "$${PLIST.doc}" $$0 }
-PRINT_PLIST_AWK+=	/^man\// { $$0 = "$${PLIST.doc}" $$0 }
 
 
 # -----------------------------------------------------------------------------

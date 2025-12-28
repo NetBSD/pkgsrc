@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.5 2025/12/28 07:30:17 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.6 2025/12/28 11:14:01 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis. See
 # ./files/BOOTSTRAP.md for details.
@@ -223,7 +223,7 @@ CONFIGURE_ARGS.boot+=	--with-bindist-prefix="ghc-boot-" --with-system-libffi
 # Hadrian arguments to use while building a bootkit.
 HADRIAN_ARGS.boot=	${HADRIAN_ARGS.common}
 HADRIAN_ARGS.boot+=	--prefix=${PREFIX:Q} # Needed because of our patch to Rules.BinaryDist
-HADRIAN_ARGS.boot+=	--docs=none
+HADRIAN_ARGS.boot+=	--docs=none          # Not even haddock
 .if ${OPSYS} == "FreeBSD"
 #   -fsplit-sections appears to corrupt the symbol table of stage 1
 #   libHSghc-*.a(Instances.o) and cause a linkage failure. Either Clang or
