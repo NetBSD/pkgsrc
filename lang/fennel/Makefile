@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2025/12/26 20:19:25 ktnb Exp $
+# $NetBSD: Makefile,v 1.7 2025/12/28 07:11:00 wiz Exp $
 
-DISTNAME=	1.6.0
-PKGNAME=	${LUA_PKGPREFIX}-fennel-1.6.0
+DISTNAME=	fennel-1.6.0
+PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang
 MASTER_SITES=	https://git.sr.ht/~technomancy/fennel/archive/
-DIST_SUBDIR=	fennel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://fennel-lang.org/
