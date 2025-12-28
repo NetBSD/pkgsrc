@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7450 2025/12/28 02:26:03 fox Exp $
+$NetBSD: CHANGES-2025,v 1.7451 2025/12/28 05:43:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10997,3 +10997,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/py-modelsearch version 1.1.1 [adam 2025-12-27]
 	Updated devel/py-ninja to 1.13.0 [adam 2025-12-27]
 	Updated sysutils/btop to 1.4.6 [fox 2025-12-28]
+	Added cad/nvc version 1.18.2 [ryoon 2025-12-28]
