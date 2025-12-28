@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2025/02/08 03:56:22 taca Exp $
+# $NetBSD: Makefile,v 1.31 2025/12/28 18:34:45 gutteridge Exp $
 
 DISTNAME=	kronolith-h3-${KRONOLITHVER}
 PKGNAME=	kronolith-${KRONOLITHVER}
@@ -31,7 +31,7 @@ PAXDIRS=	calendars feed js lib locale po scripts templates themes
 INSTALLATION_DIRS+=	${DOCDIR}
 INSTALLATION_DIRS+=	${EGDIR}
 INSTALLATION_DIRS+=	${KRONOLITHDIR}/config
-INSTALLATION_DIRS+=	${PAXDIRS:=${KRONOLITHDIR}/%}
+INSTALLATION_DIRS+=	${PAXDIRS:%=${KRONOLITHDIR}/%}
 
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	.*/bin.php
