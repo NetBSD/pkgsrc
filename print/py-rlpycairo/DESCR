@@ -1,0 +1,11 @@
+This is a plugin for the ReportLab PDF Toolkit which constructs rich PDF
+documents, and also creation of charts in a variety of bitmap and vector
+formats.
+
+This plugin is intended to replace most of the usage of the libart based C
+extension _renderPM which has been shown to have issues when rendering complex
+documents.
+
+This backend can be brought into use by setting
+reportlab.rl_config.renderPMBackend = 'rlPyCairo' any of the methods detailed
+in reportlab/rl_config.py can be used to accomplish this.
