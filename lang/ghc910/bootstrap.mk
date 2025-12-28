@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.3 2025/08/28 12:14:54 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.4 2025/12/28 05:16:50 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis. See
 # ./files/BOOTSTRAP.md for details.
@@ -78,7 +78,7 @@ PKG_FAIL_REASON+=	"internal error: unsupported platform"
 .endif
 
 # For package developers, please do not upload any bootkits unsafely
-# built. That is, machines shared with someone or on a cloud hosting
+# built. That is, machines shared with someone else or on a cloud hosting
 # service should be avoided for building bootkits.
 .for i in ${DISTFILES:M*-boot-*}
 SITES.${i}?=	${MASTER_SITE_LOCAL}
@@ -174,22 +174,9 @@ HADRIAN_CMD=	${PKGSRC_SET_ENV} ${ALL_ENV} ${WRKSRC}/hadrian/bootstrap/_build/bin
 # An unusual target "bootstrap"
 #
 # Build a bootstrapping compiler using an already installed GHC. This is
-# certainly impossible if you don't have one. It's absolutely important to
-# build it with the fewest possible run-time dependencies, otherwise the
-# resulting binary can easily get unusable.
-
-# We don't want our bootkits to have a run-time dependency on libgcc. In
-# fact GHC's implementation of Haskell exception handling does not depend
-# on libgcc's facilities so it is attractive to do the same for "normal"
-# build... but we can't. This is because Haskell programs may call C
-# functions via FFI, and those C functions may call C++ functions in turn,
-# possibly in a different shared library.
-.include "../../mk/compiler.mk"
-.if make(bootstrap) && ${CC_VERSION:Mgcc-*}
-# But on some platforms gcc automagically inserts a dependency on a shared
-# libgcc when -lpthread is given, which is seemingly unavoidable.
-LDFLAGS+=	-static-libgcc
-.endif
+# certainly impossible if you don't have one. A bootkit built with this
+# target will have required shared libraries bundled with it, except for
+# certain system libraries such as libc, libm, and libpthread.
 
 # MacOS X 10.7 is the oldest macOS version supporting __thread. Although
 # ${WRKSRC}/configure has a check for it, the actual build will fail
@@ -199,32 +186,6 @@ LDFLAGS+=	-static-libgcc
 .if make(bootstrap) && ${OPSYS} == "Darwin"
 MACOSX_DEPLOYMENT_TARGET:=	10.9
 .endif
-
-# Gather information about packages on which bootkit depends. It will be
-# used in the post-bootstrap phase.
-BOOT_GHC_DEPS:=		curses iconv
-BOOT_GHC_PKGSRC_DEPS:=	# empty
-.for pkg in ${BOOT_GHC_DEPS}
-
-# NOTE: pkglint(1) complains for including these builtin.mk files, telling
-# that we must include buildlink3.mk instead. But then how do we get
-# variables like USE_BUILTIN.${pkg} defined before including
-# ../../mk/bsd.pkg.mk, given that ../../mk/bsd.buildlink3.mk isn't
-# protected against multiple inclusion?
-CHECK_BUILTIN.${pkg}:=	yes
-.  if ${pkg} == "curses"
-.    include "../../mk/curses.builtin.mk"
-.  elif ${pkg} == "iconv"
-.    include "../../converters/libiconv/builtin.mk"
-.  endif
-CHECK_BUILTIN.${pkg}:=	no
-
-# BOOT_GHC_PKGSRC_DEPS is a list of packages whose pkgsrc version is
-# preferred over native one, either by user or ../../mk/platform
-.  if ${PREFER.${pkg}} == "pkgsrc"
-BOOT_GHC_PKGSRC_DEPS+=	${pkg}
-.  endif
-.endfor
 
 # Compiler wrappers must not remove -I/-L flags for the installed GHC's
 # libdir, otherwise the stage-0 GHC (which we are going to use for building
@@ -240,8 +201,8 @@ MAKEVARS+=			BOOT_GHC_LIBDIR
 BUILDLINK_PASSTHRU_DIRS+=	${BOOT_GHC_LIBDIR}
 
 # Default values for BUILDLINK_INCDIRS.<pkg> are only generated in the
-# barrier. See ../../mk/buildlink3/bsd.buildlink3.mk and
-# ../../mk/bsd.pkg.barrier.mk
+# barrier, which we use in CONFIGURE_ARGS. See
+# ../../mk/buildlink3/bsd.buildlink3.mk and ../../mk/bsd.pkg.barrier.mk
 .PHONY: bootstrap
 BOOT_ARCHIVE.new=		${BOOT_ARCHIVE:S/-${BOOT_VERSION}-/-${PKGVERSION_NOREV}-/}
 .if make(bootstrap)
@@ -253,34 +214,43 @@ bootstrap: barrier
 bootstrap: pre-bootstrap .WAIT ${WRKDIR}/stamp-dist-boot .WAIT post-bootstrap
 .endif
 
-# For normal build we use pkgsrc libffi.so, but for bootkits we can't do
-# that because that would mean bootkits have run-time dependency on
-# it. However, building the bundled one isn't a solution either, because
-# pkgsrc libffi tends to be heavily patched to support our exotic
-# platforms. So we remove ${BUILDLINK_DIR}/lib/libffi.so just before we
-# build our bootkit so that the resulting executables link with the static
-# one.
+# --with-system-libffi is necessary, otherwise GHC tries to build its own
+# copy of libffi, which is bad because the bundled libffi tends not to work
+# flawlessly on exotic platforms we intend to support.
 CONFIGURE_ARGS.boot=	${CONFIGURE_ARGS.common}
 CONFIGURE_ARGS.boot+=	--with-bindist-prefix="ghc-boot-" --with-system-libffi
 
 # Hadrian arguments to use while building a bootkit.
 HADRIAN_ARGS.boot=	${HADRIAN_ARGS.common}
+HADRIAN_ARGS.boot+=	--prefix=${PREFIX:Q} # Needed because of our patch to Rules.BinaryDist
 HADRIAN_ARGS.boot+=	--docs=none
 .if ${OPSYS} == "FreeBSD"
 #   -fsplit-sections appears to corrupt the symbol table of stage 1
 #   libHSghc-*.a(Instances.o) and cause a linkage failure. Either Clang or
-#   LLD is doing something wrong, probably the former.
+#   LLD is doing something wrong, probably the former. TODO: Check and see
+#   if the problem has gone. This workaround bloats the binary size.
 HADRIAN_ARGS.boot+=	--flavour=bootkit
 .else
 HADRIAN_ARGS.boot+=	--flavour=bootkit+split_sections
 .endif
 
+.if make(bootstrap)
 # Determine the version of GHC being used to build the bootkit. We will
 # need this to bootstrap Hadrian.
-.if make(bootstrap)
 BOOT_GHC_VERSION_CMD=	ghc --numeric-version
 BOOT_GHC_VERSION!=	(${BOOT_GHC_VERSION_CMD}) 2>/dev/null || ${ECHO}
 HADRIAN_BOOT_SOURCE:=	${HADRIAN_BOOT_SOURCE:S/${BOOT_VERSION}/${BOOT_GHC_VERSION}/}
+
+# Needed because of our patch to Rules.BinaryDist
+ALL_ENV+=		SYSTEM_DEFAULT_RPATH=${SYSTEM_DEFAULT_RPATH:Q}
+
+# On ELF platforms we use readelf and patchelf to embed relative rpaths
+# into binaries. We cannot use devel/chrpath because it cannot embed rpaths
+# longer than existing ones.
+.  if ${OBJECT_FMT} == "ELF"
+USE_TOOLS+=		readelf
+TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
+.  endif
 .endif
 
 .PHONY: pre-bootstrap
@@ -302,6 +272,25 @@ pre-bootstrap: wrapper
 			that building bootstrapping compiler is impossible."; \
 		${FAIL_MSG}  "Please run \"${MAKE} clean\" first."; \
 	fi
+# Fail early if we don't have tools we're going to use.
+.if ${OBJECT_FMT} == "ELF"
+	${RUN}for prog in patchelf readelf; do \
+		if ! ${TYPE} $$prog >/dev/null 2>&1; then \
+			${ERROR_MSG} "You don't have $$prog in your PATH."; \
+			${FAIL_MSG}  "Perhaps you need to run \"${MAKE} clean\" first?"; \
+		fi; \
+	done
+.elif ${OBJECT_FMT} == "Mach-O"
+	${RUN}for prog in install_name_tool otool; do \
+		if ! ${TYPE} $$prog >/dev/null 2>&1; then \
+		${FAIL_MSG} "You don't have $$prog in your PATH, which is\
+			necessary to build a bootkit."; \
+		fi; \
+	done
+.else
+	${FAIL_MSG} "Sorry but we don't know how to build a bootkit on\
+		platforms whose object format is ${OBJECT_FMT}."
+.endif
 
 ${WRKDIR}/stamp-configure-boot:
 	@${PHASE_MSG} "Configuring bootstrapping compiler ${PKGNAME_NOREV}"
@@ -344,12 +333,6 @@ ${WRKDIR}/stamp-build-boot: ${WRKDIR}/stamp-configure-boot
 				-s ${DISTDIR}/${DIST_SUBDIR}/${HADRIAN_BOOT_SOURCE}
 
 	@${PHASE_MSG} "Building bootstrapping compiler ${PKGNAME_NOREV}"
-	for f in ${BUILDLINK_DIR:Q}/lib/libffi.*; do \
-		case "$$f" in \
-			*.a) :;; \
-			*)   ${RM} -f "$$f";; \
-		esac; \
-	done
 	cd ${WRKSRC} && ${HADRIAN_CMD} ${HADRIAN_ARGS.boot}
 	${TOUCH} ${.TARGET}
 
@@ -367,27 +350,4 @@ post-bootstrap:
 	@${ECHO} "Now you can copy it into ${DISTDIR}/${DIST_SUBDIR} to use as your"
 	@${ECHO} "bootstrap kit. You may want to take a backup in case \"lintpkgsrc -r\""
 	@${ECHO} "removes it."
-	@${ECHO}
-	@${ECHO} "Your bootstrap kit has the following run-time dependencies:"
-.for pkg in ${BOOT_GHC_DEPS}
-	@${PRINTF} "  * %-8s" "${pkg}:"
-.  if ${USE_BUILTIN.${pkg}:tl} == no
-	@${ECHO_N} " pkgsrc ${BUILDLINK_PKGNAME.${pkg}}"
-.  else
-	@${ECHO_N} " native"
-.    if empty(BUILTIN_PKG.${pkg})
-	@${ECHO_N} " (version/variant unknown)"
-.    else
-	@${ECHO_N} " ${BUILTIN_PKG.${pkg}}"
-.    endif
-.  endif
-	@${ECHO}
-.endfor
-.if !empty(BOOT_GHC_PKGSRC_DEPS)
-	@${ECHO}
-	@${ECHO} "Please note that it is generally not a good idea for a bootkit to depend"
-	@${ECHO} "on pkgsrc packages, as pkgsrc tends to move faster than operating systems"
-	@${ECHO} "so your bootkit will bitrot more quickly. You may want to rebuild it"
-	@${ECHO} "without setting PREFER_PKGSRC to \"yes\"."
-.endif
 	@${ECHO} "=========================================================================="

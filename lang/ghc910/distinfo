@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2025/12/22 11:12:21 wiz Exp $
+$NetBSD: distinfo,v 1.12 2025/12/28 05:16:50 pho Exp $
 
 BLAKE2s (ghc-9.10.1-src.tar.xz) = 7e4433ead6349bd073d31803b63e6c39fb3833ad691e985e25bc5b027da7fb85
 SHA512 (ghc-9.10.1-src.tar.xz) = 46d47e7811a19dcce501002ab674d84ab2fcb842309b5094af52dc5ad26bf5b309b160c1b689f3342666013bf4b0587425c60fbd6c637e739839d41a6a96d990
@@ -12,9 +12,6 @@ Size (ghc-9.8.2-boot-aarch64-unknown-netbsd.tar.xz) = 91507768 bytes
 BLAKE2s (ghc-9.8.2-boot-hadrian-ghc910.tar.gz) = 1197d07b5523870c2811df41120a7730cecbd5edd02f7bed13c7c0d463e88a5b
 SHA512 (ghc-9.8.2-boot-hadrian-ghc910.tar.gz) = 41241ca7b09ecc7935f9893983039d1ed0809998387367860543b81f3c9d3350bfe312a6b11170085d62ca4a1a723ae4fdf3efca0195822f641c758a2893c3bb
 Size (ghc-9.8.2-boot-hadrian-ghc910.tar.gz) = 1446610 bytes
-BLAKE2s (ghc-9.8.2-boot-i386-unknown-freebsd.tar.xz) = 7e67d0277b2375024c59243533e9abd05fed5f291bb1e650c6b51ad15882b6e3
-SHA512 (ghc-9.8.2-boot-i386-unknown-freebsd.tar.xz) = eb8fbf004ddd43ee503ae7987be66afe79a15954733bb6d2aae16b281f1436b200d392eefc57571463d0a90f5ae80505b8bb2841cc28b69309d9b8653f3ab4a7
-Size (ghc-9.8.2-boot-i386-unknown-freebsd.tar.xz) = 83193744 bytes
 BLAKE2s (ghc-9.8.2-boot-x86_64-apple-darwin.tar.xz) = fce50342032195058f3d873dabf6ca1a19a3ae0f7f24895af0d07edbfbb1c724
 SHA512 (ghc-9.8.2-boot-x86_64-apple-darwin.tar.xz) = 3c18ddb7217da9158b7623bc7360cbb12326de3c94301a989cbf866801cbad7058002a2c6769c533e56293cd798e9e8cdfe337472af8f4c7ce039d4d1610721d
 Size (ghc-9.8.2-boot-x86_64-apple-darwin.tar.xz) = 94933928 bytes
@@ -38,7 +35,7 @@ SHA1 (patch-hadrian_bootstrap_bootstrap.py) = bf96af392612aad143373f628dcbd3345b
 SHA1 (patch-hadrian_bootstrap_src_Main.hs) = 2e0a7ae2ef195013ca07313c150a7e48b6985e32
 SHA1 (patch-hadrian_src_Builder.hs) = 848aae01ed5e7095ea9e5864d6b6afe23f653b90
 SHA1 (patch-hadrian_src_Hadrian_Haskell_Cabal_Parse.hs) = 6b2d7a4c7b2d63a8a8bf6b089bbb275201d27081
-SHA1 (patch-hadrian_src_Rules_BinaryDist.hs) = 8ea388ce1f380c854be871ee8361d5aace67e9a6
+SHA1 (patch-hadrian_src_Rules_BinaryDist.hs) = ad2d30b42a663d80407cc396f43fffb1e68e4322
 SHA1 (patch-hadrian_src_Rules_Documentation.hs) = 29cef344130c616d9eb0cc9723d06414186d30dd
 SHA1 (patch-hadrian_src_Settings_Builders_Cabal.hs) = 16f2b1fa9d5259ec86773449b9e936b95a2f3219
 SHA1 (patch-hadrian_src_Settings_Builders_Ghc.hs) = e2913e9f83bb36bb0b432a24518c9b6ca2990c6a
