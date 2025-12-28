@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.48 2022/11/17 01:49:17 gdt Exp $
+$NetBSD: distinfo,v 1.49 2025/12/28 14:24:06 adam Exp $
 
-BLAKE2s (reportlab-3.6.12.tar.gz) = 5e1fa732615fa14c9639855beb54a679e2709a83aff1a60f2fd25e00f497d46a
-SHA512 (reportlab-3.6.12.tar.gz) = 99e6ab1cf27cc9e661b3bfd8c71290d94189db6de5e71b2429cccd48bfee5659d5fb46dfc5709e6616877b48bc17241c74282e0d2ecddda2ead16df4c1b6818f
-Size (reportlab-3.6.12.tar.gz) = 4519536 bytes
-SHA1 (patch-setup.py) = 7fdc8414fc6bdb9a10dfde80899ca26525c0d887
+BLAKE2s (pfbfer-20180109.zip) = 87a252ff62247602339e469b2aaaeb3b10af3ca223edc50e789522fa52d566df
+SHA512 (pfbfer-20180109.zip) = 47be62ce173ff3c28580369d30f7dfcf30cbb6c5f3b3f1d36e9427dac1ffe51221af125979a3f0ed1c5ee35b2df77377351cfde50cf93e459d3c299dda210a19
+Size (pfbfer-20180109.zip) = 737561 bytes
+BLAKE2s (reportlab-4.4.7.tar.gz) = 1c94b74a6befe19fd531effc140191e5df909701351b7ef8747021657598e69a
+SHA512 (reportlab-4.4.7.tar.gz) = 0960f8d5fec4fb7a09e1dbd791246ec254a551850b8bb3ad92be2add55550bdbf300dc44ad77f2ab00c73bd16d27349b4dd672582b6b4996d1e2ae426401bc40
+Size (reportlab-4.4.7.tar.gz) = 3714000 bytes
