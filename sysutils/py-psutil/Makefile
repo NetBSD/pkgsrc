@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2025/12/26 10:27:43 adam Exp $
+# $NetBSD: Makefile,v 1.66 2025/12/29 09:03:35 wiz Exp $
 
-DISTNAME=	psutil-7.2.0
+DISTNAME=	psutil-7.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/psutil/}
@@ -19,14 +19,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>0:../../devel/py-test-xdist
 
 USE_TOOLS+=	gmake
 
-# https://github.com/giampaolo/psutil/issues/2465
-#do-test:
-#	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m psutil.tests
-
-# with this method, as of 7.1.0, after installation:
-# 2 failed, 313 passed, 277 skipped, 2 warnings, 365 subtests passes
+# as of 7.2.1
+# 3 failed, 303 passed, 285 skipped
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${GMAKE} test
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${GMAKE} build test
 
 .include "../../lang/python/wheel.mk"
 .include "../../lang/python/tool.mk"

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.63 2025/12/26 10:27:43 adam Exp $
+$NetBSD: distinfo,v 1.64 2025/12/29 09:03:35 wiz Exp $
 
-BLAKE2s (psutil-7.2.0.tar.gz) = 30e96c2f6815ed47102f5a3c37a09073b818b7f1f4911f82df7a592542f86473
-SHA512 (psutil-7.2.0.tar.gz) = d90b6198080b0e33cc24906365d825f8583e1c69f202df1de222b57f0e7140be2357df321406447215d0fd7f2f6f0781d2ba7dd0b4f52e9bef2f22bc2e3c3f3f
-Size (psutil-7.2.0.tar.gz) = 489863 bytes
+BLAKE2s (psutil-7.2.1.tar.gz) = b3309afc1952b643da22cedd2cb1b27fe031c60b6781da39e83804332d1f5179
+SHA512 (psutil-7.2.1.tar.gz) = d9b0b3d55301cb37017875685b4a990c0adaf2f2fb69a2893b4bcd7deeb81a1c141c6ddb1e26c45717f20aa9875cd66b20229d24f7b3687806478cbb4ee83ac5
+Size (psutil-7.2.1.tar.gz) = 490253 bytes
