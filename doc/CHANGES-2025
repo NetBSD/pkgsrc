@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7479 2025/12/29 21:39:59 abs Exp $
+$NetBSD: CHANGES-2025,v 1.7480 2025/12/29 23:05:31 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11040,3 +11040,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/fast_float to 8.2.1 [adam 2025-12-29]
 	Updated misc/stellarium to 25.4 [adam 2025-12-29]
 	Updated audio/py-beets to 2.5.1nb1 [wiz 2025-12-29]
+	Updated chat/matrix-synapse to 1.144.0 [gdt 2025-12-29]
