@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2025/12/21 14:11:35 markd Exp $
+# $NetBSD: Makefile,v 1.49 2025/12/29 09:15:04 markd Exp $
 
 DISTNAME=	kidentitymanagement-${KAPPSVER}
 CATEGORIES=	misc
@@ -12,5 +12,6 @@ LICENSE=	gnu-lgpl-v2
 USE_TOOLS+=	msgmerge
 
 .include "../../textproc/kpimtextedit/buildlink3.mk"
+.include "../../x11/kirigami-addons/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
