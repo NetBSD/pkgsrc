@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/12/23 21:40:13 markd Exp $
+# $NetBSD: Makefile,v 1.2 2025/12/29 10:00:08 markd Exp $
 
 DISTNAME=	kde-gtk-config-${PLASMAVER}
 CATEGORIES=	misc
@@ -8,6 +8,8 @@ COMMENT=	Syncs KDE settings to GTK applications
 LICENSE=	gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/plasma6.mk"
+
+DEPENDS+=	sassc-[0-9]*:../../www/sassc
 
 USE_TOOLS+=	msgmerge pkg-config
 
