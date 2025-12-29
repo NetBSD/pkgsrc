@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7471 2025/12/29 01:56:05 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.7472 2025/12/29 03:10:33 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11030,3 +11030,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/lcov to 2.4 [wiz 2025-12-28]
 	Updated graphics/OpenJPH to 0.26.0 [wiz 2025-12-28]
 	Updated lang/racket to 9.0 [ktnb 2025-12-29]
+	Updated audio/kew to 3.7.3 [ktnb 2025-12-29]
