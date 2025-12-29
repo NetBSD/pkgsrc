@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2025/12/29 17:49:57 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2025/12/29 17:54:57 wiz Exp $
 
 DISTNAME=	beets-2.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beets/}
 
@@ -40,9 +41,7 @@ USE_TOOLS+=	git
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
-# does not support Python 3.14 as of 2.5.1
-# https://github.com/beetbox/beets/issues/6230
-PYTHON_VERSIONS_INCOMPATIBLE=	310 314
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 # as of 2.5.1
 # 1082 passed, 101 skipped
@@ -60,6 +59,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/man/beet.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/beet-${PYVERSSUFFIX}.1
 	${INSTALL_DATA} ${WRKSRC}/man/beetsconfig.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/beetsconfig-${PYVERSSUFFIX}.5
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} beet beet-${PYVERSSUFFIX} || ${TRUE}
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/beets/ui/__init__.py.orig
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/beetsplug/lyrics.py.orig
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"

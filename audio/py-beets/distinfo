@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.26 2025/10/19 18:42:55 wiz Exp $
+$NetBSD: distinfo,v 1.27 2025/12/29 17:54:57 wiz Exp $
 
 BLAKE2s (beets-2.5.1.tar.gz) = 41091492b86070d8b52fa354466ee02923c2ea229809b89d4fa64d15dd432a1b
 SHA512 (beets-2.5.1.tar.gz) = 289f68804e7293e93044b7ab7ed1537e0cbf07bb4e0f081d89875fabdb22af747f377dde30bf9d489086dd53525cbac348ec3b5c9642fdb551eeda63e2b5dcc0
 Size (beets-2.5.1.tar.gz) = 2147257 bytes
+SHA1 (patch-beets_ui_____init____.py) = d424cb78976cd619840e317f68470cdb51c709bf
+SHA1 (patch-beetsplug_lyrics.py) = e113e8ccd31510e8850e7d12a4f2f9849032af1e
