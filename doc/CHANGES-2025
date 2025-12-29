@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7476 2025/12/29 17:34:58 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.7477 2025/12/29 17:40:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11036,3 +11036,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-coverage to 7.13.1 [adam 2025-12-29]
 	Updated news/sfeed to 2.3 [leot 2025-12-29]
 	Updated lang/sbcl to 2.6.0 [ktnb 2025-12-29]
+	Updated math/fast_float to 8.2.1 [adam 2025-12-29]
+	Updated misc/stellarium to 25.4 [adam 2025-12-29]
