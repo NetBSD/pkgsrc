@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7474 2025/12/29 11:43:40 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7475 2025/12/29 12:50:39 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11034,3 +11034,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-psutil to 7.2.1 [wiz 2025-12-29]
 	Updated net/py-tldextract to 5.3.1 [adam 2025-12-29]
 	Updated devel/py-coverage to 7.13.1 [adam 2025-12-29]
+	Updated news/sfeed to 2.3 [leot 2025-12-29]
