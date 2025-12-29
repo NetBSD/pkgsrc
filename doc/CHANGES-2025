@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7475 2025/12/29 12:50:39 leot Exp $
+$NetBSD: CHANGES-2025,v 1.7476 2025/12/29 17:34:58 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11035,3 +11035,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-tldextract to 5.3.1 [adam 2025-12-29]
 	Updated devel/py-coverage to 7.13.1 [adam 2025-12-29]
 	Updated news/sfeed to 2.3 [leot 2025-12-29]
+	Updated lang/sbcl to 2.6.0 [ktnb 2025-12-29]
