@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7473 2025/12/29 09:03:51 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7474 2025/12/29 11:43:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11032,3 +11032,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/racket to 9.0 [ktnb 2025-12-29]
 	Updated audio/kew to 3.7.3 [ktnb 2025-12-29]
 	Updated sysutils/py-psutil to 7.2.1 [wiz 2025-12-29]
+	Updated net/py-tldextract to 5.3.1 [adam 2025-12-29]
+	Updated devel/py-coverage to 7.13.1 [adam 2025-12-29]
