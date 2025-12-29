@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7478 2025/12/29 17:55:15 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7479 2025/12/29 21:39:59 abs Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -10990,6 +10990,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pipx to 1.8.0 [adam 2025-12-27]
 	Updated wm/i3 to 4.25 [wiz 2025-12-27]
 	Updated cad/py-PyRTL to 0.12nb1 [ryoon 2025-12-27]
+	Updated databases/mongodb4 to 4.4.30 [abs 2025-12-27]
 	Updated net/powerdns to 5.0.2 [wiz 2025-12-27]
 	Updated graphics/py-Willow to 1.12.0 [adam 2025-12-27]
 	Updated www/py-WebTest to 3.0.7 [adam 2025-12-27]
