@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2023/10/24 22:10:49 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/12/29 10:12:01 wiz Exp $
 
 DISTNAME=	hydan-0.13
 PKGREVISION=	6
 CATEGORIES=	security
-MASTER_SITES=	http://crazyboy.com/hydan/
+#MASTER_SITES=	http://crazyboy.com/hydan/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://crazyboy.com/hydan/
+#HOMEPAGE=	http://crazyboy.com/hydan/
 COMMENT=	Steganography tool for covert comms, signing and watermarking
 
 ONLY_FOR_PLATFORM=	*-*-i386
