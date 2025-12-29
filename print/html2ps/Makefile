@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.46 2025/04/27 08:07:20 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2025/12/29 10:11:07 wiz Exp $
 
 DISTNAME=	html2ps-1.0b7
 PKGREVISION=	14
 CATEGORIES=	print
-MASTER_SITES=	#http://user.it.uu.se/~jan/
+#MASTER_SITES=	#http://user.it.uu.se/~jan/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://user.it.uu.se/~jan/html2ps.html
+#HOMEPAGE=	http://user.it.uu.se/~jan/html2ps.html
 COMMENT=	HTML to PostScript converter
 
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
