@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7472 2025/12/29 03:10:33 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.7473 2025/12/29 09:03:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11031,3 +11031,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/OpenJPH to 0.26.0 [wiz 2025-12-28]
 	Updated lang/racket to 9.0 [ktnb 2025-12-29]
 	Updated audio/kew to 3.7.3 [ktnb 2025-12-29]
+	Updated sysutils/py-psutil to 7.2.1 [wiz 2025-12-29]
