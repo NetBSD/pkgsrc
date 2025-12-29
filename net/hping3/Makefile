@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/03/03 20:29:28 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/12/29 10:10:17 wiz Exp $
 
 DISTNAME=		hping3-alpha-2
 PKGNAME=		hping3-3a2
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		#
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://wiki.hping.org/
+#HOMEPAGE=		http://wiki.hping.org/
 COMMENT=		Command-line oriented TCP/IP packet assembler/analyzer
 LICENSE=		gnu-gpl-v2 AND original-bsd
 
