@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.87 2025/12/28 15:47:50 gdt Exp $
+$NetBSD: distinfo,v 1.88 2025/12/29 23:05:25 gdt Exp $
 
 BLAKE2s (aho-corasick-1.1.3.crate) = 36150b5dacb72fa7cd0d33aee15e14857914224878f0af76eabcb9daa68e3ae0
 SHA512 (aho-corasick-1.1.3.crate) = ba422a54688c4678fcf16e34fdf3ed06c333e6e3fc8b75af9272a215add494d43ebaef319021134b61327fd5d3572aec0dc655b714ffb3bc71ba3c265c9ebb69
@@ -126,9 +126,9 @@ Size (heck-0.5.0.crate) = 11517 bytes
 BLAKE2s (hex-0.4.3.crate) = 299902a1da9d88101e5b8b06dde30b77e8f7a802285aae519981ada5959383f8
 SHA512 (hex-0.4.3.crate) = fd8ff33b68eea2d6f2c6b02a6d82a2807cbcdc209ca5a76e3e3e5d006917ee151f236b6d18e2646cc9a9674bcdda1d6ce6ee363a89cadd99bef00d0eea9989e6
 Size (hex-0.4.3.crate) = 13299 bytes
-BLAKE2s (http-1.3.1.crate) = eb05c22ce1a43f9145af09f5cdd7154fe2cbbb87c7ede05586fe4b53990e686a
-SHA512 (http-1.3.1.crate) = 20c6a049d93294e081150991eec281f531d2f2aa66b04b5d51585995bd07c1f9748df7f21a4f94fddf4cb04872c83d77822cce12b2d65778ea55197666e550ac
-Size (http-1.3.1.crate) = 106063 bytes
+BLAKE2s (http-1.4.0.crate) = e661794dab202d28f4ca09677227030c2d75c1b56916900b6ddd2b706358f73f
+SHA512 (http-1.4.0.crate) = f85bed2e41ae4cb97a3bbd69392ec660c66e2f8eda2dadfdff6328986e68e4563fc04c7fbabf08b811f2be3dce3ed2ba84e1ef8974fdb587b11615a288e4c897
+Size (http-1.4.0.crate) = 106978 bytes
 BLAKE2s (http-body-1.0.1.crate) = 095da94c17f05738a7e5e0d6681aa805d14882003a246704cc0b70f19b9206c9
 SHA512 (http-body-1.0.1.crate) = 3d9a711619e5b14d2188fa42bbd43653dceeeb7e172cbd96d36fdf37846fa2c1efa0fad019395a4fa6da2e139875934aa56caf7332dc40546095b0a774ca39bd
 Size (http-body-1.0.1.crate) = 6125 bytes
@@ -225,9 +225,9 @@ Size (log-0.4.28.crate) = 51131 bytes
 BLAKE2s (lru-slab-0.1.2.crate) = aa3f3674478a76b09b52e1c77b3fc8382ad771a643b4184baf095d0dd7f35d1b
 SHA512 (lru-slab-0.1.2.crate) = eb93796ffaccafd2e2530efeaf60dab1eeb17fe61652a9299c220cea4dd9099239eb549ae1259ac272c5aa807eebfaec6db4dc5efc95ee59365d3fd1d413f60f
 Size (lru-slab-0.1.2.crate) = 9090 bytes
-BLAKE2s (matrix-synapse-1.143.0.tar.gz) = c1c85779d5e83346bcd81be8a8ed8d582c2a5e2bfffc9358438d642fffee4c8b
-SHA512 (matrix-synapse-1.143.0.tar.gz) = e804e5845e65a8c37d517b30d1649c52cc4b5355c2c76633df55fd08f7da44d3ac935b196935b59eec81d16701ca4bc0567c0ce4de0d12f122bacca10c914bcf
-Size (matrix-synapse-1.143.0.tar.gz) = 9191731 bytes
+BLAKE2s (matrix-synapse-1.144.0.tar.gz) = 18e841b4cc33f87e92404453b0bf238bef0eff650e934c0df09f9ccfb7ff8912
+SHA512 (matrix-synapse-1.144.0.tar.gz) = 87961796797ee1bba68b70c9e4dc04bd07ceab82f02a5c503adb34a66963b385081e30be68eb7f0ca218e66b1f350edd1b0650b19a481c3bc5e8503fe238ec8b
+Size (matrix-synapse-1.144.0.tar.gz) = 9204917 bytes
 BLAKE2s (memchr-2.7.5.crate) = 741834638b9ed49c5a8ab61a0aeac280a8d91d104fafe3c7219d313131694001
 SHA512 (memchr-2.7.5.crate) = 2606ee16a7dc02db95dac17cebd2cac9deb2e23d7ea62972cdb19145c06eaf75631347a49c4e6ceeff89fb6e90e992f9bca0a9c955eb5130f89ba2bd865936e1
 Size (memchr-2.7.5.crate) = 97603 bytes
