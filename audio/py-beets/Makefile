@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2025/10/19 18:42:55 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2025/12/29 17:49:57 wiz Exp $
 
 DISTNAME=	beets-2.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -40,7 +40,9 @@ USE_TOOLS+=	git
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+# does not support Python 3.14 as of 2.5.1
+# https://github.com/beetbox/beets/issues/6230
+PYTHON_VERSIONS_INCOMPATIBLE=	310 314
 
 # as of 2.5.1
 # 1082 passed, 101 skipped
