@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.32 2025/12/28 15:47:50 gdt Exp $
+# $NetBSD: cargo-depends.mk,v 1.33 2025/12/29 23:05:25 gdt Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.100
@@ -42,7 +42,7 @@ CARGO_CRATE_DEPENDS+=	headers-0.4.1
 CARGO_CRATE_DEPENDS+=	headers-core-0.3.0
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
 CARGO_CRATE_DEPENDS+=	hex-0.4.3
-CARGO_CRATE_DEPENDS+=	http-1.3.1
+CARGO_CRATE_DEPENDS+=	http-1.4.0
 CARGO_CRATE_DEPENDS+=	http-body-1.0.1
 CARGO_CRATE_DEPENDS+=	http-body-util-0.1.3
 CARGO_CRATE_DEPENDS+=	httparse-1.10.1
