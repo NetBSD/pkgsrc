@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2015/03/10 02:41:57 tnn Exp $
-#
+# $NetBSD: Makefile,v 1.5 2025/12/30 08:10:46 wiz Exp $
 
 DISTNAME=	i810switch-0.6.5
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www16.plala.or.jp/mano-a-mano/i810switch/
+#MASTER_SITES=	http://www16.plala.or.jp/mano-a-mano/i810switch/
 
 MAINTAINER=	christos@NetBSD.org
-HOMEPAGE=	http://www16.plala.or.jp/mano-a-mano/i810switch/
+#HOMEPAGE=	http://www16.plala.or.jp/mano-a-mano/i810switch/
 COMMENT=	Switch LCD/CRT 855/865/915 Intel chips
 LICENSE=	gnu-gpl-v2
 
