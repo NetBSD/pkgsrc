@@ -1,0 +1,11 @@
+#!/bin/sh
+
+XINITRC="$HOME/.xinitrc"
+if [ ! -f "$XINITRC" ] ; then
+        XINITRC="/etc/X11/xinit/xinitrc"
+fi
+
+if [ -n "$XINITRC" -a -f "$XINITRC" ] ; then
+        test -x "$XINITRC" && exec "$XINITRC"
+        test -f "$XINITRC" && exec /bin/sh "$XINITRC"
+fi

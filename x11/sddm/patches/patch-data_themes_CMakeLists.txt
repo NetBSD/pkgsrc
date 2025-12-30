@@ -1,0 +1,12 @@
+$NetBSD: patch-data_themes_CMakeLists.txt,v 1.1 2025/12/30 04:00:09 gutteridge Exp $
+
+Disable installation of themes distributed under an unsupported license.
+
+--- data/themes/CMakeLists.txt.orig	2025-10-05 08:19:57.818176883 +0000
++++ data/themes/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-set(THEMES elarun maldives maya)
++set(THEMES elarun)
+ 
+ foreach(THEME ${THEMES})
+     # We assume that theme-specific translations are stored
