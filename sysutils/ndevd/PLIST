@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2025/12/30 11:06:20 kikadf Exp $
+include/ndevd.h
+man/man8/ndevd.8
+sbin/ndevd
+share/examples/rc.d/ndevd

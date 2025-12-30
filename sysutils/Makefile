@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1180 2025/12/23 09:03:05 markd Exp $
+# $NetBSD: Makefile,v 1.1181 2025/12/30 11:06:20 kikadf Exp $
 #
 
 COMMENT=	System utilities
@@ -498,6 +498,7 @@ SUBDIR+=	ncdu
 SUBDIR+=	ncdu2
 SUBDIR+=	ndesk-dbus
 SUBDIR+=	ndesk-dbus-glib
+SUBDIR+=	ndevd
 SUBDIR+=	neb-wipe
 SUBDIR+=	neofetch
 SUBDIR+=	netbsd_exporter

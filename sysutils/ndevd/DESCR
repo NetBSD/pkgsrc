@@ -1,0 +1,5 @@
+NetBSD's devpubd (device publish daemon for automatic
+device node creation) extend with event forwarding.
+Since drvctl(4) allows	only one active reader, ndevd
+multiplexes it, forwarding all events to the connected
+clients.
