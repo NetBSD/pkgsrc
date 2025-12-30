@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:05:50 nia Exp $
+$NetBSD: distinfo,v 1.4 2025/12/30 02:18:47 markd Exp $
 
-BLAKE2s (kdsoap-1.9.1.tar.gz) = 38ee8bd3eb0396e358c784a1b4531f047e33d428598b2a7e394f5830660db2e7
-SHA512 (kdsoap-1.9.1.tar.gz) = 55803cc220b99d84e95dce10cd9a57a591ac1d3e25194ec4bdcd17a51546759b6abe454e675640362442628de24b52eb91ec4c89615c1ca16c1e089ca4bedd7c
-Size (kdsoap-1.9.1.tar.gz) = 1389570 bytes
+BLAKE2s (kdsoap-2.2.0.tar.gz) = ebf0573c933fa2947f1fc37611d5b739c716105b7e39f63c1ca33d2605cd163d
+SHA512 (kdsoap-2.2.0.tar.gz) = 6ed5cd6a0d02a9faf6881facbd28391c553b3671512153ecd058ab53bfbe9d3f0afa3704d580e66010ddf6a3de7e578a632339f8c1ae7529c28f9d5fd7d1eb5f
+Size (kdsoap-2.2.0.tar.gz) = 11918875 bytes
