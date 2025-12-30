@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2025/12/22 21:02:54 pin Exp $
+# $NetBSD: Makefile,v 1.42 2025/12/30 12:04:33 pin Exp $
 
 DISTNAME=	t-rec-rs-0.8.2
 PKGNAME=	t-rec-0.8.2
@@ -20,12 +20,12 @@ TOOL_DEPENDS+=	glib2-[0-9]*:../../devel/glib2
 #Upstream does not state the required MSRV.
 #This package is confirmed to build with Rust 1.92.0 on amd64
 
-# This package has an optional dependency on ffmpeg7.
+# This package has an optional dependency on ffmpeg8.
 # If you would like to save recordings as mp4 files instead of gif,
-# please make sure you have ffmpeg7 installed.
+# please make sure you have ffmpeg8 installed.
 SUBST_CLASSES+=		ffmpeg
 SUBST_FILES.ffmpeg+=	src/generators/mp4.rs
-SUBST_SED.ffmpeg+=	-e 's,"ffmpeg","ffmpeg7",'
+SUBST_SED.ffmpeg+=	-e 's,"ffmpeg","ffmpeg8",'
 SUBST_STAGE.ffmpeg=	pre-build
 SUBST_MESSAGE.ffmpeg=	Fixing path to ffmpeg binary.
 
