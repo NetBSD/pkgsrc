@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7485 2025/12/30 08:33:49 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7486 2025/12/30 10:54:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11052,3 +11052,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/ansible-lint to 25.12.2 [adam 2025-12-30]
 	Updated sysutils/py-borgbackup to 1.4.3 [adam 2025-12-30]
 	Updated devel/py-termcolor to 3.3.0 [adam 2025-12-30]
+	Updated security/vaultwarden to 1.35.0 [adam 2025-12-30]
+	Updated math/liblinear to 2.50 [adam 2025-12-30]
