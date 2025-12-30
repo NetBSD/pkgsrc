@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/07/04 08:48:12 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/12/30 08:17:16 wiz Exp $
 
 DISTNAME=	igor
 PKGNAME=	igor-0.0.20140517
@@ -9,7 +9,7 @@ DISTFILES=	igor igor.pdf readme.txt
 EXTRACT_SUFX=	# none
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.wonkity.com/~wblock/igor/
+#HOMEPAGE=	http://www.wonkity.com/~wblock/igor/
 COMMENT=	FreeBSD Project documentation sanity checker
 LICENSE=	2-clause-bsd
 
