@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2025/07/11 09:03:57 adam Exp $
+$NetBSD: distinfo,v 1.19 2025/12/30 14:18:18 adam Exp $
 
-BLAKE2s (pyobjc_framework_coreservices-11.1.tar.gz) = fddcf149157ba9f690b4e81d4125ded04c1e58a451dc2e274c20867a99ce027a
-SHA512 (pyobjc_framework_coreservices-11.1.tar.gz) = cff2eeaf36b082ff8b169d9d7566faae6c5a398675242234daaec7e7afb0148138b73cb2126d3e5c44b15bccbec2876ce9423059d78bb3bbec831e1c8c667351
-Size (pyobjc_framework_coreservices-11.1.tar.gz) = 1245086 bytes
+BLAKE2s (pyobjc_framework_coreservices-12.1.tar.gz) = 6fda7c31865832ca6baa8ec6fe4084ad9f31a2ff6e13315d89f2a8814a6569a0
+SHA512 (pyobjc_framework_coreservices-12.1.tar.gz) = fd1ada6989fcad6a2964bc6153b2372e09de1612f76f7f07b4073d351d8dedfbf3ec348bf514898f5945cd5332912a9bb20922c2ace82a6ed97e900fd09112a5
+Size (pyobjc_framework_coreservices-12.1.tar.gz) = 366150 bytes

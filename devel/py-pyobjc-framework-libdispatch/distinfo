@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2025/07/11 09:04:02 adam Exp $
+$NetBSD: distinfo,v 1.22 2025/12/30 14:18:22 adam Exp $
 
-BLAKE2s (pyobjc_framework_libdispatch-11.1.tar.gz) = dab7d29f45df5679ec50fa6663a1e98d568f4661a5f1ba0388179f12e71bc874
-SHA512 (pyobjc_framework_libdispatch-11.1.tar.gz) = c63e3a20151ef23a448b58c4c926131c65f92f62cfb49ddb2702e8aa24a74af7a7b3b898007c31bb5a955a0a0a9ec6de714f2565556ad4eefec0cfb3ed71b2cd
-Size (pyobjc_framework_libdispatch-11.1.tar.gz) = 53942 bytes
+BLAKE2s (pyobjc_framework_libdispatch-12.1.tar.gz) = 8c2b27160f4ddda1c102c21cbec825595910512013321c7ea387718b43cd5076
+SHA512 (pyobjc_framework_libdispatch-12.1.tar.gz) = a6cde4644fd739ab6f5075893ce5b5ab8e7950cb8360e2c8bbd47a00071545e0d71e400521e8ec2a738cff609edb07f0e816239e24c028bf74822e6e5a8e9bae
+Size (pyobjc_framework_libdispatch-12.1.tar.gz) = 38277 bytes

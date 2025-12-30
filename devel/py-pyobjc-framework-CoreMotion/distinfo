@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/07/11 09:03:56 adam Exp $
+$NetBSD: distinfo,v 1.11 2025/12/30 14:18:17 adam Exp $
 
-BLAKE2s (pyobjc_framework_coremotion-11.1.tar.gz) = d1a884552cc1db404359d748c89050598cff8a4af6e77ee57984bd7df436714b
-SHA512 (pyobjc_framework_coremotion-11.1.tar.gz) = 1d330598cc5bd865b383bbac2cf30dd5a950b13b82ccf08b309c9bf5f0d8f08d86a462fad9f9567863f1f31a81405e58949eadc5e543c75355d0e71ece7f83fd
-Size (pyobjc_framework_coremotion-11.1.tar.gz) = 67050 bytes
+BLAKE2s (pyobjc_framework_coremotion-12.1.tar.gz) = c320d04803f9f0a75697ecdb5ffd7785bc941926355477ef7e3ce622c21914c1
+SHA512 (pyobjc_framework_coremotion-12.1.tar.gz) = 683b6e5877f81e6f0b807f1e353eccfd9a6b5359b3b2559253ba1f7dafd3c9353e75fefdca5603b5ff2d0182471f7bb58fcc74e6f84db70bc7fb2653200d638a
+Size (pyobjc_framework_coremotion-12.1.tar.gz) = 33851 bytes

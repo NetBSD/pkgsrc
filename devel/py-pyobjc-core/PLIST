@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/02/05 08:05:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/12/30 14:18:13 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -110,6 +110,9 @@ ${PYSITELIB}/objc/_structtype.pyo
 ${PYSITELIB}/objc/_transform.py
 ${PYSITELIB}/objc/_transform.pyc
 ${PYSITELIB}/objc/_transform.pyo
+${PYSITELIB}/objc/_types.py
+${PYSITELIB}/objc/_types.pyc
+${PYSITELIB}/objc/_types.pyo
 ${PYSITELIB}/objc/simd.py
 ${PYSITELIB}/objc/simd.pyc
 ${PYSITELIB}/objc/simd.pyo

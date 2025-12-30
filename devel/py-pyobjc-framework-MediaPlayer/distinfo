@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2025/07/11 09:04:03 adam Exp $
+$NetBSD: distinfo,v 1.22 2025/12/30 14:18:23 adam Exp $
 
-BLAKE2s (pyobjc_framework_mediaplayer-11.1.tar.gz) = 63a26539fbbabea00426448ad54b27ec7fa6815b71c05f17d1e1dd0b0f372020
-SHA512 (pyobjc_framework_mediaplayer-11.1.tar.gz) = 4d0967e8934a62892fd8d85f80532e6144b3b81fd99be9d83d587b4e8402b4f8e1f95a1b60f37ef80dc4831db4b404d47172c92c4ca33379684efb91a3d409a5
-Size (pyobjc_framework_mediaplayer-11.1.tar.gz) = 93749 bytes
+BLAKE2s (pyobjc_framework_mediaplayer-12.1.tar.gz) = dbdc1a8f52e39b4a6ce73d3041e810a780f7797d7dc8e15e708d002cd148c6b1
+SHA512 (pyobjc_framework_mediaplayer-12.1.tar.gz) = 7c8ab32198362e06b5482553d3d9e6c16318b06eba193e9209678eed6e690ca0edf1e07c91238ec886068a2083988ad1a03b95c5bb2eb6bced6219a281f62961
+Size (pyobjc_framework_mediaplayer-12.1.tar.gz) = 35402 bytes
