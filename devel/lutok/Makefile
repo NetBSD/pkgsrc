@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.16 2025/03/30 07:51:22 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/12/30 13:11:36 adam Exp $
 
-DISTNAME=	lutok-0.6.1
+DISTNAME=	lutok-0.6.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=freebsd/}
 GITHUB_RELEASE=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/freebsd/lutok/
+HOMEPAGE=	https://github.com/freebsd/lutok
 COMMENT=	Lightweight C++ API for Lua
 LICENSE=	modified-bsd
 
+USE_CXX_FEATURES=	c++20
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES+=	c++14
 USE_LIBTOOL=		yes
 USE_TOOLS=		pkg-config
 GNU_CONFIGURE=		yes
