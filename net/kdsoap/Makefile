@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2025/10/23 20:38:48 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/12/30 02:18:47 markd Exp $
 #
 
-DISTNAME=	kdsoap-1.9.1
-PKGREVISION=	19
+DISTNAME=	kdsoap-2.2.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KDAB/}
 GITHUB_PROJECT=	KDSoap
@@ -13,10 +12,11 @@ HOMEPAGE=	https://github.com/KDAB/KDSoap
 COMMENT=	Qt-based client-side and server-side SOAP component
 LICENSE=	gnu-agpl-v3
 
-USE_CMAKE=	yes
+.include "../../devel/cmake/build.mk"
+
 USE_LANGUAGES=	c c++
 
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+CMAKE_CONFIGURE_ARGS+=	-DKDSoap_QT6=ON
 
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
