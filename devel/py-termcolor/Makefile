@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/10/28 09:52:05 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/12/30 08:33:32 adam Exp $
 
-DISTNAME=	termcolor-3.2.0
+DISTNAME=	termcolor-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/termcolor/}
