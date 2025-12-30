@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/11/15 12:14:32 wen Exp $
+# $NetBSD: Makefile,v 1.2 2025/12/30 08:17:37 wiz Exp $
 
 DISTNAME=	igraph-${V}
 V=		1.0.0
@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=igraph/}
 
 MAINTAINER=	wen@NetBSD.org
-HOMEPAGE=	http://igraph.org/
+HOMEPAGE=	https://igraph.org/
 COMMENT=	Package For Manipulating Undirected And Directed Graphs
 LICENSE=	gnu-gpl-v2
 
