@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7486 2025/12/30 10:54:07 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7487 2025/12/30 11:07:45 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11054,3 +11054,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-termcolor to 3.3.0 [adam 2025-12-30]
 	Updated security/vaultwarden to 1.35.0 [adam 2025-12-30]
 	Updated math/liblinear to 2.50 [adam 2025-12-30]
+	Updated sysutils/ndevd to 25.12.09 [kikadf 2025-12-30]
