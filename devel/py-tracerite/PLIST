@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2025/12/27 08:24:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/12/30 13:35:36 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/tracerite/__init__.py
 ${PYSITELIB}/tracerite/__init__.pyc
 ${PYSITELIB}/tracerite/__init__.pyo
+${PYSITELIB}/tracerite/chain_analysis.py
+${PYSITELIB}/tracerite/chain_analysis.pyc
+${PYSITELIB}/tracerite/chain_analysis.pyo
 ${PYSITELIB}/tracerite/fastapi.py
 ${PYSITELIB}/tracerite/fastapi.pyc
 ${PYSITELIB}/tracerite/fastapi.pyo
