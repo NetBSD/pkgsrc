@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/08/02 10:25:23 adam Exp $
+$NetBSD: distinfo,v 1.8 2025/12/30 13:41:50 adam Exp $
 
-BLAKE2s (flufl_i18n-5.2.0.tar.gz) = 8629dcb06cc54d8565afbefa565687b3a4017d4495fe7f4b737eb86b72861040
-SHA512 (flufl_i18n-5.2.0.tar.gz) = a176a82e3ce8f3152b980d31ac5578682cb6aa8b1b8962f62c23f3337255cd26f7dcac537c3011ec3483f0176186a08c2a54a8bc6ad7afbc85651b8147988f0c
-Size (flufl_i18n-5.2.0.tar.gz) = 18948 bytes
+BLAKE2s (flufl_i18n-6.0.0.tar.gz) = 7d251428299add005155c61059dd1256a8cec0afd110e50e0917d30ec9da6c8d
+SHA512 (flufl_i18n-6.0.0.tar.gz) = 506cb4553e9c8ad2d37ca6e51f0b414c7f8301b20f1d44f88dd7e8dffd3a1ebbb6b03c1310dbc79637db28a546ebb6f3e12c684449a878fadef49b6f96962620
+Size (flufl_i18n-6.0.0.tar.gz) = 21623 bytes
