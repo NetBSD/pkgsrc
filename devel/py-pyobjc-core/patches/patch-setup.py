@@ -1,10 +1,10 @@
-$NetBSD: patch-setup.py,v 1.9 2025/07/11 09:03:51 adam Exp $
+$NetBSD: patch-setup.py,v 1.10 2025/12/30 14:18:13 adam Exp $
 
 Do not add debug symbols.
 Do not override compiler optimiztion flags.
 Avoid a hack.
 
---- setup.py.orig	2025-06-14 19:43:45.000000000 +0000
+--- setup.py.orig	2025-11-01 07:21:30.000000000 +0000
 +++ setup.py
 @@ -67,7 +67,6 @@ def get_sdk_level(sdk):
  
@@ -37,9 +37,9 @@ Avoid a hack.
 -    "-g",
 -    "-O3",
      "-flto=thin",
+     # "-O0",
      "-fexceptions",
-     # "-fsanitize-thread-atomics",
-@@ -251,8 +242,6 @@ class oc_test(Command):
+@@ -252,8 +243,6 @@ class oc_test(Command):
          self.__old_path = sys.path[:]
          self.__old_modules = sys.modules.copy()
  

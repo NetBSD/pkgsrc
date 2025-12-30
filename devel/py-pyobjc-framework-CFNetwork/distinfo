@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2025/07/11 09:03:54 adam Exp $
+$NetBSD: distinfo,v 1.24 2025/12/30 14:18:15 adam Exp $
 
-BLAKE2s (pyobjc_framework_cfnetwork-11.1.tar.gz) = 0a1684d959299f445d145f1d7703d9fc59e1c46adb76316a84462e12a51ac2a2
-SHA512 (pyobjc_framework_cfnetwork-11.1.tar.gz) = c2fa48c925af3154c512fd38bfd917595be5df18bc77d125264db95499e0eca8d6b5ebd10f09c5d44e94bea7043aed2e0c7afc0c67d7103fa86c873b221eb566
-Size (pyobjc_framework_cfnetwork-11.1.tar.gz) = 79069 bytes
+BLAKE2s (pyobjc_framework_cfnetwork-12.1.tar.gz) = 5b21a036c649b3e8589051296c91a7fd17d663b5c9e7e0e5bba7e218f70a23e1
+SHA512 (pyobjc_framework_cfnetwork-12.1.tar.gz) = cb8c4b2468a246d7030d55ae6141ba78e6ff05d7b46faa323138c2b85f853ddee22505323412c856ab323732b8a6e0404405eb0de7748481215a1ca08e0c302d
+Size (pyobjc_framework_cfnetwork-12.1.tar.gz) = 44383 bytes

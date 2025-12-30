@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/07/11 09:03:56 adam Exp $
+$NetBSD: distinfo,v 1.11 2025/12/30 14:18:17 adam Exp $
 
-BLAKE2s (pyobjc_framework_corehaptics-11.1.tar.gz) = d354b743b677e3d3bb7de9d159991b9c391034f5b8d8a37e03c770cb40114ce7
-SHA512 (pyobjc_framework_corehaptics-11.1.tar.gz) = b7f82d528f74bd5cf045acf9fd43bc71064f825426c079a3914eb1f29e16e43a26a891d3216d13ca1b9b65ea5609067a6c71ac6afd029417119f218b5d799c7c
-Size (pyobjc_framework_corehaptics-11.1.tar.gz) = 42722 bytes
+BLAKE2s (pyobjc_framework_corehaptics-12.1.tar.gz) = 8ce3ee7b0823b1a0920cec46b65a8e66665230c069c43c8b22894e8c3b651463
+SHA512 (pyobjc_framework_corehaptics-12.1.tar.gz) = 25420026290f667a3033ee797799f7409e791fac77b9c5acbc8b51972a306107871e80965725e10d17d2bc50479ac031ae41ae0ad63db9861831a23309c8c172
+Size (pyobjc_framework_corehaptics-12.1.tar.gz) = 22164 bytes

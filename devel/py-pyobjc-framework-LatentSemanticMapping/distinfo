@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2025/07/11 09:04:01 adam Exp $
+$NetBSD: distinfo,v 1.24 2025/12/30 14:18:22 adam Exp $
 
-BLAKE2s (pyobjc_framework_latentsemanticmapping-11.1.tar.gz) = aebda4598ed162fa5a25a102cf1b79c4eafad337469eba0610c37d8f87caa1a6
-SHA512 (pyobjc_framework_latentsemanticmapping-11.1.tar.gz) = 904001d08fd871ebe67e456d9a23d123af8b80fd7f70aeabb97189fc7bb5af68cd69fdcbf4b11d47e43d6584d79000e8c08b13dcf0b3e6dd785df991235f632c
-Size (pyobjc_framework_latentsemanticmapping-11.1.tar.gz) = 17444 bytes
+BLAKE2s (pyobjc_framework_latentsemanticmapping-12.1.tar.gz) = 96c11551ac2ae98e965a82117d915f1d395f8e160d33e98d4febcfcfc40bbd9e
+SHA512 (pyobjc_framework_latentsemanticmapping-12.1.tar.gz) = 69ca461988c7574aa67558ab44ba7c6216b510c324abd457e0a3337e367385a6f6959ccc1aa7a95548ab667f3c3930d513c71af5ce4d320eb03eb0c3387c3e3c
+Size (pyobjc_framework_latentsemanticmapping-12.1.tar.gz) = 15526 bytes
