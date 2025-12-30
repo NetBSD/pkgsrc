@@ -1,0 +1,6 @@
+A libudev compatible interface for BSD systems,
+based on the libudev-devd project for FreeBSD.
+Includes changes from libudev-openbsd to support
+OpenBSD, and incorporates patches from DPorts
+for DragonFly support. NetBSD support is provided
+via drvctl(4), using ndevd.
