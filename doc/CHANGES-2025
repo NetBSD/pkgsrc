@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7493 2025/12/30 13:12:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7494 2025/12/30 13:20:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11062,3 +11062,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-alembic to 1.17.2 [adam 2025-12-30]
 	Updated devel/lutok to 0.6.2 [adam 2025-12-30]
 	Updated devel/pkgconf to 2.5.1 [adam 2025-12-30]
+	Updated devel/py-mocket to 3.14.0 [adam 2025-12-30]
+	Updated devel/py-pygit2 to 1.19.1 [adam 2025-12-30]
