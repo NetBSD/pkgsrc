@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7492 2025/12/30 12:57:21 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7493 2025/12/30 13:12:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11060,3 +11060,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 28.8.0 [pin 2025-12-30]
 	Updated mail/py-checkdmarc to 5.13.1 [adam 2025-12-30]
 	Updated databases/py-alembic to 1.17.2 [adam 2025-12-30]
+	Updated devel/lutok to 0.6.2 [adam 2025-12-30]
+	Updated devel/pkgconf to 2.5.1 [adam 2025-12-30]
