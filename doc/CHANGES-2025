@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7481 2025/12/30 02:35:34 markd Exp $
+$NetBSD: CHANGES-2025,v 1.7482 2025/12/30 04:02:08 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11046,3 +11046,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/kdsoap to 2.2.0 [markd 2025-12-30]
 	Added net/kdsoap-ws-discovery-client version 0.4.0 [markd 2025-12-30]
 	Updated devel/kio-extras to 25.08.3 [markd 2025-12-30]
+	Added x11/sddm version 0.21.0 [gutteridge 2025-12-30]
