@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1076 2025/12/30 02:13:55 markd Exp $
+# $NetBSD: Makefile,v 1.1077 2025/12/30 04:03:36 gutteridge Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -393,6 +393,7 @@ SUBDIR+=	ruby-tk
 SUBDIR+=	rxvt
 SUBDIR+=	rxvt-unicode
 SUBDIR+=	sakura
+SUBDIR+=	sddm
 SUBDIR+=	sessreg
 SUBDIR+=	setxkbmap
 SUBDIR+=	slim
