@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2024/02/06 10:46:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2025/12/30 01:56:34 markd Exp $
 bin/kcookiejar5
 bin/ktelnetservice5
 bin/ktrash5
@@ -365,7 +365,6 @@ qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies.so
 qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_netpref.so
 qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_proxy.so
 qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_webshortcuts.so
-share/applications/kcm_trash.desktop
 share/applications/ktelnetservice5.desktop
 share/dbus-1/interfaces/kf5_org.kde.KCookieServer.xml
 share/dbus-1/interfaces/kf5_org.kde.KDirNotify.xml
