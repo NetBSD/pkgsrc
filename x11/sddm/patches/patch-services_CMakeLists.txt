@@ -1,0 +1,39 @@
+$NetBSD: patch-services_CMakeLists.txt,v 1.1 2025/12/30 04:00:09 gutteridge Exp $
+
+Install OpenPAM files instead of Linux-Pam for NetBSD.
+
+--- services/CMakeLists.txt.orig	2024-02-26 10:23:03.000000000 +0000
++++ services/CMakeLists.txt
+@@ -21,21 +21,21 @@ configure_file("${CMAKE_CURRENT_SOURCE_D
+ 
+ if(INSTALL_PAM_CONFIGURATION)
+     if(EXISTS "/etc/debian_version")
+-        install(FILES debian.sddm-autologin.pam DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/pam.d RENAME sddm-autologin)
+-        install(FILES debian.sddm-greeter.pam DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/pam.d RENAME sddm-greeter)
+-        install(FILES debian.sddm.pam DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/pam.d RENAME sddm)
+-    elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
+-        install(FILES freebsd.sddm-autologin.pam DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/pam.d RENAME sddm-autologin)
+-        install(FILES freebsd.sddm-greeter.pam DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/pam.d RENAME sddm-greeter)
+-        install(FILES freebsd.sddm.pam DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/pam.d RENAME sddm)
++        install(FILES debian.sddm-autologin.pam DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/pam.d RENAME sddm-autologin)
++        install(FILES debian.sddm-greeter.pam DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/pam.d RENAME sddm-greeter)
++        install(FILES debian.sddm.pam DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/pam.d RENAME sddm)
++    elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
++        install(FILES freebsd.sddm-autologin.pam DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/pam.d RENAME sddm-autologin)
++        install(FILES freebsd.sddm-greeter.pam DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/pam.d RENAME sddm-greeter)
++        install(FILES freebsd.sddm.pam DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/pam.d RENAME sddm)
+     else()
+         if(HAVE_PAM_FAILLOCK)
+-           install(FILES sddm-autologin.pam DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/pam.d RENAME sddm-autologin)
++           install(FILES sddm-autologin.pam DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/pam.d RENAME sddm-autologin)
+         else()
+-           install(FILES sddm-autologin-tally2.pam DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/pam.d RENAME sddm-autologin)
++           install(FILES sddm-autologin-tally2.pam DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/pam.d RENAME sddm-autologin)
+         endif()
+ 
+-        install(FILES sddm.pam DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/pam.d RENAME sddm)
+-        install(FILES "${CMAKE_CURRENT_BINARY_DIR}/sddm-greeter.pam" DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/pam.d RENAME sddm-greeter)
++        install(FILES sddm.pam DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/pam.d RENAME sddm)
++        install(FILES "${CMAKE_CURRENT_BINARY_DIR}/sddm-greeter.pam" DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/pam.d RENAME sddm-greeter)
+     endif()
+ endif()

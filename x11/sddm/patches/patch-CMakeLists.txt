@@ -1,0 +1,24 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/12/30 04:00:09 gutteridge Exp $
+
+Update the minimum required cmake version to 3.5 to avoid build 
+errors on modern cmake versions. 
+
+Fix the shutdown command for NetBSD.
+
+--- CMakeLists.txt.orig	2025-10-03 11:58:46.078418066 +0000
++++ CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 3.4)
++cmake_minimum_required(VERSION 3.5)
+ 
+ project(SDDM)
+ 
+@@ -155,7 +155,7 @@ if (NOT ELOGIND_FOUND AND NOT SYSTEMD_FO
+     # Set the VT on which sddm will normally appear, and the
+     # commands for shutdown and reboot. On FreeBSD, there are
+     # normally more getty's running than on Linux.
+-    if("${CMAKE_SYSTEM_NAME}" STREQUAL "FreeBSD")
++    if("${CMAKE_SYSTEM_NAME}" STREQUAL "FreeBSD" OR "${CMAKE_SYSTEM_NAME}" STREQUAL "NetBSD")
+         set(HALT_COMMAND "/sbin/shutdown -p now")
+     else()
+         set(HALT_COMMAND "/sbin/shutdown -h -P now")

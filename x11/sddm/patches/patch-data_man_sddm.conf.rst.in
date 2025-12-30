@@ -1,0 +1,47 @@
+$NetBSD: patch-data_man_sddm.conf.rst.in,v 1.1 2025/12/30 04:00:09 gutteridge Exp $
+
+Fix hardcoded absolute paths.
+
+--- data/man/sddm.conf.rst.in.orig	2025-10-06 03:46:40.665247116 +0000
++++ data/man/sddm.conf.rst.in
+@@ -114,7 +114,7 @@ OPTIONS
+ 
+ `ServerPath=`
+ 	Path of the X server.
+-	Default value is "/usr/bin/X".
++	Default value is "@X11BASE@/bin/X".
+ 
+ `ServerArguments=`
+ 	Arguments to the X server.
+@@ -122,11 +122,11 @@ OPTIONS
+ 
+ `XephyrPath=`
+ 	Path of the Xephyr.
+-	Default value is "/usr/bin/Xephyr".
++	Default value is "@PREFIX@/bin/Xephyr".
+ 
+ `SessionDir=`
+ 	Comma-separated list of directories containing session files.
+-	Default value is "/usr/local/share/xsessions,/usr/share/xsessions".
++	Default value is "@PREFIX@/share/xsessions,/usr/share/xsessions".
+ 
+ `SessionCommand=`
+ 	Path of script to execute when starting the user session. This script
+@@ -174,7 +174,7 @@ The `UserAuthFile=` option was removed, 
+ 
+ `SessionDir=`
+ 	Comma-separated list of directories containing session files.
+-	Default value is "/usr/local/share/wayland-sessions,/usr/share/wayland-sessions".
++	Default value is "@PREFIX@/share/wayland-sessions,/usr/share/wayland-sessions".
+ 
+ `SessionCommand=`
+ 	Path of script to execute when starting the user session. This script
+@@ -196,7 +196,7 @@ The `UserAuthFile=` option was removed, 
+ `DefaultPath=`
+ 	Default path to set after successfully logging in.
+ 	This is also where SDDM looks for programs.
+-	Default value is "/usr/local/bin:/usr/bin:/bin".
++	Default value is "@PREFIX@/bin:/usr/bin:/bin".
+ 
+ `MinimumUid=`
+ 	Minimum user id of the users to be listed in the
