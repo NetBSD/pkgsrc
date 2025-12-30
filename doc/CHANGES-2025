@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7495 2025/12/30 13:35:53 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7496 2025/12/30 13:45:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11066,3 +11066,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pygit2 to 1.19.1 [adam 2025-12-30]
 	Updated devel/py-test-checkdocs to 2.14.0 [adam 2025-12-30]
 	Updated devel/py-tracerite to 2.3.0 [adam 2025-12-30]
+	Updated devel/py-flufl.i18n to 6.0.0 [adam 2025-12-30]
+	Updated devel/py-flufl.lock to 9.0.0 [adam 2025-12-30]
