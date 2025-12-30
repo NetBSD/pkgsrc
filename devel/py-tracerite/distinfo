@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/12/28 08:16:09 adam Exp $
+$NetBSD: distinfo,v 1.6 2025/12/30 13:35:36 adam Exp $
 
-BLAKE2s (tracerite-2.2.1.tar.gz) = 2ed712a09c95de7a4e3061fe3a9e66e974e280144e19e7fcb72fb3fdf74cdd35
-SHA512 (tracerite-2.2.1.tar.gz) = 0d5e36bf4d15c79ef9e2d25db183344028deb1471832745b1fd7e18ed05046343743001f72a9d19e315b6746b90ec79ad9a98debd265628b4de5b58475430101
-Size (tracerite-2.2.1.tar.gz) = 42059 bytes
+BLAKE2s (tracerite-2.3.0.tar.gz) = d30ff9e1f3e18829d0830d002146ace536795d0d9d8c71608752db66cce2e70c
+SHA512 (tracerite-2.3.0.tar.gz) = fd74a9f26d44f1b4561270a89df108fee2158a5cf8a7773d5a4d78b50ac1d6304159bfe0f4e0124a5c6ceace4780d2ecc6aaf565865ec140360cb2802309f8e3
+Size (tracerite-2.3.0.tar.gz) = 59267 bytes
