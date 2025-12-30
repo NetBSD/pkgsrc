@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/08/02 10:28:15 adam Exp $
+$NetBSD: distinfo,v 1.8 2025/12/30 13:45:04 adam Exp $
 
-BLAKE2s (flufl_lock-8.2.0.tar.gz) = 3039ffe2c3ffa06024c40c9b9244c94be76cbeee63e5b10fc4e0d3075b6ee166
-SHA512 (flufl_lock-8.2.0.tar.gz) = c02c0a2d1cff6c775d692c6dabb2c01ec07f62472c082be998430d71ee26a4c2d5f351d956ea349d74029f1669b72bf5340e82e1f6b319979b750951410c6b94
-Size (flufl_lock-8.2.0.tar.gz) = 33514 bytes
+BLAKE2s (flufl_lock-9.0.0.tar.gz) = 9170c5453de9c9a4493c785c4375fda714ef7b052fe465557e31f7c6fd5bcefc
+SHA512 (flufl_lock-9.0.0.tar.gz) = 4177c45988527114344d8d6e5f439f4f7446ef805578491a808091b20d5289b1203728f7b83bf1ab44e77a5d6c9a6e145a27f18a79f6c28fc4f98ab02e6999bc
+Size (flufl_lock-9.0.0.tar.gz) = 34151 bytes
