@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7480 2025/12/29 23:05:31 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.7481 2025/12/30 02:35:34 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11041,3 +11041,8 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/stellarium to 25.4 [adam 2025-12-29]
 	Updated audio/py-beets to 2.5.1nb1 [wiz 2025-12-29]
 	Updated chat/matrix-synapse to 1.144.0 [gdt 2025-12-29]
+	Added devel/qcoro version 0.12.0 [markd 2025-12-30]
+	Added x11/plasma6-plasma-activities-stats version 6.5.2 [markd 2025-12-30]
+	Updated net/kdsoap to 2.2.0 [markd 2025-12-30]
+	Added net/kdsoap-ws-discovery-client version 0.4.0 [markd 2025-12-30]
+	Updated devel/kio-extras to 25.08.3 [markd 2025-12-30]
