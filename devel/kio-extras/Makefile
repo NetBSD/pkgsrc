@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2025/10/23 20:36:26 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2025/12/30 02:30:00 markd Exp $
 
 DISTNAME=	kio-extras-${KAPPSVER}
-PKGREVISION=	17
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/internet/
@@ -10,7 +9,7 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config perl:run
 
@@ -38,22 +37,32 @@ TOOLS_CREATE+=		md5sum
 TOOLS_PATH.md5sum=	${PREFIX}/bin/gmd5sum
 .endif
 
+.include "../../archivers/kf6-karchive/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
-.include "../../devel/kpty/buildlink3.mk"
+.include "../../devel/kf6-kcmutils/buildlink3.mk"
+.include "../../devel/kf6-kcoreaddons/buildlink3.mk"
+.include "../../devel/kf6-ki18n/buildlink3.mk"
+.include "../../devel/kf6-kio/buildlink3.mk"
+.include "../../devel/kf6-kpty/buildlink3.mk"
 .include "../../devel/libmtp/buildlink3.mk"
+.include "../../devel/qcoro/buildlink3.mk"
+.include "../../devel/qt6-qt5compat/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/libkexiv2/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
-.include "../../net/kdnssd/buildlink3.mk"
+.include "../../graphics/qt6-qtsvg/buildlink3.mk"
+.include "../../multimedia/phonon-qt6/buildlink3.mk"
+.include "../../net/kf6-kdnssd/buildlink3.mk"
 .include "../../net/kdsoap/buildlink3.mk"
+.include "../../net/kdsoap-ws-discovery-client/buildlink3.mk"
 .include "../../net/openslp/buildlink3.mk"
 .include "../../net/samba4/buildlink3.mk"
 .include "../../security/libssh/buildlink3.mk"
-.include "../../textproc/syntax-highlighting/buildlink3.mk"
-.include "../../www/khtml/buildlink3.mk"
-.include "../../x11/kactivities5/buildlink3.mk"
-.include "../../x11/kactivities-stats/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../textproc/kf6-syntax-highlighting/buildlink3.mk"
+.include "../../x11/kf6-kguiaddons/buildlink3.mk"
+.include "../../x11/plasma6-plasma-activities/buildlink3.mk"
+.include "../../x11/plasma6-plasma-activities-stats/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
