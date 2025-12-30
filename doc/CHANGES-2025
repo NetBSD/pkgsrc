@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7509 2025/12/30 22:27:50 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.7510 2025/12/30 22:39:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11081,3 +11081,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/hugo to 0.153.5 [triaxx 2025-12-30]
 	Updated graphics/ImageMagick to 7.1.2.12 [triaxx 2025-12-30]
 	Updated graphics/p5-PerlMagick to 7.1.2.12nb1 [triaxx 2025-12-30]
+	Updated security/gnupg2 to 2.4.9 [wiz 2025-12-30]
