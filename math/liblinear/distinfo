@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2025/05/29 07:20:56 adam Exp $
+$NetBSD: distinfo,v 1.14 2025/12/30 10:53:46 adam Exp $
 
-BLAKE2s (liblinear-2.49.tar.gz) = 972027f1ea994c4a29b3d845e61d208a2394f6c51671358e2f1b67085dbce0f2
-SHA512 (liblinear-2.49.tar.gz) = 1bde9cae162da447355e7d0c3bbc9b5f213933f57a04611b8d5c3c900d081479d0e84598ef72e94eb5d8656dbebe3520e2d9122405e9767f0ed6e2cb7f639956
-Size (liblinear-2.49.tar.gz) = 74356 bytes
+BLAKE2s (liblinear-2.50.tar.gz) = 9d49a1356e04eeaa1cb6352a66e54e5dd8eb9ec8ca919635ecaa18768e9df633
+SHA512 (liblinear-2.50.tar.gz) = 5c51f614f9dfe6e0338b0c34d4b3b7a8941425db5e0b902c3308cca4cc23407e64ed4679f7ec70c1d0e500e4a4139ca86af2d02c28efb5b3b5f9d323f403f513
+Size (liblinear-2.50.tar.gz) = 73776 bytes
 SHA1 (patch-Makefile) = 0fde548c715d7da2266336f6aaac1cadd0b1cb83
 SHA1 (patch-blas_Makefile) = 98f05f989f9ebdbc98caa566d6c26ef58cb3dbe8
