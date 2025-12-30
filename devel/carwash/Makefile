@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/12/12 08:07:49 pin Exp $
+# $NetBSD: Makefile,v 1.7 2025/12/30 12:05:24 pin Exp $
 
 DISTNAME=	carwash-0.3.4
 CATEGORIES=	devel
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://static.crates.io/crates/carwash/
 EXTRACT_SUFX=	.crate
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/epistates/carwash/
 COMMENT=	TUI for managing multiple Rust projects with ease
 LICENSE=	mit
