@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/07/30 08:10:19 wiz Exp $
+$NetBSD: distinfo,v 1.9 2025/12/30 16:01:23 kikadf Exp $
 
-BLAKE2s (scdoc/1.11.3.tar.gz) = 956404cbfdabd63c2bec34a4e57a93ebc08fc16adb9c8d567e9a1b5d3c40b015
-SHA512 (scdoc/1.11.3.tar.gz) = fbecc505b44c396890c53c05183d34336160dbd02993ee120421fc6e2a3ec78ba349747e8acfe97af956a0081c923309290ff97fb7babafbc3ca8addc9ec92f9
-Size (scdoc/1.11.3.tar.gz) = 12768 bytes
-SHA1 (patch-Makefile) = b79aab9ddbb85f0d1192f28ca2bddc72ec040604
+BLAKE2s (scdoc/1.11.4.tar.gz) = f80867984d2a2f64c77e718c05c604dd8b56256f07eaeb4facc3e1cb8e4e9833
+SHA512 (scdoc/1.11.4.tar.gz) = f8950bbef5213a89746185d5ed29fbee2502235632db883afaaac515dc87c60559bc1a39e2a3ea3bb019675e6039bd2d3b5c5d117a0ad022b61c958fb9407877
+Size (scdoc/1.11.4.tar.gz) = 13081 bytes
