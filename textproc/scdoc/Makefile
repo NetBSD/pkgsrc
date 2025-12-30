@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/07/30 08:10:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/12/30 16:01:23 kikadf Exp $
 
-DISTNAME=	1.11.3
+DISTNAME=	1.11.4
 PKGNAME=	scdoc-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	https://git.sr.ht/~sircmpwn/scdoc/archive/
