@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.20 2025/11/16 16:58:11 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.21 2025/12/30 19:07:20 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -124,8 +124,8 @@ CARGO_CRATE_DEPENDS+=	lazy_static-1.5.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.166
 CARGO_CRATE_DEPENDS+=	libloading-0.8.5
 CARGO_CRATE_DEPENDS+=	libredox-0.1.3
-CARGO_CRATE_DEPENDS+=   lla_plugin_interface-0.5.1
-CARGO_CRATE_DEPENDS+=   lla_plugin_utils-0.5.1
+CARGO_CRATE_DEPENDS+=   lla_plugin_interface-0.5.3
+CARGO_CRATE_DEPENDS+=   lla_plugin_utils-0.5.3
 CARGO_CRATE_DEPENDS+=	linked-hash-map-0.5.6
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.4.14
 CARGO_CRATE_DEPENDS+=	litemap-0.8.0
@@ -172,6 +172,7 @@ CARGO_CRATE_DEPENDS+=	png-0.17.16
 CARGO_CRATE_DEPENDS+=	portable-atomic-1.10.0
 CARGO_CRATE_DEPENDS+=	potential_utf-0.1.3
 CARGO_CRATE_DEPENDS+=	powerfmt-0.2.0
+CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.21
 CARGO_CRATE_DEPENDS+=	prettyplease-0.2.25
 CARGO_CRATE_DEPENDS+=	proc-macro-crate-3.2.0
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.92
@@ -180,7 +181,10 @@ CARGO_CRATE_DEPENDS+=	prost-build-0.12.6
 CARGO_CRATE_DEPENDS+=	prost-derive-0.12.6
 CARGO_CRATE_DEPENDS+=	prost-types-0.12.6
 CARGO_CRATE_DEPENDS+=	quick-xml-0.32.0
-CARGO_CRATE_DEPENDS+=	quote-1.0.37
+CARGO_CRATE_DEPENDS+=	quote-1.0.42
+CARGO_CRATE_DEPENDS+=	rand-0.8.5
+CARGO_CRATE_DEPENDS+=	rand_chacha-0.3.1
+CARGO_CRATE_DEPENDS+=	rand_core-0.6.4
 CARGO_CRATE_DEPENDS+=	rayon-1.10.0
 CARGO_CRATE_DEPENDS+=	rayon-core-1.12.1
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.5.7
@@ -330,6 +334,8 @@ CARGO_CRATE_DEPENDS+=	xattr-1.4.0
 CARGO_CRATE_DEPENDS+=	yaml-rust-0.4.5
 CARGO_CRATE_DEPENDS+=	yoke-0.8.0
 CARGO_CRATE_DEPENDS+=	yoke-derive-0.8.0
+CARGO_CRATE_DEPENDS+=	zerocopy-0.8.30
+CARGO_CRATE_DEPENDS+=	zerocopy-derive-0.8.30
 CARGO_CRATE_DEPENDS+=	zerofrom-0.1.6
 CARGO_CRATE_DEPENDS+=	zerofrom-derive-0.1.6
 CARGO_CRATE_DEPENDS+=	zeroize-1.8.1
