@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2024/03/22 12:16:40 pin Exp $
+# $NetBSD: Makefile,v 1.43 2025/12/30 19:35:41 pin Exp $
 
-DISTNAME=	evilwm-1.4.3
+DISTNAME=	evilwm-1.5
 CATEGORIES=	wm x11
 MASTER_SITES=	http://www.6809.org.uk/evilwm/
 
