@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/12/30 02:07:53 markd Exp $
+
+BLAKE2s (qcoro-0.12.0.tar.gz) = 266b9049a5bdfb77a0e9edd1a4a75bf43c91fb5ebc588a7723c7b95146a4ac3d
+SHA512 (qcoro-0.12.0.tar.gz) = f1da90c4a9bec5f52ec9f40caa30c8465658c6ff005c6c7e89aeb97acc4aefd5e34030493b7e51313a6d2b3fc59114f6ed6751f31f1c132ece173f0e22154c37
+Size (qcoro-0.12.0.tar.gz) = 161468 bytes
