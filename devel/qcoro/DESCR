@@ -1,0 +1,7 @@
+QCoro provides the tools necessary to make easy use of C++20 coroutines with
+Qt. The cornerstone of the library is `QCoro::Task<T>`, which represents an
+executed coroutine and allows the result of the coroutine to be asynchronously
+awaited by its caller. Additionally, QCoro provides a set of wrappers for
+common Qt types, such as `QTimer`, `QNetworkReply`, `QDBusPendingCall`,
+`QFuture` and others, that allow to `co_await` their asynchronous operations
+directly.
