@@ -1,0 +1,10 @@
+By default, this package will use PAM for authentication purposes.
+To add the required authenticaion policies to your PAM configuration,
+import the policy files provided with the package:
+
+	$ for i in sddm sddm-autologin sddm-greeter; do
+	> cp @PREFIX@/share/examples/pam.d/$i /etc/pam.d
+	> done
+
+You will also need to install the sddm rc.d script to run it as a
+service. These details will be noted during the installation phase.
