@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7500 2025/12/30 19:03:54 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7501 2025/12/30 19:05:01 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11072,3 +11072,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/testdisk to 7.2 [leot 2025-12-30]
 	Updated textproc/scdoc to 1.11.4 [kikadf 2025-12-30]
 	Updated textproc/clicsv to 1.1.0 [pin 2025-12-30]
+	Updated textproc/television to 0.14.3 [pin 2025-12-30]
