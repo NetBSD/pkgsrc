@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7491 2025/12/30 12:30:36 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7492 2025/12/30 12:57:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11058,3 +11058,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/libudev-bsd version 0.6.0.4 [kikadf 2025-12-30]
 	Updated devel/cargo-nextest to 0.9.116 [pin 2025-12-30]
 	Updated shells/oh-my-posh to 28.8.0 [pin 2025-12-30]
+	Updated mail/py-checkdmarc to 5.13.1 [adam 2025-12-30]
+	Updated databases/py-alembic to 1.17.2 [adam 2025-12-30]
