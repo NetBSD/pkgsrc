@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.314 2025/12/16 09:58:05 triaxx Exp $
+$NetBSD: distinfo,v 1.315 2025/12/30 22:25:05 triaxx Exp $
 
-BLAKE2s (ImageMagick-7.1.2-11.tar.xz) = 2f25175906d8115f4e3abdae15c1a755a4804675f2a8e40a7a9d4a7f9c20c7ca
-SHA512 (ImageMagick-7.1.2-11.tar.xz) = 0c2dae1983a9e7285b02d718b7e7812f45bf1920cf214b26641574311f9f14a4838434a342f90acb2161e8b4743891bf33f9ed7bee15bae7530bc295283705cb
-Size (ImageMagick-7.1.2-11.tar.xz) = 10795280 bytes
+BLAKE2s (ImageMagick-7.1.2-12.tar.xz) = 2bcb6c420b4420325a122ea76677dda935f6cb2722d446428df7ab7d77aac59a
+SHA512 (ImageMagick-7.1.2-12.tar.xz) = 9a04140f098807b0cac280ce134eb5259b652dab806da38d9611358b9675ea71244710fdbb9bb7a770455d6c2dadb0200fc2c7439bb50c6f514a9dcc73b219ca
+Size (ImageMagick-7.1.2-12.tar.xz) = 10796588 bytes
 SHA1 (patch-MagickCore_random.c) = 56b33395e4bbdffbff5094c40ecf4e2d4be3d813
 SHA1 (patch-ghostscript-private.h) = ab25d5b565c11b98bf623f9f8afd0fedae9bf1fa
