@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/12/30 02:23:47 markd Exp $
+
+BLAKE2s (kdsoap-ws-discovery-client-0.4.0.tar.xz) = 779af8b96ac6809d6bb93326e5d325cc46d1e6045469fb9fddd4d1bcc2d865e0
+SHA512 (kdsoap-ws-discovery-client-0.4.0.tar.xz) = 485e0319d986743183e82dd3a7576f0fc473122867e5e820a57f63b2fa2fde0721d8a7ee30d4399c01b11b51634db452174841a887b6685db9ab33e310866dda
+Size (kdsoap-ws-discovery-client-0.4.0.tar.xz) = 30692 bytes
