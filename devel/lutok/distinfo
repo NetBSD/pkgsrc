@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/03/30 07:51:22 wiz Exp $
+$NetBSD: distinfo,v 1.11 2025/12/30 13:11:36 adam Exp $
 
-BLAKE2s (lutok-0.6.1.tar.gz) = 9686703e5488a6aba386d45ff3eaadfa04953873ffce753f144a8a014e5ae7a2
-SHA512 (lutok-0.6.1.tar.gz) = ffb1463050fde421b7fded7c619b206faad5ec3ca6a4fbe3a79121d76e6445d8a1e2337f59c85103fa9616860728a804bd099e64618b201f0cfa38df41637618
-Size (lutok-0.6.1.tar.gz) = 648933 bytes
+BLAKE2s (lutok-0.6.2.tar.gz) = 7f81f9ca947f5b8d931057f15e3cc9364e0ffd69253e74f85fbe7a0370d51863
+SHA512 (lutok-0.6.2.tar.gz) = f8e9a7b734f8f793cc301033b2bfed21d5b2fee16adc3f78fe4b30b314d1fb91b76ab3ce62bc23400a549365c4bc8169cc11f749d580ab9c5bcddcebd1e7605b
+Size (lutok-0.6.2.tar.gz) = 619848 bytes
