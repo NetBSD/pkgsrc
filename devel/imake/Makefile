@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2024/01/08 19:34:39 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2025/12/30 22:45:25 wiz Exp $
 
-DISTNAME=		imake-1.0.10
+DISTNAME=		imake-1.0.11
 CATEGORIES=		devel x11
 MASTER_SITES=		${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=		.tar.xz
@@ -39,5 +39,6 @@ SUBST_NOOP_OK.xmkmf=	yes
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
+#.include "../../devel/meson/build.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
