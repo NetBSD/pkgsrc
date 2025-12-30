@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/11/03 19:04:01 rillig Exp $
+# $NetBSD: Makefile,v 1.52 2025/12/30 08:14:28 wiz Exp $
 
 DISTNAME=		icon.v943src
 PKGNAME=		icon-9.4.3
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.cs.arizona.edu/icon/ftp/packages/unix/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.cs.arizona.edu/icon/index.htm
+HOMEPAGE=		https://www2.cs.arizona.edu/icon/index.htm
 COMMENT=		The Icon programming language
 LICENSE=		public-domain
 
