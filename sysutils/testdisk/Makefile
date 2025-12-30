@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2025/04/24 14:15:51 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/12/30 15:31:48 leot Exp $
 
-DISTNAME=		testdisk-7.0
-PKGREVISION=		1
+DISTNAME=		testdisk-7.2
 CATEGORIES=		sysutils
 MASTER_SITES=		https://www.cgsecurity.org/
 EXTRACT_SUFX=		.tar.bz2
@@ -28,7 +27,6 @@ CONFIGURE_ARGS+=	--disable-stack-protector
 .include "../../filesystems/libntfs/buildlink3.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
