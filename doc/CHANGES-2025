@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7502 2025/12/30 19:06:38 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7503 2025/12/30 19:07:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11074,3 +11074,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/clicsv to 1.1.0 [pin 2025-12-30]
 	Updated textproc/television to 0.14.3 [pin 2025-12-30]
 	Updated devel/feluda to 1.11.0 [pin 2025-12-30]
+	Updated sysutils/lla to 0.5.3 [pin 2025-12-30]
