@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7497 2025/12/30 14:18:53 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7498 2025/12/30 15:31:54 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11069,3 +11069,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-flufl.i18n to 6.0.0 [adam 2025-12-30]
 	Updated devel/py-flufl.lock to 9.0.0 [adam 2025-12-30]
 	Updated devel/py-pyobjc to 12.1 [adam 2025-12-30]
+	Updated sysutils/testdisk to 7.2 [leot 2025-12-30]
