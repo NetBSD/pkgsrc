@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.693 2025/12/29 11:18:09 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.694 2025/12/30 11:56:20 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29184,3 +29184,13 @@ php83<8.3.29	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-
 php84<8.4.16	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-14180
 gnupg2-[0-9]*	ui-spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-68972
 gnupg2-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-68973
+binutils-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-66861
+binutils-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-66862
+binutils-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-66863
+binutils-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-66864
+binutils-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-66865
+binutils-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-66866
+coturn>=4.6.3<4.8.0	insufficiently-random-numbers	https://nvd.nist.gov/vuln/detail/CVE-2025-69217
+libheif<1.221.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-68431
+ming-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-66869
+ming-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-66877
