@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/12/30 11:25:21 kikadf Exp $
+
+BLAKE2s (libudev-bsd-0.6.0.4.tar.gz) = 13ff58bc299afd960c0d3ce29ebc75a70a994e1c41abce20b434e750e8185dcd
+SHA512 (libudev-bsd-0.6.0.4.tar.gz) = 2d096ab068a558c8a65387374c573d08dca148e435b396ab46c3c29c1b48d6863cbabe63e74e68166335df71224f0a12a8ec96de125216f9207d89cdecf0f26d
+Size (libudev-bsd-0.6.0.4.tar.gz) = 40368 bytes
