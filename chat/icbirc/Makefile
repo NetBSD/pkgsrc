@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2025/04/21 16:24:41 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/12/30 08:12:14 wiz Exp $
 
 DISTNAME=	icbirc-2.1
 CATEGORIES=	chat
-MASTER_SITES=	http://www.benzedrine.ch/
+MASTER_SITES=	https://www.benzedrine.ch/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.benzedrine.ch/icbirc.html
+HOMEPAGE=	https://www.benzedrine.ch/icbirc.html
 COMMENT=	Proxy IRC client and ICB server
 LICENSE=	2-clause-bsd
 
