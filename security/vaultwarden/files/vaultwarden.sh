@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: vaultwarden.sh,v 1.1 2022/08/17 15:44:16 hauke Exp $
+# $NetBSD: vaultwarden.sh,v 1.2 2025/12/30 10:43:22 adam Exp $
 #
 # PROVIDE: vaultwarden
 # REQUIRE: DAEMON
@@ -10,7 +10,7 @@ name="vaultwarden"
 
 command="@PREFIX@/sbin/daemonize"
 
-pidfile="/var/run/${name}/${name}.pid"
+pidfile="@VARBASE@/run/${name}/${name}.pid"
 
 task="@PREFIX@/sbin/${name}"
 procname="${task}"
