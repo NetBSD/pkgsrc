@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2025/05/18 03:00:19 markd Exp $
+# $NetBSD: Makefile,v 1.36 2025/12/30 13:12:41 adam Exp $
 
-DISTNAME=	pkgconf-2.4.3
-PKGREVISION=	1
+DISTNAME=	pkgconf-2.5.1
 CATEGORIES=	devel
 MASTER_SITES=	https://distfiles.dereferenced.org/pkgconf/
 
@@ -26,10 +25,6 @@ PKGCONFIG_PATHS+=	${PREFIX}/share/pkgconfig
 PKGCONFIG_PATHS+=	/usr/lib/pkgconfig
 
 TEST_TARGET=	check
-
-# for reallocarray
-# https://github.com/pkgconf/pkgconf/issues/285
-CPPFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
 
 .include "../../mk/bsd.prefs.mk"
 
