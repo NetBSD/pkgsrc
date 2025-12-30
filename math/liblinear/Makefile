@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2025/05/29 07:20:56 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/12/30 10:53:46 adam Exp $
 
-DISTNAME=	liblinear-2.49
+DISTNAME=	liblinear-2.50
 CATEGORIES=	math
-MASTER_SITES=	https://www.csie.ntu.edu.tw/~cjlin/liblinear/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=cjlin1/}
+GITHUB_TAG=	v${PKGVERSION_NOREV:S/.//}
 
 MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	https://www.csie.ntu.edu.tw/~cjlin/liblinear/
