@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7504 2025/12/30 19:08:40 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7505 2025/12/30 19:09:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11076,3 +11076,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/feluda to 1.11.0 [pin 2025-12-30]
 	Updated sysutils/lla to 0.5.3 [pin 2025-12-30]
 	Updated devel/tokei to 14.0.0 [pin 2025-12-30]
+	Updated net/yaydl to 0.19.0 [pin 2025-12-30]
