@@ -1,10 +1,10 @@
-# $NetBSD: cargo-depends.mk,v 1.12 2025/11/25 19:42:31 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.13 2025/12/30 19:08:21 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
 CARGO_CRATE_DEPENDS+=	android_system_properties-0.1.5
 CARGO_CRATE_DEPENDS+=	anstream-0.6.15
-CARGO_CRATE_DEPENDS+=	anstyle-1.0.8
+CARGO_CRATE_DEPENDS+=	anstyle-1.0.13
 CARGO_CRATE_DEPENDS+=	anstyle-parse-0.2.5
 CARGO_CRATE_DEPENDS+=	anstyle-query-1.1.1
 CARGO_CRATE_DEPENDS+=	anstyle-wincon-3.0.4
@@ -23,11 +23,11 @@ CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	chrono-0.4.38
 CARGO_CRATE_DEPENDS+=	chrono-tz-0.9.0
 CARGO_CRATE_DEPENDS+=	chrono-tz-build-0.3.0
-CARGO_CRATE_DEPENDS+=	clap-4.5.16
-CARGO_CRATE_DEPENDS+=	clap-cargo-0.13.0
-CARGO_CRATE_DEPENDS+=	clap_builder-4.5.15
-CARGO_CRATE_DEPENDS+=	clap_derive-4.5.13
-CARGO_CRATE_DEPENDS+=	clap_lex-0.7.2
+CARGO_CRATE_DEPENDS+=	clap-4.5.53
+CARGO_CRATE_DEPENDS+=	clap-cargo-0.18.3
+CARGO_CRATE_DEPENDS+=	clap_builder-4.5.53
+CARGO_CRATE_DEPENDS+=	clap_derive-4.5.49
+CARGO_CRATE_DEPENDS+=	clap_lex-0.7.6
 CARGO_CRATE_DEPENDS+=	colorchoice-1.0.2
 CARGO_CRATE_DEPENDS+=	colored-2.1.0
 CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.8.7
@@ -143,7 +143,7 @@ CARGO_CRATE_DEPENDS+=	table_formatter-0.6.1
 CARGO_CRATE_DEPENDS+=	tempfile-3.12.0
 CARGO_CRATE_DEPENDS+=	tera-1.20.0
 CARGO_CRATE_DEPENDS+=	term_size-0.3.2
-CARGO_CRATE_DEPENDS+=	terminal_size-0.3.0
+CARGO_CRATE_DEPENDS+=	terminal_size-0.4.1
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.63
 CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.63
 CARGO_CRATE_DEPENDS+=	tinyvec-1.8.0
