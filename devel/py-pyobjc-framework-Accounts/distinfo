@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2025/07/11 09:03:52 adam Exp $
+$NetBSD: distinfo,v 1.24 2025/12/30 14:18:13 adam Exp $
 
-BLAKE2s (pyobjc_framework_accounts-11.1.tar.gz) = 7ab81598bc3dc53a1eea06ad1f21c2b9bb748e3d5e0030d5bb858cdffdc95345
-SHA512 (pyobjc_framework_accounts-11.1.tar.gz) = dd6f73fb76a0e7aa7a9d6ec75dde6fb39be82ad5ace16f928d9c4a03e4f72d2c5cc99e9a49d14d8955832813ced804c5ee11d3a977d4feb4709392d6824d3e92
-Size (pyobjc_framework_accounts-11.1.tar.gz) = 17086 bytes
+BLAKE2s (pyobjc_framework_accounts-12.1.tar.gz) = b34e251f14cb3aa5b0d8dd8deb3b3f7536edefdd28bd810f7e0e1da81c055034
+SHA512 (pyobjc_framework_accounts-12.1.tar.gz) = 490b866392e0ecc755c4e170869fe56c3025a475d01a7d161be6fbc0858f93ee3642183b0adad8c8407d05ad5efaf5d98336f69b0dd1544a514d40a5967c863b
+Size (pyobjc_framework_accounts-12.1.tar.gz) = 15202 bytes

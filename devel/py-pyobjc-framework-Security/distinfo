@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2025/07/11 09:04:08 adam Exp $
+$NetBSD: distinfo,v 1.22 2025/12/30 14:18:27 adam Exp $
 
-BLAKE2s (pyobjc_framework_security-11.1.tar.gz) = b3781d8f6aa09c021aa8b948217abfee3451997ae34aa1d4ba2898b5fa8015ad
-SHA512 (pyobjc_framework_security-11.1.tar.gz) = 0c3ee5faae9082589a0ddeca5044c8df7f153d59fc2977c8a9ed7ab17bbc7cb8f6cfcd3df1a9c9481c30b823c17e55e0bd8c5030163c77f84ee418bdce3f1583
-Size (pyobjc_framework_security-11.1.tar.gz) = 302291 bytes
+BLAKE2s (pyobjc_framework_security-12.1.tar.gz) = 507cb702ba48961fbf66569d4adcff33e47f283b46045faf985589f732db8f57
+SHA512 (pyobjc_framework_security-12.1.tar.gz) = 9ed484662bf7cac95d6f176efd93c94a117e36f90f62c7689f349a926c7a300038908b5de35c5b6291104110b55ed133d3383812fe62cefa1ff7cd4c04b7d77b
+Size (pyobjc_framework_security-12.1.tar.gz) = 168044 bytes
