@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2025/07/11 09:03:55 adam Exp $
+$NetBSD: distinfo,v 1.24 2025/12/30 14:18:16 adam Exp $
 
-BLAKE2s (pyobjc_framework_collaboration-11.1.tar.gz) = cf703c48dfe8346df3cd83f4597189a16aacaa4b9a1da4c32188ef99bb5af82c
-SHA512 (pyobjc_framework_collaboration-11.1.tar.gz) = eee173ce1d0829fe486de915562b392d90a01882338f5870ad78d00f1d29b8bd9040f7d976bad4be915b2320fb531d0c4105351fd852536f54d686e9d52f25b5
-Size (pyobjc_framework_collaboration-11.1.tar.gz) = 16839 bytes
+BLAKE2s (pyobjc_framework_collaboration-12.1.tar.gz) = dc434ed6efd02eaf8c8bf690a323252186e640d0cc9f6f208d359871220f22d9
+SHA512 (pyobjc_framework_collaboration-12.1.tar.gz) = f0f51c8ca2051103b7d55cdf23b9075aefb3a1fb5cc38818a21483ea989daa5f87ae5b7547cd9e68db40057e186ee843ddbc7df921174528378fe802b01fbf13
+Size (pyobjc_framework_collaboration-12.1.tar.gz) = 14299 bytes

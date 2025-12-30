@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2025/07/11 09:04:09 adam Exp $
+$NetBSD: distinfo,v 1.22 2025/12/30 14:18:29 adam Exp $
 
-BLAKE2s (pyobjc_framework_spritekit-11.1.tar.gz) = 5840e60edc819c0db4418395febf0f1e56b993a16367eda694eebef0a2aa11ad
-SHA512 (pyobjc_framework_spritekit-11.1.tar.gz) = 2e506e91d81f645bb1dbaa143769d90d249c43b3dddef8aa519d308bd873f7274ff874cf741c340783a7fa7834b9555ba70a8ae771d78d7e867e063ca94455ac
-Size (pyobjc_framework_spritekit-11.1.tar.gz) = 130297 bytes
+BLAKE2s (pyobjc_framework_spritekit-12.1.tar.gz) = eb3825f66b31dcb34818621a6e5b90ba90b603f3e051efe84387fe806e5cda94
+SHA512 (pyobjc_framework_spritekit-12.1.tar.gz) = 283cf3f4191c95243270651912e857d56705bcb40201f5d0a05b9242e2c98ae703fa48ef0b4ca2764c4b1ad9365008d08daa1d67122bf62f39e13cb4e94c62ca
+Size (pyobjc_framework_spritekit-12.1.tar.gz) = 64470 bytes

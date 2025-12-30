@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2025/07/11 09:04:00 adam Exp $
+$NetBSD: distinfo,v 1.22 2025/12/30 14:18:21 adam Exp $
 
-BLAKE2s (pyobjc_framework_imagecapturecore-11.1.tar.gz) = 75928b9a306872ef6c8829fd43f5762f861c3e622edee7ec496225be0a005819
-SHA512 (pyobjc_framework_imagecapturecore-11.1.tar.gz) = 9ce4355f1e4532139bc5b797b893bf99131509d34f78f0739915c059cc95fb0bb823d7e7e11ce223b1d6e6d4ae01a65f3baa03e220af0f6f2345425a9576d21c
-Size (pyobjc_framework_imagecapturecore-11.1.tar.gz) = 100398 bytes
+BLAKE2s (pyobjc_framework_imagecapturecore-12.1.tar.gz) = 8fe44aee15bbb68f6b210ac5dc472bb7152ffab42f37727ecd78b3812ff17caa
+SHA512 (pyobjc_framework_imagecapturecore-12.1.tar.gz) = 164b40b65626813f24e3470f2b9cf429276654e699c78f650f7a73b9dc546b30baedaa104bffb2f10e42cc61c27c71313a68b32778371445810f06ec241ef52d
+Size (pyobjc_framework_imagecapturecore-12.1.tar.gz) = 46397 bytes

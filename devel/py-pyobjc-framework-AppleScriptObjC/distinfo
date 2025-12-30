@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2025/07/11 09:03:52 adam Exp $
+$NetBSD: distinfo,v 1.24 2025/12/30 14:18:14 adam Exp $
 
-BLAKE2s (pyobjc_framework_applescriptobjc-11.1.tar.gz) = 3d0af6774c328d74291d11af8a16f939e30d73db4522f7b6a309750f24e14ed6
-SHA512 (pyobjc_framework_applescriptobjc-11.1.tar.gz) = 3c7bcaf3f54e51087cca37bec16574087b281070217ff853dc45a61448c374e12700ad3edd458ac57424d8d30870073216840d1e8ca81bb08b252b6fd48dace3
-Size (pyobjc_framework_applescriptobjc-11.1.tar.gz) = 12445 bytes
+BLAKE2s (pyobjc_framework_applescriptobjc-12.1.tar.gz) = 12b8745e58220b6240b13ccbd3e6f8b0eb9e63af01ab0a441feaaa4437bc9156
+SHA512 (pyobjc_framework_applescriptobjc-12.1.tar.gz) = f9ef4cef19390089cb2b40ed5a8af64f060868c56ee9035daf39729ee8341286dbdeb9560f9d1f79bf5c94792b5d2467b58c2991ae2ad831621ccca4e899e3d0
+Size (pyobjc_framework_applescriptobjc-12.1.tar.gz) = 11588 bytes
