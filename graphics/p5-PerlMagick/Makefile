@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.223 2025/12/16 10:00:13 triaxx Exp $
+# $NetBSD: Makefile,v 1.224 2025/12/30 22:27:05 triaxx Exp $
+
+PKGREVISION=	1
 
 .include "../../graphics/ImageMagick/Makefile.common"
 
