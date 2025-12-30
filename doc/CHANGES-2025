@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7489 2025/12/30 11:36:42 kikadf Exp $
+$NetBSD: CHANGES-2025,v 1.7490 2025/12/30 12:29:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11056,3 +11056,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/liblinear to 2.50 [adam 2025-12-30]
 	Added sysutils/ndevd version 25.12.09 [kikadf 2025-12-30]
 	Added devel/libudev-bsd version 0.6.0.4 [kikadf 2025-12-30]
+	Updated devel/cargo-nextest to 0.9.116 [pin 2025-12-30]
