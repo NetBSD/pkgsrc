@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/12 21:10:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/12/30 13:32:43 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -8,3 +8,7 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pytest_checkdocs/__init__.py
 ${PYSITELIB}/pytest_checkdocs/__init__.pyc
 ${PYSITELIB}/pytest_checkdocs/__init__.pyo
+${PYSITELIB}/pytest_checkdocs/compat/docutils21.py
+${PYSITELIB}/pytest_checkdocs/compat/docutils21.pyc
+${PYSITELIB}/pytest_checkdocs/compat/docutils21.pyo
+${PYSITELIB}/pytest_checkdocs/py.typed
