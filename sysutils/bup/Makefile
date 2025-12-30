@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2025/09/13 00:33:37 gdt Exp $
+# $NetBSD: Makefile,v 1.74 2025/12/30 17:40:03 gdt Exp $
 
 DISTNAME=	bup-0.33.9
 PKGREVISION=	1
@@ -43,6 +43,7 @@ DEPENDS+=	par2-[0-9]*:../../archivers/par2
 DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 TEST_DEPENDS+=	rsync-[0-9]*:../../net/rsync
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-tornado
@@ -56,6 +57,7 @@ ALL_ENV+=	BUP_PYTHON_CONFIG=${LOCALBASE}/bin/python${PYVERSSUFFIX}-config
 # Tests fail on netbsd-9 because of non-portable use of script(1)
 # introduced in 0.33.9.  Reported upstream by email 20250830.
 TEST_TARGET=	test
+# \todo Pass MAKE_JOBS into "gmake test" via -j.
 TEST_ENV+=	TZ=UTC
 
 # bup's configure is buggy and ends up with a make->make symlink.
