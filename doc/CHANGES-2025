@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7519 2025/12/31 09:00:16 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7520 2025/12/31 10:17:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11092,3 +11092,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/fetchmail to 6.6.2 [triaxx 2025-12-31]
 	Updated mail/fetchmailconf to 6.6.2 [triaxx 2025-12-31]
 	Updated shells/oh-my-posh to 28.8.1 [pin 2025-12-31]
+	Updated emulators/mame to 0.284 [wiz 2025-12-31]
