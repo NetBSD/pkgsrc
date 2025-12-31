@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2025/12/28 07:11:00 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/12/31 02:42:31 ktnb Exp $
 
-DISTNAME=	fennel-1.6.0
-PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
+DISTNAME=	1.6.1
+PKGNAME=	${LUA_PKGPREFIX}-fennel-${DISTNAME}
 CATEGORIES=	lang
 MASTER_SITES=	https://git.sr.ht/~technomancy/fennel/archive/
+DIST_SUBDIR=	fennel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://fennel-lang.org/
@@ -12,7 +13,6 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake
-NO_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}/fennel-${PKGVERSION_NOREV}
 
@@ -36,8 +36,9 @@ PLIST_SUBST+=	LUADOTVER=${_LUA_DOT_VERSION}
 FILES_SUBST+=	LUADOTVER=${_LUA_DOT_VERSION}
 
 post-install:
-	# also manpage?
 	${MV} ${DESTDIR}${PREFIX}/bin/fennel ${DESTDIR}${PREFIX}/bin/fennel-${_LUA_DOT_VERSION}
+	# fennel.1 is also used by pkgtools/pkg_alternatives
+	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/fennel.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/fennel-lang.1
 
 .include "../../lang/lua/application.mk"
 .include "../../lang/lua/tool.mk"

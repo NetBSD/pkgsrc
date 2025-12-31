@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2025/12/28 07:11:00 wiz Exp $
+$NetBSD: distinfo,v 1.8 2025/12/31 02:42:31 ktnb Exp $
 
-BLAKE2s (fennel-1.6.0.tar.gz) = b78ad999b139e7d605445203a5e5e83f89f016af706c6fa90f88f18a8fb3429f
-SHA512 (fennel-1.6.0.tar.gz) = ab08fdf6c084cf63e1e5eaa1b1819f22b2fffda5d7488f6b52a8266b990d8f40e15979f3db89698dd3e7f0b851fd91a2c9a09213f3f4f020b2d31e03ba989de6
-Size (fennel-1.6.0.tar.gz) = 318201 bytes
+BLAKE2s (fennel/1.6.1.tar.gz) = 8c6af53e3a45c8d43e0a9ff5347f98b590ddbe6678ec70205e07f064ce0b7621
+SHA512 (fennel/1.6.1.tar.gz) = d5f6a918f5a09bb487fd1d46dab574ad0aa610ad78a9a7a62b0fa0b6080fce0797d783614ce25d204c29983fd92be1df9d5f935ecfb9147888e8e1314002dc64
+Size (fennel/1.6.1.tar.gz) = 318230 bytes
 SHA1 (patch-Makefile) = e3b0ce56b1705e917f841fd2d523fc438d701445
