@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2025/12/18 19:31:11 vins Exp $
+# $NetBSD: Makefile,v 1.61 2025/12/31 00:47:58 ktnb Exp $
 
-DISTNAME=	fish-4.2.1
-PKGREVISION=	3
+DISTNAME=	fish-4.3.2
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fish-shell/}
 GITHUB_PROJECT=	fish-shell
@@ -20,8 +19,10 @@ LICENSE=	gnu-gpl-v2
 VENDORSRC=	${WRKDIR}/vendor
 VENDORPATCH=	patch-libc.rs patch-nix.rs
 
-USE_TOOLS+=		msgfmt patch pkg-config
+USE_TOOLS+=		msgfmt patch pkg-config pax
 USE_PKGLOCALEDIR=	yes
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 PKGCONFIG_OVERRIDE+=	fish.pc.in
 
@@ -37,11 +38,12 @@ REPLACE_PYTHON+=	share/tools/*.py
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_SYSCONFDIR=${PKG_SYSCONFDIR}
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_MANDIR=${PREFIX}/${PKGMANDIR}
 # Disable dynamic linking with pcre2 to prevent missing dshare objects.
 # See https://mail-index.netbsd.org/tech-pkg/2025/12/15/msg031761.html
 CMAKE_CONFIGURE_ARGS+=	-DFISH_USE_SYSTEM_PCRE2=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_GETTEXT=ON
-CMAKE_CONFIGURE_ARGS+=	-DBUILD_DOCS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_DOCS=ON
 
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pcre2}/lib
 RUSTFLAGS+=		-C link-arg=-L${BUILDLINK_PREFIX.pcre2}/lib
@@ -60,6 +62,10 @@ post-patch:
 	${RUN}cd ${VENDORSRC} && \
 		${PATCH} -b -p0 < ${VENDORSRC}/${i}
 .endfor
+
+post-install:
+	cd ${WRKSRC}/share/themes && ${PAX} -wr * ${DESTDIR}/${PREFIX}/share/themes
+	cd ${WRKSRC}/share/prompts && ${PAX} -wr * ${DESTDIR}/${PREFIX}/share/prompts
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"

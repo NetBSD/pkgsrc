@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2025/12/13 17:47:21 vins Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2025/12/31 00:47:58 ktnb Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.21
@@ -55,19 +55,23 @@ CARGO_CRATE_DEPENDS+=	phf_shared-0.11.3
 CARGO_CRATE_DEPENDS+=	phf_shared-0.12.1
 CARGO_CRATE_DEPENDS+=	pkg-config-0.3.32
 CARGO_CRATE_DEPENDS+=	portable-atomic-1.11.1
+CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.21
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.101
 CARGO_CRATE_DEPENDS+=	quote-1.0.41
 CARGO_CRATE_DEPENDS+=	r-efi-5.3.0
 CARGO_CRATE_DEPENDS+=	rand-0.8.5
+CARGO_CRATE_DEPENDS+=	rand-0.9.2
+CARGO_CRATE_DEPENDS+=	rand_chacha-0.9.0
 CARGO_CRATE_DEPENDS+=	rand_core-0.6.4
+CARGO_CRATE_DEPENDS+=	rand_core-0.9.3
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.5.18
 CARGO_CRATE_DEPENDS+=	redox_users-0.5.2
 CARGO_CRATE_DEPENDS+=	regex-automata-0.4.13
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.8.8
 CARGO_CRATE_DEPENDS+=	rsconf-0.2.2
-CARGO_CRATE_DEPENDS+=	rust-embed-8.8.0
-CARGO_CRATE_DEPENDS+=	rust-embed-impl-8.8.0
-CARGO_CRATE_DEPENDS+=	rust-embed-utils-8.8.0
+CARGO_CRATE_DEPENDS+=	rust-embed-8.9.0
+CARGO_CRATE_DEPENDS+=	rust-embed-impl-8.9.0
+CARGO_CRATE_DEPENDS+=	rust-embed-utils-8.9.0
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	scc-2.4.0
 CARGO_CRATE_DEPENDS+=	scopeguard-1.2.0
@@ -101,3 +105,6 @@ CARGO_CRATE_DEPENDS+=	winapi-util-0.1.11
 CARGO_CRATE_DEPENDS+=	windows-link-0.2.1
 CARGO_CRATE_DEPENDS+=	windows-sys-0.61.2
 CARGO_CRATE_DEPENDS+=	wit-bindgen-0.46.0
+CARGO_CRATE_DEPENDS+=	xterm-color-1.0.1
+CARGO_CRATE_DEPENDS+=	zerocopy-0.8.27
+CARGO_CRATE_DEPENDS+=	zerocopy-derive-0.8.27
