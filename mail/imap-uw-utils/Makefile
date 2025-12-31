@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/10/24 22:09:44 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2025/12/31 08:55:03 wiz Exp $
 
 DISTNAME=	imap-utils
 PKGNAME=	imap-uw-utils-20050108
@@ -8,7 +8,7 @@ CATEGORIES=	mail
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.washington.edu/imap/
+#HOMEPAGE=	http://www.washington.edu/imap/
 COMMENT=	UW IMAP mailbox utilities
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
