@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7518 2025/12/31 07:44:55 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.7519 2025/12/31 09:00:16 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11091,3 +11091,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added graphics/plasma6-aurorae version 6.5.2 [markd 2025-12-31]
 	Updated mail/fetchmail to 6.6.2 [triaxx 2025-12-31]
 	Updated mail/fetchmailconf to 6.6.2 [triaxx 2025-12-31]
+	Updated shells/oh-my-posh to 28.8.1 [pin 2025-12-31]
