@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2025/10/23 20:40:02 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2025/12/31 03:06:26 markd Exp $
 
 DISTNAME=	kglobalaccel-${KF5VER}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	x11
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -11,6 +11,8 @@ LICENSE=	gnu-lgpl-v2.1
 .include "../../meta-pkgs/kde/kf5.mk"
 
 USE_TOOLS+=	pkg-config
+
+CMAKE_CONFIGURE_ARGS+=	-DKF6_COMPAT_BUILD=ON
 
 .include "../../devel/kconfig/buildlink3.mk"
 .include "../../devel/kcrash/buildlink3.mk"
