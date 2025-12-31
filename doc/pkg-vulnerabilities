@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.694 2025/12/30 11:56:20 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.695 2025/12/31 21:24:02 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29194,3 +29194,25 @@ coturn>=4.6.3<4.8.0	insufficiently-random-numbers	https://nvd.nist.gov/vuln/deta
 libheif<1.221.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-68431
 ming-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-66869
 ming-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-66877
+ImageMagick<7.1.2.12	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-68618
+ImageMagick<7.1.2.12	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-68950
+ImageMagick<7.1.2.12	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-69204
+fontforge-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-15269
+fontforge-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-15270
+fontforge-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-15271
+fontforge-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-15272
+fontforge-[0-9]*	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-15273
+fontforge-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-15274
+fontforge-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-15275
+fontforge-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-15276
+fontforge-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-15277
+fontforge-[0-9]*	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-15278
+fontforge-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-15279
+fontforge-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-15280
+libpcap<1.10.6	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-11961
+libsodium<1.0.21	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-69277
+matio-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-50343
+php{56,74,81,82,83,84}-composer<2.2.26	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-67746
+py{27,39,310,311,312,313,314}-cbor2<5.8.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-68131
+ruby{32,33,34}-uri<1.0.4	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-61594
+sox-[0-9]*	floating-point-exception	https://nvd.nist.gov/vuln/detail/CVE-2022-50798
