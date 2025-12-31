@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/04/25 08:40:32 markd Exp $
-bin/kglobalaccel5
+@comment $NetBSD: PLIST,v 1.7 2025/12/31 03:06:26 markd Exp $
 include/KF5/KGlobalAccel/KGlobalAccel
 include/KF5/KGlobalAccel/KGlobalShortcutInfo
 include/KF5/KGlobalAccel/kglobalaccel.h
@@ -18,13 +17,9 @@ lib/libKF5GlobalAccel.so.5
 lib/libKF5GlobalAccel.so.${PKGVERSION}
 lib/libKF5GlobalAccelPrivate.so.5
 lib/libKF5GlobalAccelPrivate.so.${PKGVERSION}
-lib/systemd/user/plasma-kglobalaccel.service
 qt5/mkspecs/modules/qt_KGlobalAccel.pri
-qt5/plugins/org.kde.kglobalaccel5.platforms/KF5GlobalAccelPrivateXcb.so
 share/dbus-1/interfaces/kf5_org.kde.KGlobalAccel.xml
 share/dbus-1/interfaces/kf5_org.kde.kglobalaccel.Component.xml
-share/dbus-1/services/org.kde.kglobalaccel.service
-share/kservices5/kglobalaccel5.desktop
 share/locale/af/LC_MESSAGES/kglobalaccel5_qt.qm
 share/locale/ar/LC_MESSAGES/kglobalaccel5_qt.qm
 share/locale/as/LC_MESSAGES/kglobalaccel5_qt.qm
