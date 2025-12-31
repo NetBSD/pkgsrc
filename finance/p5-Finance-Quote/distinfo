@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2025/11/15 01:33:29 wen Exp $
+$NetBSD: distinfo,v 1.29 2025/12/31 23:32:58 wen Exp $
 
-BLAKE2s (Finance-Quote-1.67.tar.gz) = d63f416c90b16a0bd7681b6b0f2a4ace6b15b68c0902c61c0b5d15d00ffb4c61
-SHA512 (Finance-Quote-1.67.tar.gz) = 10edb10c6361422af6e19e3d105e6b149d6ffe4f191369151a7b4f7d06e8a8c34e669b3485127a2501cf4f7a97fdac3acf3a4e773c67494b11dd795015b91f06
-Size (Finance-Quote-1.67.tar.gz) = 273362 bytes
+BLAKE2s (Finance-Quote-1.68.tar.gz) = 3bdea54ec24c77db2e426738ddde4789367a001ed8fe1d6cdd5842ca4b5823ce
+SHA512 (Finance-Quote-1.68.tar.gz) = ee49ea9b6d3873eb78b6a928dd18c49f7d2c62d8646a8eb91d90455b4c345677b1dc3baa42d13ce4a7e692c3a426eb3fb51f73809e857a5dce41b2b34e1c47e2
+Size (Finance-Quote-1.68.tar.gz) = 279875 bytes
