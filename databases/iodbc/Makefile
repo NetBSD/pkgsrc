@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/11/02 15:38:01 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2025/12/31 08:56:44 wiz Exp $
 
 DISTNAME=	libiodbc-3.52.9
 PKGNAME=	${DISTNAME:S/^lib//}
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=iodbc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.iodbc.org/dataspace/iodbc/wiki/iODBC/
+HOMEPAGE=	https://www.iodbc.org/dataspace/doc/iodbc/wiki/iodbcWiki/WelcomeVisitors
 COMMENT=	ODBC 3.x driver manager
 LICENSE=	gnu-lgpl-v2
 
