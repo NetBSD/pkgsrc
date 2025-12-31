@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/10/23 20:37:04 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/12/31 08:59:13 wiz Exp $
 
 DISTNAME=	ironwail-0.8.0
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=andrei-drexler/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	charlotte@NetBSD.org
-HOMEPAGE=	https://github.com/andre-drexler/ironwail
+HOMEPAGE=	https://github.com/andrei-drexler/ironwail
 COMMENT=	High performance QuakeSpasm fork
 LICENSE=	gnu-gpl-v2
 
