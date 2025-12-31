@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7516 2025/12/31 04:03:22 markd Exp $
+$NetBSD: CHANGES-2025,v 1.7517 2025/12/31 07:44:27 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11089,3 +11089,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added x11/plasma6-kglobalacceld version 6.5.2 [markd 2025-12-31]
 	Added time/plasma6-knighttime version 6.5.2 [markd 2025-12-31]
 	Added graphics/plasma6-aurorae version 6.5.2 [markd 2025-12-31]
+	Updated mail/fetchmail to 6.6.2 [triaxx 2025-12-31]
