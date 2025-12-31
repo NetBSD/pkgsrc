@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7514 2025/12/31 02:42:51 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.7515 2025/12/31 03:20:03 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11086,3 +11086,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/libsodium to 1.0.20nb1 [wiz 2025-12-31]
 	Updated shells/fish to 4.3.2 [ktnb 2025-12-31]
 	Updated lang/fennel to 1.6.1 [ktnb 2025-12-31]
+	Added x11/plasma6-kglobalacceld version 6.5.2 [markd 2025-12-31]
+	Added time/plasma6-knighttime version 6.5.2 [markd 2025-12-31]
