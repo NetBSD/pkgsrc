@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2025/12/31 03:13:00 markd Exp $
+include/KGlobalAccelD/kglobalaccel_interface.h
+include/KGlobalAccelD/kglobalacceld.h
+include/KGlobalAccelD/kglobalacceld_export.h
+include/KGlobalAccelD/shortcutkeystate.h
+lib/cmake/KGlobalAccelD/KGlobalAccelDConfig.cmake
+lib/cmake/KGlobalAccelD/KGlobalAccelDConfigVersion.cmake
+lib/cmake/KGlobalAccelD/KGlobalAccelDTargets-noconfig.cmake
+lib/cmake/KGlobalAccelD/KGlobalAccelDTargets.cmake
+lib/libKGlobalAccelD.so.0
+lib/libKGlobalAccelD.so.${PKGVERSION}
+lib/systemd/user/plasma-kglobalaccel.service
+libexec/kglobalacceld
+qt6/plugins/org.kde.kglobalacceld.platforms/KGlobalAccelDXcb.so
+share/qlogging-categories6/kglobalacceld.categories
