@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.11 2017/01/19 18:52:25 agc Exp $
+# $NetBSD: Makefile,v 1.12 2025/12/31 08:57:35 wiz Exp $
 
 DISTNAME=	ipw2100-fw-1.2
 PKGNAME=	ipw-firmware-1.0
 CATEGORIES=	sysutils
-MASTER_SITES=	http://damien.bergamini.free.fr/ipwfw/
+#MASTER_SITES=	http://damien.bergamini.free.fr/ipwfw/
 MASTER_SITES+=	http://firmware.openbsd.org/firmware-dist/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	Damien.Bergamini@Free.FR
-HOMEPAGE=	http://damien.bergamini.free.fr/ipw/
+#HOMEPAGE=	http://damien.bergamini.free.fr/ipw/
 COMMENT=	Firmware binary images for ipw(4) driver
 LICENSE=	intel-ipw-license
 
