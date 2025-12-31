@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7530 2025/12/31 23:15:02 wen Exp $
+$NetBSD: CHANGES-2025,v 1.7531 2025/12/31 23:20:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11104,3 +11104,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Set-Object to 1.43 [wen 2025-12-31]
 	Updated devel/p5-Shell-Guess to 0.10 [wen 2025-12-31]
 	Updated devel/p5-Software-License to 0.104007 [wen 2025-12-31]
+	Updated devel/p5-String-Print to 1.02 [wen 2025-12-31]
