@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.15 2017/01/19 18:52:26 agc Exp $
-#
+# $NetBSD: Makefile,v 1.16 2025/12/31 09:03:12 wiz Exp $
 
 DISTNAME=		ipw2200-fw-2.3
 PKGNAME=		iwi-firmware-2.3
 PKGREVISION=		2
 CATEGORIES=		sysutils
-MASTER_SITES=		http://damien.bergamini.free.fr/iwifw/
+#MASTER_SITES=		http://damien.bergamini.free.fr/iwifw/
 MASTER_SITES+=		http://firmware.openbsd.org/firmware-dist/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		Damien.Bergamini@Free.FR
-HOMEPAGE=		http://damien.bergamini.free.fr/ipw/
+#HOMEPAGE=		http://damien.bergamini.free.fr/ipw/
 COMMENT=		Firmware binary images for iwi(4) driver
 LICENSE=		intel-ipw-license
 
