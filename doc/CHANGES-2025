@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7511 2025/12/30 22:45:39 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.7512 2025/12/31 00:13:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11083,3 +11083,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/p5-PerlMagick to 7.1.2.12nb1 [triaxx 2025-12-30]
 	Updated security/gnupg2 to 2.4.9 [wiz 2025-12-30]
 	Updated devel/imake to 1.0.11 [wiz 2025-12-30]
+	Updated security/libsodium to 1.0.20nb1 [wiz 2025-12-31]
