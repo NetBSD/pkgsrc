@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7521 2025/12/31 12:20:45 adam Exp $
+$NetBSD: CHANGES-2025,v 1.7522 2025/12/31 13:36:03 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11095,3 +11095,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/mame to 0.284 [wiz 2025-12-31]
 	Updated security/vaultwarden to 1.35.1 [adam 2025-12-31]
 	Updated converters/utf8proc to 2.11.3 [adam 2025-12-31]
+	Updated net/sayaka to 3.8.5 [tsutsui 2025-12-31]
