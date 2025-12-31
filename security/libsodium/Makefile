@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2024/05/27 07:42:54 adam Exp $
+# $NetBSD: Makefile,v 1.18 2025/12/31 00:13:22 wiz Exp $
 
 DISTNAME=	libsodium-1.0.20
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://download.libsodium.org/libsodium/releases/
 
