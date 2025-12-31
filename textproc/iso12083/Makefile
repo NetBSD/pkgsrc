@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2021/04/24 11:44:50 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/12/31 09:00:04 wiz Exp $
 
 DISTNAME=	iso12083-1993
 PKGREVISION=	5
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 DISTFILES=	article.dtd book.dtd maths.dtd serial.dtd
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xml.coverpages.org/sgml-xml.html
+HOMEPAGE=	https://xml.coverpages.org/sgml-xml.html
 COMMENT=	SGML DTDs from the The Electronic Publishing Special Interest Group
 
 DIST_SUBDIR=	iso12083
