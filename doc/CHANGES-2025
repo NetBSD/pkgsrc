@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7515 2025/12/31 03:20:03 markd Exp $
+$NetBSD: CHANGES-2025,v 1.7516 2025/12/31 04:03:22 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11088,3 +11088,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/fennel to 1.6.1 [ktnb 2025-12-31]
 	Added x11/plasma6-kglobalacceld version 6.5.2 [markd 2025-12-31]
 	Added time/plasma6-knighttime version 6.5.2 [markd 2025-12-31]
+	Added graphics/plasma6-aurorae version 6.5.2 [markd 2025-12-31]
