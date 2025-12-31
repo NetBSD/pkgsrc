@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/11/18 15:03:23 abs Exp $
+# $NetBSD: Makefile,v 1.3 2025/12/31 08:52:42 wiz Exp $
 
 DISTNAME=	IGV_2.9.2
 PKGNAME=	${DISTNAME:S/IGV_/igv-/}
@@ -7,7 +7,7 @@ MASTER_SITES=	https://data.broadinstitute.org/igv/projects/downloads/${PKGVERSIO
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	https://software.broadinstitute.org/software/igv/
+HOMEPAGE=	https://igv.org/doc/desktop/
 COMMENT=	Visualization tool for genomic datasets
 LICENSE=	mit
 
