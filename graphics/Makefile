@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1111 2025/12/28 14:28:54 adam Exp $
+# $NetBSD: Makefile,v 1.1112 2025/12/31 04:01:40 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -460,6 +460,7 @@ SUBDIR+=	php-jpgraph
 SUBDIR+=	picat
 SUBDIR+=	pikchr
 SUBDIR+=	pixmap
+SUBDIR+=	plasma6-aurorae
 SUBDIR+=	plasma6-breeze
 SUBDIR+=	plasma6-breeze-gtk
 SUBDIR+=	plasma6-oxygen
