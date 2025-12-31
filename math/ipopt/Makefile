@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/08/02 19:21:55 nia Exp $
+# $NetBSD: Makefile,v 1.5 2025/12/31 08:57:02 wiz Exp $
 
 DISTNAME=	Ipopt-3.11.5
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.coin-or.org/download/source/Ipopt/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	asau@inbox.ru
-HOMEPAGE=	https://projects.coin-or.org/Ipopt
+HOMEPAGE=	https://github.com/coin-or/Ipopt
 COMMENT=	Interior Point OPTimizer
 
 USE_LANGUAGES=	c c++ fortran
