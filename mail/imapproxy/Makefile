@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/10/24 22:09:44 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.27 2025/12/31 08:55:46 wiz Exp $
 
 DISTNAME=	squirrelmail-imap_proxy-1.2.7
 PKGNAME=	imapproxy-1.2.7
@@ -8,7 +7,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.imapproxy.org/
+#HOMEPAGE=	http://www.imapproxy.org/
 COMMENT=	Simple connection caching IMAP proxy daemon
 
 GNU_CONFIGURE=	YES
