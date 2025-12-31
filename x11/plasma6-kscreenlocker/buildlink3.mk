@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/12/23 09:42:49 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/12/31 02:43:31 markd Exp $
 
 BUILDLINK_TREE+=	plasma6-kscreenlocker
 
@@ -25,7 +25,7 @@ BUILDLINK_FILES.plasma6-kscreenlocker+=	share/dbus-1/interfaces/*.xml
 .include "../../x11/kf6-kxmlgui/buildlink3.mk"
 .include "../../x11/plasma6-layer-shell-qt/buildlink3.mk"
 .include "../../x11/plasma6-libkscreen/buildlink3.mk"
-.include "../../wip/plasma6-libplasma/buildlink3.mk"
+.include "../../x11/plasma6-libplasma/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .endif	# PLASMA6_KSCREENLOCKER_BUILDLINK3_MK
 
