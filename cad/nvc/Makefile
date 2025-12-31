@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/12/28 05:42:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2025/12/31 21:40:34 ryoon Exp $
 
 DISTNAME=	nvc-1.18.2
+PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	https://www.nickg.me.uk/files/
 
@@ -34,6 +35,7 @@ pre-configure:
 
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/capstone/buildlink3.mk"
+BUILDLINK_DEPMETHOD.check=	build
 .include "../../devel/check/buildlink3.mk"
 .include "../../devel/libdwarf/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
