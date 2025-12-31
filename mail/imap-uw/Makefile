@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2025/11/11 20:40:56 vins Exp $
+# $NetBSD: Makefile,v 1.158 2025/12/31 08:54:43 wiz Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -17,7 +17,7 @@ CATEGORIES=	mail
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.washington.edu/imap/
+HOMEPAGE=	https://github.com/uw-imap/imap
 COMMENT=	University of Washington's IMAP, POP2, and POP3 servers
 LICENSE=	apache-2.0
 
