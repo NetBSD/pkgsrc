@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7524 2025/12/31 21:33:20 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7525 2025/12/31 21:34:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11098,3 +11098,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/sayaka to 3.8.5 [tsutsui 2025-12-31]
 	Updated geography/py-nmeagps to 1.0.57 [gdt 2025-12-31]
 	Updated shells/oh-my-posh to 28.9.0 [pin 2025-12-31]
+	Updated devel/serie to 0.5.7 [pin 2025-12-31]
