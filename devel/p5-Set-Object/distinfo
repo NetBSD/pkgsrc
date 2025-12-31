@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2023/06/12 12:40:35 wen Exp $
+$NetBSD: distinfo,v 1.17 2025/12/31 23:08:04 wen Exp $
 
-BLAKE2s (Set-Object-1.42.tar.gz) = de151998e447cd56132045bb5bfd9313049f6b96c8909278f171b50871a9adca
-SHA512 (Set-Object-1.42.tar.gz) = f56fcc914c0dac95b6b10465cbab3aaf727f46bf65421ab667bd8fb5e6334fef5d82e80e26609875955121c235c8efb65265baf798c670ba157d8b3a82635d22
-Size (Set-Object-1.42.tar.gz) = 83376 bytes
+BLAKE2s (Set-Object-1.43.tar.gz) = 6514a0212eff6318869568361306431c1427effd49b2ad0959f8bed3154d5e24
+SHA512 (Set-Object-1.43.tar.gz) = ae2e11980e5380cd385f57992e1e923b0fa2f6eb33af5a91f183b9bb35d8a26b6702779c7d024b8a026d67bdb67c61bbcde0ac9ab338db326777b7a04de80952
+Size (Set-Object-1.43.tar.gz) = 83541 bytes
