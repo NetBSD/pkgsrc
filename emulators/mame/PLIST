@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.100 2025/11/29 15:12:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.101 2025/12/31 10:17:17 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -292,6 +292,7 @@ share/mame/hash/gba.xml
 share/mame/hash/gba_ereader.xml
 share/mame/hash/gbcolor.xml
 share/mame/hash/gcslottv.xml
+share/mame/hash/generic_cdrom.xml
 share/mame/hash/generic_flop_525.xml
 share/mame/hash/ggm.xml
 share/mame/hash/gimix.xml
@@ -480,6 +481,7 @@ share/mame/hash/mtx_rom.xml
 share/mame/hash/myvision.xml
 share/mame/hash/mz2000_cass.xml
 share/mame/hash/mz2000_flop.xml
+share/mame/hash/mz2000_snap.xml
 share/mame/hash/mz2500_flop.xml
 share/mame/hash/mz5500_flop.xml
 share/mame/hash/mz700_cass.xml
@@ -537,6 +539,8 @@ share/mame/hash/pc1640_flop.xml
 share/mame/hash/pc1640_hdd.xml
 share/mame/hash/pc200.xml
 share/mame/hash/pc6001_cart.xml
+share/mame/hash/pc6001_cass.xml
+share/mame/hash/pc6001mk2_cass.xml
 share/mame/hash/pc8001_flop.xml
 share/mame/hash/pc8001mk2_flop.xml
 share/mame/hash/pc8001mk2sr_flop.xml
@@ -547,6 +551,7 @@ share/mame/hash/pc8801_flop.xml
 share/mame/hash/pc88va.xml
 share/mame/hash/pc98.xml
 share/mame/hash/pc98_cd.xml
+share/mame/hash/pc98_flop_orig.xml
 share/mame/hash/pc98_hdd.xml
 share/mame/hash/pcd_flop.xml
 share/mame/hash/pce.xml
@@ -577,6 +582,7 @@ share/mame/hash/pippin.xml
 share/mame/hash/pippin_flop.xml
 share/mame/hash/pixter_cart.xml
 share/mame/hash/playmaker.xml
+share/mame/hash/pls1000_cart.xml
 share/mame/hash/plus4_cart.xml
 share/mame/hash/plus4_cass.xml
 share/mame/hash/plus4_flop.xml
@@ -624,6 +630,8 @@ share/mame/hash/rwtrntcs.xml
 share/mame/hash/rx78_cart.xml
 share/mame/hash/rx78_cass.xml
 share/mame/hash/rz1_cass.xml
+share/mame/hash/s2000_flop.xml
+share/mame/hash/s3000_cdrom.xml
 share/mame/hash/sagafox.xml
 share/mame/hash/sage2.xml
 share/mame/hash/saitek_egr.xml
@@ -674,6 +682,7 @@ share/mame/hash/spc1000_cass.xml
 share/mame/hash/spc1500_cass.xml
 share/mame/hash/special_cass.xml
 share/mame/hash/special_flop.xml
+share/mame/hash/specnext_sd.xml
 share/mame/hash/specpls3_flop.xml
 share/mame/hash/spectrum_betadisc_flop.xml
 share/mame/hash/spectrum_cart.xml
@@ -687,6 +696,7 @@ share/mame/hash/squale_cart.xml
 share/mame/hash/ssem_quik.xml
 share/mame/hash/st_cart.xml
 share/mame/hash/st_flop.xml
+share/mame/hash/st_flop_demos.xml
 share/mame/hash/stepone_flop.xml
 share/mame/hash/studio2.xml
 share/mame/hash/stv.xml
@@ -713,6 +723,7 @@ share/mame/hash/tdv2324.xml
 share/mame/hash/tek4052_cart.xml
 share/mame/hash/telestory_cart.xml
 share/mame/hash/teradrive_flop.xml
+share/mame/hash/teradrive_hdd.xml
 share/mame/hash/tg16.xml
 share/mame/hash/thinkpad8xx.xml
 share/mame/hash/ti74_cart.xml
