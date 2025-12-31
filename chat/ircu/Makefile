@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2018/01/13 23:18:26 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.38 2025/12/31 08:58:43 wiz Exp $
 
 DISTNAME=	ircu2.10.12.12
 PKGNAME=	${DISTNAME:S/ircu2/ircu-2/}
@@ -8,7 +7,7 @@ CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=undernet-ircu/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://coder-com.undernet.org/
+HOMEPAGE=	https://github.com/undernetirc/ircu2
 COMMENT=	Internet Relay Chat server customized for Undernet
 
 CONFLICTS+=	ircd-hybrid-[0-9]*
