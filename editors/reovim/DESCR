@@ -1,0 +1,7 @@
+A Rust-powered neovim-like text editor.
+
+Project Goals
+
+- Fastest-reaction editor: Minimal latency, instant response
+- Scalability: Handles large files and complex operations
+- Zero-warning policy: All code must compile warning-free
