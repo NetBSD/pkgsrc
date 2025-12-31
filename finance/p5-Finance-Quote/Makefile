@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.58 2025/11/17 19:44:27 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2025/12/31 23:32:58 wen Exp $
 
-DISTNAME=	Finance-Quote-1.67
+DISTNAME=	Finance-Quote-1.68
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	finance perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Finance/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/B/BP/BPSCHUCK/}
 
 MAINTAINER=	damon@brodiefamily.org
 HOMEPAGE=	https://finance-quote.sourceforge.net/
