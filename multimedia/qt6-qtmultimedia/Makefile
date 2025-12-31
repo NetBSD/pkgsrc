@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2025/12/22 06:08:14 adam Exp $
+# $NetBSD: Makefile,v 1.38 2025/12/31 09:59:08 tnn Exp $
 
 DISTNAME=	qtmultimedia-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtmultimedia-${QTVERSION}
@@ -9,6 +9,13 @@ LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
 
 # ALSA is experimental
 CONFIGURE_ARGS+=	-no-alsa
+
+SUBST_CLASSES+=			AvFoundation
+SUBST_STAGE.AvFoundation=	pre-configure
+SUBST_MESSAGE.AvFoundation=	Fixing build on case-sensitive filesystem
+SUBST_SED.AvFoundation=		-e 's,AvFoundation/AVFoundation.h,AVFoundation/AVFoundation.h,g'
+SUBST_FILES.AvFoundation=	src/plugins/multimedia/darwin/*.h
+SUBST_FILES.AvFoundation+=	src/plugins/multimedia/darwin/*/*.h
 
 .include "options.mk"
 
