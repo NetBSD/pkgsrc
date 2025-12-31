@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2025/12/31 03:17:11 markd Exp $
+include/KNightTime/KDarkLightSchedule
+include/KNightTime/KDarkLightScheduleProvider
+include/KNightTime/kdarklightschedule.h
+include/KNightTime/kdarklightscheduleprovider.h
+include/KNightTime/knighttime_export.h
+lib/cmake/KNightTime/KNightTimeConfig.cmake
+lib/cmake/KNightTime/KNightTimeConfigVersion.cmake
+lib/cmake/KNightTime/KNightTimeTargets-noconfig.cmake
+lib/cmake/KNightTime/KNightTimeTargets.cmake
+lib/libKNightTime.so
+lib/libKNightTime.so.0
+lib/libKNightTime.so.${PKGVERSION}
+lib/systemd/user/plasma-knighttimed.service
+libexec/knighttimed
+share/applications/org.kde.knighttimed.desktop
+share/dbus-1/interfaces/org.kde.NightTime.xml
+share/dbus-1/services/org.kde.NightTime.service
+share/qlogging-categories6/knighttime.categories
