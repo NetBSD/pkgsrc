@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.7525 2025/12/31 21:34:29 pin Exp $
+$NetBSD: CHANGES-2025,v 1.7526 2025/12/31 21:37:54 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -11099,3 +11099,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/py-nmeagps to 1.0.57 [gdt 2025-12-31]
 	Updated shells/oh-my-posh to 28.9.0 [pin 2025-12-31]
 	Updated devel/serie to 0.5.7 [pin 2025-12-31]
+	Added editors/reovim version 0.7.8 [pin 2025-12-31]
