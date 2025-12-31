@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/05/14 22:25:41 dholland Exp $
-#
+# $NetBSD: Makefile,v 1.16 2025/12/31 09:00:52 wiz Exp $
 
 DISTNAME=	ispell.el
 PKGNAME=	${EMACS_PKGNAME_PREFIX}ispell-emacs-3.6
@@ -9,7 +8,7 @@ MASTER_SITES=	ftp://kdstevens.com/pub/stevens/
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.eng.utah.edu/~kstevens/ispell-page.html
+HOMEPAGE=	https://my.eng.utah.edu/~kstevens/ispell-page.html
 COMMENT=	Emacs interface for ispell spell checker
 
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/ispell
