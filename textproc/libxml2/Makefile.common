@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2025/09/14 10:00:43 adam Exp $
+# $NetBSD: Makefile.common,v 1.30 2026/01/01 10:02:49 rillig Exp $
 #
 # used by textproc/libxml2/Makefile
 # used by textproc/py-libxml2/Makefile
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml2/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xmlsoft.org/
+HOMEPAGE=	https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home
 
 DISTINFO_FILE=	${.CURDIR}/../../textproc/libxml2/distinfo
 PATCHDIR=	${.CURDIR}/../../textproc/libxml2/patches
