@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2022/11/09 13:14:23 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2026/01/01 09:11:25 wiz Exp $
 
-DISTNAME=		rgb-1.1.0
+DISTNAME=		rgb-1.1.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.xz
