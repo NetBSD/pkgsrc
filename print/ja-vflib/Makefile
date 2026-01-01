@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/04/26 11:54:15 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2026/01/01 09:24:50 wiz Exp $
 
 DISTNAME=		ja-vflib-${VFLIB_VERSION}
 VFLIB_VERSION=		2.24.2
@@ -6,7 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		japanese print
 
 MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=		http://www-masu.ist.osaka-u.ac.jp/~kakugawa/VFlib/
+#HOMEPAGE=		http://www-masu.ist.osaka-u.ac.jp/~kakugawa/VFlib/
 COMMENT=		Japanese Vector font libraries and utilities
 
 META_PACKAGE=		yes
