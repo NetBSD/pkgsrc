@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!-- $NetBSD: pkgsrc.xml,v 1.45 2025/04/17 22:00:11 wiz Exp $ -->
+<!-- $NetBSD: pkgsrc.xml,v 1.46 2026/01/01 08:41:23 wiz Exp $ -->
 
 <!DOCTYPE book PUBLIC "-//NetBSD//DTD DocBook XML V4.5-Based DocBook Extension//EN" [
 
@@ -42,12 +42,12 @@
     </authorgroup>
 
     <copyright>
-      <year>1994-2025</year>
+      <year>1994-2026</year>
 
       <holder role="mailto:www@NetBSD.org">The NetBSD Foundation, Inc</holder>
     </copyright>
 
-    <pubdate>$NetBSD: pkgsrc.xml,v 1.45 2025/04/17 22:00:11 wiz Exp $</pubdate>
+    <pubdate>$NetBSD: pkgsrc.xml,v 1.46 2026/01/01 08:41:23 wiz Exp $</pubdate>
 
     <abstract>
 
