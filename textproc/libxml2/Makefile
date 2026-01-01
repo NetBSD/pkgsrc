@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.192 2025/05/27 21:43:35 adam Exp $
+# $NetBSD: Makefile,v 1.193 2026/01/01 10:02:49 rillig Exp $
 
 .include "../../textproc/libxml2/Makefile.common"
 
+PKGREVISION=	1
 COMMENT=	XML parser library from the GNOME project
 LICENSE=	modified-bsd
 
@@ -15,7 +16,6 @@ GNU_CONFIGURE_ICONV=	no
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ARGS+=	--with-lzma=${BUILDLINK_PREFIX.xz}
-CONFIGURE_ARGS+=	--with-ftp
 # enable http again, for now - will be removed in 2.15,
 # to fix libspatialite:
 # https://www.gaia-gis.it/fossil/libspatialite/tktview?name=2b1697e601
