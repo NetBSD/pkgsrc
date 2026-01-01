@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/02 20:11:43 asau Exp $
-#
+# $NetBSD: Makefile,v 1.19 2026/01/01 09:33:57 wiz Exp $
 
 DISTNAME=	joos-0.2
 PKGREVISION=	1
@@ -8,7 +7,7 @@ MASTER_SITES=	# ftp://netbsd.stevens-tech.edu/pub/NetBSD/packages/distfiles/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.brics.dk/~mis/dOvs/index.html
+#HOMEPAGE=	http://www.brics.dk/~mis/dOvs/index.html
 COMMENT=	Java Object Oriented Subset
 
 MAKE_JOBS_SAFE=		no
