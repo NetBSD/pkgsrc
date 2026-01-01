@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2023/11/28 20:21:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2026/01/01 13:05:41 prlw1 Exp $
 
 DISTNAME=		vnc-4_1_3-unixsrc
 PKGNAME=		vncviewer-4.1.3
@@ -22,6 +22,9 @@ LDFLAGS.SunOS+=		-lsocket -lnsl
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
+pre-configure:
+	${CP} files/unix_configure ${WRKDIR}/${DISTNAME}/unix/configure
+	${CP} files/common_configure ${WRKDIR}/${DISTNAME}/common/configure
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vncviewer/vncviewer ${DESTDIR}${PREFIX}/bin/vncviewer
 	${INSTALL_MAN} ${WRKSRC}/vncviewer/vncviewer.man \
