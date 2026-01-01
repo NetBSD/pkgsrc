@@ -12,9 +12,9 @@ Hubert Feyrer
 
 The pkgsrc Developers
 
-Copyright    1994-2025 The NetBSD Foundation, Inc
+Copyright    1994-2026 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.xml,v 1.45 2025/04/17 22:00:11 wiz Exp $
+$NetBSD: pkgsrc.xml,v 1.46 2026/01/01 08:41:23 wiz Exp $
 
 Abstract
 
