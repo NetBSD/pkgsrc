@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.29 2012/10/02 20:11:43 asau Exp $
-#
+# $NetBSD: Makefile,v 1.30 2026/01/01 09:25:57 wiz Exp $
 
 DISTNAME=	jasmin-1.06
 PKGREVISION=	2
 CATEGORIES=	lang java
-MASTER_SITES=	http://mrl.nyu.edu/~meyer/jasmin/
+#MASTER_SITES=	http://mrl.nyu.edu/~meyer/jasmin/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mrl.nyu.edu/~meyer/jasmin/
+#HOMEPAGE=	http://mrl.nyu.edu/~meyer/jasmin/
 COMMENT=	Java "assembler" interface
 
 USE_JAVA=	run
