@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2026/01/01 19:41:35 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- configure.orig	2026-01-01 19:32:23.268668736 +0000
++++ configure
+@@ -8689,7 +8689,7 @@ fi
+ 
+ 
+ 
+-if test "x${PERL_PROG}${VIM_PROG}" == 'x'; then
++if test "x${PERL_PROG}${VIM_PROG}" = 'x'; then
+     as_fn_error $? "Either perl or Vim is necessary to generate tags for documentation in Vim's format." "$LINENO" 5
+ fi
+ 
