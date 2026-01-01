@@ -1,7 +1,15 @@
-$NetBSD: patch-ab,v 1.4 2013/12/11 23:49:52 markd Exp $
+$NetBSD: patch-ab,v 1.5 2026/01/01 23:59:16 dholland Exp $
 
---- ttf.cpp.orig	2002-11-07 06:30:04.000000000 +0100
-+++ ttf.cpp	2007-11-15 07:05:27.304109000 +0100
+- include freetype headers properly
+- work around some sunpro C++ dialect issue
+- fix wrong return type in FontFamilyName()
+- avoid UB in FoundryName()
+  (was returning a pointer to automatic storage, make it return the
+  object instead)
+- some other C++ workaround involving implicit conversions and booleans
+
+--- ttf.cpp.orig	2002-11-07 05:30:04.000000000 +0000
++++ ttf.cpp
 @@ -3,7 +3,8 @@
  #include <cctype>
  #include <cstring>
@@ -34,6 +42,33 @@ $NetBSD: patch-ab,v 1.4 2013/12/11 23:49:52 markd Exp $
              };
              platform = NamePtr.platform_id;
              encoding = NamePtr.encoding_id;
+@@ -249,7 +255,7 @@ Face::FontFamilyName (void) const
+     return "unknown";
+ }
+ 
+-const char *
++std::string
+ Face::FoundryName (void) const
+ {
+ 
+@@ -455,7 +461,7 @@ Face::FoundryName (void) const
+     code[4] = 0;
+ 
+     if (code[0] == 0) { 
+-	return std::string (cmdline::instance()->option ("default-foundry")).c_str ();
++	return std::string (cmdline::instance()->option ("default-foundry"));
+     }
+     
+     for (p = known_foundries; p->xlfd; p++) {
+@@ -464,7 +470,7 @@ Face::FoundryName (void) const
+ 	}
+     }
+ 
+-    return std::string (cmdline::instance()->option ("default-foundry")).c_str ();
++    return std::string (cmdline::instance()->option ("default-foundry"));
+ }
+ 
+ const char *
 @@ -522,7 +528,7 @@ Face::Weight (void) const
  {
      const char *result;
