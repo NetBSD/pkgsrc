@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/11/02 16:25:22 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2026/01/01 09:29:19 wiz Exp $
 
 DISTNAME=		jchkmail-1.3.1a
 PKGREVISION=		2
@@ -9,7 +9,7 @@ CATEGORIES=		mail
 #MASTER_SITES=		http://foss.jose-marcio.org/download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://foss.jose-marcio.org/wiki/doku.php
+HOMEPAGE=		https://foss.jose-marcio.org/wiki/doku.php
 COMMENT=		Behavior-based virus and spam milter for Sendmail
 
 USE_PKGLOCALEDIR=	yes
