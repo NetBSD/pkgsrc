@@ -1,47 +1,35 @@
-# $NetBSD: Makefile,v 1.65 2025/11/17 11:00:39 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2026/01/01 11:19:14 wiz Exp $
 
-DISTNAME=	roundup-1.4.19
-PKGREVISION=	7
+DISTNAME=	roundup-2.5.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/roundup/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://roundup.sourceforge.net/
+HOMEPAGE=	https://www.roundup-tracker.org/
 COMMENT=	Issue tracking system with command-line, web and email clients
 LICENSE=	mit AND zpl-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
 USE_LANGUAGES=	# empty
-USE_TOOLS+=	pax
 
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.4.19
-REPLACE_PYTHON+=		demo.py roundup/admin.py
 REPLACE_PYTHON+=		frontends/roundup.cgi
-REPLACE_PYTHON+=		roundup/backends/locking.py
-REPLACE_PYTHON+=		roundup/cgi/TAL/talgettext.py
-REPLACE_PYTHON+=		roundup/msgfmt.py
-REPLACE_PYTHON+=		roundup/scripts/roundup_demo.py
-REPLACE_PYTHON+=		roundup/scripts/roundup_gettext.py
-REPLACE_PYTHON+=		roundup/scripts/roundup_xmlrpc_server.py
-REPLACE_PYTHON+=		roundup/version_check.py run_tests.py
-REPLACE_PYTHON+=		scripts/add-issue scripts/copy-user.py
-REPLACE_PYTHON+=		scripts/imapServer.py scripts/roundup-reminder
-REPLACE_PYTHON+=		scripts/schema_diagram.py tools/load_tracker.py
-REPLACE_PYTHON+=		tools/migrate-queries.py tools/pygettext.py
 
-ROUNDUPDOCDIR=	${PREFIX}/share/doc/roundup
+.include "../../mk/bsd.fast.prefs.mk"
 
-INSTALLATION_DIRS+=	${ROUNDUPDOCDIR} ${PKGMANDIR}/man1
+.if ${PKGMANDIR} != "share/man"
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/share/man/man1/roundup-admin.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/share/man/man1/roundup-demo.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/share/man/man1/roundup-mailgw.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/share/man/man1/roundup-server.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/CHANGES.txt ${DESTDIR}${ROUNDUPDOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/COPYING.txt ${DESTDIR}${ROUNDUPDOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${ROUNDUPDOCDIR}
-	cd ${WRKSRC}/doc && pax -s '/.*\.1//g' -rw -pp -pm . ${DESTDIR}${ROUNDUPDOCDIR}
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/roundup-admin.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/roundup-demo.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/roundup-mailgw.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/roundup-server.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.endif
 
-.include "../../lang/python/egg.mk"
+# as of 2.5.0
+# 1 failed, 1268 passed, 1119 skipped, 2 warnings
+
+.include "../../lang/python/wheel.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

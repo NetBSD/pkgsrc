@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.28 2021/10/26 10:19:22 nia Exp $
+$NetBSD: distinfo,v 1.29 2026/01/01 11:19:14 wiz Exp $
 
-BLAKE2s (roundup-1.4.19.tar.gz) = b8e698ed2dba8351ff0264e0a5271be5fc8532ad52cb92a532a249ff200e7edb
-SHA512 (roundup-1.4.19.tar.gz) = 497cad23e1074e535cf2729d52f07ec2103c89e5c0927be678f02299c036dac6dc262fe909310e066588f00144151b98b55a7dfd8c1df28680f99fecc255236e
-Size (roundup-1.4.19.tar.gz) = 2505527 bytes
-SHA1 (patch-setup-py) = a5a84a6fc0e4a2e57a3ce71e3c4d78234b5fe686
+BLAKE2s (roundup-2.5.0.tar.gz) = 7c9b44f8dc627f69ade3e5e255d6c83d2e3c44606deb8a6f864c1f2ca6115b1a
+SHA512 (roundup-2.5.0.tar.gz) = 296a46c8e8ece31013c799208cb80962008afe9f35ac61d20a6e5e9c5a603d7e5da12c4c42adc31ac633b6ded23f08527e3b98144ec01eb238aa600274b30f32
+Size (roundup-2.5.0.tar.gz) = 4660956 bytes
