@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/12/13 13:15:41 nia Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/01/01 19:41:35 wiz Exp $
 bin/vifm
 bin/vifm-convert-dircolors
 bin/vifm-pause
@@ -13,13 +13,18 @@ share/doc/vifm/AUTHORS
 share/doc/vifm/BUGS
 share/doc/vifm/COPYING
 share/doc/vifm/ChangeLog
+share/doc/vifm/ChangeLog.LuaAPI
 share/doc/vifm/FAQ
 share/doc/vifm/INSTALL
 share/doc/vifm/NEWS
 share/doc/vifm/README
 share/doc/vifm/TODO
 share/examples/vifm/colors/Default-256.vifm
+share/fish/vendor_completions.d/vifm.fish
+share/icons/hicolor/128x128/apps/vifm.png
+share/icons/hicolor/scalable/apps/vifm.svg
 share/pixmaps/vifm.png
+share/vifm/colors/Default-256.vifm
 share/vifm/colors/astrell-root.vifm
 share/vifm/colors/astrell-user.vifm
 share/vifm/colors/dmilith-root.vifm
