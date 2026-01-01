@@ -1,10 +1,14 @@
-$NetBSD: distinfo,v 1.28 2021/10/26 11:34:18 nia Exp $
+$NetBSD: distinfo,v 1.29 2026/01/01 09:36:08 mef Exp $
 
-BLAKE2s (Tk-804.035.tar.gz) = 9daf1ce5a2f443055e04be6cd5c553d9db64efdc81989a5c7564e733e9b7c0e9
-SHA512 (Tk-804.035.tar.gz) = ff6a236e7a2b25ff759a1bfdff517524ade337a03e6da8524f29b9ff958b4e01fe527e53fa7884179f3b1a15c0419a554eeedd471eb4c2f3a1baac5cc3ae1daa
-Size (Tk-804.035.tar.gz) = 7024487 bytes
+BLAKE2s (Tk-804.036.tar.gz) = 29e456ac1655ea46dea54cb080a9c90ed66ca7b3a6126105e71a9b32d1e1ba15
+SHA512 (Tk-804.036.tar.gz) = 7d8b82127a5fdbb2f0387f541af8844a09f1230f377b92d511ecb12e81bfd5ef56d4fe925cac064a798a96a003bb8465b6df37cff18a960f3631bb3a214cd812
+Size (Tk-804.036.tar.gz) = 7024993 bytes
 SHA1 (patch-aa) = 7f4a97b0f97e474ce6f0d0cfeb9d49e8eb703917
 SHA1 (patch-ac) = 8918f9a9dfd884ed8d7b76b0615e266ffa392a44
 SHA1 (patch-ad) = 09e322a0adf7c8abf98d2ed202c1f52e6bca97f6
 SHA1 (patch-ai) = f6ef20cb48f3ee08335a6410e873f3b5aa277b20
 SHA1 (patch-aj) = ba3dfe1e7b7a19af1240b37186ab69d857d925f4
+SHA1 (patch-config_pregcomp2.c) = 2ad3c3b806f3367e18908b3e3e123e645d7877d2
+SHA1 (patch-pTk_Xlib.t) = d44011e277f28c1893cb623c82a126ea43cc46f1
+SHA1 (patch-pTk_mTk_generic_tkEvent.c) = 67661b11776390a4bf293d1a9d965cdfd03c9d74
+SHA1 (patch-pTk_mTk_generic_tkImage.c) = 13e2342ad7753c27b00c3224830587a3c24728ca
