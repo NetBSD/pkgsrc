@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/08 09:57:15 asau Exp $
+# $NetBSD: Makefile,v 1.10 2026/01/01 09:32:08 wiz Exp $
 #
 # Update instructions:
 # . bump PKGNAME to today's date
@@ -10,12 +10,12 @@ DISTNAME=	JMdict
 PKGNAME=	JMdict-20061208
 CATEGORIES=	japanese misc
 MASTER_SITES=	${MASTER_SITE_LOCAL:=${PKGNAME_NOREV}/}
-OMASTER_SITES=	ftp://ftp.cc.monash.edu.au/pub/nihongo/
+#OMASTER_SITES=	ftp://ftp.cc.monash.edu.au/pub/nihongo/
 EXTRACT_SUFX=	.gz
 DISTFILES=	jmdict_proj_desc.html JMdict.gz JMdict.dtd
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.csse.monash.edu.au/~jwb/edict.html
+HOMEPAGE=	https://www.edrdg.org/~smg/
 COMMENT=	Japanese-Multilingual electronic dictionary
 
 WRKSRC=		${WRKDIR}
