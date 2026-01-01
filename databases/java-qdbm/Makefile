@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/03/27 19:35:54 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/01/01 09:27:25 wiz Exp $
 
 .include "../../databases/qdbm/Makefile.common"
 
@@ -6,7 +6,6 @@ PKGNAME=	java-qdbm-1.0.0.${QDBM_VERSION}
 CATEGORIES=	databases java
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://fallabs.com/qdbm/jspex.html
 COMMENT=	Java API of QDBM
 LICENSE=	gnu-lgpl-v2.1
 
