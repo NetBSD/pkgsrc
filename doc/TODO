@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26600 2026/01/01 09:40:25 mef Exp $
+$NetBSD: TODO,v 1.26601 2026/01/01 11:19:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -804,6 +804,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jed-0.99-18
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jigdo-0.8.2
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -958,6 +959,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nant-0.92
 	o nap-1.5.3
 	o nas-auscope-1.9.4
+	o ncurses-6.6
 	o ncview-2.1.8
 	o netramet-50
 	o newmail-1.0.2
@@ -996,6 +998,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencl-3.0.19
 	o opencpn-plugin-draw-1.8.5.2
 	o opencsg-1.4.2
+	o opencv-4.13
 	o opendnssec-2.1.8
 	o opengrok-1.7.1
 	o openh323-1.19.1
