@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/05/09 13:46:34 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/01/01 12:22:36 rillig Exp $
 
 PKGNAME=	${DISTNAME:S/-/17-client-/}
 COMMENT=	PostgreSQL database client programs
@@ -19,9 +19,8 @@ CONFIGURE_ARGS+=	INSTALL=${INSTALL:Q}\ -c
 INSTALLATION_DIRS+=	bin
 .endif
 
-# 1. The thread-safety test in ${WRSRC}/src/tools/thread does not pass on
+# The thread-safety test in ${WRSRC}/src/tools/thread does not pass on
 # NetBSD earlier than 4.0 or DragonFly.
-# 2. configure with --enable-thread-safety fails on OpenBSD.
 .if (${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 040000) || \
     ${OPSYS} == "DragonFly" || ${OPSYS} == "OpenBSD"
 PGSQL_THREAD_SAFETY?=	no
@@ -31,11 +30,6 @@ BUILD_DEFS+=		PGSQL_THREAD_SAFETY
 
 .if ${PGSQL_THREAD_SAFETY:tl} == yes
 .  include "../../mk/pthread.buildlink3.mk"
-.  if (${PTHREAD_TYPE} == "native")
-CONFIGURE_ARGS+=	--enable-thread-safety
-.  endif
-.else
-CONFIGURE_ARGS+=	--disable-thread-safety
 .endif
 
 BUILD_DIRS+=	src/include/catalog
