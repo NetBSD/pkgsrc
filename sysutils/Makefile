@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1181 2025/12/30 11:06:20 kikadf Exp $
+# $NetBSD: Makefile,v 1.1182 2026/01/01 20:20:02 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -448,6 +448,7 @@ SUBDIR+=	lsfp
 SUBDIR+=	lsof
 SUBDIR+=	lstr
 SUBDIR+=	lvm2
+SUBDIR+=	lx-cli
 SUBDIR+=	lxmenu-data
 SUBDIR+=	lxpanel
 SUBDIR+=	lxqt-menu-data
