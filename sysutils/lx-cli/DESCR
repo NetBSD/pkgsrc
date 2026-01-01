@@ -1,0 +1,11 @@
+A modern alternative to ls with more readable formatting, colours, icons, and
+customizable output.
+
+Features
+- Colorized output with file type icons
+- Multiple display modes: short (default), long (-l), one-per-line (-1), and
+  tree view (-r)
+- Hidden files support: use -a to show all files
+- Recursive tree view: display directory hierarchies with -r
+- Configurable: customize colors, spacing, display options, and tree styles
+- Smart alignment: properly handles unicode characters and icons
