@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26599 2025/12/31 07:44:27 triaxx Exp $
+$NetBSD: TODO,v 1.26600 2026/01/01 09:40:25 mef Exp $
 
 Suggested new packages
 ======================
@@ -1039,7 +1039,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Sys-Filesystem-1.408
 	o p5-Test-TempDir-0.018
 	o p5-Text-xSV-0.23
-	o p5-Tk-804.036
 	o p5-Weather-PurpleAir-API-0.08
 	o p5-perl-ldap-0.68
 	o p5-xmltv-1.3.1

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5 2026/01/01 09:27:06 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6 2026/01/01 09:40:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8,3 +8,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/xauth to 1.1.5 [wiz 2026-01-01]
 	Updated net/fping to 5.5 [adam 2026-01-01]
 	Updated devel/py-hypothesis to 6.148.9 [adam 2026-01-01]
+	Updated x11/p5-Tk to 804.036 [mef 2026-01-01]
