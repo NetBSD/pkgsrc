@@ -1,6 +1,6 @@
-$NetBSD: patch-pTk_mTk_generic_tkImage.c,v 1.1 2026/01/01 09:36:08 mef Exp $
+$NetBSD: patch-pTk_mTk_generic_tkImage.c,v 1.2 2026/01/01 09:49:29 mef Exp $
 
-gcd-14.3.9 flags as follows
+gcc-14.3.0 flags as follows
 
 tkImage.c:1080:1: error: type of 'imgHeight' defaults to 'int' [-Wimplicit-int]
 tkImage.c:1086:5: error: declaration for parameter 'imgHeitht' but no such parameter
