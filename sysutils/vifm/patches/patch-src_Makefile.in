@@ -1,11 +1,11 @@
-$NetBSD: patch-src_Makefile.in,v 1.1 2021/10/18 11:17:24 nia Exp $
+$NetBSD: patch-src_Makefile.in,v 1.2 2026/01/01 19:41:35 wiz Exp $
 
 - Unbundle Lua.
 - Install config files to examples, per pkgsrc convention.
 
---- src/Makefile.in.orig	2021-09-29 09:57:54.000000000 +0000
+--- src/Makefile.in.orig	2025-06-04 08:28:12.000000000 +0000
 +++ src/Makefile.in
-@@ -144,22 +144,6 @@ am_vifm_OBJECTS = cfg/config.$(OBJEXT) c
+@@ -149,22 +149,6 @@ am_vifm_OBJECTS = cfg/config.$(OBJEXT) c
  	io/iop.$(OBJEXT) io/ior.$(OBJEXT) io/private/ioc.$(OBJEXT) \
  	io/private/ioe.$(OBJEXT) io/private/ioeta.$(OBJEXT) \
  	io/private/ionotif.$(OBJEXT) io/private/traverser.$(OBJEXT) \
@@ -25,10 +25,33 @@ $NetBSD: patch-src_Makefile.in,v 1.1 2021/10/18 11:17:24 nia Exp $
 -	lua/lua/ltablib.$(OBJEXT) lua/lua/ltm.$(OBJEXT) \
 -	lua/lua/lundump.$(OBJEXT) lua/lua/lutf8lib.$(OBJEXT) \
 -	lua/lua/lvm.$(OBJEXT) lua/lua/lzio.$(OBJEXT) \
- 	lua/common.$(OBJEXT) lua/vifm_cmds.$(OBJEXT) \
- 	lua/vifm_handlers.$(OBJEXT) lua/vifm_viewcolumns.$(OBJEXT) \
- 	lua/vifmentry.$(OBJEXT) lua/vifmjob.$(OBJEXT) \
-@@ -610,7 +594,7 @@ AUTOMAKE_OPTIONS = subdir-objects
+ 	lua/common.$(OBJEXT) lua/vifm.$(OBJEXT) \
+ 	lua/vifm_abbrevs.$(OBJEXT) lua/vifm_cmds.$(OBJEXT) \
+ 	lua/vifm_events.$(OBJEXT) lua/vifm_fs.$(OBJEXT) \
+@@ -325,22 +309,6 @@ am__depfiles_remade = ./$(DEPDIR)/args.P
+ 	lua/$(DEPDIR)/vifmjob.Po lua/$(DEPDIR)/vifmtab.Po \
+ 	lua/$(DEPDIR)/vifmview.Po lua/$(DEPDIR)/vlua.Po \
+ 	lua/$(DEPDIR)/vlua_cbacks.Po lua/$(DEPDIR)/vlua_state.Po \
+-	lua/lua/$(DEPDIR)/lapi.Po lua/lua/$(DEPDIR)/lauxlib.Po \
+-	lua/lua/$(DEPDIR)/lbaselib.Po lua/lua/$(DEPDIR)/lcode.Po \
+-	lua/lua/$(DEPDIR)/lcorolib.Po lua/lua/$(DEPDIR)/lctype.Po \
+-	lua/lua/$(DEPDIR)/ldblib.Po lua/lua/$(DEPDIR)/ldebug.Po \
+-	lua/lua/$(DEPDIR)/ldo.Po lua/lua/$(DEPDIR)/ldump.Po \
+-	lua/lua/$(DEPDIR)/lfunc.Po lua/lua/$(DEPDIR)/lgc.Po \
+-	lua/lua/$(DEPDIR)/linit.Po lua/lua/$(DEPDIR)/liolib.Po \
+-	lua/lua/$(DEPDIR)/llex.Po lua/lua/$(DEPDIR)/lmathlib.Po \
+-	lua/lua/$(DEPDIR)/lmem.Po lua/lua/$(DEPDIR)/loadlib.Po \
+-	lua/lua/$(DEPDIR)/lobject.Po lua/lua/$(DEPDIR)/lopcodes.Po \
+-	lua/lua/$(DEPDIR)/loslib.Po lua/lua/$(DEPDIR)/lparser.Po \
+-	lua/lua/$(DEPDIR)/lstate.Po lua/lua/$(DEPDIR)/lstring.Po \
+-	lua/lua/$(DEPDIR)/lstrlib.Po lua/lua/$(DEPDIR)/ltable.Po \
+-	lua/lua/$(DEPDIR)/ltablib.Po lua/lua/$(DEPDIR)/ltm.Po \
+-	lua/lua/$(DEPDIR)/lundump.Po lua/lua/$(DEPDIR)/lutf8lib.Po \
+-	lua/lua/$(DEPDIR)/lvm.Po lua/lua/$(DEPDIR)/lzio.Po \
+ 	menus/$(DEPDIR)/apropos_menu.Po menus/$(DEPDIR)/bmarks_menu.Po \
+ 	menus/$(DEPDIR)/cabbrevs_menu.Po \
+ 	menus/$(DEPDIR)/chistory_menu.Po \
+@@ -748,7 +716,7 @@ AUTOMAKE_OPTIONS = subdir-objects
  vim_dir = $(pkgdatadir)/vim
  sample_colors_dir = $(pkgdatadir)/colors
  vimdoc_dir = $(pkgdatadir)/vim-doc
@@ -37,7 +60,7 @@ $NetBSD: patch-src_Makefile.in,v 1.1 2021/10/18 11:17:24 nia Exp $
  vim_autoload_vifm_dir = $(vim_dir)/autoload/vifm
  vim_doc_dir = $(vim_dir)/doc
  vim_ftdetect_dir = $(vim_dir)/ftdetect
-@@ -728,46 +712,6 @@ vifm_SOURCES = \
+@@ -876,45 +844,6 @@ vifm_SOURCES = \
  	io/private/ionotif.c io/private/ionotif.h \
  	io/private/traverser.c io/private/traverser.h \
  	\
@@ -63,7 +86,6 @@ $NetBSD: patch-src_Makefile.in,v 1.1 2021/10/18 11:17:24 nia Exp $
 -	lua/lua/loadlib.c \
 -	lua/lua/lobject.c lua/lua/lobject.h \
 -	lua/lua/lopcodes.c lua/lua/lopcodes.h \
--	lua/lua/lopnames.h \
 -	lua/lua/loslib.c \
 -	lua/lua/lparser.c lua/lua/lparser.h \
 -	lua/lua/lprefix.h \
@@ -83,4 +105,43 @@ $NetBSD: patch-src_Makefile.in,v 1.1 2021/10/18 11:17:24 nia Exp $
 -	\
  	lua/api.h \
  	lua/common.c lua/common.h \
- 	lua/vifm_cmds.c lua/vifm_cmds.h \
+ 	lua/vifm.c lua/vifm.h \
+@@ -1787,38 +1716,6 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@lua/$(DEPDIR)/vlua.Po@am__quote@ # am--include-marker
+ @AMDEP_TRUE@@am__include@ @am__quote@lua/$(DEPDIR)/vlua_cbacks.Po@am__quote@ # am--include-marker
+ @AMDEP_TRUE@@am__include@ @am__quote@lua/$(DEPDIR)/vlua_state.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/lapi.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/lauxlib.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/lbaselib.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/lcode.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/lcorolib.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/lctype.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/ldblib.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/ldebug.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/ldo.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/ldump.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/lfunc.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/lgc.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/linit.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/liolib.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/llex.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/lmathlib.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/lmem.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/loadlib.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/lobject.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/lopcodes.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/loslib.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/lparser.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/lstate.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/lstring.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/lstrlib.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/ltable.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/ltablib.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/ltm.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/lundump.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/lutf8lib.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/lvm.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@lua/lua/$(DEPDIR)/lzio.Po@am__quote@ # am--include-marker
+ @AMDEP_TRUE@@am__include@ @am__quote@menus/$(DEPDIR)/apropos_menu.Po@am__quote@ # am--include-marker
+ @AMDEP_TRUE@@am__include@ @am__quote@menus/$(DEPDIR)/bmarks_menu.Po@am__quote@ # am--include-marker
+ @AMDEP_TRUE@@am__include@ @am__quote@menus/$(DEPDIR)/cabbrevs_menu.Po@am__quote@ # am--include-marker
