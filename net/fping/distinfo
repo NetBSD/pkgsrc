@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.23 2025/11/28 12:12:21 adam Exp $
+$NetBSD: distinfo,v 1.24 2026/01/01 09:24:15 adam Exp $
 
-BLAKE2s (fping-5.4.tar.gz) = bcfd0755764a28a7bdc6ef5bbf52c50609ba76b4613744793375e83d72e8f093
-SHA512 (fping-5.4.tar.gz) = 377032bb1a104fdf7b9cf785808ae2aa23b83e60aab7288096c5a0f27657c1c40da1390f4fe8c7d52a6c3d43b7bf7e84065443b6e7fe73b9e51715623012c6b5
-Size (fping-5.4.tar.gz) = 195770 bytes
+BLAKE2s (fping-5.5.tar.gz) = 21d05aa8b14587e9824243fed17e627c23781a2833a3d05f4fb95fd7b258afe2
+SHA512 (fping-5.5.tar.gz) = 80fddfb9462b4ed7231d96d21340e75a42a4c481b78fd70f4889422eab86405b1e4b2ee25162478f4c35f273d4a6b1ff81309af9f09121c574509bfd73b1afde
+Size (fping-5.5.tar.gz) = 215522 bytes
+SHA1 (patch-configure) = 444ef5b9335cd88378890c8f2fff14fc9faedf4d
+SHA1 (patch-src_fping.c) = b96b02f0e0f056aaa1adb090c652b520a0501fc3
