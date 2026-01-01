@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2025/05/28 09:36:55 zafer Exp $
+# $NetBSD: Makefile.common,v 1.17 2026/01/01 09:25:25 wiz Exp $
 #
 # used by print/ja-vflib-lib/Makefile
 # used by print/ja-vflib-utils/Makefile
@@ -11,7 +11,7 @@ DISTFILES+=		${VFLIB_SRC}
 VFLIB_SRC=		${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=		http://www-masu.ist.osaka-u.ac.jp/~kakugawa/VFlib/
+#HOMEPAGE=		http://www-masu.ist.osaka-u.ac.jp/~kakugawa/VFlib/
 
 CONFIGURE_ARGS+=	--without-x
 VFLIB_VERSION=		2.24.2
