@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2025/03/09 06:34:27 wiz Exp $
+$NetBSD: distinfo,v 1.16 2026/01/01 09:12:14 wiz Exp $
 
-BLAKE2s (xauth-1.1.4.tar.xz) = 3490dc24c6339dbc1fbdbc461317b601618e5d773a94a96b19ac45ed1540905e
-SHA512 (xauth-1.1.4.tar.xz) = 6f08b92acec08fe426da0bcf7f68b0c6d21777bed76c5c316717bf15df0654809a97b6c4d3d570d861c49b85857191a5c5be3b4b84049b2459688af2c7b0a74d
-Size (xauth-1.1.4.tar.xz) = 163696 bytes
+BLAKE2s (xauth-1.1.5.tar.xz) = 847a7f17ea4433fdf43ae963053194135fb7da8af32ee0579941a5cda32f6af3
+SHA512 (xauth-1.1.5.tar.xz) = df94b59de49ced2490351b7ab42d56d3ef92077891b8ba7a73c53b6babb1facd250d934b82f36ee1ddc355dffefb8f52914d30893c9d578711264f82e9bf3cb9
+Size (xauth-1.1.5.tar.xz) = 165480 bytes
