@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8 2026/01/01 13:54:29 fox Exp $
+$NetBSD: CHANGES-2026,v 1.9 2026/01/01 16:30:52 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11,3 +11,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/p5-Tk to 804.036 [mef 2026-01-01]
 	Updated devel/roundup to 2.5.0 [wiz 2026-01-01]
 	Updated sysutils/pfetch to 1.10.0 [fox 2026-01-01]
+	Updated editors/neovim to 0.11.5nb2 [leot 2026-01-01]
