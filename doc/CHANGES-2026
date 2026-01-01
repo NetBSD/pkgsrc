@@ -1,4 +1,6 @@
-$NetBSD: CHANGES-2026,v 1.1 2026/01/01 08:38:20 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2 2026/01/01 09:09:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
+	Updated math/fast_float to 8.2.2 [adam 2026-01-01]
+	Updated security/py-gnupg to 0.5.6 [adam 2026-01-01]
