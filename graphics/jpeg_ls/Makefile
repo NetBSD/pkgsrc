@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2024/01/25 14:32:28 gdt Exp $
-#
+# $NetBSD: Makefile,v 1.13 2026/01/02 09:11:48 wiz Exp $
 
 DISTNAME=		jpeg_ls_v2.2
 PKGNAME=		jpeg_ls-2.2
 PKGREVISION=		1
 CATEGORIES=		graphics
-MASTER_SITES=		http://kt.ijs.si/aleks/jpeg-ls/
+#MASTER_SITES=		http://kt.ijs.si/aleks/jpeg-ls/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://kt.ijs.si/aleks/jpeg-ls/mirror.htm
+#HOMEPAGE=		http://kt.ijs.si/aleks/jpeg-ls/mirror.htm
 COMMENT=		JPEG-LS codec (lossless/near-lossless codec)
 # Boutique license not in pkgsrc: self contradictory and vague, referring to
 # "commercial programs".
