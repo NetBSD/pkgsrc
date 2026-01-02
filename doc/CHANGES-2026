@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.30 2026/01/02 17:01:27 pin Exp $
+$NetBSD: CHANGES-2026,v 1.31 2026/01/02 17:02:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -51,3 +51,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/duplicity to 3.0.7 [triaxx 2026-01-02]
 	Updated www/hugo to 0.154.1 [triaxx 2026-01-02]
 	Updated devel/cargo-nextest to 0.9.117 [pin 2026-01-02]
+	Updated editors/featherpad to 1.6.3 [pin 2026-01-02]
