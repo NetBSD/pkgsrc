@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2024/11/29 12:59:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2026/01/02 22:40:21 wiz Exp $
 
 DISTNAME=	LuaJIT-2.1.1713773202	# see .relver
 PKGNAME=	${DISTNAME:S/LuaJIT/LuaJIT2/}
+PKGREVISION=	1
 CATEGORIES=	lang lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LuaJIT/}
 GITHUB_PROJECT=	LuaJIT
@@ -26,6 +27,10 @@ PTHREAD_OPTS+=		native
 PTHREAD_AUTO_VARS=	yes
 
 CFLAGS.SunOS+=	-DLUAJIT_UNWIND_EXTERNAL=1
+
+PKGCONFIG_OVERRIDE=	etc/luajit.pc
+# enable Lua 5.2 compatibility
+CFLAGS+=		-DLUAJIT_ENABLE_LUA52COMPAT
 
 .include "../../mk/bsd.prefs.mk"
 
