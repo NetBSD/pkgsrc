@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2025/12/14 18:05:18 martin Exp $
+$NetBSD: distinfo,v 1.35 2026/01/02 20:42:17 tnn Exp $
 
 BLAKE2s (palemoon-33.9.1/icudt63b.dat.gz) = 609cc504b54df324a891aa9531ab069b3699591bf49b989e792479df33262a92
 SHA512 (palemoon-33.9.1/icudt63b.dat.gz) = 514b8bfe28fb54e1e26b9140d4b3065504a0b0284fded121f26c4e0f13697154a54da4a7c85a0fa0b9dae2e5b452aff4df138228c28ed80969ec0ac33b0ad0b2
@@ -23,6 +23,7 @@ SHA1 (patch-platform_ipc_chromium_src_base_atomicops__internals__arm__gcc.h) = f
 SHA1 (patch-platform_layout_base_FrameProperties.h) = 400fca775e5bdf2595fbd02ca8679b15988a66d0
 SHA1 (patch-platform_media_ffvpx_config.h) = 7d42a3cbcb10818b2d2d890a6fcc9ec7b6b05ec1
 SHA1 (patch-platform_media_ffvpx_config__unix__sparc64.h) = bbecefd480ab7bc20206bd46ef918fcedbd700f5
+SHA1 (patch-platform_media_ffvpx_libavutil_arm_bswap.h) = f4d4777533c2c307e1d544aaceaf544bae1bbe09
 SHA1 (patch-platform_media_libaom_config_linux_arm_config_aom__config.h) = 69ef22fe9892c2288accb6eb00b4533d8cee0299
 SHA1 (patch-platform_media_libcubeb_src_cubeb__sun.c) = ce27774d772d65fa60b6be5bee82fbe4f787f3d1
 SHA1 (patch-platform_media_libtheora_moz.build) = a7bad662dabb87c6a85542a4a50f8ed693064bc6
