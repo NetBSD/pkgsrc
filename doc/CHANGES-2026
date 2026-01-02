@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.18 2026/01/02 03:58:27 markd Exp $
+$NetBSD: CHANGES-2026,v 1.19 2026/01/02 06:14:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -37,3 +37,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/qemu7 to 7.2.22 [nia 2026-01-02]
 	Updated lang/racket-textual to 9.0 [ktnb 2026-01-02]
 	Added devel/plasma6-plasma5support version 6.5.2 [markd 2026-01-02]
+	Updated textproc/php-yaml to 2.3.0 [taca 2026-01-02]
