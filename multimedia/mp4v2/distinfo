@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2022/08/26 06:40:25 adam Exp $
+$NetBSD: distinfo,v 1.11 2026/01/02 12:17:14 triaxx Exp $
 
 BLAKE2s (mp4v2-5.0.1.tar.gz) = e43bc4237475b3e573347e71b441900207b0dd04c81498d5cd9985366f9af6d7
 SHA512 (mp4v2-5.0.1.tar.gz) = 662b85e2d5cd1c190e7cbc7074914f750939694f8391ebf1402ecb90c533a35acc5bb5a1cfa852fc06e39c0b7e92142d26f8ee94fa2e6df2c0b1ed94fc2c63d7
@@ -7,6 +7,7 @@ SHA1 (patch-include_mp4v2_file.h) = bfb8ed37208a1e04c2cb2ca4a8409e4b2b274065
 SHA1 (patch-libutil_Utility.h) = 982a92307e50061cefb8b979382c227cae144358
 SHA1 (patch-src_mp4.cpp) = 53435290d3f3fd9ecc552357f674c54f5c6ec98d
 SHA1 (patch-src_mp4atom.cpp) = 78a6dce747a8c5cc73f231fa9b81d116b51cf4bb
+SHA1 (patch-src_mp4util.cpp) = 557fc51233462dd4b63f2f3178963c73e62f43e7
 SHA1 (patch-util_mp4art.cpp) = e14257a57bb297f158c1d2a9e39023535e558895
 SHA1 (patch-util_mp4chaps.cpp) = c22a9b8b086165d8e65aeb9f470d7c3eabb9adb6
 SHA1 (patch-util_mp4file.cpp) = 7e8ca0b042e96df1bc096f3efb351600432cdfd0
