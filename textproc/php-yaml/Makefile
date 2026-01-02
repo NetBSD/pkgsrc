@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/02/08 03:55:19 taca Exp $
+# $NetBSD: Makefile,v 1.6 2026/01/02 06:13:57 taca Exp $
 
 MODNAME=	yaml
-PECL_VERSION=	2.2.2
-PKGREVISION=	1
+PECL_VERSION=	2.3.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	YAML-1.1 parser and emitter

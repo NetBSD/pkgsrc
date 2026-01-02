@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/12/12 15:24:24 taca Exp $
+$NetBSD: distinfo,v 1.6 2026/01/02 06:13:57 taca Exp $
 
-BLAKE2s (php-yaml/yaml-2.2.2.tgz) = 0b3d738484728fbbe2ac4484448b68a268a0229643bdecd89d3c6299e1ac1755
-SHA512 (php-yaml/yaml-2.2.2.tgz) = 4c1d3012623154b8d74908fb319a637d7bff178d02d0732d1a3d19d24df2c612d62948eb7dcd9ead9fd31f2da7af0cec54657b8cce128968a04079dd0002117d
-Size (php-yaml/yaml-2.2.2.tgz) = 41063 bytes
+BLAKE2s (php-yaml/yaml-2.3.0.tgz) = 5c737e3121c29d5927424abfb92d95b84e98256809e8fb57902ceb3fef2ca296
+SHA512 (php-yaml/yaml-2.3.0.tgz) = d1dca645bbf3bcf92e5725c1a4d680aa00a97f1560099daefb20f619058b99d587ec9c7234c72d929141db1a53877c9e17e4afcb123c5d7c1be2199559651b38
+Size (php-yaml/yaml-2.3.0.tgz) = 41819 bytes
