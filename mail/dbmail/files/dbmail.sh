@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dbmail.sh,v 1.2 2007/11/03 11:39:50 obache Exp $
+# $NetBSD: dbmail.sh,v 1.3 2026/01/02 17:57:31 tnn Exp $
 #
 
 # KEYWORD: nostart
@@ -44,7 +44,7 @@ dbmailrcd()
 	done
 }
 
-COMMAND_LIST="dbmailimapd dbmailpop3d dbmaillmtpd @TIMSIEVED@"
+COMMAND_LIST="dbmailhttpd dbmailimapd dbmailpop3d dbmaillmtpd @SIEVED@"
 
 name="dbmail"
 start_cmd="forward_commands"

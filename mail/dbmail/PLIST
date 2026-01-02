@@ -1,8 +1,20 @@
-@comment $NetBSD: PLIST,v 1.14 2022/10/29 15:48:59 tnn Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/01/02 17:57:31 tnn Exp $
 ${PLIST.ldap}lib/dbmail/libauth_ldap.la
 lib/dbmail/libauth_sql.la
 lib/dbmail/libdbmail.la
 ${PLIST.sieve}lib/dbmail/libsort_sieve.la
+man/man1/dbmail-deliver.1
+man/man1/dbmail.1
+man/man5/dbmail.conf.5
+man/man8/dbmail-export.8
+man/man8/dbmail-httpd.8
+man/man8/dbmail-imapd.8
+man/man8/dbmail-lmtpd.8
+man/man8/dbmail-pop3d.8
+man/man8/dbmail-sievecmd.8
+man/man8/dbmail-sieved.8
+man/man8/dbmail-users.8
+man/man8/dbmail-util.8
 sbin/dbmail-deliver
 sbin/dbmail-export
 sbin/dbmail-httpd
@@ -10,7 +22,7 @@ sbin/dbmail-imapd
 sbin/dbmail-lmtpd
 sbin/dbmail-pop3d
 ${PLIST.sieve}sbin/dbmail-sievecmd
-${PLIST.sieve}sbin/dbmail-timsieved
+${PLIST.sieve}sbin/dbmail-sieved
 sbin/dbmail-users
 sbin/dbmail-util
 share/dbmail/sql/mysql/2_1_7-2_2_0.mysql
@@ -32,7 +44,9 @@ share/dbmail/sql/mysql/upgrades/32003.mysql
 share/dbmail/sql/mysql/upgrades/32004.mysql
 share/dbmail/sql/mysql/upgrades/32005.mysql
 share/dbmail/sql/mysql/upgrades/32006.mysql
-share/dbmail/sql/mysql/upgrades/upgrade.mysql
+share/dbmail/sql/mysql/upgrades/35001.mysql
+share/dbmail/sql/mysql/upgrades/35002.mysql
+share/dbmail/sql/mysql/upgrades/create_tables.mysql
 share/dbmail/sql/postgresql/2_1_7-2_2_0.pgsql
 share/dbmail/sql/postgresql/2_2-3_0.pgsql
 share/dbmail/sql/postgresql/2_2_5-2_3_0.pgsql
@@ -49,7 +63,9 @@ share/dbmail/sql/postgresql/upgrades/32003.psql
 share/dbmail/sql/postgresql/upgrades/32004.psql
 share/dbmail/sql/postgresql/upgrades/32005.psql
 share/dbmail/sql/postgresql/upgrades/32006.psql
-share/dbmail/sql/postgresql/upgrades/upgrade.psql
+share/dbmail/sql/postgresql/upgrades/35001.psql
+share/dbmail/sql/postgresql/upgrades/35002.psql
+share/dbmail/sql/postgresql/upgrades/create_tables.psql
 share/dbmail/sql/sqlite/2_1_7-2_2_0.sqlite
 share/dbmail/sql/sqlite/2_2-3_0.sqlite
 share/dbmail/sql/sqlite/2_2_5-2_3_0.sqlite
@@ -65,8 +81,6 @@ share/dbmail/sql/sqlite/upgrades/32003.sqlite
 share/dbmail/sql/sqlite/upgrades/32004.sqlite
 share/dbmail/sql/sqlite/upgrades/32005.sqlite
 share/dbmail/sql/sqlite/upgrades/32006.sqlite
-share/dbmail/sql/sqlite/upgrades/upgrade.sqlite
+share/dbmail/sql/sqlite/upgrades/35001.sqlite
+share/dbmail/sql/sqlite/upgrades/35002.sqlite
 share/examples/dbmail/dbmail.conf
-@pkgdir man/man8
-@pkgdir man/man5
-@pkgdir man/man1
