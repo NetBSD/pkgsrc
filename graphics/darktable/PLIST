@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2025/01/01 14:06:17 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.20 2026/01/02 14:59:50 ryoon Exp $
 bin/darktable
 bin/darktable-chart
 bin/darktable-cli
@@ -6,6 +6,7 @@ bin/darktable-cmstest
 bin/darktable-generate-cache
 bin/darktable-rs-identify
 lib/darktable/libdarktable.so
+lib/darktable/plugins/imageio/format/libavif.so
 lib/darktable/plugins/imageio/format/libcopy.so
 lib/darktable/plugins/imageio/format/libexr.so
 lib/darktable/plugins/imageio/format/libj2k.so
