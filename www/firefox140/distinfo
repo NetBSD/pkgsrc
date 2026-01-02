@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2025/12/24 02:11:49 gutteridge Exp $
+$NetBSD: distinfo,v 1.6 2026/01/02 14:27:02 tnn Exp $
 
 BLAKE2s (firefox-140.6.0esr.source.tar.xz) = 7a8bd60f08fdd421ac94fa13ff776eff21cba8f432d85a60fce3a2c0c57066d6
 SHA512 (firefox-140.6.0esr.source.tar.xz) = ed66657bd4b2d94791892261d7c0c0d950b4f630d12ab28a777d93393427451a9aa125e5a01ee15f2ac0ff378d0be074a08583dcffd35609112ba4e6f9ada798
@@ -25,7 +25,7 @@ SHA1 (patch-js_public_Utility.h) = bb5464a0398b91693ab362e6b9b06d48429b9e7d
 SHA1 (patch-js_src_jit_FlushICache.cpp) = f5d1fcb391c36a29fb71a78dbf731ee6a1cb17b6
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
 SHA1 (patch-js_src_vm_TypedArrayObject-inl.h) = e7913c8d4b2b05b67040baa64dae62d6ba40390e
-SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = 019677e249e744baea857ca17ef69d977f43b3a4
+SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = ae89120862442275d6b14446c5a63b0ef570124f
 SHA1 (patch-media_libpng_pngpriv.h) = 8320a1f7534ed5c4914b597bb3d6117d0060318f
 SHA1 (patch-modules_fdlibm_src_math__private.h) = e20b6c23011d7123cbbd64a500eb8ce8c426620e
 SHA1 (patch-netwerk_protocol_http_nsHttpHandler.cpp) = 67493b4635041d21ff9fbfda80b3197fed542a26

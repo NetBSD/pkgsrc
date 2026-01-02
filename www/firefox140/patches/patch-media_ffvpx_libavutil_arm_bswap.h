@@ -1,10 +1,23 @@
-$NetBSD: patch-media_ffvpx_libavutil_arm_bswap.h,v 1.1 2025/10/19 11:56:56 leot Exp $
+$NetBSD: patch-media_ffvpx_libavutil_arm_bswap.h,v 1.2 2026/01/02 14:27:02 tnn Exp $
 
-Fix NetBSD aarch64 build.
+avutil/arm/bswap.h is preferred over the system's <arm/bswap.h> due to
+Firefox's include path order. This breaks <stdlib.h> and others, so
+make sure to pull in the system header when this happens.
 
---- media/ffvpx/libavutil/arm/bswap.h.orig	2025-02-21 13:24:25.000000000 +0000
+--- media/ffvpx/libavutil/arm/bswap.h.orig	2025-12-17 16:38:49.000000000 +0000
 +++ media/ffvpx/libavutil/arm/bswap.h
-@@ -23,6 +23,8 @@
+@@ -16,6 +16,10 @@
+  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+  */
+ 
++#if defined(__NetBSD__)
++#include "/usr/include/arm/bswap.h"
++#endif
++
+ #ifndef AVUTIL_ARM_BSWAP_H
+ #define AVUTIL_ARM_BSWAP_H
+ 
+@@ -23,6 +27,8 @@
  #include "config.h"
  #include "libavutil/attributes.h"
  
@@ -13,7 +26,7 @@ Fix NetBSD aarch64 build.
  #ifdef __ARMCC_VERSION
  
  #if HAVE_ARMV6
-@@ -47,4 +49,6 @@ static av_always_inline av_const unsigne
+@@ -47,4 +53,6 @@ static av_always_inline av_const unsigne
  #endif
  #endif /* __ARMCC_VERSION */
  
