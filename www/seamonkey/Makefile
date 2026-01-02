@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.289 2025/12/22 06:08:18 adam Exp $
+# $NetBSD: Makefile,v 1.290 2026/01/02 23:19:48 tnn Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
@@ -115,8 +115,7 @@ CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
 CFLAGS+=		-mstackrealign
 .endif
 
-CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
-CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/*/*.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}js/src/tests/update-test262.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}browser/components/loop/run-all-loop-tests.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}browser/extensions/loop/run-all-loop-tests.sh
