@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.21 2014/09/12 21:47:23 shattered Exp $
-#
+# $NetBSD: Makefile,v 1.22 2026/01/02 09:18:17 wiz Exp $
 
 DISTNAME=	kdrill6.5
 PKGNAME=	kdrill-6.5
 CATEGORIES=	japanese misc
-MASTER_SITES=	http://www.bolthole.com/kdrill/
+MASTER_SITES=	https://www.bolthole.com/kdrill/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.bolthole.com/kdrill/
+HOMEPAGE=	https://www.bolthole.com/kdrill/
 COMMENT=	Kanji quiz and japanese dictionary
 
 DEPENDS+=	edict-[0-9]*:../../misc/edict
