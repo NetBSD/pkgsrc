@@ -1,17 +1,11 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 09:59:10 nia Exp $
+$NetBSD: distinfo,v 1.16 2026/01/02 12:30:19 adam Exp $
 
-BLAKE2s (libvisual-plugins-0.4.0.tar.gz) = e1029beba009b133c63f5e8406a07f102f80c64b789e7516847a7dce0e3b4b57
-SHA512 (libvisual-plugins-0.4.0.tar.gz) = f8666b548bc04e8b9ab69a37bdd5483080c820115903aabaa629bb0bd0fa8424969ee596e6e66bb90d8e62d6e14513fd57f85c1b5e7e074792cfa94638134901
-Size (libvisual-plugins-0.4.0.tar.gz) = 828631 bytes
-SHA1 (patch-aa) = 9c84c7d8af69d603ea8ce4077247a217952c0cb3
-SHA1 (patch-ab) = 31a380ed59ed9eed1e5516c44fec54c1e7dcf25c
-SHA1 (patch-ac) = b431acd28d9ff7c8bf5a8655fe4969f08ad80772
-SHA1 (patch-ad) = 9f9adc7bc9074b6474b83a245be67f1db753d645
-SHA1 (patch-ae) = ce54b7682f0d7a184a15392ee8f3a7cd2510be13
-SHA1 (patch-af) = 35e2b6517a7c7bd5605fd6593a113f184d8dc1b3
-SHA1 (patch-plugins_actor_G-Force_Common_GeneralTools_UtilStr.cpp) = 6dfb4d2d8ba5ed6be37523b66515df630bfba604
-SHA1 (patch-plugins_actor_G-Force_Common_UI_LineXX.cpp) = f0e527dd7bc2918fbab00846cbf3c7c882ba82eb
+BLAKE2s (libvisual-plugins-0.4.2.tar.bz2) = 3f419e9df118baeb7efc7648311cd4ca6b2c6cef0768db18dbd9e27c6e313271
+SHA512 (libvisual-plugins-0.4.2.tar.bz2) = 16015bad0a898d0990ba9d5a1fe2ab2d649b5db8b965cc00fa62b095033dc8cf27559e79cc49099b5b0a1d679f1f5f6ba9ccf2eac3ac87ebe48da2e64554a568
+Size (libvisual-plugins-0.4.2.tar.bz2) = 731700 bytes
+SHA1 (patch-plugins_actor_G-Force_Common_GeneralTools_UtilStr.cpp) = eb753556205fb4de888d6c05f86db2f8ab9a996c
 SHA1 (patch-plugins_actor_G-Force_GForceCommon_G-Force.cpp) = 3db98e9132c816383060b526c87f57f3caa00b1b
 SHA1 (patch-plugins_actor_G-Force_GForceCommon_WaveShape.cpp) = 84d1ed2e062f136aef268ed9445aabdc2a42080c
-SHA1 (patch-plugins_actor_corona_corona.cpp) = 89292f12be75a59a62f7a52c660a1146fda8f1e5
-SHA1 (patch-plugins_morph_flash_morph__flash_c) = 94d696aa43213fa43fb98a563cdc040d5fe9a92c
+SHA1 (patch-plugins_actor_corona_corona.cpp) = c27d16565db5277e1128d076d847512444791e00
+SHA1 (patch-plugins_actor_pseudotoad__flower_notch.c) = 81878aa3525e9887e5adbc5f729747225adf65ad
+SHA1 (patch-plugins_morph_alphablend_morph__alphablend.c) = 9c84c7d8af69d603ea8ce4077247a217952c0cb3

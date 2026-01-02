@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2006/07/18 19:02:08 joerg Exp $
+$NetBSD: patch-plugins_morph_alphablend_morph__alphablend.c,v 1.1 2026/01/02 12:30:19 adam Exp $
 
 --- plugins/morph/alphablend/morph_alphablend.c.orig	2006-07-18 18:55:47.000000000 +0000
 +++ plugins/morph/alphablend/morph_alphablend.c

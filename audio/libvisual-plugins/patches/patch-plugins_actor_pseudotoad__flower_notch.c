@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.1 2005/06/16 21:19:08 kristerw Exp $
+$NetBSD: patch-plugins_actor_pseudotoad__flower_notch.c,v 1.1 2026/01/02 12:30:19 adam Exp $
 
---- plugins/actor/pseudotoad_flower/notch.c.orig	Thu Jun 16 22:50:58 2005
-+++ plugins/actor/pseudotoad_flower/notch.c	Thu Jun 16 22:52:05 2005
-@@ -25,12 +25,13 @@
- #include <stdio.h>
+--- plugins/actor/pseudotoad_flower/notch.c.orig	2023-03-20 02:04:42.000000000 +0000
++++ plugins/actor/pseudotoad_flower/notch.c
+@@ -26,12 +26,13 @@
+ #include <stdlib.h>
  #include <math.h>
  #include <string.h>
 +#include <stdlib.h>
