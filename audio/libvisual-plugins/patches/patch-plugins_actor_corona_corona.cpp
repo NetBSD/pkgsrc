@@ -1,6 +1,7 @@
-$NetBSD: patch-plugins_actor_corona_corona.cpp,v 1.1 2014/02/25 01:45:53 wiedi Exp $
+$NetBSD: patch-plugins_actor_corona_corona.cpp,v 1.2 2026/01/02 12:30:19 adam Exp $
 
-fix "sqrt(int) is ambiguous" on SunOS
+Fix "sqrt(int) is ambiguous" on SunOS
+
 --- plugins/actor/corona/corona.cpp.orig	2006-02-05 18:47:26.000000000 +0000
 +++ plugins/actor/corona/corona.cpp
 @@ -118,7 +118,7 @@ bool Corona::setUpSurface(int width, int
