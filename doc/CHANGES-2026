@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.19 2026/01/02 06:14:10 taca Exp $
+$NetBSD: CHANGES-2026,v 1.20 2026/01/02 08:33:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -38,3 +38,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/racket-textual to 9.0 [ktnb 2026-01-02]
 	Added devel/plasma6-plasma5support version 6.5.2 [markd 2026-01-02]
 	Updated textproc/php-yaml to 2.3.0 [taca 2026-01-02]
+	Updated net/libpcap to 1.10.6 [adam 2026-01-02]
+	Updated net/tcpdump to 4.99.6 [adam 2026-01-02]
