@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.52 2025/06/16 09:21:45 jperkin Exp $
+$NetBSD: distinfo,v 1.53 2026/01/02 09:09:36 taca Exp $
 
-BLAKE2s (pearweb_phars-1.10.24.tgz) = 6e6b480f76485871130f8a6974808f96957a8506feaa64e8435c3406d44f5c19
-SHA512 (pearweb_phars-1.10.24.tgz) = 64b81b84b815f46cabebd5bba57ce67e86fbec9208e19438997e70dde9fdeaab5f517d2fb92889954f51040627f3188e9a37d86fa796dd51c65d38d804309cc5
-Size (pearweb_phars-1.10.24.tgz) = 1205796 bytes
+BLAKE2s (pearweb_phars-1.10.25.tgz) = 05deb2f555a094b58311890131245ffd195d7df3a6a4e64381d3ff9f57ce54e2
+SHA512 (pearweb_phars-1.10.25.tgz) = 8c6d64bce78ec3289844062ca48175c0533ad03eec58abb89819df709c8c32a32a6ca7f9603bb1efc76dfa820d0ed46d4a5541b0c8faa9c98434f152abb73e5b
+Size (pearweb_phars-1.10.25.tgz) = 1207381 bytes
 SHA1 (patch-src_PEAR_Start.php) = d8038a23e5250e8b2c0a022ba5e8adfd73d1fcd7
 SHA1 (patch-src_PEAR_Start_CLI.php) = 8dbd68bde4cea2c7688a4dc0e650cff8ccdeda4c
