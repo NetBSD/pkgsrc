@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2019/11/03 19:04:02 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2026/01/02 09:15:41 wiz Exp $
 
 DISTNAME=	kali-0.52.2
 CATEGORIES=	lang
-MASTER_SITES=	http://community.schemewiki.org/kali-scheme/releases/
+#MASTER_SITES=	http://community.schemewiki.org/kali-scheme/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://community.schemewiki.org/kali-scheme/
+#HOMEPAGE=	http://community.schemewiki.org/kali-scheme/
 COMMENT=	Distributed implementation of Scheme
 
 GNU_CONFIGURE=		yes
