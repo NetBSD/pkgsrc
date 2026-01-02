@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.25 2026/01/02 14:22:08 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.26 2026/01/02 14:28:46 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -46,3 +46,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/libvisual-plugins to 0.4.2 [adam 2026-01-02]
 	Updated multimedia/gstreamer1 to 1.26.10 [adam 2026-01-02]
 	Updated news/newsraft to 0.35 [ktnb 2026-01-02]
+	Updated games/openttd to 15.0 [triaxx 2026-01-02]
