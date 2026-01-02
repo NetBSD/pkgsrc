@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/06/28 11:31:45 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/01/02 09:17:55 wiz Exp $
 
 KBUILDNAME=	kBuild
 KBUILDVERMAJ=	0.1.9998
@@ -10,7 +10,7 @@ DISTNAME=	${KBUILDNAME}-r${KBUILDVERSVN}
 PKGNAME=	kbuild-${KBUILDVERMAJ}.${KBUILDVERMIN}.r${KBUILDVERSVN}
 PKGREVISION=	5
 CATEGORIES=	devel
-MASTER_SITES=	http://svn.netlabs.org/repos/kbuild/trunk
+MASTER_SITES=	https://svn.netlabs.org/repos/kbuild/trunk/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://trac.netlabs.org/kbuild/wiki/WikiStart
