@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.40 2024/09/11 14:56:41 hauke Exp $
+# $NetBSD: Makefile.common,v 1.41 2026/01/02 22:34:58 hauke Exp $
 #
 # used by editors/xemacs-nox11/Makefile
 # used by editors/xemacs/Makefile
 
-DISTNAME=	xemacs-21.4.24
+DISTNAME=	xemacs-21.4.25
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=${DISTNAME:C/[.][^.]*$//}/}
 
@@ -101,6 +101,7 @@ INSTALL_MAKE_FLAGS+=	TAR=${TOOLS_PATH.gtar}
 
 post-extract: post-extract-x11
 	cp ${FILESDIR}/dragonfly.h ${WRKSRC}/src/s/
+	find ${WRKSRC}/ -name .cvsignore -exec rm \{\} \;
 
 pre-build:
 	rm -f ${WRKSRC}/etc/ctags.1.orig

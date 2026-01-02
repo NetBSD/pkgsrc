@@ -1,61 +1,18 @@
-$NetBSD: patch-configure,v 1.4 2019/11/27 14:35:16 hauke Exp $
+$NetBSD: patch-configure,v 1.5 2026/01/02 22:34:58 hauke Exp $
 
-On progressive Linuxen (Arch here), CPPFLAGS pre-filled with
--D_FORTIFY_SOURCE=2 -Werror will make configure tests fail on
-pre-processor warnings. Make sure we set CPP to something that works.
+Have tested cpp expect input on STDIN
 
-This patch should go upstream into configure.in, but it is really the
-autoconf AC_PROG_CPP macro definition that needs to be amended.
-
-For Solarish, select _XOPEN_SOURCE version depending on __STDC_VERSION__,
-see <https://gist.github.com/jperkin/b08f9108daf8d0ac695067d71f882a9d>
-
---- configure.orig	2015-03-25 11:25:33.000000000 +0000
+--- configure.orig	2026-01-02 21:57:40.021732482 +0000
 +++ configure
-@@ -2362,6 +2362,25 @@ else
-   echo "configure: failed program was:" >&5
-   cat conftest.$ac_ext >&5
-   rm -rf conftest*
-+  # Some Linuxen (Arch) define _FORTIFY_SOURCE in CPPFLAGS together 
-+  # with -Werror. Make sure the warnings do not disrupt feature tests.
-+  CPP="${CC-cc} -E -Wno-cpp"
-+  cat > conftest.$ac_ext <<EOF
-+#line 2370 "configure"
-+#include "confdefs.h"
-+#include <assert.h>
-+Syntax Error
-+EOF
-+ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
-+{ (eval echo configure:2376: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
-+ac_err=`grep -v '^ *+' conftest.out`
-+if test -z "$ac_err"; then
-+  :
-+else
-+  echo "$ac_err" >&5
-+  echo "configure: failed program was:" >&5
-+  cat conftest.$ac_ext >&5
-+  rm -rf conftest*
-   CPP=/lib/cpp
- fi
- rm -f conftest*
-@@ -2369,6 +2388,8 @@ fi
- rm -f conftest*
- fi
- rm -f conftest*
-+fi
-+rm -f conftest*
-   ac_cv_prog_CPP="$CPP"
-   CPP="$ac_cv_prog_CPP"
- else
-@@ -2457,7 +2478,11 @@ EOF
-     Defining _XOPEN_SOURCE = 500
- EOF
- cat >> confdefs.h <<\EOF
-+#if __STDC_VERSION__ - 0 < 199901L
- #define _XOPEN_SOURCE 500
-+#else
-+#define _XOPEN_SOURCE 600
-+#endif
- EOF
- }
+@@ -2377,9 +2377,9 @@ fi
+ echo "$ac_t""$CPP" 1>&6
  
+ 
+-if (echo "#warning warning" | $CPP $CPPFLAGS > 9dm64Q.i); then
++if (echo "#warning warning" | $CPP $CPPFLAGS - > 9dm64Q.i); then
+   rm 9dm64Q.i;
+-elif (echo "#warning warning" | $CPP $CPPFLAGS -Wno-cpp > 9dm64Q.i); then
++elif (echo "#warning warning" | $CPP $CPPFLAGS -Wno-cpp - > 9dm64Q.i); then
+   rm 9dm64Q.i;
+   CPPFLAGS="$CPPFLAGS -Wno-cpp";
+ else

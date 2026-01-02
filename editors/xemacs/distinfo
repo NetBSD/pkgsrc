@@ -1,23 +1,7 @@
-$NetBSD: distinfo,v 1.36 2025/03/17 13:08:58 hauke Exp $
+$NetBSD: distinfo,v 1.37 2026/01/02 22:34:58 hauke Exp $
 
-BLAKE2s (xemacs/xemacs-21.4.24.tar.gz) = 1b186f91ab8d8347e1051a4e867d95393a9897e4e1f5dc51b9f6763a4ca46665
-SHA512 (xemacs/xemacs-21.4.24.tar.gz) = b7a88d5a4a9f74f74c2067ed60f7ea87ac8ccad5d9c2c1033ecf07f540250191f8fa5f9e6d23d9fedd0f2ab1eb5ea6c29a7665a310ec512d85e2e4f337447213
-Size (xemacs/xemacs-21.4.24.tar.gz) = 8543879 bytes
-SHA1 (patch-Makefile.in.in) = 80e2a4b696312fa49792410d89aff48addae5436
-SHA1 (patch-configure) = 1f2e71ddd1e061111d48cc11d42b892189d208b8
+BLAKE2s (xemacs/xemacs-21.4.25.tar.gz) = 5ef4211f4be19623914e1104786971fb02631a08fcb62e67162aa67c62380531
+SHA512 (xemacs/xemacs-21.4.25.tar.gz) = 869aa61f7a32f2e9ed5cb8f755c9879e7bc3b1fd3e4bc31c4d978aeca3d19507c642093bbfda5bb4f4a7ea303ab267f3f647dfa3da868adb5d5b9970b4e03886
+Size (xemacs/xemacs-21.4.25.tar.gz) = 8427805 bytes
+SHA1 (patch-configure) = 260a4562450db001396379023a99cccdf240f719
 SHA1 (patch-lib-src_Makefile.in.in) = 5e11bf2904145804f521fed0ef956da94e5f21bd
-SHA1 (patch-lisp_gui.el) = 686bc5a7c4bf6e3c4f010dba22aee109d94f6cb3
-SHA1 (patch-lwlib_Makefile.in.in) = 97fcf6de4299dfd5ba7a9827ee88bc037df0491e
-SHA1 (patch-man_lispref_debugging.texi) = 4d6f99c17bc8e25e700a663f7eff147b72fd9a14
-SHA1 (patch-man_lispref_intro.texi) = 5837f8a0e8057649921cdbddd8e8329165ec1104
-SHA1 (patch-man_lispref_ldap.texi) = e66dd13905ab8b34e2346865d529a99bed35a23b
-SHA1 (patch-man_xemacs-faq.texi) = 4229ea06a7f9a9361639fb50af1a58c51211eb49
-SHA1 (patch-man_xemacs_custom.texi) = e564906bced48b0a7c788c217c02eafe167fee59
-SHA1 (patch-src_Makefile.in.in) = 8d2c262983ff16197c99429e7d4cc80cd8371775
-SHA1 (patch-src_config.h.in) = 25ac897560abad51d83b58818e1dc2e77a8519e4
-SHA1 (patch-src_emacs.c) = 19bbba8b9a777388060bab637b2bdc5e9027e11f
-SHA1 (patch-src_lisp.h) = cced6b8e0dac07c4dae887739ad9677b4f9d0c7d
-SHA1 (patch-src_process.c) = b33b37e7e68bd49036d90cfed206170456a4b443
-SHA1 (patch-src_sound.c) = fd3717943310c049fbcc8598b072d80d9812ae20
-SHA1 (patch-src_unexelf.c) = 5147a3f41d1188aaf08b99e768d8b93e9e28d305
-SHA1 (patch-src_unexfreebsd.c) = 8bcbd103884430cec31c584bc489e4ab98d79448
