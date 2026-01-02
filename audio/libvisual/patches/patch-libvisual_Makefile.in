@@ -1,0 +1,13 @@
+$NetBSD: patch-libvisual_Makefile.in,v 1.1 2026/01/02 12:29:21 adam Exp $
+
+--- libvisual/Makefile.in.orig	2023-03-20 02:04:27.000000000 +0000
++++ libvisual/Makefile.in
+@@ -137,7 +137,7 @@ am__uninstall_files_from_dir = { \
+ am__installdirs = "$(DESTDIR)$(libdir)" \
+ 	"$(DESTDIR)$(library_includedir)"
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+-libvisual_@LIBVISUAL_VERSION_SUFFIX@_la_LIBADD =
++libvisual_@LIBVISUAL_VERSION_SUFFIX@_la_LIBADD = ${RT_LIB_SCHED}
+ am_libvisual_@LIBVISUAL_VERSION_SUFFIX@_la_OBJECTS = lv_actor.lo \
+ 	lv_input.lo lv_event.lo lv_bin.lo lv_plugin.lo lv_video.lo \
+ 	lv_video_simd.lo lv_mem.lo lv_audio.lo lv_fourier.lo \

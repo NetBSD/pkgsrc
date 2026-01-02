@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 09:59:10 nia Exp $
+$NetBSD: distinfo,v 1.18 2026/01/02 12:29:21 adam Exp $
 
-BLAKE2s (libvisual-0.4.0.tar.gz) = 938e3cf7644ec9877ac2d457be907f673335fe25de86d1f90e48456625ee5971
-SHA512 (libvisual-0.4.0.tar.gz) = ab2286de30d33582a92f16e46436fcbc44b74649952df6e94d96aedc2cabb18d3361496c0b8ab6f52f7178214bf735673c8f1820c3d149304787ba8407201b95
-Size (libvisual-0.4.0.tar.gz) = 583386 bytes
-SHA1 (patch-ab) = 2493f145d37c6de8dc37beb22e788c628d43342e
-SHA1 (patch-ac) = ad124820a2a20550bf85181be284c1e000114ddd
-SHA1 (patch-ad) = e7b2493cf5880cea7497a1d8d6fb1ce4f856ba6d
-SHA1 (patch-ae) = 72affdd9a1302a16efe5f4ecaafbc37061e4db0c
-SHA1 (patch-libvisual_lv__defines.h) = 9b14140411ae426226318a0ccdbe64d905b7710c
-SHA1 (patch-libvisual_lv__os.c) = 9bc88cf74bab4a4fb2b47ba122e0a5512149b9f2
+BLAKE2s (libvisual-0.4.2.tar.bz2) = eb876ef4e21b446de7c7244cf5ce167f42d7b78ba109e8c8931104fe5fa45ec4
+SHA512 (libvisual-0.4.2.tar.bz2) = 88634c27cd5de149d08141fb68d86a85320513208426f412541ab6aa985069683c17437fd0f49d6dafdd811a516f1f9268a2cf2146a3b55332280d7930f59b55
+Size (libvisual-0.4.2.tar.bz2) = 563023 bytes
+SHA1 (patch-Makefile.in) = ad124820a2a20550bf85181be284c1e000114ddd
+SHA1 (patch-configure) = 2493f145d37c6de8dc37beb22e788c628d43342e
+SHA1 (patch-libvisual.pc.in) = 72affdd9a1302a16efe5f4ecaafbc37061e4db0c
+SHA1 (patch-libvisual_Makefile.in) = bd2920045ddc9c14c10485dcbd3aae2414505db5
+SHA1 (patch-libvisual_libvisual.h) = 1483cc61682d5ad1187d622f381ca6e58966ea80
+SHA1 (patch-libvisual_lv__defines.h) = b68c778ac603f8cf1144f42231fafabf08933ee2
 SHA1 (patch-libvisual_lv__types.h) = 3f2baa4861b50d3359cd9cdfa75898dfc6b5895d

@@ -1,14 +1,26 @@
-$NetBSD: patch-libvisual_lv__defines.h,v 1.1 2013/06/13 14:25:30 joerg Exp $
+$NetBSD: patch-libvisual_lv__defines.h,v 1.2 2026/01/02 12:29:21 adam Exp $
 
---- libvisual/lv_defines.h.orig	2013-06-12 21:45:45.000000000 +0000
+Don't redefine NULL.
+No inline.
+
+--- libvisual/lv_defines.h.orig	2023-03-20 02:04:17.000000000 +0000
 +++ libvisual/lv_defines.h
-@@ -63,13 +63,11 @@
+@@ -38,14 +38,6 @@
+ # define VISUAL_END_DECLS
+ #endif /* __cplusplus */
  
- /* Compiler specific optimalization macros */
- #if __GNUC__ >= 3
--# define inline			inline __attribute__ ((always_inline))
- # define __malloc		__attribute__ ((malloc))
- # define __packed		__attribute__ ((packed))
+-#ifdef NULL
+-#undef NULL
+-#endif
+-
+-/**
+- * NULL define.
+- */
+-#define NULL	((void *) 0)
+ 
+ #ifndef FALSE
+ /**
+@@ -68,7 +60,6 @@
  # define VIS_LIKELY(x)		__builtin_expect (!!(x), 1)
  # define VIS_UNLIKELY(x)	__builtin_expect (!!(x), 0)
  #else
