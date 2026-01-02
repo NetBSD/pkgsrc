@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/08/21 00:25:45 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/01/02 15:47:35 wiz Exp $
 clion-bin/Install-Linux-tar.txt
 clion-bin/bin/brokenPlugins.db
 clion-bin/bin/clion
@@ -33,7 +33,8 @@ clion-bin/bin/inspect.sh
 clion-bin/bin/jetbrains_client.sh
 clion-bin/bin/jetbrains_client64.vmoptions
 clion-bin/bin/ltedit.sh
-clion-bin/bin/ninja/linux/aarch64/ninja
+${PLIST.aarch64}clion-bin/bin/ninja/linux/aarch64/ninja
+${PLIST.x86_64}clion-bin/bin/ninja/linux/x64/ninja
 clion-bin/bin/qt/.pylintrc
 clion-bin/bin/qt/LICENSE.GPL3-EXCEPT
 clion-bin/bin/qt/LICENSE.MIT
@@ -340,7 +341,8 @@ clion-bin/lib/javax.activation.jar
 clion-bin/lib/javax.annotation-api.jar
 clion-bin/lib/jaxb-api.jar
 clion-bin/lib/jaxb-runtime.jar
-clion-bin/lib/jna/aarch64/libjnidispatch.so
+${PLIST.aarch64}clion-bin/lib/jna/aarch64/libjnidispatch.so
+${PLIST.x86_64}clion-bin/lib/jna/amd64/libjnidispatch.so
 clion-bin/lib/jps-model.jar
 clion-bin/lib/jsch-agent.jar
 clion-bin/lib/kotlinx-coroutines-slf4j-1.10.1-intellij.jar
@@ -467,14 +469,16 @@ clion-bin/lib/modules/intellij.rml.dfa.impl.jar
 clion-bin/lib/modules/intellij.settingsSync.core.jar
 clion-bin/lib/modules/intellij.spellchecker.jar
 clion-bin/lib/modules/intellij.spellchecker.xml.jar
-clion-bin/lib/native/linux-aarch64/libsqliteij.so
+${PLIST.aarch64}clion-bin/lib/native/linux-aarch64/libsqliteij.so
+${PLIST.x86_64}clion-bin/lib/native/linux-x86_64/libsqliteij.so
 clion-bin/lib/nio-fs.jar
 clion-bin/lib/opentelemetry.jar
 clion-bin/lib/platform-loader.jar
 clion-bin/lib/product-client.jar
 clion-bin/lib/product.jar
 clion-bin/lib/protobuf.jar
-clion-bin/lib/pty4j/linux/aarch64/libpty.so
+${PLIST.aarch64}clion-bin/lib/pty4j/linux/aarch64/libpty.so
+${PLIST.x86_64}clion-bin/lib/pty4j/linux/x86-64/libpty.so
 clion-bin/lib/rd.jar
 clion-bin/lib/rhino.jar
 ${PLIST.aarch64}clion-bin/lib/skiko-awt-runtime-all/libskiko-linux-arm64.so
