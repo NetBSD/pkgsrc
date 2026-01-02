@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2025/06/16 09:21:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.70 2026/01/02 09:09:36 taca Exp $
 #
 # This is super confusing, but the PEAR tarball does not include an installer,
 # it is only available in a different installer package which bundles the PEAR
@@ -6,9 +6,8 @@
 # we override the version to whatever PEAR it bundles.
 #
 
-DISTNAME=	pearweb_phars-1.10.24
-PKGREVISION=	3
-PKGNAME=	${PHP_PKG_PREFIX}-pear-1.10.16
+DISTNAME=	pearweb_phars-1.10.25
+PKGNAME=	${PHP_PKG_PREFIX}-pear-1.10.17
 CATEGORIES=	lang
 MASTER_SITES=	http://download.pear.php.net/package/
 EXTRACT_SUFX=	.tgz
@@ -30,12 +29,12 @@ CONF_FILES=	${PREFIX}/${PHP_EGDIR}/pear.conf \
 
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	pre-configure
-SUBST_FILES.config=	src/PEAR/Start.php
-SUBST_VARS.config+=	PHP_LIBDIR PKGMANDIR PREFIX WRKSRC
+SUBST_FILES.config=	src/PEAR/Start.php ${WRKDIR}/README.pkgsrc
+SUBST_VARS.config+=	PHP_LIBDIR PKGMANDIR PREFIX WRKSRC PHP_VER
 SUBST_MESSAGE.config=	Fixing configuration files.
 
 PEAR_COMMANDS=		pear peardev pecl
-INSTALLATION_DIRS+=	${PHP_EGDIR}
+INSTALLATION_DIRS+=	${PHP_EGDIR} ${PHP_SHAREDIR}
 
 # TODO: This should probably be set in lang/php
 PHPBIN=		${PREFIX}/bin/php${PHP_VER}
@@ -46,6 +45,7 @@ post-extract:
 		'$$p = new Phar("go-pear.phar"); \
 		 $$p->extractTo("src");'
 	${MV} ${WRKSRC}/go-pear.phar ${WRKSRC}/go-pear-orig.phar
+	${CP} ${FILESDIR}/README.pkgsrc ${WRKDIR}
 
 # This does not actually build anything, just packs our patched source files
 # back to an updated .phar.
@@ -62,6 +62,8 @@ do-install:
 		${PKGSRC_SETENV} ${INSTALL_ENV} ${PHPBIN} go-pear.phar
 	${INSTALL_DATA} ${WRKSRC}/pear.conf \
 		${DESTDIR}${PREFIX}/${PHP_EGDIR}/pear.conf
+	${INSTALL_DATA} ${WRKDIR}/README.pkgsrc \
+		${DESTDIR}${PREFIX}/${PHP_SHAREDIR}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && for f in ${PEAR_COMMANDS}; do \

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/06/16 09:21:45 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/01/02 09:09:36 taca Exp $
 bin/pear${PHP_VER}
 bin/peardev${PHP_VER}
 bin/pecl${PHP_VER}
@@ -158,6 +158,7 @@ ${PHP_LIBDIR}/test/XML_Util/tests/ReplaceEntitiesTests.php
 ${PHP_LIBDIR}/test/XML_Util/tests/ReverseEntitiesTests.php
 ${PHP_LIBDIR}/test/XML_Util/tests/SplitQualifiedNameTests.php
 ${PHP_EGDIR}/pear.conf
+${PHP_SHAREDIR}/README.pkgsrc
 @pkgdir ${PHP_LIBDIR}/.registry/.channel.pecl.php.net
 @pkgdir ${PHP_LIBDIR}/.registry/.channel.doc.php.net
 @pkgdir ${PHP_LIBDIR}/.registry/.channel.__uri
