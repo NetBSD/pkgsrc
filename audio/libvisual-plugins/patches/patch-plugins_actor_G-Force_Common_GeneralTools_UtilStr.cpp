@@ -1,6 +1,7 @@
-$NetBSD: patch-plugins_actor_G-Force_Common_GeneralTools_UtilStr.cpp,v 1.1 2014/02/25 01:45:53 wiedi Exp $
+$NetBSD: patch-plugins_actor_G-Force_Common_GeneralTools_UtilStr.cpp,v 1.2 2026/01/02 12:30:19 adam Exp $
 
-fix "pow() is ambiguous" on SunOS
+Fix "pow() is ambiguous" on SunOS
+
 --- plugins/actor/G-Force/Common/GeneralTools/UtilStr.cpp.orig	2005-12-06 10:48:28.000000000 +0000
 +++ plugins/actor/G-Force/Common/GeneralTools/UtilStr.cpp
 @@ -1213,7 +1213,7 @@ void UtilStr::SetFloatValue( float inVal
