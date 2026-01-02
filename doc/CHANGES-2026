@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.23 2026/01/02 12:30:43 adam Exp $
+$NetBSD: CHANGES-2026,v 1.24 2026/01/02 12:37:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -44,3 +44,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/mp4v2 to 5.0.1nb1 [triaxx 2026-01-02]
 	Updated audio/libvisual to 0.4.2 [adam 2026-01-02]
 	Updated audio/libvisual-plugins to 0.4.2 [adam 2026-01-02]
+	Updated multimedia/gstreamer1 to 1.26.10 [adam 2026-01-02]
