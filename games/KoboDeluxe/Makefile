@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.31 2025/08/16 20:55:51 triaxx Exp $
-#
+# $NetBSD: Makefile,v 1.32 2026/01/02 09:19:51 wiz Exp $
 
 DISTNAME=	KoboDeluxe-0.5.1
 PKGREVISION=	8
 CATEGORIES=	games
-MASTER_SITES=	http://olofson.net/kobodl/download/
+MASTER_SITES=	https://olofson.net/kobodl/download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	as@rsn.bth.se
-HOMEPAGE=	http://olofson.net/kobodl/
+HOMEPAGE=	https://olofson.net/kobodl/
 COMMENT=	Multi-way scrolling shoot 'em up game for X
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
