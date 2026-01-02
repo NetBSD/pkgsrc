@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4565 2025/12/30 11:25:21 kikadf Exp $
+# $NetBSD: Makefile,v 1.4566 2026/01/02 03:56:20 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -2477,6 +2477,7 @@ SUBDIR+=	pkgconf
 SUBDIR+=	pkgconf23
 SUBDIR+=	plasma-wayland-protocols
 SUBDIR+=	plasma6-kwayland
+SUBDIR+=	plasma6-plasma5support
 SUBDIR+=	ply
 SUBDIR+=	pmccabe
 SUBDIR+=	poco
