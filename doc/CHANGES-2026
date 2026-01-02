@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.20 2026/01/02 08:33:55 adam Exp $
+$NetBSD: CHANGES-2026,v 1.21 2026/01/02 09:09:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -40,3 +40,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/php-yaml to 2.3.0 [taca 2026-01-02]
 	Updated net/libpcap to 1.10.6 [adam 2026-01-02]
 	Updated net/tcpdump to 4.99.6 [adam 2026-01-02]
+	Updated lang/pear to 1.10.17 [taca 2026-01-02]
