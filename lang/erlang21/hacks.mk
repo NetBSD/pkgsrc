@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2021/01/27 16:13:51 jperkin Exp $
+# $NetBSD: hacks.mk,v 1.2 2026/01/02 13:11:02 ryoon Exp $
 
 .if !defined(ERLANG_HACKS_MK)
 ERLANG_HACKS_MK=	# empty
@@ -23,7 +23,7 @@ CFLAGS+=	-DMMAP_MAP_FIXED
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 # gcov miscompiled PR 53567
-.if !empty(MACHINE_PLATFORM:MNetBSD-8.0-*)
+.if ${MACHINE_PLATFORM:MNetBSD-8.0-*}
 CONFIGURE_ARGS+=	--disable-pgo
 .endif
 
