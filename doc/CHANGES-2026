@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.34 2026/01/02 22:35:26 hauke Exp $
+$NetBSD: CHANGES-2026,v 1.35 2026/01/02 22:35:46 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -56,3 +56,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/dbmail to 3.5.5 [tnn 2026-01-02]
 	Updated x11/sddm to 0.21.0nb1 [gutteridge 2026-01-02]
 	Updated editors/xemacs to 21.4.25 [hauke 2026-01-02]
+	Updated editors/xemacs-nox11 to 21.4.25 [hauke 2026-01-02]
