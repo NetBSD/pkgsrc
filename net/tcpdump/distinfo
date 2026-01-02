@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.33 2024/09/01 09:49:12 adam Exp $
+$NetBSD: distinfo,v 1.34 2026/01/02 08:33:33 adam Exp $
 
-BLAKE2s (tcpdump-4.99.5.tar.gz) = 335cc6732eb989b639aa26bfe7924989278d1e6e56065e46423acf707db4f01a
-SHA512 (tcpdump-4.99.5.tar.gz) = 69bc52ef7af7fd562370adf2e95cb592aad6193df9ab1708de52ac86a4c1cff72e8b256a739b435c324ee2df61051abde7d2659bc40f061d7c4fbcab1dcaa2e2
-Size (tcpdump-4.99.5.tar.gz) = 2045086 bytes
+BLAKE2s (tcpdump-4.99.6.tar.gz) = ff7a70cfea3391fdc93452b16dd55b3aa6a75a942137281c5671d9ab2d767e71
+SHA512 (tcpdump-4.99.6.tar.gz) = 1a3c1855de8769ded66c86f0a8a54f5fe0943aa6855ff43bc8262895e749f7afe6a729cec4280d705f3e82942d0cee4b914bc1aa50e6ea686ad8ff798ca8df96
+Size (tcpdump-4.99.6.tar.gz) = 2053753 bytes
 SHA1 (patch-Makefile.in) = e492eeb10b2a08ae0d0f4a3433e4956bcbba04df
