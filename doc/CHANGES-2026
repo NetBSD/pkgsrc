@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.32 2026/01/02 17:59:08 tnn Exp $
+$NetBSD: CHANGES-2026,v 1.33 2026/01/02 22:22:50 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -54,3 +54,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/featherpad to 1.6.3 [pin 2026-01-02]
 	Updated databases/libzdb to 3.5.0 [tnn 2026-01-02]
 	Updated mail/dbmail to 3.5.5 [tnn 2026-01-02]
+	Updated x11/sddm to 0.21.0nb1 [gutteridge 2026-01-02]
