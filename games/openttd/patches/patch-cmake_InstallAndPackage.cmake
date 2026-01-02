@@ -1,10 +1,10 @@
-$NetBSD: patch-cmake_InstallAndPackage.cmake,v 1.4 2024/04/28 20:01:49 triaxx Exp $
+$NetBSD: patch-cmake_InstallAndPackage.cmake,v 1.5 2026/01/02 14:28:27 triaxx Exp $
 
 Do not try to generate Linux distribution packages.
 
 --- cmake/InstallAndPackage.cmake.orig	2023-06-11 16:42:59.000000000 +0000
 +++ cmake/InstallAndPackage.cmake
-@@ -152,7 +152,7 @@ set(CPACK_PACKAGE_EXECUTABLES "openttd;O
+@@ -153,7 +153,7 @@ set(CPACK_PACKAGE_EXECUTABLES "openttd;O
  set(CPACK_STRIP_FILES YES)
  set(CPACK_OUTPUT_FILE_PREFIX "bundles")
  
@@ -13,7 +13,7 @@ Do not try to generate Linux distribution packages.
      # Stripping would produce unreadable stacktraces.
      set(CPACK_STRIP_FILES NO)
      set(CPACK_GENERATOR "Bundle")
-@@ -185,10 +185,11 @@ elseif(UNIX)
+@@ -186,10 +186,11 @@ elseif(UNIX)
      if(OPTION_PACKAGE_DEPENDENCIES)
          set(CPACK_GENERATOR "TXZ")
          set(PLATFORM "generic")
