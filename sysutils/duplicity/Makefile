@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2025/11/25 08:21:47 triaxx Exp $
+# $NetBSD: Makefile,v 1.78 2026/01/02 15:09:54 triaxx Exp $
 
-DISTNAME=	duplicity-3.0.6.2
+DISTNAME=	duplicity-3.0.7
 CATEGORIES=	sysutils net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/duplicity/}
 
@@ -26,6 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-google-auth-oauthlib-[0-9]*:../../security/py-google-au
 DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
+DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib-[0-9]*:../../security/py-requests-oauthlib
 DEPENDS+=	${PYPKGPREFIX}-swiftclient-[0-9]*:../../www/py-swiftclient
