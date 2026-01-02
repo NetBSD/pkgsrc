@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2025/12/30 21:33:59 triaxx Exp $
+$NetBSD: distinfo,v 1.49 2026/01/02 15:31:49 triaxx Exp $
 
 BLAKE2s (cel.dev_expr_@v_v0.24.0.mod) = 35d43d581d2a983aa8fccbcc9c49400c2bfdda9a968a0f701c187dec4ab5aade
 SHA512 (cel.dev_expr_@v_v0.24.0.mod) = 8c3d6929fe232875ec4de4ddffc12a54d0c24d7a86257013b060fe02fbd7d93a6a8d71bfac21490cd4457d9a10791db1b9c44291640f7e2cded698ea9462f63d
@@ -1356,12 +1356,12 @@ Size (github.com_tdewolff_parse_v2_@v_v2.8.5.zip) = 148736 bytes
 BLAKE2s (github.com_tdewolff_test_@v_v1.0.11.mod) = 9550e036778a52454f86fe095661f2f1cccff63b24c99f8f0068cd673d19a18d
 SHA512 (github.com_tdewolff_test_@v_v1.0.11.mod) = 18937aba2085376502bafa77b2a66ab7cb91091927e5b55b053aa0b4a0c49ee8b2ff51aa4f5da8cfbce91d3028f7021d79a8fa4410b8a22e4ee39217a8ecb124
 Size (github.com_tdewolff_test_@v_v1.0.11.mod) = 41 bytes
-BLAKE2s (github.com_tetratelabs_wazero_@v_v1.10.1.mod) = dac061265bb8f6285ace094d8e101a5c6865245a53e7e316826718b148577684
-SHA512 (github.com_tetratelabs_wazero_@v_v1.10.1.mod) = 0e11c60811631d403e5684f76663160f702fd27f8fcacb445129e79e4b7b9d6b809a7a912bce653cf9427914d3091f18c3f6179fc83b72c099d9563364d75b53
-Size (github.com_tetratelabs_wazero_@v_v1.10.1.mod) = 295 bytes
-BLAKE2s (github.com_tetratelabs_wazero_@v_v1.10.1.zip) = 392e9991e85e790574544f071910b5ea1d5f96f391bd567ff5866ccedcd4a3da
-SHA512 (github.com_tetratelabs_wazero_@v_v1.10.1.zip) = 20901df7b95113a9f87e3ba3fba56f7e587f96535de9d7257f846ce09907dc56084e1db76e04015f8c5ea41ecbc296330a94811539f2cb6debcd5299a7a1ba3f
-Size (github.com_tetratelabs_wazero_@v_v1.10.1.zip) = 7656301 bytes
+BLAKE2s (github.com_tetratelabs_wazero_@v_v1.11.0.mod) = 5144766980cb359ea728a372e036f41b4487910ec17b1f4c8d7a1d17442208c5
+SHA512 (github.com_tetratelabs_wazero_@v_v1.11.0.mod) = 9f6e5cb45bc7bbeda1b1e045a8e92561627ccd6adb09dd5210395b82365087f5fe8afdb9de82b5e6a41587223e68e2cf63a56c40689e9398590cb62e7140e11d
+Size (github.com_tetratelabs_wazero_@v_v1.11.0.mod) = 329 bytes
+BLAKE2s (github.com_tetratelabs_wazero_@v_v1.11.0.zip) = 41c10105dbc682cb2f776b54e0b86e0bf3f0e34e1c46704b2cb5cad79a963b49
+SHA512 (github.com_tetratelabs_wazero_@v_v1.11.0.zip) = f0267108a341b27e4339cd339438ffe4f45549aa5db21d68ff473ac6fe44a822aac0065533238cf96406e6666b3390a6721e45e6c66e2b6ca40d6c6f908e77aa
+Size (github.com_tetratelabs_wazero_@v_v1.11.0.zip) = 7623716 bytes
 BLAKE2s (github.com_woodsbury_decimal128_@v_v1.3.0.mod) = 5082dfa38de6d9de8820dec9004b9cc8b7fe6688a0b5faa870505c1ee87c8c07
 SHA512 (github.com_woodsbury_decimal128_@v_v1.3.0.mod) = a89e087802c991451308867fbb5aa5df218236b3dde86de857e15fe3ab325b17bace315d507274c45b2f45107233a5e09a14f98eb4700431aaa2ad458e0c2448
 Size (github.com_woodsbury_decimal128_@v_v1.3.0.mod) = 48 bytes
@@ -2514,9 +2514,9 @@ Size (howett.net_plist_@v_v1.0.0.mod) = 218 bytes
 BLAKE2s (howett.net_plist_@v_v1.0.0.zip) = 6c0b133ce84d8994a7c188e83ce7bae86228b60829ec29211d1a8f1a446cb945
 SHA512 (howett.net_plist_@v_v1.0.0.zip) = 7d63e5489b2b007736952dd57855fce61e8bbb38599f45d56d846ca23cb65e2db3070a2af39647c4d02f228511c2d44338904e2e83cb156df6f5aefdfa6e1aaf
 Size (howett.net_plist_@v_v1.0.0.zip) = 71680 bytes
-BLAKE2s (hugo-0.153.5.tar.gz) = ed2a898d2493ce86a992e1e2564705db8987095d5275666d05a2d5d338fea49c
-SHA512 (hugo-0.153.5.tar.gz) = 5b4ac435ba2dea7754dcb510438b4e61a24ebb886eb505fed57235f2152bd00a3e63594420bfa3bffc79e3b3323e3c3a9d99259632585241f0cfdfb93ead7a20
-Size (hugo-0.153.5.tar.gz) = 15889151 bytes
+BLAKE2s (hugo-0.154.1.tar.gz) = a043c4e54f7ae2b4e62d126fd66743ce26c26c45867c560869deb344b7fbbd1c
+SHA512 (hugo-0.154.1.tar.gz) = c024f44d923a55591d757e74bd8439428fcb3000ffdc87747a9ace5711606121c5b151178a3539873a3b28b7e6fbd4a1b2eb71f671f4fd7c89bc1fb75365fbfe
+Size (hugo-0.154.1.tar.gz) = 15896230 bytes
 BLAKE2s (rsc.io_binaryregexp_@v_v0.2.0.mod) = 351240374eb48b99bb43b8b52aa8467662e22b18ebf216f4c123858fe706c2f8
 SHA512 (rsc.io_binaryregexp_@v_v0.2.0.mod) = db50ff677b0bdccbc1a1ad3df7c5cc76f2fcccf3ab99d08d1c2868440eb9b893fe89452f4286f7d42f2f16abf0f4acda67fe86e174dcfa730a743aafcc166774
 Size (rsc.io_binaryregexp_@v_v0.2.0.mod) = 36 bytes

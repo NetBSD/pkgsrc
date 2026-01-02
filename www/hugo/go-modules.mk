@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.31 2025/12/27 21:19:44 triaxx Exp $
+# $NetBSD: go-modules.mk,v 1.32 2026/01/02 15:31:49 triaxx Exp $
 
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.24.0.mod
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.24.0.zip
@@ -452,8 +452,8 @@ GO_MODULE_FILES+=	github.com/tdewolff/minify/v2/@v/v2.24.8.zip
 GO_MODULE_FILES+=	github.com/tdewolff/parse/v2/@v/v2.8.5.mod
 GO_MODULE_FILES+=	github.com/tdewolff/parse/v2/@v/v2.8.5.zip
 GO_MODULE_FILES+=	github.com/tdewolff/test/@v/v1.0.11.mod
-GO_MODULE_FILES+=	github.com/tetratelabs/wazero/@v/v1.10.1.mod
-GO_MODULE_FILES+=	github.com/tetratelabs/wazero/@v/v1.10.1.zip
+GO_MODULE_FILES+=	github.com/tetratelabs/wazero/@v/v1.11.0.mod
+GO_MODULE_FILES+=	github.com/tetratelabs/wazero/@v/v1.11.0.zip
 GO_MODULE_FILES+=	github.com/woodsbury/decimal128/@v/v1.3.0.mod
 GO_MODULE_FILES+=	github.com/woodsbury/decimal128/@v/v1.3.0.zip
 GO_MODULE_FILES+=	github.com/yuin/goldmark-emoji/@v/v1.0.6.mod
