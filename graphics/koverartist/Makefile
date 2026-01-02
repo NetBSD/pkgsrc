@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2025/10/23 20:37:36 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2026/01/02 09:20:51 wiz Exp $
 
 PKGNAME=		koverartist-0.7.6
 DISTNAME=		38195-koverartist_0.7.6.orig
@@ -8,7 +8,7 @@ MASTER_SITES=		http://kde-apps.org/CONTENT/content-files/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		markd@NetBSD.org
-HOMEPAGE=		http://www.kde-apps.org/content/show.php?content=38195
+HOMEPAGE=		https://store.kde.org/p/1127513/
 COMMENT=		CD/DVD case designer
 
 TOOL_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
