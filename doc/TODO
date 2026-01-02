@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26602 2026/01/02 09:33:03 wiz Exp $
+$NetBSD: TODO,v 1.26603 2026/01/02 16:34:46 taca Exp $
 
 Suggested new packages
 ======================
@@ -1199,6 +1199,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o seccure-0.5a
 	o send-pr-4.0
 	o sendfile-20010424
+	o sendmail-8.18.2
 	o sendmail-cidrexpand-8.16.0.16
 	o sendmail-qtool-8.16.0.16
 	o ser-0.9.6
