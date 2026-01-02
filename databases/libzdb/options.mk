@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2015/08/30 17:41:51 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2026/01/02 17:50:47 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libzdb
 PKG_SUPPORTED_OPTIONS=		ssl libzdb-sqliteunlock
-PKG_SUGGESTED_OPTIONS=		ssl mysql pgsql sqlite
+PKG_SUGGESTED_OPTIONS=		ssl libzdb-sqliteunlock mysql pgsql sqlite
 PKG_OPTIONS_NONEMPTY_SETS=	database
 PKG_OPTIONS_SET.database=	mysql pgsql sqlite
 
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--without-mysql
 ###
 .if !empty(PKG_OPTIONS:Mpgsql)
 .  include "../../mk/pgsql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-postgresql=${BUILDLINK_PREFIX.postgresql-lib}
+CONFIGURE_ARGS+=	--with-postgresql=${PGSQL_PREFIX}/bin/pg_config
 .else
 CONFIGURE_ARGS+=	--without-postgresql
 .endif
@@ -36,6 +36,9 @@ CONFIGURE_ARGS+=	--without-postgresql
 CONFIGURE_ARGS+=	--with-sqlite=${BUILDLINK_PREFIX.sqlite3}
 .  if !empty(PKG_OPTIONS:Mlibzdb-sqliteunlock)
 CONFIGURE_ARGS+=	--enable-sqliteunlock
+.  endif
+.  if ${OPSYS} != "Linux"
+BUILDLINK_TRANSFORM+=	rm:-ldl
 .  endif
 .else
 CONFIGURE_ARGS+=	--without-sqlite
