@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1 2008/02/05 20:38:33 drochner Exp $
+$NetBSD: patch-libvisual.pc.in,v 1.1 2026/01/02 12:29:21 adam Exp $
 
 --- libvisual.pc.in.orig	2008-01-29 15:19:07.000000000 +0100
 +++ libvisual.pc.in
