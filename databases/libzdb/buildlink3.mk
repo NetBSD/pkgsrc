@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2025/04/17 21:50:02 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2026/01/02 17:50:47 tnn Exp $
 
 BUILDLINK_TREE+=	libzdb
 
@@ -8,22 +8,22 @@ LIBZDB_BUILDLINK3_MK:=
 USE_CXX_FEATURES+=	c++17
 
 BUILDLINK_API_DEPENDS.libzdb+=	libzdb>=2.6
-BUILDLINK_ABI_DEPENDS.libzdb?=	libzdb>=3.2.3nb9
+BUILDLINK_ABI_DEPENDS.libzdb+=	libzdb>=3.5.0
 BUILDLINK_PKGSRCDIR.libzdb?=	../../databases/libzdb
 
 pkgbase := libzdb
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.libzdb:Msqlite)
+.if ${PKG_BUILD_OPTIONS.libzdb:Msqlite}
 .  include "../../databases/sqlite3/buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.libzdb:Mpgsql)
+.if ${PKG_BUILD_OPTIONS.libzdb:Mpgsql}
 .  include "../../mk/pgsql.buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.libzdb:Mmysql)
+.if ${PKG_BUILD_OPTIONS.libzdb:Mmysql}
 .  include "../../mk/mysql.buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.libzdb:Mssl)
+.if ${PKG_BUILD_OPTIONS.libzdb:Mssl}
 .  include "../../security/openssl/buildlink3.mk"
 .endif
 
