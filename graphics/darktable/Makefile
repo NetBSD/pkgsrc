@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.182 2025/10/23 20:37:25 wiz Exp $
+# $NetBSD: Makefile,v 1.183 2026/01/02 14:59:50 ryoon Exp $
 
 DISTNAME=	darktable-5.0.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=darktable-org/}
 GITHUB_PROJECT=	darktable
@@ -97,6 +97,7 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.11
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/lensfun/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
+.include "../../graphics/libavif/buildlink3.mk"
 .include "../../graphics/libheif/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
