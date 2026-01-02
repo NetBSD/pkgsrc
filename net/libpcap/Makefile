@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2025/04/21 21:06:36 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2026/01/02 08:32:36 adam Exp $
 
-DISTNAME=	libpcap-1.10.5
+DISTNAME=	libpcap-1.10.6
 CATEGORIES=	net
 MASTER_SITES=	https://www.tcpdump.org/release/
 
