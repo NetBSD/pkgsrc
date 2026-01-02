@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.31 2026/01/02 17:02:39 pin Exp $
+$NetBSD: CHANGES-2026,v 1.32 2026/01/02 17:59:08 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -52,3 +52,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/hugo to 0.154.1 [triaxx 2026-01-02]
 	Updated devel/cargo-nextest to 0.9.117 [pin 2026-01-02]
 	Updated editors/featherpad to 1.6.3 [pin 2026-01-02]
+	Updated databases/libzdb to 3.5.0 [tnn 2026-01-02]
+	Updated mail/dbmail to 3.5.5 [tnn 2026-01-02]
