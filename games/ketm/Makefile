@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.31 2025/01/06 21:49:14 ktnb Exp $
-#
+# $NetBSD: Makefile,v 1.32 2026/01/02 09:18:37 wiz Exp $
 
 DISTNAME=	ketm-0.0.6
 PKGREVISION=	9
 CATEGORIES=	games
-MASTER_SITES=	http://home.t-online.de/home/haslbeck/ketm/
+#MASTER_SITES=	http://home.t-online.de/home/haslbeck/ketm/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://home.t-online.de/home/haslbeck/ketm/
+#HOMEPAGE=	http://home.t-online.de/home/haslbeck/ketm/
 COMMENT=	Old-school 2d-scrolling shooter
 
 BUILD_TARGET=	ketm
