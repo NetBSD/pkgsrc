@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2025/12/20 19:45:27 nia Exp $
+$NetBSD: distinfo,v 1.4 2026/01/02 23:31:03 tnn Exp $
 
 BLAKE2s (basilisk-2025.10.10/basilisk.tar.gz) = ed37e20294ce3566904ddb7b0b617a6bdde0ade188883412d37c852b4ba1a5c9
 SHA512 (basilisk-2025.10.10/basilisk.tar.gz) = 7d3c6ba90fe5378ea7d3ebef72c0aee2ea0414c39703c8af2632650f49f19f983cd53faf6dc83108c2dd9840880b1f01437c98918d68eda5bdb1f2ad84a5e01f
@@ -22,6 +22,7 @@ SHA1 (patch-platform_ipc_chromium_src_base_atomicops__internals__arm__gcc.h) = f
 SHA1 (patch-platform_layout_base_FrameProperties.h) = 400fca775e5bdf2595fbd02ca8679b15988a66d0
 SHA1 (patch-platform_media_ffvpx_config.h) = 7d42a3cbcb10818b2d2d890a6fcc9ec7b6b05ec1
 SHA1 (patch-platform_media_ffvpx_config__unix__sparc64.h) = bbecefd480ab7bc20206bd46ef918fcedbd700f5
+SHA1 (patch-platform_media_ffvpx_libavutil_arm_bswap.h) = 0bca91cd67ad4b2f6809991766a6938213736fbb
 SHA1 (patch-platform_media_libaom_config_linux_arm_config_aom__config.h) = 69ef22fe9892c2288accb6eb00b4533d8cee0299
 SHA1 (patch-platform_media_libcubeb_src_cubeb__sun.c) = ce27774d772d65fa60b6be5bee82fbe4f787f3d1
 SHA1 (patch-platform_media_libtheora_moz.build) = a7bad662dabb87c6a85542a4a50f8ed693064bc6
