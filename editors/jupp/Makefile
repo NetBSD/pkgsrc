@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/12/19 09:02:46 vins Exp $
-#
+# $NetBSD: Makefile,v 1.3 2026/01/02 09:14:32 wiz Exp $
 
 DISTNAME=	joe-3.1jupp41
 PKGNAME=	${DISTNAME:S/jupp/./:S/joe/jupp/}
@@ -9,7 +8,7 @@ MASTER_SITES=	http://www.mirbsd.org/MirOS/dist/jupp/ \
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	vins@NetBSD.org
-HOMEPAGE=	https://www.mirbsd.org/jupp.htm
+#HOMEPAGE=	https://www.mirbsd.org/jupp.htm
 COMMENT=	The portable version of joe from the MirOS project
 LICENSE=	gnu-gpl-v1
 
