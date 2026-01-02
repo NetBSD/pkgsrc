@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.29 2026/01/02 15:32:04 triaxx Exp $
+$NetBSD: CHANGES-2026,v 1.30 2026/01/02 17:01:27 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -50,3 +50,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/darktable to 5.0.0nb12 [ryoon 2026-01-02]
 	Updated sysutils/duplicity to 3.0.7 [triaxx 2026-01-02]
 	Updated www/hugo to 0.154.1 [triaxx 2026-01-02]
+	Updated devel/cargo-nextest to 0.9.117 [pin 2026-01-02]
