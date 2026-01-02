@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2025/07/04 08:44:47 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.17 2026/01/02 09:19:05 wiz Exp $
 
 DISTNAME=	App-KGB-1.31
 PKGNAME=	${DISTNAME:S/App-KGB/kgb-bot/}
 PKGREVISION=	13
-
 CATEGORIES=	chat perl5 scm
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://alioth.debian.org/projects/kgb/
+#HOMEPAGE=	https://alioth.debian.org/projects/kgb/
 COMMENT=	Notify about VCS commits on IRC
 
 USE_TOOLS+=	perl:run
