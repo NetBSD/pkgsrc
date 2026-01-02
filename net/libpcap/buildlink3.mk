@@ -1,6 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2025/01/24 19:22:02 riastradh Exp $
-
-.include "../../mk/bsd.fast.prefs.mk"
+# $NetBSD: buildlink3.mk,v 1.27 2026/01/02 08:32:36 adam Exp $
 
 BUILDLINK_TREE+=	libpcap
 
@@ -11,6 +9,8 @@ BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.5.0
 BUILDLINK_ABI_DEPENDS.libpcap+=	libpcap>=1.3.0nb1
 BUILDLINK_PKGSRCDIR.libpcap?=	../../net/libpcap
 
+.include "../../mk/bsd.fast.prefs.mk"
+
 # Headers require Availability.h, which debuted with 10.5.
 .if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 100500
 .  include "../../devel/macports-legacy-support/buildlink3.mk"
@@ -20,7 +20,7 @@ BUILDLINK_PKGSRCDIR.libpcap?=	../../net/libpcap
 # references symbols in them.
 .if ${OPSYS} == "SunOS"
 BUILDLINK_LDADD.libpcap+=	-lnsl -lsocket
-BUILDLINK_LDFLAGS.libpcap?=	${BUILDLINK_LDADD.libpcap}
+BUILDLINK_LDFLAGS.libpcap+=	${BUILDLINK_LDADD.libpcap}
 .endif
 
 # NetBSD 9.0 shipped with an oopsie in pcap-config -- various
