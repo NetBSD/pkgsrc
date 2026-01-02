@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2024/12/05 03:09:45 riastradh Exp $
+# $NetBSD: Makefile,v 1.47 2026/01/02 03:08:45 ktnb Exp $
 
-DISTNAME=		racket-minimal-8.15-src
+DISTNAME=		racket-minimal-9.0-src
 PKGNAME=		${DISTNAME:S/-src$//}
 CATEGORIES=		lang
 MASTER_SITES_PLT=	https://mirror.racket-lang.org/installers/${PKGVERSION_NOREV}/
@@ -33,7 +33,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 #
 # ERROR: --prefix not allowed for a Mac OS build, unless either
 #          --enable-xonx is supplied (to create a Unix-style
-#            build), or 
+#            build), or
 #          --enable-macprefix is supplied (to allow a Mac-style
 #            installation, even though --prefix is normally used
 #            for Unix-style installations)
