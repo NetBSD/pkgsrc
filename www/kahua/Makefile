@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2019/11/04 22:09:56 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2026/01/02 09:14:54 wiz Exp $
 
 DISTNAME=	Kahua-1.0.1
 PKGNAME=	${DISTNAME:C/Kahua/kahua/}
 PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	http://www.kahua.org/download/kahua/
+#MASTER_SITES=	http://www.kahua.org/download/kahua/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	uebayasi@NetBSD.org
-HOMEPAGE=	http://www.kahua.org/
+#HOMEPAGE=	http://www.kahua.org/
 COMMENT=	Continuation-based framework to develop application service
 
 MAKE_JOBS_SAFE=		no
