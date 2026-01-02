@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2021/07/17 16:01:34 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/01/02 09:19:22 wiz Exp $
 
 DISTNAME=	knock-0.8
 CATEGORIES=	net
-MASTER_SITES=	http://www.zeroflux.org/proj/knock/files/
+#MASTER_SITES=	http://www.zeroflux.org/proj/knock/files/
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	https://www.zeroflux.org/projects/knock/
+#HOMEPAGE=	https://www.zeroflux.org/projects/knock/
 COMMENT=	Port knocking server
 LICENSE=	gnu-gpl-v2
 
