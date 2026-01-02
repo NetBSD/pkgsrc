@@ -9,3 +9,6 @@ Mysql.pm is the elder species.  It was written before DBI was
 available but inspired by an early draft of the DBI specification.
 As has been been circulating longer it are more mature and pretty
 stable. It is also more complete than DBD::mysql.
+
+As of version 5, this module *only* works with mysql, not MariaDB, and
+is thus not a suitable upgrade path for those using MariaDB.
