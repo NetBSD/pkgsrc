@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.16 2026/01/02 00:32:55 nia Exp $
+$NetBSD: CHANGES-2026,v 1.17 2026/01/02 03:09:01 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -35,3 +35,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/ruby-gtk3 to 4.3.4 [tsutsui 2026-01-02]
 	Updated x11/ruby-gtksourceview3 to 4.3.4 [tsutsui 2026-01-02]
 	Updated emulators/qemu7 to 7.2.22 [nia 2026-01-02]
+	Updated lang/racket-textual to 9.0 [ktnb 2026-01-02]
