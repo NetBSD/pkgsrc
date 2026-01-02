@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.87 2025/10/23 20:38:08 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2026/01/02 17:57:31 tnn Exp $
 
-DISTNAME=	dbmail-3.3.1
-PKGREVISION=	11
+DISTNAME=	dbmail-3.5.5
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dbmail/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,7 +10,10 @@ HOMEPAGE=	https://github.com/dbmail/dbmail
 COMMENT=	Store and retrieve mail messages in a database
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		gmake pkg-config pax
+TOOL_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
+
+USE_TOOLS+=		gmake pkg-config pax perl
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -19,22 +21,34 @@ CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/run
 CONFIGURE_ARGS+=	--with-zdb=${BUILDLINK_PREFIX.libzdb}
+CONFIGURE_ARGS+=	--enable-manpages
+REPLACE_PERL+=		man/fixsp.pl
 
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		VARBASE DBMAIL_USER DBMAIL_GROUP
 
 EGDIR=			${PREFIX}/share/examples/dbmail
 CONF_FILES_PERMS+=	${EGDIR}/dbmail.conf ${PKG_SYSCONFDIR}/dbmail.conf \
-			  ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0640
-RCD_SCRIPTS=		dbmail dbmailimapd dbmaillmtpd dbmailpop3d
+			  ${DBMAIL_USER} ${DBMAIL_GROUP} 0640
+OWN_DIRS_PERMS+=	${VARBASE}/log/dbmail ${DBMAIL_USER} ${DBMAIL_GROUP} 0750
+OWN_DIRS_PERMS+=	${VARBASE}/run/dbmail ${DBMAIL_USER} ${DBMAIL_GROUP} 0750
+RCD_SCRIPTS=		dbmail dbmailhttpd dbmailimapd dbmaillmtpd dbmailpop3d
 DATADIR=		${PREFIX}/share/dbmail
 
-MESSAGE_SUBST+=		DATADIR=${DATADIR}
+DBMAIL_USER?=		dbmail
+DBMAIL_GROUP?=		dbmail
+PKG_USERS_VARS=		DBMAIL_USER
+PKG_GROUPS_VARS=	DBMAIL_GROUP
+PKG_GROUPS=		${DBMAIL_GROUP}
+PKG_USERS=		${DBMAIL_USER}:${DBMAIL_GROUP}
 
-SUBST_CLASSES+=		sysconf
-SUBST_STAGE.sysconf=	do-configure
-SUBST_FILES.sysconf=	man/commonopts.txt
-SUBST_SED.sysconf=	-e 's|/etc/dbmail\.conf|${PKG_SYSCONFDIR}/dbmail.conf|g'
-SUBST_MESSAGE.sysconf=	Fixing sysconf paths.
+SUBST_CLASSES+=		fix-cfg
+SUBST_STAGE.fix-cfg=	pre-configure
+SUBST_MESSAGE.fix-cfg=	Substituting configurtion defaults.
+SUBST_FILES.fix-cfg=	dbmail.conf
+SUBST_SED.fix-cfg=	-e 's,nobody$$,${DBMAIL_USER},g'
+SUBST_SED.fix-cfg+=	-e 's,nogroup$$,${DBMAIL_GROUP},g'
+SUBST_SED.fix-cfg+=	-e 's,/var/run/dbmail$$,${VARBASE}/run/dbmail,g'
+SUBST_SED.fix-cfg+=	-e 's,/var/log/dbmail/dbmail.log$$,${VARBASE}/log/dbmail/dbmail.log,g'
 
 INSTALLATION_DIRS=	lib ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin ${EGDIR} ${DATADIR}/sql
 
@@ -53,4 +67,5 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 .include "../../mail/gmime3/buildlink3.mk"
 .include "../../security/mhash/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
