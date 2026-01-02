@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.27 2026/01/02 14:59:59 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.28 2026/01/02 15:10:08 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -48,3 +48,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated news/newsraft to 0.35 [ktnb 2026-01-02]
 	Updated games/openttd to 15.0 [triaxx 2026-01-02]
 	Updated graphics/darktable to 5.0.0nb12 [ryoon 2026-01-02]
+	Updated sysutils/duplicity to 3.0.7 [triaxx 2026-01-02]
