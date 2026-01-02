@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2020/08/15 10:52:50 tnn Exp $
+# $NetBSD: options.mk,v 1.14 2026/01/02 17:57:31 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dbmail
 PKG_SUPPORTED_OPTIONS=	ldap sieve
@@ -15,11 +15,11 @@ PLIST_VARS+=		ldap sieve
 .include "../../mail/libsieve/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-sieve=${BUILDLINK_PREFIX.libsieve}
 PLIST.sieve=		yes
-FILES_SUBST+=		TIMSIEVED="dbmailtimsieved"
-RCD_SCRIPTS+=		dbmailtimsieved
+FILES_SUBST+=		SIEVED="dbmailsieved"
+RCD_SCRIPTS+=		dbmailsieved
 .else
 CONFIGURE_ARGS+=	--without-sieve
-FILES_SUBST+=		TIMSIEVED=""
+FILES_SUBST+=		SIEVED=""
 .endif
 
 ###
