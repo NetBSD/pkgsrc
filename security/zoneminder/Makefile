@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2025/12/22 06:08:16 adam Exp $
+# $NetBSD: Makefile,v 1.91 2026/01/02 15:50:01 gdt Exp $
 
 VERSION=	1.36.35
 # Distfile is ZoneMinder but package and tarball contents are zoneminder.
@@ -165,7 +165,6 @@ CMAKE_CONFIGURE_ARGS+=	-DPERL_EXECUTABLE=${PREFIX}/bin/perl
 
 DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-Device-SerialPort-[0-9]*:../../comms/p5-Device-SerialPort
-#DEPENDS+=	p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
 DEPENDS+=	p5-Class-Std-[0-9]*:../../devel/p5-Class-Std
 DEPENDS+=	p5-Class-Std-Fast-[0-9]*:../../devel/p5-Class-Std-Fast
 DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
@@ -186,6 +185,18 @@ DEPENDS+=	p5-Sys-MemInfo-[0-9]*:../../sysutils/p5-Sys-MemInfo
 DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-Number-Bytes-Human-[0-9]*:../../textproc/p5-Number-Bytes-Human
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
+
+# zoneminder needs a database.  While the longstanding approach is
+# mysql, it's become normal to use mariadb instead.  p5-DBD-mysql used
+# to talk to mariadb just fine, but now it doesn't.  zoneminder has
+# improved DB type selection to deal with this and use p5-DBD-mariadb
+# instead.
+#   https://github.com/ZoneMinder/zoneminder/pull/3914/commits
+# \todo Figure out if those commits are in the packaged version, now
+# and after updating to the latest micro.  If not pull them in as a patch.
+# \todo Consider options, vs just saying you need to use mariadb.
+#DEPENDS+=	p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
+#DEPENDS+=	p5-DBD-MariaDB-[0-9]*:../../databases/p5-DBD-MariaDB
 
 # A large subset of perl scripts set PATH explicitly and need to patched.
 # See "PATH FIXUPS" below.
