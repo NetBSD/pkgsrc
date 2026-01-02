@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.35 2026/01/02 22:35:46 hauke Exp $
+$NetBSD: CHANGES-2026,v 1.36 2026/01/02 22:40:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -57,3 +57,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/sddm to 0.21.0nb1 [gutteridge 2026-01-02]
 	Updated editors/xemacs to 21.4.25 [hauke 2026-01-02]
 	Updated editors/xemacs-nox11 to 21.4.25 [hauke 2026-01-02]
+	Updated lang/LuaJIT2 to 2.1.1713773202nb1 [wiz 2026-01-02]
