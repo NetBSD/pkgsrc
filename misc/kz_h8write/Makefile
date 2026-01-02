@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/09/30 16:07:38 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.4 2026/01/02 09:21:16 wiz Exp $
 
 DISTNAME=	kz_h8write-v0.2.1
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -8,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_OSDN:=kz-h8write/57645/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://osdn.jp/projects/kz-h8write/
+#HOMEPAGE=	http://osdn.jp/projects/kz-h8write/
 COMMENT=	Flash writer for H8/3069F, mainly for KOZOS
 LICENSE=	mit
 
