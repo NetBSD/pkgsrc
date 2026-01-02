@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/12/31 03:13:00 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/02 01:47:08 markd Exp $
 
 DISTNAME=	kglobalacceld-${PLASMAVER}
+PKGREVISION=	1
 CATEGORIES=	x11
 
 HOMEPAGE=	https://kde.org/plasma-desktop/
@@ -8,6 +9,9 @@ COMMENT=	Daemon providing Global Keyboard Shortcut (Accelerator) functionality
 LICENSE=	gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/plasma6.mk"
+
+post-install:
+	ln -s libKGlobalAccelD.so.${PLASMAVER} ${DESTDIR}${PREFIX}/lib/libKGlobalAccelD.so
 
 .include "../../devel/kf6-kconfig/buildlink3.mk"
 .include "../../devel/kf6-kcoreaddons/buildlink3.mk"
