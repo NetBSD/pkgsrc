@@ -1,4 +1,4 @@
-$NetBSD: patch-src_common_VirtualTerminal.cpp,v 1.1 2025/12/30 04:00:09 gutteridge Exp $
+$NetBSD: patch-src_common_VirtualTerminal.cpp,v 1.2 2026/01/02 22:22:23 gutteridge Exp $
 
 Fix tty device for NetBSD.
 
@@ -13,7 +13,7 @@ Fix tty device for NetBSD.
  #else
  #include <linux/vt.h>
  #include <linux/kd.h>
-@@ -58,6 +60,22 @@ namespace SDDM {
+@@ -58,6 +60,21 @@ namespace SDDM {
              }
              return vtActive;
          }
@@ -21,8 +21,7 @@ Fix tty device for NetBSD.
 +        static const char *defaultVtPath = "/dev/ttyE0";        
 +
 +        QString path(int vt) {
-+            char c = (vt <= 10 ? '0' : 'a') + (vt - 1);
-+            return QStringLiteral("/dev/ttyE%1").arg(c);
++            return QStringLiteral("/dev/ttyE%1").arg(vt - 1);
 +        }
 +
 +        int getVtActive(int fd) {
@@ -36,7 +35,7 @@ Fix tty device for NetBSD.
  #else
          static const char *defaultVtPath = "/dev/tty0";
  
-@@ -119,12 +137,12 @@ namespace SDDM {
+@@ -119,12 +136,12 @@ namespace SDDM {
  
              if (getmodeReply.mode != VT_AUTO)
                  goto out;
