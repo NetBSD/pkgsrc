@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:19:22 nia Exp $
+$NetBSD: distinfo,v 1.11 2026/01/03 11:20:29 wiz Exp $
 
 BLAKE2s (boxbackup-0.11.1.tgz) = 7da943e3ed9b326316f5b8761afc03785d6ae4b273a4403ee06cfc0e81ec2f5d
 SHA512 (boxbackup-0.11.1.tgz) = 15ceceae3659f14254f422136805a8b3ed3c39d14f8a1ffd0c96efb05b7acb5be310e13144ed86fe4afd24a3c0b86ec771b7d3a9f08b2789bb98e18468ca97f8
@@ -6,6 +6,8 @@ Size (boxbackup-0.11.1.tgz) = 1863270 bytes
 SHA1 (patch-aa) = d6c76bce9a706ee05a19705c80f367519316667f
 SHA1 (patch-ab) = c94b950a59f4d01b9e4dfb3b74d93b52ff264ed0
 SHA1 (patch-ac) = 7584de0bf727ad24f7d8d9c8d75ad24b29a676dc
+SHA1 (patch-bin_bbstored_HousekeepStoreAccount.cpp) = 88ca823090be5294197857b6a3399780b3e0ffd8
+SHA1 (patch-bin_bbstored_HousekeepStoreAccount.h) = 3bdcc5c9101c611bd97d28f1c24a2f4029c7f2ca
 SHA1 (patch-infrastructure_BoxPlatform.pm.in) = aec1271129fc343fc44a305c2042528901605f99
 SHA1 (patch-lib_backupstore_BackupStoreInfo.cpp) = 71fc8028a5aaee3a9bb3a5606a27ce35a2f06f71
 SHA1 (patch-lib_crypto_CipherContext.cpp) = b1778e068a86c546320ae931dce7f38709d98661
