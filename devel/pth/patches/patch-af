@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2007/02/18 11:40:10 wiz Exp $
+$NetBSD: patch-af,v 1.5 2026/01/03 11:29:18 wiz Exp $
 
 --- pth.h.in.orig	2006-06-08 17:54:02.000000000 +0000
 +++ pth.h.in
@@ -18,7 +18,15 @@ $NetBSD: patch-af,v 1.4 2007/02/18 11:40:10 wiz Exp $
  #define _XOPEN_SOURCE_set
  #endif
  #include <poll.h>
-@@ -550,8 +550,11 @@ extern ssize_t        pth_sendto(int, co
+@@ -419,6 +419,7 @@ typedef void *Sfdisc_t;
+ 
+     /* global functions */
+ extern int            pth_init(void);
++extern int            pth__init(void);
+ extern int            pth_kill(void);
+ extern long           pth_ctrl(unsigned long, ...);
+ extern long           pth_version(void);
+@@ -550,8 +551,11 @@ extern ssize_t        pth_sendto(int, co
  extern ssize_t        pth_pread(int, void *, size_t, off_t);
  extern ssize_t        pth_pwrite(int, const void *, size_t, off_t);
  
