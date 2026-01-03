@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:15:25 nia Exp $
+$NetBSD: distinfo,v 1.11 2026/01/03 10:02:04 wiz Exp $
 
 BLAKE2s (libnet-1.0.2a.tar.gz) = f26229d8fbae5b88c59b48a45d521ae4edaa7b85e7b1ddc1b66ad15450ee59ea
 SHA512 (libnet-1.0.2a.tar.gz) = 2e9a73bd767e1f46eea92e18ddd83cc3179144c8cc5b1a22b4dba50fee16173c951be4dd647a247bd7067c33b9e33489a6efb313ce1ea0c61c4a06009c3c4d95
 Size (libnet-1.0.2a.tar.gz) = 140191 bytes
 SHA1 (patch-aa) = fa71db191c421aa1b36d1107236645fdde0bc8f9
 SHA1 (patch-ab) = 56a2cb8b214529fdaacdbc6154ec2fc88edfa1c8
-SHA1 (patch-ac) = 7224d5fc0ac7084cda9b932d1a742c5055cde7f2
+SHA1 (patch-ac) = 1ef5e786e853eafbf45f217a79a00fdf5fca0f00
 SHA1 (patch-ad) = 237a8caae854df28790b3038c0b782b95b336004
 SHA1 (patch-ae) = d3b0e651bee5344b0d0539065058a939036a8152
+SHA1 (patch-src_libnet__socket.c) = 4569a07eb1397e1294dcccbbf31f1b2d8e41ffee
