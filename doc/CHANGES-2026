@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.38 2026/01/03 04:03:30 dholland Exp $
+$NetBSD: CHANGES-2026,v 1.39 2026/01/03 07:21:26 iquiw Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -60,3 +60,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/LuaJIT2 to 2.1.1713773202nb1 [wiz 2026-01-02]
 	Removed devel/drkonqi [markd 2026-01-03]
 	Updated lang/kaffe to 1.1.7nb9 [dholland 2026-01-03]
+	Updated devel/task to 3.46.4 [iquiw 2026-01-03]
