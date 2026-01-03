@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.273 2025/10/23 20:38:13 wiz Exp $
+# $NetBSD: Makefile,v 1.274 2026/01/03 09:17:26 mef Exp $
 
 #
 # If updating this package, please try to ensure PLIST.Darwin is kept in sync
 # to avoid unnecessarily breaking macOS users.
 #
-DISTNAME=	R-4.4.2
-PKGREVISION=	10
+DISTNAME=	R-4.4.3
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=base/R-4/}
 
@@ -15,6 +14,10 @@ COMMENT=	Statistical language for data analysis and graphics
 LICENSE=	gnu-gpl-v2
 
 USE_GCC_RUNTIME=	yes
+
+# https://cran.r-project.org/doc/manuals/r-release/NEWS.pdf
+# above line mentions c23 as default compiler for R, but c23 (gcc15) is N/A ?
+# USE_CC_FEATURES+=	c23
 
 BUILD_TARGET=		all info
 INSTALL_TARGET=		install install-info
