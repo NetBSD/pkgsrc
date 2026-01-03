@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2024/02/06 10:49:54 markd Exp $
-
-BLAKE2s (drkonqi-5.27.10.tar.xz) = 758ba2d201c8764ca4c88d5d324089ed8b78ce9b5741ad120690d5ed910693b7
-SHA512 (drkonqi-5.27.10.tar.xz) = b53c6ebd2951b276971bdb9c4feb4ce885daf68176b0004396b046bd8e245b62457b62d07465b39d637095f9d4b779ea31535aaa6ee68855aa8cb5a48802857f
-Size (drkonqi-5.27.10.tar.xz) = 861284 bytes
