@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:30:58 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.6 2026/01/03 22:14:24 wiz Exp $
 
 DISTNAME=	libarena-${SNAPSHOT_DATE}
 CATEGORIES=	devel
@@ -14,6 +13,7 @@ COMMENT=	Memory allocator API and implementation
 BUILD_TARGET=	pic
 USE_FEATURES=	getenv vsnprintf # XXX strsep should be added to USE_FEATURES
 USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
