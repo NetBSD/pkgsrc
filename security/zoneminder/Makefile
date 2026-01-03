@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2026/01/03 19:49:04 gdt Exp $
+# $NetBSD: Makefile,v 1.94 2026/01/03 23:25:41 gdt Exp $
 
 VERSION=	1.36.37
 # Distfile is ZoneMinder but package and tarball contents are zoneminder.
@@ -6,7 +6,7 @@ NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
 
 PKGNAME=	${DISTNAME:S/${NAME_DIST}-/${NAME_LOWER}-/}
-#PKGREVISION=	0
+PKGREVISION=	1
 DISTNAME=	${NAME_DIST}-${VERSION}
 WRKSRC=		${WRKDIR}/${NAME_LOWER}-${VERSION}
 CATEGORIES=	security
@@ -70,14 +70,13 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
 # zoneminder has a dizzying array of variables for various paths.
 # Consolidate the settings in an attempt to reduce confusion.
 
-# ZoneMinder prefers a subdirectory of etc. Further, it demands a
+# ZoneMinder prefers a subdirectory of etc.  Further, it demands a
 # conf.d subdirectory within its config directory, which would be
 # irregular at top level.
 CMAKE_CONFIGURE_ARGS+=	-DZM_CONFIG_DIR=${PKG_SYSCONFDIR}
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR} ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/conf.d ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 
-# \todo We prepare a webroot, even without the apache option.
 ZM_HTTPD_ROOT=		share/zoneminder/htdocs
 CMAKE_CONFIGURE_ARGS+=	-DZM_WEBDIR=${PREFIX}/${ZM_HTTPD_ROOT:Q}
 PLIST_SUBST+=		ZM_HTTPD_ROOT=${ZM_HTTPD_ROOT:Q}
@@ -95,35 +94,36 @@ INSTALLATION_DIRS+=	libexec/zoneminder ${ZM_HTTPD_CGIBIN}
 
 BUILD_DEFS+=		VARBASE
 CMAKE_CONFIGURE_ARGS+=	-DZM_RUNDIR=${VARBASE}/run/zm
-# \todo Consider a way to clean up on de-install as anything left
-# should just be removed.
 OWN_DIRS_PERMS+=	${VARBASE}/run/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 
 # NB: Startup script must create /var/run/zm.
 CMAKE_CONFIGURE_ARGS+=	-DZM_SOCKDIR=${VARBASE}/run/zm
-# Choose /var/tmp for now.  \todo Revisit.
+
+# ZM_TMPDIR might or might not be used.
 CMAKE_CONFIGURE_ARGS+=	-DZM_TMPDIR=${VARBASE}/tmp/zm
 OWN_DIRS_PERMS+=	${VARBASE}/tmp/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
+
+# In some configs, ZM_LOGDIR is apparently unused.
 CMAKE_CONFIGURE_ARGS+=	-DZM_LOGDIR=${VARBASE}/log/zm
 OWN_DIRS_PERMS+=	${VARBASE}/log/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 
-# \todo Define this per-OS; /var/shm is for NetBSD
-ZM_SHM=			/var/shm
+# Choose directory where zoneminder can create shm files (for zmc).
+# \todo Define this per-OS.
+ZM_SHM=			/var/shm	# NetBSD
 CMAKE_CONFIGURE_ARGS+=	-DZM_PATH_MAP=${ZM_SHM}
 
-# Cache directory is for js files to be served.  For now, use
-# /var/cache/zoneminder.  \todo Consider /tmp/zm instead.
+# Cache directory is for js files to be served.
 ZM_CACHE=		${VARBASE}/cache/zoneminder
 CMAKE_CONFIGURE_ARGS+=	-DZM_CACHEDIR=${ZM_CACHE}
 OWN_DIRS_PERMS+=	${ZM_CACHE} ${APACHE_USER} ${APACHE_GROUP} 775
 
 # Storage of events; this should persist and is hence in /var/db.
-# \todo Understand how and why /images is used.
 ZM_CONTENT=		${VARBASE}/db/zoneminder
 CMAKE_CONFIGURE_ARGS+=	-DZM_CONTENTDIR=${ZM_CONTENT}
 OWN_DIRS_PERMS+=	${ZM_CONTENT} ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 CMAKE_CONFIGURE_ARGS+=	-DZM_DIR_EVENTS=${ZM_CONTENT}/events
 OWN_DIRS_PERMS+=	${ZM_CONTENT}/events ${APACHE_USER} ${APACHE_GROUP} 775
+# \todo Understanda ZM_DIR_IMAGES.
 CMAKE_CONFIGURE_ARGS+=	-DZM_DIR_IMAGES=${ZM_CONTENT}/images
 OWN_DIRS_PERMS+=	${ZM_CONTENT}/images ${APACHE_USER} ${APACHE_GROUP} 775
 
@@ -132,13 +132,14 @@ OWN_DIRS_PERMS+=	${ZM_CONTENT}/images ${APACHE_USER} ${APACHE_GROUP} 775
 PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
 
+# \todo Move to higher ffmpeg.
 .include "../../multimedia/ffmpeg6/buildlink3.mk"
 .for lib in AVFORMAT AVCODEC AVDEVICE AVUTIL SWSCALE SWRESAMPLE
 CMAKE_CONFIGURE_ARGS+=	-D${lib}_INCLUDE_DIR=${BUILDLINK_PREFIX.ffmpeg6}/include/ffmpeg6
 CMAKE_CONFIGURE_ARGS+=	-D${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg6}/lib/ffmpeg6/lib${lib:tl}.${SHLIB_EXT}
 .endfor
 
-# \todo Revisit this and see if there is a better way.
+# \todo Recheck if this is needed.
 # MySQL uses openssl.  Force zoneminder not to choose otherwise by
 # finding libraries that are present but not buildlinked.
 CMAKE_CONFIGURE_ARGS+=	-DGNUTLS_LIBRARIES=""
@@ -306,7 +307,7 @@ PRINT_PLIST_AWK+=	{ gsub(/^.+\/examples\/rc.d/, "$${PLIST.rcd}&"); }
 
 ## PKGSRC PHASE FIXUPS
 
-# Pretend our apache config is part of the distribution.
+# Copy the example config to WRKSRC because we SUBST it, and files/ should be read only.
 # Avoid conflict with C++20 <version> - intertwined with patch-CMakeLists.txt
 post-extract:
 	${CP} ${FILESDIR}/httpd-zoneminder.conf ${WRKSRC}/httpd-zoneminder.conf

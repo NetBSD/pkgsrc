@@ -14,12 +14,12 @@ for ${PKG_SYSCONFDIR}, without loss of generality.
 ## Choice of jpeg implementation
 
 ZoneMinder claims to benefit dramatically from using libjpeg-turbo.
-Consider setting that as default in mk.conf
-`JPEG_DEFAULT=libjpeg-turbo` and then *everything*.
+Because `JPEG_DEFAULT=libjpeg-turbo` is the default setting, no action
+is required.
 
 ## User and Group
 
-zoneminder uses APACHE_USER and APACHE_GROUP.  These are www by
+zoneminder uses `APACHE_USER` and `APACHE_GROUP`.  These are www by
 default, but people set them to fpm for use with nginx and php_fpm.
 It is important that apache, zoneminder, and any existing directories
 all agree.
@@ -33,14 +33,14 @@ using mysql only for zoneminder and do not want it accessible from the
 network.
 
 See upstream instructions at
-https://zoneminder.readthedocs.io/en/1.32.3/installationguide/ubuntu.html
+https://zoneminder.readthedocs.io/en/stable/installationguide/ubuntu.html
 which are for Ubuntu, but seem mostly generic.
 
 Specifically, see "Step 5: Configure the ZoneMinder Database".
 
-The default password is "zmpass".  You may (probably should) change
-this to something else, and set ZM_DB_PASS in
-e.g. /usr/pkg/etc/zm/zmpass.conf.
+The default password is "zmpass".  You should change this to something
+else, and set `ZM_DB_PASS` in
+e.g. `/usr/pkg/etc/zm/conf.d/zmcustom.conf`.
 
 # Other setup
 
