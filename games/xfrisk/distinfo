@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:44:32 nia Exp $
+$NetBSD: distinfo,v 1.15 2026/01/03 04:08:45 dholland Exp $
 
 BLAKE2s (xfrisk-1.2.tar.gz) = 9786ce9a06e97653de8fbf8df163ce8e2c68d25267328aca021afc3d0c83b55e
 SHA512 (xfrisk-1.2.tar.gz) = fb27bd86e20ae0a4b90fd403da37ff4aa253bc801f6ff82cbfde3af1134a10f204cfec2e21127e1825981ac4e38ac5a50955a18510e3cd93b602c3a205357223
@@ -8,5 +8,7 @@ SHA1 (patch-ab) = 8c458f0fa7db8e2a032f592b857f4024769cb4f1
 SHA1 (patch-ac) = ed2194b764c3d78eedabceb9136814cffcb8f25f
 SHA1 (patch-ad) = abd57e121edccbf1f3f78d8f124fbc198722dfcd
 SHA1 (patch-ae) = 173820eabda55fce02fedae4be2d853ba7d5b31f
+SHA1 (patch-aiClientMain.c) = fad654de66af1916ededdf36557920c0e542db19
+SHA1 (patch-aiStubs.c) = 579e54b4d52da71ffaf26a198074aa3c2c5639e1
 SHA1 (patch-gui_c) = 7317a10b1883a5f230c5dd8e3be89d10598d4fb4
 SHA1 (patch-utils_c) = 83c56baeb506dc9ca26b6ccc9279fee9e881f41f
