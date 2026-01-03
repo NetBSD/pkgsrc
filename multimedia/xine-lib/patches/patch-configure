@@ -1,0 +1,33 @@
+$NetBSD: patch-configure,v 1.1 2026/01/03 14:10:39 nia Exp $
+
+Fix shell portability.
+
+--- configure.orig	2026-01-03 11:56:13.501029265 +0000
++++ configure
+@@ -31662,7 +31662,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$
+   have_avutil_avcodec_h=no
+ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+-            test x"$have_avutil_avcodec_h" == x"yes" &&
++            test x"$have_avutil_avcodec_h" = x"yes" &&
+ $as_echo "#define HAVE_AVUTIL_AVCODEC_H 1" >>confdefs.h
+ 
+             cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+@@ -31686,7 +31686,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$
+   have_avformat_avformat_h=no
+ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+-            test x"$have_avformat_avformat_h" == x"yes" &&
++            test x"$have_avformat_avformat_h" = x"yes" &&
+ $as_echo "#define HAVE_AVFORMAT_AVFORMAT_H 1" >>confdefs.h
+ 
+             cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+@@ -31711,7 +31711,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$
+   have_avformat_avio_h=no
+ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+-            test x"$have_avformat_avio_h" == x"yes" &&
++            test x"$have_avformat_avio_h" = x"yes" &&
+ $as_echo "#define HAVE_AVFORMAT_AVIO_H 1" >>confdefs.h
+ 
+             if test "$ac_cv_header_ffmpeg_avutil_h" = "yes" && test "$ac_cv_header_libavutil_avutil_h" = "yes"; then

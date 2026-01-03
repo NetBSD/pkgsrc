@@ -1,13 +1,15 @@
-$NetBSD: distinfo,v 1.120 2022/12/02 15:06:22 jperkin Exp $
+$NetBSD: distinfo,v 1.121 2026/01/03 14:10:39 nia Exp $
 
-BLAKE2s (xine-lib-1.2.12.tar.xz) = 6576144af35552e4c9144ab7981520f014ce78ad790e61e1fb526ec15bc8f283
-SHA512 (xine-lib-1.2.12.tar.xz) = cdc913d0c78a3a34bd6e4060040fd844f22dbc673330e30769c83e9682a46f3369af8f59bd0c759ddc601de979b13d53e7ed10c54f3b78bdc63afceb484826be
-Size (xine-lib-1.2.12.tar.xz) = 5341212 bytes
+BLAKE2s (xine-lib-1.2.13.tar.xz) = e066b7515caf4388d0bf2a73e6d51a1f8acf646e5f198395cb26ad9bcf9384f8
+SHA512 (xine-lib-1.2.13.tar.xz) = 088a446dd962c3cef621b56edd48fa2e1b47566108b4097d74899a9e5316a1f205993041d3070f45b706f168837579811e5e98c7e52ec278c683379407084bc4
+Size (xine-lib-1.2.13.tar.xz) = 5004196 bytes
 SHA1 (patch-ag) = 82b9464f57f93e84be1d9cf60315a9b3e1cd3812
+SHA1 (patch-configure) = bb79984c2fdd42f9d052ad396c429448754f1671
 SHA1 (patch-contrib_libxdg-basedir_basedir.c) = 8dd88fd712853e58363148023be6ef0906486206
 SHA1 (patch-include_xine_attributes.h) = e7cb5f50d95a2523e2de83250fe11a12f0126a7f
 SHA1 (patch-include_xine_post.h) = 3ada327a7f171bdf680074b30f005099011a201c
-SHA1 (patch-include_xine_xineutils.h) = d59b517c966eb3f7935ab704525ed9e510d8bc17
+SHA1 (patch-include_xine_xineutils.h) = 0c8ec0959c82862b31435396e24ceee4ccbcd51a
+SHA1 (patch-m4_decoders.m4) = 4a5703b56336a033110aaff5294be80f1621dad3
 SHA1 (patch-src-post-audio-stretch.c) = 6f950bcd47fdf68b691744dc105f59f821748ce1
 SHA1 (patch-src-post-audio-upmix.c) = 70ca6babfa9a7add0ac70a6024fcff429e1bc49d
 SHA1 (patch-src-post-audio-upmix_mono.c) = 2c70ded10118cbeed5be3c948886f7311ddb7bbd
@@ -24,7 +26,5 @@ SHA1 (patch-src-post-planar-noise.c) = 284ed49ae621f18c62f91420230aa8e109f77541
 SHA1 (patch-src-post-planar-pp.c) = f5bea421785132c5f1422ae9f0d468974fb0ae5d
 SHA1 (patch-src-post-planar-unsharp.c) = 9f29c624f96a91760df960343096247d8c09c58d
 SHA1 (patch-src_input_input__http.c) = 80de20be0f99efa5cb67230c900acbf6e4ee9e7c
-SHA1 (patch-src_input_input__pvr.c) = b6429e9a7c9309cbe9eb1bf5f50ab6b6c06d5b0c
-SHA1 (patch-src_video__dec_dav1d.c) = 26fabb94cc83a74057fc2082bb4dfb299c3452ef
 SHA1 (patch-src_video__out_Makefile.am) = 623e41b3f142426c5128c6c61c6ebefee170734e
 SHA1 (patch-src_video__out_macosx_Makefile.am) = 8350a75e3a4c0b2f684e07dcc18259fcc5b28115

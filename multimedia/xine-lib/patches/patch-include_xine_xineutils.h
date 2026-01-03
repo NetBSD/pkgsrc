@@ -1,13 +1,13 @@
-$NetBSD: patch-include_xine_xineutils.h,v 1.2 2020/12/18 23:33:06 nia Exp $
+$NetBSD: patch-include_xine_xineutils.h,v 1.3 2026/01/03 14:10:39 nia Exp $
 
 Don't reimplement memcpy. Actually not compatible with clang:
 
 ../../include/xine/xineutils.h:211:63: error: fields must have a constant size:
 'variable length array in structure' extension will never be supported
 
---- include/xine/xineutils.h.orig	2020-11-19 10:30:37.000000000 +0000
+--- include/xine/xineutils.h.orig	2022-09-05 18:19:26.000000000 +0000
 +++ include/xine/xineutils.h
-@@ -200,35 +200,6 @@ extern void *(* xine_fast_memcpy)(void *
+@@ -201,35 +201,6 @@ extern void *(* xine_fast_memcpy)(void *to, const void
  /* len (usually) < 500, but not a build time constant. */
  #define xine_small_memcpy(xsm_to,xsm_from,xsm_len) memcpy (xsm_to, xsm_from, xsm_len)
  
@@ -17,7 +17,7 @@ Don't reimplement memcpy. Actually not compatible with clang:
 -static inline void *xine_small_memcpy (void *to, const void *from, size_t len) {
 -  void *t2 = to;
 -  size_t l2 = len;
--#    if !defined(__clang__)
+-#    if !defined(__clang__) && !defined(__cplusplus)
 -  __asm__ __volatile__ (
 -    "cld\n\trep movsb"
 -    : "=S" (from), "=D" (t2), "=c" (l2), "=m" (*(struct {char foo[len];} *)to)
