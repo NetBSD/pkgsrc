@@ -7,4 +7,5 @@ virtual machine, and has automatic memory management with incremental
 garbage collection, making it ideal for configuration, scripting, and
 rapid prototyping.
 
-This version is the previous stable release.
+This version of lua was last updated in 2020 and is not maintained
+by upstream.
