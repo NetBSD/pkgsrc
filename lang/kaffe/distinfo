@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2021/10/26 10:51:40 nia Exp $
+$NetBSD: distinfo,v 1.39 2026/01/03 03:57:08 dholland Exp $
 
 BLAKE2s (kaffe-1.1.7.tar.gz) = 3ea8550d1a4009c7cffe1d729eaad4068682118dab70cbd34ff60c1ddf6c6794
 SHA512 (kaffe-1.1.7.tar.gz) = 1edab9d1a2ed96230b2342a1770d83d37834aa748b273ef197777aecb4a2fee7fc57843ce0b5f7809c90af2e04ef6b2251d4516e8d088942acb548e824d28bc2
@@ -17,6 +17,9 @@ SHA1 (patch-bc) = 43b2f18909e4939366afe9f3cdb1606faf384bec
 SHA1 (patch-ca) = 0dc783a8e78016ef5e5e2f3392644690e3a2de9a
 SHA1 (patch-cb) = c698b0a2e078cc035dfd7401617fc8d4c2ef5fbe
 SHA1 (patch-cc) = df48315c9470d433e33fd80136d7bf7f60f83e1d
+SHA1 (patch-kaffe-kaffevm-exception.c) = 340ef01e37d39759b839f15127998eea7634a5d4
+SHA1 (patch-kaffe-kaffevm-intrp-methodcalls.c) = 7ba58d826cf5ff84980cf0fabe6f09ffb5ea83f8
+SHA1 (patch-kaffe-kaffevm-stringParsing.c) = 2b8cc3cbbf8f8a0aac981a61ee012faffffaf5ff
 SHA1 (patch-libraries_clib_awt_X_imggif.c) = c4da4eb55282b5c616612182e247f2080f6f249f
 SHA1 (patch-libraries_clib_awt_X_imgpng.c) = 0cb5d6ef9349c1f6e1ac1d5885f574f4e2a0aac9
 SHA1 (patch-libraries_javalib_external_classpath_native_jni_gtk-peer_gnu__java__awt__peer__gtk__GdkTextLayout.c) = d3498337e52a735b14ff75dfaaf6dec7f9cabbef
