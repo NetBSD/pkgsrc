@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.55 2026/01/03 18:12:18 bsiegert Exp $
+$NetBSD: CHANGES-2026,v 1.56 2026/01/03 18:13:40 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -79,3 +79,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/frr to 9.1nb10 [wiz 2026-01-03]
 	Updated multimedia/xine-ui to 0.99.14 [nia 2026-01-03]
 	Added textproc/docbook-utils version 0.6.15 [bsiegert 2026-01-03]
+	Updated net/jigdo to 0.8.2 [bsiegert 2026-01-03]
