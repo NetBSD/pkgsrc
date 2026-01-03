@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/14 08:31:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/01/03 10:29:29 adam Exp $
 bin/send2trash-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -12,9 +12,6 @@ ${PYSITELIB}/send2trash/__init__.pyo
 ${PYSITELIB}/send2trash/__main__.py
 ${PYSITELIB}/send2trash/__main__.pyc
 ${PYSITELIB}/send2trash/__main__.pyo
-${PYSITELIB}/send2trash/compat.py
-${PYSITELIB}/send2trash/compat.pyc
-${PYSITELIB}/send2trash/compat.pyo
 ${PYSITELIB}/send2trash/exceptions.py
 ${PYSITELIB}/send2trash/exceptions.pyc
 ${PYSITELIB}/send2trash/exceptions.pyo
