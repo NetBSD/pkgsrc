@@ -1,0 +1,15 @@
+$NetBSD: patch-doc_jigdo-file.sgml,v 1.1 2026/01/03 18:13:22 bsiegert Exp $
+
+Correct syntax error (missing closing tag).
+
+--- doc/jigdo-file.sgml.orig	2023-08-03 19:55:46.000000000 +0000
++++ doc/jigdo-file.sgml
+@@ -1580,7 +1580,7 @@ Any text, except that lines must not beg
+     <para>Steve McIntyre <email>93sam@debian.org</email> picked up
+     later development of jigdo after Richard had moved on - see
+     the <ulink url="https://git.einval.com/cgi-bin/gitweb.cgi?p=jigdo.git;a=summary">git
+-    repo work</ulink> or packages in Debian for more recent releases.
++    repo work</ulink> or packages in Debian for more recent releases.</para>
+ 
+   </refsect1>
+ </refentry>

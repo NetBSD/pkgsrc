@@ -1,19 +1,18 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:31 joerg Exp $
-bin/jigdo
+@comment $NetBSD: PLIST,v 1.4 2026/01/03 18:13:22 bsiegert Exp $
+${PLIST.gtk}bin/jigdo
 bin/jigdo-file
 bin/jigdo-lite
 bin/jigdo-mirror
 man/man1/jigdo-file.1
 man/man1/jigdo-lite.1
 man/man1/jigdo-mirror.1
-man/man1/jigdo.1
-share/jigdo/COPYING
+${PLIST.gtk}share/jigdo/COPYING
 share/jigdo/debian-mirrors.jigdo
-share/jigdo/pixmaps/close.png
-share/jigdo/pixmaps/jigdo-logo.png
-share/jigdo/pixmaps/pause.png
-share/jigdo/pixmaps/progress-green.png
-share/jigdo/pixmaps/restart.png
-share/jigdo/pixmaps/start.png
-share/jigdo/pixmaps/stop.png
+${PLIST.gtk}share/jigdo/pixmaps/close.png
+${PLIST.gtk}share/jigdo/pixmaps/jigdo-logo.png
+${PLIST.gtk}share/jigdo/pixmaps/pause.png
+${PLIST.gtk}share/jigdo/pixmaps/progress-green.png
+${PLIST.gtk}share/jigdo/pixmaps/restart.png
+${PLIST.gtk}share/jigdo/pixmaps/start.png
+${PLIST.gtk}share/jigdo/pixmaps/stop.png
 share/locale/de/LC_MESSAGES/jigdo.mo
