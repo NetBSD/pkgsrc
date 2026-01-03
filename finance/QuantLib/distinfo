@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:26:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/01/03 11:57:44 wiz Exp $
 
-BLAKE2s (QuantLib-1.12.1.tar.gz) = 36ff14e729b5fe23597df31d84e23127bd81ad8b3a05942fa766679afe28b731
-SHA512 (QuantLib-1.12.1.tar.gz) = d30341bd53495ddf1b81a0a191659e48869e1feb4a0fda2205be7fb681eb206ba0aec88e87b31396795956c350589b301848fe0a2408592b90ff06173c20476b
-Size (QuantLib-1.12.1.tar.gz) = 7784161 bytes
-SHA1 (patch-CMakeLists.txt) = 75ba9b70a3c77996363b451554e6c30644710a07
-SHA1 (patch-ql_CMakeLists.txt) = 8c97fc4304ee9fb529b03e8351edca6d8eb2e405
-SHA1 (patch-ql_utilities_dataformatters.hpp) = e34c73dfbc23a1a4a045e570960200d940070242
+BLAKE2s (QuantLib-1.40.tar.gz) = cf6869aa549015ed379f3bb8e2c0f09183b40543ed8788e32a7e65c24ac4c7b0
+SHA512 (QuantLib-1.40.tar.gz) = 6cc9102069644a8d333fed962a02e4fed1771a0b5c110fa7fcf538ce51a109b3ed2c2ace24fb20b67d13aa1feb2e9290a3e0549e8c67e7806a9fbd886c85f357
+Size (QuantLib-1.40.tar.gz) = 8273290 bytes
