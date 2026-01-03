@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/12/21 17:41:06 pin Exp $
+# $NetBSD: Makefile,v 1.14 2026/01/03 15:22:33 pin Exp $
 
-DISTNAME=	treemd-0.5.4
+DISTNAME=	treemd-0.5.5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Epistates/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
