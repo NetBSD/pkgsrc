@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2025/10/23 20:36:28 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2026/01/03 07:40:54 wiz Exp $
 
 PKGVER=		0.8.8
 DISTNAME=	libcompizconfig-${PKGVER}
@@ -7,7 +7,7 @@ CATEGORIES=	devel gnome
 MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://compiz.org/
+HOMEPAGE=	https://www.compiz-fusion.org/
 COMMENT=	Configuration backend for compiz
 LICENSE=	gnu-gpl-v2
 
