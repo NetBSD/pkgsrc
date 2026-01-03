@@ -1,0 +1,22 @@
+$NetBSD: patch-bin_jw.in,v 1.1 2026/01/03 18:05:45 bsiegert Exp $
+
+Remove usage of sgmlwhich; otherwise, on Linux, this uses the system SGML
+catalog instead of the pkgsrc one.
+
+--- bin/jw.in.orig	2026-01-03 15:55:25.213037949 +0000
++++ bin/jw.in
+@@ -58,13 +58,7 @@ SGML_ERRORS_LIST="\n\
+ \040 no-valid \t Do not require the document to be type-valid"
+ 
+ # Get name of main SGML configuration file
+-which sgmlwhich >/dev/null 2>/dev/null
+-if [ $? -eq 0 ]
+-then
+-  SGML_CONF=`sgmlwhich`
+-else
+-  SGML_CONF="/etc/sgml/sgml.conf"
+-fi
++SGML_CONF="/etc/sgml/sgml.conf"
+ 
+ # Set version message
+ SGML_VERSION_MESSAGE="DocBook-utils version @VERSION@ (jw version 1.1)"

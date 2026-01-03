@@ -1,0 +1,15 @@
+$NetBSD: patch-bin_sgmldiff.in,v 1.1 2026/01/03 18:05:45 bsiegert Exp $
+
+Use onsgmls from openjade.
+
+--- bin/sgmldiff.in.orig	2026-01-02 20:15:42.175989032 +0000
++++ bin/sgmldiff.in
+@@ -28,7 +28,7 @@ use Getopt::Long 2.01;
+ $VERSION = 1.03;
+ 
+ my $nsgmls;
+-$nsgmls = "@jade_bindir@/nsgmls";
++$nsgmls = "@jade_bindir@/onsgmls";
+ 
+ #----------------------------------------------------------------------
+ # TODO:

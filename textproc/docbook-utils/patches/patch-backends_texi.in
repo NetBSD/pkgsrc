@@ -1,0 +1,15 @@
+$NetBSD: patch-backends_texi.in,v 1.1 2026/01/03 18:05:45 bsiegert Exp $
+
+Use onsgmls from openjade.
+
+--- backends/texi.in.orig	2026-01-02 20:15:42.173989032 +0000
++++ backends/texi.in
+@@ -3,7 +3,7 @@
+ # This program is under GPL license. See LICENSE file for details.
+ 
+ # Convert to texinfo
+-nsgmls "$SGML_FILE" | sgmlspl $SGML_BASE_DIR/docbook/utils-@VERSION@/helpers/docbook2texi-spec.pl >$SGML_FILE_NAME.texi
++onsgmls "$SGML_FILE" | sgmlspl $SGML_BASE_DIR/docbook/utils-@VERSION@/helpers/docbook2texi-spec.pl >$SGML_FILE_NAME.texi
+ if [ $? -ne 0 ]
+ then exit 1
+ fi

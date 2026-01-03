@@ -1,0 +1,20 @@
+$NetBSD: patch-configure.ac,v 1.1 2026/01/03 18:05:45 bsiegert Exp $
+
+Use onsgmls from openjade. Do not overwrite docdir with nonsense.
+
+--- configure.ac.orig	2024-10-09 12:46:46.000000000 +0000
++++ configure.ac
+@@ -17,12 +17,11 @@ done
+ 
+ AM_INIT_AUTOMAKE
+ 
+-docdir='$(prefix)/doc'
+ AC_SUBST(docdir)
+ 
+ dnl Checks for programs.
+ jade_bindirs="/usr/bin /usr/local/bin"
+-AC_FIND_PROGRAM(nsgmls, $jade_bindirs, jade_bindir)
++AC_FIND_PROGRAM(onsgmls, $jade_bindirs, jade_bindir)
+ AC_SUBST(jade_bindir)
+ 
+ perl_bindirs="/usr/bin /usr/local/bin"

@@ -1,0 +1,15 @@
+$NetBSD: patch-backends_man.in,v 1.1 2026/01/03 18:05:45 bsiegert Exp $
+
+Use onsgmls from openjade.
+
+--- backends/man.in.orig	2026-01-02 20:15:42.172989031 +0000
++++ backends/man.in
+@@ -7,7 +7,7 @@ HELPER=$SGML_BASE_DIR/docbook/utils-@VER
+ TMPDIR=`mktemp -d /tmp/man.XXXXXX` || \
+  { echo >&2 "man backend: could not create secure temporary directory"; exit 1;}
+ trap 'rm -rf "${TMPDIR}"' EXIT
+-nsgmls ${SGML_INCLUDE} "$SGML_FILE" > "${TMPDIR}/nsgmls.tmp"
++onsgmls ${SGML_INCLUDE} "$SGML_FILE" > "${TMPDIR}/nsgmls.tmp"
+ sgmlspl $HELPER <"${TMPDIR}/nsgmls.tmp" 2>"${TMPDIR}/errs"
+ if [ $? -ne 0 ]
+ then
