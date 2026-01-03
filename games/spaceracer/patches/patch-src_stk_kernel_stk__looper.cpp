@@ -1,4 +1,4 @@
-$NetBSD: patch-loopercpp,v 1.1.1.1 2006/03/09 14:08:44 rillig Exp $
+$NetBSD: patch-src_stk_kernel_stk__looper.cpp,v 1.1 2026/01/03 10:52:03 wiz Exp $
 
 g++ does not like double definition of default parameters.
 
