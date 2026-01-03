@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.5 2010/06/25 21:05:57 joerg Exp $
+$NetBSD: patch-ag,v 1.6 2026/01/03 22:37:32 wiz Exp $
 
 --- conf/defaults.orig	Thu Jul 29 17:33:56 1993
 +++ conf/defaults
@@ -41,6 +41,15 @@ $NetBSD: patch-ag,v 1.5 2010/06/25 21:05:57 joerg Exp $
  
  #	CC_OPT_SAFE: Special compile options to override CC_OPT for code
  #	which typically causes problems for most compilers (bsim1 and bsim2).
+@@ -170,7 +170,7 @@ RANLIB		= ranlib
+ #	spice3 source directory than in /tmp.  Set to 'l' (lowercase 'L')
+ #	to use the source directory, otherwise leave blank.
+ 
+-ARLOCAL		= l
++ARLOCAL		= 
+ 
+ #	DEPEND_PROG is the command to generate dependencies from '.c' files
+ #	(for "make depend").  Output should be of the form "x11.o: fte.h".
 @@ -203,7 +203,7 @@
  #	X_DIR indicates the top of the X11 lib/include hierarchy; it is only
  #	a convenience that is used in the following definitions.
