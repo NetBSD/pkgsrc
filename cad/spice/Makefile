@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2025/09/21 21:22:38 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2026/01/03 22:37:32 wiz Exp $
 
 DISTNAME=	sp3f4.kit
 PKGNAME=	spice-3f5.1
@@ -16,6 +16,11 @@ WRKSRC=			${WRKDIR}
 # with 4 clause BSD license used by spice.
 #BUILDLINK_API_DEPENDS.readline=	readline>=4.0
 #USE_GNU_READLINE=	uses rl_* interface
+
+CFLAGS+=	-Wno-implicit-function-declaration
+CFLAGS+=	-Wno-implicit-int
+CFLAGS+=	-Wno-incompatible-pointer-types
+CFLAGS+=	-Wno-int-conversion
 
 # documentation in ftp://ic.eecs.berkeley.edu/pub/Spice3/um.3f3.ps
 
