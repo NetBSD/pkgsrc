@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.56 2026/01/03 18:13:40 bsiegert Exp $
+$NetBSD: CHANGES-2026,v 1.57 2026/01/03 19:49:10 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -80,3 +80,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/xine-ui to 0.99.14 [nia 2026-01-03]
 	Added textproc/docbook-utils version 0.6.15 [bsiegert 2026-01-03]
 	Updated net/jigdo to 0.8.2 [bsiegert 2026-01-03]
+	Updated security/zoneminder to 1.36.37 [gdt 2026-01-03]
