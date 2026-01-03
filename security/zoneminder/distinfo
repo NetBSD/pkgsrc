@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.22 2025/04/25 01:03:10 gdt Exp $
+$NetBSD: distinfo,v 1.23 2026/01/03 17:40:57 gdt Exp $
 
 BLAKE2s (FriendsOfCake-crud-14292374ccf1328f2d5db20897bd06f99ba4d938.tar.gz) = 8877bf6718ecfe3cba2515629418fe5addc60cf8ce4650526b39db6a234922ad
 SHA512 (FriendsOfCake-crud-14292374ccf1328f2d5db20897bd06f99ba4d938.tar.gz) = da58528686baf05385ad08079f965bce10eba6d599133ab773e9ab1f9e4b7d82cf5431b4b773317b90effb16e0b026a029bdfabe08a9ef1a5e9b94e7a1c2ea9e
 Size (FriendsOfCake-crud-14292374ccf1328f2d5db20897bd06f99ba4d938.tar.gz) = 73086 bytes
-BLAKE2s (ZoneMinder-1.36.35.tar.gz) = d09d4f2431c38cfb2e5ff0a450dc02303b8f7128ef4d6aefdf9b28a7b28d2d57
-SHA512 (ZoneMinder-1.36.35.tar.gz) = 9567db18f59546d579bbadea244ee1171aa2ebdc4ca096c3c76e07898ad7226d5b6b940e8519cce7287a0ea18af57a685ee01e2d6721f0b495cdbbdb3a405026
-Size (ZoneMinder-1.36.35.tar.gz) = 11505979 bytes
+BLAKE2s (ZoneMinder-1.36.36.tar.gz) = 72d9461889fe117a904b16d2ac87b0224c365034f7c26a4e8bccfcc93d6617d6
+SHA512 (ZoneMinder-1.36.36.tar.gz) = 1c5ae191cdc57e40c05e51d55c777dd702cce4c73ab7ecaec4612f6ce1246ce0dc5ce13c75f8cae5de0338d85fb45b25752c66e96b1ea279883fe8b6c88445fd
+Size (ZoneMinder-1.36.36.tar.gz) = 13968475 bytes
 BLAKE2s (ZoneMinder-CakePHP-Enum-Behavior-ea90c0cd7f6e24333a90885e563b5d30b793db29.tar.gz) = 4639184438becb1c33450a00e213fca9d11e92b7f2545fb701f40a664c716764
 SHA512 (ZoneMinder-CakePHP-Enum-Behavior-ea90c0cd7f6e24333a90885e563b5d30b793db29.tar.gz) = 75f2188e548b98191c8df82fb76e918f3bda9788f541449df8fa92449ad19aa0b9c13420dd91c760e08a4d31956ad51602242ab97e3bd4460f01e99f49992453
 Size (ZoneMinder-CakePHP-Enum-Behavior-ea90c0cd7f6e24333a90885e563b5d30b793db29.tar.gz) = 3504 bytes
