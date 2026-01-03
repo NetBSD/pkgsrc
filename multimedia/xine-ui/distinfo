@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.33 2023/03/08 20:20:18 mrg Exp $
+$NetBSD: distinfo,v 1.34 2026/01/03 16:34:05 nia Exp $
 
-BLAKE2s (xine-ui-0.99.13.tar.xz) = 416e413865a99c72bc344a55a4a188effe9f1846ee102b6971ffbcf29aec4b50
-SHA512 (xine-ui-0.99.13.tar.xz) = a0802d767a805c462f7ae05fa5c4860af5c281ffa74c70a6c2c8a3ecbf8060e6f3f40fed215e27a823985c7d5c3484715cbbe5e4bf43655353f59fa2230b41e7
-Size (xine-ui-0.99.13.tar.xz) = 2156892 bytes
-SHA1 (patch-configure.ac) = 7e4a3613308486feabc1709c12491693d8868b9a
-SHA1 (patch-src_xitk_network.c) = 1a570e51a731c1ec489566e40e52fbb58896a246
+BLAKE2s (xine-ui-0.99.14.tar.xz) = 2726a8fc6cb1e6072b5daf8667f7b166288f0057f38dc51ff74255adada986e0
+SHA512 (xine-ui-0.99.14.tar.xz) = e925e2f1d02c4eac4615f59c99dd95f1627617f2abb644c521cf015f795c66bf56386e7d414b528c1cf91bbdab53f46999104e992aecebbdcb62c230e6d989e7
+Size (xine-ui-0.99.14.tar.xz) = 2214740 bytes
