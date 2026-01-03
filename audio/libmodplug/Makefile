@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/11/17 11:00:19 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/01/03 12:15:33 nia Exp $
 
 DISTNAME=	libmodplug-0.8.9.0
 CATEGORIES=	audio
@@ -13,6 +13,8 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	libmodplug.pc.in
+
+FORCE_CXX_STD=		gnu++98
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
