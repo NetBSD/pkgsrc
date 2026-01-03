@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/06/23 20:33:12 nia Exp $
+# $NetBSD: Makefile,v 1.9 2026/01/03 16:16:22 wiz Exp $
 
 DISTNAME=		mopher-0.5.3
 PKGREVISION=		2
@@ -30,6 +30,7 @@ HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c
 USE_TOOLS+=		lex
 USE_TOOLS+=		yacc
+USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
