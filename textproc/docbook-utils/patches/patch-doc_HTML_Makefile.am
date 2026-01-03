@@ -1,0 +1,17 @@
+$NetBSD: patch-doc_HTML_Makefile.am,v 1.1 2026/01/03 18:05:45 bsiegert Exp $
+
+Use openjade instead of jade; correct SGML catalog file location.
+
+--- doc/HTML/Makefile.am.orig	2024-10-09 12:46:46.000000000 +0000
++++ doc/HTML/Makefile.am
+@@ -23,8 +23,8 @@ $(html_DATA): $(top_srcdir)/doc/docbook-
+ 		$(top_srcdir)/doc/refentry/docbook2texi-spec.pl.sgml \
+ 		$(top_srcdir)/doc/refentry/frontend-spec.sgml \
+ 		$(top_srcdir)/doc/refentry/sgmldiff.sgml
+-	SGML_CATALOG_FILES=/etc/sgml/catalog \
++	SGML_CATALOG_FILES=$(SYSCONFDIR)/sgml/catalog \
+ 	SGML_SEARCH_PATH=$(top_srcdir):$(top_srcdir)/doc:.. \
+-		jade -t sgml -i html -d $(top_srcdir)/docbook-utils.dsl\#html \
++		openjade -t sgml -i html -d $(top_srcdir)/docbook-utils.dsl\#html \
+ 			-V '%use-id-as-filename%' $<
+ 
