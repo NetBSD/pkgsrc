@@ -1,7 +1,15 @@
-$NetBSD: distinfo,v 1.10 2025/01/27 16:19:02 wiz Exp $
+$NetBSD: distinfo,v 1.11 2026/01/03 10:28:11 wiz Exp $
 
 BLAKE2s (gerbera-2.4.1.tar.gz) = f39150e2f9fa0d96f35d828b1143279cba7b581dcb5efb9b941ea211d20536fc
 SHA512 (gerbera-2.4.1.tar.gz) = a9081b86170acbf9665a38ef441c082ff8d025c318991deb816d389668ad898532f1ab12341bbc8b109879b790af54083ccf407663ebd9046e9179039f06609c
 Size (gerbera-2.4.1.tar.gz) = 9594796 bytes
 SHA1 (patch-CMakeLists.txt) = 7b8e0e42547da4545be4fdf19dd27e6b5592f21d
 SHA1 (patch-src_config_grb__runtime.cc) = f3118cbffe4fa13bb3a552f31d86cb9bc486b95f
+SHA1 (patch-src_content_import__service.cc) = 4afa79c0ed08d053fcae2fffbf9c2ea184f9ef30
+SHA1 (patch-src_database_sql__database.cc) = 4bc31070b57231e7a82c8875a166df53b9bbef2f
+SHA1 (patch-src_upnp_xml__builder.cc) = 7a6f9a057aafce559af4c0b2d9d2e02a6998676e
+SHA1 (patch-src_util_grb__time.cc) = 1940cd5db96c58f0491c78287f616b33b7a02ce3
+SHA1 (patch-src_util_grb__time.h) = b36497e5aba2a4f2dac70c5ad443c1ccc6330b8b
+SHA1 (patch-src_web_clients.cc) = dac816adfb88e86e1a67ac487c1979b08438f6fc
+SHA1 (patch-src_web_config__load.cc) = 547ec3deb458a84083ab2ac79c3518155ec26d86
+SHA1 (patch-src_web_edit__load.cc) = e00adf578a7093968ca9d4160fe485c32504202c
