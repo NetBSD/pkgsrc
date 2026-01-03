@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/06/04 14:14:53 adam Exp $
+# $NetBSD: Makefile,v 1.32 2026/01/03 23:25:44 rillig Exp $
 
 .include "dist.mk"
 
@@ -36,6 +36,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 USE_CC_FEATURES+=	c11
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-system-expat
