@@ -1,0 +1,33 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2026/01/03 18:13:22 bsiegert Exp $
+
+Add missing include paths back; do not try to run glade-2.
+
+--- src/Makefile.in.orig	2023-08-03 19:55:46.000000000 +0000
++++ src/Makefile.in
+@@ -10,9 +10,7 @@ prefix =	@prefix@
+ datadir =	@datadir@
+ 
+ SUBDIRS =	util # glibcurl gtk job net 
+-SUBINCLUDE =	-I"$(srcdir)/util"
+-
+-# -I"$(srcdir)/glibcurl" -I"$(srcdir)/gtk" -I"$(srcdir)/job" \
++SUBINCLUDE =	-I"$(srcdir)/util" -I"$(srcdir)/glibcurl" -I"$(srcdir)/gtk" -I"$(srcdir)/job" \
+ 		-I"$(srcdir)/net" 
+ 
+ # Prevent these variables from being taken from the environment
+@@ -240,15 +238,6 @@ logtest@exe@:	util/debug.o util/log.o ut
+ 		$(LD) -o $@ util/log.o util/logtest.o util/string-utf.o \
+ 		    util/debug.o $(LDFLAGS) $(GTKLIBS)
+ 
+-gtk/interface.cc gtk/interface.hh: $(srcdir)/../jigdo.glade \
+-			$(srcdir)/../scripts/glade-filter.awk
+-		cd $(srcdir)/.. \
+-		    && $(GLADECODE) "jigdo.glade"
+-		$(AWK) -f "$(srcdir)/../scripts/glade-filter.awk" \
+-		    "$(srcdir)/gtk/interface"
+-		-ln -sf "$(srcdir)/gtk/interface.cc" gtk/interface.cc
+-		cd $(srcdir) && rm -f gtk/gui.cc.tmp gtk/gui.hh.tmp \
+-		    gtk/interface.cc.tmp gtk/interface.hh.tmp
+ #______________________________________________________________________
+ 
+ LDFLAGS_WINSOCK = @IF_WINDOWS@ -lws2_32

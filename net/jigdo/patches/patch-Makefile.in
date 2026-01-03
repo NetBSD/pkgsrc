@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.in,v 1.1 2026/01/03 18:13:22 bsiegert Exp $
+
+Do not try to install non-existing jigdo.1
+
+--- Makefile.in.orig	2026-01-03 17:23:16.378060074 +0000
++++ Makefile.in
+@@ -108,10 +108,6 @@ install-jigdo:
+ 		    $(INSTALL_DATA) "$(srcdir)/gfx/$$x" \
+ 		        "$(DESTDIR)$(datadir)/jigdo/pixmaps" || exit 1; \
+ 		done
+-		$(INSTALL) -d $(DESTDIR)$(mandir)/man1
+-		x="doc/jigdo.1"; \
+-		test -f "$$x" || x="$(srcdir)/$$x"; \
+-		$(INSTALL) "$$x" $(DESTDIR)$(mandir)/man1
+ 		$(INSTALL_DATA) "$(srcdir)/COPYING" \
+ 		    "$(DESTDIR)$(datadir)/jigdo/COPYING"
+ install-po:
