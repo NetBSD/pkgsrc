@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/01/03 14:56:10 alnsn Exp $
+
+BLAKE2s (lua-5.5.0.tar.gz) = 0d7eafb141ac87491121b03d5565ccd85ea5489ab4a593bb6f83070c99058273
+SHA512 (lua-5.5.0.tar.gz) = 3253d2cdc929da6438095a30d66ef16a1abdbb0ada8fee238705b3b38492f14be9553640fdca6b25661e01155ba5582032e0a2ef064e4c283e85efc0a128cabe
+Size (lua-5.5.0.tar.gz) = 396950 bytes
+SHA1 (patch-src_Makefile) = 2ffc5bf10f9cad4c13b75b7a4d11753b71c0b754
