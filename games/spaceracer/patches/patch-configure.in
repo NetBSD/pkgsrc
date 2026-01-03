@@ -1,4 +1,4 @@
-$NetBSD: patch-configurein,v 1.2 2013/01/26 22:20:25 wiz Exp $
+$NetBSD: patch-configure.in,v 1.1 2026/01/03 10:52:02 wiz Exp $
 
 First chunk: automake-1.13 compat.
 Rest: Added the necessary quoting for m4 macros.

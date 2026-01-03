@@ -1,4 +1,4 @@
-$NetBSD: patch-acinclude,v 1.1.1.1 2006/03/09 14:08:44 rillig Exp $
+$NetBSD: patch-acinclude.m4,v 1.1 2026/01/03 10:52:02 wiz Exp $
 
 Added the necessary quoting for m4 macros.
 
