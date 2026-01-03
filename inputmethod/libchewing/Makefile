@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2025/04/17 21:51:17 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.40 2026/01/03 07:40:15 wiz Exp $
 
 GITHUB_PROJECT=	libchewing
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -10,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=chewing/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://chewing.im/
+HOMEPAGE=	https://chewing.im/
 COMMENT=	The intelligent phonetic input method library
 LICENSE=	gnu-lgpl-v2.1
 
