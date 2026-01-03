@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/01/09 20:17:41 chopps Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/01/03 16:26:23 wiz Exp $
 bin/mtracebis
 bin/vtysh
 include/frr/admin_group.h
@@ -264,11 +264,13 @@ ${PLIST.doc}share/doc/frr/html/_sources/vrrp.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/vtysh.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/watchfrr.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/zebra.rst.txt
+${PLIST.doc}share/doc/frr/html/_static/base-stemmer.js
 ${PLIST.doc}share/doc/frr/html/_static/basic.css
 ${PLIST.doc}share/doc/frr/html/_static/classic.css
 ${PLIST.doc}share/doc/frr/html/_static/default.css
 ${PLIST.doc}share/doc/frr/html/_static/doctools.js
 ${PLIST.doc}share/doc/frr/html/_static/documentation_options.js
+${PLIST.doc}share/doc/frr/html/_static/english-stemmer.js
 ${PLIST.doc}share/doc/frr/html/_static/file.png
 ${PLIST.doc}share/doc/frr/html/_static/frr-icon.svg
 ${PLIST.doc}share/doc/frr/html/_static/frr-logo-icon.png
