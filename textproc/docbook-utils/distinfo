@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2026/01/03 18:05:45 bsiegert Exp $
+
+BLAKE2s (docbook-utils-0.6.15.tar.xz) = 3d0eb2df36603ece430f3a72f4d236466bfb7aa6dc58d4e8bc89520000eef83e
+SHA512 (docbook-utils-0.6.15.tar.xz) = f75168d50d03cb7f06450792118425504691b0da0b369afc323b13cbee6fb8016d75faf11c508d2cd6004f6c00680efbe4755b856b7790e81bac41c8ec2a5ac6
+Size (docbook-utils-0.6.15.tar.xz) = 95852 bytes
+SHA1 (patch-backends_man.in) = 33965177f7a2e110501298ba2a3084d615e1ffd0
+SHA1 (patch-backends_texi.in) = 472c6a4fab27e71737ea54f079c5184155d8e271
+SHA1 (patch-bin_jw.in) = 072320fa4e4887af87645e231b5f7b9ecf6aa9df
+SHA1 (patch-bin_sgmldiff.in) = e5ea33093afb54f348c0d6ee229396ea14745fac
+SHA1 (patch-configure.ac) = 899d7b960416cfe5a750219208c189ad13994890
+SHA1 (patch-doc_HTML_Makefile.am) = e482efbd87923ef48b56a4ed1375bb990636505d
+SHA1 (patch-doc_man_Makefile.am) = da860adc35f9795fa21636dbe6cb6f1664abecd5
+SHA1 (patch-helpers_docbook2man-spec.pl) = 8a8c98c7e61e877601646080d4b9cbd6178dbeee
