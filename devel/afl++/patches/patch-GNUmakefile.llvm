@@ -1,8 +1,8 @@
-$NetBSD: patch-GNUmakefile.llvm,v 1.1 2025/10/25 13:57:41 kikadf Exp $
+$NetBSD: patch-GNUmakefile.llvm,v 1.2 2026/01/03 22:16:36 wiz Exp $
 
-* Fix pathes
+* Fix paths
 
---- GNUmakefile.llvm.orig	2025-10-01 07:45:10.000000000 +0000
+--- GNUmakefile.llvm.orig	2025-12-26 12:03:19.000000000 +0000
 +++ GNUmakefile.llvm
 @@ -24,7 +24,7 @@ HELPER_PATH ?= $(PREFIX)/lib/afl
  BIN_PATH    ?= $(PREFIX)/bin
@@ -10,6 +10,6 @@ $NetBSD: patch-GNUmakefile.llvm,v 1.1 2025/10/25 13:57:41 kikadf Exp $
  MISC_PATH   ?= $(PREFIX)/share/afl
 -MAN_PATH    ?= $(PREFIX)/share/man/man8
 +MAN_PATH    ?= $(PREFIX)/man/man8
+ INCLUDE_PATH := $(PREFIX)/include/afl
  
  BUILD_DATE  ?= $(shell date -u -d "@$(SOURCE_DATE_EPOCH)" "+%Y-%m-%d" 2>/dev/null || date -u -r "$(SOURCE_DATE_EPOCH)" "+%Y-%m-%d" 2>/dev/null || date -u "+%Y-%m-%d")
- 
