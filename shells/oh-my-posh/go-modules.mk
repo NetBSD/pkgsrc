@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.115 2025/12/28 16:10:23 pin Exp $
+# $NetBSD: go-modules.mk,v 1.116 2026/01/03 15:21:20 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -128,8 +128,8 @@ GO_MODULE_FILES+=	github.com/sahilm/fuzzy/@v/v0.1.1.mod
 GO_MODULE_FILES+=	github.com/sahilm/fuzzy/@v/v0.1.1.zip
 GO_MODULE_FILES+=	github.com/sergi/go-diff/@v/v1.4.0.mod
 GO_MODULE_FILES+=	github.com/sergi/go-diff/@v/v1.4.0.zip
-GO_MODULE_FILES+=	github.com/shirou/gopsutil/v4/@v/v4.25.11.mod
-GO_MODULE_FILES+=	github.com/shirou/gopsutil/v4/@v/v4.25.11.zip
+GO_MODULE_FILES+=	github.com/shirou/gopsutil/v4/@v/v4.25.12.mod
+GO_MODULE_FILES+=	github.com/shirou/gopsutil/v4/@v/v4.25.12.zip
 GO_MODULE_FILES+=	github.com/shopspring/decimal/@v/v1.4.0.mod
 GO_MODULE_FILES+=	github.com/shopspring/decimal/@v/v1.4.0.zip
 GO_MODULE_FILES+=	github.com/shurcoo!l/gofontwoff/@v/v0.0.0-20181114050219-180f79e6909d.mod
