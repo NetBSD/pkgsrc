@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.50 2026/01/03 15:24:05 pin Exp $
+$NetBSD: CHANGES-2026,v 1.51 2026/01/03 15:25:05 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -74,3 +74,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/xine-lib to 1.2.13 [nia 2026-01-03]
 	Updated textproc/treemd to 0.5.5 [pin 2026-01-03]
 	Updated shells/oh-my-posh to 28.10.0 [pin 2026-01-03]
+	Updated net/ncgopher to 0.8.0 [pin 2026-01-03]
