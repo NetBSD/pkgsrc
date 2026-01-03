@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2025/11/17 11:00:38 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2026/01/03 22:28:03 wiz Exp $
 
 DISTNAME=		prcs-1.3.3
 PKGREVISION=		17
@@ -37,5 +37,7 @@ REPLACE_FILES.perl5=	emacs/prcs-ediff emacs/prcs-emerge
 #                                                             ^
 # Maybe fix this later.
 BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
+CFLAGS+=		-Wno-builtin-declaration-mismatch
+CFLAGS+=		-Wno-implicit-function-declaration
 
 .include "../../mk/bsd.pkg.mk"
