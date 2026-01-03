@@ -1,0 +1,51 @@
+$NetBSD: patch-configure,v 1.1 2026/01/03 10:37:18 wiz Exp $
+
+Add missing return type.
+
+--- configure.orig	1999-01-15 07:39:56.000000000 +0000
++++ configure
+@@ -1153,7 +1153,7 @@ cross_compiling=$ac_cv_prog_cc_cross
+ cat > conftest.$ac_ext <<EOF
+ #line 1155 "configure"
+ #include "confdefs.h"
+-main(){return(0);}
++int main(){return(0);}
+ EOF
+ if { (eval echo configure:1159: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
+   ac_cv_prog_cc_works=yes
+@@ -1622,7 +1622,7 @@ cross_compiling=$ac_cv_prog_cc_cross
+ cat > conftest.$ac_ext <<EOF
+ #line 1624 "configure"
+ #include "confdefs.h"
+-main(){return(0);}
++int main(){return(0);}
+ EOF
+ if { (eval echo configure:1628: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
+   ac_cv_prog_cc_works=yes
+@@ -2544,7 +2544,7 @@ find_stack_direction ()
+   else
+     return (&dummy > addr) ? 1 : -1;
+ }
+-main ()
++int main ()
+ {
+   exit (find_stack_direction() < 0);
+ }
+@@ -2728,7 +2728,7 @@ else
+ #line 2729 "configure"
+ #include "confdefs.h"
+ #include <stdio.h>
+-main()
++int main()
+ {
+   FILE *f=fopen("conftestval", "w");
+   if (!f) exit(1);
+@@ -2767,7 +2767,7 @@ else
+ #line 2768 "configure"
+ #include "confdefs.h"
+ #include <stdio.h>
+-main()
++int main()
+ {
+   FILE *f=fopen("conftestval", "w");
+   if (!f) exit(1);
