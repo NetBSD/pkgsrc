@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2025/10/23 20:38:43 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/01/03 16:26:23 wiz Exp $
 
-GITHUB_PROJECT=	frr
-VERSION=	9.1
-GITHUB_TAG=	frr-${VERSION}
-DISTNAME=	frr-${VERSION}
-PKGREVISION=	9
+DISTNAME=	frr-9.1
+PKGREVISION=	10
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FRRouting/}
+GITHUB_TAG=	frr-${PKGVERSION_NOREV}
 
 MAINTAINER=	kardel@NetBSD.org
 HOMEPAGE=	https://github.com/FRRouting/frr/
@@ -15,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	quagga-[0-9]*
 
-WRKSRC=			${WRKDIR}/frr-frr-${VERSION}
+WRKSRC=			${WRKDIR}/frr-${DISTNAME}
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl bash pkg-config autoconf automake autoreconf bison
 USE_LIBTOOL=		YES
@@ -55,6 +53,8 @@ USE_TOOLS+=	bash:run
 REPLACE_BASH=	tools/frr.in tools/*.sh.in
 
 REPLACE_PYTHON=	tools/generate_support_bundle.py tools/frr-reload.py tools/frr_babeltrace.py
+
+PRINT_PLIST_AWK+=	/^(man|info|share\/doc)/ { $$0 = "$${PLIST.doc}" $$0 }
 
 MESSAGE_SUBST+=		FRR_USER=${FRR_USER}
 MESSAGE_SUBST+=		FRR_VTY_GROUP=${FRR_VTY_GROUP}
