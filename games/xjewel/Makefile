@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/06 11:55:01 asau Exp $
+# $NetBSD: Makefile,v 1.15 2026/01/03 16:19:03 wiz Exp $
 
 DISTNAME=	xjewel-1.6
 PKGREVISION=	3
@@ -23,6 +23,10 @@ SUBST_CLASSES+=		varbase
 SUBST_STAGE.varbase=	pre-configure
 SUBST_FILES.varbase=	Imakefile
 SUBST_VARS.varbase=	VARBASE
+
+CPPFLAGS+=	-Wno-builtin-declaration-mismatch
+CPPFLAGS+=	-Wno-implicit-function-declaration
+CPPFLAGS+=	-Wno-implicit-int
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
