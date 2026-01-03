@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.695 2025/12/31 21:24:02 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.696 2026/01/03 11:45:06 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28481,7 +28481,7 @@ ghostscript-agpl<10.05.0	directory-traversal	https://nvd.nist.gov/vuln/detail/CV
 ghostscript-gpl-[0-9]*		directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-46646
 giflib-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-39742
 giflib-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-48161
-giflib-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-31344
+giflib<5.2.2nb1	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-31344
 giflib-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-45993
 gifsicle<1.94	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-36193
 gifsicle<1.95	floating-point-exception	https://nvd.nist.gov/vuln/detail/CVE-2023-46009
