@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.737 2025/10/07 17:22:34 gdt Exp $
+# $NetBSD: Makefile,v 1.738 2026/01/03 22:21:36 wiz Exp $
 
 COMMENT=	Databases
 
@@ -72,7 +72,6 @@ SUBDIR+=	kyotocabinet
 SUBDIR+=	lbdb
 SUBDIR+=	ldapvi
 SUBDIR+=	leveldb
-SUBDIR+=	libcassandra
 SUBDIR+=	libdbh2
 SUBDIR+=	libdbi
 SUBDIR+=	libdbi-driver-mysql
