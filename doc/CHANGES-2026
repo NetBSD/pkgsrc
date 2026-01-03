@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.42 2026/01/03 10:21:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.43 2026/01/03 10:32:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -65,3 +65,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/task to 3.46.4 [iquiw 2026-01-03]
 	Updated www/hugo to 0.154.2 [triaxx 2026-01-03]
 	Updated math/R to 4.4.3 [mef 2026-01-03]
+	Updated sysutils/py-Send2Trash to 2.0.0 [adam 2026-01-03]
+	Updated devel/py-pykka to 4.4.1 [adam 2026-01-03]
