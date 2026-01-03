@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.699 2026/01/03 21:36:23 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.700 2026/01/03 21:37:25 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29219,3 +29219,11 @@ sox-[0-9]*	floating-point-exception	https://nvd.nist.gov/vuln/detail/CVE-2022-50
 lua51-[0-9]*	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 lua52-[0-9]*	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 lua53-[0-9]*	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+cpp-httplib<0.30.0	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2026-21428
+gitea<1.25.2	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2025-69413
+gpsd<3.27.1	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-67268
+gpsd<3.27.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-67269
+libtpms<0.10.2	insufficiently-random-numbers	https://nvd.nist.gov/vuln/detail/CVE-2026-21444
+messagelib<25.11.90	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-69412
+wabt-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-15411
+wabt-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-15412
