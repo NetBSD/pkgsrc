@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.45 2022/04/10 16:47:32 nia Exp $
+@comment $NetBSD: PLIST.common,v 1.46 2026/01/03 14:10:39 nia Exp $
 bin/xine-config
 bin/xine-list-1.2
 include/xine.h
@@ -158,16 +158,16 @@ lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_sputext.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_sputext.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vdr.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vdr.so
-${PLIST.x11}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_gl_glx.a
-${PLIST.x11}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_gl_glx.so
+${PLIST.glx}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_gl_glx.a
+${PLIST.glx}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_gl_glx.so
 ${PLIST.egl}${PLIST.wayland}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_gl_egl_wl.a
 ${PLIST.egl}${PLIST.wayland}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_gl_egl_wl.so
 ${PLIST.egl}${PLIST.x11}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_gl_egl_x11.a
 ${PLIST.egl}${PLIST.x11}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_gl_egl_x11.so
 ${PLIST.aalib}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_aa.a
 ${PLIST.aalib}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_aa.so
-${PLIST.x11}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_opengl.a
-${PLIST.x11}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_opengl.so
+${PLIST.glx}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_opengl.a
+${PLIST.glx}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_opengl.so
 ${PLIST.gl2}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_opengl2.a
 ${PLIST.gl2}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_opengl2.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_raw.a
