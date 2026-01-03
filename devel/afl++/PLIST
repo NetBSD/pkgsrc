@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/10/25 13:57:40 kikadf Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/01/03 22:16:36 wiz Exp $
 bin/afl-addseeds
 bin/afl-analyze
 bin/afl-c++
@@ -21,6 +21,7 @@ bin/afl-system-config
 bin/afl-tmin
 bin/afl-whatsup
 include/afl/afl-fuzz.h
+include/afl/afl-ijon-min.h
 include/afl/afl-mutations.h
 include/afl/afl-persistent-replay.h
 include/afl/afl-prealloc.h
@@ -141,6 +142,7 @@ share/afl/dictionaries/sas.dict
 share/afl/dictionaries/spss.dict
 share/afl/dictionaries/sql.dict
 share/afl/dictionaries/stata.dict
+share/afl/dictionaries/stl.dict
 share/afl/dictionaries/svg.dict
 share/afl/dictionaries/tex.dict
 share/afl/dictionaries/theme-load-fuzz.dict
