@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2021/10/26 10:18:06 nia Exp $
+$NetBSD: distinfo,v 1.22 2026/01/03 09:58:49 wiz Exp $
 
 BLAKE2s (pth-2.0.7.tar.gz) = d6e255962384d228e2d2913d1f152c5349ddae3f46a7031712302c73a751bffc
 SHA512 (pth-2.0.7.tar.gz) = f79d74047c50e06f3198356f88647c5c1c8a04ebdd94641fc31d5ab0fd2750d86615fcb81da2f98d7ea73d012a501195d3fa09060571d18dcfdaec5d7a0ecb12
@@ -11,3 +11,4 @@ SHA1 (patch-ae) = 97e9546ce894a100b889dfacbd19e6c1cc1de87f
 SHA1 (patch-af) = 13aba228b9e8d8bedeac4018073c4fa5b3652caf
 SHA1 (patch-ag) = 66ba441a4efc85af4ef498d846d7ebc1115f3dcc
 SHA1 (patch-aj) = f155cac115446efce191b859d92900d1ea3bc44b
+SHA1 (patch-pth.h) = 8e5f128180772c406173fc859bd80bb2b8d1f2fa
