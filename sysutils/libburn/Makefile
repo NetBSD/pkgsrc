@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/04/05 12:47:13 nia Exp $
+# $NetBSD: Makefile,v 1.6 2026/01/03 07:39:51 wiz Exp $
 
 DISTNAME=	libburn-1.5.2
 #PKGNAME=	${DISTNAME:S/.pl/pl/}
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://files.libburnia-project.org/releases/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://libburnia-project.org/wiki/Libburn
+HOMEPAGE=	https://dev.lovelyhq.com/libburnia/libburn
 COMMENT=	Library to write preformatted data onto optical media
 LICENSE=	gnu-gpl-v2
 
