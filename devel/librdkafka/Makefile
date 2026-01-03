@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/10/24 22:08:52 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/01/03 10:30:40 wiz Exp $
 
 DISTNAME=	librdkafka-1.3.0
 PKGREVISION=	2
@@ -34,6 +34,11 @@ PKGCONFIG_OVERRIDE+=	src/rdkafka.pc
 PYTHON_FOR_BUILD_ONLY=	yes
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
+
+CFLAGS+=		-Wno-implicit-function-declaration
+CFLAGS+=		-Wno-builtin-declaration-mismatch
+# TIME_UTC
+CFLAGS+=		-D_NETBSD_SOURCE
 
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
