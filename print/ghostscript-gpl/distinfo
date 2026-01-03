@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2021/10/26 11:12:07 nia Exp $
+$NetBSD: distinfo,v 1.26 2026/01/03 03:50:16 dholland Exp $
 
 BLAKE2s (ghostscript-9.06.tar.bz2) = a85323a41a02c40da691432471e37b9279d10331aeaa62adbb5547bd39f24988
 SHA512 (ghostscript-9.06.tar.bz2) = 99f7a56316bf96d55c0cd7b07c0791ad4e6ee0d3a8f3bfa04ea28890ea9ed822ebcd7084cc8118cc38dc5def27c91c24eebc08a20a630463a9bf9d0193d0923b
@@ -27,7 +27,10 @@ SHA1 (patch-base_gsdevice.c) = fc9a17b3e8a7ac517b1faecdc1b1df31491ff36f
 SHA1 (patch-base_gserrors_h) = fde64bd096a6e6f94005c8352a6295df06c19bae
 SHA1 (patch-base_gsmalloc.c) = 891bdcef49e0f2c435744eaf7bbcd31f5dbcbaba
 SHA1 (patch-base_memento.c) = d30cfb9285a0268e743c90cdf831674eaa24789b
+SHA1 (patch-base_rinkj-rinkj--screen--eb.c) = 15ec343b91c668b59228ee0e16013ae7fbbd7224
+SHA1 (patch-contrib-gdevlx32.c) = 878a884752338341d39e3a4b73926b9fa7cf56ba
+SHA1 (patch-contrib-pcl3-src-gdevpcl3.c) = d1e179c5668abbd6210489928f2ec74a05580426
 SHA1 (patch-cups_colord.h) = ab5c4bfa7184d2c1756697b87e7046645bdc2bc2
 SHA1 (patch-openjpeg_libopenjpeg_opj_malloc_h) = 24f15c55cd7961afc1254f6c4bccd6d0c2a5e737
-SHA1 (patch-psi_zfile.c) = 24626fed9b161a77d9ab43233bad4c8391120b16
+SHA1 (patch-psi-zgstate.c) = 9dba89b8b8cbf4637cd0c4328c8d6230529e2c61
 SHA1 (patch-psi_fapi__ft.c) = ff9ee32a7332177d9b178452e071dd6f8805af8e
