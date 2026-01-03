@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2025/04/14 08:31:30 adam Exp $
+# $NetBSD: Makefile,v 1.13 2026/01/03 10:29:29 adam Exp $
 
-DISTNAME=	Send2Trash-1.8.3
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+DISTNAME=	send2trash-2.0.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/send2t/Send2T/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Send2Trash/}
 
@@ -14,8 +13,6 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
-
-WHEEL_NAME=	${DISTNAME:tl}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
