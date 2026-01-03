@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2025/10/23 20:39:34 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2026/01/03 07:41:45 wiz Exp $
 
 DISTNAME=	libcroco-0.6.13
 PKGREVISION=	15
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libcroco/0.6/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/GNOME/libcroco
+HOMEPAGE=	https://gitlab.gnome.org/Archive/libcroco
 COMMENT=	Toolkit to parse and manipulate CSS (Cascading Style Sheets)
 LICENSE=	gnu-lgpl-v2
 
