@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2025/10/09 14:51:57 adam Exp $
+# $NetBSD: Makefile,v 1.29 2026/01/03 12:26:08 wiz Exp $
 
 DISTNAME=	pocl-7.1
+PKGREVISION=	1
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pocl/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -46,6 +47,10 @@ pre-configure:
 	${LN} -sf ${PREFIX}/bin/clang++ ${WRKDIR}/.cwrapper/bin/clang++
 	${LN} -sf ${PREFIX}/bin/clang-cpp ${WRKDIR}/.cwrapper/bin/clang-cpp
 .endif
+
+# provided by opencl-headers, but installed here as well(?!)
+post-install:
+	${RM} -rf ${DESTDIR}${PREFIX}/include/CL
 
 OWN_DIRS+=	${PKG_SYSCONFDIR}/OpenCL/vendors
 
