@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/09/24 06:48:55 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/01/03 07:39:06 wiz Exp $
 
 DISTNAME=	libbind-6.0
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/libbind/6.0/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.isc.org/software/libbind
+#HOMEPAGE=	https://www.isc.org/software/libbind
 COMMENT=	ISC Standard Resolver Library
 LICENSE=	isc
 
