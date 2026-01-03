@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/11/17 11:01:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/01/03 10:04:09 wiz Exp $
 
 DISTNAME=	libXaw3dXft-1.6.2h
 PKGREVISION=	3
@@ -16,6 +16,11 @@ CONFIGURE_ARGS+=	--enable-internationalization
 CONFIGURE_ARGS+=	--enable-arrow-scrollbars
 USE_LIBTOOL=		yes
 USE_TOOLS=		pkg-config
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mgcc)
+CFLAGS+=	-Wno-error=incompatible-pointer-types
+.endif
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
