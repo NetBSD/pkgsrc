@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2022/10/26 10:31:01 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/01/03 07:45:53 wiz Exp $
 
 DISTNAME=	libctl-3.2.2
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://ab-initio.mit.edu/libctl/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ab-initio.mit.edu/libctl/
+HOMEPAGE=	https://libctl.readthedocs.io/en/latest/
 COMMENT=	Guile-based flexible control file library for scientific simulations
 LICENSE=	gnu-gpl-v2
 
