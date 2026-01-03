@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2026/01/03 14:56:10 alnsn Exp $
+bin/lua5.5
+bin/luac5.5
+include/lua-5.5/lauxlib.h
+include/lua-5.5/lua.h
+include/lua-5.5/lua.hpp
+include/lua-5.5/luaconf.h
+include/lua-5.5/lualib.h
+lib/liblua5.5.la
+lib/pkgconfig/lua-5.5.pc
+man/man1/lua5.5.1
+man/man1/luac5.5.1
+share/doc/lua-5.5/OSIApproved.png
+share/doc/lua-5.5/contents.html
+share/doc/lua-5.5/index.css
+share/doc/lua-5.5/logo.png
+share/doc/lua-5.5/lua.css
+share/doc/lua-5.5/manual.css
+share/doc/lua-5.5/manual.html
+share/doc/lua-5.5/readme.html
