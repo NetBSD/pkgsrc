@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/01/03 18:05:45 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/03 23:58:47 wiz Exp $
 
 DISTNAME=	docbook-utils-0.6.15
 CATEGORIES=	textproc
@@ -11,6 +11,11 @@ HOMEPAGE=	https://github.com/devexp-db/docbook-utils/
 COMMENT=	Shell scripts for managing DocBook documents
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	html-[0-9]*:../../textproc/html
+DEPENDS+=	dsssl-docbook-modular-[0-9]*:../../textproc/dsssl-docbook-modular
+DEPENDS+=	openjade-[0-9]*:../../textproc/openjade
+DEPENDS+=	p5-SGMLS-[0-9]*:../../textproc/p5-SGMLS
+
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
 USE_TOOLS=	autoreconf autoconf automake gmake
@@ -22,10 +27,7 @@ SUBST_SED.paths=	-e 's|/etc|${PKG_SYSCONFDIR}|g'
 SUBST_FILES.paths=	bin/jw.in
 SUBST_FILES.paths+=	doc/refentry/frontend-spec.sgml doc/refentry/jw.sgml
 
-DEPENDS+=	html-[0-9]*:../../textproc/html
-DEPENDS+=	dsssl-docbook-modular-[0-9]*:../../textproc/dsssl-docbook-modular
-DEPENDS+=	openjade-[0-9]*:../../textproc/openjade
-DEPENDS+=	p5-SGMLS-[0-9]*:../../textproc/p5-SGMLS
+REPLACE_PERL+=	bin/sgmldiff.in
 
 #CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc
 
