@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2022/09/18 22:46:25 he Exp $
+# $NetBSD: Makefile,v 1.49 2026/01/03 16:21:42 wiz Exp $
 
 DISTNAME=	delegate9.9.1
 PKGNAME=	delegate-9.9.1
@@ -24,6 +24,8 @@ SUBST_CLASSES+=		char
 SUBST_STAGE.char=	pre-configure
 SUBST_FILES.char=	src/cgi.c
 SUBST_SED.char=		-e 's|char ei;|int ei;|'
+
+CFLAGS+=	-Wno-narrowing
 
 .include "../../mk/bsd.prefs.mk"
 
