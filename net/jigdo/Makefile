@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.106 2026/01/01 09:30:40 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2026/01/03 18:13:22 bsiegert Exp $
 
-DISTNAME=		jigdo-0.7.3
-PKGREVISION=		81
+DISTNAME=		jigdo-0.8.2
 CATEGORIES=		net
-#MASTER_SITES=		http://atterer.org/sites/atterer/files/2009-08/jigdo/
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		https://www.einval.com/~steve/software/jigdo/download/
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.einval.com/~steve/software/jigdo/
@@ -19,10 +18,13 @@ GNU_CONFIGURE=			yes
 CONFIGURE_ARGS+=		--without-libdb
 BROKEN_GETTEXT_DETECTION=	yes
 
-#.include "../../databases/db3/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
+pre-build:
+	${CP} ${FILESDIR}/interface.hh ${WRKSRC}/src/gtk
+
+.include "options.mk"
+
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../www/libwww/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../textproc/docbook-utils/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

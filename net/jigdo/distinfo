@@ -1,12 +1,9 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:05:49 nia Exp $
+$NetBSD: distinfo,v 1.10 2026/01/03 18:13:22 bsiegert Exp $
 
-BLAKE2s (jigdo-0.7.3.tar.bz2) = 1d3be96235c2df59b829eb70176d91e11157fa7d5cf91160766762408b404382
-SHA512 (jigdo-0.7.3.tar.bz2) = e183a2d93126935057244b9eb6bf6dadc1900cb17c36194f69e63a15d70ddfea81ce1167de5abfcdfd7507ac9fe6250a05be9d9d29392c961d44fde796158f7c
-Size (jigdo-0.7.3.tar.bz2) = 644670 bytes
-SHA1 (patch-src_compat.hh) = 41a7a5e01453a9e2ababfa8862934b479d068484
-SHA1 (patch-src_gtk_gtk-single-url.cc) = ea2a2515fd5feef3e911e0ab1e794538be243341
-SHA1 (patch-src_gtk_jigdo.cc) = 46867a3f83cd45134f6b91766a9b6721bb5b342a
-SHA1 (patch-src_recursedir.cc) = b9b67ef698496470a7e36e95590f4fb8d0c86f8a
-SHA1 (patch-src_util_configfile.cc) = 1f280ba31a7ecba1b177f4c113df1b5cfb11b40d
-SHA1 (patch-src_util_md5sum.hh) = 9b18b5d619dc12fd0b6dd8ace6477c4c1f78f83a
-SHA1 (patch-src_util_string-utf.cc) = cef7c75d953b926ad9fc87e9051aa99084d034f4
+BLAKE2s (jigdo-0.8.2.tar.xz) = ecc5a203e4afb9f187b7f27f1b5482c0ba08f58a22217286ba2d6b75ebe61733
+SHA512 (jigdo-0.8.2.tar.xz) = 69197e6528c1b85b58b6e2e222b20973471909827ec8d1b6b35434c4c80c18c95f6ae816277853db5161b8b307bf9e25ce4fef91a91773a54eece541f0b19550
+Size (jigdo-0.8.2.tar.xz) = 576560 bytes
+SHA1 (patch-Makefile.in) = 7a9e11f53adf47c67b4dc7028e1dc1048653df7d
+SHA1 (patch-doc_jigdo-file.sgml) = 7a58e314eaf431690bfee10fccc01ece43be4dce
+SHA1 (patch-src_Makefile.in) = a76cda6309ea80fd87ca3464bb02f4e5e21cf410
+SHA1 (patch-src_net_proxyguess.cc) = 95eca64d254d9b2403c75feaecb389b742736c27
