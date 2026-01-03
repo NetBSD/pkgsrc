@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.114 2025/12/22 06:08:16 adam Exp $
+# $NetBSD: Makefile,v 1.115 2026/01/03 16:13:13 wiz Exp $
 
 DISTNAME=	scribus-1.7.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scribus/}
 EXTRACT_SUFX=	.tar.xz
@@ -42,6 +42,7 @@ PREV_PKGPATH=	print/scribus-qt5
 .include "../../graphics/osg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../print/libcups/buildlink3.mk"
+BUILDLINK_API_DEPENDS.podofo+=	podofo>=1.0
 .include "../../print/podofo/buildlink3.mk"
 .include "../../print/poppler-cpp/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
