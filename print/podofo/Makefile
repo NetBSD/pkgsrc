@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2025/11/10 13:53:33 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2026/01/03 11:31:30 wiz Exp $
 
 DISTNAME=	podofo-1.0.2
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=podofo/}
 
@@ -20,6 +21,8 @@ USE_TOOLS+=	pkg-config
 CMAKE_CONFIGURE_ARGS+=	-DFREETYPE_INCLUDE_DIR_FT2BUILD:PATH=${BUILDLINK_PREFIX.freetype2}/include/freetype2
 CMAKE_CONFIGURE_ARGS+=	-DFREETYPE_INCLUDE_DIR_FTHEADER:PATH=${BUILDLINK_PREFIX.freetype2}/include/freetype2/config
 CMAKE_CONFIGURE_ARGS+=	-DFREETYPE_LIB_PATHS:PATH=${BUILDLINK_PREFIX.freetype2}/lib
+
+PKGCONFIG_OVERRIDE+=	src/podofo/libpodofo.pc.in
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
