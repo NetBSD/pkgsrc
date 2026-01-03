@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2023/11/12 13:24:13 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2026/01/03 07:35:27 wiz Exp $
 
 DISTNAME=	lesstif-0.95.2
 PKGREVISION=	10
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lesstif/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.lesstif.org/
+HOMEPAGE=	https://lesstif.sourceforge.net/
 COMMENT=	API compatible clone of the OSF/Motif toolkit
 
 CONFLICTS+=	openmotif-[0-9]*
