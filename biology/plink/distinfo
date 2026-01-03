@@ -1,9 +1,12 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:03:42 nia Exp $
+$NetBSD: distinfo,v 1.6 2026/01/03 11:45:59 wiz Exp $
 
 BLAKE2s (plink-1.07-src.zip) = a2eee6b172743e83087cf48b4c4586651a7b1cbe50aad75ddd5fd1133af2aaa6
 SHA512 (plink-1.07-src.zip) = 493f9f32ecd9eb20c5d11dc8ac98c47a9e695059cec3d1ad6f17465b71609577032368c0fee0d3d564e9451c3c07761e444717bec0f4628caefc587fceb1f6c3
 Size (plink-1.07-src.zip) = 2257297 bytes
 SHA1 (patch-Makefile) = cb01e12cea61d1fe41f352759481277284d9c187
 SHA1 (patch-elf.cpp) = ab0bfdda3c84b4f3891f53a95bacaafa5d016bd9
+SHA1 (patch-genogroup.h) = ec44d9837b1071dad809daca381b94cfc2602fb8
+SHA1 (patch-homozyg.cpp) = aa35863c609839306fc0f5dd097294ca1dafc073
 SHA1 (patch-idhelp.cpp) = 3321f343a02bf7cfd253f12f24c8abfb2ef9ec3a
+SHA1 (patch-plink.h) = 909bcd58b19fac713e2bfb6395fe999fdc43e6ff
 SHA1 (patch-sets.cpp) = cd317b6b3775682e60e93f1d35955007d71b90b0
