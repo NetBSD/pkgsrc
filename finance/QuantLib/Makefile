@@ -1,33 +1,22 @@
-# $NetBSD: Makefile,v 1.20 2025/09/27 09:57:16 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/01/03 11:57:44 wiz Exp $
 
-DISTNAME=	QuantLib-1.12.1
-PKGREVISION=	16
+DISTNAME=	QuantLib-1.40
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lballabio/}
-GITHUB_TAG=	${PKGBASE}-v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://quantlib.org/
 COMMENT=	C++ library for quantitative finance
 LICENSE=	modified-bsd
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	c++11
 
-CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
-
 CXXFLAGS+=	-DBOOST_TIMER_ENABLE_DEPRECATED
 
-TOOLS_DEPENDS.cmake=	cmake>=3.0:../../devel/cmake
-
-SUBST_CLASSES+=		sover
-SUBST_STAGE.sover=	pre-configure
-SUBST_MESSAGE.sover=	Set the shared library version.
-SUBST_FILES.sover=	CMakeLists.txt
-SUBST_SED.sover=	-e 's,@PKGVERSION@,${PKGVERSION_NOREV},g'
-
+.include "../../devel/cmake/build.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 BUILDLINK_DEPMETHOD.boost-libs=	build
 .include "../../devel/boost-libs/buildlink3.mk"
