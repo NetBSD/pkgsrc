@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.102 2025/08/22 14:48:13 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2026/01/03 12:53:16 wiz Exp $
 
 DISTNAME=	mpich-3.4.3
+PKGREVISION=	1
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.mpich.org/static/tarballs/${PKGVERSION_NOREV}/
 
@@ -54,12 +55,10 @@ TEST_TARGET=	check
 
 .if ${OPSYS} == "NetBSD"
 # Needed for <ISO_Fortran_binding.h>
-USE_PKGSRC_GCC=		yes
-GCC_REQD+=		10
-# TODO: false positive in library dependency resolution like:
-# ERROR: lib/libmpicxx.so.12.1.12: /usr/pkg/gcc10/lib/./libstdc++.so.7: gcc10-10.5.0nb4 is not a runtime dependency
-CHECK_SHLIBS_SKIP+=	lib/libmpicxx.so*
-CHECK_SHLIBS_SKIP+=	lib/libmpifort.so*
+USE_PKGSRC_GCC=	yes
+GCC_REQD+=	10
+# needs libgfortran.so
+DEPENDS+=	gcc10-libs-[0-9]*:../../lang/gcc10-libs
 .endif
 
 # Re-enable when at version 2.x.
