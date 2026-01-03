@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.773 2025/11/13 19:00:12 adam Exp $
+# $NetBSD: Makefile,v 1.774 2026/01/03 14:56:48 alnsn Exp $
 #
 
 COMMENT=	Programming languages
@@ -191,6 +191,7 @@ SUBDIR+=	lua51
 SUBDIR+=	lua52
 SUBDIR+=	lua53
 SUBDIR+=	lua54
+SUBDIR+=	lua55
 SUBDIR+=	lush
 SUBDIR+=	maude
 SUBDIR+=	mawk
