@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/12/31 09:02:51 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/01/03 23:41:33 rillig Exp $
 
 DISTNAME=	itstool-2.0.7
 PKGREVISION=	5
@@ -11,7 +11,8 @@ HOMEPAGE=	https://itstool.org/
 COMMENT=	ITS Tool allows you to translate XML documents with PO files
 LICENSE=	gnu-gpl-v3
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 
 # With 27, gnumeric112 fails to build the cs translation with
 # ascii/utf-8 confusion.  This is not understood, so just avoid
