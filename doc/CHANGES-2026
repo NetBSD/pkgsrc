@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.40 2026/01/03 08:33:58 triaxx Exp $
+$NetBSD: CHANGES-2026,v 1.41 2026/01/03 09:17:47 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -62,3 +62,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/kaffe to 1.1.7nb9 [dholland 2026-01-03]
 	Updated devel/task to 3.46.4 [iquiw 2026-01-03]
 	Updated www/hugo to 0.154.2 [triaxx 2026-01-03]
+	Updated math/R to 4.4.3 [mef 2026-01-03]
