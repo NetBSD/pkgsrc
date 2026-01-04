@@ -1,13 +1,14 @@
-$NetBSD: patch-ai,v 1.1 2007/07/24 15:14:50 joerg Exp $
+$NetBSD: patch-ai,v 1.2 2026/01/04 17:41:56 wiz Exp $
 
---- src/IMdkit/lib/IMConn.c.orig	2007-07-24 14:18:46.000000000 +0000
+--- src/IMdkit/lib/IMConn.c.orig	2000-07-02 02:01:01.000000000 +0000
 +++ src/IMdkit/lib/IMConn.c
-@@ -30,7 +30,7 @@ IN CONNECTION WITH THE USE OR PERFORMANC
+@@ -30,7 +30,8 @@ IN CONNECTION WITH THE USE OR PERFORMANC
  ******************************************************************/
  
  #include <X11/Xlib.h>
 -#include <malloc.h>
 +#include <stdlib.h>
++#include <string.h>
  #include "IMdkit.h"
  #include <stdarg.h>
  

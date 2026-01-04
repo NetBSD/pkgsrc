@@ -1,0 +1,22 @@
+$NetBSD: patch-src_IMdkit_lib_Makefile,v 1.1 2026/01/04 17:41:56 wiz Exp $
+
+--- src/IMdkit/lib/Makefile.orig	2026-01-04 17:38:19.038750404 +0000
++++ src/IMdkit/lib/Makefile
+@@ -1,7 +1,7 @@
+ 
+ CC = gcc
+ #CFLAGS =  -c -O2 -fno-strength-reduce -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L -D_POSIX_SOURCE -D_XOPEN_SOURCE=500L -D_BSD_SOURCE -D_SVID_SOURCE   -DFUNCPROTO=15 -DNARROWPROTO   -DUNIXCONN -DTCPCONN -DXIM_t -DTRANS_SERVER
+-CFLAGS =  -c -O2 -fno-strength-reduce -DXIM_t -DTRANS_SERVER
++CFLAGS =  -c -O2 -fno-strength-reduce -DXIM_t -DTRANS_SERVER -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -Wno-implicit-int
+ INC = -I../include -I/usr/X11R6/include   
+ 
+ 
+@@ -12,7 +12,7 @@ OBJ = $(SRC:.c=.o)
+ all: libXimd.a
+ 
+ libXimd.a: $(OBJ)
+-	ar clq libXimd.a $(OBJ)
++	ar cq libXimd.a $(OBJ)
+ 	ranlib libXimd.a
+ 
+ .c.o:
