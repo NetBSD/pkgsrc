@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2025/12/22 06:08:07 adam Exp $
+# $NetBSD: Makefile,v 1.23 2026/01/04 09:01:44 wiz Exp $
 
 DISTNAME=	MoonlightSrc-4.3.1
 PKGNAME=	moonlight-qt-4.3.1
@@ -17,8 +17,13 @@ USE_TOOLS+=	gmake pkg-config
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
+# ranlib: libqmdnsengine.a: malformed archive
+MAKE_JOBS_SAFE=	no
+
 # Work around the fact that the distfile is a tarbomb
 EXTRACT_DIR=	${WRKSRC}
+
+CFLAGS+=	-Wno-implicit-function-declaration
 
 QMAKE_ARGS+=	moonlight-qt.pro
 QMAKE_ARGS+=	PREFIX=${PREFIX}
