@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/10/25 01:54:58 osa Exp $
+# $NetBSD: Makefile,v 1.32 2026/01/04 10:50:10 wiz Exp $
 
 DISTNAME=	njs-0.9.1
 PKGREVISION=	1
@@ -20,6 +20,8 @@ CONFIGURE_ARGS+=	--cc-opt="-I${LOCALBASE}/include"
 CONFIGURE_ARGS+=	--ld-opt="-L${LOCALBASE}/lib"
 #CONFIGURE_ARGS+=	--with-quickjs
 CONFIGURE_ARGS+=	--no-quickjs
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 INSTALLATION_DIRS+=	bin
 
