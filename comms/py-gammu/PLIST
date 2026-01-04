@@ -1,8 +1,17 @@
-@comment $NetBSD: PLIST,v 1.7 2015/08/23 20:20:03 leot Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/01/04 19:56:20 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/gammu/__init__.py
 ${PYSITELIB}/gammu/__init__.pyc
 ${PYSITELIB}/gammu/__init__.pyo
 ${PYSITELIB}/gammu/_gammu.so
+${PYSITELIB}/gammu/asyncworker.py
+${PYSITELIB}/gammu/asyncworker.pyc
+${PYSITELIB}/gammu/asyncworker.pyo
 ${PYSITELIB}/gammu/data.py
 ${PYSITELIB}/gammu/data.pyc
 ${PYSITELIB}/gammu/data.pyo
@@ -15,7 +24,3 @@ ${PYSITELIB}/gammu/smsd.pyo
 ${PYSITELIB}/gammu/worker.py
 ${PYSITELIB}/gammu/worker.pyc
 ${PYSITELIB}/gammu/worker.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
