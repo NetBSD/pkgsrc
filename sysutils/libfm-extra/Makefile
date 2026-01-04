@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/11/17 11:01:26 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.22 2026/01/04 15:35:42 wiz Exp $
 
 DISTNAME=	libfm-1.3.0.2
 PKGNAME=	libfm-extra-1.3.0.2
@@ -9,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcmanfm/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pcmanfm.sourceforge.net/
+HOMEPAGE=	https://sourceforge.net/projects/pcmanfm/
 COMMENT=	File management library (extra)
 LICENSE=	gnu-gpl-v2
 
