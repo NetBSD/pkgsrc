@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.72 2026/01/04 13:54:34 adam Exp $
+$NetBSD: CHANGES-2026,v 1.73 2026/01/04 14:24:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -98,3 +98,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-certifi to 2026.1.4 [adam 2026-01-04]
 	Updated net/libtorrent to 0.16.6 [adam 2026-01-04]
 	Updated net/rtorrent to 0.16.6 [adam 2026-01-04]
+	Updated devel/py-uv to 0.9.21 [adam 2026-01-04]
+	Updated devel/py-uv-build to 0.9.21 [adam 2026-01-04]
+	Updated www/py-django-bootstrap5 to 26.1 [adam 2026-01-04]
