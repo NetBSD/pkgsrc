@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2023/01/16 03:46:28 dholland Exp $
-#
+# $NetBSD: Makefile,v 1.36 2026/01/04 11:16:28 wiz Exp $
 
 DISTNAME=	snobol4-1.3
 PKGNAME=	snobol-1.3
