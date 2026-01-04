@@ -604,6 +604,7 @@ mailwrapper		Use mailwrapper to handle MTA software aliases.
 maintainer-zts		Enable the Zend Thread Safety option for PHP.
 manual			Include manual.
 marble			Enable marble (virtual globe) support.
+mariadb			Enable MariaDB support.
 mbedtls			Enable mbed TLS support.
 mc-charset		Enable charset selection and conversion.
 mc-edit			Include the built-in editor.
