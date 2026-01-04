@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:17:03 nia Exp $
+$NetBSD: distinfo,v 1.16 2026/01/04 13:35:48 wiz Exp $
 
 BLAKE2s (dsniff-2.3.tar.gz) = d19b54709be67ac0deff61bb5988ab2ade42f7e7a7f63bad04ead0a9ab71d421
 SHA512 (dsniff-2.3.tar.gz) = d27b2bf901cd7e2dcef0d6170318d131ba57d4881c0b85f24ee3de9581c41841eab4363cc8ea0dd6d7dcd1c27dcb61d054dfca964b5674301d8c7a173a9f113d
 Size (dsniff-2.3.tar.gz) = 126797 bytes
 SHA1 (patch-Makefile.in) = 90954f3959d2f55f5c50f1753210cee9fdc0a872
-SHA1 (patch-aa) = b3798143fa0a662870c3144f136773d575c54364
+SHA1 (patch-aa) = d5f59901b18789355ebb4c9878ed2458084adb34
 SHA1 (patch-ab) = 6385da7139dcb11ea29ffba468e7fac260b61b44
 SHA1 (patch-ac) = 1730b92ecd421e396781e2e4ba9b7a7d9b90d992
-SHA1 (patch-ad) = cab09e1b1a61fd6a3fa96c24fff3cd1519146a3e
-SHA1 (patch-ae) = e54a7be65c2e1d236b2427d216e1184ff6046a0b
+SHA1 (patch-ad) = c024e6e3b699df368542fe6a501efffa56cdd1e1
+SHA1 (patch-ae) = d79aa50233237a80b3c60bcb0b63dd4f15e0d1e7
 SHA1 (patch-ba) = 5f774dcb904681f123fa9cae25ea4d88afee6bb6
 SHA1 (patch-bb) = 58026805c5a8f91f7fa80a94ddbea0b8fadfadd5
 SHA1 (patch-bc) = 6d27957bd1d10b66428dbea214b0463fa8321bef
@@ -21,5 +21,9 @@ SHA1 (patch-bi) = 47c6b0e3682af9ee3b212b0d0800d9a74037df30
 SHA1 (patch-bj) = b6d45af26058a221cb68d72c45e7358c1ef894c0
 SHA1 (patch-bk) = 3a36f7a11a5590daea9b1cf7c8d7772a88ff2a18
 SHA1 (patch-bl) = add5db6023f9e76e269e953eb95ff5b808f650ab
+SHA1 (patch-dnsspoof.c) = 9056b376d60739cc2aa333a009963612f50deadd
+SHA1 (patch-pcaputil.h) = 3d30e64e85d6dc60080a5fb1c16fc43a2ff16c9b
 SHA1 (patch-sshmitm.c) = b1b219739c05290eb2635ae17175966eb2150b68
+SHA1 (patch-tcpkill.c) = 175691ad54c5d65280371ea9b430a8eca8cfa124
+SHA1 (patch-tcpnice.c) = aa543822babbeaa926a4a548edf079a3a764ab23
 SHA1 (patch-webmitm.c) = 426f4eb0e6b704b487e032f3a772766a0f1de061

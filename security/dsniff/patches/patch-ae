@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2008/10/01 08:43:09 apb Exp $
+$NetBSD: patch-ae,v 1.2 2026/01/04 13:35:48 wiz Exp $
+
+Add missing header.
 
 --- buf.c.orig	2000-11-28 09:45:07.000000000 +0200
 +++ buf.c
