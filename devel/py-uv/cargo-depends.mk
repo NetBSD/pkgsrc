@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.8 2025/12/26 09:43:14 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.9 2026/01/04 14:22:17 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -23,7 +23,7 @@ CARGO_CRATE_DEPENDS+=	assert_cmd-2.0.17
 CARGO_CRATE_DEPENDS+=	assert_fs-1.1.3
 CARGO_CRATE_DEPENDS+=	astral-pubgrub-0.3.3
 CARGO_CRATE_DEPENDS+=	astral-reqwest-middleware-0.4.2
-CARGO_CRATE_DEPENDS+=	astral-reqwest-retry-0.7.0
+CARGO_CRATE_DEPENDS+=	astral-reqwest-retry-0.8.0
 CARGO_CRATE_DEPENDS+=	astral-tl-0.7.11
 CARGO_CRATE_DEPENDS+=	astral-tokio-tar-0.5.6
 CARGO_CRATE_DEPENDS+=	astral-version-ranges-0.1.3
@@ -377,7 +377,7 @@ CARGO_CRATE_DEPENDS+=	reqsign-file-read-tokio-2.0.1
 CARGO_CRATE_DEPENDS+=	reqsign-http-send-reqwest-2.0.1
 CARGO_CRATE_DEPENDS+=	reqwest-0.12.22
 CARGO_CRATE_DEPENDS+=	resvg-0.29.0
-CARGO_CRATE_DEPENDS+=	retry-policies-0.4.0
+CARGO_CRATE_DEPENDS+=	retry-policies-0.5.1
 CARGO_CRATE_DEPENDS+=	rgb-0.8.52
 CARGO_CRATE_DEPENDS+=	ring-0.17.14
 CARGO_CRATE_DEPENDS+=	rkyv-0.8.12

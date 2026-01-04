@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2025/12/26 09:43:14 adam Exp $
+$NetBSD: distinfo,v 1.10 2026/01/04 14:22:17 adam Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -69,9 +69,9 @@ Size (astral-pubgrub-0.3.3.crate) = 71621 bytes
 BLAKE2s (astral-reqwest-middleware-0.4.2.crate) = f63550d4aae3ac1acf2409b449a7e08ceb19723065d5aa9a9c044e9e34ea2859
 SHA512 (astral-reqwest-middleware-0.4.2.crate) = ab017b507af6fb1cc4ad0d3b9a15aaae3cead9eb590efcb4eab102f57c45f9955bc2f69feea8e0d920a4a3bcc7a4cd6a5087dab6e8d4f815271890acded394e5
 Size (astral-reqwest-middleware-0.4.2.crate) = 27676 bytes
-BLAKE2s (astral-reqwest-retry-0.7.0.crate) = d7748e4fd1a583c236831bdd7b95a8052948ba6209f6d33568e2cf2727837538
-SHA512 (astral-reqwest-retry-0.7.0.crate) = cb163f018bef90514bbb5b448094fc49a33ddcd682816852a6bdd9b363e76ab85e447cd73468d98f6ac75660fd552bd9231147b8f3a3cc0074d5cf952f1b379a
-Size (astral-reqwest-retry-0.7.0.crate) = 27224 bytes
+BLAKE2s (astral-reqwest-retry-0.8.0.crate) = 8cff18713a00ef38d9f2b6a26f2d8b7a9a9226b5ecf48d5db5def0b653c9a0c4
+SHA512 (astral-reqwest-retry-0.8.0.crate) = a6a4218b28268226fde038e98208feb27fa6b6bf0726d86c1be870551019e2203e8770f2a8c4742e48836f1d2840a8cc7d0ae85b093d7e9e8be689c50e4d498a
+Size (astral-reqwest-retry-0.8.0.crate) = 26557 bytes
 BLAKE2s (astral-tl-0.7.11.crate) = f26c428af7058249aba0234679b3c700ea2582bbf741e3326e373b8e390ed417
 SHA512 (astral-tl-0.7.11.crate) = 858672bf16ebfe097019f01a42102919a6397ac42a06001ffa2dcdac3d5e0eb1d30a5ac886656857d9b1342617b713d15bfe6f1c19e551c5b3fb91c7699cdc0c
 Size (astral-tl-0.7.11.crate) = 44281 bytes
@@ -1131,9 +1131,9 @@ Size (reqwest-0.12.22.crate) = 200283 bytes
 BLAKE2s (resvg-0.29.0.crate) = e21ded06af6a7f12cab0f44db5244ba4cb80f6ff10ed5e65c42a4024bd7b486a
 SHA512 (resvg-0.29.0.crate) = fbe544a2b7b6ce8af1cfbe48df908546a26496b1c16f094406295d1423caed0e77bb87741d6f0cc6f080befa2b2b782f057c0adec0d601aca11d5b5051eb4190
 Size (resvg-0.29.0.crate) = 94880 bytes
-BLAKE2s (retry-policies-0.4.0.crate) = 553b567c74b197efd98dcfa18a668e8a2fc89f30d7a2f7deff24209accd2a498
-SHA512 (retry-policies-0.4.0.crate) = f670f89d7842fab2f3e529d2c3379228683a3ed3f4f9568380a8a023ad537d1650c5a2a068ee674c23eca1bc860ef7ac041f272c8e8f7a84d259ff2c4040e9f8
-Size (retry-policies-0.4.0.crate) = 12127 bytes
+BLAKE2s (retry-policies-0.5.1.crate) = 5feabbfb2807e0de725f4920ba944071e97a5b3a5dd9d2cd3d33f9ebfc8aa241
+SHA512 (retry-policies-0.5.1.crate) = f0959d28f745dd37bc576ba9775dee2761bbeaf011f02c393f161610e4380712e9158003f014cc7f3900f08cb77d5db97f0bab61e51c2389798a1fdc0d574f63
+Size (retry-policies-0.5.1.crate) = 14368 bytes
 BLAKE2s (rgb-0.8.52.crate) = 61b596db820aae11837a7e07823fa9552fea6d466a21c225aabe5c92277ebd1e
 SHA512 (rgb-0.8.52.crate) = db6f68c32884c67c1e22b91d8204445b89eed95468f9134c34b262e17407aad8fe3e4dec67f01867f7bf886213541775a0c5bd0335c1ef23be55023485f93a8c
 Size (rgb-0.8.52.crate) = 22449 bytes
@@ -1647,9 +1647,9 @@ Size (utf8parse-0.2.2.crate) = 13499 bytes
 BLAKE2s (uuid-1.17.0.crate) = 91efcaca4bdef348b6a9abeff89a04882fa523c11f8b1a945d1ddd1ec9449d98
 SHA512 (uuid-1.17.0.crate) = 7ee7ad0603ebd11d221c7b22aa7743a034cd1078a76479cf6f9768e1f664002674aa6cde446831e133764c0d5e67000abf00ad4bacb38642fefc65b0547e59f2
 Size (uuid-1.17.0.crate) = 59014 bytes
-BLAKE2s (uv_build-0.9.18.tar.gz) = 5420a1af13a4c25973597065e7407e64936e7e6dd0162d20f8a185f6885e9dd9
-SHA512 (uv_build-0.9.18.tar.gz) = 093ece50dd3c89c56c7d61f35dbe66319ea23295e21b66b7cdb73ae669956d6a68684a183faad9c59cb96fc2b26747f40609570540b8ff158d1f8f3d32bfd15c
-Size (uv_build-0.9.18.tar.gz) = 356832 bytes
+BLAKE2s (uv_build-0.9.21.tar.gz) = 395b8fec338be07418a68b3af9c1b8798506f9652f28943a2f7b6d7daf95224e
+SHA512 (uv_build-0.9.21.tar.gz) = 1e2885f978fa45e1481a72a35d5734ef80d3ab7da0213fc41cad8c4e49756bf0b172cea570d25a6b0461c6dd13fead8a8fae356b11ec758f8bd7b915faa322c4
+Size (uv_build-0.9.21.tar.gz) = 357539 bytes
 BLAKE2s (valuable-0.1.1.crate) = df7602da20aa0212438759173532cf82c56ba05307e036b22bfddb318e2f82b7
 SHA512 (valuable-0.1.1.crate) = d8a4bffdc8a166d1ee11b87dd91cd68e5c898916b14db7039ad2faaad34f4bfef76f3fc3d17d6e7bf05e495778f7c9d5223fbf45331bd114f93fb6ec950eadbf
 Size (valuable-0.1.1.crate) = 28679 bytes
