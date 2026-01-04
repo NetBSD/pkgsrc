@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/11/02 22:37:56 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2026/01/04 09:48:56 wiz Exp $
 
 DISTNAME=	fbm-1.2
 CATEGORIES=	graphics converters
@@ -12,5 +12,8 @@ WRKSRC=			${WRKDIR}
 INSTALL_MAKE_FLAGS+=	BIN=${DESTDIR}${PREFIX}/bin/ \
 			MAN=${DESTDIR}${PREFIX}/${PKGMANDIR}/manl/
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/manl
+
+CFLAGS+=	-Wno-implicit-function-declaration
+CFLAGS+=	-Wno-implicit-int
 
 .include "../../mk/bsd.pkg.mk"

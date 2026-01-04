@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.2 2000/08/03 19:20:45 rh Exp $
+$NetBSD: patch-aa,v 1.2 2026/01/04 09:48:56 wiz Exp $
 
---- Makefile.orig	Fri Jun  4 01:30:50 1993
-+++ Makefile	Thu Apr 27 03:27:43 2000
+--- Makefile.orig	1993-06-03 16:30:50.000000000 +0000
++++ Makefile
 @@ -63,32 +63,33 @@
  #
  ################################################################
@@ -49,7 +49,16 @@ $NetBSD: patch-aa,v 1.1.1.2 2000/08/03 19:20:45 rh Exp $
  
  LIB= -L. -lfbm $(JLIB) $(RLIB)
  
-@@ -309,12 +310,12 @@
+@@ -171,7 +172,7 @@ uninstall: clean
+ 
+ libfbm.a: $(LIBO)
+ 	rm -f $@
+-	ar clq $@ $(LIBO)
++	ar cq $@ $(LIBO)
+ 	ranlib $@
+ 
+ # Library routines
+@@ -309,12 +310,12 @@ fndseg: fndseg.c fbm.h libfbm.a flsign.c
  	fltiff.o -L$(TIFLIB) $(LIB) -ltiff -lm
  unmap: gray2clr
  	rm -rf unmap
@@ -64,7 +73,7 @@ $NetBSD: patch-aa,v 1.1.1.2 2000/08/03 19:20:45 rh Exp $
  pbm2face: pbm2face.c fbm.h libfbm.a
  	$(CC) $(DBG) -o pbm2face pbm2face.c $(LIB) -lm
  pbm2ps: pbm2ps.c
-@@ -341,211 +342,211 @@
+@@ -341,211 +342,211 @@ fbpalet: fbpalet.c fbm.h libfbm.a
  	$(CC) $(DBG) -o fbpalet fbpalet.c $(LIB) -lm
  $(BIN)fbext: fbext
  	rm -f $(BIN)fbext
