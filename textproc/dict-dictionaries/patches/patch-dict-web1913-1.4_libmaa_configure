@@ -1,0 +1,69 @@
+$NetBSD: patch-dict-web1913-1.4_libmaa_configure,v 1.1 2026/01/04 14:08:24 wiz Exp $
+
+Add missing return value.
+
+--- dict-web1913-1.4/libmaa/configure.orig	2026-01-04 13:58:32.629327896 +0000
++++ dict-web1913-1.4/libmaa/configure
+@@ -694,7 +694,7 @@ cross_compiling=$ac_cv_prog_cc_cross
+ cat > conftest.$ac_ext <<EOF
+ #line 696 "configure"
+ #include "confdefs.h"
+-main(){return(0);}
++int main(){return(0);}
+ EOF
+ if { (eval echo configure:700: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
+   ac_cv_prog_cc_works=yes
+@@ -1812,7 +1812,7 @@ else
+   cat > conftest.$ac_ext <<EOF
+ #line 1814 "configure"
+ #include "confdefs.h"
+-main () {
++int main () {
+   /* Are we little or big endian?  From Harbison&Steele.  */
+   union
+   {
+@@ -1858,7 +1858,7 @@ else
+ #line 1859 "configure"
+ #include "confdefs.h"
+ #include <stdio.h>
+-main()
++int main()
+ {
+   FILE *f=fopen("conftestval", "w");
+   if (!f) exit(1);
+@@ -1897,7 +1897,7 @@ else
+ #line 1898 "configure"
+ #include "confdefs.h"
+ #include <stdio.h>
+-main()
++int main()
+ {
+   FILE *f=fopen("conftestval", "w");
+   if (!f) exit(1);
+@@ -1936,7 +1936,7 @@ else
+ #line 1937 "configure"
+ #include "confdefs.h"
+ #include <stdio.h>
+-main()
++int main()
+ {
+   FILE *f=fopen("conftestval", "w");
+   if (!f) exit(1);
+@@ -1975,7 +1975,7 @@ else
+ #line 1976 "configure"
+ #include "confdefs.h"
+ #include <stdio.h>
+-main()
++int main()
+ {
+   FILE *f=fopen("conftestval", "w");
+   if (!f) exit(1);
+@@ -2209,7 +2209,7 @@ find_stack_direction ()
+   else
+     return (&dummy > addr) ? 1 : -1;
+ }
+-main ()
++int main ()
+ {
+   exit (find_stack_direction() < 0);
+ }
