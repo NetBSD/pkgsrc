@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/05/05 22:11:17 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/01/04 20:50:33 wiz Exp $
 
 DISTNAME=		discount-2.2.7d
 PKGREVISION=		1
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=Orc/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://www.pell.portland.or.us/~orc/Code/discount/
+HOMEPAGE=		https://www.pell.portland.or.us/~orc/Code/discount/
 COMMENT=		Markdown C implementation
 LICENSE=		modified-bsd
 
