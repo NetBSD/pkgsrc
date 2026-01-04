@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/12/11 21:28:58 vins Exp $
-#
+# $NetBSD: Makefile,v 1.22 2026/01/04 15:33:26 wiz Exp $
 
 DISTNAME=		ETM-1.09
 PKGNAME=		libetm-1.09
@@ -8,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		https://www.aydogan.net/distfiles/devel/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		${MASTER_SITES}
+#HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Exception and termination manager
 
 MAKE_JOBS_SAFE=		no
