@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.701 2026/01/03 21:50:20 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.702 2026/01/04 18:51:38 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29227,3 +29227,13 @@ libtpms<0.10.2	insufficiently-random-numbers	https://nvd.nist.gov/vuln/detail/CV
 messagelib<25.11.90	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-69412
 wabt-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-15411
 wabt-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-15412
+h2o-[0-9]*	weak-cryptography	https://nvd.nist.gov/vuln/detail/CVE-2023-41337
+h2o-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-50247
+h2o-[0-9]*	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2024-25622
+h2o-[0-9]*	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2024-45397
+h2o-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-45403
+haproxy<2.8.2	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2023-45539
+haproxy<2.9.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-45506
+haproxy<2.9.11	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-49214
+haproxy<2.9.10	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2024-53008
+haproxy<3.0.10	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-32464
