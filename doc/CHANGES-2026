@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.64 2026/01/04 01:38:09 mef Exp $
+$NetBSD: CHANGES-2026,v 1.65 2026/01/04 01:39:18 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -85,6 +85,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed databases/libcassandra [wiz 2026-01-03]
 	Updated biology/puzzle to 5.2nb1 [wiz 2026-01-04]
 	Updated devel/qore-process-module to 1.0.5nb9 [wiz 2026-01-04]
-	Updated devel/R-fansi to 1.0.7 [makoto 2026-01-04]
-	Updated devel/R-cli to 3.6.5 [makoto 2026-01-04]
-	Updated devel/R-rlang to 1.1.6 [makoto 2026-01-04]
+	Updated devel/R-fansi to 1.0.7 [mef 2026-01-04]
+	Updated devel/R-cli to 3.6.5 [mef 2026-01-04]
+	Updated devel/R-rlang to 1.1.6 [mef 2026-01-04]
