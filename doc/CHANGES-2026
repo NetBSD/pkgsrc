@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.60 2026/01/04 00:10:43 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.61 2026/01/04 00:26:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -84,3 +84,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/afl++ to 4.35c [wiz 2026-01-03]
 	Removed databases/libcassandra [wiz 2026-01-03]
 	Updated biology/puzzle to 5.2nb1 [wiz 2026-01-04]
+	Updated devel/qore-process-module to 1.0.5nb9 [wiz 2026-01-04]
