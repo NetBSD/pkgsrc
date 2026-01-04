@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/12/23 10:12:01 zafer Exp $
+# $NetBSD: Makefile,v 1.8 2026/01/04 15:40:11 wiz Exp $
 
 DISTNAME=	libisoburn-1.5.2
 #PKGNAME=	${DISTNAME:S/.pl/pl/}
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	https://files.libburnia-project.org/releases/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://libburnia-project.org/wiki/Libisoburn
+HOMEPAGE=	https://dev.lovelyhq.com/libburnia/libisoburn
 COMMENT=	Library to enable creation and expansion of ISO-9660 filesystems
 LICENSE=	gnu-gpl-v2
 
