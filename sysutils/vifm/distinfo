@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2026/01/01 19:41:35 wiz Exp $
+$NetBSD: distinfo,v 1.14 2026/01/04 14:46:10 wiz Exp $
 
 BLAKE2s (vifm-0.14.3.tar.bz2) = 4c195dfe33d2cd9e8fe3470d0c62b2cf765d7bbc8aba8566be6083d692eb7ae4
 SHA512 (vifm-0.14.3.tar.bz2) = 850d29a1c50e7579d53fcd519e3108f7edd1d5046ca473217f397b6394017dff95644ae92928a611fc6a75fb02c1cee62d4b858669c61b5c2764805dd64b303c
 Size (vifm-0.14.3.tar.bz2) = 1764017 bytes
 SHA1 (patch-configure) = 84f8b6d3e5c4f9aa9d632ebd828ad57e94c47452
 SHA1 (patch-src_Makefile.in) = 4ab1ae1049d71235008f6e3c7548f3caed133ecf
-SHA1 (patch-src_version.c) = 12f6bb81238976632907b22ac8028c04940154c7
+SHA1 (patch-src_version.c) = 4e558368da00f719317b3c0dc1f2209f248a3c11
