@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.66 2026/01/04 08:51:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.67 2026/01/04 08:52:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -89,3 +89,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/R-cli to 3.6.5 [mef 2026-01-04]
 	Updated devel/R-rlang to 1.1.6 [mef 2026-01-04]
 	Updated time/p5-DateTime-Format-Natural to 1.22 [wiz 2026-01-04]
+	Updated textproc/p5-XML-RSS to 1.65 [wiz 2026-01-04]
