@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/09/24 08:33:19 nia Exp $
+# $NetBSD: Makefile,v 1.19 2026/01/04 09:11:37 wiz Exp $
 #
 
 DISTNAME=	veleng10
@@ -41,6 +41,8 @@ SUBST_CLASSES+=		cflags
 SUBST_STAGE.cflags=	pre-configure
 SUBST_FILES.cflags=	makefile
 SUBST_SED.cflags=	-e s,^CFLAGS.*,,
+
+CFLAGS+=		-Wno-implicit-int
 
 .include "../../mk/bsd.prefs.mk"
 
