@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.71 2026/01/04 13:41:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.72 2026/01/04 13:54:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -96,3 +96,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated meta-pkgs/bulk-test-poppler to 20260104 [wiz 2026-01-04]
 	Updated graphics/quesoglc to 0.7.2 [adam 2026-01-04]
 	Updated security/py-certifi to 2026.1.4 [adam 2026-01-04]
+	Updated net/libtorrent to 0.16.6 [adam 2026-01-04]
+	Updated net/rtorrent to 0.16.6 [adam 2026-01-04]
