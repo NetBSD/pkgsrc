@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2019/11/02 22:09:01 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2026/01/04 00:10:35 wiz Exp $
 
 DISTNAME=	tree-puzzle-5.2
 PKGNAME=	${DISTNAME:S/^tree-//}
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	http://www.tree-puzzle.de/
 
