@@ -1,0 +1,15 @@
+$NetBSD: patch-unix_CMakeLists.txt,v 1.1 2026/01/04 11:28:20 wiz Exp $
+
+No CMake files in npsqueak directory, so recursing there doesn't work.
+
+--- unix/CMakeLists.txt.orig	2026-01-04 11:19:19.082755404 +0000
++++ unix/CMakeLists.txt
+@@ -155,7 +155,7 @@ INCLUDE (${unix}/vm/build.cmake)
+ 
+ BUILD_PLUGINS ()
+ 
+-ADD_SUBDIRECTORY (${unix}/npsqueak)
++#ADD_SUBDIRECTORY (${unix}/npsqueak)
+ 
+ SET (cmake ${unix}/../../cmake)
+ 
