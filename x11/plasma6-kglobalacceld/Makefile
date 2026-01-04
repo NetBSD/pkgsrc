@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2026/01/02 01:47:08 markd Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/04 19:33:11 markd Exp $
 
 DISTNAME=	kglobalacceld-${PLASMAVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 
 HOMEPAGE=	https://kde.org/plasma-desktop/
@@ -9,6 +9,15 @@ COMMENT=	Daemon providing Global Keyboard Shortcut (Accelerator) functionality
 LICENSE=	gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/plasma6.mk"
+
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	post-patch
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	src/CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_AUTOSTARTDIR}:{KDE_INSTALL_AUTOSTARTEXDIR}:'
+
+CONF_FILES+=		${PREFIX}/share/examples/kde-xdg/autostart/kglobalacceld.desktop \
+			${PKG_SYSCONFDIR}/xdg/autostart/kglobalacceld.desktop
 
 post-install:
 	ln -s libKGlobalAccelD.so.${PLASMAVER} ${DESTDIR}${PREFIX}/lib/libKGlobalAccelD.so
