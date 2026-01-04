@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2025/11/17 11:00:56 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/01/04 10:19:38 wiz Exp $
 
 DISTNAME=	ivtools-2.0.4a1
 PKGREVISION=	4
@@ -12,12 +12,11 @@ HOMEPAGE=	https://ivtools.sourceforge.net/ivtools/index.html
 COMMENT=	Drawing editors for PostScript, TeX, and web graphics
 LICENSE=	modified-bsd # close enough
 
-CONFLICTS+=	dclock-[0-9]*
-
 # ps2pdf
 TOOL_DEPENDS+=	ghostscript-[0-9]*:../../print/ghostscript
-
 DEPENDS+=	ghostscript-fonts-[0-9]*:../../fonts/ghostscript-fonts
+
+CONFLICTS+=	dclock-[0-9]*
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 USE_LANGUAGES=	c c++
@@ -25,6 +24,8 @@ USE_TOOLS+=	autoconf automake autoreconf
 USE_TOOLS+=	gmake bash:run
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
+
+BUILDLINK_TRANSFORM+=	rm:-D_POSIX_C_SOURCE=200112L
 
 REPLACE_BASH+=	src/scripts/comterp_run.bash
 REPLACE_BASH+=	src/scripts/ivgetjpg.bash
