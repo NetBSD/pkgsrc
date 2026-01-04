@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/12/31 03:17:11 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/04 19:24:52 markd Exp $
 
 DISTNAME=	knighttime-${PLASMAVER}
+PKGREVISION=	1
 CATEGORIES=	time
 
 HOMEPAGE=	https://kde.org/plasma-desktop/
@@ -13,6 +14,7 @@ USE_TOOLS+=	msgmerge
 
 .include "../../devel/kf6-kconfig/buildlink3.mk"
 .include "../../devel/kf6-kcoreaddons/buildlink3.mk"
+.include "../../devel/kf6-ki18n/buildlink3.mk"
 .include "../../devel/qt6-qttools/buildlink3.mk"
 .include "../../geography/qt6-qtpositioning/buildlink3.mk"
 .include "../../sysutils/kf6-kdbusaddons/buildlink3.mk"
