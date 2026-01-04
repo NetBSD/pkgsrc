@@ -1,11 +1,32 @@
-$NetBSD: patch-configure,v 1.1 2023/01/16 03:46:29 dholland Exp $
+$NetBSD: patch-configure,v 1.2 2026/01/04 11:16:28 wiz Exp $
 
 Don't attempt to use /etc/install. It apparently exists on Solaris
 (even today) and does horrible things.
 
---- configure~	2010-02-27 21:09:03.000000000 +0000
+--- configure.orig	2010-02-27 21:09:03.000000000 +0000
 +++ configure
-@@ -1632,7 +1632,7 @@ for DIR in /usr/bin /usr/ucb /usr/local/
+@@ -300,7 +300,8 @@ if [ ! "$GCCPATH" ]; then
+     TMP=conf$$
+     # vanilla bsd43 systems can't use <<- AND EOF must be in col 0!
+     cat << EOF > $TMP.c
+-main() {
++#include <stdlib.h>
++int main() {
+ #if defined(__gcc__) || defined(__GNUC__)
+     exit(0);
+ #else
+@@ -700,8 +701,9 @@ echo checking sizes of C types 1>&2
+ TMP=conf$$
+ cat << EOF > $TMP.c
+ #include <stdio.h>
++#include <stdlib.h>
+ 
+-main() {
++int main() {
+     printf("%d %d %d %d\n", sizeof(void *), sizeof(long),
+ 	sizeof(double), sizeof(int));
+     exit(0);
+@@ -1632,7 +1634,7 @@ for DIR in /usr/bin /usr/ucb /usr/local/
  		continue
  	    fi
  	    case $IPATH in
