@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2025/02/08 04:08:59 taca Exp $
+# $NetBSD: Makefile.common,v 1.7 2026/01/04 14:13:22 wiz Exp $
 #
 # used by devel/libunit/Makefile
 # used by www/unit/Makefile
@@ -53,7 +53,7 @@ CONFIGURE_ARGS+=	--user=${UNIT_USER}
 CONFIGURE_ARGS+=	--group=${UNIT_GROUP}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 
-CHECK_WRKREF_SKIP=	libexec/unit/modules/ruby.unit.so
+CHECK_WRKREF_SKIP+=	libexec/unit/modules/ruby*.unit.so
 
 .include "../../www/unit/options.mk"
 
