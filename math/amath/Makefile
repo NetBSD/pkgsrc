@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/12/22 19:27:21 zafer Exp $
+# $NetBSD: Makefile,v 1.7 2026/01/04 11:29:40 wiz Exp $
 
 DISTNAME=	amath-1.8.3
 CATEGORIES=	math
@@ -18,6 +18,8 @@ CONFIGURE_ARGS+=	--with-libm
 CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:Q}
 CONFIGURE_ARGS+=	CXXFLAGS=${CXXFLAGS:Q}
 CONFIGURE_ARGS+=	LDFLAGS=${LDFLAGS:Q}
+# src/main.cpp:61:34: error: ISO C++17 does not allow dynamic exception specifications
+FORCE_CXX_STD=		c++11
 
 BUILD_TARGET=		static
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
