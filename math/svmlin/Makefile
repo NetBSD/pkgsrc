@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/01/26 17:31:41 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/04 11:36:14 wiz Exp $
 
 DISTNAME=	svmlin-v1.0
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -11,6 +11,8 @@ COMMENT=	Fast Linear SVM Solvers for Supervised and Semi-supervised Learning
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c++
+# ssl.cpp:804:24: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+FORCE_CXX_STD=	c++11
 
 post-extract:
 	cp "${FILESDIR}/mkc_makefile" "${WRKSRC}"/Makefile
