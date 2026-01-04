@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2025/12/21 07:47:50 vins Exp $
+# $NetBSD: Makefile,v 1.92 2026/01/04 10:44:54 wiz Exp $
 
 DISTNAME=	xpaint-3.1.4
 PKGREVISION=	7
@@ -35,6 +35,19 @@ SUBST_FILES.paths=	configure.ac Makefile.am xpaintrw/Makefile.am
 SUBST_SED.paths=	-e 's|/usr/bin/libtool|libtool --tag=CC|'
 SUBST_SED.paths+=	-e 's|/etc/X11/app-defaults|${PREFIX}/lib/X11/app-defaults|'
 SUBST_SED.paths+=	-e 's|freetype2/config/ftheader.h|freetype2/freetype/config/ftheader.h|'
+
+SUBST_CLASSES+=		ctype
+SUBST_STAGE.ctype=	pre-build
+SUBST_MESSAGE.ctype=	Fixing isspace arguments.
+SUBST_SED.ctype+=	-e 's|isspace(|isspace((unsigned char)|'
+SUBST_FILES.ctype+=	help.c
+SUBST_FILES.ctype+=	main.c
+SUBST_FILES.ctype+=	misc.c
+SUBST_FILES.ctype+=	msgedit.c
+SUBST_FILES.ctype+=	preproc.c
+SUBST_FILES.ctype+=	print.c
+SUBST_FILES.ctype+=	substads.c
+SUBST_FILES.ctype+=	xpaintrw/readWritePS.c
 
 pre-configure:
 	set -e; cd ${WRKSRC} && autoreconf -fiv
