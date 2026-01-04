@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_libc-0.2.139_src_unix_bsd_netbsdlike_netsbd_mod.rs,v 1.1 2024/01/20 23:27:51 he Exp $
+$NetBSD: patch-vendor_libc-0.2.139_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.1 2026/01/04 19:09:34 rillig Exp $
 
 Add use of spec for NetBSD/riscv64.
 
