@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.95 2025/10/23 20:40:20 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2026/01/04 18:33:25 gutteridge Exp $
 
-DISTNAME=	vte-0.80.3
+# The 0.80 branch is tracked currently because the newer stable branch
+# requires C++23 for seemingly little that would benefit pkgsrc's
+# present state.
+DISTNAME=	vte-0.80.5
 PKGNAME=	${DISTNAME:S/vte/vte3/}
-PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 GITHUB_PROJECT=	vte
