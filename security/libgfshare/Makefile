@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2023/12/22 20:00:03 zafer Exp $
+# $NetBSD: Makefile,v 1.6 2026/01/04 15:37:43 wiz Exp $
 
 DISTNAME=	libgfshare-1.0.5
 CATEGORIES=	security
-MASTER_SITES=	https://www.digital-scurf.org/files/libgfshare/
+#MASTER_SITES=	https://www.digital-scurf.org/files/libgfshare/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://www.digital-scurf.org/software/libgfshare
+#HOMEPAGE=	http://www.digital-scurf.org/software/libgfshare
 COMMENT=	Library to implement Shamir's secret sharing scheme
 LICENSE=	mit
 
