@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/15 16:03:46 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/01/04 13:39:09 adam Exp $
 include/GL/glc.h
 lib/libGLC.la
+lib/pkgconfig/quesoglc.pc
