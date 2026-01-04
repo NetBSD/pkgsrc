@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26610 2026/01/04 15:46:55 wiz Exp $
+$NetBSD: TODO,v 1.26611 2026/01/04 19:56:40 adam Exp $
 
 Suggested new packages
 ======================
@@ -655,7 +655,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ftplibpp-2.0.2
 	o fuse-unionfs-2.1
 	o gallery3-3.0.9
-	o gammu-1.42.0
 	o ganglia-3.7.5
 	o ganglia-webfrontend-3.7.5
 	o gap-4r4p9
@@ -1142,7 +1141,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-filelock-3.20.2
-	o py-gammu-3.1
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-last-7.0.1
