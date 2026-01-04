@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.68 2026/01/04 09:44:58 pin Exp $
+$NetBSD: CHANGES-2026,v 1.69 2026/01/04 11:21:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -91,3 +91,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/p5-DateTime-Format-Natural to 1.22 [wiz 2026-01-04]
 	Updated textproc/p5-XML-RSS to 1.65 [wiz 2026-01-04]
 	Updated devel/lazygit to 0.58.0 [pin 2026-01-04]
+	Updated sysutils/ansible to 13.2.0 [adam 2026-01-04]
+	Updated multimedia/mkvtoolnix to 97.0 [adam 2026-01-04]
