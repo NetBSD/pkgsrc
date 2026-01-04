@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/12/23 10:25:07 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/01/04 15:28:28 wiz Exp $
 
 DISTNAME=	tc-2.3.1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -22,6 +22,8 @@ SUBST_FILES.string-to-int=	\
 	lisp/tc-pre-base.in	\
 	lisp/tc-pre.el
 SUBST_SED.string-to-int=	-e 's/string-to-int/string-to-number/'
+
+EMACS_VERSIONS_ACCEPTED=	emacs29 emacs29nox emacs28 emacs28nox emacs27 emacs27nox emacs26 emacs26nox emacs21 emacs21nox emacs20 xemacs215 xemacs215nox xemacs214 xemacs214nox
 
 .include "../../editors/emacs/modules.mk"
 
