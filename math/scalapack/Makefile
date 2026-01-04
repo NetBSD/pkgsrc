@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/04/10 16:40:34 thor Exp $
+# $NetBSD: Makefile,v 1.4 2026/01/04 11:35:18 wiz Exp $
 
 DISTNAME=	scalapack-2.2.0
 PKGREVISION=	1
@@ -13,6 +13,8 @@ LICENSE=	modified-bsd
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c fortran
+
+CFLAGS+=	-Wno-implicit-function-declaration
 
 .include "../../devel/cmake/build.mk"
 CMAKE_CONFIGURE_ARGS=	-DBLA_PREFER_PKGCONFIG=on \
