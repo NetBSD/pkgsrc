@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2026/01/03 23:25:41 gdt Exp $
+# $NetBSD: Makefile,v 1.95 2026/01/04 00:11:26 gdt Exp $
 
 VERSION=	1.36.37
 # Distfile is ZoneMinder but package and tarball contents are zoneminder.
@@ -6,7 +6,7 @@ NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
 
 PKGNAME=	${DISTNAME:S/${NAME_DIST}-/${NAME_LOWER}-/}
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	${NAME_DIST}-${VERSION}
 WRKSRC=		${WRKDIR}/${NAME_LOWER}-${VERSION}
 CATEGORIES=	security
@@ -219,11 +219,13 @@ ZM_PERL_PATH+=	scripts/zmx10.pl.in
 
 ## PHP
 
-# 1.36 (NetBSD/amd64) works with 74 81 82
-# 83: PHP Fatal error:  Uncaught TypeError: flock(): Argument #1 ($stream) must be of type resource, false given in /usr/pkg/share/zoneminder/htdocs/includes/functions.php:2244
-# In 2022, upstream warned against 82.
-# php-apcu fails with 56, but upstream might support it.
-PHP_VERSIONS_INCOMPATIBLE=	56 83
+# 20250103 1.36.37:
+#   74 has not been tested recently, but there's no reason to try to use it.
+#   81 has not been tested recently; probably it works.
+#   82 and 83 work.  
+#   84 has not been tested, but FreeBSD ports seems to think it works.
+# php-apcu fails with 56, and there's no reason to think about 56.
+PHP_VERSIONS_INCOMPATIBLE=	56
 
 .include "../../lang/php/phpversion.mk"
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=${PHP_BASE_VERS}:../../databases/php-pdo_mysql
