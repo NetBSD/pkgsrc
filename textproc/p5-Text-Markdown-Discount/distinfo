@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.19 2025/01/28 00:47:03 schmonz Exp $
+$NetBSD: distinfo,v 1.20 2026/01/04 21:15:44 wiz Exp $
 
 BLAKE2s (Text-Markdown-Discount-0.18.tar.gz) = b8cde170a00ab1721120b34f02eb55e3c04b359bfb299b5267e669e546d5b51d
 SHA512 (Text-Markdown-Discount-0.18.tar.gz) = 3af7113676b897d9f0b1fdd35906e4f622797fdb0b942975678a0072f8e780bd630a903151acdc33899a34272c3d83106d85603a2a26096acc05c74e65ff7e71
 Size (Text-Markdown-Discount-0.18.tar.gz) = 269175 bytes
 SHA1 (patch-MANIFEST) = a458ba174a0c673280295d01acf6883a8443cd4b
 SHA1 (patch-builder_MyBuilder.pm) = 941e78a43fb409da9f9740f685d8bce7886e6106
-SHA1 (patch-lib_Text_Markdown_Discount.xs) = 6e75b2ec3de2ffb661d826e554772efdc89165ef
 SHA1 (patch-t_12.utf8.t) = cea58d7c8a4e50d97cf031b2e7913314fe46b056
