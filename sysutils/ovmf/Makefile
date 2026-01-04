@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/10/23 06:37:52 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/01/04 13:51:43 wiz Exp $
 
 PKGNAME=		OVMF-0.0.20181116
 PKGREVISION=		5
@@ -18,6 +18,8 @@ COMMENT=	Sample UEFI firmware for virtual machines
 LICENSE=	modified-bsd
 
 SSP_SUPPORTED=		no
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../mk/bsd.prefs.mk"
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
