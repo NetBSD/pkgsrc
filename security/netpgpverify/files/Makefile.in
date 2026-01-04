@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.9 2020/11/01 11:28:35 wiz Exp $
+# $NetBSD: Makefile.in,v 1.10 2026/01/04 06:19:39 riastradh Exp $
 
 PROG=netpgpverify
 
@@ -49,6 +49,8 @@ tst:
 	./${PROG} -k pubring.gpg noversion.asc
 	@echo "testing dash-escaped text"
 	./${PROG} -k pubring.gpg dash-escaped-text.asc
+	@echo "testing gpg2-generated signature"
+	./${PROG} -k keypubring.gpg2 gpg2test.gpg2
 
 clean:
 	rm -rf *.core ${OBJS} ${PROG}

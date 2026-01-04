@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2020/11/01 11:28:35 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/01/04 06:19:39 riastradh Exp $
 
 DISTNAME=		netpgpverify-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		# empty
 DISTFILES=		# empty
