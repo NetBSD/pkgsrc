@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/10/24 22:08:51 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/01/04 15:36:52 wiz Exp $
 
 DISTNAME=	libfreefare-0.4.0
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=nfc-tools/libfreefare/releases/download/${DI
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://nfc-tools.org/index.php?title=Libfreefare
+HOMEPAGE=	https://nfc-tools.github.io/projects/libfreefare/
 COMMENT=	Convenient API for MIFARE card manipulations
 LICENSE=	gnu-lgpl-v3
 
