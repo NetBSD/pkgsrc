@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.702 2026/01/04 18:51:38 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.703 2026/01/04 19:47:23 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29237,3 +29237,66 @@ haproxy<2.9.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-45506
 haproxy<2.9.11	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-49214
 haproxy<2.9.10	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2024-53008
 haproxy<3.0.10	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-32464
+harfbuzz<10.2.0	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-56732
+hdf5-[0-9]*	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2020-18232
+hdf5-[0-9]*	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2020-18494
+hdf5<1.14.4	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-29157
+hdf5<1.14.4	stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-29158
+hdf5<1.14.4	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-29159
+hdf5<1.14.4	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-29160
+hdf5<1.14.4	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-29161
+hdf5<1.14.4	stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-29162
+hdf5<1.14.4	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-29163
+hdf5<1.14.4	stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-29164
+hdf5<1.14.4	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-29165
+hdf5<1.14.3	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-29166
+hdf5<1.14.4	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2024-32605
+hdf5<1.14.4	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2024-32606
+hdf5<1.14.4	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2024-32607
+hdf5<1.14.4	memory-corruption		https://nvd.nist.gov/vuln/detail/CVE-2024-32608
+hdf5<1.14.4	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2024-32609
+hdf5<1.14.4	memory-corruption		https://nvd.nist.gov/vuln/detail/CVE-2024-32610
+hdf5<1.14.4	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2024-32611
+hdf5<1.14.4	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2024-32612
+hdf5<1.14.4	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2024-32613
+hdf5<1.14.4	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2024-32614
+hdf5<1.14.4	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-32615
+hdf5<1.14.4	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2024-32616
+hdf5<1.14.4	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2024-32617
+hdf5<1.14.4	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-32618
+hdf5<1.14.4	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-32619
+hdf5<1.14.4	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2024-32620
+hdf5<1.14.4	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-32621
+hdf5<1.14.4	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2024-32622
+hdf5<1.14.4	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-32623
+hdf5<1.14.4	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-32624
+hdf5<1.14.4	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-33873
+hdf5<1.14.4	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-33874
+hdf5<1.14.4	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-33875
+hdf5<1.14.4	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-33876
+hdf5<1.14.4	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2024-33877
+hdf5<2.0.0	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-2153
+hdf5-[0-9]*	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-2308
+hdf5-[0-9]*	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-2309
+hdf5-[0-9]*	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-2310
+hdf5<2.0.0	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-2912
+hdf5<2.0.0	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2025-2913
+hdf5<2.0.0	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-2914
+hdf5<2.0.0	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-2915
+hdf5<2.0.0	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-2923
+hdf5<2.0.0	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-2924
+hdf5<2.0.0	memory-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-2925
+hdf5<2.0.0	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-2926
+heimdal<7.7.1	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-3116
+hledger<1.23	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-46888
+htmldoc<1.9.19	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2024-45508
+htmldoc<1.9.19	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-46478
+htop<3.4.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-37676
+hugin<2023.0	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-25442
+hugin<2023.0	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2024-25443
+hugin<2023.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-25445
+hugin<2023.0	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-25446
+hugo<0.125.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-32875
+hugo<0.139.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-55601
+hwloc<2.9.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-47022
+hyperscan<5.4.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-28711
