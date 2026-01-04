@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2025/12/21 10:10:40 nia Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/04 01:41:25 nia Exp $
 
 DISTNAME=	wine-5.0.5
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	https://dl.winehq.org/wine/source/${PKGVERSION_NOREV:R}/
 MASTER_SITES+=	http://mirrors.ibiblio.org/wine/source/${PKGVERSION_NOREV:R}/
@@ -18,6 +19,7 @@ GNU_CONFIGURE=	yes
 REPLACE_PERL+=	tools/winemaker/winemaker
 REPLACE_PERL+=	tools/winedump/function_grep.pl
 
+MKPIE_SUPPORTED=	no
 CHECK_PIE_SUPPORTED=	no
 
 ONLY_FOR_PLATFORM+=	*-*-i386 *-*-x86_64
@@ -58,6 +60,15 @@ CONFIGURE_ENV+=		ac_cv_cflags__Wl___enable_new_dtags=no
 .  endif
 # gethostbyname_r is in libc, but has a different calling convention
 CONFIGURE_ENV+=		wine_cv_linux_gethostbyname_r_6=no
+.endif
+
+.include "../../mk/compiler.mk"
+
+.if ${CC_VERSION:Mgcc-1*} || ${CC_VERSION:Mclang-*}
+CFLAGS+=	-Wno-incompatible-pointer-types
+CFLAGS+=	-Wno-implicit-function-declaration
+CXXFLAGS+=	-Wno-incompatible-pointer-types
+CXXFLAGS+=	-Wno-implicit-function-declaration
 .endif
 
 .include "../../mk/oss.buildlink3.mk"
