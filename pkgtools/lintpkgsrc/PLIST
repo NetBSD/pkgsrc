@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/03 17:43:15 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/01/04 15:02:32 rillig Exp $
 bin/lintpkgsrc
-man/cat1/lintpkgsrc.0
 man/man1/lintpkgsrc.1
