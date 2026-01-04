@@ -1,13 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2025/08/11 12:00:36 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/01/04 17:20:14 wiz Exp $
 bin/neocities${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
-${GEM_EXTSDIR}/gem_make.out
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/bin/neocities
-${GEM_LIBDIR}/ext/Rakefile
 ${GEM_LIBDIR}/ext/mkrf_conf.rb
 ${GEM_LIBDIR}/lib/neocities.rb
 ${GEM_LIBDIR}/lib/neocities/cli.rb
