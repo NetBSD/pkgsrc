@@ -1,4 +1,4 @@
-# $NetBSD: luaversion.mk,v 1.17 2022/06/28 09:39:59 nia Exp $
+# $NetBSD: luaversion.mk,v 1.18 2026/01/04 23:40:26 alnsn Exp $
 
 # This file determines which Lua version is used as a dependency for
 # a package.
@@ -8,7 +8,7 @@
 # LUA_VERSION_DEFAULT
 #	The preferred lua version to use.
 #
-#	Possible values: 51 52 53 54
+#	Possible values: 51 52 53 54 55
 #	Default: 54
 #
 # === Infrastructure variables ===
@@ -27,13 +27,13 @@
 #	is significant; those listed earlier are preferred over those
 #	listed later.
 #
-#	Possible values: 51 52 53 54
-#	Default: 54 53 52 51
+#	Possible values: 51 52 53 54 55
+#	Default: 55 54 53 52 51
 #
 # LUA_VERSIONS_INCOMPATIBLE
 #	The Lua versions that the package *cannot* build against.
 #
-#	Possible values: 51 52 53 54
+#	Possible values: 51 52 53 54 55
 #	Default: <empty>
 #
 # LUA_SELF_CONFLICT
@@ -80,7 +80,7 @@ BUILD_DEFS+=		LUA_VERSION_DEFAULT
 BUILD_DEFS_EFFECTS+=	LUA_PACKAGE
 
 LUA_VERSION_DEFAULT?=	54
-LUA_VERSIONS_ACCEPTED?=	54 53 52 51
+LUA_VERSIONS_ACCEPTED?=	55 54 53 52 51
 LUA_VERSIONS_INCOMPATIBLE?=# empty
 
 #
@@ -149,6 +149,12 @@ LUA_PACKAGE=		lua54
 LUA_PKGSRCDIR=		../../lang/lua54
 LUA_PKGPREFIX=		lua54
 LUA_BASEDEPENDS=	lua54>=5.4<5.5:${LUA_PKGSRCDIR}
+
+.elif ${_LUA_VERSION} == "55"
+LUA_PACKAGE=		lua55
+LUA_PKGSRCDIR=		../../lang/lua55
+LUA_PKGPREFIX=		lua55
+LUA_BASEDEPENDS=	lua55>=5.5<5.6:${LUA_PKGSRCDIR}
 
 .else
 PKG_FAIL_REASON+=	"No valid Lua version found"
