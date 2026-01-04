@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2025/12/31 00:47:58 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.23 2026/01/04 14:58:08 wiz Exp $
 bin/fish
 bin/fish_indent
 bin/fish_key_reader
@@ -1672,12 +1672,3 @@ share/themes/snow-day.theme
 share/themes/solarized.theme
 share/themes/tomorrow-night-bright.theme
 share/themes/tomorrow.theme
-@pkgdir share/fish/vendor_functions.d
-@pkgdir share/fish/vendor_conf.d
-@pkgdir share/fish/vendor_completions.d
-@pkgdir share/fish/themes
-@pkgdir share/fish/prompts
-@pkgdir share/doc/fish/_sources
-@pkgdir etc/fish/functions
-@pkgdir etc/fish/conf.d
-@pkgdir etc/fish/completions
