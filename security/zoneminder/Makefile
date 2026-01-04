@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2026/01/04 00:11:26 gdt Exp $
+# $NetBSD: Makefile,v 1.96 2026/01/04 23:29:54 gdt Exp $
 
 VERSION=	1.36.37
 # Distfile is ZoneMinder but package and tarball contents are zoneminder.
@@ -6,7 +6,7 @@ NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
 
 PKGNAME=	${DISTNAME:S/${NAME_DIST}-/${NAME_LOWER}-/}
-PKGREVISION=	2
+PKGREVISION=	3
 DISTNAME=	${NAME_DIST}-${VERSION}
 WRKSRC=		${WRKDIR}/${NAME_LOWER}-${VERSION}
 CATEGORIES=	security
@@ -29,13 +29,22 @@ HOMEPAGE=	https://www.zoneminder.com/
 COMMENT=	Video camera security and surveillance solution
 LICENSE=	gnu-gpl-v2
 
-# ZoneMinder without a web server does not really make sense, and if
-# it did, what is omitted is surely not right.  For now, require a
-# choice of webserver.
+# ZoneMinder without a web server does not really make sense (and if
+# it did, what is omitted is surely not right).  Require a webserver
+# (until someone wanting to not have one provides rationale and a
+# patch).
 PKG_OPTIONS_VAR=		PKG_OPTIONS.zoneminder
 PKG_OPTIONS_REQUIRED_GROUPS=	webserver
 PKG_OPTIONS_GROUP.webserver=	apache nginx
 PKG_SUGGESTED_OPTIONS=		apache
+
+# ZoneMinder requires a database, historically mysql only.  This
+# package supports mysql and MariaDB, which must be handled separately
+# because p5-DBD-mysql is (2026-01) mysql only, with p5-DBD-MariaDB
+# for MariaDB.
+PKG_OPTIONS_REQUIRED_GROUPS+=	database
+PKG_OPTIONS_GROUP.database=	mysql mariadb
+PKG_SUGGESTED_OPTIONS+=		mysql
 
 .include "../../mk/bsd.options.mk"
 
@@ -187,18 +196,6 @@ DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-Number-Bytes-Human-[0-9]*:../../textproc/p5-Number-Bytes-Human
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
-# zoneminder needs a database.  While the longstanding approach is
-# mysql, it's become normal to use mariadb instead.  p5-DBD-mysql used
-# to talk to mariadb just fine, but now it doesn't.  zoneminder has
-# improved DB type selection to deal with this and use p5-DBD-mariadb
-# instead.
-#   https://github.com/ZoneMinder/zoneminder/pull/3914/commits
-# \todo Figure out if those commits are in the packaged version, now
-# and after updating to the latest micro.  If not pull them in as a patch.
-# \todo Consider options, vs just saying you need to use mariadb.
-#DEPENDS+=	p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
-#DEPENDS+=	p5-DBD-MariaDB-[0-9]*:../../databases/p5-DBD-MariaDB
-
 # A large subset of perl scripts set PATH explicitly and need to patched.
 # See "PATH FIXUPS" below.
 # \todo Teach pkglint that this variable is a list.
@@ -216,6 +213,44 @@ ZM_PERL_PATH+=	scripts/zmupdate.pl.in
 ZM_PERL_PATH+=	scripts/zmvideo.pl.in
 ZM_PERL_PATH+=	scripts/zmwatch.pl.in
 ZM_PERL_PATH+=	scripts/zmx10.pl.in
+
+## DATABASE
+
+# In case of trouble, see files/upstream-PR-3914 for p5-DBD-mysql woes
+# and changes to address them.n
+
+# There is no reason to suspect that any version in pkgsrc is
+# problematic, but most have not been tested.
+.if !empty(PKG_OPTIONS:Mmariadb)
+# 2026-01: 1.36 works with mariadb 10.6 on NetBSD
+# 2024-01: 1.36 works with mariadb 11.2 on GNU/Linux
+DEPENDS+=			p5-DBD-MariaDB-[0-9]*:../../databases/p5-DBD-MariaDB
+MYSQL_VERSIONS_ACCEPTED=	mariadb118 mariadb114 mariadb1011 mariadb106 mariadb105
+CMAKE_CONFIGURE_ARGS+=		-DZM_DB_TYPE=MariaDB
+
+# Once you cross into p5-DBD-mysql 5, more changes are needed.
+# \todo Pull these into the package as patches or wait for upstream.
+#    https://github.com/ZoneMinder/zoneminder/pull/3914/
+
+# in Database.pm, comment out mysql_auto_reconnect because MariaDB doesn't have that.
+#$dbh->{mysql_auto_reconnect} = 1;
+#Fatal('Can\'t set mysql_auto_reconnect on in database connection')
+#  unless $dbh->{mysql_auto_reconnect};
+
+# add to includes/database.php: There is no pdo_MariaDB; use pdo_mysql instead.
+# $dsn = ZM_DB_TYPE;
+# if ( $dsn == 'MariaDB' ) {
+#   $dsn = 'mysql';
+# }
+
+.endif
+.if !empty(PKG_OPTIONS:Mmysql)
+DEPENDS+=			p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
+MYSQL_VERSIONS_ACCEPTED=	80
+CMAKE_CONFIGURE_ARGS+=		-DZM_DB_TYPE=mysql
+.endif
+
+.include "../../mk/mysql.buildlink3.mk"
 
 ## PHP
 
@@ -248,6 +283,12 @@ BUILD_DEFS+=		APACHE_USER APACHE_GROUP
 
 CMAKE_CONFIGURE_ARGS+=	-DZM_WEB_USER=${APACHE_USER}
 CMAKE_CONFIGURE_ARGS+=	-DZM_WEB_GROUP=${APACHE_GROUP}
+
+# We set ZM_PATH_ZMS to a zm-specific cgi-bin directory, so that
+# enabling that in apache (or nginx) exposes nph-zms, and not whatever
+# other random cgi scripts have been installed by other packages.
+# This sets the path to be used, and httpd/nginx config must alias
+# that path to $PREFIX/libexec/zoneminder/cgi-bin/.
 CMAKE_CONFIGURE_ARGS+=	-DZM_PATH_ZMS=zm/cgi-bin/nph-zms
 
 .if !empty(PKG_OPTIONS:Mapache)
@@ -255,27 +296,12 @@ CMAKE_CONFIGURE_ARGS+=	-DZM_PATH_ZMS=zm/cgi-bin/nph-zms
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php
 .endif
 .if !empty(PKG_OPTIONS:Mnginx)
-# \todo Actually test this option.
+# \todo Actually test this option.  Add an nginx config fragment to files/examples.
 DEPENDS+=	nginx-[0-9]*:../../www/nginx
 DEPENDS+=	${PHP_PKG_PREFIX}-fpm>=${PHP_BASE_VERS}:../../www/php-fpm
 .endif
 
-## MYSQL
-
-# 1.36 works with mariadb 10.6 on NetBSD
-# 1.36 works with mariadb 11.2 on GNU/Linux
-# \todo Evaluate and exclude troublesome versions.
-.include "../../mk/mysql.buildlink3.mk"
-
 ## PATH FIXUPS
-
-# \todo Verify that this is truly no longer necessary with 1.36.
-# # Patch the db creation script for the cgi bin path.
-# SUBST_CLASSES+=			dbpaths-path
-# SUBST_MESSAGE.dbpaths-path=	Adjusting default paths in configuration.
-# SUBST_STAGE.dbpaths-path=	pre-configure
-# SUBST_FILES.dbpaths-path=	db/zm_create.sql.in
-# SUBST_SED.dbpaths-path+=	-e 's|/cgi-bin/nph-zms|/zm/cgi-bin/nph-zms|g'
 
 # Remediate idiom in perl scripts to set PATH, by adding ${PREFIX}/bin.
 # \todo Some scripts use zmconf to get a PATH and perhaps a change
