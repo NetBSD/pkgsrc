@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.26 2025/06/01 22:18:40 thor Exp $
+# $NetBSD: options.mk,v 1.27 2026/01/04 01:03:43 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mc
 PKG_OPTIONS_REQUIRED_GROUPS=	screen
 PKG_OPTIONS_GROUP.screen=	ncurses slang
-PKG_SUPPORTED_OPTIONS=		mc-charset x11 libssh2 nls samba
+PKG_SUPPORTED_OPTIONS=		mc-charset x11 libssh2 nls
 PKG_SUGGESTED_OPTIONS=		mc-charset slang nls
 
 PKG_OPTIONS_LEGACY_OPTS+=	sftp:libssh2
@@ -62,11 +62,4 @@ USE_TOOLS+=	msgfmt msgmerge xgettext
 .include "../../devel/gettext-lib/buildlink3.mk"
 .else
 CONFIGURE_ARGS+= --disable-nls
-.endif
-
-.if !empty(PKG_OPTIONS:Msamba)
-CONFIGURE_ARGS+=	--enable-vfs-smb
-.include "../../net/samba4/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-vfs-smb
 .endif
