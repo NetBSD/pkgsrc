@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.192 2025/12/22 06:08:08 adam Exp $
+# $NetBSD: Makefile,v 1.193 2026/01/04 09:10:33 wiz Exp $
 
 DISTNAME=	simgear-2020.3.11
 PKGREVISION=	64
@@ -13,6 +13,8 @@ LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
+
+BROKEN=		"Needs updating for supporting boost 1.89+"
 
 CONFIGURE_DIRS=		sgbuild
 BUILD_DIRS=		sgbuild
