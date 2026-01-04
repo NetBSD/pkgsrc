@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.69 2026/01/04 11:21:51 adam Exp $
+$NetBSD: CHANGES-2026,v 1.70 2026/01/04 11:41:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -93,3 +93,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/lazygit to 0.58.0 [pin 2026-01-04]
 	Updated sysutils/ansible to 13.2.0 [adam 2026-01-04]
 	Updated multimedia/mkvtoolnix to 97.0 [adam 2026-01-04]
+	Updated meta-pkgs/bulk-test-poppler to 20260104 [wiz 2026-01-04]
