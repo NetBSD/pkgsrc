@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2020/02/15 02:19:49 manu Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/01/04 19:55:10 adam Exp $
 bin/gammu
 bin/gammu-config
 bin/gammu-smsd
@@ -152,6 +152,7 @@ share/doc/gammu/manual/project/index.rst
 share/doc/gammu/manual/project/install.rst
 share/doc/gammu/manual/project/localization.rst
 share/doc/gammu/manual/project/motivation.rst
+share/doc/gammu/manual/project/releasing.rst
 share/doc/gammu/manual/project/roadmap.rst
 share/doc/gammu/manual/project/testing.rst
 share/doc/gammu/manual/project/versioning.rst
