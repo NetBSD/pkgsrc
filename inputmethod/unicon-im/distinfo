@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:49:47 nia Exp $
+$NetBSD: distinfo,v 1.13 2026/01/04 10:47:27 wiz Exp $
 
 BLAKE2s (unicon-1.2.tar.gz) = 2b80cf76d15fc038250ef623a537807a0e035fe95782a13c957eb3a8402f3762
 SHA512 (unicon-1.2.tar.gz) = fa2e25f451b9eac27702fca0a9066532ffbfe118ec95bb3d6035a4279543882aaa23870d3392d2bf3731d9b3b98cfb8955857f7e46bb90693dc21b3dc5a33ee1
@@ -17,5 +17,6 @@ SHA1 (patch-aj) = 13592873c58a68837fd9a62052640121452dd343
 SHA1 (patch-ak) = e73ed21080cf92db41038acec7ea3f574b3bad59
 SHA1 (patch-al) = af704d8e0b5712f0bc1286f7c1dfbf2f761e735b
 SHA1 (patch-am) = 36bed0bf2167a3ab5919d02d191e405e68687108
+SHA1 (patch-configure) = ab71c13b31a678b3cc3502a78f14200df0a8f0b3
 SHA1 (patch-server_TLS__ImmOp.cpp) = 89992124de68fd00ba5a7f4c73c9638a23a559d0
 SHA1 (patch-server_TLS__MemFile.cpp) = f5231f5af38e9d833035bc6dccf7758beb02764c

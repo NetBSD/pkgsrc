@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/06 14:25:21 asau Exp $
+# $NetBSD: Makefile,v 1.21 2026/01/04 10:47:27 wiz Exp $
 
 DISTNAME=	unicon-1.2
 PKGNAME=	unicon-im-1.2
@@ -20,6 +20,7 @@ GNU_CONFIGURE=	YES
 .include "../../mk/bsd.prefs.mk"
 
 CFLAGS+=	-D_POSIX_THREAD_SYSCALL_SOFT=0
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 INSTALL_MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX}
 
