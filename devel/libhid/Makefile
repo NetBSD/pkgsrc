@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.30 2025/04/17 21:50:28 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2026/01/04 15:39:29 wiz Exp $
 
 DISTNAME=	libhid-0.2.16
 PKGREVISION=	19
 CATEGORIES=	devel
 MASTER_SITES=	http://sourceforge.net/projects/salix-sbo/files/13.37/libhid/
-MASTER_SITES+=	https://alioth.debian.org/frs/download.php/file/1958/
+#MASTER_SITES+=	https://alioth.debian.org/frs/download.php/file/1958/
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libhid.alioth.debian.org/
+#HOMEPAGE=	http://libhid.alioth.debian.org/
 COMMENT=	Abstraction layer for HID-class devices over USB/serial
 
 TOOL_DEPENDS+=	docbook-[0-9]*:../../textproc/docbook
