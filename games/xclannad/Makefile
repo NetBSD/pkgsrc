@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/04/24 14:14:06 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/01/04 09:19:19 wiz Exp $
 #
 
 DISTNAME=	xclannad-7hc
@@ -33,6 +33,12 @@ SUBST_SED.path=		-e 's|/usr/local/|${PREFIX}/|g'
 SUBST_SED.path+=	-e 's|/usr/pkg/|${PREFIX}/|g'
 SUBST_SED.path+=	-e 's|/usr/X11R6/|${X11BASE}/|g'
 SUBST_SED.path+=	-e 's|/usr/X11R7/|${X11BASE}/|g'
+
+SUBST_CLASSES+=		ar
+SUBST_MESSAGE.ar=	Fixing ar(1) arguments.
+SUBST_STAGE.ar=		pre-configure
+SUBST_FILES.ar=		*/Makefile.in
+SUBST_SED.ar=		-e 's| clq | cq |g'
 
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=    gtk2+>=2.6.0
