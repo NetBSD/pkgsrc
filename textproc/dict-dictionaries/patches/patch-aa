@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/12/27 02:43:47 uebayasi Exp $
+$NetBSD: patch-aa,v 1.2 2026/01/04 14:08:23 wiz Exp $
 
---- dict-gazetteer-1.3/format.c.orig	Mon Jul 21 00:21:24 1997
+--- dict-gazetteer-1.3/format.c.orig	1997-07-20 15:21:24.000000000 +0000
 +++ dict-gazetteer-1.3/format.c
-@@ -22,7 +22,7 @@
+@@ -15,6 +15,7 @@
+ #include <ctype.h>
+ #include <math.h>
+ #include <time.h>
++#include <unistd.h>
+ #include <sys/time.h>
+ 
+ #define INCLUDE_STATE 0		/* If 1, also index "City, State".
+@@ -22,7 +23,7 @@
                                     This is usually clearer when
                                     searching. */
  
@@ -11,3 +19,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/12/27 02:43:47 uebayasi Exp $
  extern int    atoi(char *);
  extern int    printf( char *, ... );
  extern int    fprintf( FILE *, char *, ... );
+@@ -280,7 +281,7 @@ static void zips( char *buffer )
+                 allocation[strlen(allocation)-1] = 0;
+ 
+    for (i = 1; i < strlen(name); i++) {
+-      if (name[i-1] != ' ') name[i] = tolower(name[i]);
++      if (name[i-1] != ' ') name[i] = tolower((unsigned char)name[i]);
+    }
+ 
+    if (strcmp(name,zip)) {
