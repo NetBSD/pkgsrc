@@ -1183,10 +1183,29 @@ read_sig_subpackets(pgpv_t *pgp, pgpv_sigpkt_t *sigpkt, uint8_t *p, size_t pktle
 			sigpkt->sig.revoked = *p++ + 1;
 			sigpkt->sig.why_revoked = (char *)(void *)p;
 			break;
-		case SUBPKT_ISSUER_FINGERPRINT:
+		case SUBPKT_ISSUER_FINGERPRINT: {
+			/* RFC 9580, Sec. 5.2.3.35 Issuer Fingerprint */
+			unsigned N;
+
 			sigpkt->sig.ifver = *p;
+			switch (sigpkt->sig.ifver) {
+			case 4:
+				N = 20;
+				break;
+			case 6:
+				N = 32;
+				break;
+			default:
+				printf("unknown issuer fpr version %d\n",
+				    sigpkt->sig.ifver);
+				return 0;
+			}
 			sigpkt->sig.issuer_fingerprint = &p[1];
+			memcpy(sigpkt->sig.signer,
+			    &p[1 + N - sizeof(sigpkt->sig.signer)],
+			    sizeof(sigpkt->sig.signer));
 			break;
+		}
 		default:
 			printf("Ignoring unusual/reserved signature subpacket %d\n", subpkt.tag);
 			break;
