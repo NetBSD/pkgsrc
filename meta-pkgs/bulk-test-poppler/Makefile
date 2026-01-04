@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/11/16 09:05:03 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/01/04 11:40:55 wiz Exp $
 
-DISTNAME=	bulk-test-poppler-20251116
+DISTNAME=	bulk-test-poppler-20260104
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -14,7 +14,8 @@ RESTRICTED=		Just for test build purposes
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-DEPENDS+=	calibre-[0-9]*:../../misc/calibre
+# needs podofo<1, but scribus needs >=1
+#DEPENDS+=	calibre-[0-9]*:../../misc/calibre
 DEPENDS+=	cups-filters-[0-9]*:../../print/cups-filters
 DEPENDS+=	gimp-[0-9]*:../../graphics/gimp
 DEPENDS+=	gnome-tracker-miners-[0-9]*:../../sysutils/gnome-tracker-miners
