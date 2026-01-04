@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:06:04 nia Exp $
+$NetBSD: distinfo,v 1.11 2026/01/04 19:56:20 adam Exp $
 
-BLAKE2s (python-gammu-2.12.tar.gz) = a1c80e5bf5bf0982fe7d44c656137e758d6edde5784c771bcc44fe416c3d2cc4
-SHA512 (python-gammu-2.12.tar.gz) = 1c50d38a3ab86298ef5d5d9f297844980ec87f2bf3c84727d385d22b4dfdbf5e09b6fc727a9ad9c25f7f2bbc92f5c58b17abf5537dba980a87f07cb0347cb6f2
-Size (python-gammu-2.12.tar.gz) = 135442 bytes
+BLAKE2s (python-gammu-3.2.4.tar.gz) = 2be6b4b409480c8b7a8b70d16cd2b69f173712823c687bea8b4ac54d50e5f2d8
+SHA512 (python-gammu-3.2.4.tar.gz) = 80908c0b587677ca81a64e22993963f23a394c5c8e3b762dc4f5858d82843dbb0f99180a6ab34649d238b0f2b78a8bd0109706749fc632cb2d8df7a735edc2b9
+Size (python-gammu-3.2.4.tar.gz) = 138986 bytes
