@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/10/23 20:36:30 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/01/04 15:38:24 wiz Exp $
 
 DISTNAME=	libgnt-2.14.0
 PKGREVISION=	16
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/pidgin/libgnt
+HOMEPAGE=	https://keep.imfreedom.org/libgnt/libgnt
 COMMENT=	GLib Ncurses Toolkit
 LICENSE=	gnu-gpl-v2
 
