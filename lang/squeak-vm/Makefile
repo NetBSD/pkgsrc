@@ -1,21 +1,17 @@
-# $NetBSD: Makefile,v 1.70 2025/10/23 20:38:06 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.71 2026/01/04 11:28:20 wiz Exp $
 
 SQUEAK_VERSION=	4.10.2.2614
-
 DISTNAME=	Squeak-${SQUEAK_VERSION}-src
 PKGNAME=	squeak-vm-${SQUEAK_VERSION:C/-/./}
 PKGREVISION=	36
 CATEGORIES=	lang
 MASTER_SITES=	https://files.squeak.org/
+DIST_SUBDIR=	squeak
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://squeak.org/
 COMMENT=	Full Smalltalk 80 with portability to UN*X, Mac, and Windows
 LICENSE=	2-clause-bsd
-
-DIST_SUBDIR=		squeak
-CHECK_PORTABILITY_SKIP=	unix/config/configure	# not used anymore
 
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
@@ -30,6 +26,13 @@ CMAKE_CONFIGURE_ARGS+=	-DDEVOSSAUDIO=${DEVOSSAUDIO}
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 LDFLAGS.SunOS+=	-lsocket -lnsl -lm
+
+CFLAGS+=	-Wno-int-conversion
+CFLAGS+=	-Wno-implicit-function-declaration
+CFLAGS+=	-Wno-implicit-int
+CFLAGS+=	-Wno-incompatible-pointer-types
+
+CHECK_PORTABILITY_SKIP=	unix/config/configure	# not used anymore
 
 # UUID routines are in libc:
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-luuid
