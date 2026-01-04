@@ -1,0 +1,15 @@
+$NetBSD: patch-dict-misc-1.5_configure,v 1.1 2026/01/04 14:08:23 wiz Exp $
+
+Add missing return value.
+
+--- dict-misc-1.5/configure.orig	2026-01-04 13:57:48.588608673 +0000
++++ dict-misc-1.5/configure
+@@ -694,7 +694,7 @@ cross_compiling=$ac_cv_prog_cc_cross
+ cat > conftest.$ac_ext <<EOF
+ #line 696 "configure"
+ #include "confdefs.h"
+-main(){return(0);}
++int main(){return(0);}
+ EOF
+ if { (eval echo configure:700: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
+   ac_cv_prog_cc_works=yes
