@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2026/01/03 15:20:16 pin Exp $
+# $NetBSD: Makefile,v 1.29 2026/01/04 16:17:05 pin Exp $
 
 DISTNAME=	ncgopher-0.8.0
 CATEGORIES=	net
@@ -20,8 +20,6 @@ USE_TOOLS+=	pkg-config perl gmake
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ncurses}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.sqlite3}/lib
 
@@ -32,7 +30,6 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/rust/cargo.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
