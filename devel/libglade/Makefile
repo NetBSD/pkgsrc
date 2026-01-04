@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2025/10/23 20:36:30 wiz Exp $
+# $NetBSD: Makefile,v 1.133 2026/01/04 15:38:03 wiz Exp $
 
 DISTNAME=		libglade-2.6.4
 PKGREVISION=		59
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/2.6/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.jamesh.id.au/software/libglade/
+HOMEPAGE=		https://www.jamesh.id.au/software/libglade/
 COMMENT=		Runtime interpreter for GLADE GUI files
 LICENSE=		gnu-lgpl-v2
 
