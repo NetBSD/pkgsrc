@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/07/25 11:12:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/01/04 11:30:47 wiz Exp $
 
 DISTNAME=	boolstuff-0.1.16
 PKGREVISION=	2
@@ -16,5 +16,8 @@ USE_LANGUAGES=	c c++
 TOOLS_BROKEN+=	perl
 
 PKGCONFIG_OVERRIDE+=	boolstuff-0.1.pc.in
+
+# BoolExprParser.cpp:145:35: error: ISO C++17 does not allow dynamic exception specifications
+FORCE_CXX_STD=	c++11
 
 .include "../../mk/bsd.pkg.mk"
