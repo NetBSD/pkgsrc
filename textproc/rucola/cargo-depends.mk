@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2025/11/24 11:47:05 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2026/01/05 11:05:20 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -58,6 +58,7 @@ CARGO_CRATE_DEPENDS+=	darling_core-0.20.11
 CARGO_CRATE_DEPENDS+=	darling_macro-0.20.11
 CARGO_CRATE_DEPENDS+=	deranged-0.4.0
 CARGO_CRATE_DEPENDS+=	deunicode-1.6.2
+CARGO_CRATE_DEPENDS+=	diff-0.1.13
 CARGO_CRATE_DEPENDS+=	directories-6.0.0
 CARGO_CRATE_DEPENDS+=	dirs-1.0.5
 CARGO_CRATE_DEPENDS+=	dirs-sys-0.5.0
@@ -152,6 +153,7 @@ CARGO_CRATE_DEPENDS+=	plist-1.7.1
 CARGO_CRATE_DEPENDS+=	potential_utf-0.1.2
 CARGO_CRATE_DEPENDS+=	powerfmt-0.2.0
 CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.21
+CARGO_CRATE_DEPENDS+=	pretty_assertions-1.4.1
 CARGO_CRATE_DEPENDS+=	prettyplease-0.2.32
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.95
 CARGO_CRATE_DEPENDS+=	pwd-1.4.0
@@ -271,6 +273,7 @@ CARGO_CRATE_DEPENDS+=	wit-bindgen-rt-0.39.0
 CARGO_CRATE_DEPENDS+=	writeable-0.6.1
 CARGO_CRATE_DEPENDS+=	xdg-2.5.2
 CARGO_CRATE_DEPENDS+=	yaml-rust-0.4.5
+CARGO_CRATE_DEPENDS+=	yansi-1.0.1
 CARGO_CRATE_DEPENDS+=	yoke-0.8.0
 CARGO_CRATE_DEPENDS+=	yoke-derive-0.8.0
 CARGO_CRATE_DEPENDS+=	zerocopy-0.8.27

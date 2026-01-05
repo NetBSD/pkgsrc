@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/12/09 14:03:13 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/05 11:05:20 wiz Exp $
 
-DISTNAME=	rucola-0.8.1
+DISTNAME=	rucola-0.8.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Linus-Mussmaecher/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
