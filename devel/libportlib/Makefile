@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/12/19 10:46:08 nia Exp $
-#
+# $NetBSD: Makefile,v 1.20 2026/01/05 09:19:06 wiz Exp $
 
 DISTNAME=		portlib-1.01
 PKGNAME=		libportlib-1.01
@@ -7,7 +6,7 @@ CATEGORIES=		devel
 MASTER_SITES=		https://www.aydogan.net/distfiles/devel/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		${MASTER_SITES}
+#HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Portable file locking and directory reading
 
 MAKE_JOBS_SAFE=		no
