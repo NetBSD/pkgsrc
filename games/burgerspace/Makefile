@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2025/12/12 10:14:01 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/01/05 21:37:12 ktnb Exp $
 
-DISTNAME=	burgerspace-1.9.4
-PKGREVISION=	1
+DISTNAME=	burgerspace-1.10.0
 CATEGORIES=	games
-#MASTER_SITES=	http://perso.b2b2c.ca/~sarrazip/dev/
+MASTER_SITES=	http://gvlsywt.cluster051.hosting.ovh.net/dev/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gvlsywt.cluster051.hosting.ovh.net/dev/burgerspace.html
