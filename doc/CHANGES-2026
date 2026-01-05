@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.82 2026/01/05 01:41:01 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.83 2026/01/05 01:42:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -110,3 +110,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-astroid to 4.0.3 [wiz 2026-01-05]
 	Updated devel/py-filelock to 3.20.2 [wiz 2026-01-05]
 	Updated audio/py-last to 7.0.1 [wiz 2026-01-05]
+	Updated textproc/py-sphinx-autodoc-typehints to 3.6.2 [wiz 2026-01-05]
