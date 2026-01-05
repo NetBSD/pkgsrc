@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2025/10/23 20:39:56 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2026/01/05 14:08:23 adam Exp $
 
 BUILDLINK_TREE+=	gtk4
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gtk4
 GTK4_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtk4+=	gtk4>=4.0.3
-BUILDLINK_ABI_DEPENDS.gtk4+=	gtk4>=4.18.6nb3
+BUILDLINK_ABI_DEPENDS.gtk4+=	gtk4>=4.20.3
 BUILDLINK_PKGSRCDIR.gtk4?=	../../x11/gtk4
 
 .include "../../devel/glib2/buildlink3.mk"
@@ -15,6 +15,7 @@ BUILDLINK_PKGSRCDIR.gtk4?=	../../x11/gtk4
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/graphene/buildlink3.mk"
 .include "../../graphics/libepoxy/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 
 pkgbase := gtk4
 .include "../../mk/pkg-build-options.mk"
