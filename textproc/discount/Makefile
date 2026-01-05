@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2026/01/04 21:56:31 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/01/05 08:42:29 wiz Exp $
 
 DISTNAME=		discount-2.2.7d
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=Orc/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -23,6 +23,8 @@ CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--shared
 CONFIGURE_ARGS+=	--enable-all-features
+
+CFLAGS.NetBSD+=		-funsigned-char
 
 USE_LIBTOOL=		yes
 
