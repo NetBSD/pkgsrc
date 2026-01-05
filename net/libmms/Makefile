@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2019/06/22 11:52:31 nia Exp $
+# $NetBSD: Makefile,v 1.14 2026/01/05 09:15:23 wiz Exp $
 
 DISTNAME=	libmms-0.6.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmms/}
 
 MAINTAINER=	jfranz@bsdprojects.net
-HOMEPAGE=	https://sourceforge.net/projects/libmms
+HOMEPAGE=	https://sourceforge.net/projects/libmms/
 COMMENT=	Library for parsing mms:// and mmsh:// type network streams
 LICENSE=	gnu-lgpl-v2.1
 
