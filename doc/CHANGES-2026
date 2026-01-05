@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.96 2026/01/05 10:12:10 adam Exp $
+$NetBSD: CHANGES-2026,v 1.97 2026/01/05 10:45:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -125,3 +125,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/lua-filesystem to 1.9.0 [alnsn 2026-01-05]
 	Updated emulators/qemu to 10.2.0 [adam 2026-01-05]
 	Updated sysutils/qemu-guest-agent to 10.2.0 [adam 2026-01-05]
+	Updated devel/liblangtag to 0.6.8 [wiz 2026-01-05]
