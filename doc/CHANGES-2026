@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.92 2026/01/05 02:55:08 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.93 2026/01/05 05:49:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -120,3 +120,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/khard to 0.20.1 [wiz 2026-01-05]
 	Updated graphics/opencv to 4.13.0 [wiz 2026-01-05]
 	Updated graphics/opencv-contrib-face to 4.13.0 [wiz 2026-01-05]
+	Updated devel/cargo-nextest to 0.9.118 [pin 2026-01-05]
