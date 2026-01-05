@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:43:45 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/01/05 21:39:00 ktnb Exp $
 
-BLAKE2s (afternoonstalker-1.1.6.tar.gz) = 60f1b5c13e4e8805340b524012b75c3771893bb4f0d7aa350bba47c8cebf7066
-SHA512 (afternoonstalker-1.1.6.tar.gz) = 4d823abc5f939bc6322729548abb0adc43b56b5d5e035578f15084f4e8f6ce80bd7b7dc3ffbe71530975b7c02962ea93405e2ad13de8a50303ccfdde543cd6c7
-Size (afternoonstalker-1.1.6.tar.gz) = 186724 bytes
+BLAKE2s (afternoonstalker-1.2.0.tar.gz) = 6865b8176fd5727f80e92ad8bf95411705256aba7182a48a661c98b46db53a20
+SHA512 (afternoonstalker-1.2.0.tar.gz) = 9137bd6a6d2bd0a58b40952d149a8e742d575f61393c2e20b6a18f6a9ed74331cbea7a94280d2fa31e9162e7d9a1d1618e38e81f91e618ee074fd6b846fb74a4
+Size (afternoonstalker-1.2.0.tar.gz) = 189534 bytes
