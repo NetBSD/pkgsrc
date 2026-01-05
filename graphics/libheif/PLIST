@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/07/06 09:29:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/01/05 01:55:49 wiz Exp $
 bin/heif-convert
 bin/heif-dec
 bin/heif-enc
@@ -25,6 +25,7 @@ include/libheif/heif_regions.h
 include/libheif/heif_security.h
 include/libheif/heif_sequences.h
 include/libheif/heif_tai_timestamps.h
+include/libheif/heif_text.h
 include/libheif/heif_tiling.h
 include/libheif/heif_uncompressed.h
 include/libheif/heif_version.h
