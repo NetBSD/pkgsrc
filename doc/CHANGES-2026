@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.103 2026/01/05 14:13:38 adam Exp $
+$NetBSD: CHANGES-2026,v 1.104 2026/01/05 14:49:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -136,3 +136,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/gtk4 to 4.20.3 [adam 2026-01-05]
 	Updated devel/catch2 to 3.12.0 [adam 2026-01-05]
 	Updated devel/py-cbor2 to 5.8.0 [adam 2026-01-05]
+	Updated devel/gobject-introspection to 1.86.0 [ryoon 2026-01-05]
