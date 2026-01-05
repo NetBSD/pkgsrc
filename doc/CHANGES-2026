@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.104 2026/01/05 14:49:12 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.105 2026/01/05 16:02:51 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -137,3 +137,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/catch2 to 3.12.0 [adam 2026-01-05]
 	Updated devel/py-cbor2 to 5.8.0 [adam 2026-01-05]
 	Updated devel/gobject-introspection to 1.86.0 [ryoon 2026-01-05]
+	Updated security/zoneminder to 1.36.37.7 [gdt 2026-01-05]
