@@ -9,46 +9,55 @@ hand-typing SQL UPDATE statements.
 We write /var for ${VARBASE}, /usr/pkg for ${PREFIX}, and /usr/pkg/etc
 for ${PKG_SYSCONFDIR}, without loss of generality.
 
-# pkgsrc-specific notes
+# Meta
 
-## Choice of jpeg implementation
+This README is not really debugged.  If you think it might be wrong,
+speak up.
+
+See upstream instructions at
+https://zoneminder.readthedocs.io/en/stable/installationguide/ubuntu.html
+which are for Ubuntu, but seem mostly generic.
+
+# Choice of jpeg implementation
 
 ZoneMinder claims to benefit dramatically from using libjpeg-turbo.
 Because `JPEG_DEFAULT=libjpeg-turbo` is the default setting, no action
 is required.
 
-## User and Group
+# User and Group
 
 zoneminder uses `APACHE_USER` and `APACHE_GROUP`.  These are www by
 default, but people set them to fpm for use with nginx and php_fpm.
 It is important that apache, zoneminder, and any existing directories
 all agree.
 
+See "Step 6: Set permissions", and use APACHE_GROUP.
+
+# Choice of database
+
+The choices are mysql and MariaDB.  While in some sense MariaDB is a
+kind of mysql, p5-DBD has decided that it's not.  Thus there is a
+package option to choose the database.  Pay attention to the example
+config which sets `ZM_DB_TYPE` accordingly, and avoid (as always)
+unintended local divergence.
+
 # MySQL configuration and initial database creation
 
-(It seems that zoneminder only works with MySQL.)
-
-Condider adding `bind-address=127.0.0.1` to `etc/my.conf`, if you are
-using mysql only for zoneminder and do not want it accessible from the
-network.
-
-See upstream instructions at
-https://zoneminder.readthedocs.io/en/stable/installationguide/ubuntu.html
-which are for Ubuntu, but seem mostly generic.
+Add `bind-address=127.0.0.1` to `etc/my.conf` if you are using mysql
+only for zoneminder and therefore do not want it accessible from the
+network.  Or do the equivalent for MariaDB.
 
 Specifically, see "Step 5: Configure the ZoneMinder Database".
 
 The default password is "zmpass".  You should change this to something
-else, and set `ZM_DB_PASS` in
-e.g. `/usr/pkg/etc/zm/conf.d/zmcustom.conf`.
+else, and set `ZM_DB_PASS` in `/usr/pkg/etc/zm/conf.d/zmcustom.conf`.
 
-# Other setup
-
-See "Step 6: Set permissions", and use APACHE_GROUP.
+# PHP
 
 See "Step 9: Edit Timezone in PHP".  Otherwise, access to streams will
-fail.  See https://github.com/ZoneMinder/ZoneMinder/issues/1552 for
-more information.
+fail because authentication hashes will mismatch.  See
+https://github.com/ZoneMinder/ZoneMinder/issues/1552 for more
+information.
  
 # Web setup
 
@@ -62,8 +71,8 @@ and expire.  headers is default on.  Enabling a zoneminder apache
 module does not make sense, but upstream maybe implies that you
 should.
 
-For now One needs to use prefork instead of event with cgid, because
-php is built without threads.
+One used to have to use prefork instead of event with cgid, because
+php was built without threads.  Now, other MPMs might work.
 
 Zoneminder installs
 /usr/pkg/share/examples/zoneminder/apache/httpd-zoneminder.conf,
@@ -87,74 +96,56 @@ file.  Likely one would use php_fpm; Makefile guesses so.
 In theory `zmpkg.pl start` should start everything.  In practice, the
 first `zmdc.pl start` invocation does start the daemon but then fails
 to exit, hanging the startup process.  While there is an attempt to
-avoid this in `zmpkg.pl`, it is likely necessary to kill the hanging
-start script, and thus to write a script to do so, to enable reliable
-starting.  This is likely an upstream issue, to be debugged after
-pkgsrc is up to date.
+avoid this in `zmpkg.pl`, it is for now necessary to kill the hanging
+start script and thus to write a script to do so, to enable reliable
+starting.  See `start-watchdog.sh`, not yet validated.  This is likely
+an upstream issue, to be debugged after pkgsrc is up to date.
 
-# Upgrading from previous versions
+# Upgrading
 
-As always, backup everything, diff all configs from upstream before
-and minimize, save deltas, and merge to new upstreams keeping intended
-changes.  This is going to be worse than most upgrades.
+For upgrading from previous stable versions: as always, backup
+everything, diff all configs from upstream before and minimize, save
+deltas, and merge to new upstreams keeping intended changes.  This is
+going to be worse than most upgrades.
+
+For upgrading to new micros of the same stable version, of course make
+backups but there is no particular reason to worry.
 
 ## Standard zoneminder advice
 
-Upgrade a database from an older version of ZoneMinder via:
+After installing a new zoneminder version (even a micro), upgrade a
+database via:
 
   zmupdate.pl -u root [-p <password>]
 
-NB: Zoneminder 1.32 will attempt to remove config from the database
-and place it in e.g. `/usr/pkg/etc/zm/conf.d/zmcustom.conf`.  The
-package attempts to create the directory, but make one more backup
-than you think you need.
+Beware that if you have custom config in zm.conf or in the database
+(because that used to be how it's done), zoneminder may migrate it
+to `/usr/pkg/etc/zm/conf.d/zmcustom.conf`.
+
+As always, make one more backup than you think you need, and check the
+resulting config files.
 
 ## Zoneminder path woes
 
-In theory, one wouldn't have to set paths, but it seems one does.  Go
-over the list at
-https://github.com/ZoneMinder/zoneminder/blob/release-1.32/INSTALL and
-set some.
+In theory, one wouldn't have to set paths, but it seems one does.
+Find and read the docs and think about this.
 
-Probably, see (or create) conf.d/zmpaths.conf.
-
-## Issues due to pkgsrc changes from 1.30 to 1.32
-
-pkgsrc changed the config dir from /usr/pkg/etc to /usr/pkg/etc/zm, so
-you should move zm.conf.
-
-When editing in conf.d, beware zmcustom.conf~ which might or might not
-also be read.
-
-pkgsrc changed from /var/cache/zoneminder to /var/db/zoneminder.
-While merging configs, pay extra attention to stray /var/cache
-pathnames.
+Probably, as of 2026-01, the package mostly sets reasonable defaults
+for paths.
 
 ### Storage
 
 Zoneminder has "Storage" configured (Options, Storage), and it is
 possible that it used to be /var/cache/zoneminder/events and should
-now be /var/db/zoneminder/events.
+now be `/var/db/zoneminder/events`.
 
 ### Upload temp dir
 
 One can configure uploads and a temp dir in which to create them.
-That path is in the database as UPLOAD_LOC_DIR and can be a stray
-source of /var/cache/zoneminder.
+By default it might be `/var/db/zoneminder/upload`.
 
 # Shared memory
 
 Zoneminder tries to use a shm filesystem to store files that are then
-mmap'd.  (1.28 used SysV shm but that is no longer relevant.)
-
-On NetBSD, the compiled default might be /dev/shm but the right place
-is /var/shm.  This can be changed in zmcustom.conf via ZM_PATH_MAP.
-
-(One might need a lot of space, or to turn the buffer down to fewer
-frames; this is not about pkgsrc.)
-
-Somtimes, the shm file can get into a bad state and be zero length.
-This might be a bad error path during camera timeouts; it seems to
-happen more with bad wifi connections.  Turning up the timeouts in the
-config (e.g. wait 10s or 30s before giving up instead of 2s) probably
-also helps.  This is also not about pkgsrc.
+mmap'd.  pkgsrc sets this to /var/shm which is right for NetBSD; it is
+left for future work to set the default based on OS type.

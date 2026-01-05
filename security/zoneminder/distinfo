@@ -1,24 +1,23 @@
-$NetBSD: distinfo,v 1.25 2026/01/04 23:29:54 gdt Exp $
+$NetBSD: distinfo,v 1.26 2026/01/05 16:02:44 gdt Exp $
 
 BLAKE2s (FriendsOfCake-crud-14292374ccf1328f2d5db20897bd06f99ba4d938.tar.gz) = 8877bf6718ecfe3cba2515629418fe5addc60cf8ce4650526b39db6a234922ad
 SHA512 (FriendsOfCake-crud-14292374ccf1328f2d5db20897bd06f99ba4d938.tar.gz) = da58528686baf05385ad08079f965bce10eba6d599133ab773e9ab1f9e4b7d82cf5431b4b773317b90effb16e0b026a029bdfabe08a9ef1a5e9b94e7a1c2ea9e
 Size (FriendsOfCake-crud-14292374ccf1328f2d5db20897bd06f99ba4d938.tar.gz) = 73086 bytes
-BLAKE2s (ZoneMinder-1.36.37.tar.gz) = db39b3312d2043091075be5fb5ce801feca2e6cbb6ba9c3621935a4d343219ac
-SHA512 (ZoneMinder-1.36.37.tar.gz) = 0ee1b3ae63e9c70cf81cc6de8f307cd65a17d2c4118d98a5967b0a12e61c4c2dd15a1f0b5b0469107738fe32ab4cb0614c1f6e8937deea7bb7e4707bb4092989
-Size (ZoneMinder-1.36.37.tar.gz) = 13971532 bytes
+BLAKE2s (ZoneMinder-1.36.37.7-02e750c7b395f701ea68bb05b7b94520805c59ef.tar.gz) = 03f1d0d287f06cac877d39fd20a827656fe775acd3f5a26c376c9a153ab60796
+SHA512 (ZoneMinder-1.36.37.7-02e750c7b395f701ea68bb05b7b94520805c59ef.tar.gz) = 556ebb4e25e2b76e3729d72cb652d6c9b253c3f5ca43809f2a8709e286420522f05e855b74bf50eff0c0f560f8ae1f215a06f20f2da203737deed2d6fea11ed7
+Size (ZoneMinder-1.36.37.7-02e750c7b395f701ea68bb05b7b94520805c59ef.tar.gz) = 13974395 bytes
 BLAKE2s (ZoneMinder-CakePHP-Enum-Behavior-ea90c0cd7f6e24333a90885e563b5d30b793db29.tar.gz) = 4639184438becb1c33450a00e213fca9d11e92b7f2545fb701f40a664c716764
 SHA512 (ZoneMinder-CakePHP-Enum-Behavior-ea90c0cd7f6e24333a90885e563b5d30b793db29.tar.gz) = 75f2188e548b98191c8df82fb76e918f3bda9788f541449df8fa92449ad19aa0b9c13420dd91c760e08a4d31956ad51602242ab97e3bd4460f01e99f49992453
 Size (ZoneMinder-CakePHP-Enum-Behavior-ea90c0cd7f6e24333a90885e563b5d30b793db29.tar.gz) = 3504 bytes
 BLAKE2s (ZoneMinder-RtspServer-055d81fe1293429e496b19104a9ed3360755a440.tar.gz) = 0feba45357a746173378193be365b164061cc9f20e84210ecfe9e991ad9971e4
 SHA512 (ZoneMinder-RtspServer-055d81fe1293429e496b19104a9ed3360755a440.tar.gz) = 2f3bbd449269cba5afda3135e54cca114342956da3ce8fbfb05533ec7b1c3f75767d8b5f3d9b415254ad7b39817bc343b0790c591ef3cc64d2863819ab3a7551
 Size (ZoneMinder-RtspServer-055d81fe1293429e496b19104a9ed3360755a440.tar.gz) = 1396623 bytes
-SHA1 (patch-CMakeLists.txt) = dd515b905c51b67112c273d20c96394010358381
+SHA1 (patch-CMakeLists.txt) = e54c1efea0b0cc99e9bbe8f493a0fe15b2c89663
 SHA1 (patch-dep_RtspServer_src_net_EventLoop.cpp) = bf1fe79c2ba1d602adf8895f29f61f7b961eece3
 SHA1 (patch-dep_RtspServer_src_net_Socket.h) = 789e90da4bfc15d6d43d942718538385cb6dfade
 SHA1 (patch-dep_RtspServer_src_net_SocketUtil.cpp) = c566652e8e7985a705682ef960118615b6777288
 SHA1 (patch-dep_RtspServer_src_xop_rtsp.h) = 20a014ce423d19549976c2158d39c46ea6892647
 SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_ConfigData.pm.in) = 3bf4e5e8276a682695db640e6608dd14c7315320
-SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_Database.pm) = 2e59b1d31c2dba9f719c60540d010ebeb216f5e9
 SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm) = 996670d8a659c0624587da73f8083d9349aaa1ba
 SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_Memory_Shared.pm) = b3de55618915fad3d9263954db71270c800ad6f1
 SHA1 (patch-scripts_zm_in) = a05727261bb8be6b707e9a14ae4ff52ea3770d51
