@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:43:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/01/05 21:34:55 ktnb Exp $
 
-BLAKE2s (batrachians-0.1.7.tar.gz) = cb007c930a6f70d1026e3dabef7b934111330c5468ac578c84203ee1253d5846
-SHA512 (batrachians-0.1.7.tar.gz) = 01c49cf02e3894d43948ba2656713fdd1662f3441c1dfe41b2fc3dc27fc5c4c95ac377a946d647c1c59e201a63d0659bc6fc2bd50132eb2f2b393ed64167e781
-Size (batrachians-0.1.7.tar.gz) = 206981 bytes
+BLAKE2s (batrachians-0.2.0.tar.gz) = cb498265a88627b52417bac2311ad66b11d2b3dc75be11ed3a4e69cf83b3d4f0
+SHA512 (batrachians-0.2.0.tar.gz) = da0429cd17a6c289f3d5dd1fad11847713c56510d9bdc7e6fa10e0045bb4985662030ea04e49db740eb361e8e016e701736a7ce52501816c68b32f2cd398c189
+Size (batrachians-0.2.0.tar.gz) = 204034 bytes
