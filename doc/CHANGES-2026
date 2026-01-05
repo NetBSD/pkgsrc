@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.115 2026/01/05 21:35:13 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.116 2026/01/05 21:36:18 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -154,3 +154,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/ruby33 to 3.3.10nb1 [wiz 2026-01-05]
 	Updated devel/flatzebra to 0.2.0 [ktnb 2026-01-05]
 	Updated games/batrachians to 0.2.0 [ktnb 2026-01-05]
+	Updated games/quadrupleback to 0.2.0 [ktnb 2026-01-05]
