@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.100 2026/01/05 11:11:04 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.101 2026/01/05 12:45:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -129,3 +129,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/moor to 2.10.1 [wiz 2026-01-05]
 	Updated textproc/rucola to 0.8.2 [wiz 2026-01-05]
 	Updated net/slumber to 4.3.1 [wiz 2026-01-05]
+	Updated devel/glib2 to 2.86.3 [adam 2026-01-05]
+	Updated devel/glib2-tools to 2.86.3 [adam 2026-01-05]
+	Updated devel/gdbus-codegen to 2.86.3 [adam 2026-01-05]
