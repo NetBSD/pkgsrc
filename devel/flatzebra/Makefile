@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2025/12/12 10:13:44 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/01/05 21:32:30 ktnb Exp $
 
-DISTNAME=	flatzebra-0.1.7
-PKGREVISION=	1
+DISTNAME=	flatzebra-0.2.0
 CATEGORIES=	devel
-MASTER_SITES=	http://perso.b2b2c.ca/~sarrazip/dev/
+MASTER_SITES=	http://gvlsywt.cluster051.hosting.ovh.net/dev/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gvlsywt.cluster051.hosting.ovh.net/dev/burgerspace.html
@@ -20,9 +19,11 @@ FORCE_CXX_STD=	c++03
 
 CONFIGURE_ARGS+=	--disable-sdltest
 
-PKGCONFIG_OVERRIDE+=	flatzebra-0.1.pc.in
+PKGCONFIG_OVERRIDE+=	flatzebra-0.2.pc.in
 
-.include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../audio/SDL2_mixer/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
+.include "../../fonts/SDL2_ttf/buildlink3.mk"
+.include "../../graphics/SDL2_image/buildlink3.mk"
+.include "../../graphics/SDL2_gfx/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
