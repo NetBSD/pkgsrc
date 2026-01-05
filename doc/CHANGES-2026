@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.110 2026/01/05 18:21:13 adam Exp $
+$NetBSD: CHANGES-2026,v 1.111 2026/01/05 18:45:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -149,3 +149,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/blender to 4.2.16 [adam 2026-01-05]
 	Updated devel/at-spi2-core to 2.58.3 [adam 2026-01-05]
 	Updated devel/spdlog to 1.17.0 [adam 2026-01-05]
+	Updated editors/reovim to 0.7.9 [pin 2026-01-05]
