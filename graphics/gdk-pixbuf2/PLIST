@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.27 2024/06/27 15:22:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2026/01/05 14:07:28 adam Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-pixdata
 bin/gdk-pixbuf-query-loaders
 ${PLIST.native}bin/gdk-pixbuf-thumbnailer
 include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h
-include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
 include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-enum-types.h
 include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-features.h
@@ -31,7 +30,7 @@ ${PLIST.introspection}lib/girepository-1.0/GdkPixbuf-2.0.typelib
 ${PLIST.introspection}lib/girepository-1.0/GdkPixdata-2.0.typelib
 lib/libgdk_pixbuf-2.0.so
 lib/libgdk_pixbuf-2.0.so.0
-lib/libgdk_pixbuf-2.0.so.0.4200.12
+lib/libgdk_pixbuf-2.0.so.0.4400.4
 lib/pkgconfig/gdk-pixbuf-2.0.pc
 man/man1/gdk-pixbuf-csource.1
 man/man1/gdk-pixbuf-query-loaders.1
