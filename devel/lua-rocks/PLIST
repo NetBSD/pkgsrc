@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/01/04 22:27:08 nikita Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/01/05 22:10:35 alnsn Exp $
 bin/luarocks-${LUADOTVER}
 bin/luarocks-admin-${LUADOTVER}
 ${LUA_EXAMPLESDIR}/config-${LUADOTVER}.lua
@@ -8,7 +8,6 @@ ${LUA_LDIR}/luarocks/admin/cmd/make_manifest.lua
 ${LUA_LDIR}/luarocks/admin/cmd/refresh_cache.lua
 ${LUA_LDIR}/luarocks/admin/cmd/remove.lua
 ${LUA_LDIR}/luarocks/admin/index.lua
-${LUA_LDIR}/luarocks/argparse.lua
 ${LUA_LDIR}/luarocks/build.lua
 ${LUA_LDIR}/luarocks/build/builtin.lua
 ${LUA_LDIR}/luarocks/build/cmake.lua
@@ -36,12 +35,16 @@ ${LUA_LDIR}/luarocks/cmd/unpack.lua
 ${LUA_LDIR}/luarocks/cmd/upload.lua
 ${LUA_LDIR}/luarocks/cmd/which.lua
 ${LUA_LDIR}/luarocks/cmd/write_rockspec.lua
+${LUA_LDIR}/luarocks/config.lua
 ${LUA_LDIR}/luarocks/core/cfg.lua
 ${LUA_LDIR}/luarocks/core/dir.lua
 ${LUA_LDIR}/luarocks/core/manif.lua
 ${LUA_LDIR}/luarocks/core/path.lua
 ${LUA_LDIR}/luarocks/core/persist.lua
 ${LUA_LDIR}/luarocks/core/sysdetect.lua
+${LUA_LDIR}/luarocks/core/types/query.lua
+${LUA_LDIR}/luarocks/core/types/result.lua
+${LUA_LDIR}/luarocks/core/types/rockspec.lua
 ${LUA_LDIR}/luarocks/core/util.lua
 ${LUA_LDIR}/luarocks/core/vers.lua
 ${LUA_LDIR}/luarocks/deplocks.lua
@@ -79,6 +82,7 @@ ${LUA_LDIR}/luarocks/path.lua
 ${LUA_LDIR}/luarocks/persist.lua
 ${LUA_LDIR}/luarocks/queries.lua
 ${LUA_LDIR}/luarocks/remove.lua
+${LUA_LDIR}/luarocks/repo_writer.lua
 ${LUA_LDIR}/luarocks/repos.lua
 ${LUA_LDIR}/luarocks/require.lua
 ${LUA_LDIR}/luarocks/results.lua
@@ -97,3 +101,5 @@ ${LUA_LDIR}/luarocks/type_check.lua
 ${LUA_LDIR}/luarocks/upload/api.lua
 ${LUA_LDIR}/luarocks/upload/multipart.lua
 ${LUA_LDIR}/luarocks/util.lua
+${LUA_LDIR}/luarocks/vendor/argparse.lua
+${LUA_LDIR}/luarocks/vendor/dkjson.lua
