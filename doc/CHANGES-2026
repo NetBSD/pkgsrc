@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.89 2026/01/05 02:18:37 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.90 2026/01/05 02:39:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -117,3 +117,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/libheif to 1.21.1 [wiz 2026-01-05]
 	Updated devel/ncurses to 6.6 [wiz 2026-01-05]
 	Updated www/kiwix-desktop to 2.5.0 [wiz 2026-01-05]
+	Updated misc/khard to 0.20.1 [wiz 2026-01-05]
