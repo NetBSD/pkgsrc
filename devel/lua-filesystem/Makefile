@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.20 2026/01/05 00:22:08 alnsn Exp $
+# $NetBSD: Makefile,v 1.21 2026/01/05 00:25:59 alnsn Exp $
 #
 
-DISTNAME=		luafilesystem-1.8.0
+DISTNAME=		luafilesystem-1.9.0
 PKGNAME=		${DISTNAME:S/lua/${LUA_PKGPREFIX}-/}
 CATEGORIES=		devel lua
-MASTER_SITES=		${MASTER_SITE_GITHUB:=keplerproject/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=lunarmodules/}
 GITHUB_PROJECT=		luafilesystem
 GITHUB_TAG=		v${PKGVERSION_NOREV:S/./_/g}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://keplerproject.github.com/luafilesystem/
+HOMEPAGE=		https://github.com/lunarmodules/luafilesystem/
 COMMENT=		File system related library for Lua
 LICENSE=		mit
 
