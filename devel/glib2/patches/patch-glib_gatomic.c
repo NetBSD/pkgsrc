@@ -1,11 +1,11 @@
-$NetBSD: patch-glib_gatomic.c,v 1.2 2020/03/04 15:11:48 wiz Exp $
+$NetBSD: patch-glib_gatomic.c,v 1.3 2026/01/05 12:44:55 adam Exp $
 
 Ignore __GCC_HAVE_SYNC_COMPARE_AND_SWAP_4 as is already done
 for android and linux. PR pkg/54298
 
---- glib/gatomic.c.orig	2020-02-27 16:12:52.000000000 +0000
+--- glib/gatomic.c.orig	2025-12-08 15:46:06.000000000 +0000
 +++ glib/gatomic.c
-@@ -94,8 +94,6 @@
+@@ -53,8 +53,6 @@
   * implement the atomic operations in a lock-free manner.
   */
  
@@ -13,8 +13,8 @@ for android and linux. PR pkg/54298
 -
  /**
   * g_atomic_int_get:
-  * @atomic: a pointer to a #gint or #guint
-@@ -658,14 +656,6 @@ gsize
+  * @atomic: (type gconstpointer): a pointer to a #gint or #guint
+@@ -836,14 +834,6 @@ guintptr
    return InterlockedXor (atomic, val);
  #endif
  }
