@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/08/20 11:34:48 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/01/05 09:16:45 wiz Exp $
 
 DISTNAME=	libmsn-4.2.1
 PKGREVISION=	5
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmsn/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://sourceforge.net/projects/libmsn
+HOMEPAGE=	https://sourceforge.net/projects/libmsn/
 COMMENT=	Library for connecting to Microsoft's MSN Messenger service
 LICENSE=	gnu-gpl-v2
 
