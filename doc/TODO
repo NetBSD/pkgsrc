@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26618 2026/01/05 01:45:36 wiz Exp $
+$NetBSD: TODO,v 1.26619 2026/01/05 01:51:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1150,7 +1150,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-sphinx-9.1.0
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
-	o py-textual-7.0.0
 	o py-tokyocabinet-0.6
 	o py-torch-2.9
 	o py-trezor-0.13.10
