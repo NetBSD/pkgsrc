@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/07/07 05:15:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/01/05 02:53:36 wiz Exp $
 include/opencv4/opencv2/face.hpp
 include/opencv4/opencv2/face/bif.hpp
 include/opencv4/opencv2/face/face_alignment.hpp
@@ -22,10 +22,10 @@ include/opencv4/opencv2/tracking/tracking_legacy.hpp
 include/opencv4/opencv2/tracking/twist.hpp
 lib/libopencv_face.so
 lib/libopencv_face.so.${PKGVERSION}
-lib/libopencv_face.so.412
+lib/libopencv_face.so.413
 lib/libopencv_plot.so
 lib/libopencv_plot.so.${PKGVERSION}
-lib/libopencv_plot.so.412
+lib/libopencv_plot.so.413
 lib/libopencv_tracking.so
 lib/libopencv_tracking.so.${PKGVERSION}
-lib/libopencv_tracking.so.412
+lib/libopencv_tracking.so.413
