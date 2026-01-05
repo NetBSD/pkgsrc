@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2024/01/04 21:35:41 prlw1 Exp $
+# $NetBSD: Makefile,v 1.44 2026/01/05 09:19:25 wiz Exp $
 
 DISTNAME=		libpqxx-7.8.1
 CATEGORIES=		databases
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=jtv/}
 GITHUB_PROJECT=		libpqxx
 
 MAINTAINER=		is@NetBSD.org
-HOMEPAGE=		http://pqxx.org/development/libpqxx/
+HOMEPAGE=		https://pqxx.org/development/libpqxx/
 COMMENT=		C++ interface to postgresql-lib
 LICENSE=		modified-bsd
 
