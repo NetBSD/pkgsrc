@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.94 2026/01/05 06:30:12 pin Exp $
+$NetBSD: CHANGES-2026,v 1.95 2026/01/05 09:00:59 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -122,3 +122,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/opencv-contrib-face to 4.13.0 [wiz 2026-01-05]
 	Updated devel/cargo-nextest to 0.9.118 [pin 2026-01-05]
 	Updated devel/ast-grep to 0.40.4 [pin 2026-01-05]
+	Updated devel/lua-filesystem to 1.9.0 [alnsn 2026-01-05]
