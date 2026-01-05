@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.116 2026/01/05 21:36:18 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.117 2026/01/05 21:37:27 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -155,3 +155,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/flatzebra to 0.2.0 [ktnb 2026-01-05]
 	Updated games/batrachians to 0.2.0 [ktnb 2026-01-05]
 	Updated games/quadrupleback to 0.2.0 [ktnb 2026-01-05]
+	Updated games/burgerspace to 1.10.0 [ktnb 2026-01-05]
