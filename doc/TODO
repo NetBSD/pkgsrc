@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26632 2026/01/05 21:32:44 ktnb Exp $
+$NetBSD: TODO,v 1.26633 2026/01/05 21:37:27 ktnb Exp $
 
 Suggested new packages
 ======================
@@ -497,7 +497,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o box2d-3.1.1
 	o brandybasic-1.19
 	o bugzilla3-3.6.13
-	o burgerspace-1.10.0
 	o cacti-1.2.30
 	o cacti-spine-1.2.30
 	o calc-2.11.10.1
