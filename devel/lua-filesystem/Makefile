@@ -1,35 +1,29 @@
-# $NetBSD: Makefile,v 1.19 2026/01/05 00:15:40 alnsn Exp $
+# $NetBSD: Makefile,v 1.20 2026/01/05 00:22:08 alnsn Exp $
 #
 
-DISTNAME=	penlight-1.13.1
-PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel lua
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lunarmodules/}
-GITHUB_TAG=	${PKGVERSION_NOREV}
-GITHUB_PROJECT=	Penlight
+DISTNAME=		luafilesystem-1.8.0
+PKGNAME=		${DISTNAME:S/lua/${LUA_PKGPREFIX}-/}
+CATEGORIES=		devel lua
+MASTER_SITES=		${MASTER_SITE_GITHUB:=keplerproject/}
+GITHUB_PROJECT=		luafilesystem
+GITHUB_TAG=		v${PKGVERSION_NOREV:S/./_/g}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://lunarmodules.github.io/Penlight/
-COMMENT=	Lua libraries for functional programming, OS path management, etc
-LICENSE=	mit
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		https://keplerproject.github.com/luafilesystem/
+COMMENT=		File system related library for Lua
+LICENSE=		mit
 
-DIST_SUBDIR=	lua-penlight
+WRKSRC=			${WRKDIR}/luafilesystem-${PKGVERSION_NOREV:S/./_/g}
 
-NO_BUILD=	yes
-USE_TOOLS+=	pax
+USE_TOOLS+=		gmake pkg-config
+BUILD_TARGET=		lib
 
-DEPENDS+=	${LUA_PKGPREFIX}-filesystem-[0-9]*:../../devel/lua-filesystem
+TEST_TARGET=		test
 
-WRKSRC=			${WRKDIR}/Penlight-${PKGVERSION_NOREV}
-INSTALLATION_DIRS+=	${LUA_LDIR}
-
-# XXX Generate documentation with Markdown.
-do-install:
-	cd ${WRKSRC}/lua && find pl ! -type d | \
-	    pax -rw ${DESTDIR}${PREFIX}/${LUA_LDIR}
-
-do-test:
-	cd ${WRKSRC} && ${LUA_INTERPRETER} run.lua tests
+MAKE_FLAGS+=		PREFIX=${PREFIX}
+MAKE_FLAGS+=		CC=${CC}
+MAKE_FLAGS+=		CFLAGS="${CFLAGS} -fPIC"
+MAKE_FLAGS+=		LUA_VERSION=${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
 
 .include "../../lang/lua/module.mk"
 .include "../../mk/bsd.pkg.mk"
