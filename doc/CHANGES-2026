@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.112 2026/01/05 19:45:25 pin Exp $
+$NetBSD: CHANGES-2026,v 1.113 2026/01/05 20:04:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -151,3 +151,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/spdlog to 1.17.0 [adam 2026-01-05]
 	Updated editors/reovim to 0.7.9 [pin 2026-01-05]
 	Updated sysutils/dua-cli to 2.33.0 [pin 2026-01-05]
+	Updated lang/ruby33 to 3.3.10nb1 [wiz 2026-01-05]
