@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/06/27 17:13:31 schmonz Exp $
+# $NetBSD: Makefile,v 1.16 2026/01/05 09:18:30 wiz Exp $
 
 DISTNAME=	libowfat-0.34
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	https://www.fefe.de/libowfat/
+HOMEPAGE=	http://www.fefe.de/libowfat/
 COMMENT=	Library of general purpose APIs
 LICENSE=	gnu-gpl-v2
 
