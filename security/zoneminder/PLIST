@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2026/01/03 19:49:04 gdt Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/01/05 16:02:44 gdt Exp $
 bin/zm_rtsp_server
 bin/zmaudit.pl
 bin/zmc
@@ -6378,7 +6378,7 @@ share/zoneminder/db/zm_update-1.35.9.sql
 share/zoneminder/db/zm_update-1.36.16.sql
 share/zoneminder/db/zm_update-1.36.18.sql
 share/zoneminder/db/zm_update-1.36.34.sql
-share/zoneminder/db/zm_update-${PKGVERSION}.sql
+share/zoneminder/db/zm_update-1.36.37.sql
 share/zoneminder/db/zm_update-1.36.6.sql
 share/zoneminder/db/zm_update-1.36.9.sql
 share/zoneminder/fonts/default.zmfnt

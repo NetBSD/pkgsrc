@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.96 2026/01/04 23:29:54 gdt Exp $
+# $NetBSD: Makefile,v 1.97 2026/01/05 16:02:44 gdt Exp $
 
-VERSION=	1.36.37
+# (1st-parent) commits past 1.36.37 on release-1.36
+VERSION=	1.36.37.7
 # Distfile is ZoneMinder but package and tarball contents are zoneminder.
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
 
 PKGNAME=	${DISTNAME:S/${NAME_DIST}-/${NAME_LOWER}-/}
-PKGREVISION=	3
+#PKGREVISION=	0
 DISTNAME=	${NAME_DIST}-${VERSION}
-WRKSRC=		${WRKDIR}/${NAME_LOWER}-${VERSION}
+#WRKSRC=		${WRKDIR}/${NAME_LOWER}-${VERSION}
+WRKSRC=		${WRKDIR}/${NAME_LOWER}-${GITHUB_TAG}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=${NAME_DIST}/}
 GITHUB_PROJECT=	${NAME_DIST}
 GITHUB_TYPE=	tag
-GITHUB_TAG=	${PKGVERSION_NOREV}
+#GITHUB_TAG=	${PKGVERSION_NOREV}
+GITHUB_TAG=	02e750c7b395f701ea68bb05b7b94520805c59ef
 
 ## Submodules (from ZoneMinder's .gitmodules file)
 # We use a specific commit on each branch, to avoid distfile versioning woes
@@ -44,7 +47,7 @@ PKG_SUGGESTED_OPTIONS=		apache
 # for MariaDB.
 PKG_OPTIONS_REQUIRED_GROUPS+=	database
 PKG_OPTIONS_GROUP.database=	mysql mariadb
-PKG_SUGGESTED_OPTIONS+=		mysql
+PKG_SUGGESTED_OPTIONS+=		mariadb
 
 .include "../../mk/bsd.options.mk"
 
@@ -132,9 +135,6 @@ CMAKE_CONFIGURE_ARGS+=	-DZM_CONTENTDIR=${ZM_CONTENT}
 OWN_DIRS_PERMS+=	${ZM_CONTENT} ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 CMAKE_CONFIGURE_ARGS+=	-DZM_DIR_EVENTS=${ZM_CONTENT}/events
 OWN_DIRS_PERMS+=	${ZM_CONTENT}/events ${APACHE_USER} ${APACHE_GROUP} 775
-# \todo Understanda ZM_DIR_IMAGES.
-CMAKE_CONFIGURE_ARGS+=	-DZM_DIR_IMAGES=${ZM_CONTENT}/images
-OWN_DIRS_PERMS+=	${ZM_CONTENT}/images ${APACHE_USER} ${APACHE_GROUP} 775
 
 ## Dependencies other than perl and php.
 
@@ -227,22 +227,6 @@ ZM_PERL_PATH+=	scripts/zmx10.pl.in
 DEPENDS+=			p5-DBD-MariaDB-[0-9]*:../../databases/p5-DBD-MariaDB
 MYSQL_VERSIONS_ACCEPTED=	mariadb118 mariadb114 mariadb1011 mariadb106 mariadb105
 CMAKE_CONFIGURE_ARGS+=		-DZM_DB_TYPE=MariaDB
-
-# Once you cross into p5-DBD-mysql 5, more changes are needed.
-# \todo Pull these into the package as patches or wait for upstream.
-#    https://github.com/ZoneMinder/zoneminder/pull/3914/
-
-# in Database.pm, comment out mysql_auto_reconnect because MariaDB doesn't have that.
-#$dbh->{mysql_auto_reconnect} = 1;
-#Fatal('Can\'t set mysql_auto_reconnect on in database connection')
-#  unless $dbh->{mysql_auto_reconnect};
-
-# add to includes/database.php: There is no pdo_MariaDB; use pdo_mysql instead.
-# $dsn = ZM_DB_TYPE;
-# if ( $dsn == 'MariaDB' ) {
-#   $dsn = 'mysql';
-# }
-
 .endif
 .if !empty(PKG_OPTIONS:Mmysql)
 DEPENDS+=			p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
