@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/09/14 10:14:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/01/05 14:11:57 adam Exp $
 include/catch2/benchmark/catch_benchmark.hpp
 include/catch2/benchmark/catch_benchmark_all.hpp
 include/catch2/benchmark/catch_chronometer.hpp
@@ -95,6 +95,7 @@ include/catch2/internal/catch_istream.hpp
 include/catch2/internal/catch_jsonwriter.hpp
 include/catch2/internal/catch_lazy_expr.hpp
 include/catch2/internal/catch_leak_detector.hpp
+include/catch2/internal/catch_lifetimebound.hpp
 include/catch2/internal/catch_list.hpp
 include/catch2/internal/catch_logical_traits.hpp
 include/catch2/internal/catch_message_info.hpp
@@ -137,6 +138,7 @@ include/catch2/internal/catch_test_macro_impl.hpp
 include/catch2/internal/catch_test_registry.hpp
 include/catch2/internal/catch_test_spec_parser.hpp
 include/catch2/internal/catch_textflow.hpp
+include/catch2/internal/catch_thread_local.hpp
 include/catch2/internal/catch_thread_support.hpp
 include/catch2/internal/catch_to_string.hpp
 include/catch2/internal/catch_uncaught_exceptions.hpp
