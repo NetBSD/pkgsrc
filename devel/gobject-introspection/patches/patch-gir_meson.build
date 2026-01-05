@@ -1,0 +1,46 @@
+$NetBSD: patch-gir_meson.build,v 1.7 2026/01/05 14:49:02 ryoon Exp $
+
+--- gir/meson.build.orig	2025-12-07 09:28:42.235445373 +0000
++++ gir/meson.build
+@@ -384,7 +384,6 @@ gio_command = scanner_command + [
+   '--identifier-prefix=G',
+   '--symbol-prefix=g',
+   '--c-include=gio/gio.h',
+-  '--namespace=Gio',
+   '--nsversion=2.0',
+   '--library=gio-2.0',
+ ]
+@@ -470,12 +469,33 @@ gio_gir = custom_target('gir-gio',
+     '-DGIO_COMPILATION',
+     '-DG_SETTINGS_ENABLE_BACKEND',
+     '--cflags-end',
++    '--namespace=Gio',
+     '@INPUT@',
+   ]
+ )
+ 
+ uninstalled_gir_files += gio_gir
+ 
++gio_unix_gir = custom_target('gir-gio-unix',
++  input: gio_files,
++  output: 'GioUnix-2.0.gir',
++  depends: [gobject_gir, gir_giscanner_pymod, gio_gir_dep, gdump],
++  depend_files: gir_giscanner_built_files,
++  env: g_ir_scanner_env,
++  command: gio_command + [
++    '--include-uninstalled=' + gobject_gir.full_path(),
++    '--cflags-begin'] + glib_includes + extra_giscanner_cflags + [
++    '-DGIO_COMPILATION',
++    '-DG_SETTINGS_ENABLE_BACKEND',
++    '--cflags-end',
++    '--namespace=GioUnix',
++    '--pkg-export=gio-unix-2.0',
++    '@INPUT@',
++  ]
++)
++
++uninstalled_gir_files += gio_unix_gir
++
+ # GIRepository
+ 
+ girepository_command = scanner_command + [
