@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.81 2026/01/05 01:39:05 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.82 2026/01/05 01:41:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -109,3 +109,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-aiohttp to 3.13.3 [wiz 2026-01-05]
 	Updated devel/py-astroid to 4.0.3 [wiz 2026-01-05]
 	Updated devel/py-filelock to 3.20.2 [wiz 2026-01-05]
+	Updated audio/py-last to 7.0.1 [wiz 2026-01-05]
