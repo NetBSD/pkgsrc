@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.99 2026/01/05 11:05:30 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.100 2026/01/05 11:11:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -128,3 +128,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/liblangtag to 0.6.8 [wiz 2026-01-05]
 	Updated textproc/moor to 2.10.1 [wiz 2026-01-05]
 	Updated textproc/rucola to 0.8.2 [wiz 2026-01-05]
+	Updated net/slumber to 4.3.1 [wiz 2026-01-05]
