@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.29 2025/10/15 02:59:02 mef Exp $
+# $NetBSD: Makefile,v 1.30 2026/01/05 09:23:11 wiz Exp $
 
 DISTNAME=		libstroke-0.5.1
 PKGREVISION=		5
 CATEGORIES=		devel
-MASTER_SITES=		http://etla.net/libstroke/
+#MASTER_SITES=		http://etla.net/libstroke/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://etla.net/libstroke/
+#HOMEPAGE=		http://etla.net/libstroke/
 COMMENT=		Stroke translation library
 
 GNU_CONFIGURE=		YES
