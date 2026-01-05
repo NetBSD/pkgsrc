@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2025/11/12 12:05:52 leot Exp $
+@comment $NetBSD: PLIST,v 1.23 2026/01/05 18:19:14 adam Exp $
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-accessible.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-action.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-application.h
@@ -73,7 +73,7 @@ ${PLIST.dbus}lib/gnome-settings-daemon-3.0/gtk-modules/at-spi2-atk.desktop
 ${PLIST.dbus}lib/gtk-2.0/modules/libatk-bridge.so
 lib/libatk-1.0.so
 lib/libatk-1.0.so.0
-lib/libatk-1.0.so.0.25810.1
+lib/libatk-1.0.so.0.25812.1
 ${PLIST.dbus}lib/libatk-bridge-2.0.so
 ${PLIST.dbus}lib/libatk-bridge-2.0.so.0
 ${PLIST.dbus}lib/libatk-bridge-2.0.so.0.0.0
