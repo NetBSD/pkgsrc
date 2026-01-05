@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.80 2025/09/29 02:35:56 mrg Exp $
+$NetBSD: distinfo,v 1.81 2026/01/05 18:01:07 adam Exp $
 
-BLAKE2s (blender-4.2.14.tar.xz) = 07fdf19422b1e901555a24e18b670a00d8c846c993bc7d9592d3722b7ddc9f63
-SHA512 (blender-4.2.14.tar.xz) = 4423b6a7b004c357f8ee09cb9b7496432534c50b6be21148657d8f342d69e55e019c3368b56ff0f1253ae328b0cac73618655a51b389c9ea5686c4c57aabe9bb
-Size (blender-4.2.14.tar.xz) = 75349316 bytes
+BLAKE2s (blender-4.2.16.tar.xz) = 9c93943ab521307cb5f01c2f828d18335ae0fdbaede2142f6649e6d24edefe2e
+SHA512 (blender-4.2.16.tar.xz) = 11e07e3df21aba85263faa9e0a7fb5be7a0415749b951327f842c8e05c46fce94debf5dfb1f57007e4034d6d7abfec9ef4e94e5bb9c4c57641c52675e0401059
+Size (blender-4.2.16.tar.xz) = 75352960 bytes
 SHA1 (patch-4f4c3f73b697436922464e087823f53e8681d7e8) = 9a3ab579122660b4cb3a11f68ec63abdb5b146a7
 SHA1 (patch-CMakeLists.txt) = 722c852b2c7f804a0fec93cec4e4c8f54d286204
 SHA1 (patch-build__files_cmake_Modules_FindOpenColorIO.cmake) = 142b0860abeae94deda0dfdcc985e4b4696cf93a
@@ -18,6 +18,7 @@ SHA1 (patch-source_blender_blenkernel_intern_object.cc) = cfe979eed3e206d6b2bad8
 SHA1 (patch-source_blender_blenkernel_intern_particle__distribute.cc) = ac83135847cf2abf729d12eac30142fe5f13a5b2
 SHA1 (patch-source_blender_blenlib_intern_math__geom.cc) = 4d3b0c283865a3b64622a3a027a0c2c95c5bfbab
 SHA1 (patch-source_blender_blenlib_intern_storage.cc) = 53f548b2c869c4ff71c74e558ea21a1c1c22bb67
+SHA1 (patch-source_blender_compositor_realtime__compositor_cached__resources_intern_ocio__color__space__conversion__shader.cc) = 5f595b5b35d518643713a1ac0e21ead198f7ba27
 SHA1 (patch-source_blender_draw_engines_eevee__next_eevee__shadow.cc) = 95c83cda8a769b3ca515c311e17da6ed9a8c40d0
 SHA1 (patch-source_blender_editors_interface_interface.cc) = 93cdbee5084a23a42c023b4307fd27cee6d8784f
 SHA1 (patch-source_blender_editors_interface_interface__draw.cc) = ef7578bb527ba1169fa54faf694dffb099a6a200
