@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.101 2025/09/29 14:11:07 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.102 2026/01/05 10:11:37 adam Exp $
 bin/elf2dmp
 ${PLIST.aarch64}bin/qemu-aarch64
 ${PLIST.aarch64_be}bin/qemu-aarch64_be
@@ -86,8 +86,8 @@ ${PLIST.doc}man/man8/qemu-nbd.8
 ${PLIST.doc}man/man8/qemu-pr-helper.8
 share/applications/qemu.desktop
 ${PLIST.doc}share/doc/qemu/.buildinfo
-share/doc/qemu/Makefile.multinode-NetBSD
-share/doc/qemu/README.NetBSD
+${PLIST.doc}share/doc/qemu/Makefile.multinode-NetBSD
+${PLIST.doc}share/doc/qemu/README.NetBSD
 ${PLIST.doc}share/doc/qemu/about/build-platforms.html
 ${PLIST.doc}share/doc/qemu/about/deprecated.html
 ${PLIST.doc}share/doc/qemu/about/emulation.html
@@ -297,6 +297,7 @@ ${PLIST.doc}share/doc/qemu/system/devices/can.html
 ${PLIST.doc}share/doc/qemu/system/devices/canokey.html
 ${PLIST.doc}share/doc/qemu/system/devices/ccid.html
 ${PLIST.doc}share/doc/qemu/system/devices/cxl.html
+${PLIST.doc}share/doc/qemu/system/devices/emmc.html
 ${PLIST.doc}share/doc/qemu/system/devices/igb.html
 ${PLIST.doc}share/doc/qemu/system/devices/ivshmem-flat.html
 ${PLIST.doc}share/doc/qemu/system/devices/ivshmem.html
@@ -306,12 +307,12 @@ ${PLIST.doc}share/doc/qemu/system/devices/nvme.html
 ${PLIST.doc}share/doc/qemu/system/devices/usb-u2f.html
 ${PLIST.doc}share/doc/qemu/system/devices/usb.html
 ${PLIST.doc}share/doc/qemu/system/devices/vfio-user.html
-${PLIST.doc}share/doc/qemu/system/devices/vhost-user-input.html
-${PLIST.doc}share/doc/qemu/system/devices/vhost-user-rng.html
-${PLIST.doc}share/doc/qemu/system/devices/vhost-user.html
-${PLIST.doc}share/doc/qemu/system/devices/virtio-gpu.html
-${PLIST.doc}share/doc/qemu/system/devices/virtio-pmem.html
-${PLIST.doc}share/doc/qemu/system/devices/virtio-snd.html
+${PLIST.doc}share/doc/qemu/system/devices/virtio/index.html
+${PLIST.doc}share/doc/qemu/system/devices/virtio/vhost-user-contrib.html
+${PLIST.doc}share/doc/qemu/system/devices/virtio/vhost-user.html
+${PLIST.doc}share/doc/qemu/system/devices/virtio/virtio-gpu.html
+${PLIST.doc}share/doc/qemu/system/devices/virtio/virtio-pmem.html
+${PLIST.doc}share/doc/qemu/system/devices/virtio/virtio-snd.html
 ${PLIST.doc}share/doc/qemu/system/gdb.html
 ${PLIST.doc}share/doc/qemu/system/generic-loader.html
 ${PLIST.doc}share/doc/qemu/system/guest-loader.html
@@ -426,6 +427,8 @@ share/qemu/bios-microvm.bin
 share/qemu/bios.bin
 share/qemu/dtb/bamboo.dtb
 share/qemu/dtb/canyonlands.dtb
+share/qemu/dtb/pegasos1.dtb
+share/qemu/dtb/pegasos2.dtb
 share/qemu/dtb/petalogix-ml605.dtb
 share/qemu/dtb/petalogix-s3adsp1800.dtb
 share/qemu/edk2-aarch64-code.fd
@@ -521,7 +524,7 @@ share/qemu/s390-ccw.img
 share/qemu/skiboot.lid
 share/qemu/slof.bin
 share/qemu/trace-events-all
-share/qemu/u-boot-sam460-20100605.bin
+share/qemu/u-boot-sam460.bin
 share/qemu/u-boot.e500
 share/qemu/vgabios-ati.bin
 share/qemu/vgabios-bochs-display.bin

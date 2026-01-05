@@ -1,10 +1,10 @@
-$NetBSD: patch-hw_9pfs_9p-util.h,v 1.1 2025/03/15 20:19:15 riastradh Exp $
+$NetBSD: patch-hw_9pfs_9p-util.h,v 1.2 2026/01/05 10:11:38 adam Exp $
 
 Add BSD support for fsdev 9p.
 
---- hw/9pfs/9p-util.h.orig	2025-02-24 14:36:36.000000000 +0000
+--- hw/9pfs/9p-util.h.orig	2025-12-23 19:48:56.000000000 +0000
 +++ hw/9pfs/9p-util.h
-@@ -84,6 +84,298 @@ static inline int errno_to_dotl(int err)
+@@ -93,6 +93,298 @@ static inline int errno_to_dotl(int err)
      } else if (err == EOPNOTSUPP) {
          err = 95; /* ==EOPNOTSUPP on Linux */
      }
@@ -303,23 +303,23 @@ Add BSD support for fsdev 9p.
  #else
  #error Missing errno translation to Linux for this host system
  #endif
-@@ -154,13 +446,13 @@ static inline int openat_file(int dirfd,
+@@ -164,13 +456,13 @@ static inline int openat_file(int dirfd,
  {
      int fd, serrno, ret;
  
--#ifndef CONFIG_DARWIN
-+#ifdef O_NOATIME
+-#if !defined(CONFIG_DARWIN) && !defined(CONFIG_FREEBSD)
++#if !defined(CONFIG_DARWIN) && !defined(CONFIG_FREEBSD) && defined(O_NOATIME)
  again:
  #endif
      fd = qemu_openat(dirfd, name, flags | O_NOFOLLOW | O_NOCTTY | O_NONBLOCK,
                       mode);
      if (fd == -1) {
--#ifndef CONFIG_DARWIN
-+#ifdef O_NOATIME
+-#if !defined(CONFIG_DARWIN) && !defined(CONFIG_FREEBSD)
++#if !defined(CONFIG_DARWIN) && !defined(CONFIG_FREEBSD) && defined(O_NOATIME)
          if (errno == EPERM && (flags & O_NOATIME)) {
              /*
               * The client passed O_NOATIME but we lack permissions to honor it.
-@@ -216,6 +508,7 @@ ssize_t fremovexattrat_nofollow(int dirf
+@@ -229,6 +521,7 @@ ssize_t fremovexattrat_nofollow(int dirf
   * so ensure it is manually injected earlier and call here when
   * needed.
   */
@@ -327,7 +327,7 @@ Add BSD support for fsdev 9p.
  static inline off_t qemu_dirent_off(struct dirent *dent)
  {
  #ifdef CONFIG_DARWIN
-@@ -224,6 +517,7 @@ static inline off_t qemu_dirent_off(stru
+@@ -237,6 +530,7 @@ static inline off_t qemu_dirent_off(stru
      return dent->d_off;
  #endif
  }

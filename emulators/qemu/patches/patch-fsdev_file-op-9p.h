@@ -1,11 +1,11 @@
-$NetBSD: patch-fsdev_file-op-9p.h,v 1.1 2025/03/15 20:19:15 riastradh Exp $
+$NetBSD: patch-fsdev_file-op-9p.h,v 1.2 2026/01/05 10:11:37 adam Exp $
 
 Add BSD support for fsdev 9p.
 
---- fsdev/file-op-9p.h.orig	2024-12-10 23:46:36.000000000 +0000
+--- fsdev/file-op-9p.h.orig	2025-12-23 19:48:56.000000000 +0000
 +++ fsdev/file-op-9p.h
-@@ -26,6 +26,11 @@
- # include <sys/param.h>
+@@ -28,6 +28,11 @@
+ # endif
  # include <sys/mount.h>
  #endif
 +#ifdef __NetBSD__
