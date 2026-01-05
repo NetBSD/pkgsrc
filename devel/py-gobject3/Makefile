@@ -1,15 +1,10 @@
-# $NetBSD: Makefile,v 1.55 2025/10/23 20:36:36 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2026/01/05 16:06:30 adam Exp $
 
-PKGREVISION= 2
 .include "Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/-/3-/}
 
 COMMENT=	Python bindings for glib2 gobject
-
-#MESON_ARGS+=	-Dpython=${PYTHONBIN:Q}
-#MESON_ARGS+=	-Dtests=false
-#TEST_TARGET=	check
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.12.1:../../devel/py-meson_python
 
@@ -23,7 +18,6 @@ BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.46.0
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/py-gobject3-common/buildlink3.mk"
-#.include "../../devel/meson/build.mk"
 # https://bugzilla.gnome.org/show_bug.cgi?id=685094
 # https://bugzilla.gnome.org/show_bug.cgi?id=707196
 .include "../../graphics/py-cairo/buildlink3.mk"
