@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/07/07 08:28:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2026/01/05 14:08:23 adam Exp $
 bin/gtk4-builder-tool
 bin/gtk4-demo
 bin/gtk4-demo-application
@@ -100,6 +100,7 @@ include/gtk-4.0/gsk/gpu/gskglrenderer.h
 include/gtk-4.0/gsk/gpu/gskvulkanrenderer.h
 include/gtk-4.0/gsk/gsk.h
 include/gtk-4.0/gsk/gskcairorenderer.h
+include/gtk-4.0/gsk/gskcomponenttransfer.h
 include/gtk-4.0/gsk/gskenums.h
 include/gtk-4.0/gsk/gskenumtypes.h
 include/gtk-4.0/gsk/gskglshader.h
@@ -279,6 +280,7 @@ include/gtk-4.0/gtk/gtkgrid.h
 include/gtk-4.0/gtk/gtkgridlayout.h
 include/gtk-4.0/gtk/gtkgridview.h
 include/gtk-4.0/gtk/gtkheaderbar.h
+include/gtk-4.0/gtk/gtkiconpaintable.h
 include/gtk-4.0/gtk/gtkicontheme.h
 include/gtk-4.0/gtk/gtkimage.h
 include/gtk-4.0/gtk/gtkimcontext.h
@@ -409,11 +411,9 @@ ${PLIST.quartz}lib/girepository-1.0/GdkMacos-4.0.typelib
 ${PLIST.x11}lib/girepository-1.0/GdkX11-4.0.typelib
 lib/girepository-1.0/Gsk-4.0.typelib
 lib/girepository-1.0/Gtk-4.0.typelib
-${PLIST.cups}lib/gtk-4.0/4.0.0/printbackends/libprintbackend-cups.so
-lib/gtk-4.0/4.0.0/printbackends/libprintbackend-file.so
 lib/libgtk-4.so
 lib/libgtk-4.so.1
-lib/libgtk-4.so.1.1800.6
+lib/libgtk-4.so.1.2000.3
 lib/pkgconfig/gtk4-atspi.pc
 ${PLIST.quartz}lib/pkgconfig/gtk4-macos.pc
 lib/pkgconfig/gtk4-unix-print.pc
@@ -423,6 +423,14 @@ share/applications/org.gtk.Demo4.desktop
 share/applications/org.gtk.PrintEditor4.desktop
 share/applications/org.gtk.WidgetFactory4.desktop
 share/applications/org.gtk.gtk4.NodeEditor.desktop
+share/bash-completion/completions/gtk4-builder-tool
+share/bash-completion/completions/gtk4-demo
+share/bash-completion/completions/gtk4-image-tool
+share/bash-completion/completions/gtk4-node-editor
+share/bash-completion/completions/gtk4-path-tool
+share/bash-completion/completions/gtk4-print-editor
+share/bash-completion/completions/gtk4-rendernode-tool
+share/bash-completion/completions/gtk4-widget-factory
 share/gettext/its/gtk4builder.its
 share/gettext/its/gtk4builder.loc
 share/gir-1.0/Gdk-4.0.gir
@@ -527,7 +535,6 @@ share/locale/it/LC_MESSAGES/gtk40.mo
 share/locale/ja/LC_MESSAGES/gtk40.mo
 share/locale/ka/LC_MESSAGES/gtk40.mo
 share/locale/kab/LC_MESSAGES/gtk40.mo
-share/locale/kg/LC_MESSAGES/gtk40.mo
 share/locale/kk/LC_MESSAGES/gtk40.mo
 share/locale/km/LC_MESSAGES/gtk40.mo
 share/locale/kn/LC_MESSAGES/gtk40.mo
@@ -575,7 +582,6 @@ share/locale/ta/LC_MESSAGES/gtk40.mo
 share/locale/te/LC_MESSAGES/gtk40.mo
 share/locale/tg/LC_MESSAGES/gtk40.mo
 share/locale/th/LC_MESSAGES/gtk40.mo
-share/locale/tk/LC_MESSAGES/gtk40.mo
 share/locale/tr/LC_MESSAGES/gtk40.mo
 share/locale/tt/LC_MESSAGES/gtk40.mo
 share/locale/ug/LC_MESSAGES/gtk40.mo

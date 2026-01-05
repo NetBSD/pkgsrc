@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2025/10/23 20:39:56 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2026/01/05 14:08:23 adam Exp $
 
-DISTNAME=	gtk-4.18.6
+DISTNAME=	gtk-4.20.3
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
-PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -57,8 +56,7 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18.2
 .include "../../graphics/graphene/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libepoxy/buildlink3.mk"
-# librsvg is required by a demo only.
-#.include "../../graphics/librsvg/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../lang/python/tool.mk"
