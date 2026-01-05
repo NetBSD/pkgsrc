@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2025/09/27 09:57:21 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/01/05 17:05:44 adam Exp $
 
-DISTNAME=	OpenColorIO-2.4.2
+DISTNAME=	OpenColorIO-2.5.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AcademySoftwareFoundation/}
 GITHUB_PROJECT=	OpenColorIO
@@ -44,8 +43,9 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 
 # Use native macOS OpenGL.
 .if ${OPSYS} == "Darwin"
-# Tries to download sse2neon.h.
-CMAKE_CONFIGURE_ARGS+=	-DOCIO_USE_SSE2NEON=OFF
+.  if ${MACHINE_ARCH} == "aarch64"
+.include "../../devel/sse2neon/buildlink3.mk"
+.  endif
 .else
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
