@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:43:51 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/01/05 21:38:15 ktnb Exp $
 
-BLAKE2s (cosmosmash-1.4.8.tar.gz) = 48f032802420396d03b28a1be5910ec62f6b63dbc522fabcde9c6e65f719f25d
-SHA512 (cosmosmash-1.4.8.tar.gz) = 4b78cac18035ef4bdbdebd2a206ceb3c80646fa030f568e171208af7510a6b1da9ef3fd817f3ebae83fbb42b1ce2900e8f1ff33ec23a8fe735022409ab1120af
-Size (cosmosmash-1.4.8.tar.gz) = 921859 bytes
+BLAKE2s (cosmosmash-1.5.0.tar.gz) = 79fb34942e43a7fb6aae24a81ad52f6e6b44347ed490e733448e980c90897808
+SHA512 (cosmosmash-1.5.0.tar.gz) = 3be4b535d68eca185d3f48ff04c11c912fdcbc17470848650b20410030c7619f9dcffaeaf3bacb3a95eb37c5944724af7fc9978613c3252af1ec725504129c23
+Size (cosmosmash-1.5.0.tar.gz) = 536986 bytes
