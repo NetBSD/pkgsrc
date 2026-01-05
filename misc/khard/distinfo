@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2025/07/27 09:07:28 wiz Exp $
+$NetBSD: distinfo,v 1.20 2026/01/05 02:39:26 wiz Exp $
 
-BLAKE2s (khard-0.20.0.tar.gz) = 43145ffabf6582c5cfc621f10a013dc86097e13af8dbce89afe18f7b8b432c0c
-SHA512 (khard-0.20.0.tar.gz) = ce304946362cc77bcbeef887fa30192d26bbc592daba75158fed12688f33499a449215f296ed4f834b4267e000da55d7ad7cbd8d3609fac7185ea336b6600759
-Size (khard-0.20.0.tar.gz) = 611320 bytes
+BLAKE2s (khard-0.20.1.tar.gz) = 465d2267be4e96d8325824f867e428e0df5949b892ceecc8a16128eff2fc2cef
+SHA512 (khard-0.20.1.tar.gz) = 3e19edb1128a4afe3490cb69ec7a714d95f65cce4427cc6f8c673390b9dbba8a4259a24ff106190907d908e18bdb8e9257d3c4b8e6823fbc85abd0e2869c4ac5
+Size (khard-0.20.1.tar.gz) = 611619 bytes
