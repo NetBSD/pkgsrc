@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2023/01/04 22:27:08 nikita Exp $
+$NetBSD: distinfo,v 1.14 2026/01/05 22:10:35 alnsn Exp $
 
-BLAKE2s (luarocks-3.9.2.tar.gz) = 1bd8d012aaf04434ee67cb79eaedabee488073e1c78df7770f25d70d41bb8f66
-SHA512 (luarocks-3.9.2.tar.gz) = 7e93164bdcf35338e993822931a8e59957ab69c6e23236a7a075649c2f7cd173305c4ca6e9d115fc5e282cb76c21754d7adac92b21885006e5ee3bc06a9d0059
-Size (luarocks-3.9.2.tar.gz) = 256117 bytes
-SHA1 (patch-GNUmakefile) = 1f84ae6e926a57b07abcc65789d784c8e6a0fa75
-SHA1 (patch-src_luarocks_core_cfg.lua) = 24c8c7e66fa12b2daf67924ac8ae0a2458380250
+BLAKE2s (luarocks-3.13.0.tar.gz) = ef2940aa7ef02f117ea742fbc75950cc82905037e2f1f8555fe3602afdf5e3c5
+SHA512 (luarocks-3.13.0.tar.gz) = 44381bb7fd3d474f92b0d2d0bf492246907f88ac6d5bdbb30b889222d755681777042195cfbfa136c068e05db78896760d5aea28c2f60a46d2f30c4c28ba704b
+Size (luarocks-3.13.0.tar.gz) = 441909 bytes
+SHA1 (patch-GNUmakefile) = c4eff41351aa082e42ec0165ce3b299a48c22c14
+SHA1 (patch-src_luarocks_core_cfg.lua) = 55e853ef7e4d2dd428998316e17229de919b05b9

@@ -1,10 +1,10 @@
-$NetBSD: patch-src_luarocks_core_cfg.lua,v 1.1 2020/07/02 12:13:36 nia Exp $
+$NetBSD: patch-src_luarocks_core_cfg.lua,v 1.2 2026/01/05 22:10:35 alnsn Exp $
 
 It seems to not like NetBSD unzip(1).
 
---- src/luarocks/core/cfg.lua.orig	2020-02-07 10:24:14.000000000 +0000
+--- src/luarocks/core/cfg.lua.orig	2025-12-28 23:01:55.000000000 +0000
 +++ src/luarocks/core/cfg.lua
-@@ -253,7 +253,7 @@ local function make_defaults(lua_version
+@@ -251,7 +251,7 @@ local function make_defaults(lua_version
           MKTEMP = "mktemp",
  
           ZIP = "zip",
