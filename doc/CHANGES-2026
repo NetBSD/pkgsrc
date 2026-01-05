@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.84 2026/01/05 01:45:36 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.85 2026/01/05 01:51:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -112,3 +112,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/py-last to 7.0.1 [wiz 2026-01-05]
 	Updated textproc/py-sphinx-autodoc-typehints to 3.6.2 [wiz 2026-01-05]
 	Updated graphics/glm to 1.0.3 [wiz 2026-01-05]
+	Updated comms/py-textual to 7.0.0 [wiz 2026-01-05]
