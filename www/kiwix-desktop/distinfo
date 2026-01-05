@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/08/31 20:22:36 wiz Exp $
+$NetBSD: distinfo,v 1.2 2026/01/05 02:18:28 wiz Exp $
 
-BLAKE2s (kiwix-desktop-2.4.1.tar.gz) = 14751154471ed921d61622c70bd4eb3d3d9e90f98982ae9e29e0ed90670dd4f5
-SHA512 (kiwix-desktop-2.4.1.tar.gz) = 7340b4ee265f50bdf88d1927374c6857660dc8126fcb6620838b836c3bb067c8d12d13a6fa6c754e1bb4d16536218dfdf252e66c1245cec4cd7ba65334bf4a95
-Size (kiwix-desktop-2.4.1.tar.gz) = 671988 bytes
+BLAKE2s (kiwix-desktop-2.5.0.tar.gz) = a12c529442fb5b5b25534d513ae67293e4a79fcc0c9e6844c9dc95d93c53b2bb
+SHA512 (kiwix-desktop-2.5.0.tar.gz) = a32d4df16acffab7a95ec7d71ab832db8f4330af05233b9055c0e9fafe72b6fe2bc272de6a4eb54b849884515ccf431ef0fb5f894fdcda38a2f147b07db54c66
+Size (kiwix-desktop-2.5.0.tar.gz) = 685922 bytes
