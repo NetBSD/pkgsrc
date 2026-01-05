@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2025/12/01 09:14:36 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/01/05 21:38:15 ktnb Exp $
 
-DISTNAME=	cosmosmash-1.4.8
-PKGREVISION=	1
+DISTNAME=	cosmosmash-1.5.0
 CATEGORIES=	games
-MASTER_SITES=	#
+MASTER_SITES=	http://gvlsywt.cluster051.hosting.ovh.net/dev/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gvlsywt.cluster051.hosting.ovh.net/dev/cosmosmash.html
