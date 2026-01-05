@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/01/08 11:46:27 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/01/05 21:36:03 ktnb Exp $
 bin/quadrupleback
 share/applications/quadrupleback.desktop
 share/doc/${PKGNAME}/AUTHORS
@@ -7,6 +7,16 @@ share/doc/${PKGNAME}/NEWS
 share/doc/${PKGNAME}/README
 share/doc/${PKGNAME}/THANKS
 share/pixmaps/quadrupleback.png
+share/pixmaps/quadrupleback/apple.xpm
+share/pixmaps/quadrupleback/cherry.xpm
+share/pixmaps/quadrupleback/horseshoe.xpm
+share/pixmaps/quadrupleback/pear.xpm
+share/pixmaps/quadrupleback/skate0.xpm
+share/pixmaps/quadrupleback/skate1.xpm
+share/pixmaps/quadrupleback/skull.xpm
+share/pixmaps/quadrupleback/spider0.xpm
+share/pixmaps/quadrupleback/spider1.xpm
+share/pixmaps/quadrupleback/yoyo.xpm
 share/quadrupleback/fonts/9x18B.fnt
 share/sounds/quadrupleback/enemyAppears.wav
 share/sounds/quadrupleback/enemyCaptured.wav
