@@ -1,16 +1,6 @@
-$NetBSD: distinfo,v 1.39 2025/08/14 07:43:27 wiz Exp $
+$NetBSD: distinfo,v 1.40 2026/01/05 17:53:52 adam Exp $
 
-BLAKE2s (OpenImageIO-3.0.9.1.tar.gz) = 81e20f2e46d83c8918eb45eb55f528472cc6a3510f0869d7fa2d5d9ad2acfd3c
-SHA512 (OpenImageIO-3.0.9.1.tar.gz) = cee6ddfbd825022a45a46b041c894a18718a474a32da8715fe08f918c7387505e81f3220c0ad79d3ec160b9c224bdeafbbb8a2b67a47cd845dca492582607c22
-Size (OpenImageIO-3.0.9.1.tar.gz) = 53477417 bytes
+BLAKE2s (OpenImageIO-3.1.9.0.tar.gz) = b06eb9375e43d8bd5b888caa63b464e6829ff16d301e43d262b9ef46bc16967c
+SHA512 (OpenImageIO-3.1.9.0.tar.gz) = 9ff2cf17a3d60537f986a35ae39cf0dea96eee8544b22937421cb14a3a0f21edf30973ae4f0e4363274cec427de5bfcc0f7693674683d1d4c6b8999619484608
+Size (OpenImageIO-3.1.9.0.tar.gz) = 53610865 bytes
 SHA1 (patch-src_cmake_compiler.cmake) = d261b70e5ff0984b386087be54aff55e2b36c274
-SHA1 (patch-src_include_OpenImageIO_strutil.h) = 440268de93e0ee5654a251ef6452914ffd05d900
-SHA1 (patch-src_include_OpenImageIO_typedesc.h) = c38e80f70bba101e5153c7e9508bd8714560796c
-SHA1 (patch-src_libOpenImageIO_imagebufalgo__compare.cpp) = 452f7f19d7730fc1e37d20fb65b49361cc5bda51
-SHA1 (patch-src_libOpenImageIO_maketexture.cpp) = 2f7f08cfe889f4c09513365909414fe3f607e373
-SHA1 (patch-src_libOpenImageIO_printinfo.cpp) = 3e532b93526d2655ba42259699b97cfe4b16bc24
-SHA1 (patch-src_libtexture_environment.cpp) = 28ddcf5b5b8cf5de6b060dda2aec659ba1d597c9
-SHA1 (patch-src_libutil_fmath__test.cpp) = e917f1e226edcc198931f4aa2d38409fbe2f0760
-SHA1 (patch-src_libutil_strutil.cpp) = dfcd8280d2fb88c3fa0ffbc2806f96963f5491bf
-SHA1 (patch-src_oiiotool_printinfo.cpp) = d17fbe355f564941388bce9dd4b40c2dc21dd582
-SHA1 (patch-src_testtex_testtex.cpp) = 3d4616d82ec758f749dc01b6139bbe77a21464df

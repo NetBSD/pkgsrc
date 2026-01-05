@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.125 2025/09/27 09:57:21 wiz Exp $
+# $NetBSD: Makefile,v 1.126 2026/01/05 17:53:52 adam Exp $
 
-DISTNAME=	OpenImageIO-3.0.9.1
+DISTNAME=	OpenImageIO-3.1.9.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AcademySoftwareFoundation/}
 GITHUB_PROJECT=	OpenImageIO
@@ -18,12 +17,16 @@ UNLIMIT_RESOURCES=	datasize virtualsize
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 TEST_TARGET=	test
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
+# For Darwin
+TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 
 CMAKE_CONFIGURE_ARGS+=	-DSTOP_ON_WARNING=OFF # Disable -Werror
 CMAKE_CONFIGURE_ARGS+=	-DUSE_EXTERNAL_PUGIXML=ON
 CMAKE_CONFIGURE_ARGS+=	-DUSE_PYTHON=OFF
 CMAKE_CONFIGURE_ARGS+=	-DROBINMAP_INCLUDE_DIR=${BUILDLINK_PREFIX.robin-map}/include
 CMAKE_CONFIGURE_ARGS+=	-DOpenEXR_ROOT=${BUILDLINK_PREFIX.openexr}
+CMAKE_CONFIGURE_ARGS+=	-DWebP_ROOT=${BUILDLINK_PREFIX.libwebp}
 
 # none of these are available in pkgsrc yet
 CMAKE_CONFIGURE_ARGS+=	-DUSE_DCMTK=OFF
@@ -50,6 +53,7 @@ PKGCONFIG_OVERRIDE=	src/build-scripts/OpenImageIO.pc.in
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/libheif/buildlink3.mk"
+.include "../../graphics/libjxl/buildlink3.mk"
 .include "../../graphics/libraw/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/opencolorio/buildlink3.mk"
@@ -57,6 +61,8 @@ PKGCONFIG_OVERRIDE=	src/build-scripts/OpenImageIO.pc.in
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/ptex/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+# For testing
+.include "../../lang/python/tool.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"

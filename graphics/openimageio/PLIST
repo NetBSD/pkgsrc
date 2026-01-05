@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2025/08/13 06:35:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/01/05 17:53:52 adam Exp $
 bin/iconvert
 bin/idiff
 bin/igrep
@@ -34,6 +34,7 @@ include/OpenImageIO/fstream_mingw.h
 include/OpenImageIO/function_view.h
 include/OpenImageIO/half.h
 include/OpenImageIO/hash.h
+include/OpenImageIO/image_span.h
 include/OpenImageIO/image_view.h
 include/OpenImageIO/imagebuf.h
 include/OpenImageIO/imagebufalgo.h
@@ -42,6 +43,7 @@ include/OpenImageIO/imagebufalgo_util.h
 include/OpenImageIO/imagecache.h
 include/OpenImageIO/imageio.h
 include/OpenImageIO/memory.h
+include/OpenImageIO/nsversions.h
 include/OpenImageIO/oiioversion.h
 include/OpenImageIO/optparser.h
 include/OpenImageIO/parallel.h
@@ -73,11 +75,11 @@ lib/cmake/OpenImageIO/OpenImageIOConfigVersion.cmake
 lib/cmake/OpenImageIO/OpenImageIOTargets-release.cmake
 lib/cmake/OpenImageIO/OpenImageIOTargets.cmake
 lib/libOpenImageIO.so
-lib/libOpenImageIO.so.3.0
-lib/libOpenImageIO.so.3.0.9
+lib/libOpenImageIO.so.3.1
+lib/libOpenImageIO.so.3.1.9
 lib/libOpenImageIO_Util.so
-lib/libOpenImageIO_Util.so.3.0
-lib/libOpenImageIO_Util.so.3.0.9
+lib/libOpenImageIO_Util.so.3.1
+lib/libOpenImageIO_Util.so.3.1.9
 lib/pkgconfig/OpenImageIO.pc
 share/doc/OpenImageIO/CHANGES-0.x.md
 share/doc/OpenImageIO/CHANGES-1.x.md
