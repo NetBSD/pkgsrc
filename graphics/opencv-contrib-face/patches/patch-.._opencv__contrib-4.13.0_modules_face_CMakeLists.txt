@@ -1,9 +1,9 @@
-$NetBSD: patch-.._opencv__contrib-4.12.0_modules_face_CMakeLists.txt,v 1.1 2025/07/07 05:15:26 wiz Exp $
+$NetBSD: patch-.._opencv__contrib-4.13.0_modules_face_CMakeLists.txt,v 1.1 2026/01/05 02:54:19 wiz Exp $
 
 Do not download files during build, let pkgsrc provide it.
 
---- ../opencv_contrib-4.12.0/modules/face/CMakeLists.txt.orig	2025-02-07 17:04:23.284140051 +0000
-+++ ../opencv_contrib-4.12.0/modules/face/CMakeLists.txt
+--- ../opencv_contrib-4.13.0/modules/face/CMakeLists.txt.orig	2025-02-07 17:04:23.284140051 +0000
++++ ../opencv_contrib-4.13.0/modules/face/CMakeLists.txt
 @@ -8,20 +8,6 @@ ocv_define_module(face opencv_core
  )
  # NOTE: objdetect module is needed for one of the samples
