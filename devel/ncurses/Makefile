@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.121 2025/10/05 01:17:21 js Exp $
+# $NetBSD: Makefile,v 1.122 2026/01/05 02:01:15 wiz Exp $
 
-DISTNAME=	ncurses-6.5
-PKGREVISION=	1
+DISTNAME=	ncurses-6.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=ncurses/}
 
