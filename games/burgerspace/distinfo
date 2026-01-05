@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:43:49 nia Exp $
+$NetBSD: distinfo,v 1.6 2026/01/05 21:37:12 ktnb Exp $
 
-BLAKE2s (burgerspace-1.9.4.tar.gz) = 3af7cb3f2e5afb14d3f207d676bab102f547d3ada3900ee0737e437af7579fc6
-SHA512 (burgerspace-1.9.4.tar.gz) = e4ba9b2421aa3db18ed0b99ecc23c114fe9146a248028064c5d477b99674d7d7ea4bb1de01041de1ddcc186242e346d186a155a6cdb3db28cca518349dcaa1b2
-Size (burgerspace-1.9.4.tar.gz) = 542060 bytes
+BLAKE2s (burgerspace-1.10.0.tar.gz) = 4606c718a8e4c843accd817a949769c181f2399fcb388ea7ed1deb500af65b54
+SHA512 (burgerspace-1.10.0.tar.gz) = 7ce6fa48829414ff7a48cb038b87842112c18829769105f34a842bffcfe99072ed6201ba3772f98efd115b8ffd9de0d1d15dc9f8b80a5f978f5763b72a358d8c
+Size (burgerspace-1.10.0.tar.gz) = 251038 bytes
