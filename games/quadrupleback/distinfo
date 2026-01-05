@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:44:22 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/01/05 21:36:03 ktnb Exp $
 
-BLAKE2s (quadrupleback-0.1.1.tar.gz) = 368d0e2e45c86f2e762f7161b19cf0aedbcec791637323f74252a45bb21afd03
-SHA512 (quadrupleback-0.1.1.tar.gz) = d65f19c3497da03ada6908b2a8f2349211a0583a39b9e738d2fb05e0d1563d718f6b5ffd1a2d1a70bfd45ac90bfefbd7fa564cd17d3a1c72ecbcac7372efc3ef
-Size (quadrupleback-0.1.1.tar.gz) = 416008 bytes
+BLAKE2s (quadrupleback-0.2.0.tar.gz) = 06a27782261bc2999a21e6691326bfb27f5506d75196e48c070d00f98f9664b2
+SHA512 (quadrupleback-0.2.0.tar.gz) = 9319ad10891d517956d4320e8b76d1e79dee48754a0d7b95e714bc2e6daaff376fd4f7848288e54443620a8f324b6577e894c039dfe54f98ac7849f8cafed997
+Size (quadrupleback-0.2.0.tar.gz) = 442256 bytes
