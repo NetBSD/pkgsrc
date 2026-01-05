@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/04/23 19:32:53 schmonz Exp $
+# $NetBSD: Makefile,v 1.20 2026/01/05 09:22:05 wiz Exp $
 
 DISTNAME=		libspf2-1.2.11
 PKGREVISION=		2
@@ -6,7 +6,7 @@ CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.libspf2.org/
+HOMEPAGE=		https://www.libspf2.net/
 COMMENT=		Implementation of the Sender Policy Framework
 LICENSE=		modified-bsd OR gnu-lgpl-v2.1
 
