@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2025/10/23 20:36:31 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/01/05 09:07:56 wiz Exp $
 
 DISTNAME=	liblangtag-0.6.7
 PKGREVISION=	6
@@ -7,7 +7,7 @@ MASTER_SITES=	https://bitbucket.org/tagoh/liblangtag/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tagoh.bitbucket.org/liblangtag/
+HOMEPAGE=	https://gitlab.com/tagoh/liblangtag
 COMMENT=	RFC 5646 language tag interface library
 LICENSE=	gnu-lgpl-v3 OR mpl-2.0
 
