@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/12/31 21:36:36 pin Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/05 06:07:16 pin Exp $
 
 DISTNAME=	reovim-0.7.8
+# reovim >= 0.7.9 requires Rust >= 1.92
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ds1sqe/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
