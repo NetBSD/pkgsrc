@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.106 2026/01/05 16:07:16 adam Exp $
+$NetBSD: CHANGES-2026,v 1.107 2026/01/05 16:12:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -140,3 +140,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/zoneminder to 1.36.37.7 [gdt 2026-01-05]
 	Updated devel/py-gobject3 to 3.54.5 [adam 2026-01-05]
 	Updated devel/py-gobject3-common to 3.54.5 [adam 2026-01-05]
+	Updated www/py-vcrpy to 8.1.1 [adam 2026-01-05]
+	Updated devel/py-cython to 3.2.4 [adam 2026-01-05]
+	Updated textproc/py-elementpath to 5.1.0 [adam 2026-01-05]
