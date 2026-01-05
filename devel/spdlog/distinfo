@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.25 2025/10/12 16:52:18 wiz Exp $
+$NetBSD: distinfo,v 1.26 2026/01/05 18:20:47 adam Exp $
 
-BLAKE2s (spdlog-1.16.0.tar.gz) = 37a38ce5bb30a1c745f29e94d9e244d22a3b8a8a53fb877c77b99c55b4ca002c
-SHA512 (spdlog-1.16.0.tar.gz) = 3c330162201fb405a08040327e08bc3f90336f431b8865d250e1cf171e48eb8a07a0245a8f60118022869de1ee38209b14da76bf6bcc2ec3da60f1853adaf958
-Size (spdlog-1.16.0.tar.gz) = 280382 bytes
+BLAKE2s (spdlog-1.17.0.tar.gz) = c3eb8080cd7b93997428610362c43277570974edc3d4cda79ef7c3659ee6f16f
+SHA512 (spdlog-1.17.0.tar.gz) = 8df117055d19ff21c9c9951881c7bdf27cc0866ea3a4aa0614b2c3939cedceab94ac9abaa63dc4312b51562b27d708cb2f014c68c603fd1c1051d3ed5c1c3087
+Size (spdlog-1.17.0.tar.gz) = 281801 bytes
 SHA1 (patch-CMakeLists.txt) = 3a8487ad4613817fa88eafd7a4a56e286aac0619
 SHA1 (patch-include_spdlog_tweakme.h) = 0e3f16aaf013535331a11be523dd731503c12717
