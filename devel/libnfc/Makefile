@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/06/06 12:40:40 riastradh Exp $
+# $NetBSD: Makefile,v 1.6 2026/01/05 09:17:23 wiz Exp $
 
 DISTNAME=	libnfc-1.7.1
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	https://dl.bintray.com/nfc-tools/sources/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://nfc-tools.org/index.php?title=Libnfc
+HOMEPAGE=	https://nfc-tools.github.io/projects/libnfc/
 COMMENT=	Low level NFC SDK and Programmers API
 LICENSE=	gnu-lgpl-v3
 
