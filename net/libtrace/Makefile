@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2025/10/05 19:26:11 js Exp $
+# $NetBSD: Makefile,v 1.35 2026/01/05 09:23:55 wiz Exp $
 
 DISTNAME=	libtrace-4.0.10
 PKGREVISION=	20
@@ -7,7 +7,7 @@ MASTER_SITES=	#
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://research.wand.net.nz/software/libtrace.php
+#HOMEPAGE=	https://research.wand.net.nz/software/libtrace.php
 COMMENT=	Library for trace processing
 LICENSE=	gnu-lgpl-v3
 
