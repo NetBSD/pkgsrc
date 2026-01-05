@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.102 2026/01/05 14:08:48 adam Exp $
+$NetBSD: CHANGES-2026,v 1.103 2026/01/05 14:13:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -134,3 +134,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/gdbus-codegen to 2.86.3 [adam 2026-01-05]
 	Updated graphics/gdk-pixbuf2 to 2.44.4 [adam 2026-01-05]
 	Updated x11/gtk4 to 4.20.3 [adam 2026-01-05]
+	Updated devel/catch2 to 3.12.0 [adam 2026-01-05]
+	Updated devel/py-cbor2 to 5.8.0 [adam 2026-01-05]
