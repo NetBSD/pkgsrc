@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.113 2026/01/05 20:04:40 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.114 2026/01/05 21:32:44 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -152,3 +152,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/reovim to 0.7.9 [pin 2026-01-05]
 	Updated sysutils/dua-cli to 2.33.0 [pin 2026-01-05]
 	Updated lang/ruby33 to 3.3.10nb1 [wiz 2026-01-05]
+	Updated devel/flatzebra to 0.2.0 [ktnb 2026-01-05]
