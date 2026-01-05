@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.95 2026/01/05 09:00:59 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.96 2026/01/05 10:12:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -123,3 +123,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-nextest to 0.9.118 [pin 2026-01-05]
 	Updated devel/ast-grep to 0.40.4 [pin 2026-01-05]
 	Updated devel/lua-filesystem to 1.9.0 [alnsn 2026-01-05]
+	Updated emulators/qemu to 10.2.0 [adam 2026-01-05]
+	Updated sysutils/qemu-guest-agent to 10.2.0 [adam 2026-01-05]
