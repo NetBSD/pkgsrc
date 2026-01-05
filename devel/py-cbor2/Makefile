@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2025/11/12 14:12:06 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/01/05 14:13:19 adam Exp $
 
-DISTNAME=	cbor2-5.7.1
+DISTNAME=	cbor2-5.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cbor2/}
