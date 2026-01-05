@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2025/12/15 10:09:44 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/01/05 16:08:27 adam Exp $
 
-DISTNAME=	vcrpy-8.1.0
+DISTNAME=	vcrpy-8.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vcrpy/}
