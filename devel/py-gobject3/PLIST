@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.15 2024/10/29 20:03:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/01/05 16:06:30 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -8,6 +9,9 @@ ${PYSITELIB}/gi/__init__.pyo
 ${PYSITELIB}/gi/_constants.py
 ${PYSITELIB}/gi/_constants.pyc
 ${PYSITELIB}/gi/_constants.pyo
+${PYSITELIB}/gi/_enum.py
+${PYSITELIB}/gi/_enum.pyc
+${PYSITELIB}/gi/_enum.pyo
 ${PYSITELIB}/gi/_error.py
 ${PYSITELIB}/gi/_error.pyc
 ${PYSITELIB}/gi/_error.pyo
@@ -28,6 +32,9 @@ ${PYSITELIB}/gi/_propertyhelper.pyo
 ${PYSITELIB}/gi/_signalhelper.py
 ${PYSITELIB}/gi/_signalhelper.pyc
 ${PYSITELIB}/gi/_signalhelper.pyo
+${PYSITELIB}/gi/_signature.py
+${PYSITELIB}/gi/_signature.pyc
+${PYSITELIB}/gi/_signature.pyo
 ${PYSITELIB}/gi/docstring.py
 ${PYSITELIB}/gi/docstring.pyc
 ${PYSITELIB}/gi/docstring.pyo
@@ -58,6 +65,9 @@ ${PYSITELIB}/gi/overrides/GdkPixbuf.pyo
 ${PYSITELIB}/gi/overrides/Gio.py
 ${PYSITELIB}/gi/overrides/Gio.pyc
 ${PYSITELIB}/gi/overrides/Gio.pyo
+${PYSITELIB}/gi/overrides/GioUnix.py
+${PYSITELIB}/gi/overrides/GioUnix.pyc
+${PYSITELIB}/gi/overrides/GioUnix.pyo
 ${PYSITELIB}/gi/overrides/Gtk.py
 ${PYSITELIB}/gi/overrides/Gtk.pyc
 ${PYSITELIB}/gi/overrides/Gtk.pyo
@@ -67,9 +77,6 @@ ${PYSITELIB}/gi/overrides/Pango.pyo
 ${PYSITELIB}/gi/overrides/__init__.py
 ${PYSITELIB}/gi/overrides/__init__.pyc
 ${PYSITELIB}/gi/overrides/__init__.pyo
-${PYSITELIB}/gi/overrides/keysyms.py
-${PYSITELIB}/gi/overrides/keysyms.pyc
-${PYSITELIB}/gi/overrides/keysyms.pyo
 ${PYSITELIB}/gi/pygtkcompat.py
 ${PYSITELIB}/gi/pygtkcompat.pyc
 ${PYSITELIB}/gi/pygtkcompat.pyo
@@ -82,9 +89,6 @@ ${PYSITELIB}/gi/types.pyo
 ${PYSITELIB}/pygtkcompat/__init__.py
 ${PYSITELIB}/pygtkcompat/__init__.pyc
 ${PYSITELIB}/pygtkcompat/__init__.pyo
-${PYSITELIB}/pygtkcompat/generictreemodel.py
-${PYSITELIB}/pygtkcompat/generictreemodel.pyc
-${PYSITELIB}/pygtkcompat/generictreemodel.pyo
 ${PYSITELIB}/pygtkcompat/pygtkcompat.py
 ${PYSITELIB}/pygtkcompat/pygtkcompat.pyc
 ${PYSITELIB}/pygtkcompat/pygtkcompat.pyo
