@@ -1,22 +1,19 @@
-$NetBSD: patch-hw_9pfs_9p.c,v 1.1 2025/03/15 20:19:15 riastradh Exp $
+$NetBSD: patch-hw_9pfs_9p.c,v 1.2 2026/01/05 10:11:38 adam Exp $
 
 Add BSD support for fsdev 9p.
 
---- hw/9pfs/9p.c.orig	2024-12-10 23:46:36.000000000 +0000
+--- hw/9pfs/9p.c.orig	2025-12-23 19:48:56.000000000 +0000
 +++ hw/9pfs/9p.c
-@@ -136,8 +136,10 @@ static int dotl_to_open_flags(int flags)
+@@ -136,7 +136,7 @@ static int dotl_to_open_flags(int flags)
          { P9_DOTL_NONBLOCK, O_NONBLOCK } ,
          { P9_DOTL_DSYNC, O_DSYNC },
          { P9_DOTL_FASYNC, FASYNC },
--#ifndef CONFIG_DARWIN
-+#ifdef O_NOATIME
+-#if !defined(CONFIG_DARWIN) && !defined(CONFIG_FREEBSD)
++#if !defined(CONFIG_DARWIN) && !defined(CONFIG_FREEBSD) && defined(O_NOATIME)
          { P9_DOTL_NOATIME, O_NOATIME },
-+#endif
-+#ifndef CONFIG_DARWIN
-         /*
-          *  On Darwin, we could map to F_NOCACHE, which is
-          *  similar, but doesn't quite have the same
-@@ -2293,6 +2295,13 @@ static int coroutine_fn v9fs_do_readdir_
+ #endif
+ #ifndef CONFIG_DARWIN
+@@ -2365,6 +2365,13 @@ static int coroutine_fn v9fs_do_readdir_
          if (err || !dent) {
              break;
          }
@@ -30,7 +27,7 @@ Add BSD support for fsdev 9p.
          err = v9fs_co_name_to_path(pdu, &fidp->path, dent->d_name, &path);
          if (err < 0) {
              break;
-@@ -2329,7 +2338,11 @@ static int coroutine_fn v9fs_do_readdir_
+@@ -2401,7 +2408,11 @@ static int coroutine_fn v9fs_do_readdir_
          count += len;
          v9fs_stat_free(&v9stat);
          v9fs_path_free(&path);
@@ -42,7 +39,7 @@ Add BSD support for fsdev 9p.
      }
  
      v9fs_readdir_unlock(&fidp->fs.dir);
-@@ -2530,7 +2543,11 @@ static int coroutine_fn v9fs_do_readdir(
+@@ -2602,7 +2613,11 @@ static int coroutine_fn v9fs_do_readdir(
              qid.version = 0;
          }
  
@@ -54,7 +51,7 @@ Add BSD support for fsdev 9p.
          v9fs_string_init(&name);
          v9fs_string_sprintf(&name, "%s", dent->d_name);
  
-@@ -3575,7 +3592,11 @@ static int v9fs_fill_statfs(V9fsState *s
+@@ -3647,7 +3662,11 @@ static int v9fs_fill_statfs(V9fsState *s
      if (!bsize_factor) {
          bsize_factor = 1;
      }
@@ -66,7 +63,7 @@ Add BSD support for fsdev 9p.
      f_bsize = stbuf->f_bsize;
      f_bsize *= bsize_factor;
      /*
-@@ -3592,10 +3613,14 @@ static int v9fs_fill_statfs(V9fsState *s
+@@ -3664,10 +3683,14 @@ static int v9fs_fill_statfs(V9fsState *s
      fsid_val = (unsigned int)stbuf->f_fsid.val[0] |
                 (unsigned long long)stbuf->f_fsid.val[1] << 32;
      f_namelen = NAME_MAX;
@@ -82,7 +79,7 @@ Add BSD support for fsdev 9p.
  #endif
  
      return pdu_marshal(pdu, offset, "ddqqqqqqd",
-@@ -3966,7 +3991,7 @@ out_nofid:
+@@ -4038,7 +4061,7 @@ out_nofid:
      v9fs_string_free(&name);
  }
  
