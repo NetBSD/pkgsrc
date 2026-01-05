@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/01/05 16:58:17 adam Exp $
+
+BLAKE2s (sse2neon-1.9.1.tar.gz) = 8781f82ed3c6a35b0d38d02193c5fe3d1f48319b2aa325f2e85c7059f3d5e083
+SHA512 (sse2neon-1.9.1.tar.gz) = ea154fd525cac66e7a26b818b67f370f0386e43fb2fce31f8d2673f99f01c45d746ddc0aa9174da6f233128ec87b669a74892847f529aceb9392a6328bbe5559
+Size (sse2neon-1.9.1.tar.gz) = 270312 bytes

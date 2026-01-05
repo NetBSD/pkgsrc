@@ -1,0 +1,4 @@
+sse2neon translates Intel SSE (Streaming SIMD Extensions) intrinsics to Arm
+NEON, enabling rapid porting of x86 SIMD code to Arm platforms. The header file
+sse2neon.h provides NEON-based implementations of functions from Intel
+intrinsic headers (e.g., <xmmintrin.h>), preserving the original semantics.
