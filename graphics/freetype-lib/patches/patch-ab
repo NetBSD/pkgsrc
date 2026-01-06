@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.3 2008/03/14 17:22:49 jlam Exp $
+$NetBSD: patch-ab,v 1.4 2026/01/06 22:28:02 wiz Exp $
 
---- test/arch/unix/Makefile.in.orig	2001-12-25 15:13:19.000000000 -0500
+--- test/arch/unix/Makefile.in.orig	2001-12-25 20:13:19.000000000 +0000
 +++ test/arch/unix/Makefile.in
+@@ -66,7 +66,7 @@ X_PROGRAMS = ftstring ftstrtto fttimer ftview ftzoom
+ PROGRAMS = ftdump fterror ftlint ftmetric ftsbit ftstrpnm
+ X_PROGRAMS = ftstring ftstrtto fttimer ftview ftzoom
+ 
+-ALL_PROGRAMS = $(PROGRAMS) @X_PROGRAMS@
++ALL_PROGRAMS = $(PROGRAMS) ${X_PROGRAMS}
+ 
+ # set this variable to nil if you don't need to use Electric-Fence
+ EFENCE =
 @@ -75,11 +75,12 @@ EFENCE =
  
  # variables used to compile either with libtool or not
@@ -17,7 +26,7 @@ $NetBSD: patch-ab,v 1.3 2008/03/14 17:22:49 jlam Exp $
  
  .c.o:
  	$(CC) -c $(FT_CFLAGS) $<
-@@ -137,9 +138,9 @@ ftstrtto: ftstrtto.o $(DISPOBJS) arabic.
+@@ -137,9 +138,9 @@ install: $(ALL_PROGRAMS)
  
  
  install: $(ALL_PROGRAMS)
