@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.26 2025/07/02 02:49:40 markd Exp $
+# $NetBSD: options.mk,v 1.27 2026/01/06 11:25:28 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
 PKG_SUPPORTED_OPTIONS=	debug debug-info doc gtk3 iscsi jack sdl spice
@@ -45,6 +45,7 @@ CONFIGURE_ARGS+=	--enable-debug
 .if !empty(PKG_OPTIONS:Mdoc)
 PLIST.doc=		yes
 CONFIGURE_ARGS+=	--enable-docs
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-rtd-theme>=1.2.0:../../textproc/py-sphinx-rtd-theme
 .else
