@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:01:05 nia Exp $
+$NetBSD: distinfo,v 1.13 2026/01/06 21:42:55 wiz Exp $
 
 BLAKE2s (gst123-0.3.5.tar.bz2) = 2986db2cef672dbc0aebd2cd990ed78464828f3d4b15a3ed50bea9576afafd93
 SHA512 (gst123-0.3.5.tar.bz2) = a967e4ba00b9ef744aa7a80e24fb7aa452c29b0b024a3bb446570ae9254ea295563deae1a000e9d363f57ce7aa11e537b124ccc672a98bf3230d371dcfb7e4ee
 Size (gst123-0.3.5.tar.bz2) = 125468 bytes
+SHA1 (patch-src_terminal.h) = 1352da2cc6ae84ae8bc38fb394a14e8115161e2c
