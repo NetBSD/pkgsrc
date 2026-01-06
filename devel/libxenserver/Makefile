@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2025/10/05 19:25:50 js Exp $
-#
+# $NetBSD: Makefile,v 1.49 2026/01/06 08:43:58 wiz Exp $
 
 VERSION=	6.2.0
 DISTNAME=	XenServer-${VERSION}-SDK
@@ -9,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://downloadns.citrix.com.edgesuite.net/7289/
 
 MAINTAINER=	sborrill@NetBSD.org
-HOMEPAGE=	http://community.citrix.com/cdn/xs/sdks/
+HOMEPAGE=	https://docs.xenserver.com/en-us/xenserver/developer/sdk-guide.html
 COMMENT=	Citrix XenServer SDK for C
 LICENSE=	2-clause-bsd
 
