@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2026/01/06 17:14:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.95 2026/01/06 17:17:00 ryoon Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -22,6 +22,7 @@ SUBDIR+=	hledger
 SUBDIR+=	hledger-lib
 SUBDIR+=	homebank
 SUBDIR+=	hs-Decimal
+SUBDIR+=	kmymoney
 SUBDIR+=	ledger
 SUBDIR+=	ledger2beancount
 SUBDIR+=	ledger32
