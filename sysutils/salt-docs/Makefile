@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2025/10/09 07:57:57 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/01/06 11:18:16 wiz Exp $
 
 .include "../../sysutils/salt/Makefile.common"
 
@@ -8,7 +8,7 @@ COMMENT=	Documentation for salt
 
 USE_TOOLS+=	gmake pax
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
 TOOL_DEPENDS+=	salt-[0-9]*:../../sysutils/salt
 TOOL_DEPENDS+=	${PYPKGPREFIX}-linkify-it-py-[0-9]*:../../textproc/py-linkify-it-py

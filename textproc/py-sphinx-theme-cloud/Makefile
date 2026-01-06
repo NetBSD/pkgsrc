@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/10/09 07:58:04 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/01/06 11:18:18 wiz Exp $
 
 DISTNAME=	cloud_sptheme-1.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/cloud_sptheme/sphinx-theme-cloud/}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
