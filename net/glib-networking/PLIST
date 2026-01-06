@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2023/02/20 09:22:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2026/01/06 08:42:32 adam Exp $
 lib/gio/modules/libgiognomeproxy.so
 ${PLIST.gnutls}lib/gio/modules/libgiognutls.so
 lib/gio/modules/libgiolibproxy.so
@@ -41,6 +41,7 @@ share/locale/id/LC_MESSAGES/glib-networking.mo
 share/locale/it/LC_MESSAGES/glib-networking.mo
 share/locale/ja/LC_MESSAGES/glib-networking.mo
 share/locale/ka/LC_MESSAGES/glib-networking.mo
+share/locale/kab/LC_MESSAGES/glib-networking.mo
 share/locale/kk/LC_MESSAGES/glib-networking.mo
 share/locale/km/LC_MESSAGES/glib-networking.mo
 share/locale/kn/LC_MESSAGES/glib-networking.mo
