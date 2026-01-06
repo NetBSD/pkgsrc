@@ -1,35 +1,31 @@
-$NetBSD: distinfo,v 1.26 2026/01/05 16:02:44 gdt Exp $
+$NetBSD: distinfo,v 1.27 2026/01/06 17:51:37 gdt Exp $
 
 BLAKE2s (FriendsOfCake-crud-14292374ccf1328f2d5db20897bd06f99ba4d938.tar.gz) = 8877bf6718ecfe3cba2515629418fe5addc60cf8ce4650526b39db6a234922ad
 SHA512 (FriendsOfCake-crud-14292374ccf1328f2d5db20897bd06f99ba4d938.tar.gz) = da58528686baf05385ad08079f965bce10eba6d599133ab773e9ab1f9e4b7d82cf5431b4b773317b90effb16e0b026a029bdfabe08a9ef1a5e9b94e7a1c2ea9e
 Size (FriendsOfCake-crud-14292374ccf1328f2d5db20897bd06f99ba4d938.tar.gz) = 73086 bytes
-BLAKE2s (ZoneMinder-1.36.37.7-02e750c7b395f701ea68bb05b7b94520805c59ef.tar.gz) = 03f1d0d287f06cac877d39fd20a827656fe775acd3f5a26c376c9a153ab60796
-SHA512 (ZoneMinder-1.36.37.7-02e750c7b395f701ea68bb05b7b94520805c59ef.tar.gz) = 556ebb4e25e2b76e3729d72cb652d6c9b253c3f5ca43809f2a8709e286420522f05e855b74bf50eff0c0f560f8ae1f215a06f20f2da203737deed2d6fea11ed7
-Size (ZoneMinder-1.36.37.7-02e750c7b395f701ea68bb05b7b94520805c59ef.tar.gz) = 13974395 bytes
+BLAKE2s (ZoneMinder-1.36.37.10-5ca31d88f7069ec4a4cc758e7ea05353573d3304.tar.gz) = a5431be1e59cc1e8cf9d723fe83d4e9c7aa6a7e5aa294bdb375b9877d8162b01
+SHA512 (ZoneMinder-1.36.37.10-5ca31d88f7069ec4a4cc758e7ea05353573d3304.tar.gz) = aaff4529a54cf9b2d60932d768faf7c75570b0c7bfa59326b448f436f635be0d35474c72fed59ac789c6d618307190ba747d534fda037edbd5c3a5d31c2f2bee
+Size (ZoneMinder-1.36.37.10-5ca31d88f7069ec4a4cc758e7ea05353573d3304.tar.gz) = 13974266 bytes
 BLAKE2s (ZoneMinder-CakePHP-Enum-Behavior-ea90c0cd7f6e24333a90885e563b5d30b793db29.tar.gz) = 4639184438becb1c33450a00e213fca9d11e92b7f2545fb701f40a664c716764
 SHA512 (ZoneMinder-CakePHP-Enum-Behavior-ea90c0cd7f6e24333a90885e563b5d30b793db29.tar.gz) = 75f2188e548b98191c8df82fb76e918f3bda9788f541449df8fa92449ad19aa0b9c13420dd91c760e08a4d31956ad51602242ab97e3bd4460f01e99f49992453
 Size (ZoneMinder-CakePHP-Enum-Behavior-ea90c0cd7f6e24333a90885e563b5d30b793db29.tar.gz) = 3504 bytes
-BLAKE2s (ZoneMinder-RtspServer-055d81fe1293429e496b19104a9ed3360755a440.tar.gz) = 0feba45357a746173378193be365b164061cc9f20e84210ecfe9e991ad9971e4
-SHA512 (ZoneMinder-RtspServer-055d81fe1293429e496b19104a9ed3360755a440.tar.gz) = 2f3bbd449269cba5afda3135e54cca114342956da3ce8fbfb05533ec7b1c3f75767d8b5f3d9b415254ad7b39817bc343b0790c591ef3cc64d2863819ab3a7551
-Size (ZoneMinder-RtspServer-055d81fe1293429e496b19104a9ed3360755a440.tar.gz) = 1396623 bytes
+BLAKE2s (gdt-RtspServer-2719899a3f74ef0a9bb213d34998bcc74cc1f17f.tar.gz) = 427ab3da339df34c610e0b6ec72f804f80ee32b22ca6ab8ead1c195f8b66950a
+SHA512 (gdt-RtspServer-2719899a3f74ef0a9bb213d34998bcc74cc1f17f.tar.gz) = 2891a0817e12be3ed9421e259878a31c97efb411f69339140be9c7f4a5f670574b887e921383d6602096e9c369fcb7b83e513fcc321c37abc87053be98f65050
+Size (gdt-RtspServer-2719899a3f74ef0a9bb213d34998bcc74cc1f17f.tar.gz) = 1396675 bytes
 SHA1 (patch-CMakeLists.txt) = e54c1efea0b0cc99e9bbe8f493a0fe15b2c89663
-SHA1 (patch-dep_RtspServer_src_net_EventLoop.cpp) = bf1fe79c2ba1d602adf8895f29f61f7b961eece3
-SHA1 (patch-dep_RtspServer_src_net_Socket.h) = 789e90da4bfc15d6d43d942718538385cb6dfade
-SHA1 (patch-dep_RtspServer_src_net_SocketUtil.cpp) = c566652e8e7985a705682ef960118615b6777288
-SHA1 (patch-dep_RtspServer_src_xop_rtsp.h) = 20a014ce423d19549976c2158d39c46ea6892647
 SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_ConfigData.pm.in) = 3bf4e5e8276a682695db640e6608dd14c7315320
 SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm) = 996670d8a659c0624587da73f8083d9349aaa1ba
 SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_Memory_Shared.pm) = b3de55618915fad3d9263954db71270c800ad6f1
 SHA1 (patch-scripts_zm_in) = a05727261bb8be6b707e9a14ae4ff52ea3770d51
 SHA1 (patch-scripts_zmpkg_pl_in) = eb3166ae3cd9bb0ce1b828b64722506aa4e82368
-SHA1 (patch-src_zm__event.cpp) = 2831f586f140f682dd107a1adb09531c388a1df8
+SHA1 (patch-src_zm__event.cpp) = 2713e583bb0c5be1764cdbca77531d11725b0034
 SHA1 (patch-src_zm__eventstream.cpp) = d2134edf09f142a6a545ca36d3263b13defcadd6
 SHA1 (patch-src_zm__monitor.cpp) = ac6eb821d5d72455b46165e74ea1d321faf9e431
 SHA1 (patch-src_zm__packet.h) = 96951004741f3d21434d3ca981f6214c07f77c88
-SHA1 (patch-src_zm__rtp__source.cpp) = 288b32cff869103b04e96487b92bb12533b29772
+SHA1 (patch-src_zm__rtp__source.cpp) = 9335686e0b353cc50eac51704546527bee5c180b
 SHA1 (patch-src_zm__utils.cpp) = e16ffd3f41bd05a32c80142e7246307df12801a8
 SHA1 (patch-src_zm_comms_h) = 33577ab0eac62eadc415fe6fb970b82eb473c8e7
-SHA1 (patch-src_zm_logger_cpp) = 1d3d2a6baef1abe762ede06aaf393e5bc2e2080e
+SHA1 (patch-src_zm_logger_cpp) = 3428e80f3e442a3ada147d3d4145564f6e949760
 SHA1 (patch-src_zm_remote_camera_h) = 2f774924338b9e42e7bcaa1701af72861ea62c22
 SHA1 (patch-src_zm_signal_cpp) = af9625702518648b8d62ed20d0d52c1a2a27841a
 SHA1 (patch-src_zmu.cpp) = e5d92c9aa17c3a9e8b53c2cbd43712d80c76ab4e
