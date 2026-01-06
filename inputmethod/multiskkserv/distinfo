@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:49:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/01/06 17:10:34 ryoon Exp $
 
-BLAKE2s (multiskkserv-20100128-ac.tar.bz2) = 9ee45fbbb388912418be03823ed5c35d90a6a4643901944b7b082e44b940cd0a
-SHA512 (multiskkserv-20100128-ac.tar.bz2) = aa9865e7c4ab4467fb9b44aec0b3eb5a9de90598865b5917b30cae7bcbb700d7cbac8e602140ab34dcac8ad59c29210d77f5b745d7873c6e4b993a2d80624190
-Size (multiskkserv-20100128-ac.tar.bz2) = 436233 bytes
+BLAKE2s (multiskkserv-20240224.tar.xz) = 3cfba4b3efe6a60940bc8db66bb1ecd3da96d1d7a849f762c72db37586c98c02
+SHA512 (multiskkserv-20240224.tar.xz) = 802de1e99af1087b26cc6ea65219633ffa6f609e6d52bb6bc36425147f70cc49fcffb3959de0eb575639b2b79282f2fbd90f5c4bb69766381c2698b62598b259
+Size (multiskkserv-20240224.tar.xz) = 307652 bytes
