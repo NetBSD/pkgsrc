@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2025/02/08 03:49:22 taca Exp $
+# $NetBSD: Makefile,v 1.35 2026/01/06 15:07:32 taca Exp $
 
-DISTNAME=	Net_SMTP-1.12.1
-PKGREVISION=	1
+DISTNAME=	Net_SMTP-1.12.2
 CATEGORIES+=	net mail
 DIST_SUBDIR=	pear/20231026
 
