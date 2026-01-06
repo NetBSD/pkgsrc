@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/08/31 14:00:59 taca Exp $
+# $NetBSD: Makefile,v 1.4 2026/01/06 07:56:50 wiz Exp $
 
 DISTNAME=	osticket-v1.18.2
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -31,6 +31,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbst
 DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=${PHP_BASE_VERS}:../../databases/php-mysqli
 DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=${PHP_BASE_VERS}:../../devel/php-opcache
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
+
+PHP_VERSIONS_INCOMPATIBLE=	56
 
 REPLACE_PHP+=	manage.php
 REPLACE_PHP+=	setup/scripts/api_ticket_create.php
