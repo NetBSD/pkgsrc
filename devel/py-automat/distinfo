@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/09/14 19:16:35 adam Exp $
+$NetBSD: distinfo,v 1.10 2026/01/06 12:00:23 adam Exp $
 
-BLAKE2s (automat-24.8.1.tar.gz) = dd56b9428ca6dba4d5280d0ba2d98b90fb71a592a035b5b1301512f67c3eda4b
-SHA512 (automat-24.8.1.tar.gz) = f42344a665f7cf31cf53274e4371c06b008818373a666ab3dfd2874bd9cf9a842c5999f1fa21978e7ccd583ddcadecbf9515d1d1d9b60744164cdc58717fb339
-Size (automat-24.8.1.tar.gz) = 128679 bytes
+BLAKE2s (automat-25.4.16.tar.gz) = b09e37c9e2fe9dc257c84a15007a9895a520979748c58b0e3cff0def66e6189d
+SHA512 (automat-25.4.16.tar.gz) = 777e86de51d7197dfd6bf9f4cc88c5a8d0cad5ccc6f83ef58e95c326658429639f39d10b16975422dbe322e4a19f54f8fbca47d1c6f4ee2dcdbb3bf28e67ae33
+Size (automat-25.4.16.tar.gz) = 129977 bytes

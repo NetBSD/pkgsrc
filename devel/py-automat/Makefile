@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2025/10/09 08:07:27 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/01/06 12:00:23 adam Exp $
 
-DISTNAME=	automat-24.8.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	2
+DISTNAME=	automat-25.4.16
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=A/Automat/}
 
@@ -11,6 +10,7 @@ HOMEPAGE=	https://github.com/glyph/Automat
 COMMENT=	Self-service finite-state machines for the programmer on the go
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>0:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 # visualize option needs both next dependencies
