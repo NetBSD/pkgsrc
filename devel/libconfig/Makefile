@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2026/01/06 12:11:55 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/01/06 12:19:09 wiz Exp $
 
 DISTNAME=	libconfig-1.8.2
 CATEGORIES=	devel
@@ -18,8 +18,5 @@ TEST_TARGET=	check
 
 PKGCONFIG_OVERRIDE+=	lib/libconfig++.pc.in
 PKGCONFIG_OVERRIDE+=	lib/libconfig.pc.in
-
-# https://github.com/hyperrealm/libconfig/pull/127
-#CHECK_PORTABILITY_SKIP=	contrib/ls-config/debian/postinst
 
 .include "../../mk/bsd.pkg.mk"
