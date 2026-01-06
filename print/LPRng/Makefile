@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2009/04/08 23:28:06 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2026/01/06 08:51:24 wiz Exp $
 
 DISTNAME=	LPRng-3.6.28
 PKGREVISION=	2
 CATEGORIES=	print meta-pkgs
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.lprng.com/
+HOMEPAGE=	https://lprng.sourceforge.net/
 COMMENT=	"meta-package" for LPRng, Enhanced Printer Spooler
 
 META_PACKAGE=		# empty
