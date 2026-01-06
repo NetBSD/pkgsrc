@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/10/09 07:57:35 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/01/06 09:05:37 adam Exp $
 
-DISTNAME=	pyasyncore-1.0.4
+DISTNAME=	pyasyncore-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyasyncore/}
