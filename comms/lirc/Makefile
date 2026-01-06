@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/08/14 05:23:57 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.10 2026/01/06 08:47:49 wiz Exp $
 
 DISTNAME=	lirc-0.9.0
 PKGREVISION=	5
@@ -8,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lirc/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://www.lirc.org/
+HOMEPAGE=	https://www.lirc.org/
 COMMENT=	Linux Infrared Remote Control
 LICENSE=	gnu-gpl-v2
 
