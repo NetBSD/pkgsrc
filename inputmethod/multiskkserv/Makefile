@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2024/01/31 15:17:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2026/01/06 17:10:34 ryoon Exp $
 #
 
-DISTNAME=	multiskkserv-20100128-ac
-PKGNAME=	${DISTNAME:S/-ac//}
-PKGREVISION=	1
+DISTNAME=	multiskkserv-20240224
 CATEGORIES=	inputmethod japanese
-MASTER_SITES=	${MASTER_SITE_LOCAL}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=sina-ht/}
+EXTRACT_SUFX=	.tar.xz
+GITHUB_PROJECT=	${PKGBASE}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/sina-ht/multiskkserv/
