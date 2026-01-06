@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.131 2026/01/06 12:22:18 pin Exp $
+$NetBSD: CHANGES-2026,v 1.132 2026/01/06 12:22:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -179,3 +179,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-ipython to 9.9.0 [adam 2026-01-06]
 	Updated devel/py-gitpython to 3.1.46 [adam 2026-01-06]
 	Updated shells/oh-my-posh to 29.0.0 [pin 2026-01-06]
+	Updated devel/libconfig to 1.8.2 [adam 2026-01-06]
+	Updated www/py-protego to 0.5.0 [adam 2026-01-06]
+	Updated security/py-nacl to 1.6.2 [adam 2026-01-06]
