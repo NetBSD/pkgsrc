@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2023/10/23 06:37:52 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/01/06 08:52:53 wiz Exp $
 
 DISTNAME=	lshell-0.9.16
 PKGREVISION=	6
@@ -6,7 +6,7 @@ CATEGORIES=	shells python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lshell/}
 
 MAINTAINER=	imil@gcu.info
-HOMEPAGE=	http://ghantoos.org/limited-shell-lshell/
+HOMEPAGE=	https://sourceforge.net/projects/lshell/
 COMMENT=	Restrict user environment to specified commands
 LICENSE=	gnu-gpl-v3
 
