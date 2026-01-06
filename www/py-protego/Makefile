@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2025/04/14 19:31:54 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/01/06 12:19:32 adam Exp $
 
-DISTNAME=	protego-0.4.0
+DISTNAME=	protego-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Protego/}
 
@@ -11,7 +10,7 @@ HOMEPAGE=	https://github.com/scrapy/protego
 COMMENT=	Pure-Python robots.txt parser with support for modern conventions
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27.0:../../devel/py-hatchling
 
 USE_LANGUAGES=	# none
 
