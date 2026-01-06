@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/10/09 07:58:09 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/01/06 09:14:11 adam Exp $
 
-DISTNAME=	draftjs_exporter-5.1.0
+DISTNAME=	draftjs_exporter-5.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/draftjs-exporter/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/springload/draftjs_exporter
 COMMENT=	Library to convert Draft.js raw ContentState to HTML
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-build>=0.9.21:../../devel/py-uv-build
 # html5lib
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.4.1:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-html5lib>=0.999:../../textproc/py-html5lib
