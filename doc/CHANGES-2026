@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.149 2026/01/06 20:21:29 adam Exp $
+$NetBSD: CHANGES-2026,v 1.150 2026/01/06 21:56:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -200,3 +200,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-daemon to 3.1.2 [adam 2026-01-06]
 	Updated net/deskflow to 1.25.0 [tnn 2026-01-06]
 	Updated shells/bash-completion to 2.17.0 [adam 2026-01-06]
+	Removed time/php-framadate [wiz 2026-01-06]
