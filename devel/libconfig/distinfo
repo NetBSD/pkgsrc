@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/04/29 19:42:50 tnn Exp $
+$NetBSD: distinfo,v 1.12 2026/01/06 12:11:55 adam Exp $
 
-BLAKE2s (libconfig-1.8.tar.gz) = 6863c302aa8e53aceeb183653522038ad5c01c38799bbaf066d5c604a33f359c
-SHA512 (libconfig-1.8.tar.gz) = bc89c2b49dd643f20893e55687819ffe006985af55648f3bf2a6746951701f62411a65a1175f63762da890d31eb58398c88fe059445f65d3c2ac870d924177c3
-Size (libconfig-1.8.tar.gz) = 799135 bytes
+BLAKE2s (libconfig-1.8.2.tar.gz) = e5b6b9ff87150d5ccbff6e810253f00104bb279bd3f8e05bdd625c2e549829e6
+SHA512 (libconfig-1.8.2.tar.gz) = 7551876aeb4db69cdadac381b8a7985980dd4faecc88aaf3a6398c7432e05bcd8474a59def59b59b0d5d2f7df85cbff8a2fa2d699dedf2adac0e15624182e1fb
+Size (libconfig-1.8.2.tar.gz) = 806445 bytes
