@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2023/12/28 23:48:45 zafer Exp $
-#
+# $NetBSD: Makefile,v 1.23 2026/01/06 08:48:16 wiz Exp $
 
 DISTNAME=	liveice
 PKGNAME=	liveice-0.20001121
@@ -8,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://star.arm.ac.uk/~spm/software/liveice.html
+#HOMEPAGE=	http://star.arm.ac.uk/~spm/software/liveice.html
 COMMENT=	Source client for Icecast
 LICENSE=	gnu-gpl-v2
 
