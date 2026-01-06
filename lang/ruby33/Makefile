@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2026/01/05 20:04:31 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/01/06 07:45:45 wiz Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-${RUBY_VERSION}
@@ -43,8 +43,10 @@ CONFIGURE_ENV.Darwin+=	ac_cv_prog_dsymutil=
 .include "../../mk/compiler.mk"
 
 .if !empty(PKGSRC_COMPILER:Mgcc)
+.if empty(CC_VERSION:Mgcc-10.*) && empty(CC_VERSION:Mgcc-[4-9]*)
 # work around miniruby coredump, solution from https://bugs.gentoo.org/965095
 CFLAGS+=	-fno-ipa-modref
+.endif
 .endif
 
 DOCS=		BSDL CONTRIBUTING.md COPYING COPYING.ja ChangeLog GPL \
