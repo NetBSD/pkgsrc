@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2025/10/23 20:35:51 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2026/01/06 11:18:14 wiz Exp $
 
 DISTNAME=	ncmpc-0.46
 PKGREVISION=	2
@@ -17,7 +17,7 @@ USE_TOOLS+=	pkg-config xgettext
 USE_LANGUAGES=	c c++
 FAKE_NCURSES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
 MESON_ARGS+=	-Dlirc=disabled
 MESON_ARGS+=	-Dhtml_manual=false

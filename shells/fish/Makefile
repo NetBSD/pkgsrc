@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2026/01/04 14:58:08 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2026/01/06 11:18:16 wiz Exp $
 
 DISTNAME=	fish-4.3.2
 CATEGORIES=	shells
@@ -23,6 +23,8 @@ USE_TOOLS+=		msgfmt patch pkg-config pax
 USE_PKGLOCALEDIR=	yes
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
 PKGCONFIG_OVERRIDE+=	fish.pc.in
 

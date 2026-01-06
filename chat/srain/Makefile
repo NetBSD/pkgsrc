@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2025/10/23 20:36:04 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2026/01/06 11:18:14 wiz Exp $
 
 DISTNAME=	srain-1.7.0
 PKGREVISION=	11
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 USE_TOOLS+=	msgfmt msgmerge pkg-config xgettext
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
 MESON_ARGS+=	-Dapp_indicator=false
 MESON_ARGS+=	-Ddoc_builders=man

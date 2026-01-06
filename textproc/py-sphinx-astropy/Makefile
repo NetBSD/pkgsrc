@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/11/12 11:18:24 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/01/06 11:18:17 wiz Exp $
 
 DISTNAME=	sphinx_astropy-1.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -24,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-test-doctestplus>=0.11:../../devel/py-test-doctestplus
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

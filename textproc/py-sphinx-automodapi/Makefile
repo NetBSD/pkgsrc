@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/12/22 08:46:07 adam Exp $
+# $NetBSD: Makefile,v 1.19 2026/01/06 11:18:17 wiz Exp $
 
 DISTNAME=	sphinx_automodapi-0.22.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -18,7 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
 # Filenames with non-ASCII characters are not portable.
 post-extract:

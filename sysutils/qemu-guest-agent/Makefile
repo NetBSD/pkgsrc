@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/12/12 09:42:00 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/01/06 11:18:16 wiz Exp $
 
 .include "../../emulators/qemu/version.mk"
 
@@ -20,7 +20,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-distlib-[0-9]*:../../devel/py-distlib
 TOOL_DEPENDS+=	meson-[0-9]*:../../devel/meson
 TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config perl

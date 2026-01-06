@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/12/15 12:02:34 adam Exp $
+# $NetBSD: Makefile,v 1.21 2026/01/06 11:18:17 wiz Exp $
 
 DISTNAME=	numpydoc-1.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
