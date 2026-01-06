@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/12/11 20:57:34 vins Exp $
-#
+# $NetBSD: Makefile,v 1.22 2026/01/06 08:41:20 wiz Exp $
 
 DISTNAME=		TS-1.08
 PKGNAME=		libts-1.08
@@ -8,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		https://www.aydogan.net/distfiles/devel/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.aydogan.net/distfiles/devel/
+#HOMEPAGE=		https://www.aydogan.net/distfiles/devel/
 COMMENT=		Library of simple token-scanning routines
 
 MAKE_JOBS_SAFE=		no
