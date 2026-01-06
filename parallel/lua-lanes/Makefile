@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/03/06 07:51:10 nia Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/06 22:10:55 wiz Exp $
 
 DISTNAME=	lanes-3.16.0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ COMMENT=	Lightweight, native, lazy evaluating multithreading library for Lua
 LICENSE=	mit
 
 USE_TOOLS+=	gmake
+
+LUA_VERSIONS_INCOMPATIBLE+=	55
 
 BUILD_DIRS+=	src
 
