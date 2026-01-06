@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/12/03 12:15:40 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/01/06 11:18:19 wiz Exp $
 
 DISTNAME=	sphinxcontrib_spelling-8.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -20,7 +20,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
 # FIX: ModuleNotFoundError: No module named 'tests'
 pre-test:

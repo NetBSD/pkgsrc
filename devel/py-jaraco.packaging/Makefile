@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/10/09 07:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/01/06 11:18:15 wiz Exp $
 
 DISTNAME=	jaraco_packaging-10.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
@@ -22,7 +22,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
