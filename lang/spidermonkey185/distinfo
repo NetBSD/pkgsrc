@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:51:56 nia Exp $
+$NetBSD: distinfo,v 1.9 2026/01/06 16:06:16 ryoon Exp $
 
 BLAKE2s (js185-1.0.0.tar.gz) = 46b57fb118dd75620f5ffdce8dec3a70bbe8067f544be55284b6631c82d2e13a
 SHA512 (js185-1.0.0.tar.gz) = 2af7122a7c7007fd7b6668776fe1222515a810b3e43bbf0f76b8f94e1ef406ffd3fb5ccec393021b00274c05b38a77235bc8d6886994c56762fcaf0aa7cf6718
 Size (js185-1.0.0.tar.gz) = 6164605 bytes
-SHA1 (patch-configure) = 77366fff7e8b766b5691d0432b8740d4c8c362a6
+SHA1 (patch-configure) = 0675714a152fc6dd5b7b3033f1c76b9d1a0927d1
 SHA1 (patch-jsatom.cpp) = 4156e97b72461af88aa68394ef439d63a4c081dc
 SHA1 (patch-jscell.h) = e2c90041b9b526d1f07e4905d0c684afe96992a9
 SHA1 (patch-jscntxt.cpp) = 7d41c587affa51f23bfff48b118d61ec6e3b87c1

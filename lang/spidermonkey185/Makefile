@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/08/14 05:24:46 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/01/06 16:06:16 ryoon Exp $
 #
 
 DISTNAME=	js185-1.0.0
@@ -59,6 +59,9 @@ PLIST_SUBST+=	ARCH=${MACHINE_ARCH}
 .endif
 
 TEST_TARGET=		check
+
+post-patch:
+	${CHMOD} +x ${WRKSRC}/build/hcpp
 
 # o Install js interpreter
 # o Install the binaries and headers with a proper version suffix
