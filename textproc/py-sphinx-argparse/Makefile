@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/12/28 21:22:50 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/01/06 11:18:17 wiz Exp $
 
 DISTNAME=	sphinx_argparse-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -18,7 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-lxml>=0:../../textproc/py-lxml
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/sphinxarg/ext.py.orig
