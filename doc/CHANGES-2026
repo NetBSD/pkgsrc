@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.150 2026/01/06 21:56:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.151 2026/01/06 22:32:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -201,3 +201,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/deskflow to 1.25.0 [tnn 2026-01-06]
 	Updated shells/bash-completion to 2.17.0 [adam 2026-01-06]
 	Removed time/php-framadate [wiz 2026-01-06]
+	Updated devel/tack to 1.11.20251210 [wiz 2026-01-06]
