@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2021/04/24 00:26:13 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/01/06 08:51:53 wiz Exp $
 
 DISTNAME=	LPRng_DOC-3.6.13
 PKGNAME=	LPRng-doc-3.6.13
@@ -7,7 +7,7 @@ CATEGORIES=	print
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.lprng.com/
+HOMEPAGE=	https://lprng.sourceforge.net/
 COMMENT=	LPRng documentation in dvi, text, html and ps formats
 
 EXTRACT_ONLY=	# empty
