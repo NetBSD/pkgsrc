@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/08/18 06:47:34 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/01/06 22:11:49 wiz Exp $
 
 DISTNAME=	lua-rapidjson-0.7.1
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua-//1}
@@ -12,11 +12,13 @@ HOMEPAGE=	https://github.com/xpol/lua-rapidjson
 COMMENT=	JSON module for Lua, based on the very fast RapidJSON C++ library
 LICENSE=	mit
 
+TEST_DEPENDS+=	${LUA_PKGPREFIX}-utf8-[0-9]*:../../textproc/lua-utf8
+
 USE_LANGUAGES=	c c++
 
 LUA_USE_BUSTED=	yes
 
-TEST_DEPENDS+=	${LUA_PKGPREFIX}-utf8-[0-9]*:../../textproc/lua-utf8
+LUA_VERSIONS_INCOMPATIBLE+=	55
 
 CMAKE_CONFIGURE_ARGS+=	-DLUA_RAPIDJSON_VERSION=${PKGVERSION}
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
