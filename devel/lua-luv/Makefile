@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/08/18 07:27:41 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/01/06 22:03:18 wiz Exp $
 
 DISTNAME=	luv-1.43.0-0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/-0$/.0/1}
@@ -15,6 +15,8 @@ LICENSE=	apache-2.0
 
 LUA_SELF_CONFLICT=	yes
 LUA_LINKER_MAGIC=	no
+
+LUA_VERSIONS_INCOMPATIBLE=	55
 
 .include "../../lang/lua/luaversion.mk"
 
