@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2019/10/26 12:28:50 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.3 2026/01/06 08:50:46 wiz Exp $
 
 DISTNAME=	logrider-0.2
 CATEGORIES=	sysutils
-MASTER_SITES=	http://ilya-evseev.narod.ru/posix/logrider/
+MASTER_SITES=	https://ilya-evseev.narod.ru/posix/logrider/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	francksys@free.fr
-HOMEPAGE=	http://ilya-evseev.narod.ru/posix/logrider/
+HOMEPAGE=	https://ilya-evseev.narod.ru/posix/logrider/
 COMMENT=	Monitor system logs for alerts
 LICENSE=	gnu-gpl-v2
 
