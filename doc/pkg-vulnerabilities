@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.705 2026/01/06 12:16:44 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.706 2026/01/06 13:49:41 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29307,3 +29307,20 @@ py{27,310,311,312,313,314}-aiohttp<3.13.3	denial-of-service	https://nvd.nist.gov
 py{27,310,311,312,313,314}-aiohttp<3.13.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-69228
 py{27,310,311,312,313,314}-aiohttp<3.13.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-69229
 py{27,310,311,312,313,314}-aiohttp<3.13.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-69230
+icinga2<2.14.3	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2024-49369
+icingaweb2<2.12.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-27404
+icingaweb2<2.12.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-27405
+icingaweb2<2.12.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-27609
+icingaweb2<2.12.3	open-redirect	https://nvd.nist.gov/vuln/detail/CVE-2025-30164
+imapsync<2.264	arbitrary-file-overwrite	https://nvd.nist.gov/vuln/detail/CVE-2023-34204
+imlib2<1.10.0	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-25447
+imlib2<1.10.0	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-25448
+imlib2<1.10.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-25450
+inetutils<2.5	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-40303
+influxdb<2.8.0	account-impersonation	https://nvd.nist.gov/vuln/detail/CVE-2024-30896
+iniparser<4.2	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-33461
+iniparser<4.2.6	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-0633
+iperf3<3.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-7250
+iperf3<3.14	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-38403
+iperf3<3.17	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2024-26306
+iperf3<3.18	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-53580
