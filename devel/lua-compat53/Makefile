@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/06/07 11:38:58 nia Exp $
+# $NetBSD: Makefile,v 1.7 2026/01/06 22:10:04 wiz Exp $
 
 DISTNAME=	lua-compat53-0.10
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua-//1}
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/keplerproject/lua-compat-5.3
 COMMENT=	Compatibility module providing Lua-5.3-style APIs for Lua 5.2 and 5.1
 LICENSE=	mit
+
+LUA_VERSIONS_INCOMPATIBLE+=	55
 
 PLIST_SUBST+=	LUA_INCDIR=${LUA_INCDIR}
 
