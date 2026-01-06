@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2026/01/02 15:55:32 tnn Exp $
+$NetBSD: distinfo,v 1.22 2026/01/06 16:16:39 ryoon Exp $
 
 BLAKE2s (firefox-128.14.0esr.source.tar.xz) = a3cc3c29528e11e4a25d67ac536bc00bdb09aaaddb21f36586e9a30a1dc412cb
 SHA512 (firefox-128.14.0esr.source.tar.xz) = a3cf267e82b6f5ab8b6497a62b12f85afb78fcaef6b12c43ef79564ce8270d3327a873368ce48fc018e46fef5e07339c07b9a494a5ff6c22a84099f939f6a9de
@@ -17,7 +17,7 @@ SHA1 (patch-gfx_angle_checkout_src_common_third__party_smhasher_src_PMurHash.cpp
 SHA1 (patch-gfx_angle_checkout_src_compiler_translator_InfoSink.h) = b2adce9e65662283a11b6dcff40e95523e940045
 SHA1 (patch-gfx_ots_src_name.cc) = b3ea28fa953e2918d86ece58c4f0db6a389db21f
 SHA1 (patch-gfx_wr_swgl_build.rs) = df6ebfaabb4d27994e59a9d0eaf12c7cf08415fb
-SHA1 (patch-intl_lwbrk_LineBreaker.cpp) = e2eaf7d66f1255ba5baf7f7edadbb1fa8cb39b13
+SHA1 (patch-intl_lwbrk_LineBreaker.cpp) = 8c4d3016218ea11f0092247d17c8efc99e96e108
 SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 298642a3527804115b398fb7904a3596962932e3
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 753bb4e90758f5b42a51bbc073b328de673988cf
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 63fbee04321f7ade20db4ccc1a1218b848344ce1
@@ -32,6 +32,7 @@ SHA1 (patch-media_libtheora_lib_info.c) = f6dbf536d73859a1ff78304c2e9f6a6f74dac0
 SHA1 (patch-modules_fdlibm_src_math__private.h) = e20b6c23011d7123cbbd64a500eb8ce8c426620e
 SHA1 (patch-netwerk_protocol_http_nsHttpHandler.cpp) = 8e1d9a0746b637f5f4259e448e72172cfb08b23f
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = b0d1f6a6e0eb852b0fd0238ad3f8ed3166c60a50
+SHA1 (patch-python_mozbuild_mozbuild_frontend_reader.py) = 0b9136397688cef5b9c5de578192ee61ce39440b
 SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = a7cd867916524770609d1c307a65b315b88456f4
 SHA1 (patch-third__party_js_cfworker_build.sh) = 46cdf97b99cf01080f290ae8d9a33b5f869fc3e4
 SHA1 (patch-third__party_libwebrtc_modules_desktop__capture_desktop__capture__gn_moz.build) = d0454784eb72be49162f619579e060a0de3c480f
@@ -40,6 +41,8 @@ SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_device__info__v4
 SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_video__capture__v4l2.cc) = 8111952a107eb2cd665525ddd0e27c79eee3c1cd
 SHA1 (patch-third__party_libwebrtc_rtc__base_physical__socket__server.cc) = 6909c4da9e7b3785252e5bce9be0ff47ebb87e01
 SHA1 (patch-third__party_libwebrtc_system__wrappers_source_cpu__features__linux.cc) = b90e22b50879f7adcc1da3a993f52c0701b720f8
+SHA1 (patch-third__party_python_dlmanager_check.py) = 0390376a7bb03065760a24cf7676e01042bce092
+SHA1 (patch-third__party_python_jsonschema_jsonschema_validators.py) = 00cd379cf70cc27224ba328c684d94d0aa4fb4fd
 SHA1 (patch-third__party_sqlite3_src_moz.build) = b26856a4b87aa12211575d9982f62dc899474b52
 SHA1 (patch-third__party_wasm2c_src_prebuilt_wasm2c__source__includes.cc) = 99d0db944f0c2d0c623460991efd423d9127c988
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = e905e38ef1b88d764c695c019f15609350c1c43b
