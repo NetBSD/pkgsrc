@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/01/13 23:34:20 gutteridge Exp $
+$NetBSD: distinfo,v 1.14 2026/01/06 08:02:06 wiz Exp $
 
-BLAKE2s (guppy3-3.1.5.tar.gz) = e916c5d5277df570f90dfbca49a738d94dfa176871aa88f7985ceb8ed49555b2
-SHA512 (guppy3-3.1.5.tar.gz) = 1baf2be2b94c37a4021197c3627b3fb30b525b93fe016adefc872a984738832d2bdad8efc3174f7bc94b7a06b670d195bfd053c5dd1b48c5a60086ba9aeb2932
-Size (guppy3-3.1.5.tar.gz) = 334938 bytes
+BLAKE2s (guppy3-3.1.6.tar.gz) = af866f9a703a08266c05a5cff83427f4e4e0e1eeed660e6f466b35bb586ef059
+SHA512 (guppy3-3.1.6.tar.gz) = 3280cfbd9cb6ca8dc273055fc70f4369273155535e19ad39d8251f932bca1dd0c2f00f11886608ee68f0ea3fef79f2c924b88e3babe43f7fbb61aa937f313b10
+Size (guppy3-3.1.6.tar.gz) = 335447 bytes
