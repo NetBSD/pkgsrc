@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.141 2026/01/06 17:09:51 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.142 2026/01/06 17:10:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -191,3 +191,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/pangomm2.48 to 2.56.1 [ryoon 2026-01-06]
 	Updated x11/gtkmm4 to 4.20.0 [ryoon 2026-01-06]
 	Updated mail/neomutt to 20260105 [wiz 2026-01-06]
+	Updated inputmethod/multiskkserv to 20240224 [ryoon 2026-01-06]
