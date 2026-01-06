@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.244 2025/10/23 20:38:08 wiz Exp $
+# $NetBSD: Makefile,v 1.245 2026/01/06 15:54:49 ryoon Exp $
 
 DISTNAME=	evolution-data-server-3.44.4
 PKGREVISION=	6
@@ -25,6 +25,9 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_OAUTH2=OFF
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+
+# This package mixes GIConv and iconv_t.
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/evolution-data-server
 
