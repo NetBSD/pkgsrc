@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.7 2025/12/05 08:57:54 martin Exp $
+# $NetBSD: options.mk,v 1.8 2026/01/06 15:15:46 ryoon Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
+PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox52
 
 PKG_OPTIONS_REQUIRED_GROUPS=	gtk
 PKG_OPTIONS_GROUP.gtk=		gtk2 gtk3
