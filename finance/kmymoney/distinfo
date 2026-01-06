@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/01/06 17:15:36 ryoon Exp $
+
+BLAKE2s (kmymoney-5.2.1.tar.xz) = 97fb8b3ab37704ce5784fb48b8d85cb02cb5f36c911e6a481320e3945fb3b07d
+SHA512 (kmymoney-5.2.1.tar.xz) = 99145f8515f5cbc811185b4e375f85d8a4bf9f57eeb30927b453cd7071990484650b9b7353f25e71d632e5b2468c204905c3df85fe3ab0a8b0cd7611f4c1c3a3
+Size (kmymoney-5.2.1.tar.xz) = 11124956 bytes
