@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2025/05/02 09:03:49 nia Exp $
+$NetBSD: distinfo,v 1.38 2026/01/06 15:15:46 ryoon Exp $
 
 BLAKE2s (firefox-52.9.0esr.source.tar.xz) = 68da851ecfe1b03231157bf79732865d3cf81b7c10128a2e2a9e6e7be3963348
 SHA512 (firefox-52.9.0esr.source.tar.xz) = bfca42668ca78a12a9fb56368f4aae5334b1f7a71966fbba4c32b9c5e6597aac79a6e340ac3966779d2d5563eb47c054ab33cc40bfb7306172138ccbd3adb2b9
@@ -80,6 +80,7 @@ SHA1 (patch-js_src_vm_StructuredClone.cpp) = e4b1d6e0dd440dafdb2c5a74e8463e0e2b1
 SHA1 (patch-js_xpconnect_src_XPCConvert.cpp) = 915777e9bb5366be41866cdb6ea0ad2b1c006dde
 SHA1 (patch-js_xpconnect_src_XPCWrappedNative.cpp) = 6630b8cb20a2a2b8337e8c1250e741fd65be1e54
 SHA1 (patch-js_xpconnect_src_xpcprivate.h) = e09e37819961bae40a9f276ae1ee510d2956c23e
+SHA1 (patch-media_ffvpx_libavcodec_x86_mathops.h) = f9cccdc9d40adaba0cd24addf354922254d26242
 SHA1 (patch-media_libcubeb_src_cubeb.c) = 24075714155e5c95fddf95ae8865a71db6006c15
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = c59eaf40973193885f32819b465b401c1ba45fce
 SHA1 (patch-media_libcubeb_src_cubeb__oss.c) = e15cc2d0c220738ccfd57f79eec242095c8ea536
