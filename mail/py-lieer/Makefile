@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/10/09 07:57:45 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/01/06 11:18:44 wiz Exp $
 
 DISTNAME=	lieer-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-tqdm-[0-9]*:../../misc/py-tqdm
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx via py-notmuch2 via notmuch
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx via py-notmuch2 via notmuch
 
 post-install:
 	cd ${DESTDIR}${PREFIX} && \

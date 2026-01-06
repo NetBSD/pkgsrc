@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2025/11/16 10:54:50 adam Exp $
+# $NetBSD: Makefile,v 1.35 2026/01/06 11:18:42 wiz Exp $
 
 DISTNAME=	pydoctor-25.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -27,7 +27,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-subtests-[0-9]*:../../devel/py-test-subtests
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311

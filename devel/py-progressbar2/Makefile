@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/10/09 07:57:34 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/01/06 11:18:43 wiz Exp $
 
 DISTNAME=	progressbar2-4.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ USE_LANGUAGES=	# none
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

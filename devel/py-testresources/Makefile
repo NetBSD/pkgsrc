@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/10/09 07:57:36 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/01/06 11:18:43 wiz Exp $
 
 DISTNAME=	testresources-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-fixtures-[0-9]*:../../devel/py-fixtures
 DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx via py-pbr
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx via py-pbr
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

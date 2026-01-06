@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/10/09 07:57:29 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/01/06 11:18:42 wiz Exp $
 
 DISTNAME=	buildbot-www-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 313 # py-sphinx, py-Tempita
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 313 # py-sphinx, py-Tempita
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

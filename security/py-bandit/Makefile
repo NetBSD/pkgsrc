@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/12/03 14:14:39 adam Exp $
+# $NetBSD: Makefile,v 1.21 2026/01/06 11:18:45 wiz Exp $
 
 DISTNAME=	bandit-1.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,7 +24,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-testtools>=2.3.0:../../devel/py-testtools
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx via py-pbr
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx via py-pbr
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311

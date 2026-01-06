@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/10/09 07:57:33 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/01/06 11:18:43 wiz Exp $
 
 DISTNAME=	lockfile-0.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pbr>=1.8:../../devel/py-pbr
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx via py-pbr
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx via py-pbr
 
 USE_LANGUAGES=	# none
 

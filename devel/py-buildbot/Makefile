@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2025/10/09 07:57:29 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/01/06 11:18:41 wiz Exp $
 
 DISTNAME=	buildbot-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -30,7 +30,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
 TEST_DEPENDS+=	${PYPKGPREFIX}-treq-[0-9]*:../../devel/py-treq
 TEST_DEPENDS+=	${PYPKGPREFIX}-txrequests-[0-9]*:../../devel/py-txrequests
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 313 # py-sphinx, py-Tempita
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 313 # py-sphinx, py-Tempita
 
 USE_PKG_RESOURCES=	yes
 
