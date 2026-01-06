@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/04/20 12:27:32 adam Exp $
+$NetBSD: distinfo,v 1.2 2026/01/06 09:05:37 adam Exp $
 
-BLAKE2s (pyasyncore-1.0.4.tar.gz) = 115393c0ffda87191ebe8a363700861909ce3a558fca75dcac65e6595b7ae4dc
-SHA512 (pyasyncore-1.0.4.tar.gz) = 43746fca009f7acc5f05506c7d54e71ee74a76a112c3689aa98ab714f0452d1ed1196836bf52585bbbced2d64c1d4ccd86f8f5c2d2c5537fdc397e29d0d87008
-Size (pyasyncore-1.0.4.tar.gz) = 15339 bytes
+BLAKE2s (pyasyncore-1.0.5.tar.gz) = 1675a9411cc5afeb7a30ae80e5594e7c422a1bb377a8a08a8f9a675d0253a79b
+SHA512 (pyasyncore-1.0.5.tar.gz) = d9bc37c3d658b37593e3fd4364c3fa68644d2abb30013a6f82381d3e442da8d096f2bee2f06ef64640b63491ab697b3adec1a0be50dc3230a49404643cf00401
+Size (pyasyncore-1.0.5.tar.gz) = 15854 bytes
