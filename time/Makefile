@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.285 2025/12/31 03:17:11 markd Exp $
+# $NetBSD: Makefile,v 1.286 2026/01/06 21:56:21 wiz Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -157,7 +157,6 @@ SUBDIR+=	pclock
 SUBDIR+=	pear-Date
 SUBDIR+=	phoon
 SUBDIR+=	php-calendar
-SUBDIR+=	php-framadate
 SUBDIR+=	php-mrbs
 SUBDIR+=	plan
 SUBDIR+=	plasma6-knighttime
