@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2025/05/23 13:19:09 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2026/01/06 17:14:14 ryoon Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -12,6 +12,7 @@ SUBDIR+=	R-fOptions
 SUBDIR+=	R-quantmod
 SUBDIR+=	R-timeSeries
 SUBDIR+=	R-tseries
+SUBDIR+=	alkimia
 SUBDIR+=	bitcoin
 SUBDIR+=	cpuminer
 SUBDIR+=	gkrellm-stock
