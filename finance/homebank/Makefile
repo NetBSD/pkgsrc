@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2025/12/28 08:30:24 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2026/01/06 17:36:26 ryoon Exp $
 
-DISTNAME=	homebank-5.5.5
-PKGREVISION=	25
+DISTNAME=	homebank-5.9.4
 CATEGORIES=	finance
 MASTER_SITES=	https://www.gethomebank.org/public/sources/
 
@@ -29,7 +28,7 @@ CONFIGURE_ARGS+=	--without-libofx
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../net/libsoup/buildlink3.mk"
+.include "../../net/libsoup3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

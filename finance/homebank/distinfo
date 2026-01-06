@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/05/29 09:36:13 wen Exp $
+$NetBSD: distinfo,v 1.5 2026/01/06 17:36:26 ryoon Exp $
 
-BLAKE2s (homebank-5.5.5.tar.gz) = 2b4b343761226369ed29c2e49fc061adb26afff6e6419d29b36b2fb8d027a18c
-SHA512 (homebank-5.5.5.tar.gz) = 81a302dbe5ee869e30e850a4596d5a00fdac353a964b3f8aabab0a1506e01ba62447971444d3345ca09ad99edc5e2b22e8d6c834f4f075c15c268c02c05e3c89
-Size (homebank-5.5.5.tar.gz) = 3094134 bytes
+BLAKE2s (homebank-5.9.4.tar.gz) = 35b20e875ac5f091e4599340a1971995b8ae164271f161c5e480ceb65726684e
+SHA512 (homebank-5.9.4.tar.gz) = 0d9c81c9f74b529301da1081cf217dd65ee0b8aff8293b30b41d4ed928cf2535f0e057dd5ac51dab23ca4958708ac2b543f7c4196259aae37df28423562b1a04
+Size (homebank-5.9.4.tar.gz) = 4013867 bytes
