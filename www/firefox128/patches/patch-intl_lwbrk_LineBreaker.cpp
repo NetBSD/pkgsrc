@@ -1,10 +1,10 @@
-$NetBSD: patch-intl_lwbrk_LineBreaker.cpp,v 1.1 2024/08/18 15:02:21 leot Exp $
+$NetBSD: patch-intl_lwbrk_LineBreaker.cpp,v 1.2 2026/01/06 16:16:39 ryoon Exp $
 
-icu 74.1 support.
+icu 74.1 and 78.1 support.
 
---- intl/lwbrk/LineBreaker.cpp.orig	2023-10-19 19:54:30.000000000 +0000
+--- intl/lwbrk/LineBreaker.cpp.orig	2025-12-01 17:21:02.000000000 +0000
 +++ intl/lwbrk/LineBreaker.cpp
-@@ -448,7 +448,13 @@ static int8_t GetClass(uint32_t u, LineB
+@@ -434,7 +434,14 @@ static int8_t GetClass(uint32_t u, LineBreakRule aLeve
        /* REGIONAL_INDICATOR = 39,           [RI] */ CLASS_CHARACTER,
        /* E_BASE = 40,                       [EB] */ CLASS_BREAKABLE,
        /* E_MODIFIER = 41,                   [EM] */ CLASS_CHARACTER,
@@ -15,6 +15,7 @@ icu 74.1 support.
 +      /* AKSARA_START = 45,                 [AS] */ CLASS_CHARACTER,
 +      /* VIRAMA_FINAL = 46,                 [VF] */ CLASS_CHARACTER,
 +      /* VIRAMA = 47,                       [VI] */ CLASS_CHARACTER,
++      /* UNAMBIGUOUS_HYPHEN = 48,           [HH] */ CLASS_CHARACTER,
 +};
  
    static_assert(U_LB_COUNT == mozilla::ArrayLength(sUnicodeLineBreakToClass),
