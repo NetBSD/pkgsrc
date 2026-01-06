@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2025/10/23 20:38:42 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/01/06 19:57:10 tnn Exp $
 
-DISTNAME=	deskflow-1.24.0
-PKGREVISION=	1
+DISTNAME=	deskflow-1.25.0
 CATEGORIES=	net x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=deskflow/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,22 +11,11 @@ COMMENT=	Let a user share a mouse and keyboard among computers
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
+DEPENDS+=	qt6-qttranslations-[0-9]*:../../x11/qt6-qttranslations
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++20
 USE_TOOLS+=		pkg-config
-
-DISTFILES=		${DEFAULT_DISTFILES}
-
-CLI11_VERSION=		2.5.0
-DISTFILES+=		CLI11-${CLI11_VERSION}.hpp
-SITES.CLI11-${CLI11_VERSION}.hpp=	\
-			-https://github.com/CLIUtils/CLI11/releases/download/v${CLI11_VERSION}/CLI11.hpp
-
-TOMLPP_VERSION=		3.4.0
-DISTFILES+=		toml-${TOMLPP_VERSION}.hpp
-SITES.toml-${TOMLPP_VERSION}.hpp=	\
-			-https://raw.githubusercontent.com/marzer/tomlplusplus/refs/tags/v${TOMLPP_VERSION}/toml.hpp
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_USER_DOCS=OFF
 # Tests on at least OSX require elevated privileges to interact with for example the clipboard
@@ -39,12 +27,6 @@ SUBST_FILES.paths=	src/lib/common/Settings.h
 SUBST_FILES.paths+=	src/lib/deskflow/unix/AppUtilUnix.cpp
 SUBST_SED.paths=	-e 's,"/etc,"${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,"/usr/local\(/share/X11/xkb\),"${X11BASE}\1,g'
-
-post-extract:
-	${MKDIR} -p ${WRKSRC}/${CMAKE_BUILD_DIR}/include/CLI
-	${MV} ${WRKDIR}/CLI11-${CLI11_VERSION}.hpp ${WRKSRC}/${CMAKE_BUILD_DIR}/include/CLI/CLI.hpp
-	${MKDIR} -p ${WRKSRC}/${CMAKE_BUILD_DIR}/include/toml++
-	${MV} ${WRKDIR}/toml-${TOMLPP_VERSION}.hpp ${WRKSRC}/${CMAKE_BUILD_DIR}/include/toml++/toml.h
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -73,5 +55,6 @@ BUILDLINK_API_DEPENDS.openssl+=	openssl>=3.0
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .endif
+.include "../../devel/qt6-qttools/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
