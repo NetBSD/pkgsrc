@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2025/11/13 14:03:30 adam Exp $
+# $NetBSD: Makefile,v 1.26 2026/01/06 09:09:09 adam Exp $
 
-DISTNAME=	cmudict-1.1.2
+DISTNAME=	cmudict-1.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cmudict/}
