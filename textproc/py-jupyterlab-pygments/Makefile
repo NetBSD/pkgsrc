@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/11/23 21:00:30 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/01/06 18:33:13 adam Exp $
 
 DISTNAME=	jupyterlab_pygments-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -16,7 +16,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.5.0:../../devel/py-hatchling
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+# These files unnecessarily get installed on some platforms.
+post-install:
+	${RM} -fr ${DESTDIR}${PREFIX}/${PYSITELIB}/jupyterlab_pygments/labextension
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
