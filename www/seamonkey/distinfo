@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.183 2025/06/07 11:13:28 nia Exp $
+$NetBSD: distinfo,v 1.184 2026/01/06 15:42:10 ryoon Exp $
 
-BLAKE2s (seamonkey-2.53.21.source.tar.xz) = 121b0a5bea915296eac36d41eddbe8ac510231238f33b85e96ae02d20b855ba5
-SHA512 (seamonkey-2.53.21.source.tar.xz) = 201a9e23cca225c9461e009c43082f516d3b85e090d78925a7d5cf0bf4776b2242a985a400039381186be1af0da773bc0a926626e9db8f7e2b4161beaf378a75
-Size (seamonkey-2.53.21.source.tar.xz) = 248215616 bytes
+BLAKE2s (seamonkey-2.53.23.source.tar.xz) = 3bbd96e8a42e4db8e950acfcfb7bf686b86968b9e54e82c5c507881a4cb6a5c6
+SHA512 (seamonkey-2.53.23.source.tar.xz) = 59352660dad53fd4e0d9810d42de05115355a857476ba9468899cefad15b27999e1f279aa457753e9adb5d65dcbb321c8007c467ac309ae30964c292608fc2b6
+Size (seamonkey-2.53.23.source.tar.xz) = 249857600 bytes
 SHA1 (patch-Makefile.in) = d1de2128b2331efc23bfeaba555e193557053859
 SHA1 (patch-dom_media_CubebUtils.cpp) = 88450f0f9c4ca5a796f63c78f2ee61b16ae26dde
 SHA1 (patch-gfx_angle_checkout_src_compiler_translator_SymbolTable__ESSL__autogen.cpp) = b3776a7d1de9f156c21943ba5ed1d4d25b07cae4
