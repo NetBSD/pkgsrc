@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2026/01/03 16:26:23 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2026/01/06 11:31:36 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.frr
 PKG_SUPPORTED_OPTIONS=	doc
@@ -16,7 +16,7 @@ PLIST_VARS+=		doc
 .if !empty(PKG_OPTIONS:Mdoc)
 USE_TOOLS+=		makeinfo
 CONFIGURE_ARGS+=	--enable-doc-html
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx>=9:../../textproc/py-sphinx
 PLIST.doc=		yes
 INFO_FILES=		yes
