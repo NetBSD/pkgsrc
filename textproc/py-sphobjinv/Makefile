@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/10/09 07:58:06 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/01/06 11:18:46 wiz Exp $
 
 DISTNAME=	sphobjinv-2.3.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-check>=0:../../devel/py-test-check
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
