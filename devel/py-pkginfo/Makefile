@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2025/04/12 19:43:14 adam Exp $
+# $NetBSD: Makefile,v 1.29 2026/01/06 16:37:59 ryoon Exp $
 
 DISTNAME=	pkginfo-1.12.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pkginfo/}
 
@@ -16,7 +16,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_SELF_CONFLICT=	yes
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} pkginfo pkginfo-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
