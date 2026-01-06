@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/10/09 07:58:13 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/01/06 11:18:47 wiz Exp $
 
 DISTNAME=	wstools-0.4.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx via py-pbr
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx via py-pbr
 
 USE_LANGUAGES=	# none
 
