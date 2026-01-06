@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/11/17 10:16:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/01/06 16:51:31 ryoon Exp $
 include/gtkmm-4.0/gdkmm.h
 include/gtkmm-4.0/gdkmm/applaunchcontext.h
 include/gtkmm-4.0/gdkmm/cairocontext.h
@@ -117,6 +117,14 @@ include/gtkmm-4.0/gdkmm/toplevelsize.h
 include/gtkmm-4.0/gdkmm/toplevelsurfaceimpl.h
 include/gtkmm-4.0/gdkmm/value_cairo.h
 include/gtkmm-4.0/gdkmm/wrap_init.h
+include/gtkmm-4.0/gskmm.h
+include/gtkmm-4.0/gskmm/enums.h
+include/gtkmm-4.0/gskmm/private/enums_p.h
+include/gtkmm-4.0/gskmm/private/roundedrect_p.h
+include/gtkmm-4.0/gskmm/private/transform_p.h
+include/gtkmm-4.0/gskmm/roundedrect.h
+include/gtkmm-4.0/gskmm/transform.h
+include/gtkmm-4.0/gskmm/wrap_init.h
 include/gtkmm-4.0/gtkmm.h
 include/gtkmm-4.0/gtkmm/aboutdialog.h
 include/gtkmm-4.0/gtkmm/accelerator.h
@@ -224,6 +232,8 @@ include/gtkmm-4.0/gtkmm/filelauncher.h
 include/gtkmm-4.0/gtkmm/filter.h
 include/gtkmm-4.0/gtkmm/filterlistmodel.h
 include/gtkmm-4.0/gtkmm/fixed.h
+include/gtkmm-4.0/gtkmm/fixedlayout.h
+include/gtkmm-4.0/gtkmm/fixedlayoutchild.h
 include/gtkmm-4.0/gtkmm/flattenlistmodel.h
 include/gtkmm-4.0/gtkmm/flowbox.h
 include/gtkmm-4.0/gtkmm/flowboxchild.h
@@ -412,6 +422,8 @@ include/gtkmm-4.0/gtkmm/private/filelauncher_p.h
 include/gtkmm-4.0/gtkmm/private/filter_p.h
 include/gtkmm-4.0/gtkmm/private/filterlistmodel_p.h
 include/gtkmm-4.0/gtkmm/private/fixed_p.h
+include/gtkmm-4.0/gtkmm/private/fixedlayout_p.h
+include/gtkmm-4.0/gtkmm/private/fixedlayoutchild_p.h
 include/gtkmm-4.0/gtkmm/private/flattenlistmodel_p.h
 include/gtkmm-4.0/gtkmm/private/flowbox_p.h
 include/gtkmm-4.0/gtkmm/private/flowboxchild_p.h
@@ -680,11 +692,13 @@ include/gtkmm-4.0/gtkmm/windowgroup.h
 include/gtkmm-4.0/gtkmm/windowhandle.h
 include/gtkmm-4.0/gtkmm/wrap_init.h
 lib/gtkmm-4.0/include/gdkmmconfig.h
+lib/gtkmm-4.0/include/gskmmconfig.h
 lib/gtkmm-4.0/include/gtkmmconfig.h
 lib/gtkmm-4.0/proc/m4/class_gtkobject.m4
 lib/gtkmm-4.0/proc/m4/class_shared.m4
 lib/gtkmm-4.0/proc/m4/convert.m4
 lib/gtkmm-4.0/proc/m4/convert_gdk.m4
+lib/gtkmm-4.0/proc/m4/convert_gsk.m4
 lib/gtkmm-4.0/proc/m4/convert_gtk.m4
 lib/gtkmm-4.0/proc/m4/convert_gtkmm.m4
 lib/gtkmm-4.0/proc/m4/enum.m4
