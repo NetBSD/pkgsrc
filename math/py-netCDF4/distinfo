@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2025/10/27 11:30:28 adam Exp $
+$NetBSD: distinfo,v 1.10 2026/01/06 09:16:46 adam Exp $
 
-BLAKE2s (netcdf4-1.7.3.tar.gz) = 55908197ff8d7f9f21b2f2652293b5a5a25d26cbf5a58f279d34198f4c05ac25
-SHA512 (netcdf4-1.7.3.tar.gz) = 1d7d9dfa99e820e83dab712550c4aeb85d5e5f0c6b61df75673d5dffe9eb3663d4020a0b02fb01acb27a06026e8f996beac3597a27d3a7088bf0a547b015fab8
-Size (netcdf4-1.7.3.tar.gz) = 836095 bytes
+BLAKE2s (netcdf4-1.7.4.tar.gz) = 2b046372aeb88da22a66c93e175097580c0a2098584778de019732c4847f6aae
+SHA512 (netcdf4-1.7.4.tar.gz) = e6021d3701cfb27a283592c5804e125b64adde541f60b1636ef5c1c604ea5eca3c4f9b72c72b0af958a341d876a991a5e3d45092ab1d0ed72384b7442cd8f425
+Size (netcdf4-1.7.4.tar.gz) = 838352 bytes
