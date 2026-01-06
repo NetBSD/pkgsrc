@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/11/11 13:47:59 adam Exp $
+$NetBSD: distinfo,v 1.9 2026/01/06 12:22:01 adam Exp $
 
-BLAKE2s (pynacl-1.6.1.tar.gz) = a070efefe8d4d6940234f44860435d4910732fc8578e186c5ba04c1f8a17a669
-SHA512 (pynacl-1.6.1.tar.gz) = 6beeda2546530561a65f03d283b65d91a47d59493bbf1f78eefd6855557a9389c6fce18c49ea96af925fe72a793a3cdbb30cbd3971f41717da1009cf10ad3eb1
-Size (pynacl-1.6.1.tar.gz) = 3506616 bytes
+BLAKE2s (pynacl-1.6.2.tar.gz) = f4ab4cd02b8b3bbebe0a0bdb15c842ff23b33e2a8cced75335c09ef34bf0b4f7
+SHA512 (pynacl-1.6.2.tar.gz) = 66adf76028461ec63958dbb418cc6539b143ae83e84f053f9e752342f869c70977c5fd12f02af863851636997e2d94efe39c1421918b41a0c0fbfe9477d1791e
+Size (pynacl-1.6.2.tar.gz) = 3511692 bytes
