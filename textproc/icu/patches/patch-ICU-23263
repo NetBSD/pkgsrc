@@ -1,0 +1,63 @@
+$NetBSD: patch-ICU-23263,v 1.1 2026/01/06 15:29:59 ryoon Exp $
+
+ICU-23263 Support shared/static data library that uses a pointer based table of contents
+
+Upstream fix: aa17de1994d188560d99d07c37bf333416483899
+
+diff --git a/icu4c/source/common/ucnv_io.cpp b/icu4c/source/common/ucnv_io.cpp
+index 46a26f821fd8..66813f5a0372 100644
+--- common/ucnv_io.cpp
++++ common/ucnv_io.cpp
+@@ -249,14 +249,15 @@ static void U_CALLCONV initAliasData(UErrorCode &errCode) {
+ 
+     sectionSizes = static_cast<const uint32_t*>(udata_getMemory(data));
+     int32_t dataLength = udata_getLength(data); // This is the length minus the UDataInfo size
+-    if (dataLength <= int32_t(sizeof(sectionSizes[0]))) {
++    UBool isDataLengthKnown = dataLength >= 0; // Only false when using a pointer table of contents (not files nor a common data archive)
++    if (isDataLengthKnown && dataLength <= int32_t(sizeof(sectionSizes[0]))) {
+         // We don't even have a TOC!
+         goto invalidFormat;
+     }
+     table = reinterpret_cast<const uint16_t*>(sectionSizes);
+     tableStart = sectionSizes[0];
+     sizeOfTOC = int32_t((tableStart + 1) * sizeof(sectionSizes[0]));
+-    if (tableStart < minTocLength || dataLength <= sizeOfTOC) {
++    if (tableStart < minTocLength || (isDataLengthKnown && dataLength <= sizeOfTOC)) {
+         // We don't have a whole TOC!
+         goto invalidFormat;
+     }
+@@ -279,7 +280,7 @@ static void U_CALLCONV initAliasData(UErrorCode &errCode) {
+     for (uint32_t section = 1; section <= tableStart; section++) {
+         sizeOfData += sectionSizes[section] * sizeof(table[0]);
+     }
+-    if (dataLength < sizeOfData) {
++    if (isDataLengthKnown && dataLength < sizeOfData) {
+         // Truncated file!
+         goto invalidFormat;
+     }
+diff --git a/icu4c/source/configure b/icu4c/source/configure
+index 033749b71bc9..1fd03e78f6f9 100755
+--- configure
++++ configure
+@@ -7013,7 +7013,7 @@ case "${host}" in
+         # We're using gcc, and the simple -a gcc command line works for genccode
+         GENCCODE_ASSEMBLY="-a gcc"
+     fi ;;
+-i*86-*-solaris*)
++*86*-solaris*)
+     if test "$GCC" = yes; then
+         # When using gcc, look if we're also using GNU as.
+         # When using GNU as, the simple -a gcc command line works for genccode.
+diff --git a/icu4c/source/configure.ac b/icu4c/source/configure.ac
+index 8ffacf8795a9..61e7ee47fcc6 100644
+--- configure.ac
++++ configure.ac
+@@ -618,7 +618,7 @@ case "${host}" in
+         # We're using gcc, and the simple -a gcc command line works for genccode
+         GENCCODE_ASSEMBLY="-a gcc"
+     fi ;;
+-i*86-*-solaris*)
++*86*-solaris*)
+     if test "$GCC" = yes; then
+         # When using gcc, look if we're also using GNU as.
+         # When using GNU as, the simple -a gcc command line works for genccode.
