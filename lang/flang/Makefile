@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/05/09 19:37:12 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/01/06 08:48:40 wiz Exp $
 
 PKGREVISION= 1
 .include "../../lang/llvm/version.mk"
@@ -8,7 +8,7 @@ PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://flang.llvm.org/
+HOMEPAGE=	https://flang.llvm.org/docs/
 COMMENT=	Fortran compiler targeting LLVM
 LICENSE=	apache-2.0
 
