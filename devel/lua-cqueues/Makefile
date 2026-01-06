@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/10/24 22:08:53 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/01/06 07:58:17 wiz Exp $
 
 DISTNAME=	cqueues-20200726
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
@@ -21,8 +21,6 @@ BUILD_TARGET=	all${_LUA_DOT_VERSION}
 INSTALL_TARGET=	install${_LUA_DOT_VERSION}
 
 MAKE_FLAGS+=	LUA_APIS=${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
-
-LUA_VERSIONS_ACCEPTED=	54 53 52 51
 
 .include "../../lang/lua/module.mk"
 .include "../../security/openssl/buildlink3.mk"
