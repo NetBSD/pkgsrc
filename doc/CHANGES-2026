@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.143 2026/01/06 17:13:29 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.144 2026/01/06 17:16:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -193,3 +193,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/neomutt to 20260105 [wiz 2026-01-06]
 	Updated inputmethod/multiskkserv to 20240224 [ryoon 2026-01-06]
 	Added finance/alkimia version 8.2.1 [ryoon 2026-01-06]
+	Added finance/kmymoney version 5.2.1 [ryoon 2026-01-06]
