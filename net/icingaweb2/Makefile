@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/08/31 14:00:58 taca Exp $
+# $NetBSD: Makefile,v 1.8 2026/01/06 07:55:50 wiz Exp $
 
 DISTNAME=	icingaweb2-2.8.2
 PKGREVISION=	3
@@ -18,6 +18,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-imagick-[0-9]*:../../graphics/php-imagick
 DEPENDS+=	${PHP_PKG_PREFIX}-intl-[0-9]*:../../textproc/php-intl
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
 # For php-*sql see options.mk
+
+PHP_VERSIONS_INCOMPATIBLE=	56 # php-imagick
 
 USE_TOOLS+=	pax
 
