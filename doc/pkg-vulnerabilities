@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.704 2026/01/06 10:24:28 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.705 2026/01/06 12:16:44 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29300,3 +29300,10 @@ hugo<0.125.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-3287
 hugo<0.139.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-55601
 hwloc<2.9.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-47022
 hyperscan<5.4.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-28711
+py{27,310,311,312,313,314}-aiohttp<3.13.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-69223
+py{27,310,311,312,313,314}-aiohttp<3.13.3	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-69224
+py{27,310,311,312,313,314}-aiohttp<3.13.3	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-69225
+py{27,310,311,312,313,314}-aiohttp<3.13.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-69227
+py{27,310,311,312,313,314}-aiohttp<3.13.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-69228
+py{27,310,311,312,313,314}-aiohttp<3.13.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-69229
+py{27,310,311,312,313,314}-aiohttp<3.13.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-69230
