@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.134 2026/01/06 15:07:46 taca Exp $
+$NetBSD: CHANGES-2026,v 1.135 2026/01/06 15:42:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -184,3 +184,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-nacl to 1.6.2 [adam 2026-01-06]
 	Updated wm/icewm to 4.0.0 [gutteridge 2026-01-06]
 	Updated net/pear-Net_SMTP to 1.12.2 [taca 2026-01-06]
+	Updated www/seamonkey to 2.53.23 [ryoon 2026-01-06]
