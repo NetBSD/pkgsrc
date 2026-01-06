@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26634 2026/01/06 11:19:48 wiz Exp $
+$NetBSD: TODO,v 1.26635 2026/01/06 13:39:00 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -767,7 +767,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o icdprog-0.5
 	o icedtea-web-1.6.2
 	o ices-mp3-2.0.2
-	o icewm-4.0
 	o icinga-base-2.12.3
 	o icu-78.1
 	o idzebra-2.2.2
