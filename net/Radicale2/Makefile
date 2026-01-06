@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/04/16 10:24:38 prlw1 Exp $
+# $NetBSD: Makefile,v 1.22 2026/01/06 07:54:23 wiz Exp $
 
 DISTNAME=	Radicale-2.1.12
 PKGREVISION=	4
@@ -23,7 +23,7 @@ PKG_GROUPS=			${RADICALE_GROUP}
 PKG_USERS=			${RADICALE_USER}:${RADICALE_GROUP}
 # Fails with python 3.12 or newer with
 # An exception occurred during server startup: module 'ssl' has no attribute 'wrap_socket'
-PYTHON_VERSIONS_ACCEPTED=	311 310
+PYTHON_VERSIONS_ACCEPTED=	311
 
 WHEEL_NAME=		${DISTNAME:tl}
 
