@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2025/05/21 14:36:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/01/06 09:10:26 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -63,6 +63,12 @@ ${PYSITELIB}/stdnum/au/acn.pyo
 ${PYSITELIB}/stdnum/au/tfn.py
 ${PYSITELIB}/stdnum/au/tfn.pyc
 ${PYSITELIB}/stdnum/au/tfn.pyo
+${PYSITELIB}/stdnum/az/__init__.py
+${PYSITELIB}/stdnum/az/__init__.pyc
+${PYSITELIB}/stdnum/az/__init__.pyo
+${PYSITELIB}/stdnum/az/voen.py
+${PYSITELIB}/stdnum/az/voen.pyc
+${PYSITELIB}/stdnum/az/voen.pyo
 ${PYSITELIB}/stdnum/be/__init__.py
 ${PYSITELIB}/stdnum/be/__init__.pyc
 ${PYSITELIB}/stdnum/be/__init__.pyo
@@ -79,6 +85,9 @@ ${PYSITELIB}/stdnum/be/iban.pyo
 ${PYSITELIB}/stdnum/be/nn.py
 ${PYSITELIB}/stdnum/be/nn.pyc
 ${PYSITELIB}/stdnum/be/nn.pyo
+${PYSITELIB}/stdnum/be/ogm_vcs.py
+${PYSITELIB}/stdnum/be/ogm_vcs.pyc
+${PYSITELIB}/stdnum/be/ogm_vcs.pyo
 ${PYSITELIB}/stdnum/be/ssn.py
 ${PYSITELIB}/stdnum/be/ssn.pyc
 ${PYSITELIB}/stdnum/be/ssn.pyo
@@ -226,6 +235,9 @@ ${PYSITELIB}/stdnum/de/handelsregisternummer.pyo
 ${PYSITELIB}/stdnum/de/idnr.py
 ${PYSITELIB}/stdnum/de/idnr.pyc
 ${PYSITELIB}/stdnum/de/idnr.pyo
+${PYSITELIB}/stdnum/de/leitweg.py
+${PYSITELIB}/stdnum/de/leitweg.pyc
+${PYSITELIB}/stdnum/de/leitweg.pyo
 ${PYSITELIB}/stdnum/de/stnr.py
 ${PYSITELIB}/stdnum/de/stnr.pyc
 ${PYSITELIB}/stdnum/de/stnr.pyo
@@ -340,10 +352,14 @@ ${PYSITELIB}/stdnum/eu/ecnumber.pyo
 ${PYSITELIB}/stdnum/eu/eic.py
 ${PYSITELIB}/stdnum/eu/eic.pyc
 ${PYSITELIB}/stdnum/eu/eic.pyo
-${PYSITELIB}/stdnum/eu/nace.dat
+${PYSITELIB}/stdnum/eu/excise.py
+${PYSITELIB}/stdnum/eu/excise.pyc
+${PYSITELIB}/stdnum/eu/excise.pyo
 ${PYSITELIB}/stdnum/eu/nace.py
 ${PYSITELIB}/stdnum/eu/nace.pyc
 ${PYSITELIB}/stdnum/eu/nace.pyo
+${PYSITELIB}/stdnum/eu/nace20.dat
+${PYSITELIB}/stdnum/eu/nace21.dat
 ${PYSITELIB}/stdnum/eu/oss.py
 ${PYSITELIB}/stdnum/eu/oss.pyc
 ${PYSITELIB}/stdnum/eu/oss.pyo
@@ -383,12 +399,18 @@ ${PYSITELIB}/stdnum/fo/vn.pyo
 ${PYSITELIB}/stdnum/fr/__init__.py
 ${PYSITELIB}/stdnum/fr/__init__.pyc
 ${PYSITELIB}/stdnum/fr/__init__.pyo
+${PYSITELIB}/stdnum/fr/accise.py
+${PYSITELIB}/stdnum/fr/accise.pyc
+${PYSITELIB}/stdnum/fr/accise.pyo
 ${PYSITELIB}/stdnum/fr/nif.py
 ${PYSITELIB}/stdnum/fr/nif.pyc
 ${PYSITELIB}/stdnum/fr/nif.pyo
 ${PYSITELIB}/stdnum/fr/nir.py
 ${PYSITELIB}/stdnum/fr/nir.pyc
 ${PYSITELIB}/stdnum/fr/nir.pyo
+${PYSITELIB}/stdnum/fr/rcs.py
+${PYSITELIB}/stdnum/fr/rcs.pyc
+${PYSITELIB}/stdnum/fr/rcs.pyo
 ${PYSITELIB}/stdnum/fr/siren.py
 ${PYSITELIB}/stdnum/fr/siren.pyc
 ${PYSITELIB}/stdnum/fr/siren.pyo
@@ -720,6 +742,12 @@ ${PYSITELIB}/stdnum/my/bp.dat
 ${PYSITELIB}/stdnum/my/nric.py
 ${PYSITELIB}/stdnum/my/nric.pyc
 ${PYSITELIB}/stdnum/my/nric.pyo
+${PYSITELIB}/stdnum/mz/__init__.py
+${PYSITELIB}/stdnum/mz/__init__.pyc
+${PYSITELIB}/stdnum/mz/__init__.pyo
+${PYSITELIB}/stdnum/mz/nuit.py
+${PYSITELIB}/stdnum/mz/nuit.pyc
+${PYSITELIB}/stdnum/mz/nuit.pyo
 ${PYSITELIB}/stdnum/nl/__init__.py
 ${PYSITELIB}/stdnum/nl/__init__.pyc
 ${PYSITELIB}/stdnum/nl/__init__.pyo
@@ -894,6 +922,12 @@ ${PYSITELIB}/stdnum/sm/__init__.pyo
 ${PYSITELIB}/stdnum/sm/coe.py
 ${PYSITELIB}/stdnum/sm/coe.pyc
 ${PYSITELIB}/stdnum/sm/coe.pyo
+${PYSITELIB}/stdnum/sn/__init__.py
+${PYSITELIB}/stdnum/sn/__init__.pyc
+${PYSITELIB}/stdnum/sn/__init__.pyo
+${PYSITELIB}/stdnum/sn/ninea.py
+${PYSITELIB}/stdnum/sn/ninea.pyc
+${PYSITELIB}/stdnum/sn/ninea.pyo
 ${PYSITELIB}/stdnum/sv/__init__.py
 ${PYSITELIB}/stdnum/sv/__init__.pyc
 ${PYSITELIB}/stdnum/sv/__init__.pyo
