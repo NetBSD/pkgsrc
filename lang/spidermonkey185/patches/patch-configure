@@ -1,10 +1,27 @@
-$NetBSD: patch-configure,v 1.1 2016/11/16 13:13:44 fhajny Exp $
+$NetBSD: patch-configure,v 1.2 2026/01/06 16:06:16 ryoon Exp $
 
 * Improve compatibility
+* Define return type for functions to fix GCC 14.
 
 --- configure.orig	2011-03-31 19:08:36.000000000 +0000
 +++ configure
-@@ -3234,7 +3234,7 @@ fi
+@@ -1617,6 +1617,7 @@ cat > conftest.$ac_ext << EOF
+ #line 1618 "configure"
+ #include "confdefs.h"
+ 
++int
+ main(){return(0);}
+ EOF
+ if { (eval echo configure:1623: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+@@ -2262,6 +2263,7 @@ cat > conftest.$ac_ext << EOF
+ #line 2263 "configure"
+ #include "confdefs.h"
+ 
++int
+ main(){return(0);}
+ EOF
+ if { (eval echo configure:2268: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+@@ -3234,7 +3236,7 @@ fi
  
  echo "$ac_t""$ac_cv_have_std__Throw" 1>&6
  
@@ -13,7 +30,16 @@ $NetBSD: patch-configure,v 1.1 2016/11/16 13:13:44 fhajny Exp $
              echo $ac_n "checking for |class __declspec(dllimport) exception| bug""... $ac_c" 1>&6
  echo "configure:3240: checking for |class __declspec(dllimport) exception| bug" >&5
  if eval "test \"`echo '$''{'ac_cv_have_dllimport_exception_bug'+set}'`\" = set"; then
-@@ -8093,6 +8093,12 @@ EOF
+@@ -3471,7 +3473,7 @@ set dummy $CC; ac_cc="`echo $2 |
+ if eval "test \"`echo '$''{'ac_cv_prog_cc_${ac_cc}_c_o'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+-  echo 'foo(){}' > conftest.c
++  echo 'int foo(){}' > conftest.c
+ # Make sure it works both with $CC and with simple cc.
+ # We do the test twice because some compilers refuse to overwrite an
+ # existing .o file with -o, though they will create one.
+@@ -8093,6 +8095,12 @@ EOF
  EOF
  
      ;;
@@ -26,3 +52,19 @@ $NetBSD: patch-configure,v 1.1 2016/11/16 13:13:44 fhajny Exp $
  *-gnu*)
      cat >> confdefs.h <<\EOF
  #define AVMPLUS_UNIX 1
+@@ -11047,6 +11055,7 @@ else
+ #line 11048 "configure"
+ #include "confdefs.h"
+ 
++int
+ main()
+ {
+   char c0 = 0x40, c1 = 0x80, c2 = 0x81;
+@@ -13592,6 +13601,7 @@ else
+ #line 13593 "configure"
+ #include "confdefs.h"
+ #include <stdio.h>
++int
+ main()
+ {
+   FILE *f=fopen("conftestval", "w");
