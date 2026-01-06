@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2026/01/06 18:49:19 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.AGPL-3
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/chug/__init__.py
+${PYSITELIB}/chug/__init__.pyc
+${PYSITELIB}/chug/__init__.pyo
+${PYSITELIB}/chug/model.py
+${PYSITELIB}/chug/model.pyc
+${PYSITELIB}/chug/model.pyo
+${PYSITELIB}/chug/parsers/__init__.py
+${PYSITELIB}/chug/parsers/__init__.pyc
+${PYSITELIB}/chug/parsers/__init__.pyo
+${PYSITELIB}/chug/parsers/core.py
+${PYSITELIB}/chug/parsers/core.pyc
+${PYSITELIB}/chug/parsers/core.pyo
+${PYSITELIB}/chug/parsers/rest.py
+${PYSITELIB}/chug/parsers/rest.pyc
+${PYSITELIB}/chug/parsers/rest.pyo
+${PYSITELIB}/chug/writers.py
+${PYSITELIB}/chug/writers.pyc
+${PYSITELIB}/chug/writers.pyo

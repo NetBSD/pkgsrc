@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/01/06 18:49:19 adam Exp $
+
+BLAKE2s (changelog_chug-0.0.3.tar.gz) = face64bc788db6812d7283edac2bf8bb574035655d150e59919a7a5e087b0d6b
+SHA512 (changelog_chug-0.0.3.tar.gz) = 8764cccf68d730cdd48c7f9a2b2729f50d6128763ffd5b28026f515def9bea83c0a7ac91d7b21452e6c7e4c4215674c97ed92cf0a0f73b0324a3713049a754a8
+Size (changelog_chug-0.0.3.tar.gz) = 39326 bytes

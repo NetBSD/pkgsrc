@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1562 2026/01/03 18:05:44 bsiegert Exp $
+# $NetBSD: Makefile,v 1.1563 2026/01/06 18:49:19 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1058,6 +1058,7 @@ SUBDIR+=	py-black
 SUBDIR+=	py-bracex
 SUBDIR+=	py-breathe
 SUBDIR+=	py-cabocha
+SUBDIR+=	py-changelog-chug
 SUBDIR+=	py-class-doc
 SUBDIR+=	py-cmTemplate
 SUBDIR+=	py-cmarkgfm
