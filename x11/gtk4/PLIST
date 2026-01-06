@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2026/01/05 14:08:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2026/01/06 20:06:35 adam Exp $
 bin/gtk4-builder-tool
 bin/gtk4-demo
 bin/gtk4-demo-application
@@ -423,14 +423,6 @@ share/applications/org.gtk.Demo4.desktop
 share/applications/org.gtk.PrintEditor4.desktop
 share/applications/org.gtk.WidgetFactory4.desktop
 share/applications/org.gtk.gtk4.NodeEditor.desktop
-share/bash-completion/completions/gtk4-builder-tool
-share/bash-completion/completions/gtk4-demo
-share/bash-completion/completions/gtk4-image-tool
-share/bash-completion/completions/gtk4-node-editor
-share/bash-completion/completions/gtk4-path-tool
-share/bash-completion/completions/gtk4-print-editor
-share/bash-completion/completions/gtk4-rendernode-tool
-share/bash-completion/completions/gtk4-widget-factory
 share/gettext/its/gtk4builder.its
 share/gettext/its/gtk4builder.loc
 share/gir-1.0/Gdk-4.0.gir

@@ -1,12 +1,14 @@
-$NetBSD: patch-meson.build,v 1.5 2024/01/16 10:00:16 prlw1 Exp $
+$NetBSD: patch-meson.build,v 1.6 2026/01/06 20:06:35 adam Exp $
 
 Build fix for gcc 12 on NetBSD.
 It is the equivalent of the default PKGSRC_USE_RELRO=partial
 c.f., PR lib/57792
 
---- meson.build.orig	2023-11-17 20:29:11.000000000 +0000
+Don't look for bash. Don't install bash-completions.
+
+--- meson.build.orig	2025-11-20 05:08:31.000000000 +0000
 +++ meson.build
-@@ -362,7 +362,6 @@ common_cflags = cc.get_supported_argumen
+@@ -429,7 +429,6 @@ common_cflags = cc.get_supported_argumen
  common_ldflags = cc.get_supported_link_arguments([
    '-Wl,-Bsymbolic',
    '-Wl,-z,relro',
@@ -14,3 +16,12 @@ c.f., PR lib/57792
  ])
  
  confinc = include_directories('.')
+@@ -858,7 +857,7 @@ if os_unix
+ endif
+ 
+ # Shell completion
+-bash = find_program('bash', required : false)
++bash = find_program('nonexistent_bash', required : false)
+ 
+ if bash.found()
+   bash_comp_dep = dependency('bash-completion', version: '>=2.0', required: false)
