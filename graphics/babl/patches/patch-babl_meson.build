@@ -1,12 +1,12 @@
-$NetBSD: patch-babl_meson.build,v 1.4 2021/01/12 18:06:58 jperkin Exp $
+$NetBSD: patch-babl_meson.build,v 1.5 2026/01/06 08:43:15 adam Exp $
 
 Not having --version-script is not an error.
 
---- babl/meson.build.orig	2020-10-04 16:37:23.504518000 +0000
+--- babl/meson.build.orig	2025-12-08 11:36:42.000000000 +0000
 +++ babl/meson.build
-@@ -46,9 +46,7 @@ elif cc.get_id() == 'clang'
-     babl_link_args = []
-   endif
+@@ -50,9 +50,7 @@ elif cc.get_argument_syntax() == 'msvc'
+     '/VERSION:' + api_version
+   ]
  else
 -  error(
 -    'Linker doesn\'t support --version-script or -exported_symbols_list'
