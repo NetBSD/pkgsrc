@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.122 2026/01/06 08:44:25 adam Exp $
+$NetBSD: CHANGES-2026,v 1.123 2026/01/06 09:10:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -163,3 +163,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/glib-networking to 2.80.1 [adam 2026-01-06]
 	Updated graphics/babl to 0.1.118 [adam 2026-01-06]
 	Updated graphics/gegl to 0.4.66 [adam 2026-01-06]
+	Updated devel/py-pyasyncore to 1.0.5 [adam 2026-01-06]
+	Updated devel/py-pyasynchat to 1.0.5 [adam 2026-01-06]
+	Updated textproc/py-cmudict to 1.1.3 [adam 2026-01-06]
+	Updated misc/py-stdnum to 2.2 [adam 2026-01-06]
