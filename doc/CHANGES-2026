@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.121 2026/01/06 08:02:15 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.122 2026/01/06 08:44:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -160,3 +160,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/afternoonstalker to 1.2.0 [ktnb 2026-01-05]
 	Updated devel/lua-rocks to 3.13.0 [alnsn 2026-01-05]
 	Updated devel/py-guppy3 to 3.1.6 [wiz 2026-01-06]
+	Updated net/glib-networking to 2.80.1 [adam 2026-01-06]
+	Updated graphics/babl to 0.1.118 [adam 2026-01-06]
+	Updated graphics/gegl to 0.4.66 [adam 2026-01-06]
