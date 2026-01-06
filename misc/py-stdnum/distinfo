@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2025/05/21 14:36:53 adam Exp $
+$NetBSD: distinfo,v 1.20 2026/01/06 09:10:26 adam Exp $
 
-BLAKE2s (python_stdnum-2.1.tar.gz) = bdf400ecb12d10464cb6dbef06901aaad069fe4f380a6a39226b9f9e4eed1961
-SHA512 (python_stdnum-2.1.tar.gz) = d29989fd7a13fbc07763bd61ffd56914f1fdb66d89ad9538f64cf26c00550dda2d4725f24cc7e038a7164115ed68ab9877b4f2485ffd1682500aaca38853d4c0
-Size (python_stdnum-2.1.tar.gz) = 1238596 bytes
+BLAKE2s (python_stdnum-2.2.tar.gz) = 7bef688e4b41a6de0e384d2ca2e9cd193360ce056ba1925704cb6549ee5a47a5
+SHA512 (python_stdnum-2.2.tar.gz) = a4092ce09817e1606908836c8068f3dc9ccc69a21c969757fb052d755f5a475503cb722fe55100201843b551194174a27bd9ef1818a0f3befa1578dc6395234f
+Size (python_stdnum-2.2.tar.gz) = 1311813 bytes
