@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2026/01/05 14:08:23 adam Exp $
+# $NetBSD: Makefile,v 1.67 2026/01/06 20:06:35 adam Exp $
 
 DISTNAME=	gtk-4.20.3
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
@@ -25,7 +25,6 @@ RELRO_SUPPORTED=	partial
 USE_TOOLS+=	gdbus-codegen msgfmt msgmerge pkg-config xgettext
 USE_LANGUAGES=	c c++
 # meson.build only mentions c++11 to build harfbuzz as a subproject
-
 
 MESON_REQD+=		1.5.0
 MESON_ARGS+=		-Dintrospection=enabled
