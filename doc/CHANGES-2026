@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.126 2026/01/06 11:19:48 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.127 2026/01/06 11:23:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -171,3 +171,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-netCDF4 to 1.7.4 [adam 2026-01-06]
 	Updated games/openrct2 to 0.4.30 [triaxx 2026-01-06]
 	Updated textproc/py-sphinx to 9.1.0 [wiz 2026-01-06]
+	Removed sysutils/dupeguru [wiz 2026-01-06]
