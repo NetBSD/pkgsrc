@@ -1,0 +1,23 @@
+$NetBSD: patch-src_libalkimia.pc.in,v 1.1 2026/01/06 17:12:23 ryoon Exp $
+
+* Make includedir as absolute path.
+* Do not include an include path for private lib.
+
+--- src/libalkimia.pc.in.orig	2025-06-21 11:46:33.000000000 +0000
++++ src/libalkimia.pc.in
+@@ -5,7 +5,7 @@
+ prefix=@CMAKE_INSTALL_PREFIX@
+ exec_prefix=@CMAKE_INSTALL_PREFIX@
+ libdir=@CMAKE_INSTALL_LIBDIR@
+-includedir=@INCLUDE_INSTALL_DIR@
++includedir=${prefix}/@INCLUDE_INSTALL_DIR@
+ 
+ # Human-readable name
+ Name: Alkimia
+@@ -15,5 +15,5 @@ Version: @ALKIMIA_LIB_VERSION@
+ 
+ Libs: -lalkimia@PC_TARGET_SUFFIX@
+ Libs.private: -l@PC_LIB@ -l@PC_TARGET_QTPREFIX@Core -l@PC_TARGET_QTPREFIX@DBus -lstdc++
+-Cflags: -I${includedir} -I@MP_INCLUDE_DIR@
++Cflags: -I${includedir}
+ 

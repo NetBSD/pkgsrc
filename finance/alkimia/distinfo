@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2026/01/06 17:12:23 ryoon Exp $
+
+BLAKE2s (alkimia-8.2.1.tar.xz) = e8a4355d53014571acfaed832bb687b64ffbcbde7cc3b797c4ef60c57f7993ac
+SHA512 (alkimia-8.2.1.tar.xz) = 129dc783adcbebb6ecdb82abc04a8fc58a01d6d88fabd9eed0fcd980d42f2182d741347ab511f13c7183cdc2fb380a75aebbfa04768381a95f74243483bdb1c9
+Size (alkimia-8.2.1.tar.xz) = 353984 bytes
+SHA1 (patch-src_CMakeLists.txt) = 846f9c6ae022827bbbb813aff95551c9b1abd5de
+SHA1 (patch-src_libalkimia.pc.in) = 139bbc7fa79846726fd77b2e9f9bb7e9f6e968f4

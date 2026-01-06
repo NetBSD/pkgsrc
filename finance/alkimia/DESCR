@@ -1,0 +1,3 @@
+Alkimia is the infrastructure for common storage and business logic
+that will be used by all financial applications in KDE. The target
+is to share financial related information over application bounderies.

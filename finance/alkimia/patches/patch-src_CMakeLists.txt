@@ -1,0 +1,23 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2026/01/06 17:12:23 ryoon Exp $
+
+* Do not export WRKREF to *.cmake. I am not sure gmp is private.
+
+--- src/CMakeLists.txt.orig	2025-07-16 08:44:42.172432864 +0000
++++ src/CMakeLists.txt
+@@ -191,15 +191,14 @@ endif()
+ 
+ target_include_directories(alkimia
+     INTERFACE
+-        ${MP_INCLUDE_DIR}
+         $<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/alkimia/${ALKIMIA_INCLUDE_SUFFIX}>
+ )
+ 
+ target_link_libraries(alkimia
+     PRIVATE
+     alkimia-internal
+-    PUBLIC
+     ${MP_LIBRARIES}
++    PUBLIC
+     ${QT_BROWSER_LIB}
+     Qt${QT_MAJOR_VERSION}::Core
+ )
