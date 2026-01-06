@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2023/04/06 14:01:44 joerg Exp $
+$NetBSD: distinfo,v 1.9 2026/01/06 15:49:29 ryoon Exp $
 
 BLAKE2s (sile-0.14.8.tar.xz) = fdc9b3fc5316ffda6b4172d0259ef8ad271b4b199ac271b58fc2cc97d3c8dda6
 SHA512 (sile-0.14.8.tar.xz) = 68c93a402700abbb8a44439a8108a5c7b404186d33638fba3790f4e3218c5e5423167010748015c85e44e3efe9f84e83c2ff785011e8cc1d0e3ea584df303d91
 Size (sile-0.14.8.tar.xz) = 2771280 bytes
+SHA1 (patch-src_justenoughharfbuzz.c) = 09339e5af734b9e7049b484cb8f6bd814f7af495
