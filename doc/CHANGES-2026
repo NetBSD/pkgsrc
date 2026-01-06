@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.137 2026/01/06 15:56:01 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.138 2026/01/06 16:23:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -187,3 +187,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/seamonkey to 2.53.23 [ryoon 2026-01-06]
 	Updated www/seamonkey-l10n to 2.53.23 [ryoon 2026-01-06]
 	Updated www/chromium to 143.0.7499.169nb1 [ryoon 2026-01-06]
+	Updated devel/glibmm2.68 to 2.86.0 [ryoon 2026-01-06]
