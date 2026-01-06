@@ -1,4 +1,4 @@
-$NetBSD: patch-src_zm_logger_cpp,v 1.8 2024/12/01 13:49:48 gdt Exp $
+$NetBSD: patch-src_zm_logger_cpp,v 1.9 2026/01/06 17:51:37 gdt Exp $
 
 Use libgen.h for basename.
 
@@ -9,7 +9,7 @@ to use SYS_gettid.
 
 Fix time types (sizes).
 
---- src/zm_logger.cpp.orig	2023-02-23 21:44:01.000000000 +0000
+--- src/zm_logger.cpp.orig	2026-01-06 13:05:00.000000000 +0000
 +++ src/zm_logger.cpp
 @@ -439,13 +439,13 @@ void Logger::logPrint(bool hex, const ch
  
@@ -27,14 +27,12 @@ Fix time types (sizes).
  #if 0
    }
  #endif
-@@ -534,8 +534,8 @@ void Logger::logPrint(bool hex, const ch
-           "INSERT INTO `Logs` "
+@@ -535,7 +535,7 @@ void Logger::logPrint(bool hex, const ch
            "( `TimeKey`, `Component`, `ServerId`, `Pid`, `Level`, `Code`, `Message`, `File`, `Line` )"
            " VALUES "
--          "( %ld.%06ld, '%s', %d, %d, %d, '%s', '%s', '%s', %d )",
--          timeVal.tv_sec, timeVal.tv_usec, mId.c_str(), staticConfig.SERVER_ID, tid, level, classString, escapedString.c_str(), file, line
-+          "( %jd.%06ld, '%s', %d, %d, %d, '%s', '%s', '%s', %d )",
-+          (intmax_t) timeVal.tv_sec, (long) timeVal.tv_usec, mId.c_str(), staticConfig.SERVER_ID, tid, level, classString, escapedString.c_str(), file, line
+           "( %jd.%06ld, '%s', %d, %d, %d, '%s', '%s', '%s', %d )",
+-          static_cast<intmax_t>(timeVal.tv_sec), timeVal.tv_usec, mId.c_str(), staticConfig.SERVER_ID, tid, level, classString, escapedString.c_str(), file, line
++          static_cast<intmax_t>(timeVal.tv_sec), static_cast<long>(timeVal.tv_usec), mId.c_str(), staticConfig.SERVER_ID, tid, level, classString, escapedString.c_str(), file, line
            );
        dbQueue.push(std::move(sql_string));
      } else {

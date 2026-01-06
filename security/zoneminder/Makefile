@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.97 2026/01/05 16:02:44 gdt Exp $
+# $NetBSD: Makefile,v 1.98 2026/01/06 17:51:37 gdt Exp $
 
 # (1st-parent) commits past 1.36.37 on release-1.36
-VERSION=	1.36.37.7
+#   git log --first-parent --oneline --reverse 1.36.37..
+VERSION=	1.36.37.10
 # Distfile is ZoneMinder but package and tarball contents are zoneminder.
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
@@ -16,7 +17,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=${NAME_DIST}/}
 GITHUB_PROJECT=	${NAME_DIST}
 GITHUB_TYPE=	tag
 #GITHUB_TAG=	${PKGVERSION_NOREV}
-GITHUB_TAG=	02e750c7b395f701ea68bb05b7b94520805c59ef
+GITHUB_TAG=	5ca31d88f7069ec4a4cc758e7ea05353573d3304
 
 ## Submodules (from ZoneMinder's .gitmodules file)
 # We use a specific commit on each branch, to avoid distfile versioning woes
@@ -24,7 +25,9 @@ GITHUB_TAG=	02e750c7b395f701ea68bb05b7b94520805c59ef
 # Beware that RtspServer might get updates and should be checked.
 GITHUB_SUBMODULES+=	FriendsOfCake crud 14292374ccf1328f2d5db20897bd06f99ba4d938 web/api/app/Plugin/Crud
 GITHUB_SUBMODULES+=	ZoneMinder CakePHP-Enum-Behavior ea90c0cd7f6e24333a90885e563b5d30b793db29 web/api/app/Plugin/CakePHP-Enum-Behavior
-GITHUB_SUBMODULES+=	ZoneMinder RtspServer 055d81fe1293429e496b19104a9ed3360755a440 dep/RtspServer
+# cherry-pick https://github.com/ZoneMinder/RtspServer/pull/12
+#GITHUB_SUBMODULES+=	ZoneMinder RtspServer 055d81fe1293429e496b19104a9ed3360755a440 dep/RtspServer
+GITHUB_SUBMODULES+=	gdt RtspServer 2719899a3f74ef0a9bb213d34998bcc74cc1f17f dep/RtspServer
 
 MAINTAINER=	dsainty@NetBSD.org
 #MAINTAINER+=	gdt@NetBSD.org
