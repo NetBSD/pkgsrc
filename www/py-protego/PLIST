@@ -1,9 +1,21 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/14 19:31:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/01/06 12:19:32 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/protego.py
-${PYSITELIB}/protego.pyc
-${PYSITELIB}/protego.pyo
+${PYSITELIB}/protego/__init__.py
+${PYSITELIB}/protego/__init__.pyc
+${PYSITELIB}/protego/__init__.pyo
+${PYSITELIB}/protego/_protego.py
+${PYSITELIB}/protego/_protego.pyc
+${PYSITELIB}/protego/_protego.pyo
+${PYSITELIB}/protego/_ruleset.py
+${PYSITELIB}/protego/_ruleset.pyc
+${PYSITELIB}/protego/_ruleset.pyo
+${PYSITELIB}/protego/_urlpattern.py
+${PYSITELIB}/protego/_urlpattern.pyc
+${PYSITELIB}/protego/_urlpattern.pyo
+${PYSITELIB}/protego/_utils.py
+${PYSITELIB}/protego/_utils.pyc
+${PYSITELIB}/protego/_utils.pyo
+${PYSITELIB}/protego/py.typed
