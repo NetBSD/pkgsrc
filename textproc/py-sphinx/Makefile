@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.111 2025/12/21 17:39:12 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2026/01/06 11:19:39 wiz Exp $
 
-DISTNAME=	sphinx-9.0.4
+DISTNAME=	sphinx-9.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
@@ -35,10 +35,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.9:../../devel/py-typing-exten
 USE_LANGUAGES=	# none
 USE_TOOLS+=	makeinfo
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
-# as of 9.0.4
-# 43 failed, 2346 passed, 33 skipped, 46 warnings
+# as of 9.1.0
+# 43 failed, 2348 passed, 33 skipped, 48 warnings
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
