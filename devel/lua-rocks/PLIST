@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2026/01/05 22:10:35 alnsn Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/01/06 22:01:18 wiz Exp $
 bin/luarocks-${LUADOTVER}
 bin/luarocks-admin-${LUADOTVER}
 ${LUA_EXAMPLESDIR}/config-${LUADOTVER}.lua
+${PLIST.compat}${LUA_LDIR}/compat53/file_mt.lua
+${PLIST.compat}${LUA_LDIR}/compat53/init.lua
+${PLIST.compat}${LUA_LDIR}/compat53/module.lua
 ${LUA_LDIR}/luarocks/admin/cache.lua
 ${LUA_LDIR}/luarocks/admin/cmd/add.lua
 ${LUA_LDIR}/luarocks/admin/cmd/make_manifest.lua

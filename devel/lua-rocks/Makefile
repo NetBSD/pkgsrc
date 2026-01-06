@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2026/01/05 22:10:35 alnsn Exp $
+# $NetBSD: Makefile,v 1.22 2026/01/06 22:01:18 wiz Exp $
 
 DISTNAME=	luarocks-3.13.0
 PKGNAME=	${DISTNAME:S/luarocks/${LUA_PKGPREFIX}-rocks/}
@@ -43,6 +43,12 @@ CONF_FILES=		${LUA_EXAMPLESDIR}/${LUAROCKS_CONF} \
 # XXX Add subst rules to ../../lang/lua/xxx.mk
 PLIST_SUBST+=		LUADOTVER=${_LUA_DOT_VERSION}
 FILES_SUBST+=		LUADOTVER=${_LUA_DOT_VERSION}
+
+PLIST_VARS+=		compat
+.include "../../lang/lua/luaversion.mk"
+.if ${LUA_PACKAGE} == "lua51" || ${LUA_PACKAGE} == "lua52"
+PLIST.compat=		yes
+.endif
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
