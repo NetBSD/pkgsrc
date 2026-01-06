@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.85 2025/12/05 11:25:41 adam Exp $
+$NetBSD: distinfo,v 1.86 2026/01/06 12:04:39 adam Exp $
 
-BLAKE2s (ipython-9.8.0.tar.gz) = 827535c16f0fc9e4dc0cdbd2e563a9e7033e471f7be078cd5052ca997ebf155c
-SHA512 (ipython-9.8.0.tar.gz) = 1f7be5df369ff9c8a5905529286d59927775b47766f6a61ad97f062fb8a068aa9875610e5b313207bf26013ac4dc6d2b24d4d28c3b54586e1f08193d980a6eba
-Size (ipython-9.8.0.tar.gz) = 4424940 bytes
+BLAKE2s (ipython-9.9.0.tar.gz) = 86e2153692dd1613c4b5d08b34fbaa699300a8270d3c87b02c2db2da345e83df
+SHA512 (ipython-9.9.0.tar.gz) = f381764a71f73b2b565996565d26d43c587c9cd21e9286c317950b3ee3a41fb9f2fc79022e5c99560f39e90e7bcfb166f54cfbe0113f0b36523578cf6aaaca8b
+Size (ipython-9.9.0.tar.gz) = 4425043 bytes
 SHA1 (patch-setupbase.py) = 1de0975a186c250f03c996f7974750811de9607e
