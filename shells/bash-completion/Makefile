@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2021/03/10 16:35:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2026/01/06 20:20:55 adam Exp $
 #
 # Note to packagers:
 # packages installing additional completion files should drop
 # them into ${DESTDIR}${PREFIX}/share/bash-completion/completions
 # with the name of the package as file name.
 
-DISTNAME=	bash-completion-2.11
+DISTNAME=	bash-completion-2.17.0
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=scop/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -16,9 +16,8 @@ HOMEPAGE=	https://github.com/scop/bash-completion
 COMMENT=	Programmable completion specifications for bash
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	bash:run gmake
-
 USE_LANGUAGES=	# none
+USE_TOOLS+=	bash:run gmake
 GNU_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	lib/pkgconfig

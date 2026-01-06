@@ -1,10 +1,10 @@
-$NetBSD: patch-bash__completion,v 1.3 2018/10/19 20:28:25 leot Exp $
+$NetBSD: patch-bash__completion,v 1.4 2026/01/06 20:20:55 adam Exp $
 
 Added pkgsrc completions
 
---- bash_completion.orig	2018-03-17 08:32:34.000000000 +0000
+--- bash_completion.orig	2025-10-31 14:03:32.000000000 +0000
 +++ bash_completion
-@@ -1402,6 +1402,11 @@ _terms()
+@@ -2611,6 +2611,11 @@ _comp_try_faketty()
      extract patch configure build install reinstall deinstall clean
      clean-depends kernel buildworld' make
  
@@ -15,4 +15,4 @@ Added pkgsrc completions
 +
  # This function provides simple user@host completion
  #
- _user_at_host()
+ # @since 2.12
