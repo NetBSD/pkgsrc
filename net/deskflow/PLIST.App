@@ -1,7 +1,19 @@
-@comment $NetBSD: PLIST.App,v 1.2 2025/10/20 19:49:12 tnn Exp $
+@comment $NetBSD: PLIST.App,v 1.3 2026/01/06 19:57:10 tnn Exp $
 Applications/Deskflow.app/Contents/Info.plist
 Applications/Deskflow.app/Contents/MacOS/Deskflow
 Applications/Deskflow.app/Contents/MacOS/deskflow-core
 Applications/Deskflow.app/Contents/Resources/Deskflow.icns
 Applications/Deskflow.app/Contents/Resources/LICENSE
 Applications/Deskflow.app/Contents/Resources/LICENSE_EXCEPTION
+Applications/Deskflow.app/Contents/Resources/translations/deskflow_en.qm
+Applications/Deskflow.app/Contents/Resources/translations/deskflow_es.qm
+Applications/Deskflow.app/Contents/Resources/translations/deskflow_it.qm
+Applications/Deskflow.app/Contents/Resources/translations/deskflow_ja.qm
+Applications/Deskflow.app/Contents/Resources/translations/deskflow_ru.qm
+Applications/Deskflow.app/Contents/Resources/translations/deskflow_zh_CN.qm
+Applications/Deskflow.app/Contents/Resources/translations/qt_en.qm
+Applications/Deskflow.app/Contents/Resources/translations/qt_es.qm
+Applications/Deskflow.app/Contents/Resources/translations/qt_it.qm
+Applications/Deskflow.app/Contents/Resources/translations/qt_ja.qm
+Applications/Deskflow.app/Contents/Resources/translations/qt_ru.qm
+Applications/Deskflow.app/Contents/Resources/translations/qt_zh_CN.qm
