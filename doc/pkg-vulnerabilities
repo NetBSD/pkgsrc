@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.703 2026/01/04 19:47:23 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.704 2026/01/06 10:24:28 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28487,7 +28487,7 @@ gifsicle<1.94	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-36193
 gifsicle<1.95	floating-point-exception	https://nvd.nist.gov/vuln/detail/CVE-2023-46009
 gimp<3.0.0	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-2760
 gimp<3.0.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-2761
-libxslt-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-11731
+libxslt<1.1.43nb5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-11731
 firefox<144		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-81/
 firefox115<115.29	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-82/
 firefox140<140.4	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-83/
