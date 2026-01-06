@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.145 2026/01/06 17:36:37 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.146 2026/01/06 17:51:44 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -195,3 +195,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added finance/alkimia version 8.2.1 [ryoon 2026-01-06]
 	Added finance/kmymoney version 5.2.1 [ryoon 2026-01-06]
 	Updated finance/homebank to 5.9.4 [ryoon 2026-01-06]
+	Updated security/zoneminder to 1.36.37.10 [gdt 2026-01-06]
