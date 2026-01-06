@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/10/23 20:39:03 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/01/06 22:06:57 wiz Exp $
 
 DISTNAME=	sile-0.14.8
 PKGREVISION=	10
@@ -36,6 +36,8 @@ DEPENDS+=	${LUA_PKGPREFIX}-cosmo-[0-9]*:../../textproc/lua-cosmo
 DEPENDS+=	${LUA_PKGPREFIX}-utf8-[0-9]*:../../textproc/lua-utf8
 
 DEPENDS+=	gentiumplus-ttf-[0-9]*:../../fonts/gentiumplus-ttf
+
+LUA_VERSIONS_INCOMPATIBLE+=	55 # lua-bit32
 
 .if 0
 # Tests require additional font downloads and extra tools before configure

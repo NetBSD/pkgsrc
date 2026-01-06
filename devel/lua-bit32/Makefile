@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/04/17 10:38:34 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/01/06 22:06:57 wiz Exp $
 
 # Keep versioning in sync with the luarocks rockspec.
 DISTNAME=	lua-compat53-0.9
@@ -17,6 +17,8 @@ CONFLICTS+=	lua[0-9]*-bitlib-[0-9]*
 SUPERSEDES+=	lua[0-9]*-bitlib-[0-9]*
 
 INSTALLATION_DIRS+=	${LUA_CDIR}
+
+LUA_VERSIONS_INCOMPATIBLE+=	55 # lua-bit32
 
 pre-build:
 	${CP} -f ${FILESDIR}/Makefile ${WRKSRC}/Makefile
