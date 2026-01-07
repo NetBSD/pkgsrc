@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/10/19 22:27:44 alnsn Exp $
+# $NetBSD: Makefile,v 1.8 2026/01/07 08:41:54 wiz Exp $
 
 .include "../../devel/lua-lrexlib/Makefile.version"
 
@@ -9,7 +9,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://luaforge.net/projects/lrexlib
+#HOMEPAGE=	http://luaforge.net/projects/lrexlib
 COMMENT=	Regexp libraries for Lua programming language
 LICENSE=	mit
 
