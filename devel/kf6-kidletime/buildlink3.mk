@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2025/10/23 20:36:24 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2026/01/07 08:46:35 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-kidletime
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kidletime
 KF6_KIDLETIME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kidletime+=	kf6-kidletime>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-kidletime?=	kf6-kidletime>=6.18.0nb1
+BUILDLINK_ABI_DEPENDS.kf6-kidletime?=	kf6-kidletime>=6.18.0nb2
 BUILDLINK_PKGSRCDIR.kf6-kidletime?=	../../devel/kf6-kidletime
 
 .include "../../devel/qt6-qtwayland/buildlink3.mk"

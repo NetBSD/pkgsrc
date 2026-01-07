@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2025/12/31 09:59:08 tnn Exp $
+# $NetBSD: Makefile,v 1.39 2026/01/07 08:48:11 wiz Exp $
 
 DISTNAME=	qtmultimedia-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtmultimedia-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Qt6 module with multimedia
 CATEGORIES=	multimedia
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3

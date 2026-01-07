@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2025/12/21 19:34:31 markd Exp $
+# $NetBSD: Makefile,v 1.59 2026/01/07 08:48:52 wiz Exp $
 
 DISTNAME=	kcron-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://apps.kde.org/en-gb/kcron/

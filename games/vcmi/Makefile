@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2025/12/22 06:08:08 adam Exp $
+# $NetBSD: Makefile,v 1.21 2026/01/07 08:47:09 wiz Exp $
 
 DISTNAME=	vcmi-1.6.8
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vcmi/}
 

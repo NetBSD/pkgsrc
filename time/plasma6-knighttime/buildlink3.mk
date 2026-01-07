@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/12/31 03:17:11 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2026/01/07 08:49:12 wiz Exp $
 
 BUILDLINK_TREE+=	plasma6-knighttime
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	plasma6-knighttime
 PLASMA6_KNIGHTTIME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.plasma6-knighttime+=	plasma6-knighttime>=6.5.2
+BUILDLINK_ABI_DEPENDS.plasma6-knighttime?=	plasma6-knighttime>=6.5.2nb2
 BUILDLINK_PKGSRCDIR.plasma6-knighttime?=	../../time/plasma6-knighttime
 
 .include "../../devel/kf6-kconfig/buildlink3.mk"

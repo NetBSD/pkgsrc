@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2025/10/23 20:37:03 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/01/07 08:47:00 wiz Exp $
 
 DISTNAME=	gcompris-qt-3.1
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_KDE:=gcompris/qt/src/}
 EXTRACT_SUFX=	.tar.xz

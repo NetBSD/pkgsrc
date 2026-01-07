@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2025/10/23 20:39:27 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2026/01/07 08:49:00 wiz Exp $
 
 DISTNAME=	tarsnap-gui-1.0.2
-PKGREVISION=	39
+PKGREVISION=	40
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Tarsnap/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

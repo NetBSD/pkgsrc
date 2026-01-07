@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2025/04/17 21:51:48 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2026/01/07 08:48:10 wiz Exp $
 
 BUILDLINK_TREE+=	ogle
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ogle
 OGLE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ogle+=	ogle>=0.9.2
-BUILDLINK_ABI_DEPENDS.ogle+=	ogle>=0.9.2nb22
+BUILDLINK_ABI_DEPENDS.ogle+=	ogle>=0.9.2nb24
 BUILDLINK_PKGSRCDIR.ogle?=	../../multimedia/ogle
 
 .include "../../textproc/libxml2/buildlink3.mk"

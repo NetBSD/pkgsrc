@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2025/11/25 22:54:01 gutteridge Exp $
+# $NetBSD: Makefile,v 1.13 2026/01/07 08:46:39 wiz Exp $
 
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	libdbusmenu-lxqt-0.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2025/12/21 11:01:01 markd Exp $
+# $NetBSD: Makefile,v 1.81 2026/01/07 08:47:02 wiz Exp $
 
 DISTNAME=	katomic-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/katomic/

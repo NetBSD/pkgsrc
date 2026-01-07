@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2025/12/21 10:46:51 markd Exp $
+# $NetBSD: Makefile,v 1.90 2026/01/07 08:46:58 wiz Exp $
 
 DISTNAME=	blinken-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/education/blinken/

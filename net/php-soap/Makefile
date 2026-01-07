@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2025/04/17 21:52:01 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/01/07 08:48:25 wiz Exp $
 
 MODNAME=		soap
-PKGREVISION=		14
+PKGREVISION=		15
 CATEGORIES+=		net
 COMMENT=		PHP extension for SOAP functions
 

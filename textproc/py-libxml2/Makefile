@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.107 2025/05/27 21:43:35 adam Exp $
+# $NetBSD: Makefile,v 1.108 2026/01/07 08:49:07 wiz Exp $
 
 PYTHON_27_ACCEPTED=	yes
 
+PKGREVISION= 1
 .include "../../textproc/libxml2/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}

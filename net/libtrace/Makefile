@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2026/01/05 09:23:55 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/01/07 08:48:22 wiz Exp $
 
 DISTNAME=	libtrace-4.0.10
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	net
 MASTER_SITES=	#
 EXTRACT_SUFX=	.tar.bz2

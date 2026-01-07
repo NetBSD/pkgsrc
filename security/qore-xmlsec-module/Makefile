@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2025/08/20 11:35:11 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2026/01/07 08:48:45 wiz Exp $
 
 DISTNAME=	qore-xmlsec-module-1.0.0
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/}
 GITHUB_PROJECT=	module-xmlsec

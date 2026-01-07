@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2025/10/23 20:36:28 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2026/01/07 08:46:39 wiz Exp $
 
 BUILDLINK_TREE+=	kwayland
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kwayland
 KWAYLAND_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kwayland+=	kwayland>=5.6.3
-BUILDLINK_ABI_DEPENDS.kwayland?=		kwayland>=5.116.0nb6
+BUILDLINK_ABI_DEPENDS.kwayland?=		kwayland>=5.116.0nb7
 BUILDLINK_PKGSRCDIR.kwayland?=		../../devel/kwayland
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"

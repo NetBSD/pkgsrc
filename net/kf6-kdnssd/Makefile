@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/10/23 20:38:48 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/01/07 08:48:19 wiz Exp $
 
 DISTNAME=	kdnssd-${KF6VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 
 HOMEPAGE=	https://community.kde.org/Frameworks

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2025/04/17 21:49:42 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/01/07 08:45:48 wiz Exp $
 
 DISTNAME=	TheUnarchiverSource
 PKGNAME=	unarchiver-3.10 # See ${WRKSRC}/Info.plist
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	archivers
 MASTER_SITES=	https://cdn.theunarchiver.com/downloads/
 DIST_SUBDIR=	${PKGNAME_NOREV}
