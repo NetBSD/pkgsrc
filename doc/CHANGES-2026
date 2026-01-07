@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.156 2026/01/07 11:58:51 leot Exp $
+$NetBSD: CHANGES-2026,v 1.157 2026/01/07 15:30:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -207,3 +207,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/libcurl-gnutls to 8.18.0 [wiz 2026-01-07]
 	Updated devel/opa to 1.12.2 [leot 2026-01-07]
 	Updated security/subfinder to 2.11.0 [leot 2026-01-07]
+	Updated www/php-contao-manager to 1.10.7 [taca 2026-01-07]
