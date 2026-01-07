@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.164 2026/01/07 19:51:38 leot Exp $
+$NetBSD: CHANGES-2026,v 1.165 2026/01/07 19:54:30 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -219,3 +219,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/opencc to 1.1.9 [adam 2026-01-07]
 	Updated inputmethod/librime to 1.16.0 [adam 2026-01-07]
 	Updated net/gh to 2.83.2 [leot 2026-01-07]
+	Updated security/nuclei to 3.6.2 [leot 2026-01-07]
