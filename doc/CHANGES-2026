@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.154 2026/01/07 08:07:00 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.155 2026/01/07 11:45:18 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -205,3 +205,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/wget2 to 2.2.1 [wiz 2026-01-07]
 	Updated www/curl to 8.18.0 [wiz 2026-01-07]
 	Updated www/libcurl-gnutls to 8.18.0 [wiz 2026-01-07]
+	Updated devel/opa to 1.12.2 [leot 2026-01-07]
