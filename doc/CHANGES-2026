@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.165 2026/01/07 19:54:30 leot Exp $
+$NetBSD: CHANGES-2026,v 1.166 2026/01/07 20:25:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -220,3 +220,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated inputmethod/librime to 1.16.0 [adam 2026-01-07]
 	Updated net/gh to 2.83.2 [leot 2026-01-07]
 	Updated security/nuclei to 3.6.2 [leot 2026-01-07]
+	Updated ham/hackrf to 2026.01.1 [adam 2026-01-07]
+	Updated security/pcsc-lite to 2.4.1 [adam 2026-01-07]
