@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.157 2026/01/07 15:30:21 taca Exp $
+$NetBSD: CHANGES-2026,v 1.158 2026/01/07 15:33:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -208,3 +208,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/opa to 1.12.2 [leot 2026-01-07]
 	Updated security/subfinder to 2.11.0 [leot 2026-01-07]
 	Updated www/php-contao-manager to 1.10.7 [taca 2026-01-07]
+	Removed www/geeklog [taca 2026-01-07]
