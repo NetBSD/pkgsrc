@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.706 2026/01/06 13:49:41 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.707 2026/01/07 21:12:27 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29324,3 +29324,4 @@ iperf3<3.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-7250
 iperf3<3.14	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-38403
 iperf3<3.17	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2024-26306
 iperf3<3.18	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-53580
+php>=8.1<8.2		eol	https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
