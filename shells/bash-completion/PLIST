@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.8 2026/01/06 20:20:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/01/07 18:31:54 leot Exp $
 lib/pkgconfig/bash-completion.pc
 share/bash-completion/bash_completion
+share/bash-completion/bash_completion.d/000_bash_completion_compat.bash
 share/bash-completion/completions/2to3
 share/bash-completion/completions/7z
 share/bash-completion/completions/7za

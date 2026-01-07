@@ -1,14 +1,12 @@
-$NetBSD: patch-Makefile.in,v 1.2 2026/01/06 20:20:55 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2026/01/07 18:31:54 leot Exp $
 
-Don't install profile.d and bash_completion.d bits.
+Don't install profile.d bits.
 
 --- Makefile.in.orig	2025-10-31 14:07:05.000000000 +0000
 +++ Makefile.in
-@@ -329,9 +329,7 @@ pkgdata_DATA = bash_completion
- 
- # Empty, but here just to get the compat dir created with install
+@@ -331,7 +331,6 @@ pkgdata_DATA = bash_completion
  compatdir = $(sysconfdir)/bash_completion.d
--compat_DATA = bash_completion.d/000_bash_completion_compat.bash
+ compat_DATA = bash_completion.d/000_bash_completion_compat.bash
  profiledir = $(sysconfdir)/profile.d
 -profile_DATA = bash_completion.sh
  pkgconfigdir = $(datadir)/pkgconfig
