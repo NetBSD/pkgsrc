@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/05/02 11:18:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2026/01/07 08:39:52 wiz Exp $
 
 DISTNAME=	lpeg-1.1.0
 PKGREVISION=	2
@@ -7,7 +7,7 @@ CATEGORIES=	devel lua
 MASTER_SITES=	https://www.inf.puc-rio.br/~roberto/lpeg/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.inf.puc-rio.br/~roberto/lpeg/
+HOMEPAGE=	https://www.inf.puc-rio.br/~roberto/lpeg/
 COMMENT=	Parsing Expression Grammars (PEGs) library for Lua
 LICENSE=	mit
 
