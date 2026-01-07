@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2020/07/02 10:26:18 nia Exp $
+# $NetBSD: Makefile,v 1.8 2026/01/07 08:37:24 wiz Exp $
 
 DISTNAME=	copas-2.0.2
 PKGNAME=	${DISTNAME:S/copas/${LUA_PKGPREFIX}-copas/}
 CATEGORIES=	net lua
-MASTER_SITES=	${MASTER_SITE_GITHUB:=keplerproject/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lunarmodules/}
 GITHUB_TAG=	v${PKGVERSION:S/./_/g}
 GITHUB_PROJECT=	${DISTNAME:S/-${PKGVERSION_NOREV}//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://keplerproject.github.io/copas
+HOMEPAGE=	https://lunarmodules.github.io/copas/
 COMMENT=	Dispatcher based on coroutines that can be used by TCP_IP servers
 LICENSE=	mit
 
