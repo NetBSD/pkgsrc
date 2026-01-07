@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.152 2026/01/07 07:56:10 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.153 2026/01/07 08:06:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -203,3 +203,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed time/php-framadate [wiz 2026-01-06]
 	Updated devel/tack to 1.11.20251210 [wiz 2026-01-06]
 	Updated net/wget2 to 2.2.1 [wiz 2026-01-07]
+	Updated www/curl to 8.18.0 [wiz 2026-01-07]
