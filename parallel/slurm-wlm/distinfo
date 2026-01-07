@@ -1,14 +1,18 @@
-$NetBSD: distinfo,v 1.5 2025/03/12 18:54:23 adam Exp $
+$NetBSD: distinfo,v 1.6 2026/01/07 18:30:07 adam Exp $
 
-BLAKE2s (slurm-20.11.9.tar.bz2) = 724b8a5aa9e7437e5d56e3e87e918ddd70bce418ce83c4e283d77a29eea1e6a2
-SHA512 (slurm-20.11.9.tar.bz2) = 5f54f61eebcf8acad073d6d46b019db00c431f35a5f945bbb35ee593fa90348af06383370c17fc3b9cf4c1bf838502abe9910fca05f508100e14703af7f36e21
-Size (slurm-20.11.9.tar.bz2) = 6629247 bytes
+BLAKE2s (slurm-25.11.1.tar.bz2) = d905b951c3798d3c66f8e7a34b25758b06171f73a8e1de6425565486697c0512
+SHA512 (slurm-25.11.1.tar.bz2) = 248219a2519d3cb05a87241d878eb775315054fd93287f38bc9600c45dabb6138a75dc6e041894459ee104b0b80fdbf68e08287337c8ea5553438ced30fc0217
+Size (slurm-25.11.1.tar.bz2) = 6724619 bytes
+SHA1 (patch-configure) = 6aae1ee7b5c041a1be978bd20b5502b78ad1b390
 SHA1 (patch-etc_init.d.slurm.in) = beaedd5385b4aad04583d2bc5a23557519f74ec5
-SHA1 (patch-src_common_gres.c) = 5eb64fa3567efe42e763801002fa4a4d185f4fa3
-SHA1 (patch-src_plugins_job__container_Makefile.in) = bc356f74093cee425937524cafd38626602e787f
-SHA1 (patch-src_plugins_task_Makefile.in) = 5d16e430bfc8b1a06347299aa2166e0a3d45a255
-SHA1 (patch-src_slurmd_common_task__plugin.h) = 4a651116b7941fb1287636a5878b49a78ca1c433
+SHA1 (patch-src_common_net.c) = ddf8ee8b3606df1c016c3e11f80173979e229525
+SHA1 (patch-src_common_run__command.c) = fd6886dc71c35d7bc6dee6339cf6fa504b1c0abf
+SHA1 (patch-src_common_xsched.c) = b0e96e4b6b098961e90c3d3e1ea33ed8c6fbe1a1
+SHA1 (patch-src_common_xsched.h) = b777c2460d21ed5ae8f5a31068521d5c134f42b5
+SHA1 (patch-src_conmgr_workers.c) = d31479b6609fcbd3d995a48aab9853313fdcb5c5
+SHA1 (patch-src_plugins_task_Makefile.in) = 6aefcbcef2f9a31941dcbe6488ec4ee0a57f5f02
+SHA1 (patch-src_slurmctld_trigger__mgr.c) = b15af6e486a0857530edb20908bcc46f6005103d
+SHA1 (patch-src_slurmd_slurmd_req.c) = b86087999264b1b224bfadea8afe998768ccf1ad
 SHA1 (patch-src_slurmd_slurmd_slurmd.c) = 512d7871b343327798922d6a23af24ccdfec5c77
-SHA1 (patch-src_slurmd_slurmd_slurmd.h) = a610b0bbe5b6b04be70eb2f8eac2a231139e6d1a
 SHA1 (patch-src_slurmd_slurmstepd_io.c) = b56782887621edb539be70d53dff8029a89e90ed
 SHA1 (patch-src_slurmd_slurmstepd_task.c) = 756dd8eb7201d003a6a7f01aa84b699f9a3ce11b

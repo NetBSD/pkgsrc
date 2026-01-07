@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2026/01/07 08:48:32 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2026/01/07 18:30:07 adam Exp $
 
-DISTNAME=	slurm-20.11.9
+DISTNAME=	slurm-25.11.1
 PKGNAME=	${DISTNAME:S/-/-wlm-/}
-PKGREVISION=	4
 CATEGORIES=	parallel
 MASTER_SITES=	https://download.schedmd.com/slurm/
-MASTER_SITES+=	http://www.schedmd.com/download/latest/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,6 +18,7 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	bash gmake perl pkg-config
 GNU_CONFIGURE=	yes
+TEST_TARGET=	check
 
 CONFIG_SHELL=		bash
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
@@ -27,7 +26,6 @@ CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html
 CONFIGURE_ARGS+=	--with-hwloc=${PREFIX}
 CONFIGURE_ARGS+=	--with-json=${PREFIX}
-CONFIGURE_ARGS+=	--with-libssh2=${PREFIX}
 CONFIGURE_ARGS+=	--with-munge=${BUILDLINK_PREFIX.munge}
 
 REPLACE_PYTHON=		doc/html/shtml2html.py
@@ -87,9 +85,10 @@ post-install:
 .include "../../security/munge/buildlink3.mk" # optional
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
+.include "../../textproc/libyaml/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
