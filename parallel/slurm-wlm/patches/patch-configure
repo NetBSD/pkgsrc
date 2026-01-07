@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2026/01/07 18:30:07 adam Exp $
+
+Portability fix.
+
+--- configure.orig	2026-01-07 10:56:18.048097221 +0000
++++ configure
+@@ -27622,7 +27622,7 @@ printf "%s\n" "doh!" >&6; }
+ fi
+ 
+ 
+-  if test "x$x_ac_sview" == "xno"; then
++  if test "x$x_ac_sview" = "xno"; then
+     { printf "%s\n" "$as_me:${as_lineno-$LINENO}: sview is disabled" >&5
+ printf "%s\n" "$as_me: sview is disabled" >&6;}
+   else
