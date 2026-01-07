@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/10/27 15:03:23 dkazankov Exp $
+# $NetBSD: Makefile,v 1.8 2026/01/07 23:31:14 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-${GITHUB_TAG}.0
@@ -23,6 +23,8 @@ USE_TOOLS=	tar bzip2
 USE_LANGUAGES=	c ada
 
 USE_GCC_RUNTIME=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx via py-langkit
 
 .include "../../mk/bsd.prefs.mk"
 

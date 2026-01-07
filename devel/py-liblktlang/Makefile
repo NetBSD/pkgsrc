@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/10/12 13:18:28 dkazankov Exp $
+# $NetBSD: Makefile,v 1.6 2026/01/07 23:31:14 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=	${PYPKGPREFIX}-liblktlang-${GITHUB_TAG}
@@ -17,6 +17,8 @@ USE_LANGUAGES=	c ada
 USE_TOOLS+=	pax gmake
 
 HAS_CONFIGURE=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx via py-langkit
 
 .include "../../mk/bsd.prefs.mk"
 
