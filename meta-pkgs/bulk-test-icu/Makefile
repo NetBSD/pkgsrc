@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2026/01/06 16:54:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2026/01/07 00:15:05 gutteridge Exp $
 
-DISTNAME=	bulk-test-icu-20260106
+DISTNAME=	bulk-test-icu-20260107
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -111,8 +111,7 @@ DEPENDS+=	libical-[0-9]*:../../time/libical
 DEPENDS+=	arcticfox-[0-9]*:../../www/arcticfox
 DEPENDS+=	cppcms-[0-9]*:../../www/cppcms
 DEPENDS+=	firefox-[0-9]*:../../www/firefox
-#DEPENDS+=	firefox115-[0-9]*:../../www/firefox115
-DEPENDS+=	firefox128-[0-9]*:../../www/firefox128
+DEPENDS+=	firefox-esr-[0-9]*:../../www/firefox-esr
 # Not built for recent environments
 DEPENDS+=	firefox52-[0-9]*:../../www/firefox52
 # Only for PHP 7
