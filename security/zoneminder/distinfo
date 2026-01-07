@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2026/01/06 17:51:37 gdt Exp $
+$NetBSD: distinfo,v 1.28 2026/01/07 01:03:59 gdt Exp $
 
 BLAKE2s (FriendsOfCake-crud-14292374ccf1328f2d5db20897bd06f99ba4d938.tar.gz) = 8877bf6718ecfe3cba2515629418fe5addc60cf8ce4650526b39db6a234922ad
 SHA512 (FriendsOfCake-crud-14292374ccf1328f2d5db20897bd06f99ba4d938.tar.gz) = da58528686baf05385ad08079f965bce10eba6d599133ab773e9ab1f9e4b7d82cf5431b4b773317b90effb16e0b026a029bdfabe08a9ef1a5e9b94e7a1c2ea9e
@@ -18,11 +18,16 @@ SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm) = 996670d8a659c0624587
 SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_Memory_Shared.pm) = b3de55618915fad3d9263954db71270c800ad6f1
 SHA1 (patch-scripts_zm_in) = a05727261bb8be6b707e9a14ae4ff52ea3770d51
 SHA1 (patch-scripts_zmpkg_pl_in) = eb3166ae3cd9bb0ce1b828b64722506aa4e82368
-SHA1 (patch-src_zm__event.cpp) = 2713e583bb0c5be1764cdbca77531d11725b0034
+SHA1 (patch-src_zm__event.cpp) = a965a93a8e531430f79432976f7f809a8e8296bf
 SHA1 (patch-src_zm__eventstream.cpp) = d2134edf09f142a6a545ca36d3263b13defcadd6
-SHA1 (patch-src_zm__monitor.cpp) = ac6eb821d5d72455b46165e74ea1d321faf9e431
+SHA1 (patch-src_zm__image.cpp) = ea74fcef9220293466835d0a4079f6aa5ae2aa75
+SHA1 (patch-src_zm__monitor.cpp) = 7ebc55e9b3b23590541505b7641beaed61b9c56a
 SHA1 (patch-src_zm__packet.h) = 96951004741f3d21434d3ca981f6214c07f77c88
+SHA1 (patch-src_zm__packetqueue.cpp) = b04e72880d428d3f22a9910c249854f31651240f
+SHA1 (patch-src_zm__regexp.cpp) = b8eede97a7b7d0a58556604fe8a38bd825c230ab
 SHA1 (patch-src_zm__rtp__source.cpp) = 9335686e0b353cc50eac51704546527bee5c180b
+SHA1 (patch-src_zm__rtsp__server__fifo__source.cpp) = ece9083fc4cb4ade8e97c2f46307db34fbdb1c2f
+SHA1 (patch-src_zm__time.h) = b52f3bf40eb4dca550bc880e5c41227999269590
 SHA1 (patch-src_zm__utils.cpp) = e16ffd3f41bd05a32c80142e7246307df12801a8
 SHA1 (patch-src_zm_comms_h) = 33577ab0eac62eadc415fe6fb970b82eb473c8e7
 SHA1 (patch-src_zm_logger_cpp) = 3428e80f3e442a3ada147d3d4145564f6e949760
