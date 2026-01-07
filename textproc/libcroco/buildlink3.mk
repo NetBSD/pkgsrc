@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.43 2025/10/23 20:39:34 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.44 2026/01/07 08:49:04 wiz Exp $
 
 BUILDLINK_TREE+=	libcroco
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libcroco
 LIBCROCO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libcroco+=	libcroco>=0.6.0
-BUILDLINK_ABI_DEPENDS.libcroco+=	libcroco>=0.6.13nb15
+BUILDLINK_ABI_DEPENDS.libcroco+=	libcroco>=0.6.13nb16
 BUILDLINK_PKGSRCDIR.libcroco?=		../../textproc/libcroco
 
 .include "../../devel/glib2/buildlink3.mk"

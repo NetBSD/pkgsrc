@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2025/12/29 09:15:04 markd Exp $
+# $NetBSD: Makefile,v 1.50 2026/01/07 08:47:59 wiz Exp $
 
 DISTNAME=	kidentitymanagement-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM

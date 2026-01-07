@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2025/05/18 10:27:33 zafer Exp $
+# $NetBSD: Makefile,v 1.61 2026/01/07 08:48:14 wiz Exp $
 
 DISTNAME=	chrony-4.2
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	net
 MASTER_SITES=	https://www.aydogan.net/distfiles/net/
 

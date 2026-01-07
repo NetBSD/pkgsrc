@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.39 2025/10/23 20:39:47 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.40 2026/01/07 08:49:19 wiz Exp $
 
 BUILDLINK_TREE+=	kjs
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kjs
 KJS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kjs+=	kjs>=5.21.0
-BUILDLINK_ABI_DEPENDS.kjs?=	kjs>=5.116.0nb6
+BUILDLINK_ABI_DEPENDS.kjs?=	kjs>=5.116.0nb7
 BUILDLINK_PKGSRCDIR.kjs?=	../../www/kjs
 
 BUILDLINK_FILES.kjs+=		share/kf5/kjs/create_hash_table

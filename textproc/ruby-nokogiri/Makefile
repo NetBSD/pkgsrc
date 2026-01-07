@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.106 2025/09/15 04:46:04 tsutsui Exp $
+# $NetBSD: Makefile,v 1.107 2026/01/07 08:49:08 wiz Exp $
 
 DISTNAME=	nokogiri-1.18.10
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	tsutsui@NetBSD.org

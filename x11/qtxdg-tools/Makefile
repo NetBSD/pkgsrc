@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2025/11/25 22:54:04 gutteridge Exp $
+# $NetBSD: Makefile,v 1.27 2026/01/07 08:49:47 wiz Exp $
 
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	qtxdg-tools-4.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

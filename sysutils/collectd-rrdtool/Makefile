@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.39 2025/10/23 20:39:15 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/01/07 08:48:49 wiz Exp $
 
 COLLECTD_PACKAGE=	rrdtool
 COLLECTD_PLUGINS=	rrdtool rrdcached
 
 COMMENT=		Statistics collection daemon - rrdtool plugins
-PKGREVISION=		17
+PKGREVISION=		18
 
 .include "../../databases/rrdtool/buildlink3.mk"
 COLLECTD_LIB.rrd=	${BUILDLINK_PREFIX.rrdtool}

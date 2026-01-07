@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2026/01/02 23:05:47 markd Exp $
+# $NetBSD: Makefile,v 1.22 2026/01/07 08:48:41 wiz Exp $
 
 DISTNAME=	kleopatra-${KAPPSVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 
 HOMEPAGE=	https://www.kde.org/applications/utilities/kleopatra/

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2025/10/23 20:39:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2026/01/07 08:48:35 wiz Exp $
 
 BUILDLINK_TREE+=	libppd
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libppd
 LIBPPD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libppd+=	libppd>=2.1.1
-BUILDLINK_ABI_DEPENDS.libppd?=	libppd>=2.1.1nb3
+BUILDLINK_ABI_DEPENDS.libppd?=	libppd>=2.1.1nb4
 BUILDLINK_PKGSRCDIR.libppd?=	../../print/libppd
 
 .include "../../print/libcupsfilters/buildlink3.mk"

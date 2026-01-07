@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2025/04/17 21:51:47 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2026/01/07 08:48:09 wiz Exp $
 
 BUILDLINK_TREE+=	libbluray
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libbluray
 LIBBLURAY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libbluray+=	libbluray>=0.8.1
-BUILDLINK_ABI_DEPENDS.libbluray?=	libbluray>=1.3.4nb9
+BUILDLINK_ABI_DEPENDS.libbluray?=	libbluray>=1.3.4nb10
 BUILDLINK_PKGSRCDIR.libbluray?=		../../multimedia/libbluray
 
 .include "../../graphics/freetype2/buildlink3.mk"

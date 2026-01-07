@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2026/01/02 09:16:01 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2026/01/07 08:47:01 wiz Exp $
 
 DISTNAME=	kanatest-0.4.8
-PKGREVISION=	57
+PKGREVISION=	58
 CATEGORIES=	games
 MASTER_SITES=	#
 LICENSE=	gnu-gpl-v2

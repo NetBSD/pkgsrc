@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2025/10/23 20:37:45 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2026/01/07 08:47:26 wiz Exp $
 
 BUILDLINK_TREE+=	qt6-qtquick3d
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qtquick3d
 QT6_QTQUICK3D_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qtquick3d+=	qt6-qtquick3d>=6.4.1
-BUILDLINK_ABI_DEPENDS.qt6-qtquick3d+=	qt6-qtquick3d>=6.9.3nb1
+BUILDLINK_ABI_DEPENDS.qt6-qtquick3d+=	qt6-qtquick3d>=6.10.1nb1
 BUILDLINK_PKGSRCDIR.qt6-qtquick3d?=	../../graphics/qt6-qtquick3d
 
 .include "../../graphics/qt6-qtshadertools/buildlink3.mk"

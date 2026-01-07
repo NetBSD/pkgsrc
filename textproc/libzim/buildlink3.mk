@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/08/31 19:16:21 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2026/01/07 08:49:05 wiz Exp $
 
 BUILDLINK_TREE+=	libzim
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libzim
 LIBZIM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libzim+=	libzim>=9.3.0
+BUILDLINK_ABI_DEPENDS.libzim?=	libzim>=9.4.1nb1
 BUILDLINK_PKGSRCDIR.libzim?=	../../textproc/libzim
 
 .include "../../archivers/xz/buildlink3.mk"

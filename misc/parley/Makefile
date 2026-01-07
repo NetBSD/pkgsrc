@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2025/12/22 22:47:12 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2026/01/07 08:48:02 wiz Exp $
 
 DISTNAME=	parley-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/parley/

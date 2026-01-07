@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.98 2025/10/25 11:53:59 adam Exp $
+# $NetBSD: Makefile,v 1.99 2026/01/07 08:46:28 wiz Exp $
 
 DISTNAME=	cutter-1.2.9
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=clear-code/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2025/10/05 19:26:14 js Exp $
+# $NetBSD: Makefile,v 1.49 2026/01/07 08:48:32 wiz Exp $
 
 DISTNAME=	slurm-20.11.9
 PKGNAME=	${DISTNAME:S/-/-wlm-/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	parallel
 MASTER_SITES=	https://download.schedmd.com/slurm/
 MASTER_SITES+=	http://www.schedmd.com/download/latest/

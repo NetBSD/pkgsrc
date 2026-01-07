@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/12/21 20:17:06 markd Exp $
+# $NetBSD: Makefile,v 1.12 2026/01/07 08:49:34 wiz Exp $
 
 DISTNAME=	kirigami-addons-1.10.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_KDE:=kirigami-addons/}
 

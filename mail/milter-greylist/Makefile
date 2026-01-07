@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.100 2025/10/05 19:26:05 js Exp $
+# $NetBSD: Makefile,v 1.101 2026/01/07 08:47:47 wiz Exp $
 
 DISTNAME=	milter-greylist-4.6.4
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.espci.fr/pub/milter-greylist/
 EXTRACT_SUFX=	.tgz

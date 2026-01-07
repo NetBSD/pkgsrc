@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2025/12/21 13:43:44 markd Exp $
+# $NetBSD: Makefile,v 1.19 2026/01/07 08:47:54 wiz Exp $
 
 DISTNAME=	akonadiconsole-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kontact.kde.org/

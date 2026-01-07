@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.101 2025/08/30 22:46:36 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2026/01/07 08:49:29 wiz Exp $
 
 DISTNAME=	gnustep-gui-0.32.0
 #PKGREVISION=	1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gnustep/}
 GITHUB_PROJECT=	libs-gui
