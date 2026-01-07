@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2025/12/12 20:52:51 wiz Exp $
+$NetBSD: distinfo,v 1.4 2026/01/07 21:19:29 wiz Exp $
 
 BLAKE2s (github.com__puerkito_bio_goquery_@v_v1.11.0.mod) = 2bb233586966faf1d6063aa3bf75e7c80563500c3d8beec934b77bcf903907cd
 SHA512 (github.com__puerkito_bio_goquery_@v_v1.11.0.mod) = fdb3a6ac5741daf0d847b3fe7e08dd1ac17deb98946aafec1ed9a3bdffe9f737800a4cd7c7ee121a30c61eb09ebc37c73be21dbcad23e49d1c1c402a59f6fb07
@@ -408,6 +408,6 @@ Size (google.golang.org_protobuf_@v_v1.36.8.zip) = 2245481 bytes
 BLAKE2s (gopkg.in_check.v1_@v_v0.0.0-20161208181325-20d25e280405.mod) = 35cd1964700502d06b8c987979fb4dbddc41a5cda3368d037211b89d3587521f
 SHA512 (gopkg.in_check.v1_@v_v0.0.0-20161208181325-20d25e280405.mod) = 9ac0f80ef05881387cb2f48f81560f3207fe586ea16495383662e6d62e43d93fac01dfe72e1d0063d3ab065331dab3a8098d7da4f1830ba1aff6f27f8e1bc1b2
 Size (gopkg.in_check.v1_@v_v0.0.0-20161208181325-20d25e280405.mod) = 25 bytes
-BLAKE2s (miniflux-2.2.15.tar.gz) = af4fb1581609c524567b529e97612a82add367a94dfe45060f55c137c4de68e1
-SHA512 (miniflux-2.2.15.tar.gz) = 64fadcdbb44fad626ff1a93b77bc55ac0c5416bdc5431d318b3eab30b2056b1b9ce6fbbd2a34f119178bc69bce7e7c0755a2f1b2f3327f28211a47bd667d1d6d
-Size (miniflux-2.2.15.tar.gz) = 881741 bytes
+BLAKE2s (miniflux-2.2.16.tar.gz) = 65b4b05c33cc4bdd8ade4e4780a3599ad288b91db1de89b66b91d9f4e0c8a994
+SHA512 (miniflux-2.2.16.tar.gz) = 38bab8ea7a2dba950fcc5d9a9855761e6da7c90525fb0ce2b76ca82469f6babb7fdeb4f23fdb59355c28fff4e9200f26e88cee2debe26b6ba0280572a835d801
+Size (miniflux-2.2.16.tar.gz) = 890245 bytes
