@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.19 2025/04/17 21:50:03 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/01/07 08:44:15 wiz Exp $
 
 DISTNAME=	lsqlite3_v096
 PKGNAME=	${LUA_PKGPREFIX}-lsqlite3-0.9.6
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases lua
 MASTER_SITES=	http://lua.sqlite.org/index.cgi/zip/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lua.sqlite.org/index.cgi/index
+HOMEPAGE=	http://lua.sqlite.org/home/index
 COMMENT=	Binding for Lua to the SQLite3 database library
 LICENSE=	mit
 
