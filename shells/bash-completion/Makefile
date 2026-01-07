@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2026/01/06 20:20:55 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/01/07 18:31:54 leot Exp $
 #
 # Note to packagers:
 # packages installing additional completion files should drop
@@ -6,6 +6,7 @@
 # with the name of the package as file name.
 
 DISTNAME=	bash-completion-2.17.0
+PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=scop/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -19,6 +20,9 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:run gmake
 GNU_CONFIGURE=	yes
+
+# Used for compatdirs, to have compat functions
+CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/bash-completion
 
 INSTALLATION_DIRS=	lib/pkgconfig
 
