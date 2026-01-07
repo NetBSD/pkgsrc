@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/08/15 08:10:03 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/07 18:08:33 dkazankov Exp $
 
 DISTNAME=	polyorb-${PKGVERSION_NOREV}
 PKGNAME=	polyorb-${GNAT_NAME}-25.0.0
+PKGREVISION=	1
 CATEGORIES=	net devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	PolyORB
@@ -50,7 +51,7 @@ SUBST_SED.time=		-e "s,\"time\",\"__gnat_time\","
 
 CONFIGURE_ARGS+=	--with-appli-perso=${APP_PERSONALITIES:Q}
 CONFIGURE_ARGS+=	--with-proto-perso=${PROTOCOL_PERSONALITIES:Q}
-.if !empty(${CORBA_SERVICES})
+.if !empty(CORBA_SERVICES)
 CONFIGURE_ARGS+=	--with-corba-services=${CORBA_SERVICES:Q}
 .endif
 EXTRA_GNATMAKE_FLAGS+=	-eL -R -largs $${LDFLAGS} -margs
