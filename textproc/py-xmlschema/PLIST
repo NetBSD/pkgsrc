@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/10/19 11:11:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2026/01/07 18:43:40 adam Exp $
 bin/xmlschema-json2xml-${PYVERSSUFFIX}
 bin/xmlschema-validate-${PYVERSSUFFIX}
 bin/xmlschema-xml2json-${PYVERSSUFFIX}
@@ -260,6 +260,9 @@ ${PYSITELIB}/xmlschema/xpath/__init__.pyo
 ${PYSITELIB}/xmlschema/xpath/assertion_parser.py
 ${PYSITELIB}/xmlschema/xpath/assertion_parser.pyc
 ${PYSITELIB}/xmlschema/xpath/assertion_parser.pyo
+${PYSITELIB}/xmlschema/xpath/find_parser.py
+${PYSITELIB}/xmlschema/xpath/find_parser.pyc
+${PYSITELIB}/xmlschema/xpath/find_parser.pyo
 ${PYSITELIB}/xmlschema/xpath/identity_parser.py
 ${PYSITELIB}/xmlschema/xpath/identity_parser.pyc
 ${PYSITELIB}/xmlschema/xpath/identity_parser.pyo
