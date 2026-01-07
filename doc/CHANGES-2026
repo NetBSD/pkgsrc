@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.162 2026/01/07 18:44:00 adam Exp $
+$NetBSD: CHANGES-2026,v 1.163 2026/01/07 19:33:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -216,3 +216,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated parallel/slurm-wlm to 25.11.1 [adam 2026-01-07]
 	Updated www/py-urllib3 to 2.6.3 [adam 2026-01-07]
 	Updated textproc/py-xmlschema to 4.3.0 [adam 2026-01-07]
+	Updated converters/opencc to 1.1.9 [adam 2026-01-07]
+	Updated inputmethod/librime to 1.16.0 [adam 2026-01-07]
