@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2020/07/02 10:26:17 nia Exp $
+# $NetBSD: Makefile.common,v 1.8 2026/01/07 08:43:19 wiz Exp $
 # used by devel/lua-lrexlib-posix/Makefile
 # used by devel/lua-lrexlib-pcre/Makefile
 # used by devel/lua-lrexlib-onig/Makefile
@@ -11,7 +11,7 @@ CATEGORIES=	devel lua
 MASTER_SITES=	-https://github.com/rrthomas/lrexlib/archive/rel-${VERSION:S/./-/g}.zip
 EXTRACT_SUFX=	.zip
 
-HOMEPAGE=	http://luaforge.net/projects/lrexlib
+HOMEPAGE=	https://github.com/rrthomas/lrexlib
 
 LICENSE=		mit
 
