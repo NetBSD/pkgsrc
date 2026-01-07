@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2025/12/12 07:09:29 adam Exp $
+# $NetBSD: Makefile,v 1.71 2026/01/07 18:42:04 adam Exp $
 
-DISTNAME=	urllib3-2.6.2
+DISTNAME=	urllib3-2.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urllib3/}
@@ -11,15 +11,11 @@ COMMENT=	HTTP library with thread-safe connection pooling
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.4.0:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.6.0:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27.0:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8:../../devel/py-setuptools_scm
 # optional dependencies:
 # "socks"; higher requirement from dev_requirements.txt
 DEPENDS+=	${PYPKGPREFIX}-Socks>=1.7.1:../../net/py-Socks
-# "secure"
-#PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL cryptography
-#DEPENDS+=	${PYPKGPREFIX}-idna>=2.0.0:../../www/py-idna
-#DEPENDS+=	${PYPKGPREFIX}-certifi>=0:../../www/py-certify
-# but also needs unpackaged urlib3-secure-extra
 
 # brotli, zstd
 .include "options.mk"
