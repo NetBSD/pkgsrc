@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2024/04/17 14:50:01 adam Exp $
+# $NetBSD: Makefile,v 1.54 2026/01/07 18:27:38 adam Exp $
 
-DISTNAME=	openmpi-4.1.6
+DISTNAME=	openmpi-4.1.8
 CATEGORIES=	parallel
 MASTER_SITES=	https://download.open-mpi.org/release/open-mpi/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
@@ -20,8 +20,7 @@ CONFIG_SHELL=		bash
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-contrib-no-build=vt # in separate package
 CONFIGURE_ARGS+=	--with-libltdl=${BUILDLINK_PREFIX.libltdl}
-# See below about external hwloc.
-#CONFIGURE_ARGS+=	--with-hwloc=${BUILDLINK_PREFIX.hwloc}
+CONFIGURE_ARGS+=	--with-hwloc=${BUILDLINK_PREFIX.hwloc}
 # OSHM Needs additional dependencies and also is surpassed with proper MPI
 # functionality. Rare use cases.
 CONFIGURE_ARGS+=	--disable-oshmem
@@ -73,7 +72,5 @@ post-install:
 .endfor
 
 .include "../../devel/libltdl/buildlink3.mk"
-# Too old, use internal hwloc 2 instead. As hwloc 2 API/ABI is incompatible,
-# upgrade has to be considered carefully.
-#.include "../../parallel/hwloc/buildlink3.mk"
+.include "../../parallel/hwloc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
