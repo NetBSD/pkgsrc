@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.24 2026/01/03 16:26:39 leot Exp $
+# $NetBSD: eol-packages,v 1.25 2026/01/07 21:12:27 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1238,3 +1238,9 @@ Package: lua53
 eol date: September 25, 2020
 URL: https://www.lua.org/versions.html
 Description: Update to newer version.
+
+Package: PHP (8.1)
+eol date: December 31, 2025
+URL: http://php.net/supported-versions.php
+Description: Upgrade to PHP 8.2 or newer.
+
