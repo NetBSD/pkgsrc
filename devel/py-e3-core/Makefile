@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/01/07 08:07:25 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/01/07 08:08:13 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-22.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -40,7 +40,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test_socket-[0-9]*:../../devel/py-test_socket
 TEST_DEPENDS+=	${PYPKGPREFIX}-ansi2html-[0-9]*:../../converters/py-ansi2html
 TEST_DEPENDS+=	${PYPKGPREFIX}-ptyprocess-[0-9]*:../../sysutils/py-ptyprocess
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx via -py-stevedore
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx via py-stevedore
 
 .include "../../mk/bsd.prefs.mk"
 
