@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/10/13 12:23:09 dkazankov Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/07 23:33:46 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}.0
@@ -15,6 +15,8 @@ LICENSE=	apache-2.0
 USE_LANGUAGES=	ada
 
 USE_TOOLS+=	gmake
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
 .include "../../mk/bsd.prefs.mk"
 
