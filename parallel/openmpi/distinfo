@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.24 2024/04/17 14:50:01 adam Exp $
+$NetBSD: distinfo,v 1.25 2026/01/07 18:27:38 adam Exp $
 
-BLAKE2s (openmpi-4.1.6.tar.bz2) = 5333eb0abe9b0bd794c9849e694fb2f5538650b964b4591d4352a62d68674ba4
-SHA512 (openmpi-4.1.6.tar.bz2) = 0ef3240f9c436fb19b67e836cac376eafeb7825d12de3387dad04329dee9f182799d17d785ea23eba763810f479015bb5230593c28950b616b2f0aa1c0a81e71
-Size (openmpi-4.1.6.tar.bz2) = 10017002 bytes
+BLAKE2s (openmpi-4.1.8.tar.bz2) = c6bf5b97bbdb681175cc4f7ccb978e3ac9dae51e087da08a6f8963ba01133902
+SHA512 (openmpi-4.1.8.tar.bz2) = 82c0369347ebfa13a5b68ccbf4bfb0d87b6c93b614cc69ca8458f708ccc3438b0e19f8af67206f7b690e3da166f0ac1a01a156e74019064078c4f201bda2a4be
+Size (openmpi-4.1.8.tar.bz2) = 10260353 bytes
 SHA1 (patch-ak) = 1dba883fb533df57f5869b743e499a3117339529
 SHA1 (patch-config_opal__setup__wrappers.m4) = c3fe3cb5ff7cedcb5c847f25eea129d4299dd5d2
 SHA1 (patch-configure) = bb6373289ffa2beabccedb6ead679367c85dbe1e
 SHA1 (patch-ompi_mca_io_romio321_romio_configure) = 1adf4e3fff2ece5abba7c5909f006e8345917b9d
 SHA1 (patch-ompi_mca_sharedfp_sm_sharedfp__sm.c) = 7ce9147662864be5ae072166231d65189cb1bed2
 SHA1 (patch-ompi_mpi_java_java_Makefile.in) = bd61f02f56e03af9799d2ba86d66c1ded35f62f4
+SHA1 (patch-opal_mca_event_libevent2022_libevent_kqueue.c) = b7d3694105802c0ccdd062ca4cedd54b1ddf9fac
 SHA1 (patch-opal_tools_wrappers_opal__wrapper.c) = c21620ceab6aff220e6a4b74ce4929ff0d1c9885
