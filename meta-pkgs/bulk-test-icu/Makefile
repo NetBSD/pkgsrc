@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2026/01/07 00:15:05 gutteridge Exp $
+# $NetBSD: Makefile,v 1.16 2026/01/07 14:36:25 ryoon Exp $
 
 DISTNAME=	bulk-test-icu-20260107
 CATEGORIES=	meta-pkgs
@@ -112,7 +112,6 @@ DEPENDS+=	arcticfox-[0-9]*:../../www/arcticfox
 DEPENDS+=	cppcms-[0-9]*:../../www/cppcms
 DEPENDS+=	firefox-[0-9]*:../../www/firefox
 DEPENDS+=	firefox-esr-[0-9]*:../../www/firefox-esr
-# Not built for recent environments
 DEPENDS+=	firefox52-[0-9]*:../../www/firefox52
 # Only for PHP 7
 #DEPENDS+=	${PHP_PKG_PREFIX}-http3-[0-9]*:../../www/php-http3
