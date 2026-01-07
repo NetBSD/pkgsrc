@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/10/09 13:30:53 dkazankov Exp $
+# $NetBSD: Makefile,v 1.5 2026/01/07 08:07:26 wiz Exp $
 
 DISTNAME=	e3_testsuite-27.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -20,6 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-botocore-[0-9]*:../../net/py-botocore
 DEPENDS+=	${PYPKGPREFIX}-boto3-[0-9]*:../../net/py-boto3
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-tqdm-[0-9]*:../../misc/py-tqdm
+   
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx via py-stevedore via py-e3-core
 
 post-extract:
 	${RM} ${WRKSRC}/src/e3/py.typed
