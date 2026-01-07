@@ -1,15 +1,16 @@
-$NetBSD: patch-meson.build,v 1.3 2025/10/22 06:45:13 adam Exp $
+$NetBSD: patch-meson.build,v 1.4 2026/01/07 20:25:10 adam Exp $
 
 Do not install file to set environment variables for systemd.
 Reported upstream by email 20241227 (as a bug that systemd files are
 installed on systems without systemd).
 
+Do not install systemd files.
 Make sure dependencies (opensc) do not get -pthread.
 \todo Report upstream.
 
---- meson.build.orig	2025-10-19 13:06:54.000000000 +0000
+--- meson.build.orig	2026-01-01 17:37:00.000000000 +0000
 +++ meson.build
-@@ -275,10 +275,6 @@ install_data('etc/fr.apdu.pcsclite.metai
+@@ -283,10 +283,6 @@ install_data('etc/fr.apdu.pcsclite.metai
    install_dir : 'share/metainfo'
    )
  
@@ -20,7 +21,24 @@ Make sure dependencies (opensc) do not get -pthread.
  # generate config.h
  configure_file(output : 'config.h',
    configuration : conf_data)
-@@ -323,7 +319,6 @@ pkg = import('pkgconfig')
+@@ -299,16 +295,6 @@ configure_file(output : 'pcsclite.h',
+ configure_file(output : 'pcscd.h',
+   input : 'src/pcscd.h.in',
+   configuration : confgen_data)
+-configure_file(output : 'pcscd.socket',
+-  input : 'etc/pcscd.socket.in',
+-  install_dir : systemdsystemunitdir,
+-  configuration : confgen_data)
+-configure_file(output : 'pcscd.service',
+-  input : 'etc/pcscd.service.in',
+-  install_dir : systemdsystemunitdir,
+-  configuration : confgen_data)
+-install_data('etc/pcscd-sysusers.conf',
+-  install_dir : sysusersdir)
+ configure_file(output : 'pcscd.8',
+   input : 'doc/pcscd.8.in',
+   install_dir : join_paths(get_option('mandir'), 'man8'),
+@@ -325,7 +311,6 @@ pkg = import('pkgconfig')
  pkg.generate(
    extra_cflags : '-pthread',
    libraries : '-L${libdir} -lpcsclite',
