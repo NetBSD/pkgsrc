@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2026/01/02 13:52:26 adam Exp $
+# $NetBSD: Makefile,v 1.98 2026/01/07 14:26:55 ryoon Exp $
 
 DISTNAME=	pillow-12.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^p/P/}
@@ -27,6 +27,7 @@ DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 # as of 11.3.0
 # 2 failed, 4934 passed, 88 skipped, 3 xfailed
 
+.include "../../lang/python/wheel.mk"
 .include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/libavif/buildlink3.mk"
@@ -37,6 +38,5 @@ DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/raqm/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../lang/python/wheel.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
