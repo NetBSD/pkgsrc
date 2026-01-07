@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.1 2020/07/10 10:26:59 nia Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/07 08:38:03 wiz Exp $
 
 DISTNAME=	luacov-0.14.0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua//1}
 CATEGORIES=	lua devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=keplerproject/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lunarmodules/}
 GITHUB_PROJECT=	luacov
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://keplerproject.github.io/luacov/
+HOMEPAGE=	https://lunarmodules.github.io/luacov/
 COMMENT=	Simple coverage analyzer for Lua scripts
 LICENSE=	mit
 
