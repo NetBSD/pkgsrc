@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2025/12/03 04:22:26 gutteridge Exp $
+# $NetBSD: Makefile,v 1.70 2026/01/07 08:49:37 wiz Exp $
 
+PKGREVISION= 1
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	lxqt-panel-2.3.1

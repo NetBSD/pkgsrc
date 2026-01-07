@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2025/10/23 20:39:12 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2026/01/07 08:48:46 wiz Exp $
 
 BUILDLINK_TREE+=	qt6-qtnetworkauth
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qtnetworkauth
 QT6_QTNETWORKAUTH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qtnetworkauth+=	qt6-qtnetworkauth>=6.4.1
-BUILDLINK_ABI_DEPENDS.qt6-qtnetworkauth+=	qt6-qtnetworkauth>=6.9.3nb1
+BUILDLINK_ABI_DEPENDS.qt6-qtnetworkauth+=	qt6-qtnetworkauth>=6.10.1nb1
 BUILDLINK_PKGSRCDIR.qt6-qtnetworkauth?=		../../security/qt6-qtnetworkauth
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"

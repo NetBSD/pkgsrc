@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2025/12/21 14:07:08 markd Exp $
+# $NetBSD: Makefile,v 1.18 2026/01/07 08:47:59 wiz Exp $
 
 DISTNAME=	kfind-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	misc
 
 HOMEPAGE=	https://www.kde.org/applications/utilities/kfind/

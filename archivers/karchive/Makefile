@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2025/10/23 20:35:37 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2026/01/07 08:45:47 wiz Exp $
 
 DISTNAME=	karchive-${KF5VER}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	archivers
 
 HOMEPAGE=	https://community.kde.org/Frameworks

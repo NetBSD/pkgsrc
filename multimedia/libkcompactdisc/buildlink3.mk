@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2025/12/21 15:00:42 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2026/01/07 08:48:09 wiz Exp $
 
 BUILDLINK_TREE+=	libkcompactdisc
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkcompactdisc
 LIBKCOMPACTDISC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkcompactdisc+=	libkcompactdisc>=25.08.2
-BUILDLINK_ABI_DEPENDS.libkcompactdisc?=	libkcompactdisc>=25.08.2
+BUILDLINK_ABI_DEPENDS.libkcompactdisc?=	libkcompactdisc>=25.08.3nb1
 BUILDLINK_PKGSRCDIR.libkcompactdisc?=	../../multimedia/libkcompactdisc
 
 .include "../../devel/kf6-kcoreaddons/buildlink3.mk"

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2025/12/21 19:27:53 markd Exp $
+# $NetBSD: Makefile,v 1.65 2026/01/07 08:48:48 wiz Exp $
 
 DISTNAME=	baloo-widgets-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://community.kde.org/Baloo

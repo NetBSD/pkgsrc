@@ -1,8 +1,8 @@
-#	$NetBSD: Makefile,v 1.18 2025/10/04 14:07:29 kikadf Exp $
+#	$NetBSD: Makefile,v 1.19 2026/01/07 08:46:25 wiz Exp $
 #
 
 DISTNAME=	SOPE-5.11.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Alinto/}
 GITHUB_PROJECT=	sope

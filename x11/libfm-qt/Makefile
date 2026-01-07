@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2025/12/03 04:23:45 gutteridge Exp $
+# $NetBSD: Makefile,v 1.57 2026/01/07 08:49:35 wiz Exp $
 
+PKGREVISION= 1
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	libfm-qt-2.3.1

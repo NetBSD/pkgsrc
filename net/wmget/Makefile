@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2025/10/05 19:26:13 js Exp $
+# $NetBSD: Makefile,v 1.51 2026/01/07 08:48:30 wiz Exp $
 
 DISTNAME=	wmget-0.6.0-src
 PKGNAME=	${DISTNAME:S/-src//}
 WRKSRC=		${WRKDIR}/wmget
-PKGREVISION=	40
+PKGREVISION=	41
 CATEGORIES=	net
 MASTER_SITES=	#
 

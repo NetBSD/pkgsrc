@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/01/06 17:12:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/07 08:46:56 wiz Exp $
 
 DISTNAME=	alkimia-8.2.1
+PKGREVISION=	1
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_KDE:=alkimia/${PKGVERSION_NOREV}/}
 

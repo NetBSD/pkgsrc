@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2025/10/23 20:38:24 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2026/01/07 08:48:00 wiz Exp $
 
 BUILDLINK_TREE+=	kquickcharts
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kquickcharts
 KQUICKCHARTS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kquickcharts+=	kquickcharts>=5.80.0
-BUILDLINK_ABI_DEPENDS.kquickcharts?=	kquickcharts>=5.116.0nb6
+BUILDLINK_ABI_DEPENDS.kquickcharts?=	kquickcharts>=5.116.0nb7
 BUILDLINK_PKGSRCDIR.kquickcharts?=	../../misc/kquickcharts
 
 .include "../../x11/qt5-qtquickcontrols2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2025/10/23 20:40:18 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2026/01/07 08:49:47 wiz Exp $
 
 BUILDLINK_TREE+=	qtermwidget
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qtermwidget
 QTERMWIDGET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qtermwidget+=	qtermwidget>=2.1.0
-BUILDLINK_ABI_DEPENDS.qtermwidget?=	qtermwidget>=2.2.0nb1
+BUILDLINK_ABI_DEPENDS.qtermwidget?=	qtermwidget>=2.3.0nb2
 BUILDLINK_PKGSRCDIR.qtermwidget?=	../../x11/qtermwidget
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"

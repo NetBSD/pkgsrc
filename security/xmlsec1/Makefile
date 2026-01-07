@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2025/04/25 07:20:42 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2026/01/07 08:48:47 wiz Exp $
 
 DISTNAME=		xmlsec1-1.2.41
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		https://www.aleksey.com/xmlsec/download/
 

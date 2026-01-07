@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.38 2025/10/23 20:40:04 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.39 2026/01/07 08:49:36 wiz Exp $
 
 BUILDLINK_TREE+=	liblxqt
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	liblxqt
 LIBLXQT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.liblxqt+=	liblxqt>=2.2.0
-BUILDLINK_ABI_DEPENDS.liblxqt?=	liblxqt>=2.2.0nb1
+BUILDLINK_ABI_DEPENDS.liblxqt?=	liblxqt>=2.3.0nb2
 BUILDLINK_PKGSRCDIR.liblxqt?=	../../x11/liblxqt
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"

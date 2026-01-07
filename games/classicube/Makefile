@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2025/10/05 19:25:55 js Exp $
+# $NetBSD: Makefile,v 1.10 2026/01/07 08:46:58 wiz Exp $
 
 DISTNAME=	ClassiCube-1.3.6
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ClassiCube/}
 

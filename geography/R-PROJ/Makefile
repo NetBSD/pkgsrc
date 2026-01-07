@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2025/10/05 19:25:59 js Exp $
+# $NetBSD: Makefile,v 1.7 2026/01/07 08:47:10 wiz Exp $
 
 R_PKGNAME=	PROJ
 R_PKGVER=	0.5.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Generic Coordinate System Transformations Using 'PROJ'
-PKGREVISION=	5
+PKGREVISION=	6
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	R-lifecycle>=1.0.4:../../devel/R-lifecycle

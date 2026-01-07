@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2025/10/23 20:36:09 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/01/07 08:46:08 wiz Exp $
 #
 
 DISTNAME=	gtkdbfeditor-1.0.4
-PKGREVISION=	51
+PKGREVISION=	52
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkdbfeditor/}
 

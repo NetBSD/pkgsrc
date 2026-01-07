@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2026/01/03 07:40:15 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/01/07 08:47:34 wiz Exp $
 
 GITHUB_PROJECT=	libchewing
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 DISTNAME=	libchewing-0.5.1
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	chinese inputmethod
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chewing/}
 EXTRACT_SUFX=	.tar.bz2

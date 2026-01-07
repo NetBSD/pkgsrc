@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2025/10/23 20:36:09 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/01/07 08:46:08 wiz Exp $
 
 DISTNAME=	gom-0.4
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gom/0.4/}
 EXTRACT_SUFX=	.tar.xz

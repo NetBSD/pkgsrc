@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2025/04/17 21:51:21 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2026/01/07 08:47:39 wiz Exp $
 
 BUILDLINK_TREE+=	nodejs
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	nodejs
 NODEJS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.nodejs+=	nodejs>=10
-BUILDLINK_ABI_DEPENDS.nodejs+=	nodejs>=22.14.0nb1
+BUILDLINK_ABI_DEPENDS.nodejs+=	nodejs>=22.21.1nb1
 BUILDLINK_PKGSRCDIR.nodejs?=	../../lang/nodejs22
 
 .include "../../mk/bsd.fast.prefs.mk"

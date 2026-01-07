@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.53 2025/10/23 20:39:47 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.54 2026/01/07 08:49:20 wiz Exp $
 
 BUILDLINK_TREE+=	kjsembed
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kjsembed
 KJSEMBED_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kjsembed+=	kjsembed>=5.21.0
-BUILDLINK_ABI_DEPENDS.kjsembed?=	kjsembed>=5.116.0nb7
+BUILDLINK_ABI_DEPENDS.kjsembed?=	kjsembed>=5.116.0nb8
 BUILDLINK_PKGSRCDIR.kjsembed?=		../../www/kjsembed
 
 .include "../../devel/ki18n/buildlink3.mk"

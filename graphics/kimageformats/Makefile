@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2025/10/23 20:37:36 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2026/01/07 08:47:21 wiz Exp $
 
 DISTNAME=	kimageformats-${KF5VER}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://community.kde.org/Frameworks

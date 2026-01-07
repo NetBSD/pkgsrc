@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2025/08/26 07:53:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2026/01/07 08:47:42 wiz Exp $
 
 DISTNAME=	wasi-libc-0.0.0pre20250809
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=WebAssembly/}
 GITHUB_PROJECT=	wasi-libc

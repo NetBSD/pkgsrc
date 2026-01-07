@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2026/01/02 14:21:53 ktnb Exp $
+# $NetBSD: Makefile,v 1.27 2026/01/07 08:48:31 wiz Exp $
 
 DISTNAME=	newsraft-0.35
+PKGREVISION=	1
 CATEGORIES=	news
 MASTER_SITES=	https://codeberg.org/newsraft/newsraft/archive/
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2025/11/25 22:54:01 gutteridge Exp $
+# $NetBSD: Makefile,v 1.43 2026/01/07 08:47:28 wiz Exp $
 
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	screengrab-3.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

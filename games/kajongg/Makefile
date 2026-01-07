@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.98 2025/12/21 10:55:45 markd Exp $
+# $NetBSD: Makefile,v 1.99 2026/01/07 08:47:01 wiz Exp $
 
 DISTNAME=	kajongg-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kajongg/

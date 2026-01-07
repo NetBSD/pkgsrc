@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2025/10/23 20:40:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2026/01/07 08:49:39 wiz Exp $
 
 BUILDLINK_TREE+=	plasma6-libkscreen
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	plasma6-libkscreen
 PLASMA6_LIBKSCREEN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.plasma6-libkscreen+=	plasma6-libkscreen>=6.0.5
-BUILDLINK_ABI_DEPENDS.plasma6-libkscreen?=	plasma6-libkscreen>=6.0.5nb6
+BUILDLINK_ABI_DEPENDS.plasma6-libkscreen?=	plasma6-libkscreen>=6.5.2nb1
 BUILDLINK_PKGSRCDIR.plasma6-libkscreen?=	../../x11/plasma6-libkscreen
 
 .include "../../devel/kf6-kconfig/buildlink3.mk"

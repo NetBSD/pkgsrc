@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2025/10/05 19:25:51 js Exp $
+# $NetBSD: Makefile,v 1.37 2026/01/07 08:46:43 wiz Exp $
 
 DISTNAME=	netcdf-cxx4-4.3.1
 PKGNAME=	${DISTNAME:S/cxx4/cxx/}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	devel
 MASTER_SITES=	https://downloads.unidata.ucar.edu/netcdf-cxx/${PKGVERSION_NOREV}/
 

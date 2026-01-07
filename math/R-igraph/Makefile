@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/04/17 21:51:31 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/01/07 08:47:51 wiz Exp $
 
 R_PKGNAME=	igraph
 R_PKGVER=	2.1.4
@@ -6,7 +6,7 @@ CATEGORIES+=	graphics
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Network analysis and visualization
-PKGREVISION=	1
+PKGREVISION=	2
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 DEPENDS+=	R-cli-[0-9]*:../../devel/R-cli

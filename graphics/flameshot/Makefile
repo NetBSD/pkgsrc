@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2025/10/23 20:37:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/01/07 08:47:17 wiz Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	flameshot-12.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=flameshot-org/}
 

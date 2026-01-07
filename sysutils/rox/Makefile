@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.124 2025/11/17 11:01:27 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2026/01/07 08:48:57 wiz Exp $
 #
 
 DISTNAME=	rox-filer-2.11
 PKGNAME=	rox-2.11
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tar.bz2

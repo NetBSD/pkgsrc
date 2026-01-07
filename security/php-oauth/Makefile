@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2025/10/22 16:30:13 taca Exp $
+# $NetBSD: Makefile,v 1.47 2026/01/07 08:48:44 wiz Exp $
 
 MODNAME=		oauth
 PECL_VERSION=		2.0.10
@@ -6,6 +6,7 @@ CATEGORIES+=		security
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		PHP oauth consumer extension
+PKGREVISION=		1
 LICENSE=		modified-bsd
 
 PHP_VERSIONS_INCOMPATIBLE=	56

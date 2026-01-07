@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2025/10/05 19:26:06 js Exp $
+# $NetBSD: Makefile,v 1.42 2026/01/07 08:47:51 wiz Exp $
 
 R_PKGNAME=	ncdf
 R_PKGVER=	1.6.6
-PKGREVISION=	34
+PKGREVISION=	35
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

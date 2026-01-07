@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2026/01/06 17:51:37 gdt Exp $
+# $NetBSD: Makefile,v 1.99 2026/01/07 08:48:47 wiz Exp $
 
 # (1st-parent) commits past 1.36.37 on release-1.36
 #   git log --first-parent --oneline --reverse 1.36.37..
@@ -8,6 +8,7 @@ NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
 
 PKGNAME=	${DISTNAME:S/${NAME_DIST}-/${NAME_LOWER}-/}
+PKGREVISION=	1
 #PKGREVISION=	0
 DISTNAME=	${NAME_DIST}-${VERSION}
 #WRKSRC=		${WRKDIR}/${NAME_LOWER}-${VERSION}
