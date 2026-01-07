@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.159 2026/01/07 18:13:46 dkazankov Exp $
+$NetBSD: CHANGES-2026,v 1.160 2026/01/07 18:31:59 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -210,3 +210,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/php-contao-manager to 1.10.7 [taca 2026-01-07]
 	Removed www/geeklog [taca 2026-01-07]
 	Updated net/ada-polyorb to 25.0.0nb1 [dkazankov 2026-01-07]
+	Updated shells/bash-completion to 2.17.0nb1 [leot 2026-01-07]
