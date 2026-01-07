@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/01/06 07:58:17 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/01/07 08:38:40 wiz Exp $
 
 DISTNAME=	cqueues-20200726
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_PROJECT=	cqueues
 GITHUB_TAG=	rel-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://25thandclement.com/~william/projects/releases/
+HOMEPAGE=	https://25thandclement.com/~william/projects/cqueues.html
 COMMENT=	Stackable Continuation Queues for Lua
 LICENSE=	mit
 
