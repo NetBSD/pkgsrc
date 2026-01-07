@@ -1,40 +1,44 @@
-# $NetBSD: Makefile,v 1.10 2025/08/20 11:34:48 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/01/07 19:32:04 adam Exp $
 
-VERSION=	1.1.3
-GITHUB_PROJECT=	OpenCC
-GITHUB_TAG=	ver.${VERSION}
-DISTNAME=	OpenCC-ver.${VERSION}
-PKGNAME=	${DISTNAME:S/OpenCC-ver./opencc-/}
-PKGREVISION=	1
+DISTNAME=	opencc-1.1.9
 CATEGORIES=	converters chinese
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BYVoid/}
+GITHUB_PROJECT=	OpenCC
+GITHUB_TAG=	ver.${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://opencc.byvoid.com/
+HOMEPAGE=	https://opencc.byvoid.com/
 COMMENT=	Convertion between Traditional and Simplified Chinese
 LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/${DISTNAME} # GitHub rule is not relevant for this.
+WRKSRC=		${WRKDIR}/OpenCC-${GITHUB_TAG}
 
-USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
-
-USE_CXX_FEATURES+=	c++14
-
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
-
+USE_CXX_FEATURES=	c++14
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	opencc.pc.in
+
+CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_DARTS=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_MARISA=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_PYBIND11=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_RAPIDJSON=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_TCLAP=ON
 
 USE_GCC_RUNTIME=	yes
 
-MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/src
-MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/src
-
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/src
+# For Darwin
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/src
 TEST_TARGET=	test
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
+.include "../../devel/cmake/build.mk"
+.include "../../devel/darts/buildlink3.mk"
+.include "../../devel/py-pybind11/buildlink3.mk"
+.include "../../devel/tclap/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
+.include "../../textproc/marisa/buildlink3.mk"
+.include "../../textproc/rapidjson/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
