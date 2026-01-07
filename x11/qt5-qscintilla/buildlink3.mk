@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2025/10/23 20:40:13 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2026/01/07 08:49:42 wiz Exp $
 
 BUILDLINK_TREE+=	qt5-qscintilla
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt5-qscintilla
 QT5_QSCINTILLA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt5-qscintilla+=	qt5-qscintilla>=2.11.2
-BUILDLINK_ABI_DEPENDS.qt5-qscintilla+=	qt5-qscintilla>=2.14.1nb8
+BUILDLINK_ABI_DEPENDS.qt5-qscintilla+=	qt5-qscintilla>=2.14.1nb9
 BUILDLINK_PKGSRCDIR.qt5-qscintilla?=	../../x11/qt5-qscintilla
 
 .include "../../mk/bsd.fast.prefs.mk"

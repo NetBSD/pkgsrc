@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2025/10/23 20:40:04 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2026/01/07 08:49:35 wiz Exp $
 
 BUILDLINK_TREE+=	libkscreen
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkscreen
 LIBKSCREEN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkscreen+=	libkscreen>=5.27.9
-BUILDLINK_ABI_DEPENDS.libkscreen?=	libkscreen>=5.27.10nb8
+BUILDLINK_ABI_DEPENDS.libkscreen?=	libkscreen>=5.27.10nb9
 BUILDLINK_PKGSRCDIR.libkscreen?=	../../x11/libkscreen
 
 BUILDLINK_API_DEPENDS.kconfig+= kconfig>=5.102.0

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.48 2025/11/25 22:54:01 gutteridge Exp $
+# $NetBSD: Makefile,v 1.49 2026/01/07 08:47:24 wiz Exp $
 
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	lximage-qt-2.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

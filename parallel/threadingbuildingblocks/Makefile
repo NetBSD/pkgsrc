@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2025/05/22 21:09:09 nia Exp $
+# $NetBSD: Makefile,v 1.21 2026/01/07 08:48:32 wiz Exp $
 
 DISTNAME=	oneTBB-2022.0.0
 PKGNAME=	${DISTNAME:S/oneTBB-/threadingbuildingblocks-/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=oneapi-src/}
 GITHUB_PROJECT=	oneTBB

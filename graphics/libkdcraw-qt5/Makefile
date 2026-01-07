@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/12/21 12:40:11 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/07 08:47:22 wiz Exp $
 
 DISTNAME=	libkdcraw-${KAPPSVER}
 PKGNAME=	${DISTNAME:S/raw-/raw-qt5-/}
+PKGREVISION=	1
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://kde.org/applications/graphics/

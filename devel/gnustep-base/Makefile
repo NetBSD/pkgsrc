@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2025/12/23 07:49:26 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2026/01/07 08:46:30 wiz Exp $
 
 DISTNAME=	gnustep-base-1.31.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gnustep/}
@@ -7,7 +7,7 @@ GITHUB_TAG=	base-1_31_0
 WRKSRC=		${WRKDIR}/libs-base-base-1_31_0
 
 #PKGREVISION=	1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel gnustep
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2025/10/05 19:25:47 js Exp $
+# $NetBSD: Makefile,v 1.48 2026/01/07 08:46:21 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	11
+PKGREVISION=	12
 COMMENT=	Python extension for SQL Relay
 
 .include "../../databases/sqlrelay/Makefile.common"

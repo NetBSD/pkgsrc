@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2025/08/25 08:34:53 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2026/01/07 08:46:12 wiz Exp $
 
 DISTNAME=	sqlite3-5.1.0
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mmottl/}
 GITHUB_PROJECT=	sqlite3-ocaml

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.57 2025/10/23 20:36:27 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.58 2026/01/07 08:46:38 wiz Exp $
 
 BUILDLINK_TREE+=	knotifyconfig
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	knotifyconfig
 KNOTIFYCONFIG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.knotifyconfig+=	knotifyconfig>=5.21.0
-BUILDLINK_ABI_DEPENDS.knotifyconfig?=	knotifyconfig>=5.116.0nb12
+BUILDLINK_ABI_DEPENDS.knotifyconfig?=	knotifyconfig>=5.116.0nb13
 BUILDLINK_PKGSRCDIR.knotifyconfig?=	../../devel/knotifyconfig
 
 .include "../../devel/kio/buildlink3.mk"

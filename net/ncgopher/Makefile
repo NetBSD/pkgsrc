@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2026/01/04 16:17:05 pin Exp $
+# $NetBSD: Makefile,v 1.30 2026/01/07 08:48:24 wiz Exp $
 
 DISTNAME=	ncgopher-0.8.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jansc/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

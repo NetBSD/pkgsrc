@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2026/01/02 03:56:20 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2026/01/07 08:46:44 wiz Exp $
 
 BUILDLINK_TREE+=	plasma6-plasma5support
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	plasma6-plasma5support
 PLASMA6_PLASMA5SUPPORT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.plasma6-plasma5support+=	plasma6-plasma5support>=6.5.2
+BUILDLINK_ABI_DEPENDS.plasma6-plasma5support?=	plasma6-plasma5support>=6.5.2nb1
 BUILDLINK_PKGSRCDIR.plasma6-plasma5support?=	../../devel/plasma6-plasma5support
 
 .include "../../devel/kf6-kconfig/buildlink3.mk"

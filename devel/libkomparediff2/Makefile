@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2025/12/21 10:25:40 markd Exp $
+# $NetBSD: Makefile,v 1.65 2026/01/07 08:46:41 wiz Exp $
 
 DISTNAME=	libkomparediff2-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 HOMEPAGE=	https://kde.org/applications/development/kompare/

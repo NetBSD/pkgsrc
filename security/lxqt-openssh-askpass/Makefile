@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2025/11/25 22:54:01 gutteridge Exp $
+# $NetBSD: Makefile,v 1.45 2026/01/07 08:48:42 wiz Exp $
 
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	lxqt-openssh-askpass-2.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

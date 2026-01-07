@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.175 2025/10/05 19:26:17 js Exp $
+# $NetBSD: Makefile,v 1.176 2026/01/07 08:48:39 wiz Exp $
 
 DISTNAME=	gnupg-1.4.23
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG:=gnupg/}
 EXTRACT_SUFX=	.tar.bz2

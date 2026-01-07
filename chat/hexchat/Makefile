@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2025/10/23 20:36:01 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2026/01/07 08:45:59 wiz Exp $
 
 DISTNAME=	hexchat-2.16.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hexchat/}
 GITHUB_PROJECT=	hexchat
