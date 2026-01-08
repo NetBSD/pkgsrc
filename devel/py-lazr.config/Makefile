@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/06/18 05:39:36 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/01/08 08:49:02 adam Exp $
 
-DISTNAME=	lazr.config-2.2.3
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	lazr_config-3.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lazr.config/}
 
@@ -11,13 +10,11 @@ HOMEPAGE=	https://launchpad.net/lazr.config/
 COMMENT=	Create configuration schemas, and process and validate configurations
 LICENSE=	gnu-lgpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-lazr.delegates-[0-9]*:../../devel/py-lazr.delegates
-TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
