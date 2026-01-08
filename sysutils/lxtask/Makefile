@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/10/23 20:39:23 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/01/08 07:58:02 wiz Exp $
 
 DISTNAME=	lxtask-0.1.10
 PKGREVISION=	12
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	https://lxde.org/
+HOMEPAGE=	https://github.com/lxde/lxtask
 COMMENT=	Lightweight desktop-independent task manager
 LICENSE=	gnu-gpl-v2
 
