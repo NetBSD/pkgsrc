@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.708 2026/01/07 22:12:04 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.709 2026/01/08 10:50:24 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29326,3 +29326,6 @@ iperf3<3.17	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2024-26306
 iperf3<3.18	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-53580
 php>=8.1<8.2		eol	https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 chromium<143.0.7499.192 	code-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0628
+libtasn1-[0-9]*	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-13151
+lmdb-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-22185
+py{27,310,311,312,313,314}-urllib3<2.6.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-21441
