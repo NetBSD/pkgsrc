@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/12/24 09:59:46 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/08 07:53:42 wiz Exp $
 
 DISTNAME=	lxde-icon-theme-0.5.1
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	https://lxde.org/
+HOMEPAGE=	https://github.com/lxde/lxde-icon-theme
 COMMENT=	LXDE icon theme
 LICENSE=	gnu-gpl-v2
 
