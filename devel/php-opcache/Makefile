@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2026/01/02 06:17:43 taca Exp $
+# $NetBSD: Makefile,v 1.11 2026/01/08 14:17:47 taca Exp $
 
 MODNAME=		opcache
 PKGREVISION=		1
@@ -13,7 +13,7 @@ USE_PHP_EXT_PATCHES=	Yes
 LDFLAGS.SunOS+=	-lgcc
 
 # PHP 8.5 bundles opcache extension.
-PHP_VERSIONS_ACCEPTED=	83 82 84 81 74 56
+PHP_VERSIONS_ACCEPTED=	83 82 84 74 56
 
 # PHP 8.4's opcache depends on gmake.
 .include "../../lang/php/phpversion.mk"
