@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:18:37 nia Exp $
+$NetBSD: distinfo,v 1.7 2026/01/08 08:49:02 adam Exp $
 
-BLAKE2s (lazr.config-2.2.3.tar.gz) = ccae2e3f6d8d8dd7f424656c3757bff0e97203a328e90a2c374679abda836ee6
-SHA512 (lazr.config-2.2.3.tar.gz) = cd8edc29a811b658045f314b2de4317bd750a701c2596d89912948fe0e58bdc39ad3d22cdf34bb7e46658af7ac6d32249e454c35bdcf72bc5053094343cd37bb
-Size (lazr.config-2.2.3.tar.gz) = 34213 bytes
+BLAKE2s (lazr_config-3.1.tar.gz) = 45b01c6166d4949805f74aa7f1c2b239f81abe7fea8bc55bc6ece302056a14f0
+SHA512 (lazr_config-3.1.tar.gz) = 760492588d7dbbafc8352390a5c4c8a2432c2fe5c825c005d901b41a45e8c2a742812ea6343f98c36bc04c2eb04434ad3ac70f6fab2e428a9c61cc1c55a6bdb7
+Size (lazr_config-3.1.tar.gz) = 36550 bytes

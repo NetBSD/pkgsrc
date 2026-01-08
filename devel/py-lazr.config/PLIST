@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2020/07/10 19:48:22 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
+@comment $NetBSD: PLIST,v 1.4 2026/01/08 08:49:02 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.txt
+${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/lazr.config-3.1-py${PYVERSSUFFIX}-nspkg.pth
 ${PYSITELIB}/lazr/config/__init__.py
 ${PYSITELIB}/lazr/config/__init__.pyc
 ${PYSITELIB}/lazr/config/__init__.pyo
@@ -16,16 +15,15 @@ ${PYSITELIB}/lazr/config/_config.pyo
 ${PYSITELIB}/lazr/config/_version.py
 ${PYSITELIB}/lazr/config/_version.pyc
 ${PYSITELIB}/lazr/config/_version.pyo
+${PYSITELIB}/lazr/config/docs/CONTRIBUTING.rst
+${PYSITELIB}/lazr/config/docs/NEWS.rst
 ${PYSITELIB}/lazr/config/docs/__init__.py
 ${PYSITELIB}/lazr/config/docs/__init__.pyc
 ${PYSITELIB}/lazr/config/docs/__init__.pyo
-${PYSITELIB}/lazr/config/docs/fixture.py
-${PYSITELIB}/lazr/config/docs/fixture.pyc
-${PYSITELIB}/lazr/config/docs/fixture.pyo
-${PYSITELIB}/lazr/config/docs/usage.rst
-${PYSITELIB}/lazr/config/docs/usage_fixture.py
-${PYSITELIB}/lazr/config/docs/usage_fixture.pyc
-${PYSITELIB}/lazr/config/docs/usage_fixture.pyo
+${PYSITELIB}/lazr/config/docs/conf.py
+${PYSITELIB}/lazr/config/docs/conf.pyc
+${PYSITELIB}/lazr/config/docs/conf.pyo
+${PYSITELIB}/lazr/config/docs/index.rst
 ${PYSITELIB}/lazr/config/interfaces.py
 ${PYSITELIB}/lazr/config/interfaces.pyc
 ${PYSITELIB}/lazr/config/interfaces.pyo
@@ -35,6 +33,9 @@ ${PYSITELIB}/lazr/config/tests/__init__.pyo
 ${PYSITELIB}/lazr/config/tests/test_config.py
 ${PYSITELIB}/lazr/config/tests/test_config.pyc
 ${PYSITELIB}/lazr/config/tests/test_config.pyo
+${PYSITELIB}/lazr/config/tests/test_docs.py
+${PYSITELIB}/lazr/config/tests/test_docs.pyc
+${PYSITELIB}/lazr/config/tests/test_docs.pyo
 ${PYSITELIB}/lazr/config/tests/testdata/__init__.py
 ${PYSITELIB}/lazr/config/tests/testdata/__init__.pyc
 ${PYSITELIB}/lazr/config/tests/testdata/__init__.pyo
