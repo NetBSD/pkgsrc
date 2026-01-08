@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.185 2026/01/08 15:11:30 adam Exp $
+$NetBSD: CHANGES-2026,v 1.186 2026/01/08 15:54:41 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -248,3 +248,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed lang/php81 [taca 2026-01-08]
 	Updated security/libsodium to 1.0.21 [adam 2026-01-08]
 	Updated math/py-gwcs to 0.26.1 [adam 2026-01-08]
+	Updated inputmethod/skk-jisyo to 20200809nb1 [ryoon 2026-01-08]
