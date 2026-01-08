@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.289 2026/01/08 22:25:48 wiz Exp $
+# $NetBSD: Makefile,v 1.290 2026/01/08 22:56:33 wiz Exp $
 #
 # release notes
 # https://firefox-source-docs.mozilla.org/security/nss/releases/index.html
@@ -189,11 +189,11 @@ do-install:
 
 # needed if host is not in DNS
 #TEST_ENV+=	HOST=localhost DOMSUF=localdomain
-# as of 3.119
+# as of 3.120
 # Tests summary:
 # --------------
-# Passed:             11530
-# Failed:             12
+# Passed:             11282
+# Failed:             36
 # Failed with core:   0
 # ASan failures:      0
 # Unknown status:     25
