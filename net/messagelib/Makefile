@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2026/01/07 08:48:23 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/01/08 18:51:35 markd Exp $
 
 DISTNAME=	messagelib-${KAPPSVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 
 HOMEPAGE=	https://kontact.kde.org/
