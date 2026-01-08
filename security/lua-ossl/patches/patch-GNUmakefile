@@ -1,0 +1,42 @@
+$NetBSD: patch-GNUmakefile,v 1.1 2026/01/08 22:50:47 alnsn Exp $
+
+PR#221: Support Lua 5.5
+https://github.com/wahern/luaossl/pull/221
+
+--- GNUmakefile.orig	2022-07-11 05:40:14.000000000 +0000
++++ GNUmakefile
+@@ -12,7 +12,7 @@ all: # default target
+ #
+ # G N U  M A K E  F U N C T I O N S
+ #
+-KNOWN_APIS = 5.1 5.2 5.3 5.4
++KNOWN_APIS = 5.1 5.2 5.3 5.4 5.5
+ 
+ # template for invoking luapath script
+ LUAPATH := $(d)/mk/luapath
+@@ -42,6 +42,8 @@ lua53cpath ?= $(libdir)/lua/5.3
+ lua53path ?= $(datadir)/lua/5.3
+ lua54cpath ?= $(libdir)/lua/5.4
+ lua54path ?= $(datadir)/lua/5.4
++lua55cpath ?= $(libdir)/lua/5.5
++lua55path ?= $(datadir)/lua/5.5
+ 
+ 
+ AR ?= ar
+@@ -99,7 +101,7 @@ endif
+ 
+ # set LUA_APIS if empty or "?"
+ ifeq ($(or $(strip $(LUA_APIS)),?),?)
+-override LUA_APIS := $(call HAVE_API_FN,5.1) $(call HAVE_API_FN,5.2) $(call HAVE_API_FN,5.3) $(call HAVE_API_FN,5.4)
++override LUA_APIS := $(call HAVE_API_FN,5.1) $(call HAVE_API_FN,5.2) $(call HAVE_API_FN,5.3) $(call HAVE_API_FN,5.4 )$(call HAVE_API_FN,5.5)
+ endif
+ 
+ define LUAXY_template
+@@ -135,6 +137,7 @@ $(eval $(call LUAXY_template,5.1))
+ $(eval $(call LUAXY_template,5.2))
+ $(eval $(call LUAXY_template,5.3))
+ $(eval $(call LUAXY_template,5.4))
++$(eval $(call LUAXY_template,5.5))
+ 
+ #
+ # A U T O D E T E C T  C O M P I L A T I O N  F L A G S
