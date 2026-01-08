@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2026/01/07 18:25:45 adam Exp $
+# $NetBSD: Makefile,v 1.43 2026/01/08 09:56:17 adam Exp $
 
 DISTNAME=	hwloc-2.12.2
 CATEGORIES=	parallel
@@ -18,6 +18,11 @@ CONFIGURE_ARGS+=	--disable-opencl
 TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	i386
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+PLIST.i386=	yes
+.endif
 
 #.include "../../graphics/cairo/buildlink3.mk" # optional
 .if ${OPSYS} != "Darwin"
