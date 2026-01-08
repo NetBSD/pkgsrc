@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:18:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/01/08 08:47:27 adam Exp $
 
-BLAKE2s (lazr.delegates-2.0.4.tar.gz) = b58ed9902843fe08a40f4138179e36157f9af82dabbf5eea40e403868f5cc79d
-SHA512 (lazr.delegates-2.0.4.tar.gz) = 0c0b32a4fa4c132646d601870be0f0c1f1856aceb91bf979faa9a675fcbf94f76c7c6f548978a402842633cf4e53275c052cff7dfd776a4246691c067eabe501
-Size (lazr.delegates-2.0.4.tar.gz) = 14168 bytes
+BLAKE2s (lazr_delegates-2.1.1.tar.gz) = df2848ee9fe499e8cb01d1596228a69ccc633b008248236b7e78d5ada787c43a
+SHA512 (lazr_delegates-2.1.1.tar.gz) = f1d15bd66e9e049c2d26776c855ef4b09ff257cc11cb6b96b9924c247dcf35b52576e052927f5fd1317104d76d6fc1fdc1471af8d856db7d8e001fef7ee820e1
+Size (lazr_delegates-2.1.1.tar.gz) = 16259 bytes
