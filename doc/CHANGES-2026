@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.192 2026/01/08 20:29:46 pin Exp $
+$NetBSD: CHANGES-2026,v 1.193 2026/01/08 22:25:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -256,3 +256,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/netatalk4 to 4.4.0 [hauke 2026-01-08]
 	Updated www/chromium to 143.0.7499.192 [kikadf 2026-01-08]
 	Updated shells/oh-my-posh to 29.0.1 [pin 2026-01-08]
+	Updated devel/nss to 3.120.0 [wiz 2026-01-08]
