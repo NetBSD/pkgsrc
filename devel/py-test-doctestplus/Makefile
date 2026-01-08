@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2026/01/06 11:18:43 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/01/08 10:31:37 adam Exp $
 
-DISTNAME=	pytest_doctestplus-1.6.0
+DISTNAME=	pytest_doctestplus-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^pytest_/test-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-doctestplus/}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=30.3.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-packaging>=17.0:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-test>=4.6:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-remotedata>=0.3.2:../../net/py-test-remotedata
