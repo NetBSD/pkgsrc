@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/06/18 05:39:36 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/01/08 08:47:27 adam Exp $
 
-DISTNAME=	lazr.delegates-2.0.4
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+DISTNAME=	lazr_delegates-2.1.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lazr.delegates/}
 
@@ -11,13 +10,10 @@ HOMEPAGE=	https://launchpad.net/lazr.delegates/
 COMMENT=	Easily write objects that delegate behavior
 LICENSE=	gnu-lgpl-v3
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
-TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
