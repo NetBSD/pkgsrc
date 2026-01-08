@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.174 2026/01/08 10:11:19 adam Exp $
+$NetBSD: CHANGES-2026,v 1.175 2026/01/08 10:27:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -234,3 +234,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-anyio to 4.12.1 [adam 2026-01-08]
 	Updated security/py-passlib to 1.9.3 [adam 2026-01-08]
 	Updated www/py-flask-security to 5.7.1 [adam 2026-01-08]
+	Updated math/py-asdf-standard to 1.4.0 [adam 2026-01-08]
+	Updated math/py-asdf to 5.1.0 [adam 2026-01-08]
+	Updated math/py-asdf_astropy to 0.9.0 [adam 2026-01-08]
