@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/11/16 20:55:38 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/01/08 09:32:17 wiz Exp $
 
-DISTNAME=	pycares-4.11.0
+DISTNAME=	pycares-5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycares/}
@@ -19,6 +19,7 @@ LICENSE=	mit
 #    Fix py-cares or cffi to work with a packed definition.
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.5.0:../../devel/py-cffi
 
 .include "../../lang/python/wheel.mk"
