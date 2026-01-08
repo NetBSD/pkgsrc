@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.176 2026/01/08 10:31:58 adam Exp $
+$NetBSD: CHANGES-2026,v 1.177 2026/01/08 12:03:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -229,7 +229,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-lazr.config to 3.1 [adam 2026-01-08]
 	Updated audio/alsa-lib to 1.2.15.1 [wiz 2026-01-08]
 	Updated math/py-numpy to 2.4.0 [wiz 2026-01-08]
-	Updated net/py-cares to 5.0.1 [wiz 2026-01-08]
 	Updated www/py-notebook to 7.5.1 [adam 2026-01-08]
 	Updated devel/py-anyio to 4.12.1 [adam 2026-01-08]
 	Updated security/py-passlib to 1.9.3 [adam 2026-01-08]
