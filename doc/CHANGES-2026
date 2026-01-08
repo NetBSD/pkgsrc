@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.168 2026/01/08 08:49:34 adam Exp $
+$NetBSD: CHANGES-2026,v 1.169 2026/01/08 09:05:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -195,6 +195,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Added finance/alkimia version 8.2.1 [ryoon 2026-01-06]
 	Added finance/kmymoney version 5.2.1 [ryoon 2026-01-06]
 	Updated finance/homebank to 5.9.4 [ryoon 2026-01-06]
+	Updated textproc/icu to 78.1 [ryoon 2026-01-06]
 	Updated security/zoneminder to 1.36.37.10 [gdt 2026-01-06]
 	Added textproc/py-changelog-chug version 0.0.3 [adam 2026-01-06]
 	Updated devel/py-daemon to 3.1.2 [adam 2026-01-06]
