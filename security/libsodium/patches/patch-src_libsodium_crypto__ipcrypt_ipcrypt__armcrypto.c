@@ -1,6 +1,7 @@
-$NetBSD: patch-src_libsodium_crypto__ipcrypt_ipcrypt__armcrypto.c,v 1.1 2026/01/08 14:54:46 adam Exp $
+$NetBSD: patch-src_libsodium_crypto__ipcrypt_ipcrypt__armcrypto.c,v 1.2 2026/01/08 14:59:35 wiz Exp $
 
 Fixed compilation with GCC on aarch64.
+https://github.com/jedisct1/libsodium/commit/6702f69bef6044163acc7715e6ac7e430890ce78
 
 --- src/libsodium/crypto_ipcrypt/ipcrypt_armcrypto.c	2026-01-06 14:42:08.000000000 +0000
 +++ src/libsodium/crypto_ipcrypt/ipcrypt_armcrypto.c
