@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/05/27 14:24:45 youri Exp $
+# $NetBSD: Makefile,v 1.7 2026/01/08 07:52:41 wiz Exp $
 
 DISTNAME=	lxde-common-0.99.2
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	https://lxde.org/
+HOMEPAGE=	https://github.com/lxde/lxde-common
 COMMENT=	Default configuration settings and scripts for LXDE
 LICENSE=	gnu-gpl-v2
 
