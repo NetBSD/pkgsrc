@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.25 2026/01/07 21:12:27 wiz Exp $
+# $NetBSD: eol-packages,v 1.26 2026/01/08 10:18:47 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1243,4 +1243,3 @@ Package: PHP (8.1)
 eol date: December 31, 2025
 URL: http://php.net/supported-versions.php
 Description: Upgrade to PHP 8.2 or newer.
-
