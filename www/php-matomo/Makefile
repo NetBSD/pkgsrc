@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/03/07 00:59:39 taca Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/08 14:17:50 taca Exp $
 
 DISTNAME=	matomo-5.2.2
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.matomo.org/
 COMMENT=	Web analytics platform
 LICENSE=	gnu-gpl-v3
 
-PHP_VERSIONS_ACCEPTED=	74 81 82 83
+PHP_VERSIONS_ACCEPTED=	74 82 83
 
 WRKSRC=		${WRKDIR}/matomo
 USE_LANGUAGES=	# none

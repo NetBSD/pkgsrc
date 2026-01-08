@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/03/16 15:40:17 taca Exp $
+# $NetBSD: Makefile,v 1.4 2026/01/08 14:17:48 taca Exp $
 
 GITHUB_PROJECT=	AVideo-Encoder-Network
 GITHUB_TAG=	3ac08dfa79fadbd83feb1f8dca3b9370452c8cf5
@@ -13,7 +13,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Aggregator for AVideo Platform Encoder Servers
 LICENSE=	gnu-gpl-v3
 
-PHP_VERSIONS_ACCEPTED=	74 81 82 83
+PHP_VERSIONS_ACCEPTED=	74 82 83
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 

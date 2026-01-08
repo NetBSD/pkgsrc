@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/08/31 14:00:58 taca Exp $
+# $NetBSD: Makefile,v 1.11 2026/01/08 14:17:49 taca Exp $
 
 PKGREVISION= 3
 .include "../../sysutils/zabbix60-server/Makefile.common"
@@ -10,7 +10,7 @@ DISTINFO_FILE=	${.CURDIR}/../../sysutils/zabbix60-server/distinfo
 
 CONFLICTS+=	zabbix-frontend-[0-9]*
 
-PHP_VERSIONS_ACCEPTED=	81 82 83
+PHP_VERSIONS_ACCEPTED=	82 83
 
 EGDIR=		share/examples/${PKGBASE}
 
