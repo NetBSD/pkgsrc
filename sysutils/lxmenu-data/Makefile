@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/11/13 23:09:24 gutteridge Exp $
+# $NetBSD: Makefile,v 1.7 2026/01/08 07:51:46 wiz Exp $
 
 DISTNAME=	lxmenu-data-0.1.5
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	https://lxde.org/
+HOMEPAGE=	https://github.com/lxde/lxmenu-data
 COMMENT=	LXDE menu data
 LICENSE=	gnu-gpl-v2
 
