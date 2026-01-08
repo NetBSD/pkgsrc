@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/01/04 13:55:21 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/01/08 08:05:19 wiz Exp $
 
 DISTNAME=	skaffold-2.16.1
 PKGREVISION=	3
@@ -19,11 +19,12 @@ DEPENDS+=	helm-[0-9]*:../../net/helm
 
 # NetBSD:
 # vendor/github.com/buildpacks/pack/pkg/client/build.go:581:37: undefined: processVolumes
+BROKEN_ON_PLATFORM=	NetBSD-*-*
 # SmartOS:
 # vendor/github.com/AlecAivazis/survey/v2/terminal/runereader_posix.go:48:81: undefined: ioctlReadTermios
 # vendor/github.com/AlecAivazis/survey/v2/terminal/runereader_posix.go:60:81: undefined: ioctlWriteTermios
 # vendor/github.com/AlecAivazis/survey/v2/terminal/runereader_posix.go:68:81: undefined: ioctlWriteTermios
-BROKEN=		"Does not build in any bulk build."
+BROKEN_ON_PLATFORM=	SmartOS-*-*
 
 .include "go-modules.mk"
 
