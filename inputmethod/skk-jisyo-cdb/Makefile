@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2024/01/31 15:11:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2026/01/08 15:55:23 ryoon Exp $
 #
 
 DISTNAME=	skk-jisyo
 PKGNAME=	skk-jisyo-cdb-${SKKJISYO_DATE}
+PKGREVISION=	1
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	${MASTER_SITE_GITHUB:=skk-dev/}
 GITHUB_PROJECT=	dict
