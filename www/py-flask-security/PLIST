@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/02/23 20:55:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/01/08 10:11:03 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -155,6 +155,8 @@ ${PYSITELIB}/flask_security/totp.pyc
 ${PYSITELIB}/flask_security/totp.pyo
 ${PYSITELIB}/flask_security/translations/af_ZA/LC_MESSAGES/flask_security.mo
 ${PYSITELIB}/flask_security/translations/af_ZA/LC_MESSAGES/flask_security.po
+${PYSITELIB}/flask_security/translations/ar_SA/LC_MESSAGES/flask_security.mo
+${PYSITELIB}/flask_security/translations/ar_SA/LC_MESSAGES/flask_security.po
 ${PYSITELIB}/flask_security/translations/ca_ES/LC_MESSAGES/flask_security.mo
 ${PYSITELIB}/flask_security/translations/ca_ES/LC_MESSAGES/flask_security.po
 ${PYSITELIB}/flask_security/translations/da_DK/LC_MESSAGES/flask_security.mo
