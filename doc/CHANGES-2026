@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.181 2026/01/08 13:47:31 taca Exp $
+$NetBSD: CHANGES-2026,v 1.182 2026/01/08 14:08:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -242,3 +242,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added lang/php85 version 8.5.1 [taca 2026-01-08]
 	Added meta-pkgs/php85-extensions version 8.5.1 [taca 2026-01-08]
 	Updated meta-pkgs/bulk-medium to 20260108 [taca 2026-01-08]
+	Removed meta-pkgs/php81-extensions [taca 2026-01-08]
