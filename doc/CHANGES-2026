@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.175 2026/01/08 10:27:22 adam Exp $
+$NetBSD: CHANGES-2026,v 1.176 2026/01/08 10:31:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -237,3 +237,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-asdf-standard to 1.4.0 [adam 2026-01-08]
 	Updated math/py-asdf to 5.1.0 [adam 2026-01-08]
 	Updated math/py-asdf_astropy to 0.9.0 [adam 2026-01-08]
+	Updated devel/py-test-datafiles to 3.0.1 [adam 2026-01-08]
+	Updated devel/py-test-doctestplus to 1.7.0 [adam 2026-01-08]
