@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2025/05/15 09:21:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/01/08 16:07:35 adam Exp $
 bin/scrapy-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -82,6 +82,9 @@ ${PYSITELIB}/scrapy/core/downloader/contextfactory.pyo
 ${PYSITELIB}/scrapy/core/downloader/handlers/__init__.py
 ${PYSITELIB}/scrapy/core/downloader/handlers/__init__.pyc
 ${PYSITELIB}/scrapy/core/downloader/handlers/__init__.pyo
+${PYSITELIB}/scrapy/core/downloader/handlers/base.py
+${PYSITELIB}/scrapy/core/downloader/handlers/base.pyc
+${PYSITELIB}/scrapy/core/downloader/handlers/base.pyo
 ${PYSITELIB}/scrapy/core/downloader/handlers/datauri.py
 ${PYSITELIB}/scrapy/core/downloader/handlers/datauri.pyc
 ${PYSITELIB}/scrapy/core/downloader/handlers/datauri.pyo
@@ -217,6 +220,9 @@ ${PYSITELIB}/scrapy/extensions/feedexport.pyo
 ${PYSITELIB}/scrapy/extensions/httpcache.py
 ${PYSITELIB}/scrapy/extensions/httpcache.pyc
 ${PYSITELIB}/scrapy/extensions/httpcache.pyo
+${PYSITELIB}/scrapy/extensions/logcount.py
+${PYSITELIB}/scrapy/extensions/logcount.pyc
+${PYSITELIB}/scrapy/extensions/logcount.pyo
 ${PYSITELIB}/scrapy/extensions/logstats.py
 ${PYSITELIB}/scrapy/extensions/logstats.pyc
 ${PYSITELIB}/scrapy/extensions/logstats.pyo
@@ -369,9 +375,6 @@ ${PYSITELIB}/scrapy/spidermiddlewares/depth.pyo
 ${PYSITELIB}/scrapy/spidermiddlewares/httperror.py
 ${PYSITELIB}/scrapy/spidermiddlewares/httperror.pyc
 ${PYSITELIB}/scrapy/spidermiddlewares/httperror.pyo
-${PYSITELIB}/scrapy/spidermiddlewares/offsite.py
-${PYSITELIB}/scrapy/spidermiddlewares/offsite.pyc
-${PYSITELIB}/scrapy/spidermiddlewares/offsite.pyo
 ${PYSITELIB}/scrapy/spidermiddlewares/referer.py
 ${PYSITELIB}/scrapy/spidermiddlewares/referer.pyc
 ${PYSITELIB}/scrapy/spidermiddlewares/referer.pyo
@@ -426,6 +429,9 @@ ${PYSITELIB}/scrapy/utils/_compression.pyo
 ${PYSITELIB}/scrapy/utils/asyncgen.py
 ${PYSITELIB}/scrapy/utils/asyncgen.pyc
 ${PYSITELIB}/scrapy/utils/asyncgen.pyo
+${PYSITELIB}/scrapy/utils/asyncio.py
+${PYSITELIB}/scrapy/utils/asyncio.pyc
+${PYSITELIB}/scrapy/utils/asyncio.pyo
 ${PYSITELIB}/scrapy/utils/benchserver.py
 ${PYSITELIB}/scrapy/utils/benchserver.pyc
 ${PYSITELIB}/scrapy/utils/benchserver.pyo
