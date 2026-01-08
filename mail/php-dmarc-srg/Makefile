@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/06/09 16:30:32 taca Exp $
+# $NetBSD: Makefile,v 1.9 2026/01/08 14:17:48 taca Exp $
 
 DISTNAME=	dmarc-srg-${GITHUB_RELEASE}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=${PHP_BASE_VERS}:../../databases/php-pdo_
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
 
-PHP_VERSIONS_ACCEPTED=	81 82 83 84
+PHP_VERSIONS_ACCEPTED=	82 83 84
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax

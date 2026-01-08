@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/03/16 15:40:16 taca Exp $
+# $NetBSD: Makefile,v 1.4 2026/01/08 14:17:48 taca Exp $
 
 GITHUB_PROJECT=	AVideo
 GITHUB_TAG=	refs/tags/${DISTNAME}
@@ -13,7 +13,7 @@ HOMEPAGE=	https://github.com/WWBN/AVideo/
 COMMENT=	Web-based video streaming platform
 LICENSE=	json-license
 
-PHP_VERSIONS_ACCEPTED=	74 81 82 83
+PHP_VERSIONS_ACCEPTED=	74 82 83
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
 USE_TOOLS=	pax

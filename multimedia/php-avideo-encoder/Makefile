@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/12/22 06:08:14 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/01/08 14:17:48 taca Exp $
 
 GITHUB_PROJECT=	AVideo-Encoder
 GITHUB_TAG=	refs/tags/${DISTNAME}
@@ -14,7 +14,7 @@ HOMEPAGE=	https://github.com/WWBN/AVideo-Encoder/
 COMMENT=	Web-based video encoder for AVideo
 LICENSE=	gnu-agpl-v3
 
-PHP_VERSIONS_ACCEPTED=	74 81 82 83
+PHP_VERSIONS_ACCEPTED=	74 82 83
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
 USE_TOOLS=	pax
