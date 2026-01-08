@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.169 2026/01/08 09:05:52 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.170 2026/01/08 09:16:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -227,3 +227,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/py-peewee to 3.19.0 [adam 2026-01-08]
 	Updated devel/py-lazr.delegates to 2.1.1 [adam 2026-01-08]
 	Updated devel/py-lazr.config to 3.1 [adam 2026-01-08]
+	Updated audio/alsa-lib to 1.2.15.1 [wiz 2026-01-08]
