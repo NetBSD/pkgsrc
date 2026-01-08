@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.4 2025/12/23 13:22:09 kikadf Exp $
+$NetBSD: README,v 1.5 2026/01/08 17:46:35 kikadf Exp $
 
 Some notes on chromium:
 
@@ -19,7 +19,9 @@ Some notes on chromium:
   Under investigation. No known working workaround.
 
 4) HID support
-  HID is not yet supported on NetBSD, so FIDO devices do not work.
+  To enable monitoring attached and detached FIDO devices on NetBSD,
+  you should enable the ndevd service (a devpubd drop-in replacement)
+  in /etc/rc.conf.
 
 5) Render blinking / glitches after 141.x
   If you notice render blinking or visual glitches
@@ -29,3 +31,4 @@ Some notes on chromium:
   start chromium with --force-gpu-mem-available-mb=128 flag.
   To make it permanent, add this flag to ~/.config/chromium-flags.conf:
     CHROMIUM_FLAGS="${CHROMIUM_FLAGS} --force-gpu-mem-available-mb=128"
+  NOTE: after 143.0.7499.192, this flag added by default in the wrapper script.
