@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/07/25 11:12:28 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/08 07:48:30 wiz Exp $
 
 DISTNAME=	LVM2.2.02.98
 PKGNAME=	${DISTNAME:S/LVM2./lvm2-/}
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://sources.redhat.com/pub/lvm2/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sources.redhat.com/lvm2
+HOMEPAGE=	https://sourceware.org/lvm2/
 COMMENT=	Linux userspace toolset for volume management facilities
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
