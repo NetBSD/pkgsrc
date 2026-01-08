@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.179 2026/01/08 13:38:17 taca Exp $
+$NetBSD: CHANGES-2026,v 1.180 2026/01/08 13:43:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -240,3 +240,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-test-doctestplus to 1.7.0 [adam 2026-01-08]
 	Updated graphics/php-imagick to 3.8.1 [taca 2026-01-08]
 	Added lang/php85 version 8.5.1 [taca 2026-01-08]
+	Added meta-pkgs/php85-extensions version 8.5.1 [taca 2026-01-08]
