@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/02/22 17:05:57 taca Exp $
+# $NetBSD: Makefile,v 1.20 2026/01/08 14:17:47 taca Exp $
 #
 
 MODNAME=		memcache
@@ -11,7 +11,7 @@ LICENSE=		php
 
 CONFLICTS=		php-memcache-[0-9]*
 
-PHP_VERSIONS_ACCEPTED=	81 82 83 84
+PHP_VERSIONS_ACCEPTED=	82 83 84
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 CONFIGURE_ARGS+=	--with-zlib-dir=${BUILDLINK_PREFIX.zlib}
