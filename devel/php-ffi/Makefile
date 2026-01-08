@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/03/02 19:52:26 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/01/08 13:39:19 taca Exp $
 
 MODNAME=		ffi
 PKGREVISION=		2
@@ -6,7 +6,7 @@ CATEGORIES+=		textproc
 COMMENT=		PHP extension for Foreign Function Interface
 LICENSE=		php
 
-PHP_VERSIONS_ACCEPTED=	74 81 82 83 84
+PHP_VERSIONS_ACCEPTED=	74 81 82 83 84 85
 
 USE_PHP_EXT_PATCHES=	yes
 
