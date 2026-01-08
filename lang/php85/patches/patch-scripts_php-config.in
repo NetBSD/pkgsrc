@@ -1,0 +1,14 @@
+$NetBSD: patch-scripts_php-config.in,v 1.1 2026/01/08 13:38:01 taca Exp $
+
+* Add $PHP_VER suffix.
+
+--- scripts/php-config.in.orig	2025-01-15 01:03:17.000000000 +0000
++++ scripts/php-config.in
+@@ -7,6 +7,7 @@ exec_prefix="@exec_prefix@"
+ version="@PHP_VERSION@"
+ vernum="@PHP_VERSION_ID@"
+ include_dir="@includedir@/php"
++include_dir="@includedir@/php/@PHP_API_VERS@"
+ lib_dir="@orig_libdir@"
+ includes="-I$include_dir -I$include_dir/main -I$include_dir/TSRM -I$include_dir/Zend -I$include_dir/ext -I$include_dir/ext/date/lib"
+ ldflags="@PHP_LDFLAGS@"
