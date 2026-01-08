@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.188 2026/01/08 16:10:50 adam Exp $
+$NetBSD: CHANGES-2026,v 1.189 2026/01/08 16:56:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -252,3 +252,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated inputmethod/skk-jisyo-cdb to 20240117nb1 [ryoon 2026-01-08]
 	Updated www/py-scrapy to 2.14.0 [adam 2026-01-08]
 	Updated devel/py-maturin to 1.11.2 [adam 2026-01-08]
+	Updated security/libtasn1 to 4.21.0 [wiz 2026-01-08]
