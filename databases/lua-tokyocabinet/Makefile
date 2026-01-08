@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2025/05/06 09:08:21 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2026/01/08 07:47:07 wiz Exp $
 
 DISTNAME=	tokyocabinet-lua-1.10
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/-lua-/-/}
@@ -7,7 +7,7 @@ CATEGORIES=	databases lua
 MASTER_SITES=	${HOMEPAGE:S/luadoc/luapkg/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://fallabs.com/tokyocabinet/luadoc/
+HOMEPAGE=	https://github.com/LuaDist/lua-tokyocabinet
 COMMENT=	Lua binding of Tokyo Cabinet
 LICENSE=	gnu-lgpl-v2.1
 
