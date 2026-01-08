@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2026/01/08 22:50:47 alnsn Exp $
+# $NetBSD: Makefile,v 1.7 2026/01/08 22:55:38 wiz Exp $
 
 DISTNAME=	luaossl-20220711
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua//1}
@@ -30,6 +30,10 @@ INSTALLATION_DIRS+=	${LUA_DOCDIR}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.pdf ${DESTDIR}${PREFIX}/${LUA_DOCDIR}
+
+# needs to be installed
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${LUA_INTERPRETER} regress/regress.lua
 
 .include "../../lang/lua/module.mk"
 .include "../../security/openssl/buildlink3.mk"
