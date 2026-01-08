@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2025/12/31 00:13:22 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/01/08 14:54:45 adam Exp $
 
-DISTNAME=	libsodium-1.0.20
-PKGREVISION=	1
+DISTNAME=	libsodium-1.0.21
 CATEGORIES=	security
 MASTER_SITES=	https://download.libsodium.org/libsodium/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://download.libsodium.org/doc/
+HOMEPAGE=	https://doc.libsodium.org/
 COMMENT=	Library for build higher-level cryptographic tools
 LICENSE=	isc
 
