@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2012/10/06 14:10:49 asau Exp $
+# $NetBSD: Makefile,v 1.18 2026/01/08 07:39:46 wiz Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	freetype-lib-${FT_VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	TrueType font rendering engine and library API
 
 CONFIGURE_ARGS+=	--without-x
