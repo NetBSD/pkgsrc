@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2026/01/07 18:25:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/01/08 09:56:17 adam Exp $
 bin/hwloc-annotate
 bin/hwloc-bind
 bin/hwloc-calc
 bin/hwloc-compress-dir
 bin/hwloc-diff
 bin/hwloc-distrib
+${PLIST.i386}bin/hwloc-gather-cpuid
 bin/hwloc-info
 bin/hwloc-ls
 bin/hwloc-patch
@@ -41,6 +42,7 @@ man/man1/hwloc-calc.1
 man/man1/hwloc-compress-dir.1
 man/man1/hwloc-diff.1
 man/man1/hwloc-distrib.1
+${PLIST.i386}man/man1/hwloc-gather-cpuid.1
 man/man1/hwloc-info.1
 man/man1/hwloc-ls.1
 man/man1/hwloc-patch.1
