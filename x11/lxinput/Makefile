@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/10/23 20:40:05 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/01/08 07:55:47 wiz Exp $
 
 DISTNAME=	lxinput-0.3.5
 PKGREVISION=	24
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	https://lxde.org/
+HOMEPAGE=	https://github.com/lxde/lxinput
 COMMENT=	Simple graphical front end to configure keyboard and mouse
 LICENSE=	gnu-gpl-v2
 
