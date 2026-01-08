@@ -1,0 +1,58 @@
+$NetBSD: patch-build_Makefile.global,v 1.1 2026/01/08 13:38:00 taca Exp $
+
+* Add ${PHP_VER} suffix.
+
+--- build/Makefile.global.orig	2025-12-16 15:59:07.000000000 +0000
++++ build/Makefile.global
+@@ -14,26 +14,26 @@ build-modules: $(PHP_MODULES) $(PHP_ZEND
+ 
+ build-binaries: $(PHP_BINARIES)
+ 
+-libphp.la: $(PHP_GLOBAL_OBJS) $(PHP_SAPI_OBJS)
++libphp$(PHP_VER).la: $(PHP_GLOBAL_OBJS) $(PHP_SAPI_OBJS)
+ 	$(LIBTOOL) --tag=CC --mode=link $(CC) $(LIBPHP_CFLAGS) $(CFLAGS) $(EXTRA_CFLAGS) -rpath $(phptempdir) $(EXTRA_LDFLAGS) $(LDFLAGS) $(PHP_RPATHS) $(PHP_GLOBAL_OBJS) $(PHP_SAPI_OBJS) $(EXTRA_LIBS) $(ZEND_EXTRA_LIBS) -o $@
+ 	-@$(LIBTOOL) --tag=CC --mode=install cp $@ $(phptempdir)/$@ >/dev/null 2>&1
+ 
+-libphp.dylib: libphp.la
++libphp$(PHP_VER).dylib: libphp$(PHP_VER).la
+ 	$(LIBTOOL) --tag=CC --mode=link $(CC) -dynamiclib $(LIBPHP_CFLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -rpath $(phptempdir) -install_name @rpath/$@ $(EXTRA_LDFLAGS) $(LDFLAGS) $(PHP_RPATHS) $(PHP_GLOBAL_OBJS) $(PHP_SAPI_OBJS) $(EXTRA_LIBS) $(ZEND_EXTRA_LIBS) -o $@
+ 	-@$(LIBTOOL) --silent --tag=CC --mode=install cp $@ $(phptempdir)/$@ >/dev/null 2>&1
+ 
+-libs/libphp.bundle: $(PHP_GLOBAL_OBJS) $(PHP_SAPI_OBJS)
+-	$(CC) $(MH_BUNDLE_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) $(EXTRA_LDFLAGS) $(PHP_GLOBAL_OBJS:.lo=.o) $(PHP_SAPI_OBJS:.lo=.o) $(PHP_FRAMEWORKS) $(EXTRA_LIBS) $(ZEND_EXTRA_LIBS) -o $@ && cp $@ libs/libphp.so
++libs/libphp$(PHP_VER).bundle: $(PHP_GLOBAL_OBJS) $(PHP_SAPI_OBJS)
++	$(CC) $(MH_BUNDLE_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) $(EXTRA_LDFLAGS) $(PHP_GLOBAL_OBJS:.lo=.o) $(PHP_SAPI_OBJS:.lo=.o) $(PHP_FRAMEWORKS) $(EXTRA_LIBS) $(ZEND_EXTRA_LIBS) -o $@ && cp $@ libs/libphp$(PHP_VER).so
+ 
+ install: $(all_targets) $(install_targets)
+ 
+ install-sapi: $(OVERALL_TARGET)
+ 	@echo "Installing PHP SAPI module:       $(PHP_SAPI)"
+ 	-@$(mkinstalldirs) $(INSTALL_ROOT)$(bindir)
+-	-@if test ! -r $(phptempdir)/libphp.$(SHLIB_DL_SUFFIX_NAME); then \
++	-@if test ! -r $(phptempdir)/libphp$(PHP_VER).$(SHLIB_DL_SUFFIX_NAME); then \
+ 		for i in 0.0.0 0.0 0; do \
+-			if test -r $(phptempdir)/libphp.$(SHLIB_DL_SUFFIX_NAME).$$i; then \
+-				$(LN_S) $(phptempdir)/libphp.$(SHLIB_DL_SUFFIX_NAME).$$i $(phptempdir)/libphp.$(SHLIB_DL_SUFFIX_NAME); \
++			if test -r $(phptempdir)/libphp$(PHP_VER).$(SHLIB_DL_SUFFIX_NAME).$$i; then \
++				$(LN_S) $(phptempdir)/libphp$(PHP_VER).$(SHLIB_DL_SUFFIX_NAME).$$i $(phptempdir)/libphp.$(SHLIB_DL_SUFFIX_NAME); \
+ 				break; \
+ 			fi; \
+ 		done; \
+@@ -121,7 +121,7 @@ clean:
+ 	find . -name \*.la -o -name \*.a | xargs rm -f
+ 	find . -name \*.so | xargs rm -f
+ 	find . -name .libs -a -type d|xargs rm -rf
+-	rm -f libphp.la $(SAPI_CLI_PATH) $(SAPI_CGI_PATH) $(SAPI_LITESPEED_PATH) $(SAPI_FPM_PATH) $(SAPI_PHPDBG_PATH) $(SAPI_PHPDBG_SHARED_PATH) $(OVERALL_TARGET) modules/* libs/*
++	rm -f libphp$(PHP_VER).la $(SAPI_CLI_PATH) $(SAPI_CGI_PATH) $(SAPI_LITESPEED_PATH) $(SAPI_FPM_PATH) $(SAPI_PHPDBG_PATH) $(SAPI_PHPDBG_SHARED_PATH) $(OVERALL_TARGET) modules/* libs/*
+ 	rm -f ext/opcache/jit/ir/gen_ir_fold_hash
+ 	rm -f ext/opcache/jit/ir/minilua
+ 	rm -f ext/opcache/jit/ir/ir_fold_hash.h
+@@ -147,7 +147,7 @@ prof-clean:
+ 	find . -name \*.lo -o -name \*.o | xargs rm -f
+ 	find . -name \*.la -o -name \*.a | xargs rm -f
+ 	find . -name \*.so | xargs rm -f
+-	rm -f libphp.la $(SAPI_CLI_PATH) $(SAPI_CGI_PATH) $(SAPI_LITESPEED_PATH) $(SAPI_FPM_PATH) $(SAPI_PHPDBG_PATH) $(SAPI_PHPDBG_SHARED_PATH) $(OVERALL_TARGET) modules/* libs/*
++	rm -f libphp$(PHP_VER).la $(SAPI_CLI_PATH) $(SAPI_CGI_PATH) $(SAPI_LITESPEED_PATH) $(SAPI_FPM_PATH) $(SAPI_PHPDBG_PATH) $(SAPI_PHPDBG_SHARED_PATH) $(OVERALL_TARGET) modules/* libs/*
+ 
+ prof-use:
+ 	CCACHE_DISABLE=1 $(MAKE) PROF_FLAGS=-fprofile-use all
