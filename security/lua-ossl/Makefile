@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2026/01/06 07:59:01 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/01/08 22:50:47 alnsn Exp $
 
 DISTNAME=	luaossl-20220711
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua//1}
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wahern/}
 CATEGORIES=	security lua
 GITHUB_PROJECT=	luaossl
