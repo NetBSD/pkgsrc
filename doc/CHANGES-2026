@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.186 2026/01/08 15:54:41 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.187 2026/01/08 15:55:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -249,3 +249,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/libsodium to 1.0.21 [adam 2026-01-08]
 	Updated math/py-gwcs to 0.26.1 [adam 2026-01-08]
 	Updated inputmethod/skk-jisyo to 20200809nb1 [ryoon 2026-01-08]
+	Updated inputmethod/skk-jisyo-cdb to 20240117nb1 [ryoon 2026-01-08]
