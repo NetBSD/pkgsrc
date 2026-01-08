@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.183 2026/01/08 14:28:18 adam Exp $
+$NetBSD: CHANGES-2026,v 1.184 2026/01/08 14:31:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -245,3 +245,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed meta-pkgs/php81-extensions [taca 2026-01-08]
 	Updated net/bird to 3.2.0 [adam 2026-01-08]
 	Updated textproc/py-json5 to 0.13.0 [adam 2026-01-08]
+	Removed lang/php81 [taca 2026-01-08]
