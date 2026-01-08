@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.28 2026/01/07 08:48:24 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/01/08 17:27:55 hauke Exp $
 
 GITHUB_PROJECT=	netatalk
 GITHUB_TAG=	refs/tags/${DISTNAME}
 DISTNAME=	netatalk-${PKGVER:C/\./-/g}
 
 PKGNAME=	${DISTNAME:C/-[0-9].*$//}-${PKGVER}
-PKGREVISION=	1
-PKGVER=		4.3.2
+PKGVER=		4.4.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Netatalk/}
 
@@ -19,8 +18,6 @@ WRKSRC=			${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
 
 USE_TOOLS+=		pkg-config perl
 TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
-TOOL_DEPENDS+=		docbook-xsl>=1.79.2:../../textproc/docbook-xsl
-MESON_ARGS+=		-Dwith-docbook-path=${TOOLBASE:Q}/share/xsl/docbook
 
 PKG_SYSCONFSUBDIR=	netatalk
 
@@ -142,7 +139,8 @@ post-configure:
 	${CP} ${FILESDIR}/netatalk_smf.sh ${SMF_SRCDIR}
 
 post-install:
-	rm -r ${DESTDIR}${PREFIX}/share/doc/netatalk/htmldocs
+	rm -r ${DESTDIR}${PREFIX}/share/doc/netatalk/developer
+	rm -r ${DESTDIR}${PREFIX}/share/doc/netatalk/manual
 	chmod -w ${DESTDIR}${PREFIX}/bin/afppasswd
 	${INSTALL_DATA} ${WRKSRC}/output/config/afp.conf \
 		${DESTDIR}${PREFIX}/${EGDIR}/afp.conf
