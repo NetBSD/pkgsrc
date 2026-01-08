@@ -1,11 +1,27 @@
-@comment $NetBSD: PLIST,v 1.57 2025/10/16 08:51:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.58 2026/01/08 09:27:05 wiz Exp $
 bin/f2py-${PYVERSSUFFIX}
 bin/numpy-config-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/numpy/_core/src/common/pythoncapi-compat/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/numpy/_core/src/highway/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/numpy/_core/src/multiarray/dragon4_LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/numpy/_core/src/umath/svml/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/numpy/fft/pocketfft/LICENSE.md
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/numpy/linalg/lapack_lite/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/numpy/ma/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/numpy/random/LICENSE.md
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/numpy/random/src/distributions/LICENSE.md
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/numpy/random/src/mt19937/LICENSE.md
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/numpy/random/src/pcg64/LICENSE.md
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/numpy/random/src/philox/LICENSE.md
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/numpy/random/src/sfc64/LICENSE.md
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/numpy/random/src/splitmix64/LICENSE.md
 ${PYSITELIB}/numpy/__config__.py
 ${PYSITELIB}/numpy/__config__.pyc
 ${PYSITELIB}/numpy/__config__.pyi
@@ -56,10 +72,6 @@ ${PYSITELIB}/numpy/_core/_internal.py
 ${PYSITELIB}/numpy/_core/_internal.pyc
 ${PYSITELIB}/numpy/_core/_internal.pyi
 ${PYSITELIB}/numpy/_core/_internal.pyo
-${PYSITELIB}/numpy/_core/_machar.py
-${PYSITELIB}/numpy/_core/_machar.pyc
-${PYSITELIB}/numpy/_core/_machar.pyi
-${PYSITELIB}/numpy/_core/_machar.pyo
 ${PYSITELIB}/numpy/_core/_methods.py
 ${PYSITELIB}/numpy/_core/_methods.pyc
 ${PYSITELIB}/numpy/_core/_methods.pyi
@@ -83,6 +95,7 @@ ${PYSITELIB}/numpy/_core/_ufunc_config.py
 ${PYSITELIB}/numpy/_core/_ufunc_config.pyc
 ${PYSITELIB}/numpy/_core/_ufunc_config.pyi
 ${PYSITELIB}/numpy/_core/_ufunc_config.pyo
+${PYSITELIB}/numpy/_core/_umath_tests.pyi
 ${PYSITELIB}/numpy/_core/_umath_tests.so
 ${PYSITELIB}/numpy/_core/arrayprint.py
 ${PYSITELIB}/numpy/_core/arrayprint.pyc
@@ -297,6 +310,9 @@ ${PYSITELIB}/numpy/_core/tests/test_errstate.pyo
 ${PYSITELIB}/numpy/_core/tests/test_extint128.py
 ${PYSITELIB}/numpy/_core/tests/test_extint128.pyc
 ${PYSITELIB}/numpy/_core/tests/test_extint128.pyo
+${PYSITELIB}/numpy/_core/tests/test_finfo.py
+${PYSITELIB}/numpy/_core/tests/test_finfo.pyc
+${PYSITELIB}/numpy/_core/tests/test_finfo.pyo
 ${PYSITELIB}/numpy/_core/tests/test_function_base.py
 ${PYSITELIB}/numpy/_core/tests/test_function_base.pyc
 ${PYSITELIB}/numpy/_core/tests/test_function_base.pyo
@@ -324,9 +340,6 @@ ${PYSITELIB}/numpy/_core/tests/test_limited_api.pyo
 ${PYSITELIB}/numpy/_core/tests/test_longdouble.py
 ${PYSITELIB}/numpy/_core/tests/test_longdouble.pyc
 ${PYSITELIB}/numpy/_core/tests/test_longdouble.pyo
-${PYSITELIB}/numpy/_core/tests/test_machar.py
-${PYSITELIB}/numpy/_core/tests/test_machar.pyc
-${PYSITELIB}/numpy/_core/tests/test_machar.pyo
 ${PYSITELIB}/numpy/_core/tests/test_mem_overlap.py
 ${PYSITELIB}/numpy/_core/tests/test_mem_overlap.pyc
 ${PYSITELIB}/numpy/_core/tests/test_mem_overlap.pyo
@@ -339,6 +352,9 @@ ${PYSITELIB}/numpy/_core/tests/test_memmap.pyo
 ${PYSITELIB}/numpy/_core/tests/test_multiarray.py
 ${PYSITELIB}/numpy/_core/tests/test_multiarray.pyc
 ${PYSITELIB}/numpy/_core/tests/test_multiarray.pyo
+${PYSITELIB}/numpy/_core/tests/test_multiprocessing.py
+${PYSITELIB}/numpy/_core/tests/test_multiprocessing.pyc
+${PYSITELIB}/numpy/_core/tests/test_multiprocessing.pyo
 ${PYSITELIB}/numpy/_core/tests/test_multithreading.py
 ${PYSITELIB}/numpy/_core/tests/test_multithreading.pyc
 ${PYSITELIB}/numpy/_core/tests/test_multithreading.pyo
@@ -895,10 +911,6 @@ ${PYSITELIB}/numpy/fft/_pocketfft.pyc
 ${PYSITELIB}/numpy/fft/_pocketfft.pyi
 ${PYSITELIB}/numpy/fft/_pocketfft.pyo
 ${PYSITELIB}/numpy/fft/_pocketfft_umath.so
-${PYSITELIB}/numpy/fft/helper.py
-${PYSITELIB}/numpy/fft/helper.pyc
-${PYSITELIB}/numpy/fft/helper.pyi
-${PYSITELIB}/numpy/fft/helper.pyo
 ${PYSITELIB}/numpy/fft/tests/__init__.py
 ${PYSITELIB}/numpy/fft/tests/__init__.pyc
 ${PYSITELIB}/numpy/fft/tests/__init__.pyo
@@ -1133,10 +1145,6 @@ ${PYSITELIB}/numpy/linalg/_umath_linalg.pyi
 ${PYSITELIB}/numpy/linalg/_umath_linalg.so
 ${PYSITELIB}/numpy/linalg/lapack_lite.pyi
 ${PYSITELIB}/numpy/linalg/lapack_lite.so
-${PYSITELIB}/numpy/linalg/linalg.py
-${PYSITELIB}/numpy/linalg/linalg.pyc
-${PYSITELIB}/numpy/linalg/linalg.pyi
-${PYSITELIB}/numpy/linalg/linalg.pyo
 ${PYSITELIB}/numpy/linalg/tests/__init__.py
 ${PYSITELIB}/numpy/linalg/tests/__init__.pyc
 ${PYSITELIB}/numpy/linalg/tests/__init__.pyo
@@ -1197,6 +1205,7 @@ ${PYSITELIB}/numpy/ma/tests/test_subclassing.pyc
 ${PYSITELIB}/numpy/ma/tests/test_subclassing.pyo
 ${PYSITELIB}/numpy/ma/testutils.py
 ${PYSITELIB}/numpy/ma/testutils.pyc
+${PYSITELIB}/numpy/ma/testutils.pyi
 ${PYSITELIB}/numpy/ma/testutils.pyo
 ${PYSITELIB}/numpy/matlib.py
 ${PYSITELIB}/numpy/matlib.pyc
@@ -1478,6 +1487,7 @@ ${PYSITELIB}/numpy/tests/test_warnings.pyc
 ${PYSITELIB}/numpy/tests/test_warnings.pyo
 ${PYSITELIB}/numpy/typing/__init__.py
 ${PYSITELIB}/numpy/typing/__init__.pyc
+${PYSITELIB}/numpy/typing/__init__.pyi
 ${PYSITELIB}/numpy/typing/__init__.pyo
 ${PYSITELIB}/numpy/typing/mypy_plugin.py
 ${PYSITELIB}/numpy/typing/mypy_plugin.pyc
@@ -1627,9 +1637,6 @@ ${PYSITELIB}/numpy/typing/tests/data/pass/shape.pyo
 ${PYSITELIB}/numpy/typing/tests/data/pass/simple.py
 ${PYSITELIB}/numpy/typing/tests/data/pass/simple.pyc
 ${PYSITELIB}/numpy/typing/tests/data/pass/simple.pyo
-${PYSITELIB}/numpy/typing/tests/data/pass/simple_py3.py
-${PYSITELIB}/numpy/typing/tests/data/pass/simple_py3.pyc
-${PYSITELIB}/numpy/typing/tests/data/pass/simple_py3.pyo
 ${PYSITELIB}/numpy/typing/tests/data/pass/ufunc_config.py
 ${PYSITELIB}/numpy/typing/tests/data/pass/ufunc_config.pyc
 ${PYSITELIB}/numpy/typing/tests/data/pass/ufunc_config.pyo
