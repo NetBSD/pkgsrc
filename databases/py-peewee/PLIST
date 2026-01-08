@@ -1,17 +1,27 @@
-@comment $NetBSD: PLIST,v 1.24 2025/04/14 11:31:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2026/01/08 08:44:01 adam Exp $
 bin/pwiz-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/peewee.py
 ${PYSITELIB}/peewee.pyc
 ${PYSITELIB}/peewee.pyo
+${PYSITELIB}/playhouse/README.md
 ${PYSITELIB}/playhouse/__init__.py
 ${PYSITELIB}/playhouse/__init__.pyc
 ${PYSITELIB}/playhouse/__init__.pyo
+${PYSITELIB}/playhouse/_pysqlite/__init__.py
+${PYSITELIB}/playhouse/_pysqlite/__init__.pyc
+${PYSITELIB}/playhouse/_pysqlite/__init__.pyo
+${PYSITELIB}/playhouse/_pysqlite/cache.h
+${PYSITELIB}/playhouse/_pysqlite/connection.h
+${PYSITELIB}/playhouse/_pysqlite/module.h
+${PYSITELIB}/playhouse/_sqlite_ext.c
 ${PYSITELIB}/playhouse/_sqlite_ext.so
+${PYSITELIB}/playhouse/_sqlite_udf.c
 ${PYSITELIB}/playhouse/_sqlite_udf.so
 ${PYSITELIB}/playhouse/apsw_ext.py
 ${PYSITELIB}/playhouse/apsw_ext.pyc
