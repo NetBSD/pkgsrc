@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.6 2023/09/01 14:03:15 nia Exp $
+$NetBSD: distinfo,v 1.7 2026/01/08 22:50:47 alnsn Exp $
 
 BLAKE2s (luaossl-20220711.tar.gz) = 6ad60d88021a098f86c6cafb61cd6e3806d22b07746f608aae936514b7ef120a
 SHA512 (luaossl-20220711.tar.gz) = 13c51881218a5a9995d195d4781f6871f0dfe58f061b85dd997b98ec970a38302ac6b057b7987bff5f7719bfdb826aae09f602ea8db5e4b2d462648ad0236909
 Size (luaossl-20220711.tar.gz) = 505174 bytes
+SHA1 (patch-GNUmakefile) = 7d5fa61b2b5710b8f77a5b306f1549c7ac011bdc
 SHA1 (patch-config.h.guess) = b25ce37a141bbb28921ffac8324af496b073817b
+SHA1 (patch-src_GNUmakefile) = 4dc5177f5717d55f948ee1a35e507b5cc1ab92ab
+SHA1 (patch-vendor_compat53_c-api_compat-5.3.h) = c099d8ee0d16629bccfbbf6370a9b59bd41d386b
