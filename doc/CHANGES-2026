@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.187 2026/01/08 15:55:32 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.188 2026/01/08 16:10:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -250,3 +250,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-gwcs to 0.26.1 [adam 2026-01-08]
 	Updated inputmethod/skk-jisyo to 20200809nb1 [ryoon 2026-01-08]
 	Updated inputmethod/skk-jisyo-cdb to 20240117nb1 [ryoon 2026-01-08]
+	Updated www/py-scrapy to 2.14.0 [adam 2026-01-08]
+	Updated devel/py-maturin to 1.11.2 [adam 2026-01-08]
