@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.184 2026/01/08 14:31:31 taca Exp $
+$NetBSD: CHANGES-2026,v 1.185 2026/01/08 15:11:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -246,3 +246,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/bird to 3.2.0 [adam 2026-01-08]
 	Updated textproc/py-json5 to 0.13.0 [adam 2026-01-08]
 	Removed lang/php81 [taca 2026-01-08]
+	Updated security/libsodium to 1.0.21 [adam 2026-01-08]
+	Updated math/py-gwcs to 0.26.1 [adam 2026-01-08]
