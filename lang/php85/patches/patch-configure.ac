@@ -1,0 +1,48 @@
+$NetBSD: patch-configure.ac,v 1.1 2026/01/08 13:38:00 taca Exp $
+
+* libphp.so => libphp${PHP_VER}.so.
+* add ${PHP_VER} to lib/php.
+
+--- configure.ac.orig	2025-12-16 15:59:07.000000000 +0000
++++ configure.ac
+@@ -270,7 +270,7 @@ dnl SAPI configuration.
+ dnl ----------------------------------------------------------------------------
+ 
+ dnl Paths to the targets are relative to the build directory.
+-SAPI_LIBNAME=libphp
++SAPI_LIBNAME=libphp$(PHP_VER)
+ SAPI_LIBNAME_SHARED=$SAPI_LIBNAME.[]$SHLIB_DL_SUFFIX_NAME
+ SAPI_LIBNAME_STATIC=$SAPI_LIBNAME.a
+ SAPI_SHARED=libs/$SAPI_LIBNAME_SHARED
+@@ -1172,7 +1172,7 @@ AS_VAR_IF([PHP_PEAR], [no],, [
+   AS_VAR_IF([PHP_PEAR], [yes],
+     [AS_CASE([$PHP_LAYOUT],
+       [GNU], [PEAR_INSTALLDIR=$datadir/pear],
+-      [PEAR_INSTALLDIR=$libdir/php])],
++      [PEAR_INSTALLDIR=$libdir/php/${PHP_API_VERS}])],
+     [PEAR_INSTALLDIR=$PHP_PEAR])
+ 
+   PHP_SUBST([PEAR_INSTALLDIR])
+@@ -1333,11 +1333,11 @@ orig_libdir=$libdir
+ dnl First for unexpanded (default), second for expanded (from options)
+ AS_CASE([$libdir],
+   ['${exec_prefix}/lib'], [libdir=$libdir/php],
+-  [${exec_prefix}/${PHP_LIBDIR}], [libdir=$libdir/php])
++  [${exec_prefix}/${PHP_LIBDIR}], [libdir=$libdir/php${PHP_API_VERS}])
+ 
+ AS_CASE([$(eval echo $datadir)],
+   ['${prefix}/share'], [datadir=$datadir/php],
+-  [${prefix}/share], [datadir=$datadir/php])
++  [${prefix}/share], [datadir=$datadir/php${PHP_API_VERS}])
+ 
+ phptempdir=$(pwd)/libs
+ 
+@@ -1371,7 +1371,7 @@ AS_VAR_IF([EXTENSION_DIR],, [
+ 
+ AS_CASE([$PHP_LAYOUT],
+   [GNU], [datarootdir=$prefix/share],
+-  [datarootdir=$prefix/php])
++  [datarootdir=$prefix/${PHP_SHAREDIR}])
+ 
+ dnl Expand all directory names for use in macros/constants.
+ EXPANDED_PEAR_INSTALLDIR=$(eval echo $PEAR_INSTALLDIR)

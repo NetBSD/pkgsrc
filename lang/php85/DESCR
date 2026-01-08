@@ -1,0 +1,17 @@
+PHP is a widely-used open source general-purpose scripting language
+that is especially suited for web development and can be embedded
+into HTML.  It is modular, and object-oriented.  Much of its syntax
+is borrowed from C, Java and Perl with a couple of unique PHP-specific
+features thrown in.  The language is designed to allow web developers
+to write dynamically generated pages quickly.
+
+PHP 8.5 comes with numerous improvements and new features such as
+
+* Built-in URI Extension to parse, normalize and handle URL.
+* Pipe Operator |> enables chaining callables and passing values.
+* Clone objects and update properties with the new clone() syntax.
+* A new attribute #[\NoDiscard] for a function.
+* Static closures and first-class-callables in constatnt expressisons.
+* cURL shared handles support.
+* array_first() and array_last() functions are added to array.
+* And much much more...

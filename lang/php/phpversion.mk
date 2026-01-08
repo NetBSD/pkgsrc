@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.485 2025/12/19 14:32:34 taca Exp $
+# $NetBSD: phpversion.mk,v 1.486 2026/01/08 13:37:59 taca Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -10,7 +10,7 @@
 #	The PHP version to choose when more than one is acceptable to
 #	the package.
 #
-#	Possible: 56 74 81 82 83 84
+#	Possible: 56 74 81 82 83 84 85
 #	Default: 83
 #
 # === Infrastructure variables ===
@@ -27,13 +27,13 @@
 # PHP_VERSIONS_ACCEPTED
 #	The PHP versions that are accepted by the package.
 #
-#	Possible: 56 74 81 82 83 84
-#	Default: 83 82 84 81 74 56
+#	Possible: 56 74 81 82 83 84 85
+#	Default: 83 82 84 85 81 74 56
 #
 # PHP_VERSIONS_INCOMPATIBLE
 #	The PHP versions that are not supported by the package.
 #
-#	Possible: 56 74 81 82 83 84
+#	Possible: 56 74 81 82 83 84 85
 #	Default: (empty)
 #
 # PHP_MINIMUM_TEENY
@@ -44,7 +44,7 @@
 # PHP_VER
 #	The selected PHP version.
 #
-#	Possible: 56 74 81 82 83 84
+#	Possible: 56 74 81 82 83 84 85
 #	Default: ${PHP_VERSION_DEFAULT}
 #
 # PHP_VERSION
@@ -72,7 +72,7 @@
 # PHP_PKG_PREFIX
 #	The prefix that is prepended to the package name.
 #
-#	Example: php56 php74 php81 php82 php83 php84
+#	Example: php56 php74 php81 php82 php83 php84 php85
 #
 # PHP_INCDIR
 #	PHP include directory path relative to ${PREFIX}.
@@ -114,6 +114,7 @@ PHP81_VERSION=	8.1.34
 PHP82_VERSION=	8.2.30
 PHP83_VERSION=	8.3.29
 PHP84_VERSION=	8.4.16
+PHP85_VERSION=	8.5.1
 
 _VARGROUPS+=	php
 _USER_VARS.php=	PHP_VERSION_DEFAULT
@@ -123,7 +124,7 @@ _SYS_VARS.php=	PHP_VERSION_PHP PHPPKGSRCDIR PHP_PKG_PREFIX PHP_VER PHP_MAJOR_VER
 .include "../../mk/bsd.prefs.mk"
 
 PHP_VERSION_DEFAULT?=		83
-PHP_VERSIONS_ACCEPTED?=		83 82 84 81 74 56
+PHP_VERSIONS_ACCEPTED?=		83 82 84 85 81 74 56
 .for pv in ${PHP_VERSIONS_ACCEPTED}
 .  if empty(PHP_VERSIONS_INCOMPATIBLE:M${pv})
 _PHP_VERSIONS_ACCEPTED+=	${pv}
@@ -177,6 +178,8 @@ PHP_VERSION=		${PHP82_VERSION}
 PHP_VERSION=		${PHP83_VERSION}
 .elif ${_PHP_VERSION} == 84
 PHP_VERSION=		${PHP84_VERSION}
+.elif ${_PHP_VERSION} == 85
+PHP_VERSION=		${PHP85_VERSION}
 .else
 # force an error
 PKG_FAIL_REASON+=	"${_PHP_VERSION} is not a valid package"
