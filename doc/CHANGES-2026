@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.167 2026/01/07 21:19:38 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.168 2026/01/08 08:49:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -223,3 +223,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated ham/hackrf to 2026.01.1 [adam 2026-01-07]
 	Updated security/pcsc-lite to 2.4.1 [adam 2026-01-07]
 	Updated www/miniflux to 2.2.16 [wiz 2026-01-07]
+	Updated databases/py-peewee to 3.19.0 [adam 2026-01-08]
+	Updated devel/py-lazr.delegates to 2.1.1 [adam 2026-01-08]
+	Updated devel/py-lazr.config to 3.1 [adam 2026-01-08]
