@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2026/01/07 08:49:22 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2026/01/08 07:47:40 wiz Exp $
 
 DISTNAME=	luakit-2.3.3
 PKGREVISION=	23
@@ -6,7 +6,7 @@ CATEGORIES=	www lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=luakit/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://luakit.org/
+HOMEPAGE=	https://luakit.github.io/
 COMMENT=	Fast, small, WebKit based browser extensible with Lua
 LICENSE=	gnu-gpl-v3
 
