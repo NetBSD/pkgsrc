@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2025/05/23 13:19:27 wiz Exp $
+# $NetBSD: Makefile,v 1.144 2026/01/08 13:43:33 taca Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -51,6 +51,7 @@ SUBDIR+=	php81-extensions
 SUBDIR+=	php82-extensions
 SUBDIR+=	php83-extensions
 SUBDIR+=	php84-extensions
+SUBDIR+=	php85-extensions
 SUBDIR+=	pkg_developer
 SUBDIR+=	pkgsrc-guide-tools
 SUBDIR+=	qmail-server
