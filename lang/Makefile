@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.775 2026/01/08 13:41:01 taca Exp $
+# $NetBSD: Makefile,v 1.776 2026/01/08 14:30:35 taca Exp $
 #
 
 COMMENT=	Programming languages
@@ -247,7 +247,6 @@ SUBDIR+=	pfe
 SUBDIR+=	pforth
 SUBDIR+=	php56
 SUBDIR+=	php74
-SUBDIR+=	php81
 SUBDIR+=	php82
 SUBDIR+=	php83
 SUBDIR+=	php84
