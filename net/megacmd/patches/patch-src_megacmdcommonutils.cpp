@@ -1,10 +1,20 @@
-$NetBSD: patch-src_megacmdcommonutils.cpp,v 1.1 2025/02/15 07:40:14 wiz Exp $
+$NetBSD: patch-src_megacmdcommonutils.cpp,v 1.2 2026/01/08 17:52:20 kikadf Exp $
 
 * BSDs use the functions of linux
+* Fix ctype(3) tolower usage
 
---- src/megacmdcommonutils.cpp.orig	2025-02-07 09:43:13.320748794 +0100
+--- src/megacmdcommonutils.cpp.orig	2025-04-04 10:39:49.000000000 +0000
 +++ src/megacmdcommonutils.cpp
-@@ -1128,7 +1128,8 @@ bool isValidEmail(string email)
+@@ -660,7 +660,7 @@ string toLower(const std::string& str)
+     std::string lower = str;
+     for (char& c : lower)
+     {
+-        c = std::tolower(c);
++        c = static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
+     }
+     return lower;
+ }
+@@ -1153,7 +1153,8 @@ bool isValidEmail(string email)
                      || (email.find("@") > email.find_last_of(".")));
  }
  
