@@ -1,0 +1,20 @@
+$NetBSD: patch-SKK-JISYO.L.20200809,v 1.1 2026/01/08 15:54:29 ryoon Exp $
+
+--- SKK-JISYO.L.20200809.orig	2026-01-07 14:47:49.497239465 +0000
++++ SKK-JISYO.L.20200809
+@@ -33195,6 +33195,7 @@ musette /ミュゼット/
+ muse /ミューズ/
+ musee /ミュゼ;(Fr)美術館/
+ musette /ミュゼット/
++museum /ミュージアム/
+ musharraf /ムシャラフ/
+ mushroom /マッシュルーム/
+ music /ミュージック/♪;quaver/♯;sharp/♭;flat/∫;※積分記号(integral)/∬;※二重積分記号/
+@@ -33205,7 +33206,6 @@ musik /ムジーク;(独語)音楽/
+ musicschool /ミュージックスクール/
+ musicvideo /ミュージックビデオ/
+ musik /ムジーク;(独語)音楽/
+-musium /ミュージアム/
+ musket /マスケット/
+ muslim /ムスリム/
+ muslin /モスリン/
