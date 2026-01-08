@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2025/05/16 19:43:58 wiz Exp $
+$NetBSD: distinfo,v 1.5 2026/01/08 17:52:19 kikadf Exp $
 
 BLAKE2s (megacmd-2.1.1.tar.gz) = 493c50974e425b54d952dea2f066b10d8d4dec13721b52808c7cba36074eac5d
 SHA512 (megacmd-2.1.1.tar.gz) = 5b510cca8a1cc8480aa759856ca6f4af5a81967f34b05a03af66334a0004ebe295f7825b3d560d86371f71a57ab60952b3dc8b020480a47b35fee2ec781962bc
@@ -16,7 +16,12 @@ SHA1 (patch-sdk_include_mega_posix_megafs.h) = a87e49a8a9d387f5325bf41df3fbd27ec
 SHA1 (patch-sdk_include_mega_sync.h) = 7b73c2619a5fbf33a4df012164876cc4dccfdb84
 SHA1 (patch-sdk_include_megaapi__impl.h) = cd5cd30d989d11d58d0030ebb7a34b3b0963d6fb
 SHA1 (patch-sdk_src_filesystem.cpp) = 3890ea10a66cd2a99925af57b0a3558c617cd6e3
-SHA1 (patch-sdk_src_posix_fs.cpp) = b8516bc9291c79e3f3903491cd19eac506413637
-SHA1 (patch-src_megacmdcommonutils.cpp) = 6128e295e1a816ad4d7ea1ec59fa963391eb3bfb
+SHA1 (patch-sdk_src_node.cpp) = c9fe20a7825edd0345dd28b4947097b3d141493b
+SHA1 (patch-sdk_src_posix_fs.cpp) = 7b3923a465dfd98d86dc2ceabf914450b62dc066
+SHA1 (patch-sdk_src_syncfilter.cpp) = 15d5209c9df3925ad45214c6a327938297f9d69b
+SHA1 (patch-sdk_src_utils.cpp) = a96bb75ab6de83bb5dc838726f3c183d06aafbb2
+SHA1 (patch-src_megacmdcommonutils.cpp) = 92bb24ee05c541f6040577e3ddad0fa7414f0868
 SHA1 (patch-src_megacmdcommonutils.h) = 194d991a02e8e48c9c31c60384549c276e4ee735
 SHA1 (patch-src_megacmdshell_megacmdshellcommunications.cpp) = ff794d128ffa6e0626296a504b22f391e0fc923b
+SHA1 (patch-src_megacmdutils.cpp) = 5130d6d5c7a86a341764674a4203ce64a8d99fd0
+SHA1 (patch-src_updater_UpdateTask.cpp) = 3b284b57109c94279c91ca96c78f89ff16bad05d
