@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.189 2026/01/08 16:56:54 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.190 2026/01/08 17:28:09 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -253,3 +253,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-scrapy to 2.14.0 [adam 2026-01-08]
 	Updated devel/py-maturin to 1.11.2 [adam 2026-01-08]
 	Updated security/libtasn1 to 4.21.0 [wiz 2026-01-08]
+	Updated net/netatalk4 to 4.4.0 [hauke 2026-01-08]
