@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2025/01/21 11:00:11 nia Exp $
+# $NetBSD: Makefile,v 1.4 2026/01/08 07:44:10 wiz Exp $
 
 DISTNAME=	lua-mimetypes-1.0.0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/lua-//1}
 PKGREVISION=	1
 CATEGORIES=	devel lua
-MASTER_SITES=	-https://bitbucket.org/leafstorm/lua-mimetypes/get/v${PKGVERSION_NOREV}.tar.gz
+#MASTER_SITES=	-https://bitbucket.org/leafstorm/lua-mimetypes/get/v${PKGVERSION_NOREV}.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/leafstorm/lua-mimetypes
+HOMEPAGE=	https://github.com/lunarmodules/lua-mimetypes
 COMMENT=	MIME type database for Lua
 LICENSE=	mit
 
