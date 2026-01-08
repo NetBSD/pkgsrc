@@ -1,10 +1,11 @@
-# $NetBSD: common.mk,v 1.15 2025/04/07 17:13:59 taca Exp $
+# $NetBSD: common.mk,v 1.16 2026/01/08 14:34:35 taca Exp $
 # used by lang/pear/Makefile
 # used by lang/php56/Makefile.common
 # used by lang/php74/Makefile.common
-# used by lang/php81/Makefile.common
 # used by lang/php82/Makefile.common
 # used by lang/php83/Makefile.common
+# used by lang/php84/Makefile.common
+# used by lang/php85/Makefile.common
 # 
 .if !defined(PHPCOMMON_MK)
 PHPCOMMON_MK=	defined
