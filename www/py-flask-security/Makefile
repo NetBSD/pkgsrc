@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2025/04/12 07:08:22 adam Exp $
+# $NetBSD: Makefile,v 1.24 2026/01/08 10:11:03 adam Exp $
 
-DISTNAME=	flask_security-5.6.1
+DISTNAME=	flask_security-5.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Security/}
@@ -12,13 +12,12 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-email_validator>=2.0.0:../../mail/py-email_validator
-DEPENDS+=	${PYPKGPREFIX}-flask>=3.0.0:../../www/py-flask
+DEPENDS+=	${PYPKGPREFIX}-flask>=3.1.0:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-flask-login>=0.6.3:../../www/py-flask-login
 DEPENDS+=	${PYPKGPREFIX}-flask-principal>=0.4.0:../../www/py-flask-principal
 DEPENDS+=	${PYPKGPREFIX}-flask-wtf>=1.1.2:../../www/py-flask-wtf
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=5.10.0:../../devel/py-importlib-resources
 DEPENDS+=	${PYPKGPREFIX}-markupsafe>=2.1.0:../../textproc/py-markupsafe
-DEPENDS+=	${PYPKGPREFIX}-passlib>=1.7.4:../../security/py-passlib
+DEPENDS+=	${PYPKGPREFIX}-passlib>=1.9.3:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-wtforms>=3.0.0:../../www/py-wtforms
 
 USE_LANGUAGES=	# none
