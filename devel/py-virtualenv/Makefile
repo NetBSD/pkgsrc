@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.103 2025/10/29 07:51:40 adam Exp $
+# $NetBSD: Makefile,v 1.104 2026/01/09 12:45:14 adam Exp $
 
-DISTNAME=	virtualenv-20.35.4
+DISTNAME=	virtualenv-20.36.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
@@ -13,7 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.3:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.17.1:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.7:../../devel/py-distlib
-DEPENDS+=	${PYPKGPREFIX}-filelock>=3.12.2:../../devel/py-filelock
+DEPENDS+=	${PYPKGPREFIX}-filelock>=3.20.1:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.9.1:../../misc/py-platformdirs
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7.2.7:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-enable-subprocess>=1:../../devel/py-coverage-enable-subprocess
@@ -29,6 +29,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-time-machine>=2.10:../../time/py-time-machine
 USE_LANGUAGES=	c # for tests
 
 REPLACE_PYTHON=	virtualenv.py
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.13.2:../../devel/py-typing-extensions
+.endif
 
 post-install:
 	# see patches
