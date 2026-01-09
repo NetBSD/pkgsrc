@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2025/01/12 15:17:14 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/01/09 01:19:41 ktnb Exp $
 include/nfd.h
 include/nfd.hpp
 include/nfd_glfw3.h
 include/nfd_sdl2.h
 lib/cmake/nfd/nfd-config-noconfig.cmake
+lib/cmake/nfd/nfd-config-version.cmake
 lib/cmake/nfd/nfd-config.cmake
 lib/libnfd.a
