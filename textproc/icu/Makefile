@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.167 2026/01/06 15:29:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.168 2026/01/09 05:47:40 adam Exp $
 
-DISTNAME=	icu4c-78.1-sources
+DISTNAME=	icu4c-78.2-sources
 PKGNAME=	${DISTNAME:S/4c//:S/-sources//}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=unicode-org/}
