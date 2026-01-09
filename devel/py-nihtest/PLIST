@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/12 12:08:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/01/09 12:36:07 wiz Exp $
 bin/nihtest-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -33,6 +33,9 @@ ${PYSITELIB}/nihtest/Output.pyo
 ${PYSITELIB}/nihtest/Sandbox.py
 ${PYSITELIB}/nihtest/Sandbox.pyc
 ${PYSITELIB}/nihtest/Sandbox.pyo
+${PYSITELIB}/nihtest/Suite.py
+${PYSITELIB}/nihtest/Suite.pyc
+${PYSITELIB}/nihtest/Suite.pyo
 ${PYSITELIB}/nihtest/Test.py
 ${PYSITELIB}/nihtest/Test.pyc
 ${PYSITELIB}/nihtest/Test.pyo
