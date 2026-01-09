@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2024/08/08 10:42:34 wiz Exp $
+# $NetBSD: Makefile,v 1.128 2026/01/09 14:40:01 wiz Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -80,6 +80,7 @@ SUBDIR+=	rpm2pkg
 SUBDIR+=	shlock
 SUBDIR+=	texlive2pkg
 SUBDIR+=	url2pkg
+#SUBDIR+=	varcache # for speeding pkgsrc scans, not a real package
 SUBDIR+=	verifypc
 SUBDIR+=	x11-links
 
