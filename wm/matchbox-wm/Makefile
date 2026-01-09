@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/11/12 13:23:49 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.24 2026/01/09 07:39:40 wiz Exp $
 
 DISTNAME=		matchbox-window-manager-1.1
 PKGNAME=		${DISTNAME:S/window-manager/wm/}
@@ -8,7 +7,7 @@ CATEGORIES=		wm x11
 MASTER_SITES=		http://downloads.yoctoproject.org/releases/matchbox/matchbox-window-manager/1.1/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.yoctoproject.org/tools-resources/projects/matchbox
+HOMEPAGE=		https://git.yoctoproject.org/matchbox-window-manager/
 COMMENT=		Window manager designed for computers with small displays
 
 USE_TOOLS+=		pkg-config
