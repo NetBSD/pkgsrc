@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/06/06 17:33:14 ktnb Exp $
+# $NetBSD: Makefile,v 1.13 2026/01/09 23:02:01 nia Exp $
 
 DISTNAME=	tyrquake-0.71
 CATEGORIES=	games x11
@@ -18,6 +18,9 @@ SUBST_STAGE.audio=	pre-configure
 SUBST_MESSAGE.audio=	Fixing path to the audio device.
 SUBST_FILES.audio=	common/snd_oss.c
 SUBST_SED.audio=	-e "s|/dev/dsp|${DEVOSSAUDIO}|"
+
+# Not on i386, and we can't check for arch first.
+MKPIE_SUPPORTED=	no
 
 INSTALLATION_DIRS=	bin
 
