@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.14 2019/11/03 19:24:33 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.15 2026/01/09 07:31:37 wiz Exp $
 
 DISTNAME=	m1077b-lnx
 PKGNAME=	m1-0.7.7
 CATEGORIES=	emulators audio
-MASTER_SITES=	http://www.emuhype.com/files/
+#MASTER_SITES=	http://www.emuhype.com/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.emuhype.com/index.phtml?s=misc&ss=index
+#HOMEPAGE=	http://www.emuhype.com/index.phtml?s=misc&ss=index
 COMMENT=	Arcade video and pinball game sound emulator (Linux binary)
 
 EMUL_PLATFORMS=		linux-i386
