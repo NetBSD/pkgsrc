@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2025/02/18 08:57:52 adam Exp $
+# $NetBSD: Makefile,v 1.32 2026/01/09 06:48:58 adam Exp $
 
-DISTNAME=	orc-0.4.41
+DISTNAME=	orc-0.4.42
 CATEGORIES=	devel
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/orc/
 EXTRACT_SUFX=	.tar.xz
@@ -21,7 +21,7 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/orc:${WRKSRC}/output/orc-test
 # For Darwin
 MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/orc:${WRKSRC}/output/orc-test
 
-MESON_ARGS+=	-Dgtk_doc=disabled
+MESON_ARGS+=	-Dhotdoc=disabled
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
