@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/11/17 20:24:10 hauke Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/01/09 15:17:33 hauke Exp $
 bin/nextcloud
 bin/nextcloudcmd
 include/nextcloudsync/creds/abstractcredentials.h
@@ -126,6 +126,7 @@ share/nextcloud/i18n/client_is.qm
 share/nextcloud/i18n/client_it.qm
 share/nextcloud/i18n/client_ja.qm
 share/nextcloud/i18n/client_ko.qm
+share/nextcloud/i18n/client_lo.qm
 share/nextcloud/i18n/client_lt_LT.qm
 share/nextcloud/i18n/client_lv.qm
 share/nextcloud/i18n/client_mk.qm
@@ -150,5 +151,3 @@ share/nextcloud/i18n/client_uk.qm
 share/nextcloud/i18n/client_zh_CN.qm
 share/nextcloud/i18n/client_zh_HK.qm
 share/nextcloud/i18n/client_zh_TW.qm
-@pkgdir qt5/plugins/kf5/overlayicon
-@pkgdir qt5/plugins/kf5/kfileitemaction
