@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.77 2025/10/29 07:51:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.78 2026/01/09 12:45:14 adam Exp $
 bin/virtualenv-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -285,6 +285,9 @@ ${PYSITELIB}/virtualenv/util/path/_sync.pyo
 ${PYSITELIB}/virtualenv/util/path/_win.py
 ${PYSITELIB}/virtualenv/util/path/_win.pyc
 ${PYSITELIB}/virtualenv/util/path/_win.pyo
+${PYSITELIB}/virtualenv/util/specifier.py
+${PYSITELIB}/virtualenv/util/specifier.pyc
+${PYSITELIB}/virtualenv/util/specifier.pyo
 ${PYSITELIB}/virtualenv/util/subprocess/__init__.py
 ${PYSITELIB}/virtualenv/util/subprocess/__init__.pyc
 ${PYSITELIB}/virtualenv/util/subprocess/__init__.pyo
