@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.102 2025/08/05 06:08:38 adam Exp $
+$NetBSD: distinfo,v 1.103 2026/01/09 19:26:56 nia Exp $
 
 BLAKE2s (libgcrypt-1.11.2.tar.bz2) = fa7f567dc55b97302991972de130b85737ebb48c115f432d06a0be8a24926049
 SHA512 (libgcrypt-1.11.2.tar.bz2) = b706cea602cc8f0896e57ce979643bf78974b05faec27c1b053b773c57d8b04250e30e95a4ef5899e1df981d01d8d08f0a36e10b5820a5ec4183e74c02e5f1f0
 Size (libgcrypt-1.11.2.tar.bz2) = 4237802 bytes
-SHA1 (patch-cipher_aria.c) = 7e574b13872ea0610bf8b4abd699ffbc9dabc09a
+SHA1 (patch-cipher_aria.c) = dcb6dc45ca601237191ffb8b6b9a0774fe543583
 SHA1 (patch-cipher_rijndael-arm.S) = ef3cb7f481022440780eb48ae31cbfad0a3ec115
 SHA1 (patch-config.h.in) = 93dddd3db484230f23450aa9d02564fe11efbc6b
 SHA1 (patch-configure) = d9cd7509ffa682104703b3aa626a4cd5751ebdfe
