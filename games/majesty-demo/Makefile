@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.17 2013/04/06 12:04:00 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.18 2026/01/09 07:36:14 wiz Exp $
 
 DISTNAME=	majesty_demo
 PKGNAME=	majesty-demo-20030310
 PKGREVISION=	1
 CATEGORIES=	games
-MASTER_SITES=	http://demos.linuxgamepublishing.com/majesty/
+MASTER_SITES=	https://demos.linuxgamepublishing.com/majesty/
 EXTRACT_SUFX=	.run
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.linuxgamepublishing.com/info.php?id=majesty
+HOMEPAGE=	https://www.linuxgamepublishing.com/info.php?id=majesty
 COMMENT=	Fantasy kingdom simulation (demo)
 
 EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' $$extract_file | \
