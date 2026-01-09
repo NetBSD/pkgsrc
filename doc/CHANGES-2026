@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.203 2026/01/09 14:34:50 adam Exp $
+$NetBSD: CHANGES-2026,v 1.204 2026/01/09 14:57:29 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -275,3 +275,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-tox to 4.34.0 [adam 2026-01-09]
 	Updated devel/py-pathspec to 1.0.2 [adam 2026-01-09]
 	Updated textproc/py-jsonschema to 4.26.0 [adam 2026-01-09]
+	Updated net/nextcloud-client to 3.17.4 [hauke 2026-01-09]
