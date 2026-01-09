@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2025/12/26 11:36:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.38 2026/01/09 06:06:45 adam Exp $
 bin/dul-receive-pack-${PYVERSSUFFIX}
 bin/dul-upload-pack-${PYVERSSUFFIX}
 bin/dulwich-${PYVERSSUFFIX}
@@ -14,12 +14,15 @@ ${PYSITELIB}/dulwich/__init__.pyo
 ${PYSITELIB}/dulwich/__main__.py
 ${PYSITELIB}/dulwich/__main__.pyc
 ${PYSITELIB}/dulwich/__main__.pyo
-${PYSITELIB}/dulwich/_diff_tree.so
-${PYSITELIB}/dulwich/_objects.so
-${PYSITELIB}/dulwich/_pack.so
 ${PYSITELIB}/dulwich/_typing.py
 ${PYSITELIB}/dulwich/_typing.pyc
 ${PYSITELIB}/dulwich/_typing.pyo
+${PYSITELIB}/dulwich/aiohttp/__init__.py
+${PYSITELIB}/dulwich/aiohttp/__init__.pyc
+${PYSITELIB}/dulwich/aiohttp/__init__.pyo
+${PYSITELIB}/dulwich/aiohttp/server.py
+${PYSITELIB}/dulwich/aiohttp/server.pyc
+${PYSITELIB}/dulwich/aiohttp/server.pyo
 ${PYSITELIB}/dulwich/annotate.py
 ${PYSITELIB}/dulwich/annotate.pyc
 ${PYSITELIB}/dulwich/annotate.pyo
@@ -159,6 +162,9 @@ ${PYSITELIB}/dulwich/midx.pyo
 ${PYSITELIB}/dulwich/notes.py
 ${PYSITELIB}/dulwich/notes.pyc
 ${PYSITELIB}/dulwich/notes.pyo
+${PYSITELIB}/dulwich/object_filters.py
+${PYSITELIB}/dulwich/object_filters.pyc
+${PYSITELIB}/dulwich/object_filters.pyo
 ${PYSITELIB}/dulwich/object_format.py
 ${PYSITELIB}/dulwich/object_format.pyc
 ${PYSITELIB}/dulwich/object_format.pyo
@@ -220,6 +226,9 @@ ${PYSITELIB}/dulwich/rerere.pyo
 ${PYSITELIB}/dulwich/server.py
 ${PYSITELIB}/dulwich/server.pyc
 ${PYSITELIB}/dulwich/server.pyo
+${PYSITELIB}/dulwich/signature.py
+${PYSITELIB}/dulwich/signature.pyc
+${PYSITELIB}/dulwich/signature.pyo
 ${PYSITELIB}/dulwich/sparse_patterns.py
 ${PYSITELIB}/dulwich/sparse_patterns.pyc
 ${PYSITELIB}/dulwich/sparse_patterns.pyo
