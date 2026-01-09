@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.28 2022/06/28 11:34:22 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.29 2026/01/09 07:35:27 wiz Exp $
 
 DISTNAME=	mailserv
 PKGNAME=	${DISTNAME}-3.29
 PKGREVISION=	10
 CATEGORIES=	mail
-MASTER_SITES=	http://www.barelyfitz.com/projects/mailserv/
+#MASTER_SITES=	http://www.barelyfitz.com/projects/mailserv/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.barelyfitz.com/projects/mailserv/
+#HOMEPAGE=	http://www.barelyfitz.com/projects/mailserv/
 COMMENT=	WWW interface to several types of mailing list servers
 
 WRKSRC=		${WRKDIR}
