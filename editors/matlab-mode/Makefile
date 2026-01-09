@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/09/21 21:22:39 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.17 2026/01/09 07:40:41 wiz Exp $
 
 DISTNAME=		matlab.el
 # we do this because we want DIST_SUBDIR to not change based on
@@ -12,7 +11,7 @@ MASTER_SITES=		http://www.mathworks.com/matlabcentral/files/104/
 EXTRACT_SUFX=
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=104&objectType=file
+HOMEPAGE=		https://github.com/mathworks/Emacs-MATLAB-Mode
 COMMENT=		Matlab mode for Emacs
 
 WRKSRC=			${WRKDIR}
