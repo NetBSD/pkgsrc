@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2024/01/13 20:08:25 riastradh Exp $
+# $NetBSD: builtin.mk,v 1.3 2026/01/09 14:34:59 wiz Exp $
 
 BUILTIN_PKG:=	bind
 
@@ -21,7 +21,7 @@ BUILTIN_FIND_LIBS:=		bind
     empty(EXE_NAMED:M__nonexistent__) && \
     empty(EXE_NAMED:M${LOCALBASE}/*)
 BUILTIN_VERSION.bind!=	\
-	${EXE_NAMED} -v 2>/dev/null | ${HEAD} -1 |			\
+	${EXE_NAMED} -v 2>/dev/null | ${SED} 1q |			\
 	${AWK} 'BEGIN { v = "4.9.11"; }					\
 		/^BIND / { v = $$2; sub("-.*", "", v); }		\
 		/^named / { v = $$2; sub("-.*", "", v); }		\
