@@ -1,4 +1,4 @@
-$NetBSD: patch-services_device_hid_BUILD.gn,v 1.13 2025/12/23 13:22:22 kikadf Exp $
+$NetBSD: patch-services_device_hid_BUILD.gn,v 1.14 2026/01/09 18:57:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
@@ -6,7 +6,7 @@ $NetBSD: patch-services_device_hid_BUILD.gn,v 1.13 2025/12/23 13:22:22 kikadf Ex
 
 --- services/device/hid/BUILD.gn.orig	2025-12-17 23:05:18.000000000 +0000
 +++ services/device/hid/BUILD.gn
-@@ -34,7 +34,33 @@ source_set("hid") {
+@@ -34,7 +34,35 @@ source_set("hid") {
      "//services/device/public/mojom",
    ]
  
@@ -32,6 +32,8 @@ $NetBSD: patch-services_device_hid_BUILD.gn,v 1.13 2025/12/23 13:22:22 kikadf Ex
 +
 +  if (is_netbsd) {
 +    sources += [
++      "hid_connection_netbsd.cc",
++      "hid_connection_netbsd.h",
 +      "hid_service_netbsd.cc",
 +      "hid_service_netbsd.h",
 +    ]

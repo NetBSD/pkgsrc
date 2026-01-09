@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2026/01/08 17:47:38 kikadf Exp $
+$NetBSD: distinfo,v 1.24 2026/01/09 18:57:04 kikadf Exp $
 
 BLAKE2s (chromium-143.0.7499.192-lite.tar.xz) = f7aba2cc60a770508bebfd82704af259110c6c40da195ab436c6f504771ce533
 SHA512 (chromium-143.0.7499.192-lite.tar.xz) = 5eb97b8559c6a141c93020f8b9a5835a926dd0ed3360ba975ba71c4bc9e1d97376332eac1eadaf224edfc9ab27c0c82ee74c6078e338aa8d0024fe4bf4353f9b
@@ -1091,7 +1091,7 @@ SHA1 (patch-services_audio_audio__sandbox__hook__linux.cc) = 77623bb0667125c871f
 SHA1 (patch-services_audio_audio__sandbox__hook__linux.h) = b423eccf88ed1cee3a5792245f788be44c7fee6c
 SHA1 (patch-services_device_BUILD.gn) = fe408a5115a36f7b7699c76fb1d6f8634eca0b1a
 SHA1 (patch-services_device_geolocation_location__provider__manager.cc) = 534e880266a02171216c2bc5422f40d2ef9368cf
-SHA1 (patch-services_device_hid_BUILD.gn) = b36aad68aa64f0c88bfb6cb73bb4b95bfe892f29
+SHA1 (patch-services_device_hid_BUILD.gn) = fae1780ea9c63702dc76a05bf96de2907fce1fcf
 SHA1 (patch-services_device_hid_hid__connection__fido.cc) = 9711a63b1c91722a8d22beffcf368678f0415870
 SHA1 (patch-services_device_hid_hid__connection__fido.h) = 3b49d82d97e77d94ce514c0d3c27954f5383dcf7
 SHA1 (patch-services_device_hid_hid__connection__freebsd.cc) = 9afe6e0a70e1852ee5b3fcb5218b4516b2dc4ae6
@@ -1101,8 +1101,6 @@ SHA1 (patch-services_device_hid_hid__service__fido.cc) = 95cb491c2940d0991e4cfd9
 SHA1 (patch-services_device_hid_hid__service__fido.h) = e3d4c2449d395ac2b4576debb58001bfcebe56e7
 SHA1 (patch-services_device_hid_hid__service__freebsd.cc) = 45a4642e328d4c891ad675105343b1310785eb7f
 SHA1 (patch-services_device_hid_hid__service__freebsd.h) = 6ff232c34f8e96edcdc8a68f60887c8937954a52
-SHA1 (patch-services_device_hid_hid__service__netbsd.cc) = bc8cb6b595935b8c1031c9aa9ddb5c196dc0b6ec
-SHA1 (patch-services_device_hid_hid__service__netbsd.h) = 80688a9c482b1c8b35e56fdb90fe49a799c622e9
 SHA1 (patch-services_device_public_cpp_device__features.cc) = 224b5457d11d04d7c7f7bab4c5119fa07fa0367f
 SHA1 (patch-services_device_public_cpp_device__features.h) = 74ee154063d3624ec6f1214e0f8018de9906b944
 SHA1 (patch-services_device_public_cpp_generic__sensor_sensor__reading.h) = 16fcdd93bf06ca945ac0f0ccfc555ed3fec314ab
