@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.31 2023/12/17 14:10:03 nros Exp $
+# $NetBSD: Makefile,v 1.32 2026/01/09 07:41:27 wiz Exp $
 
 DISTNAME=	Maude-2.6
 PKGNAME=	maude-2.6
 PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	http://maude.cs.uiuc.edu/download/
-MASTER_SITES+=	http://maude.cs.uiuc.edu/download/current/
+#MASTER_SITES=	http://maude.cs.uiuc.edu/download/
+#MASTER_SITES+=	http://maude.cs.uiuc.edu/download/current/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://maude.cs.uiuc.edu/
+HOMEPAGE=	https://maude.cs.illinois.edu/
 COMMENT=	System for equational and rewriting logic specification/programming
 LICENSE=	gnu-gpl-v2
 
