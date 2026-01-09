@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.195 2026/01/09 01:50:00 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.196 2026/01/09 05:58:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -259,3 +259,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/nss to 3.120.0 [wiz 2026-01-08]
 	Updated x11/nativefiledialog-extended to 1.3.0 [ktnb 2026-01-09]
 	Updated net/scapy to 2.7.0 [gutteridge 2026-01-09]
+	Updated textproc/icu to 78.2 [adam 2026-01-09]
+	Updated devel/py-maturin to 1.11.4 [adam 2026-01-09]
+	Updated devel/py-build to 1.4.0 [adam 2026-01-09]
