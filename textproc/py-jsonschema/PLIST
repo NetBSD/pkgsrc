@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2025/08/19 11:50:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2026/01/09 14:34:24 adam Exp $
 bin/jsonschema-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -38,6 +38,9 @@ ${PYSITELIB}/jsonschema/benchmarks/const_vs_enum.pyo
 ${PYSITELIB}/jsonschema/benchmarks/contains.py
 ${PYSITELIB}/jsonschema/benchmarks/contains.pyc
 ${PYSITELIB}/jsonschema/benchmarks/contains.pyo
+${PYSITELIB}/jsonschema/benchmarks/import_benchmark.py
+${PYSITELIB}/jsonschema/benchmarks/import_benchmark.pyc
+${PYSITELIB}/jsonschema/benchmarks/import_benchmark.pyo
 ${PYSITELIB}/jsonschema/benchmarks/issue232.py
 ${PYSITELIB}/jsonschema/benchmarks/issue232.pyc
 ${PYSITELIB}/jsonschema/benchmarks/issue232.pyo

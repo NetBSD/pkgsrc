@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2025/08/19 11:50:16 adam Exp $
+# $NetBSD: Makefile,v 1.47 2026/01/09 14:34:24 adam Exp $
 
-DISTNAME=	jsonschema-4.25.1
+DISTNAME=	jsonschema-4.26.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonschema/}
@@ -16,7 +16,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
 DEPENDS+=	${PYPKGPREFIX}-attrs>=22.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-jsonschema-specifications>=2023.03.6:../../textproc/py-jsonschema-specifications
 DEPENDS+=	${PYPKGPREFIX}-referencing>=0.28.4:../../textproc/py-referencing
-DEPENDS+=	${PYPKGPREFIX}-rpds-py>=0.7.1:../../devel/py-rpds-py
+DEPENDS+=	${PYPKGPREFIX}-rpds-py>=0.25.0:../../devel/py-rpds-py
 TEST_DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
 USE_LANGUAGES=	# none
