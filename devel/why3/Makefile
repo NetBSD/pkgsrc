@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2026/01/07 08:46:47 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/01/09 20:46:34 alnsn Exp $
 
 DISTNAME=	why3-1.8.0
 PKGREVISION=	6
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://why3.gitlabpages.inria.fr/releases/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://why3.lri.fr/
+HOMEPAGE=	https://www.why3.org/
 COMMENT=	Platform for deductive program verification
 LICENSE=	gnu-lgpl-v2.1
 
