@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.197 2026/01/09 06:11:01 adam Exp $
+$NetBSD: CHANGES-2026,v 1.198 2026/01/09 06:57:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -266,3 +266,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-dulwich to 0.25.1 [adam 2026-01-09]
 	Updated devel/py-cogapp to 3.6.0 [adam 2026-01-09]
 	Updated www/py-werkzeug to 3.1.5 [adam 2026-01-09]
+	Updated devel/orc to 0.4.42 [adam 2026-01-09]
+	Updated textproc/py-itemadapter to 0.13.1 [adam 2026-01-09]
