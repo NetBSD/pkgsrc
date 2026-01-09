@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.202 2026/01/09 12:51:10 adam Exp $
+$NetBSD: CHANGES-2026,v 1.203 2026/01/09 14:34:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -273,3 +273,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-nihtest to 1.10.0 [wiz 2026-01-09]
 	Updated devel/py-virtualenv to 20.36.0 [adam 2026-01-09]
 	Updated devel/py-tox to 4.34.0 [adam 2026-01-09]
+	Updated devel/py-pathspec to 1.0.2 [adam 2026-01-09]
+	Updated textproc/py-jsonschema to 4.26.0 [adam 2026-01-09]
