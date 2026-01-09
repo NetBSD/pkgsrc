@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/12/22 18:33:02 zafer Exp $
+# $NetBSD: Makefile,v 1.24 2026/01/09 07:42:51 wiz Exp $
 
 DISTNAME=	src-mdp-1.9a5
 PKGNAME=	${DISTNAME:S/src-//}
@@ -8,7 +8,7 @@ MASTER_SITES=	#
 DISTFILES=	src-mdp-1.9a5.tgz src-protolib-1.0a3d.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cs.itd.nrl.navy.mil/work/mdp/
+#HOMEPAGE=	http://cs.itd.nrl.navy.mil/work/mdp/
 COMMENT=	Multicast file transfer
 
 WRKSRC=		${WRKDIR}/mdp
