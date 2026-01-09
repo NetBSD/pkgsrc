@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.31 2026/01/07 08:48:24 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/01/09 14:57:01 hauke Exp $
 #
 
 # Do NOT UPGRADE to Nextcloud 4 without making sure it is functional
 # As of 4.0.1, it still has serious quality issues
 # Since 3.17.x is compatible, there is no urgent need
 
-DISTNAME=	nextcloud-client-3.17.3
-PKGREVISION=	1
+DISTNAME=	nextcloud-client-3.17.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nextcloud/}
 GITHUB_PROJECT=	desktop
@@ -43,6 +42,9 @@ CMAKE_CONFIGURE_ARGS+=	-DSVG_CONVERTER:FILEPATH=rsvg-convert
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Doxygen:BOOL=TRUE
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_PdfLatex:BOOL=TRUE
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Sphinx:BOOL=TRUE
+
+CMAKE_CONFIGURE_ARGS+=	-Wno-dev
+CMAKE_CONFIGURE_ARGS+=	-DQT_NO_PRIVATE_MODULE_WARNING=ON
 
 AUTO_MKDIRS=	yes
 
