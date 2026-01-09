@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2025/10/29 08:14:42 adam Exp $
+# $NetBSD: Makefile,v 1.62 2026/01/09 12:50:45 adam Exp $
 
-DISTNAME=	tox-4.32.0
+DISTNAME=	tox-4.34.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tox/}
@@ -11,16 +11,16 @@ COMMENT=	Virtualenv-based automation of test activities
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.5:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-cachetools>=6.2:../../devel/py-cachetools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.28:../../devel/py-hatchling
+DEPENDS+=	${PYPKGPREFIX}-cachetools>=6.2.4:../../devel/py-cachetools
 DEPENDS+=	${PYPKGPREFIX}-chardet>=5.2:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4.6:../../comms/py-colorama
-DEPENDS+=	${PYPKGPREFIX}-filelock>=3.20:../../devel/py-filelock
+DEPENDS+=	${PYPKGPREFIX}-filelock>=3.20.2:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-packaging>=25:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-platformdirs>=4.5:../../misc/py-platformdirs
+DEPENDS+=	${PYPKGPREFIX}-platformdirs>=4.5.1:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=1.6:../../devel/py-pluggy
-DEPENDS+=	${PYPKGPREFIX}-project-api>=1.9.1:../../devel/py-project-api
-DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.34:../../devel/py-virtualenv
+DEPENDS+=	${PYPKGPREFIX}-project-api>=1.10:../../devel/py-project-api
+DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.35.4:../../devel/py-virtualenv
 
 # more unpackaged TEST_DEPENDS from pyproject.toml
 # "detect-test-pollution>=1.2",
