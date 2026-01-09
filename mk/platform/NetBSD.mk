@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.88 2025/05/11 09:15:32 nia Exp $
+# $NetBSD: NetBSD.mk,v 1.89 2026/01/09 15:59:38 wiz Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -82,15 +82,7 @@ _OPSYS_HAS_INET6=	no	# IPv6 is not standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
-_OPSYS_SHLIB_TYPE=	${_OPSYS_SHLIB_TYPE_cmd:sh}	# shared library type
-_OPSYS_SHLIB_TYPE_cmd=	\
-	output=`/usr/bin/file /sbin/sysctl`;	\
-	case $$output in			\
-	*ELF*dynamically*)	echo ELF ;;	\
-	*shared*library*)	echo a.out ;;	\
-	*dynamically*)		echo a.out ;;	\
-	*)			echo ELF ;;	\
-	esac
+_OPSYS_SHLIB_TYPE=	ELF	# shared library type
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-V simple --suffix # switch to patch(1) for backup suffix
 _USE_RPATH=		yes	# add rpath to LDFLAGS
