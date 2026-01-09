@@ -1,15 +1,15 @@
-$NetBSD: patch-pyproject.toml,v 1.2 2024/02/29 21:09:17 adam Exp $
+$NetBSD: patch-pyproject.toml,v 1.3 2026/01/09 05:53:39 adam Exp $
 
-pkgsrc only has Python 3.8+, so the dependency is not needed.
+pkgsrc only has Python 3.10+, so the dependency is not needed.
 (It introduces a dependency cycle.)
 
---- pyproject.toml.orig	2024-02-29 20:24:09.035385000 +0000
+--- pyproject.toml.orig	2026-01-08 16:33:42.000000000 +0000
 +++ pyproject.toml
-@@ -38,7 +38,6 @@ dependencies = [
+@@ -37,7 +37,6 @@ dependencies = [
    "pyproject_hooks",
    # not actually a runtime dependency, only supplied as there is not "recommended dependency" support
    'colorama; os_name == "nt"',
--  'importlib-metadata >= 4.6; python_full_version < "3.10.2"',  # Not required for 3.8+, but fixes a stdlib bug
+-  'importlib-metadata >= 4.6; python_full_version < "3.10.2"',  # Not required but fixes a stdlib bug
    'tomli >= 1.1.0; python_version < "3.11"',
  ]
  
