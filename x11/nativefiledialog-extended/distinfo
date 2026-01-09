@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/01/12 15:17:14 ktnb Exp $
+$NetBSD: distinfo,v 1.2 2026/01/09 01:19:41 ktnb Exp $
 
-BLAKE2s (nativefiledialog-extended-1.2.1.tar.gz) = 1c3fb93c1708609ce68a852adf530702dac2785677a4c58ab5f650499f94c393
-SHA512 (nativefiledialog-extended-1.2.1.tar.gz) = 4ec3e174a90354c524d9be2776422740f80b73021df94e1942e60ab4310995245554f83097b9b2dcca04d016a8548d3fc0760f73daf724c5c3d72c15cf776bed
-Size (nativefiledialog-extended-1.2.1.tar.gz) = 426161 bytes
+BLAKE2s (nativefiledialog-extended-1.3.0.tar.gz) = 3e2cd71a99b81cf78773336c49c3e90b6b3d784958588b81bb50181da4e95697
+SHA512 (nativefiledialog-extended-1.3.0.tar.gz) = 1f2e17dd9ee5b416dfe1362b6eac6499c83c527a83478361769420f1d29bf21e0a81e4b6d45255703aba9be61c8379f7745fe182d74687a9c4f3309bd4fdf09e
+Size (nativefiledialog-extended-1.3.0.tar.gz) = 429165 bytes
