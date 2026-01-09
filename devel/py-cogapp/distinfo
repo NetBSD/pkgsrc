@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/06/11 19:54:21 adam Exp $
+$NetBSD: distinfo,v 1.6 2026/01/09 06:08:29 adam Exp $
 
-BLAKE2s (cogapp-3.4.1.tar.gz) = eefc2e6be69381bb677eed206efe68429b5492f62824306851c9b8c3ebda3a2b
-SHA512 (cogapp-3.4.1.tar.gz) = 7dda6720f3bfa2edca642a2082f8ad8aa4bbb6b13653e2c03d76726c88ddf433330a49d362b554f30ddab4468b9cfad6156167200b450258a697f93db1266586
-Size (cogapp-3.4.1.tar.gz) = 53776 bytes
+BLAKE2s (cogapp-3.6.0.tar.gz) = 963111dd9fc8a2a26415145a91e8ac6ba121e384cb0417c25af3dc628c0bcfc2
+SHA512 (cogapp-3.6.0.tar.gz) = 58e1fbe98ede16be7d99dc7613529f3354cdd1e6a8befdd2601956698fbeb62c269f5f3c69778ef59b6f307a673fccfd4d61d931550cfcf863e0c9d10bfb073c
+Size (cogapp-3.6.0.tar.gz) = 59742 bytes
