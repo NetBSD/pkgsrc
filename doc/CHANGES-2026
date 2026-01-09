@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.196 2026/01/09 05:58:05 adam Exp $
+$NetBSD: CHANGES-2026,v 1.197 2026/01/09 06:11:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -262,3 +262,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/icu to 78.2 [adam 2026-01-09]
 	Updated devel/py-maturin to 1.11.4 [adam 2026-01-09]
 	Updated devel/py-build to 1.4.0 [adam 2026-01-09]
+	Updated x11/py-qt6 to 6.10.2 [adam 2026-01-09]
+	Updated devel/py-dulwich to 0.25.1 [adam 2026-01-09]
+	Updated devel/py-cogapp to 3.6.0 [adam 2026-01-09]
+	Updated www/py-werkzeug to 3.1.5 [adam 2026-01-09]
