@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2025/09/27 09:57:27 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/01/09 20:30:29 alnsn Exp $
 
-DISTNAME=	gappa-1.3.5
-PKGREVISION=	1
+DISTNAME=	gappa-1.6.1
 CATEGORIES=	math
-MASTER_SITES=	https://gforge.inria.fr/frs/download.php/file/38044/
+MASTER_SITES=	https://gappa.gitlabpages.inria.fr/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gappa.gforge.inria.fr/
 COMMENT=	Formal verification tool for numerical programs
-LICENSE=	cecill-2.0 OR gnu-gpl-v3
+LICENSE=	cecill-2.1 OR gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES+=	c c++
