@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.205 2026/01/09 15:05:16 taca Exp $
+$NetBSD: CHANGES-2026,v 1.206 2026/01/09 15:28:43 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -277,3 +277,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-jsonschema to 4.26.0 [adam 2026-01-09]
 	Updated net/nextcloud-client to 3.17.4 [hauke 2026-01-09]
 	Updated www/php-contao-manager to 1.10.8 [taca 2026-01-09]
+	Updated databases/lua-ldap to 1.4.0 [sborrill 2026-01-09]
