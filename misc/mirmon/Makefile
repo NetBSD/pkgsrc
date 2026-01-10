@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:34:48 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.23 2026/01/10 07:47:52 wiz Exp $
 
 DISTNAME=		mirmon-2.11
 PKGREVISION=		5
 CATEGORIES=		misc
-MASTER_SITES=		http://www.staff.science.uu.nl/~penni101/mirmon/
+MASTER_SITES=		https://www.projects.science.uu.nl/ictbeta/mirmon/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.staff.science.uu.nl/~penni101/mirmon/
+HOMEPAGE=		https://www.projects.science.uu.nl/ictbeta/mirmon/
 COMMENT=		Monitor the state of mirror servers
 LICENSE=		apache-1.1
 
