@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.210 2026/01/10 04:04:10 scole Exp $
+$NetBSD: CHANGES-2026,v 1.211 2026/01/10 06:45:03 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -282,3 +282,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/gappa to 1.6.1 [alnsn 2026-01-09]
 	Added devel/p5-Test-Harness-Straps version 0.30 [scole 2026-01-10]
 	Updated x11/p5-Tkx to 1.10nb2 [scole 2026-01-10]
+	Updated www/hugo to 0.154.3 [triaxx 2026-01-10]
