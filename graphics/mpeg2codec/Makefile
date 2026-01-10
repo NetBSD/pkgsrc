@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/04/21 15:29:42 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/01/10 07:51:42 wiz Exp $
 
 DISTNAME=	mpeg2vidcodec_v12
 PKGNAME=	mpeg2codec-1.2
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 #MASTER_SITES=	ftp://ftp.mpeg.org/pub/mpeg/mssg/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mpeg.org/MSSG/
+#HOMEPAGE=	http://www.mpeg.org/MSSG/
 COMMENT=	MPEG Software Simulation Group's MPEG-2 Encoder and Decoder
 
 WRKSRC=		${WRKDIR}/mpeg2
