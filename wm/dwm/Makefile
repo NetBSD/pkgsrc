@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2025/08/09 15:40:02 leot Exp $
+# $NetBSD: Makefile,v 1.27 2026/01/10 21:54:14 leot Exp $
 
-DISTNAME=	dwm-6.6
+DISTNAME=	dwm-6.7
 CATEGORIES=	wm
 MASTER_SITES=	https://dl.suckless.org/dwm/
 
