@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/05/19 14:44:04 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/10 07:52:17 wiz Exp $
 
 DISTNAME=	mpfi-1.5.4
 CATEGORIES=	math
@@ -6,7 +6,7 @@ MASTER_SITES=	https://gforge.inria.fr/frs/download.php/file/38111/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gforge.inria.fr/projects/mpfi/
+#HOMEPAGE=	https://gforge.inria.fr/projects/mpfi/
 COMMENT=	Multiprecision interval arithmetic library
 LICENSE=	gnu-lgpl-v2
 
