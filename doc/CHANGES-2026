@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.217 2026/01/10 17:39:21 bsiegert Exp $
+$NetBSD: CHANGES-2026,v 1.218 2026/01/10 17:39:51 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -296,3 +296,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/py-apsw to 3.51.2.0 [adam 2026-01-10]
 	Updated www/anubis to 1.24.0 [bsiegert 2026-01-10]
 	Updated databases/sqlc to 1.30.0 [bsiegert 2026-01-10]
+	Updated x11/libdisplay-info to 0.3.0 [bsiegert 2026-01-10]
