@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.50 2026/01/03 08:33:46 triaxx Exp $
+$NetBSD: distinfo,v 1.51 2026/01/10 06:44:52 triaxx Exp $
 
 BLAKE2s (cel.dev_expr_@v_v0.24.0.mod) = 35d43d581d2a983aa8fccbcc9c49400c2bfdda9a968a0f701c187dec4ab5aade
 SHA512 (cel.dev_expr_@v_v0.24.0.mod) = 8c3d6929fe232875ec4de4ddffc12a54d0c24d7a86257013b060fe02fbd7d93a6a8d71bfac21490cd4457d9a10791db1b9c44291640f7e2cded698ea9462f63d
@@ -1389,12 +1389,12 @@ Size (github.com_yuin_goldmark_@v_v1.2.1.mod) = 41 bytes
 BLAKE2s (github.com_yuin_goldmark_@v_v1.3.5.mod) = 8cd9565cec9006d9acaaa1272611bb4f570a7f94e866ff05987335c06ca21aee
 SHA512 (github.com_yuin_goldmark_@v_v1.3.5.mod) = a6233a0864081261d4b9cda2d73cf37b236acada8f5fbc85b7b7978ccfbc3bd2949632f2fb67a7ba9db6eb43b41796df54460728379e0172082922820d6143a7
 Size (github.com_yuin_goldmark_@v_v1.3.5.mod) = 41 bytes
-BLAKE2s (github.com_yuin_goldmark_@v_v1.7.13.mod) = c07c2b9cd29f8100fd9a99dc14fc37af8bbe638799c9daad488df5d768ba0f3d
-SHA512 (github.com_yuin_goldmark_@v_v1.7.13.mod) = 0b1d49421906e9b5374b63977782a634c6d47e6c45ae36dd1e60db7995ec355dc2d349e7657954b8c2c7b910d4a1b6a45e8617c0b4590a54d662ccb2179dc060
-Size (github.com_yuin_goldmark_@v_v1.7.13.mod) = 41 bytes
-BLAKE2s (github.com_yuin_goldmark_@v_v1.7.13.zip) = 62ff00be65b9ffb45e2e3b6f6c4e9b4419d57b40dc17afe3977119d409ed136c
-SHA512 (github.com_yuin_goldmark_@v_v1.7.13.zip) = a467a1c05d1ba6aeeb963f557bf6cff144f2438c51c9ff14ae306df4cafbbb6d8c69ac8565f8b8c31ace525d6e92bb28c2233a5c5771b5394212a466b584c397
-Size (github.com_yuin_goldmark_@v_v1.7.13.zip) = 263856 bytes
+BLAKE2s (github.com_yuin_goldmark_@v_v1.7.16.mod) = c07c2b9cd29f8100fd9a99dc14fc37af8bbe638799c9daad488df5d768ba0f3d
+SHA512 (github.com_yuin_goldmark_@v_v1.7.16.mod) = 0b1d49421906e9b5374b63977782a634c6d47e6c45ae36dd1e60db7995ec355dc2d349e7657954b8c2c7b910d4a1b6a45e8617c0b4590a54d662ccb2179dc060
+Size (github.com_yuin_goldmark_@v_v1.7.16.mod) = 41 bytes
+BLAKE2s (github.com_yuin_goldmark_@v_v1.7.16.zip) = e09c8942ff6ba54fd9d75fca67b57071278dc9bdbd6452ef62dd4567a4c5e32a
+SHA512 (github.com_yuin_goldmark_@v_v1.7.16.zip) = 11148315d1711a2a91e134c964f47ca3f42007e6e1ac80ccb4243f73b8e39e497be776e0893528ab30241a813890b80d02d50da1e8e32b6518021386f0f67e23
+Size (github.com_yuin_goldmark_@v_v1.7.16.zip) = 265312 bytes
 BLAKE2s (github.com_zeebo_errs_@v_v1.4.0.mod) = 96c21e1fdb35234737a201d06b1b546c8697820284789fac590e9d440d98efa5
 SHA512 (github.com_zeebo_errs_@v_v1.4.0.mod) = c1c7f7a6ad74e10b58926021d4cb4887bdf8e48615e8af8f120b418efb011c60c3ce423eb102762c1bdbdcf032b10c06d508b54177b1baf5a71836ab0e7e101b
 Size (github.com_zeebo_errs_@v_v1.4.0.mod) = 38 bytes
@@ -2514,9 +2514,9 @@ Size (howett.net_plist_@v_v1.0.0.mod) = 218 bytes
 BLAKE2s (howett.net_plist_@v_v1.0.0.zip) = 6c0b133ce84d8994a7c188e83ce7bae86228b60829ec29211d1a8f1a446cb945
 SHA512 (howett.net_plist_@v_v1.0.0.zip) = 7d63e5489b2b007736952dd57855fce61e8bbb38599f45d56d846ca23cb65e2db3070a2af39647c4d02f228511c2d44338904e2e83cb156df6f5aefdfa6e1aaf
 Size (howett.net_plist_@v_v1.0.0.zip) = 71680 bytes
-BLAKE2s (hugo-0.154.2.tar.gz) = 5b96529904566a36419c83acc9004cfcab59d61e67d6afd77993101ddb1cc1a4
-SHA512 (hugo-0.154.2.tar.gz) = 29a0c88d876becf5cb11245fe9edeba6ccf2535d59e93d646ecd56f6a317cd9e97664cf0b595e2d1dae306c54d1ddd8813fb7be5a49a69cf180e837e459a648d
-Size (hugo-0.154.2.tar.gz) = 15859887 bytes
+BLAKE2s (hugo-0.154.3.tar.gz) = 2e74e736059a3d5caf6bc41b411cd6122279acb3a59889dd3b4a48baca5e06c5
+SHA512 (hugo-0.154.3.tar.gz) = bbbb35569bd405ea97f1a5df0a3827c5dc4d8ca04722ae58da7deb8a337c38b88af91720519de47d85bddb94174ff2fe00eaa5c079c298ddc220b5c41c974cfa
+Size (hugo-0.154.3.tar.gz) = 15860313 bytes
 BLAKE2s (rsc.io_binaryregexp_@v_v0.2.0.mod) = 351240374eb48b99bb43b8b52aa8467662e22b18ebf216f4c123858fe706c2f8
 SHA512 (rsc.io_binaryregexp_@v_v0.2.0.mod) = db50ff677b0bdccbc1a1ad3df7c5cc76f2fcccf3ab99d08d1c2868440eb9b893fe89452f4286f7d42f2f16abf0f4acda67fe86e174dcfa730a743aafcc166774
 Size (rsc.io_binaryregexp_@v_v0.2.0.mod) = 36 bytes

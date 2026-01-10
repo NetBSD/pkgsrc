@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.32 2026/01/02 15:31:49 triaxx Exp $
+# $NetBSD: go-modules.mk,v 1.33 2026/01/10 06:44:52 triaxx Exp $
 
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.24.0.mod
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.24.0.zip
@@ -463,8 +463,8 @@ GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.1.27.mod
 GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.1.32.mod
 GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.2.1.mod
 GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.3.5.mod
-GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.7.13.mod
-GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.7.13.zip
+GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.7.16.mod
+GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.7.16.zip
 GO_MODULE_FILES+=	github.com/zeebo/errs/@v/v1.4.0.mod
 GO_MODULE_FILES+=	github.com/zeebo/errs/@v/v1.4.0.zip
 GO_MODULE_FILES+=	go.opencensus.io/@v/v0.21.0.mod
