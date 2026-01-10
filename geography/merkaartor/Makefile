@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2026/01/07 08:47:12 wiz Exp $
+# $NetBSD: Makefile,v 1.159 2026/01/10 07:41:10 wiz Exp $
 
 DISTNAME=	merkaartor-0.20.0
 PKGREVISION=	22
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	merkaartor
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://www.merkaartor.be/
+HOMEPAGE=	https://www.merkaartor.be/
 COMMENT=	OpenStreetMap mapping program
 LICENSE=	gnu-gpl-v2
 
