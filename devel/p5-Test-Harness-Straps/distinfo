@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/01/10 03:26:46 scole Exp $
+
+BLAKE2s (Test-Harness-Straps-0.30.tar.gz) = ab98fcf501626641a156356e65c3f7b2a1bb9632501f9a557181eb76ad022fa5
+SHA512 (Test-Harness-Straps-0.30.tar.gz) = c9546d9ccccf0a91bfe0567f188b94f2173f8b93cbd903319b65a0a7ba4d464d00b4d961493dc736a5c81c84958ae24c8f227697274343ceae057ac27ca3ac33
+Size (Test-Harness-Straps-0.30.tar.gz) = 18612 bytes

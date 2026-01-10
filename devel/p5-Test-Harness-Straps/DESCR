@@ -1,0 +1,6 @@
+Detailed analysis of perl test results.
+
+THIS MODULE IS FOR BACKWARDS COMPATIBILITY ONLY! No further
+development is planned, no bugs will be fixed.
+
+For customizable TAP parsing please use TAP::Parser instead.
