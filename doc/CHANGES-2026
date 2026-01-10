@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.221 2026/01/10 21:13:00 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.222 2026/01/10 21:54:18 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -300,3 +300,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed mail/mopher [wiz 2026-01-10]
 	Updated devel/why3 to 1.8.2 [alnsn 2026-01-10]
 	Removed x11/lesstif [wiz 2026-01-10]
+	Updated wm/dwm to 6.7 [leot 2026-01-10]
