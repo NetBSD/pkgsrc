@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/01/07 15:55:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2026/01/10 17:39:35 bsiegert Exp $
 
-DISTNAME=	libdisplay-info-0.2.0
+DISTNAME=	libdisplay-info-0.3.0
 CATEGORIES=	x11
 MASTER_SITES=	https://gitlab.freedesktop.org/emersion/libdisplay-info/-/releases/${PKGVERSION_NOREV}/downloads/
 EXTRACT_SUFX=	.tar.xz
