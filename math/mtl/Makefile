@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2018/01/01 18:16:38 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2026/01/10 07:53:21 wiz Exp $
 
 DISTNAME=		mtl-2.1.2-22
 PKGNAME=		mtl-2.1.2.22
 CATEGORIES=		math devel
-MASTER_SITES=		http://www.osl.iu.edu/download/research/mtl/
+#MASTER_SITES=		http://www.osl.iu.edu/download/research/mtl/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.osl.iu.edu/research/mtl/
+#HOMEPAGE=		http://www.osl.iu.edu/research/mtl/
 COMMENT=		Matrix Template Library
 
 GNU_CONFIGURE=		yes
