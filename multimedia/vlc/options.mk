@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.41 2024/04/27 12:18:10 pho Exp $
+# $NetBSD: options.mk,v 1.42 2026/01/10 16:08:56 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		alsa avahi dbus debug dts jack pulseaudio
@@ -162,7 +162,7 @@ PLIST.vaapi=		yes
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-libva
-.include "../../multimedia/ffmpeg6/buildlink3.mk"
+.include "../../multimedia/ffmpeg8/buildlink3.mk"
 .endif
 
 ## VDPAU support
