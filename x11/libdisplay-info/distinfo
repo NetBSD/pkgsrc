@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2025/12/18 21:49:09 maya Exp $
+$NetBSD: distinfo,v 1.3 2026/01/10 17:39:35 bsiegert Exp $
 
-BLAKE2s (libdisplay-info-0.2.0.tar.xz) = 5e376ce163930f42f10da7f3a46ffc5bcd527022ef5c6f5bfd5659fdc1365af9
-SHA512 (libdisplay-info-0.2.0.tar.xz) = 6e910b832860d920a4be298a2b6925f701654bd7cdd8b3457e64663c25caa20a74b81b91f71878b9e7f5f70c5c067235f0c99293650231920c67d1241a61e1fb
-Size (libdisplay-info-0.2.0.tar.xz) = 95280 bytes
+BLAKE2s (libdisplay-info-0.3.0.tar.xz) = e32735dc152bccbc737ba2453e88459ca5ae0cb48828e72402f7ae59c3bd8351
+SHA512 (libdisplay-info-0.3.0.tar.xz) = 3266633d75ccd345dda5a8aad75f310e55a77654b48f17a247b35e18060b6db1047a69083cd286b43ec893125a36c4c43659af8f74a04da3278eea9fdd91efe9
+Size (libdisplay-info-0.3.0.tar.xz) = 113028 bytes
 SHA1 (patch-meson.build) = ee16893466ff2a12ed2a58eb429410a2d8f42d74
