@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.208 2026/01/09 20:38:44 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.209 2026/01/10 03:35:18 scole Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -280,3 +280,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/lua-ldap to 1.4.0 [sborrill 2026-01-09]
 	Updated www/chromium to 143.0.7499.192nb1 [kikadf 2026-01-09]
 	Updated math/gappa to 1.6.1 [alnsn 2026-01-09]
+	Added devel/p5-Test-Harness-Straps version 0.30 [scole 2026-01-10]
