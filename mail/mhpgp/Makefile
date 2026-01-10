@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2019/05/31 17:09:01 leot Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/10 07:44:12 wiz Exp $
 
 DISTNAME=	gnupg-scripts-for-mh
 PKGNAME=	mhpgp-20070530
 CATEGORIES=	mail
-MASTER_SITES=	http://faculty.cs.niu.edu/~rickert/mh/
+MASTER_SITES=	https://faculty.cs.niu.edu/~rickert/mh/
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	http://faculty.cs.niu.edu/~rickert/mh/
+HOMEPAGE=	https://faculty.cs.niu.edu/~rickert/mh/
 COMMENT=	MH scripts to assist PGP operations on emails
 LICENSE=	public-domain
 
