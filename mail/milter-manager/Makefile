@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2025/11/17 11:01:05 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.59 2026/01/10 07:45:02 wiz Exp $
 
 DISTNAME=	milter-manager-${VERSION}
 PKGREVISION=	2
@@ -8,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=milter-manager/}
 GITHUB_RELEASE=	${VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://milter-manager.sourceforge.net/
+HOMEPAGE=	https://github.com/milter-manager/milter-manager
 COMMENT=	Milter to use milters effectively
 
 VERSION=	2.2.7
