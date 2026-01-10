@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2013/05/16 12:37:35 obache Exp $
+# $NetBSD: Makefile,v 1.14 2026/01/10 07:43:27 wiz Exp $
 
 DISTNAME=		metis-4.0.3
 CATEGORIES=		math
 MASTER_SITES=		http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://glaros.dtc.umn.edu/gkhome/views/metis/
+HOMEPAGE=		https://github.com/KarypisLab/METIS
 COMMENT=		Unstructured graph partitioning and sparse matrix ordering system
 
 BUILD_TARGET=		default
