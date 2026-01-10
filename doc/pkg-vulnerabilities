@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.711 2026/01/10 12:22:18 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.712 2026/01/10 13:00:41 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29348,3 +29348,4 @@ py{27,310,311,312,313,314}-virtualenv<20.36.1	symlink-attack	https://nvd.nist.go
 py{27,310,311,312,313,314}-werkzeug<3.1.5	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-21860
 wget2<2.2.1	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-69194
 wget2<2.2.1	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-69195
+py{27,310,311,312,313,314}-aiohttp<3.13.3	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-69226
