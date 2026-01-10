@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2023/10/23 06:37:46 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/01/10 09:44:30 adam Exp $
 
 DISTNAME=	libepoxy-1.5.10
 PKGREVISION=	2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/anholt/libepoxy
 COMMENT=	Library for OpenGL function pointer management
 LICENSE=	mit
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	epoxy.pc.in
