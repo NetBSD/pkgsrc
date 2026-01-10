@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/09/03 08:53:15 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.7 2026/01/10 07:48:36 wiz Exp $
 
 DISTNAME=	mkmemstick-20111206
 CATEGORIES=	sysutils
@@ -7,7 +6,7 @@ MASTER_SITES=	# none
 DISTFILES=	# none
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	https://genericzero.wordpress.com/2009/08/01/install-netbsd-from-a-usb-memory-stick-the-easy-way/
+#HOMEPAGE=	https://genericzero.wordpress.com/2009/08/01/install-netbsd-from-a-usb-memory-stick-the-easy-way/
 COMMENT=	Create a memory stick image from NetBSD Installation CDs
 
 DEPENDS+=	cdrtools-[0-9]*:../../sysutils/cdrtools
