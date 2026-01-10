@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2024/05/22 09:46:12 bouyer Exp $
+# $NetBSD: Makefile,v 1.49 2026/01/10 07:48:11 wiz Exp $
 
 DISTNAME=	mirror-2.9
 PKGREVISION=	15
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	# ftp://src.doc.ic.ac.uk/computing/archiving/mirror/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.sunsite.org.uk/packages/mirror/
+#HOMEPAGE=	http://www.sunsite.org.uk/packages/mirror/
 COMMENT=	Mirror packages on remote sites
 LICENSE=	mit
 
