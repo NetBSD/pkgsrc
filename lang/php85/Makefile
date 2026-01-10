@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/01/08 13:38:00 taca Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/10 09:10:48 taca Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -37,11 +37,14 @@ PKGCONFIG_PATHS+=	${X11BASE}/lib/pkgconfig
 .endif
 
 PHP_PKGCONFIG_PATH=	${PKGCONFIG_PATHS:ts:}
+SUBST_FILES.path+=	${WRKDIR}/${PHP_PKGSRC_README:T}
 
 REPLACE_PHP=		ext/phar/phar/phar.php run-tests.php
 
 INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${PHP_EGDIR} \
 			${PHP_SHAREDIR}
+
+PHP_PKGSRC_README=	../../lang/php/files/README.pkgsrc
 
 # Make sure modules can link correctly
 .if ${OPSYS} == "Darwin"
