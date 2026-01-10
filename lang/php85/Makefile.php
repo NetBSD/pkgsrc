@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.1 2026/01/08 13:38:00 taca Exp $
+# $NetBSD: Makefile.php,v 1.2 2026/01/10 09:10:48 taca Exp $
 # used by lang/php85/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -23,8 +23,6 @@ PLIST_VARS+=		dtrace
 
 DISTINFO_FILE=	${.CURDIR}/../../lang/php85/distinfo
 PATCHDIR=	${.CURDIR}/../../lang/php85/patches
-
-PHP_PKGSRC_README=	../../lang/php/files/README.pkgsrc
 
 PLIST_SUBST+=	PHP_VER="${PHP_VER}"
 
@@ -87,7 +85,6 @@ SUBST_FILES.path+=	sapi/cgi/Makefile.frag
 SUBST_FILES.path+=	sapi/fpm/php-fpm.conf.in sapi/fpm/www.conf.in
 SUBST_FILES.path+=	sapi/fpm/fpm/fpm_conf.c
 SUBST_FILES.path+=	scripts/php-config.in scripts/phpize.in
-SUBST_FILES.path+=	${WRKDIR}/${PHP_PKGSRC_README:T}
 SUBST_VARS.path=	PREFIX CGIDIR PHP_VER PHP_API_VERS
 SUBST_VARS.path+=	PHP_EGDIR PHP_INCDIR PHP_LIBDIR
 SUBST_VARS.path+=	TOOLS_PATH.pkg-config PHP_PKGCONFIG_PATH
