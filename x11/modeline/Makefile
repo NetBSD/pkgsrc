@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.18 2025/01/27 18:59:07 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2026/01/10 07:49:27 wiz Exp $
 
 DISTNAME=		modeline_vfr.c
 PKGNAME=		modeline-20060729
 PKGREVISION=		1
 CATEGORIES=		x11
-MASTER_SITES=		http://www.bohne-lang.de/spec/linux/modeline/
+#MASTER_SITES=		http://www.bohne-lang.de/spec/linux/modeline/
 DIST_SUBDIR=		${PKGNAME_NOREV}
 EXTRACT_SUFX=		# empty
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.bohne-lang.de/spec/linux/modeline/
+#HOMEPAGE=		http://www.bohne-lang.de/spec/linux/modeline/
 COMMENT=		Calculates XF86 Modelines to configure your monitor for X11R6
 
 WRKSRC=			${WRKDIR}/modeline
