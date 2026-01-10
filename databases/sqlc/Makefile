@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2026/01/03 22:23:46 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/01/10 17:39:05 bsiegert Exp $
 
-DISTNAME=	sqlc-1.28.0
+DISTNAME=	sqlc-1.30.0
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-PKGREVISION=	7
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sqlc-dev/}
 
@@ -14,7 +13,7 @@ LICENSE=	mit
 USE_LANGUAGES=		c c++ # go
 GO_BUILD_PATTERN=	./cmd/sqlc
 
-BROKEN_EXCEPT_ON_PLATFORM+=	Darwin-[0-9]*
+BROKEN_EXCEPT_ON_PLATFORM+=	Darwin-[0-9]* Linux-[0-9]*
 
 .include "go-modules.mk"
 
