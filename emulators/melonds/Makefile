@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2025/10/23 20:36:50 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/01/10 07:40:53 wiz Exp $
 
 DISTNAME=	melonDS-0.8.3
 PKGNAME=	${DISTNAME:S/DS/ds/}
@@ -7,7 +7,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Arisotura/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://melonds.kuribo64.net/
+HOMEPAGE=	https://melonds.kuribo64.net/
 COMMENT=	Nintendo DS emulator, sorta
 LICENSE=	gnu-gpl-v3
 
