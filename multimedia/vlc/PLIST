@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.78 2025/08/06 09:51:47 kikadf Exp $
+@comment $NetBSD: PLIST,v 1.79 2026/01/10 16:08:56 ryoon Exp $
 bin/cvlc
 ${PLIST.qt5}bin/qvlc
 bin/rvlc
@@ -218,7 +218,6 @@ lib/vlc/plugins/audio_output/libamem_plugin.la
 ${PLIST.jack}lib/vlc/plugins/audio_output/libjack_plugin.la
 ${PLIST.oss}lib/vlc/plugins/audio_output/liboss_plugin.la
 ${PLIST.pulseaudio}lib/vlc/plugins/audio_output/libpulse_plugin.la
-lib/vlc/plugins/codec/liba52_plugin.la
 lib/vlc/plugins/codec/libadpcm_plugin.la
 lib/vlc/plugins/codec/libaes3_plugin.la
 lib/vlc/plugins/codec/libaraw_plugin.la
@@ -286,6 +285,7 @@ lib/vlc/plugins/demux/libdemux_stl_plugin.la
 lib/vlc/plugins/demux/libdemuxdump_plugin.la
 lib/vlc/plugins/demux/libdiracsys_plugin.la
 lib/vlc/plugins/demux/libdirectory_demux_plugin.la
+lib/vlc/plugins/demux/libdmxmus_plugin.la
 lib/vlc/plugins/demux/libes_plugin.la
 lib/vlc/plugins/demux/libflacsys_plugin.la
 lib/vlc/plugins/demux/libh26x_plugin.la
@@ -468,7 +468,6 @@ lib/vlc/plugins/video_filter/libmotionblur_plugin.la
 lib/vlc/plugins/video_filter/libmotiondetect_plugin.la
 lib/vlc/plugins/video_filter/liboldmovie_plugin.la
 lib/vlc/plugins/video_filter/libposterize_plugin.la
-lib/vlc/plugins/video_filter/libpostproc_plugin.la
 lib/vlc/plugins/video_filter/libpsychedelic_plugin.la
 lib/vlc/plugins/video_filter/libpuzzle_plugin.la
 lib/vlc/plugins/video_filter/libripple_plugin.la
@@ -552,7 +551,7 @@ share/locale/am/LC_MESSAGES/vlc.mo
 share/locale/am_ET/LC_MESSAGES/vlc.mo
 share/locale/an/LC_MESSAGES/vlc.mo
 share/locale/ar/LC_MESSAGES/vlc.mo
-share/locale/as_IN/LC_MESSAGES/vlc.mo
+share/locale/as/LC_MESSAGES/vlc.mo
 share/locale/ast/LC_MESSAGES/vlc.mo
 share/locale/be/LC_MESSAGES/vlc.mo
 share/locale/bg/LC_MESSAGES/vlc.mo
@@ -650,7 +649,7 @@ share/locale/wa/LC_MESSAGES/vlc.mo
 share/locale/zh_CN/LC_MESSAGES/vlc.mo
 share/locale/zh_TW/LC_MESSAGES/vlc.mo
 share/locale/zu/LC_MESSAGES/vlc.mo
-share/metainfo/vlc.appdata.xml
+share/metainfo/org.videolan.vlc.appdata.xml
 share/vlc/lua/http/css/main.css
 share/vlc/lua/http/css/mobile.css
 share/vlc/lua/http/css/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png
