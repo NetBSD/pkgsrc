@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.220 2026/01/10 18:32:17 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.221 2026/01/10 21:13:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -299,3 +299,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/libdisplay-info to 0.3.0 [bsiegert 2026-01-10]
 	Removed mail/mopher [wiz 2026-01-10]
 	Updated devel/why3 to 1.8.2 [alnsn 2026-01-10]
+	Removed x11/lesstif [wiz 2026-01-10]
