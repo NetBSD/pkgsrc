@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2025/10/09 07:57:49 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/01/11 10:28:54 adam Exp $
 
-DISTNAME=	scikit_learn-1.6.1
+DISTNAME=	scikit_learn-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-learn/}
@@ -11,10 +11,10 @@ COMMENT=	Machine learning algorithms for Python
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	meson>=1.1.0:../../devel/meson
-TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.16.0:../../devel/py-meson_python
-DEPENDS+=	${PYPKGPREFIX}-joblib>=1.2.0:../../devel/py-joblib
-DEPENDS+=	${PYPKGPREFIX}-scipy>=1.6.0:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-threadpoolctl>=3.1.0:../../parallel/py-threadpoolctl
+TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.17.1:../../devel/py-meson_python
+DEPENDS+=	${PYPKGPREFIX}-joblib>=1.3.0:../../devel/py-joblib
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.10.0:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-threadpoolctl>=3.2.0:../../parallel/py-threadpoolctl
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.9.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	c c++ fortran
@@ -32,10 +32,10 @@ post-install:
 do-test:
 	cd ${DESTDIR}${PREFIX}/${PYSITELIB}/sklearn && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
-BUILDLINK_API_DEPENDS.py-cython+=	${PYPKGPREFIX}-cython>=3
+BUILDLINK_API_DEPENDS.py-cython+=	${PYPKGPREFIX}-cython>=3.1.2
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
-BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.19.5
+BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.24.1
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
