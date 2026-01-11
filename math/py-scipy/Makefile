@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.103 2025/10/30 14:58:40 adam Exp $
+# $NetBSD: Makefile,v 1.104 2026/01/11 08:15:05 adam Exp $
 
-DISTNAME=	scipy-1.16.3
+DISTNAME=	scipy-1.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
@@ -15,7 +15,8 @@ TOOL_DEPENDS+=	meson>=1.5.0:../../devel/meson
 TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.15.0:../../devel/py-meson_python
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pythran>=0.14.0:../../math/py-pythran
-TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
+TEST_DEPENDS+=	${PYPKGPREFIX}-gmpy2-[0-9]*:../../math/py-gmpy2
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.30:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-mpmath-[0-9]*:../../math/py-mpmath
 TEST_DEPENDS+=	${PYPKGPREFIX}-pooch-[0-9]*:../../devel/py-pooch
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
@@ -39,7 +40,6 @@ SUBST_CLASSES+=		f2py
 SUBST_STAGE.f2py=	pre-configure
 SUBST_MESSAGE.f2py=	Fixing f2py binary name.
 SUBST_FILES.f2py=	scipy/meson.build
-SUBST_FILES.f2py+=	tools/generate_f2pymod.py
 SUBST_SED.f2py=		-e "s,('f2py'),('f2py-${PYVERSSUFFIX}'),"
 SUBST_SED.f2py+=	-e "s,\['f2py',\['f2py-${PYVERSSUFFIX}',"
 
@@ -108,7 +108,7 @@ do-test:
 .include "../../lang/python/wheel.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../mk/blas.buildlink3.mk"
-BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.23.5
+BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=2.0.0
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../math/py-pythran/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
