@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.239 2026/01/11 10:11:24 adam Exp $
+$NetBSD: CHANGES-2026,v 1.240 2026/01/11 10:35:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -333,3 +333,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/py-checkdmarc to 5.13.2 [adam 2026-01-11]
 	Updated www/py-flask-flatpages to 0.9.0 [adam 2026-01-11]
 	Updated sysutils/py-fsspec to 2026.1.0 [adam 2026-01-11]
+	Updated textproc/py-rst2pdf to 0.104 [adam 2026-01-11]
+	Updated www/py-starlette to 0.51.0 [adam 2026-01-11]
+	Updated math/py-scikit-learn to 1.8.0 [adam 2026-01-11]
+	Updated math/py-scikit-image to 0.26.0 [adam 2026-01-11]
