@@ -1,15 +1,15 @@
-# $NetBSD: Makefile.common,v 1.19 2013/04/13 07:55:04 ghen Exp $
+# $NetBSD: Makefile.common,v 1.20 2026/01/11 05:23:01 wiz Exp $
 #
 # used by net/mydns-mysql/Makefile
 # used by net/mydns-pgsql/Makefile
 
 DISTNAME=		mydns-1.1.0
 CATEGORIES=		net
-MASTER_SITES=		http://mydns.bboy.net/download/
+MASTER_SITES=		https://mydns.bboy.net/download/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://mydns.bboy.net/
+HOMEPAGE=		https://mydns.bboy.net/
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		makeinfo
