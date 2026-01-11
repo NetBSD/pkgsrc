@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.237 2026/01/11 09:36:43 adam Exp $
+$NetBSD: CHANGES-2026,v 1.238 2026/01/11 09:59:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -325,3 +325,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/py-octoprint-firmwarecheck to 2025.7.23 [adam 2026-01-11]
 	Updated print/py-octoprint-pisupport to 2025.7.23 [adam 2026-01-11]
 	Updated print/py-octoprint to 1.11.5 [adam 2026-01-11]
+	Updated finance/py-stripe to 14.1.0 [adam 2026-01-11]
+	Updated devel/py-zope.interface to 8.2 [adam 2026-01-11]
+	Updated www/py-websockets to 16.0 [adam 2026-01-11]
+	Updated devel/py-jupyter_client to 8.8.0 [adam 2026-01-11]
