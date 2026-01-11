@@ -1,6 +1,6 @@
-$NetBSD: patch-agent_mibgroup_hardware_cpu_cpu__sysctl.c,v 1.8 2022/10/18 12:01:52 adam Exp $
+$NetBSD: patch-agent_mibgroup_hardware_cpu_cpu__sysctl.c,v 1.9 2026/01/11 05:07:59 wiz Exp $
 
---- agent/mibgroup/hardware/cpu/cpu_sysctl.c.orig	2022-07-13 21:14:14.000000000 +0000
+--- agent/mibgroup/hardware/cpu/cpu_sysctl.c.orig	2025-12-20 15:03:33.000000000 +0000
 +++ agent/mibgroup/hardware/cpu/cpu_sysctl.c
 @@ -10,6 +10,7 @@
  
@@ -38,16 +38,18 @@ $NetBSD: patch-agent_mibgroup_hardware_cpu_cpu__sysctl.c,v 1.8 2022/10/18 12:01:
  
      /*
       * Strictly speaking, BSDi ought to use
-@@ -255,6 +259,32 @@ int netsnmp_cpu_arch_load( netsnmp_cache
-     cpu->pageOut      = mem_stats.NS_VM_PAGEOUT;
+@@ -253,6 +257,32 @@ int netsnmp_cpu_arch_load( netsnmp_cache *cache, void 
  #endif
- 
+ #ifdef NS_VM_PAGEOUT
+     cpu->pageOut      = mem_stats.NS_VM_PAGEOUT;
++#endif
++
 +#if defined(__NetBSD__)
 +    {
 +	NETSNMP_CPU_STATS *ncpu_stats;
++	int i;
 +	size_t ncpu_size = sizeof(*ncpu_stats) * cpu_num * CPUSTATES;
 +	ncpu_stats = malloc(ncpu_size);
-+	int i;
 +	if (ncpu_stats == NULL) {
 +	    snmp_log(LOG_ERR, "no memory for kern.cp_time (errno %d)\n", errno);
 +	    return -1;
@@ -66,8 +68,6 @@ $NetBSD: patch-agent_mibgroup_hardware_cpu_cpu__sysctl.c,v 1.8 2022/10/18 12:01:
 +	}
 +	free(ncpu_stats);
 +    }
-+#endif
-+
+ #endif
+ 
  #ifdef NETSNMP_KERN_MCPU
- #if defined(KERN_CPTIME2)
-     mcpu_size  = cpu_num*sizeof(cpu_stats);

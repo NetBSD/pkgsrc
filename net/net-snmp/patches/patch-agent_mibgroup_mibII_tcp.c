@@ -1,8 +1,8 @@
-$NetBSD: patch-agent_mibgroup_mibII_tcp.c,v 1.2 2024/02/21 10:21:01 wiz Exp $
+$NetBSD: patch-agent_mibgroup_mibII_tcp.c,v 1.3 2026/01/11 05:08:00 wiz Exp $
 
---- agent/mibgroup/mibII/tcp.c.orig	2023-08-15 20:32:01.000000000 +0000
+--- agent/mibgroup/mibII/tcp.c.orig	2025-12-20 15:03:33.000000000 +0000
 +++ agent/mibgroup/mibII/tcp.c
-@@ -205,6 +205,16 @@ typedef uint32_t tcp_stats[TCP_NSTATS];
+@@ -215,6 +215,16 @@ typedef uint32_t tcp_stats[TCP_NSTATS];
  #define USES_TRADITIONAL_TCPSTAT
  #endif
  
@@ -19,10 +19,11 @@ $NetBSD: patch-agent_mibgroup_mibII_tcp.c,v 1.2 2024/02/21 10:21:01 wiz Exp $
  #if !defined(TCP_STAT_STRUCTURE)
  #define TCP_STAT_STRUCTURE	struct tcpstat
  #define USES_TRADITIONAL_TCPSTAT
-@@ -332,6 +342,75 @@ tcp_handler(netsnmp_mib_handler         
+@@ -341,6 +351,75 @@ tcp_handler(netsnmp_mib_handler          *handler,
+ 	}
  #elif defined(solaris2)
          ret_value = tcpstat.tcpOutRsts;
-         break;
++        break;
 +#elif defined(TCP_NSTAT)
 +    case TCPRTOALGORITHM:      /* Assume Van Jacobsen's algorithm */
 +        ret_value = 4;
@@ -91,7 +92,6 @@ $NetBSD: patch-agent_mibgroup_mibII_tcp.c,v 1.2 2024/02/21 10:21:01 wiz Exp $
 +        break;
 +    case TCPOUTRSTS:
 +        ret_value = tcpstat[TCP_STAT_SNDCTRL] - tcpstat[TCP_STAT_CLOSED];
-+        break;
+         break;
  #endif			/* linux */
          netsnmp_set_request_error(reqinfo, request, SNMP_NOSUCHOBJECT);
-         continue;

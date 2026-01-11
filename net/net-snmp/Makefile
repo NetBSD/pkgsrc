@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.146 2025/10/07 14:59:50 wiz Exp $
+# $NetBSD: Makefile,v 1.147 2026/01/11 05:07:59 wiz Exp $
 
-PKGREVISION= 2
 .include "Makefile.common"
 CATEGORIES=	net
 
@@ -99,6 +98,8 @@ CONFIGURE_ARGS+=	--with-dummy-values
 # older software to use net-snmp.
 #
 CONFIGURE_ARGS+=	--enable-ucd-snmp-compatibility
+
+MAKE_ENV+=		NETSNMP_DONT_CHECK_VERSION=1
 
 # Handle ${PREFIX}/share/snmp in the DEINSTALL script since it may contain
 # leftover config files or pidfiles after deinstallation.
