@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.233 2026/01/11 06:00:41 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.234 2026/01/11 08:18:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -312,3 +312,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-pdf to 6.6.0 [wiz 2026-01-11]
 	Updated textproc/ruby-nokogiri to 1.19.0 [tsutsui 2026-01-11]
 	Updated fonts/harfbuzz to 12.3.0nb1 [wiz 2026-01-11]
+	Updated math/py-scipy to 1.17.0 [adam 2026-01-11]
+	Updated devel/py-hypothesis to 6.150.0 [adam 2026-01-11]
+	Updated devel/py-types-gdb to 16.3.0.20260109 [adam 2026-01-11]
