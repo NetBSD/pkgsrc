@@ -1,4 +1,4 @@
-$NetBSD: patch-include_common.h,v 1.2 2026/01/09 23:02:01 nia Exp $
+$NetBSD: patch-include_common.h,v 1.3 2026/01/11 10:56:22 nia Exp $
 
 Stable NetBSD releases leak bswap which conflicts with upstream's
 definition.
@@ -10,7 +10,7 @@ definition.
  #include <stdarg.h>
  #include <stdio.h>
 +#ifdef __NetBSD__
-+#include <sys/bswap.h>
++#include <sys/endian.h>
 +#endif
  
  #include "qtypes.h"
