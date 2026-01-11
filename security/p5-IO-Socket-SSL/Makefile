@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.151 2025/07/13 21:19:59 wiz Exp $
+# $NetBSD: Makefile,v 1.152 2026/01/11 04:49:47 wiz Exp $
 
-DISTNAME=	IO-Socket-SSL-2.095
+DISTNAME=	IO-Socket-SSL-2.098
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	security net perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../..//authors/id/S/SU/SULLR/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/IO-Socket-SSL
