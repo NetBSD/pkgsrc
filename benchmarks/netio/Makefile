@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/01/27 20:47:19 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2026/01/11 05:37:17 wiz Exp $
 
 DISTNAME=	netio133
 PKGNAME=	netio-1.33
@@ -7,7 +7,7 @@ MASTER_SITES=	https://www.aydogan.net/distfiles/benchmarks/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://web.ars.de/netio/
+HOMEPAGE=	https://github.com/kai-uwe-rommel/netio
 COMMENT=	Network benchmark for OS/2 2.x, Windows NT/2000 and Unix
 LICENSE=	no-commercial-use
 
