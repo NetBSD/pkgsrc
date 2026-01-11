@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.159 2026/01/07 08:47:14 wiz Exp $
+# $NetBSD: Makefile,v 1.160 2026/01/11 20:14:01 gdt Exp $
 
-VERSION=		1.10
+VERSION=		1.11
 DISTNAME=		viking-${VERSION}
-PKGREVISION=		36
 CATEGORIES=		geography
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=viking/}${VERSION}/
 EXTRACT_SUFX=		.tar.bz2
@@ -32,6 +31,9 @@ TEST_TARGET=		check
 CONFIGURE_ARGS+=	--disable-geoclue
 
 # \todo RESOLVE
+CONFIGURE_ARGS+=	--disable-nova
+
+# \todo RESOLVE
 CONFIGURE_ARGS+=	--disable-magic
 
 # \todo RESOLVE
@@ -54,6 +56,9 @@ CONFIGURE_ARGS+=	--disable-zip
 # \todo Resolve.
 #CONFIGURE_ARGS+=	--enable-gtk-doc
 #.include "../../textproc/gtk-doc/buildlink3.mk"
+
+# for xxd
+DEPENDS+=		vim-share-[0-9]*:../../editors/vim-share
 
 # According to upstream, gpsbabel is merely recommended.  gpsbabel
 # depends on qt, and is thus really large.  Users can install it and
