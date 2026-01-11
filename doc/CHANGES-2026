@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.223 2026/01/11 00:07:11 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.224 2026/01/11 04:47:15 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -302,3 +302,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed x11/lesstif [wiz 2026-01-10]
 	Updated wm/dwm to 6.7 [leot 2026-01-10]
 	Updated geography/qgis to 3.44.6 [gdt 2026-01-11]
+	Updated net/ruby-addressable to 2.8.8 [tsutsui 2026-01-11]
