@@ -1,11 +1,11 @@
-$NetBSD: patch-otherlibs_stdune__filesystem__stubs_readdir.c,v 1.2 2024/12/06 16:41:16 gdt Exp $
+$NetBSD: patch-otherlibs_stdune_src_readdir.c,v 1.1 2026/01/11 18:09:04 alnsn Exp $
 
 Extend conditional for HAIKU to SunOS, for no apparent reason.
 
 \todo File upstream.  
 
---- otherlibs/stdune/dune_filesystem_stubs/readdir.c.orig	2023-10-09 11:08:29.000000000 +0000
-+++ otherlibs/stdune/dune_filesystem_stubs/readdir.c
+--- otherlibs/stdune/src/readdir.c.orig	2026-01-11 01:20:55.502757183 +0000
++++ otherlibs/stdune/src/readdir.c
 @@ -18,7 +18,7 @@ typedef struct dirent directory_entry;
  value val_file_type(int typ) {
    switch(typ)

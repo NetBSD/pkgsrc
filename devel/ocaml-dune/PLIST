@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/11/05 21:26:41 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/01/11 18:09:04 alnsn Exp $
 bin/dune
 doc/dune/CHANGES.md
 doc/dune/LICENSE.md
@@ -25,6 +25,7 @@ man/man1/dune-internal.1
 man/man1/dune-monitor.1
 man/man1/dune-ocaml-merlin.1
 man/man1/dune-ocaml.1
+man/man1/dune-package.1
 man/man1/dune-pkg.1
 man/man1/dune-printenv.1
 man/man1/dune-promote.1
@@ -36,6 +37,7 @@ man/man1/dune-show.1
 man/man1/dune-shutdown.1
 man/man1/dune-subst.1
 man/man1/dune-test.1
+man/man1/dune-tools.1
 man/man1/dune-top.1
 man/man1/dune-uninstall.1
 man/man1/dune-upgrade.1
