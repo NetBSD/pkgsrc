@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.33 2021/12/01 01:04:42 gdt Exp $
+$NetBSD: distinfo,v 1.34 2026/01/11 20:14:01 gdt Exp $
 
-BLAKE2s (viking-1.10.tar.bz2) = 3635b6ec6e038de56dc69091840b30d4b62b26694ecfcbc063d313a70f437ebd
-SHA512 (viking-1.10.tar.bz2) = d04877306fb3a4e6902297d8971ca72d30418727f110b8b9bc937b2738b95975a7f41a4c969cc19cf403e73339476ff46d7ccbae77e03c5b1cf5bcac891485e5
-Size (viking-1.10.tar.bz2) = 5035598 bytes
+BLAKE2s (viking-1.11.tar.bz2) = 21088c89da6721cc5387e3162d8cce0fd88b78510d3b77e10978036973992c80
+SHA512 (viking-1.11.tar.bz2) = 3f0b788c6545571d52053fefce7e90b63b55121722303dde4c7629c6cee8fd0788bd896aa82863e85ddb27f57cdadba359e3d32c7d8d35faa6cbaadf9b30eecc
+Size (viking-1.11.tar.bz2) = 5831037 bytes
 SHA1 (patch-configure) = c1a7935c166106e21585c007a07c00dc60349f02
