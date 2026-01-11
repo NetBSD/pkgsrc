@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.242 2026/01/11 12:25:38 adam Exp $
+$NetBSD: CHANGES-2026,v 1.243 2026/01/11 14:15:14 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -343,3 +343,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/py-alembic to 1.18.0 [adam 2026-01-11]
 	Updated devel/py-awscrt to 0.31.0 [adam 2026-01-11]
 	Updated devel/py-gcovr to 8.5 [adam 2026-01-11]
+	Updated emulators/vice to 3.10 [rhialto 2026-01-11]
