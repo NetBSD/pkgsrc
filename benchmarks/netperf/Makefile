@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.16 2021/09/28 12:57:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2026/01/11 05:38:31 wiz Exp $
 
 DISTNAME=	netperf-2.7.0
 CATEGORIES=	benchmarks
-#MASTER_SITES=	ftp://ftp.netperf.org/netperf/
+##MASTER_SITES=	ftp://ftp.netperf.org/netperf/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.netperf.org/
+HOMEPAGE=	https://github.com/HewlettPackard/netperf
 COMMENT=	Rick Jones' network performance benchmarking package
 LICENSE=	modified-bsd
 
