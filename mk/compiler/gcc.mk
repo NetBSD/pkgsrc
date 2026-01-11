@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.300 2026/01/11 07:36:32 wiz Exp $
+# $NetBSD: gcc.mk,v 1.301 2026/01/11 11:54:39 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -156,7 +156,7 @@ _ALL_GCC_VERSIONS=	15 14 13 12 11 10 9 8 7 6
 .  if !empty(USE_LANGUAGES:Mc99) || ${MACHINE_ARCH} == "x86_64"
 GCC_REQD+=	3.0
 .  else
-GCC_REQD+=	2.8.0
+GCC_REQD+=	2.8
 .  endif
 .endif
 
