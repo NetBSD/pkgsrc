@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.11 2024/10/28 19:21:29 tron Exp $
+# $NetBSD: builtin.mk,v 1.12 2026/01/11 18:23:03 wiz Exp $
 
 BUILTIN_PKG:=	mDNSResponder
 
@@ -26,37 +26,22 @@ MAKEVARS+=			IS_BUILTIN.mDNSResponder
 .if !defined(BUILTIN_PKG.mDNSResponder) && \
     !empty(IS_BUILTIN.mDNSResponder:M[yY][eE][sS]) && \
     empty(H_DNSSD:M__nonexistent__)
-_BLTN_DNSSD_212_1!=		\
-	${GREP} -c 2120100 ${H_DNSSD} || ${TRUE}
-_BLTN_DNSSD_214_3_2!=		\
-	${GREP} -c 2140302 ${H_DNSSD} || ${TRUE}
-_BLTN_DNSSD_258_14!=		\
-	${GREP} -c 2581400 ${H_DNSSD} || ${TRUE}
-_BLTN_DNSSD_320_5!=		\
-	${GREP} -c 3200500 ${H_DNSSD} || ${TRUE}
-_BLTN_DNSSD_320_16!=		\
-	${GREP} -c 3201600 ${H_DNSSD} || ${TRUE}
-_BLTN_DNSSD_878_1_1!=		\
-	${GREP} -c 8780101 ${H_DNSSD} || ${TRUE}
-_BLTN_DNSSD_878_30_4!=		\
-	${GREP} -c 8783004 ${H_DNSSD} || ${TRUE}
-_BLTN_DNSSD_2559_1_1!=		\
-	${GREP} -c 16610000 ${H_DNSSD} || ${TRUE}
-.  if ${_BLTN_DNSSD_320_16} == "1"
-BUILTIN_VERSION.mDNSResponder=	320.16
-.  elif ${_BLTN_DNSSD_320_5} == "1"
-BUILTIN_VERSION.mDNSResponder=	320.5
-.  elif ${_BLTN_DNSSD_258_14} == "1"
-BUILTIN_VERSION.mDNSResponder=	258.14
-.  elif ${_BLTN_DNSSD_214_3_2} == "1"
-BUILTIN_VERSION.mDNSResponder=	214.3.2
-.  elif ${_BLTN_DNSSD_212_1} == "1"
+_DNSSD_VERSION!=${SED} -En 's,\#define[  ]+_DNS_SD_H[    ]+([0-9]+),\1,p' ${H_DNSSD}
+.  if ${_DNSSD_VERSION} == "2120100"
 BUILTIN_VERSION.mDNSResponder=	212.1
-.  elif ${_BLTN_DNSSD_878_1_1} == "1"
+.  elif ${_DNSSD_VERSION} == "2140302"
+BUILTIN_VERSION.mDNSResponder=	214.3.2
+.  elif ${_DNSSD_VERSION} == "2581400"
+BUILTIN_VERSION.mDNSResponder=	258.14
+.  elif ${_DNSSD_VERSION} == "3200500"
+BUILTIN_VERSION.mDNSResponder=	320.5
+.  elif ${_DNSSD_VERSION} == "3201600"
+BUILTIN_VERSION.mDNSResponder=	320.16
+.  elif ${_DNSSD_VERSION} == "8780101"
 BUILTIN_VERSION.mDNSResponder=	878.1.1
-.  elif ${_BLTN_DNSSD_878_30_4} == "1"
+.  elif ${_DNSSD_VERSION} == "8783004"
 BUILTIN_VERSION.mDNSResponder=	878.30.4
-.  elif ${_BLTN_DNSSD_2559_1_1} >= 1
+.  elif ${_DNSSD_VERSION} == "16610000"
 BUILTIN_VERSION.mDNSResponder=	2559.1.1
 .  else
 BUILTIN_VERSION.mDNSResponder=	0 #unknown
