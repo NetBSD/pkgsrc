@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.235 2026/01/11 08:35:59 adam Exp $
+$NetBSD: CHANGES-2026,v 1.236 2026/01/11 09:02:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -317,3 +317,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-types-gdb to 16.3.0.20260109 [adam 2026-01-11]
 	Updated devel/py-maturin to 1.11.5 [adam 2026-01-11]
 	Updated devel/py-ruff to 0.14.11 [adam 2026-01-11]
+	Updated devel/py-pathspec to 1.0.3 [adam 2026-01-11]
+	Updated print/py-pikepdf to 10.2.0 [adam 2026-01-11]
+	Updated devel/py-tox to 4.34.1 [adam 2026-01-11]
+	Updated math/py-uncertainties to 3.2.4 [adam 2026-01-11]
