@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/09/21 21:22:38 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.15 2026/01/11 05:33:44 wiz Exp $
 
 DISTNAME=	nelma-3.2
 PKGREVISION=	3
@@ -7,7 +6,7 @@ CATEGORIES=	cad
 MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.tablix.org/~avian/nelma/
+#HOMEPAGE=	https://www.tablix.org/~avian/nelma/
 COMMENT=	Circuit board capacitance extraction tool
 
 USE_TOOLS+=	pkg-config
