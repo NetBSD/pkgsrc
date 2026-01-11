@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2026/01/08 17:27:55 hauke Exp $
+# $NetBSD: Makefile,v 1.30 2026/01/11 05:34:23 wiz Exp $
 
 GITHUB_PROJECT=	netatalk
 GITHUB_TAG=	refs/tags/${DISTNAME}
@@ -10,7 +10,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Netatalk/}
 
 MAINTAINER=	hauke@NetBSD.org
-HOMEPAGE=	https://www.netatalk.io/
+HOMEPAGE=	https://netatalk.io/
 COMMENT=	AFP file and AppleTalk print services
 LICENSE=	gnu-gpl-v2
 
