@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.238 2026/01/11 09:59:54 adam Exp $
+$NetBSD: CHANGES-2026,v 1.239 2026/01/11 10:11:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -329,3 +329,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-zope.interface to 8.2 [adam 2026-01-11]
 	Updated www/py-websockets to 16.0 [adam 2026-01-11]
 	Updated devel/py-jupyter_client to 8.8.0 [adam 2026-01-11]
+	Updated sysutils/ansible-lint to 26.1.0 [adam 2026-01-11]
+	Updated mail/py-checkdmarc to 5.13.2 [adam 2026-01-11]
+	Updated www/py-flask-flatpages to 0.9.0 [adam 2026-01-11]
+	Updated sysutils/py-fsspec to 2026.1.0 [adam 2026-01-11]
