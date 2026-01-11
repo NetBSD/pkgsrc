@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/08/20 07:20:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/01/11 10:47:15 adam Exp $
 bin/alembic-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -18,9 +18,30 @@ ${PYSITELIB}/alembic/autogenerate/__init__.pyo
 ${PYSITELIB}/alembic/autogenerate/api.py
 ${PYSITELIB}/alembic/autogenerate/api.pyc
 ${PYSITELIB}/alembic/autogenerate/api.pyo
-${PYSITELIB}/alembic/autogenerate/compare.py
-${PYSITELIB}/alembic/autogenerate/compare.pyc
-${PYSITELIB}/alembic/autogenerate/compare.pyo
+${PYSITELIB}/alembic/autogenerate/compare/__init__.py
+${PYSITELIB}/alembic/autogenerate/compare/__init__.pyc
+${PYSITELIB}/alembic/autogenerate/compare/__init__.pyo
+${PYSITELIB}/alembic/autogenerate/compare/comments.py
+${PYSITELIB}/alembic/autogenerate/compare/comments.pyc
+${PYSITELIB}/alembic/autogenerate/compare/comments.pyo
+${PYSITELIB}/alembic/autogenerate/compare/constraints.py
+${PYSITELIB}/alembic/autogenerate/compare/constraints.pyc
+${PYSITELIB}/alembic/autogenerate/compare/constraints.pyo
+${PYSITELIB}/alembic/autogenerate/compare/schema.py
+${PYSITELIB}/alembic/autogenerate/compare/schema.pyc
+${PYSITELIB}/alembic/autogenerate/compare/schema.pyo
+${PYSITELIB}/alembic/autogenerate/compare/server_defaults.py
+${PYSITELIB}/alembic/autogenerate/compare/server_defaults.pyc
+${PYSITELIB}/alembic/autogenerate/compare/server_defaults.pyo
+${PYSITELIB}/alembic/autogenerate/compare/tables.py
+${PYSITELIB}/alembic/autogenerate/compare/tables.pyc
+${PYSITELIB}/alembic/autogenerate/compare/tables.pyo
+${PYSITELIB}/alembic/autogenerate/compare/types.py
+${PYSITELIB}/alembic/autogenerate/compare/types.pyc
+${PYSITELIB}/alembic/autogenerate/compare/types.pyo
+${PYSITELIB}/alembic/autogenerate/compare/util.py
+${PYSITELIB}/alembic/autogenerate/compare/util.pyc
+${PYSITELIB}/alembic/autogenerate/compare/util.pyo
 ${PYSITELIB}/alembic/autogenerate/render.py
 ${PYSITELIB}/alembic/autogenerate/render.pyc
 ${PYSITELIB}/alembic/autogenerate/render.pyo
@@ -102,6 +123,9 @@ ${PYSITELIB}/alembic/runtime/environment.pyo
 ${PYSITELIB}/alembic/runtime/migration.py
 ${PYSITELIB}/alembic/runtime/migration.pyc
 ${PYSITELIB}/alembic/runtime/migration.pyo
+${PYSITELIB}/alembic/runtime/plugins.py
+${PYSITELIB}/alembic/runtime/plugins.pyc
+${PYSITELIB}/alembic/runtime/plugins.pyo
 ${PYSITELIB}/alembic/script/__init__.py
 ${PYSITELIB}/alembic/script/__init__.pyc
 ${PYSITELIB}/alembic/script/__init__.pyo
