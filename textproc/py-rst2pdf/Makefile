@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2025/12/28 14:44:20 adam Exp $
+# $NetBSD: Makefile,v 1.22 2026/01/11 10:19:06 adam Exp $
 
-DISTNAME=	rst2pdf-0.103.1
+DISTNAME=	rst2pdf-0.104
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rst2pdf/}
@@ -13,15 +13,14 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.21.2:../../textproc/py-docutils
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=8.0:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-packaging>=24.0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-packaging>=25.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.0:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-reportlab>=4.0:../../print/py-reportlab
-DEPENDS+=	${PYPKGPREFIX}-smartypants>=2.0:../../textproc/py-smartypants
-DEPENDS+=	${PYPKGPREFIX}-yaml>=6.0:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-yaml>=6.0.1:../../textproc/py-yaml
 # not mentioned by needed: https://github.com/rst2pdf/rst2pdf/issues/1283
 DEPENDS+=	${PYPKGPREFIX}-roman>0:../../math/py-roman
+# also: fitz_old
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.0:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none

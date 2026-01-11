@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/12/28 14:44:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/01/11 10:19:06 adam Exp $
 bin/rst2pdf-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -103,6 +103,9 @@ ${PYSITELIB}/rst2pdf/roles/counter_off.pyo
 ${PYSITELIB}/rst2pdf/roles/package.py
 ${PYSITELIB}/rst2pdf/roles/package.pyc
 ${PYSITELIB}/rst2pdf/roles/package.pyo
+${PYSITELIB}/rst2pdf/roman_numerals.py
+${PYSITELIB}/rst2pdf/roman_numerals.pyc
+${PYSITELIB}/rst2pdf/roman_numerals.pyo
 ${PYSITELIB}/rst2pdf/rson.py
 ${PYSITELIB}/rst2pdf/rson.pyc
 ${PYSITELIB}/rst2pdf/rson.pyo
