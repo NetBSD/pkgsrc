@@ -1,4 +1,4 @@
-# $NetBSD: bsd.patch-vars.mk,v 1.12 2025/04/12 11:35:13 nia Exp $
+# $NetBSD: bsd.patch-vars.mk,v 1.13 2026/01/11 16:12:49 wiz Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -27,7 +27,7 @@
 
 PATCHFILES?=	# none
 
-pkgsrc_patches=	${:!echo ${PATCHDIR}/patch-* ${PATCHDIR}/emul-*-patch-*!:N*\*}
+pkgsrc_patches=	${:!echo ${PATCHDIR}/patch-*!:N*\*}
 .if !empty(LOCALPATCHES)
 local_patches=	${:!echo ${LOCALPATCHES}/${PKGPATH}/*!:N*/CVS:N*/\*}
 .endif
