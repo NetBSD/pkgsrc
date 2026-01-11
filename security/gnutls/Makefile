@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.271 2026/01/07 08:48:40 wiz Exp $
+# $NetBSD: Makefile,v 1.272 2026/01/11 19:12:01 wiz Exp $
 
 DISTNAME=	gnutls-3.8.11
 PKGREVISION=	2
@@ -60,7 +60,7 @@ INSTALLATION_DIRS=	${EGDIR} include/gnutls
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == "x86_64"
+.if ${MACHINE_ARCH} == "x86_64" && ${OPSYS} != "NetBSD"
 GNUTLS_GAS_VERSION!=	\
 	( env LC_ALL=C as --version 2>&1 | ${GREP} 'GNU assembler version' | ${AWK} '{print $$4}') 2>/dev/null || ${ECHO} 0
 .  if ${GNUTLS_GAS_VERSION} != 0
