@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.14 2026/01/11 18:42:46 wiz Exp $
+# $NetBSD: builtin.mk,v 1.15 2026/01/11 21:38:18 wiz Exp $
 
 BUILTIN_PKG:=	mDNSResponder
 
@@ -47,6 +47,7 @@ BUILTIN_VERSION.mDNSResponder=	2559.1.1
 BUILTIN_VERSION.mDNSResponder=	0 #unknown
 .  endif
 BUILTIN_PKG.mDNSResponder=	mDNSResponder-${BUILTIN_VERSION.mDNSResponder}
+MAKEVARS+=			BUILTIN_PKG.mDNSResponder
 .endif
 
 ###
