@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.241 2026/01/11 10:47:39 adam Exp $
+$NetBSD: CHANGES-2026,v 1.242 2026/01/11 12:25:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -341,3 +341,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-sanic to 25.12.0 [adam 2026-01-11]
 	Updated textproc/py-textfsm to 2.1.0 [adam 2026-01-11]
 	Updated databases/py-alembic to 1.18.0 [adam 2026-01-11]
+	Updated devel/py-awscrt to 0.31.0 [adam 2026-01-11]
+	Updated devel/py-gcovr to 8.5 [adam 2026-01-11]
