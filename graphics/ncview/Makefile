@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.67 2026/01/07 08:47:24 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2026/01/11 05:26:31 wiz Exp $
 
 DISTNAME=		ncview-2.1.7
 PKGREVISION=		16
 CATEGORIES=		graphics
-MASTER_SITES=		ftp://cirrus.ucsd.edu/pub/ncview/
+MASTER_SITES=		https://cirrus.ucsd.edu/~pierce/ncview/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://meteora.ucsd.edu/~pierce/ncview_home_page.html
+HOMEPAGE=		https://cirrus.ucsd.edu/ncview/
 COMMENT=		Visual browser for netCDF format files
 LICENSE=		gnu-gpl-v3
 
