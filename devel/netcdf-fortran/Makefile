@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2026/01/07 08:46:43 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/01/11 05:36:34 wiz Exp $
 
 DISTNAME=	netcdf-fortran-4.2
 PKGREVISION=	35
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://www.unidata.ucar.edu/downloads/netcdf/ftp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.unidata.ucar.edu/software/netcdf/index.html
+HOMEPAGE=	https://www.unidata.ucar.edu/software/netcdf
 COMMENT=	Fortran support for NetCDF
 
 USE_LANGUAGES=		c fortran77
