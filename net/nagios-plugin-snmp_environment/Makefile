@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/06/28 11:35:03 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/01/11 05:25:09 wiz Exp $
 
 DISTNAME=	check_snmp_environment.pl
 VERSION=	0.7
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	# empty
 DIST_SUBDIR=	check_snmp_environment-${VERSION}
 
 COMMENT=	Check various hardware environmental sensors
-HOMEPAGE=	https://exchange.nagios.org/directory/Plugins/Hardware/Network-Gear/Cisco/Check-various-hardware-environmental-sensors/details
+#HOMEPAGE=	https://exchange.nagios.org/directory/Plugins/Hardware/Network-Gear/Cisco/Check-various-hardware-environmental-sensors/details
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	# empty
