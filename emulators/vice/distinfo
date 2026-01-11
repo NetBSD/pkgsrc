@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.56 2025/01/31 17:49:02 rhialto Exp $
+$NetBSD: distinfo,v 1.57 2026/01/11 14:15:03 rhialto Exp $
 
-BLAKE2s (vice-3.9.tar.gz) = 9ce624e0149ecff19f75a57db2dfff50329140293d291e0791db7d806e91fb31
-SHA512 (vice-3.9.tar.gz) = 4a349dfe3e4310f1799cc705dffd01243df5b6ecfdb05b5f2ca3213fe6468831735dd3abcd6a34627e8ac2202bcb8ab617b81224c5a41cd83782868dd70b1fb8
-Size (vice-3.9.tar.gz) = 14249159 bytes
+BLAKE2s (vice-3.10.tar.gz) = 86764f30449f2e0f8014e7701a3e33358f4de81e2e14d950ca55bdb8981e5c4d
+SHA512 (vice-3.10.tar.gz) = 5cddbb09080d39fad7690e8c178af40a5834377e201252c112816e2a9af5b4afd1ed090fdd19217dd36c8d18f7c633fda1ee6efc1322334bbe13ba4866435f97
+Size (vice-3.10.tar.gz) = 14366175 bytes
 SHA1 (patch-Makefile.in) = f9c411fb2f4a8d5cf40c7cccdd36a6e4bc18529b
 SHA1 (patch-configure) = 136475ca14acc6fe9fe1eb44cf0f5308e5fc7c0a
 SHA1 (patch-src_arch_gtk3_actions-help.c) = 136fa108e999dbb98362a2e80a5389710f60290e
-SHA1 (patch-src_arch_gtk3_data_unix_Makefile.in) = c233ac070f00d0210f469466c4250c8b2cdfdc5c
+SHA1 (patch-src_arch_gtk3_joystickdrv_joystick_bsd.c) = 835726091dde5b6759e7a5e0f9c0d41024de4d3e
+SHA1 (patch-src_lib_libusbsiddrv_USBSID.cpp) = 94782f0a04d856b604d9144b9ca619b8c2364e6f
