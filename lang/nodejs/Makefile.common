@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.63 2025/11/14 13:47:00 wiz Exp $
+# $NetBSD: Makefile.common,v 1.64 2026/01/11 11:44:10 wiz Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs18/Makefile
 # used by lang/nodejs20/Makefile
@@ -22,7 +22,7 @@ PYTHON_FOR_BUILD_ONLY=	tool
 CONFLICTS+=	npm-[0-9]*
 SUPERSEDES+=	npm-[0-9]*
 
-GCC_REQD+=		4.9.4
+GCC_REQD+=		5
 
 CONFIG_SHELL=		${PYTHONBIN}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
