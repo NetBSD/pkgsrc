@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2025/10/09 07:58:11 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2026/01/11 10:40:12 adam Exp $
 
-DISTNAME=	sanic-25.3.0
+DISTNAME=	sanic-25.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sanic/}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-httptools>=0.0.10:../../www/py-httptools
 DEPENDS+=	${PYPKGPREFIX}-multidict>=5.0:../../databases/py-multidict
 DEPENDS+=	${PYPKGPREFIX}-sanic-routing>=23.12.0:../../www/py-sanic-routing
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.1.0:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-tracerite>=1.0.0:../../devel/py-tracerite
+DEPENDS+=	${PYPKGPREFIX}-tracerite>=2.2.0:../../devel/py-tracerite
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.4.0:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-ujson>=1.35:../../textproc/py-ujson
 DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.15.0:../../devel/py-uvloop
