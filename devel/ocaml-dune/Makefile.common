@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.6 2026/01/11 18:09:04 alnsn Exp $
+# $NetBSD: Makefile.common,v 1.7 2026/01/11 18:51:28 alnsn Exp $
 
 # used by devel/ocaml-dune-configurator/Makefile
 
 DUNE_VERSION=	3.20.2
 DISTNAME=	${GITHUB_PROJECT}-${DUNE_VERSION}
 
-LICENSE=	apache-2.0
+LICENSE=	mit
 
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 GITHUB_PROJECT=	dune
