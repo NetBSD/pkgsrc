@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.204 2026/01/07 08:46:53 wiz Exp $
+# $NetBSD: Makefile,v 1.205 2026/01/11 14:15:03 rhialto Exp $
 
-DISTNAME=	vice-3.9
-PKGREVISION=	10
+DISTNAME=	vice-3.10
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vice-emu/}
 
@@ -22,23 +21,32 @@ USE_CXX_FEATURES+=	c++11
 USE_TOOLS+=		bash gmake pkg-config perl flex yacc
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-ethernet
-CONFIGURE_ARGS+=	--with-lame
+CONFIGURE_ARGS+=	--enable-ipv6
+CONFIGURE_ARGS+=	--enable-new8580filter
+CONFIGURE_ARGS+=	--enable-realdevice
+CONFIGURE_ARGS+=	--enable-rs232
+CONFIGURE_ARGS+=	--disable-catweasel
+CONFIGURE_ARGS+=	--disable-debug
+CONFIGURE_ARGS+=	--disable-debug-threads
+CONFIGURE_ARGS+=	--disable-experimental-devices
+CONFIGURE_ARGS+=	--disable-hardsid
+CONFIGURE_ARGS+=	--disable-midi
+CONFIGURE_ARGS+=	--disable-parsid
+CONFIGURE_ARGS+=	--disable-x64-image
 CONFIGURE_ARGS+=	--with-fastsid
+CONFIGURE_ARGS+=	--with-resid
 CONFIGURE_ARGS+=	--with-flac
 CONFIGURE_ARGS+=	--with-gif
+CONFIGURE_ARGS+=	--with-lame
+CONFIGURE_ARGS+=	--with-libcurl
 CONFIGURE_ARGS+=	--with-mpg123
 CONFIGURE_ARGS+=	--with-png
 CONFIGURE_ARGS+=	--with-vorbis
-CONFIGURE_ARGS+=	--with-zlib
-CONFIGURE_ARGS+=	--with-fastsid
-CONFIGURE_ARGS+=	--with-libcurl
 CONFIGURE_ARGS+=	--without-libieee1284
-CONFIGURE_ARGS+=	--disable-hardsid
-CONFIGURE_ARGS+=	--disable-parsid
-CONFIGURE_ARGS+=	--disable-catweasel
-CONFIGURE_ARGS+=	--disable-midi
 CONFIGURE_ARGS.NetBSD+=	--with-sun
 CONFIGURE_ARGS.NetBSD+=	--without-oss
+CONFIGURE_ARGS.NetBSD+=	--without-portaudio
+CONFIGURE_ARGS.NetBSD+=	--without-sdlsound
 
 # Avoid build changes if these programs are installed
 CONFIGURE_ENV+=		ac_cv_prog_SVN=no
@@ -53,8 +61,6 @@ REQD_DIRS+=		${PREFIX}/share/vice
 DEPENDS+=		dos2unix-[0-9]*:../../converters/dos2unix
 TOOL_DEPENDS+=		xa65-[0-9]*:../../devel/xa65
 
-REPLACE_BASH+=		src/arch/gtk3/data/unix/mkdesktopfile.sh
-
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-configure
 SUBST_FILES.prefix+=	doc/vice.texi
@@ -67,8 +73,8 @@ INSTALLATION_DIRS+=	share/doc/vice/html/fonts
 # Install html equivalent of vice.pdf.
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/share/applications/mimeinfo.cache
-	cd ${DESTDIR}${PREFIX} && ${MV} etc/xdg/menus/applications-merged/vice-org-vice-org.menu share/vice/ || :
-	cd ${DESTDIR}${PREFIX} && ${RMDIR} -r etc || :
+	cd ${DESTDIR}${PREFIX} && ${RM} -rf etc || :
+	cd ${DESTDIR}${PREFIX}/share/ && chmod a+rX icons || :
 	cd ${WRKSRC}/doc/html && ${CP} -r fonts images vice_*.html *.css \
 		COPYING \
 		${DESTDIR}${PREFIX}/share/doc/vice/html/
