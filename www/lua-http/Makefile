@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/01/21 11:00:18 nia Exp $
+# $NetBSD: Makefile,v 1.6 2026/01/11 07:45:44 wiz Exp $
 
 DISTNAME=	lua-http-0.4
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/lua-//1}
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://daurnimator.github.io/lua-http/
 COMMENT=	HTTP/1.0/1.1/2.0 client and server library for Lua
 LICENSE=	mit
+
+LUA_VERSIONS_ACCEPTED=	54 53 52 51 # lua-cqueues
 
 .include "../../lang/lua/luaversion.mk"
 
