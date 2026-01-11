@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/04/13 12:22:41 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/11 10:45:01 adam Exp $
 
-DISTNAME=	textfsm-1.1.3
+DISTNAME=	textfsm-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
@@ -12,14 +12,13 @@ HOMEPAGE=	https://github.com/google/textfsm
 COMMENT=	Template based state machine for parsing semi-formatted text
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
-EGG_NAME=	textfsm-1.1.2
+USE_LANGUAGES=	# none
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} textfsm textfsm-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

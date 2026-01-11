@@ -1,5 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2023/04/13 12:22:41 wiz Exp $
-bin/textfsm
+@comment $NetBSD: PLIST,v 1.3 2026/01/11 10:45:01 adam Exp $
+bin/textfsm-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/testdata/clitable_templateA
 ${PYSITELIB}/testdata/clitable_templateB
 ${PYSITELIB}/testdata/clitable_templateC
@@ -10,21 +17,12 @@ ${PYSITELIB}/testdata/parseindex_index
 ${PYSITELIB}/testdata/parseindexfail1_index
 ${PYSITELIB}/testdata/parseindexfail2_index
 ${PYSITELIB}/testdata/parseindexfail3_index
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/textfsm/__init__.py
 ${PYSITELIB}/textfsm/__init__.pyc
 ${PYSITELIB}/textfsm/__init__.pyo
 ${PYSITELIB}/textfsm/clitable.py
 ${PYSITELIB}/textfsm/clitable.pyc
 ${PYSITELIB}/textfsm/clitable.pyo
-${PYSITELIB}/textfsm/copyable_regex_object.py
-${PYSITELIB}/textfsm/copyable_regex_object.pyc
-${PYSITELIB}/textfsm/copyable_regex_object.pyo
 ${PYSITELIB}/textfsm/parser.py
 ${PYSITELIB}/textfsm/parser.pyc
 ${PYSITELIB}/textfsm/parser.pyo
