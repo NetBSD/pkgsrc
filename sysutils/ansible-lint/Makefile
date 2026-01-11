@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2025/12/30 07:31:53 adam Exp $
+# $NetBSD: Makefile,v 1.80 2026/01/11 10:04:38 adam Exp $
 
-DISTNAME=	ansible_lint-25.12.2
+DISTNAME=	ansible_lint-26.1.0
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-lint/}
@@ -18,7 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-black>=24.3.0:../../textproc/py-black
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.17.1:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-distro>=1.9.0:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.8.2:../../devel/py-filelock
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=8.7.0:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.10.0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-packaging>=22.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.10.3:../../devel/py-pathspec
