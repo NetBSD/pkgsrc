@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.228 2026/01/11 04:52:11 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.229 2026/01/11 04:53:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -307,3 +307,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ruby-public_suffix to 7.0.2 [tsutsui 2026-01-11]
 	Updated security/p5-IO-Socket-SSL to 2.098 [wiz 2026-01-11]
 	Updated mail/p5-MIME-Lite to 3.035 [wiz 2026-01-11]
+	Updated devel/p5-Type-Tiny to 2.010001 [wiz 2026-01-11]
