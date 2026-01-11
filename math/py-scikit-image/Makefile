@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2025/10/09 07:57:49 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/01/11 10:35:08 adam Exp $
 
-DISTNAME=	scikit_image-0.25.2
+DISTNAME=	scikit_image-0.26.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	math graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-image/}
@@ -13,12 +13,12 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.16:../../devel/py-meson_python
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=68:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=10.1:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-imageio>=2.33:../../graphics/py-imageio
+DEPENDS+=	${PYPKGPREFIX}-imageio>=2.36:../../graphics/py-imageio
 DEPENDS+=	${PYPKGPREFIX}-lazy_loader>=0.4:../../misc/py-lazy_loader
 DEPENDS+=	${PYPKGPREFIX}-networkx>=3.0:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.24:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-packaging>=21:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-scipy>=1.11.2:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.11.4:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-tifffile>=2022.8.12:../../graphics/py-tifffile
 # optional
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.7:../../graphics/py-matplotlib
@@ -35,8 +35,8 @@ pre-configure:
 	${LN} -f -s ${PREFIX}/bin/pythran-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/pythran
 
 .include "../../devel/py-cython/buildlink3.mk"
-.include "../../math/py-pythran/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../lang/python/tool.mk"
 .include "../../math/py-numpy/buildlink3.mk"
+.include "../../math/py-pythran/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
