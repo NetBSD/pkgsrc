@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/config_gen/config.json.orig	2024-06-09 00:05:07.000000000 +0000
++++ src/config_gen/config.json
+@@ -32,7 +32,7 @@
+         },
+         {
+             "name": "semantic_tokens",
+-            "description": "Set level of semantic tokens. Partial only includes information that requires semantic analysis.",
++            "description": "Set level of semantic tokens. `partial` only includes information that requires semantic analysis.",
+             "type": "enum",
+             "enum": [
+                 "none",
