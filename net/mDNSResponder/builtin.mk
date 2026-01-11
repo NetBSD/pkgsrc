@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.12 2026/01/11 18:23:03 wiz Exp $
+# $NetBSD: builtin.mk,v 1.13 2026/01/11 18:34:17 wiz Exp $
 
 BUILTIN_PKG:=	mDNSResponder
 
@@ -26,7 +26,7 @@ MAKEVARS+=			IS_BUILTIN.mDNSResponder
 .if !defined(BUILTIN_PKG.mDNSResponder) && \
     !empty(IS_BUILTIN.mDNSResponder:M[yY][eE][sS]) && \
     empty(H_DNSSD:M__nonexistent__)
-_DNSSD_VERSION!=${SED} -En 's,\#define[  ]+_DNS_SD_H[    ]+([0-9]+),\1,p' ${H_DNSSD}
+_DNSSD_VERSION!=${SED} -En 's,\#define[[:blank:]+_DNS_SD_H[[:blank:]]+([0-9]+),\1,p' ${H_DNSSD}
 .  if ${_DNSSD_VERSION} == "2120100"
 BUILTIN_VERSION.mDNSResponder=	212.1
 .  elif ${_DNSSD_VERSION} == "2140302"
