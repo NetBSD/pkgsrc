@@ -1,17 +1,23 @@
-@comment $NetBSD: PLIST,v 1.1 2025/09/07 18:33:59 maya Exp $
-${PYSITELIB}/_awscrt.abi3.so
+@comment $NetBSD: PLIST,v 1.2 2026/01/11 12:22:50 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/NOTICE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/_awscrt.abi3.so
 ${PYSITELIB}/awscrt/__init__.py
 ${PYSITELIB}/awscrt/__init__.pyc
 ${PYSITELIB}/awscrt/__init__.pyo
 ${PYSITELIB}/awscrt/_test.py
 ${PYSITELIB}/awscrt/_test.pyc
 ${PYSITELIB}/awscrt/_test.pyo
+${PYSITELIB}/awscrt/aio/__init__.py
+${PYSITELIB}/awscrt/aio/__init__.pyc
+${PYSITELIB}/awscrt/aio/__init__.pyo
+${PYSITELIB}/awscrt/aio/http.py
+${PYSITELIB}/awscrt/aio/http.pyc
+${PYSITELIB}/awscrt/aio/http.pyo
 ${PYSITELIB}/awscrt/auth.py
 ${PYSITELIB}/awscrt/auth.pyc
 ${PYSITELIB}/awscrt/auth.pyo
