@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/01/11 18:06:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/11 19:53:06 wiz Exp $
 #
 # This is not a normal package, it is a standalone Makefile to help generate
 # varcache entries that speed up builds by precomputing expensive variables.
@@ -24,6 +24,7 @@ VC_MATCH:=	${VC_MATCH}|^(BIN|BINUTILS)_FILE
 VC_MATCH:=	${VC_MATCH}|^(XAUTH|XINIT)
 
 VC_VARS+=	HOST_OSTYPE
+VC_VARS+=	MACHINE_ENDIAN
 VC_VARS+=	PKGTOOLS_VERSION
 VC_VARS+=	_GCC_VERSION
 VC_VARS+=	_PKGSRCDIR
@@ -73,4 +74,5 @@ show-varcache:
 .  include "${builtin:Q}"
 .endfor
 
+.include "../../mk/endian.mk"
 .include "../../mk/bsd.pkg.mk"
