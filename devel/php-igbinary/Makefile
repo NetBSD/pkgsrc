@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/02/08 03:41:13 taca Exp $
+# $NetBSD: Makefile,v 1.13 2026/01/11 07:50:11 wiz Exp $
 
 MODNAME=	igbinary
 PECL_VERSION=	3.2.16
@@ -10,7 +10,8 @@ HOMEPAGE=	https://github.com/igbinary/igbinary
 COMMENT=	Binary serialization for PHP
 LICENSE=	modified-bsd
 
-PHP_VERSIONS_INCOMPATIBLE=	56
+# does not support 56 nor 85
+PHP_VERSIONS_ACCEPTED=	84 83 82 74
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gsed
