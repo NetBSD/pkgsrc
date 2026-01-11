@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.243 2026/01/11 14:15:14 rhialto Exp $
+$NetBSD: CHANGES-2026,v 1.244 2026/01/11 18:14:45 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -344,3 +344,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-awscrt to 0.31.0 [adam 2026-01-11]
 	Updated devel/py-gcovr to 8.5 [adam 2026-01-11]
 	Updated emulators/vice to 3.10 [rhialto 2026-01-11]
+	Updated devel/ocaml-dune to 3.20.2 [alnsn 2026-01-11]
