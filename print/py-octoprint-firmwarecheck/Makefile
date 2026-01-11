@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/04/15 05:04:21 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/01/11 09:33:30 adam Exp $
 
-DISTNAME=	OctoPrint-FirmwareCheck-2021.10.11
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	2
+DISTNAME=	octoprint_firmwarecheck-2025.7.23
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=O/OctoPrint-FirmwareCheck/}
 
@@ -14,8 +13,6 @@ LICENSE=	gnu-agpl-v3
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
-
-WHEEL_NAME=	${DISTNAME:tl:S/-/_/}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
