@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26648 2026/01/09 22:35:21 wiz Exp $
+$NetBSD: TODO,v 1.26649 2026/01/11 05:08:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -959,7 +959,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nap-1.5.3
 	o nas-auscope-1.9.4
 	o ncview-2.1.8
-	o net-snmp-5.9.5
 	o netramet-50
 	o newmail-1.0.2
 	o nicotine-plus-3.2.9
