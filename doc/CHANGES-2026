@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.226 2026/01/11 04:48:04 tsutsui Exp $
+$NetBSD: CHANGES-2026,v 1.227 2026/01/11 04:49:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -305,3 +305,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ruby-addressable to 2.8.8 [tsutsui 2026-01-11]
 	Updated databases/p5-DBD-SQLite to 1.78 [wiz 2026-01-11]
 	Updated net/ruby-public_suffix to 7.0.2 [tsutsui 2026-01-11]
+	Updated security/p5-IO-Socket-SSL to 2.098 [wiz 2026-01-11]
