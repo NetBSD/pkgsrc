@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.33 2024/10/22 06:29:21 jperkin Exp $
+# $NetBSD: checksum.mk,v 1.34 2026/01/11 16:12:49 wiz Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
@@ -97,7 +97,6 @@ _DISTINFO_ARGS_COMMON+=	${_PATCH_DIGEST_ALGORITHMS:S/^/-p /}
 .endif
 
 _DISTINFO_ARGS_PATCHSUM+=	${PATCHDIR}/patch-*
-_DISTINFO_ARGS_PATCHSUM+=	${PATCHDIR}/emul-*-patch-*
 
 distinfo:
 .  if ${USE_TMPFILES} == yes
