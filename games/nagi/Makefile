@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2025/01/06 21:49:15 ktnb Exp $
-#
+# $NetBSD: Makefile,v 1.18 2026/01/11 05:23:47 wiz Exp $
 
 DISTNAME=		nagi_src_-_2002-11-14
 PKGNAME=		nagi-20021114
 PKGREVISION=		7
 CATEGORIES=		games
-MASTER_SITES=		http://www.agidev.com/dl_files/nagi/
+MASTER_SITES=		https://www.agidev.com/dl_files/nagi/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.agidev.com/projects/nagi/
+HOMEPAGE=		https://www.agidev.com/projects/nagi/
 COMMENT=		Clone of Sierra's AGI
 
 WRKSRC=		${WRKDIR}/src
