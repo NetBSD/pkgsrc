@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.244 2026/01/11 18:14:45 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.245 2026/01/11 20:14:09 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -345,3 +345,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-gcovr to 8.5 [adam 2026-01-11]
 	Updated emulators/vice to 3.10 [rhialto 2026-01-11]
 	Updated devel/ocaml-dune to 3.20.2 [alnsn 2026-01-11]
+	Updated geography/viking to 1.11 [gdt 2026-01-11]
