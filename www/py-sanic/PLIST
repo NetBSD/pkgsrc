@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2025/08/10 08:21:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2026/01/11 10:40:12 adam Exp $
 bin/sanic-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -72,6 +72,9 @@ ${PYSITELIB}/sanic/cli/base.pyo
 ${PYSITELIB}/sanic/cli/console.py
 ${PYSITELIB}/sanic/cli/console.pyc
 ${PYSITELIB}/sanic/cli/console.pyo
+${PYSITELIB}/sanic/cli/daemon.py
+${PYSITELIB}/sanic/cli/daemon.pyc
+${PYSITELIB}/sanic/cli/daemon.pyo
 ${PYSITELIB}/sanic/cli/executor.py
 ${PYSITELIB}/sanic/cli/executor.pyc
 ${PYSITELIB}/sanic/cli/executor.pyo
@@ -325,6 +328,12 @@ ${PYSITELIB}/sanic/signals.pyo
 ${PYSITELIB}/sanic/simple.py
 ${PYSITELIB}/sanic/simple.pyc
 ${PYSITELIB}/sanic/simple.pyo
+${PYSITELIB}/sanic/startup/__init__.py
+${PYSITELIB}/sanic/startup/__init__.pyc
+${PYSITELIB}/sanic/startup/__init__.pyo
+${PYSITELIB}/sanic/startup/errors.py
+${PYSITELIB}/sanic/startup/errors.pyc
+${PYSITELIB}/sanic/startup/errors.pyo
 ${PYSITELIB}/sanic/touchup/__init__.py
 ${PYSITELIB}/sanic/touchup/__init__.pyc
 ${PYSITELIB}/sanic/touchup/__init__.pyo
@@ -367,6 +376,9 @@ ${PYSITELIB}/sanic/worker/__init__.pyo
 ${PYSITELIB}/sanic/worker/constants.py
 ${PYSITELIB}/sanic/worker/constants.pyc
 ${PYSITELIB}/sanic/worker/constants.pyo
+${PYSITELIB}/sanic/worker/daemon.py
+${PYSITELIB}/sanic/worker/daemon.pyc
+${PYSITELIB}/sanic/worker/daemon.pyo
 ${PYSITELIB}/sanic/worker/inspector.py
 ${PYSITELIB}/sanic/worker/inspector.pyc
 ${PYSITELIB}/sanic/worker/inspector.pyo
