@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2025/04/24 07:08:01 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2026/01/11 09:55:16 adam Exp $
 
-DISTNAME=	stripe-11.6.0
+DISTNAME=	stripe-14.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stripe/}
 
@@ -11,7 +10,7 @@ HOMEPAGE=	https://github.com/stripe/stripe-python
 COMMENT=	Stripe python bindings
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.20:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.5.0:../../devel/py-typing-extensions
 # tests require stripe-mock
