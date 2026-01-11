@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/12/26 10:19:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/01/11 08:59:51 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -21,6 +21,9 @@ ${PYSITELIB}/pikepdf/_data.pyo
 ${PYSITELIB}/pikepdf/_exceptions.py
 ${PYSITELIB}/pikepdf/_exceptions.pyc
 ${PYSITELIB}/pikepdf/_exceptions.pyo
+${PYSITELIB}/pikepdf/_explicit_conv.py
+${PYSITELIB}/pikepdf/_explicit_conv.pyc
+${PYSITELIB}/pikepdf/_explicit_conv.pyo
 ${PYSITELIB}/pikepdf/_io.py
 ${PYSITELIB}/pikepdf/_io.pyc
 ${PYSITELIB}/pikepdf/_io.pyo
