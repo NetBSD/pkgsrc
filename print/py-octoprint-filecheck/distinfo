@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2025/01/19 16:15:00 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/01/11 09:32:49 adam Exp $
 
-BLAKE2s (OctoPrint-FileCheck-2024.11.12.tar.gz) = c25d406dd374a503d4ca3bbb56061332b6d88fff548c60dac258a9c00f2e11ea
-SHA512 (OctoPrint-FileCheck-2024.11.12.tar.gz) = b7b3144f3e6b75258f40feddd77ef5004345d88563ed4cdc0b3601f5448d811676535cead7867f4a62ca173b97366dd5f98e1f5153d227da67ebe9cfbe0d0dde
-Size (OctoPrint-FileCheck-2024.11.12.tar.gz) = 31494 bytes
+BLAKE2s (octoprint_filecheck-2025.7.23.tar.gz) = b44c21c6751ff2a801670fe5577414a27211626fb4c6d00626e7a4a0461ff6fa
+SHA512 (octoprint_filecheck-2025.7.23.tar.gz) = 38c08a92f285edf10955e539f40cacb0329bcb700fa5d616a153afcc75c0a79378651a231757b8dde5fa8ef987dd95de0642ebff5de083a988d7a5f9f379fad9
+Size (octoprint_filecheck-2025.7.23.tar.gz) = 27208 bytes
