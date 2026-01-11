@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.302 2026/01/11 15:07:11 wiz Exp $
+# $NetBSD: gcc.mk,v 1.303 2026/01/11 15:30:28 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -141,12 +141,6 @@ USE_NATIVE_GCC?=	no
 USE_PKGSRC_GCC?=	no
 USE_PKGSRC_GCC_RUNTIME?=no
 
-#
-# Known gcc versions for GCC_REQD in descending order.
-# Only list versions that have pkgsrc packages.
-# Keep this list short.
-#
-_ALL_GCC_VERSIONS=	15 14 13 12 11 10 9 8 7 6
 #
 # Each successive GCC_REQD has an associated cost below when executing
 # pkg_admin to determine if it's suitable, so only add these incredibly
@@ -569,8 +563,7 @@ _NEED_GCC12=	yes
 _NEED_GCC13?=	no
 .for _pattern_ in ${_GCC13_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
-# XXX: pin to a version when NetBSD switches to gcc13
-.    if ${OPSYS} == "NetBSD" && ${_NEED_GCC_AUX:tl} != "yes"
+.    if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 119904 && ${_NEED_GCC_AUX:tl} != "yes"
 USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
 .    endif
@@ -583,8 +576,7 @@ _NEED_GCC13=	yes
 _NEED_GCC14?=	no
 .for _pattern_ in ${_GCC14_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
-# XXX: pin to a version when NetBSD switches to gcc14
-.    if ${OPSYS} == "NetBSD" && ${_NEED_GCC_AUX:tl} != "yes"
+.    if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 119904 && ${_NEED_GCC_AUX:tl} != "yes"
 USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
 .    endif
