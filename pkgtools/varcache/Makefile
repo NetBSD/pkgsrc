@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/01/09 14:40:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/11 18:06:14 wiz Exp $
 #
 # This is not a normal package, it is a standalone Makefile to help generate
 # varcache entries that speed up builds by precomputing expensive variables.
@@ -17,11 +17,16 @@ BUILTINS!=	ls -1 ../../*/*/builtin.mk ../../mk/*.builtin.mk
 # Be specific about which matches we want to include.  We would rather be
 # missing a few variables than include anything which could cause problems.
 #
-VC_MATCH:=	^(BUILTIN_LIB_FOUND|BUILTIN_PKG|FIND_FILES)
+VC_MATCH:=	^(BUILTIN_LIB_FOUND|BUILTIN_OPENSSL|BUILTIN_PKG|FIND_FILES)
 VC_MATCH:=	${VC_MATCH}|^(H_|PC_|SH_|_BLTN_H_)
 VC_MATCH:=	${VC_MATCH}|(DBM_H |_DRV |_PC )
 VC_MATCH:=	${VC_MATCH}|^(BIN|BINUTILS)_FILE
 VC_MATCH:=	${VC_MATCH}|^(XAUTH|XINIT)
+
+VC_VARS+=	HOST_OSTYPE
+VC_VARS+=	PKGTOOLS_VERSION
+VC_VARS+=	_GCC_VERSION
+VC_VARS+=	_PKGSRCDIR
 
 #
 # With X11_TYPE=modular we could end up with a situation where an X11 pkgsrc
@@ -34,6 +39,10 @@ VC_MATCH:=	${VC_MATCH}|^(XAUTH|XINIT)
 X11BASE:=	/nonexistent
 
 show-varcache:
+.for _var_ in ${VC_VARS}
+	@echo -n ${_var_}=
+	@${MAKE} show-var VARNAME=${_var_}
+.endfor
 	@{ ${MAKEVARS:@t@ \
 		printf "%s %s\n" ${t:Q} ${${t:Q}:Q}; \
 		@} } | ${SORT} | uniq | ${EGREP} ${VC_MATCH:Q} \
