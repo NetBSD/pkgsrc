@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.236 2026/01/11 09:02:31 adam Exp $
+$NetBSD: CHANGES-2026,v 1.237 2026/01/11 09:36:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -321,3 +321,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/py-pikepdf to 10.2.0 [adam 2026-01-11]
 	Updated devel/py-tox to 4.34.1 [adam 2026-01-11]
 	Updated math/py-uncertainties to 3.2.4 [adam 2026-01-11]
+	Updated print/py-octoprint-filecheck to 2025.7.23 [adam 2026-01-11]
+	Updated print/py-octoprint-firmwarecheck to 2025.7.23 [adam 2026-01-11]
+	Updated print/py-octoprint-pisupport to 2025.7.23 [adam 2026-01-11]
+	Updated print/py-octoprint to 1.11.5 [adam 2026-01-11]
