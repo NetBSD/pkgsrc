@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2025/04/13 12:32:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2026/01/11 09:57:53 adam Exp $
 bin/websockets-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -108,6 +108,9 @@ ${PYSITELIB}/websockets/legacy/server.pyo
 ${PYSITELIB}/websockets/protocol.py
 ${PYSITELIB}/websockets/protocol.pyc
 ${PYSITELIB}/websockets/protocol.pyo
+${PYSITELIB}/websockets/proxy.py
+${PYSITELIB}/websockets/proxy.pyc
+${PYSITELIB}/websockets/proxy.pyo
 ${PYSITELIB}/websockets/py.typed
 ${PYSITELIB}/websockets/server.py
 ${PYSITELIB}/websockets/server.pyc
