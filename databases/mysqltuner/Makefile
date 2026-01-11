@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/06/28 11:31:19 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/01/11 05:23:21 wiz Exp $
 
 GITHUB_PROJECT=	MySQLTuner-perl
 DISTNAME=	1.7.2
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=major/}
 DIST_SUBDIR=	${PKGBASE}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mysqltuner.com/
+HOMEPAGE=	https://mysqltuner.com/
 COMMENT=	Perl script that assists in MySQL configuration
 LICENSE=	gnu-gpl-v3
 
