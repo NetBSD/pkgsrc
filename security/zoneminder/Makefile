@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2026/01/07 08:48:47 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2026/01/11 00:10:08 gdt Exp $
 
 # (1st-parent) commits past 1.36.37 on release-1.36
 #   git log --first-parent --oneline --reverse 1.36.37..
@@ -8,8 +8,7 @@ NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
 
 PKGNAME=	${DISTNAME:S/${NAME_DIST}-/${NAME_LOWER}-/}
-PKGREVISION=	1
-#PKGREVISION=	0
+PKGREVISION=	2
 DISTNAME=	${NAME_DIST}-${VERSION}
 #WRKSRC=		${WRKDIR}/${NAME_LOWER}-${VERSION}
 WRKSRC=		${WRKDIR}/${NAME_LOWER}-${GITHUB_TAG}
@@ -252,6 +251,7 @@ PHP_VERSIONS_INCOMPATIBLE=	56
 
 .include "../../lang/php/phpversion.mk"
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=${PHP_BASE_VERS}:../../databases/php-pdo_mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-sysvsem>=${PHP_BASE_VERS}:../../devel/php-sysvsem
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-sockets>=${PHP_BASE_VERS}:../../net/php-sockets
 DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
