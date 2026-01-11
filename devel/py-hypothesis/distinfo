@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.159 2026/01/01 09:25:27 adam Exp $
+$NetBSD: distinfo,v 1.160 2026/01/11 08:16:29 adam Exp $
 
-BLAKE2s (hypothesis-6.148.9.tar.gz) = b35ec1cc4a0b2b1374de2494cb1e040c9cc7f1b72185e76189a976834848793a
-SHA512 (hypothesis-6.148.9.tar.gz) = 1f46c44583d36424704062971cb14c11a1f5d33efce0d5ef8647aec616d3aa374c75a469ddbb1d62760315a8ff9df0a4ee38161ff1eb51e4b860358348820e4d
-Size (hypothesis-6.148.9.tar.gz) = 471562 bytes
+BLAKE2s (hypothesis-6.150.0.tar.gz) = 398aa350bc9b270259d29d1aeea7f5bfa7d9baa75cfe79e0d82ba5361f66e87d
+SHA512 (hypothesis-6.150.0.tar.gz) = 95b71bd4fc5ce7a94d5baf78df183281628b61dfe994b94e0f4ea3619a5a9f4d527ae62832b642702e976804bb7f0a04f755b4b123327684f587b94c6ccf862a
+Size (hypothesis-6.150.0.tar.gz) = 474629 bytes
