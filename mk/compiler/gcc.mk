@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.301 2026/01/11 11:54:39 wiz Exp $
+# $NetBSD: gcc.mk,v 1.302 2026/01/11 15:07:11 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -476,27 +476,12 @@ _IS_BUILTIN_GCC=	NO
 # highest version of GCC required.
 #
 .if !defined(_GCC_REQD)
-_GCC_STRICTEST_REQD?=	none
-.for _version_ in ${GCC_REQD}
-.  for _pkg_ in gcc-${_version_}
-.    if ${_GCC_STRICTEST_REQD} == "none"
-_GCC_PKG_SATISFIES_DEP=		YES
-.      for _vers_ in ${GCC_REQD}
-.        if !empty(_GCC_PKG_SATISFIES_DEP:M[yY][eE][sS])
-_GCC_PKG_SATISFIES_DEP!=	\
-	if ${PKG_ADMIN} pmatch 'gcc>=${_vers_}' ${_pkg_} 2>/dev/null; then \
-		${ECHO} "YES";						\
-	else								\
-		${ECHO} "NO";						\
-	fi
-.        endif
-.      endfor
-.      if !empty(_GCC_PKG_SATISFIES_DEP:M[yY][eE][sS])
+_GCC_STRICTEST_REQD=	0
+.  for _version_ in ${GCC_REQD}
+.    if ${_version_:R} > ${_GCC_STRICTEST_REQD:R} || (${_version_:R} == ${_GCC_STRICTEST_REQD:R} && ${_version_:E} > ${_GCC_STRICTEST_REQD:E})
 _GCC_STRICTEST_REQD=	${_version_}
-.      endif
 .    endif
 .  endfor
-.endfor
 _GCC_REQD=	${_GCC_STRICTEST_REQD}
 .endif
 
