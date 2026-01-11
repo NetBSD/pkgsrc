@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.232 2026/01/11 05:45:29 tsutsui Exp $
+$NetBSD: CHANGES-2026,v 1.233 2026/01/11 06:00:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -311,3 +311,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/net-snmp to 5.9.5 [wiz 2026-01-11]
 	Updated textproc/py-pdf to 6.6.0 [wiz 2026-01-11]
 	Updated textproc/ruby-nokogiri to 1.19.0 [tsutsui 2026-01-11]
+	Updated fonts/harfbuzz to 12.3.0nb1 [wiz 2026-01-11]
