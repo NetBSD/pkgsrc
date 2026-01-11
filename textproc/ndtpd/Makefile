@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.44 2022/06/28 11:36:13 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.45 2026/01/11 05:33:24 wiz Exp $
 
 DISTNAME=	ndtpd-3.1.5
 PKGREVISION=	16
 CATEGORIES=	textproc japanese
-MASTER_SITES=	ftp://ftp.sra.co.jp/pub/net/ndtp/ndtpd/
+#MASTER_SITES=	ftp://ftp.sra.co.jp/pub/net/ndtp/ndtpd/
 
 MAINTAINER=	uebayasi@NetBSD.org
-HOMEPAGE=	http://www.sra.co.jp/people/m-kasahr/ndtpd/
+#HOMEPAGE=	http://www.sra.co.jp/people/m-kasahr/ndtpd/
 COMMENT=	Server for accessing CD-ROM books with NDTP
 
 USE_TOOLS+=	makeinfo perl:run
