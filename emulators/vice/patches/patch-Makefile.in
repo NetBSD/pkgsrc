@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile.in,v 1.1 2026/01/11 14:15:03 rhialto Exp $
+
+Some scripts use bash extensions.
+
+--- src/Makefile.in.orig	2025-01-09 14:28:43.451628620 +0000
++++ src/Makefile.in
+@@ -2381,10 +2381,10 @@ infocontrib.h: $(srcdir)/buildtools/geni
+ 
+ # also update the version/date in the readme
+ # FIXME: this is not the exact right place for this
+-	@$(SHELL) $(srcdir)/buildtools/updatereadme.sh $(top_srcdir)/README $(top_srcdir)/configure.ac $(top_srcdir)/src/vicedate.h
++	@$(BASH_SHELL) $(srcdir)/buildtools/updatereadme.sh $(top_srcdir)/README $(top_srcdir)/configure.ac $(top_srcdir)/src/vicedate.h
+ # also update the version/date in the index.html
+ # FIXME: this is not the exact right place for this
+-	@$(SHELL) $(srcdir)/buildtools/updateindex.sh $(top_srcdir)/doc/html/index.html $(top_srcdir)/configure.ac $(top_srcdir)/src/vicedate.h
++	@$(BASH_SHELL) $(srcdir)/buildtools/updateindex.sh $(top_srcdir)/doc/html/index.html $(top_srcdir)/configure.ac $(top_srcdir)/src/vicedate.h
+ 
+ .PHONY: vsid-all vsid-program
+ vsid-all:

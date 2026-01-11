@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.18 2025/01/31 17:49:02 rhialto Exp $
+# $NetBSD: options.mk,v 1.19 2026/01/11 14:15:03 rhialto Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vice
-PKG_SUPPORTED_OPTIONS=		ffmpeg vice-x64 vice-cpuhistory pulseaudio alsa
+PKG_SUPPORTED_OPTIONS=		vice-x64 vice-cpuhistory pulseaudio alsa
 PKG_OPTIONS_REQUIRED_GROUPS=	gui
 PKG_OPTIONS_GROUP.gui=		gtk3 sdl sdl2 vice-headless
-PKG_SUGGESTED_OPTIONS=		gtk3 ffmpeg
+PKG_SUGGESTED_OPTIONS=		gtk3
 
 .include "../../mk/bsd.options.mk"
 
@@ -16,27 +16,25 @@ PLIST.gtk=		yes
 PLIST.gui=		yes
 TOOL_DEPENDS+=		glib2-tools>=2.56:../../devel/glib2-tools
 
+.  include "../../x11/gtk3/buildlink3.mk"
+.  include "../../graphics/glew/buildlink3.mk"
+
+# Let gtk3 include desktop files and icons.
 CONFIGURE_ARGS+=	--enable-desktop-files
 PLIST.desktop=		yes
 TOOL_DEPENDS+=		xdg-utils-[0-9]*:../../misc/xdg-utils
-
-.  include "../../x11/gtk3/buildlink3.mk"
-.  include "../../graphics/glew/buildlink3.mk"
+TOOL_DEPENDS+=		desktop-file-utils-[0-9]*:../../sysutils/desktop-file-utils
+MAKE_FLAGS+=		DESKTOP_PREFIX=${PREFIX}
 
 # XXX work around misc/xdg-utils being completely broken;
 #     the post-install target moves the *.menu file around.
 XDG_CONFIG_DIR=		${PREFIX}/etc/xdg
 XDG_DATA_DIR=		${PREFIX}/share
-MAKE_ENV+=		XDG_CONFIG_DIRS="${DESTDIR}${XDG_CONFIG_DIR}"
-MAKE_ENV+=		XDG_DATA_DIRS="${DESTDIR}${XDG_DATA_DIR}"
+MAKE_ENV+=		XDG_UTILS_INSTALL_MODE=user
 MAKE_ENV+=		XDG_UTILS_DEBUG_LEVEL=999
 INSTALLATION_DIRS+=	${XDG_CONFIG_DIR}/menus/applications-merged
 INSTALLATION_DIRS+=	${XDG_DATA_DIR}/applications
 INSTALLATION_DIRS+=	${XDG_DATA_DIR}/desktop-directories
-MAKE_DIRS+=		${PKG_SYSCONFBASE}/xdg/menus/applications-merged
-
-CONF_FILES+=	${PREFIX}/share/vice/vice-org-vice-org.menu \
-		${PKG_SYSCONFBASE}/xdg/menus/applications-merged/vice-org-vice-org.menu
 
 BUILD_DEFS+=	PKG_SYSCONFBASE
 
@@ -63,14 +61,6 @@ PLIST.gui=		yes
 
 .if !empty(PKG_OPTIONS:Mvice-headless)
 CONFIGURE_ARGS+=	--enable-headlessui
-.endif
-
-# If desired, ffmpeg and lame can be build-time-only dependencies,
-# since they are loaded dynamically only.
-.if !empty(PKG_OPTIONS:Mffmpeg)
-#BUILDLINK_DEPMETHOD.ffmpeg?=	build
-CONFIGURE_ARGS+=	--enable-ffmpeg
-.  include "../../multimedia/ffmpeg4/buildlink3.mk"
 .endif
 
 # Building x64 is deprecated, in favour of x64sc (but that is slower).
