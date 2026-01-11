@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.298 2026/01/11 07:22:33 wiz Exp $
+# $NetBSD: gcc.mk,v 1.299 2026/01/11 07:25:41 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -1324,7 +1324,7 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 #  Special case packages which are themselves a dependency of gcc runtime.
 .  if ${PKGPATH} != devel/libtool-base && ${PKGPATH} != devel/binutils && \
       empty(PKGPATH:Mlang/gcc*-aux) && empty(PKGPATH:Mlang/gcc*-gnat) && \
-      empty(PKGPATH:Mlang/gcc4?) && empty(PKGPATH:Mlang/gcc[5-9]) && \
+      empty(PKGPATH:Mlang/gcc[6-9]) && \
       empty(PKGPATH:Mlang/gcc10) && empty(PKGPATH:Mlang/gcc1[2-5])
 .    if !empty(_GCC_PKGBASE:Mgcc13-gnat)
 .      include "../../lang/gcc13-gnat-libs/buildlink3.mk"
