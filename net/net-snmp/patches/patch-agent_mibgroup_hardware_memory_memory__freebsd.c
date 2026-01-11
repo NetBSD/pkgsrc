@@ -1,8 +1,8 @@
-$NetBSD: patch-agent_mibgroup_hardware_memory_memory__freebsd.c,v 1.1 2022/10/18 12:01:52 adam Exp $
+$NetBSD: patch-agent_mibgroup_hardware_memory_memory__freebsd.c,v 1.2 2026/01/11 05:08:00 wiz Exp $
 
---- agent/mibgroup/hardware/memory/memory_freebsd.c.orig	2014-12-08 20:23:22.000000000 +0000
+--- agent/mibgroup/hardware/memory/memory_freebsd.c.orig	2025-12-20 15:03:33.000000000 +0000
 +++ agent/mibgroup/hardware/memory/memory_freebsd.c
-@@ -36,6 +36,12 @@ int netsnmp_mem_arch_load( netsnmp_cache
+@@ -37,6 +37,12 @@ int netsnmp_mem_arch_load( netsnmp_cache *cache, void 
      long           pagesize;
      int            nswap;
  
@@ -15,7 +15,7 @@ $NetBSD: patch-agent_mibgroup_hardware_memory_memory__freebsd.c,v 1.1 2022/10/18
  #if !defined(VM_TOTAL)
      unsigned int   free_mem;
      size_t         free_size = sizeof(free_mem);
-@@ -76,11 +82,17 @@ int netsnmp_mem_arch_load( netsnmp_cache
+@@ -77,11 +83,17 @@ int netsnmp_mem_arch_load( netsnmp_cache *cache, void 
      sysctlbyname("vm.stats.vm.v_inactive_count", &inact_count, &inact_size, NULL, 0);
      sysctlbyname("vfs.bufspace",    &bufspace,    &buf_size, NULL, 0);
      sysctlbyname("vfs.maxbufspace", &maxbufspace, &buf_size, NULL, 0);
@@ -33,7 +33,7 @@ $NetBSD: patch-agent_mibgroup_hardware_memory_memory__freebsd.c,v 1.1 2022/10/18
  
      /*
       * ... and save this in a standard form.
-@@ -91,6 +103,11 @@ int netsnmp_mem_arch_load( netsnmp_cache
+@@ -92,12 +104,18 @@ int netsnmp_mem_arch_load( netsnmp_cache *cache, void 
      } else {
          if (!mem->descr)
               mem->descr = strdup("Physical memory");
@@ -45,11 +45,10 @@ $NetBSD: patch-agent_mibgroup_hardware_memory_memory__freebsd.c,v 1.1 2022/10/18
          mem->units = pagesize;
          mem->size  = phys_mem/pagesize;
  #if !defined(VM_TOTAL)
-@@ -98,6 +115,7 @@ int netsnmp_mem_arch_load( netsnmp_cache
+ 	mem->free  = free_mem;
  #else
          mem->free  = total.t_free;
- #endif
 +#endif
+ #endif
      }
  
-     mem = netsnmp_memory_get_byIdx( NETSNMP_MEM_TYPE_USERMEM, 1 );

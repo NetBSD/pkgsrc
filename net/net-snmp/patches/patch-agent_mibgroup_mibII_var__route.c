@@ -1,10 +1,10 @@
-$NetBSD: patch-agent_mibgroup_mibII_var__route.c,v 1.2 2024/02/21 10:21:01 wiz Exp $
+$NetBSD: patch-agent_mibgroup_mibII_var__route.c,v 1.3 2026/01/11 05:08:00 wiz Exp $
 
 Fix for systems with RTF_LLDATA in place of RTF_LLINFO.
 
---- agent/mibgroup/mibII/var_route.c.orig	2023-08-15 20:32:01.000000000 +0000
+--- agent/mibgroup/mibII/var_route.c.orig	2025-12-20 15:03:33.000000000 +0000
 +++ agent/mibgroup/mibII/var_route.c
-@@ -956,8 +956,12 @@ load_rtentries(struct radix_node *pt)
+@@ -956,7 +956,11 @@ load_rtentries(struct radix_node *pt)
          }
  #ifdef CHECK_RT_FLAGS
          if (((rt.rt_flags & RTF_CLONING) != RTF_CLONING)
@@ -12,8 +12,7 @@ Fix for systems with RTF_LLDATA in place of RTF_LLINFO.
 +            && ((rt.rt_flags & RTF_LLDATA) != RTF_LLDATA)) {
 +#else
              && ((rt.rt_flags & RTF_LLINFO) != RTF_LLINFO)) {
- #endif
 +#endif
+ #endif
              /*
               * check for space and malloc 
-              */
