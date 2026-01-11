@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.297 2025/07/30 19:22:49 dkazankov Exp $
+# $NetBSD: gcc.mk,v 1.298 2026/01/11 07:22:33 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -83,7 +83,7 @@ _DEF_VARS.gcc=	\
 	PKGSRC_ADA PKGSRC_GMK PKGSRC_GLK PKGSRC_GBD PKGSRC_CHP PKGSRC_GNT PKGSRC_GLS PKGSRC_PRP \
 	_CC _COMPILER_RPATH_FLAG _COMPILER_STRIP_VARS \
 	_GCCBINDIR _GCC_ARCHDIR _GCC_BIN_PREFIX _GCC_CFLAGS \
-	_GCC_CC _GCC_CPP _GCC_CXX _GCC_DEPENDENCY _GCC_DEPENDS \
+	_GCC_CC _GCC_CPP _GCC_CXX _GCC_DEPENDS \
 	_GCC_DIST_NAME _GCC_DIST_VERSION \
 	_GCC_FC _GCC_LDFLAGS _GCC_LIBDIRS _GCC_PKG \
 	_GCC_PKGBASE _GCC_PKGSRCDIR _GCC_PKG_SATISFIES_DEP \
@@ -141,6 +141,12 @@ USE_NATIVE_GCC?=	no
 USE_PKGSRC_GCC?=	no
 USE_PKGSRC_GCC_RUNTIME?=no
 
+#
+# Known gcc versions for GCC_REQD in descending order.
+# Only list versions that have pkgsrc packages.
+# Keep this list short.
+#
+_ALL_GCC_VERSIONS=	15 14 13 12 11 10 9 8 7 6
 #
 # Each successive GCC_REQD has an associated cost below when executing
 # pkg_admin to determine if it's suitable, so only add these incredibly
@@ -790,7 +796,6 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc6
-_GCC_DEPENDENCY=	gcc6>=${_GCC_REQD}:../../lang/gcc6
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
         !empty(_LANGUAGES.gcc:Mfortran77) || \
@@ -811,7 +816,6 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc7
-_GCC_DEPENDENCY=	gcc7>=${_GCC_REQD}:../../lang/gcc7
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
         !empty(_LANGUAGES.gcc:Mfortran77) || \
@@ -832,7 +836,6 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc8
-_GCC_DEPENDENCY=	gcc8>=${_GCC_REQD}:../../lang/gcc8
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
         !empty(_LANGUAGES.gcc:Mfortran77) || \
@@ -853,7 +856,6 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc9
-_GCC_DEPENDENCY=	gcc9>=${_GCC_REQD}:../../lang/gcc9
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
         !empty(_LANGUAGES.gcc:Mfortran77) || \
@@ -874,7 +876,6 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc10
-_GCC_DEPENDENCY=	gcc10>=${_GCC_REQD}:../../lang/gcc10
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
         !empty(_LANGUAGES.gcc:Mfortran77) || \
@@ -895,7 +896,6 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc12
-_GCC_DEPENDENCY=	gcc12>=${_GCC_REQD}:../../lang/gcc12
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
         !empty(_LANGUAGES.gcc:Mfortran77) || \
@@ -916,7 +916,6 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc13
-_GCC_DEPENDENCY=	gcc13>=${_GCC_REQD}:../../lang/gcc13
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
         !empty(_LANGUAGES.gcc:Mfortran77) || \
@@ -937,7 +936,6 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc14
-_GCC_DEPENDENCY=	gcc14>=${_GCC_REQD}:../../lang/gcc14
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
         !empty(_LANGUAGES.gcc:Mfortran77) || \
@@ -958,7 +956,6 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc15
-_GCC_DEPENDENCY=	gcc15>=${_GCC_REQD}:../../lang/gcc15
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
         !empty(_LANGUAGES.gcc:Mfortran77) || \
@@ -980,9 +977,6 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
 .  if !defined(_IGNORE_GCC)
 _GCC_PKGSRCDIR=		../../lang/${_GCC_PKGBASE}
-# _GCC_DEPENDENCY is some kind of artifact
-#_GCC_DEPENDENCY=	gcc6-aux>=${_GCC_REQD}:../../lang/gcc6-aux
-# gcc6-aux doesn't have a separate package for shared libraries
 .  endif
 .elif !empty(_NEED_GCC10_AUX:M[yY][eE][sS])
 #
@@ -996,8 +990,6 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/${_GCC_PKGBASE}
-#_GCC_DEPENDENCY=	gcc10-aux>=${_GCC_REQD}:../../lang/gcc10-aux
-# gcc10-aux doesn't have a separate package for shared libraries
 .  endif
 .elif !empty(_NEED_GCC13_GNAT:M[yY][eE][sS])
 #
@@ -1011,7 +1003,6 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
 .  if !defined(_IGNORE_GCC)
 _GCC_PKGSRCDIR=		../../lang/${_GCC_PKGBASE}
-#_GCC_DEPENDENCY=	gcc13-gnat>=${_GCC_REQD}:../../lang/gcc13-gnat
 .    if defined(USE_GCC_RUNTIME)
 _USE_GCC_SHLIB?=	yes
 .    endif
@@ -1028,7 +1019,6 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
 .  if !defined(_IGNORE_GCC)
 _GCC_PKGSRCDIR=		../../lang/${_GCC_PKGBASE}
-#_GCC_DEPENDENCY=	gcc14-gnat>=${_GCC_REQD}:../../lang/gcc14-gnat
 .    if defined(USE_GCC_RUNTIME)
 _USE_GCC_SHLIB?=	yes
 .    endif
