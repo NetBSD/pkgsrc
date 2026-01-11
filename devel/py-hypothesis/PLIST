@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2025/10/23 09:14:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.50 2026/01/11 08:16:29 adam Exp $
 bin/hypothesis-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -310,6 +310,9 @@ ${PYSITELIB}/hypothesis/utils/__init__.pyo
 ${PYSITELIB}/hypothesis/utils/conventions.py
 ${PYSITELIB}/hypothesis/utils/conventions.pyc
 ${PYSITELIB}/hypothesis/utils/conventions.pyo
+${PYSITELIB}/hypothesis/utils/deprecation.py
+${PYSITELIB}/hypothesis/utils/deprecation.pyc
+${PYSITELIB}/hypothesis/utils/deprecation.pyo
 ${PYSITELIB}/hypothesis/utils/dynamicvariables.py
 ${PYSITELIB}/hypothesis/utils/dynamicvariables.pyc
 ${PYSITELIB}/hypothesis/utils/dynamicvariables.pyo
