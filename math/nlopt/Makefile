@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/02/06 08:47:14 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/01/12 06:50:43 wiz Exp $
 
 DISTNAME=	nlopt-2.10.0
 CATEGORIES=	math
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=stevengj/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ab-initio.mit.edu/nlopt/
+HOMEPAGE=	https://nlopt.readthedocs.io/en/latest/
 COMMENT=	Nonlinear optimization library
 LICENSE=	gnu-lgpl-v2.1 OR mit
 
