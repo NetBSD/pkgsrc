@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.260 2026/01/12 13:07:12 pin Exp $
+$NetBSD: CHANGES-2026,v 1.261 2026/01/12 16:44:26 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -364,3 +364,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-X to 0.17 [adam 2026-01-12]
 	Removed devel/ply successor devel/py-ply [adam 2026-01-12]
 	Updated textproc/television to 0.14.5 [pin 2026-01-12]
+	Updated www/hugo to 0.154.5 [triaxx 2026-01-12]
