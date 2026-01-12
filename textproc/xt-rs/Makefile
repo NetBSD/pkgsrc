@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/09/01 09:40:48 pin Exp $
+# $NetBSD: Makefile,v 1.10 2026/01/12 11:56:36 pin Exp $
 
-DISTNAME=	xt-0.19.5
-PKGNAME=	xt-rs-0.19.5
+DISTNAME=	xt-0.20.0
+PKGNAME=	xt-rs-0.20.0
 CATEGORIES=	textproc
 MASTER_SITES=	https://static.crates.io/crates/xt/
 EXTRACT_SUFX=	.crate
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.70.0
+RUST_REQ=	1.85.0
 USE_TOOLS+=	pkg-config
 
 .include "../../lang/rust/cargo.mk"
