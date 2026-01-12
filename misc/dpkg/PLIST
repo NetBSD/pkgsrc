@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2025/08/03 21:08:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2026/01/12 12:14:15 adam Exp $
 bin/dpkg
 bin/dpkg-architecture
 bin/dpkg-buildapi
@@ -84,7 +84,6 @@ lib/libdpkg.la
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Arch.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Archive/Ar.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Build/Info.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/BuildAPI.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/BuildDriver.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/BuildDriver/DebianRules.pm
@@ -163,6 +162,7 @@ ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Source/Package/V3/Quilt.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Source/Patch.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Source/Quilt.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Substvars.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/SysInfo.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Vendor.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Vendor/Debian.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Vendor/Default.pm
@@ -171,7 +171,9 @@ ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Vendor/PureOS.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Vendor/Ubuntu.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Version.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dselect/Method.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Dselect/Method/Config.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dselect/Method/Ftp.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Dselect/Method/Media.pm
 lib/pkgconfig/libdpkg.pc
 libexec/dpkg/dpkg-db-backup
 libexec/dpkg/dpkg-db-keeper
@@ -252,7 +254,6 @@ man/de/man7/deb-version.7
 man/de/man7/dpkg-build-api.7
 man/de/man8/start-stop-daemon.8
 man/es/man1/dpkg-distaddfile.1
-man/es/man5/deb-old.5
 man/es/man5/dpkg.cfg.5
 man/es/man5/dselect.cfg.5
 man/fr/man1/dpkg-architecture.1
@@ -279,7 +280,6 @@ man/fr/man1/dpkg-vendor.1
 man/fr/man1/dselect.1
 man/fr/man1/update-alternatives.1
 man/fr/man5/deb-changelog.5
-man/fr/man5/deb-changes.5
 man/fr/man5/deb-conffiles.5
 man/fr/man5/deb-control.5
 man/fr/man5/deb-extra-override.5
@@ -293,26 +293,20 @@ man/fr/man5/deb-preinst.5
 man/fr/man5/deb-prerm.5
 man/fr/man5/deb-shlibs.5
 man/fr/man5/deb-split.5
-man/fr/man5/deb-src-control.5
 man/fr/man5/deb-src-files.5
 man/fr/man5/deb-src-rules.5
 man/fr/man5/deb-src-symbols.5
-man/fr/man5/deb-substvars.5
 man/fr/man5/deb-symbols.5
 man/fr/man5/deb-triggers.5
-man/fr/man5/deb.5
 man/fr/man5/deb822.5
 man/fr/man5/dpkg.cfg.5
-man/fr/man5/dsc.5
 man/fr/man5/dselect.cfg.5
 man/fr/man7/deb-version.7
 man/fr/man8/start-stop-daemon.8
 man/it/man1/dpkg-distaddfile.1
-man/it/man5/deb-old.5
 man/it/man5/dpkg.cfg.5
 man/it/man5/dselect.cfg.5
 man/ja/man1/dpkg-distaddfile.1
-man/ja/man5/deb-old.5
 man/ja/man5/dpkg.cfg.5
 man/ja/man5/dselect.cfg.5
 man/man1/dpkg-architecture.1
@@ -348,7 +342,6 @@ man/man1/update-alternatives.1
 man/man3/Dpkg.3perl
 man/man3/Dpkg::Arch.3perl
 man/man3/Dpkg::Archive::Ar.3perl
-man/man3/Dpkg::Build::Info.3perl
 man/man3/Dpkg::BuildAPI.3perl
 man/man3/Dpkg::BuildDriver.3perl
 man/man3/Dpkg::BuildDriver::DebianRules.3perl
@@ -427,6 +420,7 @@ man/man3/Dpkg::Source::Package::V3::Quilt.3perl
 man/man3/Dpkg::Source::Patch.3perl
 man/man3/Dpkg::Source::Quilt.3perl
 man/man3/Dpkg::Substvars.3perl
+man/man3/Dpkg::SysInfo.3perl
 man/man3/Dpkg::Vendor.3perl
 man/man3/Dpkg::Vendor::Debian.3perl
 man/man3/Dpkg::Vendor::Default.3perl
@@ -519,7 +513,6 @@ man/nl/man5/deb-src-symbols.5
 man/nl/man5/deb-substvars.5
 man/nl/man5/deb-symbols.5
 man/nl/man5/deb-triggers.5
-man/nl/man5/deb.5
 man/nl/man5/deb822.5
 man/nl/man5/dpkg.cfg.5
 man/nl/man5/dsc.5
@@ -528,7 +521,6 @@ man/nl/man7/deb-version.7
 man/nl/man7/dpkg-build-api.7
 man/nl/man8/start-stop-daemon.8
 man/pl/man1/dpkg-distaddfile.1
-man/pl/man5/deb-old.5
 man/pl/man5/dpkg.cfg.5
 man/pl/man5/dselect.cfg.5
 man/pt/man1/dpkg-architecture.1
@@ -584,7 +576,6 @@ man/pt/man5/deb-src-symbols.5
 man/pt/man5/deb-substvars.5
 man/pt/man5/deb-symbols.5
 man/pt/man5/deb-triggers.5
-man/pt/man5/deb.5
 man/pt/man5/deb822.5
 man/pt/man5/dpkg.cfg.5
 man/pt/man5/dsc.5
@@ -645,7 +636,6 @@ man/sv/man5/deb-src-symbols.5
 man/sv/man5/deb-substvars.5
 man/sv/man5/deb-symbols.5
 man/sv/man5/deb-triggers.5
-man/sv/man5/deb.5
 man/sv/man5/deb822.5
 man/sv/man5/dpkg.cfg.5
 man/sv/man5/dsc.5
@@ -706,6 +696,8 @@ share/locale/de/LC_MESSAGES/dselect.mo
 share/locale/dz/LC_MESSAGES/dpkg.mo
 share/locale/el/LC_MESSAGES/dpkg.mo
 share/locale/el/LC_MESSAGES/dselect.mo
+share/locale/en/LC_MESSAGES/dpkg-dev.mo
+share/locale/en/LC_MESSAGES/dpkg.mo
 share/locale/eo/LC_MESSAGES/dpkg.mo
 share/locale/es/LC_MESSAGES/dpkg-dev.mo
 share/locale/es/LC_MESSAGES/dpkg.mo
