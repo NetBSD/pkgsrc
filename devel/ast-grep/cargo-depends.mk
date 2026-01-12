@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.70 2026/01/05 06:29:54 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.71 2026/01/12 11:45:54 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	Inflector-0.11.4
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
@@ -23,7 +23,7 @@ CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	cfg_aliases-0.2.1
 CARGO_CRATE_DEPENDS+=	clap-4.5.54
 CARGO_CRATE_DEPENDS+=	clap_builder-4.5.54
-CARGO_CRATE_DEPENDS+=	clap_complete-4.5.64
+CARGO_CRATE_DEPENDS+=	clap_complete-4.5.65
 CARGO_CRATE_DEPENDS+=	clap_derive-4.5.49
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.4
 CARGO_CRATE_DEPENDS+=	codespan-reporting-0.13.1
