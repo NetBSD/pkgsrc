@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.91 2025/12/21 17:15:35 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2026/01/12 22:03:02 wiz Exp $
 
-DISTNAME=	google_auth-2.45.0
+DISTNAME=	google_auth-2.47.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google_auth/}
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-asn1-modules>=0.2.1:../../security/py-asn1-modules
-DEPENDS+=	${PYPKGPREFIX}-cachetools>=2.0.0:../../devel/py-cachetools
 DEPENDS+=	${PYPKGPREFIX}-rsa>=3.1.4:../../security/py-rsa
 TEST_DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.6.2:../../www/py-aiohttp
 TEST_DEPENDS+=	${PYPKGPREFIX}-aioresponses-[0-9]*:../../net/py-aioresponses
@@ -31,8 +30,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
 
 USE_LANGUAGES=	# none
 
-# as of 2.45.0
-# 2 failed, 1500 passed, 17 skipped, 105 warnings
+# as of 2.47.0
+# 2 failed, 1518 passed, 17 skipped, 114 warnings
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
