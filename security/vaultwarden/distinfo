@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2025/12/31 12:17:20 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/01/12 11:14:38 adam Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -198,9 +198,9 @@ Size (brotli-decompressor-5.0.0.crate) = 195282 bytes
 BLAKE2s (bumpalo-3.19.1.crate) = 41bd9973c8f96d8ba0769498691815bd44c461c7c3ac54b76dbb6cccd9f35043
 SHA512 (bumpalo-3.19.1.crate) = 105a84bbf8c2b8fc130055713eab7b598c67d34ac01fe95b4c9f10fe956130870c0d12ac237c5dad3a44991a1b8611e5028e749024b6497d6b2f8a2702a4f655
 Size (bumpalo-3.19.1.crate) = 96477 bytes
-BLAKE2s (bw_web_v2025.12.1.tar.gz) = a589586ef104813fd71fbd50c90ba73dc1c7a21fb6c89ce4cbafb1f283bce801
-SHA512 (bw_web_v2025.12.1.tar.gz) = 217db635f35d5f3d1e804595e0a845ac78f944c7ee6f7bab3a4a1d9dc3a5fcf23aaee36cd2f55a1fa72b200012eeb4e4f72758ef6284a45ea03d743bbd90ec06
-Size (bw_web_v2025.12.1.tar.gz) = 31980223 bytes
+BLAKE2s (bw_web_v2025.12.1+build.3.tar.gz) = 4c167544b7df70cd140798286d7347cc591ec0be959abf6145dab7a0e7ab8c24
+SHA512 (bw_web_v2025.12.1+build.3.tar.gz) = eb6c3cdf6ff3d3e1f03970767d2c80bf4d93c69eeb79db18f7e1cfa3f56c687bb1416859987be8427badb0884b9d9ca2406006eee733b9bd96713ac7b5a9a8e6
+Size (bw_web_v2025.12.1+build.3.tar.gz) = 25731827 bytes
 BLAKE2s (bytecount-0.6.9.crate) = 08ab8034e520d7b5a85e59743f84ff3d9b922d82d43da39c5f50e68e8b77595b
 SHA512 (bytecount-0.6.9.crate) = e77fa4d95ec0641f40e937ccfba4a560363284a63b79ededc00fba27080d076546bdaaa81eccf622332b924159328964dff017d017ec7d89b55427a7227975b5
 Size (bytecount-0.6.9.crate) = 18695 bytes
@@ -1605,9 +1605,9 @@ Size (valuable-0.1.1.crate) = 28679 bytes
 BLAKE2s (value-bag-1.12.0.crate) = de9b2a2ccd74cd392c6f9c278ed8a2e287c12dd64043a1ed2dc33d088a2ed5a8
 SHA512 (value-bag-1.12.0.crate) = 2f2942e5b5793c7789518e6e939e6b18546fad6ead1f7c735ee0cb4b784ff7316bbb21e6ed70b16e7b2a59c5cf1c3e1b104cebde8391f58f92df01dcf2d06c70
 Size (value-bag-1.12.0.crate) = 44222 bytes
-BLAKE2s (vaultwarden-1.35.1.tar.gz) = ec09b9ee0e328d51d6859bba7e68c27c6f176af78eebdcba2c5f8380e2e50e11
-SHA512 (vaultwarden-1.35.1.tar.gz) = 24c4d57020427fdbabe07b57355f8552007a1d0612422c251df9dc8d64ff2ca41054937ff0287e3ee3c13bf16ea7dd6c550aa2d29f8f0073ce3e152c9e9d3b9a
-Size (vaultwarden-1.35.1.tar.gz) = 733619 bytes
+BLAKE2s (vaultwarden-1.35.2.tar.gz) = 0461f3c9c7292fddbef852ee324801c3c0f58d0229cd425139fec586cc19c476
+SHA512 (vaultwarden-1.35.2.tar.gz) = 89fbf88eb824c96d700844fdfe7418b8be7c22d39e7fe049055cd092f0e846fccafaffe55252133b759b9096c29ddbaeadb1e05eca1e363a08800f4a4b61e48b
+Size (vaultwarden-1.35.2.tar.gz) = 734205 bytes
 BLAKE2s (vcpkg-0.2.15.crate) = 0ec9e97d0e23d59f0a4095773e1136e15f2054fb86bcceb309774638768ea8c4
 SHA512 (vcpkg-0.2.15.crate) = 7322a21e8811b2fe4e79e09dc321458068ecdf1953f05d36233f3278ecc0b1dfc64194db7010dd46fcf692285f42475beb090c6c6cac0c8f9fe0eb5c770e3172
 Size (vcpkg-0.2.15.crate) = 228735 bytes
