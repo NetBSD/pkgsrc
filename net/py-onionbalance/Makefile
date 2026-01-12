@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2025/10/09 07:57:52 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/01/12 11:40:11 adam Exp $
 
-DISTNAME=	onionbalance-0.2.3
+DISTNAME=	onionbalance-0.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/onionbalance/}
@@ -30,5 +30,7 @@ post-install:
 	${MV} onionbalance onionbalance-${PYVERSSUFFIX} && \
 	${MV} onionbalance-config onionbalance-config-${PYVERSSUFFIX} || ${TRUE}
 
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
