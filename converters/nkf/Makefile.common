@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.8 2019/01/05 13:45:16 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.9 2026/01/12 06:50:02 wiz Exp $
 # used by converters/nkf/Makefile
 # used by converters/p5-nkf/Makefile
 
 DISTNAME=	nkf-2.1.5
 MASTER_SITES=	${MASTER_SITE_OSDN:=nkf/70406/}
 
-HOMEPAGE=	http://osdn.jp/projects/nkf/
+#HOMEPAGE=	http://osdn.jp/projects/nkf/
 
 DISTINFO_FILE=	${.CURDIR}/../../converters/nkf/distinfo
 PATCHDIR=	${.CURDIR}/../../converters/nkf/patches
