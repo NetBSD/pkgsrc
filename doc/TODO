@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26664 2026/01/12 22:13:18 wiz Exp $
+$NetBSD: TODO,v 1.26665 2026/01/12 22:18:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -418,7 +418,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o aide-0.19.2
 	o album-4.17
 	o alevt-1.6.2
-	o alsa-lib-1.2.15.2
 	o alsa-plugins-1.2.7.1
 	o amanda-3.5.2
 	o amarok-3.3

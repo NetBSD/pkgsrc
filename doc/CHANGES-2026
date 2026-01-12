@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.275 2026/01/12 22:13:18 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.276 2026/01/12 22:18:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -381,3 +381,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-google-auth to 2.47.0 [wiz 2026-01-12]
 	Updated comms/py-textual to 7.2.0 [wiz 2026-01-12]
 	Updated sysutils/snmp_exporter to 0.30.1nb6 [wiz 2026-01-12]
+	Updated audio/alsa-lib to 1.2.15.2 [wiz 2026-01-12]
