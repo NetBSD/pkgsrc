@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.254 2026/01/12 11:56:55 pin Exp $
+$NetBSD: CHANGES-2026,v 1.255 2026/01/12 11:58:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -357,3 +357,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 29.0.2 [pin 2026-01-12]
 	Updated finance/rex to 0.2.4 [pin 2026-01-12]
 	Updated textproc/xt-rs to 0.20.0 [pin 2026-01-12]
+	Updated graphics/wallust to 3.5.0 [pin 2026-01-12]
