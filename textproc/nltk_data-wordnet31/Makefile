@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2023/05/03 09:41:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/12 07:05:22 wiz Exp $
 
 DISTNAME=	wordnet31
 PKGNAME=	nltk_data-wordnet31-20230502
 CATEGORIES=	textproc
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-HOMEPAGE=	http://wordnet.princeton.edu/
+HOMEPAGE=	https://wordnet.princeton.edu/
 COMMENT=	NLTK Data - Wordnet 3.1
 #LICENSE=	Permission to use, copy, modify and distribute this software and database and its documentation for any purpose and without fee or royalty is hereby granted, provided that you agree to comply with the following copyright notice and statements, including the disclaimer, and that the same appear on ALL copies of the software, database and documentation, including modifications that you make for internal use or for distribution.... [see webpage for full license]
 
