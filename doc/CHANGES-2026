@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.258 2026/01/12 12:32:08 adam Exp $
+$NetBSD: CHANGES-2026,v 1.259 2026/01/12 12:39:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -362,3 +362,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-nextest to 0.9.120 [pin 2026-01-12]
 	Updated misc/dpkg to 1.23.3 [adam 2026-01-12]
 	Updated textproc/py-X to 0.17 [adam 2026-01-12]
+	Removed devel/ply successor devel/py-ply [adam 2026-01-12]
