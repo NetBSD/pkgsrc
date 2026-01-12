@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.259 2026/01/12 12:39:49 adam Exp $
+$NetBSD: CHANGES-2026,v 1.260 2026/01/12 13:07:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -363,3 +363,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/dpkg to 1.23.3 [adam 2026-01-12]
 	Updated textproc/py-X to 0.17 [adam 2026-01-12]
 	Removed devel/ply successor devel/py-ply [adam 2026-01-12]
+	Updated textproc/television to 0.14.5 [pin 2026-01-12]
