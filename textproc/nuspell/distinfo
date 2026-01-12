@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/05/27 20:45:37 bsiegert Exp $
+$NetBSD: distinfo,v 1.4 2026/01/12 19:39:23 bsiegert Exp $
 
-BLAKE2s (nuspell-5.1.6.tar.gz) = e3939957f42168548daccd1b171dae08b7d21e341f857dfe79dd630647f0ab12
-SHA512 (nuspell-5.1.6.tar.gz) = ab6d9394a55d9a2a347ccae47aeef6a96af70f421ad6ea8f7ac7fde2052790f37fb1c7ec3112daac7600d193430a560cb1915ab6557c9353717f65cb32f13ab8
-Size (nuspell-5.1.6.tar.gz) = 373260 bytes
+BLAKE2s (nuspell-5.1.7.tar.gz) = c17b163b50ea9da48c6cf92b601d9173f58f2e0d3335af5c5ecaa87beb180ef6
+SHA512 (nuspell-5.1.7.tar.gz) = cb030dca90a52000a7cf4ea7f15e10ee90aec59e56e8212f8ba69f37e070f1100390393191cdbbf88b14836f408c8eb2fb9712be3d472491b1c93dd5cedd9a40
+Size (nuspell-5.1.7.tar.gz) = 339465 bytes
