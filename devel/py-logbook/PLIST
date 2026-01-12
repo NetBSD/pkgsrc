@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/12 11:55:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/01/12 17:09:58 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -8,9 +8,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/logbook/__init__.py
 ${PYSITELIB}/logbook/__init__.pyc
 ${PYSITELIB}/logbook/__init__.pyo
-${PYSITELIB}/logbook/__version__.py
-${PYSITELIB}/logbook/__version__.pyc
-${PYSITELIB}/logbook/__version__.pyo
 ${PYSITELIB}/logbook/_fallback.py
 ${PYSITELIB}/logbook/_fallback.pyc
 ${PYSITELIB}/logbook/_fallback.pyo
