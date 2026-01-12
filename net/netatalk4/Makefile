@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2026/01/11 05:34:23 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2026/01/12 23:25:00 hauke Exp $
 
 GITHUB_PROJECT=	netatalk
 GITHUB_TAG=	refs/tags/${DISTNAME}
@@ -139,8 +139,8 @@ post-configure:
 	${CP} ${FILESDIR}/netatalk_smf.sh ${SMF_SRCDIR}
 
 post-install:
-	rm -r ${DESTDIR}${PREFIX}/share/doc/netatalk/developer
-	rm -r ${DESTDIR}${PREFIX}/share/doc/netatalk/manual
+	rm -rf ${DESTDIR}${PREFIX}/share/doc/netatalk/developer
+	rm -rf ${DESTDIR}${PREFIX}/share/doc/netatalk/manual
 	chmod -w ${DESTDIR}${PREFIX}/bin/afppasswd
 	${INSTALL_DATA} ${WRKSRC}/output/config/afp.conf \
 		${DESTDIR}${PREFIX}/${EGDIR}/afp.conf
