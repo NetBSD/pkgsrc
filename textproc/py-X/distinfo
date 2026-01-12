@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:22:59 nia Exp $
+$NetBSD: distinfo,v 1.8 2026/01/12 12:31:49 adam Exp $
 
-BLAKE2s (PyX-0.15.tar.gz) = 7fb6d3c748f7832f50bf9e21a7c23821c7cfc3fbb44778669b4984300d10f239
-SHA512 (PyX-0.15.tar.gz) = c312b38b9f204b8a8832ab71da5be8c9afc417a095c8ccf242b3d3ebec63338a9d55abab4e548d1718abadf12ea7652cdad51731acdc8f6acd3d8608aa919919
-Size (PyX-0.15.tar.gz) = 2559840 bytes
+BLAKE2s (pyx-0.17.tar.gz) = d7f2bd607990305b3b48667c014f77d4d9336edee4d2e3a35b90f063d42ed827
+SHA512 (pyx-0.17.tar.gz) = 15f2f8564a34377be3bd77e24b3538d1ae9b20ecf0b196374e4193525f5c49677674a26c5544b3b1362fbc97ecd859934913470f9ba0acc5b1e4fd76a357570e
+Size (pyx-0.17.tar.gz) = 628935 bytes

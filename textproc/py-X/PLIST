@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.11 2022/01/19 17:50:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/01/12 12:31:49 adam Exp $
 ${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pyx/__init__.py
 ${PYSITELIB}/pyx/__init__.pyc
 ${PYSITELIB}/pyx/__init__.pyo
@@ -102,6 +103,7 @@ ${PYSITELIB}/pyx/epsfile.pyo
 ${PYSITELIB}/pyx/font/__init__.py
 ${PYSITELIB}/pyx/font/__init__.pyc
 ${PYSITELIB}/pyx/font/__init__.pyo
+${PYSITELIB}/pyx/font/_t1code.c
 ${PYSITELIB}/pyx/font/afmfile.py
 ${PYSITELIB}/pyx/font/afmfile.pyc
 ${PYSITELIB}/pyx/font/afmfile.pyo
@@ -195,6 +197,7 @@ ${PYSITELIB}/pyx/pdfwriter.pyo
 ${PYSITELIB}/pyx/pswriter.py
 ${PYSITELIB}/pyx/pswriter.pyc
 ${PYSITELIB}/pyx/pswriter.pyo
+${PYSITELIB}/pyx/pykpathsea.c
 ${PYSITELIB}/pyx/reader.py
 ${PYSITELIB}/pyx/reader.pyc
 ${PYSITELIB}/pyx/reader.pyo
