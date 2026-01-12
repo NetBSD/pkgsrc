@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.24 2025/12/21 17:15:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2026/01/12 22:03:02 wiz Exp $
 ${PYSITELIB}/google/auth/__init__.py
 ${PYSITELIB}/google/auth/__init__.pyc
 ${PYSITELIB}/google/auth/__init__.pyo
 ${PYSITELIB}/google/auth/_agent_identity_utils.py
 ${PYSITELIB}/google/auth/_agent_identity_utils.pyc
 ${PYSITELIB}/google/auth/_agent_identity_utils.pyo
+${PYSITELIB}/google/auth/_cache.py
+${PYSITELIB}/google/auth/_cache.pyc
+${PYSITELIB}/google/auth/_cache.pyo
 ${PYSITELIB}/google/auth/_cloud_sdk.py
 ${PYSITELIB}/google/auth/_cloud_sdk.pyc
 ${PYSITELIB}/google/auth/_cloud_sdk.pyo
