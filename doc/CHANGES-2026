@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.272 2026/01/12 21:56:40 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.273 2026/01/12 22:03:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -378,3 +378,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-cares to 5.0.1 [wiz 2026-01-12]
 	Updated net/py-aiodns to 4.0.0 [wiz 2026-01-12]
 	Updated devel/py-google-api-core to 2.29.0 [wiz 2026-01-12]
+	Updated security/py-google-auth to 2.47.0 [wiz 2026-01-12]
