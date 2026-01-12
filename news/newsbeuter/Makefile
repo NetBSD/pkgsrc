@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2026/01/07 08:48:31 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2026/01/12 06:47:58 wiz Exp $
 
 DISTNAME=	newsbeuter-2.9
 PKGREVISION=	56
@@ -6,7 +6,7 @@ CATEGORIES=	news
 MASTER_SITES=	https://www.newsbeuter.org/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.newsbeuter.org/
+HOMEPAGE=	https://github.com/akrennmair/newsbeuter
 COMMENT=	Open-source RSS/Atom feed reader for text terminals
 LICENSE=	mit
 
