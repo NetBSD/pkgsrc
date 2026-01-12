@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/04/15 05:38:03 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/01/12 10:33:24 adam Exp $
 
-DISTNAME=	dnsdiag-2.6.0
+DISTNAME=	dnsdiag-2.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dnsdiag/}
 
@@ -15,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-aioquic>=1.2.0:../../www/py-aioquic
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=42.0.5:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-cymruwhois>=1.6:../../net/py-cymruwhois
-DEPENDS+=	${PYPKGPREFIX}-dns>=2.7.0:../../net/py-dns
+DEPENDS+=	${PYPKGPREFIX}-dns>=2.8.0:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-h2>=4.1.0:../../www/py-h2
 DEPENDS+=	${PYPKGPREFIX}-httpx>=0.27.0:../../www/py-httpx
 
@@ -24,7 +23,7 @@ USE_LANGUAGES=	# none
 post-install:
 .for bin in dnseval dnsping dnstraceroute
 	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} ${bin}.py ${bin}-${PYVERSSUFFIX} && ${RM} -f ${bin} || ${TRUE}
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
 
 .include "../../lang/python/wheel.mk"

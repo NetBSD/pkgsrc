@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/04/15 05:38:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/01/12 10:33:24 adam Exp $
 bin/dnseval-${PYVERSSUFFIX}
 bin/dnsping-${PYVERSSUFFIX}
 bin/dnstraceroute-${PYVERSSUFFIX}
@@ -8,15 +8,24 @@ ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/util/__init__.py
-${PYSITELIB}/util/__init__.pyc
-${PYSITELIB}/util/__init__.pyo
-${PYSITELIB}/util/dns.py
-${PYSITELIB}/util/dns.pyc
-${PYSITELIB}/util/dns.pyo
-${PYSITELIB}/util/shared.py
-${PYSITELIB}/util/shared.pyc
-${PYSITELIB}/util/shared.pyo
-${PYSITELIB}/util/whois.py
-${PYSITELIB}/util/whois.pyc
-${PYSITELIB}/util/whois.pyo
+${PYSITELIB}/dnsdiag/__init__.py
+${PYSITELIB}/dnsdiag/__init__.pyc
+${PYSITELIB}/dnsdiag/__init__.pyo
+${PYSITELIB}/dnsdiag/dns.py
+${PYSITELIB}/dnsdiag/dns.pyc
+${PYSITELIB}/dnsdiag/dns.pyo
+${PYSITELIB}/dnsdiag/shared.py
+${PYSITELIB}/dnsdiag/shared.pyc
+${PYSITELIB}/dnsdiag/shared.pyo
+${PYSITELIB}/dnsdiag/whois.py
+${PYSITELIB}/dnsdiag/whois.pyc
+${PYSITELIB}/dnsdiag/whois.pyo
+${PYSITELIB}/dnseval.py
+${PYSITELIB}/dnseval.pyc
+${PYSITELIB}/dnseval.pyo
+${PYSITELIB}/dnsping.py
+${PYSITELIB}/dnsping.pyc
+${PYSITELIB}/dnsping.pyo
+${PYSITELIB}/dnstraceroute.py
+${PYSITELIB}/dnstraceroute.pyc
+${PYSITELIB}/dnstraceroute.pyo
