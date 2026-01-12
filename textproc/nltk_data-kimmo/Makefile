@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2021/11/24 15:57:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/12 07:05:16 wiz Exp $
 
 DISTNAME=	kimmo
 PKGNAME=	nltk_data-kimmo-20211124
 CATEGORIES=	textproc
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-HOMEPAGE=	http://www.sil.org/pckimmo/
+#HOMEPAGE=	http://www.sil.org/pckimmo/
 COMMENT=	NLTK Data - PC-KIMMO Data Files
 #LICENSE=	May be used for non-commercial purposes.
 

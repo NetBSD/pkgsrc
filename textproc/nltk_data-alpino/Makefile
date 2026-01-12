@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2021/11/24 15:57:00 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/12 07:05:13 wiz Exp $
 
 DISTNAME=	alpino
 PKGNAME=	nltk_data-alpino-20211124
 CATEGORIES=	textproc
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-HOMEPAGE=	http://www.let.rug.nl/~vannoord/trees/
+HOMEPAGE=	https://www.let.rug.nl/~vannoord/trees/
 COMMENT=	NLTK Data - Alpino Dutch Treebank
 #LICENSE=	Distributed with permission of Gertjan van Noord
 
