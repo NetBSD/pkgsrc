@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/07/04 08:45:08 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/01/12 06:49:28 wiz Exp $
 
 GITHUB_TAG=	81f185261c8863c5b84344ee31192870be939faf
 DISTNAME=	ninka-1.3.2pre20180106
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dmgerman/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://ninka.turingmachine.org/
+HOMEPAGE=	https://github.com/dmgerman/ninka
 COMMENT=	License identification tool for Source Code
 LICENSE=	gnu-gpl-v2
 
