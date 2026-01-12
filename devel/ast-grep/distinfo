@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.75 2026/01/05 06:29:54 pin Exp $
+$NetBSD: distinfo,v 1.76 2026/01/12 11:45:54 pin Exp $
 
 BLAKE2s (Inflector-0.11.4.crate) = 2f8b4a805230be3b58267c7fb6b9c26c2ec966378d195673d1128a851cca515d
 SHA512 (Inflector-0.11.4.crate) = f1f6463e033b6d3c16c51dc1e1a3f5569954308b95b59058294b7f9310919bbda797e99e6a07529071bb83f0688867a243997d33795a7136b0af73977004296e
@@ -30,9 +30,9 @@ Size (anyhow-1.0.100.crate) = 54059 bytes
 BLAKE2s (assert_cmd-2.1.1.crate) = 64c1d9b89e577787e93558bda0f351fab65371d00d0394a6af12d080e6741f71
 SHA512 (assert_cmd-2.1.1.crate) = e13ace350e832f3fb58e1f9ac775b12deb5567577a65e41ccdb49b42814a8fb9d1ce7cbd95c7a38a0bf543cb61e656128633ecb4627592bfb70c635b52e171fa
 Size (assert_cmd-2.1.1.crate) = 27211 bytes
-BLAKE2s (ast-grep-0.40.4.tar.gz) = 8efb02d9b27c3e1a8bf7097ca17e44afa5160a87b7f9ea513dec5febb5dd53d4
-SHA512 (ast-grep-0.40.4.tar.gz) = 746ef1a8df1bb456236c89c91c8889be9a85137013a9d4825f7542a4d5b3b98b4b672ba93a9045e230fd59551bd289e22e1af333e70b5a8d255d1c33e2699233
-Size (ast-grep-0.40.4.tar.gz) = 448968 bytes
+BLAKE2s (ast-grep-0.40.5.tar.gz) = 6d4b67e1cb3d3a7e2ae8275b7961cca41c92506516015537d2d26a749e5a80f0
+SHA512 (ast-grep-0.40.5.tar.gz) = b7319059da2e395a6de10265469fa49368beb6b141da9d260b3d05eddc760540abdd2b0737167f00eb1b873b789faf8f6ef858e07465344d151bafeded70efd0
+Size (ast-grep-0.40.5.tar.gz) = 452487 bytes
 BLAKE2s (atty-0.2.14.crate) = 8a58145c7b668aa6caf8d749e37857ff202211e1bfa9e441f130ff02feb68405
 SHA512 (atty-0.2.14.crate) = d7b6c4b9a0f898d91ddbc41a5ee45bbf45d1d269508c8cc87ee3e3990500e41e0ec387afb1f3bc7db55bedac396dd86c6509f4bf9e5148d809c3802edcc5e1d9
 Size (atty-0.2.14.crate) = 5470 bytes
@@ -72,9 +72,9 @@ Size (clap-4.5.54.crate) = 62028 bytes
 BLAKE2s (clap_builder-4.5.54.crate) = 0a3fb8863b583bab92b5cee2ca88e2b51c81a06434124b9a3af77a686c8a4506
 SHA512 (clap_builder-4.5.54.crate) = 6b567a2fea4e85b28d054b0432f527aadd735f730604534ab632ae7c70578bb46635d409d5cc28081d32bb6ca02ecdd17063115ad02996eff8006099d2dd838c
 Size (clap_builder-4.5.54.crate) = 170854 bytes
-BLAKE2s (clap_complete-4.5.64.crate) = 7ff5e9a0c1544d90b831cddaf5c1632859bbbe1f013d05c49ba4af2456ee7419
-SHA512 (clap_complete-4.5.64.crate) = 4080d30a6d71a50183fdfbb3282962fc40acc0355fba4e4078dcd5da131578277ada877fc7010bd2239d4ab177bdd22458cf9d54b4b35327a47c264e6c280f1a
-Size (clap_complete-4.5.64.crate) = 49368 bytes
+BLAKE2s (clap_complete-4.5.65.crate) = 248bbae0e9a2b850a24289d5359114d523d71b150522a2c13ff13937f748c06c
+SHA512 (clap_complete-4.5.65.crate) = 150e549ec78504e6bc39df7a8d380aab135d69588664956d2fcea2173492a45fc7441f4961682b332c752386eb71bb2baca6ed615bdf6cda006568bbecec1f40
+Size (clap_complete-4.5.65.crate) = 49394 bytes
 BLAKE2s (clap_derive-4.5.49.crate) = 460ba82547127fc3ac25d4fd13fa1480f3ed1e1ecfb4611fea016a26b261da0f
 SHA512 (clap_derive-4.5.49.crate) = 61d2b9597bb521cfd31a2c77af687832dd5e48f8b80dacce3079f165d6629d58f000c18a956fe948b1ad99776d75caf4e6b9004f63d861b8ab3b68b5260376dc
 Size (clap_derive-4.5.49.crate) = 33559 bytes
