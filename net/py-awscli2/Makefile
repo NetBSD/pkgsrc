@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/09/14 16:54:42 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/12 12:57:00 wiz Exp $
 
 DISTNAME=	awscli2-2.28.25
 PKGREVISION=	1
@@ -14,7 +14,7 @@ COMMENT=	Universal Command Line Interface for Amazon Web Services
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=0:../../devel/py-flit_core
-DEPENDS+=	${PYPKGPREFIX}-awscrt-0.27.6{,nb*}:../../devel/py-awscrt
+DEPENDS+=	${PYPKGPREFIX}-awscrt>=0.27.6:../../devel/py-awscrt
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.2.5:../../comms/py-colorama
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.1:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-distro>=1.5:../../devel/py-distro
