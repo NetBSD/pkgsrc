@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/13 08:05:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/01/12 11:40:11 adam Exp $
 bin/onionbalance-${PYVERSSUFFIX}
 bin/onionbalance-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -10,9 +10,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/onionbalance/__init__.py
 ${PYSITELIB}/onionbalance/__init__.pyc
 ${PYSITELIB}/onionbalance/__init__.pyo
-${PYSITELIB}/onionbalance/_version.py
-${PYSITELIB}/onionbalance/_version.pyc
-${PYSITELIB}/onionbalance/_version.pyo
 ${PYSITELIB}/onionbalance/common/__init__.py
 ${PYSITELIB}/onionbalance/common/__init__.pyc
 ${PYSITELIB}/onionbalance/common/__init__.pyo
@@ -50,7 +47,6 @@ ${PYSITELIB}/onionbalance/config_generator/config_generator.py
 ${PYSITELIB}/onionbalance/config_generator/config_generator.pyc
 ${PYSITELIB}/onionbalance/config_generator/config_generator.pyo
 ${PYSITELIB}/onionbalance/config_generator/data/config.example.yaml
-${PYSITELIB}/onionbalance/config_generator/data/torrc-instance-v2
 ${PYSITELIB}/onionbalance/config_generator/data/torrc-instance-v3
 ${PYSITELIB}/onionbalance/config_generator/data/torrc-server
 ${PYSITELIB}/onionbalance/hs_v3/__init__.py
@@ -104,3 +100,6 @@ ${PYSITELIB}/onionbalance/hs_v3/tor_node.pyo
 ${PYSITELIB}/onionbalance/manager.py
 ${PYSITELIB}/onionbalance/manager.pyc
 ${PYSITELIB}/onionbalance/manager.pyo
+${PYSITELIB}/onionbalance/manpages.py
+${PYSITELIB}/onionbalance/manpages.pyc
+${PYSITELIB}/onionbalance/manpages.pyo
