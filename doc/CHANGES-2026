@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.276 2026/01/12 22:18:19 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.277 2026/01/12 22:40:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -382,3 +382,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated comms/py-textual to 7.2.0 [wiz 2026-01-12]
 	Updated sysutils/snmp_exporter to 0.30.1nb6 [wiz 2026-01-12]
 	Updated audio/alsa-lib to 1.2.15.2 [wiz 2026-01-12]
+	Updated graphics/png to 1.6.54 [wiz 2026-01-12]
