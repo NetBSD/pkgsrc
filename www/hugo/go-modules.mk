@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.33 2026/01/10 06:44:52 triaxx Exp $
+# $NetBSD: go-modules.mk,v 1.34 2026/01/12 16:44:14 triaxx Exp $
 
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.24.0.mod
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.24.0.zip
@@ -237,8 +237,8 @@ GO_MODULE_FILES+=	github.com/gobuffalo/flect/@v/v1.0.3.mod
 GO_MODULE_FILES+=	github.com/gobuffalo/flect/@v/v1.0.3.zip
 GO_MODULE_FILES+=	github.com/gobwas/glob/@v/v0.2.3.mod
 GO_MODULE_FILES+=	github.com/gobwas/glob/@v/v0.2.3.zip
-GO_MODULE_FILES+=	github.com/goccy/go-yaml/@v/v1.19.1.mod
-GO_MODULE_FILES+=	github.com/goccy/go-yaml/@v/v1.19.1.zip
+GO_MODULE_FILES+=	github.com/goccy/go-yaml/@v/v1.19.2.mod
+GO_MODULE_FILES+=	github.com/goccy/go-yaml/@v/v1.19.2.zip
 GO_MODULE_FILES+=	github.com/gohugoio/go-i18n/v2/@v/v2.1.3-0.20251018145728-cfcc22d823c6.mod
 GO_MODULE_FILES+=	github.com/gohugoio/go-i18n/v2/@v/v2.1.3-0.20251018145728-cfcc22d823c6.zip
 GO_MODULE_FILES+=	github.com/gohugoio/go-radix/@v/v1.2.0.mod

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.51 2026/01/10 06:44:52 triaxx Exp $
+$NetBSD: distinfo,v 1.52 2026/01/12 16:44:14 triaxx Exp $
 
 BLAKE2s (cel.dev_expr_@v_v0.24.0.mod) = 35d43d581d2a983aa8fccbcc9c49400c2bfdda9a968a0f701c187dec4ab5aade
 SHA512 (cel.dev_expr_@v_v0.24.0.mod) = 8c3d6929fe232875ec4de4ddffc12a54d0c24d7a86257013b060fe02fbd7d93a6a8d71bfac21490cd4457d9a10791db1b9c44291640f7e2cded698ea9462f63d
@@ -711,12 +711,12 @@ Size (github.com_gobwas_glob_@v_v0.2.3.mod) = 30 bytes
 BLAKE2s (github.com_gobwas_glob_@v_v0.2.3.zip) = 64acda4d18b2bda20ef1367da35b8ad6f745db23c37f82763fc3fb483a99ec04
 SHA512 (github.com_gobwas_glob_@v_v0.2.3.zip) = 87e7c1792bb3a5ba1c78ea5844c0083abcc10f60d19019bcb763cac5aa7dd7625903e074228562207e836803a83bfb086148d886edc6d24e5fae7fc6d8abf11a
 Size (github.com_gobwas_glob_@v_v0.2.3.zip) = 50402 bytes
-BLAKE2s (github.com_goccy_go-yaml_@v_v1.19.1.mod) = 457a17def3de8c2babfed0511d9e71c7cbb45916729b6d8ab169fad30edf72c8
-SHA512 (github.com_goccy_go-yaml_@v_v1.19.1.mod) = ebcea080a07eac5ad62f1012676030885ab41dc158a894daa39b03cc53c188a5d23fb2af205a793d5c31c8764f4cccd02f5b35532c82d65e0467b0d2710a3c9a
-Size (github.com_goccy_go-yaml_@v_v1.19.1.mod) = 43 bytes
-BLAKE2s (github.com_goccy_go-yaml_@v_v1.19.1.zip) = 43a823ac95ee1cacbf90ef54352345cb89de62491f59b4e7c4c289e28bc85567
-SHA512 (github.com_goccy_go-yaml_@v_v1.19.1.zip) = 04fc47b1376d29523e53d11aedb05e8622e3640538032df0a64d4b3d8e095e99ae2c28c9614e6b1f990e6c2ba66057d0677821cb47b160826462538e5961e895
-Size (github.com_goccy_go-yaml_@v_v1.19.1.zip) = 490552 bytes
+BLAKE2s (github.com_goccy_go-yaml_@v_v1.19.2.mod) = 457a17def3de8c2babfed0511d9e71c7cbb45916729b6d8ab169fad30edf72c8
+SHA512 (github.com_goccy_go-yaml_@v_v1.19.2.mod) = ebcea080a07eac5ad62f1012676030885ab41dc158a894daa39b03cc53c188a5d23fb2af205a793d5c31c8764f4cccd02f5b35532c82d65e0467b0d2710a3c9a
+Size (github.com_goccy_go-yaml_@v_v1.19.2.mod) = 43 bytes
+BLAKE2s (github.com_goccy_go-yaml_@v_v1.19.2.zip) = a6039dbba4a54d415102ea9eb064af5eba08765f4985372138fb866367d600bd
+SHA512 (github.com_goccy_go-yaml_@v_v1.19.2.zip) = 0fe7f05de1d3d5004f69757f3b50e5c45b81253335dee39b27ded4a45bed792b8c0ab42ba7e08989bda47bac44f57dcef7186cefbb30369a2f7bb595c8937960
+Size (github.com_goccy_go-yaml_@v_v1.19.2.zip) = 490954 bytes
 BLAKE2s (github.com_gohugoio_go-i18n_v2_@v_v2.1.3-0.20251018145728-cfcc22d823c6.mod) = d0ab970ab74a226a788812fc2a2c691c67a822b6d0e8da5453bd545b43a3ec9c
 SHA512 (github.com_gohugoio_go-i18n_v2_@v_v2.1.3-0.20251018145728-cfcc22d823c6.mod) = ff34db4eacc69458d0d1d3942af9e3795441f79138a61a067b3e5c7bdbe1cab63989f6d312b5a26d615a9c79021f71ddaa4c8beaa080703dcba3c0628427d30d
 Size (github.com_gohugoio_go-i18n_v2_@v_v2.1.3-0.20251018145728-cfcc22d823c6.mod) = 169 bytes
@@ -2514,9 +2514,9 @@ Size (howett.net_plist_@v_v1.0.0.mod) = 218 bytes
 BLAKE2s (howett.net_plist_@v_v1.0.0.zip) = 6c0b133ce84d8994a7c188e83ce7bae86228b60829ec29211d1a8f1a446cb945
 SHA512 (howett.net_plist_@v_v1.0.0.zip) = 7d63e5489b2b007736952dd57855fce61e8bbb38599f45d56d846ca23cb65e2db3070a2af39647c4d02f228511c2d44338904e2e83cb156df6f5aefdfa6e1aaf
 Size (howett.net_plist_@v_v1.0.0.zip) = 71680 bytes
-BLAKE2s (hugo-0.154.3.tar.gz) = 2e74e736059a3d5caf6bc41b411cd6122279acb3a59889dd3b4a48baca5e06c5
-SHA512 (hugo-0.154.3.tar.gz) = bbbb35569bd405ea97f1a5df0a3827c5dc4d8ca04722ae58da7deb8a337c38b88af91720519de47d85bddb94174ff2fe00eaa5c079c298ddc220b5c41c974cfa
-Size (hugo-0.154.3.tar.gz) = 15860313 bytes
+BLAKE2s (hugo-0.154.5.tar.gz) = bf0fb483bd5116a68d1b734462c2e7c7fc3eeb0b4dedab3f4cf663edf7dbdb48
+SHA512 (hugo-0.154.5.tar.gz) = 2ad2b3ebaabb2c55bf7439c731e27ff57fb3cab07f057754fb80a793df16a21396beeeb6e9a90221a098e8211f16e3a4c8332578379fae367e8103ad7e7339a7
+Size (hugo-0.154.5.tar.gz) = 15861504 bytes
 BLAKE2s (rsc.io_binaryregexp_@v_v0.2.0.mod) = 351240374eb48b99bb43b8b52aa8467662e22b18ebf216f4c123858fe706c2f8
 SHA512 (rsc.io_binaryregexp_@v_v0.2.0.mod) = db50ff677b0bdccbc1a1ad3df7c5cc76f2fcccf3ab99d08d1c2868440eb9b893fe89452f4286f7d42f2f16abf0f4acda67fe86e174dcfa730a743aafcc166774
 Size (rsc.io_binaryregexp_@v_v0.2.0.mod) = 36 bytes
