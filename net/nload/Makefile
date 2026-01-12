@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/01/04 19:29:23 roy Exp $
-#
+# $NetBSD: Makefile,v 1.11 2026/01/12 06:50:27 wiz Exp $
 
 DISTNAME=		nload-0.7.4
 PKGREVISION=		4
@@ -7,7 +6,7 @@ CATEGORIES=		net sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nload/}
 
 MAINTAINER=		bartosz.kuzma@gmail.com
-HOMEPAGE=		http://www.roland-riegel.de/nload/
+HOMEPAGE=		https://www.roland-riegel.de/nload/
 COMMENT=		Monitoring network traffic and bandwidth usage
 LICENSE=		gnu-gpl-v2
 
