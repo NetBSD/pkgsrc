@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.250 2026/01/12 11:50:39 pin Exp $
+$NetBSD: CHANGES-2026,v 1.251 2026/01/12 11:52:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -353,3 +353,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ast-grep to 0.40.5 [pin 2026-01-12]
 	Updated devel/bacon to 3.21.0 [pin 2026-01-12]
 	Updated textproc/csvlens to 0.15.1 [pin 2026-01-12]
+	Updated sysutils/dust to 1.2.4 [pin 2026-01-12]
