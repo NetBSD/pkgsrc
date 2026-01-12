@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.262 2026/01/12 17:13:53 adam Exp $
+$NetBSD: CHANGES-2026,v 1.263 2026/01/12 17:26:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -367,3 +367,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/hugo to 0.154.5 [triaxx 2026-01-12]
 	Updated devel/py-logbook to 1.9.2 [adam 2026-01-12]
 	Updated textproc/py-tomli to 2.4.0 [adam 2026-01-12]
+	Updated devel/doxygen to 1.16.1 [adam 2026-01-12]
+	Updated devel/py-faker to 40.1.0 [adam 2026-01-12]
