@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/02/07 15:58:35 pho Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/12 06:47:07 wiz Exp $
 
 DISTNAME=	buildsystem-1.10
 PKGNAME=	netsurf-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://download.netsurf-browser.org/libs/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://source.netsurf-browser.org/buildsystem.git
+HOMEPAGE=	https://www.netsurf-browser.org/
 COMMENT=	Makefiles shared by NetSurf projects
 LICENSE=	mit
 
