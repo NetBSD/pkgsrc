@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2025/07/17 17:16:48 pin Exp $
+# $NetBSD: Makefile,v 1.27 2026/01/12 11:58:10 pin Exp $
 
-DISTNAME=	wallust-3.4.0
+DISTNAME=	wallust-3.5.0
 CATEGORIES=	graphics
 MASTER_SITES=	https://static.crates.io/crates/wallust/
 EXTRACT_SUFX=	.crate
@@ -12,9 +12,9 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.87.0
+#RUST_REQ=	1.92.0
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.87.0 on amd64
+#This package is confirmed to build with Rust 1.92.0 on amd64
 
 INSTALLATION_DIRS=	share/examples/wallust \
 			${PKGMANDIR}/man1 \
