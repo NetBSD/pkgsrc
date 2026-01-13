@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/05/17 06:23:56 taca Exp $
+$NetBSD: distinfo,v 1.12 2026/01/13 15:04:36 taca Exp $
 
-BLAKE2s (daemon_controller-3.0.0.gem) = 3120a9b64122347678a7e23f264f29f852b6c62dfe7cab42053f93d4dd5638b5
-SHA512 (daemon_controller-3.0.0.gem) = 022ae9caf14be22fe53bdc77b26a1e6261a9f95e1217a4772db7632089ccfaab60d39fca43e72421eb1a0f3c0c2f09aeaf8124ffce57e76e8d10051819c57aee
-Size (daemon_controller-3.0.0.gem) = 27136 bytes
+BLAKE2s (daemon_controller-3.0.2.gem) = 94727eae1c2029fbcdd726a26039d0433c541db41254d1f8915c6873ab970409
+SHA512 (daemon_controller-3.0.2.gem) = 8fc100268a0d4b80ced9e97bc22c38a059149fa161edb660cdaa063febd992d9e44035f642342674e7e295047df5c5e78c1fe66a2ce1933bbe094b3a658b2149
+Size (daemon_controller-3.0.2.gem) = 27136 bytes
