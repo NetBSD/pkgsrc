@@ -1,12 +1,11 @@
-$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.27 2025/08/25 17:51:12 wiz Exp $
+$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.28 2026/01/13 20:48:23 wiz Exp $
 
 Use `uname -p` on NetBSD, as that is reliable and sensible there.
-Handle earmv[67]hf for NetBSD.
-Also use @PREFIX@ and not $ORIGIN in rpath.
+Use @PREFIX@ and not $ORIGIN in rpath.
 
---- src/bootstrap/bootstrap.py.orig	2025-02-17 18:17:27.000000000 +0000
+--- src/bootstrap/bootstrap.py.orig	2025-10-28 16:34:16.000000000 +0000
 +++ src/bootstrap/bootstrap.py
-@@ -323,6 +323,11 @@ def default_build_triple(verbose):
+@@ -330,6 +330,11 @@ def default_build_triple(verbose):
          "GNU": "unknown-hurd",
      }
  
@@ -18,25 +17,7 @@ Also use @PREFIX@ and not $ORIGIN in rpath.
      # Consider the direct transformation first and then the special cases
      if kernel in kerneltype_mapper:
          kernel = kerneltype_mapper[kernel]
-@@ -427,10 +432,16 @@ def default_build_triple(verbose):
-             kernel = "linux-androideabi"
-         else:
-             kernel += "eabihf"
--    elif cputype in {"armv7l", "armv8l"}:
-+    elif cputype in {"armv6hf", "earmv6hf"}:
-+        cputype = "armv6"
-+        if kernel == "unknown-netbsd":
-+            kernel += "-eabihf"
-+    elif cputype in {"armv7l", "earmv7hf", "armv8l"}:
-         cputype = "armv7"
-         if kernel == "linux-android":
-             kernel = "linux-androideabi"
-+        elif kernel == "unknown-netbsd":
-+            kernel += "-eabihf"
-         else:
-             kernel += "eabihf"
-     elif cputype == "mips":
-@@ -688,11 +699,11 @@ class RustBuild(object):
+@@ -706,11 +711,11 @@ class RustBuild(object):
                  )
              p = Pool(pool_size)
              try:
@@ -53,7 +34,7 @@ Also use @PREFIX@ and not $ORIGIN in rpath.
  
                  p.map(unpack_component, tarballs_download_info)
              finally:
-@@ -839,7 +850,10 @@ class RustBuild(object):
+@@ -857,7 +862,10 @@ class RustBuild(object):
              self.nix_deps_dir = nix_deps_dir
  
          patchelf = "{}/bin/patchelf".format(nix_deps_dir)

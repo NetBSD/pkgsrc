@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.49 2025/08/25 17:51:11 wiz Exp $
+# $NetBSD: options.mk,v 1.50 2026/01/13 20:48:23 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
@@ -88,6 +88,16 @@ BUILDLINK_API_DEPENDS.nghttp2+= nghttp2>=1.41.0
 BUILDLINK_API_DEPENDS.curl+= 	curl>=7.67.0
 .include "../../www/curl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.endif
+
+# Work around https://github.com/rust-lang/rust/issues/148497
+# where the linking of rust-analyzer fails because it's now too big
+# for 24-bit word-based PC-relative relocation offsets.
+# Apply on or for powerpc:
+.if ${MACHINE_PLATFORM:M*-powerpc} || \
+    (!empty(TARGET) && ${TARGET:Mpowerpc-*})
+CONFIGURE_ARGS+=	--tools="cargo,clippy,rustdoc,rustfmt,analysis,src,wasm-component-ld"
+# rust-analyzer dropped from list
 .endif
 
 #
