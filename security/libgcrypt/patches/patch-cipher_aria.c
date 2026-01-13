@@ -1,14 +1,16 @@
-$NetBSD: patch-cipher_aria.c,v 1.1 2024/08/09 03:51:27 ryoon Exp $
+$NetBSD: patch-cipher_aria.c,v 1.1.12.1 2026/01/13 00:53:26 maya Exp $
 
 * Do not conflict with NetBSD's bswap(3).
 
---- cipher/aria.c.orig	2024-08-02 04:47:06.896383457 +0000
+--- cipher/aria.c.orig	2024-03-28 10:07:27.000000000 +0000
 +++ cipher/aria.c
-@@ -641,11 +641,13 @@ u32 rotr32(u32 v, u32 r)
+@@ -641,11 +641,15 @@ u32 rotr32(u32 v, u32 r)
    return ror(v, r);
  }
  
-+#if !defined(__NetBSD__)
++#ifdef __NetBSD__
++#include <sys/bswap.h>
++#else
  static ALWAYS_INLINE
  u32 bswap32(u32 v)
  {
