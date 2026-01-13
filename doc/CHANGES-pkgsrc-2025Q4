@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q4,v 1.1.2.5 2026/01/08 01:50:36 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q4,v 1.1.2.6 2026/01/13 00:58:44 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q4 branch:
 
@@ -13,3 +13,9 @@ audio/libmodplug: build fix
 
 Pullup ticket #7041 - requested by nia
 textproc/libxslt: Security fix
+
+Pullup ticket #7042 - requested by nia
+security/libgcrypt: Build fix correction
+
+Pullup ticket #7043 - requested by nia
+games/tyrquate: Build fix correction
