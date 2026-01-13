@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2025/05/17 05:52:20 taca Exp $
+$NetBSD: distinfo,v 1.28 2026/01/13 14:58:30 taca Exp $
 
-BLAKE2s (ruby2ruby-2.5.2.gem) = c28b3566b85b4a67dbc8c5c6031ae867bdc30ea83f22c2f1fc5a0d48f11aef97
-SHA512 (ruby2ruby-2.5.2.gem) = f16c34fe3cefd139768f0817309fec4929fc2e1689d3c2569d52d46c3fb0c9ccdd8468ae89b4cf8dfea7d73a721e01ec7fc38a1f3243dcd7a4559113d4794198
-Size (ruby2ruby-2.5.2.gem) = 29184 bytes
+BLAKE2s (ruby2ruby-2.6.0.gem) = 64463349660dba28d17b1ec37af97ee5aa19c5e450f9aa6224b6f881754e9fd0
+SHA512 (ruby2ruby-2.6.0.gem) = 5b6560fe098e299e297597a685bbce11d80b0f1812e6297246d3a1dcb0c61376184b654b154b0490b2238cd49da150e3bed3520157f8b9ceaf81c3faf2b7b77b
+Size (ruby2ruby-2.6.0.gem) = 29696 bytes
