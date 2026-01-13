@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/01/07 08:49:25 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/01/13 14:46:55 taca Exp $
 
-DISTNAME=	sass-embedded-1.93.2
-PKGREVISION=	1
+DISTNAME=	sass-embedded-1.97.2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,6 +11,16 @@ LICENSE=	mit
 CONFLICTS+=	${RUBY_PKGPREFIX}-sass-[0-9]*
 
 DEPENDS+=	${RUBY_PKGPREFIX}-google-protobuf>=4.31<5:../../devel/ruby-google-protobuf
+
+#
+# It is difficult to replace these files.
+#
+CHECK_INTERPRETER_SKIP+= \
+	${GEM_EXTSDIR}/sass/node_modules/.bin/detect-libc \
+	${GEM_EXTSDIR}/sass/node_modules/.bin/sass \
+	${GEM_EXTSDIR}/sass/node_modules/detect-libc/bin/detect-libc.js \
+	${GEM_EXTSDIR}/sass/node_modules/node-addon-api/tools/conversion.js \
+	${GEM_EXTSDIR}/sass/node_modules/sass/sass.js \
 
 RUBYGEM_OPTIONS+=	--format-executable
 
