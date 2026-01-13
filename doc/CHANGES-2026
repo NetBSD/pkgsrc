@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.301 2026/01/13 16:41:32 schmonz Exp $
+$NetBSD: CHANGES-2026,v 1.302 2026/01/13 16:47:11 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -411,3 +411,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-pkg-config to 1.6.5 [taca 2026-01-13]
 	Updated www/snac to 2.88 [schmonz 2026-01-13]
 	Updated devel/goredo to 2.8.0 [schmonz 2026-01-13]
+	Updated textproc/libhighlight to 4.18 [schmonz 2026-01-13]
