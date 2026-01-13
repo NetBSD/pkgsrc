@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2025/09/21 15:54:22 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/01/13 12:35:39 adam Exp $
 
-DISTNAME=	httplib2-0.31.0
+DISTNAME=	httplib2-0.31.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httplib2/}
@@ -12,15 +12,13 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=3.0.4:../../devel/py-pyparsing
-TEST_DEPENDS+=	${PYPKGPREFIX}-cryptography>=38.0.3:../../security/py-cryptography
-TEST_DEPENDS+=	${PYPKGPREFIX}-six>=0:../../lang/py-six
+TEST_DEPENDS+=	${PYPKGPREFIX}-cryptography>=45:../../security/py-cryptography
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8>=3.9.2:../../devel/py-flake8
-TEST_DEPENDS+=	${PYPKGPREFIX}-future>=0.18.3:../../devel/py-future
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.12.1:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-forked>=1.3.0:../../devel/py-test-forked
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly>=1.2.3:../../devel/py-test-randomly
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=1.4.2:../../devel/py-test-timeout
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.34.0:../../devel/py-test-xdist
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.1.0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-forked>=1.6.0:../../devel/py-test-forked
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly>=3.12.0:../../devel/py-test-randomly
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.3.1:../../devel/py-test-timeout
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.5.0:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
