@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.303 2026/01/13 16:51:57 schmonz Exp $
+$NetBSD: CHANGES-2026,v 1.304 2026/01/13 16:54:21 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -413,3 +413,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/goredo to 2.8.0 [schmonz 2026-01-13]
 	Updated textproc/libhighlight to 4.18 [schmonz 2026-01-13]
 	Updated devel/mob to 5.4.1 [schmonz 2026-01-13]
+	Updated devel/ruby-jirametrics to 2.20.1 [schmonz 2026-01-13]
