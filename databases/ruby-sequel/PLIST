@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.131 2025/11/03 03:53:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.132 2026/01/13 14:53:20 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -272,6 +272,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/require_valid_schema.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/serialization.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/serialization_modification_detection.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/sharding.rb
+${GEM_LIBDIR}/lib/sequel/plugins/single_statement_dataset_destroy.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/single_table_inheritance.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/singular_table_names.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/skip_create_refresh.rb
