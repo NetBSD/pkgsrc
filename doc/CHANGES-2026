@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.300 2026/01/13 16:38:40 schmonz Exp $
+$NetBSD: CHANGES-2026,v 1.301 2026/01/13 16:41:32 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -410,3 +410,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-async to 2.35.2 [taca 2026-01-13]
 	Updated devel/ruby-pkg-config to 1.6.5 [taca 2026-01-13]
 	Updated www/snac to 2.88 [schmonz 2026-01-13]
+	Updated devel/goredo to 2.8.0 [schmonz 2026-01-13]
