@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2025/09/15 14:45:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.27 2026/01/13 14:52:18 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -101,8 +101,8 @@ ${GEM_LIBDIR}/pg.gemspec
 ${GEM_LIBDIR}/ports/patches/krb5/1.22.1/0001-Allow-static-linking-krb5-library.patch
 ${GEM_LIBDIR}/ports/patches/krb5/1.22.1/0002-unknown-command-line-option-on-clang.patch
 ${GEM_LIBDIR}/ports/patches/openssl/3.5.2/0001-aarch64-mingw.patch
-${GEM_LIBDIR}/ports/patches/postgresql/17.6/0001-Use-workaround-of-__builtin_setjmp-only-on-MINGW-on-.patch
-${GEM_LIBDIR}/ports/patches/postgresql/17.6/0001-libpq-Process-buffered-SSL-read-bytes-to-support-rec.patch
+${GEM_LIBDIR}/ports/patches/postgresql/18.1/0001-Use-workaround-of-__builtin_setjmp-only-on-MINGW-on-.patch
+${GEM_LIBDIR}/ports/patches/postgresql/18.1/0001-libpq-Process-buffered-SSL-read-bytes-to-support-rec.patch
 ${GEM_LIBDIR}/rakelib/pg_gem_helper.rb
 ${GEM_LIBDIR}/rakelib/task_extension.rb
 ${GEM_LIBDIR}/sample/array_insert.rb
