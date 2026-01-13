@@ -34,6 +34,9 @@ else
 				# mips64 does soft-float
 		mips64*)	madd="-msoft-float"
 				;;
+		powerpc*)	# Now needed due to bloat
+				madd="-mlongcall"
+				;;
 	esac
 	# We build both for -8 and -9 due to ABI differences,
 	# so can't just test $gnuarch...  Yes, a vile hack.
@@ -90,7 +93,15 @@ while [ $# -gt 0 ]; do
 # (I thought this wasn't reqired, but apparently it is...)
 		-isystem)
 			shift
-			args="$args -isystem =$1"
+			case "$1" in
+			# Apparent mis-use of -isystem:
+			*/siphash/*)
+				args="$args -I $1"
+				;;
+			*)
+				args="$args -isystem =$1"
+				;;
+			esac
 			;;
 # Also doctor -I directives of known paths and
 # redirect them to the --sysroot.
