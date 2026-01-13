@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2025/02/09 08:55:50 taca Exp $
+# $NetBSD: Makefile,v 1.34 2026/01/13 15:21:29 taca Exp $
 
-DISTNAME=	i18n-1.14.7
+DISTNAME=	i18n-1.14.8
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
