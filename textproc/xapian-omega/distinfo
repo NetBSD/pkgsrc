@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.47 2025/05/09 20:01:42 schmonz Exp $
+$NetBSD: distinfo,v 1.48 2026/01/13 17:21:25 schmonz Exp $
 
-BLAKE2s (xapian-omega-1.4.29.tar.xz) = 10e599a798731e0287183c111dc7cf9cc650ec9d261ebd86abe2eccd8135920a
-SHA512 (xapian-omega-1.4.29.tar.xz) = 2a3e61764407afbea1b56567a66829fbb717a193111c5e754b65b0b5438f67dc7bd4fb09faba9b4e460f48abb33649576b377626af14d7bf73ed7cef475a0f38
-Size (xapian-omega-1.4.29.tar.xz) = 589016 bytes
+BLAKE2s (xapian-omega-1.4.30.tar.xz) = d7aa92ed62029b1372bc858bee6f05970ec57577ca43b3a1fd62f8d2134ff49f
+SHA512 (xapian-omega-1.4.30.tar.xz) = 7da87fb35bc7b98aea0496b25af41e3e38ec9023ec578704a77b3c424b70a76342fddce6a92b4bef031ad6625ace7a0d62faf2d83b241248c7f04ef3c129da21
+Size (xapian-omega-1.4.30.tar.xz) = 588760 bytes
 SHA1 (patch-Makefile.in) = 6ef8d525f10028afc4dfa1cafed8861c0289ac4d
 SHA1 (patch-omega.conf) = f1e941dac326de7005cad0a5a4a2848e401855c4
