@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2026/01/12 22:20:29 gutteridge Exp $
+# $NetBSD: Makefile,v 1.18 2026/01/13 17:44:13 gutteridge Exp $
 
-PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	libxfce4windowing-4.20.4
+DISTNAME=	libxfce4windowing-4.20.5
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/xfce/libxfce4windowing/${PKGVERSION_NOREV:R}/
 
