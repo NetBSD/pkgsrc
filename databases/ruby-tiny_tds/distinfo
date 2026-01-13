@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2025/09/15 17:20:14 taca Exp $
+$NetBSD: distinfo,v 1.19 2026/01/13 14:56:57 taca Exp $
 
-BLAKE2s (tiny_tds-3.3.0.gem) = ba47729962f0480a6dd9065c350e626626df2f0240d5e339ce1a8cbde4210268
-SHA512 (tiny_tds-3.3.0.gem) = 1595d92f5a64c6da87f47c7a3e0f0978c17ff0a31bdfa9e42f28dcafb57d79f766c30d29de9e00a80b57aac47f9c960f8de89b7125d9561aaac206a665eff99a
-Size (tiny_tds-3.3.0.gem) = 57856 bytes
+BLAKE2s (tiny_tds-3.4.0.gem) = e7525e05fe9bef8cc909d2963cc3563528d444ae3e2f0cd89b13f05071f8ab74
+SHA512 (tiny_tds-3.4.0.gem) = 4436c4601d83095779493feccb131f70b160c87f06906043baeba456f15c3cf93d9475a48843560b19fd36cac19d26b626d8d5994c9e98c0b62c90e2e74f3f24
+Size (tiny_tds-3.4.0.gem) = 57856 bytes
