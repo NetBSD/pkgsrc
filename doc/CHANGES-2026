@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.304 2026/01/13 16:54:21 schmonz Exp $
+$NetBSD: CHANGES-2026,v 1.305 2026/01/13 16:56:50 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -414,3 +414,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/libhighlight to 4.18 [schmonz 2026-01-13]
 	Updated devel/mob to 5.4.1 [schmonz 2026-01-13]
 	Updated devel/ruby-jirametrics to 2.20.1 [schmonz 2026-01-13]
+	Updated textproc/p5-Text-HTML-Turndown to 0.10 [schmonz 2026-01-13]
