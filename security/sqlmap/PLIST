@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2025/10/28 09:38:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/01/13 11:58:44 adam Exp $
 bin/sqlmap
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -28,10 +28,12 @@ ${PYSITELIB}/sqlmap/data/procs/postgresql/dns_request.sql
 ${PYSITELIB}/sqlmap/data/shell/README.txt
 ${PYSITELIB}/sqlmap/data/shell/backdoors/backdoor.asp_
 ${PYSITELIB}/sqlmap/data/shell/backdoors/backdoor.aspx_
+${PYSITELIB}/sqlmap/data/shell/backdoors/backdoor.cfm_
 ${PYSITELIB}/sqlmap/data/shell/backdoors/backdoor.jsp_
 ${PYSITELIB}/sqlmap/data/shell/backdoors/backdoor.php_
 ${PYSITELIB}/sqlmap/data/shell/stagers/stager.asp_
 ${PYSITELIB}/sqlmap/data/shell/stagers/stager.aspx_
+${PYSITELIB}/sqlmap/data/shell/stagers/stager.cfm_
 ${PYSITELIB}/sqlmap/data/shell/stagers/stager.jsp_
 ${PYSITELIB}/sqlmap/data/shell/stagers/stager.php_
 ${PYSITELIB}/sqlmap/data/txt/common-columns.txt
@@ -258,9 +260,6 @@ ${PYSITELIB}/sqlmap/lib/core/enums.pyo
 ${PYSITELIB}/sqlmap/lib/core/exception.py
 ${PYSITELIB}/sqlmap/lib/core/exception.pyc
 ${PYSITELIB}/sqlmap/lib/core/exception.pyo
-${PYSITELIB}/sqlmap/lib/core/gui.py
-${PYSITELIB}/sqlmap/lib/core/gui.pyc
-${PYSITELIB}/sqlmap/lib/core/gui.pyo
 ${PYSITELIB}/sqlmap/lib/core/log.py
 ${PYSITELIB}/sqlmap/lib/core/log.pyc
 ${PYSITELIB}/sqlmap/lib/core/log.pyo
@@ -462,6 +461,9 @@ ${PYSITELIB}/sqlmap/lib/utils/deps.pyo
 ${PYSITELIB}/sqlmap/lib/utils/getch.py
 ${PYSITELIB}/sqlmap/lib/utils/getch.pyc
 ${PYSITELIB}/sqlmap/lib/utils/getch.pyo
+${PYSITELIB}/sqlmap/lib/utils/gui.py
+${PYSITELIB}/sqlmap/lib/utils/gui.pyc
+${PYSITELIB}/sqlmap/lib/utils/gui.pyo
 ${PYSITELIB}/sqlmap/lib/utils/har.py
 ${PYSITELIB}/sqlmap/lib/utils/har.pyc
 ${PYSITELIB}/sqlmap/lib/utils/har.pyo
@@ -498,6 +500,9 @@ ${PYSITELIB}/sqlmap/lib/utils/sqlalchemy.pyo
 ${PYSITELIB}/sqlmap/lib/utils/timeout.py
 ${PYSITELIB}/sqlmap/lib/utils/timeout.pyc
 ${PYSITELIB}/sqlmap/lib/utils/timeout.pyo
+${PYSITELIB}/sqlmap/lib/utils/tui.py
+${PYSITELIB}/sqlmap/lib/utils/tui.pyc
+${PYSITELIB}/sqlmap/lib/utils/tui.pyo
 ${PYSITELIB}/sqlmap/lib/utils/versioncheck.py
 ${PYSITELIB}/sqlmap/lib/utils/versioncheck.pyc
 ${PYSITELIB}/sqlmap/lib/utils/versioncheck.pyo
