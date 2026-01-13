@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.34 2025/02/09 08:55:50 taca Exp $
+$NetBSD: distinfo,v 1.35 2026/01/13 15:21:29 taca Exp $
 
-BLAKE2s (i18n-1.14.7.gem) = 8b58ced36b1ea254fecbb43cb9600c098184ad6e97d80b2ad98abb122b744f5d
-SHA512 (i18n-1.14.7.gem) = 52be5d4f2bccc6be24aac23e8a72abef94efa16d37df153a067500a3be2d9dbbc232ca6804f2a473b7fddc529a2c76536de31c69a5c6a19c22ad9405b16f690d
-Size (i18n-1.14.7.gem) = 46592 bytes
+BLAKE2s (i18n-1.14.8.gem) = 1aa767496d080a23d400fab9692685377008c03a3223ea904d0606a6c38d6df5
+SHA512 (i18n-1.14.8.gem) = d58ad5276191ac08481da7d680572cabb655f6e5ddca6fcfa524e1dcfb73e3759e9fa2c70cafdf62028f31612c9a01219fb2c9bec6ec5bdcfb1d684404e51714
+Size (i18n-1.14.8.gem) = 46592 bytes
