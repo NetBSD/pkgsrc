@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.310 2026/01/13 17:27:34 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.311 2026/01/13 17:44:25 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -421,3 +421,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/xapian-omega to 1.4.30 [schmonz 2026-01-13]
 	Updated www/firefox140 to 140.7.0 [gutteridge 2026-01-13]
 	Updated www/firefox140-l10n to 140.7.0 [gutteridge 2026-01-13]
+	Updated x11/libxfce4windowing to 4.20.5 [gutteridge 2026-01-13]
