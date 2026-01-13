@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.278 2026/01/13 11:59:09 adam Exp $
+$NetBSD: CHANGES-2026,v 1.279 2026/01/13 12:16:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -385,3 +385,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/png to 1.6.54 [wiz 2026-01-12]
 	Updated graphics/opencolorio to 2.5.1 [adam 2026-01-13]
 	Updated security/sqlmap to 1.10 [adam 2026-01-13]
+	Updated misc/py-trove-classifiers to 2026.1.12.15 [adam 2026-01-13]
+	Updated www/py-publicsuffixlist to 1.0.2.20260111 [adam 2026-01-13]
