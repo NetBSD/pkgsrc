@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2023/12/23 10:05:07 zafer Exp $
+# $NetBSD: Makefile.common,v 1.7 2026/01/13 07:35:16 wiz Exp $
 # used by filesystems/fuse-ntfs-3g/Makefile
 # used by sysutils/ntfsprogs/Makefile
 
@@ -8,7 +8,7 @@ MASTER_SITES=	https://download.tuxera.com/opensource/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tuxera.com/community/ntfs-3g-download/
+HOMEPAGE=	https://github.com/tuxera/ntfs-3g
 LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=	${.CURDIR}/../../filesystems/libntfs/distinfo
