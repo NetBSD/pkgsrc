@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.298 2026/01/13 15:28:23 taca Exp $
+$NetBSD: CHANGES-2026,v 1.299 2026/01/13 15:29:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -408,3 +408,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-i18n to 1.14.8 [taca 2026-01-13]
 	Updated devel/ruby-io-event to 1.14.2 [taca 2026-01-13]
 	Updated devel/ruby-async to 2.35.2 [taca 2026-01-13]
+	Updated devel/ruby-pkg-config to 1.6.5 [taca 2026-01-13]
