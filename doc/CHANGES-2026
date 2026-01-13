@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.287 2026/01/13 14:55:09 taca Exp $
+$NetBSD: CHANGES-2026,v 1.288 2026/01/13 14:57:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -397,3 +397,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/ruby-pg to 1.6.3 [taca 2026-01-13]
 	Updated databases/ruby-sequel to 5.100.0 [taca 2026-01-13]
 	Updated databases/ruby-sqlite3 to 2.9.0 [taca 2026-01-13]
+	Updated databases/ruby-tiny_tds to 3.4.0 [taca 2026-01-13]
