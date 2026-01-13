@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.19 2020/05/20 06:09:07 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2026/01/13 07:36:58 wiz Exp $
 
 DISTNAME=	objc-3.2.10
 CATEGORIES=	lang
-MASTER_SITES=	http://users.pandora.be/stes/
+#MASTER_SITES=	http://users.pandora.be/stes/
 DISTFILES=	${DIST_BS}${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://users.pandora.be/stes/compiler.html
+#HOMEPAGE=	http://users.pandora.be/stes/compiler.html
 COMMENT=	Portable Object Compiler
 
 DIST_BS=	objc-bootstrap-3.2.8
