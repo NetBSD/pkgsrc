@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2021/01/10 14:47:38 taca Exp $
+# $NetBSD: Makefile,v 1.10 2026/01/13 15:07:19 taca Exp $
 
-DISTNAME=	facade-1.2.1
+DISTNAME=	facade-1.2.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
