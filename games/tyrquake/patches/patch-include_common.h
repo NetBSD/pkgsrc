@@ -1,8 +1,7 @@
-$NetBSD: patch-include_common.h,v 1.1 2024/06/06 17:33:14 ktnb Exp $
+$NetBSD: patch-include_common.h,v 1.1.14.1 2026/01/13 00:58:06 maya Exp $
 
-NetBSD has bswap in stdlib which conflicts with upstream's
-definitions. Using the upstream definitions causes a conflict
-throughout the rest of the program.
+Stable NetBSD releases leak bswap which conflicts with upstream's
+definition.
 
 --- include/common.h.orig	2022-09-06 10:23:53.000000000 +0000
 +++ include/common.h
@@ -11,7 +10,7 @@ throughout the rest of the program.
  #include <stdarg.h>
  #include <stdio.h>
 +#ifdef __NetBSD__
-+#include <stdlib.h>
++#include <sys/bswap.h>
 +#endif
  
  #include "qtypes.h"
