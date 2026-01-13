@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2025/12/22 10:02:25 adam Exp $
+# $NetBSD: Makefile,v 1.42 2026/01/13 11:58:44 adam Exp $
 
-DISTNAME=	sqlmap-1.9.12
+DISTNAME=	sqlmap-1.10
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlmap/}
 
@@ -9,11 +9,10 @@ HOMEPAGE=	https://sqlmap.org/
 COMMENT=	Automatic SQL injection and database takeover tool
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	bash:run perl:run
-
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
+USE_TOOLS+=	bash:run perl:run
 
 REPLACE_BASH+=	sqlmap/extra/shutils/*.sh
 REPLACE_PERL+=	sqlmap/extra/icmpsh/icmpsh-m.pl
