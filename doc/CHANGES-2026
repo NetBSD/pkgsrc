@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.306 2026/01/13 16:58:30 schmonz Exp $
+$NetBSD: CHANGES-2026,v 1.307 2026/01/13 17:02:54 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -416,3 +416,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-jirametrics to 2.20.1 [schmonz 2026-01-13]
 	Updated textproc/p5-Text-HTML-Turndown to 0.10 [schmonz 2026-01-13]
 	Updated devel/p5-Cucumber-TagExpressions to 8.1.0 [schmonz 2026-01-13]
+	Updated databases/p5-App-Sqitch to 1.6.1 [schmonz 2026-01-13]
