@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2026/01/07 08:49:23 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.108 2026/01/13 07:33:11 wiz Exp $
 
 DISTNAME=	nspluginwrapper-1.4.4
 PKGREVISION=	57
@@ -8,7 +7,7 @@ MASTER_SITES=	#
 DISTFILES=	${DISTNAME}.tar.gz ${DISTNAME}-suse121-generic.${WRAPPER_ARCH}.tar.gz
 
 MAINTAINER=	tsutsui@NetBSD.org
-HOMEPAGE=	http://nspluginwrapper.org/
+#HOMEPAGE=	http://nspluginwrapper.org/
 COMMENT=	Use Netscape compatible plugins from other platforms
 LICENSE=	gnu-gpl-v2
 
