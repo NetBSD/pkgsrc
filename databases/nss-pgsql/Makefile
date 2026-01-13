@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2023/06/06 12:40:28 riastradh Exp $
+# $NetBSD: Makefile,v 1.5 2026/01/13 07:33:52 wiz Exp $
 
 DISTNAME=	libnss-pgsql-1.5.0-beta
 PKGNAME=	nss-pgsql-1.5.0b
 PKGREVISION=	1
 CATEGORIES=	databases
-MASTER_SITES=	http://pgfoundry.org/frs/download.php/1878/
+#MASTER_SITES=	http://pgfoundry.org/frs/download.php/1878/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pgfoundry.org/projects/sysauth
+#HOMEPAGE=	http://pgfoundry.org/projects/sysauth
 COMMENT=	Name Service Switch module for PostgreSQL
 LICENSE=	gnu-gpl-v2
 
