@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.308 2026/01/13 17:21:20 schmonz Exp $
+$NetBSD: CHANGES-2026,v 1.309 2026/01/13 17:21:31 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -418,3 +418,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Cucumber-TagExpressions to 8.1.0 [schmonz 2026-01-13]
 	Updated databases/p5-App-Sqitch to 1.6.1 [schmonz 2026-01-13]
 	Updated textproc/xapian to 1.4.30 [schmonz 2026-01-13]
+	Updated textproc/xapian-omega to 1.4.30 [schmonz 2026-01-13]
