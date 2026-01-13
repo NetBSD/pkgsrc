@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/05/17 06:25:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.26 2026/01/13 15:09:24 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/ffi_c.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -9,6 +9,7 @@ ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/LICENSE.SPECS
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/Steepfile
 ${GEM_LIBDIR}/ext/ffi_c/AbstractMemory.c
 ${GEM_LIBDIR}/ext/ffi_c/AbstractMemory.h
 ${GEM_LIBDIR}/ext/ffi_c/ArrayType.c
@@ -59,9 +60,7 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi.mk
 ${GEM_LIBDIR}/ext/ffi_c/libffi.vc.mk
 ${GEM_LIBDIR}/ext/ffi_c/libffi.vc64.mk
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.allow-ai-service
-${GEM_LIBDIR}/ext/ffi_c/libffi/.appveyor.yml
-${GEM_LIBDIR}/ext/ffi_c/libffi/.appveyor/site.exp
-${GEM_LIBDIR}/ext/ffi_c/libffi/.appveyor/unix-noexec.exp
+${GEM_LIBDIR}/ext/ffi_c/libffi/.ci/Containerfile.ppc64le
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.ci/ar-lib
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.ci/bfin-sim.exp
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.ci/build-cross-in-container.sh
@@ -75,11 +74,15 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi/.ci/msvs-detect
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.ci/or1k-sim.exp
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.ci/powerpc-eabisim.exp
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.ci/site.exp
+${GEM_LIBDIR}/ext/ffi_c/libffi/.ci/unix-noexec.exp
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.ci/wine-sim.exp
+${GEM_LIBDIR}/ext/ffi_c/libffi/.gail-labels
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.gitattributes
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.github/issue_template.md
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.github/workflows/build.yml
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.github/workflows/emscripten.yml
+${GEM_LIBDIR}/ext/ffi_c/libffi/.github/workflows/label-new-issue.yaml
+${GEM_LIBDIR}/ext/ffi_c/libffi/.github/workflows/tarball.yml
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.gitignore
 ${GEM_LIBDIR}/ext/ffi_c/libffi/ChangeLog.old
 ${GEM_LIBDIR}/ext/ffi_c/libffi/LICENSE
@@ -240,6 +243,7 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi/src/prep_cif.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/raw_api.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/riscv/ffi.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/riscv/ffitarget.h
+${GEM_LIBDIR}/ext/ffi_c/libffi/src/riscv/internal.h
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/riscv/sysv.S
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/s390/ffi.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/s390/ffitarget.h
@@ -265,8 +269,8 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi/src/types.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/vax/elfbsd.S
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/vax/ffi.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/vax/ffitarget.h
-${GEM_LIBDIR}/ext/ffi_c/libffi/src/wasm32/ffi.c
-${GEM_LIBDIR}/ext/ffi_c/libffi/src/wasm32/ffitarget.h
+${GEM_LIBDIR}/ext/ffi_c/libffi/src/wasm/ffi.c
+${GEM_LIBDIR}/ext/ffi_c/libffi/src/wasm/ffitarget.h
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/x86/asmnames.h
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/x86/ffi.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/x86/ffi64.c
@@ -318,6 +322,7 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/float2.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/float3.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/float4.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/float_va.c
+${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/longjmp.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/many.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/many2.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/many_double.c
@@ -523,6 +528,9 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.go/closure1.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.go/ffitest.h
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.go/go.exp
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.go/static-chain.h
+${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.threads/ffitest.h
+${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.threads/threads.exp
+${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.threads/tsan.c
 ${GEM_LIBDIR}/ext/ffi_c/rbffi.h
 ${GEM_LIBDIR}/ext/ffi_c/rbffi_endian.h
 ${GEM_LIBDIR}/ffi.gemspec
@@ -611,13 +619,11 @@ ${GEM_LIBDIR}/lib/ffi/tools/const_generator.rb
 ${GEM_LIBDIR}/lib/ffi/tools/generator.rb
 ${GEM_LIBDIR}/lib/ffi/tools/generator_task.rb
 ${GEM_LIBDIR}/lib/ffi/tools/struct_generator.rb
-${GEM_LIBDIR}/lib/ffi/tools/types_generator.rb
 ${GEM_LIBDIR}/lib/ffi/types.rb
 ${GEM_LIBDIR}/lib/ffi/union.rb
 ${GEM_LIBDIR}/lib/ffi/variadic.rb
 ${GEM_LIBDIR}/lib/ffi/version.rb
 ${GEM_LIBDIR}/lib/ffi_c.${RUBY_DLEXT}
-${GEM_LIBDIR}/rakelib/ffi_gem_helper.rb
 ${GEM_LIBDIR}/samples/getlogin.rb
 ${GEM_LIBDIR}/samples/getpid.rb
 ${GEM_LIBDIR}/samples/gettimeofday.rb
@@ -634,9 +640,11 @@ ${GEM_LIBDIR}/sig/ffi/buffer.rbs
 ${GEM_LIBDIR}/sig/ffi/data_converter.rbs
 ${GEM_LIBDIR}/sig/ffi/dynamic_library.rbs
 ${GEM_LIBDIR}/sig/ffi/enum.rbs
+${GEM_LIBDIR}/sig/ffi/errno.rbs
 ${GEM_LIBDIR}/sig/ffi/function.rbs
 ${GEM_LIBDIR}/sig/ffi/library.rbs
 ${GEM_LIBDIR}/sig/ffi/native_type.rbs
+${GEM_LIBDIR}/sig/ffi/platform.rbs
 ${GEM_LIBDIR}/sig/ffi/pointer.rbs
 ${GEM_LIBDIR}/sig/ffi/struct.rbs
 ${GEM_LIBDIR}/sig/ffi/struct_by_reference.rbs
