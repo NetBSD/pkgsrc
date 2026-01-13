@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.277 2026/01/12 22:40:31 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.278 2026/01/13 11:59:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -383,3 +383,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/snmp_exporter to 0.30.1nb6 [wiz 2026-01-12]
 	Updated audio/alsa-lib to 1.2.15.2 [wiz 2026-01-12]
 	Updated graphics/png to 1.6.54 [wiz 2026-01-12]
+	Updated graphics/opencolorio to 2.5.1 [adam 2026-01-13]
+	Updated security/sqlmap to 1.10 [adam 2026-01-13]
