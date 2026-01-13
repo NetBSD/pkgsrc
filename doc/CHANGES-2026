@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.282 2026/01/13 14:47:05 taca Exp $
+$NetBSD: CHANGES-2026,v 1.283 2026/01/13 14:49:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -392,3 +392,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-scrapy to 2.14.1 [adam 2026-01-13]
 	Updated net/py-prometheus_client to 0.24.0 [adam 2026-01-13]
 	Updated www/ruby-sass-embedded to 1.97.2 [taca 2026-01-13]
+	Updated benchmarks/ruby-benchmark to 0.5.0 [taca 2026-01-13]
