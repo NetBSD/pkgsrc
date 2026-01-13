@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/05/17 07:53:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/01/13 12:41:38 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -8,6 +8,12 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/prometheus_client/__init__.py
 ${PYSITELIB}/prometheus_client/__init__.pyc
 ${PYSITELIB}/prometheus_client/__init__.pyo
+${PYSITELIB}/prometheus_client/aiohttp/__init__.py
+${PYSITELIB}/prometheus_client/aiohttp/__init__.pyc
+${PYSITELIB}/prometheus_client/aiohttp/__init__.pyo
+${PYSITELIB}/prometheus_client/aiohttp/exposition.py
+${PYSITELIB}/prometheus_client/aiohttp/exposition.pyc
+${PYSITELIB}/prometheus_client/aiohttp/exposition.pyo
 ${PYSITELIB}/prometheus_client/asgi.py
 ${PYSITELIB}/prometheus_client/asgi.pyc
 ${PYSITELIB}/prometheus_client/asgi.pyo
@@ -26,6 +32,12 @@ ${PYSITELIB}/prometheus_client/core.pyo
 ${PYSITELIB}/prometheus_client/decorator.py
 ${PYSITELIB}/prometheus_client/decorator.pyc
 ${PYSITELIB}/prometheus_client/decorator.pyo
+${PYSITELIB}/prometheus_client/django/__init__.py
+${PYSITELIB}/prometheus_client/django/__init__.pyc
+${PYSITELIB}/prometheus_client/django/__init__.pyo
+${PYSITELIB}/prometheus_client/django/exposition.py
+${PYSITELIB}/prometheus_client/django/exposition.pyc
+${PYSITELIB}/prometheus_client/django/exposition.pyo
 ${PYSITELIB}/prometheus_client/exposition.py
 ${PYSITELIB}/prometheus_client/exposition.pyc
 ${PYSITELIB}/prometheus_client/exposition.pyo
