@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2025/10/27 14:53:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/01/13 15:28:14 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/context/best-practices.md
 ${GEM_LIBDIR}/context/debugging.md
@@ -15,6 +15,7 @@ ${GEM_LIBDIR}/lib/async/condition.md
 ${GEM_LIBDIR}/lib/async/condition.rb
 ${GEM_LIBDIR}/lib/async/console.rb
 ${GEM_LIBDIR}/lib/async/deadline.rb
+${GEM_LIBDIR}/lib/async/fork_handler.rb
 ${GEM_LIBDIR}/lib/async/idler.rb
 ${GEM_LIBDIR}/lib/async/limited_queue.rb
 ${GEM_LIBDIR}/lib/async/list.rb
