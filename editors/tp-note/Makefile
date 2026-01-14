@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.108 2025/12/04 18:44:11 pin Exp $
+# $NetBSD: Makefile,v 1.109 2026/01/14 14:46:49 pin Exp $
 
-DISTNAME=	tp-note-1.25.16
-# tp-note >= 1.25.17 requires Rust >= 1.91.1
+DISTNAME=	tp-note-1.25.17
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITLAB:=getreu/}
 GITLAB_RELEASE=	v${PKGVERSION_NOREV}
@@ -13,9 +12,9 @@ LICENSE=	mit OR apache-2.0
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.86.0
+RUST_REQ=	1.91.0
 
-WRKSRC=		${WRKDIR}/tp-note-v1.25.16-537943c78c53d9f094d7a01eeb7ed86e1ca7fcf7
+WRKSRC=		${WRKDIR}/tp-note-v1.25.17-ebc1818f0831bfacaaca0ac72de9a356678c13c9
 
 USE_TOOLS+=	pkg-config
 
