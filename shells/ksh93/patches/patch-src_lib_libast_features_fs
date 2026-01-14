@@ -1,0 +1,112 @@
+$NetBSD: patch-src_lib_libast_features_fs,v 1.1 2026/01/14 10:22:23 wiz Exp $
+
+Fix statvfs feature test, see PR 59915.
+
+--- src/lib/libast/features/fs.orig	2026-01-14 06:42:40.670523512 +0000
++++ src/lib/libast/features/fs
+@@ -107,7 +107,7 @@ lib	statfs4 sys/types.h - sys/statfs.h - sys/vfs.h - s
+ 	}
+ }end
+ 
+-lib	getmntinfo_statvfs note{ getmntinfo uses statvfs -- since when? }end compile{
++lib	getmntinfo_statvfs note{ getmntinfo uses statvfs }end compile{
+ 	#include <sys/types.h>
+ 	#include <sys/mount.h>
+ 	int
+@@ -118,45 +118,59 @@ lib	getmntinfo_statvfs note{ getmntinfo uses statvfs -
+ 	}
+ }end
+ 
+-lib	getfsstat_statvfs note{ getfsstat uses statvfs -- just in case it is confused like getmntinfo }end compile{
+-	#include <sys/types.h>
+-	#if _sys_mount
+-	#include <sys/mount.h>
+-	#endif
+-	int
+-	gfs(struct statvfs* fs)
+-	{
+-		fs->f_flag = 0;
+-		return getfsstat(fs, sizeof(struct statvfs), MNT_WAIT);
++if lib getfsstat_getvfsstat note{ getvfsstat (NetBSD) compiles }end compile{
++		#include <sys/types.h>
++		#if _sys_statvfs
++		#include <sys/statvfs.h>
++		#endif
++		int
++		gfs(struct statvfs* fs)
++		{
++			fs->f_flag = 0;
++			return getvfsstat(fs, sizeof(struct statvfs), ST_WAIT);
++		}
++	}end {
++		#define getfsstat		getvfsstat
++		#define MNT_WAIT		ST_WAIT
++		#define MNT_NOWAIT		ST_NOWAIT
++		#define _lib_getfsstat		1	/* getfsstat() is actually getvfsstat()  */
++		#define _lib_getfsstat_statvfs	1	/* ...and it uses statvfs */
+ 	}
+-}end pass{
+-	cat <<!
+-	#define _lib_getfsstat 1	/* getfsstat() uses statvfs and compiles successfully */
+-	!
+-}end
+-
+-lib	getfsstat_statfs note{ getfsstat uses statfs }end compile{
+-	#include <sys/types.h>
+-	#if _sys_mount
+-	#include <sys/mount.h>
+-	#endif
+-	#if _sys_param
+-	#include <sys/param.h>
+-	#endif
+-	#if _sys_ucred
+-	#include <sys/ucred.h>
+-	#endif
+-	int
+-	gfs(struct statfs* fs)
+-	{
+-		fs->f_flags = 0;
+-		return getfsstat(fs, sizeof(struct statfs), MNT_WAIT);
++elif lib getfsstat_statvfs note{ getfsstat uses statvfs }end compile{
++		#include <sys/types.h>
++		#if _sys_mount
++		#include <sys/mount.h>
++		#endif
++		int
++		gfs(struct statvfs* fs)
++		{
++			fs->f_flag = 0;
++			return getfsstat(fs, sizeof(struct statvfs), MNT_WAIT);
++		}
++	}end {
++		#define _lib_getfsstat		1	/* getfsstat() uses statvfs */
+ 	}
+-}end pass{
+-	cat <<!
+-	#define _lib_getfsstat 1	/* getfsstat() uses statfs and compiles successfully */
+-	!
+-}end
++elif lib getfsstat_statfs note{ getfsstat uses statfs }end compile{
++		#include <sys/types.h>
++		#if _sys_mount
++		#include <sys/mount.h>
++		#endif
++		#if _sys_param
++		#include <sys/param.h>
++		#endif
++		#if _sys_ucred
++		#include <sys/ucred.h>
++		#endif
++		int
++		gfs(struct statfs* fs)
++		{
++			fs->f_flags = 0;
++			return getfsstat(fs, sizeof(struct statfs), MNT_WAIT);
++		}
++	}end {
++		#define _lib_getfsstat		1	/* getfsstat() uses statfs */
++	}
++endif
+ 
+ cat{
+ 	#if _sys_statvfs
