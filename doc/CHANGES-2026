@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.322 2026/01/14 13:10:36 adam Exp $
+$NetBSD: CHANGES-2026,v 1.323 2026/01/14 14:43:22 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -439,3 +439,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated chat/prosody to 13.0.3 [sborrill 2026-01-14]
 	Updated devel/py-test-run-parallel to 0.8.2 [adam 2026-01-14]
 	Updated devel/py-dulwich to 0.25.2 [adam 2026-01-14]
+	Updated devel/cargo-nextest to 0.9.121 [pin 2026-01-14]
