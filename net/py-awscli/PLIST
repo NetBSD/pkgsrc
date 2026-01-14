@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2025/10/31 12:53:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.55 2026/01/14 08:09:06 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -534,6 +534,9 @@ ${PYSITELIB}/awscli/customizations/s3/syncstrategy/__init__.pyo
 ${PYSITELIB}/awscli/customizations/s3/syncstrategy/base.py
 ${PYSITELIB}/awscli/customizations/s3/syncstrategy/base.pyc
 ${PYSITELIB}/awscli/customizations/s3/syncstrategy/base.pyo
+${PYSITELIB}/awscli/customizations/s3/syncstrategy/caseconflict.py
+${PYSITELIB}/awscli/customizations/s3/syncstrategy/caseconflict.pyc
+${PYSITELIB}/awscli/customizations/s3/syncstrategy/caseconflict.pyo
 ${PYSITELIB}/awscli/customizations/s3/syncstrategy/delete.py
 ${PYSITELIB}/awscli/customizations/s3/syncstrategy/delete.pyc
 ${PYSITELIB}/awscli/customizations/s3/syncstrategy/delete.pyo
@@ -775,6 +778,7 @@ ${PYSITELIB}/awscli/examples/apigateway/update-rest-api.rst
 ${PYSITELIB}/awscli/examples/apigateway/update-stage.rst
 ${PYSITELIB}/awscli/examples/apigateway/update-usage-plan.rst
 ${PYSITELIB}/awscli/examples/apigateway/update-usage.rst
+${PYSITELIB}/awscli/examples/apigateway/update-vpc-link.rst
 ${PYSITELIB}/awscli/examples/apigatewaymanagementapi/delete-connection.rst
 ${PYSITELIB}/awscli/examples/apigatewaymanagementapi/get-connection.rst
 ${PYSITELIB}/awscli/examples/apigatewaymanagementapi/post-to-connection.rst
@@ -1168,11 +1172,14 @@ ${PYSITELIB}/awscli/examples/cloudformation/batch-describe-type-configurations.r
 ${PYSITELIB}/awscli/examples/cloudformation/cancel-update-stack.rst
 ${PYSITELIB}/awscli/examples/cloudformation/continue-update-rollback.rst
 ${PYSITELIB}/awscli/examples/cloudformation/create-change-set.rst
+${PYSITELIB}/awscli/examples/cloudformation/create-generated-template.rst
 ${PYSITELIB}/awscli/examples/cloudformation/create-stack-instances.rst
+${PYSITELIB}/awscli/examples/cloudformation/create-stack-refactor.rst
 ${PYSITELIB}/awscli/examples/cloudformation/create-stack-set.rst
 ${PYSITELIB}/awscli/examples/cloudformation/create-stack.rst
 ${PYSITELIB}/awscli/examples/cloudformation/deactivate-type.rst
 ${PYSITELIB}/awscli/examples/cloudformation/delete-change-set.rst
+${PYSITELIB}/awscli/examples/cloudformation/delete-generated-template.rst
 ${PYSITELIB}/awscli/examples/cloudformation/delete-stack-instances.rst
 ${PYSITELIB}/awscli/examples/cloudformation/delete-stack-set.rst
 ${PYSITELIB}/awscli/examples/cloudformation/delete-stack.rst
@@ -1180,10 +1187,13 @@ ${PYSITELIB}/awscli/examples/cloudformation/deploy.rst
 ${PYSITELIB}/awscli/examples/cloudformation/deregister-type.rst
 ${PYSITELIB}/awscli/examples/cloudformation/describe-account-limits.rst
 ${PYSITELIB}/awscli/examples/cloudformation/describe-change-set.rst
+${PYSITELIB}/awscli/examples/cloudformation/describe-generated-template.rst
 ${PYSITELIB}/awscli/examples/cloudformation/describe-publisher.rst
+${PYSITELIB}/awscli/examples/cloudformation/describe-resource-scan.rst
 ${PYSITELIB}/awscli/examples/cloudformation/describe-stack-drift-detection-status.rst
 ${PYSITELIB}/awscli/examples/cloudformation/describe-stack-events.rst
 ${PYSITELIB}/awscli/examples/cloudformation/describe-stack-instance.rst
+${PYSITELIB}/awscli/examples/cloudformation/describe-stack-refactor.rst
 ${PYSITELIB}/awscli/examples/cloudformation/describe-stack-resource-drifts.rst
 ${PYSITELIB}/awscli/examples/cloudformation/describe-stack-resource.rst
 ${PYSITELIB}/awscli/examples/cloudformation/describe-stack-resources.rst
@@ -1197,13 +1207,18 @@ ${PYSITELIB}/awscli/examples/cloudformation/detect-stack-resource-drift.rst
 ${PYSITELIB}/awscli/examples/cloudformation/detect-stack-set-drift.rst
 ${PYSITELIB}/awscli/examples/cloudformation/estimate-template-cost.rst
 ${PYSITELIB}/awscli/examples/cloudformation/execute-change-set.rst
+${PYSITELIB}/awscli/examples/cloudformation/execute-stack-refactor.rst
 ${PYSITELIB}/awscli/examples/cloudformation/get-stack-policy.rst
 ${PYSITELIB}/awscli/examples/cloudformation/get-template-summary.rst
 ${PYSITELIB}/awscli/examples/cloudformation/get-template.rst
 ${PYSITELIB}/awscli/examples/cloudformation/list-change-sets.rst
 ${PYSITELIB}/awscli/examples/cloudformation/list-exports.rst
+${PYSITELIB}/awscli/examples/cloudformation/list-generated-templates.rst
 ${PYSITELIB}/awscli/examples/cloudformation/list-imports.rst
+${PYSITELIB}/awscli/examples/cloudformation/list-resource-scan-related-resources.rst
+${PYSITELIB}/awscli/examples/cloudformation/list-resource-scan-resources.rst
 ${PYSITELIB}/awscli/examples/cloudformation/list-stack-instances.rst
+${PYSITELIB}/awscli/examples/cloudformation/list-stack-refactor-actions.rst
 ${PYSITELIB}/awscli/examples/cloudformation/list-stack-resources.rst
 ${PYSITELIB}/awscli/examples/cloudformation/list-stack-set-operation-results.rst
 ${PYSITELIB}/awscli/examples/cloudformation/list-stack-set-operations.rst
@@ -1220,6 +1235,7 @@ ${PYSITELIB}/awscli/examples/cloudformation/set-stack-policy.rst
 ${PYSITELIB}/awscli/examples/cloudformation/set-type-configuration.rst
 ${PYSITELIB}/awscli/examples/cloudformation/set-type-default-version.rst
 ${PYSITELIB}/awscli/examples/cloudformation/signal-resource.rst
+${PYSITELIB}/awscli/examples/cloudformation/start-resource-scan.rst
 ${PYSITELIB}/awscli/examples/cloudformation/stop-stack-set-operation.rst
 ${PYSITELIB}/awscli/examples/cloudformation/test-type.rst
 ${PYSITELIB}/awscli/examples/cloudformation/update-stack-instances.rst
@@ -3065,22 +3081,6 @@ ${PYSITELIB}/awscli/examples/elasticbeanstalk/update-application.rst
 ${PYSITELIB}/awscli/examples/elasticbeanstalk/update-configuration-template.rst
 ${PYSITELIB}/awscli/examples/elasticbeanstalk/update-environment.rst
 ${PYSITELIB}/awscli/examples/elasticbeanstalk/validate-configuration-settings.rst
-${PYSITELIB}/awscli/examples/elastictranscoder/cancel-job.rst
-${PYSITELIB}/awscli/examples/elastictranscoder/create-job.rst
-${PYSITELIB}/awscli/examples/elastictranscoder/create-pipeline.rst
-${PYSITELIB}/awscli/examples/elastictranscoder/create-preset.rst
-${PYSITELIB}/awscli/examples/elastictranscoder/delete-pipeline.rst
-${PYSITELIB}/awscli/examples/elastictranscoder/delete-preset.rst
-${PYSITELIB}/awscli/examples/elastictranscoder/list-jobs-by-pipeline.rst
-${PYSITELIB}/awscli/examples/elastictranscoder/list-jobs-by-status.rst
-${PYSITELIB}/awscli/examples/elastictranscoder/list-pipelines.rst
-${PYSITELIB}/awscli/examples/elastictranscoder/list-presets.rst
-${PYSITELIB}/awscli/examples/elastictranscoder/read-job.rst
-${PYSITELIB}/awscli/examples/elastictranscoder/read-pipeline.rst
-${PYSITELIB}/awscli/examples/elastictranscoder/read-preset.rst
-${PYSITELIB}/awscli/examples/elastictranscoder/update-pipeline-notifications.rst
-${PYSITELIB}/awscli/examples/elastictranscoder/update-pipeline-status.rst
-${PYSITELIB}/awscli/examples/elastictranscoder/update-pipeline.rst
 ${PYSITELIB}/awscli/examples/elb/add-tags.rst
 ${PYSITELIB}/awscli/examples/elb/apply-security-groups-to-load-balancer.rst
 ${PYSITELIB}/awscli/examples/elb/attach-load-balancer-to-subnets.rst
@@ -6495,6 +6495,7 @@ ${PYSITELIB}/awscli/text.pyc
 ${PYSITELIB}/awscli/text.pyo
 ${PYSITELIB}/awscli/topics/config-vars.rst
 ${PYSITELIB}/awscli/topics/return-codes.rst
+${PYSITELIB}/awscli/topics/s3-case-insensitivity.rst
 ${PYSITELIB}/awscli/topics/s3-config.rst
 ${PYSITELIB}/awscli/topics/s3-faq.rst
 ${PYSITELIB}/awscli/topics/topic-tags.json
