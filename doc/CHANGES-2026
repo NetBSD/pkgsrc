@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.319 2026/01/14 12:50:26 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.320 2026/01/14 12:56:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -435,3 +435,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-hishel to 1.1.8 [adam 2026-01-14]
 	Updated net/arti to 1.9.0 [wiz 2026-01-14]
 	Updated print/texlab to 5.25.1 [wiz 2026-01-14]
+	Updated devel/abseil to 20260107.0 [wiz 2026-01-14]
