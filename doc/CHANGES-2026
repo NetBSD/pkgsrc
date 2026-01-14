@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.313 2026/01/14 02:51:09 scole Exp $
+$NetBSD: CHANGES-2026,v 1.314 2026/01/14 08:09:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -424,3 +424,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/libxfce4windowing to 4.20.5 [gutteridge 2026-01-13]
 	Updated lang/rust to 1.91.1 [wiz 2026-01-13]
 	Updated devel/p5-Test-Harness-Straps to 0.30nb1 [scole 2026-01-14]
+	Updated net/py-botocore to 1.42.27 [adam 2026-01-14]
+	Updated net/py-s3transfer to 0.16.0 [adam 2026-01-14]
+	Updated net/py-boto3 to 1.42.27 [adam 2026-01-14]
+	Updated net/py-awscli to 1.44.17 [adam 2026-01-14]
