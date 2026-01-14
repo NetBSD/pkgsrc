@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26666 2026/01/13 20:48:35 wiz Exp $
+$NetBSD: TODO,v 1.26667 2026/01/14 12:34:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -977,7 +977,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o objc-3.3.24
 	o obs-studio-32.0
 	o ocaml-5.4.0 [wip]
+	o ocaml-bz2-0.8.0
 	o ocaml-cppo-1.6.9
+	o ocaml-cudf-0.10
 	o ocaml-encore-0.8
 	o ocaml-eqaf-0.7
 	o ocaml-expat-1.1.0
@@ -1000,6 +1002,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencpn-plugin-draw-1.8.5.2
 	o opencsg-1.4.2
 	o opendnssec-2.1.8
+	o openfst-1.8.4
 	o opengrok-1.7.1
 	o openh323-1.19.1
 	o openmortal-0.7.1
@@ -1339,7 +1342,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o whowatch-1.8.5
 	o widelands-1.3
 	o windowlab-1.40
-	o wine-10.0
+	o wine-11.0
 	o wine-devel-9.22
 	o wiredtiger-10.0.0
 	o wkhtmltopdf-0.12.6
