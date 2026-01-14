@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.321 2026/01/14 13:03:37 sborrill Exp $
+$NetBSD: CHANGES-2026,v 1.322 2026/01/14 13:10:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -437,3 +437,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/texlab to 5.25.1 [wiz 2026-01-14]
 	Updated devel/abseil to 20260107.0 [wiz 2026-01-14]
 	Updated chat/prosody to 13.0.3 [sborrill 2026-01-14]
+	Updated devel/py-test-run-parallel to 0.8.2 [adam 2026-01-14]
+	Updated devel/py-dulwich to 0.25.2 [adam 2026-01-14]
