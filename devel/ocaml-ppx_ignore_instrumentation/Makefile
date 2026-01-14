@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/08/25 08:35:03 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/01/14 10:50:06 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.15.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	ppx_ignore_instrumentation
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/janestreet/ppx_ignore_instrumentatio/
+HOMEPAGE=	https://github.com/janestreet/ppx_ignore_instrumentation
 COMMENT=	Removes AST nodes for instrumentation extensions
 LICENSE=	mit
 
