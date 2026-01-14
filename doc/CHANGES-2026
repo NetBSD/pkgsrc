@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.331 2026/01/14 18:57:17 adam Exp $
+$NetBSD: CHANGES-2026,v 1.332 2026/01/14 19:05:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -452,3 +452,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-prometheus_client to 0.24.1 [adam 2026-01-14]
 	Updated comms/py-jupyter_server_terminals to 0.5.4 [adam 2026-01-14]
 	Updated textproc/py-regex to 2026.1.14 [adam 2026-01-14]
+	Updated textproc/py-tomlkit to 0.14.0 [adam 2026-01-14]
+	Updated misc/py-pbs-installer to 2026.1.13 [adam 2026-01-14]
+	Updated devel/py-gcovr to 8.6 [adam 2026-01-14]
+	Updated misc/py-icecream to 2.1.9 [adam 2026-01-14]
