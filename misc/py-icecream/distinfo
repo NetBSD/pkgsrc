@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/09/14 14:23:26 adam Exp $
+$NetBSD: distinfo,v 1.6 2026/01/14 19:05:15 adam Exp $
 
-BLAKE2s (icecream-2.1.8.tar.gz) = 78e516df368d684f7f207c4c5565b1db6430a6ed2ef1a95dfaa8fd017d558d50
-SHA512 (icecream-2.1.8.tar.gz) = 74092cc8cf79ca4b24b2904dd3c48af7706c3e5ccac1fd2fd15075f20dc075dcbe8d4396344536fb557ec4e51e8718865d97db5a7557d2aa506c7ea944f2b3e4
-Size (icecream-2.1.8.tar.gz) = 18337 bytes
+BLAKE2s (icecream-2.1.9.tar.gz) = cc1341bb7a71d0e1279d52a525ea9fd864529aec98d904c384a6b0124b233269
+SHA512 (icecream-2.1.9.tar.gz) = 00c624b4efc0cc8d4c14aadeb18c5cd8fca3d7a4c817640fb3561c82f789031040ef43139e02368ed1eb6c80fccb986b3f7e9417ecbcd89c5f319fff5574e39d
+Size (icecream-2.1.9.tar.gz) = 13924 bytes
