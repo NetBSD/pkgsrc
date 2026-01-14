@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.332 2026/01/14 19:05:42 adam Exp $
+$NetBSD: CHANGES-2026,v 1.333 2026/01/14 19:09:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -456,3 +456,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-pbs-installer to 2026.1.13 [adam 2026-01-14]
 	Updated devel/py-gcovr to 8.6 [adam 2026-01-14]
 	Updated misc/py-icecream to 2.1.9 [adam 2026-01-14]
+	Updated lang/nodejs20 to 20.20.0 [adam 2026-01-14]
+	Updated lang/nodejs22 to 22.22.0 [adam 2026-01-14]
+	Updated lang/nodejs24 to 24.13.0 [adam 2026-01-14]
+	Updated lang/nodejs to 25.3.0 [adam 2026-01-14]
