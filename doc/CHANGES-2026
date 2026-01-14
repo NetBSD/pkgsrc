@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.317 2026/01/14 09:53:13 adam Exp $
+$NetBSD: CHANGES-2026,v 1.318 2026/01/14 12:34:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -433,3 +433,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/libgsf to 1.14.55 [adam 2026-01-14]
 	Updated devel/colordiff to 1.0.22 [adam 2026-01-14]
 	Updated www/py-hishel to 1.1.8 [adam 2026-01-14]
+	Updated net/arti to 1.9.0 [wiz 2026-01-14]
