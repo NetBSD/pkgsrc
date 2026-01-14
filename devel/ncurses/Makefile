@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2026/01/05 02:01:15 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2026/01/14 12:55:59 wiz Exp $
 
 DISTNAME=	ncurses-6.6
 CATEGORIES=	devel
@@ -43,6 +43,7 @@ CONFIGURE_ARGS+=	--with-panel-libname=gnupanel
 
 CONFIGURE_ARGS.Darwin+=	--disable-mixed-case
 CONFIGURE_ARGS.SunOS+=	--disable-const
+CFLAGS.SunOS+=		-Wno-incompatible-pointer-types
 
 CONFIGURE_ARGS.UnixWare+=	--disable-libtool-version
 
