@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.315 2026/01/14 08:46:31 wen Exp $
+$NetBSD: CHANGES-2026,v 1.316 2026/01/14 09:44:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -429,3 +429,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-boto3 to 1.42.27 [adam 2026-01-14]
 	Updated net/py-awscli to 1.44.17 [adam 2026-01-14]
 	Updated devel/p5-Test-Unit to 0.29 [wen 2026-01-14]
+	Updated devel/sccache to 0.13.0 [adam 2026-01-14]
+	Updated devel/libgsf to 1.14.55 [adam 2026-01-14]
