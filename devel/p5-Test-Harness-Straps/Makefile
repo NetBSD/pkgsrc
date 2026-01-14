@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2026/01/10 03:26:45 scole Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/14 02:47:56 scole Exp $
 
 DISTNAME=	Test-Harness-Straps-0.30
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -11,6 +12,8 @@ COMMENT=	Detailed analysis of perl test results
 LICENSE=	${PERL5_LICENSE}
 
 USE_TOOLS+=	perl
+
+DEPENDS+=	p5-Module-Build-[0-9]*:../../devel/p5-Module-Build
 
 SUBST_CLASSES+=		nosleep
 SUBST_STAGE.nosleep=	pre-configure
