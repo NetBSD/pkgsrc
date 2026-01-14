@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2026/01/11 12:25:20 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/01/14 19:03:29 adam Exp $
 
-DISTNAME=	gcovr-8.5
+DISTNAME=	gcovr-8.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gcovr/}
