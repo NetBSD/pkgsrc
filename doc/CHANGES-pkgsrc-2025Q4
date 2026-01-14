@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q4,v 1.1.2.6 2026/01/13 00:58:44 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q4,v 1.1.2.7 2026/01/14 18:59:20 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q4 branch:
 
@@ -19,3 +19,7 @@ security/libgcrypt: Build fix correction
 
 Pullup ticket #7043 - requested by nia
 games/tyrquate: Build fix correction
+
+Pullup ticket #7044 - requested by gutteridge
+www/firefox140: Security fix
+www/firefox140-l10n: Security fix
