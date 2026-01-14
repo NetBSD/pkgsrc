@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26668 2026/01/14 12:50:26 wiz Exp $
+$NetBSD: TODO,v 1.26669 2026/01/14 12:56:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -404,7 +404,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o TiffIO-140a
 	o aarch64-none-elf-binutils-2.45
 	o aarch64-none-elf-gcc-14.3.0
-	o abseil-20260107.0
 	o accountsservice-23.13.9 [switched to meson]
 	o adms-2.3.6
 	o adocman-0.13
