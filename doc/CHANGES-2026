@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.312 2026/01/13 20:48:35 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.313 2026/01/14 02:51:09 scole Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -423,3 +423,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox140-l10n to 140.7.0 [gutteridge 2026-01-13]
 	Updated x11/libxfce4windowing to 4.20.5 [gutteridge 2026-01-13]
 	Updated lang/rust to 1.91.1 [wiz 2026-01-13]
+	Updated devel/p5-Test-Harness-Straps to 0.30nb1 [scole 2026-01-14]
