@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2025/08/24 16:36:16 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2026/01/14 12:57:32 wiz Exp $
 
 BUILDLINK_TREE+=	protobuf
 
@@ -8,7 +8,7 @@ PROTOBUF_BUILDLINK3_MK:=
 USE_CXX_FEATURES+=	c++14
 
 BUILDLINK_API_DEPENDS.protobuf+=	protobuf>=24.4
-BUILDLINK_ABI_DEPENDS.protobuf+=	protobuf>=32.0nb1
+BUILDLINK_ABI_DEPENDS.protobuf+=	protobuf>=33.3nb1
 BUILDLINK_PKGSRCDIR.protobuf?=		../../devel/protobuf
 
 BUILDLINK_FILES.protobuf+=	bin/protoc
