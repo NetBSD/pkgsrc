@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/07/04 08:47:38 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/01/14 10:51:43 wiz Exp $
 #
 VERS=			1.1.2.1
 PKGREVISION=		17
@@ -9,7 +9,7 @@ MASTER_SITES=		http://launchpad.net/ocsinventory-unix-agent/stable-1.1.2/ocsinve
 MASTER_SITES+=		http://launchpadlibrarian.net/57513674/
 
 MAINTAINER=		bouyer@NetBSD.org
-HOMEPAGE=		http://www.ocsinventory-ng.org/
+HOMEPAGE=		https://ocsinventory-ng.org/?lang=en
 COMMENT=		Keep track of the computers configuration and software
 
 PKG_SYSCONFSUBDIR=	ocsinventory
