@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/14 10:04:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/01/14 18:51:59 adam Exp $
 bin/hy-${PYVERSSUFFIX}
 bin/hy2py-${PYVERSSUFFIX}
 bin/hyc-${PYVERSSUFFIX}
@@ -42,6 +42,9 @@ ${PYSITELIB}/hy/core/util.pyc
 ${PYSITELIB}/hy/errors.py
 ${PYSITELIB}/hy/errors.pyc
 ${PYSITELIB}/hy/errors.pyo
+${PYSITELIB}/hy/hy_inspect.py
+${PYSITELIB}/hy/hy_inspect.pyc
+${PYSITELIB}/hy/hy_inspect.pyo
 ${PYSITELIB}/hy/importer.py
 ${PYSITELIB}/hy/importer.pyc
 ${PYSITELIB}/hy/importer.pyo
