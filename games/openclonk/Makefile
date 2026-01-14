@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.17 2026/01/07 08:47:07 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/01/14 10:52:40 wiz Exp $
 
 DISTNAME=	openclonk-8.1-src
 PKGNAME=	${DISTNAME:S/-src//}
 PKGREVISION=	13
 CATEGORIES=	games
-MASTER_SITES=	http://www.openclonk.org/builds/release/${PKGVERSION_NOREV}/
+MASTER_SITES=	https://www.openclonk.org/builds/release/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	charlotte@NetBSD.org
-HOMEPAGE=	http://www.openclonk.org/
+HOMEPAGE=	https://www.openclonk.org/
 COMMENT=	Open source successor of the Clonk gaming series
 LICENSE=	isc
 
