@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.316 2026/01/14 09:44:14 adam Exp $
+$NetBSD: CHANGES-2026,v 1.317 2026/01/14 09:53:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -431,3 +431,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Test-Unit to 0.29 [wen 2026-01-14]
 	Updated devel/sccache to 0.13.0 [adam 2026-01-14]
 	Updated devel/libgsf to 1.14.55 [adam 2026-01-14]
+	Updated devel/colordiff to 1.0.22 [adam 2026-01-14]
+	Updated www/py-hishel to 1.1.8 [adam 2026-01-14]
