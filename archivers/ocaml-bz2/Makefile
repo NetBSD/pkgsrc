@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.23 2025/08/25 08:34:52 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/01/14 10:47:37 wiz Exp $
 
 PKGNAME=	ocaml-bz2-${VERSION}
 DISTNAME=	camlbz2-${VERSION}
 VERSION=	0.7.0
 CATEGORIES=	archivers
-MASTER_SITES=	http://gitlab.com/irill/camlbz2/-/archive/${VERSION}/
+MASTER_SITES=	https://gitlab.com/irill/camlbz2/-/archive/${VERSION}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	OCaml library to manipulate bz2 archives
-HOMEPAGE=	http://gitlab.com/irill/camlbz2
+HOMEPAGE=	https://gitlab.com/irill/camlbz2
 LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=		yes
