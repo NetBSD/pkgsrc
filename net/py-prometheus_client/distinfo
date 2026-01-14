@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2026/01/13 12:41:38 adam Exp $
+$NetBSD: distinfo,v 1.27 2026/01/14 18:53:15 adam Exp $
 
-BLAKE2s (prometheus_client-0.24.0.tar.gz) = 9ccc4d06e33650d8b1e37f0c5b25cb87297338e8f7063f0067aaf4ff5bca2bdc
-SHA512 (prometheus_client-0.24.0.tar.gz) = 8d673390ec3acd608acc20d8cb00a93c63daf316a0993070424c6a2346517df52f8f71fb107496f1ae561bc17d651e8de2148656c84803997410396ca5ea6989
-Size (prometheus_client-0.24.0.tar.gz) = 85590 bytes
+BLAKE2s (prometheus_client-0.24.1.tar.gz) = b4f670ca2f865079f02826e4f979014d46093812789d747389ee1937fe0df0f3
+SHA512 (prometheus_client-0.24.1.tar.gz) = e84f2e3537351204705039b8abc1477cb4d7b73cc3491e3a336a6deb4f838f78cf0646d6324ddb97e8cb60d294367feb674596270c69f7f962533179e4152242
+Size (prometheus_client-0.24.1.tar.gz) = 85616 bytes
