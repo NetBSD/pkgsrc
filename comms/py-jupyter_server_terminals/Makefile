@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/03/17 17:32:25 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/01/14 18:55:43 adam Exp $
 
-DISTNAME=	jupyter_server_terminals-0.5.3
+DISTNAME=	jupyter_server_terminals-0.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	comms python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter-server-terminals/}
@@ -19,8 +19,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
