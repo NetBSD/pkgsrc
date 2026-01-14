@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2025/10/31 12:46:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.59 2026/01/14 07:44:17 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -198,6 +198,7 @@ ${PYSITELIB}/botocore/data/backup-gateway/2021-01-01/service-2.json
 ${PYSITELIB}/botocore/data/backup/2018-11-15/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/backup/2018-11-15/examples-1.json
 ${PYSITELIB}/botocore/data/backup/2018-11-15/paginators-1.json
+${PYSITELIB}/botocore/data/backup/2018-11-15/paginators-1.sdk-extras.json
 ${PYSITELIB}/botocore/data/backup/2018-11-15/service-2.json
 ${PYSITELIB}/botocore/data/backupsearch/2018-05-10/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/backupsearch/2018-05-10/paginators-1.json
@@ -520,6 +521,10 @@ ${PYSITELIB}/botocore/data/comprehendmedical/2018-10-30/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/comprehendmedical/2018-10-30/examples-1.json
 ${PYSITELIB}/botocore/data/comprehendmedical/2018-10-30/paginators-1.json
 ${PYSITELIB}/botocore/data/comprehendmedical/2018-10-30/service-2.json
+${PYSITELIB}/botocore/data/compute-optimizer-automation/2025-09-22/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/compute-optimizer-automation/2025-09-22/paginators-1.json
+${PYSITELIB}/botocore/data/compute-optimizer-automation/2025-09-22/service-2.json
+${PYSITELIB}/botocore/data/compute-optimizer-automation/2025-09-22/waiters-2.json
 ${PYSITELIB}/botocore/data/compute-optimizer/2019-11-01/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/compute-optimizer/2019-11-01/examples-1.json
 ${PYSITELIB}/botocore/data/compute-optimizer/2019-11-01/paginators-1.json
@@ -557,6 +562,7 @@ ${PYSITELIB}/botocore/data/controlcatalog/2018-05-10/waiters-2.json
 ${PYSITELIB}/botocore/data/controltower/2018-05-10/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/controltower/2018-05-10/paginators-1.json
 ${PYSITELIB}/botocore/data/controltower/2018-05-10/service-2.json
+${PYSITELIB}/botocore/data/controltower/2018-05-10/waiters-2.json
 ${PYSITELIB}/botocore/data/cost-optimization-hub/2022-07-26/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/cost-optimization-hub/2022-07-26/paginators-1.json
 ${PYSITELIB}/botocore/data/cost-optimization-hub/2022-07-26/paginators-1.sdk-extras.json
@@ -591,6 +597,7 @@ ${PYSITELIB}/botocore/data/datazone/2018-05-10/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/datazone/2018-05-10/paginators-1.json
 ${PYSITELIB}/botocore/data/datazone/2018-05-10/paginators-1.sdk-extras.json
 ${PYSITELIB}/botocore/data/datazone/2018-05-10/service-2.json
+${PYSITELIB}/botocore/data/datazone/2018-05-10/waiters-2.json
 ${PYSITELIB}/botocore/data/dax/2017-04-19/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/dax/2017-04-19/examples-1.json
 ${PYSITELIB}/botocore/data/dax/2017-04-19/paginators-1.json
@@ -753,11 +760,6 @@ ${PYSITELIB}/botocore/data/elasticbeanstalk/2010-12-01/examples-1.json
 ${PYSITELIB}/botocore/data/elasticbeanstalk/2010-12-01/paginators-1.json
 ${PYSITELIB}/botocore/data/elasticbeanstalk/2010-12-01/service-2.json
 ${PYSITELIB}/botocore/data/elasticbeanstalk/2010-12-01/waiters-2.json
-${PYSITELIB}/botocore/data/elastictranscoder/2012-09-25/endpoint-rule-set-1.json
-${PYSITELIB}/botocore/data/elastictranscoder/2012-09-25/examples-1.json
-${PYSITELIB}/botocore/data/elastictranscoder/2012-09-25/paginators-1.json
-${PYSITELIB}/botocore/data/elastictranscoder/2012-09-25/service-2.json
-${PYSITELIB}/botocore/data/elastictranscoder/2012-09-25/waiters-2.json
 ${PYSITELIB}/botocore/data/elb/2012-06-01/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/elb/2012-06-01/examples-1.json
 ${PYSITELIB}/botocore/data/elb/2012-06-01/paginators-1.json
@@ -1083,6 +1085,7 @@ ${PYSITELIB}/botocore/data/lambda/2014-11-11/service-2.json
 ${PYSITELIB}/botocore/data/lambda/2015-03-31/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/lambda/2015-03-31/examples-1.json
 ${PYSITELIB}/botocore/data/lambda/2015-03-31/paginators-1.json
+${PYSITELIB}/botocore/data/lambda/2015-03-31/paginators-1.sdk-extras.json
 ${PYSITELIB}/botocore/data/lambda/2015-03-31/service-2.json
 ${PYSITELIB}/botocore/data/lambda/2015-03-31/waiters-2.json
 ${PYSITELIB}/botocore/data/launch-wizard/2018-05-10/endpoint-rule-set-1.json
@@ -1128,6 +1131,7 @@ ${PYSITELIB}/botocore/data/location/2020-11-19/service-2.json
 ${PYSITELIB}/botocore/data/logs/2014-03-28/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/logs/2014-03-28/examples-1.json
 ${PYSITELIB}/botocore/data/logs/2014-03-28/paginators-1.json
+${PYSITELIB}/botocore/data/logs/2014-03-28/paginators-1.sdk-extras.json
 ${PYSITELIB}/botocore/data/logs/2014-03-28/service-2.json
 ${PYSITELIB}/botocore/data/lookoutequipment/2020-12-15/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/lookoutequipment/2020-12-15/examples-1.json
@@ -1160,6 +1164,7 @@ ${PYSITELIB}/botocore/data/managedblockchain/2018-09-24/service-2.json
 ${PYSITELIB}/botocore/data/marketplace-agreement/2020-03-01/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/marketplace-agreement/2020-03-01/paginators-1.json
 ${PYSITELIB}/botocore/data/marketplace-agreement/2020-03-01/service-2.json
+${PYSITELIB}/botocore/data/marketplace-agreement/2020-03-01/waiters-2.json
 ${PYSITELIB}/botocore/data/marketplace-catalog/2018-09-17/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/marketplace-catalog/2018-09-17/examples-1.json
 ${PYSITELIB}/botocore/data/marketplace-catalog/2018-09-17/paginators-1.json
@@ -1233,6 +1238,7 @@ ${PYSITELIB}/botocore/data/mgn/2020-02-26/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/mgn/2020-02-26/examples-1.json
 ${PYSITELIB}/botocore/data/mgn/2020-02-26/paginators-1.json
 ${PYSITELIB}/botocore/data/mgn/2020-02-26/service-2.json
+${PYSITELIB}/botocore/data/mgn/2020-02-26/waiters-2.json
 ${PYSITELIB}/botocore/data/migration-hub-refactor-spaces/2021-10-26/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/migration-hub-refactor-spaces/2021-10-26/examples-1.json
 ${PYSITELIB}/botocore/data/migration-hub-refactor-spaces/2021-10-26/paginators-1.json
@@ -1261,6 +1267,10 @@ ${PYSITELIB}/botocore/data/mturk/2017-01-17/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/mturk/2017-01-17/examples-1.json
 ${PYSITELIB}/botocore/data/mturk/2017-01-17/paginators-1.json
 ${PYSITELIB}/botocore/data/mturk/2017-01-17/service-2.json
+${PYSITELIB}/botocore/data/mwaa-serverless/2024-07-26/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/mwaa-serverless/2024-07-26/paginators-1.json
+${PYSITELIB}/botocore/data/mwaa-serverless/2024-07-26/service-2.json
+${PYSITELIB}/botocore/data/mwaa-serverless/2024-07-26/waiters-2.json
 ${PYSITELIB}/botocore/data/mwaa/2020-07-01/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/mwaa/2020-07-01/examples-1.json
 ${PYSITELIB}/botocore/data/mwaa/2020-07-01/paginators-1.json
@@ -1304,6 +1314,10 @@ ${PYSITELIB}/botocore/data/notificationscontacts/2018-05-10/endpoint-rule-set-1.
 ${PYSITELIB}/botocore/data/notificationscontacts/2018-05-10/paginators-1.json
 ${PYSITELIB}/botocore/data/notificationscontacts/2018-05-10/service-2.json
 ${PYSITELIB}/botocore/data/notificationscontacts/2018-05-10/waiters-2.json
+${PYSITELIB}/botocore/data/nova-act/2025-08-22/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/nova-act/2025-08-22/paginators-1.json
+${PYSITELIB}/botocore/data/nova-act/2025-08-22/service-2.json
+${PYSITELIB}/botocore/data/nova-act/2025-08-22/waiters-2.json
 ${PYSITELIB}/botocore/data/oam/2022-06-10/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/oam/2022-06-10/paginators-1.json
 ${PYSITELIB}/botocore/data/oam/2022-06-10/service-2.json
@@ -1345,6 +1359,18 @@ ${PYSITELIB}/botocore/data/panorama/2019-07-24/examples-1.json
 ${PYSITELIB}/botocore/data/panorama/2019-07-24/paginators-1.json
 ${PYSITELIB}/botocore/data/panorama/2019-07-24/service-2.json
 ${PYSITELIB}/botocore/data/partitions.json
+${PYSITELIB}/botocore/data/partnercentral-account/2025-04-04/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/partnercentral-account/2025-04-04/paginators-1.json
+${PYSITELIB}/botocore/data/partnercentral-account/2025-04-04/service-2.json
+${PYSITELIB}/botocore/data/partnercentral-account/2025-04-04/waiters-2.json
+${PYSITELIB}/botocore/data/partnercentral-benefits/2018-05-10/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/partnercentral-benefits/2018-05-10/paginators-1.json
+${PYSITELIB}/botocore/data/partnercentral-benefits/2018-05-10/service-2.json
+${PYSITELIB}/botocore/data/partnercentral-benefits/2018-05-10/waiters-2.json
+${PYSITELIB}/botocore/data/partnercentral-channel/2024-03-18/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/partnercentral-channel/2024-03-18/paginators-1.json
+${PYSITELIB}/botocore/data/partnercentral-channel/2024-03-18/service-2.json
+${PYSITELIB}/botocore/data/partnercentral-channel/2024-03-18/waiters-2.json
 ${PYSITELIB}/botocore/data/partnercentral-selling/2022-07-26/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/partnercentral-selling/2022-07-26/paginators-1.json
 ${PYSITELIB}/botocore/data/partnercentral-selling/2022-07-26/service-2.json
@@ -1501,6 +1527,7 @@ ${PYSITELIB}/botocore/data/resourcegroupstaggingapi/2017-01-26/service-2.json
 ${PYSITELIB}/botocore/data/rolesanywhere/2018-05-10/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/rolesanywhere/2018-05-10/paginators-1.json
 ${PYSITELIB}/botocore/data/rolesanywhere/2018-05-10/service-2.json
+${PYSITELIB}/botocore/data/rolesanywhere/2018-05-10/waiters-2.json
 ${PYSITELIB}/botocore/data/route53-recovery-cluster/2019-12-02/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/route53-recovery-cluster/2019-12-02/examples-1.json
 ${PYSITELIB}/botocore/data/route53-recovery-cluster/2019-12-02/paginators-1.json
@@ -1521,6 +1548,10 @@ ${PYSITELIB}/botocore/data/route53domains/2014-05-15/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/route53domains/2014-05-15/examples-1.json
 ${PYSITELIB}/botocore/data/route53domains/2014-05-15/paginators-1.json
 ${PYSITELIB}/botocore/data/route53domains/2014-05-15/service-2.json
+${PYSITELIB}/botocore/data/route53globalresolver/2022-09-27/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/route53globalresolver/2022-09-27/paginators-1.json
+${PYSITELIB}/botocore/data/route53globalresolver/2022-09-27/service-2.json
+${PYSITELIB}/botocore/data/route53globalresolver/2022-09-27/waiters-2.json
 ${PYSITELIB}/botocore/data/route53profiles/2018-05-10/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/route53profiles/2018-05-10/paginators-1.json
 ${PYSITELIB}/botocore/data/route53profiles/2018-05-10/service-2.json
@@ -1537,6 +1568,7 @@ ${PYSITELIB}/botocore/data/rum/2018-05-10/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/rum/2018-05-10/examples-1.json
 ${PYSITELIB}/botocore/data/rum/2018-05-10/paginators-1.json
 ${PYSITELIB}/botocore/data/rum/2018-05-10/service-2.json
+${PYSITELIB}/botocore/data/rum/2018-05-10/waiters-2.json
 ${PYSITELIB}/botocore/data/s3/2006-03-01/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/s3/2006-03-01/examples-1.json
 ${PYSITELIB}/botocore/data/s3/2006-03-01/paginators-1.json
@@ -1660,6 +1692,9 @@ ${PYSITELIB}/botocore/data/signer/2017-08-25/examples-1.json
 ${PYSITELIB}/botocore/data/signer/2017-08-25/paginators-1.json
 ${PYSITELIB}/botocore/data/signer/2017-08-25/service-2.json
 ${PYSITELIB}/botocore/data/signer/2017-08-25/waiters-2.json
+${PYSITELIB}/botocore/data/signin/2023-01-01/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/signin/2023-01-01/paginators-1.json
+${PYSITELIB}/botocore/data/signin/2023-01-01/service-2.json
 ${PYSITELIB}/botocore/data/simspaceweaver/2022-10-28/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/simspaceweaver/2022-10-28/paginators-1.json
 ${PYSITELIB}/botocore/data/simspaceweaver/2022-10-28/service-2.json
@@ -1775,6 +1810,7 @@ ${PYSITELIB}/botocore/data/transcribe/2017-10-26/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/transcribe/2017-10-26/examples-1.json
 ${PYSITELIB}/botocore/data/transcribe/2017-10-26/paginators-1.json
 ${PYSITELIB}/botocore/data/transcribe/2017-10-26/service-2.json
+${PYSITELIB}/botocore/data/transcribe/2017-10-26/waiters-2.json
 ${PYSITELIB}/botocore/data/transfer/2018-11-05/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/transfer/2018-11-05/examples-1.json
 ${PYSITELIB}/botocore/data/transfer/2018-11-05/paginators-1.json
@@ -1815,6 +1851,10 @@ ${PYSITELIB}/botocore/data/wellarchitected/2020-03-31/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/wellarchitected/2020-03-31/examples-1.json
 ${PYSITELIB}/botocore/data/wellarchitected/2020-03-31/paginators-1.json
 ${PYSITELIB}/botocore/data/wellarchitected/2020-03-31/service-2.json
+${PYSITELIB}/botocore/data/wickr/2024-02-01/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/wickr/2024-02-01/paginators-1.json
+${PYSITELIB}/botocore/data/wickr/2024-02-01/service-2.json
+${PYSITELIB}/botocore/data/wickr/2024-02-01/waiters-2.json
 ${PYSITELIB}/botocore/data/wisdom/2020-10-19/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/wisdom/2020-10-19/examples-1.json
 ${PYSITELIB}/botocore/data/wisdom/2020-10-19/paginators-1.json
