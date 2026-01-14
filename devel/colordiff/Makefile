@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2023/01/04 10:33:55 adam Exp $
+# $NetBSD: Makefile,v 1.22 2026/01/14 09:49:23 adam Exp $
 
-DISTNAME=	colordiff-1.0.21
+DISTNAME=	colordiff-1.0.22
 CATEGORIES=	devel
 MASTER_SITES=	https://www.colordiff.org/
 
