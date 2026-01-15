@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.14 2024/05/06 08:40:28 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.15 2026/01/15 08:38:49 wiz Exp $
 
 ORDCALCVER=	0.2
 PKGNAME=	ordCalc-${ORDCALCVER}
 DISTNAME=	ordCalc_${ORDCALCVER}
 PKGREVISION=	8
 CATEGORIES=	math
-MASTER_SITES=	http://mtnmath.com/ord/
+#MASTER_SITES=	http://mtnmath.com/ord/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	is@NetBSD.org
-HOMEPAGE=	https://mtnmath.com/ord/
+#HOMEPAGE=	https://mtnmath.com/ord/
 COMMENT=	Ordinal arithmetic calculator and research tool
 LICENSE=	gnu-gpl-v2
 
