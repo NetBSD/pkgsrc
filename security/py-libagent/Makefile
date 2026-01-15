@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2026/01/06 11:18:45 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/01/15 08:28:42 wiz Exp $
 
 DISTNAME=	trezor-agent-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-libagent-0.15.0
@@ -14,6 +14,7 @@ HOMEPAGE=	https://github.com/romanz/trezor-agent
 COMMENT=	Hardware-based SSH/GPG/age agent
 LICENSE=	gnu-lgpl-v3
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-bech32>=1.2.0:../../devel/py-bech32
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=3.4.6:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.14:../../textproc/py-docutils
