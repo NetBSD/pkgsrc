@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/04/28 09:45:26 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/01/15 08:40:04 wiz Exp $
 
 DISTNAME=	osbf-lua-2.0.4
 PKGREVISION=	6
@@ -6,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	http://luaforge.net/frs/download.php/2094/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://osbf-lua.luaforge.net/
+HOMEPAGE=	https://github.com/arunpersaud/osbf-lua
 COMMENT=	Lua C module for text classification
 LICENSE=	gnu-gpl-v2
 
