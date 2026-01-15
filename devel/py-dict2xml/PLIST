@@ -1,14 +1,18 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/28 19:56:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/01/15 06:08:50 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/dict2xml/__init__.py
 ${PYSITELIB}/dict2xml/__init__.pyc
+${PYSITELIB}/dict2xml/__init__.pyi
 ${PYSITELIB}/dict2xml/__init__.pyo
 ${PYSITELIB}/dict2xml/logic.py
 ${PYSITELIB}/dict2xml/logic.pyc
+${PYSITELIB}/dict2xml/logic.pyi
 ${PYSITELIB}/dict2xml/logic.pyo
+${PYSITELIB}/dict2xml/py.typed
 ${PYSITELIB}/dict2xml/version.py
 ${PYSITELIB}/dict2xml/version.pyc
+${PYSITELIB}/dict2xml/version.pyi
 ${PYSITELIB}/dict2xml/version.pyo
