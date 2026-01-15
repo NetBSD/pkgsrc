@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2025/12/28 05:44:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.112 2026/01/15 11:31:33 adam Exp $
 #
 
 COMMENT=	Computer Aided Design tools
@@ -57,7 +57,6 @@ SUBDIR+=	pcb
 SUBDIR+=	py-MyHDL
 SUBDIR+=	py-PyRTL
 SUBDIR+=	py-gds
-SUBDIR+=	py-gdscad
 SUBDIR+=	py-gdstk
 SUBDIR+=	py-simpy
 SUBDIR+=	qcad
