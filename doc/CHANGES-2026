@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.335 2026/01/15 08:42:50 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.336 2026/01/15 08:50:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -463,3 +463,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-regex to 2026.1.15 [adam 2026-01-15]
 	Updated devel/py-dict2xml to 1.7.8 [adam 2026-01-15]
 	Removed net/py-ORBit [wiz 2026-01-15]
+	Removed chat/telepathy-logger [wiz 2026-01-15]
