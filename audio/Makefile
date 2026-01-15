@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.722 2025/12/25 09:17:19 wiz Exp $
+# $NetBSD: Makefile,v 1.723 2026/01/15 09:11:35 adam Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -383,12 +383,9 @@ SUBDIR+=	pt2-clone
 SUBDIR+=	puddletag
 SUBDIR+=	pulseaudio
 SUBDIR+=	py-acoustid
-SUBDIR+=	py-ao
 SUBDIR+=	py-audio
 SUBDIR+=	py-audioread
 SUBDIR+=	py-beets
-SUBDIR+=	py-cddb
-SUBDIR+=	py-daap
 SUBDIR+=	py-discid
 SUBDIR+=	py-discogs-client
 SUBDIR+=	py-dynampd
