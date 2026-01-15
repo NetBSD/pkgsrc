@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/08/09 05:53:58 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/01/15 06:08:50 adam Exp $
 
-DISTNAME=	dict2xml-1.7.7
+DISTNAME=	dict2xml-1.7.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dict2xml/}
