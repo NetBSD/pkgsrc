@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2022/11/09 13:14:16 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2026/01/15 08:36:25 wiz Exp $
 
 DISTNAME=	openpam-20190224
 PKGREVISION=	4
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openpam/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.openpam.org/
+HOMEPAGE=	https://git.des.dev/openpam/openpam/wiki
 COMMENT=	Open-source PAM library
 LICENSE=	modified-bsd
 
