@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1183 2026/01/06 11:23:33 wiz Exp $
+# $NetBSD: Makefile,v 1.1184 2026/01/15 08:56:52 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -417,7 +417,6 @@ SUBDIR+=	libdevkit-gobject
 SUBDIR+=	libfm
 SUBDIR+=	libfm-extra
 SUBDIR+=	libgamin
-SUBDIR+=	libgksu
 SUBDIR+=	libgtop
 SUBDIR+=	libisoburn
 SUBDIR+=	libisofs
