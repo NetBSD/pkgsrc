@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.12 2026/01/04 14:22:17 adam Exp $
+# $NetBSD: Makefile.common,v 1.13 2026/01/15 12:42:46 adam Exp $
 # used by devel/py-uv/Makefile
 # used by devel/py-uv-build/Makefile
 
-UV_VERSION=	0.9.21
+UV_VERSION=	0.9.25
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
