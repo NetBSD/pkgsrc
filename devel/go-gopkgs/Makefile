@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.75 2025/12/02 19:25:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.76 2026/01/15 19:54:40 bsiegert Exp $
 
 DISTNAME=	gopkgs-2.1.2
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	52
+PKGREVISION=	53
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uudashr/}
 CATEGORIES=	devel
 GITHUB_PROJECT=	gopkgs
