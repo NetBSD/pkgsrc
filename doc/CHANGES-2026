@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.345 2026/01/15 13:26:34 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.346 2026/01/15 13:42:34 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -482,3 +482,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv to 0.9.25 [adam 2026-01-15]
 	Updated devel/py-uv-build to 0.9.25 [adam 2026-01-15]
 	Added textproc/rumdl version 0.0.217 [wiz 2026-01-15]
+	Updated geography/gpsd to 3.27.5 [gdt 2026-01-15]
