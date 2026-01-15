@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.7 2022/01/14 17:51:50 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}
-${PYSITELIB}/CDDB.py
-${PYSITELIB}/CDDB.pyc
-${PYSITELIB}/CDDB.pyo
-${PYSITELIB}/DiscID.py
-${PYSITELIB}/DiscID.pyc
-${PYSITELIB}/DiscID.pyo
-${PYSITELIB}/cdrom.so
