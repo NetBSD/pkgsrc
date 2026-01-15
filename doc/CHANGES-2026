@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.341 2026/01/15 09:11:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.342 2026/01/15 09:30:56 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -473,3 +473,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed audio/py-ao [adam 2026-01-15]
 	Removed audio/py-cddb [adam 2026-01-15]
 	Removed audio/py-daap [adam 2026-01-15]
+	Updated devel/cargo-nextest to 0.9.122 [pin 2026-01-15]
