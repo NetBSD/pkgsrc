@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.334 2026/01/15 06:09:10 adam Exp $
+$NetBSD: CHANGES-2026,v 1.335 2026/01/15 08:42:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -462,3 +462,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nodejs to 25.3.0 [adam 2026-01-14]
 	Updated textproc/py-regex to 2026.1.15 [adam 2026-01-15]
 	Updated devel/py-dict2xml to 1.7.8 [adam 2026-01-15]
+	Removed net/py-ORBit [wiz 2026-01-15]
