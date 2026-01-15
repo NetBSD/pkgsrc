@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.337 2026/01/15 08:53:36 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.338 2026/01/15 08:56:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -465,3 +465,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed net/py-ORBit [wiz 2026-01-15]
 	Removed chat/telepathy-logger [wiz 2026-01-15]
 	Removed net/libgdata0.6 successor net/libgdata [wiz 2026-01-15]
+	Removed sysutils/libgksu [wiz 2026-01-15]
