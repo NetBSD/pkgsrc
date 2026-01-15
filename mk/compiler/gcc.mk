@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.304 2026/01/15 13:45:12 wiz Exp $
+# $NetBSD: gcc.mk,v 1.305 2026/01/15 15:12:32 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -84,7 +84,7 @@ _DEF_VARS.gcc=	\
 	_CC _COMPILER_RPATH_FLAG _COMPILER_STRIP_VARS \
 	_GCCBINDIR _GCC_ARCHDIR _GCC_BIN_PREFIX _GCC_CFLAGS \
 	_GCC_CC _GCC_CPP _GCC_CXX _GCC_DEPENDS \
-	_GCC_DIST_NAME _GCC_DIST_VERSION \
+	_GCC_DIST_NAME _GCC_DIST_VERSION _GCC_DIST_MAJOR_MINOR \
 	_GCC_FC _GCC_LDFLAGS _GCC_LIBDIRS _GCC_PKG _GCC_PKG_MAJOR_MINOR \
 	_GCC_PKGBASE _GCC_PKGSRCDIR _GCC_PKG_SATISFIES_DEP \
 	_GCC_PREFIX _GCC_REQD _GCC_STRICTEST_REQD _GCC_SUBPREFIX \
@@ -1064,18 +1064,17 @@ _USE_PKGSRC_GCC=	YES
 # requirement.
 #
 .if !defined(_NEED_NEWER_GCC)
-_PKGSRC_GCC_VERSION=	${_GCC_PKGBASE}-${_GCC_DIST_VERSION}
-_NEED_NEWER_GCC!=	\
-	if ${PKG_ADMIN} pmatch '${_GCC_DEPENDS}' ${_PKGSRC_GCC_VERSION} 2>/dev/null; then \
-		${ECHO} "NO";						\
-	else								\
-		${ECHO} "YES";						\
-	fi
+_GCC_DIST_MAJOR_MINOR=${_GCC_DIST_VERSION:C/([0-9]+\.[0-9]+).*/\1/}
+.  if ${_GCC_DIST_MAJOR_MINOR:R} > ${_GCC_REQD:R} || (${_GCC_DIST_MAJOR_MINOR:R} == ${_GCC_REQD:R} && ${_GCC_DIST_MAJOR_MINOR:E} >= ${_GCC_REQD:E})
+_NEED_NEWER_GCC=	NO
+.  else
+_NEED_NEWER_GCC=	YES
+.  endif
 #MAKEFLAGS+=	_NEED_NEWER_GCC=${_NEED_NEWER_GCC}
 .endif
 .if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS]) && \
     !empty(_NEED_NEWER_GCC:M[yY][eE][sS])
-PKG_FAIL_REASON+=	"Unable to satisfy dependency: ${_GCC_DEPENDS}"
+PKG_FAIL_REASON+=	"Unable to satisfy dependency: gcc>=${_GCC_REQD}, newest pkgsrc version is ${_GCC_DIST_VERSION}"
 .endif
 
 .if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS]) && !defined(_GCC_PREFIX)
