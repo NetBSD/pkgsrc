@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.31 2026/01/07 08:46:55 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/01/15 07:54:12 wiz Exp $
 
-GITHUB_PROJECT=	ltfs
 DISTNAME=	v2.4.2.0-pre0
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S/v//:S/-pre0/.0/}
 PKGREVISION=	27
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LinearTapeFileSystem/}/${GITHUB_PROJECT}/archive/
+GITHUB_PROJECT=	ltfs
 DIST_SUBDIR=	${GITHUB_PROJECT}
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME:S/v//}
 
@@ -30,6 +30,8 @@ REPLACE_SH+=	init.d/ltfs
 EGDIR=		${PREFIX}/share/examples/ltfs/
 CONF_FILES+=	${EGDIR}/ltfs.conf ${PKG_SYSCONFDIR}/ltfs.conf
 CONF_FILES+=	${EGDIR}/ltfs.conf.local ${PKG_SYSCONFDIR}/ltfs.conf.local
+
+BUILDLINK_TRANSFORM+=	rm:-Werror=declaration-after-statement
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
