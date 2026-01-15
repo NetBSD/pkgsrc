@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.343 2026/01/15 11:31:55 adam Exp $
+$NetBSD: CHANGES-2026,v 1.344 2026/01/15 12:43:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -478,3 +478,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed audio/py-id3lib [adam 2026-01-15]
 	Removed audio/py-mad [adam 2026-01-15]
 	Removed cad/py-gdscad [adam 2026-01-15]
+	Updated graphics/py-tifffile to 2026.1.14 [adam 2026-01-15]
+	Updated devel/py-uv to 0.9.25 [adam 2026-01-15]
+	Updated devel/py-uv-build to 0.9.25 [adam 2026-01-15]
