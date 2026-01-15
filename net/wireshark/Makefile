@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.342 2026/01/07 08:48:30 wiz Exp $
+# $NetBSD: Makefile,v 1.343 2026/01/15 08:57:58 adam Exp $
 
-DISTNAME=	wireshark-4.6.2
-PKGREVISION=	1
+DISTNAME=	wireshark-4.6.3
 CATEGORIES=	net
 MASTER_SITES=	https://www.wireshark.org/download/src/
 EXTRACT_SUFX=	.tar.xz
