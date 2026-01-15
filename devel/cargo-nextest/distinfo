@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2026/01/14 14:43:03 pin Exp $
+$NetBSD: distinfo,v 1.9 2026/01/15 09:30:26 pin Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -123,9 +123,9 @@ Size (camino-tempfile-1.4.1.crate) = 26540 bytes
 BLAKE2s (camino-tempfile-ext-0.3.3.crate) = a4c8ca92f3553889982795461fa1bd8a17151e7e8afcd6bce7227ccbbb6e40be
 SHA512 (camino-tempfile-ext-0.3.3.crate) = 1725f3f72ccd207e8d9ee6c7f28749f1b34734032e51bf11aa773be791509a80fdad1aa3c8cb70e3d2b8cea4c04997a615c3581fb16975242e66cb11655195fa
 Size (camino-tempfile-ext-0.3.3.crate) = 19167 bytes
-BLAKE2s (cargo-nextest-0.9.121.tar.gz) = fc2880f9e612d259f68ca6f1b567ff1ef5e6275a66b4eb3d050e4898f9b1eed7
-SHA512 (cargo-nextest-0.9.121.tar.gz) = 69be28206b0fcc5f58c61a657800bd4561b4a40531ba328c974900ec86dd9cd289a165419fed574b740160ab9d1a519b64bb4ab50c2b5109b823bef572b803c2
-Size (cargo-nextest-0.9.121.tar.gz) = 7585068 bytes
+BLAKE2s (cargo-nextest-0.9.122.tar.gz) = 9322b0aa2068f075b7670048c2b39b5d1f700a28e268ed964de77de547b94796
+SHA512 (cargo-nextest-0.9.122.tar.gz) = cba360ee44b6ea4a8ceaa46ff6de4016ed7fd0d81cc6bc1fefda6359b9785b187853d3e27f7d2824ee2c4fe3d8891deb691921c5d36699c5d9b3eea91bdc95c6
+Size (cargo-nextest-0.9.122.tar.gz) = 7589536 bytes
 BLAKE2s (cargo-platform-0.3.0.crate) = f1dc01d022f8890fc5e672e24809275d002c6063802735604161960fd465374c
 SHA512 (cargo-platform-0.3.0.crate) = 43800bb1f7d23c4b82b8ff67dda6463de93955201bf9add1da16d31e4efc3864e5bc506ad05d7b76e7d7eb3a1dc3623e25c5656d19433dc8ef545656aa5786e0
 Size (cargo-platform-0.3.0.crate) = 13252 bytes
