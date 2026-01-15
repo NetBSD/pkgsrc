@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/05/29 14:25:53 zafer Exp $
-#
+# $NetBSD: Makefile,v 1.18 2026/01/15 08:41:07 wiz Exp $
 
 DISTNAME=	overnetclc-1.0.1
 PKGNAME=	${DISTNAME:C/clc//}
@@ -9,7 +8,7 @@ MASTER_SITES=	#http://www.zen18864.zen.co.uk/overnet/1.0.1/
 DISTFILES=	${DISTNAME}-1.i386_compat.rpm
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.overnet.com/
+#HOMEPAGE=	http://www.overnet.com/
 COMMENT=	Peer-to-peer file sharing client (binary pkg)
 
 EMUL_PLATFORMS=		linux-i386
