@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.723 2026/01/15 09:11:35 adam Exp $
+# $NetBSD: Makefile,v 1.724 2026/01/15 11:30:43 adam Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -390,10 +390,7 @@ SUBDIR+=	py-discid
 SUBDIR+=	py-discogs-client
 SUBDIR+=	py-dynampd
 SUBDIR+=	py-hsaudiotag3k
-SUBDIR+=	py-id3
-SUBDIR+=	py-id3lib
 SUBDIR+=	py-last
-SUBDIR+=	py-mad
 SUBDIR+=	py-mediafile
 SUBDIR+=	py-mpd
 SUBDIR+=	py-mpd2
