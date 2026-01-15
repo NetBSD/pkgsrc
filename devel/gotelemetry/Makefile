@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2025/12/02 19:25:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.20 2026/01/15 19:54:42 bsiegert Exp $
 
 GITHUB_PROJECT=	telemetry
 GITHUB_TAG=	config/v0.8.0
 DISTNAME=	telemetry-config-v0.8.0
 PKGNAME=	go${DISTNAME:S/-config-v/-/}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=golang/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2025/12/02 19:25:15 bsiegert Exp $
+# $NetBSD: Makefile,v 1.10 2026/01/15 19:54:49 bsiegert Exp $
 
 DISTNAME=	tailscale
 PKGNAME=	tailscale-1.81.0pre20250210
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ryoon/}
 GITHUB_PROJECT=	tailscale
