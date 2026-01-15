@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.349 2026/01/15 18:36:34 adam Exp $
+$NetBSD: CHANGES-2026,v 1.350 2026/01/15 19:51:25 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -488,3 +488,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/reovim to 0.8.1 [pin 2026-01-15]
 	Updated net/dnsmasq to 2.92 [adam 2026-01-15]
 	Updated devel/lazygit to 0.58.1 [adam 2026-01-15]
+	Updated lang/go124 to 1.24.12 [bsiegert 2026-01-15]
+	Updated lang/go125 to 1.25.6 [bsiegert 2026-01-15]
