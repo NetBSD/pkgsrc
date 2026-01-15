@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.220 2025/12/22 10:24:59 adam Exp $
+# $NetBSD: Makefile,v 1.221 2026/01/15 09:07:19 adam Exp $
 #
 
 COMMENT=	Archivers and compression tools
@@ -122,7 +122,6 @@ SUBDIR+=	py-lzstring
 SUBDIR+=	py-rarfile
 SUBDIR+=	py-unrardll
 SUBDIR+=	py-zipp
-SUBDIR+=	py-zipstream
 SUBDIR+=	py-zipstream-ng
 SUBDIR+=	py-zlib-ng
 SUBDIR+=	py-zopfli
