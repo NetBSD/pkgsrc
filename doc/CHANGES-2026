@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.348 2026/01/15 18:24:03 pin Exp $
+$NetBSD: CHANGES-2026,v 1.349 2026/01/15 18:36:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -486,3 +486,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated finance/bitcoin to 30.2 [adam 2026-01-15]
 	Updated devel/py-meson_python to 0.19.0 [adam 2026-01-15]
 	Updated editors/reovim to 0.8.1 [pin 2026-01-15]
+	Updated net/dnsmasq to 2.92 [adam 2026-01-15]
+	Updated devel/lazygit to 0.58.1 [adam 2026-01-15]
