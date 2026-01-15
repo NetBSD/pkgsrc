@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2025/10/09 07:58:11 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/01/15 09:02:53 adam Exp $
 
-DISTNAME=	posting-2.7.1
+DISTNAME=	posting-2.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/posting/}
@@ -19,8 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-openapi-pydantic>=0.5.0:../../textproc/py-openapi-pydan
 DEPENDS+=	${PYPKGPREFIX}-pydantic>=2.9.2:../../devel/py-pydantic
 DEPENDS+=	${PYPKGPREFIX}-pydantic-settings>=2.4.0:../../devel/py-pydantic-settings
 DEPENDS+=	${PYPKGPREFIX}-pyperclip>=1.9.0:../../x11/py-pyperclip
-DEPENDS+=	${PYPKGPREFIX}-textual-autocomplete>=4.0.4:../../comms/py-textual-autocomplete
-DEPENDS+=	${PYPKGPREFIX}-textual>=3.0.0:../../comms/py-textual
+DEPENDS+=	${PYPKGPREFIX}-textual-autocomplete>=4.0.6:../../comms/py-textual-autocomplete
+DEPENDS+=	${PYPKGPREFIX}-textual>=6.1.0:../../comms/py-textual
 DEPENDS+=	${PYPKGPREFIX}-watchfiles>=0.24.0:../../misc/py-watchfiles
 DEPENDS+=	${PYPKGPREFIX}-xdg-base-dirs>=6.0.1:../../devel/py-xdg-base-dirs
 DEPENDS+=	${PYPKGPREFIX}-yaml>=6.0.2:../../textproc/py-yaml
