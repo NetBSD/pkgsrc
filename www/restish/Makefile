@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.59 2025/12/20 22:25:42 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2026/01/15 19:55:00 bsiegert Exp $
 #
 # Changelog:
 # https://github.com/rest-sh/restish/releases/
 
 DISTNAME=	restish-0.21.2
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rest-sh/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
