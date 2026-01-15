@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.340 2026/01/15 09:03:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.341 2026/01/15 09:11:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -469,3 +469,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed x11/libgnomekbd [wiz 2026-01-15]
 	Updated net/wireshark to 4.6.3 [adam 2026-01-15]
 	Updated www/py-posting to 2.9.2 [adam 2026-01-15]
+	Removed archivers/py-zipstream [adam 2026-01-15]
+	Removed audio/py-ao [adam 2026-01-15]
+	Removed audio/py-cddb [adam 2026-01-15]
+	Removed audio/py-daap [adam 2026-01-15]
