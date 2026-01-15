@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.13 2026/01/04 09:44:38 pin Exp $
+# $NetBSD: go-modules.mk,v 1.14 2026/01/15 18:36:06 adam Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.34.0.mod
@@ -91,8 +91,8 @@ GO_MODULE_FILES+=	github.com/fatih/color/@v/v1.9.0.mod
 GO_MODULE_FILES+=	github.com/fatih/color/@v/v1.9.0.zip
 GO_MODULE_FILES+=	github.com/gdamore/encoding/@v/v1.0.1.mod
 GO_MODULE_FILES+=	github.com/gdamore/encoding/@v/v1.0.1.zip
-GO_MODULE_FILES+=	github.com/gdamore/tcell/v2/@v/v2.13.5.mod
-GO_MODULE_FILES+=	github.com/gdamore/tcell/v2/@v/v2.13.5.zip
+GO_MODULE_FILES+=	github.com/gdamore/tcell/v2/@v/v2.13.7.mod
+GO_MODULE_FILES+=	github.com/gdamore/tcell/v2/@v/v2.13.7.zip
 GO_MODULE_FILES+=	github.com/go-errors/errors/@v/v1.5.1.mod
 GO_MODULE_FILES+=	github.com/go-errors/errors/@v/v1.5.1.zip
 GO_MODULE_FILES+=	github.com/go-git/gcfg/@v/v1.5.1-0.20230307220236-3a3c6141e376.mod
@@ -179,8 +179,8 @@ GO_MODULE_FILES+=	github.com/jesseduffield/generics/@v/v0.0.0-20250517122708-b0b
 GO_MODULE_FILES+=	github.com/jesseduffield/generics/@v/v0.0.0-20250517122708-b0b4a53a6f5c.zip
 GO_MODULE_FILES+=	github.com/jesseduffield/go-git/v5/@v/v5.14.1-0.20250407170251-e1a013310ccd.mod
 GO_MODULE_FILES+=	github.com/jesseduffield/go-git/v5/@v/v5.14.1-0.20250407170251-e1a013310ccd.zip
-GO_MODULE_FILES+=	github.com/jesseduffield/gocui/@v/v0.3.1-0.20260103133810-b7e030324985.mod
-GO_MODULE_FILES+=	github.com/jesseduffield/gocui/@v/v0.3.1-0.20260103133810-b7e030324985.zip
+GO_MODULE_FILES+=	github.com/jesseduffield/gocui/@v/v0.3.1-0.20260111170441-330357056207.mod
+GO_MODULE_FILES+=	github.com/jesseduffield/gocui/@v/v0.3.1-0.20260111170441-330357056207.zip
 GO_MODULE_FILES+=	github.com/jesseduffield/lazycore/@v/v0.0.0-20221012050358-03d2e40243c5.mod
 GO_MODULE_FILES+=	github.com/jesseduffield/lazycore/@v/v0.0.0-20221012050358-03d2e40243c5.zip
 GO_MODULE_FILES+=	github.com/josharian/intern/@v/v1.0.0.mod
