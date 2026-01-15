@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2025/11/17 11:01:10 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2026/01/15 08:38:20 wiz Exp $
 
 DISTNAME=		ORBit2-2.14.19
 PKGREVISION=		7
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ORBit2/2.14/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://orbit-resource.sourceforge.net/
+HOMEPAGE=		https://gitlab.gnome.org/Archive/orbit2
 COMMENT=		High-performance CORBA ORB with C language support
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 
