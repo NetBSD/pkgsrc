@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/10/23 20:38:53 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/01/15 08:39:13 wiz Exp $
 
 DISTNAME=	ortp-0.16.1
 PKGREVISION=	12
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/linphone/ortp/sources/
 
 MAINTAINER=	zul@netbsd-fr.org
-HOMEPAGE=	https://www.linphone.org/technical-corner/ortp
+#HOMEPAGE=	https://www.linphone.org/technical-corner/ortp
 COMMENT=	Real-time Transport Protocol stack
 LICENSE=	gnu-lgpl-v2.1
 
