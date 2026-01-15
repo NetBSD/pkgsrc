@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.344 2026/01/15 12:43:17 adam Exp $
+$NetBSD: CHANGES-2026,v 1.345 2026/01/15 13:26:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -481,3 +481,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/py-tifffile to 2026.1.14 [adam 2026-01-15]
 	Updated devel/py-uv to 0.9.25 [adam 2026-01-15]
 	Updated devel/py-uv-build to 0.9.25 [adam 2026-01-15]
+	Added textproc/rumdl version 0.0.217 [wiz 2026-01-15]
