@@ -1,15 +1,15 @@
-$NetBSD: patch-Cargo.toml,v 1.1 2026/01/05 18:45:08 pin Exp $
+$NetBSD: patch-Cargo.toml,v 1.2 2026/01/15 18:23:44 pin Exp $
 
 Relax MSRV.
 
---- Cargo.toml.orig	2026-01-05 06:33:03.436515055 +0000
+--- Cargo.toml.orig	2026-01-15 08:16:16.078473330 +0000
 +++ Cargo.toml
-@@ -4,7 +4,7 @@ resolver = "2"
+@@ -29,7 +29,7 @@ resolver = "2"
  resolver = "2"
  
  [workspace.package]
 -rust-version = "1.92"
-+rust-version = "1.90"
- version = "0.7.9"
++rust-version = "1.91"
+ version = "0.8.1"
  edition = "2024"
  authors = ["ds1sqe(dukim) <ds1sqe@mensakorea.org>"]
