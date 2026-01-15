@@ -1,3 +1,0 @@
-tp-logger is a headless Observer client that logs information received by the
-Telepathy framework. It features pluggable backends to log different sorts of
-messages, in different formats.
