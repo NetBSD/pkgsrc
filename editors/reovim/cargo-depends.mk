@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2026/01/05 18:45:08 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2026/01/15 18:23:44 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -49,6 +49,8 @@ CARGO_CRATE_DEPENDS+=	crunchy-0.2.4
 CARGO_CRATE_DEPENDS+=	deranged-0.5.5
 CARGO_CRATE_DEPENDS+=	derive_more-2.1.0
 CARGO_CRATE_DEPENDS+=	derive_more-impl-2.1.0
+CARGO_CRATE_DEPENDS+=	dirs-6.0.0
+CARGO_CRATE_DEPENDS+=	dirs-sys-0.5.0
 CARGO_CRATE_DEPENDS+=	dispatch2-0.3.0
 CARGO_CRATE_DEPENDS+=	displaydoc-0.2.5
 CARGO_CRATE_DEPENDS+=	document-features-0.2.12
@@ -78,6 +80,7 @@ CARGO_CRATE_DEPENDS+=	futures-task-0.3.31
 CARGO_CRATE_DEPENDS+=	futures-timer-3.0.3
 CARGO_CRATE_DEPENDS+=	futures-util-0.3.31
 CARGO_CRATE_DEPENDS+=	gethostname-1.1.0
+CARGO_CRATE_DEPENDS+=	getrandom-0.2.16
 CARGO_CRATE_DEPENDS+=	getrandom-0.3.4
 CARGO_CRATE_DEPENDS+=	globset-0.4.18
 CARGO_CRATE_DEPENDS+=	half-2.7.1
@@ -104,6 +107,7 @@ CARGO_CRATE_DEPENDS+=	itoa-1.0.15
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.83
 CARGO_CRATE_DEPENDS+=	lazy_static-1.5.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.178
+CARGO_CRATE_DEPENDS+=	libredox-0.1.12
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.11.0
 CARGO_CRATE_DEPENDS+=	litemap-0.8.1
 CARGO_CRATE_DEPENDS+=	litrs-1.0.0
@@ -132,6 +136,7 @@ CARGO_CRATE_DEPENDS+=	objc2-io-surface-0.3.2
 CARGO_CRATE_DEPENDS+=	once_cell-1.21.3
 CARGO_CRATE_DEPENDS+=	once_cell_polyfill-1.70.2
 CARGO_CRATE_DEPENDS+=	oorandom-11.1.5
+CARGO_CRATE_DEPENDS+=	option-ext-0.2.0
 CARGO_CRATE_DEPENDS+=	page_size-0.6.0
 CARGO_CRATE_DEPENDS+=	parking_lot-0.12.5
 CARGO_CRATE_DEPENDS+=	parking_lot_core-0.9.12
@@ -153,6 +158,7 @@ CARGO_CRATE_DEPENDS+=	radix_trie-0.2.1
 CARGO_CRATE_DEPENDS+=	rayon-1.11.0
 CARGO_CRATE_DEPENDS+=	rayon-core-1.13.0
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.5.18
+CARGO_CRATE_DEPENDS+=	redox_users-0.5.2
 CARGO_CRATE_DEPENDS+=	regex-1.12.2
 CARGO_CRATE_DEPENDS+=	regex-automata-0.4.13
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.8.8
