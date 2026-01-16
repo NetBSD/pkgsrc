@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.15 2026/01/11 21:38:18 wiz Exp $
+# $NetBSD: builtin.mk,v 1.16 2026/01/16 19:45:47 wiz Exp $
 
 BUILTIN_PKG:=	mDNSResponder
 
@@ -47,8 +47,8 @@ BUILTIN_VERSION.mDNSResponder=	2559.1.1
 BUILTIN_VERSION.mDNSResponder=	0 #unknown
 .  endif
 BUILTIN_PKG.mDNSResponder=	mDNSResponder-${BUILTIN_VERSION.mDNSResponder}
-MAKEVARS+=			BUILTIN_PKG.mDNSResponder
 .endif
+MAKEVARS+=			BUILTIN_PKG.mDNSResponder
 
 ###
 ### Determine whether we should use the built-in implementation if it
