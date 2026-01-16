@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26676 2026/01/15 13:42:34 gdt Exp $
+$NetBSD: TODO,v 1.26677 2026/01/16 22:42:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -869,7 +869,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libretro-core-info-1.9.1
 	o libthai-0.2.2
 	o libtrace-4.0.16
-	o libvirt-11.0
+	o libvirt-12.0
 	o libxdg-basedir-1.2.3
 	o lima-2.0.3
 	o lincvs-2.1.4 [now called CrossVC]
@@ -993,7 +993,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o olvwm-4.5
 	o oo2c-2.1.11
 	o opal-3.16.2
-	o openblas-0.3.30
+	o openblas-0.3.31
 	o opencl-3.0.19
 	o opencpn-5.12.4
 	o opencpn-plugin-draw-1.8.5.2
