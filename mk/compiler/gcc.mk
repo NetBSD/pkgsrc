@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.305 2026/01/15 15:12:32 wiz Exp $
+# $NetBSD: gcc.mk,v 1.306 2026/01/16 05:59:24 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -1051,7 +1051,7 @@ _USE_PKGSRC_GCC=	NO
 .if !defined(_USE_PKGSRC_GCC)
 _USE_PKGSRC_GCC=	YES
 .  if !empty(_IS_BUILTIN_GCC:M[yY][eE][sS])
-_GCC_PKG_MAJOR_MINOR=${_GCC_PKG:C/gcc-([0-9]+\.[0-9]+).*/\1/}
+_GCC_PKG_MAJOR_MINOR=${_GCC_PKG:C/gcc-([0-9]+)(\.[0-9]+)?.*/\1\2/}
 .    if ${_GCC_PKG_MAJOR_MINOR:R} > ${_GCC_REQD:R} || (${_GCC_PKG_MAJOR_MINOR:R} == ${_GCC_REQD:R} && ${_GCC_PKG_MAJOR_MINOR:E} >= ${_GCC_REQD:E})
 _USE_PKGSRC_GCC=	NO
 .    else
