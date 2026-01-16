@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2018/07/04 13:40:29 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.13 2026/01/16 06:51:34 wiz Exp $
 
 DISTNAME=	pconsole-1.0
 PKGREVISION=	2
 CATEGORIES=	net
-MASTER_SITES=	http://www.heiho.net/pconsole/
+#MASTER_SITES=	http://www.heiho.net/pconsole/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.heiho.net/pconsole/
+#HOMEPAGE=	http://www.heiho.net/pconsole/
 COMMENT=	Parallel console tool to access several host via one input tty
 LICENSE=	gnu-gpl-v2
 
