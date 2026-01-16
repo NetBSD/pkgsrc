@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/10/09 08:01:58 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/01/16 16:37:39 adam Exp $
 
-DISTNAME=	fido2-2.0.0
+DISTNAME=	fido2-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fido2/}
 
