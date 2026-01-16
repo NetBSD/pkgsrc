@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.176 2026/01/16 16:14:10 hauke Exp $
+# $NetBSD: Makefile,v 1.177 2026/01/16 17:45:29 hauke Exp $
 
 DISTNAME=		xscreensaver-6.14
 CATEGORIES=		x11
@@ -13,7 +13,7 @@ LICENSE=		mit
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_CC_FEATURES=	c99
-USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config bash:run
+USE_TOOLS+=		gmake intltool msgfmt perl pkg-config bash:run
 
 CHECK_PORTABILITY_SKIP+=	OSX/fuzztest.sh
 CHECK_PORTABILITY_SKIP+=	OSX/installer.sh
