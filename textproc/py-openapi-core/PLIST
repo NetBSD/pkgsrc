@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/10/03 07:37:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/01/16 07:28:04 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -18,9 +18,6 @@ ${PYSITELIB}/openapi_core/casting/schemas/__init__.pyo
 ${PYSITELIB}/openapi_core/casting/schemas/casters.py
 ${PYSITELIB}/openapi_core/casting/schemas/casters.pyc
 ${PYSITELIB}/openapi_core/casting/schemas/casters.pyo
-${PYSITELIB}/openapi_core/casting/schemas/datatypes.py
-${PYSITELIB}/openapi_core/casting/schemas/datatypes.pyc
-${PYSITELIB}/openapi_core/casting/schemas/datatypes.pyo
 ${PYSITELIB}/openapi_core/casting/schemas/exceptions.py
 ${PYSITELIB}/openapi_core/casting/schemas/exceptions.pyc
 ${PYSITELIB}/openapi_core/casting/schemas/exceptions.pyo
@@ -304,6 +301,9 @@ ${PYSITELIB}/openapi_core/templating/paths/finders.pyo
 ${PYSITELIB}/openapi_core/templating/paths/iterators.py
 ${PYSITELIB}/openapi_core/templating/paths/iterators.pyc
 ${PYSITELIB}/openapi_core/templating/paths/iterators.pyo
+${PYSITELIB}/openapi_core/templating/paths/parsers.py
+${PYSITELIB}/openapi_core/templating/paths/parsers.pyc
+${PYSITELIB}/openapi_core/templating/paths/parsers.pyo
 ${PYSITELIB}/openapi_core/templating/paths/protocols.py
 ${PYSITELIB}/openapi_core/templating/paths/protocols.pyc
 ${PYSITELIB}/openapi_core/templating/paths/protocols.pyo
@@ -328,9 +328,6 @@ ${PYSITELIB}/openapi_core/templating/security/__init__.pyo
 ${PYSITELIB}/openapi_core/templating/security/exceptions.py
 ${PYSITELIB}/openapi_core/templating/security/exceptions.pyc
 ${PYSITELIB}/openapi_core/templating/security/exceptions.pyo
-${PYSITELIB}/openapi_core/templating/util.py
-${PYSITELIB}/openapi_core/templating/util.pyc
-${PYSITELIB}/openapi_core/templating/util.pyo
 ${PYSITELIB}/openapi_core/testing/__init__.py
 ${PYSITELIB}/openapi_core/testing/__init__.pyc
 ${PYSITELIB}/openapi_core/testing/__init__.pyo
