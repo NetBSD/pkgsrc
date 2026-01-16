@@ -1,4 +1,4 @@
-# $NetBSD: bsd.patch-vars.mk,v 1.13 2026/01/11 16:12:49 wiz Exp $
+# $NetBSD: bsd.patch-vars.mk,v 1.14 2026/01/16 08:17:46 wiz Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -27,16 +27,10 @@
 
 PATCHFILES?=	# none
 
-pkgsrc_patches=	${:!echo ${PATCHDIR}/patch-*!:N*\*}
-.if !empty(LOCALPATCHES)
-local_patches=	${:!echo ${LOCALPATCHES}/${PKGPATH}/*!:N*/CVS:N*/\*}
-.endif
-
-.if !empty(PATCHFILES) || !empty(pkgsrc_patches) || !empty(local_patches)
+.if !empty(PATCHFILES) || exists(${PATCHDIR}) || exists(${LOCALPATCHES}/${PKGPATH})
 USE_TOOLS+=	patch
 .endif
-.if (!empty(PATCHFILES) || !empty(pkgsrc_patches)) \
-  && empty(TOOLS_PLATFORM.mktool)
+.if (!empty(PATCHFILES) || exists(${PATCHDIR})) && empty(TOOLS_PLATFORM.mktool)
 USE_TOOLS+=	digest:bootstrap
 .endif
 
