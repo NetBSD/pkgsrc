@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2015/12/29 02:04:08 agc Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/16 06:50:17 wiz Exp $
 
 DISTNAME=	pcg-c-0.94
 PKGNAME=	${DISTNAME:S/-c//}
 CATEGORIES=	math
-MASTER_SITES=	http://www.pcg-random.org/downloads/
+MASTER_SITES=	https://www.pcg-random.org/downloads/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://www.pcg-random.org/
+HOMEPAGE=	https://www.pcg-random.org/
 COMMENT=	Random number generator
 LICENSE=	apache-2.0
 
