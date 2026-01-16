@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/03/30 21:10:44 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/01/16 06:49:21 wiz Exp $
 
 DISTNAME=	pcc-1.0.0
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	#
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	http://pcc.ludd.ltu.se/
+#HOMEPAGE=	http://pcc.ludd.ltu.se/
 COMMENT=	Portable C compiler
 
 ONLY_FOR_PLATFORM=	NetBSD-*-arm* NetBSD-*-i386 NetBSD-*-mips* \
