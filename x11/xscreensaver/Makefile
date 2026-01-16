@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.174 2026/01/07 08:49:49 wiz Exp $
+# $NetBSD: Makefile,v 1.175 2026/01/16 14:53:05 hauke Exp $
 
-DISTNAME=		xscreensaver-6.13
-PKGREVISION=		1
+DISTNAME=		xscreensaver-6.14
 CATEGORIES=		x11
 MASTER_SITES=		https://www.jwz.org/xscreensaver/
 
@@ -14,11 +13,18 @@ LICENSE=		mit
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_CC_FEATURES=	c99
-USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
+USE_TOOLS+=		bash gmake intltool msgfmt perl:run pkg-config
 
 CHECK_PORTABILITY_SKIP+=	OSX/fuzztest.sh
 CHECK_PORTABILITY_SKIP+=	OSX/installer.sh
 CHECK_PORTABILITY_SKIP+=	android/Makefile
+
+REPLACE_PERL+=		hacks/*.pl hacks/*/*.pl
+
+SUBST_CLASSES+=		bash
+SUBST_STAGE.bash=	pre-configure
+SUBST_FILES.bash=	hacks/glx/xshadertoy-compile.pl
+SUBST_VARS.bash=	BASH
 
 CONFIGURE_ARGS+=	--with-configdir=${PREFIX}/libexec/xscreensaver/config
 CONFIGURE_ARGS+=	--with-gl
@@ -46,8 +52,6 @@ TOOL_DEPENDS+=		bc-[0-9]*:../../math/bc
 INSTALL_MAKE_FLAGS=	install_prefix=${DESTDIR}
 
 INSTALLATION_DIRS=	share/doc/${PKGBASE}
-
-REPLACE_PERL+=		hacks/*.pl hacks/*/*.pl
 
 post-install:
 	${CHMOD} a-x ${DESTDIR}${PREFIX}/share/applications/*.desktop
