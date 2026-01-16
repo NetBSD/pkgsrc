@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.60 2025/10/31 14:56:38 abs Exp $
+@comment $NetBSD: PLIST,v 1.61 2026/01/16 14:53:05 hauke Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
 bin/xscreensaver-settings
 lib/X11/app-defaults/XScreenSaver
 libexec/xscreensaver/abstractile
+libexec/xscreensaver/alienbeacon
 libexec/xscreensaver/anemone
 libexec/xscreensaver/anemotaxis
 libexec/xscreensaver/antinspect
@@ -16,6 +17,7 @@ libexec/xscreensaver/atlantis
 libexec/xscreensaver/attraction
 libexec/xscreensaver/atunnel
 libexec/xscreensaver/barcode
+libexec/xscreensaver/batteredplanet
 libexec/xscreensaver/beats
 libexec/xscreensaver/binaryhorizon
 libexec/xscreensaver/binaryring
@@ -44,6 +46,7 @@ libexec/xscreensaver/companioncube
 libexec/xscreensaver/compass
 libexec/xscreensaver/config/README
 libexec/xscreensaver/config/abstractile.xml
+libexec/xscreensaver/config/alienbeacon.xml
 libexec/xscreensaver/config/anemone.xml
 libexec/xscreensaver/config/anemotaxis.xml
 libexec/xscreensaver/config/antinspect.xml
@@ -55,6 +58,7 @@ libexec/xscreensaver/config/atlantis.xml
 libexec/xscreensaver/config/attraction.xml
 libexec/xscreensaver/config/atunnel.xml
 libexec/xscreensaver/config/barcode.xml
+libexec/xscreensaver/config/batteredplanet.xml
 libexec/xscreensaver/config/beats.xml
 libexec/xscreensaver/config/binaryhorizon.xml
 libexec/xscreensaver/config/binaryring.xml
@@ -108,6 +112,7 @@ libexec/xscreensaver/config/drift.xml
 libexec/xscreensaver/config/droste.xml
 libexec/xscreensaver/config/dumpsterfire.xml
 libexec/xscreensaver/config/dymaxionmap.xml
+libexec/xscreensaver/config/elementalring.xml
 libexec/xscreensaver/config/endgame.xml
 libexec/xscreensaver/config/energystream.xml
 libexec/xscreensaver/config/engine.xml
@@ -128,6 +133,7 @@ libexec/xscreensaver/config/fliptext.xml
 libexec/xscreensaver/config/flow.xml
 libexec/xscreensaver/config/fluidballs.xml
 libexec/xscreensaver/config/flurry.xml
+libexec/xscreensaver/config/fluxcore.xml
 libexec/xscreensaver/config/flyingtoasters.xml
 libexec/xscreensaver/config/fontglide.xml
 libexec/xscreensaver/config/fuzzyflakes.xml
@@ -137,6 +143,7 @@ libexec/xscreensaver/config/geodesic.xml
 libexec/xscreensaver/config/geodesicgears.xml
 libexec/xscreensaver/config/gflux.xml
 libexec/xscreensaver/config/gibson.xml
+libexec/xscreensaver/config/gimbalharmonics.xml
 libexec/xscreensaver/config/glblur.xml
 libexec/xscreensaver/config/glcells.xml
 libexec/xscreensaver/config/gleidescope.xml
@@ -159,6 +166,7 @@ libexec/xscreensaver/config/handsy.xml
 libexec/xscreensaver/config/headroom.xml
 libexec/xscreensaver/config/helix.xml
 libexec/xscreensaver/config/hexadrop.xml
+libexec/xscreensaver/config/hexplasma.xml
 libexec/xscreensaver/config/hexstrut.xml
 libexec/xscreensaver/config/hextrail.xml
 libexec/xscreensaver/config/highvoltage.xml
@@ -187,6 +195,7 @@ libexec/xscreensaver/config/lament.xml
 libexec/xscreensaver/config/lavalite.xml
 libexec/xscreensaver/config/lcdscrub.xml
 libexec/xscreensaver/config/lockward.xml
+libexec/xscreensaver/config/logarithmiccircles.xml
 libexec/xscreensaver/config/loop.xml
 libexec/xscreensaver/config/m6502.xml
 libexec/xscreensaver/config/mapscroller.xml
@@ -206,6 +215,8 @@ libexec/xscreensaver/config/morph3d.xml
 libexec/xscreensaver/config/mountain.xml
 libexec/xscreensaver/config/munch.xml
 libexec/xscreensaver/config/nakagin.xml
+libexec/xscreensaver/config/neongravity.xml
+libexec/xscreensaver/config/neontriangulator.xml
 libexec/xscreensaver/config/nerverot.xml
 libexec/xscreensaver/config/noof.xml
 libexec/xscreensaver/config/noseguy.xml
@@ -228,6 +239,7 @@ libexec/xscreensaver/config/polytopes.xml
 libexec/xscreensaver/config/pong.xml
 libexec/xscreensaver/config/popsquares.xml
 libexec/xscreensaver/config/projectiveplane.xml
+libexec/xscreensaver/config/protophore.xml
 libexec/xscreensaver/config/providence.xml
 libexec/xscreensaver/config/pulsar.xml
 libexec/xscreensaver/config/pyro.xml
@@ -246,10 +258,12 @@ libexec/xscreensaver/config/rubik.xml
 libexec/xscreensaver/config/rubikblocks.xml
 libexec/xscreensaver/config/sballs.xml
 libexec/xscreensaver/config/scooter.xml
+libexec/xscreensaver/config/selfreflect.xml
 libexec/xscreensaver/config/shadebobs.xml
 libexec/xscreensaver/config/sierpinski.xml
 libexec/xscreensaver/config/sierpinski3d.xml
 libexec/xscreensaver/config/skulloop.xml
+libexec/xscreensaver/config/skyline.xml
 libexec/xscreensaver/config/skytentacles.xml
 libexec/xscreensaver/config/slidescreen.xml
 libexec/xscreensaver/config/slip.xml
@@ -264,21 +278,27 @@ libexec/xscreensaver/config/sproingies.xml
 libexec/xscreensaver/config/squiral.xml
 libexec/xscreensaver/config/squirtorus.xml
 libexec/xscreensaver/config/stairs.xml
+libexec/xscreensaver/config/stardome.xml
 libexec/xscreensaver/config/starfish.xml
+libexec/xscreensaver/config/starnest.xml
 libexec/xscreensaver/config/starwars.xml
 libexec/xscreensaver/config/stonerview.xml
 libexec/xscreensaver/config/strange.xml
+libexec/xscreensaver/config/stripeytorus.xml
 libexec/xscreensaver/config/substrate.xml
 libexec/xscreensaver/config/superquadrics.xml
 libexec/xscreensaver/config/surfaces.xml
 libexec/xscreensaver/config/swirl.xml
+libexec/xscreensaver/config/synthwavecity.xml
 libexec/xscreensaver/config/tangram.xml
 libexec/xscreensaver/config/tessellimage.xml
 libexec/xscreensaver/config/timetunnel.xml
 libexec/xscreensaver/config/topblock.xml
+libexec/xscreensaver/config/topologica.xml
 libexec/xscreensaver/config/triangle.xml
 libexec/xscreensaver/config/tronbit.xml
 libexec/xscreensaver/config/truchet.xml
+libexec/xscreensaver/config/truchetzoom.xml
 libexec/xscreensaver/config/twang.xml
 libexec/xscreensaver/config/unicrud.xml
 libexec/xscreensaver/config/unknownpleasures.xml
@@ -327,6 +347,7 @@ libexec/xscreensaver/drift
 libexec/xscreensaver/droste
 libexec/xscreensaver/dumpsterfire
 libexec/xscreensaver/dymaxionmap
+libexec/xscreensaver/elementalring
 libexec/xscreensaver/endgame
 libexec/xscreensaver/energystream
 libexec/xscreensaver/engine
@@ -347,6 +368,7 @@ libexec/xscreensaver/fliptext
 libexec/xscreensaver/flow
 libexec/xscreensaver/fluidballs
 libexec/xscreensaver/flurry
+libexec/xscreensaver/fluxcore
 libexec/xscreensaver/flyingtoasters
 libexec/xscreensaver/fontglide
 libexec/xscreensaver/fuzzyflakes
@@ -356,6 +378,7 @@ libexec/xscreensaver/geodesic
 libexec/xscreensaver/geodesicgears
 libexec/xscreensaver/gflux
 libexec/xscreensaver/gibson
+libexec/xscreensaver/gimbalharmonics
 libexec/xscreensaver/glblur
 libexec/xscreensaver/glcells
 libexec/xscreensaver/gleidescope
@@ -378,6 +401,7 @@ libexec/xscreensaver/handsy
 libexec/xscreensaver/headroom
 libexec/xscreensaver/helix
 libexec/xscreensaver/hexadrop
+libexec/xscreensaver/hexplasma
 libexec/xscreensaver/hexstrut
 libexec/xscreensaver/hextrail
 libexec/xscreensaver/highvoltage
@@ -406,6 +430,7 @@ libexec/xscreensaver/lament
 libexec/xscreensaver/lavalite
 libexec/xscreensaver/lcdscrub
 libexec/xscreensaver/lockward
+libexec/xscreensaver/logarithmiccircles
 libexec/xscreensaver/loop
 libexec/xscreensaver/m6502
 libexec/xscreensaver/mapscroller
@@ -426,6 +451,8 @@ libexec/xscreensaver/morph3d
 libexec/xscreensaver/mountain
 libexec/xscreensaver/munch
 libexec/xscreensaver/nakagin
+libexec/xscreensaver/neongravity
+libexec/xscreensaver/neontriangulator
 libexec/xscreensaver/nerverot
 libexec/xscreensaver/noof
 libexec/xscreensaver/noseguy
@@ -448,6 +475,7 @@ libexec/xscreensaver/polytopes
 libexec/xscreensaver/pong
 libexec/xscreensaver/popsquares
 libexec/xscreensaver/projectiveplane
+libexec/xscreensaver/protophore
 libexec/xscreensaver/providence
 libexec/xscreensaver/pulsar
 libexec/xscreensaver/pyro
@@ -466,10 +494,12 @@ libexec/xscreensaver/rubik
 libexec/xscreensaver/rubikblocks
 libexec/xscreensaver/sballs
 libexec/xscreensaver/scooter
+libexec/xscreensaver/selfreflect
 libexec/xscreensaver/shadebobs
 libexec/xscreensaver/sierpinski
 libexec/xscreensaver/sierpinski3d
 libexec/xscreensaver/skulloop
+libexec/xscreensaver/skyline
 libexec/xscreensaver/skytentacles
 libexec/xscreensaver/slidescreen
 libexec/xscreensaver/slip
@@ -484,21 +514,27 @@ libexec/xscreensaver/sproingies
 libexec/xscreensaver/squiral
 libexec/xscreensaver/squirtorus
 libexec/xscreensaver/stairs
+libexec/xscreensaver/stardome
 libexec/xscreensaver/starfish
+libexec/xscreensaver/starnest
 libexec/xscreensaver/starwars
 libexec/xscreensaver/stonerview
 libexec/xscreensaver/strange
+libexec/xscreensaver/stripeytorus
 libexec/xscreensaver/substrate
 libexec/xscreensaver/superquadrics
 libexec/xscreensaver/surfaces
 libexec/xscreensaver/swirl
+libexec/xscreensaver/synthwavecity
 libexec/xscreensaver/tangram
 libexec/xscreensaver/tessellimage
 libexec/xscreensaver/timetunnel
 libexec/xscreensaver/topblock
+libexec/xscreensaver/topologica
 libexec/xscreensaver/triangle
 libexec/xscreensaver/tronbit
 libexec/xscreensaver/truchet
+libexec/xscreensaver/truchetzoom
 libexec/xscreensaver/twang
 libexec/xscreensaver/unicrud
 libexec/xscreensaver/unknownpleasures
@@ -526,6 +562,7 @@ libexec/xscreensaver/xscreensaver-getimage-video
 libexec/xscreensaver/xscreensaver-gfx
 libexec/xscreensaver/xscreensaver-gl-visual
 libexec/xscreensaver/xscreensaver-text
+libexec/xscreensaver/xshadertoy
 libexec/xscreensaver/xspirograph
 libexec/xscreensaver/zoom
 man/man1/xscreensaver-command.1
@@ -533,6 +570,7 @@ man/man1/xscreensaver-demo.1
 man/man1/xscreensaver-settings.1
 man/man1/xscreensaver.1
 man/man6/abstractile.6
+man/man6/alienbeacon.6
 man/man6/anemone.6
 man/man6/anemotaxis.6
 man/man6/antinspect.6
@@ -544,6 +582,7 @@ man/man6/atlantis.6
 man/man6/attraction.6
 man/man6/atunnel.6
 man/man6/barcode.6
+man/man6/batteredplanet.6
 man/man6/beats.6
 man/man6/binaryhorizon.6
 man/man6/binaryring.6
@@ -596,6 +635,7 @@ man/man6/distort.6
 man/man6/drift.6
 man/man6/droste.6
 man/man6/dymaxionmap.6
+man/man6/elementalring.6
 man/man6/endgame.6
 man/man6/energystream.6
 man/man6/engine.6
@@ -616,6 +656,7 @@ man/man6/fliptext.6
 man/man6/flow.6
 man/man6/fluidballs.6
 man/man6/flurry.6
+man/man6/fluxcore.6
 man/man6/flyingtoasters.6
 man/man6/fontglide.6
 man/man6/fuzzyflakes.6
@@ -625,6 +666,7 @@ man/man6/geodesic.6
 man/man6/geodesicgears.6
 man/man6/gflux.6
 man/man6/gibson.6
+man/man6/gimbalharmonics.6
 man/man6/glblur.6
 man/man6/glcells.6
 man/man6/gleidescope.6
@@ -647,6 +689,7 @@ man/man6/handsy.6
 man/man6/headroom.6
 man/man6/helix.6
 man/man6/hexadrop.6
+man/man6/hexplasma.6
 man/man6/hexstrut.6
 man/man6/hextrail.6
 man/man6/highvoltage.6
@@ -674,6 +717,7 @@ man/man6/lament.6
 man/man6/lavalite.6
 man/man6/lcdscrub.6
 man/man6/lockward.6
+man/man6/logarithmiccircles.6
 man/man6/loop.6
 man/man6/m6502.6
 man/man6/mapscroller.6
@@ -693,6 +737,8 @@ man/man6/morph3d.6
 man/man6/mountain.6
 man/man6/munch.6
 man/man6/nakagin.6
+man/man6/neongravity.6
+man/man6/neontriangulator.6
 man/man6/nerverot.6
 man/man6/noof.6
 man/man6/noseguy.6
@@ -715,6 +761,7 @@ man/man6/polytopes.6
 man/man6/pong.6
 man/man6/popsquares.6
 man/man6/projectiveplane.6
+man/man6/protophore.6
 man/man6/providence.6
 man/man6/pulsar.6
 man/man6/pyro.6
@@ -733,10 +780,12 @@ man/man6/rubik.6
 man/man6/rubikblocks.6
 man/man6/sballs.6
 man/man6/scooter.6
+man/man6/selfreflect.6
 man/man6/shadebobs.6
 man/man6/sierpinski.6
 man/man6/sierpinski3d.6
 man/man6/skulloop.6
+man/man6/skyline.6
 man/man6/skytentacles.6
 man/man6/slidescreen.6
 man/man6/slip.6
@@ -751,21 +800,27 @@ man/man6/sproingies.6
 man/man6/squiral.6
 man/man6/squirtorus.6
 man/man6/stairs.6
+man/man6/stardome.6
 man/man6/starfish.6
+man/man6/starnest.6
 man/man6/starwars.6
 man/man6/stonerview.6
 man/man6/strange.6
+man/man6/stripeytorus.6
 man/man6/substrate.6
 man/man6/superquadrics.6
 man/man6/surfaces.6
 man/man6/swirl.6
+man/man6/synthwavecity.6
 man/man6/tangram.6
 man/man6/tessellimage.6
 man/man6/timetunnel.6
 man/man6/topblock.6
+man/man6/topologica.6
 man/man6/triangle.6
 man/man6/tronbit.6
 man/man6/truchet.6
+man/man6/truchetzoom.6
 man/man6/twang.6
 man/man6/unicrud.6
 man/man6/unknownpleasures.6
@@ -793,6 +848,7 @@ man/man6/xscreensaver-gfx.6
 man/man6/xscreensaver-gl-visual.6
 man/man6/xscreensaver-systemd.6
 man/man6/xscreensaver-text.6
+man/man6/xshadertoy.6
 man/man6/xspirograph.6
 man/man6/zoom.6
 share/applications/xscreensaver-settings.desktop
