@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2025/10/23 20:40:08 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2026/01/16 22:33:18 wiz Exp $
 
 PKGREVISION= 11
 .include "../../meta-pkgs/mate/Makefile.common"
@@ -19,6 +19,8 @@ SUBST_FILES.prefix=	schemas/org.mate.background.gschema.xml
 SUBST_MESSAGE.prefix=	Fixing prefix
 SUBST_STAGE.prefix=	pre-install
 SUBST_SED.prefix=	-e 's,$${prefix},${PREFIX},'
+
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
