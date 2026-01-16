@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2025/11/17 11:01:27 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.65 2026/01/16 06:51:22 wiz Exp $
 
 DISTNAME=	pcmanfm-1.3.2
 PKGREVISION=	14
@@ -8,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcmanfm/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	https://pcmanfm.sourceforge.net/
+HOMEPAGE=	https://sourceforge.net/projects/pcmanfm/
 COMMENT=	Extremly fast and lightweight file manager
 LICENSE=	gnu-gpl-v2
 
