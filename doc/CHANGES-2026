@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.352 2026/01/16 07:29:52 adam Exp $
+$NetBSD: CHANGES-2026,v 1.353 2026/01/16 14:53:35 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -494,3 +494,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/py-reportlab to 4.4.9 [adam 2026-01-16]
 	Updated textproc/py-openapi-core to 0.22.0 [adam 2026-01-16]
 	Updated www/py-django-import-export to 4.4.0 [adam 2026-01-16]
+	Updated x11/xscreensaver to 6.14 [hauke 2026-01-16]
