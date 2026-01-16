@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2026/01/15 12:42:46 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/01/16 06:18:52 wiz Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -1947,4 +1947,5 @@ Size (zvariant_derive-5.6.0.crate) = 14278 bytes
 BLAKE2s (zvariant_utils-3.2.0.crate) = a37b85bd35e5168e45b50ab6d42717bc90cd237c0efb92629a6597d1b79eac8c
 SHA512 (zvariant_utils-3.2.0.crate) = 9176e3240078a3d240f81272cd6e04438048ee044dabd0233bce0ba9567e97655e2721332dcd43376b09c055c07080e12ffd2888355f003cc32c3bfddbc4c479
 Size (zvariant_utils-3.2.0.crate) = 14779 bytes
+SHA1 (patch-.._vendor_mio-1.1.0_src_sys_unix_selector_kqueue.rs) = 82643b1ee58f7e20b611ef172044d68f4145b65a
 SHA1 (patch-python_uv__build_____init____.py) = ca65b89a8af0a2eea3a3c3af3d3895d53cced314
