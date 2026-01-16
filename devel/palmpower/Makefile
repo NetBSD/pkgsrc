@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2012/10/31 11:19:21 asau Exp $
-#
+# $NetBSD: Makefile,v 1.8 2026/01/16 06:47:47 wiz Exp $
 
 DISTNAME=		palmpower-1.0.2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_BACKUP}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.palmblvd.com/software/pc/PilotDis-2000-05-04-palm-pc.html
+#HOMEPAGE=		http://www.palmblvd.com/software/pc/PilotDis-2000-05-04-palm-pc.html
 COMMENT=		Assembler, disassembler and other tools for PalmOS binaries
 
 CPPFLAGS+=		-Dunix
