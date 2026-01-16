@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2023/08/14 05:25:08 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/01/16 06:47:23 wiz Exp $
 
 DISTNAME=	PACK-0.0.3
 PKGREVISION=	5
 CATEGORIES=	security
-MASTER_SITES=	http://thesprawl.org/media/projects/
+#MASTER_SITES=	http://thesprawl.org/media/projects/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://thesprawl.org/projects/pack/
+#HOMEPAGE=	http://thesprawl.org/projects/pack/
 COMMENT=	Password analysis and cracking kit
 LICENSE=	2-clause-bsd
 
