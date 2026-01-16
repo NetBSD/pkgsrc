@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2025/10/05 15:22:53 adam Exp $
+# $NetBSD: Makefile,v 1.34 2026/01/16 06:48:05 wiz Exp $
 
 DISTNAME=	patchutils-0.4.4
 CATEGORIES=	devel
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.xz
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cyberelk.net/tim/software/patchutils/
+HOMEPAGE=	https://cyberelk.net/tim/software/patchutils/
 COMMENT=	Some programs for manipulating patch files
 LICENSE=	gnu-gpl-v2
 
