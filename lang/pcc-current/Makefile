@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2023/05/06 15:19:25 nikita Exp $
+# $NetBSD: Makefile,v 1.18 2026/01/16 06:49:35 wiz Exp $
 
 DISTNAME=	pcc-${DATE_STR}
 PKGNAME=	pcc-current-${DATE_STR}
 CATEGORIES=	lang
-MASTER_SITES=	ftp://pcc.ludd.ltu.se/pub/pcc/
+#MASTER_SITES=	ftp://pcc.ludd.ltu.se/pub/pcc/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	he@NetBSD.org
-HOMEPAGE=	http://pcc.ludd.ltu.se/
+#HOMEPAGE=	http://pcc.ludd.ltu.se/
 COMMENT=	Portable C compiler
 LICENSE=	pcc-license
 
