@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2025/03/30 21:10:42 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/01/16 06:49:57 wiz Exp $
 
 DISTNAME=	pcc-libs-1.1.0
 CATEGORIES=	devel
 MASTER_SITES=	#
 EXTRACT_SUFX=	.tgz
 
-HOMEPAGE=	http://pcc.ludd.ltu.se/
+#HOMEPAGE=	http://pcc.ludd.ltu.se/
 COMMENT=	Runtime libraries for the Portable C Compiler
 LICENSE=	original-bsd
 
