@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2025/05/11 02:44:01 markd Exp $
+# $NetBSD: Makefile,v 1.33 2026/01/16 06:52:48 wiz Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	dvipsk-2025.1
 CATEGORIES=	print
 
-HOMEPAGE=	http://www.radicaleye.com/dvips.html
+HOMEPAGE=	https://tug.org/texinfohtml/dvips.html
 COMMENT=	DVI-to-PostScript translator
 LICENSE=	gnu-gpl-v2
 
