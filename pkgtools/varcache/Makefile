@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/01/11 19:53:06 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/01/16 22:40:29 wiz Exp $
 #
 # This is not a normal package, it is a standalone Makefile to help generate
 # varcache entries that speed up builds by precomputing expensive variables.
@@ -37,7 +37,9 @@ VC_VARS+=	_PKGSRCDIR
 #
 .include "../../mk/bsd.prefs.mk"
 
+.if ${X11_TYPE} == "modular"
 X11BASE:=	/nonexistent
+.endif
 
 show-varcache:
 .for _var_ in ${VC_VARS}
