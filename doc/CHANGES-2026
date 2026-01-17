@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.383 2026/01/17 20:59:51 pin Exp $
+$NetBSD: CHANGES-2026,v 1.384 2026/01/17 21:01:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -529,3 +529,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/bacon to 3.22.0 [pin 2026-01-17]
 	Updated sysutils/gravityfile to 0.2.2 [pin 2026-01-17]
 	Updated textproc/rumdl to 0.0.220 [pin 2026-01-17]
+	Updated graphics/wallust to 3.5.1 [pin 2026-01-17]
