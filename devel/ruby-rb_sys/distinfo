@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/11/03 05:38:50 taca Exp $
+$NetBSD: distinfo,v 1.2 2026/01/17 16:35:47 taca Exp $
 
-BLAKE2s (rb_sys-0.9.117.gem) = 193f830c11d71922d5de38836ddaff18c56575b64e53480bf05cb447d52af18b
-SHA512 (rb_sys-0.9.117.gem) = 307407a1d91117bff054547899f70fa70729d03787973004d0890320291f040bac2e93b09ceda6a2c92bbc9faedeed234eb932be0efeeaf9211c79e4579b0110
-Size (rb_sys-0.9.117.gem) = 31232 bytes
+BLAKE2s (rb_sys-0.9.124.gem) = 1c03fdeec9db1e5f9d46b9a9b4f23302833ba65273551799ee2b0149bd9e24f7
+SHA512 (rb_sys-0.9.124.gem) = 80676f47a2a1a246a2c0905d980d5562ea9246ca03b6bd1bb93e6964cdff462a82d94e2be18f0842d114bd94ffb8f57f95b0860abbb1ad6ed6cc6b7162fdb3d7
+Size (rb_sys-0.9.124.gem) = 31232 bytes
