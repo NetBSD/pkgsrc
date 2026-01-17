@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2026/01/14 15:20:41 wiz Exp $
+$NetBSD: distinfo,v 1.29 2026/01/17 07:37:52 wiz Exp $
 
 BLAKE2s (addr2line-0.25.1.crate) = cc5c422ec48ccef5c2c46379d2f600644609490afafea5020f2020815d1146e6
 SHA512 (addr2line-0.25.1.crate) = c400f3b6ccaff8a1c0d7d82c708a1784b8fd5ba64b6e420e85819d59b1cadb55fa59c852925093b921469f272d1d5140cf12f013ae75d1e1bc85021097df8fc2
@@ -1662,4 +1662,4 @@ Size (zune-inflate-0.2.54.crate) = 37973 bytes
 BLAKE2s (zune-jpeg-0.5.8.crate) = f69e39a60414e91f95a1bc5d295cbbd79c0f4e31142d6864a6f330996e78fa88
 SHA512 (zune-jpeg-0.5.8.crate) = b6d213f149f582d92137e615287ea389239c04859a06bb128c19b4f77f6a23ed0d40de4593d9073c31a4d5a573a4fd3c727ca2f0cefcacf995e23d74ad17d227
 Size (zune-jpeg-0.5.8.crate) = 84366 bytes
-SHA1 (patch-yazi-fs_src_provider_local_casefold.rs) = 8752bc7a210ba4f4888be29abcc8e45335f2a649
+SHA1 (patch-yazi-fs_src_provider_local_casefold.rs) = b5316974e560e0180d0e40f1b3fbe93c68f778ea
