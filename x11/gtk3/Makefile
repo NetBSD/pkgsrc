@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.223 2026/01/07 08:49:30 wiz Exp $
+# $NetBSD: Makefile,v 1.224 2026/01/17 21:41:12 wiz Exp $
 
 DISTNAME=	gtk-3.24.51
 PKGNAME=	${DISTNAME:S/gtk/gtk3+/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -13,7 +13,9 @@ COMMENT=	GIMP Toolkit v3 - libraries for building X11 user interfaces
 LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	gettext-tools>=0.19.4nb1:../../devel/gettext-tools
-TOOL_DEPENDS+=	gtk-doc>=1.32:../../textproc/gtk-doc
+# needs xsltproc
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
