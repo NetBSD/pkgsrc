@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/11/03 05:38:50 taca Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/17 16:35:47 taca Exp $
 
-DISTNAME=	rb_sys-0.9.117
+DISTNAME=	rb_sys-0.9.124
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,7 +8,9 @@ HOMEPAGE=	https://oxidize-rb.github.io/rb-sys/
 COMMENT=	Helpers for compiling Rust extensions for ruby
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-rake-compiler-dock>=1.9.1<1.10:../../devel/ruby-rake-compiler-dock
+OVERRIDE_GEMSPEC+=	rake-compiler-dock>=1.11.0
+
+DEPENDS+=	${RUBY_PKGPREFIX}-rake-compiler-dock>=1.11.0<1.12:../../devel/ruby-rake-compiler-dock
 
 USE_LANGUAGES=	# none
 
