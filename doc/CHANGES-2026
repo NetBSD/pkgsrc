@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.389 2026/01/17 21:41:20 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.390 2026/01/17 22:00:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -535,3 +535,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/pulseaudio to 17.0nb4 [wiz 2026-01-17]
 	Updated textproc/libxmlb to 0.3.24nb1 [wiz 2026-01-17]
 	Updated x11/gtk3 to 3.24.51nb2 [wiz 2026-01-17]
+	Updated math/gnumeric112 to 1.12.59nb4 [wiz 2026-01-17]
