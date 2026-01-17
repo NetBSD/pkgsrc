@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2025/05/27 16:05:33 taca Exp $
+# $NetBSD: Makefile,v 1.15 2026/01/17 15:49:26 taca Exp $
 
-DISTNAME=	byebug-12.0.0
+DISTNAME=	byebug-13.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,8 +9,6 @@ COMMENT=	Ruby 2.0 fast debugger - base + CLI
 LICENSE=	2-clause-bsd
 
 RUBYGEM_OPTIONS+=	--format-executable
-
-RUBY_VERSIONS_ACCEPTED=	32 33
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
