@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2026/01/07 08:49:02 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2026/01/17 21:45:37 wiz Exp $
 
 DISTNAME=	gtk-doc-1.34.0
 PKGREVISION=	7
@@ -17,7 +17,6 @@ DEPENDS+=	yelp-tools-[0-9]*:../../textproc/yelp-tools
 DEPENDS+=	${PYPKGPREFIX}-anytree-[0-9]*:../../devel/py-anytree
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
 
 MESON_REQD+=		0.55
@@ -42,8 +41,6 @@ SUBST_MESSAGE.python3=	Fix python binary name.
 SUBST_FILES.python3=	meson.build
 SUBST_SED.python3=	-e "s,find_installation('python3',find_installation('${PYTHONBIN}',"
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 # needed together with pkg-config by gtkdoc-depscan at runtime
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/meson/build.mk"
@@ -51,4 +48,3 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
-TEST_ENV+=	LC_ALL=en_US.UTF-8
