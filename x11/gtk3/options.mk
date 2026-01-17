@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.31 2025/01/12 20:34:54 riastradh Exp $
+# $NetBSD: options.mk,v 1.32 2026/01/17 21:41:12 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
 PKG_SUPPORTED_OPTIONS+=	doc introspection gtk3-atk-bridge cups
@@ -79,6 +79,7 @@ MESON_ARGS+=	-Dx11_backend=false
 
 PLIST_VARS+=	doc
 .if ${PKG_OPTIONS:Mdoc}
+TOOL_DEPENDS+=	gtk-doc>=1.32:../../textproc/gtk-doc
 PLIST.doc=	yes
 MESON_ARGS+=	-Dgtk_doc=true
 .else
