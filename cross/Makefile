@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2025/06/15 12:53:35 js Exp $
+# $NetBSD: Makefile,v 1.127 2026/01/17 12:13:22 tnn Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -77,6 +77,7 @@ SUBDIR+=	or1k-none-elf-binutils
 SUBDIR+=	or1k-none-elf-gcc
 SUBDIR+=	pdp11-aout-binutils
 SUBDIR+=	pdp11-aout-gcc
+SUBDIR+=	pioasm
 SUBDIR+=	powerpc-none-elf-binutils
 SUBDIR+=	powerpc-none-elf-gcc
 SUBDIR+=	ppc-morphos-binutils
