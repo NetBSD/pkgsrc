@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/10/21 13:29:48 taca Exp $
+# $NetBSD: Makefile,v 1.10 2026/01/17 15:50:53 taca Exp $
 
-DISTNAME=	contracts-0.17.2
+DISTNAME=	contracts-0.17.3
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org

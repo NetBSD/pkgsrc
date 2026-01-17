@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2024/10/21 13:29:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/01/17 15:50:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/dependabot.yml
 ${GEM_LIBDIR}/.github/workflows/code_style_checks.yaml
 ${GEM_LIBDIR}/.github/workflows/tests.yaml
 ${GEM_LIBDIR}/.gitignore
@@ -24,7 +25,8 @@ ${GEM_LIBDIR}/dependabot.yml
 ${GEM_LIBDIR}/features/README.md
 ${GEM_LIBDIR}/features/advanced/pattern_matching.feature
 ${GEM_LIBDIR}/features/basics/functype.feature
-${GEM_LIBDIR}/features/basics/pretty-print.feature
+${GEM_LIBDIR}/features/basics/pretty-print_@before_ruby_3_3.feature
+${GEM_LIBDIR}/features/basics/pretty-print_after_ruby_3_4.feature
 ${GEM_LIBDIR}/features/basics/simple_example.feature
 ${GEM_LIBDIR}/features/builtin_contracts/README.md
 ${GEM_LIBDIR}/features/builtin_contracts/and.feature
