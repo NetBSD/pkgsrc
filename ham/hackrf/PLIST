@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/01/07 20:24:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/01/17 06:25:26 adam Exp $
 bin/hackrf_biast
 bin/hackrf_clock
 bin/hackrf_cpldjtag
@@ -570,6 +570,7 @@ share/hackerRF/firmware/fpga/dsp/round.py
 share/hackerRF/firmware/fpga/dsp/sb_mac16.py
 share/hackerRF/firmware/fpga/interface/__init__.py
 share/hackerRF/firmware/fpga/interface/max586x.py
+share/hackerRF/firmware/fpga/interface/sgpio.py
 share/hackerRF/firmware/fpga/interface/spi.py
 share/hackerRF/firmware/fpga/requirements.txt
 share/hackerRF/firmware/fpga/top/ext_precision_rx.py

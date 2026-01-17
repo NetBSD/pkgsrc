@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2026/01/07 20:24:34 adam Exp $
+# $NetBSD: Makefile,v 1.21 2026/01/17 06:25:26 adam Exp $
 
-DISTNAME=	hackrf-2026.01.1
+DISTNAME=	hackrf-2026.01.2
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mossmann/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
