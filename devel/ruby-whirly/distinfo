@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/08/12 12:16:26 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2026/01/17 16:59:28 taca Exp $
 
-BLAKE2s (whirly-0.3.0.gem) = a2a67b3e0d4ed6be9bdcf9fc2a15056f92934a109847c743c45c972f3f1ac2d1
-SHA512 (whirly-0.3.0.gem) = b8272a1b2cd329982e041dea27afbe4d16216ed3bbce233420cedcfdd4483910cd9ad07d694faabf0db147eca5fe7db3a9ca14e97040dc6a7ebb030771cea7d3
-Size (whirly-0.3.0.gem) = 99840 bytes
+BLAKE2s (whirly-0.4.0.gem) = 868d35994c60b0c0ed3ca44b05f4e5cefd89f1410f8a11681b85174b303379a2
+SHA512 (whirly-0.4.0.gem) = 387d29838aadd51ab2d1d589746128a3c479b6f42c0a52a6fe52b35975d584139046b9d6f56b7934e2ec37b83fbf690baab86b65980293f18b74c8dc0e702ca0
+Size (whirly-0.4.0.gem) = 100864 bytes
