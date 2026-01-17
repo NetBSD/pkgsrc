@@ -1,19 +1,16 @@
-# $NetBSD: Makefile.common,v 1.81 2025/11/17 11:01:40 wiz Exp $
+# $NetBSD: Makefile.common,v 1.82 2026/01/17 22:35:59 wiz Exp $
 #
 # used by www/w3m/Makefile
 # used by www/w3m-img/Makefile
 
-DISTNAME=	w3m-${W3M_VERS}
+DISTNAME=	w3m-0.5.5
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_GITHUB:=tats/}
-GITHUB_TAG=	v${W3M_VERS}
+MASTER_SITES=	-https://git.sr.ht/~rkta/w3m/archive/v${PKGVERSION_NOREV}.tar.gz
 
 MAINTAINER=	uebayasi@NetBSD.org
-HOMEPAGE=	https://w3m.sourceforge.net/
-# or https://github.com/tats/w3m
-# or https://packages.qa.debian.org/w/w3m.html
-
-WRKSRC=		${WRKDIR}/w3m-${W3M_VERS:S/+/-/}
+HOMEPAGE=	https://git.sr.ht/~rkta/w3m
+# was https://github.com/tats/w3m
+# but see https://github.com/tats/w3m/issues/304
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
@@ -21,12 +18,11 @@ USE_TOOLS+=		gmake	# Needed for some combinations of options...
 USE_TOOLS+=		msgfmt
 USE_PKGLOCALEDIR=	yes
 
+WRKSRC=		${WRKDIR}/w3m-v${PKGVERSION_NOREV}
+
 # error: 'for' loop initial declarations are only allowed in C99 mode
 # needs strcasecmp, ISO C unacceptable on illumos
 FORCE_C_STD=	gnu99
-
-W3M_VERS=	0.5.3+git20230121
-W3M_PKGVERS=	${W3M_VERS:S/+git/.0./}
 
 # For w3mman, xface2xpm, cgi scripts.
 USE_TOOLS+=	perl:run pax pkg-config
@@ -65,14 +61,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 SUBST_CLASSES+=		man-ja
 SUBST_MESSAGE.man-ja=	Fixing the path to Japanese manual pages.
 SUBST_STAGE.man-ja=	pre-configure
-SUBST_FILES.man-ja=	Makefile.in config.h.dist
+SUBST_FILES.man-ja=	Makefile.in
 SUBST_SED.man-ja=	-e 's|/ja/|/ja_JP.eucJP/|g'
-
-SUBST_CLASSES+=		fh
-SUBST_MESSAGE.fh=	Rename file_handle.
-SUBST_STAGE.fh=		pre-configure
-SUBST_FILES.fh=		istream.*
-SUBST_SED.fh=		-e 's/file_handle/file_handle_rofl/g'
 
 .if ${OPSYS} == SunOS && ${OS_VARIANT} == Solaris
 LDFLAGS+=		-lm
