@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2025/10/23 20:39:08 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/01/17 21:13:49 wiz Exp $
 
 DISTNAME=	libsecret-0.20.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsecret/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -43,5 +43,4 @@ BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../lang/python/application.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
-.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
