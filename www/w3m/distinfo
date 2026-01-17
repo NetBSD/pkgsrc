@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.42 2025/07/07 00:54:38 schmonz Exp $
+$NetBSD: distinfo,v 1.43 2026/01/17 22:35:59 wiz Exp $
 
-BLAKE2s (w3m-0.5.3+git20230121.tar.gz) = 8dd724d95a676c9831ea20599767c6fec0a27e02b6487af970f749768b41967f
-SHA512 (w3m-0.5.3+git20230121.tar.gz) = f220aabf69cf11ca7560c1519a971bdb1cc0baa443b1b46cd8fca2a4defb614653dd9ba637afbf9315f3b63a349f972436348c2f93d06665573057e4232eab1c
-Size (w3m-0.5.3+git20230121.tar.gz) = 2322709 bytes
-SHA1 (patch-Makefile.in) = 42b98e9c1a57f10411a87fbdc370d3e2650749c3
-SHA1 (patch-Str.c) = 29fd80f6e80a6503967a14cb6255e261ff724dd5
-SHA1 (patch-etc.c) = af69b43ceba1e2ffd8c602dacd9272a3fb2ec5b0
-SHA1 (patch-file.c) = a93d207e25dc055d7f3fd931581790bf90e6edfa
-SHA1 (patch-fm.h) = 0338d7ac97f31325f59d056096f8789ef90a0f1d
+BLAKE2s (w3m-0.5.5.tar.gz) = b23cbaf114fc839f497d4262194767616f3e5500d87fa60a9db91e373ab750b7
+SHA512 (w3m-0.5.5.tar.gz) = ba373483355b46b2a6025e3f3241cd20ac814bd2e47199aa886e55eece7972389d3508cd0d326e89e9630c8b884ba0e3b3462f869eadcf7278115be4247d9fd6
+Size (w3m-0.5.5.tar.gz) = 2307438 bytes
+SHA1 (patch-Makefile.in) = 5cb650ec7900cb298335d1d821cb4be00ee1e38e
+SHA1 (patch-Str.c) = a756cf258622d0d41f9d90950719ce497dd8861b
+SHA1 (patch-file.c) = 033c6e0315087571a21b4c633089d46d9943182b
+SHA1 (patch-fm.h) = d01ca9c36500b8cd83055b3327eebdc2d63403c3

@@ -1,13 +1,13 @@
-$NetBSD: patch-fm.h,v 1.1 2025/07/03 10:50:37 jperkin Exp $
+$NetBSD: patch-fm.h,v 1.2 2026/01/17 22:35:59 wiz Exp $
 
 Include strings.h for bcopy().
 
---- fm.h.orig	2025-07-03 10:47:28.078773140 +0000
+--- fm.h.orig	2025-08-20 09:32:27.000000000 +0000
 +++ fm.h
-@@ -83,9 +83,7 @@ typedef int wc_ces;	/* XXX: not used */
- void bcopy(const void *, void *, int);
- void bzero(void *, int);
- #endif				/* HAVE_BCOPY */
+@@ -77,9 +77,7 @@
+ #include "terms.h"
+ #include "istream.h"
+ 
 -#ifdef __EMX__
  #include <strings.h>		/* for bzero() and bcopy() */
 -#endif
