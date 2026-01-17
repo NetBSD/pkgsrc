@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.187 2025/10/23 20:35:52 wiz Exp $
+# $NetBSD: Makefile,v 1.188 2026/01/17 21:25:59 wiz Exp $
 
 DISTNAME=	pulseaudio-17.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	https://freedesktop.org/software/pulseaudio/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -130,9 +130,6 @@ PKG_USERS=		${PULSE_USER}:${PULSE_GROUP}
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-version-script=${WRKSRC}/src/pulse/map-file
 
 .include "../../devel/meson/build.mk"
-.if ${OPSYS} != Linux && ${OPSYS} != "Darwin"
-.include "../../sysutils/consolekit/buildlink3.mk"
-.endif
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/speexdsp/buildlink3.mk"
 .include "../../databases/tdb/buildlink3.mk"
