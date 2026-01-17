@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.367 2026/01/17 16:26:13 taca Exp $
+$NetBSD: CHANGES-2026,v 1.368 2026/01/17 16:29:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -513,3 +513,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-mocha to 3.0.1 [taca 2026-01-17]
 	Updated devel/ruby-parser to 3.22.0 [taca 2026-01-17]
 	Updated devel/ruby-rake-compiler to 1.3.1 [taca 2026-01-17]
+	Updated devel/ruby-rake-compiler-dock to 1.11.1 [taca 2026-01-17]
