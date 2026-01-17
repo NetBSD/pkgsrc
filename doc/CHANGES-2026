@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.365 2026/01/17 16:12:10 taca Exp $
+$NetBSD: CHANGES-2026,v 1.366 2026/01/17 16:15:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -511,3 +511,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-contracts to 0.17.3 [taca 2026-01-17]
 	Updated devel/ruby-google-protobuf to 4.33.4 [taca 2026-01-17]
 	Updated devel/ruby-mocha to 3.0.1 [taca 2026-01-17]
+	Updated devel/ruby-parser to 3.22.0 [taca 2026-01-17]
