@@ -1,28 +1,31 @@
-@comment $NetBSD: PLIST,v 1.1 2025/11/03 05:35:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/01/17 16:29:24 taca Exp $
 bin/rake-compiler-dock${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.dockerignore
 ${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.github/workflows/publish-images.yml
+${GEM_LIBDIR}/.github/workflows/publish-images.yml.erb
 ${GEM_LIBDIR}/.github/workflows/release-images.yml
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Dockerfile.jruby
 ${GEM_LIBDIR}/Dockerfile.mri.erb
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/History.md
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/rake-compiler-dock
+${GEM_LIBDIR}/build/buildkitd.toml
 ${GEM_LIBDIR}/build/gem_helper.rb
 ${GEM_LIBDIR}/build/mk_i686.rb
 ${GEM_LIBDIR}/build/mk_musl_cross.sh
 ${GEM_LIBDIR}/build/mk_osxcross.sh
 ${GEM_LIBDIR}/build/mk_pkg_config.sh
 ${GEM_LIBDIR}/build/parallel_docker_build.rb
-${GEM_LIBDIR}/build/patches/rake-compiler-1.2.9/0004-Enable-build-of-static-libruby.patch
-${GEM_LIBDIR}/build/patches/rake-compiler-1.2.9/0005-build-miniruby-first.patch
+${GEM_LIBDIR}/build/patches/rake-compiler-1.3.1/0004-Enable-build-of-static-libruby.patch
+${GEM_LIBDIR}/build/patches/rake-compiler-1.3.1/0005-build-miniruby-first.patch
+${GEM_LIBDIR}/build/patches/rake-compiler-1.3.1/0006-ruby-4-rubyspec-capiext.patch
 ${GEM_LIBDIR}/build/rcd-env.sh
 ${GEM_LIBDIR}/build/runas
 ${GEM_LIBDIR}/build/sigfw.c
@@ -42,8 +45,8 @@ ${GEM_LIBDIR}/mingw64-ucrt/gcc-mingw-w64-only-c-c++.patch
 ${GEM_LIBDIR}/mingw64-ucrt/mingw-w64-enable-ucrt.patch
 ${GEM_LIBDIR}/rake-compiler-dock.gemspec
 ${GEM_LIBDIR}/test/env/Dockerfile.alpine
-${GEM_LIBDIR}/test/env/Dockerfile.centos
 ${GEM_LIBDIR}/test/env/Dockerfile.debian
+${GEM_LIBDIR}/test/fixtures/mig_test_rpc.defs
 ${GEM_LIBDIR}/test/rcd_test/Gemfile
 ${GEM_LIBDIR}/test/rcd_test/Rakefile
 ${GEM_LIBDIR}/test/rcd_test/ext/java/RcdTestExtService.java
@@ -55,6 +58,7 @@ ${GEM_LIBDIR}/test/rcd_test/lib/rcd_test.rb
 ${GEM_LIBDIR}/test/rcd_test/rcd_test.gemspec
 ${GEM_LIBDIR}/test/rcd_test/test/test_basic.rb
 ${GEM_LIBDIR}/test/test_environment_variables.rb
+${GEM_LIBDIR}/test/test_mig.rb
 ${GEM_LIBDIR}/test/test_parallel_docker_build.rb
 ${GEM_LIBDIR}/test/test_starter.rb
 ${GEM_LIBDIR}/test/test_versions.rb
