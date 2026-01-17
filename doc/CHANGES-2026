@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.361 2026/01/17 15:41:15 taca Exp $
+$NetBSD: CHANGES-2026,v 1.362 2026/01/17 15:49:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -507,3 +507,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added cross/pioasm version 2.2.0 [tnn 2026-01-17]
 	Updated databases/ruby-arel-helpers to 2.17.0 [taca 2026-01-17]
 	Updated devel/ruby-async to 2.35.3 [taca 2026-01-17]
+	Updated devel/ruby-byebug to 13.0.0 [taca 2026-01-17]
