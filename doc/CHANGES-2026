@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.355 2026/01/16 16:39:27 adam Exp $
+$NetBSD: CHANGES-2026,v 1.356 2026/01/17 06:27:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -499,3 +499,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-notebook to 7.5.2 [adam 2026-01-16]
 	Updated security/py-fido2 to 2.1.0 [adam 2026-01-16]
 	Updated misc/py-pbs-installer to 2026.1.14 [adam 2026-01-16]
+	Updated ham/hackrf to 2026.01.2 [adam 2026-01-17]
+	Updated finance/py-stripe to 14.2.0 [adam 2026-01-17]
