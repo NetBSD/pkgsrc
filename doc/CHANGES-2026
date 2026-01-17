@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.387 2026/01/17 21:26:17 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.388 2026/01/17 21:33:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -533,3 +533,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/scooter to 0.8.5 [pin 2026-01-17]
 	Updated security/libsecret to 0.20.5nb3 [wiz 2026-01-17]
 	Updated audio/pulseaudio to 17.0nb4 [wiz 2026-01-17]
+	Updated textproc/libxmlb to 0.3.24nb1 [wiz 2026-01-17]
