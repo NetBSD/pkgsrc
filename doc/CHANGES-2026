@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.356 2026/01/17 06:27:33 adam Exp $
+$NetBSD: CHANGES-2026,v 1.357 2026/01/17 07:38:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -501,3 +501,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-pbs-installer to 2026.1.14 [adam 2026-01-16]
 	Updated ham/hackrf to 2026.01.2 [adam 2026-01-17]
 	Updated finance/py-stripe to 14.2.0 [adam 2026-01-17]
+	Updated sysutils/yazi to 26.1.4nb1 [wiz 2026-01-17]
