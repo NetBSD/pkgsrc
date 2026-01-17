@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2026/01/17 12:12:57 tnn Exp $
+bin/pioasm
+lib/cmake/pioasm/pioasmConfig.cmake
+lib/cmake/pioasm/pioasmConfigVersion.cmake
+lib/cmake/pioasm/pioasmTargets-release.cmake
+lib/cmake/pioasm/pioasmTargets.cmake

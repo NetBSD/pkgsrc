@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/01/17 12:12:57 tnn Exp $
+
+BLAKE2s (pico-sdk-2.2.0.tar.gz) = 2e543a2a1ed5492675831eca65d54f5d4f8db837fde3501fdd2b5afe36cce2db
+SHA512 (pico-sdk-2.2.0.tar.gz) = 25882c1fefb6ca7252ee4b8bc1c26f9816d367bd276fca371724f5254271984992b53652321f1df1d2610e846d3dcdf7170c8bb2c678fb9f8fe4d942d90862d8
+Size (pico-sdk-2.2.0.tar.gz) = 2483547 bytes
