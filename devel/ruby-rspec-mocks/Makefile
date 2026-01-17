@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.45 2025/10/28 13:50:08 taca Exp $
+# $NetBSD: Makefile,v 1.46 2026/01/17 16:41:15 taca Exp $
 
-DISTNAME=	rspec-mocks-3.13.6
+DISTNAME=	rspec-mocks-3.13.7
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/rspec/rspec-mocks
+HOMEPAGE=	https://github.com/rspec
 COMMENT=	This is test-double framework for rspec
 LICENSE=	mit
 
