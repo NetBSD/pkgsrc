@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/05/17 06:18:00 taca Exp $
+$NetBSD: distinfo,v 1.14 2026/01/17 15:49:26 taca Exp $
 
-BLAKE2s (byebug-12.0.0.gem) = b9b9558684ba71b40d099e27477356941d1c12c230c1d4bf3f351db11bc5ce65
-SHA512 (byebug-12.0.0.gem) = e1edd7a628c98d4a28d5c3b8cb8b5a33ab57571d5495804ff20540844903069e043b1cd22664ac80e5fb6a2e89f06f10786e1c13ab88854d2ee06422d593e4af
-Size (byebug-12.0.0.gem) = 84992 bytes
+BLAKE2s (byebug-13.0.0.gem) = 666171314bcd11b1558ae85fa27c62d604a6ee7074a73b6754b4be9017f7f110
+SHA512 (byebug-13.0.0.gem) = 5aabc800401c55b8f9d428a7727f93bbcf1c4e6d7b26d9bbd21c5f4aca9470c4e2679a9e1a6d943b05929fad8adbdfa0c7e4a0aed4d768a0581cc7c7db027333
+Size (byebug-13.0.0.gem) = 85504 bytes
