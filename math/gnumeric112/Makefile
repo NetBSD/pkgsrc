@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.110 2026/01/07 08:47:52 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2026/01/17 22:00:46 wiz Exp $
 
 DISTNAME=	gnumeric-1.12.59
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnumeric/1.12/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnumeric.org/
 COMMENT=	Spreadsheet program from the GNOME project
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
-
-DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
