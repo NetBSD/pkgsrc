@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/08/12 12:16:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/17 16:59:28 taca Exp $
 
-DISTNAME=	whirly-0.3.0
+DISTNAME=	whirly-0.4.0
 CATEGORIES=	devel
 
 MAINTAINER=	ryoon@NetBSD.org
