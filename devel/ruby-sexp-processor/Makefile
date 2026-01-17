@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2025/09/15 15:25:25 taca Exp $
+# $NetBSD: Makefile,v 1.39 2026/01/17 16:46:26 taca Exp $
 
-DISTNAME=	sexp_processor-4.17.4
+DISTNAME=	sexp_processor-4.17.5
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel
 
