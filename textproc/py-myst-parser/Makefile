@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2026/01/06 11:18:17 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/01/17 08:47:58 adam Exp $
 
-DISTNAME=	myst_parser-4.0.1
+DISTNAME=	myst_parser-5.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/myst-parser/}
 
@@ -12,11 +11,11 @@ COMMENT=	Extended CommonMark compliant parser
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
-DEPENDS+=	${PYPKGPREFIX}-docutils>=0.19:../../textproc/py-docutils
+DEPENDS+=	${PYPKGPREFIX}-docutils>=0.20:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-markdown-it-py>=3.0:../../textproc/py-markdown-it-py
-DEPENDS+=	${PYPKGPREFIX}-mdit-py-plugins>=0.4.1:../../textproc/py-mdit-py-plugins
-DEPENDS+=	${PYPKGPREFIX}-sphinx>=7:../../textproc/py-sphinx
+DEPENDS+=	${PYPKGPREFIX}-markdown-it-py>=4.0:../../textproc/py-markdown-it-py
+DEPENDS+=	${PYPKGPREFIX}-mdit-py-plugins>=0.5:../../textproc/py-mdit-py-plugins
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=8:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
