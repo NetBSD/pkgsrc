@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.32 2025/02/23 11:18:32 wen Exp $
+$NetBSD: distinfo,v 1.33 2026/01/17 23:04:40 wen Exp $
 
-BLAKE2s (App-Cmd-0.337.tar.gz) = 1561c7c365b5286b694b892d0560d4aa499f6013a1f9cdab5110e2497b77dc57
-SHA512 (App-Cmd-0.337.tar.gz) = e06171aca8a3d318927e0ecbba97e6376c1ecd1c756686fc1a882305f4fd74f251ae8c585596ee12c3adf76160059184c4f765da4b9389b3f092dd3088a178b2
-Size (App-Cmd-0.337.tar.gz) = 50287 bytes
+BLAKE2s (App-Cmd-0.338.tar.gz) = 11ce6fc15e711274fa3beadcf3630c2737600bb5e727331af621acf7c529b735
+SHA512 (App-Cmd-0.338.tar.gz) = 4e6a462e4680f0de748d5e12c03eae99020fd03f0c81823e71302c20c437de44b7c43afce6dffca4714fa28ad9e69259f9de48f07656189ea40bb9ab6ce2a33c
+Size (App-Cmd-0.338.tar.gz) = 50670 bytes
