@@ -1,14 +1,18 @@
-# $NetBSD: options.mk,v 1.17 2024/05/04 18:39:00 tnn Exp $
+# $NetBSD: options.mk,v 1.18 2026/01/17 21:25:59 wiz Exp $
 
 .include "../../comms/lirc/available.mk"
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.pulseaudio
-PKG_SUPPORTED_OPTIONS=	avahi gsettings x11
+PKG_OPTIONS_VAR=		PKG_OPTIONS.pulseaudio
+PKG_SUPPORTED_OPTIONS=		avahi consolekit gsettings x11
 .if ${LIRC_AVAILABLE} == "yes"
-PKG_SUPPORTED_OPTIONS+=	lirc
+PKG_SUPPORTED_OPTIONS+=		lirc
 .endif
-PKG_SUGGESTED_OPTIONS=	avahi x11
-PLIST_VARS+=		avahi gsettings x11 lirc
+PKG_SUGGESTED_OPTIONS=		avahi x11
+#.if ${OPSYS} != Linux && ${OPSYS} != "Darwin"
+#PKG_SUGGESTED_OPTIONS+=	consolekit
+#.endif
+
+PLIST_VARS+=		avahi consolekit gsettings x11 lirc
 
 .include "../../mk/bsd.options.mk"
 
@@ -17,6 +21,13 @@ PLIST_VARS+=		avahi gsettings x11 lirc
 PLIST.avahi=		yes
 .else
 MESON_ARGS+=		-Davahi=disabled
+.endif
+
+.if !empty(PKG_OPTIONS:Mconsolekit)
+.include "../../sysutils/consolekit/buildlink3.mk"
+PLIST.consolekit=	yes
+.else
+MESON_ARGS+=		-Dconsolekit=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mgsettings)
