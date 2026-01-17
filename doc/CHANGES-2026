@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.372 2026/01/17 16:46:38 taca Exp $
+$NetBSD: CHANGES-2026,v 1.373 2026/01/17 16:51:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -518,3 +518,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-reline to 0.6.3 [taca 2026-01-17]
 	Updated devel/ruby-rspec-mocks to 3.13.7 [taca 2026-01-17]
 	Updated devel/ruby-sexp-processor to 4.17.5 [taca 2026-01-17]
+	Updated devel/ruby-shoulda-matchers to 7.0.1 [taca 2026-01-17]
