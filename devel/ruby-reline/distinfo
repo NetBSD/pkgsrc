@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/07/27 15:54:17 taca Exp $
+$NetBSD: distinfo,v 1.6 2026/01/17 16:38:30 taca Exp $
 
-BLAKE2s (reline-0.6.2.gem) = 9026324bee3d019322607d1dd204756ccbb4aac7ceeb364e37fb229812cbb132
-SHA512 (reline-0.6.2.gem) = eb2c98295722481a5d33fcfa5a6ac1f2dfba626dfcad5e5cf9deec2cca486f04e51d5e23b6281493453871df18dc19c33f503dad024f37678403317a7c8a6b5d
-Size (reline-0.6.2.gem) = 51712 bytes
+BLAKE2s (reline-0.6.3.gem) = 7a1795d9f1a8f3bcf3b21a6ddd36d1172931d8be546951e457867a295f407385
+SHA512 (reline-0.6.3.gem) = 7906c6ff282623036d1419657908e08de35d37116a3f7c81777016369289f7fd2c1c74ae105d3fce4a7aa163a8baac277422f69768dfe2991ccdbd8f5bfff22a
+Size (reline-0.6.3.gem) = 51712 bytes
