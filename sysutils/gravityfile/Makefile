@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/12/21 17:38:16 pin Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/17 20:58:14 pin Exp $
 
-DISTNAME=	gravityfile-0.2.1
+DISTNAME=	gravityfile-0.2.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=epistates/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
