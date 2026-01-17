@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.391 2026/01/17 22:36:08 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.392 2026/01/17 22:36:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -537,3 +537,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/gtk3 to 3.24.51nb2 [wiz 2026-01-17]
 	Updated math/gnumeric112 to 1.12.59nb4 [wiz 2026-01-17]
 	Updated www/w3m to 0.5.5 [wiz 2026-01-17]
+	Updated www/w3m-img to 0.5.5 [wiz 2026-01-17]
