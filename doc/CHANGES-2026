@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.384 2026/01/17 21:01:02 pin Exp $
+$NetBSD: CHANGES-2026,v 1.385 2026/01/17 21:02:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -530,3 +530,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/gravityfile to 0.2.2 [pin 2026-01-17]
 	Updated textproc/rumdl to 0.0.220 [pin 2026-01-17]
 	Updated graphics/wallust to 3.5.1 [pin 2026-01-17]
+	Updated textproc/scooter to 0.8.5 [pin 2026-01-17]
