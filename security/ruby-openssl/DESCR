@@ -1,0 +1,15 @@
+OpenSSL for Ruby
+
+OpenSSL for Ruby provides access to SSL/TLS and general-purpose cryptography
+based on the OpenSSL library.
+
+OpenSSL for Ruby is sometimes referred to as **openssl** in all lowercase or
+Ruby/OpenSSL for disambiguation.
+
+ Compatibility and maintenance policy
+
+OpenSSL for Ruby is released as a RubyGems gem. At the same time, it is part
+of the standard library of Ruby. This is called a default gem.
+
+Each stable branch of OpenSSL for Ruby will remain supported as long as it
+is included as a default gem in supported Ruby branches.
