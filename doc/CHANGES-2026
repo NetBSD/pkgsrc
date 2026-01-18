@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.397 2026/01/18 04:03:05 taca Exp $
+$NetBSD: CHANGES-2026,v 1.398 2026/01/18 04:05:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -543,3 +543,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/ruby-enumerable-statistics to 2.0.9 [taca 2026-01-18]
 	Updated misc/ruby-pry to 0.16.0 [taca 2026-01-18]
 	Added misc/ruby-uniform_notifier version 1.18.0 [taca 2026-01-18]
+	Updated net/ruby-amq-protocol to 2.5.0 [taca 2026-01-18]
