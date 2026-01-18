@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.672 2025/12/23 21:40:12 markd Exp $
+# $NetBSD: Makefile,v 1.673 2026/01/18 04:02:48 taca Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -346,6 +346,7 @@ SUBDIR+=	ruby-systemu
 SUBDIR+=	ruby-thread_safe
 SUBDIR+=	ruby-transaction-simple
 SUBDIR+=	ruby-typed-array
+SUBDIR+=	ruby-uniform_notifier
 SUBDIR+=	ruby-windows_error
 SUBDIR+=	rust-kanban
 SUBDIR+=	s6-portable-utils
