@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/11/03 07:30:42 taca Exp $
+# $NetBSD: Makefile,v 1.13 2026/01/18 15:24:29 taca Exp $
 
 DISTNAME=	padrino-core-${RUBY_PADRINO_VERS}
-PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,7 +9,8 @@ COMMENT=	Padrino framework core
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-padrino-support>=${RUBY_PADRINO_VERS}:../../www/ruby-padrino-support
-DEPENDS+=	${RUBY_PKGPREFIX}-sinatra3>=2.2.4<4:../../www/ruby-sinatra3
+DEPENDS+=	${RUBY_PKGPREFIX}-rackup>=2.1<3:../../www/ruby-rackup
+DEPENDS+=	${RUBY_PKGPREFIX}-sinatra>=4<5:../../www/ruby-sinatra
 DEPENDS+=	${RUBY_PKGPREFIX}-thor>=1.0<2:../../devel/ruby-thor
 
 USE_LANGUAGES=	# empty
