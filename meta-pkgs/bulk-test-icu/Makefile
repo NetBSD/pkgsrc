@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2026/01/07 14:36:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2026/01/18 09:20:22 wiz Exp $
 
-DISTNAME=	bulk-test-icu-20260107
+DISTNAME=	bulk-test-icu-20260118
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -87,7 +87,8 @@ DEPENDS+=	rspamd-[0-9]*:../../mail/rspamd
 # Python problem
 #DEPENDS+=	thunderbird78-[0-9]*:../../mail/thunderbird78
 DEPENDS+=	qalculate-[0-9]*:../../math/qalculate
-DEPENDS+=	calibre-[0-9]*:../../misc/calibre
+# conflicts with scribus over podofo
+#DEPENDS+=	calibre-[0-9]*:../../misc/calibre
 DEPENDS+=	libreoffice-[0-9]*:../../misc/libreoffice
 DEPENDS+=	sword-[0-9]*:../../misc/sword
 DEPENDS+=	yaz-[0-9]*:../../net/yaz
