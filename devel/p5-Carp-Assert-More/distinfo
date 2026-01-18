@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/07/29 12:43:37 wen Exp $
+$NetBSD: distinfo,v 1.10 2026/01/18 08:44:18 wen Exp $
 
-BLAKE2s (Carp-Assert-More-2.4.0.tar.gz) = e45ffb110f0a291e602f9068a480161656c0cc406df7795d9e44eed2740c48ad
-SHA512 (Carp-Assert-More-2.4.0.tar.gz) = a23450b10eb8402d928903fafa4538130c740fc0b2f71534e252ffd6442d5b1da6e297f41cdb797df19978d5d54f0bfc4ebc89de95d8706a1c841512525bad7b
-Size (Carp-Assert-More-2.4.0.tar.gz) = 22427 bytes
+BLAKE2s (Carp-Assert-More-2.9.0.tar.gz) = 9b9ba490b486ab31661915e230eae5597987e03f3fc11abeb95e030cb951d2e4
+SHA512 (Carp-Assert-More-2.9.0.tar.gz) = b9e6b6e0b6a0a4e80f65659e34deb5e0963c1375ab485982805dfee58922d901c1cf3fece79e20348495367903777729da3955e05f1d7546df08912ab33f7ba4
+Size (Carp-Assert-More-2.9.0.tar.gz) = 25903 bytes
