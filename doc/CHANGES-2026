@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.427 2026/01/18 08:45:17 wen Exp $
+$NetBSD: CHANGES-2026,v 1.428 2026/01/18 09:09:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -573,3 +573,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-B-Keywords to 1.29 [wen 2026-01-18]
 	Updated devel/p5-Cache-FastMmap to 1.60 [wen 2026-01-18]
 	Updated devel/p5-Carp-Assert-More to 2.9.0 [wen 2026-01-18]
+	Updated devel/p5-Devel-Cover to 1.51 [wen 2026-01-18]
