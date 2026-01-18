@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/11/03 06:01:15 taca Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/18 15:00:08 taca Exp $
 
-DISTNAME=	faraday-follow_redirects-0.4.0
+DISTNAME=	faraday-follow_redirects-0.5.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
