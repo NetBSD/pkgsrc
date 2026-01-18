@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/12/11 14:07:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/01/18 05:44:06 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE
@@ -35,14 +35,7 @@ ${GEM_LIBDIR}/lib/vault/configurable.rb
 ${GEM_LIBDIR}/lib/vault/defaults.rb
 ${GEM_LIBDIR}/lib/vault/encode.rb
 ${GEM_LIBDIR}/lib/vault/errors.rb
-${GEM_LIBDIR}/lib/vault/persistent.rb
-${GEM_LIBDIR}/lib/vault/persistent/connection.rb
-${GEM_LIBDIR}/lib/vault/persistent/pool.rb
-${GEM_LIBDIR}/lib/vault/persistent/timed_stack_multi.rb
 ${GEM_LIBDIR}/lib/vault/request.rb
 ${GEM_LIBDIR}/lib/vault/response.rb
-${GEM_LIBDIR}/lib/vault/vendor/connection_pool.rb
-${GEM_LIBDIR}/lib/vault/vendor/connection_pool/timed_stack.rb
-${GEM_LIBDIR}/lib/vault/vendor/connection_pool/version.rb
 ${GEM_LIBDIR}/lib/vault/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
