@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.50 2026/01/13 20:48:23 wiz Exp $
+# $NetBSD: options.mk,v 1.51 2026/01/18 00:42:57 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
@@ -87,6 +87,10 @@ CONFIGURE_ARGS+=	--enable-cargo-native-static
 BUILDLINK_API_DEPENDS.nghttp2+= nghttp2>=1.41.0
 BUILDLINK_API_DEPENDS.curl+= 	curl>=7.67.0
 .include "../../www/curl/buildlink3.mk"
+BUILDLINK_API_DEPENDS.openssl=	openssl>=3
+RUSTFLAGS+=     -C link-arg=-L${BUILDLINK_PREFIX.openssl}/lib
+RUSTFLAGS+=     -C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
+MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
 .include "../../security/openssl/buildlink3.mk"
 .endif
 
