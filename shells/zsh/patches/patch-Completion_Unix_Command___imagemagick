@@ -1,0 +1,13 @@
+$NetBSD: patch-Completion_Unix_Command___imagemagick,v 1.1 2026/01/18 14:12:41 ryoon Exp $
+
+--- Completion/Unix/Command/_imagemagick.orig	2025-06-17 11:31:49.990750312 +0000
++++ Completion/Unix/Command/_imagemagick
+@@ -12,7 +12,7 @@ typeset -A opt_args
+ #
+ # and certainly many other things...
+ 
+-formats=(jpg jpeg jp2 j2k jpc jpx jpf tif tiff miff ras bmp cgm dcx ps eps fig fits fpx gif mpeg pbm pgm ppm pcd pcl pdf pcx png rad rgb rgba rle sgi html shtml tga ttf uil xcf xwd xbm xpm yuv)
++formats=(jpg jpeg jp2 j2k jpc jpx jpf tif tiff miff ras bmp cgm dcx ps eps fig fits fpx gif heic mpeg pbm pgm ppm pcd pcl pdf pcx png rad rgb rgba rle sgi html shtml tga ttf uil xcf xwd xbm xpm yuv)
+ 
+ if (( $# )); then
+   _files "$@" -g "*.(#i)(${(j:|:)formats})(-.)"
