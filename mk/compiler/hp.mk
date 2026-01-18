@@ -1,4 +1,4 @@
-# $NetBSD: hp.mk,v 1.7 2009/06/02 22:32:49 joerg Exp $
+# $NetBSD: hp.mk,v 1.8 2026/01/18 21:08:07 wiz Exp $
 #
 # This is the compiler definition for the HP-UX C/aC++ compilers.
 #
@@ -33,11 +33,10 @@ PKG_CXX:=		${_HP_CXX}
 .endif
 _COMPILER_STRIP_VARS+=	${_HP_VARS}
 
-.if exists(${CXXPATH}) && !defined(CC_VERSION_STRING)
-CC_VERSION_STRING!=	${CXXPATH} -V 2>&1
-CC_VERSION=		${CC_VERSION_STRING:S/ /_/Wg}
+.if exists(${CXXPATH})
+_CC_VERSION!=		${CXXPATH} -V 2>&1
+CC_VERSION=		${_CC_VERSION:S/ /_/Wg}
 .else
-CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		hp
 .endif
 
