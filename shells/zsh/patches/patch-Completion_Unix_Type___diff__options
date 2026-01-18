@@ -1,0 +1,13 @@
+$NetBSD: patch-Completion_Unix_Type___diff__options,v 1.1 2026/01/18 14:12:41 ryoon Exp $
+
+--- Completion/Unix/Type/_diff_options.orig	2026-01-16 21:59:11.331321983 +0000
++++ Completion/Unix/Type/_diff_options
+@@ -25,7 +25,7 @@ _diff_palette() {
+   return ret
+ }
+ 
+-if _pick_variant -r variant -c $cmd gnu=GNU unix -v || [[ $OSTYPE = freebsd<12->.* ]]; then
++if _pick_variant -r variant -c $cmd gnu=GNU unix -v || [[ $OSTYPE = freebsd<12->.* ]] || [[ $OSTYPE = netbsd* ]]; then
+   # output formats
+   of="-y --side-by-side -n --rcs -e -f --ed -q --brief -c -C --context -u -U \
+   --unified --old-group-format --new-group-format --changed-group-format \
