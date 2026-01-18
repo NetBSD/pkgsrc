@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2025/02/09 14:58:24 taca Exp $
+$NetBSD: distinfo,v 1.30 2026/01/18 05:42:18 taca Exp $
 
-BLAKE2s (sshkit-1.24.0.gem) = c74b177b800ceefdd2f0fb2889042409da57aed6daba6b18835a938da1a6a10e
-SHA512 (sshkit-1.24.0.gem) = 074999525efac34381f5e2396fd38b1dbf18c278aa894d90ad7014b9a0e8c0946b138b32e4f37817052b957379af7d7d29ed103e13cb3951639d5c75ce0395ad
-Size (sshkit-1.24.0.gem) = 145920 bytes
+BLAKE2s (sshkit-1.25.0.gem) = 1c6ae56ed0889e8012cf5a1108d23c53e9932dc11c7865954b9438374e479f0d
+SHA512 (sshkit-1.25.0.gem) = a03ae80aad4bda1090d5143fe864cd96c373b85c59bb25cff80b61e51f15d5ac8e3e0ba0a346fc2b3dcfe6e47cc86be11aa308531a39a182715bcfa705792590
+Size (sshkit-1.25.0.gem) = 145920 bytes
