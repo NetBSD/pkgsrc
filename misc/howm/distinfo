@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:59:06 nia Exp $
+$NetBSD: distinfo,v 1.8 2026/01/18 15:17:10 ryoon Exp $
 
-BLAKE2s (howm-1.4.5.tar.gz) = 70b813be1457416fda5b9e8a10d3f6953d4ed7545766f1c835432df9d90c0a3a
-SHA512 (howm-1.4.5.tar.gz) = b448bf8caeaf21bf1980862ed12541bd793369494a3e321bc5b77bb99ef63cc5ed2f70c54eaa60b427489e9b3fa9b0037d5cbe06449f87af924f245b7f8f2615
-Size (howm-1.4.5.tar.gz) = 565221 bytes
+BLAKE2s (howm-1.5.6.tar.gz) = c446fa9e7499db7f82c8cbd9f2d385a3dd1f4a3a10e9c3415b0c9a2a99744b9f
+SHA512 (howm-1.5.6.tar.gz) = 6a1cf2074d8d95a90639f8050f3285f456904b0f3952c5d761257ed0001a3f9d6139ba915fce2adddbb344e71262d670e8732ddf5336861d401fe4deffef3b4b
+Size (howm-1.5.6.tar.gz) = 873398 bytes
