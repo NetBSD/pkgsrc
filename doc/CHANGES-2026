@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.470 2026/01/18 15:26:37 taca Exp $
+$NetBSD: CHANGES-2026,v 1.471 2026/01/18 15:28:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -622,3 +622,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-padrino-gen to 0.16.0 [taca 2026-01-18]
 	Updated www/ruby-padrino-mailer to 0.16.0 [taca 2026-01-18]
 	Updated www/ruby-padrino to 0.16.0 [taca 2026-01-18]
+	Updated www/ruby-pygments.rb to 4.0.0 [taca 2026-01-18]
