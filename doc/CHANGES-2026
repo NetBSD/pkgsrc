@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.429 2026/01/18 09:19:57 wen Exp $
+$NetBSD: CHANGES-2026,v 1.430 2026/01/18 09:20:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -575,3 +575,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Carp-Assert-More to 2.9.0 [wen 2026-01-18]
 	Updated devel/p5-Devel-Cover to 1.51 [wen 2026-01-18]
 	Updated devel/p5-Devel-Events to 0.10 [wen 2026-01-18]
+	Updated meta-pkgs/bulk-test-icu to 20260118 [wiz 2026-01-18]
