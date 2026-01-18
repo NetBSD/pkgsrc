@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.465 2026/01/18 15:10:57 taca Exp $
+$NetBSD: CHANGES-2026,v 1.466 2026/01/18 15:12:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -611,3 +611,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-faraday-retry to 2.4.0 [taca 2026-01-18]
 	Updated www/ruby-html-proofer to 5.2.0 [taca 2026-01-18]
 	Updated www/ruby-http_parser.rb to 0.8.1 [taca 2026-01-18]
+	Updated www/ruby-importmap-rails to 2.2.3 [taca 2026-01-18]
