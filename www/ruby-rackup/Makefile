@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/12/11 14:38:51 taca Exp $
+# $NetBSD: Makefile,v 1.4 2026/01/18 15:33:54 taca Exp $
 
-DISTNAME=	rackup-2.2.1
+DISTNAME=	rackup-2.3.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
