@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2025/12/22 21:01:47 pin Exp $
+$NetBSD: distinfo,v 1.12 2026/01/18 16:16:41 pin Exp $
 
 BLAKE2s (aho-corasick-1.1.4.crate) = 1419308c5b0745af6cfa18dd4c9639f7078f564e9dacbe2b17b03df42c393409
 SHA512 (aho-corasick-1.1.4.crate) = c77e35191b00546f5e499fab154170cedd619599e7250f92db9fba0a41c833eb426f214e58b00c5c39f8757406b33492b3241cb8cb233ce384ad0683c3ee4b62
@@ -81,9 +81,9 @@ Size (cexpr-0.6.0.crate) = 17966 bytes
 BLAKE2s (cfg-if-1.0.4.crate) = 517b7cff4f133f9b02492c0db281822fd02c24941a7aa4f9b1502895dc5e58d9
 SHA512 (cfg-if-1.0.4.crate) = 176e04df7ba783b7143bb84397b777f5c5a1305c08a5c3a218d4a66830620be89ed68992ba27686165bcd3fb2f34b2daf80b2a1d4b481ecc267c988e84d28e9d
 Size (cfg-if-1.0.4.crate) = 9360 bytes
-BLAKE2s (chess-tui-2.2.0.tar.gz) = e9f056bfb42924547f3ff65aba2f63df9d5c8f2c0dcfe04f29b406ea76e31efd
-SHA512 (chess-tui-2.2.0.tar.gz) = 0b7fb8342751ae618d38a138e864cbf7fed6033e781c9202b7f0b96ef78ec620a8403b0abe04d1bb6343a48e5a61d341f8c9b1ceb0d97d9548c42dac774f9a7e
-Size (chess-tui-2.2.0.tar.gz) = 8609470 bytes
+BLAKE2s (chess-tui-2.3.0.tar.gz) = c316af1eaa63d65ca91e3f0219335ed4a78906857a11b97cd1f12b153f7c995a
+SHA512 (chess-tui-2.3.0.tar.gz) = 48277a5d25c17aa1843280e4ad2095724c4902ce3d532e968a9725d7afa3aeb4d3c83698f32384fc3c02897649b39b8554e138861ccebb8f7fa5eeb6578ca741
+Size (chess-tui-2.3.0.tar.gz) = 8612689 bytes
 BLAKE2s (chrono-0.4.42.crate) = 72c5d8a1978ab715e15123defd74393dc4993664e1362fed0eb07fb3e93912d6
 SHA512 (chrono-0.4.42.crate) = 776b4b127c1a07ddce587aad341fa1022cebaa90ad667064809b3f83fc33aa355c811d7df445d6aae405265660deba9d8514d909391e47ea26d968bd4f24becf
 Size (chrono-0.4.42.crate) = 238174 bytes
@@ -480,9 +480,9 @@ Size (quote-1.0.41.crate) = 31408 bytes
 BLAKE2s (r-efi-5.3.0.crate) = 3a737953fd15903b6e466848b522230b19bc1520b9b900092e3f5822be416a2d
 SHA512 (r-efi-5.3.0.crate) = e748db9729dbddf215d5c37630fa272197dd2921297800209ca7bfcd6ffd8530b598b944d95547ad9723655cafdfb69b1c1fade9ba5f8c2ac5c55ec38258fdad
 Size (r-efi-5.3.0.crate) = 64532 bytes
-BLAKE2s (ratatui-0.28.1.crate) = da72c8d4c0cafd5ab7a6af4763983316656c767c7c03aa1348c10bca95529be8
-SHA512 (ratatui-0.28.1.crate) = 48aadc5e4fca22121fb2ea607e2959a27a757b7e327f73af0f5a6c2a325968db5c8b6a13c545b054a13fab014748ee5cfec2dc475f12ab208e7303605de055df
-Size (ratatui-0.28.1.crate) = 513803 bytes
+BLAKE2s (ratatui-0.29.0.crate) = 841ba8548aaa1b96b3f355c07b39438b61ae00a85506d0701d8fb53f29597802
+SHA512 (ratatui-0.29.0.crate) = 0825af0b840e83e6a4aef9e631ae8840e8f7fe4ecc80dfe24b093488a95e1710d11c9a99f92690b0028f106b3d2351949a2b64016369a1fdf822eb4a2381eeb6
+Size (ratatui-0.29.0.crate) = 543514 bytes
 BLAKE2s (redox_syscall-0.5.18.crate) = 15142008cfcffdfe12059e4c1415d354d0a1f60e4fd392dcf9ac888821a0988b
 SHA512 (redox_syscall-0.5.18.crate) = 69f1cfb215666f1243616366711dbd8cadd6bb411121f48f6e4ffd7b25479efa6f900dd072d7cc6e6fb8130d95cdb42f4c0cb4ba9e05b09b1fa676ca32932101
 Size (redox_syscall-0.5.18.crate) = 30747 bytes
@@ -705,6 +705,9 @@ Size (unicode-truncate-1.1.0.crate) = 12529 bytes
 BLAKE2s (unicode-width-0.1.14.crate) = 4ddc2fd3ee5bc866c828ff462007c04eaa776733703945469968ce59e6433fa9
 SHA512 (unicode-width-0.1.14.crate) = 3c58a18776aa82cc13c761789a47901616cd98a30356f93d7eb05ae457314209d0a66213e2bbfa5eb8b59be6beacf62438234ce8daafa31b128dbf7d5d6fcadb
 Size (unicode-width-0.1.14.crate) = 271615 bytes
+BLAKE2s (unicode-width-0.2.0.crate) = a7766e4f1abc9ab320d8207e1e06f8f89cd6babee9c03ca5fed21390f0979b18
+SHA512 (unicode-width-0.2.0.crate) = 38149ad512a44fc79b2c991c6b5667da2e8f8b442ab6bb7e4f404e7fbb034f7540c7e0e8b9e72a1ff6117b899d6034862239f43b6423fa89d55dcf489caff37d
+Size (unicode-width-0.2.0.crate) = 271509 bytes
 BLAKE2s (url-2.5.7.crate) = 4c8aaa9c6b0d6f6a0d14d111a432cf5540d47635e44db2f3d52ffdca15f14dee
 SHA512 (url-2.5.7.crate) = bef3c8fa25242615f5749428cac1ad2ca895c7f194bb3df39020d6d7697c4fadafa11046378d44a72f46e39c5f657ecdef8760fd2a36cf25d82b1de75d190999
 Size (url-2.5.7.crate) = 87907 bytes
