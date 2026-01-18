@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.423 2026/01/18 08:31:36 wen Exp $
+$NetBSD: CHANGES-2026,v 1.424 2026/01/18 08:33:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -569,3 +569,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/p5-Net-DNS to 1.54 [wiz 2026-01-18]
 	Updated security/py-asn1 to 0.6.2 [wiz 2026-01-18]
 	Added devel/p5-Test2-Plugin-IOEvents version 0.001001 [wen 2026-01-18]
+	Updated devel/p5-App-perlbrew to 1.02 [wen 2026-01-18]
