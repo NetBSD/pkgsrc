@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2025/07/04 08:48:59 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/01/18 09:04:22 wiz Exp $
 
 DISTNAME=		CGI-FormBuilder-3.20
 PKGNAME=		p5-${DISTNAME}00
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Perl5 module for building HTML forms
-HOMEPAGE=		http://www.formbuilder.org/
+HOMEPAGE=		https://metacpan.org/dist/CGI-FormBuilder
 LICENSE=		${PERL5_LICENSE}
 
 PERL5_PACKLIST=		auto/CGI/FormBuilder/.packlist
