@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/11/03 06:55:33 taca Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/18 15:36:28 taca Exp $
 
-DISTNAME=	requestjs-rails-0.0.13
+DISTNAME=	requestjs-rails-0.0.14
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
