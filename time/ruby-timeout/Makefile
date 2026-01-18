@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2025/05/27 16:05:34 taca Exp $
+# $NetBSD: Makefile,v 1.7 2026/01/18 14:34:36 taca Exp $
 
-DISTNAME=	timeout-0.4.3
+DISTNAME=	timeout-0.6.0
 CATEGORIES=	time
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,8 +10,8 @@ LICENSE=	2-clause-bsd OR ruby-license
 
 USE_LANGUAGES=	# none
 
-# Ruby 3.4.4 has timeout 0.4.3 gem.
-RUBY_VERSIONS_ACCEPTED=	32 33
+# Ruby 4.0.0 has the same version as bundled gem.
+RUBY_VERSIONS_ACCEPTED=	32 33 34
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
