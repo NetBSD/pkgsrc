@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.421 2026/01/18 06:34:01 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.422 2026/01/18 06:45:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -567,3 +567,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-File-DesktopEntry to 0.23 [wiz 2026-01-18]
 	Updated devel/p5-File-MimeInfo to 0.36 [wiz 2026-01-18]
 	Updated net/p5-Net-DNS to 1.54 [wiz 2026-01-18]
+	Updated security/py-asn1 to 0.6.2 [wiz 2026-01-18]
