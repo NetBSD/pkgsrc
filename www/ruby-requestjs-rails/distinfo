@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/11/03 06:55:33 taca Exp $
+$NetBSD: distinfo,v 1.2 2026/01/18 15:36:28 taca Exp $
 
-BLAKE2s (requestjs-rails-0.0.13.gem) = 6a57f14af7cbd843c4081aae8098f37b5a77e4ba9591fd0cfc578bde426cd11c
-SHA512 (requestjs-rails-0.0.13.gem) = 9ba9d719c9c71d16c717e2ddac87f6d42ccaa575729290c2ca03846ed17cfe00e688a5397f78a372d51e1789f02c6a714d8f054fab574f1098bb5f12e35cf82e
-Size (requestjs-rails-0.0.13.gem) = 9216 bytes
+BLAKE2s (requestjs-rails-0.0.14.gem) = 2d32939795e35fb5a24f4c548b9469963c3479729ec3326f3e4e17ead923da52
+SHA512 (requestjs-rails-0.0.14.gem) = 0a107230f8156d9e23b81c6ef6d2bcb240cde565b9329c802b72b6b9f44b92c925afa92be0933514cdc0460d9a145fece35ecddab7af0d7c8532cdeb63e53209
+Size (requestjs-rails-0.0.14.gem) = 9216 bytes
