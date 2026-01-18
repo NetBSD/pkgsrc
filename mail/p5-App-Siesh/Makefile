@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2025/07/04 08:47:17 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/01/18 09:03:19 wiz Exp $
 
 DISTNAME=	App-Siesh-0.21
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
 #MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MD/MDOM/}
 
 MAINTAINER=	dom@math.uni-bonn.de
-HOMEPAGE=	http://www.math.uni-bonn.de/people/dom/
+HOMEPAGE=	https://metacpan.org/release/MDOM/App-Siesh-0.21
 COMMENT=	Sieve Shell
 LICENSE=	${PERL5_LICENSE}
 
