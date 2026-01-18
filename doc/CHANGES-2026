@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.460 2026/01/18 15:00:20 taca Exp $
+$NetBSD: CHANGES-2026,v 1.461 2026/01/18 15:01:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -606,3 +606,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-cgi to 0.5.1 [taca 2026-01-18]
 	Added www/ruby-bullet version 8.1.0 [taca 2026-01-18]
 	Updated www/ruby-faraday-follow_redirects to 0.5.0 [taca 2026-01-18]
+	Updated www/ruby-faraday-multipart to 1.2.0 [taca 2026-01-18]
