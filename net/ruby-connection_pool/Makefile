@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2025/09/15 15:32:41 taca Exp $
+# $NetBSD: Makefile,v 1.11 2026/01/18 04:14:05 taca Exp $
 
-DISTNAME=	connection_pool-2.5.4
+DISTNAME=	connection_pool-2.5.5
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
