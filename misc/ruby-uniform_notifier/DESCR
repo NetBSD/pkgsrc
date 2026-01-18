@@ -1,0 +1,5 @@
+UniformNotifier
+
+uniform_notifier is extracted from bullet, it gives you the ability to send
+notification through rails logger, customized logger, javascript alert,
+javascript console, xmpp, airbrake, honeybadger and AppSignal.
