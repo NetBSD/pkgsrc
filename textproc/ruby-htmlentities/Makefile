@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/05/25 14:21:57 taca Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/18 14:00:19 taca Exp $
 
-DISTNAME=	htmlentities-4.3.4
+DISTNAME=	htmlentities-4.4.2
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
