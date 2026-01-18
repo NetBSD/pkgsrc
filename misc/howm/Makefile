@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2025/05/28 09:21:17 zafer Exp $
+# $NetBSD: Makefile,v 1.20 2026/01/18 15:17:10 ryoon Exp $
 
-DISTNAME=	howm-1.4.5
-PKGREVISION=	5
+DISTNAME=	howm-1.5.6
 CATEGORIES=	misc
-MASTER_SITES=	#http://howm.osdn.jp/a/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=kaorahi/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://howm.osdn.jp/
+HOMEPAGE=	https://kaorahi.github.io/howm/
 COMMENT=	Write fragmentarily and read collectively
 LICENSE=	gnu-gpl-v2
 
