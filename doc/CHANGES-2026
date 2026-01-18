@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.469 2026/01/18 15:20:44 taca Exp $
+$NetBSD: CHANGES-2026,v 1.470 2026/01/18 15:26:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -615,3 +615,10 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-loofah to 2.25.0 [taca 2026-01-18]
 	Updated misc/howm to 1.5.6 [ryoon 2026-01-18]
 	Updated www/ruby-net-http-persistent to 4.0.8 [taca 2026-01-18]
+	Updated www/ruby-padrino-support to 0.16.0 [taca 2026-01-18]
+	Updated www/ruby-padrino-helpers to 0.16.0 [taca 2026-01-18]
+	Updated www/ruby-padrino-core to 0.16.0 [taca 2026-01-18]
+	Updated www/ruby-padrino-admin to 0.16.0 [taca 2026-01-18]
+	Updated www/ruby-padrino-gen to 0.16.0 [taca 2026-01-18]
+	Updated www/ruby-padrino-mailer to 0.16.0 [taca 2026-01-18]
+	Updated www/ruby-padrino to 0.16.0 [taca 2026-01-18]
