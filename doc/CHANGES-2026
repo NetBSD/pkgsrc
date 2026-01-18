@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.406 2026/01/18 04:57:59 taca Exp $
+$NetBSD: CHANGES-2026,v 1.407 2026/01/18 05:05:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -552,3 +552,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ruby-airbrussh to 1.6.0 [taca 2026-01-18]
 	Updated security/ruby-bcrypt to 3.1.21 [taca 2026-01-18]
 	Updated security/ruby-bcrypt_pbkdf to 1.1.2 [taca 2026-01-18]
+	Updated security/ruby-metasploit-payloads to 2.0.240 [taca 2026-01-18]
