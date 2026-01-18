@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.434 2026/01/18 13:58:18 taca Exp $
+$NetBSD: CHANGES-2026,v 1.435 2026/01/18 14:00:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -580,3 +580,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/dillo to 3.2.0nb4 [leot 2026-01-18]
 	Updated textproc/ruby-commonmarker to 2.6.1 [taca 2026-01-18]
 	Updated textproc/ruby-haml to 7.2.0 [taca 2026-01-18]
+	Updated textproc/ruby-htmlentities to 4.4.2 [taca 2026-01-18]
