@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/01/04 15:33:36 taca Exp $
+# $NetBSD: Makefile,v 1.11 2026/01/18 15:24:29 taca Exp $
 
 DISTNAME=	padrino-cache-${RUBY_PADRINO_VERS}
 CATEGORIES=	www
@@ -10,11 +10,9 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-padrino-core>=${RUBY_PADRINO_VERS}:../../www/ruby-padrino-core
 DEPENDS+=	${RUBY_PKGPREFIX}-padrino-helpers>=${RUBY_PADRINO_VERS}:../../www/ruby-padrino-helpers
-DEPENDS+=	${RUBY_PKGPREFIX}-moneta>=1.1.0:../../databases/ruby-moneta
+DEPENDS+=	${RUBY_PKGPREFIX}-moneta>=1.6<2:../../databases/ruby-moneta
 
 USE_LANGUAGES=	# empty
-
-OVERRIDE_GEMSPEC+=	moneta>=1.1.0
 
 .include "../../www/ruby-padrino/Makefile.common"
 .include "../../lang/ruby/gem.mk"
