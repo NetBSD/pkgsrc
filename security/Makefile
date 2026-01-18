@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.990 2025/12/23 09:17:26 markd Exp $
+# $NetBSD: Makefile,v 1.991 2026/01/18 05:27:21 taca Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -606,6 +606,7 @@ SUBDIR+=	ruby-nexpose
 SUBDIR+=	ruby-oauth
 SUBDIR+=	ruby-oauth-tty
 SUBDIR+=	ruby-openid
+SUBDIR+=	ruby-openssl
 SUBDIR+=	ruby-openssl-ccm
 SUBDIR+=	ruby-openssl-cmac
 SUBDIR+=	ruby-openvas-omp
