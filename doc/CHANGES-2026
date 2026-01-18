@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.448 2026/01/18 14:30:34 taca Exp $
+$NetBSD: CHANGES-2026,v 1.449 2026/01/18 14:30:58 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -594,3 +594,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ruby-treetop to 1.6.18 [taca 2026-01-18]
 	Updated textproc/ruby-unicode-emoji to 4.2.0 [taca 2026-01-18]
 	Updated textproc/ruby-multi_json to 1.19.1 [taca 2026-01-18]
+	Updated audio/libopus to 1.6.1 [ryoon 2026-01-18]
