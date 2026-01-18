@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/12/11 15:34:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/01/18 15:10:47 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/ruby_http_parser.${RUBY_DLEXT}
@@ -81,10 +81,6 @@ ${GEM_LIBDIR}/http_parser.rb.gemspec
 ${GEM_LIBDIR}/lib/http/parser.rb
 ${GEM_LIBDIR}/lib/http_parser.rb
 ${GEM_LIBDIR}/lib/ruby_http_parser.${RUBY_DLEXT}
-${GEM_LIBDIR}/spec/parser_spec.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/support/requests.json
-${GEM_LIBDIR}/spec/support/responses.json
 ${GEM_LIBDIR}/tasks/compile.rake
 ${GEM_LIBDIR}/tasks/fixtures.rake
 ${GEM_LIBDIR}/tasks/spec.rake
