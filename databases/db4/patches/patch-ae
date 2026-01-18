@@ -1,12 +1,59 @@
-$NetBSD: patch-ae,v 1.3 2025/12/16 10:19:11 hauke Exp $
+$NetBSD: patch-ae,v 1.4 2026/01/18 20:59:43 hauke Exp $
 
-* adds support for mutexes on aarch64
-* fixes build failure on MIPS arch with -mips1.
-* adds mutex support for sparc v[789]
+(1) adds support for mutexes on aarch64
 
---- dbinc/mutex_int.h.orig	2025-12-15 13:35:56.838500475 +0000
+(2) adds mutex support for sparc v[789]
+
+(3) fixes build failure on MIPS arch with -mips1.
+
+
+--- dbinc/mutex_int.h.orig	2010-04-12 20:25:22.000000000 +0000
 +++ dbinc/mutex_int.h
-@@ -751,14 +751,24 @@ typedef unsigned char tsl_t;
+@@ -491,6 +491,43 @@ typedef unsigned char tsl_t;
+ #endif
+ 
+ /*********************************************************************
++ * AARCH64/gcc assembly.
++ *********************************************************************/
++
++#ifdef HAVE_MUTEX_AARCH64_GCC_ASSEMBLY
++typedef unsigned int tsl_t;
++
++#ifdef LOAD_ACTUAL_MUTEX_CODE
++static inline int
++MUTEX_SET(tsl_t *tsl) {
++	register tsl_t *__l = tsl;
++	register tsl_t __r;
++	__asm__ volatile(
++		"1:	ldxr	%w0,[%1]\n"
++		"	cbnz	%w0,2f\n"
++		"	stxr	%w0,%w2,[%1]\n"
++		"	cbnz	%w0,1b\n"
++		"	dmb	st\n"
++		"2:"
++		: "=&r"(__r)
++		: "r"(__l), "r"(1)
++		: "memory");
++
++	return !__r;
++}
++
++static inline int
++MUTEX_UNSET(tsl_t *tsl) {
++	__asm__ volatile(
++		"	dsb	sy\n" ::: "memory");
++	return *tsl = 0;
++}
++
++#define	MUTEX_INIT(tsl)		(MUTEX_UNSET(tsl), 0)
++#endif
++#endif
++
++/*********************************************************************
+  * HPPA/gcc assembly.
+  *********************************************************************/
+ #ifdef HAVE_MUTEX_HPPA_GCC_ASSEMBLY
+@@ -714,14 +751,24 @@ typedef unsigned char tsl_t;
  	!__r;								\
  })
  
@@ -32,3 +79,18 @@ $NetBSD: patch-ae,v 1.3 2025/12/16 10:19:11 hauke Exp $
  #endif
  #endif
  
+@@ -778,10 +825,14 @@ MUTEX_SET(tsl_t *tsl) {
+ static inline void
+ MUTEX_UNSET(tsl_t *tsl) {
+ 	__asm__ volatile(
++	       "       .set push           \n"
++	       "       .set mips2          \n"
+ 	       "       .set noreorder      \n"
++	       "       .set nomacro        \n"
+ 	       "       sync                \n"
+ 	       "       sw      $0, %0      \n"
+ 	       "       .set reorder        \n"
++	       "       .set pop            \n"
+ 	       : "=m" (*tsl)
+ 	       : "m" (*tsl)
+ 	       : "memory");
