@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2025/05/27 16:13:45 taca Exp $
+# $NetBSD: Makefile,v 1.20 2026/01/18 15:07:06 taca Exp $
 
-DISTNAME=	html-proofer-5.0.10
+DISTNAME=	html-proofer-5.2.0
 CATEGORIES=	www
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -20,6 +20,12 @@ DEPENDS+=	${RUBY_PKGPREFIX}-zeitwerk>=2.5<3:../../devel/ruby-zeitwerk
 USE_LANGUAGES=	# none
 
 RUBYGEM_OPTIONS+=	--format-executable
+
+.include "../../lang/ruby/rubyversion.mk"
+# for older Ruby
+.if ${RUBY_VER} < 40
+DEPENDS+=	${RUBY_PKGPREFIX}-benchmark>=0.5<0.6:../../benchmarks/ruby-benchmark
+.endif
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
