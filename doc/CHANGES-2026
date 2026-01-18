@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.432 2026/01/18 13:00:49 leot Exp $
+$NetBSD: CHANGES-2026,v 1.433 2026/01/18 13:56:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -578,3 +578,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated meta-pkgs/bulk-test-icu to 20260118 [wiz 2026-01-18]
 	Updated textproc/libfyaml to 0.9.3 [wiz 2026-01-18]
 	Updated www/dillo to 3.2.0nb4 [leot 2026-01-18]
+	Updated textproc/ruby-commonmarker to 2.6.1 [taca 2026-01-18]
