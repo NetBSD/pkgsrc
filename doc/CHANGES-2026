@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.450 2026/01/18 14:31:30 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.451 2026/01/18 14:34:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -596,3 +596,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ruby-multi_json to 1.19.1 [taca 2026-01-18]
 	Updated audio/libopus to 1.6.1 [ryoon 2026-01-18]
 	Updated audio/libopusenc to 0.3 [ryoon 2026-01-18]
+	Updated time/ruby-timeout to 0.6.0 [taca 2026-01-18]
