@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.400 2026/01/18 04:16:56 taca Exp $
+$NetBSD: CHANGES-2026,v 1.401 2026/01/18 04:47:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -546,3 +546,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ruby-amq-protocol to 2.5.0 [taca 2026-01-18]
 	Updated net/ruby-connection_pool to 2.5.5 [taca 2026-01-18]
 	Updated net/ruby-dnsruby to 1.73.1 [taca 2026-01-18]
+	Updated net/ruby-recog to 3.1.24 [taca 2026-01-18]
