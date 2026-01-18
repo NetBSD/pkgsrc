@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2023/12/17 14:46:54 taca Exp $
+$NetBSD: distinfo,v 1.17 2026/01/18 04:55:05 taca Exp $
 
-BLAKE2s (bcrypt-3.1.20.gem) = 6b9be5a6e2db137cc5aa2fbc8367afdaf9d52dd7fa07a727e0b93d44c2807462
-SHA512 (bcrypt-3.1.20.gem) = 96e64bab4c7d3d0e79ea21bdb866ee8c2890377e3b2173b861f80eb634268d8456872696ce84dce9cbaddc4b005a4dc20b1c50e40c22dde1c637d91d2f8b4284
-Size (bcrypt-3.1.20.gem) = 47104 bytes
+BLAKE2s (bcrypt-3.1.21.gem) = 07c1226325135fa91280391c6cb8b2a3e70970240e5b08dc7a427377fbd9ea3b
+SHA512 (bcrypt-3.1.21.gem) = 469c7bd8717fbda0b04bce8ddce3dedf74c3b5234f55a3542f70cb646dae4bf93b85c0ac0881590b830bff5b347a271f1d6261ca79f08c8cee462d4a9a9162be
+Size (bcrypt-3.1.21.gem) = 47616 bytes
