@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.415 2026/01/18 05:42:28 taca Exp $
+$NetBSD: CHANGES-2026,v 1.416 2026/01/18 05:44:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -561,3 +561,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ruby-rex-arch to 0.1.19 [taca 2026-01-18]
 	Updated security/ruby-rex-core to 0.1.35 [taca 2026-01-18]
 	Updated security/ruby-sshkit to 1.25.0 [taca 2026-01-18]
+	Updated security/ruby-vault to 0.19.0 [taca 2026-01-18]
