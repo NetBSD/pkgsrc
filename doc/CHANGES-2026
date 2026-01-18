@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.474 2026/01/18 15:38:09 taca Exp $
+$NetBSD: CHANGES-2026,v 1.475 2026/01/18 15:40:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -626,3 +626,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-rackup to 2.3.1 [taca 2026-01-18]
 	Updated www/ruby-requestjs-rails to 0.0.14 [taca 2026-01-18]
 	Updated www/ruby-rouge to 4.7.0 [taca 2026-01-18]
+	Updated www/ruby-selenium-webdriver to 4.39.0 [taca 2026-01-18]
