@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.712 2026/01/10 13:00:41 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.713 2026/01/18 11:16:55 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29349,3 +29349,57 @@ py{27,310,311,312,313,314}-werkzeug<3.1.5	input-validation	https://nvd.nist.gov/
 wget2<2.2.1	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-69194
 wget2<2.2.1	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-69195
 py{27,310,311,312,313,314}-aiohttp<3.13.3	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-69226
+avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-68276
+avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-68468
+avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-68471
+cpp-httplib<0.30.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-22776
+freeimage-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-70968
+freerdp2<3.20.1	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2026-22851
+freerdp2<3.20.1	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-22852
+freerdp2<3.20.1	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-22853
+freerdp2<3.20.1	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-22854
+freerdp2<3.20.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-22855
+freerdp2<3.20.1	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2026-22856
+freerdp2<3.20.1	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2026-22857
+freerdp2<3.20.1	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-22858
+freerdp2<3.20.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-22859
+php{56,74,81,82,83,84}-glpi<10.0.21	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2025-64516
+php{56,74,81,82,83,84}-glpi>=11.0.0<11.0.3	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-66417
+gpac-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-70298
+gpac-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-70299
+gpac-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-70302
+gpac-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-70303
+gpac-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-70304
+gpac-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-70305
+gpac-[0-9]*	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-70307
+gpac-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-70308
+gpac-[0-9]*	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-70309
+gpac-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-70310
+gradle<9.3.0	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-22816
+gradle<9.3.0	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-22865
+libsndfile-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-56226
+libsoup-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-0716
+libxml2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-0989
+libxml2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-0990
+libxml2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-0992
+metabase<56.3	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2026-22805
+mit-krb5<1.22	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-24528
+opencolorio<2.5.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-15506
+png<1.6.54	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-22695
+png<1.6.54	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-22801
+py{27,310,311,312,313,314}-asn1<0.6.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-23490
+raylib-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-15533
+raylib-[0-9]*	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-15534
+rt4<4.4.9	csv-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-61873
+rt5<5.0.9	csv-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-61873
+slurm-wlm<224.11.5	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-43904
+php{56,74,81,82,83,84}-typo3<13.4.23	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-59020
+php{56,74,81,82,83,84}-typo3<13.4.23	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-59021
+php{56,74,81,82,83,84}-typo3<13.4.23	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-59022
+php{56,74,81,82,83,84}-typo3<13.4.23	code-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0859
+vlc<3.0.22	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-51602
+#vsftpd-[0-9]*	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-14242 # specific to Red Hat
+wireshark<4.6.3	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-0959
+wireshark<4.6.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-0960
+wireshark<4.6.3	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-0961
+wireshark<4.6.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-0962
