@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/08/28 05:50:37 taca Exp $
+# $NetBSD: Makefile,v 1.4 2026/01/18 05:33:58 taca Exp $
 
-DISTNAME=	openssl-ccm-1.2.3
+DISTNAME=	openssl-ccm-1.3.0
 CATEGORIES=	security
 
 MAINTAINER=	minskim@NetBSD.org
