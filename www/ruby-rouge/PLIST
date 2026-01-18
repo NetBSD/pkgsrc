@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2025/08/11 15:50:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.25 2026/01/18 15:37:59 taca Exp $
 bin/rougify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -75,11 +75,13 @@ ${GEM_LIBDIR}/lib/rouge/demos/gdscript
 ${GEM_LIBDIR}/lib/rouge/demos/ghc-cmm
 ${GEM_LIBDIR}/lib/rouge/demos/ghc-core
 ${GEM_LIBDIR}/lib/rouge/demos/gherkin
+${GEM_LIBDIR}/lib/rouge/demos/gjs
 ${GEM_LIBDIR}/lib/rouge/demos/glsl
 ${GEM_LIBDIR}/lib/rouge/demos/go
 ${GEM_LIBDIR}/lib/rouge/demos/gradle
 ${GEM_LIBDIR}/lib/rouge/demos/graphql
 ${GEM_LIBDIR}/lib/rouge/demos/groovy
+${GEM_LIBDIR}/lib/rouge/demos/gts
 ${GEM_LIBDIR}/lib/rouge/demos/hack
 ${GEM_LIBDIR}/lib/rouge/demos/haml
 ${GEM_LIBDIR}/lib/rouge/demos/handlebars
@@ -325,11 +327,13 @@ ${GEM_LIBDIR}/lib/rouge/lexers/ghc_cmm.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/ghc_core.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/gherkin.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/gherkin/keywords.rb
+${GEM_LIBDIR}/lib/rouge/lexers/gjs.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/glsl.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/go.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/gradle.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/graphql.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/groovy.rb
+${GEM_LIBDIR}/lib/rouge/lexers/gts.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/hack.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/haml.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/handlebars.rb
