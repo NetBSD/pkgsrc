@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2025/09/17 17:08:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/01/18 04:16:41 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
 ${GEM_LIBDIR}/.github/FUNDING.yml
@@ -15,6 +15,7 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/RELEASE_NOTES.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/SIGNED_UPDATES
+${GEM_LIBDIR}/cache_delay.rb
 ${GEM_LIBDIR}/demo/axfr.rb
 ${GEM_LIBDIR}/demo/check_soa.rb
 ${GEM_LIBDIR}/demo/check_zone.rb
@@ -27,6 +28,7 @@ ${GEM_LIBDIR}/demo/rubydig.rb
 ${GEM_LIBDIR}/demo/to_resolve.txt
 ${GEM_LIBDIR}/demo/trace_dns.rb
 ${GEM_LIBDIR}/dnsruby.gemspec
+${GEM_LIBDIR}/fd.ruby
 ${GEM_LIBDIR}/lib/dnsruby.rb
 ${GEM_LIBDIR}/lib/dnsruby/DNS.rb
 ${GEM_LIBDIR}/lib/dnsruby/bit_mapping.rb
