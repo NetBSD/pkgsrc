@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.443 2026/01/18 14:12:52 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.444 2026/01/18 14:13:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -589,3 +589,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ruby-rqrcode_core to 2.1.0 [taca 2026-01-18]
 	Updated textproc/ruby-rqrcode to 3.1.1 [taca 2026-01-18]
 	Updated shells/zsh to 5.9nb4 [ryoon 2026-01-18]
+	Updated textproc/ruby-simple-rss to 2.1.0 [taca 2026-01-18]
