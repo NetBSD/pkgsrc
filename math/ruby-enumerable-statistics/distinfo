@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/05/26 15:33:07 taca Exp $
+$NetBSD: distinfo,v 1.3 2026/01/18 03:53:26 taca Exp $
 
-BLAKE2s (enumerable-statistics-2.0.8.gem) = fe0c3a401d50401b068d10cdbd48114d4147f8d520ee1f060b499bba0e185a74
-SHA512 (enumerable-statistics-2.0.8.gem) = 8f9344110c8a0b79ef615a61bec095c85f8ffaeec844c15b0f7dc27c8cc0e061a4ea05dc45fa2187896973e69f159914ac360f02a1b385635c97c3135056c357
-Size (enumerable-statistics-2.0.8.gem) = 358912 bytes
+BLAKE2s (enumerable-statistics-2.0.9.gem) = 8f13380bb2933a7ea8862f11d23b3bd3073e30e9521c9005b31d1e0db9c44f4d
+SHA512 (enumerable-statistics-2.0.9.gem) = 63d1f8c95eec448d9f4b82b175b5e23903a3d288a3f30b0769645fa67789f6922598fdccefc1798c30ce789a21991bc67d5b638c3041fb2ba689acb39388d975
+Size (enumerable-statistics-2.0.9.gem) = 359936 bytes

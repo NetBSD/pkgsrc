@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/31 13:05:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/01/18 03:53:26 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/enumerable/statistics/extension.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
+${GEM_LIBDIR}/.github/dependabot.yml
 ${GEM_LIBDIR}/.github/workflows/ci.yml
+${GEM_LIBDIR}/.github/workflows/release.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.yardopts
