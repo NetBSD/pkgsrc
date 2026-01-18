@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.118 2025/08/31 06:57:44 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2026/01/18 06:33:54 wiz Exp $
 
-DISTNAME=		Net-DNS-1.53
+DISTNAME=		Net-DNS-1.54
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		net perl5
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
-MASTER_SITES+=		http://www.net-dns.org/download/
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NL/NLNETLABS/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.net-dns.org/
@@ -13,7 +12,6 @@ LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-Digest-HMAC>=1.0:../../security/p5-Digest-HMAC
 DEPENDS+=		p5-Net-IP>=1.20:../../net/p5-Net-IP
-
 TEST_DEPENDS+=		p5-Net-DNS-SEC-[0-9]*:../../security/p5-Net-DNS-SEC
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.p5-Net-DNS
@@ -31,6 +29,7 @@ MAKE_PARAMS+=		--no-IPv6-tests
 .endif
 
 .if !empty(PKG_OPTIONS:Monline-tests)
+ALLOW_NETWORK_ACCESS=	yes
 MAKE_PARAMS+=		--online-tests
 .else
 MAKE_PARAMS+=		--no-online-tests
