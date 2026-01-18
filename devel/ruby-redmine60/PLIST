@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/08/11 08:38:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/01/18 15:51:11 taca Exp $
 bin/redmine60_generate_secret_token${RUBY_SUFFIX}.sh
 bin/redmine60_load_default_data${RUBY_SUFFIX}.sh
 bin/redmine60_migrate_db${RUBY_SUFFIX}.sh
@@ -1670,6 +1670,8 @@ ${RM_DIR}/test/fixtures/files/configuration/empty.yml
 ${RM_DIR}/test/fixtures/files/configuration/no_default.yml
 ${RM_DIR}/test/fixtures/files/configuration/overrides.yml
 ${RM_DIR}/test/fixtures/files/hello.js
+${RM_DIR}/test/fixtures/files/hello.pdf
+${RM_DIR}/test/fixtures/files/hello.ps
 ${RM_DIR}/test/fixtures/files/hg-export.diff
 ${RM_DIR}/test/fixtures/files/import_dates.csv
 ${RM_DIR}/test/fixtures/files/import_dates_ja.csv
@@ -1693,6 +1695,7 @@ ${RM_DIR}/test/fixtures/files/testfile.md
 ${RM_DIR}/test/fixtures/files/testfile.textile
 ${RM_DIR}/test/fixtures/files/testfile.txt
 ${RM_DIR}/test/fixtures/files/unclosed_quoted_field.csv
+${RM_DIR}/test/fixtures/files/with_pdf_magic.ps
 ${RM_DIR}/test/fixtures/groups_users.yml
 ${RM_DIR}/test/fixtures/issue_categories.yml
 ${RM_DIR}/test/fixtures/issue_relations.yml
@@ -2087,6 +2090,7 @@ ${RM_DIR}/test/unit/lib/redmine/scm/adapters/subversion_adapter_test.rb
 ${RM_DIR}/test/unit/lib/redmine/search_test.rb
 ${RM_DIR}/test/unit/lib/redmine/syntax_highlighting/rouge_test.rb
 ${RM_DIR}/test/unit/lib/redmine/themes_test.rb
+${RM_DIR}/test/unit/lib/redmine/thumbnail_test.rb
 ${RM_DIR}/test/unit/lib/redmine/unified_diff_test.rb
 ${RM_DIR}/test/unit/lib/redmine/utils/date_calculation.rb
 ${RM_DIR}/test/unit/lib/redmine/views/builders/json_test.rb
