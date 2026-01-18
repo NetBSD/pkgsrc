@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2025/07/04 08:45:26 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2026/01/18 09:05:11 wiz Exp $
 
 DISTNAME=	Config-General-2.67
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Config/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.daemon.de/ConfigGeneral
+HOMEPAGE=	https://codeberg.org/scip/Config-General/
 COMMENT=	Perl Generic Config module
 LICENSE=	artistic-2.0
 
