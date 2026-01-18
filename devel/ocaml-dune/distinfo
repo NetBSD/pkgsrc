@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.16 2026/01/11 18:09:04 alnsn Exp $
+$NetBSD: distinfo,v 1.17 2026/01/18 21:50:46 wiz Exp $
 
-BLAKE2s (dune-3.20.2.tar.gz) = 97c40f8ee15e66359f5df0192edc1a65b375fc9d71d15c2b379cab0cbd31fafb
-SHA512 (dune-3.20.2.tar.gz) = efb4376e03a3e760ee230c22ba8ac788623382437d9e3551fdd6bacdca1c6aa2db90246feb011d3d0e7ba3afa47161ebd06c80cfb24e357a82f7764bf003e355
-Size (dune-3.20.2.tar.gz) = 3051854 bytes
+BLAKE2s (dune-3.21.0.tar.gz) = e96694d48bb0a544738be8f4273325e7bf570e02fd4130576a826447f7cfd6b2
+SHA512 (dune-3.21.0.tar.gz) = ba1ceb5774e7358ae87781853d4a7916980c6a345458407786561b71b02f3a9a19890c9c93000bef095951710d0460553b18375d156b019c0cdc4259cbffc910
+Size (dune-3.21.0.tar.gz) = 3430620 bytes
 SHA1 (patch-otherlibs_configurator_src_v1.ml) = 74ddbf037c59ed81eb858042463fa5016027d9b8
 SHA1 (patch-otherlibs_stdune_src_readdir.c) = 931f784972ddd7f364e9dfe004f41669fd560225
 SHA1 (patch-vendor_notty_src-unix_native_winsize.c) = d970c142e55e217477a54f11801e2d2365e12e7f
+SHA1 (patch-vendor_ocaml-lmdb_lmdb__stubs.c) = e7744a7e008c72753644da4fc2a54cfef5872d43
+SHA1 (patch-vendor_ocaml-lmdb_mdb.c) = 9c46b39da5dd5bb9db7501a7818edf52503cbc1a

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/01/11 18:09:04 alnsn Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/01/18 21:50:46 wiz Exp $
 bin/dune
 doc/dune/CHANGES.md
 doc/dune/LICENSE.md
@@ -30,6 +30,7 @@ man/man1/dune-pkg.1
 man/man1/dune-printenv.1
 man/man1/dune-promote.1
 man/man1/dune-promotion.1
+man/man1/dune-rocq.1
 man/man1/dune-rpc.1
 man/man1/dune-rules.1
 man/man1/dune-runtest.1
