@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/11/03 06:04:31 taca Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/18 15:12:12 taca Exp $
 
-DISTNAME=	importmap-rails-2.2.2
+DISTNAME=	importmap-rails-2.2.3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
