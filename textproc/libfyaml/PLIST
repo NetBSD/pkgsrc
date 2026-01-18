@@ -1,18 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2022/12/08 19:16:20 khorben Exp $
-bin/fy-compose
-bin/fy-dump
-bin/fy-filter
-bin/fy-join
-bin/fy-testsuite
+@comment $NetBSD: PLIST,v 1.2 2026/01/18 10:50:26 wiz Exp $
 bin/fy-tool
-bin/fy-ypath
 include/libfyaml.h
-lib/libfyaml.la
+lib/cmake/libfyaml/libfyaml-config-version.cmake
+lib/cmake/libfyaml/libfyaml-config.cmake
+lib/cmake/libfyaml/libfyaml-targets-noconfig.cmake
+lib/cmake/libfyaml/libfyaml-targets.cmake
+lib/libfyaml.so
+lib/libfyaml.so.0
+lib/libfyaml.so.${PKGVERSION}
 lib/pkgconfig/libfyaml.pc
-man/man1/fy-compose.1
-man/man1/fy-dump.1
-man/man1/fy-filter.1
-man/man1/fy-join.1
-man/man1/fy-testsuite.1
-man/man1/fy-tool.1
-man/man1/fy-ypath.1
