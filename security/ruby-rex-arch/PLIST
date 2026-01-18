@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/11 13:40:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/01/18 05:37:13 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -10,6 +10,16 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/cortex.yaml
 ${GEM_LIBDIR}/lib/rex/arch.rb
+${GEM_LIBDIR}/lib/rex/arch/aarch64.rb
+${GEM_LIBDIR}/lib/rex/arch/amd64.rb
+${GEM_LIBDIR}/lib/rex/arch/arm.rb
+${GEM_LIBDIR}/lib/rex/arch/loongarch64.rb
+${GEM_LIBDIR}/lib/rex/arch/mips32.rb
+${GEM_LIBDIR}/lib/rex/arch/mips64.rb
+${GEM_LIBDIR}/lib/rex/arch/ppc32.rb
+${GEM_LIBDIR}/lib/rex/arch/ppc64.rb
+${GEM_LIBDIR}/lib/rex/arch/riscv32.rb
+${GEM_LIBDIR}/lib/rex/arch/riscv64.rb
 ${GEM_LIBDIR}/lib/rex/arch/sparc.rb
 ${GEM_LIBDIR}/lib/rex/arch/version.rb
 ${GEM_LIBDIR}/lib/rex/arch/x86.rb
