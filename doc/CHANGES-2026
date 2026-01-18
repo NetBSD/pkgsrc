@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.445 2026/01/18 14:15:01 taca Exp $
+$NetBSD: CHANGES-2026,v 1.446 2026/01/18 14:26:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -591,3 +591,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/zsh to 5.9nb4 [ryoon 2026-01-18]
 	Updated textproc/ruby-simple-rss to 2.1.0 [taca 2026-01-18]
 	Updated textproc/ruby-tilt to 2.7.0 [taca 2026-01-18]
+	Updated textproc/ruby-treetop to 1.6.18 [taca 2026-01-18]
