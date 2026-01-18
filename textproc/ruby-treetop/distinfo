@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2025/02/09 15:03:43 taca Exp $
+$NetBSD: distinfo,v 1.16 2026/01/18 14:26:18 taca Exp $
 
-BLAKE2s (treetop-1.6.14.gem) = 8d0bb84dfddc4409cdaf6191d324ef0af5ef15891dce898d9a41904428b26745
-SHA512 (treetop-1.6.14.gem) = fb94284a25ef1f9ba99c6300cd61c9b1cf44c3cceb811e248b81c33fb1e0b999d573edaf55321e3ebeb186a1436c74c0726175ac9645df59ea2b9e5e836b55ee
-Size (treetop-1.6.14.gem) = 91136 bytes
+BLAKE2s (treetop-1.6.18.gem) = 84749fefe6066c3ce70818d5a89e151a42164453dfa2a6002329255e9a208279
+SHA512 (treetop-1.6.18.gem) = f45a7f3c7134f6ea564a7e8c7fa38d9cd6627b32db3bfee7ff0c512f5b6145433e3bb5605907260c2d6d54615fdffd1a185d234f5ca3c87340016b3b6a8b41bd
+Size (treetop-1.6.18.gem) = 91648 bytes
