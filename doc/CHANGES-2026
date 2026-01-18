@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.418 2026/01/18 06:21:14 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.419 2026/01/18 06:27:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -564,3 +564,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ruby-vault to 0.19.0 [taca 2026-01-18]
 	Updated sysutils/ruby-capistrano to 3.20.0 [taca 2026-01-18]
 	Updated www/w3m to 0.5.5nb1 [wiz 2026-01-18]
+	Updated devel/p5-File-DesktopEntry to 0.23 [wiz 2026-01-18]
