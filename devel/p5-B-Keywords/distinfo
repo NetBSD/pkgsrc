@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2024/07/29 12:38:57 wen Exp $
+$NetBSD: distinfo,v 1.21 2026/01/18 08:36:12 wen Exp $
 
-BLAKE2s (B-Keywords-1.27.tar.gz) = c84d2fa954c8bef8a5cf24dee65ecdacb734e85bc2b3f5224b10348d061527f9
-SHA512 (B-Keywords-1.27.tar.gz) = f846cbc6f045a8cc7cb9f7d74a50e927ba66b7060dc0f77c096f15fdb0d8959599dc8c2024eacea9ba298eac42bbfb887f6ca8b749531d8c08962de673d21854
-Size (B-Keywords-1.27.tar.gz) = 14216 bytes
+BLAKE2s (B-Keywords-1.29.tar.gz) = 23447d6a6a625679452049d37d52f67d54253736ed81a08b0ac5f2c083d3bd5e
+SHA512 (B-Keywords-1.29.tar.gz) = 72473bdde53302cd6618e130fbcf6c4449412a101aca0d9a74240f027d646f3a77cf7f9e920fe463491b8494b222b2abf387f712e4a4f5cb0ce53cfe484da609
+Size (B-Keywords-1.29.tar.gz) = 14319 bytes
