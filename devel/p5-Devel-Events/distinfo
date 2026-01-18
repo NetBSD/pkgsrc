@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:16:26 nia Exp $
+$NetBSD: distinfo,v 1.8 2026/01/18 09:18:49 wen Exp $
 
-BLAKE2s (Devel-Events-0.09.tar.gz) = 8281ad91514968bd46f5902f3ab228c9c11f5d2f19ef2595ce7324ec2f0fca46
-SHA512 (Devel-Events-0.09.tar.gz) = 3832a8fb80a8293f6b7aba3c594ffe252c5e3f88417df2c40b1129907955b8bb4146cf834a191fd239eff8ed08779c9988b0f68fd3e0a34f0ef7c8a05b8d8cb4
-Size (Devel-Events-0.09.tar.gz) = 42192 bytes
+BLAKE2s (Devel-Events-0.10.tar.gz) = 2242b0684cd37ce2366ca1f50e7617a7e8f6f15b76f6d666561d89fc2b4b9af1
+SHA512 (Devel-Events-0.10.tar.gz) = d8f4af0929600b5a2d50753a48422db489d1dcd5cb0b8d78ff1eeb84b25ad884a3e92b939092f1ef99f35c01ad7b1e0e6147f09c452857a1fbf88bc1bf1ca376
+Size (Devel-Events-0.10.tar.gz) = 43778 bytes
