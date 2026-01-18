@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2025/11/03 03:44:03 taca Exp $
+# $NetBSD: Makefile,v 1.51 2026/01/18 14:48:00 taca Exp $
 
-DISTNAME=	aws-sdk-s3-1.202.0
+DISTNAME=	aws-sdk-s3-1.212.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,7 +9,7 @@ COMMENT=	AWS SDK for Ruby - Amazon S3
 LICENSE=	apache-2.0
 
 DEPENDS+=	${RUBY_PKGPREFIX}-aws-sdk-kms>=1<2:../../www/ruby-aws-sdk-kms
-#DEPENDS+=	${RUBY_PKGPREFIX}-aws-sdk-core>=3.234.0<4:../../www/ruby-aws-sdk-core
+#DEPENDS+=	${RUBY_PKGPREFIX}-aws-sdk-core>=3.241.4<4:../../www/ruby-aws-sdk-core
 #DEPENDS+=	${RUBY_PKGPREFIX}-aws-sigv4>=1.5<2:../../www/ruby-aws-sigv4
 
 USE_LANGUAGES=		# none

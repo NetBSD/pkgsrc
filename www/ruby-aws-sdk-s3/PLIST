@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/11/03 03:44:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/01/18 14:48:00 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -47,6 +47,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-s3/encryption/materials.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/encryption/utils.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV2/client.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV2/decrypt_handler.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV2/decryption.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV2/default_cipher_provider.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV2/default_key_provider.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV2/encrypt_handler.rb
@@ -58,7 +59,22 @@ ${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV2/key_provider.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV2/kms_cipher_provider.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV2/materials.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV2/utils.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV3/client.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV3/decrypt_handler.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV3/decryption.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV3/default_cipher_provider.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV3/default_key_provider.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV3/encrypt_handler.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV3/errors.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV3/io_auth_decrypter.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV3/io_decrypter.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV3/io_encrypter.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV3/key_provider.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV3/kms_cipher_provider.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV3/materials.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/encryptionV3/utils.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/encryption_v2.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/encryption_v3.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/endpoint_parameters.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/endpoint_provider.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/endpoints.rb
