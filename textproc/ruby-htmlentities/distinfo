@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:23:23 nia Exp $
+$NetBSD: distinfo,v 1.4 2026/01/18 14:00:19 taca Exp $
 
-BLAKE2s (htmlentities-4.3.4.gem) = ba61858e20ce76e7092e97a9c13ed772ce1e4dee91c7b9a22fa76a56d5666111
-SHA512 (htmlentities-4.3.4.gem) = 0163d6c014ffebb4ee9bdb15d32884c8d6af60681f240d3f0177811d37647776b8f8fd0aa4f1c7559403f36a5538ce8da6926bc16cc8105bd6eed5c180db700b
-Size (htmlentities-4.3.4.gem) = 31744 bytes
+BLAKE2s (htmlentities-4.4.2.gem) = 532d03b9adbf595b2ed75ecafbb77e9b63a8fca83e9d834024558938471a4106
+SHA512 (htmlentities-4.4.2.gem) = c9a9a44eb5fc6a9a0c03ce560600952178901dab74d1eab57b977cf073c3388850b948688b4c78f3513125a88e2dd8f2f103efd3d0057f4bc72d74eab0d74760
+Size (htmlentities-4.4.2.gem) = 28160 bytes
