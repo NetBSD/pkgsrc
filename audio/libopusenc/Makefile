@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/12/22 23:18:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/01/18 14:30:28 ryoon Exp $
 
-DISTNAME=	libopusenc-0.2.1
-PKGREVISION=	2
+DISTNAME=	libopusenc-0.3
 CATEGORIES=	audio
 MASTER_SITES=	https://downloads.xiph.org/releases/opus/
 
