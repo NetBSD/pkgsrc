@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2025/03/03 20:29:27 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/01/18 17:00:44 ryoon Exp $
 
 DISTNAME=	rel-${PKGNAME_NOREV:C/\./-/g}
 PKGNAME=	opendmarc-1.4.2
@@ -15,9 +15,10 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
-DEPENDS+=	p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
 DEPENDS+=	p5-Switch-[0-9]*:../../lang/p5-Switch
 DEPENDS+=	p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
+
+.include "options.mk"
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	perl autoconf automake pkg-config
