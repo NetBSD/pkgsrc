@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2025/12/22 21:01:47 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2026/01/18 16:16:41 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.21
@@ -159,7 +159,7 @@ CARGO_CRATE_DEPENDS+=	proc-macro-crate-3.4.0
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.103
 CARGO_CRATE_DEPENDS+=	quote-1.0.41
 CARGO_CRATE_DEPENDS+=	r-efi-5.3.0
-CARGO_CRATE_DEPENDS+=	ratatui-0.28.1
+CARGO_CRATE_DEPENDS+=	ratatui-0.29.0
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.5.18
 CARGO_CRATE_DEPENDS+=	redox_users-0.4.6
 CARGO_CRATE_DEPENDS+=	regex-1.12.2
@@ -234,6 +234,7 @@ CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.22
 CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.12.0
 CARGO_CRATE_DEPENDS+=	unicode-truncate-1.1.0
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.14
+CARGO_CRATE_DEPENDS+=	unicode-width-0.2.0
 CARGO_CRATE_DEPENDS+=	url-2.5.7
 CARGO_CRATE_DEPENDS+=	utf8_iter-1.0.4
 CARGO_CRATE_DEPENDS+=	utf8parse-0.2.2

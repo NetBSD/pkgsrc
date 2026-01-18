@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/12/22 21:01:47 pin Exp $
+# $NetBSD: Makefile,v 1.12 2026/01/18 16:16:41 pin Exp $
 
-DISTNAME=	chess-tui-2.2.0
+DISTNAME=	chess-tui-2.3.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=thomas-mauran/}
 
@@ -14,11 +14,10 @@ LICENSE=	mit
 USE_TOOLS+=	pkg-config perl gmake
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.alsa-lib}/lib
 
-DEPENDS+=	alsa-plugins-oss-[0-9]*:../../audio/alsa-plugins-oss
+CARGO_NO_DEFAULT_FEATURES=	YES
+CARGO_FEATURES+=		chess-tui
 
 .include "../../lang/rust/cargo.mk"
-.include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
