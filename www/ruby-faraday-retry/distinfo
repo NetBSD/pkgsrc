@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/08/11 15:40:51 taca Exp $
+$NetBSD: distinfo,v 1.8 2026/01/18 15:04:26 taca Exp $
 
-BLAKE2s (faraday-retry-2.3.2.gem) = 140be2c068e0f6d2d4735d9e8c75c0eb61d1b64526993c26503ba371f1721942
-SHA512 (faraday-retry-2.3.2.gem) = d53188915dd6157c7b0cbe69838da0f0dd083a97983abc12c1dd29a2709769792e7d9976daac60fac36c1c8f0a70dccfcc5cdde29e5c24b15ab23a765ce2a29e
-Size (faraday-retry-2.3.2.gem) = 11776 bytes
+BLAKE2s (faraday-retry-2.4.0.gem) = 52367e59625e2502471d03f98d4d6109dde36f65ddbe0c3c317e09f1e7845c5b
+SHA512 (faraday-retry-2.4.0.gem) = 17602a0456c86463e89a538fd150ecaed78ee449f47e6187bf5757d6bea9254e35a85611ef7ea5ea0c825faf55f3e1e92eccb1baec694c40bdf7bf9407f3f57a
+Size (faraday-retry-2.4.0.gem) = 11776 bytes
