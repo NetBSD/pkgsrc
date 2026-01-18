@@ -1,4 +1,4 @@
-# $NetBSD: pcc.mk,v 1.10 2023/12/12 16:41:49 gdt Exp $
+# $NetBSD: pcc.mk,v 1.11 2026/01/18 21:08:07 wiz Exp $
 #
 # This is the compiler definition for the PCC compiler.
 #
@@ -59,10 +59,8 @@ _LINKER_RPATH_FLAG=	-R
 _COMPILER_RPATH_FLAG=	-Wl,-R
 
 .if exists(${CCPATH})
-CC_VERSION_STRING!=	${CCPATH} -v 2>&1 || ${TRUE}
 CC_VERSION!=		${CCPATH} -v 2>&1 | ${GREP} -E '^(pcc|Portable C Compiler)'
 .else
-CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		pcc
 .endif
 

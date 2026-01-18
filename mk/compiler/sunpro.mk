@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.50 2021/11/29 16:14:23 jperkin Exp $
+# $NetBSD: sunpro.mk,v 1.51 2026/01/18 21:08:07 wiz Exp $
 #
 # This is the compiler definition for the SUNWspro C compiler.
 #
@@ -81,10 +81,8 @@ _COMPILER_RPATH_FLAG=	-Wl,-R
 # XXX: What about the versions of the other compilers? Fortran and C++?
 # XXX: should be moved to compiler.mk.
 .if exists(${CCPATH})
-CC_VERSION_STRING!=	${CCPATH} -V 2>&1 || ${TRUE}
 CC_VERSION!=		${CCPATH} -V 2>&1 | ${GREP} '^cc'
 .else
-CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		cc: Sun C
 .endif
 

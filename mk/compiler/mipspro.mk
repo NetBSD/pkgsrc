@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.42 2011/08/22 09:18:29 cheusov Exp $
+# $NetBSD: mipspro.mk,v 1.43 2026/01/18 21:08:07 wiz Exp $
 #
 # This is the compiler definition for the MIPSpro C compiler.
 #
@@ -44,10 +44,8 @@ _COMPILER_STRIP_VARS+=	${_MIPSPRO_VARS}
 
 .if exists(${CCPATH})
 # MIPSpro Compilers: Version 7.3.1.2m
-CC_VERSION_STRING!=	${CCPATH} -version 2>&1 || ${TRUE}
 CC_VERSION!=		${CCPATH} -version 2>&1 | ${GREP} '^MIPSpro'
 .else
-CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		MIPSpro Compilers
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: ccc.mk,v 1.20 2019/04/20 16:32:42 rillig Exp $
+# $NetBSD: ccc.mk,v 1.21 2026/01/18 21:08:07 wiz Exp $
 #
 # This is the compiler definition for the Compaq C Compilers.
 #
@@ -33,11 +33,9 @@ PKG_CXX:=		${_CCC_CXX}
 .endif
 _COMPILER_STRIP_VARS+=	${_CCC_VARS}
 
-.if exists(${CCPATH}) && !defined(CC_VERSION_STRING)
-CC_VERSION_STRING!=	${CCPATH} -V 2>&1 | ${AWK} '{print; exit(0);}'
+.if exists(${CCPATH})
 CC_VERSION!=		${CCPATH} -V 2>&1 | ${AWK} '{print "CCC-"$$3; exit(0);}'
 .else
-CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		CCC
 .endif
 

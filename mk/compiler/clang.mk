@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.46 2025/04/09 11:53:18 adam Exp $
+# $NetBSD: clang.mk,v 1.47 2026/01/18 21:08:07 wiz Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -47,11 +47,6 @@ CLANG_VERSION=		0
 .  endif
 CC_VERSION=		clang-${CLANG_VERSION}
 .endif
-
-#
-# TODO: CC_VERSION_STRING is obsolete and should be removed at some point.
-#
-CC_VERSION_STRING=	${CC_VERSION}
 
 _COMPILER_ABI_FLAG.32=	-m32
 _COMPILER_ABI_FLAG.64=	-m64
