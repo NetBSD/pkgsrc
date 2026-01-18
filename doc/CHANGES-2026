@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.452 2026/01/18 14:41:20 taca Exp $
+$NetBSD: CHANGES-2026,v 1.453 2026/01/18 14:43:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -598,3 +598,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/libopusenc to 0.3 [ryoon 2026-01-18]
 	Updated time/ruby-timeout to 0.6.0 [taca 2026-01-18]
 	Updated www/ruby-aws-partitions to 1.1206.0 [taca 2026-01-18]
+	Updated www/ruby-aws-sdk-core to 3.241.4 [taca 2026-01-18]
