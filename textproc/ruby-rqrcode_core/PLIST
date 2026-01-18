@@ -1,16 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2025/05/18 03:54:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/01/18 14:07:56 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.github/FUNDING.yml
-${GEM_LIBDIR}/.github/workflows/ruby.yml
-${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CHANGELOG.md
-${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/bin/console
-${GEM_LIBDIR}/bin/setup
 ${GEM_LIBDIR}/lib/rqrcode_core.rb
 ${GEM_LIBDIR}/lib/rqrcode_core/qrcode.rb
 ${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_8bit_byte.rb
@@ -25,5 +17,4 @@ ${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_rs_block.rb
 ${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_segment.rb
 ${GEM_LIBDIR}/lib/rqrcode_core/qrcode/qr_util.rb
 ${GEM_LIBDIR}/lib/rqrcode_core/version.rb
-${GEM_LIBDIR}/rqrcode_core.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
