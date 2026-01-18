@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/01/18 08:28:27 wen Exp $
+
+BLAKE2s (Test2-Plugin-IOEvents-0.001001.tar.gz) = c851dcd2cafec71d169ce0bd1278ad114e2bef717bb81583b81908e6b0ca4673
+SHA512 (Test2-Plugin-IOEvents-0.001001.tar.gz) = 4f8c14635e763133c9397cc5a51b74b85959fee67bf98b637ad1c512320535527c4bedfb1718f807ed52eefe3331d1de86b83d69c4860301f15842100077c5ae
+Size (Test2-Plugin-IOEvents-0.001001.tar.gz) = 11710 bytes
