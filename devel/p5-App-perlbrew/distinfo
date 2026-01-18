@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2025/04/19 12:35:23 wen Exp $
+$NetBSD: distinfo,v 1.30 2026/01/18 08:33:05 wen Exp $
 
-BLAKE2s (App-perlbrew-1.01.tar.gz) = 9dad06df715a0359d424d44671cd952b7795781af54c06e9a94834c9346ca9dd
-SHA512 (App-perlbrew-1.01.tar.gz) = 944b47bdf60975abb2779e4cbecdc470c87891a76a024359737f9b6444270c57b323d6832979f7aca7d2a38d579b0cca84773aef595b228c7948034ae9614234
-Size (App-perlbrew-1.01.tar.gz) = 89218 bytes
+BLAKE2s (App-perlbrew-1.02.tar.gz) = 5118e3e508d083f66c04c0765618959b7f24de523834659811c7ebc534b3b24d
+SHA512 (App-perlbrew-1.02.tar.gz) = 2ec56ba16f5325cb25789cd9f404ced0368f0049bc5f5d755695afad215e5c8d5f38545c0eb868301988e47e1d840d7b539f4d4eedbc8de642bb972e7983a9b3
+Size (App-perlbrew-1.02.tar.gz) = 90379 bytes
