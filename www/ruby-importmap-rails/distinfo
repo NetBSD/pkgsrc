@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/11/03 06:04:31 taca Exp $
+$NetBSD: distinfo,v 1.2 2026/01/18 15:12:12 taca Exp $
 
-BLAKE2s (importmap-rails-2.2.2.gem) = 6103fdce3879ab00ed0c44f15ad3934ac0230766f628321464ea8714011fa1c2
-SHA512 (importmap-rails-2.2.2.gem) = 7087211e49aa0e0da657f1f49494e23fb75abab72be4d66f7aac2607defe6c7c09c0088254984c8c7fcf550ba7ab08dacf6e53f0b15c5308e7ce7913e883782c
-Size (importmap-rails-2.2.2.gem) = 20992 bytes
+BLAKE2s (importmap-rails-2.2.3.gem) = 78edd2fdc9f31c3adaa80883462b3eabaa12d8e7398f94ab9b04d44cc4e9adba
+SHA512 (importmap-rails-2.2.3.gem) = a48acf6184d22b98c93c52ee4ab4bdf089475db87abaea87262ef893ece3c18a1cd7cf10ffd79df2d4b44f3827fcddbdb60be2b0fe20a8a1664f2a21def014af
+Size (importmap-rails-2.2.3.gem) = 20992 bytes
