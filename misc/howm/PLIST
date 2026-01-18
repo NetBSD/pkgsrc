@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/08/10 11:28:42 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/01/18 15:17:10 ryoon Exp $
 share/doc/howm/CL-HOWM.ja.rd
 share/doc/howm/OLD.rd
 share/doc/howm/README-j.html
@@ -10,10 +10,7 @@ share/doc/howm/come.png
 share/doc/howm/go.png
 share/doc/howm/index-j.html
 share/doc/howm/index.html
-share/doc/howm/s-cat.png
-share/doc/howm/s-menu.png
-share/doc/howm/s-screen-shot.png
-share/doc/howm/s-search.png
+share/doc/howm/screenshot.png
 share/doc/howm/todo.png
 share/doc/howm/updown.png
 ${EMACS_LISPPREFIX}/howm/action-lock.el
@@ -56,6 +53,8 @@ ${EMACS_LISPPREFIX}/howm/howm-view.el
 ${EMACS_LISPPREFIX}/howm/howm-view.elc
 ${EMACS_LISPPREFIX}/howm/howm.el
 ${EMACS_LISPPREFIX}/howm/howm.elc
+${EMACS_LISPPREFIX}/howm/iigrep.el
+${EMACS_LISPPREFIX}/howm/iigrep.elc
 ${EMACS_LISPPREFIX}/howm/illusion.el
 ${EMACS_LISPPREFIX}/howm/illusion.elc
 ${EMACS_LISPPREFIX}/howm/riffle.el
