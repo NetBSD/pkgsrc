@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.404 2026/01/18 04:53:52 taca Exp $
+$NetBSD: CHANGES-2026,v 1.405 2026/01/18 04:55:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -550,3 +550,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ruby-recog to 3.1.25 [taca 2026-01-18]
 	Updated print/ruby-pdf-reader to 2.15.1 [taca 2026-01-18]
 	Updated security/ruby-airbrussh to 1.6.0 [taca 2026-01-18]
+	Updated security/ruby-bcrypt to 3.1.21 [taca 2026-01-18]
