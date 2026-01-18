@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/02/09 15:06:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/01/18 14:02:32 taca Exp $
 bin/de-gfm${RUBY_SUFFIX}
 bin/doilit${RUBY_SUFFIX}
 bin/echars${RUBY_SUFFIX}
@@ -33,6 +33,7 @@ ${GEM_LIBDIR}/bin/kramdown-rfc2629
 ${GEM_LIBDIR}/data/encoding-fallbacks.txt
 ${GEM_LIBDIR}/data/kramdown-rfc2629.erb
 ${GEM_LIBDIR}/data/math.json
+${GEM_LIBDIR}/data/rfcxml.xslt
 ${GEM_LIBDIR}/kramdown-rfc2629.gemspec
 ${GEM_LIBDIR}/lib/kramdown-rfc/autolink-iref-cleanup.rb
 ${GEM_LIBDIR}/lib/kramdown-rfc/command.rb
