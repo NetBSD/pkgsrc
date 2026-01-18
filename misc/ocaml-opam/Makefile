@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.59 2026/01/07 08:48:02 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2026/01/18 21:34:16 wiz Exp $
 
-VERSION=	2.1.3
-GITHUB_PROJECT=	opam
-DISTNAME=	${GITHUB_PROJECT}-${VERSION}
+DISTNAME=	opam-2.1.3
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
+GITHUB_PROJECT=	opam
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://opam.ocaml.org/
 COMMENT=	OCaml package manager
 LICENSE=	gnu-lgpl-v3
+
+DEPENDS+=	curl-[0-9]*:../../www/curl
+
 MAKE_JOBS_SAFE=	no
 
 USE_LANGUAGES+=	c++
@@ -23,14 +25,10 @@ OCAML_FINDLIB_DIRS+=	opam-installer opam-solver
 OPAM_INSTALL_FILES=	opam opam-installer opam-solver
 
 .include "../../devel/ocaml-cmdliner/buildlink3.mk"
-.include "../../devel/ocaml-extlib/buildlink3.mk"
 .include "../../devel/ocaml-re/buildlink3.mk"
 .include "../../devel/ocamlgraph/buildlink3.mk"
 .include "../../misc/dose3/buildlink3.mk" # with ocamlgraph option
 .include "../../misc/ocaml-cudf/buildlink3.mk"
 .include "../../misc/ocaml-opam-file-format/buildlink3.mk"
-.include "../../textproc/ocaml-jsonm/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
-
 .include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
