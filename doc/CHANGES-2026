@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.479 2026/01/18 15:51:22 taca Exp $
+$NetBSD: CHANGES-2026,v 1.480 2026/01/18 16:16:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -631,3 +631,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-webrick to 1.9.2 [taca 2026-01-18]
 	Updated devel/ruby-redmine51 to 5.1.11 [taca 2026-01-18]
 	Updated devel/ruby-redmine60 to 6.0.8 [taca 2026-01-18]
+	Updated games/chess-tui to 2.3.0 [pin 2026-01-18]
