@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.457 2026/01/18 14:54:00 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.458 2026/01/18 14:56:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -603,3 +603,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-aws-sdk-kms to 1.121.0 [taca 2026-01-18]
 	Updated www/ruby-aws-sdk-s3 to 1.212.0 [taca 2026-01-18]
 	Updated print/qpdf to 12.3.0 [ryoon 2026-01-18]
+	Updated www/ruby-cgi to 0.5.1 [taca 2026-01-18]
