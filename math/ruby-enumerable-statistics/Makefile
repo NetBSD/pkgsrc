@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/05/26 15:33:07 taca Exp $
+# $NetBSD: Makefile,v 1.4 2026/01/18 03:53:26 taca Exp $
 
-DISTNAME=	enumerable-statistics-2.0.8
+DISTNAME=	enumerable-statistics-2.0.9
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
