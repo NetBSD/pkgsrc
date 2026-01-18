@@ -1,4 +1,4 @@
-# $NetBSD: icc.mk,v 1.8 2011/05/19 22:37:55 alnsn Exp $
+# $NetBSD: icc.mk,v 1.9 2026/01/18 21:08:07 wiz Exp $
 #
 # This is the compiler definition for the Intel compilers.
 #
@@ -53,11 +53,9 @@ _LINKER_RPATH_FLAG=	-Wl,-R
 _COMPILER_RPATH_FLAG=	-Wl,-R
 
 .if exists(${CCPATH})
-CC_VERSION_STRING!=	${CCPATH} -V 2>&1 | ${GREP} '^Intel'
 _CC_VERSION!=		${CCPATH} -v 2>&1 || ${TRUE}
 CC_VERSION=		Intel C++ Compiler ${_CC_VERSION}
 .else
-CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		Intel C++ Compiler
 .endif
 
