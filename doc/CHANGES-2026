@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.472 2026/01/18 15:34:06 taca Exp $
+$NetBSD: CHANGES-2026,v 1.473 2026/01/18 15:36:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -624,3 +624,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-padrino to 0.16.0 [taca 2026-01-18]
 	Updated www/ruby-pygments.rb to 4.0.0 [taca 2026-01-18]
 	Updated www/ruby-rackup to 2.3.1 [taca 2026-01-18]
+	Updated www/ruby-requestjs-rails to 0.0.14 [taca 2026-01-18]
