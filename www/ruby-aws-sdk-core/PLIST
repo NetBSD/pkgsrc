@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/05/12 14:24:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/01/18 14:43:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -66,6 +66,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/log/formatter.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/log/handler.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/log/param_filter.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/log/param_formatter.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/login_credentials.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/lru_cache.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/pageable_response.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/pager.rb
@@ -198,6 +199,17 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/xml/parser/ox_engine.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/xml/parser/parsing_error.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/xml/parser/rexml_engine.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/xml/parser/stack.rb
+${GEM_LIBDIR}/lib/aws-sdk-signin.rb
+${GEM_LIBDIR}/lib/aws-sdk-signin/client.rb
+${GEM_LIBDIR}/lib/aws-sdk-signin/client_api.rb
+${GEM_LIBDIR}/lib/aws-sdk-signin/customizations.rb
+${GEM_LIBDIR}/lib/aws-sdk-signin/endpoint_parameters.rb
+${GEM_LIBDIR}/lib/aws-sdk-signin/endpoint_provider.rb
+${GEM_LIBDIR}/lib/aws-sdk-signin/endpoints.rb
+${GEM_LIBDIR}/lib/aws-sdk-signin/errors.rb
+${GEM_LIBDIR}/lib/aws-sdk-signin/plugins/endpoints.rb
+${GEM_LIBDIR}/lib/aws-sdk-signin/resource.rb
+${GEM_LIBDIR}/lib/aws-sdk-signin/types.rb
 ${GEM_LIBDIR}/lib/aws-sdk-sso.rb
 ${GEM_LIBDIR}/lib/aws-sdk-sso/client.rb
 ${GEM_LIBDIR}/lib/aws-sdk-sso/client_api.rb
