@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.11 2026/01/18 05:26:52 taca Exp $
+
+BLAKE2s (openssl-3.3.2.gem) = 62a8900013da571c0b251cdc1d72a6b847a5524ea63ce322658de22ac711b6b0
+SHA512 (openssl-3.3.2.gem) = 2abf41cb52f6911595e46e60daba7fdd0814203638cfe11a887898db0b2d0fc7f1fa815a5d3a2a587047535c79eed73bf7ee9ad9555053a02f2f72b3ece59945
+Size (openssl-3.3.2.gem) = 207872 bytes
