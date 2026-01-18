@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2025/01/02 05:36:40 taca Exp $
+# $NetBSD: Makefile,v 1.19 2026/01/18 03:56:51 taca Exp $
 
-DISTNAME=	pry-0.15.2
+DISTNAME=	pry-0.16.0
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,6 +14,12 @@ DEPENDS+=	${RUBY_PKGPREFIX}-coderay>=1.1.0<2.0:../../textproc/ruby-coderay
 RUBYGEM_OPTIONS+=	--format-executable
 
 USE_LANGUAGES=	# none
+
+.include "../../lang/ruby/rubyversion.mk"
+
+.if ${RUBY_VER} < 34
+DEPENDS+=	${RUBY_PKGPREFIX}-reline>=0.6.0:../../devel/ruby-reline
+.endif
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
