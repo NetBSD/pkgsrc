@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2026/01/12 11:03:55 mef Exp $
+# $NetBSD: Makefile.common,v 1.34 2026/01/19 19:25:40 gutteridge Exp $
 # used by www/libcurl-gnutls/Makefile
 
 DISTNAME=	curl-8.18.0
@@ -23,8 +23,6 @@ USE_TOOLS+=		nroff perl
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_ICONV=	no
-
-BUILDLINK_API_DEPENDS.openssl+=	openssl>=3.0
 
 # Some systems use bundles instead of directories; this needs configuring
 # because curl doesn't use default validation.
