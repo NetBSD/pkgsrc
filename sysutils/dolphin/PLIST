@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/02/06 11:17:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/01/19 10:08:23 markd Exp $
 bin/dolphin
 bin/servicemenuinstaller
 include/Dolphin/KVersionControlPlugin
@@ -10,16 +10,18 @@ lib/cmake/DolphinVcs/DolphinVcsConfig.cmake
 lib/cmake/DolphinVcs/DolphinVcsConfigVersion.cmake
 lib/cmake/DolphinVcs/DolphinVcsTargets-noconfig.cmake
 lib/cmake/DolphinVcs/DolphinVcsTargets.cmake
-lib/libdolphinprivate.so.5
-lib/libdolphinprivate.so.5.0.0
+lib/kconf_update_bin/dolphin_25.04_update_statusandlocationbarssettings
+lib/libdolphinprivate.so.${PKGVERSION}
+lib/libdolphinprivate.so.6
 lib/libdolphinvcs.so
-lib/libdolphinvcs.so.5
-lib/libdolphinvcs.so.5.0.0
+lib/libdolphinvcs.so.${PKGVERSION}
+lib/libdolphinvcs.so.6
 lib/systemd/user/plasma-dolphin.service
-qt5/plugins/dolphin/kcms/kcm_dolphingeneral.${RUBY_DLEXT}
-qt5/plugins/dolphin/kcms/kcm_dolphinnavigation.${RUBY_DLEXT}
-qt5/plugins/dolphin/kcms/kcm_dolphinviewmodes.${RUBY_DLEXT}
-qt5/plugins/kf5/parts/dolphinpart.${RUBY_DLEXT}
+qt6/plugins/dolphin/kcms/kcm_dolphingeneral.so
+qt6/plugins/dolphin/kcms/kcm_dolphinviewmodes.so
+qt6/plugins/kf6/kfileitemaction/movetonewfolderitemaction.so
+qt6/plugins/kf6/kfileitemaction/setfoldericonitemaction.so
+qt6/plugins/kf6/parts/dolphinpart.so
 share/applications/org.kde.dolphin.desktop
 share/config.kcfg/dolphin_compactmodesettings.kcfg
 share/config.kcfg/dolphin_contentdisplaysettings.kcfg
@@ -149,6 +151,8 @@ share/doc/HTML/pt_BR/dolphin/toolbar.png
 share/doc/HTML/pt_BR/dolphin/viewproperties-dialog.png
 share/doc/HTML/ru/dolphin/index.cache.bz2
 share/doc/HTML/ru/dolphin/index.docbook
+share/doc/HTML/sl/dolphin/index.cache.bz2
+share/doc/HTML/sl/dolphin/index.docbook
 share/doc/HTML/sr/dolphin/index.cache.bz2
 share/doc/HTML/sr/dolphin/index.docbook
 share/doc/HTML/sr@latin/dolphin/index.cache.bz2
@@ -207,11 +211,17 @@ share/doc/HTML/uk/dolphin/toolbar-view-appearance.png
 share/doc/HTML/uk/dolphin/toolbar.png
 share/doc/HTML/uk/dolphin/viewproperties-dialog.png
 share/dolphin/dolphinpartactions.desktop
+share/icons/hicolor/scalable/apps/org.kde.dolphin.svg
 share/kconf_update/dolphin_detailsmodesettings.upd
+share/kconf_update/dolphin_replace_view_mode_with_view_settings_in_toolbar.py
+share/kconf_update/dolphin_replace_view_mode_with_view_settings_in_toolbar.upd
+share/kconf_update/dolphin_statusandlocationbarssettings.upd
 share/kglobalaccel/org.kde.dolphin.desktop
 share/knsrcfiles/servicemenu.knsrc
 share/locale/ar/LC_MESSAGES/dolphin.mo
 share/locale/ar/LC_MESSAGES/dolphin_servicemenuinstaller.mo
+share/locale/ast/LC_MESSAGES/dolphin.mo
+share/locale/ast/LC_MESSAGES/dolphin_servicemenuinstaller.mo
 share/locale/az/LC_MESSAGES/dolphin.mo
 share/locale/az/LC_MESSAGES/dolphin_servicemenuinstaller.mo
 share/locale/be/LC_MESSAGES/dolphin.mo
@@ -248,7 +258,6 @@ share/locale/eu/LC_MESSAGES/dolphin_servicemenuinstaller.mo
 share/locale/fa/LC_MESSAGES/dolphin.mo
 share/locale/fi/LC_MESSAGES/dolphin.mo
 share/locale/fi/LC_MESSAGES/dolphin_servicemenuinstaller.mo
-share/locale/fi/LC_SCRIPTS/dolphin/dolphin.js
 share/locale/fr/LC_MESSAGES/dolphin.mo
 share/locale/fr/LC_MESSAGES/dolphin_servicemenuinstaller.mo
 share/locale/fy/LC_MESSAGES/dolphin.mo
@@ -257,6 +266,7 @@ share/locale/gl/LC_MESSAGES/dolphin.mo
 share/locale/gl/LC_MESSAGES/dolphin_servicemenuinstaller.mo
 share/locale/gu/LC_MESSAGES/dolphin.mo
 share/locale/he/LC_MESSAGES/dolphin.mo
+share/locale/he/LC_MESSAGES/dolphin_servicemenuinstaller.mo
 share/locale/hi/LC_MESSAGES/dolphin.mo
 share/locale/hi/LC_MESSAGES/dolphin_servicemenuinstaller.mo
 share/locale/hne/LC_MESSAGES/dolphin.mo
@@ -318,6 +328,8 @@ share/locale/ro/LC_MESSAGES/dolphin.mo
 share/locale/ro/LC_MESSAGES/dolphin_servicemenuinstaller.mo
 share/locale/ru/LC_MESSAGES/dolphin.mo
 share/locale/ru/LC_MESSAGES/dolphin_servicemenuinstaller.mo
+share/locale/sa/LC_MESSAGES/dolphin.mo
+share/locale/sa/LC_MESSAGES/dolphin_servicemenuinstaller.mo
 share/locale/se/LC_MESSAGES/dolphin.mo
 share/locale/si/LC_MESSAGES/dolphin.mo
 share/locale/sk/LC_MESSAGES/dolphin.mo
@@ -351,5 +363,5 @@ share/locale/zh_CN/LC_MESSAGES/dolphin_servicemenuinstaller.mo
 share/locale/zh_TW/LC_MESSAGES/dolphin.mo
 share/locale/zh_TW/LC_MESSAGES/dolphin_servicemenuinstaller.mo
 share/metainfo/org.kde.dolphin.appdata.xml
-share/qlogging-categories5/dolphin.categories
+share/qlogging-categories6/dolphin.categories
 share/zsh/site-functions/_dolphin
