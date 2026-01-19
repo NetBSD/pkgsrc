@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/12/26 11:51:16 adam Exp $
+$NetBSD: distinfo,v 1.6 2026/01/19 11:11:57 wiz Exp $
 
-BLAKE2s (jaraco_context-6.0.2.tar.gz) = 4c91d8883c2e9ef31440b7afc6056686310e29d93d6a6349f98d9784dad07bba
-SHA512 (jaraco_context-6.0.2.tar.gz) = 18cc7381eeadea82df21219df0886c486f0b2338aea01e53c471c29d5a289e92d92f41a9943535f27a9f113ae889ee03d8f3323d777006b0dd653b422a412a09
-Size (jaraco_context-6.0.2.tar.gz) = 14994 bytes
+BLAKE2s (jaraco_context-6.1.0.tar.gz) = a2f024e76bd15daa9ad22bbad84a676712a8ba0a699d5cf0dfa4bf3d86659510
+SHA512 (jaraco_context-6.1.0.tar.gz) = 19f9fe4e00cc94f46177604e2a6e44af3c21be22b2059f8f7d0c586a77007196a163df68e545808b5f73d10c4e429903ff33274f110a15601481f4eff8cf9f8f
+Size (jaraco_context-6.1.0.tar.gz) = 15850 bytes
