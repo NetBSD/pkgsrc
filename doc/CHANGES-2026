@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.508 2026/01/19 14:20:19 adam Exp $
+$NetBSD: CHANGES-2026,v 1.509 2026/01/19 15:28:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -666,3 +666,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Added ham/wsjtx version 2.5.4 [mef 2026-01-19]
 	Updated security/p11-kit to 0.26.1 [adam 2026-01-19]
 	Updated audio/py-last to 7.0.2 [adam 2026-01-19]
+	Updated lang/ruby32-base to 3.2.10 [taca 2026-01-19]
+	Updated devel/ruby-readline to 3.2.10 [taca 2026-01-19]
+	Updated lang/ruby32 to 3.2.10 [taca 2026-01-19]
