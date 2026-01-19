@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.35 2021/08/03 08:16:44 nia Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.36 2026/01/19 13:02:38 wiz Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -166,6 +166,71 @@ an IP address that must be accessible over SSH without a password).</para>
 </note>
 
 </sect2>
+
+</sect1>
+
+<sect1 id="bulk.scan">
+  <title>Speeding up bulk build scans</title>
+
+  <para>At the start of a bulk build. pkgsrc is scanned for details
+  about the packages to build. This is needed e.g. to build a
+  dependency graph for building the packages in the correct
+  order.</para>
+
+  <para>Basically, this calls &man.make.1; once for each package. To
+  speed this up, some variables can be pre-computed and others can be
+  cached. This will greatly reduce the time needed for the scan part
+  of a bulk build.</para>
+
+  <para>The fake <filename role="pkg">pkgtools/varcache</filename>
+  package provides a Makefile target to precompute some often-used
+  variables for the build system that shouldn't change during one
+  build. Redirect its output to a file and include it from
+  &mk.conf;; for example:</para>
+
+  <screen>
+&uprompt; <userinput>cd pkgtools/varcache</userinput>
+&uprompt; <userinput>make show-varcache > /etc/varcache.mk</userinput>
+&uprompt; <userinput>echo .include "varcache.mk" >> /etc/mk.conf</userinput>
+  </screen>
+
+  <para>Some system information is needed quite early in the build
+  and can not be cached this way. It must be set in the environment
+  for the next speed-up:</para>
+
+  <screen>
+&uprompt; <userinput>export HOST_MACHINE_ARCH=`uname -m`</userinput>
+&uprompt; <userinput>export NATIVE_OPSYS=`uname -s`</userinput>
+&uprompt; <userinput>export NATIVE_OPSYS_VERSION=`uname -r | awk -F. '{major=int($1); minor=int($2); if (minor>=100) minor=99; patch=int($3); if (patch>=100) patch=99; printf "%02d%02d%02d", major, minor, patch}'`</userinput>
+&uprompt; <userinput>export NATIVE_OS_VERSION=`uname -r`</userinput>
+  </screen>
+
+  <para>Some settings that also affect the scan time strongly can be set in
+  &mk.conf;:</para>
+
+<programlisting>
+NATIVE_PKG_TOOLS_BIN=/usr/sbin # location on NetBSD
+NO_PKGTOOLS_REQD_CHECK=yes     # assume pkg tools are up-to-date
+SKIP_LICENSE_CHECK=yes         # do not check license validity
+_SRC_TOP_=                     # bulk build is not running from inside /usr/src
+UNPRIVILEGED_USER=pbulk        # use the appropriate user for your system
+UNPRIVILEGED_GROUP=builder     # use the appropriate group for your system
+UNPRIVILEGED_GROUPS=builder    # use the appropriate groups for your system
+</programlisting>
+
+<para>Finally, some packages require information about build options
+of other packages. This information can be cached by setting
+<varname>PBULK_CACHE_DIRECTORY</varname>.</para>
+
+<programlisting>
+PBULK_CACHE_DIRECTORY=/tmp/pbulk_cache
+</programlisting>
+
+<para>For all of these: please make sure they are kept up-to-date for
+changes in your environment. The safest method is to re-create the
+varcache before each build, make sure the environment variables are
+still up-to-date, and to delete the
+<varname>PBULK_CACHE_DIRECTORY</varname> before builds.</para>
 
 </sect1>
 
