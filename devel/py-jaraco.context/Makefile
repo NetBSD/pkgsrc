@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2025/12/26 11:51:16 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/01/19 11:11:57 wiz Exp $
 
-DISTNAME=	jaraco_context-6.0.2
+DISTNAME=	jaraco_context-6.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco_context/}
@@ -15,6 +15,13 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_s
 TEST_DEPENDS+=	${PYPKGPREFIX}-portend-[0-9]*:../../net/py-portend
 
 USE_LANGUAGES=	# none
+
+# as of 6.1.0
+# 1 failed, 14 passed
+
+.if make(test)
+ALLOW_NETWORK_ACCESS=	yes
+.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
