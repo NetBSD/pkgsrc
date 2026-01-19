@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/07/04 08:47:48 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/01/19 07:38:40 wiz Exp $
 
 DISTNAME=		Net-eBay-0.62
 PKGNAME=		p5-${DISTNAME}
@@ -7,8 +7,7 @@ CATEGORIES=		net perl5 www
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=		abs@NetBSD.org
-HOMEPAGE=		http://www.net-ebay.org/
-#HOMEPAGE=		http://search.cpan.org/dist/Net-eBay/
+HOMEPAGE=		https://www.net-ebay.org/
 COMMENT=		Perl Interface to XML based eBay API
 LICENSE=		gnu-gpl-v2
 
