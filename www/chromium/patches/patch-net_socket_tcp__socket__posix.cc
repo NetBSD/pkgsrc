@@ -1,10 +1,10 @@
-$NetBSD: patch-net_socket_tcp__socket__posix.cc,v 1.13 2025/12/23 13:22:21 kikadf Exp $
+$NetBSD: patch-net_socket_tcp__socket__posix.cc,v 1.14 2026/01/19 16:14:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/tcp_socket_posix.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- net/socket/tcp_socket_posix.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ net/socket/tcp_socket_posix.cc
 @@ -6,6 +6,9 @@
  
@@ -16,7 +16,7 @@ $NetBSD: patch-net_socket_tcp__socket__posix.cc,v 1.13 2025/12/23 13:22:21 kikad
  #include <sys/socket.h>
  
  #include <algorithm>
-@@ -98,6 +101,17 @@ bool SetTCPKeepAlive(int fd, bool enable
+@@ -97,6 +100,17 @@ bool SetTCPKeepAlive(int fd, bool enable
        PLOG(ERROR) << "Failed to set TCP_KEEPALIVE on fd: " << fd;
        return false;
      }

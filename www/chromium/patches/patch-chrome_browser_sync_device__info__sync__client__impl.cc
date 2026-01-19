@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_sync_device__info__sync__client__impl.cc,v 1.13 2025/12/23 13:22:14 kikadf Exp $
+$NetBSD: patch-chrome_browser_sync_device__info__sync__client__impl.cc,v 1.14 2026/01/19 16:14:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sync/device_info_sync_client_impl.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/sync/device_info_sync_client_impl.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/sync/device_info_sync_client_impl.cc
 @@ -34,7 +34,7 @@ DeviceInfoSyncClientImpl::~DeviceInfoSyn
  std::string DeviceInfoSyncClientImpl::GetSigninScopedDeviceId() const {

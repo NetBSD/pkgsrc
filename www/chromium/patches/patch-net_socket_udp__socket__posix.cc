@@ -1,10 +1,10 @@
-$NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.13 2025/12/23 13:22:21 kikadf Exp $
+$NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.14 2026/01/19 16:14:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/udp_socket_posix.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- net/socket/udp_socket_posix.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ net/socket/udp_socket_posix.cc
 @@ -78,6 +78,32 @@ constexpr int kBindRetries = 10;
  constexpr int kPortStart = 1024;
@@ -39,7 +39,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.13 2025/12/23 13:22:21 kikad
  int GetSocketFDHash(int fd) {
    return fd ^ 1595649551;
  }
-@@ -550,12 +576,17 @@ int UDPSocketPosix::SetRecvTos() {
+@@ -559,12 +585,17 @@ int UDPSocketPosix::SetRecvTos() {
  #endif  // BUILDFLAG(IS_APPLE)
    }
  
@@ -58,7 +58,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.13 2025/12/23 13:22:21 kikad
    if (confirm) {
      sendto_flags_ |= MSG_CONFIRM;
    } else {
-@@ -576,7 +607,7 @@ int UDPSocketPosix::SetBroadcast(bool br
+@@ -585,7 +616,7 @@ int UDPSocketPosix::SetBroadcast(bool br
    DCHECK_CALLED_ON_VALID_THREAD(thread_checker_);
    int value = broadcast ? 1 : 0;
    int rv;
@@ -67,7 +67,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.13 2025/12/23 13:22:21 kikad
    // SO_REUSEPORT on OSX permits multiple processes to each receive
    // UDP multicast or broadcast datagrams destined for the bound
    // port.
-@@ -897,9 +928,17 @@ int UDPSocketPosix::SetMulticastOptions(
+@@ -906,9 +937,17 @@ int UDPSocketPosix::SetMulticastOptions(
    if (multicast_interface_ != 0) {
      switch (addr_family_) {
        case AF_INET: {
@@ -85,7 +85,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.13 2025/12/23 13:22:21 kikad
          int rv = setsockopt(socket_, IPPROTO_IP, IP_MULTICAST_IF,
                              reinterpret_cast<const char*>(&mreq), sizeof(mreq));
          if (rv)
-@@ -934,7 +973,7 @@ int UDPSocketPosix::DoBind(const IPEndPo
+@@ -943,7 +982,7 @@ int UDPSocketPosix::DoBind(const IPEndPo
  #if BUILDFLAG(IS_CHROMEOS)
    if (last_error == EINVAL)
      return ERR_ADDRESS_IN_USE;
@@ -94,7 +94,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.13 2025/12/23 13:22:21 kikad
    if (last_error == EADDRNOTAVAIL)
      return ERR_ADDRESS_IN_USE;
  #endif
-@@ -962,9 +1001,17 @@ int UDPSocketPosix::JoinGroup(const IPAd
+@@ -971,9 +1010,17 @@ int UDPSocketPosix::JoinGroup(const IPAd
      case IPAddress::kIPv4AddressSize: {
        if (addr_family_ != AF_INET)
          return ERR_ADDRESS_INVALID;
@@ -112,7 +112,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.13 2025/12/23 13:22:21 kikad
        mreq.imr_multiaddr = ToInAddr(group_address);
        int rv = setsockopt(socket_, IPPROTO_IP, IP_ADD_MEMBERSHIP,
                            &mreq, sizeof(mreq));
-@@ -999,9 +1046,17 @@ int UDPSocketPosix::LeaveGroup(const IPA
+@@ -1008,9 +1055,17 @@ int UDPSocketPosix::LeaveGroup(const IPA
      case IPAddress::kIPv4AddressSize: {
        if (addr_family_ != AF_INET)
          return ERR_ADDRESS_INVALID;

@@ -1,10 +1,10 @@
-$NetBSD: patch-base_threading_platform__thread__metrics.h,v 1.9 2025/12/23 13:22:11 kikadf Exp $
+$NetBSD: patch-base_threading_platform__thread__metrics.h,v 1.10 2026/01/19 16:14:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/platform_thread_metrics.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- base/threading/platform_thread_metrics.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ base/threading/platform_thread_metrics.h
 @@ -67,7 +67,7 @@ class BASE_EXPORT PlatformThreadMetrics 
        PlatformThreadHandle handle);

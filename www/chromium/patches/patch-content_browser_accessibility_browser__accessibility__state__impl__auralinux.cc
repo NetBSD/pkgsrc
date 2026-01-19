@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_accessibility_browser__accessibility__state__impl__auralinux.cc,v 1.12 2025/12/23 13:22:18 kikadf Exp $
+$NetBSD: patch-content_browser_accessibility_browser__accessibility__state__impl__auralinux.cc,v 1.13 2026/01/19 16:14:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/accessibility/browser_accessibility_state_impl_auralinux.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- content/browser/accessibility/browser_accessibility_state_impl_auralinux.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ content/browser/accessibility/browser_accessibility_state_impl_auralinux.cc
 @@ -12,6 +12,7 @@
  #include <sstream>

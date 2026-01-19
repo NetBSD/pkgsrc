@@ -1,10 +1,10 @@
-$NetBSD: patch-media_capture_video_linux_v4l2__capture__delegate.h,v 1.13 2025/12/23 13:22:20 kikadf Exp $
+$NetBSD: patch-media_capture_video_linux_v4l2__capture__delegate.h,v 1.14 2026/01/19 16:14:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/linux/v4l2_capture_delegate.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- media/capture/video/linux/v4l2_capture_delegate.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ media/capture/video/linux/v4l2_capture_delegate.h
 @@ -22,7 +22,7 @@
  #include "media/capture/video/linux/v4l2_capture_device_impl.h"

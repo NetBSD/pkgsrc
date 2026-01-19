@@ -1,10 +1,10 @@
-$NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.13 2025/12/23 13:22:22 kikadf Exp $
+$NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.14 2026/01/19 16:14:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/sandbox_type.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- sandbox/policy/sandbox_type.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ sandbox/policy/sandbox_type.cc
 @@ -12,7 +12,7 @@
  #include "sandbox/policy/mojom/sandbox.mojom.h"
@@ -24,7 +24,7 @@ $NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.13 2025/12/23 13:22:22 kikadf
  constexpr char kPrintBackendSandbox[] = "print_backend";
  constexpr char kScreenAISandbox[] = "screen_ai";
  #endif
-@@ -52,11 +52,11 @@ constexpr char kWindowsSystemProxyResolv
+@@ -52,11 +52,11 @@ constexpr char kProxyResolverSandbox[] =
  constexpr char kMirroringSandbox[] = "mirroring";
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -42,10 +42,10 @@ $NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.13 2025/12/23 13:22:22 kikadf
  constexpr char kNearbySandbox[] = "nearby";
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  constexpr char kOnDeviceTranslationSandbox[] = "on_device_translation";
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS)
  
 @@ -124,7 +124,7 @@ void SetCommandLineFlagsForSandboxType(b
      case Sandbox::kCdm:
@@ -58,7 +58,7 @@ $NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.13 2025/12/23 13:22:22 kikadf
  #if BUILDFLAG(IS_WIN)
 @@ -135,7 +135,7 @@ void SetCommandLineFlagsForSandboxType(b
      case Sandbox::kMediaFoundationCdm:
-     case Sandbox::kWindowsSystemProxyResolver:
+     case Sandbox::kProxyResolver:
  #endif  // BUILDFLAG(IS_WIN)
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
@@ -75,8 +75,8 @@ $NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.13 2025/12/23 13:22:22 kikadf
      case Sandbox::kScreenAI:
  #endif
      case Sandbox::kSpeechRecognition:
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
      case Sandbox::kOnDeviceTranslation:
  #endif
        DCHECK(command_line->GetSwitchValueASCII(switches::kProcessType) ==
@@ -118,8 +118,8 @@ $NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.13 2025/12/23 13:22:22 kikadf
      case Sandbox::kScreenAI:
        return kScreenAISandbox;
  #endif
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
      case Sandbox::kOnDeviceTranslation:
        return kOnDeviceTranslationSandbox;
  #endif
@@ -154,8 +154,8 @@ $NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.13 2025/12/23 13:22:22 kikadf
      return Sandbox::kScreenAI;
    }
  #endif
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    if (sandbox_string == kOnDeviceTranslationSandbox) {
      return Sandbox::kOnDeviceTranslation;
    }

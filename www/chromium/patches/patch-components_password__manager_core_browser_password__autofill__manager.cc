@@ -1,12 +1,12 @@
-$NetBSD: patch-components_password__manager_core_browser_password__autofill__manager.cc,v 1.9 2025/12/23 13:22:17 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_browser_password__autofill__manager.cc,v 1.10 2026/01/19 16:14:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_autofill_manager.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- components/password_manager/core/browser/password_autofill_manager.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ components/password_manager/core/browser/password_autofill_manager.cc
-@@ -405,7 +405,7 @@ void PasswordAutofillManager::DidAcceptS
+@@ -401,7 +401,7 @@ void PasswordAutofillManager::DidAcceptS
                           weak_ptr_factory_.GetWeakPtr(), *password_credential);
        if (password_credential->is_grouped_affiliation) {
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-components_password__manager_core_browser_password__autofill__man
          cross_domain_confirmation_controller_ =
              password_client_->ShowCrossDomainConfirmationPopup(
                  last_popup_open_args_.element_bounds,
-@@ -653,7 +653,7 @@ void PasswordAutofillManager::DidNavigat
+@@ -649,7 +649,7 @@ void PasswordAutofillManager::DidNavigat
    manual_fallback_metrics_recorder_ =
        std::make_unique<PasswordManualFallbackMetricsRecorder>();
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS) || \

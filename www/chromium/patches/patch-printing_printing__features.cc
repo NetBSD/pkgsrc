@@ -1,21 +1,21 @@
-$NetBSD: patch-printing_printing__features.cc,v 1.13 2025/12/23 13:22:22 kikadf Exp $
+$NetBSD: patch-printing_printing__features.cc,v 1.14 2026/01/19 16:14:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/printing_features.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- printing/printing_features.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ printing/printing_features.cc
-@@ -22,7 +22,7 @@ BASE_FEATURE(kAddPrinterViaPrintscanmgr,
- BASE_FEATURE(kApiPrintingMarginsAndScale, base::FEATURE_DISABLED_BY_DEFAULT);
- #endif  // BUILDFLAG(IS_CHROMEOS)
+@@ -26,7 +26,7 @@ BASE_FEATURE(kApiPrintingMarginsAndScale
+ BASE_FEATURE(kAlignPdfDefaultPrintSettingsWithHTML,
+              base::FEATURE_DISABLED_BY_DEFAULT);
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  // Use the CUPS IPP printing backend instead of the original CUPS backend that
  // calls the deprecated PPD API.
  BASE_FEATURE(kCupsIppPrintingBackend, base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -54,7 +54,7 @@ BASE_FEATURE(kUseXpsForPrintingFromPdf, 
+@@ -58,7 +58,7 @@ BASE_FEATURE(kUseXpsForPrintingFromPdf, 
  // Enables printing interactions with the operating system to be performed
  // out-of-process.
  BASE_FEATURE(kEnableOopPrintDrivers,

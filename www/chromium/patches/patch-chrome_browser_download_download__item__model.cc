@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_download_download__item__model.cc,v 1.13 2025/12/23 13:22:12 kikadf Exp $
+$NetBSD: patch-chrome_browser_download_download__item__model.cc,v 1.14 2026/01/19 16:14:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/download_item_model.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/download/download_item_model.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/download/download_item_model.cc
 @@ -724,7 +724,7 @@ bool DownloadItemModel::IsCommandChecked
               download_crx_util::IsExtensionDownload(*download_);
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_download_download__item__model.cc,v 1.13 2025/12/2
        if (download_commands->CanOpenPdfInSystemViewer()) {
          prefs->SetShouldOpenPdfInSystemReader(!is_checked);
          SetShouldPreferOpeningInBrowser(is_checked);
-@@ -1175,7 +1175,7 @@ void DownloadItemModel::DetermineAndSetS
+@@ -1177,7 +1177,7 @@ void DownloadItemModel::DetermineAndSetS
      return;
    }
  

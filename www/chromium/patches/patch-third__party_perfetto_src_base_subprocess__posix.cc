@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_perfetto_src_base_subprocess__posix.cc,v 1.13 2025/12/23 13:22:25 kikadf Exp $
+$NetBSD: patch-third__party_perfetto_src_base_subprocess__posix.cc,v 1.14 2026/01/19 16:14:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/subprocess_posix.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- third_party/perfetto/src/base/subprocess_posix.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ third_party/perfetto/src/base/subprocess_posix.cc
-@@ -35,7 +35,8 @@
+@@ -36,7 +36,8 @@
  #include <thread>
  #include <tuple>
  
@@ -16,7 +16,7 @@ $NetBSD: patch-third__party_perfetto_src_base_subprocess__posix.cc,v 1.13 2025/1
      PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)
  #include <sys/prctl.h>
  #endif
-@@ -64,7 +65,8 @@ struct ChildProcessArgs {
+@@ -65,7 +66,8 @@ struct ChildProcessArgs {
  // Don't add any dynamic allocation in this function. This will be invoked
  // under a fork(), potentially in a state where the allocator lock is held.
  void __attribute__((noreturn)) ChildProcess(ChildProcessArgs* args) {

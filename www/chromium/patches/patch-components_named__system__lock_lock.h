@@ -1,10 +1,10 @@
-$NetBSD: patch-components_named__system__lock_lock.h,v 1.13 2025/12/23 13:22:17 kikadf Exp $
+$NetBSD: patch-components_named__system__lock_lock.h,v 1.14 2026/01/19 16:14:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/named_system_lock/lock.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- components/named_system_lock/lock.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ components/named_system_lock/lock.h
 @@ -38,7 +38,7 @@ class ScopedLock {
    // may acquire that lock. The lock name has different meanings per platform:
