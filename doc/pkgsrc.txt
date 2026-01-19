@@ -80,20 +80,21 @@ I. The pkgsrc user's guide
         8.1. Preparations
         8.2. Running a bulk build
             8.2.1. Configuration
-        8.3. Requirements of a full bulk build
-        8.4. Bulk build variants
-            8.4.1. Detect unknown configure options
-            8.4.2. Detect classes of bugs by forcing compiler warnings
-            8.4.3. Force compiler options only in the build phase
-            8.4.4. Use custom directories
-            8.4.5. Turn warnings into errors
-            8.4.6. Reject packages for which pkglint reports errors
-            8.4.7. Reject packages that contain forbidden strings
-            8.4.8. Reject packages whose self-test fails
-            8.4.9. Reject packages that use undefined shell variables
-            8.4.10. Turn off verbose logging
-        8.5. Creating a multiple CD-ROM packages collection
-            8.5.1. Example of cdpack
+        8.3. Speeding up bulk build scans
+        8.4. Requirements of a full bulk build
+        8.5. Bulk build variants
+            8.5.1. Detect unknown configure options
+            8.5.2. Detect classes of bugs by forcing compiler warnings
+            8.5.3. Force compiler options only in the build phase
+            8.5.4. Use custom directories
+            8.5.5. Turn warnings into errors
+            8.5.6. Reject packages for which pkglint reports errors
+            8.5.7. Reject packages that contain forbidden strings
+            8.5.8. Reject packages whose self-test fails
+            8.5.9. Reject packages that use undefined shell variables
+            8.5.10. Turn off verbose logging
+        8.6. Creating a multiple CD-ROM packages collection
+            8.6.1. Example of cdpack
     9. Directory layout of the installed files
         9.1. File system layout in ${LOCALBASE}
         9.2. File system layout in ${VARBASE}
@@ -642,20 +643,21 @@ Table of Contents
     8.1. Preparations
     8.2. Running a bulk build
         8.2.1. Configuration
-    8.3. Requirements of a full bulk build
-    8.4. Bulk build variants
-        8.4.1. Detect unknown configure options
-        8.4.2. Detect classes of bugs by forcing compiler warnings
-        8.4.3. Force compiler options only in the build phase
-        8.4.4. Use custom directories
-        8.4.5. Turn warnings into errors
-        8.4.6. Reject packages for which pkglint reports errors
-        8.4.7. Reject packages that contain forbidden strings
-        8.4.8. Reject packages whose self-test fails
-        8.4.9. Reject packages that use undefined shell variables
-        8.4.10. Turn off verbose logging
-    8.5. Creating a multiple CD-ROM packages collection
-        8.5.1. Example of cdpack
+    8.3. Speeding up bulk build scans
+    8.4. Requirements of a full bulk build
+    8.5. Bulk build variants
+        8.5.1. Detect unknown configure options
+        8.5.2. Detect classes of bugs by forcing compiler warnings
+        8.5.3. Force compiler options only in the build phase
+        8.5.4. Use custom directories
+        8.5.5. Turn warnings into errors
+        8.5.6. Reject packages for which pkglint reports errors
+        8.5.7. Reject packages that contain forbidden strings
+        8.5.8. Reject packages whose self-test fails
+        8.5.9. Reject packages that use undefined shell variables
+        8.5.10. Turn off verbose logging
+    8.6. Creating a multiple CD-ROM packages collection
+        8.6.1. Example of cdpack
 9. Directory layout of the installed files
     9.1. File system layout in ${LOCALBASE}
     9.2. File system layout in ${VARBASE}
@@ -1658,20 +1660,21 @@ Table of Contents
 8.1. Preparations
 8.2. Running a bulk build
     8.2.1. Configuration
-8.3. Requirements of a full bulk build
-8.4. Bulk build variants
-    8.4.1. Detect unknown configure options
-    8.4.2. Detect classes of bugs by forcing compiler warnings
-    8.4.3. Force compiler options only in the build phase
-    8.4.4. Use custom directories
-    8.4.5. Turn warnings into errors
-    8.4.6. Reject packages for which pkglint reports errors
-    8.4.7. Reject packages that contain forbidden strings
-    8.4.8. Reject packages whose self-test fails
-    8.4.9. Reject packages that use undefined shell variables
-    8.4.10. Turn off verbose logging
-8.5. Creating a multiple CD-ROM packages collection
-    8.5.1. Example of cdpack
+8.3. Speeding up bulk build scans
+8.4. Requirements of a full bulk build
+8.5. Bulk build variants
+    8.5.1. Detect unknown configure options
+    8.5.2. Detect classes of bugs by forcing compiler warnings
+    8.5.3. Force compiler options only in the build phase
+    8.5.4. Use custom directories
+    8.5.5. Turn warnings into errors
+    8.5.6. Reject packages for which pkglint reports errors
+    8.5.7. Reject packages that contain forbidden strings
+    8.5.8. Reject packages whose self-test fails
+    8.5.9. Reject packages that use undefined shell variables
+    8.5.10. Turn off verbose logging
+8.6. Creating a multiple CD-ROM packages collection
+    8.6.1. Example of cdpack
 
 For a number of reasons, you may want to build binary packages for a large
 selected set of packages in pkgsrc, or even for all pkgsrc packages. For
@@ -1689,7 +1692,7 @@ set of them. Full bulk builds usually consume a lot more resources, both space
 and time, than builds for some practical sets of packages. A number of
 particularly heavy packages exist that are not actually interesting to a wide
 audience. (The approximate resource consumption for a full bulk build is given
-in section Section  8.3,    Requirements of a full bulk build   .) For limited bulk
+in section Section  8.4,    Requirements of a full bulk build   .) For limited bulk
 builds you need to make a list of packages you want to build. Note that all
 their dependencies will be built, so you don't need to track them manually.
 
@@ -1775,7 +1778,55 @@ replicate the target system, including the pbulk prefix, or remote machines
 (each node is an IP address that must be accessible over SSH without a
 password).
 
-8.3.  Requirements of a full bulk build
+8.3.  Speeding up bulk build scans
+
+At the start of a bulk build. pkgsrc is scanned for details about the packages
+to build. This is needed e.g. to build a dependency graph for building the
+packages in the correct order.
+
+Basically, this calls make(1) once for each package. To speed this up, some
+variables can be pre-computed and others can be cached. This will greatly
+reduce the time needed for the scan part of a bulk build.
+
+The fake pkgtools/varcache package provides a Makefile target to precompute
+some often-used variables for the build system that shouldn't change during one
+build. Redirect its output to a file and include it from mk.conf; for example:
+
+$ cd pkgtools/varcache
+$ make show-varcache > /etc/varcache.mk
+$ echo .include "varcache.mk" >> /etc/mk.conf
+
+
+Some system information is needed quite early in the build and can not be
+cached this way. It must be set in the environment for the next speed-up:
+
+$ export HOST_MACHINE_ARCH=`uname -m`
+$ export NATIVE_OPSYS=`uname -s`
+$ export NATIVE_OPSYS_VERSION=`uname -r | awk -F. '{major=int($1); minor=int($2); if (minor>=100) minor=99; patch=int($3); if (patch>=100) patch=99; printf "%02d%02d%02d", major, minor, patch}'`
+$ export NATIVE_OS_VERSION=`uname -r`
+
+
+Some settings that also affect the scan time strongly can be set in mk.conf:
+
+NATIVE_PKG_TOOLS_BIN=/usr/sbin # location on NetBSD
+NO_PKGTOOLS_REQD_CHECK=yes     # assume pkg tools are up-to-date
+SKIP_LICENSE_CHECK=yes         # do not check license validity
+_SRC_TOP_=                     # bulk build is not running from inside /usr/src
+UNPRIVILEGED_USER=pbulk        # use the appropriate user for your system
+UNPRIVILEGED_GROUP=builder     # use the appropriate group for your system
+UNPRIVILEGED_GROUPS=builder    # use the appropriate groups for your system
+
+Finally, some packages require information about build options of other
+packages. This information can be cached by setting PBULK_CACHE_DIRECTORY.
+
+PBULK_CACHE_DIRECTORY=/tmp/pbulk_cache
+
+For all of these: please make sure they are kept up-to-date for changes in your
+environment. The safest method is to re-create the varcache before each build,
+make sure the environment variables are still up-to-date, and to delete the
+PBULK_CACHE_DIRECTORY before builds.
+
+8.4.  Requirements of a full bulk build
 
 A complete bulk build requires lots of disk space. Some of the disk space can
 be read-only, some other must be writable. Some can be on remote filesystems
@@ -1794,14 +1845,14 @@ others must survive a sudden reboot.
 
   * 5 GB for temporary files (read-write, local, temporary)
 
-8.4.  Bulk build variants
+8.5.  Bulk build variants
 
 To ensure that pkgsrc packages work in different configurations, it makes sense
 to run non-default bulk builds from time to time. This section lists some ideas
 for bulk builds that intentionally let packages fail if they don't follow the
 pkgsrc style.
 
-8.4.1.  Detect unknown configure options
+8.5.1.  Detect unknown configure options
 
 Add the following line to mk.conf.
 
@@ -1811,7 +1862,7 @@ When a package fails this additional check, the most common cause is that the
 configure option was valid for an older version of the package but does not
 apply anymore. In that case, just remove it.
 
-8.4.2.  Detect classes of bugs by forcing compiler warnings
+8.5.2.  Detect classes of bugs by forcing compiler warnings
 
 The job of a compiler is not restricted to producing executable code, most
 compilers also detect typical programming mistakes. The pkgsrc compiler
@@ -1857,7 +1908,7 @@ collected above.
 Patches that are not essential for the package to work should only be reported
 upstream but not committed to pkgsrc, to make future updates easier.
 
-8.4.3.  Force compiler options only in the build phase
+8.5.3.  Force compiler options only in the build phase
 
 When adding custom compiler flags via CFLAGS, these apply to all phases of the
 package build process. Especially in the configure phase, adding -Werror leads
@@ -1926,10 +1977,10 @@ options, but the corresponding lines starting with <.> do end with these
 options.
 
 Building packages using this setup variant and fixing the resulting bugs is the
-same as in Section  8.4.2,    Detect classes of bugs by forcing compiler warnings   
+same as in Section  8.5.2,    Detect classes of bugs by forcing compiler warnings   
 .
 
-8.4.4.  Use custom directories
+8.5.4.  Use custom directories
 
 Some directories like PREFIX, VARBASE, PKG_SYSCONFDIR, PKGMANDIR, PKG_INFODIR
 can be configured in pkgsrc. Set these to arbitrary paths during bootstrap or
@@ -1941,7 +1992,7 @@ VARBASE=        /a-random-uuid
 PKGMANDIR=      a-random-uuid
 PKG_INFODIR=    a-random-uuid
 
-8.4.5.  Turn warnings into errors
+8.5.5.  Turn warnings into errors
 
 When building a package, warnings are typically ignored since they just flow by
 and do not cause the build to fail immediately. To find these warnings,
@@ -1957,14 +2008,14 @@ If a package suggests to add USE_TOOLS+=perl to the package Makefile, research
 whether the package actually needs Perl. If it does, add USE_TOOLS+=perl to the
 package Makefile, and if it doesn't, add TOOLS_BROKEN+=perl.
 
-8.4.6.  Reject packages for which pkglint reports errors
+8.5.6.  Reject packages for which pkglint reports errors
 
 Using pkglint as part of the regular build process is mostly a waste of time.
 If you want to fix some of the warnings, just run pkglint recursively on the
 whole pkgsrc tree. This will take a few minutes (up to 10), which is much
 faster than a complete bulk build.
 
-8.4.7.  Reject packages that contain forbidden strings
+8.5.7.  Reject packages that contain forbidden strings
 
 To ensure that the binary packages don't contain references to the build
 directory, there is already CHECK_WRKREF. If that variable includes the item
@@ -1979,7 +2030,7 @@ CHECK_WRKREF_EXTRA_DIRS+=       @[A-Z][A-Z]*@
 The above patterns will probably generate many false positives, therefore the
 results need to be taken with a grain of salt.
 
-8.4.8.  Reject packages whose self-test fails
+8.5.8.  Reject packages whose self-test fails
 
 To run the test suites that come with each package, add this line to mk.conf.
 
@@ -1990,7 +2041,7 @@ build with this, it will often abort in the early phase where the packages are
 scanned for their dependencies since there are cyclic dependencies. There is
 still a lot to do in this area.
 
-8.4.9.  Reject packages that use undefined shell variables
+8.5.9.  Reject packages that use undefined shell variables
 
 To catch typos in the shell snippets from the Makefile fragments, add the -u
 flag to most of the commands by adding this line to mk.conf.
@@ -2003,7 +2054,7 @@ error message the command sh -ceu '$undefined' outputs.
 
 See mk/misc/common.mk for the existing definition.
 
-8.4.10.  Turn off verbose logging
+8.5.10.  Turn off verbose logging
 
 The build logs of a package are often quite long. This allows error messages or
 other interesting details to hide between the noise. To make the actual error
@@ -2015,7 +2066,7 @@ MAKE_FLAGS+=            -s
 The -s option works for both GNU Make and BSD Make. On exotic platforms with
 their own make, it may be a little different.
 
-8.5.  Creating a multiple CD-ROM packages collection
+8.6.  Creating a multiple CD-ROM packages collection
 
 After your pkgsrc bulk-build has completed, you may wish to create a CD-ROM set
 of the resulting binary packages to assist in installing packages on other
@@ -2023,7 +2074,7 @@ machines. The pkgtools/cdpack package provides a simple tool for creating the
 ISO 9660 images. cdpack arranges the packages on the CD-ROMs in a way that
 keeps all the dependencies for a given package on the same CD as that package.
 
-8.5.1.  Example of cdpack
+8.6.1.  Example of cdpack
 
 Complete documentation for cdpack is found in the cdpack(1) man page. The
 following short example assumes that the binary packages are left in /usr/
