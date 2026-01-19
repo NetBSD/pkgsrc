@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2025/07/04 08:47:21 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/01/19 07:34:36 wiz Exp $
 
 DISTNAME=	Mail-Box-3.011
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://perl.overmeer.net/mailbox/
+HOMEPAGE=	https://perl.overmeer.net/mailbox/
 COMMENT=	Set of packages which implement methods to handle e-mail
 LICENSE=	${PERL5_LICENSE}
 
