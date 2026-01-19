@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/09/21 16:35:01 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/01/19 10:46:52 wiz Exp $
 
-DISTNAME=	tree-sitter-markdown-0.5.1
+DISTNAME=	tree-sitter-markdown-0.5.2
 # we switched to from a version that had 0.7.1 as last release to the official one
 # so we need to make sure the version number is higher than it was before
 PKGNAME=	${DISTNAME:S/markdown-/markdown-0.7.1./}
