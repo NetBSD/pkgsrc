@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/12/23 09:42:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/01/19 10:05:27 markd Exp $
 bin/ck-unlock-session
 include/KScreenLocker/KScreenLocker/KsldApp
 include/KScreenLocker/KScreenLocker/kscreenlocker_export.h
@@ -16,6 +16,7 @@ qt6/plugins/plasma/kcms/systemsettings/kcm_screenlocker.so
 share/applications/kcm_screenlocker.desktop
 share/dbus-1/interfaces/kf6_org.freedesktop.ScreenSaver.xml
 share/dbus-1/interfaces/org.kde.screensaver.xml
+share/examples/pam.d/kde
 share/knotifications6/ksmserver.notifyrc
 share/ksmserver/screenlocker/org.kde.passworddialog/metadata.desktop
 share/locale/ar/LC_MESSAGES/kcm_screenlocker.mo
