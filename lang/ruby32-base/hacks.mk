@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.3 2025/03/27 14:12:02 taca Exp $
+# $NetBSD: hacks.mk,v 1.4 2026/01/19 15:26:15 taca Exp $
 
 .if !defined(RUBY31_BASE_HACKS_MK)
 RUBY31_BASE_HACKS_MK=	defined
@@ -45,7 +45,7 @@ BUILDLINK_TRANSFORM+=	rm:-fomit-frame-pointer
 # vm.c (really vm_exec.c).
 #
 .if ${MACHINE_PLATFORM:MNetBSD-*-i386}
-GCC_REQD=	8
+GCC_REQD+=	8
 .endif
 
 .endif	# RUBY31_BASE_HACKS_MK
