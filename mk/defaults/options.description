@@ -88,9 +88,11 @@ bugzilla-xmlimportbugs	Bulk import/export of bugs in XML format.
 bzip2			Enable compression using bzip2.
 caca			Enable libcaca support.
 cairo			Enable cairo support.
+caldav			Enable CalDAV support.
 camlzip			Enable camlzip support (for zip/gz/jar).
 canlock			Enable Cancel-Lock support.
 canna			Use Canna as Japanese conversion program.
+carddav			Enable CardDAV support.
 cares			Use the c-ares library for asynchronous name resolution.
 catalog-mysql		Store Bacula catalog in MySQL database.
 catalog-pgsql		Store Bacula catalog in PostgreSQL database.
