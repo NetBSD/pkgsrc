@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2025/08/20 19:23:36 wiz Exp $
+$NetBSD: distinfo,v 1.16 2026/01/19 11:56:45 wiz Exp $
 
-BLAKE2s (happy-2.1.7.tar.gz) = ec531c2f7f2ee86b02c9a048af5846348c18620af90d3b85963435ecc9e595b9
-SHA512 (happy-2.1.7.tar.gz) = 3579fd3217f28b8269afcb21b46d74ce160a2ddbe3e6edc7018e945851be8c573c77d7e0884a47ea90e1320bcec9d3f9be8fc284143c4477428f7f65560cd308
-Size (happy-2.1.7.tar.gz) = 62023 bytes
+BLAKE2s (happy-2.2.tar.gz) = 28c2ce66ead9b551b0ec3ef9d58369f77fa8f216692ad42508aa3fd91eeae938
+SHA512 (happy-2.2.tar.gz) = 735ab6afee77f040f6c38ca42792185d89c75a2fa9266635b3b9d8bb67e1123c371ac876b8ed309268243ae9372b671e9e7332747534e068264c2f54b6716d0e
+Size (happy-2.2.tar.gz) = 62273 bytes
 SHA1 (patch-app_Main.lhs) = f7fbffb1bc67311707c0d3196dd616ea3d434195
