@@ -1,0 +1,14 @@
+Weak Signal Communication Software
+
+WSJT-X, WSJT, MAP65, and WSPR are open-source programs designed for
+weak-signal digital communication by amateur radio.  Normal usage
+requires a standard SSB transceiver and a personal computer with
+soundcard, or the equivalent.  SDR-style hardware including the
+SDR-IQ, Perseus, SoftRock, and FUNcube Dongle is supported by MAP65
+and WSPR.  SimJT is a utility program that generates simulated signals
+for test purposes.  All of the programs are available free of charge,
+licensed under the GNU General Public License.  Installation packages
+for WSJT-X are available for Windows, Linux, and OS X; WSJT and WSPR
+have Windows and Linux packages, and MAP65 and SimJT are Windows only.
+For further details about source code and operating systems, see the
+Program Development page.
