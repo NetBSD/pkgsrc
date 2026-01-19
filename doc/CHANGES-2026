@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.498 2026/01/19 11:12:06 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.499 2026/01/19 11:40:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -656,3 +656,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/tabiew to 0.12.0 [wiz 2026-01-19]
 	Updated www/py-google-api-python-client to 2.188.0 [wiz 2026-01-19]
 	Updated devel/py-jaraco.context to 6.1.0 [wiz 2026-01-19]
+	Updated devel/py-ruff to 0.14.13 [wiz 2026-01-19]
