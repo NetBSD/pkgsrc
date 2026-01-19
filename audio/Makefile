@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.724 2026/01/15 11:30:43 adam Exp $
+# $NetBSD: Makefile,v 1.725 2026/01/19 09:37:16 markd Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -375,6 +375,7 @@ SUBDIR+=	pcaudiolib
 SUBDIR+=	pd
 SUBDIR+=	pianobar
 SUBDIR+=	picard
+SUBDIR+=	plasma6-oxygen-sounds
 SUBDIR+=	playitslowly
 SUBDIR+=	pocketsphinx
 SUBDIR+=	portaudio
