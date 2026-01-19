@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.487 2026/01/08 14:33:02 taca Exp $
+# $NetBSD: phpversion.mk,v 1.488 2026/01/19 15:32:17 taca Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -112,7 +112,7 @@ PHP56_VERSION=	5.6.40
 PHP74_VERSION=	7.4.33
 PHP82_VERSION=	8.2.30
 PHP83_VERSION=	8.3.29
-PHP84_VERSION=	8.4.16
+PHP84_VERSION=	8.4.17
 PHP85_VERSION=	8.5.1
 
 _VARGROUPS+=	php
