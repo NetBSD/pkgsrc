@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2025/07/04 08:49:23 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/01/19 07:34:03 wiz Exp $
 
 DISTNAME=	Kwiki-Wikiwyg-0.13
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Kwiki/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.wikiwyg.net/
+HOMEPAGE=	https://metacpan.org/pod/Kwiki::Wikiwyg
 COMMENT=	Kwiki plugin for WYSIWYG editing
 
 DEPENDS+=	p5-Kwiki>=0.38:../../www/p5-Kwiki
