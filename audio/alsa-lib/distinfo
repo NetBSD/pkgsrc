@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.48 2026/01/12 22:18:11 wiz Exp $
+$NetBSD: distinfo,v 1.49 2026/01/19 10:25:11 wiz Exp $
 
-BLAKE2s (alsa-lib-1.2.15.2.tar.bz2) = f1016c4166d2ac09b3be702ae3f8e7e10cf29231853a4d05edc544b3157e0f8f
-SHA512 (alsa-lib-1.2.15.2.tar.bz2) = e9a13aafa9693be2ce501059db0ff9f83a0044d07019bd6b420617da44cc4e7df6f444da9eccf37577893ed81426dce44ecdb9a652d1db047e24a3b803da4a8a
-Size (alsa-lib-1.2.15.2.tar.bz2) = 1126565 bytes
+BLAKE2s (alsa-lib-1.2.15.3.tar.bz2) = d14920244cde1492cafb1983baa4da2e4041546e6d92f5cc9021d28913af7083
+SHA512 (alsa-lib-1.2.15.3.tar.bz2) = 7fc0fa8a5ae02d3404d2c262c6a14fcbb8b08e25993eac86b9e89b8419ed4d293b422da77b3eb7a1930f26c316b638e5aa7bdba78b0ada9908b0362d132a0cc0
+Size (alsa-lib-1.2.15.3.tar.bz2) = 1126411 bytes
 SHA1 (patch-ad) = efddfa1c7dc4d09f840443417d2a27c93d2275c9
 SHA1 (patch-ae) = 57f6f38f9cf831cfad78c6090504291775338fe7
 SHA1 (patch-af) = 257b06f10616c04c2724e30777b027e5e7e443f9
