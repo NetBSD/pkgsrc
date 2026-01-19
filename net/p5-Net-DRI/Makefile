@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/07/04 08:47:42 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/01/19 07:37:17 wiz Exp $
 
 DISTNAME=	Net-DRI-0.96
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.dotandco.com/services/software/Net-DRI/index.en
+HOMEPAGE=	https://metacpan.org/pod/Net::DRI
 COMMENT=	Perl5 module to access DNS registries/registrars w/EPP
 LICENSE=	${PERL5_LICENSE}
 
