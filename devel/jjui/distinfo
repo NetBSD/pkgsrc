@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2026/01/12 21:40:29 wiz Exp $
+$NetBSD: distinfo,v 1.12 2026/01/19 10:28:05 wiz Exp $
 
 BLAKE2s (github.com__burnt_sushi_toml_@v_v1.5.0.mod) = 26f62b858e9ef333fa0b51b46ce83c2d385ddf010431d6415a115aef9a338b35
 SHA512 (github.com__burnt_sushi_toml_@v_v1.5.0.mod) = fb6b4ae74dfdcc39b915f1b5f84f8e52e830d273d29f9225dc5ed4f26e970d9f61921f6f3588249141a82404c3ba180f735b4f23e700050e76a740fbf541ac78
@@ -207,6 +207,6 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (jjui-0.9.9.tar.gz) = 792f4254a7321c964b8ad45340bb691576a2f54241e4756ea69cbff88af0d95a
-SHA512 (jjui-0.9.9.tar.gz) = 02410bf3139013bb6fd81d6c38e1af4a1136ee5eac2537e1c3aa40d1c93939c971d1410ae28719113f47314e04b7f1dda1024a52d0e4a6f11fd540ce5b2bdade
-Size (jjui-0.9.9.tar.gz) = 144201 bytes
+BLAKE2s (jjui-0.9.10.tar.gz) = 9040934f12e95ca3bf2b0b2c4db7206cd27edb6b4ae9a1b7d5815b590bdf0feb
+SHA512 (jjui-0.9.10.tar.gz) = 652f86511a91c053ac39800e6890281da75efab605c5ff90672f93ae1ff2e58071d91196b3be9d5e6ee676e620e12737901bc4ef85737352c8278a2ca75e2dbd
+Size (jjui-0.9.10.tar.gz) = 149189 bytes
