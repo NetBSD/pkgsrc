@@ -1,10 +1,10 @@
-$NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.13 2025/12/23 13:22:17 kikadf Exp $
+$NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.14 2026/01/19 16:14:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/embedder_support/user_agent_utils.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- components/embedder_support/user_agent_utils.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ components/embedder_support/user_agent_utils.cc
 @@ -317,7 +317,7 @@ std::string GetUserAgentPlatform() {
    return "";
@@ -42,7 +42,7 @@ $NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.13 2025/12
    // TODO(crbug.com/40245146): Remove this Blink feature
    if (base::FeatureList::IsEnabled(
            blink::features::kReduceUserAgentDataLinuxPlatformVersion)) {
-@@ -661,6 +661,9 @@ std::string GetPlatformForUAMetadata() {
+@@ -663,6 +663,9 @@ std::string GetPlatformForUAMetadata() {
  #else
    return "Chromium OS";
  #endif
@@ -52,7 +52,7 @@ $NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.13 2025/12
  #else
    return std::string(version_info::GetOSType());
  #endif
-@@ -868,6 +871,16 @@ std::string BuildOSCpuInfoFromOSVersionA
+@@ -870,6 +873,16 @@ std::string BuildOSCpuInfoFromOSVersionA
                        "Android %s", os_version.c_str()
  #elif BUILDFLAG(IS_FUCHSIA)
                        "Fuchsia"

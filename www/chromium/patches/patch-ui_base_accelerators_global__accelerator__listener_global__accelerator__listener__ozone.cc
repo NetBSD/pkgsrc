@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_accelerators_global__accelerator__listener_global__accelerator__listener__ozone.cc,v 1.12 2025/12/23 13:22:26 kikadf Exp $
+$NetBSD: patch-ui_base_accelerators_global__accelerator__listener_global__accelerator__listener__ozone.cc,v 1.13 2026/01/19 16:14:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/accelerators/global_accelerator_listener/global_accelerator_listener_ozone.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- ui/base/accelerators/global_accelerator_listener/global_accelerator_listener_ozone.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ ui/base/accelerators/global_accelerator_listener/global_accelerator_listener_ozone.cc
 @@ -12,7 +12,7 @@
  #include "ui/base/accelerators/accelerator.h"
@@ -15,16 +15,16 @@ $NetBSD: patch-ui_base_accelerators_global__accelerator__listener_global__accele
  #include "base/environment.h"
  #include "base/feature_list.h"
  #include "base/nix/xdg_util.h"
-@@ -23,7 +23,7 @@
+@@ -24,7 +24,7 @@
  using content::BrowserThread;
  
  namespace {
 -#if BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_DBUS)
 +#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(USE_DBUS)
  BASE_FEATURE(kGlobalShortcutsPortal, base::FEATURE_ENABLED_BY_DEFAULT);
- constexpr char kChannelEnvVar[] = "CHROME_VERSION_EXTRA";
  
-@@ -73,7 +73,7 @@ GlobalAcceleratorListener* GlobalAcceler
+ constexpr char kSessionSuffix[] = "_global_shortcuts";
+@@ -49,7 +49,7 @@ GlobalAcceleratorListener* GlobalAcceler
      return instance->get();
    }
  

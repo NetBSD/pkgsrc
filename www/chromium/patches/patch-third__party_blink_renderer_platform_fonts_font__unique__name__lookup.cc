@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_fonts_font__unique__name__lookup.cc,v 1.13 2025/12/23 13:22:24 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_fonts_font__unique__name__lookup.cc,v 1.14 2026/01/19 16:14:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_unique_name_lookup.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- third_party/blink/renderer/platform/fonts/font_unique_name_lookup.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/font_unique_name_lookup.cc
 @@ -9,7 +9,7 @@
  #if BUILDFLAG(IS_ANDROID)

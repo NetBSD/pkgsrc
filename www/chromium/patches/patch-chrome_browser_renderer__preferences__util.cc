@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.13 2025/12/23 13:22:13 kikadf Exp $
+$NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.14 2026/01/19 16:14:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/renderer_preferences_util.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/renderer_preferences_util.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/renderer_preferences_util.cc
-@@ -38,7 +38,7 @@
+@@ -36,12 +36,12 @@
  #include "ui/base/ui_base_features.h"
  #include "ui/native_theme/native_theme.h"
  
@@ -14,8 +14,14 @@ $NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.13 2025/12/23 1
 +#if defined(USE_AURA) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD))
  #include "chrome/browser/themes/theme_service.h"
  #include "chrome/browser/themes/theme_service_factory.h"
+ #endif
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "ui/linux/linux_ui.h"
-@@ -109,7 +109,7 @@ void UpdateFromSystemSettings(blink::Ren
+ #endif
+ 
+@@ -110,7 +110,7 @@ void UpdateFromSystemSettings(blink::Ren
                                Profile* profile) {
    const PrefService* pref_service = profile->GetPrefs();
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
@@ -24,7 +30,7 @@ $NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.13 2025/12/23 1
    content::UpdateFontRendererPreferencesFromSystemSettings(prefs);
  #endif
    prefs->focus_ring_color = BUILDFLAG(IS_MAC) ? SkColorSetRGB(0x00, 0x5F, 0xCC)
-@@ -123,7 +123,7 @@ void UpdateFromSystemSettings(blink::Ren
+@@ -124,7 +124,7 @@ void UpdateFromSystemSettings(blink::Ren
    prefs->inactive_selection_fg_color = SK_ColorBLACK;
  #endif
  
@@ -33,3 +39,12 @@ $NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.13 2025/12/23 1
    if (auto* linux_ui_theme = ui::LinuxUiTheme::GetForProfile(profile)) {
      if (ThemeServiceFactory::GetForProfile(profile)->UsingSystemTheme()) {
        linux_ui_theme->GetFocusRingColor(&prefs->focus_ring_color);
+@@ -141,7 +141,7 @@ void UpdateFromSystemSettings(blink::Ren
+ #endif  // BUILDFLAG(IS_LINUX)
+ #endif  // BUILDFLAG(USE_AURA)
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   if (auto* linux_ui = ui::LinuxUi::instance()) {
+     prefs->middle_click_paste_allowed = linux_ui->PrimaryPasteEnabled();
+   }

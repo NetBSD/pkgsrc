@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_gcm_gcm__profile__service__factory.cc,v 1.13 2025/12/23 13:22:13 kikadf Exp $
+$NetBSD: patch-chrome_browser_gcm_gcm__profile__service__factory.cc,v 1.14 2026/01/19 16:14:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/gcm/gcm_profile_service_factory.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/gcm/gcm_profile_service_factory.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/gcm/gcm_profile_service_factory.cc
 @@ -109,7 +109,7 @@ GCMProfileServiceFactory::ScopedTestingF
  // static

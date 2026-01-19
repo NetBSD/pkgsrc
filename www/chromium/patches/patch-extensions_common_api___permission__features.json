@@ -1,10 +1,10 @@
-$NetBSD: patch-extensions_common_api___permission__features.json,v 1.13 2025/12/23 13:22:20 kikadf Exp $
+$NetBSD: patch-extensions_common_api___permission__features.json,v 1.14 2026/01/19 16:14:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/common/api/_permission_features.json.orig	2025-12-17 23:05:18.000000000 +0000
+--- extensions/common/api/_permission_features.json.orig	2026-01-07 00:50:30.000000000 +0000
 +++ extensions/common/api/_permission_features.json
 @@ -61,7 +61,7 @@
      "channel": "stable",
@@ -98,7 +98,7 @@ $NetBSD: patch-extensions_common_api___permission__features.json,v 1.13 2025/12/
        "allowlist": [
          "D7CD4B3956B1F6E970E4AFCBCD4094B1EF4D07B9",  // http://crbug.com/710541
          "D4EFCCC0CC612380762758BB96C7997224BD6395",  // http://crbug.com/710541
-@@ -445,7 +445,7 @@
+@@ -446,7 +446,7 @@
      "channel": "stable",
      "extension_types": ["extension", "legacy_packaged_app", "platform_app"],
      // "desktop_android" is not supported.
@@ -107,7 +107,7 @@ $NetBSD: patch-extensions_common_api___permission__features.json,v 1.13 2025/12/
      "allowlist": [
        "0DE0F05680A4A056BCEC864ED8DDA84296F82B40",  // http://crbug.com/434651
        "1C93BD3CF875F4A73C0B2A163BB8FBDA8B8B3D80",  // http://crbug.com/293683
-@@ -484,7 +484,7 @@
+@@ -485,7 +485,7 @@
      "channel": "stable",
      "extension_types": ["extension", "legacy_packaged_app", "platform_app"],
      // "desktop_android" is not supported.
@@ -116,7 +116,7 @@ $NetBSD: patch-extensions_common_api___permission__features.json,v 1.13 2025/12/
      "allowlist": [
        // DO NOT ADD ANY MORE ENTRIES HERE.
        // networkingPrivate is being migrated to networking.onc.
-@@ -564,7 +564,7 @@
+@@ -565,7 +565,7 @@
      "channel": "stable",
      "extension_types": ["extension", "platform_app" ],
      // "desktop_android" is not supported.
@@ -125,7 +125,7 @@ $NetBSD: patch-extensions_common_api___permission__features.json,v 1.13 2025/12/
    },
    // Note: runtime is not actually a permission, but some systems check these
    // values to verify restrictions.
-@@ -576,13 +576,13 @@
+@@ -577,13 +577,13 @@
      "channel": "stable",
      "extension_types": ["platform_app"],
      // "desktop_android" is not supported.
@@ -141,7 +141,7 @@ $NetBSD: patch-extensions_common_api___permission__features.json,v 1.13 2025/12/
    },
    "storage": [
      {
-@@ -672,13 +672,13 @@
+@@ -673,13 +673,13 @@
        "channel": "stable",
        "extension_types": ["extension", "legacy_packaged_app", "platform_app"],
        // "desktop_android" is not supported.
@@ -157,7 +157,7 @@ $NetBSD: patch-extensions_common_api___permission__features.json,v 1.13 2025/12/
        "allowlist": ["B44D08FD98F1523ED5837D78D0A606EA9D6206E5"]  // Web Store
      }
    ],
-@@ -687,13 +687,13 @@
+@@ -688,13 +688,13 @@
        "channel": "stable",
        "extension_types": ["extension", "legacy_packaged_app", "platform_app"],
        // "desktop_android" is not supported.
@@ -173,7 +173,7 @@ $NetBSD: patch-extensions_common_api___permission__features.json,v 1.13 2025/12/
        "allowlist": ["B44D08FD98F1523ED5837D78D0A606EA9D6206E5"]  // Web Store
      }
    ],
-@@ -720,7 +720,7 @@
+@@ -721,7 +721,7 @@
      "channel": "stable",
      "extension_types": ["platform_app"],
      // "desktop_android" is not supported.
@@ -182,7 +182,7 @@ $NetBSD: patch-extensions_common_api___permission__features.json,v 1.13 2025/12/
    },
    "usbDevices": [
      {
-@@ -788,7 +788,7 @@
+@@ -789,7 +789,7 @@
      "channel": "stable",
      "extension_types": ["platform_app"],
      // "desktop_android" is not supported.

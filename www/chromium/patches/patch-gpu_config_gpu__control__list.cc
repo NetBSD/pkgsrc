@@ -1,12 +1,12 @@
-$NetBSD: patch-gpu_config_gpu__control__list.cc,v 1.13 2025/12/23 13:22:20 kikadf Exp $
+$NetBSD: patch-gpu_config_gpu__control__list.cc,v 1.14 2026/01/19 16:14:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_control_list.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- gpu/config/gpu_control_list.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ gpu/config/gpu_control_list.cc
-@@ -846,7 +846,7 @@ GpuControlList::OsType GpuControlList::G
+@@ -855,7 +855,7 @@ GpuControlList::OsType GpuControlList::G
    return kOsAndroid;
  #elif BUILDFLAG(IS_FUCHSIA)
    return kOsFuchsia;

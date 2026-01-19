@@ -1,12 +1,12 @@
-$NetBSD: patch-components_password__manager_core_browser_features_password__features.cc,v 1.13 2025/12/23 13:22:17 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_browser_features_password__features.cc,v 1.14 2026/01/19 16:14:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/features/password_features.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- components/password_manager/core/browser/features/password_features.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ components/password_manager/core/browser/features/password_features.cc
-@@ -71,7 +71,7 @@ BASE_FEATURE(kClearUndecryptablePassword
+@@ -67,7 +67,7 @@ BASE_FEATURE(kClearUndecryptablePassword
  BASE_FEATURE(kClearUndecryptablePasswordsOnSync,
               "ClearUndecryptablePasswordsInSync",
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_IOS) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-components_password__manager_core_browser_features_password__feat
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -139,7 +139,7 @@ BASE_FEATURE(kPasswordManualFallbackAvai
+@@ -138,7 +138,7 @@ BASE_FEATURE(kPasswordManualFallbackAvai
  
  BASE_FEATURE(kPasswordManagerLogToTerminal, base::FEATURE_DISABLED_BY_DEFAULT);
  

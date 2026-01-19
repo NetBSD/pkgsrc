@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_profiles_chrome__browser__main__extra__parts__profiles.cc,v 1.13 2025/12/23 13:22:13 kikadf Exp $
+$NetBSD: patch-chrome_browser_profiles_chrome__browser__main__extra__parts__profiles.cc,v 1.14 2026/01/19 16:14:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc
-@@ -390,7 +390,7 @@
+@@ -385,7 +385,7 @@
  #endif
  
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_profiles_chrome__browser__main__extra__parts__prof
  #include "chrome/browser/enterprise/client_certificates/certificate_provisioning_service_factory.h"
  #include "chrome/browser/enterprise/client_certificates/certificate_store_factory.h"
  #include "chrome/browser/enterprise/idle/idle_service_factory.h"
-@@ -435,7 +435,7 @@
+@@ -430,7 +430,7 @@
  #endif
  
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_profiles_chrome__browser__main__extra__parts__prof
  #include "chrome/browser/enterprise/connectors/device_trust/device_trust_connector_service_factory.h"
  #include "chrome/browser/enterprise/connectors/device_trust/device_trust_service_factory.h"
  #include "chrome/browser/ui/tabs/saved_tab_groups/collaboration_messaging_observer_factory.h"
-@@ -447,11 +447,11 @@
+@@ -442,11 +442,11 @@
  #include "chrome/browser/webauthn/passkey_unlock_manager_factory.h"
  #include "device/fido/features.h"
  #endif
@@ -38,7 +38,7 @@ $NetBSD: patch-chrome_browser_profiles_chrome__browser__main__extra__parts__prof
  #include "chrome/browser/browser_switcher/browser_switcher_service_factory.h"
  #include "chrome/browser/enterprise/signin/enterprise_signin_service_factory.h"
  #include "chrome/browser/enterprise/signin/oidc_authentication_signin_interceptor_factory.h"
-@@ -676,7 +676,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -672,7 +672,7 @@ void ChromeBrowserMainExtraPartsProfiles
    AccountPasswordStoreFactory::GetInstance();
    AccountReconcilorFactory::GetInstance();
    autofill::AccountSettingServiceFactory::GetInstance();
@@ -47,7 +47,7 @@ $NetBSD: patch-chrome_browser_profiles_chrome__browser__main__extra__parts__prof
    AccountsPolicyManagerFactory::GetInstance();
  #endif
  #if !BUILDFLAG(IS_ANDROID)
-@@ -775,7 +775,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -771,7 +771,7 @@ void ChromeBrowserMainExtraPartsProfiles
    DiceBoundSessionCookieServiceFactory::GetInstance();
  #endif
  #endif
@@ -56,7 +56,7 @@ $NetBSD: patch-chrome_browser_profiles_chrome__browser__main__extra__parts__prof
    browser_switcher::BrowserSwitcherServiceFactory::GetInstance();
  #endif
    browser_sync::UserEventServiceFactory::GetInstance();
-@@ -839,7 +839,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -835,7 +835,7 @@ void ChromeBrowserMainExtraPartsProfiles
    collaboration::comments::CommentsServiceFactory::GetInstance();
    collaboration::messaging::MessagingBackendServiceFactory::GetInstance();
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -65,7 +65,7 @@ $NetBSD: patch-chrome_browser_profiles_chrome__browser__main__extra__parts__prof
    tab_groups::CollaborationMessagingObserverFactory::GetInstance();
  #endif
    commerce::ShoppingServiceFactory::GetInstance();
-@@ -853,7 +853,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -848,7 +848,7 @@ void ChromeBrowserMainExtraPartsProfiles
    contextual_tasks::ContextualTasksUiServiceFactory::GetInstance();
  #endif
    ContentIndexProviderFactory::GetInstance();
@@ -74,7 +74,7 @@ $NetBSD: patch-chrome_browser_profiles_chrome__browser__main__extra__parts__prof
    contextual_cueing::ContextualCueingServiceFactory::GetInstance();
  #endif
    ContextualSearchServiceFactory::GetInstance();
-@@ -907,11 +907,11 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -902,11 +902,11 @@ void ChromeBrowserMainExtraPartsProfiles
    enterprise_connectors::ConnectorsServiceFactory::GetInstance();
    enterprise_connectors::ReportingEventRouterFactory::GetInstance();
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -88,7 +88,7 @@ $NetBSD: patch-chrome_browser_profiles_chrome__browser__main__extra__parts__prof
      BUILDFLAG(ENTERPRISE_LOCAL_CONTENT_ANALYSIS) &&                    \
      BUILDFLAG(SAFE_BROWSING_AVAILABLE)
    enterprise_connectors::LocalBinaryUploadServiceFactory::GetInstance();
-@@ -921,7 +921,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -916,7 +916,7 @@ void ChromeBrowserMainExtraPartsProfiles
        GetInstance();
  #endif
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -97,7 +97,7 @@ $NetBSD: patch-chrome_browser_profiles_chrome__browser__main__extra__parts__prof
    enterprise_idle::IdleServiceFactory::GetInstance();
    enterprise_signals::SignalsAggregatorFactory::GetInstance();
  #endif
-@@ -930,10 +930,10 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -925,10 +925,10 @@ void ChromeBrowserMainExtraPartsProfiles
  #endif
    enterprise_reporting::LegacyTechServiceFactory::GetInstance();
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -110,7 +110,7 @@ $NetBSD: patch-chrome_browser_profiles_chrome__browser__main__extra__parts__prof
    enterprise_signin::EnterpriseSigninServiceFactory::GetInstance();
  #endif
  #if BUILDFLAG(ENABLE_SESSION_SERVICE)
-@@ -1069,7 +1069,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -1063,7 +1063,7 @@ void ChromeBrowserMainExtraPartsProfiles
  #if BUILDFLAG(IS_ANDROID)
    MerchantViewerDataManagerFactory::GetInstance();
  #endif
@@ -119,7 +119,7 @@ $NetBSD: patch-chrome_browser_profiles_chrome__browser__main__extra__parts__prof
    metrics::DesktopProfileSessionDurationsServiceFactory::GetInstance();
  #endif
  #if !BUILDFLAG(IS_ANDROID)
-@@ -1162,7 +1162,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -1155,7 +1155,7 @@ void ChromeBrowserMainExtraPartsProfiles
    PasswordCounterFactory::GetInstance();
  #endif  // !BUILDFLAG(IS_ANDROID)
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
@@ -128,7 +128,7 @@ $NetBSD: patch-chrome_browser_profiles_chrome__browser__main__extra__parts__prof
    PasswordManagerBlocklistPolicyFactory::GetInstance();
  #endif
    PasswordManagerSettingsServiceFactory::GetInstance();
-@@ -1205,7 +1205,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -1201,7 +1201,7 @@ void ChromeBrowserMainExtraPartsProfiles
  #if BUILDFLAG(IS_CHROMEOS)
    policy::PolicyCertServiceFactory::GetInstance();
  #endif
@@ -137,7 +137,7 @@ $NetBSD: patch-chrome_browser_profiles_chrome__browser__main__extra__parts__prof
    policy::ProfileTokenPolicyWebSigninServiceFactory::GetInstance();
    policy::UserPolicyOidcSigninServiceFactory::GetInstance();
  #endif
-@@ -1240,7 +1240,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -1236,7 +1236,7 @@ void ChromeBrowserMainExtraPartsProfiles
  #if !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_CHROMEOS)
    ProfileStatisticsFactory::GetInstance();
  #endif
@@ -146,7 +146,7 @@ $NetBSD: patch-chrome_browser_profiles_chrome__browser__main__extra__parts__prof
    ProfileTokenWebSigninInterceptorFactory::GetInstance();
    OidcAuthenticationSigninInterceptorFactory::GetInstance();
  #endif
-@@ -1260,7 +1260,7 @@ void ChromeBrowserMainExtraPartsProfiles
+@@ -1256,7 +1256,7 @@ void ChromeBrowserMainExtraPartsProfiles
    ReduceAcceptLanguageFactory::GetInstance();
    RendererUpdaterFactory::GetInstance();
    regional_capabilities::RegionalCapabilitiesServiceFactory::GetInstance();

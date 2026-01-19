@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.h,v 1.13 2025/12/23 13:22:24 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.h,v 1.14 2026/01/19 16:14:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_cache.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- third_party/blink/renderer/platform/fonts/font_cache.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/font_cache.h
 @@ -55,7 +55,7 @@
  #include "third_party/skia/include/core/SkFontMgr.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.h,v 1.13 2
  #include "ui/gfx/font_fallback_linux.h"
  #endif
  
-@@ -170,7 +170,7 @@ class PLATFORM_EXPORT FontCache final {
+@@ -168,7 +168,7 @@ class PLATFORM_EXPORT FontCache final {
  
    static void MaybePreloadSystemFonts();
  
@@ -24,7 +24,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.h,v 1.13 2
    // These are needed for calling QueryRenderStyleForStrike, since
    // gfx::GetFontRenderParams makes distinctions based on DSF.
    static float DeviceScaleFactor() { return device_scale_factor_; }
-@@ -246,7 +246,7 @@ class PLATFORM_EXPORT FontCache final {
+@@ -244,7 +244,7 @@ class PLATFORM_EXPORT FontCache final {
        const char* locale_family_name);
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -33,17 +33,8 @@ $NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.h,v 1.13 2
    static bool GetFontForCharacter(UChar32,
                                    const char* preferred_locale,
                                    gfx::FallbackFontData*);
-@@ -319,7 +319,7 @@ class PLATFORM_EXPORT FontCache final {
-                                    const FontFaceCreationParams&,
-                                    std::string& name);
- 
--#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   static const FontPlatformData* CreateFontPlatformDataForCharacter(
-       SkFontMgr*,
-       UChar32,
-@@ -354,7 +354,7 @@ class PLATFORM_EXPORT FontCache final {
-   bool is_test_font_mgr_ = false;
+@@ -346,7 +346,7 @@ class PLATFORM_EXPORT FontCache final {
+   static int32_t status_font_height_;
  #endif  // BUILDFLAG(IS_WIN)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

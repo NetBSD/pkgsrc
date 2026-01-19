@@ -1,12 +1,12 @@
-$NetBSD: patch-base_debug_debugger__posix.cc,v 1.13 2025/12/23 13:22:10 kikadf Exp $
+$NetBSD: patch-base_debug_debugger__posix.cc,v 1.14 2026/01/19 16:14:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/debug/debugger_posix.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- base/debug/debugger_posix.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ base/debug/debugger_posix.cc
-@@ -38,6 +38,10 @@
+@@ -39,6 +39,10 @@
  #include <sys/sysctl.h>
  #endif
  
@@ -17,7 +17,7 @@ $NetBSD: patch-base_debug_debugger__posix.cc,v 1.13 2025/12/23 13:22:10 kikadf E
  #if BUILDFLAG(IS_FREEBSD)
  #include <sys/user.h>
  #endif
-@@ -83,6 +87,7 @@ bool BeingDebugged() {
+@@ -84,6 +88,7 @@ bool BeingDebugged() {
  
    // Initialize mib, which tells sysctl what info we want.  In this case,
    // we're looking for information about a specific process ID.
@@ -25,7 +25,7 @@ $NetBSD: patch-base_debug_debugger__posix.cc,v 1.13 2025/12/23 13:22:10 kikadf E
    int mib[] = {CTL_KERN,
                 KERN_PROC,
                 KERN_PROC_PID,
-@@ -93,37 +98,75 @@ bool BeingDebugged() {
+@@ -94,37 +99,75 @@ bool BeingDebugged() {
                 0
  #endif
    };

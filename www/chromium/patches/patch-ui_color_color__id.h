@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_color_color__id.h,v 1.13 2025/12/23 13:22:26 kikadf Exp $
+$NetBSD: patch-ui_color_color__id.h,v 1.14 2026/01/19 16:14:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/color/color_id.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- ui/color/color_id.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ ui/color/color_id.h
-@@ -652,7 +652,7 @@
+@@ -657,7 +657,7 @@
    E_CPONLY(kColorCrosSysPositive) \
    E_CPONLY(kColorCrosSysComplementVariant) \
    E_CPONLY(kColorCrosSysInputFieldOnBase)

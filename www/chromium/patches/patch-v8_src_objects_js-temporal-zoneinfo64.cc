@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_objects_js-temporal-zoneinfo64.cc,v 1.5 2025/12/23 13:22:28 kikadf Exp $
+$NetBSD: patch-v8_src_objects_js-temporal-zoneinfo64.cc,v 1.6 2026/01/19 16:14:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/objects/js-temporal-zoneinfo64.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- v8/src/objects/js-temporal-zoneinfo64.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ v8/src/objects/js-temporal-zoneinfo64.cc
 @@ -11,7 +11,7 @@
  #include "temporal_rs/TimeZone.hpp"

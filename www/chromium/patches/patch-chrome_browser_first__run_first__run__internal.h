@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_first__run_first__run__internal.h,v 1.13 2025/12/23 13:22:13 kikadf Exp $
+$NetBSD: patch-chrome_browser_first__run_first__run__internal.h,v 1.14 2026/01/19 16:14:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/first_run/first_run_internal.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/first_run/first_run_internal.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/first_run/first_run_internal.h
 @@ -72,7 +72,7 @@ FirstRunState DetermineFirstRunState(boo
                                       bool force_first_run,

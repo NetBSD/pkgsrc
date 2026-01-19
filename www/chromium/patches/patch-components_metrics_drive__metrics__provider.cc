@@ -1,12 +1,12 @@
-$NetBSD: patch-components_metrics_drive__metrics__provider.cc,v 1.12 2025/12/23 13:22:17 kikadf Exp $
+$NetBSD: patch-components_metrics_drive__metrics__provider.cc,v 1.13 2026/01/19 16:14:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/metrics/drive_metrics_provider.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- components/metrics/drive_metrics_provider.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ components/metrics/drive_metrics_provider.cc
-@@ -21,7 +21,7 @@
+@@ -20,7 +20,7 @@
  namespace metrics {
  
  namespace {
@@ -15,7 +15,7 @@ $NetBSD: patch-components_metrics_drive__metrics__provider.cc,v 1.12 2025/12/23 
  void RecordTriStateMetric(const char* name, std::optional<bool> sample) {
    base::UmaHistogramEnumeration(
        name, !sample.has_value()
-@@ -106,7 +106,7 @@ void DriveMetricsProvider::FillDriveMetr
+@@ -105,7 +105,7 @@ void DriveMetricsProvider::FillDriveMetr
      drive->set_has_seek_penalty(*response.has_seek_penalty);
    }
  

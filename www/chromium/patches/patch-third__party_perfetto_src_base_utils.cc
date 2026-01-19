@@ -1,13 +1,13 @@
-$NetBSD: patch-third__party_perfetto_src_base_utils.cc,v 1.13 2025/12/23 13:22:25 kikadf Exp $
+$NetBSD: patch-third__party_perfetto_src_base_utils.cc,v 1.14 2026/01/19 16:14:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/utils.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- third_party/perfetto/src/base/utils.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ third_party/perfetto/src/base/utils.cc
-@@ -38,7 +38,8 @@
- #include <mach/vm_page_size.h>
+@@ -43,7 +43,8 @@
+ #include <sys/sysctl.h>
  #endif
  
 -#if PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX_BUT_NOT_QNX) || \
@@ -16,7 +16,7 @@ $NetBSD: patch-third__party_perfetto_src_base_utils.cc,v 1.13 2025/12/23 13:22:2
      PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)
  #include <sys/prctl.h>
  
-@@ -285,14 +286,22 @@ void Daemonize(std::function<int()> pare
+@@ -294,14 +295,22 @@ void Daemonize(std::function<int()> pare
  
  std::string GetCurExecutablePath() {
    std::string self_path;
@@ -41,7 +41,7 @@ $NetBSD: patch-third__party_perfetto_src_base_utils.cc,v 1.13 2025/12/23 13:22:2
  #elif PERFETTO_BUILDFLAG(PERFETTO_OS_APPLE)
    uint32_t size = 0;
    PERFETTO_CHECK(_NSGetExecutablePath(nullptr, &size));
-@@ -344,7 +353,8 @@ void AlignedFree(void* ptr) {
+@@ -365,7 +374,8 @@ void AlignedFree(void* ptr) {
  }
  
  bool IsSyncMemoryTaggingEnabled() {

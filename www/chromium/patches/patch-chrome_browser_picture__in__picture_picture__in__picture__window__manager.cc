@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_picture__in__picture_picture__in__picture__window__manager.cc,v 1.5 2025/12/23 13:22:13 kikadf Exp $
+$NetBSD: patch-chrome_browser_picture__in__picture_picture__in__picture__window__manager.cc,v 1.6 2026/01/19 16:14:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/picture_in_picture/picture_in_picture_window_manager.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/picture_in_picture/picture_in_picture_window_manager.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/picture_in_picture/picture_in_picture_window_manager.cc
 @@ -21,7 +21,7 @@
  #include "ui/gfx/geometry/resize_utils.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_picture__in__picture_picture__in__picture__window_
  #include "components/webapps/isolated_web_apps/scheme.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -585,7 +585,7 @@ void PictureInPictureWindowManager::SetW
+@@ -581,7 +581,7 @@ void PictureInPictureWindowManager::SetW
  bool PictureInPictureWindowManager::IsSupportedForDocumentPictureInPicture(
      const GURL& url) {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

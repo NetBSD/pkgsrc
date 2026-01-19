@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_views_BUILD.gn,v 1.12 2025/12/23 13:22:27 kikadf Exp $
+$NetBSD: patch-ui_views_BUILD.gn,v 1.13 2026/01/19 16:14:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/BUILD.gn.orig	2025-12-17 23:05:18.000000000 +0000
+--- ui/views/BUILD.gn.orig	2026-01-07 00:50:30.000000000 +0000
 +++ ui/views/BUILD.gn
-@@ -834,7 +834,6 @@ component("views") {
+@@ -836,7 +836,6 @@ component("views") {
        "windows_stationarity_monitor_aura.cc",
      ]
      deps += [

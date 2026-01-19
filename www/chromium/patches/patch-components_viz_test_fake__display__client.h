@@ -1,10 +1,10 @@
-$NetBSD: patch-components_viz_test_fake__display__client.h,v 1.13 2025/12/23 13:22:18 kikadf Exp $
+$NetBSD: patch-components_viz_test_fake__display__client.h,v 1.14 2026/01/19 16:14:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/test/fake_display_client.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- components/viz/test/fake_display_client.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ components/viz/test/fake_display_client.h
 @@ -36,7 +36,7 @@ class FakeDisplayClient : public mojom::
    void AddChildWindowToBrowser(gpu::SurfaceHandle child_window) override;

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.13 2025/12/23 13:22:12 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.14 2026/01/19 16:14:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_content_browser_client.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/chrome_content_browser_client.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/chrome_content_browser_client.cc
-@@ -574,7 +574,7 @@
+@@ -578,7 +578,7 @@
  #include "third_party/cros_system_api/switches/chrome_switches.h"
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.13 2025/12
  #include "components/crash/core/app/crash_switches.h"
  #include "components/crash/core/app/crashpad.h"
  #endif
-@@ -585,7 +585,7 @@
+@@ -589,7 +589,7 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.13 2025/12
  #include "components/webapps/isolated_web_apps/scheme.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -1406,7 +1406,7 @@ void ChromeContentBrowserClient::Registe
+@@ -1411,7 +1411,7 @@ void ChromeContentBrowserClient::Registe
    registry->RegisterBooleanPref(prefs::kDataURLWhitespacePreservationEnabled,
                                  true);
    registry->RegisterBooleanPref(prefs::kEnableUnsafeSwiftShader, false);
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.13 2025/12
    registry->RegisterBooleanPref(prefs::kOutOfProcessSystemDnsResolutionEnabled,
                                  true);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_ANDROID)
-@@ -1676,7 +1676,7 @@ ChromeContentBrowserClient::GetStoragePa
+@@ -1681,7 +1681,7 @@ ChromeContentBrowserClient::GetStoragePa
  
  #if BUILDFLAG(ENABLE_EXTENSIONS)
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.13 2025/12
    if (content::SiteIsolationPolicy::ShouldUrlUseApplicationIsolationLevel(
            browser_context, site)) {
      CHECK(url::Origin::Create(site).scheme() == webapps::kIsolatedAppScheme);
-@@ -2550,7 +2550,7 @@ bool ChromeContentBrowserClient::ShouldU
+@@ -2548,7 +2548,7 @@ bool ChromeContentBrowserClient::ShouldU
      const GURL& url) {
  #if BUILDFLAG(ENABLE_EXTENSIONS)
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.13 2025/12
  
    if (!content::AreIsolatedWebAppsEnabled(browser_context)) {
      return false;
-@@ -2674,7 +2674,9 @@ void MaybeAppendBlinkSettingsSwitchForFi
+@@ -2672,7 +2672,9 @@ void MaybeAppendBlinkSettingsSwitchForFi
  void ChromeContentBrowserClient::AppendExtraCommandLineSwitches(
      base::CommandLine* command_line,
      int child_process_id) {
@@ -61,7 +61,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.13 2025/12
  #if BUILDFLAG(IS_MAC)
    std::unique_ptr<metrics::ClientInfo> client_info =
        GoogleUpdateSettings::LoadMetricsClientInfo();
-@@ -2683,7 +2685,7 @@ void ChromeContentBrowserClient::AppendE
+@@ -2681,7 +2683,7 @@ void ChromeContentBrowserClient::AppendE
                                      client_info->client_id);
    }
  #elif BUILDFLAG(IS_POSIX)
@@ -70,7 +70,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.13 2025/12
    pid_t pid;
    if (crash_reporter::GetHandlerSocket(nullptr, &pid)) {
      command_line->AppendSwitchASCII(
-@@ -3016,7 +3018,7 @@ void ChromeContentBrowserClient::AppendE
+@@ -3003,7 +3005,7 @@ void ChromeContentBrowserClient::AppendE
      }
    }
  
@@ -79,7 +79,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.13 2025/12
    // Opt into a hardened stack canary mitigation if it hasn't already been
    // force-disabled.
    if (!browser_command_line.HasSwitch(switches::kChangeStackGuardOnFork)) {
-@@ -4075,7 +4077,7 @@ GetPreferredColorScheme(const WebPrefere
+@@ -4062,7 +4064,7 @@ GetPreferredColorScheme(const WebPrefere
  
  std::optional<SkColor> GetRootScrollbarThemeColor(WebContents* web_contents) {
    bool root_scrollbar_follows_browser_theme = false;
@@ -88,7 +88,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.13 2025/12
    root_scrollbar_follows_browser_theme = base::FeatureList::IsEnabled(
        blink::features::kRootScrollbarFollowsBrowserTheme);
  #endif
-@@ -5001,7 +5003,7 @@ void ChromeContentBrowserClient::GetAddi
+@@ -4994,7 +4996,7 @@ void ChromeContentBrowserClient::GetAddi
    additional_allowed_schemes->push_back(content::kChromeUIScheme);
    additional_allowed_schemes->push_back(content::kChromeUIUntrustedScheme);
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -97,7 +97,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.13 2025/12
    additional_allowed_schemes->push_back(webapps::kIsolatedAppScheme);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -5056,7 +5058,7 @@ void ChromeContentBrowserClient::GetAddi
+@@ -5049,7 +5051,7 @@ void ChromeContentBrowserClient::GetAddi
    }
  }
  
@@ -106,7 +106,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.13 2025/12
  void ChromeContentBrowserClient::GetAdditionalMappedFilesForChildProcess(
      const base::CommandLine& command_line,
      int child_process_id,
-@@ -5932,7 +5934,7 @@ ChromeContentBrowserClient::CreateNonNet
+@@ -5943,7 +5945,7 @@ ChromeContentBrowserClient::CreateNonNet
    }
  #endif  // BUILDFLAG(IS_CHROMEOS)
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -115,7 +115,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.13 2025/12
    if (scheme == webapps::kIsolatedAppScheme) {
      if (content::AreIsolatedWebAppsEnabled(browser_context) &&
          !browser_context->ShutdownStarted()) {
-@@ -5958,7 +5960,7 @@ void ChromeContentBrowserClient::
+@@ -5969,7 +5971,7 @@ void ChromeContentBrowserClient::
    DCHECK(factories);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -124,7 +124,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.13 2025/12
    if (content::AreIsolatedWebAppsEnabled(browser_context) &&
        !browser_context->ShutdownStarted()) {
      factories->emplace(webapps::kIsolatedAppScheme,
-@@ -5987,7 +5989,7 @@ void ChromeContentBrowserClient::
+@@ -5998,7 +6000,7 @@ void ChromeContentBrowserClient::
    DCHECK(factories);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -133,7 +133,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.13 2025/12
    if (content::AreIsolatedWebAppsEnabled(browser_context) &&
        !browser_context->ShutdownStarted()) {
      factories->emplace(webapps::kIsolatedAppScheme,
-@@ -6262,7 +6264,7 @@ void ChromeContentBrowserClient::
+@@ -6273,7 +6275,7 @@ void ChromeContentBrowserClient::
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -142,16 +142,16 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.13 2025/12
    {
      auto* rph = content::RenderProcessHost::FromID(render_process_id);
      content::BrowserContext* browser_context = rph->GetBrowserContext();
-@@ -6955,7 +6957,7 @@ bool ChromeContentBrowserClient::HandleW
+@@ -6973,7 +6975,7 @@ bool ChromeContentBrowserClient::HandleW
    }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  
-   // Rewrite chrome://settings/autofill to chrome://settings/yourSavedInfo.
-   if (url->SchemeIs(content::kChromeUIScheme) &&
-@@ -7241,7 +7243,7 @@ bool ChromeContentBrowserClient::ShouldS
+   // Rewrite chrome://settings/autofill and chrome://settings/enhancedAutofill
+   // to chrome://settings/yourSavedInfo.
+@@ -7271,7 +7273,7 @@ bool ChromeContentBrowserClient::ShouldS
  bool ChromeContentBrowserClient::ShouldRunOutOfProcessSystemDnsResolution() {
  // This enterprise policy is supported on Android, but the feature will not be
  // launched there.
@@ -160,7 +160,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.13 2025/12
    // This is possibly called before `g_browser_process` is initialized.
    PrefService* local_state;
    if (g_browser_process) {
-@@ -7680,7 +7682,7 @@ void ChromeContentBrowserClient::
+@@ -7710,7 +7712,7 @@ void ChromeContentBrowserClient::
      GrantAdditionalRequestPrivilegesToWorkerProcess(int child_id,
                                                      const GURL& script_url) {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -169,7 +169,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.13 2025/12
    // IWA Service Workers need to be explicitly granted access to their origin
    // because isolated-app: isn't a web-safe scheme that can be accessed by
    // default.
-@@ -8057,7 +8059,7 @@ ChromeContentBrowserClient::GetAlternati
+@@ -8159,7 +8161,7 @@ ChromeContentBrowserClient::GetAlternati
      content::BrowserContext* browser_context,
      int32_t error_code) {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

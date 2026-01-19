@@ -1,12 +1,12 @@
-$NetBSD: patch-components_error__page_common_localized__error.cc,v 1.12 2025/12/23 13:22:17 kikadf Exp $
+$NetBSD: patch-components_error__page_common_localized__error.cc,v 1.13 2026/01/19 16:14:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/error_page/common/localized_error.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- components/error_page/common/localized_error.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ components/error_page/common/localized_error.cc
-@@ -896,7 +896,7 @@ void AddSuggestionsDetails(int error_cod
+@@ -889,7 +889,7 @@ void AddSuggestionsDetails(int error_cod
    if (suggestions & SUGGEST_PROXY_CONFIG) {
      // Custom body string.
      std::u16string inner =

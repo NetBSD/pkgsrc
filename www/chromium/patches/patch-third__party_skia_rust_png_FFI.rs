@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_skia_rust_png_FFI.rs,v 1.5 2025/12/23 13:22:25 kikadf Exp $
+$NetBSD: patch-third__party_skia_rust_png_FFI.rs,v 1.6 2026/01/19 16:14:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/skia/rust/png/FFI.rs.orig	2025-12-17 23:05:18.000000000 +0000
+--- third_party/skia/rust/png/FFI.rs.orig	2026-01-07 00:50:30.000000000 +0000
 +++ third_party/skia/rust/png/FFI.rs
-@@ -246,6 +246,7 @@ mod ffi {
+@@ -222,6 +222,7 @@ mod ffi {
          type StreamWriter;
          fn write(self: &mut StreamWriter, data: &[u8]) -> EncodingResult;
          fn finish_encoding(stream_writer: Box<StreamWriter>) -> EncodingResult;
@@ -14,7 +14,7 @@ $NetBSD: patch-third__party_skia_rust_png_FFI.rs,v 1.5 2025/12/23 13:22:25 kikad
      }
  }
  
-@@ -965,3 +966,11 @@ fn new_writer(
+@@ -929,3 +930,11 @@ fn new_writer(
  fn finish_encoding(stream_writer: Box<StreamWriter>) -> ffi::EncodingResult {
      stream_writer.0.finish().as_ref().err().into()
  }

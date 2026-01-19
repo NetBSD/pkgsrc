@@ -1,10 +1,10 @@
-$NetBSD: patch-extensions_shell_browser_shell__extensions__api__client.cc,v 1.13 2025/12/23 13:22:20 kikadf Exp $
+$NetBSD: patch-extensions_shell_browser_shell__extensions__api__client.cc,v 1.14 2026/01/19 16:14:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/shell/browser/shell_extensions_api_client.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- extensions/shell/browser/shell_extensions_api_client.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ extensions/shell/browser/shell_extensions_api_client.cc
 @@ -18,7 +18,7 @@
  #include "extensions/shell/browser/shell_extension_web_contents_observer.h"

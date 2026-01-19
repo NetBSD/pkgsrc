@@ -1,12 +1,12 @@
-$NetBSD: patch-net_tools_cert__verify__tool_cert__verify__tool.cc,v 1.13 2025/12/23 13:22:21 kikadf Exp $
+$NetBSD: patch-net_tools_cert__verify__tool_cert__verify__tool.cc,v 1.14 2026/01/19 16:14:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/tools/cert_verify_tool/cert_verify_tool.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- net/tools/cert_verify_tool/cert_verify_tool.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ net/tools/cert_verify_tool/cert_verify_tool.cc
-@@ -35,7 +35,7 @@
+@@ -36,7 +36,7 @@
  #include "third_party/boringssl/src/pki/trust_store.h"
  #include "third_party/boringssl/src/pki/trust_store_collection.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-net_tools_cert__verify__tool_cert__verify__tool.cc,v 1.13 2025/12
  #include "net/proxy_resolution/proxy_config.h"
  #include "net/proxy_resolution/proxy_config_service_fixed.h"
  #endif
-@@ -67,7 +67,7 @@ void SetUpOnNetworkThread(
+@@ -68,7 +68,7 @@ void SetUpOnNetworkThread(
      base::WaitableEvent* initialization_complete_event) {
    net::URLRequestContextBuilder url_request_context_builder;
    url_request_context_builder.set_user_agent(GetUserAgent());

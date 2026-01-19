@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_signin_signin__util.cc,v 1.13 2025/12/23 13:22:14 kikadf Exp $
+$NetBSD: patch-chrome_browser_signin_signin__util.cc,v 1.14 2026/01/19 16:14:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/signin/signin_util.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/signin/signin_util.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/signin/signin_util.cc
 @@ -50,7 +50,7 @@
  #include "services/network/public/mojom/cookie_manager.mojom.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_signin_signin__util.cc,v 1.13 2025/12/23 13:22:14 
  #include "chrome/browser/ui/browser_dialogs.h"
  #include "chrome/browser/ui/browser_finder.h"
  #include "components/strings/grit/components_strings.h"
-@@ -97,7 +97,7 @@ CookiesMover::CookiesMover(base::WeakPtr
+@@ -101,7 +101,7 @@ CookiesMover::CookiesMover(base::WeakPtr
  CookiesMover::~CookiesMover() = default;
  
  void CookiesMover::StartMovingCookies() {
@@ -24,12 +24,12 @@ $NetBSD: patch-chrome_browser_signin_signin__util.cc,v 1.13 2025/12/23 13:22:14 
    bool allow_cookies_to_be_moved = base::FeatureList::IsEnabled(
        profile_management::features::kThirdPartyProfileManagement);
  #else
-@@ -399,7 +399,7 @@ bool IsSyncingUserSelectableTypesAllowed
+@@ -403,7 +403,7 @@ bool IsSyncingUserSelectableTypesAllowed
    return true;
  }
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
- bool HasExplicitlyDisabledHistorySync(Profile& profile) {
-   // If the user is signed out, we cannot know if the toggles were interacted
-   // with or not.
+ bool HasExplicitlyDisabledHistorySync(
+     const syncer::SyncService* sync_service,
+     const signin::IdentityManager* identity_manager) {

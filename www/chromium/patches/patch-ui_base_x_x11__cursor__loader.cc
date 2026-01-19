@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_x_x11__cursor__loader.cc,v 1.13 2025/12/23 13:22:26 kikadf Exp $
+$NetBSD: patch-ui_base_x_x11__cursor__loader.cc,v 1.14 2026/01/19 16:14:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_cursor_loader.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- ui/base/x/x11_cursor_loader.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ ui/base/x/x11_cursor_loader.cc
 @@ -37,7 +37,7 @@
  #include "ui/gfx/x/connection.h"

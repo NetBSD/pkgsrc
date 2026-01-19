@@ -1,10 +1,10 @@
-$NetBSD: patch-base_threading_platform__thread__posix.cc,v 1.13 2025/12/23 13:22:11 kikadf Exp $
+$NetBSD: patch-base_threading_platform__thread__posix.cc,v 1.14 2026/01/19 16:14:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/platform_thread_posix.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- base/threading/platform_thread_posix.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ base/threading/platform_thread_posix.cc
 @@ -80,6 +80,7 @@ void* ThreadFunc(void* params) {
        base::DisallowSingleton();
@@ -41,47 +41,26 @@ $NetBSD: patch-base_threading_platform__thread__posix.cc,v 1.13 2025/12/23 13:22
    if (from >= to) {
      // Decreasing thread priority on POSIX is always allowed.
      return true;
-@@ -372,12 +379,18 @@ bool PlatformThreadBase::CanChangeThread
+@@ -372,10 +379,15 @@ bool PlatformThreadBase::CanChangeThread
    }
  
    return internal::CanLowerNiceTo(internal::ThreadTypeToNiceValue(to));
 +#endif
  }
  
- namespace internal {
- 
- void SetCurrentThreadTypeImpl(ThreadType thread_type,
-                               MessagePumpType pump_type_hint) {
-+#if BUILDFLAG(IS_BSD)
-+  // pledge(2) violation
-+  NOTIMPLEMENTED();
-+  return;
-+#else
-   if (internal::SetCurrentThreadTypeForPlatform(thread_type, pump_type_hint)) {
-     return;
-   }
-@@ -393,12 +406,17 @@ void SetCurrentThreadTypeImpl(ThreadType
-     DVPLOG(1) << "Failed to set nice value of thread ("
-               << PlatformThread::CurrentId() << ") to " << nice_setting;
-   }
-+#endif
- }
- 
- }  // namespace internal
- 
  // static
- ThreadPriorityForTest PlatformThreadBase::GetCurrentThreadPriorityForTest() {
+ ThreadType PlatformThreadBase::GetCurrentEffectiveThreadTypeForTest() {
 +#if BUILDFLAG(IS_BSD)
 +  NOTIMPLEMENTED();
-+  return ThreadPriorityForTest::kNormal;
++  return ThreadType::kDefault;
 +#else
    // Mirrors SetCurrentThreadPriority()'s implementation.
    auto platform_specific_priority =
-       internal::GetCurrentThreadPriorityForPlatformForTest();  // IN-TEST
-@@ -409,6 +427,7 @@ ThreadPriorityForTest PlatformThreadBase
+       internal::GetCurrentEffectiveThreadTypeForPlatformForTest();  // IN-TEST
+@@ -386,6 +398,7 @@ ThreadType PlatformThreadBase::GetCurren
    int nice_value = internal::GetCurrentThreadNiceValue();
  
-   return internal::NiceValueToThreadPriorityForTest(nice_value);  // IN-TEST
+   return internal::NiceValueToThreadTypeForTest(nice_value);  // IN-TEST
 +#endif
  }
  

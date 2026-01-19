@@ -1,10 +1,10 @@
-$NetBSD: patch-components_permissions_prediction__service_prediction__common.cc,v 1.13 2025/12/23 13:22:18 kikadf Exp $
+$NetBSD: patch-components_permissions_prediction__service_prediction__common.cc,v 1.14 2026/01/19 16:14:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/permissions/prediction_service/prediction_common.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- components/permissions/prediction_service/prediction_common.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ components/permissions/prediction_service/prediction_common.cc
 @@ -36,7 +36,7 @@ int BucketizeValue(int count) {
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-media_gpu_chromeos_video__decoder__pipeline.cc,v 1.13 2025/12/23 13:22:21 kikadf Exp $
+$NetBSD: patch-media_gpu_chromeos_video__decoder__pipeline.cc,v 1.14 2026/01/19 16:14:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/video_decoder_pipeline.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- media/gpu/chromeos/video_decoder_pipeline.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ media/gpu/chromeos/video_decoder_pipeline.cc
 @@ -1132,7 +1132,7 @@ VideoDecoderPipeline::PickDecoderOutputF
    }

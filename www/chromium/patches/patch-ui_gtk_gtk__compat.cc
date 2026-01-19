@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_gtk_gtk__compat.cc,v 1.13 2025/12/23 13:22:27 kikadf Exp $
+$NetBSD: patch-ui_gtk_gtk__compat.cc,v 1.14 2026/01/19 16:14:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gtk/gtk_compat.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- ui/gtk/gtk_compat.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ ui/gtk/gtk_compat.cc
-@@ -64,27 +64,47 @@ auto DlCast(void* symbol) {
+@@ -74,27 +74,47 @@ auto DlSym(void* library, const char* na
  }
  
  void* GetLibGio() {

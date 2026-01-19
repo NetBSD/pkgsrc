@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_snapshot_embedded_platform-embedded-file-writer-generic.cc,v 1.13 2025/12/23 13:22:28 kikadf Exp $
+$NetBSD: patch-v8_src_snapshot_embedded_platform-embedded-file-writer-generic.cc,v 1.14 2026/01/19 16:14:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/snapshot/embedded/platform-embedded-file-writer-generic.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- v8/src/snapshot/embedded/platform-embedded-file-writer-generic.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ v8/src/snapshot/embedded/platform-embedded-file-writer-generic.cc
 @@ -9,6 +9,10 @@
  
@@ -34,10 +34,10 @@ $NetBSD: patch-v8_src_snapshot_embedded_platform-embedded-file-writer-generic.cc
  #endif
 +#elif defined(V8_OS_OPENBSD) && !defined(V8_TARGET_ARCH_IA32)
 +  fprintf(fp_, ".balign %d\n", PAGE_SIZE);
- #elif V8_TARGET_ARCH_X64
-   // On x64 use 64-bytes code alignment to allow 64-bytes loop header alignment.
-   static_assert(64 >= kCodeAlignment);
-@@ -102,6 +112,8 @@ void PlatformEmbeddedFileWriterGeneric::
+ #else
+   fprintf(fp_, ".balign %d\n", static_cast<int>(kCodeAlignment));
+ #endif
+@@ -92,6 +102,8 @@ void PlatformEmbeddedFileWriterGeneric::
  #else
    fprintf(fp_, ".balign 4096\n");
  #endif

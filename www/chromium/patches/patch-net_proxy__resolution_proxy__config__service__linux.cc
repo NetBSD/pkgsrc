@@ -1,12 +1,12 @@
-$NetBSD: patch-net_proxy__resolution_proxy__config__service__linux.cc,v 1.13 2025/12/23 13:22:21 kikadf Exp $
+$NetBSD: patch-net_proxy__resolution_proxy__config__service__linux.cc,v 1.14 2026/01/19 16:14:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/proxy_resolution/proxy_config_service_linux.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- net/proxy_resolution/proxy_config_service_linux.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ net/proxy_resolution/proxy_config_service_linux.cc
-@@ -11,7 +11,9 @@
+@@ -6,7 +6,9 @@
  
  #include <errno.h>
  #include <limits.h>
@@ -16,7 +16,7 @@ $NetBSD: patch-net_proxy__resolution_proxy__config__service__linux.cc,v 1.13 202
  #include <unistd.h>
  
  #include <map>
-@@ -502,6 +504,7 @@ bool SettingGetterImplGSettings::CheckVe
+@@ -498,6 +500,7 @@ bool SettingGetterImplGSettings::CheckVe
  }
  #endif  // defined(USE_GIO)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-net_proxy__resolution_proxy__config__service__linux.cc,v 1.13 202
  // Converts |value| from a decimal string to an int. If there was a failure
  // parsing, returns |default_value|.
  int StringToIntOrDefault(std::string_view value, int default_value) {
-@@ -1039,6 +1042,7 @@ class SettingGetterImplKDE : public Prox
+@@ -1038,6 +1041,7 @@ class SettingGetterImplKDE : public Prox
    // events on.
    scoped_refptr<base::SequencedTaskRunner> file_task_runner_;
  };
@@ -32,7 +32,7 @@ $NetBSD: patch-net_proxy__resolution_proxy__config__service__linux.cc,v 1.13 202
  
  }  // namespace
  
-@@ -1259,9 +1263,11 @@ ProxyConfigServiceLinux::Delegate::Deleg
+@@ -1258,9 +1262,11 @@ ProxyConfigServiceLinux::Delegate::Deleg
      case base::nix::DESKTOP_ENVIRONMENT_KDE4:
      case base::nix::DESKTOP_ENVIRONMENT_KDE5:
      case base::nix::DESKTOP_ENVIRONMENT_KDE6:

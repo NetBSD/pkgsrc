@@ -1,12 +1,12 @@
-$NetBSD: patch-media_video_video__encode__accelerator__adapter__test.cc,v 1.13 2025/12/23 13:22:21 kikadf Exp $
+$NetBSD: patch-media_video_video__encode__accelerator__adapter__test.cc,v 1.14 2026/01/19 16:14:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/video_encode_accelerator_adapter_test.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- media/video/video_encode_accelerator_adapter_test.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ media/video/video_encode_accelerator_adapter_test.cc
-@@ -260,7 +260,7 @@ TEST_F(VideoEncodeAcceleratorAdapterTest
+@@ -259,7 +259,7 @@ TEST_F(VideoEncodeAcceleratorAdapterTest
        });
  
    VideoPixelFormat expected_input_format = PIXEL_FORMAT_I420;
@@ -15,7 +15,7 @@ $NetBSD: patch-media_video_video__encode__accelerator__adapter__test.cc,v 1.13 2
    expected_input_format = PIXEL_FORMAT_NV12;
  #endif
    vea()->SetEncodingCallback(base::BindLambdaForTesting(
-@@ -369,7 +369,7 @@ TEST_F(VideoEncodeAcceleratorAdapterTest
+@@ -368,7 +368,7 @@ TEST_F(VideoEncodeAcceleratorAdapterTest
        });
  
    VideoPixelFormat expected_input_format = PIXEL_FORMAT_I420;
@@ -24,7 +24,7 @@ $NetBSD: patch-media_video_video__encode__accelerator__adapter__test.cc,v 1.13 2
    expected_input_format = PIXEL_FORMAT_NV12;
  #endif
  
-@@ -467,7 +467,7 @@ TEST_P(VideoEncodeAcceleratorAdapterTest
+@@ -466,7 +466,7 @@ TEST_P(VideoEncodeAcceleratorAdapterTest
        CreateGreenFrame(large_size, pixel_format, base::Milliseconds(2));
  
    VideoPixelFormat expected_input_format = PIXEL_FORMAT_I420;
@@ -33,7 +33,7 @@ $NetBSD: patch-media_video_video__encode__accelerator__adapter__test.cc,v 1.13 2
      expected_input_format = PIXEL_FORMAT_NV12;
  #endif
    const gfx::ColorSpace expected_color_space =
-@@ -714,7 +714,7 @@ TEST_F(VideoEncodeAcceleratorAdapterTest
+@@ -713,7 +713,7 @@ TEST_F(VideoEncodeAcceleratorAdapterTest
        });
  
    VideoPixelFormat expected_input_format = PIXEL_FORMAT_I420;
