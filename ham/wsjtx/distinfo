@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2026/01/19 13:40:53 mef Exp $
+
+BLAKE2s (wsjtx-2.5.4.tgz) = 67169293348ef4176ec9a709cde87488df716fd92af0a701b46f76f0216691db
+SHA512 (wsjtx-2.5.4.tgz) = c4092d03af3346f0244d942c3db693f5d2c1ed7a2ec9077ded039b7d162e15abdaf09dcb9997d1833d25c366eb03a0dab6114313d423e7e2c9ff37d965261efc
+Size (wsjtx-2.5.4.tgz) = 25369854 bytes
+SHA1 (patch-CMakeLists.txt) = 8ebdc56e3679429863121d0e4739ab433a628743
+SHA1 (patch-CMake_Modules_FindUsb.cmake) = 6c9edbce838731a026d682ddd0a1174bbceb4e89
+SHA1 (patch-Radio.cpp) = a798fbf75deb3cd49c6a15cd1e74530bb955ee23
+SHA1 (patch-hamlib.patch) = 8d5cec646b0fe317a41da3ed66a299ea1510c87f
+SHA1 (patch-lib_shmem.cpp) = 0520cc1972bdfd692f5fc9f046c7a8a2b8f8eff4
+SHA1 (patch-widgets_FrequencyDeltaLineEdit.cpp) = 61adc842a3b8fae64d9a4110bed1f8d209d3e5d7
+SHA1 (patch-widgets_FrequencyLineEdit.cpp) = a70cf22461eb6a54fcf052079c7e5de6e4085313
