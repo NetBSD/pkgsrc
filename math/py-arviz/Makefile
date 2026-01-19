@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2025/12/26 16:30:18 adam Exp $
+# $NetBSD: Makefile,v 1.22 2026/01/19 08:36:12 adam Exp $
 
-DISTNAME=	arviz-0.23.0
+DISTNAME=	arviz-0.23.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/arviz/}
