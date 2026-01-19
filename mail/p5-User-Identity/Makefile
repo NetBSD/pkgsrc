@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2025/07/04 08:47:26 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/01/19 07:52:24 wiz Exp $
 
 DISTNAME=	User-Identity-1.02
 PKGNAME=	p5-${DISTNAME}
@@ -7,8 +7,7 @@ CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=User/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://perl.overmeer.net/userid/
-#HOMEPAGE=	http://search.cpan.org/dist/User-Identity/
+HOMEPAGE=	https://perl.overmeer.net/userid/
 COMMENT=	Helps maintaining user information from various sources
 LICENSE=	${PERL5_LICENSE}
 
