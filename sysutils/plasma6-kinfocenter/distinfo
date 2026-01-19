@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2025/12/23 08:48:26 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/01/19 09:52:19 markd Exp $
 
 BLAKE2s (kinfocenter-6.5.2.tar.xz) = ff22a0e8a90e1b84530c95befd24d690c6ba1c4d660c46e452f1b7e75acf5b55
 SHA512 (kinfocenter-6.5.2.tar.xz) = 6c96092849063807e165fe51b0b9d2986c13d1956d74fcb1c57eda46c641543c3f889f73bb88df3d01f0178e25063f5c605d11c5943bcf278847c9d7c5102459
 Size (kinfocenter-6.5.2.tar.xz) = 760788 bytes
 SHA1 (patch-kcms_about-distro_src_MemoryEntry.cpp) = 001b0a06431064eda5de57bf8faece89393992d0
+SHA1 (patch-kcms_interrupts_main.cpp) = ba899a303b1cbe4a864d9dc0ffae7835373c452e
