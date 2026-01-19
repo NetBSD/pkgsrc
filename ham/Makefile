@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2025/04/12 18:37:38 jmcneill Exp $
+# $NetBSD: Makefile,v 1.58 2026/01/19 13:42:31 mef Exp $
 #
 
 COMMENT=	Wireless communication tools and applications
@@ -52,6 +52,7 @@ SUBDIR+=	tlf
 SUBDIR+=	tnt
 SUBDIR+=	trustedQSL
 SUBDIR+=	uhd
+SUBDIR+=	wsjtx
 SUBDIR+=	wwl
 SUBDIR+=	xdx
 SUBDIR+=	xlog

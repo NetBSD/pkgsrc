@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.505 2026/01/19 12:06:51 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.506 2026/01/19 13:42:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -663,3 +663,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/happy to 2.2 [wiz 2026-01-19]
 	Updated www/firefox to 147.0.1 [ryoon 2026-01-19]
 	Updated www/firefox-l10n to 147.0.1 [ryoon 2026-01-19]
+	Added ham/wsjtx to 2.5.4 [mef 2026-01-19]
