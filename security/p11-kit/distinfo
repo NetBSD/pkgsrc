@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.33 2026/01/19 10:37:26 wiz Exp $
+$NetBSD: distinfo,v 1.34 2026/01/19 14:18:58 adam Exp $
 
-BLAKE2s (p11-kit-0.26.0.tar.xz) = 79c38738a3c010d7b457cef2ce508dc5639fadd489f045a2a7f009a7b53c55c8
-SHA512 (p11-kit-0.26.0.tar.xz) = 20ca24e3a202a8fc9d66f6312ea0c34a36523bd2b33c9316148f68349481b22149b46f05a4ac1460d2b9bbbd40133588fc3fc4a3177e4db06a7c2d11d07dd494
-Size (p11-kit-0.26.0.tar.xz) = 1068736 bytes
+BLAKE2s (p11-kit-0.26.1.tar.xz) = 83f2edf7180a4b13642cf5f74dfeb73fa30e63fd41f4676f88ae436bb15c4e94
+SHA512 (p11-kit-0.26.1.tar.xz) = 236983b3fb4cd40517e19d4c56815b16979be95d986c7be937ea941c4203955e0e3145a40835b2d1b7bb1c23511bb324686ecbf240cd9f68bce193c1c02b0cc5
+Size (p11-kit-0.26.1.tar.xz) = 1069980 bytes
 SHA1 (patch-common_message.c) = 4169ab2cb0b923d306c0b77908e1a412fec261c8
 SHA1 (patch-meson.build) = eb1c4130b097e3d57a74c9aa5482872670f3472b
