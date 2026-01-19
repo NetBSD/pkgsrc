@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.17 2025/07/26 06:21:35 taca Exp $
+$NetBSD: distinfo,v 1.18 2026/01/19 15:26:15 taca Exp $
 
-BLAKE2s (ruby-3.2.9.tar.xz) = 4a75586ce20da8e18247f2d17ebf72d8d765e72f4996c641292a7114190726d1
-SHA512 (ruby-3.2.9.tar.xz) = 4db0656694c25c971bcf3591516e6feddb7fc60c4474b63dd1d2c1481c3629421edc904666067b2dcbc47357db1a32b7bf412055306fe29cee30fa048f89b6e3
-Size (ruby-3.2.9.tar.xz) = 15141728 bytes
+BLAKE2s (ruby-3.2.10.tar.xz) = 878c7f7a3c90fe3af058555b4b51da3a127d4cfb5a16965dcdbd0cad3cec3575
+SHA512 (ruby-3.2.10.tar.xz) = a89044db8a55bd990d3756e212f2966b62b903eefc96c7e0af89aa4580ff7253d2f64c6c25fc04f2031b959e614bae84b86db36cfdec3a3e8afb5c3026426687
+Size (ruby-3.2.10.tar.xz) = 14696548 bytes
 SHA1 (patch-.bundle_gems_net-imap-0.3.9_net-imap.gemspec) = 8fafe18eeb24bff0a79b558746cfab331e65aa8c
 SHA1 (patch-common.mk) = c23eed58427b2fd4ba8fdb3692f609701a666c6d
 SHA1 (patch-configure) = b653c9443574e9c2e76699063ad2937f77a532b2
