@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.509 2026/01/19 15:28:06 taca Exp $
+$NetBSD: CHANGES-2026,v 1.510 2026/01/19 15:32:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -669,3 +669,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/ruby32-base to 3.2.10 [taca 2026-01-19]
 	Updated devel/ruby-readline to 3.2.10 [taca 2026-01-19]
 	Updated lang/ruby32 to 3.2.10 [taca 2026-01-19]
+	Updated lang/php84 to 8.4.17 [taca 2026-01-19]
