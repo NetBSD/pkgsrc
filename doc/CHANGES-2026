@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.484 2026/01/19 07:42:37 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.485 2026/01/19 07:58:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -636,3 +636,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/ocaml-opam to 2.1.3nb10 [wiz 2026-01-18]
 	Updated devel/ocaml-dune to 3.21.0 [wiz 2026-01-18]
 	Removed editors/p5-Padre-Plugin-Debugger [wiz 2026-01-19]
+	Updated textproc/discount to 2.2.7e [wiz 2026-01-19]
