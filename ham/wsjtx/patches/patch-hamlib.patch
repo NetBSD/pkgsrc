@@ -1,0 +1,28 @@
+$NetBSD: patch-hamlib.patch,v 1.1 2026/01/19 13:40:54 mef Exp $
+
+patch PREFIX inside patch
+
+--- /dev/null	2021-03-27 14:25:58.185030027 +0900
++++ hamlib.patch 2021-03-27 14:26:58.703680417 +0900
+@@ -0,0 +1,21 @@
++--- hamlib-prefix/src/hamlib/hamlib.pc.in.orig	2021-02-01 21:35:36.000000000 +0900
+++++ hamlib/hamlib.pc.in	2021-03-21 21:07:31.473290128 +0900
++@@ -9,5 +9,5 @@ URL: @PACKAGE_URL@
++ Version: @PACKAGE_VERSION@
++ Requires.private: @LIBUSB@
++ Cflags: -I${includedir} @PTHREAD_CFLAGS@
++-Libs: -L${libdir} -lhamlib
+++Libs: -L${libdir} ${libdir}/libhamlib.a
++ Libs.private: @MATH_LIBS@ @DL_LIBS@ @NET_LIBS@ @PTHREAD_LIBS@
++
++--- hamlib/configure.orig	2021-02-01 21:35:58.000000000 +0900
+++++ hamlib/configure	2021-03-27 14:11:34.897938353 +0900
++@@ -19344,7 +19344,7 @@
++ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_usb_1_0_libusb_init" >&5
++ $as_echo "$ac_cv_lib_usb_1_0_libusb_init" >&6; }
++ if test "x$ac_cv_lib_usb_1_0_libusb_init" = xyes; then :
++-  LIBUSB_LIBS="-lusb-1.0"
+++  LIBUSB_LIBS="-lusb-1.0 -L@PREFIX@/lib"
++ else
++   { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: libusb_init was not found in libusb-1.0--USB backends will be disabled" >&5
++ $as_echo "$as_me: WARNING: libusb_init was not found in libusb-1.0--USB backends will be disabled" >&2;}
