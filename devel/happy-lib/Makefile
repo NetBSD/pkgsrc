@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2025/08/20 19:22:52 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/01/19 11:56:21 wiz Exp $
 
-DISTNAME=	happy-lib-2.1.7
+DISTNAME=	happy-lib-2.2
 PKGNAME=	${DISTNAME}
 CATEGORIES=	devel
 
