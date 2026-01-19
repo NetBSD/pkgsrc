@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.488 2026/01/19 08:38:20 adam Exp $
+$NetBSD: CHANGES-2026,v 1.489 2026/01/19 08:50:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -642,3 +642,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-arviz to 0.23.1 [adam 2026-01-19]
 	Updated x11/py-sip-qt5 to 12.18.0 [adam 2026-01-19]
 	Updated x11/py-sip-qt6 to 13.11.0 [adam 2026-01-19]
+	Updated textproc/py-xmlschema to 4.3.1 [adam 2026-01-19]
+	Updated security/py-bandit to 1.9.3 [adam 2026-01-19]
