@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.26 2026/01/01 10:09:54 rillig Exp $
+# $NetBSD: options.mk,v 1.27 2026/01/19 19:25:40 gutteridge Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.curl
 PKG_SUPPORTED_OPTIONS=		inet6 openssl libssh2 gssapi ldap rtmp idn http2
@@ -18,6 +18,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 .if !empty(PKG_OPTIONS:Mopenssl)
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=3.0
 .include "../../security/openssl/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-ssl
