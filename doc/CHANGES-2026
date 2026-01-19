@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.492 2026/01/19 10:28:14 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.493 2026/01/19 10:32:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -650,3 +650,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/dolphin-plugins to 25.08.3 [markd 2026-01-19]
 	Updated audio/alsa-lib to 1.2.15.3 [wiz 2026-01-19]
 	Updated devel/jjui to 0.9.10 [wiz 2026-01-19]
+	Updated graphics/libheif to 1.21.2 [wiz 2026-01-19]
