@@ -1,10 +1,10 @@
-$NetBSD: patch-base_posix_unix__domain__socket.cc,v 1.13 2025/12/23 13:22:10 kikadf Exp $
+$NetBSD: patch-base_posix_unix__domain__socket.cc,v 1.14 2026/01/19 16:14:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/posix/unix_domain_socket.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- base/posix/unix_domain_socket.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ base/posix/unix_domain_socket.cc
 @@ -20,6 +20,7 @@
  #include "base/files/scoped_file.h"

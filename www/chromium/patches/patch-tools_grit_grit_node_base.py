@@ -1,10 +1,10 @@
-$NetBSD: patch-tools_grit_grit_node_base.py,v 1.13 2025/12/23 13:22:26 kikadf Exp $
+$NetBSD: patch-tools_grit_grit_node_base.py,v 1.14 2026/01/19 16:14:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/grit/grit/node/base.py.orig	2025-12-17 23:05:18.000000000 +0000
+--- tools/grit/grit/node/base.py.orig	2026-01-07 00:50:30.000000000 +0000
 +++ tools/grit/grit/node/base.py
 @@ -491,7 +491,8 @@ class Node:
          value = defs

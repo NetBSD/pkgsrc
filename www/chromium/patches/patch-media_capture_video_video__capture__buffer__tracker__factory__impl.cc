@@ -1,10 +1,10 @@
-$NetBSD: patch-media_capture_video_video__capture__buffer__tracker__factory__impl.cc,v 1.13 2025/12/23 13:22:20 kikadf Exp $
+$NetBSD: patch-media_capture_video_video__capture__buffer__tracker__factory__impl.cc,v 1.14 2026/01/19 16:14:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/video_capture_buffer_tracker_factory_impl.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- media/capture/video/video_capture_buffer_tracker_factory_impl.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ media/capture/video/video_capture_buffer_tracker_factory_impl.cc
 @@ -13,7 +13,7 @@
  #include "media/capture/video/chromeos/gpu_memory_buffer_tracker_cros.h"

@@ -1,12 +1,12 @@
-$NetBSD: patch-headless_lib_headless__content__main__delegate.cc,v 1.13 2025/12/23 13:22:20 kikadf Exp $
+$NetBSD: patch-headless_lib_headless__content__main__delegate.cc,v 1.14 2026/01/19 16:14:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/lib/headless_content_main_delegate.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- headless/lib/headless_content_main_delegate.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ headless/lib/headless_content_main_delegate.cc
-@@ -411,7 +411,7 @@ void HeadlessContentMainDelegate::InitCr
+@@ -408,7 +408,7 @@ void HeadlessContentMainDelegate::InitCr
    if (process_type != ::switches::kZygoteProcess) {
      g_headless_crash_client.Pointer()->set_crash_dumps_dir(
          command_line.GetSwitchValuePath(switches::kCrashDumpsDir));

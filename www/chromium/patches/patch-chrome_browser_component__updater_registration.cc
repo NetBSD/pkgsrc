@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_component__updater_registration.cc,v 1.13 2025/12/23 13:22:12 kikadf Exp $
+$NetBSD: patch-chrome_browser_component__updater_registration.cc,v 1.14 2026/01/19 16:14:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/registration.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/component_updater/registration.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/component_updater/registration.cc
-@@ -95,7 +95,7 @@
+@@ -94,7 +94,7 @@
  #endif  // BUILDFLAG(ENABLE_WIDEVINE_CDM_COMPONENT)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_component__updater_registration.cc,v 1.13 2025/12/
  #include "components/component_updater/installer_policies/amount_extraction_heuristic_regexes_component_installer.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
-@@ -108,7 +108,7 @@
+@@ -107,7 +107,7 @@
  #include "chrome/browser/component_updater/lacros_component_remover.h"
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_component__updater_registration.cc,v 1.13 2025/12/
  #include "chrome/browser/component_updater/wasm_tts_engine_component_installer.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
-@@ -247,7 +247,7 @@ void RegisterComponentsForUpdate() {
+@@ -254,7 +254,7 @@ void RegisterComponentsForUpdate() {
    RegisterCookieReadinessListComponent(cus);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_component__updater_registration.cc,v 1.13 2025/12/
    RegisterAmountExtractionHeuristicRegexesComponent(cus);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -259,7 +259,7 @@ void RegisterComponentsForUpdate() {
+@@ -266,7 +266,7 @@ void RegisterComponentsForUpdate() {
    }
  #endif  // BUIDLFLAG(IS_ANDROID)
  
@@ -41,4 +41,4 @@ $NetBSD: patch-chrome_browser_component__updater_registration.cc,v 1.13 2025/12/
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    RegisterWasmTtsEngineComponent(cus, g_browser_process->local_state());
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
- 
+ }

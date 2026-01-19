@@ -1,10 +1,10 @@
-$NetBSD: patch-net_socket_udp__socket__unittest.cc,v 1.13 2025/12/23 13:22:21 kikadf Exp $
+$NetBSD: patch-net_socket_udp__socket__unittest.cc,v 1.14 2026/01/19 16:14:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/udp_socket_unittest.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- net/socket/udp_socket_unittest.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ net/socket/udp_socket_unittest.cc
 @@ -396,7 +396,7 @@ TEST_F(UDPSocketTest, PartialRecv) {
    EXPECT_EQ(second_packet, received);
@@ -42,7 +42,7 @@ $NetBSD: patch-net_socket_udp__socket__unittest.cc,v 1.13 2025/12/23 13:22:21 ki
  #define MAYBE_SharedMulticastAddress DISABLED_SharedMulticastAddress
  #else
  #define MAYBE_SharedMulticastAddress SharedMulticastAddress
-@@ -849,7 +849,7 @@ TEST_F(UDPSocketTest, MAYBE_SharedMultic
+@@ -846,7 +846,7 @@ TEST_F(UDPSocketTest, MAYBE_SharedMultic
                                  NetLogSource());
    ASSERT_THAT(client_socket.Connect(send_address), IsOk());
  

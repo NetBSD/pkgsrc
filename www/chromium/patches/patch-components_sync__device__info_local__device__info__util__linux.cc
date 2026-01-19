@@ -1,10 +1,10 @@
-$NetBSD: patch-components_sync__device__info_local__device__info__util__linux.cc,v 1.13 2025/12/23 13:22:18 kikadf Exp $
+$NetBSD: patch-components_sync__device__info_local__device__info__util__linux.cc,v 1.14 2026/01/19 16:14:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync_device_info/local_device_info_util_linux.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- components/sync_device_info/local_device_info_util_linux.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ components/sync_device_info/local_device_info_util_linux.cc
 @@ -9,6 +9,11 @@
  

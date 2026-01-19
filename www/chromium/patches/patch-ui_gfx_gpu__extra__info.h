@@ -1,14 +1,14 @@
-$NetBSD: patch-ui_gfx_gpu__extra__info.h,v 1.11 2025/12/23 13:22:26 kikadf Exp $
+$NetBSD: patch-ui_gfx_gpu__extra__info.h,v 1.12 2026/01/19 16:14:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/gpu_extra_info.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- ui/gfx/gpu_extra_info.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ ui/gfx/gpu_extra_info.h
-@@ -51,7 +51,7 @@ struct COMPONENT_EXPORT(GFX) GpuExtraInf
-   std::vector<gfx::BufferUsageAndFormat> gpu_memory_buffer_support_x11;
- #endif  // BUILDFLAG(IS_OZONE_X11)
+@@ -47,7 +47,7 @@ struct COMPONENT_EXPORT(GFX) GpuExtraInf
+   // applicable.
+   ANGLEFeatures angle_features;
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

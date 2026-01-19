@@ -1,17 +1,18 @@
-$NetBSD: patch-media_audio_sndio_sndio__input.cc,v 1.13 2025/12/23 13:22:20 kikadf Exp $
+$NetBSD: patch-media_audio_sndio_sndio__input.cc,v 1.14 2026/01/19 16:14:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/sndio/sndio_input.cc.orig	2025-12-22 09:38:34.087604262 +0000
+--- media/audio/sndio/sndio_input.cc.orig	2026-01-19 14:53:54.679781240 +0000
 +++ media/audio/sndio/sndio_input.cc
-@@ -0,0 +1,201 @@
+@@ -0,0 +1,202 @@
 +// Copyright 2013 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +
 +#include "base/logging.h"
++#include "media/base/audio_bus.h"
 +#include "media/base/audio_sample_types.h"
 +#include "media/base/audio_timestamp_helper.h"
 +#include "media/audio/sndio/audio_manager_sndio.h"

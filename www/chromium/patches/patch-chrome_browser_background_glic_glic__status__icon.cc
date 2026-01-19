@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.12 2025/12/23 13:22:12 kikadf Exp $
+$NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.13 2026/01/19 16:14:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/background/glic/glic_status_icon.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/background/glic/glic_status_icon.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/background/glic/glic_status_icon.cc
-@@ -105,7 +105,7 @@ GlicStatusIcon::GlicStatusIcon(GlicContr
+@@ -111,7 +111,7 @@ GlicStatusIcon::GlicStatusIcon(GlicContr
      return;
    }
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.12 2025/
    // Set a vector icon for proper theming on Linux.
    status_icon_->SetIcon(
        GlicVectorIconManager::GetVectorIcon(IDR_GLIC_BUTTON_VECTOR_ICON));
-@@ -160,7 +160,7 @@ GlicStatusIcon::~GlicStatusIcon() {
+@@ -166,7 +166,7 @@ GlicStatusIcon::~GlicStatusIcon() {
  
    context_menu_ = nullptr;
    if (status_icon_) {
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.12 2025/
      status_icon_->RemoveObserver(this);
  #endif
      std::unique_ptr<StatusIcon> removed_icon =
-@@ -290,7 +290,7 @@ void GlicStatusIcon::UpdateHotkey(const 
+@@ -304,7 +304,7 @@ void GlicStatusIcon::UpdateHotkey(const 
  }
  
  void GlicStatusIcon::UpdateVisibilityOfExitInContextMenu() {
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.12 2025/
    if (context_menu_) {
      const bool is_visible = BrowserList::GetInstance()->empty();
      const std::optional<size_t> index =
-@@ -368,7 +368,7 @@ std::unique_ptr<StatusIconMenuModel> Gli
+@@ -382,7 +382,7 @@ std::unique_ptr<StatusIconMenuModel> Gli
    menu->AddItem(IDC_GLIC_STATUS_ICON_MENU_SETTINGS,
                  l10n_util::GetStringUTF16(IDS_GLIC_STATUS_ICON_MENU_SETTINGS));
  

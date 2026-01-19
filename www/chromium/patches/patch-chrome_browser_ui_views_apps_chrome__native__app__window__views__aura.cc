@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_apps_chrome__native__app__window__views__aura.cc,v 1.13 2025/12/23 13:22:15 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_apps_chrome__native__app__window__views__aura.cc,v 1.14 2026/01/19 16:14:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/apps/chrome_native_app_window_views_aura.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/ui/views/apps/chrome_native_app_window_views_aura.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/ui/views/apps/chrome_native_app_window_views_aura.cc
 @@ -19,7 +19,7 @@
  #include "ui/menus/simple_menu_model.h"

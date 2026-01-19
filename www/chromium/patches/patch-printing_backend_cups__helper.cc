@@ -1,12 +1,12 @@
-$NetBSD: patch-printing_backend_cups__helper.cc,v 1.9 2025/12/23 13:22:21 kikadf Exp $
+$NetBSD: patch-printing_backend_cups__helper.cc,v 1.10 2026/01/19 16:14:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/backend/cups_helper.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- printing/backend/cups_helper.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ printing/backend/cups_helper.cc
-@@ -13,7 +13,7 @@
+@@ -8,7 +8,7 @@
  #include "base/time/time.h"
  #include "build/build_config.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-printing_backend_cups__helper.cc,v 1.9 2025/12/23 13:22:21 kikadf
  #include <cups/ppd.h>
  #include <stddef.h>
  #include <stdio.h>
-@@ -43,11 +43,11 @@
+@@ -38,11 +38,11 @@
  #include "url/gurl.h"
  #endif  // BUILDFLAG(IS_LINUX)
  
@@ -29,7 +29,7 @@ $NetBSD: patch-printing_backend_cups__helper.cc,v 1.9 2025/12/23 13:22:21 kikadf
  using base::EqualsCaseInsensitiveASCII;
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -60,7 +60,7 @@ namespace {
+@@ -55,7 +55,7 @@ namespace {
  // able to start and respond on all systems within this duration.
  constexpr base::TimeDelta kCupsTimeout = base::Seconds(5);
  
@@ -38,7 +38,7 @@ $NetBSD: patch-printing_backend_cups__helper.cc,v 1.9 2025/12/23 13:22:21 kikadf
  // CUPS default max copies value (parsed from kCupsMaxCopies PPD attribute).
  constexpr int32_t kDefaultMaxCopies = 9999;
  constexpr char kCupsMaxCopies[] = "cupsMaxCopies";
-@@ -766,7 +766,7 @@ const int kDefaultIPPServerPort = 631;
+@@ -761,7 +761,7 @@ const int kDefaultIPPServerPort = 631;
  
  }  // namespace
  
@@ -47,7 +47,7 @@ $NetBSD: patch-printing_backend_cups__helper.cc,v 1.9 2025/12/23 13:22:21 kikadf
  // Helper wrapper around http_t structure, with connection and cleanup
  // functionality.
  HttpConnectionCUPS::HttpConnectionCUPS(const GURL& print_server_url,
-@@ -971,7 +971,7 @@ ScopedHttpPtr HttpConnect2(const char* h
+@@ -966,7 +966,7 @@ ScopedHttpPtr HttpConnect2(const char* h
                             int blocking,
                             int msec,
                             int* cancel) {

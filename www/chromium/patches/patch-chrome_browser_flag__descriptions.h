@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_flag__descriptions.h,v 1.13 2025/12/23 13:22:13 kikadf Exp $
+$NetBSD: patch-chrome_browser_flag__descriptions.h,v 1.14 2026/01/19 16:14:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/flag_descriptions.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- chrome/browser/flag_descriptions.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ chrome/browser/flag_descriptions.h
-@@ -8586,6 +8586,20 @@ inline constexpr char kHandleMdmErrorsFo
+@@ -8618,6 +8618,20 @@ inline constexpr char kHandleMdmErrorsFo
  inline constexpr char kHandleMdmErrorsForDasherAccountsDescription[] =
      "Enables the mdm error handling feature for dasher accounts";
  

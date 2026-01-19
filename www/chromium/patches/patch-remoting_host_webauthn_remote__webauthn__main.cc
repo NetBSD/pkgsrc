@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_webauthn_remote__webauthn__main.cc,v 1.11 2025/12/23 13:22:22 kikadf Exp $
+$NetBSD: patch-remoting_host_webauthn_remote__webauthn__main.cc,v 1.12 2026/01/19 16:14:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/webauthn/remote_webauthn_main.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- remoting/host/webauthn/remote_webauthn_main.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ remoting/host/webauthn/remote_webauthn_main.cc
 @@ -27,7 +27,7 @@
  #include "remoting/host/webauthn/remote_webauthn_caller_security_utils.h"

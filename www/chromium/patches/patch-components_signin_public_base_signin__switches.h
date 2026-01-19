@@ -1,12 +1,12 @@
-$NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.12 2025/12/23 13:22:18 kikadf Exp $
+$NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.13 2026/01/19 16:14:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/signin/public/base/signin_switches.h.orig	2025-12-17 23:05:18.000000000 +0000
+--- components/signin/public/base/signin_switches.h.orig	2026-01-07 00:50:30.000000000 +0000
 +++ components/signin/public/base/signin_switches.h
-@@ -95,7 +95,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+@@ -98,7 +98,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kChromeAndroidIdentitySurveyBookmarkPromo);
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.12 2025/12/2
  // Enables surveys to measure the effectiveness of the identity model.
  // These surveys would be displayed after interactions such as signin, profile
  // switching, etc. Please keep sorted alphabetically.
-@@ -127,7 +127,7 @@ BASE_DECLARE_FEATURE(kChromeIdentitySurv
+@@ -130,7 +130,7 @@ BASE_DECLARE_FEATURE(kChromeIdentitySurv
  // LINT.ThenChange(//chrome/browser/signin/signin_hats_util.cc)
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
@@ -24,26 +24,27 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.12 2025/12/2
  // Controls the duration for which the launch of an identity survey is delayed.
  COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kChromeIdentitySurveyLaunchWithDelay);
-@@ -287,7 +287,7 @@ BASE_DECLARE_FEATURE_PARAM(base::TimeDel
+@@ -297,7 +297,7 @@ BASE_DECLARE_FEATURE_PARAM(base::TimeDel
                             kOfferMigrationToDiceUsersMinTimeBetweenDialogs);
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // Experimenting with a button to all profiles from the profile picker.
+ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+ BASE_DECLARE_FEATURE(kOpenAllProfilesFromProfilePickerExperiment);
+@@ -306,7 +306,7 @@ extern const base::FeatureParam<int>
+     kMaxProfilesCountToShowOpenAllButtonInProfilePicker;
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  // Experimenting with changing the secondary CTA for FRE and new profile
  // creation.
  COMPONENT_EXPORT(SIGNIN_SWITCHES)
-@@ -318,14 +318,14 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
- BASE_DECLARE_FEATURE(kRollbackDiceMigration);
- #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)
- 
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- // Experimenting with showing the profile picker to all users (not only the
- // users with multiple profiles).
+@@ -371,7 +371,7 @@ extern const base::FeatureParam<int> kCo
  COMPONENT_EXPORT(SIGNIN_SWITCHES)
- BASE_DECLARE_FEATURE(kShowProfilePickerToAllUsersExperiment);
- #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+ extern const base::FeatureParam<int> kContextualSigninPromoDismissedThreshold;
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

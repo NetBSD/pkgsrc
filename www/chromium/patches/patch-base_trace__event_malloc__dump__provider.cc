@@ -1,10 +1,10 @@
-$NetBSD: patch-base_trace__event_malloc__dump__provider.cc,v 1.13 2025/12/23 13:22:11 kikadf Exp $
+$NetBSD: patch-base_trace__event_malloc__dump__provider.cc,v 1.14 2026/01/19 16:14:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/trace_event/malloc_dump_provider.cc.orig	2025-12-17 23:05:18.000000000 +0000
+--- base/trace_event/malloc_dump_provider.cc.orig	2026-01-07 00:50:30.000000000 +0000
 +++ base/trace_event/malloc_dump_provider.cc
 @@ -31,6 +31,8 @@
  
