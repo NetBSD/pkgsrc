@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2025/08/20 19:23:36 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/01/19 11:56:45 wiz Exp $
 
-DISTNAME=	happy-2.1.7
+DISTNAME=	happy-2.2
 PKGNAME=	${DISTNAME}
 CATEGORIES=	devel
 
