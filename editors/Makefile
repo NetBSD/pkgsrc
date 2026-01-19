@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.261 2025/12/31 21:37:27 pin Exp $
+# $NetBSD: Makefile,v 1.262 2026/01/19 07:42:37 wiz Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -114,7 +114,6 @@ SUBDIR+=	p5-Padre
 SUBDIR+=	p5-Padre-Plugin-Autoformat
 SUBDIR+=	p5-Padre-Plugin-Catalyst
 SUBDIR+=	p5-Padre-Plugin-DataWalker
-SUBDIR+=	p5-Padre-Plugin-Debugger
 SUBDIR+=	p5-Padre-Plugin-Ecliptic
 SUBDIR+=	p5-Padre-Plugin-Encrypt
 SUBDIR+=	p5-Padre-Plugin-Git
