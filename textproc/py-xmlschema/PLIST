@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2026/01/07 18:43:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2026/01/19 08:48:23 adam Exp $
 bin/xmlschema-json2xml-${PYVERSSUFFIX}
 bin/xmlschema-validate-${PYVERSSUFFIX}
 bin/xmlschema-xml2json-${PYVERSSUFFIX}
@@ -20,6 +20,9 @@ ${PYSITELIB}/xmlschema/aliases.pyo
 ${PYSITELIB}/xmlschema/arguments.py
 ${PYSITELIB}/xmlschema/arguments.pyc
 ${PYSITELIB}/xmlschema/arguments.pyo
+${PYSITELIB}/xmlschema/caching.py
+${PYSITELIB}/xmlschema/caching.pyc
+${PYSITELIB}/xmlschema/caching.pyo
 ${PYSITELIB}/xmlschema/cli.py
 ${PYSITELIB}/xmlschema/cli.pyc
 ${PYSITELIB}/xmlschema/cli.pyo
@@ -164,9 +167,6 @@ ${PYSITELIB}/xmlschema/utils/__init__.pyo
 ${PYSITELIB}/xmlschema/utils/decoding.py
 ${PYSITELIB}/xmlschema/utils/decoding.pyc
 ${PYSITELIB}/xmlschema/utils/decoding.pyo
-${PYSITELIB}/xmlschema/utils/descriptors.py
-${PYSITELIB}/xmlschema/utils/descriptors.pyc
-${PYSITELIB}/xmlschema/utils/descriptors.pyo
 ${PYSITELIB}/xmlschema/utils/etree.py
 ${PYSITELIB}/xmlschema/utils/etree.pyc
 ${PYSITELIB}/xmlschema/utils/etree.pyo
