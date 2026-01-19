@@ -1,0 +1,3 @@
+auth	sufficient	%%PREFIX%%lib/security/pam_pwauth_suid.so
+auth	include		system
+account	include		system
