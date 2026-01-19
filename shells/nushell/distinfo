@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.67 2026/01/18 14:06:46 pin Exp $
+$NetBSD: distinfo,v 1.68 2026/01/19 21:28:46 wiz Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -2667,4 +2667,5 @@ Size (zstd-safe-7.2.1.crate) = 21122 bytes
 BLAKE2s (zstd-sys-2.0.13+zstd.1.5.6.crate) = df71c3b7a2dd396817e8e71eee920caccb9ae769f06d82920e6eea55df3be7dc
 SHA512 (zstd-sys-2.0.13+zstd.1.5.6.crate) = c1f0176ebd0914879d0060796776c7fe376293ce9bc9f8f07ee3b809932a75aa033881d59a1bc99b6cd9af85b8e225fc09bcfc96013e556d7c11f155b759ecbf
 Size (zstd-sys-2.0.13+zstd.1.5.6.crate) = 749090 bytes
+SHA1 (patch-.._vendor_mio-0.8.11_src_sys_unix_selector_kqueue.rs) = 0ac5513dceb7f92e6530d24d536935ed4f16aa5c
 SHA1 (patch-.._vendor_mio-1.0.3_src_sys_unix_selector_kqueue.rs) = a61c6361072178d86f00280158f6c8876c42b42d
