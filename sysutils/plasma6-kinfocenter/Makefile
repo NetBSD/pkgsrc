@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2026/01/07 08:48:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/19 09:52:19 markd Exp $
 
 DISTNAME=	kinfocenter-${PLASMAVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/
@@ -11,8 +11,10 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND gnu-fdl-v1.2
 .include "../../meta-pkgs/kde/plasma6.mk"
 
 TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
+DEPENDS+=	glx-utils-[0-9]*:../../graphics/glx-utils
 DEPENDS+=	vulkan-tools-[0-9]*:../../graphics/vulkan-tools
 DEPENDS+=	plasma6-systemsettings>=${PLASMAVER}:../../sysutils/plasma6-systemsettings
+DEPENDS+=	lscpu-[0-9]*:../../sysutils/lscpu
 DEPENDS+=	xdpyinfo-[0-9]*:../../x11/xdpyinfo
 
 USE_TOOLS+=	msgmerge pkg-config
