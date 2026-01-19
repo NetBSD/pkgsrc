@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.507 2026/01/19 13:52:44 mef Exp $
+$NetBSD: CHANGES-2026,v 1.508 2026/01/19 14:20:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -664,3 +664,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox to 147.0.1 [ryoon 2026-01-19]
 	Updated www/firefox-l10n to 147.0.1 [ryoon 2026-01-19]
 	Added ham/wsjtx version 2.5.4 [mef 2026-01-19]
+	Updated security/p11-kit to 0.26.1 [adam 2026-01-19]
+	Updated audio/py-last to 7.0.2 [adam 2026-01-19]
