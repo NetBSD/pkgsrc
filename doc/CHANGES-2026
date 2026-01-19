@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.486 2026/01/19 08:14:06 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.487 2026/01/19 08:36:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -638,3 +638,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed editors/p5-Padre-Plugin-Debugger [wiz 2026-01-19]
 	Updated textproc/discount to 2.2.7e [wiz 2026-01-19]
 	Updated net/powerdns-recursor to 5.3.4 [wiz 2026-01-19]
+	Updated devel/meson to 1.10.1 [adam 2026-01-19]
+	Updated math/py-arviz to 0.23.1 [adam 2026-01-19]
