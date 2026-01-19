@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.495 2026/01/19 10:47:00 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.496 2026/01/19 11:05:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -653,3 +653,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/libheif to 1.21.2 [wiz 2026-01-19]
 	Updated security/p11-kit to 0.26.0 [wiz 2026-01-19]
 	Updated textproc/tree-sitter-markdown to 0.7.1.0.5.2 [wiz 2026-01-19]
+	Updated textproc/tabiew to 0.12.0 [wiz 2026-01-19]
