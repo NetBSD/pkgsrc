@@ -1,35 +1,45 @@
-# $NetBSD: Makefile,v 1.39 2026/01/07 08:48:50 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/01/19 10:08:23 markd Exp $
 
 DISTNAME=	dolphin-${KAPPSVER}
-PKGREVISION=	12
 CATEGORIES=	sysutils
 
-HOMEPAGE=	https://kde.org/applications/system/dolphin/
+HOMEPAGE=	https://apps.kde.org/dolphin/
 COMMENT=	KDE File Manager
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 DEPENDS+=	kio-extras>=${KAPPSVER}:../../devel/kio-extras
-DEPENDS+=	kinit>=5.70.0nb6:../../x11/kinit
-
-REPLACE_RUBY+=	src/settings/services/servicemenuinstallation
-REPLACE_RUBY+=	src/settings/services/servicemenudeinstallation
-
-.include "../../lang/ruby/replace.mk"
 
 USE_TOOLS+=	msgmerge
 
-MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/_KDE_build/bin
-
-.include "../../devel/kcmutils/buildlink3.mk"
-.include "../../devel/kparts/buildlink3.mk"
-.include "../../lang/ruby/buildlink3.mk"
-.include "../../misc/kuserfeedback/buildlink3.mk"
-.include "../../net/knewstuff/buildlink3.mk"
+.include "../../devel/kf6-kbookmarks/buildlink3.mk"
+.include "../../devel/kf6-kcmutils/buildlink3.mk"
+.include "../../devel/kf6-kcolorscheme/buildlink3.mk"
+.include "../../devel/kf6-kconfig/buildlink3.mk"
+.include "../../devel/kf6-kcoreaddons/buildlink3.mk"
+.include "../../devel/kf6-kcrash/buildlink3.mk"
+.include "../../devel/kf6-ki18n/buildlink3.mk"
+.include "../../devel/kf6-kio/buildlink3.mk"
+.include "../../devel/kf6-knotifications/buildlink3.mk"
+.include "../../devel/kf6-kparts/buildlink3.mk"
+.include "../../graphics/kf6-kiconthemes/buildlink3.mk"
+.include "../../misc/kf6-kuserfeedback/buildlink3.mk"
+.include "../../net/kf6-knewstuff/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/baloo-widgets/buildlink3.mk"
-.include "../../x11/kactivities5/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../sysutils/kf6-baloo/buildlink3.mk"
+.include "../../sysutils/kf6-kdbusaddons/buildlink3.mk"
+.include "../../sysutils/kf6-kfilemetadata/buildlink3.mk"
+.include "../../sysutils/kf6-solid/buildlink3.mk"
+.include "../../textproc/kf6-kcodecs/buildlink3.mk"
+.include "../../textproc/kf6-kcompletion/buildlink3.mk"
+.include "../../x11/kf6-kguiaddons/buildlink3.mk"
+.include "../../x11/kf6-ktextwidgets/buildlink3.mk"
+.include "../../x11/kf6-kwidgetsaddons/buildlink3.mk"
+.include "../../x11/kf6-kwindowsystem/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
+
