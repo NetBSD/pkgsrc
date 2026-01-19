@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.716 2026/01/18 20:38:52 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.717 2026/01/19 17:53:04 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29409,3 +29409,4 @@ firefox140<140.7	multiple-vulnerabilities	https://www.mozilla.org/en-US/security
 thunderbird<147		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2026-04/
 thunderbird140<140.7	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2026-05/
 opencc-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-15536
+assimp-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-15538
