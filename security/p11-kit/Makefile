@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2026/01/19 10:37:26 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2026/01/19 14:18:58 adam Exp $
 
-DISTNAME=	p11-kit-0.26.0
+DISTNAME=	p11-kit-0.26.1
 CATEGORIES=	security
 MASTER_SITES+=	${MASTER_SITE_GITHUB:=p11-glue/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
