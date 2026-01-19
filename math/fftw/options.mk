@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.12 2021/06/12 07:30:23 nia Exp $
+# $NetBSD: options.mk,v 1.13 2026/01/19 13:47:13 mef Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fftw
 PKG_SUPPORTED_OPTIONS=	fftw-fortran openmp mpi simd
+PKG_SUGGESTED_OPTIONS=	fftw-fortran
 
 .include "../../mk/bsd.prefs.mk"
 
