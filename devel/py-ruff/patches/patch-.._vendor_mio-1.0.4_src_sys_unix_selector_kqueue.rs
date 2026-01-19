@@ -1,10 +1,10 @@
-$NetBSD: patch-.._vendor_mio-1.0.4_src_sys_unix_selector_kqueue.rs,v 1.1 2026/01/12 10:34:16 wiz Exp $
+$NetBSD: patch-.._vendor_mio-1.0.4_src_sys_unix_selector_kqueue.rs,v 1.2 2026/01/19 11:40:24 wiz Exp $
 
-https://github.com/tokio-rs/mio/commit/625655db8e66beab8da7a6b1810bb02c045dd5cc
+Fix build using upstream later released commit
 
---- ../vendor/mio-1.0.4/src/sys/unix/selector/kqueue.rs.orig	2026-01-09 07:58:13.021012278 +0000
+--- ../vendor/mio-1.0.4/src/sys/unix/selector/kqueue.rs.orig	2025-12-04 08:47:31.211497049 +0000
 +++ ../vendor/mio-1.0.4/src/sys/unix/selector/kqueue.rs
-@@ -46,10 +46,7 @@ type Flags = u32;
+@@ -50,10 +50,7 @@ type Flags = u16;
  type Flags = u32;
  
  // Type of the `udata` field in the `kevent` structure.
