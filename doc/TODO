@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26683 2026/01/19 07:42:38 wiz Exp $
+$NetBSD: TODO,v 1.26684 2026/01/19 07:58:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1042,6 +1042,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-SMS-Send-1.08
 	o p5-Search-QueryParser-0.95
 	o p5-Spreadsheet-ReadSXC-0.34
+	o p5-perl-ldap-0.68
 	o p5-sybperl-2.20
 	o p5-Sys-Filesystem-1.408
 	o p5-Test-TempDir-0.018
