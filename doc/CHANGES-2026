@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.517 2026/01/20 08:46:08 adam Exp $
+$NetBSD: CHANGES-2026,v 1.518 2026/01/20 08:51:13 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -678,3 +678,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/ImageMagick to 7.1.2.13 [triaxx 2026-01-20]
 	Updated multimedia/assimp to 6.0.3 [adam 2026-01-20]
 	Updated security/py-fido2 to 2.1.1 [adam 2026-01-20]
+	Updated graphics/p5-PerlMagick to 7.1.2.13 [triaxx 2026-01-20]
