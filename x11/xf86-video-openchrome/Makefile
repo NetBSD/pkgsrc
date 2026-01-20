@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/11/12 13:24:36 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/01/20 08:57:42 wiz Exp $
 
 DISTNAME=	xf86-video-openchrome-0.6.0
 PKGREVISION=	3
@@ -21,6 +21,9 @@ CONFIGURE_ARGS+=	--enable-maintainer-mode
 CONFIGURE_ARGS+=	--enable-dri
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
+
+CFLAGS+=		-Wno-implicit-function-declaration
+CFLAGS+=		-Wno-int-conversion
 
 .include "../../mk/bsd.prefs.mk"
 
