@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/06/08 10:53:26 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2026/01/20 09:57:40 wiz Exp $
 
 DISTNAME=	gdb-7.12.1
 PKGNAME=	${DISTNAME:S/^/avr-/}
@@ -17,6 +17,8 @@ CONFIGURE_ENV+=		CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--target=avr
 CONFIGURE_ARGS+=	--program-prefix=avr
 CONFIGURE_ARGS+=	--with-curses
+
+CFLAGS+=	-Wno-implicit-function-declaration
 
 # elfread.c is to be included in init.c to support bfd_target_elf_flavour
 CONFIGURE_ENV+=		gdb_cv_var_elf=yes
