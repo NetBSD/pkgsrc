@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2025/06/29 14:09:04 taca Exp $
+# $NetBSD: Makefile,v 1.151 2026/01/20 07:29:01 wiz Exp $
 
 DISTNAME=	squirrelmail-webmail-1.4.23pre15037
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/-webmail//}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www.squirrelmail.org/
+HOMEPAGE=	https://www.squirrelmail.org/
 COMMENT=	PHP webmail package
 LICENSE=	gnu-gpl-v2
 
