@@ -1,4 +1,4 @@
-$NetBSD: patch-src_tiffwrite.c,v 1.3 2021/12/26 05:28:23 dholland Exp $
+$NetBSD: patch-src_tiffwrite.c,v 1.4 2026/01/20 09:45:43 wiz Exp $
 
 - ocaml/caml/compatibility.h defines int16 and uint16, which break tiff.
 They're not needed, so clear them out. (There are no more int32/uint32
@@ -10,7 +10,7 @@ defines, so that logic can be removed.)
 
 --- src/tiffwrite.c.orig	2011-06-22 18:04:32.000000000 +0000
 +++ src/tiffwrite.c
-@@ -20,18 +20,11 @@
+@@ -20,19 +20,12 @@
  #include <caml/memory.h>
  #include <caml/fail.h>
  
@@ -27,12 +27,13 @@ defines, so that logic can be removed.)
  #undef uint16
 -#undef int32
 -#undef uint32
-+
-+#include <tiffio.h>
  
++#include <tiffio.h>
++
  extern value *imglib_error;
  
-@@ -56,8 +49,8 @@ value open_tiff_file_for_write( value fi
+ value open_tiff_file_for_write( value file,
+@@ -56,8 +49,8 @@ value open_tiff_file_for_write( value file,
      /* Resolution */
      /* FillOrder */
      
@@ -43,7 +44,7 @@ defines, so that logic can be removed.)
      TIFFSetField(tif, TIFFTAG_ORIENTATION, ORIENTATION_TOPLEFT);
      TIFFSetField(tif, TIFFTAG_SAMPLESPERPIXEL, 3);
      TIFFSetField(tif, TIFFTAG_BITSPERSAMPLE, 8);
-@@ -83,6 +76,6 @@ value write_tiff_scanline( tiffh, buf, r
+@@ -83,6 +76,6 @@ value write_tiff_scanline( tiffh, buf, row )
       value row;
  {
    CAMLparam3(tiffh,buf,row);
