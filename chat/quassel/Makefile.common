@@ -1,0 +1,29 @@
+# $NetBSD: Makefile.common,v 1.1 2026/01/20 15:59:17 kikadf Exp $
+#
+# used by chat/quassel/Makefile
+# used by chat/quassel-core/Makefile
+
+DISTNAME=	quassel-0.14.0
+CATEGORIES=	chat
+MASTER_SITES=	https://quassel-irc.org/pub/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://quassel-irc.org/
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+
+USE_LANGUAGES=	c c++
+
+USE_CXX_FEATURES+=	c++14
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
+
+PATCHDIR=	${.CURDIR}/../../chat/quassel/patches
+DISTINFO_FILE=	${.CURDIR}/../../chat/quassel/distinfo
+
+.include "../../devel/cmake/build.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/libexecinfo/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/qca2-qt5/buildlink3.mk"
