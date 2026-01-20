@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.54 2026/01/14 10:52:23 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/01/20 18:26:12 tsutsui Exp $
 
 DISTNAME=		onscripter-20230825
 PKGREVISION=		3
 CATEGORIES=		games
-MASTER_SITES=		#https://onscripter.osdn.jp/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=ogapee/}
+GITHUB_PROJECT=		${PKGBASE}
+# XXX: YYYYMMDD format tag seems mis-recognized as a hash by fetch/github.mk
+GITHUB_TAG=		refs/tags/${PKGVERSION_NOREV}
 
 MAINTAINER=		tsutsui@NetBSD.org
 HOMEPAGE=		https://ogapee.github.io/www/onscripter_en.html
