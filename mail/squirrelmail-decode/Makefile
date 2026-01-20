@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/02/08 03:44:48 taca Exp $
+# $NetBSD: Makefile,v 1.18 2026/01/20 07:29:29 wiz Exp $
 
 DISTNAME=	squirrelmail-decode-1.2
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.squirrelmail.org/
+HOMEPAGE=	https://www.squirrelmail.org/
 COMMENT=	Extra decoding library for SquirrelMail
 LICENSE=	gnu-gpl-v2
 
