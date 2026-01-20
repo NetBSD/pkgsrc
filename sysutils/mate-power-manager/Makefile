@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2025/10/23 20:39:24 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/01/20 08:29:31 wiz Exp $
 
 PKGREVISION= 12
 .include "../../meta-pkgs/mate/Makefile.common"
@@ -16,6 +16,8 @@ TOOL_DEPENDS+=		polkit-[0-9]*:../../security/polkit
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-keyring
+
+CFLAGS+=	-Wno-implicit-function-declaration
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/${PKGBASE}
 
