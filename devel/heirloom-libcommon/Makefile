@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/03/31 09:14:06 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2026/01/20 08:30:56 wiz Exp $
 
 PKGNAME=	heirloom-libcommon-${HEIRLOOM_VER}
 PKGREVISION=	1
@@ -19,6 +19,8 @@ HEADERS=	_alloca.h _malloc.h alloca.h asciitype.h atoll.h \
 
 PLIST_SUBST+=	NO_ALLOCA_H=
 PLIST_SUBST+=	NOMALLOC_H=
+
+CFLAGS+=	-Wno-implicit-function-declaration
 
 .include "../../sysutils/heirloom-doc/Makefile.common"
 
