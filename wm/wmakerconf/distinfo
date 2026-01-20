@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:25:20 nia Exp $
+$NetBSD: distinfo,v 1.15 2026/01/20 08:45:15 wiz Exp $
 
 BLAKE2s (wmakerconf-2.11.tar.gz) = a93b707b62eacef5aa04d018fb3b631aa62790f74507e1c71d95b7860590d1e6
 SHA512 (wmakerconf-2.11.tar.gz) = c867cd62d88f168c91b625776ceb77ad159b75b8a451be02416cc05ed8e0fcfcd8ddc88b97bddc0bbaf30a41ea14ab9e962b4449c65a7ac5677dd832002b0a8e
@@ -11,6 +11,7 @@ SHA1 (patch-af) = c6f05d30ee645d0e7ff1ed574208d5819beeceac
 SHA1 (patch-src_menu.c) = 9ae1df8b5b60881181f75ce409dc29593fe71210
 SHA1 (patch-src_misc.c) = 8e25ce66bcf11e285222df2425dbbe52a5d8adfa
 SHA1 (patch-src_rootmenu.c) = 2e327c2b1b3937e98a5e34f9de65c2d3c726403e
+SHA1 (patch-src_simple.c) = 27aaafb640a54ac84285dd2f37b81a7eb368effc
 SHA1 (patch-src_themebrowser.c) = 18e17a51d9ee52969d29ab2388d2e0e84cc6373f
 SHA1 (patch-src_window.c) = 4aa5f9f16276c0325b4d0a0b9d39289a89cec4c9
 SHA1 (patch-src_wmconfig.c) = 66d40308389977e9476593586ec8060acef41cae
