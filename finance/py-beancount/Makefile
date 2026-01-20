@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/10/09 07:57:38 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/01/20 16:06:25 gdt Exp $
 
 DISTNAME=	beancount-2.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beancount/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://furius.ca/beancount/
+HOMEPAGE=	https://furius.ca/beancount/
 COMMENT=	Command-line double-entry bookkeeping
 LICENSE=	gnu-gpl-v2
 
