@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.37 2026/01/02 22:34:58 hauke Exp $
+$NetBSD: distinfo,v 1.38 2026/01/20 22:27:15 hauke Exp $
 
 BLAKE2s (xemacs/xemacs-21.4.25.tar.gz) = 5ef4211f4be19623914e1104786971fb02631a08fcb62e67162aa67c62380531
 SHA512 (xemacs/xemacs-21.4.25.tar.gz) = 869aa61f7a32f2e9ed5cb8f755c9879e7bc3b1fd3e4bc31c4d978aeca3d19507c642093bbfda5bb4f4a7ea303ab267f3f647dfa3da868adb5d5b9970b4e03886
 Size (xemacs/xemacs-21.4.25.tar.gz) = 8427805 bytes
 SHA1 (patch-configure) = 260a4562450db001396379023a99cccdf240f719
 SHA1 (patch-lib-src_Makefile.in.in) = 5e11bf2904145804f521fed0ef956da94e5f21bd
+SHA1 (patch-src_device-x.c) = 864e4a9efbc6bff4058283e0fd8d3a3eb248a832
