@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:54:34 nia Exp $
+$NetBSD: distinfo,v 1.9 2026/01/20 09:06:38 wiz Exp $
 
 BLAKE2s (WMMail.app-0.64.tar.gz) = cf91a1ffc3bc8d49f50f24e1d1cd63cc2d9997278a6bdc935a15b720f5c91a35
 SHA512 (WMMail.app-0.64.tar.gz) = 2291595970d2a680e3452bf666602361ad0e1ec7a09079444a6d3ff6583c1a3c483ad53ca91c4cbe9df0f8ef6729792ac5fc1c403bee96620a5a6df3beafada2
@@ -6,5 +6,6 @@ Size (WMMail.app-0.64.tar.gz) = 147305 bytes
 SHA1 (patch-aa) = afeaff242ccf423a1e2ca3368941b6230185878e
 SHA1 (patch-ac) = 565d442850f7b406fad588dd5e045b465a40fbab
 SHA1 (patch-ad) = 13251a2ab4a656cf1452dc785d98e39b39aa7c94
+SHA1 (patch-configure) = 34a44a09716307eec896f9699fab9933870c14d1
 SHA1 (patch-src_list.h) = 747b32a70ecd05935f123d362dec996f98cf95aa
 SHA1 (patch-src_wmutil.c.in) = 71f1b7a97225a78371961cbe15cc1c793cc443fb
