@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.527 2026/01/20 19:54:24 adam Exp $
+$NetBSD: CHANGES-2026,v 1.528 2026/01/20 22:31:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -689,3 +689,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added www/palemoon-gtk3 version 34.0.0 [nia 2026-01-20]
 	Updated devel/py-sarge to 0.1.8 [adam 2026-01-20]
 	Updated mail/py-imapclient to 3.1.0 [adam 2026-01-20]
+	Updated devel/py-lexid to 2021.1006nb2 [wiz 2026-01-20]
