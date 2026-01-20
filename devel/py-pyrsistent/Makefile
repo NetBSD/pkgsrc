@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/10/26 08:03:40 adam Exp $
+# $NetBSD: Makefile,v 1.15 2026/01/20 08:19:46 wiz Exp $
 
 DISTNAME=	pyrsistent-0.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,8 @@ LICENSE=	mit
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+CFLAGS+=	-Wno-implicit-function-declaration
+CFLAGS+=	-Wno-int-conversion
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
