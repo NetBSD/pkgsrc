@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/12/28 20:56:52 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/01/20 19:50:44 adam Exp $
 
-DISTNAME=	sarge-0.1.7.post1
+DISTNAME=	sarge-0.1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sarge/}
