@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.523 2026/01/20 15:39:46 triaxx Exp $
+$NetBSD: CHANGES-2026,v 1.524 2026/01/20 16:08:26 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -684,3 +684,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/php-contao-manager to 1.10.9 [taca 2026-01-20]
 	Updated www/ruby-selenium-webdriver to 4.40.0 [taca 2026-01-20]
 	Updated games/corsix-th to 0.69.2 [triaxx 2026-01-20]
+	Added chat/quassel-core version 0.14.0 [kikadf 2026-01-20]
