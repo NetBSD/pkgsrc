@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2025/10/08 21:38:52 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/01/20 22:34:36 wiz Exp $
 
 DISTNAME=	bumpver-2025.1131
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bumpver/}
 
@@ -11,7 +12,6 @@ COMMENT=	Bump version numbers in project files
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-lib3to6>=0:../../devel/py-lib3to6
 DEPENDS+=	${PYPKGPREFIX}-click>=0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4:../../comms/py-colorama
 DEPENDS+=	${PYPKGPREFIX}-lexid>=0:../../devel/py-lexid
@@ -19,8 +19,6 @@ DEPENDS+=	${PYPKGPREFIX}-pathlib2>=0:../../devel/py-pathlib2
 DEPENDS+=	${PYPKGPREFIX}-toml>=0:../../textproc/py-toml
 TEST_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 TEST_DEPENDS+=	${PYPKGPREFIX}-mercurial>=0:../../devel/py-mercurial
-
-PYTHON_VERSIONS_INCOMPATIBLE+=	314 # py-lib3to6
 
 USE_LANGUAGES=	# none
 
