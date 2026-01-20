@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2026/01/09 15:05:05 taca Exp $
+# $NetBSD: Makefile,v 1.20 2026/01/20 14:36:57 taca Exp $
 #
 
 DISTNAME=	${CM_NAME}.phar
@@ -23,10 +23,10 @@ DEPENDS+=	${PHP_PKG_PREFIX}-sodium>=${PHP_BASE_VERS}:../../security/php-sodium
 DEPENDS+=	${PHP_PKG_PREFIX}-pecl-mcrypt>=1.0.1:../../security/php-pecl-mcrypt
 
 CM_NAME=	contao-manager
-CM_VERSION=	1.10.8
+CM_VERSION=	1.10.9
 NO_BUILD=	yes
 
-PHP_VERSIONS_ACCEPTED=	82 83 84
+PHP_VERSIONS_ACCEPTED=	82 83 84 85
 
 CT_DOCDIR=	share/doc/${PHP_PKG_PREFIX}/${CM_NAME}
 CT_EGDIR=	share/examples/${PHP_PKG_PREFIX}/${CM_NAME}
