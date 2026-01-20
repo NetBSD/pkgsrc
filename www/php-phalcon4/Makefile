@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/02/08 04:07:18 taca Exp $
-#
+# $NetBSD: Makefile,v 1.6 2026/01/20 07:28:31 wiz Exp $
 
 MODNAME=		phalcon
 PECL_VERSION=		4.1.0
@@ -9,7 +8,7 @@ CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_GITHUB:=phalcon/}
 EXTRACT_SUFX=		.tar.gz
 
-HOMEPAGE=		https://phalconphp.com/
+HOMEPAGE=		https://phalcon.io/
 COMMENT=		Web framework implemented as a C extension offering high performance
 LICENSE=		php
 
