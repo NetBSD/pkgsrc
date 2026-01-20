@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2022/08/19 22:13:19 abs Exp $
+# $NetBSD: Makefile,v 1.43 2026/01/20 09:10:26 wiz Exp $
 
 DISTNAME=	joe-4.6
 PKGREVISION=	1
@@ -15,6 +15,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 
 PKG_SYSCONFSUBDIR=	joe
+
+CFLAGS+=	-Wno-implicit-function-declaration
 
 EGDIR=		${PREFIX}/share/examples/joe
 CONF_FILES=	${EGDIR}/ftyperc ${PKG_SYSCONFDIR}/ftyperc
