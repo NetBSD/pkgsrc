@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.522 2026/01/20 14:39:21 taca Exp $
+$NetBSD: CHANGES-2026,v 1.523 2026/01/20 15:39:46 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -683,3 +683,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed www/ruby-rack-protection3 [taca 2026-01-20]
 	Updated www/php-contao-manager to 1.10.9 [taca 2026-01-20]
 	Updated www/ruby-selenium-webdriver to 4.40.0 [taca 2026-01-20]
+	Updated games/corsix-th to 0.69.2 [triaxx 2026-01-20]
