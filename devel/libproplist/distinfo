@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:15:26 nia Exp $
+$NetBSD: distinfo,v 1.7 2026/01/20 08:18:09 wiz Exp $
 
 BLAKE2s (libPropList-0.10.1.tar.gz) = b21f50cbcab7b843da69f743768746ca1c12c617e4533e6fff04d04bcede5f6c
 SHA512 (libPropList-0.10.1.tar.gz) = 8ebad2ffedda9cf0f0a01320340c1b6b9f7d9d9af06d886da9c82d626b5ad799692daeab4c7569e85f756ce8aef3fedf6f662ee38fd4e13e2ec52c7dbe843c39
 Size (libPropList-0.10.1.tar.gz) = 152625 bytes
+SHA1 (patch-comparing.c) = 16de7b2c836d108645b186c45b51938e5f07fe1b
+SHA1 (patch-configure) = f7ca3a5d1b7c18c404301a79ce53a16445e8d50a
