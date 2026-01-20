@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2025/01/31 07:09:56 wiz Exp $
+$NetBSD: distinfo,v 1.21 2026/01/20 09:45:43 wiz Exp $
 
 BLAKE2s (camlimages-4.0.1a/v4.0.1.tar.gz) = 0d8e3e7a10f89ff6afd5161a840ea9951a563daf8388f2717d2f75257b6276d4
 SHA512 (camlimages-4.0.1a/v4.0.1.tar.gz) = c4e2a816911ed128c0414308d1ace914bbb51e40b6d70a3c492690b38c860f79e3e01efa3f1be7d57654c78f8acca6f30bffb9e6b8fd423d1d36d6a477d0fd8d
@@ -36,7 +36,7 @@ SHA1 (patch-src_mstring.ml) = 84ec525bd572ea1a5d44869c4f5a4afc6ae94d2e
 SHA1 (patch-src_oImages.ml) = 40d0b13cfa54647da850172142c054576a8ce073
 SHA1 (patch-src_oImages.mli) = 0b6290c409eadf60ee3dcece8895dbab90ae36be
 SHA1 (patch-src_png.ml) = 613dc0b5bace73423f3ccad0f393881220fcc877
-SHA1 (patch-src_pngread.c) = 00d753b8570b5ff9ffa71e6e62328496b03f9654
+SHA1 (patch-src_pngread.c) = 80686b7623aa955d923e3747f7efccf53317c329
 SHA1 (patch-src_pngwrite.c) = 4df4f69851769e0eefc2249a30ac8dd53aa8d755
 SHA1 (patch-src_rgb24.ml) = 9b30ac9f92992e30e0dc33fe4f0b09fffc4504d5
 SHA1 (patch-src_rgb24.mli) = 8a9e765a8b9c787796c7f7f3effc9d7fe542c32b
@@ -45,7 +45,7 @@ SHA1 (patch-src_rgba32.mli) = 4cb8e6b36d463c019299a9553a5622e6a4f22edf
 SHA1 (patch-src_tiff.ml) = a668e0a414121ba566d270eede9c4a0213419d54
 SHA1 (patch-src_tiff.mli) = 51938d692d0589134c9ef5bdd4ca25013fc74406
 SHA1 (patch-src_tiffread.c) = 42e5891b57bf46705a597d1515016e6fe84e65fe
-SHA1 (patch-src_tiffwrite.c) = c35f55594ab56373dd0f00d55c125209f7a88377
+SHA1 (patch-src_tiffwrite.c) = dd64b7ea6b7a5c582e3023038f1ad15c99b0ef32
 SHA1 (patch-src_units.ml) = 65f6b69092f2618756848ad7291432c84a230bce
 SHA1 (patch-src_xpm.ml) = f5eee2983770100f1f7999c1c2fbb6e1155b83cf
 SHA1 (patch-src_xvthumb.ml) = b1142f4aae2e1692ec4b6fe25633fc84aeff604f
