@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2026/01/07 08:48:49 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2026/01/20 09:00:25 wiz Exp $
 
 PKGREVISION= 24
 .include "../../meta-pkgs/mate/Makefile.common"
@@ -9,6 +9,8 @@ CATEGORIES=	sysutils
 COMMENT=	Set of extensions for Caja
 
 PKGCONFIG_OVERRIDE+=	sendto/caja-sendto.pc.in
+
+CFLAGS+=	-Wno-implicit-function-declaration
 
 .include "../../devel/glib2/schemas.mk"
 
