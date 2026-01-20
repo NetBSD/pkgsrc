@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2026/01/07 08:46:50 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2026/01/20 08:46:51 wiz Exp $
 
 DISTNAME=	medit-1.2.0
 PKGREVISION=	42
@@ -20,6 +20,8 @@ PYTHON_FOR_BUILD_ONLY=		yes
 PYTHON_VERSIONS_INCOMPATIBLE+=	27
 CONFIGURE_ARGS+=		--with-python=no
 CONFIGURE_ENV+=			MOO_PYTHON=${PYTHONBIN}
+
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
