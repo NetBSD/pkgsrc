@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2025/09/27 09:57:10 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2026/01/20 12:35:49 wiz Exp $
 
 DISTNAME=	liborcus-0.20.2
 PKGNAME=	${DISTNAME:S/liborcus/orcus/}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.com/orcus/orcus
-COMMENT=	Import filter library for spreadsheet documents (0.16 branch)
+COMMENT=	Import filter library for spreadsheet documents
 LICENSE=	mpl-2.0
 
 USE_LANGUAGES=		c c++
