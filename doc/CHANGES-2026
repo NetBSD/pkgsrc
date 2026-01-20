@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.519 2026/01/20 13:23:26 taca Exp $
+$NetBSD: CHANGES-2026,v 1.520 2026/01/20 13:25:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -680,3 +680,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-fido2 to 2.1.1 [adam 2026-01-20]
 	Updated graphics/p5-PerlMagick to 7.1.2.13 [triaxx 2026-01-20]
 	Removed www/ruby-sinatra3 [taca 2026-01-20]
+	Removed www/ruby-rack-protection3 [taca 2026-01-20]
