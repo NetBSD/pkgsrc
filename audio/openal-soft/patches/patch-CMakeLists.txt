@@ -1,10 +1,25 @@
-$NetBSD: patch-CMakeLists.txt,v 1.9 2025/10/29 07:57:08 tnn Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.10 2026/01/20 13:47:49 kikadf Exp $
 
 Disable libsndfile.
+Fix ld error on NetBSD<11:
+[ 97%] Linking CXX shared library libopenal.so
+/usr/bin/ld: CMakeFiles/OpenAL.dir/alc/alc.cpp.o: relocation R_X86_64_PC32 against protected symbol
+`alcCreateContext' can not be used when making a shared object
+/usr/bin/ld: final link failed: bad value
 
---- CMakeLists.txt.orig	2025-03-29 04:08:24.000000000 +0000
+--- CMakeLists.txt.orig	2025-12-22 09:17:45.000000000 +0000
 +++ CMakeLists.txt
-@@ -1708,7 +1708,7 @@ if(ALSOFT_UTILS)
+@@ -501,6 +501,9 @@ if(NOT LIBTYPE STREQUAL "STATIC")
+             set(CMAKE_C_VISIBILITY_PRESET hidden)
+             set(CMAKE_CXX_VISIBILITY_PRESET hidden)
+         endif()
++        if(CMAKE_SYSTEM_NAME STREQUAL "NetBSD" AND CMAKE_HOST_SYSTEM_VERSION LESS 110000)
++            set(EXPORT_DECL "__attribute__((visibility(\"default\")))")
++        endif()
+ 
+         set(CMAKE_REQUIRED_FLAGS "${OLD_REQUIRED_FLAGS}")
+     endif()
+@@ -1910,7 +1913,7 @@ if(ALSOFT_UTILS)
          set(EXTRA_INSTALLS ${EXTRA_INSTALLS} openal-info)
      endif()
  
@@ -13,7 +28,7 @@ Disable libsndfile.
          add_executable(uhjdecoder utils/uhjdecoder.cpp)
          target_compile_definitions(uhjdecoder PRIVATE ${CPP_DEFS})
          target_include_directories(uhjdecoder
-@@ -1813,7 +1813,7 @@ if(ALSOFT_EXAMPLES)
+@@ -2050,7 +2053,7 @@ if(ALSOFT_EXAMPLES)
  
      message(STATUS "Building example programs")
  
