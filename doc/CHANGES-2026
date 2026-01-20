@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.521 2026/01/20 14:37:07 taca Exp $
+$NetBSD: CHANGES-2026,v 1.522 2026/01/20 14:39:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -682,3 +682,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed www/ruby-sinatra3 [taca 2026-01-20]
 	Removed www/ruby-rack-protection3 [taca 2026-01-20]
 	Updated www/php-contao-manager to 1.10.9 [taca 2026-01-20]
+	Updated www/ruby-selenium-webdriver to 4.40.0 [taca 2026-01-20]
