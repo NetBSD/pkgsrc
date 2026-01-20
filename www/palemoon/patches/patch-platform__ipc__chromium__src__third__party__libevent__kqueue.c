@@ -1,3 +1,7 @@
+$NetBSD: patch-platform__ipc__chromium__src__third__party__libevent__kqueue.c,v 1.2 2026/01/20 17:13:01 nia Exp $
+
+GCC 14 build fix.
+
 --- platform/ipc/chromium/src/third_party/libevent/kqueue.c.orig	2025-10-15 19:46:52.000000000 +0200
 +++ platform/ipc/chromium/src/third_party/libevent/kqueue.c	2025-12-03 16:26:33.558111547 +0100
 @@ -49,7 +49,7 @@
