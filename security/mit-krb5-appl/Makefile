@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/01/27 13:52:54 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/01/20 09:53:44 wiz Exp $
 
 DISTNAME=	krb5-appl-1.0.3
 PKGNAME=	mit-${DISTNAME}
@@ -16,6 +16,9 @@ HOMEPAGE=	https://web.mit.edu/kerberos/
 COMMENT=	MIT Kerberos 5 authentication system applications
 
 MAKE_JOBS_SAFE=		no
+
+CFLAGS+=	-Wno-implicit-int
+CFLAGS+=	-Wno-implicit-function-declaration
 
 .include "../../mk/bsd.prefs.mk"
 
