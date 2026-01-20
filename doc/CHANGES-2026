@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.525 2026/01/20 17:13:10 nia Exp $
+$NetBSD: CHANGES-2026,v 1.526 2026/01/20 17:15:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -686,3 +686,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/corsix-th to 0.69.2 [triaxx 2026-01-20]
 	Added chat/quassel-core version 0.14.0 [kikadf 2026-01-20]
 	Updated www/palemoon to 34.0.0 [nia 2026-01-20]
+	Added www/palemoon-gtk3 version 34.0.0 [nia 2026-01-20]
