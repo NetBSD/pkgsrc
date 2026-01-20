@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.30 2026/01/08 14:17:47 taca Exp $
+# $NetBSD: Makefile,v 1.31 2026/01/20 07:27:31 wiz Exp $
 
 MODNAME=	mongodb
 PECL_VERSION=	1.21.0
 CATEGORIES+=	databases
 
 MAINTAINER=	bartosz.kuzma@gmail.com
-HOMEPAGE=	http://docs.mongodb.org/ecosystem/drivers/php/
+HOMEPAGE=	https://www.mongodb.com/docs/php-library/current/
 COMMENT=	MongoDB database driver
 LICENSE=	apache-2.0
 
