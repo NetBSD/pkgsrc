@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.529 2026/01/20 22:34:44 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.530 2026/01/20 22:43:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -691,3 +691,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/py-imapclient to 3.1.0 [adam 2026-01-20]
 	Updated devel/py-lexid to 2021.1006nb2 [wiz 2026-01-20]
 	Updated devel/py-bumpver to 2025.1131nb1 [wiz 2026-01-20]
+	Removed devel/py-lib3to6 [wiz 2026-01-20]
