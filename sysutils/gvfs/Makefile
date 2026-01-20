@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2026/01/07 08:48:52 wiz Exp $
+# $NetBSD: Makefile,v 1.141 2026/01/20 08:09:54 wiz Exp $
 
 DISTNAME=	gvfs-1.6.7
 PKGREVISION=	77
@@ -18,6 +18,9 @@ CONFIGURE_ARGS+=	--enable-http
 CONFIGURE_ARGS+=	--disable-bash-completion
 
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
+
+CFLAGS+=	-Wno-incompatible-pointer-types
+CFLAGS+=	-Wno-implicit-function-declaration
 
 .include "../../mk/compiler.mk"
 
