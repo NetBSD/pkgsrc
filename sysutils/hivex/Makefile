@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2026/01/07 08:48:52 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/01/20 09:01:56 wiz Exp $
 
 DISTNAME=	hivex-1.3.18
 PKGREVISION=	26
@@ -21,6 +21,8 @@ PKGCONFIG_OVERRIDE+=	hivex.pc.in
 CONFIGURE_ARGS+=	--disable-nls
 
 REPLACE_SH+=		sh/hivexget
+
+CFLAGS+=		-Wno-incompatible-pointer-types
 
 .include "../../mk/bsd.prefs.mk"
 
