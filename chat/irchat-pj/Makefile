@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/05/14 22:25:32 dholland Exp $
+# $NetBSD: Makefile,v 1.24 2026/01/20 08:37:53 wiz Exp $
 
 DISTNAME=	irchat-pj-2.4.24.22
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -13,6 +13,9 @@ MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 COMMENT=	Emacs lisp interface to Internet Relay Chat
 
 INSTALLATION_DIRS=	bin ${EMACS_LISPPREFIX:C|^${PREFIX}/||}/irchat-pj
+
+CFLAGS+=	-Wno-implicit-function-declaration
+CFLAGS+=	-Wno-builtin-declaration-mismatch
 
 .include "../../editors/emacs/modules.mk"
 

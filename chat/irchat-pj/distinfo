@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:05:16 nia Exp $
+$NetBSD: distinfo,v 1.9 2026/01/20 08:37:53 wiz Exp $
 
 BLAKE2s (irchat-pj-2.4.24.22.tar.bz2) = 1d7c9f249d9f6c5fc7c1664ce37dc4cc15d91a0c93daf9cb1a843694d3b693d0
 SHA512 (irchat-pj-2.4.24.22.tar.bz2) = 4dd4f2d8b5a760348fe58cdb8a4afb71742193e7ee3427be076b534a74e32c4b1aadffb2413b9ab918466f0dedeaf1cfd7047df00488a40980e736b34628ca9a
 Size (irchat-pj-2.4.24.22.tar.bz2) = 83897 bytes
-SHA1 (patch-aa) = ba02dd82c57bb2dfb7482f6e371bfef94e72d317
+SHA1 (patch-aa) = 48fbf23dccc98134efa48f3db05cfd0f2cf02d6f
