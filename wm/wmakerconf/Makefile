@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2025/10/23 20:39:43 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2026/01/20 08:45:15 wiz Exp $
 
 DISTNAME=	wmakerconf-2.11
 PKGREVISION=	72
@@ -19,6 +19,7 @@ CONFIGURE_ARGS+=	--with-wmakeretcprefix=${PKG_SYSCONFDIR.windowmaker}
 .else
 CONFIGURE_ARGS+=	--with-wmakeretcprefix=${PKG_SYSCONFDIR}/WindowMaker
 .endif
+CONFIGURE_ARGS+=	ac_cv_header_stdc=yes
 
 CONFIGURE_ENV+=		gzip=${TOOLS_GZIP_CMD:Q}
 CONFIGURE_ENV+=		perlpath=${PERL5:Q}
