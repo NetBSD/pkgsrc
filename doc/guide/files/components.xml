@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.65 2024/10/11 19:46:56 jkoshy Exp $ -->
+<!-- $NetBSD: components.xml,v 1.66 2026/01/20 16:07:33 gdt Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -600,50 +600,74 @@ FILES_SUBST+=  SOMEVAR="somevalue"
 
 	  <listitem>
 	    <para>This file is displayed after installation of the package.
-	    While this was used often in the past, it has two
-	    problems: the display will be missed if many packages are
-	    installed at once, and the person installing the package
-	    and the one using or configuring it may be different.  It
-	    should therefore be used only in exceptional circumstances
-	    where lasting negative consequences would result from
-	    someone not reading it.</para>
-	    <para>MESSAGE should not be used for:</para>
+	    While this was used often in the past, it has multiple problems:
+	    <itemizedlist>
+	      <listitem><para>the display will be missed if many
+   	      packages are installed at once</para></listitem>
+	      <listitem><para>the person installing the package may be
+	      different than the one responsible for configuring
+	      it</para></listitem>
+	      <listitem><para>the installation may be scripted by
+	      automation tools</para></listitem>
+	      <listitem><para>it is often used to display information
+	      that is redundant with documentation, or should be
+	      documentation</para></listitem>
+	    </itemizedlist>
+	    Previous doctrine was that it should be used only in
+	    exceptional circumstances where lasting negative
+	    consequences would result from someone not reading it.  As
+	    of 2025-04until dpe, MESSAGE is deprecated, based on rough
+	    consensus.  Situations that would result in lasting
+	    negative consequences should be reported to pkgsrc email
+	    lists.  Deprecation means that no new MESSAGE files may be
+	    added, and no content may be added to any existing file.
+	    </para>
+	    <para>With deprecation, maintainers are asked to remove
+	    MESSAGE files, simply dropping the following categories:
 	    <itemizedlist>
 	      <listitem><para>exhortations to read the documentation</para></listitem>
 	      <listitem><para>reminders to install rc.d files and set variables</para></listitem>
-	      <listitem><para>anything that should be explained in the
-	      installation/configuration documentation that should
-	      come with the package</para></listitem>
+	      <listitem><para>suggestions to configure syslog file rotation</para></listitem>
 	    </itemizedlist>
-	    <para>If the documentation provided by upstream needs
-	    enhancing, create e.g. files/README.pkgsrc and install it
-	    in the package's documentation directory.
 	    </para>
-	    <para>Note that MESSAGE is shown for all operating
-	    systems and all init systems.  If a MESSAGE is necessary,
-	    it should be narrowed to only those operating systems and
-	    init systems to which it applies.</para>
-	    <para>Note that you can modify variables in it easily by using
-	    <varname>MESSAGE_SUBST</varname> in the package's
-	    <filename>Makefile</filename>:</para>
-
-<programlisting>
-MESSAGE_SUBST+=  SOMEVAR="somevalue"
-</programlisting>
-
-	    <para>replaces "${SOMEVAR}" with <quote>somevalue</quote> in
-	    <filename>MESSAGE</filename>.  By default, substitution is
-	    performed for <varname>PKGNAME</varname>,
-	    <varname>PKGBASE</varname>, <varname>PREFIX</varname>,
-	    <varname>LOCALBASE</varname>, <varname>X11BASE</varname>,
-	    <varname>PKG_SYSCONFDIR</varname>,
-	    <varname>ROOT_GROUP</varname>, and
-	    <varname>ROOT_USER</varname>.</para>
-
-	    <para>You can display a different or additional files by
-	    setting the <varname>MESSAGE_SRC</varname> variable.  Its
-	    default is <filename>MESSAGE</filename>, if the file
-	    exists.</para>
+	    <para>
+	    Explanations that the package does not work without other
+	    packages should be moved to <filename>DESCR</filename>,
+	    which is documented to describe what the package does (and
+	    therefore does not) contain.
+	    </para>
+	    <para>
+	    Content that is an explanation of how to use the package
+	    in a pkgsrc context (but is not applicable to a person
+	    building the package from upstream without pkgsrc) should
+	    be placed in e.g. <filename>files/README.pkgsrc</filename>
+	    and installed in the package's documentation directory.
+	    </para>
+	    <para>
+	    Content that belongs in upstream documentation,
+	    e.g. because it is useful to someone building and using
+	    the software from upstream sources, should be submitted
+	    upstream.  It may be placed in
+	    <filename>files/README.pkgsrc</filename> but should be
+	    marked as belonging upstream.
+	    </para>
+	    <para>
+	      After 2025-05-01, anyone should feel free to remediate
+	      MESSAGE files, even if there is a MAINTAINER/OWNER.
+	    </para>
+	    <para>Until deprecation is complete:
+	    <itemizedlist>
+	      <listitem><para>Note that MESSAGE is shown for all
+	      operating systems and all init systems.  If a MESSAGE is
+	      necessary, it should be narrowed to only those operating
+	      systems and init systems to which it
+	      applies.</para></listitem>
+	      <listitem><para>Note that you can modify variables in it
+	      easily by using <varname>MESSAGE_SUBST</varname> in the
+	      package's
+	      <filename>Makefile</filename></para></listitem>
+	    </itemizedlist>
+	    </para>
 	  </listitem>
 	</varlistentry>
 
