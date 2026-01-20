@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.27 2018/01/01 18:16:37 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2026/01/20 07:25:06 wiz Exp $
 
 DISTNAME=		pforth_v27_20101121
 PKGNAME=		pforth-27
 CATEGORIES=		lang
-MASTER_SITES=		http://pforth.googlecode.com/files/
+MASTER_SITES=		https://pforth.googlecode.com/files/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		asau@inbox.ru
-HOMEPAGE=		http://www.softsynth.com/pforth/
+HOMEPAGE=		https://www.softsynth.com/pforth/
 COMMENT=		Portable ANS-like Forth
 LICENSE=		mit
 
