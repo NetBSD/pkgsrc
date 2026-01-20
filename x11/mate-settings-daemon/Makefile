@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2026/01/07 08:49:38 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2026/01/20 08:14:38 wiz Exp $
 
 PKGREVISION= 20
 .include "../../meta-pkgs/mate/Makefile.common"
@@ -13,6 +13,8 @@ PKGCONFIG_OVERRIDE+=	data/mate-settings-daemon.pc.in
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 PLIST_VARS+=		rfkill
+
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 .if ${OPSYS} != "Linux"
 CONFIGURE_ARGS+=	--disable-rfkill
