@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2026/01/02 22:34:58 hauke Exp $
+# $NetBSD: Makefile.common,v 1.42 2026/01/20 22:31:27 hauke Exp $
 #
 # used by editors/xemacs-nox11/Makefile
 # used by editors/xemacs/Makefile
@@ -12,7 +12,7 @@ HOMEPAGE=	https://www.xemacs.org/
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c
-FORCE_C_STD=		c90
+FORCE_C_STD=		c89
 MKPIE_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
