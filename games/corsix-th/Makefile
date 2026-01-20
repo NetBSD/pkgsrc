@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2026/01/07 08:46:58 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/01/20 15:38:05 triaxx Exp $
 
-DISTNAME=	corsix-th-0.69.1
-PKGREVISION=	5
+DISTNAME=	corsix-th-0.69.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CorsixTH/}
 GITHUB_PROJECT=	CorsixTH
@@ -23,6 +22,7 @@ USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	unique_ptr
 
+CMAKE_CONFIGURE_ARGS+=	-Wno-dev
 .for module in AVCODEC AVFORMAT AVDEVICE AVUTIL SWSCALE POSTPROC SWRESAMPLE
 CMAKE_CONFIGURE_ARGS+=	-D${module}_INCLUDE_DIRS=${BUILDLINK_PREFIX.ffmpeg7}/include/ffmpeg7
 CMAKE_CONFIGURE_ARGS+=	-D${module}_LIBRARIES=${PREFIX}/lib/ffmpeg7/lib${module:tl}.${SHLIB_EXT}
@@ -54,6 +54,10 @@ SUBST_MESSAGE.cpath=	Fixing lpeg.dylib in package.cpatch.
 SUBST_FILES.cpath=	CorsixTH/CorsixTH.lua
 SUBST_VARS.cpath=	PKGSRC_LUA_CPATH
 
+GENERATE_PLIST+=	cd ${DESTDIR}${PREFIX}; \
+			for f in ${MACOS_BUNDLE_DIR}/CorsixTH.app/Contents/Frameworks/*; do \
+			${ECHO} "$$f"; \
+			done;
 PLIST_SRC=		PLIST.bundle
 .endif
 
