@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.46 2025/10/23 20:38:06 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/01/20 09:42:59 wiz Exp $
 
-GITHUB_PROJECT=	ucblogo-code
-GITHUB_RELEASE=	version_${PKGVERSION_NOREV}
 DISTNAME=	ucblogo-6.2.1
 PKGREVISION=	15
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jrincayc/}
+GITHUB_PROJECT=	ucblogo-code
+GITHUB_RELEASE=	version_${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://people.eecs.berkeley.edu/~bh/logo.html
@@ -21,6 +21,8 @@ CONFIGURE_ARGS+=	--enable-objects
 
 USE_TOOLS+=		gmake makeinfo
 INFO_FILES=		yes
+
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/wxGTK30/buildlink3.mk"
