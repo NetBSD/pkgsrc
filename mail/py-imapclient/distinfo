@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/01/18 15:59:37 adam Exp $
+$NetBSD: distinfo,v 1.6 2026/01/20 19:54:06 adam Exp $
 
-BLAKE2s (IMAPClient-3.0.1.zip) = 8f9a2903b0def88b3701c8c9195aa9210ee016b09d5bfed7a125a2f5bab60aa3
-SHA512 (IMAPClient-3.0.1.zip) = 940723e4182f65a0fe5920504690d005b65c56cda176e0421d351bdd1907631d6a3c21abd49c4e65f336f2241f93f93b888ec3e962225a14d7a580547e1d7145
-Size (IMAPClient-3.0.1.zip) = 244222 bytes
+BLAKE2s (imapclient-3.1.0.tar.gz) = f776370bde49fba3003aee4d6399c19106384e977755f1d152711e691637754c
+SHA512 (imapclient-3.1.0.tar.gz) = 76cac63f212469e8bff61d2976b500d273a6b16d53e28b4e629abc01e987402f3266ac08840f6ccd47571202351a7cf39ea84bdb47fa381b9ffe84d9bc38916a
+Size (imapclient-3.1.0.tar.gz) = 199675 bytes
