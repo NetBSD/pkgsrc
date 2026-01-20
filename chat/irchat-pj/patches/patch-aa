@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.1 2004/06/12 02:11:42 grant Exp $
+$NetBSD: patch-aa,v 1.2 2026/01/20 08:37:53 wiz Exp $
 
---- Makefile.orig	2002-07-19 03:15:54.000000000 +1000
+--- Makefile.orig	2002-07-18 17:15:54.000000000 +0000
 +++ Makefile
-@@ -59,7 +59,7 @@ install-pj:
+@@ -33,7 +33,7 @@ TAR	= tar
+ #
+ 
+ TAR	= tar
+-CC 	= cc
++CC 	= cc $(CFLAGS)
+ LD	= $(CC)
+ CAT	= cat
+ ECHO	= echo
+@@ -59,7 +59,7 @@ $(DCC_BIN):	$(DCC_SRC)
  
  # dcc
  $(DCC_BIN):	$(DCC_SRC)
