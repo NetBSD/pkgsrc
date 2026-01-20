@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2025/11/03 06:52:31 taca Exp $
-
-BLAKE2s (rack-protection-3.2.0.gem) = a1350189cf740afdb16ec43cefe92cb3fdd0355e6dab08b855b7408bbde16762
-SHA512 (rack-protection-3.2.0.gem) = 8c8a715e031bbba3a572dc70e3ebc75357e43860fb8c3c88d15c9f07c07b3d6d27b335abc2eebb29c12a78871ef7be9788231f7ccfafca692afea49397310fee
-Size (rack-protection-3.2.0.gem) = 20480 bytes
