@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2026/01/20 17:15:42 nia Exp $
+lib/palemoon-${PKGVERSION}/libfreebl3.so
