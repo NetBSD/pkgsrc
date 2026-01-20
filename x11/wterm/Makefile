@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2025/11/17 11:01:42 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2026/01/20 08:32:02 wiz Exp $
 
 DISTNAME=	wterm-6.2.9
 PKGREVISION=	37
@@ -20,6 +20,8 @@ CONFIGURE_ARGS+=	--enable-half-shadow
 CONFIGURE_ARGS+=	--with-xpm-library=${BUILDLINK_PREFIX.libXpm}
 
 INSTALLATION_DIRS+=	share/WindowMaker/Icons
+
+CFLAGS+=	-Wno-implicit-function-declaration
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/wterm.tiff \
