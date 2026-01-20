@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.374 2026/01/14 12:57:34 wiz Exp $
+# $NetBSD: Makefile,v 1.375 2026/01/20 07:16:46 wiz Exp $
 
 VERREL=		25.8.4
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -349,7 +349,6 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../converters/libmwaw/buildlink3.mk"
 .include "../../converters/libzmf/buildlink3.mk"
 .include "../../converters/orcus/buildlink3.mk"
-.include "../../databases/db4/buildlink3.mk"
 #.include "../../mk/mysql.buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../databases/unixodbc/buildlink3.mk"
