@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:09:20 nia Exp $
+$NetBSD: distinfo,v 1.8 2026/01/20 09:41:13 wiz Exp $
 
 BLAKE2s (idzebra-2.0.62.tar.gz) = 52f454268105b3130ca94cc0d975979eff1d389564d6220809d02edf8203ed1c
 SHA512 (idzebra-2.0.62.tar.gz) = a81f17b53214bf7977072a6aac7b25f6745b3374a5351689977618e3907ba4fe3f670d6454423f0d75c12c2e3dc5fcecea2e0ea15d63cf2493439a83954a7fc2
 Size (idzebra-2.0.62.tar.gz) = 1933584 bytes
+SHA1 (patch-index_mod__alvis.c) = 97d92696fc1a2a9021225cb9ad872d3aa687fe94
+SHA1 (patch-index_mod__dom.c) = e1ea876965066c759b937d669882ad3b1d0e4174
