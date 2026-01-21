@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2025/12/15 13:15:05 pin Exp $
+# $NetBSD: Makefile,v 1.55 2026/01/21 14:44:57 pin Exp $
 
-DISTNAME=	git-cliff-2.11.0
+DISTNAME=	git-cliff-2.12.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=orhun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
