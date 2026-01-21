@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.71 2025/02/21 11:59:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.72 2026/01/21 11:19:32 adam Exp $
 bin/wesnoth
 bin/wesnothd
+man/ar/man6/wesnoth.6
+man/ar/man6/wesnothd.6
 man/bg/man6/wesnoth.6
 man/bg/man6/wesnothd.6
 man/ca/man6/wesnoth.6
@@ -18439,6 +18441,7 @@ share/wesnoth/data/test/scenarios/cve_tests/test_cve_2018_1999023_2.cfg
 share/wesnoth/data/test/scenarios/lua_tests/ai/temp.txt
 share/wesnoth/data/test/scenarios/lua_tests/filesystem/temp.txt
 share/wesnoth/data/test/scenarios/lua_tests/functional/lua_functional.cfg
+share/wesnoth/data/test/scenarios/lua_tests/gui/show_dialog.cfg
 share/wesnoth/data/test/scenarios/lua_tests/gui/widget/temp.txt
 share/wesnoth/data/test/scenarios/lua_tests/location_set/temp.txt
 share/wesnoth/data/test/scenarios/lua_tests/mathx/temp.txt
@@ -19106,7 +19109,6 @@ share/wesnoth/fonts/DejaVuSans.ttf
 share/wesnoth/fonts/DejaVuSansMono-Bold.ttf
 share/wesnoth/fonts/DejaVuSansMono.ttf
 share/wesnoth/fonts/DroidSansFallbackFull.ttf
-share/wesnoth/fonts/DroidSansJapanese.ttf
 share/wesnoth/fonts/Lato-Black.ttf
 share/wesnoth/fonts/Lato-BlackItalic.ttf
 share/wesnoth/fonts/Lato-Bold.ttf
@@ -19124,6 +19126,7 @@ share/wesnoth/fonts/Lato-SemiboldItalic.ttf
 share/wesnoth/fonts/Lato-Thin.ttf
 share/wesnoth/fonts/Lato-ThinItalic.ttf
 share/wesnoth/fonts/Lohit-Bengali.ttf
+share/wesnoth/fonts/NotoSansJP-VariableFont_wght.ttf
 share/wesnoth/fonts/OldaniaADFStd-Bold.otf
 share/wesnoth/fonts/OldaniaADFStd-BoldItalic.otf
 share/wesnoth/fonts/OldaniaADFStd-Italic.otf
