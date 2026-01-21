@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.548 2026/01/21 18:27:06 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.549 2026/01/21 19:06:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -717,3 +717,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/rumdl to 0.0.222 [pin 2026-01-21]
 	Updated www/zola to 0.22.0 [pin 2026-01-21]
 	Added net/microsocks version 1.0.5 [gdt 2026-01-21]
+	Updated lang/nodejs to 25.4.0 [adam 2026-01-21]
+	Updated benchmarks/google-benchmark to 1.9.5 [adam 2026-01-21]
