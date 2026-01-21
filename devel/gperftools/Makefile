@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/08/25 08:09:42 adam Exp $
+# $NetBSD: Makefile,v 1.28 2026/01/21 05:38:05 markd Exp $
 
 DISTNAME=	gperftools-2.17.2
 CATEGORIES=	devel
@@ -23,6 +23,9 @@ TEST_TARGET=		check
 LIBS+=			-lexecinfo
 CONFIGURE_ARGS+=	--enable-stacktrace-via-backtrace
 .endif
+
+# Don't look for asciidoctor
+CONFIGURE_ENV+=		ac_cv_path_ASCIIDOCTOR=""
 
 PKGCONFIG_OVERRIDE=		libprofiler.pc
 PKGCONFIG_OVERRIDE+=		libtcmalloc.pc
