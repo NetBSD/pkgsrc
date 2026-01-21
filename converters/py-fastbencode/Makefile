@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2025/11/05 07:51:46 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/01/21 08:54:32 adam Exp $
 
-DISTNAME=	fastbencode-0.3.7
+DISTNAME=	fastbencode-0.3.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters python
 MASTER_SITES+=	${MASTER_SITE_PYPI:=f/fastbencode/}
