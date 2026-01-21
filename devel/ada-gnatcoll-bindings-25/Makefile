@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2025/11/04 20:31:27 dkazankov Exp $
+# $NetBSD: Makefile,v 1.6 2026/01/21 09:31:42 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-${GITHUB_TAG}.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	gnatcoll-bindings
@@ -52,6 +52,8 @@ GENERATE_PLIST+= \
 	${FIND} ${GNAT_PKGBASE} \( -type f -or -type l \) -print | ${SORT};
 
 PRINT_PLIST_AWK+=	/\.relocatable\/|\.static-pic\/|lib\/.*\.so.*/ { $$0 = "$${PLIST.shlibs}" $$0 }
+PRINT_PLIST_AWK+=	/lib\/.*\.a/ { sub(/${PYVERSSUFFIX}/, "$${PYVERSSUFFIX}") }
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "../../devel/gprbuild/buildlink3.mk"
 
