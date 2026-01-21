@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/05/27 12:17:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/01/21 19:05:57 adam Exp $
 include/benchmark/benchmark.h
 include/benchmark/export.h
 lib/cmake/benchmark/benchmarkConfig.cmake
@@ -25,3 +25,21 @@ share/doc/benchmark/reducing_variance.md
 share/doc/benchmark/releasing.md
 share/doc/benchmark/tools.md
 share/doc/benchmark/user_guide.md
+share/googlebenchmark/tools/BUILD.bazel
+share/googlebenchmark/tools/compare.py
+share/googlebenchmark/tools/gbench/Inputs/test1_run1.json
+share/googlebenchmark/tools/gbench/Inputs/test1_run2.json
+share/googlebenchmark/tools/gbench/Inputs/test2_run.json
+share/googlebenchmark/tools/gbench/Inputs/test3_run0.json
+share/googlebenchmark/tools/gbench/Inputs/test3_run1.json
+share/googlebenchmark/tools/gbench/Inputs/test4_run.json
+share/googlebenchmark/tools/gbench/Inputs/test4_run0.json
+share/googlebenchmark/tools/gbench/Inputs/test4_run1.json
+share/googlebenchmark/tools/gbench/Inputs/test5_run0.json
+share/googlebenchmark/tools/gbench/Inputs/test5_run1.json
+share/googlebenchmark/tools/gbench/__init__.py
+share/googlebenchmark/tools/gbench/report.py
+share/googlebenchmark/tools/gbench/util.py
+share/googlebenchmark/tools/libpfm.BUILD.bazel
+share/googlebenchmark/tools/requirements.txt
+share/googlebenchmark/tools/strip_asm.py
