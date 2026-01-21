@@ -1,0 +1,11 @@
+A lightweight SOCKS5 service that you can run on your remote boxes to
+tunnel connections through them, if for some reason SSH doesn't cut it
+for you.
+
+It handles resource exhaustion gracefully by simply denying new
+connections, instead of calling abort() as most other programs do
+these days.
+
+Another plus is ease-of-use: no config file necessary, everything can be
+done from the command line and doesn't even need any parameters for quick
+setup.

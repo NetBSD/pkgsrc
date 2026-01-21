@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/01/21 18:26:43 gdt Exp $
+
+BLAKE2s (microsocks-1.0.5.tar.gz) = b1432cc8028cbeb14e6a0618ceb845befbcc26dd336972b7e2e5889965bd1eeb
+SHA512 (microsocks-1.0.5.tar.gz) = 1180e007f586108b299f4861e8bf94e06a35fa986af90ce66844ef002c06557803825a1b5e73d08bd7a5463337d6bfe0c913bc69b3342e3932b582f05b522ab2
+Size (microsocks-1.0.5.tar.gz) = 10413 bytes
