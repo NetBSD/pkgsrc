@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.545 2026/01/21 14:48:14 pin Exp $
+$NetBSD: CHANGES-2026,v 1.546 2026/01/21 14:49:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -714,3 +714,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/mise to 2026.1.5 [pin 2026-01-21]
 	Updated chat/iamb to 0.0.11 [pin 2026-01-21]
 	Updated graphics/matugen to 3.1.0 [pin 2026-01-21]
+	Updated textproc/rumdl to 0.0.222 [pin 2026-01-21]
