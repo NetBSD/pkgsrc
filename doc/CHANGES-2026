@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.540 2026/01/21 14:01:18 adam Exp $
+$NetBSD: CHANGES-2026,v 1.541 2026/01/21 14:44:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -709,3 +709,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added multimedia/openwv version 1.1.3nb1 [ryoon 2026-01-21]
 	Updated audio/wavpack to 5.9.0 [adam 2026-01-21]
 	Updated misc/py-icecream to 2.1.10 [adam 2026-01-21]
+	Updated devel/codeberg-cli to 0.5.4 [pin 2026-01-21]
