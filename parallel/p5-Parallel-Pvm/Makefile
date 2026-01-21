@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2025/07/04 08:47:52 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/01/21 19:44:37 wiz Exp $
 
 DISTNAME=	Parallel-Pvm-1.4.0
 PKGNAME=	p5-${DISTNAME}
@@ -19,6 +19,8 @@ MESSAGE_SUBST+=		PVM_ROOT=${PVM_ROOT}
 EXAMPLES_DIR=		${PREFIX}/share/examples/p5-Parallel-Pvm
 
 INSTALLATION_DIRS=	${EXAMPLES_DIR}
+
+CFLAGS+=	-Wno-implicit-function-declaration
 
 post-build:
 .for f in hello.pl hello_other.pl
