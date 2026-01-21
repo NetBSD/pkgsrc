@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.532 2026/01/21 08:09:25 adam Exp $
+$NetBSD: CHANGES-2026,v 1.533 2026/01/21 08:56:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -695,3 +695,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/pear to 1.10.17nb1 [taca 2026-01-21]
 	Updated fonts/harfbuzz to 12.3.1 [adam 2026-01-21]
 	Updated fonts/harfbuzz-icu to 12.3.1 [adam 2026-01-21]
+	Updated textproc/py-dill to 0.4.1 [adam 2026-01-21]
+	Updated converters/py-fastbencode to 0.3.9 [adam 2026-01-21]
+	Updated databases/py-alembic to 1.18.1 [adam 2026-01-21]
