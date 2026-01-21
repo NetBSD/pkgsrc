@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.536 2026/01/21 10:11:02 adam Exp $
+$NetBSD: CHANGES-2026,v 1.537 2026/01/21 11:22:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -703,3 +703,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-xandikos to 0.3.1 [adam 2026-01-21]
 	Updated textproc/py-elementpath to 5.1.1 [adam 2026-01-21]
 	Updated mail/py-mailsuite to 1.11.2 [adam 2026-01-21]
+	Updated games/wesnoth to 1.18.6 [adam 2026-01-21]
+	Updated sysutils/ansible-lint to 26.1.1 [adam 2026-01-21]
