@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/10/09 18:30:02 dkazankov Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/01/21 09:31:42 dkazankov Exp $
 ${GNAT_PKGBASE}/include/gnatcoll_cpp/cpp_string_support.cpp
 ${GNAT_PKGBASE}/include/gnatcoll_cpp/gnatcoll-cpp-strings.adb
 ${GNAT_PKGBASE}/include/gnatcoll_cpp/gnatcoll-cpp-strings.ads
@@ -187,7 +187,7 @@ ${GNAT_PKGBASE}/lib/gnatcoll_python.static/gnatcoll-python-state.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_python.static/gnatcoll-python.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_python.static/gnatcoll-scripts-python.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_python.static/libgnatcoll_python3.a
-${GNAT_PKGBASE}/lib/gnatcoll_python.static/libpython3.13.a
+${GNAT_PKGBASE}/lib/gnatcoll_python.static/libpython${PYVERSSUFFIX}.a
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_readline.relocatable/gnatcoll-readline.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_readline.relocatable/libgnatcoll_readline.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_readline.relocatable/libgnatcoll_readline.so.25
