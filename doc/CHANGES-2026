@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.533 2026/01/21 08:56:04 adam Exp $
+$NetBSD: CHANGES-2026,v 1.534 2026/01/21 09:33:56 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -698,3 +698,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-dill to 0.4.1 [adam 2026-01-21]
 	Updated converters/py-fastbencode to 0.3.9 [adam 2026-01-21]
 	Updated databases/py-alembic to 1.18.1 [adam 2026-01-21]
+	Updated devel/ada-gnatcoll-bindings-25 to 25.2.0nb2 [dkazankov 2026-01-21]
