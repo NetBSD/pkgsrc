@@ -1,0 +1,34 @@
+$NetBSD: patch-src_openwv.rs,v 1.1 2026/01/21 13:59:45 ryoon Exp $
+
+* Load .wvd data from file. Taken from OpenBSD Ports.
+
+--- src/openwv.rs.orig	2026-01-20 13:27:18.000000000 +0000
++++ src/openwv.rs
+@@ -1,13 +1,13 @@ use std::ffi::{c_char, c_int, c_uchar, c_void};
+ use autocxx::subclass::{CppSubclassSelfOwned, subclass};
+ use log::{debug, error, info, trace, warn};
+ use std::ffi::{c_char, c_int, c_uchar, c_void};
++use std::fs::File;
+ use std::pin::Pin;
+ use std::ptr::{null, null_mut};
+ use std::sync::OnceLock;
+ 
+ use crate::CdmError;
+ use crate::common_host::{CommonHost, downcast_host};
+-use crate::config::CONFIG;
+ use crate::decrypt::{DecryptError, decrypt_buf};
+ use crate::ffi::cdm;
+ use crate::service_certificate::{ServerCertificate, parse_service_certificate};
+@@ -27,7 +27,11 @@ extern "C" fn InitializeCdmModule_4() {
+ 
+     info!("OpenWV version {} initializing", env!("CARGO_PKG_VERSION"));
+ 
+-    let mut embedded_wvd = std::io::Cursor::new(CONFIG.widevine_device);
++    let f = File::open("@PKG_SYSCONFDIR@/openwv/widevine_device.wvd");
++    let mut embedded_wvd = match f {
++        Ok(file) => file,
++        Err(_) => return(),
++    };
+     match wvd_file::parse_wvd(&mut embedded_wvd) {
+         Ok(dev) => {
+             if DEVICE.set(dev).is_err() {

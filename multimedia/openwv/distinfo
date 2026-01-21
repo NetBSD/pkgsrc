@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2026/01/21 13:59:45 ryoon Exp $
+
+BLAKE2s (openwv-1.1.3.tar.bz2) = 2457e67c8cfcc33b7cc4161ad59fdb96176fe5f37805141f57300c8f9e9ec3cf
+SHA512 (openwv-1.1.3.tar.bz2) = 1168029017b0ccc92c119e860a37e565940d54f9f4b2759e26da9ae615c1940f83483cffea642c2e36e958d77f99c6bc58df9c747d08b3d229bc839093f4766f
+Size (openwv-1.1.3.tar.bz2) = 23790667 bytes
+SHA1 (patch-Cargo.toml) = bdda1d5ee91423d173e659bd4c305d4362a6f0c8
+SHA1 (patch-src_config.rs) = 80c6aee2b32fa9376b71f530719e88f6f3e70285
+SHA1 (patch-src_openwv.rs) = 5cb12ef32d13f7c0806f81d05501c2b1ebc5b53d

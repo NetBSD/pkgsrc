@@ -1,0 +1,21 @@
+===========================================================================
+$NetBSD: README.firefox.in,v 1.1 2026/01/21 13:59:45 ryoon Exp $
+
+For Firefox web browser:
+
+(1) Open about:support in www/firefox and get profile name.
+(2) Create gmp-widevinecdm/openwv directory under profile directory.
+$ mkdir -p ~/.mozilla/<profile>/gmp-widevinecdm/openwv
+(3) Copy @PREFIX@/share/openwv/libwidevinecdm.so
+    to ~/.mozilla/<profile>/gmp-widevinecdm/openwv
+(4) Copy @PREFIX@/share/openwv/manifest-firefox.json
+    as ~/.mozilla/<profile>/gmp-widevinecdm/openwv/manifest.json
+(5) Create some keys in about:config.
+    key					| type		| value
+    -------------------------------------------------------------
+    media.gmp-widevinecdm.enabled	| boolean	| true
+    media.gmp-widevinecdm.visible	| boolean	| true
+    media.gmp-widevinecdm.autoupdate	| boolean	| false
+    media.gmp-widevinecdm.version	| string	| openwv
+
+===========================================================================

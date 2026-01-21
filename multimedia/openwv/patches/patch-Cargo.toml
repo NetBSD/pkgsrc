@@ -1,0 +1,24 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2026/01/21 13:59:45 ryoon Exp $
+
+* Use vendored autocxx for offline build.
+
+--- Cargo.toml.orig	2026-01-20 13:47:09.346022322 +0000
++++ Cargo.toml
+@@ -10,7 +10,7 @@ edition = "2024"
+ edition = "2024"
+ 
+ [dependencies]
+-autocxx = { git = "https://github.com/tchebb/autocxx.git", branch = "openwv-fixes" }
++autocxx = "0.30.0"
+ cxx = "1"
+ prost = "0.14.1"
+ thiserror = "2"
+@@ -31,7 +31,7 @@ ctr = "0.10.0-rc"
+ ctr = "0.10.0-rc"
+ 
+ [build-dependencies]
+-autocxx-build = { git = "https://github.com/tchebb/autocxx.git", branch = "openwv-fixes" }
++autocxx-build = "0.30.0"
+ prost-build = "0.14.1"
+ thiserror = "2"
+ 
