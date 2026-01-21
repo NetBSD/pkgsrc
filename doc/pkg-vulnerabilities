@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.719 2026/01/21 18:08:52 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.720 2026/01/21 21:30:49 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29493,3 +29493,13 @@ mysql-server<8.0.45	multiple-vulnerabilities	https://www.oracle.com/security-ale
 openjdk11<11.0.30	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujan2026.html#AppendixJAVA
 openjdk17<17.0.18	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujan2026.html#AppendixJAVA
 openjdk21<21.0.10	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujan2026.html#AppendixJAVA
+bind<9.18.44		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13878
+glib2<2.87.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-0988
+moodle-[0-9]*		cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-47857
+php{56,74,81,82,83,84}-phppgadmin-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2021-47853
+proftpd-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-47865
+python310-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-12781
+python311-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-12781
+python312-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-12781
+python313-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-12781
+python314-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-12781
