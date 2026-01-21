@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2026/01/06 07:54:23 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/01/21 19:42:05 wiz Exp $
 
 DISTNAME=	nicotine-plus-2.2.2
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nicotine-plus/}
@@ -6,7 +6,7 @@ PKGREVISION=	18
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://nicotine-plus.github.io/nicotine-plus/
+HOMEPAGE=	https://nicotine-plus.org/
 COMMENT=	Graphical client for the Soulseek file sharing network
 LICENSE=	gnu-gpl-v3
 
