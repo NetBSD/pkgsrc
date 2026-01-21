@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2025/09/28 19:47:24 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2026/01/21 14:44:00 pin Exp $
 
-DISTNAME=	codeberg-cli-0.5.1
+DISTNAME=	codeberg-cli-0.5.4
 CATEGORIES=	devel
 MASTER_SITES=	${HOMEPAGE}archive/
 SITES.${DISTNAME}.tar.gz=	-${MASTER_SITES}v${PKGVERSION_NOREV}${EXTRACT_SUFX}
@@ -8,7 +8,7 @@ SITES.${DISTNAME}.tar.gz=	-${MASTER_SITES}v${PKGVERSION_NOREV}${EXTRACT_SUFX}
 MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	https://codeberg.org/Aviac/codeberg-cli/
 COMMENT=	CLI for codeberg and forgejo similar to gh, glab and tea
-LICENSE=	gnu-agpl-v3
+LICENSE=	mit #gnu-agpl-v3
 
 WRKSRC=		${WRKDIR}/${PKGBASE}
 
