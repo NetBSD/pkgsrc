@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.541 2026/01/21 14:44:17 pin Exp $
+$NetBSD: CHANGES-2026,v 1.542 2026/01/21 14:45:15 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -710,3 +710,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/wavpack to 5.9.0 [adam 2026-01-21]
 	Updated misc/py-icecream to 2.1.10 [adam 2026-01-21]
 	Updated devel/codeberg-cli to 0.5.4 [pin 2026-01-21]
+	Updated devel/git-cliff to 2.12.0 [pin 2026-01-21]
