@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2026/01/20 18:26:12 tsutsui Exp $
+# $NetBSD: Makefile,v 1.56 2026/01/21 19:40:42 wiz Exp $
 
 DISTNAME=		onscripter-20230825
 PKGREVISION=		3
@@ -22,6 +22,8 @@ MAKE_FILE=	Makefile.Linux
 BUILD_TARGET=	ALL
 
 USE_TOOLS+=	pkg-config
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 .include "options.mk"
 
