@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.44 2025/12/15 13:15:05 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.45 2026/01/21 14:44:57 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -35,7 +35,7 @@ CARGO_CRATE_DEPENDS+=	bstr-1.12.1
 CARGO_CRATE_DEPENDS+=	bumpalo-3.19.0
 CARGO_CRATE_DEPENDS+=	bytemuck-1.23.2
 CARGO_CRATE_DEPENDS+=	bytes-1.11.0
-CARGO_CRATE_DEPENDS+=	cacache-13.0.0
+CARGO_CRATE_DEPENDS+=	cacache-13.1.0
 CARGO_CRATE_DEPENDS+=	cc-1.2.49
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.4
 CARGO_CRATE_DEPENDS+=	cfg_aliases-0.2.1
