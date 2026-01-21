@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.547 2026/01/21 14:50:07 pin Exp $
+$NetBSD: CHANGES-2026,v 1.548 2026/01/21 18:27:06 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -716,3 +716,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/matugen to 3.1.0 [pin 2026-01-21]
 	Updated textproc/rumdl to 0.0.222 [pin 2026-01-21]
 	Updated www/zola to 0.22.0 [pin 2026-01-21]
+	Added net/microsocks version 1.0.5 [gdt 2026-01-21]
