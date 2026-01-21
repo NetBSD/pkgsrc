@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.535 2026/01/21 10:02:21 adam Exp $
+$NetBSD: CHANGES-2026,v 1.536 2026/01/21 10:11:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -701,3 +701,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ada-gnatcoll-bindings-25 to 25.2.0nb2 [dkazankov 2026-01-21]
 	Updated sysutils/py-Send2Trash to 2.1.0 [adam 2026-01-21]
 	Updated net/py-xandikos to 0.3.1 [adam 2026-01-21]
+	Updated textproc/py-elementpath to 5.1.1 [adam 2026-01-21]
+	Updated mail/py-mailsuite to 1.11.2 [adam 2026-01-21]
