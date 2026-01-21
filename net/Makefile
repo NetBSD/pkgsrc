@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1622 2026/01/15 08:53:36 wiz Exp $
+# $NetBSD: Makefile,v 1.1623 2026/01/21 18:26:43 gdt Exp $
 #
 
 COMMENT=	Networking tools
@@ -389,6 +389,7 @@ SUBDIR+=	md-whois
 SUBDIR+=	megacmd
 SUBDIR+=	megatools
 SUBDIR+=	messagelib
+SUBDIR+=	microsocks
 SUBDIR+=	mikutter
 SUBDIR+=	mimms
 SUBDIR+=	minikube

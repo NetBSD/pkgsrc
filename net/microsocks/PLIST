@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2026/01/21 18:26:43 gdt Exp $
+bin/microsocks
