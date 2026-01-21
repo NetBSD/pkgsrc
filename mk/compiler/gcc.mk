@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.307 2026/01/18 21:08:07 wiz Exp $
+# $NetBSD: gcc.mk,v 1.308 2026/01/21 19:32:02 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -1351,7 +1351,19 @@ ${_GCC_${_var_}}:
 # On systems without a Fortran compiler, pull one in if needed.
 PKGSRC_FORTRAN?=gfortran
 
-.include "../../mk/compiler/${PKGSRC_FORTRAN}.mk"
+_GCC_NEEDS_A_FORTRAN=	no
+.if empty(_USE_PKGSRC_GCC:M[yY][eE][sS]) && !(defined(FCPATH) && exists(${FCPATH}))
+_GCC_NEEDS_A_FORTRAN=	yes
+.else
+.  for _pattern_ in 0.* 1.[0-4] 1.[0-4].*
+.    if !empty(MACHINE_PLATFORM:MNetBSD-${_pattern_}-*)
+_GCC_NEEDS_A_FORTRAN=	yes
+.    endif
+.  endfor
+.endif
+.if !empty(_GCC_NEEDS_A_FORTRAN:M[yY][eE][sS])
+.  include "../../mk/compiler/${PKGSRC_FORTRAN}.mk"
+.endif
 
 #.READONLY: GCC_REQD
 _GCC_REQD_EFFECTIVE:=	${GCC_REQD}
