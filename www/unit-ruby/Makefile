@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/10/25 01:52:48 osa Exp $
+# $NetBSD: Makefile,v 1.10 2026/01/22 07:46:06 wiz Exp $
 
 PKGNAME=	unit-${LANG}${RUBY_VER}-${UNIT_VERSION}
 COMMENT=	Ruby module for NGINX Unit
@@ -13,8 +13,9 @@ post-configure:
 		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS} 			\
 			${CONFIGURE_SCRIPT} ${LANG} --module=${MODNAME}
 
+# only recognizes ruby 3.2
 # ruby 3.4: error: 'rb_data_object_get_warning' is deprecated
-RUBY_VERSIONS_ACCEPTED=		32 33
+RUBY_VERSIONS_ACCEPTED=		32
 
 .include "../../lang/${LANG}/buildlink3.mk"
 .include "../../www/unit/ext.mk"
