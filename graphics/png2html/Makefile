@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.46 2025/10/23 20:37:43 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.47 2026/01/22 08:43:21 wiz Exp $
 
 DISTNAME=	png2html-1.1
 PKGREVISION=	31
 CATEGORIES=	graphics www
-MASTER_SITES=	http://www.engr.mun.ca/~holden/
+#MASTER_SITES=	http://www.engr.mun.ca/~holden/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.engr.mun.ca/~holden/png2html.html
+#HOMEPAGE=	http://www.engr.mun.ca/~holden/png2html.html
 COMMENT=	Takes a PNG image and transforms it to a web page
 
 FIX_RPATH+=	CFLAGS
