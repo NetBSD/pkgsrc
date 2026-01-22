@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2025/10/29 15:39:25 nia Exp $
+# $NetBSD: Makefile,v 1.98 2026/01/22 15:28:28 jperkin Exp $
 #
 # NOTE: If you update this package, it is *mandatory* that you update
 # 	pkgsrc/pkgtools/libnbcompat/files/README to reflect the actual
@@ -13,6 +13,7 @@ HOMEPAGE=		https://www.NetBSD.org/
 COMMENT=		Portable NetBSD compatibility library
 LICENSE=		2-clause-bsd AND modified-bsd
 
+BOOTSTRAP_PKG=		yes
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		LIBMODE=${LIBMODE}
 

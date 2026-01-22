@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/02/18 15:20:24 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/01/22 15:28:28 jperkin Exp $
 
 PKGNAME=		mktools-20250213
 CATEGORIES=		pkgtools sysutils
@@ -8,6 +8,7 @@ HOMEPAGE=		https://www.NetBSD.org/
 COMMENT=		Collection of pkgsrc mk infrastructure tools
 LICENSE=		modified-bsd
 
+BOOTSTRAP_PKG=		yes
 USE_BSD_MAKEFILE=	yes
 
 INSTALLATION_DIRS=	libexec/mktools
