@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.563 2026/01/22 19:18:24 js Exp $
+$NetBSD: CHANGES-2026,v 1.564 2026/01/22 19:30:06 js Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -735,3 +735,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed chat/py-mautrix [js 2026-01-22]
 	Removed chat/py-tulir-telethon [js 2026-01-22]
 	Removed chat/tkabber [js 2026-01-22]
+	Added security/mbedtls4 version 4.0.0 [js 2026-01-22]
