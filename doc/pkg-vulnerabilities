@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.720 2026/01/21 21:30:49 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.721 2026/01/22 09:37:24 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29503,3 +29503,7 @@ python311-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-1278
 python312-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-12781
 python313-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-12781
 python314-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-12781
+ImageMagick<7.1.2.13	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-23952
+ImageMagick6<6.9.13.38	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-23952
+py{27,310,311,312,313,314}-test-[0-9]*	insecure-temporary-files	https://nvd.nist.gov/vuln/detail/CVE-2025-71176
+py{27,310,311,312,313,314}-wheel<0.46.2	path-traversal			https://nvd.nist.gov/vuln/detail/CVE-2026-24049
