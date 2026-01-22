@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.306 2026/01/22 19:14:23 js Exp $
+# $NetBSD: Makefile,v 1.307 2026/01/22 19:17:29 js Exp $
 #
 
 COMMENT=	Communication programs
@@ -110,7 +110,6 @@ SUBDIR+=	py-matrix-common
 SUBDIR+=	py-matrix-nio
 SUBDIR+=	py-nbxmpp
 SUBDIR+=	py-telethon
-SUBDIR+=	py-tulir-telethon
 SUBDIR+=	py-xmpppy
 SUBDIR+=	py-zulip
 SUBDIR+=	py-zulip-term
