@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2025/10/24 21:23:08 js Exp $
+# $NetBSD: options.mk,v 1.5 2026/01/22 19:34:10 js Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.objfw
 .if ${MACHINE_ARCH} != "alpha" && \
@@ -15,8 +15,11 @@ PKG_SUPPORTED_OPTIONS=		clang
 PKG_SUGGESTED_OPTIONS+=		clang
 .endif
 PKG_OPTIONS_OPTIONAL_GROUPS=	tls
-PKG_OPTIONS_GROUP.tls=		openssl gnutls mbedtls
+PKG_OPTIONS_GROUP.tls=		openssl gnutls mbedtls mbedtls3
+# Will only be supported in next release
+#PKG_OPTIONS_GROUP.tls+=		mbedtls4
 .if ${OPSYS} == "Darwin"
+# Will be removed in the next release
 PKG_OPTIONS_GROUP.tls+=		securetransport
 PKG_SUGGESTED_OPTIONS+=		securetransport
 .else
@@ -59,7 +62,21 @@ PLIST_SRC+=		PLIST.tls
 PLIST_SRC+=		PLIST.tlsframework
 .  endif
 .elif !empty(PKG_OPTIONS:Mmbedtls)
+.  include "../../security/mbedtls/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-tls=mbedtls
+PLIST_SRC+=		PLIST.tls
+.  if ${OPSYS} == "Darwin"
+PLIST_SRC+=		PLIST.tlsframework
+.  endif
+.elif !empty(PKG_OPTIONS:Mmbedtls3)
 .  include "../../security/mbedtls3/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-tls=mbedtls
+PLIST_SRC+=		PLIST.tls
+.  if ${OPSYS} == "Darwin"
+PLIST_SRC+=		PLIST.tlsframework
+.  endif
+.elif !empty(PKG_OPTIONS:Mmbedtls4)
+.  include "../../security/mbedtls4/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-tls=mbedtls
 PLIST_SRC+=		PLIST.tls
 .  if ${OPSYS} == "Darwin"
