@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2026/01/07 08:48:32 wiz Exp $
+# $NetBSD: Makefile,v 1.143 2026/01/22 08:42:35 wiz Exp $
 
 DISTNAME=		pkgin-25.10.0
 PKGREVISION=		1
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=NetBSDfr/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@pkgsrc.org
-HOMEPAGE=		http://pkgin.net/
+HOMEPAGE=		https://pkgin.net/
 COMMENT=		Apt / yum like tool for managing pkgsrc binary packages
 LICENSE=		modified-bsd
 
