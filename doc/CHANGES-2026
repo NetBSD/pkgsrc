@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.552 2026/01/22 09:03:00 adam Exp $
+$NetBSD: CHANGES-2026,v 1.553 2026/01/22 10:10:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -724,3 +724,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed converters/py-jpCodecs [adam 2026-01-22]
 	Removed converters/py-yenc [adam 2026-01-22]
 	Removed converters/py-zhCodecs [adam 2026-01-22]
+	Updated net/chrony to 4.8 [wiz 2026-01-22]
