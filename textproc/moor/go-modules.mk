@@ -1,9 +1,9 @@
-# $NetBSD: go-modules.mk,v 1.6 2026/01/05 10:47:03 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.7 2026/01/22 16:24:57 schmonz Exp $
 
 GO_MODULE_FILES+=	github.com/adrg/xdg/@v/v0.5.3.mod
 GO_MODULE_FILES+=	github.com/adrg/xdg/@v/v0.5.3.zip
-GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.21.1.mod
-GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.21.1.zip
+GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.22.0.mod
+GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.22.0.zip
 GO_MODULE_FILES+=	github.com/charlievieth/strcase/@v/v0.0.5.mod
 GO_MODULE_FILES+=	github.com/charlievieth/strcase/@v/v0.0.5.zip
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.0.mod
