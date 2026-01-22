@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.3 2021/09/17 09:39:54 wiz Exp $
+# $NetBSD: module.mk,v 1.4 2026/01/22 09:58:27 wiz Exp $
 # used by sysutils/py-syslog-ng/Makefile
 # used by sysutils/syslog-ng-amqp/Makefile
 # used by sysutils/syslog-ng-curl/Makefile
@@ -13,7 +13,7 @@
 
 PKGNAME?=	${DISTNAME:S/ng/ng-${SYSLOG_MOD}/}
 
-DEPENDS+=	syslog-ng-${PKGVERSION_NOREV}{nb*,}:../../sysutils/syslog-ng
+DEPENDS+=	syslog-ng-${PKGVERSION_NOREV}{,nb*}:../../sysutils/syslog-ng
 
 CONFIGURE_ARGS+=	--enable-${SYSLOG_MOD}
 
