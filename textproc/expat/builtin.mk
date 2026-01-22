@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.25 2025/12/07 08:40:04 wiz Exp $
+# $NetBSD: builtin.mk,v 1.26 2026/01/22 03:49:43 markd Exp $
 
 BUILTIN_PKG:=	expat
 
@@ -27,11 +27,14 @@ MAKEVARS+=		IS_BUILTIN.expat
 .if !defined(BUILTIN_PKG.expat) && \
     ${IS_BUILTIN.expat:tl} == yes && \
     empty(H_EXPAT:M__nonexistent__)
-BUILTIN_VERSION.expat!=							\
-	${AWK} '/\#define[ 	]*XML_MAJOR_VERSION/ { M = $$3 }	\
-		/\#define[ 	]*XML_MINOR_VERSION/ { m = "."$$3 }	\
-		/\#define[ 	]*XML_MICRO_VERSION/ { u = "."$$3 }	\
-		END { printf "%s%s%s\n", M, m, u }'			\
+BUILTIN_VERSION.expat!=								\
+	${AWK} '/\#define[ 	]*XML_MAJOR_VERSION/ { M = $$3 }		\
+		/\# [ ]*define[ 	]*XML_MAJOR_VERSION/ { M = $$4 }	\
+		/\#define[ 	]*XML_MINOR_VERSION/ { m = "."$$3 }		\
+		/\# [ ]*define[ 	]*XML_MINOR_VERSION/ { m = "."$$4 }	\
+		/\#define[ 	]*XML_MICRO_VERSION/ { u = "."$$3 }		\
+		/\# [ ]*define[ 	]*XML_MICRO_VERSION/ { u = "."$$4 }	\
+		END { printf "%s%s%s\n", M, m, u }'				\
 		${_CROSS_DESTDIR:U:Q}${H_EXPAT:Q}
 BUILTIN_PKG.expat=	expat-${BUILTIN_VERSION.expat}
 .endif
