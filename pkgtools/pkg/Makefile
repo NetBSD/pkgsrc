@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2025/04/20 19:19:01 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2026/01/22 08:42:16 wiz Exp $
 
 DISTNAME=	pkg-1.10.99.7
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://files.etoilebsd.net/pkg/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	https://wiki.freebsd.org/pkgng
+HOMEPAGE=	https://wiki.freebsd.org/pkg
 COMMENT=	Package management tool for FreeBSD
 LICENSE=	2-clause-bsd
 
