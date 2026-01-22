@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.550 2026/01/22 07:21:47 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.551 2026/01/22 07:28:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -720,3 +720,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nodejs to 25.4.0 [adam 2026-01-21]
 	Updated benchmarks/google-benchmark to 1.9.5 [adam 2026-01-21]
 	Updated devel/hs-ghc-lib-parser to 9.14.1.20251220 [wiz 2026-01-22]
+	Removed textproc/ruby-rexml [taca 2026-01-22]
