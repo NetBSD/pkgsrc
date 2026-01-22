@@ -1,18 +1,18 @@
-$NetBSD: patch-comm_third__party_openpgp.configure,v 1.1 2025/11/14 17:28:39 ryoon Exp $
+$NetBSD: patch-comm_third__party_openpgp.configure,v 1.2 2026/01/22 19:41:09 ryoon Exp $
 
 * Pass CC for detecting C++ compiler (GCC/clang).
   A logic in botan/configure.py does not detect c++ from cwrappers correctly.
 * GCC does not accept --target= as argument. Remove it.
 
---- comm/third_party/openpgp.configure.orig	2025-11-12 23:23:21.000000000 +0000
+--- comm/third_party/openpgp.configure.orig	2026-01-08 21:45:29.000000000 +0000
 +++ comm/third_party/openpgp.configure
-@@ -319,8 +319,8 @@ with only_when(in_tree_librnp):
-             )
+@@ -347,8 +347,8 @@ with only_when(in_tree_librnp):
+                     log.info("Botan: failed to inject libstdc++ include dirs: {}".format(e))
  
              botan_flags = [
 +                "--cc={}".format(os.getenv("CC")),
                  "--cc-bin={}".format(cxx_compiler.compiler),
--                "--cc-abi-flags=--target={}".format(target.alias),
+-                "--cc-abi-flags={}".format(" ".join(abi_flags)),
                  "--cpu={}".format(target.cpu),
                  "--os={}".format(botan_os),
                  "--with-build-dir={}".format(botan_objdir),

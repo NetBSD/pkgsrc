@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.356 2026/01/07 08:47:49 wiz Exp $
+# $NetBSD: Makefile,v 1.357 2026/01/22 19:41:09 ryoon Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER:S/esr//}
-PKGREVISION=	1
-TB_VER=		146.0.1
+TB_VER=		147.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -58,26 +57,38 @@ CHECK_WRKREF_SKIP+=	lib/${MOZILLA_NAME}/omni.ja
 # updating and verification.
 #
 
-CKSUM_CRATES+=	third_party/rust/libc
+CKSUM_CRATES+=	comm/third_party/rust/minimal-lexical
 
-# patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs
-#CKSUMS+=	107a4aa396b8383c66e0ace2f941450b4b69146558cdc4d9fbe33eeab51760f1
-#CKSUMS+=	3aa5bbc6bec675641c8cb02342022256435ea4f958bfa3832344dba6847ba5ea
+# touch comm/third_party/rust/minimal-lexical/.gitmodules
+CKSUMS+=	6976207a02c7160a3a1d076c5fae10fe4b78f58cdc0aa66ae47f3855b3c392fb
+CKSUMS+=	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 
-#CKSUM_CRATES+=	third_party/rust/getrandom
+CKSUM_CRATES+=	comm/third_party/rust/dogear
 
-# patch-third__party_rust_getrandom_src_lib.rs
-#CKSUMS+=	0e52f6bde42d7bb05c297ce1c25b9879d61b28caba98f6226a152bff538db6c2
-#CKSUMS+=	394425b4ba03c21c494e64d993678f7014575b1e3d590b9ee452b5c2d83ec4ac
+# patch-comm_third__party_rust_dogear_.github_workflows_upload-to-codecov.sh
+CKSUMS+=	bb2cb096519bc76a5bb4fb217165686b27a6d08920d61dfc0a13d301fbe140c9
+CKSUMS+=	61478eeb1ad8fface3596cedf42bfa4762da19ce84f2f1a33b9197bb93d35262
 
-#SUBST_CLASSES+=		cksum
-#SUBST_STAGE.cksum=	pre-configure
-#.for crate in ${CKSUM_CRATES}
-#SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
-#.endfor
-#.for from to in ${CKSUMS}
-#SUBST_SED.cksum+=	-e 's,${from},${to},g'
-#.endfor
+CKSUM_CRATES+=	comm/third_party/rust/sfv
+
+# touch comm/third_party/rust/sfv/.gitmodules
+CKSUMS+=	caa4f75b6a87c4a0f2e7d8d0d5fa2ef3f726fb0ae7797af09bfa3d57c4721148
+CKSUMS+=	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+CKSUM_CRATES+=	comm/third_party/rust/glslopt
+
+# touch comm/third_party/rust/glslopt/.gitmodules
+CKSUMS+=	ffc0cce90e856d4f4bdb3bd3c950c9e59501a45ebd5022b91cfe8c07c79ef1ac
+CKSUMS+=	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+SUBST_CLASSES+=		cksum
+SUBST_STAGE.cksum=	pre-configure
+.for crate in ${CKSUM_CRATES}
+SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
+.endfor
+.for from to in ${CKSUMS}
+SUBST_SED.cksum+=	-e 's,${from},${to},g'
+.endfor
 
 SUBST_CLASSES+=		netbsdtag
 SUBST_STAGE.netbsdtag=	pre-configure
@@ -85,6 +96,9 @@ SUBST_FILES.netbsdtag=	comm/third_party/rnp/src/librekey/key_store_pgp.cpp
 SUBST_SED.netbsdtag=	-e 's/__NetBSD__/__NEVER__/'
 
 post-extract:
+	${TOUCH} ${WRKSRC}/comm/third_party/rust/minimal-lexical/.gitmodules
+	${TOUCH} ${WRKSRC}/comm/third_party/rust/sfv/.gitmodules
+	${TOUCH} ${WRKSRC}/comm/third_party/rust/glslopt/.gitmodules
 	#${CP} ${FILESDIR}/cubeb_sun.c ${WRKSRC}/media/libcubeb/src/cubeb_sun.c
 
 pre-patch:
