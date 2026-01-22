@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.13 2025/12/28 10:27:08 adam Exp $
-
-BLAKE2s (mautrix-0.21.0.tar.gz) = 35bfb3c67b09027fd05972ff69dffb0f50a61c38b19eeb8c91f04ddea862dbf5
-SHA512 (mautrix-0.21.0.tar.gz) = 8f7634df6d57e34b42e7ef71de202fa33cb602b970937c79bec64b7d1d21e4af43add43fc0e05d45a6efacc338d64504348a067c781d880d831f2161b90d2bc1
-Size (mautrix-0.21.0.tar.gz) = 254726 bytes
