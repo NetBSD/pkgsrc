@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.562 2026/01/22 19:16:50 js Exp $
+$NetBSD: CHANGES-2026,v 1.563 2026/01/22 19:18:24 js Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -734,3 +734,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed chat/mautrix-telegram [js 2026-01-22]
 	Removed chat/py-mautrix [js 2026-01-22]
 	Removed chat/py-tulir-telethon [js 2026-01-22]
+	Removed chat/tkabber [js 2026-01-22]
