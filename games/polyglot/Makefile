@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2019/05/23 19:23:01 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.7 2026/01/22 08:44:18 wiz Exp $
 
 DISTNAME=		polyglot_14
 PKGNAME=		polyglot-1.4
 CATEGORIES=		games
-MASTER_SITES=		http://wbec-ridderkerk.nl/html/download/fruit/
+#MASTER_SITES=		http://wbec-ridderkerk.nl/html/download/fruit/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://wbec-ridderkerk.nl/html/details/PolyGlot.html
+#HOMEPAGE=		http://wbec-ridderkerk.nl/html/details/PolyGlot.html
 COMMENT=		UCI to WB adapter (for chess engines)
 
 WRKSRC=			${WRKDIR}/polyglot_14
