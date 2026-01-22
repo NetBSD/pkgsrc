@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/01/21 13:59:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/22 07:25:43 wiz Exp $
 
 DISTNAME=	openwv-1.1.3
 PKGREVISION=	1
@@ -47,4 +47,5 @@ do-install:
 		${DESTDIR}${PREFIX}/share/doc/openwv
 
 .include "../../lang/rust/cargo.mk"
+.include "../../lang/clang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
