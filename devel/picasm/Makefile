@@ -1,24 +1,23 @@
-# $NetBSD: Makefile,v 1.2 2020/03/18 17:52:39 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.3 2026/01/22 08:36:54 wiz Exp $
 
 DISTNAME=	picasm114
 PKGNAME=	${DISTNAME:S/picasm/picasm-/}
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://nsa.kpu-m.ac.jp/gijutu/kousaku/man-pic/
+#MASTER_SITES=	http://nsa.kpu-m.ac.jp/gijutu/kousaku/man-pic/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 # Mirror of the latest release notes
-HOMEPAGE=	http://nsa.kpu-m.ac.jp/gijutu/kousaku/man-pic/picasm.html
+#HOMEPAGE=	http://nsa.kpu-m.ac.jp/gijutu/kousaku/man-pic/picasm.html
 COMMENT=	Assembler for Microchip PIC16Cxx microcontrollers
 LICENSE=	mit
 
 BUILD_TARGET=		picasm
-BUILD_MAKE_FLAGS=	CC=${CC:Q}
+BUILD_MAKE_FLAGS+=	CC=${CC:Q}
 # We need to construct -DBUILTIN_INCLUDE1=\"/usr/pkg/share/picasm/include\"
 # in order to process symbol correctly to the preprocessor
-BUILD_MAKE_FLAGS=	DEFS=-DBUILTIN_INCLUDE1=\\\"${PREFIX}/share/picasm/include\\\"
+BUILD_MAKE_FLAGS+=	DEFS=-DBUILTIN_INCLUDE1=\\\"${PREFIX}/share/picasm/include\\\"
 
 INSTALLATION_DIRS=	bin share/examples/picasm share/doc/picasm \
 			share/picasm/include
