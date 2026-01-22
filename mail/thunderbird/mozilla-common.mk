@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.25 2025/12/24 16:47:38 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.26 2026/01/22 19:41:09 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -89,7 +89,6 @@ CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--enable-system-pixman
 CONFIGURE_ARGS+=	--with-system-libvpx
 CONFIGURE_ARGS+=	--enable-system-ffi
-#CONFIGURE_ARGS+=	--with-system-icu
 #CONFIGURE_ARGS+=	--with-intl-api
 CONFIGURE_ARGS+=	--without-system-icu
 CONFIGURE_ARGS+=	--with-system-nss
