@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/06/28 11:35:53 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/01/22 08:44:36 wiz Exp $
 
 DISTNAME=	posh_0.12.6
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/p/posh/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://packages.debian.org/posh
+HOMEPAGE=	https://packages.debian.org/search?keywords=posh
 COMMENT=	Debian Policy-compliant Ordinary SHell
 LICENSE=	gnu-gpl-v2
 
