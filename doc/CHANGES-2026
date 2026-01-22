@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.568 2026/01/22 21:01:15 adam Exp $
+$NetBSD: CHANGES-2026,v 1.569 2026/01/22 22:55:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -742,3 +742,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-packaging to 26.0 [adam 2026-01-22]
 	Updated devel/talloc to 2.4.4 [adam 2026-01-22]
 	Updated databases/tdb to 1.4.15 [adam 2026-01-22]
+	Updated security/mbedtls4 to 4.0.0nb1 [wiz 2026-01-22]
