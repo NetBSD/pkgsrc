@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.307 2026/01/22 19:17:29 js Exp $
+# $NetBSD: Makefile,v 1.308 2026/01/22 19:20:29 js Exp $
 #
 
 COMMENT=	Communication programs
@@ -138,7 +138,6 @@ SUBDIR+=	telepathy-mission-control5
 SUBDIR+=	telepathy-qt5
 SUBDIR+=	tik
 SUBDIR+=	tirc
-SUBDIR+=	tkabber
 SUBDIR+=	tkirc
 SUBDIR+=	tkirc2
 SUBDIR+=	toot
