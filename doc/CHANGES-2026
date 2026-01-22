@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.561 2026/01/22 19:13:30 js Exp $
+$NetBSD: CHANGES-2026,v 1.562 2026/01/22 19:16:50 js Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -733,3 +733,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/chromium to 144.0.7559.96 [kikadf 2026-01-22]
 	Removed chat/mautrix-telegram [js 2026-01-22]
 	Removed chat/py-mautrix [js 2026-01-22]
+	Removed chat/py-tulir-telethon [js 2026-01-22]
