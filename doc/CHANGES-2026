@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.554 2026/01/22 12:32:52 nia Exp $
+$NetBSD: CHANGES-2026,v 1.555 2026/01/22 14:53:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -726,3 +726,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed converters/py-zhCodecs [adam 2026-01-22]
 	Updated net/chrony to 4.8 [wiz 2026-01-22]
 	Updated www/palemoon to 34.0.1 [nia 2026-01-22]
+	Updated devel/py-nihtest to 1.10.1 [wiz 2026-01-22]
