@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2026/01/09 12:36:07 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/01/22 14:53:20 wiz Exp $
 
-DISTNAME=	nihtest-1.10.0
+DISTNAME=	nihtest-1.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nihtest/}
