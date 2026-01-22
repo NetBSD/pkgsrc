@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/11/09 13:14:15 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2026/01/22 15:28:28 jperkin Exp $
 
 PKGNAME=		cwrappers-20220403
 CATEGORIES=		pkgtools sysutils
@@ -8,6 +8,7 @@ HOMEPAGE=		https://www.NetBSD.org/
 COMMENT=		pkgsrc compiler wrappers
 LICENSE=		modified-bsd
 
+BOOTSTRAP_PKG=		yes
 GNU_CONFIGURE=		yes
 USE_BSD_MAKEFILE=	yes
 USE_FEATURES=		nbcompat
