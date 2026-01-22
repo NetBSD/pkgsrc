@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.143 2025/11/15 13:48:06 pgoyette Exp $
+# $NetBSD: Makefile,v 1.144 2026/01/22 08:39:19 wiz Exp $
 
 DISTNAME=	pine4.64
 PKGNAME=	pine-4.64
 PKGREVISION=	16
 CATEGORIES=	mail news
-MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/
+#MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/
 MASTER_SITES+=	ftp://ftp.fu-berlin.de/unix/mail/pine/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.washington.edu/pine/
+#HOMEPAGE=	http://www.washington.edu/pine/
 COMMENT=	Program for Internet News and E-mail
 LICENSE=	pine-license
 
