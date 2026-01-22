@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/12/30 21:26:08 zafer Exp $
+# $NetBSD: Makefile,v 1.9 2026/01/22 08:41:50 wiz Exp $
 
 DISTNAME=	pixels-sagas-startrek-201404
 PKGREVISION=	2
@@ -20,7 +20,7 @@ DISTFILES+=	PS_Font_Schnaubelt.zip
 
 # pinged 20230827
 MAINTAINER=	christtrekker@users.sourceforge.net
-HOMEPAGE=	http://www.pixelsagas.com/
+HOMEPAGE=	https://www.pixelsagas.com/
 COMMENT=	Star Trek fonts from Pixel Sagas (Neale Davidson)
 LICENSE=	pixel-sagas-shareware-license
 
