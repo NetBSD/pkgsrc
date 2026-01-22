@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.991 2026/01/18 05:27:21 taca Exp $
+# $NetBSD: Makefile,v 1.992 2026/01/22 19:29:46 js Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -246,6 +246,7 @@ SUBDIR+=	lynis
 SUBDIR+=	mate-polkit
 SUBDIR+=	mbedtls
 SUBDIR+=	mbedtls3
+SUBDIR+=	mbedtls4
 SUBDIR+=	mcrypt
 SUBDIR+=	md4-collision
 SUBDIR+=	md5-collision
