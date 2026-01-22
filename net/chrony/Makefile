@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2026/01/07 08:48:14 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2026/01/22 10:10:19 wiz Exp $
 
-DISTNAME=	chrony-4.2
-PKGREVISION=	11
+DISTNAME=	chrony-4.8
 CATEGORIES=	net
-MASTER_SITES=	https://www.aydogan.net/distfiles/net/
+MASTER_SITES=	https://chrony-project.org/releases/
 
 MAINTAINER=	hannken@NetBSD.org
 HOMEPAGE=	https://chrony.tuxfamily.org/
@@ -31,10 +30,10 @@ SUBST_VARS.paths=	PKG_SYSCONFDIR VARBASE
 SUBST_STAGE.paths=	pre-configure
 
 post-install:
-	${INSTALL_DATA} "${WRKSRC}/examples/chrony.conf.example3" \
-	    "${DESTDIR}${EGDIR}/chrony.conf.example";
-	${INSTALL_DATA} "${WRKSRC}/examples/chrony.keys.example" \
-	    "${DESTDIR}${EGDIR}/chrony.keys.example";
+	${INSTALL_DATA} ${WRKSRC}/examples/chrony.conf.example3 \
+	    ${DESTDIR}${EGDIR}/chrony.conf.example
+	${INSTALL_DATA} ${WRKSRC}/examples/chrony.keys.example \
+	    ${DESTDIR}${EGDIR}/chrony.keys.example
 
 CONF_FILES+=	${EGDIR}/chrony.conf.example \
 		${PKG_SYSCONFDIR}/chrony.conf
