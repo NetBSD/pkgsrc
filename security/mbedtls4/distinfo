@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2026/01/22 19:29:11 js Exp $
+$NetBSD: distinfo,v 1.2 2026/01/22 22:46:06 wiz Exp $
 
 BLAKE2s (mbedtls-4.0.0.tar.bz2) = d7a973c6eefab652e590f680612b644a6d0c6f1c0d0f7d0d69dc01278620dc66
 SHA512 (mbedtls-4.0.0.tar.bz2) = cc62c99a82f2f85ee4caa6488804648e81358e59f1498b6a97b034114e531bf44b05ae3d50db797ada939b6d4ac90bde29cd2363a36631af9e5fdfef57bfb267
 Size (mbedtls-4.0.0.tar.bz2) = 6342607 bytes
+SHA1 (patch-tf-psa-crypto_drivers_builtin_src_platform__util.c) = d78b596fe6a4bf0d5fe37527496389cf38f6defc
