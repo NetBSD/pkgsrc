@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.33 2025/01/06 21:49:16 ktnb Exp $
+# $NetBSD: Makefile,v 1.34 2026/01/22 08:45:28 wiz Exp $
 
 DISTNAME=	powermanga-0.93.1
 PKGREVISION=	1
 CATEGORIES=	games
-MASTER_SITES=	http://linux.tlk.fr/games/Powermanga/download/
+MASTER_SITES=	https://linux.tlk.fr/games/Powermanga/download/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://linux.tlk.fr/games/Powermanga/
+HOMEPAGE=	https://linux.tlk.fr/games/Powermanga/
 COMMENT=	Arcade 2D shoot-em-up game
 LICENSE=	gnu-gpl-v3
 
