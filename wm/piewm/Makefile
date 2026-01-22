@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2014/09/02 09:02:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2026/01/22 08:37:39 wiz Exp $
 
 DISTNAME=	piewm-1.04
 CATEGORIES=	wm
-MASTER_SITES=	http://www.crynwr.com/piewm/
+#MASTER_SITES=	http://www.crynwr.com/piewm/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.crynwr.com/piewm/
+#HOMEPAGE=	http://www.crynwr.com/piewm/
 COMMENT=	Minimalist window manager based on tvtwm with pie menus
 
 USE_IMAKE=	yes
