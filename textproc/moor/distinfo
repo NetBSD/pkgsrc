@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2026/01/05 10:47:03 wiz Exp $
+$NetBSD: distinfo,v 1.18 2026/01/22 16:24:57 schmonz Exp $
 
 BLAKE2s (github.com_adrg_xdg_@v_v0.5.3.mod) = d6562994850ff49646864144f83c4ce6db7f136692b1d986787ee15b68e4d496
 SHA512 (github.com_adrg_xdg_@v_v0.5.3.mod) = 392cf3f009a48dab138d1e2b3d1d2563e616a43ae7c2e0bb00f0029073b758706ebb882e96a3400dc4b6a25fef07370c960fdd197d366bc9757d29f20c89cbe3
@@ -6,12 +6,12 @@ Size (github.com_adrg_xdg_@v_v0.5.3.mod) = 258 bytes
 BLAKE2s (github.com_adrg_xdg_@v_v0.5.3.zip) = fa5b272189b912fd8c33445194c35cbd11562f91b88909e5a8d7d4c203235ef4
 SHA512 (github.com_adrg_xdg_@v_v0.5.3.zip) = 46f75caeaea8b5c852b218f561e4ea42cbf537cfe97a231e2772583b4e90c630158a4bbd046fa3871be88e0444142ac0779d2dbba219eb98c02a2ec66b99f083
 Size (github.com_adrg_xdg_@v_v0.5.3.zip) = 37913 bytes
-BLAKE2s (github.com_alecthomas_chroma_v2_@v_v2.21.1.mod) = c7d9479d85c908f9d5afbda13a3a413f06e501e0dc99d8fe2c117a53f25a3fec
-SHA512 (github.com_alecthomas_chroma_v2_@v_v2.21.1.mod) = f508bced36e41ddfb6c986989b9fbcfd337606a6451d0cc3dab16af04b7cdde46edd886c16fbae8a81eef87949d2d0a3cae7fd393c74945a77ccc6c94430c282
-Size (github.com_alecthomas_chroma_v2_@v_v2.21.1.mod) = 230 bytes
-BLAKE2s (github.com_alecthomas_chroma_v2_@v_v2.21.1.zip) = 862c89754fac116506992cadfa535692240eb429e3e747debbad8e352dc44093
-SHA512 (github.com_alecthomas_chroma_v2_@v_v2.21.1.zip) = 4e1d5aadadd9df0a4c21ff63e62c517191c6654b44ce12d5ae8c584800d352b08e392f077fde7cc7dea7d8aa5c1a9b40144f3498eaf095d8f3296d8452cd020b
-Size (github.com_alecthomas_chroma_v2_@v_v2.21.1.zip) = 1641356 bytes
+BLAKE2s (github.com_alecthomas_chroma_v2_@v_v2.22.0.mod) = c7d9479d85c908f9d5afbda13a3a413f06e501e0dc99d8fe2c117a53f25a3fec
+SHA512 (github.com_alecthomas_chroma_v2_@v_v2.22.0.mod) = f508bced36e41ddfb6c986989b9fbcfd337606a6451d0cc3dab16af04b7cdde46edd886c16fbae8a81eef87949d2d0a3cae7fd393c74945a77ccc6c94430c282
+Size (github.com_alecthomas_chroma_v2_@v_v2.22.0.mod) = 230 bytes
+BLAKE2s (github.com_alecthomas_chroma_v2_@v_v2.22.0.zip) = 398ac317b1f6efe96784b4db5b8260dc40a37b35e83c2eb3e879e33b498a4516
+SHA512 (github.com_alecthomas_chroma_v2_@v_v2.22.0.zip) = 990fe7b60f0d4f91f7c90321d30b88af057969e30365723262d87b38598db10fe0734022c186f89a03c9c250b88c49379bda5f868ff1a7d4dc7f66d2b3c68918
+Size (github.com_alecthomas_chroma_v2_@v_v2.22.0.zip) = 1685990 bytes
 BLAKE2s (github.com_charlievieth_strcase_@v_v0.0.5.mod) = 198b287687e58d7c76e54364c8ecd97793eb19974054da403d6d68d835752073
 SHA512 (github.com_charlievieth_strcase_@v_v0.0.5.mod) = 9c061181d2ece6155cc220e6f9b4650fa4445f1063f7c6ba55bc5f1f93f1dcca840904489bfa665cb9c6f3d87471974996a8af7cf6fe84ad0b475f871e0ce178
 Size (github.com_charlievieth_strcase_@v_v0.0.5.mod) = 82 bytes
@@ -180,6 +180,6 @@ Size (gotest.tools_v3_@v_v3.3.0.mod) = 189 bytes
 BLAKE2s (gotest.tools_v3_@v_v3.3.0.zip) = 423fc3f010d9c97ade508b10b055fc63c3281231b357f8fe70d540b3153c3156
 SHA512 (gotest.tools_v3_@v_v3.3.0.zip) = 5cbbd6ef791325a668daa7de227b8e75b9a636acfc63214cb71b024a6ecb448770c42d1d0fff868d1f4d8a97f99ab39e738c5fd5ded5def30209cf460ba78664
 Size (gotest.tools_v3_@v_v3.3.0.zip) = 98546 bytes
-BLAKE2s (moor-2.10.1.tar.gz) = 9d52df3f6439c1cbe5d6f2af365b50601322cb48b14a1deb3678dd7079270831
-SHA512 (moor-2.10.1.tar.gz) = a5eb7a07921a6c487b4d4a871f04ec35d80e0ea4ffe764aa35f55226ab15daab8fb775ce29510c225eef42bb2769a11940d85b72c093fba147de1f89fc7f92de
-Size (moor-2.10.1.tar.gz) = 5308074 bytes
+BLAKE2s (moor-2.10.2.tar.gz) = df9f9d5e03f805882f5d36e97b0d441160ece12c0de67592b40a7b422f276dd4
+SHA512 (moor-2.10.2.tar.gz) = a81a8c3888b1c2cd163f51e325ebd9fee2a4c275e188d95598d690cebae0bfb2d4241394287dba9e94eada718789ccb4e09fbf0698df2fe82dd77839907a6d4a
+Size (moor-2.10.2.tar.gz) = 5309784 bytes
