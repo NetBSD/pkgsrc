@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.566 2026/01/22 19:43:04 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.567 2026/01/22 20:21:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -738,3 +738,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added security/mbedtls4 version 4.0.0 [js 2026-01-22]
 	Updated mail/thunderbird to 147.0 [ryoon 2026-01-22]
 	Updated mail/thunderbird-l10n to 147.0 [ryoon 2026-01-22]
+	Updated net/py-xandikos to 0.3.3 [adam 2026-01-22]
+	Updated devel/py-packaging to 26.0 [adam 2026-01-22]
