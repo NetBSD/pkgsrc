@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:06:51 nia Exp $
-
-BLAKE2s (ChineseCodecs1.2.0.tar.gz) = d40445fa5f531e38293e1c55deae15a336c07993097e711239784912ccb7ba45
-SHA512 (ChineseCodecs1.2.0.tar.gz) = 85833d80499079bada7619ed8a240a0bbed90e225fbd10f48c26ac177dea5afc736df8ba45e451bdfccfc5f0b846a84e001be47fd6ed586734fa7b2d479c720a
-Size (ChineseCodecs1.2.0.tar.gz) = 519525 bytes
