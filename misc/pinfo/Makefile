@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2024/05/06 08:27:54 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.41 2026/01/22 08:39:56 wiz Exp $
 
 DISTNAME=		pinfo-0.6.1
 PKGREVISION=		8
@@ -7,7 +6,7 @@ CATEGORIES=		misc
 MASTER_SITES=		# http://alioth.debian.org/download.php/1502/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://pinfo.alioth.debian.org/
+#HOMEPAGE=		http://pinfo.alioth.debian.org/
 COMMENT=		Przemek's Info Viewer
 
 USE_PKGLOCALEDIR=	yes
