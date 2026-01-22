@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/22 15:44:47 wiz Exp $
-${PYSITELIB}/_yenc.so
-${PYSITELIB}/${EGG_INFODIR}
-${PYSITELIB}/yenc.py
-${PYSITELIB}/yenc.pyc
-${PYSITELIB}/yenc.pyo
