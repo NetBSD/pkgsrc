@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.15 2026/01/09 12:36:07 wiz Exp $
+$NetBSD: distinfo,v 1.16 2026/01/22 14:53:20 wiz Exp $
 
-BLAKE2s (nihtest-1.10.0.tar.gz) = 99297120165143e42dbf892e3730041a5f8222636d9cde3594df7708315d90fb
-SHA512 (nihtest-1.10.0.tar.gz) = 85acb380e12b49e9f42105c09d7a8c901b17df0a6dd910276275f7b1d20a1c0d5903b926413aead36ba8ea10e8f77d949c1ee55d323a8ae9e8e49904def02e8d
-Size (nihtest-1.10.0.tar.gz) = 45854 bytes
+BLAKE2s (nihtest-1.10.1.tar.gz) = 10c9e8b0b68dc034eb39591df2b9cdee667cfeb65d7e410d5a14b153aae8e375
+SHA512 (nihtest-1.10.1.tar.gz) = 9686be92048787c3fca9e4b4b93c8b7c9fb498de7e0bc00022c544658713413d035937fb1ce0ba1c94714577404c520e7081559b79c8eae9833e1e28c9fc3c1d
+Size (nihtest-1.10.1.tar.gz) = 46684 bytes
 SHA1 (patch-tests_nihtest-conf.in) = 4535608d21597d040b1ce781d9f2ad1f323ab960
 SHA1 (patch-tests_nihtest.conf.in) = 48e8fed44e729242e3643df11866bdd1b00fba29
