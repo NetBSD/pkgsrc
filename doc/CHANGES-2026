@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.565 2026/01/22 19:41:22 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.566 2026/01/22 19:43:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -737,3 +737,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed chat/tkabber [js 2026-01-22]
 	Added security/mbedtls4 version 4.0.0 [js 2026-01-22]
 	Updated mail/thunderbird to 147.0 [ryoon 2026-01-22]
+	Updated mail/thunderbird-l10n to 147.0 [ryoon 2026-01-22]
