@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2026/01/07 08:45:53 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2026/01/22 17:41:35 gutteridge Exp $
 
 DISTNAME=	musescore-4.6.5
 PKGREVISION=	1
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES=	c++11
+USE_CXX_FEATURES=	c++17
 
 DEPENDS+=	qt6-qttranslations-[0-9]*:../../x11/qt6-qttranslations
 
