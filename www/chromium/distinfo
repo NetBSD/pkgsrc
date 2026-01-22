@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.25 2026/01/19 16:14:05 kikadf Exp $
+$NetBSD: distinfo,v 1.26 2026/01/22 19:08:09 kikadf Exp $
 
-BLAKE2s (chromium-144.0.7559.59-lite.tar.xz) = ea9a6b30082b618bad4e3d46c95b077a88c4b6ccd43cefabd2479d7a1ca64b71
-SHA512 (chromium-144.0.7559.59-lite.tar.xz) = 709c5b7ef031295e3aaa366cfddd4c2b4a736cef73b40070701700867648f232c906847f8d801acf55a6baf4288d8a5cb0bab61c5d77f1b85bb143858e7f053c
-Size (chromium-144.0.7559.59-lite.tar.xz) = 1287944964 bytes
-BLAKE2s (chromium-144.0.7559.59-testdata.tar.xz) = e31cc01320d14a4a85550437a14f923daf2e0bdb3659550f0f2eb3a54e3bac37
-SHA512 (chromium-144.0.7559.59-testdata.tar.xz) = 6be60717e42fda4cdf141f75b197ff81fdb9f3e8464f8fe9f8076fb1c4a1d3e862ada1ad312fb3aec1d83a342f8c6c220568856c1ddd6f8531f2362ddb181970
-Size (chromium-144.0.7559.59-testdata.tar.xz) = 1311290608 bytes
+BLAKE2s (chromium-144.0.7559.96-lite.tar.xz) = 412ede47644b2486768e646d10caf11ec63bec016c9c4dd3a75736d7981209da
+SHA512 (chromium-144.0.7559.96-lite.tar.xz) = 9f9802a340c04a04d976ec82b47c48e74f69702614bc33ee366c70b61ec5f26d06b87256083ce230803eb3fa2c282646e5dce6a7cf6f193bf8b911ee60d961ac
+Size (chromium-144.0.7559.96-lite.tar.xz) = 1287892772 bytes
+BLAKE2s (chromium-144.0.7559.96-testdata.tar.xz) = 6bfa347d85b517a44b60f1e439d852f3783c66b4561572bf8ee48bd540d5fc1e
+SHA512 (chromium-144.0.7559.96-testdata.tar.xz) = 32727c21fdd1a8effc1387619d0cae090ef18a0ab5c8eab45924d43f37a677a53d4610c5bb3a2197e9432d5d3faad873398bfd2d0ae088a19fe44ee7f1270f5e
+Size (chromium-144.0.7559.96-testdata.tar.xz) = 1311335796 bytes
 BLAKE2s (kikadf-chromium-nb-v144.0.tar.gz) = f7f1cc062de1a5b6ffefd972602210b51ec4490b1e903b7dc92e284227dd9c06
 SHA512 (kikadf-chromium-nb-v144.0.tar.gz) = e02e6096e167a7921ff24f77611870ee82c33487438c58acf6f2a80657ffe415183a9360c11d20d174925d35f732a3c3e2164c00ea83d4d73489e3d257ffe9c8
 Size (kikadf-chromium-nb-v144.0.tar.gz) = 22475 bytes

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2026/01/19 16:14:05 kikadf Exp $
+# $NetBSD: Makefile,v 1.38 2026/01/22 19:08:09 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			144.0.7559.59
+VERSION=			144.0.7559.96
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -136,11 +136,13 @@ GN_SYSTEM_LIBS+=	opus
 
 # while not llvm-21
 GN_ARGS+=	chrome_pgo_phase=0
+
 GN_ARGS+=	clang_use_chrome_plugins=false
 GN_ARGS+=	disable_fieldtrial_testing_config=true
 GN_ARGS+=	enable_backup_ref_ptr_support=false
 GN_ARGS+=	enable_hangout_services_extension=true
 GN_ARGS+=	enable_remoting=false
+GN_ARGS+=	enable_widevine=true
 GN_ARGS+=	fatal_linker_warnings=false
 GN_ARGS+=	icu_use_data_file=false
 GN_ARGS+=	is_cfi=false
