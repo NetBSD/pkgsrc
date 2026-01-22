@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2026/01/22 19:29:11 js Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/22 22:55:49 wiz Exp $
 
 DISTNAME=	mbedtls-4.0.0
 PKGNAME=	${DISTNAME:S/mbedtls/mbedtls4/}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Mbed-TLS/mbedtls/releases/download/mbedtls-${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -30,15 +31,17 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_PROGRAMS=ON
 CMAKE_CONFIGURE_ARGS.NetBSD+=	-DENABLE_TESTING=OFF
 
 CMAKE_CONFIGURE_ARGS+=	-DMBEDTLS_FATAL_WARNINGS=OFF
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+
+PKGCONFIG_OVERRIDE+=	pkgconfig/mbedcrypto.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/mbedtls.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/mbedx509.pc.in
+PKGCONFIG_OVERRIDE+=	tf-psa-crypto/pkgconfig/tfpsacrypto.pc.in
 
 MAKE_ENV+=	RANLIB=${RANLIB:Q}
 
 LDFLAGS.SunOS+=	-lsocket
 
 PYTHON_FOR_BUILD_ONLY=	tool
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # Prefix bundled programs so they don't conflict with other packages
 post-install:
