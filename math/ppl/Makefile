@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/12/28 22:51:58 zafer Exp $
+# $NetBSD: Makefile,v 1.22 2026/01/22 08:45:49 wiz Exp $
 
 DISTNAME=	ppl-1.2
 PKGREVISION=	4
@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cs.unipr.it/ppl/
+HOMEPAGE=	https://www.bugseng.com/ppl/
 COMMENT=	The Parma Polyhedra Library
 LICENSE=	gnu-gpl-v3
 
