@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2023/11/15 11:49:41 wiz Exp $
+# $NetBSD: Makefile.common,v 1.24 2026/01/22 09:58:27 wiz Exp $
 # used by sysutils/syslog-ng/Makefile
 # used by sysutils/syslog-ng/module.mk
 
@@ -16,11 +16,12 @@ GITHUB_RELEASE=	${DISTNAME}
 PATCHDIR=	${.CURDIR}/../../sysutils/syslog-ng/patches
 DISTINFO_FILE=	${.CURDIR}/../../sysutils/syslog-ng/distinfo
 
-USE_LANGUAGES=	c c99
-USE_TOOLS+=	flex pkg-config gmake awk:run bison
-USE_LIBTOOL=	yes
-GNU_CONFIGURE=	yes
-USE_FEATURES+=	strnlen
+USE_LANGUAGES=		c
+USE_CC_FEATURES+=	c99
+USE_TOOLS+=		flex pkg-config gmake awk:run bison
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+USE_FEATURES+=		strnlen
 
 CHECK_PORTABILITY_SKIP+=	debian/syslog-ng.init
 

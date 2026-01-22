@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2025/10/23 20:39:27 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2026/01/22 09:58:27 wiz Exp $
 
 PKGREVISION= 3
 .include "../../sysutils/syslog-ng/Makefile.common"
@@ -10,6 +10,8 @@ CONFIGURE_ARGS+=	--with-jsonc=system
 CONFIGURE_ARGS.SunOS+=	--enable-dynamic-linking
 CONFIGURE_ARGS.SunOS+=	--enable-sun-streams
 CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
+
+CFLAGS+=		-Wno-implicit-function-declaration
 
 .include "options.mk"
 
