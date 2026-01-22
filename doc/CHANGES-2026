@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.559 2026/01/22 19:09:19 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.560 2026/01/22 19:11:57 js Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -731,3 +731,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/snac to 2.89 [schmonz 2026-01-22]
 	Updated textproc/moor to 2.10.2 [schmonz 2026-01-22]
 	Updated www/chromium to 144.0.7559.96 [kikadf 2026-01-22]
+	Removed chat/mautrix-telegram [js 2026-01-22]
