@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2025/11/15 13:41:07 pgoyette Exp $
+# $NetBSD: Makefile,v 1.84 2026/01/22 08:39:03 wiz Exp $
 #
 # NOTE:
 # When updating, it is necessary to change the shlib version, located in
@@ -10,12 +10,12 @@ DISTNAME=	pine4.64
 PKGNAME=	pico-4.10
 PKGREVISION=	2
 CATEGORIES=	editors
-MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/
+#MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/
 MASTER_SITES+=	ftp://ftp.fu-berlin.de/unix/mail/pine/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.washington.edu/pine/
+#HOMEPAGE=	http://www.washington.edu/pine/
 COMMENT=	Text editor (ships with Pine), and Pine's text editing lib
 LICENSE=	pine-license
 
