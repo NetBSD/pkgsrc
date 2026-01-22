@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/08/22 17:05:59 gdt Exp $
-#
+# $NetBSD: Makefile,v 1.17 2026/01/22 08:46:30 wiz Exp $
 
 DISTNAME=		ProFitV2.2
 PKGNAME=		profit-2.2
@@ -8,7 +7,7 @@ CATEGORIES=		biology
 MASTER_SITES=		#
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://acrmwww.biochem.ucl.ac.uk/programs/profit/index.html
+#HOMEPAGE=		http://acrmwww.biochem.ucl.ac.uk/programs/profit/index.html
 COMMENT=		Performs least squares fits of two protein structures
 
 USE_TOOLS+=		pax
