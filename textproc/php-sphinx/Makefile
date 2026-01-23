@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/02/08 03:55:19 taca Exp $
+# $NetBSD: Makefile,v 1.5 2026/01/23 05:45:29 wiz Exp $
 
 MODNAME=		sphinx
 PECL_VERSION=		1.3.3
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES+=		textproc databases
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://pecl.php.net/package/sphinx/
+HOMEPAGE=		https://pecl.php.net/package/sphinx
 COMMENT=		Client extension for Sphinx
 LICENSE=		php
 
