@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2025/02/08 03:48:15 taca Exp $
+# $NetBSD: Makefile,v 1.38 2026/01/23 05:43:46 wiz Exp $
 
 PKGREVISION= 4
 .include "../../multimedia/ming/Makefile.common"
@@ -9,7 +9,6 @@ DIST_SUBDIR?=		#empty
 EXTRACT_SUFX=		.tar.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.libming.org/
 COMMENT=		PHP extension for Ming library
 LICENSE=		php
 
