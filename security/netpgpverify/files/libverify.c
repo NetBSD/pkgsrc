@@ -468,7 +468,7 @@ read_file(pgpv_t *pgp, const char *f)
 	mem = &ARRAY_LAST(pgp->areas);
 	memset(mem, 0x0, sizeof(*mem));
 	if ((mem->fp = fopen(f, "r")) == NULL) {
-		fprintf(stderr, "can't read '%s'", f);
+		fprintf(stderr, "can't read '%s'\n", f);
 		return 0;
 	}
 	fstat(fileno(mem->fp), &st);
