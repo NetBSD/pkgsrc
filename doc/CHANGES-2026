@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.576 2026/01/23 12:30:56 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.577 2026/01/23 12:46:14 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -751,3 +751,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-soupsieve to 2.8.3 [adam 2026-01-23]
 	Updated devel/py-blessed to 1.27.0 [adam 2026-01-23]
 	Updated misc/fd to 3.01bnb2 [wiz 2026-01-23]
+	Updated sysutils/fd-find to 10.3.0nb1 [pin 2026-01-23]
