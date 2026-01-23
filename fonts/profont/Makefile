@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2015/07/04 16:18:33 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.13 2026/01/23 05:46:27 wiz Exp $
 
 DISTNAME=	profontlinux
 PKGNAME=	profont-1.0
 PKGREVISION=	2
 CATEGORIES=	fonts
-MASTER_SITES=	http://www.tobiasjung.net/dl/
+#MASTER_SITES=	http://www.tobiasjung.net/dl/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tobias-jung.de/seekingprofont/
+#HOMEPAGE=	http://www.tobias-jung.de/seekingprofont/
 COMMENT=	Monospaced bitmap font readable in very small sizes
 
 NO_BUILD=		yes
