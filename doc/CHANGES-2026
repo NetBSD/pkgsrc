@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.571 2026/01/23 07:48:03 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.572 2026/01/23 08:28:15 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -745,3 +745,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/mbedtls4 to 4.0.0nb1 [wiz 2026-01-22]
 	Removed security/py-backports.ssl_match_hostname [wiz 2026-01-23]
 	Updated sysutils/yazi to 26.1.22 [wiz 2026-01-23]
+	Updated devel/hexpatch to 1.12.5 [pin 2026-01-23]
