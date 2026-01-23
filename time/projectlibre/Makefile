@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2023/07/11 05:40:17 nia Exp $
+# $NetBSD: Makefile,v 1.7 2026/01/23 05:47:22 wiz Exp $
 
 DISTNAME=	projectlibre-1.9.3
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=projectlibre/}
 
 MAINTAINER=	asau@inbox.ru
-HOMEPAGE=	http://www.projectlibre.org/
+HOMEPAGE=	https://sourceforge.net/projects/projectlibre/
 COMMENT=	Project management software
 
 USE_TOOLS+=	bash:run pax
