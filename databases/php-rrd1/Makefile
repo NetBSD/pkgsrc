@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/01/07 08:46:14 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/01/23 05:45:02 wiz Exp $
 
 MODNAME=	rrd
 PECL_VERSION=	1.1.3
@@ -6,7 +6,7 @@ PKGREVISION=	30
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pecl.php.net/package/rrd/
+HOMEPAGE=	https://pecl.php.net/package/rrd
 COMMENT=	PHP extension provides bindings to the RRDtool C library
 LICENSE=	php
 
