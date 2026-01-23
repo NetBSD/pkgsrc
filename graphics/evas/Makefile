@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/04/24 14:14:16 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/01/23 01:31:50 gutteridge Exp $
 
 COMMENT=	Enlightened Canvas Library
 PKGREVISION=	5
@@ -17,10 +17,7 @@ INSTALLATION_DIRS=	lib/evas/modules/loaders lib/evas/modules/savers \
 
 PLIST_SRC+=	PLIST
 .if ${OPSYS} == "NetBSD"
-.  if exists(/var/shm)
-# /var/shm was added together with shm_open, so use this as test.
 PLIST_SRC+=	PLIST.cserve
-.  endif
 .elif ${OPSYS} == "OpenBSD" || ${OPSYS} == "Linux"
 # No shm_open on OpenBSD
 .else
