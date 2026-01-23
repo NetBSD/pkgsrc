@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2025/12/11 09:23:33 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/01/23 12:30:46 wiz Exp $
 
 DISTNAME=	FD-3.01b
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc shells
 #MASTER_SITES=	http://hp.vector.co.jp/authors/VA012337/soft/fd/
 
@@ -20,11 +20,11 @@ MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 MANLANG?=	ja_JP.eucJP
 MAKE_ENV+=	LANGDIR=${MANLANG:Q} DATADIR=${DATADIR}
 
-PLIST_SUBST+=	FD_CONFIG=${FD_CONFIG:Q} MANLANG=${MANLANG:Q}
+PLIST_SUBST+=	FD_CONFIG=${FD_CONFIG:Q}
 
-DATADIR=	${PREFIX}/share/fd
-DOCDIR=		${PREFIX}/share/doc/fd
-EXAMPLESDIR=	${PREFIX}/share/examples/fd
+DATADIR=	${PREFIX}/share/fdclone
+DOCDIR=		${PREFIX}/share/doc/fdclone
+EXAMPLESDIR=	${PREFIX}/share/examples/fdclone
 
 DESTDIR_VARNAME=	BUILD
 
@@ -42,6 +42,12 @@ post-configure:
 .endif
 
 post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} fd fdclone
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} fdsh fdclonesh
+	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 && ${MV} fd.1 fdclone.1
+	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 && ${MV} fdsh.1 fdclonesh.1
+	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/ja_JP.eucJP/man1 && ${MV} fd.1 fdclone.1
+	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/ja_JP.eucJP/man1 && ${MV} fdsh.1 fdclonesh.1
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}/ja
 	${RUN}cd ${WRKSRC}; \
 	for i in ${DOCS}; do \

@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:59:03 nia Exp $
+$NetBSD: distinfo,v 1.17 2026/01/23 12:30:46 wiz Exp $
 
 BLAKE2s (FD-3.01b.tar.gz) = aae80f6a834e6af6ee1cc1123b5bd6ecf380a1daac61e577f50d75fc022f0f4e
 SHA512 (FD-3.01b.tar.gz) = f98dae589fed90958dff335ab5975e11ad539c4c146455ba4607b7bcff2897fc745d9a5500cada0029d7a316795d8b29192ecd75dbd622ece06eeaf4838e310e
 Size (FD-3.01b.tar.gz) = 953287 bytes
-SHA1 (patch-Makefile.in) = cfb4ff0519b7b1eb158476ffa976060af9e20c6e
+SHA1 (patch-Makefile.in) = c212d3ffadd03c80cc4c72fd74e02c6c022e3b8a
 SHA1 (patch-machine.h) = 094bd6c4de6d336fbed60c1924da661407cb86ca
