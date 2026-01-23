@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.574 2026/01/23 08:32:26 pin Exp $
+$NetBSD: CHANGES-2026,v 1.575 2026/01/23 09:19:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -748,3 +748,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/hexpatch to 1.12.5 [pin 2026-01-23]
 	Updated devel/mise to 2026.1.6 [pin 2026-01-23]
 	Updated textproc/rumdl to 0.0.224 [pin 2026-01-23]
+	Updated www/py-soupsieve to 2.8.3 [adam 2026-01-23]
+	Updated devel/py-blessed to 1.27.0 [adam 2026-01-23]
