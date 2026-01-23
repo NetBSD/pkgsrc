@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/02/04 17:25:59 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2026/01/23 05:47:53 wiz Exp $
 
 DISTNAME=	pscan
 PKGNAME=	pscan-1.3
@@ -8,7 +8,7 @@ CATEGORIES=	security devel
 #MASTER_SITES=	# http://deployingradius.com/pscan/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://deployingradius.com/pscan/ # no https available
+HOMEPAGE=	https://deployingradius.com/pscan/
 COMMENT=	Security C code scanner for misuse of format strings
 LICENSE=	gnu-gpl-v2
 
