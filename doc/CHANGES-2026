@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.575 2026/01/23 09:19:35 adam Exp $
+$NetBSD: CHANGES-2026,v 1.576 2026/01/23 12:30:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -750,3 +750,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/rumdl to 0.0.224 [pin 2026-01-23]
 	Updated www/py-soupsieve to 2.8.3 [adam 2026-01-23]
 	Updated devel/py-blessed to 1.27.0 [adam 2026-01-23]
+	Updated misc/fd to 3.01bnb2 [wiz 2026-01-23]
