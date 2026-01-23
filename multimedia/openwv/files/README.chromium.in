@@ -1,0 +1,18 @@
+===========================================================================
+$NetBSD: README.chromium.in,v 1.1 2026/01/23 07:28:05 kikadf Exp $
+
+For Chromium web browser:
+
+(1) Create "9999/_platform_specific/linux_{x64,arm64}" directory path under
+    WidevineCdm folder in the user data directory of Chromium.
+$ mkdir -p ~/.config/chromium/WidevineCdm/9999/_platform_specific/linux_x64
+(2) Link @PREFIX@/share/openwv/libwidevinecdm.so
+    to ~/.config/chromium/WidevineCdm/9999/_platform_specific/linux_{x64,arm64}
+(3) Link @PREFIX@/share/openwv/manifest-chromium.json
+    as ~/.config/chromium/WidevineCdm/9999/manifest.json
+(4) Launch and quit the browser once before playing any Widevine-protected media.
+    OpenWV will not be loaded on the first launch due to an implementation
+    quirk of Chromium.
+
+===========================================================================
+
