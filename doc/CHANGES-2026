@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.578 2026/01/23 16:04:33 adam Exp $
+$NetBSD: CHANGES-2026,v 1.579 2026/01/23 21:42:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -755,3 +755,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/samba4 to 4.23.5 [adam 2026-01-23]
 	Updated devel/cmake to 4.2.2 [adam 2026-01-23]
 	Updated devel/cmake-gui to 4.2.2 [adam 2026-01-23]
+	Updated devel/hs-ghc-lib-parser-ex to 9.14.2.0 [wiz 2026-01-23]
