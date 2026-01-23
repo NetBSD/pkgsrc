@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2026/01/17 07:37:52 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/01/23 07:47:54 wiz Exp $
 
-DISTNAME=	yazi-26.1.4
-PKGREVISION=	1
+DISTNAME=	yazi-26.1.22
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sxyazi/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +12,8 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.86.0
+# actually, 1.92.0 but patched down to 1.91.0
+RUST_REQ=	1.91.0
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake pkg-config
 
