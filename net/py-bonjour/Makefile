@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2022/01/22 14:38:01 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/01/23 05:53:31 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-bonjour-${PKGVER}
 DISTNAME=	bonjour-py-${PKGVER}
 PKGVER=		0.3
 PKGREVISION=	3
 CATEGORIES=	net
-MASTER_SITES=	http://www.mcs.anl.gov/fl/research/accessgrid/bonjour-py/
+MASTER_SITES=	https://www.mcs.anl.gov/fl/research/accessgrid/bonjour-py/
 
 MAINTAINER=	hauke@NetBSD.org
-HOMEPAGE=	http://www.mcs.anl.gov/fl/research/accessgrid/bonjour-py/
+HOMEPAGE=	https://www.mcs.anl.gov/research/projects/accessgrid/bonjour-py/
 COMMENT=	Python interface to interact with Bonjour
 LICENSE=	agtpl-license
 
