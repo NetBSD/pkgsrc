@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.577 2026/01/23 12:46:14 pin Exp $
+$NetBSD: CHANGES-2026,v 1.578 2026/01/23 16:04:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -752,3 +752,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-blessed to 1.27.0 [adam 2026-01-23]
 	Updated misc/fd to 3.01bnb2 [wiz 2026-01-23]
 	Updated sysutils/fd-find to 10.3.0nb1 [pin 2026-01-23]
+	Updated net/samba4 to 4.23.5 [adam 2026-01-23]
+	Updated devel/cmake to 4.2.2 [adam 2026-01-23]
+	Updated devel/cmake-gui to 4.2.2 [adam 2026-01-23]
