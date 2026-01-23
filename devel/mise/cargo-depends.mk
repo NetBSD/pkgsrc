@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.96 2026/01/21 14:45:59 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.97 2026/01/23 08:29:19 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -58,6 +58,7 @@ CARGO_CRATE_DEPENDS+=	aws-smithy-types-1.3.6
 CARGO_CRATE_DEPENDS+=	aws-smithy-xml-0.60.13
 CARGO_CRATE_DEPENDS+=	aws-types-1.3.11
 CARGO_CRATE_DEPENDS+=	backtrace-0.3.76
+CARGO_CRATE_DEPENDS+=	backtrace-ext-0.2.1
 CARGO_CRATE_DEPENDS+=	base16ct-0.2.0
 CARGO_CRATE_DEPENDS+=	base64-0.13.1
 CARGO_CRATE_DEPENDS+=	base64-0.21.7
@@ -376,6 +377,7 @@ CARGO_CRATE_DEPENDS+=	io-close-0.3.7
 CARGO_CRATE_DEPENDS+=	io_tee-0.1.1
 CARGO_CRATE_DEPENDS+=	ipnet-2.11.0
 CARGO_CRATE_DEPENDS+=	iri-string-0.7.10
+CARGO_CRATE_DEPENDS+=	is_ci-1.2.0
 CARGO_CRATE_DEPENDS+=	is_terminal_polyfill-1.70.2
 CARGO_CRATE_DEPENDS+=	itertools-0.10.5
 CARGO_CRATE_DEPENDS+=	itertools-0.13.0
@@ -684,6 +686,9 @@ CARGO_CRATE_DEPENDS+=	strsim-0.11.1
 CARGO_CRATE_DEPENDS+=	strum-0.27.2
 CARGO_CRATE_DEPENDS+=	strum_macros-0.27.2
 CARGO_CRATE_DEPENDS+=	subtle-2.6.1
+CARGO_CRATE_DEPENDS+=	supports-color-3.0.2
+CARGO_CRATE_DEPENDS+=	supports-hyperlinks-3.2.0
+CARGO_CRATE_DEPENDS+=	supports-unicode-3.0.0
 CARGO_CRATE_DEPENDS+=	syn-1.0.109
 CARGO_CRATE_DEPENDS+=	syn-2.0.114
 CARGO_CRATE_DEPENDS+=	sync_wrapper-1.0.2
@@ -703,6 +708,7 @@ CARGO_CRATE_DEPENDS+=	test-log-0.2.19
 CARGO_CRATE_DEPENDS+=	test-log-macros-0.2.19
 CARGO_CRATE_DEPENDS+=	testing_table-0.3.0
 CARGO_CRATE_DEPENDS+=	text-size-1.1.1
+CARGO_CRATE_DEPENDS+=	textwrap-0.16.2
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.69
 CARGO_CRATE_DEPENDS+=	thiserror-2.0.18
 CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.69
@@ -752,6 +758,7 @@ CARGO_CRATE_DEPENDS+=	unic-langid-impl-0.9.6
 CARGO_CRATE_DEPENDS+=	unicase-2.9.0
 CARGO_CRATE_DEPENDS+=	unicode-bom-2.0.3
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.22
+CARGO_CRATE_DEPENDS+=	unicode-linebreak-0.1.5
 CARGO_CRATE_DEPENDS+=	unicode-normalization-0.1.25
 CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.12.0
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.14
