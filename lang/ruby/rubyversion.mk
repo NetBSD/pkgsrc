@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.309 2026/01/19 15:26:15 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.310 2026/01/23 18:11:17 wiz Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -44,7 +44,7 @@
 #		Default: empty
 #
 # RUBY_NOVERSION
-#	If "Yes", the package dosen't depend on any version of Ruby, such
+#	If "Yes", the package doesn't depend on any version of Ruby, such
 #	as an editing mode for Emacs.  In this case, package's name would begin
 #	with "ruby-".  Otherwise, the package's name begins with
 #	${RUBY_PKGPREFIX}.
@@ -83,7 +83,7 @@
 #	Ruby's ABI version.
 #
 # RUBY_DLEXT
-#	Suffix of extention library.
+#	Suffix of extension library.
 #
 # RUBY_SLEXT
 #	Suffix of shared library.
@@ -124,7 +124,7 @@
 #	String after libruby shared library.
 #
 # RUBY_SHLIBALIAS
-#	Symblic link with libruby shared library with major version only.
+#	Symbolic link with libruby shared library with major version only.
 #
 # RUBY_STATICLIB
 #	Name of libruby static library.
@@ -169,10 +169,10 @@
 #	version specific and machine dependent vendor local directory.
 #
 # RUBY_DOC
-#	version specific document direcotry.
+#	version specific document directory.
 #
 # RUBY_EG
-#	version specific examples direcotry.
+#	version specific examples directory.
 #
 # RUBY_GEM_BASE
 #	common GEM directory.
@@ -570,7 +570,7 @@ RUBY_API_VERSION=	${RUBY${RUBY_VER}_API_VERSION}
 # Variable assignment for multi-ruby packages
 MULTI+=	RUBY_VER=${RUBY_VERS:U${RUBY_VERSION_DEFAULT}}
 
-# RUBY_NOVERSION should be set to "Yes" if the package dosen't depend on
+# RUBY_NOVERSION should be set to "Yes" if the package doesn't depend on
 #	any specific version of ruby command.  In this case, package's
 #	name begin with "ruby-".
 #	If RUBY_NOVERSION is "No" (default), the package's name begins
