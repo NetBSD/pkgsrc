@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/08/13 11:07:12 pho Exp $
+# $NetBSD: Makefile,v 1.21 2026/01/23 05:48:11 wiz Exp $
 
 DISTNAME=	purescript-0.15.15
 PKGNAME=	${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	4
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.purescript.org/
+HOMEPAGE=	https://www.purescript.org/
 COMMENT=	Strongly typed programming language that compiles to JavaScript
 LICENSE=	modified-bsd
 
