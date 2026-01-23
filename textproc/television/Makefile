@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2026/01/15 09:47:56 pin Exp $
+# $NetBSD: Makefile,v 1.15 2026/01/23 08:33:10 pin Exp $
 
 DISTNAME=	television-0.14.5
 CATEGORIES=	textproc devel
@@ -21,10 +21,6 @@ post-install:
 # The following are not strictly necessary but functionallity will
 # be limited without these. Hence, make sure they are installed.
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
-# Please note that within pkgsrc the resulting binary for sysutils/fd-find
-# has been renamed to 'fdfind' to avoid conflicts with misc/fd
-# Due to this, the default 'files.toml' provided with this package
-# needs to be adapted to reflect the renamed binary.
 DEPENDS+=	fd-find-[0-9]*:../../sysutils/fd-find
 DEPENDS+=	bat-[0-9]*:../../textproc/bat
 
