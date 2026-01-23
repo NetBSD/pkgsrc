@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.31 2023/06/06 12:42:49 riastradh Exp $
+# $NetBSD: Makefile,v 1.32 2026/01/23 05:53:09 wiz Exp $
 
 PYBLOXSOMVERS=	1.5.3
 DISTNAME=	pyblosxom-${PYBLOXSOMVERS}
 PKGNAME=	${PYPKGPREFIX}-blosxom-${PYBLOXSOMVERS}
 PKGREVISION=	5
 CATEGORIES=	www
-MASTER_SITES=	http://pyblosxom.github.com/download/
+#MASTER_SITES=	http://pyblosxom.github.com/download/
 
 MAINTAINER=	hauke@NetBSD.org
-HOMEPAGE=	https://pyblosxom.github.com/
+#HOMEPAGE=	https://pyblosxom.github.com/
 COMMENT=	Lightweight file-based weblog system
 LICENSE=	mit
 
