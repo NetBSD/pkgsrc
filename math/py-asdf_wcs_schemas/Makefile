@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/10/09 07:57:46 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/01/23 05:49:55 wiz Exp $
 
 DISTNAME=	asdf_wcs_schemas-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asdf_wcs_schemas/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://asdf-wcs-schemas.readthedocs.io/en/stable
+HOMEPAGE=	https://github.com/asdf-format/asdf-wcs-schemas
 COMMENT=	ASDF schemas for validating WCS tags
 LICENSE=	modified-bsd
 
