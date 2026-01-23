@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2025/01/31 04:29:08 pho Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/01/23 21:42:01 wiz Exp $
+bin/ghc-lib-parser-ex-build-tool
+lib/ghc-lib-parser-ex-${PKGVERSION}/${HS_VERSION}/package-description
+lib/ghc-lib-parser-ex-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GhclibParserEx/Dump.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GhclibParserEx/Dump.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GhclibParserEx/Dump.p_hi
@@ -59,8 +62,6 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_ghc_lib_parser_ex.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-lib/ghc-lib-parser-ex-${PKGVERSION}/${HS_VERSION}/package-description
-lib/ghc-lib-parser-ex-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/ghc-lib-parser-ex-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-ex-${PKGVERSION}/html/Language-Haskell-GhclibParserEx-Dump.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-ex-${PKGVERSION}/html/Language-Haskell-GhclibParserEx-Fixity.html
