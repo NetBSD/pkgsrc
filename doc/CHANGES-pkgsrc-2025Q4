@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q4,v 1.1.2.7 2026/01/14 18:59:20 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q4,v 1.1.2.8 2026/01/24 03:07:32 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q4 branch:
 
@@ -23,3 +23,13 @@ games/tyrquate: Build fix correction
 Pullup ticket #7044 - requested by gutteridge
 www/firefox140: Security fix
 www/firefox140-l10n: Security fix
+
+Pullup ticket #7045 - requested by mlelstv
+sysutils/amanda-client: Bug fix
+sysutils/amanda-common: Bug fix
+
+Pullup ticket #7046 - requested by taca
+net/bind918: Security fix
+
+Pullup ticket #7047 - requested by wiz
+security/netpgpverify: Bug fix
