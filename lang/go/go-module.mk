@@ -1,4 +1,4 @@
-# $NetBSD: go-module.mk,v 1.24 2025/03/30 14:56:44 riastradh Exp $
+# $NetBSD: go-module.mk,v 1.25 2026/01/24 16:50:59 bsiegert Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -7,9 +7,15 @@
 # GO_BUILD_PATTERN (optional)
 #	Argument used for 'go install'.
 #	In most cases, the default is fine.
+#	Note that arguments other than package pattern should be in GOFLAGS
+#	instead.
 #
 #	Default:
 #		"./...", which means all files below the top-level directory.
+#
+# GOFLAGS (optional)
+#	Extra arguments to pass to 'go install´ other than the build pattern,
+#	for example linker flags (-ldflags).
 #
 # GO_MODULE_FILES (optional)
 #	List of dependency files to be downloaded from the Go module proxy.
@@ -84,12 +90,13 @@ do-build:
 	${RUN} cd ${WRKSRC} && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} \
 		${GO} telemetry off >/dev/null 2>&1 || ${TRUE}
 	${RUN} cd ${WRKSRC} && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} \
-		${GO} install -v ${GO_BUILD_PATTERN}
+		${GO} install -v ${GOFLAGS} ${GO_BUILD_PATTERN}
 .endif
 
 .if !target(do-test)
 do-test:
-	${RUN} cd ${WRKSRC} && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${TEST_ENV} ${MAKE_ENV} ${GO} test -v ${GO_BUILD_PATTERN}
+	${RUN} cd ${WRKSRC} && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${TEST_ENV} \
+		${MAKE_ENV} ${GO} test -v ${GOFLAGS} ${GO_BUILD_PATTERN}
 .endif
 
 .if !target(do-install)
@@ -128,7 +135,8 @@ pre-clean-go:
 	${RUN} [ -d ${WRKDIR}/.gopath ] && chmod -R +w ${WRKDIR}/.gopath || true
 
 _VARGROUPS+=		go
-_PKG_VARS.go=		GO_BUILD_PATTERN GO_MODULE_FILES GO_EXTRA_MOD_DIRS
+_PKG_VARS.go=		GOFLAGS GO_BUILD_PATTERN GO_MODULE_FILES \
+			GO_EXTRA_MOD_DIRS
 _USER_VARS.go=		GO_VERSION_DEFAULT
 _SYS_VARS.go=		GO GO_VERSION GOVERSSUFFIX GOARCH GOCHAR \
 			GOOPT GOTOOLDIR GO_PLATFORM GO_CACHE_DIR
