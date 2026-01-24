@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.30 2025/12/22 14:26:31 adam Exp $
+$NetBSD: distinfo,v 1.31 2026/01/24 08:07:03 adam Exp $
 
-BLAKE2s (glew-2.3.0.tgz) = e209fbf0a423fbc1f4c4f9d668a268af4233d28b9135a94a137fb93a6630a732
-SHA512 (glew-2.3.0.tgz) = a452874b7e7e5a359593fcd93475cf2c7a484f649947308f8611461df58772e060fe5a305434c22cc2411e34a20775379fcae735477f6ef056b31730ae87426e
-Size (glew-2.3.0.tgz) = 865493 bytes
+BLAKE2s (glew-2.3.1.tgz) = 70382b84bdbe2ebe56d814546ba84fb613af279bd55a69be03df8e6b5fee407c
+SHA512 (glew-2.3.1.tgz) = cb4caecf32ec0f180c2691dc7769ffc99571c64f259a2663a2b80e788f1c2fd5362c59e0caaeefed6fb78a4070366d244666a657358049b09071b59fae2377e0
+Size (glew-2.3.1.tgz) = 866060 bytes
 SHA1 (patch-Makefile) = 81b77e9bc8648f31512f5e80b1d39c824bb4d74b
 SHA1 (patch-config_Makefile.freebsd) = dcfdf2a6bde59529412bff2529d976df6c9bf6a4
 SHA1 (patch-config_Makefile.linux) = 49ae0366211065225c944cd0088af6e591f12aa9
