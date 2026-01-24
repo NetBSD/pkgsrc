@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.34 2025/12/22 14:15:56 adam Exp $
+$NetBSD: distinfo,v 1.35 2026/01/24 08:08:50 adam Exp $
 
-BLAKE2s (greenlet-3.3.0.tar.gz) = c6fdc28cdb304f8d90cd844d1a069537c324ffb9af2abb5308890c2e926ebadb
-SHA512 (greenlet-3.3.0.tar.gz) = 633d207f9fe749074760e31302ca6b2f2a6c72f0161d9676c8c1047928a4108106653f3914430cee62b125d99d449f80566282d089a09f9bb6eb3589b43e9817
-Size (greenlet-3.3.0.tar.gz) = 190651 bytes
+BLAKE2s (greenlet-3.3.1.tar.gz) = 4dae1df4457690a303a42cd07215be54a1db08b812cf6d2ee5401d5e7f624911
+SHA512 (greenlet-3.3.1.tar.gz) = 890e9a56f15c39101b45aabb006545640777a987d8f962c63859c2b4e26adfb5ae33310905982475809d3fcfb3b0ee5a9b11817c380708bba2d3c25cd5ad1822
+Size (greenlet-3.3.1.tar.gz) = 184690 bytes
