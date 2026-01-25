@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.598 2026/01/25 08:04:24 adam Exp $
+$NetBSD: CHANGES-2026,v 1.599 2026/01/25 08:15:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -777,3 +777,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/w3m-img to 0.5.6 [wiz 2026-01-25]
 	Updated fonts/harfbuzz to 12.3.2 [adam 2026-01-25]
 	Updated fonts/harfbuzz-icu to 12.3.2 [adam 2026-01-25]
+	Updated multimedia/assimp to 6.0.4 [adam 2026-01-25]
+	Updated devel/py-zope.testrunner to 8.2 [adam 2026-01-25]
