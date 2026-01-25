@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/01/25 19:37:59 alnsn Exp $
+
+BLAKE2s (ounit2-2.2.7.tar.gz) = 8a50c537e2e794566e735a4625651ea181066ef258fc1ad44edd58f3a90e5b3e
+SHA512 (ounit2-2.2.7.tar.gz) = b2cefed53127f724c099391eefe1bce3b43cad5d6b629b5f1e9446b58892639de758f5dbcbd5efb6c409ce77ed01d06693989a3ba909cf79c36c2554c1473396
+Size (ounit2-2.2.7.tar.gz) = 69771 bytes
