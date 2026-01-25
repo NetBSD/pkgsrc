@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26707 2026/01/25 22:15:04 wiz Exp $
+$NetBSD: TODO,v 1.26708 2026/01/25 22:26:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -577,6 +577,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o drivel-3.0.5
 	o drupal-10.0.5
 	o drupal-9.5.5
+	o dunst-1.13.1
 	o dvdisaster-0.79.10
 	o eagle-8.1.0
 	o easymenu-0.7.2p1
@@ -794,6 +795,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
+	o jansson-2.15.0
 	o java-db3-3.87
 	o jcabc2ps-20181112
 	o jchkmail-2.6.2
@@ -959,6 +961,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ncview-2.1.11
 	o netramet-50
 	o newmail-1.0.2
+	o nghttp3-1.15.0
+	o ngtcp2-1.20.0
 	o nicotine-plus-3.3.10
 	o nim-2.2.6
 	o nios2-binutils-2.36.1
@@ -1121,20 +1125,31 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-black-26.1.0
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-cparser-3.0
 	o py-cutadapt-5.2 [wip]
 	o py-cxfreeze-8.5.3
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
+	o py-gi-docgen-2026.1
 	o py-hgview-1.9.0
+	o py-httplib2-0.31.2
 	o py-input-pad-1.4.2
+	o py-markdown-3.10.1
 	o py-omniORBpy-3.7
 	o py-pandas-3.0.0
 	o py-pdf-parser-0.7.4
+	o py-pillow_heif-1.2.0
+	o py-poetry-core-2.3.0
 	o py-postgresql-5.1.2
+	o py-pytokens-0.4.0
+	o py-rich-14.3.1
+	o py-ruff-0.14.14
 	o py-sbws-1.1.0
+	o py-setuptools-80.10.1
 	o py-simpletal-5.1
 	o py-sip6-6.15.1
 	o py-sybase-0.37
@@ -1145,6 +1160,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-uliweb-0.6
 	o py-uv-build-0.9.26
 	o py-wat-0.6.0
+	o py-wcwidth-0.3.3
+	o py-wheel-0.46.3
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
 	o q5go-2.1.3
