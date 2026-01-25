@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/12/04 23:16:35 wiz Exp $
+$NetBSD: distinfo,v 1.13 2026/01/25 23:57:46 wiz Exp $
 
-BLAKE2s (libXdamage-1.1.6.tar.xz) = 25231bae855e20f8ac3669113b8d1c0cded134807382755984c3080944eea297
-SHA512 (libXdamage-1.1.6.tar.xz) = 624dcefa1c79064569df952892f7f1351dc19ad338ce73d1a57041e406cb3e18abe531bab352b93d1f0f5c9b5c6b2652cc84a8f1fbfcbba648343812695a8acb
-Size (libXdamage-1.1.6.tar.xz) = 257532 bytes
+BLAKE2s (libXdamage-1.1.7.tar.xz) = 48ae6c8839b623c1b4156f722557efaa634b6c20206c1112578ff27d2753b1c1
+SHA512 (libXdamage-1.1.7.tar.xz) = 9406e39cbc426d7fa3c66bf1eec202fdb5af5db99a0ff49c2be995b1ff7326a6c1fb395c46391e1c32f5a6569a5d6e02bdd5b79fc79dd468fc3ebd698496bbc2
+Size (libXdamage-1.1.7.tar.xz) = 265336 bytes
