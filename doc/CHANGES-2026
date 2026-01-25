@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.640 2026/01/25 23:13:53 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.641 2026/01/25 23:15:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -834,3 +834,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-cparser to 3.0 [wiz 2026-01-25]
 	Updated www/py-httplib2 to 0.31.2 [wiz 2026-01-25]
 	Updated textproc/py-markdown to 3.10.1 [wiz 2026-01-25]
+	Updated graphics/py-pillow_heif to 1.2.0 [wiz 2026-01-25]
