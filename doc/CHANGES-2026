@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.601 2026/01/25 08:35:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.602 2026/01/25 09:09:53 tron Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -783,3 +783,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-cucumber-expressions to 18.1.0 [adam 2026-01-25]
 	Updated archivers/minizip-ng to 4.1.0 [adam 2026-01-25]
 	Updated devel/py-pyparsing to 3.3.2 [adam 2026-01-25]
+	Updated mail/mutt to 2.3.0 [tron 2026-01-25]
