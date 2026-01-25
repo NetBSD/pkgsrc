@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2026/01/07 08:49:47 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2026/01/25 09:33:36 kikadf Exp $
 
-DISTNAME=	rofi-1.7.9.1
-PKGREVISION=	3
+DISTNAME=	rofi-2.0.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=davatorium/}
 # We need to specify this way to get submodules fetched
@@ -15,14 +14,14 @@ LICENSE=	x11
 
 USE_TOOLS+=	pkg-config bash:run flex bison
 
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	YACC='bison -y'
-
 REPLACE_BASH+=	script/rofi-sensible-terminal
 REPLACE_BASH+=	script/rofi-theme-selector
 
 TEST_TARGET=	check
 
+.include "options.mk"
+
+.include "../../devel/meson/build.mk"
 .include "../../devel/check/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
