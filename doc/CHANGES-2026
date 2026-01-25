@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.588 2026/01/25 07:30:59 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.589 2026/01/25 07:36:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -766,3 +766,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/p5-Net-Server to 2.015 [wiz 2026-01-25]
 	Updated devel/cargo-c to 0.10.20 [pin 2026-01-25]
 	Removed textproc/py-color [wiz 2026-01-25]
+	Removed databases/py-datapkg [wiz 2026-01-25]
