@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2025/05/12 10:02:22 markd Exp $
+# $NetBSD: Makefile,v 1.23 2026/01/25 09:14:15 markd Exp $
 
 DISTNAME=	collection-games
 PKGNAME=	texlive-${DISTNAME}-2025pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	74536
+TEXLIVE_REV=	76381
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -22,6 +22,7 @@ DEPENDS+=	tex-chessfss-[0-9]*:../../print/tex-chessfss
 # depend crosswrd
 # depend customdice
 # depend egameps
+# depend eigo
 # depend gamebook
 # depend gamebooklib
 DEPENDS+=	tex-go-[0-9]*:../../print/tex-go
@@ -36,7 +37,9 @@ DEPENDS+=	tex-go-[0-9]*:../../print/tex-go
 # depend labyrinth
 # depend logicpuzzle
 # depend mahjong
+# depend mathador
 # depend maze
+# depend multi-sudoku
 # depend musikui
 # depend nimsticks
 # depend onedown
@@ -62,6 +65,7 @@ DEPENDS+=	tex-skaknew-[0-9]*:../../print/tex-skaknew
 # depend sudokubundle
 # depend tangramtikz
 # depend thematicpuzzle
+# depend tictactoe
 # depend tikz-triminos
 # depend trivialpursuit
 # depend twoxtwogame
