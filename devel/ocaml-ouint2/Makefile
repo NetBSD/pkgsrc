@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/01/25 19:37:59 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/25 20:41:40 alnsn Exp $
 
 DISTNAME=	ounit2-2.2.7
 PKGNAME=	ocaml-${DISTNAME}
@@ -18,4 +18,8 @@ DUNE_BUILD_PACKAGES=	ounit2
 TEST_TARGET=	test
 
 .include "../../lang/ocaml/ocaml.mk"
+
+.include "../../devel/ocaml-seq/buildlink3.mk"
+.include "../../devel/ocaml-stdlib-shims/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
