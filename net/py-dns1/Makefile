@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2023/05/05 10:16:33 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/25 07:38:08 wiz Exp $
 
 DISTNAME=	dnspython-1.16.0
 PKGREVISION=	2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-/-/}
 CATEGORIES=	net python
-MASTER_SITES=	http://www.dnspython.org/kits/${PKGVERSION_NOREV}/
+MASTER_SITES=	https://www.dnspython.org/kits/${PKGVERSION_NOREV}/
 
 MAINTAINER=	gson@NetBSD.org
-HOMEPAGE=	http://www.dnspython.org/
+HOMEPAGE=	https://www.dnspython.org/
 COMMENT=	Python DNS toolkit (v1)
 LICENSE=	isc
 
