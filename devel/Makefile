@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4574 2026/01/25 07:41:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4575 2026/01/25 07:43:27 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2693,7 +2693,6 @@ SUBDIR+=	py-fixtures
 SUBDIR+=	py-flake8
 SUBDIR+=	py-flake8-docstrings
 SUBDIR+=	py-flake8-import-order
-SUBDIR+=	py-flake8-polyfill
 SUBDIR+=	py-flakes
 SUBDIR+=	py-flaky
 SUBDIR+=	py-flexmock

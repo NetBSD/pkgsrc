@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.591 2026/01/25 07:41:47 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.592 2026/01/25 07:43:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -769,3 +769,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed databases/py-datapkg [wiz 2026-01-25]
 	Removed devel/py-hypothesis4 [wiz 2026-01-25]
 	Removed devel/py-enum34 [wiz 2026-01-25]
+	Removed devel/py-flake8-polyfill [wiz 2026-01-25]
