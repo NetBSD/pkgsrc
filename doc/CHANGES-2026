@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.597 2026/01/25 08:02:24 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.598 2026/01/25 08:04:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -775,3 +775,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/xfd to 1.1.5 [wiz 2026-01-25]
 	Updated www/w3m to 0.5.6 [wiz 2026-01-25]
 	Updated www/w3m-img to 0.5.6 [wiz 2026-01-25]
+	Updated fonts/harfbuzz to 12.3.2 [adam 2026-01-25]
+	Updated fonts/harfbuzz-icu to 12.3.2 [adam 2026-01-25]
