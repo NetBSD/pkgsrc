@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2025/05/12 09:57:42 markd Exp $
+# $NetBSD: Makefile,v 1.33 2026/01/25 08:56:35 markd Exp $
 
 DISTNAME=	collection-bibtexextra
 PKGNAME=	texlive-${DISTNAME}-2025pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	74736
+TEXLIVE_REV=	75480
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -119,6 +119,7 @@ DEPENDS+=	tex-chbibref-[0-9]*:../../print/tex-chbibref
 # depend citation-style-language
 # depend citeall
 # depend citeref
+# depend citeright
 # depend collref
 # depend compactbib
 # depend crossrefware
