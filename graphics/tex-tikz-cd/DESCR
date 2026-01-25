@@ -1,4 +1,4 @@
-The general-purpose drawing package TiKZ can be used to typeset
+The general-purpose drawing package TikZ can be used to typeset
 commutative diagrams and other kinds of mathematical pictures,
 generating high-quality results.  The present package facilitates
 the creation of such diagrams by providing a convenient set of
