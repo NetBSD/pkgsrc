@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.39 2025/05/12 10:47:19 markd Exp $
+# $NetBSD: Makefile,v 1.40 2026/01/25 10:20:51 markd Exp $
 
 DISTNAME=	collection-publishers
 PKGNAME=	texlive-${DISTNAME}-2025pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	75150
+TEXLIVE_REV=	77395
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -16,10 +16,12 @@ DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-lat
 # depend abnt
 DEPENDS+=	tex-abntex2-[0-9]*:../../print/tex-abntex2
 # depend abntexto
+# depend abntexto-uece
 # depend acmart
 DEPENDS+=	tex-acmconf-[0-9]*:../../print/tex-acmconf
 # depend active-conf
 # depend adfathesis
+# depend aeskwadraat
 # depend afthesis
 # depend aguplus
 # depend aiaa
@@ -91,6 +93,7 @@ DEPENDS+=	tex-elsarticle-[0-9]*:../../print/tex-elsarticle
 # depend fcavtex
 # depend fcltxdoc
 # depend fei
+# depend fhj-script
 # depend ftc-notebook
 # depend gaceta
 # depend gammas
@@ -135,6 +138,7 @@ DEPENDS+=	tex-ieeetran-[0-9]*:../../print/tex-IEEEtran
 # depend jourcl
 # depend jourrr
 # depend jpsj
+# depend jsonresume
 # depend jwjournal
 # depend kdgdocs
 # depend kdpcover
@@ -150,6 +154,7 @@ DEPENDS+=	tex-ieeetran-[0-9]*:../../print/tex-IEEEtran
 # depend llncsconf
 # depend lni
 # depend lps
+# depend maine-thesis
 # depend matc3
 # depend matc3mem
 # depend mcmthesis
@@ -159,6 +164,7 @@ DEPENDS+=	tex-ieeetran-[0-9]*:../../print/tex-IEEEtran
 # depend mluexercise
 # depend mnras
 # depend modeles-factures-belges-assocs
+# depend modernnewspaper
 # depend msu-thesis
 # depend mucproc
 # depend mugsthesis
@@ -191,6 +197,7 @@ DEPENDS+=	tex-ieeetran-[0-9]*:../../print/tex-IEEEtran
 # depend oup-authoring-template
 # depend pats-resume
 # depend philosophersimprint
+# depend phimisci
 # depend pittetd
 # depend pkuthss
 # depend powerdot-fuberlin
@@ -206,11 +213,13 @@ DEPENDS+=	tex-ieeetran-[0-9]*:../../print/tex-IEEEtran
 # depend regulatory
 # depend resphilosophica
 # depend resumecls
+# depend retosmatematicos
 DEPENDS+=	tex-revtex-[0-9]*:../../print/tex-revtex
 DEPENDS+=	tex-revtex4-[0-9]*:../../print/tex-revtex4
 # depend revtex4-1
 # depend rub-kunstgeschichte
 # depend rutitlepage
+# depend rwth-ci
 # depend ryersonsgsthesis
 # depend ryethesis
 # depend sageep
@@ -238,6 +247,7 @@ DEPENDS+=	tex-revtex4-[0-9]*:../../print/tex-revtex4
 # depend stellenbosch-2
 # depend suftesi
 # depend sugconf
+# depend sysuthesis
 # depend tabriz-thesis
 # depend technion-thesis-template
 # depend texilikechaps
