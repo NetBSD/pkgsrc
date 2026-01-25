@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4576 2026/01/25 13:10:22 adam Exp $
+# $NetBSD: Makefile,v 1.4577 2026/01/25 19:39:17 alnsn Exp $
 #
 
 COMMENT=	Development utilities
@@ -1320,6 +1320,7 @@ SUBDIR+=	ocaml-mmap
 SUBDIR+=	ocaml-oasis
 SUBDIR+=	ocaml-ocplib-endian
 SUBDIR+=	ocaml-optint
+SUBDIR+=	ocaml-ounit2
 SUBDIR+=	ocaml-parsexp
 SUBDIR+=	ocaml-ppx_assert
 SUBDIR+=	ocaml-ppx_base
