@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2025/09/08 10:02:10 vins Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/25 16:13:16 vins Exp $
 
 DISTNAME=	lchat-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	https://dl.suckless.org/tools/
 
