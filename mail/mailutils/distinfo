@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2025/09/02 19:01:24 vins Exp $
+$NetBSD: distinfo,v 1.7 2026/01/25 16:24:58 vins Exp $
 
-BLAKE2s (mailutils-3.20.tar.gz) = f986de911beab8d400c466f7a9b9f80ad0aa6814f14202236b0f1d17841c9c92
-SHA512 (mailutils-3.20.tar.gz) = 0ddbdcf57fd20677da76a906ace5d0d0aa35f515530c077a6ec8e6eb22beeed9011dcb3bd3e5e800f0e51d9cfad09fa49a4c7a2ddd04b286a5adafaa55b5230c
-Size (mailutils-3.20.tar.gz) = 7883826 bytes
+BLAKE2s (mailutils-3.21.tar.gz) = 750a7ef91b593df2f42cc6debc50a2f833516e919e95aafb91399fb2eaec352d
+SHA512 (mailutils-3.21.tar.gz) = dc08e6204c2e88ca91cc2df15cbf28b2c8f8f8dcc2c38d2ac8e592c747415f964e65e16132e56619d31aa0ce692b7b3764527f9a152ab4f95bbcc457f1b33277
+Size (mailutils-3.21.tar.gz) = 8047304 bytes
 SHA1 (patch-configure.ac) = 8fdcba83e0ef8769945f43e41b48a4e9a3319d0b
 SHA1 (patch-frm_frm.h) = 8ed8ae4b64b3b6b30d0572d06b35165b2e1d7e3e
 SHA1 (patch-lib_tcpwrap.c) = 758619c13030816b99b772f65ae8205aff23b323
