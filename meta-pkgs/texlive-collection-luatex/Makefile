@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2025/05/12 10:22:23 markd Exp $
+# $NetBSD: Makefile,v 1.31 2026/01/25 09:51:27 markd Exp $
 
 DISTNAME=	collection-luatex
-PKGNAME=	texlive-${DISTNAME}-2025pre1
+PKGNAME=	texlive-${DISTNAME}-2025pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	74062
+TEXLIVE_REV=	77106
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -18,6 +18,7 @@ DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-bas
 # depend barracuda
 # depend bezierplot
 # depend blopentype
+# depend char2path
 # depend checkcites
 # depend chickenize
 # depend chinese-jfm
@@ -29,11 +30,15 @@ DEPENDS+=	tex-ctablestack-[0-9]*:../../print/tex-ctablestack
 # depend emoji
 # depend emojicite
 # depend enigma
+# depend fancymag
+# depend farbe
 # depend gitinfo-lua
 # depend ideavault
 # depend innerscript
 # depend interpreter
 # depend kanaparser
+# depend kkran
+# depend kksymbols
 # depend ligtype
 # depend linebreaker
 # depend longmath
@@ -44,7 +49,6 @@ DEPENDS+=	tex-ctablestack-[0-9]*:../../print/tex-ctablestack
 # depend lua-typo
 # depend lua-uca
 DEPENDS+=	tex-lua-ul-[0-9]*:../../print/tex-lua-ul
-DEPENDS+=	tex-lua-uni-algos-[0-9]*:../../print/tex-lua-uni-algos
 # depend lua-visual-debug
 # depend lua-widow-control
 # depend luaaddplot
@@ -60,6 +64,7 @@ DEPENDS+=	tex-luacolor-[0-9]*:../../print/tex-luacolor
 # depend luaindex
 # depend luainputenc
 # depend luakeys
+# depend luakeyval
 DEPENDS+=	tex-lualatex-math-[0-9]*:../../math/tex-lualatex-math
 # depend lualatex-truncate
 DEPENDS+=	tex-lualibs-[0-9]*:../../devel/tex-lualibs
@@ -77,6 +82,7 @@ DEPENDS+=	tex-luaotfload-[0-9]*:../../fonts/tex-luaotfload
 # depend luaquotes
 # depend luaset
 # depend luatbls
+# depend luatex-type-definitions
 # depend luarandom
 DEPENDS+=	tex-luatex85-[0-9]*:../../print/tex-luatex85
 DEPENDS+=	tex-luatexbase-[0-9]*:../../devel/tex-luatexbase
@@ -97,6 +103,7 @@ DEPENDS+=	tex-luatexbase-[0-9]*:../../devel/tex-luatexbase
 # depend nodetree
 # depend odsfile
 # depend optex
+# depend parstat
 # depend pdfarticle
 # depend pdfextra
 # depend penlight
@@ -106,6 +113,7 @@ DEPENDS+=	tex-luatexbase-[0-9]*:../../devel/tex-luatexbase
 # depend plantuml
 # depend pyluatex
 # depend scikgtex
+# depend seatingchart
 # depend selnolig
 # depend semesterplannerlua
 # depend showhyphenation
