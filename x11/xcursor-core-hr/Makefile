@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2025/01/27 18:59:08 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2026/01/25 15:41:49 vins Exp $
 
 DISTNAME=	xc-core-hr
-PKGVER=		20220127
+PKGVER=		20241226
 PKGNAME=	xcursor-core-hr-${PKGVER}
 CATEGORIES=	x11 graphics
 MASTER_SITES=	https://fastestcode.org/dl/

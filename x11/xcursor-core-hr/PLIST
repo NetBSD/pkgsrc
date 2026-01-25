@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/12/06 15:00:38 vins Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/01/25 15:41:49 vins Exp $
 share/icons/core-hr/cursors/00000000000000020006000e7e9ffc3f
 share/icons/core-hr/cursors/08e8e1c95fe2fc01f976f1e063a24ccd
 share/icons/core-hr/cursors/1081e37283d90000800003c07f3ef6bf
@@ -41,6 +41,7 @@ share/icons/core-hr/cursors/move
 share/icons/core-hr/cursors/openhand
 share/icons/core-hr/cursors/pencil
 share/icons/core-hr/cursors/pointer
+share/icons/core-hr/cursors/progress
 share/icons/core-hr/cursors/question_arrow
 share/icons/core-hr/cursors/right_side
 share/icons/core-hr/cursors/sb_down_arrow
