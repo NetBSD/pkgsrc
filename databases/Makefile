@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.738 2026/01/03 22:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.739 2026/01/25 07:36:18 wiz Exp $
 
 COMMENT=	Databases
 
@@ -382,7 +382,6 @@ SUBDIR+=	py-cassandra-driver
 SUBDIR+=	py-cdb
 SUBDIR+=	py-ckanclient
 SUBDIR+=	py-cx_Oracle
-SUBDIR+=	py-datapkg
 SUBDIR+=	py-dbf
 SUBDIR+=	py-dbfread
 SUBDIR+=	py-dsinternals
