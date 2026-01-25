@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2025/05/14 13:01:44 markd Exp $
+# $NetBSD: Makefile,v 1.35 2026/01/25 09:02:22 markd Exp $
 
 DISTNAME=	collection-binextra
 PKGNAME=	texlive-${DISTNAME}-2025pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	73049
+TEXLIVE_REV=	75830
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -90,8 +90,10 @@ DEPENDS+=	tex-pkfix-[0-9]*:../../print/tex-pkfix
 # depend ppmcheckpdf
 # depend purifyeps
 # depend pythontex
+# depend runtexfile
 # depend runtexshebang
 DEPENDS+=	seetexk-[0-9]*:../../print/seetexk
+# depend show-pdf-tags
 # depend spix
 # depend sqltex
 # depend srcredact
