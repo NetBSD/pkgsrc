@@ -1,6 +1,6 @@
 CSplain is a small extension of basic Plain TeX macros, the
 formats csplain and pdfcsplain can be generated. It supports:
-hyphenation of words for 50+ languages, simple and powerfull
+hyphenation of words for 50+ languages, simple and powerful
 font loading system (various sizes of fonts), TeX, pdfTeX,
 XeTeX and LuaTeX engines, math fonts simply loaded with full
 amstex-like features, three internal encodings (IL2 for
