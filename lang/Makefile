@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.776 2026/01/08 14:30:35 taca Exp $
+# $NetBSD: Makefile,v 1.777 2026/01/25 23:22:15 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -272,6 +272,7 @@ SUBDIR+=	py-js2py
 SUBDIR+=	py-jsparser
 SUBDIR+=	py-lark-parser
 SUBDIR+=	py-libcst
+SUBDIR+=	py-librt
 SUBDIR+=	py-lsp-server
 SUBDIR+=	py-lsprotocol
 SUBDIR+=	py-mypy
