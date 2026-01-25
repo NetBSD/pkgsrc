@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.37 2025/05/13 09:41:44 markd Exp $
+# $NetBSD: Makefile,v 1.38 2026/01/25 09:09:58 markd Exp $
 
 DISTNAME=	collection-fontsextra
 PKGNAME=	texlive-${DISTNAME}-2025pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	75103
+TEXLIVE_REV=	77044
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -33,6 +33,7 @@ DEPENDS+=	tex-archaic-[0-9]*:../../fonts/tex-archaic
 DEPENDS+=	tex-arev-[0-9]*:../../fonts/tex-arev
 DEPENDS+=	tex-arimo-[0-9]*:../../fonts/tex-arimo
 # depend arsenal
+# depend arsenal-math
 # depend arvo
 DEPENDS+=	tex-asana-math-[0-9]*:../../fonts/tex-Asana-Math
 # depend asapsym
@@ -44,6 +45,7 @@ DEPENDS+=	tex-augie-[0-9]*:../../fonts/tex-augie
 DEPENDS+=	tex-auncial-new-[0-9]*:../../fonts/tex-auncial-new
 DEPENDS+=	tex-aurical-[0-9]*:../../fonts/tex-aurical
 DEPENDS+=	tex-b1encoding-[0-9]*:../../fonts/tex-b1encoding
+# depend bahaistar
 DEPENDS+=	tex-barcodes-[0-9]*:../../fonts/tex-barcodes
 DEPENDS+=	tex-baskervaldadf-[0-9]*:../../fonts/tex-baskervaldadf
 DEPENDS+=	tex-baskervaldx-[0-9]*:../../fonts/tex-baskervaldx
@@ -166,6 +168,8 @@ DEPENDS+=	tex-fonetika-[0-9]*:../../fonts/tex-fonetika
 DEPENDS+=	tex-fontawesome-[0-9]*:../../fonts/tex-fontawesome
 DEPENDS+=	tex-fontawesome5-[0-9]*:../../fonts/tex-fontawesome5
 # depend fontawesome6
+# depend fontawesome7
+# depend fontawesomescaled
 DEPENDS+=	tex-fontmfizz-[0-9]*:../../fonts/tex-fontmfizz
 # depend fonts-churchslavonic
 # depend fontscripts
@@ -222,6 +226,7 @@ DEPENDS+=	tex-jablantile-[0-9]*:../../fonts/tex-jablantile
 DEPENDS+=	tex-jamtimes-[0-9]*:../../fonts/tex-jamtimes
 # depend jetbrainsmono-otf
 # depend josefin
+# depend juliamono
 DEPENDS+=	tex-junicode-[0-9]*:../../fonts/tex-junicode
 # depend junicodevf
 DEPENDS+=	tex-kixfont-[0-9]*:../../fonts/tex-kixfont
@@ -252,6 +257,7 @@ DEPENDS+=	tex-lobster2-[0-9]*:../../fonts/tex-lobster2
 # depend luwiantype
 DEPENDS+=	tex-lxfonts-[0-9]*:../../fonts/tex-lxfonts
 DEPENDS+=	tex-ly1-[0-9]*:../../fonts/tex-ly1
+# depend lydtype
 # depend magra
 # depend marcellus
 DEPENDS+=	tex-mathabx-[0-9]*:../../fonts/tex-mathabx
@@ -267,6 +273,7 @@ DEPENDS+=	tex-mintspirit-[0-9]*:../../fonts/tex-mintspirit
 # depend missaali
 # depend mlmodern
 DEPENDS+=	tex-mnsymbol-[0-9]*:../../fonts/tex-mnsymbol
+# depend monaspace-otf
 # depend montserrat
 # depend mpfonts
 DEPENDS+=	tex-mweights-[0-9]*:../../print/tex-mweights
@@ -298,6 +305,7 @@ DEPENDS+=	tex-overlock-[0-9]*:../../fonts/tex-overlock
 DEPENDS+=	tex-pacioli-[0-9]*:../../fonts/tex-pacioli
 # depend pagella-otf
 DEPENDS+=	tex-paratype-[0-9]*:../../fonts/tex-paratype
+# depend pennstander-otf
 DEPENDS+=	tex-phaistos-[0-9]*:../../fonts/tex-phaistos
 DEPENDS+=	tex-phonetic-[0-9]*:../../fonts/tex-phonetic
 DEPENDS+=	tex-pigpen-[0-9]*:../../fonts/tex-pigpen
@@ -336,6 +344,7 @@ DEPENDS+=	tex-sourcecodepro-[0-9]*:../../fonts/tex-sourcecodepro
 DEPENDS+=	tex-sourcesanspro-[0-9]*:../../fonts/tex-sourcesanspro
 DEPENDS+=	tex-sourceserifpro-[0-9]*:../../fonts/tex-sourceserifpro
 # depend spectral
+# depend splentinex
 # depend srbtiks
 DEPENDS+=	tex-starfont-[0-9]*:../../fonts/tex-starfont
 DEPENDS+=	tex-staves-[0-9]*:../../fonts/tex-staves
