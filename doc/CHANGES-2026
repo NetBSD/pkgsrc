@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.585 2026/01/25 07:14:39 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.586 2026/01/25 07:16:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -763,3 +763,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-CPAN-Meta-Requirements to 2.144 [wiz 2026-01-25]
 	Updated devel/p5-Test-Future-IO-Impl to 0.17 [wiz 2026-01-25]
 	Updated devel/p5-IO-Async to 0.805 [wiz 2026-01-25]
+	Updated net/p5-Net-Server to 2.015 [wiz 2026-01-25]
