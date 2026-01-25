@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.593 2026/01/25 07:44:41 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.594 2026/01/25 07:45:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -771,3 +771,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/py-enum34 [wiz 2026-01-25]
 	Removed devel/py-flake8-polyfill [wiz 2026-01-25]
 	Updated x11/bitmap to 1.1.2 [wiz 2026-01-25]
+	Updated x11/libXmu to 1.3.0 [wiz 2026-01-25]
