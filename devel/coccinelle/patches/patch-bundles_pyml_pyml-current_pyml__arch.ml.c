@@ -1,6 +1,7 @@
-$NetBSD: patch-bundles_pyml_pyml-current_pyml__arch.ml.c,v 1.1 2026/01/25 23:50:17 wiz Exp $
+$NetBSD: patch-bundles_pyml_pyml-current_pyml__arch.ml.c,v 1.2 2026/01/25 23:54:29 wiz Exp $
 
 NetBSD doesn't define 'unix'
+https://github.com/coccinelle/coccinelle/issues/410
 
 --- bundles/pyml/pyml-current/pyml_arch.ml.c.orig	2026-01-25 23:45:56.634799893 +0000
 +++ bundles/pyml/pyml-current/pyml_arch.ml.c
