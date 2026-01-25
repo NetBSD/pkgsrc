@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.621 2026/01/25 14:01:32 taca Exp $
+$NetBSD: CHANGES-2026,v 1.622 2026/01/25 15:24:43 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -815,3 +815,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-mixlib-shellout to 3.4.10 [taca 2026-01-25]
 	Updated security/httpx to 1.8.1 [leot 2026-01-25]
 	Updated devel/ruby-async to 2.36.0 [taca 2026-01-25]
+	Updated wm/emwm-utils to 1.3.2 [vins 2026-01-25]
