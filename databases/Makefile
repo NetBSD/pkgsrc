@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.741 2026/01/25 12:10:37 adam Exp $
+# $NetBSD: Makefile,v 1.742 2026/01/25 12:15:33 adam Exp $
 
 COMMENT=	Databases
 
@@ -407,15 +407,10 @@ SUBDIR+=	py-sqlalchemy
 SUBDIR+=	py-sqlalchemy-i18n
 SUBDIR+=	py-sqlalchemy-migrate
 SUBDIR+=	py-sqlalchemy-utils
-SUBDIR+=	py-sqlite2
 SUBDIR+=	py-sqlparse
 SUBDIR+=	py-sqlrelay
-SUBDIR+=	py-sybase
-SUBDIR+=	py-table
 SUBDIR+=	py-tinydb
-SUBDIR+=	py-tokyocabinet
 SUBDIR+=	py-tortoise-orm
-SUBDIR+=	py-unicodecsv
 SUBDIR+=	py-whisper
 SUBDIR+=	qdbm
 SUBDIR+=	qdbm-cgi
