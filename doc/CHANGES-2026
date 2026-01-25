@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.619 2026/01/25 13:58:17 taca Exp $
+$NetBSD: CHANGES-2026,v 1.620 2026/01/25 13:59:43 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -813,3 +813,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added textproc/ocaml-xmlm version 1.4.0 [alnsn 2026-01-25]
 	Updated graphics/ruby-color to 2.2.0 [taca 2026-01-25]
 	Updated devel/ruby-mixlib-shellout to 3.4.10 [taca 2026-01-25]
+	Updated security/httpx to 1.8.1 [leot 2026-01-25]
