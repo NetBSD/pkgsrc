@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q4,v 1.1.2.8 2026/01/24 03:07:32 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q4,v 1.1.2.9 2026/01/25 15:26:40 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q4 branch:
 
@@ -33,3 +33,6 @@ net/bind918: Security fix
 
 Pullup ticket #7047 - requested by wiz
 security/netpgpverify: Bug fix
+
+Pullup ticket #7048 - requested by nia
+www/palemoon: Security fix
