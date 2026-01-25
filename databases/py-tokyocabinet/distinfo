@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:09:54 nia Exp $
-
-BLAKE2s (tokyocabinet-0.5.tar.gz) = 9742456cd72031e06329e2028df1ff5bcbff4409a1ee7d5eccbda312a8c19594
-SHA512 (tokyocabinet-0.5.tar.gz) = 12c665be846291f8ec7e37fbb72ca69e18f2278fb02d27138329f440ddaf11ef13812b72192a4792ef8449c253ea17a39837b28adfba680ea6e34de8e091cc2d
-Size (tokyocabinet-0.5.tar.gz) = 12408 bytes
