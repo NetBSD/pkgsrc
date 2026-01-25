@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2025/05/14 12:48:12 markd Exp $
+# $NetBSD: Makefile,v 1.29 2026/01/25 10:11:09 markd Exp $
 
 DISTNAME=	collection-plaingeneric
 PKGNAME=	texlive-${DISTNAME}-2025pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	75140
+TEXLIVE_REV=	75599
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -35,6 +35,7 @@ DEPENDS+=	tex-compare-[0-9]*:../../print/tex-compare
 # depend dowith
 DEPENDS+=	tex-eijkhout-[0-9]*:../../print/tex-eijkhout
 # depend encxvlna
+# depend eoldef
 # depend epigram
 DEPENDS+=	tex-epsf>=2.7.4:../../print/tex-epsf
 DEPENDS+=	tex-epsf-dvipdfmx-[0-9]*:../../print/tex-epsf-dvipdfmx
@@ -90,6 +91,7 @@ DEPENDS+=	tex-path>=3.05:../../print/tex-path
 # depend pdftoolbox
 DEPENDS+=	tex-pitex-[0-9]*:../../print/tex-pitex
 DEPENDS+=	tex-placeins-plain-[0-9]*:../../print/tex-placeins-plain
+# depend plain-widow
 # depend plainpkg
 DEPENDS+=	tex-plipsum-[0-9]*:../../print/tex-plipsum
 DEPENDS+=	tex-plnfss-[0-9]*:../../print/tex-plnfss
@@ -117,6 +119,7 @@ DEPENDS+=	tex-tex4ht-[0-9]*:../../print/tex-tex4ht
 # depend texdimens
 DEPENDS+=	tex-texinfo-[0-9]*:../../print/tex-texinfo
 DEPENDS+=	tex-timetable-[0-9]*:../../print/tex-timetable
+# depend tokmap
 DEPENDS+=	tex-tracklang-[0-9]*:../../print/tex-tracklang
 # depend transparent-io
 DEPENDS+=	tex-treetex-[0-9]*:../../print/tex-treetex
@@ -125,6 +128,7 @@ DEPENDS+=	tex-treetex-[0-9]*:../../print/tex-treetex
 DEPENDS+=	tex-ulem>=2013:../../print/tex-ulem
 # depend upca
 DEPENDS+=	tex-varisize-[0-9]*:../../print/tex-varisize
+# depend visualtoks
 # xii is a "fun" package and the only files are in tex-xii-doc
 # depend xii-lat
 # depend xintsession
