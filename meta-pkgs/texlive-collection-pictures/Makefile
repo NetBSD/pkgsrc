@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.49 2025/05/14 12:44:52 markd Exp $
+# $NetBSD: Makefile,v 1.50 2026/01/25 10:08:11 markd Exp $
 
 DISTNAME=	collection-pictures
 PKGNAME=	texlive-${DISTNAME}-2025pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	74988
+TEXLIVE_REV=	77389
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -27,6 +27,7 @@ DEPENDS+=	tex-asyfig-[0-9]*:../../graphics/tex-asyfig
 # depend bodegraph
 # depend bondgraph
 # depend bondgraphs
+# depend bootstrapicons
 # depend braids
 # depend bxeepic
 # depend byo-twemojis
@@ -74,6 +75,7 @@ DEPENDS+=	tex-ellipse-[0-9]*:../../graphics/tex-ellipse
 # depend fitbox
 # depend flowchart
 DEPENDS+=	tex-forest-[0-9]*:../../graphics/tex-forest
+# depend forest-ext
 # depend genealogytree
 # depend getmap
 DEPENDS+=	tex-gincltex-[0-9]*:../../print/tex-gincltex
@@ -91,6 +93,7 @@ DEPENDS+=	tex-here-[0-9]*:../../print/tex-here
 # depend hvfloat
 # depend istgame
 # depend kblocks
+# depend keisennote
 # depend kinematikz
 # depend knitting
 # depend knittingpattern
@@ -100,8 +103,10 @@ DEPENDS+=	tex-here-[0-9]*:../../print/tex-here
 # depend liftarm
 # depend lpic
 # depend lroundrect
+# depend lua-tikz3dtools
 # depend luamesh
 # depend luasseq
+# depend lucide-icons
 # depend maker
 # depend makeshape
 # depend maritime
@@ -117,6 +122,8 @@ DEPENDS+=	tex-here-[0-9]*:../../print/tex-here
 # depend nndraw
 # depend numericplots
 # depend open-everyday-symbols
+# depend openmoji
+# depend optikz
 # depend outilsgeomtikz
 # depend papiergurvan
 DEPENDS+=	tex-pb-diagram-[0-9]*:../../print/tex-pb-diagram
@@ -161,7 +168,7 @@ DEPENDS+=	tex-pictex-[0-9]*:../../graphics/tex-pictex
 # depend pxpic
 # depend qcircuit
 DEPENDS+=	tex-qrcode-[0-9]*:../../graphics/tex-qrcode
-# depend quantikz
+# depend qrcodetikz
 # depend randbild
 # depend randomwalk
 # depend realhats
@@ -195,6 +202,7 @@ DEPENDS+=	tex-tikz-3dplot-[0-9]*:../../graphics/tex-tikz-3dplot
 # depend tikz-bbox
 # depend tikz-bpmn
 DEPENDS+=	tex-tikz-cd-[0-9]*:../../graphics/tex-tikz-cd
+# depend tikz-cookingsymbols
 # depend tikz-decofonts
 # depend tikz-dependency
 # depend tikz-dimline
@@ -221,12 +229,14 @@ DEPENDS+=	tex-tikz-cd-[0-9]*:../../graphics/tex-tikz-cd
 # depend tikz-qtree
 # depend tikz-relay
 # depend tikz-sfc
+# depend tikz-shields
 # depend tikz-swigs
 # depend tikz-timing
 # depend tikz-trackschematic
 # depend tikz-truchet
 # depend tikz2d-fr
 # depend tikz3d-fr
+# depend tikzbrickfigurines
 # depend tikzbricks
 # depend tikzcalendarnotes
 # depend tikzcodeblocks
@@ -275,6 +285,7 @@ DEPENDS+=	tex-tzplot-[0-9]*:../../graphics/tex-tzplot
 # depend utfsym
 # depend vectorlogos
 DEPENDS+=	tex-venndiagram-[0-9]*:../../graphics/tex-venndiagram
+# depend vexillology
 # depend visualpstricks
 # depend wheelchart
 # depend wordcloud
