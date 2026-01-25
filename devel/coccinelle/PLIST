@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/06/04 10:44:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/01/25 23:50:17 wiz Exp $
 bin/spatch
 bin/spgen
 lib/coccinelle/dllpyml_stubs.so
@@ -8,14 +8,14 @@ lib/coccinelle/ocaml/ast_c.cmi
 lib/coccinelle/ocaml/ast_c.cmx
 lib/coccinelle/ocaml/ast_cocci.cmi
 lib/coccinelle/ocaml/ast_cocci.cmx
+lib/coccinelle/ocaml/cocciconfig.cmi
+lib/coccinelle/ocaml/cocciconfig.cmx
 lib/coccinelle/ocaml/coccilib.cmi
 lib/coccinelle/ocaml/coccilib.cmx
 lib/coccinelle/ocaml/commands.cmi
 lib/coccinelle/ocaml/commands.cmx
 lib/coccinelle/ocaml/common.cmi
 lib/coccinelle/ocaml/common.cmx
-lib/coccinelle/ocaml/config.cmi
-lib/coccinelle/ocaml/config.cmx
 lib/coccinelle/ocaml/dumper.cmi
 lib/coccinelle/ocaml/dumper.cmx
 lib/coccinelle/ocaml/exposed_modules.cmi
@@ -68,3 +68,4 @@ man/man1/spatch.1
 man/man1/spgen.1
 man/man3/Coccilib.3
 share/bash-completion/completions/spatch
+share/metainfo/io.github.coccinelle.coccinelle.metainfo.xml
