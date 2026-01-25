@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2025/11/30 10:15:27 vins Exp $
+$NetBSD: distinfo,v 1.8 2026/01/25 15:24:20 vins Exp $
 
-BLAKE2s (emwm-utils-src-1.3.1.tar.xz) = 0677f0bdd7d9775a302505b3e4a7b340a6bacc9f2b6a758a44edbb90ec47f4a4
-SHA512 (emwm-utils-src-1.3.1.tar.xz) = e7e5f25953fd50ab24d21f6a343e38a8a92c5a08c3c6bd8616ab92932f65f03fd8ec7c6486eb23969d0a1ff0ded2180dc491f5166eb80f77f28e82927118276f
-Size (emwm-utils-src-1.3.1.tar.xz) = 28416 bytes
+BLAKE2s (emwm-utils-src-1.3.2.tar.xz) = 06a7277b172edd24626a521015de579556cf982c7322f7277dfab34e45a639fb
+SHA512 (emwm-utils-src-1.3.2.tar.xz) = 50ad210c582b05f679c02832ddf30724a3d4723acdd85b572be503c39b0f575a6d0505cbaa55854b10cc0d2028e0f42c6101107cf00948708ea1a83ee4c49685
+Size (emwm-utils-src-1.3.2.tar.xz) = 28464 bytes
 SHA1 (patch-Makefile) = 1316be75730b7823d5f0f00adb243bc5b9100f26
 SHA1 (patch-mf_Makefile.pkgsrc) = 26f8fa4ee7d57d1c1ed0bfea46c19302d4e1e5fd
 SHA1 (patch-src_common.mf) = 3a4a80449ad060732abacb08cfd2d32012e0750f
