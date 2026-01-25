@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/04/12 06:49:07 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/01/25 23:05:24 wiz Exp $
 
-DISTNAME=	jansson-2.14.1
+DISTNAME=	jansson-2.15.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=akheron/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	jansson.pc.in
 # Fails a self-test because the library exports more symbols than it should.
 # It seems "libtool ... -export-symbols-regex '^json_' ..." doesn't work,
-# at least not on NetBSD-6.99.20/amd64.
+# at least not on NetBSD-11.99.4/amd64.
 TEST_TARGET=		check
 
 .include "../../mk/bsd.pkg.mk"
