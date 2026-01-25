@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2026/01/14 12:57:33 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2026/01/25 07:32:46 wiz Exp $
 
 PKGVER=			0.8.4
 DISTNAME=		compizconfig-python-${PKGVER}
@@ -8,7 +8,7 @@ CATEGORIES=		devel gnome
 MASTER_SITES=		#
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://compiz.org/
+#HOMEPAGE=		http://compiz.org/
 COMMENT=		Python bindings for libcompizconfig
 LICENSE=		gnu-gpl-v2
 
