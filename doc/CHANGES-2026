@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.627 2026/01/25 16:25:24 vins Exp $
+$NetBSD: CHANGES-2026,v 1.628 2026/01/25 17:32:10 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -821,3 +821,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/libgrapheme to 3.0.0 [vins 2026-01-25]
 	Updated textproc/libgrapheme to 3.0.0 [vins 2026-01-25]
 	Updated mail/mailutils to 3.21 [vins 2026-01-25]
+	Updated mail/meli to 0.8.13 [vins 2026-01-25]
