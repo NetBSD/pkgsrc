@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.739 2026/01/25 07:36:18 wiz Exp $
+# $NetBSD: Makefile,v 1.740 2026/01/25 12:02:56 adam Exp $
 
 COMMENT=	Databases
 
@@ -372,15 +372,11 @@ SUBDIR+=	py-agate-excel
 SUBDIR+=	py-agate-sql
 SUBDIR+=	py-aiosqlite
 SUBDIR+=	py-alembic
-SUBDIR+=	py-ana
 SUBDIR+=	py-apsw
 SUBDIR+=	py-asyncpg
 SUBDIR+=	py-barman
 SUBDIR+=	py-bsddb3
-SUBDIR+=	py-cassa
 SUBDIR+=	py-cassandra-driver
-SUBDIR+=	py-cdb
-SUBDIR+=	py-ckanclient
 SUBDIR+=	py-cx_Oracle
 SUBDIR+=	py-dbf
 SUBDIR+=	py-dbfread
