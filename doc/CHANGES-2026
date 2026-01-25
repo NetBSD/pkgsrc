@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.630 2026/01/25 19:40:31 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.631 2026/01/25 22:15:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -824,3 +824,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/meli to 0.8.13 [vins 2026-01-25]
 	Updated misc/qt6gtk2 to 0.7 [vins 2026-01-25]
 	Added devel/ocaml-ounit2 version 2.2.7 [alnsn 2026-01-25]
+	Updated x11/xkill to 1.0.7 [wiz 2026-01-25]
