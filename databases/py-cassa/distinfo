@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:09:49 nia Exp $
-
-BLAKE2s (pycassa-0.3.0.tar.gz) = 995572879ae38c221af50083f376865112b1ff1dee83b7923e8c55dc26e5370f
-SHA512 (pycassa-0.3.0.tar.gz) = 32b7d9bbbbc0196449f0cccaa2aa1196ba139b2fd1e4d648ff6ecb32ecb02328c2e5dbdbef9ee0f822cdd1ea73c7bd3515ab2260e5e0d4a66935af69d00fe719
-Size (pycassa-0.3.0.tar.gz) = 46721 bytes
