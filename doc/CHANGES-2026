@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.643 2026/01/25 23:27:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.644 2026/01/25 23:31:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -837,3 +837,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/py-pillow_heif to 1.2.0 [wiz 2026-01-25]
 	Added lang/py-librt version 0.7.8 [wiz 2026-01-25]
 	Updated lang/py-mypy to 1.19.1nb1 [wiz 2026-01-25]
+	Updated comms/py-rich to 14.3.1 [wiz 2026-01-25]
