@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/10/12 10:06:59 vins Exp $
+# $NetBSD: Makefile,v 1.7 2026/01/25 16:14:36 vins Exp $
 
 DISTNAME=	telescope-0.11
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	https://ftp.telescope-browser.org/
 
