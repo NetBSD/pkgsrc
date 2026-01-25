@@ -1,0 +1,3 @@
+Xmlm is a streaming codec to decode and encode the XML data format.
+It can process XML documents without a complete in-memory representation
+of the data.
