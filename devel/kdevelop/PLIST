@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/12/21 10:17:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/01/25 04:19:06 markd Exp $
 bin/kdev_dbus_socket_transformer
 bin/kdev_format_source
 bin/kdev_includepathsconverter
@@ -421,6 +421,7 @@ lib/libKDevPlatformUtil.so.63
 lib/libKDevPlatformVcs.so
 lib/libKDevPlatformVcs.so.6.3.250803
 lib/libKDevPlatformVcs.so.63
+lib/libKDevelopSessionsWatch.so
 qt6/plugins/kdevplatform/63/KDevCustomBuildSystem.so
 qt6/plugins/kdevplatform/63/KDevCustomMakeManager.so
 qt6/plugins/kdevplatform/63/KDevDefinesAndIncludesManager.so
@@ -476,7 +477,10 @@ qt6/plugins/kdevplatform/63/kdevswitchtobuddy.so
 qt6/plugins/kdevplatform/63/kdevtestview.so
 qt6/plugins/kdevplatform/63/kdevvcschangesviewplugin.so
 qt6/plugins/kdevplatform/63/scratchpad.so
+qt6/plugins/kf6/krunner/kdevelopsessions.so
 qt6/plugins/kf6/ktexttemplate/kdev_filters.so
+qt6/qml/org/kde/plasma/private/kdevelopsessions/libkdevelopsessionsplugin.so
+qt6/qml/org/kde/plasma/private/kdevelopsessions/qmldir
 share/applications/org.kde.kdevelop.desktop
 share/applications/org.kde.kdevelop_bzr.desktop
 share/applications/org.kde.kdevelop_git.desktop
@@ -3491,5 +3495,7 @@ share/metainfo/org.kde.kdevelop.appdata.xml
 share/mime/packages/kdevclang.xml
 share/mime/packages/kdevelop.xml
 share/mime/packages/kdevgit.xml
+share/plasma/plasmoids/org.kde.kdevelopsessions/contents/ui/main.qml
+share/plasma/plasmoids/org.kde.kdevelopsessions/metadata.json
 share/qlogging-categories6/kdevelop.categories
 share/qlogging-categories6/kdevplatform.categories
