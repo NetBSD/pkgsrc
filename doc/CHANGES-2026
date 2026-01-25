@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.613 2026/01/25 13:44:01 taca Exp $
+$NetBSD: CHANGES-2026,v 1.614 2026/01/25 13:47:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -807,3 +807,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/py-sqlalchemy to 2.0.46 [adam 2026-01-25]
 	Updated security/subfinder to 2.12.0 [leot 2026-01-25]
 	Updated www/ruby-sass-embedded to 1.97.3 [taca 2026-01-25]
+	Updated textproc/ruby-commonmarker to 2.6.3 [taca 2026-01-25]
