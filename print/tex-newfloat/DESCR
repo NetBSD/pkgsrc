@@ -1,4 +1,4 @@
 The package offers the command \DeclareFloatingEnvironment,
 which the user may use to define new floating environments
-which behave like the LaTeX standard foating environments
+which behave like the LaTeX standard floating environments
 figure and table.
