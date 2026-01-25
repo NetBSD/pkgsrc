@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26719 2026/01/25 23:31:24 wiz Exp $
+$NetBSD: TODO,v 1.26720 2026/01/25 23:34:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1149,7 +1149,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-uliweb-0.6
 	o py-uv-build-0.9.26
 	o py-wat-0.6.0
-	o py-wcwidth-0.3.3
 	o py-wheel-0.46.3
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
