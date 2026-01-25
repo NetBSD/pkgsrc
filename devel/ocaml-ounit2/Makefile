@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/01/25 20:41:40 alnsn Exp $
+# $NetBSD: Makefile,v 1.1 2026/01/25 20:44:40 alnsn Exp $
 
 DISTNAME=	ounit2-2.2.7
 PKGNAME=	ocaml-${DISTNAME}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/01/25 19:37:59 alnsn Exp $
+@comment $NetBSD: PLIST,v 1.1 2026/01/25 20:44:40 alnsn Exp $
 ${OCAML_SITELIB}/ounit2/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ounit2/advanced/oUnitAdvanced.a
 ${OCAML_SITELIB}/ounit2/advanced/oUnitAdvanced.cma
