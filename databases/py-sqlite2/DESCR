@@ -1,5 +1,0 @@
-PySQLite is a Python interface to the SQLite library,
-allowing Python programs to access SQLite databases.
-
-This module wraps sqlite3 by using code not contained in the python
-distribution.
