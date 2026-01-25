@@ -1,13 +1,30 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/12 21:37:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/01/25 23:34:38 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
 ${PYSITELIB}/wcwidth/__init__.py
 ${PYSITELIB}/wcwidth/__init__.pyc
 ${PYSITELIB}/wcwidth/__init__.pyo
+${PYSITELIB}/wcwidth/bisearch.py
+${PYSITELIB}/wcwidth/bisearch.pyc
+${PYSITELIB}/wcwidth/bisearch.pyo
+${PYSITELIB}/wcwidth/control_codes.py
+${PYSITELIB}/wcwidth/control_codes.pyc
+${PYSITELIB}/wcwidth/control_codes.pyo
+${PYSITELIB}/wcwidth/escape_sequences.py
+${PYSITELIB}/wcwidth/escape_sequences.pyc
+${PYSITELIB}/wcwidth/escape_sequences.pyo
+${PYSITELIB}/wcwidth/grapheme.py
+${PYSITELIB}/wcwidth/grapheme.pyc
+${PYSITELIB}/wcwidth/grapheme.pyo
+${PYSITELIB}/wcwidth/py.typed
+${PYSITELIB}/wcwidth/table_ambiguous.py
+${PYSITELIB}/wcwidth/table_ambiguous.pyc
+${PYSITELIB}/wcwidth/table_ambiguous.pyo
+${PYSITELIB}/wcwidth/table_grapheme.py
+${PYSITELIB}/wcwidth/table_grapheme.pyc
+${PYSITELIB}/wcwidth/table_grapheme.pyo
 ${PYSITELIB}/wcwidth/table_vs16.py
 ${PYSITELIB}/wcwidth/table_vs16.pyc
 ${PYSITELIB}/wcwidth/table_vs16.pyo
@@ -17,6 +34,9 @@ ${PYSITELIB}/wcwidth/table_wide.pyo
 ${PYSITELIB}/wcwidth/table_zero.py
 ${PYSITELIB}/wcwidth/table_zero.pyc
 ${PYSITELIB}/wcwidth/table_zero.pyo
+${PYSITELIB}/wcwidth/textwrap.py
+${PYSITELIB}/wcwidth/textwrap.pyc
+${PYSITELIB}/wcwidth/textwrap.pyo
 ${PYSITELIB}/wcwidth/unicode_versions.py
 ${PYSITELIB}/wcwidth/unicode_versions.pyc
 ${PYSITELIB}/wcwidth/unicode_versions.pyo
