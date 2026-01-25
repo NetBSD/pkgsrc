@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.603 2026/01/25 09:34:01 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.604 2026/01/25 11:08:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -785,3 +785,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pyparsing to 3.3.2 [adam 2026-01-25]
 	Updated mail/mutt to 2.3.0 [tron 2026-01-25]
 	Updated x11/rofi to 2.0.0 [kikadf 2026-01-25]
+	Updated devel/opa to 1.12.3 [leot 2026-01-25]
