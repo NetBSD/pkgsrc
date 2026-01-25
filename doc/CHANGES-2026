@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.611 2026/01/25 13:16:28 adam Exp $
+$NetBSD: CHANGES-2026,v 1.612 2026/01/25 13:43:09 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -805,3 +805,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed databases/py-unicodecsv [adam 2026-01-25]
 	Removed devel/py-backports_abc [adam 2026-01-25]
 	Updated databases/py-sqlalchemy to 2.0.46 [adam 2026-01-25]
+	Updated security/subfinder to 2.12.0 [leot 2026-01-25]
