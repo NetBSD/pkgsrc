@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2025/10/07 19:50:28 markd Exp $
+# $NetBSD: Makefile,v 1.34 2026/01/25 10:00:31 markd Exp $
 
 DISTNAME=	collection-mathscience
 PKGNAME=	texlive-${DISTNAME}-2025pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	75100
+TEXLIVE_REV=	77452
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -28,6 +28,7 @@ DEPENDS+=	tex-algorithms-[0-9]*:../../print/tex-algorithms
 DEPENDS+=	tex-amstex-[0-9]*:../../print/tex-amstex
 # depend annotate-equations
 # depend apxproof
+# depend aspen
 # depend atableau
 # depend autobreak
 # depend axodraw2
@@ -43,6 +44,7 @@ DEPENDS+=	tex-amstex-[0-9]*:../../print/tex-amstex
 # depend bpchem
 # depend bracealign
 # depend bropd
+# depend broydensolve
 DEPENDS+=	tex-bussproofs-[0-9]*:../../print/tex-bussproofs
 # depend bussproofs-extra
 # depend bytefield
@@ -119,9 +121,11 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend fixdif
 # depend fixmath
 # depend fnspe
+# depend fodot
 # depend formal-grammar
 # depend fouridx
 # depend freealign
+# depend freemath
 # depend functan
 # depend galois
 # depend gastex
@@ -139,9 +143,11 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend hepparticles
 # depend hepthesis
 # depend hepunits
+# depend hideproofs
 # depend ibrackets
 # depend includernw
 # depend interval
+# depend intexgral
 # depend ionumbers
 # depend isomath
 # depend isphysicalmath
@@ -155,6 +161,7 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend letterswitharrows
 # depend lie-hasse
 # depend linearregression
+# depend linkedthm
 # depend logicproof
 # depend logictools
 # depend longdivision
@@ -225,6 +232,9 @@ DEPENDS+=	tex-physics-[0-9]*:../../math/tex-physics
 # depend pseudocode
 # depend pythonhighlight
 # depend qsharp
+# depend quantikz
+# depend quantum-chemistry-bonn
+# depend quantumcubemodel
 # depend quickreaction
 # depend quiver
 # depend qworld
@@ -279,6 +289,7 @@ DEPENDS+=	tex-stmaryrd-[0-9]*:../../fonts/tex-stmaryrd
 # depend temporal-logic
 DEPENDS+=	tex-tensind-[0-9]*:../../print/tex-tensind
 # depend tensor
+# depend tensormatrix
 # depend tex-ewd
 # depend textgreek
 # depend textopo
@@ -286,6 +297,7 @@ DEPENDS+=	tex-tensind-[0-9]*:../../print/tex-tensind
 # depend thmbox
 DEPENDS+=	tex-thmtools-[0-9]*:../../print/tex-thmtools
 # depend tiscreen
+# depend tkz-interval
 DEPENDS+=	tex-turnstile-[0-9]*:../../print/tex-turnstile
 # depend ulqda
 # depend unitsdef
@@ -296,6 +308,7 @@ DEPENDS+=	tex-yhmath-[0-9]*:../../fonts/tex-yhmath
 # depend youngtab
 # depend yquant
 # depend ytableau
+# depend zeckendorf
 # depend zx-calculus
 
 META_PACKAGE=	yes
