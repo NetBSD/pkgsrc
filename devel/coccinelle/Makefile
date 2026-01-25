@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2025/11/29 07:14:59 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2026/01/25 23:50:17 wiz Exp $
 
-DISTNAME=	coccinelle-1.1.1
-PKGREVISION=	2
+DISTNAME=	coccinelle-1.3.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coccinelle/}
 
@@ -11,12 +10,7 @@ COMMENT=	Tool for writing and applying semantic patches
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
-
-# use included version, pkgsrc version makes ocamlopt dump core
-#DEPENDS+=		menhir>=20071212:../../devel/menhir
-
-# gmake[3]: *** No rule to make target 'stdcompat__root.cmt', needed by 'all-am'.  Stop.
-MAKE_JOBS_SAFE=		no
+TOOL_DEPENDS+=	menhir>=20071212:../../devel/menhir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf automake gmake pkg-config
