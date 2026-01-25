@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.582 2026/01/25 06:56:16 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.583 2026/01/25 06:58:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -760,3 +760,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/glew to 2.3.1 [adam 2026-01-24]
 	Updated devel/py-greenlet to 3.3.1 [adam 2026-01-24]
 	Updated devel/p5-EV to 4.37 [wiz 2026-01-25]
+	Updated devel/p5-CPAN-Meta-Requirements to 2.144 [wiz 2026-01-25]
