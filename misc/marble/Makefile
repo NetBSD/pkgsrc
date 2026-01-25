@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.120 2026/01/14 12:57:34 wiz Exp $
+# $NetBSD: Makefile,v 1.121 2026/01/25 04:00:35 markd Exp $
 
 DISTNAME=	marble-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 
 HOMEPAGE=	https://marble.kde.org/
@@ -24,6 +24,10 @@ SUBST_FILES.fix-moc=	_KDE_build/src/apps/*/CMakeFiles/*_autogen.dir/AutogenInfo.
 SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
+.include "../../devel/kf6-kconfig/buildlink3.mk"
+.include "../../devel/kf6-kcoreaddons/buildlink3.mk"
+.include "../../devel/kf6-kcrash/buildlink3.mk"
+.include "../../devel/kf6-ki18n/buildlink3.mk"
 .include "../../devel/kf6-kparts/buildlink3.mk"
 .include "../../devel/kf6-krunner/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
@@ -35,8 +39,8 @@ SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 .include "../../multimedia/phonon-qt6/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../www/qt6-qtwebengine/buildlink3.mk"
+.include "../../x11/plasma6-libplasma/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../x11/qt6-qtserialport/buildlink3.mk"
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt6WebEngineWidgets:BOOL=TRUE
-#.include "../../www/qt6-qtwebengine/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
