@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.599 2026/01/25 08:15:02 adam Exp $
+$NetBSD: CHANGES-2026,v 1.600 2026/01/25 08:27:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -779,3 +779,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated fonts/harfbuzz-icu to 12.3.2 [adam 2026-01-25]
 	Updated multimedia/assimp to 6.0.4 [adam 2026-01-25]
 	Updated devel/py-zope.testrunner to 8.2 [adam 2026-01-25]
+	Updated inputmethod/librime to 1.16.1 [adam 2026-01-25]
+	Updated devel/py-cucumber-expressions to 18.1.0 [adam 2026-01-25]
