@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2025/07/26 06:36:33 vins Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/01/25 16:05:43 vins Exp $
 include/grapheme.h
-lib/libgrapheme.2.0.2
+lib/libgrapheme.${PKGVERSION}
 lib/libgrapheme.a
 lib/libgrapheme.so
-lib/libgrapheme.so.2
-lib/libgrapheme.so.2.0
+lib/libgrapheme.so.3
+lib/libgrapheme.so.3.0
 lib/pkgconfig/libgrapheme.pc
 man/man3/grapheme_decode_utf8.3
 man/man3/grapheme_encode_utf8.3

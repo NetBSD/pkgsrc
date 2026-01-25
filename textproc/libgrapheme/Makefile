@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/09/08 08:22:16 vins Exp $
+# $NetBSD: Makefile,v 1.4 2026/01/25 16:05:43 vins Exp $
 
-DISTNAME=	libgrapheme-2.0.2
-PKGREVISION=	1
+DISTNAME=	libgrapheme-3.0.0
 CATEGORIES=	textproc devel
 MASTER_SITES=	https://dl.suckless.org/libgrapheme/
 
