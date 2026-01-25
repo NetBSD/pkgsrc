@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.605 2026/01/25 11:12:49 leot Exp $
+$NetBSD: CHANGES-2026,v 1.606 2026/01/25 11:23:36 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -787,3 +787,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/rofi to 2.0.0 [kikadf 2026-01-25]
 	Updated devel/opa to 1.12.3 [leot 2026-01-25]
 	Updated devel/regal to 0.38.1 [leot 2026-01-25]
+	Updated net/k6 to 1.5.0 [leot 2026-01-25]
