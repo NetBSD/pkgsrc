@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4575 2026/01/25 07:43:27 wiz Exp $
+# $NetBSD: Makefile,v 1.4576 2026/01/25 13:10:22 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2549,7 +2549,6 @@ SUBDIR+=	py-babel
 SUBDIR+=	py-backcall
 SUBDIR+=	py-backports
 SUBDIR+=	py-backports.shutil_get_terminal_size
-SUBDIR+=	py-backports_abc
 SUBDIR+=	py-bech32
 SUBDIR+=	py-behave
 SUBDIR+=	py-beniget
