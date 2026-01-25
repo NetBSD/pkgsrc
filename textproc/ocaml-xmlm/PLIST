@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2026/01/25 13:46:01 alnsn Exp $
+bin/xmltrip
+${OCAML_SITELIB}/xmlm/META
+${OCAML_SITELIB}/xmlm/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/xmlm/xmlm.a
+${OCAML_SITELIB}/xmlm/xmlm.cma
+${OCAML_SITELIB}/xmlm/xmlm.cmi
+${OCAML_SITELIB}/xmlm/xmlm.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/xmlm/xmlm.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/xmlm/xmlm.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/xmlm/xmlm.cmxs
+${OCAML_SITELIB}/xmlm/xmlm.mli
+share/doc/xmlm/CHANGES.md
+share/doc/xmlm/LICENSE.md
+share/doc/xmlm/README.md
+share/doc/xmlm/examples.ml
+share/doc/xmlm/odoc-pages/index.mld
+share/doc/xmlm/xhtml.ml
