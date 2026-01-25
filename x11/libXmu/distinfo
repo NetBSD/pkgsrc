@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2024/04/16 21:18:47 wiz Exp $
+$NetBSD: distinfo,v 1.14 2026/01/25 07:45:26 wiz Exp $
 
-BLAKE2s (libXmu-1.2.1.tar.xz) = 59f15e1d1867baab952c778540763cbb419696e8fa636172dcf464a7b8491a6c
-SHA512 (libXmu-1.2.1.tar.xz) = 05a30e5961e00e940ad7ec4eb94ec482b5cbe808585972bf70c849333af3fddf4ae4bd87895d706507fb3a94ed0fb73ea161e0e27dc2840323a1a1af49c0e8a3
-Size (libXmu-1.2.1.tar.xz) = 364888 bytes
+BLAKE2s (libXmu-1.3.0.tar.xz) = aff24fb6e5512bb5accb1a6749526b2b620a5f14c11737b2a84b6adade41b3cf
+SHA512 (libXmu-1.3.0.tar.xz) = 38bad3d975017fada13e90ae13ef8db4cb1ed5063cd3b3ae0acddfa77443265e33d0d3397cd070a0c78d92281d16445944e3f19828ff467c21da69db0249f3fa
+Size (libXmu-1.3.0.tar.xz) = 374056 bytes
