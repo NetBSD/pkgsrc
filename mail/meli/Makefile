@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2026/01/07 08:47:47 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/01/25 17:31:17 vins Exp $
 
-DISTNAME=	v0.8.12
+DISTNAME=	v0.8.13
 PKGNAME=	${DISTNAME:S|^v|meli-|}
-PKGREVISION=	3
 CATEGORIES=	mail news
 DIST_SUBDIR=	${PKGNAME_NOREV}
 MASTER_SITES=	https://git.meli-email.org/meli/meli/archive/
@@ -50,8 +49,8 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man7 ${DOCDIR}
 post-patch:
 	@${STEP_MSG} "Patching vendor crates"
 .for i in ${VENDORPATCH}
-	@${STEP_MSG} "Applying pkgsrc patch ${FILESDIR}/${i}"
-	${RUN}${CP} ${FILESDIR}/${i} ${VENDORSRC}
+	@${STEP_MSG} "Applying pkgsrc patch ${PATCHDIR}/vendor/${i}"
+	${RUN}${CP} ${PATCHDIR}/vendor/${i} ${VENDORSRC}
 	${RUN}cd ${VENDORSRC} && \
 	  ${PATCH} -b -p0 < ${VENDORSRC}/${i}
 .endfor
@@ -72,8 +71,6 @@ do-install:
 
 post-install:
 	${INSTALL_DATA} ${PKG_DOCS:S|^|${WRKSRC}/|}		\
-		${DESTDIR}${PREFIX}/${DOCDIR}
-	${INSTALL_DATA} ${FILESDIR}/README.pkgsrc		\
 		${DESTDIR}${PREFIX}/${DOCDIR}
 	${RUN}cd ${WRKSRC}/meli/docs &&				\
 		${PAX} -rw -pm samples ${DESTDIR}${PREFIX}/${DOCDIR}

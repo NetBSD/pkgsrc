@@ -1,19 +1,18 @@
-$NetBSD: patch-meli_Cargo.toml,v 1.2 2024/11/28 08:46:12 pin Exp $
+$NetBSD: patch-meli_Cargo.toml,v 1.3 2026/01/25 17:31:18 vins Exp $
 
 Avoid static linking of vendored libraries.
 
---- meli/Cargo.toml.orig	2024-11-27 21:55:37.478773090 +0000
+--- meli/Cargo.toml.orig	2026-01-04 12:37:15.000000000 +0000
 +++ meli/Cargo.toml
-@@ -50,7 +50,7 @@ toml = { version = "0.8", default-featur
- xdg = { version = "2.1.0" }
- 
- [features]
--default = ["sqlite3", "notmuch", "smtp", "dbus-notifications", "gpgme", "cli-docs", "jmap", "static"]
-+default = ["sqlite3", "notmuch", "smtp", "dbus-notifications", "gpgme", "cli-docs", "jmap"]
+@@ -31,7 +31,6 @@ default = [
+     "gpgme",
+     "cli-docs",
+     "jmap",
+-    "static",
+ ]
  notmuch = ["melib/notmuch"]
  jmap = ["melib/jmap"]
- sqlite3 = ["melib/sqlite3"]
-@@ -66,7 +66,7 @@ http-static = ["melib/http-static"]
+@@ -48,7 +47,7 @@ http-static = ["melib/http-static"]
  sqlite3-static = ["melib/sqlite3-static"]
  dbus-static = ["dep:notify-rust", "notify-rust?/d_vendored"]
  libz-static = ["dep:libz-sys", "libz-sys?/static"]
