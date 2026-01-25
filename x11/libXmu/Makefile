@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/04/16 21:18:47 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/01/25 07:45:26 wiz Exp $
 
-DISTNAME=		libXmu-1.2.1
+DISTNAME=		libXmu-1.3.0
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.xz
