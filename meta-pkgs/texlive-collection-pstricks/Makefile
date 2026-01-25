@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2025/05/13 11:56:56 markd Exp $
+# $NetBSD: Makefile,v 1.21 2026/01/25 10:15:38 markd Exp $
 
 DISTNAME=	collection-pstricks
 PKGNAME=	texlive-${DISTNAME}-2025pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	65367
+TEXLIVE_REV=	77232
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -52,11 +52,13 @@ DEPENDS+=	tex-pst-eps-[0-9]*:../../graphics/tex-pst-eps
 DEPENDS+=	tex-pst-fill-[0-9]*:../../graphics/tex-pst-fill
 # depend pst-fit
 # depend pst-flags
+# depend pst-fourbarlinkage
 # depend pst-fr3d
 # depend pst-fractal
 # depend pst-fun
 # depend pst-func
 # depend pst-gantt
+# depend pst-gears
 DEPENDS+=	tex-pst-geo-[0-9]*:../../geography/tex-pst-geo
 # depend pst-geometrictools
 DEPENDS+=	tex-pst-gr3d-[0-9]*:../../graphics/tex-pst-gr3d
@@ -66,6 +68,7 @@ DEPENDS+=	tex-pst-hsb-[0-9]*:../../graphics/tex-pst-hsb
 # depend pst-infixplot
 # depend pst-intersect
 # depend pst-jtree
+# depend pst-kepler
 # depend pst-knot
 # depend pst-labo
 # depend pst-layout
@@ -74,10 +77,12 @@ DEPENDS+=	tex-pst-lens-[0-9]*:../../graphics/tex-pst-lens
 # depend pst-lsystem
 # depend pst-magneticfield
 # depend pst-marble
+# depend pst-massspring
 DEPENDS+=	tex-pst-math-[0-9]*:../../graphics/tex-pst-math
 # depend pst-mirror
 # depend pst-moire
 DEPENDS+=	tex-pst-node-[0-9]*:../../graphics/tex-pst-node
+# depend pst-nutation
 # depend pst-ob3d
 # depend pst-ode
 # depend pst-optexp
@@ -103,6 +108,7 @@ DEPENDS+=	tex-pst-slpe-[0-9]*:../../graphics/tex-pst-slpe
 # depend pst-solides3d
 # depend pst-soroban
 # depend pst-spectra
+# depend pst-sphericaltrochoid
 # depend pst-spinner
 # depend pst-stru
 # depend pst-support
