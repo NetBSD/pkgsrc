@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.11 2025/12/21 13:35:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/01/25 01:12:31 markd Exp $
 bin/calgebra
+bin/kalgebra
 bin/kalgebramobile
+share/applications/org.kde.kalgebra.desktop
 share/applications/org.kde.kalgebramobile.desktop
 share/doc/HTML/ca/kalgebra/commands.docbook
 share/doc/HTML/ca/kalgebra/index.cache.bz2
@@ -62,6 +64,7 @@ share/doc/HTML/uk/kalgebra/kalgebra-dictionary-window.png
 share/doc/HTML/uk/kalgebra/kalgebra-main-window.png
 share/icons/hicolor/64x64/apps/kalgebra.png
 share/icons/hicolor/scalable/apps/kalgebra.svgz
+share/katepart5/syntax/kalgebra.xml
 share/locale/ar/LC_MESSAGES/kalgebra.mo
 share/locale/ar/LC_MESSAGES/kalgebramobile.mo
 share/locale/ast/LC_MESSAGES/kalgebra.mo
@@ -167,4 +170,8 @@ share/locale/zh_CN/LC_MESSAGES/kalgebra.mo
 share/locale/zh_CN/LC_MESSAGES/kalgebramobile.mo
 share/locale/zh_TW/LC_MESSAGES/kalgebra.mo
 share/locale/zh_TW/LC_MESSAGES/kalgebramobile.mo
+share/metainfo/org.kde.kalgebra.appdata.xml
 share/metainfo/org.kde.kalgebramobile.appdata.xml
+share/plasma/plasmoids/org.kde.graphsplasmoid/contents/ui/config.ui
+share/plasma/plasmoids/org.kde.graphsplasmoid/contents/ui/main.qml
+share/plasma/plasmoids/org.kde.graphsplasmoid/metadata.json
