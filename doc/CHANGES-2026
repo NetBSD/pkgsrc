@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.626 2026/01/25 16:10:29 vins Exp $
+$NetBSD: CHANGES-2026,v 1.627 2026/01/25 16:25:24 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -820,3 +820,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/fastfetch to 2.58.0 [vins 2026-01-25]
 	Updated textproc/libgrapheme to 3.0.0 [vins 2026-01-25]
 	Updated textproc/libgrapheme to 3.0.0 [vins 2026-01-25]
+	Updated mail/mailutils to 3.21 [vins 2026-01-25]
