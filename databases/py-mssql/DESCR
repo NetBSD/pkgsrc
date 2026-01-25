@@ -1,9 +1,0 @@
-This module provides access to MS SQL Servers from Python scripts.
-
-Features:
- - Supports connecting to Microsoft SQL 2000 and SQL 2005 servers,
-   all editions and service pack levels
- - Supports named instances and non-standard port numbers
- - Multiple Query/Multiple Result
- - Not using Win32 ODBC (using MSSQL DB-LIB)
- - Supports "almost all" of the DB-API 2.0
