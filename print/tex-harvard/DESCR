@@ -1,4 +1,4 @@
-This is a re-implementation, for LaTeX 2e, of the original
+This is a re-implementation, for LaTeX2e, of the original
 Harvard package. The bundle contains the LaTeX package, several
 BibTeX styles, and a Perl package for use with
 LaTeX2HTML. Harvard is an author-year citation style (all but
