@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.608 2026/01/25 12:06:16 adam Exp $
+$NetBSD: CHANGES-2026,v 1.609 2026/01/25 12:10:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -794,3 +794,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed databases/py-cdb [adam 2026-01-25]
 	Removed databases/py-ckanclient [adam 2026-01-25]
 	Removed textproc/queequeg [adam 2026-01-25]
+	Removed databases/py-cx_Oracle [adam 2026-01-25]
+	Removed databases/py-mssql [adam 2026-01-25]
+	Removed databases/py-PgSQL [adam 2026-01-25]
+	Removed databases/py-pgnotify [adam 2026-01-25]
