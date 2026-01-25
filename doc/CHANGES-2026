@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.602 2026/01/25 09:09:53 tron Exp $
+$NetBSD: CHANGES-2026,v 1.603 2026/01/25 09:34:01 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -784,3 +784,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/minizip-ng to 4.1.0 [adam 2026-01-25]
 	Updated devel/py-pyparsing to 3.3.2 [adam 2026-01-25]
 	Updated mail/mutt to 2.3.0 [tron 2026-01-25]
+	Updated x11/rofi to 2.0.0 [kikadf 2026-01-25]
