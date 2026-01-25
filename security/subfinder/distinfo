@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2026/01/07 11:58:46 leot Exp $
+$NetBSD: distinfo,v 1.11 2026/01/25 13:43:03 leot Exp $
 
 BLAKE2s (aead.dev_minisign_@v_v0.2.0.mod) = 378e96bd552c55898e408f5f6ab9b753f53dab43e68646c2ed7e283248f10e0b
 SHA512 (aead.dev_minisign_@v_v0.2.0.mod) = abd63ded5a0e8566efc1effb97aa35dffe4269c917e0affae057f7e642ec591620f5169096ab4a5e9bd6bed61cac1f00cb6b2d0bc440418e3289d5f2fae2dc14
@@ -1830,6 +1830,6 @@ Size (rsc.io_quote_v3_@v_v3.1.0.mod) = 55 bytes
 BLAKE2s (rsc.io_sampler_@v_v1.3.0.mod) = 6d4d3ba7c381b9a923679a73562a7cf3d6b7d49f94f585f274c8955bb1b932b4
 SHA512 (rsc.io_sampler_@v_v1.3.0.mod) = 2137507eb25fbae419605e0cd6bca4cfa584110eebc276cd759a4dcb6f97e52928e5b2d9b276e76bcabcec3bbfc2c42f97fa29f54695d27fb00f9423e1638863
 Size (rsc.io_sampler_@v_v1.3.0.mod) = 88 bytes
-BLAKE2s (subfinder-2.11.0.tar.gz) = 750006a7706e6c9fbae4a2171a4bba3fc13e6270db33d6cab5eab5d923b17902
-SHA512 (subfinder-2.11.0.tar.gz) = 84319d19c752cfd46b7c9450d61472e8b683f236d0e58f0fde0c9e9d3542d445d54d0ef2987e2b9a76c199a48e48532e4b803f6f424625216e465bb87ac504b4
-Size (subfinder-2.11.0.tar.gz) = 1115648 bytes
+BLAKE2s (subfinder-2.12.0.tar.gz) = 4d881fb8add929af4873663cb258f291b09ebf5bed58ea1ce5d03b88321f52d3
+SHA512 (subfinder-2.12.0.tar.gz) = ba9c96ef3df01c67b34b698024fcef15f5c21852a0bcbcc9a575e07f45836a83a087b2094101328613bb2a080d09f8f3680d381896b05f622688cf742d98b42e
+Size (subfinder-2.12.0.tar.gz) = 1116522 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.10 2026/01/07 11:58:46 leot Exp $
+# $NetBSD: go-modules.mk,v 1.11 2026/01/25 13:43:03 leot Exp $
 
 GO_MODULE_FILES+=	aead.dev/minisign/@v/v0.2.0.mod
 GO_MODULE_FILES+=	aead.dev/minisign/@v/v0.2.0.zip
