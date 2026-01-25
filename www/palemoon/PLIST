@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/12/17 17:23:37 nia Exp $
+@comment $NetBSD: PLIST,v 1.8.2.1 2026/01/25 15:25:36 maya Exp $
 bin/palemoon
 lib/${PKGNAME}/application.ini
 lib/${PKGNAME}/browser/blocklist.xml
@@ -28,8 +28,8 @@ lib/${PKGNAME}/dependentlibs.list
 lib/${PKGNAME}/dictionaries/en-US.aff
 lib/${PKGNAME}/dictionaries/en-US.dic
 lib/${PKGNAME}/fonts/TwemojiMozilla.ttf
-${PLIST.be}lib/${PKGNAME}/icudt63b.dat
-${PLIST.le}lib/${PKGNAME}/icudt63l.dat
+${PLIST.be}lib/${PKGNAME}/icudt78b.dat
+${PLIST.le}lib/${PKGNAME}/icudt78l.dat
 lib/${PKGNAME}/liblgpllibs.so
 lib/${PKGNAME}/libmozavcodec.so
 lib/${PKGNAME}/libmozavutil.so

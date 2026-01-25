@@ -1,28 +1,25 @@
-$NetBSD: distinfo,v 1.34 2025/12/14 18:05:18 martin Exp $
+$NetBSD: distinfo,v 1.34.2.1 2026/01/25 15:25:36 maya Exp $
 
-BLAKE2s (palemoon-33.9.1/icudt63b.dat.gz) = 609cc504b54df324a891aa9531ab069b3699591bf49b989e792479df33262a92
-SHA512 (palemoon-33.9.1/icudt63b.dat.gz) = 514b8bfe28fb54e1e26b9140d4b3065504a0b0284fded121f26c4e0f13697154a54da4a7c85a0fa0b9dae2e5b452aff4df138228c28ed80969ec0ac33b0ad0b2
-Size (palemoon-33.9.1/icudt63b.dat.gz) = 11145931 bytes
-BLAKE2s (palemoon-33.9.1/palemoon.tar.gz) = 0d9dd33ac3f998c6ff74dace7527fbf3ad1024d020cf65989cb62cdab2c6ad61
-SHA512 (palemoon-33.9.1/palemoon.tar.gz) = 37c8d46b9dd3c8050196bc0190464bd0e64f73cf318a75ecb0746823a88372e75f6aa2546fce018fa7d434f762bf3cb71d1e43acc05d00f7aa5020cd3554f76f
-Size (palemoon-33.9.1/palemoon.tar.gz) = 5607390 bytes
-BLAKE2s (palemoon-33.9.1/psutil.tar.gz) = 7a2c5c938910795453cf1cdfd5fbfa4dc8cac15e6eb43a5e9aba91ac032b37ce
-SHA512 (palemoon-33.9.1/psutil.tar.gz) = 95c246ed4ce68a476f83868312101d88dafa9d4cef96ff60af646a443c00e6cc447d37cc1ac4e85224db16c24390575174bb7ef76f48cb839fe2e93749107ffb
-Size (palemoon-33.9.1/psutil.tar.gz) = 274361 bytes
-BLAKE2s (palemoon-33.9.1/uxp.tar.gz) = c0cf9296bb155c55583489939fc1e5dc61f619c0975bbda17718da9e938ab379
-SHA512 (palemoon-33.9.1/uxp.tar.gz) = 8c78942211acf3ed3f01dce45e0b5bfdbef8561598b1e230e0243c3dabdd6779f3a81a6d788619af50bc17cbcd5eff44b20c28270bb6e97443ed85b46082491a
-Size (palemoon-33.9.1/uxp.tar.gz) = 264434768 bytes
+BLAKE2s (palemoon-34.0.1/icudt78b.dat.gz) = f7414c79346600686ea9e0660e2604156b04cf655cb70e04915fdfd15f24ce93
+SHA512 (palemoon-34.0.1/icudt78b.dat.gz) = 5ea8779e6f8809cdd30662da7fc1f578274d8a9ea79ed0f2ae63807bb9ae0bcbe1f8302d4ba4d58d2997d46a3bcb10f0697288b16e19c7cfb5af288358cde314
+Size (palemoon-34.0.1/icudt78b.dat.gz) = 13078670 bytes
+BLAKE2s (palemoon-34.0.1/palemoon.tar.gz) = 7cf13eea3687854ae099ee1840d4ac23ce6f40fcc81873667d5c6fc1522512bf
+SHA512 (palemoon-34.0.1/palemoon.tar.gz) = fdd1a15746cbad13def678303a40a6ac6a2f6574ac6254cd8d6e446c54171599c4a1898efdef0c65ed3f1a64df2dc068740fceb0ea49632cfd22691beb50ba46
+Size (palemoon-34.0.1/palemoon.tar.gz) = 5608375 bytes
+BLAKE2s (palemoon-34.0.1/psutil.tar.gz) = 7a2c5c938910795453cf1cdfd5fbfa4dc8cac15e6eb43a5e9aba91ac032b37ce
+SHA512 (palemoon-34.0.1/psutil.tar.gz) = 95c246ed4ce68a476f83868312101d88dafa9d4cef96ff60af646a443c00e6cc447d37cc1ac4e85224db16c24390575174bb7ef76f48cb839fe2e93749107ffb
+Size (palemoon-34.0.1/psutil.tar.gz) = 274361 bytes
+BLAKE2s (palemoon-34.0.1/uxp.tar.gz) = 16327cf958517a037299bc70a2093bcacf3d226806350275e3b8208f0be252fd
+SHA512 (palemoon-34.0.1/uxp.tar.gz) = e80679c00c43eb5cbeae007931a95f1497262bcadb541af32b078de0188eae867757575f4d1f5468c97843444de3c18690169353e2cff7ad817faf71dbc4d2ee
+Size (palemoon-34.0.1/uxp.tar.gz) = 281248841 bytes
 SHA1 (patch-palemoon_app_profile_palemoon.js) = 0687dccbb5adff1ee0ea71fef4ebd46174a434d4
-SHA1 (patch-platform__ipc__chromium__src__third__party__libevent__kqueue.c) = 82cbbcd23a193a5c27311380b795fc3ff9f82602
-SHA1 (patch-platform__media__ffvpx__config_unix_ppc.h) = 38a984034aa9e707659dea784e54016d7adc1900
+SHA1 (patch-platform__ipc__chromium__src__third__party__libevent__kqueue.c) = 4064ba31a324ed9fdcae64274b6a632be7d45fa0
+SHA1 (patch-platform__media__ffvpx__config_unix_ppc.h) = 731460ac18461aa90cfbb137e34904b0a2894d77
 SHA1 (patch-platform_build_moz.build) = 7b45929d58ad0963423f7c859922df6d98413c67
 SHA1 (patch-platform_gfx_angle_src_libANGLE_renderer_gl_glx_FunctionsGLX.cpp) = 502d79eb3ef41e08328bbac9fbb5048b96660bbb
-SHA1 (patch-platform_intl_icu_source_configure) = 87d19e9212b4340d9b052b5a89be84432ad1cff2
 SHA1 (patch-platform_ipc_chromium_src_base_atomicops.h) = ab4b489e9f9c22a861a275924ef34a909d210828
 SHA1 (patch-platform_ipc_chromium_src_base_atomicops__internals__arm__gcc.h) = f33b6c391689c52d0a6855e29ff25d863a7f15e5
 SHA1 (patch-platform_layout_base_FrameProperties.h) = 400fca775e5bdf2595fbd02ca8679b15988a66d0
-SHA1 (patch-platform_media_ffvpx_config.h) = 7d42a3cbcb10818b2d2d890a6fcc9ec7b6b05ec1
-SHA1 (patch-platform_media_ffvpx_config__unix__sparc64.h) = bbecefd480ab7bc20206bd46ef918fcedbd700f5
 SHA1 (patch-platform_media_libaom_config_linux_arm_config_aom__config.h) = 69ef22fe9892c2288accb6eb00b4533d8cee0299
 SHA1 (patch-platform_media_libcubeb_src_cubeb__sun.c) = ce27774d772d65fa60b6be5bee82fbe4f787f3d1
 SHA1 (patch-platform_media_libtheora_moz.build) = a7bad662dabb87c6a85542a4a50f8ed693064bc6

@@ -1,3 +1,7 @@
+$NetBSD: patch-platform__media__ffvpx__config_unix_ppc.h,v 1.1.2.1 2026/01/25 15:25:36 maya Exp $
+
+NetBSD/powerpc support.
+
 --- platform/media/ffvpx/config_unix_ppc.h.orig	2025-10-15 19:46:52.000000000 +0200
 +++ platform/media/ffvpx/config_unix_ppc.h	2025-12-04 09:40:13.469799012 +0100
 @@ -339,10 +339,19 @@
