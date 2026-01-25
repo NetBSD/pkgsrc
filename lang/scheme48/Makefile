@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2018/07/04 13:40:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.44 2026/01/25 23:12:38 gdt Exp $
 
 DISTNAME=		scheme48-1.9.2
 CATEGORIES=		lang
@@ -7,6 +7,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://s48.org/
+#HOMEPAGE+=		https://codeberg.org/s48/scheme48
 COMMENT=		The Scheme Underground implementation of R5RS
 LICENSE=		modified-bsd
 
