@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.17 2026/01/07 19:33:28 adam Exp $
+$NetBSD: distinfo,v 1.18 2026/01/25 08:21:57 adam Exp $
 
-BLAKE2s (librime-1.16.0.tar.gz) = 6d22a51c22136b584a25c5d060dd27e4b780aee87f23b11060c19481f5d3df7c
-SHA512 (librime-1.16.0.tar.gz) = a7d464e59db264dc47b11090d81b3ce71ea044adec856e36c1603382d292dfe9afc6a80f4bec957595ec9213523ccfdff20503f592eb4e0f8b86d8b14ced09ce
-Size (librime-1.16.0.tar.gz) = 2664891 bytes
+BLAKE2s (librime-1.16.1.tar.gz) = 2cd60a3c63ce44bdab75496ae6d5f07deb86daf7374af86104a0a80c246af4a8
+SHA512 (librime-1.16.1.tar.gz) = ff48cd3d8a6b39c998735522160e1e213a978bc15e439412a417023042e9c623f0b98ec98c70bd21f0bb204d5197cdc6660cef202da4032ea6a3e4ec99570369
+Size (librime-1.16.1.tar.gz) = 2649730 bytes
 SHA1 (patch-CMakeLists.txt) = dc01d9f1d34d4d1ece83da133dac8efe46089830
 SHA1 (patch-plugins_CMakeLists.txt) = ab0b528c0a9219c52d0a8ca596209799db9de14a
