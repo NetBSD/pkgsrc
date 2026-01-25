@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.635 2026/01/25 23:06:53 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.636 2026/01/25 23:08:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -829,3 +829,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/dunst to 1.13.1 [wiz 2026-01-25]
 	Updated textproc/jansson to 2.15.0 [wiz 2026-01-25]
 	Updated www/nghttp3 to 1.15.0 [wiz 2026-01-25]
+	Updated net/ngtcp2 to 1.20.0 [wiz 2026-01-25]
