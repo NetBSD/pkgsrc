@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2022/01/22 14:28:27 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/01/25 07:33:41 wiz Exp $
 
 DISTNAME=	pycrack-0.01
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/py//}
 PKGREVISION=	3
 CATEGORIES=	security python
-MASTER_SITES=	http://www.digitalevacuation.org/pycrack/
+#MASTER_SITES=	http://www.digitalevacuation.org/pycrack/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.digitalevacuation.org/
+#HOMEPAGE=	https://www.digitalevacuation.org/
 COMMENT=	Python interface to cracklib
 LICENSE=	gnu-gpl-v2
 
