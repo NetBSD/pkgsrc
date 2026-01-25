@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2025/09/21 06:43:06 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/01/25 06:56:06 wiz Exp $
 
-DISTNAME=	EV-4.35
+DISTNAME=	EV-4.37
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/ML/MLEHMANN/}
