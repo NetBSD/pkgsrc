@@ -5,4 +5,4 @@ optional extension that adds computation of sin, cos, log,
 sqrt, exp, powers and angles. These are also exact when
 theoretically possible and are otherwise accurate to at least 7
 decimal places. In addition, the package provides a stack-based
-programing environment.
+programming environment.
