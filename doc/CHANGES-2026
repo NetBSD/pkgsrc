@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.609 2026/01/25 12:10:55 adam Exp $
+$NetBSD: CHANGES-2026,v 1.610 2026/01/25 12:16:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -798,3 +798,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed databases/py-mssql [adam 2026-01-25]
 	Removed databases/py-PgSQL [adam 2026-01-25]
 	Removed databases/py-pgnotify [adam 2026-01-25]
+	Removed databases/py-sqlite2 [adam 2026-01-25]
+	Removed databases/py-sybase [adam 2026-01-25]
+	Removed databases/py-table [adam 2026-01-25]
+	Removed databases/py-tokyocabinet [adam 2026-01-25]
+	Removed databases/py-unicodecsv [adam 2026-01-25]
