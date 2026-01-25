@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2026/01/25 20:41:40 alnsn Exp $
+# $NetBSD: buildlink3.mk,v 1.1 2026/01/25 20:44:40 alnsn Exp $
 
 BUILDLINK_TREE+=	ocaml-ounit2
 
