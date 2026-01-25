@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/10/23 20:36:33 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/01/25 14:34:43 alnsn Exp $
 
 GITHUB_PROJECT=	lwt_glib
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ocsigen/lwt_glib/
-COMMENT=	SSL module for ocaml-lwt
+COMMENT=	GLib integration for ocaml-lwt
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config
