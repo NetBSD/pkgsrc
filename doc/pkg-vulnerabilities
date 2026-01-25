@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.721 2026/01/22 09:37:24 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.722 2026/01/25 21:02:28 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29507,3 +29507,31 @@ ImageMagick<7.1.2.13	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/C
 ImageMagick6<6.9.13.38	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-23952
 py{27,310,311,312,313,314}-test-[0-9]*	insecure-temporary-files	https://nvd.nist.gov/vuln/detail/CVE-2025-71176
 py{27,310,311,312,313,314}-wheel<0.46.2	path-traversal			https://nvd.nist.gov/vuln/detail/CVE-2026-24049
+7-zip<25.00	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-11002
+avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-24401
+docopt.cpp-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-67125
+epiphany<48.1	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2025-3839
+expat<2.7.4	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-24515
+gimp-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-15059
+gitea<1.25.4	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2026-0798
+gitea<1.25.4	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2026-20736
+gitea<1.25.4	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2026-20750
+gitea<1.25.4	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-20800
+gitea<1.25.4	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2026-20883
+gitea<1.25.4	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2026-20888
+gitea<1.25.4	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2026-20897
+gitea<1.25.4	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2026-20904
+gitea<1.25.4	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2026-20912
+moodle<5.0.4	code-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-67847
+nodejs20-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0775
+nodejs22-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0775
+nodejs24-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0775
+nodejs-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0775
+py{27,310,311,312,313,314}-orjson-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-67221
+py{27,310,311,312,313,314}-protobuf-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-0994
+python310-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-1299
+python311-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-1299
+python312-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-1299
+python313-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-1299
+python314-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-1299
+sentencepiece<0.2.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-1260
