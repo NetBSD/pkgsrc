@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1565 2026/01/22 07:28:00 taca Exp $
+# $NetBSD: Makefile,v 1.1566 2026/01/25 07:30:59 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1063,7 +1063,6 @@ SUBDIR+=	py-class-doc
 SUBDIR+=	py-cmTemplate
 SUBDIR+=	py-cmarkgfm
 SUBDIR+=	py-cmudict
-SUBDIR+=	py-color
 SUBDIR+=	py-colored
 SUBDIR+=	py-commonmark
 SUBDIR+=	py-creole
