@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2025/06/02 00:40:35 gutteridge Exp $
+$NetBSD: distinfo,v 1.10 2026/01/25 09:33:36 kikadf Exp $
 
-BLAKE2s (rofi-1.7.9.1.tar.xz) = 124322ae4c3c205de010fa153a5f20025c160c2dae69b9c921a0edb7681c3758
-SHA512 (rofi-1.7.9.1.tar.xz) = 0ded093b5a50ec2e547f5a35c4972690250ad260025ce1ef7c4736554b05dde9c559508b4e68ef186f5270bcd9d4ed8804e7c790690f37cf1a499491011933c9
-Size (rofi-1.7.9.1.tar.xz) = 813356 bytes
+BLAKE2s (rofi-2.0.0.tar.xz) = 51f50c6230e4e47ca657f3270960a6d6fa06f86e7b6b0a97ee7e45c1617dd46c
+SHA512 (rofi-2.0.0.tar.xz) = 0531f7da2a6e363b2c97c47778cadc4a84eb58903ea91ce683ff98d7c6e23172fa0df59a42f7236a4a0e80020c21c72cbc126ffe260491082ab9cc19ef6673d5
+Size (rofi-2.0.0.tar.xz) = 682792 bytes
