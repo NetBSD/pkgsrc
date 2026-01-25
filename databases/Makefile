@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.740 2026/01/25 12:02:56 adam Exp $
+# $NetBSD: Makefile,v 1.741 2026/01/25 12:10:37 adam Exp $
 
 COMMENT=	Databases
 
@@ -366,7 +366,6 @@ SUBDIR+=	postgresql18-server
 SUBDIR+=	prometheus
 SUBDIR+=	prometheus-cpp
 SUBDIR+=	pxtools
-SUBDIR+=	py-PgSQL
 SUBDIR+=	py-agate-dbf
 SUBDIR+=	py-agate-excel
 SUBDIR+=	py-agate-sql
@@ -377,7 +376,6 @@ SUBDIR+=	py-asyncpg
 SUBDIR+=	py-barman
 SUBDIR+=	py-bsddb3
 SUBDIR+=	py-cassandra-driver
-SUBDIR+=	py-cx_Oracle
 SUBDIR+=	py-dbf
 SUBDIR+=	py-dbfread
 SUBDIR+=	py-dsinternals
@@ -391,13 +389,11 @@ SUBDIR+=	py-ldap3
 SUBDIR+=	py-lmdb
 SUBDIR+=	py-metakit
 SUBDIR+=	py-mongo
-SUBDIR+=	py-mssql
 SUBDIR+=	py-multidict
 SUBDIR+=	py-mysql-connector
 SUBDIR+=	py-mysqlclient
 SUBDIR+=	py-orderedmultidict
 SUBDIR+=	py-peewee
-SUBDIR+=	py-pgnotify
 SUBDIR+=	py-pickleshare
 SUBDIR+=	py-postgresql
 SUBDIR+=	py-psycopg2
