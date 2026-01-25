@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2026/01/13 12:35:39 adam Exp $
+# $NetBSD: Makefile,v 1.41 2026/01/25 23:12:24 wiz Exp $
 
-DISTNAME=	httplib2-0.31.1
+DISTNAME=	httplib2-0.31.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httplib2/}
@@ -25,7 +25,7 @@ USE_LANGUAGES=	# none
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
-# as of 0.31.0
+# as of 0.31.2
 # 1 failed, 467 passed, 6 skipped, 1 xfailed, 1 xpassed, 16 warnings
 
 # needs unpackaged socks package
