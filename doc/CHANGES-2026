@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.655 2026/01/26 00:17:41 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.656 2026/01/26 08:21:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -849,3 +849,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/libxkbfile to 1.2.0 [wiz 2026-01-26]
 	Updated graphics/gimp to 3.0.8 [wiz 2026-01-26]
 	Updated x11/libXpm to 3.5.18 [wiz 2026-01-26]
+	Updated devel/py-setuptools to 80.10.2 [adam 2026-01-26]
+	Updated devel/py-wheel to 0.46.3 [adam 2026-01-26]
