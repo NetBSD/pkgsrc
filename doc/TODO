@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26726 2026/01/26 10:52:04 wiz Exp $
+$NetBSD: TODO,v 1.26727 2026/01/26 10:54:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1131,7 +1131,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-omniORBpy-3.7
 	o py-pandas-3.0.0
 	o py-pdf-parser-0.7.4
-	o py-poetry-core-2.3.0
 	o py-postgresql-5.1.2
 	o py-pytokens-0.4.0
 	o py-sbws-1.1.0
