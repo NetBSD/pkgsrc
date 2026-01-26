@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2026/01/15 19:54:49 bsiegert Exp $
+# $NetBSD: Makefile,v 1.17 2026/01/26 19:49:19 bsiegert Exp $
 
 DISTNAME=	scaleway-cli-2.42.0
 PKGREVISION=	6
@@ -11,12 +11,12 @@ HOMEPAGE=	https://www.scaleway.com/en/cli/
 COMMENT=	Command Line Interface for Scaleway
 LICENSE=	apache-2.0
 
-GO_BUILD_PATTERN+=	-ldflags ' \
+GOFLAGS+=		-ldflags ' \
 			-X main.Version=${PKGVERSION_NOREV} \
 			-X main.GitCommit= \
 			-X main.GitBranch= \
 			-X main.BuildDate='
-GO_BUILD_PATTERN+=	./cmd/scw
+GO_BUILD_PATTERN=	./cmd/scw
 
 .include "go-modules.mk"
 

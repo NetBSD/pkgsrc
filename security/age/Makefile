@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2026/01/15 19:54:51 bsiegert Exp $
+# $NetBSD: Makefile,v 1.58 2026/01/26 19:49:20 bsiegert Exp $
 
 DISTNAME=		age-1.2.1
 PKGREVISION=		10
@@ -13,7 +13,7 @@ LICENSE=		modified-bsd
 
 .include "go-modules.mk"
 
-GO_BUILD_PATTERN=	-ldflags "-X main.Version=v${PKGVERSION_NOREV}"
+GOFLAGS=		-ldflags "-X main.Version=v${PKGVERSION_NOREV}"
 GO_BUILD_PATTERN+=	filippo.io/age/cmd/...
 
 .include "../../lang/go/go-module.mk"

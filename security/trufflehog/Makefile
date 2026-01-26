@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2026/01/15 19:54:54 bsiegert Exp $
+# $NetBSD: Makefile,v 1.42 2026/01/26 19:49:20 bsiegert Exp $
 
 DISTNAME=	trufflehog-3.90.5
 PKGREVISION=	5
@@ -11,8 +11,9 @@ HOMEPAGE=	https://github.com/trufflesecurity/trufflehog
 COMMENT=	Find credentials all over the place
 LICENSE=	gnu-agpl-v3
 
-GO_BUILD_PATTERN+=	-ldflags ' \
+GOFLAGS+=		-ldflags ' \
 			-X github.com/trufflesecurity/trufflehog/v3/pkg/version.BuildVersion=${GITHUB_TAG}'
+GO_BUILD_PATTERN=	.
 
 # github.com/wasilibs/go-re2 needs NOT_PAX_MPROTECT_SAFE, stick to Go regexp to
 # avoid that.

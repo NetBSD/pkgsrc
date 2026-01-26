@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2026/01/15 19:54:57 bsiegert Exp $
+# $NetBSD: Makefile,v 1.15 2026/01/26 19:49:20 bsiegert Exp $
 
 DISTNAME=		ov-0.50.2
 PKGREVISION=		1
@@ -15,7 +15,8 @@ WRKSRC=			${WRKDIR}
 
 .include "go-modules.mk"
 
-GO_BUILD_PATTERN=	-ldflags "-X main.Version=${PKGVERSION_NOREV}" ./...
+GOFLAGS=		-ldflags "-X main.Version=${PKGVERSION_NOREV}"
+GO_BUILD_PATTERN=	./...
 
 AUTO_MKDIRS=		yes
 

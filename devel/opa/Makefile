@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2026/01/25 11:08:11 leot Exp $
+# $NetBSD: Makefile,v 1.75 2026/01/26 19:49:18 bsiegert Exp $
 
 DISTNAME=	opa-1.12.3
 CATEGORIES=	devel
@@ -10,12 +10,13 @@ HOMEPAGE=	https://www.openpolicyagent.org/
 COMMENT=	Open source, general-purpose policy engine
 LICENSE=	apache-2.0
 
-GO_BUILD_PATTERN+=	-ldflags ' \
+GOFLAGS+=		-ldflags ' \
 			-X github.com/open-policy-agent/opa/version.Version=${PKGVERSION_NOREV} \
 			-X github.com/open-policy-agent/opa/version.Vcs= \
 			-X github.com/open-policy-agent/opa/version.Timestamp= \
 			-X github.com/open-policy-agent/opa/version.Hostname= \
 			-X github.com/open-policy-agent/opa/internal/report.ExternalServiceURL='
+GO_BUILD_PATTERN=	.
 
 .include "go-modules.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2026/01/15 19:54:59 bsiegert Exp $
+# $NetBSD: Makefile,v 1.133 2026/01/26 19:49:21 bsiegert Exp $
 
 DISTNAME=	hugo-0.154.5
 PKGNAME=	go-${DISTNAME}
@@ -13,7 +13,8 @@ HOMEPAGE=	https://gohugo.io/
 COMMENT=	Fast & Modern Static Website Engine
 LICENSE=	apache-2.0
 
-GO_BUILD_PATTERN=	-tags "extended"
+GOFLAGS=		-tags "extended"
+GO_BUILD_PATTERN=	.
 
 MAKE_ENV+=	"CGO_ENABLED=1"
 MAKE_ENV+=	"CGO_LDFLAGS=-lm"
