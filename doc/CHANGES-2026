@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.663 2026/01/26 10:36:15 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.664 2026/01/26 10:37:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -865,3 +865,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 29.1.0 [pin 2026-01-26]
 	Updated x11/libXvMC to 1.0.15 [wiz 2026-01-26]
 	Updated x11/libXxf86dga to 1.1.7 [wiz 2026-01-26]
+	Updated x11/libXxf86vm to 1.1.7 [wiz 2026-01-26]
