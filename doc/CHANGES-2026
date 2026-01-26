@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.650 2026/01/25 23:59:01 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.651 2026/01/26 00:00:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -844,3 +844,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/libXcomposite to 0.4.7 [wiz 2026-01-25]
 	Updated x11/libXdamage to 1.1.7 [wiz 2026-01-25]
 	Updated x11/libXext to 1.3.7 [wiz 2026-01-25]
+	Updated x11/libXinerama to 1.1.6 [wiz 2026-01-26]
