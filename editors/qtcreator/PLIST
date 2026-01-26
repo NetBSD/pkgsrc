@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/12/15 14:50:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/01/26 20:15:21 adam Exp $
 bin/qtcreator
 bin/qtcreator.sh
 lib/qtcreator/libAdvancedDockingSystem.so.${PKGVERSION}
@@ -193,6 +193,7 @@ share/qtcreator/changelog/changes-17.0.1.md
 share/qtcreator/changelog/changes-17.0.2.md
 share/qtcreator/changelog/changes-18.0.0.md
 share/qtcreator/changelog/changes-18.0.1.md
+share/qtcreator/changelog/changes-18.0.2.md
 share/qtcreator/changelog/changes-2.0.0
 share/qtcreator/changelog/changes-2.0.1
 share/qtcreator/changelog/changes-2.1.0
