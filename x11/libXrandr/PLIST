@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:24:58 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/01/26 10:33:02 wiz Exp $
 include/X11/extensions/Xrandr.h
-lib/libXrandr.la
+lib/libXrandr.so
+lib/libXrandr.so.2
+lib/libXrandr.so.2.2.0
 lib/pkgconfig/xrandr.pc
 man/man3/XRRConfigCurrentConfiguration.3
 man/man3/XRRConfigCurrentRate.3
