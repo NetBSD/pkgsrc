@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.664 2026/01/26 10:37:48 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.665 2026/01/26 10:47:11 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -857,12 +857,9 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/oxipng to 10.1.0 [adam 2026-01-26]
 	Updated devel/cargo-nextest to 0.9.124 [pin 2026-01-26]
 	Updated devel/feluda to 1.11.1 [pin 2026-01-26]
-<<<<<<< CHANGES-2026
 	Updated shells/oh-my-posh to 29.1.0 [pin 2026-01-26]
-=======
 	Updated x11/libXrandr to 1.5.5 [wiz 2026-01-26]
->>>>>>> 1.660
-	Updated shells/oh-my-posh to 29.1.0 [pin 2026-01-26]
 	Updated x11/libXvMC to 1.0.15 [wiz 2026-01-26]
 	Updated x11/libXxf86dga to 1.1.7 [wiz 2026-01-26]
 	Updated x11/libXxf86vm to 1.1.7 [wiz 2026-01-26]
+	Updated textproc/rumdl to 0.1.0 [pin 2026-01-26]
