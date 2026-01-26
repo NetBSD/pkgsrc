@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2026/01/15 19:54:55 bsiegert Exp $
+# $NetBSD: Makefile,v 1.86 2026/01/26 19:49:20 bsiegert Exp $
 
 DISTNAME=	node_exporter-1.10.2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 
 RCD_SCRIPTS=	node_exporter
 
-GO_BUILD_PATTERN+=	-ldflags ' \
+GOFLAGS+=		-ldflags ' \
 			-X github.com/prometheus/common/version.Version=${PKGVERSION_NOREV} \
 			-X github.com/prometheus/common/version.Revision=${PKGREVISION} \
 			-X github.com/prometheus/common/version.Branch=${GITHUB_TAG}'

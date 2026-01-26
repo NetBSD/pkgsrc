@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2026/01/15 19:54:44 bsiegert Exp $
+# $NetBSD: Makefile,v 1.68 2026/01/26 19:49:19 bsiegert Exp $
 
 DISTNAME=	micro-2.0.14
 PKGREVISION=	8
@@ -15,7 +15,8 @@ INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/applications share/doc/micro
 
 GO_LDFLAGS+=		-X github.com/zyedidia/micro/v2/internal/util.Version=${PKGVERSION_NOREV}
 GO_LDFLAGS+=		-X github.com/zyedidia/micro/v2/internal/util.CommitHash=${GITHUB_TAG}
-GO_BUILD_PATTERN=	-ldflags ${GO_LDFLAGS:Q} ./cmd/micro
+GOFLAGS=		-ldflags ${GO_LDFLAGS:Q}
+GO_BUILD_PATTERN=	./cmd/micro
 
 post-install:
 	${INSTALL_MAN}  ${WRKSRC}/assets/packaging/micro.1       ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/

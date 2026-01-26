@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/01/15 19:54:51 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2026/01/26 19:49:19 bsiegert Exp $
 
 DISTNAME=	adguardhome-0.107.71
 PKGREVISION=	1
@@ -29,9 +29,10 @@ OWN_DIRS+=	libdata/adguardhome
 
 .include "go-modules.mk"
 
-GO_BUILD_PATTERN=	--ldflags='-s -w \
+GOFLAGS=		--ldflags='-s -w \
 			-X github.com/AdguardTeam/AdGuardHome/internal/version.version=v${PKGVERSION_NOREV} \
 			-X github.com/AdGuardTeam/AdGuardHome/internal/version..channel=release'
+GO_BUILD_PATTERN=	.
 INSTALLATION_DIRS+=	libdata/adguardhome
 PKG_SYSCONFSUBDIR=	adguardhome
 RCD_SCRIPTS+=		adguardhome

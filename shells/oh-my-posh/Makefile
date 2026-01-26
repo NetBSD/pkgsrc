@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.312 2026/01/26 10:32:07 pin Exp $
+# $NetBSD: Makefile,v 1.313 2026/01/26 19:49:20 bsiegert Exp $
 
 DISTNAME=		oh-my-posh-29.1.0
 CATEGORIES=		shells
@@ -18,8 +18,9 @@ INSTALLATION_DIRS=	share/${PKGBASE}
 
 GO_BUILD_DATE_cmd=	${DATE} "+%Y-%m-%d"
 GO_FLAG_PREFIX=		github.com/jandedobbeleer/oh-my-posh/src
-GO_BUILD_PATTERN=	-ldflags="-s -w -X '${GO_FLAG_PREFIX}/build.Version=${PKGVERSION_NOREV}' \
-			-X '${GO_FLAG_PREFIX}/build.Date=${GO_BUILD_DATE_cmd:sh}'" ./...
+GOFLAGS=		-ldflags="-s -w -X '${GO_FLAG_PREFIX}/build.Version=${PKGVERSION_NOREV}' \
+			-X '${GO_FLAG_PREFIX}/build.Date=${GO_BUILD_DATE_cmd:sh}'"
+GO_BUILD_PATTERN=	./...
 
 post-build:
 	${MV} ${WRKDIR}/.gopath/bin/src ${WRKDIR}/.gopath/bin/oh-my-posh

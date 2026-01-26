@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2026/01/15 19:54:58 bsiegert Exp $
+# $NetBSD: Makefile,v 1.17 2026/01/26 19:49:20 bsiegert Exp $
 
 DISTNAME=	anubis-src-vendor-npm-1.24.0
 PKGNAME=	${DISTNAME:S/anubis-src-vendor-npm-/anubis-/}
@@ -13,8 +13,8 @@ COMMENT=	Proof-of-work check to stop AI bots
 LICENSE=	mit
 
 USE_LANGUAGES=		c # Go
-GO_BUILD_PATTERN+=	-ldflags="-X github.com/TecharoHQ/anubis.Version=v${PKGVERSION_NOREV}"
-GO_BUILD_PATTERN+=	./cmd/anubis
+GOFLAGS+=		-ldflags="-X github.com/TecharoHQ/anubis.Version=v${PKGVERSION_NOREV}"
+GO_BUILD_PATTERN=	./cmd/anubis
 
 EGDIR=			share/examples/anubis
 INSTALLATION_DIRS=	${EGDIR}

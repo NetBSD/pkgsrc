@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2026/01/15 19:54:47 bsiegert Exp $
+# $NetBSD: Makefile,v 1.103 2026/01/26 19:49:19 bsiegert Exp $
 
 # Please also update GH_REL_DATE when upgrading to a new release.
 
@@ -20,10 +20,10 @@ DEPENDS+=		git-base-[0-9]*:../../devel/git-base
 # do, we do not get these flags set. These flags make the output from
 # "gh --version" meaningful.
 GH_REL_DATE=		2025-12-10
-GO_BUILD_PATTERN+=	-ldflags ' \
+GOFLAGS+=		-ldflags ' \
 			-X github.com/cli/cli/v2/internal/build.Date=${GH_REL_DATE} \
 			-X github.com/cli/cli/v2/internal/build.Version=${PKGVERSION_NOREV}'
-GO_BUILD_PATTERN+=	./cmd/gh
+GO_BUILD_PATTERN=	./cmd/gh
 
 .include "go-modules.mk"
 

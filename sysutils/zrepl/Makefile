@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/01/15 19:54:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2026/01/26 19:49:20 bsiegert Exp $
 
 DISTNAME=	zrepl-0.6.1
 PKGREVISION=	4
@@ -13,8 +13,8 @@ LICENSE=	mit
 
 ZREPL_FLAGS+=	-X github.com/zrepl/zrepl/version.zreplVersion=${PKGVERSION_NOREV}
 
-GO_BUILD_PATTERN+=	-ldflags "${ZREPL_FLAGS}"
-GO_BUILD_PATTERN+=	-mod=readonly .
+GOFLAGS+=		-ldflags "${ZREPL_FLAGS}" -mod=readonly
+GO_BUILD_PATTERN=	.
 
 .include "go-modules.mk"
 

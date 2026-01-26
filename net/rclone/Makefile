@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2026/01/15 19:54:49 bsiegert Exp $
+# $NetBSD: Makefile,v 1.90 2026/01/26 19:49:19 bsiegert Exp $
 
 # When updating changelog is available in
 # ${WRKSRC}/docs/content/changelog.md
@@ -13,7 +13,8 @@ HOMEPAGE=	https://rclone.org/
 COMMENT=	Rsync for cloud storage
 LICENSE=	mit
 
-GO_BUILD_PATTERN=	--ldflags "-X github.com/rclone/rclone/fs.Version=${PKGVERSION_NOREV}"
+GOFLAGS=		-ldflags "-X github.com/rclone/rclone/fs.Version=${PKGVERSION_NOREV}"
+GO_BUILD_PATTERN=	.
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 post-install:

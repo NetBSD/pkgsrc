@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2026/01/15 19:54:44 bsiegert Exp $
+# $NetBSD: Makefile,v 1.34 2026/01/26 19:49:19 bsiegert Exp $
 
 DISTNAME=	shfmt-3.12.0
 PKGREVISION=	6
@@ -12,9 +12,9 @@ HOMEPAGE=	https://github.com/mvdan/sh
 COMMENT=	Shell formatter with bash support
 LICENSE=	modified-bsd
 
-GO_BUILD_PATTERN+=	-ldflags ' \
+GOFLAGS+=		-ldflags ' \
 			-X main.version=${GITHUB_TAG}'
-GO_BUILD_PATTERN+=	./cmd/shfmt
+GO_BUILD_PATTERN=	./cmd/shfmt
 
 .include "go-modules.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2026/01/15 19:54:48 bsiegert Exp $
+# $NetBSD: Makefile,v 1.8 2026/01/26 19:49:19 bsiegert Exp $
 
 DISTNAME=	helm-3.18.6
 PKGREVISION=	4
@@ -17,7 +17,7 @@ LICENSE=	apache-2.0
 K8S_MODULES_VERSION=		0.33.3 # <major>.<minor>.x
 K8S_MODULES_VERSION_MAJOR=	1 # <major> + 1
 K8S_MODULES_VERSION_MINOR=	33 # <minor>
-GO_BUILD_PATTERN+=	-ldflags ' \
+GOFLAGS+=		-ldflags ' \
 			-X helm.sh/helm/v3/internal/version.version=${PKGVERSION_NOREV} \
 			-X helm.sh/helm/v3/internal/version.metadata= \
 			-X helm.sh/helm/v3/internal/version.gitCommit= \
@@ -26,7 +26,7 @@ GO_BUILD_PATTERN+=	-ldflags ' \
 			-X helm.sh/helm/v3/pkg/lint/rules.k8sVersionMinor=${K8S_MODULES_VERSION_MINOR} \
 			-X helm.sh/helm/v3/pkg/chartutil.k8sVersionMajor=${K8S_MODULES_VERSION_MAJOR} \
 			-X helm.sh/helm/v3/pkg/chartutil.k8sVersionMinor=${K8S_MODULES_VERSION_MINOR}'
-GO_BUILD_PATTERN+=	./cmd/helm
+GO_BUILD_PATTERN=	./cmd/helm
 
 .include "go-modules.mk"
 

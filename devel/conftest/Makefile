@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2026/01/15 19:54:39 bsiegert Exp $
+# $NetBSD: Makefile,v 1.72 2026/01/26 19:49:18 bsiegert Exp $
 
 DISTNAME=	conftest-0.66.0
 PKGREVISION=	1
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.conftest.dev/
 COMMENT=	Tests structured configuration data via OPA Rego query language
 LICENSE=	apache-2.0
 
-GO_BUILD_PATTERN+=	-ldflags ' \
+GOFLAGS+=		-ldflags ' \
 			-X github.com/open-policy-agent/conftest/internal/commands.version=${GITHUB_TAG}'
 GO_BUILD_PATTERN+=	.
 
