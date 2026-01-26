@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2026/01/11 10:07:06 adam Exp $
+$NetBSD: distinfo,v 1.26 2026/01/26 20:17:25 adam Exp $
 
-BLAKE2s (checkdmarc-5.13.2.tar.gz) = 7ea8948fac8d0c6375fe0c4061006674e2b43b6cefce2e1d9991c63ce74d19a0
-SHA512 (checkdmarc-5.13.2.tar.gz) = f94fcaf1a1b9ab3425cc2bab6e5f1d202913df09a1831b655b4a97b11635dd5a22d04285c17b5f8c1015e3c970730283eaedeaf6902b099408e80ecc8d10d6d3
-Size (checkdmarc-5.13.2.tar.gz) = 61564 bytes
+BLAKE2s (checkdmarc-5.13.3.tar.gz) = 9b3a1b6625448b899fa8e6b216f732f5c65196304462b4fd108eb64f652ba8f2
+SHA512 (checkdmarc-5.13.3.tar.gz) = cbac46d2a9d02e982cc139b20efdc0394816052e8bd225bdff7211e99965cd14e384c14d6558aea6c75b8557cce44768fa3760200177958767af8dada8f6aafc
+Size (checkdmarc-5.13.3.tar.gz) = 61990 bytes
