@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2026/01/26 19:43:32 nia Exp $
+
+BLAKE2s (jstrings-1.6.tar.gz) = d951227b527a085816dd158ae8de362eb0f6aba1a46855fde03bbab8f3691267
+SHA512 (jstrings-1.6.tar.gz) = b9f73e1383cd4038c99a2ae8d3a8f65d4cc77ea9c4f84546740b9f8d4f166aa9b192fd313698de0589530102f9261430bd608f959773514053627cccce95c68f
+Size (jstrings-1.6.tar.gz) = 131767 bytes
+SHA1 (patch-CMakeLists.txt) = 82548ec22175eccb038250452f15b9fba72b77f6
+SHA1 (patch-inc_enc__shiftjis.hpp) = cb5d584c44725f566c503e9b5c85c3ff0f587d90

@@ -1,0 +1,20 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/01/26 19:43:32 nia Exp $
+
+Make iconv dependency optional, some systems have it in libc.
+
+--- CMakeLists.txt.orig	2026-01-26 19:30:15.724494513 +0000
++++ CMakeLists.txt
+@@ -32,11 +32,9 @@ find_library(ICONV_LIB iconv)
+ 
+ find_library(ICONV_LIB iconv)
+ 
+-if(NOT ICONV_LIB)
+-  message(FATAL_ERROR "libiconv not found")
++if(ICONV_LIB)
++  target_link_libraries(${PROJECT_NAME} iconv)
+ endif()
+-
+-target_link_libraries(${PROJECT_NAME} iconv)
+ 
+ install(TARGETS jstrings
+   RUNTIME DESTINATION bin)
