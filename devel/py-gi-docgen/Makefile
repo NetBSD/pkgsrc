@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2025/10/12 17:56:46 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/01/26 10:51:54 wiz Exp $
 
-DISTNAME=	gi_docgen-2025.5
+DISTNAME=	gi_docgen-2026.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gi_/gi-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gi_docgen/}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-typogrify>=2:../../textproc/py-typogrify
+# uses bin/dot for .dot file support
+DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
