@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.666 2026/01/26 10:49:32 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.667 2026/01/26 10:52:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -864,3 +864,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/libXxf86vm to 1.1.7 [wiz 2026-01-26]
 	Updated textproc/rumdl to 0.1.0 [pin 2026-01-26]
 	Updated graphics/gdk-pixbuf2 to 2.44.4nb1 [wiz 2026-01-26]
+	Updated devel/py-gi-docgen to 2026.1 [wiz 2026-01-26]
