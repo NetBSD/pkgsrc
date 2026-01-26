@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2010/01/15 18:26:41 tnn Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/01/26 10:36:07 wiz Exp $
 include/X11/extensions/Xxf86dga.h
 include/X11/extensions/xf86dga1.h
-lib/libXxf86dga.la
+lib/libXxf86dga.so
+lib/libXxf86dga.so.1
+lib/libXxf86dga.so.1.0.0
 lib/pkgconfig/xxf86dga.pc
 man/man3/XDGA.3
 man/man3/XDGAChangePixmapMode.3
