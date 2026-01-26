@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2019/11/03 09:14:13 rillig Exp $
+# $NetBSD: builtin.mk,v 1.5 2026/01/26 10:34:35 wiz Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -40,10 +40,10 @@ USE_BUILTIN.libXvMC=	no
 .  else
 USE_BUILTIN.libXvMC=	${IS_BUILTIN.libXvMC}
 .    if defined(BUILTIN_PKG.libXvMC) && \
-        !empty(IS_BUILTIN.libXvMC:M[yY][eE][sS])
+        ${IS_BUILTIN.libXvMC:tl} == yes
 USE_BUILTIN.libXvMC=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.libXvMC}
-.        if !empty(USE_BUILTIN.libXvMC:M[yY][eE][sS])
+.        if ${USE_BUILTIN.libXvMC:tl} == yes
 USE_BUILTIN.libXvMC!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libXvMC:Q}; then \
 		${ECHO} yes;						\
