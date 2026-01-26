@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.674 2026/01/26 20:17:44 adam Exp $
+$NetBSD: CHANGES-2026,v 1.675 2026/01/26 21:32:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -876,3 +876,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added textproc/jstrings version 1.6 [nia 2026-01-26]
 	Updated editors/qtcreator to 18.0.2 [adam 2026-01-26]
 	Updated mail/py-checkdmarc to 5.13.3 [adam 2026-01-26]
+	Updated graphics/librsvg to 2.60.1nb2 [wiz 2026-01-26]
