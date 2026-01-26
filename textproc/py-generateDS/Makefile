@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/10/09 07:57:59 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/01/26 09:49:35 wiz Exp $
 
 DISTNAME=	generateDS-2.43.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/0$//}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/generateDS/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.davekuhlman.org/generateDS.html
+#HOMEPAGE=	https://www.davekuhlman.org/generateDS.html
 COMMENT=	Python XML data binding library
 LICENSE=	mit
 
