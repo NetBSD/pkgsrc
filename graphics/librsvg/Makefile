@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.179 2026/01/07 08:47:23 wiz Exp $
+# $NetBSD: Makefile,v 1.180 2026/01/26 21:32:00 wiz Exp $
 
 DISTNAME=	librsvg-2.60.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,10 +11,6 @@ HOMEPAGE=	https://wiki.gnome.org/LibRsvg
 COMMENT=	SVG library for GNOME
 LICENSE=	gnu-lgpl-v2.1
 
-# Requires rst2man to generate rsvg-convert.1
-TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
-# Requires gi-docgen to generate HTML format API documentation
-TOOL_DEPENDS+=	${PYPKGPREFIX}-gi-docgen>=2022.1nb1:../../devel/py-gi-docgen
 TOOL_DEPENDS+=	cargo-c>=0.9.19:../../devel/cargo-c
 
 USE_LANGUAGES=	c c++
@@ -41,13 +37,15 @@ SUBST_SED.rst2man=	-e 's,rst2man.py,rst2man-${PYVERSSUFFIX},g'
 
 .include "../../mk/bsd.prefs.mk"
 
-post-install:
 .if ${OPSYS} == "Darwin"
+post-install:
 	install_name_tool			\
 	  -change @rpath/librsvg-2.2.dylib	\
 	  ${PREFIX}/lib/librsvg-2.2.dylib	\
 	  ${DESTDIR}${PREFIX}/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader_svg.dylib
 .endif
+
+.include "options.mk"
 
 .include "cargo-depends.mk"
 
