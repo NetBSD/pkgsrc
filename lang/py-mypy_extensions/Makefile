@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/04/28 19:44:29 adam Exp $
+# $NetBSD: Makefile,v 1.7 2026/01/26 09:53:19 wiz Exp $
 
 DISTNAME=	mypy_extensions-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mypy_extensions/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mypy-lang.org/
+HOMEPAGE=	https://www.mypy-lang.org/
 COMMENT=	Experimental type system extensions
 LICENSE=	mit
 
