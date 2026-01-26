@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.25 2024/04/17 10:38:36 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/01/26 09:50:50 wiz Exp $
 
 DISTNAME=	Gnosis_Utils-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Gnosis_Utils/gnosis-utils/}
 PKGREVISION=	2
 CATEGORIES=	textproc python
-MASTER_SITES=	http://gnosis.cx/download/
+MASTER_SITES=	https://gnosis.cx/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gnosis.cx/download/
+HOMEPAGE=	https://gnosis.cx/download/
 COMMENT=	Classes for working with XML
 LICENSE=	public-domain
 
