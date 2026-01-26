@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/19 17:54:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/26 09:52:54 wiz Exp $
 
 DISTNAME=	mox-0.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mox/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://code.google.com/p/pymox/
+HOMEPAGE=	https://code.google.com/archive/p/pymox/
 COMMENT=	Mock object framework for Python
 LICENSE=	apache-2.0
 
