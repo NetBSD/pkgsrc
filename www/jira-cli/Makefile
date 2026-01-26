@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2026/01/15 19:54:59 bsiegert Exp $
+# $NetBSD: Makefile,v 1.55 2026/01/26 19:49:21 bsiegert Exp $
 
 DISTNAME=	jira-cli-1.7.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ankitpokhrel/}
@@ -16,11 +16,12 @@ GO_VERSION_DEFAULT=	124
 GO_BUILD_DATE_cmd=	${DATE} "+%FT%T%Z"
 GO_XFLAG_PREFIX=	-X github.com/ankitpokhrel/jira-cli/internal/version
 
-GO_BUILD_PATTERN=	-ldflags ' \
+GOFLAGS=		-ldflags ' \
 			${GO_XFLAG_PREFIX}.BuildDate=${GO_BUILD_DATE_cmd:sh} \
 			${GO_XFLAG_PREFIX}.Version=v${PKGVERSION_NOREV} \
-			${GO_XFLAG_PREFIX}.GitCommit=${GITHUB_TAG} '
-GO_BUILD_PATTERN+=	-mod=readonly ./cmd/jira
+			${GO_XFLAG_PREFIX}.GitCommit=${GITHUB_TAG} ' \
+			-mod=readonly
+GO_BUILD_PATTERN=	./cmd/jira
 
 CHECK_RELRO_SKIP+=	bin/jira
 
