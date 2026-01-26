@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1568 2026/01/25 13:48:47 alnsn Exp $
+# $NetBSD: Makefile,v 1.1569 2026/01/26 19:43:32 nia Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -503,6 +503,7 @@ SUBDIR+=	json-schema
 SUBDIR+=	json-yaml
 SUBDIR+=	json2tsv
 SUBDIR+=	jsoncpp
+SUBDIR+=	jstrings
 SUBDIR+=	kakasi
 SUBDIR+=	kapidox
 SUBDIR+=	kbanner
