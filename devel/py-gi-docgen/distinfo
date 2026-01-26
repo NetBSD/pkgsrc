@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/10/12 17:56:46 wiz Exp $
+$NetBSD: distinfo,v 1.8 2026/01/26 10:51:54 wiz Exp $
 
-BLAKE2s (gi_docgen-2025.5.tar.gz) = 63f77b765a6340ca435902a1e786715db632c6ab0c0cda91bb3c83a151559ff6
-SHA512 (gi_docgen-2025.5.tar.gz) = f6314c6af56cc2cb3fcebc06d1fe6ce7075873e8924fac318e2356f9f2f73dd519466439cb43bf0f3e17371b644bf387de1a53d89469e5fab46f06b99a98d8da
-Size (gi_docgen-2025.5.tar.gz) = 2533728 bytes
+BLAKE2s (gi_docgen-2026.1.tar.gz) = 8ec07e93d3f36496c56509a021b4f591736f3ae9054b0cf752a6752b6de90a73
+SHA512 (gi_docgen-2026.1.tar.gz) = 0bbe9422cfcebb794631e14f2940a110393f966cc906510c52e787b1b1a2d9990de2f7cc91d8e884043d751b71a57da9782192444a6b73a78dfe6f7a58fe6455
+Size (gi_docgen-2026.1.tar.gz) = 2533823 bytes
