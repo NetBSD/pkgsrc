@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/10/30 01:09:52 wiz Exp $
+$NetBSD: distinfo,v 1.12 2026/01/26 00:00:00 wiz Exp $
 
-BLAKE2s (libXinerama-1.1.5.tar.xz) = 7985a7abce361ddf4e7fea82f79befc8a74f2b2de55f81086ef738fc07dca3af
-SHA512 (libXinerama-1.1.5.tar.xz) = 735b5320de4782005b379e409bf2f976131c17d496b297d33a0e127ca1443034778586b6b25c077b2ad73a4ab34d440d7510475e0041f38202bb40f15fb08ff7
-Size (libXinerama-1.1.5.tar.xz) = 260272 bytes
+BLAKE2s (libXinerama-1.1.6.tar.xz) = 1c5703fa424f9c5336c4fa2986a7eb524cb33e040c12a27351538a6b90afbe81
+SHA512 (libXinerama-1.1.6.tar.xz) = 64bff837941625120da43b8876db4204bc5740bcf3147997fc4df1475f90d6d9e3f9caa8748c7ebbf69d681be8e5ab4bc40f82c56c367dddcec3ab27d1c71573
+Size (libXinerama-1.1.6.tar.xz) = 268440 bytes
