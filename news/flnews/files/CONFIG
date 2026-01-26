@@ -175,8 +175,8 @@ CFG_MAINTAINER="mailto:@MAINT@"
 
 # Installation path for man page
 # (must be an absolute path without trailing slash)
-# The FHS 3.0 defines "/usr[/local]/share/man". The location "/usr/local/man" is
-# explicitly marked deprecated.
+# The FHS 3.0 defines "/usr[/local]/share/man". The location "/usr/local/man"
+# is explicitly marked deprecated.
 CFG_MAN_PATH="@MAN_PATH@/man1"
 
 # Installation path for license file
@@ -200,7 +200,7 @@ CFG_XDG_ICON_THEME_PATH="$CFG_PREFIX/share/icons"
 
 # Reproducible builds
 # The SOURCE_DATE_EPOCH specification 1.1 is supported:
-# https://reproducible-builds.org/specs/source-date-epoch/
+# <https://reproducible-builds.org/specs/source-date-epoch/>
 # ==============================================================================
 
 
