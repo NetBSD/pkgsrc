@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.102 2026/01/07 08:46:05 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2026/01/27 08:39:06 wiz Exp $
 
 DISTNAME=	multisync-gui-0.91.0
-PKGREVISION=	84
+PKGREVISION=	85
 CATEGORIES=	comms
 #MASTER_SITES=	http://www.opensync.org/raw-attachment/wiki/releases/0.2x/download/
 

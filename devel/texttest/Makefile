@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2025/10/23 20:36:38 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/01/27 08:39:18 wiz Exp $
 
 DISTNAME=		texttest-4.4.5
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel python
 MASTER_SITES=		${MASTER_SITE_PYPI:=t/texttest/}
 

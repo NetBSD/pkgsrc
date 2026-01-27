@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2025/10/23 20:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2026/01/27 08:39:26 wiz Exp $
 
 DISTNAME=	visualboyadvance-m-2.1.4
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=visualboyadvance-m/}
 GITHUB_PROJECT=	visualboyadvance-m

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.277 2026/01/07 08:49:27 wiz Exp $
+# $NetBSD: Makefile,v 1.278 2026/01/27 08:40:51 wiz Exp $
 
 DISTNAME=	webkitgtk-2.36.8
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
 EXTRACT_SUFX=	.tar.xz

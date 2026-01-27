@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2025/10/23 20:36:15 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2026/01/27 08:39:09 wiz Exp $
 
 BUILDLINK_TREE+=	amtk
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	amtk
 AMTK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.amtk+=	amtk>=5.0.0
-BUILDLINK_ABI_DEPENDS.amtk?=	amtk>=5.0.2nb17
+BUILDLINK_ABI_DEPENDS.amtk?=	amtk>=5.0.2nb18
 BUILDLINK_PKGSRCDIR.amtk?=	../../devel/amtk
 BUILDLINK_INCDIRS.amtk+=	include/amtk-5
 

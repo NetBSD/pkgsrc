@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2025/11/17 11:01:28 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2026/01/27 08:40:41 wiz Exp $
 
 DISTNAME=	aiksaurus-1.2.1
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aiksaurus/}
 

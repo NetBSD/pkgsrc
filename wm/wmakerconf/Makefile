@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.112 2026/01/20 08:45:15 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2026/01/27 08:40:47 wiz Exp $
 
 DISTNAME=	wmakerconf-2.11
-PKGREVISION=	72
+PKGREVISION=	73
 CATEGORIES=	wm x11 windowmaker
 MASTER_SITES=	http://starplot.org/wmakerconf/
 

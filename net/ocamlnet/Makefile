@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.109 2026/01/07 08:48:24 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2026/01/27 08:40:23 wiz Exp $
 #
 
 DISTNAME=		ocamlnet-4.1.9
-PKGREVISION=		24
+PKGREVISION=		25
 CATEGORIES=		net
 MASTER_SITES=		http://download.camlcity.org/download/
 

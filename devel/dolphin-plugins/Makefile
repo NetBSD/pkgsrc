@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2026/01/19 10:10:25 markd Exp $
+# $NetBSD: Makefile,v 1.71 2026/01/27 08:39:10 wiz Exp $
 
 DISTNAME=	dolphin-plugins-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	devel sysutils
 
 HOMEPAGE=	https://kde.org/applications/system/dolphin/
