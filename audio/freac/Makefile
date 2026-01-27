@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2026/01/07 08:45:50 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/01/27 08:38:56 wiz Exp $
 
 DISTNAME=	freac-1.1.7
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=enzo1982/}
 GITHUB_PROJECT=	freac

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2025/10/23 20:36:32 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2026/01/27 08:39:15 wiz Exp $
 
 DISTNAME=	libwnck-3.36.0
 PKGNAME=	${DISTNAME:S/libwnck/libwnck3/}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	devel x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libwnck/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

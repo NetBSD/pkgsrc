@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2026/01/07 08:47:27 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2026/01/27 08:39:48 wiz Exp $
 
 DISTNAME=	rawtherapee-5.11
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://rawtherapee.com/shared/source/
 EXTRACT_SUFX=	.tar.xz

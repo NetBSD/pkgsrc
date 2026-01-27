@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.117 2025/10/23 20:39:40 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2026/01/27 08:40:44 wiz Exp $
 
 DISTNAME=	AfterStep-2.2.12
 PKGNAME=	${DISTNAME:S/AfterStep/afterstep/}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	wm
 MASTER_SITES=	ftp://ftp.afterstep.org/stable/
 EXTRACT_SUFX=	.tar.bz2

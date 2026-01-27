@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2026/01/07 08:49:11 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/01/27 08:40:43 wiz Exp $
 
 DISTNAME=	gnome-pomodoro-0.17.0
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=codito/}
 GITHUB_PROJECT=	gnome-pomodoro

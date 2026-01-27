@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.111 2026/01/07 08:45:53 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2026/01/27 08:39:00 wiz Exp $
 #
 
 DISTNAME=	pavucontrol-6.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	https://freedesktop.org/software/pulseaudio/pavucontrol/
 EXTRACT_SUFX=	.tar.xz

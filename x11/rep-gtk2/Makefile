@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2025/10/23 20:40:19 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2026/01/27 08:41:05 wiz Exp $
 
 DISTNAME=	rep-gtk_0.90.8.3
 PKGNAME=	${DISTNAME:S/gtk_/gtk2-/}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	x11 lang
 MASTER_SITES=	https://www.aydogan.net/distfiles/x11/
 EXTRACT_SUFX=	.tar.xz

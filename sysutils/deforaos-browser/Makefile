@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2025/10/23 20:39:16 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/01/27 08:40:33 wiz Exp $
 
 DISTNAME=	Browser-0.5.5
 PKGNAME=	deforaos-browser-0.5.5
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	sysutils
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Browser/
 
