@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.680 2026/01/27 09:58:55 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.681 2026/01/27 11:12:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -883,3 +883,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/py-open-vcdiff [wiz 2026-01-27]
 	Updated security/sequoia-sq to 1.3.1nb2 [wiz 2026-01-27]
 	Updated security/sequoia-chameleon-gnupg to 0.13.1nb2 [wiz 2026-01-27]
+	Updated textproc/py-pdf to 6.6.2 [adam 2026-01-27]
+	Updated devel/py-test-doctestplus to 1.7.1 [adam 2026-01-27]
