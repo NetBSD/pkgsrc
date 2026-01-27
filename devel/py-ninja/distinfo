@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2025/12/27 22:17:02 adam Exp $
+$NetBSD: distinfo,v 1.6 2026/01/27 12:59:15 mef Exp $
 
-BLAKE2s (ninja-1.13.0.tar.gz) = 2d52248690f4623a5d8935b6685e5fc5e7ec6667f0d0d08273748c663a7c823b
-SHA512 (ninja-1.13.0.tar.gz) = 383c342ff3ea061e83ccec0100d6e03b65268792a93fed58f6e7a6fc29d996c9639ed5f71b5800e69fec6f989b3e6221de496e35f9ee67d9f5f2e84621fb3d08
-Size (ninja-1.13.0.tar.gz) = 242558 bytes
+BLAKE2s (py-ninja/ninja-1.13.0.tar.gz) = 2d52248690f4623a5d8935b6685e5fc5e7ec6667f0d0d08273748c663a7c823b
+SHA512 (py-ninja/ninja-1.13.0.tar.gz) = 383c342ff3ea061e83ccec0100d6e03b65268792a93fed58f6e7a6fc29d996c9639ed5f71b5800e69fec6f989b3e6221de496e35f9ee67d9f5f2e84621fb3d08
+Size (py-ninja/ninja-1.13.0.tar.gz) = 242558 bytes
 SHA1 (patch-CMakeLists.txt) = 071d718895af64ee7a215bb9c0d3a7e6f6619458

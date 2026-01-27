@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/12/27 22:17:02 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/01/27 12:59:15 mef Exp $
 
 DISTNAME=	ninja-1.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/scikit-build/ninja-python-distributions
 COMMENT=	Python bindings for the ninja build tool
 LICENSE=	apache-2.0
+
+# avoid conflict with devel/ninja-build
+DIST_SUBDIR=	py-ninja
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme-[0-9]*:../../devel/py-hatch-fancy-pypi-readme
