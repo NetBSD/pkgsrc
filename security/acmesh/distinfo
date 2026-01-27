@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2025/06/15 14:11:05 ryoon Exp $
+$NetBSD: distinfo,v 1.19 2026/01/27 14:27:01 ryoon Exp $
 
-BLAKE2s (acme.sh-3.1.1.tar.gz) = 01bb7cd075a9fa6035431d4e93ea3b32d318b5d047c2d4fe1e3f9ccdd4862bb0
-SHA512 (acme.sh-3.1.1.tar.gz) = 9b3f8541251b83c2ac34826c60e3abedb06fa72e628afcfa0f0beb529d6c9ae2b1964e873ce33e12498f106c2fc6ef1fc7ed1c9673d9fd80e343921a284f015d
-Size (acme.sh-3.1.1.tar.gz) = 316344 bytes
+BLAKE2s (acme.sh-3.1.2.tar.gz) = 43c54f0a5c12351ab860021c78ac9377b55a79506cb63298e66d1c124973711d
+SHA512 (acme.sh-3.1.2.tar.gz) = b7ea3ef8dd68f47f9770e2cebbacd9ab12a1b8a2ccc3bf85ff28141b7ac54c8b2ec68d6fbc245ef117bc41e00c6a5e3d8128bf401e07d12d7e0cf6e36f70966f
+Size (acme.sh-3.1.2.tar.gz) = 338572 bytes

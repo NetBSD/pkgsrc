@@ -1,26 +1,33 @@
-@comment $NetBSD: PLIST,v 1.9 2025/06/15 14:11:05 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/01/27 14:27:01 ryoon Exp $
 sbin/acme.sh
 share/acmesh/acme.sh
 share/acmesh/deploy/ali_cdn.sh
 share/acmesh/deploy/ali_dcdn.sh
 share/acmesh/deploy/apache.sh
+share/acmesh/deploy/cachefly.sh
 share/acmesh/deploy/cleverreach.sh
 share/acmesh/deploy/consul.sh
 share/acmesh/deploy/cpanel_uapi.sh
+share/acmesh/deploy/directadmin.sh
 share/acmesh/deploy/docker.sh
 share/acmesh/deploy/dovecot.sh
+share/acmesh/deploy/edgio.sh
 share/acmesh/deploy/exim4.sh
 share/acmesh/deploy/fritzbox.sh
 share/acmesh/deploy/gcore_cdn.sh
 share/acmesh/deploy/gitlab.sh
 share/acmesh/deploy/haproxy.sh
+share/acmesh/deploy/kemplm.sh
 share/acmesh/deploy/keychain.sh
+share/acmesh/deploy/keyhelp.sh
+share/acmesh/deploy/keyhelp_api.sh
 share/acmesh/deploy/kong.sh
 share/acmesh/deploy/lighttpd.sh
 share/acmesh/deploy/mailcow.sh
 share/acmesh/deploy/myapi.sh
 share/acmesh/deploy/mydevil.sh
 share/acmesh/deploy/mysqld.sh
+share/acmesh/deploy/netlify.sh
 share/acmesh/deploy/nginx.sh
 share/acmesh/deploy/openmediavault.sh
 share/acmesh/deploy/opensshd.sh
@@ -42,6 +49,7 @@ share/acmesh/deploy/unifi.sh
 share/acmesh/deploy/vault.sh
 share/acmesh/deploy/vault_cli.sh
 share/acmesh/deploy/vsftpd.sh
+share/acmesh/deploy/zyxel_gs1900.sh
 share/acmesh/dnsapi/dns_1984hosting.sh
 share/acmesh/dnsapi/dns_acmedns.sh
 share/acmesh/dnsapi/dns_acmeproxy.sh
@@ -105,6 +113,7 @@ share/acmesh/dnsapi/dns_googledomains.sh
 share/acmesh/dnsapi/dns_he.sh
 share/acmesh/dnsapi/dns_he_ddns.sh
 share/acmesh/dnsapi/dns_hetzner.sh
+share/acmesh/dnsapi/dns_hetznercloud.sh
 share/acmesh/dnsapi/dns_hexonet.sh
 share/acmesh/dnsapi/dns_hostingde.sh
 share/acmesh/dnsapi/dns_huaweicloud.sh
@@ -159,6 +168,7 @@ share/acmesh/dnsapi/dns_omglol.sh
 share/acmesh/dnsapi/dns_one.sh
 share/acmesh/dnsapi/dns_online.sh
 share/acmesh/dnsapi/dns_openprovider.sh
+share/acmesh/dnsapi/dns_openprovider_rest.sh
 share/acmesh/dnsapi/dns_openstack.sh
 share/acmesh/dnsapi/dns_opnsense.sh
 share/acmesh/dnsapi/dns_ovh.sh
@@ -177,6 +187,7 @@ share/acmesh/dnsapi/dns_selectel.sh
 share/acmesh/dnsapi/dns_selfhost.sh
 share/acmesh/dnsapi/dns_servercow.sh
 share/acmesh/dnsapi/dns_simply.sh
+share/acmesh/dnsapi/dns_spaceship.sh
 share/acmesh/dnsapi/dns_technitium.sh
 share/acmesh/dnsapi/dns_tele3.sh
 share/acmesh/dnsapi/dns_tencent.sh
@@ -212,6 +223,7 @@ share/acmesh/notify/mail.sh
 share/acmesh/notify/mailgun.sh
 share/acmesh/notify/mattermost.sh
 share/acmesh/notify/ntfy.sh
+share/acmesh/notify/opsgenie.sh
 share/acmesh/notify/pop.sh
 share/acmesh/notify/postmark.sh
 share/acmesh/notify/pushbullet.sh
