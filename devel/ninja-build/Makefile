@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/11/21 09:23:00 adam Exp $
+# $NetBSD: Makefile,v 1.28 2026/01/27 12:59:15 mef Exp $
 
 DISTNAME=	ninja-1.13.2
 PKGNAME=	${DISTNAME:S/ninja/ninja-build/}
@@ -11,6 +11,9 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://ninja-build.org/
 COMMENT=	Small build system with a focus on speed
 LICENSE=	apache-2.0
+
+# avoid conflict with devel/py-ninja
+DIST_SUBDIR=	ninja-build
 
 TOOL_DEPENDS+=	re2c>=0.11.3:../../devel/re2c
 
