@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4577 2026/01/25 19:39:17 alnsn Exp $
+# $NetBSD: Makefile,v 1.4578 2026/01/27 09:18:52 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2866,7 +2866,6 @@ SUBDIR+=	py-ninja
 SUBDIR+=	py-nose
 SUBDIR+=	py-nose2
 SUBDIR+=	py-olefile
-SUBDIR+=	py-open-vcdiff
 SUBDIR+=	py-orca
 SUBDIR+=	py-ordered-set
 SUBDIR+=	py-orderly-set
