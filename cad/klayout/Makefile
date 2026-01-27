@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2026/01/07 08:45:57 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2026/01/27 13:04:46 wiz Exp $
 
 DISTNAME=	klayout-0.29.12
 PKGREVISION=	4
@@ -47,7 +47,6 @@ do-build:
 	cd ${WRKSRC} && ${MKDIR} ${REL_DIR} && \
 	${PKGSRC_SETENV} ${MAKE_ENV} ${BASH} build.sh \
 	-python python${PYVERSSUFFIX} \
-	-qt5 \
 	-qmake ${PREFIX}/qt5/bin/qmake \
 	-ruby ${PREFIX}/bin/${RUBY_NAME} \
 	${MAKE_JOBS_FLAG} \
