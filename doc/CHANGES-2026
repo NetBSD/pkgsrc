@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.677 2026/01/27 08:37:05 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.678 2026/01/27 09:18:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -880,3 +880,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/helix to 25.07.1 [adam 2026-01-27]
 	Updated devel/py-pathspec to 1.0.4 [adam 2026-01-27]
 	Updated graphics/cairo to 1.18.4nb3 [wiz 2026-01-27]
+	Removed devel/py-open-vcdiff [wiz 2026-01-27]
