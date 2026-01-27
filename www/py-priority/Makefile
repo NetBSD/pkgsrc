@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/04/14 19:31:54 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/01/27 09:19:42 wiz Exp $
 
 DISTNAME=	priority-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/priority/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://python-hyper.org/priority/
+HOMEPAGE=	http://python-hyper.org/projects/priority/en/stable/
 COMMENT=	Pure-Python implementation of the HTTP/2 priority tree
 LICENSE=	mit
 
