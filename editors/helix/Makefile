@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/11/30 20:31:07 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/01/27 07:49:20 adam Exp $
 
-DISTNAME=	helix-23.10-source
+DISTNAME=	helix-25.07.1-source
 PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=helix-editor/}
@@ -11,15 +11,15 @@ COMMENT=	Modal editor inspired by kakoune / neovim
 # Additionally, the tree-sitter sources have various licenses.
 LICENSE=	mpl-2.0
 
-BROKEN=		"Needs updating to work with rust 1.80"
-
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 TOOL_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pax
 MAKE_ENV+=	HELIX_DISABLE_AUTO_GRAMMAR_BUILD=1
+# See: https://docs.helix-editor.com/building-from-source.html#note-to-packagers
+MAKE_ENV+=	HELIX_DEFAULT_RUNTIME=${PREFIX}/share/helix/runtime
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/examples/helix/completion
@@ -31,7 +31,11 @@ INSTALLATION_DIRS+=	share/helix/runtime/grammars
 post-extract:
 	${MKDIR} ${WRKSRC}/runtime/grammars/sources
 .for name rev url path in ${TS_FILES}
+.  if ${name} == "tree-sitter-prolog"
+	${LN} -s ${WRKDIR}/${name} ${WRKSRC}/runtime/grammars/sources/${path}
+.  else
 	${LN} -s ${WRKDIR}/${name}-${rev} ${WRKSRC}/runtime/grammars/sources/${path}
+.  endif
 .endfor
 
 SUBST_CLASSES+=		datadir
@@ -63,9 +67,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/runtime/tutor ${DESTDIR}${PREFIX}/share/helix/runtime/tutor
 	${INSTALL_LIB} ${WRKSRC}/runtime/grammars/*.so ${DESTDIR}${PREFIX}/share/helix/runtime/grammars/
 
+# FIXME: v-analyzer is generated incorrectly.
 .PHONY: print-tree-sitter-depends
 print-tree-sitter-depends:
-	${RUN}${AWK} -f ${FILESDIR}/print-depends.awk ${WRKSRC}/languages.toml
+	${AWK} -f ${FILESDIR}/print-depends.awk ${WRKSRC}/languages.toml
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"

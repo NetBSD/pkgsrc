@@ -1,10 +1,10 @@
-$NetBSD: patch-helix-loader_src_lib.rs,v 1.4 2024/03/24 20:06:49 adam Exp $
+$NetBSD: patch-helix-loader_src_lib.rs,v 1.5 2026/01/27 07:49:20 adam Exp $
 
 Taken from FreeBSD ports, original patch by ashish@.
 
---- helix-loader/src/lib.rs.orig	2023-10-25 16:37:27.000000000 +0000
+--- helix-loader/src/lib.rs.orig	2025-07-18 14:31:37.000000000 +0000
 +++ helix-loader/src/lib.rs
-@@ -75,8 +75,6 @@ fn prioritize_runtime_dirs() -> Vec<Path
+@@ -49,8 +49,6 @@ fn prioritize_runtime_dirs() -> Vec<Path
          rt_dirs.push(path);
      }
  
@@ -12,8 +12,8 @@ Taken from FreeBSD ports, original patch by ashish@.
 -    rt_dirs.push(conf_rt_dir);
  
      if let Ok(dir) = std::env::var("HELIX_RUNTIME") {
-         rt_dirs.push(dir.into());
-@@ -90,14 +88,8 @@ fn prioritize_runtime_dirs() -> Vec<Path
+         let dir = path::expand_tilde(Path::new(&dir));
+@@ -65,14 +63,8 @@ fn prioritize_runtime_dirs() -> Vec<Path
          rt_dirs.push(dir.into());
      }
  
