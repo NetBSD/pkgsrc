@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2026/01/07 08:48:46 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/01/27 09:58:47 wiz Exp $
 
 DISTNAME=	sequoia-chameleon-gnupg-0.13.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITLAB:=sequoia-pgp/}
 GITLAB_PROJECT=	sequoia-chameleon-gnupg
@@ -11,6 +11,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.com/sequoia-pgp/sequoia-chameleon-gnupg
 COMMENT=	Sequoia's reimplementation of the GnuPG interface
 LICENSE=	gnu-gpl-v3
+
+# bindgen needs libclang
+TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
 
 # See, https://github.com/briansmith/ring/issues/1999
 .include "../../mk/compiler/i386-sse2.mk"
@@ -24,7 +27,6 @@ USE_TOOLS+=	pkg-config
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.nettle}/lib
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.clang}/lib
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	share/bash-completion/completions
@@ -42,7 +44,6 @@ post-install:
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
-.include "../../lang/clang/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/nettle/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
