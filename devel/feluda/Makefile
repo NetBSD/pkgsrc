@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2026/01/26 10:30:12 pin Exp $
+# $NetBSD: Makefile,v 1.20 2026/01/27 17:39:49 pin Exp $
 
 DISTNAME=	feluda-1.11.1
 CATEGORIES=	devel
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/anistark/feluda/
 COMMENT=	Detect license usage restrictions in your project
 LICENSE=	mit
+
+TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 # See, https://github.com/briansmith/ring/issues/1999
 .include "../../mk/compiler/i386-sse2.mk"
