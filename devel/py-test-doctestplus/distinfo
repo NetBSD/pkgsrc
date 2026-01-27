@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2026/01/08 10:31:37 adam Exp $
+$NetBSD: distinfo,v 1.11 2026/01/27 11:11:49 adam Exp $
 
-BLAKE2s (pytest_doctestplus-1.7.0.tar.gz) = d6d7e6bc7c2cf72cc5a8377bbba64c77cd5ca68ff36a0979f40367188c0eac46
-SHA512 (pytest_doctestplus-1.7.0.tar.gz) = 18e6f2d05d8b472c4b2dc951a9ad7ab811603c874627d24b244550f7fa1e6b273097d19e158dc8ff68d0a515518760a81eb989b9f7cfe55d387c89070d09ea05
-Size (pytest_doctestplus-1.7.0.tar.gz) = 50078 bytes
+BLAKE2s (pytest_doctestplus-1.7.1.tar.gz) = bc442e6ff6e87a59c6b6afed6a44b7d6760f5dd954c69c92dee0fc7fd574a5b7
+SHA512 (pytest_doctestplus-1.7.1.tar.gz) = 81599d589d23683fee8e08af2aaf4b207eb7a69a756ec64624f9b44cc7f1027a04dcc33b00c4a848aea43ebc9c91d9830be2d93b88c8a6dd6b410a82d467f2a4
+Size (pytest_doctestplus-1.7.1.tar.gz) = 50286 bytes
