@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.159 2026/01/27 08:41:04 wiz Exp $
+# $NetBSD: Makefile,v 1.160 2026/01/27 09:22:23 wiz Exp $
 
 DISTNAME=	pygtk-2.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pygtk/gtk2/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pygtk/2.24/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.pygtk.org/
+#HOMEPAGE=	http://www.pygtk.org/
 COMMENT=	Python bindings for GTK+2
 LICENSE=	gnu-lgpl-v2.1
 
