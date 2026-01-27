@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/10/09 07:57:42 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/01/27 09:20:21 wiz Exp $
 
 DISTNAME=	pycha-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycha/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/lgs/pycha/
+#HOMEPAGE=	https://bitbucket.org/lgs/pycha/
 COMMENT=	Library for making charts with Python
 LICENSE=	gnu-lgpl-v3
 
