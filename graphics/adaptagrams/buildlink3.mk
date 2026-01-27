@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2025/10/23 20:37:22 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2026/01/27 08:39:36 wiz Exp $
 
 BUILDLINK_TREE+=	adaptagrams
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	adaptagrams
 ADAPTAGRAMS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.adaptagrams+=	adaptagrams>=0.20160901nb1
-BUILDLINK_ABI_DEPENDS.adaptagrams?=	adaptagrams>=0.20231102nb2
+BUILDLINK_ABI_DEPENDS.adaptagrams?=	adaptagrams>=0.20231102nb3
 BUILDLINK_PKGSRCDIR.adaptagrams?=	../../graphics/adaptagrams
 
 .include "../../graphics/cairomm/buildlink3.mk"

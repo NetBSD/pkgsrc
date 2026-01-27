@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2025/10/23 20:39:40 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2026/01/27 08:40:44 wiz Exp $
 
 BUILDLINK_TREE+=	afterstep
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	afterstep
 AFTERSTEP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.afterstep+=	afterstep>=2.2.11
-BUILDLINK_ABI_DEPENDS.afterstep?=	afterstep>=2.2.12nb18
+BUILDLINK_ABI_DEPENDS.afterstep?=	afterstep>=2.2.12nb19
 BUILDLINK_PKGSRCDIR.afterstep?=		../../wm/afterstep
 BUILDLINK_DEPMETHOD.afterstep?=		build
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2025/10/23 20:40:19 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/01/27 08:41:05 wiz Exp $
 
 VERSION=	4.21
 DISTNAME=	swt-${VERSION}-gtk-linux-x86_64
 PKGNAME=	swt-${VERSION}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	x11 java graphics
 MASTER_SITES=	http://archive.eclipse.org/eclipse/downloads/drops4/R-${VERSION}-202109060500/
 EXTRACT_SUFX=	.zip

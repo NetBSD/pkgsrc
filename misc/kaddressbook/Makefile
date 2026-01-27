@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2026/01/07 08:47:56 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/01/27 08:40:09 wiz Exp $
 
 DISTNAME=	kaddressbook-${KAPPSVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kontact.kde.org/

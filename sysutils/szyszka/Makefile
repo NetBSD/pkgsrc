@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2026/01/07 08:48:59 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/01/27 08:40:39 wiz Exp $
 
 DISTNAME=	szyszka-3.0.0
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qarmin/}
 

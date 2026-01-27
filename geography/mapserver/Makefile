@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.142 2026/01/14 12:57:33 wiz Exp $
+# $NetBSD: Makefile,v 1.143 2026/01/27 08:39:34 wiz Exp $
 
 DISTNAME=	mapserver-8.2.2
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	geography www
 MASTER_SITES=	http://download.osgeo.org/mapserver/
 

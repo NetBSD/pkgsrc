@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.276 2026/01/07 08:47:52 wiz Exp $
+# $NetBSD: Makefile,v 1.277 2026/01/27 08:40:06 wiz Exp $
 
 DISTNAME=	octave-10.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GNU:=octave/}
 EXTRACT_SUFX=	.tar.xz

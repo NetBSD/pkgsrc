@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2026/01/07 08:48:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/27 08:40:31 wiz Exp $
 
 DISTNAME=	ksshaskpass-${PLASMAVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 
 HOMEPAGE=	https://kde.org/plasma-desktop/

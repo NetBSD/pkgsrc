@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.93 2025/10/23 20:39:55 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.94 2026/01/27 08:40:55 wiz Exp $
 
 BUILDLINK_TREE+=	gtk2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gtk2
 GTK2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.4.0
-BUILDLINK_ABI_DEPENDS.gtk2+=	gtk2+>=2.24.33nb34
+BUILDLINK_ABI_DEPENDS.gtk2+=	gtk2+>=2.24.33nb36
 BUILDLINK_PKGSRCDIR.gtk2?=	../../x11/gtk2
 
 .include "../../mk/bsd.fast.prefs.mk"

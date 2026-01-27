@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2026/01/07 08:46:46 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/01/27 08:39:18 wiz Exp $
 
 DISTNAME=	smooth-0.9.10
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=smooth/}
 

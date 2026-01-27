@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2026/01/12 22:20:29 gutteridge Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2026/01/27 08:40:59 wiz Exp $
 
 BUILDLINK_TREE+=	libxfce4windowing
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libxfce4windowing
 LIBXFCE4WINDOWING_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libxfce4windowing+=	libxfce4windowing>=4.20.0nb1
-BUILDLINK_ABI_DEPENDS.libxfce4windowing?=	libxfce4windowing>=4.20.4nb1
+BUILDLINK_ABI_DEPENDS.libxfce4windowing?=	libxfce4windowing>=4.20.5nb1
 BUILDLINK_PKGSRCDIR.libxfce4windowing?=		../../x11/libxfce4windowing
 
 .include "../../devel/gobject-introspection/buildlink3.mk"

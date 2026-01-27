@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.102 2026/01/07 08:46:29 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2026/01/27 08:39:10 wiz Exp $
 
 DISTNAME=	gdl-3.34.0
-PKGREVISION=	34
+PKGREVISION=	35
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdl/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
