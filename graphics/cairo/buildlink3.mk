@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.72 2025/10/23 20:37:23 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.73 2026/01/27 08:31:50 wiz Exp $
 
 BUILDLINK_TREE+=	cairo
 
@@ -18,13 +18,10 @@ pkgbase := cairo
 .include "../../archivers/lzo/buildlink3.mk"
 .endif
 
-.if ${PKG_BUILD_OPTIONS.cairo:Mxcb}
-.include "../../x11/libxcb/buildlink3.mk"
-.endif
-
-.if ${PKG_BUILD_OPTIONS.cairo:Mx11} || ${PKG_BUILD_OPTIONS.cairo:Mxcb}
+.if ${PKG_BUILD_OPTIONS.cairo:Mx11}
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
+.include "../../x11/libxcb/buildlink3.mk"
 .endif
 
 .include "../../devel/glib2/buildlink3.mk"

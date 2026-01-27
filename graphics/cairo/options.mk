@@ -1,39 +1,37 @@
-# $NetBSD: options.mk,v 1.27 2024/04/07 07:31:19 wiz Exp $
+# $NetBSD: options.mk,v 1.28 2026/01/27 08:31:50 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cairo
-PKG_SUPPORTED_OPTIONS=	lzo x11 xcb
+PKG_SUPPORTED_OPTIONS=	lzo x11
 .if exists(/System/Library/Frameworks/Quartz.framework)
 PKG_SUPPORTED_OPTIONS+=	quartz
 PKG_SUGGESTED_OPTIONS+=	quartz
 .else
-PKG_SUGGESTED_OPTIONS=	x11 xcb
+PKG_SUGGESTED_OPTIONS=	x11
 .endif
 PKG_SUGGESTED_OPTIONS+=	lzo
 
+# remove after 2026Q2
+PKG_OPTIONS_LEGACY_OPTS+=	xcb:x11
+
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	x11 xcb quartz
+PLIST_VARS+=	x11 quartz
 
 .if !empty(PKG_OPTIONS:Mlzo)
 .include "../../archivers/lzo/buildlink3.mk"
 .endif
 
 ###
-### X11 and XCB support (XCB implies X11)
+### X11 support
 ###
-.if !empty(PKG_OPTIONS:Mx11) || !empty(PKG_OPTIONS:Mxcb)
+.if !empty(PKG_OPTIONS:Mx11)
 PLIST.x11=		yes
+MESON_ARGS+=		-Dxlib=enabled
+MESON_ARGS+=		-Dxcb=enabled
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
-MESON_ARGS+=		-Dxlib=enabled
-.  if !empty(PKG_OPTIONS:Mxcb)
-PLIST.xcb=	yes
-.    include "../../x11/libxcb/buildlink3.mk"
-MESON_ARGS+=		-Dxcb=enabled
-.  else
-MESON_ARGS+=		-Dxcb=disabled
-.  endif
+.include "../../x11/libxcb/buildlink3.mk"
 .else
 MESON_ARGS+=		-Dxlib=disabled
 MESON_ARGS+=		-Dxcb=disabled
