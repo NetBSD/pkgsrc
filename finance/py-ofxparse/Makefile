@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/10/09 07:57:39 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/01/27 09:12:48 wiz Exp $
 
 DISTNAME=	ofxparse-0.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/ofxparse/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sites.google.com/site/ofxparse
+#HOMEPAGE=	http://sites.google.com/site/ofxparse
 COMMENT=	Tools for working with the OFX file format
 LICENSE=	mit
 
