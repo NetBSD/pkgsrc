@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.20 2025/04/21 21:11:41 wiz Exp $
+# $NetBSD: mksandbox,v 1.21 2026/01/28 20:37:38 lloyd Exp $
 
 # Copyright (c) 2002,2012 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -84,7 +84,7 @@ Darwin)
 	mountprog=/sbin/mount
 	paxprog=/bin/pax
 	sedprog=/usr/bin/sed
-	sandboxEmptyDirs="$sandboxEmptyDirs /var/root"
+	sandboxEmptyDirs="$sandboxEmptyDirs /var/root /var/db"
 	sandboxMountDirs="$sandboxMountDirs /usr/llvm-gcc-4.2 /usr/X11 /System/Library /Library"
 	sandboxWriteDirs="$sandboxWriteDirs /Library/Server/Mail/Data"
 	;;
@@ -101,6 +101,9 @@ DragonFly)
 	paxprog=/bin/pax
 	sedprog=/usr/bin/sed
 	sandboxEmptyDirs="$sandboxEmptyDirs /var/spool/dma"
+	# Does /var/db exist on a basic install of DragonFly?
+	# If so, delete the line above and uncomment the line below.
+	# sandboxEmptyDirs="$sandboxEmptyDirs /var/spool/dma /var/db"
 	;;
 FreeBSD)
 	bmakeprog=bmake
@@ -114,6 +117,9 @@ FreeBSD)
 	mountprog=/sbin/mount
 	paxprog=/bin/pax
 	sedprog=/usr/bin/sed
+	# Does /var/db exist on a basic install of FreeBSD?
+	# If so, uncomment the line below.
+	# sandboxEmptyDirs="$sandboxEmptyDirs /var/db"
 	;;
 Linux)
 	bmakeprog=bmake
@@ -131,6 +137,7 @@ Linux)
 	fi
 	paxprog=""
 	sedprog=/bin/sed
+	sandboxEmptyDirs="$sandboxEmptyDirs /var/lib"
 	sandboxMountDirs="$sandboxMountDirs /lib64 /usr/lib64 /usr/kerberos"
 	sandboxWriteDirs="$sandboxWriteDirs /proc"
 	;;
@@ -149,6 +156,7 @@ NetBSD)
 	sedprog=/usr/bin/sed
 	need_src=yes
 	need_xsrc=yes
+	sandboxEmptyDirs="$sandboxEmptyDirs /var/db"
 	;;
 SunOS)
 	bmakeprog=bmake
@@ -164,6 +172,9 @@ SunOS)
 	sedprog=/usr/xpg4/bin/sed
 	sandboxMountDirs="/bin /sbin /kernel /lib /proc /opt/SUNWspro /usr/X11R6 /usr/5bin /usr/bin /usr/ccs /usr/dt /usr/games /usr/include /usr/lib /usr/openwin /usr/share /usr/sbin /usr/sadm /usr/sfw /usr/ucb /usr/ucblib /usr/xpg4 /var/mail /var/sadm"
 	sandboxEmptyDirs="$sandboxEmptyDirs /usr/tmp /var/tmp"
+	# Does /var/adm exist on a basic install of Solaris?
+	# If so, delete the line above and uncomment the line below.
+	# sandboxEmptyDirs="$sandboxEmptyDirs /usr/tmp /var/tmp /var/adm"
 	;;
 *)
 	echo "Unknown Operating System ($opsys) - good luck"
