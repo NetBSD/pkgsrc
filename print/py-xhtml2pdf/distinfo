@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/11/14 19:32:41 wiz Exp $
+$NetBSD: distinfo,v 1.5 2026/01/28 10:33:30 wiz Exp $
 
-BLAKE2s (xhtml2pdf-0.2.8.tar.gz) = 9e3cfcbe45e59eb019b0ad1254ef807eff059273531a5e6a594eb31d04fc0a97
-SHA512 (xhtml2pdf-0.2.8.tar.gz) = 15c46121caac5e2be289e547a1358d81a93352efdb47b4e106aaab93a8b3ff5851a51638b72c2508c4b9c67ecac4edc1a79ab527c2039d79d4c2a3dd7c6708ba
-Size (xhtml2pdf-0.2.8.tar.gz) = 107374 bytes
+BLAKE2s (xhtml2pdf-0.2.17.tar.gz) = 776e7e11c8e582349d2391b4367d5077a0db7fb46db7f771df78567936ae6795
+SHA512 (xhtml2pdf-0.2.17.tar.gz) = 584070777cdbb3b45bdb3701b5598d22b9154434c61f9d0e941d46743862ffb6750cbda28833deed0e0df8305ab3c3df2ba4793b8a18a5728f815a9a17f7a4ed
+Size (xhtml2pdf-0.2.17.tar.gz) = 139727 bytes
