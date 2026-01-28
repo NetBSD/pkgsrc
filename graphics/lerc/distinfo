@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2025/08/17 09:37:52 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2026/01/28 13:37:48 adam Exp $
 
 BLAKE2s (lerc-4.0.0.tar.gz) = 877998e672801d4da465c6d4e137d9efd2863ff10558cccb76f2786005343581
 SHA512 (lerc-4.0.0.tar.gz) = 36fe453b6e732f6bed554d1c1c5cd4668aec63593d6de11f12b659c7b9cbc059ac9aaacc6cea483b3257d522f1b07e13c299914d08b1f8aeb0bb2cde42ba47cf
 Size (lerc-4.0.0.tar.gz) = 4710408 bytes
+SHA1 (patch-src_LercLib_Lerc.cpp) = c3d0479fa9f449aa0f6db39b15ff01b701c6446c
