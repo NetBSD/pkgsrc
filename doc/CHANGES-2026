@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.683 2026/01/27 19:24:43 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.684 2026/01/28 03:24:48 fox Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -887,3 +887,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-test-doctestplus to 1.7.1 [adam 2026-01-27]
 	Updated security/acmesh to 3.1.2 [ryoon 2026-01-27]
 	Updated lang/joker to 1.6.0 [ktnb 2026-01-27]
+	Updated audio/din to 60 [fox 2026-01-27]
