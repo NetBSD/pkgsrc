@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2024/08/09 09:42:33 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2026/01/28 10:50:49 wiz Exp $
 
 BUILDLINK_TREE+=	gpgme
 
@@ -18,11 +18,11 @@ pkgbase:=		gpgme
 .include "../../mk/pkg-build-options.mk"
 
 .if ${PKG_BUILD_OPTIONS.gpgme:Mgnupg2}
-DEPENDS+=		gnupg2>=2.2.0:../../security/gnupg2
-GPGME_GPG=		${PREFIX}/bin/gpg2
-.else
-DEPENDS+=		gnupg>=1.4.2:../../security/gnupg
+DEPENDS+=		gnupg2>=2.5:../../security/gnupg2
 GPGME_GPG=		${PREFIX}/bin/gpg
+.else
+DEPENDS+=		gnupg>=1.4.23nb28:../../security/gnupg
+GPGME_GPG=		${PREFIX}/bin/gpg1
 .endif
 .if ${GNU_CONFIGURE:U""} == "yes"
 CONFIGURE_ARGS+=	ac_cv_path_GNUPG=${GPGME_GPG}
