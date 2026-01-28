@@ -1,18 +1,22 @@
-@comment $NetBSD: PLIST,v 1.13 2025/01/19 21:32:46 fox Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/01/28 03:23:45 fox Exp $
 bin/din
 share/applications/din.desktop
-share/din/factory/2600
-share/din/factory/2600.help.tcl
-share/din/factory/2600.patch.tcl
+share/din/factory/2${PKGVERSION}0
+share/din/factory/2${PKGVERSION}0.help.tcl
+share/din/factory/2${PKGVERSION}0.patch.tcl
 share/din/factory/CDGB
 share/din/factory/Makefile.am
 share/din/factory/Sine_Mixer
+share/din/factory/accent.crv
 share/din/factory/all_notes
 share/din/factory/am.crv
 share/din/factory/attack.crv
 share/din/factory/attack.ed
 share/din/factory/attack.lib
 share/din/factory/audio_prefs
+share/din/factory/beat-patterns.lib
+share/din/factory/beater.crv
+share/din/factory/beater.ed
 share/din/factory/binaural-drone.help.tcl
 share/din/factory/binaural-drones-waveform.crv
 share/din/factory/binaural-drones-waveform.ed
@@ -23,6 +27,7 @@ share/din/factory/blues
 share/din/factory/blues.drone
 share/din/factory/blues.intervals
 share/din/factory/blues.ranges
+share/din/factory/bpmtools
 share/din/factory/changer.help.tcl
 share/din/factory/changer.patch.tcl
 share/din/factory/chord.help.tcl
@@ -296,6 +301,7 @@ share/din/factory/d_capturer
 share/din/factory/d_circler
 share/din/factory/d_countries
 share/din/factory/d_curve_picker
+share/din/factory/d_delaylevels
 share/din/factory/d_dotter
 share/din/factory/d_dpeu
 share/din/factory/d_fft
@@ -309,10 +315,12 @@ share/din/factory/d_octave_shift
 share/din/factory/d_parameters
 share/din/factory/d_plugin_browser
 share/din/factory/d_point_modulator
+share/din/factory/d_polyrhythm
 share/din/factory/d_rose_milker
 share/din/factory/d_sine_mixer
 share/din/factory/d_spiraler
 share/din/factory/d_starrer
+share/din/factory/d_subdiv
 share/din/factory/d_superformula
 share/din/factory/d_warper
 share/din/factory/dash.crv
@@ -321,7 +329,6 @@ share/din/factory/decay.ed
 share/din/factory/decay.lib
 share/din/factory/delay.ed
 share/din/factory/din.hlp
-share/din/factory/din.osc
 share/din/factory/din_info
 share/din/factory/dot.crv
 share/din/factory/dp_bpm.crv
@@ -344,9 +351,6 @@ share/din/factory/fft_levels
 share/din/factory/fm.crv
 share/din/factory/font.ed
 share/din/factory/font.hlp
-share/din/factory/gater-patterns.lib
-share/din/factory/gater.crv
-share/din/factory/gater.ed
 share/din/factory/get-beat.help.tcl
 share/din/factory/get-bpm.help.tcl
 share/din/factory/get-curve-editor.help.tcl
@@ -423,6 +427,7 @@ share/din/factory/p_Superformula
 share/din/factory/phases
 share/din/factory/pitch-vol.ed
 share/din/factory/pitch.crv
+share/din/factory/pitch.lib
 share/din/factory/point-modulation.ed
 share/din/factory/pomo-x.crv
 share/din/factory/pomo-y.crv
@@ -468,7 +473,6 @@ share/din/factory/setup-user-dir.tcl
 share/din/factory/sin.lib
 share/din/factory/sine_mixer_sin.crv
 share/din/factory/sine_mixer_sin.ed
-share/din/factory/sounding-board.osc
 share/din/factory/spinners
 share/din/factory/spiraler.scr
 share/din/factory/spiraler_cos.crv
@@ -480,6 +484,7 @@ share/din/factory/spiraler_sin.crv
 share/din/factory/spiraler_sin.ed
 share/din/factory/start-end.help.tcl
 share/din/factory/start-end.patch.tcl
+share/din/factory/swing.crv
 share/din/factory/tuning.help.tcl
 share/din/factory/velocity.crv
 share/din/factory/velocity.ed
