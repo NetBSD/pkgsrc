@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2026/01/21 05:10:01 taca Exp $
+# $NetBSD: Makefile,v 1.72 2026/01/28 14:06:18 taca Exp $
 #
 # This is super confusing, but the PEAR tarball does not include an installer,
 # it is only available in a different installer package which bundles the PEAR
@@ -6,9 +6,8 @@
 # we override the version to whatever PEAR it bundles.
 #
 
-DISTNAME=	pearweb_phars-1.10.25
-PKGNAME=	${PHP_PKG_PREFIX}-pear-1.10.17
-PKGREVISION=	1
+DISTNAME=	pearweb_phars-1.10.26
+PKGNAME=	${PHP_PKG_PREFIX}-pear-1.10.18
 CATEGORIES=	lang
 MASTER_SITES=	http://download.pear.php.net/package/
 EXTRACT_SUFX=	.tgz
