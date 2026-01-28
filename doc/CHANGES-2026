@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.702 2026/01/28 10:43:04 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.703 2026/01/28 10:48:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -909,3 +909,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed chat/py-hangups [wiz 2026-01-28]
 	Removed devel/py-readlike [wiz 2026-01-28]
 	Removed devel/py-ruamel-base [wiz 2026-01-28]
+	Updated security/git-secret to 0.5.0nb1 [wiz 2026-01-28]
