@@ -1,0 +1,5 @@
+oscrypto is a library that exposes cryptography primitives from
+the host operating system.
+
+Many of the supported ciphers and hashes are not necessarily modern,
+and should primarily be used for integration with legacy systems.
