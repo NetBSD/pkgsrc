@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2026/01/28 10:06:32 adam Exp $
+# $NetBSD: Makefile,v 1.170 2026/01/28 14:58:33 wiz Exp $
 
 DISTNAME=	gnupg-2.5.17
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
@@ -38,6 +38,9 @@ CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600	# socklen_t
 LDFLAGS.Darwin+=	-lintl
 #LDFLAGS.SunOS+=	-lsocket -lrt
 #LDFLAGS.Linux+=	-lrt
+
+# self test problems:
+# https://dev.gnupg.org/T8065
 
 .include "options.mk"
 
