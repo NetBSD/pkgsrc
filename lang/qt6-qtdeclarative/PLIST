@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2025/11/20 12:36:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/01/28 17:10:51 adam Exp $
 lib/pkgconfig/Qt6LabsAnimation.pc
 lib/pkgconfig/Qt6LabsFolderListModel.pc
 lib/pkgconfig/Qt6LabsPlatform.pc
@@ -4329,6 +4329,7 @@ qt6/qml/QtQuick/Controls/Imagine/RoundButton.qml
 qt6/qml/QtQuick/Controls/Imagine/ScrollBar.qml
 qt6/qml/QtQuick/Controls/Imagine/ScrollIndicator.qml
 qt6/qml/QtQuick/Controls/Imagine/ScrollView.qml
+qt6/qml/QtQuick/Controls/Imagine/SearchField.qml
 qt6/qml/QtQuick/Controls/Imagine/SelectionRectangle.qml
 qt6/qml/QtQuick/Controls/Imagine/Slider.qml
 qt6/qml/QtQuick/Controls/Imagine/SpinBox.qml

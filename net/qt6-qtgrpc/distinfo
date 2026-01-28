@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2025/11/20 12:36:37 adam Exp $
+$NetBSD: distinfo,v 1.21 2026/01/28 17:10:51 adam Exp $
 
-BLAKE2s (qtgrpc-everywhere-src-6.10.1.tar.xz) = 4b823b5c532f0f828fa04a338e041fa1ca39114740e562718e72fe1f4c746e1c
-SHA512 (qtgrpc-everywhere-src-6.10.1.tar.xz) = cd2b68060e91512e3771001756136ae098dd3ed21eb01a1abe78902a2c85452a86df5e6c371b8206b5752a1075eda73e18c440e918cf5b4dad969079223801c4
-Size (qtgrpc-everywhere-src-6.10.1.tar.xz) = 620108 bytes
+BLAKE2s (qtgrpc-everywhere-src-6.10.2.tar.xz) = f154bc23be46e0d900c71aca011a6227425a9a56ada5a960eee1a5b2e7da2efe
+SHA512 (qtgrpc-everywhere-src-6.10.2.tar.xz) = fd42c9792b9de98d038a748e03eb66a578a28b68c7151d912bb274d2e5223f0f2aa213b1f824b201cd622f21e62cf15f6ce030a7deed05cbd3a47b78fc41694e
+Size (qtgrpc-everywhere-src-6.10.2.tar.xz) = 622164 bytes
