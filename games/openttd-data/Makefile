@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.11 2022/05/08 12:06:34 triaxx Exp $
+# $NetBSD: Makefile,v 1.12 2026/01/28 07:53:39 triaxx Exp $
 
-GFXVER=		7.1
-MSXVER=		0.4.2
-SFXVER=		1.0.3
-PKGNAME=	openttd-data-${GFXVER}
-CATEGORIES=	games x11
-MASTER_SITES=	https://proxy.binaries.openttd.org/
-DISTFILES=	opengfx-${GFXVER}-all.zip
-DISTFILES+=	openmsx-${MSXVER}-all.zip
-DISTFILES+=	opensfx-${SFXVER}-all.zip
-EXTRACT_SUFX=	.zip
-
+GFXVER=					8.0
+MSXVER=					0.4.2
+SFXVER=					1.0.3
+PKGNAME=				openttd-data-${GFXVER}
+CATEGORIES=				games x11
+MASTER_SITES=				https://proxy.binaries.openttd.org/
+MASTER_SITES+=				https://cdn.openttd.org/
+EXTRACT_SUFX=				.zip
+DISTFILES=				opengfx-${GFXVER}-all.zip
+DISTFILES+=				openmsx-${MSXVER}-all.zip
+DISTFILES+=				opensfx-${SFXVER}-all.zip
 SITES.opengfx-${GFXVER}-all.zip=	${MASTER_SITES:Q}opengfx-releases/${GFXVER}/
 SITES.openmsx-${MSXVER}-all.zip=	${MASTER_SITES:Q}openmsx-releases/${MSXVER}/
 SITES.opensfx-${SFXVER}-all.zip=	${MASTER_SITES:Q}opensfx-releases/${SFXVER}/
