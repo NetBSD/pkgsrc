@@ -1,0 +1,18 @@
+# $NetBSD: Makefile,v 1.1 2026/01/28 10:27:48 wiz Exp $
+
+DISTNAME=	uritools-6.0.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	www python
+MASTER_SITES=	${MASTER_SITE_PYPI:=u/uritools/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/tkem/uritools/
+COMMENT=	URI parsing, classification and composition
+LICENSE=	mit
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
+USE_LANGUAGES=	# none
+
+.include "../../lang/python/wheel.mk"
+.include "../../mk/bsd.pkg.mk"
