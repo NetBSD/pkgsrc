@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.685 2026/01/28 07:39:58 triaxx Exp $
+$NetBSD: CHANGES-2026,v 1.686 2026/01/28 07:47:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -889,3 +889,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/joker to 1.6.0 [ktnb 2026-01-27]
 	Updated audio/din to 60 [fox 2026-01-27]
 	Updated games/openttd to 15.1 [triaxx 2026-01-28]
+	Updated security/openssl to 3.6.1 [adam 2026-01-28]
+	Updated devel/py-cachetools to 6.2.6 [adam 2026-01-28]
