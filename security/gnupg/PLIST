@@ -1,18 +1,18 @@
-@comment $NetBSD: PLIST,v 1.29 2020/09/07 13:08:28 gdt Exp $
-bin/gpg
-bin/gpg-zip
-bin/gpgv
+@comment $NetBSD: PLIST,v 1.30 2026/01/28 09:28:12 wiz Exp $
+bin/gpg-zip1
+bin/gpg1
+bin/gpgv1
 info/gnupg1.info
-libexec/gnupg/gpgkeys_curl
-libexec/gnupg/gpgkeys_finger
-libexec/gnupg/gpgkeys_hkp
-${PLIST.ldap}libexec/gnupg/gpgkeys_ldap
-man/man1/gpg-zip.1
-man/man1/gpg.1
-man/man1/gpgv.1
-share/gnupg/DETAILS
-share/gnupg/FAQ
-share/gnupg/options.skel
+libexec/gnupg/gpgkeys_curl1
+libexec/gnupg/gpgkeys_finger1
+libexec/gnupg/gpgkeys_hkp1
+${PLIST.ldap}libexec/gnupg/gpgkeys_ldap1
+man/man1/gpg-zip1.1
+man/man1/gpg1.1
+man/man1/gpgv1.1
+share/gnupg1/DETAILS
+share/gnupg1/FAQ
+share/gnupg1/options.skel
 share/locale/be/LC_MESSAGES/gnupg.mo
 share/locale/ca/LC_MESSAGES/gnupg.mo
 share/locale/cs/LC_MESSAGES/gnupg.mo

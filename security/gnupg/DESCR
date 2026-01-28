@@ -1,4 +1,11 @@
-GNU Privacy Guard
+GnuPG is GNU's tool for secure communication and data storage. It
+can be used to encrypt data and to create digital signatures. It
+includes an advanced key management facility and is compliant with
+the proposed OpenPGP Internet standard as described in RFC 4880.
 
-GnuPG is a complete and free replacement for PGP. GnuPG is nearly in
-compliance with RFC2440 (OpenPGP).
+The gnupg1 package provides GnuPG 1.4, the "classic" standalone,
+non-modularized version. It is provided mainly for people with the
+need to use archaic cryptographic objects like PGPv3 keys to access
+archived messages. It does not support more recent cryptographic
+primitives like ECDSA or EdDSA. Please use the gnupg2 package instead
+unless you know for sure that you need GnuPG 1.x.
