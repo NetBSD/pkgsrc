@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2022/05/08 12:06:34 triaxx Exp $
+$NetBSD: distinfo,v 1.12 2026/01/28 07:53:39 triaxx Exp $
 
-BLAKE2s (opengfx-7.1-all.zip) = b8834b037ad68b89275d438f8c1da5d800daf7cf00ef8a6bb694fe6aedf8bd1c
-SHA512 (opengfx-7.1-all.zip) = 89dbb5cb45f3d720290d78904611ee3173617d97f4f49176fb10949b7d78bb0348b1aa7e12743c0cf3834b09ed73c1e161e04ae7532f2baffe4f1259bc8df04c
-Size (opengfx-7.1-all.zip) = 3547160 bytes
+BLAKE2s (opengfx-8.0-all.zip) = ec6092cb5bfbf1f053f1298f78bc0b6b87b8f9ee88c1b168b4e37a9d4fa89400
+SHA512 (opengfx-8.0-all.zip) = 93808f243ec527aebaf37df4cfb286879a981cc07e54d2b9790f2e9c4162a961a5a0cc2802af8deb0cbf3aab2713608ab93dae23f407e05cd2df9f3509a88253
+Size (opengfx-8.0-all.zip) = 3583152 bytes
 BLAKE2s (openmsx-0.4.2-all.zip) = c6f1a41ec81a6b7cd013fb9a212ac40f4f47b0287a951118e30863eebbc8d3e1
 SHA512 (openmsx-0.4.2-all.zip) = 6fdcec91ffcfa68ef367ff1733011a472caeb53f26fe07623ac510db80890789475919192317e6d5cddd6f3acea5bd58d8b174c23d506efcbd868392e418ed2f
 Size (openmsx-0.4.2-all.zip) = 140204 bytes
