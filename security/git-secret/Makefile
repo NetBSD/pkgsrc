@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/01/22 09:25:18 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/28 10:48:48 wiz Exp $
 
 DISTNAME=	git-secret-0.5.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sobolevn/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +13,7 @@ LICENSE=	mit
 
 DEPENDS+=	gawk-[0-9]*:../../lang/gawk
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
-DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
+DEPENDS+=	gnupg2>=2.5:../../security/gnupg2
 
 USE_TOOLS+=	bash:run
 
@@ -20,12 +21,6 @@ REPLACE_BASH+=	src/*.sh
 REPLACE_BASH+=	src/commands/*.sh
 REPLACE_BASH+=	src/_utils/*.sh
 REPLACE_BASH+=	utils/*.sh
-
-SUBST_CLASSES+=		gpgpath
-SUBST_STAGE.gpgpath=	pre-configure
-SUBST_MESSAGE.gpgpath=	Fixing gpg path.
-SUBST_FILES.gpgpath=	src/_utils/_git_secret_tools.sh
-SUBST_SED.gpgpath=	-e 's,SECRETS_GPG_COMMAND:="gpg",SECRETS_GPG_COMMAND:="${PREFIX}/bin/gpg2",'
 
 SUBST_CLASSES+=		mandir
 SUBST_STAGE.mandir=	pre-configure
