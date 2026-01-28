@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2025/05/08 14:02:38 jperkin Exp $
+# $NetBSD: options.mk,v 1.8 2026/01/28 17:10:52 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qt6-qtmultimedia
 PKG_SUPPORTED_OPTIONS=	gstreamer pulseaudio
@@ -34,9 +34,9 @@ CONFIGURE_ARGS+=	-no-pulseaudio
 # For some reason ffmpeg support is conditional on pulseaudio OR apple
 # in src/multimedia/configure.cmake
 .if !empty(PKG_OPTIONS:Mpulseaudio) || ${OPSYS} == "Darwin"
-.include "../../multimedia/ffmpeg7/buildlink3.mk"
+.include "../../multimedia/ffmpeg8/buildlink3.mk"
 PLIST.ffmpeg=		yes
-.  if ${PKG_BUILD_OPTIONS.ffmpeg7:Mvaapi}
+.  if ${PKG_BUILD_OPTIONS.ffmpeg8:Mvaapi}
 PLIST.vaapi=		yes
 .  endif
 .  if ${OPSYS} != "Darwin"
