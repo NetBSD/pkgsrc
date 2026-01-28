@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.707 2026/01/28 10:54:02 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.708 2026/01/28 10:54:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -914,3 +914,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/gpgme to 1.24.3nb1 [wiz 2026-01-28]
 	Updated security/p5-GnuPG-Interface to 1.04nb3 [wiz 2026-01-28]
 	Updated sysutils/duplicity to 3.0.7nb1 [wiz 2026-01-28]
+	Updated sysutils/yadm to 3.2.2nb1 [wiz 2026-01-28]
