@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.168 2026/01/28 09:41:31 wiz Exp $
+# $NetBSD: Makefile,v 1.169 2026/01/28 10:06:32 adam Exp $
 
 DISTNAME=	gnupg-2.5.17
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
@@ -35,7 +35,7 @@ TEST_TARGET=		check
 
 CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600	# socklen_t
 
-#LDFLAGS.Darwin+=	-lintl -lresolv
+LDFLAGS.Darwin+=	-lintl
 #LDFLAGS.SunOS+=	-lsocket -lrt
 #LDFLAGS.Linux+=	-lrt
 
