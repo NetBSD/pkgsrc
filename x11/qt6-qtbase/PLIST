@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2025/12/21 09:19:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.33 2026/01/28 17:10:50 adam Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -2276,7 +2276,6 @@ ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandC
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-xdg-shell.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-xdg-system-bell-v1.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-xdg-toplevel-drag-v1.h
-${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-xx-color-management-v4.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandabstractdecoration_p.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandappmenu_p.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandbuffer_p.h
@@ -2297,7 +2296,6 @@ ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandC
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylanddecorationplugin_p.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylanddisplay_p.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylanddnd_p.h
-${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandeventdispatcher_p.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandfractionalscale_p.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandhardwareintegration_p.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandinputcontext_p.h
@@ -2358,7 +2356,6 @@ ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandC
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-xdg-shell-client-protocol.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-xdg-system-bell-v1-client-protocol.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-xdg-toplevel-drag-v1-client-protocol.h
-${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-xx-color-management-v4-client-protocol.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/QWaylandClientExtension
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/QWaylandClientExtensionTemplate
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/QtWaylandClient
@@ -2472,6 +2469,7 @@ qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qtoolbararealayout_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qtoolbarextension_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qtoolbarlayout_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qtoolbarseparator_p.h
+qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qtooltip_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qtreeview_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qtreewidget_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qtreewidgetitemiterator_p.h
@@ -3026,9 +3024,13 @@ qt6/lib/cmake/Qt6/QtPublicGitHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicPluginHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicPluginHelpers_v2.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomAttributionHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicSbomCommonGenerationHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomCpeHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicSbomCycloneDXHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomDepHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicSbomDocumentNamespaceHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomFileHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicSbomGenerationCycloneDXHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomLicenseHelpers.cmake
@@ -3792,6 +3794,7 @@ qt6/libexec/qt-cmake-standalone-test
 qt6/libexec/qt-internal-configure-examples
 qt6/libexec/qt-internal-configure-tests
 qt6/libexec/qt-testrunner.py
+qt6/libexec/qt_cyclonedx_generator.py
 ${PLIST.wayland}${PLIST.x11}qt6/libexec/qtwaylandscanner
 qt6/libexec/qvkgen
 qt6/libexec/rcc
@@ -4388,8 +4391,8 @@ qt6/share/qt6/wayland/protocols/appmenu/REUSE.toml
 qt6/share/qt6/wayland/protocols/appmenu/appmenu.xml
 qt6/share/qt6/wayland/protocols/appmenu/qt_attribution.json
 qt6/share/qt6/wayland/protocols/color-management/REUSE.toml
+qt6/share/qt6/wayland/protocols/color-management/color-management-v1.xml
 qt6/share/qt6/wayland/protocols/color-management/qt_attribution.json
-qt6/share/qt6/wayland/protocols/color-management/xx-color-management-v4.xml
 qt6/share/qt6/wayland/protocols/cursor-shape/REUSE.toml
 qt6/share/qt6/wayland/protocols/cursor-shape/cursor-shape-v1.xml
 qt6/share/qt6/wayland/protocols/fractional-scale/REUSE.toml

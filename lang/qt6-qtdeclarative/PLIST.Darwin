@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.9 2025/11/20 12:36:36 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.10 2026/01/28 17:10:51 adam Exp $
 lib/pkgconfig/Qt6QuickControls2IOSStyleImpl.pc
 lib/pkgconfig/Qt6QuickControls2MacOSStyleImpl.pc
 qt6/include/QtQuickControls2IOSStyleImpl/${PKGVERSION}/QtQuickControls2IOSStyleImpl/private/qquickioscursorflashtimer_p.h
@@ -114,6 +114,7 @@ qt6/qml/QtQuick/Controls/iOS/RadioDelegate.qml
 qt6/qml/QtQuick/Controls/iOS/RangeSlider.qml
 qt6/qml/QtQuick/Controls/iOS/ScrollBar.qml
 qt6/qml/QtQuick/Controls/iOS/ScrollIndicator.qml
+qt6/qml/QtQuick/Controls/iOS/SearchField.qml
 qt6/qml/QtQuick/Controls/iOS/SelectionRectangle.qml
 qt6/qml/QtQuick/Controls/iOS/Slider.qml
 qt6/qml/QtQuick/Controls/iOS/SpinBox.qml

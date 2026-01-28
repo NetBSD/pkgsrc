@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2026/01/07 08:47:26 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/01/28 17:10:50 adam Exp $
 
 DISTNAME=	qt3d-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qt3d-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	Qt6 3d
 CATEGORIES=	graphics
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
