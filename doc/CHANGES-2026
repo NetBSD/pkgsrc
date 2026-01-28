@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.691 2026/01/28 09:28:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.692 2026/01/28 09:32:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -897,3 +897,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/feathernotes to 1.4.0 [pin 2026-01-28]
 	Updated textproc/rumdl to 0.1.2 [pin 2026-01-28]
 	Updated security/gnupg to 1.4.23nb28 [wiz 2026-01-28]
+	Updated lang/oracle-jdk21 to 21.0.10 [adam 2026-01-28]
+	Updated textproc/py-phonenumbers to 9.0.22 [adam 2026-01-28]
