@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.710 2026/01/28 11:25:17 adam Exp $
+$NetBSD: CHANGES-2026,v 1.711 2026/01/28 12:26:38 jun Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -918,3 +918,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/garden to 2.5.1 [pin 2026-01-28]
 	Removed devel/py-functools32 [adam 2026-01-28]
 	Updated www/py-django-binary-database-files to 1.0.19 [adam 2026-01-28]
+	Updated emulators/nono to 1.6.5 [jun 2026-01-28]
