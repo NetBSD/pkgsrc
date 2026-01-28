@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.704 2026/01/28 10:49:06 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.705 2026/01/28 10:50:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -911,3 +911,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/py-ruamel-base [wiz 2026-01-28]
 	Updated security/git-secret to 0.5.0nb1 [wiz 2026-01-28]
 	Updated misc/libreoffice to 25.8.4.2nb5 [wiz 2026-01-28]
+	Updated security/gpgme to 1.24.3nb1 [wiz 2026-01-28]
