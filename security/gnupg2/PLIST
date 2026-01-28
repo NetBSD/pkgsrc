@@ -1,21 +1,22 @@
-@comment $NetBSD: PLIST,v 1.18 2024/11/03 08:54:48 nia Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/01/28 09:41:31 wiz Exp $
 ${PLIST.gnutls}bin/dirmngr
 ${PLIST.gnutls}bin/dirmngr-client
 bin/g13
+bin/gpg
 bin/gpg-agent
+bin/gpg-authcode-sign.sh
 bin/gpg-card
 bin/gpg-connect-agent
 bin/gpg-mail-tube
 bin/gpg-wks-client
 bin/gpg-wks-server
-bin/gpg2
 bin/gpgconf
 bin/gpgparsemail
 bin/gpgscm
 bin/gpgsm
 bin/gpgsplit
 bin/gpgtar
-bin/gpgv2
+bin/gpgv
 bin/kbxutil
 bin/watchgnupg
 info/gnupg.info
@@ -37,12 +38,12 @@ man/man1/gpg-mail-tube.1
 man/man1/gpg-preset-passphrase.1
 man/man1/gpg-wks-client.1
 man/man1/gpg-wks-server.1
-man/man1/gpg2.1
+man/man1/gpg.1
 man/man1/gpgconf.1
 man/man1/gpgparsemail.1
 man/man1/gpgsm.1
 man/man1/gpgtar.1
-man/man1/gpgv2.1
+man/man1/gpgv.1
 man/man1/scdaemon.1
 man/man1/watchgnupg.1
 man/man7/gnupg.7
@@ -97,7 +98,10 @@ share/gnupg/help.tr.txt
 share/gnupg/help.txt
 share/gnupg/help.zh_CN.txt
 share/gnupg/help.zh_TW.txt
-${PLIST.gnutls}share/gnupg/sks-keyservers.netCA.pem
+share/gnupg/mail-tube.de.txt
+share/gnupg/mail-tube.txt
+share/gnupg/wks-utils.de.txt
+share/gnupg/wks-utils.txt
 share/locale/ca/LC_MESSAGES/gnupg2.mo
 share/locale/cs/LC_MESSAGES/gnupg2.mo
 share/locale/da/LC_MESSAGES/gnupg2.mo
@@ -115,6 +119,7 @@ share/locale/hu/LC_MESSAGES/gnupg2.mo
 share/locale/id/LC_MESSAGES/gnupg2.mo
 share/locale/it/LC_MESSAGES/gnupg2.mo
 share/locale/ja/LC_MESSAGES/gnupg2.mo
+share/locale/ka/LC_MESSAGES/gnupg2.mo
 share/locale/nb/LC_MESSAGES/gnupg2.mo
 share/locale/nl/LC_MESSAGES/gnupg2.mo
 share/locale/pl/LC_MESSAGES/gnupg2.mo

@@ -1,7 +1,7 @@
-GnuPG 2.2 provides several utilities that are used by mail clients,
-such as Kmail and Balsa, including OpenPGP and S/MIME support.  GnuPG
-2.2 has a different architecture than GnuPG 1.4 in that it splits up
-functionality into several modules.  However, both versions may be
-installed alongside without any conflict.  The advantage of GnuPG-1 is
-its smaller size and the lack of dependency on other modules at run
-and build time.
+GnuPG is GNU's tool for secure communication and data storage. It
+can be used to encrypt data and to create digital signatures. It
+includes an advanced key management facility and is compliant with
+the proposed OpenPGP Internet standard as described in RFC4880.
+
+This package contains the full suite of GnuPG tools for cryptographic
+communications and data storage.
