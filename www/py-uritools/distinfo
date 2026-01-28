@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/01/28 10:27:48 wiz Exp $
+
+BLAKE2s (uritools-6.0.1.tar.gz) = 7ff94ea69cf4d20c3f134eab9ce1c59760aff9cb81e59db81c0817627a95b788
+SHA512 (uritools-6.0.1.tar.gz) = 32a8e4fad14fd2a0475fc92e185ef86e8dee3e80342a881877953ba8673ada2e820beb73db465dfe38842759c0aa394c921ed41b48ec57c630d139eb04da0f91
+Size (uritools-6.0.1.tar.gz) = 22857 bytes
