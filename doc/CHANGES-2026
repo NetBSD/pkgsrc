@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.687 2026/01/28 07:53:54 triaxx Exp $
+$NetBSD: CHANGES-2026,v 1.688 2026/01/28 08:40:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -892,3 +892,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/openssl to 3.6.1 [adam 2026-01-28]
 	Updated devel/py-cachetools to 6.2.6 [adam 2026-01-28]
 	Updated games/openttd-data to 8.0 [triaxx 2026-01-28]
+	Updated security/py-cryptography to 46.0.4 [adam 2026-01-28]
+	Updated security/py-cryptography_vectors to 46.0.4 [adam 2026-01-28]
