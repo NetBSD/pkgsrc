@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2026/01/28 21:54:07 mef Exp $
+# $NetBSD: Makefile,v 1.55 2026/01/28 22:00:21 mef Exp $
 
 DISTNAME=	liborcus-0.21.0
 PKGNAME=	${DISTNAME:S/liborcus/orcus/}
@@ -16,6 +16,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 
+# with gcc 7.5, we have following line:
 # stream.cpp:191:44:   required from here
 # /usr/include/g++/bits/unique_ptr.h:821:30: error: no matching function for call to 'orcus::file_content::impl::impl(std::basic_string_view<char16_t>&)'
 #      { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
