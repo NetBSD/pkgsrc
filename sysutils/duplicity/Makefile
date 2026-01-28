@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2026/01/02 15:09:54 triaxx Exp $
+# $NetBSD: Makefile,v 1.79 2026/01/28 10:53:53 wiz Exp $
 
 DISTNAME=	duplicity-3.0.7
+PKGREVISION=	1
 CATEGORIES=	sysutils net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/duplicity/}
 
@@ -15,7 +16,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=5.0.2:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 
-DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
+DEPENDS+=	gnupg2>=2.5:../../security/gnupg2
 DEPENDS+=	lftp-[0-9]*:../../net/lftp
 DEPENDS+=	${PYPKGPREFIX}-boto3-[0-9]*:../../net/py-boto3
 DEPENDS+=	${PYPKGPREFIX}-botocore-[0-9]*:../../net/py-botocore
@@ -37,7 +38,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 # as of 3.0.0
 # 119 failed, 324 passed, 27 skipped, 18 warnings, 2 errors
 
-GPG=	${PREFIX}/bin/gpg2
 LFTP=	${PREFIX}/bin/lftp
 
 REPLACE_PYTHON+=	bin/duplicity
