@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.695 2026/01/28 10:28:54 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.696 2026/01/28 10:30:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -902,3 +902,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/gnupg2 to 2.5.17 [wiz 2026-01-28]
 	Added www/py-uritools version 6.0.1 [wiz 2026-01-28]
 	Added security/py-oscrypto version 1.3.0 [wiz 2026-01-28]
+	Added security/py-hanko-certvalidator version 0.29.0 [wiz 2026-01-28]
