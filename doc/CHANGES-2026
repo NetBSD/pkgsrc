@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.698 2026/01/28 10:33:39 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.699 2026/01/28 10:35:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -905,3 +905,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added security/py-hanko-certvalidator version 0.29.0 [wiz 2026-01-28]
 	Added security/py-hanko version 0.32.0 [wiz 2026-01-28]
 	Updated print/py-xhtml2pdf to 0.2.17 [wiz 2026-01-28]
+	Removed print/py-PDF2 successor textproc/py-pdf [wiz 2026-01-28]
