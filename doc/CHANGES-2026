@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.699 2026/01/28 10:35:26 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.700 2026/01/28 10:39:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -906,3 +906,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added security/py-hanko version 0.32.0 [wiz 2026-01-28]
 	Updated print/py-xhtml2pdf to 0.2.17 [wiz 2026-01-28]
 	Removed print/py-PDF2 successor textproc/py-pdf [wiz 2026-01-28]
+	Removed chat/py-hangups [wiz 2026-01-28]
