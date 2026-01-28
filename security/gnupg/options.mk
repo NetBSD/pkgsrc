@@ -1,15 +1,15 @@
-# $NetBSD: options.mk,v 1.17 2013/07/15 02:02:27 ryoon Exp $
+# $NetBSD: options.mk,v 1.18 2026/01/28 09:28:12 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnupg
-PKG_SUPPORTED_OPTIONS=	curl ldap readline
+PKG_SUPPORTED_OPTIONS=	curl ldap
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH:Mi386}
+.if ${MACHINE_ARCH} == i386
 PKG_SUPPORTED_OPTIONS+=	i586-optimized
 .endif
 
-.if ${MACHINE_ARCH:Mm68k}
+.if ${MACHINE_ARCH} == m68k
 PKG_SUPPORTED_OPTIONS+=	m68060-optimized
 .endif
 
@@ -39,11 +39,4 @@ CONFIGURE_ARGS+=	--disable-ldap
 # be more efficient on M68060 machines
 CONFIGURE_ENV+=		M68060=${M68060:Q}
 CFLAGS+=		-m68060
-.endif
-
-.if !empty(PKG_OPTIONS:Mreadline)
-.include "../../devel/readline/buildlink3.mk"
-CONFIGURE_ARGS+=  --with-readline=${BUILDLINK_PREFIX.readline}
-.else
-CONFIGURE_ARGS+=	--without-readline
 .endif
