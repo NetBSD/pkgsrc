@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4580 2026/01/28 10:43:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4581 2026/01/28 11:19:52 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2707,7 +2707,6 @@ SUBDIR+=	py-frozendict
 SUBDIR+=	py-frozenlist
 SUBDIR+=	py-funcparserlib
 SUBDIR+=	py-funcsigs
-SUBDIR+=	py-functools32
 SUBDIR+=	py-funcy
 SUBDIR+=	py-future
 SUBDIR+=	py-futures
