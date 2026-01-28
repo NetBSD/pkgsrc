@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.714 2026/01/28 17:25:27 adam Exp $
+$NetBSD: CHANGES-2026,v 1.715 2026/01/28 17:37:03 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -923,3 +923,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated pkgtools/pkgin to 26.1.0 [jperkin 2026-01-28]
 	Updated meta-pkgs/qt6 to 6.10.2 [adam 2026-01-28]
 	Updated graphics/librsvg to 2.60.2 [adam 2026-01-28]
+	Updated archivers/par2 to 1.1.0 [rhialto 2026-01-28]
