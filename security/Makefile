@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.993 2026/01/23 05:51:26 wiz Exp $
+# $NetBSD: Makefile,v 1.994 2026/01/28 10:31:22 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -505,6 +505,8 @@ SUBDIR+=	py-google-auth
 SUBDIR+=	py-google-auth-httplib2
 SUBDIR+=	py-google-auth-oauthlib
 SUBDIR+=	py-gssapi
+SUBDIR+=	py-hanko
+SUBDIR+=	py-hanko-certvalidator
 SUBDIR+=	py-hawkauthlib
 SUBDIR+=	py-hkdf
 SUBDIR+=	py-hsm
@@ -527,6 +529,7 @@ SUBDIR+=	py-oauthlib
 SUBDIR+=	py-olm
 SUBDIR+=	py-omemo-dr
 SUBDIR+=	py-openid
+SUBDIR+=	py-oscrypto
 SUBDIR+=	py-otp
 SUBDIR+=	py-paramiko
 SUBDIR+=	py-passlib
