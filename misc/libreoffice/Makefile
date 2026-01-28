@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.376 2026/01/27 08:40:12 wiz Exp $
+# $NetBSD: Makefile,v 1.377 2026/01/28 10:48:09 wiz Exp $
 
 VERREL=		25.8.4
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -179,7 +179,7 @@ WRKSRC=		${WRKDIR}/${LO_BOOTSTRAP}
 
 TOOL_DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 DEPENDS+=		xdg-utils-[0-9]*:../../misc/xdg-utils
-DEPENDS+=		gnupg2-[0-9]*:../../security/gnupg2
+DEPENDS+=		gnupg2>=2.5:../../security/gnupg2
 
 USE_LIBTOOL=		yes
 # Use GNU find from findutils.
@@ -196,7 +196,6 @@ CXXFLAGS.NetBSD+=	-DNO_CPLUSPLUS_ALLOCA
 # Do not use /tmp, outside of WRKSRC.
 CONFIGURE_ENV+=		TMPDIR=${WRKSRC}/tmp
 CONFIGURE_ENV+=		ANT_LIB=${PREFIX}/lib/java/ant
-CONFIGURE_ENV+=		ac_cv_path_GPG=${PREFIX}/bin/gpg2
 
 MAKE_JOBS_SAFE=		no # --with-parallelism conficts with -jN
 .if !empty(MAKE_JOBS.${PKGPATH})
