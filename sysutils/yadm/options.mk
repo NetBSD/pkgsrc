@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2021/11/23 05:53:33 pho Exp $
+# $NetBSD: options.mk,v 1.2 2026/01/28 10:54:37 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.yadm
 PKG_SUPPORTED_OPTIONS=	openssl
@@ -23,12 +23,12 @@ YADM_PROGS+=	OPENSSL_PROGRAM="/nonexistent"
 ### gnupg1 or gnupg2 support
 ###
 .if !empty(PKG_OPTIONS:Mgnupg1)
-DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
-YADM_PROGS+=	GPG_PROGRAM="${PREFIX}/bin/gpg"
+DEPENDS+=	gnupg>=1.4.23nb28:../../security/gnupg
+YADM_PROGS+=	GPG_PROGRAM="${PREFIX}/bin/gpg1"
 
 .elif !empty(PKG_OPTIONS:Mgnupg2)
-DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
-YADM_PROGS+=	GPG_PROGRAM="${PREFIX}/bin/gpg2"
+DEPENDS+=	gnupg2>=2.5:../../security/gnupg2
+YADM_PROGS+=	GPG_PROGRAM="${PREFIX}/bin/gpg"
 
 .else
 YADM_PROGS+=	GPG_PROGRAM="/nonexistent"
