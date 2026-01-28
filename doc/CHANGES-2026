@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.684 2026/01/28 03:24:48 fox Exp $
+$NetBSD: CHANGES-2026,v 1.685 2026/01/28 07:39:58 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -888,3 +888,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/acmesh to 3.1.2 [ryoon 2026-01-27]
 	Updated lang/joker to 1.6.0 [ktnb 2026-01-27]
 	Updated audio/din to 60 [fox 2026-01-27]
+	Updated games/openttd to 15.1 [triaxx 2026-01-28]
