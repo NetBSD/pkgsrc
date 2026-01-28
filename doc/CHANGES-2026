@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.701 2026/01/28 10:40:44 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.702 2026/01/28 10:43:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -908,3 +908,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed print/py-PDF2 successor textproc/py-pdf [wiz 2026-01-28]
 	Removed chat/py-hangups [wiz 2026-01-28]
 	Removed devel/py-readlike [wiz 2026-01-28]
+	Removed devel/py-ruamel-base [wiz 2026-01-28]

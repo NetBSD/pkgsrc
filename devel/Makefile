@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4579 2026/01/28 10:40:43 wiz Exp $
+# $NetBSD: Makefile,v 1.4580 2026/01/28 10:43:04 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3132,7 +3132,6 @@ SUBDIR+=	py-rope
 SUBDIR+=	py-rpds-py
 SUBDIR+=	py-rply
 SUBDIR+=	py-rstr
-SUBDIR+=	py-ruamel-base
 SUBDIR+=	py-ruamel-yaml
 SUBDIR+=	py-ruamel-yaml-clib
 SUBDIR+=	py-ruff
