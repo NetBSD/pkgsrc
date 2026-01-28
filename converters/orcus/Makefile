@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2026/01/20 12:35:49 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2026/01/28 21:54:07 mef Exp $
 
-DISTNAME=	liborcus-0.20.2
+DISTNAME=	liborcus-0.21.0
 PKGNAME=	${DISTNAME:S/liborcus/orcus/}
-PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	https://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.xz
@@ -16,6 +15,14 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
+
+# stream.cpp:191:44:   required from here
+# /usr/include/g++/bits/unique_ptr.h:821:30: error: no matching function for call to 'orcus::file_content::impl::impl(std::basic_string_view<char16_t>&)'
+#      { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+
+# implies gcc12
+USE_CXX_FEATURES+=	c++20
+
 # python detection completely broken
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-werror
@@ -25,6 +32,9 @@ PKGCONFIG_OVERRIDE+=	liborcus.pc.in
 PKGCONFIG_OVERRIDE+=	liborcus-spreadsheet-model.pc.in
 
 PTHREAD_AUTO_VARS=	yes
+
+# strip the 3rd digit, may not work at all the cases
+PLIST_SUBST+=		MAJOR_MINOR=${PKGVERSION_NOREV:C/.[0-9]$//}
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/mdds/buildlink3.mk"

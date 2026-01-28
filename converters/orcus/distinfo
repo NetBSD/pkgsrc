@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.25 2025/08/30 05:16:00 ryoon Exp $
+$NetBSD: distinfo,v 1.26 2026/01/28 21:54:07 mef Exp $
 
-BLAKE2s (liborcus-0.20.2.tar.xz) = deb61587e5abb06bd35c7399bda2590b6e35a7010ee9a1c625b03116a412ea02
-SHA512 (liborcus-0.20.2.tar.xz) = 3f6d06b7bb75a1ac64503f8bae0d90b415dd647292ad4773199c220ab83aefc8168b8d8432f075e929fe3720c261f51b7c0488ddb3acf5662c2a5977ebc9ecd0
-Size (liborcus-0.20.2.tar.xz) = 2265788 bytes
-SHA1 (patch-include_orcus_json__document__tree.hpp) = 98376bd146dcaab6db21498a6c2941d712150bec
+BLAKE2s (liborcus-0.21.0.tar.xz) = 2a9d44666ef8d90ad7a44ffb62e0c7262e84c13a51e45a976a55641af2b34228
+SHA512 (liborcus-0.21.0.tar.xz) = 1f34cf3da2d3296bbeb318c7581829d2df51dcbb741a47fc8ef574c1cd302e4176504340f803a6ab2a0d9b37bf5a41cbe396013e003154adbb064a40dbe8a57d
+Size (liborcus-0.21.0.tar.xz) = 2267752 bytes
