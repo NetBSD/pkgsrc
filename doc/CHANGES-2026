@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.713 2026/01/28 16:32:44 jperkin Exp $
+$NetBSD: CHANGES-2026,v 1.714 2026/01/28 17:25:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -921,3 +921,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/nono to 1.6.5 [jun 2026-01-28]
 	Updated lang/pear to 1.10.18 [taca 2026-01-28]
 	Updated pkgtools/pkgin to 26.1.0 [jperkin 2026-01-28]
+	Updated meta-pkgs/qt6 to 6.10.2 [adam 2026-01-28]
+	Updated graphics/librsvg to 2.60.2 [adam 2026-01-28]
