@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2026/01/28 21:54:07 mef Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/01/28 22:11:16 mef Exp $
 bin/orcus-css-dump
 bin/orcus-csv
 bin/orcus-detect
@@ -91,20 +91,8 @@ include/liborcus-${MAJOR_MINOR}/orcus/yaml_parser_base.hpp
 include/liborcus-${MAJOR_MINOR}/orcus/zip_archive.hpp
 include/liborcus-${MAJOR_MINOR}/orcus/zip_archive_stream.hpp
 lib/liborcus-${MAJOR_MINOR}.la
-lib/liborcus-mso-${MAJOR_MINOR}.a
 lib/liborcus-mso-${MAJOR_MINOR}.la
-lib/liborcus-mso-${MAJOR_MINOR}.so
-lib/liborcus-mso-${MAJOR_MINOR}.so.0
-lib/liborcus-mso-${MAJOR_MINOR}.so.0.0.0
-lib/liborcus-parser-${MAJOR_MINOR}.a
 lib/liborcus-parser-${MAJOR_MINOR}.la
-lib/liborcus-parser-${MAJOR_MINOR}.so
-lib/liborcus-parser-${MAJOR_MINOR}.so.0
-lib/liborcus-parser-${MAJOR_MINOR}.so.0.0.0
-lib/liborcus-spreadsheet-model-${MAJOR_MINOR}.a
 lib/liborcus-spreadsheet-model-${MAJOR_MINOR}.la
-lib/liborcus-spreadsheet-model-${MAJOR_MINOR}.so
-lib/liborcus-spreadsheet-model-${MAJOR_MINOR}.so.0
-lib/liborcus-spreadsheet-model-${MAJOR_MINOR}.so.0.0.0
 lib/pkgconfig/liborcus-${MAJOR_MINOR}.pc
 lib/pkgconfig/liborcus-spreadsheet-model-${MAJOR_MINOR}.pc
