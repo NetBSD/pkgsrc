@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.170 2026/01/28 14:58:33 wiz Exp $
+# $NetBSD: Makefile,v 1.171 2026/01/29 07:53:27 wiz Exp $
 
-DISTNAME=	gnupg-2.5.17
+DISTNAME=	gnupg-2.4.9
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG:=gnupg/}
 EXTRACT_SUFX=	.tar.bz2
@@ -39,9 +40,6 @@ LDFLAGS.Darwin+=	-lintl
 #LDFLAGS.SunOS+=	-lsocket -lrt
 #LDFLAGS.Linux+=	-lrt
 
-# self test problems:
-# https://dev.gnupg.org/T8065
-
 .include "options.mk"
 
 BUILDLINK_API_DEPENDS.sqlite3+=		sqlite3>=3.27.0
@@ -50,11 +48,11 @@ BUILDLINK_API_DEPENDS.sqlite3+=		sqlite3>=3.27.0
 BUILDLINK_API_DEPENDS.npth+=		npth>=1.2
 .include "../../devel/npth/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.11.0
+BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.9.1
 .include "../../security/libgcrypt/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.56
+BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.46
 .include "../../security/libgpg-error/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libassuan+=	libassuan>=3.0.0
+BUILDLINK_API_DEPENDS.libassuan+=	libassuan>=2.5.0
 .include "../../security/libassuan2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libksba+=		libksba>=1.6.3
 .include "../../security/libksba/buildlink3.mk"
