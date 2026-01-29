@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/08/29 10:46:30 adam Exp $
+$NetBSD: distinfo,v 1.9 2026/01/29 13:00:53 adam Exp $
 
-BLAKE2s (absl_py-2.3.1.tar.gz) = c7e195feccc268e3bf7b536880a269cbc2fd977a22ce68b05b213be5f3509019
-SHA512 (absl_py-2.3.1.tar.gz) = b117c907bc4e4129e19ce461e18bb1851a16d046ab9f38ffa81ed737414431f316442c945114d952b7455962ef6b2ce8815509f6afd84167b1c82f323476f75d
-Size (absl_py-2.3.1.tar.gz) = 116588 bytes
+BLAKE2s (absl_py-2.4.0.tar.gz) = 7f2998f46c2a6e9feb9a49b8e5839fb99c5a2bb0a2f168f66b87fec940c21c21
+SHA512 (absl_py-2.4.0.tar.gz) = ef0ab861c09de37e32aad03f10a0c7c33b4f855c22bd0596db1147bab9ad56bbdbe6c5ee79b9118ce84349ba86584e6b36ebd7454e05bc4009be86a296d4b96a
+Size (absl_py-2.4.0.tar.gz) = 116543 bytes
