@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.720 2026/01/29 08:00:55 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.721 2026/01/29 09:51:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -927,3 +927,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/xfce4-panel to 4.20.6 [gutteridge 2026-01-28]
 	Updated sysutils/bup to 0.33.10 [gdt 2026-01-29]
 	Updated mail/spamassassin to 4.0.2nb1 [wiz 2026-01-29]
+	Removed security/gpgmepp [wiz 2026-01-29]
