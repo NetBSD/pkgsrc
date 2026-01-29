@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2023/11/22 11:19:36 nia Exp $
+$NetBSD: distinfo,v 1.8 2026/01/29 16:59:56 ktnb Exp $
 
-BLAKE2s (angband-4.2.5.tar.gz) = 068516659f21406ecaba705de160300741bffec3e9277b847fe245193e9636a2
-SHA512 (angband-4.2.5.tar.gz) = 4bd92f583cbebe5b0159ef9af9cd1df2ddf136e226b0560408d1409ac57a84c49302983ca44b0bc25b749b8c6120c892a557d0021b015b405cc8f17143f08119
-Size (angband-4.2.5.tar.gz) = 25801900 bytes
+BLAKE2s (angband-4.2.6.tar.gz) = 070e94326f21018455a320814c125582042c90eaa1e0e80d5b1bc3d7fa2f233a
+SHA512 (angband-4.2.6.tar.gz) = 1682206eb4005295e5f2034921eec6cd56f1dc70be7792b5c7048d439143e2da9fb2f0c92b3703ea26ea1c80ec6223882c64deb2b91294310d594dec029a31cb
+Size (angband-4.2.6.tar.gz) = 25964779 bytes
 SHA1 (patch-configure.ac) = 35fbcd77734bf9dfb6c9d5c6dc9d82bca2343ebb
