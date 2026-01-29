@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.739 2026/01/29 17:01:29 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.740 2026/01/29 18:11:59 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -947,3 +947,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/mu to 1.12.15 [ktnb 2026-01-29]
 	Updated games/angband to 4.2.6 [ktnb 2026-01-29]
 	Updated games/angband-sdl to 4.2.6 [ktnb 2026-01-29]
+	Updated net/sayaka to 3.8.6 [tsutsui 2026-01-29]
