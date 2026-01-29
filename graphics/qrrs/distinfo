@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2024/08/16 03:35:04 pin Exp $
+$NetBSD: distinfo,v 1.9 2026/01/29 14:22:10 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -333,9 +333,9 @@ Size (qoi-0.4.1.crate) = 71135 bytes
 BLAKE2s (qrcode-0.14.1.crate) = 5cde8c81247d28d395fbb127ff78c7aff2b42388d93d6ef99879984340dce48f
 SHA512 (qrcode-0.14.1.crate) = b89ae61387700bee85e605cdc2addbefbdee5ae67900cbb9d63a637291a96d42b41fc15283404f63e469ba3b1f25aa3986b497a6bdc6b1cfe8d9e4b975f433ce
 Size (qrcode-0.14.1.crate) = 66224 bytes
-BLAKE2s (qrrs-0.1.10.tar.gz) = 7a318e9290855e7909f6bbd7ab041ee1ea4ca9263ef8a5d46917a28b9c98c87a
-SHA512 (qrrs-0.1.10.tar.gz) = 34a6b1fab5ad2220d4c9b92fd856146313a36c3ad96b8bd242fa60485db9b4e7d64ed4ee30be750f15627fa119f3463f5039cd7cadd020086f46a562abf94c28
-Size (qrrs-0.1.10.tar.gz) = 27140 bytes
+BLAKE2s (qrrs-0.1.11.tar.gz) = 7a51538317eb5fc5d2e3f1c70e4a51f3fcc8c539a1ea40ae8dddd43d0cfeb73d
+SHA512 (qrrs-0.1.11.tar.gz) = 6cf2fe55a9ebdfb44e5ddab06f010e191fd3305b6f0046cf099b9491d9e09978cd0a7d7d24cee1c640d8a104fb211550788765dcafdfb97cd612a72be7a113a5
+Size (qrrs-0.1.11.tar.gz) = 27765 bytes
 BLAKE2s (quick-error-2.0.1.crate) = b5baa20597127843f2ea703488925348d57077126e4c5741bf35bc415b1489b6
 SHA512 (quick-error-2.0.1.crate) = e028deb598466ae91663e5d090606be4f117662d0fa6e0c0b0043c7261f26787057e84e644cae72a45b1a0a7b1fb03fc9712faa3abee94b97ce2c8d25c365c32
 Size (quick-error-2.0.1.crate) = 14265 bytes
