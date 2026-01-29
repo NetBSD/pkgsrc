@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.722 2026/01/25 21:02:28 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.723 2026/01/29 11:48:49 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29535,3 +29535,14 @@ python312-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-12
 python313-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-1299
 python314-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-1299
 sentencepiece<0.2.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-1260
+gnutls<3.8.11	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-9820
+gpac-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-1415
+gpac-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-1416
+gpac-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-1417
+gpac-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-1418
+hiawatha-[0-9]*	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-57783
+hiawatha-[0-9]*	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2025-57784
+hiawatha-[0-9]*	double-free	https://nvd.nist.gov/vuln/detail/CVE-2025-57785
+py{27,310,311,312,313,314}-gi-docgen<2025.5	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-11687
+py{27,310,311,312,313,314}-python-multipart<0.0.22	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2026-24486
+#qgis-[0-9]*	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2026-24480	# CI/CD vulnerability
