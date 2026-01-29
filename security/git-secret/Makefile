@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/01/28 10:48:48 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/01/29 10:03:12 wiz Exp $
 
 DISTNAME=	git-secret-0.5.0
 PKGREVISION=	1
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 DEPENDS+=	gawk-[0-9]*:../../lang/gawk
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
-DEPENDS+=	gnupg2>=2.5:../../security/gnupg2
+DEPENDS+=	gnupg2>=2.4.9nb2:../../security/gnupg2
 
 USE_TOOLS+=	bash:run
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2026/01/28 10:53:53 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2026/01/29 10:03:12 wiz Exp $
 
 DISTNAME=	duplicity-3.0.7
 PKGREVISION=	1
@@ -16,7 +16,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=5.0.2:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 
-DEPENDS+=	gnupg2>=2.5:../../security/gnupg2
+DEPENDS+=	gnupg2>=2.4.9nb2:../../security/gnupg2
 DEPENDS+=	lftp-[0-9]*:../../net/lftp
 DEPENDS+=	${PYPKGPREFIX}-boto3-[0-9]*:../../net/py-boto3
 DEPENDS+=	${PYPKGPREFIX}-botocore-[0-9]*:../../net/py-botocore
