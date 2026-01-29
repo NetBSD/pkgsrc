@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.17 2026/01/29 10:52:51 jperkin Exp $
+# $NetBSD: cargo-depends.mk,v 1.18 2026/01/29 13:10:28 jperkin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -54,6 +54,7 @@ CARGO_CRATE_DEPENDS+=	fastrand-2.3.0
 CARGO_CRATE_DEPENDS+=	filetime-0.2.27
 CARGO_CRATE_DEPENDS+=	find-msvc-tools-0.1.8
 CARGO_CRATE_DEPENDS+=	flate2-1.1.8
+CARGO_CRATE_DEPENDS+=	fnv-1.0.7
 CARGO_CRATE_DEPENDS+=	foreign-types-0.3.2
 CARGO_CRATE_DEPENDS+=	foreign-types-shared-0.1.1
 CARGO_CRATE_DEPENDS+=	form_urlencoded-1.2.2
@@ -70,6 +71,7 @@ CARGO_CRATE_DEPENDS+=	getrandom-0.2.17
 CARGO_CRATE_DEPENDS+=	getrandom-0.3.4
 CARGO_CRATE_DEPENDS+=	glob-0.3.3
 CARGO_CRATE_DEPENDS+=	goblin-0.10.4
+CARGO_CRATE_DEPENDS+=	h2-0.4.13
 CARGO_CRATE_DEPENDS+=	hashbrown-0.16.1
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
 CARGO_CRATE_DEPENDS+=	http-1.4.0
@@ -196,6 +198,7 @@ CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.1
 CARGO_CRATE_DEPENDS+=	tokio-1.49.0
 CARGO_CRATE_DEPENDS+=	tokio-native-tls-0.3.1
 CARGO_CRATE_DEPENDS+=	tokio-rustls-0.26.4
+CARGO_CRATE_DEPENDS+=	tokio-util-0.7.18
 CARGO_CRATE_DEPENDS+=	tower-0.5.3
 CARGO_CRATE_DEPENDS+=	tower-http-0.6.8
 CARGO_CRATE_DEPENDS+=	tower-layer-0.3.3
