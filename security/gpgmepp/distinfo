@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.6 2026/01/29 13:49:39 wiz Exp $
+
+BLAKE2s (gpgmepp-2.0.0.tar.xz) = 10c59d70aaf1f8ef6cf0d2989d05ac469a251061fb348284fa7a2d664593cdd1
+SHA512 (gpgmepp-2.0.0.tar.xz) = ed98f5dfd45efa216d0fc983ad650b46235b28a8e4faaf4349bc8e14cf76758e3099cfdc61e549f07e57d663e82550f373641f67303c5f2891b00fa5b419e927
+Size (gpgmepp-2.0.0.tar.xz) = 118304 bytes
