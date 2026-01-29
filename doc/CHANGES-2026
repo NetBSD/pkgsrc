@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.733 2026/01/29 14:22:28 pin Exp $
+$NetBSD: CHANGES-2026,v 1.734 2026/01/29 14:23:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -942,3 +942,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/xcp to 0.24.3 [pin 2026-01-29]
 	Updated textproc/rumdl to 0.1.4 [pin 2026-01-29]
 	Updated graphics/qrrs to 0.1.11 [pin 2026-01-29]
+	Updated devel/mise to 2026.1.10 [pin 2026-01-29]
