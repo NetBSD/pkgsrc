@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/04/04 20:02:37 pin Exp $
+# $NetBSD: Makefile,v 1.12 2026/01/29 14:22:10 pin Exp $
 
-DISTNAME=	qrrs-0.1.10
+DISTNAME=	qrrs-0.1.11
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Lenivaya/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,9 +12,9 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.79.0
+#RUST_REQ=	1.93.0
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.79.0 on amd64
+#This package is confirmed to build with Rust 1.93.0 on amd64
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
