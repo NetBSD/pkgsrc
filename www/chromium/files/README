@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.6 2026/01/19 16:14:05 kikadf Exp $
+$NetBSD: README,v 1.7 2026/01/29 12:44:16 kikadf Exp $
 
 Some notes on chromium:
 
@@ -23,3 +23,6 @@ Some notes on chromium:
   you should enable the ndevd service (a devpubd drop-in replacement)
   in /etc/rc.conf.
 
+5) Widevine support
+  Install the multimedia/openwv package and follow the instructions
+  in its README.chromium file. 
