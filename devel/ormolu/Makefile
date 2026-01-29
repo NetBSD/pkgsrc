@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/08/13 11:07:08 pho Exp $
+# $NetBSD: Makefile,v 1.16 2026/01/29 13:42:17 pho Exp $
 
 DISTNAME=	ormolu-0.7.7.0
 PKGNAME=	${DISTNAME}
@@ -11,6 +11,12 @@ LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	Diff
+
+# The GHC API has drastically changed between 9.10 and 9.14 and there's no
+# easy fix. The upstream is working on an update to adopt the new
+# API. Until it's done we can't build ormolu unfortunately:
+# https://github.com/tweag/ormolu/pull/1175
+BROKEN=		"ormolu is incompatible with ghc-lib-parser-9.14"
 
 # lib:ormolu
 .include "../../textproc/hs-Diff/buildlink3.mk"
