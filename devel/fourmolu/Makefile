@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/08/13 11:06:27 pho Exp $
+# $NetBSD: Makefile,v 1.17 2026/01/29 13:45:24 pho Exp $
 
 DISTNAME=	fourmolu-0.17.0.0
 PKGNAME=	${DISTNAME}
@@ -8,6 +8,12 @@ CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Formatter for Haskell source code
 LICENSE=	modified-bsd
+
+# The GHC API has drastically changed between 9.10 and 9.14 and there's no
+# easy fix. The upstream is working on an update to adopt the new
+# API. Until it's done we can't build fourmolu unfortunately:
+# https://github.com/fourmolu/fourmolu/pull/454
+BROKEN=		"fourmolu is incompatible with ghc-lib-parser-9.14"
 
 # lib:fourmolu
 .include "../../textproc/hs-Diff/buildlink3.mk"
