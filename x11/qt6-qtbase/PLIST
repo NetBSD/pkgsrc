@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2026/01/28 17:10:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.34 2026/01/29 07:05:31 wiz Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -2256,6 +2256,7 @@ qt6/include/QtTest/qttestversion.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qtwaylandclient-config_p.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qtwaylandclientglobal_p.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-appmenu.h
+${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-color-management-v1.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-cursor-shape-v1.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-fractional-scale-v1.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-hardware-integration.h
@@ -2336,6 +2337,7 @@ ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandC
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandwindow_p.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandwindowmanagerintegration_p.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-appmenu-client-protocol.h
+${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-color-management-v1-client-protocol.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-cursor-shape-v1-client-protocol.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-fractional-scale-v1-client-protocol.h
 ${PLIST.wayland}${PLIST.x11}qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-hardware-integration-client-protocol.h
