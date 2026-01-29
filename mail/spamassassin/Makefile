@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.155 2025/08/30 19:30:50 gdt Exp $
+# $NetBSD: Makefile,v 1.156 2026/01/29 08:00:46 wiz Exp $
 
 VERSION=	4.0.2
 DISTNAME=	Mail-SpamAssassin-${VERSION}
 PKGNAME=	spamassassin-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
