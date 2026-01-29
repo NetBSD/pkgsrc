@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.717 2026/01/28 23:53:13 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.718 2026/01/29 00:35:19 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -926,3 +926,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/par2 to 1.1.0 [rhialto 2026-01-28]
 	Updated converters/orcus to 0.21.0 [mef 2026-01-28]
 	Updated x11/xfce4-panel to 4.20.6 [gutteridge 2026-01-28]
+	Updated sysutils/bup to 0.33.10 [gdt 2026-01-29]
