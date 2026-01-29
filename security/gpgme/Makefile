@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.127 2026/01/28 10:50:49 wiz Exp $
+# $NetBSD: Makefile,v 1.128 2026/01/29 13:27:47 wiz Exp $
 
-DISTNAME=	gpgme-1.24.3
-PKGREVISION=	1
+DISTNAME=	gpgme-2.0.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG:=gpgme/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +18,6 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 INFO_FILES=		yes
-CONFIGURE_ARGS+=	--enable-languages="cl cpp"
 
 SUBST_CLASSES+=		pthread
 SUBST_FILES.pthread=	src/gpgme-config.in
