@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/12/21 15:31:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/01/29 13:57:32 wiz Exp $
 include/qgpgme-qt6/QGpgME/AbstractImportJob
 include/qgpgme-qt6/QGpgME/AddExistingSubkeyJob
 include/qgpgme-qt6/QGpgME/AddUserIDJob
@@ -20,7 +20,6 @@ include/qgpgme-qt6/QGpgME/EncryptJob
 include/qgpgme-qt6/QGpgME/ExportJob
 include/qgpgme-qt6/QGpgME/FileListDataProvider
 include/qgpgme-qt6/QGpgME/GpgCardJob
-include/qgpgme-qt6/QGpgME/HierarchicalKeyListJob
 include/qgpgme-qt6/QGpgME/ImportFromKeyserverJob
 include/qgpgme-qt6/QGpgME/ImportJob
 include/qgpgme-qt6/QGpgME/Job
@@ -70,7 +69,6 @@ include/qgpgme-qt6/qgpgme/encryptjob.h
 include/qgpgme-qt6/qgpgme/exportjob.h
 include/qgpgme-qt6/qgpgme/filelistdataprovider.h
 include/qgpgme-qt6/qgpgme/gpgcardjob.h
-include/qgpgme-qt6/qgpgme/hierarchicalkeylistjob.h
 include/qgpgme-qt6/qgpgme/importfromkeyserverjob.h
 include/qgpgme-qt6/qgpgme/importjob.h
 include/qgpgme-qt6/qgpgme/job.h
@@ -101,6 +99,12 @@ include/qgpgme-qt6/qgpgme/wkdlookupjob.h
 include/qgpgme-qt6/qgpgme/wkdlookupresult.h
 include/qgpgme-qt6/qgpgme/wkdrefreshjob.h
 include/qgpgme-qt6/qgpgme/wkspublishjob.h
+lib/cmake/QGpgmeQt6/FindGpgme.cmake
+lib/cmake/QGpgmeQt6/FindLibGpgError.cmake
 lib/cmake/QGpgmeQt6/QGpgmeQt6Config.cmake
 lib/cmake/QGpgmeQt6/QGpgmeQt6ConfigVersion.cmake
-lib/libqgpgmeqt6.la
+lib/cmake/QGpgmeQt6/QGpgmeQt6Targets-noconfig.cmake
+lib/cmake/QGpgmeQt6/QGpgmeQt6Targets.cmake
+lib/libqgpgmeqt6.so
+lib/libqgpgmeqt6.so.15
+lib/libqgpgmeqt6.so.15.7.0
