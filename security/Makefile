@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.994 2026/01/28 10:31:22 wiz Exp $
+# $NetBSD: Makefile,v 1.995 2026/01/29 09:51:28 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -130,7 +130,6 @@ SUBDIR+=	gpa
 SUBDIR+=	gpg-tui
 SUBDIR+=	gpg2dot
 SUBDIR+=	gpgme
-SUBDIR+=	gpgmepp
 SUBDIR+=	gsasl
 SUBDIR+=	gss
 SUBDIR+=	hackbot

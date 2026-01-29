@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2025/08/20 07:03:15 wiz Exp $
-
-BLAKE2s (gpgmepp-15.12.2.tar.xz) = c7276257c8ab01446af5c1621d0d100e3ff2f80089dc10b4bf45c253b4c1c0f4
-SHA512 (gpgmepp-15.12.2.tar.xz) = af86e8c732bd8efe5fe4e89b39d9b2fc1975cce9ab66cd6a4de68097bf8acbf51e86a63dbcef5dffd5f981c0641ed1b3b68c1ca9dcc70323ced88c4c02706958
-Size (gpgmepp-15.12.2.tar.xz) = 67724 bytes
-SHA1 (patch-src_qgpgme_CMakeLists.txt) = 54795b690fe669c95836a19c800af1951cfdba43
