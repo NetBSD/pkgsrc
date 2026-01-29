@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.377 2026/01/28 10:48:09 wiz Exp $
+# $NetBSD: Makefile,v 1.378 2026/01/29 10:03:11 wiz Exp $
 
 VERREL=		25.8.4
 VERRC=		2
@@ -179,7 +179,7 @@ WRKSRC=		${WRKDIR}/${LO_BOOTSTRAP}
 
 TOOL_DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 DEPENDS+=		xdg-utils-[0-9]*:../../misc/xdg-utils
-DEPENDS+=		gnupg2>=2.5:../../security/gnupg2
+DEPENDS+=		gnupg2>=2.4.9nb2:../../security/gnupg2
 
 USE_LIBTOOL=		yes
 # Use GNU find from findutils.
