@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2026/01/07 08:46:31 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/01/29 14:17:32 pho Exp $
 
 DISTNAME=	haskell-language-server-2.9.0.0
 PKGNAME=	${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -264,12 +264,13 @@ CONFIGURE_ARGS+=	-f -fourmolu # Broken at the moment.
 #.include "../../textproc/hs-yaml/buildlink3.mk"
 
 # lib:hls-ormolu-plugin
-.include "../../misc/hs-extra/buildlink3.mk"
-.include "../../devel/hs-ghcide/buildlink3.mk"
-.include "../../devel/hs-hls-plugin-api/buildlink3.mk"
-.include "../../devel/hs-lsp/buildlink3.mk"
-.include "../../sysutils/hs-process-extras/buildlink3.mk"
-.include "../../devel/ormolu/buildlink3.mk"
+CONFIGURE_ARGS+=	-f -ormolu # Broken at the moment.
+#.include "../../misc/hs-extra/buildlink3.mk"
+#.include "../../devel/hs-ghcide/buildlink3.mk"
+#.include "../../devel/hs-hls-plugin-api/buildlink3.mk"
+#.include "../../devel/hs-lsp/buildlink3.mk"
+#.include "../../sysutils/hs-process-extras/buildlink3.mk"
+#.include "../../devel/ormolu/buildlink3.mk"
 
 CONFIGURE_ARGS+=	-f -stylishHaskell # Broken at the moment.
 # lib:hls-stylish-haskell-plugin
