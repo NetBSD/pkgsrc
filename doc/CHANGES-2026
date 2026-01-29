@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.729 2026/01/29 13:59:27 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.730 2026/01/29 14:10:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -937,3 +937,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added security/gpgmepp version 2.0.0 [wiz 2026-01-29]
 	Updated security/qgpgme to 2.0.0 [wiz 2026-01-29]
 	Updated x11/libXmu to 1.3.1 [wiz 2026-01-29]
+	Updated lang/py-test-mypy-testing to 0.2.0 [adam 2026-01-29]
+	Updated devel/py-testrepository to 0.0.22 [adam 2026-01-29]
