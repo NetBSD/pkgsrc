@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.726 2026/01/29 13:27:56 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.727 2026/01/29 13:50:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -934,3 +934,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-absl-py to 2.4.0 [adam 2026-01-29]
 	Updated pkgtools/mktool to 1.5.4 [jperkin 2026-01-29]
 	Updated security/gpgme to 2.0.1 [wiz 2026-01-29]
+	Added security/gpgmepp version 2.0.0 [wiz 2026-01-29]
