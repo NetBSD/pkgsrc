@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/10/14 06:45:41 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/01/29 14:10:08 adam Exp $
 
-DISTNAME=	testrepository-0.0.21
+DISTNAME=	testrepository-0.0.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/testrepository/}
