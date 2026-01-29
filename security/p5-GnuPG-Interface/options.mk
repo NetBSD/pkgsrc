@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2026/01/28 10:52:27 wiz Exp $
+# $NetBSD: options.mk,v 1.9 2026/01/29 10:03:12 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.p5_GnuPG_Interface
 PKG_OPTIONS_REQUIRED_GROUPS=	gnupg
@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=		gnupg2
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgnupg2)
-DEPENDS+=		gnupg2>=2.5:../../security/gnupg2
+DEPENDS+=		gnupg2>=2.4.9nb2:../../security/gnupg2
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnupg1)
