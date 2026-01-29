@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.732 2026/01/29 14:21:33 pin Exp $
+$NetBSD: CHANGES-2026,v 1.733 2026/01/29 14:22:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -941,3 +941,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-testrepository to 0.0.22 [adam 2026-01-29]
 	Updated sysutils/xcp to 0.24.3 [pin 2026-01-29]
 	Updated textproc/rumdl to 0.1.4 [pin 2026-01-29]
+	Updated graphics/qrrs to 0.1.11 [pin 2026-01-29]
