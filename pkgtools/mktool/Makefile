@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2025/04/10 19:37:51 pin Exp $
+# $NetBSD: Makefile,v 1.25 2026/01/29 10:52:51 jperkin Exp $
 
-DISTNAME=	mktool-1.4.2
+DISTNAME=	mktool-1.5.3
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jperkin/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,12 +10,30 @@ HOMEPAGE=	https://github.com/jperkin/mktool/
 COMMENT=	High performance alternatives for pkgsrc/mk
 LICENSE=	isc
 
+USE_LANGUAGES=	c
+RUST_REQ=	1.85.1
+
+#
+# For consistency in pkgsrc this build switches to using native-certs, i.e.
+# openssl for the most part, and requires a certificate store to be configured.
+#
+# If you want to build a portable binary that bundles the webpki-roots certs
+# and uses rustls then simply 'cargo install mktool' to use the defaults.
+#
+CARGO_NO_DEFAULT_FEATURES=	yes
+CARGO_FEATURES+=		native-certs
+
+.include "../../mk/bsd.prefs.mk"
+
+# Use OpenSSL except on Darwin where native-tls uses Security.framework.
+.if ${OPSYS} != "Darwin"
+.include "../../security/openssl/buildlink3.mk"
+MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
+.endif
+
 # See, https://github.com/briansmith/ring/issues/1999
 .include "../../mk/compiler/i386-sse2.mk"
-
-USE_LANGUAGES=	c
-
-RUST_REQ=	1.74.0
 
 .include "cargo-depends.mk"
 

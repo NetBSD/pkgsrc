@@ -12,6 +12,5 @@ To enable, install this package or 'cargo install mktool', and then
 add the following lines to your mk.conf:
 
 	TOOLS_PLATFORM.mktool=	/path/to/mktool
-	FETCH_USING=		mktool
 
 pkgsrc will then use mktool for all targets where it is supported.
