@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2025/11/12 07:29:37 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/01/30 08:58:48 wiz Exp $
 
-DISTNAME=	bulk-test-boost-20251112
+DISTNAME=	bulk-test-boost-20260130
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -47,7 +47,6 @@ DEPENDS+=	libreoffice-[0-9]*:../../misc/libreoffice
 DEPENDS+=	mongodb-3*:../../databases/mongodb3
 DEPENDS+=	mongodb-[0-9]*:../../databases/mongodb
 DEPENDS+=	mumble-[0-9]*:../../chat/mumble
-DEPENDS+=	musicpd-[0-9]*:../../audio/musicpd
 DEPENDS+=	ncmpcpp-[0-9]*:../../audio/ncmpcpp
 DEPENDS+=	openscad-[0-9]*:../../cad/openscad
 DEPENDS+=	osm2pgsql-[0-9]*:../../geography/osm2pgsql
