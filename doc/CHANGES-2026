@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.743 2026/01/30 08:58:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.744 2026/01/30 08:58:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -951,3 +951,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/mosquitto to 2.1.0 [gdt 2026-01-30]
 	Updated audio/libsidplayfp to 2.16.0 [wiz 2026-01-30]
 	Updated audio/musicpd to 0.24.8 [wiz 2026-01-30]
+	Updated meta-pkgs/bulk-test-boost to 20260130 [wiz 2026-01-30]
