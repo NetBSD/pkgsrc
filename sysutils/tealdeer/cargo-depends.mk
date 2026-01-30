@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.7 2025/10/06 12:58:47 bsiegert Exp $
+# $NetBSD: cargo-depends.mk,v 1.8 2026/01/30 11:12:06 bsiegert Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
@@ -17,6 +17,7 @@ CARGO_CRATE_DEPENDS+=	base64ct-1.8.0
 CARGO_CRATE_DEPENDS+=	bitflags-2.9.4
 CARGO_CRATE_DEPENDS+=	bstr-1.12.0
 CARGO_CRATE_DEPENDS+=	bumpalo-3.19.0
+CARGO_CRATE_DEPENDS+=	byteorder-1.5.0
 CARGO_CRATE_DEPENDS+=	bytes-1.10.1
 CARGO_CRATE_DEPENDS+=	cc-1.2.40
 CARGO_CRATE_DEPENDS+=	cesu8-1.1.0
@@ -118,6 +119,7 @@ CARGO_CRATE_DEPENDS+=	serde_json-1.0.145
 CARGO_CRATE_DEPENDS+=	serde_spanned-0.6.9
 CARGO_CRATE_DEPENDS+=	shlex-1.3.0
 CARGO_CRATE_DEPENDS+=	simd-adler32-0.3.7
+CARGO_CRATE_DEPENDS+=	socks-0.3.4
 CARGO_CRATE_DEPENDS+=	subtle-2.6.1
 CARGO_CRATE_DEPENDS+=	syn-2.0.106
 CARGO_CRATE_DEPENDS+=	tempfile-3.23.0
