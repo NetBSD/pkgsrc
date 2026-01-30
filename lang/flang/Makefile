@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2026/01/07 08:47:37 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/01/30 18:37:56 jakllsch Exp $
 
 PKGREVISION= 2
 .include "../../lang/llvm/version.mk"
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://flang.llvm.org/docs/
 COMMENT=	Fortran compiler targeting LLVM
 LICENSE=	apache-2.0
-
-BROKEN=		"Fails to build"
 
 USE_CXX_FEATURES+=	c++17
 USE_LANGUAGES=		c c++
