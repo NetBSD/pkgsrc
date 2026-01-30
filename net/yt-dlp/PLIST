@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2025/12/20 22:35:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.56 2026/01/30 06:50:49 mrg Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -632,6 +632,11 @@ ${PYSITELIB}/yt_dlp/extractor/cracked.pyo
 ${PYSITELIB}/yt_dlp/extractor/craftsy.py
 ${PYSITELIB}/yt_dlp/extractor/craftsy.pyc
 ${PYSITELIB}/yt_dlp/extractor/craftsy.pyo
+${PYSITELIB}/yt_dlp/extractor/croatianfilm.py
+${PYSITELIB}/yt_dlp/extractor/croatianfilm.py
+${PYSITELIB}/yt_dlp/extractor/croatianfilm.py
+${PYSITELIB}/yt_dlp/extractor/croatianfilm.pyc
+${PYSITELIB}/yt_dlp/extractor/croatianfilm.pyo
 ${PYSITELIB}/yt_dlp/extractor/crooksandliars.py
 ${PYSITELIB}/yt_dlp/extractor/crooksandliars.pyc
 ${PYSITELIB}/yt_dlp/extractor/crooksandliars.pyo
@@ -887,6 +892,9 @@ ${PYSITELIB}/yt_dlp/extractor/fczenit.pyo
 ${PYSITELIB}/yt_dlp/extractor/fifa.py
 ${PYSITELIB}/yt_dlp/extractor/fifa.pyc
 ${PYSITELIB}/yt_dlp/extractor/fifa.pyo
+${PYSITELIB}/yt_dlp/extractor/filmarchiv.py
+${PYSITELIB}/yt_dlp/extractor/filmarchiv.pyc
+${PYSITELIB}/yt_dlp/extractor/filmarchiv.pyo
 ${PYSITELIB}/yt_dlp/extractor/filmon.py
 ${PYSITELIB}/yt_dlp/extractor/filmon.pyc
 ${PYSITELIB}/yt_dlp/extractor/filmon.pyo
@@ -1472,9 +1480,6 @@ ${PYSITELIB}/yt_dlp/extractor/mainstreaming.pyo
 ${PYSITELIB}/yt_dlp/extractor/mangomolo.py
 ${PYSITELIB}/yt_dlp/extractor/mangomolo.pyc
 ${PYSITELIB}/yt_dlp/extractor/mangomolo.pyo
-${PYSITELIB}/yt_dlp/extractor/manoto.py
-${PYSITELIB}/yt_dlp/extractor/manoto.pyc
-${PYSITELIB}/yt_dlp/extractor/manoto.pyo
 ${PYSITELIB}/yt_dlp/extractor/manyvids.py
 ${PYSITELIB}/yt_dlp/extractor/manyvids.pyc
 ${PYSITELIB}/yt_dlp/extractor/manyvids.pyo
@@ -1721,9 +1726,6 @@ ${PYSITELIB}/yt_dlp/extractor/newspicks.pyo
 ${PYSITELIB}/yt_dlp/extractor/newsy.py
 ${PYSITELIB}/yt_dlp/extractor/newsy.pyc
 ${PYSITELIB}/yt_dlp/extractor/newsy.pyo
-${PYSITELIB}/yt_dlp/extractor/nextmedia.py
-${PYSITELIB}/yt_dlp/extractor/nextmedia.pyc
-${PYSITELIB}/yt_dlp/extractor/nextmedia.pyo
 ${PYSITELIB}/yt_dlp/extractor/nexx.py
 ${PYSITELIB}/yt_dlp/extractor/nexx.pyc
 ${PYSITELIB}/yt_dlp/extractor/nexx.pyo
@@ -1916,6 +1918,9 @@ ${PYSITELIB}/yt_dlp/extractor/packtpub.pyo
 ${PYSITELIB}/yt_dlp/extractor/palcomp3.py
 ${PYSITELIB}/yt_dlp/extractor/palcomp3.pyc
 ${PYSITELIB}/yt_dlp/extractor/palcomp3.pyo
+${PYSITELIB}/yt_dlp/extractor/pandatv.pyo
+${PYSITELIB}/yt_dlp/extractor/pandatv.py
+${PYSITELIB}/yt_dlp/extractor/pandatv.pyc
 ${PYSITELIB}/yt_dlp/extractor/panopto.py
 ${PYSITELIB}/yt_dlp/extractor/panopto.pyc
 ${PYSITELIB}/yt_dlp/extractor/panopto.pyo
@@ -2309,9 +2314,6 @@ ${PYSITELIB}/yt_dlp/extractor/scrippsnetworks.pyo
 ${PYSITELIB}/yt_dlp/extractor/scrolller.py
 ${PYSITELIB}/yt_dlp/extractor/scrolller.pyc
 ${PYSITELIB}/yt_dlp/extractor/scrolller.pyo
-${PYSITELIB}/yt_dlp/extractor/scte.py
-${PYSITELIB}/yt_dlp/extractor/scte.pyc
-${PYSITELIB}/yt_dlp/extractor/scte.pyo
 ${PYSITELIB}/yt_dlp/extractor/sejmpl.py
 ${PYSITELIB}/yt_dlp/extractor/sejmpl.pyc
 ${PYSITELIB}/yt_dlp/extractor/sejmpl.pyo
@@ -2528,6 +2530,10 @@ ${PYSITELIB}/yt_dlp/extractor/tagesschau.pyo
 ${PYSITELIB}/yt_dlp/extractor/taptap.py
 ${PYSITELIB}/yt_dlp/extractor/taptap.pyc
 ${PYSITELIB}/yt_dlp/extractor/taptap.pyo
+${PYSITELIB}/yt_dlp/extractor/tarangplus.py
+${PYSITELIB}/yt_dlp/extractor/tarangplus.py
+${PYSITELIB}/yt_dlp/extractor/tarangplus.pyc
+${PYSITELIB}/yt_dlp/extractor/tarangplus.pyo
 ${PYSITELIB}/yt_dlp/extractor/tass.py
 ${PYSITELIB}/yt_dlp/extractor/tass.pyc
 ${PYSITELIB}/yt_dlp/extractor/tass.pyo
