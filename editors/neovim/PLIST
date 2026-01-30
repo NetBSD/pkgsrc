@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/11/04 21:14:00 leot Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/01/30 16:10:21 leot Exp $
 bin/nvim
 @pkgdir lib/nvim
 man/man1/nvim.1
@@ -989,6 +989,8 @@ share/nvim/runtime/indent/testdir/krl.in
 share/nvim/runtime/indent/testdir/krl.ok
 share/nvim/runtime/indent/testdir/lua.in
 share/nvim/runtime/indent/testdir/lua.ok
+share/nvim/runtime/indent/testdir/make.in
+share/nvim/runtime/indent/testdir/make.ok
 share/nvim/runtime/indent/testdir/matlab.in
 share/nvim/runtime/indent/testdir/matlab.ok
 share/nvim/runtime/indent/testdir/python.in
