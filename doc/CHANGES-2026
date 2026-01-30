@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.757 2026/01/30 13:39:58 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.758 2026/01/30 13:58:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -971,3 +971,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/dpkg to 1.23.5 [adam 2026-01-30]
 	Updated devel/appstream to 1.1.2 [adam 2026-01-30]
 	Updated emulators/mame to 0.285 [wiz 2026-01-30]
+	Updated sysutils/ansible-core to 2.20.2 [adam 2026-01-30]
+	Updated sysutils/ansible to 13.3.0 [adam 2026-01-30]
