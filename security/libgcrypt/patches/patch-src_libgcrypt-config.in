@@ -1,13 +1,13 @@
-$NetBSD: patch-src_libgcrypt-config.in,v 1.1 2025/05/09 14:05:32 adam Exp $
+$NetBSD: patch-src_libgcrypt-config.in,v 1.2 2026/01/30 14:01:24 wiz Exp $
 
 Add rpath to configure script.
 
---- src/libgcrypt-config.in.orig	2008-08-19 17:20:04.000000000 +0200
+--- src/libgcrypt-config.in.orig	2025-09-23 13:14:23.000000000 +0000
 +++ src/libgcrypt-config.in
-@@ -155,7 +155,7 @@ if test "$echo_libs" = "yes"; then
+@@ -167,7 +167,7 @@ if test "$echo_libs" = "yes"; then
  
      # Set up `libdirs'.
-     if test "x$libdir" != "x/usr/lib" -a "x$libdir" != "x/lib"; then
+     if test "x$libdir" != "x/usr/lib" && test "x$libdir" != "x/lib"; then
 -	libdirs="-L$libdir"
 +	libdirs="-L$libdir @COMPILER_RPATH_FLAG@@libdir@"
      fi

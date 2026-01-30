@@ -1,9 +1,11 @@
-$NetBSD: patch-mpi_config.links,v 1.4 2021/06/19 11:17:53 spz Exp $
+$NetBSD: patch-mpi_config.links,v 1.5 2026/01/30 14:01:24 wiz Exp $
 
 Extend the m68k assembler syntax probe to match NetBSD targets.
 
 (...probably should just make ELF_SYNTAX the default for pkgsrc, but
 not now)
+
+https://dev.gnupg.org/T8069
 
 --- mpi/config.links~	2021-01-28 12:53:52.000000000 +0000
 +++ mpi/config.links
