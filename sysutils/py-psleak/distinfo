@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/01/30 12:59:38 adam Exp $
+
+BLAKE2s (psleak-0.1.5.tar.gz) = e1383979c65e594b84589266a8942e6be77068011036602a9697d3642b0b1ab2
+SHA512 (psleak-0.1.5.tar.gz) = af9bca93125ac070b40542b1e1d236f1fa4fe7fac058d6571f1fc1890ce325dde21eb726f6a760b0272022c1d17fa78c0c361d2a0cf720f48ad333df161cbfe0
+Size (psleak-0.1.5.tar.gz) = 26435 bytes

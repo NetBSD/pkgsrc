@@ -1,0 +1,3 @@
+A testing framework for detecting memory leaks and unclosed resources created
+by Python functions, particularly those implemented in C or other native
+extensions.

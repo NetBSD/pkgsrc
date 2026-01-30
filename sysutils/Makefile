@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1184 2026/01/15 08:56:52 wiz Exp $
+# $NetBSD: Makefile,v 1.1185 2026/01/30 12:59:38 adam Exp $
 #
 
 COMMENT=	System utilities
@@ -628,6 +628,7 @@ SUBDIR+=	py-notify
 SUBDIR+=	py-notify2
 SUBDIR+=	py-pefile
 SUBDIR+=	py-pid
+SUBDIR+=	py-psleak
 SUBDIR+=	py-psutil
 SUBDIR+=	py-ptyprocess
 SUBDIR+=	py-puremagic
