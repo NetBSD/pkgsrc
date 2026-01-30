@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2025/10/06 12:58:47 bsiegert Exp $
+$NetBSD: distinfo,v 1.12 2026/01/30 11:12:06 bsiegert Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -51,6 +51,9 @@ Size (bstr-1.12.0.crate) = 351557 bytes
 BLAKE2s (bumpalo-3.19.0.crate) = bdefc57ae010900dc81909430c791a7d4e7539a2c777fce3c252222e0cf14642
 SHA512 (bumpalo-3.19.0.crate) = 58db27a643c55adae07061100e3604dad0056bacd42ce1142bcc34249645e9313e886c3174a755593544684fcc632f134f9c6066752ac695254fb9ecd40878cf
 Size (bumpalo-3.19.0.crate) = 96414 bytes
+BLAKE2s (byteorder-1.5.0.crate) = b610119a2e2d4b96996b58e8d4920729fa24d4a96d14852953fdf8dbe035cad0
+SHA512 (byteorder-1.5.0.crate) = 96caf981177f6ded9f27f025922cb94eb0cd9de5303bd91680099912d922092e77b7361efa70011e84f1595e443193e4f1b354443b9980c123f6ae573b236f7f
+Size (byteorder-1.5.0.crate) = 23288 bytes
 BLAKE2s (bytes-1.10.1.crate) = 5b3216b1cac8c7d1740ecf85c7cdfcf54dfc2fab12d4e634b882fc8bcf27e480
 SHA512 (bytes-1.10.1.crate) = 03429f01927b94ba6c958c46b2e5bf92a23b39ce9385689e21accd34a5d3be01fd0f665f4bbffb1f7c5bdf1edfb1bf11d5ccad00eff0f9388be39fe2f753d296
 Size (bytes-1.10.1.crate) = 76779 bytes
@@ -354,15 +357,18 @@ Size (shlex-1.3.0.crate) = 18713 bytes
 BLAKE2s (simd-adler32-0.3.7.crate) = 4e97d965efa10d40728db8210a078be56385eaa8c9226af960f1685713576ea7
 SHA512 (simd-adler32-0.3.7.crate) = 2976bb7fa153854ecd0d68ccdc108bf81d5da374839d53ce9dfb27e80d8db258bb817ea3dac73921e408541d75e2797b6d20fa63c42c1e8a935b6d75dee14bac
 Size (simd-adler32-0.3.7.crate) = 12086 bytes
+BLAKE2s (socks-0.3.4.crate) = 61aab45ca5ecb0f2c70f482ab8b1ff6e289893fbfbb608dc990c1779908ce72a
+SHA512 (socks-0.3.4.crate) = 531ab43f277e2dfc6aaefcb584c5fdf910cba51cc5fee73256ef00dae714ace844251cb53ca090fd3e8258115cebbcf65843476913fadba8535cb44166294eb8
+Size (socks-0.3.4.crate) = 13172 bytes
 BLAKE2s (subtle-2.6.1.crate) = 20c4da1ee5ba2b0bb1aa9725b78c70ccae98f7b6cab0b57266d539d1b323b636
 SHA512 (subtle-2.6.1.crate) = f5946ebd9bcb8776ee3446abcbf4afb3cca5d8bd847cadda87e864333ac7ded537a3efa773e9648adf20ce4add2c1da85172cff88c1e1a3a6cb051401b00c6bd
 Size (subtle-2.6.1.crate) = 14562 bytes
 BLAKE2s (syn-2.0.106.crate) = c60ec549bf025a9082bf93d27daf33926aafabd3e65b847b74a9c08aca179b85
 SHA512 (syn-2.0.106.crate) = e07e1058770fa3f1039eaf335340cefb597c0dd11bb90fec9fa777ca5815d0e0bb1711bb4db52cac77e205dd68fbe2bce0e1aa9895c2a52a1ea6d7758d13424c
 Size (syn-2.0.106.crate) = 301514 bytes
-BLAKE2s (tealdeer-1.8.0.tar.gz) = a46f9b190e6540e13f421df5d0f5f99295b81fc6116bf712926e7d862e033a73
-SHA512 (tealdeer-1.8.0.tar.gz) = 2e31b8eeaa5cf9ca5afa3c7f82e8dbb895ca2126fc1b8600a3d5ed9cb29c48d7c623fa4cfb9167a9c5901439f17272cf065fdafdad5752e7b90e1030453bd020
-Size (tealdeer-1.8.0.tar.gz) = 701009 bytes
+BLAKE2s (tealdeer-1.8.1.tar.gz) = b63a64ad175bf8cbbd0da24f360052abb146b224d08902fa9fe834a0f744cf5e
+SHA512 (tealdeer-1.8.1.tar.gz) = 3601007703b5f95adcd7b8e7a3467100b15d66d4d8fb6f6e11544f0046b844e4c8eedbd92522f49dbee36be92cccc6534687b51bd9e065dc9e0d731c0db593ec
+Size (tealdeer-1.8.1.tar.gz) = 701157 bytes
 BLAKE2s (tempfile-3.23.0.crate) = 03894a0b6e2c16a9462ea26eccb98f1cef6ee46f95d6a41761f2c3086c0fd692
 SHA512 (tempfile-3.23.0.crate) = 8e9f84400f714209eb713af5960d1de501c10520817299f0ba2fd53a7c5f0931b60d1053c2c84820aa627aa94bdefa1b0e82c787784b1960170930f0ed2d8753
 Size (tempfile-3.23.0.crate) = 43063 bytes
