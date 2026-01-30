@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2026/01/06 11:18:19 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/01/30 09:15:41 wiz Exp $
 
 DISTNAME=	sphinxcontrib-newsfeed-0.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-newsfeed/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/prometheus/sphinxcontrib-newsfeed
+HOMEPAGE=	https://github.com/prometheusresearch/sphinxcontrib-newsfeed
 COMMENT=	News Feed extension for Sphinx
 LICENSE=	2-clause-bsd
 
