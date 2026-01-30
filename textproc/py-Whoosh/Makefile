@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/04/14 13:00:58 adam Exp $
+# $NetBSD: Makefile,v 1.20 2026/01/30 09:29:17 wiz Exp $
 
 DISTNAME=	Whoosh-2.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/Whoosh/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/mchaput/whoosh/wiki/Home
+#HOMEPAGE=	https://bitbucket.org/mchaput/whoosh/wiki/Home
 COMMENT=	Fast, featureful full-text indexing and searching library implemented
 LICENSE=	apache-2.0
 
