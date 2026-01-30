@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.101 2025/12/31 10:17:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.102 2026/01/30 13:39:49 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -63,6 +63,7 @@ share/mame/artwork/slot-mask-aligned.png
 share/mame/artwork/slot-mask.png
 share/mame/artwork/white.png
 share/mame/hash/32x.xml
+share/mame/hash/3do.xml
 share/mame/hash/3do_m2.xml
 share/mame/hash/README.md
 share/mame/hash/a2600.xml
@@ -372,6 +373,7 @@ share/mame/hash/juku.xml
 share/mame/hash/jupace_cass.xml
 share/mame/hash/jupace_snap.xml
 share/mame/hash/k28.xml
+share/mame/hash/k28o.xml
 share/mame/hash/kaypro.xml
 share/mame/hash/kc_cart.xml
 share/mame/hash/kc_cass.xml
@@ -566,6 +568,7 @@ share/mame/hash/pdp1_ptp.xml
 share/mame/hash/pecom_cass.xml
 share/mame/hash/pegasus_cart.xml
 share/mame/hash/pencil2.xml
+share/mame/hash/pencil2_cass.xml
 share/mame/hash/pentagon_cass.xml
 share/mame/hash/pet_cass.xml
 share/mame/hash/pet_flop.xml
