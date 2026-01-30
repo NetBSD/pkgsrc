@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26733 2026/01/30 13:39:58 wiz Exp $
+$NetBSD: TODO,v 1.26734 2026/01/30 14:01:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -846,7 +846,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libfakekey-0.3
 	o libflash-0.4.13
 	o libfolks-0.15.9
-	o libgcrypt-1.12
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
