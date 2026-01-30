@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2026/01/29 13:00:26 adam Exp $
+# $NetBSD: Makefile,v 1.63 2026/01/30 09:17:02 wiz Exp $
 
 DISTNAME=	tifffile-2026.1.28
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tifffile/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.lfd.uci.edu/~gohlke/
+HOMEPAGE=	https://github.com/cgohlke/tifffile/
 COMMENT=	Read and write TIFF(r) files
 LICENSE=	modified-bsd
 
