@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.741 2026/01/30 01:08:04 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.742 2026/01/30 08:30:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -949,3 +949,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/angband-sdl to 4.2.6 [ktnb 2026-01-29]
 	Updated net/sayaka to 3.8.6 [tsutsui 2026-01-29]
 	Updated net/mosquitto to 2.1.0 [gdt 2026-01-30]
+	Updated audio/libsidplayfp to 2.16.0 [wiz 2026-01-30]
