@@ -1,19 +1,16 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.8 2024/10/14 21:51:21 gdt Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.9 2026/01/30 01:07:56 gdt Exp $
 
 The first hunk removes linker args on SunOS, for no apparent reason.
+
 \todo Explain and file a bug upstream; this should not be a pkgsrc change.
 
---- src/CMakeLists.txt.orig	2020-08-19 13:55:03.000000000 +0000
+--- src/CMakeLists.txt.orig	2026-01-19 00:00:46.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -213,9 +213,9 @@ target_link_libraries(mosquitto ${MOSQ_L
- if (UNIX)
- 	if (APPLE)
- 		set_target_properties(mosquitto PROPERTIES LINK_FLAGS "-Wl,-exported_symbols_list -Wl,${mosquitto_SOURCE_DIR}/src/linker-macosx.syms")
--	else (APPLE)
-+	elseif (NOT CMAKE_SYSTEM_NAME STREQUAL SunOS)
- 		set_target_properties(mosquitto PROPERTIES LINK_FLAGS "-Wl,-dynamic-list=${mosquitto_SOURCE_DIR}/src/linker.syms")
--	endif (APPLE)
-+	endif ()
- endif (UNIX)
- 
- install(TARGETS mosquitto RUNTIME DESTINATION "${CMAKE_INSTALL_SBINDIR}")
+@@ -310,6 +310,7 @@ if(UNIX)
+ 			LINK_FLAGS "-Wl,-exported_symbols_list -Wl,${mosquitto_SOURCE_DIR}/src/linker-macosx.syms"
+ 		)
+ 	elseif (${CMAKE_SYSTEM_NAME} MATCHES "AIX")
++	elseif (${CMAKE_SYSTEM_NAME} MATCHES "SunOS")
+ 	else()
+ 		set_target_properties(mosquitto PROPERTIES
+ 			LINK_FLAGS "-Wl,-dynamic-list=${mosquitto_SOURCE_DIR}/src/linker.syms"

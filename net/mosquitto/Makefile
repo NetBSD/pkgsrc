@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2025/07/12 12:56:07 gdt Exp $
+# $NetBSD: Makefile,v 1.44 2026/01/30 01:07:56 gdt Exp $
 
-DISTNAME=	mosquitto-2.0.22
+DISTNAME=	mosquitto-2.1.0
 CATEGORIES=	net
 MASTER_SITES=	https://mosquitto.org/files/source/
 
@@ -9,16 +9,20 @@ HOMEPAGE=	https://mosquitto.org/
 COMMENT=	Open Source MQTT broker
 LICENSE=	epl-v1.0
 
-TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES+=		c c++
+# Upstream does not document required compiler versions in
+# README_compiling.md, but CMakeLists.txt says c99 and c++17
+USE_CC_FEATURES=	c99
+USE_CXX_FEATURES=	c++17
 
 # \todo File a bug upstream.
-LDFLAGS.SunOS+=	-lsocket -lnsl
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_SYSCONFDIR=${PREFIX}/share/examples
-CMAKE_CONFIGURE_ARGS+=	-DWITH_PLUGINS=NO
+USE_TOOLS+=		pkg-config
+
+# \todo Consider WITH_DOCS=no.
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 MOSQUITTO_USER=		mosquitto
 MOSQUITTO_GROUP=	mosquitto
@@ -26,7 +30,7 @@ MOSQUITTO_GROUP=	mosquitto
 PKG_USERS=	${MOSQUITTO_USER}:${MOSQUITTO_GROUP}
 PKG_GROUPS=	${MOSQUITTO_GROUP}
 
-CONF_FILES=	${PREFIX}/share/examples/mosquitto/mosquitto.conf \
+CONF_FILES=	${PREFIX}/share/examples/mosquitto/mosquitto.conf.example \
 		${PKG_SYSCONFDIR}/mosquitto.conf
 
 SUBST_CLASSES+=		paths
@@ -43,27 +47,34 @@ FILES_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 FILES_SUBST+=	VARBASE=${VARBASE}
 
 BUILD_DEFS+=	VARBASE
+
 PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
 
-# Upstream documents that "unix" should use make, but Mac cmake.
-# After asking and receiving no guidance, choose to always use cmake.
-# https://github.com/eclipse/mosquitto/issues/1041
+# As of 2.1.0, cmake is the recommended build system.
 .include "../../devel/cmake/build.mk"
 
-# mosquitto's build system is very troubled, and the tests do not
-# currently work.
-#   https://github.com/eclipse/mosquitto/issues/1242
-#   https://github.com/eclipse/mosquitto/issues/1330
-#
-# \todo invoke "gmake test" in tests/ subdir instead of at top level
-# \todo pass in CPPFLAGS/LDFLAGS to test invocation
-TEST_TARGET=	test
-.include "../../devel/cunit/buildlink3.mk"
+CMAKE_CONFIGURE_ARGS+=	-DWITH_BUNDLED_DEPS=no
+
+# Somehow, even with WITH_EDITLINE=no, adding this finds it, causing build failures.
+# # upstream cmake fails to find libedit.pc
+# CMAKE_CONFIGURE_ARGS+=	-DEDITLINE_DIR=${BUILDLINK_PREFIX.editline}
+# CMAKE_CONFIGURE_ARGS+=	-DEDITLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.editline}/${BUILDLINK_INCDIRS.editline}
+
+# Upstream editline cmakery cannot handle editline's readline compat as installed natively.
+CMAKE_CONFIGURE_ARGS+=	-DWITH_EDITLINE=no
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_SYSCONFDIR=${PREFIX}/share/examples
 
 .include "options.mk"
-.include "../../devel/libuuid/buildlink3.mk"
-.include "../../devel/uthash/buildlink3.mk"
+
+# Same order as README-compiling.md
+.include "../../textproc/cJSON/buildlink3.mk"
 .include "../../net/libcares/buildlink3.mk"
+.include "../../devel/editline/buildlink3.mk"
+.include "../../www/libmicrohttpd/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+# pthreads included above
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/uthash/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
