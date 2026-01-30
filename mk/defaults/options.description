@@ -549,6 +549,7 @@ libmtp			Enable MTP via libmtp support.
 libnotify		Enable libnotify support.
 libofa			Enable Open Fingerprint Architecture library support.
 libofx			Enable OFX support.
+libopenmpt		Enable libopenmpt support.
 libotf			Enable libotf support.
 libpcap			Enable libpcap support.
 libproxy		Use libproxy for automatic proxy configuration.
@@ -667,8 +668,7 @@ mstats			Enable memory statistics.
 mtpz			Enable MTPZ support using libgcrypt.
 musepack		Enable the portable Musepack decoder library.
 musicbrainz		Enable musicbrainz support.
-musicpd-lastfm		Enable Last.FM support in musicpd.
-musicpd-soundcloud	Enable Soundcloud support.
+musicpd-qobuz		Enable Qobuz support.
 mutt-compressed-mbox	Enable compressed mailbox support in mutt.
 mutt-hcache		Enable header caching in mutt.
 mutt-sidebar		Enable the mutt mailbox sidebar patch.
