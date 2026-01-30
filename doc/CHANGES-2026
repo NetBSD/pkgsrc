@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.759 2026/01/30 14:01:33 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.760 2026/01/30 14:26:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -974,3 +974,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/ansible-core to 2.20.2 [adam 2026-01-30]
 	Updated sysutils/ansible to 13.3.0 [adam 2026-01-30]
 	Updated security/libgcrypt to 1.12.0 [wiz 2026-01-30]
+	Updated www/php-contao-manager to 1.10.10 [taca 2026-01-30]
