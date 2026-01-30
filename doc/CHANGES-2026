@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.762 2026/01/30 16:10:27 leot Exp $
+$NetBSD: CHANGES-2026,v 1.763 2026/01/30 19:09:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -977,3 +977,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/php-contao-manager to 1.10.10 [taca 2026-01-30]
 	Updated security/libgpg-error to 1.58nb1 [wiz 2026-01-30]
 	Updated editors/neovim to 0.11.6 [leot 2026-01-30]
+	Updated net/yt-dlp-ejs to 0.4.0 [wiz 2026-01-30]
