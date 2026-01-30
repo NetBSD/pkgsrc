@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2026/01/13 14:46:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/01/30 23:19:00 wiz Exp $
 bin/sass${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -179,6 +179,9 @@ ${GEM_EXTSDIR}/sass/node_modules/source-map-js/source-map.d.ts
 ${GEM_EXTSDIR}/sass/node_modules/source-map-js/source-map.js
 ${GEM_EXTSDIR}/sass/node_modules/sync-message-port/LICENSE
 ${GEM_EXTSDIR}/sass/node_modules/sync-message-port/README.md
+${GEM_EXTSDIR}/sass/node_modules/sync-message-port/dist/lib/atomic_counter.d.ts
+${GEM_EXTSDIR}/sass/node_modules/sync-message-port/dist/lib/atomic_counter.js
+${GEM_EXTSDIR}/sass/node_modules/sync-message-port/dist/lib/atomic_counter.js.map
 ${GEM_EXTSDIR}/sass/node_modules/sync-message-port/dist/lib/index.d.ts
 ${GEM_EXTSDIR}/sass/node_modules/sync-message-port/dist/lib/index.js
 ${GEM_EXTSDIR}/sass/node_modules/sync-message-port/dist/lib/index.js.map
@@ -186,13 +189,13 @@ ${GEM_EXTSDIR}/sass/node_modules/sync-message-port/dist/tsconfig.build.tsbuildin
 ${GEM_EXTSDIR}/sass/node_modules/sync-message-port/package.json
 ${GEM_EXTSDIR}/sass/package-lock.json
 ${GEM_EXTSDIR}/sass/package.json
-${GEM_EXTSDIR}/sass/sass-${PKGVERSION}.tgz
+${GEM_EXTSDIR}/sass/sass-1.97.3.tgz
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/exe/sass
 ${GEM_LIBDIR}/ext/sass/Rakefile
 ${GEM_LIBDIR}/ext/sass/package.json
-${GEM_LIBDIR}/ext/sass/sass-${PKGVERSION}.tgz
+${GEM_LIBDIR}/ext/sass/sass-1.97.3.tgz
 ${GEM_LIBDIR}/lib/sass-embedded.rb
 ${GEM_LIBDIR}/lib/sass/calculation_value.rb
 ${GEM_LIBDIR}/lib/sass/calculation_value/calculation_operation.rb
