@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/23 09:11:54 adam Exp $
+# $NetBSD: Makefile,v 1.4 2026/01/30 09:13:01 wiz Exp $
 
 DISTNAME=	sip-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-sip5-5.5.0
@@ -6,7 +6,7 @@ CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sip/}
 
 MAINTAINER=	rhialto@NetBSD.org
-HOMEPAGE=	https://www.riverbankcomputing.com/software/sip/
+HOMEPAGE=	https://python-sip.readthedocs.io/en/stable/
 COMMENT=	Tool to create Python bindings for C++ libraries (v5)
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
