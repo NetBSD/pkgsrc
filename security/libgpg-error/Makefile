@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.98 2025/12/21 21:38:59 adam Exp $
+# $NetBSD: Makefile,v 1.99 2026/01/30 14:45:13 wiz Exp $
 
 DISTNAME=	libgpg-error-1.58
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG:=libgpg-error/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +18,10 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-install-gpg-error-config
 INFO_FILES=		yes
 TEST_TARGET=		check
+
+PKGCONFIG_OVERRIDE+=		src/gpg-error.pc
+# compared to 'known good' values with rpath during build
+PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 .include "../../mk/bsd.prefs.mk"
 
