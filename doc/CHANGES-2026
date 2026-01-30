@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.755 2026/01/30 13:00:49 adam Exp $
+$NetBSD: CHANGES-2026,v 1.756 2026/01/30 13:23:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -968,3 +968,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv-build to 0.9.28 [adam 2026-01-30]
 	Added sysutils/py-psleak version 0.1.5 [adam 2026-01-30]
 	Updated sysutils/py-psutil to 7.2.2 [adam 2026-01-30]
+	Updated misc/dpkg to 1.23.5 [adam 2026-01-30]
+	Updated devel/appstream to 1.1.2 [adam 2026-01-30]
