@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.684 2026/01/10 18:00:16 wiz Exp $
+# $NetBSD: Makefile,v 1.685 2026/01/30 09:21:20 wiz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -358,7 +358,6 @@ SUBDIR+=	py-policyd-spf
 SUBDIR+=	py-postfix-mta-sts-resolver
 SUBDIR+=	py-spf
 SUBDIR+=	py-ukpostcodeparser
-SUBDIR+=	py-validate-email-address
 SUBDIR+=	py-vmailmgr
 SUBDIR+=	pymsgauth
 SUBDIR+=	qcheck
