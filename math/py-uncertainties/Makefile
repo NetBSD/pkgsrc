@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2026/01/11 09:02:04 adam Exp $
+# $NetBSD: Makefile,v 1.26 2026/01/30 09:17:41 wiz Exp $
 
 DISTNAME=	uncertainties-3.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uncertainties/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://uncertainties-python-package.readthedocs.io/
+HOMEPAGE=	https://uncertainties.readthedocs.io/en/latest/
 COMMENT=	Transparent calculations with uncertainties on the quantities involved
 LICENSE=	modified-bsd
 
