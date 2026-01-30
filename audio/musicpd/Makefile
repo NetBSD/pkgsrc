@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.338 2026/01/07 08:45:53 wiz Exp $
+# $NetBSD: Makefile,v 1.339 2026/01/30 08:58:13 wiz Exp $
 
-DISTNAME=	mpd-0.23.16
+DISTNAME=	mpd-0.24.8
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
-PKGREVISION=	12
 CATEGORIES=	audio
 MASTER_SITES=	https://www.musicpd.org/download/mpd/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -13,29 +12,24 @@ COMMENT=	Remote controllable audio player
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>=9.0.0:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme>=0:../../textproc/py-sphinx-rtd-theme
 
 CONFLICTS=	mpd-[0-9]*
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-# The upstream changelog recommends gcc8, but it compiles fine with 7.5.0
-# (NetBSD 9.1) using -std=c++17.
-#
-# Please be cautious of raising this requirement - mpd seems to adopt new C++
-# standards quickly.
-
-USE_CXX_FEATURES+=	c++17
+USE_CXX_FEATURES+=	c++20
 
 MESON_ARGS+=	-Ddocumentation=enabled
 
 # worrying libraries with limited maintainance:
 # - audiofile, many CVEs, no activity since 2016
-#   using sndfile instead
+#   prefer ffmpeg instead
 # - mad, no release since 2004
-#   using mpg123 instead
-MESON_ARGS+=	-Dmad=disabled
+#   prefer mpg123 instead
 MESON_ARGS+=	-Daudiofile=disabled
+MESON_ARGS+=	-Dmad=disabled
 
 # not available in pkgsrc?
 MESON_ARGS+=	-Dnfs=disabled
@@ -120,12 +114,6 @@ SUBST_FILES.doc=	doc/mpd.conf.5.rst
 SUBST_MESSAGE.doc=	Fixing sysconfdir path in mpd.conf location.
 SUBST_VARS.doc+=	PKG_SYSCONFDIR
 
-SUBST_CLASSES+=		sidplay
-SUBST_STAGE.sidplay=	pre-configure
-SUBST_FILES.sidplay=	src/decoder/plugins/meson.build
-SUBST_MESSAGE.sidplay=	Add directory of sidplay2 to search resid-buidler library in.
-SUBST_VARS.sidplay+=	PREFIX
-
 INSTALLATION_DIRS=	${EGDIR} ${EGDIR}/logrotate.d
 
 PYTHON_FOR_BUILD_ONLY=		tool
@@ -148,12 +136,12 @@ BUILDLINK_API_DEPENDS.flac+=	flac>=1.2
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/mpg123/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+BUILDLINK_API_DEPENDS.fmtlib+=	fmtlib>=9
 .include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
