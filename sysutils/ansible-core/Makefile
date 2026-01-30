@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.55 2025/12/10 12:43:34 adam Exp $
+# $NetBSD: Makefile,v 1.56 2026/01/30 13:51:44 adam Exp $
 
 # When upgrading ansible-core, please also upgrade the ansible package
 # to a version that supports the new version of ansible-core.  At times
 # this may mean not upgrading ansible-core to its latest release branch.
 
-DISTNAME=	ansible_core-2.20.1
+DISTNAME=	ansible_core-2.20.2
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-core/}
