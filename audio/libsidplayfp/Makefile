@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/10/29 13:05:10 rhialto Exp $
+# $NetBSD: Makefile,v 1.2 2026/01/30 08:30:48 wiz Exp $
 
-DISTNAME=	libsidplayfp-2.5.0
+DISTNAME=	libsidplayfp-2.16.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sidplay-residfp/}
 
