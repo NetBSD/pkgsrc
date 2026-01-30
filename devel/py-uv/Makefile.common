@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.common,v 1.13 2026/01/15 12:42:46 adam Exp $
+# $NetBSD: Makefile.common,v 1.14 2026/01/30 12:21:50 adam Exp $
 # used by devel/py-uv/Makefile
 # used by devel/py-uv-build/Makefile
 
-UV_VERSION=	0.9.25
+UV_VERSION=	0.9.28
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 CFLAGS+=	-Wno-implicit-function-declaration
 
-RUST_REQ=	1.89.0
+RUST_REQ=	1.91.0
 
 .include "${.CURDIR}/../../devel/py-uv/cargo-depends.mk"
