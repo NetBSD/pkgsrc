@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4581 2026/01/28 11:19:52 adam Exp $
+# $NetBSD: Makefile,v 1.4582 2026/01/30 09:31:52 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3293,7 +3293,6 @@ SUBDIR+=	py-xbe
 SUBDIR+=	py-xdg
 SUBDIR+=	py-xdg-base-dirs
 SUBDIR+=	py-xdis
-SUBDIR+=	py-xdist
 SUBDIR+=	py-xopen
 SUBDIR+=	py-yapf
 SUBDIR+=	py-zanata-python-client
