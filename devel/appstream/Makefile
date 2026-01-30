@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2026/01/07 08:46:26 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/01/30 13:22:33 adam Exp $
 
-DISTNAME=	appstream-1.1.1
-PKGREVISION=	2
+DISTNAME=	appstream-1.1.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ximion/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -21,6 +20,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		itstool msgfmt pkg-config
 
 MESON_ARGS+=	-Dapidocs=false
+MESON_ARGS+=	-Dbash-completion=false
 MESON_ARGS+=	-Dsystemd=false
 # for running a tool during the build
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/src
