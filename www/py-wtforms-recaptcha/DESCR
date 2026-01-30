@@ -1,2 +1,0 @@
-WTForms-reCaptcha is a convenient field for WTForms that transparently handles
-reCaptcha display and validation via corresponding widget and validator classes.
