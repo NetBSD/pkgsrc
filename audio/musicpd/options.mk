@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.48 2025/12/14 13:12:02 vins Exp $
+# $NetBSD: options.mk,v 1.49 2026/01/30 08:58:13 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
 
 # audio outputs
 PKG_SUPPORTED_OPTIONS+=	jack openal libao pulseaudio sndio
 # codecs
-PKG_SUPPORTED_OPTIONS+=	adplug faad ffmpeg fluidsynth libgme libwildmidi
+PKG_SUPPORTED_OPTIONS+=	adplug faad ffmpeg fluidsynth libgme libopenmpt libwildmidi
 PKG_SUPPORTED_OPTIONS+=	mikmod modplug musepack sidplay wavpack
 # codecs (encoding only)
 PKG_SUPPORTED_OPTIONS+=	lame shine twolame
@@ -14,15 +14,13 @@ PKG_SUPPORTED_OPTIONS+=	bzip2 zziplib
 # networking/comms
 PKG_SUPPORTED_OPTIONS+=	avahi curl dbus libmms samba shout upnp
 # misc
-PKG_SUPPORTED_OPTIONS+=	cdparanoia chromaprint musicpd-soundcloud libmpdclient
+PKG_SUPPORTED_OPTIONS+=	cdparanoia chromaprint libmpdclient musicpd-qobuz
 
 # no packages yet
 # pipewire
 # snapcast
-# currently broken build:
-# sid
 
-PKG_SUGGESTED_OPTIONS=	curl faad ffmpeg libao musepack samplerate shout vorbis
+PKG_SUGGESTED_OPTIONS=	curl faad ffmpeg libao libopenmpt musepack musicpd-qobuz samplerate shout sidplay vorbis
 PKG_SUGGESTED_OPTIONS+=	wavpack
 
 PKG_OPTIONS_LEGACY_OPTS+=	game-music-emu:libgme
@@ -126,10 +124,16 @@ MESON_ARGS+=	-Dmms=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibmpdclient)
-BUILDLINK_API_DEPENDS.libmpdclient+=	libmpdclient>=2.11
+BUILDLINK_API_DEPENDS.libmpdclient+=	libmpdclient>=2.15
 .  include "../../audio/libmpdclient/buildlink3.mk"
 .else
 MESON_ARGS+=	-Dlibmpdclient=disabled
+.endif
+
+.if !empty(PKG_OPTIONS:Mlibopenmpt)
+.include "../../audio/libopenmpt/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dopenmpt=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibsoxr)
@@ -162,11 +166,10 @@ MESON_ARGS+=	-Dmodplug=disabled
 MESON_ARGS+=	-Dmpcdec=disabled
 .endif
 
-.if !empty(PKG_OPTIONS:Mmusicpd-soundcloud)
-BUILDLINK_API_DEPENDS.yajl+=	yajl>=2.1
-.  include "../../devel/yajl/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mmusicpd-qobuz)
+.  include "../../textproc/nlohmann-json/buildlink3.mk"
 .else
-MESON_ARGS+=	-Dyajl=disabled
+MESON_ARGS+=	-Dqobuz=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mopenal)
@@ -200,7 +203,7 @@ MESON_ARGS+=	-Dshine=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Msidplay)
-.  include "../../audio/libsidplay2/buildlink3.mk"
+.  include "../../audio/libsidplayfp/buildlink3.mk"
 .else
 MESON_ARGS+=	-Dsidplay=disabled
 .endif
@@ -245,6 +248,7 @@ MESON_ARGS+=	-Dupnp=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mwavpack)
+BUILDLINK_API_DEPENDS.wavpack+=	wavpack>=5
 .  include "../../audio/wavpack/buildlink3.mk"
 .else
 MESON_ARGS+=	-Dwavpack=disabled
