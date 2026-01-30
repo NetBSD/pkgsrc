@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.104 2026/01/04 10:58:13 adam Exp $
+# $NetBSD: Makefile,v 1.105 2026/01/30 13:58:03 adam Exp $
 
-DISTNAME=	ansible-13.2.0
+DISTNAME=	ansible-13.3.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible/}
 
@@ -16,7 +16,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 # Each ansible release tracks a specific release branch of ansible-core.
 # Enforce this by using an upper limit for the dependency version.
 # PLEASE KEEP THE UPPER LIMIT WHEN UPGRADING THIS PACKAGE.
-DEPENDS+=	ansible-core>=2.20.1<2.21:../../sysutils/ansible-core
+DEPENDS+=	ansible-core>=2.20.2<2.21:../../sysutils/ansible-core
 
 USE_LANGUAGES=	# none
 
