@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.745 2026/01/30 09:21:20 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.746 2026/01/30 09:30:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -953,3 +953,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/musicpd to 0.24.8 [wiz 2026-01-30]
 	Updated meta-pkgs/bulk-test-boost to 20260130 [wiz 2026-01-30]
 	Removed mail/py-validate-email-address [wiz 2026-01-30]
+	Removed www/py-wtforms-recaptcha [wiz 2026-01-30]
