@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2026/01/12 12:14:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2026/01/30 13:16:04 adam Exp $
 bin/dpkg
 bin/dpkg-architecture
 bin/dpkg-buildapi
@@ -123,6 +123,8 @@ ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Deps/OR.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Deps/Simple.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Deps/Union.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Dist/Files.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Email/Address.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Email/AddressList.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/ErrorHandling.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Exit.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/File.pm
@@ -295,7 +297,6 @@ man/fr/man5/deb-shlibs.5
 man/fr/man5/deb-split.5
 man/fr/man5/deb-src-files.5
 man/fr/man5/deb-src-rules.5
-man/fr/man5/deb-src-symbols.5
 man/fr/man5/deb-symbols.5
 man/fr/man5/deb-triggers.5
 man/fr/man5/deb822.5
@@ -381,6 +382,8 @@ man/man3/Dpkg::Deps::OR.3perl
 man/man3/Dpkg::Deps::Simple.3perl
 man/man3/Dpkg::Deps::Union.3perl
 man/man3/Dpkg::Dist::Files.3perl
+man/man3/Dpkg::Email::Address.3perl
+man/man3/Dpkg::Email::AddressList.3perl
 man/man3/Dpkg::ErrorHandling.3perl
 man/man3/Dpkg::Exit.3perl
 man/man3/Dpkg::File.3perl
@@ -513,6 +516,7 @@ man/nl/man5/deb-src-symbols.5
 man/nl/man5/deb-substvars.5
 man/nl/man5/deb-symbols.5
 man/nl/man5/deb-triggers.5
+man/nl/man5/deb.5
 man/nl/man5/deb822.5
 man/nl/man5/dpkg.cfg.5
 man/nl/man5/dsc.5
@@ -576,6 +580,7 @@ man/pt/man5/deb-src-symbols.5
 man/pt/man5/deb-substvars.5
 man/pt/man5/deb-symbols.5
 man/pt/man5/deb-triggers.5
+man/pt/man5/deb.5
 man/pt/man5/deb822.5
 man/pt/man5/dpkg.cfg.5
 man/pt/man5/dsc.5
