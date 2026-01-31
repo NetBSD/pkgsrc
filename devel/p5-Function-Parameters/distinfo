@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/12/16 11:40:33 mef Exp $
+$NetBSD: distinfo,v 1.9 2026/01/31 01:45:37 wen Exp $
 
-BLAKE2s (Function-Parameters-2.002004.tar.gz) = 33b4aae7fbf58c23c9d935bb99c55445d90cb465a98a7a5162e109247b6cd2f2
-SHA512 (Function-Parameters-2.002004.tar.gz) = 2df10b3e7ad87c26a0bfec88a88602b5960f1c59a494d480eb24cee96be89d1b89036d3ad7f6f2f4bda25531cb5693c139578a3b2efaca1b38b3cea9f050fa9e
-Size (Function-Parameters-2.002004.tar.gz) = 72690 bytes
+BLAKE2s (Function-Parameters-2.002006.tar.gz) = 1852ce19d071447451742b1be0cc801a551cb9ddceaca42413dae0becd01bf18
+SHA512 (Function-Parameters-2.002006.tar.gz) = 8609b8799b48498f292833ca69834005d1dae0fef7bd70db143a058e2ccb744f811fa2328030859119dacfce98c3476de82669d3849ab2bbeca0dc831208e1c9
+Size (Function-Parameters-2.002006.tar.gz) = 73151 bytes
