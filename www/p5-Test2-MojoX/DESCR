@@ -1,0 +1,3 @@
+Test2::MojoX is a test user agent based on Mojo::UserAgent, it is
+usually used together with Test2::Suite to test Mojolicious
+applications. Just run your tests with prove or yath.
