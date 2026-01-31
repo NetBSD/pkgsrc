@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.86 2026/01/31 17:28:48 wiz Exp $
+# $NetBSD: Makefile.common,v 1.87 2026/01/31 19:00:15 gutteridge Exp $
 #
 # used by www/w3m/Makefile
 # used by www/w3m-img/Makefile
@@ -25,10 +25,6 @@ WRKSRC=		${WRKDIR}/w3m-v${PKGVERSION_NOREV}
 # needs strcasecmp, ISO C unacceptable on illumos
 FORCE_C_STD=	gnu99
 
-# gcc: error: unrecognized command line option '-Wstring-compare'
-# That option is available >= 10.0
-GCC_REQD+=	10
-
 # For w3mman, xface2xpm, cgi scripts.
 USE_TOOLS+=	perl:run pax pkg-config
 
@@ -40,8 +36,10 @@ _W3M_USE_IMAGE?=	NO
 
 .include "../../mk/bsd.prefs.mk"
 
-# not supported by gcc 5
+# not supported by GCC 5
 BUILDLINK_TRANSFORM+=	rm:-Wnull-dereference
+# not supported by GCC < 10
+BUILDLINK_TRANSFORM+=   rm:-Wstring-compare
 
 # Configurable by environment variables at run-time.
 CONFIGURE_ARGS+=	--with-charset=US-ASCII
