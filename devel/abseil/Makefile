@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2026/01/14 12:56:47 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2026/01/31 21:16:04 gdt Exp $
 
 DISTNAME=	abseil-20260107.0
 CATEGORIES=	devel
@@ -12,7 +12,13 @@ COMMENT=	C++ Common Libraries
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=		c++
+# Upstream documents "collection of C++ code (compliant to C++17)"
 USE_CXX_FEATURES=	c++17
+# Upstream's cmakery checks if c++20 is supported and if so enables
+# additional features.  pkgsrc norms are to have packages build the
+# same regardless of environment (other than the required environment
+# which is forced by the pkgsrc build).  Thus, try to make the
+# compiler be c++17 only, and not accept c++20.
 FORCE_CXX_STD=		c++17
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 
