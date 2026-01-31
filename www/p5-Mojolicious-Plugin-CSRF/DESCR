@@ -1,0 +1,7 @@
+This module is a Mojolicious plugin for Cross Site Request Forgery (CSRF)
+"prevention" (theoretically; if used correctly; caveat emptor).
+
+By default, when used, the plugin will cause requests methods that
+traditionally contain data-changing actions (i.e. POST, PUT, etc.) to
+check a generated session token against a token from a form value, URL
+parameter, or HTTP header. On failure, a Mojo::Exception is thrown.
