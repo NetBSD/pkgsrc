@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2026/01/31 18:05:27 gdt Exp $
+$NetBSD: distinfo,v 1.19 2026/01/31 18:10:10 gdt Exp $
 
 BLAKE2s (XEphem-4.2.0.tar.gz) = 28bfc97fcd86769c3e9926695e9c77ac19da95c2f5d162ad63bc928cb875b77a
 SHA512 (XEphem-4.2.0.tar.gz) = 97756bc299821e95cbc06facc3091795feb245db033193fdf587bcfd7a83142a15552a1f8aa53c040c87cb75021424b94bbed5a747fb9783f5a0cac6fb4ddb3e
 Size (XEphem-4.2.0.tar.gz) = 17317398 bytes
 SHA1 (patch-aa) = f72467338392d2cfc6f9bfde07c3c4f1e0f259d0
-SHA1 (patch-homeio.c) = 351bce4a3d4ac6e89ca9c873269f20725dc984d3
+SHA1 (patch-homeio.c) = b2891558c607b1e0a57a5a786b8e399c5f9102e8
 SHA1 (patch-tools_xedb_xedb.c) = 3f1310401f5eb49d35f90a25f99d7bccc05cd79d
