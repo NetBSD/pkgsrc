@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2025/11/11 20:40:56 vins Exp $
+# $NetBSD: options.mk,v 1.11 2026/01/31 15:23:40 mef Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -44,6 +44,7 @@ CFLAGS+=	-DUSE_WHOSON
 ###
 .if !empty(PKG_OPTIONS:Mssl)
 .  include "../../security/openssl/buildlink3.mk"
+BUILDLINK_API_DEPENDS.openssl+=        openssl>=3.0
 .  if !empty(PKG_OPTIONS:Mimapuw-cleartextpwd)
 MAKE_FLAGS+=	SSLTYPE=unix	# plaintext auth
 .  else
