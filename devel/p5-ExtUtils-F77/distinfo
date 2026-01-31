@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:16:32 nia Exp $
+$NetBSD: distinfo,v 1.14 2026/01/31 01:36:15 wen Exp $
 
-BLAKE2s (ExtUtils-F77-1.24.tar.gz) = 20842bfb28bdd633c29cf6d3e9d032ffe9f891c0a7083c90b04f730ae7b15df8
-SHA512 (ExtUtils-F77-1.24.tar.gz) = 83ffa66e61fd5dd30cbe3e62d93374f5e1bc5a5eef180e87a6b90a62198a1a8e69d5e1683ae48f2e400304824442b4d78bd2eacdb3822ba8df5c9da1031880fe
-Size (ExtUtils-F77-1.24.tar.gz) = 12572 bytes
+BLAKE2s (ExtUtils-F77-1.26.tar.gz) = 66a5423d25d0f5b2d316992b3171a6533bd7bd1813a656d891d56a4ed66235e7
+SHA512 (ExtUtils-F77-1.26.tar.gz) = ed95922f261f3e4e917c06fc73a4ed2eee3501065d38587414a81a62aba4232a75e9045fd6890a55ece1808a0eb9af51d103ace2478684f3e5e8f017dbb975b0
+Size (ExtUtils-F77-1.26.tar.gz) = 13141 bytes
