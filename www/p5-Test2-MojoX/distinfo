@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/01/31 03:10:44 wen Exp $
+
+BLAKE2s (Test2-MojoX-0.07.tar.gz) = 26c5d650d9833ca7b62cf13bc140e24884d676bb94848b79bb9ad2ca13ce1501
+SHA512 (Test2-MojoX-0.07.tar.gz) = 4fe0b18d156f4120a231752249aac60a2488adcffd262d7e4d75756cd78653044de27d03d81a994284b3adc9c975fd330354f6d42cb7fb9bfc7e3f205a5f1631
+Size (Test2-MojoX-0.07.tar.gz) = 17886 bytes
