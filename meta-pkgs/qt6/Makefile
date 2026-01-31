@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2024/12/26 22:20:19 adam Exp $
+# $NetBSD: Makefile,v 1.35 2026/01/31 22:22:52 wiz Exp $
 
 DISTNAME=	qt6-${QTVERSION}
 
@@ -41,6 +41,7 @@ DEPENDS+=	qt6-qttools-${QTVERSION}{,nb[0-9]*}:../../devel/qt6-qttools
 DEPENDS+=	qt6-qttranslations-${QTVERSION}{,nb[0-9]*}:../../x11/qt6-qttranslations
 DEPENDS+=	qt6-qtvirtualkeyboard-${QTVERSION}{,nb[0-9]*}:../../inputmethod/qt6-qtvirtualkeyboard
 DEPENDS+=	qt6-qtwebchannel-${QTVERSION}{,nb[0-9]*}:../../www/qt6-qtwebchannel
+DEPENDS+=	qt6-qtwebengine-${QTVERSION}{,nb[0-9]*}:../../www/qt6-qtwebengine
 DEPENDS+=	qt6-qtwebsockets-${QTVERSION}{,nb[0-9]*}:../../net/qt6-qtwebsockets
 
 .include "../../devel/wayland/platform.mk"
