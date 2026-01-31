@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2026/01/27 08:40:30 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2026/01/31 08:09:19 markd Exp $
 
 BUILDLINK_TREE+=	kf6-kwallet
 
@@ -17,7 +17,7 @@ BUILDLINK_FILES.kf6-kwallet+=	share/dbus-1/interfaces/kf6_org.kde.KWallet.xml
 .include "../../devel/kf6-ki18n/buildlink3.mk"
 .include "../../devel/kf6-knotifications/buildlink3.mk"
 .include "../../devel/kf6-kservice/buildlink3.mk"
-.include "../../security/gpgme/buildlink3.mk"
+.include "../../security/gpgmepp/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../sysutils/kf6-kdbusaddons/buildlink3.mk"
