@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.780 2026/01/31 14:06:39 khorben Exp $
+$NetBSD: CHANGES-2026,v 1.781 2026/01/31 14:09:36 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -994,4 +994,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/libreoffice to 25.8.4.2nb6 [ryoon 2026-01-31]
 	Updated print/qpdf to 12.3.2 [ryoon 2026-01-31]
 	Updated pkgtools/pkglint to 23.20.0 [rillig 2026-01-31]
-	Updated www/gitea to 1.23.8nb7 [khorben 2026-01-31]
+	Updated www/gitea to 1.24.7 [khorben 2026-01-31]
