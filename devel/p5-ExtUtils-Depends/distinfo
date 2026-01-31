@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/11/30 00:38:32 wen Exp $
+$NetBSD: distinfo,v 1.17 2026/01/31 01:33:04 wen Exp $
 
-BLAKE2s (ExtUtils-Depends-0.8001.tar.gz) = 0461aab96ce320a2525a5103df2d4e50485051d448dbe1cbdfb1e230d7173921
-SHA512 (ExtUtils-Depends-0.8001.tar.gz) = 80141f90fbde7c62b192a55d40d26ce4e442150287ae6fe200388dc84cedba5f5210ee6cd9a40b1a9cda0cc49815b1ba1ab35e75afaa7440de3c3577d01bb733
-Size (ExtUtils-Depends-0.8001.tar.gz) = 16708 bytes
+BLAKE2s (ExtUtils-Depends-0.8002.tar.gz) = d3d8db080f1fc2f82d4dae26dc4c244ed77ff83a71132f9ee95663bfefef1511
+SHA512 (ExtUtils-Depends-0.8002.tar.gz) = fe0d571174962df92dd9ef3dbce029383d216cd9c3910d2fce539e3a4da9053bb153aad4636d706f5103ec3c58a61736bdb6f0afb15d77374acf64ff45615980
+Size (ExtUtils-Depends-0.8002.tar.gz) = 16750 bytes
