@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/01/31 03:18:28 wen Exp $
+
+BLAKE2s (Mojolicious-Plugin-CSRF-1.05.tar.gz) = a115bd9f183f0f0bd1decad3de840287405f120fcf79d24762e318c32142c6b5
+SHA512 (Mojolicious-Plugin-CSRF-1.05.tar.gz) = a9f9127c751aeb463adda66633e347d5737e0d50186f8b55d1a49eed044201daebc75f2aa44512767d4630998012d8905245040c4747712186dbe5c009a912ff
+Size (Mojolicious-Plugin-CSRF-1.05.tar.gz) = 13005 bytes
