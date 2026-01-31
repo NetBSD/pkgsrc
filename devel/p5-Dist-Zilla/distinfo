@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.30 2024/06/26 23:18:41 wen Exp $
+$NetBSD: distinfo,v 1.31 2026/01/31 01:28:15 wen Exp $
 
-BLAKE2s (Dist-Zilla-6.032.tar.gz) = 6ccacf3b696680f8971788abaddf1baa414e20b5675964c3f0137eff8e0876cd
-SHA512 (Dist-Zilla-6.032.tar.gz) = 372578192f045362f73d614022acd60643822b262b7d62ddfb3f2c067fdae972ff8e86494ec084201fb641e9894b1a53a0166f67fc912bf96246fa0f08f82410
-Size (Dist-Zilla-6.032.tar.gz) = 357239 bytes
+BLAKE2s (Dist-Zilla-6.037.tar.gz) = 560822d0972da4f0305fe13c9f919315620b10b985bf16723a2cf4aa4083ec56
+SHA512 (Dist-Zilla-6.037.tar.gz) = 336bfd1ebcafb7a7640e9d802d10a0d9d702f542e64f9421bc7853f39e35c5a80426bc64cd698bf7b3b14f761cab389e1a763ab81d9810c10bdaa8476f6a2cc8
+Size (Dist-Zilla-6.037.tar.gz) = 368313 bytes
