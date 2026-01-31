@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2011/12/07 16:19:33 drochner Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/01/31 18:05:27 gdt Exp $
 bin/xephem
 lib/X11/app-defaults/XEphem
 man/man1/xephem.1
@@ -12,10 +12,12 @@ share/xephem/auxil/classicfigs.csf
 share/xephem/auxil/dearth.gif
 share/xephem/auxil/favorites.fav
 share/xephem/auxil/jupiter.1020
+share/xephem/auxil/jupiter.2040
 share/xephem/auxil/jupiter.9910
 share/xephem/auxil/jupitermap.gif
 share/xephem/auxil/logo.gif
 share/xephem/auxil/mars.1020
+share/xephem/auxil/mars.2040
 share/xephem/auxil/mars.9910
 share/xephem/auxil/mars_db
 share/xephem/auxil/marsmap.jpg
@@ -30,9 +32,11 @@ share/xephem/auxil/saturn16.gif
 share/xephem/auxil/saturn20.gif
 share/xephem/auxil/saturn24.gif
 share/xephem/auxil/saturne.1020
+share/xephem/auxil/saturne.2040
 share/xephem/auxil/saturne.9910
 share/xephem/auxil/starcensus.txt
 share/xephem/auxil/uranus.1020
+share/xephem/auxil/uranus.2040
 share/xephem/auxil/uranus.9910
 share/xephem/auxil/wmm.cof
 share/xephem/auxil/xephem_sites

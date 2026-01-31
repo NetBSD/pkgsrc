@@ -1,17 +1,32 @@
-$NetBSD: patch-aa,v 1.10 2016/06/18 21:32:10 jakllsch Exp $
+$NetBSD: patch-aa,v 1.11 2026/01/31 18:05:27 gdt Exp $
 
---- Makefile.orig	2015-08-09 21:36:50.000000000 +0000
+--- Makefile.orig	2024-02-13 14:35:36.000000000 +0000
 +++ Makefile
-@@ -32,9 +32,9 @@ endif
- # for linux and Apple OS X
+@@ -30,16 +30,10 @@ endif
+ 
+ # For Linux and Apple OS X
+ 
+-UNAME_S = $(shell uname -s)
+-ifeq ($(UNAME_S),Darwin)
+-  PLATI = -I/usr/local/opt/openssl@3/include -I/opt/X11/include
+-  PLATL = -L/usr/local/opt/openssl@3/lib -L/opt/X11/lib
+-endif
+-
  CC = gcc
  CLDFLAGS = -g
--CFLAGS = $(LIBINC) $(CLDFLAGS) -O2 -Wall -I$(MOTIFI) -I/opt/X11/include
--LDFLAGS = $(LIBLNK) $(CLDFLAGS) -L$(MOTIFL) -L/opt/X11/lib
--XLIBS = -lXm -lXp -lXt -lXext -lXmu -lX11
-+CFLAGS = $(LIBINC) $(CLDFLAGS) -O2 -Wall -I/usr/X11R6/include
-+LDFLAGS = $(LIBLNK) $(CLDFLAGS) $(X11_LDFLAGS)
-+XLIBS = $(MOTIFLIB) -lXt -lXext -lXmu -lX11
- LIBS = $(XLIBS) $(LIBLIB) -lm
+-CFLAGS = $(LIBINC) $(CLDFLAGS) -O2 -Wall -I$(MOTIFI) $(PLATI)
+-LDFLAGS = $(LIBLNK) $(CLDFLAGS) -L$(MOTIFL) $(PLATL)
++CFLAGS = $(LIBINC) $(CLDFLAGS) -O2 -Wall
++XE_LDFLAGS = $(LIBLNK) $(CLDFLAGS) $(LDFLAGS)
+ XLIBS = -lXm -lXt -lXext -lXmu -lX11
+ LIBS = $(XLIBS) $(LIBLIB) -lm -lssl
  
- # static linking on Apple using X11 libs from ports
+@@ -195,7 +189,7 @@ OBJS =			\
+ all: libs xephem xephem.1
+ 
+ xephem: $(INCS) $(OBJS)
+-	$(CC) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
++	$(CC) $(XE_LDFLAGS) -o $@ $(OBJS) $(LIBS)
+ 
+ xephem.1: xephem.man
+ 	nroff -man $? > $@

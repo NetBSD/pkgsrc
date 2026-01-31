@@ -1,21 +1,20 @@
-# $NetBSD: Makefile,v 1.75 2025/06/23 01:23:36 zafer Exp $
+# $NetBSD: Makefile,v 1.76 2026/01/31 18:05:27 gdt Exp $
 
-DISTNAME=	xephem-3.7.7
+VERSION=	4.2.0
+DISTNAME=	XEphem-${VERSION}
+PKGNAME=	xephem-${VERSION}
 CATEGORIES=	x11
-# New MASTER_SITES is:
-# https://github.com/XEphem/XEphem/archive/refs/tags/4.2.0.tar.gz
-MASTER_SITES=	#http://97.74.56.125/free/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=XEphem/}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	https://www.clearskyinstitute.com/
-#HOMEPAGE+=	https://github.com/XEphem/XEphem
+HOMEPAGE=	https://github.com/XEphem/XEphem
 COMMENT=	Interactive astronomical ephemeris program
-# 4.2.0 appears to be mit-license
-LICENSE=	xephem-license
+LICENSE=	mit
 
-# Pending adjustment of license wording to clarify the copyright
-# holder's intent, permission has been granted to distribute the
-# distfile and binary packages without functional changes.
+# License was previously xephem-licenes (boutique, almost free). Do not
+# delete this comment; I will do so eventually when licensing is 100%
+# resolved.
 #
 # From: "Elwood C. Downey" <ecdowney@clearskyinstitute.com>
 # Subject: Re: license terms, tarball mirroring, binary packages
@@ -28,16 +27,20 @@ LICENSE=	xephem-license
 # from the original tarball (including possible changes for porting but
 # not changes in functionality).
 
-# uses built libpng without synchronization
-MAKE_JOBS_SAFE=	no
+# old-school makefile with no synchronization
+# (not reported upstream because a bug report today would be disrespectful)
+MAKE_JOBS_SAFE=		no
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/GUI/xephem
-USE_TOOLS+=	gmake pax perl:run
-REPLACE_PERL+=	auxil/*.pl
+WRKSRC=			${WRKDIR}/${DISTNAME}/GUI/xephem
+USE_TOOLS+=		gmake pax perl:run
 
-LIBS.SunOS+=		-lnsl -lsocket
 X11_LDFLAGS+=		${LIBS}
 MAKE_ENV+=		X11_LDFLAGS=${X11_LDFLAGS:Q}
+
+LIBS.SunOS+=		-lnsl -lsocket
+
+# \todo Evaluate and perhaps modernize this section.
+REPLACE_PERL+=		auxil/*.pl
 
 REPLACE_INTERPRETER+=	perl
 REPLACE.perl.old=	.*/bin/perl
@@ -47,10 +50,26 @@ REPLACE_FILES.perl=	auxil/astorb2edb.pl auxil/mpcorb2edb.pl
 INSTALLATION_DIRS=	bin lib/X11/app-defaults share/xephem/tools \
 			${PKGMANDIR}/man1
 
+# xephem looks for app-defaults in hardcoded/wrong places
+SUBST_CLASSES+=		ad
+SUBST_SED.ad=		-e "s,@PREFIX@,${PREFIX},"
+SUBST_FILES.ad=		tools/xedb/xedb.c
+SUBST_STAGE.ad=		post-configure
+SUBST_MESSAGE.ad=	Fixing path to x11 app-defaultsin xedb.c.
+
+# \todo Make this respect user ShareDir config also.
+SUBST_CLASSES+=		homeio
+SUBST_SED.homeio=	-e "s,@SHAREDIR@,${PREFIX}/share/xephem,"
+SUBST_FILES.homeio=	homeio.c
+SUBST_STAGE.homeio=	post-configure
+SUBST_MESSAGE.homeio=	Fixing path to x11 app-defaults in homeio.c.
+
+post-extract:
+	${SED} s,@PREFIX@,${PREFIX}, ${FILESDIR}/XEphem.ad > ${WRKDIR}/XEphem
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xephem ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/xephem.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xephem.1
-	${SED} s,@PREFIX@,${PREFIX}, ${FILESDIR}/XEphem.ad > ${WRKDIR}/XEphem
 	${INSTALL_DATA} ${WRKDIR}/XEphem ${DESTDIR}${PREFIX}/lib/X11/app-defaults
 	cd ${WRKSRC}; pax -rw auxil catalogs fifos fits gallery help lo \
 		${DESTDIR}${PREFIX}/share/xephem
