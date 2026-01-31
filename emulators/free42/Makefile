@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2026/01/27 08:39:23 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/01/31 18:31:17 gdt Exp $
 
-DISTNAME=	free42-nologo-3.3.4
+DISTNAME=	free42-nologo-3.3.11
 PKGNAME=	${DISTNAME:S/-nologo//}
 PKGREVISION=	3
 CATEGORIES=	emulators
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://thomasokken.com/free42/
+#HOMEPAGE+=	https://codeberg.org/thomasokken/free42
 COMMENT=	HP42S Calculator Simulator
 LICENSE=	gnu-gpl-v2
 
@@ -35,8 +36,8 @@ do-install:
 		${DESTDIR}${PREFIX}/share/doc/free42/
 	${INSTALL_DATA} ${WRKSRC}/gtk/README.txt \
 		${DESTDIR}${PREFIX}/share/doc/free42/README.gtk
-	${INSTALL_DATA} ${WRKSRC}/gtk/icon-128x128.xpm \
-		${DESTDIR}${PREFIX}/share/doc/free42/free42icon-128x128.xpm
+	${INSTALL_DATA} ${WRKSRC}/gtk/icon-128x128.png \
+		${DESTDIR}${PREFIX}/share/doc/free42/free42icon-128x128.png
 
 .include "../../mk/bsd.prefs.mk"
 
