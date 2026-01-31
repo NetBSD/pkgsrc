@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.783 2026/01/31 17:39:51 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.784 2026/01/31 18:05:32 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -997,3 +997,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/gitea to 1.24.7 [khorben 2026-01-31]
 	Updated devel/golangci-lint to 2.8.0 [bsiegert 2026-01-31]
 	Updated textproc/expat to 2.7.4 [wiz 2026-01-31]
+	Updated x11/xephem to 4.2.0 [gdt 2026-01-31]
