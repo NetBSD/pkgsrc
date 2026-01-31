@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:16:37 nia Exp $
+$NetBSD: distinfo,v 1.8 2026/01/31 01:43:07 wen Exp $
 
-BLAKE2s (File-Save-Home-0.11.tar.gz) = 4c631789102f4ea55e018f4ce6dfa07c0096333309017a86c3960582fa67b318
-SHA512 (File-Save-Home-0.11.tar.gz) = e2da0e951182341e4a33ae3e0b3b9d9a64d8ffabc4b667410c1926aa4936f370e5e5c0d0dcbffe564e9687976034e09b9cec773a44391613ba3899d2f136a602
-Size (File-Save-Home-0.11.tar.gz) = 21340 bytes
+BLAKE2s (File-Save-Home-0.12.tar.gz) = d25f390279798e4510a6ebdc5496e5620e5c44f6a336b8794672597758da3dac
+SHA512 (File-Save-Home-0.12.tar.gz) = d3fc791ef6fa61a1bd5798811149af04f7ee6de02a46ad3a86ab651bcb611ba08df6b589e349651fc0f0b0b88978b1d9234b39372be9e59098e920da286176a0
+Size (File-Save-Home-0.12.tar.gz) = 20697 bytes
