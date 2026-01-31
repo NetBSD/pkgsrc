@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2026/01/29 13:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2026/01/31 08:04:30 markd Exp $
 
 DISTNAME=	qgpgme-2.0.0
 CATEGORIES=	security
@@ -12,6 +12,8 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_QT5=OFF
 
 .include "../../devel/cmake/build.mk"
 BUILDLINK_API_DEPENDS.gpgme+=	gpgme>=2.0.0
