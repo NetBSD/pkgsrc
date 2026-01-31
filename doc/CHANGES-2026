@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.777 2026/01/31 11:06:00 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.778 2026/01/31 12:33:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -992,3 +992,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added www/p5-Mojolicious-Plugin-CSRF version 1.05 [wen 2026-01-31]
 	Updated www/p5-WWW-Mechanize to 2.20 [wen 2026-01-31]
 	Updated misc/libreoffice to 25.8.4.2nb6 [ryoon 2026-01-31]
+	Updated print/qpdf to 12.3.2 [ryoon 2026-01-31]
