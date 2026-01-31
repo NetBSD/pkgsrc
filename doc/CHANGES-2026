@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.767 2026/01/31 01:33:50 wen Exp $
+$NetBSD: CHANGES-2026,v 1.768 2026/01/31 01:36:57 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -982,3 +982,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Dist-Zilla to 6.037 [wen 2026-01-31]
 	Updated devel/p5-ExtUtils-CppGuess to 0.27 [wen 2026-01-31]
 	Updated devel/p5-ExtUtils-Depends to 0.8002 [wen 2026-01-31]
+	Updated devel/p5-ExtUtils-F77 to 1.26 [wen 2026-01-31]
