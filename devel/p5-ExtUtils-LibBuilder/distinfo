@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:16:33 nia Exp $
+$NetBSD: distinfo,v 1.7 2026/01/31 01:39:19 wen Exp $
 
-BLAKE2s (ExtUtils-LibBuilder-0.08.tar.gz) = 2a580d3dee9adf9e952a2563024effa7ca0ee9b111683f26911d470cf17cc6e8
-SHA512 (ExtUtils-LibBuilder-0.08.tar.gz) = c9cb95ff9ce3d30163e3e6e76adc03e164bddcef1fa58a068f6fc41e4be7289f06712457fba341244e6d37ec5976912920d44ac02ff6c9a2cde368b102e5133e
-Size (ExtUtils-LibBuilder-0.08.tar.gz) = 5986 bytes
+BLAKE2s (ExtUtils-LibBuilder-0.09.tar.gz) = 5cb9ea1f0cccd0bcafeb3286f63ae5720126bb6e784cb89d41211bbdedce6bcf
+SHA512 (ExtUtils-LibBuilder-0.09.tar.gz) = 9bed280712763e48ea2c10fe14d90569857f9699397828d1349a30ec51bf825a36f43d2d5b5bbab642ea10386af8a175035ab1f5465c21630d1af7e4cff7adac
+Size (ExtUtils-LibBuilder-0.09.tar.gz) = 6103 bytes
