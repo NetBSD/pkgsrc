@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2026/01/27 08:40:30 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/01/31 08:09:19 markd Exp $
 
 DISTNAME=	kwallet-${KF6VER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -29,7 +29,7 @@ post-install:
 .include "../../devel/kf6-ki18n/buildlink3.mk"
 .include "../../devel/kf6-knotifications/buildlink3.mk"
 .include "../../devel/kf6-kservice/buildlink3.mk"
-.include "../../security/gpgme/buildlink3.mk"
+.include "../../security/gpgmepp/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../security/qca2-qt6/buildlink3.mk"
