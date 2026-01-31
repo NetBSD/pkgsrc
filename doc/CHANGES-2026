@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.774 2026/01/31 03:13:20 wen Exp $
+$NetBSD: CHANGES-2026,v 1.775 2026/01/31 03:20:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -989,3 +989,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/p5-Mojolicious to 9.42 [wen 2026-01-31]
 	Updated www/p5-Mojolicious-Plugin-OAuth2-Server to 0.52 [wen 2026-01-31]
 	Added www/p5-Test2-MojoX version 0.07 [wen 2026-01-31]
+	Added www/p5-Mojolicious-Plugin-CSRF version 1.05 [wen 2026-01-31]
