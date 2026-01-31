@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.171 2025/12/24 15:29:50 ryoon Exp $
+$NetBSD: distinfo,v 1.172 2026/01/31 11:05:48 ryoon Exp $
 
 BLAKE2s (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 0e0a0ae1eb07e5058749dc1726bc59971c723b4b16c57d83f24b6ac6ddd96d71
 SHA512 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = b9c02d63e9b47a838dbe67c05b9e9e4983d13b9d74794e1c30c73d341c3bc905c9edec3a72fa339ae8c0e06d97e69ac2ea23bf51336b77af14cab7ae67721a46
@@ -208,7 +208,7 @@ SHA1 (patch-Makefile.in) = c16214631f0e40af4b366c790c7b84e0e11a892e
 SHA1 (patch-autogen.sh) = d12528926425d0bce95fc5c1370f054a74385d60
 SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__intel_share.hxx) = 2eed9efc4a145687f409ba87806147dac2210c68
 SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx) = e664faa4044feaafe8214fdf42f7d008b9aa29fc
-SHA1 (patch-configure.ac) = c19a8201ddc9a3297ee8ca5a23ac0ba0145686fe
+SHA1 (patch-configure.ac) = 40a61d5955eda744431a5805aa71671ccc723332
 SHA1 (patch-desktop_scripts_soffice.sh) = c0e69ec1c7cdb6697cf5898950a89c5450c57b25
 SHA1 (patch-external_mariadb-connector-c_UnpackedTarball__mariadb-connector-c.mk) = 0947735a0dc09fd534f0399ddef2e3ce1bf859fd
 SHA1 (patch-external_mariadb-connector-c_fix-debug-i386.patch.0) = db3481a64b434371abc472776bd34daa9b30d695
