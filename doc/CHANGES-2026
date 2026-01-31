@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.764 2026/01/30 23:19:09 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.765 2026/01/31 01:29:05 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -979,3 +979,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/neovim to 0.11.6 [leot 2026-01-30]
 	Updated net/yt-dlp-ejs to 0.4.0 [wiz 2026-01-30]
 	Updated www/ruby-sass-embedded to 1.97.3nb1 [wiz 2026-01-30]
+	Updated devel/p5-Dist-Zilla to 6.037 [wen 2026-01-31]
