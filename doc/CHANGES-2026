@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.770 2026/01/31 01:43:53 wen Exp $
+$NetBSD: CHANGES-2026,v 1.771 2026/01/31 01:46:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -985,3 +985,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-ExtUtils-F77 to 1.26 [wen 2026-01-31]
 	Updated devel/p5-ExtUtils-LibBuilder to 0.09 [wen 2026-01-31]
 	Updated devel/p5-File-Save-Home to 0.12 [wen 2026-01-31]
+	Updated devel/p5-Function-Parameters to 2.002006 [wen 2026-01-31]
