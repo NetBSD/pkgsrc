@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2019/02/08 22:25:32 tonio Exp $
+# $NetBSD: options.mk,v 1.5 2026/01/31 23:28:10 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lbdb
 PKG_SUPPORTED_OPTIONS=	osx-addressbook gnupg abook
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	--without-osx-addressbook
 
 .if !empty(PKG_OPTIONS:Mgnupg)
 DEPENDS+=		gnupg-[0-9]*:../../security/gnupg
-CONFIGURE_ARGS+=	--with-gpg
+CONFIGURE_ARGS+=	--with-gpg=${PREFIX}/bin/gpg1
 PLIST.gnupg=		yes
 .else
 CONFIGURE_ARGS+=	--without-gpg
