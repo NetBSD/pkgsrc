@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.378 2026/01/29 10:03:11 wiz Exp $
+# $NetBSD: Makefile,v 1.379 2026/01/31 11:05:48 ryoon Exp $
 
 VERREL=		25.8.4
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -410,7 +410,7 @@ BUILDLINK_API_DEPENDS.libcmis+=       libcmis>=0.6.1
 #.include "../../print/poppler-cpp/buildlink3.mk"
 #.include "../../print/poppler-includes/buildlink3.mk"
 .include "../../security/argon2/buildlink3.mk"
-.include "../../security/gpgme/buildlink3.mk"
+.include "../../security/gpgmepp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/zxcvbn-c/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
