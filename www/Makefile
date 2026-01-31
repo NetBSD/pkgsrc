@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1904 2026/01/31 03:11:40 wen Exp $
+# $NetBSD: Makefile,v 1.1905 2026/01/31 03:19:17 wen Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -550,6 +550,7 @@ SUBDIR+=	p5-LWPx-TimedHTTP
 SUBDIR+=	p5-MasonX-Request-WithApacheSession
 SUBDIR+=	p5-Mojo-JWT
 SUBDIR+=	p5-Mojolicious
+SUBDIR+=	p5-Mojolicious-Plugin-CSRF
 SUBDIR+=	p5-Mojolicious-Plugin-OAuth2-Server
 SUBDIR+=	p5-Net-Curl
 SUBDIR+=	p5-Net-FastCGI
