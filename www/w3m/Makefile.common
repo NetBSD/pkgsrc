@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.84 2026/01/26 00:22:28 wiz Exp $
+# $NetBSD: Makefile.common,v 1.85 2026/01/31 15:18:10 mef Exp $
 #
 # used by www/w3m/Makefile
 # used by www/w3m-img/Makefile
@@ -24,6 +24,10 @@ WRKSRC=		${WRKDIR}/w3m-v${PKGVERSION_NOREV}
 # error: 'for' loop initial declarations are only allowed in C99 mode
 # needs strcasecmp, ISO C unacceptable on illumos
 FORCE_C_STD=	gnu99
+
+# gcc: error: unrecognized command line option '-Wstring-compare'
+# That option is availabe >= 10.0
+GCC_REQD+=	12
 
 # For w3mman, xface2xpm, cgi scripts.
 USE_TOOLS+=	perl:run pax pkg-config
