@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.85 2026/01/31 15:18:10 mef Exp $
+# $NetBSD: Makefile.common,v 1.86 2026/01/31 17:28:48 wiz Exp $
 #
 # used by www/w3m/Makefile
 # used by www/w3m-img/Makefile
@@ -26,8 +26,8 @@ WRKSRC=		${WRKDIR}/w3m-v${PKGVERSION_NOREV}
 FORCE_C_STD=	gnu99
 
 # gcc: error: unrecognized command line option '-Wstring-compare'
-# That option is availabe >= 10.0
-GCC_REQD+=	12
+# That option is available >= 10.0
+GCC_REQD+=	10
 
 # For w3mman, xface2xpm, cgi scripts.
 USE_TOOLS+=	perl:run pax pkg-config
