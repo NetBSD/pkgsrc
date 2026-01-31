@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.55 2026/01/07 08:48:42 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.56 2026/01/31 08:07:57 markd Exp $
 
 BUILDLINK_TREE+=	kwallet
 
@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.kwallet?=	../../security/kwallet
 .include "../../devel/knotifications/buildlink3.mk"
 .include "../../devel/kservice/buildlink3.mk"
 .include "../../graphics/kiconthemes/buildlink3.mk"
-.include "../../security/gpgme/buildlink3.mk"
+.include "../../security/gpgmepp/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .endif	# KWALLET_BUILDLINK3_MK
