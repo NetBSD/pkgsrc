@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/11/04 21:12:58 rillig Exp $
+# $NetBSD: options.mk,v 1.4 2026/01/31 23:29:02 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pinepgp
 
@@ -10,7 +10,7 @@ PLIST_VARS=		gpg pgp5
 
 .if !empty(PKG_OPTIONS:Mgpg)
 DEPENDS+=		gnupg>=1.2.3:../../security/gnupg
-CONFIGURE_ARGS+=	--with-gpg
+CONFIGURE_ARGS+=	--with-gpg=${PREFIX}/bin/gpg1
 PLIST.gpg=		yes
 .else
 CONFIGURE_ARGS+=	--without-gpg
