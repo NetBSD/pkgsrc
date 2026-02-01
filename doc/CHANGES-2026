@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.814 2026/02/01 18:16:04 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.815 2026/02/01 18:17:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1030,3 +1030,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-numpy to 2.4.2 [wiz 2026-02-01]
 	Updated devel/py-pdm_backend to 2.4.7 [wiz 2026-02-01]
 	Updated devel/py-pip to 26.0 [wiz 2026-02-01]
+	Updated lang/py-pygls to 2.0.1 [wiz 2026-02-01]
