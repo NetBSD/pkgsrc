@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/05/22 04:51:28 schmonz Exp $
+# $NetBSD: Makefile,v 1.15 2026/02/01 09:06:00 wiz Exp $
 
 DISTNAME=		queue-fix-1.4
 PKGREVISION=		1
@@ -6,7 +6,7 @@ CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://www.netmeridian.com/e-huss/
+#HOMEPAGE=		http://www.netmeridian.com/e-huss/
 COMMENT=		Check and repair the qmail queue structure
 
 INSTALLATION_DIRS=	bin
