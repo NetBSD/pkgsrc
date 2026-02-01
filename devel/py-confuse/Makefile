@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2025/11/02 19:50:13 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/02/01 17:55:53 wiz Exp $
 
-DISTNAME=	confuse-2.1.0
+DISTNAME=	confuse-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/confuse/}
@@ -12,13 +12,11 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover -v
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
