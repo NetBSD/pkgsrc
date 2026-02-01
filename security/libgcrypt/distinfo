@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.104 2026/01/30 14:01:24 wiz Exp $
+$NetBSD: distinfo,v 1.105 2026/02/01 08:51:16 wiz Exp $
 
 BLAKE2s (libgcrypt-1.12.0.tar.bz2) = 8e8c265bd087638c042cc6563a664436e4b208e15b8e93c58b801f9abd26685a
 SHA512 (libgcrypt-1.12.0.tar.bz2) = 9421461297bd79b14f94d1ab275c3ed93b5d433531915c5cc7a718a94d32978a46feccb7a33fe63a60780ff00d465fbe1fe9ada5c250cf6d10a525c246c63d1c
 Size (libgcrypt-1.12.0.tar.bz2) = 4438947 bytes
+SHA1 (patch-cipher_asm-common-amd64.h) = e0ad048681448f4fde3d75c2429edfd122e97e0b
+SHA1 (patch-cipher_rijndael-vaes-avx512-amd64.S) = a8dae214c6763c8783b1128ef205163e8dc0e704
 SHA1 (patch-mpi_config.links) = 1bb6bd677b0c7519fe14672bba0adc8c99c8e09f
 SHA1 (patch-src_libgcrypt-config.in) = 2b791d7ebe51c52ece864b23dcbeae5354701263
