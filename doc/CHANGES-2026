@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.805 2026/02/01 13:59:39 pin Exp $
+$NetBSD: CHANGES-2026,v 1.806 2026/02/01 14:00:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1020,3 +1020,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/indi to 2.1.8 [adam 2026-02-01]
 	Updated graphics/gdk-pixbuf2 to 2.44.5 [adam 2026-02-01]
 	Updated devel/mise to 2026.2.0 [pin 2026-02-01]
+	Updated textproc/rumdl to 0.1.8 [pin 2026-02-01]
