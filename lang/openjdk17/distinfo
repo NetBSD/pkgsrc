@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2025/11/15 12:15:13 ryoon Exp $
+$NetBSD: distinfo,v 1.27 2026/02/01 06:52:01 ryoon Exp $
 
 BLAKE2s (bootstrap-jdk-1.17.0.15.6-netbsd-9-aarch64-20250806.tar.xz) = cd7cd0c0acc259f55291932fc679388003c3c108257f08f660d328974b764ee5
 SHA512 (bootstrap-jdk-1.17.0.15.6-netbsd-9-aarch64-20250806.tar.xz) = 26003c0ace59f41b03584ae0bbe79b15041d4c3537d5d4227a3396276943ff95d687de0aa5025b5dddb1d91cf33ffbc7fd57d7cc8de70aef53907fa2c2652811
@@ -12,9 +12,9 @@ Size (bootstrap-jdk-1.17.0.3.7-netbsd-9-earmv6hf-20220525.tar.xz) = 96766088 byt
 BLAKE2s (bootstrap-jdk-1.17.0.3.7-netbsd-9-i386-20220515.tar.xz) = a8e6a44e1470cf2e8845f6b5a6edff142d06c76e12a793b5991b1bf05cf36a98
 SHA512 (bootstrap-jdk-1.17.0.3.7-netbsd-9-i386-20220515.tar.xz) = 9fc54d9a31270cbec5e0454bbf1ddf3bb99ab5c916660e1f5e89163b384368a7f1fd5311db71b21c1638eb916899199a1080e90cc1f9615bfdbd871bb94a3216
 Size (bootstrap-jdk-1.17.0.3.7-netbsd-9-i386-20220515.tar.xz) = 103902136 bytes
-BLAKE2s (jdk17u-jdk-17.0.17-10-1.tar.gz) = 853cab5016efd6b062966cde6e31419233b4449c6c028639466727ecbdfe371a
-SHA512 (jdk17u-jdk-17.0.17-10-1.tar.gz) = 274928c823a1b2b36a3d833c8b8576c55cd2c4a7e5a3d25b32a3062664d9cc0255a0583f55160fef4ece58833779eef21e57ec6ef26a86b1d09863cf49d5d6b4
-Size (jdk17u-jdk-17.0.17-10-1.tar.gz) = 108082578 bytes
+BLAKE2s (jdk17u-jdk-17.0.18-8-1.tar.gz) = 292f6aaa56822335da7508b5d8e070881270ce3cf279e96ceff0ce46961df735
+SHA512 (jdk17u-jdk-17.0.18-8-1.tar.gz) = 42fa2f786a05e72ec65c178677de532633abbe0bc166f77668295906723e73b51ec5f51f7c650c4af98700c8e56800731e50bb55efb892c8247ab5deaa681fb4
+Size (jdk17u-jdk-17.0.18-8-1.tar.gz) = 108240404 bytes
 SHA1 (patch-make_autoconf_buildjdk-spec.gmk.in) = 01b6ac6dae1a886949020b9d472aab1e357084b0
 SHA1 (patch-make_autoconf_flags-cflags.m4) = 2777471821988895f5ae1be33b1c92b7386b068a
 SHA1 (patch-make_autoconf_hotspot.m4) = 6370c6cb2a3f225c502e7916342104cf1288f4cf
@@ -25,7 +25,6 @@ SHA1 (patch-make_autoconf_lib-x11.m4) = 38038e6d7cfc2d15fb3537a52f11d2961cc2ec99
 SHA1 (patch-make_data_fontconfig_bsd.fontconfig.properties) = 3172d8d76e0e79b127605429fb70dccd164b33c8
 SHA1 (patch-make_lib_Awt2dLibraries.gmk) = d69fa8c5cab173be2f41cfbd6479dad60a6337db
 SHA1 (patch-src_hotspot_cpu_aarch64_frame__aarch64.hpp) = 263be050505100a9ff37d75e2aa465e0ffb04d68
-SHA1 (patch-src_hotspot_cpu_aarch64_jniFastGetField__aarch64.cpp) = 9a60a93df8415727c8cefedaf177fe29f67a1726
 SHA1 (patch-src_hotspot_cpu_aarch64_macroAssembler__aarch64.cpp) = 0b720cdfef884368432b818bb56648b462539125
 SHA1 (patch-src_hotspot_cpu_aarch64_macroAssembler__aarch64.hpp) = 301d16361542eec9123b9a4cf0a64978cc863ed6
 SHA1 (patch-src_hotspot_cpu_aarch64_sharedRuntime__aarch64.cpp) = 248188cc49cfca7fb26b907525f19b9cec5caffd
