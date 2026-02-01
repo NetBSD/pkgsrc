@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/05/22 04:51:28 schmonz Exp $
+# $NetBSD: Makefile,v 1.22 2026/02/01 09:05:11 wiz Exp $
 
 DISTNAME=		qtools-0.56
 PKGREVISION=		1
@@ -6,7 +6,7 @@ CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://www.superscript.com/qtools/
+#HOMEPAGE=		http://www.superscript.com/qtools/
 COMMENT=		Utilities for filtering via .qmail
 
 DEPENDS+=		{ezmlm>=0.53,ezmlm-idx-[0-9]*}:../../mail/ezmlm
