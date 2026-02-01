@@ -1,13 +1,10 @@
-$NetBSD: distinfo,v 1.105 2025/07/13 08:17:38 wiz Exp $
+$NetBSD: distinfo,v 1.106 2026/02/01 07:09:03 ryoon Exp $
 
-BLAKE2s (inkscape-1.4.2.tar.xz) = 271fd0811e2ae75715ae801c2114fcf5da055a8be893de4563b3766b52cf5cf0
-SHA512 (inkscape-1.4.2.tar.xz) = e7d69f477d11aee296efe48d3a9dd24f76fd5e64e5f2a29574f387bc681ced3d806d30b0f98d842c485443624dbf31fd9dabdb92848ee852121bc9d9e90191a1
-Size (inkscape-1.4.2.tar.xz) = 53278452 bytes
+BLAKE2s (inkscape-1.4.3.tar.xz) = 19cc86eb5e27d77251adbc6801c3df81d433c4b38c354ae9204259973a795e7c
+SHA512 (inkscape-1.4.3.tar.xz) = 8bf8047f656f472ecac7a35badf83765873688901e94e93ec8388f920e1b8370e8c8c88d06ba91c26d668714b912f444b49bed59a8d1cf3e14d3ab206c3aff60
+Size (inkscape-1.4.3.tar.xz) = 53907460 bytes
 SHA1 (patch-CMakeScripts_DefineDependsandFlags.cmake) = 6638a97615ca37bcdc20463b37cd859d723f66d6
 SHA1 (patch-src_extension_implementation_script.cpp) = da46549f688da5c9c0ecbeaeac7962e4f261cae4
-SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.cpp) = 5767c62a63748acebcbbaf52a312f6b12f5611de
-SHA1 (patch-src_extension_internal_pdfinput_poppler-cairo-font-engine.cpp) = 4b795ef94f627f2166c36a361005d774e4de52c6
-SHA1 (patch-src_extension_internal_pdfinput_poppler-transition-api.h) = b0393b5f7ebe797803eecd1b064c6012f3006877
 SHA1 (patch-src_path_splinefit_splinefit.c) = 6c4482891567215a9b2cb5b2a4fb63ca54b24f9f
 SHA1 (patch-src_path_splinefit_splinefont.c) = 43f67ea3c25d64d323899718d6adf26225f24da0
 SHA1 (patch-src_path_splinefit_splinefont.h) = 170bec433cfbf98f54717e09433f6def5a7a9afe
