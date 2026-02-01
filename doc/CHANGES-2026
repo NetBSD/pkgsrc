@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.822 2026/02/01 20:34:37 triaxx Exp $
+$NetBSD: CHANGES-2026,v 1.823 2026/02/01 20:45:28 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1038,3 +1038,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/moor to 2.10.3 [wiz 2026-02-01]
 	Added x11/xssstate version 1.1 [leot 2026-02-01]
 	Updated www/hugo to 0.155.1 [triaxx 2026-02-01]
+	Updated games/openrct2 to 0.4.31 [triaxx 2026-02-01]
