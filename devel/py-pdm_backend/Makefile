@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2025/11/13 13:51:04 adam Exp $
+# $NetBSD: Makefile,v 1.24 2026/02/01 18:13:01 wiz Exp $
 
-DISTNAME=	pdm_backend-2.4.6
+DISTNAME=	pdm_backend-2.4.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pdm-backend/}
@@ -20,8 +20,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
 USE_LANGUAGES=	c # for tests
 USE_TOOLS+=	git:test
 
-# as of 2.4.5
-# 72 passed, 1 skipped, 1 warning, 21 errors
+# as of 2.4.7
+# 73 passed, 1 skipped, 21 errors
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
