@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/02/02 16:23:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/02/01 19:18:57 wiz Exp $
 bin/Xvnc
 bin/vncconfig
 bin/vncpasswd
@@ -33,6 +33,7 @@ share/icons/hicolor/32x32/apps/tigervnc.png
 share/icons/hicolor/48x48/apps/tigervnc.png
 share/icons/hicolor/64x64/apps/tigervnc.png
 share/icons/hicolor/scalable/apps/tigervnc.svg
+share/locale/ar/LC_MESSAGES/tigervnc.mo
 share/locale/bg/LC_MESSAGES/tigervnc.mo
 share/locale/cs/LC_MESSAGES/tigervnc.mo
 share/locale/da/LC_MESSAGES/tigervnc.mo

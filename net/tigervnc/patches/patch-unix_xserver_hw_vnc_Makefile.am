@@ -1,8 +1,17 @@
-$NetBSD: patch-unix_xserver_hw_vnc_Makefile.am,v 1.8 2025/02/24 13:04:58 wiz Exp $
+$NetBSD: patch-unix_xserver_hw_vnc_Makefile.am,v 1.9 2026/02/01 19:18:57 wiz Exp $
 
---- unix/xserver/hw/vnc/Makefile.am.orig	2025-02-13 10:01:00.000000000 +0000
+--- unix/xserver/hw/vnc/Makefile.am.orig	2026-01-23 10:05:49.000000000 +0000
 +++ unix/xserver/hw/vnc/Makefile.am
-@@ -19,6 +19,9 @@ AM_CPPFLAGS = \
+@@ -3,7 +3,7 @@ RDR_LIB=$(TIGERVNC_BUILDDIR)/common/rdr/librdr.la
+ 
+ RFB_LIB=$(TIGERVNC_BUILDDIR)/common/rfb/librfb.la
+ RDR_LIB=$(TIGERVNC_BUILDDIR)/common/rdr/librdr.la
+-OS_LIB=$(TIGERVNC_BUILDDIR)/common/os/libos.la
++OS_LIB=$(TIGERVNC_BUILDDIR)/unix/xserver/os/libos.la
+ NETWORK_LIB=$(TIGERVNC_BUILDDIR)/common/network/libnetwork.la
+ UNIXCOMMON_LIB=$(TIGERVNC_BUILDDIR)/unix/common/libunixcommon.la
+ COMMON_LIBS=$(UNIXCOMMON_LIB) $(RFB_LIB) $(NETWORK_LIB) $(RDR_LIB) $(CORE_LIB)
+@@ -16,6 +16,9 @@ AM_CXXFLAGS = -std=gnu++11
  
  AM_CXXFLAGS = -std=gnu++11
  
@@ -12,7 +21,7 @@ $NetBSD: patch-unix_xserver_hw_vnc_Makefile.am,v 1.8 2025/02/24 13:04:58 wiz Exp
  noinst_LTLIBRARIES = libvnccommon.la
  
  HDRS = vncExtInit.h vncHooks.h \
-@@ -87,6 +90,6 @@ libvnc_la_CPPFLAGS = $(AM_CPPFLAGS) \
+@@ -84,6 +87,6 @@ libvnc_la_LDFLAGS = -module -avoid-version -Wl,-z,now
  
  libvnc_la_LDFLAGS = -module -avoid-version -Wl,-z,now
  
