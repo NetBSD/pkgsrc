@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/05/31 17:09:16 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.13 2026/02/01 09:03:25 wiz Exp $
 
 .include "../../databases/qdbm/Makefile.common"
 
@@ -7,7 +6,7 @@ PKGNAME=	qdbm-plus-1.0.0.${QDBM_VERSION}
 CATEGORIES=	databases devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://fallabs.com/qdbm/xspex.html
+#HOMEPAGE=	https://fallabs.com/qdbm/xspex.html
 COMMENT=	C++ API for QDBM
 LICENSE=	gnu-lgpl-v2.1
 
