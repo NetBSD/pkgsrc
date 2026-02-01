@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2025/12/08 21:12:43 adam Exp $
+# $NetBSD: Makefile,v 1.24 2026/02/01 14:15:12 adam Exp $
 
-DISTNAME=	orjson-3.11.5
+DISTNAME=	orjson-3.11.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/orjson/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/ijl/orjson
 COMMENT=	Fast, correct Python JSON library
 LICENSE=	apache-2.0 OR mit
 
-RUST_REQ=	1.85.0
+RUST_REQ=	1.89.0
 
 .include "cargo-depends.mk"
 
