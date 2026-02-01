@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.824 2026/02/01 21:07:49 rhialto Exp $
+$NetBSD: CHANGES-2026,v 1.825 2026/02/01 22:11:10 js Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1040,3 +1040,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/hugo to 0.155.1 [triaxx 2026-02-01]
 	Updated games/openrct2 to 0.4.31 [triaxx 2026-02-01]
 	Removed fonts/UFAS-otf [rhialto 2026-02-01]
+	Updated devel/objfw to 1.4.4 [js 2026-02-01]
