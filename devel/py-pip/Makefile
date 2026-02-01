@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.87 2025/10/28 09:44:51 adam Exp $
+# $NetBSD: Makefile,v 1.88 2026/02/01 18:15:55 wiz Exp $
 
-DISTNAME=	pip-25.3
+DISTNAME=	pip-26.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip/}
@@ -11,11 +11,10 @@ COMMENT=	Installs Python packages as an easy_install replacement
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
+TEST_DEPENDS+=	${PYPKGPREFIX}-test_socket>=0:../../devel/py-test_socket
 
 USE_LANGUAGES=	# none
 
-REPLACE_PYTHON+=	src/pip/_vendor/appdirs.py
-REPLACE_PYTHON+=	src/pip/_vendor/chardet/cli/chardetect.py
 REPLACE_PYTHON+=	src/pip/_vendor/requests/certs.py
 
 post-install:

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2025/10/28 09:44:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.51 2026/02/01 18:15:55 wiz Exp $
 bin/pip${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -234,9 +234,9 @@ ${PYSITELIB}/pip/_internal/models/installation_report.pyo
 ${PYSITELIB}/pip/_internal/models/link.py
 ${PYSITELIB}/pip/_internal/models/link.pyc
 ${PYSITELIB}/pip/_internal/models/link.pyo
-${PYSITELIB}/pip/_internal/models/pylock.py
-${PYSITELIB}/pip/_internal/models/pylock.pyc
-${PYSITELIB}/pip/_internal/models/pylock.pyo
+${PYSITELIB}/pip/_internal/models/release_control.py
+${PYSITELIB}/pip/_internal/models/release_control.pyc
+${PYSITELIB}/pip/_internal/models/release_control.pyo
 ${PYSITELIB}/pip/_internal/models/scheme.py
 ${PYSITELIB}/pip/_internal/models/scheme.pyc
 ${PYSITELIB}/pip/_internal/models/scheme.pyo
@@ -321,6 +321,9 @@ ${PYSITELIB}/pip/_internal/req/__init__.pyo
 ${PYSITELIB}/pip/_internal/req/constructors.py
 ${PYSITELIB}/pip/_internal/req/constructors.pyc
 ${PYSITELIB}/pip/_internal/req/constructors.pyo
+${PYSITELIB}/pip/_internal/req/pep723.py
+${PYSITELIB}/pip/_internal/req/pep723.pyc
+${PYSITELIB}/pip/_internal/req/pep723.pyo
 ${PYSITELIB}/pip/_internal/req/req_dependency_group.py
 ${PYSITELIB}/pip/_internal/req/req_dependency_group.pyc
 ${PYSITELIB}/pip/_internal/req/req_dependency_group.pyo
@@ -432,6 +435,9 @@ ${PYSITELIB}/pip/_internal/utils/misc.pyo
 ${PYSITELIB}/pip/_internal/utils/packaging.py
 ${PYSITELIB}/pip/_internal/utils/packaging.pyc
 ${PYSITELIB}/pip/_internal/utils/packaging.pyo
+${PYSITELIB}/pip/_internal/utils/pylock.py
+${PYSITELIB}/pip/_internal/utils/pylock.pyc
+${PYSITELIB}/pip/_internal/utils/pylock.pyo
 ${PYSITELIB}/pip/_internal/utils/retry.py
 ${PYSITELIB}/pip/_internal/utils/retry.pyc
 ${PYSITELIB}/pip/_internal/utils/retry.pyo
@@ -657,6 +663,9 @@ ${PYSITELIB}/pip/_vendor/packaging/metadata.py
 ${PYSITELIB}/pip/_vendor/packaging/metadata.pyc
 ${PYSITELIB}/pip/_vendor/packaging/metadata.pyo
 ${PYSITELIB}/pip/_vendor/packaging/py.typed
+${PYSITELIB}/pip/_vendor/packaging/pylock.py
+${PYSITELIB}/pip/_vendor/packaging/pylock.pyc
+${PYSITELIB}/pip/_vendor/packaging/pylock.pyo
 ${PYSITELIB}/pip/_vendor/packaging/requirements.py
 ${PYSITELIB}/pip/_vendor/packaging/requirements.pyc
 ${PYSITELIB}/pip/_vendor/packaging/requirements.pyo
