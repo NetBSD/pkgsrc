@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2020/11/19 09:35:42 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2026/02/01 09:02:19 wiz Exp $
 
 DISTNAME=		qconfirm-0.14.3
 CATEGORIES=		mail
-MASTER_SITES=		${HOMEPAGE}
+MASTER_SITES=		https://smarden.org/qconfirm/
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://smarden.org/qconfirm/
+HOMEPAGE=		https://smarden.org/qconfirm/
 COMMENT=		Request delivery confirmation for mail
 LICENSE=		modified-bsd
 
