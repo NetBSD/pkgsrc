@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2026/01/07 08:45:58 wiz Exp $
+# $NetBSD: Makefile,v 1.133 2026/02/01 09:01:40 wiz Exp $
 
 DISTNAME=		qcad-3.32.3.4
 PKGREVISION=		2
@@ -11,7 +11,7 @@ GITHUB_SUBMODULES=	qcad qtjsapi ${GITHUB_TAG} src/qtjsapi \
 			qcad qcadjsapi ${GITHUB_TAG} src/qcadjsapi
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.qcad.org/
+HOMEPAGE=		https://www.qcad.org/en/
 COMMENT=		2D CAD system
 LICENSE=		gnu-gpl-v3
 
