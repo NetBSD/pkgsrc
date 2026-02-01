@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2026/01/26 10:40:58 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2026/02/01 14:00:20 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -42,6 +42,7 @@ CARGO_CRATE_DEPENDS+=	ciborium-io-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-ll-0.2.2
 CARGO_CRATE_DEPENDS+=	clap-4.5.51
 CARGO_CRATE_DEPENDS+=	clap_builder-4.5.51
+CARGO_CRATE_DEPENDS+=	clap_complete-4.5.65
 CARGO_CRATE_DEPENDS+=	clap_derive-4.5.49
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.6
 CARGO_CRATE_DEPENDS+=	cobs-0.3.0
