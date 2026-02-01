@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2025/08/10 03:29:22 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2026/02/01 07:38:46 wiz Exp $
 
-DISTNAME=	Authen-SASL-2.1900
+DISTNAME=	Authen-SASL-2.2000
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	security perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Authen/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/EH/EHUELS/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Authen-SASL

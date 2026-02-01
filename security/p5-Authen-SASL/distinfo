@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2025/08/10 03:29:22 wiz Exp $
+$NetBSD: distinfo,v 1.18 2026/02/01 07:38:46 wiz Exp $
 
-BLAKE2s (Authen-SASL-2.1900.tar.gz) = fdbfedd6d2c50b1a7922afd6d5469a5d062760f1424ac1695adec05a285d2f10
-SHA512 (Authen-SASL-2.1900.tar.gz) = 86de89d35f29ebdc5907775e392b5bfbadd77802b6e0b4cb018f495fe28ef44c72751994c90219ecb54ce4912e6ae0c14f037217012d246fc8f83464d9d35bff
-Size (Authen-SASL-2.1900.tar.gz) = 40345 bytes
+BLAKE2s (Authen-SASL-2.2000.tar.gz) = 877f858719c05c21ae4d21bf4909bb5697a6cf7c71dad16e1c47caec58ec70c6
+SHA512 (Authen-SASL-2.2000.tar.gz) = 88da776b1354f5c623abf56e4f73faecce9cee3ad31c2faaecaaee41beeb935bad74c2629a2427a80de9ec746fa4cb424c0f78e44612818709228b2503b897c1
+Size (Authen-SASL-2.2000.tar.gz) = 41529 bytes
