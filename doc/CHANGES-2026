@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.818 2026/02/01 19:10:18 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.819 2026/02/01 19:19:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1034,3 +1034,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-wcwidth to 0.5.3 [wiz 2026-02-01]
 	Updated comms/py-textual to 7.5.0 [wiz 2026-02-01]
 	Updated sysutils/zoxide to 0.9.9 [wiz 2026-02-01]
+	Updated net/tigervnc to 1.16.0 [wiz 2026-02-01]
