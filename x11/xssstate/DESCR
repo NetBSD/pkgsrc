@@ -1,0 +1,4 @@
+This is a simple utility to get the state of the X screensaver extension.
+
+These states include the idle time, the screensaver state and the time
+how long to wait until the screensaver should be active.

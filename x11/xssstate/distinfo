@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/02/01 20:30:52 leot Exp $
+
+BLAKE2s (xssstate-1.1.tar.gz) = 2a4334c6e22485b5038feb39326c425eae3823f0a617ceea1494dfea3a87d424
+SHA512 (xssstate-1.1.tar.gz) = 96c59e9cc7b78aec8a95040cd1c4c6aaeb85f092c5a52cf64a62ceeb3fed65bdd3eb6f070b3d66ae8ec2544371a236f32e83e0a5c45e6d21f2bf7791b5c0d519
+Size (xssstate-1.1.tar.gz) = 3725 bytes
