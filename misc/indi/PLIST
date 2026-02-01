@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/12/01 20:09:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/02/01 11:02:36 adam Exp $
 bin/indi_Excalibur
 bin/indi_aaf2_focus
 bin/indi_aagsolo_weather
@@ -45,6 +45,7 @@ bin/indi_fcusb_focus
 bin/indi_flipflat
 bin/indi_gemini_flatpanel
 bin/indi_gemini_focus
+bin/indi_getdevice
 bin/indi_getprop
 bin/indi_giotto
 bin/indi_gpusb
@@ -103,6 +104,7 @@ bin/indi_onfocus_focus
 bin/indi_openweathermap_weather
 bin/indi_optec_wheel
 bin/indi_paramount_telescope
+bin/indi_pegasus_flatmaster
 bin/indi_pegasus_focuscube
 bin/indi_pegasus_focuscube3
 bin/indi_pegasus_ppb
@@ -158,8 +160,10 @@ bin/indi_snapcap
 bin/indi_spectracyber
 bin/indi_sqm_weather
 bin/indi_star2000
+bin/indi_startech_hub
 bin/indi_steeldrive2_focus
 bin/indi_steeldrive_focus
+bin/indi_svbony_powerbox
 bin/indi_synscan_telescope
 bin/indi_synscanlegacy_telescope
 bin/indi_tcfs3_focus
