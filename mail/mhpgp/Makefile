@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2026/01/10 07:44:12 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/02/01 09:42:33 leot Exp $
 
 DISTNAME=	gnupg-scripts-for-mh
 PKGNAME=	mhpgp-20070530
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	https://faculty.cs.niu.edu/~rickert/mh/
 DIST_SUBDIR=	${PKGNAME_NOREV}
