@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2026/01/25 23:34:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/02/01 18:26:01 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -19,12 +19,18 @@ ${PYSITELIB}/wcwidth/grapheme.py
 ${PYSITELIB}/wcwidth/grapheme.pyc
 ${PYSITELIB}/wcwidth/grapheme.pyo
 ${PYSITELIB}/wcwidth/py.typed
+${PYSITELIB}/wcwidth/sgr_state.py
+${PYSITELIB}/wcwidth/sgr_state.pyc
+${PYSITELIB}/wcwidth/sgr_state.pyo
 ${PYSITELIB}/wcwidth/table_ambiguous.py
 ${PYSITELIB}/wcwidth/table_ambiguous.pyc
 ${PYSITELIB}/wcwidth/table_ambiguous.pyo
 ${PYSITELIB}/wcwidth/table_grapheme.py
 ${PYSITELIB}/wcwidth/table_grapheme.pyc
 ${PYSITELIB}/wcwidth/table_grapheme.pyo
+${PYSITELIB}/wcwidth/table_mc.py
+${PYSITELIB}/wcwidth/table_mc.pyc
+${PYSITELIB}/wcwidth/table_mc.pyo
 ${PYSITELIB}/wcwidth/table_vs16.py
 ${PYSITELIB}/wcwidth/table_vs16.pyc
 ${PYSITELIB}/wcwidth/table_vs16.pyo
