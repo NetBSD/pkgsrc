@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.788 2026/02/01 06:31:34 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.789 2026/02/01 06:51:09 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1002,3 +1002,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated chat/profanity to 0.14.0nb22 [wiz 2026-01-31]
 	Updated www/firefox to 147.0.2 [ryoon 2026-02-01]
 	Updated www/firefox-l10n to 147.0.2 [ryoon 2026-02-01]
+	Updated lang/openjdk8 to 1.8.482 [ryoon 2026-02-01]
