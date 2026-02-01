@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2026/01/30 06:50:49 mrg Exp $
+@comment $NetBSD: PLIST,v 1.57 2026/02/01 14:12:26 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -104,6 +104,9 @@ ${PYSITELIB}/yt_dlp/downloader/rtmp.pyo
 ${PYSITELIB}/yt_dlp/downloader/rtsp.py
 ${PYSITELIB}/yt_dlp/downloader/rtsp.pyc
 ${PYSITELIB}/yt_dlp/downloader/rtsp.pyo
+${PYSITELIB}/yt_dlp/downloader/soop.py
+${PYSITELIB}/yt_dlp/downloader/soop.pyc
+${PYSITELIB}/yt_dlp/downloader/soop.pyo
 ${PYSITELIB}/yt_dlp/downloader/websocket.py
 ${PYSITELIB}/yt_dlp/downloader/websocket.pyc
 ${PYSITELIB}/yt_dlp/downloader/websocket.pyo
@@ -632,8 +635,6 @@ ${PYSITELIB}/yt_dlp/extractor/cracked.pyo
 ${PYSITELIB}/yt_dlp/extractor/craftsy.py
 ${PYSITELIB}/yt_dlp/extractor/craftsy.pyc
 ${PYSITELIB}/yt_dlp/extractor/craftsy.pyo
-${PYSITELIB}/yt_dlp/extractor/croatianfilm.py
-${PYSITELIB}/yt_dlp/extractor/croatianfilm.py
 ${PYSITELIB}/yt_dlp/extractor/croatianfilm.py
 ${PYSITELIB}/yt_dlp/extractor/croatianfilm.pyc
 ${PYSITELIB}/yt_dlp/extractor/croatianfilm.pyo
@@ -1918,9 +1919,9 @@ ${PYSITELIB}/yt_dlp/extractor/packtpub.pyo
 ${PYSITELIB}/yt_dlp/extractor/palcomp3.py
 ${PYSITELIB}/yt_dlp/extractor/palcomp3.pyc
 ${PYSITELIB}/yt_dlp/extractor/palcomp3.pyo
-${PYSITELIB}/yt_dlp/extractor/pandatv.pyo
 ${PYSITELIB}/yt_dlp/extractor/pandatv.py
 ${PYSITELIB}/yt_dlp/extractor/pandatv.pyc
+${PYSITELIB}/yt_dlp/extractor/pandatv.pyo
 ${PYSITELIB}/yt_dlp/extractor/panopto.py
 ${PYSITELIB}/yt_dlp/extractor/panopto.pyc
 ${PYSITELIB}/yt_dlp/extractor/panopto.pyo
@@ -2530,7 +2531,6 @@ ${PYSITELIB}/yt_dlp/extractor/tagesschau.pyo
 ${PYSITELIB}/yt_dlp/extractor/taptap.py
 ${PYSITELIB}/yt_dlp/extractor/taptap.pyc
 ${PYSITELIB}/yt_dlp/extractor/taptap.pyo
-${PYSITELIB}/yt_dlp/extractor/tarangplus.py
 ${PYSITELIB}/yt_dlp/extractor/tarangplus.py
 ${PYSITELIB}/yt_dlp/extractor/tarangplus.pyc
 ${PYSITELIB}/yt_dlp/extractor/tarangplus.pyo
