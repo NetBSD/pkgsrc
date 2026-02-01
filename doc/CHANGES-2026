@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.812 2026/02/01 18:10:09 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.813 2026/02/01 18:13:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1028,3 +1028,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-confuse to 2.2.0 [wiz 2026-02-01]
 	Updated security/py-google-auth to 2.48.0 [wiz 2026-02-01]
 	Updated math/py-numpy to 2.4.2 [wiz 2026-02-01]
+	Updated devel/py-pdm_backend to 2.4.7 [wiz 2026-02-01]
