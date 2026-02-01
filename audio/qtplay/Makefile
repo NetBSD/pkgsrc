@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2019/06/23 23:26:05 schmonz Exp $
-#
+# $NetBSD: Makefile,v 1.8 2026/02/01 09:05:31 wiz Exp $
 
 DISTNAME=	qtplay1.3.1
 PKGNAME=	${DISTNAME:S/qtplay/qtplay-/}
 CATEGORIES=	audio
-MASTER_SITES=	http://rainbowflight.googlepages.com/#qtplay
+#MASTER_SITES=	http://rainbowflight.googlepages.com/#qtplay
 
 MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	http://rainbowflight.googlepages.com/
+#HOMEPAGE=	http://rainbowflight.googlepages.com/
 COMMENT=	QuickTime command-line player
 LICENSE=	modified-bsd
 
