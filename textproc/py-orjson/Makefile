@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2026/02/01 14:15:12 adam Exp $
+# $NetBSD: Makefile,v 1.25 2026/02/01 14:34:45 wiz Exp $
 
 DISTNAME=	orjson-3.11.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=o/orjson/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ijl/orjson
 COMMENT=	Fast, correct Python JSON library
-LICENSE=	apache-2.0 OR mit
+LICENSE=	apache-2.0 AND mit AND mpl-2.0
 
 RUST_REQ=	1.89.0
 
