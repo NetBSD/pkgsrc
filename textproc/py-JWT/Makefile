@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2025/04/13 12:20:51 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2026/02/01 17:52:53 wiz Exp $
 
-DISTNAME=	pyjwt-2.10.1
+DISTNAME=	pyjwt-2.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyjwt/JWT/}
-PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyJWT/}
 
@@ -14,9 +13,6 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
-
-# as of 2.10.0
-# 1 failed, 285 passed, 4 skipped
 
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 .include "../../lang/python/versioned_dependencies.mk"
