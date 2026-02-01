@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2025/11/25 09:20:42 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.32 2026/02/01 20:44:46 triaxx Exp $
 bin/openrct2
 bin/openrct2-cli
 lib/libopenrct2.a
@@ -1366,7 +1366,7 @@ share/openrct2/object/rct2tt/scenery_large/rct2tt.scenery_large.hrbwal11.json
 share/openrct2/object/rct2tt/scenery_large/rct2tt.scenery_large.jailxx17.json
 share/openrct2/object/rct2tt/scenery_large/rct2tt.scenery_large.jailxx18.json
 share/openrct2/object/rct2tt/scenery_large/rct2tt.scenery_large.jetplan1.json
-share/openrct2/object/rct2tt/scenery_large/rct2tt.scenery_large.jetplan2.json
+share/openrct2/object/rct2tt/scenery_large/rct2tt.scenery_large.jetplan2.parkobj
 share/openrct2/object/rct2tt/scenery_large/rct2tt.scenery_large.jetplan3.json
 share/openrct2/object/rct2tt/scenery_large/rct2tt.scenery_large.majoroak.json
 share/openrct2/object/rct2tt/scenery_large/rct2tt.scenery_large.mcastl01.json
@@ -2572,6 +2572,7 @@ share/openrct2/object/rct2ww/scenery_wall/rct2ww.scenery_wall.wwind03.json
 share/openrct2/object/rct2ww/scenery_wall/rct2ww.scenery_wall.wwind04.json
 share/openrct2/object/rct2ww/scenery_wall/rct2ww.scenery_wall.wwind05.json
 share/openrct2/object/rct2ww/scenery_wall/rct2ww.scenery_wall.wwind06.json
+share/openrct2/palettes.dat
 share/openrct2/scenario_patches/0153987.parkpatch
 share/openrct2/scenario_patches/020ed74.parkpatch
 share/openrct2/scenario_patches/081feb1.parkpatch
