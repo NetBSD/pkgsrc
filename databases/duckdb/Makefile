@@ -1,7 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2026/01/07 08:46:08 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/02/01 08:40:04 ryoon Exp $
 
-PKGREVISION= 1
-.include "../../databases/duckdb/Makefile.common"
+DISTNAME=	duckdb-1.4.4
+CATEGORIES=	databases
+MASTER_SITES=	${MASTER_SITE_GITHUB:=duckdb/}
+GITHUB_PROJECT=	duckdb
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://duckdb.org/
@@ -22,5 +25,5 @@ CMAKE_CONFIGURE_ARGS+=	-DDUCKDB_EXPLICIT_VERSION=${PKGVERSION_NOREV}
 
 .include "../../devel/cmake/build.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
+#.include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
