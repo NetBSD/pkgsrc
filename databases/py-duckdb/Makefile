@@ -1,32 +1,37 @@
-# $NetBSD: Makefile,v 1.4 2025/10/09 07:57:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/02/01 08:40:05 ryoon Exp $
 
-.include "../../databases/duckdb/Makefile.common"
+DISTNAME=	duckdb-1.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	databases
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/duckdb/}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://pypi.org/project/duckdb/
 COMMENT=	Python module for DuckDB in-process database
 LICENSE=	mit
 
+DIST_SUBDIR=	py-duckdb-${PKGVERSION_NOREV}
+
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-pybind11>=2.6.0:../../devel/py-pybind11
+TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build-core-[0-9]*:../../devel/py-scikit-build-core
+TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
-USE_LANGUAGES+=	c++
+USE_LANGUAGES+=	c c++
 
-BUILD_DIRS=	tools/pythonpkg
-PYSETUPSUBDIR=	${BUILD_DIRS}
+USE_TOOLS+=	cmake
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
-# as of 1.3.0
-# 95 skipped, 648 deselected, 65 errors
+WHEEL_ARGS+=	-C skbuild.build-dir=${WRKDIR}/build
 
-post-install:
-	${RM} -rf ${DESTDIR}${PREFIX}/duckdb_build
-	${RM} -f ${DESTDIR}${PREFIX}/*.list
+post-patch:
+	${MKDIR} ${WRKSRC}/build
 
+.include "../../lang/python/wheel.mk"
+BUILDLINK_DEPMETHOD.py-pybind11=	full
 .include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../lang/python/wheel.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
