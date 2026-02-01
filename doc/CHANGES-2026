@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.793 2026/02/01 07:01:29 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.794 2026/02/01 07:02:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1007,3 +1007,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/openjdk17 to 1.17.0.18.8 [ryoon 2026-02-01]
 	Updated lang/openjdk21 to 1.21.0.10.7 [ryoon 2026-02-01]
 	Updated mail/thunderbird to 147.0.1 [ryoon 2026-02-01]
+	Updated mail/thunderbird-l10n to 147.0.1 [ryoon 2026-02-01]
