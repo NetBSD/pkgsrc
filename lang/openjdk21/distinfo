@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2025/11/15 12:17:11 ryoon Exp $
+$NetBSD: distinfo,v 1.15 2026/02/01 06:52:28 ryoon Exp $
 
 BLAKE2s (bootstrap-jdk-1.21.0.1.12-netbsd-9-amd64-20231207.tar.xz) = 017a9d787a34faa997d72ac69bcafd9c8ab72354e3a1b751d1cb5d376b364f72
 SHA512 (bootstrap-jdk-1.21.0.1.12-netbsd-9-amd64-20231207.tar.xz) = 7ec4208363f44a378674a2b87687ab7facb60bf73118ebd4bec35f7912f073365b36efc4c4b3c034bc448139cb81106e18d6d3b1db45f4ab086ce1ed72bc21bf
@@ -9,9 +9,9 @@ Size (bootstrap-jdk-1.21.0.1.12-netbsd-9-i386-20231207.tar.xz) = 111820092 bytes
 BLAKE2s (bootstrap-jdk-1.21.0.7.6-netbsd-9-aarch64-20250811.tar.xz) = 0ee9c4b9d6e62a67af62d62121769121d475e9c3a8d7c25a32cd70f62d01b873
 SHA512 (bootstrap-jdk-1.21.0.7.6-netbsd-9-aarch64-20250811.tar.xz) = 7b8b17b9a077ea45d92ad9c855df6f831d0f1233166cf9e1af0e16ed0a747575be0a361c398b981d59aee2c09f1ea3e1dcceef68c9876a6efce3c6a94b7c7e50
 Size (bootstrap-jdk-1.21.0.7.6-netbsd-9-aarch64-20250811.tar.xz) = 112607360 bytes
-BLAKE2s (jdk21u-jdk-21.0.9-10-1.tar.gz) = 549bfbefc3fb12411e33b092552a798c8383a3254ef92364de848a30aa45f57d
-SHA512 (jdk21u-jdk-21.0.9-10-1.tar.gz) = 2c32f80142c1c55f4a5d760185e3620efabd42ba211a337a73a776d699576d909f762844d976e3c55d489d0ee86d3a69f67c5eb9fec407e37cc3c7d832d92c21
-Size (jdk21u-jdk-21.0.9-10-1.tar.gz) = 113912901 bytes
+BLAKE2s (jdk21u-jdk-21.0.10-7-1.tar.gz) = 64a5579af50b0226710be150ed1275a23d17a8b008860a72bb5b4b87c6d0e7d8
+SHA512 (jdk21u-jdk-21.0.10-7-1.tar.gz) = b090a06000c9347c32538a7577ce612d54482f06de355f95c8e695db593df6a7c3cefd30f664e8cbfb30bb063eaccb8c8a9da1e9ff30728d4790b6d6d1c32095
+Size (jdk21u-jdk-21.0.10-7-1.tar.gz) = 114068913 bytes
 SHA1 (patch-make_autoconf_buildjdk-spec.gmk.in) = 01b6ac6dae1a886949020b9d472aab1e357084b0
 SHA1 (patch-make_autoconf_flags-cflags.m4) = 2777471821988895f5ae1be33b1c92b7386b068a
 SHA1 (patch-make_autoconf_hotspot.m4) = b3d70d7def7b4b0c4ae2632be75bfbe97f931879
