@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2026/01/27 08:39:44 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2026/02/01 08:52:26 ryoon Exp $
 
 DISTNAME=	libgdiplus-6.1
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.mono-project.com/sources/libgdiplus/
 
@@ -11,7 +11,7 @@ COMMENT=	Implementation of the GDI+ API
 LICENSE=	mit
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		autoconf gmake pkg-config
+USE_TOOLS+=		autoconf cmake gmake pkg-config
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 PKGCONFIG_OVERRIDE+=	libgdiplus.pc.in
