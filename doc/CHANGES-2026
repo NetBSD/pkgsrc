@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.823 2026/02/01 20:45:28 triaxx Exp $
+$NetBSD: CHANGES-2026,v 1.824 2026/02/01 21:07:49 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1039,3 +1039,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added x11/xssstate version 1.1 [leot 2026-02-01]
 	Updated www/hugo to 0.155.1 [triaxx 2026-02-01]
 	Updated games/openrct2 to 0.4.31 [triaxx 2026-02-01]
+	Removed fonts/UFAS-otf [rhialto 2026-02-01]
