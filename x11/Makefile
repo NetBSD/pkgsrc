@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1080 2026/01/15 08:58:03 wiz Exp $
+# $NetBSD: Makefile,v 1.1081 2026/02/01 20:31:21 leot Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -654,6 +654,7 @@ SUBDIR+=	xsetroot
 SUBDIR+=	xsm
 SUBDIR+=	xsnow
 SUBDIR+=	xss-lock
+SUBDIR+=	xssstate
 SUBDIR+=	xst
 SUBDIR+=	xstdcmap
 SUBDIR+=	xtar
