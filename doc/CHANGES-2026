@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.816 2026/02/01 18:26:10 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.817 2026/02/01 19:08:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1032,3 +1032,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pip to 26.0 [wiz 2026-02-01]
 	Updated lang/py-pygls to 2.0.1 [wiz 2026-02-01]
 	Updated devel/py-wcwidth to 0.5.3 [wiz 2026-02-01]
+	Updated comms/py-textual to 7.5.0 [wiz 2026-02-01]
