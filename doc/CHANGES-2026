@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.790 2026/02/01 06:51:39 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.791 2026/02/01 06:52:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1004,3 +1004,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox-l10n to 147.0.2 [ryoon 2026-02-01]
 	Updated lang/openjdk8 to 1.8.482 [ryoon 2026-02-01]
 	Updated lang/openjdk11 to 1.11.0.30.7 [ryoon 2026-02-01]
+	Updated lang/openjdk17 to 1.17.0.18.8 [ryoon 2026-02-01]
