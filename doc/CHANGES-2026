@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.801 2026/02/01 08:52:37 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.802 2026/02/01 09:42:38 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1015,3 +1015,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/duckdb to 1.4.4 [ryoon 2026-02-01]
 	Updated databases/py-duckdb to 1.4.4 [ryoon 2026-02-01]
 	Updated graphics/libgdiplus to 6.1nb13 [ryoon 2026-02-01]
+	Updated mail/mhpgp to 20070530nb1 [leot 2026-02-01]
