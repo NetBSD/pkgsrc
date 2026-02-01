@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.798 2026/02/01 07:40:26 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.799 2026/02/01 08:40:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1012,3 +1012,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/p5-Authen-SASL to 2.2000 [wiz 2026-02-01]
 	Updated devel/p5-CPAN-Meta-Requirements to 2.145 [wiz 2026-02-01]
 	Updated net/p5-Net-Server to 2.016 [wiz 2026-02-01]
+	Updated databases/duckdb to 1.4.4 [ryoon 2026-02-01]
