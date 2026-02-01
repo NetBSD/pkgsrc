@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.807 2026/02/01 14:15:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.808 2026/02/01 14:37:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1023,3 +1023,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/rumdl to 0.1.8 [pin 2026-02-01]
 	Updated net/yt-dlp to 2026.1.31 [adam 2026-02-01]
 	Updated textproc/py-orjson to 3.11.6 [adam 2026-02-01]
+	Updated devel/serie to 0.6.0 [pin 2026-02-01]
