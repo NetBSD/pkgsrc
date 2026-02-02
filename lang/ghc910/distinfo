@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2025/12/28 07:30:17 pho Exp $
+$NetBSD: distinfo,v 1.14 2026/02/02 21:28:58 wiz Exp $
 
 BLAKE2s (ghc-9.10.1-src.tar.xz) = 7e4433ead6349bd073d31803b63e6c39fb3833ad691e985e25bc5b027da7fb85
 SHA512 (ghc-9.10.1-src.tar.xz) = 46d47e7811a19dcce501002ab674d84ab2fcb842309b5094af52dc5ad26bf5b309b160c1b689f3342666013bf4b0587425c60fbd6c637e739839d41a6a96d990
@@ -53,7 +53,7 @@ SHA1 (patch-libraries_ghc-internal_src_GHC_Internal_System_Environment.hs) = 0c1
 SHA1 (patch-libraries_ghc-internal_src_GHC_Internal_System_Environment_Blank.hsc) = 3eb8a30bc254b90244e2d45d4bafd09bfc188f03
 SHA1 (patch-libraries_haskeline_System_Console_Haskeline_Backend_Posix.hsc) = d218f1447f9d338af406b41b01a28005cb1f843a
 SHA1 (patch-libraries_terminfo_configure.ac) = 068c2b89fc997a433709ec171c685654598781d7
-SHA1 (patch-libraries_text_cbits_measure__off.c) = 61bf1241fb65645abcbbbada33d41382044fe5c5
+SHA1 (patch-libraries_text_cbits_measure__off.c) = 0d944e6376fb8d75f7bfbc9c01891c7e0570168f
 SHA1 (patch-libraries_time_lib_Data_Time_Clock_Internal_CTimespec.hsc) = 588270767f8a9cbde0648fc99807891fef65d721
 SHA1 (patch-libraries_time_lib_Data_Time_Clock_Internal_CTimeval.hs) = 68914d012a98cc4a4a245efeabcb9143dba0246a
 SHA1 (patch-libraries_unix_System_Posix_Env.hsc) = 414f0310793bf184cdac7546e3f81fee4821a05f
