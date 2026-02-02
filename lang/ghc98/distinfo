@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2025/02/03 16:25:01 jperkin Exp $
+$NetBSD: distinfo,v 1.19 2026/02/02 22:52:49 wiz Exp $
 
 BLAKE2s (ghc-9.8.2-boot-aarch64-apple-darwin.tar.xz) = 45867db56f03b0c25a13f034dd3eca3a91cc1b031790e457a55f599b023827ba
 SHA512 (ghc-9.8.2-boot-aarch64-apple-darwin.tar.xz) = c9b8717b0e37fd7c0fcff4f3dac603673fabe235bc8257cc24200ca926b7d2a226f656b8ffd13c1e6c0260f73a162d81b19a4f866b7c34d1ea54cdddef3aa406
@@ -47,7 +47,7 @@ SHA1 (patch-libraries_base_System_CPUTime_Posix_Times.hsc) = 2bfb779d534d1207328
 SHA1 (patch-libraries_base_System_Environment.hs) = 7d79a91f295915b4408d5f41d5405739d7189215
 SHA1 (patch-libraries_base_configure) = 4e02082cdfde8d927d12f3d2f3d98ace6d4ee116
 SHA1 (patch-libraries_terminfo_configure.ac) = 068c2b89fc997a433709ec171c685654598781d7
-SHA1 (patch-libraries_text_cbits_measure__off.c) = 61bf1241fb65645abcbbbada33d41382044fe5c5
+SHA1 (patch-libraries_text_cbits_measure__off.c) = 0d944e6376fb8d75f7bfbc9c01891c7e0570168f
 SHA1 (patch-libraries_time_lib_Data_Time_Clock_Internal_CTimespec.hsc) = 588270767f8a9cbde0648fc99807891fef65d721
 SHA1 (patch-libraries_time_lib_Data_Time_Clock_Internal_CTimeval.hs) = 68914d012a98cc4a4a245efeabcb9143dba0246a
 SHA1 (patch-libraries_unix_System_Posix_Env.hsc) = 414f0310793bf184cdac7546e3f81fee4821a05f
