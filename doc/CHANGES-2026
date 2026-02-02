@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.841 2026/02/02 15:22:38 taca Exp $
+$NetBSD: CHANGES-2026,v 1.842 2026/02/02 15:25:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1065,3 +1065,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/ruby-sequel to 5.101.0 [taca 2026-02-02]
 	Updated devel/ruby2ruby to 2.6.1 [taca 2026-02-02]
 	Updated devel/ruby-pathname2 to 2.0.0 [taca 2026-02-02]
+	Updated devel/ruby-rspec-support to 3.13.7 [taca 2026-02-02]
