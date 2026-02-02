@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/04/19 07:58:23 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/02/02 20:23:09 wiz Exp $
 
 DISTNAME=		racoon2
 PKGNAME=		racoon2-20180701
@@ -9,7 +9,7 @@ GITHUB_PROJECT=		racoon2
 GITHUB_TAG=		b2a193fc9875d1fb89c0a51690745379bc135fcf
 
 MAINTAINER=		kamada@nanohz.org
-HOMEPAGE=		http://www.racoon2.wide.ad.jp/
+#HOMEPAGE=		http://www.racoon2.wide.ad.jp/
 COMMENT=		IPsec key management system (IKEv2, IKEv1, and KINK)
 
 GNU_CONFIGURE=		yes
