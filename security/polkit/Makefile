@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2025/12/21 15:44:05 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2026/02/02 16:47:20 jperkin Exp $
 
 DISTNAME=	polkit-127
 CATEGORIES=	security
@@ -29,6 +29,7 @@ PKGCONFIG_OVERRIDE+=	data/polkit-agent-1.pc.in
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 CPPFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS -D__EXTENSIONS__
+LDFLAGS.SunOS+=			-lsocket
 
 .include "../../mk/bsd.prefs.mk"
 
