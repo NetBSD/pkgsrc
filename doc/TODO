@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26755 2026/02/02 23:25:20 wiz Exp $
+$NetBSD: TODO,v 1.26756 2026/02/02 23:27:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1156,7 +1156,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rails-6.1.0
 	o rasmol-2.7.5.2
 	o rat-4.2.25
-	o raylib-5.5
 	o razor-qt-0.5.2
 	o rcs-5.10.0
 	o rdp-1.6
