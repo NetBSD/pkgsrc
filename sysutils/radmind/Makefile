@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2024/07/12 13:28:42 hauke Exp $
-#
+# $NetBSD: Makefile,v 1.47 2026/02/02 20:23:44 wiz Exp $
 
 DISTNAME=	radmind-1.14.1
 PKGREVISION=	13
@@ -7,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=radmind/}
 
 MAINTAINER=	hauke@NetBSD.org
-HOMEPAGE=	http://rsug.itd.umich.edu/software/radmind/
+HOMEPAGE=	https://radmind.org/
 COMMENT=	Remote file administration and integrity tool
 LICENSE=	modified-bsd
 
