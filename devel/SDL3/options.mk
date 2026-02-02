@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2025/06/03 14:06:51 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2026/02/02 08:04:05 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.SDL3
 PKG_SUPPORTED_OPTIONS=		alsa dbus jack opengl libusb pulseaudio x11
@@ -124,6 +124,7 @@ CMAKE_CONFIGURE_ARGS+=	-DSDL_WAYLAND=OFF
 
 .if !empty(PKG_OPTIONS:Mx11)
 CMAKE_CONFIGURE_ARGS+=	-DSDL_X11=ON
+CMAKE_CONFIGURE_ARGS+=	-DSDL_X11_XTEST=OFF
 .  include "../../x11/libXcursor/buildlink3.mk"
 .  include "../../x11/libXext/buildlink3.mk"
 .  include "../../x11/libXi/buildlink3.mk"
