@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/12/28 11:47:34 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/02/02 20:24:08 wiz Exp $
 
 DISTNAME=	randlib.c-1.3
 PKGNAME=	randlib-1.3
@@ -7,7 +7,7 @@ CATEGORIES=	math
 MASTER_SITES=	# ftp://odin.mdacc.tmc.edu/pub/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://biostatistics.mdanderson.org/SoftwareDownload/SingleSoftware.aspx?Software_Id=27
+HOMEPAGE=	https://biostatistics.mdanderson.org/SoftwareDownload/SingleSoftware/Index/27
 COMMENT=	Library of C Routines for Random Number Generation
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
