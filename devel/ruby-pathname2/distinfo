@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:19:41 nia Exp $
+$NetBSD: distinfo,v 1.14 2026/02/02 15:22:28 taca Exp $
 
-BLAKE2s (pathname2-1.8.4.gem) = e4ea42b24de5b1ca3821d4af02bc0157f071b7114d45a0290ea0ac0bf23fdf4a
-SHA512 (pathname2-1.8.4.gem) = cb3a79fdff74ae97bd64bff5881b405ea28e2b4c3d2ae549eb52a5bf0f1530b5b6e7052f97b9063db14679e7fe05cc90c2324dba506bd3ed038e53347290e070
-Size (pathname2-1.8.4.gem) = 36864 bytes
+BLAKE2s (pathname2-2.0.0.gem) = 6a9ebfe81731d86b4258800ecd002b2b3cd42541e5d7d97b88b690d0f8bb6d84
+SHA512 (pathname2-2.0.0.gem) = 37647f4419ad983f2cac7445533229c9271f849cce7d82f70f4572145e4304ec160040502e29fb08ba9a15c766c7c8ddb14398c3cd365ba53b4eee907cb4819c
+Size (pathname2-2.0.0.gem) = 37376 bytes
