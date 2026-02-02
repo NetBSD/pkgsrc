@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2026/02/02 23:42:24 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2026/02/02 23:47:53 gdt Exp $
 
 VERSION=	4.2.0
 DISTNAME=	XEphem-${VERSION}
@@ -52,10 +52,10 @@ INSTALLATION_DIRS=	bin lib/X11/app-defaults share/xephem/tools \
 
 # xephem looks for app-defaults in hardcoded/wrong places
 SUBST_CLASSES+=		ad
-SUBST_SED.ad=		-e "s,@PREFIX@,${PREFIX},"
+SUBST_VARS.ad=		PREFIX
 SUBST_FILES.ad=		tools/xedb/xedb.c
 SUBST_STAGE.ad=		post-configure
-SUBST_MESSAGE.ad=	Fixing path to x11 app-defaultsin xedb.c.
+SUBST_MESSAGE.ad=	Fixing path to x11 app-defaults in xedb.c.
 
 # \todo Make this respect user ShareDir config also.
 SUBST_CLASSES+=		homeio
