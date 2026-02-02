@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2020/11/24 17:33:29 nia Exp $
+# $NetBSD: Makefile,v 1.7 2026/02/02 20:27:08 wiz Exp $
 
 DISTNAME=	ratmen-2.2.3
 CATEGORIES=	x11 wm
-MASTER_SITES=	https://www.update.uu.se/~zrajm/programs/ratmen/
+#MASTER_SITES=	https://www.update.uu.se/~zrajm/programs/ratmen/
 
 MAINTAINER=	lkundrak@skosi.org
-HOMEPAGE=	https://www.update.uu.se/~zrajm/programs/
+#HOMEPAGE=	https://www.update.uu.se/~zrajm/programs/
 COMMENT=	Allows you to create X menus from the shell
 LICENSE=	9menu-license
 
