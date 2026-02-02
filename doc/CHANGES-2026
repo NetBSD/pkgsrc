@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.827 2026/02/02 08:05:38 adam Exp $
+$NetBSD: CHANGES-2026,v 1.828 2026/02/02 09:49:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1045,3 +1045,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/scummvm to 2026.1.0 [adam 2026-02-02]
 	Updated devel/SDL3 to 3.4.0 [adam 2026-02-02]
 	Updated graphics/SDL3_image to 3.4.0 [adam 2026-02-02]
+	Updated net/rclone to 1.73.0 [adam 2026-02-02]
+	Updated net/icinga2 to 2.15.2 [adam 2026-02-02]
