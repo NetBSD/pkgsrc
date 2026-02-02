@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/03/19 11:23:53 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/02/02 23:25:12 wiz Exp $
 include/GLFW/glfw3.h
 include/GLFW/glfw3native.h
 lib/cmake/glfw3/glfw3Config.cmake
@@ -7,5 +7,5 @@ lib/cmake/glfw3/glfw3Targets-noconfig.cmake
 lib/cmake/glfw3/glfw3Targets.cmake
 lib/libglfw.so
 lib/libglfw.so.3
-lib/libglfw.so.3.3
+lib/libglfw.so.3.4
 lib/pkgconfig/glfw3.pc
