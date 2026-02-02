@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2026/01/19 13:47:13 mef Exp $
+# $NetBSD: options.mk,v 1.14 2026/02/02 23:14:54 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fftw
 PKG_SUPPORTED_OPTIONS=	fftw-fortran openmp mpi simd
@@ -9,6 +9,9 @@ PKG_SUGGESTED_OPTIONS=	fftw-fortran
 .if !empty(PKGSRC_COMPILER:M*gcc*) || !empty(PKGSRC_COMPILER:M*clang*)
 .  if ${MACHINE_ARCH} == "x86_64"
 PKG_SUPPORTED_OPTIONS+=	avx
+.    if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} >= 110000
+PKG_SUGGESTED_OPTIONS+=	avx
+.    endif
 .  endif
 PKG_SUGGESTED_OPTIONS+=	simd
 .endif
@@ -24,7 +27,7 @@ FFTW_DOUBLE_OPTS+=	--enable-${opt}
 .endif
 
 .if !empty(PKG_OPTIONS:Msimd)
-.  if !empty(MACHINE_ARCH:Mpowerpc*)
+.  if ${MACHINE_ARCH:Mpowerpc*}
 FFTW_FLOAT_OPTS+=	--enable-altivec
 .  endif
 .  if ${MACHINE_ARCH} == "x86_64"
