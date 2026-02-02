@@ -1,23 +1,24 @@
-# $NetBSD: Makefile,v 1.38 2025/08/25 08:35:15 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.39 2026/02/02 19:33:23 wiz Exp $
 
-GITHUB_PROJECT=	eliom
 DISTNAME=	${GITHUB_PROJECT}-10.0.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
+GITHUB_PROJECT=	eliom
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ocsigen.org/eliom/
 COMMENT=	Dynamic webpage generation library
 LICENSE=	gnu-lgpl-v2.1
 
+TOOL_DEPENDS+=	ocaml-opaline>=0:../../misc/ocaml-opaline
+DEPENDS+=	ocsigen>=5.0.0:../../www/ocsigen
+DEPENDS+=	ocsipersist>=1.0:../../databases/ocsipersist
+
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c
 OCAML_USE_FINDLIB=	yes
 UNLIMIT_RESOURCES+=	stacksize
-
-DEPENDS+=	ocsigen>=5.0.0:../../www/ocsigen
-DEPENDS+=	ocsipersist>=1.0:../../databases/ocsipersist
 
 .include "../../lang/ocaml/ocaml.mk"
 
@@ -43,7 +44,6 @@ do-install:
 .include "../../devel/ocaml-ppxlib/buildlink3.mk"
 .include "../../devel/ocaml-reactiveData/buildlink3.mk"
 .include "../../devel/ocaml-reactiveData/buildlink3.mk"
-.include "../../misc/ocaml-opaline/buildlink3.mk"
 .include "../../net/ocaml-ipaddr/buildlink3.mk"
 .include "../../textproc/ocaml-tyxml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
