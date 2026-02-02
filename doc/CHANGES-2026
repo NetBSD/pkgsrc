@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.832 2026/02/02 10:41:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.833 2026/02/02 10:54:53 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1055,3 +1055,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-poetry to 2.3.2 [adam 2026-02-02]
 	Updated security/sqlmap to 1.10.2 [adam 2026-02-02]
 	Updated misc/py-tqdm to 4.67.2 [adam 2026-02-02]
+	Updated geography/qgis to 3.44.7 [gdt 2026-02-02]
