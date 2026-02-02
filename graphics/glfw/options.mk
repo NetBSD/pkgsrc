@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2024/08/25 06:18:50 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2026/02/02 23:25:12 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.glfw
 
@@ -17,13 +17,16 @@ CMAKE_CONFIGURE_ARGS+=	-DGLFW_USE_OSMESA=ON
 .endif
 
 .if !empty(PKG_OPTIONS:Mwayland)
-CMAKE_CONFIGURE_ARGS+=	-DGLFW_USE_WAYLAND=ON
+CMAKE_CONFIGURE_ARGS+=	-DGLFW_BUILD_WAYLAND=ON
 .  include "../../devel/wayland/buildlink3.mk"
 .  include "../../devel/wayland-protocols/buildlink3.mk"
 .  include "../../x11/libxkbcommon/buildlink3.mk"
+.else
+CMAKE_CONFIGURE_ARGS+=	-DGLFW_BUILD_WAYLAND=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)
+CMAKE_CONFIGURE_ARGS+=	-DGLFW_BUILD_X11=ON
 .  include "../../x11/libICE/buildlink3.mk"
 .  include "../../x11/libXcursor/buildlink3.mk"
 .  include "../../x11/libXi/buildlink3.mk"
@@ -31,4 +34,6 @@ CMAKE_CONFIGURE_ARGS+=	-DGLFW_USE_WAYLAND=ON
 .  include "../../x11/libXrandr/buildlink3.mk"
 .  include "../../x11/libXxf86vm/buildlink3.mk"
 .  include "../../x11/libxkbcommon/buildlink3.mk"
+.else
+CMAKE_CONFIGURE_ARGS+=	-DGLFW_BUILD_X11=OFF
 .endif
