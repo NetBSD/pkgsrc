@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2026/01/31 18:05:27 gdt Exp $
+# $NetBSD: Makefile,v 1.77 2026/02/02 23:42:24 wiz Exp $
 
 VERSION=	4.2.0
 DISTNAME=	XEphem-${VERSION}
@@ -80,5 +80,6 @@ do-install:
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
