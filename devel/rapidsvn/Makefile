@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.143 2026/01/27 08:39:17 wiz Exp $
+# $NetBSD: Makefile,v 1.144 2026/02/02 20:26:40 wiz Exp $
 
 DISTNAME=		rapidsvn-0.12.1
 PKGREVISION=		74
 CATEGORIES=		devel x11 scm
-MASTER_SITES=		http://www.rapidsvn.org/download/release/0.12.1/
+MASTER_SITES=		https://rapidsvn.org/download/release/0.12.1/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://rapidsvn.tigris.org/
+HOMEPAGE=		https://rapidsvn.org/
 COMMENT=		Cross-platform Subversion GUI
 LICENSE=		gnu-gpl-v3
 
