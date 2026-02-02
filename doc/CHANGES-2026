@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.854 2026/02/02 22:55:00 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.855 2026/02/02 23:04:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1076,3 +1076,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated chat/matrix-synapse to 1.146.0 [gdt 2026-02-02]
 	Updated lang/ghc910 to 9.10.1nb7 [wiz 2026-02-02]
 	Updated lang/ghc98 to 9.8.2nb3 [wiz 2026-02-02]
+	Updated math/py-numpy to 2.4.2nb1 [wiz 2026-02-02]
