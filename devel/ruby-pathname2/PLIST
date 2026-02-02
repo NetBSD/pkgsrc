@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/01/26 14:54:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/02/02 15:22:28 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES.md
 ${GEM_LIBDIR}/Gemfile
@@ -6,13 +6,13 @@ ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/MANIFEST.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/benchmarks/bench_pathname.rb
+${GEM_LIBDIR}/benchmarks/bench_pathname2.rb
 ${GEM_LIBDIR}/benchmarks/bench_plus.rb
 ${GEM_LIBDIR}/certs/djberg96_pub.pem
-${GEM_LIBDIR}/examples/example_pathname.rb
+${GEM_LIBDIR}/examples/example_pathname2.rb
 ${GEM_LIBDIR}/lib/pathname2.rb
 ${GEM_LIBDIR}/pathname2.gemspec
-${GEM_LIBDIR}/test/test_pathname.rb
+${GEM_LIBDIR}/test/test_pathname2.rb
 ${GEM_LIBDIR}/test/test_version.rb
 ${GEM_LIBDIR}/test/windows/test_append.rb
 ${GEM_LIBDIR}/test/windows/test_aref.rb
