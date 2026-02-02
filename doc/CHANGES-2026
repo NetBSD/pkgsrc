@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.831 2026/02/02 10:35:47 adam Exp $
+$NetBSD: CHANGES-2026,v 1.832 2026/02/02 10:41:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1053,3 +1053,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-blessed to 1.29.0 [adam 2026-02-02]
 	Updated devel/py-poetry-core to 2.3.1 [adam 2026-02-02]
 	Updated devel/py-poetry to 2.3.2 [adam 2026-02-02]
+	Updated security/sqlmap to 1.10.2 [adam 2026-02-02]
+	Updated misc/py-tqdm to 4.67.2 [adam 2026-02-02]
