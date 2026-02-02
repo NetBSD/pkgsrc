@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2025/09/14 10:50:23 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/02/02 20:26:50 wiz Exp $
 
 DISTNAME=	rat-3.0.28
 PKGREVISION=	12
@@ -6,7 +6,7 @@ CATEGORIES=	mbone
 MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/rat/
+#HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/rat/
 COMMENT=	Robust Audio Tool - multicast audioconferencing
 
 USE_TOOLS+=	gmake
