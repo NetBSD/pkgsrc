@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2026/02/02 21:07:36 gdt Exp $
+# $NetBSD: Makefile,v 1.123 2026/02/02 21:08:26 gdt Exp $
 
 DISTNAME=	matrix-synapse-1.146.0
 #PKGREVISION=	0
@@ -71,7 +71,7 @@ DEPENDS+=	${PYPKGPREFIX}-python-multipart>=0.0.9:../../www/py-python-multipart
 # crashes if it is not present, because it ends up in
 # /usr/pkg/lib/python3.13/site-packages/matrix_synapse-1.146.0.dist-info/METADATA
 # The version is taken from METADATA.  However, I can find no actual usage.
-DEPENDS+= ${PYPKGPREFIX}-pyrsistent>=0.18.0:../../devel/py-pyrsistent
+DEPENDS+=	${PYPKGPREFIX}-pyrsistent>=0.18.0:../../devel/py-pyrsistent
 
 # A separate issue is that upstream claims pyrsistent is required via
 # jsonschema, but the pkgsrc jsonschema package and its pyproject.toml
