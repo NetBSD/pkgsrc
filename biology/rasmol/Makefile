@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.34 2023/07/17 22:00:22 nia Exp $
+# $NetBSD: Makefile,v 1.35 2026/02/02 20:26:04 wiz Exp $
 
 DISTNAME=	RasMol_2.7.3
 PKGNAME=	rasmol-2.7.3
 PKGREVISION=	2
 CATEGORIES=	biology
-MASTER_SITES=	http://www.bernstein-plus-sons.com/software/
+#MASTER_SITES=	http://www.bernstein-plus-sons.com/software/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.bernstein-plus-sons.com/software/rasmol/
+#HOMEPAGE=	http://www.bernstein-plus-sons.com/software/rasmol/
 COMMENT=	Molecular Graphics Visualisation Tool
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
