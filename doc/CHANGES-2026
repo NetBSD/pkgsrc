@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.845 2026/02/02 15:29:54 taca Exp $
+$NetBSD: CHANGES-2026,v 1.846 2026/02/02 18:54:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1069,3 +1069,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/ruby-mime-types-data to 3.2026.0127 [taca 2026-02-02]
 	Updated security/ruby-simple_oauth to 0.4.0 [taca 2026-02-02]
 	Updated sysutils/ruby-listen to 3.10.0 [taca 2026-02-02]
+	Updated devel/py-pytokens to 0.4.1 [wiz 2026-02-02]
