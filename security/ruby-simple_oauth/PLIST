@@ -1,16 +1,28 @@
-@comment $NetBSD: PLIST,v 1.5 2015/03/13 15:47:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/02/02 15:28:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.rubocop.yml
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
+${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
-${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/Steepfile
 ${GEM_LIBDIR}/lib/simple_oauth.rb
+${GEM_LIBDIR}/lib/simple_oauth/encoding.rb
+${GEM_LIBDIR}/lib/simple_oauth/errors.rb
 ${GEM_LIBDIR}/lib/simple_oauth/header.rb
-${GEM_LIBDIR}/simple_oauth.gemspec
+${GEM_LIBDIR}/lib/simple_oauth/header/class_methods.rb
+${GEM_LIBDIR}/lib/simple_oauth/parser.rb
+${GEM_LIBDIR}/lib/simple_oauth/signature.rb
+${GEM_LIBDIR}/lib/simple_oauth/version.rb
+${GEM_LIBDIR}/mutant.yml
+${GEM_LIBDIR}/sig/matchdata_ext.rbs
+${GEM_LIBDIR}/sig/openssl_ext.rbs
+${GEM_LIBDIR}/sig/simple_oauth.rbs
+${GEM_LIBDIR}/sig/simple_oauth/header/class_methods.rbs
+${GEM_LIBDIR}/sig/simple_oauth/parser.rbs
+${GEM_LIBDIR}/sig/simple_oauth/signature.rbs
+${GEM_LIBDIR}/sig/strscan.rbs
+${GEM_LIBDIR}/sig/uri_rfc2396_parser.rbs
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec

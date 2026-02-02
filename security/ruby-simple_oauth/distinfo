@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:17:59 nia Exp $
+$NetBSD: distinfo,v 1.11 2026/02/02 15:28:04 taca Exp $
 
-BLAKE2s (simple_oauth-0.3.1.gem) = 27776bffaf92bd55423699bf21230c1a6e475ff17e771f8b119baecbee5a88ce
-SHA512 (simple_oauth-0.3.1.gem) = 206512ba643b60de3601d11add691c0f6386ea62e8516651d525b5956ca7d8009e167f8acd8375ba07ae8ec598dcf115bc6813c4028a836827b618db9ce6939a
-Size (simple_oauth-0.3.1.gem) = 8704 bytes
+BLAKE2s (simple_oauth-0.4.0.gem) = cba4736835b90f1ec750e0894b8faa4a65ac91a3de47a11a131209a394f3fd68
+SHA512 (simple_oauth-0.4.0.gem) = db0fe52999e7d26b5dea7309dd173892a94736e13b0926ab1c57c127c30c96abf15060b5ec3cded5eea1fa589c885093484b38c1d52da85ec4467a1c928d0177
+Size (simple_oauth-0.4.0.gem) = 15872 bytes
