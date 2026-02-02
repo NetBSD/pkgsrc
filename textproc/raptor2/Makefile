@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.58 2026/01/07 08:49:07 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2026/02/02 20:26:43 wiz Exp $
 
 DISTNAME=	raptor2-2.0.16
 PKGREVISION=	13
 CATEGORIES=	textproc
-MASTER_SITES=	http://download.librdf.org/source/
+#MASTER_SITES=	http://download.librdf.org/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://librdf.org/raptor/
+#HOMEPAGE=	http://librdf.org/raptor/
 COMMENT=	RDF Parser Toolkit written in C
 LICENSE=	gnu-lgpl-v2.1 OR apache-2.0
 
