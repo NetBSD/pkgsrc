@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.134 2026/01/07 08:47:08 wiz Exp $
+# $NetBSD: Makefile,v 1.135 2026/02/02 07:29:31 adam Exp $
 
-DISTNAME=	scummvm-2.9.1
-PKGREVISION=	3
+DISTNAME=	scummvm-2026.1.0
 CATEGORIES=	games
 MASTER_SITES=	https://www.scummvm.org/frs/scummvm/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -25,10 +24,10 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 UNLIMIT_RESOURCES=	datasize
 EXTRACT_USING=		bsdtar
 
+CHECK_PORTABILITY_SKIP+=	dists/engine-data/testbed-audiocd-files/image/image-gen.sh
 CHECK_PORTABILITY_SKIP+=	dists/opendingux/scummvm.sh
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.1
-.include "../../devel/SDL2/buildlink3.mk"
 .include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/fluidsynth/buildlink3.mk"
@@ -36,6 +35,7 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.1
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
