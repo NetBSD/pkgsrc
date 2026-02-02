@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26750 2026/02/02 07:29:51 adam Exp $
+$NetBSD: TODO,v 1.26751 2026/02/02 08:05:39 adam Exp $
 
 Suggested new packages
 ======================
@@ -396,7 +396,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-RSQLite-2.6
 	o R-mapproj-3
 	o R-ncdf-1.6.9
-	o SDL3-3.4
 	o SQLiteCpp-2.5.0
 	o Sigil-2.7.0
 	o SOGo-5.12.4

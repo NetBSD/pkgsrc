@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.826 2026/02/02 07:29:51 adam Exp $
+$NetBSD: CHANGES-2026,v 1.827 2026/02/02 08:05:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1043,3 +1043,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/objfw to 1.4.4 [js 2026-02-01]
 	Updated audio/libmysofa to 1.3.4 [adam 2026-02-02]
 	Updated games/scummvm to 2026.1.0 [adam 2026-02-02]
+	Updated devel/SDL3 to 3.4.0 [adam 2026-02-02]
+	Updated graphics/SDL3_image to 3.4.0 [adam 2026-02-02]
