@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.123 2026/02/02 21:08:26 gdt Exp $
+# $NetBSD: Makefile,v 1.124 2026/02/02 23:29:34 gdt Exp $
 
 DISTNAME=	matrix-synapse-1.146.0
-#PKGREVISION=	0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=element-hq/}
 GITHUB_PROJECT=	synapse
@@ -21,10 +21,7 @@ USE_CC_FEATURES=	c99
 # pyproject.toml that is often confusing and sometimes wrong.  This
 # list attempts to follow the order and contents.
 
-# NB: synapse needs features missing in NetBSD base system sqlite3,
-# and probably missing in other builds.  This package does not attempt
-# to make sqlite3 work -- use postgresql instead.  This comment is in
-# lieu of requiring enough sqlite3.
+.include "../../lang/python/pyversion.mk"
 
 # Build tools:
 TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1.0:../../devel/py-maturin
@@ -33,7 +30,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1.0:../../devel/py-maturin
 
 # Dependencies as expressed in pyproject.toml
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3.0.0:../../textproc/py-jsonschema
-# rpds for python 3.14 only?
+.if ${PYTHON_VERSION} >= 314
+DEPENDS+=	${PYPKGPREFIX}-rpds-py>=0.30.0:../../devel/py-rpds-py
+.endif
 DEPENDS+=	${PYPKGPREFIX}-immutabledict>=2.0:../../devel/py-immutabledict
 DEPENDS+=	${PYPKGPREFIX}-unpaddedbase64>=2.1.0:../../devel/py-unpaddedbase64
 DEPENDS+=	${PYPKGPREFIX}-canonicaljson>=2.0.0:../../devel/py-canonicaljson
@@ -105,10 +104,10 @@ DEPENDS+=	${PYPKGPREFIX}-pyrsistent>=0.18.0:../../devel/py-pyrsistent
 # matrix-synapse-ldap3: \todo
 
 # postgres: always on
+# In theory, one could use sqlite3 and argue that this should be an
+# option.  The package chooses to always support pgsql as the standard
+# database approach for synapse.
 DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2.8:../../databases/py-psycopg2
-# ?
-#    "psycopg2cffi>=2.8;platform_python_implementation == 'PyPy'",
-#    "psycopg2cffi-compat==1.1;platform_python_implementation == 'PyPy'",
 
 # saml2: see options.mk
 
@@ -133,8 +132,6 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=4.2.0:../../textproc/py-lxml
 # test: enabled when testing
 TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized>=0.9.0:../../devel/py-parameterized
 TEST_DEPENDS+=	${PYPKGPREFIX}-idna>=3.3:../../www/py-idna
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	synapse/_scripts/*.py
 
