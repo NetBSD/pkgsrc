@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.857 2026/02/02 23:25:20 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.858 2026/02/02 23:27:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1079,3 +1079,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-numpy to 2.4.2nb1 [wiz 2026-02-02]
 	Updated math/fftw to 3.3.10nb4 [wiz 2026-02-02]
 	Updated graphics/glfw to 3.4 [wiz 2026-02-02]
+	Updated devel/raylib to 5.5 [wiz 2026-02-02]
