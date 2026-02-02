@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.835 2026/02/02 12:28:04 jperkin Exp $
+$NetBSD: CHANGES-2026,v 1.836 2026/02/02 12:56:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1059,3 +1059,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-xarray to 2026.1.0 [adam 2026-02-02]
 	Updated devel/py-poetry-plugin-export to 1.10.0 [adam 2026-02-02]
 	Updated pkgtools/mktool to 1.5.5 [jperkin 2026-02-02]
+	Updated net/knot to 3.5.3 [ryoon 2026-02-02]
