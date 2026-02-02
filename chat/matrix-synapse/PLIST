@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.66 2025/12/29 23:05:25 gdt Exp $
+@comment $NetBSD: PLIST,v 1.67 2026/02/02 21:07:36 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -117,6 +117,9 @@ ${PYSITELIB}/synapse/app/appservice.pyo
 ${PYSITELIB}/synapse/app/client_reader.py
 ${PYSITELIB}/synapse/app/client_reader.pyc
 ${PYSITELIB}/synapse/app/client_reader.pyo
+${PYSITELIB}/synapse/app/complement_fork_proxied_reactor.py
+${PYSITELIB}/synapse/app/complement_fork_proxied_reactor.pyc
+${PYSITELIB}/synapse/app/complement_fork_proxied_reactor.pyo
 ${PYSITELIB}/synapse/app/complement_fork_starter.py
 ${PYSITELIB}/synapse/app/complement_fork_starter.pyc
 ${PYSITELIB}/synapse/app/complement_fork_starter.pyo
@@ -1985,7 +1988,11 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/92/08_thread_subscriptions_seq_fi
 ${PYSITELIB}/synapse/storage/schema/main/delta/92/09_thread_subscriptions_update.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/92/09_thread_subscriptions_update.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/93/01_add_delayed_events.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/93/02_sliding_sync_members.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/93/03_sss_pos_last_used.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/93/04_make_delayed_event_content_text.py
+${PYSITELIB}/synapse/storage/schema/main/delta/93/04_make_delayed_event_content_text.pyc
+${PYSITELIB}/synapse/storage/schema/main/delta/93/04_make_delayed_event_content_text.pyo
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/state/delta/23/drop_state_index.sql
