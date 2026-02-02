@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2025/04/12 08:28:30 adam Exp $
+# $NetBSD: Makefile,v 1.46 2026/02/02 10:07:36 adam Exp $
 
-DISTNAME=	babel-2.17.0
+DISTNAME=	babel-2.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=B/Babel/}
 
@@ -12,7 +11,7 @@ COMMENT=	Collection of tools for internationalizing Python applications
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
+TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun>=1.0:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
