@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.3 2024/11/30 00:32:16 gdt Exp $
+# $NetBSD: ocaml.mk,v 1.4 2026/02/02 19:36:35 wiz Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 # It should be included by every package that uses OCaml.
@@ -127,7 +127,7 @@ OCAML_USE_OPAM?=	no
 
 # Configure stuff for OPAM
 .if ${OCAML_USE_OPAM} == "yes"
-.include "../../misc/ocaml-opaline/buildlink3.mk"
+TOOL_DEPENDS+=	ocaml-opaline-[0-9]*:../../misc/ocaml-opaline
 OCAML_USE_FINDLIB=	yes
 .endif
 
