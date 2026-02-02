@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/04/19 20:08:23 js Exp $
+$NetBSD: distinfo,v 1.2 2026/02/02 08:05:19 adam Exp $
 
-BLAKE2s (SDL3_image-3.2.4.tar.gz) = a4daa46818f604af2fa12ef73fe41fa410498f5508df2ec865f37ce398fba41b
-SHA512 (SDL3_image-3.2.4.tar.gz) = 3c360434a9fe19a2e827936aeafd416eaea191c84592ad4a054ae8eb17e0993f04198f711173ed6e5ca3323e3e55876c1d04141e7dfcbefa20e78242825df55e
-Size (SDL3_image-3.2.4.tar.gz) = 10674746 bytes
+BLAKE2s (SDL3_image-3.4.0.tar.gz) = 0b3a2ae27ccfa576d0aeafafad7b181f287e2f2f90c9a6540973f61867827b79
+SHA512 (SDL3_image-3.4.0.tar.gz) = 3a0e9bebc961daeafbab2dafc628c204fea7ac7b336f1db6e7d1ef0c2a80849150096d8b9886eabcf4393dec0b3b88b8f1049e9459a90eb984d04026a3a88bff
+Size (SDL3_image-3.4.0.tar.gz) = 11133814 bytes

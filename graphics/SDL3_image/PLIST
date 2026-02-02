@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/04/19 20:08:23 js Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/02/02 08:05:19 adam Exp $
 include/SDL3_image/SDL_image.h
 lib/cmake/SDL3_image/SDL3_image-shared-targets-relwithdebinfo.cmake
 lib/cmake/SDL3_image/SDL3_image-shared-targets.cmake
@@ -6,6 +6,6 @@ lib/cmake/SDL3_image/SDL3_imageConfig.cmake
 lib/cmake/SDL3_image/SDL3_imageConfigVersion.cmake
 lib/libSDL3_image.so
 lib/libSDL3_image.so.0
-lib/libSDL3_image.so.0.2.4
+lib/libSDL3_image.so.0.4.0
 lib/pkgconfig/sdl3-image.pc
 share/licenses/SDL3_image/LICENSE.txt
