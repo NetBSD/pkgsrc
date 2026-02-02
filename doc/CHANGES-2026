@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.852 2026/02/02 21:12:44 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.853 2026/02/02 21:29:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1074,3 +1074,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/eliom to 10.0.0nb1 [wiz 2026-02-02]
 	Updated www/ocsigen-toolkit to 3.2.0nb1 [wiz 2026-02-02]
 	Updated chat/matrix-synapse to 1.146.0 [gdt 2026-02-02]
+	Updated lang/ghc910 to 9.10.1nb7 [wiz 2026-02-02]
