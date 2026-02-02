@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/10/22 07:46:11 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/02/02 07:28:50 adam Exp $
 
-DISTNAME=	libmysofa-1.3.3
+DISTNAME=	libmysofa-1.3.4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hoene/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,6 +14,7 @@ TEST_DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config
+TEST_TARGET=	test
 
 CMAKE_CONFIGURE_ARGS+=	-Wno-dev
 
