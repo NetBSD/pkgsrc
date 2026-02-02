@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2025/08/25 08:34:56 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/02/02 19:24:32 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.15.0
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 GITHUB_PROJECT=	core_unix
@@ -13,11 +13,13 @@ HOMEPAGE=	https://github.com/janestreet/core_unix/
 COMMENT=	Standard library overlay for OCaml by Jane Street (unix-specific)
 LICENSE=	mit
 
+TOOL_DEPENDS+=	ocaml-opaline-[0-9]*:../../misc/ocaml-opaline
+
 USE_TOOLS+=	bash
 
-OCAML_USE_DUNE=	yes
-OCAML_USE_OPAM=	no
-OCAML_USE_FINDLIB= yes
+OCAML_USE_DUNE=		yes
+OCAML_USE_OPAM=		no
+OCAML_USE_FINDLIB=	yes
 
 OCAML_FINDLIB_DIRS=	${GITHUB_PROJECT}
 
@@ -47,6 +49,5 @@ do-install:
 .include "../../devel/ocaml-ppx_jane/buildlink3.mk"
 .include "../../devel/ocaml-sexplib/buildlink3.mk"
 .include "../../devel/ocaml-spawn/buildlink3.mk"
-.include "../../misc/ocaml-opaline/buildlink3.mk"
 .include "../../time/ocaml-timezone/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
