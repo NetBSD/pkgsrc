@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.839 2026/02/02 15:16:41 taca Exp $
+$NetBSD: CHANGES-2026,v 1.840 2026/02/02 15:19:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1063,3 +1063,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-aws-partitions to 1.1211.0 [taca 2026-02-02]
 	Updated www/ruby-aws-sdk-s3 to 1.213.0 [taca 2026-02-02]
 	Updated databases/ruby-sequel to 5.101.0 [taca 2026-02-02]
+	Updated devel/ruby2ruby to 2.6.1 [taca 2026-02-02]
