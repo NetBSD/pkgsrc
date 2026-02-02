@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/10/30 13:25:14 gdt Exp $
+# $NetBSD: Makefile,v 1.10 2026/02/02 09:30:55 bouyer Exp $
 
 VERSION=	7.8.0
+PKGREVISION=	1
 DISTNAME=	opencascade-${VERSION}
 PKGNAME=	${DISTNAME:S/opencascade/occt/}
 CATEGORIES=	cad
@@ -49,6 +50,12 @@ OCCT_CUSTOM_COMPILER_DRIVER=	custom_gcc_32.sh
 
 PLIST_SUBST=	OCCT_CUSTOM_COMPILER_DRIVER=${OCCT_CUSTOM_COMPILER_DRIVER:Q}
 PLIST_SUBST+=	MINOR_VERSION=${VERSION:C/.[0-9]$//}
+
+SUBST_CLASSES+=		unbl3
+SUBST_STAGE.unbl3=	post-build
+SUBST_FILES.unbl3=	${CMAKE_BUILD_DIR}/CMakeFiles/Export/*/*.cmake
+SUBST_SED.unbl3=	-e 's,${BUILDLINK_DIR},${PREFIX},g'
+SUBST_MESSAGE.unbl3=	Fix paths to buildlink directories in installed files.
 
 .include "../../devel/cmake/build.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
