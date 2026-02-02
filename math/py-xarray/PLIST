@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2025/10/30 14:07:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2026/02/02 10:58:21 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -197,6 +197,9 @@ ${PYSITELIB}/xarray/core/dtypes.pyo
 ${PYSITELIB}/xarray/core/duck_array_ops.py
 ${PYSITELIB}/xarray/core/duck_array_ops.pyc
 ${PYSITELIB}/xarray/core/duck_array_ops.pyo
+${PYSITELIB}/xarray/core/eval.py
+${PYSITELIB}/xarray/core/eval.pyc
+${PYSITELIB}/xarray/core/eval.pyo
 ${PYSITELIB}/xarray/core/extension_array.py
 ${PYSITELIB}/xarray/core/extension_array.pyc
 ${PYSITELIB}/xarray/core/extension_array.pyo
@@ -486,6 +489,9 @@ ${PYSITELIB}/xarray/tests/test_duck_array_wrapping.pyo
 ${PYSITELIB}/xarray/tests/test_error_messages.py
 ${PYSITELIB}/xarray/tests/test_error_messages.pyc
 ${PYSITELIB}/xarray/tests/test_error_messages.pyo
+${PYSITELIB}/xarray/tests/test_eval.py
+${PYSITELIB}/xarray/tests/test_eval.pyc
+${PYSITELIB}/xarray/tests/test_eval.pyo
 ${PYSITELIB}/xarray/tests/test_extensions.py
 ${PYSITELIB}/xarray/tests/test_extensions.pyc
 ${PYSITELIB}/xarray/tests/test_extensions.pyo
