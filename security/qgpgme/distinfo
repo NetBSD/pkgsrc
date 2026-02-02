@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2026/01/29 13:57:32 wiz Exp $
+$NetBSD: distinfo,v 1.10 2026/02/02 18:45:40 wiz Exp $
 
 BLAKE2s (qgpgme-2.0.0.tar.xz) = 1136ad98eff08ce3d6866dc68280b174e3653056c1c5c79777586505f98e9528
 SHA512 (qgpgme-2.0.0.tar.xz) = 0bad84d1df70d972f540569a78a8f0d03d229fcc5354ff3fdbd1d4f397ef25f8e6e9b91c41e6809a187d56f48897bb42f0e23e4c913a39146e1cda4452cf4689
 Size (qgpgme-2.0.0.tar.xz) = 188552 bytes
+SHA1 (patch-src_threadedjobmixin.cpp) = 9edf3dcb2621f11ce324be91d07c1f7a77e48388
