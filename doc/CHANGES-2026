@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.836 2026/02/02 12:56:32 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.837 2026/02/02 15:14:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1060,3 +1060,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-poetry-plugin-export to 1.10.0 [adam 2026-02-02]
 	Updated pkgtools/mktool to 1.5.5 [jperkin 2026-02-02]
 	Updated net/knot to 3.5.3 [ryoon 2026-02-02]
+	Updated www/ruby-aws-partitions to 1.1211.0 [taca 2026-02-02]
