@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/05/27 16:05:33 taca Exp $
+# $NetBSD: Makefile,v 1.9 2026/02/03 15:35:07 taca Exp $
 
 DISTNAME=	securerandom-0.4.1
 CATEGORIES=	security
@@ -10,7 +10,7 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# none
 
-# Ruby 3.4.4 has securerandom 0.4.1 gem.
+# Ruby 3.4.8 and later have securerandom 0.4.1 gem.
 RUBY_VERSIONS_ACCEPTED=	32 33
 
 .include "../../lang/ruby/gem.mk"

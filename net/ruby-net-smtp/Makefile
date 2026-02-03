@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/05/27 16:05:33 taca Exp $
+# $NetBSD: Makefile,v 1.15 2026/02/03 15:35:07 taca Exp $
 
 DISTNAME=	net-smtp-0.5.1
 PKGREVISION=	1
@@ -11,7 +11,7 @@ LICENSE=	2-clause-bsd OR ruby-license
 
 USE_LANGUAGES=	# none
 
-# Ruby 3.3.8 and 3.4.2 has the same version as bundled gem.
+# Ruby 3.3.10 and later have the same version as bundled gem.
 RUBY_VERSIONS_ACCEPTED=	32
 
 .include "../../lang/ruby/gem.mk"
