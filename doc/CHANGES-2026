@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.864 2026/02/03 11:57:46 adam Exp $
+$NetBSD: CHANGES-2026,v 1.865 2026/02/03 12:57:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1092,3 +1092,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/py-alembic to 1.18.3 [adam 2026-02-03]
 	Updated ham/hackrf to 2026.01.3 [adam 2026-02-03]
 	Updated devel/blosc2 to 2.23.0 [adam 2026-02-03]
+	Updated databases/openldap to 2.6.12 [adam 2026-02-03]
+	Updated databases/lmdb to 0.9.35 [adam 2026-02-03]
