@@ -1,0 +1,4 @@
+with_advisory_lock
+
+Adds advisory locking (mutexes) to ActiveRecord 7.2+, with ruby 3.3+, jruby
+or truffleruby, when used with MySQL or PostgreSQL.
