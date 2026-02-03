@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1569 2026/01/26 19:43:32 nia Exp $
+# $NetBSD: Makefile,v 1.1570 2026/02/03 09:10:23 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1290,7 +1290,6 @@ SUBDIR+=	rarian
 SUBDIR+=	rasqal
 SUBDIR+=	redland
 SUBDIR+=	regexx
-SUBDIR+=	regxml
 SUBDIR+=	rfcutil
 SUBDIR+=	ripgrep
 SUBDIR+=	rman
