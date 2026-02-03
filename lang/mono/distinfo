@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.121 2025/08/21 16:36:51 ryoon Exp $
+$NetBSD: distinfo,v 1.122 2026/02/03 15:17:53 ryoon Exp $
 
-BLAKE2s (mono-6.12.0.199.tar.xz) = 50c074d858ce32159283f5eb2c5efee22fca111d09e0b1556474a6db33acb25e
-SHA512 (mono-6.12.0.199.tar.xz) = 9e379aaeb2e8750edbda74648c0ae9cc8cb9b2d7af85512bf2e729132c2e0322e776ef0b7657da708cbc1ae2a62f5532519d339fa68f465b30a65ca30d4a1e51
-Size (mono-6.12.0.199.tar.xz) = 304146664 bytes
+BLAKE2s (mono-6.14.1.tar.xz) = a86db1a994f25654e0c66547120c8cb8146d4593274783b3e7f154e9ef6223a0
+SHA512 (mono-6.14.1.tar.xz) = c16a2ecbfce93db20a7a6d11b6406c8764f5694355c1ce82081399cd7ab6d8b22e7f8fb21f7af78967b34ef54dcb682917b8cf22d61f1b72be996d1a42e9f1b9
+Size (mono-6.14.1.tar.xz) = 303688164 bytes
 SHA1 (patch-acceptance-tests_Makefile.in) = b2edf3ed54d3669c5651c6d63bb8fb04fae0fec0
 SHA1 (patch-acceptance-tests_microbench-perf_sh_in) = d46118c1685e3e48a5b8594bf7f77acd2bebaf94
 SHA1 (patch-configure.ac) = b43ae23e74790660435eb13ac358dc56ad243779
@@ -14,8 +14,6 @@ SHA1 (patch-data_net__4__0_Makefile.am) = 7c0fa175047f01a556f61503b2fcfabdedd2c6
 SHA1 (patch-data_net__4__5_Browsers_Makefile.am) = 80bd57a2ac3fc95adef18acd9cfd7744ca112b01
 SHA1 (patch-data_net__4__5_Makefile.am) = d7591e835bfdd27fa0fba4b669b778924c811be4
 SHA1 (patch-external_bdwgc_CMakeLists.txt) = 33efc37b9260716fca95d9933016c6b2fb55d18e
-SHA1 (patch-external_boringssl_CMakeLists.txt) = f1fb377878bfdc3514108d8abeb334fb28bb3b96
-SHA1 (patch-external_boringssl_crypto_cpu-aarch64-linux.c) = 7c876a1e937e21758199a1842bfc15c205069922
 SHA1 (patch-external_boringssl_include_openssl_thread.h) = a0855fa36e98111961e58338e7c810c5e0568bfb
 SHA1 (patch-external_boringssl_third__party_android-cmake_android.toolchain.cmake) = efe2df8dd238d6c31f8e7d5d1c3820e56506cca1
 SHA1 (patch-external_boringssl_util_android-cmake_android.toolchain.cmake) = 9a97a42364dbc1402c9085b5c1918d254a237362
@@ -30,9 +28,8 @@ SHA1 (patch-external_llvm-project_openmp_cmake_DetectTestCompiler_CMakeLists.txt
 SHA1 (patch-external_llvm-project_openmp_runtime_cmake_LibompCheckLinkerFlag.cmake) = 2ae5282fbba399a2c35f43dfab23ff1ceea25f3b
 SHA1 (patch-mcs_class_System_System.Net.NetworkInformation_UnixNetworkInterfaceFactory.cs) = 90cb31154f325c19ae82a9e7dd52b4de0ee7b2d2
 SHA1 (patch-mcs_class_System_System_Platform.cs) = ef773547c0f27738319e1c9d4c8624185456ee0c
-SHA1 (patch-mono_btls_CMakeLists.txt) = 7729551ad083353a54a6cf426632c77508ded1f2
 SHA1 (patch-mono_eglib_giconv.c) = 5c2ca5788b93d371d1aa30f296a447516b622a4e
-SHA1 (patch-mono_metadata_icall.c) = 9c0ec3d4d3263943a7351a76065ef80ce312396a
+SHA1 (patch-mono_metadata_icall.c) = 282c08c710acea35c34a8e001fcf091119fdad30
 SHA1 (patch-mono_metadata_w32mutex-unix.c) = c3d424fe4ae1079c9c664c876a087fb0134f2e22
 SHA1 (patch-mono_mini_Makefile.am.in) = 7f4555b53e74646d96c847862999e4eceaa86164
 SHA1 (patch-mono_mini_Makefile.in) = c8a96e8d9139b5f1c751abc2256af45c219e504e
@@ -40,10 +37,10 @@ SHA1 (patch-mono_tests_Makefile.am) = ddeab885c28be53dc457261c63af53b3de754052
 SHA1 (patch-mono_tests_Makefile.in) = cf6a670e94b52f41d30ae6262f2f4ed5c0da4c05
 SHA1 (patch-mono_utils_jemalloc_Makefile.in) = bb20a6f72c88632bf2e75c83174b4255788ad4ff
 SHA1 (patch-mono_utils_mono-os-semaphore.h) = b850911945c95be804e9462263d558ef702831ca
-SHA1 (patch-mono_utils_mono-sigcontext.h) = e57bda25e6554e89899da9d56682e912315970ad
+SHA1 (patch-mono_utils_mono-sigcontext.h) = c33ea13db04cb27e42ea97649f773a2b5e6f061b
 SHA1 (patch-mono_utils_mono-threads-posix.c) = 3111d6a47fa104d964b34fdb5f7eca8643559ea3
 SHA1 (patch-mono_utils_mono-utils-debug.c) = 39f099969040b3a52101b611be723b25674ea68b
-SHA1 (patch-msvc_mono.props) = 0ffb74104049e763d28a2c7a17433b35ffb4cf3b
+SHA1 (patch-msvc_mono.props) = a42c0e6d3d8e197cd3ec38bf0fdd23532da205b5
 SHA1 (patch-runtime_mono-wrapper.in) = ea40d2f2e8b67de0ae42c6e608e3c085dc2b040e
 SHA1 (patch-scripts_submodules_versions.mk) = ca45d582a09af1bb3a1031a689c188605dea91b8
 SHA1 (patch-support_minizip_ioapi.c) = 605c86916c957c31a8b3048d7703482f8f545463
