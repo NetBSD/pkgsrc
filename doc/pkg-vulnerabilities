@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.724 2026/01/30 11:05:48 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.725 2026/02/03 11:58:22 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29546,3 +29546,71 @@ hiawatha-[0-9]*	double-free	https://nvd.nist.gov/vuln/detail/CVE-2025-57785
 py{27,310,311,312,313,314}-gi-docgen<2025.5	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-11687
 py{27,310,311,312,313,314}-python-multipart<0.0.22	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2026-24486
 #qgis-[0-9]*	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2026-24480	# CI/CD vulnerability
+alsa-lib>=1.2.2<1.2.15.3	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-25068
+cacti<1.2.27	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-45160
+chromium<144.0.7559.110	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-1504
+codeblocks-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-37038
+codeblocks-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-37040
+expat<2.7.4	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-25210
+furnace<0.6.8.3	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-24800
+glib2<2.86.4	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-1484
+glib2<2.86.4	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-1485
+glib2<2.86.4	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-1489
+gnome-font-viewer-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2020-37011
+gnupg2>=2.5.13<2.5.17	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-24881
+#gnupg2<2.5.17	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-24882 # security/gnupg2 does not build tpm2daemon
+gnupg2>=2.5.3<2.5.17	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-24883
+go124<1.24.12	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61726
+go125<1.25.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61726
+go124<1.24.12	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61728
+go125<1.25.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61728
+go124<1.24.12	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-61730
+go125<1.25.6	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-61730
+go124<1.24.12	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2025-61731
+go125<1.25.6	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2025-61731
+go125<1.25.6	code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-68119
+grafana<12.3.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-21720
+grafana<12.3.1	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2026-21721
+icingaweb2-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-50942
+libsoup-[0-9]*	crlf-attack	https://nvd.nist.gov/vuln/detail/CVE-2026-1467
+libsoup-[0-9]*	crlf-attack	https://nvd.nist.gov/vuln/detail/CVE-2026-1536
+libsoup-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-1539
+libsoup-[0-9]*	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2026-1760
+libsoup-[0-9]*	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-1761
+libxml2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-1757
+mongo-c-driver<2.1.3	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-14911
+monit-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-36968
+monit-[0-9]*	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2020-36969
+openssl<3.6.1	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-11187
+openssl<3.6.1	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-15467
+openssl<3.6.1	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-15468
+openssl<3.6.1	improper-validation-of-certificate	https://nvd.nist.gov/vuln/detail/CVE-2025-15469
+openssl<3.6.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-66199
+openssl<3.6.1	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-68160
+openssl<3.6.1	weak-cryptography	https://nvd.nist.gov/vuln/detail/CVE-2025-69418
+openssl<3.6.1	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-69419
+openssl<3.6.1	improper-validation-of-certificate	https://nvd.nist.gov/vuln/detail/CVE-2025-69420
+openssl<3.6.1	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-69421
+openssl<3.6.1	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-22795
+openssl<3.6.1	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-22796
+#only unrelased versions
+#openvpn>=2.7alpha_1<2.7rc5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-15497
+png<1.6.47	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-28162
+png<1.6.47	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-28164
+py{27,310,311,312,313,314}-octoprint<1.11.6	timing-attack	https://nvd.nist.gov/vuln/detail/CVE-2026-23892
+py{27,310,311,312,313,314}-pdf<6.6.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-24688
+py{27,310,311,312,313,314}-pip<26.0	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2026-1703
+py{27,310,311,312,313,314}-torch<2.10.0	code-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-24747
+rawtherapee<5.12	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-24808
+ruby{32,33,34}-activestorage61-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-24293
+ruby{32,33,34}-activestorage70-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-24293
+ruby{32,33,34}-activestorage71<7.1.5.2	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-24293
+ruby{32,33,34}-activestorage72<7.2.2.2	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-24293
+ruby{32,33,34}-activestorage80<8.0.2.1	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-24293
+salt<3007.9	code-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-62348
+salt<3007.9	improper-authentication	https://nvd.nist.gov/vuln/detail/CVE-2025-62349
+tcpflow<1.6.2	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-25061
+xenkernel418-[0-9]*	buffer-overrun				https://nvd.nist.gov/vuln/detail/CVE-2025-58150
+xenkernel420-[0-9]*	buffer-overrun				https://nvd.nist.gov/vuln/detail/CVE-2025-58150
+xenkernel418-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-23553
+xenkernel420-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-23553
