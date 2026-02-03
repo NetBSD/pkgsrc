@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/01/27 08:39:26 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/02/03 13:56:02 ryoon Exp $
 
 DISTNAME=	kmymoney-5.2.1
 PKGREVISION=	2
@@ -35,6 +35,7 @@ BUILDLINK_API_DEPENDS.libofx+=  libofx>=0.10.9
 .include "../../finance/libofx/buildlink3.mk"
 .include "../../graphics/qt6-qtsvg/buildlink3.mk"
 .include "../../misc/kf6-kcontacts/buildlink3.mk"
+.include "../../security/gpgmepp/buildlink3.mk"
 .include "../../security/qgpgme/buildlink3.mk"
 .include "../../security/qt6-qtkeychain/buildlink3.mk"
 .include "../../textproc/kf6-kcompletion/buildlink3.mk"
