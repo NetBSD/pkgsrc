@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2018/02/15 07:30:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2026/02/03 08:39:32 wiz Exp $
 
 BUILDLINK_TREE+=	openct
 
@@ -11,11 +11,11 @@ BUILDLINK_PKGSRCDIR.openct?=	../../security/openct
 pkgbase := openct
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.openct:Mpcsc-lite)
+.if ${PKG_BUILD_OPTIONS.openct:Mpcsc-lite}
 .include "../../security/pcsc-lite/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.openct:Mlibusb)
+.if ${PKG_BUILD_OPTIONS.openct:Mlibusb}
 .include "../../mk/libusb.buildlink3.mk"
 .endif
 
