@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.888 2026/02/03 20:31:12 adam Exp $
+$NetBSD: CHANGES-2026,v 1.889 2026/02/03 21:01:47 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1119,3 +1119,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/fast_float to 8.2.3 [adam 2026-02-03]
 	Updated lang/python314 to 3.14.3 [adam 2026-02-03]
 	Updated lang/py314-html-docs to 3.14.3 [adam 2026-02-03]
+	Updated www/hugo to 0.155.2 [triaxx 2026-02-03]
