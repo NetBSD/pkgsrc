@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2024/12/04 11:07:19 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2026/02/03 09:01:00 wiz Exp $
 
 DISTNAME=	rc-1.7.4
 CATEGORIES=	shells plan9
-MASTER_SITES=	http://static.tobold.org/rc/
+#MASTER_SITES=	http://static.tobold.org/rc/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tobold.org/article/rc
-#HOMEPAGE=	http://plan9.bell-labs.com/sys/doc/rc.html
+#HOMEPAGE=	http://tobold.org/article/rc
 COMMENT=	Unix incarnation of the plan9 shell
 
 GNU_CONFIGURE=		yes
