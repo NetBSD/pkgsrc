@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.1 2024/12/25 09:40:30 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2026/02/03 12:57:31 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-memberof-/}
 COMMENT=	memberOf overlay for OpenLDAP
 
 CONFIGURE_ARGS+=	--enable-memberof=mod
-MAKE_JOBS_SAFE= 	NO
+MAKE_JOBS_SAFE=		no
 
 DEPENDS+=	openldap-server>=2.4.13nb1:../../databases/openldap-server
 
 BUILD_DIRS=		include libraries servers/slapd/overlays
-INSTALLATION_DIRS+=	lib/openldap 
+INSTALLATION_DIRS+=	lib/openldap
 
 do-install:
-	${LIBTOOL} --mode=install ${INSTALL_LIB}			\
+	${LIBTOOL} --mode=install ${INSTALL_LIB}		\
 		   ${WRKSRC}/servers/slapd/overlays/memberof.la	\
 		   ${DESTDIR}${PREFIX}/lib/openldap
 
