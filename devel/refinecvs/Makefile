@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.22 2025/07/04 08:47:06 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.23 2026/02/03 09:08:45 wiz Exp $
 
 DISTNAME=		refinecvs-0.86.1251
 PKGREVISION=		16
 CATEGORIES=		devel scm
-MASTER_SITES=		http://lev.serebryakov.spb.ru/refinecvs/
+MASTER_SITES=		https://lev.serebryakov.spb.ru/refinecvs/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://lev.serebryakov.spb.ru/refinecvs/
+HOMEPAGE=		https://lev.serebryakov.spb.ru/refinecvs/
 COMMENT=		Convert CVS repository to SVN dump
 
 do-configure:	# nothing
