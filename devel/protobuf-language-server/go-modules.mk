@@ -1,10 +1,10 @@
-# $NetBSD: go-modules.mk,v 1.2 2025/04/01 12:12:15 adam Exp $
+# $NetBSD: go-modules.mk,v 1.3 2026/02/03 19:20:10 adam Exp $
 
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.mod
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.zip
-GO_MODULE_FILES+=	github.com/emicklei/proto/@v/v1.14.0.mod
-GO_MODULE_FILES+=	github.com/emicklei/proto/@v/v1.14.0.zip
+GO_MODULE_FILES+=	github.com/emicklei/proto/@v/v1.14.1.mod
+GO_MODULE_FILES+=	github.com/emicklei/proto/@v/v1.14.1.zip
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.4.0.mod
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.6.mod
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.6.zip

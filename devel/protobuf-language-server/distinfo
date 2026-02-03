@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2025/04/01 12:12:15 adam Exp $
+$NetBSD: distinfo,v 1.3 2026/02/03 19:20:10 adam Exp $
 
 BLAKE2s (github.com_davecgh_go-spew_@v_v1.1.0.mod) = eee11d0ec5d2260dc11d9bfe8f9d523e54530b71cc8357f43c0214b3b74bef5c
 SHA512 (github.com_davecgh_go-spew_@v_v1.1.0.mod) = 5e079462f7e0dff0efda71f580aa185700cfa936b718a19d0e2a8c63212e47a07022dca0c282832d48e5165aae8e82aeeeb2ac3664268f1148fc772010fb860e
@@ -9,12 +9,12 @@ Size (github.com_davecgh_go-spew_@v_v1.1.1.mod) = 34 bytes
 BLAKE2s (github.com_davecgh_go-spew_@v_v1.1.1.zip) = 5281c0e301579c764ebf96f97056ba8fc1a8142d98f2fe44aabb07d7e8ae4f3e
 SHA512 (github.com_davecgh_go-spew_@v_v1.1.1.zip) = 7b4e4df2fea731e23e05437f26f24e32b2e99028d685b72e3a726c1cb616ada4a77ca4fb9db4a6fae48178cc5172e724b74499bc776d63a9110cb97377d5edeb
 Size (github.com_davecgh_go-spew_@v_v1.1.1.zip) = 60320 bytes
-BLAKE2s (github.com_emicklei_proto_@v_v1.14.0.mod) = fbec9c0c4bce7ec10b23c5e7db6126c4e13803f6e371742bb10aa896bdcbc6d4
-SHA512 (github.com_emicklei_proto_@v_v1.14.0.mod) = de169b0b50d285233181cd35bc2d2b5e96a7f7c5094baf0f4c2568ab14e8bb4360703708e3d36b8336887cf24c7c726bad3a24fc29a9e04e93011984dfd1c84b
-Size (github.com_emicklei_proto_@v_v1.14.0.mod) = 42 bytes
-BLAKE2s (github.com_emicklei_proto_@v_v1.14.0.zip) = 41e767222f57dbf7efe34e87ab8bb9adeebac6671e826a6eba8b435c70f1d68b
-SHA512 (github.com_emicklei_proto_@v_v1.14.0.zip) = 798722cf4ecab7a197c69bf4c6248a9fc056fd040952b738878da7a15e9788295e7faf442c364675309833b96ae61a2bfa94d6d9b336a6a4b28f5ee69d2ada7a
-Size (github.com_emicklei_proto_@v_v1.14.0.zip) = 78904 bytes
+BLAKE2s (github.com_emicklei_proto_@v_v1.14.1.mod) = fbec9c0c4bce7ec10b23c5e7db6126c4e13803f6e371742bb10aa896bdcbc6d4
+SHA512 (github.com_emicklei_proto_@v_v1.14.1.mod) = de169b0b50d285233181cd35bc2d2b5e96a7f7c5094baf0f4c2568ab14e8bb4360703708e3d36b8336887cf24c7c726bad3a24fc29a9e04e93011984dfd1c84b
+Size (github.com_emicklei_proto_@v_v1.14.1.mod) = 42 bytes
+BLAKE2s (github.com_emicklei_proto_@v_v1.14.1.zip) = d5b7e49d53f20f9bcc595356318001fda8f17a2e40df20fa7e793d8447453408
+SHA512 (github.com_emicklei_proto_@v_v1.14.1.zip) = b64e6c38596de1a67a4df2f0580558f672073dab97e0b78d94d4715a91e2699c0b85c1d4602df5b9c63f8d18fcf59afab68aaadb1292a5aa2e0536f9d41af371
+Size (github.com_emicklei_proto_@v_v1.14.1.zip) = 81563 bytes
 BLAKE2s (github.com_google_go-cmp_@v_v0.4.0.mod) = 54befdbebc1a7ed8c2f5de2cc688fab3ab3337a212c5f36bde6d427830820200
 SHA512 (github.com_google_go-cmp_@v_v0.4.0.mod) = cb203760fc6ca9c9d64811cf1342752faa5a95f27934c298407dc865f9561081210dd1b82b15ee2f5337b70d4c55d102d8884b5b9a5f70d9cbf85227a32b9713
 Size (github.com_google_go-cmp_@v_v0.4.0.mod) = 105 bytes
@@ -111,6 +111,6 @@ Size (gopkg.in_yaml.v3_@v_v3.0.0-20210107192922-496545a6307b.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.0-20210107192922-496545a6307b.zip) = 04d74632486e9040cbbd56b8326afb1971f28972ea65f9aa5be2a5f9692ad77f
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.0-20210107192922-496545a6307b.zip) = f9c0400f1f5590d7185ae3fdac7adf1787a5f5198e52ebd02841b7df5113c5e34de6a66fa01b2f5735be4b21190dffb46e9d8b084ad5c00ebd99599a39ff73db
 Size (gopkg.in_yaml.v3_@v_v3.0.0-20210107192922-496545a6307b.zip) = 105245 bytes
-BLAKE2s (protobuf-language-server-0.1.1.tar.gz) = e7b706878da344645830069ecdc3dba4f8ad122b7c859f9d20dd58751e6ff659
-SHA512 (protobuf-language-server-0.1.1.tar.gz) = 74b9836538675297986ddcd49913a6709d1f24cffd4460df4780b65e76908d9a0330e49d69d97c79ba42d7da9bb899604a824f51b9adf7f9c263f65243c0554e
-Size (protobuf-language-server-0.1.1.tar.gz) = 2169053 bytes
+BLAKE2s (protobuf-language-server-0.1.2.tar.gz) = 4db9ba1c8736481c85ff893fde863afcce1f00f69728174304272785b72d7125
+SHA512 (protobuf-language-server-0.1.2.tar.gz) = 7ed76a2b382b2c47529fd8fa12bca7231068c24e786bfcf2633db9cfa886d3ca9059a7b9b82b29b6aab36d7b284be43de4f459771d055bb1bf4d8e4f423e4cef
+Size (protobuf-language-server-0.1.2.tar.gz) = 2171898 bytes
