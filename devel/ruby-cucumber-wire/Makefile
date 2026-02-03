@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2023/12/17 17:29:24 taca Exp $
+# $NetBSD: Makefile,v 1.14 2026/02/03 15:05:45 taca Exp $
 
-DISTNAME=	cucumber-wire-7.0.0
+DISTNAME=	cucumber-wire-8.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
@@ -8,8 +8,8 @@ HOMEPAGE=	https://cucumber.io/
 COMMENT=	Wire protocol for Cucumber
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-cucumber-core>=10.1<14:../../devel/ruby-cucumber-core
-DEPENDS+=	${RUBY_PKGPREFIX}-cucumber-cucumber-expressions>=14.0<18:../../devel/ruby-cucumber-expressions
+DEPENDS+=	${RUBY_PKGPREFIX}-cucumber-core>=11<16:../../devel/ruby-cucumber-core
+DEPENDS+=	${RUBY_PKGPREFIX}-cucumber-cucumber-expressions>=14.0<20:../../devel/ruby-cucumber-expressions
 
 USE_LANGUAGES=	# none
 
