@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/02/03 14:45:13 taca Exp $
+
+BLAKE2s (with_advisory_lock-7.5.0.gem) = 29c28f6ba98c602c7419c724b36feb3caa7318e3f59c07e46472621b7d6b58e4
+SHA512 (with_advisory_lock-7.5.0.gem) = 6bfefb01b58ede169b350eabc2491116f36581e123d9a612f92a42b43bd63d198ccf1f08b2ad580124ba736a577b449efc8f54fbd47ad97bfa7a093c7d59ff3f
+Size (with_advisory_lock-7.5.0.gem) = 32768 bytes
