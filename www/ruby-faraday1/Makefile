@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/09/22 08:01:48 taca Exp $
+# $NetBSD: Makefile,v 1.4 2026/02/03 16:05:54 taca Exp $
 
 DISTNAME=	faraday-1.10.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/faraday/&1/}
@@ -22,6 +22,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-faraday-retry1>=1.0<2:../../www/ruby-faraday-retry1
 DEPENDS+=	${RUBY_PKGPREFIX}-ruby2_keywords>=0.0.4:../../devel/ruby-ruby2_keywords
 
 USE_LANGUAGES=	# none
+
+RUBY_VERSIONS_ACCEPTED=	32 33 34
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
