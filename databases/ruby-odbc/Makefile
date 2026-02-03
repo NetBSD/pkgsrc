@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/04/09 16:40:41 taca Exp $
+# $NetBSD: Makefile,v 1.21 2026/02/03 16:04:39 taca Exp $
 
 DISTNAME=	ruby-odbc-0.999992
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
@@ -14,7 +14,9 @@ LICENSE=	gnu-gpl-v2 OR ruby-license
 
 CONFIGURE_ARGS=	--disable-dlopen
 
-pre-patch:
+RUBY_ALLOW_HAS_RDOC=	# empty
+
+pre-configure:
 	mv ${WRKSRC}/ruby-odbc.gemspec ${GEM_SPECFILE}
 
 .include "options.mk"
