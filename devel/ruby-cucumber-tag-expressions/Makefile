@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/02/04 16:39:48 taca Exp $
+# $NetBSD: Makefile,v 1.7 2026/02/03 14:56:52 taca Exp $
 
-DISTNAME=	cucumber-tag-expressions-6.1.0
+DISTNAME=	cucumber-tag-expressions-8.1.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
