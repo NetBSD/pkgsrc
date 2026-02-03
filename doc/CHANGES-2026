@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.869 2026/02/03 14:51:32 taca Exp $
+$NetBSD: CHANGES-2026,v 1.870 2026/02/03 14:53:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1098,3 +1098,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added databases/ruby-with_advisory_lock version 7.5.0 [taca 2026-02-03]
 	Updated devel/ruby-cucumber-expressions to 19.0.0 [taca 2026-02-03]
 	Updated devel/ruby-cucumber-messages to 32.0.1 [taca 2026-02-03]
+	Updated lang/ruby-cucumber-gherkin to 38.0.0 [taca 2026-02-03]
