@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.886 2026/02/03 16:08:07 taca Exp $
+$NetBSD: CHANGES-2026,v 1.887 2026/02/03 19:21:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1115,3 +1115,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-aws-sdk-core to 3.242.0 [taca 2026-02-03]
 	Added lang/ruby40 version 4.0.1 [taca 2026-02-03]
 	Updated www/ruby-faraday_middleware to 1.2.1 [taca 2026-02-03]
+	Updated devel/protobuf-language-server to 0.1.2 [adam 2026-02-03]
+	Updated math/fast_float to 8.2.3 [adam 2026-02-03]
