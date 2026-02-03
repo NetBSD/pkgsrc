@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2022/02/08 13:39:17 gavan Exp $
+@comment $NetBSD: PLIST,v 1.30 2026/02/03 15:17:53 ryoon Exp $
 bin/al
 bin/al2
 bin/aprofutil
@@ -93,6 +93,7 @@ bin/xbuild
 bin/xsd
 include/mono-2.0/mono/cil/opcode.def
 include/mono-2.0/mono/jit/jit.h
+include/mono-2.0/mono/jit/mono-private-unstable.h
 include/mono-2.0/mono/metadata/appdomain.h
 include/mono-2.0/mono/metadata/assembly.h
 include/mono-2.0/mono/metadata/attrdefs.h
@@ -108,6 +109,7 @@ include/mono-2.0/mono/metadata/metadata.h
 include/mono-2.0/mono/metadata/mono-config.h
 include/mono-2.0/mono/metadata/mono-debug.h
 include/mono-2.0/mono/metadata/mono-gc.h
+include/mono-2.0/mono/metadata/mono-private-unstable.h
 include/mono-2.0/mono/metadata/object-forward.h
 include/mono-2.0/mono/metadata/object.h
 include/mono-2.0/mono/metadata/opcodes.h
@@ -125,6 +127,7 @@ include/mono-2.0/mono/utils/mono-error.h
 include/mono-2.0/mono/utils/mono-forward.h
 include/mono-2.0/mono/utils/mono-jemalloc.h
 include/mono-2.0/mono/utils/mono-logger.h
+include/mono-2.0/mono/utils/mono-private-unstable.h
 include/mono-2.0/mono/utils/mono-publib.h
 lib/libMonoPosixHelper.la
 lib/libMonoSupportW.la
@@ -134,8 +137,8 @@ lib/libmono-2.0.la
 lib/libmono-2.0.so
 lib/libmono-2.0.so.1
 lib/libmono-2.0.so.1.0.0
-lib/libmono-native.la
 lib/libmono-btls-shared.so
+lib/libmono-native.la
 lib/libmono-profiler-aot-static.la
 lib/libmono-profiler-aot.la
 lib/libmono-profiler-coverage-static.la
@@ -3400,6 +3403,7 @@ share/examples/mono/mconfig/config.xml
 share/locale/de/LC_MESSAGES/mcs.mo
 share/locale/es/LC_MESSAGES/mcs.mo
 share/locale/ja/LC_MESSAGES/mcs.mo
+share/locale/ka/LC_MESSAGES/mcs.mo
 share/locale/pt_BR/LC_MESSAGES/mcs.mo
 share/mono-2.0/mono/cil/cil-opcodes.xml
 share/mono-2.0/mono/eglib/eglib-config.h
