@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/10/23 20:37:13 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/02/03 09:06:57 wiz Exp $
 
 DISTNAME=	redeclipse_2.0.0_nix
 PKGNAME=	redeclipse-2.0.0
@@ -10,7 +10,7 @@ GITHUB_PROJECT=	base
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	charlotte@NetBSD.org
-HOMEPAGE=	https://redeclipse.net/
+HOMEPAGE=	https://github.com/redeclipse/base
 COMMENT=	Free casual arena shooter
 LICENSE=	zlib AND cc-by-sa-v3.0
 
