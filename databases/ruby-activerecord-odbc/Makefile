@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/09/03 15:42:31 taca Exp $
+# $NetBSD: Makefile,v 1.15 2026/02/03 16:04:38 taca Exp $
 
 DISTNAME=	activerecord-odbc-adapter-2.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/-adapter//}
@@ -15,6 +15,7 @@ DEPENDS+=	${RUBY_ACTIVERECORD_DEPENDS}
 
 USE_LANGUAGES=	# none
 
+RUBY_ALLOW_HAS_RDOC=	# empty
 RUBY_RAILS_ACCEPTED=	# empty
 OVERRIDE_GEMSPEC=	:files lib/connection_adapters=
 
