@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.884 2026/02/03 15:46:13 taca Exp $
+$NetBSD: CHANGES-2026,v 1.885 2026/02/03 16:01:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1113,3 +1113,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ruby-diff-lcs to 2.0.0 [taca 2026-02-03]
 	Updated www/ruby-aws-partitions to 1.1212.0 [taca 2026-02-03]
 	Updated www/ruby-aws-sdk-core to 3.242.0 [taca 2026-02-03]
+	Added lang/ruby40 version 4.0.1 [taca 2026-02-03]
