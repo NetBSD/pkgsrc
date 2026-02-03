@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.3 2020/04/03 10:58:39 jperkin Exp $
-
-In order to enable the use of this module, add this directive to slapd.conf:
-
-  moduleload      smbk5pwd.la
-===========================================================================
