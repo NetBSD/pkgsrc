@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.872 2026/02/03 15:03:47 taca Exp $
+$NetBSD: CHANGES-2026,v 1.873 2026/02/03 15:05:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1101,3 +1101,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/ruby-cucumber-gherkin to 38.0.0 [taca 2026-02-03]
 	Updated devel/ruby-cucumber-tag-expressions to 8.1.0 [taca 2026-02-03]
 	Updated devel/ruby-cucumber-core to 15.4.0 [taca 2026-02-03]
+	Updated devel/ruby-cucumber-wire to 8.0.0 [taca 2026-02-03]
