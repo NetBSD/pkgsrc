@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/12/02 21:34:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/02/03 20:30:46 adam Exp $
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -2088,6 +2088,9 @@ lib/python${PY_VER_SUFFIX}/pydoc_data/__init__.py
 lib/python${PY_VER_SUFFIX}/pydoc_data/__init__.pyc
 lib/python${PY_VER_SUFFIX}/pydoc_data/__init__.pyo
 lib/python${PY_VER_SUFFIX}/pydoc_data/_pydoc.css
+lib/python${PY_VER_SUFFIX}/pydoc_data/module_docs.py
+lib/python${PY_VER_SUFFIX}/pydoc_data/module_docs.pyc
+lib/python${PY_VER_SUFFIX}/pydoc_data/module_docs.pyo
 lib/python${PY_VER_SUFFIX}/pydoc_data/topics.py
 lib/python${PY_VER_SUFFIX}/pydoc_data/topics.pyc
 lib/python${PY_VER_SUFFIX}/pydoc_data/topics.pyo
@@ -2224,6 +2227,7 @@ lib/python${PY_VER_SUFFIX}/tarfile.pyo
 lib/python${PY_VER_SUFFIX}/tempfile.py
 lib/python${PY_VER_SUFFIX}/tempfile.pyc
 lib/python${PY_VER_SUFFIX}/tempfile.pyo
+lib/python${PY_VER_SUFFIX}/test/NormalizationTest-3.2.0.txt
 lib/python${PY_VER_SUFFIX}/test/__init__.py
 lib/python${PY_VER_SUFFIX}/test/__init__.pyc
 lib/python${PY_VER_SUFFIX}/test/__init__.pyo
@@ -2686,9 +2690,15 @@ lib/python${PY_VER_SUFFIX}/test/mp_preload_flush.pyo
 lib/python${PY_VER_SUFFIX}/test/mp_preload_main.py
 lib/python${PY_VER_SUFFIX}/test/mp_preload_main.pyc
 lib/python${PY_VER_SUFFIX}/test/mp_preload_main.pyo
+lib/python${PY_VER_SUFFIX}/test/mp_preload_sysargv.py
+lib/python${PY_VER_SUFFIX}/test/mp_preload_sysargv.pyc
+lib/python${PY_VER_SUFFIX}/test/mp_preload_sysargv.pyo
 lib/python${PY_VER_SUFFIX}/test/multibytecodec_support.py
 lib/python${PY_VER_SUFFIX}/test/multibytecodec_support.pyc
 lib/python${PY_VER_SUFFIX}/test/multibytecodec_support.pyo
+lib/python${PY_VER_SUFFIX}/test/picklecommon.py
+lib/python${PY_VER_SUFFIX}/test/picklecommon.pyc
+lib/python${PY_VER_SUFFIX}/test/picklecommon.pyo
 lib/python${PY_VER_SUFFIX}/test/pickletester.py
 lib/python${PY_VER_SUFFIX}/test/pickletester.pyc
 lib/python${PY_VER_SUFFIX}/test/pickletester.pyo
@@ -5852,6 +5862,9 @@ lib/python${PY_VER_SUFFIX}/test/test_xml_etree_c.pyo
 lib/python${PY_VER_SUFFIX}/test/test_xmlrpc.py
 lib/python${PY_VER_SUFFIX}/test/test_xmlrpc.pyc
 lib/python${PY_VER_SUFFIX}/test/test_xmlrpc.pyo
+lib/python${PY_VER_SUFFIX}/test/test_xpickle.py
+lib/python${PY_VER_SUFFIX}/test/test_xpickle.pyc
+lib/python${PY_VER_SUFFIX}/test/test_xpickle.pyo
 lib/python${PY_VER_SUFFIX}/test/test_xxlimited.py
 lib/python${PY_VER_SUFFIX}/test/test_xxlimited.pyc
 lib/python${PY_VER_SUFFIX}/test/test_xxlimited.pyo
@@ -6085,6 +6098,9 @@ lib/python${PY_VER_SUFFIX}/test/xmltestdata/test.xml.out
 lib/python${PY_VER_SUFFIX}/test/xmltests.py
 lib/python${PY_VER_SUFFIX}/test/xmltests.pyc
 lib/python${PY_VER_SUFFIX}/test/xmltests.pyo
+lib/python${PY_VER_SUFFIX}/test/xpickle_worker.py
+lib/python${PY_VER_SUFFIX}/test/xpickle_worker.pyc
+lib/python${PY_VER_SUFFIX}/test/xpickle_worker.pyo
 lib/python${PY_VER_SUFFIX}/test/zipimport_data/sparse-zip64-c0-0x000000000.part
 lib/python${PY_VER_SUFFIX}/test/zipimport_data/sparse-zip64-c0-0x100000000.part
 lib/python${PY_VER_SUFFIX}/test/zipimport_data/sparse-zip64-c0-0x200000000.part
