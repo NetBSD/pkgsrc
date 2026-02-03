@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2026/01/27 08:41:00 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2026/02/03 08:51:16 wiz Exp $
 
 DISTNAME=	lxsession-0.5.5
 PKGREVISION=	14
@@ -21,6 +21,8 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR}/autostart
 
 CONF_FILES+=	${LXDE_CONF}/lxpolkit.desktop \
 		${PKG_SYSCONFDIR}/autostart/lxpolkit.desktop
+
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths.
