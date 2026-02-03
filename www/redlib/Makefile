@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/04/10 19:32:52 pin Exp $
+# $NetBSD: Makefile,v 1.4 2026/02/03 09:08:18 wiz Exp $
 
 DISTNAME=	redlib-0.36.0
 CATEGORIES=	www
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=redlib-org/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	vins@NetBSD.org
-HOMEPAGE=	https://github.com/redlib/redlib/
+HOMEPAGE=	https://github.com/redlib-org/redlib
 COMMENT=	Private front-end for Reddit
 LICENSE=	gnu-agpl-v3
 
