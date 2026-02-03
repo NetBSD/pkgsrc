@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2025/03/16 13:57:37 taca Exp $
+# $NetBSD: Makefile,v 1.22 2026/02/03 15:07:56 taca Exp $
 
-DISTNAME=	RubyInline-3.14.2
+DISTNAME=	RubyInline-3.14.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/^Ruby//:tl}
 CATEGORIES=	devel
 
