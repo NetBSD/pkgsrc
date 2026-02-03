@@ -1,0 +1,21 @@
+Ruby is an interpreted object-oriented programming language often used
+for web development.  It also offers many scripting features to
+process plain text and serialized files, or manage system tasks.  It
+is simple, straightforward, and extensible.
+
+Ruby 4.0 introduces a number of new features and performance improvements,
+here are some of them:
+  * Ruby Box
+
+	a new (experimental) feature to provide separation about definitions
+
+  * Performance: ZJIT
+
+	a new just-in-time (JIT) compiler, which is developed as the
+	next generation of YJIT
+
+	It is not enabled on pkgsrc for now.
+
+  * Ractor Improvements
+  * Stdlib updates
+  * Retirement of RJIT: Experital pure-Ruby JIT compiler

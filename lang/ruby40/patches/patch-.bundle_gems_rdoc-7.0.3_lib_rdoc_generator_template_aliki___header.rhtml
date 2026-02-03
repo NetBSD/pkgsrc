@@ -1,0 +1,30 @@
+$NetBSD: patch-.bundle_gems_rdoc-7.0.3_lib_rdoc_generator_template_aliki___header.rhtml,v 1.1 2026/02/03 16:00:33 taca Exp $
+
+Make template file to US-ASCC encoding.
+
+--- .bundle/gems/rdoc-7.0.3/lib/rdoc/generator/template/aliki/_header.rhtml.orig	2026-01-13 02:02:42.000000000 +0000
++++ .bundle/gems/rdoc-7.0.3/lib/rdoc/generator/template/aliki/_header.rhtml
+@@ -19,12 +19,12 @@
+ 
+   <!-- Mobile search icon button -->
+   <button id="search-toggle" class="navbar-search-mobile" aria-label="Open search" type="button">
+-    <span aria-hidden="true">🔍</span>
++    <span aria-hidden="true">&#x1f50d;</span>
+   </button>
+ 
+   <!-- Theme toggle button -->
+   <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" type="button">
+-    <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
++    <span class="theme-toggle-icon" aria-hidden="true">&#x1f319;</span>
+   </button>
+ </header>
+ 
+@@ -34,7 +34,7 @@
+   <div class="search-modal-content">
+     <div class="search-modal-header">
+       <form class="search-modal-form" action="#" method="get" accept-charset="utf-8">
+-        <span class="search-modal-icon" aria-hidden="true">🔍</span>
++        <span class="search-modal-icon" aria-hidden="true">&#x1f50d;</span>
+         <input id="search-field-mobile" role="combobox" aria-label="Search"
+                aria-autocomplete="list" aria-controls="search-results-mobile"
+                type="text" name="search" placeholder="Search documentation"
