@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.725 2026/02/03 11:58:22 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.726 2026/02/03 12:40:13 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29614,3 +29614,44 @@ xenkernel418-[0-9]*	buffer-overrun				https://nvd.nist.gov/vuln/detail/CVE-2025-
 xenkernel420-[0-9]*	buffer-overrun				https://nvd.nist.gov/vuln/detail/CVE-2025-58150
 xenkernel418-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-23553
 xenkernel420-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-23553
+mediawiki<1.43.4	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-11173
+mediawiki<1.43.5	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-11261
+mediawiki<1.43.4	unspecified		https://nvd.nist.gov/vuln/detail/CVE-2025-61634
+mediawiki<1.43.6	brute-force		https://nvd.nist.gov/vuln/detail/CVE-2025-61635
+mediawiki<1.43.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-61636
+mediawiki<1.43.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-61637
+mediawiki<1.43.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-61638
+mediawiki<1.43.4	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-61639
+mediawiki<1.43.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-61640
+mediawiki<1.43.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61641
+mediawiki<1.43.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-61642
+mediawiki<1.43.4	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-61643
+mediawiki-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-61644
+mediawiki<1.44.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-61645
+mediawiki<1.43.4	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-61646
+mediawiki<1.44.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-61648
+mediawiki<1.43.4	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-61652
+mediawiki<1.43.4	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-61653
+mediawiki<1.43.4	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-61654
+mediawiki<1.43.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-61655
+mediawiki<1.43.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-61657
+mediawiki<1.43.6	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-6589
+mediawiki<1.43.2	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-6590
+mediawiki<1.43.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-6591
+mediawiki<1.43.2	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-6592
+mediawiki<1.43.2	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-6593
+mediawiki<1.43.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-6594
+mediawiki<1.43.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-6595
+mediawiki<1.43.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-6596
+mediawiki<1.43.2	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-6597
+mediawiki<1.43.6	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-67475
+mediawiki<1.44.3	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-67476
+mediawiki<1.44.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-67477
+mediawiki<1.43.4	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-67478
+mediawiki<1.43.4	unspecified		https://nvd.nist.gov/vuln/detail/CVE-2025-67479
+mediawiki<1.43.6	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-67480
+mediawiki<1.43.6	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-67481
+mediawiki<1.43.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-67482
+mediawiki<1.43.6	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-67483
+mediawiki<1.43.6	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-67484
+mediawiki<1.43.2	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-6927
