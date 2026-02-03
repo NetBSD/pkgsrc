@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/09/15 11:48:00 adam Exp $
+$NetBSD: distinfo,v 1.4 2026/02/03 10:23:15 adam Exp $
 
-BLAKE2s (zope_component-7.0.tar.gz) = 19503054fa694d69c13d6e4df0c4e61f4213e8f001f803ef299bd1a38b123d3c
-SHA512 (zope_component-7.0.tar.gz) = e5ba3dca773e19aa9333a85305fc28eea82ecf406c6c5028cf6eb9473ee896653c2aa9e3773614867df1019663e63fad068d1e6707526ee358d41f208be9f4c8
-Size (zope_component-7.0.tar.gz) = 91467 bytes
+BLAKE2s (zope_component-7.1.tar.gz) = d2940df34a433751f5b6d1b172f97407fe639ee5c3965c0a3a07626a4aad7b03
+SHA512 (zope_component-7.1.tar.gz) = 1b93eb25475fdd44560f2300faf0ac0eb4cbce71caa417e5083ae6b66219c5657244b12e906fd798d5bd8b31f7aac4f86925664c2dbcca4740db8a405a608f50
+Size (zope_component-7.1.tar.gz) = 91153 bytes
