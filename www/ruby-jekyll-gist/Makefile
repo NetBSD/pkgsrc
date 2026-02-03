@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/01/09 08:11:00 taca Exp $
+# $NetBSD: Makefile,v 1.9 2026/02/03 16:05:54 taca Exp $
 
 DISTNAME=	jekyll-gist-1.5.0
 PKGREVISION=	1
@@ -13,6 +13,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-octokit4>=4.2<5:../../devel/ruby-octokit4
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:run
+
+RUBY_VERSIONS_ACCEPTED=	32 33 34
 
 REPLACE_BASH+=	script/bootstrap script/cibuild script/fmt script/release
 
