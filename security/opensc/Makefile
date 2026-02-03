@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2026/01/07 08:48:43 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2026/02/03 08:41:03 wiz Exp $
 
 DISTNAME=	opensc-0.26.1
 PKGREVISION=	3
@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 # The stylesheets are not found without this.
 CONFIGURE_ARGS+=	--with-xsl-stylesheetsdir=${PREFIX}/share/xsl/docbook
 TEST_TARGET=		check
+
+CFLAGS.SunOS+=		-D__STDC_WANT_LIB_EXT1__=1
 
 .include "options.mk"
 
