@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.878 2026/02/03 15:18:52 taca Exp $
+$NetBSD: CHANGES-2026,v 1.879 2026/02/03 15:32:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1107,3 +1107,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-irb to 1.16.0 [taca 2026-02-03]
 	Updated lang/mono to 6.14.1 [ryoon 2026-02-03]
 	Updated finance/ruby-braintree to 4.35.0 [taca 2026-02-03]
+	Updated net/ruby-net-imap to 0.6.2 [taca 2026-02-03]
