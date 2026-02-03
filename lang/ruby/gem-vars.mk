@@ -1,4 +1,4 @@
-# $NetBSD: gem-vars.mk,v 1.13 2022/01/14 15:42:08 taca Exp $
+# $NetBSD: gem-vars.mk,v 1.14 2026/02/03 15:58:12 taca Exp $
 #
 # This Makefile fragment defines various make(1) variables for Ruby gems
 # support.
@@ -20,7 +20,7 @@ GEM_EXTSDIR=	${GEM_EXTSBASE}/${GEM_NAME}
 
 PLIST_SUBST+=	GEM_EXTSDIR=${GEM_EXTSDIR}
 
-.if ${_RUBY_GEM_MAJOR} >= 3 && ${_RUBY_GEM_MINOR} >= 2
+.if ${_RUBY_GEM_MAJOR} >= 4 || (${_RUBY_GEM_MAJOR} >= 3 && ${_RUBY_GEM_MINOR} >= 2)
 PLIST.ruby_plugins=	YES
 .endif
 
