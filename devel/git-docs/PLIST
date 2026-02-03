@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2025/11/18 16:24:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2026/02/03 09:13:32 adam Exp $
 man/man1/git-add.1
 man/man1/git-am.1
 man/man1/git-annotate.1
@@ -191,6 +191,7 @@ man/man7/gitcli.7
 man/man7/gitcore-tutorial.7
 man/man7/gitcredentials.7
 man/man7/gitcvs-migration.7
+man/man7/gitdatamodel.7
 man/man7/gitdiffcore.7
 man/man7/giteveryday.7
 man/man7/gitfaq.7
