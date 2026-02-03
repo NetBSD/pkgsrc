@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.866 2026/02/03 14:40:42 taca Exp $
+$NetBSD: CHANGES-2026,v 1.867 2026/02/03 14:46:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1095,3 +1095,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/openldap to 2.6.12 [adam 2026-02-03]
 	Updated databases/lmdb to 0.9.35 [adam 2026-02-03]
 	Updated archivers/ruby-zip to 3.2.2 [taca 2026-02-03]
+	Added databases/ruby-with_advisory_lock version 7.5.0 [taca 2026-02-03]
