@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/02/04 16:39:48 taca Exp $
+$NetBSD: distinfo,v 1.9 2026/02/03 14:56:52 taca Exp $
 
-BLAKE2s (cucumber-tag-expressions-6.1.0.gem) = 87ae234113ada249cfa34d32483d2048308c9c3fb4c124f992a174ceb3eb905d
-SHA512 (cucumber-tag-expressions-6.1.0.gem) = c165ef24fc6b4b46699dae1703d0106b27be0d48bec810f2c8d7e7c15405d0847752b49fd25f980b8e358a39f050d45e7deb1c3207741e4a436a1929719057ee
-Size (cucumber-tag-expressions-6.1.0.gem) = 6656 bytes
+BLAKE2s (cucumber-tag-expressions-8.1.0.gem) = b20b40c2298307455a9468cf886fb0adb5e08714269f904699b7dfdb1bc33120
+SHA512 (cucumber-tag-expressions-8.1.0.gem) = fffadd3aabe7dce3973ba0cc778ae77eb1157c127a874e982f08d8293f06a50dc6ecf91f7a171db82cd2eeadd3cbf6660c6ea350634e2a72b749b388f80f552d
+Size (cucumber-tag-expressions-8.1.0.gem) = 6656 bytes
