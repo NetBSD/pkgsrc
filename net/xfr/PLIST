@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2026/02/04 13:59:40 wiz Exp $
+bin/xfr
+man/man1/xfr.1
+share/examples/xfr/config.toml
