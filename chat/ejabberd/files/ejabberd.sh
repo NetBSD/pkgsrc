@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ejabberd.sh,v 1.4 2014/07/31 10:31:51 fhajny Exp $
+# $NetBSD: ejabberd.sh,v 1.5 2026/02/04 16:19:13 gdt Exp $
 # $FreeBSD: ejabberd.sh.in,v 1.1 2005/08/28 15:51:48 vsevolod Exp $
 #
 # PROVIDE: ejabberd
@@ -34,6 +34,9 @@ ejabberd_status()
 
 ejabberd_start()
 {
+    # epmd is an erlang nameserver.  Listen only on localhost, aligned
+    # with what 99.9% want.
+    export ERL_EPMD_ADDRESS=127.0.0.1
     echo -n "Starting $name: "
     if ejabberd_status; then
 	echo " already running."
