@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/12/02 21:33:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/02/04 14:15:49 adam Exp $
 share/doc/python3.13/.buildinfo
 share/doc/python3.13/404.html
 share/doc/python3.13/_downloads/6dc1f3f4f0e6ca13cb42ddf4d6cbc8af/tzinfo_examples.py
@@ -101,6 +101,7 @@ share/doc/python3.13/_sources/deprecations/pending-removal-in-3.14.rst.txt
 share/doc/python3.13/_sources/deprecations/pending-removal-in-3.15.rst.txt
 share/doc/python3.13/_sources/deprecations/pending-removal-in-3.16.rst.txt
 share/doc/python3.13/_sources/deprecations/pending-removal-in-3.17.rst.txt
+share/doc/python3.13/_sources/deprecations/pending-removal-in-3.18.rst.txt
 share/doc/python3.13/_sources/deprecations/pending-removal-in-future.rst.txt
 share/doc/python3.13/_sources/distributing/index.rst.txt
 share/doc/python3.13/_sources/extending/building.rst.txt
@@ -530,7 +531,6 @@ share/doc/python3.13/_sources/whatsnew/3.8.rst.txt
 share/doc/python3.13/_sources/whatsnew/3.9.rst.txt
 share/doc/python3.13/_sources/whatsnew/changelog.rst.txt
 share/doc/python3.13/_sources/whatsnew/index.rst.txt
-share/doc/python3.13/_static/base-stemmer.js
 share/doc/python3.13/_static/basic.css
 share/doc/python3.13/_static/changelog_search.js
 share/doc/python3.13/_static/classic.css
@@ -538,7 +538,6 @@ share/doc/python3.13/_static/copybutton.js
 share/doc/python3.13/_static/default.css
 share/doc/python3.13/_static/doctools.js
 share/doc/python3.13/_static/documentation_options.js
-share/doc/python3.13/_static/english-stemmer.js
 share/doc/python3.13/_static/file.png
 share/doc/python3.13/_static/glossary.json
 share/doc/python3.13/_static/glossary_search.js
@@ -642,6 +641,7 @@ share/doc/python3.13/deprecations/pending-removal-in-3.14.html
 share/doc/python3.13/deprecations/pending-removal-in-3.15.html
 share/doc/python3.13/deprecations/pending-removal-in-3.16.html
 share/doc/python3.13/deprecations/pending-removal-in-3.17.html
+share/doc/python3.13/deprecations/pending-removal-in-3.18.html
 share/doc/python3.13/deprecations/pending-removal-in-future.html
 share/doc/python3.13/distributing/index.html
 share/doc/python3.13/download.html
