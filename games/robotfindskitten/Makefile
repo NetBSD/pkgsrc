@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2022/06/08 22:19:51 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.7 2026/02/04 10:34:45 wiz Exp $
 
 DISTNAME=	robotfindskitten-2.7182818.701
 CATEGORIES=	games
-MASTER_SITES=	http://robotfindskitten.org/download/POSIX/
+MASTER_SITES=	https://robotfindskitten.org/download/POSIX/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://robotfindskitten.org/
+HOMEPAGE=	https://robotfindskitten.org/
 COMMENT=	Yet another zen simulation
 LICENSE=	gnu-gpl-v2
 
