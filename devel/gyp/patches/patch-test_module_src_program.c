@@ -1,9 +1,9 @@
-$NetBSD: patch-test_module_src_program.c,v 1.1 2014/08/21 14:49:43 he Exp $
+$NetBSD: patch-test_module_src_program.c,v 1.2 2026/02/04 00:06:54 wiz Exp $
 
 Treat other targets than Windows the same,
 don't require explicit platform code here.
 
---- test/module/src/program.c.orig	2014-07-14 14:19:50.000000000 +0000
+--- test/module/src/program.c.orig	2026-02-04 00:01:38.000000000 +0000
 +++ test/module/src/program.c
 @@ -3,7 +3,7 @@
  
@@ -14,17 +14,18 @@ don't require explicit platform code here.
  #include <dlfcn.h>
  #include <libgen.h>
  #include <string.h>
-@@ -13,9 +13,7 @@
+@@ -13,10 +13,8 @@
  
  #if defined(PLATFORM_WIN)
  #define MODULE_SUFFIX ".dll"
 -#elif defined(PLATFORM_MAC)
--#define MODULE_SUFFIX ".so"
--#elif defined(PLATFORM_LINUX)
 +#else
  #define MODULE_SUFFIX ".so"
+-#elif defined(PLATFORM_LINUX)
+-#define MODULE_SUFFIX ".so"
  #endif
  
+ typedef void (*module_symbol)(void);
 @@ -56,7 +54,7 @@ void CallModule(const char* module) {
    funcptr();
  

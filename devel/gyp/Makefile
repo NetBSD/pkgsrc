@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2023/08/14 05:24:09 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2026/02/04 00:06:54 wiz Exp $
 
-GIT_VERSION=	20210830.d6c5dd51dc3a60bf4ff32a5256713690a1a10376
+GIT_VERSION=	20240206.1615ec326858f8c2bd8f30b3a86ea71830409ce4
 DIST_VERSION=	0.1
 DISTNAME=	gyp-${DIST_VERSION}pre${GIT_VERSION}
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/.[^.]*$//}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -13,13 +12,11 @@ HOMEPAGE=	https://gyp.gsrc.io/
 COMMENT=	GYP can Generate Your Projects
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
-EGG_NAME=	gyp-${DIST_VERSION}
+WRKSRC=		${WRKDIR}/gyp
 
-USE_PKG_RESOURCES=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+WHEEL_NAME=	gyp-${DIST_VERSION}
 
 # REPLACE_PYTHON settings farmed out due to size...
 .include "replace-python.mk"
@@ -46,7 +43,7 @@ USE_LANGUAGES=	c c++
 do-test:
 	${RUN}cd ${WRKSRC}; LANG=C ${SETENV} ${TEST_ENV} ${PYTHONBIN} gyptest.py -a -f make --passed
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
