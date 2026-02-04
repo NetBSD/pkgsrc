@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.893 2026/02/04 11:33:35 adam Exp $
+$NetBSD: CHANGES-2026,v 1.894 2026/02/04 12:11:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1125,3 +1125,20 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/gnupg2 to 2.5.17 [wiz 2026-02-04]
 	Updated lang/nodejs to 25.6.0 [adam 2026-02-04]
 	Updated archivers/zlib-ng to 2.3.3 [adam 2026-02-04]
+	Updated security/py-acme to 5.3.0 [adam 2026-02-04]
+	Updated security/py-certbot to 5.3.0 [adam 2026-02-04]
+	Updated security/py-certbot-apache to 5.3.0 [adam 2026-02-04]
+	Updated security/py-certbot-dns-cloudflare to 5.3.0 [adam 2026-02-04]
+	Updated security/py-certbot-dns-digitalocean to 5.3.0 [adam 2026-02-04]
+	Updated security/py-certbot-dns-dnsimple to 5.3.0 [adam 2026-02-04]
+	Updated security/py-certbot-dns-dnsmadeeasy to 5.3.0 [adam 2026-02-04]
+	Updated security/py-certbot-dns-gehirn to 5.3.0 [adam 2026-02-04]
+	Updated security/py-certbot-dns-google to 5.3.0 [adam 2026-02-04]
+	Updated security/py-certbot-dns-linode to 5.3.0 [adam 2026-02-04]
+	Updated security/py-certbot-dns-luadns to 5.3.0 [adam 2026-02-04]
+	Updated security/py-certbot-dns-nsone to 5.3.0 [adam 2026-02-04]
+	Updated security/py-certbot-dns-ovh to 5.3.0 [adam 2026-02-04]
+	Updated security/py-certbot-dns-rfc2136 to 5.3.0 [adam 2026-02-04]
+	Updated security/py-certbot-dns-route53 to 5.3.0 [adam 2026-02-04]
+	Updated security/py-certbot-dns-sakuracloud to 5.3.0 [adam 2026-02-04]
+	Updated security/py-certbot-nginx to 5.3.0 [adam 2026-02-04]
