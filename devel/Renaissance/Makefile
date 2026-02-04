@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.52 2026/01/07 08:46:25 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2026/02/04 10:33:18 wiz Exp $
 
 DISTNAME=	Renaissance-0.9.0
 PKGREVISION=	32
 CATEGORIES=	devel gnustep
-MASTER_SITES=	http://www.gnustep.it/Renaissance/Download/
+#MASTER_SITES=	http://www.gnustep.it/Renaissance/Download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnustep.it/Renaissance/
+#HOMEPAGE=	http://www.gnustep.it/Renaissance/
 COMMENT=	Structured GNUstep user interface development framework
 
 PKG_DESTDIR_SUPPORT=	destdir
