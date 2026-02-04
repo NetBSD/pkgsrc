@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.43 2025/04/21 21:09:45 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2026/02/04 10:35:09 wiz Exp $
 
 DISTNAME=	rp-pppoe-3.8
 PKGREVISION=	2
 CATEGORIES=	net
-MASTER_SITES=	http://www.roaringpenguin.com/files/download/
+#MASTER_SITES=	http://www.roaringpenguin.com/files/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.roaringpenguin.com/products/pppoe
+#HOMEPAGE=	https://www.roaringpenguin.com/products/pppoe
 COMMENT=	Roaring Penguin's PPP over Ethernet client
 
 CONFLICTS+=	mouse_pppoe<20000912nb1
