@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.892 2026/02/04 10:00:34 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.893 2026/02/04 11:33:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1123,3 +1123,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/gyp to 0.1pre20240206 [wiz 2026-02-04]
 	Updated net/arti to 2.0.0 [wiz 2026-02-04]
 	Updated security/gnupg2 to 2.5.17 [wiz 2026-02-04]
+	Updated lang/nodejs to 25.6.0 [adam 2026-02-04]
+	Updated archivers/zlib-ng to 2.3.3 [adam 2026-02-04]
