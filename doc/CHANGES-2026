@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.898 2026/02/04 14:00:28 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.899 2026/02/04 14:16:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1149,3 +1149,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-orjson to 3.11.7 [adam 2026-02-04]
 	Updated devel/py-pooch to 1.9.0 [adam 2026-02-04]
 	Added net/xfr version 0.3.0 [wiz 2026-02-04]
+	Updated lang/python313 to 3.13.12 [adam 2026-02-04]
+	Updated lang/py313-html-docs to 3.13.12 [adam 2026-02-04]
