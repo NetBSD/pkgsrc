@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/04/12 20:37:42 adam Exp $
+# $NetBSD: Makefile,v 1.10 2026/02/04 12:54:43 adam Exp $
 
-DISTNAME=	queuelib-1.8.0
+DISTNAME=	queuelib-1.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=q/queuelib/}
