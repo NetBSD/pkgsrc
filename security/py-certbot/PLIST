@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2025/12/07 11:23:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.41 2026/02/04 12:09:42 adam Exp $
 bin/certbot-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -114,9 +114,6 @@ ${PYSITELIB}/certbot/_internal/renewal.pyo
 ${PYSITELIB}/certbot/_internal/san.py
 ${PYSITELIB}/certbot/_internal/san.pyc
 ${PYSITELIB}/certbot/_internal/san.pyo
-${PYSITELIB}/certbot/_internal/san_test.py
-${PYSITELIB}/certbot/_internal/san_test.pyc
-${PYSITELIB}/certbot/_internal/san_test.pyo
 ${PYSITELIB}/certbot/_internal/snap_config.py
 ${PYSITELIB}/certbot/_internal/snap_config.pyc
 ${PYSITELIB}/certbot/_internal/snap_config.pyo
@@ -252,6 +249,9 @@ ${PYSITELIB}/certbot/_internal/tests/renewupdater_test.pyo
 ${PYSITELIB}/certbot/_internal/tests/reverter_test.py
 ${PYSITELIB}/certbot/_internal/tests/reverter_test.pyc
 ${PYSITELIB}/certbot/_internal/tests/reverter_test.pyo
+${PYSITELIB}/certbot/_internal/tests/san_test.py
+${PYSITELIB}/certbot/_internal/tests/san_test.pyc
+${PYSITELIB}/certbot/_internal/tests/san_test.pyo
 ${PYSITELIB}/certbot/_internal/tests/storage_test.py
 ${PYSITELIB}/certbot/_internal/tests/storage_test.pyc
 ${PYSITELIB}/certbot/_internal/tests/storage_test.pyo
