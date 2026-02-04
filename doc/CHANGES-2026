@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.896 2026/02/04 12:55:01 adam Exp $
+$NetBSD: CHANGES-2026,v 1.897 2026/02/04 13:40:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1146,3 +1146,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-tqdm to 4.67.3 [adam 2026-02-04]
 	Updated www/py-asgiref to 3.11.1 [adam 2026-02-04]
 	Updated devel/py-queuelib to 1.9.0 [adam 2026-02-04]
+	Updated textproc/py-orjson to 3.11.7 [adam 2026-02-04]
+	Updated devel/py-pooch to 1.9.0 [adam 2026-02-04]
