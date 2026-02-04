@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.894 2026/02/04 12:11:07 adam Exp $
+$NetBSD: CHANGES-2026,v 1.895 2026/02/04 12:47:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1142,3 +1142,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-certbot-dns-route53 to 5.3.0 [adam 2026-02-04]
 	Updated security/py-certbot-dns-sakuracloud to 5.3.0 [adam 2026-02-04]
 	Updated security/py-certbot-nginx to 5.3.0 [adam 2026-02-04]
+	Updated devel/py-proto-plus to 1.27.1 [adam 2026-02-04]
+	Updated misc/py-tqdm to 4.67.3 [adam 2026-02-04]
