@@ -1,0 +1,15 @@
+A fast, modern network bandwidth testing tool with TUI. Built in Rust as an
+iperf replacement.
+
+Features:
+ - Live TUI with real-time throughput graphs and per-stream stats
+ - Server dashboard - xfr serve --tui for monitoring active tests
+ - Multi-client server - handle multiple simultaneous tests
+ - TCP and UDP with configurable bitrate and parallel streams
+ - Bidirectional testing - measure upload and download simultaneously
+ - Multiple output formats - plain text, JSON, JSON streaming, CSV
+ - Result comparison - xfr diff to detect performance regressions
+ - LAN discovery - find xfr servers with mDNS (xfr discover)
+ - Prometheus metrics - export stats for monitoring dashboards
+ - Config file - save defaults in ~/.config/xfr/config.toml
+ - Environment variables - XFR_PORT, XFR_DURATION overrides
