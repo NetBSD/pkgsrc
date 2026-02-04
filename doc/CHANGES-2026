@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.889 2026/02/03 21:01:47 triaxx Exp $
+$NetBSD: CHANGES-2026,v 1.890 2026/02/04 00:07:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1120,3 +1120,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/python314 to 3.14.3 [adam 2026-02-03]
 	Updated lang/py314-html-docs to 3.14.3 [adam 2026-02-03]
 	Updated www/hugo to 0.155.2 [triaxx 2026-02-03]
+	Updated devel/gyp to 0.1pre20240206 [wiz 2026-02-04]
