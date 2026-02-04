@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.171 2026/01/29 07:53:27 wiz Exp $
+# $NetBSD: Makefile,v 1.172 2026/02/04 10:00:26 wiz Exp $
 
-DISTNAME=	gnupg-2.4.9
+DISTNAME=	gnupg-2.5.17
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
-PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG:=gnupg/}
 EXTRACT_SUFX=	.tar.bz2
@@ -48,11 +47,14 @@ BUILDLINK_API_DEPENDS.sqlite3+=		sqlite3>=3.27.0
 BUILDLINK_API_DEPENDS.npth+=		npth>=1.2
 .include "../../devel/npth/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.9.1
+BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.11.0
 .include "../../security/libgcrypt/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.46
+# per configure script as of 2.5.17
+#BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.56
+# but we need a fix for NetBSD
+BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.58nb2
 .include "../../security/libgpg-error/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libassuan+=	libassuan>=2.5.0
+BUILDLINK_API_DEPENDS.libassuan+=	libassuan>=3.0.0
 .include "../../security/libassuan2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libksba+=		libksba>=1.6.3
 .include "../../security/libksba/buildlink3.mk"
