@@ -1,7 +1,9 @@
-$NetBSD: patch-Source_kwsys_ProcessUNIX.c,v 1.1 2023/09/30 08:52:52 nros Exp $
+$NetBSD: patch-Source_kwsys_ProcessUNIX.c,v 1.2 2026/02/05 22:33:28 wiz Exp $
 
 * Use the correct ps command on NetBSD,
   this also makes cmake runnable on NetBSD Sparc, see pkg/57272
+
+https://gitlab.kitware.com/cmake/cmake/-/issues/27575
 
 --- Source/kwsys/ProcessUNIX.c.orig	2023-09-27 13:10:16.942207869 +0000
 +++ Source/kwsys/ProcessUNIX.c
