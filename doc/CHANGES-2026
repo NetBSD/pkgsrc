@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.913 2026/02/05 12:45:40 adam Exp $
+$NetBSD: CHANGES-2026,v 1.914 2026/02/05 22:32:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1171,3 +1171,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/ruby-celluloid-pool [wiz 2026-02-05]
 	Updated devel/gperftools to 2.18 [adam 2026-02-05]
 	Updated devel/py-coverage to 7.13.3 [adam 2026-02-05]
+	Updated sysutils/coreutils to 9.10 [wiz 2026-02-05]
