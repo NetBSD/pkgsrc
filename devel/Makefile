@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4583 2026/02/05 11:01:41 wiz Exp $
+# $NetBSD: Makefile,v 1.4584 2026/02/05 11:03:17 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3404,7 +3404,6 @@ SUBDIR+=	ruby-bsearch
 SUBDIR+=	ruby-byaccr
 SUBDIR+=	ruby-byebug
 SUBDIR+=	ruby-celluloid
-SUBDIR+=	ruby-celluloid-essentials
 SUBDIR+=	ruby-celluloid-extras
 SUBDIR+=	ruby-celluloid-fsm
 SUBDIR+=	ruby-celluloid-pool

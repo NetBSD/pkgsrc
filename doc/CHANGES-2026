@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.909 2026/02/05 11:01:41 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.910 2026/02/05 11:03:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1166,3 +1166,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-dulwich to 1.0.0 [adam 2026-02-05]
 	Updated devel/py-syrupy to 5.1.0 [adam 2026-02-05]
 	Removed devel/ruby-c21e [wiz 2026-02-05]
+	Removed devel/ruby-celluloid-essentials [wiz 2026-02-05]
