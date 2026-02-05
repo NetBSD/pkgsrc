@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2019/03/16 14:17:20 taca Exp $
+# $NetBSD: Makefile,v 1.12 2026/02/05 11:07:18 wiz Exp $
 
 DISTNAME=	compass-1.0.3
 PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://compass-style.org/
+HOMEPAGE=	https://compass-style.org/
 COMMENT=	Stylesheet authoring framework based on Sass
 LICENSE=	mit
 
