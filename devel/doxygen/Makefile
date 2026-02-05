@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.203 2026/01/12 17:22:48 adam Exp $
+# $NetBSD: Makefile,v 1.204 2026/02/05 08:39:50 mef Exp $
 
 DISTNAME=	doxygen-1.16.1.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -21,6 +21,11 @@ FLEX_REQD+=		2.6.4
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake gs:run perl:run bison flex
+
+# if gcc version is 7.5, we will have
+# g++: error: unrecognized command line option '-Wextra-semi'; did you mean '-Wextra'?
+GCC_REQD+=		10
+
 MAKE_ENV+=		PKGSRC_CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		MAN1DIR=${PKGMANDIR}/man1
 
