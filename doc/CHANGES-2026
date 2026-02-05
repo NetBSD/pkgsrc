@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.904 2026/02/05 08:11:20 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.905 2026/02/05 08:16:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1158,3 +1158,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/mosquitto to 2.1.1 [gdt 2026-02-05]
 	Updated security/cargo-audit to 0.22.1 [adam 2026-02-05]
 	Updated graphics/raqm to 0.10.4 [adam 2026-02-05]
+	Updated print/poppler to 25.08.0nb7 [wiz 2026-02-05]
