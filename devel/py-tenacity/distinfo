@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/04/12 20:56:20 adam Exp $
+$NetBSD: distinfo,v 1.13 2026/02/05 09:12:24 adam Exp $
 
-BLAKE2s (tenacity-9.1.2.tar.gz) = c5599734ad9ece7a3521ec049a05cd0566dc7ec531422f81438cf3b78793797b
-SHA512 (tenacity-9.1.2.tar.gz) = 35dff9ab9f1c2b9ab0d807bc790b92a3a3d4e133aecb9921a700af0e6dd9bf805f551a2409dc4341088a44b0693ec0b0fa6b703305b312a988da5e3dc1f61d11
-Size (tenacity-9.1.2.tar.gz) = 48036 bytes
+BLAKE2s (tenacity-9.1.3.tar.gz) = a165c756af522a10285d1a601408cb37acb4511ee74df01678d27a1a737143ec
+SHA512 (tenacity-9.1.3.tar.gz) = aa04c007aca4e0d505b48e41b1d7b568c6da4f4d0f3db498033e6f46903d6c03c36a1762e722bd6895bd4f095b240946ee756cd15d21782746fd67766d6aafd9
+Size (tenacity-9.1.3.tar.gz) = 49002 bytes
