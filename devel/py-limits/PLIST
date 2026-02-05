@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/12/27 14:32:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/02/05 09:10:28 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -6,6 +6,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/limits/__init__.py
 ${PYSITELIB}/limits/__init__.pyc
 ${PYSITELIB}/limits/__init__.pyo
+${PYSITELIB}/limits/_storage_scheme.py
+${PYSITELIB}/limits/_storage_scheme.pyc
+${PYSITELIB}/limits/_storage_scheme.pyo
 ${PYSITELIB}/limits/_version.py
 ${PYSITELIB}/limits/_version.pyc
 ${PYSITELIB}/limits/_version.pyi
@@ -92,9 +95,6 @@ ${PYSITELIB}/limits/storage/redis_cluster.pyo
 ${PYSITELIB}/limits/storage/redis_sentinel.py
 ${PYSITELIB}/limits/storage/redis_sentinel.pyc
 ${PYSITELIB}/limits/storage/redis_sentinel.pyo
-${PYSITELIB}/limits/storage/registry.py
-${PYSITELIB}/limits/storage/registry.pyc
-${PYSITELIB}/limits/storage/registry.pyo
 ${PYSITELIB}/limits/strategies.py
 ${PYSITELIB}/limits/strategies.pyc
 ${PYSITELIB}/limits/strategies.pyo
