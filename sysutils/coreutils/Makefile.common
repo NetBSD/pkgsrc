@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.37 2025/11/15 13:11:18 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.38 2026/02/05 22:29:45 wiz Exp $
 #
 # used by sysutils/coreutils/Makefile
 # used by misc/gnuls/Makefile
 
-DISTNAME=	coreutils-9.9
+DISTNAME=	coreutils-9.10
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU:=coreutils/}
 EXTRACT_SUFX=	.tar.xz
@@ -59,6 +59,7 @@ CONFIGURE_ENV+=		ac_cv_sys_year2038_opts="none needed"
 CONFIGURE_ENV+=		ac_cv_header_sys_acl_h=no jm_cv_func_svid_putenv=yes
 .endif
 
+PLIST_VARS+=		linux
 # XXX - this hack is bound to cause fallout on some platform at some point.
 # How can we determine the API version of the builtin gettext?
 .if ${OPSYS} != "Linux"
