@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.915 2026/02/05 22:36:19 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.916 2026/02/05 23:22:04 morr Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1173,3 +1173,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-coverage to 7.13.3 [adam 2026-02-05]
 	Updated sysutils/coreutils to 9.10 [wiz 2026-02-05]
 	Updated misc/gnuls to 9.10 [wiz 2026-02-05]
+	Updated editors/vim-share to 9.1.2132 [morr 2026-02-05]
+	Updated editors/vim-lang to 9.1.2132 [morr 2026-02-05]
