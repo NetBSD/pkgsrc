@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/09/28 19:39:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/02/05 10:14:43 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -25,6 +25,15 @@ ${PYSITELIB}/syrupy/extensions/__init__.pyo
 ${PYSITELIB}/syrupy/extensions/amber/__init__.py
 ${PYSITELIB}/syrupy/extensions/amber/__init__.pyc
 ${PYSITELIB}/syrupy/extensions/amber/__init__.pyo
+${PYSITELIB}/syrupy/extensions/amber/attrs_plugin.py
+${PYSITELIB}/syrupy/extensions/amber/attrs_plugin.pyc
+${PYSITELIB}/syrupy/extensions/amber/attrs_plugin.pyo
+${PYSITELIB}/syrupy/extensions/amber/dataclasses_plugin.py
+${PYSITELIB}/syrupy/extensions/amber/dataclasses_plugin.pyc
+${PYSITELIB}/syrupy/extensions/amber/dataclasses_plugin.pyo
+${PYSITELIB}/syrupy/extensions/amber/pydantic_plugin.py
+${PYSITELIB}/syrupy/extensions/amber/pydantic_plugin.pyc
+${PYSITELIB}/syrupy/extensions/amber/pydantic_plugin.pyo
 ${PYSITELIB}/syrupy/extensions/amber/serializer.py
 ${PYSITELIB}/syrupy/extensions/amber/serializer.pyc
 ${PYSITELIB}/syrupy/extensions/amber/serializer.pyo
