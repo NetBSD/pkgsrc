@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2021/05/21 11:18:09 nia Exp $
+# $NetBSD: Makefile,v 1.20 2026/02/05 10:57:30 wiz Exp $
 
 DISTNAME=	amrita-1.0.2
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	textproc ruby www
 MASTER_SITES=	${MASTER_SITE_OSDN:=amrita/10939/}
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	https://amrita.osdn.jp/
+#HOMEPAGE=	https://amrita.osdn.jp/
 COMMENT=	HTML/XHTML template library for Ruby
 LICENSE=	gnu-gpl-v2 OR ruby-license
 
