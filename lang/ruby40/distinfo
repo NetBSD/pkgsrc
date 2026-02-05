@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2026/02/05 10:07:44 wiz Exp $
+$NetBSD: distinfo,v 1.3 2026/02/05 13:07:17 wiz Exp $
 
 BLAKE2s (ruby-4.0.1.tar.xz) = 241246857c0f5543a6ca7a9c332440cdc00b68ba3a89f9b6f3174e4b1518a9be
 SHA512 (ruby-4.0.1.tar.xz) = b67d9d1f97ba30200d103f8454e39dc2d0450819d51d91eb5451d44b0bafc56d2fa48bb1be6c5081babe5828f679984bad02b9bcee7441f6bd34c0a95b8f200b
@@ -17,7 +17,6 @@ SHA1 (patch-lib_rubygems_install__update__options.rb) = 0cd0816e1cd7c84c1dab1e09
 SHA1 (patch-lib_rubygems_installer.rb) = 68a43121b4faab060afa4e352e1603f9d6630a47
 SHA1 (patch-lib_rubygems_platform.rb) = 6bd2e1c5c3064f9d694508169a5bf0a594d7bbef
 SHA1 (patch-lib_rubygems_specification.rb) = f543cab6b56fec0f7195d4eabddedc080c18688c
-SHA1 (patch-template_Makefile.in) = db46fd6681186446f64ce1462058bc8233eebe94
 SHA1 (patch-test_rubygems_test__gem.rb) = 32f7c7d7f8a024c045d78c2bce93944fc3113d04
 SHA1 (patch-thread__pthread.c) = 7c1231933a2d6ce9d56891ab512371841697fbca
 SHA1 (patch-tool_ifchange) = 1803bb6a1836e232dcabcf38f11c9881dbf726ea
