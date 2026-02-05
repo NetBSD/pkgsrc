@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.911 2026/02/05 11:04:41 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.912 2026/02/05 11:05:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1168,3 +1168,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/ruby-c21e [wiz 2026-02-05]
 	Removed devel/ruby-celluloid-essentials [wiz 2026-02-05]
 	Removed devel/ruby-celluloid-fsm [wiz 2026-02-05]
+	Removed devel/ruby-celluloid-pool [wiz 2026-02-05]

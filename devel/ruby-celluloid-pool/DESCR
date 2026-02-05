@@ -1,2 +1,0 @@
-An implementation of an actor pool, based on the Celluloid concurrent object
-framework.
