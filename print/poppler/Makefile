@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.122 2026/01/27 08:40:27 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2026/02/05 08:16:24 wiz Exp $
 
 COMMENT=	PDF rendering library
-PKGREVISION=	6
+PKGREVISION=	7
 
 SUPERSEDES+=	poppler-glib-[0-9]*
 
 PKGCONFIG_OVERRIDE+=	poppler.pc.cmake
+PKGCONFIG_OVERRIDE+=	poppler-glib.pc.cmake
 
 INSTALLATION_DIRS+=	include/poppler share/doc/poppler
 
