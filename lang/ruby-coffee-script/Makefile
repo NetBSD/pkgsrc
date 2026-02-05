@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2015/06/07 13:55:41 taca Exp $
+# $NetBSD: Makefile,v 1.4 2026/02/05 11:06:33 wiz Exp $
 
 DISTNAME=	coffee-script-2.4.1
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/josh/ruby-coffee-script/
+HOMEPAGE=	https://github.com/rails/ruby-coffee-script
 COMMENT=	Ruby CoffeeScript Compiler
 LICENSE=	mit
 
