@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26759 2026/02/04 10:00:34 wiz Exp $
+$NetBSD: TODO,v 1.26760 2026/02/05 11:01:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -536,6 +536,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o consul-1.9.5
 	o cook-2.31
 	o coordgenlibs-2.0.3
+	o coreutils-9.10
 	o cross-binutils-2.36.1
 	o cross-h8300-hms-binutils-2.17
 	o csound6-6.18.1
@@ -864,6 +865,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librdkafka-1.6.1
 	o librelp-1.10.0
+	o libreoffice-26.2
 	o libretro-core-info-1.9.1
 	o libthai-0.2.2
 	o libtrace-4.0.16
