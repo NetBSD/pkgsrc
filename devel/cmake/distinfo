@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.261 2026/01/30 10:05:16 adam Exp $
+$NetBSD: distinfo,v 1.262 2026/02/05 22:33:28 wiz Exp $
 
 BLAKE2s (cmake-4.2.3.tar.gz) = 151309a55b48bcb94522e84a656d9c0d1ce0552ac21f43379b925683d4fb19b2
 SHA512 (cmake-4.2.3.tar.gz) = 56cac755277bc3fcf190d6c947c99a718ee555b0524132427989a5d2d51d030c76c07f198ddeea0d9c7e57b24488d352e9b29bb106c1ad15397b92fb4487a88f
@@ -20,7 +20,7 @@ SHA1 (patch-Source_Checks_Curses_CheckCurses.c) = 530ee1300595e64c97630d27792cc2
 SHA1 (patch-Source_Checks_cm__cxx17__check.cpp) = d5e2708df6fcda078b1b5ea59264c663d2633ced
 SHA1 (patch-Source_Modules_CMakeBuildUtilities.cmake) = e4f2ad39f0899074c2b66d97ef12d03c48e82950
 SHA1 (patch-Source_QtDialog_CMakeLists.txt) = ca57d666f0a30d87aa1db49f82c62c41b05d87f9
-SHA1 (patch-Source_kwsys_ProcessUNIX.c) = e333da03c3ac31be6a992809062a60a9cccc62c0
+SHA1 (patch-Source_kwsys_ProcessUNIX.c) = 70a5156e32047595f73f10302c0fcfd96c982ac5
 SHA1 (patch-Tests_CMakeLists.txt) = 555e0be38ef92530c7315a87db65dd3004d7744c
 SHA1 (patch-Utilities_KWIML_CMakeLists.txt) = e4bdf9fc58757e87bf7e3e3e195839eededbc796
 SHA1 (patch-bootstrap) = 2cc542006955aea5573942c9f443b044281fb514
