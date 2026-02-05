@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.901 2026/02/04 20:54:34 prlw1 Exp $
+$NetBSD: CHANGES-2026,v 1.902 2026/02/05 01:40:23 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1154,3 +1154,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/mimalloc to 3.2.8 [adam 2026-02-04]
 	Updated devel/py-dash to 8.0.6 [adam 2026-02-04]
 	Updated print/pmw to 5.33 [prlw1 2026-02-04]
+	Updated net/mosquitto to 2.1.1 [gdt 2026-02-05]
