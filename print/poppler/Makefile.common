@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.165 2025/08/22 08:04:03 adam Exp $
+# $NetBSD: Makefile.common,v 1.166 2026/02/05 08:16:24 wiz Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-cpp/Makefile
@@ -31,8 +31,6 @@ TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}
 TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}
 TEST_TARGET=	test
 
-CMAKE_CONFIGURE_ARGS+=	-DENABLE_GPGME=OFF
-
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 BUILDLINK_TRANSFORM+=   rm:-fno-check-new
@@ -45,5 +43,6 @@ CMAKE_GENERATORS_INCOMPATIBLE=	ninja
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/nss/buildlink3.mk"
+.include "../../security/gpgmepp/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
