@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.62 2025/08/08 18:37:34 gdt Exp $
+@comment $NetBSD: PLIST,v 1.63 2026/02/06 15:59:16 gdt Exp $
 lib/${PKGNAME}/COPYING
 lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/${PKGNAME}/ebin/acl.beam
@@ -223,6 +223,8 @@ lib/${PKGNAME}/ebin/mod_private_opt.beam
 lib/${PKGNAME}/ebin/mod_private_sql.beam
 lib/${PKGNAME}/ebin/mod_privilege.beam
 lib/${PKGNAME}/ebin/mod_privilege_opt.beam
+lib/${PKGNAME}/ebin/mod_providers.beam
+lib/${PKGNAME}/ebin/mod_providers_opt.beam
 lib/${PKGNAME}/ebin/mod_proxy65.beam
 lib/${PKGNAME}/ebin/mod_proxy65_lib.beam
 lib/${PKGNAME}/ebin/mod_proxy65_mnesia.beam
