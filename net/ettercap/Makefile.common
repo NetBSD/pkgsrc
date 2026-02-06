@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.4 2024/08/25 06:19:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2026/02/06 13:31:21 adam Exp $
 # used by net/ettercap/Makefile
 # used by net/ettercap-gtk/Makefile
 
-DISTNAME=	ettercap-0.8.3.1
+DISTNAME=	ettercap-0.8.4
 CATEGORIES=	net security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Ettercap/}
 GITHUB_PROJECT=	ettercap  # explicit for WRKSRC in net/ettercap-gtk
@@ -13,29 +13,32 @@ LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	ettercap-NG-[0-9]*
 
-USE_CMAKE=	yes
 USE_TOOLS+=	bison flex pkg-config
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
-
 TEST_TARGET=	test
 
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_IPV6=ON
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_TESTS=ON
+CMAKE_CONFIGURE_ARGS+=	-DINSTALL_SYSCONFDIR=${PREFIX}/share/examples
 
 DISTINFO_FILE=	${.CURDIR}/../../net/ettercap/distinfo
 PATCHDIR=	${.CURDIR}/../../net/ettercap/patches
 
-pre-configure:
-	${MKDIR} ${WRKSRC}/build
+PKG_SYSCONFSUBDIR=	ettercap
+
+EGDIR=		${PREFIX}/share/examples/ettercap
+CONF_FILES=	${EGDIR}/etter.conf ${PKG_SYSCONFDIR}/etter.conf
+CONF_FILES+=	${EGDIR}/etter.dns ${PKG_SYSCONFDIR}/etter.dns
+CONF_FILES+=	${EGDIR}/etter.mdns ${PKG_SYSCONFDIR}/etter.mdns
+CONF_FILES+=	${EGDIR}/etter.nbns ${PKG_SYSCONFDIR}/etter.nbns
 
 .include "../../devel/check/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 BUILDLINK_DEPMETHOD.check?=	build # tests only
 .include "../../devel/libnet/buildlink3.mk"
 # It uses set_menu_spacing from libmenu which NetBSD curses doesn't have.
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../net/GeoIP/buildlink3.mk"
+.include "../../geography/libmaxminddb/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"

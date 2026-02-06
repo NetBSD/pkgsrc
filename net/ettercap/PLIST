@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/03/06 11:20:56 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/02/06 13:31:21 adam Exp $
 bin/ettercap
 bin/etterfilter
 bin/etterlog
@@ -37,11 +37,11 @@ lib/ettercap/ec_smurf_attack.so
 lib/ettercap/ec_sslstrip.so
 lib/ettercap/ec_stp_mangler.so
 lib/libettercap-ui.so
-lib/libettercap-ui.so.0
 lib/libettercap-ui.so.${PKGVERSION}
+lib/libettercap-ui.so.0
 lib/libettercap.so
-lib/libettercap.so.0
 lib/libettercap.so.${PKGVERSION}
+lib/libettercap.so.0
 man/man5/etter.conf.5
 man/man8/ettercap-pkexec.8
 man/man8/ettercap.8
@@ -50,6 +50,7 @@ man/man8/ettercap_plugins.8
 man/man8/etterfilter.8
 man/man8/etterlog.8
 share/ettercap/AUTHORS
+share/ettercap/GeoLite2-Country.mmdb
 share/ettercap/LICENSE
 share/ettercap/etter.dns.examples
 share/ettercap/etter.fields
@@ -70,3 +71,7 @@ share/ettercap/ettercap.svg
 share/ettercap/etterfilter.cnt
 share/ettercap/etterfilter.tbl
 share/ettercap/etterlog.dtd
+share/examples/ettercap/etter.conf
+share/examples/ettercap/etter.dns
+share/examples/ettercap/etter.mdns
+share/examples/ettercap/etter.nbns
