@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.110 2026/02/06 15:59:16 gdt Exp $
+# $NetBSD: Makefile,v 1.111 2026/02/06 17:02:06 gdt Exp $
 
-DISTNAME=	ejabberd-25.08
+DISTNAME=	ejabberd-25.10
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
