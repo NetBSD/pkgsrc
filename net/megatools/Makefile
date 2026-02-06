@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2026/01/07 08:48:23 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2026/02/06 10:05:35 wiz Exp $
 
 DISTNAME=	megatools-1.11.4.20250411
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	https://xff.cz/megatools/builds/
 

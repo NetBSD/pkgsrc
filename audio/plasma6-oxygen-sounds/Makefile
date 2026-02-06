@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/01/19 09:37:16 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/02/06 10:04:16 wiz Exp $
 
 DISTNAME=	oxygen-sounds-${PLASMAVER}
+PKGREVISION=	1
 CATEGORIES=	audio
 
 HOMEPAGE=	https://kde.org/plasma-desktop/

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2026/01/07 08:45:55 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2026/02/06 10:04:17 wiz Exp $
 
 DISTNAME=	vorbis-tools-1.0
 PKGNAME=	tremor-tools-1.0.0.8
-PKGREVISION=	49
+PKGREVISION=	50
 CATEGORIES=	audio
 MASTER_SITES=	https://downloads.xiph.org/releases/vorbis/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2026/01/07 08:46:20 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/02/06 10:04:25 wiz Exp $
 
 DISTNAME=	prometheus-cpp-with-submodules
 PKGNAME=	prometheus-cpp-1.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jupp0r/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

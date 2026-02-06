@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2026/01/27 08:40:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/02/06 10:05:56 wiz Exp $
 
 DISTNAME=	kinfocenter-${PLASMAVER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/

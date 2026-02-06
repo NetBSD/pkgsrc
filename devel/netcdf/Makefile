@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2026/01/07 08:46:42 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2026/02/06 10:04:35 wiz Exp $
 
 DISTNAME=	netcdf-c-4.9.3
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	${DISTNAME:S/-c-/-/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Unidata/}

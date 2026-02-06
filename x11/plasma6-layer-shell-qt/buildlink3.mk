@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2026/01/07 08:49:39 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2026/02/06 10:06:18 wiz Exp $
 
 BUILDLINK_TREE+=	plasma6-layer-shell-qt
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	plasma6-layer-shell-qt
 PLASMA6_LAYER_SHELL_QT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.plasma6-layer-shell-qt+=	plasma6-layer-shell-qt>=6.0.5
-BUILDLINK_ABI_DEPENDS.plasma6-layer-shell-qt?=	plasma6-layer-shell-qt>=6.5.2nb1
+BUILDLINK_ABI_DEPENDS.plasma6-layer-shell-qt?=	plasma6-layer-shell-qt>=6.5.2nb2
 BUILDLINK_PKGSRCDIR.plasma6-layer-shell-qt?=	../../x11/plasma6-layer-shell-qt
 
 .include "../../devel/wayland-protocols/buildlink3.mk"
