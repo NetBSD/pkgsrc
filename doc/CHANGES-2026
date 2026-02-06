@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.922 2026/02/06 09:23:11 adam Exp $
+$NetBSD: CHANGES-2026,v 1.923 2026/02/06 09:58:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1185,3 +1185,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/py-barman to 3.17.0 [adam 2026-02-06]
 	Updated devel/py-ipython to 9.10.0 [adam 2026-02-06]
 	Updated www/py-protego to 0.6.0 [adam 2026-02-06]
+	Updated devel/jj to 0.38.0 [wiz 2026-02-06]
