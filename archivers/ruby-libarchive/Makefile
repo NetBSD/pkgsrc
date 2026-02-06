@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2017/05/29 11:09:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2026/02/06 08:34:37 wiz Exp $
 
 DISTNAME=	libarchive-0.1.2
 PKGREVISION=	2
 CATEGORIES=	archivers
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/winebarrel/libarchive-ruby
+#HOMEPAGE=	https://bitbucket.org/winebarrel/libarchive-ruby
 COMMENT=	Ruby bindings for Libarchive
 LICENSE=	modified-bsd
 
