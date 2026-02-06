@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/09/30 16:07:35 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.22 2026/02/06 08:43:55 wiz Exp $
 
 DISTNAME=	tokyotyrant-ruby-1.13
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/-ruby-/-/}
@@ -7,7 +6,7 @@ CATEGORIES=	databases ruby
 MASTER_SITES=	${HOMEPAGE:S/rubydoc/rubypkg/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://fallabs.com/tokyotyrant/rubydoc/
+#HOMEPAGE=	https://fallabs.com/tokyotyrant/rubydoc/
 COMMENT=	Pure Ruby Interface of Tokyo Tyrant
 LICENSE=	gnu-lgpl-v2.1
 
