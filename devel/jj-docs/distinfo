@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/01/09 08:09:10 wiz Exp $
+$NetBSD: distinfo,v 1.5 2026/02/06 09:58:38 wiz Exp $
 
-BLAKE2s (jj-v0.37.0-docs-html.tar.gz) = e267679a938b0f088a3687b91e856a914c2321e997f5b0b3faf320c29ef0423f
-SHA512 (jj-v0.37.0-docs-html.tar.gz) = d3c60536ab666f4f958e128d2600a2c34def2e7df14ca745394cb0b4db32a96114a2108dad393b3a2600d5ba5c438dd723b80ccaa99502942794f961438b666e
-Size (jj-v0.37.0-docs-html.tar.gz) = 1746716 bytes
+BLAKE2s (jj-v0.38.0-docs-html.tar.gz) = 1cbb125b673cbf16bb71194e2e3ade28a48d0c04b090a414b3ef527dd989c390
+SHA512 (jj-v0.38.0-docs-html.tar.gz) = de1c4845142e2beb9e42104319b59a5f4ec9ccf203c218fb018545bb13cdd234c4984fcbc606e0c0830b0821d12453042428527db27f24526b77475b05f6f191
+Size (jj-v0.38.0-docs-html.tar.gz) = 1787771 bytes

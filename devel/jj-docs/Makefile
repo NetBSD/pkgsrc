@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/01/09 08:09:10 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/02/06 09:58:38 wiz Exp $
 
-DISTNAME=	jj-v0.37.0-docs-html
+DISTNAME=	jj-v0.38.0-docs-html
 PKGNAME=	${DISTNAME:S/jj-v/jj-docs-/:S/-docs-html//}
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/jj-vcs/jj/releases/download/v${PKGVERSION_NOREV}/
