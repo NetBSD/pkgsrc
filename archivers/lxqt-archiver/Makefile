@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2026/01/07 08:45:47 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/02/06 10:04:12 wiz Exp $
 
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	lxqt-archiver-1.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	archivers
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2026/01/07 08:48:42 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2026/02/06 10:05:49 wiz Exp $
 
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	lxqt-policykit-2.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

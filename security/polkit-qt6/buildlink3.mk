@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2026/01/07 08:48:45 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2026/02/06 10:05:50 wiz Exp $
 
 BUILDLINK_TREE+=	polkit-qt6
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	polkit-qt6
 POLKIT_QT6_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.polkit-qt6+=	polkit-qt6>=0.200.0
-BUILDLINK_ABI_DEPENDS.polkit-qt6?=	polkit-qt6>=0.200.0nb8
+BUILDLINK_ABI_DEPENDS.polkit-qt6?=	polkit-qt6>=0.200.0nb9
 BUILDLINK_PKGSRCDIR.polkit-qt6?=	../../security/polkit-qt6
 
 .include "../../security/polkit/buildlink3.mk"

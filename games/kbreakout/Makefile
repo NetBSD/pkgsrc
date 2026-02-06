@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2026/01/07 08:47:02 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2026/02/06 10:04:47 wiz Exp $
 
 DISTNAME=	kbreakout-${KAPPSVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kbreakout/

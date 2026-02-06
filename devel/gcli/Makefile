@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2026/01/07 08:46:29 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/02/06 10:04:28 wiz Exp $
 
 DISTNAME=	gcli-2.2.0
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	devel
 MASTER_SITES=	https://herrhotzenplotz.de/gcli/releases/gcli-2.2.0/
 EXTRACT_SUFX=	.tar.bz2

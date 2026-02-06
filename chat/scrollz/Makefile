@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2026/01/07 08:46:02 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/02/06 10:04:20 wiz Exp $
 
 DISTNAME=	ScrollZ-2.2.3
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	chat
 MASTER_SITES=	https://www.scrollz.info/download/
 

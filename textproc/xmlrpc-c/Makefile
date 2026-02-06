@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.82 2026/01/07 08:49:10 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2026/02/06 10:06:03 wiz Exp $
 
 DISTNAME=	xmlrpc-c-1.51.04
 # the "super stable" branch
 PKGNAME=	${DISTNAME:S/-c-/-c-ss-/}
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmlrpc-c/}
 EXTRACT_SUFX=	.tgz

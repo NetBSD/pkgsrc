@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/01/07 08:46:53 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/02/06 10:04:41 wiz Exp $
 
-PKGREVISION= 5
+PKGREVISION= 6
 .include "../../emulators/ppsspp/Makefile.common"
 
 PKGNAME=	${DISTNAME:S,ppsspp,ppsspp-qt,1}

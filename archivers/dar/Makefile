@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2026/01/07 08:45:46 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2026/02/06 10:04:11 wiz Exp $
 
 DISTNAME=	dar-2.7.7
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	archivers sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dar/}
 

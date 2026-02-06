@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2026/01/27 08:39:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/02/06 10:04:35 wiz Exp $
 
 DISTNAME=	plasma5support-${PLASMAVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 HOMEPAGE=	https://kde.org/plasma-desktop/

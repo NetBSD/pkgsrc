@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2026/01/07 08:49:03 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/02/06 10:06:00 wiz Exp $
 
 DISTNAME=	hxt-curl-9.1.1.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

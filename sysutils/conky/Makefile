@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2026/01/27 08:40:33 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2026/02/06 10:05:52 wiz Exp $
 #
 
 DISTNAME=	conky-1.9.0
-PKGREVISION=	71
+PKGREVISION=	72
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=conky/}
 EXTRACT_SUFX=	.tar.bz2

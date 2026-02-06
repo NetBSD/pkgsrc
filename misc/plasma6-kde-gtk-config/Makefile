@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2026/01/27 08:40:13 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/02/06 10:05:23 wiz Exp $
 
 DISTNAME=	kde-gtk-config-${PLASMAVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/plasma-desktop/

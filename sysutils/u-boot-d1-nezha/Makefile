@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2026/01/07 08:49:00 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/02/06 10:05:59 wiz Exp $
 
 UBOOT_TARGET=		d1-nezha
 UBOOT_VERSION=		2024.1
@@ -30,7 +30,7 @@ post-extract:
 
 MAKE_ENV+=	OPENSBI=${WRKSRC}/fw_dynamic.bin
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../sysutils/u-boot/u-boot-riscv64.mk"
 BUILDLINK_DEPMETHOD.libuuid=	build
 .include "../../devel/libuuid/buildlink3.mk"

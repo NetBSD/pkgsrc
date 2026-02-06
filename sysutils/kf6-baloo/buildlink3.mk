@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2026/01/27 08:40:35 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2026/02/06 10:05:54 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-baloo
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-baloo
 KF6_BALOO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-baloo+=	kf6-baloo>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-baloo?=		kf6-baloo>=6.18.0nb3
+BUILDLINK_ABI_DEPENDS.kf6-baloo?=		kf6-baloo>=6.18.0nb4
 BUILDLINK_PKGSRCDIR.kf6-baloo?=		../../sysutils/kf6-baloo
 
 #.include "../../devel/libinotify/buildlink3.mk"

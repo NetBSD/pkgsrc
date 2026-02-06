@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2026/01/07 08:47:09 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2026/02/06 10:04:53 wiz Exp $
 
 DISTNAME=	SuperTuxKart-1.4-src
 PKGNAME=	${DISTNAME:tl:S/-src//}
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=supertuxkart/}
 GITHUB_PROJECT=	stk-code

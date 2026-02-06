@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.71 2026/02/03 02:16:46 gutteridge Exp $
+# $NetBSD: Makefile,v 1.72 2026/02/06 10:06:16 wiz Exp $
 
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	lxqt-panel-2.3.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

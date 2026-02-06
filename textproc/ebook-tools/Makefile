@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2026/01/07 08:49:02 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2026/02/06 10:06:00 wiz Exp $
 
 # also update lit2epub if you update this package.
 DISTNAME=	ebook-tools-0.2.2
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ebook-tools/}
 
