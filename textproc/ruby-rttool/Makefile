@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2010/09/10 08:37:41 taca Exp $
+# $NetBSD: Makefile,v 1.20 2026/02/06 08:42:25 wiz Exp $
 
 DISTNAME=	rttool-1.0.3.0
 CATEGORIES=	textproc
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www.rubyist.net/~rubikitch/computer/rttool/
+#HOMEPAGE=	http://www.rubyist.net/~rubikitch/computer/rttool/
 COMMENT=	RT to HTML (and hopefully LaTeX in future) table converter
 LICENSE=	gnu-gpl-v2 OR ruby-license
 
