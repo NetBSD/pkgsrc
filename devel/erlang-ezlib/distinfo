@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/08/22 05:52:02 adam Exp $
+$NetBSD: distinfo,v 1.11 2026/02/06 21:52:33 gdt Exp $
 
-BLAKE2s (ezlib-1.0.13.tar.gz) = 5100d6c53da6dad7b202e0b4293a55873622e79619f7840c9fa8dc4bb206d6fc
-SHA512 (ezlib-1.0.13.tar.gz) = 947594a219c71a9afb792dc7766712694159cf7ed24df37c646ebbe8b366f82035067cb75ba00d7b9364e1ffc438090c54a93f41f67a57167c8ec4ab8f1ae663
-Size (ezlib-1.0.13.tar.gz) = 49817 bytes
+BLAKE2s (ezlib-1.0.15.tar.gz) = 7b0e18249268bbd7b9e20387e147698f46f7b5110ded58bbcf3efd0b5be7ef2e
+SHA512 (ezlib-1.0.15.tar.gz) = ecdc551ccd93c483d1a7bcc2e3101527fa02d73ec751eea6fe8aa981df3239b18d6c0fb1d905478e9500ac8913aa9f45623160f592ed29f4afde0a169c4ff7da
+Size (ezlib-1.0.15.tar.gz) = 49862 bytes
