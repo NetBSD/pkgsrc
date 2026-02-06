@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26762 2026/02/06 09:58:06 wiz Exp $
+$NetBSD: TODO,v 1.26763 2026/02/06 13:53:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -957,6 +957,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nas-auscope-1.9.4
 	o ncview-2.1.11
 	o netramet-50
+	o nettle-4.0 [wait at least for https://gitlab.com/gnutls/gnutls/-/issues/1791 to be fixed]
 	o newmail-1.0.2
 	o nicotine-plus-3.3.10
 	o nim-2.2.6

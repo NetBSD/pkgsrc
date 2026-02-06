@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.928 2026/02/06 13:32:24 adam Exp $
+$NetBSD: CHANGES-2026,v 1.929 2026/02/06 13:53:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1187,7 +1187,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-protego to 0.6.0 [adam 2026-02-06]
 	Updated devel/jj to 0.38.0 [wiz 2026-02-06]
 	Updated devel/jj-docs to 0.38.0 [wiz 2026-02-06]
-	Updated security/nettle to 4.0 [wiz 2026-02-06]
 	Updated archivers/unrar to 7.2.4 [adam 2026-02-06]
 	Updated security/ccid to 1.7.1 [adam 2026-02-06]
 	Updated mail/ruby-mime-types-data to 3.2026.0203 [taca 2026-02-06]
