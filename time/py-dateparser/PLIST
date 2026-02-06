@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/07/02 12:47:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/02/06 07:53:42 adam Exp $
 bin/dateparser-download-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -716,6 +716,9 @@ ${PYSITELIB}/dateparser/utils/__init__.pyo
 ${PYSITELIB}/dateparser/utils/strptime.py
 ${PYSITELIB}/dateparser/utils/strptime.pyc
 ${PYSITELIB}/dateparser/utils/strptime.pyo
+${PYSITELIB}/dateparser/utils/time_spans.py
+${PYSITELIB}/dateparser/utils/time_spans.pyc
+${PYSITELIB}/dateparser/utils/time_spans.pyo
 ${PYSITELIB}/dateparser_cli/__init__.py
 ${PYSITELIB}/dateparser_cli/__init__.pyc
 ${PYSITELIB}/dateparser_cli/__init__.pyo
