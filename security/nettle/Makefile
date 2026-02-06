@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2025/06/30 19:15:21 adam Exp $
+# $NetBSD: Makefile,v 1.35 2026/02/06 10:02:02 wiz Exp $
 
-DISTNAME=	nettle-3.10.2
+DISTNAME=	nettle-4.0
 CATEGORIES=	security
 MASTER_SITES=	http://www.lysator.liu.se/~nisse/archive/
 MASTER_SITES+=	ftp://ftp.lysator.liu.se/pub/security/lsh/
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.lysator.liu.se/~nisse/nettle/
 COMMENT=	Cryptographic library
 LICENSE=	gnu-lgpl-v2.1
 
-USE_CC_FEATURES=	c99
+USE_CC_FEATURES=	c99 # and alignas/alignof from C11
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gm4 gmake
