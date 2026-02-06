@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2026/02/03 15:03:34 taca Exp $
+# $NetBSD: Makefile,v 1.21 2026/02/06 08:28:18 wiz Exp $
 
 DISTNAME=	cucumber-core-15.4.0
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://cukes.info/
+#HOMEPAGE=	http://cukes.info/
 COMMENT=	Core library for the Cucumber BDD app
 LICENSE=	mit
 
