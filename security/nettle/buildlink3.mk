@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2026/02/06 10:04:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2026/02/06 13:51:48 wiz Exp $
 
 BUILDLINK_TREE+=	nettle
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	nettle
 NETTLE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.nettle+=	nettle>=2.4
-BUILDLINK_ABI_DEPENDS.nettle+=	nettle>=4.0
+BUILDLINK_ABI_DEPENDS.nettle+=	nettle>=3.6
 BUILDLINK_PKGSRCDIR.nettle?=	../../security/nettle
 
 BUILDLINK_API_DEPENDS.gmp+=	gmp>=6.0

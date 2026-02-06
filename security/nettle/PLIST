@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2026/02/06 10:02:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/02/06 13:51:48 wiz Exp $
 bin/nettle-hash
 bin/nettle-lfib-stream
 bin/nettle-pbkdf2
@@ -27,6 +27,7 @@ include/nettle/curve25519.h
 include/nettle/curve448.h
 include/nettle/des.h
 include/nettle/drbg-ctr.h
+include/nettle/dsa-compat.h
 include/nettle/dsa.h
 include/nettle/eax.h
 include/nettle/ecc-curve.h
@@ -42,6 +43,7 @@ include/nettle/knuth-lfib.h
 include/nettle/macros.h
 include/nettle/md2.h
 include/nettle/md4.h
+include/nettle/md5-compat.h
 include/nettle/md5.h
 include/nettle/memops.h
 include/nettle/memxor.h
@@ -50,6 +52,7 @@ include/nettle/nettle-types.h
 include/nettle/nist-keywrap.h
 include/nettle/ocb.h
 include/nettle/pbkdf2.h
+include/nettle/pgp.h
 include/nettle/pkcs1.h
 include/nettle/poly1305.h
 include/nettle/pss-mgf1.h
@@ -60,12 +63,12 @@ include/nettle/rsa.h
 include/nettle/salsa20.h
 include/nettle/serpent.h
 include/nettle/sexp.h
+include/nettle/sha.h
 include/nettle/sha1.h
 include/nettle/sha2.h
 include/nettle/sha3.h
 include/nettle/siv-cmac.h
 include/nettle/siv-gcm.h
-include/nettle/slh-dsa.h
 include/nettle/sm3.h
 include/nettle/sm4.h
 include/nettle/streebog.h
