@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.145 2026/01/07 08:48:34 wiz Exp $
+# $NetBSD: Makefile,v 1.146 2026/02/06 10:05:43 wiz Exp $
 #
 
 # XXX The version number is the last one before the agpl change.
 DISTNAME=	ghostscript-9.05
-PKGREVISION=	46
+PKGREVISION=	47
 CATEGORIES=	print meta-pkgs
 MASTER_SITES=	# empty
 

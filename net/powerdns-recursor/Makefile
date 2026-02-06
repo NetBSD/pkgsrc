@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2026/01/19 08:13:58 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/02/06 10:05:37 wiz Exp $
 
 DISTNAME=	pdns-recursor-5.3.4
 PKGNAME=	${DISTNAME:S/pdns/powerdns/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.powerdns.com/releases/
 EXTRACT_SUFX=	.tar.xz

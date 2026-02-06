@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2026/01/07 08:48:21 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/02/06 10:05:34 wiz Exp $
 
 DISTNAME=	libnpupnp-4.1.5
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	net
 MASTER_SITES=	https://www.lesbonscomptes.com/upmpdcli/downloads/
 

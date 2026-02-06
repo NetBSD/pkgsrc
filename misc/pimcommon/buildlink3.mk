@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2026/01/27 08:40:13 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2026/02/06 10:05:23 wiz Exp $
 
 BUILDLINK_TREE+=	pimcommon
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pimcommon
 PIMCOMMON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pimcommon+=	pimcommon>=25.08.3
-BUILDLINK_ABI_DEPENDS.pimcommon?=	pimcommon>=25.08.3nb2
+BUILDLINK_ABI_DEPENDS.pimcommon?=	pimcommon>=25.08.3nb3
 BUILDLINK_PKGSRCDIR.pimcommon?=		../../misc/pimcommon
 
 .include "../../databases/kldap/buildlink3.mk"

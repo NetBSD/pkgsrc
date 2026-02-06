@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2026/01/07 08:48:21 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2026/02/06 10:05:34 wiz Exp $
 #
 
 DISTNAME=	libquvi-0.4.1
-PKGREVISION=	41
+PKGREVISION=	42
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quvi/}
 EXTRACT_SUFX=	.tar.bz2

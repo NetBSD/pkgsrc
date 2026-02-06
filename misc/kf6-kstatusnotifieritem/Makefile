@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2026/01/07 08:47:58 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/02/06 10:05:20 wiz Exp $
 
 DISTNAME=	kstatusnotifieritem-${KF6VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/Frameworks

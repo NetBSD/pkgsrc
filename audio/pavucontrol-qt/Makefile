@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2026/01/07 08:45:54 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/02/06 10:04:15 wiz Exp $
 
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	pavucontrol-qt-2.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

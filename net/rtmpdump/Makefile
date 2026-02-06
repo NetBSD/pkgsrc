@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2026/02/04 00:11:21 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/02/06 10:05:38 wiz Exp $
 
 DISTNAME=	rtmpdump-2.6-git-6f6bb1353fc84f4cc37138baa99f586750028a01
 PKGNAME=	${DISTNAME:C/-git-.*/.0.0.20240301/}
+PKGREVISION=	1
 CATEGORIES=	net multimedia
 #MASTER_SITES=	# manually created tarball from https://git.ffmpeg.org/rtmpdump
 

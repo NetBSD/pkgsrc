@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2026/01/07 08:45:56 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2026/02/06 10:04:17 wiz Exp $
 
 DISTNAME=	ncbi-blast-2.16.0+-src
 PKGNAME=	${DISTNAME:S/+-src//:S/blast/blast+/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	biology
 MASTER_SITES=	https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ \
 		https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${PKGVERSION_NOREV}/

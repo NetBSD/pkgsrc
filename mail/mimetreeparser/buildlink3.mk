@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2026/01/27 08:40:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2026/02/06 10:05:13 wiz Exp $
 
 BUILDLINK_TREE+=	mimetreeparser
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mimetreeparser
 MIMETREEPARSER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mimetreeparser+=	mimetreeparser>=25.08.3
-BUILDLINK_ABI_DEPENDS.mimetreeparser?=	mimetreeparser>=25.08.3nb2
+BUILDLINK_ABI_DEPENDS.mimetreeparser?=	mimetreeparser>=25.08.3nb3
 BUILDLINK_PKGSRCDIR.mimetreeparser?=	../../mail/mimetreeparser
 
 .include "../../devel/kf6-ki18n/buildlink3.mk"

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2026/01/07 08:48:59 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/02/06 10:05:58 wiz Exp $
 #
 
 RSYSLOG_MOD=	snmp
 PKGNAME=	${DISTNAME:S/rsyslog/rsyslog-${RSYSLOG_MOD}/}
-PKGREVISION=	26
+PKGREVISION=	27
 
 DEPENDS+=	rsyslog>=${PKGVERSION_NOREV}:../../sysutils/rsyslog
 
