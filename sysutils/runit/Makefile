@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2023/10/19 13:54:26 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2026/02/06 08:44:13 wiz Exp $
 
 DISTNAME=	runit-2.1.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	neil@daikokuya.co.uk
-HOMEPAGE=	http://smarden.org/runit/
+HOMEPAGE=	https://smarden.org/runit/
 COMMENT=	UNIX init scheme with service supervision
 LICENSE=	modified-bsd
 
