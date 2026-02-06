@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2025/10/20 18:32:10 vins Exp $
+# $NetBSD: Makefile,v 1.70 2026/02/06 08:44:47 wiz Exp $
 
 DISTNAME=		rxvt-2.7.10
 PKGREVISION=		11
@@ -6,7 +6,7 @@ CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rxvt/}
 
 MAINTAINER=		gcw@rxvt.org
-HOMEPAGE=		https://sourceforge.net/projects/rxvt
+HOMEPAGE=		https://sourceforge.net/projects/rxvt/
 COMMENT=		Low memory usage xterm replacement that supports color
 LICENSE=		gnu-gpl-v2
 
