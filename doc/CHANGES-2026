@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.921 2026/02/06 08:43:52 adam Exp $
+$NetBSD: CHANGES-2026,v 1.922 2026/02/06 09:23:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1183,3 +1183,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/ruby-rspec-logsplit [wiz 2026-02-06]
 	Updated biology/py-pydicom to 3.0.1 [adam 2026-02-06]
 	Updated databases/py-barman to 3.17.0 [adam 2026-02-06]
+	Updated devel/py-ipython to 9.10.0 [adam 2026-02-06]
+	Updated www/py-protego to 0.6.0 [adam 2026-02-06]
