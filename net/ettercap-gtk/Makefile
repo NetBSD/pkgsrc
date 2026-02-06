@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.35 2026/02/06 10:05:30 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/02/06 13:31:22 adam Exp $
 
-PKGREVISION= 33
 .include "../../net/ettercap/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/ettercap-/ettercap-gtk-/1}
@@ -13,6 +12,7 @@ CONFLICTS+=	ettercap-[0-9]*
 CMAKE_CONFIGURE_ARGS+=	-DGTK_BUILD_TYPE=GTK3
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_GTK=ON
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

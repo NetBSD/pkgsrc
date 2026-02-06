@@ -1,0 +1,14 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2026/02/06 13:31:21 adam Exp $
+
+Don't generate exports (.tbd files on Darwin). This makes PLIST portable.
+
+--- src/CMakeLists.txt.orig	2026-02-06 13:16:45.627984379 +0000
++++ src/CMakeLists.txt
+@@ -227,7 +227,6 @@ endif()
+ #endif(NOT LIBRARY_BUILD)
+ 
+ set_target_properties(lib_ettercap PROPERTIES
+-  ENABLE_EXPORTS On
+   #  LINK_INTERFACE_LIBRARIES ""
+   OUTPUT_NAME ettercap
+   VERSION ${VERSION}
