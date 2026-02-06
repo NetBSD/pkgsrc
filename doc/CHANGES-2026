@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.931 2026/02/06 17:02:13 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.932 2026/02/06 20:23:22 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1194,3 +1194,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ettercap-gtk to 0.8.4 [adam 2026-02-06]
 	Updated net/yt-dlp to 2026.2.4 [wiz 2026-02-06]
 	Updated chat/ejabberd to 25.10 [gdt 2026-02-06]
+	Updated lang/go124 to 1.24.13 [bsiegert 2026-02-06]
+	Updated lang/go125 to 1.25.7 [bsiegert 2026-02-06]
