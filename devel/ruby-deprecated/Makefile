@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/09/25 06:06:36 taca Exp $
+# $NetBSD: Makefile,v 1.5 2026/02/06 08:30:59 wiz Exp $
 
 DISTNAME=	deprecated-2.0.1
 PKGREVISION=	1
@@ -10,7 +10,7 @@ CATEGORIES=	devel ruby
 #
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	https://github.com/erikh/deprecated
+#HOMEPAGE=	https://github.com/erikh/deprecated
 COMMENT=	Aid developers working with deprecated code
 LICENSE=	modified-bsd
 
