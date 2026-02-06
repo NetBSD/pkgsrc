@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2026/01/18 13:58:07 taca Exp $
+# $NetBSD: Makefile,v 1.31 2026/02/06 08:32:49 wiz Exp $
 
 DISTNAME=	haml-7.2.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://haml.info/
+HOMEPAGE=	https://haml.info/
 COMMENT=	XHTML & CSS markup language & template engine
 LICENSE=	mit
 
