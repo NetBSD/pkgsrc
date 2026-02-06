@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4586 2026/02/05 11:05:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4587 2026/02/06 08:42:02 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3569,7 +3569,6 @@ SUBDIR+=	ruby-rspec
 SUBDIR+=	ruby-rspec-core
 SUBDIR+=	ruby-rspec-expectations
 SUBDIR+=	ruby-rspec-its
-SUBDIR+=	ruby-rspec-logsplit
 SUBDIR+=	ruby-rspec-mocks
 SUBDIR+=	ruby-rspec-rails
 SUBDIR+=	ruby-rspec-support
