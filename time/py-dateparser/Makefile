@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2025/07/02 12:47:11 adam Exp $
+# $NetBSD: Makefile,v 1.20 2026/02/06 07:53:42 adam Exp $
 
-DISTNAME=	dateparser-1.2.2
+DISTNAME=	dateparser-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dateparser/}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.7.0:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2024.2:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-regex>2021.8.27:../../textproc/py-regex
+DEPENDS+=	${PYPKGPREFIX}-regex>2024.9.11:../../textproc/py-regex
 DEPENDS+=	${PYPKGPREFIX}-tzlocal>=0.2:../../time/py-tzlocal
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
