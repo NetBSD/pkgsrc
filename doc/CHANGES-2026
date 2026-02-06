@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.925 2026/02/06 10:02:10 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.926 2026/02/06 11:17:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1188,3 +1188,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/jj to 0.38.0 [wiz 2026-02-06]
 	Updated devel/jj-docs to 0.38.0 [wiz 2026-02-06]
 	Updated security/nettle to 4.0 [wiz 2026-02-06]
+	Updated archivers/unrar to 7.2.4 [adam 2026-02-06]
+	Updated security/ccid to 1.7.1 [adam 2026-02-06]
