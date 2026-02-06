@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2026/01/09 08:07:52 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/02/06 09:57:56 wiz Exp $
 
-DISTNAME=	jj-0.37.0
+DISTNAME=	jj-0.38.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jj-vcs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,10 +10,13 @@ HOMEPAGE=	https://github.com/jj-vcs/jj
 COMMENT=	Git-compatible DVCS that is both simple and powerful
 LICENSE=	apache-2.0
 
-# for 'cargo test', not connected to pkgsrc infrastructure
-#TEST_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
-# status as of 0.36.0
-# test result: FAILED. 904 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 53.52s
+DEPENDS+=	git-base>=2.41.0:../../devel/git-base
+
+# status as of 0.38.0
+# test result: FAILED. 964 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 54.10s
+# report upstream:
+# https://github.com/jj-vcs/jj/issues/8819
+# https://github.com/jj-vcs/jj/issues/8820
 
 RUST_REQ=	1.89
 
@@ -38,6 +41,9 @@ do-install:
 		${DESTDIR}${PREFIX}/share/fish/vendor_completions.d/jj.fish
 	${INSTALL_DATA} ${WRKDIR}/zsh \
 		${DESTDIR}${PREFIX}/share/zsh/site-functions/_jj
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} cargo test
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
