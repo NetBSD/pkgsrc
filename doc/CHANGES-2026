@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.933 2026/02/06 21:41:25 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.934 2026/02/06 21:43:26 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1197,3 +1197,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/go124 to 1.24.13 [bsiegert 2026-02-06]
 	Updated lang/go125 to 1.25.7 [bsiegert 2026-02-06]
 	Updated devel/erlang-cache_tab to 1.0.33 [gdt 2026-02-06]
+	Updated graphics/erlang-eimp to 1.0.26 [gdt 2026-02-06]
