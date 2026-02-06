@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2026/01/07 08:49:07 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2026/02/06 07:50:00 adam Exp $
 
-DISTNAME=	pyicu-2.16
+DISTNAME=	pyicu-2.16.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyicu/ICU/}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyICU/}
 
@@ -14,7 +13,7 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-USE_CXX_FEATURES+=	c++17
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 
