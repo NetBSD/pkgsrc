@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.919 2026/02/06 08:40:03 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.920 2026/02/06 08:42:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1180,3 +1180,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated comms/py-gammu to 3.2.5 [adam 2026-02-06]
 	Updated sysutils/py-fsspec to 2026.2.0 [adam 2026-02-06]
 	Removed textproc/ruby-rison [wiz 2026-02-06]
+	Removed devel/ruby-rspec-logsplit [wiz 2026-02-06]
