@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.926 2026/02/06 11:17:21 adam Exp $
+$NetBSD: CHANGES-2026,v 1.927 2026/02/06 13:28:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1190,3 +1190,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/nettle to 4.0 [wiz 2026-02-06]
 	Updated archivers/unrar to 7.2.4 [adam 2026-02-06]
 	Updated security/ccid to 1.7.1 [adam 2026-02-06]
+	Updated mail/ruby-mime-types-data to 3.2026.0203 [taca 2026-02-06]
