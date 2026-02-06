@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2024/03/05 13:28:43 taca Exp $
+# $NetBSD: Makefile,v 1.12 2026/02/06 08:36:05 wiz Exp $
 
 DISTNAME=	pdf-core-0.10.0
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://prawnpdf.org/
+HOMEPAGE=	https://prawnpdf.org/
 COMMENT=	PDF::Core is used by Prawn to render PDF documents
 LICENSE=	mit
 
