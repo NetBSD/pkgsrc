@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.935 2026/02/06 21:51:25 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.936 2026/02/06 21:52:44 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1199,3 +1199,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/erlang-cache_tab to 1.0.33 [gdt 2026-02-06]
 	Updated graphics/erlang-eimp to 1.0.26 [gdt 2026-02-06]
 	Updated net/erlang-esip to 1.0.59 [gdt 2026-02-06]
+	Updated devel/erlang-ezlib to 1.0.15 [gdt 2026-02-06]
