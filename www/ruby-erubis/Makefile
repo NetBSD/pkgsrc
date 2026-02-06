@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2022/05/05 14:03:28 taca Exp $
+# $NetBSD: Makefile,v 1.4 2026/02/06 08:31:21 wiz Exp $
 
 DISTNAME=	erubis-2.7.0
 PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.kuwata-lab.com/erubis/
+#HOMEPAGE=	http://www.kuwata-lab.com/erubis/
 COMMENT=	Fast and extensible eRuby implementation which supports multi-language
 LICENSE=	mit
 
