@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.63 2026/02/06 15:59:16 gdt Exp $
+@comment $NetBSD: PLIST,v 1.64 2026/02/06 17:02:06 gdt Exp $
 lib/${PKGNAME}/COPYING
 lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/${PKGNAME}/ebin/acl.beam
@@ -318,7 +318,6 @@ lib/${PKGNAME}/include/ejabberd_router.hrl
 lib/${PKGNAME}/include/ejabberd_sm.hrl
 lib/${PKGNAME}/include/ejabberd_sql.hrl
 lib/${PKGNAME}/include/ejabberd_sql_pt.hrl
-lib/${PKGNAME}/include/ejabberd_stacktrace.hrl
 lib/${PKGNAME}/include/ejabberd_web_admin.hrl
 lib/${PKGNAME}/include/eldap.hrl
 lib/${PKGNAME}/include/http_bind.hrl
