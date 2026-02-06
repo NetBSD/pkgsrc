@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2025/02/09 09:28:21 tsutsui Exp $
+# $NetBSD: Makefile,v 1.30 2026/02/06 08:43:30 wiz Exp $
 
 DISTNAME=	squib-0.19.0
 PKGREVISION=	1
@@ -7,7 +7,7 @@ CATEGORIES=	games
 #GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://squib.rocks/
+HOMEPAGE=	https://github.com/andymeneely/squib
 COMMENT=	Tool for prototyping card and board games
 LICENSE=	mit
 
