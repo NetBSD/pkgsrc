@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2020/03/24 17:03:36 taca Exp $
+# $NetBSD: Makefile,v 1.7 2026/02/06 08:42:52 wiz Exp $
 
 DISTNAME=	safe_yaml-1.0.5
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://dtao.github.com/safe_yaml/
+HOMEPAGE=	https://github.com/dtao/safe_yaml/
 COMMENT=	Parse YAML safely
 LICENSE=	mit
 
