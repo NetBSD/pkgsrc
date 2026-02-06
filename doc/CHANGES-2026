@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.920 2026/02/06 08:42:02 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.921 2026/02/06 08:43:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1181,3 +1181,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-fsspec to 2026.2.0 [adam 2026-02-06]
 	Removed textproc/ruby-rison [wiz 2026-02-06]
 	Removed devel/ruby-rspec-logsplit [wiz 2026-02-06]
+	Updated biology/py-pydicom to 3.0.1 [adam 2026-02-06]
+	Updated databases/py-barman to 3.17.0 [adam 2026-02-06]
