@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.938 2026/02/07 00:19:59 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.939 2026/02/07 00:21:21 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1202,3 +1202,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/erlang-ezlib to 1.0.15 [gdt 2026-02-06]
 	Updated security/erlang-fast_tls to 1.1.25 [gdt 2026-02-06]
 	Updated textproc/erlang-fast_xml to 1.1.57 [gdt 2026-02-07]
+	Updated textproc/erlang-fast_yaml to 1.0.39 [gdt 2026-02-07]
