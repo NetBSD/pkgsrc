@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.947 2026/02/07 00:51:35 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.948 2026/02/07 00:53:44 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1211,3 +1211,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/erlang-p1_utils to 1.0.28 [gdt 2026-02-07]
 	Updated textproc/erlang-stringprep to 1.0.33 [gdt 2026-02-07]
 	Updated net/erlang-stun to 1.2.21 [gdt 2026-02-07]
+	Updated net/erlang-xmpp to 1.12.0 [gdt 2026-02-07]
