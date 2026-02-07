@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2026/01/27 08:39:58 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.55 2026/02/07 08:27:57 wiz Exp $
 
 DISTNAME=		scim-canna-1.0.1
 PKGREVISION=		49
@@ -7,7 +6,7 @@ CATEGORIES=		inputmethod
 MASTER_SITES=		${MASTER_SITE_OSDN:=scim-imengine/29155/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://osdn.jp/projects/scim-imengine/
+#HOMEPAGE=		http://osdn.jp/projects/scim-imengine/
 COMMENT=		SCIM IMEngine module for Canna
 LICENSE=		gnu-gpl-v2
 
