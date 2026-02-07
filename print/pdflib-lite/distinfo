@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2025/02/21 17:08:52 chuck Exp $
+$NetBSD: distinfo,v 1.11 2026/02/07 20:25:53 chuck Exp $
 
 BLAKE2s (PDFlib-Lite-7.0.5.tar.gz) = f36b99aabd80c0db3b5582957550628317a4ea35da237faee1ad81a322c126e6
 SHA512 (PDFlib-Lite-7.0.5.tar.gz) = d3c409ebf4a53ec1886762307b7772f71ba8db96d2caab3e2477278d4c9875bf163dbd6b12cc6a2270d4482e06b1b1d4d5cb51753bd8754f4f8736c5e4300c22
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = 080be19dbb3d4ca317bca6f92c675aea2a685594
 SHA1 (patch-config_aclocal.m4) = 357b2a276ae70c3f9fc1a0ff0bd0ca65cc4d6e5c
 SHA1 (patch-configure) = 974c729a970e5b5af199007f022cdb11783c380c
 SHA1 (patch-libs_pdcore_pc_config.h) = e68f27744119facb7b0d7b54fb5104fe1373354d
+SHA1 (patch-libs_png_pngconf.h) = fd4202e14b8b14180b7c767e326dd33d6d0c785b
