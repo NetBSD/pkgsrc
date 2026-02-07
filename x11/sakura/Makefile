@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2026/01/27 08:41:05 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2026/02/07 08:21:55 wiz Exp $
 
 DISTNAME=	sakura-3.8.9
 PKGREVISION=	4
@@ -7,7 +7,7 @@ MASTER_SITES=	https://launchpad.net/sakura/trunk/${PKGVERSION_NOREV}/+download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.pleyades.net/david/projects/sakura
+HOMEPAGE=	https://www.pleyades.net/david/projects/sakura
 COMMENT=	Terminal emulator based on GTK and VTE that supports tab
 LICENSE=	gnu-gpl-v2
 
