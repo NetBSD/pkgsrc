@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.111 2026/02/06 17:02:06 gdt Exp $
+# $NetBSD: Makefile,v 1.112 2026/02/07 01:58:53 gdt Exp $
 
-DISTNAME=	ejabberd-25.10
+DISTNAME=	ejabberd-26.01
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
@@ -59,41 +59,39 @@ CONFIGURE_ARGS+=	--enable-group=${EJABBERD_GROUP}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
-# from rebar.config, less deps for options and pseudo-options
-# (tuned for erlange >= 27 as it is too painful for no point to support
+# from rebar.config
+# (tuned for erlang >= 27 as it is too painful for no point to support
 # using outdated erlang)
 BUILDLINK_ABI_DEPENDS.erlang+=	erlang>=27.0
 
-DEPENDS+=	erlang-cache_tab>=1.0.31:../../devel/erlang-cache_tab
+DEPENDS+=	erlang-cache_tab>=1.0.33:../../devel/erlang-cache_tab
+DEPENDS+=	erlang-eimp>=1.0.26:../../graphics/erlang-eimp
 DEPENDS+=	erlang-epam>=1.0.14:../../security/erlang-epam
-DEPENDS+=	erlang-eimp>=1.0.24:../../graphics/erlang-eimp
-DEPENDS+=	erlang-esip>=1.0.57:../../net/erlang-esip
-DEPENDS+=	erlang-ezlib>=1.0.13:../../devel/erlang-ezlib
-DEPENDS+=	erlang-fast_tls>=1.1.22:../../security/erlang-fast_tls
-DEPENDS+=	erlang-fast_xml>=1.1.55:../../textproc/erlang-fast_xml
-DEPENDS+=	erlang-fast_yaml>=1.0.37:../../textproc/erlang-fast_yaml
-DEPENDS+=	erlang-idna>=6.1.1:../../net/erlang-idna
-DEPENDS+=	erlang-jose>=1.11.10:../../security/erlang-jose
-DEPENDS+=	erlang-mqtree>=1.0.17:../../devel/erlang-mqtree
-DEPENDS+=	erlang-p1_acme>=1.0.25:../../security/erlang-p1_acme
-DEPENDS+=	erlang-p1_mysql>=1.0.26:../../databases/erlang-p1_mysql
-DEPENDS+=	erlang-p1_oauth2>=0.6.14:../../security/erlang-p1_oauth2
-DEPENDS+=	erlang-p1_pgsql>=1.1.32:../../databases/erlang-p1_pgsql
-DEPENDS+=	erlang-p1_utils>=1.0.27:../../misc/erlang-p1_utils
-DEPENDS+=	erlang-pkix>=1.0.10:../../security/erlang-pkix
-DEPENDS+=	erlang-stringprep>=1.0.31:../../textproc/erlang-stringprep
-DEPENDS+=	erlang-stun>=1.2.17:../../net/erlang-stun
-DEPENDS+=	erlang-xmpp>=1.10.0:../../net/erlang-xmpp
-DEPENDS+=	erlang-yconf>=1.0.18:../../textproc/erlang-yconf
-
-# PSEUDO-OPTIONS (off, but could be options if someone cares)
-
-#CONFIGURE_ARGS+=	--disable-redis
 # pkgsrc eredis is too old, so no redis for now
 #DEPENDS+=	erlang-eredis>=1.7.1:../../databases/erlang-eredis
-
+# master?
+DEPENDS+=	erlang-erlydtl>=0.15.0:../../textproc/erlang-erlydtl
+DEPENDS+=	erlang-esip>=1.0.59:../../net/erlang-esip
+DEPENDS+=	erlang-ezlib>=1.0.15:../../devel/erlang-ezlib
+DEPENDS+=	erlang-fast_tls>=1.1.25:../../security/erlang-fast_tls
+DEPENDS+=	erlang-fast_xml>=1.1.57:../../textproc/erlang-fast_xml
+DEPENDS+=	erlang-fast_yaml>=1.0.39:../../textproc/erlang-fast_yaml
+DEPENDS+=	erlang-idna>=6.0.0:../../net/erlang-idna
+# <27: jiffy (skipped)
+DEPENDS+=	erlang-jose>=1.11.12:../../security/erlang-jose
 # --enable-lua, default off (used for importing from prosody)
 #DEPENDS+=	erlang-luerl>=1.2.0:../../lang/erlang-luerl
+DEPENDS+=	erlang-mqtree>=1.0.19:../../devel/erlang-mqtree
+DEPENDS+=	erlang-p1_acme>=1.0.30:../../security/erlang-p1_acme
+DEPENDS+=	erlang-p1_mysql>=1.0.27:../../databases/erlang-p1_mysql
+DEPENDS+=	erlang-p1_oauth2>=0.6.14:../../security/erlang-p1_oauth2
+DEPENDS+=	erlang-p1_pgsql>=1.1.38:../../databases/erlang-p1_pgsql
+DEPENDS+=	erlang-p1_utils>=1.0.28:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-pkix>=1.0.10:../../security/erlang-pkix
+DEPENDS+=	erlang-stringprep>=1.0.33:../../textproc/erlang-stringprep
+DEPENDS+=	erlang-stun>=1.2.21:../../net/erlang-stun
+DEPENDS+=	erlang-xmpp>=1.12.0:../../net/erlang-xmpp
+DEPENDS+=	erlang-yconf>=1.0.22:../../textproc/erlang-yconf
 
 RCD_SCRIPTS=		ejabberd
 
