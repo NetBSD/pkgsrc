@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2026/01/27 08:39:59 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.54 2026/02/07 08:29:27 wiz Exp $
 
 DISTNAME=		scim-skk-0.5.2
 PKGREVISION=		49
@@ -7,7 +6,7 @@ CATEGORIES=		inputmethod
 MASTER_SITES=		${MASTER_SITE_OSDN:=scim-imengine/18121/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://osdn.jp/projects/scim-imengine/
+#HOMEPAGE=		http://osdn.jp/projects/scim-imengine/
 COMMENT=		SCIM IMEngine module for skk
 LICENSE=		gnu-gpl-v2
 
