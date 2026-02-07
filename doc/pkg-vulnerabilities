@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.726 2026/02/03 12:40:13 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.727 2026/02/07 10:00:30 vins Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29655,3 +29655,4 @@ mediawiki<1.43.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-674
 mediawiki<1.43.6	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-67483
 mediawiki<1.43.6	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-67484
 mediawiki<1.43.2	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-6927
+inetutils<2.7		remote-code-execution	https://nvd.nist.gov/vuln/detail/cve-2026-24061
