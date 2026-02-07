@@ -1,4 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2024/08/21 15:00:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/02/07 00:40:22 gdt Exp $
+lib/erlang/lib/jose-${PKGVERSION}/ebin/Elixir.Inspect.JOSE.JWK.beam
+lib/erlang/lib/jose-${PKGVERSION}/ebin/Elixir.JOSE.JWA.beam
+lib/erlang/lib/jose-${PKGVERSION}/ebin/Elixir.JOSE.JWE.beam
+lib/erlang/lib/jose-${PKGVERSION}/ebin/Elixir.JOSE.JWK.beam
+lib/erlang/lib/jose-${PKGVERSION}/ebin/Elixir.JOSE.JWS.beam
+lib/erlang/lib/jose-${PKGVERSION}/ebin/Elixir.JOSE.JWT.beam
+lib/erlang/lib/jose-${PKGVERSION}/ebin/Elixir.JOSE.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose.app
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_app.beam
