@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2021/05/21 07:05:52 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/02/07 08:24:31 wiz Exp $
 
 DISTNAME=	sassc-3.6.2
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sass/}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://sass-lang.com/libsass/
+HOMEPAGE=	https://sass-lang.com/libsass/
 COMMENT=	Wrapper around libsass
 LICENSE=	mit
 
