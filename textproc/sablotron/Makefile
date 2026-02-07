@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2023/08/02 19:30:57 nia Exp $
+# $NetBSD: Makefile,v 1.57 2026/02/07 08:21:09 wiz Exp $
 
 DISTNAME=		Sablot-1.0.2
 PKGNAME=		${DISTNAME:S/Sablot/sablotron/}
@@ -7,7 +7,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		http://download-1.gingerall.cz/download/sablot/
 
 MAINTAINER=		uithuis@dds.nl
-HOMEPAGE=		http://www.gingerall.com/charlie/ga/xml/p_sab.xml
+#HOMEPAGE=		http://www.gingerall.com/charlie/ga/xml/p_sab.xml
 COMMENT=		XML toolkit implementing XSLT, DOM, and XPath
 
 TOOL_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
