@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2025/04/25 11:29:22 gdt Exp $
+$NetBSD: distinfo,v 1.16 2026/02/07 00:46:35 gdt Exp $
 
-BLAKE2s (p1_pgsql-1.1.32.tar.gz) = 94e1dc86c4839aed7ce3c9eac2f75639a3cd2582d45f694fdcd5c58753861154
-SHA512 (p1_pgsql-1.1.32.tar.gz) = f0d6d2aae2e58b8fc7c2d495097851de0eee410cb24795644c2fb2d60796937020828ecd540c65406e95ff2d813b63abe12a8d351ce41807516deccfbacd03bc
-Size (p1_pgsql-1.1.32.tar.gz) = 27702 bytes
+BLAKE2s (p1_pgsql-1.1.38.tar.gz) = ba46766a211f33f0f2292b1dfe942594317f56b55b3abe4de0f932bbacea4412
+SHA512 (p1_pgsql-1.1.38.tar.gz) = 4ba5ae8a5cea10cf2ec4ba1212b0b9feaf30374a2d53e8d2097a65bdc17551a6bc1d5b92c97e266b0f6fd2d5f538faff3e1e950256902e4330663f2707a71a99
+Size (p1_pgsql-1.1.38.tar.gz) = 27865 bytes
