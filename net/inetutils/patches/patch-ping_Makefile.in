@@ -1,6 +1,6 @@
-$NetBSD: patch-ping_Makefile.in,v 1.1 2023/01/09 15:43:33 vins Exp $
+$NetBSD: patch-ping_Makefile.in,v 1.2 2026/02/07 09:53:47 vins Exp $
 
-Let pkgsrc set SUID_PERMS
+Let pkgsrc handle special perms.
 
 --- ping/Makefile.in.orig	2022-10-25 21:16:11.000000000 +0000
 +++ ping/Makefile.in

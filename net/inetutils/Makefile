@@ -1,23 +1,24 @@
-# $NetBSD: Makefile,v 1.10 2023/12/31 19:06:15 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/02/07 09:53:47 vins Exp $
 
-DISTNAME=	inetutils-2.5
+DISTNAME=	inetutils-2.7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=inetutils/}
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/inetutils/
 COMMENT=	GNU network utilities
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
+TOOL_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
 
-AUTO_MKDIRS=		yes
+USE_TOOLS+=		makeinfo yacc
 INFO_FILES=		yes
+
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--program-prefix=g
 CONFIGURE_ENV+=		inetutils_cv_path_cp=${CP:Q}
 
+CFLAGS.NetBSD+=		-Wno-error=incompatible-pointer-types	# incompatible telopts definition
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .for prog in ping ping6 rcp rlogin rsh traceroute
@@ -25,6 +26,8 @@ SPECIAL_PERMS+=		bin/g${prog} ${SETUID_ROOT_PERMS}
 .endfor
 
 TEST_TARGET=		check
+
+AUTO_MKDIRS=		yes
 
 post-install:
 .for f in dnsdomainname ftp hostname ifconfig logger ping ping6 \
