@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.954 2026/02/07 09:54:13 vins Exp $
+$NetBSD: CHANGES-2026,v 1.955 2026/02/07 16:25:05 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1235,3 +1235,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/ruby-gtk3 to 4.3.5 [tsutsui 2026-02-07]
 	Updated x11/ruby-gtksourceview3 to 4.3.5 [tsutsui 2026-02-07]
 	Updated net/inetutils to 2.7 [vins 2026-02-07]
+	Updated editors/nano to 8.7.1 [schwarz 2026-02-07]
