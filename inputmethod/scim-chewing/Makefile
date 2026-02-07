@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.83 2026/01/27 08:39:58 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.84 2026/02/07 08:28:51 wiz Exp $
 
 DISTNAME=		scim-chewing-0.3.5
 PKGREVISION=		59
 CATEGORIES=		inputmethod
-MASTER_SITES=		http://chewing.googlecode.com/files/
+#MASTER_SITES=		http://chewing.googlecode.com/files/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://chewing.im/
+HOMEPAGE=		https://chewing.im/
 COMMENT=		SCIM IMEngine module for Chewing input method
 LICENSE=		gnu-gpl-v2
 
