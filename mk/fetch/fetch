@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: fetch,v 1.21 2021/12/16 14:10:46 schmonz Exp $
+# $NetBSD: fetch,v 1.22 2026/02/07 15:15:02 wiz Exp $
 #
 # Copyright (c) 2006, 2015 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -68,7 +68,7 @@
 #	-r	Resume a previous fetch for the file.  In this case,
 #		the file is first saved to a ".pkgsrc.resume" file,
 #		and is later renamed to the final file name if the
-#		complete file has been sucessfully fetched.
+#		complete file has been successfully fetched.
 #
 #	-v	Show the actual command line used to fetch the file
 #		from each site.
@@ -116,7 +116,7 @@
 self="${0##*/}"
 
 usage() {
-	${ECHO} 1>&2 "usage: $self [-c] [-d dir] [-f distinfo] [-p hook] [-r] [-v] file [site ...]"
+	${ECHO} 1>&2 "usage: $self [-crv] [-d dir] [-f distinfo] [-p hook] file [site ...]"
 }
 
 # Process optional arguments
