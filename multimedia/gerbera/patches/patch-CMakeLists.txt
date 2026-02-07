@@ -1,0 +1,16 @@
+$NetBSD: patch-CMakeLists.txt,v 1.5 2026/02/07 23:48:30 khorben Exp $
+
+Darwin does not require libuuid.
+
+--- CMakeLists.txt.orig	2022-11-04 11:22:55.000000000 +0000
++++ CMakeLists.txt
+@@ -337,7 +337,9 @@ endif()
+ unset(CMAKE_REQUIRED_LIBRARIES)
+ 
+ find_package(UUID REQUIRED)
++if(NOT APPLE)
+ target_link_libraries(libgerbera PUBLIC UUID::UUID)
++endif()
+ 
+ find_package(LFS REQUIRED)
+ target_compile_definitions(libgerbera PUBLIC ${LFS_DEFINITIONS})
