@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/08/22 06:00:15 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/02/07 00:41:46 gdt Exp $
 
-DISTNAME=	mqtree-1.0.17
+DISTNAME=	mqtree-1.0.19
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 GITHUB_PROJECT=	mqtree
