@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.944 2026/02/07 00:46:41 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.945 2026/02/07 00:47:59 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1208,3 +1208,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/erlang-p1_acme to 1.0.30 [gdt 2026-02-07]
 	Updated databases/erlang-p1_mysql to 1.0.27 [gdt 2026-02-07]
 	Updated databases/erlang-p1_pgsql to 1.1.38 [gdt 2026-02-07]
+	Updated misc/erlang-p1_utils to 1.0.28 [gdt 2026-02-07]
