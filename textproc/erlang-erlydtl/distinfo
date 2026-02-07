@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/02/07 01:00:44 gdt Exp $
+
+BLAKE2s (erlydtl-0.15.0.tar.gz) = 56416807f9190bfec326af7755c81fd912cfa408e60c8f09539a5fd84f0d5ecb
+SHA512 (erlydtl-0.15.0.tar.gz) = 5c9ad666b9bea5c44fd45a08f1d26d8efb42c651a9e3528a4290a27a486ce3a0021be1654fced2024ee2ecdf97fbeae58c7966d45b96035658f92732eec2e85d
+Size (erlydtl-0.15.0.tar.gz) = 120544 bytes
+SHA1 (patch-rebar.config) = 877954c0ffa7e42a606f14def02b1666104e1e4e

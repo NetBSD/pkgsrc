@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2026/02/07 01:00:44 gdt Exp $
+lib/erlang/lib/erlydtl-${PKGVERSION}/bin/erlydtl_compile
+lib/erlang/lib/erlydtl-${PKGVERSION}/ebin/erlydtl.app
+lib/erlang/lib/erlydtl-${PKGVERSION}/ebin/erlydtl.beam
+lib/erlang/lib/erlydtl-${PKGVERSION}/ebin/erlydtl_beam_compiler.beam
+lib/erlang/lib/erlydtl-${PKGVERSION}/ebin/erlydtl_compiler.beam
+lib/erlang/lib/erlydtl-${PKGVERSION}/ebin/erlydtl_compiler_utils.beam
+lib/erlang/lib/erlydtl-${PKGVERSION}/ebin/erlydtl_contrib_humanize.beam
+lib/erlang/lib/erlydtl-${PKGVERSION}/ebin/erlydtl_dateformat.beam
+lib/erlang/lib/erlydtl-${PKGVERSION}/ebin/erlydtl_deps.beam
+lib/erlang/lib/erlydtl-${PKGVERSION}/ebin/erlydtl_filters.beam
+lib/erlang/lib/erlydtl-${PKGVERSION}/ebin/erlydtl_library.beam
+lib/erlang/lib/erlydtl-${PKGVERSION}/ebin/erlydtl_parser.beam
+lib/erlang/lib/erlydtl-${PKGVERSION}/ebin/erlydtl_runtime.beam
+lib/erlang/lib/erlydtl-${PKGVERSION}/ebin/erlydtl_scanner.beam
+lib/erlang/lib/erlydtl-${PKGVERSION}/ebin/erlydtl_slice.beam
+lib/erlang/lib/erlydtl-${PKGVERSION}/ebin/erlydtl_time_compat.beam
+lib/erlang/lib/erlydtl-${PKGVERSION}/ebin/erlydtl_unparser.beam
+lib/erlang/lib/erlydtl-${PKGVERSION}/ebin/i18n_manager.beam
+lib/erlang/lib/erlydtl-${PKGVERSION}/ebin/po_generator.beam
+lib/erlang/lib/erlydtl-${PKGVERSION}/ebin/po_scanner.beam
+lib/erlang/lib/erlydtl-${PKGVERSION}/ebin/sources_parser.beam
+lib/erlang/lib/erlydtl-${PKGVERSION}/include/erlydtl_ext.hrl
+lib/erlang/lib/erlydtl-${PKGVERSION}/include/erlydtl_preparser.hrl
+lib/erlang/lib/erlydtl-${PKGVERSION}/priv/custom_tags/flashvideo
+lib/erlang/lib/erlydtl-${PKGVERSION}/test/files/expect/include
+lib/erlang/lib/erlydtl-${PKGVERSION}/test/files/input/include
