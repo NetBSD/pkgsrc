@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.951 2026/02/07 01:58:58 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.952 2026/02/07 08:00:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1215,3 +1215,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/erlang-yconf to 1.0.22 [gdt 2026-02-07]
 	Added textproc/erlang-erlydtl version 0.15.0 [gdt 2026-02-07]
 	Updated chat/ejabberd to 26.01 [gdt 2026-02-07]
+	Updated security/p11-kit to 0.26.2 [adam 2026-02-07]
+	Updated security/py-authlib to 1.6.7 [adam 2026-02-07]
