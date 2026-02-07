@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2026/02/06 10:05:26 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2026/02/07 23:11:45 khorben Exp $
 
-DISTNAME=	gerbera-2.4.1
-PKGREVISION=	8
+DISTNAME=	gerbera-3.0.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gerbera/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -86,6 +85,8 @@ post-install:
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/fmtlib/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
+.include "../../textproc/jsoncpp/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
