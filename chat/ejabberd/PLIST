@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2026/02/06 17:02:06 gdt Exp $
+@comment $NetBSD: PLIST,v 1.65 2026/02/07 01:58:53 gdt Exp $
 lib/${PKGNAME}/COPYING
 lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/${PKGNAME}/ebin/acl.beam
@@ -30,6 +30,7 @@ lib/${PKGNAME}/ebin/ejabberd_commands_doc.beam
 lib/${PKGNAME}/ebin/ejabberd_config.beam
 lib/${PKGNAME}/ebin/ejabberd_config_transformer.beam
 lib/${PKGNAME}/ebin/ejabberd_ctl.beam
+lib/${PKGNAME}/ebin/ejabberd_db_serialize.beam
 lib/${PKGNAME}/ebin/ejabberd_db_sup.beam
 lib/${PKGNAME}/ebin/ejabberd_doc.beam
 lib/${PKGNAME}/ebin/ejabberd_hooks.beam
@@ -89,7 +90,6 @@ lib/${PKGNAME}/ebin/eldap_filter.beam
 lib/${PKGNAME}/ebin/eldap_filter_yecc.beam
 lib/${PKGNAME}/ebin/eldap_pool.beam
 lib/${PKGNAME}/ebin/eldap_utils.beam
-lib/${PKGNAME}/ebin/elixir_logger_backend.beam
 lib/${PKGNAME}/ebin/ext_mod.beam
 lib/${PKGNAME}/ebin/extauth.beam
 lib/${PKGNAME}/ebin/extauth_sup.beam
@@ -155,6 +155,13 @@ lib/${PKGNAME}/ebin/mod_http_upload.beam
 lib/${PKGNAME}/ebin/mod_http_upload_opt.beam
 lib/${PKGNAME}/ebin/mod_http_upload_quota.beam
 lib/${PKGNAME}/ebin/mod_http_upload_quota_opt.beam
+lib/${PKGNAME}/ebin/mod_invites.beam
+lib/${PKGNAME}/ebin/mod_invites_http.beam
+lib/${PKGNAME}/ebin/mod_invites_http_erlylib.beam
+lib/${PKGNAME}/ebin/mod_invites_mnesia.beam
+lib/${PKGNAME}/ebin/mod_invites_opt.beam
+lib/${PKGNAME}/ebin/mod_invites_register.beam
+lib/${PKGNAME}/ebin/mod_invites_sql.beam
 lib/${PKGNAME}/ebin/mod_jidprep.beam
 lib/${PKGNAME}/ebin/mod_jidprep_opt.beam
 lib/${PKGNAME}/ebin/mod_last.beam
@@ -312,6 +319,7 @@ lib/${PKGNAME}/include/bosh.hrl
 lib/${PKGNAME}/include/ejabberd_auth.hrl
 lib/${PKGNAME}/include/ejabberd_commands.hrl
 lib/${PKGNAME}/include/ejabberd_ctl.hrl
+lib/${PKGNAME}/include/ejabberd_db_serialize.hrl
 lib/${PKGNAME}/include/ejabberd_http.hrl
 lib/${PKGNAME}/include/ejabberd_oauth.hrl
 lib/${PKGNAME}/include/ejabberd_router.hrl
@@ -325,6 +333,7 @@ lib/${PKGNAME}/include/logger.hrl
 lib/${PKGNAME}/include/mod_announce.hrl
 lib/${PKGNAME}/include/mod_antispam.hrl
 lib/${PKGNAME}/include/mod_caps.hrl
+lib/${PKGNAME}/include/mod_invites.hrl
 lib/${PKGNAME}/include/mod_last.hrl
 lib/${PKGNAME}/include/mod_mam.hrl
 lib/${PKGNAME}/include/mod_matrix_gw.hrl
