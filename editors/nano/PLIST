@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2025/04/08 14:44:02 nia Exp $
+@comment $NetBSD: PLIST,v 1.35 2026/02/07 16:25:04 schwarz Exp $
 bin/nano
 bin/rnano
 info/nano.info
@@ -8,6 +8,7 @@ man/man5/nanorc.5
 share/doc/nano/faq.html
 share/doc/nano/nano.html
 share/examples/nano/nanorc
+share/locale/ar/LC_MESSAGES/nano.mo
 share/locale/bg/LC_MESSAGES/nano.mo
 share/locale/ca/LC_MESSAGES/nano.mo
 share/locale/cs/LC_MESSAGES/nano.mo

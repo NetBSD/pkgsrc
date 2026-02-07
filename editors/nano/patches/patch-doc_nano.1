@@ -1,10 +1,10 @@
-$NetBSD: patch-doc_nano.1,v 1.5 2025/04/08 14:44:02 nia Exp $
+$NetBSD: patch-doc_nano.1,v 1.6 2026/02/07 16:25:05 schwarz Exp $
 
 * Fix hard-coded paths.
 
---- doc/nano.1.orig	2025-04-02 08:53:51.000000000 +0000
-+++ doc/nano.1
-@@ -431,7 +431,7 @@ or \fI~/.config/nano/nanorc\fR, whicheve
+--- doc/nano.1.orig	2026-02-04 08:49:22.000000000 +0100
++++ doc/nano.1	2026-02-07 16:11:47.000000000 +0100
+@@ -435,7 +435,7 @@
  .BR nanorc (5)
  for more information on the possible contents of those files.
  .sp
@@ -12,8 +12,8 @@ $NetBSD: patch-doc_nano.1,v 1.5 2025/04/08 14:44:02 nia Exp $
 +See \fI@PREFIX@/share/nano/\fR and \fI@PREFIX@/share/nano/extra/\fR
  for available syntax-coloring definitions.
  
- .SH NOTES
-@@ -480,4 +480,4 @@ the environment variable \fBNANO_NOCATCH
+ .SH EXIT STATUS
+@@ -497,4 +497,4 @@
  .SH SEE ALSO
  .BR nanorc (5)
  .sp
