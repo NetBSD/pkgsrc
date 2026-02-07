@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2025/08/19 14:12:41 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/02/07 08:31:18 wiz Exp $
 
 DISTNAME=	sd-mux-9dd189d973da64e033a0c5c2adb3d94b23153d94
 PKGNAME=	sd-mux-ctrl-0.0.20200217
 CATEGORIES=	misc
-MASTER_SITES=	https://git.tizen.org/cgit/tools/testlab/sd-mux/snapshot/
+#MASTER_SITES=	https://git.tizen.org/cgit/tools/testlab/sd-mux/snapshot/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmcneill@invisible.ca
-HOMEPAGE=	https://wiki.tizen.org/SD_MUX
+#HOMEPAGE=	https://wiki.tizen.org/SD_MUX
 COMMENT=	Control software for sd-mux devices
 LICENSE=	apache-2.0
 
