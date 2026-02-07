@@ -1,25 +1,28 @@
-$NetBSD: patch-aa,v 1.4 2020/03/07 18:31:03 fcambus Exp $
+$NetBSD: patch-aa,v 1.5 2026/02/07 22:47:54 wiz Exp $
 
---- Makefile.orig	2017-08-01 22:51:08.000000000 +0000
+Libtoolize.
+
+--- Makefile.orig	2026-02-01 07:26:50.000000000 +0000
 +++ Makefile
-@@ -2,13 +2,14 @@
+@@ -5,7 +5,7 @@ VERS=$(shell sed -n <NEWS.adoc '/^[0-9]/s/:.*//p' | he
  
- VERS=$(shell sed -n <NEWS '/^[0-9]/s/:.*//p' | head -1)
+ VERS=$(shell sed -n <NEWS.adoc '/^[0-9]/s/:.*//p' | head -1)
  
 -CFLAGS = -O
-+CFLAGS? = -O
++CFLAGS ?= -O
  
- PREFIX = /usr
+ PREFIX = /usr/local
  
+@@ -15,6 +15,7 @@ ascii: ascii.c splashscreen.h nametable.h
  all: ascii ascii.1
  
  ascii: ascii.c splashscreen.h nametable.h
 +	$(LIBTOOL) --mode=link --tag=CC \
- 	$(CC) $(CFLAGS) -DREVISION=$(VERS) ascii.c -o ascii
+ 	$(CC) $(CFLAGS) -DREVISION='"$(VERS)"' ascii.c -o ascii
  
  splashscreen.h: splashscreen
-@@ -35,8 +36,11 @@ splint:
- 	splint +quiet +posixlib $(SPLINT_SUPPRESSIONS) ascii.c
+@@ -59,8 +60,11 @@ install: ascii ascii.1
+ 	spellcheck ascii.adoc
  
  install: ascii ascii.1
 -	cp ascii $(DESTDIR)$(PREFIX)/bin/ascii
