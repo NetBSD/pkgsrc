@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.6 2023/12/31 19:06:15 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/02/07 09:53:47 vins Exp $
 
-BLAKE2s (inetutils-2.5.tar.xz) = 6a2d57a6e3b36a6b72b232fe7aa6c61aedb4e2b9d574aae9c1bc9e92f3fe340a
-SHA512 (inetutils-2.5.tar.xz) = dc11ad6eeb5ea2c85edddbfc77630b5b09e4e1ac643629edf13b0ac0828c13cdb0885275153c072ae13a798427c96bc461037822ad646f7210369192c35bb04c
-Size (inetutils-2.5.tar.xz) = 1670424 bytes
-SHA1 (patch-ping_Makefile.in) = b27c71e45b94baa954859f83c890f4f819a4651d
-SHA1 (patch-src_Makefile.in) = 752148dbd9657291a7b20a667a002c535169e7ba
-SHA1 (patch-src_syslogd.c) = df4a9a8a30964d336b16d00589d0eca5252b680c
+BLAKE2s (inetutils-2.7.tar.gz) = 537183861935001f209af6f8a4a1d9e223bb879aedc4ec0f180a98aaeda2feee
+SHA512 (inetutils-2.7.tar.gz) = 8f36bea126108e8f48f2c436c9ff11684f3bd51c4e48090f0ab8626b8c5878b6dc8c64b84cd7a6220913f68c8602b37c8ac632fe9ef530bf5018c6e51ee1a90b
+Size (inetutils-2.7.tar.gz) = 3157952 bytes
+SHA1 (patch-libinetutils_libinetutils.h) = 4fd40c71340a90cbe606b71655555d98dfc7e2c6
+SHA1 (patch-ping_Makefile.in) = bfc193800d353496ce2dc639803c356eef7a655a
+SHA1 (patch-src_Makefile.in) = a8321822fdd68db4ec86ad232b59aaad92583297
+SHA1 (patch-src_syslogd.c) = 608579f47456d85b29520e7021c86cf80f6faa1c
