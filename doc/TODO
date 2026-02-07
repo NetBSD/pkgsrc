@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26764 2026/02/07 10:23:57 wiz Exp $
+$NetBSD: TODO,v 1.26765 2026/02/07 18:29:40 adam Exp $
 
 Suggested new packages
 ======================
@@ -646,7 +646,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o freerdp-3.17
 	o freesci-0.6.4
 	o freeswitch-1.2.3
-	o freetds-1.4.2
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
 	o freewais-sf-2.2.14
