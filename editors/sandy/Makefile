@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/05/06 08:40:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2026/02/07 08:24:11 wiz Exp $
 
 DISTNAME=	sandy-0.4
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://tools.suckless.org/sandy
+HOMEPAGE=	https://oldgit.suckless.org/sandy/file/README.html
 COMMENT=	Sandy is an ncurses text editor
 LICENSE=	mit
 
