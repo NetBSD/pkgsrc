@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1571 2026/02/06 08:40:03 wiz Exp $
+# $NetBSD: Makefile,v 1.1572 2026/02/07 01:01:48 gdt Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -237,6 +237,7 @@ SUBDIR+=	enchant2
 SUBDIR+=	enju
 SUBDIR+=	epubcheck
 SUBDIR+=	epubpreflight
+SUBDIR+=	erlang-erlydtl
 SUBDIR+=	erlang-fast_xml
 SUBDIR+=	erlang-fast_yaml
 SUBDIR+=	erlang-jiffy
