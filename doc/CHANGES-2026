@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.956 2026/02/07 18:29:40 adam Exp $
+$NetBSD: CHANGES-2026,v 1.957 2026/02/07 22:44:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1239,3 +1239,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/freetds to 1.5.10 [adam 2026-02-07]
 	Updated devel/ccache to 4.12.3 [adam 2026-02-07]
 	Updated devel/lazygit to 0.59.0 [adam 2026-02-07]
+	Updated x11/libX11 to 1.8.13 [wiz 2026-02-07]
