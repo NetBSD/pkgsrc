@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.940 2026/02/07 00:40:28 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.941 2026/02/07 00:41:58 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1204,3 +1204,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/erlang-fast_xml to 1.1.57 [gdt 2026-02-07]
 	Updated textproc/erlang-fast_yaml to 1.0.39 [gdt 2026-02-07]
 	Updated security/erlang-jose to 1.11.12 [gdt 2026-02-07]
+	Updated devel/erlang-mqtree to 1.0.19 [gdt 2026-02-07]
