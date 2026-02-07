@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.953 2026/02/07 08:43:18 tsutsui Exp $
+$NetBSD: CHANGES-2026,v 1.954 2026/02/07 09:54:13 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1234,3 +1234,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/ruby-poppler to 4.3.5 [tsutsui 2026-02-07]
 	Updated x11/ruby-gtk3 to 4.3.5 [tsutsui 2026-02-07]
 	Updated x11/ruby-gtksourceview3 to 4.3.5 [tsutsui 2026-02-07]
+	Updated net/inetutils to 2.7 [vins 2026-02-07]
