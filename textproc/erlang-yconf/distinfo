@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/04/25 11:37:24 gdt Exp $
+$NetBSD: distinfo,v 1.8 2026/02/07 00:54:59 gdt Exp $
 
-BLAKE2s (yconf-1.0.18.tar.gz) = 16e94a3ec385ecd96c5b06fee611a8e3bcd3fd16c58a0874d59da665a46e587d
-SHA512 (yconf-1.0.18.tar.gz) = ca139b0c1982fc0fc3de2f0ee08493a730a5ef4f4162931e7b8271310067330ee3a6e330c66715a61dcdc3e2cdb7e482b21206b3e7c31246651636777c446d9c
-Size (yconf-1.0.18.tar.gz) = 224293 bytes
+BLAKE2s (yconf-1.0.22.tar.gz) = 782bd497b8c8a4bcf6128d1dfc052e4b8ae920024a99ad9cbe690900e3476502
+SHA512 (yconf-1.0.22.tar.gz) = 43b8bb4a11b5fb8fa31f5c97f019cede3638edb3239ac8c5c378ca3b1560a1fa713eaed727ff21a9e17380daa20c320ed2eebb1d8f3345ee7318e53137b2d8ff
+Size (yconf-1.0.22.tar.gz) = 224525 bytes
