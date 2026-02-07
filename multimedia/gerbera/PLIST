@@ -1,15 +1,24 @@
-@comment $NetBSD: PLIST,v 1.6 2025/01/27 16:19:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/02/07 23:11:45 khorben Exp $
 bin/gerbera
 man/man1/gerbera.1
 share/applications/gerbera.desktop
 share/examples/gerbera/config.xml
+share/gerbera/config2.xsd
 share/gerbera/js/audio.js
 share/gerbera/js/common.js
+share/gerbera/js/image.js
 share/gerbera/js/import.js
 share/gerbera/js/metadata.js
 share/gerbera/js/playlists.js
+share/gerbera/js/trailer.js
+share/gerbera/js/video.js
+share/gerbera/mysql-drop.sql
 share/gerbera/mysql-upgrade.xml
 share/gerbera/mysql.sql
+share/gerbera/postgres-drop.sql
+share/gerbera/postgres-upgrade.xml
+share/gerbera/postgres.sql
+share/gerbera/sqlite3-drop.sql
 share/gerbera/sqlite3-upgrade.xml
 share/gerbera/sqlite3.sql
 share/gerbera/web/.gitignore
