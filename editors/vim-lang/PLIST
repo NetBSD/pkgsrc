@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2025/12/03 22:52:01 morr Exp $
+@comment $NetBSD: PLIST,v 1.37.2.1 2026/02/07 22:12:28 maya Exp $
 man/da.ISO8859-1/man1/ex.1
 man/da.ISO8859-1/man1/rview.1
 man/da.ISO8859-1/man1/rvim.1
@@ -131,6 +131,30 @@ man/ru.UTF-8/man1/view.1
 man/ru.UTF-8/man1/vim.1
 man/ru.UTF-8/man1/vimdiff.1
 man/ru.UTF-8/man1/vimtutor.1
+man/sv.ISO8859-1/man1/evim.1
+man/sv.ISO8859-1/man1/ex.1
+man/sv.ISO8859-1/man1/rview.1
+man/sv.ISO8859-1/man1/rvim.1
+man/sv.ISO8859-1/man1/view.1
+man/sv.ISO8859-1/man1/vim.1
+man/sv.ISO8859-1/man1/vimdiff.1
+man/sv.ISO8859-1/man1/vimtutor.1
+man/sv.UTF-8/man1/evim.1
+man/sv.UTF-8/man1/ex.1
+man/sv.UTF-8/man1/rview.1
+man/sv.UTF-8/man1/rvim.1
+man/sv.UTF-8/man1/view.1
+man/sv.UTF-8/man1/vim.1
+man/sv.UTF-8/man1/vimdiff.1
+man/sv.UTF-8/man1/vimtutor.1
+man/sv/man1/evim.1
+man/sv/man1/ex.1
+man/sv/man1/rview.1
+man/sv/man1/rvim.1
+man/sv/man1/view.1
+man/sv/man1/vim.1
+man/sv/man1/vimdiff.1
+man/sv/man1/vimtutor.1
 man/tr.ISO8859-9/man1/evim.1
 man/tr.ISO8859-9/man1/ex.1
 man/tr.ISO8859-9/man1/rview.1
@@ -427,6 +451,7 @@ share/vim/${VIM_SUBDIR}/lang/sk.cp1250/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/sk/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/sr/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/sv/LC_MESSAGES/vim.mo
+share/vim/${VIM_SUBDIR}/lang/ta/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/tr/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/uk.cp1251/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/uk/LC_MESSAGES/vim.mo
