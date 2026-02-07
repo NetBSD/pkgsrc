@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2025/04/25 11:31:38 gdt Exp $
+$NetBSD: distinfo,v 1.16 2026/02/07 00:49:21 gdt Exp $
 
-BLAKE2s (stringprep-1.0.31.tar.gz) = 8eb60b1ab97a6fd52b8dc42c04d0d4195e0ce4396c7728f2f8b6c1bbb882b7fc
-SHA512 (stringprep-1.0.31.tar.gz) = f65567fe6611671c7b37aaf3cec7fc15cbb3788f1b99f5efd93bcde045ae1e5744e8fc60f1fb3c7be083e540e435740b5c866cbd2c843816d24b97e23c66d007
-Size (stringprep-1.0.31.tar.gz) = 99458 bytes
+BLAKE2s (stringprep-1.0.33.tar.gz) = 042aaf515b79925662c74aacaa54c2ad4ea857f12adcf9199d59f9486dfea089
+SHA512 (stringprep-1.0.33.tar.gz) = b49ed091785ec7add0e22fa98137976899ffbd0281d01f54edc322942eeec7a1bba9394df55911f2c8084b7b379ce9c542f251d1ffef921392359a127cbcd1fe
+Size (stringprep-1.0.33.tar.gz) = 99491 bytes
