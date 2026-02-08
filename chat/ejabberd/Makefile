@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2026/02/07 01:58:53 gdt Exp $
+# $NetBSD: Makefile,v 1.113 2026/02/08 20:03:17 gdt Exp $
 
 DISTNAME=	ejabberd-26.01
 CATEGORIES=	chat
@@ -59,17 +59,15 @@ CONFIGURE_ARGS+=	--enable-group=${EJABBERD_GROUP}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
-# from rebar.config
-# (tuned for erlang >= 27 as it is too painful for no point to support
-# using outdated erlang)
-BUILDLINK_ABI_DEPENDS.erlang+=	erlang>=27.0
+# Dependencies from rebar.config
+# (We assume erlang >= 27; it is too painful to accomodate old erlang.)
+BUILDLINK_API_DEPENDS.erlang+=	erlang>=27.0
 
 DEPENDS+=	erlang-cache_tab>=1.0.33:../../devel/erlang-cache_tab
 DEPENDS+=	erlang-eimp>=1.0.26:../../graphics/erlang-eimp
 DEPENDS+=	erlang-epam>=1.0.14:../../security/erlang-epam
 # pkgsrc eredis is too old, so no redis for now
 #DEPENDS+=	erlang-eredis>=1.7.1:../../databases/erlang-eredis
-# master?
 DEPENDS+=	erlang-erlydtl>=0.15.0:../../textproc/erlang-erlydtl
 DEPENDS+=	erlang-esip>=1.0.59:../../net/erlang-esip
 DEPENDS+=	erlang-ezlib>=1.0.15:../../devel/erlang-ezlib
