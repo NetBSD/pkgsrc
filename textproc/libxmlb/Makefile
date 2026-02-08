@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/01/17 21:33:08 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/02/08 21:47:57 wiz Exp $
 
-DISTNAME=	libxmlb-0.3.24
-PKGREVISION=	1
+DISTNAME=	libxmlb-0.3.25
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hughsie/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
