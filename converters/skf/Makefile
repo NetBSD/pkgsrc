@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2022/06/28 11:31:13 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2026/02/08 10:56:31 wiz Exp $
 
 DISTNAME=	skf_${VERSION}.4
 VERSION=	2.00
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_OSDN:=skf/64426/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://osdn.jp/projects/skf/
+#HOMEPAGE=	http://osdn.jp/projects/skf/
 COMMENT=	Simple Kanji Filter - i18n kanji converter
 #LICENSE=	modified-bsd # some files are derived from...see ${WRKSRC}/copyright
 # 		and ${PREFIX}/share/doc/skf/copyright
