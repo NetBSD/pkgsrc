@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.978 2026/02/08 21:49:11 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.979 2026/02/08 21:50:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1264,3 +1264,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/libfyaml to 0.9.4 [wiz 2026-02-08]
 	Updated textproc/libxmlb to 0.3.25 [wiz 2026-02-08]
 	Updated textproc/libzim to 9.5.0 [wiz 2026-02-08]
+	Updated devel/py-astroid to 4.0.4 [wiz 2026-02-08]
