@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/12/30 21:42:48 zafer Exp $
-#
+# $NetBSD: Makefile,v 1.15 2026/02/08 10:53:55 wiz Exp $
 
 DISTNAME=		siege-4.1.6
 PKGREVISION=		2
@@ -7,7 +6,7 @@ CATEGORIES=		www
 MASTER_SITES=		https://download.joedog.org/siege/
 
 MAINTAINER=		nils@NetBSD.org
-HOMEPAGE=		http://www.joedog.org/JoeDog/Siege
+HOMEPAGE=		https://www.joedog.org/siege
 COMMENT=		Website/webserver regression testing utility
 LICENSE=		gnu-gpl-v2
 
