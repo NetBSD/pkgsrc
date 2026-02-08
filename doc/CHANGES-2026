@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.959 2026/02/07 23:12:06 khorben Exp $
+$NetBSD: CHANGES-2026,v 1.960 2026/02/08 00:13:44 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1242,3 +1242,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/libX11 to 1.8.13 [wiz 2026-02-07]
 	Updated misc/ascii to 3.31 [wiz 2026-02-07]
 	Updated multimedia/gerbera to 3.0.0 [khorben 2026-02-07]
+	Updated chat/py-xmpppy to 0.7.3 [gdt 2026-02-08]
