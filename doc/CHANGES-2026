@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.974 2026/02/08 12:00:07 leot Exp $
+$NetBSD: CHANGES-2026,v 1.975 2026/02/08 15:28:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1257,3 +1257,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/gnome-nibbles to 4.5.0 [wiz 2026-02-08]
 	Removed games/libgnome-games-support [wiz 2026-02-08]
 	Updated security/age to 1.3.1 [leot 2026-02-08]
+	Updated mail/roundcube to 1.6.13 [taca 2026-02-08]
+	Updated mail/roundcube-plugin-enigma to 1.6.13 [taca 2026-02-08]
+	Updated mail/roundcube-plugin-password to 1.6.13 [taca 2026-02-08]
+	Updated mail/roundcube-plugin-zipdownload to 1.6.13 [taca 2026-02-08]
