@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.730 2026/02/08 14:08:07 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.731 2026/02/08 14:09:55 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29716,3 +29716,6 @@ py{27,310,311,312,313,314}-django<4.2.28	sql-injection		https://nvd.nist.gov/vul
 py{27,310,311,312,313,314}-django>=5<5.2.11	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2026-1312
 py{27,310,311,312,313,314}-wagtail<7.2.2	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2026-25517
 vim<9.1.2132	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-25749
+firefox<147.0.2		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2026-06/
+thunderbird<147.0.1	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2026-07/
+firefox140<140.7.1	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2026-08/
