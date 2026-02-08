@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.728 2026/02/07 10:35:49 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.729 2026/02/08 14:01:54 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29655,3 +29655,64 @@ mediawiki<1.43.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-674
 mediawiki<1.43.6	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-67483
 mediawiki<1.43.6	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-67484
 mediawiki<1.43.2	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-6927
+asterisk<20.18.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2026-23738
+asterisk>=21<21.12.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2026-23738
+asterisk>=22<22.8.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2026-23738
+asterisk>=23<23.2.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2026-23738
+asterisk<20.18.2	xml-external-entity	https://nvd.nist.gov/vuln/detail/CVE-2026-23739
+asterisk>=21<21.12.1	xml-external-entity	https://nvd.nist.gov/vuln/detail/CVE-2026-23739
+asterisk>=22<22.8.2	xml-external-entity	https://nvd.nist.gov/vuln/detail/CVE-2026-23739
+asterisk>=23<23.2.2	xml-external-entity	https://nvd.nist.gov/vuln/detail/CVE-2026-23739
+asterisk<20.18.2	arbitrary-file-overwrite	https://nvd.nist.gov/vuln/detail/CVE-2026-23740
+asterisk>=21<21.12.1	arbitrary-file-overwrite	https://nvd.nist.gov/vuln/detail/CVE-2026-23740
+asterisk>=22<22.8.2	arbitrary-file-overwrite	https://nvd.nist.gov/vuln/detail/CVE-2026-23740
+asterisk>=23<23.2.2	arbitrary-file-overwrite	https://nvd.nist.gov/vuln/detail/CVE-2026-23740
+asterisk<20.18.2	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2026-23741
+asterisk>=21<21.12.1	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2026-23741
+asterisk>=22<22.8.2	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2026-23741
+asterisk>=23<23.2.2	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2026-23741
+calibre<9.2.0	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2026-25635
+calibre<9.2.0	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2026-25636
+calibre<9.2.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2026-25731
+chromium<144.0.7559.132	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-1861
+chromium<144.0.7559.132	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2026-1862
+codeblocks-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-37121
+dnsmasq<2.80	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-37127
+php{56,74,81,82,83,84}-glpi<10.0.23	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-22044
+php{56,74,81,82,83,84}-glpi>=11<11.0.5	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2026-22247
+php{56,74,81,82,83,84}-glpi<10.0.23	session-fixation	https://nvd.nist.gov/vuln/detail/CVE-2026-23624
+gnupg2<2.5.17	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-24882
+go123<1.23.9	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-22873
+go124<1.24.3	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-22873
+go124<1.24.13	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-61732
+go125<1.25.7	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-61732
+go124<1.24.13	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-68121
+go125<1.25.7	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-68121
+libsoup-[0-9]*	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2026-1801
+magento<20.16.1	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-25523
+micropython<1.28.0	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2026-1998
+moodle<5.0.4	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-67848
+moodle<5.0.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-67849
+moodle<5.0.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-67850
+moodle<5.0.4	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-67851
+moodle<5.0.4	open-redirect	https://nvd.nist.gov/vuln/detail/CVE-2025-67852
+moodle<5.0.4	brute-force	https://nvd.nist.gov/vuln/detail/CVE-2025-67853
+moodle<5.0.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-67855
+moodle<5.0.4	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2025-67856
+moodle<5.0.4	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-67857
+mupdf<1.27.1	double-free	https://nvd.nist.gov/vuln/detail/CVE-2026-25556
+php{56,74,81,82,83,84}-phppgadmin<9.122	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-1707
+py{27,310,311,312,313,314}-django<4.2.28	timing-attack	https://nvd.nist.gov/vuln/detail/CVE-2025-13473
+py{27,310,311,312,313,314}-django>=5<5.2.11	timing-attack	https://nvd.nist.gov/vuln/detail/CVE-2025-13473
+py{27,310,311,312,313,314}-django<4.2.28	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-14550
+py{27,310,311,312,313,314}-django>=5<5.2.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-14550
+py{27,310,311,312,313,314}-django<4.2.28	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-1207
+py{27,310,311,312,313,314}-django>=5<5.2.11	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-1207
+py{27,310,311,312,313,314}-django<4.2.28	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-1285
+py{27,310,311,312,313,314}-django>=5<5.2.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-1285
+py{27,310,311,312,313,314}-django<4.2.28	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-1287
+py{27,310,311,312,313,314}-django>=5<5.2.11	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-1287
+py{27,310,311,312,313,314}-django<4.2.28	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-1312
+py{27,310,311,312,313,314}-django>=5<5.2.11	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-1312
+py{27,310,311,312,313,314}-wagtail<7.2.2	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2026-25517
+vim<9.1.2132	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-25749
