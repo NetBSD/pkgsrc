@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2023/05/05 08:21:22 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/02/08 06:39:37 wiz Exp $
 
-DISTNAME=		xcalc-1.1.2
+DISTNAME=		xcalc-1.1.3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.xz
@@ -10,12 +10,8 @@ HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Scientific calculator for X
 LICENSE=		mit
 
-GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
-CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
-
-MAKE_FLAGS+=		appdefaultdir=${PREFIX}/lib/X11/app-defaults
-
+.include "../../devel/meson/build.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
