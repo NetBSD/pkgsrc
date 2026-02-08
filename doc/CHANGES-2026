@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.985 2026/02/08 22:19:58 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.986 2026/02/08 22:21:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1271,3 +1271,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-ruff to 0.15.0 [wiz 2026-02-08]
 	Updated devel/py-setuptools to 81.0.0 [wiz 2026-02-08]
 	Updated www/py-sigal to 2.6.1 [wiz 2026-02-08]
+	Updated devel/py-wcwidth to 0.6.0 [wiz 2026-02-08]
