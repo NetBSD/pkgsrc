@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2026/01/26 00:07:49 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/02/08 07:46:27 wiz Exp $
 
 DISTNAME=		libxkbfile-1.2.0
 CATEGORIES=		x11
@@ -15,8 +15,6 @@ FORCE_C_STD=		gnu99
 
 PKGCONFIG_OVERRIDE+=		output/xkbfile.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
-
-.include "../../meta-pkgs/modular-xorg/hacks.mk"
 
 .include "../../devel/meson/build.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
