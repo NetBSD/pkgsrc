@@ -1,16 +1,16 @@
-$NetBSD: patch-xmpp_transports.py,v 1.6 2025/08/10 14:36:24 gdt Exp $
+$NetBSD: patch-xmpp_transports.py,v 1.7 2026/02/08 00:13:38 gdt Exp $
 
 Upstream disables validating certificates.  In 2025, this is a bug.
 Record how to address the bug, and why that fails.
 
 https://github.com/xmpppy/xmpppy/issues/71
 
---- xmpp/transports.py.orig	2025-08-09 12:24:46.000000000 +0000
+--- xmpp/transports.py.orig	2026-02-07 23:48:17.000000000 +0000
 +++ xmpp/transports.py
-@@ -385,6 +385,11 @@ class TLS(PlugIn):
-         """ Here we should switch pending_data to hint mode."""
-         tcpsock=self._owner.Connection
-         context=ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+@@ -389,6 +389,11 @@ class TLS(PlugIn):
+         else:
+             protocol = ssl.PROTOCOL_TLS
+         context=ssl.SSLContext(protocol)
 +        #pkgsrc:
 +        #  - Choose defaults for 2025.
 +        #  - https://github.com/xmpppy/xmpppy/issues/71

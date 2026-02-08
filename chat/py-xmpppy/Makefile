@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2025/08/13 05:59:09 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/02/08 00:13:38 gdt Exp $
 
-DISTNAME=	xmpppy-0.7.2
+DISTNAME=	xmpppy-0.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xmpppy/}
@@ -26,12 +26,9 @@ INSTALLATION_DIRS+=	${DOCDIR} ${EXDIR}
 
 # Upstream says install_requires, but it is used at runtime.
 DEPENDS+=	${PYPKGPREFIX}-six>=1.15.0:../../lang/py-six
-
-.if ${PYTHON_VERSION} == 207
-DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns1
-.else
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
-.endif
+
+TEST_DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 
 post-install:
 	${INSTALL_SCRIPT_DIR} ${DESTDIR}${EXDIR}
