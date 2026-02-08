@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/05/05 08:21:22 wiz Exp $
+$NetBSD: distinfo,v 1.15 2026/02/08 06:39:37 wiz Exp $
 
-BLAKE2s (xcalc-1.1.2.tar.xz) = 8bb0a793836c94ada131881e58504e78719cb4d050b534f67e28fc5a9c8575f2
-SHA512 (xcalc-1.1.2.tar.xz) = 51da677dc88bcd7299ed8d678cb26b048fdb82a1983e1496a06253ee2dceefca4ac87d1a74432b4a76dcc11921a61339bb3d292607be46228164140b430bbad2
-Size (xcalc-1.1.2.tar.xz) = 140692 bytes
+BLAKE2s (xcalc-1.1.3.tar.xz) = b9a906d774f5968eafb323dcd2ca89b5b65a7f17d6563d27503c3577c4f48f85
+SHA512 (xcalc-1.1.3.tar.xz) = 26236f5d6bd37df424e2f61b00362f4cd31a55b1decf03d98053765466af1393c762ae4127fd29256d635e28c10d7713ad12c5feb72c02272144b94453115afd
+Size (xcalc-1.1.3.tar.xz) = 146996 bytes
