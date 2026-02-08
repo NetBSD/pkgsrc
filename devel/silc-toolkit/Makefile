@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2021/04/21 09:06:15 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/02/08 10:55:11 wiz Exp $
 
 DISTNAME=	silc-toolkit-1.1.10
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.silcnet.org/download/toolkit/sources/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	salo@NetBSD.org
-HOMEPAGE=	http://www.silcnet.org/
+#HOMEPAGE=	http://www.silcnet.org/
 COMMENT=	Secure Internet Live Conferencing (SILC) protocol Toolkit
 
 CONFLICTS+=		silc-client<1.0.1nb1
