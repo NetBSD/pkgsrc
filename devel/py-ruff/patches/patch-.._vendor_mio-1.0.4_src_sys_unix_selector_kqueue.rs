@@ -1,4 +1,4 @@
-$NetBSD: patch-.._vendor_mio-1.0.4_src_sys_unix_selector_kqueue.rs,v 1.2 2026/01/19 11:40:24 wiz Exp $
+$NetBSD: patch-.._vendor_mio-1.0.4_src_sys_unix_selector_kqueue.rs,v 1.3 2026/02/08 22:09:53 wiz Exp $
 
 Fix build using upstream later released commit
 
