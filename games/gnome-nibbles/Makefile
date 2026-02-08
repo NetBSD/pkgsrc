@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2026/02/08 09:52:29 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/02/08 09:53:38 wiz Exp $
 
 DISTNAME=	gnome-nibbles-4.5.0
 CATEGORIES=	games
@@ -23,8 +23,6 @@ BUILDLINK_API_DEPENDS.libadwaita+=	libadwaita>=1.5.0
 .include "../../devel/libadwaita/buildlink3.mk"
 .include "../../devel/libgee/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-#BUILDLINK_API_DEPENDS.libgnome-games-support+=	libgnome-games-support>=3.0
-#.include "../../games/libgnome-games-support/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/buildlink3.mk"
