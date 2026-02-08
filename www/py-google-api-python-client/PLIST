@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2026/01/19 11:08:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.54 2026/02/08 21:55:53 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -331,6 +331,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/groupssettings.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/healthcare.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/healthcare.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/homegraph.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/hypercomputecluster.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/iam.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/iam.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/iam.v2beta.json
@@ -464,6 +465,8 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/policysimulator.v1beta.js
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/policysimulator.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/policytroubleshooter.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/policytroubleshooter.v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/policytroubleshooter.v3.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/policytroubleshooter.v3beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/pollen.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/poly.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/privateca.v1.json
@@ -550,6 +553,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/tasks.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/testing.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/texttospeech.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/texttospeech.v1beta1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/threatintelligence.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/toolresults.v1beta3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/tpu.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/tpu.v1alpha1.json
