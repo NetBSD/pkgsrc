@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/09/15 11:48:00 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2026/02/08 18:19:57 wiz Exp $
 ${PYSITELIB}/zope/component/__init__.py
 ${PYSITELIB}/zope/component/__init__.pyc
 ${PYSITELIB}/zope/component/__init__.pyo
@@ -51,9 +46,6 @@ ${PYSITELIB}/zope/component/security.pyo
 ${PYSITELIB}/zope/component/standalonetests.py
 ${PYSITELIB}/zope/component/standalonetests.pyc
 ${PYSITELIB}/zope/component/standalonetests.pyo
-${PYSITELIB}/zope/component/testfiles/__init__.py
-${PYSITELIB}/zope/component/testfiles/__init__.pyc
-${PYSITELIB}/zope/component/testfiles/__init__.pyo
 ${PYSITELIB}/zope/component/testfiles/adapter.py
 ${PYSITELIB}/zope/component/testfiles/adapter.pyc
 ${PYSITELIB}/zope/component/testfiles/adapter.pyo
@@ -121,3 +113,8 @@ ${PYSITELIB}/zope/component/tests/test_zcml.pyo
 ${PYSITELIB}/zope/component/zcml.py
 ${PYSITELIB}/zope/component/zcml.pyc
 ${PYSITELIB}/zope/component/zcml.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
