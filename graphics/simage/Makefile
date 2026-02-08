@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2025/08/30 22:45:35 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2026/02/08 10:55:32 wiz Exp $
 
 DISTNAME=		simage-1.8.3
 PKGREVISION=		3
@@ -8,7 +8,7 @@ GITHUB_PROJECT=		simage
 GITHUB_TAG=		v1.8.3
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.coin3d.org/
+HOMEPAGE=		https://www.coin3d.org/
 COMMENT=		Library for image format loaders and front-ends
 LICENSE=		public-domain
 
