@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/02/26 09:39:03 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/02/08 22:19:50 wiz Exp $
 
-BLAKE2s (sigal-2.5.tar.gz) = d3b0e2d45466a7b6a23f00c1103d1fe163dad93d8c683a0fc615c1ea9dc0035a
-SHA512 (sigal-2.5.tar.gz) = 9593d9563dc49a2911149aa9bc046ac42563bf78aab221502718d4cf330c38f19e65f51e582115e61d24f3e9d17cf90e5b68b197c956ca702f6490734e5bbd2c
-Size (sigal-2.5.tar.gz) = 4978240 bytes
+BLAKE2s (sigal-2.6.1.tar.gz) = 620a6016643b240b4acba20bb2ce31f8815090774b0cb8fbd37f8038ca1787d3
+SHA512 (sigal-2.6.1.tar.gz) = c21aea3e215481aef7465541a258170fda331b0504d6566e7c733d8a8d2d2943cd62033d7eb8f0d2cec3d30a3108a168edb3cab5d77909be9d9b609bb4bed945
+Size (sigal-2.6.1.tar.gz) = 5409796 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/13 18:30:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/02/08 22:19:50 wiz Exp $
 bin/sigal-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -181,6 +181,7 @@ ${PYSITELIB}/sigal/themes/photoswipe/static/photoswipe.esm.js.map
 ${PYSITELIB}/sigal/themes/photoswipe/static/photoswipe.esm.min.js
 ${PYSITELIB}/sigal/themes/photoswipe/static/styles.css
 ${PYSITELIB}/sigal/themes/photoswipe/templates/album.html
+${PYSITELIB}/sigal/themes/photoswipe/templates/album_items.html
 ${PYSITELIB}/sigal/themes/photoswipe/templates/album_list.html
 ${PYSITELIB}/sigal/themes/photoswipe/templates/base.html
 ${PYSITELIB}/sigal/utils.py

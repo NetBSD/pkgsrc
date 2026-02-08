@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/04/13 18:30:17 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/02/08 22:19:50 wiz Exp $
 
-DISTNAME=	sigal-2.5
+DISTNAME=	sigal-2.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sigal/}
 
@@ -34,6 +33,9 @@ SUBST_FILES.ffmpeg+=	src/sigal/settings.py
 SUBST_FILES.ffmpeg+=	src/sigal/video.py
 SUBST_STAGE.ffmpeg=	pre-build
 SUBST_MESSAGE.ffmpeg=	Fixing ffmpeg path.
+
+# as of 2.6.1
+# 2 failed, 83 passed, 3 skipped
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && mv sigal sigal-${PYVERSSUFFIX} || ${TRUE}
