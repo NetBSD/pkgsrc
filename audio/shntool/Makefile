@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2025/01/27 20:21:14 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.9 2026/02/08 10:52:58 wiz Exp $
 
 DISTNAME=	shntool-3.0.10
 CATEGORIES=	audio archivers
-MASTER_SITES=	http://www.etree.org/shnutils/shntool/source/
+#MASTER_SITES=	http://www.etree.org/shnutils/shntool/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.etree.org/shnutils/shntool/
+#HOMEPAGE=	http://www.etree.org/shnutils/shntool/
 COMMENT=	Lossless audio compressor wrapper tool
 LICENSE=	gnu-gpl-v2
 
