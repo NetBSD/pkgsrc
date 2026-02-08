@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.92 2024/08/25 06:18:39 wiz Exp $ -->
+<!-- $NetBSD: build.xml,v 1.93 2026/02/08 09:42:35 wiz Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -591,8 +591,18 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
   <sect1 id="build.test">
     <title>The <emphasis>test</emphasis> phase</title>
 
-    <para>[TODO]</para>
-
+    <para>The test phase is for running a program's self
+    tests. Dependencies that are only required for testing can be
+    specified using <varname>TEST_DEPENDS</varname>.</para>
+    <para>For packages using &man.make.1; for building, you can set
+    <varname>TEST_TARGET</varname>. Often, the proper value is
+    <quote>check</quote> or <quote>test</quote>. If more elaborate
+    steps are needed, you can define a <literal>do-test</literal>
+    target.</para>
+    <para>To run the tests, call <quote>make test</quote>.</para>
+    <para>When building a package, the tests are not run
+    automatically, except if <varname>PKGSRC_RUN_TEST</varname> is set
+    to <quote>yes</quote>.</para>
   </sect1>
 
   <sect1 id="build.install">
