@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2026/02/01 14:00:20 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2026/02/08 22:29:21 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -148,7 +148,6 @@ CARGO_CRATE_DEPENDS+=	lock_api-0.4.14
 CARGO_CRATE_DEPENDS+=	log-0.4.29
 CARGO_CRATE_DEPENDS+=	lsp-types-0.94.1
 CARGO_CRATE_DEPENDS+=	memchr-2.7.6
-CARGO_CRATE_DEPENDS+=	memmap2-0.9.9
 CARGO_CRATE_DEPENDS+=	memory-stats-1.2.0
 CARGO_CRATE_DEPENDS+=	mimalloc-0.1.48
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.8.9
