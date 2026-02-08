@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2025/07/04 08:44:48 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2026/02/08 10:54:24 wiz Exp $
 
 DISTNAME=		${SILC_CLIENT_DISTNAME}
 PKGREVISION=		17
@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.silcnet.org/download/client/sources/
 EXTRACT_SUFX=		${SILC_CLIENT_EXTRACT_SUFX}
 
 MAINTAINER=		salo@NetBSD.org
-HOMEPAGE=		http://www.silcnet.org/
+#HOMEPAGE=		http://www.silcnet.org/
 COMMENT=		Client for the Secure Internet Live Conferencing (SILC) protocol
 
 .include "../../mk/bsd.prefs.mk"
