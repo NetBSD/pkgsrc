@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2025/09/21 15:29:43 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/02/08 06:52:55 wiz Exp $
 
 DISTNAME=		libXScrnSaver-1.2.5
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.xz
@@ -11,14 +12,13 @@ COMMENT=		X11 Screen Saver Library
 
 USE_TOOLS+=		pkg-config
 
-CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
+PKGCONFIG_OVERRIDE+=	output/meson-private/xscrnsaver.pc
 
-PKGCONFIG_OVERRIDE+=	xscrnsaver.pc.in
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 X11_LIB_NAME?=		libXScrnSaver
 .include "../../devel/meson/build.mk"
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
-.include "../../meta-pkgs/modular-xorg/hacks.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
