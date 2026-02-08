@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2025/01/19 06:51:00 wiz Exp $
+$NetBSD: distinfo,v 1.19 2026/02/08 06:48:01 wiz Exp $
 
-BLAKE2s (libintl-perl-1.35.tar.gz) = f23bd02621b5230a99c3fbd980dcad474cc78d2c3062417534833b4aed27fa2c
-SHA512 (libintl-perl-1.35.tar.gz) = 2952a0cfb8bc84307208d71b974777fd7883266f595309cf7f38f7f640a20c1a3852c6daf4b02e758dc94d37cc84fc23ef9a51a892b3de50b4eaf28ee253ac77
-Size (libintl-perl-1.35.tar.gz) = 581376 bytes
-SHA1 (patch-aa) = d97ebd2453b346adba588c6fc5d4087d22feea79
+BLAKE2s (libintl-perl-1.36.tar.gz) = d59fa25608bfb10e2923592b88e8149eb962278bb0fe3643938b8010071409da
+SHA512 (libintl-perl-1.36.tar.gz) = ae2d2301069c92bf98040b4a39f9a2efec721f052ea95b6d6f7a49e3454be58be013ce047bb7070e6b72e5821a086c61660bf269219ffb829e32f38f784dcad7
+Size (libintl-perl-1.36.tar.gz) = 581385 bytes
