@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2023/07/09 10:02:38 nia Exp $
+# $NetBSD: Makefile,v 1.73 2026/02/08 10:54:47 wiz Exp $
 
 DISTNAME=	silc-server-1.1.18
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.silcnet.org/download/server/sources/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	salo@NetBSD.org
-HOMEPAGE=	http://www.silcnet.org/
+#HOMEPAGE=	http://www.silcnet.org/
 COMMENT=	Server for the Secure Internet Live Conferencing (SILC) protocol
 
 USE_LIBTOOL=		yes
