@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.988 2026/02/08 22:29:30 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.989 2026/02/08 22:36:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1274,3 +1274,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-wcwidth to 0.6.0 [wiz 2026-02-08]
 	Updated textproc/tree-sitter to 0.26.5 [wiz 2026-02-08]
 	Updated textproc/rumdl to 0.1.15 [wiz 2026-02-08]
+	Updated devel/boost-libs to 1.90.0nb2 [wiz 2026-02-08]
