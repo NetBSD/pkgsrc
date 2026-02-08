@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.960 2026/02/08 00:13:44 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.961 2026/02/08 00:53:03 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1243,3 +1243,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/ascii to 3.31 [wiz 2026-02-07]
 	Updated multimedia/gerbera to 3.0.0 [khorben 2026-02-07]
 	Updated chat/py-xmpppy to 0.7.3 [gdt 2026-02-08]
+	Updated net/coturn to 4.8.0 [gdt 2026-02-08]
