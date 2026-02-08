@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.967 2026/02/08 06:53:04 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.968 2026/02/08 06:54:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1250,3 +1250,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated fonts/libfontenc to 1.1.9 [wiz 2026-02-08]
 	Updated misc/p5-Locale-libintl to 1.36 [wiz 2026-02-08]
 	Updated x11/libXScrnSaver to 1.2.5nb1 [wiz 2026-02-08]
+	Updated x11/libXinerama to 1.1.6nb1 [wiz 2026-02-08]
