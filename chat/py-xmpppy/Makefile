@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2026/02/08 00:13:38 gdt Exp $
+# $NetBSD: Makefile,v 1.38 2026/02/08 01:15:59 gdt Exp $
 
 DISTNAME=	xmpppy-0.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -29,6 +29,7 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.15.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 post-install:
 	${INSTALL_SCRIPT_DIR} ${DESTDIR}${EXDIR}
