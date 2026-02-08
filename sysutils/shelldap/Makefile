@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.23 2023/05/21 05:30:39 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/02/08 10:52:11 wiz Exp $
 
 PKGNAME=	shelldap-1.5.1
 PKGREVISION=	4
 DISTNAME=	c06315e
 CATEGORIES=	sysutils
-MASTER_SITES=	http://code.martini.nu/shelldap/archive/
+MASTER_SITES=	http://code.martini.nu/mahlon/shelldap/archive/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	imil@NetBSD.org
-HOMEPAGE=	http://projects.martini.nu/shelldap
+HOMEPAGE=	http://code.martini.nu/mahlon/shelldap
 COMMENT=	Shell-like interface for browsing LDAP servers
 LICENSE=	modified-bsd
 
