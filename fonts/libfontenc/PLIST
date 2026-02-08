@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 19:01:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/02/08 06:43:18 wiz Exp $
 include/X11/fonts/fontenc.h
-lib/libfontenc.la
+lib/libfontenc.so
+lib/libfontenc.so.1
+lib/libfontenc.so.1.0.0
 lib/pkgconfig/fontenc.pc
