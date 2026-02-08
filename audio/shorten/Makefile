@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2012/10/02 23:48:08 asau Exp $
-#
+# $NetBSD: Makefile,v 1.15 2026/02/08 10:53:11 wiz Exp $
 
 DISTNAME=	shorten-3.6.1
 CATEGORIES=	audio archivers
-MASTER_SITES=	http://www.etree.org/shnutils/shorten/dist/src/
+#MASTER_SITES=	http://www.etree.org/shnutils/shorten/dist/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.etree.org/shnutils/shorten/
+#HOMEPAGE=	http://www.etree.org/shnutils/shorten/
 COMMENT=	Lossless audio compressor
 LICENSE=	shorten-license
 
