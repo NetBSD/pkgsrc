@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.971 2026/02/08 07:45:15 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.972 2026/02/08 09:52:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1254,3 +1254,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/libXres to 1.2.3nb1 [wiz 2026-02-08]
 	Updated x11/libXxf86dga to 1.1.7nb1 [wiz 2026-02-08]
 	Updated x11/libXxf86vm to 1.1.7nb1 [wiz 2026-02-08]
+	Updated games/gnome-nibbles to 4.5.0 [wiz 2026-02-08]
