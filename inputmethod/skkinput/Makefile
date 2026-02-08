@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2020/01/26 17:31:25 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2026/02/08 10:56:53 wiz Exp $
 
 DISTNAME=	skkinput-2.06.4
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	${MASTER_SITE_OSDN:=skkinput2/6273/}
 
 MAINTAINER=	uebayasi@NetBSD.org
-HOMEPAGE=	https://skkinput2.osdn.jp/
+#HOMEPAGE=	https://skkinput2.osdn.jp/
 COMMENT=	X11 frontend for SKK
 LICENSE=	gnu-gpl-v2
 
