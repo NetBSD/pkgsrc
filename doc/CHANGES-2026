@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.961 2026/02/08 00:53:03 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.962 2026/02/08 02:33:47 iquiw Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1244,3 +1244,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/gerbera to 3.0.0 [khorben 2026-02-07]
 	Updated chat/py-xmpppy to 0.7.3 [gdt 2026-02-08]
 	Updated net/coturn to 4.8.0 [gdt 2026-02-08]
+	Updated devel/task to 3.48.0 [iquiw 2026-02-08]
