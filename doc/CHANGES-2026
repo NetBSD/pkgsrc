@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.981 2026/02/08 21:55:22 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.982 2026/02/08 21:56:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1267,3 +1267,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-astroid to 4.0.4 [wiz 2026-02-08]
 	Updated devel/py-id to 1.6.1 [wiz 2026-02-08]
 	Updated devel/py-pip to 26.0.1 [wiz 2026-02-08]
+	Updated www/py-google-api-python-client to 2.189.0 [wiz 2026-02-08]
