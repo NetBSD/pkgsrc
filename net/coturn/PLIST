@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/01/23 17:21:26 gdt Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/02/08 00:52:55 gdt Exp $
 bin/turnadmin
 bin/turnserver
 bin/turnutils_natdiscovery
@@ -36,10 +36,6 @@ share/doc/coturn/README.turnadmin
 share/doc/coturn/README.turnserver
 share/doc/coturn/README.turnutils
 share/doc/coturn/postinstall.txt
-share/doc/coturn/schema.mongo.sh
-share/doc/coturn/schema.sql
-share/doc/coturn/schema.stats.redis
-share/doc/coturn/schema.userdb.redis
 share/examples/coturn/etc/cacert.pem
 share/examples/coturn/etc/coturn.service
 share/examples/coturn/etc/turn_client_cert.pem

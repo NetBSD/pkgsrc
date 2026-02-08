@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2026/01/07 08:48:14 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/02/08 00:52:55 gdt Exp $
 
-DISTNAME=	coturn-4.6.3
-PKGREVISION=	9
+DISTNAME=	coturn-4.8.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coturn/}
 
@@ -22,6 +21,7 @@ COTURN_GROUP?=	${COTURN_USER}
 COTURN_DATA?=	${VARBASE}/db/coturn
 BUILD_DEFS+=	COTURN_USER COTURN_GROUP VARBASE COTURN_DATA
 
+# \todo Justify disabling rpath.
 CONFIGURE_ARGS+=	--disable-rpath
 CONFIGURE_ARGS+=	--localstatedir ${COTURN_DATA}
 CONFIGURE_ARGS+=	--prefix ${PREFIX}
@@ -61,19 +61,14 @@ CONFIGURE_ARGS+=	--confdir=${PKG_SYSCONFDIR}
 # Defaults to ${PREFIX}/var; give it a subdirectory.
 CONFIGURE_ARGS+=	--localstatedir=${COTURN_DATA}
 
-# \todo Why is there a db installed in /var?  If not within PREFIX we don't pick it up,
-# but it seems like a bug.
-
-# Upstream installs some files twice (examples and docs).  This is not
-# causing real trouble, but it's a bug.
-#   https://github.com/coturn/coturn/issues/1631
-
 .include "options.mk"
 
 # upstream installs both a .conf.default in etcdir, and the
 # pkgsrc-right-way .conf in egdir.
 post-install:
 	${RM} ${DESTDIR}${PKG_SYSCONFDIR}/turnserver.conf.default
+
+TEST_TARGET=		check
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
