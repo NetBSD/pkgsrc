@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2024/03/03 10:03:09 wiz Exp $
+$NetBSD: distinfo,v 1.17 2026/02/08 06:43:18 wiz Exp $
 
-BLAKE2s (libfontenc-1.1.8.tar.xz) = 93b07b2346973c3a5b85feeb43d3e2e0963200cb9818bef2efe45a31c1c3792b
-SHA512 (libfontenc-1.1.8.tar.xz) = c9ddea9c0c6c6f4933b5b8ed2044e3dc259a9edbb3070a32f0335a6ad4d47b1858cefc01fa2dff9f29808bee311e9c677b05861200d2f2c4552c92b33fe027e2
-Size (libfontenc-1.1.8.tar.xz) = 274176 bytes
+BLAKE2s (libfontenc-1.1.9.tar.xz) = 05f849102d9d131463b9ff6ebc92c2cbb5b15686184b91b9a043633256910f88
+SHA512 (libfontenc-1.1.9.tar.xz) = 19050c4c9ea1143b555b92faec641fd6b4976de463ad1fb67d20a7bf2f610bbc3debd3c65925cd8329691a9fb0435d004a05b6486e1dc600719e8c479812b912
+Size (libfontenc-1.1.9.tar.xz) = 280828 bytes
