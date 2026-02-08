@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.160 2025/12/25 22:45:28 adam Exp $
+$NetBSD: distinfo,v 1.161 2026/02/08 22:36:16 wiz Exp $
 
 BLAKE2s (boost_1_90_0.tar.bz2) = 9fb979657f9c196fa279e8bb05aa5b9bc1dc05f6d856679934abcb250d764758
 SHA512 (boost_1_90_0.tar.bz2) = 1c81b60f63367d7249f277f0a569c181926dcf5a725e30433dd336205f1782880489dd00df6a1a74fd107765d3ca2cd49f806788cabb7d5700a8a55927a9a199
@@ -27,5 +27,7 @@ SHA1 (patch-libs_config_test_boost__no__range__based__for.ipp) = d9936c472fc2c69
 SHA1 (patch-libs_context_src_asm_jump_arm_aapcs_elf_gas.S) = f442dfcad2f6e4caba29f75017dc826c5417b335
 SHA1 (patch-libs_context_src_asm_ontop_arm_aapcs_elf_gas.S) = d4450d2a96520283d0e79b80d86d780cd04274ee
 SHA1 (patch-libs_fiber_build_Jamfile.v2) = 4b4a6698111042a3e54dc181b555516e0685796d
+SHA1 (patch-tools_boost__install_boost-install-dirs.jam) = 560db410080cbb8f8d98ef84c05a2c75e171936d
+SHA1 (patch-tools_boost__install_boost-install.jam) = e404dd58cf9a287a4187d06158ee349f24af5ba5
 SHA1 (patch-tools_build_src_engine_build.sh) = 7a756f04a2f11fd06bfa69c5d8ad160926f7da95
 SHA1 (patch-tools_build_src_tools_gcc.jam) = 4d895f14965ee29e328dda15e9975ccc1c14673f
