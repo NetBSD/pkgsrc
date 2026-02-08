@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/01/18 10:50:26 wiz Exp $
+$NetBSD: distinfo,v 1.5 2026/02/08 21:46:47 wiz Exp $
 
-BLAKE2s (libfyaml-0.9.3.tar.gz) = 7030854e5f1976d9be02f641bbc0413398775f9a9f3a195b96ff69c3ef1a5f9b
-SHA512 (libfyaml-0.9.3.tar.gz) = 0b991d9beaaeb1a088ae25666f679235d76812bb4b991d56843d7b24369aa67b50975903f8758c065d25520590114cdb137d78d8fcd56e0e4a8e6094d8728c84
-Size (libfyaml-0.9.3.tar.gz) = 1076446 bytes
+BLAKE2s (libfyaml-0.9.4.tar.gz) = 005df028474a7dbdc04c3c407e939da1db5bb11124911878d8da465bc011db12
+SHA512 (libfyaml-0.9.4.tar.gz) = 5335bc07c102902a95c54848863cf353e2cdd8efb0f6fa47f41429b7bda1bc5133cb3a2c753faebf42fe23a35eaf8e4267f89276e921e6e6dbed9960528ff15f
+Size (libfyaml-0.9.4.tar.gz) = 1025050 bytes
