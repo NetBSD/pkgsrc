@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2025/08/10 14:36:24 gdt Exp $
+$NetBSD: distinfo,v 1.14 2026/02/08 00:13:38 gdt Exp $
 
-BLAKE2s (xmpppy-0.7.2.tar.gz) = c67d9a8d5941a3792eaa2fffe9a80c1cf753a91791d9752b8ca430a0f8eb394a
-SHA512 (xmpppy-0.7.2.tar.gz) = e49b4b2ab4803791d93d0b37446e00c908562af578217b17e1d97a7b9003d7ce98a06b39ed02119bf8bae4b3ad8d8f824e87717287816541625b58f31d10e65e
-Size (xmpppy-0.7.2.tar.gz) = 192093 bytes
+BLAKE2s (xmpppy-0.7.3.tar.gz) = 4442da500d6a31f26140c40ecd3752f86176950208bb796e7489bf4fb696b33d
+SHA512 (xmpppy-0.7.3.tar.gz) = 09041b693c4578667deba2c2320c903bbf42bfcf98169709573c1a8031879addfb35fb70c9946cf9539401779e1ec50003899fae7aa9070b20620ced47823f22
+Size (xmpppy-0.7.3.tar.gz) = 195736 bytes
 SHA1 (patch-xmpp_debug.py) = a410b7abd534f37bba583ca9f15bf05252bc55a0
-SHA1 (patch-xmpp_transports.py) = 8ae6ccbebf7a3aadda7070e4dc762840e236cf0d
+SHA1 (patch-xmpp_transports.py) = a85ab6b0d62b80ee94ea186c1fd7761a730ebf07
