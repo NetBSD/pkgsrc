@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.994 2026/02/09 12:24:38 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.995 2026/02/09 12:41:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1285,3 +1285,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/py-wxPython to 4.2.5 [adam 2026-02-09]
 	Updated textproc/py-pyaml to 26.2.1 [adam 2026-02-09]
 	Updated wm/pekwm to 0.4.2 [wiz 2026-02-09]
+	Updated sysutils/hwdata to 0.404 [wiz 2026-02-09]
