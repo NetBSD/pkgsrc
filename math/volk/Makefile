@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2025/09/21 18:15:09 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/02/09 12:55:14 adam Exp $
 
-DISTNAME=	volk-3.2.0
-PKGREVISION=	1
+DISTNAME=	volk-3.3.0
 CATEGORIES=	math ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gnuradio/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
