@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2026/01/07 08:47:09 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2026/02/09 07:07:20 wiz Exp $
 
 VERSION=	1.6.5
 DISTNAME=	solarus-${VERSION}-src
@@ -10,7 +10,7 @@ GITLAB_PROJECT=	solarus
 GITLAB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.solarus-games.org/solarus/
+HOMEPAGE=	https://www.solarus-games.org/
 COMMENT=	Open-source Zelda-like 2D game engine licensed under GPL
 LICENSE=	gnu-gpl-v3
 
