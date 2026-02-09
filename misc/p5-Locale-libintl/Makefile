@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2026/02/08 06:48:01 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/02/09 17:51:55 wiz Exp $
 
 DISTNAME=	libintl-perl-1.36
 PKGNAME=	p5-${DISTNAME:S/libintl-perl/Locale-libintl/}
@@ -9,6 +9,8 @@ MAINTAINER=	peter.schuller@infidyne.com
 HOMEPAGE=	https://metacpan.org/release/libintl-perl
 COMMENT=	Perl internationalization library
 LICENSE=	gnu-lgpl-v2.1
+
+USE_LANGUAGES=	# empty
 
 PERL5_PACKLIST=			auto/libintl-perl/.packlist
 # Interpreter /bin/false
