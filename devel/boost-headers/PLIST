@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2025/12/25 22:45:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.61 2026/02/09 21:50:54 wiz Exp $
 include/boost/accumulators/accumulators.hpp
 include/boost/accumulators/accumulators_fwd.hpp
 include/boost/accumulators/framework/accumulator_base.hpp
@@ -16004,3 +16004,5 @@ include/boost/yap/expression.hpp
 include/boost/yap/print.hpp
 include/boost/yap/user_macros.hpp
 include/boost/yap/yap.hpp
+lib/cmake/boost_headers-${PKGVERSION}/boost_headers-config-version.cmake
+lib/cmake/boost_headers-${PKGVERSION}/boost_headers-config.cmake
