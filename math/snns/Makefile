@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.27 2019/11/02 16:16:22 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2026/02/09 07:02:56 wiz Exp $
 
 DISTNAME=	SNNSv4.3
 PKGNAME=	snns-4.3
 PKGREVISION=	2
 CATEGORIES=	misc
-MASTER_SITES=	http://www-ra.informatik.uni-tuebingen.de/downloads/SNNS/
+#MASTER_SITES=	http://www-ra.informatik.uni-tuebingen.de/downloads/SNNS/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www-ra.informatik.uni-tuebingen.de/SNNS/
+#HOMEPAGE=	http://www-ra.informatik.uni-tuebingen.de/SNNS/
 COMMENT=	Software simulator for neural networks
 
 GNU_CONFIGURE=		YES
