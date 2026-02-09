@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2026/02/06 10:06:05 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/02/09 07:06:03 wiz Exp $
 
 DISTNAME=	SOGo-5.11.2
 PKGREVISION=	5
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	sogo
 GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.sogo.nu/
+HOMEPAGE=	https://www.sogo.nu/
 COMMENT=	Groupware server supporting CalDAV, CardDAV and GroupDAV
 LICENSE=	gnu-gpl-v2
 
