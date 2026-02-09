@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/01/07 08:49:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/02/09 07:50:54 taca Exp $
 
 DISTNAME=	commonmarker-2.3.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/commonmarker/&23/}
@@ -15,6 +15,9 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rb_sys>=0.9<1:../../devel/ruby-rb_sys
 USE_TOOLS+=	gmake
 
 RUBYGEM_OPTIONS+=	--format-executable
+
+# This packages is for ruby-redmine61 and it is not support by ruby40.
+RUBY_VERSIONS_ACCEPTED=	32 33 34
 
 .include "cargo-depends.mk"
 
