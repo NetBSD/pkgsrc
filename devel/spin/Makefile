@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/07/11 11:07:05 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/02/09 07:13:13 wiz Exp $
 
 DISTNAME=	spin-6.5.2
 CATEGORIES=	devel
@@ -7,7 +7,7 @@ GITHUB_PROJECT=	Spin
 GITHUB_TAG=	version-${PKGVERSION_NOREV}
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://spinroot.com/spin/whatispin.html
+HOMEPAGE=	https://spinroot.com/spin/whatispin.html
 COMMENT=	Tool for formal verification of multi-threaded software applications
 LICENSE=	modified-bsd
 
