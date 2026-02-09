@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1004 2026/02/09 14:21:07 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.1005 2026/02/09 16:47:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1298,3 +1298,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/chafa to 1.18.1 [ktnb 2026-02-09]
 	Updated www/hugo to 0.155.3 [triaxx 2026-02-09]
 	Updated lang/joker to 1.7.1 [ktnb 2026-02-09]
+	Added devel/antlr4-cpp-runtime version 4.13.2 [ryoon 2026-02-09]
