@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1010 2026/02/09 17:03:53 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.1011 2026/02/09 17:04:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1304,3 +1304,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/libreoffice to 26.2.0.3 [ryoon 2026-02-09]
 	Updated multimedia/openwv to 1.1.3nb3 [ryoon 2026-02-09]
 	Updated www/firefox to 147.0.3 [ryoon 2026-02-09]
+	Updated www/firefox-l10n to 147.0.3 [ryoon 2026-02-09]
