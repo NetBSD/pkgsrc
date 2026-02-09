@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/04/14 20:28:03 adam Exp $
+# $NetBSD: Makefile,v 1.15 2026/02/09 13:38:35 adam Exp $
 
-DISTNAME=	w3lib-2.3.1
+DISTNAME=	w3lib-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/w3lib/}
 
@@ -11,7 +10,7 @@ HOMEPAGE=	https://github.com/scrapy/w3lib
 COMMENT=	Python library of web-related functions
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27.0:../../devel/py-hatchling
 
 USE_LANGUAGES=	# none
 
