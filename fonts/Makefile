@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.449 2026/02/01 20:56:06 rhialto Exp $
+# $NetBSD: Makefile,v 1.450 2026/02/09 16:50:02 ryoon Exp $
 #
 
 COMMENT=	Fonts
@@ -28,6 +28,7 @@ SUBDIR+=	adobe-cmaps
 SUBDIR+=	ae-mono-ttf
 SUBDIR+=	aegean-ttf
 SUBDIR+=	aegyptus-ttf
+SUBDIR+=	afdko
 SUBDIR+=	afm2pl
 SUBDIR+=	akkadian-ttf
 SUBDIR+=	alee-ttf
