@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/06/04 16:49:35 taca Exp $
+# $NetBSD: Makefile,v 1.2 2026/02/09 07:53:33 taca Exp $
 
 DISTNAME=	xhtmldiff-1.2.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -14,6 +14,7 @@ COMMENT=	Tool for generating valid XHTML redline documents
 DEPENDS+=	${RUBY_PKGPREFIX}-diff-lcs>=1.1.1:../../textproc/ruby-diff-lcs
 
 RUBYGEM_OPTIONS+=	--format-executable
+RUBY_ALLOW_HAS_RDOC=	# empty
 
 pre-configure:
 	${CP} ${WRKSRC}/packaging/xhtmldiff.gemspec ${GEM_SPECFILE}
