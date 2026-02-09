@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1003 2026/02/09 14:18:35 triaxx Exp $
+$NetBSD: CHANGES-2026,v 1.1004 2026/02/09 14:21:07 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1297,3 +1297,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated chat/toxcore to 0.2.22nb1 [ktnb 2026-02-09]
 	Updated graphics/chafa to 1.18.1 [ktnb 2026-02-09]
 	Updated www/hugo to 0.155.3 [triaxx 2026-02-09]
+	Updated lang/joker to 1.7.1 [ktnb 2026-02-09]
