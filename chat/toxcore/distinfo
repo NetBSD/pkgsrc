@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2025/08/25 16:55:41 ktnb Exp $
+$NetBSD: distinfo,v 1.8 2026/02/09 14:00:05 ktnb Exp $
 
 BLAKE2s (camgunz-cmp-v20.tar.gz) = a5160868b63f1a24bfa217d1b8a3480999ef5d6c90bb1feee84a7a096e03941c
 SHA512 (camgunz-cmp-v20.tar.gz) = f747cb9672592d8c06d08786152a0bfbd6ae4d759d7006805913781c502bf3796241ade636ce2cf9c049f68dd2899e2d5d7008815f29c1a91fc797590a26a9fd
 Size (camgunz-cmp-v20.tar.gz) = 40252 bytes
-BLAKE2s (toxcore-0.2.21.tar.gz) = e6dfd670f54cc48642f329dae5a4f4836b5ebdc0e6e0096fc60cdabd62d7e80f
-SHA512 (toxcore-0.2.21.tar.gz) = 6bbad32dffd6996dc69570cdff4f646592d9566c5472a12e82554a63c29774478ff0358b141373c8ee799078d42c5fb5204f83232a57b28a224e935bb8af648c
-Size (toxcore-0.2.21.tar.gz) = 856518 bytes
+BLAKE2s (toxcore-0.2.22.tar.gz) = d95e209cd3cb249bacb432ccbfa5a29cf88f56654103924b8265a58c662c7e17
+SHA512 (toxcore-0.2.22.tar.gz) = c42fba4da94eb5ec28f4b9c8afb3ad61ec36c1a17dabb6dd5530caa31b66192bdb0b057a2e939dccb7ffe91ec24691e8953e0641cd33f0dd7edea921910f7b1a
+Size (toxcore-0.2.22.tar.gz) = 959762 bytes

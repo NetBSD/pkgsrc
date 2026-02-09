@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/08/25 16:55:41 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/02/09 14:00:05 ktnb Exp $
 bin/DHT_bootstrap
 bin/tox-bootstrapd
 include/tox/tox.h
@@ -9,6 +9,6 @@ include/tox/toxencryptsave.h
 lib/libtoxcore.a
 lib/libtoxcore.so
 lib/libtoxcore.so.2
-lib/libtoxcore.so.2.21.0
+lib/libtoxcore.so.2.22.0
 lib/pkgconfig/toxcore.pc
 share/bash-completion/completions/tox-bootstrapd

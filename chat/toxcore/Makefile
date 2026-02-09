@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/08/25 16:55:41 ktnb Exp $
+# $NetBSD: Makefile,v 1.9 2026/02/09 14:00:05 ktnb Exp $
 
-DISTNAME=	toxcore-0.2.21
+DISTNAME=	toxcore-0.2.22
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TokTok/}
 GITHUB_PROJECT=	c-toxcore
