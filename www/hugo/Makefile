@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.135 2026/02/03 21:01:32 triaxx Exp $
+# $NetBSD: Makefile,v 1.136 2026/02/09 14:18:21 triaxx Exp $
 
-DISTNAME=	hugo-0.155.2
+DISTNAME=	hugo-0.155.3
 PKGNAME=	go-${DISTNAME}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gohugoio/}
 CATEGORIES=	www
