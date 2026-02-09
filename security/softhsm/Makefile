@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2026/01/07 08:48:46 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2026/02/09 07:05:26 wiz Exp $
 
 DISTNAME=	softhsm-1.3.7
 PKGREVISION=	30
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	https://www.opendnssec.org/files/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.opendnssec.org/softhsm/
+HOMEPAGE=	https://www.opendnssec.org/en/latest/softhsm/
 COMMENT=	Cryptographic store accessible through a PKCS\#11 interface
 LICENSE=	2-clause-bsd
 
