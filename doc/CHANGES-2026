@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.991 2026/02/09 08:36:20 adam Exp $
+$NetBSD: CHANGES-2026,v 1.992 2026/02/09 10:09:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1280,3 +1280,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-types-gdb to 16.3.0.20260203 [adam 2026-02-09]
 	Updated time/py-types-python-dateutil to 2.9.0.20260124 [adam 2026-02-09]
 	Updated devel/py-tenacity to 9.1.4 [adam 2026-02-09]
+	Updated devel/py-blessed to 1.30.0 [adam 2026-02-09]
+	Updated databases/redis to 8.4.1 [adam 2026-02-09]
