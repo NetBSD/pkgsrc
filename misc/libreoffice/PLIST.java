@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java,v 1.23 2025/08/30 06:44:05 ryoon Exp $
+@comment $NetBSD: PLIST.java,v 1.24 2026/02/09 16:59:59 ryoon Exp $
 ${PKGNAME}/lib/libreoffice/program/JREProperties.class
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptFramework.jar
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptProviderForBeanShell.jar
@@ -51,7 +51,6 @@ ${PKGNAME}/lib/libreoffice/program/libjvmfwklo.so
 ${PKGNAME}/lib/libreoffice/program/libofficebean.so
 ${PKGNAME}/lib/libreoffice/program/librptlo.so
 ${PKGNAME}/lib/libreoffice/program/librptuilo.so
-${PKGNAME}/lib/libreoffice/program/librptxmllo.so
 ${PKGNAME}/lib/libreoffice/program/services/scriptproviderforbeanshell.rdb
 ${PKGNAME}/lib/libreoffice/program/services/scriptproviderforjavascript.rdb
 ${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/Calc/CopyRange.bsh

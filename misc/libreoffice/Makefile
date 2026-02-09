@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.380 2026/02/06 10:05:23 wiz Exp $
+# $NetBSD: Makefile,v 1.381 2026/02/09 16:59:59 ryoon Exp $
 
-VERREL=		25.8.4
-VERRC=		2
+VERREL=		26.2.0
+VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	7
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -129,16 +128,16 @@ MORE_DISTFILES= \
 	lxml-4.1.1.tgz \
 	Amiri-1.001.zip \
 	ReemKufi-2.0.zip \
-	pdfium-7012.tar.bz2 \
+	pdfium-7471.tar.bz2 \
 	dtoa-20180411.tgz \
-	skia-m136-28685d899b0a35894743e2cedad4c9f525e90e1e.tar.xz \
+	skia-m142-f4ed99d2443962782cf5f8b4dd27179f131e7cbe.tar.xz \
 	Java-WebSocket-1.6.0.tar.gz \
 	NotoSans-v2.015.zip \
 	NotoSerif-v2.015.zip \
 	NotoSansHebrew-v3.001.zip \
 	NotoSansArabic-v2.010.zip \
-	NotoKufiArabic-v2.109.zip \
-	NotoNaskhArabic-v2.019.zip \
+	NotoKufiArabic-v2.110.zip \
+	NotoNaskhArabic-v2.020.zip \
 	NotoSerifHebrew-v2.004.zip \
 	NotoSansArmenian-v2.008.zip \
 	NotoSerifArmenian-v2.008.zip \
@@ -178,6 +177,7 @@ EXTRACT_USING=		bsdtar
 WRKSRC=		${WRKDIR}/${LO_BOOTSTRAP}
 
 TOOL_DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
+TOOL_DEPENDS+=		afdko-[0-9]*:../../fonts/afdko
 DEPENDS+=		xdg-utils-[0-9]*:../../misc/xdg-utils
 DEPENDS+=		gnupg2>=2.4.9nb2:../../security/gnupg2
 
@@ -396,6 +396,7 @@ BUILDLINK_INCDIRS.${PYPKGPREFIX:S/py/python/}=	# empty
 .include "../../lang/python/tool.mk"
 .include "../../math/coinmp/buildlink3.mk"
 .include "../../math/dragonbox/buildlink3.mk"
+.include "../../math/fast_float/buildlink3.mk"
 .include "../../math/libfixmath/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libnumbertext+=	libnumbertext>=1.0.6
 .include "../../math/libnumbertext/buildlink3.mk"
@@ -425,6 +426,7 @@ BUILDLINK_API_DEPENDS.libodfgen+=       libodfgen>=0.1.4
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/redland/buildlink3.mk"
 .include "../../textproc/libexttextcat/buildlink3.mk"
+.include "../../textproc/md4c/buildlink3.mk"
 .include "../../textproc/mythes/buildlink3.mk"
 .include "../../textproc/raptor2/buildlink3.mk"
 .include "../../textproc/rasqal/buildlink3.mk"
