@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1007 2026/02/09 16:55:03 kleink Exp $
+$NetBSD: CHANGES-2026,v 1.1008 2026/02/09 17:00:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1301,3 +1301,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/antlr4-cpp-runtime version 4.13.2 [ryoon 2026-02-09]
 	Added fonts/afdko version 4.0.3 [ryoon 2026-02-09]
 	Updated print/py-weasyprint to 68.1 [kleink 2026-02-09]
+	Updated misc/libreoffice to 26.2.0.3 [ryoon 2026-02-09]
