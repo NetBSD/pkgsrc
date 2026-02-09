@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2026/01/24 01:00:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2026/02/09 17:01:22 ryoon Exp $
 
 DISTNAME=	openwv-1.1.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 # Tarball contains Git submodule and result of `cargo vendor`.
 MASTER_SITES=	https://www.ryoon.net/~ryoon/
