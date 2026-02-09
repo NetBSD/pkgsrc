@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2026/01/27 08:41:04 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/02/09 10:48:49 adam Exp $
 
-DISTNAME=	wxpython-4.2.4
+DISTNAME=	wxpython-4.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/wxp/wxP/}
-PKGREVISION=	1
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wxPython/}
 
@@ -13,7 +12,6 @@ COMMENT=	GUI Toolkit for Python
 LICENSE=	gnu-lgpl-v2
 
 EGG_NAME=	${DISTNAME:S/wxp/wxP/}
-WRKSRC=		${WRKDIR}/${DISTNAME:S/wxp/wxP/}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.10:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-requests>=2.26.0:../../devel/py-requests
