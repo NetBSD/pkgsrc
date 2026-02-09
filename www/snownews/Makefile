@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.84 2026/02/06 10:06:11 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2026/02/09 07:04:10 wiz Exp $
 
 DISTNAME=	snownews-1.9
 PKGREVISION=	17
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_GITHUB:=msharov/}
+#MASTER_SITES=	${MASTER_SITE_GITHUB:=msharov/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/msharov/snownews
+HOMEPAGE=	https://sourceforge.net/projects/snownews/
 COMMENT=	Small, curses based RSS feed reader
 LICENSE=	gnu-gpl-v3
 
