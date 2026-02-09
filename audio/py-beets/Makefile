@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2025/12/29 17:54:57 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2026/02/09 12:44:18 wiz Exp $
 
-DISTNAME=	beets-2.5.1
+DISTNAME=	beets-2.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beets/}
 
@@ -43,8 +42,8 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
-# as of 2.5.1
-# 1082 passed, 101 skipped
+# as of 2.6.1
+# 898 passed, 100 skipped
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
@@ -59,8 +58,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/man/beet.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/beet-${PYVERSSUFFIX}.1
 	${INSTALL_DATA} ${WRKSRC}/man/beetsconfig.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/beetsconfig-${PYVERSSUFFIX}.5
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} beet beet-${PYVERSSUFFIX} || ${TRUE}
-	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/beets/ui/__init__.py.orig
-	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/beetsplug/lyrics.py.orig
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
