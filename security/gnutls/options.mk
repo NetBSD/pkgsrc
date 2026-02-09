@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.7 2024/05/15 08:13:25 nia Exp $
+# $NetBSD: options.mk,v 1.8 2026/02/09 19:35:36 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnutls
-PKG_SUPPORTED_OPTIONS=	dane pkcs11
+PKG_SUPPORTED_OPTIONS=	brotli dane pkcs11 zstd
 PKG_SUGGESTED_OPTIONS=	pkcs11
 
 .include "../../mk/bsd.options.mk"
@@ -21,4 +21,18 @@ BUILDLINK_API_DEPENDS.p11-kit+=	p11-kit>=0.23.1
 .include "../../security/p11-kit/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-p11-kit
+.endif
+
+.if !empty(PKG_OPTIONS:Mbrotli)
+CONFIGURE_ARGS+=	--with-brotli
+.include "../../archivers/brotli/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-brotli
+.endif
+
+.if !empty(PKG_OPTIONS:Mzstd)
+CONFIGURE_ARGS+=	--with-zstd
+.include "../../archivers/zstd/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-zstd
 .endif
