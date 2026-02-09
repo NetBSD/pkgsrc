@@ -1,20 +1,26 @@
-# $NetBSD: Makefile,v 1.72 2025/12/25 22:45:28 adam Exp $
+# $NetBSD: Makefile,v 1.73 2026/02/09 21:50:54 wiz Exp $
 
 BOOST_PACKAGE=		headers
 BOOST_COMMENT=		(build-time headers)
 BOOST_CONFIG=		generate
 
+PKGREVISION=		1
+
 .include "../../meta-pkgs/boost/Makefile.common"
 
-BJAM_ARGS+=		--without-\*
-
-NO_BUILD=		yes
+BJAM_ARGS+=		--with-headers
 
 INSTALLATION_DIRS+=	include/boost
 
+CONFLICTS+=	boost-libs<=1.90.0nb2
+
 .include "../../devel/boost-jam/bjam.mk"
 
-do-install: bjam-build
+do-build: bjam-build
+
+do-install: boost-install-cmake
+do-install:
+	@${STEP_MSG} Installing boost header files
 	${FIND} ${WRKSRC}/boost -type f -name '*.orig' | ${XARGS} ${RM} -f
 	cd ${WRKSRC}/boost; ${FIND} . -type f -print | \
 		pax -rw ${DESTDIR}${PREFIX}/include/boost
@@ -22,6 +28,11 @@ do-install: bjam-build
 		-type f -exec ${CHOWN} ${SHAREOWN}:${SHAREGRP} {} +
 	${FIND} ${DESTDIR}${PREFIX}/include/boost \
 		-type d -exec ${CHMOD} ${PKGDIRMODE} {} +
+
+# These are required only for boost-libs
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/lib/cmake/Boost-*/*.cmake
+	${RM} -f ${DESTDIR}${PREFIX}/lib/cmake/BoostDetectToolset-*.cmake
 
 PTHREAD_OPTS+=		require
 .include "../../mk/pthread.buildlink3.mk"
