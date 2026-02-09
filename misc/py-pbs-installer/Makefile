@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2026/01/16 16:39:08 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/02/09 14:01:03 adam Exp $
 
-DISTNAME=	pbs_installer-2026.1.14
+DISTNAME=	pbs_installer-2026.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pbs-installer/}
