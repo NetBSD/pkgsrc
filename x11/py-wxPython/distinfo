@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/11/12 11:07:03 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/02/09 10:48:49 adam Exp $
 
-BLAKE2s (wxpython-4.2.4.tar.gz) = 0e67b7e0e0c03a4d57598899c5d9933f468bb935cad575332c5f04cf2e418d3c
-SHA512 (wxpython-4.2.4.tar.gz) = 4ae124bced8a0d357a34763c981ef370b7c0c978dfba0f941f37e83227816881fee2e65eb7eaa2a114bbaded14afd8e96ad17dba5a9886b38ac35bc75ec82737
-Size (wxpython-4.2.4.tar.gz) = 58583054 bytes
+BLAKE2s (wxpython-4.2.5.tar.gz) = c919c712fd1294a59ef125f55b4d951c4296a3457e077ecf17f88aa0ecd28acf
+SHA512 (wxpython-4.2.5.tar.gz) = a094faab4f901e46c6a771168160b0e3fec336e937507fedab97a0645df55671af046e673344a37d3d6997fadcb83c5490a673c2475c200841ef9eb12bc19763
+Size (wxpython-4.2.5.tar.gz) = 58732217 bytes
