@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.999 2026/02/09 13:45:52 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1000 2026/02/09 14:01:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1292,3 +1292,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-w3lib to 2.4.0 [adam 2026-02-09]
 	Updated www/py-parsel to 1.11.0 [adam 2026-02-09]
 	Updated textproc/py-cssselect to 1.4.0 [adam 2026-02-09]
+	Updated archivers/par2 to 1.1.1 [adam 2026-02-09]
+	Updated misc/py-pbs-installer to 2026.2.3 [adam 2026-02-09]
