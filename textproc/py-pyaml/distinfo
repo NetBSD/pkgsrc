@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2025/07/15 07:47:55 adam Exp $
+$NetBSD: distinfo,v 1.18 2026/02/09 10:50:09 adam Exp $
 
-BLAKE2s (pyaml-25.7.0.tar.gz) = 7f04679c955447648bcd0fc0a97bff9f6cb2ada366673c4c7a78840a8fb191d8
-SHA512 (pyaml-25.7.0.tar.gz) = cff46329cff9976f4628608ed87d8e6d811edba8a2a708b18a4216bde3bcd2f84fb06f31605c4bd684a87da8ab7fa5b4ae3bac976058ad707b0e37a30c365063
-Size (pyaml-25.7.0.tar.gz) = 29814 bytes
+BLAKE2s (pyaml-26.2.1.tar.gz) = b52a5ce5747d2367c281bc06e1ebe7d7f40e524065d4fd32b0f50cdadc5b3ec2
+SHA512 (pyaml-26.2.1.tar.gz) = 2c1d6ed58d02efd0d83e7eb61fb57567bf83a991c236afbe862ab9a0338cb8fd8a7f84d7edfb00b824a2c4bfac61a2115dc4bdeb1d4f63f1aafe406e64695edc
+Size (pyaml-26.2.1.tar.gz) = 30653 bytes
