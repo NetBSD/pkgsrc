@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/02/04 13:59:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/02/09 20:36:29 abs Exp $
 
-DISTNAME=	xfr-0.3.0
+DISTNAME=	xfr-0.6.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lance0/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,7 +17,7 @@ TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/examples/xfr
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/xfr.1 \
+	${INSTALL_MAN} ${WRKSRC}/docs/xfr.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xfr.1
 	${INSTALL_DATA} ${WRKSRC}/examples/config.toml \
 		${DESTDIR}${PREFIX}/share/examples/xfr/config.toml
