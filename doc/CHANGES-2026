@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1017 2026/02/09 20:33:44 triaxx Exp $
+$NetBSD: CHANGES-2026,v 1.1018 2026/02/09 20:36:50 abs Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1319,3 +1319,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pyperf to 2.10.0 [adam 2026-02-09]
 	Updated print/py-pikepdf to 10.3.0 [adam 2026-02-09]
 	Updated games/warzone2100 to 4.6.3 [triaxx 2026-02-09]
+	Updated net/xfr to 0.6.0 [abs 2026-02-09]
