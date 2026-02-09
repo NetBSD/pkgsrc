@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.7 2026/01/27 19:24:24 ktnb Exp $
+# $NetBSD: go-modules.mk,v 1.8 2026/02/09 14:20:40 ktnb Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.0.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.0.zip
