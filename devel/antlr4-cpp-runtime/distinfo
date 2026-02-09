@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/02/09 16:47:00 ryoon Exp $
+
+BLAKE2s (antlr4-cpp-runtime-4.13.2-source.zip) = 0a6730a4a3cffe1f034026245b42e2429a0f57ddab4da378930b548f6c871ebd
+SHA512 (antlr4-cpp-runtime-4.13.2-source.zip) = 2a67afaa6ef0d0b56455850caabc94042785a07036f53b5a195cfb105d9441d89a155dcd9c089da4344a644fa73a01da071a89266340dce621901e0c47233faa
+Size (antlr4-cpp-runtime-4.13.2-source.zip) = 3182150 bytes
