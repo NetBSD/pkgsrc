@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2026/01/27 08:40:28 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2026/02/09 16:54:37 kleink Exp $
 
-DISTNAME=	weasyprint-67.0
+DISTNAME=	weasyprint-68.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/weasyprint/}
 
@@ -19,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-fonttools>=4.59.2:../../fonts/py-fonttools
 DEPENDS+=	${PYPKGPREFIX}-html5lib>=1.1:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-pydyf>=0.11.0:../../print/py-pydyf
 DEPENDS+=	${PYPKGPREFIX}-pyphen>=0.9.1:../../textproc/py-pyphen
-DEPENDS+=	${PYPKGPREFIX}-tinycss2>=1.3.0:../../textproc/py-tinycss2
+DEPENDS+=	${PYPKGPREFIX}-tinycss2>=1.5.0:../../textproc/py-tinycss2
 DEPENDS+=	${PYPKGPREFIX}-tinyhtml5>=2.0.0:../../textproc/py-tinyhtml5
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
