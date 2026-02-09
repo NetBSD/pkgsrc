@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1006 2026/02/09 16:49:21 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.1007 2026/02/09 16:55:03 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1300,3 +1300,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/joker to 1.7.1 [ktnb 2026-02-09]
 	Added devel/antlr4-cpp-runtime version 4.13.2 [ryoon 2026-02-09]
 	Added fonts/afdko version 4.0.3 [ryoon 2026-02-09]
+	Updated print/py-weasyprint to 68.1 [kleink 2026-02-09]
