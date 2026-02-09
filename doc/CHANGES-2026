@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.996 2026/02/09 12:44:27 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.997 2026/02/09 12:59:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1287,3 +1287,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated wm/pekwm to 0.4.2 [wiz 2026-02-09]
 	Updated sysutils/hwdata to 0.404 [wiz 2026-02-09]
 	Updated audio/py-beets to 2.6.1 [wiz 2026-02-09]
+	Updated textproc/py-itemloaders to 1.4.0 [adam 2026-02-09]
+	Updated math/volk to 3.3.0 [adam 2026-02-09]
