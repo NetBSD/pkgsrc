@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1000 2026/02/09 14:01:29 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1001 2026/02/09 14:12:57 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1294,3 +1294,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-cssselect to 1.4.0 [adam 2026-02-09]
 	Updated archivers/par2 to 1.1.1 [adam 2026-02-09]
 	Updated misc/py-pbs-installer to 2026.2.3 [adam 2026-02-09]
+	Updated chat/toxcore to 0.2.22nb1 [ktnb 2026-02-09]
