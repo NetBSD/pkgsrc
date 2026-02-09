@@ -1,0 +1,22 @@
+$NetBSD: patch-external_pdfium_freebsd.patch,v 1.1 2026/02/09 16:59:59 ryoon Exp $
+
+--- external/pdfium/freebsd.patch.orig	2026-02-04 13:42:39.222198098 +0000
++++ external/pdfium/freebsd.patch
+@@ -5,7 +5,7 @@ -#if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS) &
+  #include "core/fxge/systemfontinfo_iface.h"
+  
+ -#if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS) && !defined(OS_ASMJS)
+-+#if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS) && !defined(OS_ASMJS) && !defined(OS_FREEBSD) && !defined(OS_OPENBSD)
+++#if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS) && !defined(OS_ASMJS) && !defined(OS_FREEBSD) && !defined(OS_OPENBSD) && !defined(OS_NETBSD)
+  #error "Included on the wrong platform"
+  #endif
+  
+@@ -16,7 +16,7 @@ -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || 
+  };
+  
+ -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || defined(OS_ASMJS)
+-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || defined(OS_ASMJS) || defined(OS_FREEBSD) || defined(OS_OPENBSD)
+++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || defined(OS_ASMJS) || defined(OS_FREEBSD) || defined(OS_OPENBSD) || defined(OS_NETBSD)
+  const char kNarrowFamily[] = "LiberationSansNarrow";
+  #elif BUILDFLAG(IS_ANDROID)
+  const char kNarrowFamily[] = "RobotoCondensed";

@@ -1,34 +1,98 @@
-$NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.11 2024/08/24 02:57:35 ryoon Exp $
+$NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon Exp $
 
 * Support NetBSD
 * Add pkgsrc font path
 
---- external/pdfium/pkgsrc.patch.1.orig	2024-08-22 13:07:50.547500585 +0000
+--- external/pdfium/pkgsrc.patch.1.orig 2024-08-22 13:07:50.547500585 +0000
 +++ external/pdfium/pkgsrc.patch.1
-@@ -0,0 +1,30 @@
-+--- pdfium/core/fpdfapi/page/cpdf_psengine.cpp.orig	2024-04-16 00:00:38.000000000 +0000
-++++ pdfium/core/fpdfapi/page/cpdf_psengine.cpp
-+@@ -75,7 +75,7 @@ constexpr PDF_PSOpName kPsOpNames[] = {
+@@ -0,0 +1,316 @@
++diff -urN pdfium.orig/core/fpdfapi/page/cpdf_pageobjectholder_unittest.cpp pdfium/core/fpdfapi/page/cpdf_pageobjectholder_unittest.cpp
++--- pdfium.orig/core/fpdfapi/page/cpdf_pageobjectholder_unittest.cpp	2025-10-13 14:04:21.000000000 +0900
+++++ pdfium/core/fpdfapi/page/cpdf_pageobjectholder_unittest.cpp	2026-02-04 22:45:26.393180629 +0900
++@@ -40,7 +40,7 @@
++   EXPECT_EQ(data[0], fMin);
++   EXPECT_EQ(data[1], fMax);
++   EXPECT_EQ(data[2], fInf);
++-  EXPECT_EQ(isnan(data[3]), isnan(fNan));
+++  EXPECT_EQ(std::isnan(data[3]), std::isnan(fNan));
++ 
++   std::map<GraphicsData, int> graphics_map;
++ 
++diff -urN pdfium.orig/core/fpdfapi/page/cpdf_psengine.cpp pdfium/core/fpdfapi/page/cpdf_psengine.cpp
++--- pdfium.orig/core/fpdfapi/page/cpdf_psengine.cpp	2025-10-13 14:04:21.000000000 +0900
+++++ pdfium/core/fpdfapi/page/cpdf_psengine.cpp	2026-02-04 22:43:56.268709656 +0900
++@@ -75,7 +75,7 @@
 + // Round half up is a nearest integer round with half-way numbers always rounded
 + // up. Example: -5.5 rounds to -5.
 + float RoundHalfUp(float f) {
-+-  if (isnan(f))
-++  if (std::isnan(f))
++-  if (isnan(f)) {
+++  if (std::isnan(f)) {
 +     return 0;
-+   if (f > std::numeric_limits<float>::max() - 0.5f)
-+     return std::numeric_limits<float>::max();
-+--- pdfium/core/fxge/linux/fx_linux_impl.cpp.orig	2024-04-16 00:00:38.000000000 +0000
-++++ pdfium/core/fxge/linux/fx_linux_impl.cpp
-+@@ -17,7 +17,7 @@
-+ #include "core/fxge/fx_font.h"
-+ #include "core/fxge/systemfontinfo_iface.h"
++   }
++   if (f > std::numeric_limits<float>::max() - 0.5f) {
++diff -urN pdfium.orig/core/fxcrt/css/cfx_cssdeclaration.cpp pdfium/core/fxcrt/css/cfx_cssdeclaration.cpp
++--- pdfium.orig/core/fxcrt/css/cfx_cssdeclaration.cpp	2025-10-13 14:04:21.000000000 +0900
+++++ pdfium/core/fxcrt/css/cfx_cssdeclaration.cpp	2026-02-05 00:14:08.598217203 +0900
++@@ -37,7 +37,7 @@
 + 
-+-#if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS) && !defined(OS_ASMJS)
-++#if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS) && !defined(OS_ASMJS) && !defined(OS_NETBSD)
-+ #error "Included on the wrong platform"
-+ #endif
++   size_t nUsedLen = 0;
++   float value = FXSYS_wcstof(view, &nUsedLen);
++-  if (nUsedLen == 0 || !isfinite(value)) {
+++  if (nUsedLen == 0 || !std::isfinite(value)) {
++     return std::nullopt;
++   }
++   view = view.Substr(nUsedLen);
++diff -urN pdfium.orig/core/fxcrt/fx_extension.h pdfium/core/fxcrt/fx_extension.h
++--- pdfium.orig/core/fxcrt/fx_extension.h	2025-10-13 14:04:21.000000000 +0900
+++++ pdfium/core/fxcrt/fx_extension.h	2026-02-04 22:46:23.783555997 +0900
++@@ -131,17 +131,17 @@
++ // All NaNs are treated as equal to each other and greater than infinity.
++ template <typename T>
++ bool FXSYS_SafeEQ(const T& lhs, const T& rhs) {
++-  return (isnan(lhs) && isnan(rhs)) ||
++-         (!isnan(lhs) && !isnan(rhs) && lhs == rhs);
+++  return (std::isnan(lhs) && std::isnan(rhs)) ||
+++         (!std::isnan(lhs) && !std::isnan(rhs) && lhs == rhs);
++ }
 + 
-+@@ -169,6 +169,7 @@ class CLinuxPlatform : public CFX_GEModu
++ template <typename T>
++ bool FXSYS_SafeLT(const T& lhs, const T& rhs) {
++-  if (isnan(lhs) && isnan(rhs)) {
+++  if (std::isnan(lhs) && std::isnan(rhs)) {
++     return false;
++   }
++-  if (isnan(lhs) || isnan(rhs)) {
++-    return isnan(lhs) < isnan(rhs);
+++  if (std::isnan(lhs) || std::isnan(rhs)) {
+++    return std::isnan(lhs) < std::isnan(rhs);
++   }
++   return lhs < rhs;
++ }
++diff -urN pdfium.orig/core/fxcrt/fx_system.cpp pdfium/core/fxcrt/fx_system.cpp
++--- pdfium.orig/core/fxcrt/fx_system.cpp	2025-10-13 14:04:21.000000000 +0900
+++++ pdfium/core/fxcrt/fx_system.cpp	2026-02-04 22:45:57.363749488 +0900
++@@ -99,7 +99,7 @@
++ }  // namespace
++ 
++ int FXSYS_roundf(float f) {
++-  if (isnan(f)) {
+++  if (std::isnan(f)) {
++     return 0;
++   }
++   if (f < static_cast<float>(std::numeric_limits<int>::min())) {
++@@ -112,7 +112,7 @@
++ }
++ 
++ int FXSYS_round(double d) {
++-  if (isnan(d)) {
+++  if (std::isnan(d)) {
++     return 0;
++   }
++   if (d < static_cast<double>(std::numeric_limits<int>::min())) {
++diff -urN pdfium.orig/core/fxge/linux/fx_linux_impl.cpp pdfium/core/fxge/linux/fx_linux_impl.cpp
++--- pdfium.orig/core/fxge/linux/fx_linux_impl.cpp	2025-10-13 14:04:21.000000000 +0900
+++++ pdfium/core/fxge/linux/fx_linux_impl.cpp	2026-02-04 22:43:56.268932135 +0900
++@@ -183,6 +183,7 @@
 +       pInfo->AddPath("/usr/share/X11/fonts/Type1");
 +       pInfo->AddPath("/usr/share/X11/fonts/TTF");
 +       pInfo->AddPath("/usr/local/share/fonts");
@@ -36,3 +100,225 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.11 2024/08/24 02:57:35 ryoon E
 +     }
 +     return pInfo;
 +   }
++diff -urN pdfium.orig/fxjs/cfx_v8_unittest.cpp pdfium/fxjs/cfx_v8_unittest.cpp
++--- pdfium.orig/fxjs/cfx_v8_unittest.cpp	2025-10-13 14:04:21.000000000 +0900
+++++ pdfium/fxjs/cfx_v8_unittest.cpp	2026-02-04 22:47:11.102988204 +0900
++@@ -88,7 +88,7 @@
++   auto undef = cfx_v8()->NewUndefined();
++   EXPECT_FALSE(cfx_v8()->ToBoolean(undef));
++   EXPECT_EQ(0, cfx_v8()->ToInt32(undef));
++-  EXPECT_TRUE(isnan(cfx_v8()->ToDouble(undef)));
+++  EXPECT_TRUE(std::isnan(cfx_v8()->ToDouble(undef)));
++   EXPECT_EQ("undefined", cfx_v8()->ToByteString(undef));
++   EXPECT_EQ(L"undefined", cfx_v8()->ToWideString(undef));
++   EXPECT_TRUE(cfx_v8()->ToObject(undef).IsEmpty());
++diff -urN pdfium.orig/fxjs/cjs_publicmethods.cpp pdfium/fxjs/cjs_publicmethods.cpp
++--- pdfium.orig/fxjs/cjs_publicmethods.cpp	2025-10-13 14:04:21.000000000 +0900
+++++ pdfium/fxjs/cjs_publicmethods.cpp	2026-02-04 22:48:02.672697845 +0900
++@@ -459,7 +459,7 @@
++ 
++   if (status == fxjs::ConversionStatus::kBadDate) {
++     dRet = JS_DateParse(isolate, value);
++-    if (!isnan(dRet)) {
+++    if (!std::isnan(dRet)) {
++       return dRet;
++     }
++   }
++@@ -951,7 +951,7 @@
++                                  nullptr);
++   }
++ 
++-  if (isnan(dDate)) {
+++  if (std::isnan(dDate)) {
++     WideString swMsg = WideString::Format(
++         JSGetStringFromID(JSMessage::kParseDateError).c_str(), sFormat.c_str());
++     AlertIfPossible(pEvent, WideString::FromASCII("AFDate_FormatEx"), swMsg);
++@@ -994,7 +994,7 @@
++   int nYear = StringToFloat(wsArray[7].AsStringView());
++   double dRet = FX_MakeDate(FX_MakeDay(nYear, nMonth - 1, nDay),
++                             FX_MakeTime(nHour, nMin, nSec, 0));
++-  if (isnan(dRet)) {
+++  if (std::isnan(dRet)) {
++     dRet = JS_DateParse(isolate, strValue);
++   }
++ 
++@@ -1028,7 +1028,7 @@
++   WideString sFormat = pRuntime->ToWideString(params[0]);
++   double dRet = ParseDateUsingFormat(pRuntime->GetIsolate(), strValue, sFormat,
++                                      &bWrongFormat);
++-  if (bWrongFormat || isnan(dRet)) {
+++  if (bWrongFormat || std::isnan(dRet)) {
++     WideString swMsg = WideString::Format(
++         JSGetStringFromID(JSMessage::kParseDateError).c_str(), sFormat.c_str());
++     AlertIfPossible(pEvent, WideString::FromASCII("AFDate_KeystrokeEx"), swMsg);
++@@ -1306,7 +1306,7 @@
++   WideString sFormat = pRuntime->ToWideString(params[1]);
++   double dDate =
++       ParseDateUsingFormat(pRuntime->GetIsolate(), sValue, sFormat, nullptr);
++-  if (isnan(dDate)) {
+++  if (std::isnan(dDate)) {
++     WideString swMsg = WideString::Format(
++         JSGetStringFromID(JSMessage::kParseDateError).c_str(), sFormat.c_str());
++     AlertIfPossible(pRuntime->GetCurrentEventContext(),
++@@ -1326,7 +1326,7 @@
++   WideString sFunction = pRuntime->ToWideString(params[0]);
++   double arg1 = pRuntime->ToDouble(params[1]);
++   double arg2 = pRuntime->ToDouble(params[2]);
++-  if (isnan(arg1) || isnan(arg2)) {
+++  if (std::isnan(arg1) || std::isnan(arg2)) {
++     return CJS_Result::Failure(JSMessage::kValueError);
++   }
++ 
++diff -urN pdfium.orig/fxjs/cjs_runtime.cpp pdfium/fxjs/cjs_runtime.cpp
++--- pdfium.orig/fxjs/cjs_runtime.cpp	2025-10-13 14:04:21.000000000 +0900
+++++ pdfium/fxjs/cjs_runtime.cpp	2026-02-04 22:47:31.356002620 +0900
++@@ -236,7 +236,7 @@
++   }
++ 
++   v8::Local<v8::Number> num = maybeNum.ToLocalChecked();
++-  if (isnan(num->Value()) && !bAllowNaN) {
+++  if (std::isnan(num->Value()) && !bAllowNaN) {
++     return value;
++   }
++ 
++diff -urN pdfium.orig/fxjs/cjs_util.cpp pdfium/fxjs/cjs_util.cpp
++--- pdfium.orig/fxjs/cjs_util.cpp	2025-10-13 14:04:21.000000000 +0900
+++++ pdfium/fxjs/cjs_util.cpp	2026-02-04 22:48:26.021762568 +0900
++@@ -177,7 +177,7 @@
++   }
++ 
++   v8::Local<v8::Date> v8_date = params[1].As<v8::Date>();
++-  if (v8_date.IsEmpty() || isnan(pRuntime->ToDouble(v8_date))) {
+++  if (v8_date.IsEmpty() || std::isnan(pRuntime->ToDouble(v8_date))) {
++     return CJS_Result::Failure(JSMessage::kSecondParamInvalidDateError);
++   }
++ 
++@@ -393,7 +393,7 @@
++     dDate = CJS_PublicMethods::ParseDateUsingFormat(pRuntime->GetIsolate(),
++                                                     sDate, sFormat, nullptr);
++   }
++-  if (isnan(dDate)) {
+++  if (std::isnan(dDate)) {
++     return CJS_Result::Success(pRuntime->NewUndefined());
++   }
++ 
++diff -urN pdfium.orig/fxjs/fx_date_helpers.cpp pdfium/fxjs/fx_date_helpers.cpp
++--- pdfium.orig/fxjs/fx_date_helpers.cpp	2025-10-13 14:04:21.000000000 +0900
+++++ pdfium/fxjs/fx_date_helpers.cpp	2026-02-05 00:14:49.671310081 +0900
++@@ -278,7 +278,7 @@
++ }
++ 
++ double FX_MakeDate(double day, double time) {
++-  if (!isfinite(day) || !isfinite(time)) {
+++  if (!std::isfinite(day) || !std::isfinite(time)) {
++     return nan("");
++   }
++ 
++@@ -565,7 +565,7 @@
++ 
++   dt = FX_MakeDate(FX_MakeDay(nYear, nMonth - 1, nDay),
++                    FX_MakeTime(nHour, nMin, nSec, 0));
++-  if (isnan(dt)) {
+++  if (std::isnan(dt)) {
++     return ConversionStatus::kBadDate;
++   }
++ 
++diff -urN pdfium.orig/fxjs/js_define.cpp pdfium/fxjs/js_define.cpp
++--- pdfium.orig/fxjs/js_define.cpp	2025-10-13 14:04:21.000000000 +0900
+++++ pdfium/fxjs/js_define.cpp	2026-02-05 00:14:33.113862531 +0900
++@@ -59,7 +59,7 @@
++   }
++ 
++   double date = value.As<v8::Number>()->Value();
++-  return isfinite(date) ? FX_LocalTime(date) : date;
+++  return std::isfinite(date) ? FX_LocalTime(date) : date;
++ }
++ 
++ v8::LocalVector<v8::Value> ExpandKeywordParams(
++diff -urN pdfium.orig/fxjs/xfa/cfxjse_formcalc_context.cpp pdfium/fxjs/xfa/cfxjse_formcalc_context.cpp
++--- pdfium.orig/fxjs/xfa/cfxjse_formcalc_context.cpp	2025-10-13 14:04:21.000000000 +0900
+++++ pdfium/fxjs/xfa/cfxjse_formcalc_context.cpp	2026-02-04 23:50:32.594362288 +0900
++@@ -4267,7 +4267,7 @@
++     bsLocale = ValueToUTF8String(info.GetIsolate(), localeValue);
++   }
++ 
++-  if (isnan(fNumber) || fNumber < 0.0f || fNumber > 922337203685477550.0f) {
+++  if (std::isnan(fNumber) || fNumber < 0.0f || fNumber > 922337203685477550.0f) {
++     info.GetReturnValue().Set(fxv8::NewStringHelper(info.GetIsolate(), "*"));
++     return;
++   }
++diff -urN pdfium.orig/fxjs/xfa/cfxjse_formcalc_context_embeddertest.cpp pdfium/fxjs/xfa/cfxjse_formcalc_context_embeddertest.cpp
++--- pdfium.orig/fxjs/xfa/cfxjse_formcalc_context_embeddertest.cpp	2025-10-13 14:04:21.000000000 +0900
+++++ pdfium/fxjs/xfa/cfxjse_formcalc_context_embeddertest.cpp	2026-02-04 23:50:20.248919381 +0900
++@@ -90,7 +90,7 @@
++     CFXJSE_ScopeUtil_IsolateHandleContext scope(GetJseContext());
++     v8::Local<v8::Value> value = GetValue();
++     EXPECT_TRUE(fxv8::IsNumber(value));
++-    EXPECT_TRUE(isnan(fxv8::ReentrantToDoubleHelper(isolate(), value)));
+++    EXPECT_TRUE(std::isnan(fxv8::ReentrantToDoubleHelper(isolate(), value)));
++   }
++ 
++   void ExecuteExpectString(ByteStringView input, const char* expected) {
++diff -urN pdfium.orig/third_party/fast_float/src/tests/basictest.cpp pdfium/third_party/fast_float/src/tests/basictest.cpp
++--- pdfium.orig/third_party/fast_float/src/tests/basictest.cpp	2025-05-19 22:05:25.000000000 +0900
+++++ pdfium/third_party/fast_float/src/tests/basictest.cpp	2026-02-04 23:50:49.273976710 +0900
++@@ -741,12 +741,12 @@
++     return std::copysign(x, y);
++   };
++ 
++-  auto isnan = [](double x) -> bool { return x != x; };
+++  auto std::isnan = [](double x) -> bool { return x != x; };
++ 
++   FASTFLOAT_CHECK_EQ(result.ec, expected_ec);
++   FASTFLOAT_CHECK_EQ(result.ptr, str.data() + str.size());
++   FASTFLOAT_CHECK_EQ(copysign(1, actual), copysign(1, expected));
++-  FASTFLOAT_CHECK_EQ(isnan(actual), isnan(expected));
+++  FASTFLOAT_CHECK_EQ(std::isnan(actual), std::isnan(expected));
++   FASTFLOAT_CHECK_EQ(actual, expected);
++ 
++ #undef FASTFLOAT_CHECK_EQ
++diff -urN pdfium.orig/third_party/lcms/src/cmsintrp.c pdfium/third_party/lcms/src/cmsintrp.c
++--- pdfium.orig/third_party/lcms/src/cmsintrp.c	2025-10-13 14:04:21.000000000 +0900
+++++ pdfium/third_party/lcms/src/cmsintrp.c	2026-02-04 23:51:00.760757400 +0900
++@@ -223,7 +223,7 @@
++ // To prevent out of bounds indexing
++ cmsINLINE cmsFloat32Number fclamp(cmsFloat32Number v) 
++ {
++-    return ((v < 1.0e-9f) || isnan(v)) ? 0.0f : (v > 1.0f ? 1.0f : v);
+++    return ((v < 1.0e-9f) || std::isnan(v)) ? 0.0f : (v > 1.0f ? 1.0f : v);
++ }
++ 
++ // Floating-point version of 1D interpolation
++diff -urN pdfium.orig/xfa/fgas/graphics/cfgas_gegraphics.cpp pdfium/xfa/fgas/graphics/cfgas_gegraphics.cpp
++--- pdfium.orig/xfa/fgas/graphics/cfgas_gegraphics.cpp	2025-10-13 14:04:21.000000000 +0900
+++++ pdfium/xfa/fgas/graphics/cfgas_gegraphics.cpp	2026-02-04 22:46:43.938987678 +0900
++@@ -313,7 +313,7 @@
++             float x = static_cast<float>(column);
++             scale = (((x - start_x) * x_span) + ((y - start_y) * y_span)) /
++                     axis_len_square;
++-            if (isnan(scale) || scale < 0.0f) {
+++            if (std::isnan(scale) || scale < 0.0f) {
++               if (!info_.fillColor.GetShading()->IsExtendedBegin()) {
++                 continue;
++               }
++@@ -374,7 +374,7 @@
++               continue;
++             }
++           }
++-          if (isnan(s) || s < 0.0f) {
+++          if (std::isnan(s) || s < 0.0f) {
++             if (!info_.fillColor.GetShading()->IsExtendedBegin()) {
++               continue;
++             }
++diff -urN pdfium.orig/xfa/fxfa/parser/cxfa_measurement.cpp pdfium/xfa/fxfa/parser/cxfa_measurement.cpp
++--- pdfium.orig/xfa/fxfa/parser/cxfa_measurement.cpp	2025-10-13 14:04:21.000000000 +0900
+++++ pdfium/xfa/fxfa/parser/cxfa_measurement.cpp	2026-02-05 00:14:20.825879359 +0900
++@@ -46,7 +46,7 @@
++ 
++   size_t nUsedLen = 0;
++   float fValue = FXSYS_wcstof(wsMeasure, &nUsedLen);
++-  if (!isfinite(fValue)) {
+++  if (!std::isfinite(fValue)) {
++     fValue = 0.0f;
++   }
++   Set(fValue, GetUnitFromString(wsMeasure.Substr(nUsedLen)));

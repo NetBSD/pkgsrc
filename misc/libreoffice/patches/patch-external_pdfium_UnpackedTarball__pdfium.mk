@@ -1,15 +1,15 @@
-$NetBSD: patch-external_pdfium_UnpackedTarball__pdfium.mk,v 1.10 2025/08/30 06:44:05 ryoon Exp $
+$NetBSD: patch-external_pdfium_UnpackedTarball__pdfium.mk,v 1.11 2026/02/09 16:59:59 ryoon Exp $
 
 * Support pkgsrc and NetBSD
 
---- external/pdfium/UnpackedTarball_pdfium.mk.orig	2025-08-22 05:44:00.207667260 +0000
+--- external/pdfium/UnpackedTarball_pdfium.mk.orig	2026-01-27 21:11:38.000000000 +0000
 +++ external/pdfium/UnpackedTarball_pdfium.mk
-@@ -16,6 +16,8 @@ pdfium_patches += constexpr-template.pat
+@@ -22,6 +22,8 @@ pdfium_patches += system-fast_float.diff
  
- pdfium_patches += system-abseil.diff
+ pdfium_patches += system-fast_float.diff
  
 +pdfium_patches += pkgsrc.patch.1
 +
- # https://pdfium-review.googlesource.com/c/pdfium/+/130970
- pdfium_patches += retrieve-MIME-type-from-PDF-attachments.patch.1
- 
+ ifeq ($(OS),WNT)
+ pdfium_patches += pdfium-vs2019-arm64_no-__umulh.patch.1
+ endif
