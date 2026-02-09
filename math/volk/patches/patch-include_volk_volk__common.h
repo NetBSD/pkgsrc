@@ -1,6 +1,11 @@
-$NetBSD: patch-include_volk_volk__common.h,v 1.2 2026/02/09 12:55:14 adam Exp $
+$NetBSD: patch-include_volk_volk__common.h,v 1.3 2026/02/09 18:42:13 gdt Exp $
 
-Something is wrong with NetBSD's headers; GCC says isinf is out of scope.
+This header is used in both C and C++.  Using C99-style bare
+isinf/isnan is UB in C++, but works in some environments and thus
+persists upstream
+
+Reported upstream by gdt via email 2026-02.  Upstream is going to
+prepare a patch for me to test, perhaps detangling C/C++.
 
 --- include/volk/volk_common.h.orig	2026-02-09 12:27:43.544508041 +0000
 +++ include/volk/volk_common.h
