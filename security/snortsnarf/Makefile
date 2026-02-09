@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.31 2022/06/28 11:35:51 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.32 2026/02/09 07:03:29 wiz Exp $
 
 DISTNAME=	SnortSnarf-050314.1
 PKGNAME=	${DISTNAME:S/SnortSnarf-/snortsnarf-20/}
 PKGREVISION=	10
 CATEGORIES=	security net
-MASTER_SITES=	https://www.snort.org/dl/contrib/data_analysis/snortsnarf/
+#MASTER_SITES=	https://www.snort.org/dl/contrib/data_analysis/snortsnarf/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.silicondefense.com/software/snortsnarf/
+#HOMEPAGE=	http://www.silicondefense.com/software/snortsnarf/
 COMMENT=	Generate HTML report summaries from snort incident alerts
 
 DEPENDS+=	p5-Time-modules>=101.062101:../../time/p5-Time-modules
