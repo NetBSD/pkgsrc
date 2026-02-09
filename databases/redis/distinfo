@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.90 2025/11/21 09:05:36 adam Exp $
+$NetBSD: distinfo,v 1.91 2026/02/09 10:09:27 adam Exp $
 
-BLAKE2s (redis-8.4.0.tar.gz) = e31fcf682fdb0b2aa14d09ffcec286ea2676fcd13e9d3c2e18096446da102b58
-SHA512 (redis-8.4.0.tar.gz) = f0075c0b5a6700657197fb2bc7cfee0657ab37c7d27c4702b81d844e5c51c4eabfb0e780ad374060c3896db13d7d560e755974e3d2091b24803aaacf8d6c695c
-Size (redis-8.4.0.tar.gz) = 4109585 bytes
+BLAKE2s (redis-8.4.1.tar.gz) = 7e1821a131a588263061720eca92f6cb306d8447c5ef23a09cf80b7a80c03145
+SHA512 (redis-8.4.1.tar.gz) = 134069aeee6958c93acf39e4a45f2c26cba66bcab2057eb8fec79e6c6b4e3e0a9609d54acf595bfa3317e6676959366893d3171edb7308eabacb0c3b18c292cd
+Size (redis-8.4.1.tar.gz) = 4115219 bytes
 SHA1 (patch-redis.conf) = a16fd0c559c9fbe0237b719d92a59259ae19c41a
 SHA1 (patch-src_Makefile) = a2817ec27efc11b11e77b4ed310a7dec7e1d39d4
 SHA1 (patch-src_config.h) = 46d434465269977b7897c025c2d6f72b3b736de1
