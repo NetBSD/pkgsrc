@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.998 2026/02/09 13:41:24 adam Exp $
+$NetBSD: CHANGES-2026,v 1.999 2026/02/09 13:45:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1291,3 +1291,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/volk to 3.3.0 [adam 2026-02-09]
 	Updated www/py-w3lib to 2.4.0 [adam 2026-02-09]
 	Updated www/py-parsel to 1.11.0 [adam 2026-02-09]
+	Updated textproc/py-cssselect to 1.4.0 [adam 2026-02-09]
