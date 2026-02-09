@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/01/27 18:59:08 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2026/02/09 07:10:17 wiz Exp $
 
 DISTNAME=		space_dapp.c
 PKGNAME=		space_dapp-20060717
@@ -7,7 +7,7 @@ MASTER_SITES=		https://darkshed.net/files/c_cpp/bits/
 EXTRACT_SUFX=
 
 MAINTAINER=		sborrill@NetBSD.org
-HOMEPAGE=		https://darkshed.net/files/c_cpp/bits/
+#HOMEPAGE=		https://darkshed.net/files/c_cpp/bits/
 COMMENT=		Tiny dock app to create an empty space
 
 INSTALLATION_DIRS=	bin
