@@ -1,20 +1,16 @@
-# $NetBSD: Makefile,v 1.75 2026/01/27 08:40:46 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2026/02/09 12:24:28 wiz Exp $
 
-DISTNAME=	release-0.3.2
-GITHUB_PROJECT=	pekwm
-GITHUB_TAG=	refs/tags/release-0.3.2
-PKGNAME=	${GITHUB_PROJECT}-0.3.2
-PKGREVISION=	3
+DISTNAME=	pekwm-0.4.2
 CATEGORIES=	wm
-MASTER_SITES=	${MASTER_SITE_GITHUB:=pekdon/}
+MASTER_SITES=	https://www.pekwm.se/pekwm/uv/
 
 MAINTAINER=	gls@NetBSD.org
 HOMEPAGE=	https://www.pekwm.se/
 COMMENT=	Light, unobtrusive, and configurable window manager
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/pekwm-release-0.3.2
-
+# src/lib/Md5.cc:267:19: error: 'UINT32_MAX' was not declared in this scope; did you mean 'UINT_MAX'?
+CFLAGS+=	-D__STDC_LIMIT_MACROS
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
