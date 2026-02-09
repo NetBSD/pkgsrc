@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2025/09/27 06:54:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.52 2026/02/09 21:51:29 wiz Exp $
 lib/cmake/Boost-${PKGVERSION}/BoostConfig.cmake
 lib/cmake/Boost-${PKGVERSION}/BoostConfigVersion.cmake
 lib/cmake/BoostDetectToolset-${PKGVERSION}.cmake
@@ -50,8 +50,6 @@ lib/cmake/boost_graph-${PKGVERSION}/libboost_graph-variant-shared.cmake
 lib/cmake/boost_graph-${PKGVERSION}/libboost_graph-variant-static.cmake
 lib/cmake/boost_graph_parallel-${PKGVERSION}/boost_graph_parallel-config-version.cmake
 lib/cmake/boost_graph_parallel-${PKGVERSION}/boost_graph_parallel-config.cmake
-lib/cmake/boost_headers-${PKGVERSION}/boost_headers-config-version.cmake
-lib/cmake/boost_headers-${PKGVERSION}/boost_headers-config.cmake
 lib/cmake/boost_iostreams-${PKGVERSION}/boost_iostreams-config-version.cmake
 lib/cmake/boost_iostreams-${PKGVERSION}/boost_iostreams-config.cmake
 lib/cmake/boost_iostreams-${PKGVERSION}/libboost_iostreams-variant-shared.cmake

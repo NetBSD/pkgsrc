@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.124 2026/02/08 22:36:16 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2026/02/09 21:51:29 wiz Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
 BOOST_CONFIG=		installed
 BOOST_INSTALL_LIBS=	yes
 
-PKGREVISION= 2
+PKGREVISION=		3
+
 .include "../../meta-pkgs/boost/Makefile.common"
 
 INSTALLATION_DIRS+=	lib
 
+BJAM_ARGS+=		--without-headers
 BJAM_ARGS+=		--without-python
 PLIST_VARS+=		context fiber log stacktrace_from_exception
 
@@ -73,6 +75,10 @@ CONFIGURE_ENV+=	ZLIB_LIBRARY_PATH=${BUILDLINK_PREFIX.zlib}/lib
 do-build: bjam-build
 
 do-install: boost-install-libs boost-install-cmake
+
+# These are already in boost-headers
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/lib/cmake/boost_headers-*/*.cmake
 
 PRINT_PLIST_AWK+=	/boost_context/ { $$0 = "$${PLIST.context}"$$0 }
 PRINT_PLIST_AWK+=	/boost_coroutine/ { $$0 = "$${PLIST.context}"$$0 }
