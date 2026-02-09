@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2026/02/09 16:49:07 ryoon Exp $
+
+BLAKE2s (afdko-4.0.3.tar.gz) = 550249d1bf264ad2d69297cf92d196d8393ee7d8867b41be0cb415a4f90ffea7
+SHA512 (afdko-4.0.3.tar.gz) = 81ff16b7f2b1103032871cf6ecc6074de0b7b0b7e2bdcd1a6878601f77a831f02c7eb02e8db7e5a7cee169fa991c5563050cc875074355b807857ad51c8a8c87
+Size (afdko-4.0.3.tar.gz) = 17922308 bytes
+SHA1 (patch-CMakeLists.txt) = d5f312e73eb83dab96eb49c0a57e18ceb66e4713
+SHA1 (patch-c_makeotf_lib_cffread_CMakeLists.txt) = 18a026916c2919a1c5345b83a75b2403f090fe67
+SHA1 (patch-c_makeotf_lib_hotconv_CMakeLists.txt) = 156430e46c4917ca0b2b65e784e86c0a935ad31b
+SHA1 (patch-c_makeotf_lib_hotconv_FeatCtx.cpp) = 7030fb4e1cf3e6f3d9f84ec5c3af88634fc47d66
+SHA1 (patch-c_makeotf_lib_hotconv_FeatLexer.h) = 964fde6c7840ead3651fcff2cd3d74182c503057
+SHA1 (patch-c_makeotf_lib_hotconv_FeatParser.h) = a360653cb7a2c514f8772b3a70f37b864f08824f
+SHA1 (patch-c_makeotf_lib_hotconv_FeatParserBaseVisitor.h) = 454a4144c54260a52fdf5affcb79a9117e30a420
+SHA1 (patch-c_makeotf_lib_hotconv_FeatParserVisitor.h) = a466088fca3454974266e7ae29846a2b532472ed
