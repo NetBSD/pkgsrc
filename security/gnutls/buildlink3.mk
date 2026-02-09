@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.59 2026/02/06 10:05:47 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.60 2026/02/09 19:35:36 adam Exp $
 
 BUILDLINK_TREE+=	gnutls
 
@@ -22,6 +22,12 @@ pkgbase := gnutls
 .endif
 .if ${PKG_BUILD_OPTIONS.gnutls:Mpkcs11}
 .include "../../security/p11-kit/buildlink3.mk"
+.endif
+.if ${PKG_BUILD_OPTIONS.gnutls:Mbrotli}
+.include "../../archivers/brotli/buildlink3.mk"
+.endif
+.if ${PKG_BUILD_OPTIONS.gnutls:Mzstd}
+.include "../../archivers/zstd/buildlink3.mk"
 .endif
 .endif # GNUTLS_BUILDLINK3_MK
 
