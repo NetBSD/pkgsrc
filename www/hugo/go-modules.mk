@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.35 2026/02/01 20:34:18 triaxx Exp $
+# $NetBSD: go-modules.mk,v 1.36 2026/02/09 14:18:21 triaxx Exp $
 
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.24.0.mod
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.24.0.zip
@@ -200,8 +200,8 @@ GO_MODULE_FILES+=	github.com/envoyproxy/go-control-plane/envoy/@v/v1.32.4.zip
 GO_MODULE_FILES+=	github.com/envoyproxy/protoc-gen-validate/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/envoyproxy/protoc-gen-validate/@v/v1.2.1.mod
 GO_MODULE_FILES+=	github.com/envoyproxy/protoc-gen-validate/@v/v1.2.1.zip
-GO_MODULE_FILES+=	github.com/evanw/esbuild/@v/v0.27.2.mod
-GO_MODULE_FILES+=	github.com/evanw/esbuild/@v/v0.27.2.zip
+GO_MODULE_FILES+=	github.com/evanw/esbuild/@v/v0.27.3.mod
+GO_MODULE_FILES+=	github.com/evanw/esbuild/@v/v0.27.3.zip
 GO_MODULE_FILES+=	github.com/fatih/color/@v/v1.18.0.mod
 GO_MODULE_FILES+=	github.com/fatih/color/@v/v1.18.0.zip
 GO_MODULE_FILES+=	github.com/felixge/httpsnoop/@v/v1.0.4.mod

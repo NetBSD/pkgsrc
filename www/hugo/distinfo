@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.54 2026/02/03 21:01:32 triaxx Exp $
+$NetBSD: distinfo,v 1.55 2026/02/09 14:18:21 triaxx Exp $
 
 BLAKE2s (cel.dev_expr_@v_v0.24.0.mod) = 35d43d581d2a983aa8fccbcc9c49400c2bfdda9a968a0f701c187dec4ab5aade
 SHA512 (cel.dev_expr_@v_v0.24.0.mod) = 8c3d6929fe232875ec4de4ddffc12a54d0c24d7a86257013b060fe02fbd7d93a6a8d71bfac21490cd4457d9a10791db1b9c44291640f7e2cded698ea9462f63d
@@ -600,12 +600,12 @@ Size (github.com_envoyproxy_protoc-gen-validate_@v_v1.2.1.mod) = 503 bytes
 BLAKE2s (github.com_envoyproxy_protoc-gen-validate_@v_v1.2.1.zip) = 86f84497fbb5206abc98df8fbd25ebe41389d67a0056613293ade034779373b1
 SHA512 (github.com_envoyproxy_protoc-gen-validate_@v_v1.2.1.zip) = 0bce5db55355f051b384c9d54efde880fda07185b5d9cbc484a6e7a1c96678bf4b8f1860c6653166e467f3871101a6526ee63cf6474cae59d11cbfdd2739d4bc
 Size (github.com_envoyproxy_protoc-gen-validate_@v_v1.2.1.zip) = 253376 bytes
-BLAKE2s (github.com_evanw_esbuild_@v_v0.27.2.mod) = e4e80cb32594006dcd081fdbfdd36e92fff77010d031518e781774082ced16d1
-SHA512 (github.com_evanw_esbuild_@v_v0.27.2.mod) = 802603d781f08cb8c315d7ec151af2383e6d5c2d2c0b1879674dc539539564f78099b25377bd56e7397f6b66235c73c35c6bb9f79a9409a831ed3a68de42080d
-Size (github.com_evanw_esbuild_@v_v0.27.2.mod) = 428 bytes
-BLAKE2s (github.com_evanw_esbuild_@v_v0.27.2.zip) = e3aa17aab7d19de9f89e12ed33ff163cbb883948257328b5dc5a91eab2c52017
-SHA512 (github.com_evanw_esbuild_@v_v0.27.2.zip) = 15dba8f70bc6b1d9132303d3948d447024bdf4e382bc25001f8ca88264f64e7c024fbbc26bc45c77e58f72e5b13220fdc61700f11bf8a0ac292ab044a9e26b3e
-Size (github.com_evanw_esbuild_@v_v0.27.2.zip) = 2139702 bytes
+BLAKE2s (github.com_evanw_esbuild_@v_v0.27.3.mod) = e4e80cb32594006dcd081fdbfdd36e92fff77010d031518e781774082ced16d1
+SHA512 (github.com_evanw_esbuild_@v_v0.27.3.mod) = 802603d781f08cb8c315d7ec151af2383e6d5c2d2c0b1879674dc539539564f78099b25377bd56e7397f6b66235c73c35c6bb9f79a9409a831ed3a68de42080d
+Size (github.com_evanw_esbuild_@v_v0.27.3.mod) = 428 bytes
+BLAKE2s (github.com_evanw_esbuild_@v_v0.27.3.zip) = 7ac88e41526fd6f9b2fa84cf9a5812d4dbd9f8d34c6b117b2471677486c7e2ba
+SHA512 (github.com_evanw_esbuild_@v_v0.27.3.zip) = 9dd5720535f86ea2630b9c2ec8e566937bdc3385431ca9fc1f1bca2d63cb3ebb34db045c8908ecf37129a6b1c5629b02f6f4ae306b9906ae4f3957770c31ca91
+Size (github.com_evanw_esbuild_@v_v0.27.3.zip) = 2141055 bytes
 BLAKE2s (github.com_fatih_color_@v_v1.18.0.mod) = 563a7be56d4fc4cd173718d23227cd95829888341b21dcbb0ea4711293a0cebf
 SHA512 (github.com_fatih_color_@v_v1.18.0.mod) = a043bf3205a4ff88582acef109693cba029d5b5ebd7afb758be8b5a6da9b5f930702522c25a36b508c7d916a8c41cc6af6f8d9cfcca9f1c382cce7110e7993f1
 Size (github.com_fatih_color_@v_v1.18.0.mod) = 161 bytes
@@ -2508,9 +2508,9 @@ Size (howett.net_plist_@v_v1.0.0.mod) = 218 bytes
 BLAKE2s (howett.net_plist_@v_v1.0.0.zip) = 6c0b133ce84d8994a7c188e83ce7bae86228b60829ec29211d1a8f1a446cb945
 SHA512 (howett.net_plist_@v_v1.0.0.zip) = 7d63e5489b2b007736952dd57855fce61e8bbb38599f45d56d846ca23cb65e2db3070a2af39647c4d02f228511c2d44338904e2e83cb156df6f5aefdfa6e1aaf
 Size (howett.net_plist_@v_v1.0.0.zip) = 71680 bytes
-BLAKE2s (hugo-0.155.2.tar.gz) = 8b41bd6b2eee69d4afa40fe8da326fecbefac8fc28cc50b62c949c426155d5e8
-SHA512 (hugo-0.155.2.tar.gz) = a1d47d3e1050ad708ca88092cbe6d003bba3abaf455783429cc096b932b1a2b37a8094254a0bc6139b84dfeace7449f9b1c52ebfb3212f035a41b9406ac8be9d
-Size (hugo-0.155.2.tar.gz) = 15885389 bytes
+BLAKE2s (hugo-0.155.3.tar.gz) = eb4b0e515ed4e597f0c491ad2bcca21f64b55ba25d5ed3205ec454805228f729
+SHA512 (hugo-0.155.3.tar.gz) = b9c330ae145aac34dcf21c9503479889bfce69ec76b4c4407523473c9589043f47ea20585eed8b2eb8f8a24089a6c957261a7ca086df467ffad29fd9850d5c86
+Size (hugo-0.155.3.tar.gz) = 15884923 bytes
 BLAKE2s (rsc.io_binaryregexp_@v_v0.2.0.mod) = 351240374eb48b99bb43b8b52aa8467662e22b18ebf216f4c123858fe706c2f8
 SHA512 (rsc.io_binaryregexp_@v_v0.2.0.mod) = db50ff677b0bdccbc1a1ad3df7c5cc76f2fcccf3ab99d08d1c2868440eb9b893fe89452f4286f7d42f2f16abf0f4acda67fe86e174dcfa730a743aafcc166774
 Size (rsc.io_binaryregexp_@v_v0.2.0.mod) = 36 bytes
