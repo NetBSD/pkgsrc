@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4587 2026/02/06 08:42:02 wiz Exp $
+# $NetBSD: Makefile,v 1.4588 2026/02/09 16:48:33 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -154,6 +154,7 @@ SUBDIR+=	amtk
 SUBDIR+=	android-tools-adb
 SUBDIR+=	anjuta
 SUBDIR+=	ant-contrib
+SUBDIR+=	antlr4-cpp-runtime
 SUBDIR+=	apache-ant
 SUBDIR+=	apache-ant15
 SUBDIR+=	apache-ant19
