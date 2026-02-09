@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/09/22 21:41:54 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/02/09 19:44:28 adam Exp $
 
-DISTNAME=	pyperf-2.9.0
+DISTNAME=	pyperf-2.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyperf/}
@@ -10,7 +10,8 @@ HOMEPAGE=	https://github.com/psf/pyperf
 COMMENT=	Python module to run and analyze benchmarks
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-psutil>=5.9.0:../../sysutils/py-psutil
 
 USE_LANGUAGES=	# none
 
