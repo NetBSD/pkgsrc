@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.95 2026/02/06 10:04:39 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2026/02/09 22:55:41 yhardy Exp $
 
-DISTNAME=	xournalpp-1.2.8
-PKGREVISION=	5
+DISTNAME=	xournalpp-1.3.2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xournalpp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -20,6 +19,8 @@ CMAKE_CONFIGURE_ARGS+=	-DPKGSRC_CMAKE_MODS=${BUILDLINK_DIR}/cmake-Modules
 CMAKE_REQD+=		3.18
 
 USE_CXX_FEATURES+=	c++17 filesystem
+# downloads files during configure stage
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_CPPTRACE=OFF
 
 TOOL_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
@@ -38,6 +39,7 @@ post-install:
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/portaudio/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/adwaita-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
@@ -45,6 +47,7 @@ post-install:
 .include "../../lang/lua54/buildlink3.mk"
 BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
 .include "../../print/poppler/buildlink3.mk"
+.include "../../print/qpdf/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk3/buildlink3.mk"

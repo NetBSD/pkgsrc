@@ -1,13 +1,13 @@
-$NetBSD: patch-po_CMakeLists.txt,v 1.1 2020/05/04 11:04:07 nia Exp $
+$NetBSD: patch-po_CMakeLists.txt,v 1.2 2026/02/09 22:55:41 yhardy Exp $
 
 Fix building of po files. The "NOUPDATE" was added very close
 to the release, and there seems to be ongoing discussion in
 the bug reports -- not submitted upstream.
 
---- po/CMakeLists.txt.orig	2020-04-15 19:03:39.000000000 +0000
+--- po/CMakeLists.txt.orig	2026-02-03 08:56:24.000000000 +0000
 +++ po/CMakeLists.txt
-@@ -20,7 +20,7 @@ if (XGETTEXT_FOUND)
-       "${PROJECT_SOURCE_DIR}/ui/*.glade"
+@@ -39,7 +39,7 @@ if (XGETTEXT_FOUND)
+       "${PROJECT_SOURCE_DIR}/po/"
    )
  
 -  gettext_create_translations ("${potfile}" ALL NOUPDATE)
