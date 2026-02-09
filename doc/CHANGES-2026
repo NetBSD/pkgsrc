@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1013 2026/02/09 19:06:01 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1014 2026/02/09 19:15:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1308,3 +1308,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox to 147.0.3 [ryoon 2026-02-09]
 	Updated www/firefox-l10n to 147.0.3 [ryoon 2026-02-09]
 	Updated net/mosquitto to 2.1.2 [gdt 2026-02-09]
+	Updated databases/py-redis to 7.1.1 [adam 2026-02-09]
+	Updated lang/py-parso to 0.8.6 [adam 2026-02-09]
+	Updated textproc/py-markdown to 3.10.2 [adam 2026-02-09]
+	Updated devel/py-fakefs to 6.1.0 [adam 2026-02-09]
