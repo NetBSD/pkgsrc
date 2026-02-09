@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.992 2026/02/09 10:09:45 adam Exp $
+$NetBSD: CHANGES-2026,v 1.993 2026/02/09 10:50:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1282,3 +1282,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-tenacity to 9.1.4 [adam 2026-02-09]
 	Updated devel/py-blessed to 1.30.0 [adam 2026-02-09]
 	Updated databases/redis to 8.4.1 [adam 2026-02-09]
+	Updated x11/py-wxPython to 4.2.5 [adam 2026-02-09]
+	Updated textproc/py-pyaml to 26.2.1 [adam 2026-02-09]
