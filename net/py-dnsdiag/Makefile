@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2026/01/12 10:33:24 adam Exp $
+# $NetBSD: Makefile,v 1.15 2026/02/09 19:40:26 adam Exp $
 
-DISTNAME=	dnsdiag-2.9.1
+DISTNAME=	dnsdiag-2.9.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dnsdiag/}
