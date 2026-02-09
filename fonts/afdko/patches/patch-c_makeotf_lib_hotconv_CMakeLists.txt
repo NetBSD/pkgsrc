@@ -1,0 +1,15 @@
+$NetBSD: patch-c_makeotf_lib_hotconv_CMakeLists.txt,v 1.1 2026/02/09 16:49:07 ryoon Exp $
+
+* Use antlr4-runtime library from devel/antlr4-cpp-runtime.
+
+--- c/makeotf/lib/hotconv/CMakeLists.txt.orig	2026-02-04 12:31:07.324580295 +0000
++++ c/makeotf/lib/hotconv/CMakeLists.txt
+@@ -70,7 +70,7 @@ target_include_directories(hotconv PRIVATE AFTER $<$<C
+ set_property(TARGET hotconv PROPERTY C_STANDARD 99)
+ set_property(TARGET hotconv PROPERTY CXX_STANDARD 17)
+ target_include_directories(hotconv PRIVATE AFTER $<$<COMPILE_LANGUAGE:CXX>:${ANTLR4_INCLUDE_DIRS}>)
+-target_link_libraries(hotconv PUBLIC antlr4_static)
++target_link_libraries(hotconv PUBLIC antlr4-runtime)
+ 
+ target_link_libraries(hotconv PUBLIC ${CHOSEN_LIBXML2_LIBRARY})
+ 

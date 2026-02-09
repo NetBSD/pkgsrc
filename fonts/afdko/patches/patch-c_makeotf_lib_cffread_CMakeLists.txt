@@ -1,0 +1,14 @@
+$NetBSD: patch-c_makeotf_lib_cffread_CMakeLists.txt,v 1.1 2026/02/09 16:49:07 ryoon Exp $
+
+* Use antlr4-runtime library from devel/antlr4-cpp-runtime.
+
+--- c/makeotf/lib/cffread/CMakeLists.txt.orig	2026-02-04 12:31:47.016709909 +0000
++++ c/makeotf/lib/cffread/CMakeLists.txt
+@@ -8,6 +8,6 @@ endif()
+     add_dependencies(makeotf_cffread ${LIBXML2_TARGET})
+ endif()
+ 
+-target_link_libraries(makeotf_cffread PUBLIC antlr4_static)
++target_link_libraries(makeotf_cffread PUBLIC antlr4-runtime)
+ 
+ target_compile_definitions(makeotf_cffread PRIVATE $<$<CONFIG:Debug>:CFF_DEBUG=1> CFF_T13_SUPPORT=0)
