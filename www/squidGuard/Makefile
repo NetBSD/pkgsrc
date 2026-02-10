@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2023/12/22 18:02:38 zafer Exp $
+# $NetBSD: Makefile,v 1.45 2026/02/10 08:06:34 wiz Exp $
 
 DISTNAME=		squidGuard-1.4
 PKGREVISION=		18
@@ -13,7 +13,7 @@ PATCHFILES=		squidGuard-1.4_upgrade.patch
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.squidguard.org/
+#HOMEPAGE=	http://www.squidguard.org/
 COMMENT=	Ultrafast and free filter, redirector and access controller for Squid
 LICENSE=	gnu-gpl-v2
 
