@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/12/12 10:25:08 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/02/10 13:30:17 triaxx Exp $
 bin/warzone2100
 man/man6/warzone2100.6
 share/applications/net.wz2100.warzone2100.desktop
@@ -119,8 +119,8 @@ share/locale/ru/LC_MESSAGES/warzone2100.mo
 share/locale/ru/LC_MESSAGES/warzone2100_guide.mo
 share/locale/sk/LC_MESSAGES/warzone2100.mo
 share/locale/sl/LC_MESSAGES/warzone2100.mo
-share/locale/sr_CS/LC_MESSAGES/warzone2100.mo
-share/locale/sr_CS/LC_MESSAGES/warzone2100_guide.mo
+share/locale/sr_RS/LC_MESSAGES/warzone2100.mo
+share/locale/sr_RS/LC_MESSAGES/warzone2100_guide.mo
 share/locale/tr/LC_MESSAGES/warzone2100.mo
 share/locale/tr/LC_MESSAGES/warzone2100_guide.mo
 share/locale/tt_RU/LC_MESSAGES/warzone2100.mo

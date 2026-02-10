@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.27 2025/12/12 10:25:08 triaxx Exp $
+$NetBSD: distinfo,v 1.28 2026/02/10 13:30:17 triaxx Exp $
 
-BLAKE2s (wz2100_4.6.2/warzone2100_src.tar.xz) = 24e8bf077b31e0e6c0c1442d256677de5b9a23b7bca24ac9f21b3d217b5c085c
-SHA512 (wz2100_4.6.2/warzone2100_src.tar.xz) = 24cffab0ba0e381c9d3ecb51a83532985c89a36290bd9d5a0f8a4cc369213e7fafce830a576af7204425c9ba1aa46162f1b3f0507da8d2472718a1cb41ec2982
-Size (wz2100_4.6.2/warzone2100_src.tar.xz) = 491311612 bytes
+BLAKE2s (wz2100_4.6.3/warzone2100_src.tar.xz) = f3468d3d97424b11458aa924c198ff5999adf81de37418de0ecf8c08946f6be2
+SHA512 (wz2100_4.6.3/warzone2100_src.tar.xz) = 14b7e502dd2f5b5350d80e5210718aa9118859381e3f33e80ae0b83a05136103b480d1e510e56b0cfac20a56bc51801db98c25c15636d21f1c847a70a56bf8ed
+Size (wz2100_4.6.3/warzone2100_src.tar.xz) = 491362256 bytes
 SHA1 (patch-3rdparty_GameNetworkingSockets_CMakeLists.txt) = da224bbd0f33c1ad73b82b196f55fd14bac55bfc
 SHA1 (patch-3rdparty_GameNetworkingSockets_src_CMakeLists.txt) = c378a6e4c6ebb97b13cda2968e50363a4d2b12c4
 SHA1 (patch-3rdparty_GameNetworkingSockets_src_steamnetworkingsockets_clientlib_csteamnetworkingsockets.cpp) = 6eadc014b177b3b87785e47b7a8def4580e7e55b
