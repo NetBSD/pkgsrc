@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/03/31 15:19:29 nikita Exp $
+# $NetBSD: Makefile,v 1.4 2026/02/10 08:11:18 wiz Exp $
 
 DISTNAME=	stylua-0.17.1
 CATEGORIES=	devel
@@ -7,7 +7,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT=	StyLua
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/Morganz/StyLua/
+HOMEPAGE=	https://github.com/JohnnyMorganz/StyLua
 COMMENT=	Opinionated Lua code formatter
 LICENSE=	mpl-2.0
 
