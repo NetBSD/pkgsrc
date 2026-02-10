@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# $NetBSD: revbump.py,v 1.11 2025/04/24 14:13:31 wiz Exp $
+# $NetBSD: revbump.py,v 1.12 2026/02/10 04:01:06 gutteridge Exp $
 #
 # Copyright (c) 2023 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -190,6 +190,9 @@ parser.add_argument('-w', dest='wip', default=False,
 parser.add_argument('-x', dest='recursive', default=True,
                     help='do not recurse packages to bump', action='store_false')
 args = parser.parse_args()
+
+if args.pkgsrcdir[-1] == '/':
+    args.pkgsrcdir = args.pkgsrcdir[:-1]
 
 if not pathlib.Path(args.pkgsrcdir).exists() or \
    not pathlib.Path(args.pkgsrcdir + '/doc').exists() or \
