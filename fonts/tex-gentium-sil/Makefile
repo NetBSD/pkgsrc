@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/05/13 09:32:49 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/02/10 08:40:14 markd Exp $
 
 DISTNAME=	gentium-sil
-PKGNAME=	tex-${DISTNAME}-6.200
-TEXLIVE_REV=	73571
+PKGNAME=	tex-${DISTNAME}-7.000
+TEXLIVE_REV=	75783
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/gentium-sil
