@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:27:43 nia Exp $
+$NetBSD: distinfo,v 1.6 2026/02/10 08:29:04 markd Exp $
 
-BLAKE2s (tex-cmtiup-39728/cmtiup.tar.xz) = 7c7017e893280f139ae246fc9dfe1e2f1a4d80f956eb3afec161650a19de9d2d
-SHA512 (tex-cmtiup-39728/cmtiup.tar.xz) = 398f3669cfafbb955732dacab8f38acd786253ff2fe02f545b644aa3c5714c2ab0f417719eba27fe84c2532e67d9a11b205ab180996d16eed1ff8dbe43fd83f8
-Size (tex-cmtiup-39728/cmtiup.tar.xz) = 43600 bytes
+BLAKE2s (cmtiup.r77050.tar.xz) = bcc321fdb7a6f3c9401fd7873a219fe07b08ceaa561f8cc58472016f82e39a45
+SHA512 (cmtiup.r77050.tar.xz) = 7c02115bf5879368a11e2374e78a095616aecb0a5827da964fcb1d563d05efe8b5f92d17c82959abe42a5da02670f8c6076997177a98263ad9bb22f0843953e2
+Size (cmtiup.r77050.tar.xz) = 43624 bytes
