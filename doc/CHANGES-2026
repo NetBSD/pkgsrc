@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1024 2026/02/10 07:01:31 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1025 2026/02/10 07:53:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1326,3 +1326,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/luanti to 5.15.1 [ktnb 2026-02-10]
 	Removed devel/ruby-minitest [taca 2026-02-10]
 	Updated graphics/png to 1.6.55 [wiz 2026-02-10]
+	Updated math/nlopt to 2.10.1 [adam 2026-02-10]
+	Updated devel/py-fakefs to 6.1.1 [adam 2026-02-10]
