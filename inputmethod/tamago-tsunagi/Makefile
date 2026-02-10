@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/12/27 12:44:02 mef Exp $
+# $NetBSD: Makefile,v 1.5 2026/02/10 08:17:24 wiz Exp $
 
 DISTNAME=	tamago-tsunagi-5.0.7.1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_OSDN:=tamago-tsunagi/62701/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ja.osdn.net/projects/tamago-tsunagi/
+#HOMEPAGE=	https://ja.osdn.net/projects/tamago-tsunagi/
 COMMENT=	IM(egg) for (Free)Wnn, Canna, sj3 and Anthy
 LICENSE=	gnu-gpl-v2
 
