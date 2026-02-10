@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1038 2026/02/10 22:45:16 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1039 2026/02/10 22:45:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1377,3 +1377,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/jam to 2.5.2nb2 [jakllsch 2026-02-10]
 	Updated net/tnftp to 20260211 [wiz 2026-02-10]
 	Updated security/py-cryptography to 46.0.5 [wiz 2026-02-10]
+	Updated security/py-cryptography_vectors to 46.0.5 [wiz 2026-02-10]
