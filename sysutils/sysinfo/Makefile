@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2024/10/23 10:05:13 nia Exp $
+# $NetBSD: Makefile,v 1.19 2026/02/10 08:14:38 wiz Exp $
 
 DISTNAME=		sysinfo-3.5.1
 CATEGORIES=		sysutils
 #MASTER_SITES=		ftp://ftp.rge.com/pub/admin/sysinfo/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.magnicomp.com/
+HOMEPAGE=		https://www.magnicomp.com/
 COMMENT=		Displays system hardware and software information and configuration
 LICENSE=		sysinfo-license
 
