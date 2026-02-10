@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.66 2026/01/07 08:46:55 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.67 2026/02/10 08:13:03 wiz Exp $
 
 DISTNAME=	svnfs-0.4
 PKGREVISION=	60
 CATEGORIES=	filesystems
-MASTER_SITES=	http://www.jmadden.eu/wp-content/uploads/svnfs/
+#MASTER_SITES=	http://www.jmadden.eu/wp-content/uploads/svnfs/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.jmadden.eu/
+#HOMEPAGE=	http://www.jmadden.eu/
 COMMENT=	FUSE filesystem for accessing SVN repositories
 LICENSE=	gnu-gpl-v2
 
