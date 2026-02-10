@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2026/02/10 18:53:11 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/02/10 18:54:46 adam Exp $
 
 .include "Makefile.common"
 
@@ -29,14 +29,13 @@ PKGCONFIG_OVERRIDE+=	lib/jxl/libjxl.pc.in
 PKGCONFIG_OVERRIDE+=	lib/jxl/libjxl_cms.pc.in
 PKGCONFIG_OVERRIDE+=	lib/threads/libjxl_threads.pc.in
 
-.include "../../devel/cmake/build.mk"
 .include "../../archivers/brotli/buildlink3.mk"
-.include "../../graphics/libavif/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
-.include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/libavif/buildlink3.mk"
 .include "../../graphics/libhighway/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/openexr/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../mk/atomic64.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
