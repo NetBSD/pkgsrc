@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2026/01/22 09:58:27 wiz Exp $
+# $NetBSD: Makefile.common,v 1.25 2026/02/10 08:15:02 wiz Exp $
 # used by sysutils/syslog-ng/Makefile
 # used by sysutils/syslog-ng/module.mk
 
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syslog-ng/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.syslog-ng.com/
+HOMEPAGE=	https://www.syslog-ng.com/
 COMMENT?=	Highly portable log management solution
 LICENSE=	gnu-gpl-v2
 
