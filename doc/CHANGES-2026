@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1026 2026/02/10 08:33:55 jperkin Exp $
+$NetBSD: CHANGES-2026,v 1.1027 2026/02/10 08:54:50 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1329,3 +1329,19 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/nlopt to 2.10.1 [adam 2026-02-10]
 	Updated devel/py-fakefs to 6.1.1 [adam 2026-02-10]
 	Updated pkgtools/pkgin to 26.2.0 [jperkin 2026-02-10]
+	Updated fonts/tex-cmtiup to 2.2 [markd 2026-02-10]
+	Updated fonts/tex-cmtiup-doc to 2.2 [markd 2026-02-10]
+	Updated fonts/tex-dozenal to 7.2.75722 [markd 2026-02-10]
+	Updated fonts/tex-dozenal-doc to 7.2.75722 [markd 2026-02-10]
+	Updated fonts/tex-fontools to 2025.76266 [markd 2026-02-10]
+	Updated fonts/tex-fontools-doc to 2025.76266 [markd 2026-02-10]
+	Updated fonts/tex-gentium-sil to 7.000 [markd 2026-02-10]
+	Updated fonts/tex-gentium-sil-doc to 7.000 [markd 2026-02-10]
+	Updated fonts/tex-haranoaji to 20250811 [markd 2026-02-10]
+	Updated fonts/tex-haranoaji-doc to 20250811 [markd 2026-02-10]
+	Updated fonts/tex-haranoaji-extra to 20250811 [markd 2026-02-10]
+	Updated fonts/tex-haranoaji-extra-doc to 20250811 [markd 2026-02-10]
+	Updated fonts/tex-libertinus-type1 to 2025.76891 [markd 2026-02-10]
+	Updated fonts/tex-libertinus-type1-doc to 2025.76891 [markd 2026-02-10]
+	Updated fonts/tex-modes to 4.4 [markd 2026-02-10]
+	Updated fonts/tex-modes-doc to 4.4 [markd 2026-02-10]
