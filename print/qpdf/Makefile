@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2026/01/31 12:33:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.69 2026/02/10 13:39:36 mef Exp $
 
 DISTNAME=	qpdf-12.3.2
 CATEGORIES=	print
@@ -9,7 +9,13 @@ HOMEPAGE=	https://qpdf.sourceforge.io/
 COMMENT=	Structural, content-preserving transformations on PDF files
 LICENSE=	apache-2.0
 
-USE_CXX_FEATURES+=	c++17
+# fix build on NetBSD/9.4
+# -- Performing Test ATOMIC_WORKED0
+# CMake Error in /tmp/print/qpdf/work/qpdf-12.3.2/cmake-pkgsrc-build/CMakeFiles/CMakeScratch/TryCompile-g61khV/CMakeLists.txt:
+#   Target "cmTC_f6cd8" requires the language dialect "CXX20" .  But the
+#   current compiler "GNU" does not support this, or CMake does not know the
+
+USE_CXX_FEATURES+=	c++20
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl:test pkg-config
 PKGCONFIG_OVERRIDE+=	libqpdf.pc.in
