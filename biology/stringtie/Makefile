@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2025/03/06 01:19:05 bacon Exp $
+# $NetBSD: Makefile,v 1.3 2026/02/10 08:10:27 wiz Exp $
 
 DISTNAME=	stringtie-2.1.1
 CATEGORIES=	biology
-MASTER_SITES=	http://ccb.jhu.edu/software/stringtie/dl/
+MASTER_SITES=	https://ccb.jhu.edu/software/stringtie/dl/
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://www.ccb.jhu.edu/software/stringtie/
+HOMEPAGE=	https://www.ccb.jhu.edu/software/stringtie/
 COMMENT=	Transcript assembly and quantification for RNA-seq
 LICENSE=	mit
 
