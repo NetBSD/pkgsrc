@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.124 2026/02/02 23:29:34 gdt Exp $
+# $NetBSD: Makefile,v 1.125 2026/02/10 19:12:22 gdt Exp $
 
-DISTNAME=	matrix-synapse-1.146.0
-PKGREVISION=	1
+DISTNAME=	matrix-synapse-1.147.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=element-hq/}
 GITHUB_PROJECT=	synapse
@@ -30,6 +29,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1.0:../../devel/py-maturin
 
 # Dependencies as expressed in pyproject.toml
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3.0.0:../../textproc/py-jsonschema
+# \todo Grasp/fix rpds.
 .if ${PYTHON_VERSION} >= 314
 DEPENDS+=	${PYPKGPREFIX}-rpds-py>=0.30.0:../../devel/py-rpds-py
 .endif
@@ -38,44 +38,45 @@ DEPENDS+=	${PYPKGPREFIX}-unpaddedbase64>=2.1.0:../../devel/py-unpaddedbase64
 DEPENDS+=	${PYPKGPREFIX}-canonicaljson>=2.0.0:../../devel/py-canonicaljson
 DEPENDS+=	${PYPKGPREFIX}-signedjson>=1.1.0:../../security/py-signedjson
 DEPENDS+=	${PYPKGPREFIX}-service_identity>=18.1.0:../../security/py-service_identity
-DEPENDS+=	${PYPKGPREFIX}-twisted>=18.9.0:../../net/py-twisted
-DEPENDS+=	${PYPKGPREFIX}-treq>=15.1:../../devel/py-treq
-DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=16.0.0:../../security/py-OpenSSL
-DEPENDS+=	${PYPKGPREFIX}-yaml>=3.13:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-twisted>=21.2.0:../../net/py-twisted
+DEPENDS+=	${PYPKGPREFIX}-treq>=21.5.0:../../devel/py-treq
+DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=16.2.0:../../security/py-OpenSSL
+DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.9:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-asn1-modules>=0.0.7:../../security/py-asn1-modules
 DEPENDS+=	${PYPKGPREFIX}-bcrypt>=3.1.7:../../security/py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=10.0.1:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=1.5.2:../../devel/py-sortedcontainers
+DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.0.5:../../devel/py-sortedcontainers
 DEPENDS+=	${PYPKGPREFIX}-macaroons>=0.13.0:../../devel/py-macaroons
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.2:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-phonenumbers>=8.2.0:../../textproc/py-phonenumbers
-DEPENDS+=	${PYPKGPREFIX}-prometheus_client>=0.4.0:../../net/py-prometheus_client
+DEPENDS+=	${PYPKGPREFIX}-prometheus_client>=0.6.0:../../net/py-prometheus_client
+# To avoid the !=21.1.0, we just require 21.1.1 or newer.
 DEPENDS+=	${PYPKGPREFIX}-attrs>=21.1.1:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-netaddr>=0.7.18:../../net/py-netaddr
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-bleach>=1.4.3:../../www/py-bleach
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-bleach>=3.2.0:../../www/py-bleach
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4..14.1:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=3.4.7:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-ijson>=3.1.4:../../devel/py-ijson
 DEPENDS+=	${PYPKGPREFIX}-matrix-common>=1.3.0:../../chat/py-matrix-common
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
+# If py<3.14, only need 2.8, but leave that on the table to simplify.
 DEPENDS+=	${PYPKGPREFIX}-pydantic>=2.12:../../devel/py-pydantic
 # Upstream documents that this is needed for poetry, but the explanation is highly confused,
 # and, experimentally, it is needed at runtime, as of 1.146.0
-DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.3:../../devel/py-setuptools-rust
+#DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.3:../../devel/py-setuptools-rust
 DEPENDS+=	${PYPKGPREFIX}-python-multipart>=0.0.9:../../www/py-python-multipart
 
 # Upstream does NOT document a dependency on pyrsistent, but synapse
 # crashes if it is not present, because it ends up in
 # /usr/pkg/lib/python3.13/site-packages/matrix_synapse-1.146.0.dist-info/METADATA
 # The version is taken from METADATA.  However, I can find no actual usage.
-DEPENDS+=	${PYPKGPREFIX}-pyrsistent>=0.18.0:../../devel/py-pyrsistent
-
+#
 # A separate issue is that upstream claims pyrsistent is required via
 # jsonschema, but the pkgsrc jsonschema package and its pyproject.toml
 # do not reference pyrsistent at all.
-# DEPENDS+= ${PYPKGPREFIX}-pyrsistent>=0.20.0:../../devel/py-pyrsistent
+DEPENDS+=	${PYPKGPREFIX}-pyrsistent>=0.18.0:../../devel/py-pyrsistent
 
 # Upstream lists "transitive dependency constraints". The theory is
 # that they are required by something that synapse depends on, and
@@ -117,7 +118,7 @@ DEPENDS+=	${PYPKGPREFIX}-authlib>=0.15.1:../../security/py-authlib
 # systemd: never
 
 # url-preview: always on
-DEPENDS+=	${PYPKGPREFIX}-lxml>=4.2.0:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-lxml>=4.6.3:../../textproc/py-lxml
 
 # sentry: never
 

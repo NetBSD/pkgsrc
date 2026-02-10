@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.34 2026/02/02 21:07:36 gdt Exp $
+# $NetBSD: cargo-depends.mk,v 1.35 2026/02/10 19:12:22 gdt Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.100
@@ -88,13 +88,13 @@ CARGO_CRATE_DEPENDS+=	portable-atomic-1.11.1
 CARGO_CRATE_DEPENDS+=	potential_utf-0.1.2
 CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.21
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.95
-CARGO_CRATE_DEPENDS+=	pyo3-0.26.0
-CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.26.0
-CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.26.0
+CARGO_CRATE_DEPENDS+=	pyo3-0.27.2
+CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.27.2
+CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.27.2
 CARGO_CRATE_DEPENDS+=	pyo3-log-0.13.2
-CARGO_CRATE_DEPENDS+=	pyo3-macros-0.26.0
-CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.26.0
-CARGO_CRATE_DEPENDS+=	pythonize-0.26.0
+CARGO_CRATE_DEPENDS+=	pyo3-macros-0.27.2
+CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.27.2
+CARGO_CRATE_DEPENDS+=	pythonize-0.27.0
 CARGO_CRATE_DEPENDS+=	quinn-0.11.8
 CARGO_CRATE_DEPENDS+=	quinn-proto-0.11.12
 CARGO_CRATE_DEPENDS+=	quinn-udp-0.5.13
@@ -121,7 +121,7 @@ CARGO_CRATE_DEPENDS+=	security-framework-sys-2.14.0
 CARGO_CRATE_DEPENDS+=	serde-1.0.228
 CARGO_CRATE_DEPENDS+=	serde_core-1.0.228
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.228
-CARGO_CRATE_DEPENDS+=	serde_json-1.0.145
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.149
 CARGO_CRATE_DEPENDS+=	serde_urlencoded-0.7.1
 CARGO_CRATE_DEPENDS+=	sha1-0.10.6
 CARGO_CRATE_DEPENDS+=	sha2-0.10.9
@@ -196,3 +196,4 @@ CARGO_CRATE_DEPENDS+=	zeroize-1.8.1
 CARGO_CRATE_DEPENDS+=	zerotrie-0.2.2
 CARGO_CRATE_DEPENDS+=	zerovec-0.11.2
 CARGO_CRATE_DEPENDS+=	zerovec-derive-0.11.1
+CARGO_CRATE_DEPENDS+=	zmij-1.0.19
