@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1034 2026/02/10 19:12:30 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.1035 2026/02/10 19:35:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1371,3 +1371,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/libjxl to 0.11.2 [adam 2026-02-10]
 	Updated graphics/gdk-pixbuf2-jxl to 0.11.2 [adam 2026-02-10]
 	Updated chat/matrix-synapse to 1.147.0 [gdt 2026-02-10]
+	Updated devel/py-test-codspeed to 4.3.0 [adam 2026-02-10]
+	Updated net/py-pyftpdlib to 2.2.0 [adam 2026-02-10]
+	Updated math/py-gmpy2 to 2.3.0 [adam 2026-02-10]
