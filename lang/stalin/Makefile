@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2022/08/11 05:08:55 gutteridge Exp $
+# $NetBSD: Makefile,v 1.44 2026/02/10 08:09:08 wiz Exp $
 
 DISTNAME=		stalin-0.9
 PKGREVISION=		10
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://ftp.ecn.purdue.edu/qobi/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://cobweb.ecn.purdue.edu/~qobi/software.html
+#HOMEPAGE=		http://cobweb.ecn.purdue.edu/~qobi/software.html
 #HOMEPAGE+=		https://github.com/barak/stalin
 COMMENT=		Aggressively optimizing Scheme compiler
 
