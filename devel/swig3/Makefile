@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/06/28 11:33:44 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/02/10 08:14:13 wiz Exp $
 
 DISTNAME=	swig-3.0.12
 PKGNAME=	${DISTNAME:S/swig/swig3/}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=swig/}
 
 MAINTAINER=	prlw1@cam.ac.uk
-HOMEPAGE=	http://www.swig.org/
+HOMEPAGE=	https://www.swig.org/
 COMMENT=	Simplified Wrapper and Interface Generator (version 3)
 LICENSE=	gnu-gpl-v3
 
