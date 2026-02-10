@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1030 2026/02/10 11:25:29 sborrill Exp $
+$NetBSD: CHANGES-2026,v 1.1031 2026/02/10 17:49:48 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1365,3 +1365,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-certbot-dns-sakuracloud to 5.3.1 [adam 2026-02-10]
 	Updated security/py-certbot-nginx to 5.3.1 [adam 2026-02-10]
 	Updated sysutils/gam to 7.33.02 [sborrill 2026-02-10]
+	Updated geography/gdal-lib to 3.12.2 [gdt 2026-02-10]
+	Updated geography/py-gdal to 3.12.2 [gdt 2026-02-10]
