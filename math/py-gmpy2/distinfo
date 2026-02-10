@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2025/11/27 09:56:06 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/02/10 19:35:09 adam Exp $
 
-BLAKE2s (gmpy2-2.2.2.tar.gz) = 2596b1c4acd8f3be2669a1bb4d01f0984491956ccdcba16bb2904102fa9994aa
-SHA512 (gmpy2-2.2.2.tar.gz) = e2bf224645f06099acffcd75539b22739a3a832fb9c080075893a669f938e959d00341293ecc06c4aa4a001daed65901da4a2f0329981270424458e4e95d0a29
-Size (gmpy2-2.2.2.tar.gz) = 267106 bytes
+BLAKE2s (gmpy2-2.3.0.tar.gz) = 61160bd4ded893efc22c3d7700e1a2157d4af3d2c873b16a7ba73d9284afb2e0
+SHA512 (gmpy2-2.3.0.tar.gz) = 2e7284859222c5bfaa5b16e0d18abffa2dfa1efbeb66465f2770497be1676191e424a016a5543c5585632d439d7921e9a98be4a339c88dbfc04e560fbbb6812d
+Size (gmpy2-2.3.0.tar.gz) = 302252 bytes
