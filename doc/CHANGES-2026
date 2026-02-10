@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1025 2026/02/10 07:53:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1026 2026/02/10 08:33:55 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1328,3 +1328,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/png to 1.6.55 [wiz 2026-02-10]
 	Updated math/nlopt to 2.10.1 [adam 2026-02-10]
 	Updated devel/py-fakefs to 6.1.1 [adam 2026-02-10]
+	Updated pkgtools/pkgin to 26.2.0 [jperkin 2026-02-10]
