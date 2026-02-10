@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2025/11/08 00:52:41 gdt Exp $
+@comment $NetBSD: PLIST,v 1.33 2026/02/10 17:49:27 gdt Exp $
 bin/gdal
 bin/gdal-config
 bin/gdal_contour
@@ -135,7 +135,7 @@ lib/cmake/gdal/GDALConfigVersion.cmake
 lib/gdalplugins/drivers.ini
 lib/libgdal.so
 lib/libgdal.so.38
-lib/libgdal.so.38.3.12.0
+lib/libgdal.so.38.3.12.2
 lib/pkgconfig/gdal.pc
 man/man1/gdal-config.1
 man/man1/gdal-convert.1
@@ -202,6 +202,7 @@ man/man1/gdal-vector-check-coverage.1
 man/man1/gdal-vector-check-geometry.1
 man/man1/gdal-vector-clean-coverage.1
 man/man1/gdal-vector-clip.1
+man/man1/gdal-vector-concat.1
 man/man1/gdal-vector-convert.1
 man/man1/gdal-vector-edit.1
 man/man1/gdal-vector-explode-collections.1
@@ -223,7 +224,6 @@ man/man1/gdal-vector-simplify.1
 man/man1/gdal-vector-sql.1
 man/man1/gdal-vector-swap-xy.1
 man/man1/gdal-vector.1
-man/man1/gdal-vector_concat.1
 man/man1/gdal-vsi-copy.1
 man/man1/gdal-vsi-delete.1
 man/man1/gdal-vsi-list.1
