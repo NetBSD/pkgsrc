@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2026/01/31 15:23:40 mef Exp $
+# $NetBSD: options.mk,v 1.12 2026/02/10 02:14:16 gutteridge Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -43,8 +43,8 @@ CFLAGS+=	-DUSE_WHOSON
 ### Support SSL/TLS connections.
 ###
 .if !empty(PKG_OPTIONS:Mssl)
-.  include "../../security/openssl/buildlink3.mk"
 BUILDLINK_API_DEPENDS.openssl+=        openssl>=3.0
+.  include "../../security/openssl/buildlink3.mk"
 .  if !empty(PKG_OPTIONS:Mimapuw-cleartextpwd)
 MAKE_FLAGS+=	SSLTYPE=unix	# plaintext auth
 .  else
