@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/05/13 09:32:50 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/02/10 08:40:15 markd Exp $
 
-BLAKE2s (gentium-sil.doc.r73571.tar.xz) = 8d08fabd271a5c1023d3d975b479442056ef30c68c75d021f3610ce06b38e384
-SHA512 (gentium-sil.doc.r73571.tar.xz) = 65fcd212a555f3ef50d9253b8490c6da64f5c01b0ad50be8cb38aed295d63d76102a3af675d3729232d8224c223088eb15609af2dac177c26469c7fbd7cdae9d
-Size (gentium-sil.doc.r73571.tar.xz) = 6419864 bytes
+BLAKE2s (gentium-sil.doc.r75783.tar.xz) = f743ca6194abe12df573aae75e509d01b95daa8af1095dec3312994db30026c4
+SHA512 (gentium-sil.doc.r75783.tar.xz) = 60a0fdf0d88325d1fd2aa45e36f20afb809af608cc346e304d92e62c720ac4581e876cf73efac4ade0f38deb73d5a5fb3cdfd519bced383a89af5c975ffbe371
+Size (gentium-sil.doc.r75783.tar.xz) = 763304 bytes
