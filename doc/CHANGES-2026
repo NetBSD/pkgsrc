@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1023 2026/02/10 04:38:42 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1024 2026/02/10 07:01:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1325,3 +1325,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/xournalpp to 1.3.2 [yhardy 2026-02-09]
 	Updated games/luanti to 5.15.1 [ktnb 2026-02-10]
 	Removed devel/ruby-minitest [taca 2026-02-10]
+	Updated graphics/png to 1.6.55 [wiz 2026-02-10]
