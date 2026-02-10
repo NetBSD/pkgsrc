@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2025/11/17 11:00:36 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/02/10 20:17:59 jakllsch Exp $
 #
 
 DISTNAME=	ft${PKGNAME_NOREV}
 PKGNAME=	jam-2.5.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/}
 #MASTER_SITES=	ftp://ftp.perforce.com/pub/jam/

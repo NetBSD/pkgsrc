@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:15:06 nia Exp $
+$NetBSD: distinfo,v 1.15 2026/02/10 20:17:59 jakllsch Exp $
 
 BLAKE2s (ftjam-2.5.2.tar.bz2) = 1e100fade3e02bc019159346fa48aa168d57594dc4d3736db99953c978d1eec2
 SHA512 (ftjam-2.5.2.tar.bz2) = 0754111d22e27f66800c584b8c891819fc5d089713b9c73d7e51f3e5231f322f5f52a3176fae1d13e4e059aed783faaa4f0cd048123cd1f622fe8554335e7e7a
 Size (ftjam-2.5.2.tar.bz2) = 196631 bytes
-SHA1 (patch-aa) = 64a149995f63cd3d3648f4597769e2ec57b0b0ba
-SHA1 (patch-ab) = 6f6fce24c46d799d7ef9885271960c3d2038f93d
-SHA1 (patch-jambase.c) = 906d3589718e4bf87a0f1740d876c2ddc7a7f90d
-SHA1 (patch-rules.h) = aca330528c722cce5fbf0587fd8c34c457dd8c62
+SHA1 (patch-aa) = 97fecb37e5f44bc184c3560f218faa9126ca3d86
+SHA1 (patch-ab) = cb3836b14500f155cc2977b7c9b934e946027078
+SHA1 (patch-jambase.c) = d98474a6f9659be0bf7bf7fd9b85e61c7d3710af
+SHA1 (patch-mkjambase.c) = 9fffeb5a0500aaa40e98cc126fc745c9468235a4
+SHA1 (patch-rules.h) = b293832ebb648026238641f037ee572b0e880b6f
