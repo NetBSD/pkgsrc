@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2014/02/16 15:45:52 wiedi Exp $
-#
+# $NetBSD: Makefile,v 1.11 2026/02/10 08:07:50 wiz Exp $
 
 DISTNAME=		sredird-2.0.0
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.pcmicro.com/sredird/
+#MASTER_SITES=		http://www.pcmicro.com/sredird/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.pcmicro.com/sredird/
+#HOMEPAGE=		http://www.pcmicro.com/sredird/
 COMMENT=		RFC2217 compliant serial port redirector
 
 MAKE_FLAGS+=		CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q}
