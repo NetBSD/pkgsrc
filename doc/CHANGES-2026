@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1027 2026/02/10 08:54:50 markd Exp $
+$NetBSD: CHANGES-2026,v 1.1028 2026/02/10 09:04:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1345,3 +1345,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated fonts/tex-libertinus-type1-doc to 2025.76891 [markd 2026-02-10]
 	Updated fonts/tex-modes to 4.4 [markd 2026-02-10]
 	Updated fonts/tex-modes-doc to 4.4 [markd 2026-02-10]
+	Updated graphics/openimageio to 3.1.10.0 [adam 2026-02-10]
+	Updated devel/py-coverage to 7.13.4 [adam 2026-02-10]
