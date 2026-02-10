@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1031 2026/02/10 17:49:48 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.1032 2026/02/10 18:20:23 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1367,3 +1367,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/gam to 7.33.02 [sborrill 2026-02-10]
 	Updated geography/gdal-lib to 3.12.2 [gdt 2026-02-10]
 	Updated geography/py-gdal to 3.12.2 [gdt 2026-02-10]
+	Updated databases/postgresql-postgis2 to 3.6.2 [gdt 2026-02-10]
