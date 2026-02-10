@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/04/29 09:27:39 nia Exp $
+# $NetBSD: Makefile,v 1.11 2026/02/10 08:08:31 wiz Exp $
 
 DISTNAME=	sslsplit-0.5.5
 PKGREVISION=	3
@@ -7,7 +7,7 @@ MASTER_SITES=	http://mirror.roe.ch/rel/sslsplit/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.roe.ch/sslsplit/
+HOMEPAGE=	https://www.roe.ch/SSLsplit
 COMMENT=	Transparent and scalable SSL/TLS interception
 LICENSE=	2-clause-bsd
 
