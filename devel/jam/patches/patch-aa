@@ -1,10 +1,21 @@
-$NetBSD: patch-aa,v 1.5 2012/12/26 18:51:47 ryoon Exp $
+$NetBSD: patch-aa,v 1.6 2026/02/10 20:17:59 jakllsch Exp $
 
 Beware of DOS linebreaks.
 
+Add missing #includes
+
 --- jam.h.orig	2006-06-05 10:52:05.000000000 +0000
 +++ jam.h
-@@ -379,19 +379,8 @@
+@@ -363,6 +363,8 @@
+ 
+ # include <sys/types.h>
+ # include <sys/stat.h>
++# include <sys/wait.h>
++# include <unistd.h>
+ 
+ # ifndef OS_MPEIX
+ # include <sys/file.h>
+@@ -379,19 +381,8 @@
  # include <memory.h>
  # endif
  

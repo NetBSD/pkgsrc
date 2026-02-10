@@ -1,4 +1,4 @@
-$NetBSD: patch-rules.h,v 1.1 2020/03/26 21:19:58 rillig Exp $
+$NetBSD: patch-rules.h,v 1.2 2026/02/10 20:17:59 jakllsch Exp $
 
 make.c: In function 'make0':
 make.c:249:41: error: array subscript has type 'char' [-Werror=char-subscripts]
