@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:27:48 nia Exp $
+$NetBSD: distinfo,v 1.9 2026/02/10 08:32:29 markd Exp $
 
-BLAKE2s (tex-dozenal-47680/dozenal.doc.tar.xz) = 0db57b95398c7dfa230701100836b10ac58c1dcb375072e0d48249444dc834ac
-SHA512 (tex-dozenal-47680/dozenal.doc.tar.xz) = f31be9e8c280e8c518735abf46908e1347d07cc815d42a6156040ff014384a6df77c918f33ebfb81be0b9a8454d34975331ca0781679d423b348cfecd01c1fd6
-Size (tex-dozenal-47680/dozenal.doc.tar.xz) = 311060 bytes
+BLAKE2s (dozenal.doc.r75722.tar.xz) = 9a0aadaec06ea54c2be170484f1425c012f9f1af8b553871849516eb79170c21
+SHA512 (dozenal.doc.r75722.tar.xz) = 19fd78cd903530678d97e55652666b4e644a7fdb89eecda71557cd2528dcdceeca4f30e8c70c86431c1a67887bd999282effe27e93be41d8257d6e2b5f94324e
+Size (dozenal.doc.r75722.tar.xz) = 311064 bytes
