@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2026/01/12 06:50:43 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/02/10 07:27:52 adam Exp $
 
-DISTNAME=	nlopt-2.10.0
+DISTNAME=	nlopt-2.10.1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stevengj/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
