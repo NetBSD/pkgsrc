@@ -1,12 +1,12 @@
-$NetBSD: patch-src_client_game.cpp,v 1.1 2025/05/29 17:36:03 ktnb Exp $
+$NetBSD: patch-src_client_game.cpp,v 1.2 2026/02/10 02:06:36 ktnb Exp $
 
 Temporary fix for bug with SDL.
 https://github.com/luanti-org/luanti/issues/16199
 
---- src/client/game.cpp.orig	2025-05-29 12:58:05.749735811 +0000
+--- src/client/game.cpp.orig	2026-02-08 11:42:38.000000000 +0000
 +++ src/client/game.cpp
-@@ -2432,8 +2432,8 @@ void Game::updateCameraDirection(CameraO
- 	Since Minetest has its own code to synthesize mouse events from touch events,
+@@ -1927,8 +1927,8 @@ void Game::updateCameraDirection(CameraO
+ 	Since we have our own code to synthesize mouse events from touch events,
  	this results in duplicated input. To avoid that, we don't enable relative
  	mouse mode if we're in touchscreen mode. */
 -	if (cur_control)
