@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.321 2026/02/06 10:04:59 wiz Exp $
+# $NetBSD: Makefile,v 1.322 2026/02/10 19:00:37 bouyer Exp $
 
 DISTNAME=	inkscape-1.4.3
 PKGREVISION=	1
@@ -66,6 +66,12 @@ SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Replacing xdg search path.
 SUBST_FILES.xdg+=	src/inkscape-main.cpp
 SUBST_SED.xdg=		-e 's,xdg_data_dirs = "/usr/local/share/:/usr/share/",xdg_data_dirs = "'${PREFIX}'/share/",'
+
+SUBST_CLASSES+=		unbl3
+SUBST_STAGE.unbl3=	post-build
+SUBST_FILES.unbl3=	${CMAKE_BUILD_DIR}/src/3rdparty/2geom/CMakeFiles/Export/*/*.cmake
+SUBST_SED.unbl3=	-e 's,${BUILDLINK_DIR},${PREFIX},g'
+SUBST_MESSAGE.unbl3=	Fix paths to buildlink directories in installed files.
 
 REPLACE_PYTHON+=	share/extensions/*.py
 

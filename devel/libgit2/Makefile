@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2026/02/06 10:04:34 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2026/02/10 19:00:37 bouyer Exp $
 
 DISTNAME=	libgit2-1.9.2
 PKGREVISION=	2
@@ -25,6 +25,12 @@ PKGCONFIG_OVERRIDE+=		${CMAKE_BUILD_DIR}/libgit2.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
+
+SUBST_CLASSES+=		unbl3
+SUBST_STAGE.unbl3=	post-build
+SUBST_FILES.unbl3=	${CMAKE_BUILD_DIR}/src/libgit2/CMakeFiles/Export/*/*.cmake
+SUBST_SED.unbl3=	-e 's,${BUILDLINK_DIR},${PREFIX},g'
+SUBST_MESSAGE.unbl3=	Fix paths to buildlink directories in installed files.
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
