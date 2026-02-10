@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.4 2025/08/17 18:27:46 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2026/02/10 18:53:11 adam Exp $
 # used by graphics/gdk-pixbuf2-jxl/Makefile
 
-DISTNAME=	libjxl-0.11.1
+DISTNAME=	libjxl-0.11.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libjxl/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,3 +12,5 @@ LICENSE=	modified-bsd
 
 PATCHDIR?=	${.CURDIR}/../../graphics/libjxl/patches
 DISTINFO_FILE?=	${.CURDIR}/../../graphics/libjxl/distinfo
+
+.include "../../devel/cmake/build.mk"
