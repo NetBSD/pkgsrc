@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.102 2026/02/06 10:04:53 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2026/02/10 13:30:17 triaxx Exp $
 
 DISTNAME=	warzone2100_src
-PKGNAME=	warzone2100-4.6.2
-PKGREVISION=	3
+PKGNAME=	warzone2100-4.6.3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Warzone2100/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -89,7 +88,6 @@ BUILDLINK_API_DEPENDS.glew+=		glew>=1.5.2
 .include "../../net/miniupnpc/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libsodium+=	libsodium>=1.0.13
 .include "../../security/libsodium/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
