@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1035 2026/02/10 19:35:33 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1036 2026/02/10 20:18:14 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1374,3 +1374,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-test-codspeed to 4.3.0 [adam 2026-02-10]
 	Updated net/py-pyftpdlib to 2.2.0 [adam 2026-02-10]
 	Updated math/py-gmpy2 to 2.3.0 [adam 2026-02-10]
+	Updated devel/jam to 2.5.2nb2 [jakllsch 2026-02-10]
