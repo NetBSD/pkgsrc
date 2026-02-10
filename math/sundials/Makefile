@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2025/08/19 14:03:02 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/02/10 08:12:00 wiz Exp $
 
 DISTNAME=	sundials-4.1.0
 PKGREVISION=	2
 CATEGORIES=	math
-MASTER_SITES=	https://computation.llnl.gov/projects/sundials/download/
+#MASTER_SITES=	https://computation.llnl.gov/projects/sundials/download/
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://computation.llnl.gov/projects/sundials
+#HOMEPAGE=	https://computation.llnl.gov/projects/sundials
 COMMENT=	Suite of nonlinear and differential/algrbraic equation solvers
 LICENSE=	modified-bsd
 
