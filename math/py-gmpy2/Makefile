@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2025/11/27 09:56:06 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/02/10 19:35:09 adam Exp $
 
-DISTNAME=	gmpy2-2.2.2
+DISTNAME=	gmpy2-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/a/alpha/}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gmpy2/}
