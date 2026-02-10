@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2026/02/09 21:50:54 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2026/02/10 08:20:51 adam Exp $
 
 BOOST_PACKAGE=		headers
 BOOST_COMMENT=		(build-time headers)
@@ -10,7 +10,7 @@ PKGREVISION=		1
 
 BJAM_ARGS+=		--with-headers
 
-INSTALLATION_DIRS+=	include/boost
+INSTALLATION_DIRS+=	include/boost lib/cmake
 
 CONFLICTS+=	boost-libs<=1.90.0nb2
 
