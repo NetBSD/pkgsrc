@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2022/06/28 11:33:44 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2026/02/10 08:14:13 wiz Exp $
 
 DISTNAME=	swig-1.3.38
 PKGREVISION=	4
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=swig/}
 #
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.swig.org/
+HOMEPAGE=	https://www.swig.org/
 COMMENT=	Simplified Wrapper and Interface Generator (version 1)
 LICENSE=	2-clause-bsd
 
