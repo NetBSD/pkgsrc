@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2021/10/20 18:31:49 tm Exp $
-#
+# $NetBSD: Makefile,v 1.13 2026/02/10 08:16:46 wiz Exp $
 
 DISTNAME=	t-prot-3.4
 CATEGORIES=	mail
-MASTER_SITES=	http://www.escape.de/users/tolot/mutt/t-prot/downloads/
+#MASTER_SITES=	http://www.escape.de/users/tolot/mutt/t-prot/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.escape.de/users/tolot/mutt/t-prot/
+#HOMEPAGE=	http://www.escape.de/users/tolot/mutt/t-prot/
 COMMENT=	TOFU enhancement to mutt for condensing quoted text
 
 DEPENDS+=	p5-Getopt-Mixed>=1.10:../../devel/p5-Getopt-Mixed
