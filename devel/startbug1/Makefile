@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2026/01/07 08:46:46 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/02/10 08:09:33 wiz Exp $
 
 DISTNAME=	starbug1-1.6.01
 PKGREVISION=	36
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_OSDN:=starbug1/57514/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://starbug1.com/
+HOMEPAGE=	https://starbug1.com/
 COMMENT=	Light weight Bug Tracking System written in C and Perl
 LICENSE=	gnu-gpl-v2
 
