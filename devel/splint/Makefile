@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/01/24 09:20:37 riastradh Exp $
-#
+# $NetBSD: Makefile,v 1.26 2026/02/10 08:04:57 wiz Exp $
 
 DISTNAME=	splint-3.1.2.src
 PKGNAME=	${DISTNAME:S/.src$//}
@@ -9,7 +8,7 @@ MASTER_SITES=	https://splint.org/downloads/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://lclint.cs.virginia.edu/
+HOMEPAGE=	https://splint.org/
 COMMENT=	Statically check C programs
 LICENSE=	gnu-gpl-v2
 
