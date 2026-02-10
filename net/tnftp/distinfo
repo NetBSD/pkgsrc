@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/05/17 10:20:59 wiz Exp $
+$NetBSD: distinfo,v 1.5 2026/02/10 22:36:54 wiz Exp $
 
-BLAKE2s (tnftp-20230507.tar.gz) = 24e480f89e803ddf1da3d342540b718ed9888d74fa3ea8bc7f0972cbdbe18269
-SHA512 (tnftp-20230507.tar.gz) = c6539902b709d6b35a8754dd552ca71926fd09ad2a0244363005607089bea3947a6176e61a1dc9a232e8af415cfebed7decd9653b6f6bc38385a05ca86c85b1a
-Size (tnftp-20230507.tar.gz) = 702357 bytes
+BLAKE2s (tnftp-20260211.tar.gz) = a9fada08a1f7c0fc0ff0c1891f158f0e80a14ecf5cc16a17bbd6a9db7f7616a1
+SHA512 (tnftp-20260211.tar.gz) = 67c4a49267dd4b1a639105714cd2bf2d4cb3a67b1b3a7ccf95065006f28b5c8dffc05bfb18ccf9a71dbc945e45f860b7c9f777918df3878501e65aba8afb974e
+Size (tnftp-20260211.tar.gz) = 703535 bytes

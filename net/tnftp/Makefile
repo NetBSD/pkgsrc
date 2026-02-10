@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2023/10/24 22:10:35 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/02/10 22:36:54 wiz Exp $
 
-DISTNAME=		tnftp-20230507
-PKGREVISION=		1
+DISTNAME=		tnftp-20260211
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/tnftp/
+MASTER_SITES=		http://ftp.NetBSD.org/pub/NetBSD/misc/tnftp/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		The enhanced FTP client in NetBSD
