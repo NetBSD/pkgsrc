@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2026/02/03 15:32:34 taca Exp $
+# $NetBSD: Makefile,v 1.19 2026/02/11 08:44:48 taca Exp $
 
-DISTNAME=	net-imap-0.6.2
+DISTNAME=	net-imap-0.5.13
 CATEGORIES=	net mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,7 +10,7 @@ LICENSE=	2-clause-bsd OR ruby-license
 
 USE_LANGUAGES=	# none
 
-# Ruby 4.0.1 has the same version as bundled gem.
+# This package is for ruby-redmine60 and ruby-redmine61.
 RUBY_VERSIONS_ACCEPTED=	32 33 34
 
 .include "../../lang/ruby/gem.mk"
