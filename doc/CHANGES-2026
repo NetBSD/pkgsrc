@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1068 2026/02/11 13:35:05 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1069 2026/02/11 14:36:26 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1409,7 +1409,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/typo3-13 to 13.4.25 [taca 2026-02-11]
 	Updated news/tin to 2.6.5 [micha 2026-02-11]
 	Updated net/py-pypiserver to 2.4.1 [adam 2026-02-11]
-	Updated xlockmore to 5.88 [micha 2026-02-11]
-	Updated xlockmore-lite to 5.88 [micha 2026-02-11]
+	Updated x11/xlockmore to 5.88 [micha 2026-02-11]
+	Updated x11/xlockmore-lite to 5.88 [micha 2026-02-11]
 	Updated math/py-arviz to 0.23.4 [adam 2026-02-11]
 	Updated databases/py-alembic to 1.18.4 [adam 2026-02-11]
