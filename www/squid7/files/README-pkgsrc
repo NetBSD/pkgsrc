@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2025/07/16 10:58:02 sborrill Exp $
+$NetBSD: README-pkgsrc,v 1.1 2026/02/11 09:18:49 taca Exp $
 
-You DO need running nameservice to start and run ${PKGNAME}.
+You DO need running nameservice to start and run @PKGNAME@.
 
 Please note that to use the diskd storage method, you'll likely have to
 change SYSV-IPC parameters in the kernel config file (see
