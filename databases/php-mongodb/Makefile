@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2026/01/20 07:27:31 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/02/11 08:24:49 taca Exp $
 
 MODNAME=	mongodb
-PECL_VERSION=	1.21.0
+PECL_VERSION=	1.21.5
 CATEGORIES+=	databases
 
 MAINTAINER=	bartosz.kuzma@gmail.com
@@ -9,7 +9,7 @@ HOMEPAGE=	https://www.mongodb.com/docs/php-library/current/
 COMMENT=	MongoDB database driver
 LICENSE=	apache-2.0
 
-PHP_VERSIONS_ACCEPTED=	82 83 84
+PHP_VERSIONS_ACCEPTED=	82 83 84 85
 
 USE_TOOLS+=		pkg-config gmake
 # To use system mongodb library, we require libmongocrypt package.
