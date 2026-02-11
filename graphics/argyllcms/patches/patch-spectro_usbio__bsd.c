@@ -1,8 +1,8 @@
-$NetBSD: patch-spectro_usbio__bsd.c,v 1.3 2025/03/10 22:40:50 jakllsch Exp $
+$NetBSD: patch-spectro_usbio__bsd.c,v 1.4 2026/02/11 02:41:15 jakllsch Exp $
 
 Attempt to make actually function with NetBSD ugen(4).
 
---- spectro/usbio_bsd.c.orig	2024-09-24 22:29:21.000000000 +0000
+--- spectro/usbio_bsd.c.orig	2026-02-09 22:25:25.000000000 +0000
 +++ spectro/usbio_bsd.c
 @@ -69,13 +69,16 @@ icompaths *p 
  #if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
@@ -32,12 +32,15 @@ Attempt to make actually function with NetBSD ugen(4).
  		int rv, found = 0;
  
  		if (paths[j] == NULL)
-@@ -123,12 +129,8 @@ icompaths *p 
+@@ -123,15 +129,8 @@ icompaths *p 
  				continue;
  			}
  
 -			// ~~99 need to check number of end points ~~~
 -			// ~~99 and number of configs
+-			// ~~99 and read any USB serial numbert
+-# pragma message("######### usbio_bsd.c missing USB code !!!!! ########")
+-
 -			nconfig = 1;
 - 
 -//USB_GET_DEVICEINFO	struct usb_device_info
@@ -47,11 +50,14 @@ Attempt to make actually function with NetBSD ugen(4).
  
  			/* Allocate an idevice so that we can fill in the end point information */
  			if ((usbd = (struct usb_idevice *) calloc(sizeof(struct usb_idevice), 1)) == NULL) {
-@@ -138,8 +140,55 @@ icompaths *p 
+@@ -141,8 +140,58 @@ icompaths *p 
  				return ICOM_SYS;
  			}
  
 -			usbd->nconfig = nconfig;
++			//usbd->iserialno = udd.iSerialNumber;
++			usbd->SerialNumber = strdup(di.udi_serial); /* XXX check NULL */
++			
 +			usbd->nconfig = nconfig = udd.bNumConfigurations;
  			
 +			/* Read the configuration descriptors looking for the first configuration, first interface, */
@@ -104,7 +110,7 @@ Attempt to make actually function with NetBSD ugen(4).
  			/* Found a known instrument ? */
  			if ((itype = inst_usb_match(vid, pid, nep)) != instUnknown) {
  				char pname[400], *cp;
-@@ -312,7 +361,6 @@ char **pnames		/* List of process names 
+@@ -315,7 +364,6 @@ char **pnames		/* List of process names 
  	if (p->is_open)
  		p->close_port(p);
  
@@ -112,7 +118,7 @@ Attempt to make actually function with NetBSD ugen(4).
  	/* Make sure the port is open */
  	if (!p->is_open) {
  		int rv, i, iface;
-@@ -347,12 +395,16 @@ char **pnames		/* List of process names 
+@@ -350,12 +398,16 @@ char **pnames		/* List of process names 
  			p->cconfig = 1;
  
  			if (p->cconfig != config) {
@@ -129,7 +135,7 @@ Attempt to make actually function with NetBSD ugen(4).
  			}
  
  			/* We're done */
-@@ -365,6 +417,7 @@ char **pnames		/* List of process names 
+@@ -368,6 +420,7 @@ char **pnames		/* List of process names 
  		/* Claim all the interfaces */
  		for (iface = 0; iface < p->nifce; iface++) {
  
@@ -137,7 +143,7 @@ Attempt to make actually function with NetBSD ugen(4).
  			if ((rv = ioctl(p->usbd->fd, USBDEVFS_CLAIMINTERFACE, &iface)) < 0) {
  				struct usbdevfs_getdriver getd;
  				getd.interface = iface;
-@@ -389,6 +442,30 @@ char **pnames		/* List of process names 
+@@ -392,6 +445,30 @@ char **pnames		/* List of process names 
  					return ICOM_SYS;
  				}
  			}
@@ -168,7 +174,7 @@ Attempt to make actually function with NetBSD ugen(4).
  		}
  
  		/* Clear any errors. */
-@@ -410,25 +487,10 @@ char **pnames		/* List of process names 
+@@ -413,25 +490,10 @@ char **pnames		/* List of process names 
  			p->rd_qa = 8;
  		a1logd(p->log, 8, "usb_open_port: 'serial' read quanta = packet size = %d\n",p->rd_qa);
  
@@ -194,7 +200,7 @@ Attempt to make actually function with NetBSD ugen(4).
  	/* Install the cleanup signal handlers, and add to our cleanup list */
  	usb_install_signal_handlers(p);
  
-@@ -447,174 +509,31 @@ static int icoms_usb_transaction(
+@@ -450,174 +512,31 @@ static int icoms_usb_transaction(
  	int length,
  	unsigned int timeout		/* In msec */
  ) {
@@ -215,9 +221,7 @@ Attempt to make actually function with NetBSD ugen(4).
 -		a1logv(p->log, 1, "icoms_usb_transaction: reaper thread is not running\n");
 -		return ICOM_SYS;
 -	}
-+	if (ioctl(p->ep[endpoint&0xf].fd, USB_SET_TIMEOUT, &timeout) < 0)
-+		a1logd(p->log, 8, "icoms_usb_transaction: SET_TIMEOUT failed\n");
- 
+-
 -	/* Translate icoms transfer type of Linux */
 -	switch (ttype) {
 -		case icom_usb_trantype_command:
@@ -230,11 +234,7 @@ Attempt to make actually function with NetBSD ugen(4).
 -			type = USBDEVFS_URB_TYPE_BULK;
 -			break;
 -	}
-+	if ((endpoint & IUSB_ENDPOINT_DIR_MASK) == IUSB_ENDPOINT_OUT)
-+		xlength = write(p->ep[endpoint&0xf].fd, buffer, length);
-+	else
-+		xlength = read(p->ep[endpoint&0xf].fd, buffer, length);
- 
+-
 -	/* Setup the icom req and urbs */
 -	req.urbs = NULL;
 -	pthread_mutex_init(&req.lock, NULL);
@@ -250,7 +250,9 @@ Attempt to make actually function with NetBSD ugen(4).
 -		a1loge(p->log, ICOM_SYS, "icoms_usb_transaction: control transfer too big! (%d)\n",length);
 -		return ICOM_SYS;
 -	}
--
++	if (ioctl(p->ep[endpoint&0xf].fd, USB_SET_TIMEOUT, &timeout) < 0)
++		a1logd(p->log, 8, "icoms_usb_transaction: SET_TIMEOUT failed\n");
+ 
 -	bp = buffer;
 -	remlen = length;
 -	for (i = 0; i < req.nurbs; i++) {
@@ -271,7 +273,11 @@ Attempt to make actually function with NetBSD ugen(4).
 -		req.urbs[i].urb.status = -EINPROGRESS;
 -	}
 -a1logd(p->log, 8, "icoms_usb_transaction: reset req %p nourbs to %d\n",&req,req.nourbs);
--
++	if ((endpoint & IUSB_ENDPOINT_DIR_MASK) == IUSB_ENDPOINT_OUT)
++		xlength = write(p->ep[endpoint&0xf].fd, buffer, length);
++	else
++		xlength = read(p->ep[endpoint&0xf].fd, buffer, length);
+ 
 -	/* Add our request to the req list so that it can be cancelled on reap failure */
 -	pthread_mutex_lock(&p->usbd->lock);
 -	req.next = p->usbd->reqs;
@@ -378,7 +384,7 @@ Attempt to make actually function with NetBSD ugen(4).
  
  	/* requested size wasn't transferred ? */
  	if (reqrv == ICOM_OK && xlength != length)
-@@ -623,6 +542,7 @@ a1logd(p->log, 8, "icoms_usb_transaction
+@@ -626,6 +545,7 @@ a1logd(p->log, 8, "icoms_usb_transaction
  	if (transferred != NULL)
  		*transferred = xlength;
  
@@ -386,7 +392,7 @@ Attempt to make actually function with NetBSD ugen(4).
  done:;
  	if (cancelt != NULL) {
  		amutex_lock(cancelt->cmtx);
-@@ -632,20 +552,7 @@ done:;
+@@ -635,20 +555,7 @@ done:;
  		cancelt->state = 2;
  		amutex_unlock(cancelt->cmtx);
  	}
@@ -408,7 +414,7 @@ Attempt to make actually function with NetBSD ugen(4).
  
  	if (in_usb_rw < 0)
  		exit(0);
-@@ -653,7 +560,6 @@ done:;
+@@ -656,7 +563,6 @@ done:;
  	in_usb_rw--;
  
  	a1logd(p->log, 8, "coms_usb_transaction: returning err 0x%x and %d bytes\n",reqrv, xlength);
@@ -416,7 +422,7 @@ Attempt to make actually function with NetBSD ugen(4).
  
  	return reqrv;
  }
-@@ -668,51 +574,35 @@ int value, int index, unsigned char *byt
+@@ -671,51 +577,35 @@ int value, int index, unsigned char *byt
  int timeout) {
  	int reqrv = ICOM_OK;
  	int dirw = (requesttype & IUSB_REQ_DIR_MASK) == IUSB_REQ_HOST_TO_DEV ? 1 : 0;
@@ -485,7 +491,7 @@ Attempt to make actually function with NetBSD ugen(4).
  
  /* Cancel i/o in another thread */
  int icoms_usb_cancel_io(
-@@ -720,8 +610,9 @@ int icoms_usb_cancel_io(
+@@ -723,8 +613,9 @@ int icoms_usb_cancel_io(
  	usb_cancelt *cancelt
  ) {
  	int rv = ICOM_OK;
@@ -496,7 +502,7 @@ Attempt to make actually function with NetBSD ugen(4).
  	usb_lock_cancel(cancelt);
  	if (cancelt->hcancel != NULL)
  		rv = cancel_req(p, (usbio_req *)cancelt->hcancel, -1);
-@@ -742,6 +633,8 @@ int icoms_usb_resetep(
+@@ -745,6 +636,8 @@ int icoms_usb_resetep(
  ) {
  	int rv = ICOM_OK;
  
@@ -505,7 +511,7 @@ Attempt to make actually function with NetBSD ugen(4).
  #ifdef NEVER    // ~~99
  	if ((rv = ioctl(p->usbd->fd, USBDEVFS_RESETEP, &ep)) != 0) {
  		a1logd(p->log, 1, "icoms_usb_resetep failed with %d\n",rv);
-@@ -759,6 +652,8 @@ int icoms_usb_clearhalt(
+@@ -762,6 +655,8 @@ int icoms_usb_clearhalt(
  ) {
  	int rv = ICOM_OK;
  

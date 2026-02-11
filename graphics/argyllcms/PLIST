@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/07/13 12:59:03 jakllsch Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/02/11 02:41:15 jakllsch Exp $
 bin/applycal
 bin/average
 bin/cb2ti3
@@ -103,6 +103,8 @@ share/argyll/ref/ISO12641_2_3_1.cht
 share/argyll/ref/ISO12641_2_3_2.cht
 share/argyll/ref/ISO12641_2_3_3.cht
 share/argyll/ref/LaserSoftDCPro.cht
+share/argyll/ref/MLG.cht
+share/argyll/ref/MLG.cie
 share/argyll/ref/Office.sp
 share/argyll/ref/ProPhoto.icm
 share/argyll/ref/ProPhotoLin.icm

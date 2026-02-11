@@ -1,0 +1,15 @@
+$NetBSD: patch-Jamfile,v 1.1 2026/02/11 02:41:15 jakllsch Exp $
+
+Don't build vendored libz/zlib
+
+--- Jamfile.orig	2026-02-09 22:25:03.000000000 +0000
++++ Jamfile
+@@ -61,7 +61,7 @@ if ! $(HAVE_JPEG) {
+ 	SubInclude jpeg ;
+ }
+ 
+-if ! $(HAVE_ZLIB) {
++if ! $(HAVE_Z) {
+ 	SubInclude zlib ;
+ }
+ 
