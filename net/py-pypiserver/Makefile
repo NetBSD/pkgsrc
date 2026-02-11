@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2025/10/09 07:57:53 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/02/11 12:59:58 adam Exp $
 
-DISTNAME=	pypiserver-2.4.0
+DISTNAME=	pypiserver-2.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypiserver/}
@@ -26,7 +26,10 @@ PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 312
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources-[0-9]*:../../devel/py-importlib-resources
+DEPENDS+=	${PYPKGPREFIX}-importlib-resources>0:../../devel/py-importlib-resources
+.endif
+.if ${PYTHON_VERSION} > 312
+DEPENDS+=	${PYPKGPREFIX}-legacy-cgi>0:../../www/py-legacy-cgi
 .endif
 
 post-install:
