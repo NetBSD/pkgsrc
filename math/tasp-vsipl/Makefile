@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2019/12/19 22:20:01 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2026/02/11 07:39:56 wiz Exp $
 
 DISTNAME=	tvcpp0p8
 PKGNAME=	tasp-vsipl-20030710
 PKGREVISION=	2
 CATEGORIES=	math
-MASTER_SITES=	http://www.vsipl.org/software/
+#MASTER_SITES=	http://www.vsipl.org/software/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.vsipl.org/
+#HOMEPAGE=	http://www.vsipl.org/
 COMMENT=	Vector Signal Image Processing Library
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/lib
