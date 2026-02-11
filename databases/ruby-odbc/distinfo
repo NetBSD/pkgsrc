@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.14 2024/04/09 16:40:41 taca Exp $
+$NetBSD: distinfo,v 1.15 2026/02/11 15:30:50 taca Exp $
 
 BLAKE2s (ruby-odbc-0.999992.tar.gz) = efdc71ddb226b8464ef2d8915d46ff5940aca196cb1601383febd40260dd4cdb
 SHA512 (ruby-odbc-0.999992.tar.gz) = b4eee475ad93d112d51ef7955dc2df60b035e87338d991bc069e59d77918ab08a7e96069d975be156e57d401fea4b2ee57486dc7caf83f9dfac9fe49f935607b
 Size (ruby-odbc-0.999992.tar.gz) = 77614 bytes
+SHA1 (patch-ext_odbc.c) = dda1fca640965c84f96c05e68c1447b954021ecd
