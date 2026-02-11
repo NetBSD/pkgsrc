@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2026/02/06 10:04:39 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2026/02/11 07:43:37 wiz Exp $
 
 DISTNAME=	tea-48.0.1
 PKGREVISION=	55
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=psemiletov/}
 GITHUB_PROJECT=	tea-qt
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://semiletov.org/tea/
+HOMEPAGE=	https://tea.ourproject.org/
 COMMENT=	Powerful, easy-to-use text editor
 LICENSE=	gnu-gpl-v3
 
