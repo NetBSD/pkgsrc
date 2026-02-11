@@ -1,4 +1,4 @@
-$NetBSD: patch-sdk_src_posix_fs.cpp,v 1.5 2026/01/08 17:52:19 kikadf Exp $
+$NetBSD: patch-sdk_src_posix_fs.cpp,v 1.6 2026/02/11 17:04:10 kikadf Exp $
 
 * Fix build on NetBSD, use statvfs
 * Don't use mntent features on BSDs
@@ -6,7 +6,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.5 2026/01/08 17:52:19 kikadf Exp $
 * Fallback funcs
 * Fix ctype(3) tolower usage
 
---- sdk/src/posix/fs.cpp.orig	2025-04-02 09:16:59.000000000 +0200
+--- sdk/src/posix/fs.cpp.orig	2026-01-13 02:44:33.000000000 +0100
 +++ sdk/src/posix/fs.cpp
 @@ -22,7 +22,8 @@
   * You should have received a copy of the license along with this
@@ -28,7 +28,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.5 2026/01/08 17:52:19 kikadf Exp $
  #include <sys/types.h>
  #include <sys/utsname.h>
  #ifdef TARGET_OS_MAC
-@@ -1018,6 +1022,18 @@ int LinuxFileSystemAccess::checkevents([
+@@ -1112,6 +1116,18 @@ int LinuxFileSystemAccess::checkevents([
      return result;
  }
  
@@ -47,7 +47,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.5 2026/01/08 17:52:19 kikadf Exp $
  #endif //  __linux__
  
  
-@@ -1417,7 +1433,8 @@ string getDistro()
+@@ -1537,7 +1553,8 @@ string getDistro()
      {
          distro = distro.substr(0, 20);
      }
@@ -57,7 +57,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.5 2026/01/08 17:52:19 kikadf Exp $
      return distro;
  }
  
-@@ -1433,7 +1450,8 @@ string getDistroVersion()
+@@ -1553,7 +1570,8 @@ string getDistroVersion()
      {
          version = version.substr(0, 10);
      }
@@ -67,7 +67,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.5 2026/01/08 17:52:19 kikadf Exp $
      return version;
  }
  #endif
-@@ -1749,6 +1767,16 @@ void LinuxDirNotify::removeWatch(WatchMa
+@@ -1860,6 +1878,16 @@ void LinuxDirNotify::removeWatch(WatchMa
  }
  
  #endif // USE_INOTIFY
@@ -84,7 +84,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.5 2026/01/08 17:52:19 kikadf Exp $
  #endif // __linux__
  
  #endif //ENABLE_SYNC
-@@ -1805,8 +1833,8 @@ private:
+@@ -1916,8 +1944,8 @@ private:
      // open with O_NOATIME if possible
      int open(const char *path)
      {
@@ -95,7 +95,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.5 2026/01/08 17:52:19 kikadf Exp $
          int fd = ::open(path, O_RDONLY) ;
  #else
          // for sync in particular, try to open without setting access-time
-@@ -2065,6 +2093,7 @@ ScanResult PosixFileSystemAccess::direct
+@@ -2167,6 +2195,7 @@ ScanResult PosixFileSystemAccess::direct
  }
  
  #ifndef __APPLE__
@@ -103,7 +103,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.5 2026/01/08 17:52:19 kikadf Exp $
  
  // Determine which device contains the specified path.
  static std::string deviceOf(const std::string& database,
-@@ -2233,6 +2262,7 @@ static std::string deviceOf(const std::s
+@@ -2335,6 +2364,7 @@ static std::string deviceOf(const std::s
      // No database has a mapping for this path.
      return std::string();
  }
@@ -111,7 +111,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.5 2026/01/08 17:52:19 kikadf Exp $
  
  // Compute legacy filesystem fingerprint.
  static std::uint64_t fingerprintOf(const std::string& path)
-@@ -2261,6 +2291,7 @@ static std::uint64_t fingerprintOf(const
+@@ -2363,6 +2393,7 @@ static std::uint64_t fingerprintOf(const
      return ++value;
  }
  
@@ -119,7 +119,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.5 2026/01/08 17:52:19 kikadf Exp $
  // Determine the UUID of the specified device.
  static std::string uuidOf(const std::string& device)
  {
-@@ -2337,6 +2368,7 @@ static std::string uuidOf(const std::str
+@@ -2439,6 +2470,7 @@ static std::string uuidOf(const std::str
      // Couldn't determine device's UUID.
      return std::string();
  }
@@ -127,15 +127,15 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.5 2026/01/08 17:52:19 kikadf Exp $
  
  fsfp_t FileSystemAccess::fsFingerprint(const LocalPath& path) const
  {
-@@ -2347,6 +2379,7 @@ fsfp_t FileSystemAccess::fsFingerprint(c
+@@ -2449,6 +2481,7 @@ fsfp_t FileSystemAccess::fsFingerprint(c
      if (!fingerprint)
          return fsfp_t();
  
 +#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__)
      // What device contains the specified path?
-     auto device = deviceOf(path.localpath);
+     auto device = deviceOf(path.toPath(false));
  
-@@ -2360,6 +2393,7 @@ fsfp_t FileSystemAccess::fsFingerprint(c
+@@ -2462,6 +2495,7 @@ fsfp_t FileSystemAccess::fsFingerprint(c
          if (!uuid.empty())
              return fsfp_t(fingerprint, std::move(uuid));
      }
@@ -143,7 +143,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.5 2026/01/08 17:52:19 kikadf Exp $
  
      // Couldn't determine filesystem UUID.
      return fsfp_t(fingerprint, std::string());
-@@ -2452,6 +2486,15 @@ DirNotify* LinuxFileSystemAccess::newdir
+@@ -2554,6 +2588,15 @@ DirNotify* LinuxFileSystemAccess::newdir
      return new LinuxDirNotify(*this, root, rootPath);
  }
  #endif
@@ -158,8 +158,8 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.5 2026/01/08 17:52:19 kikadf Exp $
 +
  #endif
  
- bool PosixFileSystemAccess::issyncsupported(const LocalPath& localpathArg, bool& isnetwork, SyncError& syncError, SyncWarning& syncWarning)
-@@ -2526,18 +2569,26 @@ bool PosixFileSystemAccess::getlocalfsty
+ bool PosixFileSystemAccess::issyncsupported(const LocalPath& localpathArg,
+@@ -2635,18 +2678,26 @@ bool PosixFileSystemAccess::getlocalfsty
      }
  #endif /* __linux__ || __ANDROID__ */
  
@@ -187,7 +187,7 @@ $NetBSD: patch-sdk_src_posix_fs.cpp,v 1.5 2026/01/08 17:52:19 kikadf Exp $
      }; /* filesystemTypes */
  
      struct statfs statbuf;
-@@ -2555,7 +2606,7 @@ bool PosixFileSystemAccess::getlocalfsty
+@@ -2664,7 +2715,7 @@ bool PosixFileSystemAccess::getlocalfsty
          type = FS_UNKNOWN;
          return true;
      }
