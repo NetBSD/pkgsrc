@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.731 2026/02/08 14:09:55 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.732 2026/02/11 13:23:56 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29719,3 +29719,42 @@ vim<9.1.2132	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-25749
 firefox<147.0.2		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2026-06/
 thunderbird<147.0.1	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2026-07/
 firefox140<140.7.1	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2026-08/
+freerdp2<3.22.0	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-23948
+freerdp2<3.22.0	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2026-24491
+freerdp2<3.22.0	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2026-24675
+freerdp2<3.22.0	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2026-24676
+freerdp2<3.22.0	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2026-24677
+freerdp2<3.22.0	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2026-24678
+freerdp2<3.22.0	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2026-24679
+freerdp2<3.22.0	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2026-24680
+freerdp2<3.22.0	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2026-24681
+freerdp2<3.22.0	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2026-24682
+freerdp2<3.22.0	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2026-24683
+freerdp2<3.22.0	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2026-24684
+gnutls<3.8.12	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-14831
+janet-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-2240
+janet-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-2241
+janet-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-2242
+lrzip-[0-9]*	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2025-15570
+lrzip-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-15571
+mongodb<7.0.29	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-1847
+mongodb<7.0.29	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-1848
+mongodb<7.0.29	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-1849
+mongodb<7.0.29	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-1850
+mongodb<7.0.29	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2026-25609
+mongodb<7.0.29	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-25610
+mongodb<7.0.29	traffic-amplification	https://nvd.nist.gov/vuln/detail/CVE-2026-25611
+mongodb<7.0.29	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-25612
+mongodb<7.0.29	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-25613
+munge<0.5.18	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-25506
+mupdf<1.26.2	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-15569
+png<1.6.55	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2026-25646
+powerdns-recursor<5.3.1	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-59023
+powerdns-recursor<5.3.1	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-59024
+powerdns-recursor<5.3.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-0398
+powerdns-recursor<5.3.5	traffic-amplification	https://nvd.nist.gov/vuln/detail/CVE-2026-24027
+py{27,310,311,312,313,314}-cryptography<46.0.5	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-26007
+php{56,74,81,82,83,84}-roundcube<1.6.13	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2026-25916
+php{56,74,81,82,83,84}-roundcube<1.6.13	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2026-26079
+ruby{32,33,34}-faraday<2.14.1	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2026-25765
+tcpreplay<4.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-54192
