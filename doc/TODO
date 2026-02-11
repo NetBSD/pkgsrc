@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26788 2026/02/11 07:56:35 taca Exp $
+$NetBSD: TODO,v 1.26789 2026/02/11 17:25:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1264,6 +1264,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tct-1.19
 	o tdir-1.73
 	o tds-1.6.2
+	o tea-63.3.1
 	o teem-1.10.0
 	o telegram-purple-1.4.7
 	o telepathy-haze-0.8.1
