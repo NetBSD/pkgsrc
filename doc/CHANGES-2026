@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1043 2026/02/11 07:28:07 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1044 2026/02/11 07:29:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1382,3 +1382,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/ruby-ast version 2.4.3 [taca 2026-02-11]
 	Updated devel/ruby-parser to 3.22.0nb1 [taca 2026-02-11]
 	Added devel/ruby-tsort version 0.2.0 [taca 2026-02-11]
+	Updated devel/ruby-railties71 to 7.1.6nb1 [taca 2026-02-11]
+	Updated devel/ruby-railties72 to 7.2.3nb1 [taca 2026-02-11]
+	Updated devel/ruby-railties80 to 8.0.4nb1 [taca 2026-02-11]
