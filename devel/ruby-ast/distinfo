@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/02/11 06:35:45 taca Exp $
+
+BLAKE2s (ast-2.4.3.gem) = 8c8b05781d81a96bd83b32885935e9c7040f1bd644850785adf5dc554064ddb4
+SHA512 (ast-2.4.3.gem) = 3eb1f76ad262729a4178035dfc5cadf2f93df3bde5ef4e2429e970bb27e17f3c704d8f5417a6b50980f5edc2d9f568d88c8f3913eeb29f7cf42de0b88a748779
+Size (ast-2.4.3.gem) = 11776 bytes
