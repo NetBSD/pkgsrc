@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.36 2023/10/24 10:30:53 jperkin Exp $
+# $NetBSD: metadata.mk,v 1.37 2026/02/11 22:54:14 wiz Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -136,7 +136,7 @@ ${_BUILD_INFO_FILE}: ${_PLIST_NOKEYWORDS}
 ###
 ### +BUILD_VERSION - Package build files versioning information
 ###
-### We extract the ident strings from all of the important pkgsrc files
+### We compute checksums for all of the important pkgsrc files
 ### involved in building the package, i.e. Makefile and patches.
 ###
 _BUILD_VERSION_FILE=	${PKG_DB_TMPDIR}/+BUILD_VERSION
@@ -148,7 +148,10 @@ ${_BUILD_VERSION_FILE}:
 	{								\
 		${FIND} ${FILESDIR} -type f 2>/dev/null |		\
 		while read f; do					\
-			[ -f "$$f" ] && ${ECHO} "$$f";			\
+			case "$$f" in					\
+			*/CVS/*) ;;					\
+			*) [ -f "$$f" ] && ${ECHO} "$$f";;		\
+			esac;						\
 		done;							\
 		for f in ${.CURDIR}/Makefile ${PKGDIR}/*; do		\
 			[ -f "$$f" ] && ${ECHO} "$$f";			\
