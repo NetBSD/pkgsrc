@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/01/18 15:51:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/02/11 07:51:14 taca Exp $
 bin/redmine60_generate_secret_token${RUBY_SUFFIX}.sh
 bin/redmine60_load_default_data${RUBY_SUFFIX}.sh
 bin/redmine60_migrate_db${RUBY_SUFFIX}.sh
@@ -11,6 +11,7 @@ ${RM_DIR}/CONTRIBUTING.md
 ${RM_DIR}/Gemfile
 ${PLIST.unicorn}${RM_DIR}/Gemfile.local
 ${RM_DIR}/LICENSE.txt
+${RM_DIR}/README-pkgsrc
 ${RM_DIR}/README.rdoc
 ${RM_DIR}/Rakefile
 ${RM_DIR}/app/assets/fonts/NotoSans-Bold.woff2

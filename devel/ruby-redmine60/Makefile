@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2026/01/18 15:51:11 taca Exp $
+# $NetBSD: Makefile,v 1.12 2026/02/11 07:51:14 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://www.redmine.org/releases/
 
@@ -29,7 +30,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rouge>=4.5.0<5:../../www/ruby-rouge
 
 # ruby-mail depends it.
 #DEPENDS+=	${RUBY_PKGPREFIX}-mini_mime>=1.1.0<1.2:../../mail/ruby-mini_mime
-DEPENDS+=	${RUBY_PKGPREFIX}-actionpack${RUBY_RAILS}-xml_parser>=2.0:../../textproc/ruby-actionpack-xml_parser
+DEPENDS+=	${RUBY_PKGPREFIX}-actionpack-xml_parser>=2.0:../../textproc/ruby-actionpack-xml_parser
 DEPENDS+=	${RUBY_PKGPREFIX}-roadie-rails32_${RUBY_RAILS}>=3.2.0<3.3:../../mail/ruby-roadie-rails32
 DEPENDS+=	${RUBY_PKGPREFIX}-marcel>=1.0.0:../../devel/ruby-marcel
 DEPENDS+=	${RUBY_PKGPREFIX}-mail>=2.8.1<2.9:../../mail/ruby-mail
@@ -55,11 +56,12 @@ REPLACE_RUBY+=	bin/*
 REPLACE_RUBY+=	extra/mail_handler/rdm-mailhandler.rb
 REPLACE_RUBY+=	extra/svn/reposman.rb
 
-SUBST_CLASSES+=		shell
-SUBST_FILES.shell=	${DESTDIR}${PREFIX}/bin/redmine60_*${RUBY_SUFFIX}.sh
-SUBST_MESSAGE.shell=	Fixing paths in helper shell scripts.
-SUBST_VARS.shell=	PREFIX RUBY RM_DIR
-SUBST_STAGE.shell=	post-install
+SUBST_CLASSES+=		path
+SUBST_FILES.path+=	${DESTDIR}${PREFIX}/bin/redmine60_*${RUBY_SUFFIX}.sh
+SUBST_FILES.path+=	${DESTDIR}${PREFIX}/${RM_DIR}/README-pkgsrc
+SUBST_MESSAGE.path=	Fixing paths in helper shell scripts and documents.
+SUBST_VARS.path=	PREFIX RM_DIR RM_VER RUBY RUBY_SUFFIX RCD_SCRIPTS_DIR
+SUBST_STAGE.path=	post-install
 
 EGDIR=		${PREFIX}/share/examples/${RUBY_PKGPREFIX}-redmine60
 INSTALLATION_DIRS=	bin ${EGDIR} ${RM_DIR} ${RM_DIR}/config
@@ -71,6 +73,7 @@ CONF_FILES+=	${EGDIR}/database.yml.example \
 CONF_FILES+=	${EGDIR}/additional_environment.rb.example \
 			${RM_DIR}/config/additional_environment.rb
 REQD_FILES+=	/dev/null ${RM_DIR}/Gemfile.lock
+OWN_DIRS+=	${RM_DIR}/.bundle
 
 PKG_GROUPS=	${APACHE_GROUP}
 PKG_USERS=	${APACHE_USER}:${APACHE_GROUP}
@@ -91,6 +94,7 @@ do-install:
 		${DESTDIR}${PREFIX}/bin/redmine60_migrate_db${RUBY_SUFFIX}.sh
 	${INSTALL_SCRIPT} ${FILESDIR}/redmine60_load_default_data.sh \
 		${DESTDIR}${PREFIX}/bin/redmine60_load_default_data${RUBY_SUFFIX}.sh
+	${INSTALL_DATA} ${FILESDIR}/README-pkgsrc ${DESTDIR}${PREFIX}/${RM_DIR}
 
 post-install: unicorn-post-install
 	${FIND} ${DESTDIR}${PREFIX} -name '.*' -exec ${RM} -rf {} +
