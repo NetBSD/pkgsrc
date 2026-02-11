@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1055 2026/02/11 08:35:30 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1056 2026/02/11 08:38:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1396,3 +1396,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/fengoffice to 3.11.13.11 [taca 2026-02-11]
 	Updated databases/php-mongodb to 1.21.5 [taca 2026-02-11]
 	Updated mail/rspamd to 3.14.3 [taca 2026-02-11]
+	Updated misc/ruby-sprockets to 4.2.2nb1 [taca 2026-02-11]
