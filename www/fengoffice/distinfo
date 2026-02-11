@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.31 2025/06/15 16:11:39 taca Exp $
+$NetBSD: distinfo,v 1.32 2026/02/11 08:18:58 taca Exp $
 
-BLAKE2s (fengoffice-3.11.8.0.tar.gz) = 1f55024fd621b6eb524324e532c83313d1b8b6c6069acee15bece2673886da0e
-SHA512 (fengoffice-3.11.8.0.tar.gz) = 9d5ea9f57c7a8d88de12548864f4fcd9e3d91663073cde4be8461995eec94bbf92093e6966de7ce637507e43d4f2fd7ef5104c6fc3b32b10502d23aae045f688
-Size (fengoffice-3.11.8.0.tar.gz) = 17046553 bytes
+BLAKE2s (fengoffice-3.11.13.11.tar.gz) = e1da96271536590e55aadece1e150ea6a24c857070082c02662fa370390e8657
+SHA512 (fengoffice-3.11.13.11.tar.gz) = 5e2206413ce8f89b84412431e3a3645e03545591570bfd6d6c0689be3c62c8e2fa4293c11afc0cebc323969da641db88079601a1f6e4c46f87d872f1d7cc68d8
+Size (fengoffice-3.11.13.11.tar.gz) = 17061524 bytes
 SHA1 (patch-aa) = 0162718439c36bbc4c867c943b78854f863929c5
 SHA1 (patch-ac) = 10cdae0fe56a08d0f04e4071ba2eb82112495fe5
 SHA1 (patch-ag) = 03f09610de1c7fd41641d4f08eb72876d82b2bbf

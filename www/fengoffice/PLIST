@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2025/06/15 16:11:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.27 2026/02/11 08:18:58 taca Exp $
 ${FO_DIR}/.gitignore
 ${FO_DIR}/README.md
 ${FO_DIR}/application/application.php
@@ -137,6 +137,7 @@ ${FO_DIR}/application/models/config_categories/base/BaseConfigCategories.class.p
 ${FO_DIR}/application/models/config_categories/base/BaseConfigCategory.class.php
 ${FO_DIR}/application/models/config_handlers/complex/AddressFieldsConfigHandler.class.php
 ${FO_DIR}/application/models/config_handlers/complex/AllDimensionsConfigHandler.class.php
+${FO_DIR}/application/models/config_handlers/complex/CalculationMethodConfigHandler.class.php
 ${FO_DIR}/application/models/config_handlers/complex/ColorPickerConfigHandler.class.php
 ${FO_DIR}/application/models/config_handlers/complex/ContactPropertySelectorConfigHandler.class.php
 ${FO_DIR}/application/models/config_handlers/complex/CustomPropertiesByObjectTypeHandler.class.php
@@ -148,6 +149,7 @@ ${FO_DIR}/application/models/config_handlers/complex/DefaultTypeAddressConfigHan
 ${FO_DIR}/application/models/config_handlers/complex/DefaultTypeEmailConfigHandler.class.php
 ${FO_DIR}/application/models/config_handlers/complex/DefaultTypePhoneConfigHandler.class.php
 ${FO_DIR}/application/models/config_handlers/complex/DimAssociationsConfigHandler.class.php
+${FO_DIR}/application/models/config_handlers/complex/DimensionsSelectorConfigHandler.class.php
 ${FO_DIR}/application/models/config_handlers/complex/DragDropPromptConfigHandler.class.php
 ${FO_DIR}/application/models/config_handlers/complex/FileStorageConfigHandler.class.php
 ${FO_DIR}/application/models/config_handlers/complex/InitialWorkspaceConfigHandler.class.php
@@ -164,6 +166,7 @@ ${FO_DIR}/application/models/config_handlers/complex/MultipleListConfigHandler.c
 ${FO_DIR}/application/models/config_handlers/complex/MultipleObjectTypeConfigHandler.class.php
 ${FO_DIR}/application/models/config_handlers/complex/MultipleObjectTypePrefixConfigHandler.class.php
 ${FO_DIR}/application/models/config_handlers/complex/NewClientContactTypeConfigHandler.class.php
+${FO_DIR}/application/models/config_handlers/complex/ObjectTypePropertiesConfigHandler.class.php
 ${FO_DIR}/application/models/config_handlers/complex/RememberGUIConfigHandler.class.php
 ${FO_DIR}/application/models/config_handlers/complex/RootDimensionsConfigHandler.class.php
 ${FO_DIR}/application/models/config_handlers/complex/SearchEngineConfigHandler.class.php
@@ -653,6 +656,7 @@ ${FO_DIR}/application/views/contact/card_content.php
 ${FO_DIR}/application/views/contact/company_card.php
 ${FO_DIR}/application/views/contact/company_content.php
 ${FO_DIR}/application/views/contact/configure_widgets.php
+${FO_DIR}/application/views/contact/contact_selector_contact_card.php
 ${FO_DIR}/application/views/contact/csv_export.php
 ${FO_DIR}/application/views/contact/csv_import.php
 ${FO_DIR}/application/views/contact/edit_contact.php
@@ -661,6 +665,7 @@ ${FO_DIR}/application/views/contact/edit_picture.php
 ${FO_DIR}/application/views/contact/list_contacts.php
 ${FO_DIR}/application/views/contact/list_user_categories.php
 ${FO_DIR}/application/views/contact/list_user_sub_categories.php
+${FO_DIR}/application/views/contact/quick_add_form.php
 ${FO_DIR}/application/views/contact/quick_config_filter_activity.php
 ${FO_DIR}/application/views/contact/tabs/company_data.php
 ${FO_DIR}/application/views/contact/tabs/contact_data.php
@@ -893,6 +898,8 @@ ${FO_DIR}/application/widgets/overdue_upcoming/template.php
 ${FO_DIR}/application/widgets/people/index.php
 ${FO_DIR}/application/widgets/people/template.php
 ${FO_DIR}/autoloader_index.php
+${FO_DIR}/build/composer_php74.lock
+${FO_DIR}/build/composer_php82.lock
 ${FO_DIR}/cache/.htaccess
 ${FO_DIR}/changelog.txt
 ${FO_DIR}/ck_upload_handler.php
@@ -6436,6 +6443,7 @@ ${FO_DIR}/public/assets/javascript/react_production/vendors~showEarnedValueWidge
 ${FO_DIR}/public/assets/javascript/react_production/vendors~showEarnedValueWidget~showExpensesProgressWidget~showFinancialsWidget~showWorkedHoursWidget.js
 ${FO_DIR}/public/assets/javascript/react_production/vendors~showEarnedValueWidget~showExpensesProgressWidget~showProjectStatisticsWidget~showWorkedHoursWidget.js
 ${FO_DIR}/public/assets/javascript/react_src/helpers/widgetChartHelpers.js
+${FO_DIR}/public/assets/javascript/react_src/helpers/widgetDateFilterHelpers.js
 ${FO_DIR}/public/assets/javascript/react_src/showEarnedValueWidget.js
 ${FO_DIR}/public/assets/javascript/react_src/showExpensesProgressWidget.js
 ${FO_DIR}/public/assets/javascript/react_src/showFinancialsWidget.js
