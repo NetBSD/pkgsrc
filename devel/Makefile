@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4590 2026/02/11 06:36:25 taca Exp $
+# $NetBSD: Makefile,v 1.4591 2026/02/11 07:27:50 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3604,6 +3604,7 @@ SUBDIR+=	ruby-thrift_client
 SUBDIR+=	ruby-tins
 SUBDIR+=	ruby-tomlrb
 SUBDIR+=	ruby-traces
+SUBDIR+=	ruby-tsort
 SUBDIR+=	ruby-tty-box
 SUBDIR+=	ruby-tty-color
 SUBDIR+=	ruby-tty-cursor
