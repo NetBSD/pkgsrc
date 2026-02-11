@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26787 2026/02/10 22:37:03 wiz Exp $
+$NetBSD: TODO,v 1.26788 2026/02/11 07:56:35 taca Exp $
 
 Suggested new packages
 ======================
@@ -895,10 +895,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o makeztxt-1.60
 	o man-pages-5.11
 	o manedit-1.2.1
-	o mariadb-10.6.24
-	o mariadb-10.11.15
-	o mariadb-11.4.9
-	o mariadb-11.8.5
+	o mariadb-10.6.25
+	o mariadb-10.11.16
+	o mariadb-11.4.10
+	o mariadb-11.8.6
 	o mariadb-12.1.2
 	o matcha-sns-1.3.8
 	o matchbox-panel-0.9.3
