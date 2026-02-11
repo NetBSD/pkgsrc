@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/12/09 14:25:50 taca Exp $
+# $NetBSD: Makefile,v 1.11 2026/02/11 09:26:50 taca Exp $
 
 DISTNAME=	typo3_src-${VER}
 PKGNAME=	${PHP_PKG_PREFIX}-typo3-${VER}
@@ -17,7 +17,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbst
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=${PHP_BASE_VERS}:../../databases/php-pdo
 DEPENDS+=	${PHP_PKG_PREFIX}-exif>=${PHP_BASE_VERS}:../../graphics/php-exif
 
-PHP_VERSIONS_ACCEPTED=	82 83 84
+PHP_VERSIONS_ACCEPTED=	82 83 84 85
 
 REPLACE_PHP+=	typo3/sysext/core/bin/typo3
 REPLACE_PHP+=	vendor/nikic/php-parser/bin/php-parse
@@ -25,7 +25,7 @@ REPLACE_PHP+=	vendor/symfony/yaml/Resources/bin/yaml-lint
 REPLACE_PHP+=	vendor/typo3/cms-cli/typo3
 REPLACE_PHP+=	vendor/typo3fluid/fluid/bin/fluid
 
-VER=		13.4.22
+VER=		13.4.25
 
 NO_BUILD=	YES
 TYPO3DIR=	share/typo3
