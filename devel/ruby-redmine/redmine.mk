@@ -1,4 +1,4 @@
-# $NetBSD: redmine.mk,v 1.14 2025/05/26 15:40:42 taca Exp $
+# $NetBSD: redmine.mk,v 1.15 2026/02/11 08:28:42 taca Exp $
 
 .if !defined(_RUBY_REDMINE_MK)
 _RUBY_REDMINE_MK=	# defined
@@ -9,15 +9,24 @@ _RUBY_REDMINE_MK=	# defined
 # RM_VERSION_DEFAULT
 #	Select default Redmine version.
 #
-#	Possible values: 51 60
+#	Possible values: 51 60 61
 #	Default: 60
 #
+#
+# === Infrastructure variables ===
+#
+# RM_VERSION_REQD
+#	Ruby version to use. This variable should not be set in
+#	packages.  It assumes that it is  used by bulk build tools.
+#
+#	Possible values: 51 60 61
+#	Default: ${RUBY_VERSION_DEFAULT}
 #
 # === Package-settable variables ===
 #
 # RM_VERSIONS_SUPPORTED
 #	Supported Redmine version.
-#	Possible values: 51 60
+#	Possible values: 51 60 61
 #	Default: 60
 #
 #
@@ -25,7 +34,7 @@ _RUBY_REDMINE_MK=	# defined
 #
 # RM_VER
 #	Redmine version.
-#	Possible values: 51 60
+#	Possible values: 51 60 61
 #	Default: 60
 #
 # RM_DIR
@@ -38,11 +47,26 @@ PRINT_PLIST_AWK+=	/^${RM_DIR:S|/|\\/|g}/ { gsub(/^${RM_DIR:S|/|\\/|g}/, "$${RM_D
 
 .include "../../lang/ruby/rubyversion.mk"
 
+.if defined(PKGNAME_REQD)
+.  if ${PKGNAME_REQD:M${RUBY_PKGPREFIX}-redmine[0-9][0-9]-*}
+_RM_VERSION_REQD:=	${PKGNAME_REQD:C/${RUBY_PKGPREFIX}-redmine([0-9]+)-.*/\1/}
+RM_VERSION_REQD?=	${PKGNAME_REQD:C/${RUBY_PKGPREFIX}-redmine([0-9]+)-.*/\1/}
+.  endif
+.endif
+
 RM_VERSION_DEFAULT?=	60
-RM_VERSIONS_SUPPORTED?=	60 51
+RM_VERSIONS_SUPPORTED?=	60 61 51
 
 RM_VERSION?=	# empty
 RM_VER?=	# empty
+
+.if defined(RM_VERSION_REQD)
+.  for rv in ${RM_VERSIONS_SUPPORTED}
+.    if "${rv}" == "${RM_VERSION_REQD}"
+RM_VER:=	${rv}
+.    endif
+.  endfor
+.endif
 
 .if ${RM_VERSION} == ""
 .  for rv in ${RM_VERSIONS_SUPPORTED}
