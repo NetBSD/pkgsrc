@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/12/14 11:15:07 taca Exp $
+# $NetBSD: Makefile,v 1.5 2026/02/11 07:49:58 taca Exp $
 
 DISTNAME=	actionpack-xml_parser-2.0.1
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/actionpack/actionpack${RUBY_RAILS}/}
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,12 +8,16 @@ HOMEPAGE=	http://www.rubyonrails.org/
 COMMENT=	XML parameters parser for Action Pack (removed from core in Rails 4.0)
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_ACTIONPACK_DEPENDS}
-DEPENDS+=	${RUBY_RAILTIES_DEPENDS}
+
+# This pacakge is assumed to used by redmine51, redmine60 and redmine61.
+# To shared by multiple rails, omit dependency here.
+#DEPENDS+=	${RUBY_ACTIONPACK_DEPENDS}
+#DEPENDS+=	${RUBY_RAILTIES_DEPENDS}
+#RUBY_RAILS_ACCEPTED=	61 72
+
+CONFLICTS+=	${RUBY_PKGPREFIX}-actionpack[67][0-2]-xml_parser-[0-9]*
 
 USE_LANGUAGES=	# none
-
-RUBY_RAILS_ACCEPTED=	61 72
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
