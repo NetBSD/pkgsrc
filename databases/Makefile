@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.743 2026/02/03 14:45:44 taca Exp $
+# $NetBSD: Makefile,v 1.744 2026/02/11 07:37:23 taca Exp $
 
 COMMENT=	Databases
 
@@ -497,6 +497,7 @@ SUBDIR+=	ruby-tokyocabinet
 SUBDIR+=	ruby-tokyotyrant
 SUBDIR+=	ruby-vapor
 SUBDIR+=	ruby-with_advisory_lock
+SUBDIR+=	ruby-with_advisory_lock53
 SUBDIR+=	sdbm
 SUBDIR+=	shared-mime-info
 SUBDIR+=	slony1
