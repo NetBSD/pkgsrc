@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1057 2026/02/11 08:45:55 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1058 2026/02/11 08:48:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1398,3 +1398,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/rspamd to 3.14.3 [taca 2026-02-11]
 	Updated misc/ruby-sprockets to 4.2.2nb1 [taca 2026-02-11]
 	Downgraded net/ruby-net-imap to 0.5.13 [taca 2026-02-11]
+	Updated www/ruby-actionpack61 to 6.1.7.10nb1 [taca 2026-02-11]
