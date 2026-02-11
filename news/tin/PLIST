@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/01/15 15:48:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/02/11 12:28:53 micha Exp $
 bin/metamutt
 bin/opt-case.pl
 bin/rtin
@@ -22,6 +22,7 @@ ${PLIST.nls}share/locale/en_GB/LC_MESSAGES/tin.mo
 ${PLIST.nls}share/locale/es/LC_MESSAGES/tin.mo
 ${PLIST.nls}share/locale/et/LC_MESSAGES/tin.mo
 ${PLIST.nls}share/locale/fr/LC_MESSAGES/tin.mo
+${PLIST.nls}share/locale/ro/LC_MESSAGES/tin.mo
 ${PLIST.nls}share/locale/ru/LC_MESSAGES/tin.mo
 ${PLIST.nls}share/locale/sv/LC_MESSAGES/tin.mo
 ${PLIST.nls}share/locale/tr/LC_MESSAGES/tin.mo
