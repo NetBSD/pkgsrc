@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1064 2026/02/11 09:27:02 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1065 2026/02/11 12:31:06 micha Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1407,3 +1407,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-immutabledict to 4.3.0 [adam 2026-02-11]
 	Updated www/squid7 to 7.4 [taca 2026-02-11]
 	Updated www/typo3-13 to 13.4.25 [taca 2026-02-11]
+	Updated news/tin to 2.6.5 [micha 2026-02-11]
