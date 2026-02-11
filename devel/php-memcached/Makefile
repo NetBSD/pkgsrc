@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2026/01/08 14:17:47 taca Exp $
+# $NetBSD: Makefile,v 1.15 2026/02/11 08:26:14 taca Exp $
 #
 
 MODNAME=		memcached
@@ -12,7 +12,7 @@ LICENSE=		php
 
 CONFLICTS=		php-memcached-[0-9]*
 
-PHP_VERSIONS_ACCEPTED=	74 82 83 84
+PHP_VERSIONS_ACCEPTED=	74 82 83 84 85
 
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
