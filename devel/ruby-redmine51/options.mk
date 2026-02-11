@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2024/11/06 16:21:18 taca Exp $
+# $NetBSD: options.mk,v 1.4 2026/02/11 07:50:27 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.redmine51
 
@@ -16,6 +16,7 @@ PLIST_VARS+=			unicorn
 ###
 .if !empty(PKG_OPTIONS:Mmysql)
 DEPENDS+=	${RUBY_PKGPREFIX}-mysql2>=0.5.0<0.6:../../databases/ruby-mysql2
+DEPENDS+=	${RUBY_PKGPREFIX}-with_advisory_lock53>=5.3.0<6:../../databases/ruby-with_advisory_lock53
 .elif !empty(PKG_OPTIONS:Mpgsql)
 DEPENDS+=	${RUBY_PKGPREFIX}-pg>=1.5.3<2.0:../../databases/ruby-pg
 .elif !empty(PKG_OPTIONS:Msqlite3)
