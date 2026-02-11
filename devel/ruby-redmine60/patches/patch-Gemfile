@@ -1,4 +1,4 @@
-$NetBSD: patch-Gemfile,v 1.5 2026/01/18 15:51:11 taca Exp $
+$NetBSD: patch-Gemfile,v 1.6 2026/02/11 07:51:14 taca Exp $
 
 * Relax dependency.
 * Do not load gem for developemt and test.
@@ -75,3 +75,19 @@ $NetBSD: patch-Gemfile,v 1.5 2026/01/18 15:51:11 taca Exp $
        when /sqlserver/
          gem 'tiny_tds', '~> 2.1.2'
          gem 'activerecord-sqlserver-adapter', '~> 7.2.0'
+@@ -94,6 +94,7 @@ group :development, :test do
+   gem 'debug'
+ end
+ 
++if false
+ group :development do
+   gem 'listen', '~> 3.3'
+   gem 'yard', require: false
+@@ -118,6 +119,7 @@ group :test do
+   # `bin/rails test` fails at startup with minitest >= 6.0
+   gem 'minitest', '< 6.0'
+ end
++end
+ 
+ local_gemfile = File.join(File.dirname(__FILE__), "Gemfile.local")
+ if File.exist?(local_gemfile)

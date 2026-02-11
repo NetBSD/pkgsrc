@@ -1,7 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2024/12/13 17:19:28 taca Exp $
+$NetBSD: README-pkgsrc,v 1.1 2026/02/11 07:51:14 taca Exp $
 
 To use Redmine with nginx, you will need to perform the following steps.
+For more information, please refer
+<https://www.redmine.org/projects/redmine/wiki/RedmineInstall>.
 
 1. If you want to use with MySQL server (by default), install
    databases/mysql80-* (or mariadb) and enable it.
@@ -19,12 +21,12 @@ To use Redmine with nginx, you will need to perform the following steps.
 	> grant all privileges on redmine_development.* to 'redmine'@'localhost';
 
 4. Set the database password for the redmine and redmine_development databases
-     in ${PREFIX}/${RM_DIR}/config/database.yml;
+   in @PREFIX@/@RM_DIR@/config/database.yml;
 
 5. Create secret token and write to
-     ${PREFIX}/${RM_DIR}/config/configuration.yml
+   @PREFIX@/@RM_DIR@/config/configuration.yml
 
-	# redmine${RM_VER}_generate_secret_token${RUBY_SUFFIX}.sh
+	# redmine@RM_VER@_generate_secret_token@RUBY_SUFFIX@.sh
 	# vi config/configuration.yml
 	  [...]
 	  secret_token: 'YOUR_SECRET_KEY'
@@ -32,20 +34,20 @@ To use Redmine with nginx, you will need to perform the following steps.
 
 6. Import some data to Redmine database, select your locale, and migrate the DB:
 
-	# redmine${RM_VER}_migrate_db${RUBY_SUFFIX}.sh
+	# redmine@RM_VER@_migrate_db@RUBY_SUFFIX@.sh
 
 7. Setup nginx.
 
-	# vi ${PREFIX}/etc/nginx/nginx.conf
+	# vi @PREFIX@/etc/nginx/nginx.conf
 	http {
 	upstream unicorn_redmine {
-		server unix:${PREFIX}/${RM_DIR}/unicorn.redmine.sock fail_timeout=0;
+		server unix:@PREFIX@/@RM_DIR@/unicorn.redmine.sock fail_timeout=0;
 	}
 	server {
 	listen       80;
 	server_name  localhost;
 
-	root ${PREFIX}/${RM_DIR};
+	root @PREFIX@/@RM_DIR@;
 	try_files $uri @unicorn_redmine;
 
 	location @unicorn_redmine {
@@ -61,11 +63,11 @@ To use Redmine with nginx, you will need to perform the following steps.
 
 8. Start Redmine with Unicorn.
 
-	# ${RCD_SCRIPTS_DIR}/redmine${RM_VER}_unicorn${RUBY_SUFFIX} start
+	# @RCD_SCRIPTS_DIR@/redmine@RM_VER@_unicorn@RUBY_SUFFIX@ start
 
 9. Start nginx.
 
-	# ${RCD_SCRIPTS_DIR}/nginx start
+	# @RCD_SCRIPTS_DIR@/nginx start
 
 10. Access Redmine with username: admin and password: admin.
 ===========================================================================
