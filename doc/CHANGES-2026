@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1059 2026/02/11 08:49:56 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1060 2026/02/11 08:50:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1400,3 +1400,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Downgraded net/ruby-net-imap to 0.5.13 [taca 2026-02-11]
 	Updated www/ruby-actionpack61 to 6.1.7.10nb1 [taca 2026-02-11]
 	Updated www/ruby-actionpack72 to 7.2.3nb1 [taca 2026-02-11]
+	Updated www/ruby-actionpack80 to 8.0.4nb1 [taca 2026-02-11]
