@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1071 2026/02/11 17:12:40 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.1072 2026/02/11 20:21:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1415,3 +1415,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/py-alembic to 1.18.4 [adam 2026-02-11]
 	Updated databases/ruby-odbc to 0.999992nb1 [taca 2026-02-11]
 	Updated net/megacmd to 2.4.0 [kikadf 2026-02-11]
+	Updated lang/nodejs24 to 24.13.1 [adam 2026-02-11]
+	Updated lang/nodejs to 25.6.1 [adam 2026-02-11]
