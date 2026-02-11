@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2022/03/07 16:18:24 nia Exp $
+# $NetBSD: Makefile.common,v 1.18 2026/02/11 01:20:29 gutteridge Exp $
 #
 # Common infrastructure for NetBSD compat* packages.
 #
@@ -9,24 +9,14 @@
 # used by emulators/compat13/Makefile
 # used by emulators/compat14/Makefile
 # used by emulators/compat15-extras/Makefile
-# used by emulators/compat15-extras/Makefile
-# used by emulators/compat15/Makefile
 # used by emulators/compat15/Makefile
 # used by emulators/compat16-extras/Makefile
-# used by emulators/compat16-extras/Makefile
-# used by emulators/compat16/Makefile
 # used by emulators/compat16/Makefile
 # used by emulators/compat20-extras/Makefile
-# used by emulators/compat20-extras/Makefile
-# used by emulators/compat20/Makefile
 # used by emulators/compat20/Makefile
 # used by emulators/compat30-extras/Makefile
-# used by emulators/compat30-extras/Makefile
-# used by emulators/compat30/Makefile
 # used by emulators/compat30/Makefile
 # used by emulators/compat40-extras/Makefile
-# used by emulators/compat40-extras/Makefile
-# used by emulators/compat40/Makefile
 # used by emulators/compat40/Makefile
 # used by emulators/compat50-x11/Makefile
 # used by emulators/compat50/Makefile
