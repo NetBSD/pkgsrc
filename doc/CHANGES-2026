@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1052 2026/02/11 08:08:37 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1053 2026/02/11 08:19:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1393,3 +1393,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ruby-kramdown-rfc2629 to 1.7.31 [taca 2026-02-11]
 	Updated www/ruby-aws-partitions to 1.1213.0 [taca 2026-02-11]
 	Updated www/ruby-faraday to 2.14.1 [taca 2026-02-11]
+	Updated www/fengoffice to 3.11.13.11 [taca 2026-02-11]
