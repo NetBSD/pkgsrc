@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1072 2026/02/11 20:21:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1073 2026/02/11 20:36:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1417,3 +1417,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/megacmd to 2.4.0 [kikadf 2026-02-11]
 	Updated lang/nodejs24 to 24.13.1 [adam 2026-02-11]
 	Updated lang/nodejs to 25.6.1 [adam 2026-02-11]
+	Updated devel/abseil to 20260107.1 [adam 2026-02-11]
+	Updated security/vaultwarden to 1.35.3 [adam 2026-02-11]
