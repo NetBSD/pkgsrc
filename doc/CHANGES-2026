@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1067 2026/02/11 13:21:28 micha Exp $
+$NetBSD: CHANGES-2026,v 1.1068 2026/02/11 13:35:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1411,3 +1411,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-pypiserver to 2.4.1 [adam 2026-02-11]
 	Updated xlockmore to 5.88 [micha 2026-02-11]
 	Updated xlockmore-lite to 5.88 [micha 2026-02-11]
+	Updated math/py-arviz to 0.23.4 [adam 2026-02-11]
+	Updated databases/py-alembic to 1.18.4 [adam 2026-02-11]
