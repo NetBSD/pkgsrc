@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1042 2026/02/11 06:37:48 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1043 2026/02/11 07:28:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1381,3 +1381,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/argyllcms to 3.5.0 [jakllsch 2026-02-11]
 	Added devel/ruby-ast version 2.4.3 [taca 2026-02-11]
 	Updated devel/ruby-parser to 3.22.0nb1 [taca 2026-02-11]
+	Added devel/ruby-tsort version 0.2.0 [taca 2026-02-11]
