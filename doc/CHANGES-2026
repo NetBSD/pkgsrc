@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1040 2026/02/11 02:41:26 jakllsch Exp $
+$NetBSD: CHANGES-2026,v 1.1041 2026/02/11 06:36:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1379,3 +1379,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-cryptography to 46.0.5 [wiz 2026-02-10]
 	Updated security/py-cryptography_vectors to 46.0.5 [wiz 2026-02-10]
 	Updated graphics/argyllcms to 3.5.0 [jakllsch 2026-02-11]
+	Added devel/ruby-ast version 2.4.3 [taca 2026-02-11]
