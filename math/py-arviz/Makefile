@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2026/01/19 08:36:12 adam Exp $
+# $NetBSD: Makefile,v 1.23 2026/02/11 13:32:21 adam Exp $
 
-DISTNAME=	arviz-0.23.1
+DISTNAME=	arviz-0.23.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/arviz/}
@@ -11,9 +11,11 @@ COMMENT=	Exploratory analysis of Bayesian models
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-h5netcdf>=1.0.2:../../devel/py-h5netcdf
+DEPENDS+=	${PYPKGPREFIX}-h5py-[0-9]*:../../devel/py-h5py
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.8:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.26.0:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-platformdirs-[0-9]*:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-pandas>=2.1.0:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.11.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
