@@ -1,20 +1,21 @@
-$NetBSD: patch-Gemfile,v 1.7 2025/03/16 12:38:01 taca Exp $
+$NetBSD: patch-Gemfile,v 1.8 2026/02/11 07:50:27 taca Exp $
 
 * Relax dependency.
 * Do not load gem for developemt and test.
 
---- Gemfile.orig	2025-03-10 23:30:03.000000000 +0000
+--- Gemfile.orig	2026-01-06 02:25:01.000000000 +0000
 +++ Gemfile
-@@ -2,7 +2,7 @@ source 'https://rubygems.org'
+@@ -2,19 +2,19 @@ source 'https://rubygems.org'
  
  ruby '>= 2.7.0', '< 3.3.0'
  
 -gem 'rails', '6.1.7.10'
-+gem 'rails', '~>6.1.7,>=6.1.7.10'
- gem 'rouge', '~> 4.2.0'
+-gem 'rouge', '~> 4.2.0'
++gem 'rails', '~> 6.1.7', '>= 6.1.7.10'
++gem 'rouge', '~> 4.2'
  gem 'request_store', '~> 1.5.0'
  gem 'mini_mime', '~> 1.1.0'
-@@ -10,7 +10,7 @@ gem "actionpack-xml_parser"
+ gem "actionpack-xml_parser"
  gem 'roadie-rails', '~> 3.1.0'
  gem 'marcel'
  gem 'mail', '~> 2.8.1'
@@ -23,6 +24,11 @@ $NetBSD: patch-Gemfile,v 1.7 2025/03/16 12:38:01 taca Exp $
  gem 'i18n', '~> 1.14.1'
  gem 'rbpdf', '~> 1.21.3'
  gem 'addressable'
+-gem 'rubyzip', '~> 2.3.0'
++gem 'rubyzip', '~> 2.4.0'
+ 
+ #  Ruby Standard Gems
+ gem 'csv', '~> 3.2.6'
 @@ -31,17 +31,17 @@ gem 'rotp', '>= 5.0.0'
  gem 'rqrcode'
  
@@ -44,6 +50,15 @@ $NetBSD: patch-Gemfile,v 1.7 2025/03/16 12:38:01 taca Exp $
  end
  
  # Optional Markdown support
+@@ -52,7 +52,7 @@ end
+ # Optional CommonMark support, not for JRuby
+ group :common_mark do
+   gem "commonmarker", '~> 0.23.8'
+-  gem 'deckar01-task_list', '2.3.2'
++  gem 'deckar01-task_list', '~> 2.3.2'
+ end
+ 
+ # Include database gems for the adapters found in the database
 @@ -80,7 +80,7 @@ if File.exist?(database_file)
        when /postgresql/
          gem 'pg', '~> 1.5.3', :platforms => [:mri, :mingw, :x64_mingw]
@@ -61,3 +76,11 @@ $NetBSD: patch-Gemfile,v 1.7 2025/03/16 12:38:01 taca Exp $
  group :development do
    gem 'listen', '~> 3.3'
    gem "yard"
+@@ -122,6 +123,7 @@ group :test do
+   # `bin/rails test` fails at startup with minitest >= 6.0
+   gem 'minitest', '< 6.0'
+ end
++end
+ 
+ local_gemfile = File.join(File.dirname(__FILE__), "Gemfile.local")
+ if File.exist?(local_gemfile)

@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: INSTALL,v 1.1 2023/11/29 16:10:19 taca Exp $
+# $NetBSD: INSTALL,v 1.2 2026/02/11 07:50:27 taca Exp $
 
 WWWGRP="@WWWGRP@"
 WWWOWN="@WWWOWN@"
@@ -9,6 +9,8 @@ RM_DIR="@PREFIX@/@RM_DIR@"
 case "${STAGE}" in
 POST-INSTALL)
 	cd ${RM_DIR} &&
+		bundle@RUBY_SUFFIX@ config \
+			set --local without 'development test'
 		${CHOWN} -R ${WWWOWN} ${RM_DIR}
 		${CHGRP} -R ${WWWGRP} ${RM_DIR}
 	;;
