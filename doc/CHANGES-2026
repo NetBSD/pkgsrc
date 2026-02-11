@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1062 2026/02/11 09:13:51 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1063 2026/02/11 09:18:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1405,3 +1405,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-parse to 1.21.0 [adam 2026-02-11]
 	Updated databases/py-tortoise-orm to 1.0.0 [adam 2026-02-11]
 	Updated devel/py-immutabledict to 4.3.0 [adam 2026-02-11]
+	Updated www/squid7 to 7.4 [taca 2026-02-11]
