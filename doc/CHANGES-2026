@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1050 2026/02/11 08:04:47 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1051 2026/02/11 08:06:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1391,3 +1391,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/ruby-redmine61 version 6.1.1 [taca 2026-02-11]
 	Updated devel/ruby-google-protobuf to 4.33.5 [taca 2026-02-11]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.7.31 [taca 2026-02-11]
+	Updated www/ruby-aws-partitions to 1.1213.0 [taca 2026-02-11]
