@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/05/16 19:43:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/02/11 17:04:10 kikadf Exp $
 bin/mega-attr
 bin/mega-backup
 bin/mega-cancel
@@ -6,6 +6,7 @@ bin/mega-cat
 bin/mega-cd
 bin/mega-cmd
 bin/mega-cmd-server
+bin/mega-configure
 bin/mega-confirm
 bin/mega-confirmcancel
 bin/mega-cp
