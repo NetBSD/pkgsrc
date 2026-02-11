@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/07/16 10:58:02 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/02/11 09:18:49 taca Exp $
 libexec/basic_db_auth
 libexec/basic_fake_auth
 ${PLIST.ba_getpwnam}libexec/basic_getpwnam_auth
@@ -43,6 +43,7 @@ man/man8/squid.8
 man/man8/storeid_file_rewrite.8
 man/man8/url_lfs_rewrite.8
 sbin/squid
+share/doc/squid/README-pkgsrc
 share/examples/squid/errorpage.css
 share/examples/squid/mime.conf
 share/examples/squid/squid.conf
