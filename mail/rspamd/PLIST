@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2025/12/09 14:07:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.40 2026/02/11 08:35:14 taca Exp $
 bin/rspamadm
 bin/rspamadm-${PKGVERSION}
 bin/rspamc
@@ -360,6 +360,7 @@ share/rspamd/rules/regexp/upstream_spam_filters.lua
 share/rspamd/rules/regexp/urls.lua
 share/rspamd/rules/rspamd.lua
 share/rspamd/rules/subject_checks.lua
+share/rspamd/www/ARCHITECTURE.md
 share/rspamd/www/README.md
 share/rspamd/www/apple-touch-icon.png
 share/rspamd/www/browserconfig.xml
