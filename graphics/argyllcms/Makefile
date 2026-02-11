@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/09/14 17:22:41 jakllsch Exp $
+# $NetBSD: Makefile,v 1.9 2026/02/11 02:41:15 jakllsch Exp $
 
-DISTNAME=	Argyll_V3.4.1_src
+DISTNAME=	Argyll_V3.5.0_src
 PKGNAME=	${DISTNAME:S/_V/cms-/:S/_src$//:tl}
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.argyllcms.com/
@@ -22,6 +22,8 @@ PKGCONFIG_OVERRIDE+=	zlib/zlib.pc.in
 
 TOOL_DEPENDS+=	jam>=2.5.2:../../devel/jam
 
+INSTALLATION_DIRS+=	share/metainfo
+
 do-build:
 	cd ${WRKSRC} && ${SETENV} DESTDIR=${DESTDIR} PREFIX=${PREFIX} \
 		REFSUBDIR=share/argyll/ref \
@@ -33,7 +35,6 @@ do-install:
 		${MAKE_ENV} jam -q -fJambase ${_MAKE_JOBS} install
 	${MV} ${DESTDIR}${PREFIX}/bin/License.txt \
 		${DESTDIR}${PREFIX}/share/argyll/
-	${MKDIR} ${DESTDIR}${PREFIX}/share/metainfo
 	${MV} ${DESTDIR}${PREFIX}/bin/com.argyllcms.metainfo.xml \
 		${DESTDIR}${PREFIX}/share/metainfo/
 
@@ -49,5 +50,6 @@ do-install:
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

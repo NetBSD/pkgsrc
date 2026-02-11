@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.5 2025/09/14 17:22:41 jakllsch Exp $
+$NetBSD: distinfo,v 1.6 2026/02/11 02:41:15 jakllsch Exp $
 
-BLAKE2s (Argyll_V3.4.1_src.zip) = 60e9c14aba39588a6d668609fb7705ee27745527a97ae920d71e935c61f6a16c
-SHA512 (Argyll_V3.4.1_src.zip) = c2671fc67263a115c81014feeaf29af6197a9dc564b66a769e776c60ae29e1dfef773ee340c5bfcc04a85b007b92eafedb1eb95e600388643438dacdf7752d8d
-Size (Argyll_V3.4.1_src.zip) = 14810106 bytes
+BLAKE2s (Argyll_V3.5.0_src.zip) = f085f99e73060025bec1f54911290f1aa9d3f90b553ae6680470915ba5b3bb0c
+SHA512 (Argyll_V3.5.0_src.zip) = c0a995c090b44d3981cfed541140ae3422ea5ebaa8d5e3d4c3c71599b527b8808e17f037283b08b4c10ad6f48976b5f48e9c6802355a6940a52682020e820b17
+Size (Argyll_V3.5.0_src.zip) = 15352322 bytes
+SHA1 (patch-Jamfile) = fe1d1851cd40da71de7efb2676592c20b18fae4d
 SHA1 (patch-Jamtop) = b2df031cea2ac829e18d52033a469f1fbe1bef93
-SHA1 (patch-spectro_Jamfile) = 1e40d46df292dc73b55163c66e7bb4c7f89acf19
-SHA1 (patch-spectro_hidio.c) = bf61035b9ccca00a4da4af717db26c9f3048fe78
-SHA1 (patch-spectro_hidio.h) = cdf6600dd0c346fcc1e6b2d514e8a488dc3c771f
+SHA1 (patch-spectro_Jamfile) = 8800444d05bbabdc58b62982abf3f5a1ef7d817e
+SHA1 (patch-spectro_hidio.c) = 84d6208bd6e6b5db29a748b72ec6d197d68dd500
+SHA1 (patch-spectro_hidio.h) = abc6ae2dbb522acc5860e36671ccf46d66ef3883
 SHA1 (patch-spectro_icoms__ux.c) = d37ef6b64805e1fa3919cedf9a1c39f696612494
 SHA1 (patch-spectro_usbio.c) = 762d01c3dd65c27605e2abfb3cfc957bef1ba8e5
-SHA1 (patch-spectro_usbio__bsd.c) = 981ec261cb29eae14a1c1d11a06ccbcf6bc7ea4b
+SHA1 (patch-spectro_usbio__bsd.c) = c55d9a8a42bdfa64acde1b7d9368f1e02eba6e2a
