@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2026/02/06 10:05:06 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2026/02/11 07:39:11 wiz Exp $
 
 DISTNAME=	tango-icon-theme-0.8.90
 PKGREVISION=	82
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://tango.freedesktop.org/releases/
 
 MAINTAINER=	dieter.NetBSD@pandora.be
-HOMEPAGE=	https://tango.freedesktop.org/Tango_Desktop_Project
+#HOMEPAGE=	https://tango.freedesktop.org/Tango_Desktop_Project
 COMMENT=	Tango desktop project icon theme
 LICENSE=	public-domain
 
