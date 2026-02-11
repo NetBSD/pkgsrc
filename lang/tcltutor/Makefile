@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/10/07 14:37:34 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2026/02/11 07:42:24 wiz Exp $
 
 DISTNAME=	tcltutor30b7
 PKGNAME=	${DISTNAME:S/tcltutor/tcltutor-/}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_OPENBSD:=distfiles/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	kamil@NetBSD.org
-HOMEPAGE=	http://www.msen.com/~clif/TclTutor.html
+#HOMEPAGE=	http://www.msen.com/~clif/TclTutor.html
 COMMENT=	Learn Tcl interactively
 LICENSE=	isc
 
