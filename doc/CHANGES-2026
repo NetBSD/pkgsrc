@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1047 2026/02/11 07:51:29 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1048 2026/02/11 07:54:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1388,3 +1388,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added databases/ruby-with_advisory_lock53 version 5.3.0 [taca 2026-02-11]
 	Updated devel/ruby-redmine51 to 5.1.11nb1 [taca 2026-02-11]
 	Updated devel/ruby-redmine60 to 6.0.8nb1 [taca 2026-02-11]
+	Added devel/ruby-redmine61 version 6.1.1 [taca 2026-02-11]
