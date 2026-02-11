@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/02/28 10:37:22 hauke Exp $
+# $NetBSD: Makefile,v 1.4 2026/02/11 07:41:41 wiz Exp $
 
 DISTNAME=	HP-15C_4.5.00_Source
 PKGNAME=	tcl-hp-15c-${PKGVER}
@@ -8,7 +8,7 @@ MASTER_SITES=	-https://bit.ly/3ksi3SI
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	hauke@NetBSD.org
-HOMEPAGE=	http://hp-15c.homepage.t-online.de/
+#HOMEPAGE=	http://hp-15c.homepage.t-online.de/
 COMMENT=	Simulated HP-15C RPN calculator
 LICENSE=	gnu-gpl-v3
 
