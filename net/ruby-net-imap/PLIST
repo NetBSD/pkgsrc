@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2026/02/03 15:32:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/02/11 08:44:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/BSDL
 ${GEM_LIBDIR}/COPYING
@@ -17,6 +17,7 @@ ${GEM_LIBDIR}/lib/net/imap/config/attr_type_coercion.rb
 ${GEM_LIBDIR}/lib/net/imap/config/attr_version_defaults.rb
 ${GEM_LIBDIR}/lib/net/imap/connection_state.rb
 ${GEM_LIBDIR}/lib/net/imap/data_encoding.rb
+${GEM_LIBDIR}/lib/net/imap/data_lite.rb
 ${GEM_LIBDIR}/lib/net/imap/deprecated_client_options.rb
 ${GEM_LIBDIR}/lib/net/imap/errors.rb
 ${GEM_LIBDIR}/lib/net/imap/esearch_result.rb
