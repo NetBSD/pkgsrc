@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1074 2026/02/12 06:24:30 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1075 2026/02/12 08:02:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1420,3 +1420,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/abseil to 20260107.1 [adam 2026-02-11]
 	Updated security/vaultwarden to 1.35.3 [adam 2026-02-11]
 	Updated graphics/py-Pillow to 12.1.1 [wiz 2026-02-12]
+	Updated security/seahorse to 47.0.1 [wiz 2026-02-12]

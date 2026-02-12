@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26789 2026/02/11 17:25:36 wiz Exp $
+$NetBSD: TODO,v 1.26790 2026/02/12 08:02:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -388,7 +388,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-25.2.7 [wip]
-	o MesaLib-25.3.5
+	o MesaLib-26.0
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o PageEdit-2.7.0
@@ -1003,6 +1003,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o openmpi-5.0.5
 	o openmw-0.50.0
 	o openslp-2.0.0
+	o openvpn-2.7
 	o openxenmanager-0.83
 	o opera-26
 	o or1k-none-elf-binutils-2.36.1
@@ -1129,6 +1130,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-grpcio-1.78.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
+	o py-llvmlite-0.46.0
 	o py-omniORBpy-3.7
 	o py-pandas-3.0.0
 	o py-pdf-parser-0.7.4
