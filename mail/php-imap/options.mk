@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2018/02/16 22:22:58 jdolecek Exp $
+# $NetBSD: options.mk,v 1.2 2026/02/12 02:34:00 gutteridge Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--with-kerberos
 
 # Imap extension's config.m4 calls m4 macro PHP_SETUP_OPENSSL() which
 # expects PHP_ARG_WITH(openssl, ...) being called beforehand so that
-# PHP_OPENSSL is set. For a self contained extension build like for
+# PHP_OPENSSL is set. For a self-contained extension build like for
 # this package this is not the case of course.
 CONFIGURE_ENV.SunOS+=	PHP_OPENSSL=yes
 CONFIGURE_ENV.*+=	PHP_OPENSSL=${SSLBASE:Q}
