@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.205 2026/01/27 08:40:31 wiz Exp $
+# $NetBSD: Makefile,v 1.206 2026/02/12 08:02:14 wiz Exp $
 
-DISTNAME=	seahorse-3.38.0.1
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/3.38/}
-PKGREVISION=	38
+DISTNAME=	seahorse-47.0.1
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R:R}/}
 CATEGORIES=	security gnome
 EXTRACT_SUFX=	.tar.xz
 
@@ -11,11 +10,14 @@ HOMEPAGE=	https://wiki.gnome.org/Apps/Seahorse
 COMMENT=	GNOME encryption interface
 LICENSE=	gnu-gpl-v2
 
+# detects binary at configure time
+TOOL_DEPENDS+=	desktop-file-utils-[0-9]*:../../sysutils/desktop-file-utils
+
 USE_TOOLS+=	pkg-config msgfmt xgettext itstool
 USE_TOOLS+=	gdbus-codegen
 
 # Why does it want specific point releases?
-MESON_ARGS+=	-Dcheck-compatible-gpg=false
+#MESON_ARGS+=	-Dcheck-compatible-gpg=false
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
@@ -28,7 +30,7 @@ PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../lang/python/tool.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
-.include "../../net/libsoup/buildlink3.mk"
+.include "../../net/libsoup3/buildlink3.mk"
 .include "../../security/gcr/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../security/libpwquality/buildlink3.mk"
