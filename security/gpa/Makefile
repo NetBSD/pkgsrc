@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.80 2026/02/12 08:15:03 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2026/02/12 11:52:43 wiz Exp $
 
-DISTNAME=	gpa-0.11.0
+DISTNAME=	gpa-0.11.1
 CATEGORIES=	security x11
 MASTER_SITES=	${MASTER_SITE_GNUPG:=gpa/}
 EXTRACT_SUFX=	.tar.bz2
