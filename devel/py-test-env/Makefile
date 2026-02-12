@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/10/23 15:00:04 adam Exp $
+# $NetBSD: Makefile,v 1.13 2026/02/12 11:06:55 adam Exp $
 
-DISTNAME=	pytest_env-1.2.0
+DISTNAME=	pytest_env-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-env/}
@@ -11,17 +11,18 @@ COMMENT=	Plugin for py.test that allows you to add environment variables
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.5:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-test>=8.4.2:../../devel/py-test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.28:../../devel/py-hatchling
+DEPENDS+=	${PYPKGPREFIX}-dotenv>=1.2.1:../../devel/py-dotenv
+DEPENDS+=	${PYPKGPREFIX}-test>=9.0.2:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-covdefaults>=2.3:../../devel/py-covdefaults
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7.10.7:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7.13.4:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.15.1:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=2.0.1:../../textproc/py-tomli
+DEPENDS+=	${PYPKGPREFIX}-tomli>=2.4:../../textproc/py-tomli
 .endif
 
 .include "../../lang/python/wheel.mk"
