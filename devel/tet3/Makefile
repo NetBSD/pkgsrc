@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.34 2022/06/28 11:33:44 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/02/12 08:19:16 wiz Exp $
 
 DISTNAME=	tet3.7-unsup.src
 PKGNAME=	tet3-3.7
 PKGREVISION=	12
 CATEGORIES=	devel
-MASTER_SITES=	http://tetworks.opengroup.org/tet/
+MASTER_SITES=	https://tetworks.opengroup.org/tet/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tetworks.opengroup.org/
+HOMEPAGE=	https://tetworks.opengroup.org/
 COMMENT=	The Open Group test harness
 LICENSE=	artistic
 
