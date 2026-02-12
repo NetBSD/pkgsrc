@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1079 2026/02/12 11:31:41 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1080 2026/02/12 11:52:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1429,3 +1429,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-test-httpserver to 1.1.4 [adam 2026-02-12]
 	Updated databases/py-mysqlclient to 2.2.8 [adam 2026-02-12]
 	Updated www/py-gunicorn to 25.0.3 [adam 2026-02-12]
+	Updated security/gpa to 0.11.1 [wiz 2026-02-12]
