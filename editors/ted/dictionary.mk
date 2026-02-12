@@ -1,4 +1,4 @@
-# $NetBSD: dictionary.mk,v 1.1 2022/05/19 13:32:47 nia Exp $
+# $NetBSD: dictionary.mk,v 1.2 2026/02/12 08:16:49 wiz Exp $
 
 DISTNAME=	ted_${LANGCODE}-2.23-1.noarch
 PKGNAME=	ted-${PKG_LANGCODE}-2.23
@@ -7,7 +7,7 @@ MASTER_SITES=	https://ftp.nluug.nl/pub/editors/ted/
 EXTRACT_SUFX=	.rpm
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.nllgg.nl/Ted/
+HOMEPAGE=	https://ftp.nluug.nl/pub/editors/ted/
 COMMENT=	${LANGNAME} spelling dictionary for the Ted word processor
 LICENSE=	gnu-gpl-v2
 
