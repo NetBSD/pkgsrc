@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/11/03 05:15:27 taca Exp $
+# $NetBSD: Makefile,v 1.2 2026/02/12 07:33:50 taca Exp $
 
 DISTNAME=	commonmarker-0.23.12
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/commonmarker/&0/}
@@ -12,6 +12,10 @@ LICENSE=	mit
 OVERRIDE_GEMSPEC+=	:executables commonmarker=commonmarker0 \
 			:files bin/commonmarker=bin/commonmarker0
 RUBYGEM_OPTIONS+=	--format-executable
+
+# This packages is for ruby-redmine50 and ruby-redmine60 and they are
+# not support by ruby40.
+RUBY_VERSIONS_ACCEPTED=	32 33 34
 
 pre-configure:
 	${TEST} -f ${WRKSRC}/bin/commonmarker0 || \
