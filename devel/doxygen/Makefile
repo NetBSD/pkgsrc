@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.204 2026/02/05 08:39:50 mef Exp $
+# $NetBSD: Makefile,v 1.205 2026/02/12 01:25:08 gutteridge Exp $
 
 DISTNAME=	doxygen-1.16.1.src
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://doxygen.nl/files/
 
@@ -22,10 +23,6 @@ USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake gs:run perl:run bison flex
 
-# if gcc version is 7.5, we will have
-# g++: error: unrecognized command line option '-Wextra-semi'; did you mean '-Wextra'?
-GCC_REQD+=		10
-
 MAKE_ENV+=		PKGSRC_CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		MAN1DIR=${PKGMANDIR}/man1
 
@@ -34,6 +31,9 @@ CMAKE_CONFIGURE_ARGS+=	-DGIT_EXECUTABLE=git # avoid searching for git executable
 TEST_TARGET=		tests
 
 PYTHON_FOR_BUILD_ONLY=	tool
+
+# GCC < 8 doesn't support -Wextra-semi. 
+BUILDLINK_TRANSFORM+=	rm:-Wextra-semi
 
 # Case Insensitive or Case Sensitive File System
 PLIST_VARS+=		ci cs
