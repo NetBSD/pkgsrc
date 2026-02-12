@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.18 2025/12/29 03:10:14 ktnb Exp $
+$NetBSD: distinfo,v 1.19 2026/02/12 12:55:00 ktnb Exp $
 
 BLAKE2s (kew-3.7.3.tar.gz) = 6d1f8b5190f71dc4ee8622ea3fbd6ec3722e5c585c88cecd0792933870809029
 SHA512 (kew-3.7.3.tar.gz) = 208dc0fdf004d8284f6378d863617f8eec5f8e71b8febafca059964a4db07967ceb56950946c588765e5984d58df89f094e438ff878e53514688289932389432
 Size (kew-3.7.3.tar.gz) = 3540842 bytes
 SHA1 (patch-Makefile) = cfff7938e8b325f20c86bc459e76d0617261b1d2
+SHA1 (patch-src_sys_mpris.c) = 26bfe6d50579a8928e86c28571c27fc468c27bf1
 SHA1 (patch-src_ui_common__ui.c) = ed7add1e11f413a83599ce405040e3d3352c1074
 SHA1 (patch-src_ui_input.c) = dd575b6ef6e7b01d18422e8be47d9cd9d2bb9ebc
