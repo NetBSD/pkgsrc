@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.13 2024/08/22 12:41:59 ryoon Exp $
+$NetBSD: distinfo,v 1.14 2026/02/12 08:15:03 wiz Exp $
 
-BLAKE2s (gpa-0.10.0.tar.bz2) = 9e2143bfa742ccf130697212606df72ca4a16da6673515262e1a8d8e122af66f
-SHA512 (gpa-0.10.0.tar.bz2) = 87004fb0806e76012bc194f95afe9ef6044aec890b26e845f45c314e1bd8864f056ba5e32f9ef2e15b24b50840235e6e548a5e3006b255b4f1c20e0fd7710a3b
-Size (gpa-0.10.0.tar.bz2) = 782455 bytes
-SHA1 (patch-configure) = 930aea9049f7a2fb6d3465f73f79671f2fc3a331
+BLAKE2s (gpa-0.11.0.tar.bz2) = 01daf60132d131d344b5d8ac31df69e945001e4a0bc906c362e04c06315d2f35
+SHA512 (gpa-0.11.0.tar.bz2) = 976c607732ac5558bc00bfd777408605729155773036ac811faf1e528c29567f9f16288aeaa3390fef7b8eaa75ae68a0fe710f8b55d001580a09d7382d33d20d
+Size (gpa-0.11.0.tar.bz2) = 827217 bytes
+SHA1 (patch-src_gpacontext.c) = a9d214baf5fbcd040379fc73fb31ab6b4bccfb8b
+SHA1 (patch-src_gpacontext.h) = 5e48d93735a3dfd93b1da028df27dea66e649a3e
