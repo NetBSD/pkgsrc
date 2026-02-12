@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2025/12/26 16:47:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/02/12 14:07:33 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/src/polymorphic/contrib/drf/LICENSE
 ${PYSITELIB}/polymorphic/__init__.py
 ${PYSITELIB}/polymorphic/__init__.pyc
 ${PYSITELIB}/polymorphic/__init__.pyo
@@ -39,6 +40,13 @@ ${PYSITELIB}/polymorphic/base.pyo
 ${PYSITELIB}/polymorphic/contrib/__init__.py
 ${PYSITELIB}/polymorphic/contrib/__init__.pyc
 ${PYSITELIB}/polymorphic/contrib/__init__.pyo
+${PYSITELIB}/polymorphic/contrib/drf/LICENSE
+${PYSITELIB}/polymorphic/contrib/drf/__init__.py
+${PYSITELIB}/polymorphic/contrib/drf/__init__.pyc
+${PYSITELIB}/polymorphic/contrib/drf/__init__.pyo
+${PYSITELIB}/polymorphic/contrib/drf/serializers.py
+${PYSITELIB}/polymorphic/contrib/drf/serializers.pyc
+${PYSITELIB}/polymorphic/contrib/drf/serializers.pyo
 ${PYSITELIB}/polymorphic/contrib/extra_views.py
 ${PYSITELIB}/polymorphic/contrib/extra_views.pyc
 ${PYSITELIB}/polymorphic/contrib/extra_views.pyo
@@ -69,12 +77,16 @@ ${PYSITELIB}/polymorphic/managers.pyo
 ${PYSITELIB}/polymorphic/models.py
 ${PYSITELIB}/polymorphic/models.pyc
 ${PYSITELIB}/polymorphic/models.pyo
+${PYSITELIB}/polymorphic/py.typed
 ${PYSITELIB}/polymorphic/query.py
 ${PYSITELIB}/polymorphic/query.pyc
 ${PYSITELIB}/polymorphic/query.pyo
 ${PYSITELIB}/polymorphic/query_translate.py
 ${PYSITELIB}/polymorphic/query_translate.pyc
 ${PYSITELIB}/polymorphic/query_translate.pyo
+${PYSITELIB}/polymorphic/related_descriptors.py
+${PYSITELIB}/polymorphic/related_descriptors.pyc
+${PYSITELIB}/polymorphic/related_descriptors.pyo
 ${PYSITELIB}/polymorphic/showfields.py
 ${PYSITELIB}/polymorphic/showfields.pyc
 ${PYSITELIB}/polymorphic/showfields.pyo
