@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.353 2026/02/06 10:05:10 wiz Exp $
+# $NetBSD: Makefile,v 1.354 2026/02/12 01:35:36 gutteridge Exp $
 
 DISTNAME=	rustc-1.91.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -645,7 +645,8 @@ do-install:
 .endif
 
 .if ${MACHINE_PLATFORM:MNetBSD-*-i386}
-# Turn off Address space layout randomization
+USE_TOOLS+=	paxctl
+# Turn off address space layout randomization
 # so that we can build firefox natively:
 post-install:
 	paxctl +a ${DESTDIR}${PREFIX}/bin/rustc
