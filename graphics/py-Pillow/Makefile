@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2026/01/10 15:06:24 rillig Exp $
+# $NetBSD: Makefile,v 1.100 2026/02/12 06:24:22 wiz Exp $
 
-DISTNAME=	pillow-12.1.0
+DISTNAME=	pillow-12.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^p/P/}
-PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pillow/}
 
@@ -25,8 +24,8 @@ CONFLICTS+=	py[0-9]*-imaging-[0-9]*
 
 DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 
-# as of 11.3.0
-# 2 failed, 4934 passed, 88 skipped, 3 xfailed
+# as of 12.1.1
+# 2 failed, 4959 passed, 102 skipped, 3 xfailed
 
 .include "../../lang/python/wheel.mk"
 .include "../../devel/py-pybind11/buildlink3.mk"
