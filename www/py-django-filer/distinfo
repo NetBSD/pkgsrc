@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2025/12/28 14:50:22 adam Exp $
+$NetBSD: distinfo,v 1.22 2026/02/12 14:05:34 adam Exp $
 
-BLAKE2s (django_filer-3.4.1.tar.gz) = 5eb4be71431bd83cbbaf8e0f7e8d285e68d80a02ef9c13cf090f1e284f85ef66
-SHA512 (django_filer-3.4.1.tar.gz) = abe33ec405a06700668d9bcad97071a3dd134ffa4dd58bee3fa47acca227e5e76045c2c54d50bd52f2fbf74f2ad9f21fae5b4eabef1b3bdb4750cfc89762eaa6
-Size (django_filer-3.4.1.tar.gz) = 1112997 bytes
+BLAKE2s (django_filer-3.4.4.tar.gz) = cebebd3f3046291c408828849cb7379ba851de7e8a980e9c5ac1bdf1303cc4fc
+SHA512 (django_filer-3.4.4.tar.gz) = 1f4aec88147d927f2253608cea8eb09f6d1a1a502dee6884961ed93e15dcaffbd4c7c43b07698942f811b64a4cb15f4a7135b1fca936a394fad62b57294f1b28
+Size (django_filer-3.4.4.tar.gz) = 1113129 bytes
