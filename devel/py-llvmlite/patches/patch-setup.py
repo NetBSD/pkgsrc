@@ -1,6 +1,7 @@
-$NetBSD: patch-setup.py,v 1.1 2026/02/12 07:33:48 wiz Exp $
+$NetBSD: patch-setup.py,v 1.2 2026/02/12 07:35:39 wiz Exp $
 
 dry_run flag was removed from setuptools.
+https://github.com/numba/llvmlite/issues/1399
 
 --- setup.py.orig	2026-02-12 07:31:33.741515162 +0000
 +++ setup.py
