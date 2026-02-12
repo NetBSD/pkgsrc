@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2026/02/03 09:17:23 adam Exp $
+# $NetBSD: Makefile,v 1.29 2026/02/12 11:31:11 adam Exp $
 
-DISTNAME=	gunicorn-25.0.1
+DISTNAME=	gunicorn-25.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gunicorn/}
