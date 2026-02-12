@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2026/02/12 07:33:48 wiz Exp $
+$NetBSD: distinfo,v 1.28 2026/02/12 07:35:38 wiz Exp $
 
 BLAKE2s (libunwind-14.0.6.src.tar.xz) = 21da632762db6524a46c1f721908b233265afe83728c1de5dd7757c662db0d99
 SHA512 (libunwind-14.0.6.src.tar.xz) = c8f3804c47ac33273238899e5682f9cb52465dcceff0e0ecf9925469620c6c9a62cc2c708a35a0e156b666e1198df52c5fff1da9d5ee3194605dfd62c296b058
@@ -13,4 +13,4 @@ BLAKE2s (llvmlite-0.43.0.tar.gz) = 379d69e08053b7c6d604a31a396496e9c05ed12899f07
 SHA512 (llvmlite-0.43.0.tar.gz) = 82fc43e2b4be22ca5de5fe5ea850c4d363fe6ff7dd8f34e523bebb5b9ff5bb41a591f112b1732fab3cf60c6248aa157ed58962c58d91eedf01857fa3b4877c5b
 Size (llvmlite-0.43.0.tar.gz) = 157069 bytes
 SHA1 (patch-ffi_build.py) = 3ad47b6643484c7b98fd7f4debe8e84b803bf071
-SHA1 (patch-setup.py) = e8aaea4f9eccfa92694b3da985632485d678ba71
+SHA1 (patch-setup.py) = c5b929ef9d65d0d962cf5ff7fe4d0a5764751074
