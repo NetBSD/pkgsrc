@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2026/01/15 19:54:50 bsiegert Exp $
+# $NetBSD: Makefile,v 1.65 2026/02/12 08:18:50 wiz Exp $
 
 DISTNAME=	terraform-provider-random-2.3.0
 PKGREVISION=	58
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.terraform.io/docs/providers/random/
+HOMEPAGE=	https://registry.terraform.io/providers/hashicorp/random/latest/docs
 COMMENT=	Terraform provider for randomness
 LICENSE=	mpl-2.0
 

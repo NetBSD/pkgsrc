@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2026/01/15 19:54:50 bsiegert Exp $
+# $NetBSD: Makefile,v 1.77 2026/02/12 08:18:50 wiz Exp $
 
 DISTNAME=	terraform-provider-aws-3.27.0
 PKGREVISION=	51
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=terraform-providers/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.terraform.io/docs/providers/aws/
+HOMEPAGE=	https://registry.terraform.io/providers/hashicorp/aws/latest/docs
 COMMENT=	Terraform provider for Amazon Web Services
 LICENSE=	mpl-2.0
 

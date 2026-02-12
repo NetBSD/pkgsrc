@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2026/01/15 19:54:50 bsiegert Exp $
+# $NetBSD: Makefile,v 1.53 2026/02/12 08:18:50 wiz Exp $
 
 DISTNAME=	terraform-provider-archive-2.1.0
 PKGREVISION=	51
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	${PKGBASE}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.terraform.io/docs/providers/archive/
+HOMEPAGE=	https://registry.terraform.io/providers/hashicorp/archive/latest/docs
 COMMENT=	Terraform archive provider
 LICENSE=	mpl-2.0
 

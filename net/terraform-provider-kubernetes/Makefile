@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2026/01/15 19:54:50 bsiegert Exp $
+# $NetBSD: Makefile,v 1.64 2026/02/12 08:18:50 wiz Exp $
 
 DISTNAME=	terraform-provider-kubernetes-1.11.4
 PKGREVISION=	57
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	${PKGBASE}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.terraform.io/docs/providers/kubernetes/
+HOMEPAGE=	https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs
 COMMENT=	Terraform provider for Kubernetes (K8S)
 LICENSE=	mpl-2.0
 
