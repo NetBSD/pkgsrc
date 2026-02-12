@@ -1,0 +1,29 @@
+$NetBSD: patch-configure.ac,v 1.1 2026/02/12 19:49:31 schmonz Exp $
+
+Avoid bashism. Let pkgsrc find the right libiconv.
+
+--- configure.ac.orig	2026-02-12 19:35:09.052432492 +0000
++++ configure.ac
+@@ -20,7 +20,7 @@ AC_PROG_RANLIB
+ 
+ # Checks for libraries.
+ AC_CHECK_LIB(socket,socket)
+-AC_CHECK_LIB(iconv,iconv_open)
++LIBS="$LIBS -liconv"
+ 
+ AC_CHECK_HEADERS([syslog.h ])
+ AC_CHECK_HEADER([iconv.h])
+@@ -82,11 +82,11 @@ AS_IF([test x"$enable_tests" = xyes], [
+   AC_PATH_PROG([ATFSH], [atf-sh])
+   AC_PATH_PROG([KYUA], [kyua])
+ 
+-  AS_IF([test "x$KYUA" == "x"], [
++  AS_IF([test "x$KYUA" = "x"], [
+     AC_MSG_ERROR([A 'kyua' binary is required when the tests are enabled. Set the PATH or use the KYUA environment variable to specify its location.])
+   ])
+ 
+-  AS_IF([test "x$ATFSH" == "x"], [
++  AS_IF([test "x$ATFSH" = "x"], [
+     AC_MSG_ERROR([An 'atf-sh' binary is required when the tests are enabled. Set the PATH or use the ATFSH environment variable to specify its location.])
+   ])
+ ])
