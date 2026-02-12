@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.51 2026/01/18 00:42:57 ryoon Exp $
+# $NetBSD: options.mk,v 1.52 2026/02/12 01:35:36 gutteridge Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
@@ -65,14 +65,13 @@ GCC_REQD+=	14
 # Use the internal copy of LLVM or the external one?
 #
 .if empty(PKG_OPTIONS:Mrust-internal-llvm)
-BUILDLINK_API_DEPENDS.llvm+=	llvm>=18.0.0
 .include "../../lang/libunwind/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-llvm-link-shared
 CONFIGURE_ARGS+=	--llvm-libunwind=system
 CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
 # Also turn off build of the internal LLD, as the external LLVM
-# may be older (e.g. 18) than the internal LLD (now 19.x), ref.
+# may be older (e.g., 18) than the internal LLD (now 19.x), ref.
 # https://github.com/rust-lang/rust/issues/131291
 CONFIGURE_ARGS+=	--set rust.lld=false
 .endif
@@ -87,7 +86,6 @@ CONFIGURE_ARGS+=	--enable-cargo-native-static
 BUILDLINK_API_DEPENDS.nghttp2+= nghttp2>=1.41.0
 BUILDLINK_API_DEPENDS.curl+= 	curl>=7.67.0
 .include "../../www/curl/buildlink3.mk"
-BUILDLINK_API_DEPENDS.openssl=	openssl>=3
 RUSTFLAGS+=     -C link-arg=-L${BUILDLINK_PREFIX.openssl}/lib
 RUSTFLAGS+=     -C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
