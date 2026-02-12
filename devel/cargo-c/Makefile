@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2026/01/31 15:10:40 mef Exp $
+# $NetBSD: Makefile,v 1.34 2026/02/12 01:37:06 gutteridge Exp $
 
 DISTNAME=	cargo-c-0.10.20
 CATEGORIES=	devel
@@ -32,7 +32,7 @@ do-install:
 .endfor
 
 #.include "../../devel/libgit2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=3.0
 .include "../../security/openssl/buildlink3.mk"
-BUILDLINK_API_DEPENDS.openssl+=        openssl>=3.0
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
