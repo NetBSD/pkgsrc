@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.42 2021/10/26 11:18:00 nia Exp $
+$NetBSD: distinfo,v 1.43 2026/02/12 08:02:14 wiz Exp $
 
-BLAKE2s (seahorse-3.38.0.1.tar.xz) = 154a92164f8f3271f3b98d563ae424ee4737d1b067f62b59f65516d3ec216fcd
-SHA512 (seahorse-3.38.0.1.tar.xz) = d0fdbb81d71e5e0908f732ad49db89a3cae936f98e0285f758a8861259bff976d33083783a7e19474bd6a1e95c11ec74021b6b7f5cdd3d51372e9cd93d4fd014
-Size (seahorse-3.38.0.1.tar.xz) = 1726460 bytes
+BLAKE2s (seahorse-47.0.1.tar.xz) = 1d71fe975ebe55a89b2977f3ed331d5eb8526db7711882337a59abe9ed51b367
+SHA512 (seahorse-47.0.1.tar.xz) = ac2a20f4d9106f26932c77dc11b4fbd18c8a83d15991f31ae89223a487fa1b4d97cb19de858cc6f53435b7ebcc1dd0f16148d0d1d3080436f0b541de5a56bfcb
+Size (seahorse-47.0.1.tar.xz) = 1401872 bytes
+SHA1 (patch-pgp_seahorse-gpgme.c) = d8c16d833f3765c9c1b9b0824f9b058840bf9554
