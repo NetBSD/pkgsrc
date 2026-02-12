@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1080 2026/02/12 11:52:51 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1081 2026/02/12 14:10:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1430,3 +1430,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/py-mysqlclient to 2.2.8 [adam 2026-02-12]
 	Updated www/py-gunicorn to 25.0.3 [adam 2026-02-12]
 	Updated security/gpa to 0.11.1 [wiz 2026-02-12]
+	Updated www/py-django-admin-sortable2 to 2.3.1 [adam 2026-02-12]
+	Updated www/py-django-filer to 3.4.4 [adam 2026-02-12]
+	Updated www/py-django-polymorphic to 4.11.0 [adam 2026-02-12]
+	Updated www/py-django-bootstrap5 to 26.2 [adam 2026-02-12]
