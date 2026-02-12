@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2026/02/08 06:39:37 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/02/12 07:37:32 wiz Exp $
 
 DISTNAME=		xcalc-1.1.3
 CATEGORIES=		x11
@@ -11,6 +11,7 @@ COMMENT=		Scientific calculator for X
 LICENSE=		mit
 
 USE_TOOLS+=		pkg-config
+MESON_ARGS+=		-Dappdefaultdir=${PREFIX}/lib/X11/app-defaults
 
 .include "../../devel/meson/build.mk"
 .include "../../x11/libXaw/buildlink3.mk"
