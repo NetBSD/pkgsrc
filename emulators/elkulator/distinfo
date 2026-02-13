@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2026/02/13 15:09:13 nia Exp $
+
+BLAKE2s (ElkulatorV1.0Linux.tar.gz) = 5229e0535289edf00fdcb11f43e669fa8d0111b318c5edb43288f996f683c58c
+SHA512 (ElkulatorV1.0Linux.tar.gz) = 09caed6fc140fe41b63f673e5d8208f7273eec8ffaab733388b6fcc5dba971b7ca81143087d1e13a1cb5af66e203182aa009d6137292205f09d3aa15ae14b884
+Size (ElkulatorV1.0Linux.tar.gz) = 689325 bytes
+SHA1 (patch-src_config.c) = ab86c22fcb7d36c8c529f86ea18370e5156488dd
+SHA1 (patch-src_debugger.c) = 572e7deb7c02982a22e37cacbed256cde3df84a9
+SHA1 (patch-src_fdi2raw.c) = ad9db03afb553101ab59d8b4ef818381441ce5d7
+SHA1 (patch-src_linux-keydefine.c) = 7a8dc5167faae3add64955dcf299909c458039ad
+SHA1 (patch-src_main.c) = dd6c987069f21e5ad9c8433d44c8b75c6e772608
+SHA1 (patch-src_palfilt.c) = 5a825adad71af9fe58575a96b076772700ec19b2
+SHA1 (patch-src_uef.c) = 0f4c6fa947ddfdde18b23556d03160bada20eaa4

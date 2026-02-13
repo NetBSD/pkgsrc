@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.377 2025/12/21 10:01:55 nia Exp $
+# $NetBSD: Makefile,v 1.378 2026/02/13 15:09:13 nia Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -58,6 +58,7 @@ SUBDIR+=	duckstation-qt
 SUBDIR+=	dynagen
 SUBDIR+=	dynamips
 SUBDIR+=	e-uae
+SUBDIR+=	elkulator
 SUBDIR+=	emulationstation
 SUBDIR+=	fbneo
 SUBDIR+=	fceu
