@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.50 2025/08/23 12:46:10 adam Exp $
+# $NetBSD: Makefile.common,v 1.51 2026/02/13 18:50:22 wiz Exp $
 # used by audio/gst-plugins1-dts/Makefile
 # used by audio/gst-plugins1-faac/Makefile
 # used by audio/gst-plugins1-faad/Makefile
@@ -252,7 +252,6 @@ GST_PLUGINS_SET+=	winscreencap
 GST_PLUGINS_SET+=	wpe
 GST_PLUGINS_SET+=	x11
 GST_PLUGINS_SET+=	x265
-GST_PLUGINS_SET+=	y4m
 GST_PLUGINS_SET+=	zbar
 GST_PLUGINS_SET+=	zxing
 
