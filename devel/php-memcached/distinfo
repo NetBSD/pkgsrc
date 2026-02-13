@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2025/02/22 17:22:29 taca Exp $
+$NetBSD: distinfo,v 1.7 2026/02/13 01:49:08 taca Exp $
 
-BLAKE2s (php-memcached/memcached-3.3.0.tgz) = 0fab9a66ef57dc38a78b30f9b3a0d37624904e284f74a66a4288c4d2b5d4a397
-SHA512 (php-memcached/memcached-3.3.0.tgz) = bdbe8b203cadcda50c4f8099fac1161424f3091537027251aaba7d9ba9a7932f59a9ac201dca9d9ae3aa59ff833ac6aa0284c5ab118cdb85a9fd89f63a95509a
-Size (php-memcached/memcached-3.3.0.tgz) = 92669 bytes
+BLAKE2s (php-memcached/memcached-3.4.0.tgz) = ae09bba673c84da56479858d3b38972c9d3930fdfe8607de8007a0a41900a67c
+SHA512 (php-memcached/memcached-3.4.0.tgz) = b60fdb7347f8be19f53f67d2bd96ed1423b862a517ad61513d9f736d4cbfe55b9da1e4b13d366968e39a0617e0b98f48e72d0fb357061f3cc093b18f5afad685
+Size (php-memcached/memcached-3.4.0.tgz) = 93288 bytes
