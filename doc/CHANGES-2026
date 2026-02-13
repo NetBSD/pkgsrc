@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1082 2026/02/12 19:49:37 schmonz Exp $
+$NetBSD: CHANGES-2026,v 1.1083 2026/02/13 01:49:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1435,3 +1435,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-django-polymorphic to 4.11.0 [adam 2026-02-12]
 	Updated www/py-django-bootstrap5 to 26.2 [adam 2026-02-12]
 	Updated mail/mlmmj to 1.7.0 [schmonz 2026-02-12]
+	Updated devel/php-memcached to 3.4.0 [taca 2026-02-13]
