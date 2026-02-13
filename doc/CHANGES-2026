@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1087 2026/02/13 10:54:53 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1088 2026/02/13 11:52:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1447,3 +1447,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/postgresql16 to 16.12 [adam 2026-02-13]
 	Updated databases/postgresql17 to 17.8 [adam 2026-02-13]
 	Updated databases/postgresql18 to 18.2 [adam 2026-02-13]
+	Removed databases/postgresql13 [adam 2026-02-13]
+	Updated databases/postgresql-timescaledb to 2.25.0 [adam 2026-02-13]
