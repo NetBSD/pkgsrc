@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/28 19:57:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/02/13 09:30:07 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -9,6 +9,9 @@ ${PYSITELIB}/platformdirs/__init__.pyo
 ${PYSITELIB}/platformdirs/__main__.py
 ${PYSITELIB}/platformdirs/__main__.pyc
 ${PYSITELIB}/platformdirs/__main__.pyo
+${PYSITELIB}/platformdirs/_xdg.py
+${PYSITELIB}/platformdirs/_xdg.pyc
+${PYSITELIB}/platformdirs/_xdg.pyo
 ${PYSITELIB}/platformdirs/android.py
 ${PYSITELIB}/platformdirs/android.pyc
 ${PYSITELIB}/platformdirs/android.pyo
