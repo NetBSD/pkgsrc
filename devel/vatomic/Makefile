@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/02/01 21:53:25 maya Exp $
+# $NetBSD: Makefile,v 1.3 2026/02/13 10:42:02 wiz Exp $
 
 DISTNAME=	vatomic-2.4.1
 CATEGORIES=	devel
@@ -18,6 +18,8 @@ ONLY_FOR_PLATFORM+=	*-*-x86_64
 ONLY_FOR_PLATFORM+=	*-*-riscv64
 ONLY_FOR_PLATFORM+=	*-*-aarch64
 ONLY_FOR_PLATFORM+=	*-*-arm
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
