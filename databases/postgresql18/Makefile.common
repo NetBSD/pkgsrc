@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2026/01/01 12:22:36 rillig Exp $
+# $NetBSD: Makefile.common,v 1.4 2026/02/13 10:52:25 adam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -16,7 +16,7 @@
 # used by databases/postgresql18-pltcl/Makefile
 # used by databases/postgresql18-server/Makefile
 
-DISTNAME=	postgresql-18.1
+DISTNAME=	postgresql-18.2
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PGSQL:=source/v${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -106,7 +106,7 @@ BROKEN_ON_PLATFORM+=	*-*-alpha
 # Please override this locally if you can't reproduce it rather
 # than removing MAKE_JOBS_SAFE, since this is necessary for
 # bulk build stability.
-MAKE_JOBS_SAFE=		no
+#MAKE_JOBS_SAFE=		no
 
 .if ${MACHINE_ARCH} == "sparc"
 CFLAGS.NetBSD+=		-D__sparc_v8__
