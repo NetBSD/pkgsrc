@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1084 2026/02/13 07:37:16 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1085 2026/02/13 09:33:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1438,3 +1438,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/php-memcached to 3.4.0 [taca 2026-02-13]
 	Updated devel/py-filelock to 3.21.2 [adam 2026-02-13]
 	Updated devel/py-tox to 4.35.0 [adam 2026-02-13]
+	Updated misc/py-platformdirs to 4.7.0 [adam 2026-02-13]
+	Updated textproc/py-cssselect2 to 0.9.0 [adam 2026-02-13]
+	Updated net/haproxy to 3.3.3 [adam 2026-02-13]
