@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1088 2026/02/13 11:52:11 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1089 2026/02/13 12:14:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1449,3 +1449,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/postgresql18 to 18.2 [adam 2026-02-13]
 	Removed databases/postgresql13 [adam 2026-02-13]
 	Updated databases/postgresql-timescaledb to 2.25.0 [adam 2026-02-13]
+	Updated devel/py-pebble to 5.2.0 [adam 2026-02-13]
+	Updated misc/py-pbs-installer to 2026.2.11 [adam 2026-02-13]
+	Updated textproc/py-pdf to 6.7.0 [adam 2026-02-13]
