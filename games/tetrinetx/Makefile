@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2018/01/14 15:26:48 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2026/02/13 10:26:37 wiz Exp $
 
 DISTNAME=	tetrinetx-1.13.16+qirc-1.40c
 PKGNAME=	tetrinetx-1.13.16
 PKGREVISION=	2
 CATEGORIES=	games
-MASTER_SITES=	http://tetrinetx.sourceforge.net/
+MASTER_SITES=	https://tetrinetx.sourceforge.net/
 
 MAINTAINER=	david@netbsd-fr.org
-HOMEPAGE=	${MASTER_SITES}
+HOMEPAGE=	https://tetrinetx.sourceforge.net/
 COMMENT=	Server for an addictive 6 player tetris game
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
