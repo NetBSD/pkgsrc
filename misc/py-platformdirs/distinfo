@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.36 2025/12/08 10:24:56 wiz Exp $
+$NetBSD: distinfo,v 1.37 2026/02/13 09:30:07 adam Exp $
 
-BLAKE2s (platformdirs-4.5.1.tar.gz) = b4d43ac8bb750b65dca1ee6b772e0ddf5f990705089f0e45e103504d57d09b0c
-SHA512 (platformdirs-4.5.1.tar.gz) = 33651a2aba8e844027d22f1e7a48fb32750a81a8d73807a4f10f37f1ba7ee8c8d3b2c391920328fb34fce1d3653e6d7f097a2c5e09b350a8ebfb6f21e3b1c488
-Size (platformdirs-4.5.1.tar.gz) = 21715 bytes
-SHA1 (patch-tests_test__unix.py) = 2b6587c2d8136875950b709cd80973467940f568
+BLAKE2s (platformdirs-4.7.0.tar.gz) = 03b04acee316c466cc95be4626041bd4f2fd79d01b0a8575656bb5ccfd57f803
+SHA512 (platformdirs-4.7.0.tar.gz) = d5e28eb05c73c7a0187ccfa9df9b3819804fcb92ba4237f3c788d1d8722d1ec0fea54708c1d976077e4189b2187bf8f19657f05dc51a515ffa53c07da07e93ca
+Size (platformdirs-4.7.0.tar.gz) = 23118 bytes
+SHA1 (patch-tests_test__unix.py) = 354b3b2e28871fe1f9b4a531b415225a3326f080
