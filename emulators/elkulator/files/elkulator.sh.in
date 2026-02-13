@@ -1,0 +1,11 @@
+#!/bin/sh
+DIR="${HOME}/.elkulator"
+mkdir -p "${DIR}"
+if ! [ -e "${DIR}/elk.cfg" ]; then
+	cp -p @PREFIX@/share/examples/elkulator/elk.cfg "${DIR}/elk.cfg"
+fi
+if ! [ -e "${DIR}/roms" ]; then
+	mkdir -p "${DIR}/roms"
+	cp -Rp @PREFIX@/share/elkulator/roms/* "${DIR}/roms"
+fi
+exec "@PREFIX@/libexec/elkulator" "$@"
