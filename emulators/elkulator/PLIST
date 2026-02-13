@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2026/02/13 15:09:13 nia Exp $
+bin/elkulator
+libexec/elkulator
+share/applications/elkulator.desktop
+share/elkulator/roms/adfs.rom
+share/elkulator/roms/basic.rom
+share/elkulator/roms/dfs.rom
+share/elkulator/roms/os
+share/elkulator/roms/os300.rom
+share/elkulator/roms/plus1.rom
+share/elkulator/roms/sndrom
+share/examples/elkulator/elk.cfg
+share/pixmaps/elkulator.png

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Elkulator
+GenericName=Acorn Electron Emulator
+Comment=Acorn Electron emulator
+Icon=elkulator
+Exec=elkulator
+Categories=Game;Emulator;
