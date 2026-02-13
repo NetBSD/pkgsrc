@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2024/03/05 14:45:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2026/02/13 18:50:22 wiz Exp $
 bin/gst-device-monitor-1.0
 bin/gst-discoverer-1.0
 bin/gst-play-1.0
@@ -9,6 +9,7 @@ include/gstreamer-1.0/gst/allocators/gstdrmdumb.h
 include/gstreamer-1.0/gst/allocators/gstfdmemory.h
 include/gstreamer-1.0/gst/allocators/gstphysmemory.h
 include/gstreamer-1.0/gst/allocators/gstshmallocator.h
+include/gstreamer-1.0/gst/allocators/gstudmabufallocator.h
 include/gstreamer-1.0/gst/app/app-enumtypes.h
 include/gstreamer-1.0/gst/app/app-prelude.h
 include/gstreamer-1.0/gst/app/app.h
@@ -106,6 +107,7 @@ include/gstreamer-1.0/gst/video/gstvideoaffinetransformationmeta.h
 include/gstreamer-1.0/gst/video/gstvideoaggregator.h
 include/gstreamer-1.0/gst/video/gstvideocodecalphameta.h
 include/gstreamer-1.0/gst/video/gstvideodecoder.h
+include/gstreamer-1.0/gst/video/gstvideodmabufpool.h
 include/gstreamer-1.0/gst/video/gstvideoencoder.h
 include/gstreamer-1.0/gst/video/gstvideofilter.h
 include/gstreamer-1.0/gst/video/gstvideometa.h
@@ -229,6 +231,7 @@ share/gir-1.0/GstTag-1.0.gir
 share/gir-1.0/GstVideo-1.0.gir
 share/gst-plugins-base/1.0/license-translations.dict
 share/locale/af/LC_MESSAGES/gst-plugins-base-1.0.mo
+share/locale/ar/LC_MESSAGES/gst-plugins-base-1.0.mo
 share/locale/az/LC_MESSAGES/gst-plugins-base-1.0.mo
 share/locale/bg/LC_MESSAGES/gst-plugins-base-1.0.mo
 share/locale/ca/LC_MESSAGES/gst-plugins-base-1.0.mo
