@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1090 2026/02/13 15:09:26 nia Exp $
+$NetBSD: CHANGES-2026,v 1.1091 2026/02/13 15:26:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1453,3 +1453,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-pbs-installer to 2026.2.11 [adam 2026-02-13]
 	Updated textproc/py-pdf to 6.7.0 [adam 2026-02-13]
 	Added emulators/elkulator version 1.0 [nia 2026-02-13]
+	Updated lang/php84 to 8.4.18 [taca 2026-02-13]
