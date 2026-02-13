@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2026/01/12 06:26:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/02/13 12:13:57 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -18,9 +18,9 @@ ${PYSITELIB}/pypdf/_codecs/_codecs.pyo
 ${PYSITELIB}/pypdf/_codecs/adobe_glyphs.py
 ${PYSITELIB}/pypdf/_codecs/adobe_glyphs.pyc
 ${PYSITELIB}/pypdf/_codecs/adobe_glyphs.pyo
-${PYSITELIB}/pypdf/_codecs/core_fontmetrics.py
-${PYSITELIB}/pypdf/_codecs/core_fontmetrics.pyc
-${PYSITELIB}/pypdf/_codecs/core_fontmetrics.pyo
+${PYSITELIB}/pypdf/_codecs/core_font_metrics.py
+${PYSITELIB}/pypdf/_codecs/core_font_metrics.pyc
+${PYSITELIB}/pypdf/_codecs/core_font_metrics.pyo
 ${PYSITELIB}/pypdf/_codecs/pdfdoc.py
 ${PYSITELIB}/pypdf/_codecs/pdfdoc.pyc
 ${PYSITELIB}/pypdf/_codecs/pdfdoc.pyo
