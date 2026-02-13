@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2026/02/06 10:04:37 wiz Exp $
+# $NetBSD: Makefile,v 1.180 2026/02/13 10:33:14 wiz Exp $
 #
 # changelog at http://www.texmacs.org/tmweb/about/changes.en.html
 
@@ -10,7 +10,7 @@ MASTER_SITES=		ftp://ftp.texmacs.org/pub/TeXmacs/tmftp/source/
 MASTER_SITES+=		http://www.texmacs.org/Download/ftp/tmftp/source/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.texmacs.org/
+HOMEPAGE=		https://www.texmacs.org/tmweb/home/welcome.en.html
 COMMENT=		GNU TeXmacs (free scientific text editor)
 LICENSE=		gnu-gpl-v3
 
