@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1092 2026/02/13 15:27:33 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1093 2026/02/13 18:51:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1455,3 +1455,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added emulators/elkulator version 1.0 [nia 2026-02-13]
 	Updated lang/php84 to 8.4.18 [taca 2026-02-13]
 	Updated lang/php85 to 8.5.3 [taca 2026-02-13]
+	Removed multimedia/gst-plugins1-vaapi [wiz 2026-02-13]
+	Updated multimedia/gstreamer1 to 1.28.0 [wiz 2026-02-13]
