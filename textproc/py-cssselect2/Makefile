@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2025/03/13 15:23:19 adam Exp $
+# $NetBSD: Makefile,v 1.15 2026/02/13 09:31:56 adam Exp $
 
-DISTNAME=	cssselect2-0.8.0
+DISTNAME=	cssselect2-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cssselect2/}
@@ -16,8 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-webencodings-[0-9]*:../../textproc/py-webencodings
 
 USE_LANGUAGES=	# none
 
-# as of 0.7.0
-# 431 passed, 9 xfailed
+# as of 0.9.0
+# 446 passed, 9 xfailed
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
