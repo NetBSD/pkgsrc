@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2023/03/09 08:25:41 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/02/13 18:50:22 wiz Exp $
 lib/gstreamer-1.0/libgstalaw.so
 lib/gstreamer-1.0/libgstalpha.so
 lib/gstreamer-1.0/libgstalphacolor.so
@@ -45,11 +45,12 @@ lib/gstreamer-1.0/libgstvideomixer.so
 lib/gstreamer-1.0/libgstwavenc.so
 lib/gstreamer-1.0/libgstwavparse.so
 lib/gstreamer-1.0/libgstxingmux.so
-lib/gstreamer-1.0/libgsty4menc.so
+lib/gstreamer-1.0/libgsty4m.so
 share/gstreamer-1.0/presets/GstIirEqualizer10Bands.prs
 share/gstreamer-1.0/presets/GstIirEqualizer3Bands.prs
 share/gstreamer-1.0/presets/GstQTMux.prs
 share/locale/af/LC_MESSAGES/gst-plugins-good-1.0.mo
+share/locale/ar/LC_MESSAGES/gst-plugins-good-1.0.mo
 share/locale/az/LC_MESSAGES/gst-plugins-good-1.0.mo
 share/locale/bg/LC_MESSAGES/gst-plugins-good-1.0.mo
 share/locale/ca/LC_MESSAGES/gst-plugins-good-1.0.mo
