@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2025/12/23 11:01:32 adam Exp $
+# $NetBSD: Makefile,v 1.79 2026/02/13 18:55:11 wiz Exp $
 
 .include "../../multimedia/gstreamer1/version.mk"
 
@@ -19,5 +19,6 @@ USE_TOOLS+=	pkg-config perl
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../multimedia/ffmpeg7/buildlink3.mk"
+BUILDLINK_API_DEPENDS.orc+=	orc>=0.4.42
 .include "../../devel/orc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
