@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.27 2012/10/29 05:06:54 asau Exp $
+# $NetBSD: Makefile,v 1.28 2026/02/14 08:26:50 wiz Exp $
 
 DISTNAME=	tkinfo-2.8
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	http://math-www.uni-paderborn.de/~axel/tkinfo/
+#MASTER_SITES=	http://math-www.uni-paderborn.de/~axel/tkinfo/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://math-www.uni-paderborn.de/~axel/tkinfo/
+#HOMEPAGE=	http://math-www.uni-paderborn.de/~axel/tkinfo/
 COMMENT=	Tk script to read and display GNU "info" files
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
