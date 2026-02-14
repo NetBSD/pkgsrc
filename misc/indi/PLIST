@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2026/02/01 11:02:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/02/14 18:28:36 adam Exp $
 bin/indi_Excalibur
 bin/indi_aaf2_focus
 bin/indi_aagsolo_weather
@@ -113,6 +113,7 @@ bin/indi_pegasus_prodigyMF
 bin/indi_pegasus_scopsoag
 bin/indi_pegasus_spb
 bin/indi_pegasus_upb
+bin/indi_pegasus_upb3
 bin/indi_pegasusindigo_wheel
 bin/indi_perfectstar_focus
 bin/indi_pinefeat_cef_focus
