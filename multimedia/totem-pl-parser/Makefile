@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2026/01/07 08:48:12 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2026/02/14 08:33:35 wiz Exp $
 
 DISTNAME=	totem-pl-parser-3.26.6
 PKGREVISION=	7
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://wiki.gnome.org/Apps/Videos
+HOMEPAGE=	https://gitlab.gnome.org/bugzilla-migration/totem-pl-parser
 COMMENT=	Totem playlist parser
 LICENSE=	gnu-lgpl-v2
 
