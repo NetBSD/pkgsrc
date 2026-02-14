@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2025/07/17 05:25:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/02/14 07:50:57 wiz Exp $
 lib/gstreamer-1.0/libgstpython.so
+lib/gstreamer-1.0/python/gesotioformatter.py
 ${PYSITELIB}/gi/overrides/Gst.py
 ${PYSITELIB}/gi/overrides/Gst.pyc
 ${PYSITELIB}/gi/overrides/GstAnalytics.py
