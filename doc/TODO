@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26793 2026/02/14 10:24:30 wiz Exp $
+$NetBSD: TODO,v 1.26794 2026/02/14 12:57:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -493,7 +493,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o boolean-7.1
 	o bos-2.5
 	o bottlerocket-0.05b3
-	o box2d-3.1.1
+	o box2d-3.1.1 [wip. breaks libreoffice]
 	o brandybasic-1.19
 	o bugzilla3-3.6.13
 	o cacti-1.2.30
