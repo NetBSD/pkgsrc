@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/07/08 14:57:06 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2026/02/14 08:18:29 wiz Exp $
 
 DISTNAME=		tinyxml_2_6_2
 PKGNAME=		tinyxml-2.6.2
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tinyxml/}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc@NetBSD.org
-HOMEPAGE=		http://www.grinninglizard.com/tinyxml/
+HOMEPAGE=		https://sourceforge.net/projects/tinyxml/
 COMMENT=		Simple, small, C++ XML parser
 LICENSE=		zlib
 
