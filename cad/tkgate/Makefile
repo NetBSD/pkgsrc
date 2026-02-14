@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.40 2023/12/23 01:59:43 zafer Exp $
-#
+# $NetBSD: Makefile,v 1.41 2026/02/14 08:26:31 wiz Exp $
 
 DISTNAME=	tkgate-1.8.7
 PKGREVISION=	4
 CATEGORIES=	cad
-MASTER_SITES=	https://www.tkgate.org/downloads/
+#MASTER_SITES=	https://www.tkgate.org/downloads/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.tkgate.org/
+#HOMEPAGE=	https://www.tkgate.org/
 LICENSE=	gnu-gpl-v2
 COMMENT=	Tcl/Tk based digital circuit editor and simulator
 
