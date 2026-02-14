@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/12/23 20:53:15 zafer Exp $
+# $NetBSD: Makefile,v 1.14 2026/02/14 08:36:51 wiz Exp $
 
 DISTNAME=	tree-1.8.0
 CATEGORIES=	sysutils
@@ -6,7 +6,7 @@ MASTER_SITES=	#
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mama.indstate.edu/users/ice/tree/
+#HOMEPAGE=	http://mama.indstate.edu/users/ice/tree/
 COMMENT=	Print a text or HTML tree diagram of a directory structure
 LICENSE=	gnu-gpl-v2
 
