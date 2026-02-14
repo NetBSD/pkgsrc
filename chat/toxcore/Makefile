@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2026/02/13 02:55:05 ktnb Exp $
+# $NetBSD: Makefile,v 1.11 2026/02/14 01:42:52 ktnb Exp $
 
 DISTNAME=	toxcore-0.2.22
 CATEGORIES=	chat
@@ -13,7 +13,7 @@ HOMEPAGE=	https://tox.chat/
 COMMENT=	Tox protocol library
 LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 USE_CC_FEATURES=	c99
 USE_TOOLS=		pkg-config
 TEST_TARGET=		test
