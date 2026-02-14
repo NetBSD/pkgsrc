@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.43 2017/05/09 09:05:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.44 2026/02/14 08:31:20 wiz Exp $
 
 DISTNAME=	top-3.6.1
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.groupsys.com/pub/top/
+#MASTER_SITES=	ftp://ftp.groupsys.com/pub/top/
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://www.groupsys.com/topinfo/
+#HOMEPAGE=	http://www.groupsys.com/topinfo/
 COMMENT=	The ubiquitous system monitoring utility
 
 GNU_CONFIGURE=		yes
