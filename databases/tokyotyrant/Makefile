@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.39 2020/07/13 18:37:22 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.40 2026/02/14 08:30:26 wiz Exp $
 
 DISTNAME=	tokyotyrant-1.1.41
 PKGREVISION=	4
 CATEGORIES=	databases net
-MASTER_SITES=	${HOMEPAGE}
+#MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://fallabs.com/tokyotyrant/
+#HOMEPAGE=	https://fallabs.com/tokyotyrant/
 COMMENT=	Network interface of Tokyo Cabinet
 LICENSE=	gnu-lgpl-v2.1
 
