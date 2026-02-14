@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.35 2023/11/12 13:23:27 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.36 2026/02/14 08:27:36 wiz Exp $
 
 DISTNAME=	TkPasMan-2.2a
 PKGNAME=	${DISTNAME:S/TkPasMan/tkpasman/}
 PKGREVISION=	21
 CATEGORIES=	security
-MASTER_SITES=	http://www.xs4all.nl/~wbsoft/linux/projects/
+MASTER_SITES=	https://wbsoft.home.xs4all.nl/linux/projects/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.xs4all.nl/~wbsoft/linux/tkpasman.html
+HOMEPAGE=	https://wbsoft.home.xs4all.nl/linux/tkpasman.html
 COMMENT=	Username and password manager that uses the Tk toolkit
 
 CONFIG_SUBST=		PREFIX="${PREFIX}"
