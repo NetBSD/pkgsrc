@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/10/01 14:23:19 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.2 2026/02/14 08:17:27 wiz Exp $
 
 TB_VER=		115.15.0
 PKGNAME=	thunderbird115-l10n-${TB_VER}
@@ -8,7 +7,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/linux-x86_64/xpi/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.mozillamessaging.com/en-US/thunderbird/
+HOMEPAGE=	https://www.thunderbird.net/en-US/
 COMMENT=	Language packs for mail/thunderbird115
 
 DEPENDS+=	thunderbird115>=${PKGVERSION_NOREV}:../../mail/thunderbird115
