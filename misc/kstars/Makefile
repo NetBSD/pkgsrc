@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2026/01/07 08:48:00 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2026/02/14 18:33:11 adam Exp $
 
 DISTNAME=	kstars-${_KDE_VERSION}
-PKGREVISION=	52
+PKGREVISION=	53
 CATEGORIES=	misc
 COMMENT=	KDE desktop planetarium
 
@@ -12,7 +12,7 @@ COMMENT=	KDE desktop planetarium
 .include "../../devel/cfitsio/buildlink3.mk"
 .include "../../devel/qjson/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-#BUILDLINK_API_DEPENDS.eigen2+=  eigen2>=2.0.3
+.include "../../graphics/wcslib/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
