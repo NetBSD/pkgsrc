@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1093 2026/02/13 18:51:17 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1094 2026/02/14 07:51:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1457,3 +1457,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/php85 to 8.5.3 [taca 2026-02-13]
 	Removed multimedia/gst-plugins1-vaapi [wiz 2026-02-13]
 	Updated multimedia/gstreamer1 to 1.28.0 [wiz 2026-02-13]
+	Updated multimedia/py-gstreamer1 to 1.28.0 [wiz 2026-02-14]
