@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2026/01/27 08:40:18 wiz Exp $
+# $NetBSD: Makefile,v 1.155 2026/02/14 08:32:49 wiz Exp $
 
 DISTNAME=	totem-3.34.1
 PKGREVISION=	45
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/3.34/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://wiki.gnome.org/Apps/Videos
+HOMEPAGE=	https://gitlab.gnome.org/GNOME/totem
 COMMENT=	Movie player designed for GNOME
 LICENSE=	gnu-gpl-v2
 
