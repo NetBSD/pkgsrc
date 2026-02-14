@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1096 2026/02/14 15:12:15 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.1097 2026/02/14 18:33:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1460,3 +1460,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/py-gstreamer1 to 1.28.0 [wiz 2026-02-14]
 	Added emulators/oricutron version 1.2.14 [nia 2026-02-14]
 	Updated math/suitesparse to 7.12.2 [ktnb 2026-02-14]
+	Updated devel/cfitsio to 4.6.3 [adam 2026-02-14]
+	Updated misc/indi to 2.1.9 [adam 2026-02-14]
+	Updated graphics/wcslib to 8.5 [adam 2026-02-14]
