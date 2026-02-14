@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2026/02/01 07:01:48 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.146 2026/02/14 08:17:08 wiz Exp $
 
 TB_VER=		147.0.1
 PKGNAME=	thunderbird-l10n-${TB_VER:S/esr//}
@@ -8,7 +7,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/linux-x86_64/xpi/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.mozillamessaging.com/en-US/thunderbird/
+HOMEPAGE=	https://www.thunderbird.net/en-US/
 COMMENT=	Language packs for mail/thunderbird
 
 DEPENDS+=	thunderbird>=${PKGVERSION_NOREV}:../../mail/thunderbird
