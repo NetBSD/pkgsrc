@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2026/02/14 14:17:10 nia Exp $
+
+BLAKE2s (oricutron-1.2.14/Oricutron_win32_v12.zip) = 8c4d88237b2ec070dee96672ee118b6f6bcac411999d066417c2afe47b698120
+SHA512 (oricutron-1.2.14/Oricutron_win32_v12.zip) = adceccefbb9b5c944348591b579e431061a28c4e5785b6acf7eda014e7ad0be48792b50eb22605fd99e5a2eb6dff4ecd7ce903630b046d5ab948c53976908e67
+Size (oricutron-1.2.14/Oricutron_win32_v12.zip) = 2059772 bytes
+BLAKE2s (oricutron-1.2.14/V1_2_14.tar.gz) = 07359097ff908d5d31ff003e54eaf75d830cea57184d15738271ef849050864d
+SHA512 (oricutron-1.2.14/V1_2_14.tar.gz) = ff20d31d7855b032deb80ef7786e9dc80eefe97bb196935e1eb27410882044c32594579efd76d5e049e67014d93cc42347f60ab0fa8e70d9cbfd2d15179ba4b9
+Size (oricutron-1.2.14/V1_2_14.tar.gz) = 2236359 bytes
+SHA1 (patch-system.h) = cdc1ab2bd4558dd126afc504d1abc1238c910861
