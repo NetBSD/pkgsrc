@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.151 2026/02/06 10:06:21 wiz Exp $
+# $NetBSD: Makefile,v 1.152 2026/02/14 08:38:24 wiz Exp $
 
 PKGREVISION= 3
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -9,7 +9,7 @@ PKGNAME=	xfce4-tumbler-${VERSION}
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/xfce/tumbler/${VERSION:R}/
 
-HOMEPAGE=	https://docs.xfce.org/xfce/thunar/4.18/tumbler
+HOMEPAGE=	https://docs.xfce.org/xfce/tumbler/start
 COMMENT=	D-Bus thumbnailing service
 
 GNU_CONFIGURE=	yes
