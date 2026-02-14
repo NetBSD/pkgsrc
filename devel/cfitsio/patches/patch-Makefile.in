@@ -1,122 +1,15 @@
-$NetBSD: patch-Makefile.in,v 1.2 2024/08/05 14:50:55 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2026/02/14 18:27:35 adam Exp $
 
-Use libtool.
+Skip additional symlink.
 
---- Makefile.in.orig	2024-06-17 15:47:47.000000000 +0000
+--- Makefile.in.orig	2026-02-13 12:33:21.815209350 +0000
 +++ Makefile.in
-@@ -39,13 +39,15 @@ SHELL =		/bin/sh
- ARCHIVE =	@ARCHIVE@
- RANLIB =	@RANLIB@
- CC =		@CC@
-+CC =		${LIBTOOL} --mode=compile @CC@
-+LD =		${LIBTOOL} --mode=link @CC@
- CFLAGS =	@CFLAGS@
- CPPFLAGS =	@CPPFLAGS@
- SSE_FLAGS =	@SSE_FLAGS@
- FC =		@FC@
- LDFLAGS =	@LDFLAGS@
- LDFLAGS_BIN =	@LDFLAGS_BIN@
--DEFS =		@DEFS@
-+DEFS =		@DEFS@ -Dunix
- LIBS =		@LIBS@
- LIBS_CURL =	@LIBS_CURL@
- FLEX =		flex
-@@ -94,11 +96,11 @@ all:
- all-nofitsio:
- 		${MAKE} stand_alone "FITSIO_SRC="
+@@ -1980,7 +1980,7 @@ install-dvi-am:
  
--stand_alone:	lib${PACKAGE}.a shared
-+stand_alone:	lib${PACKAGE}.la
+ install-exec-am: install-binPROGRAMS install-libLTLIBRARIES
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-exec-hook
++	$(MAKE) $(AM_MAKEFLAGS)
+ install-html: install-html-am
  
--lib${PACKAGE}.a:	${OBJECTS}
--		${ARCHIVE} $@ ${OBJECTS}; \
--		${RANLIB} $@;
-+lib${PACKAGE}.la:	${OBJECTS}
-+		${ARCHIVE} $lib${PACKAGE}.la ${OBJECTS}; \
-+		${LIBTOOL} --mode=link @CC@ -o $@ ${OBJECTS:.o=.lo} ${LIBS_CURL} -rpath ${PREFIX}/lib -version-info 4:0
- 
- shared: lib${PACKAGE}${SHLIB_SUFFIX}
- 
-@@ -109,23 +111,15 @@ lib${PACKAGE}${SHLIB_SUFFIX}: ${OBJECTS}
- 			ln -sf ${CFITSIO_SHLIB_SONAME} $@; \
- 		fi
- 
--install:	lib${PACKAGE}.a ${INSTALL_DIRS}
--		@for lib in lib${PACKAGE}.a lib${PACKAGE}${SHLIB_SUFFIX} \
--				${CFITSIO_SHLIB} ${CFITSIO_SHLIB_SONAME}; do \
--		    if [ -f $$lib ]; then \
--			echo "/bin/rm -f ${CFITSIO_LIB}/$$lib"; \
--			/bin/rm -f ${CFITSIO_LIB}/$$lib; \
--			echo "/bin/cp -a $$lib ${CFITSIO_LIB}"; \
--			/bin/cp -a $$lib ${CFITSIO_LIB}; \
--		    fi; \
--		done
--		/bin/cp fitsio.h fitsio2.h longnam.h drvrsmem.h ${CFITSIO_INCLUDE}
--		/bin/cp cfitsio.pc ${CFITSIO_LIB}/pkgconfig
-+install:	lib${PACKAGE}.la ${INSTALL_DIRS}
-+		${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} lib${PACKAGE}.la ${CFITSIO_LIB}
-+		${BSD_INSTALL_DATA} fitsio.h fitsio2.h longnam.h drvrsmem.h ${CFITSIO_INCLUDE}
-+		${BSD_INSTALL_DATA} cfitsio.pc ${CFITSIO_LIB}/pkgconfig
- 		@for task in ${FPACK_UTILS} ${UTILS}; do \
- 		    if [ -f $$task ]; then \
- 			if [ ! -d ${CFITSIO_BIN} ]; then mkdir -p ${CFITSIO_BIN}; fi; \
- 			echo "/bin/cp $$task ${CFITSIO_BIN}"; \
--			/bin/cp $$task ${CFITSIO_BIN}; \
-+			${BSD_INSTALL_PROGRAM} $$task ${CFITSIO_BIN}; \
- 		    fi; \
- 		done
- 
-@@ -168,34 +162,34 @@ utilities/fvrf_key.o: utilities/fvrf_key
- utilities/fvrf_misc.o: utilities/fvrf_misc.c
- 		${CC} -c -I. -I./utilities -DSTANDALONE $< -o $@
- 
--fitsverify:	lib${PACKAGE}${SHLIB_SUFFIX} ${OBJECTS} ${FVERIFY_OBJ}
--		${CC} ${LDFLAGS_BIN} -o $@ ${FVERIFY_OBJ} -L. -l${PACKAGE} -lm ${LIBS}
-+fitsverify:	lib${PACKAGE}.la ${OBJECTS} ${FVERIFY_OBJ}
-+		${LD} ${LDFLAGS_BIN} -o $@ ${FVERIFY_OBJ} -L. -l${PACKAGE} -lm ${LIBS}
- 
--fpack:		utilities/fpack.o utilities/fpackutil.o lib${PACKAGE}${SHLIB_SUFFIX} ${OBJECTS}
--		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ $< utilities/fpackutil.o -L. -l${PACKAGE} -lm ${LIBS}
-+fpack:		utilities/fpack.o utilities/fpackutil.o lib${PACKAGE}.la ${OBJECTS}
-+		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ $< utilities/fpackutil.o -L. -l${PACKAGE} -lm ${LIBS}
- 
--funpack:	utilities/funpack.o utilities/fpackutil.o lib${PACKAGE}${SHLIB_SUFFIX} ${OBJECTS}
--		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ $< utilities/fpackutil.o -L. -l${PACKAGE} -lm ${LIBS}
-+funpack:	utilities/funpack.o utilities/fpackutil.o lib${PACKAGE}.la ${OBJECTS}
-+		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ $< utilities/fpackutil.o -L. -l${PACKAGE} -lm ${LIBS}
- 
--smem:		utilities/smem.o lib${PACKAGE}${SHLIB_SUFFIX} ${OBJECTS}
--		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm
-+smem:		utilities/smem.o lib${PACKAGE}.la ${OBJECTS}
-+		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm
- 
--testprog:	utilities/testprog.o lib${PACKAGE}${SHLIB_SUFFIX} ${OBJECTS}
--		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
-+testprog:	utilities/testprog.o lib${PACKAGE}.la ${OBJECTS}
-+		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
- 
--fitscopy:	utilities/fitscopy.o lib${PACKAGE}${SHLIB_SUFFIX} ${OBJECTS}
--		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
-+fitscopy:	utilities/fitscopy.o lib${PACKAGE}.la ${OBJECTS}
-+		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
- 
--speed:		utilities/speed.o lib${PACKAGE}${SHLIB_SUFFIX} ${OBJECTS}
--		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
-+speed:		utilities/speed.o lib${PACKAGE}.la ${OBJECTS}
-+		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
- 
--imcopy:		utilities/imcopy.o lib${PACKAGE}${SHLIB_SUFFIX} ${OBJECTS}
--		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
-+imcopy:		utilities/imcopy.o lib${PACKAGE}.la ${OBJECTS}
-+		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
- 
--cookbook:	utilities/cookbook.o lib${PACKAGE}${SHLIB_SUFFIX} ${OBJECTS}
--		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
-+cookbook:	utilities/cookbook.o lib${PACKAGE}.la ${OBJECTS}
-+		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
- 
--testf77:	utilities/testf77.o lib${PACKAGE}${SHLIB_SUFFIX} ${OBJECTS}
-+testf77:	utilities/testf77.o lib${PACKAGE}.la ${OBJECTS}
- 		${FC} ${LDFLAGS_BIN} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
- 
- # eval: ==================================================================
+ install-html-am:
