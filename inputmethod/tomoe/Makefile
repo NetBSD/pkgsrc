@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/10/23 20:38:03 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.16 2026/02/14 08:31:00 wiz Exp $
 
 DISTNAME=	tomoe-0.6.0
 PKGREVISION=	9
@@ -7,7 +6,7 @@ CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tomoe/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://tomoe.osdn.jp/
+HOMEPAGE=	https://sourceforge.net/projects/tomoe/
 COMMENT=	Handwriting recognition engine
 #LICENSE=	gnu-lgpl-v2.1 # AND Creative Commons Attribution-ShareAlike Licence
 
