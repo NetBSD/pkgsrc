@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.278 2026/01/27 08:40:51 wiz Exp $
+# $NetBSD: Makefile,v 1.279 2026/02/14 07:41:01 taca Exp $
 
 DISTNAME=	webkitgtk-2.36.8
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
 PKGREVISION=	29
 CATEGORIES=	www
