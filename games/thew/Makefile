@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/01/19 18:52:10 agc Exp $
+# $NetBSD: Makefile,v 1.7 2026/02/14 08:16:16 wiz Exp $
 
 DISTNAME=		thew-1.1.1
 PKGREVISION=		3
@@ -8,7 +8,7 @@ MASTER_SITES+=		http://dinotte.altervista.org/files/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		ilfoglionascosto@netcat.it
-HOMEPAGE=		http://thew.sourceforce.net/
+HOMEPAGE=		https://thew.sourceforge.net/
 COMMENT=		The hermit worm
 
 AUTO_MKDIRS=		yes
