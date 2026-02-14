@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.378 2026/02/13 15:09:13 nia Exp $
+# $NetBSD: Makefile,v 1.379 2026/02/14 14:17:10 nia Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -172,6 +172,7 @@ SUBDIR+=	ntvcm
 SUBDIR+=	open-simh
 SUBDIR+=	openmsx
 SUBDIR+=	or1ksim
+SUBDIR+=	oricutron
 SUBDIR+=	osf1_lib
 SUBDIR+=	p11
 SUBDIR+=	pce
