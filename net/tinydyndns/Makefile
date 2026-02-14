@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/05/22 04:51:28 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2026/02/14 08:17:48 wiz Exp $
 
 DISTNAME=		tinydyndns-0.4.2
 DJBDNS_DISTNAME=	djbdns-1.05
@@ -9,7 +9,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${DJBDNS_DISTNAME}${EXTRACT_SUFX}
 SITES.${DJBDNS_DISTNAME}${EXTRACT_SUFX}= http://cr.yp.to/djbdns/ ftp://cr.yp.to/djbdns/
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://smarden.org/tinydyndns/
+HOMEPAGE=		https://smarden.org/tinydyndns/
 COMMENT=		Simple and powerful dynamic DNS solution
 LICENSE=		modified-bsd
 
