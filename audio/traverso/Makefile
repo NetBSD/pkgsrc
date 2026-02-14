@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2026/01/27 08:39:02 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2026/02/14 08:36:16 wiz Exp $
 
 DISTNAME=	traverso-0.49.6
 PKGREVISION=	43
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://traverso-daw.org/
+#HOMEPAGE=	https://traverso-daw.org/
 COMMENT=	Multitrack audio recording and audio editing suite
 LICENSE=	gnu-gpl-v2
 
