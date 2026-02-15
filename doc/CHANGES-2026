@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1112 2026/02/15 13:59:55 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1113 2026/02/15 14:12:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1486,3 +1486,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-xarray to 2026.2.0 [adam 2026-02-15]
 	Updated net/darkstat to 3.0.722 [wiz 2026-02-15]
 	Updated sysutils/detox to 3.0.1 [wiz 2026-02-15]
+	Updated devel/py-line_profiler to 5.0.1 [adam 2026-02-15]
+	Updated devel/py-trio to 0.33.0 [adam 2026-02-15]
