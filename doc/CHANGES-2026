@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1117 2026/02/15 19:27:05 leot Exp $
+$NetBSD: CHANGES-2026,v 1.1118 2026/02/15 22:41:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1491,3 +1491,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added multimedia/uxplay version 1.73.3 [wiz 2026-02-15]
 	Added textproc/php-pecl-pspell version 1.0.1 [manu 2026-02-15]
 	Updated lang/erlang to 27.3.4.7 [gdt 2026-02-15]
+	Removed databases/pgadmin3 [wiz 2026-02-15]
