@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2026/02/07 00:40:22 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2026/02/15 18:21:05 gdt Exp $
 
 DISTNAME=	jose-1.11.12
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=potatosalad/}
 GITHUB_PROJECT=	erlang-jose
@@ -17,6 +18,9 @@ USE_TOOLS+=	gmake
 TOOL_DEPENDS+=	elixir>=1.17.0:../../lang/elixir
 
 MAKE_FLAGS+=	SKIP_DEPS=true
+
+# Fails to build if a previous erlang-jose is not installed.
+# https://github.com/potatosalad/erlang-jose/issues/189
 
 .include "../../lang/erlang/module.mk"
 .include "../../mk/bsd.pkg.mk"
