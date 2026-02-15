@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1098 2026/02/15 07:39:58 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1099 2026/02/15 09:05:23 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1465,3 +1465,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/wcslib to 8.5 [adam 2026-02-14]
 	Updated emulators/qemu to 10.2.1 [adam 2026-02-15]
 	Updated textproc/py-xmltodict to 1.0.3 [adam 2026-02-15]
+	Updated www/chromium to 145.0.7632.75 [kikadf 2026-02-15]
