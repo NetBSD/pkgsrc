@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2026/01/07 08:46:08 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/02/15 18:22:31 gdt Exp $
 
 DISTNAME=	sqlite3-1.1.15
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 GITHUB_PROJECT=	erlang-sqlite3

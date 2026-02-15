@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/07/14 06:11:40 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/02/15 18:22:31 gdt Exp $
 
 DISTNAME=	fs-8.6.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=synrc/}
 GITHUB_PROJECT=	fs
