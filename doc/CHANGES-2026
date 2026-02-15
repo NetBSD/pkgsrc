@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1109 2026/02/15 13:34:57 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1110 2026/02/15 13:54:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1482,3 +1482,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-test-httpserver to 1.1.5 [adam 2026-02-15]
 	Updated databases/py-pypika to 0.51.1 [adam 2026-02-15]
 	Updated www/py-jupyterlab to 4.5.4 [adam 2026-02-15]
+	Updated archivers/py-zopfli to 0.4.1 [adam 2026-02-15]
+	Updated math/py-xarray to 2026.2.0 [adam 2026-02-15]
