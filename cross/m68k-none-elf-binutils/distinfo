@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/02/15 23:22:03 mrg Exp $
+
+BLAKE2s (binutils-2.46.0.tar.bz2) = 7dbb01bf08effe59e6c1419cbd2662c32116840748da62771c422aeb73e4d7b6
+SHA512 (binutils-2.46.0.tar.bz2) = 0706f565112981eea5f6f412a928f14ffcd7afec0e289259709c5d6a41fd54d0ebe675de0580684affe20ac71b7686e235555f8f3ca20537f99330ca46491ab9
+Size (binutils-2.46.0.tar.bz2) = 39884632 bytes
