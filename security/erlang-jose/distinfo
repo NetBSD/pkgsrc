@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.9 2026/02/07 00:40:22 gdt Exp $
+$NetBSD: distinfo,v 1.10 2026/02/15 18:21:05 gdt Exp $
 
 BLAKE2s (jose-1.11.12.tar.gz) = 1fbee3da80b294b6a59bc0a2587a5d77b1dd09fead5559adac856b8feb7eb65a
 SHA512 (jose-1.11.12.tar.gz) = a564edd6450939ac5228ce274035683bfffac0f5ee0d84648b8f13004b6993acc8319f61c27f4823757b265c0637142864f857d00acc1ef186afe2862e5eccc8
 Size (jose-1.11.12.tar.gz) = 310892 bytes
-SHA1 (patch-erlang.mk) = 1245a1d9f473eb4eb8681678a27a60a2c0d26a90
-SHA1 (patch-mix.exs) = f6072e820cb23d9ec23e5ec76c37a0d78b9fe418
