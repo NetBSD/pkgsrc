@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1116 2026/02/15 18:16:01 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.1117 2026/02/15 19:27:05 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1489,5 +1489,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-line_profiler to 5.0.1 [adam 2026-02-15]
 	Updated devel/py-trio to 0.33.0 [adam 2026-02-15]
 	Added multimedia/uxplay version 1.73.3 [wiz 2026-02-15]
-	Added textproc/php-pecl-spell version 1.0.1 [manu 2026-02-15]
+	Added textproc/php-pecl-pspell version 1.0.1 [manu 2026-02-15]
 	Updated lang/erlang to 27.3.4.7 [gdt 2026-02-15]
