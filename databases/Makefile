@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.744 2026/02/11 07:37:23 taca Exp $
+# $NetBSD: Makefile,v 1.745 2026/02/15 22:41:59 wiz Exp $
 
 COMMENT=	Databases
 
@@ -271,7 +271,6 @@ SUBDIR+=	percona-toolkit
 SUBDIR+=	pg_activity
 SUBDIR+=	pg_repack
 SUBDIR+=	pg_top
-SUBDIR+=	pgadmin3
 SUBDIR+=	pgbouncer
 SUBDIR+=	pgbuildfarm
 SUBDIR+=	pgocaml
@@ -315,14 +314,6 @@ SUBDIR+=	postgresql-postgis2
 SUBDIR+=	postgresql-redislog
 SUBDIR+=	postgresql-timescaledb
 SUBDIR+=	postgresql-wal2json
-SUBDIR+=	postgresql13
-SUBDIR+=	postgresql13-client
-SUBDIR+=	postgresql13-contrib
-SUBDIR+=	postgresql13-docs
-SUBDIR+=	postgresql13-plperl
-SUBDIR+=	postgresql13-plpython
-SUBDIR+=	postgresql13-pltcl
-SUBDIR+=	postgresql13-server
 SUBDIR+=	postgresql14
 SUBDIR+=	postgresql14-client
 SUBDIR+=	postgresql14-contrib
