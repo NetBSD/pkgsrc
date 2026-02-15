@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1103 2026/02/15 09:21:02 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1104 2026/02/15 12:44:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1470,3 +1470,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/p5-MIME-Lite to 3.037 [wiz 2026-02-15]
 	Updated net/p5-Net-Server to 2.017 [wiz 2026-02-15]
 	Updated misc/p5-Locale-libintl to 1.37 [wiz 2026-02-15]
+	Updated textproc/cmark to 0.31.2 [adam 2026-02-15]
+	Updated net/libsoup3 to 3.6.6 [adam 2026-02-15]
