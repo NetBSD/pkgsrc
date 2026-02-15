@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2025/10/09 12:03:50 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/02/15 14:09:28 adam Exp $
 
-DISTNAME=	line_profiler-5.0.0
+DISTNAME=	line_profiler-5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/line_profiler/}
@@ -13,10 +13,10 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.3:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c c++
 # avoid scikit-build
-MAKE_ENV+=	LINE_PROFILER_BUILD_METHOD=setuptools
-INSTALL_ENV+=	LINE_PROFILER_BUILD_METHOD=setuptools
+MAKE_ENV+=	LINE_PROFILER_BUILD_METHOD=cython
+INSTALL_ENV+=	LINE_PROFILER_BUILD_METHOD=cython
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
