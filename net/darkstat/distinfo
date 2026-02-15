@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2024/03/16 22:36:01 nia Exp $
+$NetBSD: distinfo,v 1.18 2026/02/15 13:58:07 wiz Exp $
 
-BLAKE2s (darkstat-3.0.719.tar.bz2) = 46d084ad95c8f2a4ce30d069494c9a2f044ea7c62f4b383b11b31b9084ad2885
-SHA512 (darkstat-3.0.719.tar.bz2) = 264f6c5f862745fbfb5d125aae5a319369f028fd7be96cfb12775147f528a36b7f5a42bcd6434f2d376933292364641f2ec9cd9bdb1fe105f5a905e331181f98
-Size (darkstat-3.0.719.tar.bz2) = 117695 bytes
+BLAKE2s (darkstat-3.0.722.tar.gz) = 32c3e1e84cc2a091118d81d1dc0ec84f31da2c5fb6195622f369019c5df50542
+SHA512 (darkstat-3.0.722.tar.gz) = 510445ccb03562feec34c250bb92ff187402fc59ce2c408962e967581a1d9767fa8f5eb0e51c7ab086b3b57d9886e5a2a2a6f0e01a30d1dbdd49657005c92732
+Size (darkstat-3.0.722.tar.gz) = 107679 bytes
 SHA1 (patch-now.c) = 3cd0ceeb9d51c48791855c5d4b2a6f9b77a7cb3f
