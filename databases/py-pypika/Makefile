@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2025/10/09 10:56:26 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2026/02/15 13:30:33 adam Exp $
 
-DISTNAME=	PyPika-0.48.9
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	3
+DISTNAME=	pypika-0.51.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyPika/}
 
@@ -15,12 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 CONFLICTS=	py[0-9]*-pypika-tortoise-[0-9]*
 
-# ast.Str, see https://github.com/kayak/pypika/issues/847
-PYTHON_VERSIONS_INCOMPATIBLE+=	314
-
 USE_LANGUAGES=	# none
-
-WHEEL_NAME=	${DISTNAME:tl}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
