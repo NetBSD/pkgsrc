@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2023/08/28 07:52:26 nia Exp $
+# $NetBSD: Makefile,v 1.28 2026/02/15 18:22:34 gdt Exp $
 #
 
 DISTNAME=		yaws-2.1.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_GITHUB:=erlyaws/}
 GITHUB_TAG=		${DISTNAME}

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/03/23 18:24:10 nia Exp $
+# $NetBSD: Makefile,v 1.6 2026/02/15 18:22:33 gdt Exp $
 
 DISTNAME=	goldrush-0.2.0
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=DeadZen/}
 GITHUB_PROJECT=	goldrush

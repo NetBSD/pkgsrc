@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2022/03/13 06:47:52 mef Exp $
+# $NetBSD: Makefile,v 1.12 2026/02/15 18:22:30 gdt Exp $
 
 DISTNAME=	iconv-1.0.13
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 

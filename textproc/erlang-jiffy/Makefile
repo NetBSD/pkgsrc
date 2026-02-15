@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/08/22 05:57:03 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/02/15 18:22:34 gdt Exp $
 
 DISTNAME=	jiffy-1.1.2
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=davisp/}
 GITHUB_PROJECT=	jiffy

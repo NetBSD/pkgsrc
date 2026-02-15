@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2026/02/07 00:53:38 gdt Exp $
+# $NetBSD: Makefile,v 1.23 2026/02/15 18:22:32 gdt Exp $
 
 DISTNAME=	xmpp-1.12.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 GITHUB_PROJECT=	xmpp
