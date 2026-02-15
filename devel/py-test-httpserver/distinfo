@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2026/02/12 11:11:03 adam Exp $
+$NetBSD: distinfo,v 1.13 2026/02/15 13:23:58 adam Exp $
 
-BLAKE2s (pytest_httpserver-1.1.4.tar.gz) = 55386910d3dce1368fb7b3b3b23425764a4cd085e5758729e7d127cb940082a2
-SHA512 (pytest_httpserver-1.1.4.tar.gz) = 7e94a60113000bb8c91bed4c95f822333ea013b3eb51f969d3033c0c0b7feb146f98821f09b33efbe1304387995ea453296f208732f30c028a1869b8b1b70764
-Size (pytest_httpserver-1.1.4.tar.gz) = 8295814 bytes
+BLAKE2s (pytest_httpserver-1.1.5.tar.gz) = 8abdbe36f4f1a09846827d9b60acf584effcae86cc296a42f26f2919a71d7f03
+SHA512 (pytest_httpserver-1.1.5.tar.gz) = 1a5ee0b65922db6623b0f93f7b0f2d4d223ab6f21705bf94f62135695c5e85ce2528fc6cfe7f833fd1170aad092ce924e060c4a47666cadec3fbbdd5a3f67daa
+Size (pytest_httpserver-1.1.5.tar.gz) = 70974 bytes
