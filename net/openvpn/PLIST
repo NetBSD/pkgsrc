@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.27 2025/09/24 17:06:43 gdt Exp $
+@comment $NetBSD: PLIST,v 1.28 2026/02/15 12:50:42 adam Exp $
 include/openvpn-msg.h
 include/openvpn-plugin.h
 ${PLIST.pam}lib/openvpn/plugins/openvpn-plugin-auth-pam.la
 lib/openvpn/plugins/openvpn-plugin-down-root.la
+libexec/openvpn/dns-updown
 man/man5/openvpn-examples.5
 man/man8/openvpn.8
 sbin/openvpn
@@ -32,6 +33,7 @@ share/examples/openvpn/keys/client-pass.key
 share/examples/openvpn/keys/client.crt
 share/examples/openvpn/keys/client.key
 share/examples/openvpn/keys/client.p12
+share/examples/openvpn/keys/ffdhe2048.pem
 share/examples/openvpn/keys/gen-sample-keys.sh
 share/examples/openvpn/keys/openssl.cnf
 share/examples/openvpn/keys/server-ec.crt
