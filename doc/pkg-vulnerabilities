@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.732 2026/02/11 13:23:56 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.733 2026/02/15 15:43:28 spz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29049,8 +29049,8 @@ png<1.6.52	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-66293
 python310-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12084
 python311-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12084
 python312-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12084
-python313-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12084
-python314-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12084
+python313<3.13.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12084
+python314<3.14.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12084
 qt5-qtdeclarative-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12385
 qt6-qtdeclarative<6.10.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12385
 webkit-gtk<2.50.3	multiple-vulnerabilities	https://webkitgtk.org/security/WSA-2025-0009.html
@@ -29462,13 +29462,13 @@ py{27,310,311,312,313,314}-weasyprint<68.0	server-side-request-forgery	https://n
 python310-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-11468
 python311-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-11468
 python312-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-11468
-python313-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-11468
-python314-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-11468
+python313<3.13.12	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-11468
+python314<3.14.3	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-11468
 python310-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-15282
 python311-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-15282
 python312-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-15282
-python313-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-15282
-python314-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-15282
+python313<3.13.12	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-15282
+python314<3.14.3	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-15282
 python310-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-15366
 python311-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-15366
 python312-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-15366
@@ -29482,13 +29482,13 @@ python314-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-153
 python310-[0-9]*	http-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0672
 python311-[0-9]*	http-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0672
 python312-[0-9]*	http-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0672
-python313-[0-9]*	http-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0672
-python314-[0-9]*	http-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0672
+python313<3.13.12	http-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0672
+python314<3.14.3	http-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0672
 python310-[0-9]*	http-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0865
 python311-[0-9]*	http-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0865
 python312-[0-9]*	http-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0865
-python313-[0-9]*	http-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0865
-python314-[0-9]*	http-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0865
+python313<3.13.12	http-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0865
+python314<3.14.3	http-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0865
 mysql-server<8.0.45	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujan2026.html#AppendixMSQL
 openjdk11<11.0.30	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujan2026.html#AppendixJAVA
 openjdk17<17.0.18	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujan2026.html#AppendixJAVA
@@ -29532,8 +29532,8 @@ py{27,310,311,312,313,314}-protobuf-[0-9]*	denial-of-service	https://nvd.nist.go
 python310-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-1299
 python311-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-1299
 python312-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-1299
-python313-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-1299
-python314-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-1299
+python313<3.13.12	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-1299
+python314<3.14.3	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-1299
 sentencepiece<0.2.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-1260
 gnutls<3.8.11	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-9820
 gpac-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-1415
