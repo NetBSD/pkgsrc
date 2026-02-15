@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_ffmpeg_libavutil_x86_x86inc.asm,v 1.14 2026/01/19 16:14:20 kikadf Exp $
+$NetBSD: patch-third__party_ffmpeg_libavutil_x86_x86inc.asm,v 1.15 2026/02/15 09:04:11 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/ffmpeg/libavutil/x86/x86inc.asm.orig	2026-01-07 00:50:30.000000000 +0000
+--- third_party/ffmpeg/libavutil/x86/x86inc.asm.orig	2026-02-03 22:07:10.000000000 +0000
 +++ third_party/ffmpeg/libavutil/x86/x86inc.asm
 @@ -46,6 +46,12 @@
      %endif

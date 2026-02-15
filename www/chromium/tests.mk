@@ -1,10 +1,13 @@
-# $NetBSD: tests.mk,v 1.4 2025/11/20 08:36:03 kikadf Exp $
+# $NetBSD: tests.mk,v 1.5 2026/02/15 09:03:54 kikadf Exp $
 
 REGRESS_DISTFILE=		chromium-${VERSION}-testdata${EXTRACT_SUFX_C}
 DISTFILES+=			${REGRESS_DISTFILE}
 EXTRACT_ONLY=			${DISTNAME}-lite${EXTRACT_SUFX_C}
 #EXTRACT_ONLY+=			${PROFILE_DISTFILES}
 EXTRACT_ONLY+=			${_GITHUB_DEFAULT_DISTFILES}
+.for crate in ${CARGO_CRATE_DEPENDS}
+EXTRACT_ONLY+=			${crate}.crate
+.endfor
 
 USE_TOOLS+=	xzcat gzip tar
 

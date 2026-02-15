@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_task__manager_sampling_task__group.h,v 1.14 2026/01/19 16:14:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_task__manager_sampling_task__group.h,v 1.15 2026/02/15 09:03:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/task_manager/sampling/task_group.h.orig	2026-01-07 00:50:30.000000000 +0000
+--- chrome/browser/task_manager/sampling/task_group.h.orig	2026-02-03 22:07:10.000000000 +0000
 +++ chrome/browser/task_manager/sampling/task_group.h
-@@ -41,7 +41,7 @@ inline constexpr int kUnsupportedVMRefre
+@@ -40,7 +40,7 @@ inline constexpr int kUnsupportedVMRefre
      REFRESH_TYPE_WEBCACHE_STATS | REFRESH_TYPE_NETWORK_USAGE |
      REFRESH_TYPE_IDLE_WAKEUPS | REFRESH_TYPE_HANDLES | REFRESH_TYPE_START_TIME |
      REFRESH_TYPE_CPU_TIME | REFRESH_TYPE_PRIORITY |
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_task__manager_sampling_task__group.h,v 1.14 2026/0
      REFRESH_TYPE_FD_COUNT |
  #endif
      REFRESH_TYPE_HARD_FAULTS;
-@@ -141,7 +141,7 @@ class TaskGroup {
+@@ -139,7 +139,7 @@ class TaskGroup {
    int64_t hard_faults_per_second() const { return hard_faults_per_second_; }
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_task__manager_sampling_task__group.h,v 1.14 2026/0
    int open_fd_count() const { return open_fd_count_; }
    void set_open_fd_count(int open_fd_count) { open_fd_count_ = open_fd_count; }
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
-@@ -156,7 +156,7 @@ class TaskGroup {
+@@ -154,7 +154,7 @@ class TaskGroup {
  
    void RefreshWindowsHandles();
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_task__manager_sampling_task__group.h,v 1.14 2026/0
    void OnOpenFdCountRefreshDone(int open_fd_count);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
  
-@@ -226,7 +226,7 @@ class TaskGroup {
+@@ -220,7 +220,7 @@ class TaskGroup {
    int64_t user_peak_handles_ = -1;
    int64_t hard_faults_per_second_ = -1;
  #endif  // BUILDFLAG(IS_WIN)

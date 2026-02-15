@@ -1,12 +1,12 @@
-$NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.13 2026/01/19 16:14:14 kikadf Exp $
+$NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.14 2026/02/15 09:04:04 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/signin/public/base/signin_switches.h.orig	2026-01-07 00:50:30.000000000 +0000
+--- components/signin/public/base/signin_switches.h.orig	2026-02-03 22:07:10.000000000 +0000
 +++ components/signin/public/base/signin_switches.h
-@@ -98,7 +98,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+@@ -94,7 +94,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kChromeAndroidIdentitySurveyBookmarkPromo);
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.13 2026/01/1
  // Enables surveys to measure the effectiveness of the identity model.
  // These surveys would be displayed after interactions such as signin, profile
  // switching, etc. Please keep sorted alphabetically.
-@@ -130,7 +130,7 @@ BASE_DECLARE_FEATURE(kChromeIdentitySurv
+@@ -126,7 +126,7 @@ BASE_DECLARE_FEATURE(kChromeIdentitySurv
  // LINT.ThenChange(//chrome/browser/signin/signin_hats_util.cc)
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.13 2026/01/1
  // Controls the duration for which the launch of an identity survey is delayed.
  COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kChromeIdentitySurveyLaunchWithDelay);
-@@ -297,7 +297,7 @@ BASE_DECLARE_FEATURE_PARAM(base::TimeDel
+@@ -290,7 +290,7 @@ BASE_DECLARE_FEATURE_PARAM(base::TimeDel
                             kOfferMigrationToDiceUsersMinTimeBetweenDialogs);
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)
  
@@ -33,7 +33,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.13 2026/01/1
  // Experimenting with a button to all profiles from the profile picker.
  COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kOpenAllProfilesFromProfilePickerExperiment);
-@@ -306,7 +306,7 @@ extern const base::FeatureParam<int>
+@@ -299,7 +299,7 @@ extern const base::FeatureParam<int>
      kMaxProfilesCountToShowOpenAllButtonInProfilePicker;
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
@@ -42,7 +42,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.13 2026/01/1
  // Experimenting with changing the secondary CTA for FRE and new profile
  // creation.
  COMPONENT_EXPORT(SIGNIN_SWITCHES)
-@@ -371,7 +371,7 @@ extern const base::FeatureParam<int> kCo
+@@ -370,7 +370,7 @@ extern const base::FeatureParam<int> kCo
  COMPONENT_EXPORT(SIGNIN_SWITCHES)
  extern const base::FeatureParam<int> kContextualSigninPromoDismissedThreshold;
  

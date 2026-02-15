@@ -1,12 +1,12 @@
-$NetBSD: patch-base_files_file__util__posix.cc,v 1.14 2026/01/19 16:14:06 kikadf Exp $
+$NetBSD: patch-base_files_file__util__posix.cc,v 1.15 2026/02/15 09:03:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/file_util_posix.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- base/files/file_util_posix.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ base/files/file_util_posix.cc
-@@ -944,6 +944,7 @@ bool CreateNewTempDirectory(FilePath::St
+@@ -936,6 +936,7 @@ bool CreateNewTempDirectory(FilePath::St
  bool CreateDirectoryAndGetError(const FilePath& full_path, File::Error* error) {
    ScopedBlockingCall scoped_blocking_call(
        FROM_HERE, BlockingType::MAY_BLOCK);  // For call to mkdir().
@@ -14,7 +14,7 @@ $NetBSD: patch-base_files_file__util__posix.cc,v 1.14 2026/01/19 16:14:06 kikadf
  
    // Avoid checking subdirs if directory already exists.
    if (DirectoryExists(full_path)) {
-@@ -953,8 +954,8 @@ bool CreateDirectoryAndGetError(const Fi
+@@ -945,8 +946,8 @@ bool CreateDirectoryAndGetError(const Fi
    // Collect a list of all missing directories.
    std::vector<FilePath> missing_subpaths({full_path});
    FilePath last_path = full_path;
@@ -25,7 +25,7 @@ $NetBSD: patch-base_files_file__util__posix.cc,v 1.14 2026/01/19 16:14:06 kikadf
      if (DirectoryExists(path)) {
        break;
      }
-@@ -972,21 +973,14 @@ bool CreateDirectoryAndGetError(const Fi
+@@ -964,21 +965,14 @@ bool CreateDirectoryAndGetError(const Fi
      }
  #endif  // BUILDFLAG(IS_CHROMEOS)
  

@@ -1,12 +1,12 @@
-$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_partition__alloc__base_debug_stack__trace__posix.cc,v 1.14 2026/01/19 16:14:06 kikadf Exp $
+$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_partition__alloc__base_debug_stack__trace__posix.cc,v 1.15 2026/02/15 09:03:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/debug/stack_trace_posix.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/debug/stack_trace_posix.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/debug/stack_trace_posix.cc
-@@ -18,11 +18,11 @@
+@@ -14,11 +14,11 @@
  #include "partition_alloc/partition_alloc_base/posix/eintr_wrapper.h"
  #include "partition_alloc/partition_alloc_base/strings/safe_sprintf.h"
  
@@ -20,7 +20,7 @@ $NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_partitio
  #include <dlfcn.h>
  #endif
  
-@@ -30,7 +30,7 @@ namespace partition_alloc::internal::bas
+@@ -26,7 +26,7 @@ namespace partition_alloc::internal::bas
  
  namespace {
  

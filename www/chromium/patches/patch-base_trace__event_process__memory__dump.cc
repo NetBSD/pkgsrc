@@ -1,12 +1,12 @@
-$NetBSD: patch-base_trace__event_process__memory__dump.cc,v 1.14 2026/01/19 16:14:07 kikadf Exp $
+$NetBSD: patch-base_trace__event_process__memory__dump.cc,v 1.15 2026/02/15 09:03:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/trace_event/process_memory_dump.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- base/trace_event/process_memory_dump.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ base/trace_event/process_memory_dump.cc
-@@ -47,7 +47,7 @@
+@@ -43,7 +43,7 @@
  #include <Psapi.h>
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-base_trace__event_process__memory__dump.cc,v 1.14 2026/01/19 16:1
  #include <tuple>
  
  #include "base/notreached.h"
-@@ -116,7 +116,7 @@ std::optional<size_t> ProcessMemoryDump:
+@@ -112,7 +112,7 @@ std::optional<size_t> ProcessMemoryDump:
  #if BUILDFLAG(IS_WIN)
    auto vec =
        base::HeapArray<PSAPI_WORKING_SET_EX_INFORMATION>::WithSize(max_vec_size);
@@ -24,7 +24,7 @@ $NetBSD: patch-base_trace__event_process__memory__dump.cc,v 1.14 2026/01/19 16:1
    auto vec = base::HeapArray<char>::WithSize(max_vec_size);
  #elif BUILDFLAG(IS_POSIX) || BUILDFLAG(IS_FUCHSIA)
    auto vec = base::HeapArray<unsigned char>::WithSize(max_vec_size);
-@@ -140,7 +140,7 @@ std::optional<size_t> ProcessMemoryDump:
+@@ -136,7 +136,7 @@ std::optional<size_t> ProcessMemoryDump:
      for (size_t i = 0; i < page_count; i++) {
        resident_page_count += vec[i].VirtualAttributes.Valid;
      }

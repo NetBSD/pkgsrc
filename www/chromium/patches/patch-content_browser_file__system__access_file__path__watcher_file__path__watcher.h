@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_file__system__access_file__path__watcher_file__path__watcher.h,v 1.14 2026/01/19 16:14:14 kikadf Exp $
+$NetBSD: patch-content_browser_file__system__access_file__path__watcher_file__path__watcher.h,v 1.15 2026/02/15 09:04:04 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/file_system_access/file_path_watcher/file_path_watcher.h.orig	2026-01-07 00:50:30.000000000 +0000
+--- content/browser/file_system_access/file_path_watcher/file_path_watcher.h.orig	2026-02-03 22:07:10.000000000 +0000
 +++ content/browser/file_system_access/file_path_watcher/file_path_watcher.h
 @@ -126,7 +126,7 @@ class CONTENT_EXPORT FilePathWatcher {
      Type type = Type::kNonRecursive;

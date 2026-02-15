@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_startup_startup__browser__creator__impl.cc,v 1.14 2026/01/19 16:14:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_startup_startup__browser__creator__impl.cc,v 1.15 2026/02/15 09:04:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/startup/startup_browser_creator_impl.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- chrome/browser/ui/startup/startup_browser_creator_impl.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ chrome/browser/ui/startup/startup_browser_creator_impl.cc
 @@ -81,7 +81,7 @@
  #include "components/app_restore/full_restore_utils.h"
@@ -33,3 +33,12 @@ $NetBSD: patch-chrome_browser_ui_startup_startup__browser__creator__impl.cc,v 1.
      // Start the What's New fetch but don't add the tab at this point. The tab
      // will open as the foreground tab only if the remote content can be
      // retrieved successfully. This prevents needing to automatically close the
+@@ -458,7 +458,7 @@ void StartupBrowserCreatorImpl::Determin
+             : CHROME_VERSION_STRING;
+     MaybeShowNonMilestoneUpdateToast(browser, current_version_string);
+   }
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   // Check for DSE integrity if flag is enabled.
+   if (base::FeatureList::IsEnabled(features::kDseIntegrity)) {
+     // TODO(466065123): The controller will instantiate the model, check the

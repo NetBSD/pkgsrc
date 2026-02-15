@@ -1,12 +1,12 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.cc,v 1.14 2026/01/19 16:14:16 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.cc,v 1.15 2026/02/15 09:04:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/shared_image_factory.cc
-@@ -52,7 +52,7 @@
+@@ -51,7 +51,7 @@
  #include "gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.h"
  #include "gpu/vulkan/vulkan_device_queue.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.
  #include "gpu/command_buffer/service/shared_image/external_vk_image_backing_factory.h"
  #endif
  
-@@ -109,7 +109,7 @@ const char* GmbTypeToString(gfx::GpuMemo
+@@ -113,7 +113,7 @@ const char* GmbTypeToString(gfx::GpuMemo
      case gfx::IO_SURFACE_BUFFER:
        return "platform";
  #endif
@@ -24,7 +24,7 @@ $NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.
      case gfx::NATIVE_PIXMAP:
        return "platform";
  #endif
-@@ -130,7 +130,7 @@ gfx::GpuMemoryBufferType GetNativeBuffer
+@@ -134,7 +134,7 @@ gfx::GpuMemoryBufferType GetNativeBuffer
    return gfx::GpuMemoryBufferType::IO_SURFACE_BUFFER;
  #elif BUILDFLAG(IS_ANDROID)
    return gfx::GpuMemoryBufferType::ANDROID_HARDWARE_BUFFER;
@@ -33,7 +33,7 @@ $NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.
    return gfx::GpuMemoryBufferType::NATIVE_PIXMAP;
  #elif BUILDFLAG(IS_WIN)
    return gfx::GpuMemoryBufferType::DXGI_SHARED_HANDLE;
-@@ -305,7 +305,7 @@ SharedImageFactory::SharedImageFactory(
+@@ -309,7 +309,7 @@ SharedImageFactory::SharedImageFactory(
      factories_.push_back(std::move(ozone_factory));
    }
  

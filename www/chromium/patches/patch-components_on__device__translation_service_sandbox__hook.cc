@@ -1,13 +1,13 @@
-$NetBSD: patch-components_services_on__device__translation_sandbox__hook.cc,v 1.14 2026/01/19 16:14:14 kikadf Exp $
+$NetBSD: patch-components_on__device__translation_service_sandbox__hook.cc,v 1.1 2026/02/15 09:04:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/services/on_device_translation/sandbox_hook.cc.orig	2026-01-07 00:50:30.000000000 +0000
-+++ components/services/on_device_translation/sandbox_hook.cc
+--- components/on_device_translation/service/sandbox_hook.cc.orig	2026-02-03 22:07:10.000000000 +0000
++++ components/on_device_translation/service/sandbox_hook.cc
 @@ -7,12 +7,15 @@
- #include "components/services/on_device_translation/translate_kit_client.h"
+ #include "components/on_device_translation/service/translate_kit_client.h"
  #include "sandbox/linux/syscall_broker/broker_command.h"
  
 +#if !BUILDFLAG(IS_BSD)
@@ -38,12 +38,11 @@ $NetBSD: patch-components_services_on__device__translation_sandbox__hook.cc,v 1.
    auto* instance = sandbox::policy::SandboxLinux::GetInstance();
    instance->StartBrokerProcess(MakeBrokerCommandSet({
                                     sandbox::syscall_broker::COMMAND_OPEN,
-@@ -36,7 +41,7 @@ bool OnDeviceTranslationSandboxHook(
+@@ -36,6 +41,7 @@ bool OnDeviceTranslationSandboxHook(
                                 GetOnDeviceTranslationFilePermissions(),
                                 options);
    instance->EngageNamespaceSandboxIfPossible();
--
 +#endif
+ 
    return true;
  }
- 

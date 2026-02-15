@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_webrtc_rtc__base_physical__socket__server.cc,v 1.14 2026/01/19 16:14:21 kikadf Exp $
+$NetBSD: patch-third__party_webrtc_rtc__base_physical__socket__server.cc,v 1.15 2026/02/15 09:04:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/rtc_base/physical_socket_server.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- third_party/webrtc/rtc_base/physical_socket_server.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ third_party/webrtc/rtc_base/physical_socket_server.cc
 @@ -61,7 +61,7 @@
  #undef SetPort

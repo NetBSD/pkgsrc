@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.json5,v 1.14 2026/01/19 16:14:20 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.json5,v 1.15 2026/02/15 09:04:11 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2026-01-07 00:50:30.000000000 +0000
+--- third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2026-02-03 22:07:10.000000000 +0000
 +++ third_party/blink/renderer/platform/runtime_enabled_features.json5
-@@ -358,7 +358,7 @@
+@@ -362,7 +362,7 @@
          "default": "",
        },
        origin_trial_feature_name: "AIPromptAPIMultimodalInput",
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        origin_trial_allows_third_party: true,
        implied_by: ["AIPromptAPIMultimodalInput"],
      },
-@@ -388,7 +388,7 @@
+@@ -392,7 +392,7 @@
          "default": "",
        },
        origin_trial_feature_name: "AIPromptAPIMultimodalInput",
@@ -24,7 +24,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        origin_trial_allows_third_party: true,
        base_feature_status: "enabled",
        copied_from_base_feature_if: "overridden",
-@@ -422,7 +422,7 @@
+@@ -426,7 +426,7 @@
          "default": "",
        },
        origin_trial_feature_name: "AIProofreaderAPI",
@@ -33,7 +33,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        origin_trial_allows_third_party: true,
        base_feature_status: "enabled",
        copied_from_base_feature_if: "overridden",
-@@ -437,7 +437,7 @@
+@@ -441,7 +441,7 @@
          "default": "",
        },
        origin_trial_feature_name: "AIRewriterAPI",
@@ -42,7 +42,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        origin_trial_allows_third_party: true,
        base_feature_status: "enabled",
        copied_from_base_feature_if: "overridden",
-@@ -470,7 +470,7 @@
+@@ -474,7 +474,7 @@
          "default": "",
        },
        origin_trial_feature_name: "AIWriterAPI",
@@ -51,7 +51,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        origin_trial_allows_third_party: true,
        base_feature_status: "enabled",
        copied_from_base_feature_if: "overridden",
-@@ -594,7 +594,7 @@
+@@ -598,7 +598,7 @@
        name: "AppTitle",
        status: "experimental",
        origin_trial_feature_name: "AppTitle",
@@ -60,7 +60,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        base_feature: "WebAppEnableAppTitle",
      },
      {
-@@ -1279,7 +1279,7 @@
+@@ -1286,7 +1286,7 @@
        name: "CSPHashesV1",
        base_feature: "none",
        origin_trial_feature_name: "CSPExtendedScriptSrcHashes",
@@ -69,7 +69,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        status: "experimental",
        public: true,
      },
-@@ -1858,7 +1858,7 @@
+@@ -1882,7 +1882,7 @@
      {
        name: "DeviceBoundSessionCredentials",
        origin_trial_feature_name: "DeviceBoundSessionCredentials",
@@ -78,7 +78,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        status: "experimental",
        // Killswitch is net::features::kDeviceBoundSessions
        base_feature: "none",
-@@ -1866,7 +1866,7 @@
+@@ -1890,7 +1890,7 @@
      {
        name: "DeviceBoundSessionCredentials2",
        origin_trial_feature_name: "DeviceBoundSessionCredentials2",
@@ -87,7 +87,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        status: "experimental",
        // Killswitch is net::features::kDeviceBoundSessions
        base_feature: "none",
-@@ -2007,7 +2007,7 @@
+@@ -2035,7 +2035,7 @@
        name: "DocumentIsolationPolicy",
        status: "experimental",
        origin_trial_feature_name: "DocumentIsolationPolicy",
@@ -96,7 +96,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        base_feature: "none",
      },
      {
-@@ -2318,7 +2318,7 @@
+@@ -2348,7 +2348,7 @@
        base_feature: "none",
        public: true,
        origin_trial_feature_name: "FedCmMultipleIdentityProviders",
@@ -105,7 +105,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        origin_trial_allows_third_party: true,
      },
      {
-@@ -3862,7 +3862,7 @@
+@@ -3945,7 +3945,7 @@
        // Tracking bug for the implementation: https://crbug.com/1462930
        name: "PermissionElement",
        origin_trial_feature_name: "PermissionElement",
@@ -114,7 +114,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        status: "experimental",
        public: true,
        base_feature_status: "enabled",
-@@ -5416,7 +5416,7 @@
+@@ -5518,7 +5518,7 @@
        name: "UnrestrictedSharedArrayBuffer",
        base_feature: "none",
        origin_trial_feature_name: "UnrestrictedSharedArrayBuffer",
@@ -123,7 +123,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
      },
      // Enables using policy-controlled feature "usb-unrestricted" to allow
      // isolated context to access protected USB interface classes and to
-@@ -5611,7 +5611,7 @@
+@@ -5721,7 +5721,7 @@
        name: "WebAppInstallation",
        status: {"Android": "", "default": "test"},
        origin_trial_feature_name: "WebAppInstallation",
@@ -132,7 +132,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        base_feature_status: "enabled",
        copied_from_base_feature_if: "overridden",
      },
-@@ -5623,7 +5623,7 @@
+@@ -5733,7 +5733,7 @@
      {
        name: "WebAppScopeExtensions",
        origin_trial_feature_name: "WebAppScopeExtensions",
@@ -141,7 +141,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        status: "experimental",
        base_feature: "none",
      },
-@@ -5731,7 +5731,7 @@
+@@ -5843,7 +5843,7 @@
      {
        name: "WebAuthenticationImmediateGet",
        origin_trial_feature_name: "WebAuthenticationImmediateGet",

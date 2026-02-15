@@ -1,12 +1,12 @@
-$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_spinning__mutex.cc,v 1.14 2026/01/19 16:14:06 kikadf Exp $
+$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_spinning__mutex.cc,v 1.15 2026/02/15 09:03:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc
-@@ -25,7 +25,16 @@
+@@ -20,7 +20,16 @@
  #endif
  
  #if PA_CONFIG(HAS_LINUX_KERNEL)
@@ -23,7 +23,7 @@ $NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_spinning
  #include <sys/syscall.h>
  #include <unistd.h>
  
-@@ -155,8 +164,19 @@ PA_ALWAYS_INLINE long FutexSyscall(volat
+@@ -159,8 +168,19 @@ PA_ALWAYS_INLINE long FutexSyscall(volat
    int saved_errno = errno;
    errno = 0;
  

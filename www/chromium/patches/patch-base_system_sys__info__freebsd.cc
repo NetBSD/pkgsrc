@@ -1,15 +1,15 @@
-$NetBSD: patch-base_system_sys__info__freebsd.cc,v 1.14 2026/01/19 16:14:07 kikadf Exp $
+$NetBSD: patch-base_system_sys__info__freebsd.cc,v 1.15 2026/02/15 09:03:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_freebsd.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- base/system/sys_info_freebsd.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ base/system/sys_info_freebsd.cc
-@@ -9,28 +9,95 @@
- #include <sys/sysctl.h>
+@@ -10,20 +10,74 @@
  
  #include "base/notreached.h"
+ #include "base/numerics/safe_conversions.h"
 +#include "base/process/process_metrics.h"
 +#include "base/strings/string_util.h"
  
@@ -26,7 +26,7 @@ $NetBSD: patch-base_system_sys__info__freebsd.cc,v 1.14 2026/01/19 16:14:07 kika
 +  return ncpu;
 +}
 +
- ByteCount SysInfo::AmountOfPhysicalMemoryImpl() {
+ ByteSize SysInfo::AmountOfTotalPhysicalMemoryImpl() {
 -  int pages, page_size;
 +  int pages, page_size, r = 0;
    size_t size = sizeof(pages);
@@ -40,13 +40,13 @@ $NetBSD: patch-base_system_sys__info__freebsd.cc,v 1.14 2026/01/19 16:14:07 kika
 +    r = sysctlbyname("vm.stats.vm.v_page_size", &page_size, &size, NULL, 0);
 +
 +  if (r == -1) {
-+    NOTREACHED();
-+  }
+     NOTREACHED();
+   }
 +
-+  return ByteCount::FromUnsigned(static_cast<uint64_t>(pages) * page_size);
-+}
-+
-+ByteCount SysInfo::AmountOfAvailablePhysicalMemoryImpl() {
+   return ByteSize(checked_cast<unsigned>(page_size)) * pages;
+ }
+ 
++ByteSize SysInfo::AmountOfAvailablePhysicalMemoryImpl() {
 +  int page_size, r = 0;
 +  unsigned int pgfree, pginact, pgcache;
 +  size_t size = sizeof(page_size);
@@ -62,12 +62,11 @@ $NetBSD: patch-base_system_sys__info__freebsd.cc,v 1.14 2026/01/19 16:14:07 kika
 +    r = sysctlbyname("vm.stats.vm.v_cache_count", &pgcache, &szpg, NULL, 0);
 +
 +  if (r == -1) {
-     NOTREACHED();
-+    return ByteCount();
-   }
--  return ByteCount(page_size) * pages;
++    NOTREACHED();
++    return ByteSize(0);
++  }
 +
-+  return ByteCount::FromUnsigned(static_cast<uint64_t>((pgfree + pginact + pgcache) * page_size));
++  return ByteSize((pgfree + pginact + pgcache) * checked_cast<unsigned>(page_size));
 +}
 +
 +// static
@@ -81,16 +80,12 @@ $NetBSD: patch-base_system_sys__info__freebsd.cc,v 1.14 2026/01/19 16:14:07 kika
 +  }
 +
 +  return std::string();
- }
- 
++}
++
  // static
  uint64_t SysInfo::MaxSharedMemorySize() {
    size_t limit;
-   size_t size = sizeof(limit);
-+
-   if (sysctlbyname("kern.ipc.shmmax", &limit, &size, NULL, 0) < 0) {
-     NOTREACHED();
-   }
+@@ -34,4 +88,16 @@ uint64_t SysInfo::MaxSharedMemorySize() 
    return static_cast<uint64_t>(limit);
  }
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_soda_soda__util.cc,v 1.14 2026/01/19 16:14:14 kikadf Exp $
+$NetBSD: patch-components_soda_soda__util.cc,v 1.15 2026/02/15 09:04:04 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/soda/soda_util.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- components/soda/soda_util.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ components/soda/soda_util.cc
 @@ -23,7 +23,7 @@
  #include "base/win/windows_version.h"
