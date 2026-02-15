@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/01/27 19:12:38 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2026/02/15 09:12:17 wiz Exp $
 
 DISTNAME=	unarj-2.65
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.arjsoftware.com/
+HOMEPAGE=	https://www.arjsoftware.com/
 COMMENT=	Allows files to be extracted from ARJ archives
 LICENSE=	unarj-license
 
