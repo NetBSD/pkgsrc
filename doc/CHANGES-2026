@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1108 2026/02/15 13:24:16 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1109 2026/02/15 13:34:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1480,3 +1480,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated finance/py-braintree to 4.42.0 [adam 2026-02-15]
 	Updated devel/py-ipykernel to 7.2.0 [adam 2026-02-15]
 	Updated devel/py-test-httpserver to 1.1.5 [adam 2026-02-15]
+	Updated databases/py-pypika to 0.51.1 [adam 2026-02-15]
+	Updated www/py-jupyterlab to 4.5.4 [adam 2026-02-15]
