@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2026/01/11 04:52:03 wiz Exp $
+$NetBSD: distinfo,v 1.17 2026/02/15 09:19:16 wiz Exp $
 
-BLAKE2s (MIME-Lite-3.035.tar.gz) = 2a40155f55f6db52b16b5f3b69f3884e18fb3a30547ead2ec772ce67120f5453
-SHA512 (MIME-Lite-3.035.tar.gz) = 762f0b7e837b6c11432fa5ffadd9b5fde4c05202295ef787087cca291390c617f16d540eb9e7c483d478126d43d4d5bbd6c849f24b3dc15c5f44d1666fc34fcd
-Size (MIME-Lite-3.035.tar.gz) = 61593 bytes
+BLAKE2s (MIME-Lite-3.037.tar.gz) = f307fd05d8ca0f096711c5aa315919dc777a203707aa81f1bc7473f9f27b84f8
+SHA512 (MIME-Lite-3.037.tar.gz) = fda7b616d3add86849d8f6fddbc05fdbedbb1770fe083d116757185375a7917e3d5cef39ac414ccb0a46bc1ac6e71f361983e85f83f0e277ef611925cee0ad97
+Size (MIME-Lite-3.037.tar.gz) = 78075 bytes
