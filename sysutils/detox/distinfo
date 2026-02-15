@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:19:30 nia Exp $
+$NetBSD: distinfo,v 1.10 2026/02/15 13:59:47 wiz Exp $
 
-BLAKE2s (detox-1.4.2.tar.gz) = 496df368ba13a0d39143c821202f69a2ac623f6a8bda2d1f8bce439813f17930
-SHA512 (detox-1.4.2.tar.gz) = 29b700bb225a5fd6be555adf4398c2419cc7906061bfa3ab46c890b15486d73d56495c5e837215881c3e120e62139ac4b036974ca4eb39e9ae8e1f2cc1d05b4e
-Size (detox-1.4.2.tar.gz) = 142104 bytes
+BLAKE2s (detox-3.0.1.tar.gz) = 53b8702bb27732e9231545f7dfc3062d9dc78f93ff24a9cca2e4f050e4fc6a2f
+SHA512 (detox-3.0.1.tar.gz) = d3d0662075c956dbd7840c92a171eca86eb4dbd44e6985186e2256cffdcf34fc560bc68a5a7a02f6bee00c90c9c8333c8de3a7d5c1122c667d0fccf3b0a8f03a
+Size (detox-3.0.1.tar.gz) = 312527 bytes
