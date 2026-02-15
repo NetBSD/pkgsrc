@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/02/07 01:00:44 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2026/02/15 18:22:33 gdt Exp $
 
 DISTNAME=	erlydtl-0.15.0
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=erlydtl/}
 GITHUB_PROJECT=	erlydtl

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2024/08/31 07:04:01 nikita Exp $
+# $NetBSD: Makefile,v 1.15 2026/02/15 18:22:31 gdt Exp $
 
 DISTNAME=	rebar3-3.24.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=erlang/}
 DIST_SUBDIR=	rebar3
