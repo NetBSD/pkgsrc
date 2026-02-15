@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2019/11/03 11:55:29 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.12 2026/02/15 09:11:36 wiz Exp $
 
 DISTNAME=	ubench-0.32
 PKGREVISION=	1
 CATEGORIES=	benchmarks
-MASTER_SITES=	http://www.phystech.com/ftp/
+MASTER_SITES=	http://phystech.com/ftp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.phystech.com/download/ubench.html
+#HOMEPAGE=	http://www.phystech.com/download/ubench.html
 COMMENT=	The Unix Benchmark utility
 LICENSE=	gnu-gpl-v2
 
