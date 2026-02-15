@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/02/28 11:53:31 tsutsui Exp $
+# $NetBSD: Makefile,v 1.9 2026/02/15 09:12:54 wiz Exp $
 
 DISTNAME=	unicode-emoji-${EMOJI_VERSION}
 CATEGORIES=	textproc
@@ -8,7 +8,7 @@ DISTFILES=	${EMOJI_FILES}
 EXTRACT_SUFX=	# none
 
 MAINTAINER=	tsutsui@NetBSD.org
-HOMEPAGE=	https://www.unicode.org/emoji/
+HOMEPAGE=	https://home.unicode.org/emoji/about-emoji/
 COMMENT=	Unicode Emoji Data Files
 LICENSE=	unicode
 
