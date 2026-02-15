@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2026/02/11 09:11:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/02/15 12:56:08 adam Exp $
 bin/tortoise
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -257,6 +257,9 @@ ${PYSITELIB}/tortoise/fields/base.pyo
 ${PYSITELIB}/tortoise/fields/data.py
 ${PYSITELIB}/tortoise/fields/data.pyc
 ${PYSITELIB}/tortoise/fields/data.pyo
+${PYSITELIB}/tortoise/fields/db_defaults.py
+${PYSITELIB}/tortoise/fields/db_defaults.pyc
+${PYSITELIB}/tortoise/fields/db_defaults.pyo
 ${PYSITELIB}/tortoise/fields/relational.py
 ${PYSITELIB}/tortoise/fields/relational.pyc
 ${PYSITELIB}/tortoise/fields/relational.pyo
@@ -402,3 +405,6 @@ ${PYSITELIB}/tortoise/utils.pyo
 ${PYSITELIB}/tortoise/validators.py
 ${PYSITELIB}/tortoise/validators.pyc
 ${PYSITELIB}/tortoise/validators.pyo
+${PYSITELIB}/tortoise/warnings.py
+${PYSITELIB}/tortoise/warnings.pyc
+${PYSITELIB}/tortoise/warnings.pyo
