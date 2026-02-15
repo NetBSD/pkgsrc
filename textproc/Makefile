@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1572 2026/02/07 01:01:48 gdt Exp $
+# $NetBSD: Makefile,v 1.1573 2026/02/15 16:46:07 manu Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1028,6 +1028,7 @@ SUBDIR+=	php-enchant
 SUBDIR+=	php-intl
 SUBDIR+=	php-json
 SUBDIR+=	php-mecab
+SUBDIR+=	php-pecl-pspell
 SUBDIR+=	php-pspell
 SUBDIR+=	php-sphinx
 SUBDIR+=	php-wddx

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/02/15 16:46:07 manu Exp $
+
+BLAKE2s (php-pspell/pspell-1.0.1.tgz) = c36259ba8176ba75ad285534d7ca22529e5c6d494175694e21cc75077c2afc88
+SHA512 (php-pspell/pspell-1.0.1.tgz) = b7c464c8c34fb9aa202bb4fa08ba8880b15a912104e491fc5a4702610378bf853730cf275430cefd58cadb0994281d2d277f0ae4833fd23c1cd34d806831e3a5
+Size (php-pspell/pspell-1.0.1.tgz) = 10850 bytes
