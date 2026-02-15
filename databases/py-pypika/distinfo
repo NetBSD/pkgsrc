@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2022/04/04 18:21:25 adam Exp $
+$NetBSD: distinfo,v 1.26 2026/02/15 13:30:33 adam Exp $
 
-BLAKE2s (PyPika-0.48.9.tar.gz) = 799996e0f2056e36d663f1d7cc891ee7fab4759db8313ad0bcc4d8a7c4df98a8
-SHA512 (PyPika-0.48.9.tar.gz) = f6b00622a37298e8c9b911ba5c29c354519f1bbe3c9b74ea2b3c0059724189f56a7e8566dc058ccd77de11f834405cd8e46922c3cc997dd445e636ca71fa6481
-Size (PyPika-0.48.9.tar.gz) = 67259 bytes
+BLAKE2s (pypika-0.51.1.tar.gz) = 3816accee1314762950de6db3f794959102344468ecf07128fa721700f189aed
+SHA512 (pypika-0.51.1.tar.gz) = d56ac771b66884ce8fe881bc0d29f18048e3da0af0e882265e022f025adbc7af326d2e0c9c8e867c7d95d0b50cd2f825229cebd8ed8037e6806699cf992631d5
+Size (pypika-0.51.1.tar.gz) = 80919 bytes
