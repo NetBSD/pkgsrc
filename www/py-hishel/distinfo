@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2026/01/14 09:52:57 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/02/15 12:53:56 adam Exp $
 
-BLAKE2s (hishel-1.1.8.tar.gz) = d6977c053c3015680460458afeae8930a96c0b2710e20deb4a1a487ec157c6d5
-SHA512 (hishel-1.1.8.tar.gz) = 55d45adc4255a63afb2ec67ca1b708c2653b2a084b609c3e3fd9a6b3d01a75d2986d42adae454afda20412ad79db0e0369d4840f52a73f20f6f222ddd5938e88
-Size (hishel-1.1.8.tar.gz) = 61755 bytes
+BLAKE2s (hishel-1.1.9.tar.gz) = c9ba974ef31b061e167e3d503cb73e6dcc58d701ef227f1fd8cbb071787d9d12
+SHA512 (hishel-1.1.9.tar.gz) = 5fc2451c55cb44935cc1e14e251ba05e230b710d81d1099a9788afe124c6eec5f95ea0e084e3192c36e1c78c2aa0ebb2b3c01b69e9bd4bde8681684d349ae991
+Size (hishel-1.1.9.tar.gz) = 61898 bytes
