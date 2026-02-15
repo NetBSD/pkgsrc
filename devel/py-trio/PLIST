@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2025/09/21 16:20:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/02/15 14:11:13 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -356,9 +356,6 @@ ${PYSITELIB}/trio/_tests/type_tests/open_memory_channel.pyo
 ${PYSITELIB}/trio/_tests/type_tests/path.py
 ${PYSITELIB}/trio/_tests/type_tests/path.pyc
 ${PYSITELIB}/trio/_tests/type_tests/path.pyo
-${PYSITELIB}/trio/_tests/type_tests/raisesgroup.py
-${PYSITELIB}/trio/_tests/type_tests/raisesgroup.pyc
-${PYSITELIB}/trio/_tests/type_tests/raisesgroup.pyo
 ${PYSITELIB}/trio/_tests/type_tests/subprocesses.py
 ${PYSITELIB}/trio/_tests/type_tests/subprocesses.pyc
 ${PYSITELIB}/trio/_tests/type_tests/subprocesses.pyo
