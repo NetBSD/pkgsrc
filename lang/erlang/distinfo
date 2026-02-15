@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.116 2025/07/10 14:23:11 jperkin Exp $
+$NetBSD: distinfo,v 1.117 2026/02/15 18:14:31 gdt Exp $
 
-BLAKE2s (erlang-27.0.1.tar.gz) = a1a3de15111945edf2878d3fca02d88cc4b028571609981f8e5c3fc82dc78aca
-SHA512 (erlang-27.0.1.tar.gz) = 03bba7f7d8226474b4dba9855e78b59c7cf78973fbb2ed48893a26879dc0dce579336e9cae6870f154bdd48cf3be6398cc1ec4ff52f252017d84edb20d565e71
-Size (erlang-27.0.1.tar.gz) = 62055749 bytes
+BLAKE2s (erlang-27.3.4.7.tar.gz) = b78b369fa021b7ec647810bbb3b5007fc8b80dc266c6ffc5a893f5b13e64a248
+SHA512 (erlang-27.3.4.7.tar.gz) = e2627e346be13588cbe142d4918fa2f6eb9c4c43e8a208f5cd84b9d8c840355e440ca2537e2a018d66ec160fce77372a79057b700c744ff898736e3761bd247c
+Size (erlang-27.3.4.7.tar.gz) = 62290067 bytes
 SHA1 (patch-erts_emulator_Makefile.in) = 73b983936f6c52643e26530f133fbd32cdaf7b7e
 SHA1 (patch-erts_emulator_beam_erl__init.c) = ccbf4330a0774b97a3aca611fc57ba60062e1390
 SHA1 (patch-erts_emulator_beam_packet__parser.c) = 13cb7fb1d65ddac93221d85df1a44d76332b1cec
-SHA1 (patch-erts_emulator_drivers_common_inet__drv.c) = 937280446342ceb00e3d193fe0e2ee47765a9957
+SHA1 (patch-erts_emulator_drivers_common_inet__drv.c) = 14f7a9743303dc205497d63ebb63d6f7e0ab55ec
 SHA1 (patch-erts_emulator_drivers_common_ram__file__drv.c) = 5c3c05c27b2eec0f5be1e31f2e8fbdee0d9b8885
 SHA1 (patch-erts_emulator_drivers_win32_registry__drv.c) = 5d66b9be1c09f7c471d9675f376df3c8ec3d39be
 SHA1 (patch-erts_emulator_nifs_common_prim__tty__nif.c) = 580607af8bec00b1f618834c24dfc4b924812dce
