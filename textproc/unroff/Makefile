@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.32 2020/01/26 17:32:18 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2026/02/15 09:13:41 wiz Exp $
 
 DISTNAME=		unroff-1.0
 PKGNAME=		unroff-1.0.2
 PKGREVISION=		1
 CATEGORIES=		textproc
-MASTER_SITES=		http://www-rn.informatik.uni-bremen.de/software/unroff/dist/
+#MASTER_SITES=		http://www-rn.informatik.uni-bremen.de/software/unroff/dist/
 
 PATCHFILES=		me-misc-patch misc-patch-2
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www-rn.informatik.uni-bremen.de/software/unroff/
+#HOMEPAGE=		https://www-rn.informatik.uni-bremen.de/software/unroff/
 COMMENT=		Programmable troff translator with backend for HTML
 
 DIST_SUBDIR=		unroff
