@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1097 2026/02/14 18:33:40 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1098 2026/02/15 07:39:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1463,3 +1463,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cfitsio to 4.6.3 [adam 2026-02-14]
 	Updated misc/indi to 2.1.9 [adam 2026-02-14]
 	Updated graphics/wcslib to 8.5 [adam 2026-02-14]
+	Updated emulators/qemu to 10.2.1 [adam 2026-02-15]
+	Updated textproc/py-xmltodict to 1.0.3 [adam 2026-02-15]
