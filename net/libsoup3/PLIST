@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/18 19:14:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/02/15 12:43:53 adam Exp $
 include/libsoup-3.0/libsoup/soup-auth-domain-basic.h
 include/libsoup-3.0/libsoup/soup-auth-domain-digest.h
 include/libsoup-3.0/libsoup/soup-auth-domain.h
@@ -81,8 +81,10 @@ share/locale/it/LC_MESSAGES/libsoup-3.0.mo
 share/locale/ja/LC_MESSAGES/libsoup-3.0.mo
 share/locale/ka/LC_MESSAGES/libsoup-3.0.mo
 share/locale/kab/LC_MESSAGES/libsoup-3.0.mo
+share/locale/kk/LC_MESSAGES/libsoup-3.0.mo
 share/locale/kn/LC_MESSAGES/libsoup-3.0.mo
 share/locale/ko/LC_MESSAGES/libsoup-3.0.mo
+share/locale/kw/LC_MESSAGES/libsoup-3.0.mo
 share/locale/lt/LC_MESSAGES/libsoup-3.0.mo
 share/locale/lv/LC_MESSAGES/libsoup-3.0.mo
 share/locale/ml/LC_MESSAGES/libsoup-3.0.mo
@@ -111,6 +113,7 @@ share/locale/th/LC_MESSAGES/libsoup-3.0.mo
 share/locale/tr/LC_MESSAGES/libsoup-3.0.mo
 share/locale/ug/LC_MESSAGES/libsoup-3.0.mo
 share/locale/uk/LC_MESSAGES/libsoup-3.0.mo
+share/locale/uz/LC_MESSAGES/libsoup-3.0.mo
 share/locale/uz@cyrillic/LC_MESSAGES/libsoup-3.0.mo
 share/locale/vi/LC_MESSAGES/libsoup-3.0.mo
 share/locale/zh_CN/LC_MESSAGES/libsoup-3.0.mo
