@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1106 2026/02/15 12:56:30 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1107 2026/02/15 12:59:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1476,3 +1476,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/openvpn to 2.7.0 [adam 2026-02-15]
 	Updated www/py-hishel to 1.1.9 [adam 2026-02-15]
 	Updated databases/py-tortoise-orm to 1.1.2 [adam 2026-02-15]
+	Updated security/py-authlib to 1.6.8 [adam 2026-02-15]
+	Updated finance/py-braintree to 4.42.0 [adam 2026-02-15]
