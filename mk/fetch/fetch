@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: fetch,v 1.22 2026/02/07 15:15:02 wiz Exp $
+# $NetBSD: fetch,v 1.23 2026/02/15 09:46:33 wiz Exp $
 #
 # Copyright (c) 2006, 2015 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -44,6 +44,9 @@
 #	site should be the concatenation of the specified site and file.
 #	If the file cannot be fetched successfully, then we try the next
 #	listed site.
+#
+#	The file will be downloaded under a temporary name and
+#	renamed to the proper name when the download is done.
 #
 #	If the file already exists on the disk and is verified, then
 #	no fetch action is taken.
@@ -189,7 +192,7 @@ if ${TEST} -n "$distinfo"; then
 	done < $distinfo
 fi
 
-# verify_file [-v] $file
+# verify_file [-v] $file $suffix
 #	If we can checksum the file, then see if it matches the listed
 #	checksums in the distinfo file.  If we can check the size, then
 #	check that instead.  We strip off ".pkgsrc.resume" from the
@@ -199,12 +202,13 @@ fi
 verify_file() {
 	_if_verbose=:; if [ "x$1" = "x-v" ]; then shift; _if_verbose=; fi
 	_file="${1#./}"
+	_suffix="$2"
 	${TEST} -f $_file || {
 		$_if_verbose ${ECHO} 1>&2 "$self: File $_file does not exist."
 		return 1
 	}
 	if ${TEST} -n "$checksum"; then
-		${CHECKSUM} -s ".pkgsrc.resume" $distinfo ${_file} || {
+		${CHECKSUM} -s "${_suffix}" $distinfo ${_file} || {
 			$_if_verbose ${ECHO} 1>&2 "$self: Checksum of the file $_file doesn't match."
 			return 1
 		}
@@ -223,7 +227,7 @@ verify_file() {
 # If the file already exists and it verifies, then we don't need to fetch
 # it again.
 #
-if verify_file $path; then
+if verify_file $path ""; then
 	exit 0
 fi
 
@@ -232,32 +236,23 @@ ${TEST} -d $fetchdir || ${MKDIR} -p $fetchdir 2>/dev/null
 ${TEST} -w $fetchdir || ${ECHO} 1>&2 "$self: WARNING: DISTDIR `cd $fetchdir && pwd` looks non-writable."
 
 # Set the name of the output file.  In the "resume" case, we initialize
-# the fetch loop by ensuring that the temporary output file already
-# exists.
+# the fetch loop by providing the existing, possibly incomplete, file.
 #
-outputfile="$file"
+tmp_suffix=".$$.part"
+outputfile="$file$tmp_suffix"
 outputpath="$fetchdir/$outputfile"
+if ${TEST} -f $outputpath; then
+    ${ECHO} "Temporary download file ${outputpath} already existed, deleting"
+    ${RM} -f $outputpath
+fi
 if ${TEST} -n "$resume"; then
-	outputfile="${file}.pkgsrc.resume"
-	outputpath="$fetchdir/$outputfile"
-	if ${TEST} ! -f $outputpath; then
-		if ${TEST} -f $path; then
-			${CP} -f $path $outputpath
-		else
-			${RM} -f $outputpath
-			${TOUCH} $outputpath
-		fi
-	fi
-	#
-	# If the temporary file verifies, then we don't need to resume
-	# fetching it.
-	#
-	if verify_file $outputpath; then
-		${MV} -f $outputpath $path
-		exit 0
+	if ${TEST} -f $path; then
+		${CP} -f $path $outputpath
+	else
+		${TOUCH} $outputpath
 	fi
 	size=`${WC} -c < $outputpath`
-	${ECHO} "=> Downloaded size: $size bytes"
+	${ECHO} "=> Downloaded size (before resume): $size bytes"
 fi
 ${TEST} -z "$distsize" || ${ECHO} "=> Total size: $distsize $distunits"
 
@@ -287,8 +282,8 @@ while ${TEST} $# -gt 0; do
 		${ECHO} 1>&2 "$self: Unable to fetch expected file $file"
 		continue
 	fi
-	if verify_file -v $outputpath; then
-		${TEST} -z "$resume" || ${MV} -f $outputpath $path
+	if verify_file -v $outputpath $tmp_suffix; then
+		${MV} -f $outputpath $path
 		break
 	fi
 	if ${TEST} -n "$resume"; then
