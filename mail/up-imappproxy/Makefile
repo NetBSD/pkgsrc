@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/10/24 22:09:51 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/02/15 09:14:14 wiz Exp $
 
 VERSION=	1.2.8
 PKGNAME=	up-imapproxy-${VERSION}
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 CONFLICTS+=	imapproxy-[0-9]*
 
 MAINTAINER=	tm@NetBSD.org
-HOMEPAGE=	http://www.imapproxy.org/
+#HOMEPAGE=	http://www.imapproxy.org/
 COMMENT=	Connection caching IMAP proxy server
 LICENSE=	gnu-gpl-v2
 
