@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_blink_renderer_core_exported_web__view__impl.cc,v 1.14 2026/01/19 16:14:19 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_core_exported_web__view__impl.cc,v 1.15 2026/02/15 09:04:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/exported/web_view_impl.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- third_party/blink/renderer/core/exported/web_view_impl.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ third_party/blink/renderer/core/exported/web_view_impl.cc
-@@ -422,7 +422,7 @@ void RecordPrerenderActivationSignalDela
+@@ -423,7 +423,7 @@ void RecordPrerenderActivationSignalDela
  #if !BUILDFLAG(IS_MAC) && !BUILDFLAG(IS_WIN)
  SkFontHinting RendererPreferencesToSkiaHinting(
      const blink::RendererPreferences& prefs) {
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_blink_renderer_core_exported_web__view__impl.cc,v 1.
    if (!prefs.should_antialias_text) {
      // When anti-aliasing is off, GTK maps all non-zero hinting settings to
      // 'Normal' hinting so we do the same. Otherwise, folks who have 'Slight'
-@@ -3472,7 +3472,7 @@ void WebViewImpl::UpdateFontRenderingFro
+@@ -3619,7 +3619,7 @@ void WebViewImpl::UpdateFontRenderingFro
        gfx::FontRenderParams::SUBPIXEL_RENDERING_NONE);
    WebFontRenderStyle::SetSubpixelPositioning(
        renderer_preferences_.use_subpixel_positioning);
@@ -24,7 +24,7 @@ $NetBSD: patch-third__party_blink_renderer_core_exported_web__view__impl.cc,v 1.
    if (!renderer_preferences_.system_font_family_name.empty()) {
      WebFontRenderStyle::SetSystemFontFamily(blink::WebString::FromUTF8(
          renderer_preferences_.system_font_family_name));
-@@ -3610,7 +3610,7 @@ void WebViewImpl::UpdateRendererPreferen
+@@ -3757,7 +3757,7 @@ void WebViewImpl::UpdateRendererPreferen
        renderer_preferences_.selection_clipboard_buffer_available);
  #endif  // BUILDFLAG(IS_OZONE)
  

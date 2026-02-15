@@ -1,10 +1,10 @@
-$NetBSD: patch-base_process_process__metrics__freebsd.cc,v 1.14 2026/01/19 16:14:06 kikadf Exp $
+$NetBSD: patch-base_process_process__metrics__freebsd.cc,v 1.15 2026/02/15 09:03:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics_freebsd.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- base/process/process_metrics_freebsd.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ base/process/process_metrics_freebsd.cc
 @@ -3,18 +3,37 @@
  // found in the LICENSE file.
@@ -160,10 +160,10 @@ $NetBSD: patch-base_process_process__metrics__freebsd.cc,v 1.14 2026/01/19 16:14
 +      != 0 || length != sizeof(swap_used))
 +    return false;
 +
-+  meminfo->total = ByteCount::FromUnsigned(mem_total * pagesize);
-+  meminfo->free = ByteCount::FromUnsigned(mem_free * pagesize);
-+  meminfo->swap_total = ByteCount::FromUnsigned(swap_total * pagesize);
-+  meminfo->swap_free = ByteCount::FromUnsigned((swap_total - swap_used) * pagesize);
++  meminfo->total = ByteSize(mem_total * pagesize);
++  meminfo->free = ByteSize(mem_free * pagesize);
++  meminfo->swap_total = ByteSize(swap_total * pagesize);
++  meminfo->swap_free = ByteSize((swap_total - swap_used) * pagesize);
 +
 +  return true;
 +}

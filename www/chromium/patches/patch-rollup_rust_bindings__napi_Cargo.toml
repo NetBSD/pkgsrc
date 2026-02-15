@@ -1,0 +1,21 @@
+$NetBSD: patch-rollup_rust_bindings__napi_Cargo.toml,v 1.1 2026/02/15 09:04:08 kikadf Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- rollup/rust/bindings_napi/Cargo.toml.orig	2024-09-21 06:00:56.000000000 +0000
++++ rollup/rust/bindings_napi/Cargo.toml
+@@ -15,10 +15,10 @@ napi-derive = "2.16.12"
+ parse_ast = { path = "../parse_ast" }
+ xxhash = { path = "../xxhash" }
+ 
+-[target.'cfg(not(target_os = "linux"))'.dependencies]
++[target.'cfg(not(any(target_os = "linux", target_os = "freebsd", target_os = "openbsd", target_os = "netbsd")))'.dependencies]
+ mimalloc-rust = { version = "0.2.1" }
+ 
+-[target.'cfg(all(target_os = "linux", not(all(target_env = "musl", target_arch = "aarch64"))))'.dependencies]
++[target.'cfg(any(all(target_os = "linux", not(all(target_env = "musl", target_arch = "aarch64"))), all(target_os = "freebsd", not(target_arch = "aarch64")), all(target_os = "openbsd", not(target_arch = "aarch64")), all(target_os = "netbsd", not(target_arch = "evbarm"))))'.dependencies]
+ mimalloc-rust = { version = "0.2.1", features = ["local-dynamic-tls"] }
+ 
+ [build-dependencies]

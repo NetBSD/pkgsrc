@@ -1,10 +1,10 @@
-$NetBSD: patch-build_detect__host__arch.py,v 1.14 2026/01/19 16:14:07 kikadf Exp $
+$NetBSD: patch-build_detect__host__arch.py,v 1.15 2026/02/15 09:03:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/detect_host_arch.py.orig	2026-01-07 00:50:30.000000000 +0000
+--- build/detect_host_arch.py.orig	2026-02-03 22:07:10.000000000 +0000
 +++ build/detect_host_arch.py
 @@ -20,6 +20,8 @@ def HostArch():
      host_arch = 'ia32'

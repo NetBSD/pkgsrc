@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2026/02/06 10:06:06 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/02/15 09:03:54 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			144.0.7559.109
-PKGREVISION=			1
+VERSION=			145.0.7632.75
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -10,8 +9,17 @@ EXTRACT_SUFX_C=			.tar.xz
 DISTFILES+=			${DISTNAME}-lite${EXTRACT_SUFX_C}
 
 # Sources to build on NetBSD
-NB_VERSION=			144.0
-GITHUB_SUBMODULES=		kikadf chromium-nb v${NB_VERSION} ./
+NB_VERSION=			v145.1
+GITHUB_SUBMODULES=		kikadf chromium-nb ${NB_VERSION} ./
+
+# rollup
+GITHUB_SUBMODULES+=		rollup rollup v4.22.4 rollup
+CARGO_WRKSRC=			${WRKSRC}/rollup/rust
+.include "cargo-depends.mk"
+
+# esbuild
+EB_DISTNAME=			${MAKE} -C ../../www/esbuild -V DISTNAME
+GITHUB_SUBMODULES+=		evanw esbuild v${EB_DISTNAME:sh:C/^.*-//} esbuild
 
 # LLVM_MAJOR_VERSION
 LLVM_MV=			19
@@ -22,7 +30,7 @@ COMMENT=			Open source web browser
 LICENSE=			modified-bsd AND gnu-lgpl-v3 AND mpl-2.0
 
 USE_TOOLS+=			bash bison flex:pkgsrc gmake pax perl pkg-config
-TOOLS_PLATFORM.flex=		# override the platform definition to use pkgsrc's flex.
+#TOOLS_PLATFORM.flex=		# override the platform definition to use pkgsrc's flex.
 USE_LANGUAGES=			c c++
 
 CHECK_PORTABILITY_SKIP+=	third_party/dawn/third_party/dxc/utils/buildit/build_llvm
@@ -40,6 +48,7 @@ CHECK_PORTABILITY_SKIP+=	v8/tools/profiling/run-llprof.sh
 CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
 
 TOOL_DEPENDS+=			gperf>=3.2:../../devel/gperf
+TOOL_DEPENDS+=			esbuild-[0-9]*:../../www/esbuild
 TOOL_DEPENDS+=			ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=			${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TOOL_DEPENDS+=			${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
@@ -101,8 +110,8 @@ SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
 SUBST_MESSAGE.man=	Fixing manpage
 SUBST_FILES.man+=	chrome/app/resources/manpage.1.in
-SUBST_SED.man+=		-e 's,@@PACKAGE@@,chromium,g'
-SUBST_SED.man+=		-e 's,@@MENUNAME@@,Chromium Web Browser,g'
+SUBST_SED.man+=		-e 's,@@PACKAGE,chromium,g'
+SUBST_SED.man+=		-e 's,@@MENUNAME,Chromium Web Browser,g'
 
 .include "options.mk"
 
@@ -254,7 +263,21 @@ pre-configure:
 	${LN} -sf ${PREFIX}/bin/node \
 		${WRKSRC}/third_party/node/${LOWER_OPSYS}/node-${LOWER_OPSYS}/bin/node
 
+	# Prepare esbuild
+	${LN} -sf ${PREFIX}/bin/esbuild \
+		${WRKSRC}/third_party/devtools-frontend/src/third_party/esbuild/esbuild
+
+	# Prepare rollup
+	${MKDIR} ${WRKSRC}/third_party/devtools-frontend/src/node_modules/@rollup/rollup-${LOWER_OPSYS}
+
 do-configure:
+	cd ${WRKSRC}/esbuild && \
+		${RUN} ${WRKSRC}/third_party/node/${LOWER_OPSYS}/node-${LOWER_OPSYS}/bin/node scripts/esbuild.js \
+		${WRKSRC}/third_party/devtools-frontend/src/third_party/esbuild/esbuild --neutral
+	${RM} -rf ${WRKSRC}/third_party/devtools-frontend/src/node_modules/esbuild
+	${LN} -sf ${WRKSRC}/esbuild/npm/esbuild \
+		${WRKSRC}/third_party/devtools-frontend/src/node_modules/esbuild
+
 	cd ${WRKSRC} && \
 		${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./build/linux/unbundle/replace_gn_files.py \
 		--system-libraries ${GN_SYSTEM_LIBS} || ${FALSE}
@@ -266,7 +289,11 @@ do-configure:
 		${SETENV} ${CONFIGURE_ENV} ./out/${BUILDTYPE}/gn \
 		gen --args="${GN_ARGS}" --script-executable="${PYTHONBIN}" ${GN_VERBOSE} out/${BUILDTYPE}
 
-do-build:
+do-build: do-cargo-build
+	cd ${WRKSRC}/third_party/devtools-frontend/src/node_modules/@rollup && \
+	${CP} ${WRKSRC}/rollup/rust/target/release/libbindings_napi.so \
+		rollup-${LOWER_OPSYS}/rollup.${LOWER_OPSYS}.node && \
+		${ECHO} '{ "main": "./rollup.${LOWER_OPSYS}.node" }' > rollup-${LOWER_OPSYS}/package.json
 	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
 	${SETENV} ${MAKE_ENV} ${PREFIX}/bin/ninja -j ${_MAKE_JOBS_N} -C out/${BUILDTYPE} ${TARGET}
 
@@ -336,6 +363,7 @@ do-install:
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../lang/rust/cargo.mk"
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/compiler-rt/buildlink3.mk"

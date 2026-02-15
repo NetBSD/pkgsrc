@@ -1,12 +1,12 @@
-$NetBSD: patch-services_device_usb_usb__service.cc,v 1.14 2026/01/19 16:14:19 kikadf Exp $
+$NetBSD: patch-services_device_usb_usb__service.cc,v 1.15 2026/02/15 09:04:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/usb/usb_service.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- services/device/usb/usb_service.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ services/device/usb/usb_service.cc
-@@ -20,12 +20,16 @@
+@@ -19,12 +19,16 @@
  
  #if BUILDFLAG(IS_ANDROID)
  #include "services/device/usb/usb_service_android.h"
@@ -24,7 +24,7 @@ $NetBSD: patch-services_device_usb_usb__service.cc,v 1.14 2026/01/19 16:14:19 ki
  #endif
  
  namespace device {
-@@ -48,12 +52,14 @@ constexpr base::TaskTraits UsbService::k
+@@ -47,12 +51,14 @@ constexpr base::TaskTraits UsbService::k
  std::unique_ptr<UsbService> UsbService::Create() {
  #if BUILDFLAG(IS_ANDROID)
    return base::WrapUnique(new UsbServiceAndroid());

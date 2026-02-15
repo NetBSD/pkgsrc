@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_infobar__internals_infobar__internals__handler.cc,v 1.1 2026/01/19 16:14:11 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_infobar__internals_infobar__internals__handler.cc,v 1.2 2026/02/15 09:04:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/infobar_internals/infobar_internals_handler.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- chrome/browser/ui/webui/infobar_internals/infobar_internals_handler.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ chrome/browser/ui/webui/infobar_internals/infobar_internals_handler.cc
 @@ -25,7 +25,7 @@
  #include "chrome/browser/win/installer_downloader/installer_downloader_pref_names.h"

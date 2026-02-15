@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_renderer__host_render__process__host__impl__receiver__bindings.cc,v 1.14 2026/01/19 16:14:15 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_render__process__host__impl__receiver__bindings.cc,v 1.15 2026/02/15 09:04:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc
 @@ -52,7 +52,7 @@
  #include "third_party/blink/public/mojom/android_font_lookup/android_font_lookup.mojom.h"

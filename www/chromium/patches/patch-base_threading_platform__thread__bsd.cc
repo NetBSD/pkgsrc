@@ -1,12 +1,12 @@
-$NetBSD: patch-base_threading_platform__thread__bsd.cc,v 1.14 2026/01/19 16:14:07 kikadf Exp $
+$NetBSD: patch-base_threading_platform__thread__bsd.cc,v 1.15 2026/02/15 09:03:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/platform_thread_bsd.cc.orig	2026-01-19 14:53:54.431821625 +0000
+--- base/threading/platform_thread_bsd.cc.orig	2026-02-14 15:42:44.582489103 +0000
 +++ base/threading/platform_thread_bsd.cc
-@@ -0,0 +1,39 @@
+@@ -0,0 +1,41 @@
 +// Copyright 2023 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -19,7 +19,8 @@ $NetBSD: patch-base_threading_platform__thread__bsd.cc,v 1.14 2026/01/19 16:14:0
 +namespace internal {
 +
 +void SetCurrentThreadTypeImpl(ThreadType thread_type,
-+                              MessagePumpType pump_type_hint) {
++                              MessagePumpType pump_type_hint,
++                              bool may_change_affinity) {
 +  NOTIMPLEMENTED();
 +  return;
 +}
@@ -34,9 +35,10 @@ $NetBSD: patch-base_threading_platform__thread__bsd.cc,v 1.14 2026/01/19 16:14:0
 +  return false;
 +}
 +
-+void RemoveThreadTypeOverrideImpl(
++void RemoveThreadTypeOverride(
++    PlatformThreadHandle thread_handle,
 +    const PlatformPriorityOverride& priority_override_handle,
-+    ThreadType thread_type) {}
++    ThreadType initial_thread_type) {}
 +
 +}  // namespace internal
 +

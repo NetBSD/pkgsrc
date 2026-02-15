@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_message__center_views_message__popup__view.cc,v 1.14 2026/01/19 16:14:23 kikadf Exp $
+$NetBSD: patch-ui_message__center_views_message__popup__view.cc,v 1.15 2026/02/15 09:04:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/message_center/views/message_popup_view.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- ui/message_center/views/message_popup_view.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ ui/message_center/views/message_popup_view.cc
 @@ -164,7 +164,7 @@ std::unique_ptr<views::Widget> MessagePo
        views::Widget::InitParams::CLIENT_OWNS_WIDGET,

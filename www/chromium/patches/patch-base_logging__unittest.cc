@@ -1,12 +1,12 @@
-$NetBSD: patch-base_logging__unittest.cc,v 1.14 2026/01/19 16:14:06 kikadf Exp $
+$NetBSD: patch-base_logging__unittest.cc,v 1.15 2026/02/15 09:03:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/logging_unittest.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- base/logging_unittest.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ base/logging_unittest.cc
-@@ -41,7 +41,7 @@
+@@ -37,7 +37,7 @@
  #include "base/posix/eintr_wrapper.h"
  #endif  // BUILDFLAG(IS_POSIX)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-base_logging__unittest.cc,v 1.14 2026/01/19 16:14:06 kikadf Exp $
  #include <ucontext.h>
  #endif
  
-@@ -587,14 +587,18 @@ void CheckCrashTestSighandler(int, sigin
+@@ -584,14 +584,18 @@ void CheckCrashTestSighandler(int, sigin
    // need the arch-specific boilerplate below, which is inspired by breakpad.
    // At the same time, on OSX, ucontext.h is deprecated but si_addr works fine.
    uintptr_t crash_addr = 0;

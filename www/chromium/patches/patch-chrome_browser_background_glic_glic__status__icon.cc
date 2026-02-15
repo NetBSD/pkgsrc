@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.13 2026/01/19 16:14:08 kikadf Exp $
+$NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.14 2026/02/15 09:03:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/background/glic/glic_status_icon.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- chrome/browser/background/glic/glic_status_icon.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ chrome/browser/background/glic/glic_status_icon.cc
 @@ -111,7 +111,7 @@ GlicStatusIcon::GlicStatusIcon(GlicContr
      return;
@@ -31,7 +31,7 @@ $NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.13 2026/
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    if (context_menu_) {
-     const bool is_visible = BrowserList::GetInstance()->empty();
+     const bool is_visible = GlobalBrowserCollection::GetInstance()->IsEmpty();
      const std::optional<size_t> index =
 @@ -382,7 +382,7 @@ std::unique_ptr<StatusIconMenuModel> Gli
    menu->AddItem(IDC_GLIC_STATUS_ICON_MENU_SETTINGS,

@@ -1,10 +1,10 @@
-$NetBSD: patch-content_utility_utility__main.cc,v 1.14 2026/01/19 16:14:15 kikadf Exp $
+$NetBSD: patch-content_utility_utility__main.cc,v 1.15 2026/02/15 09:04:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/utility_main.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- content/utility/utility_main.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ content/utility/utility_main.cc
 @@ -38,22 +38,31 @@
  #include "services/on_device_model/public/mojom/on_device_model_service.mojom.h"
@@ -45,7 +45,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.14 2026/01/19 16:14:15 kikad
  #if BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION) && \
 -    (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS))
 +    (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD))
- #include "components/services/on_device_translation/sandbox_hook.h"
+ #include "components/on_device_translation/service/sandbox_hook.h"
  #endif  // BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION) &&  (BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS))
 @@ -121,7 +130,7 @@ namespace content {

@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_wtf_stack__util.cc,v 1.14 2026/01/19 16:14:20 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_wtf_stack__util.cc,v 1.15 2026/02/15 09:04:11 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ third_party/blink/renderer/platform/wtf/stack_util.cc
 @@ -22,6 +22,15 @@ extern "C" void* __libc_stack_end;  // N
  #include <sanitizer/asan_interface.h>

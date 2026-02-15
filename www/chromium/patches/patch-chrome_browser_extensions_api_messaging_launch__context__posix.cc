@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_extensions_api_messaging_launch__context__posix.cc,v 1.14 2026/01/19 16:14:08 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_api_messaging_launch__context__posix.cc,v 1.15 2026/02/15 09:03:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/messaging/launch_context_posix.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- chrome/browser/extensions/api/messaging/launch_context_posix.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ chrome/browser/extensions/api/messaging/launch_context_posix.cc
 @@ -84,7 +84,7 @@ std::optional<LaunchContext::ProcessStat
  

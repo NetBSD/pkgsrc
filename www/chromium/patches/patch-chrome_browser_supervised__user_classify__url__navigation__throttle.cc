@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_supervised__user_classify__url__navigation__throttle.cc,v 1.14 2026/01/19 16:14:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_supervised__user_classify__url__navigation__throttle.cc,v 1.15 2026/02/15 09:03:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/classify_url_navigation_throttle.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- chrome/browser/supervised_user/classify_url_navigation_throttle.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ chrome/browser/supervised_user/classify_url_navigation_throttle.cc
-@@ -41,7 +41,7 @@ namespace supervised_user {
+@@ -42,7 +42,7 @@ namespace supervised_user {
  
  namespace {
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_supervised__user_classify__url__navigation__thrott
  bool ShouldShowReAuthInterstitial(
      content::NavigationHandle& navigation_handle) {
    Profile* profile = Profile::FromBrowserContext(
-@@ -208,7 +208,7 @@ void ClassifyUrlNavigationThrottle::OnIn
+@@ -209,7 +209,7 @@ void ClassifyUrlNavigationThrottle::OnIn
      }
      case InterstitialResultCallbackActions::kCancelWithInterstitial: {
        CHECK(navigation_handle());

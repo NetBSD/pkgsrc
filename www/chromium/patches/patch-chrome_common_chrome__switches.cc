@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_chrome__switches.cc,v 1.14 2026/01/19 16:14:12 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__switches.cc,v 1.15 2026/02/15 09:04:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_switches.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- chrome/common/chrome_switches.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ chrome/common/chrome_switches.cc
 @@ -952,7 +952,7 @@ const char kDebugPrint[] = "debug-print"
  #endif
@@ -15,8 +15,8 @@ $NetBSD: patch-chrome_common_chrome__switches.cc,v 1.14 2026/01/19 16:14:12 kika
  const char kEnableNewAppMenuIcon[] = "enable-new-app-menu-icon";
  
  // Causes the browser to launch directly in guest mode.
-@@ -991,7 +991,7 @@ const char kGlicAlwaysShowWebActuationTo
- const char kGlicAdminRedirectPatterns[] = "glic-admin-redirect-patterns";
+@@ -1000,7 +1000,7 @@ const char kGlicResetMultiInstanceEnable
+ const char kGlicForceG1StatusForMultiInstance[] = "glic-force-g1-for-mi";
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)

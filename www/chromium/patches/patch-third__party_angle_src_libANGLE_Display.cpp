@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_angle_src_libANGLE_Display.cpp,v 1.14 2026/01/19 16:14:19 kikadf Exp $
+$NetBSD: patch-third__party_angle_src_libANGLE_Display.cpp,v 1.15 2026/02/15 09:04:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/libANGLE/Display.cpp.orig	2026-01-07 00:50:30.000000000 +0000
+--- third_party/angle/src/libANGLE/Display.cpp.orig	2026-02-03 22:07:10.000000000 +0000
 +++ third_party/angle/src/libANGLE/Display.cpp
 @@ -64,7 +64,7 @@
  #        include "libANGLE/renderer/gl/wgl/DisplayWGL.h"
@@ -42,7 +42,7 @@ $NetBSD: patch-third__party_angle_src_libANGLE_Display.cpp,v 1.14 2026/01/19 16:
  #        if defined(ANGLE_USE_GBM)
              if (platformType == EGL_PLATFORM_GBM_KHR && rx::IsVulkanGbmDisplayAvailable())
              {
-@@ -2183,7 +2183,7 @@ static ClientExtensions GenerateClientEx
+@@ -2185,7 +2185,7 @@ static ClientExtensions GenerateClientEx
      extensions.platformWaylandEXT = true;
  #endif
  
@@ -51,7 +51,7 @@ $NetBSD: patch-third__party_angle_src_libANGLE_Display.cpp,v 1.14 2026/01/19 16:
      extensions.platformSurfacelessMESA = true;
  #endif
  
-@@ -2230,7 +2230,7 @@ static ClientExtensions GenerateClientEx
+@@ -2232,7 +2232,7 @@ static ClientExtensions GenerateClientEx
      extensions.x11Visual = true;
  #endif
  

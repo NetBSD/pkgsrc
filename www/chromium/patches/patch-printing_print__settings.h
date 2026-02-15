@@ -1,10 +1,10 @@
-$NetBSD: patch-printing_print__settings.h,v 1.14 2026/01/19 16:14:17 kikadf Exp $
+$NetBSD: patch-printing_print__settings.h,v 1.15 2026/02/15 09:04:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/print_settings.h.orig	2026-01-07 00:50:30.000000000 +0000
+--- printing/print_settings.h.orig	2026-02-03 22:07:10.000000000 +0000
 +++ printing/print_settings.h
 @@ -25,7 +25,7 @@
  #include "base/values.h"
@@ -21,10 +21,10 @@ $NetBSD: patch-printing_print__settings.h,v 1.14 2026/01/19 16:14:17 kikadf Exp 
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // Used by PrintDialogGtk
  inline constexpr char kLinuxSystemPrintDialogDataPrinter[] = "printer_name";
  inline constexpr char kLinuxSystemPrintDialogDataPrintSettings[] =
-     "print_settings";
-@@ -102,7 +102,7 @@ class COMPONENT_EXPORT(PRINTING_SETTINGS
+@@ -112,7 +112,7 @@ class COMPONENT_EXPORT(PRINTING_SETTINGS
      std::string vendor_id;
    };
  
@@ -33,7 +33,7 @@ $NetBSD: patch-printing_print__settings.h,v 1.14 2026/01/19 16:14:17 kikadf Exp 
    using AdvancedSettings = std::map<std::string, base::Value>;
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
-@@ -290,7 +290,7 @@ class COMPONENT_EXPORT(PRINTING_SETTINGS
+@@ -300,7 +300,7 @@ class COMPONENT_EXPORT(PRINTING_SETTINGS
      pages_per_sheet_ = pages_per_sheet;
    }
  
@@ -42,7 +42,7 @@ $NetBSD: patch-printing_print__settings.h,v 1.14 2026/01/19 16:14:17 kikadf Exp 
    AdvancedSettings& advanced_settings() { return advanced_settings_; }
    const AdvancedSettings& advanced_settings() const {
      return advanced_settings_;
-@@ -451,7 +451,7 @@ class COMPONENT_EXPORT(PRINTING_SETTINGS
+@@ -461,7 +461,7 @@ class COMPONENT_EXPORT(PRINTING_SETTINGS
    // Number of pages per sheet.
    int pages_per_sheet_;
  

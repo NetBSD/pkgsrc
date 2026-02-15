@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_accelerator__table.cc,v 1.7 2026/01/19 16:14:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_accelerator__table.cc,v 1.8 2026/02/15 09:03:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/accelerator_table.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- chrome/browser/ui/accelerator_table.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ chrome/browser/ui/accelerator_table.cc
 @@ -73,11 +73,11 @@ const AcceleratorMapping kAcceleratorMap
      {ui::VKEY_S, ui::EF_PLATFORM_ACCELERATOR, IDC_SAVE_PAGE},
@@ -38,12 +38,12 @@ $NetBSD: patch-chrome_browser_ui_accelerator__table.cc,v 1.7 2026/01/19 16:14:10
      {ui::VKEY_BROWSER_BACK, ui::EF_NONE, IDC_BACK},
      {ui::VKEY_BROWSER_FORWARD, ui::EF_NONE, IDC_FORWARD},
      {ui::VKEY_BROWSER_HOME, ui::EF_NONE, IDC_HOME},
-@@ -311,7 +311,7 @@ std::vector<AcceleratorMapping> GetAccel
+@@ -310,7 +310,7 @@ std::vector<AcceleratorMapping> GetAccel
+                          std::begin(kDevToolsAcceleratorMap),
                           std::end(kDevToolsAcceleratorMap));
  
-     if (features::IsSideBySideKeyboardShortcutEnabled()) {
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-       accelerators->emplace_back(
-           AcceleratorMapping({ui::VKEY_N, ui::EF_SHIFT_DOWN | ui::EF_ALT_DOWN,
-                               IDC_NEW_SPLIT_TAB}));
+     accelerators->emplace_back(AcceleratorMapping(
+         {ui::VKEY_N, ui::EF_SHIFT_DOWN | ui::EF_ALT_DOWN, IDC_NEW_SPLIT_TAB}));
+ #elif BUILDFLAG(IS_CHROMEOS)

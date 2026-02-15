@@ -1,12 +1,12 @@
-$NetBSD: patch-services_device_hid_hid__service.cc,v 1.14 2026/01/19 16:14:18 kikadf Exp $
+$NetBSD: patch-services_device_hid_hid__service.cc,v 1.15 2026/02/15 09:04:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/hid/hid_service.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- services/device/hid/hid_service.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ services/device/hid/hid_service.cc
-@@ -20,12 +20,18 @@
+@@ -19,12 +19,18 @@
  
  #if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && defined(USE_UDEV)
  #include "services/device/hid/hid_service_linux.h"
@@ -25,7 +25,7 @@ $NetBSD: patch-services_device_hid_hid__service.cc,v 1.14 2026/01/19 16:14:18 ki
  #endif
  
  namespace device {
-@@ -68,12 +74,18 @@ constexpr base::TaskTraits HidService::k
+@@ -67,12 +73,18 @@ constexpr base::TaskTraits HidService::k
  std::unique_ptr<HidService> HidService::Create() {
  #if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && defined(USE_UDEV)
    return std::make_unique<HidServiceLinux>();

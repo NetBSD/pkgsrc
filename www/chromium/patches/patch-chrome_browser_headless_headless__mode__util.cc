@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_headless_headless__mode__util.cc,v 1.13 2026/01/19 16:14:09 kikadf Exp $
+$NetBSD: patch-chrome_browser_headless_headless__mode__util.cc,v 1.14 2026/02/15 09:03:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/headless/headless_mode_util.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- chrome/browser/headless/headless_mode_util.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ chrome/browser/headless/headless_mode_util.cc
-@@ -12,7 +12,7 @@
+@@ -13,7 +13,7 @@
  // New headless mode is available on Linux, Windows and Mac platforms.
  // More platforms will be added later, so avoid function level clutter
  // by providing stub implementations at the end of the file.
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_headless_headless__mode__util.cc,v 1.13 2026/01/19
  
  #include "base/base_switches.h"
  #include "base/files/file_path.h"
-@@ -24,7 +24,7 @@
+@@ -25,7 +25,7 @@
  #include "chrome/common/chrome_switches.h"
  #include "content/public/common/content_switches.h"
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_headless_headless__mode__util.cc,v 1.13 2026/01/19
  #include "ui/gl/gl_switches.h"               // nogncheck
  #include "ui/ozone/public/ozone_switches.h"  // nogncheck
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -117,7 +117,7 @@ class HeadlessModeHandleImpl : public He
+@@ -94,7 +94,7 @@ class HeadlessModeHandleImpl : public He
        command_line->AppendSwitchPath(switches::kUserDataDir, user_data_dir);
      }
  

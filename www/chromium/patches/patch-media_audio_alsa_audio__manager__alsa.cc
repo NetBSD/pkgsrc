@@ -1,10 +1,10 @@
-$NetBSD: patch-media_audio_alsa_audio__manager__alsa.cc,v 1.14 2026/01/19 16:14:16 kikadf Exp $
+$NetBSD: patch-media_audio_alsa_audio__manager__alsa.cc,v 1.15 2026/02/15 09:04:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/alsa/audio_manager_alsa.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- media/audio/alsa/audio_manager_alsa.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ media/audio/alsa/audio_manager_alsa.cc
 @@ -103,7 +103,9 @@ void AudioManagerAlsa::GetAlsaAudioDevic
    int card = -1;

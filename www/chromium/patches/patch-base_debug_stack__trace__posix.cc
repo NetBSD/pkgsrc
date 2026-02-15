@@ -1,12 +1,12 @@
-$NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.14 2026/01/19 16:14:06 kikadf Exp $
+$NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.15 2026/02/15 09:03:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/debug/stack_trace_posix.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- base/debug/stack_trace_posix.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ base/debug/stack_trace_posix.cc
-@@ -50,8 +50,8 @@
+@@ -46,8 +46,8 @@
  // Surprisingly, uClibc defines __GLIBC__ in some build configs, but
  // execinfo.h and backtrace(3) are really only present in glibc and in macOS
  // libc.
@@ -17,7 +17,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.14 2026/01/19 16:14:06 kika
  #define HAVE_BACKTRACE
  #include <execinfo.h>
  #endif
-@@ -69,8 +69,10 @@
+@@ -65,8 +65,10 @@
  #include <AvailabilityMacros.h>
  #endif
  
@@ -29,7 +29,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.14 2026/01/19 16:14:06 kika
  
  #include "base/debug/proc_maps_linux.h"
  #endif
-@@ -327,7 +329,7 @@ void PrintToStderr(const char* output) {
+@@ -323,7 +325,7 @@ void PrintToStderr(const char* output) {
    std::ignore = HANDLE_EINTR(write(STDERR_FILENO, output, strlen(output)));
  }
  
@@ -38,7 +38,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.14 2026/01/19 16:14:06 kika
  void AlarmSignalHandler(int signal, siginfo_t* info, void* void_context) {
    // We have seen rare cases on AMD linux where the default signal handler
    // either does not run or a thread (Probably an AMD driver thread) prevents
-@@ -344,7 +346,11 @@ void AlarmSignalHandler(int signal, sigi
+@@ -340,7 +342,11 @@ void AlarmSignalHandler(int signal, sigi
        "Warning: Default signal handler failed to terminate process.\n");
    PrintToStderr("Calling exit_group() directly to prevent timeout.\n");
    // See: https://man7.org/linux/man-pages/man2/exit_group.2.html
@@ -50,7 +50,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.14 2026/01/19 16:14:06 kika
  }
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_ANDROID) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -548,7 +554,7 @@ void StackDumpSignalHandler(int signal, 
+@@ -544,7 +550,7 @@ void StackDumpSignalHandler(int signal, 
      _exit(EXIT_FAILURE);
    }
  
@@ -59,7 +59,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.14 2026/01/19 16:14:06 kika
    // Set an alarm to trigger in case the default handler does not terminate
    // the process. See 'AlarmSignalHandler' for more details.
    struct sigaction action;
-@@ -573,6 +579,7 @@ void StackDumpSignalHandler(int signal, 
+@@ -569,6 +575,7 @@ void StackDumpSignalHandler(int signal, 
    // signals that do not re-raise autonomously), such as signals delivered via
    // kill() and asynchronous hardware faults such as SEGV_MTEAERR, which would
    // otherwise be lost when re-raising the signal via raise().
@@ -67,7 +67,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.14 2026/01/19 16:14:06 kika
    long retval = syscall(SYS_rt_tgsigqueueinfo, getpid(), syscall(SYS_gettid),
                          info->si_signo, info);
    if (retval == 0) {
-@@ -587,6 +594,7 @@ void StackDumpSignalHandler(int signal, 
+@@ -583,6 +590,7 @@ void StackDumpSignalHandler(int signal, 
    if (errno != EPERM) {
      _exit(EXIT_FAILURE);
    }
@@ -75,7 +75,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.14 2026/01/19 16:14:06 kika
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_ANDROID) ||
          // BUILDFLAG(IS_CHROMEOS)
  
-@@ -779,6 +787,7 @@ class SandboxSymbolizeHelper {
+@@ -775,6 +783,7 @@ class SandboxSymbolizeHelper {
      return -1;
    }
  
@@ -83,7 +83,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.14 2026/01/19 16:14:06 kika
    // This class is copied from
    // third_party/crashpad/crashpad/util/linux/scoped_pr_set_dumpable.h.
    // It aims at ensuring the process is dumpable before opening /proc/self/mem.
-@@ -871,11 +880,15 @@ class SandboxSymbolizeHelper {
+@@ -867,11 +876,15 @@ class SandboxSymbolizeHelper {
        r.base = cur_base;
      }
    }
@@ -99,7 +99,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.14 2026/01/19 16:14:06 kika
      // Reads /proc/self/maps.
      std::string contents;
      if (!ReadProcMaps(&contents)) {
-@@ -893,6 +906,7 @@ class SandboxSymbolizeHelper {
+@@ -889,6 +902,7 @@ class SandboxSymbolizeHelper {
  
      is_initialized_ = true;
      return true;

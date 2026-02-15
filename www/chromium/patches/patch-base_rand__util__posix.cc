@@ -1,12 +1,12 @@
-$NetBSD: patch-base_rand__util__posix.cc,v 1.14 2026/01/19 16:14:07 kikadf Exp $
+$NetBSD: patch-base_rand__util__posix.cc,v 1.15 2026/02/15 09:03:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/rand_util_posix.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- base/rand_util_posix.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ base/rand_util_posix.cc
-@@ -30,7 +30,7 @@
+@@ -25,7 +25,7 @@
  #include "build/build_config.h"
  #include "third_party/boringssl/src/include/openssl/rand.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-base_rand__util__posix.cc,v 1.14 2026/01/19 16:14:07 kikadf Exp $
  #include "third_party/lss/linux_syscall_support.h"
  #elif BUILDFLAG(IS_MAC)
  // TODO(crbug.com/40641285): Waiting for this header to appear in the iOS SDK.
-@@ -42,6 +42,7 @@ namespace base {
+@@ -37,6 +37,7 @@ namespace base {
  
  namespace {
  
@@ -23,7 +23,7 @@ $NetBSD: patch-base_rand__util__posix.cc,v 1.14 2026/01/19 16:14:07 kikadf Exp $
  #if BUILDFLAG(IS_AIX)
  // AIX has no 64-bit support for O_CLOEXEC.
  static constexpr int kOpenFlags = O_RDONLY;
-@@ -66,8 +67,9 @@ class URandomFd {
+@@ -61,8 +62,9 @@ class URandomFd {
   private:
    const int fd_;
  };
@@ -34,7 +34,7 @@ $NetBSD: patch-base_rand__util__posix.cc,v 1.14 2026/01/19 16:14:07 kikadf Exp $
  
  bool KernelSupportsGetRandom() {
    return base::SysInfo::KernelVersionNumber::Current() >=
-@@ -120,6 +122,7 @@ bool UseBoringSSLForRandBytes() {
+@@ -115,6 +117,7 @@ bool UseBoringSSLForRandBytes() {
  namespace {
  
  void RandBytesInternal(span<uint8_t> output, bool avoid_allocation) {
@@ -42,7 +42,7 @@ $NetBSD: patch-base_rand__util__posix.cc,v 1.14 2026/01/19 16:14:07 kikadf Exp $
    // The BoringSSL experiment takes priority over everything else.
    if (!avoid_allocation && internal::UseBoringSSLForRandBytes()) {
      // BoringSSL's RAND_bytes always returns 1. Any error aborts the program.
-@@ -150,6 +153,9 @@ void RandBytesInternal(span<uint8_t> out
+@@ -145,6 +148,9 @@ void RandBytesInternal(span<uint8_t> out
    const int urandom_fd = GetUrandomFD();
    const bool success = ReadFromFD(urandom_fd, as_writable_chars(output));
    CHECK(success);
@@ -52,7 +52,7 @@ $NetBSD: patch-base_rand__util__posix.cc,v 1.14 2026/01/19 16:14:07 kikadf Exp $
  }
  
  }  // namespace
-@@ -169,9 +175,11 @@ void RandBytes(span<uint8_t> output) {
+@@ -164,9 +170,11 @@ void RandBytes(span<uint8_t> output) {
    RandBytesInternal(output, /*avoid_allocation=*/false);
  }
  

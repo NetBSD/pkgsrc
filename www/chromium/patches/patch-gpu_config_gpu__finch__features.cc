@@ -1,12 +1,12 @@
-$NetBSD: patch-gpu_config_gpu__finch__features.cc,v 1.14 2026/01/19 16:14:16 kikadf Exp $
+$NetBSD: patch-gpu_config_gpu__finch__features.cc,v 1.15 2026/02/15 09:04:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_finch_features.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- gpu/config/gpu_finch_features.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ gpu/config/gpu_finch_features.cc
-@@ -122,7 +122,8 @@ BASE_FEATURE(kAllowHardwareBufferUsageFl
+@@ -116,7 +116,8 @@ BASE_FEATURE(kRemoveGPULegacyIPC, base::
  // Android and Linux.
  BASE_FEATURE(kDefaultEnableGpuRasterization,
  #if BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS) || \

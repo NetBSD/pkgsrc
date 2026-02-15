@@ -1,10 +1,10 @@
-$NetBSD: patch-services_screen__ai_sandbox_screen__ai__sandbox__hook__linux.h,v 1.14 2026/01/19 16:14:19 kikadf Exp $
+$NetBSD: patch-services_screen__ai_sandbox_screen__ai__sandbox__hook__linux.h,v 1.15 2026/02/15 09:04:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.h.orig	2026-01-07 00:50:30.000000000 +0000
+--- services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.h.orig	2026-02-03 22:07:10.000000000 +0000
 +++ services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.h
 @@ -6,7 +6,13 @@
  #define SERVICES_SCREEN_AI_SANDBOX_SCREEN_AI_SANDBOX_HOOK_LINUX_H_

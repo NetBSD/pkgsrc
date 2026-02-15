@@ -1,25 +1,25 @@
-$NetBSD: patch-base_system_sys__info__openbsd.cc,v 1.14 2026/01/19 16:14:07 kikadf Exp $
+$NetBSD: patch-base_system_sys__info__openbsd.cc,v 1.15 2026/02/15 09:03:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_openbsd.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- base/system/sys_info_openbsd.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ base/system/sys_info_openbsd.cc
-@@ -12,6 +12,7 @@
- 
+@@ -13,6 +13,7 @@
  #include "base/notreached.h"
+ #include "base/numerics/safe_conversions.h"
  #include "base/posix/sysctl.h"
 +#include "base/strings/string_util.h"
  
  namespace base {
  
-@@ -28,9 +29,14 @@ ByteCount AmountOfMemory(int pages_name)
+@@ -29,9 +30,14 @@ ByteSize AmountOfMemory(int pages_name) 
  
  }  // namespace
  
 +// pledge(2)
-+ByteCount aofpmem = ByteCount(0);
++ByteSize aofpmem = ByteSize(0);
 +uint64_t shmmax = 0;
 +char cpumodel[256];
 +
@@ -30,7 +30,7 @@ $NetBSD: patch-base_system_sys__info__openbsd.cc,v 1.14 2026/01/19 16:14:07 kika
    int ncpu;
    size_t size = sizeof(ncpu);
    if (sysctl(mib, std::size(mib), &ncpu, &size, NULL, 0) < 0) {
-@@ -40,8 +46,24 @@ int SysInfo::NumberOfProcessors() {
+@@ -41,8 +47,24 @@ int SysInfo::NumberOfProcessors() {
  }
  
  // static
@@ -47,16 +47,16 @@ $NetBSD: patch-base_system_sys__info__openbsd.cc,v 1.14 2026/01/19 16:14:07 kika
 +}
 +
 +// static
- ByteCount SysInfo::AmountOfPhysicalMemoryImpl() {
+ ByteSize SysInfo::AmountOfTotalPhysicalMemoryImpl() {
 -  return AmountOfMemory(_SC_PHYS_PAGES);
 +  // pledge(2)
-+  if (aofpmem == ByteCount(0))
++  if (aofpmem == ByteSize(0))
 +    aofpmem = AmountOfMemory(_SC_PHYS_PAGES);
 +  return aofpmem;
  }
  
  // static
-@@ -56,15 +78,27 @@ uint64_t SysInfo::MaxSharedMemorySize() 
+@@ -57,15 +79,27 @@ uint64_t SysInfo::MaxSharedMemorySize() 
    int mib[] = {CTL_KERN, KERN_SHMINFO, KERN_SHMINFO_SHMMAX};
    size_t limit;
    size_t size = sizeof(limit);

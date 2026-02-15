@@ -1,14 +1,14 @@
-$NetBSD: patch-chrome_browser_task__manager_sampling_task__group__sampler.h,v 1.14 2026/01/19 16:14:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_task__manager_sampling_task__group__sampler.h,v 1.15 2026/02/15 09:03:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/task_manager/sampling/task_group_sampler.h.orig	2026-01-07 00:50:30.000000000 +0000
+--- chrome/browser/task_manager/sampling/task_group_sampler.h.orig	2026-02-03 22:07:10.000000000 +0000
 +++ chrome/browser/task_manager/sampling/task_group_sampler.h
 @@ -33,7 +33,7 @@ class TaskGroupSampler : public base::Re
    using OnSwappedMemRefreshCallback =
-       base::RepeatingCallback<void(base::ByteCount)>;
+       base::RepeatingCallback<void(base::ByteSize)>;
    using OnIdleWakeupsCallback = base::RepeatingCallback<void(int)>;
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
@@ -26,7 +26,7 @@ $NetBSD: patch-chrome_browser_task__manager_sampling_task__group__sampler.h,v 1.
        const OnProcessPriorityCallback& on_process_priority);
 @@ -65,7 +65,7 @@ class TaskGroupSampler : public base::Re
    double RefreshCpuUsage();
-   base::ByteCount RefreshSwappedMem();
+   base::ByteSize RefreshSwappedMem();
    int RefreshIdleWakeupsPerSecond();
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)

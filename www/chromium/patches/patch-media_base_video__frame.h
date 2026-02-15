@@ -1,12 +1,12 @@
-$NetBSD: patch-media_base_video__frame.h,v 1.14 2026/01/19 16:14:16 kikadf Exp $
+$NetBSD: patch-media_base_video__frame.h,v 1.15 2026/02/15 09:04:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.h.orig	2026-01-07 00:50:30.000000000 +0000
+--- media/base/video_frame.h.orig	2026-02-03 22:07:10.000000000 +0000
 +++ media/base/video_frame.h
-@@ -41,7 +41,7 @@
+@@ -40,7 +40,7 @@
  #include "ui/gfx/geometry/size.h"
  #include "ui/gfx/hdr_metadata.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-media_base_video__frame.h,v 1.14 2026/01/19 16:14:16 kikadf Exp $
  #include "base/files/scoped_file.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
-@@ -95,7 +95,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -89,7 +89,7 @@ class MEDIA_EXPORT VideoFrame : public b
      STORAGE_UNOWNED_MEMORY = 2,  // External, non owned data pointers.
      STORAGE_OWNED_MEMORY = 3,  // VideoFrame has allocated its own data buffer.
      STORAGE_SHMEM = 4,         // Backed by read-only shared memory.
@@ -23,17 +23,17 @@ $NetBSD: patch-media_base_video__frame.h,v 1.14 2026/01/19 16:14:16 kikadf Exp $
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
      STORAGE_DMABUFS = 5,  // Each plane is stored into a DmaBuf.
  #endif
-     STORAGE_GPU_MEMORY_BUFFER = 6,
-@@ -348,7 +348,7 @@ class MEDIA_EXPORT VideoFrame : public b
+     STORAGE_MAPPABLE_SHARED_IMAGE = 6,
+@@ -309,7 +309,7 @@ class MEDIA_EXPORT VideoFrame : public b
+       base::span<const uint8_t> uv_data,
        base::TimeDelta timestamp);
- #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    // Wraps provided dmabufs
    // (https://www.kernel.org/doc/html/latest/driver-api/dma-buf.html) with a
    // VideoFrame. The frame will take ownership of |dmabuf_fds|, and will
-@@ -693,7 +693,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -616,7 +616,7 @@ class MEDIA_EXPORT VideoFrame : public b
    // wait for the included sync point.
    scoped_refptr<gpu::ClientSharedImage> shared_image() const;
  
@@ -42,9 +42,9 @@ $NetBSD: patch-media_base_video__frame.h,v 1.14 2026/01/19 16:14:16 kikadf Exp $
    // The number of DmaBufs will be equal or less than the number of planes of
    // the frame. If there are less, this means that the last FD contains the
    // remaining planes. Should be > 0 for STORAGE_DMABUFS.
-@@ -909,7 +909,7 @@ class MEDIA_EXPORT VideoFrame : public b
-   // GpuMemoryBuffers. Clients will set this flag while creating a VideoFrame.
-   bool is_mappable_si_enabled_ = false;
+@@ -806,7 +806,7 @@ class MEDIA_EXPORT VideoFrame : public b
+   base::ReadOnlySharedMemoryRegion owned_shm_region_;
+   base::ReadOnlySharedMemoryMapping owned_shm_mapping_;
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

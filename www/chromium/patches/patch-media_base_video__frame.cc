@@ -1,12 +1,12 @@
-$NetBSD: patch-media_base_video__frame.cc,v 1.14 2026/01/19 16:14:16 kikadf Exp $
+$NetBSD: patch-media_base_video__frame.cc,v 1.15 2026/02/15 09:04:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- media/base/video_frame.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ media/base/video_frame.cc
-@@ -85,7 +85,7 @@ std::string VideoFrame::StorageTypeToStr
+@@ -84,7 +84,7 @@ std::string VideoFrame::StorageTypeToStr
        return "OWNED_MEMORY";
      case VideoFrame::STORAGE_SHMEM:
        return "SHMEM";
@@ -15,16 +15,7 @@ $NetBSD: patch-media_base_video__frame.cc,v 1.14 2026/01/19 16:14:16 kikadf Exp 
      case VideoFrame::STORAGE_DMABUFS:
        return "DMABUFS";
  #endif
-@@ -99,7 +99,7 @@ std::string VideoFrame::StorageTypeToStr
- // static
- bool VideoFrame::IsStorageTypeMappable(VideoFrame::StorageType storage_type) {
-   return
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-       // This is not strictly needed but makes explicit that, at VideoFrame
-       // level, DmaBufs are not mappable from userspace.
-       storage_type != VideoFrame::STORAGE_DMABUFS &&
-@@ -503,7 +503,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
+@@ -422,7 +422,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
          plane_size.width() * VideoFrame::BytesPerElement(*format, plane);
    }
    uint64_t modifier = gfx::NativePixmapHandle::kNoModifier;
@@ -33,16 +24,16 @@ $NetBSD: patch-media_base_video__frame.cc,v 1.14 2026/01/19 16:14:16 kikadf Exp 
    bool is_native_buffer = !shared_image->IsSharedMemoryForVideoFrame();
    if (is_native_buffer) {
      const auto gmb_handle = shared_image->CloneGpuMemoryBufferHandle();
-@@ -800,7 +800,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
+@@ -696,7 +696,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
+   return frame;
  }
- #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  // static
  scoped_refptr<VideoFrame> VideoFrame::WrapExternalDmabufs(
      const VideoFrameLayout& layout,
-@@ -1492,7 +1492,7 @@ scoped_refptr<gpu::ClientSharedImage> Vi
+@@ -1341,7 +1341,7 @@ scoped_refptr<gpu::ClientSharedImage> Vi
    return wrapped_frame_ ? wrapped_frame_->shared_image() : shared_image_;
  }
  

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_sessions_session__restore.cc,v 1.14 2026/01/19 16:14:09 kikadf Exp $
+$NetBSD: patch-chrome_browser_sessions_session__restore.cc,v 1.15 2026/02/15 09:03:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sessions/session_restore.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- chrome/browser/sessions/session_restore.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ chrome/browser/sessions/session_restore.cc
-@@ -111,7 +111,7 @@
+@@ -115,7 +115,7 @@
  #include "ui/wm/core/scoped_animation_disabler.h"
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_sessions_session__restore.cc,v 1.14 2026/01/19 16:
  #include "chrome/browser/ui/webui/whats_new/whats_new_fetcher.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
-@@ -1204,7 +1204,7 @@ class SessionRestoreImpl : public Browse
+@@ -1212,7 +1212,7 @@ class SessionRestoreImpl : public Browse
      bool is_first_tab = true;
      for (const auto& startup_tab : startup_tabs) {
        const GURL& url = startup_tab.url;

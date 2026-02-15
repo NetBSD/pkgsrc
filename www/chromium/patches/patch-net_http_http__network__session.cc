@@ -1,12 +1,12 @@
-$NetBSD: patch-net_http_http__network__session.cc,v 1.14 2026/01/19 16:14:17 kikadf Exp $
+$NetBSD: patch-net_http_http__network__session.cc,v 1.15 2026/02/15 09:04:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/http/http_network_session.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- net/http/http_network_session.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ net/http/http_network_session.cc
-@@ -21,7 +21,9 @@
+@@ -20,7 +20,9 @@
  #include "build/build_config.h"
  #include "net/base/features.h"
  #include "net/dns/host_resolver.h"
