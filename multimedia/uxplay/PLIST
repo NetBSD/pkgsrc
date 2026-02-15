@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2026/02/15 16:18:45 wiz Exp $
+bin/uxplay
+man/man1/uxplay.1
+share/doc/uxplay/LICENSE
+share/doc/uxplay/README.html
+share/doc/uxplay/README.md
+share/doc/uxplay/README.txt
+share/doc/uxplay/llhttp/LICENSE-MIT
+share/doc/uxplay/systemd/uxplay.service

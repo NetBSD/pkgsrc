@@ -1,0 +1,12 @@
+UxPlay is an open source AirPlay2 Mirror server. Its main use is to
+act like an AppleTV for screen-mirroring (with audio) of
+iOS/iPadOS/macOS clients (iPhone, iPod Touch, iPad, Mac computers)
+in a window on the server display of a host running Linux, macOS,
+other Unix, or Microsoft Windows.
+
+The UxPlay server and its client must be on the same local area
+network, on which a Bonjour/Zeroconf mDNS/DNS-SD server is also
+running (only DNS-SD "Service Discovery" service is strictly
+necessary, it is not necessary that the local network also be of the
+".local" mDNS-based type). On Linux and BSD Unix servers, this is
+usually provided by Avahi, through the avahi-daemon service.
