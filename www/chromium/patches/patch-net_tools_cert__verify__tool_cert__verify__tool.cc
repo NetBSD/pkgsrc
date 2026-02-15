@@ -1,10 +1,10 @@
-$NetBSD: patch-net_tools_cert__verify__tool_cert__verify__tool.cc,v 1.14 2026/01/19 16:14:17 kikadf Exp $
+$NetBSD: patch-net_tools_cert__verify__tool_cert__verify__tool.cc,v 1.15 2026/02/15 09:04:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/tools/cert_verify_tool/cert_verify_tool.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- net/tools/cert_verify_tool/cert_verify_tool.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ net/tools/cert_verify_tool/cert_verify_tool.cc
 @@ -36,7 +36,7 @@
  #include "third_party/boringssl/src/pki/trust_store.h"

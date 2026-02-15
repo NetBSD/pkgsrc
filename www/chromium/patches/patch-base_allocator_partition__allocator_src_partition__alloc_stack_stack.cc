@@ -1,12 +1,12 @@
-$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_stack_stack.cc,v 1.14 2026/01/19 16:14:06 kikadf Exp $
+$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_stack_stack.cc,v 1.15 2026/02/15 09:03:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/stack/stack.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/stack/stack.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/stack/stack.cc
-@@ -23,6 +23,10 @@
+@@ -18,6 +18,10 @@
  #include <pthread.h>
  #endif
  
@@ -17,7 +17,7 @@ $NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_stack_st
  #if PA_BUILDFLAG(PA_LIBC_GLIBC)
  extern "C" void* __libc_stack_end;
  #endif
-@@ -55,6 +59,36 @@ void* GetStackTop() {
+@@ -50,6 +54,36 @@ void* GetStackTop() {
    return pthread_get_stackaddr_np(pthread_self());
  }
  

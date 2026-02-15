@@ -1,12 +1,12 @@
-$NetBSD: patch-base_files_dir__reader__linux.h,v 1.14 2026/01/19 16:14:06 kikadf Exp $
+$NetBSD: patch-base_files_dir__reader__linux.h,v 1.15 2026/02/15 09:03:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/dir_reader_linux.h.orig	2026-01-07 00:50:30.000000000 +0000
+--- base/files/dir_reader_linux.h.orig	2026-02-03 22:07:10.000000000 +0000
 +++ base/files/dir_reader_linux.h
-@@ -21,10 +21,16 @@
+@@ -19,10 +19,16 @@
  #include "base/logging.h"
  #include "base/posix/eintr_wrapper.h"
  
@@ -23,7 +23,7 @@ $NetBSD: patch-base_files_dir__reader__linux.h,v 1.14 2026/01/19 16:14:06 kikadf
  struct linux_dirent {
    uint64_t d_ino;
    int64_t d_off;
-@@ -32,6 +38,7 @@ struct linux_dirent {
+@@ -30,6 +36,7 @@ struct linux_dirent {
    unsigned char d_type;
    char d_name[0];
  };
@@ -31,14 +31,14 @@ $NetBSD: patch-base_files_dir__reader__linux.h,v 1.14 2026/01/19 16:14:06 kikadf
  
  class DirReaderLinux {
   public:
-@@ -66,7 +73,11 @@ class DirReaderLinux {
+@@ -61,7 +68,11 @@ class DirReaderLinux {
        return true;
      }
  
 +#if BUILDFLAG(IS_BSD)
-+    const int r = getdents(fd_, reinterpret_cast<char *>(buf_), sizeof(buf_));
++    const int r = getdents(fd_, reinterpret_cast<char *>(buf_.data()), buf_.size());
 +#else
-     const long r = syscall(__NR_getdents64, fd_, buf_, sizeof(buf_));
+     const long r = syscall(__NR_getdents64, fd_, buf_.data(), buf_.size());
 +#endif
      if (r == 0) {
        return false;

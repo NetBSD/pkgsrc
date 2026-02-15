@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_chrome__switches.h,v 1.14 2026/01/19 16:14:12 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__switches.h,v 1.15 2026/02/15 09:04:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_switches.h.orig	2026-01-07 00:50:30.000000000 +0000
+--- chrome/common/chrome_switches.h.orig	2026-02-03 22:07:10.000000000 +0000
 +++ chrome/common/chrome_switches.h
 @@ -291,7 +291,7 @@ extern const char kDebugPrint[];
  #endif
@@ -15,8 +15,8 @@ $NetBSD: patch-chrome_common_chrome__switches.h,v 1.14 2026/01/19 16:14:12 kikad
  extern const char kEnableNewAppMenuIcon[];
  extern const char kGuest[];
  extern const char kForceNtpMobilePromo[];
-@@ -312,7 +312,7 @@ extern const char kGlicAdminRedirectPatt
- extern const char kGlicAlwaysShowWebActuationToggle[];
+@@ -314,7 +314,7 @@ extern const char kGlicResetMultiInstanc
+ extern const char kGlicForceG1StatusForMultiInstance[];
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)

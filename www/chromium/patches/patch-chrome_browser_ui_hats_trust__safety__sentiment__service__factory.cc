@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_hats_trust__safety__sentiment__service__factory.cc,v 1.10 2026/01/19 16:14:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_hats_trust__safety__sentiment__service__factory.cc,v 1.11 2026/02/15 09:04:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/hats/trust_safety_sentiment_service_factory.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- chrome/browser/ui/hats/trust_safety_sentiment_service_factory.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ chrome/browser/ui/hats/trust_safety_sentiment_service_factory.cc
 @@ -59,7 +59,7 @@ TrustSafetySentimentServiceFactory::Buil
    // TrustSafetySentimentSurvey is conducted only for Windows, MacOS and Linux

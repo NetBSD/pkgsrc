@@ -1,21 +1,21 @@
-$NetBSD: patch-content_common_features.h,v 1.14 2026/01/19 16:14:15 kikadf Exp $
+$NetBSD: patch-content_common_features.h,v 1.15 2026/02/15 09:04:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/features.h.orig	2026-01-07 00:50:30.000000000 +0000
+--- content/common/features.h.orig	2026-02-03 22:07:10.000000000 +0000
 +++ content/common/features.h
-@@ -67,7 +67,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kCom
- CONTENT_EXPORT BASE_DECLARE_FEATURE(kCopyFromSurfaceAlwaysCallCallback);
+@@ -67,7 +67,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kCop
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kCriticalClientHint);
+ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDeviceBoundSessionsDevTools);
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kDocumentPolicyNegotiation);
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnableDevToolsJsErrorReporting);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnforceSameDocumentOriginInvariants);
-@@ -106,7 +106,7 @@ enum class FontDataServiceTypefaceType {
+@@ -105,7 +105,7 @@ enum class FontDataServiceTypefaceType {
  CONTENT_EXPORT BASE_DECLARE_FEATURE_PARAM(FontDataServiceTypefaceType,
                                            kFontDataServiceTypefaceType);
  #endif  // BUILDFLAG(IS_WIN)
@@ -24,7 +24,7 @@ $NetBSD: patch-content_common_features.h,v 1.14 2026/01/19 16:14:15 kikadf Exp $
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kFontDataServiceLinux);
  enum class FontDataServiceTypefaceType {
    kFreetype,
-@@ -116,7 +116,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE_PARA
+@@ -115,7 +115,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE_PARA
                                            kFontDataServiceTypefaceType);
  #endif  // BUILDFLAG(IS_LINUX)
  

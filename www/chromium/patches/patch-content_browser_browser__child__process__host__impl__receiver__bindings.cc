@@ -1,12 +1,21 @@
-$NetBSD: patch-content_browser_browser__child__process__host__impl__receiver__bindings.cc,v 1.14 2026/01/19 16:14:14 kikadf Exp $
+$NetBSD: patch-content_browser_browser__child__process__host__impl__receiver__bindings.cc,v 1.15 2026/02/15 09:04:04 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/browser_child_process_host_impl_receiver_bindings.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- content/browser/browser_child_process_host_impl_receiver_bindings.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ content/browser/browser_child_process_host_impl_receiver_bindings.cc
-@@ -64,7 +64,7 @@ void BrowserChildProcessHostImpl::BindHo
+@@ -38,7 +38,7 @@
+ #include "content/public/common/font_cache_win.mojom.h"
+ #endif
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "components/services/font_data/font_data_service_impl.h"
+ #endif
+ 
+@@ -69,7 +69,7 @@ void BrowserChildProcessHostImpl::BindHo
      }
    }
  
@@ -15,3 +24,12 @@ $NetBSD: patch-content_browser_browser__child__process__host__impl__receiver__bi
    if (auto r = receiver.As<mojom::ThreadTypeSwitcher>()) {
      child_thread_type_switcher_.Bind(std::move(r));
      return;
+@@ -111,7 +111,7 @@ void BrowserChildProcessHostImpl::BindHo
+   }
+ #endif
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   if (features::IsFontDataServiceEnabled()) {
+     if (auto font_data_receiver =
+             receiver.As<font_data_service::mojom::FontDataService>()) {

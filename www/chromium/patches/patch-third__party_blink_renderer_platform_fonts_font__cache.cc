@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.cc,v 1.14 2026/01/19 16:14:20 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.cc,v 1.15 2026/02/15 09:04:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_cache.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- third_party/blink/renderer/platform/fonts/font_cache.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/font_cache.cc
 @@ -80,7 +80,7 @@ const char kMonoEmojiLocale[] = "und-Zsy
  extern const char kNotoColorEmojiCompat[] = "Noto Color Emoji Compat";
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.cc,v 1.14 
  float FontCache::device_scale_factor_ = 1.0;
  #endif
  
-@@ -113,7 +113,7 @@ const FontPlatformData* FontCache::Syste
+@@ -112,7 +112,7 @@ const FontPlatformData* FontCache::Syste
      const FontDescription& font_description) {
    const AtomicString& family = FontCache::SystemFontFamily();
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || \

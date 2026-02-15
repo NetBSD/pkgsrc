@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_startup_startup__tab__provider.cc,v 1.14 2026/01/19 16:14:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_startup_startup__tab__provider.cc,v 1.15 2026/02/15 09:04:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/startup/startup_tab_provider.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- chrome/browser/ui/startup/startup_tab_provider.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ chrome/browser/ui/startup/startup_tab_provider.cc
-@@ -68,7 +68,7 @@
+@@ -67,7 +67,7 @@
  #include "extensions/common/manifest_handlers/chrome_url_overrides_handler.h"
  #endif  // !BUILDFLAG(IS_ANDROID)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_startup_startup__tab__provider.cc,v 1.14 2026/0
  #include "chrome/browser/headless/headless_mode_util.h"
  #endif
  
-@@ -137,7 +137,7 @@ bool ValidateUrl(const GURL& url) {
+@@ -135,7 +135,7 @@ bool ValidateUrl(const GURL& url) {
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
    bool url_scheme_is_chrome = false;

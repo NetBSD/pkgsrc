@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_common_chrome__features.h,v 1.14 2026/01/19 16:14:12 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__features.h,v 1.15 2026/02/15 09:04:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_features.h.orig	2026-01-07 00:50:30.000000000 +0000
+--- chrome/common/chrome_features.h.orig	2026-02-03 22:07:10.000000000 +0000
 +++ chrome/common/chrome_features.h
-@@ -85,7 +85,7 @@ BASE_DECLARE_FEATURE(kUseKeychainKeyProv
+@@ -74,7 +74,7 @@ BASE_DECLARE_FEATURE(kUseKeychainKeyProv
  #endif  // BUILDFLAG(IS_MAC)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_common_chrome__features.h,v 1.14 2026/01/19 16:14:12 kikad
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kAutofillAddressSurvey);
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kAutofillCardSurvey);
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kAutofillPasswordSurvey);
-@@ -173,7 +173,7 @@ BASE_DECLARE_FEATURE(kDesktopPWAsTabStri
+@@ -162,7 +162,7 @@ BASE_DECLARE_FEATURE(kDesktopPWAsTabStri
  COMPONENT_EXPORT(CHROME_FEATURES)
  BASE_DECLARE_FEATURE(kShowResetProfileBannerV2);
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_common_chrome__features.h,v 1.14 2026/01/19 16:14:12 kikad
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kChromeAppsDeprecation);
  COMPONENT_EXPORT(CHROME_FEATURES)
  BASE_DECLARE_FEATURE(kShortcutsNotApps);
-@@ -962,7 +962,7 @@ BASE_DECLARE_FEATURE(kKAnonymityServiceO
+@@ -992,7 +992,7 @@ BASE_DECLARE_FEATURE(kKAnonymityServiceO
  COMPONENT_EXPORT(CHROME_FEATURES)
  BASE_DECLARE_FEATURE(kKAnonymityServiceStorage);
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_common_chrome__features.h,v 1.14 2026/01/19 16:14:12 kikad
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kLinuxLowMemoryMonitor);
  COMPONENT_EXPORT(CHROME_FEATURES)
  extern const base::FeatureParam<int> kLinuxLowMemoryMonitorModerateLevel;
-@@ -970,7 +970,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
+@@ -1000,7 +1000,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
  extern const base::FeatureParam<int> kLinuxLowMemoryMonitorCriticalLevel;
  #endif  // BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
  

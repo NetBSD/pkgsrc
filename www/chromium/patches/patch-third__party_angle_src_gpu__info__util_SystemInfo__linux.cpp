@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_angle_src_gpu__info__util_SystemInfo__linux.cpp,v 1.14 2026/01/19 16:14:19 kikadf Exp $
+$NetBSD: patch-third__party_angle_src_gpu__info__util_SystemInfo__linux.cpp,v 1.15 2026/02/15 09:04:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/gpu_info_util/SystemInfo_linux.cpp.orig	2026-01-07 00:50:30.000000000 +0000
+--- third_party/angle/src/gpu_info_util/SystemInfo_linux.cpp.orig	2026-02-03 22:07:10.000000000 +0000
 +++ third_party/angle/src/gpu_info_util/SystemInfo_linux.cpp
 @@ -71,6 +71,24 @@ bool GetPCIDevicesWithLibPCI(std::vector
  
@@ -28,12 +28,12 @@ $NetBSD: patch-third__party_angle_src_gpu__info__util_SystemInfo__linux.cpp,v 1.
 +#endif
 +    }
 +#else
-     if (!GetPCIDevicesWithLibPCI(&(info->gpus)))
+     if (!GetPCIDevicesWithLibPCI(&(info->gpus)) || info->gpus.size() == 0)
      {
  #if defined(ANGLE_USE_VULKAN_SYSTEM_INFO)
-@@ -85,6 +103,7 @@ bool GetSystemInfo(SystemInfo *info)
-     {
+@@ -80,6 +98,7 @@ bool GetSystemInfo(SystemInfo *info)
          return false;
+ #endif  // defined(ANGLE_HAS_VULKAN_SYSTEM_INFO)
      }
 +#endif
  

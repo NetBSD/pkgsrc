@@ -1,12 +1,12 @@
-$NetBSD: patch-base_linux__util.cc,v 1.14 2026/01/19 16:14:06 kikadf Exp $
+$NetBSD: patch-base_linux__util.cc,v 1.15 2026/02/15 09:03:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/linux_util.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- base/linux_util.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ base/linux_util.cc
-@@ -163,10 +163,14 @@ void SetLinuxDistro(const std::string& d
+@@ -159,10 +159,14 @@ void SetLinuxDistro(const std::string& d
  }
  
  bool GetThreadsForProcess(pid_t pid, std::vector<pid_t>* tids) {

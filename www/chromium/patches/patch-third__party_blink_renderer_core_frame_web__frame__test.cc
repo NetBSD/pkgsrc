@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_core_frame_web__frame__test.cc,v 1.14 2026/01/19 16:14:19 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_core_frame_web__frame__test.cc,v 1.15 2026/02/15 09:04:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/frame/web_frame_test.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- third_party/blink/renderer/core/frame/web_frame_test.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ third_party/blink/renderer/core/frame/web_frame_test.cc
 @@ -6476,7 +6476,7 @@ TEST_F(WebFrameTest, DISABLED_PositionFo
  }

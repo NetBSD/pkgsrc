@@ -1,12 +1,12 @@
-$NetBSD: patch-components_feature__engagement_public_feature__configurations.cc,v 1.14 2026/01/19 16:14:13 kikadf Exp $
+$NetBSD: patch-components_feature__engagement_public_feature__configurations.cc,v 1.15 2026/02/15 09:04:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_configurations.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- components/feature_engagement/public/feature_configurations.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ components/feature_engagement/public/feature_configurations.cc
-@@ -103,7 +103,7 @@ std::optional<FeatureConfig> CreateNewUs
+@@ -100,7 +100,7 @@ std::optional<FeatureConfig> CreateNewUs
  
  std::optional<FeatureConfig> GetClientSideFeatureConfig(
      const base::Feature* feature) {
@@ -15,7 +15,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__configurations.cc,
  
    // The IPH bubble for link capturing has a trigger set to ANY so that it
    // always shows up. The per app specific guardrails are independently stored
-@@ -122,7 +122,7 @@ std::optional<FeatureConfig> GetClientSi
+@@ -119,7 +119,7 @@ std::optional<FeatureConfig> GetClientSi
  
  #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__configurations.cc,
    if (kIPHPasswordsManagementBubbleAfterSaveFeature.name == feature->name) {
      FeatureConfig config;
      config.valid = true;
-@@ -2028,7 +2028,8 @@ std::optional<FeatureConfig> GetClientSi
+@@ -2047,7 +2047,8 @@ std::optional<FeatureConfig> GetClientSi
  #endif  // BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \

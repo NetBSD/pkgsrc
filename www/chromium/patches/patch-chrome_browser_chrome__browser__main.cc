@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.14 2026/01/19 16:14:08 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.15 2026/02/15 09:03:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_main.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- chrome/browser/chrome_browser_main.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ chrome/browser/chrome_browser_main.cc
-@@ -168,7 +168,7 @@
+@@ -172,7 +172,7 @@
  #endif
  
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.14 2026/01/19 16:14:0
  #include "sql/database.h"
  #endif
  
-@@ -195,12 +195,12 @@
+@@ -199,12 +199,12 @@
  #include "components/enterprise/browser/controller/chrome_browser_cloud_management_controller.h"
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -30,7 +30,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.14 2026/01/19 16:14:0
  #include "chrome/browser/headless/headless_mode_metrics.h"  // nogncheck
  #include "chrome/browser/headless/headless_mode_util.h"     // nogncheck
  #include "chrome/browser/metrics/desktop_session_duration/desktop_session_duration_tracker.h"
-@@ -211,7 +211,7 @@
+@@ -215,7 +215,7 @@
  #include "ui/gfx/switches.h"
  #endif
  
@@ -39,7 +39,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.14 2026/01/19 16:14:0
  #include "chrome/browser/first_run/upgrade_util.h"
  #endif
  
-@@ -285,7 +285,7 @@
+@@ -290,7 +290,7 @@
  #include "chrome/browser/chrome_process_singleton.h"
  #include "chrome/browser/ui/startup/startup_browser_creator.h"
  
@@ -48,7 +48,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.14 2026/01/19 16:14:0
  #include "base/nix/xdg_util.h"
  #endif
  #endif  // BUILDFLAG(ENABLE_PROCESS_SINGLETON)
-@@ -318,7 +318,7 @@
+@@ -319,7 +319,7 @@
  #include "chrome/browser/chrome_browser_main_mac.h"
  #elif BUILDFLAG(IS_CHROMEOS)
  #include "chrome/browser/ash/main_parts/chrome_browser_main_parts_ash.h"
@@ -57,7 +57,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.14 2026/01/19 16:14:0
  #include "chrome/browser/chrome_browser_main_linux.h"
  #elif BUILDFLAG(IS_ANDROID)
  #include "chrome/browser/chrome_browser_main_android.h"
-@@ -326,7 +326,7 @@
+@@ -327,7 +327,7 @@
  #include "chrome/browser/chrome_browser_main_posix.h"
  #endif
  
@@ -66,7 +66,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.14 2026/01/19 16:14:0
  #include "chrome/browser/chrome_browser_main_extra_parts_linux.h"
  #elif BUILDFLAG(IS_OZONE)
  #include "chrome/browser/chrome_browser_main_extra_parts_ozone.h"
-@@ -335,7 +335,7 @@
+@@ -336,7 +336,7 @@
  namespace {
  
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || \
@@ -75,7 +75,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.14 2026/01/19 16:14:0
  constexpr base::FilePath::CharType kMediaHistoryDatabaseName[] =
      FILE_PATH_LITERAL("Media History");
  
-@@ -484,7 +484,7 @@ void ProcessSingletonNotificationCallbac
+@@ -486,7 +486,7 @@ void ProcessSingletonNotificationCallbac
    }
  #endif
  
@@ -84,7 +84,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.14 2026/01/19 16:14:0
    // Set the global activation token sent as a command line switch by another
    // browser process. This also removes the switch after use to prevent any side
    // effects of leaving it in the command line after this point.
-@@ -550,7 +550,7 @@ bool ProcessSingletonNotificationCallbac
+@@ -552,7 +552,7 @@ bool ProcessSingletonNotificationCallbac
  
    // Drop the request if headless mode is in effect or the request is from
    // a headless Chrome process.
@@ -93,7 +93,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.14 2026/01/19 16:14:0
    if (headless::IsHeadlessMode() ||
        command_line.HasSwitch(switches::kHeadless)) {
      return false;
-@@ -716,7 +716,7 @@ std::unique_ptr<content::BrowserMainPart
+@@ -718,7 +718,7 @@ std::unique_ptr<content::BrowserMainPart
  #elif BUILDFLAG(IS_CHROMEOS)
    main_parts = std::make_unique<ash::ChromeBrowserMainPartsAsh>(
        is_integration_test, startup_data);
@@ -102,7 +102,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.14 2026/01/19 16:14:0
    main_parts = std::make_unique<ChromeBrowserMainPartsLinux>(
        is_integration_test, startup_data);
  #elif BUILDFLAG(IS_ANDROID)
-@@ -746,7 +746,7 @@ std::unique_ptr<content::BrowserMainPart
+@@ -748,7 +748,7 @@ std::unique_ptr<content::BrowserMainPart
    // Construct additional browser parts. Stages are called in the order in
    // which they are added.
  #if defined(TOOLKIT_VIEWS)
@@ -111,7 +111,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.14 2026/01/19 16:14:0
    main_parts->AddParts(
        std::make_unique<ChromeBrowserMainExtraPartsViewsLinux>());
  #else
-@@ -763,7 +763,7 @@ std::unique_ptr<content::BrowserMainPart
+@@ -765,7 +765,7 @@ std::unique_ptr<content::BrowserMainPart
    main_parts->AddParts(std::make_unique<ChromeBrowserMainExtraPartsAsh>());
  #endif
  
@@ -120,7 +120,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.14 2026/01/19 16:14:0
    main_parts->AddParts(std::make_unique<ChromeBrowserMainExtraPartsLinux>());
  #elif BUILDFLAG(IS_OZONE)
    main_parts->AddParts(std::make_unique<ChromeBrowserMainExtraPartsOzone>());
-@@ -1221,7 +1221,7 @@ int ChromeBrowserMainParts::PreCreateThr
+@@ -1240,7 +1240,7 @@ int ChromeBrowserMainParts::PreCreateThr
  
  #if BUILDFLAG(ENABLE_EXTENSIONS_CORE) &&                                   \
      (BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -129,7 +129,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.14 2026/01/19 16:14:0
    // Create directory for user-level Native Messaging manifest files. This
    // makes it less likely that the directory will be created by third-party
    // software with incorrect owner or permission. See crbug.com/725513 .
-@@ -1265,7 +1265,7 @@ int ChromeBrowserMainParts::PreCreateThr
+@@ -1284,7 +1284,7 @@ int ChromeBrowserMainParts::PreCreateThr
  
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -138,7 +138,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.14 2026/01/19 16:14:0
    metrics::DesktopSessionDurationTracker::Initialize();
    ProfileActivityMetricsRecorder::Initialize();
    TouchUIControllerStatsTracker::Initialize(
-@@ -1479,7 +1479,7 @@ void ChromeBrowserMainParts::PostProfile
+@@ -1502,7 +1502,7 @@ void ChromeBrowserMainParts::PostProfile
  #endif  // BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || \
@@ -147,7 +147,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.14 2026/01/19 16:14:0
    // Delete the media history database if it still exists.
    // TODO(crbug.com/40177301): Remove this.
    base::ThreadPool::PostTask(
-@@ -1530,7 +1530,7 @@ void ChromeBrowserMainParts::PostProfile
+@@ -1553,7 +1553,7 @@ void ChromeBrowserMainParts::PostProfile
        *UrlLanguageHistogramFactory::GetForBrowserContext(profile));
  #endif
  
@@ -156,7 +156,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.14 2026/01/19 16:14:0
    if (headless::IsHeadlessMode()) {
      headless::ReportHeadlessActionMetrics();
    }
-@@ -1641,7 +1641,7 @@ int ChromeBrowserMainParts::PreMainMessa
+@@ -1670,7 +1670,7 @@ int ChromeBrowserMainParts::PreMainMessa
    // In headless mode provide alternate SelectFileDialog factory overriding
    // any platform specific SelectFileDialog implementation that may have been
    // set.

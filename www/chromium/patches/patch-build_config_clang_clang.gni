@@ -1,12 +1,12 @@
-$NetBSD: patch-build_config_clang_clang.gni,v 1.7 2026/01/19 16:14:07 kikadf Exp $
+$NetBSD: patch-build_config_clang_clang.gni,v 1.8 2026/02/15 09:03:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/clang/clang.gni.orig	2026-01-07 00:50:30.000000000 +0000
+--- build/config/clang/clang.gni.orig	2026-02-03 22:07:10.000000000 +0000
 +++ build/config/clang/clang.gni
-@@ -90,7 +90,7 @@ declare_args() {
+@@ -93,7 +93,7 @@ declare_args() {
    #
    # TODO(https://crbug.com/440260716): Enable for Cronet in AOSP once gn2bp
    # supports copy targets.

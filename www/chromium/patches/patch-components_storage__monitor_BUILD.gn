@@ -1,12 +1,12 @@
-$NetBSD: patch-components_storage__monitor_BUILD.gn,v 1.14 2026/01/19 16:14:14 kikadf Exp $
+$NetBSD: patch-components_storage__monitor_BUILD.gn,v 1.15 2026/02/15 09:04:04 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/storage_monitor/BUILD.gn.orig	2026-01-07 00:50:30.000000000 +0000
+--- components/storage_monitor/BUILD.gn.orig	2026-02-03 22:07:10.000000000 +0000
 +++ components/storage_monitor/BUILD.gn
-@@ -73,7 +73,7 @@ component("storage_monitor") {
+@@ -66,7 +66,7 @@ component("storage_monitor") {
        deps += [ "//services/device/public/mojom" ]
      }
    } else if (is_linux) {
@@ -15,7 +15,7 @@ $NetBSD: patch-components_storage__monitor_BUILD.gn,v 1.14 2026/01/19 16:14:14 k
        sources += [
          "mtab_watcher_linux.cc",
          "mtab_watcher_linux.h",
-@@ -182,7 +182,7 @@ source_set("unit_tests") {
+@@ -167,7 +167,7 @@ source_set("unit_tests") {
          "storage_monitor_chromeos_unittest.cc",
        ]
      }

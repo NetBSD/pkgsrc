@@ -1,20 +1,20 @@
-$NetBSD: patch-base_test_launcher_test__launcher.cc,v 1.14 2026/01/19 16:14:07 kikadf Exp $
+$NetBSD: patch-base_test_launcher_test__launcher.cc,v 1.15 2026/02/15 09:03:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/test/launcher/test_launcher.cc.orig	2026-01-07 00:50:30.000000000 +0000
+--- base/test/launcher/test_launcher.cc.orig	2026-02-03 22:07:10.000000000 +0000
 +++ base/test/launcher/test_launcher.cc
-@@ -73,6 +73,7 @@
- #include "testing/gtest/include/gtest/gtest.h"
+@@ -66,6 +66,7 @@
+ #include "third_party/abseil-cpp/absl/container/flat_hash_set.h"
  
  #if BUILDFLAG(IS_POSIX)
 +#include <signal.h>
  #include <fcntl.h>
  
  #include "base/files/file_descriptor_watcher_posix.h"
-@@ -1831,6 +1832,10 @@ bool TestLauncher::Init(CommandLine* com
+@@ -1826,6 +1827,10 @@ bool TestLauncher::Init(CommandLine* com
    results_tracker_.AddGlobalTag("OS_OPENBSD");
  #endif
  
