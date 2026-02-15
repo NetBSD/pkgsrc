@@ -1,3 +1,3 @@
-# $NetBSD: versions.mk,v 1.41 2024/08/16 09:56:14 adam Exp $
+# $NetBSD: versions.mk,v 1.42 2026/02/15 18:14:31 gdt Exp $
 # Do not edit, regenerate using 'make versions'
-_VERSIONS=	compiler 8.5.1 edoc 1.3.1 erts 15.0.1 kernel 10.0.1 public_key 1.16.1 ssh 5.2.1 ssl 11.2.1 stdlib 6.0.1 asn1 5.3 common_test 1.27 crypto 5.5 debugger 5.4 dialyzer 5.2 diameter 2.4 eldap 1.2.13 erl_interface 5.5.2 et 1.7.1 eunit 2.9.1 ftp 1.2.2 inets 9.2 jinterface 1.14.1 megaco 4.6 mnesia 4.23.2 observer 2.16 odbc 2.14.3 os_mon 2.10 parsetools 2.6 reltool 1.0.1 runtime_tools 2.1 sasl 4.2.2 snmp 5.16 syntax_tools 3.2 tftp 1.2 tools 4.0 wx 2.4.2 xmerl 2.0
+_VERSIONS=	compiler 8.6.1.3 erts 15.2.7.5 megaco 4.7.2.1 mnesia 4.23.5.1 ssl 11.2.12.5 xmerl 2.1.3.3 asn1 5.3.4.2 common_test 1.27.7 crypto 5.5.3 debugger 5.5.0.1 dialyzer 5.3.1 diameter 2.4.1.1 edoc 1.3.2 eldap 1.2.14.1 erl_interface 5.5.2 et 1.7.1 eunit 2.9.1 ftp 1.2.3 inets 9.3.2.2 jinterface 1.14.1 kernel 10.2.7.3 observer 2.17 odbc 2.15 os_mon 2.10.1 parsetools 2.6 public_key 1.17.1.1 reltool 1.0.1 runtime_tools 2.1.1 sasl 4.2.2 snmp 5.18.2 ssh 5.2.11.4 stdlib 6.2.2.2 syntax_tools 3.2.2.2 tftp 1.2.2 tools 4.1.1 wx 2.4.3.1
