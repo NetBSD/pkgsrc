@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2024/03/16 22:36:01 nia Exp $
+# $NetBSD: Makefile,v 1.20 2026/02/15 13:58:07 wiz Exp $
 
-DISTNAME=		darkstat-3.0.719
+DISTNAME=		darkstat-3.0.722
 CATEGORIES=		net
-MASTER_SITES=		https://unix4lyfe.org/darkstat/
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		${MASTER_SITE_GITHUB:=emikulic/}
 
 MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		https://unix4lyfe.org/darkstat/
@@ -12,11 +11,16 @@ LICENSE=		gnu-gpl-v2
 
 BUILD_TARGET=		darkstat
 
+USE_TOOLS+=		autoconf autoheader
 GNU_CONFIGURE=		yes
 
 RCD_SCRIPTS=		darkstat
 
 .include "../../mk/bsd.prefs.mk"
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
+	cd ${WRKSRC} && autoheader
 
 # Macs lacked clock_gettime way past its implement-by date.
 .if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 101200
@@ -25,6 +29,6 @@ LDFLAGS+=	-lMacportsLegacySupport
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.6.0
+BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=1.10.0
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
