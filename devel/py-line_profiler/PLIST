@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST,v 1.9 2025/10/09 12:03:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/02/15 14:09:28 adam Exp $
 bin/kernprof-${PYVERSSUFFIX}
-${PYSITELIB}/kernprof.py
-${PYSITELIB}/kernprof.pyc
-${PYSITELIB}/kernprof.pyo
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -10,6 +7,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE_Python.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/kernprof.py
+${PYSITELIB}/kernprof.pyc
+${PYSITELIB}/kernprof.pyo
 ${PYSITELIB}/line_profiler/CMakeLists.txt
 ${PYSITELIB}/line_profiler/Python_wrapper.h
 ${PYSITELIB}/line_profiler/__init__.py
@@ -24,9 +24,11 @@ ${PYSITELIB}/line_profiler/_diagnostics.pyc
 ${PYSITELIB}/line_profiler/_diagnostics.pyo
 ${PYSITELIB}/line_profiler/_line_profiler.cpp
 ${PYSITELIB}/line_profiler/_line_profiler.pyx
+${PYSITELIB}/line_profiler/_line_profiler.so
 ${PYSITELIB}/line_profiler/_logger.py
 ${PYSITELIB}/line_profiler/_logger.pyc
 ${PYSITELIB}/line_profiler/_logger.pyo
+${PYSITELIB}/line_profiler/_map_helpers.pxd
 ${PYSITELIB}/line_profiler/autoprofile/__init__.py
 ${PYSITELIB}/line_profiler/autoprofile/__init__.pyc
 ${PYSITELIB}/line_profiler/autoprofile/__init__.pyo
@@ -70,7 +72,6 @@ ${PYSITELIB}/line_profiler/cli_utils.pyi
 ${PYSITELIB}/line_profiler/cli_utils.pyo
 ${PYSITELIB}/line_profiler/explicit_profiler.py
 ${PYSITELIB}/line_profiler/explicit_profiler.pyc
-${PYSITELIB}/line_profiler/explicit_profiler.pyi
 ${PYSITELIB}/line_profiler/explicit_profiler.pyo
 ${PYSITELIB}/line_profiler/ipython_extension.py
 ${PYSITELIB}/line_profiler/ipython_extension.pyc
