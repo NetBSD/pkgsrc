@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2026/02/01 07:40:18 wiz Exp $
+$NetBSD: distinfo,v 1.23 2026/02/15 09:20:07 wiz Exp $
 
-BLAKE2s (Net-Server-2.016.tar.gz) = 519807229b7a93d136395432f2b0577e08fb259e33bc705faa51e0c4500fdce2
-SHA512 (Net-Server-2.016.tar.gz) = 48fe4a1ba0138052bb11bae626f054e1bfa9801af51401d029d85183fc8a8409bd1fa15a4b50135ed21df20a0c6ff7da0f4f40295b9312cba518ad5baa6e0f3e
-Size (Net-Server-2.016.tar.gz) = 163854 bytes
+BLAKE2s (Net-Server-2.017.tar.gz) = 29b9491de49f854d21310269ec4450daf3eecabce455687c718ee9cf4b8c1569
+SHA512 (Net-Server-2.017.tar.gz) = 0fe6b684c76e73a4ac68d25ba073ba9628699dfce507f13c63be2c2ac7965b4db8b55ec6e2c2e06fed52a4f7b065635345ab0f03e43740419ccdc2bb55b29714
+Size (Net-Server-2.017.tar.gz) = 170087 bytes
