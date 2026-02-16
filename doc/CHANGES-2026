@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1158 2026/02/16 14:45:27 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1159 2026/02/16 14:46:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1548,3 +1548,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated ham/hamlib to 4.7.0 [gdt 2026-02-16]
 	Updated www/ruby-rack to 3.2.5 [taca 2026-02-16]
 	Updated www/ruby-rack2 to 2.2.22 [taca 2026-02-16]
+	Updated graphics/simp to 3.10.3 [pin 2026-02-16]
