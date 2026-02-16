@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2025/10/09 07:57:46 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/02/16 09:41:07 adam Exp $
 
-DISTNAME=	asdf_coordinates_schemas-0.4.0
+DISTNAME=	asdf_coordinates_schemas-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asdf_coordinates_schemas/}
