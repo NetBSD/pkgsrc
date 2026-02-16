@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/13 08:33:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/02/16 15:40:53 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -25,6 +25,12 @@ ${PYSITELIB}/pyqtgraph/PlotData.pyo
 ${PYSITELIB}/pyqtgraph/Point.py
 ${PYSITELIB}/pyqtgraph/Point.pyc
 ${PYSITELIB}/pyqtgraph/Point.pyo
+${PYSITELIB}/pyqtgraph/Qt/OpenGLConstants.py
+${PYSITELIB}/pyqtgraph/Qt/OpenGLConstants.pyc
+${PYSITELIB}/pyqtgraph/Qt/OpenGLConstants.pyo
+${PYSITELIB}/pyqtgraph/Qt/OpenGLHelpers.py
+${PYSITELIB}/pyqtgraph/Qt/OpenGLHelpers.pyc
+${PYSITELIB}/pyqtgraph/Qt/OpenGLHelpers.pyo
 ${PYSITELIB}/pyqtgraph/Qt/QtCore/__init__.py
 ${PYSITELIB}/pyqtgraph/Qt/QtCore/__init__.pyc
 ${PYSITELIB}/pyqtgraph/Qt/QtCore/__init__.pyi
@@ -73,24 +79,6 @@ ${PYSITELIB}/pyqtgraph/WidgetGroup.pyo
 ${PYSITELIB}/pyqtgraph/__init__.py
 ${PYSITELIB}/pyqtgraph/__init__.pyc
 ${PYSITELIB}/pyqtgraph/__init__.pyo
-${PYSITELIB}/pyqtgraph/canvas/Canvas.py
-${PYSITELIB}/pyqtgraph/canvas/Canvas.pyc
-${PYSITELIB}/pyqtgraph/canvas/Canvas.pyo
-${PYSITELIB}/pyqtgraph/canvas/CanvasItem.py
-${PYSITELIB}/pyqtgraph/canvas/CanvasItem.pyc
-${PYSITELIB}/pyqtgraph/canvas/CanvasItem.pyo
-${PYSITELIB}/pyqtgraph/canvas/CanvasManager.py
-${PYSITELIB}/pyqtgraph/canvas/CanvasManager.pyc
-${PYSITELIB}/pyqtgraph/canvas/CanvasManager.pyo
-${PYSITELIB}/pyqtgraph/canvas/CanvasTemplate_generic.py
-${PYSITELIB}/pyqtgraph/canvas/CanvasTemplate_generic.pyc
-${PYSITELIB}/pyqtgraph/canvas/CanvasTemplate_generic.pyo
-${PYSITELIB}/pyqtgraph/canvas/TransformGuiTemplate_generic.py
-${PYSITELIB}/pyqtgraph/canvas/TransformGuiTemplate_generic.pyc
-${PYSITELIB}/pyqtgraph/canvas/TransformGuiTemplate_generic.pyo
-${PYSITELIB}/pyqtgraph/canvas/__init__.py
-${PYSITELIB}/pyqtgraph/canvas/__init__.pyc
-${PYSITELIB}/pyqtgraph/canvas/__init__.pyo
 ${PYSITELIB}/pyqtgraph/colormap.py
 ${PYSITELIB}/pyqtgraph/colormap.pyc
 ${PYSITELIB}/pyqtgraph/colormap.pyo
@@ -221,6 +209,9 @@ ${PYSITELIB}/pyqtgraph/examples/AxisItem_label_overlap.pyo
 ${PYSITELIB}/pyqtgraph/examples/BarGraphItem.py
 ${PYSITELIB}/pyqtgraph/examples/BarGraphItem.pyc
 ${PYSITELIB}/pyqtgraph/examples/BarGraphItem.pyo
+${PYSITELIB}/pyqtgraph/examples/BoxplotItem.py
+${PYSITELIB}/pyqtgraph/examples/BoxplotItem.pyc
+${PYSITELIB}/pyqtgraph/examples/BoxplotItem.pyo
 ${PYSITELIB}/pyqtgraph/examples/CLIexample.py
 ${PYSITELIB}/pyqtgraph/examples/CLIexample.pyc
 ${PYSITELIB}/pyqtgraph/examples/CLIexample.pyo
@@ -690,6 +681,9 @@ ${PYSITELIB}/pyqtgraph/graphicsItems/AxisItem.pyo
 ${PYSITELIB}/pyqtgraph/graphicsItems/BarGraphItem.py
 ${PYSITELIB}/pyqtgraph/graphicsItems/BarGraphItem.pyc
 ${PYSITELIB}/pyqtgraph/graphicsItems/BarGraphItem.pyo
+${PYSITELIB}/pyqtgraph/graphicsItems/BoxplotItem.py
+${PYSITELIB}/pyqtgraph/graphicsItems/BoxplotItem.pyc
+${PYSITELIB}/pyqtgraph/graphicsItems/BoxplotItem.pyo
 ${PYSITELIB}/pyqtgraph/graphicsItems/ButtonItem.py
 ${PYSITELIB}/pyqtgraph/graphicsItems/ButtonItem.pyc
 ${PYSITELIB}/pyqtgraph/graphicsItems/ButtonItem.pyo
@@ -762,9 +756,6 @@ ${PYSITELIB}/pyqtgraph/graphicsItems/LegendItem.pyo
 ${PYSITELIB}/pyqtgraph/graphicsItems/LinearRegionItem.py
 ${PYSITELIB}/pyqtgraph/graphicsItems/LinearRegionItem.pyc
 ${PYSITELIB}/pyqtgraph/graphicsItems/LinearRegionItem.pyo
-${PYSITELIB}/pyqtgraph/graphicsItems/MultiPlotItem.py
-${PYSITELIB}/pyqtgraph/graphicsItems/MultiPlotItem.pyc
-${PYSITELIB}/pyqtgraph/graphicsItems/MultiPlotItem.pyo
 ${PYSITELIB}/pyqtgraph/graphicsItems/NonUniformImage.py
 ${PYSITELIB}/pyqtgraph/graphicsItems/NonUniformImage.pyc
 ${PYSITELIB}/pyqtgraph/graphicsItems/NonUniformImage.pyo
@@ -854,12 +845,6 @@ ${PYSITELIB}/pyqtgraph/jupyter/GraphicsView.pyo
 ${PYSITELIB}/pyqtgraph/jupyter/__init__.py
 ${PYSITELIB}/pyqtgraph/jupyter/__init__.pyc
 ${PYSITELIB}/pyqtgraph/jupyter/__init__.pyo
-${PYSITELIB}/pyqtgraph/metaarray/MetaArray.py
-${PYSITELIB}/pyqtgraph/metaarray/MetaArray.pyc
-${PYSITELIB}/pyqtgraph/metaarray/MetaArray.pyo
-${PYSITELIB}/pyqtgraph/metaarray/__init__.py
-${PYSITELIB}/pyqtgraph/metaarray/__init__.pyc
-${PYSITELIB}/pyqtgraph/metaarray/__init__.pyo
 ${PYSITELIB}/pyqtgraph/multiprocess/__init__.py
 ${PYSITELIB}/pyqtgraph/multiprocess/__init__.pyc
 ${PYSITELIB}/pyqtgraph/multiprocess/__init__.pyo
@@ -1022,15 +1007,6 @@ ${PYSITELIB}/pyqtgraph/units.pyo
 ${PYSITELIB}/pyqtgraph/util/__init__.py
 ${PYSITELIB}/pyqtgraph/util/__init__.pyc
 ${PYSITELIB}/pyqtgraph/util/__init__.pyo
-${PYSITELIB}/pyqtgraph/util/colorama/__init__.py
-${PYSITELIB}/pyqtgraph/util/colorama/__init__.pyc
-${PYSITELIB}/pyqtgraph/util/colorama/__init__.pyo
-${PYSITELIB}/pyqtgraph/util/colorama/win32.py
-${PYSITELIB}/pyqtgraph/util/colorama/win32.pyc
-${PYSITELIB}/pyqtgraph/util/colorama/win32.pyo
-${PYSITELIB}/pyqtgraph/util/colorama/winterm.py
-${PYSITELIB}/pyqtgraph/util/colorama/winterm.pyc
-${PYSITELIB}/pyqtgraph/util/colorama/winterm.pyo
 ${PYSITELIB}/pyqtgraph/util/cprint.py
 ${PYSITELIB}/pyqtgraph/util/cprint.pyc
 ${PYSITELIB}/pyqtgraph/util/cprint.pyo
@@ -1112,9 +1088,6 @@ ${PYSITELIB}/pyqtgraph/widgets/LayoutWidget.pyo
 ${PYSITELIB}/pyqtgraph/widgets/MatplotlibWidget.py
 ${PYSITELIB}/pyqtgraph/widgets/MatplotlibWidget.pyc
 ${PYSITELIB}/pyqtgraph/widgets/MatplotlibWidget.pyo
-${PYSITELIB}/pyqtgraph/widgets/MultiPlotWidget.py
-${PYSITELIB}/pyqtgraph/widgets/MultiPlotWidget.pyc
-${PYSITELIB}/pyqtgraph/widgets/MultiPlotWidget.pyo
 ${PYSITELIB}/pyqtgraph/widgets/PathButton.py
 ${PYSITELIB}/pyqtgraph/widgets/PathButton.pyc
 ${PYSITELIB}/pyqtgraph/widgets/PathButton.pyo
