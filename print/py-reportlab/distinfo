@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.50 2026/01/16 06:45:33 adam Exp $
+$NetBSD: distinfo,v 1.51 2026/02/16 11:29:23 adam Exp $
 
-BLAKE2s (reportlab-4.4.9.tar.gz) = a38d785f7d5f0abf70b4bc697e22eda12941c323073318c0f5a451cb0179eb53
-SHA512 (reportlab-4.4.9.tar.gz) = c802758fac5aedab54581c3c03a8e0a2201125c547f5e51efd252adbfde4b7a1db3a4caa0c0276a660a2352fc295176d088fc38b6166f3f798a295f6d231705e
-Size (reportlab-4.4.9.tar.gz) = 3911246 bytes
+BLAKE2s (reportlab-4.4.10.tar.gz) = 2d1a8dc4b3a39c597cf1b50b1261d2a4ee3b66e2475e0754a300de34ca59fbf8
+SHA512 (reportlab-4.4.10.tar.gz) = 568d1725826b20d9a1286ef1477dac157b7e291aae7e17605633776693677dbbd4d49a6385f5ed456db31686651306e4b62e61840f11773b13dc6704119010a9
+Size (reportlab-4.4.10.tar.gz) = 3714962 bytes
