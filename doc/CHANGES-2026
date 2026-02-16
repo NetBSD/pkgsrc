@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1121 2026/02/16 04:11:31 jnemeth Exp $
+$NetBSD: CHANGES-2026,v 1.1122 2026/02/16 09:06:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1495,3 +1495,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated comms/asterisk21 to 21.12.1 [jnemeth 2026-02-16]
 	Updated comms/asterisk22 to 22.8.2 [jnemeth 2026-02-16]
 	Updated comms/asterisk23 to 23.2.2 [jnemeth 2026-02-16]
+	Updated graphics/py-tifffile to 2026.2.15 [adam 2026-02-16]
+	Updated devel/py-immutabledict to 4.3.1 [adam 2026-02-16]
+	Updated net/py-python-socks to 2.8.1 [adam 2026-02-16]
+	Updated devel/py-typeguard to 4.5.0 [adam 2026-02-16]
