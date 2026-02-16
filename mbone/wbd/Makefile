@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/12/22 18:31:14 zafer Exp $
-#
+# $NetBSD: Makefile,v 1.18 2026/02/16 08:24:49 wiz Exp $
 
 DISTNAME=		wbd-1.0ucl4
 PKGNAME=		wbd-1.0p4
@@ -8,7 +7,7 @@ CATEGORIES=		mbone tk
 MASTER_SITES=		#
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www-mice.cs.ucl.ac.uk/multimedia/software/wbd/
+#HOMEPAGE=		http://www-mice.cs.ucl.ac.uk/multimedia/software/wbd/
 COMMENT=		Multicast WhiteBoarD
 
 MAKE_FILE=		makefile
