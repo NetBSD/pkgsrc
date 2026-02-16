@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1141 2026/02/16 11:53:05 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1142 2026/02/16 12:00:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1527,3 +1527,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-platformdirs to 4.9.2 [wiz 2026-02-16]
 	Updated devel/py-project-metadata to 0.11.0 [wiz 2026-02-16]
 	Updated devel/py-ruff to 0.15.1 [wiz 2026-02-16]
+	Updated devel/py-setuptools to 82.0.0 [wiz 2026-02-16]
