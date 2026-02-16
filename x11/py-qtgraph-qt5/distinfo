@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/08/05 14:45:29 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/02/16 15:40:53 adam Exp $
 
-BLAKE2s (pyqtgraph-0.13.7.tar.gz) = f9a595f01241404882946547fff21af81af8d96e07941d6df60488989675941d
-SHA512 (pyqtgraph-0.13.7.tar.gz) = e294623e620d8c18cee5202ffeac6f392ac7ad435762f297c91aa7f2d84a1c1479a453ef81f4f415dabf90c20f57e440a196061b7830baa575474d65d7ba7412
-Size (pyqtgraph-0.13.7.tar.gz) = 2343380 bytes
+BLAKE2s (pyqtgraph-0.14.0.tar.gz) = ced4700f66f41fdd12cc0bd35f35dd2a8070b58410cb65387d9f8776865b1102
+SHA512 (pyqtgraph-0.14.0.tar.gz) = f9c973d5dbfd79ef34652a5eb8eadbc1b0215aa1c30773e5c58148bae6a6d79d3e21a904b1a6dd8ff6eb7fe15debf6c1d45c8a9cce96cbcc60495bc9814259f7
+Size (pyqtgraph-0.14.0.tar.gz) = 2397130 bytes
