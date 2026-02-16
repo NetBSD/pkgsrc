@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1156 2026/02/16 14:01:10 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.1157 2026/02/16 14:43:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1546,3 +1546,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-gunicorn to 25.1.0 [adam 2026-02-16]
 	Updated graphics/zint to 2.16.0 [wiz 2026-02-16]
 	Updated ham/hamlib to 4.7.0 [gdt 2026-02-16]
+	Updated www/ruby-rack to 3.2.5 [taca 2026-02-16]
