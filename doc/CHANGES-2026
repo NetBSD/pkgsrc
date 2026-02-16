@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1154 2026/02/16 12:49:37 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1155 2026/02/16 13:10:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1544,3 +1544,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/slumber to 5.0.0 [wiz 2026-02-16]
 	Updated security/pgpdump to 0.37 [adam 2026-02-16]
 	Updated www/py-gunicorn to 25.1.0 [adam 2026-02-16]
+	Updated graphics/zint to 2.16.0 [wiz 2026-02-16]
