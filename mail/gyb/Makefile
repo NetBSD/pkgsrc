@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/08/29 14:14:00 sborrill Exp $
+# $NetBSD: Makefile,v 1.10 2026/02/16 09:44:54 sborrill Exp $
 
-DISTNAME=	gyb-1.90
+DISTNAME=	gyb-1.95
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GAM-team/}
 GITHUB_PROJECT=	got-your-back
