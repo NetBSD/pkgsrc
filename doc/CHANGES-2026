@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1134 2026/02/16 11:17:45 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1135 2026/02/16 11:21:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1519,3 +1519,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/py-icalendar to 7.0.0 [wiz 2026-02-16]
 	Updated math/py-xgboost to 3.2.0 [adam 2026-02-16]
 	Updated textproc/py-sphinx-autoapi to 3.7.0 [adam 2026-02-16]
+	Updated www/py-nh3 to 0.3.3 [wiz 2026-02-16]
