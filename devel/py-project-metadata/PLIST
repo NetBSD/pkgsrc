@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/02/23 18:30:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/02/16 11:45:34 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -6,6 +6,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/pyproject_metadata/__init__.py
 ${PYSITELIB}/pyproject_metadata/__init__.pyc
 ${PYSITELIB}/pyproject_metadata/__init__.pyo
+${PYSITELIB}/pyproject_metadata/_dispatch.py
+${PYSITELIB}/pyproject_metadata/_dispatch.pyc
+${PYSITELIB}/pyproject_metadata/_dispatch.pyo
 ${PYSITELIB}/pyproject_metadata/constants.py
 ${PYSITELIB}/pyproject_metadata/constants.pyc
 ${PYSITELIB}/pyproject_metadata/constants.pyo
