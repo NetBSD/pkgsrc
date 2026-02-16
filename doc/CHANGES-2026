@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1151 2026/02/16 12:35:03 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1152 2026/02/16 12:41:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1540,3 +1540,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-apache-libcloud to 3.9.0 [adam 2026-02-16]
 	Updated www/py-django to 5.2.11 [adam 2026-02-16]
 	Updated www/py-django4 to 4.2.28 [adam 2026-02-16]
+	Updated textproc/rumdl to 0.1.21 [wiz 2026-02-16]
