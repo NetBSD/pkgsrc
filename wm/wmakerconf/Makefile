@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.113 2026/01/27 08:40:47 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2026/02/16 08:30:13 wiz Exp $
 
 DISTNAME=	wmakerconf-2.11
 PKGREVISION=	73
 CATEGORIES=	wm x11 windowmaker
-MASTER_SITES=	http://starplot.org/wmakerconf/
+#MASTER_SITES=	http://starplot.org/wmakerconf/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://starplot.org/wmakerconf/
+#HOMEPAGE=	http://starplot.org/wmakerconf/
 COMMENT=	Gtk+ based configuration tool for Window Maker
 LICENSE=	gnu-gpl-v2
 
