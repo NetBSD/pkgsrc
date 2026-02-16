@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2026/01/06 11:18:17 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2026/02/16 11:16:50 adam Exp $
 
-DISTNAME=	sphinx_autoapi-3.6.1
+DISTNAME=	sphinx_autoapi-3.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx_autoapi/}
@@ -11,7 +11,7 @@ COMMENT=	Autodoc style documentation for multiple languages
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
-DEPENDS+=	${PYPKGPREFIX}-astroid>=3.0.0:../../devel/py-astroid
+DEPENDS+=	${PYPKGPREFIX}-astroid>=4.0:../../devel/py-astroid
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=7.4.0:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
@@ -26,8 +26,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 ALLOW_NETWORK_ACCESS=	yes
 .endif
 
-# as of 3.6.1
-# 316 passed, 3636 warnings, 4 errors
+# as of 3.7.0
+# 1 failed, 327 passed, 5 warnings, 4 errors
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
