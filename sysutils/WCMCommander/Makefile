@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2025/08/20 11:35:11 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/02/16 08:27:12 wiz Exp $
 
 DISTNAME=	WCMCommander-0.20.0
 PKGREVISION=	5
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GITHUB:=corporateshark/}
-GITHUB_PROJECT=	WCMCommander
-GITHUB_TAG=	release-${PKGVERSION_NOREV}
+#MASTER_SITES=	${MASTER_SITE_GITHUB:=corporateshark/}
+#GITHUB_PROJECT=	WCMCommander
+#GITHUB_TAG=	release-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wcm.linderdaum.com/
+#HOMEPAGE=	http://wcm.linderdaum.com/
 COMMENT=	Two-panel file manager
 #LICENSE=	mit # includes fonts with perhaps other licenses
 
