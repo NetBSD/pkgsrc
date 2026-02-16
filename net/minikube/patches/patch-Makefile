@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2026/02/16 18:45:11 maya Exp $
+
+Don't try to install a random Go toolchain version
+
+--- Makefile.orig	2026-02-16 18:26:36.757915736 +0000
++++ Makefile
+@@ -38,7 +38,7 @@ RPM_REVISION ?= 0
+ GO_VERSION ?= 1.25.5
+ # set GOTOOLCHAIN to GO_VERSION to override any toolchain version specified in
+ # go.mod (ref: https://go.dev/doc/toolchain#GOTOOLCHAIN)
+-export GOTOOLCHAIN := go$(GO_VERSION)
++#export GOTOOLCHAIN := go$(GO_VERSION)
+ # update this only by running `make update-golang-version`
+ GO_K8S_VERSION_PREFIX ?= v1.35.0
+ 
