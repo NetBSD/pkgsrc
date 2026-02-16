@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1125 2026/02/16 09:45:23 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1126 2026/02/16 10:17:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1506,3 +1506,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-asdf-standard to 1.5.0 [adam 2026-02-16]
 	Updated math/py-asdf_coordinates_schemas to 0.5.1 [adam 2026-02-16]
 	Updated math/py-asdf_astropy to 0.10.0 [adam 2026-02-16]
+	Updated devel/glib2 to 2.86.4 [adam 2026-02-16]
+	Updated devel/glib2-tools to 2.86.4 [adam 2026-02-16]
+	Updated devel/gdbus-codegen to 2.86.4 [adam 2026-02-16]
+	Updated devel/catch2 to 3.13.0 [adam 2026-02-16]
