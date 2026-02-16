@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2025/03/30 21:10:46 wiz Exp $
+# $NetBSD: Makefile.common,v 1.17 2026/02/16 08:29:11 wiz Exp $
 #
 # used by net/wistumbler2-gtk/Makefile
 
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	# ftp://ftp.nopcode.org/prj/wistumbler2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nopcode.org/?t=wistumbler2
+#HOMEPAGE=	http://www.nopcode.org/?t=wistumbler2
 COMMENT=	Fork of original WaveLAN/IEEE network stumbler
 
 DISTINFO_FILE=		${.CURDIR}/../../net/wistumbler2/distinfo
