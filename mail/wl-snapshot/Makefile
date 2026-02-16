@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/10/24 22:09:52 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/02/16 08:29:54 wiz Exp $
 
 VERSION=	2023.08.18
 DISTNAME=	wanderlust
@@ -10,7 +10,7 @@ GITHUB_PROJECT=	wanderlust
 GITHUB_TAG=	1389dcec6e3242948682eb3e3ce8ead8be2772d8
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gohome.org/wl/
+HOMEPAGE=	https://github.com/wanderlust/wanderlust
 COMMENT=	Mail/news management system with IMAP4rev1 support for Emacs
 LICENSE=	gnu-gpl-v2
 
