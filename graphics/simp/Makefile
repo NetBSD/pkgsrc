@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2026/01/27 08:39:49 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/02/16 14:46:07 pin Exp $
 
-DISTNAME=	simp-3.10.2
-PKGREVISION=	2
+DISTNAME=	simp-3.10.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Kl4rry/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,7 +16,9 @@ TOOL_DEPENDS+=	cargo-about-[0-9]*:../../devel/cargo-about
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.80.1
+#RUST_REQ=	1.93.1
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.93.1 on amd64
 USE_TOOLS+=	pkg-config
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk3}/lib
