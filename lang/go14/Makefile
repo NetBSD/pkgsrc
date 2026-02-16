@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2026/02/16 17:51:58 maya Exp $
+# $NetBSD: Makefile,v 1.31 2026/02/16 18:28:28 maya Exp $
 
 .include "../../lang/go/version.mk"
 
@@ -16,6 +16,8 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/go
 USE_TOOLS+=	bash:run perl:run pax touch awk
+
+# Doesn't build with C23 - "bool" is a keyword.
 FORCE_C_STD=	gnu99
 
 # uses ulimit -T
