@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1120 2026/02/16 03:23:18 jnemeth Exp $
+$NetBSD: CHANGES-2026,v 1.1121 2026/02/16 04:11:31 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1494,3 +1494,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed databases/pgadmin3 [wiz 2026-02-15]
 	Updated comms/asterisk21 to 21.12.1 [jnemeth 2026-02-16]
 	Updated comms/asterisk22 to 22.8.2 [jnemeth 2026-02-16]
+	Updated comms/asterisk23 to 23.2.2 [jnemeth 2026-02-16]
