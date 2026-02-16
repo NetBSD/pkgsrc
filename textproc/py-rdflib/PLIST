@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2025/12/26 09:26:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/02/16 12:26:51 adam Exp $
 bin/csv2rdf-${PYVERSSUFFIX}
 bin/rdf2dot-${PYVERSSUFFIX}
 bin/rdfgraphisomorphism-${PYVERSSUFFIX}
 bin/rdfpipe-${PYVERSSUFFIX}
 bin/rdfs2dot-${PYVERSSUFFIX}
-bin/sq-${PYVERSSUFFIX}
+bin/sparqlquery-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -40,6 +40,15 @@ ${PYSITELIB}/rdflib/contrib/graphdb/__init__.pyo
 ${PYSITELIB}/rdflib/contrib/graphdb/client.py
 ${PYSITELIB}/rdflib/contrib/graphdb/client.pyc
 ${PYSITELIB}/rdflib/contrib/graphdb/client.pyo
+${PYSITELIB}/rdflib/contrib/graphdb/exceptions.py
+${PYSITELIB}/rdflib/contrib/graphdb/exceptions.pyc
+${PYSITELIB}/rdflib/contrib/graphdb/exceptions.pyo
+${PYSITELIB}/rdflib/contrib/graphdb/models.py
+${PYSITELIB}/rdflib/contrib/graphdb/models.pyc
+${PYSITELIB}/rdflib/contrib/graphdb/models.pyo
+${PYSITELIB}/rdflib/contrib/graphdb/util.py
+${PYSITELIB}/rdflib/contrib/graphdb/util.pyc
+${PYSITELIB}/rdflib/contrib/graphdb/util.pyo
 ${PYSITELIB}/rdflib/contrib/rdf4j/__init__.py
 ${PYSITELIB}/rdflib/contrib/rdf4j/__init__.pyc
 ${PYSITELIB}/rdflib/contrib/rdf4j/__init__.pyo
@@ -298,6 +307,9 @@ ${PYSITELIB}/rdflib/plugins/sparql/parserutils.pyo
 ${PYSITELIB}/rdflib/plugins/sparql/processor.py
 ${PYSITELIB}/rdflib/plugins/sparql/processor.pyc
 ${PYSITELIB}/rdflib/plugins/sparql/processor.pyo
+${PYSITELIB}/rdflib/plugins/sparql/pyparsing_compat.py
+${PYSITELIB}/rdflib/plugins/sparql/pyparsing_compat.pyc
+${PYSITELIB}/rdflib/plugins/sparql/pyparsing_compat.pyo
 ${PYSITELIB}/rdflib/plugins/sparql/results/__init__.py
 ${PYSITELIB}/rdflib/plugins/sparql/results/__init__.pyc
 ${PYSITELIB}/rdflib/plugins/sparql/results/__init__.pyo

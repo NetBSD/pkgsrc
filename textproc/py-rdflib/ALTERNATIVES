@@ -3,4 +3,4 @@ bin/rdf2dot @PREFIX@/bin/rdf2dot-@PYVERSSUFFIX@
 bin/rdfgraphisomorphism @PREFIX@/bin/rdfgraphisomorphism-@PYVERSSUFFIX@
 bin/rdfpipe @PREFIX@/bin/rdfpipe-@PYVERSSUFFIX@
 bin/rdfs2dot @PREFIX@/bin/rdfs2dot-@PYVERSSUFFIX@
-bin/sq @PREFIX@/bin/sq-@PYVERSSUFFIX@
+bin/sparqlquery @PREFIX@/bin/sparqlquery-@PYVERSSUFFIX@
