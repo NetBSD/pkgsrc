@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1160 2026/02/16 15:42:40 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.1161 2026/02/16 15:43:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1550,3 +1550,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-rack2 to 2.2.22 [taca 2026-02-16]
 	Updated graphics/simp to 3.10.3 [pin 2026-02-16]
 	Updated lang/janet to 1.41.1 [ktnb 2026-02-16]
+	Updated x11/py-qtgraph-qt5 to 0.14.0 [adam 2026-02-16]
+	Updated devel/py-maturin to 1.12.2 [adam 2026-02-16]
