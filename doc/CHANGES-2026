@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1145 2026/02/16 12:17:42 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1146 2026/02/16 12:19:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1531,3 +1531,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/dasel to 3.2.2 [wiz 2026-02-16]
 	Updated www/miniflux to 2.2.17 [wiz 2026-02-16]
 	Updated devel/jjui to 0.9.11 [wiz 2026-02-16]
+	Updated textproc/moor to 2.10.4 [wiz 2026-02-16]
