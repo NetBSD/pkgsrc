@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/12/26 16:36:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/02/16 11:13:35 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -46,6 +46,9 @@ ${PYSITELIB}/xgboost/lib/libxgboost.so
 ${PYSITELIB}/xgboost/libpath.py
 ${PYSITELIB}/xgboost/libpath.pyc
 ${PYSITELIB}/xgboost/libpath.pyo
+${PYSITELIB}/xgboost/objective.py
+${PYSITELIB}/xgboost/objective.pyc
+${PYSITELIB}/xgboost/objective.pyo
 ${PYSITELIB}/xgboost/plotting.py
 ${PYSITELIB}/xgboost/plotting.pyc
 ${PYSITELIB}/xgboost/plotting.pyo
@@ -104,12 +107,18 @@ ${PYSITELIB}/xgboost/testing/federated.pyo
 ${PYSITELIB}/xgboost/testing/interaction_constraints.py
 ${PYSITELIB}/xgboost/testing/interaction_constraints.pyc
 ${PYSITELIB}/xgboost/testing/interaction_constraints.pyo
+${PYSITELIB}/xgboost/testing/intercept.py
+${PYSITELIB}/xgboost/testing/intercept.pyc
+${PYSITELIB}/xgboost/testing/intercept.pyo
 ${PYSITELIB}/xgboost/testing/metrics.py
 ${PYSITELIB}/xgboost/testing/metrics.pyc
 ${PYSITELIB}/xgboost/testing/metrics.pyo
 ${PYSITELIB}/xgboost/testing/monotone_constraints.py
 ${PYSITELIB}/xgboost/testing/monotone_constraints.pyc
 ${PYSITELIB}/xgboost/testing/monotone_constraints.pyo
+${PYSITELIB}/xgboost/testing/multi_target.py
+${PYSITELIB}/xgboost/testing/multi_target.pyc
+${PYSITELIB}/xgboost/testing/multi_target.pyo
 ${PYSITELIB}/xgboost/testing/ordinal.py
 ${PYSITELIB}/xgboost/testing/ordinal.pyc
 ${PYSITELIB}/xgboost/testing/ordinal.pyo
