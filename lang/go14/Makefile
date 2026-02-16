@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2023/07/15 10:52:59 bsiegert Exp $
+# $NetBSD: Makefile,v 1.30 2026/02/16 17:51:58 maya Exp $
 
 .include "../../lang/go/version.mk"
 
@@ -16,6 +16,7 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/go
 USE_TOOLS+=	bash:run perl:run pax touch awk
+FORCE_C_STD=	gnu99
 
 # uses ulimit -T
 TOOL_DEPENDS+=	bash>=4.2nb3:../../shells/bash
