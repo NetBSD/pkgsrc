@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.1 2025/10/27 06:58:38 jnemeth Exp $
+$NetBSD: patch-configure,v 1.2 2026/02/16 04:11:13 jnemeth Exp $
 
---- configure.orig	2025-10-15 17:01:28.000000000 +0000
+--- configure.orig	2026-02-05 16:58:10.000000000 +0000
 +++ configure
-@@ -5099,13 +5099,9 @@ esac
+@@ -5170,13 +5170,9 @@ esac
  case "${host_os}" in
       netbsd*)
       ac_default_prefix=/usr/pkg
@@ -16,7 +16,7 @@ $NetBSD: patch-configure,v 1.1 2025/10/27 06:58:38 jnemeth Exp $
       ;;
       openbsd*)
       ac_default_prefix=/usr/local
-@@ -5117,8 +5113,6 @@ case "${host_os}" in
+@@ -5188,8 +5184,6 @@ case "${host_os}" in
             astmandir=/usr/share/man
          fi
       fi
@@ -25,8 +25,8 @@ $NetBSD: patch-configure,v 1.1 2025/10/27 06:58:38 jnemeth Exp $
       ;;
       darwin*)
       ac_default_prefix=/usr/local
-@@ -20536,12 +20530,12 @@ else $as_nop
- 
+@@ -20951,12 +20945,12 @@ else case e in #(
+   e)
  			{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for clang -fblocks" >&5
  printf %s "checking for clang -fblocks... " >&6; }
 -			if test "`echo 'int main(){return ^{return 42;}();}' | ${CC} -o /dev/null -fblocks -x c - 2>&1`" = ""; then
@@ -40,7 +40,7 @@ $NetBSD: patch-configure,v 1.1 2025/10/27 06:58:38 jnemeth Exp $
  				AST_CLANG_BLOCKS_LIBS="-lBlocksRuntime"
  				AST_CLANG_BLOCKS="-fblocks"
  				{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
-@@ -30775,6 +30769,142 @@ if test -z $ax_cv_have_c_atomics$ax_cv_h
+@@ -31404,6 +31398,142 @@ if test -z $ax_cv_have_c_atomics$ax_cv_h
  	as_fn_error $? "*** Atomic operations are not supported by your compiler." "$LINENO" 5
  fi
  
