@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.48 2025/12/21 14:43:41 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.49 2026/02/16 10:35:41 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.5.0.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.5.0.zip
@@ -99,8 +99,8 @@ GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.12.mod
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.13.0.mod
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.21.1-0.20240508182429-e35e4ccd0d2d.mod
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.23.0.mod
-GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.39.1-0.20251205192105-907593008619.mod
-GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.39.1-0.20251205192105-907593008619.zip
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.39.1-0.20260109155911-b69ac100ecb7.mod
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.39.1-0.20260109155911-b69ac100ecb7.zip
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.6.0.mod
 GO_MODULE_FILES+=	golang.org/x/tools/go/expect/@v/v0.1.1-deprecated.mod
 GO_MODULE_FILES+=	golang.org/x/tools/go/expect/@v/v0.1.1-deprecated.zip
