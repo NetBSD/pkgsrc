@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4592 2026/02/11 07:54:04 taca Exp $
+# $NetBSD: Makefile,v 1.4593 2026/02/16 23:58:29 maya Exp $
 #
 
 COMMENT=	Development utilities
@@ -3746,6 +3746,7 @@ SUBDIR+=	texttest
 SUBDIR+=	threadweaver
 SUBDIR+=	thrift
 SUBDIR+=	tig
+SUBDIR+=	tilt
 SUBDIR+=	tinycthread
 SUBDIR+=	tkcon
 SUBDIR+=	tkcvs
