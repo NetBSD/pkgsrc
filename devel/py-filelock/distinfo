@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.37 2026/02/13 07:32:50 adam Exp $
+$NetBSD: distinfo,v 1.38 2026/02/16 11:10:25 wiz Exp $
 
-BLAKE2s (filelock-3.21.2.tar.gz) = 54ec39624f0d2bbe6fd52a3f2baf11e91bea4b01406eb2d78b6a5ed49c90bbcc
-SHA512 (filelock-3.21.2.tar.gz) = aff75767ee32a21232081809d2ba1137f1947e19e4d5aafe4b12b1bb6eb8d96e052a8e95fcb70dbc06a212cfcda48b5fb56b644f296d282bd4879999b38e83f0
-Size (filelock-3.21.2.tar.gz) = 31486 bytes
+BLAKE2s (filelock-3.24.2.tar.gz) = f96a70eafc881b450902dedeb3a52fe0625a204cd6368b5d3a5f10cc1b715239
+SHA512 (filelock-3.24.2.tar.gz) = 902e9d6a5a2a1100d7a71aa8d71df87b6d723a61597363cabab60536019121b407b1695a2319c74e98938858e21d01321f577adce3198f7f526c043a07146035
+Size (filelock-3.24.2.tar.gz) = 37601 bytes
