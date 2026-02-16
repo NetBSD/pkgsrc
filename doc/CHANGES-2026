@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1123 2026/02/16 09:30:02 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1124 2026/02/16 09:42:05 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1501,3 +1501,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-typeguard to 4.5.0 [adam 2026-02-16]
 	Updated print/py-octoprint to 1.11.6 [adam 2026-02-16]
 	Updated devel/py-faker to 40.4.0 [adam 2026-02-16]
+	Updated sysutils/gam to 7.34.02 [sborrill 2026-02-16]
