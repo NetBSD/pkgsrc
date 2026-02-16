@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1165 2026/02/16 18:27:08 tron Exp $
+$NetBSD: CHANGES-2026,v 1.1166 2026/02/16 18:45:23 maya Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1559,3 +1559,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-junos-eznc to 2.7.6 [adam 2026-02-16]
 	Updated math/py-jplephem to 2.24 [adam 2026-02-16]
 	Updated pkgtools/rpm2pkg to 3.3.1 [tron 2026-02-16]
+	Updated net/minikube to 1.38.0 [maya 2026-02-16]
