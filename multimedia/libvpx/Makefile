@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.108 2025/07/14 10:44:45 adam Exp $
+# $NetBSD: Makefile,v 1.109 2026/02/16 11:30:11 adam Exp $
 
-DISTNAME=	libvpx-1.15.2
+DISTNAME=	libvpx-1.16.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=webmproject/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://chromium.googlesource.com/webm/libvpx
 COMMENT=	On2 VP8/VP9 video codec library from Google
 LICENSE=	modified-bsd
 
+USE_CXX_FEATURES=	c++11
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES+=	c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake bash:build perl:build
 HAS_CONFIGURE=		yes
