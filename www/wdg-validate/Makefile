@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.35 2022/06/28 11:37:51 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.36 2026/02/16 08:27:38 wiz Exp $
 
 DISTNAME=	validate-1.2.2
 PKGNAME=	wdg-${DISTNAME}
 PKGREVISION=	10
 CATEGORIES=	www
-MASTER_SITES=	http://www.htmlhelp.com/tools/validator/offline/
+#MASTER_SITES=	http://www.htmlhelp.com/tools/validator/offline/
 DISTFILES=	${DISTNAME} wdg-sgml-lib-1.1.4.tar.gz README
 
 MAINTAINER=	norm@sandbox.org.uk
-HOMEPAGE=	https://www.htmlhelp.com/tools/validator/offline/
+#HOMEPAGE=	https://www.htmlhelp.com/tools/validator/offline/
 COMMENT=	HTML validator from the Web Design Group
 
 DEPENDS+=	lq-sp>=1.3.4.5:../../textproc/lq-sp
