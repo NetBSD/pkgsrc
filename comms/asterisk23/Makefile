@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2026/02/06 10:04:21 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/02/16 04:11:13 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 #       Also look in ${WRKSRC}/third-party/versions.mak for pjproject
 
-DISTNAME=	asterisk-23.1.0
-PKGREVISION=	2
+DISTNAME=	asterisk-23.2.2
 CATEGORIES=	comms net audio
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	https://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -178,9 +177,6 @@ SUBST_STAGE.pktinfo=	post-configure
 SUBST_FILES.pktinfo=	include/asterisk/autoconfig.h
 SUBST_SED.pktinfo=	-e "s|^\#define HAVE_PKTINFO 1|\#undef HAVE_PKTINFO|"
 
-post-extract:
-	mv ${WRKSRC}/configs/samples/phoneprov_users.conf ${WRKSRC}/configs/samples/phoneprov_users.conf.sample
-
 RCD_SCRIPTS=		asterisk
 OWN_DIRS_PERMS+=	${ASTDBDIR} ${ASTERISK_USER} ${ASTERISK_GROUP} 0755
 OWN_DIRS_PERMS+=	${ASTSPOOLDIR} ${ASTERISK_USER} ${ASTERISK_GROUP} 0755
@@ -218,17 +214,18 @@ CONF_FILES_PERMS+=	${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_U
 	cdr_sqlite3_custom.conf cdr_tds.conf cel.conf			\
 	cel_beanstalkd.conf cel_custom.conf cel_odbc.conf		\
 	cel_pgsql.conf cel_sqlite3_custom.conf cel_tds.conf		\
-	chan_dahdi.conf	chan_mobile.conf cli.conf cli_aliases.conf	\
-	cli_permissions.conf codecs.conf confbridge.conf		\
-	config_test.conf console.conf dbsep.conf dnsmgr.conf dsp.conf	\
-	dundi.conf enum.conf extconfig.conf extensions.ael		\
-	extensions.conf extensions.lua extensions_minivm.conf		\
-	features.conf festival.conf followme.conf func_odbc.conf	\
-	geolocation.conf hep.conf http.conf iax.conf iaxprov.conf	\
-	indications.conf logger.conf manager.conf meetme.conf		\
-	minivm.conf modules.conf motif.conf musiconhold.conf		\
-	ooh323.conf phoneprov.conf phoneprov_users.conf pjproject.conf	\
-	pjsip.conf pjsip_notify.conf pjsip_wizard.conf prometheus.conf	\
+	chan_dahdi.conf	chan_mobile.conf chan_websocket.conf cli.conf	\
+	cli_aliases.conf cli_permissions.conf codecs.conf		\
+	confbridge.conf config_test.conf console.conf dbsep.conf	\
+	dnsmgr.conf dsp.conf dundi.conf enum.conf extconfig.conf	\
+	extensions.ael extensions.conf extensions.lua			\
+	extensions_minivm.conf features.conf festival.conf		\
+	followme.conf func_odbc.conf geolocation.conf hep.conf		\
+	http.conf iax.conf iaxprov.conf indications.conf logger.conf	\
+	manager.conf meetme.conf minivm.conf modules.conf motif.conf	\
+	musiconhold.conf ooh323.conf phoneprov.conf			\
+	phoneprov_users.conf pjproject.conf pjsip.conf			\
+	pjsip_notify.conf pjsip_wizard.conf prometheus.conf		\
 	queuerules.conf queues.conf res_config_mysql.conf		\
 	res_config_odbc.conf res_config_sqlite3.conf res_corosync.conf	\
 	res_curl.conf res_fax.conf res_http_media_cache.conf		\
@@ -261,6 +258,12 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-23.0.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-23.1.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-23.1.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-23.2.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-23.2.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-23.2.1.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-23.2.1.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-23.2.2.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-23.2.2.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README-SERIOUSLY.bestpractices.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
