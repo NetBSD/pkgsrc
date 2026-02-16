@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2026/02/06 10:04:21 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/02/16 03:21:59 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 #       Also look in ${WRKSRC}/third-party/versions.mak for pjproject
 
-DISTNAME=	asterisk-22.7.0
-PKGREVISION=	2
+DISTNAME=	asterisk-22.8.2
 CATEGORIES=	comms net audio
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	https://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -215,17 +214,17 @@ CONF_FILES_PERMS+=	${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_U
 	cdr_sqlite3_custom.conf cdr_tds.conf cel.conf			\
 	cel_beanstalkd.conf cel_custom.conf cel_odbc.conf		\
 	cel_pgsql.conf cel_sqlite3_custom.conf cel_tds.conf		\
-	chan_dahdi.conf	chan_mobile.conf cli.conf cli_aliases.conf	\
-	cli_permissions.conf codecs.conf confbridge.conf		\
-	config_test.conf console.conf dbsep.conf dnsmgr.conf dsp.conf	\
-	dundi.conf enum.conf extconfig.conf extensions.ael		\
-	extensions.conf extensions.lua extensions_minivm.conf		\
-	features.conf festival.conf followme.conf func_odbc.conf	\
-	geolocation.conf hep.conf http.conf iax.conf iaxprov.conf	\
-	indications.conf logger.conf manager.conf meetme.conf		\
-	minivm.conf modules.conf motif.conf musiconhold.conf		\
-	ooh323.conf phoneprov.conf pjproject.conf pjsip.conf		\
-	pjsip_notify.conf pjsip_wizard.conf prometheus.conf		\
+	chan_dahdi.conf	chan_mobile.conf chan_websocket.conf cli.conf	\
+	cli_aliases.conf cli_permissions.conf codecs.conf		\
+	confbridge.conf config_test.conf console.conf dbsep.conf	\
+	dnsmgr.conf dsp.conf dundi.conf enum.conf extconfig.conf	\
+	extensions.ael	 extensions.conf extensions.lua			\
+	extensions_minivm.conf	 features.conf festival.conf		\
+	followme.conf func_odbc.conf geolocation.conf hep.conf		\
+	http.conf iax.conf iaxprov.conf indications.conf logger.conf	\
+	manager.conf meetme.conf minivm.conf modules.conf motif.conf	\
+	musiconhold.conf ooh323.conf phoneprov.conf pjproject.conf	\
+	pjsip.conf pjsip_notify.conf pjsip_wizard.conf prometheus.conf	\
 	queuerules.conf queues.conf res_config_mysql.conf		\
 	res_config_odbc.conf res_config_sqlite3.conf res_corosync.conf	\
 	res_curl.conf res_fax.conf res_http_media_cache.conf		\
@@ -265,6 +264,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.5.2.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.6.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.7.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.8.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.8.1.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.8.2.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.3.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.4.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.5.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
@@ -272,6 +274,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.5.2.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.6.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.7.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.8.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.8.1.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.8.2.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README-SERIOUSLY.bestpractices.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
