@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2012/10/08 12:42:24 asau Exp $
-#
+# $NetBSD: Makefile,v 1.13 2026/02/16 08:28:17 wiz Exp $
 
 DISTNAME=	weewm-0.0.2
 PKGREVISION=	2
 CATEGORIES=	wm
-MASTER_SITES=	http://weewm.flashtux.org/download/
+#MASTER_SITES=	http://weewm.flashtux.org/download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://weewm.flashtux.org/
+#HOMEPAGE=	http://weewm.flashtux.org/
 COMMENT=	Fast and ultra light windowmanager with total keyboard control
 
 EXAMPLESDIR=	${PREFIX}/share/examples/weewm
