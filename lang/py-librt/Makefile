@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.1 2026/01/25 23:22:07 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/02/16 11:29:12 wiz Exp $
 
-DISTNAME=	librt-0.7.8
+DISTNAME=	librt-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/librt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.org/project/librt/
+HOMEPAGE=	https://github.com/mypyc/librt
 COMMENT=	Mypyc runtime library
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-mypy_extensions-[0-9]*:../../lang/py-mypy_extensions
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} smoke_tests.py
