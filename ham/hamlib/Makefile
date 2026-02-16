@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2025/09/06 00:02:05 gdt Exp $
+# $NetBSD: Makefile,v 1.71 2026/02/16 13:51:42 gdt Exp $
 #
 
-VERSION=	4.6.5
+VERSION=	4.7.0
 DISTNAME=	hamlib-${VERSION}
 CATEGORIES=	ham
 # hamlib is both at github and sourceforge, and upstream documents
@@ -15,10 +15,13 @@ HOMEPAGE=	https://hamlib.github.io/
 COMMENT=	API for digital communications equipment
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
+USE_LANGUAGES=		c c++
+USE_CC_FEATURES=	c11
+USE_CXX_FEATURES=	c++11
+
+USE_TOOLS+=		gmake pkg-config
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 
 # \todo Consider language bindings.
 CONFIGURE_ARGS+=	--without-tcl-binding \
@@ -30,6 +33,8 @@ CHECK_PORTABILITY_SKIP+=	scripts/build-w64-jtsdk.sh
 TEST_TARGET=	check
 
 .include "../../mk/bsd.prefs.mk"
+
+.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"

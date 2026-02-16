@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2024/12/26 13:17:27 gdt Exp $
+@comment $NetBSD: PLIST,v 1.23 2026/02/16 13:51:42 gdt Exp $
 bin/ampctl
 bin/ampctld
 bin/rigctl
@@ -6,7 +6,6 @@ bin/rigctlcom
 bin/rigctld
 bin/rigctlsync
 bin/rigctltcp
-bin/rigfreqwalk
 bin/rigmem
 bin/rigsmtr
 bin/rigswr
@@ -15,14 +14,18 @@ bin/rigtestmcast
 bin/rigtestmcastrx
 bin/rotctl
 bin/rotctld
+include/hamlib/amp_state.h
 include/hamlib/ampclass.h
 include/hamlib/amplifier.h
 include/hamlib/amplist.h
 include/hamlib/multicast.h
+include/hamlib/port.h
 include/hamlib/rig.h
 include/hamlib/rig_dll.h
+include/hamlib/rig_state.h
 include/hamlib/rigclass.h
 include/hamlib/riglist.h
+include/hamlib/rot_state.h
 include/hamlib/rotator.h
 include/hamlib/rotclass.h
 include/hamlib/rotlist.h
@@ -35,9 +38,13 @@ man/man1/rigctl.1
 man/man1/rigctlcom.1
 man/man1/rigctld.1
 man/man1/rigctlsync.1
+man/man1/rigctltcp.1
 man/man1/rigmem.1
 man/man1/rigsmtr.1
 man/man1/rigswr.1
+man/man1/rigtestlibusb.1
+man/man1/rigtestmcast.1
+man/man1/rigtestmcastrx.1
 man/man1/rotctl.1
 man/man1/rotctld.1
 man/man7/hamlib-primer.7
