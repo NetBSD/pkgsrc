@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1118 2026/02/15 22:41:59 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1119 2026/02/16 02:49:42 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1492,3 +1492,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added textproc/php-pecl-pspell version 1.0.1 [manu 2026-02-15]
 	Updated lang/erlang to 27.3.4.7 [gdt 2026-02-15]
 	Removed databases/pgadmin3 [wiz 2026-02-15]
+	Updated comms/asterisk21 to 21.12.1 [jnemeth 2026-02-16]
