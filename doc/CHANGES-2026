@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1133 2026/02/16 11:15:57 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1134 2026/02/16 11:17:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1517,3 +1517,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-filelock to 3.24.2 [wiz 2026-02-16]
 	Updated www/py-google-api-python-client to 2.190.0 [wiz 2026-02-16]
 	Updated time/py-icalendar to 7.0.0 [wiz 2026-02-16]
+	Updated math/py-xgboost to 3.2.0 [adam 2026-02-16]
+	Updated textproc/py-sphinx-autoapi to 3.7.0 [adam 2026-02-16]
