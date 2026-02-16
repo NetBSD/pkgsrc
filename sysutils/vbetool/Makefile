@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.13 2022/05/13 15:46:09 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/02/16 08:21:28 wiz Exp $
 
 DISTNAME=	vbetool_0.7-1
 PKGNAME=	vbetool-0.7.1
 PKGREVISION=	4
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.codon.org.uk/~mjg59/vbetool/download/
+#MASTER_SITES=	http://www.codon.org.uk/~mjg59/vbetool/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.codon.org.uk/~mjg59/vbetool/
+#HOMEPAGE=	https://www.codon.org.uk/~mjg59/vbetool/
 COMMENT=	Run real-mode video BIOS code to alter hardware state
 
 ONLY_FOR_PLATFORM+=	Linux-*-i386 NetBSD-*-i386 NetBSD-*-x86_64
