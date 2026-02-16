@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1166 2026/02/16 18:45:23 maya Exp $
+$NetBSD: CHANGES-2026,v 1.1167 2026/02/16 19:01:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1560,3 +1560,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-jplephem to 2.24 [adam 2026-02-16]
 	Updated pkgtools/rpm2pkg to 3.3.1 [tron 2026-02-16]
 	Updated net/minikube to 1.38.0 [maya 2026-02-16]
+	Updated textproc/py-html5lib to 1.1nb4 [wiz 2026-02-16]
