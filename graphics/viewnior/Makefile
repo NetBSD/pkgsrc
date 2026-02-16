@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2026/01/27 08:39:50 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/02/16 08:22:27 wiz Exp $
 
 DISTNAME=	viewnior-1.7
 PKGREVISION=	18
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	Viewnior
 GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://siyanpanayotov.com/project/viewnior
+HOMEPAGE=	https://siyanpanayotov.com/project/viewnior
 COMMENT=	Fast and simple image viewer
 LICENSE=	gnu-gpl-v3
 
