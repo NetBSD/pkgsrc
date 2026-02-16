@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2025/10/09 07:58:11 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/02/16 12:21:04 adam Exp $
 
-DISTNAME=	nbconvert-7.16.6
+DISTNAME=	nbconvert-7.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbconvert/}
@@ -24,7 +24,6 @@ DEPENDS+=	${PYPKGPREFIX}-nbformat>=5.7:../../www/py-nbformat
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pandocfilters>=1.4.1:../../textproc/py-pandocfilters
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.4.1:../../textproc/py-pygments
-DEPENDS+=	${PYPKGPREFIX}-tinycss2-[0-9]*:../../textproc/py-tinycss2
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.1:../../devel/py-traitlets
 # serve
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.1:../../www/py-tornado
