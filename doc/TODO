@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26801 2026/02/15 22:41:59 wiz Exp $
+$NetBSD: TODO,v 1.26802 2026/02/16 10:35:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -711,7 +711,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gok-2.30.1
 	o golem-0.0.6
 	o goocanvas-2.0.2
-	o gopls-0.21.1
 	o gossip-0.31
 	o gp-autpgrp-1.11
 	o gp-factint-1.6.3
