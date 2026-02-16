@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2026/01/27 12:59:15 mef Exp $
+# $NetBSD: Makefile,v 1.29 2026/02/16 04:16:46 jnemeth Exp $
 
 DISTNAME=	ninja-1.13.2
 PKGNAME=	${DISTNAME:S/ninja/ninja-build/}
@@ -16,6 +16,8 @@ LICENSE=	apache-2.0
 DIST_SUBDIR=	ninja-build
 
 TOOL_DEPENDS+=	re2c>=0.11.3:../../devel/re2c
+
+CONFLICTS+=     ninja-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
