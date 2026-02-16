@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.138 2026/02/16 19:08:07 wiz Exp $
+# $NetBSD: Makefile,v 1.139 2026/02/16 21:47:54 wiz Exp $
 
 DISTNAME=	cryptography-46.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cryptography/}
 
@@ -27,6 +27,10 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 
 pre-build:
 	cd ${WRKSRC} && ${LN} -f -s src/rust/.cargo .cargo
+
+# https://github.com/PyO3/maturin/issues/3006
+post-install:
+	cd ${DESTDIR}${PREFIX}/${PYSITELIB} && ${RM} -rf CHANGELOG.rst CONTRIBUTING.rst docs tests
 
 .include "cargo-depends.mk"
 
