@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2025/10/09 07:57:59 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/02/16 19:01:02 wiz Exp $
 
 DISTNAME=	html5lib-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/html5lib/}
 
