@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2025/08/25 08:34:57 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/02/16 12:23:49 wiz Exp $
 
 .include "../../devel/ocaml-dune/Makefile.common"
 
 PKGNAME=	ocaml-dune-configurator-${DUNE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
