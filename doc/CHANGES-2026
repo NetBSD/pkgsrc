@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1169 2026/02/16 19:06:48 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1170 2026/02/16 19:08:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1565,3 +1565,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv-build to 0.10.3 [adam 2026-02-16]
 	Updated devel/py-cucumber-expressions to 19.0.0 [adam 2026-02-16]
 	Updated devel/py-cucumber-tag-expressions to 9.0.0 [adam 2026-02-16]
+	Updated security/py-cryptography to 46.0.5nb1 [wiz 2026-02-16]
