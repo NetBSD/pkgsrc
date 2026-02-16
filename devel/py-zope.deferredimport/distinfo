@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2026/02/09 14:12:05 adam Exp $
+$NetBSD: distinfo,v 1.10 2026/02/16 18:14:40 adam Exp $
 
-BLAKE2s (zope_deferredimport-6.1.tar.gz) = 2dda20f82756c601bcd0dc03aa0eb41060ce7b36f8bb368493d47be0c65791fc
-SHA512 (zope_deferredimport-6.1.tar.gz) = 5af8a304cef4f7595c934d2120a444b43b284ae94d2c00c0e0dc442f3f69a191008a79bd2738418be30a3d31a54180282c48c22d5b66a47f2ca627dc04b7828d
-Size (zope_deferredimport-6.1.tar.gz) = 20764 bytes
+BLAKE2s (zope_deferredimport-6.1.1.tar.gz) = a66e9ab8cb60d3ce3ab5a036eeb8045705314fe6571339ae46b859551081bb01
+SHA512 (zope_deferredimport-6.1.1.tar.gz) = a9b8d27d12e588e469653cf24977b34d044ca0edbab47648489be63b07cbb5c81ab985a801b46e105a98de44c1a6479e95f1edd8e6de9725484e03f34391175b
+Size (zope_deferredimport-6.1.1.tar.gz) = 20833 bytes
