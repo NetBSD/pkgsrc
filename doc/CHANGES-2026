@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1167 2026/02/16 19:01:15 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1168 2026/02/16 19:03:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1561,3 +1561,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated pkgtools/rpm2pkg to 3.3.1 [tron 2026-02-16]
 	Updated net/minikube to 1.38.0 [maya 2026-02-16]
 	Updated textproc/py-html5lib to 1.1nb4 [wiz 2026-02-16]
+	Updated devel/py-uv to 0.10.3 [adam 2026-02-16]
+	Updated devel/py-uv-build to 0.10.3 [adam 2026-02-16]
