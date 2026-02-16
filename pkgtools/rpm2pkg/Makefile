@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2020/01/26 17:32:00 rillig Exp $
+# $NetBSD: Makefile,v 1.72 2026/02/16 18:26:48 tron Exp $
 
-PKGNAME=	rpm2pkg-3.3.0
+PKGNAME=	rpm2pkg-3.3.1
 CATEGORIES=	pkgtools
 NO_CHECKSUM=	yes
 

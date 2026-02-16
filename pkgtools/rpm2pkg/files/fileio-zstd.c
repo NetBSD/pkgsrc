@@ -1,4 +1,4 @@
-/*	$NetBSD: fileio-zstd.c,v 1.3 2019/12/01 06:05:44 rin Exp $	*/
+/*	$NetBSD: fileio-zstd.c,v 1.4 2026/02/16 18:26:49 tron Exp $	*/
 /*	NetBSD: fileio-bzlib.c,v 1.2 2019/12/01 06:03:58 rin Exp	*/
 
 /*-
@@ -111,13 +111,17 @@ FileHandleZstd(int *fd_p)
 
 	id->id_Stream = ZSTD_createDStream();
 	if (id->id_Stream == NULL ||
-	    ZSTD_isError(ZSTD_initDStream(id->id_Stream)))
+	    ZSTD_isError(ZSTD_initDStream(id->id_Stream))) {
+		FileHandleClose(fh);
 		return NULL;
+	}
 
 	id->id_BufSize = ZSTD_DStreamOutSize();
 	id->id_Buf = malloc(id->id_BufSize);
-	if (id->id_Buf == NULL)
+	if (id->id_Buf == NULL) {
+		FileHandleClose(fh);
 		return NULL;
+	}
 
 	return fh;
 }
