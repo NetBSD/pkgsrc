@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1131 2026/02/16 11:10:33 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1132 2026/02/16 11:12:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1515,3 +1515,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/aspell to 0.60.8.2 [wiz 2026-02-16]
 	Updated devel/py-astroid to 4.1.0 [wiz 2026-02-16]
 	Updated devel/py-filelock to 3.24.2 [wiz 2026-02-16]
+	Updated www/py-google-api-python-client to 2.190.0 [wiz 2026-02-16]
