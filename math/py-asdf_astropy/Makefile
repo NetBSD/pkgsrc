@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2026/01/08 10:27:00 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/02/16 09:43:06 adam Exp $
 
-DISTNAME=	asdf_astropy-0.9.0
+DISTNAME=	asdf_astropy-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asdf_astropy/}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-asdf_coordinates_schemas>=0.4:../../math/py-asdf_coordi
 DEPENDS+=	${PYPKGPREFIX}-asdf-standard>=1.1.0:../../math/py-asdf-standard
 DEPENDS+=	${PYPKGPREFIX}-asdf-transform-schemas>=0.6:../../math/py-asdf-transform-schemas
 DEPENDS+=	${PYPKGPREFIX}-astropy>=5.3.0:../../math/py-astropy
-DEPENDS+=	${PYPKGPREFIX}-numpy>=1.26:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.26.4:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-packaging>=19:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-doctestplus>=0:../../devel/py-test-doctestplus
 TEST_DEPENDS+=	${PYPKGPREFIX}-scipy>0:../../math/py-scipy
