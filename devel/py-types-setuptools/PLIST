@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2025/05/14 10:58:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2026/02/16 12:18:43 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -25,9 +25,12 @@ ${PYSITELIB}/distutils-stubs/command/install_scripts.pyi
 ${PYSITELIB}/distutils-stubs/command/sdist.pyi
 ${PYSITELIB}/distutils-stubs/compat/__init__.pyi
 ${PYSITELIB}/distutils-stubs/compilers/C/base.pyi
+${PYSITELIB}/distutils-stubs/compilers/C/cygwin.pyi
 ${PYSITELIB}/distutils-stubs/compilers/C/errors.pyi
 ${PYSITELIB}/distutils-stubs/compilers/C/msvc.pyi
 ${PYSITELIB}/distutils-stubs/compilers/C/unix.pyi
+${PYSITELIB}/distutils-stubs/compilers/C/zos.pyi
+${PYSITELIB}/distutils-stubs/cygwinccompiler.pyi
 ${PYSITELIB}/distutils-stubs/dep_util.pyi
 ${PYSITELIB}/distutils-stubs/dist.pyi
 ${PYSITELIB}/distutils-stubs/errors.pyi
@@ -38,6 +41,8 @@ ${PYSITELIB}/distutils-stubs/spawn.pyi
 ${PYSITELIB}/distutils-stubs/sysconfig.pyi
 ${PYSITELIB}/distutils-stubs/unixccompiler.pyi
 ${PYSITELIB}/distutils-stubs/util.pyi
+${PYSITELIB}/distutils-stubs/version.pyi
+${PYSITELIB}/distutils-stubs/zosccompiler.pyi
 ${PYSITELIB}/setuptools-stubs/METADATA.toml
 ${PYSITELIB}/setuptools-stubs/__init__.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/__init__.pyi
@@ -60,9 +65,12 @@ ${PYSITELIB}/setuptools-stubs/_distutils/command/install_scripts.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/sdist.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/compat/__init__.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/compilers/C/base.pyi
+${PYSITELIB}/setuptools-stubs/_distutils/compilers/C/cygwin.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/compilers/C/errors.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/compilers/C/msvc.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/compilers/C/unix.pyi
+${PYSITELIB}/setuptools-stubs/_distutils/compilers/C/zos.pyi
+${PYSITELIB}/setuptools-stubs/_distutils/cygwinccompiler.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/dep_util.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/dist.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/errors.pyi
@@ -72,6 +80,8 @@ ${PYSITELIB}/setuptools-stubs/_distutils/spawn.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/sysconfig.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/unixccompiler.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/util.pyi
+${PYSITELIB}/setuptools-stubs/_distutils/version.pyi
+${PYSITELIB}/setuptools-stubs/_distutils/zosccompiler.pyi
 ${PYSITELIB}/setuptools-stubs/archive_util.pyi
 ${PYSITELIB}/setuptools-stubs/build_meta.pyi
 ${PYSITELIB}/setuptools-stubs/command/__init__.pyi
