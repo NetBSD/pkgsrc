@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1147 2026/02/16 12:21:48 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1148 2026/02/16 12:23:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1534,3 +1534,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/moor to 2.10.4 [wiz 2026-02-16]
 	Updated devel/py-types-setuptools to 82.0.0.20260210 [adam 2026-02-16]
 	Updated www/py-nbconvert to 7.17.0 [adam 2026-02-16]
+	Updated devel/ocaml-dune to 3.21.1 [wiz 2026-02-16]
