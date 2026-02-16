@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2026/02/12 11:31:11 adam Exp $
+# $NetBSD: Makefile,v 1.30 2026/02/16 12:48:35 adam Exp $
 
-DISTNAME=	gunicorn-25.0.3
+DISTNAME=	gunicorn-25.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gunicorn/}
@@ -20,8 +20,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 USE_LANGUAGES=	# none
 
 post-install:
+.for bin in gunicorn gunicornc
 	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} gunicorn gunicorn-${PYVERSSUFFIX} || ${TRUE}
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.16 2026/02/03 09:17:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/02/16 12:48:35 adam Exp $
 bin/gunicorn-${PYVERSSUFFIX}
+bin/gunicornc-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -51,6 +52,24 @@ ${PYSITELIB}/gunicorn/asgi/websocket.pyo
 ${PYSITELIB}/gunicorn/config.py
 ${PYSITELIB}/gunicorn/config.pyc
 ${PYSITELIB}/gunicorn/config.pyo
+${PYSITELIB}/gunicorn/ctl/__init__.py
+${PYSITELIB}/gunicorn/ctl/__init__.pyc
+${PYSITELIB}/gunicorn/ctl/__init__.pyo
+${PYSITELIB}/gunicorn/ctl/cli.py
+${PYSITELIB}/gunicorn/ctl/cli.pyc
+${PYSITELIB}/gunicorn/ctl/cli.pyo
+${PYSITELIB}/gunicorn/ctl/client.py
+${PYSITELIB}/gunicorn/ctl/client.pyc
+${PYSITELIB}/gunicorn/ctl/client.pyo
+${PYSITELIB}/gunicorn/ctl/handlers.py
+${PYSITELIB}/gunicorn/ctl/handlers.pyc
+${PYSITELIB}/gunicorn/ctl/handlers.pyo
+${PYSITELIB}/gunicorn/ctl/protocol.py
+${PYSITELIB}/gunicorn/ctl/protocol.pyc
+${PYSITELIB}/gunicorn/ctl/protocol.pyo
+${PYSITELIB}/gunicorn/ctl/server.py
+${PYSITELIB}/gunicorn/ctl/server.pyc
+${PYSITELIB}/gunicorn/ctl/server.pyo
 ${PYSITELIB}/gunicorn/debug.py
 ${PYSITELIB}/gunicorn/debug.pyc
 ${PYSITELIB}/gunicorn/debug.pyo
@@ -72,6 +91,12 @@ ${PYSITELIB}/gunicorn/dirty/errors.pyo
 ${PYSITELIB}/gunicorn/dirty/protocol.py
 ${PYSITELIB}/gunicorn/dirty/protocol.pyc
 ${PYSITELIB}/gunicorn/dirty/protocol.pyo
+${PYSITELIB}/gunicorn/dirty/stash.py
+${PYSITELIB}/gunicorn/dirty/stash.pyc
+${PYSITELIB}/gunicorn/dirty/stash.pyo
+${PYSITELIB}/gunicorn/dirty/tlv.py
+${PYSITELIB}/gunicorn/dirty/tlv.pyc
+${PYSITELIB}/gunicorn/dirty/tlv.pyo
 ${PYSITELIB}/gunicorn/dirty/worker.py
 ${PYSITELIB}/gunicorn/dirty/worker.pyc
 ${PYSITELIB}/gunicorn/dirty/worker.pyo
