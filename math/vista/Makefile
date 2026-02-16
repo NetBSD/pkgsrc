@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.20 2015/07/04 16:18:37 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.21 2026/02/16 08:23:06 wiz Exp $
 
 DISTNAME=	vista
 PKGNAME=	vista-5.05
 PKGREVISION=	1
 CATEGORIES=	math
-MASTER_SITES=	http://forrest.psych.unc.edu/research/vista-frames/ftp/
+#MASTER_SITES=	http://forrest.psych.unc.edu/research/vista-frames/ftp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://forrest.psych.unc.edu/research/
+#HOMEPAGE=	http://forrest.psych.unc.edu/research/
 COMMENT=	Visual statistics system
 
 DEPENDS+=	xlispstat>=3.52.9:../../math/xlispstat
