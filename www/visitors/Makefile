@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2023/12/22 17:59:34 zafer Exp $
-#
+# $NetBSD: Makefile,v 1.10 2026/02/16 08:22:46 wiz Exp $
 
 DISTNAME=		visitors-0.7
 CATEGORIES=		www
 MASTER_SITES=		#
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.hping.org/visitors/
+HOMEPAGE=		https://www.hping.org/visitors/
 COMMENT=		Very fast web log analyzer
 
 WRKSRC=			${WRKDIR}/visitors_0.7
