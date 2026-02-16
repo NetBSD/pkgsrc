@@ -1,9 +1,9 @@
-$NetBSD: patch-include_asterisk_autoconfig.h.in,v 1.1 2025/10/27 06:58:38 jnemeth Exp $
+$NetBSD: patch-include_asterisk_autoconfig.h.in,v 1.2 2026/02/16 04:11:13 jnemeth Exp $
 
---- include/asterisk/autoconfig.h.in.orig	2025-10-15 17:01:28.000000000 +0000
+--- include/asterisk/autoconfig.h.in.orig	2026-02-16 03:46:19.122105923 +0000
 +++ include/asterisk/autoconfig.h.in
-@@ -1007,6 +1007,9 @@
- /* Define to 1 if you have the `strftime' function. */
+@@ -1014,6 +1014,9 @@
+ /* Define to 1 if you have the 'strftime' function. */
  #undef HAVE_STRFTIME
  
 +/* Define to 1 if you have the `strftime_l' function. */
@@ -12,23 +12,23 @@ $NetBSD: patch-include_asterisk_autoconfig.h.in,v 1.1 2025/10/27 06:58:38 jnemet
  /* Define to 1 if you have the <strings.h> header file. */
  #undef HAVE_STRINGS_H
  
-@@ -1028,6 +1031,9 @@
- /* Define to 1 if you have the `strnlen' function. */
+@@ -1035,6 +1038,9 @@
+ /* Define to 1 if you have the 'strnlen' function. */
  #undef HAVE_STRNLEN
  
 +/* Define to 1 if you have the `strptime_l' function. */
 +#undef HAVE_STRPTIME_L
 +
- /* Define to 1 if you have the `strrchr' function. */
+ /* Define to 1 if you have the 'strrchr' function. */
  #undef HAVE_STRRCHR
  
-@@ -1133,6 +1139,9 @@
+@@ -1140,6 +1146,9 @@
  /* Define if your system has the SYSTEMD libraries. */
  #undef HAVE_SYSTEMD
  
 +/* Define to 1 if sys/atomic.h atomic operations are supported. */
 +#undef HAVE_SYS_ATOMIC_H
 +
- /* Define to 1 if you have the <sys/dir.h> header file, and it defines `DIR'.
+ /* Define to 1 if you have the <sys/dir.h> header file, and it defines 'DIR'.
     */
  #undef HAVE_SYS_DIR_H
