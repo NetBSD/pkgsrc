@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1136 2026/02/16 11:29:22 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1137 2026/02/16 11:30:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1521,3 +1521,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-sphinx-autoapi to 3.7.0 [adam 2026-02-16]
 	Updated www/py-nh3 to 0.3.3 [wiz 2026-02-16]
 	Updated lang/py-librt to 0.8.0 [wiz 2026-02-16]
+	Updated print/py-reportlab to 4.4.10 [adam 2026-02-16]
+	Updated multimedia/libvpx to 1.16.0 [adam 2026-02-16]
