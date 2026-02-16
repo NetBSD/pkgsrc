@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2025/10/10 09:51:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2026/02/16 11:03:43 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -8,6 +8,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/astroid/__init__.py
 ${PYSITELIB}/astroid/__init__.pyc
 ${PYSITELIB}/astroid/__init__.pyo
+${PYSITELIB}/astroid/__main__.py
+${PYSITELIB}/astroid/__main__.pyc
+${PYSITELIB}/astroid/__main__.pyo
 ${PYSITELIB}/astroid/__pkginfo__.py
 ${PYSITELIB}/astroid/__pkginfo__.pyc
 ${PYSITELIB}/astroid/__pkginfo__.pyo
