@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2025/08/31 14:00:59 taca Exp $
-#
+# $NetBSD: Makefile,v 1.29 2026/02/16 08:27:59 wiz Exp $
 
 DISTNAME=	websvn-2.2.1
 PKGREVISION=	5
@@ -7,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.websvn.info/
+#HOMEPAGE=	http://www.websvn.info/
 COMMENT=	Subversion repository web frontend
 
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
