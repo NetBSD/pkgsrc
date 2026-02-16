@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2025/02/12 06:44:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2026/02/16 08:21:08 wiz Exp $
 
 DISTNAME=	vamp-plugin-sdk-2.10.0
 PKGREVISION=	4
 CATEGORIES=	audio
-MASTER_SITES=	https://code.soundsoftware.ac.uk/attachments/download/2691/
+#MASTER_SITES=	https://code.soundsoftware.ac.uk/attachments/download/2691/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://code.soundsoftware.ac.uk/projects/vamp-plugin-sdk
+HOMEPAGE=	https://vamp-plugins.org/
 COMMENT=	The Vamp audio analysis plugin system
 LICENSE=	x11
 
