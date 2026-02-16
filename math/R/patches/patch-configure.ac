@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.13 2026/01/03 09:17:26 mef Exp $
+$NetBSD: patch-configure.ac,v 1.14 2026/02/16 23:44:02 mef Exp $
 
 on NetBSD/amd64 9.4: getting
 
