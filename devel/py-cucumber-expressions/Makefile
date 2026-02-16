@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2026/01/25 08:26:45 adam Exp $
+# $NetBSD: Makefile,v 1.4 2026/02/16 19:05:34 adam Exp $
 
-DISTNAME=	cucumber_expressions-18.1.0
+DISTNAME=	cucumber_expressions-19.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cucumber_expressions/}
