@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1155 2026/02/16 13:10:57 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1156 2026/02/16 14:01:10 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1545,3 +1545,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/pgpdump to 0.37 [adam 2026-02-16]
 	Updated www/py-gunicorn to 25.1.0 [adam 2026-02-16]
 	Updated graphics/zint to 2.16.0 [wiz 2026-02-16]
+	Updated ham/hamlib to 4.7.0 [gdt 2026-02-16]
