@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.955 2026/02/17 11:07:58 markd Exp $
+# $NetBSD: Makefile,v 1.956 2026/02/17 11:12:24 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -546,7 +546,6 @@ SUBDIR+=	tex-context-squares
 SUBDIR+=	tex-context-squares-doc
 SUBDIR+=	tex-context-sudoku
 SUBDIR+=	tex-context-sudoku-doc
-SUBDIR+=	tex-context-texlive
 SUBDIR+=	tex-context-transliterator
 SUBDIR+=	tex-context-transliterator-doc
 SUBDIR+=	tex-context-typescripts
