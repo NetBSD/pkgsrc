@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1193 2026/02/17 13:15:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1194 2026/02/17 13:22:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1612,6 +1612,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/clock-rs to 0.1.31 [pin 2026-02-17]
 	Updated www/cobalt to 0.20.3 [pin 2026-02-17]
 	Updated sysutils/hexyl to 0.17.0 [pin 2026-02-17]
+	Updated wm/lefthk to 0.3.2 [pin 2026-02-17]
 	Updated www/py-publicsuffixlist to 1.0.2.20260217 [adam 2026-02-17]
 	Updated textproc/py-phonenumbers to 9.0.24 [adam 2026-02-17]
 	Updated databases/py-tortoise-orm to 1.1.4 [adam 2026-02-17]
