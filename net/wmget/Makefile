@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2026/02/06 10:05:40 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2026/02/17 08:05:45 wiz Exp $
 
 DISTNAME=	wmget-0.6.0-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -8,7 +8,7 @@ CATEGORIES=	net
 MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://amtrickey.net/wmget/index.html
+#HOMEPAGE=	http://amtrickey.net/wmget/index.html
 COMMENT=	Background download manager in a Window Maker dock app
 LICENSE=	mit
 
