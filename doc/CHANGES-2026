@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1213 2026/02/17 14:44:10 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1214 2026/02/17 14:45:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1637,3 +1637,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ruby-nokogiri to 1.19.1 [taca 2026-02-17]
 	Updated www/ruby-aws-partitions to 1.1214.0 [taca 2026-02-17]
 	Updated www/ruby-aws-sdk-kms to 1.122.0 [taca 2026-02-17]
+	Updated www/py-django-debug-toolbar to 6.2.0 [adam 2026-02-17]
+	Updated www/py-django-stubs-ext to 5.2.9 [adam 2026-02-17]
