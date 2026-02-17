@@ -1,0 +1,2 @@
+bin/genfakeproducts @PREFIX@/bin/genfakeproducts-@PYVERSSUFFIX@
+bin/jg @PREFIX@/bin/jg-@PYVERSSUFFIX@
