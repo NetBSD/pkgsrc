@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1183 2026/02/17 06:40:16 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1184 2026/02/17 09:30:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1581,3 +1581,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pybind11 to 3.0.2 [adam 2026-02-17]
 	Updated graphics/py-tifffile to 2026.2.16 [adam 2026-02-17]
 	Updated www/py-notebook to 7.5.3 [adam 2026-02-17]
+	Updated security/py-hanko-certvalidator to 0.29.1 [adam 2026-02-17]
+	Updated security/py-hanko to 0.33.0 [adam 2026-02-17]
