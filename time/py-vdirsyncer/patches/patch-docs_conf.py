@@ -1,7 +1,7 @@
-$NetBSD: patch-docs_conf.py,v 1.3 2026/02/17 08:41:47 wiz Exp $
+$NetBSD: patch-docs_conf.py,v 1.4 2026/02/17 10:47:28 wiz Exp $
 
 Fix setuptools 82 compat.
-https://github.com/pimutils/vdirsyncer/issues/1062
+https://github.com/pimutils/vdirsyncer/commit/5c470a0933d4dcd291fb38f62cff1a504277762a
 
 --- docs/conf.py.orig	2025-08-28 20:57:38.000000000 +0000
 +++ docs/conf.py
@@ -10,7 +10,7 @@ https://github.com/pimutils/vdirsyncer/issues/1062
  import os
  
 -from pkg_resources import get_distribution
-+from importlib.metadata import version
++import vdirsyncer
  
  extensions = ["sphinx.ext.autodoc"]
  
@@ -19,7 +19,7 @@ https://github.com/pimutils/vdirsyncer/issues/1062
  )
  
 -release = get_distribution("vdirsyncer").version
-+release = version('vdirsyncer')
++release = vdirsyncer.__version__
  version = ".".join(release.split(".")[:2])  # The short X.Y version.
  
  rst_epilog = ".. |vdirsyncer_version| replace:: %s" % release
