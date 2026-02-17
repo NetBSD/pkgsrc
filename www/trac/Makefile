@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2024/11/29 19:57:48 lloyd Exp $
+# $NetBSD: Makefile,v 1.100 2026/02/17 15:13:30 wiz Exp $
 
 DISTNAME=	Trac-1.6
 PKGNAME=	${DISTNAME:tl}
@@ -10,6 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://trac.edgewall.org/
 COMMENT=	Repository browser, wiki, and issue tracking system
 LICENSE=	modified-bsd
+
+# https://trac.edgewall.org/ticket/13606
+BROKEN=		"uses removed pkg_resources API"
 
 # Updates to micro-releases along stable branches are commited without
 # testing.
