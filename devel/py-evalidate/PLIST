@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2026/02/17 22:04:32 wiz Exp $
+bin/genfakeproducts-${PYVERSSUFFIX}
+bin/jg-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/evalidate/__init__.py
+${PYSITELIB}/evalidate/__init__.pyc
+${PYSITELIB}/evalidate/__init__.pyo
+${PYSITELIB}/evalidate/cli/genfakeproducts.py
+${PYSITELIB}/evalidate/cli/genfakeproducts.pyc
+${PYSITELIB}/evalidate/cli/genfakeproducts.pyo
+${PYSITELIB}/evalidate/cli/jg.py
+${PYSITELIB}/evalidate/cli/jg.pyc
+${PYSITELIB}/evalidate/cli/jg.pyo
+${PYSITELIB}/evalidate/credits.txt
+${PYSITELIB}/evalidate/security.py
+${PYSITELIB}/evalidate/security.pyc
+${PYSITELIB}/evalidate/security.pyo
