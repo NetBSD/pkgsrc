@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/03/21 11:43:27 markd Exp $
+$NetBSD: distinfo,v 1.3 2026/02/17 10:59:25 markd Exp $
 
-BLAKE2s (context-squares.r70128.tar.xz) = 66beb33663d26abe0678481b2be0c843a75767f841ead9df32f8135cd2854c0b
-SHA512 (context-squares.r70128.tar.xz) = fdb194b57a51d1ff127b23a45fc07f43844b4bf5c8ae5cd7a2dd73cf7b75ecc2bb842a26f88c23fcbaaf060c8f496e11fa6967553944fd46939936eeef29e22c
-Size (context-squares.r70128.tar.xz) = 3600 bytes
+BLAKE2s (context-squares.r77884.tar.xz) = 56c2ec46dcf4b4e0e356136dad8c3098da1e8b6892db9f4468eedc28fd9042ed
+SHA512 (context-squares.r77884.tar.xz) = f6520a239e3f7b4a2f19fb5aaf11525af86ab322023b359bbfb4dbfc6522f4719962d0fdab2c9e2e00719fa00ca1968bec4c8c1e301917d3dbb0b0d38d697cd6
+Size (context-squares.r77884.tar.xz) = 4020 bytes
