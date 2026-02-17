@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.83 2026/02/06 10:06:20 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2026/02/17 08:09:14 wiz Exp $
 
 DISTNAME=	wmweather-2.4.7
 PKGREVISION=	18
 CATEGORIES=	x11
-MASTER_SITES=	https://people.debian.org/~godisch/wmweather/
+#MASTER_SITES=	https://people.debian.org/~godisch/wmweather/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://people.debian.org/~godisch/
+#HOMEPAGE=	https://people.debian.org/~godisch/
 COMMENT=	WindowMaker DockApp showing local weather conditions
 LICENSE=	gnu-gpl-v2
 
