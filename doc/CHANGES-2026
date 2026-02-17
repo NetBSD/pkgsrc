@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1196 2026/02/17 13:28:23 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1197 2026/02/17 13:30:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1619,3 +1619,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ccls to 0.20250815.1 [adam 2026-02-17]
 	Updated security/py-google-auth-oauthlib to 1.2.4 [adam 2026-02-17]
 	Updated sysutils/lla to 0.5.4 [pin 2026-02-17]
+	Updated devel/mise to 2026.2.15 [pin 2026-02-17]
