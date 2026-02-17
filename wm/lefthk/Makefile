@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/12/13 19:50:34 pin Exp $
+# $NetBSD: Makefile,v 1.9 2026/02/17 13:15:07 pin Exp $
 
-DISTNAME=	lefthk-0.3.1
+DISTNAME=	lefthk-0.3.2
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leftwm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,7 +14,7 @@ CONFLICTS=	leftwm-[0-9]*
 
 .include "cargo-depends.mk"
 
-RUST_REQ=		1.85.0
+RUST_REQ=		1.88.0
 INSTALLATION_DIRS=	bin
 
 do-install:
