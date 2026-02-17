@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.5 2026/02/17 11:07:58 markd Exp $
+
+BLAKE2s (context-animation.doc.r75386.tar.xz) = b6a7531250046530527de4fd0abbbe09b7919560b97048d95ba42c72bf658d3a
+SHA512 (context-animation.doc.r75386.tar.xz) = 8a0b6caddc510841d10e72dbe3ee76dae69606e5b88155ea85ec66b60edd581f0621c087bb857fb94eb9ee8a16690939e83dcb422d45dab397aaf92439e4549d
+Size (context-animation.doc.r75386.tar.xz) = 620 bytes
