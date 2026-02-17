@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1224 2026/02/17 20:36:12 morr Exp $
+$NetBSD: CHANGES-2026,v 1.1225 2026/02/17 21:53:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1651,3 +1651,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added misc/stellarsolver version 2.7 [markd 2026-02-17]
 	Updated misk/kstars to 3.8.1 [markd 2026-02-17]
 	Updated editors/vim-share to 9.2.0015 [morr 2026-02-17]
+	Added time/py-croniter version 6.0.0 [wiz 2026-02-17]
