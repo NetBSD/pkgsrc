@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2026/02/09 20:36:29 abs Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2026/02/17 14:00:16 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -11,7 +11,7 @@ CARGO_CRATE_DEPENDS+=	anstyle-1.0.13
 CARGO_CRATE_DEPENDS+=	anstyle-parse-0.2.7
 CARGO_CRATE_DEPENDS+=	anstyle-query-1.1.5
 CARGO_CRATE_DEPENDS+=	anstyle-wincon-3.0.11
-CARGO_CRATE_DEPENDS+=	anyhow-1.0.100
+CARGO_CRATE_DEPENDS+=	anyhow-1.0.101
 CARGO_CRATE_DEPENDS+=	asn1-rs-0.7.1
 CARGO_CRATE_DEPENDS+=	asn1-rs-derive-0.6.0
 CARGO_CRATE_DEPENDS+=	asn1-rs-impl-0.2.0
@@ -38,8 +38,8 @@ CARGO_CRATE_DEPENDS+=	chrono-0.4.43
 CARGO_CRATE_DEPENDS+=	ciborium-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-io-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-ll-0.2.2
-CARGO_CRATE_DEPENDS+=	clap-4.5.56
-CARGO_CRATE_DEPENDS+=	clap_builder-4.5.56
+CARGO_CRATE_DEPENDS+=	clap-4.5.57
+CARGO_CRATE_DEPENDS+=	clap_builder-4.5.57
 CARGO_CRATE_DEPENDS+=	clap_complete-4.5.65
 CARGO_CRATE_DEPENDS+=	clap_derive-4.5.55
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.7
@@ -53,8 +53,8 @@ CARGO_CRATE_DEPENDS+=	core-foundation-0.10.1
 CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.8.7
 CARGO_CRATE_DEPENDS+=	cpufeatures-0.2.17
 CARGO_CRATE_DEPENDS+=	crc32fast-1.5.0
-CARGO_CRATE_DEPENDS+=	criterion-0.8.1
-CARGO_CRATE_DEPENDS+=	criterion-plot-0.8.1
+CARGO_CRATE_DEPENDS+=	criterion-0.8.2
+CARGO_CRATE_DEPENDS+=	criterion-plot-0.8.2
 CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.15
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.6
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.18
