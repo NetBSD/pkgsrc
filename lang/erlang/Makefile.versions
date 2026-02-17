@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.versions,v 1.75 2026/02/15 18:14:31 gdt Exp $
+# $NetBSD: Makefile.versions,v 1.76 2026/02/17 00:07:59 gdt Exp $
+
+# used by lang/erlang-doc
 
 # When making any update to the versions below (even patch level),
 # please check to see if the erlang-doc or erlang-man packages also
