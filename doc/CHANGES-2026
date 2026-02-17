@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1210 2026/02/17 14:35:04 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1211 2026/02/17 14:40:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1634,3 +1634,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-pynng to 0.9.0 [adam 2026-02-17]
 	Updated devel/py-py2app to 0.28.10 [adam 2026-02-17]
 	Updated devel/ruby-rd-mode to 0.6.38 [taca 2026-02-17]
+	Updated textproc/ruby-nokogiri to 1.19.1 [taca 2026-02-17]
