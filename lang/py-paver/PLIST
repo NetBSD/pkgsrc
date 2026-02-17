@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2018/12/27 15:14:00 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/02/17 15:33:07 wiz Exp $
 bin/paver-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/paver-${PKGVERSION}.dist-info/METADATA
+${PYSITELIB}/paver-${PKGVERSION}.dist-info/RECORD
+${PYSITELIB}/paver-${PKGVERSION}.dist-info/WHEEL
+${PYSITELIB}/paver-${PKGVERSION}.dist-info/licenses/LICENSE.txt
+${PYSITELIB}/paver-${PKGVERSION}.dist-info/top_level.txt
 ${PYSITELIB}/paver/__init__.py
 ${PYSITELIB}/paver/__init__.pyc
 ${PYSITELIB}/paver/__init__.pyo
@@ -26,8 +24,6 @@ ${PYSITELIB}/paver/deps/__init__.py
 ${PYSITELIB}/paver/deps/__init__.pyc
 ${PYSITELIB}/paver/deps/__init__.pyo
 ${PYSITELIB}/paver/deps/path2.py
-${PLIST.py2x}${PYSITELIB}/paver/deps/path2.pyc
-${PLIST.py2x}${PYSITELIB}/paver/deps/path2.pyo
 ${PYSITELIB}/paver/deps/path3.py
 ${PYSITELIB}/paver/deps/path3.pyc
 ${PYSITELIB}/paver/deps/path3.pyo
