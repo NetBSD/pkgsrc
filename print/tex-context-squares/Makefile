@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2024/03/21 11:43:27 markd Exp $
+# $NetBSD: Makefile,v 1.3 2026/02/17 10:59:25 markd Exp $
 
 DISTNAME=	context-squares
-PKGNAME=	tex-${DISTNAME}-2024
-TEXLIVE_REV=	70128
+PKGNAME=	tex-${DISTNAME}-2025
+TEXLIVE_REV=	77884
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/context-squares
