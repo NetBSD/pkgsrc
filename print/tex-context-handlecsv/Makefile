@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2024/02/19 10:34:24 markd Exp $
+# $NetBSD: Makefile,v 1.3 2026/02/17 10:51:52 markd Exp $
 
 DISTNAME=	context-handlecsv
-PKGNAME=	tex-${DISTNAME}-20231220
-TEXLIVE_REV=	69186
+PKGNAME=	tex-${DISTNAME}-20251029
+TEXLIVE_REV=	76721
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/context-handlecsv
