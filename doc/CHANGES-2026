@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1206 2026/02/17 13:57:05 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1207 2026/02/17 13:59:27 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1629,3 +1629,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/spotify-player to 0.22.1 [pin 2026-02-17]
 	Updated audio/spotify-qt to 4.0.2 [pin 2026-02-17]
 	Updated textproc/xan to 0.55.0 [pin 2026-02-17]
+	Updated sysutils/xcp to 0.24.7 [pin 2026-02-17]
