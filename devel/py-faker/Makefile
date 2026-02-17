@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2026/02/16 09:19:22 adam Exp $
+# $NetBSD: Makefile,v 1.113 2026/02/17 15:47:36 wiz Exp $
 
 DISTNAME=	faker-40.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -18,6 +18,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-ukpostcodeparser>=1.1.1:../../mail/py-ukpostcodepa
 TEST_DEPENDS+=	${PYPKGPREFIX}-validators>=0.13.0:../../textproc/py-validators
 
 USE_LANGUAGES=	# none
+
+# as of 40.4.0
+# 341 passed, 10 skipped, 13 warnings, 1858 errors
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
