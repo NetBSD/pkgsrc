@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2025/05/13 10:02:12 markd Exp $
+# $NetBSD: Makefile,v 1.17 2026/02/17 11:21:38 markd Exp $
 
 DISTNAME=	collection-context
-PKGNAME=	texlive-${DISTNAME}-2025
+PKGNAME=	texlive-${DISTNAME}-2025.75426
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	72727
+TEXLIVE_REV=	75426
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -13,10 +13,10 @@ COMMENT=	ConTeXt and packages
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
 
 DEPENDS+=	tex-context-[0-9]*:../../print/tex-context
+DEPENDS+=	tex-context-animation-[0-9]*:../../print/tex-context-animation
 DEPENDS+=	tex-context-calendar-examples-[0-9]*:../../print/tex-context-calendar-examples
 DEPENDS+=	tex-context-chat-[0-9]*:../../print/tex-context-chat
 DEPENDS+=	tex-context-collating-marks-[0-9]*:../../print/tex-context-collating-marks
-DEPENDS+=	tex-context-companion-fonts-[0-9]*:../../fonts/tex-context-companion-fonts
 DEPENDS+=	tex-context-cyrillicnumbers-[0-9]*:../../print/tex-context-cyrillicnumbers
 DEPENDS+=	tex-context-filter-[0-9]*:../../print/tex-context-filter
 DEPENDS+=	tex-context-gnuplot-[0-9]*:../../print/tex-context-gnuplot
@@ -29,7 +29,6 @@ DEPENDS+=	tex-context-pocketdiary-[0-9]*:../../print/tex-context-pocketdiary
 DEPENDS+=	tex-context-simpleslides-[0-9]*:../../print/tex-context-simpleslides
 DEPENDS+=	tex-context-squares-[0-9]*:../../print/tex-context-squares
 DEPENDS+=	tex-context-sudoku-[0-9]*:../../print/tex-context-sudoku
-DEPENDS+=	tex-context-texlive-[0-9]*:../../print/tex-context-texlive
 DEPENDS+=	tex-context-transliterator-[0-9]*:../../print/tex-context-transliterator
 DEPENDS+=	tex-context-typescripts-[0-9]*:../../print/tex-context-typescripts
 DEPENDS+=	tex-context-vim-[0-9]*:../../print/tex-context-vim
