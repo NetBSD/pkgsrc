@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1178 2026/02/17 00:29:08 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.1179 2026/02/17 01:20:20 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1574,3 +1574,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/erlang-man to 27.3 [gdt 2026-02-17]
 	Updated www/firefox140 to 140.7.1 [gutteridge 2026-02-17]
 	Updated www/firefox140-l10n to 140.7.1 [gutteridge 2026-02-17]
+	Updated graphics/R-jpeg to 0.1.11 [mef 2026-02-17]
