@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1185 2026/02/17 11:12:26 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1186 2026/02/17 11:24:18 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1585,3 +1585,23 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-hanko to 0.33.0 [adam 2026-02-17]
 	Updated devel/py-test-mypy-plugins to 3.3.0 [adam 2026-02-17]
 	Updated devel/py-apycula to 0.29 [adam 2026-02-17]
+	Updated print/tex-luatex to 1.21.0.76924 [markd 2026-02-17]
+	Updated print/tex-luatex-doc to 1.21.0.76924 [markd 2026-02-17]
+	Updated print/tex-context to 20260212 [markd 2026-02-17]
+	Updated print/tex-context-doc to 20260212 [markd 2026-02-17]
+	Updated print/tex-context-handlecsv to 20251029 [markd 2026-02-17]
+	Updated print/tex-context-handlecsv-doc to 20251029 [markd 2026-02-17]
+	Updated print/tex-context-legacy to 2025.77795 [markd 2026-02-17]
+	Updated print/tex-context-legacy-doc to 2025.77795 [markd 2026-02-17]
+	Updated print/tex-context-letter to 2025 [markd 2026-02-17]
+	Updated print/tex-context-letter-doc to 2025 [markd 2026-02-17]
+	Updated print/tex-context-squares to 2025 [markd 2026-02-17]
+	Updated print/tex-context-squares-doc to 2025 [markd 2026-02-17]
+	Updated print/tex-context-sudoku to 2025 [markd 2026-02-17]
+	Updated print/tex-context-sudoku-doc to 2025 [markd 2026-02-17]
+	Added print/tex-context-animation version 2025 [markd 2026-02-17]
+	Added print/tex-context-animation-doc version 2025 [markd 2026-02-17]
+	Removed print/tex-context-texlive [markd 2026-02-17]
+	Removed fonts/tex-context-companion-fonts [markd 2026-02-17]
+	Removed fonts/tex-context-companion-fonts-doc [markd 2026-02-17]
+	Updated meta-pkgs/texlive-collection-context to 2025.75426 [markd 2026-02-17]
