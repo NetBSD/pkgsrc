@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/02/17 21:59:11 wiz Exp $
+
+BLAKE2s (python-unidiff-0.7.5.tar.gz) = efc397e2350f276c97890d1ca3ec5c75bfc446175f826d60280a58aa92db6b33
+SHA512 (python-unidiff-0.7.5.tar.gz) = 50955aae18e9f16f515c539ef19a0238010003fc2ecf20d61c0f291a65719f90fb3aac1210f30a9b1ff47cda58d1e0bd92b2c23e5c0e380120a22dd57e9230fc
+Size (python-unidiff-0.7.5.tar.gz) = 18334 bytes
