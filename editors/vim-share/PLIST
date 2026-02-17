@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.81 2026/02/05 23:20:23 morr Exp $
+@comment $NetBSD: PLIST,v 1.82 2026/02/17 20:35:35 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -274,7 +274,6 @@ share/vim/${VIM_SUBDIR}/doc/gui_w32.txt
 share/vim/${VIM_SUBDIR}/doc/gui_x11.txt
 share/vim/${VIM_SUBDIR}/doc/hangulin.txt
 share/vim/${VIM_SUBDIR}/doc/hebrew.txt
-share/vim/${VIM_SUBDIR}/doc/help.svx
 share/vim/${VIM_SUBDIR}/doc/help.txt
 share/vim/${VIM_SUBDIR}/doc/helphelp.txt
 share/vim/${VIM_SUBDIR}/doc/howto.txt
@@ -341,7 +340,6 @@ share/vim/${VIM_SUBDIR}/doc/starting.txt
 share/vim/${VIM_SUBDIR}/doc/syntax.txt
 share/vim/${VIM_SUBDIR}/doc/tabpage.txt
 share/vim/${VIM_SUBDIR}/doc/tags
-share/vim/${VIM_SUBDIR}/doc/tags-sv
 share/vim/${VIM_SUBDIR}/doc/tagsrch.txt
 share/vim/${VIM_SUBDIR}/doc/term.txt
 share/vim/${VIM_SUBDIR}/doc/terminal.txt
