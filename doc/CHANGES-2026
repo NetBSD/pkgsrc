@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1217 2026/02/17 15:22:32 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1218 2026/02/17 15:28:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1642,3 +1642,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-sbws to 2.2.0 [wiz 2026-02-17]
 	Removed textproc/py-loremipsum [wiz 2026-02-17]
 	Updated textproc/py-humanfriendly to 10.0nb2 [wiz 2026-02-17]
+	Updated devel/py-dunamai to 1.26.0 [adam 2026-02-17]
+	Updated www/py-starlette to 0.52.1 [adam 2026-02-17]
