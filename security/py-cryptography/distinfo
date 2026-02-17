@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.112 2026/02/10 22:45:05 wiz Exp $
+$NetBSD: distinfo,v 1.113 2026/02/17 06:32:37 adam Exp $
 
 BLAKE2s (asn1-0.22.0.crate) = 7e7420078762cd29a9053df025d2cca979928af5c44c37b411d0f6a22772ffbf
 SHA512 (asn1-0.22.0.crate) = 403c9fccf8a4c7f487a52528b23fd37790770526b75187b3634744ab9aff072eccdec5bf309e8532df6eb86fe70e60535d0783638c77c248b37296a0993feedf
@@ -111,3 +111,4 @@ Size (unindent-0.2.4.crate) = 7422 bytes
 BLAKE2s (vcpkg-0.2.15.crate) = 0ec9e97d0e23d59f0a4095773e1136e15f2054fb86bcceb309774638768ea8c4
 SHA512 (vcpkg-0.2.15.crate) = 7322a21e8811b2fe4e79e09dc321458068ecdf1953f05d36233f3278ecc0b1dfc64194db7010dd46fcf692285f42475beb090c6c6cac0c8f9fe0eb5c770e3172
 Size (vcpkg-0.2.15.crate) = 228735 bytes
+SHA1 (patch-pyproject.toml) = 70baad4213b3ef3879574c1eb4767bdc270cf093
