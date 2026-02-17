@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.23 2018/01/14 14:58:40 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.24 2026/02/17 08:08:56 wiz Exp $
 
 DISTNAME=	wmphoto-0.3a
 PKGREVISION=	1
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.dcc.uchile.cl/~amartoq/wmphoto/
+#MASTER_SITES=	http://www.dcc.uchile.cl/~amartoq/wmphoto/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.dcc.uchile.cl/~amartoq/wmphoto/
+#HOMEPAGE=	http://www.dcc.uchile.cl/~amartoq/wmphoto/
 COMMENT=	Dock-app that can show you a photo
 
 BUILD_DIRS=	wmphoto
