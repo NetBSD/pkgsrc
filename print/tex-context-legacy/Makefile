@@ -1,18 +1,24 @@
-# $NetBSD: Makefile,v 1.3 2025/05/12 08:00:54 markd Exp $
+# $NetBSD: Makefile,v 1.4 2026/02/17 10:55:01 markd Exp $
 
 DISTNAME=	context-legacy
-PKGNAME=	tex-${DISTNAME}-2025
-TEXLIVE_REV=	74403
+PKGNAME=	tex-${DISTNAME}-2025.77795
+TEXLIVE_REV=	77795
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ctan.org/pkg/context-legacy
-COMMENT=	Legacy context components
+HOMEPAGE=	https://ctan.org/pkg/context
+COMMENT=	ConTeXt macro package, MkII
 
+DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
 DEPENDS+=	tex-context-[0-9]*:../../print/tex-context
-DEPENDS+=	tex-metapost-[0-9]*:../../graphics/tex-metapost
+DEPENDS+=	tex-lm-[0-9]*:../../fonts/tex-lm
+DEPENDS+=	tex-ly1-[0-9]*:../../fonts/tex-ly1
+DEPENDS+=	tex-manfnt-font-[0-9]*:../../fonts/tex-manfnt-font
+DEPENDS+=	tex-mflogo-font-[0-9]*:../../fonts/tex-mflogo-font
 DEPENDS+=	tex-mptopdf-[0-9]*:../../graphics/tex-mptopdf
 DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
-DEPENDS+=	tex-xetex-[0-9]*:../../print/tex-xetex
+DEPENDS+=	tex-stmaryrd-[0-9]*:../../fonts/tex-stmaryrd
+
+TEX_MAP_FILES+=	original-context-symbol.map
 
 CHECK_INTERPRETER_SKIP=	share/texmf-dist/scripts/context/ruby/*.rb
 
