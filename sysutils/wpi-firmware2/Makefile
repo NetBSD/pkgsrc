@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2017/01/19 18:52:26 agc Exp $
-#
+# $NetBSD: Makefile,v 1.7 2026/02/17 08:10:13 wiz Exp $
 
 VERSION=		2.14.4
 DISTNAME=		iwlwifi-3945-ucode-${VERSION}
 PKGNAME=		wpi-firmware2-${VERSION}
 CATEGORIES=		sysutils
-MASTER_SITES=		http://intellinuxwireless.org/iwlwifi/downloads/
+#MASTER_SITES=		http://intellinuxwireless.org/iwlwifi/downloads/
 MASTER_SITES+=		http://firmware.openbsd.org/firmware-dist/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://intellinuxwireless.org/
+#HOMEPAGE=		http://intellinuxwireless.org/
 COMMENT=		Firmware binary images for wpi(4) driver
 
 NO_CONFIGURE=		yes
