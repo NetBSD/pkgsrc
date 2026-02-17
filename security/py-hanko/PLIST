@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/01/28 10:30:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/02/17 09:30:09 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -366,6 +366,9 @@ ${PYSITELIB}/pyhanko/stamp/base.pyo
 ${PYSITELIB}/pyhanko/stamp/functions.py
 ${PYSITELIB}/pyhanko/stamp/functions.pyc
 ${PYSITELIB}/pyhanko/stamp/functions.pyo
+${PYSITELIB}/pyhanko/stamp/noop.py
+${PYSITELIB}/pyhanko/stamp/noop.pyc
+${PYSITELIB}/pyhanko/stamp/noop.pyo
 ${PYSITELIB}/pyhanko/stamp/py.typed
 ${PYSITELIB}/pyhanko/stamp/qr.py
 ${PYSITELIB}/pyhanko/stamp/qr.pyc
