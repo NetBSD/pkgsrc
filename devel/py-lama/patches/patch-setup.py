@@ -1,0 +1,29 @@
+$NetBSD: patch-setup.py,v 1.3 2026/02/17 15:45:12 wiz Exp $
+
+https://github.com/klen/pylama/issues/249
+
+--- setup.py.orig	2022-08-08 11:26:27.000000000 +0000
++++ setup.py
+@@ -4,22 +4,15 @@ import pathlib
+ 
+ import pathlib
+ 
+-import pkg_resources
+ from setuptools import setup
+ 
+ 
+-def parse_requirements(path: str) -> "list[str]":
+-    with pathlib.Path(path).open(encoding='utf-8') as requirements:
+-        return [str(req) for req in pkg_resources.parse_requirements(requirements)]
+ 
+-
+ OPTIONAL_LINTERS = ['pylint', 'eradicate', 'radon', 'mypy', 'vulture']
+ 
+ 
+ setup(
+-    install_requires=parse_requirements("requirements/requirements.txt"),
+     extras_require=dict(
+-        tests=parse_requirements("requirements/requirements-tests.txt"),
+         all=OPTIONAL_LINTERS, **{linter: [linter] for linter in OPTIONAL_LINTERS},
+         toml="toml>=0.10.2",
+     ),
