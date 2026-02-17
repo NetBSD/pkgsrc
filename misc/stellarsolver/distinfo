@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2026/02/17 18:41:01 markd Exp $
+
+BLAKE2s (stellarsolver-2.7.tar.gz) = 2b4d743efadc981ce36252aa559a21a7512996328a504aef716981a73c3b225f
+SHA512 (stellarsolver-2.7.tar.gz) = f666023bcc4e5c83d5a88224ebe524a490852d7b2aab89a52f596aa891f965367a6057997592eab50035f55565e330cf0a48074d2bf339fbaa78afdf56fda876
+Size (stellarsolver-2.7.tar.gz) = 26567114 bytes
+SHA1 (patch-CMakeLists.txt) = cf2dd1980448d3211521f048b38c2d96d4cd9f5d
+SHA1 (patch-stellarsolver_stellarsolver.cpp) = cafdf1a6f83d314b372ae624acddc4d0b3159abb

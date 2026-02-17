@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.673 2026/01/18 04:02:48 taca Exp $
+# $NetBSD: Makefile,v 1.674 2026/02/17 18:41:01 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -362,6 +362,7 @@ SUBDIR+=	sleepto
 SUBDIR+=	splitvt
 SUBDIR+=	starplot
 SUBDIR+=	stellarium
+SUBDIR+=	stellarsolver
 SUBDIR+=	step
 SUBDIR+=	sunwait
 SUBDIR+=	sweeper
