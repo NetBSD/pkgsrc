@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/11/16 10:39:18 adam Exp $
+# $NetBSD: Makefile,v 1.13 2026/02/17 12:45:10 adam Exp $
 
-DISTNAME=	inline_snapshot-0.31.1
+DISTNAME=	inline_snapshot-0.32.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/inline_snapshot/}
@@ -15,6 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-asttokens>=2.0.5:../../lang/py-asttokens
 DEPENDS+=	${PYPKGPREFIX}-executing>=2.2.0:../../lang/py-executing
 DEPENDS+=	${PYPKGPREFIX}-rich>=13.7.1:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-test>=8.3.4:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-attrs>=24.3.0:../../devel/py-attrs
 TEST_DEPENDS+=	${PYPKGPREFIX}-dirty-equals>=0.7.0:../../devel/py-dirty-equals
 TEST_DEPENDS+=	${PYPKGPREFIX}-black>=23.3.0:../../textproc/py-black
