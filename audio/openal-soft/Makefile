@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2026/01/26 14:35:36 adam Exp $
+# $NetBSD: Makefile,v 1.53 2026/02/17 23:46:09 gutteridge Exp $
 
 DISTNAME=	openal-soft-1.25.1
 CATEGORIES=	audio
@@ -58,6 +58,7 @@ post-install:
 
 .include "../../devel/cmake/build.mk"
 .include "../../audio/libmysofa/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
