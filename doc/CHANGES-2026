@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1184 2026/02/17 09:30:28 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1185 2026/02/17 11:12:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1583,3 +1583,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-notebook to 7.5.3 [adam 2026-02-17]
 	Updated security/py-hanko-certvalidator to 0.29.1 [adam 2026-02-17]
 	Updated security/py-hanko to 0.33.0 [adam 2026-02-17]
+	Updated devel/py-test-mypy-plugins to 3.3.0 [adam 2026-02-17]
+	Updated devel/py-apycula to 0.29 [adam 2026-02-17]
