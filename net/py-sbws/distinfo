@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:06:43 nia Exp $
+$NetBSD: distinfo,v 1.4 2026/02/17 14:45:55 wiz Exp $
 
-BLAKE2s (sbws-0.8.0.tar.gz) = 61c20b146fa1bb22624b1dd00eb59798ddc9dfe9da76648c6d28ede42ced548c
-SHA512 (sbws-0.8.0.tar.gz) = 6af24a4aa3a756b5d9a7b3aba99339a1739f04f6ae8f4af9ad15cf16bcba9d5d416a6c3a37e85cb11f5f36bbc40753fcfbdf2af5858a9ae295e3d0a0eb368d5d
-Size (sbws-0.8.0.tar.gz) = 156048 bytes
+BLAKE2s (sbws-2.2.0.tar.bz2) = 144d8eb2bb33515fbf6560e08b9b1c9d86fc052058e16a0f5d90062d298bf3a8
+SHA512 (sbws-2.2.0.tar.bz2) = 8b0c81a540c8c6f5e96d782921d78cec240696e8d385b1d28124674cb911c1d86471fcaddb4af94fec057487a28c87e4e8f42a6c48678a1656b4a7ae697d6059
+Size (sbws-2.2.0.tar.bz2) = 4137765 bytes
