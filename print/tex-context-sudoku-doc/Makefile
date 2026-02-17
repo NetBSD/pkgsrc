@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/06/17 12:30:57 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/02/17 11:01:54 markd Exp $
 
 DISTNAME=	context-sudoku.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2023
-TEXLIVE_REV=	67289
+PKGNAME=	tex-${DISTNAME:S/./-/}-2025
+TEXLIVE_REV=	77885
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/context-sudoku
