@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1201 2026/02/17 13:42:34 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1202 2026/02/17 13:44:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1624,3 +1624,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 29.4.1 [pin 2026-02-17]
 	Updated devel/ruby-console to 1.34.3 [taca 2026-02-17]
 	Updated textproc/prose to 0.5.0 [pin 2026-02-17]
+	Updated devel/ruby-mocha to 3.0.2 [taca 2026-02-17]
