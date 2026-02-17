@@ -1,0 +1,29 @@
+$NetBSD: patch-kstars_indi_servermanager.cpp,v 1.1 2026/02/17 19:25:02 markd Exp $
+
+Don't use stderr as a variable.
+
+--- kstars/indi/servermanager.cpp.orig	2026-02-02 08:02:14.000000000 +0000
++++ kstars/indi/servermanager.cpp
+@@ -530,17 +530,17 @@ void ServerManager::processStandardError
+     qWarning() << "INDI server is currently not supported on Windows.";
+     return;
+ #else
+-    QString stderr = serverProcess->readAllStandardError();
++    QString sstderr = serverProcess->readAllStandardError();
+ 
+-    for (auto &msg : stderr.split('\n'))
++    for (auto &msg : sstderr.split('\n'))
+         qCDebug(KSTARS_INDI) << "INDI Server: " << msg;
+ 
+-    serverBuffer.write(stderr.toLatin1());
++    serverBuffer.write(sstderr.toLatin1());
+     emit newServerLog();
+ 
+-    //if (driverCrashed == false && (stderr.contains("stdin EOF") || stderr.contains("stderr EOF")))
++    //if (driverCrashed == false && (sstderr.contains("stdin EOF") || sstderr.contains("stderr EOF")))
+     QRegularExpression re("Driver (.*): Terminated after #0 restarts");
+-    QRegularExpressionMatch match = re.match(stderr);
++    QRegularExpressionMatch match = re.match(sstderr);
+     if (match.hasMatch())
+     {
+         QString driverExec = match.captured(1);
