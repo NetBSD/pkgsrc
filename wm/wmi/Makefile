@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/11/12 13:23:52 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.27 2026/02/17 08:07:22 wiz Exp $
 
 DISTNAME=	wmi-10
 PKGREVISION=	10
@@ -7,7 +6,7 @@ CATEGORIES=	wm
 MASTER_SITES=	http://www.suckless.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wmi.suckless.org/
+HOMEPAGE=	https://oldgit.suckless.org/wmi/
 COMMENT=	Minimalist, flexible and highly customizable window manager
 
 USE_LANGUAGES=	c c++
