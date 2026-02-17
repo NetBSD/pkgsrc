@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2025/05/12 07:55:17 markd Exp $
+$NetBSD: distinfo,v 1.22 2026/02/17 10:49:05 markd Exp $
 
-BLAKE2s (context.doc.r74402.tar.xz) = 57b58b3008051063c007c5f2075cc95b3493452eeacde0354a4c0bac13f2a772
-SHA512 (context.doc.r74402.tar.xz) = 411739f073321b04b79921f83560c6e600c8b7479636377ed706d24ff1d749649aff9589e7ad5c5ab5ec15a4669d6e97e3327ec477cf7b9354d13c0c2cbbc6f9
-Size (context.doc.r74402.tar.xz) = 101944496 bytes
+BLAKE2s (context.doc.r77795.tar.xz) = 3975c43f0efbeb183a85c23408319480c468302bbadbc6ed0af6d6be76e512d8
+SHA512 (context.doc.r77795.tar.xz) = 71e6d2499753c608dde4ffbcdd0547ccc4b816dff639ba8cba064f34e76397c90d2b8cb4f2912aace29504c132aa1dbd8f5042784b5a302cfa9166c52019523b
+Size (context.doc.r77795.tar.xz) = 127966316 bytes
