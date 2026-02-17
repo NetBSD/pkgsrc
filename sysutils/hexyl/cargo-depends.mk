@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.8 2024/12/27 21:25:14 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.9 2026/02/17 13:12:59 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
 CARGO_CRATE_DEPENDS+=	anstream-0.6.17
@@ -7,12 +7,13 @@ CARGO_CRATE_DEPENDS+=	anstyle-parse-0.2.6
 CARGO_CRATE_DEPENDS+=	anstyle-query-1.1.2
 CARGO_CRATE_DEPENDS+=	anstyle-wincon-3.0.6
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.91
-CARGO_CRATE_DEPENDS+=	assert_cmd-2.0.16
+CARGO_CRATE_DEPENDS+=	assert_cmd-2.1.2
 CARGO_CRATE_DEPENDS+=	autocfg-1.4.0
 CARGO_CRATE_DEPENDS+=	bitflags-2.6.0
 CARGO_CRATE_DEPENDS+=	bstr-1.10.0
 CARGO_CRATE_DEPENDS+=	clap-4.5.20
 CARGO_CRATE_DEPENDS+=	clap_builder-4.5.20
+CARGO_CRATE_DEPENDS+=	clap_complete-4.5.55
 CARGO_CRATE_DEPENDS+=	clap_derive-4.5.18
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.2
 CARGO_CRATE_DEPENDS+=	colorchoice-1.0.3
@@ -20,7 +21,6 @@ CARGO_CRATE_DEPENDS+=	const_format-0.2.33
 CARGO_CRATE_DEPENDS+=	const_format_proc_macros-0.2.33
 CARGO_CRATE_DEPENDS+=	diff-0.1.13
 CARGO_CRATE_DEPENDS+=	difflib-0.4.0
-CARGO_CRATE_DEPENDS+=	doc-comment-0.3.3
 CARGO_CRATE_DEPENDS+=	errno-0.3.9
 CARGO_CRATE_DEPENDS+=	float-cmp-0.9.0
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
