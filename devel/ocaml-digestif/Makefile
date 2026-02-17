@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2025/08/25 08:34:57 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/02/17 13:38:57 wiz Exp $
 
 DISTNAME=	digestif-1.1.0
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 GITHUB_PROJECT=	digestif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/08/25 08:35:12 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/02/17 13:39:12 wiz Exp $
 #
 
 VERSION=	1.17
@@ -6,6 +6,7 @@ GITHUB_PROJECT=	cryptokit
 GITHUB_TAG=	release${VERSION:S/.//}
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xavierleroy/}
 

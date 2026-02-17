@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2025/08/25 08:35:12 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/02/17 13:39:12 wiz Exp $
 
 VERSION=	2.4
-PKGREVISION=	1
+PKGREVISION=	2
 GITHUB_PROJECT=	ocaml-csv
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 CATEGORIES=	textproc

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/08/25 08:35:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/02/17 13:39:15 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-4.2.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 GITHUB_PROJECT=	ocaml-uri

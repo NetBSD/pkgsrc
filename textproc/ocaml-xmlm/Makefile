@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2026/01/25 13:46:00 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2026/02/17 13:39:14 wiz Exp $
 
 DISTNAME=	xmlm-1.4.0
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	https://erratique.ch/software/xmlm/releases/
 EXTRACT_SUFX=	.tbz

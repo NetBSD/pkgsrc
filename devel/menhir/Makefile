@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2026/01/18 14:06:00 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/02/17 13:38:54 wiz Exp $
 
 DISTNAME=	menhir-20260112
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://gitlab.inria.fr/fpottier/${PKGBASE}/-/archive/${PKGVERSION_NOREV}/
 
