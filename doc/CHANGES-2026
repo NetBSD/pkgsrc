@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1186 2026/02/17 11:24:18 markd Exp $
+$NetBSD: CHANGES-2026,v 1.1187 2026/02/17 12:47:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1605,3 +1605,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed fonts/tex-context-companion-fonts [markd 2026-02-17]
 	Removed fonts/tex-context-companion-fonts-doc [markd 2026-02-17]
 	Updated meta-pkgs/texlive-collection-context to 2025.75426 [markd 2026-02-17]
+	Updated devel/py-inline-snapshot to 0.32.1 [adam 2026-02-17]
+	Updated www/py-uvicorn to 0.41.0 [adam 2026-02-17]
