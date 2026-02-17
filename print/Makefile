@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.954 2026/01/28 10:35:26 wiz Exp $
+# $NetBSD: Makefile,v 1.955 2026/02/17 11:07:58 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -514,6 +514,8 @@ SUBDIR+=	tex-comprehensive-doc
 SUBDIR+=	tex-concprog
 SUBDIR+=	tex-concprog-doc
 SUBDIR+=	tex-context
+SUBDIR+=	tex-context-animation
+SUBDIR+=	tex-context-animation-doc
 SUBDIR+=	tex-context-calendar-examples
 SUBDIR+=	tex-context-calendar-examples-doc
 SUBDIR+=	tex-context-chat
