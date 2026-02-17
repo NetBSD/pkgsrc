@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1182 2026/02/17 01:54:12 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.1183 2026/02/17 06:40:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1578,3 +1578,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/R-latticeExtra to 0.6.31 [mef 2026-02-17]
 	Updated math/R-DAAG to 1.25.7 [mef 2026-02-17]
 	Updated multimedia/libvpx to 1.16.0nb1 [gutteridge 2026-02-17]
+	Updated devel/py-pybind11 to 3.0.2 [adam 2026-02-17]
+	Updated graphics/py-tifffile to 2026.2.16 [adam 2026-02-17]
+	Updated www/py-notebook to 7.5.3 [adam 2026-02-17]
