@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1573 2026/02/15 16:46:07 manu Exp $
+# $NetBSD: Makefile,v 1.1574 2026/02/17 15:20:05 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1137,7 +1137,6 @@ SUBDIR+=	py-libxml2
 SUBDIR+=	py-libxslt
 SUBDIR+=	py-link-grammar
 SUBDIR+=	py-linkify-it-py
-SUBDIR+=	py-loremipsum
 SUBDIR+=	py-lsp-jsonrpc
 SUBDIR+=	py-lunr
 SUBDIR+=	py-lxml
