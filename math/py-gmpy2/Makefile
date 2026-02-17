@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2026/02/10 19:35:09 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/02/17 11:41:12 wiz Exp $
 
 DISTNAME=	gmpy2-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/a/alpha/}
@@ -11,6 +11,7 @@ COMMENT=	Interface to GMP/MPIR, MPFR, and MPC for Python
 LICENSE=	gnu-lgpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-mpmath-[0-9]*:../../math/py-mpmath
