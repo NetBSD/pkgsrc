@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2026/01/07 08:46:51 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/02/17 08:09:41 wiz Exp $
 
 DISTNAME=	WordTsar-0.3.719-src
 PKGNAME=	${DISTNAME:tl:S/-src//}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wordtsar/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://wordtsar.ca/
+HOMEPAGE=	https://wordtsar.ca/
 COMMENT=	Wordstar for the 21st Century
 LICENSE=	gnu-agpl-v3
 
