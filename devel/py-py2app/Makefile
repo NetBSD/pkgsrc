@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2025/12/22 06:21:17 adam Exp $
+# $NetBSD: Makefile,v 1.21 2026/02/17 14:08:35 adam Exp $
 
-DISTNAME=	py2app-0.28.9
+DISTNAME=	py2app-0.28.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/py2app/}
