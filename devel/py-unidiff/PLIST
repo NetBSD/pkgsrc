@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2026/02/17 21:59:11 wiz Exp $
+bin/unidiff${PYVERSSUFFIX}
+${PYSITELIB}/unidiff-${PKGVERSION}.dist-info/METADATA
+${PYSITELIB}/unidiff-${PKGVERSION}.dist-info/RECORD
+${PYSITELIB}/unidiff-${PKGVERSION}.dist-info/WHEEL
+${PYSITELIB}/unidiff-${PKGVERSION}.dist-info/licenses/LICENSE
+${PYSITELIB}/unidiff-${PKGVERSION}.dist-info/top_level.txt
+${PYSITELIB}/unidiff/__init__.py
+${PYSITELIB}/unidiff/__init__.pyc
+${PYSITELIB}/unidiff/__init__.pyo
+${PYSITELIB}/unidiff/__version__.py
+${PYSITELIB}/unidiff/__version__.pyc
+${PYSITELIB}/unidiff/__version__.pyo
+${PYSITELIB}/unidiff/constants.py
+${PYSITELIB}/unidiff/constants.pyc
+${PYSITELIB}/unidiff/constants.pyo
+${PYSITELIB}/unidiff/errors.py
+${PYSITELIB}/unidiff/errors.pyc
+${PYSITELIB}/unidiff/errors.pyo
+${PYSITELIB}/unidiff/patch.py
+${PYSITELIB}/unidiff/patch.pyc
+${PYSITELIB}/unidiff/patch.pyo
