@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:19:43 nia Exp $
+$NetBSD: distinfo,v 1.14 2026/02/17 14:34:52 taca Exp $
 
-BLAKE2s (rdtool-0.6.22.tar.gz) = dc04537ba7bbeba89fef53537b32a0f58941cb8e1c1ad48734a4dd3a817877ab
-SHA512 (rdtool-0.6.22.tar.gz) = 66c1ad9c9bc0447bcd16712c6dbd31ccac1df8fd0b566baeda158f40dadb320a6104c673ea19d25b523a2700b58187fe0a01e577de52f55f7e6841fe61bf5802
-Size (rdtool-0.6.22.tar.gz) = 89524 bytes
+BLAKE2s (rdtool-0.6.38.gem) = eecaccfb611bf2df447f0d717e6768b55ae50616336c8a2aa5141f0484dd9248
+SHA512 (rdtool-0.6.38.gem) = 958e9066a8b3610eb1a78069e615c5bd672aa56b3b45669604b35cd094bb8ddc549d8f373d1ee53864c27a0aa7ee038101b3256c56b3b8ffe618f75a1a939bcd
+Size (rdtool-0.6.38.gem) = 115712 bytes
+SHA1 (patch-rd-mode.el) = f6ed758013c18ded3ba83f0075a4210e21d8e3bb
