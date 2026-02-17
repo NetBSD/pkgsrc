@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1176 2026/02/17 00:19:29 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.1177 2026/02/17 00:28:03 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1572,3 +1572,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/tilt version 0.36.3 [maya 2026-02-17]
 	Updated lang/erlang-doc to 27.3.4.7 [gdt 2026-02-17]
 	Updated lang/erlang-man to 27.3 [gdt 2026-02-17]
+	Updated www/firefox140 to 140.7.1 [gutteridge 2026-02-17]
