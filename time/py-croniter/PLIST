@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2026/02/17 21:53:33 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/croniter/__init__.py
+${PYSITELIB}/croniter/__init__.pyc
+${PYSITELIB}/croniter/__init__.pyo
+${PYSITELIB}/croniter/croniter.py
+${PYSITELIB}/croniter/croniter.pyc
+${PYSITELIB}/croniter/croniter.pyo
