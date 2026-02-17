@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/08/16 09:56:15 adam Exp $
+# $NetBSD: Makefile,v 1.17 2026/02/17 00:19:20 gdt Exp $
 
 # TODO: on update uncomment DIST_VERSION_PATCH, as doc_man is not available for 27.0.1
 DISTNAME=	otp_doc_man_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR} #${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=erlang/otp/releases/download/OTP-${PKGVERSIO
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.erlang.org/
 COMMENT=	Documentation for Erlang, a concurrent functional programming language
+# \todo Determine license, probably:
+# LICENSE=	apache-2.0
 
 DIST_SUBDIR=	erlang
 
