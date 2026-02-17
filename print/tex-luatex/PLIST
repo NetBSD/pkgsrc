@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.8 2024/03/21 09:30:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/02/17 10:43:34 markd Exp $
 bin/dviluatex
 share/texmf-dist/tex/generic/config/luatex-unicode-letters.tex
-share/texmf-dist/web2c/texmfcnf.lua
