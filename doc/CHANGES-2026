@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1225 2026/02/17 21:53:56 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1226 2026/02/17 21:59:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1652,3 +1652,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misk/kstars to 3.8.1 [markd 2026-02-17]
 	Updated editors/vim-share to 9.2.0015 [morr 2026-02-17]
 	Added time/py-croniter version 6.0.0 [wiz 2026-02-17]
+	Added devel/py-unidiff version 0.7.5 [wiz 2026-02-17]
