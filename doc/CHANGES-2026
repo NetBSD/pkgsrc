@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1209 2026/02/17 14:09:33 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1210 2026/02/17 14:35:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1633,3 +1633,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/xfr to 0.8.0 [pin 2026-02-17]
 	Updated net/py-pynng to 0.9.0 [adam 2026-02-17]
 	Updated devel/py-py2app to 0.28.10 [adam 2026-02-17]
+	Updated devel/ruby-rd-mode to 0.6.38 [taca 2026-02-17]
