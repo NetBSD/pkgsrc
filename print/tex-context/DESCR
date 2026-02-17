@@ -1,3 +1,10 @@
 A full featured, parameter driven macro package, which fully
-supports advanced interactive documents. See the ConTeXt garden
-for a wealth of support information.
+supports advanced interactive documents. See the ConTeXt Wiki
+for more information. This content on CTAN is packaged
+independently of the ConTeXt project, so if you have a problem
+with ConTeXt itself, it is best to report it to the official
+ntg-context@ntg.nl mailing list. If you notice that ConTeXt is
+mispackaged in TeX Live or CTAN, then please open a new issue
+on GitHub, email the public ntg-context@ntg.nl or
+tex-live@tug.org mailing lists, or email me privately at
+tex@maxchernoff.ca. Pull requests are also gladly accepted.
