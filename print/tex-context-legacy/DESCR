@@ -1,1 +1,5 @@
-Legacy context components
+In TeX Live, ConTeXt MkII is split from current ConTeXt (MkIV
+and newer). We use the ConTeXt repackaging as distributed from
+https://github.com/gucci-on-fleek/context-packaging. See
+https://contextgarden.net and https://pragma-ade.com for
+information about ConTeXt.
