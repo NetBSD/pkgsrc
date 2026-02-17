@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/12/25 17:01:49 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/02/17 11:12:06 adam Exp $
 bin/gowin_pack-${PYVERSSUFFIX}
 bin/gowin_pll-${PYVERSSUFFIX}
 bin/gowin_unpack-${PYVERSSUFFIX}
@@ -17,6 +17,7 @@ ${PYSITELIB}/apycula/GW1NZ-1.pickle
 ${PYSITELIB}/apycula/GW2A-18.pickle
 ${PYSITELIB}/apycula/GW2A-18C.pickle
 ${PYSITELIB}/apycula/GW5A-25A.pickle
+${PYSITELIB}/apycula/GW5AST-138C.pickle
 ${PYSITELIB}/apycula/__init__.py
 ${PYSITELIB}/apycula/__init__.pyc
 ${PYSITELIB}/apycula/__init__.pyo
