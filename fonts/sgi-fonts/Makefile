@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2021/01/16 18:19:32 fcambus Exp $
+# $NetBSD: Makefile,v 1.23 2026/02/17 13:36:56 taca Exp $
 
 DISTNAME=	sgi-fonts-1.0-457.src
 PKGNAME=	sgi-fonts-1.0.457
@@ -14,6 +14,8 @@ LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/sgi-fonts
 USE_LANGUAGES=	c
+
+MAKE_FLAGS+=	XBINDIR=${TOOLS_DIR}/bin
 
 FONTS_DIRS.x11=	${PREFIX}/share/fonts/X11/misc/sgi
 
