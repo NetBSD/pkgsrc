@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.31 2022/05/14 22:25:35 dholland Exp $
+# $NetBSD: Makefile,v 1.32 2026/02/17 14:34:52 taca Exp $
 #
 
 DISTNAME=	rdtool-${RUBY_RD_VERSION}
-PKGNAME=	${EMACS_PKGNAME_PREFIX}${RUBY_PKGPREFIX}-rd-mode-${RUBY_RD_VERSION}
-PKGREVISION=	3
+PKGNAME=	${EMACS_PKGNAME_PREFIX}ruby-rd-mode-${RUBY_RD_VERSION}
 CATEGORIES=	devel ruby
-MASTER_SITES=	# http://rubyforge.org/frs/download.php/33346/
-LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+EXTRACT_SUFX?=	.gem
 
 MAINTAINER=	taca@NetBSD.org
-#HOMEPAGE=	http://uwabami.github.io/rdtool/index-en.html
+HOMEPAGE=	https://uwabami.github.io/software/rdtool/
 COMMENT=	Editing mode for RD (Ruby Document Format)
+LICENSE=	ruby-license OR gnu-gpl-v2
+
+BUILD_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/utils
 EXTRACT_ELEMENTS=	${DISTNAME}/utils/rd-mode.el
-RUBY_RD_VERSION=	0.6.22
-RUBY_NOVERSION=		yes
+RUBY_RD_VERSION=	0.6.38
 NO_CONFIGURE=		yes
 
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/rd-mode
@@ -28,6 +28,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/rd-mode.el ${DESTDIR}${EMACS_LISPPREFIX}/rd-mode
 	${INSTALL_DATA} ${WRKSRC}/rd-mode.elc ${DESTDIR}${EMACS_LISPPREFIX}/rd-mode
 
-.include "../../lang/ruby/rubyversion.mk"
+.include "../../lang/ruby/gem-extract.mk"
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"
