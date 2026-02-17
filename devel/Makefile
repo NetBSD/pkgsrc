@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4593 2026/02/16 23:58:29 maya Exp $
+# $NetBSD: Makefile,v 1.4594 2026/02/17 21:59:31 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3261,6 +3261,7 @@ SUBDIR+=	py-typing-extensions
 SUBDIR+=	py-typing-inspect
 SUBDIR+=	py-typing-inspection
 SUBDIR+=	py-u-msgpack
+SUBDIR+=	py-unidiff
 SUBDIR+=	py-unittest-mixins
 SUBDIR+=	py-unittest2pytest
 SUBDIR+=	py-unpaddedbase64
