@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/06/15 11:52:16 mef Exp $
+# $NetBSD: Makefile,v 1.8 2026/02/17 01:26:34 mef Exp $
 
 R_PKGNAME=	latticeExtra
-R_PKGVER=	0.6-30
+R_PKGVER=	0.6-31
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
