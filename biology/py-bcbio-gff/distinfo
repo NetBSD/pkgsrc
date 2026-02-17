@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2025/01/16 13:10:08 bacon Exp $
+$NetBSD: distinfo,v 1.3 2026/02/17 15:54:54 wiz Exp $
 
 BLAKE2s (bcbio-gff-0.7.1.tar.gz) = 917810f9e112e51afd539b9307e1d05b8fa52e6d8dfa1a375a1705430e6a8f4d
 SHA512 (bcbio-gff-0.7.1.tar.gz) = 5cb931835e01a211b2fa9a52f6c5ee6a0a23f48a7a33862eb698110a1dc4f154f417ad626a72cab55f4065889f40349e8f955df6b0190e0377989ffaa182b7b7
 Size (bcbio-gff-0.7.1.tar.gz) = 20102 bytes
+SHA1 (patch-setup.py) = a429675a97eda841adcdf2cd0d1739341f3308dd
