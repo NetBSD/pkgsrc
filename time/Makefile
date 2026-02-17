@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.286 2026/01/06 21:56:21 wiz Exp $
+# $NetBSD: Makefile,v 1.287 2026/02/17 21:53:46 wiz Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -166,6 +166,7 @@ SUBDIR+=	py-aniso8601
 SUBDIR+=	py-arrow
 SUBDIR+=	py-cftime
 SUBDIR+=	py-ciso8601
+SUBDIR+=	py-croniter
 SUBDIR+=	py-dateparser
 SUBDIR+=	py-dateutil
 SUBDIR+=	py-durationpy
