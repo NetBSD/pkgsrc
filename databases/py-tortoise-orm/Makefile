@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2026/02/16 18:09:02 adam Exp $
+# $NetBSD: Makefile,v 1.45 2026/02/17 13:15:10 adam Exp $
 
-DISTNAME=	tortoise_orm-1.1.3
+DISTNAME=	tortoise_orm-1.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tortoise-orm/}
