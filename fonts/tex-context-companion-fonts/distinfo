@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2025/05/13 09:57:58 markd Exp $
-
-BLAKE2s (context-companion-fonts.r72732.tar.xz) = ba63cd80ec69880f721e2e01d79df823717542e0d25446197456f1bb9385d7ec
-SHA512 (context-companion-fonts.r72732.tar.xz) = 52533908c52f814619a3b48e90422d9124561ca0685f44a75b0da3d3805faccc26cfdb5be0a8eb48f22b4949d351f8357870f91bbc9ef4c1067933cdedd288cb
-Size (context-companion-fonts.r72732.tar.xz) = 113948 bytes

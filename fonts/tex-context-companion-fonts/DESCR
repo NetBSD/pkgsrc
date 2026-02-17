@@ -1,4 +1,0 @@
-These files fix and/or enhance some math glyphs and are loaded in the math font
-goodie files used by ConTeXt LMTX. They are meant to be used alongside the main
-math fonts that are frozen. The fonts were developed as part of an overhaul of
-OpenType math in LuaMetaTeX and LMTX.

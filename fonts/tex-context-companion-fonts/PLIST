@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2025/05/13 09:57:58 markd Exp $
-share/texmf-dist/fonts/opentype/public/context-companion-fonts/LatinModernMathCompanion-Regular.otf
-share/texmf-dist/fonts/opentype/public/context-companion-fonts/RalphSmithsFormalScriptCompanion-Regular.otf
-share/texmf-dist/fonts/opentype/public/context-companion-fonts/TeXGyreBonumMathCompanion-Regular.otf
-share/texmf-dist/fonts/opentype/public/context-companion-fonts/TeXGyrePagellaMathCompanion-Regular.otf
-share/texmf-dist/fonts/opentype/public/context-companion-fonts/TeXGyreTermesMathCompanion-Regular.otf
-share/texmf-dist/fonts/opentype/public/context-companion-fonts/XITSMathCompanion-Regular.otf
