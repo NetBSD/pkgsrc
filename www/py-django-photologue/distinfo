@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2025/09/03 14:45:26 adam Exp $
+$NetBSD: distinfo,v 1.11 2026/02/17 15:17:46 wiz Exp $
 
 BLAKE2s (django-photologue-3.18.tar.gz) = cc40cf29644c992a86e7dd608a27076d5299dde7fd2dd07f57029cec47671e26
 SHA512 (django-photologue-3.18.tar.gz) = 0fac29b8e6e8a87bde9376e559c12883f97fba4e00fcd88b301956a4609b64825eadff6ca7185d697afa1a8f857ce908a7af3330c8a642bc5f3b452fac3e4d8d
 Size (django-photologue-3.18.tar.gz) = 204354 bytes
+SHA1 (patch-setup.py) = a04d66998c39dfefc7eae8663583bb1a02effcdd
