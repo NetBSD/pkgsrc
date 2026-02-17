@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1194 2026/02/17 13:22:03 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1195 2026/02/17 13:25:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1616,3 +1616,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-publicsuffixlist to 1.0.2.20260217 [adam 2026-02-17]
 	Updated textproc/py-phonenumbers to 9.0.24 [adam 2026-02-17]
 	Updated databases/py-tortoise-orm to 1.1.4 [adam 2026-02-17]
+	Updated devel/ccls to 0.20250815.1 [adam 2026-02-17]
+	Updated security/py-google-auth-oauthlib to 1.2.4 [adam 2026-02-17]
