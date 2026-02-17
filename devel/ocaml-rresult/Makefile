@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2025/08/25 08:35:06 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/02/17 13:39:07 wiz Exp $
 
 DISTNAME=	rresult-0.7.0
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://erratique.ch/software/rresult/releases/
 EXTRACT_SUFX=	.tbz

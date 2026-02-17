@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2025/08/25 08:34:54 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/02/17 13:38:55 wiz Exp $
 
 DISTNAME=	astring-0.8.5
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://erratique.ch/software/astring/releases/
 EXTRACT_SUFX=	.tbz

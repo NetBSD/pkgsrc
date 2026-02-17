@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2026/01/27 08:41:02 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2026/02/17 13:39:16 wiz Exp $
 
 DISTNAME=	lablgtk-3.1.5
 PKGNAME=	ocaml-${DISTNAME:S/lablgtk/lablgtk3/}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=garrigue/}
 GITHUB_PROJECT=	lablgtk
@@ -26,5 +26,6 @@ DUNE_BUILD_PACKAGES=	${OCAML_FINDLIB_DIRS}
 
 .include "../../devel/camlp-streams/buildlink3.mk"
 .include "../../graphics/ocaml-cairo/buildlink3.mk"
+.include "../../devel/ocaml-dune-configurator/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2025/08/25 08:34:58 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/02/17 13:38:59 wiz Exp $
 
 DISTNAME=	hmap-0.8.1
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://erratique.ch/software/hmap/releases/
 EXTRACT_SUFX=	.tbz

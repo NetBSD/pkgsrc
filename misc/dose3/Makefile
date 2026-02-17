@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2025/12/05 11:26:53 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/02/17 13:39:10 wiz Exp $
 
 DISTNAME=	dose3-5.0.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	misc
 #MASTER_SITES=	https://gforge.inria.fr/frs/download.php/file/36063/
 

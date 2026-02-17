@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.58 2026/02/06 10:06:09 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2026/02/17 13:39:15 wiz Exp $
 #
 
 DISTNAME=		ocurl-0.5.3
 PKGNAME=		ocaml-curl-0.5.3
 EXTRACT_SUFX=		.tgz
-PKGREVISION=		54
+PKGREVISION=		55
 CATEGORIES=		www net devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ocurl/}
 

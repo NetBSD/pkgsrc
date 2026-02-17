@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2025/08/25 08:35:13 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/02/17 13:39:13 wiz Exp $
 
 DISTNAME=	jsonm-1.0.1
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	textproc
 MASTER_SITES=	http://erratique.ch/software/jsonm/releases/
 EXTRACT_SUFX=	.tbz

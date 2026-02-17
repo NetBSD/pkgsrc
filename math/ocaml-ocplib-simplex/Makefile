@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2025/06/05 14:42:21 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2026/02/17 13:39:10 wiz Exp $
 
 VERSION=	0.5.1
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OCamlPro/}
 GITHUB_PROJECT=	ocplib-simplex

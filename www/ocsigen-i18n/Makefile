@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2025/08/25 08:35:15 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/02/17 13:39:15 wiz Exp $
 
 GITHUB_PROJECT=	ocsigen-i18n
 DISTNAME=	${GITHUB_PROJECT}-4.0.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=besport/}
 
