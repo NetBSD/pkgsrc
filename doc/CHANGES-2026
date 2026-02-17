@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1189 2026/02/17 13:07:14 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1190 2026/02/17 13:09:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1609,3 +1609,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-uvicorn to 0.41.0 [adam 2026-02-17]
 	Updated sysutils/broot to 1.55.0 [pin 2026-02-17]
 	Updated devel/cargo-nextest to 0.9.127 [pin 2026-02-17]
+	Updated time/clock-rs to 0.1.31 [pin 2026-02-17]
