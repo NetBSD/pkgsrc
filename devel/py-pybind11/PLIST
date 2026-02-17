@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/07/14 10:54:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/02/17 06:36:11 adam Exp $
 bin/pybind11-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -28,6 +28,7 @@ ${PYSITELIB}/pybind11/include/pybind11/conduit/pybind11_conduit_v1.h
 ${PYSITELIB}/pybind11/include/pybind11/conduit/pybind11_platform_abi_id.h
 ${PYSITELIB}/pybind11/include/pybind11/conduit/wrap_include_python_h.h
 ${PYSITELIB}/pybind11/include/pybind11/critical_section.h
+${PYSITELIB}/pybind11/include/pybind11/detail/argument_vector.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/class.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/common.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/cpp_conduit.h
@@ -35,6 +36,7 @@ ${PYSITELIB}/pybind11/include/pybind11/detail/descr.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/dynamic_raw_ptr_cast_if_possible.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/exception_translation.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/function_record_pyobject.h
+${PYSITELIB}/pybind11/include/pybind11/detail/holder_caster_foreign_helpers.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/init.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/internals.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/native_enum_data.h
