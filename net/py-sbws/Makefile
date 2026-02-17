@@ -1,51 +1,46 @@
-# $NetBSD: Makefile,v 1.3 2022/01/10 08:01:01 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/02/17 14:45:55 wiz Exp $
 
-DISTNAME=	sbws-0.8.0
+DISTNAME=	sbws-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=torproject/}
-GITHUB_PROJECT=	sbws
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	https://gitlab.torproject.org/tpo/network-health/sbws/-/archive/v${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://sbws.readthedocs.io/
+HOMEPAGE=	https://tpo.pages.torproject.net/network-health/sbws/
 COMMENT=	Tor simple bandwidth scanner
 LICENSE=	cc0-1.0-universal
 
-USE_LANGUAGES=	# none
-
-# Python 3 only.
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-stem>=1.7.0:../../devel/py-stem
-
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
-TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
+DEPENDS+=	${PYPKGPREFIX}-stem>=1.8.0:../../devel/py-stem
+DEPENDS+=	${PYPKGPREFIX}-psutil>=7.0:../../sysutils/py-psutil
+DEPENDS+=	${PYPKGPREFIX}-versioneer>=0:../../devel/py-versioneer
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
-TEST_DEPENDS+=	bash>=4.0:../../shells/bash
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-time-machine-[0-9]*:../../time/py-time-machine
+
+WRKSRC=		${WRKDIR}/sbws-v2.2.0-df4c6e9138ca5cbca054e5684e6b580ad1b95dc5
+
+USE_LANGUAGES=	# none
+USE_TOOLS+=	bash:test
 
 REPLACE_BASH+=	scripts/maint/update-authors
 REPLACE_BASH+=	scripts/maint/update-website
 REPLACE_BASH+=	scripts/tools/osx-extra-loopback.sh
-REPLACE_BASH+=	tests/testnets/run-network.sh
-REPLACE_BASH+=	tests/testnets/simple.common/01-gen-configs.sh
-REPLACE_BASH+=	tests/testnets/simple.common/02-start-network.sh
-REPLACE_BASH+=	tests/testnets/simple.common/04-stop-network.sh
 
 REPLACE_PYTHON+=	scripts/tools/get-per-relay-budget.py
-REPLACE_PYTHON+=	scripts/tools/sbws-http-server.py
 REPLACE_PYTHON+=	scripts/tools/scale-v3bw-with-budget.py
-REPLACE_PYTHON+=	setup.py
-REPLACE_PYTHON+=	tests/testnets/simple.common/03-network-in-ready-state.py
 
 # XXX Should run the integration tests too, but it's a bit more
 # involved.
 do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} -s tests/unit -vv
 
+# https://gitlab.torproject.org/tpo/network-health/sbws/-/issues/40247
+post-install:
+	${RM} -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/tests
+
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
