@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/08/25 08:35:00 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/02/17 13:39:01 wiz Exp $
 
+PKGREVISION= 1
 .include "../../devel/ocaml-lwt/Makefile.common"
 
 PKGNAME=	ocaml-lwt_react-1.1.5
