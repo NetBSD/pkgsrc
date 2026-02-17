@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2024/10/26 06:19:26 mef Exp $
+# $NetBSD: Makefile,v 1.19 2026/02/17 01:49:26 mef Exp $
 
 R_PKGNAME=	DAAG
-R_PKGVER=	1.25.6
+R_PKGVER=	1.25.7
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Data analysis and graphics data and functions
