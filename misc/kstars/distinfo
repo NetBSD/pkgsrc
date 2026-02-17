@@ -1,11 +1,6 @@
-$NetBSD: distinfo,v 1.18 2025/08/22 13:55:17 wiz Exp $
+$NetBSD: distinfo,v 1.19 2026/02/17 19:25:01 markd Exp $
 
-BLAKE2s (kstars-4.14.3.tar.xz) = 915e2ac310a96f1d69b3fc255355e5d538da279bddf902e6c05c197cdc8b411c
-SHA512 (kstars-4.14.3.tar.xz) = c843506ae0d85e03b9ac3b11be73f35b66f9fc64adddf7a4643cb397fc59628920254aa056d7bf968b54893ce035d40d0c17a7d0fc576d3dae5799fd0f16ec3e
-Size (kstars-4.14.3.tar.xz) = 12374500 bytes
-SHA1 (patch-CMakeLists.txt) = 837431f4b84daa05ed0bc0104283456f3cc1578e
-SHA1 (patch-kstars_fitsviewer_fitsimage.cpp) = 006d16c81f6eaf897cc65233409b3b9af4b07868
-SHA1 (patch-kstars_htmesh_SkipListElement.h) = 0636fc46b3aae72ab1dcf442a5029d97d635b23c
-SHA1 (patch-kstars_skyobjects_satellite.cpp) = a30cd6139fff8e5968d704b901dd2a059548d527
-SHA1 (patch-kstars_tools_altvstime.cpp) = 24b8d4c31216fd08353e29825c6213349cfa6287
-SHA1 (patch-kstars_widgets_moonphasecalendarwidget.h) = c3c507447ea4586b2d1224e49cb4c44ba0a13918
+BLAKE2s (kstars-3.8.1.tar.xz) = 00ec270d78e5ede66417ba9196c47f267d34091c667efac30cf9d724fe2914bb
+SHA512 (kstars-3.8.1.tar.xz) = c8d564c6ddcb36cd478759045545bc9ac8d31c23277f2d99f779028d086a2def28eb684f35db642624ccb6db5c183fa701f3d085fb773f0c0be98cf29a8d7cdc
+Size (kstars-3.8.1.tar.xz) = 51894280 bytes
+SHA1 (patch-kstars_indi_servermanager.cpp) = 6d59d0d9703d77f375f69ccf4da8d844cfafef6a

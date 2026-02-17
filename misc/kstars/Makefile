@@ -1,20 +1,46 @@
-# $NetBSD: Makefile,v 1.90 2026/02/14 18:33:11 adam Exp $
+# $NetBSD: Makefile,v 1.91 2026/02/17 19:25:01 markd Exp $
 
-DISTNAME=	kstars-${_KDE_VERSION}
-PKGREVISION=	53
+DISTNAME=	kstars-3.8.1
 CATEGORIES=	misc
+MASTER_SITES=	${MASTER_SITE_KDE:=kstars/3.8.1/}
+
+HOMEPAGE=	https://kstars.kde.org/
 COMMENT=	KDE desktop planetarium
+LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
+
+USE_TOOLS+=	msgmerge pkg-config
+
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_QT6=ON
 
 .include "../../devel/cfitsio/buildlink3.mk"
-.include "../../devel/qjson/buildlink3.mk"
+.include "../../devel/kf6-kconfig/buildlink3.mk"
+.include "../../devel/kf6-kcrash/buildlink3.mk"
+.include "../../devel/kf6-kio/buildlink3.mk"
+.include "../../devel/kf6-knotifications/buildlink3.mk"
+.include "../../devel/kf6-knotifyconfig/buildlink3.mk"
+.include "../../geography/libnova/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/kf6-kplotting/buildlink3.mk"
+.include "../../graphics/libraw/buildlink3.mk"
+.include "../../graphics/opencv/buildlink3.mk"
+.include "../../graphics/qt6-qtsvg/buildlink3.mk"
 .include "../../graphics/wcslib/buildlink3.mk"
+.include "../../lang/qt6-qtdeclarative/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
+.include "../../math/gsl/buildlink3.mk"
+.include "../../misc/indi/buildlink3.mk"
+.include "../../misc/stellarsolver/buildlink3.mk"
+.include "../../net/kf6-knewstuff/buildlink3.mk"
+.include "../../net/qt6-qtwebsockets/buildlink3.mk"
+.include "../../security/qt6-qtkeychain/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../x11/kf6-kxmlgui/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
