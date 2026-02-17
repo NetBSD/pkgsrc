@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1175 2026/02/17 00:11:31 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.1176 2026/02/17 00:19:29 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1571,3 +1571,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/R to 4.5.2 [mef 2026-02-16]
 	Added devel/tilt version 0.36.3 [maya 2026-02-17]
 	Updated lang/erlang-doc to 27.3.4.7 [gdt 2026-02-17]
+	Updated lang/erlang-man to 27.3 [gdt 2026-02-17]
