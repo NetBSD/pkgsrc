@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.52 2025/08/31 10:31:03 wiz Exp $
+$NetBSD: distinfo,v 1.53 2026/02/17 08:41:47 wiz Exp $
 
 BLAKE2s (vdirsyncer-0.20.0.tar.gz) = 46ae76042fb6fa7c84eb8dde0286decb153a715ace310f6510c325ba45b880d2
 SHA512 (vdirsyncer-0.20.0.tar.gz) = 8499440ce8ba036d40f5bbff9d7cadb485be8bb2419d1fbad947f244259dabba9f2527ffff24298f697dd10e6ccd39155ea9547a480c584f64da0eadb993dad7
 Size (vdirsyncer-0.20.0.tar.gz) = 126633 bytes
+SHA1 (patch-docs_conf.py) = 436482f3abef1c926ed066682d1b248f9a76ec0b

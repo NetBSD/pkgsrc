@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2026/01/06 11:18:20 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2026/02/17 08:41:47 wiz Exp $
 
 DISTNAME=	vdirsyncer-0.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vdirsyncer/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/vdirsyncer/
+HOMEPAGE=	https://vdirsyncer.pimutils.org/en/stable/
 COMMENT=	Synchronization tool for vdir
 LICENSE=	modified-bsd
 
