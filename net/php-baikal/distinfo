@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2025/04/29 20:45:11 wiz Exp $
+$NetBSD: distinfo,v 1.21 2026/02/17 18:53:37 wiz Exp $
 
-BLAKE2s (baikal-0.10.1.zip) = adda7adbb1c56003f69826af49777761a95ef167136e6ce04182fdbea7a451fd
-SHA512 (baikal-0.10.1.zip) = 372027dc424ab3efa0c0f6f597cee15627dbfbb5709d1f9ddf18a721d31c4fa29c7a800c05e57efdf5d2b25cfdb4f1fa110661e19a85c2b2b4bf03eea15981f9
-Size (baikal-0.10.1.zip) = 2857336 bytes
+BLAKE2s (baikal-0.11.1.zip) = 2ace2b00a5bf859ab109d30371dbade425cfb228c4d40f487ef62117ac0eb0f4
+SHA512 (baikal-0.11.1.zip) = 41803b68890a9677ec9ae8e912364be37de32479fa64d0e0df0f9ed10bfd1385ae92adc51efa88f19224fa696f554f5e20e4bae75af1b2d4fcaa2e9c14907671
+Size (baikal-0.11.1.zip) = 2912380 bytes
