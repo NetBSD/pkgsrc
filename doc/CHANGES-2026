@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1211 2026/02/17 14:40:19 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1212 2026/02/17 14:42:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1635,3 +1635,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-py2app to 0.28.10 [adam 2026-02-17]
 	Updated devel/ruby-rd-mode to 0.6.38 [taca 2026-02-17]
 	Updated textproc/ruby-nokogiri to 1.19.1 [taca 2026-02-17]
+	Updated www/ruby-aws-partitions to 1.1214.0 [taca 2026-02-17]
