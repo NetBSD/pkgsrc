@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/02/17 21:53:33 wiz Exp $
+
+BLAKE2s (croniter-6.0.0.tar.gz) = 503b3dce063139abfd196b979c00c96173d50a529853664f8edb48581a7ee225
+SHA512 (croniter-6.0.0.tar.gz) = 189afd46439471be6f98e477f4a180c56de5b1640463de7a20a3a6c5ff36c121638183d4297be47bfd7fc33a4c38689c9f0d3578010117cf954043638d6a8fe4
+Size (croniter-6.0.0.tar.gz) = 64481 bytes
