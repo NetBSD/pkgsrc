@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1208 2026/02/17 14:01:24 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1209 2026/02/17 14:09:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1631,3 +1631,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/xan to 0.55.0 [pin 2026-02-17]
 	Updated sysutils/xcp to 0.24.7 [pin 2026-02-17]
 	Updated net/xfr to 0.8.0 [pin 2026-02-17]
+	Updated net/py-pynng to 0.9.0 [adam 2026-02-17]
+	Updated devel/py-py2app to 0.28.10 [adam 2026-02-17]
