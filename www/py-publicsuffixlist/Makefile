@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2026/01/13 12:16:05 adam Exp $
+# $NetBSD: Makefile,v 1.26 2026/02/17 13:12:43 adam Exp $
 
-DISTNAME=	publicsuffixlist-1.0.2.20260111
+DISTNAME=	publicsuffixlist-1.0.2.20260217
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/publicsuffixlist/}
