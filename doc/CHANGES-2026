@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1180 2026/02/17 01:26:41 mef Exp $
+$NetBSD: CHANGES-2026,v 1.1181 2026/02/17 01:50:59 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1576,3 +1576,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox140-l10n to 140.7.1 [gutteridge 2026-02-17]
 	Updated graphics/R-jpeg to 0.1.11 [mef 2026-02-17]
 	Updated graphics/R-latticeExtra to 0.6.31 [mef 2026-02-17]
+	Updated math/R-DAAG to 1.25.7 [mef 2026-02-17]
