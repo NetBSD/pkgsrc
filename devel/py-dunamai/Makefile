@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/10/12 17:28:58 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/02/17 15:25:58 adam Exp $
 
-DISTNAME=	dunamai-1.25.0
+DISTNAME=	dunamai-1.26.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dunamai/}
@@ -11,6 +11,7 @@ COMMENT=	Dynamic version generation
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core-[0-9]*:../../devel/py-poetry-core
+DEPENDS+=	${PYPKGPREFIX}-packaging>=20.9:../../devel/py-packaging
 
 USE_LANGUAGES=	# none
 # for testing
