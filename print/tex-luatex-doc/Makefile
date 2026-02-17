@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2025/05/11 04:17:39 markd Exp $
+# $NetBSD: Makefile,v 1.24 2026/02/17 10:43:34 markd Exp $
 
 DISTNAME=	luatex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.21.0
-TEXLIVE_REV=	73850
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.21.0.76924
+TEXLIVE_REV=	76924
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://www.luatex.org/
