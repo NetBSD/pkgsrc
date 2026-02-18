@@ -1,0 +1,64 @@
+$NetBSD: patch-vp9_vp9__cx__iface.c,v 1.1.2.2 2026/02/18 15:57:51 maya Exp $
+
+Apply upstream commit related to CVE-2026-2447.
+https://github.com/webmproject/libvpx/commit/d5f35ac8d93cba7f7a3f7ddb8f9dc8bd28f785e1
+
+--- vp9/vp9_cx_iface.c.orig	2026-01-08 16:01:40.000000000 +0000
++++ vp9/vp9_cx_iface.c
+@@ -8,7 +8,9 @@
+  *  be found in the AUTHORS file in the root of the source tree.
+  */
+ 
++#include <assert.h>
+ #include <limits.h>
++#include <stddef.h>
+ #include <stdint.h>
+ #include <stdlib.h>
+ #include <string.h>
+@@ -122,6 +124,7 @@ struct vpx_codec_alg_priv {
+   VP9_COMP *cpi;
+   unsigned char *cx_data;
+   size_t cx_data_sz;
++  // pending_cx_data either is a null pointer or points into the cx_data buffer.
+   unsigned char *pending_cx_data;
+   size_t pending_cx_data_sz;
+   int pending_frame_count;
+@@ -1252,8 +1255,12 @@ static int write_superframe_index(vpx_codec_alg_priv_t
+ 
+   // Write the index
+   index_sz = 2 + (mag + 1) * ctx->pending_frame_count;
+-  if (ctx->pending_cx_data_sz + index_sz < ctx->cx_data_sz) {
+-    uint8_t *x = ctx->pending_cx_data + ctx->pending_cx_data_sz;
++  unsigned char *cx_data_end = ctx->cx_data + ctx->cx_data_sz;
++  unsigned char *pending_cx_data_end =
++      ctx->pending_cx_data + ctx->pending_cx_data_sz;
++  ptrdiff_t space_remaining = cx_data_end - pending_cx_data_end;
++  if (index_sz <= space_remaining) {
++    uint8_t *x = pending_cx_data_end;
+     int i, j;
+ #ifdef TEST_SUPPLEMENTAL_SUPERFRAME_DATA
+     uint8_t marker_test = 0xc0;
+@@ -1284,6 +1291,8 @@ static int write_superframe_index(vpx_codec_alg_priv_t
+ #ifdef TEST_SUPPLEMENTAL_SUPERFRAME_DATA
+     index_sz += index_sz_test;
+ #endif
++  } else {
++    index_sz = 0;
+   }
+   return index_sz;
+ }
+@@ -1612,9 +1621,12 @@ static vpx_codec_err_t encoder_encode(vpx_codec_alg_pr
+               ctx->pending_frame_sizes[ctx->pending_frame_count++] = size;
+             ctx->pending_frame_magnitude |= size;
+             ctx->pending_cx_data_sz += size;
+-            // write the superframe only for the case when
+-            if (!ctx->output_cx_pkt_cb.output_cx_pkt)
++            // write the superframe only for the case when the callback function
++            // for getting per-layer packets is not registered.
++            if (!ctx->output_cx_pkt_cb.output_cx_pkt) {
+               size += write_superframe_index(ctx);
++              assert(size <= cx_data_sz);
++            }
+             pkt.data.frame.buf = ctx->pending_cx_data;
+             pkt.data.frame.sz = ctx->pending_cx_data_sz;
+             ctx->pending_cx_data = NULL;
