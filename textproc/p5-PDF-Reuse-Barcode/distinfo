@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:22:32 nia Exp $
+$NetBSD: distinfo,v 1.6 2026/02/18 07:24:22 wen Exp $
 
-BLAKE2s (PDF-Reuse-Barcode-0.07.tar.gz) = 5c3ecd70f028529709ba0e43d27f4c6c8b87a8da53e3671993386ec7e9570c23
-SHA512 (PDF-Reuse-Barcode-0.07.tar.gz) = e7bba6cad252dbd3ed550515d1fc3f56999df0071cd98ea97ae7a97ab3ea42b2fb749b589cd663461dbc7af145e249f2af8ea0f83b7caf0203c1c022d95c88ba
-Size (PDF-Reuse-Barcode-0.07.tar.gz) = 8319 bytes
+BLAKE2s (PDF-Reuse-Barcode-0.09.tar.gz) = 11c22ef59b1bd80e0dea824264ce70d46a766859805e5564e990df59b4e51a32
+SHA512 (PDF-Reuse-Barcode-0.09.tar.gz) = 29a35f2674b903ae5a4394b59ca1d38993f48c12752694c6a1411f9009a401b237c2ce8630dac0dbca37d5701ee25b770b25062af47e8cf8c6fd440f0ee028e8
+Size (PDF-Reuse-Barcode-0.09.tar.gz) = 10099 bytes
