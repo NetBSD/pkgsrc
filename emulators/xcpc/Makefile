@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/10/23 20:36:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/02/18 08:02:17 wiz Exp $
 
 DISTNAME=	xcpc-20070122
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	https://bitbucket.org/ponceto/xcpc/get/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/ponceto/xcpc/get/
+HOMEPAGE=	https://bitbucket.org/ponceto/xcpc/src/master/
 COMMENT=	Portable Amstrad CPC 464/664/6128 emulator
 LICENSE=	gnu-gpl-v2
 
