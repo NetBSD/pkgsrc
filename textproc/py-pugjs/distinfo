@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/02/18 10:43:39 wiz Exp $
+
+BLAKE2s (pypugjs-6.0.1.tar.gz) = 159a42bd71d04ea681cfe8142ab74bdfb9b4581d551187c30032dff60fe592d3
+SHA512 (pypugjs-6.0.1.tar.gz) = 0182495be2d799098ea7d53df13d793a4103f1e6e47e718651307e96b5a39a2734c31c3518803956143e54e96cceb18964fcfcc0ff0c5568ab47eed8474326ac
+Size (pypugjs-6.0.1.tar.gz) = 34608 bytes
