@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2025/05/28 09:41:07 zafer Exp $
-#
+# $NetBSD: Makefile,v 1.30 2026/02/18 08:00:55 wiz Exp $
 
 DISTNAME=	xbatt-1.3pr1
 PKGNAME=	xbatt-1.3.1
@@ -8,7 +7,7 @@ CATEGORIES=	sysutils x11
 MASTER_SITES=	#http://www.clave.gr.jp/~eto/xbatt/
 
 MAINTAINER=	hubertf@NetBSD.org
-HOMEPAGE=	http://www.clave.gr.jp/~eto/xbatt/	# Not really
+#HOMEPAGE=	http://www.clave.gr.jp/~eto/xbatt/
 COMMENT=	Displays battery status of your notebook via APM
 
 PKG_DESTDIR_SUPPORT=	destdir
