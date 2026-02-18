@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/01/27 18:59:09 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2026/02/18 08:06:21 wiz Exp $
 
 DISTNAME=		xdm3d-1.0
 PKGREVISION=		7
@@ -10,7 +10,7 @@ PATCHFILES=		xdm3d-jumbo-patch-20130616.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.hijinks.com/~spade/linux/XBanner/
+#HOMEPAGE=		http://www.hijinks.com/~spade/linux/XBanner/
 COMMENT=		Replacement for xdm with 3D effects
 
 WRKSRC=			${WRKDIR}/xdm
