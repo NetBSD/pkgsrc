@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2012/10/23 19:51:35 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2026/02/18 08:01:18 wiz Exp $
 
 DISTNAME=		xc3028L-v36.fw
 PKGNAME=		xc3028l-firmware-3.6
 CATEGORIES=		sysutils
-MASTER_SITES=		http://steventoth.net/linux/hvr1400/
+#MASTER_SITES=		http://steventoth.net/linux/hvr1400/
 EXTRACT_SUFX=		# none
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		${MASTER_SITES}
+#HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Firmware binary image for Xceive XC3028L tuners
 
 NO_CONFIGURE=		yes
