@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2024/10/12 15:48:12 rhialto Exp $
+# $NetBSD: Makefile,v 1.56 2026/02/18 07:58:21 wiz Exp $
 
 DISTNAME=	suite3270-${VER}-src
 PKGNAME=	x3270-${VER}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=x3270/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	rhialto@NetBSD.org
-HOMEPAGE=	http://x3270.bgp.nu/
+HOMEPAGE=	https://x3270.bgp.nu/
 COMMENT=	3270 Terminal emulators (X11 and/or curses)
 LICENSE=	modified-bsd
 
