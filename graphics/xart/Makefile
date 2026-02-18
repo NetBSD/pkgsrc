@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.67 2025/08/30 22:45:36 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.68 2026/02/18 07:59:43 wiz Exp $
 
 DISTNAME=	xart19980415
 PKGNAME=	xart-19980415
 PKGREVISION=	23
 CATEGORIES=	graphics x11
-MASTER_SITES=	http://linux01.gwdg.de/~rhohen/linux/
+#MASTER_SITES=	http://linux01.gwdg.de/~rhohen/linux/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://linux01.gwdg.de/~rhohen/linux.html
+#HOMEPAGE=	http://linux01.gwdg.de/~rhohen/linux.html
 COMMENT=	Paint program (enhanced xpaint)
 # quite like isc, but copyright needs to mention in documentation as well
 # see the bottom of the included "Help.txt" file
