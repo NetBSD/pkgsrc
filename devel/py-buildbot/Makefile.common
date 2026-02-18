@@ -1,0 +1,18 @@
+# $NetBSD: Makefile.common,v 1.1 2026/02/18 13:46:02 wiz Exp $
+# used by devel/py-buildbot-console-view/Makefile
+# used by devel/py-buildbot-grid-view/Makefile
+# used by devel/py-buildbot-pkg/Makefile
+# used by devel/py-buildbot-waterfall-view/Makefile
+# used by devel/py-buildbot-worker/Makefile
+# used by devel/py-buildbot-www/Makefile
+# used by devel/py-buildbot-badges/Makefile
+
+BBVERSION=	4.3.0
+MAINTAINER=	root@zta.lk
+HOMEPAGE=	https://buildbot.net/
+PKGNAME?=	${PYPKGPREFIX}-${DISTNAME}
+LICENSE=	gnu-gpl-v2
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
+
+.include "../../lang/python/wheel.mk"
