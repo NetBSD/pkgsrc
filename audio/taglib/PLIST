@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/07/25 09:27:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2026/02/18 07:39:31 adam Exp $
 bin/taglib-config
 include/taglib/aifffile.h
 include/taglib/aiffproperties.h
@@ -41,6 +41,16 @@ include/taglib/id3v2tag.h
 include/taglib/infotag.h
 include/taglib/itfile.h
 include/taglib/itproperties.h
+include/taglib/matroskaattachedfile.h
+include/taglib/matroskaattachments.h
+include/taglib/matroskachapter.h
+include/taglib/matroskachapteredition.h
+include/taglib/matroskachapters.h
+include/taglib/matroskaelement.h
+include/taglib/matroskafile.h
+include/taglib/matroskaproperties.h
+include/taglib/matroskasimpletag.h
+include/taglib/matroskatag.h
 include/taglib/modfile.h
 include/taglib/modfilebase.h
 include/taglib/modproperties.h
@@ -51,6 +61,7 @@ include/taglib/mp4file.h
 include/taglib/mp4item.h
 include/taglib/mp4itemfactory.h
 include/taglib/mp4properties.h
+include/taglib/mp4stem.h
 include/taglib/mp4tag.h
 include/taglib/mpcfile.h
 include/taglib/mpcproperties.h
@@ -122,10 +133,10 @@ lib/cmake/taglib/taglib-config.cmake
 lib/cmake/taglib/taglib-targets-noconfig.cmake
 lib/cmake/taglib/taglib-targets.cmake
 lib/libtag.so
-lib/libtag.so.${PKGVERSION}
 lib/libtag.so.2
+lib/libtag.so.2.2.0
 lib/libtag_c.so
-lib/libtag_c.so.${PKGVERSION}
 lib/libtag_c.so.2
+lib/libtag_c.so.2.2.0
 lib/pkgconfig/taglib.pc
 lib/pkgconfig/taglib_c.pc
