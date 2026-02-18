@@ -12,4 +12,6 @@ CSS, JavaScript, C++, etc. Many extensions are available.
 Note: Due to upstream's trademark policies, this package identifies as
 "Nightly" rather than "Firefox" by default.
 
-This package provides Firefox 128 Extended Support Release.
+This package provides Firefox 128 Extended Support Release. Note this
+package is past end-of-life (September 2025) and is no longer receiving
+security updates.
