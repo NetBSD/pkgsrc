@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2025/08/11 11:58:19 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/02/18 07:58:02 wiz Exp $
 
 DISTNAME=	x265_4.1
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -6,7 +6,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	https://bitbucket.org/multicoreware/x265_git/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.x265.org/
+HOMEPAGE=	https://www.x265.org/
 COMMENT=	High Efficiency Video Coding (HEVC)
 LICENSE=	gnu-gpl-v2
 
