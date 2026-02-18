@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1232 2026/02/18 07:31:11 wen Exp $
+$NetBSD: CHANGES-2026,v 1.1233 2026/02/18 07:34:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1659,3 +1659,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/p5-PDF-Reuse-Barcode to 0.09 [wen 2026-02-18]
 	Updated textproc/p5-PDF-Reuse to 0.43 [wen 2026-02-18]
 	Updated textproc/p5-Pod-Abstract to 0.26 [wen 2026-02-18]
+	Updated textproc/p5-PPIx-Utils to 0.004 [wen 2026-02-18]
