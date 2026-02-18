@@ -1,7 +1,39 @@
-$NetBSD: distinfo,v 1.46 2025/01/31 14:33:17 micha Exp $
+$NetBSD: distinfo,v 1.46.8.1 2026/02/18 17:00:59 maya Exp $
 
 BLAKE2s (dillo-3.2.0.tar.gz) = 5316ef138218567801d7ed9491f69c8f30393f91f976ee6980ca9f47e764a2e1
 SHA512 (dillo-3.2.0.tar.gz) = ff6aa64c79a5dac3bd5152e7501a20c129924c20df712003fc2cd0f18ab55886b0959aea4765f3c893e450e9f95781c10d393108cae8240804d4740f8121f066
 Size (dillo-3.2.0.tar.gz) = 1459110 bytes
 SHA1 (patch-configure.ac) = 9e3e7297b559dc70a3b1b61416bf1e97eeb23ca0
 SHA1 (patch-dillo-install-hyphenation) = 27f3a481da421a691c4c39093f010c01abee2515
+SHA1 (patch-dlib_dlib.c) = 0a35c4817abcb5d7a230203962050955ce686c8a
+SHA1 (patch-dlib_dlib.h) = 62ba87d250be1fdc188fbac5a421e2014efdb807
+SHA1 (patch-dpi_bookmarks.c) = cf74d17876e59c8e710f0d659f2c228f92313f15
+SHA1 (patch-dpi_cookies.c) = a1919022ca3a4c9902b4c968a9e66ccc66aa1c9f
+SHA1 (patch-dpi_datauri.c) = 5cc8dc48d91ec3481557f38f6a48ef6d1adff3be
+SHA1 (patch-dpi_downloads.cc) = cacd04e64752b54d209c75d252295ca961080ac4
+SHA1 (patch-dpi_dpiutil.c) = 4f0360a2a58f3984ba1ae1edb09c544f72cc9c4e
+SHA1 (patch-dpi_file.c) = 64518eae1956f00b9785611ecec58573b6af7bd5
+SHA1 (patch-dpi_ftp.c) = a268148ec90e1d5441c0b764ecbf2ae5acca6db3
+SHA1 (patch-dpid_dpidc.c) = 5c20bdbb60a7a24b184b566e5ca91a56dbf56c41
+SHA1 (patch-dpip_dpip.c) = e4ba65b0aa04911484db5b7e337966b22a1e4d5c
+SHA1 (patch-dw_findtext.hh) = d3a27f547c0b3a13438172ba74850cd1854eb53b
+SHA1 (patch-dw_fltkui.cc) = 3e5479c554df3a0dfeaedc8baf05d04c85323f54
+SHA1 (patch-dw_style.cc) = b0116e1f31c6608878ba97007060744a7e91e9a4
+SHA1 (patch-dw_textblock.cc) = 3770f6253b073868123a1db543e5f81a3368f76b
+SHA1 (patch-lout_misc.cc) = c16df31edc312b5f87ec2c20c24432a4d0ba1072
+SHA1 (patch-src_IO_dpi.c) = 7b5f4e96ce4378a4d2a88bf36535b171bc38be6d
+SHA1 (patch-src_IO_http.c) = db2a04569bc9e089c22657052e3575810133575e
+SHA1 (patch-src_IO_tls__openssl.c) = da44290d7b7de51e794e81c12a91091feffab96d
+SHA1 (patch-src_auth.c) = e66959bfa05e7fd92204aaf08a585ffa3b53dcaa
+SHA1 (patch-src_colors.c) = d4818f021c70f1c9b8c71df6a515e726d4e4a374
+SHA1 (patch-src_cookies.c) = 9d9d4e63a7a774c010aa418d287f5cc9f5448491
+SHA1 (patch-src_cssparser.cc) = 780fedfba509e9fb2b2ab04debc9c9b182a0a868
+SHA1 (patch-src_hsts.c) = 6853fb438005120734853296c9bf339bb88876da
+SHA1 (patch-src_html.cc) = c8b61e3d90e724bf57b4ed3a94aa1f85a9f4e997
+SHA1 (patch-src_keys.cc) = 08c83bbc9e770711a1baa664a20003e17351f3db
+SHA1 (patch-src_misc.c) = 62ebb46459cea990b66abfa6f41423003d6d8793
+SHA1 (patch-src_table.cc) = 569e75efe38e84de52cdfa3523b17f12d51752c8
+SHA1 (patch-src_url.c) = 9826c9b1ca79e34e9d83b8f7e0e40dc82e4d3b14
+SHA1 (patch-src_xembed.cc) = 0960dc598bc47e8a713e37e9c6c7d9dc9f0a32fd
+SHA1 (patch-test_dw_dw__anchors__test.cc) = 2b14a0392027e382a89d46d0abad17cfde05c4d6
+SHA1 (patch-test_unit_cookies.c) = a0215d1bbc1ab6b3c45beb2d2c9b2041ce309468
