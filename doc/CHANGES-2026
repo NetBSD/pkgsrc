@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1249 2026/02/18 10:57:34 leot Exp $
+$NetBSD: CHANGES-2026,v 1.1250 2026/02/18 17:12:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1678,3 +1678,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-buildbot-waterfall-view to 4.3.0 [wiz 2026-02-18]
 	Updated devel/py-buildbot-worker to 4.3.0 [wiz 2026-02-18]
 	Updated devel/py-buildbot-www to 4.3.0 [wiz 2026-02-18]
+	Updated www/php-contao-manager to 1.10.11 [taca 2026-02-18]
