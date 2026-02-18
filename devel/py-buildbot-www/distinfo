@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:18:16 nia Exp $
+$NetBSD: distinfo,v 1.10 2026/02/18 10:47:09 wiz Exp $
 
-BLAKE2s (buildbot-www-2.6.0.tar.gz) = 75b798b79185e1aff64dd97363db53373fab4a10b2d1bcf24949ab9481e7397f
-SHA512 (buildbot-www-2.6.0.tar.gz) = c33b9e7f10cbc680978ee38cca1a6e5c71945b648dd87d123440a538732617a4e7239aa9d512480242036282dece5eba583b050f3c2a9a7bb850aea06e8a8c74
-Size (buildbot-www-2.6.0.tar.gz) = 3178015 bytes
+BLAKE2s (buildbot_www-4.3.0.tar.gz) = c5cb3aed0bc17ad92503c521b98098f511303ae5068ccd2012c4b2cb7bd53c63
+SHA512 (buildbot_www-4.3.0.tar.gz) = 313b16e9243d8a53024ab7413ea904f302c6b0bd8a9a755bd352f005e7004c2aea89d753ace0dbf653907da1beacc6ead796cee36db245245e337f35ab9942f2
+Size (buildbot_www-4.3.0.tar.gz) = 430203 bytes
