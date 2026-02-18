@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1234 2026/02/18 07:34:29 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1235 2026/02/18 07:39:13 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1662,3 +1662,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/p5-PPIx-Utils to 0.004 [wen 2026-02-18]
 	Updated databases/postgresql-timescaledb to 2.25.1 [adam 2026-02-18]
 	Updated net/rclone to 1.73.1 [adam 2026-02-18]
+	Updated textproc/p5-Template-Plugin-Autoformat to 2.79 [wen 2026-02-18]
