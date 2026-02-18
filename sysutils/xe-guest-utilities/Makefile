@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/03/31 12:26:19 sborrill Exp $
+# $NetBSD: Makefile,v 1.19 2026/02/18 08:06:48 wiz Exp $
 #
 
 # Values from XenServer 7.0 = 7, 0, 0, 125243
@@ -19,7 +19,7 @@ PKGREVISION=	2
 MASTER_SITES=	http://updates.vmd.citrix.com/XenServer/5.6.0/debian/pool/main/x/xe-guest-utilities/
 
 MAINTAINER=	sborrill@NetBSD.org
-HOMEPAGE=	http://www.xenserver.com/
+HOMEPAGE=	https://www.xenserver.com/
 COMMENT=	VM tools for Citrix XenServer
 LICENSE=	gnu-gpl-v2
 
