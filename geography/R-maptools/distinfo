@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2023/06/03 13:09:14 mef Exp $
+$NetBSD: distinfo,v 1.8 2026/02/18 10:39:42 wiz Exp $
 
 BLAKE2s (R/maptools_1.1-7.tar.gz) = 90303ac2ad6dfb70795b447bbd6f64d98006de4251f41247af4667c1e80fafb1
 SHA512 (R/maptools_1.1-7.tar.gz) = 8b071733e401c4b8117e260bbb6248a6d545ddcd98c23ee656a1ae68b20f3d0cf5f050b1d59434b3586ea0d909a46d7c27a5738de99ce73da90103d8662dda44
 Size (R/maptools_1.1-7.tar.gz) = 1381947 bytes
+SHA1 (patch-src_pip.c) = a119e3d8b68bb9411f78ac132bc566873d8f90ba
