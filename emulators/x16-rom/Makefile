@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/10/16 04:21:48 thorpej Exp $
+# $NetBSD: Makefile,v 1.9 2026/02/18 07:57:29 wiz Exp $
 
 DISTNAME=	x16-rom-48
 CATEGORIES=	emulators
@@ -10,7 +10,7 @@ GITHUB_TAG=	r${PKGVERSION_NOREV}
 MAKE_JOBS_SAFE=	no
 
 MAINTAINER=	thorpej@NetBSD.org
-HOMEPAGE=	http://commanderx16.com/
+HOMEPAGE=	https://commanderx16.com/
 COMMENT=	ROM for the Commander X16 computer system
 LICENSE=	commander-x16-rom-license
 
