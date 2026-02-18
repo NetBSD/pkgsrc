@@ -1,4 +1,4 @@
-# $NetBSD: redmine.mk,v 1.15 2026/02/11 08:28:42 taca Exp $
+# $NetBSD: redmine.mk,v 1.16 2026/02/18 13:28:58 taca Exp $
 
 .if !defined(_RUBY_REDMINE_MK)
 _RUBY_REDMINE_MK=	# defined
@@ -10,7 +10,7 @@ _RUBY_REDMINE_MK=	# defined
 #	Select default Redmine version.
 #
 #	Possible values: 51 60 61
-#	Default: 60
+#	Default: 61
 #
 #
 # === Infrastructure variables ===
