@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1235 2026/02/18 07:39:13 wen Exp $
+$NetBSD: CHANGES-2026,v 1.1236 2026/02/18 07:41:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1663,3 +1663,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/postgresql-timescaledb to 2.25.1 [adam 2026-02-18]
 	Updated net/rclone to 1.73.1 [adam 2026-02-18]
 	Updated textproc/p5-Template-Plugin-Autoformat to 2.79 [wen 2026-02-18]
+	Updated audio/taglib to 2.2 [adam 2026-02-18]
+	Updated textproc/py-sphinx-autodoc-typehints to 3.6.3 [adam 2026-02-18]
