@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1236 2026/02/18 07:41:02 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1237 2026/02/18 08:46:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1665,3 +1665,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/p5-Template-Plugin-Autoformat to 2.79 [wen 2026-02-18]
 	Updated audio/taglib to 2.2 [adam 2026-02-18]
 	Updated textproc/py-sphinx-autodoc-typehints to 3.6.3 [adam 2026-02-18]
+	Updated biology/py-dna-features-viewer to 3.1.5 [wiz 2026-02-18]
