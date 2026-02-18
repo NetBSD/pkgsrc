@@ -1,4 +1,4 @@
-# $NetBSD: redmine.mk,v 1.16 2026/02/18 13:28:58 taca Exp $
+# $NetBSD: redmine.mk,v 1.17 2026/02/18 16:26:21 taca Exp $
 
 .if !defined(_RUBY_REDMINE_MK)
 _RUBY_REDMINE_MK=	# defined
@@ -54,8 +54,8 @@ RM_VERSION_REQD?=	${PKGNAME_REQD:C/${RUBY_PKGPREFIX}-redmine([0-9]+)-.*/\1/}
 .  endif
 .endif
 
-RM_VERSION_DEFAULT?=	60
-RM_VERSIONS_SUPPORTED?=	60 61 51
+RM_VERSION_DEFAULT?=	61
+RM_VERSIONS_SUPPORTED?=	61 60 51
 
 RM_VERSION?=	# empty
 RM_VER?=	# empty
