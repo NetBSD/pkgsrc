@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2025/07/04 08:48:19 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/02/18 07:15:26 wen Exp $
 
-DISTNAME=	ODF-lpOD-2.001
+DISTNAME=	ODF-lpOD-2.100
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc converters perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ODF/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AB/ABEVERLEY/}
 
 MAINTAINER=	ef@math.uni-bonn.de
 LICENSE=	gnu-gpl-v3 AND apache-2.0
@@ -13,10 +12,6 @@ COMMENT=	OpenDocument management interface
 
 DEPENDS+=	p5-XML-Twig>=3.34:../../textproc/p5-XML-Twig
 DEPENDS+=	p5-Archive-Zip>=1.30:../../archivers/p5-Archive-Zip
-# File::Temp>=0.12
-# File::Find>=1.01
-# Time::Local>=1.07
-# File::Basename>=2.76
 DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
 DEPENDS+=	p5-File-Type-[0-9]*:../../devel/p5-File-Type
 DEPENDS+=	p5-Image-Size-[0-9]*:../../graphics/p5-Image-Size

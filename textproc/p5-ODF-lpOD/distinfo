@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/07/29 07:51:27 wen Exp $
+$NetBSD: distinfo,v 1.7 2026/02/18 07:15:26 wen Exp $
 
-BLAKE2s (ODF-lpOD-2.001.tar.gz) = 1e4fe709bd5f6149966ae9f96abc91ea97fc1cb1a0ef71a8ed7ec86bd1d378e3
-SHA512 (ODF-lpOD-2.001.tar.gz) = 536d800ded0968d53b0f71c6b6eddb073abfc84a47898de140dca00956025a5e8817a21d2e566b50e19786fac6d32a42c4e2919824a7e1ef13033e9dd3428c88
-Size (ODF-lpOD-2.001.tar.gz) = 252111 bytes
+BLAKE2s (ODF-lpOD-2.100.tar.gz) = 10ea950697df625eece48f513d579c04e2c6000fd5ad3e5af92042103da3a9ea
+SHA512 (ODF-lpOD-2.100.tar.gz) = 9c084e53f3a482834861ce3bf039fdcaeb3e0c784e26835e3b3e85b0f0b5acec64f3cf78367c8ff6a59564bdcdfe83c86efb2211d8740e1791cc6c34eefdc7be
+Size (ODF-lpOD-2.100.tar.gz) = 251847 bytes
