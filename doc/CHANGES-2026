@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1229 2026/02/18 07:21:53 wen Exp $
+$NetBSD: CHANGES-2026,v 1.1230 2026/02/18 07:25:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1656,3 +1656,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/py-evalidate version 2.1.3 [wiz 2026-02-17]
 	Updated textproc/p5-ODF-lpOD to 2.100 [wen 2026-02-18]
 	Updated textproc/p5-PDF-API2 to 2.048 [wen 2026-02-18]
+	Updated textproc/p5-PDF-Reuse-Barcode to 0.09 [wen 2026-02-18]
