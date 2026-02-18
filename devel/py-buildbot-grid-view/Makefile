@@ -1,22 +1,16 @@
-# $NetBSD: Makefile,v 1.17 2026/01/06 11:18:42 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/02/18 10:47:08 wiz Exp $
 
-DISTNAME=	buildbot-grid-view-2.6.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	buildbot_grid_view-${BBVERSION}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/buildbot-grid-view/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://buildbot.net/
 COMMENT=	Grid View Plugin for the buildbot CI system
-LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-buildbot-[0-9]*:../../devel/py-buildbot
 TOOL_DEPENDS+=	${PYPKGPREFIX}-buildbot-pkg-[0-9]*:../../devel/py-buildbot-pkg
+DEPENDS+=	${PYPKGPREFIX}-buildbot-[0-9]*:../../devel/py-buildbot
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 313 # py-sphinx, py-Tempita
-
-.include "../../lang/python/egg.mk"
+.include "../../devel/py-buildbot/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

@@ -1,26 +1,16 @@
-# $NetBSD: Makefile,v 1.21 2026/01/06 11:18:42 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/02/18 10:47:09 wiz Exp $
 
-DISTNAME=	buildbot-www-2.6.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	buildbot_www-${BBVERSION}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/buildbot-www/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://buildbot.net/
 COMMENT=	Web frontend for the buildbot CI system
-LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-buildbot-[0-9]*:../../devel/py-buildbot
 TOOL_DEPENDS+=	${PYPKGPREFIX}-buildbot-pkg-[0-9]*:../../devel/py-buildbot-pkg
-TOOL_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TOOL_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-TOOL_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-buildbot-[0-9]*:../../devel/py-buildbot
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 313 # py-sphinx, py-Tempita
-
-.include "../../lang/python/egg.mk"
+.include "../../devel/py-buildbot/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
