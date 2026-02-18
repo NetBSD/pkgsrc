@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.21 2026/02/02 08:49:57 adam Exp $
+# $NetBSD: go-modules.mk,v 1.22 2026/02/18 07:33:27 adam Exp $
 
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20230120002735-62a210ff1fd5.mod
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20230120002735-62a210ff1fd5.zip
@@ -57,8 +57,8 @@ GO_MODULE_FILES+=	github.com/!azure/go-ntlmssp/@v/v0.0.2-0.20251110135918-10b7b7
 GO_MODULE_FILES+=	github.com/!azure/go-ntlmssp/@v/v0.0.2-0.20251110135918-10b7b7e7cd26.zip
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v0.3.1.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/xgb/@v/v0.0.0-20160522181843-27f122750802.mod
-GO_MODULE_FILES+=	github.com/!filen!cloud!dienste/filen-sdk-go/@v/v0.0.35.mod
-GO_MODULE_FILES+=	github.com/!filen!cloud!dienste/filen-sdk-go/@v/v0.0.35.zip
+GO_MODULE_FILES+=	github.com/!filen!cloud!dienste/filen-sdk-go/@v/v0.0.37.mod
+GO_MODULE_FILES+=	github.com/!filen!cloud!dienste/filen-sdk-go/@v/v0.0.37.zip
 GO_MODULE_FILES+=	github.com/!files-com/files-sdk-go/v3/@v/v3.2.264.mod
 GO_MODULE_FILES+=	github.com/!files-com/files-sdk-go/v3/@v/v3.2.264.zip
 GO_MODULE_FILES+=	github.com/!i!b!m/go-sdk-core/v5/@v/v5.18.5.mod
@@ -250,8 +250,8 @@ GO_MODULE_FILES+=	github.com/gdamore/tcell/v2/@v/v2.9.0.mod
 GO_MODULE_FILES+=	github.com/gdamore/tcell/v2/@v/v2.9.0.zip
 GO_MODULE_FILES+=	github.com/geoffgarside/ber/@v/v1.2.0.mod
 GO_MODULE_FILES+=	github.com/geoffgarside/ber/@v/v1.2.0.zip
-GO_MODULE_FILES+=	github.com/go-chi/chi/v5/@v/v5.2.3.mod
-GO_MODULE_FILES+=	github.com/go-chi/chi/v5/@v/v5.2.3.zip
+GO_MODULE_FILES+=	github.com/go-chi/chi/v5/@v/v5.2.5.mod
+GO_MODULE_FILES+=	github.com/go-chi/chi/v5/@v/v5.2.5.zip
 GO_MODULE_FILES+=	github.com/go-darwin/apfs/@v/v0.0.0-20211011131704-f84b94dbf348.mod
 GO_MODULE_FILES+=	github.com/go-darwin/apfs/@v/v0.0.0-20211011131704-f84b94dbf348.zip
 GO_MODULE_FILES+=	github.com/go-git/go-billy/v5/@v/v5.6.2.mod
@@ -373,8 +373,8 @@ GO_MODULE_FILES+=	github.com/hashicorp/golang-lru/v2/@v/v2.0.7.zip
 GO_MODULE_FILES+=	github.com/ianlancetaylor/demangle/@v/v0.0.0-20181102032728-5e5cf60278f6.mod
 GO_MODULE_FILES+=	github.com/inconshreveable/mousetrap/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/inconshreveable/mousetrap/@v/v1.1.0.zip
-GO_MODULE_FILES+=	github.com/internxt/rclone-adapter/@v/v0.0.0-20260130171252-c3c6ebb49276.mod
-GO_MODULE_FILES+=	github.com/internxt/rclone-adapter/@v/v0.0.0-20260130171252-c3c6ebb49276.zip
+GO_MODULE_FILES+=	github.com/internxt/rclone-adapter/@v/v0.0.0-20260213125353-6f59c89fcb7c.mod
+GO_MODULE_FILES+=	github.com/internxt/rclone-adapter/@v/v0.0.0-20260213125353-6f59c89fcb7c.zip
 GO_MODULE_FILES+=	github.com/jcmturner/aescts/v2/@v/v2.0.0.mod
 GO_MODULE_FILES+=	github.com/jcmturner/aescts/v2/@v/v2.0.0.zip
 GO_MODULE_FILES+=	github.com/jcmturner/dnsutils/v2/@v/v2.0.0.mod
