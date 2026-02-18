@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:18:14 nia Exp $
+$NetBSD: distinfo,v 1.4 2026/02/18 10:47:08 wiz Exp $
 
-BLAKE2s (buildbot-badges-2.6.0.tar.gz) = 3ff8d9b6a8450f319cff70d03cdeed503c7df9159334940dbb7b02001ae096bf
-SHA512 (buildbot-badges-2.6.0.tar.gz) = 38718a33393494db90cf0b28931d6e6523f9b34bc938143c1e83d15edb9a264a248ea9fdc9928e19d06bc1625a4a9986bfe208333c69ff390b64b6dbe5e6f485
-Size (buildbot-badges-2.6.0.tar.gz) = 3885 bytes
+BLAKE2s (buildbot_badges-4.3.0.tar.gz) = 7ad66cbd3576de68b1f851347a91d3f3e00e23a305fcc7ed15bf1de1b625c228
+SHA512 (buildbot_badges-4.3.0.tar.gz) = d12c761e2a7268ac79daecd92caeee5d755d14f70df3d18681c4767e9b62af12b91b2399b44fdbe4b0d05a124854e8fd0b7fe0ac319a06ab77d76dbe4a2e9e74
+Size (buildbot_badges-4.3.0.tar.gz) = 4662 bytes

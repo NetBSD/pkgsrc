@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:18:16 nia Exp $
+$NetBSD: distinfo,v 1.11 2026/02/18 10:47:09 wiz Exp $
 
-BLAKE2s (buildbot-worker-2.6.0.tar.gz) = 949e42caef8bb42df47d39ff95e1f9e474c27126abbc521e9571a4214b73e0c5
-SHA512 (buildbot-worker-2.6.0.tar.gz) = 21070d6e8e54fb34e2d75c67c10e8ee36a4730de4f4a54605ffb689ef37bc1642e327c3935b7db25bb972f6ec0649c419e9eed61a17c6b4ca9db082940f2ee1b
-Size (buildbot-worker-2.6.0.tar.gz) = 115284 bytes
+BLAKE2s (buildbot_worker-4.3.0.tar.gz) = 090639b907cbe22141ac385127ffb86c9794444ee8180afb925a067aae6dfbab
+SHA512 (buildbot_worker-4.3.0.tar.gz) = fb753efe10f1202274b541f32ec26ef81886e0db12c61c86b958ad945e81fb3f7b140de414345dfd5b97c4506be17855e08bb43ffad227a3adaed6ffbe80917c
+Size (buildbot_worker-4.3.0.tar.gz) = 135399 bytes

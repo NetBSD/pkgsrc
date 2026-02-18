@@ -1,22 +1,16 @@
-# $NetBSD: Makefile,v 1.17 2026/01/07 08:07:25 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/02/18 10:47:09 wiz Exp $
 
-DISTNAME=	buildbot-waterfall-view-2.6.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	buildbot_waterfall_view-${BBVERSION}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/buildbot-waterfall-view/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://buildbot.net/
 COMMENT=	Waterfall Plugin for the buildbot CI system
-LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-buildbot-[0-9]*:../../devel/py-buildbot
 TOOL_DEPENDS+=	${PYPKGPREFIX}-buildbot-pkg-[0-9]*:../../devel/py-buildbot-pkg
+DEPENDS+=	${PYPKGPREFIX}-buildbot-[0-9]*:../../devel/py-buildbot
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 313 # py-shinx, py-Tempita
-
-.include "../../lang/python/egg.mk"
+.include "../../devel/py-buildbot/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
