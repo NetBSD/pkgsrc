@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2026/01/07 08:49:27 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2026/02/18 07:59:26 wiz Exp $
 
 DISTNAME=		xaos-4.2.1
 PKGREVISION=		27
@@ -8,7 +8,7 @@ GITHUB_PROJECT=		XaoS
 GITHUB_TAG=		refs/tags/release-${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://matek.hu/xaos/
+HOMEPAGE=		https://xaos.app/
 COMMENT=		Zoomable fractal rendering doodad
 LICENSE=		gnu-gpl-v2
 
