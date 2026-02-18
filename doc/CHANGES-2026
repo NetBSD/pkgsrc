@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1248 2026/02/18 10:48:32 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1249 2026/02/18 10:57:34 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1649,7 +1649,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-lama to 8.4.1nb1 [wiz 2026-02-17]
 	Updated net/php-baikal to 0.11.1 [wiz 2026-02-17]
 	Added misc/stellarsolver version 2.7 [markd 2026-02-17]
-	Updated misk/kstars to 3.8.1 [markd 2026-02-17]
+	Updated misc/kstars to 3.8.1 [markd 2026-02-17]
 	Updated editors/vim-share to 9.2.0015 [morr 2026-02-17]
 	Added time/py-croniter version 6.0.0 [wiz 2026-02-17]
 	Added devel/py-unidiff version 0.7.5 [wiz 2026-02-17]
