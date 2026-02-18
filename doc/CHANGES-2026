@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1241 2026/02/18 10:47:31 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1242 2026/02/18 10:47:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1671,3 +1671,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/R-maptools to 1.1.7nb1 [wiz 2026-02-18]
 	Added textproc/py-pugjs version 6.0.1 [wiz 2026-02-18]
 	Updated devel/py-buildbot to 4.3.0 [wiz 2026-02-18]
+	Updated devel/py-buildbot-badges to 4.3.0 [wiz 2026-02-18]
