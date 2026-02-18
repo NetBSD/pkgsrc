@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.278 2026/02/16 23:44:02 mef Exp $
+# $NetBSD: Makefile,v 1.279 2026/02/18 08:50:07 wiz Exp $
 
 #
 # If updating this package, please try to ensure PLIST.Darwin is kept in sync
@@ -18,6 +18,10 @@ USE_GCC_RUNTIME=	yes
 # https://cran.r-project.org/doc/manuals/r-release/NEWS.pdf
 # above line mentions c23 as default compiler for R, but c23 (gcc15) is N/A ?
 # USE_CC_FEATURES+=	c23
+
+# R-4.5.2/tests/Pkgs/pkgA: Cannot restore extended attributes: com.apple.provenance com.apple.provenance: Unknown error: -1
+USE_TOOLS+=		gtar
+EXTRACT_USING=		gtar
 
 BUILD_TARGET=		all info
 INSTALL_TARGET=		install install-info
