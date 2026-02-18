@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q4,v 1.1.2.11 2026/02/07 22:13:18 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q4,v 1.1.2.12 2026/02/18 17:01:28 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q4 branch:
 
@@ -43,3 +43,9 @@ textproc/expat: Security fix
 Pullup ticket #7050 - requested by morr
 editors/vim-lang: Security fix
 editors/vim-share: Security fix
+
+Pullup ticket #7051 - requested by gutteridge
+multimedia/libvpx: Security fix
+
+Pullup ticket #7052 - requested by leot
+www/dillo: Bug fix
