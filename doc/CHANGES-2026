@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1246 2026/02/18 10:48:15 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1247 2026/02/18 10:48:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1676,3 +1676,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-buildbot-grid-view to 4.3.0 [wiz 2026-02-18]
 	Updated devel/py-buildbot-pkg to 4.3.0 [wiz 2026-02-18]
 	Updated devel/py-buildbot-waterfall-view to 4.3.0 [wiz 2026-02-18]
+	Updated devel/py-buildbot-worker to 4.3.0 [wiz 2026-02-18]
