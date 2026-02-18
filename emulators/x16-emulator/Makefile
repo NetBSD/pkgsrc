@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/10/23 20:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/02/18 07:57:15 wiz Exp $
 
 DISTNAME=	x16-emulator-48
 PKGREVISION=	2
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	x16-emulator
 GITHUB_TAG=	r${PKGVERSION_NOREV}
 
 MAINTAINER=	thorpej@NetBSD.org
-HOMEPAGE=	http://commanderx16.com/
+HOMEPAGE=	https://commanderx16.com/
 COMMENT=	Emulator for the Commander X16 computer system
 LICENSE=	2-clause-bsd
 
