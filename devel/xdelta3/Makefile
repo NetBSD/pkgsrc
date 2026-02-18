@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/04/26 19:47:29 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/02/18 08:05:58 wiz Exp $
 
 DISTNAME=		xdelta3-3.1.0
 CATEGORIES=		devel
@@ -7,7 +7,7 @@ GITHUB_PROJECT=		xdelta-gpl
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://xdelta.org/
+HOMEPAGE=		https://github.com/jmacd/xdelta
 COMMENT=		Enhanced diff that works on binary files (version 3.x)
 LICENSE=		gnu-gpl-v2
 
