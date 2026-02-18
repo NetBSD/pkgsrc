@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2026/02/17 13:37:07 pin Exp $
+# $NetBSD: Makefile,v 1.85 2026/02/18 09:58:59 pin Exp $
 
 DISTNAME=	ncspot-1.3.3
 CATEGORIES=	audio
@@ -12,6 +12,8 @@ LICENSE=	2-clause-bsd
 
 # See, https://github.com/briansmith/ring/issues/1999
 .include "../../mk/compiler/i386-sse2.mk"
+
+TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
