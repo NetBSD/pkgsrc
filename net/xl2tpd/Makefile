@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/12/09 21:05:34 adam Exp $
-#
+# $NetBSD: Makefile,v 1.6 2026/02/19 08:34:48 wiz Exp $
 
 DISTNAME=		xl2tpd-20171013
 CATEGORIES=		net
@@ -8,7 +7,7 @@ EXTRACT_SUFX=		.zip
 WRKSRC=			${WRKDIR}/xl2tpd-master
 
 MAINTAINER=		christos@NetBSD.org
-HOMEPAGE=		http://www.xelerance.com/services/software/xl2tpd/
+HOMEPAGE=		https://github.com/xelerance/xl2tpd
 COMMENT=		Layer 2 Protocol Daemon
 
 EXDIR=			${PREFIX}/share/examples
