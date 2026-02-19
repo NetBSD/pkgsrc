@@ -1,4 +1,4 @@
-$NetBSD: patch-SConstruct,v 1.12 2025/12/07 16:46:10 maya Exp $
+$NetBSD: patch-SConstruct,v 1.13 2026/02/19 08:08:51 wiz Exp $
 
 Add support for NetBSD and Dragonfly.
 Avoid -fatal-warnings: ld might complain about conflicting versions.
@@ -8,10 +8,19 @@ Don't mess with the linker.
 Respect LDFLAGS and CXXFLAGS.
 Fix bogus check for mongoc-1.0 library - we need call=somefunction();
   otherwise it's part of the command line arguments to the compiler
+Fix build with setuptools 82 (pkg_resources removal).
 
 --- SConstruct.orig	2024-01-04 00:34:55.000000000 +0000
 +++ SConstruct
-@@ -1259,6 +1259,7 @@ envDict = dict(BUILD_ROOT=buildDir,
+@@ -16,7 +16,6 @@ from glob import glob
+ import uuid
+ from glob import glob
+ 
+-from pkg_resources import parse_version
+ 
+ import SCons
+ 
+@@ -1259,6 +1258,7 @@ envDict = dict(BUILD_ROOT=buildDir,
                 CONFIGURELOG='$BUILD_ROOT/scons/config.log',
                 CONFIG_HEADER_DEFINES={},
                 LIBDEPS_TAG_EXPANSIONS=[],
@@ -19,7 +28,7 @@ Fix bogus check for mongoc-1.0 library - we need call=somefunction();
                 )
  
  # By default, we will get the normal SCons tool search. But if the
-@@ -1448,7 +1449,9 @@ def CheckForProcessor(context, which_arc
+@@ -1448,7 +1448,9 @@ os_macros = {
  os_macros = {
      "windows": "defined(_WIN32)",
      "solaris": "defined(__sun)",
@@ -29,7 +38,7 @@ Fix bogus check for mongoc-1.0 library - we need call=somefunction();
      "openbsd": "defined(__OpenBSD__)",
      "iOS": "defined(__APPLE__) && TARGET_OS_IOS && !TARGET_OS_SIMULATOR",
      "iOS-sim": "defined(__APPLE__) && TARGET_OS_IOS && TARGET_OS_SIMULATOR",
-@@ -1584,7 +1587,7 @@ if env.TargetOSIs('posix'):
+@@ -1584,7 +1586,7 @@ if env.TargetOSIs('posix'):
          env.Append(
              CCFLAGS_WERROR=["-Werror"],
              CXXFLAGS_WERROR=['-Werror=unused-result'] if env.ToolchainIs('clang') else [],
@@ -38,7 +47,7 @@ Fix bogus check for mongoc-1.0 library - we need call=somefunction();
          )
  elif env.TargetOSIs('windows'):
          env.Append(
-@@ -1999,7 +2002,7 @@ if env['_LIBDEPS'] == '$_LIBDEPS_LIBS':
+@@ -1999,7 +2001,7 @@ if env['_LIBDEPS'] == '$_LIBDEPS_LIBS':
      if not env.TargetOSIs('solaris', 'darwin', 'windows', 'openbsd'):
          env.Tool('thin_archive')
  
@@ -47,7 +56,7 @@ Fix bogus check for mongoc-1.0 library - we need call=somefunction();
      env['LINK_WHOLE_ARCHIVE_LIB_START'] = '-Wl,--whole-archive'
      env['LINK_WHOLE_ARCHIVE_LIB_END'] = '-Wl,--no-whole-archive'
      env['LINK_AS_NEEDED_LIB_START'] = '-Wl,--as-needed'
-@@ -2176,14 +2179,14 @@ if env.TargetOSIs('linux'):
+@@ -2176,14 +2178,14 @@ elif env.TargetOSIs('solaris'):
  elif env.TargetOSIs('solaris'):
       env.Append( LIBS=["socket","resolv","lgrp"] )
  
@@ -64,7 +73,7 @@ Fix bogus check for mongoc-1.0 library - we need call=somefunction();
      env.Append( LIBS=[ "kvm" ] )
  
  elif env.TargetOSIs('windows'):
-@@ -2485,7 +2488,6 @@ if env.TargetOSIs('posix'):
+@@ -2485,7 +2487,6 @@ if env.TargetOSIs('posix'):
  
      # -Winvalid-pch Warn if a precompiled header (see Precompiled Headers) is found in the search path but can't be used.
      env.Append( CCFLAGS=["-fasynchronous-unwind-tables",
@@ -72,7 +81,7 @@ Fix bogus check for mongoc-1.0 library - we need call=somefunction();
                           "-Wall",
                           "-Wsign-compare",
                           "-Wno-unknown-pragmas",
-@@ -3010,7 +3012,7 @@ def doConfigure(myenv):
+@@ -3010,7 +3011,7 @@ def doConfigure(myenv):
          myenv.AddMethod(
              functools.partial(var_func, var=var, func=CheckFlag), f"Check{var}Supported")
  
@@ -81,7 +90,7 @@ Fix bogus check for mongoc-1.0 library - we need call=somefunction();
          # This tells clang/gcc to use the gold linker if it is available - we prefer the gold linker
          # because it is much faster. Don't use it if the user has already configured another linker
          # selection manually.
-@@ -3406,9 +3408,6 @@ def doConfigure(myenv):
+@@ -3406,9 +3407,6 @@ def doConfigure(myenv):
      if usingLibStdCxx:
          def CheckModernLibStdCxx(context):
              test_body = """
@@ -91,7 +100,7 @@ Fix bogus check for mongoc-1.0 library - we need call=somefunction();
              """
  
              context.Message('Checking for libstdc++ 5.3.0 or better... ')
-@@ -3819,7 +3818,7 @@ def doConfigure(myenv):
+@@ -3819,7 +3817,7 @@ def doConfigure(myenv):
          # Explicitly use the new gnu hash section if the linker offers
          # it, except on android since older runtimes seem to not
          # support it. For that platform, use 'both'.
@@ -100,7 +109,7 @@ Fix bogus check for mongoc-1.0 library - we need call=somefunction();
              myenv.AddToLINKFLAGSIfSupported('-Wl,--hash-style=both')
          else:
              myenv.AddToLINKFLAGSIfSupported('-Wl,--hash-style=gnu')
-@@ -4110,8 +4109,9 @@ def doConfigure(myenv):
+@@ -4110,8 +4108,9 @@ def doConfigure(myenv):
      def checkOpenSSL(conf):
          sslLibName = "ssl"
          cryptoLibName = "crypto"
@@ -112,7 +121,7 @@ Fix bogus check for mongoc-1.0 library - we need call=somefunction();
              sslLinkDependencies = ["crypto"]
  
          if conf.env.TargetOSIs('windows'):
-@@ -4448,7 +4448,7 @@ def doConfigure(myenv):
+@@ -4448,7 +4447,7 @@ def doConfigure(myenv):
          myenv.ConfError("Couldn't find SASL header/libraries")
  
      # requires ports devel/libexecinfo to be installed
@@ -121,7 +130,7 @@ Fix bogus check for mongoc-1.0 library - we need call=somefunction();
          if not conf.CheckLib("execinfo"):
              myenv.ConfError("Cannot find libexecinfo, please install devel/libexecinfo.")
  
-@@ -4586,7 +4586,7 @@ def doConfigure(myenv):
+@@ -4586,7 +4585,7 @@ def doConfigure(myenv):
                  ["mongoc-1.0"],
                  ["mongoc/mongoc.h"],
                  "C",
@@ -130,3 +139,14 @@ Fix bogus check for mongoc-1.0 library - we need call=somefunction();
                  autoadd=False ):
              conf.env['MONGO_HAVE_LIBMONGOC'] = True
          if not conf.env['MONGO_HAVE_LIBMONGOC'] and mongoc_mode == 'on':
+@@ -4786,10 +4785,6 @@ if get_option('ninja') != 'disabled':
+     env['NINJA_MAX_JOBS'] = cpu_count
+ 
+ if get_option('ninja') != 'disabled':
+-
+-    if 'ICECREAM_VERSION' in env and not env.get('CCACHE', None):
+-        if env['ICECREAM_VERSION'] < parse_version("1.2"):
+-            env.FatalError("Use of ccache is mandatory with --ninja and icecream older than 1.2. You are running {}.".format(env['ICECREAM_VERSION']))
+ 
+     ninja_builder = Tool("ninja")
+     env["NINJA_BUILDDIR"] = env.Dir("$NINJA_BUILDDIR")
