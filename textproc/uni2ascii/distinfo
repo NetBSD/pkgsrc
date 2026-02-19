@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:23:37 nia Exp $
+$NetBSD: distinfo,v 1.7 2026/02/19 15:19:19 wiz Exp $
 
-BLAKE2s (uni2ascii-4.18.tar.bz2) = daca3d826ea59745e5dc2830a8f63d25bd19104b3729aeeb893c85c5ebfe698a
-SHA512 (uni2ascii-4.18.tar.bz2) = 7ec94576b4ad794e3d4a080551b0cbed8c4e9084eda6505bb5974c06f2e043ba20d293abed5b744fb1abff7897b4719ca2b43e5214dbd897ea44dfae8778eb21
-Size (uni2ascii-4.18.tar.bz2) = 127125 bytes
+BLAKE2s (uni2ascii-4.20.tar.bz2) = 6daaac9d59206b9851dabe2d201dab5ef8ae264780fbe8b91300bca0fa428c0c
+SHA512 (uni2ascii-4.20.tar.bz2) = fca5251ef8ab6817d602f2049113d362dbac3b01cda98cc0fe2831f5502d77599659898b1f4fcfc7f29cb274ef7cc2d05568589ab0cde2c3eb11192de27c45c9
+Size (uni2ascii-4.20.tar.bz2) = 166554 bytes
+SHA1 (patch-enttbl.c) = eb11bceb8fc438d3ed41b8c1994823077ebc77b8
+SHA1 (patch-uni2ascii.c) = 30592178afd96088c7889bbb3fee1dfa1356417b
