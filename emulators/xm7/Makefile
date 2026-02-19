@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2025/05/26 19:37:16 zafer Exp $
-#
+# $NetBSD: Makefile,v 1.36 2026/02/19 08:35:37 wiz Exp $
 
 DISTNAME=		xm71020s
 PKGNAME=		xm7-1020s
@@ -8,7 +7,7 @@ MASTER_SITES=		http://www.mirrorservice.org/pub/minix/distfiles/backup/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=		http://yohkai.no-ip.info/fm7/XM7.htm
+#HOMEPAGE=		http://yohkai.no-ip.info/fm7/XM7.htm
 COMMENT=		X11-based FM-7 emulator
 LICENSE=		xm7-license
 
