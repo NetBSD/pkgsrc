@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1257 2026/02/19 08:21:19 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1258 2026/02/19 08:29:18 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1686,3 +1686,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/mise to 2026.2.16 [pin 2026-02-19]
 	Updated textproc/rumdl to 0.1.23 [pin 2026-02-19]
 	Updated databases/py-cassandra-driver to 3.29.3 [wiz 2026-02-19]
+	Added sysutils/xtop version 0.2.1 [pin 2026-02-19]
