@@ -1,4 +1,4 @@
-$NetBSD: patch-tools_binman_control.py,v 1.1 2026/02/19 09:51:43 wiz Exp $
+$NetBSD: patch-tools_binman_control.py,v 1.1 2026/02/19 09:55:00 wiz Exp $
 
 adapted from
 commit 538719cb6a77934d069e0e64f264457a59a9ebfc
