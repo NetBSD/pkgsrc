@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2026/01/19 08:34:23 adam Exp $
+# $NetBSD: Makefile,v 1.89 2026/02/19 14:43:25 wiz Exp $
 
 DISTNAME=	meson-1.10.1
 CATEGORIES=	devel python
@@ -12,13 +12,13 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	ninja-build>=1.7:../../devel/ninja-build
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
 
 CONFLICTS+=	py[0-9]*-meson-[0-9]*
 SUPERSEDES+=	py[0-9]*-meson-[0-9]*
 
 USE_LANGUAGES=	c c++ # c++ for tests
-# XXX both tools are only needed for tests, but itstool:test didn't work
-USE_TOOLS+=	itstool pkg-config
+USE_TOOLS+=	itstool:test pkg-config
 
 SUBST_CLASSES+=		man
 SUBST_SED.man+=		-e "s,share/man,${PKGMANDIR},"
@@ -36,8 +36,8 @@ REPLACE_PYTHON+=	test\ cases/common/14\ configure\ file/test.py.in
 REPLACE_PYTHON+=	test\ cases/windows/8\ find\ program/test-script
 REPLACE_PYTHON+=	tools/*.py
 
-# as of 1.10.0
-# Total passed tests:  491
+# as of 1.10.1
+# Total passed tests:  492
 # Total failed tests:  36
 # Total skipped tests: 107
 
