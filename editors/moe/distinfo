@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2025/08/24 16:24:48 schwarz Exp $
+$NetBSD: distinfo,v 1.3 2026/02/19 22:27:05 schwarz Exp $
 
-BLAKE2s (moe-1.15.tar.lz) = 15999e99ef181c6c4c8d2667e2a6586e6b9eb073b0d10ab1eb1edf8a2148ef08
-SHA512 (moe-1.15.tar.lz) = 3e7ddac70e0298070db98c2e366f4bac0884c08c9200beee0c380cc75068c6469f9f60da6ccdf541ed0729cb685782ed41464ca690bd804b1ab9654168636c26
-Size (moe-1.15.tar.lz) = 93995 bytes
+BLAKE2s (moe-1.16.tar.lz) = 6de66a7d7b3fde526567a72ab50c6dc9a054079b699bdafff784d3d2e4334895
+SHA512 (moe-1.16.tar.lz) = e130a90f9888a83ad1d8819c042cfc110a94360deb7a1b7fb5b926a3f03916d16197c1281a5c80635ba03a56f10a017e01bd3c3977c6b120039e42cdae842b95
+Size (moe-1.16.tar.lz) = 96250 bytes
