@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1267 2026/02/19 15:17:02 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1268 2026/02/19 15:19:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1697,3 +1697,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-libxslt to 1.1.45 [wiz 2026-02-19]
 	Removed textproc/xml2 [wiz 2026-02-19]
 	Removed textproc/libxml [wiz 2026-02-19]
+	Updated textproc/uni2ascii to 4.20 [wiz 2026-02-19]
