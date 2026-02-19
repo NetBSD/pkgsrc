@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1260 2026/02/19 10:20:59 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1261 2026/02/19 14:52:52 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1689,3 +1689,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added sysutils/xtop version 0.2.1 [pin 2026-02-19]
 	Updated wm/i3 to 4.25.1 [wiz 2026-02-19]
 	Updated x11/i3lock to 2.16 [wiz 2026-02-19]
+	Updated net/netatalk4 to 4.4.1 [hauke 2026-02-19]
