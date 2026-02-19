@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1271 2026/02/19 16:57:26 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1272 2026/02/19 22:27:05 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1701,3 +1701,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated fonts/harfbuzz to 12.3.2nb1 [wiz 2026-02-19]
 	Updated textproc/libxmlb to 0.3.25nb1 [wiz 2026-02-19]
 	Updated x11/gtk3 to 3.24.51nb5 [wiz 2026-02-19]
+	Updated editors/moe to 1.16 [schwarz 2026-02-19]
