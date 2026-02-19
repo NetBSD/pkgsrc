@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2025/10/09 07:57:27 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/02/19 08:21:09 wiz Exp $
 
-DISTNAME=	python-driver-3.28.0
+DISTNAME=	python-driver-3.29.3
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}-cassandra/}
-PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=datastax/}
 GITHUB_PROJECT=	python-driver
@@ -14,11 +13,12 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.28:../../devel/py-cython
-DEPENDS+=	${PYPKGPREFIX}-six>=1.9:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-geomet>=0:../../geography/py-geomet
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=0:../../devel/py-mock
 
 WHEEL_NAME=	${DISTNAME:S/python-/cassandra_/}
+
+WRKSRC=		${WRKDIR}/cassandra-${DISTNAME}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
