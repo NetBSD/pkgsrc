@@ -1,4 +1,4 @@
-$NetBSD: patch-SConstruct,v 1.2 2025/04/26 13:53:10 tnn Exp $
+$NetBSD: patch-SConstruct,v 1.3 2026/02/19 08:38:08 wiz Exp $
 
 Add support for NetBSD and Dragonfly.
 Fix locations.
@@ -6,10 +6,20 @@ Don't compile with debug info.
 Don't mess with the linker.
 Respect LDFLAGS and CXXFLAGS.
 Fix compatibility issue with scons 4.9's CheckLibWithHeader
+Fix build with setuptools 82 (pkg_resources removal).
 
---- SConstruct.orig	2024-02-13 08:46:45.000000000 +0000
+--- SConstruct.orig	2025-12-22 23:06:05.000000000 +0000
 +++ SConstruct
-@@ -1189,6 +1189,7 @@ envDict = dict(BUILD_ROOT=buildDir,
+@@ -16,8 +16,6 @@ from glob import glob
+ import uuid
+ from glob import glob
+ 
+-from pkg_resources import parse_version
+-
+ import SCons
+ 
+ # This must be first, even before EnsureSConsVersion, if
+@@ -1189,6 +1187,7 @@ envDict = dict(BUILD_ROOT=buildDir,
                 CONFIGURELOG='$BUILD_ROOT/scons/config.log',
                 CONFIG_HEADER_DEFINES={},
                 LIBDEPS_TAG_EXPANSIONS=[],
@@ -17,7 +27,7 @@ Fix compatibility issue with scons 4.9's CheckLibWithHeader
                 )
  
  # TODO: Remove these when hygienic builds are default.
-@@ -1360,7 +1361,9 @@ def CheckForProcessor(context, which_arc
+@@ -1360,7 +1359,9 @@ os_macros = {
  os_macros = {
      "windows": "defined(_WIN32)",
      "solaris": "defined(__sun)",
@@ -27,7 +37,7 @@ Fix compatibility issue with scons 4.9's CheckLibWithHeader
      "openbsd": "defined(__OpenBSD__)",
      "iOS": "defined(__APPLE__) && TARGET_OS_IOS && !TARGET_OS_SIMULATOR",
      "iOS-sim": "defined(__APPLE__) && TARGET_OS_IOS && TARGET_OS_SIMULATOR",
-@@ -1852,7 +1855,7 @@ if env['_LIBDEPS'] == '$_LIBDEPS_LIBS':
+@@ -1852,7 +1853,7 @@ if env['_LIBDEPS'] == '$_LIBDEPS_LIBS':
      if not env.TargetOSIs('solaris', 'darwin', 'windows', 'openbsd'):
          env.Tool('thin_archive')
  
@@ -36,7 +46,7 @@ Fix compatibility issue with scons 4.9's CheckLibWithHeader
      # NOTE: The leading and trailing spaces here are important. Do not remove them.
      env['LINK_WHOLE_ARCHIVE_LIB_START'] = '-Wl,--whole-archive '
      env['LINK_WHOLE_ARCHIVE_LIB_END'] = ' -Wl,--no-whole-archive'
-@@ -1892,14 +1895,14 @@ if env.TargetOSIs('linux'):
+@@ -1892,14 +1893,14 @@ elif env.TargetOSIs('solaris'):
  elif env.TargetOSIs('solaris'):
       env.Append( LIBS=["socket","resolv","lgrp"] )
  
@@ -53,7 +63,7 @@ Fix compatibility issue with scons 4.9's CheckLibWithHeader
      env.Append( LIBS=[ "kvm" ] )
  
  elif env.TargetOSIs('windows'):
-@@ -2197,7 +2200,6 @@ if env.TargetOSIs('posix'):
+@@ -2197,7 +2198,6 @@ if env.TargetOSIs('posix'):
      env.Append( CCFLAGS=["-fno-omit-frame-pointer",
                           "-fno-strict-aliasing",
                           "-fasynchronous-unwind-tables",
@@ -61,7 +71,7 @@ Fix compatibility issue with scons 4.9's CheckLibWithHeader
                           "-pthread",
                           "-Wall",
                           "-Wsign-compare",
-@@ -2860,9 +2862,9 @@ def doConfigure(myenv):
+@@ -2860,9 +2860,9 @@ def doConfigure(myenv):
      if usingLibStdCxx:
          def CheckModernLibStdCxx(context):
              test_body = """
@@ -74,7 +84,7 @@ Fix compatibility issue with scons 4.9's CheckLibWithHeader
              """
  
              context.Message('Checking for libstdc++ 5.3.0 or better... ')
-@@ -3217,7 +3219,7 @@ def doConfigure(myenv):
+@@ -3217,7 +3217,7 @@ def doConfigure(myenv):
          #
          myenv.Append( CCFLAGS=["/Zc:inline"])
  
@@ -83,7 +93,7 @@ Fix compatibility issue with scons 4.9's CheckLibWithHeader
          # This tells clang/gcc to use the gold linker if it is available - we prefer the gold linker
          # because it is much faster. Don't use it if the user has already configured another linker
          # selection manually.
-@@ -3449,8 +3451,9 @@ def doConfigure(myenv):
+@@ -3449,8 +3449,9 @@ def doConfigure(myenv):
      def checkOpenSSL(conf):
          sslLibName = "ssl"
          cryptoLibName = "crypto"
@@ -95,7 +105,7 @@ Fix compatibility issue with scons 4.9's CheckLibWithHeader
              sslLinkDependencies = ["crypto"]
  
          if conf.env.TargetOSIs('windows'):
-@@ -3499,7 +3502,7 @@ def doConfigure(myenv):
+@@ -3499,7 +3500,7 @@ def doConfigure(myenv):
                  cryptoLibName,
                  ["openssl/crypto.h"],
                  "C",
@@ -104,7 +114,7 @@ Fix compatibility issue with scons 4.9's CheckLibWithHeader
                  autoadd=True):
              maybeIssueDarwinSSLAdvice(conf.env)
              conf.env.ConfError("Couldn't find OpenSSL crypto.h header and library")
-@@ -3656,7 +3659,7 @@ def doConfigure(myenv):
+@@ -3656,7 +3657,7 @@ def doConfigure(myenv):
          if conf.CheckLibWithHeader(
              "curl",
              ["curl/curl.h"], "C",
@@ -113,7 +123,7 @@ Fix compatibility issue with scons 4.9's CheckLibWithHeader
              autoadd=False):
              return True
  
-@@ -3782,12 +3785,12 @@ def doConfigure(myenv):
+@@ -3782,12 +3783,12 @@ def doConfigure(myenv):
              "sasl2",
              ["stddef.h","sasl/sasl.h"],
              "C",
@@ -128,7 +138,7 @@ Fix compatibility issue with scons 4.9's CheckLibWithHeader
          if not conf.CheckLib("execinfo"):
              myenv.ConfError("Cannot find libexecinfo, please install devel/libexecinfo.")
  
-@@ -3947,7 +3950,7 @@ def doConfigure(myenv):
+@@ -3947,7 +3948,7 @@ def doConfigure(myenv):
                  ["mongoc-1.0"],
                  ["mongoc/mongoc.h"],
                  "C",
@@ -137,3 +147,14 @@ Fix compatibility issue with scons 4.9's CheckLibWithHeader
                  autoadd=False ):
              conf.env['MONGO_HAVE_LIBMONGOC'] = "library"
          if not conf.env['MONGO_HAVE_LIBMONGOC'] and env.TargetOSIs('darwin') and conf.CheckMongoCFramework():
+@@ -4130,10 +4131,6 @@ if get_option('ninja') != 'disabled':
+         env.SetOption('num_jobs', cpu_count)
+ 
+ if get_option('ninja') != 'disabled':
+-
+-    if 'ICECREAM_VERSION' in env and not env.get('CCACHE', None):
+-        if env['ICECREAM_VERSION'] < parse_version("1.2"):
+-            env.FatalError("Use of ccache is mandatory with --ninja and icecream older than 1.2. You are running {}.".format(env['ICECREAM_VERSION']))
+ 
+     ninja_builder = Tool("ninja")
+     env["NINJA_BUILDDIR"] = env.Dir("$BUILD_DIR/ninja")
