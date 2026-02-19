@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2024/07/01 02:23:25 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.44 2026/02/19 15:10:30 wiz Exp $
 bin/xslt-config
 bin/xsltproc
 include/libexslt/exslt.h
@@ -18,6 +18,7 @@ include/libxslt/preproc.h
 include/libxslt/security.h
 include/libxslt/templates.h
 include/libxslt/transform.h
+include/libxslt/transformInternals.h
 include/libxslt/variables.h
 include/libxslt/xslt.h
 include/libxslt/xsltInternals.h
