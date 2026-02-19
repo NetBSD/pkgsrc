@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2025/06/30 14:34:14 hauke Exp $
+$NetBSD: distinfo,v 1.2 2026/02/19 14:45:11 hauke Exp $
 
-BLAKE2s (osticket-v1.18.2.zip) = 0d7e6014b49e0136320535ec6bcca4548afaf2423346b6bee1e4f00a84467db0
-SHA512 (osticket-v1.18.2.zip) = 9aa0f88f1ade84aff8be619d2bbe6b8bd0f5cc95b3373e7e500f86d60974412c3d05260c33427842ee58aaf679c4b0a74559a8a57b99376472e52beb11c2697a
-Size (osticket-v1.18.2.zip) = 51768260 bytes
+BLAKE2s (osticket-v1.18.3.zip) = 2371af3e1d0459cab5582df315077552199b65958e329dcd3954168094a5094e
+SHA512 (osticket-v1.18.3.zip) = ae9bf8633eb53f77322b480a6d75ccc5df6dfbf5bea89ab31d33ebfd803601a6a6f04c35e05728132ea007649fb2c8a378ca843250284e2ad2f875fc442606ed
+Size (osticket-v1.18.3.zip) = 51849710 bytes
 SHA1 (patch-include_class.mailer.php) = 9efaf0af5ddecdf770c442fc67dc1181a4f6bdde
 SHA1 (patch-include_mpdf_vendor_paragonie_random__compat_build-phar.sh) = f206340e8adcb46879fc010fe0d89a0e8b30b764
 SHA1 (patch-scp_admin.inc.php) = 3e20e082618b0bfc51bd0f359630753c34c4c93d
