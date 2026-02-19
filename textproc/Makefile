@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1575 2026/02/18 10:43:51 wiz Exp $
+# $NetBSD: Makefile,v 1.1576 2026/02/19 15:17:02 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -547,7 +547,6 @@ SUBDIR+=	libuninameslist
 SUBDIR+=	libunistring
 SUBDIR+=	libxls
 SUBDIR+=	libxlsxwriter
-SUBDIR+=	libxml
 SUBDIR+=	libxml++
 SUBDIR+=	libxml++5.0
 SUBDIR+=	libxml2
@@ -1529,7 +1528,6 @@ SUBDIR+=	xhtml
 SUBDIR+=	xindy
 SUBDIR+=	xleak
 SUBDIR+=	xml-coreutils
-SUBDIR+=	xml2
 SUBDIR+=	xml2doc
 SUBDIR+=	xmlcatmgr
 SUBDIR+=	xmlindent
