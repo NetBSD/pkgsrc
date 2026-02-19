@@ -1,8 +1,15 @@
-# $NetBSD: itstool.mk,v 1.2 2025/01/12 20:35:13 riastradh Exp $
+# $NetBSD: itstool.mk,v 1.3 2026/02/19 14:31:11 wiz Exp $
 
-.if !empty(USE_TOOLS:Mitstool)
+.if !empty(USE_TOOLS:C/:.*//:Mitstool)
+.  if !empty(USE_TOOLS:Mitstool\:test)
+_TOOLS_DEPMETHOD.itstool=      TEST_DEPENDS
+.  else
+_TOOLS_DEPMETHOD.itstool=      TOOL_DEPENDS
+.  endif
+.  if empty(${_TOOLS_DEPMETHOD.itstool}:M${TOOLS_DEPENDS.itstool})
+${_TOOLS_DEPMETHOD.itstool}+=	itstool-[0-9]*:../../textproc/itstool
+.  endif
 TOOLS_CREATE+=		itstool
-TOOLS_DEPENDS.itstool?=	itstool-[0-9]*:../../textproc/itstool
 TOOLS_PATH.itstool=	${TOOLBASE}/bin/itstool
 .else
 #
