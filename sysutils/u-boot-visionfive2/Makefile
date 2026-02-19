@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2026/02/06 10:05:59 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/02/19 09:55:00 wiz Exp $
 
 UBOOT_TARGET=		visionfive2
 UBOOT_VERSION=		2024.10
@@ -11,7 +11,6 @@ post-extract:
 
 MAKE_ENV+=	OPENSBI=${WRKSRC}/fw_dynamic.bin
 
-PATCHDIR=	${.CURDIR}/patches  # Presently, no patching is intended.
 .include "../../sysutils/u-boot/u-boot-riscv64.mk"
 BUILDLINK_DEPMETHOD.libuuid=	build
 .include "../../devel/libuuid/buildlink3.mk"
