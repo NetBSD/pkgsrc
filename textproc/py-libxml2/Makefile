@@ -1,8 +1,5 @@
-# $NetBSD: Makefile,v 1.108 2026/01/07 08:49:07 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2026/02/19 15:12:09 wiz Exp $
 
-PYTHON_27_ACCEPTED=	yes
-
-PKGREVISION= 1
 .include "../../textproc/libxml2/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,10 +9,25 @@ LICENSE=	modified-bsd
 
 USE_GCC_RUNTIME=	yes
 
-PYSETUPSUBDIR=	python
-GNU_CONFIGURE=	yes
+PYSETUPSUBDIR=		python
+GNU_CONFIGURE=		yes
 GNU_CONFIGURE_ICONV=	no
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=		pkg-config
+
+# needed for Python bindings
+CONFIGURE_ARGS+=	--with-docs
+
+TOOL_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
+MAKE_ENV+=	PYTHONPATH=${WRKSRC}/python
+
+WHEEL_NAME=	${DISTNAME:S/-/_python-/}
+
+pre-build:
+	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV} ${MAKE}
 
 # python/setup.py looks in various places for libxml2 and libiconv,
 # including (usually incorrectly) in /usr/include, /usr/local/include
@@ -54,10 +66,8 @@ fix-darwin-install-name:
 		${DESTDIR}${PREFIX}/${PYSITELIB}/libxml2mod.so
 .endif
 
-EGG_NAME=	${DISTNAME:S/-/_python-/}
-
 .include "../../lang/python/batteries-included.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=${PKGVERSION_NOREV}
 .include "../../textproc/libxml2/buildlink3.mk"
