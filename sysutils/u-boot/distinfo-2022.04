@@ -1,6 +1,7 @@
-$NetBSD: distinfo-2022.04,v 1.2 2023/12/18 21:57:35 gutteridge Exp $
+$NetBSD: distinfo-2022.04,v 1.3 2026/02/19 09:37:45 wiz Exp $
 
 BLAKE2s (u-boot-2022.04.tar.bz2) = f30bb94e07143168fc352e2840e4c8517716b90dfbedb196cc26c4d2c4e5b88a
 SHA512 (u-boot-2022.04.tar.bz2) = 113056e542db049eea3b1d1ccbbe52c79539a2f9bb6129d284ec9200dcffec7bd5969821913a9899631575b80991c84ad01bc845b4bba614e42e54466d9f0d64
 Size (u-boot-2022.04.tar.bz2) = 17772787 bytes
 SHA1 (patch-scripts_dtc_pylibfdt_Makefile) = fc3fb6c2aa6ad8e71aecb30839c9e474adcf5229
+SHA1 (patch-tools_binman_control.py) = b5b8fabd359257d5301606140d51f9b592160407
