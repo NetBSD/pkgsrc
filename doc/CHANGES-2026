@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1264 2026/02/19 15:10:38 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1265 2026/02/19 15:12:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1693,3 +1693,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/osticket to 1.18.3 [hauke 2026-02-19]
 	Updated textproc/libxml2 to 2.15.1 [wiz 2026-02-19]
 	Updated textproc/libxslt to 1.1.45 [wiz 2026-02-19]
+	Updated textproc/py-libxml2 to 2.15.1 [wiz 2026-02-19]
