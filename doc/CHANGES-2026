@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1251 2026/02/18 17:15:36 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1252 2026/02/19 07:19:46 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1680,3 +1680,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-buildbot-www to 4.3.0 [wiz 2026-02-18]
 	Updated www/php-contao-manager to 1.10.11 [taca 2026-02-18]
 	Updated net/bind918 to 9.18.45 [taca 2026-02-18]
+	Updated www/hugo to 0.156.0 [triaxx 2026-02-19]
