@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.194 2026/01/07 08:49:05 wiz Exp $
+# $NetBSD: Makefile,v 1.195 2026/02/19 15:09:47 wiz Exp $
 
 .include "../../textproc/libxml2/Makefile.common"
 
-PKGREVISION=	2
 COMMENT=	XML parser library from the GNOME project
 LICENSE=	modified-bsd
 
@@ -15,8 +14,7 @@ GNU_CONFIGURE=		yes
 GNU_CONFIGURE_ICONV=	no
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
-CONFIGURE_ARGS+=	--with-lzma=${BUILDLINK_PREFIX.xz}
-# enable http again, for now - will be removed in 2.15,
+# enable http ABI compatibility (feature is gone)
 # to fix libspatialite:
 # https://www.gaia-gis.it/fossil/libspatialite/tktview?name=2b1697e601
 CONFIGURE_ARGS+=	--with-http
@@ -55,7 +53,6 @@ BUILDLINK_TRANSFORM+=	rm:-Wno-array-bounds
 
 .include "options.mk"
 
-.include "../../archivers/xz/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
