@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/06/30 14:34:14 hauke Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/02/19 14:45:11 hauke Exp $
 share/examples/osticket/apache-osticket.conf
 share/examples/osticket/api_ticket_create.php
 share/examples/osticket/automail.php
@@ -203,6 +203,7 @@ share/osticket/include/class.mailfetch.php
 share/osticket/include/class.mailparse.php
 share/osticket/include/class.message.php
 share/osticket/include/class.migrater.php
+share/osticket/include/class.mime.php
 share/osticket/include/class.misc.php
 share/osticket/include/class.model.php
 share/osticket/include/class.nav.php
@@ -880,11 +881,13 @@ share/osticket/include/mpdf/vendor/composer/installed.php
 share/osticket/include/mpdf/vendor/composer/platform_check.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/.github/CONTRIBUTING.md
 share/osticket/include/mpdf/vendor/mpdf/mpdf/.github/FUNDING.yml
-share/osticket/include/mpdf/vendor/mpdf/mpdf/.github/ISSUE_TEMPLATE/Bug_report.md
-share/osticket/include/mpdf/vendor/mpdf/mpdf/.github/ISSUE_TEMPLATE/Feature_request.md
+share/osticket/include/mpdf/vendor/mpdf/mpdf/.github/ISSUE_TEMPLATE/01_bug_report.yml
+share/osticket/include/mpdf/vendor/mpdf/mpdf/.github/ISSUE_TEMPLATE/02_feature_request.yml
 share/osticket/include/mpdf/vendor/mpdf/mpdf/.github/ISSUE_TEMPLATE/config.yml
+share/osticket/include/mpdf/vendor/mpdf/mpdf/.github/SECURITY.md
 share/osticket/include/mpdf/vendor/mpdf/mpdf/.github/workflows/coverage.yml
 share/osticket/include/mpdf/vendor/mpdf/mpdf/.github/workflows/cs.yml
+share/osticket/include/mpdf/vendor/mpdf/mpdf/.github/workflows/static-analysis.yml
 share/osticket/include/mpdf/vendor/mpdf/mpdf/.github/workflows/tests.yml
 share/osticket/include/mpdf/vendor/mpdf/mpdf/.gitignore
 share/osticket/include/mpdf/vendor/mpdf/mpdf/CHANGELOG.md
@@ -1095,8 +1098,11 @@ share/osticket/include/mpdf/vendor/mpdf/mpdf/data/patterns/sv.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/data/subs_core.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/data/subs_win-1252.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/data/upperCase.php
+share/osticket/include/mpdf/vendor/mpdf/mpdf/phpstan-baseline.neon
+share/osticket/include/mpdf/vendor/mpdf/mpdf/phpstan.neon
 share/osticket/include/mpdf/vendor/mpdf/mpdf/phpunit.xml
 share/osticket/include/mpdf/vendor/mpdf/mpdf/ruleset.xml
+share/osticket/include/mpdf/vendor/mpdf/mpdf/src/AssetFetcher.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Barcode.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Barcode/AbstractBarcode.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Barcode/BarcodeException.php
@@ -1121,6 +1127,9 @@ share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Color/ColorSpaceRestrictor.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Color/NamedColors.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Config/ConfigVariables.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Config/FontVariables.php
+share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Container/ContainerInterface.php
+share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Container/NotFoundException.php
+share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Container/SimpleContainer.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Conversion/DecToAlpha.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Conversion/DecToCjk.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Conversion/DecToHebrew.php
@@ -1131,8 +1140,11 @@ share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Css/DefaultCss.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Css/TextVars.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/CssManager.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/DirectWrite.php
+share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Exception/AssetFetchingException.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Exception/FontException.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Exception/InvalidArgumentException.php
+share/osticket/include/mpdf/vendor/mpdf/mpdf/src/File/LocalContentLoader.php
+share/osticket/include/mpdf/vendor/mpdf/mpdf/src/File/LocalContentLoaderInterface.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/File/StreamWrapperChecker.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Fonts/FontCache.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Fonts/FontFileFinder.php
@@ -1148,6 +1160,13 @@ share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Gif/ImageHeader.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Gif/Lzw.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Gradient.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/HTMLParserMode.php
+share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Http/ClientInterface.php
+share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Http/CurlHttpClient.php
+share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Http/Exception/ClientException.php
+share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Http/Exception/ForbiddenRequestException.php
+share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Http/Exception/NetworkException.php
+share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Http/Exception/RequestException.php
+share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Http/SocketHttpClient.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Hyphenator.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Image/Bmp.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Image/ImageProcessor.php
@@ -1165,10 +1184,10 @@ share/osticket/include/mpdf/vendor/mpdf/mpdf/src/MpdfImageException.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Otl.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/OtlDump.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Output/Destination.php
+share/osticket/include/mpdf/vendor/mpdf/mpdf/src/PageBox.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/PageFormat.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Pdf/Protection.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Pdf/Protection/UniqidGenerator.php
-share/osticket/include/mpdf/vendor/mpdf/mpdf/src/RemoteContentFetcher.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/ServiceFactory.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Shaper/Indic.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Shaper/Myanmar.php
@@ -1293,6 +1312,9 @@ share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Utils/Arrays.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Utils/NumericString.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Utils/PdfDate.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Utils/UtfString.php
+share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Watermark.php
+share/osticket/include/mpdf/vendor/mpdf/mpdf/src/WatermarkImage.php
+share/osticket/include/mpdf/vendor/mpdf/mpdf/src/WatermarkText.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Writer/BackgroundWriter.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Writer/BaseWriter.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Writer/BookmarkWriter.php
@@ -1307,6 +1329,7 @@ share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Writer/OptionalContentWriter.ph
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Writer/PageWriter.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/Writer/ResourceWriter.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/src/functions-dev.php
+share/osticket/include/mpdf/vendor/mpdf/mpdf/src/functions.php
 share/osticket/include/mpdf/vendor/mpdf/mpdf/tmp/.gitignore
 share/osticket/include/mpdf/vendor/mpdf/mpdf/ttfonts/AboriginalSansREGULAR.ttf
 share/osticket/include/mpdf/vendor/mpdf/mpdf/ttfonts/Abyssinica_SIL.ttf
@@ -1338,6 +1361,7 @@ share/osticket/include/mpdf/vendor/mpdf/mpdf/ttfonts/DejaVuinfo.txt
 share/osticket/include/mpdf/vendor/mpdf/mpdf/ttfonts/Dhyana-Bold.ttf
 share/osticket/include/mpdf/vendor/mpdf/mpdf/ttfonts/Dhyana-Regular.ttf
 share/osticket/include/mpdf/vendor/mpdf/mpdf/ttfonts/DhyanaOFL.txt
+share/osticket/include/mpdf/vendor/mpdf/mpdf/ttfonts/Eeyek-Regular.ttf
 share/osticket/include/mpdf/vendor/mpdf/mpdf/ttfonts/FreeMono.ttf
 share/osticket/include/mpdf/vendor/mpdf/mpdf/ttfonts/FreeMonoBold.ttf
 share/osticket/include/mpdf/vendor/mpdf/mpdf/ttfonts/FreeMonoBoldOblique.ttf
@@ -1390,13 +1414,24 @@ share/osticket/include/mpdf/vendor/mpdf/mpdf/ttfonts/kaputaunicode.ttf
 share/osticket/include/mpdf/vendor/mpdf/mpdf/ttfonts/lannaalif-v1-03.ttf
 share/osticket/include/mpdf/vendor/mpdf/mpdf/ttfonts/ocrb10.ttf
 share/osticket/include/mpdf/vendor/mpdf/mpdf/ttfonts/ocrbinfo.txt
-share/osticket/include/mpdf/vendor/myclabs/deep-copy/.github/FUNDING.yml
+share/osticket/include/mpdf/vendor/mpdf/psr-http-message-shim/README.md
+share/osticket/include/mpdf/vendor/mpdf/psr-http-message-shim/composer.json
+share/osticket/include/mpdf/vendor/mpdf/psr-http-message-shim/src/Request.php
+share/osticket/include/mpdf/vendor/mpdf/psr-http-message-shim/src/Response.php
+share/osticket/include/mpdf/vendor/mpdf/psr-http-message-shim/src/Stream.php
+share/osticket/include/mpdf/vendor/mpdf/psr-http-message-shim/src/Uri.php
+share/osticket/include/mpdf/vendor/mpdf/psr-log-aware-trait/.gitignore
+share/osticket/include/mpdf/vendor/mpdf/psr-log-aware-trait/README.md
+share/osticket/include/mpdf/vendor/mpdf/psr-log-aware-trait/composer.json
+share/osticket/include/mpdf/vendor/mpdf/psr-log-aware-trait/src/MpdfPsrLogAwareTrait.php
+share/osticket/include/mpdf/vendor/mpdf/psr-log-aware-trait/src/PsrLogAwareTrait.php
 share/osticket/include/mpdf/vendor/myclabs/deep-copy/LICENSE
 share/osticket/include/mpdf/vendor/myclabs/deep-copy/README.md
 share/osticket/include/mpdf/vendor/myclabs/deep-copy/composer.json
 share/osticket/include/mpdf/vendor/myclabs/deep-copy/src/DeepCopy/DeepCopy.php
 share/osticket/include/mpdf/vendor/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php
 share/osticket/include/mpdf/vendor/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php
+share/osticket/include/mpdf/vendor/myclabs/deep-copy/src/DeepCopy/Filter/ChainableFilter.php
 share/osticket/include/mpdf/vendor/myclabs/deep-copy/src/DeepCopy/Filter/Doctrine/DoctrineCollectionFilter.php
 share/osticket/include/mpdf/vendor/myclabs/deep-copy/src/DeepCopy/Filter/Doctrine/DoctrineEmptyCollectionFilter.php
 share/osticket/include/mpdf/vendor/myclabs/deep-copy/src/DeepCopy/Filter/Doctrine/DoctrineProxyFilter.php
@@ -1411,6 +1446,7 @@ share/osticket/include/mpdf/vendor/myclabs/deep-copy/src/DeepCopy/Matcher/Proper
 share/osticket/include/mpdf/vendor/myclabs/deep-copy/src/DeepCopy/Matcher/PropertyTypeMatcher.php
 share/osticket/include/mpdf/vendor/myclabs/deep-copy/src/DeepCopy/Reflection/ReflectionHelper.php
 share/osticket/include/mpdf/vendor/myclabs/deep-copy/src/DeepCopy/TypeFilter/Date/DateIntervalFilter.php
+share/osticket/include/mpdf/vendor/myclabs/deep-copy/src/DeepCopy/TypeFilter/Date/DatePeriodFilter.php
 share/osticket/include/mpdf/vendor/myclabs/deep-copy/src/DeepCopy/TypeFilter/ReplaceFilter.php
 share/osticket/include/mpdf/vendor/myclabs/deep-copy/src/DeepCopy/TypeFilter/ShallowCopyFilter.php
 share/osticket/include/mpdf/vendor/myclabs/deep-copy/src/DeepCopy/TypeFilter/Spl/ArrayObjectFilter.php
@@ -1445,9 +1481,13 @@ share/osticket/include/mpdf/vendor/setasign/fpdi/SECURITY.md
 share/osticket/include/mpdf/vendor/setasign/fpdi/composer.json
 share/osticket/include/mpdf/vendor/setasign/fpdi/src/FpdfTpl.php
 share/osticket/include/mpdf/vendor/setasign/fpdi/src/FpdfTplTrait.php
+share/osticket/include/mpdf/vendor/setasign/fpdi/src/FpdfTrait.php
 share/osticket/include/mpdf/vendor/setasign/fpdi/src/Fpdi.php
 share/osticket/include/mpdf/vendor/setasign/fpdi/src/FpdiException.php
 share/osticket/include/mpdf/vendor/setasign/fpdi/src/FpdiTrait.php
+share/osticket/include/mpdf/vendor/setasign/fpdi/src/GraphicsState.php
+share/osticket/include/mpdf/vendor/setasign/fpdi/src/Math/Matrix.php
+share/osticket/include/mpdf/vendor/setasign/fpdi/src/Math/Vector.php
 share/osticket/include/mpdf/vendor/setasign/fpdi/src/PdfParser/CrossReference/AbstractReader.php
 share/osticket/include/mpdf/vendor/setasign/fpdi/src/PdfParser/CrossReference/CrossReference.php
 share/osticket/include/mpdf/vendor/setasign/fpdi/src/PdfParser/CrossReference/CrossReferenceException.php
