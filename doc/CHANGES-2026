@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1262 2026/02/19 14:53:08 hauke Exp $
+$NetBSD: CHANGES-2026,v 1.1263 2026/02/19 15:09:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1691,3 +1691,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/i3lock to 2.16 [wiz 2026-02-19]
 	Updated net/netatalk4 to 4.4.1 [hauke 2026-02-19]
 	Updated www/osticket to 1.18.3 [hauke 2026-02-19]
+	Updated textproc/libxml2 to 2.15.1 [wiz 2026-02-19]
