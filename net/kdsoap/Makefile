@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2026/02/06 10:05:32 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.25 2026/02/19 22:56:39 wiz Exp $
 
 DISTNAME=	kdsoap-2.2.0
 PKGREVISION=	2
@@ -18,6 +17,8 @@ LICENSE=	gnu-agpl-v3
 USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DKDSoap_QT6=ON
+
+BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
