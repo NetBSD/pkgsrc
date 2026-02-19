@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.76 2026/01/06 10:21:12 nia Exp $
+$NetBSD: distinfo,v 1.77 2026/02/19 15:10:30 wiz Exp $
 
-BLAKE2s (libxslt-1.1.43.tar.xz) = f5b46cbf27816b93b69f155844d0d08e7b1a2c35b5836012fa48e07f9a347435
-SHA512 (libxslt-1.1.43.tar.xz) = 96110b0397a8f5791f489127574e2143845feb61bea0581d7b7e3c1101fd0718483bae81a7ce417b971bd678293bfd95daddad0dadd3e256c87d41a69faed85a
-Size (libxslt-1.1.43.tar.xz) = 1518364 bytes
-SHA1 (patch-CVE-2025-11731) = 1cba0cf96ec4c6934a697fbd8136923c45ec2a95
+BLAKE2s (libxslt-1.1.45.tar.xz) = fdcf75869a2584d939ec8fb7ce1f38c9b415b5b8963f7c4653e0ed5878f8a209
+SHA512 (libxslt-1.1.45.tar.xz) = 8f0608aad7250ccfe62808169d464a1641535b41a73b4fbbc1eeec9c9e785bbd8f4860d571eb567ee1e7abbd89ac3d707a5f3e3a9e836ecaf38155793ce47d78
+Size (libxslt-1.1.45.tar.xz) = 1519992 bytes

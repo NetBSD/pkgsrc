@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.146 2026/01/07 08:49:05 wiz Exp $
+# $NetBSD: Makefile,v 1.147 2026/02/19 15:10:30 wiz Exp $
 
-PKGREVISION=	6
 .include "Makefile.common"
 
 TOOL_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
@@ -37,6 +36,6 @@ CONFIGURE_ARGS+=	--with-crypto
 CONFIGURE_ARGS+=	--with-plugins
 
 .include "../../security/libgcrypt/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.27
+BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.15
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

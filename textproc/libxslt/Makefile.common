@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.13 2025/05/30 15:34:55 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.14 2026/02/19 15:10:30 wiz Exp $
 #
 # used by textproc/libxslt/Makefile
 # used by textproc/py-libxslt/Makefile
 
-DISTNAME=	libxslt-1.1.43
+DISTNAME=	libxslt-1.1.45
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxslt/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
