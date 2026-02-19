@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/14 11:31:11 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.9 2026/02/19 08:21:09 wiz Exp $
 ${PYSITELIB}/cassandra/__init__.py
 ${PYSITELIB}/cassandra/__init__.pyc
 ${PYSITELIB}/cassandra/__init__.pyo
@@ -26,9 +21,6 @@ ${PYSITELIB}/cassandra/column_encryption/_policies.pyo
 ${PYSITELIB}/cassandra/column_encryption/policies.py
 ${PYSITELIB}/cassandra/column_encryption/policies.pyc
 ${PYSITELIB}/cassandra/column_encryption/policies.pyo
-${PYSITELIB}/cassandra/compat.py
-${PYSITELIB}/cassandra/compat.pyc
-${PYSITELIB}/cassandra/compat.pyo
 ${PYSITELIB}/cassandra/concurrent.py
 ${PYSITELIB}/cassandra/concurrent.pyc
 ${PYSITELIB}/cassandra/concurrent.pyo
@@ -232,3 +224,8 @@ ${PYSITELIB}/cassandra/util.py
 ${PYSITELIB}/cassandra/util.pyc
 ${PYSITELIB}/cassandra/util.pyo
 ${PYSITELIB}/cassandra/util.so
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
