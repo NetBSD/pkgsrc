@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2026/01/17 21:33:08 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2026/02/19 16:56:26 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libxmlb
 PKG_SUPPORTED_OPTIONS+=	doc
-PKG_SUGGESTED_OPTIONS=	doc
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
