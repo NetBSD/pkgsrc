@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1254 2026/02/19 07:41:31 triaxx Exp $
+$NetBSD: CHANGES-2026,v 1.1255 2026/02/19 08:18:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1683,3 +1683,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/hugo to 0.156.0 [triaxx 2026-02-19]
 	Updated security/libgpg-error to 1.59 [wiz 2026-02-19]
 	Updated games/openttd to 15.2 [triaxx 2026-02-19]
+	Updated devel/mise to 2026.2.16 [pin 2026-02-19]
