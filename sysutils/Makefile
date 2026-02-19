@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1185 2026/01/30 12:59:38 adam Exp $
+# $NetBSD: Makefile,v 1.1186 2026/02/19 08:28:08 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -1006,6 +1006,7 @@ SUBDIR+=	xosview2
 SUBDIR+=	xpipe
 SUBDIR+=	xplr
 SUBDIR+=	xps
+SUBDIR+=	xtop
 SUBDIR+=	xuvmstat
 SUBDIR+=	yadm
 SUBDIR+=	yank
