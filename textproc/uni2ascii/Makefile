@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:32:18 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2026/02/19 15:19:19 wiz Exp $
 #
 
-DISTNAME=	uni2ascii-4.18
+DISTNAME=	uni2ascii-4.20
 CATEGORIES=	textproc
 MASTER_SITES=	http://billposer.org/Software/Downloads/
 EXTRACT_SUFX=	.tar.bz2
