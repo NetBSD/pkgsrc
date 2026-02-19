@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/03/22 12:18:36 pin Exp $
+$NetBSD: distinfo,v 1.7 2026/02/19 10:20:50 wiz Exp $
 
-BLAKE2s (i3lock-2.15.tar.xz) = d5d0efc0d64a645e593d7a3d56f05a54f3f1d00592c2586f9d27d88d3362a3e7
-SHA512 (i3lock-2.15.tar.xz) = 6079f5233c0820c6e38f3cd8f3732d585e95e7d670408e4fb18ab580a2e1face8f3d6ea13eaaeedc8671f74def917183667e736b35306bf7c630d40625b41ac2
-Size (i3lock-2.15.tar.xz) = 29100 bytes
+BLAKE2s (i3lock-2.16.tar.xz) = f0b8677d02814d62fef1501e38ec6fda0c0a328537522c78217a65ecb2b16082
+SHA512 (i3lock-2.16.tar.xz) = f5d4db5f1cb23fa2599701c625da3ecd7cceb521e28f4d8401b3c35e05adb5dca3e8061e82a68cd33170d1cc8585acf19c5409e5bf8b7fa207e108d97ed68138
+Size (i3lock-2.16.tar.xz) = 29932 bytes
