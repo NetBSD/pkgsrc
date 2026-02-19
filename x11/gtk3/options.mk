@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.32 2026/01/17 21:41:12 wiz Exp $
+# $NetBSD: options.mk,v 1.33 2026/02/19 16:57:17 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
 PKG_SUPPORTED_OPTIONS+=	doc introspection gtk3-atk-bridge cups
@@ -14,7 +14,6 @@ PKG_SUGGESTED_OPTIONS+=	x11
 PKG_SUGGESTED_OPTIONS+=	wayland
 .endif
 PKG_SUGGESTED_OPTIONS+=	gtk3-atk-bridge cups
-PKG_SUGGESTED_OPTIONS+=	${${USE_CROSS_COMPILE:tl} == "yes":?:doc}
 PKG_SUGGESTED_OPTIONS+=	${${USE_CROSS_COMPILE:tl} == "yes":?:introspection}
 
 .include "../../mk/bsd.options.mk"
