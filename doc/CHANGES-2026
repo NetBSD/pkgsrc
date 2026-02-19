@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1268 2026/02/19 15:19:27 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1269 2026/02/19 16:55:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1698,3 +1698,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed textproc/xml2 [wiz 2026-02-19]
 	Removed textproc/libxml [wiz 2026-02-19]
 	Updated textproc/uni2ascii to 4.20 [wiz 2026-02-19]
+	Updated fonts/harfbuzz to 12.3.2nb1 [wiz 2026-02-19]
