@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1276 2026/02/20 05:21:17 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1277 2026/02/20 05:24:51 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1706,3 +1706,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed sysutils/arm-trusted-firmware-rk3399 [gutteridge 2026-02-20]
 	Updated devel/cargo-release to 1.0.0 [pin 2026-02-20]
 	Updated devel/codeberg-cli to 0.5.5 [pin 2026-02-20]
+	Updated x11/xterm to 407 [pin 2026-02-20]
