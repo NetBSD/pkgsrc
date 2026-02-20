@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1278 2026/02/20 05:26:01 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1279 2026/02/20 08:45:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1708,3 +1708,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/codeberg-cli to 0.5.5 [pin 2026-02-20]
 	Updated x11/xterm to 407 [pin 2026-02-20]
 	Updated graphics/nsxiv to 34 [pin 2026-02-20]
+	Updated www/cobalt to 0.20.4 [pin 2026-02-20]
