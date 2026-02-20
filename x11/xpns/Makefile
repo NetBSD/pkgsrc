@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.29 2019/05/23 19:23:24 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2026/02/20 12:19:17 wiz Exp $
 
 DISTNAME=	pns_source
 PKGNAME=	xpns-1.0
 PKGREVISION=	4
 CATEGORIES=	x11 cad
-MASTER_SITES=	http://robotics.ee.uwa.edu.au/pns/ftp/
+MASTER_SITES=	https://robotics.ee.uwa.edu.au/pns/ftp/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pgiffuni@fps.biblos.unal.edu.co
-HOMEPAGE=	http://robotics.ee.uwa.edu.au/pns/
+HOMEPAGE=	https://robotics.ee.uwa.edu.au/pns/
 COMMENT=	Petri-Net Simulator for Xwindows
 
 WRKSRC=		${WRKDIR}
