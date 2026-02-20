@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1272 2026/02/19 22:27:05 schwarz Exp $
+$NetBSD: CHANGES-2026,v 1.1273 2026/02/20 00:05:52 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1702,3 +1702,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/libxmlb to 0.3.25nb1 [wiz 2026-02-19]
 	Updated x11/gtk3 to 3.24.51nb5 [wiz 2026-02-19]
 	Updated editors/moe to 1.16 [schwarz 2026-02-19]
+	Updated lang/janet to 1.41.2 [ktnb 2026-02-20]
