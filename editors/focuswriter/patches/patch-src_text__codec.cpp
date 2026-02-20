@@ -1,8 +1,8 @@
-$NetBSD: patch-src_text__codec.cpp,v 1.3 2024/05/03 09:16:52 pin Exp $
+$NetBSD: patch-src_text__codec.cpp,v 1.4 2026/02/20 08:46:41 pin Exp $
 
 NetBSD 9 uses const in the second argument to iconv.
 
---- src/text_codec.cpp.orig	2024-05-03 08:38:17.190099116 +0000
+--- src/text_codec.cpp.orig	2026-02-19 12:34:02.786107287 +0000
 +++ src/text_codec.cpp
 @@ -14,6 +14,13 @@
  
@@ -18,7 +18,7 @@ NetBSD 9 uses const in the second argument to iconv.
  //-----------------------------------------------------------------------------
  
  namespace
-@@ -79,7 +86,7 @@ TextCodecIconv::~TextCodecIconv()
+@@ -79,7 +86,7 @@ QByteArray TextCodecIconv::fromUnicode(const QString& 
  QByteArray TextCodecIconv::fromUnicode(const QString& input)
  {
  	QByteArray in = TextCodec::fromUnicode(input);
@@ -27,7 +27,7 @@ NetBSD 9 uses const in the second argument to iconv.
  	// POSIX requires the source to not be const, even though it does not modify it
  	char* source = in.data();
  #else
-@@ -128,7 +135,7 @@ QByteArray TextCodecIconv::fromUnicode(c
+@@ -128,7 +135,7 @@ QString TextCodecIconv::toUnicode(const QByteArray& in
  
  QString TextCodecIconv::toUnicode(const QByteArray& input)
  {
