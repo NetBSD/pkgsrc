@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2026/02/06 10:04:38 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2026/02/20 08:46:41 pin Exp $
 
-DISTNAME=	focuswriter-1.8.13
-PKGREVISION=	3
+DISTNAME=	focuswriter-1.9.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gottcode/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
