@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1273 2026/02/20 00:05:52 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.1274 2026/02/20 01:57:25 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1703,3 +1703,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/gtk3 to 3.24.51nb5 [wiz 2026-02-19]
 	Updated editors/moe to 1.16 [schwarz 2026-02-19]
 	Updated lang/janet to 1.41.2 [ktnb 2026-02-20]
+	Removed sysutils/arm-trusted-firmware-rk3399 [gutteridge 2026-02-20]
