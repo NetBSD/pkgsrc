@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/03/05 20:50:19 pin Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/02/20 09:37:16 pin Exp $
 bin/kvantummanager
 bin/kvantumpreview
 qt6/plugins/styles/libkvantum.so
@@ -151,6 +151,7 @@ share/kvantummanager/translations/kvantummanager_tr.qm
 share/kvantummanager/translations/kvantummanager_uk.qm
 share/kvantummanager/translations/kvantummanager_zh_CN.qm
 share/kvantummanager/translations/kvantummanager_zh_Hant.qm
+share/kvantummanager/translations/kvantummanager_zh_TW.qm
 share/kvantumpreview/translations/kvantumpreview_ar_DZ.qm
 share/kvantumpreview/translations/kvantumpreview_bg.qm
 share/kvantumpreview/translations/kvantumpreview_ca.qm
