@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2026/01/21 14:51:26 pin Exp $
+# $NetBSD: Makefile,v 1.9 2026/02/20 05:20:57 pin Exp $
 
-DISTNAME=	codeberg-cli-0.5.4
+DISTNAME=	codeberg-cli-0.5.5
 CATEGORIES=	devel
 MASTER_SITES=	${HOMEPAGE}archive/
 SITES.${DISTNAME}.tar.gz=	-${MASTER_SITES}v${PKGVERSION_NOREV}${EXTRACT_SUFX}
