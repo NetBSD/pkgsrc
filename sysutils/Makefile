@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1186 2026/02/19 08:28:08 pin Exp $
+# $NetBSD: Makefile,v 1.1187 2026/02/20 01:55:00 gutteridge Exp $
 #
 
 COMMENT=	System utilities
@@ -37,7 +37,6 @@ SUBDIR+=	ansible-lint
 SUBDIR+=	apcupsd
 SUBDIR+=	arm-trusted-firmware-fiptool
 SUBDIR+=	arm-trusted-firmware-rk3328
-SUBDIR+=	arm-trusted-firmware-rk3399
 SUBDIR+=	arm-trusted-firmware-sun50i-h6
 SUBDIR+=	arm-trusted-firmware-sun50i_a64
 SUBDIR+=	asapm
