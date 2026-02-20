@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.38 2025/12/20 20:53:09 nia Exp $
-#
+# $NetBSD: Makefile,v 1.39 2026/02/20 12:17:42 wiz Exp $
 
 DISTNAME=		xorp-1.6
 PKGREVISION=		9
 CATEGORIES=		net
-MASTER_SITES=		http://www.xorp.org/releases/1.6/
+#MASTER_SITES=		http://www.xorp.org/releases/1.6/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.xorp.org/
+#HOMEPAGE=		http://www.xorp.org/
 COMMENT=		The eXtensible Open Router Platform
 
 GNU_CONFIGURE=		yes
