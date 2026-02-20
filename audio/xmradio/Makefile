@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.34 2020/04/29 19:44:49 maya Exp $
+# $NetBSD: Makefile,v 1.35 2026/02/20 12:17:03 wiz Exp $
 
 DISTNAME=	xmradio-1.2
 PKGREVISION=	5
 CATEGORIES=	audio
-MASTER_SITES=	http://core.de/~coto/radio/
+#MASTER_SITES=	http://core.de/~coto/radio/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://core.de/~coto/xmradio.html
+#HOMEPAGE=	http://core.de/~coto/xmradio.html
 COMMENT=	Radio application for Brooktree 848 compatible TV cards
 LICENSE=	2-clause-bsd
 
