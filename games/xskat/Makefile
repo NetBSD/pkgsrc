@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.19 2019/04/27 11:25:11 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/02/20 12:20:27 wiz Exp $
 
 DISTNAME=	xskat-4.0
 CATEGORIES=	games
-MASTER_SITES=	http://www.xskat.de/
+#MASTER_SITES=	http://www.xskat.de/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.xskat.de/xskat.html
+#HOMEPAGE=	http://www.xskat.de/xskat.html
 COMMENT=	Play the card game Skat
 
 USE_IMAKE=	yes
