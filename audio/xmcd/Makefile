@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2025/01/27 20:21:14 rillig Exp $
+# $NetBSD: Makefile,v 1.84 2026/02/20 12:14:33 wiz Exp $
 
 DISTNAME=	xmcd-3.0.2
 PKGREVISION=	15
@@ -10,7 +10,7 @@ PATCHFILES=		xmcd-3.0.2-proxyauth-patch
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.amb.org/xmcd/
+HOMEPAGE=	http://www.tikan.org/xmcd/
 COMMENT=	Motif CD player
 LICENSE=	gnu-gpl-v2
 
