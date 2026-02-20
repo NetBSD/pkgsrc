@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.22 2016/04/20 12:10:34 nros Exp $
-#
+# $NetBSD: Makefile,v 1.23 2026/02/20 12:16:17 wiz Exp $
 
 DISTNAME=		xmms-meta-input-0.4
 PKGREVISION=		8
 CATEGORIES=		audio
-MASTER_SITES=		http://www.corbac.com/Data/Sources/
+MASTER_SITES=		https://www.corbac.com/Data/Sources/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.corbac.com/page3.html
+HOMEPAGE=		https://www.corbac.com/page3.html
 COMMENT=		XMMS plugin wrapper for shell scripts
 LICENSE=		gnu-gpl-v2
 
