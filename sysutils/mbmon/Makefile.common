@@ -1,15 +1,15 @@
-# $NetBSD: Makefile.common,v 1.19 2018/04/30 10:41:36 wiz Exp $
+# $NetBSD: Makefile.common,v 1.20 2026/02/20 12:14:02 wiz Exp $
 #
 # used by sysutils/xmbmon/Makefile
 # used by sysutils/mbmon/Makefile
 
 DISTNAME=	xmbmon205
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/xmbmon/
+#MASTER_SITES=	http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/xmbmon/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} xmbmon205conf.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/download.html
+#HOMEPAGE=	http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/download.html
 
 GNU_CONFIGURE=	yes
 
