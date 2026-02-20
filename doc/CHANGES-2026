@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1279 2026/02/20 08:45:32 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1280 2026/02/20 08:47:06 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1709,3 +1709,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/xterm to 407 [pin 2026-02-20]
 	Updated graphics/nsxiv to 34 [pin 2026-02-20]
 	Updated www/cobalt to 0.20.4 [pin 2026-02-20]
+	Updated editors/focuswriter to 1.9.0 [pin 2026-02-20]
