@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/11/08 15:14:34 pin Exp $
+# $NetBSD: Makefile,v 1.8 2026/02/20 05:22:10 pin Exp $
 
 DISTNAME=	kibi-0.3.1
+# kibi-0.3.3 requires Rust >= 1.93.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ilai-deutel/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
