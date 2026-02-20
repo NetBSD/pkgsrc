@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2026/02/17 13:10:46 pin Exp $
+$NetBSD: distinfo,v 1.11 2026/02/20 08:45:13 pin Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -111,9 +111,9 @@ Size (clap_derive-4.5.40.crate) = 33470 bytes
 BLAKE2s (clap_lex-0.7.4.crate) = 87179de8b09978be634962bb5bf3feebda3994e47c4e29fb88504349e07ad710
 SHA512 (clap_lex-0.7.4.crate) = a2566868f4619679d3b74b70592ffa6a04b13e38e3196c56bb1dae8bea0c711bddbccd778d2aba3cc0ee074c9b1cc0335222818f0d47fb3cc8109cbc35bb992e
 Size (clap_lex-0.7.4.crate) = 12858 bytes
-BLAKE2s (cobalt-0.20.3.tar.gz) = b76e91315d0f5d5b53b196ee5fdf4fd2d1369ef659a825bcf3c06f4206268b25
-SHA512 (cobalt-0.20.3.tar.gz) = fda34b9e146571fa53820e6ab79515765568e1632ab5180103b18390c204346ce2962aba7c2d8d68f8c9bbeed2d6be1527c3cbd04c762d2167db82b57f88a06d
-Size (cobalt-0.20.3.tar.gz) = 151105 bytes
+BLAKE2s (cobalt-0.20.4.tar.gz) = a3c85ed9c1cbca10101f1472bd0dc328d823ab2409779aed5c2593a1f6de57fb
+SHA512 (cobalt-0.20.4.tar.gz) = b9edbf2fddd56d0fe3f95662980ec53d45c676829d0766cfdce4a1e5fb38d7d5894f51ac74f1fa4592a84c7d9f58d0b616bb1e1ddee0a9208b384dbd42fbdf4f
+Size (cobalt-0.20.4.tar.gz) = 151437 bytes
 BLAKE2s (codemap-0.1.3.crate) = f8a21d6a9908ba187954daacf0d23ad25eeb38ea1727dff7cf930c30acd83004
 SHA512 (codemap-0.1.3.crate) = 58cf60c2161f4c208bc98e8377104be4ca4b2827444a8c1310f2d60cb13775d7158a6d30a88321b308938d635ae92c5a41c5d4fb73a3d86499c29ddf6f86eebb
 Size (codemap-0.1.3.crate) = 9483 bytes
