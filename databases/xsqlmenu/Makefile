@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.38 2025/08/30 22:44:47 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.39 2026/02/21 05:29:57 wiz Exp $
 
 DISTNAME=	xsqlmenu-2.10
 PKGREVISION=	20
 CATEGORIES=	databases
-MASTER_SITES=	http://www.jlab.org/~saw/xsqlmenu/
+MASTER_SITES=	https://www.jlab.org/~saw/xsqlmenu/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.jlab.org/~saw/xsqlmenu/
+HOMEPAGE=	https://userweb.jlab.org/~saw/xsqlmenu/
 COMMENT=	X based GUI for MySQL
 LICENSE=	gnu-gpl-v2
 
