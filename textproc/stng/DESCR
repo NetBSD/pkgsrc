@@ -1,0 +1,16 @@
+Language-aware string extraction for binary malware analysis.
+Extract indicators, hardcoded credentials, C2 addresses, and obfuscated strings
+from any binary.
+
+Features
+ - Garbage filtering: Filters out unusable garbage by default
+   (but supports --unfiltered)
+ - Language-aware extraction: Go/Rust {ptr, len}, DWARF stack strings
+ - Binary network structures: Finds hardcoded IPs/ports in socket structures
+ - XOR obfuscation: Single/multi-byte keys with entropy analysis, double-layer
+   (encoding+XOR)
+ - Encoding detection: Base64, Base32, Base85, hex, URL-encoding, Unicode
+   escapes
+ - IOC classification: IPs, URLs, shell commands, paths, credentials
+ - Wide strings: UTF-16LE in Windows PE binaries
+ - Format support: ELF, PE, Mach-O, raw binaries, overlays
