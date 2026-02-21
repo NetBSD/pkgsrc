@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1285 2026/02/20 21:42:33 triaxx Exp $
+$NetBSD: CHANGES-2026,v 1.1286 2026/02/21 15:12:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1715,3 +1715,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/dua-cli to 2.34.0 [pin 2026-02-20]
 	Updated lang/gcc12 to 12.5.0nb1 [triaxx 2026-02-20]
 	Updated lang/gcc12-libs to 12.5.0nb2 [triaxx 2026-02-20]
+	Updated shells/oh-my-posh to 29.5.0 [pin 2026-02-21]
