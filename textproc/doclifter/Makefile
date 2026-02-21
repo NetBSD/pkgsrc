@@ -1,33 +1,27 @@
-# $NetBSD: Makefile,v 1.31 2023/08/14 05:25:21 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.32 2026/02/21 20:18:51 wiz Exp $
 
-DISTNAME=	doclifter-2.3
-PKGREVISION=	9
+DISTNAME=	doclifter-2.22
 CATEGORIES=	textproc
-MASTER_SITES=	http://catb.org/~esr/doclifter/
+# doesn't provide the distfile for ftp(1)
+MASTER_SITES=	# http://catb.org/~esr/doclifter/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://catb.org/~esr/doclifter/
 COMMENT=	Translates documents written in troff macros to DocBook
+LICENSE=	2-clause-bsd
+
+USE_TOOLS+=	gmake
 
 NO_BUILD=	yes
 
 REPLACE_PYTHON=		doclifter manlifter
 
-SUBST_CLASSES+=		bin-path
-SUBST_STAGE.bin-path=	pre-configure
-SUBST_FILES.bin-path=	manlifter
-SUBST_SED.bin-path=	-e 's,@@BIN_PATH@@,${PREFIX}/bin,g'
+MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	DESTDIR=${DESTDIR}
+MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
-do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/doclifter ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doclifter.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_SCRIPT} ${WRKSRC}/manlifter ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/manlifter.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+# https://gitlab.com/esr/doclifter/-/issues/7
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

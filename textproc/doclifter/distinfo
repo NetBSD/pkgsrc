@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 11:21:51 nia Exp $
+$NetBSD: distinfo,v 1.17 2026/02/21 20:18:51 wiz Exp $
 
-BLAKE2s (doclifter-2.3.tar.gz) = f799d7b33bb13ad30cb0ef8e229c08c84d28db48d47a7575c2845e0d0a1af28b
-SHA512 (doclifter-2.3.tar.gz) = 8120bfdac621822f6fabf8eb7a585695f03acdc74b7238e22f0a83291de0a9b2d5d91994aff740b8f1d8f2653c9e5c8ba462e8b91a1bd30929a77a717decec67
-Size (doclifter-2.3.tar.gz) = 132537 bytes
-SHA1 (patch-aa) = ef13eca669f2b57ca559d631e6067ba290a25bd1
-SHA1 (patch-doclifter.1) = 01c6cc595ccf73fb49e3897008548ad54d17d72f
-SHA1 (patch-manlifter.1) = f6e48940ee0d596f8f915f3d31545963e475e25d
+BLAKE2s (doclifter-2.22.tar.gz) = be8a2e040ccfadce716fb2dc8a423e936f53a6407850c097e6ddae4a70678beb
+SHA512 (doclifter-2.22.tar.gz) = 2b7f93f379783c96c0c05002f3976fb2c136e218b230db6d33b90e1ea7a169299dd94b5a760e5b9b70b6d85cb4e13abea896cf9030f7a8e14bca40a7efa3233a
+Size (doclifter-2.22.tar.gz) = 380157 bytes
