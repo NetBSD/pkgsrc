@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1288 2026/02/21 15:14:59 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1289 2026/02/21 15:18:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1718,3 +1718,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 29.5.0 [pin 2026-02-21]
 	Updated textproc/rumdl to 0.1.25 [pin 2026-02-21]
 	Updated devel/serie to 0.6.1 [pin 2026-02-21]
+	Added textproc/stng version 1.0.0 [pin 2026-02-21]
