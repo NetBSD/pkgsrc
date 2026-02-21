@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/05/16 12:31:11 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.29 2026/02/21 05:31:47 wiz Exp $
 
 DISTNAME=	xtrs-4.9d
 PKGREVISION=	3
@@ -7,7 +6,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	http://www.tim-mann.org/trs80/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITES}
+HOMEPAGE=	https://www.tim-mann.org/xtrs.html
 COMMENT=	TRS-80 Model I/III/4 Emulator for Unix
 
 BUILD_TARGET=	default
