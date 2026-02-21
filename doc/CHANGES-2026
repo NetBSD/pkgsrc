@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1286 2026/02/21 15:12:59 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1287 2026/02/21 15:13:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1716,3 +1716,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/gcc12 to 12.5.0nb1 [triaxx 2026-02-20]
 	Updated lang/gcc12-libs to 12.5.0nb2 [triaxx 2026-02-20]
 	Updated shells/oh-my-posh to 29.5.0 [pin 2026-02-21]
+	Updated textproc/rumdl to 0.1.25 [pin 2026-02-21]
