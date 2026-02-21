@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2026/02/06 14:28:38 chuck Exp $
+# $NetBSD: Makefile,v 1.107 2026/02/21 05:32:23 wiz Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	33
@@ -15,7 +15,7 @@ PATCHFILES+=				xv-3.10a-enhancements.20070520-20081216.diff
 PATCH_SITES=				http://www.gregroelofs.com/code/
 
 MAINTAINER=	tsutsui@NetBSD.org
-HOMEPAGE=	http://www.trilon.com/xv/
+#HOMEPAGE=	http://www.trilon.com/xv/
 # and...	http://www.sonic.net/~roelofs/greg_xv.html
 COMMENT=	X11 program that displays images of various formats
 LICENSE=	xv-license
