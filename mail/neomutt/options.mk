@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.25 2025/12/12 11:24:05 wiz Exp $
+# $NetBSD: options.mk,v 1.26 2026/02/21 15:22:59 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.neomutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
@@ -8,9 +8,6 @@ PKG_SUPPORTED_OPTIONS+=		debug gpgme gssapi ssl smime sasl
 PKG_SUPPORTED_OPTIONS+=		notmuch lua
 PKG_SUGGESTED_OPTIONS=		gpgme gssapi ncurses sasl smime ssl
 PKG_SUGGESTED_OPTIONS+=		tokyocabinet notmuch
-
-# remove after pkgsrc-2024Q3
-PKG_OPTIONS_LEGACY_OPTS+=	ncursesw:ncurses
 
 .include "../../mk/bsd.options.mk"
 
