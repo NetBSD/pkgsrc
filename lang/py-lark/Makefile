@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/02/22 12:59:22 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/02/22 13:01:06 wiz Exp $
 
 DISTNAME=	lark-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
+
+CONFLICTS=	py[0-9]*-lark-parser-[0-9]*
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
