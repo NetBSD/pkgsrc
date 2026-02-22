@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1294 2026/02/22 07:33:35 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1295 2026/02/22 08:47:08 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1724,3 +1724,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/p5-Crypt-URandom to 0.55 [wiz 2026-02-22]
 	Updated mail/p5-MIME-Lite to 3.038 [wiz 2026-02-22]
 	Updated net/p5-Net-Server to 2.018 [wiz 2026-02-22]
+	Updated www/chromium to 145.0.7632.109 [kikadf 2026-02-22]
