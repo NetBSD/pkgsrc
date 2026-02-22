@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1296 2026/02/22 10:51:03 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1297 2026/02/22 10:53:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1726,3 +1726,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/p5-Net-Server to 2.018 [wiz 2026-02-22]
 	Updated www/chromium to 145.0.7632.109 [kikadf 2026-02-22]
 	Updated graphics/OpenJPH to 0.26.3 [wiz 2026-02-22]
+	Updated audio/fluidsynth to 2.5.3 [wiz 2026-02-22]
