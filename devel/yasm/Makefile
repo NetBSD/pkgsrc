@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2016/04/14 23:18:04 khorben Exp $
+# $NetBSD: Makefile,v 1.37 2026/02/22 08:16:32 wiz Exp $
 
 DISTNAME=	yasm-1.3.0
 CATEGORIES=	devel
-MASTER_SITES=	http://www.tortall.net/projects/yasm/releases/
+#MASTER_SITES=	http://www.tortall.net/projects/yasm/releases/
 
 MAINTAINER=	shaun@inerd.com
-HOMEPAGE=	http://www.tortall.net/projects/yasm/
+#HOMEPAGE=	http://www.tortall.net/projects/yasm/
 COMMENT=	Complete rewrite of the NASM assembler with BSD license
 LICENSE=	modified-bsd AND (artistic OR gnu-gpl-v2 OR gnu-lgpl-v2)
 
