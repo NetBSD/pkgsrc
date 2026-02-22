@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/08/20 11:34:47 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/02/22 08:17:29 wiz Exp $
 
 DISTNAME=	ympd-1.3.0
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=notandy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.ympd.org/
+HOMEPAGE=	https://ympd.org/
 COMMENT=	Music Player Daemon web UI
 LICENSE=	gnu-gpl-v2
 
