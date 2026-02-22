@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.bridge,v 1.10 2025/08/03 12:56:04 js Exp $
+@comment $NetBSD: PLIST.bridge,v 1.11 2026/02/22 20:40:55 js Exp $
 Library/Frameworks/ObjFWBridge.framework/Headers
 Library/Frameworks/ObjFWBridge.framework/Modules
 Library/Frameworks/ObjFWBridge.framework/ObjFWBridge
@@ -48,7 +48,7 @@ include/ObjFWBridge/OFOFToNSBridging.h
 include/ObjFWBridge/OFSet+NSObject.h
 include/ObjFWBridge/OFString+NSObject.h
 include/ObjFWBridge/ObjFWBridge.h
-lib/libobjfwbridge.1.4.dylib
+lib/libobjfwbridge.1.5.dylib
 lib/libobjfwbridge.1.dylib
 lib/libobjfwbridge.dylib
 lib/objfw-config/ObjFWBridge.oc

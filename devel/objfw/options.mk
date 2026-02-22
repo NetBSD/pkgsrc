@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2026/01/22 19:34:10 js Exp $
+# $NetBSD: options.mk,v 1.6 2026/02/22 20:40:55 js Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.objfw
 .if ${MACHINE_ARCH} != "alpha" && \
@@ -15,16 +15,8 @@ PKG_SUPPORTED_OPTIONS=		clang
 PKG_SUGGESTED_OPTIONS+=		clang
 .endif
 PKG_OPTIONS_OPTIONAL_GROUPS=	tls
-PKG_OPTIONS_GROUP.tls=		openssl gnutls mbedtls mbedtls3
-# Will only be supported in next release
-#PKG_OPTIONS_GROUP.tls+=		mbedtls4
-.if ${OPSYS} == "Darwin"
-# Will be removed in the next release
-PKG_OPTIONS_GROUP.tls+=		securetransport
-PKG_SUGGESTED_OPTIONS+=		securetransport
-.else
+PKG_OPTIONS_GROUP.tls=		openssl gnutls mbedtls mbedtls3 mbedtls4
 PKG_SUGGESTED_OPTIONS+=		openssl
-.endif
 
 .include "../../mk/bsd.options.mk"
 
