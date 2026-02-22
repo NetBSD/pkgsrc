@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2023/11/22 16:23:28 tsutsui Exp $
+# $NetBSD: Makefile,v 1.52 2026/02/22 08:14:18 wiz Exp $
 
 DISTNAME=	xvidcore-1.3.7
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	https://downloads.xvid.com/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.xvid.org/
+HOMEPAGE=	https://www.xvid.com/
 COMMENT=	ISO MPEG-4 compliant video codec
 LICENSE=	gnu-gpl-v2
 
