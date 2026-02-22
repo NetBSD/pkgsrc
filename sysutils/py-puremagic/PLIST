@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/12 18:03:06 pgoyette Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+@comment $NetBSD: PLIST,v 1.5 2026/02/22 14:15:28 wiz Exp $
+bin/puremagic
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/puremagic/__init__.py
 ${PYSITELIB}/puremagic/__init__.pyc
@@ -15,3 +17,33 @@ ${PYSITELIB}/puremagic/main.py
 ${PYSITELIB}/puremagic/main.pyc
 ${PYSITELIB}/puremagic/main.pyo
 ${PYSITELIB}/puremagic/py.typed
+${PYSITELIB}/puremagic/scanners/__init__.py
+${PYSITELIB}/puremagic/scanners/__init__.pyc
+${PYSITELIB}/puremagic/scanners/__init__.pyo
+${PYSITELIB}/puremagic/scanners/hdf5_scanner.py
+${PYSITELIB}/puremagic/scanners/hdf5_scanner.pyc
+${PYSITELIB}/puremagic/scanners/hdf5_scanner.pyo
+${PYSITELIB}/puremagic/scanners/helpers.py
+${PYSITELIB}/puremagic/scanners/helpers.pyc
+${PYSITELIB}/puremagic/scanners/helpers.pyo
+${PYSITELIB}/puremagic/scanners/json_scanner.py
+${PYSITELIB}/puremagic/scanners/json_scanner.pyc
+${PYSITELIB}/puremagic/scanners/json_scanner.pyo
+${PYSITELIB}/puremagic/scanners/mpeg_audio_scanner.py
+${PYSITELIB}/puremagic/scanners/mpeg_audio_scanner.pyc
+${PYSITELIB}/puremagic/scanners/mpeg_audio_scanner.pyo
+${PYSITELIB}/puremagic/scanners/pdf_scanner.py
+${PYSITELIB}/puremagic/scanners/pdf_scanner.pyc
+${PYSITELIB}/puremagic/scanners/pdf_scanner.pyo
+${PYSITELIB}/puremagic/scanners/python_scanner.py
+${PYSITELIB}/puremagic/scanners/python_scanner.pyc
+${PYSITELIB}/puremagic/scanners/python_scanner.pyo
+${PYSITELIB}/puremagic/scanners/sndhdr_scanner.py
+${PYSITELIB}/puremagic/scanners/sndhdr_scanner.pyc
+${PYSITELIB}/puremagic/scanners/sndhdr_scanner.pyo
+${PYSITELIB}/puremagic/scanners/text_scanner.py
+${PYSITELIB}/puremagic/scanners/text_scanner.pyc
+${PYSITELIB}/puremagic/scanners/text_scanner.pyo
+${PYSITELIB}/puremagic/scanners/zip_scanner.py
+${PYSITELIB}/puremagic/scanners/zip_scanner.pyc
+${PYSITELIB}/puremagic/scanners/zip_scanner.pyo
