@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1292 2026/02/22 07:30:29 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1293 2026/02/22 07:31:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1722,3 +1722,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/doclifter to 2.22 [wiz 2026-02-21]
 	Updated devel/mise to 2026.2.18 [pin 2026-02-22]
 	Updated security/p5-Crypt-URandom to 0.55 [wiz 2026-02-22]
+	Updated mail/p5-MIME-Lite to 3.038 [wiz 2026-02-22]
