@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2025/09/14 10:53:56 wiz Exp $
+$NetBSD: distinfo,v 1.29 2026/02/22 22:23:16 bouyer Exp $
 
 BLAKE2s (OpenCPN-5.0.0.zip) = b29dc2c6cde51a2984e835496ed424f919824df8aa3dd48f14dfa654221b8571
 SHA512 (OpenCPN-5.0.0.zip) = 146fe0bf29424f72138168cd20617aabc2f130d2ffd47b8da4aa1e0aa6d7176093b36d96d8f0d456af1f7805db13ed87be67f4f3af7a7a2d6abf0d5734834f7a
@@ -12,6 +12,7 @@ SHA1 (patch-plugins_wmm_pi_CMakeLists.txt) = 88339a61dd4b78b823bbd34bd1b02863d15
 SHA1 (patch-src_glu_CMakeLists.txt) = 6d17d0e878c7ce52e49837c94cb003d18829be40
 SHA1 (patch-src_mipmap_mipmap.c) = 3bdb2c37e7a6d89fc6a531af6e0396a1ff385aeb
 SHA1 (patch-src_ocpndc.cpp) = d0f32a34a9a9401c07a6c071994b2173343ed7d1
+SHA1 (patch-src_pluginmanager.cpp) = ed1054c130cdbe4679cc95423c27a5887f023fe4
 SHA1 (patch-src_printtable.cpp) = 52ed0f09610d56e9acc5ec9b8e4cbdc7ad55d043
 SHA1 (patch-src_routeprintout.cpp) = c0f960b76b1b7a8acb7e5faca5f656a5c259f02c
 SHA1 (patch-src_wxcurl_base.cpp) = 25c6d03dd1215885f15221d888327f0535080284
