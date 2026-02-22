@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1299 2026/02/22 10:55:58 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1300 2026/02/22 10:59:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1729,3 +1729,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/fluidsynth to 2.5.3 [wiz 2026-02-22]
 	Updated sysutils/fzf to 0.68.0 [wiz 2026-02-22]
 	Updated devel/jjui to 0.9.12 [wiz 2026-02-22]
+	Updated textproc/jnv to 0.6.2 [wiz 2026-02-22]
