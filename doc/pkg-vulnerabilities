@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.734 2026/02/22 00:40:56 ryoon Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.735 2026/02/22 16:17:32 taca Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25172,7 +25172,10 @@ webkit-gtk<2.40.5	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-202
 webkit-gtk<2.40.5	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-38611
 rust<1.71.1	permission-problem	https://nvd.nist.gov/vuln/detail/CVE-2023-38497
 py{27,37,38,39,310,311}-borgbackup<1.2.5	archive-spoofing	https://nvd.nist.gov/vuln/detail/CVE-2023-36811
-ruby{30,31,32}-rails<6.1	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+ruby[1-2][0-9]-rails42-*	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+ruby[23][0-9]-rails51-*	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+ruby[23][0-9]-rails52-*	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+ruby[23][0-9]-rails61-*	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 py{37,38,39,310,311}-django>=3.2<3.2.21	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-41164
 py{37,38,39,310,311}-django>=4.1<4.1.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-41164
 py{37,38,39,310,311}-django>=4.2<4.2.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-41164
@@ -29324,7 +29327,8 @@ iperf3<3.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-7250
 iperf3<3.14	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-38403
 iperf3<3.17	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2024-26306
 iperf3<3.18	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-53580
-php>=8.1<8.2		eol	https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+php-8.1<8.2	eol	https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+php81-*		eol	https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 chromium<143.0.7499.192 	code-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-0628
 libtasn1<4.21.0	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-13151
 lmdb-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-22185
@@ -29759,3 +29763,5 @@ php{56,74,81,82,83,84}-roundcube<1.6.13	cross-site-scripting	https://nvd.nist.go
 ruby{32,33,34}-faraday<2.14.1	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2026-25765
 tcpreplay<4.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-54192
 libvpx<1.16.0nb1	heap-overflow	https://nvd.nist.gov/vuln/detail/cve-2026-2447
+ruby[234][0-9]-rails70-*	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+ruby[34][0-4]-rails71-*	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
