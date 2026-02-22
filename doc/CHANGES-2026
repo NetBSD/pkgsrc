@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1310 2026/02/22 12:59:49 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1311 2026/02/22 13:19:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1740,3 +1740,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/py-icalendar to 7.0.1 [wiz 2026-02-22]
 	Updated devel/py-lama to 8.4.1nb2 [wiz 2026-02-22]
 	Added lang/py-lark version 1.3.1 [wiz 2026-02-22]
+	Removed lang/py-lark-parser successor lang/py-lark [wiz 2026-02-22]
