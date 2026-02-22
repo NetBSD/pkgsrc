@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.26 2026/01/08 10:18:47 wiz Exp $
+# $NetBSD: eol-packages,v 1.27 2026/02/22 13:53:07 taca Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1243,3 +1243,18 @@ Package: PHP (8.1)
 eol date: December 31, 2025
 URL: http://php.net/supported-versions.php
 Description: Upgrade to PHP 8.2 or newer.
+
+Package: Rails (6.1)
+eol date: October 23, 2024
+URL: https://guides.rubyonrails.org/maintenance_policy.html
+Description: Upgrade to a newer version.
+
+Package: Rails (7.0)
+eol date: October 29, 2025
+URL: https://guides.rubyonrails.org/maintenance_policy.html
+Description: Upgrade to a newer version.
+
+Package: Rails (7.1)
+eol date: October 29, 2025
+URL: https://guides.rubyonrails.org/maintenance_policy.html
+Description: Upgrade to a newer version.
