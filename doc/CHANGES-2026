@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1313 2026/02/22 13:32:04 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1314 2026/02/22 13:33:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1743,3 +1743,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed lang/py-lark-parser successor lang/py-lark [wiz 2026-02-22]
 	Updated devel/py-hypothesmith to 0.3.3nb2 [wiz 2026-02-22]
 	Updated devel/py-isort to 8.0.0 [wiz 2026-02-22]
+	Updated lang/py-librt to 0.8.1 [wiz 2026-02-22]
