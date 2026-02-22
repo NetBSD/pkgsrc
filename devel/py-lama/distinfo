@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.11 2026/02/17 15:45:12 wiz Exp $
+$NetBSD: distinfo,v 1.12 2026/02/22 11:51:38 wiz Exp $
 
 BLAKE2s (pylama-8.4.1.tar.gz) = a87eaa7ec81b4fb5d1f0cc017a773a0950ca20f67c254f778b8edf181cfeaf06
 SHA512 (pylama-8.4.1.tar.gz) = b1a968caa743ecbeff88676666419d3ad4d60dea0cc0c50744ff185548d6ef59ea68e196fecd50e1dc082bc759a1c812172566f85ac15cda785d9b338b78f2cf
 Size (pylama-8.4.1.tar.gz) = 33616 bytes
+SHA1 (patch-pylama_lint_____init____.py) = fec7c63294dcd06fbc6598e8934e6abf8db08cf2
 SHA1 (patch-setup.py) = 30a4e6bd0d62decc6843c1038faec2ea5092ba3a
