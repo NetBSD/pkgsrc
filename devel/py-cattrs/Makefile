@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2025/10/12 17:55:12 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/02/22 11:10:44 wiz Exp $
 
-DISTNAME=	cattrs-25.3.0
+DISTNAME=	cattrs-26.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cattrs/}
@@ -20,6 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.12.2:../../devel/py-typing-extensi
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7.6.1:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.111.2:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-immutables>=0.20:../../misc/py-immutables
+TEST_DEPENDS+=	${PYPKGPREFIX}-orjson>=0:../../textproc/py-orjson
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark>=4.0.0:../../devel/py-test-benchmark
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.6.1:../../devel/py-test-xdist
 # not listed in pyproject but used

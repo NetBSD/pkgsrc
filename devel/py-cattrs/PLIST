@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/10/12 17:55:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/02/22 11:10:44 wiz Exp $
 ${PYSITELIB}/cattr/__init__.py
 ${PYSITELIB}/cattr/__init__.pyc
 ${PYSITELIB}/cattr/__init__.pyo
@@ -67,6 +67,9 @@ ${PYSITELIB}/cattrs/disambiguators.pyo
 ${PYSITELIB}/cattrs/dispatch.py
 ${PYSITELIB}/cattrs/dispatch.pyc
 ${PYSITELIB}/cattrs/dispatch.pyo
+${PYSITELIB}/cattrs/enums.py
+${PYSITELIB}/cattrs/enums.pyc
+${PYSITELIB}/cattrs/enums.pyo
 ${PYSITELIB}/cattrs/errors.py
 ${PYSITELIB}/cattrs/errors.pyc
 ${PYSITELIB}/cattrs/errors.pyo
@@ -121,6 +124,9 @@ ${PYSITELIB}/cattrs/preconf/pyyaml.pyo
 ${PYSITELIB}/cattrs/preconf/tomlkit.py
 ${PYSITELIB}/cattrs/preconf/tomlkit.pyc
 ${PYSITELIB}/cattrs/preconf/tomlkit.pyo
+${PYSITELIB}/cattrs/preconf/tomllib.py
+${PYSITELIB}/cattrs/preconf/tomllib.pyc
+${PYSITELIB}/cattrs/preconf/tomllib.pyo
 ${PYSITELIB}/cattrs/preconf/ujson.py
 ${PYSITELIB}/cattrs/preconf/ujson.pyc
 ${PYSITELIB}/cattrs/preconf/ujson.pyo
