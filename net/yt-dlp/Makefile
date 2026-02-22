@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.86 2026/02/06 15:26:34 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2026/02/22 20:52:07 wiz Exp $
 
-DISTNAME=	yt_dlp-2026.2.4
+DISTNAME=	yt_dlp-2026.2.21
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yt-dlp/}
@@ -26,8 +26,8 @@ post-install:
 ALLOW_NETWORK_ACCESS=	yes
 .endif
 
-# as of 2026.2.4
-# 2424 failed, 3849 passed, 1118 skipped, 3 warnings, 21 subtests passed
+# as of 2026.2.21
+# 2483 failed, 3819 passed, 1121 skipped, 3 warnings, 39 subtests passed
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
