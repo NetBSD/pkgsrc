@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1324 2026/02/22 15:05:01 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1325 2026/02/22 15:40:04 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1754,3 +1754,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated comms/py-textual to 8.0.0 [wiz 2026-02-22]
 	Updated www/py-werkzeug to 3.1.6 [wiz 2026-02-22]
 	Updated net/slumber to 5.1.0 [wiz 2026-02-22]
+	Updated devel/wayland to 1.24.0nb2 [kikadf 2026-02-22]
