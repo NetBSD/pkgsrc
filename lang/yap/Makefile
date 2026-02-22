@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.27 2017/10/09 08:52:04 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/02/22 08:16:15 wiz Exp $
 
 DISTNAME=		yap-6.3.3
 PKGREVISION=		5
 CATEGORIES=		lang
 # MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=yap/}
-MASTER_SITES=		http://www.dcc.fc.up.pt/~vsc/Yap/
-MASTER_SITES+=		http://www.dcc.fc.up.pt/~vsc/Yap/current/
+#MASTER_SITES=		http://www.dcc.fc.up.pt/~vsc/Yap/
+#MASTER_SITES+=		http://www.dcc.fc.up.pt/~vsc/Yap/current/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.dcc.fc.up.pt/~vsc/Yap/
+#HOMEPAGE=		http://www.dcc.fc.up.pt/~vsc/Yap/
 COMMENT=		ISO-compliant Prolog
 
 USE_LANGUAGES=		c c++
