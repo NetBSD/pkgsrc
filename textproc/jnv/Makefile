@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/07/27 08:57:06 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/02/22 10:59:10 wiz Exp $
 
-DISTNAME=	jnv-0.6.1
+DISTNAME=	jnv-0.6.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ynqa/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
