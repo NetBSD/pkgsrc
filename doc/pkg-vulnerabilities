@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.733 2026/02/15 15:43:28 spz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.734 2026/02/22 00:40:56 ryoon Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29758,3 +29758,4 @@ php{56,74,81,82,83,84}-roundcube<1.6.13	cross-site-scripting	https://nvd.nist.go
 php{56,74,81,82,83,84}-roundcube<1.6.13	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2026-26079
 ruby{32,33,34}-faraday<2.14.1	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2026-25765
 tcpreplay<4.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-54192
+libvpx<1.16.0nb1	heap-overflow	https://nvd.nist.gov/vuln/detail/cve-2026-2447
