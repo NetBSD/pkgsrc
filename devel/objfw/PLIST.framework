@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.framework,v 1.10 2025/08/03 12:56:04 js Exp $
+@comment $NetBSD: PLIST.framework,v 1.11 2026/02/22 20:40:55 js Exp $
 Library/Frameworks/ObjFW.framework/Headers
 Library/Frameworks/ObjFW.framework/Modules
 Library/Frameworks/ObjFW.framework/ObjFW
@@ -18,11 +18,13 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFBindUNIXSocketFailedExce
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFBlock.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFBroadcastConditionFailedException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFCNAMEDNSResourceRecord.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFCanvas.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFChangeCurrentDirectoryFailedException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFCharacterSet.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFChecksumMismatchException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFCollection.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFColor.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFColorSpace.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFCondition.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFConditionStillWaitingException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFConnectIPSocketFailedException.h
@@ -44,6 +46,8 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFData+MessagePackParsing.
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFData.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFDatagramSocket.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFDate.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFDeflate64Stream.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFDeflateStream.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFDictionary.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFEmbeddedIRIHandler.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFEnumerationMutationException.h
@@ -72,6 +76,8 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFINISection.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFINISection.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFIRI.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFIRIHandler.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFImage.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFImageFormatHandler.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFIndexSet.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFInflate64Stream.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFInflateStream.h
@@ -113,6 +119,7 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableArray.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableData.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableDictionary.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableIRI.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableImage.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableIndexSet.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableLHAArchiveEntry.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutablePair.h
@@ -252,7 +259,9 @@ Library/Frameworks/ObjFWHID.framework/ObjFWHID
 Library/Frameworks/ObjFWHID.framework/Resources
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OH8BitDoUltimate2CWirelessGamepad.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHDualSenseGamepad.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHDualShock3Gamepad.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHDualShock4Gamepad.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHDualShockGamepad.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHExtendedGamepad.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHExtendedN64Controller.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHExtendedSNESGamepad.h
@@ -262,6 +271,7 @@ Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHGameControllerButton.
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHGameControllerDirectionalPad.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHGameControllerElement.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHGameControllerProfile.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHGameCubeController.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHGamepad.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHJoyConPair.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHLeftJoyCon.h
