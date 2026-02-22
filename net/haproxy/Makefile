@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.150 2026/02/13 09:32:47 adam Exp $
+# $NetBSD: Makefile,v 1.151 2026/02/22 19:46:19 adam Exp $
 
-DISTNAME=	haproxy-3.3.3
+DISTNAME=	haproxy-3.3.4
 CATEGORIES=	net www
 MASTER_SITES=	https://www.haproxy.org/download/${PKGVERSION_NOREV:R}/src/
 
