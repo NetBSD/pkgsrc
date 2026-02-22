@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2025/10/12 18:07:30 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/02/22 13:31:56 wiz Exp $
 
-DISTNAME=	isort-7.0.0
+DISTNAME=	isort-8.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/isort/}
@@ -27,13 +27,17 @@ USE_LANGUAGES=	# none
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
-# 9 failed, 553 passed, 1 skipped, 1 xfailed, 558 warnings, 2 errors
+# 5 failed, 552 passed, 1 skipped, 1 xpassed, 2 errors
 
 post-install:
 .for bin in isort isort-identify-imports
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
+
+pre-test:
+	${RM} -f ${BUILDLINK_DIR}/bin/isort
+	${LN} -s ${PREFIX}/bin/isort-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/isort
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
