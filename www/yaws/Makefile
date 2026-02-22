@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2026/02/15 18:22:34 gdt Exp $
-#
+# $NetBSD: Makefile,v 1.29 2026/02/22 08:17:04 wiz Exp $
 
 DISTNAME=		yaws-2.1.1
 PKGREVISION=		4
@@ -8,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=erlyaws/}
 GITHUB_TAG=		${DISTNAME}
 
 MAINTAINER=		bartosz.kuzma@gmail.com
-HOMEPAGE=		http://yaws.hyber.org/
+HOMEPAGE=		https://erlyaws.github.io/
 COMMENT=		High perfomance HTTP 1.1 webserver written in Erlang
 LICENSE=		modified-bsd
 
