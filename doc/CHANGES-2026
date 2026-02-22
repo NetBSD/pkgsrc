@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1325 2026/02/22 15:40:04 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.1326 2026/02/22 19:53:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1755,3 +1755,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-werkzeug to 3.1.6 [wiz 2026-02-22]
 	Updated net/slumber to 5.1.0 [wiz 2026-02-22]
 	Updated devel/wayland to 1.24.0nb2 [kikadf 2026-02-22]
+	Updated net/haproxy to 3.3.4 [adam 2026-02-22]
+	Updated security/libgcrypt to 1.12.1 [adam 2026-02-22]
