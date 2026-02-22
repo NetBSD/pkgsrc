@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2023/10/24 22:11:02 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2026/02/22 08:17:58 wiz Exp $
 
 DISTNAME=	zebedee-2.5.3
 PKGREVISION=	19
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zebedee/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.winton.org.uk/zebedee/
+HOMEPAGE=	https://sourceforge.net/projects/zebedee/
 COMMENT=	Simple tunneling program for TCP or UDP with encryption
 
 USE_TOOLS+=		gmake perl tclsh:run
