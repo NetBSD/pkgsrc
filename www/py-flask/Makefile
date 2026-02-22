@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2025/10/09 08:07:29 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/02/22 11:14:00 wiz Exp $
 
-DISTNAME=	flask-3.1.2
+DISTNAME=	flask-3.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flask/}
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-werkzeug>=3.1.0:../../www/py-werkzeug
 
 USE_LANGUAGES=	# none
 
-# as of 3.1.2
+# as of 3.1.3
 # 1 failed, 476 passed, 6 skipped
 
 post-install:
