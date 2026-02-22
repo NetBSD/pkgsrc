@@ -1,4 +1,4 @@
-$NetBSD: patch-media_base_media__switches.cc,v 1.15 2026/02/15 09:04:06 kikadf Exp $
+$NetBSD: patch-media_base_media__switches.cc,v 1.16 2026/02/22 08:46:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
@@ -101,7 +101,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.15 2026/02/15 09:04:06 kikadf E
  BASE_FEATURE(kV4L2H264TemporalLayerHWEncoding,
               base::FEATURE_DISABLED_BY_DEFAULT);
 @@ -1272,7 +1297,7 @@ BASE_FEATURE(kUseOutOfProcessVideoDecodi
- BASE_FEATURE(kUseSharedImageInOOPVDProcess, base::FEATURE_ENABLED_BY_DEFAULT);
+ BASE_FEATURE(kUseSharedImageInOOPVDProcess, base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(ALLOW_OOP_VIDEO_DECODER)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

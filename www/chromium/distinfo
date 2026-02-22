@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2026/02/15 09:03:54 kikadf Exp $
+$NetBSD: distinfo,v 1.29 2026/02/22 08:46:28 kikadf Exp $
 
 BLAKE2s (Inflector-0.11.4.crate) = 2f8b4a805230be3b58267c7fb6b9c26c2ec966378d195673d1128a851cca515d
 SHA512 (Inflector-0.11.4.crate) = f1f6463e033b6d3c16c51dc1e1a3f5569954308b95b59058294b7f9310919bbda797e99e6a07529071bb83f0688867a243997d33795a7136b0af73977004296e
@@ -51,12 +51,12 @@ Size (cc-1.1.21.crate) = 83463 bytes
 BLAKE2s (cfg-if-1.0.0.crate) = fbb02f63b24cc224b045ff2aac3aefd0a77cf7b578df4d5f9da9517a59aaf9bb
 SHA512 (cfg-if-1.0.0.crate) = 0fb16a8882fd30e86b62c5143b1cb18ab564e84e75bd1f28fd12f24ffdc4a42e0d2e012a99abb606c12efe3c11061ff5bf8e24ab053e550ae083f7d90f6576ff
 Size (cfg-if-1.0.0.crate) = 7934 bytes
-BLAKE2s (chromium-145.0.7632.75-lite.tar.xz) = 91db2c218f31127df4a323d5651c6182f5977bbc4bbc57b1a2561c898cc0eeb7
-SHA512 (chromium-145.0.7632.75-lite.tar.xz) = d741b0bf22a103280d62942bb86c3248e28684b1cb12a00ff0b8d0e847a6f130f5ca3309dd6eaa2e8fc04737fe20299f245b70f1d40fa9d7713002a620841d80
-Size (chromium-145.0.7632.75-lite.tar.xz) = 1416357796 bytes
-BLAKE2s (chromium-145.0.7632.75-testdata.tar.xz) = 07e5db47ab02ff61fa033cb71ac66523fccb7100733671f7fcd112293eed9582
-SHA512 (chromium-145.0.7632.75-testdata.tar.xz) = 7dfe67181f7b163de675dfe348c613d776eec7edccea648d79ff0cdb5f36a70eb00e39e056cad8dfa766b20e40780f24715c2c74f0e45b241f578569a54983e5
-Size (chromium-145.0.7632.75-testdata.tar.xz) = 1319035408 bytes
+BLAKE2s (chromium-145.0.7632.109-lite.tar.xz) = 3b546319a62218f4c31b8921acd47ec3f7016a36ce9054d8ce42fcd13f8955b9
+SHA512 (chromium-145.0.7632.109-lite.tar.xz) = d69ad62f4aaf2f4a96c2c97236bb4c54597f211b33c6c5008803bdaae5a3d17ae13f0c661e25cbc6bc7c6878bacd13af67044c0c6576d7fde4a6103422c7811e
+Size (chromium-145.0.7632.109-lite.tar.xz) = 1416231332 bytes
+BLAKE2s (chromium-145.0.7632.109-testdata.tar.xz) = 95f16f36dc13e9c0e8358e3b0c62844cb6a3e03773e06310982cd11b37f44da7
+SHA512 (chromium-145.0.7632.109-testdata.tar.xz) = 54192668724c8dc1e2332790e22eb72a680d2de6dd8c809d7f13dbf15f56b4ad8f874b673b493d0c41ee260ca46ded90762111f7da4db6625f179428f73c7abf
+Size (chromium-145.0.7632.109-testdata.tar.xz) = 1318358228 bytes
 BLAKE2s (convert_case-0.6.0.crate) = c65fc0970543af9611c565957751df80f31efa3aa7c4d8e5eac41712864a67d5
 SHA512 (convert_case-0.6.0.crate) = 3b17449195a9a36e3965db89eeb967979c192ad7743217ea08e8c8b91ecae1ac1674362d05dc6f32f1f361fface3f783398285bb78060403f65a777a9d29adf2
 Size (convert_case-0.6.0.crate) = 18675 bytes
@@ -1417,7 +1417,7 @@ SHA1 (patch-media_audio_sndio_sndio__output.h) = 0f750c7d6583293852402ee1535cb3b
 SHA1 (patch-media_base_audio__latency.cc) = f952ede00d74addb108bea72a43115724de6d523
 SHA1 (patch-media_base_libaom__thread__wrapper.cc) = cd220c26a3facd9cd2924870399e034a7cbc7c61
 SHA1 (patch-media_base_libvpx__thread__wrapper.cc) = ab4d150f50e24654517c9e2658bc12b1a39dc061
-SHA1 (patch-media_base_media__switches.cc) = 9c53262f7451ec267ebb38be7efece392bff97d2
+SHA1 (patch-media_base_media__switches.cc) = 990bd344e10703fd9e469250f7cd9e74ebccdaba
 SHA1 (patch-media_base_media__switches.h) = 1dc55e2dc666f9574526060a0ce7a3acd2656288
 SHA1 (patch-media_base_video__frame.cc) = 279926860987fdcfb6cf2290ef94b7fdfe1b5d07
 SHA1 (patch-media_base_video__frame.h) = 5c03dc35a26e8f3ca9d4f5c9d606043e54463c38
