@@ -1,1 +1,1 @@
-bin/bin/poetry-dynamic-versioning @PREFIX@/bin/bin/poetry-dynamic-versioning-@PYVERSSUFFIX@
+bin/poetry-dynamic-versioning @PREFIX@/bin/poetry-dynamic-versioning-@PYVERSSUFFIX@

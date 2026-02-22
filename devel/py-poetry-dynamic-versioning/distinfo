@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/10/12 17:48:51 wiz Exp $
+$NetBSD: distinfo,v 1.2 2026/02/22 14:14:20 wiz Exp $
 
-BLAKE2s (poetry_dynamic_versioning-1.9.1.tar.gz) = 102cc48257c1d718a43793ed6aaac0e96fb4132559cfd7edcd9d833aa3b467eb
-SHA512 (poetry_dynamic_versioning-1.9.1.tar.gz) = 688a6113722bea00c1111e3fa50734eed3cb4406d439a9880ea27637f7518f309893af643eb87a380034103d48f7ca6310c130fe58d5887327bbdf0498db7429
-Size (poetry_dynamic_versioning-1.9.1.tar.gz) = 37200 bytes
+BLAKE2s (poetry_dynamic_versioning-1.10.0.tar.gz) = 55c3f52ca66c960cc27befd69910a2d53d0baff838fd13ab00ee8b814708fa4b
+SHA512 (poetry_dynamic_versioning-1.10.0.tar.gz) = cf5b870aa8d2f9e01bb14189f50037c5588bad5679fde80c2a56f36f38c559c590f33b0bb0fbfda76abce8eed8711a0e46c9de21ebe8f6d1d2966aee96424297
+Size (poetry_dynamic_versioning-1.10.0.tar.gz) = 36312 bytes
