@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.57 2026/02/01 14:12:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.58 2026/02/22 20:52:07 wiz Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -1442,6 +1442,9 @@ ${PYSITELIB}/yt_dlp/extractor/livestreamfails.pyo
 ${PYSITELIB}/yt_dlp/extractor/lnk.py
 ${PYSITELIB}/yt_dlp/extractor/lnk.pyc
 ${PYSITELIB}/yt_dlp/extractor/lnk.pyo
+${PYSITELIB}/yt_dlp/extractor/locipo.py
+${PYSITELIB}/yt_dlp/extractor/locipo.pyc
+${PYSITELIB}/yt_dlp/extractor/locipo.pyo
 ${PYSITELIB}/yt_dlp/extractor/loco.py
 ${PYSITELIB}/yt_dlp/extractor/loco.pyc
 ${PYSITELIB}/yt_dlp/extractor/loco.pyo
@@ -1496,6 +1499,9 @@ ${PYSITELIB}/yt_dlp/extractor/massengeschmacktv.pyo
 ${PYSITELIB}/yt_dlp/extractor/masters.py
 ${PYSITELIB}/yt_dlp/extractor/masters.pyc
 ${PYSITELIB}/yt_dlp/extractor/masters.pyo
+${PYSITELIB}/yt_dlp/extractor/matchitv.py
+${PYSITELIB}/yt_dlp/extractor/matchitv.pyc
+${PYSITELIB}/yt_dlp/extractor/matchitv.pyo
 ${PYSITELIB}/yt_dlp/extractor/matchtv.py
 ${PYSITELIB}/yt_dlp/extractor/matchtv.pyc
 ${PYSITELIB}/yt_dlp/extractor/matchtv.pyo
@@ -2774,6 +2780,9 @@ ${PYSITELIB}/yt_dlp/extractor/tvn24.pyo
 ${PYSITELIB}/yt_dlp/extractor/tvnoe.py
 ${PYSITELIB}/yt_dlp/extractor/tvnoe.pyc
 ${PYSITELIB}/yt_dlp/extractor/tvnoe.pyo
+${PYSITELIB}/yt_dlp/extractor/tvo.py
+${PYSITELIB}/yt_dlp/extractor/tvo.pyc
+${PYSITELIB}/yt_dlp/extractor/tvo.pyo
 ${PYSITELIB}/yt_dlp/extractor/tvopengr.py
 ${PYSITELIB}/yt_dlp/extractor/tvopengr.pyc
 ${PYSITELIB}/yt_dlp/extractor/tvopengr.pyo
@@ -2948,6 +2957,9 @@ ${PYSITELIB}/yt_dlp/extractor/viously.pyo
 ${PYSITELIB}/yt_dlp/extractor/viqeo.py
 ${PYSITELIB}/yt_dlp/extractor/viqeo.pyc
 ${PYSITELIB}/yt_dlp/extractor/viqeo.pyo
+${PYSITELIB}/yt_dlp/extractor/visir.py
+${PYSITELIB}/yt_dlp/extractor/visir.pyc
+${PYSITELIB}/yt_dlp/extractor/visir.pyo
 ${PYSITELIB}/yt_dlp/extractor/viu.py
 ${PYSITELIB}/yt_dlp/extractor/viu.pyc
 ${PYSITELIB}/yt_dlp/extractor/viu.pyo
