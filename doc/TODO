@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26838 2026/02/22 10:59:20 wiz Exp $
+$NetBSD: TODO,v 1.26839 2026/02/22 11:00:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -926,7 +926,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o minicom-2.10
 	o miniircd-2.1
 	o miniupnpd-2.3.7
-	o minizip-1.3.2
 	o mipsel-none-elf-binutils-2.36.1
 	o mipsel-none-elf-gcc-9.3.0
 	o mit-scheme-bin-9.2
