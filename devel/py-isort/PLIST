@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/10/12 18:07:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/02/22 13:31:56 wiz Exp $
 bin/isort-${PYVERSSUFFIX}
 bin/isort-identify-imports-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -35,12 +35,6 @@ ${PYSITELIB}/isort/comments.pyo
 ${PYSITELIB}/isort/core.py
 ${PYSITELIB}/isort/core.pyc
 ${PYSITELIB}/isort/core.pyo
-${PYSITELIB}/isort/deprecated/__init__.py
-${PYSITELIB}/isort/deprecated/__init__.pyc
-${PYSITELIB}/isort/deprecated/__init__.pyo
-${PYSITELIB}/isort/deprecated/finders.py
-${PYSITELIB}/isort/deprecated/finders.pyc
-${PYSITELIB}/isort/deprecated/finders.pyo
 ${PYSITELIB}/isort/exceptions.py
 ${PYSITELIB}/isort/exceptions.pyc
 ${PYSITELIB}/isort/exceptions.pyo
@@ -87,9 +81,6 @@ ${PYSITELIB}/isort/sections.pyo
 ${PYSITELIB}/isort/settings.py
 ${PYSITELIB}/isort/settings.pyc
 ${PYSITELIB}/isort/settings.pyo
-${PYSITELIB}/isort/setuptools_commands.py
-${PYSITELIB}/isort/setuptools_commands.pyc
-${PYSITELIB}/isort/setuptools_commands.pyo
 ${PYSITELIB}/isort/sorting.py
 ${PYSITELIB}/isort/sorting.pyc
 ${PYSITELIB}/isort/sorting.pyo
