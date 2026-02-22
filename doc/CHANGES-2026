@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1321 2026/02/22 14:31:33 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1322 2026/02/22 14:55:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1751,3 +1751,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pylint to 4.0.5 [wiz 2026-02-22]
 	Updated comms/py-rich to 14.3.3 [wiz 2026-02-22]
 	Updated devel/py-ruff to 0.15.2 [wiz 2026-02-22]
+	Updated comms/py-textual to 8.0.0 [wiz 2026-02-22]
