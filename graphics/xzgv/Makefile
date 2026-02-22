@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2026/01/27 08:39:51 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.93 2026/02/22 08:15:30 wiz Exp $
 
 DISTNAME=	xzgv-0.9.1
 PKGREVISION=	43
@@ -7,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xzgv/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://sourceforge.net/projects/xzgv
+HOMEPAGE=	https://sourceforge.net/projects/xzgv/
 COMMENT=	Image viewer
 LICENSE=	gnu-gpl-v2
 
