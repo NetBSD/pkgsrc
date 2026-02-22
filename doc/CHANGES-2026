@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1308 2026/02/22 11:18:20 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1309 2026/02/22 11:51:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1738,3 +1738,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-flask to 3.1.3 [wiz 2026-02-22]
 	Updated devel/py-google-api-core to 2.30.0 [wiz 2026-02-22]
 	Updated time/py-icalendar to 7.0.1 [wiz 2026-02-22]
+	Updated devel/py-lama to 8.4.1nb2 [wiz 2026-02-22]
