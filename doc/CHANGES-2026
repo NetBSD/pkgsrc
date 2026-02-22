@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1314 2026/02/22 13:33:04 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1315 2026/02/22 13:39:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1744,3 +1744,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-hypothesmith to 0.3.3nb2 [wiz 2026-02-22]
 	Updated devel/py-isort to 8.0.0 [wiz 2026-02-22]
 	Updated lang/py-librt to 0.8.1 [wiz 2026-02-22]
+	Updated devel/py-maturin to 1.12.4 [wiz 2026-02-22]
