@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2026/02/16 12:47:00 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/02/22 15:04:52 wiz Exp $
 
-DISTNAME=	slumber-5.0.0
+DISTNAME=	slumber-5.1.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LucasPickering/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,7 +15,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.88.0
+RUST_REQ=	1.90.0
 USE_TOOLS+=	pkg-config
 
 .include "../../lang/rust/cargo.mk"
