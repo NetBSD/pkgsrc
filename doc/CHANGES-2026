@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1327 2026/02/22 20:41:11 js Exp $
+$NetBSD: CHANGES-2026,v 1.1328 2026/02/22 20:52:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1758,3 +1758,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/haproxy to 3.3.4 [adam 2026-02-22]
 	Updated security/libgcrypt to 1.12.1 [adam 2026-02-22]
 	Updated devel/objfw to 1.5 [js 2026-02-22]
+	Updated net/yt-dlp to 2026.2.21 [wiz 2026-02-22]
