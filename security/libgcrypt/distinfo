@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.105 2026/02/01 08:51:16 wiz Exp $
+$NetBSD: distinfo,v 1.106 2026/02/22 19:52:38 adam Exp $
 
-BLAKE2s (libgcrypt-1.12.0.tar.bz2) = 8e8c265bd087638c042cc6563a664436e4b208e15b8e93c58b801f9abd26685a
-SHA512 (libgcrypt-1.12.0.tar.bz2) = 9421461297bd79b14f94d1ab275c3ed93b5d433531915c5cc7a718a94d32978a46feccb7a33fe63a60780ff00d465fbe1fe9ada5c250cf6d10a525c246c63d1c
-Size (libgcrypt-1.12.0.tar.bz2) = 4438947 bytes
-SHA1 (patch-cipher_asm-common-amd64.h) = e0ad048681448f4fde3d75c2429edfd122e97e0b
-SHA1 (patch-cipher_rijndael-vaes-avx512-amd64.S) = a8dae214c6763c8783b1128ef205163e8dc0e704
-SHA1 (patch-mpi_config.links) = 1bb6bd677b0c7519fe14672bba0adc8c99c8e09f
+BLAKE2s (libgcrypt-1.12.1.tar.bz2) = d0447a5d747dc1c7189bcfdb3d4336e8fad968c7cf82fdcbf6c44d39fef88173
+SHA512 (libgcrypt-1.12.1.tar.bz2) = e4be1f9d32bb672663499a1203454b9c646b7f237d9acb64303b991798fe3f4c3366793b0564b94c6687885353f6e7fef6ae6e74a57ccb5eb5606e77c81b3738
+Size (libgcrypt-1.12.1.tar.bz2) = 4441330 bytes
 SHA1 (patch-src_libgcrypt-config.in) = 2b791d7ebe51c52ece864b23dcbeae5354701263
