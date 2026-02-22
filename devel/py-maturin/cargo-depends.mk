@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.32 2026/02/16 11:37:49 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.33 2026/02/22 13:39:47 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -35,7 +35,7 @@ CARGO_CRATE_DEPENDS+=	cargo-options-0.7.6
 CARGO_CRATE_DEPENDS+=	cargo-platform-0.1.9
 CARGO_CRATE_DEPENDS+=	cargo-platform-0.3.2
 CARGO_CRATE_DEPENDS+=	cargo-xwin-0.19.2
-CARGO_CRATE_DEPENDS+=	cargo-zigbuild-0.22.0
+CARGO_CRATE_DEPENDS+=	cargo-zigbuild-0.22.1
 CARGO_CRATE_DEPENDS+=	cargo_metadata-0.18.1
 CARGO_CRATE_DEPENDS+=	cargo_metadata-0.23.1
 CARGO_CRATE_DEPENDS+=	cbindgen-0.29.2
@@ -121,7 +121,7 @@ CARGO_CRATE_DEPENDS+=	getrandom-0.2.17
 CARGO_CRATE_DEPENDS+=	getrandom-0.3.4
 CARGO_CRATE_DEPENDS+=	glob-0.3.3
 CARGO_CRATE_DEPENDS+=	globset-0.4.18
-CARGO_CRATE_DEPENDS+=	goblin-0.10.4
+CARGO_CRATE_DEPENDS+=	goblin-0.10.5
 CARGO_CRATE_DEPENDS+=	hashbrown-0.15.5
 CARGO_CRATE_DEPENDS+=	hashbrown-0.16.1
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
@@ -174,7 +174,7 @@ CARGO_CRATE_DEPENDS+=	lzxd-0.2.6
 CARGO_CRATE_DEPENDS+=	mailparse-0.16.1
 CARGO_CRATE_DEPENDS+=	matchers-0.2.0
 CARGO_CRATE_DEPENDS+=	memchr-2.8.0
-CARGO_CRATE_DEPENDS+=	memmap2-0.9.9
+CARGO_CRATE_DEPENDS+=	memmap2-0.9.10
 CARGO_CRATE_DEPENDS+=	mimalloc-0.1.48
 CARGO_CRATE_DEPENDS+=	mime-0.3.17
 CARGO_CRATE_DEPENDS+=	mime_guess-2.0.5
