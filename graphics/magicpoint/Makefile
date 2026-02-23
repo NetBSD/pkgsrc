@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2025/04/24 14:14:31 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2026/02/23 08:03:19 taca Exp $
 
 DISTNAME=		magicpoint-1.13a
 PKGREVISION=		39
@@ -29,6 +29,8 @@ CONFIGURE_ARGS+=	--with-searchpath=${BUILDLINK_DIR}
 CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR}
 CONFIGURE_ENV+=		mgp_cv_path_perl=${TOOLS_PERL5}
 CONFIGURE_ENV+=		ac_cv_path_mgp_cv_path_gzip=${TOOLS_PATH.gzip}
+
+MAKE_FLAGS+=	XBINDIR=${TOOLS_DIR}/bin
 
 DOCDIR=			share/doc/mgp
 EGDIR=			share/examples/mgp
