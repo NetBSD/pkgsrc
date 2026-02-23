@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2025/09/28 19:44:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/02/23 15:01:32 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/aiormq/__init__.py
 ${PYSITELIB}/aiormq/__init__.pyc
 ${PYSITELIB}/aiormq/__init__.pyo
