@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/02/06 10:05:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/02/23 07:15:44 wiz Exp $
 
 DISTNAME=	kdsoap-ws-discovery-client-0.4.0
 PKGREVISION=	2
@@ -15,6 +15,8 @@ USE_LANGUAGES=		c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DQT_MAJOR_VERSION=6
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Doxygen=ON
+
+BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
 
 .include "../../devel/cmake/build.mk"
 
