@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1342 2026/02/23 14:44:29 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1343 2026/02/23 14:50:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1789,3 +1789,16 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/ruby-railties70 [taca 2026-02-23]
 	Removed textproc/ruby-actiontext70 [taca 2026-02-23]
 	Removed www/ruby-rails70 [taca 2026-02-23]
+	Removed devel/ruby-activesupport71 [taca 2026-02-23]
+	Removed devel/ruby-activemodel71 [taca 2026-02-23]
+	Removed devel/ruby-activejob71 [taca 2026-02-23]
+	Removed www/ruby-actionview71 [taca 2026-02-23]
+	Removed www/ruby-actionpack71 [taca 2026-02-23]
+	Removed databases/ruby-activerecord71 [taca 2026-02-23]
+	Removed devel/ruby-activestorage71 [taca 2026-02-23]
+	Removed mail/ruby-actionmailer71 [taca 2026-02-23]
+	Removed mail/ruby-actionmailbox71 [taca 2026-02-23]
+	Removed www/ruby-actioncable71 [taca 2026-02-23]
+	Removed devel/ruby-railties71 [taca 2026-02-23]
+	Removed textproc/ruby-actiontext71 [taca 2026-02-23]
+	Removed www/ruby-rails71 [taca 2026-02-23]
