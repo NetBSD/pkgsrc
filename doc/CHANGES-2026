@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1332 2026/02/23 08:35:02 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1333 2026/02/23 08:37:10 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1762,3 +1762,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/minizip to 1.3.2nb1 [wiz 2026-02-23]
 	Updated devel/ast-grep to 0.41.0 [pin 2026-02-23]
 	Updated devel/cargo-nextest to 0.9.129 [pin 2026-02-23]
+	Updated shells/oh-my-posh to 29.6.1 [pin 2026-02-23]
