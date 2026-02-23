@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/11/17 11:01:08 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.24 2026/02/23 09:13:41 wiz Exp $
 
 DISTNAME=	bbappconf-0.0.2
 PKGREVISION=	1
@@ -7,7 +6,7 @@ CATEGORIES=	misc x11 wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bbtools/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bbtools.sourceforge.net/download.php?file=1
+HOMEPAGE=	https://sourceforge.net/projects/bbtools/
 COMMENT=	Configure the behaviour of an application under Blackbox
 
 USE_LANGUAGES=		c c++
