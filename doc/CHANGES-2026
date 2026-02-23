@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1352 2026/02/23 15:57:44 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1353 2026/02/23 16:07:18 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1813,3 +1813,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/ruby-RMagick to 6.2.0 [taca 2026-02-23]
 	Updated net/ruby-recog to 3.1.26 [taca 2026-02-23]
 	Updated www/php-contao-manager to 1.10.12 [taca 2026-02-23]
+	Updated graphics/qiv to 3.0.1 [triaxx 2026-02-23]
