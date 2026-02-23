@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1349 2026/02/23 15:32:55 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1350 2026/02/23 15:48:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1810,3 +1810,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-zeitwerk to 2.7.5 [taca 2026-02-23]
 	Updated security/ruby-vault to 0.20.0 [taca 2026-02-23]
 	Updated www/ruby-selenium-webdriver to 4.41.0 [taca 2026-02-23]
+	Updated graphics/ruby-RMagick to 6.2.0 [taca 2026-02-23]
