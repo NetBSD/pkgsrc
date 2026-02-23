@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1346 2026/02/23 15:26:21 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1347 2026/02/23 15:28:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1807,3 +1807,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-aiormq to 6.9.3 [adam 2026-02-23]
 	Updated devel/py-greenlet to 3.3.2 [adam 2026-02-23]
 	Updated www/ruby-aws-partitions to 1.1217.0 [taca 2026-02-23]
+	Updated devel/ruby-zeitwerk to 2.7.5 [taca 2026-02-23]
