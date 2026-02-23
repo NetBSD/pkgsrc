@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.28 2023/03/02 06:24:33 charlotte Exp $
+$NetBSD: distinfo,v 1.29 2026/02/23 13:23:05 adam Exp $
 
-BLAKE2s (hatari-2.4.1.tar.bz2) = 7617ee03a00a614c2b95cd72218f2178df1f5e132b4f732c32f1a099f0a34cfb
-SHA512 (hatari-2.4.1.tar.bz2) = 90c555150b0fa86b88e4ba3360384edf6afa05d45b82b3260853178b77fd542da6f31bd2e80c8307380fff9c61f0230545ec987e6e74b8c3d708bc5ef5ca8f42
-Size (hatari-2.4.1.tar.bz2) = 4446656 bytes
+BLAKE2s (hatari-v2.6.1.tar.bz2) = eeedb5cba6895eabadc8aab9889a67066e2ff5136c931838fcbc201765d5c6c9
+SHA512 (hatari-v2.6.1.tar.bz2) = c025334e32b84431dff96761876f5f078a7f175e22181e9357c17bb3871aa0d7626495bb1ad4fa0c6d94d22b5d045df5fcd99d5cdb089c911ce77a4f42a6448c
+Size (hatari-v2.6.1.tar.bz2) = 2128063 bytes
+SHA1 (patch-CMakeLists.txt) = ea8add332df88cbcf830c3cb16fc3c7076527f85
 SHA1 (patch-src_cpu_fpp__native.c) = 065c67d7c018cc1d1161b0a7d131e8bf66f74d8b
-SHA1 (patch-src_paths.c) = 9f547b97d18c676b5038d5349a35d46821a37d73
