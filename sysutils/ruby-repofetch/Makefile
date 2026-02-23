@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/10/31 15:15:12 taca Exp $
+# $NetBSD: Makefile,v 1.6 2026/02/23 14:27:24 taca Exp $
 
 DISTNAME=	repofetch-0.5.2
 CATEGORIES=	sysutils
@@ -17,7 +17,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-octokit>=6.0<7:../../devel/ruby-octokit
 
 USE_LANGUAGES=	# none
 
-RUBY_RAILS_ACCEPTED=	70 71 72
+RUBY_RAILS_ACCEPTED=	72
 RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../lang/ruby/gem.mk"
