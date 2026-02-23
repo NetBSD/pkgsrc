@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/07/01 07:10:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/02/23 15:02:57 adam Exp $
 ${PYINC}/greenlet/greenlet.h
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -126,6 +126,9 @@ ${PYSITELIB}/greenlet/tests/test_greenlet.pyo
 ${PYSITELIB}/greenlet/tests/test_greenlet_trash.py
 ${PYSITELIB}/greenlet/tests/test_greenlet_trash.pyc
 ${PYSITELIB}/greenlet/tests/test_greenlet_trash.pyo
+${PYSITELIB}/greenlet/tests/test_interpreter_shutdown.py
+${PYSITELIB}/greenlet/tests/test_interpreter_shutdown.pyc
+${PYSITELIB}/greenlet/tests/test_interpreter_shutdown.pyo
 ${PYSITELIB}/greenlet/tests/test_leaks.py
 ${PYSITELIB}/greenlet/tests/test_leaks.pyc
 ${PYSITELIB}/greenlet/tests/test_leaks.pyo
