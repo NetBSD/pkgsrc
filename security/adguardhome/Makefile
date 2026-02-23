@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2026/02/23 08:38:47 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/02/23 13:22:14 adam Exp $
 
 DISTNAME=	adguardhome-0.107.72
 CATEGORIES=	security
@@ -35,6 +35,12 @@ GO_BUILD_PATTERN=	.
 INSTALLATION_DIRS+=	libdata/adguardhome
 PKG_SYSCONFSUBDIR=	adguardhome
 RCD_SCRIPTS+=		adguardhome
+
+SUBST_CLASSES+=		rcconf
+SUBST_STAGE.rcconf=	pre-configure
+SUBST_MESSAGE.rcconf=	Subsituting pkgsrc variables.
+SUBST_FILES.rcconf=	internal/ossvc/config_netbsd.go
+SUBST_VARS.rcconf=	PKG_SYSCONFDIR PREFIX RCD_SCRIPTS_SHELL VARBASE
 
 # Hack: see https://github.com/AdguardTeam/AdGuardHome/pull/8142
 post-patch:
