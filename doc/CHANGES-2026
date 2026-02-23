@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1344 2026/02/23 14:52:22 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1345 2026/02/23 15:03:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1804,3 +1804,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed www/ruby-rails71 [taca 2026-02-23]
 	Updated devel/py-uv to 0.10.4 [adam 2026-02-23]
 	Updated devel/py-uv-build to 0.10.4 [adam 2026-02-23]
+	Updated net/py-aiormq to 6.9.3 [adam 2026-02-23]
+	Updated devel/py-greenlet to 3.3.2 [adam 2026-02-23]
