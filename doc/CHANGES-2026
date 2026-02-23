@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1334 2026/02/23 08:41:48 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1335 2026/02/23 09:02:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1765,3 +1765,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 29.6.1 [pin 2026-02-23]
 	Updated security/adguardhome to 0.107.72 [adam 2026-02-23]
 	Updated devel/py-typeguard to 4.5.1 [adam 2026-02-23]
+	Updated devel/py-async-lru to 2.2.0 [adam 2026-02-23]
+	Updated textproc/py-xmltodict to 1.0.4 [adam 2026-02-23]
