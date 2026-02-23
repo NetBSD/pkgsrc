@@ -1,10 +1,10 @@
-$NetBSD: patch-extension_inplace.c,v 1.2 2018/07/14 13:47:32 adam Exp $
+$NetBSD: patch-extension_inplace.c,v 1.3 2026/02/23 13:30:37 wiz Exp $
 
 Support SunOS in C99 mode.
 
---- extension/inplace.c.orig	2018-02-23 08:44:11.000000000 +0000
+--- extension/inplace.c.orig	2025-07-30 04:20:31.000000000 +0000
 +++ extension/inplace.c
-@@ -27,12 +27,14 @@
+@@ -27,11 +27,13 @@
  #include <config.h>
  #endif
  
@@ -14,8 +14,7 @@ Support SunOS in C99 mode.
  #endif
  #ifndef _XOPEN_SOURCE_EXTENDED
  # define _XOPEN_SOURCE_EXTENDED 1
- #endif
 +#endif
+ #endif
  
  #include <stdio.h>
- #include <assert.h>

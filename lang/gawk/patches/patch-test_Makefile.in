@@ -1,6 +1,5 @@
-$NetBSD: patch-test_Makefile.in,v 1.5 2022/09/12 09:55:56 wiz Exp $
+$NetBSD: patch-test_Makefile.in,v 1.6 2026/02/23 13:30:37 wiz Exp $
 
-Non portable '-f' flag for ls should be -U for unsorted
 pkgsrc replacement links mean -L should be used too.
 
 NB on SunOS, locale/en should be installed in order to have
@@ -13,7 +12,7 @@ all tests successfully execute (namely mbfw1 and mbprintf1)
  	fi
  	@-$(AWK) -f "$(srcdir)"/readdir.awk "$(top_srcdir)" > _$@ || echo EXIT CODE: $$? >> _$@
 -	@-ls -afi "$(top_srcdir)" > _dirlist
-+	@-ls -aiUL "$(top_srcdir)" > _dirlist
++	@-ls -afiL "$(top_srcdir)" > _dirlist
  	@-ls -lna "$(top_srcdir)" | sed 1d > _longlist
  	@-$(AWK) -f "$(srcdir)"/readdir0.awk -v extout=_$@  \
  		-v dirlist=_dirlist -v longlist=_longlist > $@.ok
