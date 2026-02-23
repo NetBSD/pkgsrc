@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2025/11/03 09:13:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.23 2026/02/23 15:32:46 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -67,6 +67,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_network_condit
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_network_interception.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_permissions.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_pinned_scripts.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_session_events.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_session_id.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/prints_page.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/uploads_files.rb
