@@ -1,9 +1,9 @@
-$NetBSD: patch-extension_Makefile.in,v 1.5 2019/04/16 11:43:29 ryoon Exp $
+$NetBSD: patch-extension_Makefile.in,v 1.6 2026/02/23 13:30:37 wiz Exp $
 
 Install into a separate directory, otherwise these shadow e.g. time(3).
 Install *.la file for extensions, reduce PLIST divergence.
 
---- extension/Makefile.in.orig	2019-04-12 09:03:11.000000000 +0000
+--- extension/Makefile.in.orig	2026-02-22 09:49:58.000000000 +0000
 +++ extension/Makefile.in
 @@ -323,7 +323,7 @@ am__can_run_installinfo = \
      n|no|NO) false;; \
@@ -14,7 +14,7 @@ Install *.la file for extensions, reduce PLIST divergence.
  NROFF = nroff
  MANS = $(dist_man_MANS)
  RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
-@@ -1269,7 +1269,6 @@ info-am:
+@@ -1275,7 +1275,6 @@ install-data-am: install-man install-pkgextensionLTLIB
  
  install-data-am: install-man install-pkgextensionLTLIBRARIES
  	@$(NORMAL_INSTALL)
@@ -22,8 +22,8 @@ Install *.la file for extensions, reduce PLIST divergence.
  install-dvi: install-dvi-recursive
  
  install-dvi-am:
-@@ -1348,7 +1347,7 @@ uninstall-man: uninstall-man3
- 	distclean-libtool distclean-local distclean-tags \
+@@ -1353,7 +1352,7 @@ uninstall-man: uninstall-man3
+ 	distclean-hdr distclean-libtool distclean-local distclean-tags \
  	distcleancheck distdir distuninstallcheck dvi dvi-am html \
  	html-am info info-am install install-am install-data \
 -	install-data-am install-data-hook install-dvi install-dvi-am \
