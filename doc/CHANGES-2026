@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1335 2026/02/23 09:02:36 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1336 2026/02/23 09:57:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1767,3 +1767,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-typeguard to 4.5.1 [adam 2026-02-23]
 	Updated devel/py-async-lru to 2.2.0 [adam 2026-02-23]
 	Updated textproc/py-xmltodict to 1.0.4 [adam 2026-02-23]
+	Updated devel/py-stevedore to 5.7.0 [adam 2026-02-23]
+	Updated graphics/py-tifffile to 2026.2.20 [adam 2026-02-23]
