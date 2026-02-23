@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2025/11/17 11:01:40 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.49 2026/02/23 09:17:15 wiz Exp $
 
 DISTNAME=	fbdesk-1.4.1
 PKGREVISION=	17
@@ -7,7 +6,7 @@ CATEGORIES=	x11 wm
 MASTER_SITES=	http://fluxbox.sourceforge.net/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://fluxbox.sourceforge.net/fbdesk/
+#HOMEPAGE=	https://fluxbox.sourceforge.net/fbdesk/
 COMMENT=	Application that creates and manage icons on your desktop
 
 USE_LANGUAGES=	c c++
