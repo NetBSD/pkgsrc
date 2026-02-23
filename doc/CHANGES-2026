@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1347 2026/02/23 15:28:30 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1348 2026/02/23 15:31:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1808,3 +1808,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-greenlet to 3.3.2 [adam 2026-02-23]
 	Updated www/ruby-aws-partitions to 1.1217.0 [taca 2026-02-23]
 	Updated devel/ruby-zeitwerk to 2.7.5 [taca 2026-02-23]
+	Updated security/ruby-vault to 0.20.0 [taca 2026-02-23]
