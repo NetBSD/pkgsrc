@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2026/02/23 16:06:44 triaxx Exp $
+# $NetBSD: Makefile,v 1.83 2026/02/23 16:39:39 triaxx Exp $
 
 DISTNAME=	qiv-3.0.1
 CATEGORIES=	graphics x11
@@ -9,6 +9,8 @@ MAINTAINER=	snj@NetBSD.org
 HOMEPAGE=	https://spiegl.de/qiv/
 COMMENT=	Quick Image Viewer
 LICENSE=	gnu-gpl-v2
+
+NOT_FOR_PLATFORM=	Darwin-*-*
 
 USE_TOOLS+=	gmake pkg-config
 
