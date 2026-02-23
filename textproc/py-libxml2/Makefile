@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2026/02/23 12:55:58 tnn Exp $
+# $NetBSD: Makefile,v 1.112 2026/02/23 18:14:55 tnn Exp $
 
 .include "../../textproc/libxml2/Makefile.common"
 
@@ -14,20 +14,11 @@ GNU_CONFIGURE=		yes
 GNU_CONFIGURE_ICONV=	no
 USE_TOOLS+=		pkg-config
 
-# needed for Python bindings
-CONFIGURE_ARGS+=	--with-docs
-
-TOOL_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
-TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 MAKE_ENV+=	PYTHONPATH=${WRKSRC}/python
 
 WHEEL_NAME=	${DISTNAME:S/-/_python-/}
-
-pre-build:
-	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV} ${MAKE}
 
 # python/setup.py looks in various places for libxml2 and libiconv,
 # including (usually incorrectly) in /usr/include, /usr/local/include
@@ -57,6 +48,7 @@ SUBST_SED.setup+=	-e "/^\"/s,/usr/local/include,${BUILDLINK_PREFIX.iconv}/includ
 BUILDLINK_TRANSFORM.Darwin+=	opt:-bundle:-dynamiclib
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 .if ${OPSYS} == "Darwin"
 post-install: fix-darwin-install-name
