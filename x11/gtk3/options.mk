@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.33 2026/02/19 16:57:17 wiz Exp $
+# $NetBSD: options.mk,v 1.34 2026/02/23 16:36:12 triaxx Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
 PKG_SUPPORTED_OPTIONS+=	doc introspection gtk3-atk-bridge cups
-PKG_SUPPORTED_OPTIONS+=	wayland x11
 .if exists(/System/Library/Frameworks/Quartz.framework)
 PKG_SUPPORTED_OPTIONS+=	quartz
 PKG_SUGGESTED_OPTIONS+=	quartz
 .else
+PKG_SUPPORTED_OPTIONS+=	wayland x11
 PKG_SUGGESTED_OPTIONS+=	x11
 .endif
 .include "../../devel/wayland/platform.mk"
