@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile.am,v 1.1 2026/02/23 05:16:33 wiz Exp $
+
+Add dependency to ints.h in minizip Makefile.am.
+So that ints.h is part of the installation.
+https://github.com/madler/zlib/commit/cb14dc9ade3759352417a300e6c2ed73268f1d97
+
+--- Makefile.am.orig	2012-03-27 03:17:41.000000000 +0000
++++ Makefile.am
+@@ -27,6 +27,7 @@ minizip_include_HEADERS = \
+ minizip_includedir = $(includedir)/minizip
+ minizip_include_HEADERS = \
+ 	crypt.h \
++	ints.h \
+ 	ioapi.h \
+ 	mztools.h \
+ 	unzip.h \
