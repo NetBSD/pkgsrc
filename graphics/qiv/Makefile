@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2026/01/27 08:39:48 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2026/02/23 16:06:44 triaxx Exp $
 
-DISTNAME=	qiv-2.3.2
-PKGREVISION=	16
+DISTNAME=	qiv-3.0.1
 CATEGORIES=	graphics x11
 MASTER_SITES=	https://spiegl.de/qiv/download/
 EXTRACT_SUFX=	.tgz
@@ -34,7 +33,7 @@ do-install:
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/file/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
