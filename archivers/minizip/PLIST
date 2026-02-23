@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2020/03/31 10:25:28 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/02/23 05:16:33 wiz Exp $
+include/minizip/ints.h
 include/minizip/ioapi.h
 include/minizip/mztools.h
 include/minizip/unzip.h
