@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1339 2026/02/23 13:30:46 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1340 2026/02/23 14:29:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1774,3 +1774,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/hatari to 2.6.1 [adam 2026-02-23]
 	Updated devel/py-test-env to 1.5.0 [adam 2026-02-23]
 	Updated lang/gawk to 5.4.0 [wiz 2026-02-23]
+	Updated meta-pkgs/bulk-large to 20260223 [taca 2026-02-23]
