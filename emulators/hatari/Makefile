@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.76 2025/10/23 20:36:49 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2026/02/23 13:23:05 adam Exp $
 
-DISTNAME=	hatari-2.4.1
-PKGREVISION=	6
+DISTNAME=	hatari-v2.6.1
+PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	emulators
-MASTER_SITES=	https://www.aydogan.net/distfiles/emulators/
+MASTER_SITES=	https://framagit.org/hatari/hatari/-/archive/v${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,11 +11,10 @@ HOMEPAGE=	https://hatari.tuxfamily.org/
 COMMENT=	Atari ST emulator
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=		yes
-USE_LANGUAGES=		c99
+USE_CC_FEATURES=	c99
+USE_LANGUAGES=		c
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_OSX_BUNDLE=OFF
 CMAKE_CONFIGURE_ARGS+=	-DMANDIR=${PKGMANDIR}/man1
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 REPLACE_PYTHON+=	python-ui/config.py
 REPLACE_PYTHON+=	python-ui/debugui.py
@@ -37,6 +36,7 @@ INSTALLATION_DIRS+=	share/doc/hatari
 
 .include "../../audio/portaudio/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

@@ -1,0 +1,17 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/02/23 13:23:05 adam Exp $
+
+Don't build universal binary on Darwin.
+
+--- CMakeLists.txt.orig	2026-02-23 11:31:25.155888710 +0000
++++ CMakeLists.txt
+@@ -6,10 +6,6 @@ if(NOT CMAKE_BUILD_TYPE)
+ 	set(CMAKE_BUILD_TYPE Release)
+ endif(NOT CMAKE_BUILD_TYPE)
+ 
+-if(APPLE AND CMAKE_BUILD_TYPE STREQUAL "Release")
+-	set(CMAKE_OSX_ARCHITECTURES "arm64;x86_64" CACHE STRING "Target architectures")
+-	set(CMAKE_OSX_DEPLOYMENT_TARGET "10.13" CACHE STRING "Target minimum macOS version")
+-endif(APPLE AND CMAKE_BUILD_TYPE STREQUAL "Release")
+ 
+ project(Hatari C)
+ enable_testing()
