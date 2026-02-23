@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1333 2026/02/23 08:37:10 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1334 2026/02/23 08:41:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1763,3 +1763,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ast-grep to 0.41.0 [pin 2026-02-23]
 	Updated devel/cargo-nextest to 0.9.129 [pin 2026-02-23]
 	Updated shells/oh-my-posh to 29.6.1 [pin 2026-02-23]
+	Updated security/adguardhome to 0.107.72 [adam 2026-02-23]
+	Updated devel/py-typeguard to 4.5.1 [adam 2026-02-23]
