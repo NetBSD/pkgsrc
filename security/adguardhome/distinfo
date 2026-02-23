@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2026/02/23 08:38:47 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/02/23 13:22:14 adam Exp $
 
 BLAKE2s (adguardhome-0.107.72.tar.gz) = 7c7fe10c521c23947c8f04a9041450d6a30779bfefda770046adbffee393f3a4
 SHA512 (adguardhome-0.107.72.tar.gz) = c15a6b91ea4edfa85068c6386fecd6d35c7f13500ba3727dd7f1afe86d909d761d9cd0d147131cdd652948ff84af5078a4e2d7f3fd095e7fcbc7eaac9155484f
@@ -762,3 +762,4 @@ SHA1 (patch-internal_dhcpd_v4__unix.go) = 5a3052ee3cd556b918f4b9ee90689f30afcadc
 SHA1 (patch-internal_dhcpd_v4__unix__internal__test.go) = 76ce987d8edc5314c1076427d8fe4000092011b5
 SHA1 (patch-internal_dhcpd_v6__unix.go) = c28cc0ee11b5084cd3a4600aab183487f35497fb
 SHA1 (patch-internal_dhcpd_v6__unix__internal__test.go) = 5322a928bc14ffbbd4335ed716c22f1c23069227
+SHA1 (patch-internal_ossvc_config__netbsd.go) = d587f2b7a3cb1331874acce840225e9f5b99c2b5
