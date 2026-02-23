@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.109 2026/02/16 11:03:43 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2026/02/23 10:09:19 adam Exp $
 
-DISTNAME=	astroid-4.1.0
+DISTNAME=	astroid-4.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astroid/}
@@ -17,7 +17,7 @@ USE_LANGUAGES=	# none
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0.0:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4:../../devel/py-typing-extensions
 .endif
 
 .include "../../lang/python/wheel.mk"
