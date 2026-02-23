@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.34 2025/09/28 11:37:33 ryoon Exp $
-bin/${PKGNAME}
+@comment $NetBSD: PLIST,v 1.35 2026/02/23 13:30:37 wiz Exp $
 bin/gawk
+bin/${PKGNAME}
 bin/gawkbug
 gnu/bin/awk
 gnu/man/man1/awk.1
@@ -15,6 +15,7 @@ info/gawk_process-flow.png
 info/gawk_statist.jpg
 info/gawkinet.info
 info/gawkworkflow.info
+info/notes.info
 info/pm-gawk.info
 lib/gawk/filefuncs.la
 lib/gawk/fnmatch.la
@@ -73,19 +74,15 @@ share/awk/strtonum.awk
 share/awk/tocsv.awk
 share/awk/walkarray.awk
 share/awk/zerofile.awk
+${PLIST.nls}share/locale/ar/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/bg/LC_MESSAGES/gawk.mo
-${PLIST.nls}share/locale/ca/LC_MESSAGES/gawk.mo
-${PLIST.nls}share/locale/da/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/de/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/es/LC_MESSAGES/gawk.mo
-${PLIST.nls}share/locale/fi/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/fr/LC_MESSAGES/gawk.mo
+${PLIST.nls}share/locale/he/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/id/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/it/LC_MESSAGES/gawk.mo
-${PLIST.nls}share/locale/ja/LC_MESSAGES/gawk.mo
-${PLIST.nls}share/locale/ka/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/ko/LC_MESSAGES/gawk.mo
-${PLIST.nls}share/locale/ms/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/nl/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/pt/LC_MESSAGES/gawk.mo
@@ -95,5 +92,4 @@ ${PLIST.nls}share/locale/sr/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/sv/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/tr/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/gawk.mo
-${PLIST.nls}share/locale/vi/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/gawk.mo
