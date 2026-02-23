@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.24 2025/11/03 08:01:35 taca Exp $
-
-BLAKE2s (actionmailbox-7.0.10.gem) = 9b439bcb87adb3e317f62382d3217d60606d2b3d08fe23f800512eb308a9f6c1
-SHA512 (actionmailbox-7.0.10.gem) = b94926042eb792f887913bb98e1b7e37c4d3a03e32e1d29d89fef1b60ab2452ec21cb59ae6c015f00389d10dc37b1714cbf2c8c7d0c7f375d0906267acb59f4b
-Size (actionmailbox-7.0.10.gem) = 22528 bytes
