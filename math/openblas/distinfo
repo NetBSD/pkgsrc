@@ -1,15 +1,18 @@
-$NetBSD: distinfo,v 1.12 2024/04/25 10:02:07 jperkin Exp $
+$NetBSD: distinfo,v 1.13 2026/02/24 23:09:01 thor Exp $
 
-BLAKE2s (OpenBLAS-0.3.26.tar.gz) = 0fbd69665e88cffb118b86af77fd981ad5f5eb167f0ddf7deb5616efdf4b732e
-SHA512 (OpenBLAS-0.3.26.tar.gz) = 01d3a536fbfa62f276fd6b1ad0e218fb3d91f41545fc83ddc74979fa26372d8389f0baa20334badfe0adacd77bd944c50a47ac920577373fcc1d495553084373
-Size (OpenBLAS-0.3.26.tar.gz) = 24404912 bytes
-SHA1 (patch-Makefile) = 1b375bddd95af23cfe5e3ccd9476d3bf0fa78043
-SHA1 (patch-Makefile.install) = 3e15dc3674285b5b6b014e8ab17f77f60cf7ac61
-SHA1 (patch-Makefile.rule) = 45b6b4576fb521fa093252c63b899d4178a516b6
-SHA1 (patch-Makefile.system) = 6dc9fd85731ca88cb1fdb9063ba3baa31edbcfb8
-SHA1 (patch-c__check) = 5d30cd9b2534d553d4dfec757b69d3de408054a2
+BLAKE2s (OpenBLAS-0.3.31.tar.gz) = 61531162bf9c314e87bab487894d86b8c8c89e14627610d5909421daba3566c1
+SHA512 (OpenBLAS-0.3.31.tar.gz) = 703b84c476c148a0922a04b1c33c9c4c452f478d608d93e59204b8f0f2c516344301ff0a4dbb3750a2449db0d28cc2df001c295898e859b41ecb8381f9c2eab8
+Size (OpenBLAS-0.3.31.tar.gz) = 25232810 bytes
+SHA1 (patch-Makefile) = fa6335a2cf9925c285611dc20f5a67e6b49a01c9
+SHA1 (patch-Makefile.install) = 1bc085d9c1138e24b136566587dfb35bc9bd3b08
+SHA1 (patch-Makefile.system) = 4cc1576e008619d427730a8fa14da7094744b6a3
+SHA1 (patch-c__check) = 731a7e35535a29933677c72bc0a9e956b9e3ff42
 SHA1 (patch-common__arm.h) = f08ec61bee8317daac267e90a79f46097b3431c9
 SHA1 (patch-cpuid__arm.c) = 20f95cede90cbe548c0cd09ed2e3d37d1d4aeabd
 SHA1 (patch-cpuid_ia64.c) = 39649319b8c0a37b8d494e3c03b1ddb6fb616603
+SHA1 (patch-driver_others_Makefile) = 23d746e39f19b27e20574003eaa95dbce581490f
+SHA1 (patch-driver_others_blas__server__callback.c) = 638f285807d7fb6b56b9185e0a8db1eb9d221375
+SHA1 (patch-exports_Makefile) = 677a29b44e7e5a59a227ec48d8e8e41d0b747aee
 SHA1 (patch-f_check) = 11f22d0dded9f7b64fb8028693f64fc24f2016a3
 SHA1 (patch-interface__ztrmv.c) = 6038946f8fb9542e680178ece2bd0d0d5853baad
+SHA1 (patch-openblas.pc.in) = 9b7097a8b47ac377c485ab67906d1885c29d3593

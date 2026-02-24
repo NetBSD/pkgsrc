@@ -1,35 +1,66 @@
-$NetBSD: patch-Makefile.system,v 1.3 2021/05/29 19:57:21 thor Exp $
+$NetBSD: patch-Makefile.system,v 1.4 2026/02/24 23:09:02 thor Exp $
 
-Stable library names, determined by our choice only.
+Fix FIXED_LIBNAME to result in a primary library with the usual so.0 ending,
+and matching SONAME, with the .so being a symlink. This is the expected
+setup for a generic library that does not encode every release version or
+build settings in its name.
 
---- Makefile.system.orig	2021-05-02 21:50:22.000000000 +0000
+Define universal LNCMD that works for all library naming schemes (just
+skipping linking if the file is already named like the link).
+
+--- Makefile.system.orig	2026-01-15 22:57:26.000000000 +0000
 +++ Makefile.system
-@@ -1510,6 +1510,10 @@ ifndef LIBSUFFIX
- LIBSUFFIX = a
+@@ -2,6 +2,9 @@
+ # Include user definition
+ #
+ 
++# Common safe link command, just put here in lack of a better common place.
++LNCMD = if ! test "$(1)" = "$(2)"; then ln -fs "$(1)" "$(2)"; fi
++
+ # TO suppress recursive includes
+ INCLUDED = 1
+ 
+@@ -1611,10 +1614,11 @@ else
+ LIBNAMEBASE = $(SYMPREFIX)$(LIBSONAMEBASE)$(SYMSUFFIX)$(LIBNAMESUFFIX)
  endif
  
-+ifeq ($(FIXED_LIBNAME), 1)
-+LIBNAME		= $(LIBPREFIX).$(LIBSUFFIX)
-+LIBNAME_P	= $(LIBPREFIX)_p.$(LIBSUFFIX)
-+else
- ifneq ($(DYNAMIC_ARCH), 1)
- ifndef SMP
- LIBNAME		= $(LIBPREFIX)_$(LIBCORE)$(REVISION).$(LIBSUFFIX)
-@@ -1527,12 +1531,16 @@ LIBNAME		= $(LIBPREFIX)p$(REVISION).$(LI
- LIBNAME_P	= $(LIBPREFIX)p$(REVISION)_p.$(LIBSUFFIX)
++LIBLINKPREFIX=$(LIBNAMEPREFIX)$(LIBNAMEBASE)
+ ifeq ($(OSNAME), CYGWIN_NT)
+-LIBPREFIX = cyg$(LIBNAMEPREFIX)$(LIBNAMEBASE)
++LIBPREFIX = cyg$(LIBLINKPREFIX)
+ else
+-LIBPREFIX = lib$(LIBNAMEPREFIX)$(LIBNAMEBASE)
++LIBPREFIX = lib$(LIBLINKPREFIX)
+ endif
+ 
+ KERNELDIR	= $(TOPDIR)/kernel/$(ARCH)
+@@ -1814,15 +1818,27 @@ LIBNAME_P	= $(LIBPREFIX)p$(REVISION)_p.$
  endif
  endif
--
-+endif
+ 
++# FIXED_LIBNAME means to fix the library file name to match the simple soname,
++# without revision and CPU name.
+ ifeq ($(FIXED_LIBNAME),1)
+-	LIBNAME = lib$(LIBNAMEPREFIX)$(LIBSONAMEBASE)$(LIBNAMESUFFIX).$(LIBSUFFIX)
+-	LIBNAME_P = lib$(LIBNAMEPREFIX)$(LISOBNAMEBASE)$(LIBNAMESUFFIX)_p.$(LIBSUFFIX)
++	LIBNAME = $(LIBPREFIX).$(LIBSUFFIX)
++	LIBNAME_P = $(LIBPREFIX)_p.$(LIBSUFFIX)
+ endif
  
  LIBDLLNAME   = $(LIBPREFIX).dll
  IMPLIBNAME   = lib$(LIBNAMEBASE).dll.a
- ifneq ($(OSNAME), AIX)
-+ifeq ($(FIXED_LIBNAME), 1)
++# Keep major version in SONAME also for fixed libname. Primary lib
++# file is libopenblas_foobar.so.0 and libopenblas_foobar.so is a link.
++ifeq ($(FIXED_LIBNAME),1)
 +LIBSONAME    = $(LIBNAME:.$(LIBSUFFIX)=.so).$(MAJOR_VERSION)
++LIBDYNNAME   = $(LIBNAME:$(LIBSUFFIX)=).$(MAJOR_VERSION).dylib
 +else
++# Other case uses LIBPREFIX for SONAME. Primary lib file is
++# libopenblas_cputypep-0.x.y.so, libopenblas.so.0 and libopenblas.so
++# are symlinks.
  LIBSONAME    = $(LIBNAME:.$(LIBSUFFIX)=.so)
+ LIBDYNNAME   = $(LIBNAME:.$(LIBSUFFIX)=.dylib)
 +endif
- else
- LIBSONAME    = $(LIBNAME:.$(LIBSUFFIX)=.a)
- endif
+ LIBDEFNAME   = $(LIBNAME:.$(LIBSUFFIX)=.def)
+ LIBEXPNAME   = $(LIBNAME:.$(LIBSUFFIX)=.exp)
+ LIBZIPNAME   = $(LIBNAME:.$(LIBSUFFIX)=.zip)
