@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2026/01/07 08:46:03 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2026/02/24 14:47:18 triaxx Exp $
 
-DISTNAME=	znc-1.9.1
-PKGREVISION=	10
+DISTNAME=	znc-1.10.1
 CATEGORIES=	chat
 MASTER_SITES=	https://znc.in/releases/archive/
 DISTFILES=	${DEFAULT_DISTFILES} znc-palaver-1.2.2.tar.gz
@@ -12,7 +11,6 @@ HOMEPAGE=	https://znc.in/
 COMMENT=	Advanced IRC bouncer with IPv6 and SSL support
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config msgfmt
 USE_LANGUAGES=	c c++
 MANCOMPRESSED=	yes
@@ -53,10 +51,18 @@ SUBST_MESSAGE.man=	Fixing absolute paths in znc.1 manpage.
 SUBST_FILES.man=	man/znc.1
 SUBST_SED.man=		-e 's|/usr/local|${PREFIX}|g'
 
+.if ${OPSYS} == "Darwin"
+MOD_EXT=	.bundle
+.else
+MOD_EXT=	.so
+.endif
+PLIST_SUBST+=	MOD_EXT=${MOD_EXT}
+
 post-extract:
 	${CP} ${WRKDIR}/znc-palaver-1.2.2/palaver.cpp ${WRKSRC}/modules/
 
 .include "options.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
