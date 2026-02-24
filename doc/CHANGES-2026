@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1366 2026/02/24 10:58:44 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1367 2026/02/24 11:56:53 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1832,3 +1832,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-bitarray to 3.8.0 [adam 2026-02-24]
 	Updated textproc/py-types-docutils to 0.22.3.20260223 [adam 2026-02-24]
 	Updated textproc/py-sphinx-autodoc-typehints to 3.7.0 [adam 2026-02-24]
+	Updated print/xpdf4 to 4.06 [pin 2026-02-24]
