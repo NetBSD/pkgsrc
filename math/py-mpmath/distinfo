@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2023/03/14 14:12:49 adam Exp $
+$NetBSD: distinfo,v 1.14 2026/02/24 20:00:32 adam Exp $
 
-BLAKE2s (mpmath-1.3.0.tar.gz) = 8c989285af9f0456d42c039ecfb9e6b9b9aec95d78c4248964e4c3eb84c858fd
-SHA512 (mpmath-1.3.0.tar.gz) = a68028150095d743eae9669a0f70cbe6b7bcb4d27dfad6b1a96575f0885ec7306459a2a464117bab18779883ee8b4293502b4bd0ebd8672767e1d08d38f8b202
-Size (mpmath-1.3.0.tar.gz) = 508106 bytes
+BLAKE2s (mpmath-1.4.0.tar.gz) = bb8052bb46059c4649ff41001da6ee4fc1a87a3a27c7a52a96e8761b32c0dff6
+SHA512 (mpmath-1.4.0.tar.gz) = fa0d2e1a92c4693dcff6fce03d6bacd1156fec131c2af87c805cff62e0a232c230a8bab78987b43d58904a486577931592d12731990117fcab2b766c3c7f47f6
+Size (mpmath-1.4.0.tar.gz) = 2092745 bytes
