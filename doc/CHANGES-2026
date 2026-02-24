@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1373 2026/02/24 15:16:43 triaxx Exp $
+$NetBSD: CHANGES-2026,v 1.1374 2026/02/24 16:27:25 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1840,3 +1840,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox140-l10n to 140.8.0 [gutteridge 2026-02-24]
 	Updated chat/znc to 1.10.1 [triaxx 2026-02-24]
 	Updated archivers/lzlib to 1.15 [triaxx 2026-02-24]
+	Updated security/liboqs to 0.15.0 [triaxx 2026-02-24]
