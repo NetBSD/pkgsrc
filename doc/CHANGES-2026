@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1367 2026/02/24 11:56:53 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1368 2026/02/24 12:00:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1833,3 +1833,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-types-docutils to 0.22.3.20260223 [adam 2026-02-24]
 	Updated textproc/py-sphinx-autodoc-typehints to 3.7.0 [adam 2026-02-24]
 	Updated print/xpdf4 to 4.06 [pin 2026-02-24]
+	Added net/ttl version 0.18.2 [pin 2026-02-24]
