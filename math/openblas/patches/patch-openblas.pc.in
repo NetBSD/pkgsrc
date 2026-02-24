@@ -1,0 +1,14 @@
+$NetBSD: patch-openblas.pc.in,v 1.1 2026/02/24 23:09:02 thor Exp $
+
+Simplify and fix the pkg-config file for FIXED_LIBNAME.
+
+--- openblas.pc.in.orig	2026-01-15 22:57:26.000000000 +0000
++++ openblas.pc.in
+@@ -2,6 +2,6 @@ Name: openblas
+ Description: OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version
+ Version: ${version}
+ URL: https://github.com/xianyi/OpenBLAS
+-Libs: -L${libdir} -l${libprefix}openblas${libsuffix}${libnamesuffix}
++Libs: -L${libdir} -l${libname}
+ Libs.private: ${extralib}
+ Cflags: -I${includedir} ${omp_opt}

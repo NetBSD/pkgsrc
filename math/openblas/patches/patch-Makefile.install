@@ -1,11 +1,32 @@
-$NetBSD: patch-Makefile.install,v 1.7 2023/10/15 22:08:50 thor Exp $
+$NetBSD: patch-Makefile.install,v 1.8 2026/02/24 23:09:02 thor Exp $
 
-Second part of removing the special library names.
-Separate options for "install" (needed at least on Darwin).
+Reform library linking commands to work for any library naming setup, ensuring
+that we got the generic libopenblas.so.0 and libopenblas.so names, either as
+symlink or as library file.
 
---- Makefile.install.orig	2023-09-03 20:58:32.000000000 +0000
+Remove duplicate definition of SUFFIX64.
+
+Simplify and fix the pkg-config file for FIXED_LIBNAME.
+
+--- Makefile.install.orig	2026-01-15 22:57:26.000000000 +0000
 +++ Makefile.install
-@@ -17,7 +17,7 @@ PKG_EXTRALIB := $(EXTRALIB)
+@@ -2,15 +2,11 @@ TOPDIR	= .
+ export GOTOBLAS_MAKEFILE = 1
+ -include $(TOPDIR)/Makefile.conf_last
+ include ./Makefile.system
+-LNCMD = ln -fs
+ 
+ ifdef THELIBNAME
+ LIBNAME=$(THELIBNAME)
+ LIBSONAME=$(THELIBSONAME)
+ endif
+-ifeq ($(FIXED_LIBNAME), 1)
+-LNCMD = true
+-endif
+ ifeq ($(INTERFACE64),1)
+ USE_64BITINT=1
+ endif
+@@ -32,7 +28,7 @@ PKG_EXTRALIB := $(EXTRALIB)
  ifeq ($(INTERFACE64),1)
  	SUFFIX64=64
  endif
@@ -14,84 +35,75 @@ Separate options for "install" (needed at least on Darwin).
  
  ifeq ($(USE_OPENMP), 1)
    ifeq ($(C_COMPILER), PGI)
-@@ -90,29 +90,37 @@ endif
- ifneq ($(NO_STATIC),1)
+@@ -124,29 +120,23 @@ ifneq ($(NO_STATIC),1)
  	@echo Copying the static library to $(DESTDIR)$(OPENBLAS_LIBRARY_DIR)
  	@install -m644 $(LIBNAME) "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)"
-+ifneq ($(LIBNAME), $(LIBPREFIX).$(LIBSUFFIX))
  	@cd "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)" ; \
- 	ln -fs $(LIBNAME) $(LIBPREFIX).$(LIBSUFFIX)
+-	$(LNCMD) $(LIBNAME) $(LIBPREFIX).$(LIBSUFFIX)
++	$(call LNCMD,$(LIBNAME),$(LIBPREFIX).$(LIBSUFFIX))
  endif
-+endif
  #for install shared library
  ifneq ($(NO_SHARED),1)
  	@echo Copying the shared library to $(DESTDIR)$(OPENBLAS_LIBRARY_DIR)
- ifeq ($(OSNAME), $(filter $(OSNAME),Linux SunOS Android Haiku FreeBSD DragonFly))
+-ifeq ($(OSNAME), $(filter $(OSNAME),Linux SunOS Android Haiku FreeBSD DragonFly))
++ifeq ($(OSNAME), $(filter $(OSNAME),Linux SunOS Android Haiku FreeBSD DragonFly OpenBSD NetBSD))
  	@install -m755 $(LIBSONAME) "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)"
  	@cd "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)" ; \
--	ln -fs $(LIBSONAME) $(LIBPREFIX).so ; \
--	ln -fs $(LIBSONAME) $(LIBPREFIX).so.$(MAJOR_VERSION)
-+	if ! test $(LIBSONAME) = $(LIBPREFIX).so; then \
-+	ln -fs $(LIBSONAME) $(LIBPREFIX).so ; fi ; \
-+	if ! test $(LIBSONAME) = $(LIBPREFIX).so.$(MAJOR_VERSION); then \
-+	ln -fs $(LIBSONAME) $(LIBPREFIX).so.$(MAJOR_VERSION); fi
+-	$(LNCMD) $(LIBSONAME) $(LIBPREFIX).so ; \
+-	$(LNCMD) $(LIBSONAME) $(LIBPREFIX).so.$(MAJOR_VERSION)
+-endif
+-
+-ifeq ($(OSNAME), $(filter $(OSNAME),OpenBSD NetBSD))
+-	@cp $(LIBSONAME) "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)"
+-	@cd "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)" ; \
+-	$(LNCMD) $(LIBSONAME) $(LIBPREFIX).so
++	$(call LNCMD,$(LIBSONAME),$(LIBPREFIX).so) ; \
++	$(call LNCMD,$(LIBSONAME),$(LIBPREFIX).so.$(MAJOR_VERSION))
  endif
- 
- ifeq ($(OSNAME), $(filter $(OSNAME),OpenBSD NetBSD))
- 	@cp $(LIBSONAME) "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)"
-+ifneq ($(LIBSONAME), $(LIBPREFIX).so)
- 	@cd "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)" ; \
- 	ln -fs $(LIBSONAME) $(LIBPREFIX).so
- endif
-+endif
  ifeq ($(OSNAME), Darwin)
  	@-cp $(LIBDYNNAME) "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)"
  	@-install_name_tool -id "$(OPENBLAS_LIBRARY_DIR)/$(LIBPREFIX).$(MAJOR_VERSION).dylib" "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)/$(LIBDYNNAME)"
  	@cd "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)" ; \
-+	if ! test $(LIBDYNNAME) = $(LIBPREFIX).dylib; then \
- 	ln -fs $(LIBDYNNAME) $(LIBPREFIX).dylib ; \
-+	fi ; \
- 	ln -fs $(LIBDYNNAME) $(LIBPREFIX).$(MAJOR_VERSION).dylib
+-	$(LNCMD) $(LIBDYNNAME) $(LIBPREFIX).dylib ; \
+-	$(LNCMD) $(LIBDYNNAME) $(LIBPREFIX).$(MAJOR_VERSION).dylib
++	$(call LNCMD,$(LIBDYNNAME),$(LIBPREFIX).dylib) ; \
++	$(call LNCMD,$(LIBDYNNAME),$(LIBPREFIX).$(MAJOR_VERSION).dylib)
  endif
  ifeq ($(OSNAME), WINNT)
-@@ -140,16 +148,20 @@ endif
- ifneq ($(NO_STATIC),1)
+ 	@-cp $(LIBDLLNAME) "$(DESTDIR)$(OPENBLAS_BINARY_DIR)"
+@@ -174,30 +164,23 @@ ifneq ($(NO_STATIC),1)
  	@echo Copying the static library to $(DESTDIR)$(OPENBLAS_LIBRARY_DIR)
  	@installbsd -c -m 644 $(LIBNAME) "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)"
-+ifneq ($(LIBNAME), $(LIBPREFIX).$(LIBSUFFIX))
  	@cd "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)" ; \
- 	ln -fs $(LIBNAME) $(LIBPREFIX).$(LIBSUFFIX)
+-	$(LNCMD) $(LIBNAME) $(LIBPREFIX).$(LIBSUFFIX)
++	$(call LNCMD,$(LIBNAME),$(LIBPREFIX).$(LIBSUFFIX))
  endif
-+endif
  #for install shared library
  ifneq ($(NO_SHARED),1)
  	@echo Copying the shared library to $(DESTDIR)$(OPENBLAS_LIBRARY_DIR)
  	@installbsd -c -m 755 $(LIBSONAME) "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)"
  	@cd "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)" ; \
--	ln -fs $(LIBSONAME) $(LIBPREFIX).so ; \
--	ln -fs $(LIBSONAME) $(LIBPREFIX).so.$(MAJOR_VERSION)
-+	if ! test $(LIBSONAME) = $(LIBPREFIX).so; then \
-+	ln -fs $(LIBSONAME) $(LIBPREFIX).so ; fi ; \
-+	if ! test $(LIBSONAME) = $(LIBPREFIX).so.$(MAJOR_VERSION); then \
-+	ln -fs $(LIBSONAME) $(LIBPREFIX).so.$(MAJOR_VERSION); fi
+-	$(LNCMD) $(LIBSONAME) $(LIBPREFIX).so ; \
+-	$(LNCMD) $(LIBSONAME) $(LIBPREFIX).so.$(MAJOR_VERSION)
++	$(call LNCMD,$(LIBSONAME),$(LIBPREFIX).so) ; \
++	$(call LNCMD,$(LIBSONAME),$(LIBPREFIX).so.$(MAJOR_VERSION))
  endif
  
  endif
-@@ -158,7 +170,7 @@ endif
- ifeq ($(INTERFACE64),1)
- 	SUFFIX64=64
- endif
+ 
+ #Generating openblas.pc
+-ifeq ($(INTERFACE64),1)
+-	SUFFIX64=64
+-endif
 -	PKGFILE="$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)/$(LIBSONAMEBASE)$(SUFFIX64).pc"
-+	PKGFILE="$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)/$(LIBNAMEBASE).pc"
- 
- 	@echo Generating $(LIBSONAMEBASE)$(SUFFIX64).pc in "$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)"
+-
+-	@echo Generating $(LIBSONAMEBASE)$(SUFFIX64).pc in "$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)"
++	@echo Generating "$$(basename "$(PKGFILE)")" in "$$(dirname "$(PKGFILE)")"
  	@echo 'libdir='$(OPENBLAS_LIBRARY_DIR) > "$(PKGFILE)"
-@@ -167,7 +179,7 @@ endif
- 	@echo 'openblas_config= USE_64BITINT='$(INTERFACE64) 'DYNAMIC_ARCH='$(DYNAMIC_ARCH) 'DYNAMIC_OLDER='$(DYNAMIC_OLDER) 'NO_CBLAS='$(NO_CBLAS) 'NO_LAPACK='$(NO_LAPACK) 'NO_LAPACKE='$(NO_LAPACKE) 'NO_AFFINITY='$(NO_AFFINITY) 'USE_OPENMP='$(USE_OPENMP) $(CORE) 'MAX_THREADS='$(NUM_THREADS)>> "$(PKGFILE)"
- 	@echo 'version='$(VERSION) >> "$(PKGFILE)"
- 	@echo 'extralib='$(PKG_EXTRALIB) >> "$(PKGFILE)"
--	@cat openblas.pc.in >> "$(PKGFILE)"
-+	@cat openblas.pc.in | sed -e 's,-lopenblas[^[:space:]]*,-l$(LIBNAMEBASE),' >> "$(PKGFILE)"
- 
- 
- #Generating OpenBLASConfig.cmake
+-	@echo 'libprefix='$(LIBNAMEPREFIX) >> "$(PKGFILE)"
+-	@echo 'libnamesuffix='$(LIBNAMESUFFIX) >> "$(PKGFILE)"
+-	@echo 'libsuffix='$(SYMBOLSUFFIX) >> "$(PKGFILE)"
++	@echo 'libname='$(LIBLINKPREFIX) >> "$(PKGFILE)"
+ 	@echo 'includedir='$(OPENBLAS_INCLUDE_DIR) >> "$(PKGFILE)"
+ 	@echo 'omp_opt='$(FOMP_OPT) >> "$(PKGFILE)"
+ 	@echo 'openblas_config= USE_64BITINT='$(INTERFACE64) 'DYNAMIC_ARCH='$(DYNAMIC_ARCH) 'DYNAMIC_OLDER='$(DYNAMIC_OLDER) 'NO_CBLAS='$(NO_CBLAS) 'NO_LAPACK='$(NO_LAPACK) 'NO_LAPACKE='$(NO_LAPACKE) 'NO_AFFINITY='$(NO_AFFINITY) 'USE_OPENMP='$(USE_OPENMP) $(TARGET) 'MAX_THREADS='$(NUM_THREADS)>> "$(PKGFILE)"

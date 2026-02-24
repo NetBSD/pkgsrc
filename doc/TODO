@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26863 2026/02/24 04:02:41 ryoon Exp $
+$NetBSD: TODO,v 1.26864 2026/02/24 23:09:02 thor Exp $
 
 Suggested new packages
 ======================
@@ -989,7 +989,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o olvwm-4.5
 	o oo2c-2.1.11
 	o opal-3.16.2
-	o openblas-0.3.31
 	o opencl-3.0.19
 	o opencpn-5.12.4
 	o opencpn-plugin-draw-1.8.5.2
