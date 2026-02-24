@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1356 2026/02/24 06:47:18 triaxx Exp $
+$NetBSD: CHANGES-2026,v 1.1357 2026/02/24 07:14:19 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1817,3 +1817,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/nss to 3.121.0 [wiz 2026-02-23]
 	Updated graphics/ImageMagick to 7.1.2.15 [triaxx 2026-02-24]
 	Updated graphics/p5-PerlMagick to 7.1.2.15 [triaxx 2026-02-24]
+	Updated editors/emacs30 to 30.2nb6 [triaxx 2026-02-24]
