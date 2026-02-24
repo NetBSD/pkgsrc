@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1624 2026/02/04 14:00:19 wiz Exp $
+# $NetBSD: Makefile,v 1.1625 2026/02/24 11:59:46 pin Exp $
 #
 
 COMMENT=	Networking tools
@@ -1013,6 +1013,7 @@ SUBDIR+=	trickle
 SUBDIR+=	trippy
 SUBDIR+=	tsocks
 SUBDIR+=	tspc
+SUBDIR+=	ttl
 SUBDIR+=	ttt
 SUBDIR+=	tut
 SUBDIR+=	tvnjviewer
