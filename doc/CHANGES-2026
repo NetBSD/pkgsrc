@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1358 2026/02/24 07:16:50 triaxx Exp $
+$NetBSD: CHANGES-2026,v 1.1359 2026/02/24 07:43:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1817,3 +1817,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/nss to 3.121.0 [wiz 2026-02-23]
 	Updated graphics/ImageMagick to 7.1.2.15 [triaxx 2026-02-24]
 	Updated graphics/p5-PerlMagick to 7.1.2.15 [triaxx 2026-02-24]
+	Updated net/wireguard-tools to 1.0.20260223 [adam 2026-02-24]
+	Updated sysutils/ansible-core to 2.20.3 [adam 2026-02-24]
