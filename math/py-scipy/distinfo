@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.64 2026/01/11 08:15:05 adam Exp $
+$NetBSD: distinfo,v 1.65 2026/02/24 10:05:18 adam Exp $
 
-BLAKE2s (scipy-1.17.0.tar.gz) = 1a806be5300807b9a13c8f4ff257ca917c9c18cae18b832a845400567bcb6f1d
-SHA512 (scipy-1.17.0.tar.gz) = 299339cf7885ae6ad81bb29ab1a9128c1e7baef387e64e03a5ca784c14f08de1fe58c8d58b25c76c9068b09d8d97fc8b38d2e03922f0f8ada4e5d00910d56dae
-Size (scipy-1.17.0.tar.gz) = 30396830 bytes
+BLAKE2s (scipy-1.17.1.tar.gz) = 1816cf6a8b79e28dfa0f41a6d570f101c491119f45c0d4a0e48e63e4c83a9aed
+SHA512 (scipy-1.17.1.tar.gz) = c2930d9be072057eb25394d6bee7fbe504f1b7c442b5393641ab3ff6bba590d4a76d240eb3a2ef58891bcb449af847de056a8957c591caa8fbf496ce9ce5a9e5
+Size (scipy-1.17.1.tar.gz) = 30573822 bytes
 SHA1 (patch-scipy_ndimage_src___rank__filter__1d.cpp) = 937e0d4308146a4035cf7e17909dcc21f9f7323f
 SHA1 (patch-scipy_spatial___ckdtree.pyx) = 09f79827790edb78204cca7bbe25b5f373834dd4
 SHA1 (patch-scipy_special_boost__special__functions.h) = eaf46deb56b012ffe467e2e38805c609ba551cff
