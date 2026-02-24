@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2026/02/06 10:05:46 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2026/02/24 11:56:29 pin Exp $
 
-DISTNAME=	xpdf-4.05
-PKGREVISION=	13
+DISTNAME=	xpdf-4.06
 CATEGORIES=	print
 MASTER_SITES=	https://dl.xpdfreader.com/
 
@@ -12,15 +11,10 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	urw-fonts-[0-9]*:../../fonts/urw-fonts
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 TOOL_DEPENDS+=	icoutils-[0-9]*:../../graphics/icoutils
-
-# don't accidentally find qt6
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt6Widgets=TRUE
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/icons/hicolor/scalable/apps
@@ -57,5 +51,6 @@ post-install:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../print/libpaper/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
