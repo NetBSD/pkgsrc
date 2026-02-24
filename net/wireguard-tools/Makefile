@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2025/05/23 20:02:02 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/02/24 07:41:41 adam Exp $
 
-DISTNAME=	wireguard-tools-1.0.20250521
+DISTNAME=	wireguard-tools-1.0.20260223
 CATEGORIES=	net
 MASTER_SITES=	https://git.zx2c4.com/wireguard-tools/snapshot/
 EXTRACT_SUFX=	.tar.xz
