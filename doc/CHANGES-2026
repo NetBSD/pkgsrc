@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1378 2026/02/24 19:20:55 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1379 2026/02/24 19:35:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1846,3 +1846,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/gtk4 to 4.20.3nb4 [kikadf 2026-02-24]
 	Updated databases/py-peewee to 4.0.0 [adam 2026-02-24]
 	Updated sysutils/ansible to 13.4.0 [adam 2026-02-24]
+	Updated devel/py-aenum to 3.1.16 [adam 2026-02-24]
+	Updated databases/py-dbf to 0.99.11 [adam 2026-02-24]
