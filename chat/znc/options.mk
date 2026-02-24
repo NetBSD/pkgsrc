@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2024/08/25 06:18:28 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2026/02/24 14:47:18 triaxx Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.znc
 PKG_SUPPORTED_OPTIONS=	icu inet6 nls perl python sasl-cyrus tcl
@@ -28,6 +28,7 @@ CMAKE_CONFIGURE_ARGS+=	-DWANT_ICU=OFF
 USE_TOOLS+=	msgfmt
 PLIST_SRC+=	PLIST.nls
 CMAKE_CONFIGURE_ARGS+=	-DWANT_I18N=ON
+BUILDLINK_API_DEPENDS.boost-libs+=	boost-libs>=1.70
 .  include "../../devel/boost-libs/buildlink3.mk"
 .else
 CMAKE_CONFIGURE_ARGS+=	-DWANT_I18N=OFF

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/08/07 22:23:46 nia Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/02/24 14:47:18 triaxx Exp $
 bin/znc
 bin/znc-buildmod
 include/znc/Buffer.h
@@ -82,6 +82,7 @@ lib/znc/route_replies.so
 lib/znc/sample.so
 lib/znc/samplewebapi.so
 lib/znc/sasl.so
+lib/znc/saslplainauth.so
 lib/znc/savebuff.so
 lib/znc/schat.so
 lib/znc/send_raw.so
