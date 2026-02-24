@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2025/07/13 06:08:54 kim Exp $
+# $NetBSD: Makefile,v 1.8 2026/02/24 16:26:27 triaxx Exp $
 
-DISTNAME=	liboqs-0.14.0
+DISTNAME=	liboqs-0.15.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=open-quantum-safe/}
 
