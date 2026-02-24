@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1360 2026/02/24 08:02:50 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1361 2026/02/24 08:23:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1821,3 +1821,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/ansible-core to 2.20.3 [adam 2026-02-24]
 	Updated devel/py-uv to 0.10.5 [adam 2026-02-24]
 	Updated devel/py-uv-build to 0.10.5 [adam 2026-02-24]
+	Updated devel/capstone to 5.0.7 [adam 2026-02-24]
+	Updated devel/py-capstone to 5.0.7 [adam 2026-02-24]
