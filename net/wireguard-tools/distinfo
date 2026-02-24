@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2025/05/23 20:02:02 adam Exp $
+$NetBSD: distinfo,v 1.6 2026/02/24 07:41:41 adam Exp $
 
-BLAKE2s (wireguard-tools-1.0.20250521.tar.xz) = 5970ffcec0259abe5bbddc38c1939af8b14e1d30ca8f5a5428523087c629d3ea
-SHA512 (wireguard-tools-1.0.20250521.tar.xz) = 93a9ef1caaf8494f7f43fd2557c6499414481bcc7006e10ee9ad7cc520a0d0751e5fb65f6d554424ed9f2ef7a3ad510413d7aa021d829e6a631e81d24d7f47eb
-Size (wireguard-tools-1.0.20250521.tar.xz) = 100340 bytes
+BLAKE2s (wireguard-tools-1.0.20260223.tar.xz) = 0249788d836b2b4ac523cd6fdffe501c00b98abb1d0e783452276d38cf45a820
+SHA512 (wireguard-tools-1.0.20260223.tar.xz) = ab56199345fdc385e62e414ec200c10777c985fb2bde767f9c76e049f47bc6d2ae83ed12d60dc1ebe0e66f22f7a7e554c13ab13837fb8cb2fbd5481149b07654
+Size (wireguard-tools-1.0.20260223.tar.xz) = 100472 bytes
 SHA1 (patch-Makefile) = bc5c5a0242273c6f15b4c04a9d54d6a46835eda6
