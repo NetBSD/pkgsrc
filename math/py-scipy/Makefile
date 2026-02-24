@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.104 2026/01/11 08:15:05 adam Exp $
+# $NetBSD: Makefile,v 1.105 2026/02/24 10:05:18 adam Exp $
 
-DISTNAME=	scipy-1.17.0
+DISTNAME=	scipy-1.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
@@ -80,6 +80,9 @@ WHEEL_ARGS+=		-Csetup-args=-Dlapack=${LAPACK_PC}
 WHEEL_ARGS+=		-Ccompile-args=-j${MAKE_JOBS:U1}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
+
+pre-configure:
+	${LN} -sf ${PREFIX}/bin/f2py-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/f2py
 
 .include "../../mk/bsd.prefs.mk"
 
