@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/02/24 15:16:28 triaxx Exp $
+# $NetBSD: Makefile,v 1.6 2026/02/24 15:40:33 triaxx Exp $
 
 DISTNAME=	lzlib-1.15
 CATEGORIES=	archivers devel
@@ -17,6 +17,7 @@ INFO_FILES=	yes
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --infodir=${PREFIX}/${PKGINFODIR} --enable-shared
 
+BUILDLINK_TRANSFORM.Darwin+=	opt:-Wl,--soname=liblz.so.1:-Wl,-install_name,${PREFIX}/lib/liblz.so.1
 BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,--soname=liblz.so.1:-Wl,-soname,liblz.so.1
 
 TEST_TARGET=	check
