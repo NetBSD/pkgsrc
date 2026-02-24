@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2025/10/09 07:57:50 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/02/24 10:06:44 adam Exp $
 
-DISTNAME=	xarray_einstats-0.9.1
+DISTNAME=	xarray_einstats-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xarray-einstats/}
@@ -11,9 +11,9 @@ COMMENT=	Stats, linear algebra and einops for xarray
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
-DEPENDS+=	${PYPKGPREFIX}-numpy>=1.25:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-scipy>=1.11:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-xarray>=2023.06.0:../../math/py-xarray
+DEPENDS+=	${PYPKGPREFIX}-numpy>=2.0:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.13:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-xarray>=2024.02.0:../../math/py-xarray
 
 USE_LANGUAGES=	# none
 
