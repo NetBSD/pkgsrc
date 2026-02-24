@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1381 2026/02/24 20:03:10 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1382 2026/02/24 21:07:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1855,3 +1855,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-mocket to 3.14.1 [adam 2026-02-24]
 	Updated math/py-mpmath to 1.4.0 [adam 2026-02-24]
 	Updated devel/py-testtools to 2.8.4 [adam 2026-02-24]
+	Updated www/cgit to 1.3 [wiz 2026-02-24]
