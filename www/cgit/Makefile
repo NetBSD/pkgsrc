@@ -1,30 +1,30 @@
-# $NetBSD: Makefile,v 1.13 2024/04/20 13:45:27 nia Exp $
+# $NetBSD: Makefile,v 1.14 2026/02/24 21:06:53 wiz Exp $
 
-DISTNAME=	cgit-1.2.3
-PKGREVISION=	1
+DISTNAME=	cgit-1.3
 CATEGORIES=	www
 MASTER_SITES=	https://git.zx2c4.com/cgit/snapshot/
 EXTRACT_SUFX=	.tar.xz
-# cgit builds its own libgit using a known-good version
-# check release notes or README when updating the package
-GIT_VER=	2.25.1
+# cgit builds its own libgit using a known-good version; check
+# release notes or Makefile (GIT_VER) when updating the package
+GIT_VER=	2.53.0
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} git-${GIT_VER}${EXTRACT_SUFX}
-SITES.git-${GIT_VER}${EXTRACT_SUFX}=	http://hjemli.net/git/git/snapshot/
+#SITES.git-${GIT_VER}${EXTRACT_SUFX}=	https://www.kernel.org/pub/software/scm/git/
 
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://git.zx2c4.com/cgit/
 COMMENT=	Fast web interface for git
-MAINTAINER=	pkgsrc-users@NetBSD.org
 LICENSE=	gnu-gpl-v2
 
-MAKE_JOBS_SAFE=		no
-
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl:test
 USE_FEATURES+=		memrchr
 MAKE_FLAGS+=		GIT_VER=${GIT_VER}
+MAKE_FLAGS+=		PERL_PATH=${PERL5}
 BUILD_MAKE_FLAGS+=	CGIT_CONFIG=${PKG_SYSCONFDIR}/cgitrc
 
 MAKE_ENV+=		CGIT_LIBS=${LIBNBCOMPAT_LIBNAME}
 MAKE_ENV.SunOS+=	NEEDS_LIBICONV=YesPlease
+
+TEST_TARGET=	test
 
 CGIT_CONFIG=	${PKG_SYSCONFDIR}/cgitrc
 CGIT_CGIBIN=	${PREFIX}/libexec/cgi-bin
@@ -42,13 +42,14 @@ post-extract:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cgit ${DESTDIR}${CGIT_CGIBIN}/cgit.cgi
-	${INSTALL_DATA} ${WRKSRC}/cgit.png ${DESTDIR}${CGIT_HTDOCS}/cgit.png
-	${INSTALL_DATA} ${WRKSRC}/cgit.css ${DESTDIR}${CGIT_HTDOCS}/cgit.css
-	${INSTALL_DATA} ${WRKSRC}/cgitrc ${DESTDIR}${CGIT_EGDIR}/cgitrc
+	${INSTALL_DATA} ${WRKSRC}/cgit.png ${DESTDIR}${CGIT_HTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/cgit.js ${DESTDIR}${CGIT_HTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/cgit.css ${DESTDIR}${CGIT_HTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/cgitrc ${DESTDIR}${CGIT_EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/filters/commit-links.sh \
-		${DESTDIR}${CGIT_FILTERS}/commit-links.sh
+		${DESTDIR}${CGIT_FILTERS}
 	${INSTALL_SCRIPT} ${WRKSRC}/filters/syntax-highlighting.sh \
-		${DESTDIR}${CGIT_FILTERS}/syntax-highlighting.sh
+		${DESTDIR}${CGIT_FILTERS}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
