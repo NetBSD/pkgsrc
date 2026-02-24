@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1380 2026/02/24 19:42:33 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1381 2026/02/24 20:03:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1851,3 +1851,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-regex to 2026.2.19 [adam 2026-02-24]
 	Updated databases/py-sqlalchemy to 2.0.47 [adam 2026-02-24]
 	Updated textproc/py-pdf to 6.7.3 [adam 2026-02-24]
+	Updated devel/py-pathable to 0.5.0 [adam 2026-02-24]
+	Updated devel/py-mocket to 3.14.1 [adam 2026-02-24]
+	Updated math/py-mpmath to 1.4.0 [adam 2026-02-24]
+	Updated devel/py-testtools to 2.8.4 [adam 2026-02-24]
