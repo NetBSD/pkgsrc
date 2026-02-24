@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1379 2026/02/24 19:35:49 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1380 2026/02/24 19:42:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1848,3 +1848,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/ansible to 13.4.0 [adam 2026-02-24]
 	Updated devel/py-aenum to 3.1.16 [adam 2026-02-24]
 	Updated databases/py-dbf to 0.99.11 [adam 2026-02-24]
+	Updated textproc/py-regex to 2026.2.19 [adam 2026-02-24]
+	Updated databases/py-sqlalchemy to 2.0.47 [adam 2026-02-24]
+	Updated textproc/py-pdf to 6.7.3 [adam 2026-02-24]
