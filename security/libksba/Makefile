@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2025/04/09 10:40:13 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/02/24 08:35:46 adam Exp $
 
-DISTNAME=	libksba-1.6.7
+DISTNAME=	libksba-1.6.8
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG:=libksba/}
 EXTRACT_SUFX=	.tar.bz2
