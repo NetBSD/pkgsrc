@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2023/03/14 14:12:49 adam Exp $
+# $NetBSD: Makefile,v 1.21 2026/02/24 20:00:32 adam Exp $
 
-DISTNAME=	mpmath-1.3.0
+DISTNAME=	mpmath-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mpmath/}
@@ -11,17 +11,15 @@ HOMEPAGE=	https://mpmath.org/
 COMMENT=	Python library for arbitrary-precision FP arithmetic
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 # py-gmpy provides faster backend
-DEPENDS+=	${PYPKGPREFIX}-gmpy2>=2.1.0:../../math/py-gmpy2
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4.6:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-gmpy2>=2.3:../../math/py-gmpy2
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
+TEST_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} mpmath/tests
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
