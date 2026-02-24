@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST.runtime,v 1.17 2026/02/22 20:40:55 js Exp $
+@comment $NetBSD: PLIST.runtime,v 1.18 2026/02/24 21:50:50 js Exp $
 include/ObjFWRT/ObjFWRT.h
 lib/libobjfwrt.so
 lib/libobjfwrt.so.1
-lib/libobjfwrt.so.1.5.0
+lib/libobjfwrt.so.1.5.1
