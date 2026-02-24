@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2026/01/15 19:54:54 bsiegert Exp $
+# $NetBSD: Makefile,v 1.63 2026/02/24 08:45:37 bsiegert Exp $
 
 DISTNAME=		direnv-2.37.1
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=direnv/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}

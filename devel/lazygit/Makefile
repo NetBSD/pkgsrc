@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2026/02/07 18:28:51 adam Exp $
+# $NetBSD: Makefile,v 1.67 2026/02/24 08:45:25 bsiegert Exp $
 
 DISTNAME=	lazygit-0.59.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jesseduffield/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

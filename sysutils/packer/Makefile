@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2026/01/15 19:54:55 bsiegert Exp $
+# $NetBSD: Makefile,v 1.33 2026/02/24 08:45:38 bsiegert Exp $
 
 DISTNAME=	packer-1.9.5
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
