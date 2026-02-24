@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1375 2026/02/24 16:28:43 triaxx Exp $
+$NetBSD: CHANGES-2026,v 1.1376 2026/02/24 16:47:35 he Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1842,3 +1842,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/lzlib to 1.15 [triaxx 2026-02-24]
 	Updated security/liboqs to 0.15.0 [triaxx 2026-02-24]
 	Updated net/wget2 to 2.2.1nb3 [triaxx 2026-02-24]
+	Updated net/nsd to 4.14.1 [he 2026-02-24]
