@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2026/01/26 19:49:19 bsiegert Exp $
+# $NetBSD: Makefile,v 1.9 2026/02/24 08:45:30 bsiegert Exp $
 
 DISTNAME=	helm-3.18.6
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=helm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
