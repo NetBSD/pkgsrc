@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/02/16 23:58:05 maya Exp $
+# $NetBSD: Makefile,v 1.2 2026/02/24 08:45:27 bsiegert Exp $
 
 DISTNAME=	tilt-0.36.3
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tilt-dev/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

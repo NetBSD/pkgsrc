@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2026/02/16 12:14:32 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/02/24 08:45:39 bsiegert Exp $
 
 DISTNAME=	dasel-3.2.2
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TomWright/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
