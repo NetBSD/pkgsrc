@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2026/01/08 08:44:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2026/02/24 19:13:02 adam Exp $
 bin/pwiz-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -13,14 +13,6 @@ ${PYSITELIB}/playhouse/README.md
 ${PYSITELIB}/playhouse/__init__.py
 ${PYSITELIB}/playhouse/__init__.pyc
 ${PYSITELIB}/playhouse/__init__.pyo
-${PYSITELIB}/playhouse/_pysqlite/__init__.py
-${PYSITELIB}/playhouse/_pysqlite/__init__.pyc
-${PYSITELIB}/playhouse/_pysqlite/__init__.pyo
-${PYSITELIB}/playhouse/_pysqlite/cache.h
-${PYSITELIB}/playhouse/_pysqlite/connection.h
-${PYSITELIB}/playhouse/_pysqlite/module.h
-${PYSITELIB}/playhouse/_sqlite_ext.c
-${PYSITELIB}/playhouse/_sqlite_ext.so
 ${PYSITELIB}/playhouse/_sqlite_udf.c
 ${PYSITELIB}/playhouse/_sqlite_udf.so
 ${PYSITELIB}/playhouse/apsw_ext.py
@@ -29,6 +21,9 @@ ${PYSITELIB}/playhouse/apsw_ext.pyo
 ${PYSITELIB}/playhouse/cockroachdb.py
 ${PYSITELIB}/playhouse/cockroachdb.pyc
 ${PYSITELIB}/playhouse/cockroachdb.pyo
+${PYSITELIB}/playhouse/cysqlite_ext.py
+${PYSITELIB}/playhouse/cysqlite_ext.pyc
+${PYSITELIB}/playhouse/cysqlite_ext.pyo
 ${PYSITELIB}/playhouse/dataset.py
 ${PYSITELIB}/playhouse/dataset.pyc
 ${PYSITELIB}/playhouse/dataset.pyo
@@ -59,9 +54,9 @@ ${PYSITELIB}/playhouse/pool.pyo
 ${PYSITELIB}/playhouse/postgres_ext.py
 ${PYSITELIB}/playhouse/postgres_ext.pyc
 ${PYSITELIB}/playhouse/postgres_ext.pyo
-${PYSITELIB}/playhouse/psycopg3_ext.py
-${PYSITELIB}/playhouse/psycopg3_ext.pyc
-${PYSITELIB}/playhouse/psycopg3_ext.pyo
+${PYSITELIB}/playhouse/pwasyncio.py
+${PYSITELIB}/playhouse/pwasyncio.pyc
+${PYSITELIB}/playhouse/pwasyncio.pyo
 ${PYSITELIB}/playhouse/reflection.py
 ${PYSITELIB}/playhouse/reflection.pyc
 ${PYSITELIB}/playhouse/reflection.pyo

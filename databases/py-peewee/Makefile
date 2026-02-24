@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.127 2026/01/08 08:44:01 adam Exp $
+# $NetBSD: Makefile,v 1.128 2026/02/24 19:13:02 adam Exp $
 
-DISTNAME=	peewee-3.19.0
+DISTNAME=	peewee-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/peewee/}
@@ -23,16 +23,7 @@ MESSAGE_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
 
 REPLACE_PYTHON+=	pwiz.py
 
-SUBST_CLASSES+=		lpath
-SUBST_STAGE.lpath=	pre-configure
-SUBST_FILES.lpath=	setup.py
-SUBST_VARS.lpath=	BUILDLINK_PREFIX.sqlite3
-
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
-
-# Let Cython re-generate these files. Fixes build with Python 3.9.
-pre-configure:
-	${RM} ${WRKSRC}/playhouse/_sqlite_ext.c ${WRKSRC}/playhouse/_sqlite_udf.c
 
 post-build:
 	cd ${WRKSRC}/docs && ${BUILD_MAKE_CMD} man
