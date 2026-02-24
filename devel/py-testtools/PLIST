@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2025/12/26 12:38:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/02/24 20:02:48 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -58,6 +58,9 @@ ${PYSITELIB}/testtools/matchers/_impl.pyo
 ${PYSITELIB}/testtools/matchers/_warnings.py
 ${PYSITELIB}/testtools/matchers/_warnings.pyc
 ${PYSITELIB}/testtools/matchers/_warnings.pyo
+${PYSITELIB}/testtools/matchers/test.py
+${PYSITELIB}/testtools/matchers/test.pyc
+${PYSITELIB}/testtools/matchers/test.pyo
 ${PYSITELIB}/testtools/monkey.py
 ${PYSITELIB}/testtools/monkey.pyc
 ${PYSITELIB}/testtools/monkey.pyo
@@ -83,6 +86,18 @@ ${PYSITELIB}/testtools/testresult/doubles.pyo
 ${PYSITELIB}/testtools/testresult/real.py
 ${PYSITELIB}/testtools/testresult/real.pyc
 ${PYSITELIB}/testtools/testresult/real.pyo
+${PYSITELIB}/testtools/tests/__init__.py
+${PYSITELIB}/testtools/tests/__init__.pyc
+${PYSITELIB}/testtools/tests/__init__.pyo
+${PYSITELIB}/testtools/tests/helpers.py
+${PYSITELIB}/testtools/tests/helpers.pyc
+${PYSITELIB}/testtools/tests/helpers.pyo
+${PYSITELIB}/testtools/tests/matchers/__init__.py
+${PYSITELIB}/testtools/tests/matchers/__init__.pyc
+${PYSITELIB}/testtools/tests/matchers/__init__.pyo
+${PYSITELIB}/testtools/tests/matchers/helpers.py
+${PYSITELIB}/testtools/tests/matchers/helpers.pyc
+${PYSITELIB}/testtools/tests/matchers/helpers.pyo
 ${PYSITELIB}/testtools/testsuite.py
 ${PYSITELIB}/testtools/testsuite.pyc
 ${PYSITELIB}/testtools/testsuite.pyo
