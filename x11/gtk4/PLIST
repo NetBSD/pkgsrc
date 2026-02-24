@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2026/01/06 20:06:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2026/02/24 18:05:00 kikadf Exp $
 bin/gtk4-builder-tool
 bin/gtk4-demo
 bin/gtk4-demo-application
@@ -79,6 +79,15 @@ ${PLIST.quartz}include/gtk-4.0/gdk/macos/gdkmacosseat.h
 ${PLIST.quartz}include/gtk-4.0/gdk/macos/gdkmacossurface.h
 include/gtk-4.0/gdk/version/gdk-visibility.h
 include/gtk-4.0/gdk/version/gdkversionmacros.h
+${PLIST.wayland}include/gtk-4.0/gdk/wayland/gdkwayland.h
+${PLIST.wayland}include/gtk-4.0/gdk/wayland/gdkwaylanddevice.h
+${PLIST.wayland}include/gtk-4.0/gdk/wayland/gdkwaylanddisplay.h
+${PLIST.wayland}include/gtk-4.0/gdk/wayland/gdkwaylandglcontext.h
+${PLIST.wayland}include/gtk-4.0/gdk/wayland/gdkwaylandmonitor.h
+${PLIST.wayland}include/gtk-4.0/gdk/wayland/gdkwaylandpopup.h
+${PLIST.wayland}include/gtk-4.0/gdk/wayland/gdkwaylandseat.h
+${PLIST.wayland}include/gtk-4.0/gdk/wayland/gdkwaylandsurface.h
+${PLIST.wayland}include/gtk-4.0/gdk/wayland/gdkwaylandtoplevel.h
 ${PLIST.x11}include/gtk-4.0/gdk/x11/gdkx-autocleanups.h
 ${PLIST.x11}include/gtk-4.0/gdk/x11/gdkx.h
 ${PLIST.x11}include/gtk-4.0/gdk/x11/gdkx11applaunchcontext.h
@@ -408,6 +417,7 @@ include/gtk-4.0/unix-print/gtk/print/gtkprintjob.h
 include/gtk-4.0/unix-print/gtk/print/gtkprintunixdialog.h
 lib/girepository-1.0/Gdk-4.0.typelib
 ${PLIST.quartz}lib/girepository-1.0/GdkMacos-4.0.typelib
+${PLIST.wayland}lib/girepository-1.0/GdkWayland-4.0.typelib
 ${PLIST.x11}lib/girepository-1.0/GdkX11-4.0.typelib
 lib/girepository-1.0/Gsk-4.0.typelib
 lib/girepository-1.0/Gtk-4.0.typelib
@@ -417,6 +427,7 @@ lib/libgtk-4.so.1.2000.3
 lib/pkgconfig/gtk4-atspi.pc
 ${PLIST.quartz}lib/pkgconfig/gtk4-macos.pc
 lib/pkgconfig/gtk4-unix-print.pc
+${PLIST.wayland}lib/pkgconfig/gtk4-wayland.pc
 ${PLIST.x11}lib/pkgconfig/gtk4-x11.pc
 lib/pkgconfig/gtk4.pc
 share/applications/org.gtk.Demo4.desktop
@@ -427,6 +438,7 @@ share/gettext/its/gtk4builder.its
 share/gettext/its/gtk4builder.loc
 share/gir-1.0/Gdk-4.0.gir
 ${PLIST.quartz}share/gir-1.0/GdkMacos-4.0.gir
+${PLIST.wayland}share/gir-1.0/GdkWayland-4.0.gir
 ${PLIST.x11}share/gir-1.0/GdkX11-4.0.gir
 share/gir-1.0/Gsk-4.0.gir
 share/gir-1.0/Gtk-4.0.gir
