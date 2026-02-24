@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/09/28 19:33:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/02/24 19:48:04 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -9,15 +9,15 @@ ${PYSITELIB}/pathable/__init__.pyo
 ${PYSITELIB}/pathable/accessors.py
 ${PYSITELIB}/pathable/accessors.pyc
 ${PYSITELIB}/pathable/accessors.pyo
-${PYSITELIB}/pathable/dataclasses.py
-${PYSITELIB}/pathable/dataclasses.pyc
-${PYSITELIB}/pathable/dataclasses.pyo
 ${PYSITELIB}/pathable/parsers.py
 ${PYSITELIB}/pathable/parsers.pyc
 ${PYSITELIB}/pathable/parsers.pyo
 ${PYSITELIB}/pathable/paths.py
 ${PYSITELIB}/pathable/paths.pyc
 ${PYSITELIB}/pathable/paths.pyo
+${PYSITELIB}/pathable/protocols.py
+${PYSITELIB}/pathable/protocols.pyc
+${PYSITELIB}/pathable/protocols.pyo
 ${PYSITELIB}/pathable/py.typed
 ${PYSITELIB}/pathable/types.py
 ${PYSITELIB}/pathable/types.pyc
