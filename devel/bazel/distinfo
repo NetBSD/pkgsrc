@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2025/12/15 03:37:01 maya Exp $
+$NetBSD: distinfo,v 1.5 2026/02/24 20:48:20 christos Exp $
 
 BLAKE2s (bazel-6.4.0-dist-netbsd.tar.gz) = a740abafc058fe6569dd181611fa6521f82dfc8aea26897a6349709842f388dc
 SHA512 (bazel-6.4.0-dist-netbsd.tar.gz) = 0f1edab7673148a4c5d077de0435d05ca8f25abc280416261d05ee2c3a79d028485d60e046babec23757d0b3b90576e9467b2fdc41b6f5c03ce6e805a00cb5ee
@@ -40,7 +40,7 @@ SHA1 (patch-src_tools_singlejar_mapped__file__posix.inc) = fc9d9407d173ad95984cf
 SHA1 (patch-src_tools_singlejar_port.h) = ef1e7ad8eb101aa76e794f95f6b4eb20155146d8
 SHA1 (patch-src_tools_singlejar_zip__headers.h) = 0f2f98f4677118214c7b93cbfeb9399c3d0939b1
 SHA1 (patch-third__party_BUILD) = 05d665afc9d1697867102b3737467241f4b2b610
-SHA1 (patch-third__party_abseil-cpp_netbsd-sunos.patch) = c9ff33d2c331312736db8f26c47e8e0b6d7a671f
+SHA1 (patch-third__party_abseil-cpp_netbsd-sunos.patch) = 0d9ab7340776cb367c2e8eadc03263a0b46cc0a5
 SHA1 (patch-third__party_grpc_netbsd-config.patch) = ea14e800a118a3541356c00df5d8edb1aed309fa
 SHA1 (patch-third__party_upb_upb-bazel-clang.patch) = e0de19a8117adddf2a87fb49acecf089536106d0
 SHA1 (patch-third__party_zstd-jni_zstd-jni.BUILD) = 338d636638b429da3f8a695cc15010174651dd23
