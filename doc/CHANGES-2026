@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1377 2026/02/24 18:06:09 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.1378 2026/02/24 19:20:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1844,3 +1844,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/wget2 to 2.2.1nb3 [triaxx 2026-02-24]
 	Updated net/nsd to 4.14.1 [he 2026-02-24]
 	Updated x11/gtk4 to 4.20.3nb4 [kikadf 2026-02-24]
+	Updated databases/py-peewee to 4.0.0 [adam 2026-02-24]
+	Updated sysutils/ansible to 13.4.0 [adam 2026-02-24]
