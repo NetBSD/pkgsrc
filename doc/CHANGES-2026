@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1370 2026/02/24 14:08:08 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.1371 2026/02/24 14:09:10 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1837,3 +1837,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-responses to 0.26.0 [adam 2026-02-24]
 	Updated textproc/py-parse to 1.21.1 [adam 2026-02-24]
 	Updated www/firefox140 to 140.8.0 [gutteridge 2026-02-24]
+	Updated www/firefox140-l10n to 140.8.0 [gutteridge 2026-02-24]
