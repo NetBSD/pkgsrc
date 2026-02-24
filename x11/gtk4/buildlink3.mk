@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2026/01/27 08:40:56 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2026/02/24 18:05:00 kikadf Exp $
 
 BUILDLINK_TREE+=	gtk4
 
@@ -25,6 +25,11 @@ pkgbase := gtk4
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .endif
+.if ${PKG_BUILD_OPTIONS.gtk4:Mwayland}
+.include "../../devel/wayland/buildlink3.mk"
+.include "../../devel/wayland-protocols/buildlink3.mk"
+.include "../../x11/libxkbcommon/buildlink3.mk"
+.endif # PKG_BUILD_OPTIONS.gtk4:Mwayland
 
 .endif	# GTK4_BUILDLINK3_MK
 
