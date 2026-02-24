@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1362 2026/02/24 08:36:04 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1363 2026/02/24 08:38:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1825,3 +1825,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-capstone to 5.0.7 [adam 2026-02-24]
 	Updated devel/SDL3 to 3.4.2 [adam 2026-02-24]
 	Updated security/libksba to 1.6.8 [adam 2026-02-24]
+	Updated x11/xkeyboard-config to 2.47 [wiz 2026-02-24]
