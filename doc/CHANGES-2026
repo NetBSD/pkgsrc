@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1354 2026/02/23 22:49:47 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1355 2026/02/24 06:44:54 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1815,3 +1815,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/php-contao-manager to 1.10.12 [taca 2026-02-23]
 	Updated graphics/qiv to 3.0.1 [triaxx 2026-02-23]
 	Updated devel/nss to 3.121.0 [wiz 2026-02-23]
+	Updated graphics/ImageMagick to 7.1.2.15 [triaxx 2026-02-24]
