@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1364 2026/02/24 10:07:04 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1365 2026/02/24 10:29:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1828,3 +1828,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/xkeyboard-config to 2.47 [wiz 2026-02-24]
 	Updated math/py-scipy to 1.17.1 [adam 2026-02-24]
 	Updated math/py-xarray-einstats to 0.10.0 [adam 2026-02-24]
+	Updated security/vaultwarden to 1.35.4 [adam 2026-02-24]
+	Updated devel/py-bitarray to 3.8.0 [adam 2026-02-24]
