@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2026/01/14 13:10:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.40 2026/02/25 14:41:34 adam Exp $
 bin/dul-receive-pack-${PYVERSSUFFIX}
 bin/dul-upload-pack-${PYVERSSUFFIX}
 bin/dulwich-${PYVERSSUFFIX}
@@ -47,6 +47,9 @@ ${PYSITELIB}/dulwich/bitmap.pyo
 ${PYSITELIB}/dulwich/bundle.py
 ${PYSITELIB}/dulwich/bundle.pyc
 ${PYSITELIB}/dulwich/bundle.pyo
+${PYSITELIB}/dulwich/bundle_uri.py
+${PYSITELIB}/dulwich/bundle_uri.pyc
+${PYSITELIB}/dulwich/bundle_uri.pyo
 ${PYSITELIB}/dulwich/cli.py
 ${PYSITELIB}/dulwich/cli.pyc
 ${PYSITELIB}/dulwich/cli.pyo
@@ -198,6 +201,9 @@ ${PYSITELIB}/dulwich/porcelain/notes.pyo
 ${PYSITELIB}/dulwich/porcelain/submodule.py
 ${PYSITELIB}/dulwich/porcelain/submodule.pyc
 ${PYSITELIB}/dulwich/porcelain/submodule.pyo
+${PYSITELIB}/dulwich/porcelain/subtree.py
+${PYSITELIB}/dulwich/porcelain/subtree.pyc
+${PYSITELIB}/dulwich/porcelain/subtree.pyo
 ${PYSITELIB}/dulwich/porcelain/tag.py
 ${PYSITELIB}/dulwich/porcelain/tag.pyc
 ${PYSITELIB}/dulwich/porcelain/tag.pyo
@@ -244,6 +250,9 @@ ${PYSITELIB}/dulwich/stripspace.pyo
 ${PYSITELIB}/dulwich/submodule.py
 ${PYSITELIB}/dulwich/submodule.pyc
 ${PYSITELIB}/dulwich/submodule.pyo
+${PYSITELIB}/dulwich/subtree.py
+${PYSITELIB}/dulwich/subtree.pyc
+${PYSITELIB}/dulwich/subtree.pyo
 ${PYSITELIB}/dulwich/tests/__init__.py
 ${PYSITELIB}/dulwich/tests/__init__.pyc
 ${PYSITELIB}/dulwich/tests/__init__.pyo
