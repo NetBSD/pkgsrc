@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2026/02/08 22:29:21 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2026/02/25 11:44:13 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -130,7 +130,6 @@ CARGO_CRATE_DEPENDS+=	ipnet-2.11.0
 CARGO_CRATE_DEPENDS+=	iri-string-0.7.9
 CARGO_CRATE_DEPENDS+=	is_terminal_polyfill-1.70.2
 CARGO_CRATE_DEPENDS+=	itertools-0.13.0
-CARGO_CRATE_DEPENDS+=	itertools-0.14.0
 CARGO_CRATE_DEPENDS+=	itoa-1.0.15
 CARGO_CRATE_DEPENDS+=	jiff-0.2.16
 CARGO_CRATE_DEPENDS+=	jiff-static-0.2.16
@@ -235,7 +234,7 @@ CARGO_CRATE_DEPENDS+=	serde_derive-1.0.228
 CARGO_CRATE_DEPENDS+=	serde_derive_internals-0.29.1
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.145
 CARGO_CRATE_DEPENDS+=	serde_repr-0.1.20
-CARGO_CRATE_DEPENDS+=	serde_spanned-1.0.3
+CARGO_CRATE_DEPENDS+=	serde_spanned-1.0.4
 CARGO_CRATE_DEPENDS+=	serde_urlencoded-0.7.1
 CARGO_CRATE_DEPENDS+=	serde_yml-0.0.12
 CARGO_CRATE_DEPENDS+=	serial_test-3.2.0
@@ -264,11 +263,10 @@ CARGO_CRATE_DEPENDS+=	tinystr-0.8.2
 CARGO_CRATE_DEPENDS+=	tinytemplate-1.2.1
 CARGO_CRATE_DEPENDS+=	tinyvec-1.10.0
 CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.1
-CARGO_CRATE_DEPENDS+=	titlecase-3.6.0
 CARGO_CRATE_DEPENDS+=	tokio-1.48.0
 CARGO_CRATE_DEPENDS+=	tokio-macros-2.6.0
 CARGO_CRATE_DEPENDS+=	tokio-util-0.7.17
-CARGO_CRATE_DEPENDS+=	toml-0.9.8
+CARGO_CRATE_DEPENDS+=	toml-0.9.11+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	toml_datetime-0.7.5+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	toml_edit-0.24.0+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	toml_parser-1.0.6+spec-1.1.0
