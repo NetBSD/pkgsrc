@@ -1,8 +1,8 @@
-$NetBSD: patch-libiberty_Makefile.in,v 1.1 2016/10/19 12:48:26 ryoon Exp $
+$NetBSD: patch-libiberty_Makefile.in,v 1.2 2026/02/25 09:15:03 triaxx Exp $
 
 --- libiberty/Makefile.in.orig	2014-12-24 16:22:51.000000000 +0000
 +++ libiberty/Makefile.in
-@@ -363,13 +363,12 @@ install-strip: install
+@@ -385,13 +385,12 @@ install-strip: install
  # multilib-specific flags, it's overridden by FLAGS_TO_PASS from the
  # default multilib, so we have to take CFLAGS into account as well,
  # since it will be passed the multilib flags.
@@ -20,7 +20,7 @@ $NetBSD: patch-libiberty_Makefile.in,v 1.1 2016/10/19 12:48:26 ryoon Exp $
  		case "${target_header_dir}" in \
  		  /*)    thd=${target_header_dir};; \
  		  *)     thd=${includedir}/${target_header_dir};; \
-@@ -382,10 +381,10 @@ install_to_libdir: all
+@@ -404,10 +403,10 @@ install_to_libdir: all
  	@$(MULTIDO) $(FLAGS_TO_PASS) multi-do DO=install
  
  install_to_tooldir: all
