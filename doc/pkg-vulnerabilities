@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.735 2026/02/22 16:17:32 taca Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.736 2026/02/25 19:58:38 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29765,3 +29765,63 @@ tcpreplay<4.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-5419
 libvpx<1.16.0nb1	heap-overflow	https://nvd.nist.gov/vuln/detail/cve-2026-2447
 ruby[234][0-9]-rails70-*	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 ruby[34][0-4]-rails71-*	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+ImageMagick<7.1.2.15	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-24481
+ImageMagick6<6.9.13.40	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-24481
+ImageMagick<7.1.2.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-24484
+ImageMagick6<6.9.13.40	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-24484
+ImageMagick<7.1.2.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-24485
+ImageMagick6<6.9.13.40	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-24485
+ImageMagick<7.1.2.15	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2026-25576
+ImageMagick6<6.9.13.40	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2026-25576
+ImageMagick<7.1.2.15	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2026-25637
+ImageMagick<7.1.2.15	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2026-25638
+ImageMagick6<6.9.13.40	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2026-25638
+ImageMagick<7.1.2.15	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2026-25794
+ImageMagick<7.1.2.15	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-25795
+ImageMagick6<6.9.13.40	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-25795
+ImageMagick<7.1.2.15	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2026-25796
+ImageMagick6<6.9.13.40	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2026-25796
+ImageMagick<7.1.2.15	code-injection		https://nvd.nist.gov/vuln/detail/CVE-2026-25797
+ImageMagick6<6.9.13.40	code-injection		https://nvd.nist.gov/vuln/detail/CVE-2026-25797
+ImageMagick<7.1.2.15	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-25798
+ImageMagick6<6.9.13.40	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-25798
+ImageMagick<7.1.2.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-25799
+ImageMagick6<6.9.13.40	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-25799
+ImageMagick<7.1.2.15	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2026-25897
+ImageMagick6<6.9.13.40	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2026-25897
+ImageMagick<7.1.2.15	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-25898
+ImageMagick6<6.9.13.40	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-25898
+ImageMagick<7.1.2.15	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2026-25965
+ImageMagick6<6.9.13.40	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2026-25965
+ImageMagick<7.1.2.15	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2026-25966
+ImageMagick6<6.9.13.40	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2026-25966
+ImageMagick<7.1.2.15	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2026-25967
+ImageMagick<7.1.2.15	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2026-25968
+ImageMagick6<6.9.13.40	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2026-25968
+ImageMagick<7.1.2.15	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2026-25969
+ImageMagick<7.1.2.15	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-25970
+ImageMagick6<6.9.13.40	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-25970
+ImageMagick<7.1.2.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-25971
+ImageMagick6<6.9.13.40	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-25971
+ImageMagick<7.1.2.15	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-25982
+ImageMagick6<6.9.13.40	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-25982
+ImageMagick<7.1.2.15	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2026-25983
+ImageMagick6<6.9.13.40	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2026-25983
+ImageMagick<7.1.2.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-25985
+ImageMagick6<6.9.13.40	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-25985
+ImageMagick<7.1.2.15	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-25986
+ImageMagick6<6.9.13.40	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-25986
+ImageMagick<7.1.2.15	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-25987
+ImageMagick6<6.9.13.40	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-25987
+ImageMagick<7.1.2.15	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2026-25988
+ImageMagick6<6.9.13.40	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2026-25988
+ImageMagick<7.1.2.15	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-25989
+ImageMagick6<6.9.13.40	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-25989
+ImageMagick<7.1.2.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-26066
+ImageMagick6<6.9.13.40	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-26066
+ImageMagick<7.1.2.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-26283
+ImageMagick6<6.9.13.40	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-26283
+ImageMagick<7.1.2.15	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2026-26284
+ImageMagick6<6.9.13.40	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2026-26284
+ImageMagick<7.1.2.15	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-26983
+ImageMagick6<6.9.13.40	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-26983
