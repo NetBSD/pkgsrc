@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2025/09/04 23:06:24 lloyd Exp $
+# $NetBSD: Makefile,v 1.14 2026/02/25 08:27:41 triaxx Exp $
 
 DISTNAME=	binutils-2.45
 PKGNAME=	cross-arm-none-eabi-${DISTNAME}
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=	.tar.xz
