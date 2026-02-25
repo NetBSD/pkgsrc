@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1384 2026/02/24 23:09:02 thor Exp $
+$NetBSD: CHANGES-2026,v 1.1385 2026/02/25 08:28:03 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1863,3 +1863,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/openblas64_pthread to 0.3.31 [thor 2026-02-24]
 	Updated math/openblas_openmp to 0.3.31 [thor 2026-02-24]
 	Updated math/openblas_pthread to 0.3.31 [thor 2026-02-24]
+	Updated cross/arm-none-eabi-binutils to 2.45nb1 [triaxx 2026-02-25]
