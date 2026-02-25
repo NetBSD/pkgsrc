@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.13 2025/09/04 23:06:24 lloyd Exp $
+$NetBSD: distinfo,v 1.14 2026/02/25 08:27:41 triaxx Exp $
 
 BLAKE2s (binutils-2.45.tar.xz) = cb7c92ac2441421d9a054d8585456dba6e714aa6cb7392cdf561d55879bf24a8
 SHA512 (binutils-2.45.tar.xz) = c7b10a7466d9fd398d7a0b3f2a43318432668d714f2ec70069a31bdc93c86d28e0fe83792195727167743707fbae45337c0873a0786416db53bbf22860c16ce7
 Size (binutils-2.45.tar.xz) = 27868232 bytes
+SHA1 (patch-zlib_zutil.h) = 7e2367c285572c59831ce7c8098f22fa9fe02f47
