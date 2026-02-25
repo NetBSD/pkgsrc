@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1391 2026/02/25 14:35:59 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1392 2026/02/25 14:43:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1875,3 +1875,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/py-icalendar to 7.0.2 [adam 2026-02-25]
 	Updated graphics/babl to 0.1.122 [adam 2026-02-25]
 	Updated devel/py-ijson to 3.5.0 [adam 2026-02-25]
+	Updated devel/py-dulwich to 1.1.0 [adam 2026-02-25]
+	Updated net/py-geventhttpclient to 2.3.8 [adam 2026-02-25]
