@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/12 11:18:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/02/25 14:35:14 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -7,6 +7,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/ijson/__init__.py
 ${PYSITELIB}/ijson/__init__.pyc
 ${PYSITELIB}/ijson/__init__.pyo
+${PYSITELIB}/ijson/adapters.py
+${PYSITELIB}/ijson/adapters.pyc
+${PYSITELIB}/ijson/adapters.pyo
 ${PYSITELIB}/ijson/backends/__init__.py
 ${PYSITELIB}/ijson/backends/__init__.pyc
 ${PYSITELIB}/ijson/backends/__init__.pyo
