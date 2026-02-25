@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/10/09 07:57:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/02/25 15:10:52 adam Exp $
 
-DISTNAME=	lap-0.5.12
+DISTNAME=	lap-0.5.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lap/}
@@ -12,7 +12,7 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	c c++
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
