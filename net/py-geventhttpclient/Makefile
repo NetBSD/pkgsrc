@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2025/12/26 11:42:29 adam Exp $
+# $NetBSD: Makefile,v 1.19 2026/02/25 14:43:01 adam Exp $
 
-DISTNAME=	geventhttpclient-2.3.7
+DISTNAME=	geventhttpclient-2.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/geventhttpclient/}
