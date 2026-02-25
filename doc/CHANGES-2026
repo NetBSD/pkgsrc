@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1387 2026/02/25 10:32:45 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1388 2026/02/25 11:45:20 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1867,3 +1867,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated cross/arm-none-eabi-gcc to 14.3.0nb1 [triaxx 2026-02-25]
 	Updated security/py-bandit to 1.9.4 [adam 2026-02-25]
 	Updated security/py-certifi to 2026.2.25 [adam 2026-02-25]
+	Updated textproc/rumdl to 0.1.28 [pin 2026-02-25]
