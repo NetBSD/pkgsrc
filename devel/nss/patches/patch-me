@@ -1,10 +1,13 @@
-$NetBSD: patch-me,v 1.9 2021/04/09 06:40:59 wiz Exp $
+$NetBSD: patch-me,v 1.10 2026/02/25 21:35:03 wiz Exp $
 
 clang for SunOS(?)
 
---- nss/lib/freebl/Makefile.orig	2020-03-06 18:44:20.000000000 +0000
+Try using preprocessed assembler file
+https://bugzilla.mozilla.org/show_bug.cgi?id=2019194
+
+--- nss/lib/freebl/Makefile.orig	2026-02-19 09:30:44.000000000 +0000
 +++ nss/lib/freebl/Makefile
-@@ -472,7 +472,11 @@ else
+@@ -508,7 +508,11 @@ else
      ifdef NS_USE_GCC
  	LD = gcc
  	AS = gcc
@@ -16,3 +19,12 @@ clang for SunOS(?)
      endif
      ifeq ($(USE_64),1)
  	# Solaris for AMD64
+@@ -517,7 +521,7 @@ else
+ 	    ASFLAGS += -march=opteron -m64 -fPIC
+ 	    MPI_SRCS += mp_comba.c
+ 	    # comment the next four lines to turn off Intel HW acceleration
+-	    ASFILES += intel-gcm.S
++	    ASFILES += intel-gcm.s
+ 	    EXTRA_SRCS += intel-gcm-wrap.c
+ 	    DEFINES += -DHAVE_PLATFORM_GCM
+ 	    INTEL_GCM = 1
