@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/02/26 22:51:44 alnsn Exp $
+
+BLAKE2s (zycore-c-1.5.1.tar.gz) = 296163f3692361508501865be360cda2f65cfc74af14b9955dc646c29a57900a
+SHA512 (zycore-c-1.5.1.tar.gz) = e9afc9e9f30007d3adb4299edde1fcd5f45135415ed6fd78d64c5dc12d1930d61db11bde89964b34f28afebd9784e734cd2c90f0e846763f198e2e5cc6364874
+Size (zycore-c-1.5.1.tar.gz) = 65182 bytes
