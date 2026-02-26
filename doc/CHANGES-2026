@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1425 2026/02/26 18:21:22 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1426 2026/02/26 18:41:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1921,3 +1921,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ngtcp2 to 1.21.0 [adam 2026-02-26]
 	Updated lang/nodejs24 to 24.14.0 [adam 2026-02-26]
 	Updated lang/nodejs to 25.7.0 [adam 2026-02-26]
+	Updated devel/patchutils to 0.4.5 [adam 2026-02-26]
+	Updated finance/py-stripe to 14.4.0 [adam 2026-02-26]
