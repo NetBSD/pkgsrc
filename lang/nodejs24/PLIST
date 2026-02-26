@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/02/11 20:21:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/02/26 18:20:11 adam Exp $
 bin/corepack
 bin/node
 bin/npm
@@ -1320,10 +1320,10 @@ lib/node_modules/npm/node_modules/minipass-pipeline/node_modules/minipass/index.
 lib/node_modules/npm/node_modules/minipass-pipeline/node_modules/minipass/package.json
 lib/node_modules/npm/node_modules/minipass-pipeline/package.json
 lib/node_modules/npm/node_modules/minipass-sized/LICENSE
-lib/node_modules/npm/node_modules/minipass-sized/index.js
-lib/node_modules/npm/node_modules/minipass-sized/node_modules/minipass/LICENSE
-lib/node_modules/npm/node_modules/minipass-sized/node_modules/minipass/index.js
-lib/node_modules/npm/node_modules/minipass-sized/node_modules/minipass/package.json
+lib/node_modules/npm/node_modules/minipass-sized/dist/commonjs/index.js
+lib/node_modules/npm/node_modules/minipass-sized/dist/commonjs/package.json
+lib/node_modules/npm/node_modules/minipass-sized/dist/esm/index.js
+lib/node_modules/npm/node_modules/minipass-sized/dist/esm/package.json
 lib/node_modules/npm/node_modules/minipass-sized/package.json
 lib/node_modules/npm/node_modules/minipass/LICENSE
 lib/node_modules/npm/node_modules/minipass/dist/commonjs/index.js
