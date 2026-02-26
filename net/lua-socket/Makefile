@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2025/11/25 15:35:26 sborrill Exp $
+# $NetBSD: Makefile,v 1.16 2026/02/26 17:09:47 sborrill Exp $
 
 DISTNAME=		luasocket-3.1.0
+PKGREVISION=		1
 PKGNAME=		${LUA_PKGPREFIX}-${DISTNAME:S/lua//}
 CATEGORIES=		net lua
 MASTER_SITES=		-https://github.com/lunarmodules/luasocket/archive/v${PKGVERSION}.tar.gz
