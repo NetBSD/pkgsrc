@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2026/02/22 08:46:28 kikadf Exp $
+# $NetBSD: Makefile,v 1.44 2026/02/26 11:45:39 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			145.0.7632.109
+VERSION=			145.0.7632.116
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -271,8 +271,8 @@ pre-configure:
 	${MKDIR} ${WRKSRC}/third_party/devtools-frontend/src/node_modules/@rollup/rollup-${LOWER_OPSYS}
 
 do-configure:
-	cd ${WRKSRC}/esbuild && \
-		${RUN} ${WRKSRC}/third_party/node/${LOWER_OPSYS}/node-${LOWER_OPSYS}/bin/node scripts/esbuild.js \
+	${RUN} cd ${WRKSRC}/esbuild && \
+		${WRKSRC}/third_party/node/${LOWER_OPSYS}/node-${LOWER_OPSYS}/bin/node scripts/esbuild.js \
 		${WRKSRC}/third_party/devtools-frontend/src/third_party/esbuild/esbuild --neutral
 	${RM} -rf ${WRKSRC}/third_party/devtools-frontend/src/node_modules/esbuild
 	${LN} -sf ${WRKSRC}/esbuild/npm/esbuild \
