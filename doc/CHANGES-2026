@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1412 2026/02/26 13:24:46 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.1413 2026/02/26 13:34:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1901,3 +1901,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/mame to 0.286 [wiz 2026-02-26]
 	Updated www/firefox to 148.0 [ryoon 2026-02-26]
 	Updated www/firefox-l10n to 148.0 [ryoon 2026-02-26]
+	Updated games/greed to 4.4 [wiz 2026-02-26]
