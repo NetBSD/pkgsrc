@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1418 2026/02/26 14:10:51 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.1419 2026/02/26 14:49:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1907,3 +1907,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/thunderbird-l10n to 148.0 [ryoon 2026-02-26]
 	Updated lang/smlnj to 110.99.9 [ryoon 2026-02-26]
 	Updated chat/matrix-synapse to 1.148.0 [gdt 2026-02-26]
+	Updated security/stunnel to 5.77 [ryoon 2026-02-26]
