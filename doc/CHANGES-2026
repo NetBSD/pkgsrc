@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1423 2026/02/26 17:20:49 triaxx Exp $
+$NetBSD: CHANGES-2026,v 1.1424 2026/02/26 17:30:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1917,3 +1917,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/postgresql17 to 17.9 [adam 2026-02-26]
 	Updated databases/postgresql18 to 18.3 [adam 2026-02-26]
 	Updated www/hugo to 0.157.0 [triaxx 2026-02-26]
+	Updated security/gnupg2 to 2.5.18 [adam 2026-02-26]
+	Updated net/ngtcp2 to 1.21.0 [adam 2026-02-26]
