@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.24 2026/01/17 21:00:43 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.25 2026/02/26 12:49:51 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -224,8 +224,8 @@ CARGO_CRATE_DEPENDS+=	syn-1.0.109
 CARGO_CRATE_DEPENDS+=	syn-2.0.114
 CARGO_CRATE_DEPENDS+=	synstructure-0.13.2
 CARGO_CRATE_DEPENDS+=	tempfile-3.24.0
-CARGO_CRATE_DEPENDS+=	thiserror-2.0.17
-CARGO_CRATE_DEPENDS+=	thiserror-impl-2.0.17
+CARGO_CRATE_DEPENDS+=	thiserror-2.0.18
+CARGO_CRATE_DEPENDS+=	thiserror-impl-2.0.18
 CARGO_CRATE_DEPENDS+=	tiff-0.10.3
 CARGO_CRATE_DEPENDS+=	time-0.3.45
 CARGO_CRATE_DEPENDS+=	time-core-0.1.7
@@ -277,9 +277,9 @@ CARGO_CRATE_DEPENDS+=	zerofrom-derive-0.1.6
 CARGO_CRATE_DEPENDS+=	zerotrie-0.2.3
 CARGO_CRATE_DEPENDS+=	zerovec-0.11.5
 CARGO_CRATE_DEPENDS+=	zerovec-derive-0.11.2
-CARGO_CRATE_DEPENDS+=	zmij-1.0.14
+CARGO_CRATE_DEPENDS+=	zmij-1.0.15
 CARGO_CRATE_DEPENDS+=	zune-core-0.4.12
 CARGO_CRATE_DEPENDS+=	zune-core-0.5.1
 CARGO_CRATE_DEPENDS+=	zune-inflate-0.2.54
 CARGO_CRATE_DEPENDS+=	zune-jpeg-0.4.21
-CARGO_CRATE_DEPENDS+=	zune-jpeg-0.5.9
+CARGO_CRATE_DEPENDS+=	zune-jpeg-0.5.10
