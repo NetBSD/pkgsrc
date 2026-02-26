@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4597 2026/02/23 14:49:57 taca Exp $
+# $NetBSD: Makefile,v 1.4598 2026/02/26 22:58:08 alnsn Exp $
 #
 
 COMMENT=	Development utilities
@@ -3807,6 +3807,8 @@ SUBDIR+=	zlib
 SUBDIR+=	zls
 SUBDIR+=	zookeeper
 SUBDIR+=	zug
+SUBDIR+=	zycore-c
+SUBDIR+=	zydis
 SUBDIR+=	zzuf
 
 .include "../mk/misc/category.mk"
