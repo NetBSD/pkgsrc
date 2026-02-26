@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.37 2026/02/19 07:19:03 triaxx Exp $
+# $NetBSD: go-modules.mk,v 1.38 2026/02/26 14:21:49 triaxx Exp $
 
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.24.0.mod
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.24.0.zip
@@ -142,8 +142,8 @@ GO_MODULE_FILES+=	github.com/bep/goportabletext/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/bep/goportabletext/@v/v0.1.0.zip
 GO_MODULE_FILES+=	github.com/bep/helpers/@v/v0.7.0.mod
 GO_MODULE_FILES+=	github.com/bep/helpers/@v/v0.7.0.zip
-GO_MODULE_FILES+=	github.com/bep/imagemeta/@v/v0.14.0.mod
-GO_MODULE_FILES+=	github.com/bep/imagemeta/@v/v0.14.0.zip
+GO_MODULE_FILES+=	github.com/bep/imagemeta/@v/v0.15.0.mod
+GO_MODULE_FILES+=	github.com/bep/imagemeta/@v/v0.15.0.zip
 GO_MODULE_FILES+=	github.com/bep/lazycache/@v/v0.8.1.mod
 GO_MODULE_FILES+=	github.com/bep/lazycache/@v/v0.8.1.zip
 GO_MODULE_FILES+=	github.com/bep/logg/@v/v0.4.0.mod
@@ -446,10 +446,10 @@ GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.7.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.7.1.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.1.mod
-GO_MODULE_FILES+=	github.com/tdewolff/minify/v2/@v/v2.24.8.mod
-GO_MODULE_FILES+=	github.com/tdewolff/minify/v2/@v/v2.24.8.zip
-GO_MODULE_FILES+=	github.com/tdewolff/parse/v2/@v/v2.8.5.mod
-GO_MODULE_FILES+=	github.com/tdewolff/parse/v2/@v/v2.8.5.zip
+GO_MODULE_FILES+=	github.com/tdewolff/minify/v2/@v/v2.24.9.mod
+GO_MODULE_FILES+=	github.com/tdewolff/minify/v2/@v/v2.24.9.zip
+GO_MODULE_FILES+=	github.com/tdewolff/parse/v2/@v/v2.8.8.mod
+GO_MODULE_FILES+=	github.com/tdewolff/parse/v2/@v/v2.8.8.zip
 GO_MODULE_FILES+=	github.com/tdewolff/test/@v/v1.0.11.mod
 GO_MODULE_FILES+=	github.com/tetratelabs/wazero/@v/v1.11.0.mod
 GO_MODULE_FILES+=	github.com/tetratelabs/wazero/@v/v1.11.0.zip
