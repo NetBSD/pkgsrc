@@ -1,0 +1,2 @@
+Internal library for zydis disassembler providing platform independent
+types, macros and a fallback for environments without LibC.
