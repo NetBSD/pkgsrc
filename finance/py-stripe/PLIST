@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2026/01/17 06:26:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.39 2026/02/26 18:41:11 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -2584,6 +2584,9 @@ ${PYSITELIB}/stripe/params/radar/_early_fraud_warning_list_params.pyo
 ${PYSITELIB}/stripe/params/radar/_early_fraud_warning_retrieve_params.py
 ${PYSITELIB}/stripe/params/radar/_early_fraud_warning_retrieve_params.pyc
 ${PYSITELIB}/stripe/params/radar/_early_fraud_warning_retrieve_params.pyo
+${PYSITELIB}/stripe/params/radar/_payment_evaluation_create_params.py
+${PYSITELIB}/stripe/params/radar/_payment_evaluation_create_params.pyc
+${PYSITELIB}/stripe/params/radar/_payment_evaluation_create_params.pyo
 ${PYSITELIB}/stripe/params/radar/_value_list_create_params.py
 ${PYSITELIB}/stripe/params/radar/_value_list_create_params.pyc
 ${PYSITELIB}/stripe/params/radar/_value_list_create_params.pyo
@@ -3191,6 +3194,12 @@ ${PYSITELIB}/stripe/radar/_early_fraud_warning.pyo
 ${PYSITELIB}/stripe/radar/_early_fraud_warning_service.py
 ${PYSITELIB}/stripe/radar/_early_fraud_warning_service.pyc
 ${PYSITELIB}/stripe/radar/_early_fraud_warning_service.pyo
+${PYSITELIB}/stripe/radar/_payment_evaluation.py
+${PYSITELIB}/stripe/radar/_payment_evaluation.pyc
+${PYSITELIB}/stripe/radar/_payment_evaluation.pyo
+${PYSITELIB}/stripe/radar/_payment_evaluation_service.py
+${PYSITELIB}/stripe/radar/_payment_evaluation_service.pyc
+${PYSITELIB}/stripe/radar/_payment_evaluation_service.pyo
 ${PYSITELIB}/stripe/radar/_value_list.py
 ${PYSITELIB}/stripe/radar/_value_list.pyc
 ${PYSITELIB}/stripe/radar/_value_list.pyo
@@ -3218,6 +3227,18 @@ ${PYSITELIB}/stripe/reporting/_report_type.pyo
 ${PYSITELIB}/stripe/reporting/_report_type_service.py
 ${PYSITELIB}/stripe/reporting/_report_type_service.pyc
 ${PYSITELIB}/stripe/reporting/_report_type_service.pyo
+${PYSITELIB}/stripe/reserve/__init__.py
+${PYSITELIB}/stripe/reserve/__init__.pyc
+${PYSITELIB}/stripe/reserve/__init__.pyo
+${PYSITELIB}/stripe/reserve/_hold.py
+${PYSITELIB}/stripe/reserve/_hold.pyc
+${PYSITELIB}/stripe/reserve/_hold.pyo
+${PYSITELIB}/stripe/reserve/_plan.py
+${PYSITELIB}/stripe/reserve/_plan.pyc
+${PYSITELIB}/stripe/reserve/_plan.pyo
+${PYSITELIB}/stripe/reserve/_release.py
+${PYSITELIB}/stripe/reserve/_release.pyc
+${PYSITELIB}/stripe/reserve/_release.pyo
 ${PYSITELIB}/stripe/sigma/__init__.py
 ${PYSITELIB}/stripe/sigma/__init__.pyc
 ${PYSITELIB}/stripe/sigma/__init__.pyo
