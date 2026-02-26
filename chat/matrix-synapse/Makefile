@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.125 2026/02/10 19:12:22 gdt Exp $
+# $NetBSD: Makefile,v 1.126 2026/02/26 14:10:44 gdt Exp $
 
-DISTNAME=	matrix-synapse-1.147.0
+DISTNAME=	matrix-synapse-1.148.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=element-hq/}
 GITHUB_PROJECT=	synapse
@@ -29,10 +29,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1.0:../../devel/py-maturin
 
 # Dependencies as expressed in pyproject.toml
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3.0.0:../../textproc/py-jsonschema
-# \todo Grasp/fix rpds.
-.if ${PYTHON_VERSION} >= 314
-DEPENDS+=	${PYPKGPREFIX}-rpds-py>=0.30.0:../../devel/py-rpds-py
-.endif
+# This is wrong upstream; jsonschema built with old rpds is buggy, and synapse doesn't use rpds.
+DEPENDS+=	${PYPKGPREFIX}-rpds-py>=0.25.0:../../devel/py-rpds-py
 DEPENDS+=	${PYPKGPREFIX}-immutabledict>=2.0:../../devel/py-immutabledict
 DEPENDS+=	${PYPKGPREFIX}-unpaddedbase64>=2.1.0:../../devel/py-unpaddedbase64
 DEPENDS+=	${PYPKGPREFIX}-canonicaljson>=2.0.0:../../devel/py-canonicaljson
@@ -56,15 +54,15 @@ DEPENDS+=	${PYPKGPREFIX}-attrs>=21.1.1:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-netaddr>=0.7.18:../../net/py-netaddr
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-bleach>=3.2.0:../../www/py-bleach
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4..14.1:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.14.1:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=3.4.7:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-ijson>=3.1.4:../../devel/py-ijson
 DEPENDS+=	${PYPKGPREFIX}-matrix-common>=1.3.0:../../chat/py-matrix-common
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
-# If py<3.14, only need 2.8, but leave that on the table to simplify.
+# If py<3.14, only need 2.8, but just require >=2.2 to simplify.
 DEPENDS+=	${PYPKGPREFIX}-pydantic>=2.12:../../devel/py-pydantic
-# Upstream documents that this is needed for poetry, but the explanation is highly confused,
-# and, experimentally, it is needed at runtime, as of 1.146.0
+# Upstream documents that this is needed for poetry, but the
+# explanation is very confusing.
 #DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.3:../../devel/py-setuptools-rust
 DEPENDS+=	${PYPKGPREFIX}-python-multipart>=0.0.9:../../www/py-python-multipart
 
