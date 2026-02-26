@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26865 2026/02/26 11:40:24 kikadf Exp $
+$NetBSD: TODO,v 1.26866 2026/02/26 13:04:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -388,7 +388,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-25.2.7 [wip]
-	o MesaLib-26.0
+	o MesaLib-26.0.1
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o PageEdit-2.7.0
@@ -641,7 +641,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o freemint-binutils-2.30
 	o freemint-gcc-7.1.0
 	o freenet-0.7
-	o freerdp-3.22.0
+	o freerdp-3.23
 	o freesci-0.6.4
 	o freeswitch-1.2.3
 	o freetype-lib-1.5.20050518
@@ -1145,6 +1145,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qconf-2.5
 	o qore-2.2.0
 	o qutebrowser-3.0.1
+	o racket-9.1
 	o radare2-6.0
 	o rails-6.1.0
 	o rasmol-2.7.5.2

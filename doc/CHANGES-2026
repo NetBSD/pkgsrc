@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1409 2026/02/26 12:56:30 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1410 2026/02/26 13:04:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1898,3 +1898,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/matugen to 4.0.0 [pin 2026-02-26]
 	Updated shells/starship to 1.24.2 [pin 2026-02-26]
 	Updated textproc/television to 0.15.2 [pin 2026-02-26]
+	Updated emulators/mame to 0.286 [wiz 2026-02-26]
