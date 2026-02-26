@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26867 2026/02/26 13:34:54 wiz Exp $
+$NetBSD: TODO,v 1.26868 2026/02/26 18:10:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -725,6 +725,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grub2-2.14
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
+	o gstreamer-1.28.1
 	o gtklevel9-5.1
 	o gtklife-5.3
 	o gtkmagnetic-23
