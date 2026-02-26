@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1405 2026/02/26 12:50:09 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1406 2026/02/26 12:52:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1894,3 +1894,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/xtop to 0.3.1 [pin 2026-02-26]
 	Updated wm/pekwm to 0.4.3 [pin 2026-02-26]
 	Updated graphics/wallust to 3.5.2 [pin 2026-02-26]
+	Updated mail/himalaya to 1.2.0 [pin 2026-02-26]
