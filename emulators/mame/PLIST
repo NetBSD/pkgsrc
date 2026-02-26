@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.102 2026/01/30 13:39:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.103 2026/02/26 13:03:54 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -341,6 +341,7 @@ share/mame/hash/ibm5170.xml
 share/mame/hash/ibm5170_cdrom.xml
 share/mame/hash/ibm5170_hdd.xml
 share/mame/hash/ibm6580.xml
+share/mame/hash/ibmpc110.xml
 share/mame/hash/ibmpcjr_cart.xml
 share/mame/hash/ibmpcjr_flop.xml
 share/mame/hash/ibmpcjx.xml
@@ -597,6 +598,7 @@ share/mame/hash/poisk1_flop.xml
 share/mame/hash/pokemini.xml
 share/mame/hash/poly_flop.xml
 share/mame/hash/polysix.xml
+share/mame/hash/precur2w_cart.xml
 share/mame/hash/princ.xml
 share/mame/hash/pro128_cart.xml
 share/mame/hash/pro128_cass.xml
@@ -751,7 +753,7 @@ share/mame/hash/trs80_flop.xml
 share/mame/hash/trs80_quik.xml
 share/mame/hash/trs80m2.xml
 share/mame/hash/trsm100.xml
-share/mame/hash/tsconf_betadisc_flop.xml
+share/mame/hash/tsconf.xml
 share/mame/hash/ttwist_brainquest_cart.xml
 share/mame/hash/turboextreme_cart.xml
 share/mame/hash/tutor.xml
