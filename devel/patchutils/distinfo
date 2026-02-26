@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/10/05 15:22:53 adam Exp $
+$NetBSD: distinfo,v 1.13 2026/02/26 18:36:41 adam Exp $
 
-BLAKE2s (patchutils-0.4.4.tar.xz) = 9e704d7e4a40b298b36338bfba21338c72396991e6003c04cdbd3da3089d75db
-SHA512 (patchutils-0.4.4.tar.xz) = 26f3ee959d7f8d7d5718ecf361436709559c62d6235114faac9a84442e9df4fb271f85eea5d96dae3969e96d88fdd9c1a9b5246696ef548fad71a8f29a026a84
-Size (patchutils-0.4.4.tar.xz) = 424248 bytes
+BLAKE2s (patchutils-0.4.5.tar.xz) = 1d32e0a8fc52c1b507d7f47403a0e193d077a066b086ea212554b3821347911b
+SHA512 (patchutils-0.4.5.tar.xz) = 403f2c06523f4ca5983ec669b97a5d0d3ce33d0f7cfb1d7b312357840ecd5c865ef76b11b394a5396fad859ad4693740ebe91790b9a1da9c20144c4f269c4560
+Size (patchutils-0.4.5.tar.xz) = 427628 bytes
