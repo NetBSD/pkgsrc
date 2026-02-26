@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.90 2025/11/05 14:37:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.91 2026/02/26 17:40:44 khorben Exp $
 
 .include "Makefile.common"
+
+PKGREVISION=	1
 
 COMMENT=	Remote execution and configuration management system
 
