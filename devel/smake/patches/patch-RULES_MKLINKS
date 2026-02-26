@@ -1,10 +1,10 @@
-$NetBSD: patch-RULES_MKLINKS,v 1.4 2025/04/25 17:54:13 nia Exp $
+$NetBSD: patch-RULES_MKLINKS,v 1.5 2026/02/26 23:58:27 mrg Exp $
 
-Add support for NetBSD/sparc64.
+Add support for NetBSD on sparc64, evbppc, and ofppc.
 
---- RULES/MKLINKS.orig	2025-04-25 17:52:21.212084088 +0000
-+++ RULES/MKLINKS
-@@ -268,6 +268,12 @@ $symlink	i386-netbsd-cc.rul	sparc-netbsd
+--- RULES/MKLINKS.orig	2024-03-21 13:19:57.000000000 +0000
++++ RULES/MKLINKS	2026-02-26 19:50:10.072921541 +0000
+@@ -268,12 +268,22 @@ $symlink	i386-netbsd-gcc.rul	sparc-netbsd-gcc64.rul
  $symlink	i386-netbsd-gcc.rul	sparc-netbsd-gcc.rul
  $symlink	i386-netbsd-gcc.rul	sparc-netbsd-gcc32.rul
  $symlink	i386-netbsd-gcc.rul	sparc-netbsd-gcc64.rul
@@ -17,3 +17,13 @@ Add support for NetBSD/sparc64.
  $symlink	i386-netbsd-cc.rul	mac68k-netbsd-cc.rul
  $symlink	i386-netbsd-gcc.rul	mac68k-netbsd-gcc.rul
  $symlink	i386-netbsd-cc.rul	amiga-netbsd-cc.rul
+ $symlink	i386-netbsd-gcc.rul	amiga-netbsd-gcc.rul
++$symlink	i386-netbsd-cc.rul	evbppc-netbsd-cc.rul
++$symlink	i386-netbsd-gcc.rul	evbppc-netbsd-gcc.rul
+ $symlink	i386-netbsd-cc.rul	macppc-netbsd-cc.rul
+ $symlink	i386-netbsd-gcc.rul	macppc-netbsd-gcc.rul
++$symlink	i386-netbsd-cc.rul	ofppc-netbsd-cc.rul
++$symlink	i386-netbsd-gcc.rul	ofppc-netbsd-gcc.rul
+ $symlink	i386-netbsd-clang.rul	amd64-netbsd-clang.rul
+ $symlink	i386-netbsd-clang.rul	amd64-netbsd-clang32.rul
+ $symlink	i386-netbsd-clang.rul	amd64-netbsd-clang64.rul
