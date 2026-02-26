@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.278 2026/02/06 10:05:16 wiz Exp $
+# $NetBSD: Makefile,v 1.279 2026/02/26 15:45:32 adam Exp $
 
-DISTNAME=	octave-10.3.0
-PKGREVISION=	4
+DISTNAME=	octave-11.1.0
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GNU:=octave/}
 EXTRACT_SUFX=	.tar.xz
@@ -27,6 +26,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake gsed gmake:run perl pkg-config bison
 USE_TOOLS+=		bsdtar:run makeinfo:test
 GNU_CONFIGURE=		yes
+MAKE_ENV+=		MAKE="${GMAKE}"
 
 # needed for loading of shared objects such as those in the
 # octave-forge package or user written ones compiled with mkoctfile
@@ -71,12 +71,6 @@ INSTALLATION_DIRS+=	${PKGINFODIR}
 PRINT_PLIST_AWK+=	{ gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}"); }
 CHECK_WRKREF_SKIP+=	lib/octave/${PKGVERSION_NOREV}/liboctinterp*.${SHLIB_TYPE}* \
 			lib/octave/${PKGVERSION_NOREV}/liboctinterp.a
-
-SUBST_CLASSES+=			fix-make
-SUBST_STAGE.fix-make=		pre-configure
-SUBST_MESSAGE.fix-make=		Fixing path to gmake.
-SUBST_FILES.fix-make=		scripts/pkg/private/configure_make.m
-SUBST_VARS.fix-make=		GMAKE
 
 SUBST_CLASSES+=			qtchooser
 SUBST_STAGE.qtchooser=		pre-configure
