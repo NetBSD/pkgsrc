@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1399 2026/02/26 11:40:24 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.1400 2026/02/26 11:45:59 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1888,3 +1888,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-notebook to 7.5.4 [adam 2026-02-26]
 	Updated print/py-octoprint to 1.11.7 [adam 2026-02-26]
 	Updated www/esbuild to 0.27.3 [kikadf 2026-02-26]
+	Updated www/chromium to 145.0.7632.116 [kikadf 2026-02-26]
