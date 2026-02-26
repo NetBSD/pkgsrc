@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2026/02/12 14:07:33 adam Exp $
+$NetBSD: distinfo,v 1.13 2026/02/26 11:02:33 adam Exp $
 
-BLAKE2s (django_polymorphic-4.11.0.tar.gz) = 5161848bfb36cfa93a4240b07f1b40dce33f3789f9fe7c0e60192437d91c2397
-SHA512 (django_polymorphic-4.11.0.tar.gz) = d04b3d494f44b28d9dc558305ab74bb13a4e0ce4a101999553ebbffbe5603df1c3c5f3e4abeaeab98c3c5df318b419670b83e9749ba6ff85cdd4421183120a7e
-Size (django_polymorphic-4.11.0.tar.gz) = 61337 bytes
+BLAKE2s (django_polymorphic-4.11.1.tar.gz) = 1d808c53ee3443fe3c289e891cda7669b0afd12b5ba62c17987551d653995dda
+SHA512 (django_polymorphic-4.11.1.tar.gz) = 2d5fddf586e00a1750fcb7fae2701328ed5a362b851e2768e94e23dca2eaa510435d19c1d72ada104ab844d91ca9cff02c7c69a0488761d1086e3a786fc05e5a
+Size (django_polymorphic-4.11.1.tar.gz) = 61381 bytes
