@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/02/26 22:55:54 alnsn Exp $
+
+BLAKE2s (zydis-4.1.1.tar.gz) = 7e81446639241dd651ba77e107c32ed0309a5e5c8b10aac664365e8d25cc92f0
+SHA512 (zydis-4.1.1.tar.gz) = 177e84fedb3449e29ffb6c0b02a92066ba1aa8fb624facad5593902b8e08cb8ae0b20ff38c16987989c8e414d7484d09dab7917c00a8fe54aa9bab4bc90e275d
+Size (zydis-4.1.1.tar.gz) = 811528 bytes
