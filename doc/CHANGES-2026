@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1398 2026/02/26 11:25:33 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1399 2026/02/26 11:40:24 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1887,3 +1887,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-jupyterlab to 4.5.5 [adam 2026-02-26]
 	Updated www/py-notebook to 7.5.4 [adam 2026-02-26]
 	Updated print/py-octoprint to 1.11.7 [adam 2026-02-26]
+	Updated www/esbuild to 0.27.3 [kikadf 2026-02-26]
