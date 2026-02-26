@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2025/03/03 21:34:21 schmonz Exp $
+# $NetBSD: Makefile,v 1.35 2026/02/26 15:19:54 ryoon Exp $
 
-DISTNAME=	pv-1.9.31
+DISTNAME=	pv-1.10.3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://www.ivarch.com/programs/sources/
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=pipeviewer/}
@@ -30,7 +30,7 @@ CONFIGURE_ENV+=		ac_cv_func_stat64=no
 .endif
 
 PV_SHARE_FILES=		ACKNOWLEDGEMENTS.md COPYING DEVELOPERS.md INSTALL \
-			NEWS.md benchmark.sh
+			NEWS.md benchmark-rw-syscalls-vs-data.sh
 
 post-install:
 .for i in ${PV_SHARE_FILES}
