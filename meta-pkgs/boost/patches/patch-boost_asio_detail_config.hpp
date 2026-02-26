@@ -1,7 +1,8 @@
-$NetBSD: patch-boost_asio_detail_config.hpp,v 1.8 2026/02/26 10:11:39 wiz Exp $
+$NetBSD: patch-boost_asio_detail_config.hpp,v 1.9 2026/02/26 10:21:00 wiz Exp $
 
 1. chunk: ?
 2. chunk: NetBSD has MSG_NOSIGNAL, even though _POSIX_VERSION is only 200112L
+https://github.com/chriskohlhoff/asio/pull/1717
 
 --- boost/asio/detail/config.hpp.orig	2025-12-03 13:46:38.000000000 +0000
 +++ boost/asio/detail/config.hpp
