@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2025/12/26 10:08:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.43 2026/02/26 11:07:12 adam Exp $
 bin/djangocms-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -781,6 +781,9 @@ ${PYSITELIB}/cms/signals/apphook.pyo
 ${PYSITELIB}/cms/signals/log_entries.py
 ${PYSITELIB}/cms/signals/log_entries.pyc
 ${PYSITELIB}/cms/signals/log_entries.pyo
+${PYSITELIB}/cms/signals/pagecontent.py
+${PYSITELIB}/cms/signals/pagecontent.pyc
+${PYSITELIB}/cms/signals/pagecontent.pyo
 ${PYSITELIB}/cms/signals/permissions.py
 ${PYSITELIB}/cms/signals/permissions.pyc
 ${PYSITELIB}/cms/signals/permissions.pyo
@@ -795,7 +798,7 @@ ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.base.css
 ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.pagetree.css
 ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.welcome.css
 ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.wizard.css
-${PYSITELIB}/cms/static/cms/css/5.0.5/cms.headless.css
+${PYSITELIB}/cms/static/cms/css/5.0.6/cms.headless.css
 ${PYSITELIB}/cms/static/cms/fonts/${PKGVERSION}/django-cms-iconfont.eot
 ${PYSITELIB}/cms/static/cms/fonts/${PKGVERSION}/django-cms-iconfont.svg
 ${PYSITELIB}/cms/static/cms/fonts/${PKGVERSION}/django-cms-iconfont.ttf
@@ -1752,6 +1755,9 @@ ${PYSITELIB}/cms/tests/test_api.pyo
 ${PYSITELIB}/cms/tests/test_app_registration.py
 ${PYSITELIB}/cms/tests/test_app_registration.pyc
 ${PYSITELIB}/cms/tests/test_app_registration.pyo
+${PYSITELIB}/cms/tests/test_apphook_reload_language_variants.py
+${PYSITELIB}/cms/tests/test_apphook_reload_language_variants.pyc
+${PYSITELIB}/cms/tests/test_apphook_reload_language_variants.pyo
 ${PYSITELIB}/cms/tests/test_apphooks.py
 ${PYSITELIB}/cms/tests/test_apphooks.pyc
 ${PYSITELIB}/cms/tests/test_apphooks.pyo
