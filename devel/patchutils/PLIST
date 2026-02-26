@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/10/05 15:22:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/02/26 18:36:41 adam Exp $
 bin/combinediff
 bin/dehtmldiff
 bin/editdiff
@@ -13,7 +13,9 @@ bin/gitshowview
 bin/grepdiff
 bin/interdiff
 bin/lsdiff
+bin/move-to-front
 bin/patchview
+bin/patchview-wrapper
 bin/recountdiff
 bin/rediff
 bin/splitdiff
