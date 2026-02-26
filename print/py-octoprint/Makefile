@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2026/02/16 09:16:43 adam Exp $
+# $NetBSD: Makefile,v 1.17 2026/02/26 11:25:09 adam Exp $
 
-DISTNAME=	octoprint-1.11.6
+DISTNAME=	octoprint-1.11.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=O/OctoPrint/}
