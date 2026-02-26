@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2026/02/16 09:16:43 adam Exp $
+$NetBSD: distinfo,v 1.10 2026/02/26 11:25:09 adam Exp $
 
-BLAKE2s (octoprint-1.11.6.tar.gz) = 5070a63a360a6f190bbd37efbe5e1d057fcb378ceb2c698990c02ec7b40850d2
-SHA512 (octoprint-1.11.6.tar.gz) = b5658759aeea75e222f07ebb0f9817cba90abf128543ddda9ffb7a91d7b7fd85095b29380ad89c4892d1284ab3b142249210fa67ed2fd5fd2a163dfee0d170b9
-Size (octoprint-1.11.6.tar.gz) = 3234886 bytes
+BLAKE2s (octoprint-1.11.7.tar.gz) = 27fd292d790e08b7a77942c2a3b85e4e645f630967e38b3281f9335324c67f6c
+SHA512 (octoprint-1.11.7.tar.gz) = 98cecc2e638de19692a1f35e2983b7c3bd9c18acdf190f50f22b9028c554c0e654ac6efed52432c836e6e542bce3075480ad54fd71b66569af07d51f3d4c3c9e
+Size (octoprint-1.11.7.tar.gz) = 3236058 bytes
