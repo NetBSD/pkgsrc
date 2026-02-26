@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1420 2026/02/26 15:20:06 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.1421 2026/02/26 16:17:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1909,3 +1909,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated chat/matrix-synapse to 1.148.0 [gdt 2026-02-26]
 	Updated security/stunnel to 5.77 [ryoon 2026-02-26]
 	Updated sysutils/pv to 1.10.3 [ryoon 2026-02-26]
+	Updated net/wireshark to 4.6.4 [adam 2026-02-26]
+	Updated math/octave to 11.1.0 [adam 2026-02-26]
