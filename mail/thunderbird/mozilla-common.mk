@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.26 2026/01/22 19:41:09 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.27 2026/02/26 13:38:43 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -30,7 +30,8 @@ CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 
 TOOL_DEPENDS+=		cbindgen>=0.28.0:../../devel/cbindgen
 
-TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
+BUILDLINK_DEPMETHOD.nodejs=	build
+.include "../../lang/nodejs/nodeversion.mk"
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		nasm>=2.14:../../devel/nasm

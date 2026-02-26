@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.359 2026/02/01 07:01:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.360 2026/02/26 13:38:43 ryoon Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER:S/esr//}
-TB_VER=		147.0.1
+TB_VER=		148.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -17,7 +17,7 @@ LICENSE=	mpl-1.1
 # overflowing even a biggish tmpfs).
 
 USE_TOOLS+=	unzip pax
-WRKSRC=		${WRKDIR}/${DISTNAME:S/.source//:S/esr//}
+WRKSRC=		${WRKDIR}/thunderbird-${TB_VER:C/b.*//}
 MOZILLA_DIR=	# empty
 PLIST_SRC+=	${PLIST_SRC_DFLT}
 
@@ -89,11 +89,6 @@ SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
 .for from to in ${CKSUMS}
 SUBST_SED.cksum+=	-e 's,${from},${to},g'
 .endfor
-
-SUBST_CLASSES+=		netbsdtag
-SUBST_STAGE.netbsdtag=	pre-configure
-SUBST_FILES.netbsdtag=	comm/third_party/rnp/src/librekey/key_store_pgp.cpp
-SUBST_SED.netbsdtag=	-e 's/__NetBSD__/__NEVER__/'
 
 post-extract:
 	${TOUCH} ${WRKSRC}/comm/third_party/rust/minimal-lexical/.gitmodules
