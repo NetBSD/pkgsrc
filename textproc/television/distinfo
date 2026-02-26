@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2026/01/12 12:05:10 pin Exp $
+$NetBSD: distinfo,v 1.13 2026/02/26 12:56:12 pin Exp $
 
 BLAKE2s (addr2line-0.25.1.crate) = cc5c422ec48ccef5c2c46379d2f600644609490afafea5020f2020815d1146e6
 SHA512 (addr2line-0.25.1.crate) = c400f3b6ccaff8a1c0d7d82c708a1784b8fd5ba64b6e420e85819d59b1cadb55fa59c852925093b921469f272d1d5140cf12f013ae75d1e1bc85021097df8fc2
@@ -468,6 +468,9 @@ Size (nu-ansi-term-0.50.3.crate) = 29597 bytes
 BLAKE2s (nucleo-0.5.0.crate) = efa02cea80af66c695e2dfb045bbdc74c922598502c72f7bd5f46868cf563630
 SHA512 (nucleo-0.5.0.crate) = 85d7d4c8dba5974caa9ba86a1ea08c4a81cbfd4268e1ee2e1754858ded2b43b8e71e51a2c259f49cabda0e549986ffc0918132fee1c79c8d83676aa3f4a27fca
 Size (nucleo-0.5.0.crate) = 35547 bytes
+BLAKE2s (nucleo-4a5b53c7fa7abb8d777c49dc5850033ae108683e.tar.gz) = e3611639440c6242eff672513b3ef49adc81f288fe351992e0782e2566fd5cec
+SHA512 (nucleo-4a5b53c7fa7abb8d777c49dc5850033ae108683e.tar.gz) = 191ddbb16d48ab07e732f739f1671962e659cdd7aaa502126b020b52950f7eef5145974c0d83aa61cee3ff6309311f152967f479d54fa3818a73a775cae212fd
+Size (nucleo-4a5b53c7fa7abb8d777c49dc5850033ae108683e.tar.gz) = 88072 bytes
 BLAKE2s (nucleo-matcher-0.3.1.crate) = 89046b90193d62855236a34c74443d863b43a5a29ef9c6060fa75ebe9b1c818b
 SHA512 (nucleo-matcher-0.3.1.crate) = 16d7b5386950bfff1a491c45b1f5da5c840e6405c340704cb8c600766b7c1b77e0229ce11166f8975ab41b74480f68c38b3bd593bc53614b2e1226c78b36e651
 Size (nucleo-matcher-0.3.1.crate) = 50501 bytes
@@ -816,9 +819,9 @@ Size (syn-1.0.109.crate) = 237611 bytes
 BLAKE2s (syn-2.0.111.crate) = 59e384935e8312b487a780865026ad631dfdc775720b9246d94b06af3e5751f4
 SHA512 (syn-2.0.111.crate) = f30fc819fc6c942cde044b6bbe608f96736070717f28da71ab4ff68aa9e780416829152da11a83513fbc0de88337c2157e4fd1e4a029ebcbb64daeaa54dbf768
 Size (syn-2.0.111.crate) = 302117 bytes
-BLAKE2s (television-0.14.5.tar.gz) = 8d44f3e16efa94982d583e8a892bd539710e6253676d6a642be995dab421b452
-SHA512 (television-0.14.5.tar.gz) = 5b4caf278587ccbaf64b0dfd37a31542028b83ccacea3eef22cd21413a80170855343695ea68d07c2a191b52773d8f26bd7aaca9ae2fd0dba5ed99817bb1dce0
-Size (television-0.14.5.tar.gz) = 19210539 bytes
+BLAKE2s (television-0.15.2.tar.gz) = 331d066a4a17adf1d63e9a33e3247de98cda3c8cc50b29366b0bd2f7220c0a45
+SHA512 (television-0.15.2.tar.gz) = 5ea052f1aeb3f83edc6afd260e3f7a65bb83ad6927b61ecadb3a31b49cffda2b102b198f0e9a834ab0bc71f8ef17e6ae713938b53dae0bb813a06212cebc5f53
+Size (television-0.15.2.tar.gz) = 19250333 bytes
 BLAKE2s (tempfile-3.23.0.crate) = 03894a0b6e2c16a9462ea26eccb98f1cef6ee46f95d6a41761f2c3086c0fd692
 SHA512 (tempfile-3.23.0.crate) = 8e9f84400f714209eb713af5960d1de501c10520817299f0ba2fd53a7c5f0931b60d1053c2c84820aa627aa94bdefa1b0e82c787784b1960170930f0ed2d8753
 Size (tempfile-3.23.0.crate) = 43063 bytes
@@ -1116,3 +1119,4 @@ Size (zerocopy-derive-0.8.30.crate) = 90705 bytes
 BLAKE2s (zeroize-1.8.2.crate) = 0242c1584931f4bf8a6ac21efdb45453c03030d2ac36ecc37e8a2a4c174a705b
 SHA512 (zeroize-1.8.2.crate) = ce1fb97ac69cb0792f2f5820919aaa0a9f71c4b410bd0d0c2343d8415d39e3eec3f948cc2769eaf639c14695a3961fb6cd96ba7a77a15a77924d1a8c16497b81
 Size (zeroize-1.8.2.crate) = 20907 bytes
+SHA1 (patch-Cargo.toml) = 441cdf338a78e3cfdd3d9b66f73445e2141cf44e
