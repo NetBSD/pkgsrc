@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2026/02/26 14:10:44 gdt Exp $
+# $NetBSD: Makefile,v 1.127 2026/02/26 14:19:48 gdt Exp $
 
 DISTNAME=	matrix-synapse-1.148.0
 CATEGORIES=	chat
@@ -59,7 +59,7 @@ DEPENDS+=	${PYPKGPREFIX}-cryptography>=3.4.7:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-ijson>=3.1.4:../../devel/py-ijson
 DEPENDS+=	${PYPKGPREFIX}-matrix-common>=1.3.0:../../chat/py-matrix-common
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
-# If py<3.14, only need 2.8, but just require >=2.2 to simplify.
+# If py<3.14, only need 2.8, but just require >=2.12 to simplify.
 DEPENDS+=	${PYPKGPREFIX}-pydantic>=2.12:../../devel/py-pydantic
 # Upstream documents that this is needed for poetry, but the
 # explanation is very confusing.
