@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1394 2026/02/26 02:07:08 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.1395 2026/02/26 02:08:14 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1879,3 +1879,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-geventhttpclient to 2.3.8 [adam 2026-02-25]
 	Updated math/py-lap to 0.5.13 [adam 2026-02-25]
 	Updated editors/abiword to 3.0.8 [gutteridge 2026-02-26]
+	Updated editors/abiword-plugins to 3.0.8 [gutteridge 2026-02-26]
