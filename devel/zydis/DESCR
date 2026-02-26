@@ -1,0 +1,5 @@
+Fast and lightweight x86/x86-64 disassembler and code generation library.
+
+Zydis comes with absolutely no dependencies, making it a perfect
+candidate not only for user-mode code, but also for kernel drivers
+and exotic build environments like UEFI.
