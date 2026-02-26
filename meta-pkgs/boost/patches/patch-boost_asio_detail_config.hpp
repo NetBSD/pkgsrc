@@ -1,8 +1,11 @@
-$NetBSD: patch-boost_asio_detail_config.hpp,v 1.7 2021/09/29 16:11:04 adam Exp $
+$NetBSD: patch-boost_asio_detail_config.hpp,v 1.8 2026/02/26 10:11:39 wiz Exp $
 
---- boost/asio/detail/config.hpp.orig	2021-08-05 09:41:11.000000000 +0000
+1. chunk: ?
+2. chunk: NetBSD has MSG_NOSIGNAL, even though _POSIX_VERSION is only 200112L
+
+--- boost/asio/detail/config.hpp.orig	2025-12-03 13:46:38.000000000 +0000
 +++ boost/asio/detail/config.hpp
-@@ -1153,7 +1153,9 @@
+@@ -521,7 +521,9 @@
  #  elif defined(__GNUC__)
  #   if ((__GNUC__ == 4) && (__GNUC_MINOR__ >= 9)) || (__GNUC__ > 4)
  #    if (__cplusplus >= 201402)
@@ -12,3 +15,12 @@ $NetBSD: patch-boost_asio_detail_config.hpp,v 1.7 2021/09/29 16:11:04 adam Exp $
  #    endif // (__cplusplus >= 201402)
  #   endif // ((__GNUC__ == 4) && (__GNUC_MINOR__ >= 9)) || (__GNUC__ > 4)
  #  endif // defined(__GNUC__)
+@@ -1392,7 +1394,7 @@
+ 
+ // Kernel support for MSG_NOSIGNAL.
+ #if !defined(BOOST_ASIO_HAS_MSG_NOSIGNAL)
+-# if defined(__linux__)
++# if defined(__linux__) || defined(__NetBSD__)
+ #  define BOOST_ASIO_HAS_MSG_NOSIGNAL 1
+ # elif defined(_POSIX_VERSION)
+ #  if (_POSIX_VERSION >= 200809L)
