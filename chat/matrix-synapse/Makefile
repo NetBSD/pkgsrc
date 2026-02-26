@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2026/02/26 14:19:48 gdt Exp $
+# $NetBSD: Makefile,v 1.128 2026/02/26 15:42:05 gdt Exp $
 
 DISTNAME=	matrix-synapse-1.148.0
 CATEGORIES=	chat
@@ -61,31 +61,30 @@ DEPENDS+=	${PYPKGPREFIX}-matrix-common>=1.3.0:../../chat/py-matrix-common
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
 # If py<3.14, only need 2.8, but just require >=2.12 to simplify.
 DEPENDS+=	${PYPKGPREFIX}-pydantic>=2.12:../../devel/py-pydantic
-# Upstream documents that this is needed for poetry, but the
-# explanation is very confusing.
+# Upstream documents that setuptools_rust is needed if you choose to
+# use poetry instead of the documented/specified maturin (people that
+# work on synapse does that because something is more convenient).
+# However, it is coded as a depdendency for everyone, and ends up in
+# METAINFO.  Experimentally, synapse starts and runs fine without it,
+# so we omit it as a pkgsrc dependency.
 #DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.3:../../devel/py-setuptools-rust
 DEPENDS+=	${PYPKGPREFIX}-python-multipart>=0.0.9:../../www/py-python-multipart
 
-# Upstream does NOT document a dependency on pyrsistent, but synapse
-# crashes if it is not present, because it ends up in
-# /usr/pkg/lib/python3.13/site-packages/matrix_synapse-1.146.0.dist-info/METADATA
-# The version is taken from METADATA.  However, I can find no actual usage.
+# Upstream lists "transitive dependency constraints".  These are
+# workarounds for bugs in other packaging systems, a bug in pip (that
+# it is most of a package manager but not really in that it can't
+# patch bugs in older versions while also being content to let older
+# versions be), where some package A that synapse uses was released
+# with a dependency on B>=n, when either B=n is just actually buggy,
+# or A's use of B=n is buggy.  Really, the right fix is to have new
+# enough B without bugs, or a fixed A, and this isn't about synapse.
+# However, synapse forces these deps in pyproject.toml to defend its
+# issue tracker from incorrect reports "synapse doesn't work right
+# when I use it with buggy dependencies".
 #
-# A separate issue is that upstream claims pyrsistent is required via
-# jsonschema, but the pkgsrc jsonschema package and its pyproject.toml
-# do not reference pyrsistent at all.
-DEPENDS+=	${PYPKGPREFIX}-pyrsistent>=0.18.0:../../devel/py-pyrsistent
-
-# Upstream lists "transitive dependency constraints". The theory is
-# that they are required by something that synapse depends on, and
-# that synapse doesn't actually use them.  Yet somehow, a version that
-# is older than the one listed here, but new enough for the other
-# required package, will somehow cause that package to misbehave when
-# used by synapse.
-# We ignore this for now, as a quantum superposition of not making
-# sense and it being likely the pkgsrc versions are adequately up to
-# date.
-
+# For the most part, pkgsrc takes a different approach, updating
+# things that are buggy, so this is not relevant.  synapse's list is
+#
 # cffi > 1.15
 # pynacl >= 1.3
 # pyparsing >= 2.4
@@ -93,6 +92,16 @@ DEPENDS+=	${PYPKGPREFIX}-pyrsistent>=0.18.0:../../devel/py-pyrsistent
 # requests >= 2.16.0
 # urllib3 >= 1.26.5
 # zope-interface >= 5.2
+#
+# And we decline to add those here, as noise.
+#
+# However, pyrsistent is in pyproject.toml because jsonschema used to
+# require it (before 4.18.0) -- and now it doesn't.  Without an
+# explicit pkgsrc dep on pyrsistent, it isn't pulled in.  That would
+# be fine, except that it appears in METAINFO (because of presence in
+# pyproject.toml) and synapse then fails to start.  Reported upstream
+# 20260226.
+DEPENDS+=	${PYPKGPREFIX}-pyrsistent>=0.18.0:../../devel/py-pyrsistent
 
 ## OPTIONS
 #
