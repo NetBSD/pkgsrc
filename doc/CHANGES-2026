@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1426 2026/02/26 18:41:29 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1427 2026/02/26 23:00:57 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1923,3 +1923,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nodejs to 25.7.0 [adam 2026-02-26]
 	Updated devel/patchutils to 0.4.5 [adam 2026-02-26]
 	Updated finance/py-stripe to 14.4.0 [adam 2026-02-26]
+	Added devel/zycore-c version 1.5.1 [alnsn 2026-02-26]
+	Added devel/zydis version 4.1.1 [alnsn 2026-02-26]
