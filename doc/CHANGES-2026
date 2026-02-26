@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1403 2026/02/26 12:47:45 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1404 2026/02/26 12:49:01 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1892,3 +1892,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-release to 1.1.1 [pin 2026-02-26]
 	Updated graphics/feh to 3.11.3 [pin 2026-02-26]
 	Updated sysutils/xtop to 0.3.1 [pin 2026-02-26]
+	Updated wm/pekwm to 0.4.3 [pin 2026-02-26]
