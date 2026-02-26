@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1400 2026/02/26 11:45:59 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.1401 2026/02/26 12:44:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1889,3 +1889,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/py-octoprint to 1.11.7 [adam 2026-02-26]
 	Updated www/esbuild to 0.27.3 [kikadf 2026-02-26]
 	Updated www/chromium to 145.0.7632.116 [kikadf 2026-02-26]
+	Updated devel/cargo-release to 1.1.1 [pin 2026-02-26]
