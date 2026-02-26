@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1408 2026/02/26 12:54:31 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1409 2026/02/26 12:56:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1897,3 +1897,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/himalaya to 1.2.0 [pin 2026-02-26]
 	Updated graphics/matugen to 4.0.0 [pin 2026-02-26]
 	Updated shells/starship to 1.24.2 [pin 2026-02-26]
+	Updated textproc/television to 0.15.2 [pin 2026-02-26]
