@@ -1,21 +1,28 @@
-# $NetBSD: Makefile,v 1.7 2015/08/18 07:31:08 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.8 2026/02/26 13:34:44 wiz Exp $
 
-DISTNAME=		greed-3.4
-PKGREVISION=		3
+DISTNAME=		greed-4.4
 CATEGORIES=		games
 MASTER_SITES=		http://www.catb.org/~esr/greed/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.catb.org/~esr/greed/
 COMMENT=		Strategy game: eat as much as possible
+LICENSE=		2-clause-bsd
 
-BUILD_TARGET=		greed
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
+TOOL_DEPENDS+=		${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciidoctor
 
-TERMLIB=		${BUILDLINK_LDADD.termcap} ${BUILDLINK_LDADD.curses}
-MAKE_ENV+=		TERMLIB=${TERMLIB:Q}
+USE_TOOLS+=		gmake
 
+MAKE_FLAGS+=		PREFIX=${PREFIX}
+MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=		SFILE=${PREFIX}/share/games/greed.hs
+
+SUBST_CLASSES+=		ad
+SUBST_SED.ad+=		-e "s,asciidoctor,asciidoctor${RUBY_SUFFIX},"
+SUBST_STAGE.ad=		pre-build
+SUBST_FILES.ad+=	Makefile
+SUBST_MESSAGE.ad=	Fixing asciidoctor name.
+
+.include "../../lang/ruby/rubyversion.mk"
 .include "../../mk/curses.buildlink3.mk"
-.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
