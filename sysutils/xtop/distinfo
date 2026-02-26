@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2026/02/19 08:26:57 pin Exp $
+$NetBSD: distinfo,v 1.2 2026/02/26 12:47:24 pin Exp $
 
 BLAKE2s (aho-corasick-1.1.4.crate) = 1419308c5b0745af6cfa18dd4c9639f7078f564e9dacbe2b17b03df42c393409
 SHA512 (aho-corasick-1.1.4.crate) = c77e35191b00546f5e499fab154170cedd619599e7250f92db9fba0a41c833eb426f214e58b00c5c39f8757406b33492b3241cb8cb233ce384ad0683c3ee4b62
@@ -531,6 +531,6 @@ Size (windows-threading-0.2.1.crate) = 9686 bytes
 BLAKE2s (wit-bindgen-0.51.0.crate) = cf16eb01643719aa71a7baac9b014a8ea727ad3a94e6ac5e4eb4c8b042e7b92c
 SHA512 (wit-bindgen-0.51.0.crate) = 61380c309630ad7f415d467daf1d639ad7a3e8dcd26e5f88aacf0230b52600f150e804821b6a1df9b79cc7fdd4f1d800d043ee7eca770b1947a3cf06f893711e
 Size (wit-bindgen-0.51.0.crate) = 68035 bytes
-BLAKE2s (xtop-0.2.1.crate) = bb3af4d5892bf8494ccfa9b232ef99b73dfb46b8e6442d43865558fe7120f16b
-SHA512 (xtop-0.2.1.crate) = 72c914981c914a04aaf92d21180df659d0dbde5991d9414dc63f95a16b97d9d8510cae29765799b927053183248a9529d6557c4735d6e02e57b9c597a8fa54a1
-Size (xtop-0.2.1.crate) = 17957 bytes
+BLAKE2s (xtop-0.3.1.crate) = b2b17955f6a6381923a6a37066f51175afb7ca94d52919a69d98a31466a0c014
+SHA512 (xtop-0.3.1.crate) = 524aaef729a655ea7d7d8a4455ee8da821ff4dbcd2bab203e5a8bf32adc0cdf9a4b4f9048bae8cc5300f690195b7e137e20581b428f87cbe2ebfed295bcbcab9
+Size (xtop-0.3.1.crate) = 18319 bytes
