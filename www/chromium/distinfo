@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2026/02/22 08:46:28 kikadf Exp $
+$NetBSD: distinfo,v 1.30 2026/02/26 11:45:39 kikadf Exp $
 
 BLAKE2s (Inflector-0.11.4.crate) = 2f8b4a805230be3b58267c7fb6b9c26c2ec966378d195673d1128a851cca515d
 SHA512 (Inflector-0.11.4.crate) = f1f6463e033b6d3c16c51dc1e1a3f5569954308b95b59058294b7f9310919bbda797e99e6a07529071bb83f0688867a243997d33795a7136b0af73977004296e
@@ -51,12 +51,12 @@ Size (cc-1.1.21.crate) = 83463 bytes
 BLAKE2s (cfg-if-1.0.0.crate) = fbb02f63b24cc224b045ff2aac3aefd0a77cf7b578df4d5f9da9517a59aaf9bb
 SHA512 (cfg-if-1.0.0.crate) = 0fb16a8882fd30e86b62c5143b1cb18ab564e84e75bd1f28fd12f24ffdc4a42e0d2e012a99abb606c12efe3c11061ff5bf8e24ab053e550ae083f7d90f6576ff
 Size (cfg-if-1.0.0.crate) = 7934 bytes
-BLAKE2s (chromium-145.0.7632.109-lite.tar.xz) = 3b546319a62218f4c31b8921acd47ec3f7016a36ce9054d8ce42fcd13f8955b9
-SHA512 (chromium-145.0.7632.109-lite.tar.xz) = d69ad62f4aaf2f4a96c2c97236bb4c54597f211b33c6c5008803bdaae5a3d17ae13f0c661e25cbc6bc7c6878bacd13af67044c0c6576d7fde4a6103422c7811e
-Size (chromium-145.0.7632.109-lite.tar.xz) = 1416231332 bytes
-BLAKE2s (chromium-145.0.7632.109-testdata.tar.xz) = 95f16f36dc13e9c0e8358e3b0c62844cb6a3e03773e06310982cd11b37f44da7
-SHA512 (chromium-145.0.7632.109-testdata.tar.xz) = 54192668724c8dc1e2332790e22eb72a680d2de6dd8c809d7f13dbf15f56b4ad8f874b673b493d0c41ee260ca46ded90762111f7da4db6625f179428f73c7abf
-Size (chromium-145.0.7632.109-testdata.tar.xz) = 1318358228 bytes
+BLAKE2s (chromium-145.0.7632.116-lite.tar.xz) = a52d653f3012237fefa6938566a3ac026b404127d291e803321202977f8fce9e
+SHA512 (chromium-145.0.7632.116-lite.tar.xz) = f0d7023960c80cb762f93312f620e7c5776e5806e76e625800c5b7a291c86b0fe49d2b93fd5c0d4ec6c22b90e18936068dd777645109ae974823db0dcd28b43c
+Size (chromium-145.0.7632.116-lite.tar.xz) = 1416260344 bytes
+BLAKE2s (chromium-145.0.7632.116-testdata.tar.xz) = 384801369e0067878426664f4c0d249f2b90ae87625e62fcbc2354bf1d24bddf
+SHA512 (chromium-145.0.7632.116-testdata.tar.xz) = 9373d86591f86e67194c96f5fbad1354e0e3d32cf6cb7a0a3f90affc4fad46ebb1c12aca6b9fcd2cec8a32ed74aefd817e191d4fc6bfa807b350f1059243c5fd
+Size (chromium-145.0.7632.116-testdata.tar.xz) = 1318511816 bytes
 BLAKE2s (convert_case-0.6.0.crate) = c65fc0970543af9611c565957751df80f31efa3aa7c4d8e5eac41712864a67d5
 SHA512 (convert_case-0.6.0.crate) = 3b17449195a9a36e3965db89eeb967979c192ad7743217ea08e8c8b91ecae1ac1674362d05dc6f32f1f361fface3f783398285bb78060403f65a777a9d29adf2
 Size (convert_case-0.6.0.crate) = 18675 bytes
@@ -81,9 +81,9 @@ Size (either-1.13.0.crate) = 19169 bytes
 BLAKE2s (equivalent-1.0.1.crate) = 915ff7ece3e11b5de2f2f26d2da9c4dfa1c7484416c53025c08507677cebebbd
 SHA512 (equivalent-1.0.1.crate) = b2bc60e804c1b02c461dcefcfd60fc37145af710d183ebe65f9a4d63f2b2072d23193f98dc550a9213c7fdc6a2a837af23b04a89294ebbb681a4aaf5d5031140
 Size (equivalent-1.0.1.crate) = 6615 bytes
-BLAKE2s (evanw-esbuild-v0.25.9.tar.gz) = 171058036c4b2fe72cc1e91cb630e5b1f87254069b9e96dc285fd050e81b3012
-SHA512 (evanw-esbuild-v0.25.9.tar.gz) = 9211a25a8fc141f9b3c810a7493e1bf83a8a7008a555023a7947d1e0c26ec823f2574f561f4bf53c328fba659d0a5565dd7a3498d089f2642714e02f9fb05a4b
-Size (evanw-esbuild-v0.25.9.tar.gz) = 1960126 bytes
+BLAKE2s (evanw-esbuild-v0.27.3.tar.gz) = 798d1a1f3574c92b47c6588b9ed436dbb74fc77f1eb065b2fcb0bfb5396b87ca
+SHA512 (evanw-esbuild-v0.27.3.tar.gz) = 169861c528ffb4943b8c7074017e1b65d97c3b598eb7be355e9842ce40ea75393e6ecc40a29e6a9d865175b354a5c74e18f3b024c480a3a09446a66db4ee02a4
+Size (evanw-esbuild-v0.27.3.tar.gz) = 1983973 bytes
 BLAKE2s (fixedbitset-0.4.2.crate) = 4b9d305e9a18e8ccdf747fa067106c885d45e3856780140107551f9aaee4812c
 SHA512 (fixedbitset-0.4.2.crate) = 57c5d756b0a202b2506270f0d5e890f7617a1e0c015b6059ea23fab49cf7af47fd06927eb56feb03b37cb2b6c467e326b3f0da1e32cfcb6339cf11a130a3ccab
 Size (fixedbitset-0.4.2.crate) = 15954 bytes
