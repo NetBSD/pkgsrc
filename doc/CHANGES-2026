@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1396 2026/02/26 10:11:57 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1397 2026/02/26 11:08:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1881,3 +1881,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/abiword to 3.0.8 [gutteridge 2026-02-26]
 	Updated editors/abiword-plugins to 3.0.8 [gutteridge 2026-02-26]
 	Updated devel/boost-headers to 1.90.0nb2 [wiz 2026-02-26]
+	Updated www/py-django-polymorphic to 4.11.1 [adam 2026-02-26]
+	Updated www/py-django-treebeard to 5.0.5 [adam 2026-02-26]
+	Updated www/py-django-cms to 5.0.6 [adam 2026-02-26]
