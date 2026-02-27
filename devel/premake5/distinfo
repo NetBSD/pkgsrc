@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.4 2025/06/26 09:24:17 triaxx Exp $
+$NetBSD: distinfo,v 1.5 2026/02/27 07:34:14 wiz Exp $
 
 BLAKE2s (premake-5.0.0-beta7-src.zip) = d419fe1a7fcf00eb9f1bf9fd1c6de60d0fbe764bbb22a6755708232d1b3a2513
 SHA512 (premake-5.0.0-beta7-src.zip) = 57bd22ae07314b1c429cab73e0eaa5ed573c024625a64c8e5efa8d3cc90daa398f7c4fbcc3d780974633b0a677c3755ac384e7aacb7e64493e0c83cfcef80fdf
 Size (premake-5.0.0-beta7-src.zip) = 10926866 bytes
+SHA1 (patch-binmodules_luasocket_gem_myps2pdf) = 186ec5b2545b7fc40ee6725a0ad7a2a1c592646a
 SHA1 (patch-modules_gmake_tests_test__gmake__ldflags.lua) = 6c733297295b2d01ed7cd572a166d166bf9e16de
 SHA1 (patch-modules_gmakelegacy_tests_cpp_test__ldflags.lua) = c844137f75c3ca329c891301c526a820928d501f
 SHA1 (patch-src_host_premake.h) = 9d5da0ce882436d792543154550fa3ba6f8fb4bf
