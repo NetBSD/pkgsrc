@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2026/01/11 12:22:50 adam Exp $
+# $NetBSD: Makefile,v 1.4 2026/02/27 06:54:11 adam Exp $
 
-DISTNAME=	awscrt-0.31.0
+DISTNAME=	awscrt-0.31.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/awscrt/}
