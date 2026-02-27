@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2026/01/11 10:28:54 adam Exp $
+# $NetBSD: Makefile,v 1.35 2026/02/27 07:23:30 wiz Exp $
 
 DISTNAME=	scikit_learn-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -22,6 +22,7 @@ USE_TOOLS+=	pkg-config
 GCC_REQD+=	8
 
 REPLACE_PYTHON+=	sklearn/_build_utils/version.py
+REPLACE_PYTHON+=	sklearn/_build_utils/tempita.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
