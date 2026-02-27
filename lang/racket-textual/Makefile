@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2026/01/02 03:08:45 ktnb Exp $
+# $NetBSD: Makefile,v 1.48 2026/02/27 03:21:08 ktnb Exp $
 
-DISTNAME=		racket-minimal-9.0-src
+DISTNAME=		racket-minimal-9.1-src
 PKGNAME=		${DISTNAME:S/-src$//}
 CATEGORIES=		lang
 MASTER_SITES_PLT=	https://mirror.racket-lang.org/installers/${PKGVERSION_NOREV}/

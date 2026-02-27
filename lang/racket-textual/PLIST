@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2026/01/02 03:08:45 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.21 2026/02/27 03:21:08 ktnb Exp $
 bin/racket
 bin/raco
 include/racket/chezscheme.h
@@ -201,6 +201,8 @@ lib/racket/compiled${PREFIX}/share/racket/collects/file/compiled/zip_rkt.dep
 lib/racket/compiled${PREFIX}/share/racket/collects/file/compiled/zip_rkt.zo
 lib/racket/compiled${PREFIX}/share/racket/collects/file/private/compiled/check-path_rkt.dep
 lib/racket/compiled${PREFIX}/share/racket/collects/file/private/compiled/check-path_rkt.zo
+lib/racket/compiled${PREFIX}/share/racket/collects/file/private/compiled/convertible_rkt.dep
+lib/racket/compiled${PREFIX}/share/racket/collects/file/private/compiled/convertible_rkt.zo
 lib/racket/compiled${PREFIX}/share/racket/collects/file/private/compiled/glob_rkt.dep
 lib/racket/compiled${PREFIX}/share/racket/collects/file/private/compiled/glob_rkt.zo
 lib/racket/compiled${PREFIX}/share/racket/collects/file/private/compiled/strip-prefix_rkt.dep
@@ -241,6 +243,8 @@ lib/racket/compiled${PREFIX}/share/racket/collects/net/compiled/url_rkt.dep
 lib/racket/compiled${PREFIX}/share/racket/collects/net/compiled/url_rkt.zo
 lib/racket/compiled${PREFIX}/share/racket/collects/net/compiled/win32-ssl_rkt.dep
 lib/racket/compiled${PREFIX}/share/racket/collects/net/compiled/win32-ssl_rkt.zo
+lib/racket/compiled${PREFIX}/share/racket/collects/openssl/compiled/legacy_rkt.dep
+lib/racket/compiled${PREFIX}/share/racket/collects/openssl/compiled/legacy_rkt.zo
 lib/racket/compiled${PREFIX}/share/racket/collects/openssl/compiled/libcrypto_rkt.dep
 lib/racket/compiled${PREFIX}/share/racket/collects/openssl/compiled/libcrypto_rkt.zo
 lib/racket/compiled${PREFIX}/share/racket/collects/openssl/compiled/libssl_rkt.dep
@@ -369,6 +373,8 @@ lib/racket/compiled${PREFIX}/share/racket/collects/pkg/private/compiled/stage_rk
 lib/racket/compiled${PREFIX}/share/racket/collects/pkg/private/compiled/stage_rkt.zo
 lib/racket/compiled${PREFIX}/share/racket/collects/pkg/private/compiled/suggestions_rkt.dep
 lib/racket/compiled${PREFIX}/share/racket/collects/pkg/private/compiled/suggestions_rkt.zo
+lib/racket/compiled${PREFIX}/share/racket/collects/pkg/private/compiled/timeout_rkt.dep
+lib/racket/compiled${PREFIX}/share/racket/collects/pkg/private/compiled/timeout_rkt.zo
 lib/racket/compiled${PREFIX}/share/racket/collects/pkg/private/compiled/trash_rkt.dep
 lib/racket/compiled${PREFIX}/share/racket/collects/pkg/private/compiled/trash_rkt.zo
 lib/racket/compiled${PREFIX}/share/racket/collects/planet/compiled/cachepath_rkt.dep
@@ -815,8 +821,6 @@ lib/racket/compiled${PREFIX}/share/racket/collects/racket/private/compiled/fixnu
 lib/racket/compiled${PREFIX}/share/racket/collects/racket/private/compiled/fixnum_rkt.zo
 lib/racket/compiled${PREFIX}/share/racket/collects/racket/private/compiled/for_rkt.dep
 lib/racket/compiled${PREFIX}/share/racket/collects/racket/private/compiled/for_rkt.zo
-lib/racket/compiled${PREFIX}/share/racket/collects/racket/private/compiled/gen-temp_rkt.dep
-lib/racket/compiled${PREFIX}/share/racket/collects/racket/private/compiled/gen-temp_rkt.zo
 lib/racket/compiled${PREFIX}/share/racket/collects/racket/private/compiled/generic-interfaces_rkt.dep
 lib/racket/compiled${PREFIX}/share/racket/collects/racket/private/compiled/generic-interfaces_rkt.zo
 lib/racket/compiled${PREFIX}/share/racket/collects/racket/private/compiled/generic-methods_rkt.dep
@@ -1067,6 +1071,8 @@ lib/racket/compiled${PREFIX}/share/racket/collects/setup/compiled/info_rkt.dep
 lib/racket/compiled${PREFIX}/share/racket/collects/setup/compiled/info_rkt.zo
 lib/racket/compiled${PREFIX}/share/racket/collects/setup/compiled/infotab_rkt.dep
 lib/racket/compiled${PREFIX}/share/racket/collects/setup/compiled/infotab_rkt.zo
+lib/racket/compiled${PREFIX}/share/racket/collects/setup/compiled/language-family_rkt.dep
+lib/racket/compiled${PREFIX}/share/racket/collects/setup/compiled/language-family_rkt.zo
 lib/racket/compiled${PREFIX}/share/racket/collects/setup/compiled/link_rkt.dep
 lib/racket/compiled${PREFIX}/share/racket/collects/setup/compiled/link_rkt.zo
 lib/racket/compiled${PREFIX}/share/racket/collects/setup/compiled/main-collects_rkt.dep
@@ -1131,6 +1137,8 @@ lib/racket/compiled${PREFIX}/share/racket/collects/setup/private/compiled/omitte
 lib/racket/compiled${PREFIX}/share/racket/collects/setup/private/compiled/omitted-paths_rkt.zo
 lib/racket/compiled${PREFIX}/share/racket/collects/setup/private/compiled/pkg-deps_rkt.dep
 lib/racket/compiled${PREFIX}/share/racket/collects/setup/private/compiled/pkg-deps_rkt.zo
+lib/racket/compiled${PREFIX}/share/racket/collects/setup/private/compiled/relevant-collects_rkt.dep
+lib/racket/compiled${PREFIX}/share/racket/collects/setup/private/compiled/relevant-collects_rkt.zo
 lib/racket/compiled${PREFIX}/share/racket/collects/setup/private/compiled/setup-fprintf_rkt.dep
 lib/racket/compiled${PREFIX}/share/racket/collects/setup/private/compiled/setup-fprintf_rkt.zo
 lib/racket/compiled${PREFIX}/share/racket/collects/setup/private/compiled/time_rkt.dep
@@ -1456,6 +1464,7 @@ share/racket/collects/file/gzip.rkt
 share/racket/collects/file/ico.rkt
 share/racket/collects/file/md5.rkt
 share/racket/collects/file/private/check-path.rkt
+share/racket/collects/file/private/convertible.rkt
 share/racket/collects/file/private/glob.rkt
 share/racket/collects/file/private/strip-prefix.rkt
 share/racket/collects/file/resource.rkt
@@ -1484,6 +1493,7 @@ share/racket/collects/net/url-string.rkt
 share/racket/collects/net/url-structs.rkt
 share/racket/collects/net/url.rkt
 share/racket/collects/net/win32-ssl.rkt
+share/racket/collects/openssl/legacy.rkt
 share/racket/collects/openssl/libcrypto.rkt
 share/racket/collects/openssl/libssl.rkt
 share/racket/collects/openssl/main.rkt
@@ -1547,6 +1557,7 @@ share/racket/collects/pkg/private/repo-path.rkt
 share/racket/collects/pkg/private/show.rkt
 share/racket/collects/pkg/private/stage.rkt
 share/racket/collects/pkg/private/suggestions.rkt
+share/racket/collects/pkg/private/timeout.rkt
 share/racket/collects/pkg/private/trash.rkt
 share/racket/collects/pkg/raco.rkt
 share/racket/collects/pkg/strip.rkt
@@ -1738,7 +1749,6 @@ share/racket/collects/racket/private/ellipses.rkt
 share/racket/collects/racket/private/executable-path.rkt
 share/racket/collects/racket/private/fixnum.rkt
 share/racket/collects/racket/private/for.rkt
-share/racket/collects/racket/private/gen-temp.rkt
 share/racket/collects/racket/private/generic-interfaces.rkt
 share/racket/collects/racket/private/generic-methods.rkt
 share/racket/collects/racket/private/generic.rkt
@@ -1911,6 +1921,7 @@ share/racket/collects/setup/getinfo.rkt
 share/racket/collects/setup/info.rkt
 share/racket/collects/setup/infotab.rkt
 share/racket/collects/setup/infotab/lang/reader.rkt
+share/racket/collects/setup/language-family.rkt
 share/racket/collects/setup/link.rkt
 share/racket/collects/setup/main-collects.rkt
 share/racket/collects/setup/main-doc.rkt
@@ -1934,6 +1945,7 @@ share/racket/collects/setup/private/format-error.rkt
 share/racket/collects/setup/private/lib-roots.rkt
 share/racket/collects/setup/private/omitted-paths.rkt
 share/racket/collects/setup/private/pkg-deps.rkt
+share/racket/collects/setup/private/relevant-collects.rkt
 share/racket/collects/setup/private/setup-fprintf.rkt
 share/racket/collects/setup/private/time.rkt
 share/racket/collects/setup/setup-cmdline.rkt
