@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1431 2026/02/27 07:00:28 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1432 2026/02/27 11:30:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1933,3 +1933,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-awscrt to 0.31.2 [adam 2026-02-27]
 	Updated sysutils/py-ansible-compat to 25.12.1 [adam 2026-02-27]
 	Updated sysutils/ansible-lint to 26.2.0 [adam 2026-02-27]
+	Updated mail/neomutt to 20260105nb2 [wiz 2026-02-27]
