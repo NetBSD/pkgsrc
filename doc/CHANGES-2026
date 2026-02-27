@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1430 2026/02/27 06:54:33 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1431 2026/02/27 07:00:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1931,3 +1931,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-boto3 to 1.42.58 [adam 2026-02-27]
 	Updated net/py-awscli to 1.44.48 [adam 2026-02-27]
 	Updated devel/py-awscrt to 0.31.2 [adam 2026-02-27]
+	Updated sysutils/py-ansible-compat to 25.12.1 [adam 2026-02-27]
+	Updated sysutils/ansible-lint to 26.2.0 [adam 2026-02-27]
