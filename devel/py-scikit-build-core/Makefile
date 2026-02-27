@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2025/08/23 08:02:13 adam Exp $
+# $NetBSD: Makefile,v 1.23 2026/02/27 14:22:37 adam Exp $
 
-DISTNAME=	scikit_build_core-0.11.6
+DISTNAME=	scikit_build_core-0.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-build-core/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/scikit-build/scikit-build-core
 COMMENT=	Build backend for CMake based projects
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.4:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.24:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-packaging>=23.2:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.10.1:../../devel/py-pathspec
 TEST_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
@@ -33,6 +33,7 @@ USE_LANGUAGES=	c c++
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.0:../../devel/py-exceptiongroup
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.2.2:../../textproc/py-tomli
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4:../../devel/py-typing-extensions
 .endif
 
 .include "../../lang/python/wheel.mk"
