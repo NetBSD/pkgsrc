@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2026/02/24 08:45:34 bsiegert Exp $
+# $NetBSD: Makefile,v 1.10 2026/02/27 11:47:25 adam Exp $
 
-DISTNAME=	adguardhome-0.107.72
+AGH_VERSION=	0.107.72
+DISTNAME=	adguardhome-${AGH_VERSION}
 PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdguardTeam/}
@@ -12,13 +13,8 @@ HOMEPAGE=	https://github.com/AdguardTeam/AdGuardHome
 COMMENT=	Powerful network-wide ads and trackers blocking DNS server
 LICENSE=	gnu-gpl-v3
 
-# Because frontend is not versioned, fetch it, rename to
-# adguardhome_frontend-${PKGVERSION_NOREV}.tar.gz
-# and upload to MASTER_SITE_LOCAL (make upload-distfiles).
-#FRONTEND=		AdGuardHome_frontend.tar.gz
-#SITES.${FRONTEND}=	${MASTER_SITE_GITHUB:=AdguardTeam/}${GITHUB_PROJECT}/releases/download/${GITHUB_TAG}/
-FRONTEND=		adguardhome_frontend-${PKGVERSION_NOREV}.tar.gz
-SITES.${FRONTEND}=	${MASTER_SITE_LOCAL}
+FRONTEND=		adguardhome_frontend-${AGH_VERSION}.tar.gz
+SITES.${FRONTEND}=	-${MASTER_SITE_GITHUB:=AdguardTeam/}${GITHUB_PROJECT}/releases/download/${GITHUB_TAG}/AdGuardHome_frontend.tar.gz
 
 DISTFILES=	${DEFAULT_DISTFILES} ${FRONTEND}
 EXTRACT_ONLY=	${DEFAULT_DISTFILES} ${FRONTEND}
