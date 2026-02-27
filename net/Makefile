@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1625 2026/02/24 11:59:46 pin Exp $
+# $NetBSD: Makefile,v 1.1626 2026/02/27 13:33:34 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -788,6 +788,7 @@ SUBDIR+=	py-pyftpdlib
 SUBDIR+=	py-pylint-celery
 SUBDIR+=	py-pynng
 SUBDIR+=	py-pypiserver
+SUBDIR+=	py-pyrate-limiter
 SUBDIR+=	py-pysendfile
 SUBDIR+=	py-python-socks
 SUBDIR+=	py-requestbuilder
