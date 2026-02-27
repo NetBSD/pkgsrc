@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2026/02/24 15:58:16 triaxx Exp $
+# $NetBSD: Makefile,v 1.24 2026/02/27 17:36:55 triaxx Exp $
 
 DISTNAME=	wget2-2.2.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=wget/}
 EXTRACT_SUFX=	.tar.lz
@@ -28,7 +28,6 @@ post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/bin/wget2_noinstall
 
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../archivers/lzlib/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2021/10/03 13:41:11 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2026/02/27 17:36:55 triaxx Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wget2
-PKG_SUPPORTED_OPTIONS=		gpgme http2 idn psl
+PKG_SUPPORTED_OPTIONS=		gpgme http2 idn lzma psl
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
 PKG_OPTIONS_GROUP.ssl=		gnutls openssl
 PKG_SUGGESTED_OPTIONS=		http2 idn openssl psl
@@ -51,6 +51,16 @@ CONFIGURE_ARGS+=--without-gpgme
 CONFIGURE_ARGS+=--with-libnghttp2
 .else
 CONFIGURE_ARGS+=--without-libnghttp2
+.endif
+
+###
+### Support LZMA
+###
+.if !empty(PKG_OPTIONS:Mlzma)
+.  include "../../archivers/lzlib/buildlink3.mk"
+CONFIGURE_ARGS+=--with-lzlib
+.else
+CONFIGURE_ARGS+=--without-lzlib
 .endif
 
 ###
