@@ -1,4 +1,4 @@
-# $NetBSD: tool.mk,v 1.1 2025/12/30 16:01:23 kikadf Exp $
+# $NetBSD: tool.mk,v 1.2 2026/02/27 13:24:46 kikadf Exp $
 #
 # This mk fragment can be included in all packages that uses `scdoc'
 # as a tool.
@@ -8,6 +8,8 @@
 
 .if !defined(SCDOC_TOOL_MK)
 SCDOC_TOOL_MK=	defined
+
+TOOL_DEPENDS+=	scdoc-[0-9]*:../../textproc/scdoc
 
 BUILDLINK_TARGETS+=	buildlink-bin-scdoc buildlink-pkgconfig-scdoc
 
