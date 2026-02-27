@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2025/09/30 08:10:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2026/02/27 07:00:08 adam Exp $
 bin/ansible-lint
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -236,6 +236,10 @@ ${PYSITELIB}/ansiblelint/rules/risky_shell_pipe.md
 ${PYSITELIB}/ansiblelint/rules/risky_shell_pipe.py
 ${PYSITELIB}/ansiblelint/rules/risky_shell_pipe.pyc
 ${PYSITELIB}/ansiblelint/rules/risky_shell_pipe.pyo
+${PYSITELIB}/ansiblelint/rules/role_argument_spec.md
+${PYSITELIB}/ansiblelint/rules/role_argument_spec.py
+${PYSITELIB}/ansiblelint/rules/role_argument_spec.pyc
+${PYSITELIB}/ansiblelint/rules/role_argument_spec.pyo
 ${PYSITELIB}/ansiblelint/rules/role_name.md
 ${PYSITELIB}/ansiblelint/rules/role_name.py
 ${PYSITELIB}/ansiblelint/rules/role_name.pyc
