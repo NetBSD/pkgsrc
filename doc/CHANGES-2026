@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1433 2026/02/27 13:35:19 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1434 2026/02/27 13:48:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1937,3 +1937,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/py-uv-dynamic-versioning version 0.13.0 [adam 2026-02-27]
 	Added net/py-pyrate-limiter version 4.0.2 [adam 2026-02-27]
 	Added net/py-requests-ratelimiter version 0.9.1 [adam 2026-02-27]
+	Updated textproc/libfyaml to 0.9.5 [adam 2026-02-27]
+	Updated audio/py-beets to 2.6.2 [adam 2026-02-27]
