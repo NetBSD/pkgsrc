@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2026/02/27 15:29:25 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2026/02/27 16:03:09 gdt Exp $
 
 DISTNAME=	coturn-4.9.0
 CATEGORIES=	net
@@ -74,5 +74,6 @@ post-install:
 TEST_TARGET=		check
 
 .include "../../devel/libevent/buildlink3.mk"
+BUILDLINK_API_DEPENDS.openssl+= openssl>=3.0.2
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
