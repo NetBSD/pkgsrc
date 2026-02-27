@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/02/27 13:34:52 adam Exp $
+
+BLAKE2s (requests_ratelimiter-0.9.1.tar.gz) = 718920039ca8e124cd1df2499baf5973495523a8c97ec364d5ace7f8c3c8f351
+SHA512 (requests_ratelimiter-0.9.1.tar.gz) = c2771920b21248e4b6c79a66436d93213722069f9f9dd43504c079df958a7a46036e9226a3a6800dfad2f2d23508eec70edaaf067ea6228268f5db4dab36e280
+Size (requests_ratelimiter-0.9.1.tar.gz) = 12234 bytes

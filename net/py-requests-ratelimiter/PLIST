@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2026/02/27 13:34:52 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/requests_ratelimiter/__init__.py
+${PYSITELIB}/requests_ratelimiter/__init__.pyc
+${PYSITELIB}/requests_ratelimiter/__init__.pyo
+${PYSITELIB}/requests_ratelimiter/buckets.py
+${PYSITELIB}/requests_ratelimiter/buckets.pyc
+${PYSITELIB}/requests_ratelimiter/buckets.pyo
+${PYSITELIB}/requests_ratelimiter/py.typed
+${PYSITELIB}/requests_ratelimiter/requests_ratelimiter.py
+${PYSITELIB}/requests_ratelimiter/requests_ratelimiter.pyc
+${PYSITELIB}/requests_ratelimiter/requests_ratelimiter.pyo

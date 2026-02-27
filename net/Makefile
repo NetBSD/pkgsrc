@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1626 2026/02/27 13:33:34 adam Exp $
+# $NetBSD: Makefile,v 1.1627 2026/02/27 13:34:52 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -792,6 +792,7 @@ SUBDIR+=	py-pyrate-limiter
 SUBDIR+=	py-pysendfile
 SUBDIR+=	py-python-socks
 SUBDIR+=	py-requestbuilder
+SUBDIR+=	py-requests-ratelimiter
 SUBDIR+=	py-responses
 SUBDIR+=	py-rfc6555
 SUBDIR+=	py-rpyc
