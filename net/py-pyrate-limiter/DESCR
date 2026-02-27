@@ -1,0 +1,11 @@
+The request rate limiter using Leaky-bucket Algorithm.
+
+* Supports unlimited rate limits and custom intervals.
+* Separately tracks limits for different services or resources.
+* Manages limit breaches with configurable blocking or non-blocking behavior.
+* Offers multiple usage modes: direct calls or decorators.
+* Fully compatible with both synchronous and asynchronous workflows.
+* Provides SQLite and Redis backends for persistent limit tracking across
+  threads or restarts.
+* Includes MultiprocessBucket and SQLite File Lock backends for multiprocessing
+  environments.

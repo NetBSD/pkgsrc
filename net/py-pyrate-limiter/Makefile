@@ -1,0 +1,23 @@
+# $NetBSD: Makefile,v 1.1 2026/02/27 13:33:35 adam Exp $
+
+DISTNAME=	pyrate_limiter-4.0.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+CATEGORIES=	net python
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyrate-limiter/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/vutran1710/PyrateLimiter
+COMMENT=	Rate-Limiter using Leaky-Bucket Algorithm
+LICENSE=	mit
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-dynamic-versioning>0:../../devel/py-uv-dynamic-versioning
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=1.1.0:../../devel/py-test-asyncio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=6.2.1:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly>=3.16.0:../../devel/py-test-randomly
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.8.0:../../devel/py-test-xdist
+
+USE_LANGUAGES=	# none
+
+.include "../../lang/python/wheel.mk"
+.include "../../mk/bsd.pkg.mk"
