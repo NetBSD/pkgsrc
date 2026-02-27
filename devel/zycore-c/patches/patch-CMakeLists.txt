@@ -1,0 +1,22 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/02/27 17:47:23 ryoon Exp $
+
+* Doxygen use can be configured.
+
+--- CMakeLists.txt.orig	2026-02-27 00:46:43.001548134 +0000
++++ CMakeLists.txt
+@@ -227,6 +227,7 @@ install(DIRECTORY "include/" DESTINATION ${CMAKE_INSTA
+ # Doxygen documentation                                                                           #
+ # =============================================================================================== #
+ 
++if (ENABLE_DOCS)
+ find_package(Doxygen)
+ if (DOXYGEN_FOUND)
+     set(DOXYGEN_GENERATE_MAN YES)
+@@ -241,6 +242,7 @@ if (DOXYGEN_FOUND)
+         DESTINATION "${CMAKE_INSTALL_MANDIR}/man3"
+         COMPONENT Documentation
+     )
++endif()
+ endif()
+ 
+ # =============================================================================================== #

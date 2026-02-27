@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/02/26 22:51:44 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2026/02/27 17:47:22 ryoon Exp $
 
 DISTNAME=       zycore-c-1.5.1
 GITHUB_TAG=     v${PKGVERSION_NOREV}
@@ -14,6 +14,7 @@ USE_LANGUAGES=	c
 
 CMAKE_CONFIGURE_ARGS+=	-DZYAN_NO_LIBC=OFF
 CMAKE_CONFIGURE_ARGS+=	-DZYCORE_BUILD_SHARED_LIB=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_DOCS=NO
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
