@@ -1,0 +1,1 @@
+bin/uv-dynamic-versioning @PREFIX@/bin/uv-dynamic-versioning-@PYVERSSUFFIX@

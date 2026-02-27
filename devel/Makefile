@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4598 2026/02/26 22:58:08 alnsn Exp $
+# $NetBSD: Makefile,v 1.4599 2026/02/27 13:30:57 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -3275,6 +3275,7 @@ SUBDIR+=	py-utils
 SUBDIR+=	py-uuid
 SUBDIR+=	py-uv
 SUBDIR+=	py-uv-build
+SUBDIR+=	py-uv-dynamic-versioning
 SUBDIR+=	py-uvloop
 SUBDIR+=	py-vcversioner
 SUBDIR+=	py-verboselogs

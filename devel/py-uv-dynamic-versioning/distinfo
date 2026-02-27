@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/02/27 13:30:57 adam Exp $
+
+BLAKE2s (uv_dynamic_versioning-0.13.0.tar.gz) = 8337e92c053dda1026c13104a2e31661ad535f8dc3f725b6b055d6db9583ac88
+SHA512 (uv_dynamic_versioning-0.13.0.tar.gz) = 5568115f56b9c5a0c1e5cd2179dcc97c34f8af145a7587dd293710c7755e701d27c550e0bf3d0e9c067ed2e2d960a035a680440ccf4bdb228f90d8917daf25f5
+Size (uv_dynamic_versioning-0.13.0.tar.gz) = 38797 bytes

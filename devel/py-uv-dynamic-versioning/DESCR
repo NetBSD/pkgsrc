@@ -1,0 +1,4 @@
+This project offers two plugins:
+* Version source plugin: is for setting a version based on VCS.
+* Metadata hook plugin: is for setting dependencies and optional-dependencies
+  dynamically based on VCS version. This plugin is useful for monorepo.
