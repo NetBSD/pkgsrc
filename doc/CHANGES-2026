@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1432 2026/02/27 11:30:17 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1433 2026/02/27 13:35:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1934,3 +1934,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-ansible-compat to 25.12.1 [adam 2026-02-27]
 	Updated sysutils/ansible-lint to 26.2.0 [adam 2026-02-27]
 	Updated mail/neomutt to 20260105nb2 [wiz 2026-02-27]
+	Added devel/py-uv-dynamic-versioning version 0.13.0 [adam 2026-02-27]
+	Added net/py-pyrate-limiter version 4.0.2 [adam 2026-02-27]
+	Added net/py-requests-ratelimiter version 0.9.1 [adam 2026-02-27]
