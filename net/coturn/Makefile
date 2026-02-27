@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2026/02/27 14:29:16 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/02/27 15:29:25 gdt Exp $
 
 DISTNAME=	coturn-4.9.0
 CATEGORIES=	net
@@ -60,6 +60,9 @@ CONFIGURE_ENV+=		PORTNAME=coturn
 CONFIGURE_ARGS+=	--confdir=${PKG_SYSCONFDIR}
 # Defaults to ${PREFIX}/var; give it a subdirectory.
 CONFIGURE_ARGS+=	--localstatedir=${COTURN_DATA}
+
+# \todo Why is there a db installed in /var?  If not within PREFIX we don't pick it up,
+# but it seems like a bug.
 
 .include "options.mk"
 
