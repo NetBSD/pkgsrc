@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/08/23 08:02:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/02/27 14:22:37 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -41,6 +41,9 @@ ${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/LICENSE
 ${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/__init__.py
 ${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/__init__.pyc
 ${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/__init__.pyo
+${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/_dispatch.py
+${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/_dispatch.pyc
+${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/_dispatch.pyo
 ${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/constants.py
 ${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/constants.pyc
 ${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/constants.pyo
