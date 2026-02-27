@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1427 2026/02/26 23:00:57 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.1428 2026/02/27 03:21:25 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1925,3 +1925,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated finance/py-stripe to 14.4.0 [adam 2026-02-26]
 	Added devel/zycore-c version 1.5.1 [alnsn 2026-02-26]
 	Added devel/zydis version 4.1.1 [alnsn 2026-02-26]
+	Updated lang/racket-textual to 9.1 [ktnb 2026-02-27]
