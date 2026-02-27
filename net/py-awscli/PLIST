@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2026/01/14 08:09:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.56 2026/02/27 06:52:09 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -3483,6 +3483,7 @@ ${PYSITELIB}/awscli/examples/guardduty/list-findings.rst
 ${PYSITELIB}/awscli/examples/guardduty/list-invitations.rst
 ${PYSITELIB}/awscli/examples/guardduty/list-ip-sets.rst
 ${PYSITELIB}/awscli/examples/guardduty/list-members.rst
+${PYSITELIB}/awscli/examples/guardduty/update-detector.rst
 ${PYSITELIB}/awscli/examples/guardduty/update-ip-set.rst
 ${PYSITELIB}/awscli/examples/health/describe-affected-entities.rst
 ${PYSITELIB}/awscli/examples/health/describe-event-details.rst
@@ -3977,40 +3978,6 @@ ${PYSITELIB}/awscli/examples/iot/update-thing-groups-for-thing.rst
 ${PYSITELIB}/awscli/examples/iot/update-thing.rst
 ${PYSITELIB}/awscli/examples/iot/update-topic-rule-destination.rst
 ${PYSITELIB}/awscli/examples/iot/validate-security-profile-behaviors.rst
-${PYSITELIB}/awscli/examples/iotanalytics/batch-put-message.rst
-${PYSITELIB}/awscli/examples/iotanalytics/cancel-pipeline-reprocessing.rst
-${PYSITELIB}/awscli/examples/iotanalytics/create-channel.rst
-${PYSITELIB}/awscli/examples/iotanalytics/create-dataset-content.rst
-${PYSITELIB}/awscli/examples/iotanalytics/create-dataset.rst
-${PYSITELIB}/awscli/examples/iotanalytics/create-datastore.rst
-${PYSITELIB}/awscli/examples/iotanalytics/create-pipeline.rst
-${PYSITELIB}/awscli/examples/iotanalytics/delete-channel.rst
-${PYSITELIB}/awscli/examples/iotanalytics/delete-dataset-content.rst
-${PYSITELIB}/awscli/examples/iotanalytics/delete-dataset.rst
-${PYSITELIB}/awscli/examples/iotanalytics/delete-datastore.rst
-${PYSITELIB}/awscli/examples/iotanalytics/delete-pipeline.rst
-${PYSITELIB}/awscli/examples/iotanalytics/describe-channel.rst
-${PYSITELIB}/awscli/examples/iotanalytics/describe-dataset.rst
-${PYSITELIB}/awscli/examples/iotanalytics/describe-datastore.rst
-${PYSITELIB}/awscli/examples/iotanalytics/describe-logging-options.rst
-${PYSITELIB}/awscli/examples/iotanalytics/describe-pipeline.rst
-${PYSITELIB}/awscli/examples/iotanalytics/get-dataset-content.rst
-${PYSITELIB}/awscli/examples/iotanalytics/list-channels.rst
-${PYSITELIB}/awscli/examples/iotanalytics/list-dataset-contents.rst
-${PYSITELIB}/awscli/examples/iotanalytics/list-datasets.rst
-${PYSITELIB}/awscli/examples/iotanalytics/list-datastores.rst
-${PYSITELIB}/awscli/examples/iotanalytics/list-pipelines.rst
-${PYSITELIB}/awscli/examples/iotanalytics/list-tags-for-resource.rst
-${PYSITELIB}/awscli/examples/iotanalytics/put-logging-options.rst
-${PYSITELIB}/awscli/examples/iotanalytics/run-pipeline-activity.rst
-${PYSITELIB}/awscli/examples/iotanalytics/sample-channel-data.rst
-${PYSITELIB}/awscli/examples/iotanalytics/start-pipeline-reprocessing.rst
-${PYSITELIB}/awscli/examples/iotanalytics/tag-resource.rst
-${PYSITELIB}/awscli/examples/iotanalytics/untag-resource.rst
-${PYSITELIB}/awscli/examples/iotanalytics/update-channel.rst
-${PYSITELIB}/awscli/examples/iotanalytics/update-dataset.rst
-${PYSITELIB}/awscli/examples/iotanalytics/update-datastore.rst
-${PYSITELIB}/awscli/examples/iotanalytics/update-pipeline.rst
 ${PYSITELIB}/awscli/examples/iotdeviceadvisor/create-suite-definition.rst
 ${PYSITELIB}/awscli/examples/iotdeviceadvisor/delete-suite-definition.rst
 ${PYSITELIB}/awscli/examples/iotdeviceadvisor/get-endpoint.rst
