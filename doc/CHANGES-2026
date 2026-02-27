@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1429 2026/02/27 03:24:10 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.1430 2026/02/27 06:54:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1927,3 +1927,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/zydis version 4.1.1 [alnsn 2026-02-26]
 	Updated lang/racket-textual to 9.1 [ktnb 2026-02-27]
 	Updated lang/racket to 9.1 [ktnb 2026-02-27]
+	Updated net/py-botocore to 1.42.58 [adam 2026-02-27]
+	Updated net/py-boto3 to 1.42.58 [adam 2026-02-27]
+	Updated net/py-awscli to 1.44.48 [adam 2026-02-27]
+	Updated devel/py-awscrt to 0.31.2 [adam 2026-02-27]
