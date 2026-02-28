@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2019/08/24 22:09:16 alnsn Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/02/28 11:28:44 alnsn Exp $
 bin/yices
 bin/yices-sat
 bin/yices-smt
@@ -7,5 +7,6 @@ include/yices.h
 include/yices_exit_codes.h
 include/yices_limits.h
 include/yices_types.h
+lib/libyices.a
 lib/libyices.so
 lib/libyices.so.${PKGVERSION}
