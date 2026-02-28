@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1438 2026/02/28 06:56:49 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1439 2026/02/28 06:58:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1944,3 +1944,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/wget2 to 2.2.1nb4 [triaxx 2026-02-27]
 	Updated devel/flatbuffers to 25.12.19.1 [ryoon 2026-02-28]
 	Updated net/ttl to 0.19.0 [pin 2026-02-28]
+	Updated shells/oh-my-posh to 29.7.0 [pin 2026-02-28]
