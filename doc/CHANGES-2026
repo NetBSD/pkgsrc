@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1441 2026/02/28 08:37:59 thor Exp $
+$NetBSD: CHANGES-2026,v 1.1442 2026/02/28 09:49:55 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1954,3 +1954,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/cblas64 to 3.12.1 [thomas-uhh 2026-02-28]
 	Updated math/lapacke to 3.12.1 [thomas-uhh 2026-02-28]
 	Updated math/lapacke64 to 3.12.1 [thomas-uhh 2026-02-28]
+	Updated pkgtools/pkg_install to 20260227 [bsiegert 2026-02-28]
