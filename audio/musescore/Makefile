@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2026/02/06 10:04:15 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2026/02/28 16:53:58 gutteridge Exp $
 
 DISTNAME=	musescore-4.6.5
 PKGREVISION=	2
@@ -15,6 +15,9 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++17
+# GCC 9 (present minimum due to Qt6 enforcing this) has an issue
+# handling a lambda expression, which GCC 10 and newer are fine with.
+GCC_REQD+=		10
 
 DEPENDS+=	qt6-qttranslations-[0-9]*:../../x11/qt6-qttranslations
 
