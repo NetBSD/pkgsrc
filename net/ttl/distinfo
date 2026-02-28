@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2026/02/24 11:59:09 pin Exp $
+$NetBSD: distinfo,v 1.2 2026/02/28 06:56:31 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -105,9 +105,9 @@ Size (cfg-if-1.0.4.crate) = 9360 bytes
 BLAKE2s (cfg_aliases-0.2.1.crate) = 7a7bb366100bf1ad7c15cddb6443a31f372f4a9040ea3ccc49781f78efcc1721
 SHA512 (cfg_aliases-0.2.1.crate) = 74969d12d5d24002a29e08d52e30fbce014dd481a7c35ee0162e69333c5f2d7755f3b02439b31522e12444cf1ac8e65880ce33fe6778dac03757e362cbf8a72c
 Size (cfg_aliases-0.2.1.crate) = 6355 bytes
-BLAKE2s (chrono-0.4.43.crate) = 6d7aca5d15e37985960a97ec3f3acc2938ebecae96d98dab7398be844e4fe1f7
-SHA512 (chrono-0.4.43.crate) = 6c0c5548a22021c9219ff63e79c60b20aa0278718b7038a83e247d89b5dfdca63222f27d24b40d254d5f1a44bba0f7a49928736ba3d38e5d940dc1a3ff9a86b4
-Size (chrono-0.4.43.crate) = 240392 bytes
+BLAKE2s (chrono-0.4.44.crate) = 48c6b840b300bbb2bee8ae415cdeb6c63a61272e19232453162be5bf0432c772
+SHA512 (chrono-0.4.44.crate) = 0b1a83885724e9180e71ee9fed146d070d88620d46b74970a67f4af04f583dddc0285e7d09574b99507786568ac7fb3f06a5dfbd25c51490c8d444c145bdee21
+Size (chrono-0.4.44.crate) = 240549 bytes
 BLAKE2s (clap-4.5.60.crate) = f2d1c1b9cabe864543e018c39b191d9699b952fbd9042a2c40196a0d2eccebea
 SHA512 (clap-4.5.60.crate) = 04cdd8503ea322b41d574bc700bb8be24fd930b28a5281899ad7e8f5d3fe65c3f671a639b8ec88070523abada843c78fc7c9ec784a8eeab54a1c7efced120234
 Size (clap-4.5.60.crate) = 62002 bytes
@@ -1014,9 +1014,9 @@ Size (triomphe-0.1.15.crate) = 34711 bytes
 BLAKE2s (try-lock-0.2.5.crate) = dc461d615e36a08553313c3a3172764749d329fe5dc4707a3de8c54af94d3c31
 SHA512 (try-lock-0.2.5.crate) = 433db3c52f55d78220db414ef6a7367791dd66eac935f41dcda85ec9200f0eefeab6e8342e70aabe35c300069c0e7b7c4f8d63a2334b52a081cc98416371ef08
 Size (try-lock-0.2.5.crate) = 4314 bytes
-BLAKE2s (ttl-0.18.2.tar.gz) = 9bac5bf5d7a006649d5ec4eb9b203b029e16f65d4869c17a274d803005890ea6
-SHA512 (ttl-0.18.2.tar.gz) = f04b6b44571ad324d9fef14f41d88eb006dead78807a223834a4205fb4481ec052d47a438567fe8ca6234641215ab730bbd57a0d39d984aa61303c6a7ed4df9d
-Size (ttl-0.18.2.tar.gz) = 857057 bytes
+BLAKE2s (ttl-0.19.0.tar.gz) = f7578d54354f074e33192d0dc29fdec3c56dcfd77b002218b788f5a8c1cdc1ce
+SHA512 (ttl-0.19.0.tar.gz) = ae8930902db7d1076d57ef8261bb0156e1644666ddba8f07e95457144ee7c84cdc72989e2d1de01ec941bbccf0c73961e704fcafdbe53893af42f4c375bf8b31
+Size (ttl-0.19.0.tar.gz) = 862875 bytes
 BLAKE2s (typenum-1.19.0.crate) = 80b44dc55e4bf94091b8882ffecd8b65b421bee8fec93e878f36eab55aa58f68
 SHA512 (typenum-1.19.0.crate) = 09ebcd7a2cc11f422469cf4fe706f1988bcd81d628e2bab3f54ae82b0aa5486d03a4392187a3736c13dc0c2027053387f89ac656caff72f36365c8be38bc7ff4
 Size (typenum-1.19.0.crate) = 76414 bytes
