@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.82 2026/02/17 20:35:35 morr Exp $
+@comment $NetBSD: PLIST,v 1.83 2026/02/28 16:11:28 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -504,6 +504,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/eiffel.vim
 share/vim/${VIM_SUBDIR}/ftplugin/elinks.vim
 share/vim/${VIM_SUBDIR}/ftplugin/elixir.vim
 share/vim/${VIM_SUBDIR}/ftplugin/elm.vim
+share/vim/${VIM_SUBDIR}/ftplugin/env.vim
 share/vim/${VIM_SUBDIR}/ftplugin/erlang.vim
 share/vim/${VIM_SUBDIR}/ftplugin/eruby.vim
 share/vim/${VIM_SUBDIR}/ftplugin/eterm.vim
@@ -1348,6 +1349,7 @@ share/vim/${VIM_SUBDIR}/syntax/elf.vim
 share/vim/${VIM_SUBDIR}/syntax/elinks.vim
 share/vim/${VIM_SUBDIR}/syntax/elm.vim
 share/vim/${VIM_SUBDIR}/syntax/elmfilt.vim
+share/vim/${VIM_SUBDIR}/syntax/env.vim
 share/vim/${VIM_SUBDIR}/syntax/erlang.vim
 share/vim/${VIM_SUBDIR}/syntax/eruby.vim
 share/vim/${VIM_SUBDIR}/syntax/esmtprc.vim
@@ -2034,3 +2036,4 @@ share/vim/${VIM_SUBDIR}/tutor/tutor2.ru
 share/vim/${VIM_SUBDIR}/tutor/tutor2.sr
 share/vim/${VIM_SUBDIR}/tutor/tutor2.sv
 share/vim/${VIM_SUBDIR}/vimrc_example.vim
+share/vim/${VIM_SUBDIR}/xdg.vim
