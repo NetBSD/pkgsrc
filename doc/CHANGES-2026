@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1436 2026/02/27 17:37:14 triaxx Exp $
+$NetBSD: CHANGES-2026,v 1.1437 2026/02/28 02:09:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1942,3 +1942,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-scikit-build-core to 0.12.1 [adam 2026-02-27]
 	Updated net/coturn to 4.9.0 [adam 2026-02-27]
 	Updated net/wget2 to 2.2.1nb4 [triaxx 2026-02-27]
+	Updated devel/flatbuffers to 25.12.19.1 [ryoon 2026-02-28]
