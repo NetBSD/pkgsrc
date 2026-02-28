@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1440 2026/02/28 06:59:05 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1441 2026/02/28 08:37:59 thor Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1946,3 +1946,11 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ttl to 0.19.0 [pin 2026-02-28]
 	Updated shells/oh-my-posh to 29.7.0 [pin 2026-02-28]
 	Updated textproc/treemd to 0.5.7 [pin 2026-02-28]
+	Updated math/blas to 3.12.1 [thomas-uhh 2026-02-28]
+	Updated math/blas64 to 3.12.1 [thomas-uhh 2026-02-28]
+	Updated math/lapack to 3.12.1 [thomas-uhh 2026-02-28]
+	Updated math/lapack64 to 3.12.1 [thomas-uhh 2026-02-28]
+	Updated math/cblas to 3.12.1 [thomas-uhh 2026-02-28]
+	Updated math/cblas64 to 3.12.1 [thomas-uhh 2026-02-28]
+	Updated math/lapacke to 3.12.1 [thomas-uhh 2026-02-28]
+	Updated math/lapacke64 to 3.12.1 [thomas-uhh 2026-02-28]
