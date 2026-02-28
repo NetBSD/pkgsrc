@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2025/08/20 11:34:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/02/28 02:08:52 ryoon Exp $
 
-DISTNAME=	flatbuffers-1.9.0
+DISTNAME=	flatbuffers-25.12.19-2026-02-06-03fffb2
+PKGNAME=	flatbuffers-25.12.19.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	v25.12.19-2026-02-06-03fffb2
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://google.github.io/flatbuffers/
+HOMEPAGE=	https://flatbuffers.dev/
 COMMENT=	Memory efficient serialization library
 LICENSE=	apache-2.0
 
@@ -20,9 +21,5 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 USE_CXX_FEATURES+=	c++11
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
-
-post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/include/flatbuffers/flatbuffers.h.orig
-	${RM} -f ${DESTDIR}${PREFIX}/include/flatbuffers/reflection.h.orig
 
 .include "../../mk/bsd.pkg.mk"
