@@ -1,4 +1,4 @@
-/*	$NetBSD: parse_cross.c,v 1.3 2024/06/11 09:11:33 wiz Exp $	*/
+/*	$NetBSD: parse_cross.c,v 1.4 2026/02/28 09:49:35 bsiegert Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: parse_cross.c,v 1.3 2024/06/11 09:11:33 wiz Exp $");
+__RCSID("$NetBSD: parse_cross.c,v 1.4 2026/02/28 09:49:35 bsiegert Exp $");
 
 #if HAVE_ERR_H
 #include <err.h>
@@ -51,7 +51,7 @@ parse_cross(const char *text, char **machine_arch, char **opsys,
 		/*
 		 * If there's no SPC, fail.
 		 */
-		if (*(r = strchr(q, ' ')) == '\0') {
+		if ((r = strchr(q, ' ')) == NULL) {
 			goto fail;
 		}
 
