@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1443 2026/02/28 11:51:09 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.1444 2026/02/28 13:32:28 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1956,3 +1956,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/lapacke64 to 3.12.1 [thomas-uhh 2026-02-28]
 	Updated pkgtools/pkg_install to 20260227 [bsiegert 2026-02-28]
 	Updated math/yices2 to 2.6.5 [alnsn 2026-02-28]
+	Updated net/yt-dlp-ejs to 0.5.0 [ktnb 2026-02-28]
