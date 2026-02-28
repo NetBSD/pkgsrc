@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/01/27 20:32:17 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/02/28 11:28:44 alnsn Exp $
 
 DISTNAME=	Yices-${PKGVERSION}
-PKGNAME=	yices2-2.6.1
+PKGNAME=	yices2-2.6.5
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SRI-CSL/}
 GITHUB_TAG=	${DISTNAME}
