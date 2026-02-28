@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q4,v 1.1.2.13 2026/02/22 22:23:48 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q4,v 1.1.2.14 2026/02/28 20:15:05 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q4 branch:
 
@@ -52,3 +52,8 @@ www/dillo: Bug fix
 
 Pullup ticket #7053 - requested by nia
 www/palemoon: Bug fix
+
+Pullup ticket #7054 - requested by gutteridge
+www/firefox140: security fix
+www/firefox140-l10n: dependent update
+
