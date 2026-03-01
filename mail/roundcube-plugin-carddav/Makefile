@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/02/08 03:44:47 taca Exp $
+# $NetBSD: Makefile,v 1.11 2026/03/01 08:01:38 triaxx Exp $
 
 DISTNAME=	carddav-v4.4.3
 PKGREVISION=	1
@@ -9,7 +9,7 @@ GITHUB_PROJECT=	rcmcarddav
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 HOMEPAGE=	https://github.com/mstilkerich/rcmcarddav
-MAINTAINER=	triaxx@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	CardDAV adapter for Roundcube
 LICENSE=	gnu-gpl-v2
 

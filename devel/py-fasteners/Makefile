@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2025/08/13 08:09:48 adam Exp $
+# $NetBSD: Makefile,v 1.18 2026/03/01 08:01:37 triaxx Exp $
 
 DISTNAME=	fasteners-0.20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fasteners/}
 
-MAINTAINER=	triaxx@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/harlowja/fasteners
 COMMENT=	Python package providing useful locks
 LICENSE=	apache-2.0

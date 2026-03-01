@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/10/04 12:14:22 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2026/03/01 08:01:37 triaxx Exp $
 
 DISTNAME=	SPIRV-Tools-2025.4
 PKGNAME=	${DISTNAME:tl}
@@ -6,7 +6,7 @@ CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	triaxx@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/KhronosGroup/SPIRV-Tools/
 COMMENT=	API and commands for processing SPIR-V modules
 LICENSE=	apache-2.0

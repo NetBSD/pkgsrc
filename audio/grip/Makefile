@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.68 2026/02/06 10:04:14 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2026/03/01 08:01:38 triaxx Exp $
 
 DISTNAME=	grip-4.2.4
 PKGREVISION=	21
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=grip/}
 
-MAINTAINER=	triaxx@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/grip/
 COMMENT=	CD-player and CD-ripper for the Gnome desktop
 LICENSE=	gnu-gpl-v2

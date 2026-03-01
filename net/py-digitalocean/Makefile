@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2025/10/09 07:57:51 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/03/01 08:01:37 triaxx Exp $
 
 DISTNAME=	python-digitalocean-1.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-digitalocean/}
 
-MAINTAINER=	triaxx@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/koalalorenzo/python-digitalocean
 COMMENT=	Python module to manage Digital Ocean droplets
 LICENSE=	gnu-gpl-v3
