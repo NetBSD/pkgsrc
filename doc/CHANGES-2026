@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1477 2026/03/01 15:13:10 js Exp $
+$NetBSD: CHANGES-2026,v 1.1478 2026/03/01 19:04:30 js Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1999,3 +1999,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/py-inquirer [js 2026-03-01]
 	Updated security/py-libagent to 0.16.0 [js 2026-03-01]
 	Updated security/py-trezor-agent to 0.13.0 [js 2026-03-01]
+	Updated security/py-libagent to 0.16.1 [js 2026-03-01]
