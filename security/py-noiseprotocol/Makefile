@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/03/01 00:30:37 js Exp $
+# $NetBSD: Makefile,v 1.2 2026/03/01 07:11:19 wiz Exp $
 
 DISTNAME=	noiseprotocol-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://github.com/plizonczyk/noiseprotocol
 COMMENT=	Python 3 implementation of Noise Protocol Framework
 LICENSE=	mit
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
