@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2025/11/01 22:44:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2026/03/01 20:20:55 wiz Exp $
 ${MYETCDIR}/openssl/certs/002c0b4f.0
 ${MYETCDIR}/openssl/certs/0179095f.0
 ${MYETCDIR}/openssl/certs/02265526.0
@@ -135,6 +135,7 @@ ${MYETCDIR}/openssl/certs/f0c70a8d.0
 ${MYETCDIR}/openssl/certs/f249de83.0
 ${MYETCDIR}/openssl/certs/f30dd6ad.0
 ${MYETCDIR}/openssl/certs/f39fc864.0
+${MYETCDIR}/openssl/certs/f44703f1.0
 ${MYETCDIR}/openssl/certs/f51bb24c.0
 ${MYETCDIR}/openssl/certs/fa5da96b.0
 ${MYETCDIR}/openssl/certs/fb717492.0
@@ -207,6 +208,7 @@ ${MYETCDIR}/openssl/certs/mozilla-rootcert-173.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-175.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-178.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-179.pem
+${MYETCDIR}/openssl/certs/mozilla-rootcert-180.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-19.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-2.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-20.pem
