@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2026/03/01 00:58:18 js Exp $
+# $NetBSD: Makefile,v 1.8 2026/03/01 07:15:25 wiz Exp $
 
 DISTNAME=	trezor-0.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/trezor/trezor-firmware
 COMMENT=	Python library for communicating with Trezor hardware wallets
 LICENSE=	gnu-lgpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-ecdsa>=0.9:../../security/py-ecdsa
 DEPENDS+=	${PYPKGPREFIX}-mnemonic>=0.20:../../devel/py-mnemonic
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.4.0:../../devel/py-requests
@@ -33,6 +33,12 @@ SUBST_FILES.python=	src/trezorlib/cli/trezorctl.py
 SUBST_SED.python=	-e 's,/usr/bin/env python3,${PYTHONBIN},'
 
 PYTHON_SELF_CONFLICT=	yes
+
+# as of 0.20.0
+# 1 failed, 113 passed, 1 skipped, 1 warning
+.if make(test)
+ALLOW_NETWORK_ACCESS=	yes
+.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
