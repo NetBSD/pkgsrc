@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/01/03 10:04:09 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/03/01 08:01:38 triaxx Exp $
 
 DISTNAME=	libXaw3dXft-1.6.2h
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sf-xpaint/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	triaxx@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sf-xpaint.sourceforge.net/
 COMMENT=	FreeType and UTF-8 support for libXaw3d
 LICENSE=	x11

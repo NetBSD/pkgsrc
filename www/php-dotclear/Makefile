@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2026/01/08 14:17:49 taca Exp $
+# $NetBSD: Makefile,v 1.13 2026/03/01 08:01:38 triaxx Exp $
 
 DISTNAME=	dotclear-2.25.3
 PKGREVISION=	1
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	https://download.dotclear.org/latest/ \
 		https://download.dotclear.org/attic/
 
-MAINTAINER=	triaxx@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://dotclear.org/
 COMMENT=	Open-source web publising software
 LICENSE=	gnu-gpl-v2

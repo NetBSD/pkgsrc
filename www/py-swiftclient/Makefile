@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2026/01/06 11:18:46 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/03/01 08:01:38 triaxx Exp $
 
 DISTNAME=	python-swiftclient-3.11.0
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-swiftclient/}
 
-MAINTAINER=	triaxx@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/openstack/python-swiftclient
 COMMENT=	Python bindings to the OpenStack Object Storage API
 LICENSE=	apache-2.0
