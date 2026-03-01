@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1456 2026/03/01 07:14:42 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1457 2026/03/01 07:18:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1970,3 +1970,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/p5-TimeDate to 2.34 [wiz 2026-03-01]
 	Updated databases/ruby-sqlite3 to 2.9.1 [taca 2026-03-01]
 	Updated devel/ruby-cucumber-messages to 32.1.0 [taca 2026-03-01]
+	Updated devel/ruby-google-protobuf to 4.34.0 [taca 2026-03-01]
