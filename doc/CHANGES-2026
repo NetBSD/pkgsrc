@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1458 2026/03/01 07:19:51 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1459 2026/03/01 07:23:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1972,3 +1972,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-cucumber-messages to 32.1.0 [taca 2026-03-01]
 	Updated devel/ruby-google-protobuf to 4.34.0 [taca 2026-03-01]
 	Updated devel/ruby-hoe to 4.6.1 [taca 2026-03-01]
+	Updated devel/ruby-locale to 2.1.5 [taca 2026-03-01]
