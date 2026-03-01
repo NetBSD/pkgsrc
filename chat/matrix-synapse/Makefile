@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2026/02/26 15:42:05 gdt Exp $
+# $NetBSD: Makefile,v 1.129 2026/03/01 11:36:45 js Exp $
 
 DISTNAME=	matrix-synapse-1.148.0
 CATEGORIES=	chat
@@ -6,8 +6,8 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=element-hq/}
 GITHUB_PROJECT=	synapse
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	js@NetBSD.org
-#MAINTAINER+=	gdt@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
+#MAINTAINER+=	js@NetBSD.org
 HOMEPAGE=	https://github.com/element-hq/synapse/
 COMMENT=	Reference homeserver for the Matrix decentralised comms protocol
 LICENSE=	gnu-agpl-v3
