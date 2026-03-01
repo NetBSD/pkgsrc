@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.56 2025/09/21 18:11:34 wiz Exp $
+$NetBSD: distinfo,v 1.57 2026/03/01 19:36:26 adam Exp $
 
-BLAKE2s (exiv2-0.28.7.tar.gz) = 7851354385086e693b5b16edef4a2e5c89cc04081bf059fbb642a767c90c8752
-SHA512 (exiv2-0.28.7.tar.gz) = b53f4989abcd5d346f2a9c726a06707c47e1990ecb2e5e193c963e01d452fefe4dddd14e25eb08ef35e2f8288b8ec4bdee60725aa7dcd6b1c0348ed56c803fc0
-Size (exiv2-0.28.7.tar.gz) = 46935478 bytes
+BLAKE2s (exiv2-0.28.8.tar.gz) = 5f8f55ba91b5c20b6a26c6ad0064cfd93a240eb2a244e6397ff03f84c80fbbc9
+SHA512 (exiv2-0.28.8.tar.gz) = e322438b565fe373e65baceeb4fd5173f538063b12b3d5a93d6e707da5020c818b1b9cc116f7bf0709635aa72b941dacb7a2bcfe6d946e2eaf7d9e55736dec5b
+Size (exiv2-0.28.8.tar.gz) = 46670323 bytes
 SHA1 (patch-cmake_compilerFlags.cmake) = 9f56d637e5dc99d7377a8d57ca9be9aab5833a76
-SHA1 (patch-src_futils.cpp) = 16f320338ea0071098a892e23c7056ead2e18d16
