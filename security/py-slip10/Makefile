@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/03/01 00:52:25 js Exp $
+# $NetBSD: Makefile,v 1.2 2026/03/01 07:13:14 wiz Exp $
 
 DISTNAME=	slip10-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/trezor/python-slip10
 COMMENT=	Reference implementation of SLIP-0010
 LICENSE=	mit AND modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core-[0-9]*:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 
 USE_LANGUAGES=	# none
