@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2026/03/01 00:52:25 js Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENCE
+${PYSITELIB}/slip10/__init__.py
+${PYSITELIB}/slip10/__init__.pyc
+${PYSITELIB}/slip10/__init__.pyo
+${PYSITELIB}/slip10/base58.py
+${PYSITELIB}/slip10/base58.pyc
+${PYSITELIB}/slip10/base58.pyo
+${PYSITELIB}/slip10/ripemd160.py
+${PYSITELIB}/slip10/ripemd160.pyc
+${PYSITELIB}/slip10/ripemd160.pyo
+${PYSITELIB}/slip10/slip10.py
+${PYSITELIB}/slip10/slip10.pyc
+${PYSITELIB}/slip10/slip10.pyo
+${PYSITELIB}/slip10/utils.py
+${PYSITELIB}/slip10/utils.pyc
+${PYSITELIB}/slip10/utils.pyo

@@ -1,0 +1,4 @@
+A reference implementation of the SLIP-0010 specification, which generalizes
+the BIP-0032 derivation scheme for private and public key pairs in hierarchical
+deterministic wallets for the curves secp256k1, NIST P-256, ed25519 and
+curve25519.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.998 2026/03/01 00:44:45 js Exp $
+# $NetBSD: Makefile,v 1.999 2026/03/01 00:52:25 js Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -549,6 +549,7 @@ SUBDIR+=	py-service_identity
 SUBDIR+=	py-shamir_mnemonic
 SUBDIR+=	py-signedjson
 SUBDIR+=	py-simplesha3
+SUBDIR+=	py-slip10
 SUBDIR+=	py-slowaes
 SUBDIR+=	py-smbpasswd
 SUBDIR+=	py-solo1
