@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2025/03/18 09:11:03 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2026/03/01 12:38:18 gdt Exp $
 
 DISTNAME=	geneweb-5.01
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	databases
 EXTRACT_SUFX=	.tgz
 MASTER_SITES+=	http://www.sartorelli.gen.nz/GeneWeb/Src/

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2022/05/11 08:58:03 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2026/03/01 12:38:37 gdt Exp $
 
 BUILDLINK_TREE+=	ocaml-ipaddr
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-ipaddr
 OCAML_IPADDR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-ipaddr+=	ocaml-ipaddr>=5.3.0
-BUILDLINK_ABI_DEPENDS.ocaml-ipaddr?=	ocaml-ipaddr>=5.3.0
+BUILDLINK_ABI_DEPENDS.ocaml-ipaddr?=	ocaml-ipaddr>=5.3.0nb2
 BUILDLINK_PKGSRCDIR.ocaml-ipaddr?=	../../net/ocaml-ipaddr
 BUILDLINK_FILES.ocaml-ipaddr+=		lib/ocaml/site-lib/*
 

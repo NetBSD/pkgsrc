@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2026/02/17 13:38:56 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/03/01 12:38:21 gdt Exp $
 
 GITHUB_PROJECT=	biniou
 DISTNAME=	${GITHUB_PROJECT}-1.2.1
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml-community/}
 

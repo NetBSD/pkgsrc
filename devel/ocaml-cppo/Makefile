@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2026/02/17 13:38:57 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/03/01 12:38:22 gdt Exp $
 
 DISTNAME=	cppo-1.6.8
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml-community/}
 GITHUB_PROJECT=	cppo
