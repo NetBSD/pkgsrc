@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1452 2026/03/01 02:50:55 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.1453 2026/03/01 06:51:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1966,3 +1966,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/mosquitto to 2.1.2 [gdt 2026-03-01]
 	Removed www/firefox115 [gutteridge 2026-03-01]
 	Removed www/firefox115-l10n [gutteridge 2026-03-01]
+	Updated net/bind918 to 9.18.46 [taca 2026-03-01]
