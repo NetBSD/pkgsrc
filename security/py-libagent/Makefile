@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2026/01/15 08:28:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/03/01 15:09:41 js Exp $
 
 DISTNAME=	trezor-agent-${PKGVERSION_NOREV}
-PKGNAME=	${PYPKGPREFIX}-libagent-0.15.0
+PKGNAME=	${PYPKGPREFIX}-libagent-0.16.0
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=romanz/}
 GITHUB_PROJECT=	trezor-agent
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	libagent/${PKGVERSION_NOREV}
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
+WRKSRC=		${WRKDIR}/trezor-agent-libagent-${PKGVERSION_NOREV}
 
 MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://github.com/romanz/trezor-agent

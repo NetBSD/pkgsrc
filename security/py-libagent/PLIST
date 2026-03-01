@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/04/20 04:40:50 js Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/03/01 15:09:41 js Exp $
 ${PYSITELIB}/libagent-${PKGVERSION}.dist-info/METADATA
 ${PYSITELIB}/libagent-${PKGVERSION}.dist-info/RECORD
 ${PYSITELIB}/libagent-${PKGVERSION}.dist-info/WHEEL
@@ -25,15 +25,6 @@ ${PYSITELIB}/libagent/device/interface.pyo
 ${PYSITELIB}/libagent/device/jade.py
 ${PYSITELIB}/libagent/device/jade.pyc
 ${PYSITELIB}/libagent/device/jade.pyo
-${PYSITELIB}/libagent/device/keepkey.py
-${PYSITELIB}/libagent/device/keepkey.pyc
-${PYSITELIB}/libagent/device/keepkey.pyo
-${PYSITELIB}/libagent/device/keepkey_defs.py
-${PYSITELIB}/libagent/device/keepkey_defs.pyc
-${PYSITELIB}/libagent/device/keepkey_defs.pyo
-${PYSITELIB}/libagent/device/ledger.py
-${PYSITELIB}/libagent/device/ledger.pyc
-${PYSITELIB}/libagent/device/ledger.pyo
 ${PYSITELIB}/libagent/device/onlykey.py
 ${PYSITELIB}/libagent/device/onlykey.pyc
 ${PYSITELIB}/libagent/device/onlykey.pyo
@@ -43,9 +34,6 @@ ${PYSITELIB}/libagent/device/onlykey_defs.pyo
 ${PYSITELIB}/libagent/device/trezor.py
 ${PYSITELIB}/libagent/device/trezor.pyc
 ${PYSITELIB}/libagent/device/trezor.pyo
-${PYSITELIB}/libagent/device/trezor_defs.py
-${PYSITELIB}/libagent/device/trezor_defs.pyc
-${PYSITELIB}/libagent/device/trezor_defs.pyo
 ${PYSITELIB}/libagent/device/ui.py
 ${PYSITELIB}/libagent/device/ui.pyc
 ${PYSITELIB}/libagent/device/ui.pyo
