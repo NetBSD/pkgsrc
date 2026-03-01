@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2026/02/07 22:47:54 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/03/01 22:24:11 wiz Exp $
 
-DISTNAME=	ascii-3.31
+DISTNAME=	ascii-3.32
 CATEGORIES=	misc
 MASTER_SITES=	${HOMEPAGE}
 
@@ -9,14 +9,17 @@ HOMEPAGE=	http://www.catb.org/~esr/ascii/
 COMMENT=	ASCII character table program
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciidoctor
+
 USE_TOOLS=		gmake
-USE_LIBTOOL=		yes
 MAKE_FLAGS+=		PREFIX=${PREFIX}
+MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}
 
-BUILD_TARGET=		ascii
-EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+SUBST_CLASSES+=		ad
+SUBST_SED.ad+=		-e "s,asciidoctor,asciidoctor${RUBY_SUFFIX},"
+SUBST_STAGE.ad=		pre-build
+SUBST_FILES.ad+=	Makefile
+SUBST_MESSAGE.ad=	Fixing asciidoctor name.
 
-post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-
+.include "../../lang/ruby/rubyversion.mk"
 .include "../../mk/bsd.pkg.mk"

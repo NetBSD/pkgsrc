@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2026/02/07 22:47:54 wiz Exp $
+$NetBSD: distinfo,v 1.12 2026/03/01 22:24:11 wiz Exp $
 
-BLAKE2s (ascii-3.31.tar.gz) = 7dbd84cd3d0be210a23eef37fb401831f7f01682838877bd22c7f1dfa911b756
-SHA512 (ascii-3.31.tar.gz) = 6da73febfd8055620bd87b4637ea4fdca4185769e81b73bae444b3b30a8d6042071b8179bd743566e53dc8ff7016b28bdf037bb68b319ca43dfc38aadf6864fd
-Size (ascii-3.31.tar.gz) = 14687 bytes
-SHA1 (patch-aa) = 787a8ddec5debb30294bfe34840ea6d5e9f6fb83
+BLAKE2s (ascii-3.32.tar.gz) = e462691a9a40b8ad4e46b93d0fea80887d2b0ce2abc437cdcb1eb868e70dc198
+SHA512 (ascii-3.32.tar.gz) = a8c8254bd7720d6250d6ad74ef288f6ebc4a538facff1ee577c55c73fa55f49b18cb9597dc2092bf2f3322e1ef9e7645f9c89c92e2a00133db592051d1465f9a
+Size (ascii-3.32.tar.gz) = 14063 bytes
