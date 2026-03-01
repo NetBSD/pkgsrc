@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/10/27 13:40:57 taca Exp $
+# $NetBSD: Makefile,v 1.4 2026/03/01 07:45:54 taca Exp $
 
-DISTNAME=	rspec-its-1.3.1
+DISTNAME=	rspec-its-2.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,8 +8,8 @@ HOMEPAGE=	https://github.com/rspec/rspec-its
 COMMENT=	Provides "its" method formerly part of rspec-core
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-rspec-core>=3.0.0:../../devel/ruby-rspec-core
-DEPENDS+=	${RUBY_PKGPREFIX}-rspec-expectations>=3.0.0:../../devel/ruby-rspec-expectations
+DEPENDS+=	${RUBY_PKGPREFIX}-rspec-core>=3.13.0:../../devel/ruby-rspec-core
+DEPENDS+=	${RUBY_PKGPREFIX}-rspec-expectations>=3.13.0:../../devel/ruby-rspec-expectations
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
