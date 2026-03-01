@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2026/02/06 10:05:35 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/03/01 01:03:12 gdt Exp $
 
-DISTNAME=	mosquitto-2.1.1
-PKGREVISION=	1
+DISTNAME=	mosquitto-2.1.2
 CATEGORIES=	net
 MASTER_SITES=	https://mosquitto.org/files/source/
 
