@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1447 2026/03/01 00:31:01 js Exp $
+$NetBSD: CHANGES-2026,v 1.1448 2026/03/01 00:45:02 js Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1960,3 +1960,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/ocaml to 4.14.3 [gdt 2026-02-28]
 	Updated editors/vim-share to 9.2.0077 [morr 2026-02-28]
 	Added security/py-noiseprotocol version 0.3.1 [js 2026-03-01]
+	Added security/py-shamir_mnemonic version 0.3.0 [js 2026-03-01]
