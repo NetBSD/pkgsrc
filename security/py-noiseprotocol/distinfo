@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/01 00:30:37 js Exp $
+
+BLAKE2s (noiseprotocol-0.3.1.tar.gz) = cc1d356b800b5dbf097d584ec48e2da3e2e9d7961560fe154cc55c344b58823a
+SHA512 (noiseprotocol-0.3.1.tar.gz) = dab72a3633549fc245c3f440da557879d148c7bc84167f79bcdb726dfc0896cc395b982af82d2a04457b09d8bc73f4daa24e7d8c648892ea603ab3e34f508094
+Size (noiseprotocol-0.3.1.tar.gz) = 16890 bytes
