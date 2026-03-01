@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1446 2026/02/28 16:12:15 morr Exp $
+$NetBSD: CHANGES-2026,v 1.1447 2026/03/01 00:31:01 js Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1959,3 +1959,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/yt-dlp-ejs to 0.5.0 [ktnb 2026-02-28]
 	Updated lang/ocaml to 4.14.3 [gdt 2026-02-28]
 	Updated editors/vim-share to 9.2.0077 [morr 2026-02-28]
+	Added security/py-noiseprotocol version 0.3.1 [js 2026-03-01]
