@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2024/02/17 10:13:19 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/03/01 17:55:10 thor Exp $
 
 OPENBLAS_VARIANT= openblas64
+PKGREVISION=1
+
 .include "../../math/openblas/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
