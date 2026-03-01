@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1454 2026/03/01 07:10:19 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1455 2026/03/01 07:11:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1968,3 +1968,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed www/firefox115-l10n [gutteridge 2026-03-01]
 	Updated net/bind918 to 9.18.46 [taca 2026-03-01]
 	Updated time/p5-TimeDate to 2.34 [wiz 2026-03-01]
+	Updated databases/ruby-sqlite3 to 2.9.1 [taca 2026-03-01]
