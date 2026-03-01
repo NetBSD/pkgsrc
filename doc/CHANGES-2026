@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1468 2026/03/01 07:57:16 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1469 2026/03/01 08:02:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1982,3 +1982,11 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/ruby-mime-types-data to 3.2026.0224 [taca 2026-03-01]
 	Updated net/ruby-snmp to 1.3.4 [taca 2026-03-01]
 	Updated www/ruby-aws-partitions to 1.1220.0 [taca 2026-03-01]
+	Updated mail/postfix to 3.10.8 [taca 2026-03-01]
+	Updated mail/postfix-cdb to 3.10.8 [taca 2026-03-01]
+	Updated mail/postfix-ldap to 3.10.8 [taca 2026-03-01]
+	Updated mail/postfix-lmdb to 3.10.8 [taca 2026-03-01]
+	Updated mail/postfix-mysql to 3.10.8 [taca 2026-03-01]
+	Updated mail/postfix-pcre to 3.10.8 [taca 2026-03-01]
+	Updated mail/postfix-pgsql to 3.10.8 [taca 2026-03-01]
+	Updated mail/postfix-sqlite to 3.10.8 [taca 2026-03-01]
