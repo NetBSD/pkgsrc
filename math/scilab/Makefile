@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.116 2025/09/21 21:22:40 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2026/03/01 12:38:36 gdt Exp $
 #
 
 DISTNAME=	${SCIBASE}-src
-PKGREVISION=	30
+PKGREVISION=	31
 PKGNAME=	${SCIBASE}
 CATEGORIES=	math
 MASTER_SITES=	http://www.scilab.org/download/4.1/

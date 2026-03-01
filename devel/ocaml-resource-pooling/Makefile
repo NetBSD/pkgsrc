@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2026/02/17 13:39:06 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/03/01 12:38:32 gdt Exp $
 
 GITHUB_PROJECT=	resource-pooling
 DISTNAME=	${GITHUB_PROJECT}-1.1
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 

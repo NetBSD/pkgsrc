@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2026/01/25 23:50:17 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/03/01 12:38:19 gdt Exp $
 
 DISTNAME=	coccinelle-1.3.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coccinelle/}
 

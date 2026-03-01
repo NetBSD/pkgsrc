@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2026/02/17 13:39:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/03/01 12:38:27 gdt Exp $
 
 DISTNAME=	ounit2-2.2.7
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gildor478/}
 GITHUB_PROJECT=	ounit

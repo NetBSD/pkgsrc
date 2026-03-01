@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2026/02/17 13:39:12 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/03/01 12:38:38 gdt Exp $
 
 DISTNAME=	hevea-2.35
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	http://hevea.inria.fr/distri/
 

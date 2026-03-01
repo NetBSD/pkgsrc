@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2024/11/29 23:27:32 dholland Exp $
+# $NetBSD: Makefile,v 1.47 2026/03/01 12:38:42 gdt Exp $
 
 DISTNAME=	labltk-8.06.12
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=garrigue/}
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2026/02/17 13:38:53 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/03/01 12:38:18 gdt Exp $
 #
 
 DISTNAME=	caml${GITHUB_PROJECT}-1.3
 PKGNAME=	${DISTNAME:S/caml/ocaml-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 GITHUB_PROJECT=	dbm
