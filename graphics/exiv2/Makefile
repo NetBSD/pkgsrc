@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2025/09/21 18:11:34 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2026/03/01 19:36:26 adam Exp $
 
-DISTNAME=	exiv2-0.28.7
+DISTNAME=	exiv2-0.28.8
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Exiv2/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -33,9 +33,9 @@ CXXFLAGS.SunOS+=	-fPIC
 
 PKGCONFIG_OVERRIDE=	cmake/exiv2.pc.in
 
-.include "../../devel/cmake/build.mk"
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
