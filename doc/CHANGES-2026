@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1469 2026/03/01 08:02:42 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1470 2026/03/01 08:29:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1990,3 +1990,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/postfix-pcre to 3.10.8 [taca 2026-03-01]
 	Updated mail/postfix-pgsql to 3.10.8 [taca 2026-03-01]
 	Updated mail/postfix-sqlite to 3.10.8 [taca 2026-03-01]
+	Updated textproc/py-regex to 2026.2.28 [adam 2026-03-01]
+	Updated textproc/py-lxml-html-clean to 0.4.4 [adam 2026-03-01]
