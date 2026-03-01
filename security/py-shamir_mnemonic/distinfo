@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/01 00:44:45 js Exp $
+
+BLAKE2s (shamir_mnemonic-0.3.0.tar.gz) = 2d281d5df760964a152028923ef24d4d4289637551fe629a1e260172f9db921f
+SHA512 (shamir_mnemonic-0.3.0.tar.gz) = c39d10398e06dbccf7c25fb48a18e78faffd135260787d1965a586cf3a8a4dd661e751317a002a77b7aea62756cdae692170eb3cdee8bf21e18719f15b8552ee
+Size (shamir_mnemonic-0.3.0.tar.gz) = 21757 bytes

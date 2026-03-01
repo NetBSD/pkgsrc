@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.997 2026/03/01 00:30:36 js Exp $
+# $NetBSD: Makefile,v 1.998 2026/03/01 00:44:45 js Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -546,6 +546,7 @@ SUBDIR+=	py-requests-oauthlib
 SUBDIR+=	py-rsa
 SUBDIR+=	py-secretstorage
 SUBDIR+=	py-service_identity
+SUBDIR+=	py-shamir_mnemonic
 SUBDIR+=	py-signedjson
 SUBDIR+=	py-simplesha3
 SUBDIR+=	py-slowaes
