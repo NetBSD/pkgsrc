@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.13 2026/02/24 23:09:01 thor Exp $
+$NetBSD: distinfo,v 1.14 2026/03/01 17:55:10 thor Exp $
 
 BLAKE2s (OpenBLAS-0.3.31.tar.gz) = 61531162bf9c314e87bab487894d86b8c8c89e14627610d5909421daba3566c1
 SHA512 (OpenBLAS-0.3.31.tar.gz) = 703b84c476c148a0922a04b1c33c9c4c452f478d608d93e59204b8f0f2c516344301ff0a4dbb3750a2449db0d28cc2df001c295898e859b41ecb8381f9c2eab8
 Size (OpenBLAS-0.3.31.tar.gz) = 25232810 bytes
 SHA1 (patch-Makefile) = fa6335a2cf9925c285611dc20f5a67e6b49a01c9
 SHA1 (patch-Makefile.install) = 1bc085d9c1138e24b136566587dfb35bc9bd3b08
-SHA1 (patch-Makefile.system) = 4cc1576e008619d427730a8fa14da7094744b6a3
+SHA1 (patch-Makefile.system) = 7345f7f0c69309ce0c163a2cb5702f6d41391270
 SHA1 (patch-c__check) = 731a7e35535a29933677c72bc0a9e956b9e3ff42
 SHA1 (patch-common__arm.h) = f08ec61bee8317daac267e90a79f46097b3431c9
 SHA1 (patch-cpuid__arm.c) = 20f95cede90cbe548c0cd09ed2e3d37d1d4aeabd

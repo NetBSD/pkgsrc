@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.system,v 1.4 2026/02/24 23:09:02 thor Exp $
+$NetBSD: patch-Makefile.system,v 1.5 2026/03/01 17:55:10 thor Exp $
 
 Fix FIXED_LIBNAME to result in a primary library with the usual so.0 ending,
 and matching SONAME, with the .so being a symlink. This is the expected
@@ -53,7 +53,7 @@ skipping linking if the file is already named like the link).
 +# file is libopenblas_foobar.so.0 and libopenblas_foobar.so is a link.
 +ifeq ($(FIXED_LIBNAME),1)
 +LIBSONAME    = $(LIBNAME:.$(LIBSUFFIX)=.so).$(MAJOR_VERSION)
-+LIBDYNNAME   = $(LIBNAME:$(LIBSUFFIX)=).$(MAJOR_VERSION).dylib
++LIBDYNNAME   = $(LIBNAME:.$(LIBSUFFIX)=).$(MAJOR_VERSION).dylib
 +else
 +# Other case uses LIBPREFIX for SONAME. Primary lib file is
 +# libopenblas_cputypep-0.x.y.so, libopenblas.so.0 and libopenblas.so
