@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.2 2026/03/01 15:09:41 js Exp $
+$NetBSD: distinfo,v 1.3 2026/03/01 19:04:15 js Exp $
 
-BLAKE2s (trezor-agent-0.16.0.tar.gz) = e60c537b032bb2f9eae6d8dbc73ececc7e537f7fcad872c38b288b0645e829e1
-SHA512 (trezor-agent-0.16.0.tar.gz) = afa91d7ebe5e9582b5ad42823c538f8891906b1da531fc74280c66cbc0f534f1421d12d7313aeea5d9a7393f646d778e58a92d176f15526513c9b4b0dcade14d
-Size (trezor-agent-0.16.0.tar.gz) = 923834 bytes
-SHA1 (patch-libagent_device_trezor.py) = 4a8b21f237cabbc8a33ca38072e9d2d163b511bb
-SHA1 (patch-libagent_gpg_agent.py) = f38ac130c397bd6896beba2d6d7b876f60b67560
+BLAKE2s (trezor-agent-0.16.1.tar.gz) = c8a52c63135e6a77ffef63263048551d6c182182a9bcb506752f0e8d6a2fd205
+SHA512 (trezor-agent-0.16.1.tar.gz) = 4246c236138d45ddbf4e2da0471cee84f6004e946b3bcd12dc1460275f0b4fd98de41ea536e0f488085b7fd53d17f5e0f1a7842e0552ad39a540084f1ccd2f0d
+Size (trezor-agent-0.16.1.tar.gz) = 923857 bytes
 SHA1 (patch-setup.py) = bc0377560b88ee5c88a5249e42c2c505be9a0b59
