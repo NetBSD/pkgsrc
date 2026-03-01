@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2025/01/19 16:05:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.25 2026/03/01 07:39:18 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -7,6 +7,9 @@ ${GEM_LIBDIR}/Changelog.md
 ${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/generators/rspec.rb
+${GEM_LIBDIR}/lib/generators/rspec/authentication/authentication_generator.rb
+${GEM_LIBDIR}/lib/generators/rspec/authentication/templates/user_spec.rb
+${GEM_LIBDIR}/lib/generators/rspec/authentication/templates/users.yml
 ${GEM_LIBDIR}/lib/generators/rspec/channel/channel_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/channel/templates/channel_spec.rb.erb
 ${GEM_LIBDIR}/lib/generators/rspec/controller/controller_generator.rb
