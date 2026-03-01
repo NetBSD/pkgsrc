@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1472 2026/03/01 09:34:13 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1473 2026/03/01 10:03:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1994,3 +1994,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-lxml-html-clean to 0.4.4 [adam 2026-03-01]
 	Updated textproc/py-pdf to 6.7.4 [wiz 2026-03-01]
 	Updated textproc/rumdl to 0.1.33 [pin 2026-03-01]
+	Updated security/mozilla-rootcerts to 1.1.20260211 [wiz 2026-03-01]
