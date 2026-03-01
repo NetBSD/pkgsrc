@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2026/02/17 13:39:16 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/03/01 12:38:42 gdt Exp $
 
 DISTNAME=	lablgtk-3.1.5
 PKGNAME=	ocaml-${DISTNAME:S/lablgtk/lablgtk3/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=garrigue/}
 GITHUB_PROJECT=	lablgtk

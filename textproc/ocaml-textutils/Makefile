@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2026/02/17 13:39:13 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/03/01 12:38:39 gdt Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.15.0
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 GITHUB_PROJECT=	textutils

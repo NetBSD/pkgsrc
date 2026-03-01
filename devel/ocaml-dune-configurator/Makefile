@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2026/02/17 13:38:58 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/03/01 12:38:23 gdt Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../devel/ocaml-dune/Makefile.common"
 
 PKGNAME=	ocaml-dune-configurator-${DUNE_VERSION}
