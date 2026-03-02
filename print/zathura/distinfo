@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.19 2024/08/10 07:50:33 adam Exp $
+$NetBSD: distinfo,v 1.20 2026/03/02 13:29:45 yhardy Exp $
 
-BLAKE2s (zathura-0.5.8.tar.xz) = 32c5c7ef7387fafaf8591f7b507f15451813b10ba48df5b784ea771d09f951d0
-SHA512 (zathura-0.5.8.tar.xz) = 3a8d16597e07c0cc95632466e8c6a1aeb20324143732ca9c48f59de94de8577be64a7b4d44e0c1cee1f8211fa8bde89ac9866040b218421f95d7d13d8a6bd0c9
-Size (zathura-0.5.8.tar.xz) = 172524 bytes
+BLAKE2s (zathura-2026.02.22.tar.xz) = da122370d55814fa2965ec698fff6e9578549027881dd458340694bebd015b8f
+SHA512 (zathura-2026.02.22.tar.xz) = a4491b8c1752ff5942f2efbc3aed4f5fc258ea823d73e0418586de5e344295c7abed5925c5e8cd9186c4bf159f456aacab7ec3c4cf659af05b8f241483bca8df
+Size (zathura-2026.02.22.tar.xz) = 266772 bytes
 SHA1 (patch-doc_meson.build) = 18b2f9d78e9d249bde5c8dea8825b89a17a6ab3a
-SHA1 (patch-zathura_main.c) = 3c36f653653dfd806b28504e11c1a1aa847372ce
