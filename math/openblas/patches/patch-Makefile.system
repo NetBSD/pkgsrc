@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.system,v 1.5 2026/03/01 17:55:10 thor Exp $
+$NetBSD: patch-Makefile.system,v 1.6 2026/03/02 06:00:41 adam Exp $
 
 Fix FIXED_LIBNAME to result in a primary library with the usual so.0 ending,
 and matching SONAME, with the .so being a symlink. This is the expected
@@ -20,7 +20,18 @@ skipping linking if the file is already named like the link).
  # TO suppress recursive includes
  INCLUDED = 1
  
-@@ -1611,10 +1614,11 @@ else
+@@ -442,10 +445,8 @@ ifeq (x$(XCVER), x 15)
+ CCOMMON_OPT += -Wl,-ld_classic
+ FCOMMON_OPT += -Wl,-ld_classic
+ endif
+-ifeq ($(shell [ $(XCVER) -ge 16 ] && echo yes),yes)
+ override CEXTRALIB := $(filter-out(-lto_library, $(CEXTRALIB))) 
+ endif
+-endif
+ 
+ ifneq (,$(findstring $(OSNAME), FreeBSD OpenBSD DragonFly))
+ MD5SUM = md5 -r
+@@ -1611,10 +1612,11 @@ else
  LIBNAMEBASE = $(SYMPREFIX)$(LIBSONAMEBASE)$(SYMSUFFIX)$(LIBNAMESUFFIX)
  endif
  
@@ -34,7 +45,7 @@ skipping linking if the file is already named like the link).
  endif
  
  KERNELDIR	= $(TOPDIR)/kernel/$(ARCH)
-@@ -1814,15 +1818,27 @@ LIBNAME_P	= $(LIBPREFIX)p$(REVISION)_p.$
+@@ -1814,15 +1816,27 @@ LIBNAME_P	= $(LIBPREFIX)p$(REVISION)_p.$
  endif
  endif
  
