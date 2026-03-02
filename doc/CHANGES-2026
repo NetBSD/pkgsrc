@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1483 2026/03/02 07:44:05 jnemeth Exp $
+$NetBSD: CHANGES-2026,v 1.1484 2026/03/02 07:44:38 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2003,3 +2003,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/sendmail to 8.18.2 [jnemeth 2026-03-02]
 	Updated mail/libmilter to 8.18.2 [jnemeth 2026-03-02]
 	Updated mail/sendmail-qtool to 8.18.2 [jnemeth 2026-03-02]
+	Updated mail/sendmail-cidrexpand to 8.18.2 [jnemeth 2026-03-02]
