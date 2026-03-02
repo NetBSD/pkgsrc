@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/12/09 09:27:33 adam Exp $
+$NetBSD: distinfo,v 1.2 2026/03/02 11:48:44 adam Exp $
 
-BLAKE2s (zope_dottedname-7.0.tar.gz) = 32d46fe6761e9624a3d390c4ebb37bba70eaf954391ed8a9da2716f080178fb8
-SHA512 (zope_dottedname-7.0.tar.gz) = 3fee8c686b26409b0a6ac1258ce87fc8cca45f01a95f6bbc61cd6232b8c770c662fe615976aca637946ff30f931e8c7de82549c3a7816e46788d7a150ff71606
-Size (zope_dottedname-7.0.tar.gz) = 18322 bytes
+BLAKE2s (zope_dottedname-7.1.tar.gz) = b0c01a750d6a1347a2c0992196b7eced9f32796d1504d323436ef75ccbfc76f3
+SHA512 (zope_dottedname-7.1.tar.gz) = 57f89815477f70c41603bde13613e68d210ef1ab5ae97ebdb4e8bef60d233e5adc223f53b91fb83ed7d6a64c9847da6be7342784e94cf6ff61fbd2c9c482833b
+Size (zope_dottedname-7.1.tar.gz) = 18594 bytes
