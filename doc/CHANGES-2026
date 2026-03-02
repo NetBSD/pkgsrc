@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1493 2026/03/02 12:08:25 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1494 2026/03/02 12:09:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2020,3 +2020,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-zope.dottedname to 7.1 [adam 2026-03-02]
 	Updated emulators/jgenesis to 0.11.2 [pin 2026-03-02]
 	Updated graphics/geeqie to 2.7 [wiz 2026-03-02]
+	Updated net/lagrange to 1.19.4 [pin 2026-03-02]
