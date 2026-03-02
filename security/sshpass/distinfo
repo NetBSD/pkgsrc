@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:18:03 nia Exp $
+$NetBSD: distinfo,v 1.6 2026/03/02 16:13:51 ryoon Exp $
 
-BLAKE2s (sshpass-1.06.tar.gz) = 9d5c084966aed4ac31e277198b7f48e28c534525c3bd15849db287ba3a69a99a
-SHA512 (sshpass-1.06.tar.gz) = fc08fcca5aaa5e4958f16d38116d828739a5d53f8e2a83506ef78ee602941a7bfc0e3f07154dc390660df490dbdf7601e0c7ec17c68c9627d72d565e4c6717f8
-Size (sshpass-1.06.tar.gz) = 112205 bytes
-SHA1 (patch-main.c) = c9a5f66833d66a5920e17a2b783fd226cf2f934d
+BLAKE2s (sshpass-1.10.tar.gz) = 8d27fa43526de8ddb902352065f34ca23f0d0d77e5751e5e6f1da65c03f6a090
+SHA512 (sshpass-1.10.tar.gz) = d0fbceb956baee79803fec8bd9a2e0d1e342cbc90fb8bb4baa5a01914f870393f43bd07b62aa1da208318b4971005b9bbccf0e926c590124de11a272169db81d
+Size (sshpass-1.10.tar.gz) = 139652 bytes
