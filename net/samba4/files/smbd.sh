@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: smbd.sh,v 1.2 2021/06/21 10:23:48 nia Exp $
+# $NetBSD: smbd.sh,v 1.3 2026/03/02 10:07:44 adam Exp $
 #
 # PROVIDE: smbd
 
@@ -39,5 +39,4 @@ smbd_precmd()
 
 
 load_rc_config $name
-load_rc_config_var nmbd nmbd
 run_rc_command "$1"
