@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.35 2025/12/01 18:21:05 gdt Exp $
+$NetBSD: distinfo,v 1.36 2026/03/02 13:52:17 gdt Exp $
 
-BLAKE2s (proj-9.7.1.tar.gz) = d9afff04a8af1fbd7a5921c75ddd76b3a49ab66e5e2697846e6ee0aa9a5c1e0b
-SHA512 (proj-9.7.1.tar.gz) = fc5a35b8c89deeb4901bf77906fff009a0e7de3c96d26f5f40c6ad8620f5614700227fa80d8fbd38c737742ae813af4fdd3cb0bdc64abd8683f23ada5208d1fd
-Size (proj-9.7.1.tar.gz) = 5915221 bytes
-SHA1 (patch-CMakeLists.txt) = 4135a5cf31ed23a75b8c0b7367458642980776dd
+BLAKE2s (proj-9.8.0.tar.gz) = 802fd5ed4c0759a6eda8a7ce51bfe3ddf20bbb16349e87fc6cb719d1d362e113
+SHA512 (proj-9.8.0.tar.gz) = 892dd0c3a29176d6068b7c8329fd6d6cdbfc0fd15a483ca5d36939c180d25ff2896c6824fd10477ef8bae7578ad466eb16a087c264d67c5c6e34855331902bdf
+Size (proj-9.8.0.tar.gz) = 5980467 bytes

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2026/02/06 10:04:56 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2026/03/02 13:52:17 gdt Exp $
 
-VERSION_BASE=	9.7.1
+VERSION_BASE=	9.8.0
 # Accommodate testing RCs (names like 9.0RC1, unpacking to 9.0).
 #VERSION_RC=	RC1
 VERSION=	${VERSION_BASE}${VERSION_RC}
@@ -8,7 +8,6 @@ WRKFINAL=	proj-${VERSION_BASE}
 WRKSRC=		${WRKDIR}/${WRKFINAL}
 DISTNAME=	proj-${VERSION}
 #PKGREVISION=	0
-PKGREVISION=	2
 CATEGORIES=	geography
 MASTER_SITES=	https://download.osgeo.org/proj/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -24,7 +23,7 @@ PREV_PKGPATH=		misc/proj
 
 USE_LANGUAGES=		c c++
 USE_CC_FEATURES=	c99
-USE_CXX_FEATURES=	c++11
+USE_CXX_FEATURES=	c++17
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
@@ -44,7 +43,7 @@ CMAKE_CONFIGURE_ARGS+=	-DEMBED_RESOURCE_FILES=OFF
 #CFLAGS+=		-DHAVE_C99_MATH=0
 #.endif
 
-# \todo Document, file uprsteam, and add uptream bug report URL.
+# \todo Document, file upstream, and add uptream bug report URL.
 CXXFLAGS.SunOS+=	-fpermissive
 
 # proj has tests that rely on precise IEEE754 double results, and fail
@@ -58,6 +57,9 @@ CXXFLAGS.SunOS+=	-fpermissive
 .if (${MACHINE_ARCH} == "i386")
 CFLAGS+=		-ffloat-store
 .endif
+
+PLIST_SUBST+=		VERSION=${VERSION_BASE}
+PRINT_PLIST_AWK+=	{ gsub(/${VERSION_BASE}/, "$${VERSION}") }
 
 # Tests fail on NetBSD 9 earmv7hf-el, but this is apparently a bug in
 # GNU ld < 2.33:
