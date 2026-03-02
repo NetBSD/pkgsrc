@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2026/02/15 14:09:28 adam Exp $
+# $NetBSD: Makefile,v 1.24 2026/03/02 12:21:31 adam Exp $
 
-DISTNAME=	line_profiler-5.0.1
+DISTNAME=	line_profiler-5.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/line_profiler/}
