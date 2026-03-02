@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1490 2026/03/02 11:42:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1491 2026/03/02 11:49:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2016,3 +2016,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/dasel to 3.3.1 [wiz 2026-03-02]
 	Updated security/py-authlib to 1.6.9 [adam 2026-03-02]
 	Updated textproc/py-pdf to 6.7.5 [adam 2026-03-02]
+	Updated textproc/py-uc-micro-py to 2.0.0 [adam 2026-03-02]
+	Updated textproc/py-zope.dottedname to 7.1 [adam 2026-03-02]
