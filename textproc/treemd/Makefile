@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2026/03/02 12:11:14 pin Exp $
+# $NetBSD: Makefile,v 1.18 2026/03/02 12:17:33 pin Exp $
 
 DISTNAME=	treemd-0.5.8
 CATEGORIES=	textproc
@@ -15,7 +15,7 @@ LICENSE=	mit
 RUST_REQ=	1.90.0
 USE_TOOLS+=	pkg-config
 
-#DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
+DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
