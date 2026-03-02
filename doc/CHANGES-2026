@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1486 2026/03/02 08:31:30 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1487 2026/03/02 10:15:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2010,3 +2010,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/py-types-python-dateutil to 2.9.0.20260302 [adam 2026-03-02]
 	Updated devel/py-maturin to 1.12.6 [adam 2026-03-02]
 	Updated devel/py-ruff to 0.15.4 [adam 2026-03-02]
+	Updated net/samba4 to 4.23.6 [adam 2026-03-02]
+	Updated graphics/freetype2 to 2.14.2 [adam 2026-03-02]
