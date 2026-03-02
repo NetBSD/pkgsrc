@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1485 2026/03/02 08:12:28 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1486 2026/03/02 08:31:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2008,3 +2008,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/sendmail-cidrexpand to 8.18.2 [jnemeth 2026-03-02]
 	Updated www/py-yarl to 1.23.0 [adam 2026-03-02]
 	Updated time/py-types-python-dateutil to 2.9.0.20260302 [adam 2026-03-02]
+	Updated devel/py-maturin to 1.12.6 [adam 2026-03-02]
+	Updated devel/py-ruff to 0.15.4 [adam 2026-03-02]
