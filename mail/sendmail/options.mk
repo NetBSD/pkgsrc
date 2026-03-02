@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.27 2024/01/15 04:43:22 jnemeth Exp $
+# $NetBSD: options.mk,v 1.28 2026/03/02 07:39:29 jnemeth Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmail
 PKG_SUPPORTED_OPTIONS=	inet6 db2 db4 ldap sasl tls tcpwrappers
@@ -9,10 +9,11 @@ PKG_SUGGESTED_OPTIONS=	inet6 tcpwrappers tls
 .include "../../mk/bsd.prefs.mk"
 
 .for dir in ${COMPILER_INCLUDE_DIRS}
-.  if exists(${dir}/blacklist.h)
-PKG_SUPPORTED_OPTIONS+=		blacklist
-PKG_SUGGESTED_OPTIONS+=		blacklist
-PKG_OPTIONS_LEGACY_OPTS+=	blacklistd:blacklist
+.  if exists(${dir}/blocklist.h)
+PKG_SUPPORTED_OPTIONS+=		blocklist
+PKG_SUGGESTED_OPTIONS+=		blocklist
+PKG_OPTIONS_LEGACY_OPTS+=	blacklistd:blocklist
+PKG_OPTIONS_LEGACY_OPTS+=	blacklist:blocklist
 .  endif
 .endfor
 
@@ -75,7 +76,7 @@ PKG_OPTIONS_LEGACY_OPTS+=	starttls:tls ffr_tls_1:sendmail-ffr-tls
 .endif
 
 ###
-### NetBSD blacklistd(8) support.
+### NetBSD blocklistd(8) support.
 ###
 # Nothing to do here, activation is done in Makefile
 

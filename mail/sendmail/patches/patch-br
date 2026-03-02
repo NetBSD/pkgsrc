@@ -1,4 +1,4 @@
-$NetBSD: patch-br,v 1.1 2019/07/15 05:30:33 jnemeth Exp $
+$NetBSD: patch-br,v 1.2 2026/03/02 07:39:30 jnemeth Exp $
 
 --- cf/m4/proto.m4.orig	2015-05-22 13:42:27.000000000 +0000
 +++ cf/m4/proto.m4
@@ -6,8 +6,8 @@ $NetBSD: patch-br,v 1.1 2019/07/15 05:30:33 jnemeth Exp $
  # Name to use for EHLO (defaults to $j)
  _OPTION(HeloName, `confHELO_NAME')
  
-+# blacklistd
-+_OPTION(UseBlacklist, `confUSE_BLACKLIST', `False')
++# blocklistd
++_OPTION(UseBlocklist, `confUSE_BLOCKLIST', `False')
 +
  ifdef(`_NEED_SMTPOPMODES_', `dnl
  # SMTP operation modes

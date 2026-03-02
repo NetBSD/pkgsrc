@@ -1,9 +1,9 @@
-$NetBSD: patch-at,v 1.4 2024/02/12 03:23:06 jnemeth Exp $
+$NetBSD: patch-at,v 1.5 2026/03/02 07:39:29 jnemeth Exp $
 
---- sendmail/domain.c.orig	2024-01-31 06:38:32.000000000 +0000
+--- sendmail/domain.c.orig	2025-11-26 16:02:45.000000000 +0000
 +++ sendmail/domain.c
-@@ -23,6 +23,7 @@ SM_RCSID("@(#)$Id: domain.c,v 8.205 2013
- #include <sm/sendmail.h>
+@@ -27,6 +27,7 @@ SM_RCSID("@(#)$Id: domain.c,v 8.205 2013
+ #endif
  
  #if NAMED_BIND
 +extern struct __res_state sm_res;
@@ -19,7 +19,7 @@ $NetBSD: patch-at,v 1.4 2024/02/12 03:23:06 jnemeth Exp $
  # endif
  
  # ifndef HFIXEDSZ
-@@ -909,9 +910,9 @@ getmxrr(host, mxhosts, mxprefs, flags, r
+@@ -877,9 +878,9 @@ getmxrr(host, mxhosts, mxprefs, flags, r
  # if DANE
  	cname2mx = false;
  	qname[0] = '\0';
@@ -31,7 +31,7 @@ $NetBSD: patch-at,v 1.4 2024/02/12 03:23:06 jnemeth Exp $
  # endif
  
  	if ((fallbackMX != NULL && (flags & DROPLOCALHOST) != 0 &&
-@@ -1072,7 +1073,7 @@ getmxrr(host, mxhosts, mxprefs, flags, r
+@@ -1040,7 +1041,7 @@ getmxrr(host, mxhosts, mxprefs, flags, r
  # endif
  		if (type != T_MX)
  		{
@@ -40,7 +40,7 @@ $NetBSD: patch-at,v 1.4 2024/02/12 03:23:06 jnemeth Exp $
  # if DANE
  			    && type != T_RRSIG
  # endif
-@@ -1410,13 +1411,13 @@ punt:
+@@ -1378,13 +1379,13 @@ punt:
  	}
      done:
  # if DANE
@@ -56,7 +56,7 @@ $NetBSD: patch-at,v 1.4 2024/02/12 03:23:06 jnemeth Exp $
  # endif
  	return -1;
  }
-@@ -1486,7 +1487,7 @@ bestmx_map_lookup(map, name, av, statp)
+@@ -1454,7 +1455,7 @@ bestmx_map_lookup(map, name, av, statp)
  	int *statp;
  {
  	int nmx;
@@ -65,7 +65,7 @@ $NetBSD: patch-at,v 1.4 2024/02/12 03:23:06 jnemeth Exp $
  	int i;
  	ssize_t len = 0;
  	char *result;
-@@ -1498,9 +1499,9 @@ bestmx_map_lookup(map, name, av, statp)
+@@ -1466,9 +1467,9 @@ bestmx_map_lookup(map, name, av, statp)
  	char buf[PSBUFSIZE / 2];
  # endif
  
@@ -77,23 +77,34 @@ $NetBSD: patch-at,v 1.4 2024/02/12 03:23:06 jnemeth Exp $
  	if (nmx <= 0)
  		return NULL;
  	if (bitset(MF_MATCHONLY, map->map_mflags))
-@@ -1650,16 +1651,22 @@ dns_getcanonname(host, hbsize, trymx, st
+@@ -1621,22 +1622,28 @@ dns_getcanonname(host, hbsize, trymx, st
  	if (tTd(8, 2))
  		sm_dprintf("dns_getcanonname(%s, trymx=%d)\n", host, trymx);
  
--	if ((_res.options & RES_INIT) == 0 && res_init() == -1)
+-	if (!bitset(RES_INIT, _res.options) && res_init() == -1)
 -	{
+-		if (LogLevel > 7)
+-			sm_syslog(LOG_ERR, NOQID,
+-				"res_init()=failed, h_errno=%d", h_errno);
 -		*statp = EX_UNAVAILABLE;
--		return HOST_NOTFOUND;
+-# if _FFR_DNS_ERR_NAME
+-		DNSErrName = sm_strdup(host);
 +	if ((sm_res.options & RES_INIT) == 0) {
 +# if NAMED_RESN
 +		memset(&sm_res, 0, sizeof(sm_res));
 +		if (res_ninit(&sm_res) == -1) {
 +# else
 +		if (res_init() == -1) {
-+# endif
+ # endif
+-		return HOST_NOTFOUND;
++			if (LogLevel > 7)
++				sm_syslog(LOG_ERR, NOQID,
++					"res_init()=failed, h_errno=%d", h_errno);
 +			*statp = EX_UNAVAILABLE;
-+			return false;
++	# if _FFR_DNS_ERR_NAME
++			DNSErrName = sm_strdup(host);
++	# endif
++			return HOST_NOTFOUND;
 +		}
  	}
  
@@ -106,7 +117,7 @@ $NetBSD: patch-at,v 1.4 2024/02/12 03:23:06 jnemeth Exp $
  # endif
  
  	*statp = EX_OK;
-@@ -1709,7 +1716,7 @@ cnameloop:
+@@ -1686,7 +1693,7 @@ cnameloop:
  		searchlist[sli++] = NameSearchList;
  	}
  # endif
@@ -115,7 +126,7 @@ $NetBSD: patch-at,v 1.4 2024/02/12 03:23:06 jnemeth Exp $
  	{
  		/* make sure there are less than MAXDNSRCH domains */
  		for (domain = RES_DNSRCH_VARIABLE, ret = 0;
-@@ -1717,10 +1724,10 @@ cnameloop:
+@@ -1694,10 +1701,10 @@ cnameloop:
  		     ret++)
  			searchlist[sli++] = *domain++;
  	}
@@ -128,7 +139,7 @@ $NetBSD: patch-at,v 1.4 2024/02/12 03:23:06 jnemeth Exp $
  	}
  	else if (*cp == '.')
  	{
-@@ -2026,13 +2033,13 @@ nexttype:
+@@ -2003,13 +2010,13 @@ nexttype:
  	if (ttl > 0 && pttl != NULL)
  		*pttl = ttl;
  # if DANE
@@ -142,5 +153,5 @@ $NetBSD: patch-at,v 1.4 2024/02/12 03:23:06 jnemeth Exp $
 -	_res.options = old_options;
 +	sm_res.options = old_options;
  # endif
- 	return HOST_NOTFOUND;
- }
+ # if _FFR_DNS_ERR_NAME
+ 	DNSErrName = sm_strdup(host);

@@ -1,6 +1,6 @@
-$NetBSD: patch-ay,v 1.4 2024/01/15 04:43:22 jnemeth Exp $
+$NetBSD: patch-ay,v 1.5 2026/03/02 07:39:29 jnemeth Exp $
 
---- sendmail/sm_resolve.c.orig	2023-02-09 18:24:38.000000000 +0000
+--- sendmail/sm_resolve.c.orig	2025-11-26 16:08:32.000000000 +0000
 +++ sendmail/sm_resolve.c
 @@ -61,2 +61,6 @@ SM_RCSID("$Id: sm_resolve.c,v 8.40 2013-
  
@@ -114,8 +114,16 @@ $NetBSD: patch-ay,v 1.4 2024/01/15 04:43:22 jnemeth Exp $
 +		sm_res.nsaddr_list[nsidx].sin_port = htons(port);
 +	sm_res.nscount = ++nsidx;
  	if (tTd(8, 61))
-@@ -1639,3 +1656,3 @@ nsportip(p)
+@@ -1639,4 +1656,10 @@ nsportip(p)
  	{
--		if ((_res.options & RES_INIT) == 0)
-+		if ((sm_res.options & RES_INIT) == 0)
- 			(void) res_init();
+-		if (!bitset(RES_INIT, _res.options))
+-			(void) res_init();
++		if ((sm_res.options & RES_INIT) == 0) {
++# if NAMED_RESN
++			memset(&sm_res, 0, sizeof(sm_res));
++			(void) res_ninit(&sm_res)
++# else
++			(void) res_init()
++# endif
++		}
+ 		dns_addns(&nsip, port);
