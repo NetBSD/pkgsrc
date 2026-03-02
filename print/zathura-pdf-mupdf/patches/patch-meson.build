@@ -1,18 +1,18 @@
-$NetBSD: patch-meson.build,v 1.6 2025/07/21 20:53:04 yhardy Exp $
+$NetBSD: patch-meson.build,v 1.7 2026/03/02 13:31:38 yhardy Exp $
 
 Link against mupdf normally, not assuming static linking.
 
---- meson.build.orig	2024-08-04 08:34:58.000000000 +0000
+--- meson.build.orig	2026-03-02 08:55:03.310455962 +0000
 +++ meson.build
-@@ -22,7 +22,7 @@ zathura = dependency('zathura', version:
- girara = dependency('girara-gtk3')
+@@ -23,7 +23,7 @@ cairo = dependency('cairo')
+ girara = dependency('girara')
  glib = dependency('glib-2.0')
  cairo = dependency('cairo')
 -mupdf = dependency('mupdf', required: false, version: '>=@0@.@1@'.format(mupdf_required_version_major, mupdf_required_version_minor))
 +mupdf = dependency('mupdf', version: '>=@0@.@1@'.format(mupdf_required_version_major, mupdf_required_version_minor))
- mupdfthird = cc.find_library('mupdf-third')
  
  build_dependencies = [
+   zathura,
 @@ -32,7 +32,7 @@ build_dependencies = [
    cairo,
  ]
@@ -21,12 +21,13 @@ Link against mupdf normally, not assuming static linking.
 +if mupdf.found()
    # normal build of mupdf
    mupdf = cc.find_library('mupdf', has_headers: ['mupdf/fitz/version.h', 'mupdf/fitz.h', 'mupdf/pdf.h'], required: true)
-   version_check = '''
-@@ -47,6 +47,20 @@ if not mupdf.found()
+   mupdfthird = cc.find_library('mupdf-third')
+@@ -48,6 +48,22 @@ if not mupdf.found()
    endif
  
    build_dependencies += [mupdf, mupdfthird]
 +
++  libbrotlienc = dependency('libbrotlienc')
 +  libjpeg = dependency('libjpeg')
 +  libjbig2dec = cc.find_library('jbig2dec')
 +  libopenjp2 = dependency('libopenjp2')
@@ -34,6 +35,7 @@ Link against mupdf normally, not assuming static linking.
 +  mujs = dependency('mujs')
 +
 +  build_dependencies += [
++    libbrotlienc,
 +    libjpeg,
 +    libjbig2dec,
 +    libopenjp2,
@@ -42,4 +44,4 @@ Link against mupdf normally, not assuming static linking.
 +  ]
  else
    # build from Debian's libmupdf-dev
-   build_dependencies += [mupdf, mupdfthird]
+   build_dependencies += [mupdf]
