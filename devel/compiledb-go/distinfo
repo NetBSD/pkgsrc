@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2025/04/12 06:41:55 wiz Exp $
+$NetBSD: distinfo,v 1.8 2026/03/02 11:37:32 wiz Exp $
 
-BLAKE2s (compiledb-go-1.5.2.tar.gz) = 02d0a5fd29e98667b4dd8a61daa0d5e4f57ae80a7a99fdd87134609848590c3c
-SHA512 (compiledb-go-1.5.2.tar.gz) = 8d994e01a25cd5443e8ec704c326c2e8d2d9067068d1b8d002f867ad9a4544d8c375d0ffca5926c5e74327187e4da111e7911ac3cf967fc992577812c57098d4
-Size (compiledb-go-1.5.2.tar.gz) = 23117 bytes
+BLAKE2s (compiledb-go-1.5.4.tar.gz) = cd5f4705ee869cfd68dc19730a9cb348ae68db2c715e0aa66d65902eedce892c
+SHA512 (compiledb-go-1.5.4.tar.gz) = 459184abc8fa785fbd91489be95a61cb4db0b3b0fa5b69f0edce6d9c02afd91ba4a00d1ad781d2f12bd11fce21b9d6b164f4da8bc66e202940af3a2710f64849
+Size (compiledb-go-1.5.4.tar.gz) = 23922 bytes
 BLAKE2s (github.com_cpuguy83_go-md2man_v2_@v_v2.0.4.mod) = 5d28aa7bd4d3be65c094ff1eff00044ed7a895928d188f7a279b5bd9a596d393
 SHA512 (github.com_cpuguy83_go-md2man_v2_@v_v2.0.4.mod) = d39412bb14c058291d07276337f802547bfb1a682cc65199cb04334f8089b6ea5d4d73587c2765c518f9e27fa3421c276eaea616d7cfbe36a2a244326edf1cb5
 Size (github.com_cpuguy83_go-md2man_v2_@v_v2.0.4.mod) = 100 bytes
@@ -15,6 +15,12 @@ Size (github.com_davecgh_go-spew_@v_v1.1.0.mod) = 34 bytes
 BLAKE2s (github.com_davecgh_go-spew_@v_v1.1.1.mod) = eee11d0ec5d2260dc11d9bfe8f9d523e54530b71cc8357f43c0214b3b74bef5c
 SHA512 (github.com_davecgh_go-spew_@v_v1.1.1.mod) = 5e079462f7e0dff0efda71f580aa185700cfa936b718a19d0e2a8c63212e47a07022dca0c282832d48e5165aae8e82aeeeb2ac3664268f1148fc772010fb860e
 Size (github.com_davecgh_go-spew_@v_v1.1.1.mod) = 34 bytes
+BLAKE2s (github.com_mattn_go-shellwords_@v_v1.0.12.mod) = f30e6044a95a1d7c205a42356ff66be576f3764237dcc5f5a444e1322b0b6bd4
+SHA512 (github.com_mattn_go-shellwords_@v_v1.0.12.mod) = c1a6d910b914ceef7ffea53c61f2225ebffeba2fc87c290aebdb739bf520494e35fef046eb9ced4fc9a3767523efefcce41ef5026fe11bad97c005b8e55d96f8
+Size (github.com_mattn_go-shellwords_@v_v1.0.12.mod) = 47 bytes
+BLAKE2s (github.com_mattn_go-shellwords_@v_v1.0.12.zip) = 4c6f30561a0a34bef64e9a85aa5f1ce7ed9f6ce73beab039a0bb5ed78fd2d99f
+SHA512 (github.com_mattn_go-shellwords_@v_v1.0.12.zip) = 9ad6072ad5f2034e9f2c96870a58eb41ab50c563f7d9cbb952e989e7d6e2479100f39606e09ccad66d826b3f52a39d330a06f4f1ec995dcc5acbcd5809733e8f
+Size (github.com_mattn_go-shellwords_@v_v1.0.12.zip) = 9134 bytes
 BLAKE2s (github.com_pmezard_go-difflib_@v_v1.0.0.mod) = 365dee34dcd09f0fbcccb2fff0be74a00fe71a80b9104b1ad3a3c199a48f5a28
 SHA512 (github.com_pmezard_go-difflib_@v_v1.0.0.mod) = c3d5c48cdb8ba6af7071a07cfede06e0ab67e3726d9de592a952fad40167dcbdd9621dc2c4df1bd3c28eb99d70b1b6d8d812441237c35bf492e5b7f07bd33902
 Size (github.com_pmezard_go-difflib_@v_v1.0.0.mod) = 37 bytes

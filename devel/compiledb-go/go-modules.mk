@@ -1,9 +1,11 @@
-# $NetBSD: go-modules.mk,v 1.2 2024/10/13 07:44:04 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.3 2026/03/02 11:37:32 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.4.mod
 GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.4.zip
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.mod
+GO_MODULE_FILES+=	github.com/mattn/go-shellwords/@v/v1.0.12.mod
+GO_MODULE_FILES+=	github.com/mattn/go-shellwords/@v/v1.0.12.zip
 GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/russross/blackfriday/v2/@v/v2.1.0.mod
 GO_MODULE_FILES+=	github.com/russross/blackfriday/v2/@v/v2.1.0.zip
