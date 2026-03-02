@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1480 2026/03/02 00:22:43 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1481 2026/03/02 07:39:44 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2000,3 +2000,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-trezor-agent to 0.13.0 [js 2026-03-01]
 	Updated security/py-libagent to 0.16.1 [js 2026-03-01]
 	Updated misc/ascii to 3.32 [wiz 2026-03-01]
+	Updated mail/sendmail to 8.18.2 [jnemeth 2026-03-02]
