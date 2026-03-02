@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1518 2026/03/02 15:03:06 abs Exp $
+$NetBSD: CHANGES-2026,v 1.1519 2026/03/02 15:20:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2046,3 +2046,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/proj to 9.8.0 [gdt 2026-03-02]
 	Updated x11/py-sip6 to 6.15.1 [gdt 2026-03-02]
 	Updated net/syncthing to 1.30.0 [abs 2026-03-02]
+	Updated geography/py-maxminddb to 3.1.0 [adam 2026-03-02]
+	Updated devel/py-fakefs to 6.1.3 [adam 2026-03-02]
