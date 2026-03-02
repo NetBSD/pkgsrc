@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1502 2026/03/02 12:26:30 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1503 2026/03/02 12:29:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2032,3 +2032,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/tree-sitter to 0.26.6 [wiz 2026-03-02]
 	Updated textproc/py-linkify-it-py to 2.1.0 [adam 2026-03-02]
 	Updated devel/py-line_profiler to 5.0.2 [adam 2026-03-02]
+	Updated net/slumber to 5.1.1 [wiz 2026-03-02]
