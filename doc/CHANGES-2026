@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1499 2026/03/02 12:13:21 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1500 2026/03/02 12:13:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2028,3 +2028,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/libmaxminddb to 1.13.2 [wiz 2026-03-02]
 	Updated www/py-pook to 2.1.5 [adam 2026-03-02]
 	Updated devel/py-testtools to 2.8.5 [adam 2026-03-02]
+	Updated textproc/tree-sitter-markdown to 0.5.3 [wiz 2026-03-02]
