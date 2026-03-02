@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1497 2026/03/02 12:11:52 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1498 2026/03/02 12:12:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2028,3 +2028,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/moor to 2.11.0 [wiz 2026-03-02]
 >>>>>>> 1.1496
 	Updated textproc/treemd to 0.5.8 [pin 2026-03-02]
+	Updated geography/libmaxminddb to 1.13.2 [wiz 2026-03-02]
