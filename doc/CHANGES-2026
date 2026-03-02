@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1503 2026/03/02 12:29:59 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1504 2026/03/02 12:43:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2033,3 +2033,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-linkify-it-py to 2.1.0 [adam 2026-03-02]
 	Updated devel/py-line_profiler to 5.0.2 [adam 2026-03-02]
 	Updated net/slumber to 5.1.1 [wiz 2026-03-02]
+	Updated devel/py-hatchling to 1.29.0 [wiz 2026-03-02]
