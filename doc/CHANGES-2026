@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1508 2026/03/02 12:53:19 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1509 2026/03/02 13:28:52 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2036,3 +2036,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-isort to 8.0.1 [wiz 2026-03-02]
 	Updated graphics/py-pillow_heif to 1.3.0 [wiz 2026-03-02]
 	Updated textproc/py-sphinx-autodoc-typehints to 3.9.3 [wiz 2026-03-02]
+	Updated graphics/girara to 2026.02.04 [yhardy 2026-03-02]
