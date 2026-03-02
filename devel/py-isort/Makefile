@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2026/02/22 13:31:56 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/03/02 12:47:36 wiz Exp $
 
-DISTNAME=	isort-8.0.0
+DISTNAME=	isort-8.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/isort/}
@@ -23,11 +23,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-toml>=0.10.2:../../textproc/py-toml
 
 USE_LANGUAGES=	# none
 
-# for testing:
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
-# 5 failed, 552 passed, 1 skipped, 1 xpassed, 2 errors
+# as of 8.0.1
+# 5 failed, 553 passed, 1 skipped, 1 xpassed, 2 errors
 
 post-install:
 .for bin in isort isort-identify-imports
