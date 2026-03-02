@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2026/03/02 20:25:53 yhardy Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/trio_websocket/__init__.py
+${PYSITELIB}/trio_websocket/__init__.pyc
+${PYSITELIB}/trio_websocket/__init__.pyo
+${PYSITELIB}/trio_websocket/_impl.py
+${PYSITELIB}/trio_websocket/_impl.pyc
+${PYSITELIB}/trio_websocket/_impl.pyo
+${PYSITELIB}/trio_websocket/_version.py
+${PYSITELIB}/trio_websocket/_version.pyc
+${PYSITELIB}/trio_websocket/_version.pyo
+${PYSITELIB}/trio_websocket/py.typed
