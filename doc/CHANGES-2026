@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1517 2026/03/02 15:00:54 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.1518 2026/03/02 15:03:06 abs Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2045,3 +2045,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/zathura-djvu to 2026.02.03 [yhardy 2026-03-02]
 	Updated geography/proj to 9.8.0 [gdt 2026-03-02]
 	Updated x11/py-sip6 to 6.15.1 [gdt 2026-03-02]
+	Updated net/syncthing to 1.30.0 [abs 2026-03-02]
