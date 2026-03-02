@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1521 2026/03/02 16:14:02 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.1522 2026/03/02 20:31:32 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2050,3 +2050,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-fakefs to 6.1.3 [adam 2026-03-02]
 	Updated shells/nushell to 0.111.0 [pin 2026-03-02]
 	Updated security/sshpass to 1.10 [ryoon 2026-03-02]
+	Updated multimedia/streamlink to 8.1.2 [yhardy 2026-03-02]
