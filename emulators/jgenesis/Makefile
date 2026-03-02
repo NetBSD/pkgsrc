@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/10/23 20:36:49 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/03/02 12:07:43 pin Exp $
 
-DISTNAME=	jgenesis-0.10.1
-PKGREVISION=	1
+DISTNAME=	jgenesis-0.11.2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jsgroth/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,10 +14,11 @@ DEPENDS+=	zenity-[0-9]*:../../x11/zenity
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.88.0
+#RUST_REQ=	1.93.1
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.88.0 on amd64
-USE_TOOLS+=	pkg-config
+#This package is confirmed to build with Rust 1.93.1 on amd64
+USE_LANGUAGES+=		c c++
+USE_TOOLS+=		pkg-config
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
@@ -51,5 +51,5 @@ DEPENDS+=	xrandr-[0-9]*:../../x11/xrandr
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
-.include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/SDL3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
