@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1484 2026/03/02 07:44:38 jnemeth Exp $
+$NetBSD: CHANGES-2026,v 1.1485 2026/03/02 08:12:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -1996,6 +1996,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/mozilla-rootcerts to 1.1.20260211 [wiz 2026-03-01]
 	Updated security/mozilla-rootcerts-openssl to 2.21 [wiz 2026-03-01]
 	Removed devel/py-inquirer [js 2026-03-01]
+	Updated graphics/exiv2 to 0.28.8 [adam 2026-03-01]
+	Updated databases/py-peewee to 4.0.1 [adam 2026-03-01]
 	Updated security/py-libagent to 0.16.0 [js 2026-03-01]
 	Updated security/py-trezor-agent to 0.13.0 [js 2026-03-01]
 	Updated security/py-libagent to 0.16.1 [js 2026-03-01]
@@ -2004,3 +2006,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/libmilter to 8.18.2 [jnemeth 2026-03-02]
 	Updated mail/sendmail-qtool to 8.18.2 [jnemeth 2026-03-02]
 	Updated mail/sendmail-cidrexpand to 8.18.2 [jnemeth 2026-03-02]
+	Updated www/py-yarl to 1.23.0 [adam 2026-03-02]
+	Updated time/py-types-python-dateutil to 2.9.0.20260302 [adam 2026-03-02]
