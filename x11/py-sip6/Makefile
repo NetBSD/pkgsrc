@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2025/11/11 12:37:45 adam Exp $
+# $NetBSD: Makefile,v 1.31 2026/03/02 15:00:18 gdt Exp $
 
 # Before updating sip, geography/qgis (as the most demanding sip user
 # currently known) must be tested to build and run (with an actual
@@ -16,7 +16,7 @@
 # other packaging systems -- the MAINTAINER's decision is that lack of
 # trouble is more important than fast updates.
 
-DISTNAME=	sip-6.14.0
+DISTNAME=	sip-6.15.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/sip/sip6/}
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sip/}
@@ -42,6 +42,12 @@ PYTHON_SELF_CONFLICT=	yes
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
 .endif
+
+# Tests are broken.
+# https://github.com/Python-SIP/sip/issues/103
+TEST_DEPENDS+=     ${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=     ${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=     ${PYPKGPREFIX}-anyio-[0-9]*:../../devel/py-anyio
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
