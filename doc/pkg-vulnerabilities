@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.740 2026/03/02 22:13:05 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.741 2026/03/02 22:42:24 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29967,3 +29967,54 @@ firefox<148.0		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/a
 firefox115<115.33	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2026-14/
 firefox140<140.8	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2026-15/
 thunderbird<148.0	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2026-16/
+ImageMagick<7.1.2.15	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-27798
+ImageMagick6<6.9.13.40	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-27798
+ImageMagick<7.1.2.15	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-27799
+ImageMagick6<6.9.13.40	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-27799
+calibre<9.4.0	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2026-27810
+calibre<9.4.0	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2026-27824
+exiv2<0.28.8	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-25884
+exiv2<0.28.8	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-27596
+exiv2<0.28.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-27631
+freerdp2<2.11.8	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-25941
+freerdp2<3.23.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-25942
+freerdp2<3.23.0	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2026-25952
+freerdp2<3.23.0	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2026-25953
+freerdp2<3.23.0	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2026-25954
+freerdp2<3.23.0	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2026-25955
+freerdp2<3.23.0	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2026-25959
+freerdp2<3.23.0	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2026-25997
+freerdp2<3.23.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-26271
+freerdp2<3.23.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-26955
+freerdp2<3.23.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-26965
+freerdp2<3.23.0	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2026-26986
+freerdp2<3.23.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-27015
+freerdp2<3.23.0	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2026-27950
+freerdp2<3.23.0	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-27951
+freetype2<2.14.2	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-23865
+gpac<26.02.0	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-27821
+grafana<12.4.1	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2026-21725
+gvfs<1.56.2	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2026-28295
+gvfs<1.56.2	crlf-attack	https://nvd.nist.gov/vuln/detail/CVE-2026-28296
+inetutils<2.8	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2026-28372
+libvips-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-3281
+libvips-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-3282
+libvips-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-3283
+libvips-[0-9]*	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-3284
+ocaml<4.14.3	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-28364
+openbabel-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-3408
+p5-Net-CIDR<0.24	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2021-4456
+py{27,310,311,312,313,314}-pdf<6.7.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-27888
+py{27,310,311,312,313,314}-pdf<6.7.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-28351
+py{27,310,311,312,313,314}-pillow_heif<1.3.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-28231
+py{27,310,311,312,313,314}-uv<0.9.6	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-13327
+rebar3<3.27.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-21619
+vim<9.2.0073	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-28417
+vim<9.2.0074	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-28418
+vim<9.2.0075	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-28419
+vim<9.2.0076	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-28420
+vim<9.2.0077	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-28421
+vim<9.2.0078	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-28422
+wireshark<4.6.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-3201
+wireshark<4.6.4	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-3202
+wireshark<4.6.4	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-3203
