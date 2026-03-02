@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.3 2026/02/16 12:14:32 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.4 2026/03/02 11:38:48 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/agext/levenshtein/@v/v1.2.1.mod
 GO_MODULE_FILES+=	github.com/agext/levenshtein/@v/v1.2.1.zip
@@ -10,16 +10,16 @@ GO_MODULE_FILES+=	github.com/atotto/clipboard/@v/v0.1.4.mod
 GO_MODULE_FILES+=	github.com/atotto/clipboard/@v/v0.1.4.zip
 GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.mod
 GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.21.1.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.21.1.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v1.0.0.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.3.10.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.3.10.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/colorprofile/@v/v0.4.1.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/colorprofile/@v/v0.4.1.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v1.1.0.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.11.5.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.11.5.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.11.6.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.11.6.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/x/cellbuf/@v/v0.0.15.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/x/cellbuf/@v/v0.0.15.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/x/term/@v/v0.2.2.mod
