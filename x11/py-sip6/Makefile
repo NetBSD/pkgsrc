@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2026/03/02 15:00:18 gdt Exp $
+# $NetBSD: Makefile,v 1.32 2026/03/02 15:02:50 gdt Exp $
 
 # Before updating sip, geography/qgis (as the most demanding sip user
 # currently known) must be tested to build and run (with an actual
@@ -43,11 +43,11 @@ PYTHON_SELF_CONFLICT=	yes
 DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
 .endif
 
-# Tests are broken.
+# Tests are broken; the file downloadable from pypi omits them.
 # https://github.com/Python-SIP/sip/issues/103
-TEST_DEPENDS+=     ${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-TEST_DEPENDS+=     ${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=     ${PYPKGPREFIX}-anyio-[0-9]*:../../devel/py-anyio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-anyio-[0-9]*:../../devel/py-anyio
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
