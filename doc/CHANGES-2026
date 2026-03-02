@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1492 2026/03/02 12:08:10 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1493 2026/03/02 12:08:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2019,3 +2019,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-uc-micro-py to 2.0.0 [adam 2026-03-02]
 	Updated textproc/py-zope.dottedname to 7.1 [adam 2026-03-02]
 	Updated emulators/jgenesis to 0.11.2 [pin 2026-03-02]
+	Updated graphics/geeqie to 2.7 [wiz 2026-03-02]
