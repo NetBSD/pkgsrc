@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2026/01/19 10:46:52 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/03/02 12:13:33 wiz Exp $
 
-DISTNAME=	tree-sitter-markdown-0.5.2
-# we switched to from a version that had 0.7.1 as last release to the official one
-# so we need to make sure the version number is higher than it was before
-PKGNAME=	${DISTNAME:S/markdown-/markdown-0.7.1./}
+DISTNAME=	tree-sitter-markdown-0.5.3
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tree-sitter-grammars/}
-GITHUB_TAG=	v${PKGVERSION_NOREV:S/0.7.1.//}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/tree-sitter-grammars/tree-sitter-markdown
