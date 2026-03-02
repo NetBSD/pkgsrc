@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2026/01/27 08:39:40 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2026/03/02 13:28:36 yhardy Exp $
 
-DISTNAME=	girara-0.4.4
-PKGREVISION=	7
+DISTNAME=	girara-2026.02.04
 CATEGORIES=	graphics
 MASTER_SITES=	https://pwmt.org/projects/girara/download/
 EXTRACT_SUFX=	.tar.xz
@@ -18,6 +17,6 @@ CFLAGS.SunOS+=	-D__EXTENSIONS__
 PYTHON_FOR_BUILD_ONLY=	tool
 USE_CC_FEATURES=	c17
 
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/meson/build.mk"
-.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
