@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/02 20:25:53 yhardy Exp $
+
+BLAKE2s (trio_websocket-0.12.2.tar.gz) = 5468f1657469c82c4ad9133799551ddf557e7cdcd7e8397c989bc6fd3ac520cf
+SHA512 (trio_websocket-0.12.2.tar.gz) = 0d215ceaca47e0a256de99fe10f352321630e77bb66e3af68a91f926c144f1de4ae70d2fcb7da42a6d57b4831f1f36245325a960538a5b47b2348ba2b296038c
+Size (trio_websocket-0.12.2.tar.gz) = 33549 bytes
