@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1489 2026/03/02 11:38:59 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1490 2026/03/02 11:42:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2014,3 +2014,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/freetype2 to 2.14.2 [adam 2026-03-02]
 	Updated devel/compiledb-go to 1.5.4 [wiz 2026-03-02]
 	Updated textproc/dasel to 3.3.1 [wiz 2026-03-02]
+	Updated security/py-authlib to 1.6.9 [adam 2026-03-02]
+	Updated textproc/py-pdf to 6.7.5 [adam 2026-03-02]
