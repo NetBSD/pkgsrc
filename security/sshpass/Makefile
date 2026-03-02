@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/11/17 11:01:24 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/03/02 16:13:51 ryoon Exp $
 #
 
-DISTNAME=	sshpass-1.06
+DISTNAME=	sshpass-1.10
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sshpass/}
 
