@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1504 2026/03/02 12:43:20 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1505 2026/03/02 12:47:22 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2022,7 +2022,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/geeqie to 2.7 [wiz 2026-03-02]
 	Updated net/lagrange to 1.19.4 [pin 2026-03-02]
 	Updated finance/rex to 0.2.5 [pin 2026-03-02]
-	Updated textproc/treemd to 0.5.8 [pin 2026-03-02]
 	Updated textproc/moor to 2.11.0 [wiz 2026-03-02]
 	Updated textproc/treemd to 0.5.8 [pin 2026-03-02]
 	Updated geography/libmaxminddb to 1.13.2 [wiz 2026-03-02]
