@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2025/11/11 12:37:45 adam Exp $
+$NetBSD: distinfo,v 1.21 2026/03/02 15:00:18 gdt Exp $
 
-BLAKE2s (sip-6.14.0.tar.gz) = 5fc3371e36f3ba960be4bfadacc31df4f5145d0ae715a6a6d250a832bf7a9e85
-SHA512 (sip-6.14.0.tar.gz) = 77bc52cccc9f6eb76aaf7c4e25b4a9d3deccfc02ce3f4d649c6d9f4139c7ffe250d025f7c6de130d88784e39d6294bb1236bb70e7b06cf5d90d5e10667d7d4d1
-Size (sip-6.14.0.tar.gz) = 2349267 bytes
+BLAKE2s (sip-6.15.1.tar.gz) = 426255c1e2a09e046c77718cde0f5420aad98ca228e71c0aef5680586bb57adf
+SHA512 (sip-6.15.1.tar.gz) = 30a312419ba82c0221c0cf03c3fb3ad7d45bb8fe633d1d7477025a7986b0a7f7b7b781a8d9cd6bcdb78f3b872231fd1eed123a761b497861822f2e35093f574d
+Size (sip-6.15.1.tar.gz) = 2563506 bytes
