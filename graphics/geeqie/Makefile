@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.156 2026/02/06 10:04:58 wiz Exp $
+# $NetBSD: Makefile,v 1.157 2026/03/02 12:08:13 wiz Exp $
 
-DISTNAME=	geeqie-2.6.1
-PKGREVISION=	9
+DISTNAME=	geeqie-2.7
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BestImageViewer/}
 EXTRACT_SUFX=	.tar.xz
@@ -32,6 +31,7 @@ REPLACE_BASH+=		plugins/*/*
 REPLACE_BASH+=		doc/*.sh
 REPLACE_BASH+=		g*.sh
 REPLACE_BASH+=		version.sh
+REPLACE_BASH+=		data/plugins/resize-image/downsize
 
 MESON_ARGS+=	-Dgq_localedir='${PREFIX}/${PKGLOCALEDIR}/locale'
 MESON_ARGS+=	--localedir='${PKGLOCALEDIR}/locale'
