@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2025/12/03 14:18:11 adam Exp $
+$NetBSD: distinfo,v 1.9 2026/03/02 15:18:40 adam Exp $
 
-BLAKE2s (maxminddb-3.0.0.tar.gz) = 423fb5e4ff141b3c5d49a98fda42f8e4cade1724dffe21a669773bfaa3671af7
-SHA512 (maxminddb-3.0.0.tar.gz) = 7555322acf43a5a7f07e393c01661d5b4f3004c0125a8bddbcd73a518486eaa2a298d38210d4774c1ed39f9ac2b0a6d3baf2723608770a461365f7e8e0b0382d
-Size (maxminddb-3.0.0.tar.gz) = 199784 bytes
+BLAKE2s (maxminddb-3.1.0.tar.gz) = 925bb1fb67e36be640a87e262c52f3cf41d92632f17f945beae6c4091421a45b
+SHA512 (maxminddb-3.1.0.tar.gz) = b4c4fdec4d94d36fd8613461e8c037135061144adbb4860b7d12919430c8ec2c75d87591b8d1b4457136634530e823d70350c55ca4141a0497e7bbdaf9a84839
+Size (maxminddb-3.1.0.tar.gz) = 212219 bytes
+SHA1 (patch-extension_libmaxminddb_src_maxminddb.c) = 2645d69aa9bcb2b99d5fc08eebb66aefbca73e70

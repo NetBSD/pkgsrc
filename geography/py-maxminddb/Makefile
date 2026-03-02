@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/12/03 14:18:11 adam Exp $
+# $NetBSD: Makefile,v 1.13 2026/03/02 15:18:40 adam Exp $
 
-DISTNAME=	maxminddb-3.0.0
+DISTNAME=	maxminddb-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/maxminddb/}
@@ -12,6 +12,8 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+
+MAKE_ENV+=	MAXMINDDB_USE_SYSTEM_LIBMAXMINDDB=1
 
 .include "../../geography/libmaxminddb/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
