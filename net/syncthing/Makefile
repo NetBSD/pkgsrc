@@ -1,15 +1,18 @@
-# $NetBSD: Makefile,v 1.202 2026/02/24 08:45:32 bsiegert Exp $
+# $NetBSD: Makefile,v 1.203 2026/03/02 15:02:33 abs Exp $
 
 # Protocol breaks require tech-pkg@ discussion and MAINTAINER approval.
 # Update to 2.0.0 is very much on hold until 1) upstream withdraws the
 # rough edges warning and 2) it is known to be safe on NetBSD.
 # Update to 1.30.0 is on hold until after 2025Q3, just because it's recent.
-DISTNAME=	syncthing-source-v1.29.6
+DISTNAME=	syncthing-source-v1.30.0
 PKGNAME=	${DISTNAME:S,source-v,,}
-PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+
+# v1.29.0 and v1.30.0 fail wit go1.26 after a few minutes with
+# "panic: crypto/tls bug: where's my session ticket?"
+GO_VERSION_REQD=	125
 
 COMMENT=	Keeps directories in sync across hosts
 HOMEPAGE=	https://syncthing.net/
