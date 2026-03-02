@@ -1,4 +1,4 @@
-$NetBSD: patch-bo,v 1.6 2024/01/15 04:43:22 jnemeth Exp $
+$NetBSD: patch-bo,v 1.7 2026/03/02 07:39:29 jnemeth Exp $
 
 --- sendmail/sendmail.h.orig	2023-04-27 10:39:42.000000000 +0000
 +++ sendmail/sendmail.h
@@ -6,10 +6,10 @@ $NetBSD: patch-bo,v 1.6 2024/01/15 04:43:22 jnemeth Exp $
  #endif
  
  #include "bf.h"
-+#ifdef USE_BLACKLIST
-+#include <blacklist.h>
++#ifdef USE_BLOCKLIST
++#include <blocklist.h>
 +#endif
-+#include "blacklist_client.h"
++#include "blocklist_client.h"
  #include "timers.h"
  #include <sm/exc.h>
  #include <sm/gen.h>
@@ -17,7 +17,7 @@ $NetBSD: patch-bo,v 1.6 2024/01/15 04:43:22 jnemeth Exp $
  
  EXTERN int ConnectionRateWindowSize;
  
-+EXTERN bool	UseBlacklist;
++EXTERN bool	UseBlocklist;
 +
  /*
  **  Declarations of useful functions

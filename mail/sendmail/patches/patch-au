@@ -1,8 +1,8 @@
-$NetBSD: patch-au,v 1.3 2021/07/04 07:57:13 jnemeth Exp $
+$NetBSD: patch-au,v 1.4 2026/03/02 07:39:29 jnemeth Exp $
 
---- sendmail/main.c.orig	2020-06-02 09:41:43.000000000 +0000
+--- sendmail/main.c.orig	2025-11-26 16:02:45.000000000 +0000
 +++ sendmail/main.c
-@@ -153,6 +153,10 @@ int		SyslogPrefixLen; /* estimated lengt
+@@ -159,6 +159,10 @@ int		SyslogPrefixLen; /* estimated lengt
  	}								\
  }
  
@@ -13,8 +13,8 @@ $NetBSD: patch-au,v 1.3 2021/07/04 07:57:13 jnemeth Exp $
  int
  main(argc, argv, envp)
  	int argc;
-@@ -215,6 +219,15 @@ main(argc, argv, envp)
- 	envp = environ;
+@@ -230,6 +234,15 @@ main(argc, argv, envp)
+ 	DNSErrName = NULL;
  #endif
  
 +#if NAMED_BIND
@@ -29,7 +29,7 @@ $NetBSD: patch-au,v 1.3 2021/07/04 07:57:13 jnemeth Exp $
  	/* turn off profiling */
  	SM_PROF(0);
  
-@@ -697,21 +710,25 @@ main(argc, argv, envp)
+@@ -724,21 +737,25 @@ main(argc, argv, envp)
  	*/
  
  #if NAMED_BIND
@@ -65,7 +65,7 @@ $NetBSD: patch-au,v 1.3 2021/07/04 07:57:13 jnemeth Exp $
  #endif /* NAMED_BIND */
  
  	errno = 0;
-@@ -1394,8 +1411,8 @@ main(argc, argv, envp)
+@@ -1450,8 +1467,8 @@ main(argc, argv, envp)
  	}
  
  #if NAMED_BIND
@@ -76,7 +76,7 @@ $NetBSD: patch-au,v 1.3 2021/07/04 07:57:13 jnemeth Exp $
  #endif
  
  	/*
-@@ -2944,8 +2961,8 @@ main(argc, argv, envp)
+@@ -3031,8 +3048,8 @@ main(argc, argv, envp)
  		sm_getla();
  		GrabTo = false;
  #if NAMED_BIND

@@ -1,6 +1,6 @@
-$NetBSD: patch-aw,v 1.8 2024/01/15 04:43:22 jnemeth Exp $
+$NetBSD: patch-aw,v 1.9 2026/03/02 07:39:29 jnemeth Exp $
 
---- sendmail/readcf.c.orig	2023-04-27 10:39:42.000000000 +0000
+--- sendmail/readcf.c.orig	2025-11-26 16:02:45.000000000 +0000
 +++ sendmail/readcf.c
 @@ -26,6 +26,10 @@ SM_RCSID("@(#)$Id: readcf.c,v 8.692 2013
  # include <arpa/inet.h>
@@ -13,17 +13,17 @@ $NetBSD: patch-aw,v 1.8 2024/01/15 04:43:22 jnemeth Exp $
  
  #define SECONDS
  #define MINUTES	* 60
-@@ -3210,6 +3214,9 @@ static struct optioninfo
- 	{ "CipherSuites",		O_CIPHERSUITES,	OI_NONE	},
+@@ -3213,6 +3217,9 @@ static struct optioninfo
+ 	{ "SameDomainOnly",		O_SAMEDOMAINONLY,	OI_NONE	},
  #endif
  
-+# define O_BLACKLIST	0xfb
-+	{ "UseBlacklist",		O_BLACKLIST,	OI_NONE },
++# define O_BLOCKLIST	0xfc
++	{ "UseBlocklist",		O_BLOCKLIST,	OI_NONE },
 +
  	{ NULL,				'\0',		OI_NONE	}
  };
  
-@@ -3620,13 +3627,13 @@ setoption(opt, val, safe, sticky, e)
+@@ -3623,13 +3630,13 @@ setoption(opt, val, safe, sticky, e)
  			if (rfp->rf_name == NULL)
  				syserr("readcf: I option value %s unrecognized", q);
  			else if (clearmode)
@@ -41,12 +41,12 @@ $NetBSD: patch-aw,v 1.8 2024/01/15 04:43:22 jnemeth Exp $
  #else /* NAMED_BIND */
  		usrerr("name server (I option) specified but BIND not compiled in");
  #endif /* NAMED_BIND */
-@@ -4949,6 +4956,10 @@ setoption(opt, val, safe, sticky, e)
+@@ -4963,6 +4970,10 @@ setoption(opt, val, safe, sticky, e)
  		break;
- #endif
+ #endif /* _FFR_SAMEDOMAIN */
  
-+	  case O_BLACKLIST:
-+		UseBlacklist = atobool(val);
++	  case O_BLOCKLIST:
++		UseBlocklist = atobool(val);
 +		break;
 +
  	  default:

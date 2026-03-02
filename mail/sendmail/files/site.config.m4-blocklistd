@@ -1,0 +1,5 @@
+# $Id: site.config.m4-blocklistd,v 1.1 2026/03/02 07:39:29 jnemeth Exp $
+
+APPENDDEF(`conf_sendmail_ENVDEF', `-DUSE_BLOCKLIST')
+APPENDDEF(`conf_sendmail_LIBS', `-lblocklist')
+

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2024/02/12 03:23:05 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.28 2026/03/02 07:39:29 jnemeth Exp $
 bin/hoststat
 bin/mailq
 bin/newaliases
@@ -145,6 +145,7 @@ share/sendmail/feature/relay_hosts_only.m4
 share/sendmail/feature/relay_local_from.m4
 share/sendmail/feature/relay_mail_from.m4
 share/sendmail/feature/require_rdns.m4
+share/sendmail/feature/same_domain_only.m4
 share/sendmail/feature/smrsh.m4
 share/sendmail/feature/stickyhost.m4
 share/sendmail/feature/sts.m4

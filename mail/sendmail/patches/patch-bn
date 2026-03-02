@@ -1,4 +1,4 @@
-$NetBSD: patch-bn,v 1.2 2024/01/15 04:43:22 jnemeth Exp $
+$NetBSD: patch-bn,v 1.3 2026/03/02 07:39:29 jnemeth Exp $
 
 --- sendmail/sendmail.8.orig	2023-02-09 18:24:38.000000000 +0000
 +++ sendmail/sendmail.8
@@ -6,9 +6,9 @@ $NetBSD: patch-bn,v 1.2 2024/01/15 04:43:22 jnemeth Exp $
  failed messages will be returned to the sender.
  The default is five days.
  .TP
-+.RI UseBlacklist
++.RI UseBlocklist
 +If set, send authentication failure and success notifications to the
-+.BR blacklistd (8)
++.BR blocklistd (8)
 +daemon.
 +.TP
  .RI UserDatabaseSpec= userdatabase
