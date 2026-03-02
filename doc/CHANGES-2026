@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1511 2026/03/02 13:35:37 yhardy Exp $
+$NetBSD: CHANGES-2026,v 1.1512 2026/03/02 13:36:00 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2039,3 +2039,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/girara to 2026.02.04 [yhardy 2026-03-02]
 	Updated print/zathura to 2026.02.22 [yhardy 2026-03-02]
 	Updated print/zathura-pdf-mupdf to 2026.02.03 [yhardy 2026-03-02]
+	Updated print/zathura-pdf-poppler to 2026.02.03 [yhardy 2026-03-02]
