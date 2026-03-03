@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/12/07 09:21:34 nia Exp $
+# $NetBSD: Makefile,v 1.8 2026/03/03 21:37:12 yhardy Exp $
 
-DISTNAME=	mujs-1.3.4
+DISTNAME=	mujs-1.3.9
 CATEGORIES=	lang
 MASTER_SITES=	https://mujs.com/downloads/
 
@@ -19,6 +19,12 @@ INSTALL_TARGET=	install-shared
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		build/release/mujs.pc
+
+INSTALLATION_DIRS+=		include/mujs
+
+# needed by print/mupdf
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/regexp.h ${DESTDIR}${PREFIX}/include/mujs/
 
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
