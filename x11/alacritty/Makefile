@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2025/10/27 11:59:24 pin Exp $
+# $NetBSD: Makefile,v 1.41 2026/03/03 21:24:21 tnn Exp $
 
 DISTNAME=	alacritty-0.16.1
 CATEGORIES=	x11
@@ -48,6 +48,19 @@ PYTHON_FOR_BUILD_ONLY=		tool
 INSTALLATION_DIRS=	bin share/applications ${PKGMANDIR}/man1 \
 			${PKGMANDIR}/man5 share/icons/hicolor/scalable/apps
 
+PLIST_SRC=		${PLIST_SRC_DFLT}
+
+.if ${OPSYS} == "Darwin"
+INSTALLATION_DIRS+=	Applications
+USE_TOOLS+=		pax
+PLIST_SRC+=		PLIST.App
+
+post-build: build-app
+.PHONY: build-app
+build-app:
+	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} app
+.endif
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/alacritty \
 		${DESTDIR}${PREFIX}/bin
@@ -55,6 +68,9 @@ do-install:
                  ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/extra/logo/alacritty-term.svg \
 		${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps
+.if ${OPSYS} == "Darwin"
+	cd ${WRKSRC}/target/release/osx && ${PAX} -rwpe Alacritty.app ${DESTDIR}${PREFIX}/Applications
+.endif
 
 post-install:
 	scdoc < ${WRKSRC}/extra/man/alacritty-msg.1.scd > ${WRKSRC}/extra/man/alacritty-msg.1
