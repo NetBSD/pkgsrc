@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:54:04 nia Exp $
+$NetBSD: distinfo,v 1.10 2026/03/03 11:49:02 wiz Exp $
 
 BLAKE2s (jchkmail-1.3.1a.tar.gz) = a72bcba411e5ab29e73db715bf41742f280631a5effd9c17f442db8178da305c
 SHA512 (jchkmail-1.3.1a.tar.gz) = 8dd5d49cde3395d0fe4e83bca1daee2db036300ff6aad64ad36c1a7d37bde69afb1602e702e5cdbaf0b2767cb32a15c1a720a778a51e2f95dabdd3d534d2a529
 Size (jchkmail-1.3.1a.tar.gz) = 420432 bytes
 SHA1 (patch-aa) = 19acb161de38b297d000ae4cc9a96106ff7b3a20
 SHA1 (patch-ab) = c629836b5dbab9282104a3c2731e379c56c5ea81
-SHA1 (patch-ac) = 8be29408b4fb665d3374fb6232b596d028d69e28
+SHA1 (patch-ac) = 2bbdef990651241bfa092056e4eb25000c815bd8
 SHA1 (patch-ad) = 18b8504670010da4d7e75cc3164e74d560d7eba0
+SHA1 (patch-src_j-throttle.c) = ac1a770c1c1f1c6a64772e74dfb0397f734ede06
