@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1525 2026/03/03 02:28:34 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.1526 2026/03/03 08:22:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2054,3 +2054,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added www/py-trio-websocket version 0.12.2 [yhardy 2026-03-02]
 	Updated sysutils/xfce4-thunar to 4.20.7 [gutteridge 2026-03-03]
 	Updated meta-pkgs/xfce4 to 4.20.0nb14 [gutteridge 2026-03-03]
+	Updated devel/py-apycula to 0.30 [adam 2026-03-03]
+	Updated textproc/py-xml2rfc to 3.32.0 [adam 2026-03-03]
