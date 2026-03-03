@@ -1,11 +1,11 @@
-$NetBSD: patch-source_helpers_pkcs7_pkcs7-openssl.c,v 1.1 2023/09/07 14:36:54 vins Exp $
+$NetBSD: patch-source_helpers_pkcs7_pkcs7-openssl.c,v 1.2 2026/03/03 21:49:01 yhardy Exp $
 
 Add default_paths to STORE for checking signatures.
 From OpenBSD ports.
 
---- source/helpers/pkcs7/pkcs7-openssl.c.orig	2023-09-05 11:51:19.000000000 +0000
+--- source/helpers/pkcs7/pkcs7-openssl.c.orig	2026-02-18 16:24:19.000000000 +0000
 +++ source/helpers/pkcs7/pkcs7-openssl.c
-@@ -203,7 +203,7 @@ static int stream_free(BIO *b)
+@@ -209,7 +209,7 @@ static int stream_free(BIO *b)
  	return 1;
  }
  
@@ -14,13 +14,13 @@ From OpenBSD ports.
  {
  	return 1;
  }
-@@ -519,6 +519,9 @@ check_certificate(fz_context *ctx, pdf_p
+@@ -524,6 +524,9 @@ check_certificate(fz_context *ctx, pdf_pkcs7_verifier 
+ 			X509_STORE_add_cert(st, c);
  		}
  	}
- 
++
 +	/* Add default paths */
 +	X509_STORE_set_default_paths(st);
-+
+ 
  	res = pk7_verify_cert(st, pk7sig);
  
- exit:

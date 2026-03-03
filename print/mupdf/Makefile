@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.138 2026/02/06 10:05:44 wiz Exp $
+# $NetBSD: Makefile,v 1.139 2026/03/03 21:49:01 yhardy Exp $
 
-DISTNAME=	mupdf-1.26.8-source
+DISTNAME=	mupdf-1.27.2-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	4
 CATEGORIES=	print
-MASTER_SITES=	https://mupdf.com/downloads/archive/
+MASTER_SITES=	https://casper.mupdf.com/downloads/archive/
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://mupdf.com/
@@ -62,6 +61,7 @@ SUBST_SED.indext=	-e 's,index_t,mu_index_t,g'
 # files with proper colors.
 post-extract:
 	${RUN}${RM} -fr \
+	    ${WRKSRC}/thirdparty/brotli \
 	    ${WRKSRC}/thirdparty/curl \
 	    ${WRKSRC}/thirdparty/freeglut \
 	    ${WRKSRC}/thirdparty/freetype \
@@ -73,7 +73,9 @@ post-extract:
 	    ${WRKSRC}/thirdparty/mujs \
 	    ${WRKSRC}/thirdparty/openjpeg \
 	    ${WRKSRC}/thirdparty/tesseract \
-	    ${WRKSRC}/thirdparty/zlib
+	    ${WRKSRC}/thirdparty/zint \
+	    ${WRKSRC}/thirdparty/zlib \
+	    ${WRKSRC}/thirdparty/zxing-cpp
 
 post-build:
 	${RUN}${SED} -e "s,@PREFIX@,${PREFIX}," -e "s,@VERSION@,${PKGVERSION_NOREV}," \
@@ -90,6 +92,7 @@ post-install:
 .endfor
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../archivers/brotli/buildlink3.mk"
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.7
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
@@ -102,6 +105,7 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.7
 #.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+# XXX: mupdf needs mujs/regexp.h installed
 .include "../../lang/mujs/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../www/gumbo-parser/buildlink3.mk"

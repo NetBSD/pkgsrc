@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2025/08/29 09:54:49 leot Exp $
+@comment $NetBSD: PLIST,v 1.31 2026/03/03 21:49:01 yhardy Exp $
 bin/mupdf
 ${PLIST.opengl}bin/mupdf-gl
 ${PLIST.curl}bin/mupdf-x11-curl
@@ -30,6 +30,7 @@ include/mupdf/fitz/glyph.h
 include/mupdf/fitz/hash.h
 include/mupdf/fitz/heap-imp.h
 include/mupdf/fitz/heap.h
+include/mupdf/fitz/hyphen.h
 include/mupdf/fitz/image.h
 include/mupdf/fitz/json.h
 include/mupdf/fitz/link.h
@@ -112,6 +113,7 @@ share/doc/mupdf/examples/pdf-merge.js
 share/doc/mupdf/examples/pdf-portfolio.js
 share/doc/mupdf/examples/pdf-trace.js
 share/doc/mupdf/examples/reconvert-cmyk.js
+share/doc/mupdf/examples/searchtest.c
 share/doc/mupdf/examples/storytest.c
 share/doc/mupdf/examples/storytest.js
 share/doc/mupdf/examples/trace-device.js
