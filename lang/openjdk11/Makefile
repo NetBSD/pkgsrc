@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2026/02/06 10:05:09 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2026/03/03 20:34:52 tnn Exp $
 
 DISTNAME=	jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -24,6 +24,10 @@ JAVA_WRAPPERS=	jar jarsigner java javac javadoc javap jcmd jconsole jdb \
 		rmiregistry serialver
 
 TOOL_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootcerts
+
+# For alloca()
+BUILDLINK_TRANSFORM+=	opt:-std=c99:-std=gnu99
+BUILDLINK_TRANSFORM+=	opt:-std=c++11:-std=gnu++11
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # generates the configure script during the build
