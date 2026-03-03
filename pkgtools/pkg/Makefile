@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2026/01/22 08:42:16 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/03/03 06:44:04 wiz Exp $
 
 DISTNAME=	pkg-1.10.99.7
 PKGREVISION=	1
 CATEGORIES=	pkgtools
-MASTER_SITES=	http://files.etoilebsd.net/pkg/
+# https://github.com/freebsd/pkg/
+#MASTER_SITES=	http://files.etoilebsd.net/pkg/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	khorben@defora.org
