@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2025/12/12 09:28:50 adam Exp $
+# $NetBSD: Makefile,v 1.33 2026/03/03 08:21:40 adam Exp $
 
-DISTNAME=	xml2rfc-3.31.0
+DISTNAME=	xml2rfc-3.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xml2rfc/}
