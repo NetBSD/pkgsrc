@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/02/17 11:12:06 adam Exp $
+# $NetBSD: Makefile,v 1.3 2026/03/03 08:19:42 adam Exp $
 
-DISTNAME=	apycula-0.29
+DISTNAME=	apycula-0.30
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/apycula/}
@@ -10,8 +10,11 @@ HOMEPAGE=	https://github.com/YosysHQ/apicula
 COMMENT=	Open Source tools for Gowin FPGAs
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-crc-[0-9]*:../../devel/py-crc
+DEPENDS+=	${PYPKGPREFIX}-crcmod-[0-9]*:../../security/py-crcmod
+DEPENDS+=	${PYPKGPREFIX}-msgspec-[0-9]*:../../devel/py-msgspec
+DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 
 USE_LANGUAGES=	# none
 
