@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1527 2026/03/03 15:08:36 jperkin Exp $
+$NetBSD: CHANGES-2026,v 1.1528 2026/03/03 19:10:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2057,3 +2057,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-apycula to 0.30 [adam 2026-03-03]
 	Updated textproc/py-xml2rfc to 3.32.0 [adam 2026-03-03]
 	Updated pkgtools/mktool to 1.5.6 [jperkin 2026-03-03]
+	Updated devel/cargo-edit to 0.13.9 [pin 2026-03-03]
