@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.102 2026/01/05 10:11:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.103 2026/03/03 21:13:54 tnn Exp $
 bin/elf2dmp
 ${PLIST.aarch64}bin/qemu-aarch64
 ${PLIST.aarch64_be}bin/qemu-aarch64_be
@@ -86,8 +86,8 @@ ${PLIST.doc}man/man8/qemu-nbd.8
 ${PLIST.doc}man/man8/qemu-pr-helper.8
 share/applications/qemu.desktop
 ${PLIST.doc}share/doc/qemu/.buildinfo
-${PLIST.doc}share/doc/qemu/Makefile.multinode-NetBSD
-${PLIST.doc}share/doc/qemu/README.NetBSD
+share/doc/qemu/Makefile.multinode-NetBSD
+share/doc/qemu/README.NetBSD
 ${PLIST.doc}share/doc/qemu/about/build-platforms.html
 ${PLIST.doc}share/doc/qemu/about/deprecated.html
 ${PLIST.doc}share/doc/qemu/about/emulation.html
