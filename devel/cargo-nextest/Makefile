@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2026/02/23 08:33:58 pin Exp $
+# $NetBSD: Makefile,v 1.17 2026/03/03 12:17:31 wiz Exp $
 
 DISTNAME=	cargo-nextest-0.9.129
 CATEGORIES=	devel
@@ -42,6 +42,9 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/cargo-nextest \
 		${DESTDIR}${PREFIX}/bin
+
+# See, https://github.com/briansmith/ring/issues/1999
+.include "../../mk/compiler/i386-sse2.mk"
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
