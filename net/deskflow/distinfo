@@ -1,14 +1,8 @@
-$NetBSD: distinfo,v 1.6 2026/01/06 19:57:10 tnn Exp $
+$NetBSD: distinfo,v 1.7 2026/03/03 19:49:24 tnn Exp $
 
-BLAKE2s (CLI11-2.5.0.hpp) = 2a27af60fd6ccb1d1d5883c415a7432277544287a29d69dec2f92dc79de22518
-SHA512 (CLI11-2.5.0.hpp) = 1440f3500126e2edfb8e52811339a80721509446a2725e845961b7d41a42e0726b6a91cfe714b75684b3fa41b44c2b578af2f7b94746e5ef1a24e2f211b939f3
-Size (CLI11-2.5.0.hpp) = 444182 bytes
-BLAKE2s (deskflow-1.25.0.tar.gz) = b0d22c8e4a0f2fd6c4395fb8ac6db03acd9af700443b0bb732f01260042dda26
-SHA512 (deskflow-1.25.0.tar.gz) = a9fa7deea2d1ec38932cf36a32ee788f86713bc0a7ac0e2d4078f600eb004dad0557666dac079f4c3d3228fc8c4f195c6f387c1aec5504538b039385c9490887
-Size (deskflow-1.25.0.tar.gz) = 1291356 bytes
-BLAKE2s (toml-3.4.0.hpp) = 8d715a2b4fd6648d5a40ff0f8e2462d9488608da8efe052c5df0516a86b29799
-SHA512 (toml-3.4.0.hpp) = b434408b483f3ce308c63d48922f2dacfaac95be9031056118486b230123a3bdc8303e191c0dc787dc22bcc3a1777fe94057638b6c10da9620163665481c4d0d
-Size (toml-3.4.0.hpp) = 485931 bytes
+BLAKE2s (deskflow-1.26.0.tar.gz) = 81ed6accb5150431f61b384383cdd9d86cd35f586b0a752a104e9e5342d833b8
+SHA512 (deskflow-1.26.0.tar.gz) = 419eccd26ae9199d6f98167e3e97c1de44e316b1b3b49d7318cf323e9955934e5ee6c4c5175ec05fc6410e5aeacae619406a98d6084a11643b24220179eb7cec
+Size (deskflow-1.26.0.tar.gz) = 1306972 bytes
 SHA1 (patch-cmake_Libraries.cmake) = 037ac3fdff42849d414db7e8551b3ac027d35964
 SHA1 (patch-src_apps_deskflow-core_CMakeLists.txt) = d2833b28ff9bb7fbe6ca9314214b26b0ecebd4d5
 SHA1 (patch-src_apps_deskflow-gui_CMakeLists.txt) = ac1a434c31a65907d66b465c83e13c07dde860c4
