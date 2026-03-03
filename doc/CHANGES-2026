@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1523 2026/03/02 20:53:18 yhardy Exp $
+$NetBSD: CHANGES-2026,v 1.1524 2026/03/03 02:27:25 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2052,3 +2052,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/sshpass to 1.10 [ryoon 2026-03-02]
 	Updated multimedia/streamlink to 8.1.2 [yhardy 2026-03-02]
 	Added www/py-trio-websocket version 0.12.2 [yhardy 2026-03-02]
+	Updated sysutils/xfce4-thunar to 4.20.7 [gutteridge 2026-03-03]
