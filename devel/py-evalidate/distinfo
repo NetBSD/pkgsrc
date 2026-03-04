@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2026/02/17 22:04:32 wiz Exp $
+$NetBSD: distinfo,v 1.2 2026/03/04 13:44:15 adam Exp $
 
-BLAKE2s (evalidate-2.1.3.tar.gz) = 4e40b2a28f5d5cd8cd29cbeeb1df48f63d8c7b9d97a579ecb794d3996cbdcbb1
-SHA512 (evalidate-2.1.3.tar.gz) = 831f5de414201e3b9ece8e7db467df9b162ef00a0afd13badb57fb4aed51a6c8fcc37b925230df3bb91eb47b13e72129e206f6da2044ac91503ac99de7dfaae1
-Size (evalidate-2.1.3.tar.gz) = 14283 bytes
+BLAKE2s (evalidate-2.1.4.tar.gz) = d08b282d55c3ae9fd0d311994b38cd6193c7665e3abee71f750ec9fad6360b68
+SHA512 (evalidate-2.1.4.tar.gz) = 6aad61282d16ad64455f50c7edf64d8533dcf6a72badc1dd04c4be98af8f336aca467baf8c3d1e5f896505c0298bb8ddacdc01653411e65849b026f09a08d4fb
+Size (evalidate-2.1.4.tar.gz) = 1190139 bytes
