@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1538 2026/03/04 09:32:07 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1539 2026/03/04 10:27:38 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2078,3 +2078,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv-build to 0.10.8 [adam 2026-03-04]
 	Updated textproc/py-markdown2 to 2.5.5 [adam 2026-03-04]
 	Updated devel/py-faker to 40.5.1 [adam 2026-03-04]
+	Updated games/xclannad to 0.07hcnb5 [tsutsui 2026-03-04]
