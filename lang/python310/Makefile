@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.43 2026/01/07 08:47:41 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2026/03/04 07:03:17 adam Exp $
 
-PKGREVISION= 1
 .include "dist.mk"
 
 PKGNAME=	python310-${PY_DISTVERSION}
@@ -39,9 +38,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-readline=readline # XXX editline?
-CONFIGURE_ARGS+=	--with-system-expat
 CONFIGURE_ARGS+=	--with-system-ffi
 CONFIGURE_ARGS+=	--without-ensurepip
+CONFIGURE_ARGS+=	--without-system-expat # requires expat_config.h
 CONFIGURE_ENV+=		OPT=${CFLAGS:M*:Q}
 CONFIGURE_ENV+=		ac_cv_path_mkdir=${TOOLS_PATH.mkdir}
 PKGCONFIG_OVERRIDE+=	Misc/python.pc.in Misc/python-embed.pc.in
