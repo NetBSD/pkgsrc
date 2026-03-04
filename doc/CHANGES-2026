@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1534 2026/03/04 05:56:52 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1535 2026/03/04 06:52:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2067,3 +2067,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/py-sqlalchemy to 2.0.48 [adam 2026-03-04]
 	Updated www/nginx to 1.28.2 [adam 2026-03-04]
 	Updated www/nginx-devel to 1.29.5 [adam 2026-03-04]
+	Updated lang/python312 to 3.12.13 [adam 2026-03-04]
+	Updated lang/py312-html-docs to 3.12.13 [adam 2026-03-04]
+	Updated lang/python311 to 3.11.15 [adam 2026-03-04]
+	Updated lang/py311-html-docs to 3.11.15 [adam 2026-03-04]
