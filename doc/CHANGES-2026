@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1542 2026/03/04 14:56:12 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1543 2026/03/04 14:58:20 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2084,3 +2084,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-pyspnego to 0.12.1 [adam 2026-03-04]
 	Updated time/py-pytz to 2026.1.post1 [adam 2026-03-04]
 	Updated textproc/rumdl to 0.1.38 [pin 2026-03-04]
+	Updated devel/cocogitto to 7.0.0 [pin 2026-03-04]
