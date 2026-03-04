@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/03/04 00:19:40 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2026/03/04 00:20:26 tnn Exp $
 
 DISTNAME=	Qt-Color-Widgets-3.0.0
 PKGNAME=	${DISTNAME:S/Qt-Color-Widgets/qt6-qt-color-widgets/}
@@ -16,8 +16,6 @@ LICENSE=	gnu-lgpl-v3
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c++
 CMAKE_CONFIGURE_ARGS+=	-DQT_VERSION_MAJOR=6
-# No point building the shared library as applications
-# typically link statically with the widget.
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 
 PKGCONFIG_OVERRIDE+=	QtColorWidgets.pc.in
