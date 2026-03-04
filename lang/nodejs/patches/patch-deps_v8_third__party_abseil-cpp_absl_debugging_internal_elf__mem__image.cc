@@ -1,10 +1,10 @@
-$NetBSD: patch-deps_v8_third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc,v 1.3 2025/11/17 13:05:32 ryoon Exp $
+$NetBSD: patch-deps_v8_third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc,v 1.4 2026/03/04 07:04:23 adam Exp $
 
 Fix build on NetBSD.
 
---- deps/v8/third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.cc.orig	2025-11-11 13:52:04.000000000 +0000
+--- deps/v8/third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.cc.orig	2026-03-03 01:28:34.000000000 +0000
 +++ deps/v8/third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.cc
-@@ -377,7 +381,7 @@ void ElfMemImage::SymbolIterator::Update
+@@ -377,7 +377,7 @@ void ElfMemImage::SymbolIterator::Update
    const ElfW(Versym) *version_symbol = image->GetVersym(index_);
    ABSL_RAW_CHECK(symbol && version_symbol, "");
    const char *const symbol_name = image->GetDynstr(symbol->st_name);
