@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.130 2025/09/15 11:36:12 osa Exp $
+$NetBSD: distinfo,v 1.131 2026/03/04 05:56:31 adam Exp $
 
 BLAKE2s (array-var-nginx-module-0.06.tar.gz) = fa6ad2a2ce3c3eba3f69287b224e9c01fcaca29a083394ab74f2f655d3e2138b
 SHA512 (array-var-nginx-module-0.06.tar.gz) = bc72158856a1be18a26ee04c6b5b0f0a20bcce688610a493bf31e2a133e7eb12e11f7c18197a09a72b1513f6a08348ee5281b9d5b84cf43603539040ebd23c26
@@ -18,18 +18,18 @@ Size (google-ngx_brotli-a71f931_GH.tar.gz) = 16376 bytes
 BLAKE2s (headers-more-nginx-module-0.39.tar.gz) = 29c90cc57f236c5e9ff69e0a39522ba3ec0d42d23d1592b730f5e1336aa14d64
 SHA512 (headers-more-nginx-module-0.39.tar.gz) = b73099bc1d088afc2ccb13e97ad8dd2210cdb6c8355b348007042f23c4bb3ec239e9521f29cb4e82d09b930d8b6a46ccdc7fb75438bf180342d8c53727971c1e
 Size (headers-more-nginx-module-0.39.tar.gz) = 29616 bytes
-BLAKE2s (lua-nginx-module-0.10.28.tar.gz) = 0e8b2e8ee0d43905385ca90bf9233e213c78f131ae90f16e64555679c01776e5
-SHA512 (lua-nginx-module-0.10.28.tar.gz) = 176d7516bebbdb3a5d3bb3ee627a7d63d59f23a7df8dcaef2195edb875ce438700ae97fb2ad1d17a30519bbbc6d6ee8c742dbc1b37d3e4f4da2187acb9c16aaa
-Size (lua-nginx-module-0.10.28.tar.gz) = 869217 bytes
+BLAKE2s (lua-nginx-module-0.10.29.tar.gz) = ac29ff6eec96f1ce2038b0590fc63419d3777b0124fd03558f56df44d5fe04aa
+SHA512 (lua-nginx-module-0.10.29.tar.gz) = c2afd85ec7e16089b01c310b0df45d6d87a47438c470efe25eaef455a4d4acbfb16aa74c4cbbfe1091098345f0ae81a8a0315cc6de03ed0c5fbda33164ce7514
+Size (lua-nginx-module-0.10.29.tar.gz) = 892502 bytes
 BLAKE2s (naxsi-1.7-src-with-deps.tar.gz) = 9283a2193c536ba4ef4b28389313623729e4c0c343f62c8a4d683bf377e0fe4a
 SHA512 (naxsi-1.7-src-with-deps.tar.gz) = 78db1b06e4956854af0e31037db4607c4cc3d06316300af026c1e4349475c85e375bf963718c2def505396d30766f008182128060f0cfc4bb37f06896689fdd2
 Size (naxsi-1.7-src-with-deps.tar.gz) = 3366176 bytes
 BLAKE2s (nchan-1.3.7.tar.gz) = 27da0a52c9123186a321a01b02cb004eed0623110aafa6737dd43ceeff766010
 SHA512 (nchan-1.3.7.tar.gz) = 585c6f9107b84354e7f6c587f85cf554dd5c213b1e3baa75e0aee0b28520afb9cffff1812c32e81541a1f25773fc58d1b92ce6bd9d85accc12f37841633eb79b
 Size (nchan-1.3.7.tar.gz) = 665133 bytes
-BLAKE2s (nginx-1.29.1.tar.gz) = 4094c4f42bcdda91b47284cc7e471a16c37a80c225fa96813e7263dc4e3ad46c
-SHA512 (nginx-1.29.1.tar.gz) = 06ce3caca5acdaea6c6b7254681bbc50ba46f4bd99f1d4edbbf0be0ef3af4b5222e75c16fc52990decb773898fe47c647e8dfb0dabcf1793a870808866ea69d1
-Size (nginx-1.29.1.tar.gz) = 1285529 bytes
+BLAKE2s (nginx-1.29.5.tar.gz) = 8e92da491bed67ce10b7e666dbcc19ea9dc9ec469a9513f96d7ed589cb18f58d
+SHA512 (nginx-1.29.5.tar.gz) = 721b5f8d5484b4508c3fffc5aa8239212266ad8635ea9e5b2c3d5f0349e0846ab9dd3c1e1409435b30989aa83d4b65113a8ab8854fff725c55b9043f17435235
+Size (nginx-1.29.5.tar.gz) = 1310203 bytes
 BLAKE2s (nginx-dav-ext-module-3.0.0.tar.gz) = 8e823ffd605d4fca00eb3ca92a0954ca35fb178397e0b990fea7d47580ee582f
 SHA512 (nginx-dav-ext-module-3.0.0.tar.gz) = d0193ba90f1ef46c4e470630c4394bdf99d94fd2e3bd8be6cb2ba1655ec59944b1269025f032b79dc2c6dad366e54389ef6a6da2ddeb91d535a4027f2162fbde
 Size (nginx-dav-ext-module-3.0.0.tar.gz) = 14558 bytes
@@ -68,4 +68,4 @@ SHA512 (vozlt-nginx-module-vts-bdb2699_GH.tar.gz) = b6c12524991c0c369b83f56c40b2
 Size (vozlt-nginx-module-vts-bdb2699_GH.tar.gz) = 185041 bytes
 SHA1 (patch-auto_cc_conf) = 5e6a479ba419cd16dedeb3b4c47dc685d126ef6a
 SHA1 (patch-auto_install) = 3b3a0f9f4c005b707664554fa57a58c9e3b7de60
-SHA1 (patch-conf_nginx.conf) = d2ca1954e9682b9d0007cc02e5841e3986ecf5c1
+SHA1 (patch-conf_nginx.conf) = 8e2c360711a01dc83db3e831e0fb350391e52e85
