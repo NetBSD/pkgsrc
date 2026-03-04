@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.43 2026/01/07 08:47:41 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2026/03/04 06:51:45 adam Exp $
 
-PKGREVISION= 1
 .include "dist.mk"
 
 PKGNAME=	python311-${PY_DISTVERSION}
@@ -33,15 +32,16 @@ PRINT_PLIST_AWK+=	sub(/\.cpython-311/, "")}
 PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.opt-1.pyc$$/ {
 PRINT_PLIST_AWK+=	sub(/.opt-[12].pyc$$/, ".pyo")}
 
+USE_CC_FEATURES=	c11
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
-USE_CC_FEATURES+=	c11
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-system-expat
 CONFIGURE_ARGS+=	--with-system-ffi
 CONFIGURE_ARGS+=	--without-ensurepip
+CONFIGURE_ARGS+=	--without-system-expat # requires expat_config.h
 CONFIGURE_ENV+=		OPT=${CFLAGS:M*:Q}
 CONFIGURE_ENV+=		ac_cv_path_mkdir=${TOOLS_PATH.mkdir}
 PKGCONFIG_OVERRIDE+=	Misc/python.pc.in Misc/python-embed.pc.in
