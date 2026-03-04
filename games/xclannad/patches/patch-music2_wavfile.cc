@@ -1,6 +1,9 @@
-$NetBSD: patch-music2_wavfile.cc,v 1.1 2026/03/04 10:27:19 tsutsui Exp $
+$NetBSD: patch-music2_wavfile.cc,v 1.2 2026/03/04 12:38:01 tsutsui Exp $
 
 - appease -Wwrite-strings warnings
+- fix incorrect frequency of the input wav file
+- fix an undefined behavior
+- fix incorrect parentheses
 
 --- music2/wavfile.cc.orig	2008-08-31 09:52:12.000000000 +0000
 +++ music2/wavfile.cc
@@ -22,3 +25,32 @@ $NetBSD: patch-music2_wavfile.cc,v 1.1 2026/03/04 10:27:19 tsutsui Exp $
  {	char	*pend ;
  	int		k, test ;
  
+@@ -217,7 +217,7 @@ static char* WavGetInfo(WAVFILE* wfile, 
+ 
+ 	if ( (e = WaveHeaderCheck(data,
+ 				  &channels,&samplerate,
+-				  &sample_bits,&samples,&datastart) != 0 )) {
++				  &sample_bits,&samples,&datastart)) != 0 ) {
+ 		fprintf(stderr,"WavGetInfo(): Reading WAV header\n");
+ 		return 0;
+ 	}
+@@ -303,7 +303,7 @@ WAVFILE_Stream::WAVFILE_Stream(FILE* _st
+ 	return;
+ }
+ WAVFILE_Stream::~WAVFILE_Stream() {
+-	if (data_orig) delete data_orig;
++	if (data_orig) delete[] data_orig;
+ 	if (stream) fclose(stream);
+ 	return;
+ }
+@@ -328,8 +328,8 @@ WAVFILE* WAVFILE::MakeConverter(WAVFILE*
+ 	if (new_reader->wavinfo.DataBits == 8) from_format = AUDIO_S8;
+ 	else from_format = AUDIO_S16;
+ 	SDL_AudioCVT* cvt = new SDL_AudioCVT;
+-	int ret = SDL_BuildAudioCVT(cvt, from_format, new_reader->wavinfo.Channels, freq,
+-		format, 2, freq);
++	int ret = SDL_BuildAudioCVT(cvt, from_format, new_reader->wavinfo.Channels, new_reader->wavinfo.SamplingRate,
++		format, channels, freq);
+ 	if (ret == -1) {
+ 		delete cvt;
+ 		fprintf(stderr,"Cannot make wave file converter!!!\n");
