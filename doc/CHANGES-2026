@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1537 2026/03/04 09:28:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1538 2026/03/04 09:32:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2076,3 +2076,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nodejs to 25.8.0 [adam 2026-03-04]
 	Updated devel/py-uv to 0.10.8 [adam 2026-03-04]
 	Updated devel/py-uv-build to 0.10.8 [adam 2026-03-04]
+	Updated textproc/py-markdown2 to 2.5.5 [adam 2026-03-04]
+	Updated devel/py-faker to 40.5.1 [adam 2026-03-04]
