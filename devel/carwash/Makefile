@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/12/30 12:05:24 pin Exp $
+# $NetBSD: Makefile,v 1.8 2026/03/04 14:57:18 pin Exp $
 
 DISTNAME=	carwash-0.3.4
+# v0.3.5 requires Rust >= 1.93
 CATEGORIES=	devel
 #MASTER_SITES=	${MASTER_SITE_GITHUB:=epistates/}
 #GITHUB_TAG=	v${PKGVERSION_NOREV}
