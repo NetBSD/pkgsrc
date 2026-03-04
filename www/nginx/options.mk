@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.122 2025/09/28 20:17:16 osa Exp $
+# $NetBSD: options.mk,v 1.123 2026/03/04 05:56:31 adam Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -207,7 +207,7 @@ DISTFILES+=		${NDK_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mnginx-luajit) || make(makesum) || make(mdi) || make(distclean)
-LUA_VERSION=		0.10.28
+LUA_VERSION=		0.10.29
 LUA_DISTNAME=		lua-nginx-module-${LUA_VERSION}
 LUA_DISTFILE=		${LUA_DISTNAME}.tar.gz
 SITES.${LUA_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/lua-nginx-module/archive/}v${LUA_VERSION}.tar.gz
