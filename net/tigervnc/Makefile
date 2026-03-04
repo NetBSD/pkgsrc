@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2026/03/03 22:24:35 tnn Exp $
+# $NetBSD: Makefile,v 1.87 2026/03/04 05:38:05 wiz Exp $
 
 DISTNAME=		tigervnc-1.16.0
 PKGREVISION=		1
@@ -138,7 +138,6 @@ pre-configure:
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
