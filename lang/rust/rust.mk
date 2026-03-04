@@ -1,4 +1,4 @@
-# $NetBSD: rust.mk,v 1.17 2025/08/25 17:51:11 wiz Exp $
+# $NetBSD: rust.mk,v 1.18 2026/03/04 12:17:34 jperkin Exp $
 #
 # This file determines the type of rust package to use.
 #
@@ -8,11 +8,15 @@
 # === User-settable variables ===
 #
 # RUST_TYPE
-#	The preferred type of Rust release to use -
-#	either bootstrap-from-source or an official binary.
+#	The preferred type of Rust release to use - either build from source,
+#	or use a binary installation.
 #
-#	Official Rust binaries are only published for certain platforms,
-#	including Darwin, FreeBSD, Linux, and NetBSD x86_64.
+#	Official Rust binaries are only published for certain platforms.  The
+#	"bin" option uses the lang/rust-bin package, whereas "native" uses
+#	binaries installed on the host system.  If using "native" with a rustup
+#	installation, you will probably also need to set RUSTUP_HOME in your
+#	MAKE_ENV pointing to the 'rustup show home' directory.  This is due to
+#	pkgsrc overwriting the HOME environment variable during build.
 #
 #	Possible values: src bin native
 #	Default: "src", except on 32-bit arm where it's "bin"
