@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/14 12:39:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/03/04 09:30:36 adam Exp $
 bin/markdown2-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -9,3 +9,4 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/markdown2.py
 ${PYSITELIB}/markdown2.pyc
 ${PYSITELIB}/markdown2.pyo
+testing/tox.ini
