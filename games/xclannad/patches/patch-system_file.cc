@@ -1,10 +1,59 @@
-$NetBSD: patch-system_file.cc,v 1.1 2020/01/03 02:35:51 tsutsui Exp $
+$NetBSD: patch-system_file.cc,v 1.2 2026/03/04 10:27:20 tsutsui Exp $
 
 - avoid unaligned copy for RISC cpus (XXX: handle NetBSD only)
+- fix a missing return value warning
+- appease -Wwrite-strings warnings
 
 --- system/file.cc.orig	2008-08-31 09:52:12.000000000 +0000
 +++ system/file.cc
-@@ -1161,14 +1161,8 @@ public:
+@@ -93,7 +93,7 @@ FILESEARCH::ARCTYPE FILESEARCH::default_
+ 	ATYPE_DIR, ATYPE_DIR, ATYPE_DIR, ATYPE_DIR,
+ 	ATYPE_DIR, ATYPE_DIR
+ };
+-char* FILESEARCH::default_dirnames[TYPEMAX] = {
++const char* FILESEARCH::default_dirnames[TYPEMAX] = {
+ 	0, 0, "", "pdt", 
+ 	"seen.txt", "allanm.anl", "allard.ard", "allcur.cur", 
+ 	0, 0, "koe", "bgm", "mov", "gan"};
+@@ -107,7 +107,7 @@ char* FILESEARCH::default_dirnames[TYPEM
+ **	Find したものをReadすると内容が得られる。
+ */
+ 
+-ARCFILE::ARCFILE(char* aname) {
++ARCFILE::ARCFILE(const char* aname) {
+ 	struct stat sb;
+ 	/* 変数初期化 */
+ 	arcname = 0;
+@@ -614,8 +614,9 @@ void FILESEARCH::SetFileInformation(FILE
+ 	/* 適当に初期化 */
+ 	if (filenames[type] != 0 &&
+ 		filenames[type] != default_dirnames[type]) delete[] filenames[type];
+-	filenames[type] = new char[strlen(filename)+1];
+-	strcpy(filenames[type], filename);
++	char *p = new char[strlen(filename)+1];
++	strcpy(p, filename);
++	filenames[type] = p;
+ 	is_archived[type] = is_arc;
+ 	searcher[type] = MakeARCFILE(is_arc, filename);
+ 	if (searcher[type] && next_arc)
+@@ -645,7 +646,7 @@ void FILESEARCH::AppendFileInformation(F
+ 	return;
+ }
+ 
+-ARCFILE* FILESEARCH::MakeARCFILE(ARCTYPE tp, char* filename) {
++ARCFILE* FILESEARCH::MakeARCFILE(ARCTYPE tp, const char* filename) {
+ 	ARCFILE* arc = 0;
+ 	char* file;
+ 	if (filename == 0) goto err;
+@@ -1067,6 +1068,7 @@ bool G00CONV::Read(char* image) {
+ 	if (type == 0) return Read_Type0(image);
+ 	else if (type == 1) return Read_Type1(image);
+ 	else if (type == 2) return Read_Type2(image);
++	return false;
+ }
+ 
+ /* 一般的な LZ 圧縮の展開ルーチン */
+@@ -1161,14 +1163,8 @@ public:
  		lsrc += 2;
  	}
  	static void Copy1Pixel(const char*& lsrc, char*& ldest) {
@@ -21,7 +70,7 @@ $NetBSD: patch-system_file.cc,v 1.1 2020/01/03 02:35:51 tsutsui Exp $
  		lsrc += 3; ldest += 4;
  	}
  	static int IsRev(void) { return 0; }
-@@ -1246,13 +1240,7 @@ public:
+@@ -1246,13 +1242,7 @@ public:
  		lsrc += 2;
  	}
  	static void Copy1Pixel(const char*& lsrc, char*& ldest) {
@@ -36,7 +85,7 @@ $NetBSD: patch-system_file.cc,v 1.1 2020/01/03 02:35:51 tsutsui Exp $
  		lsrc += 3; ldest += 3;
  	}
  	static int IsRev(void) { return 1; }
-@@ -1279,7 +1267,7 @@ bool PDTCONV::Read(char* image) {
+@@ -1279,7 +1269,7 @@ bool PDTCONV::Read(char* image) {
  	int i; int len = width*height;
  	src = buf; dest = image;
  	for (i=0; i<len; i++) {
@@ -45,7 +94,7 @@ $NetBSD: patch-system_file.cc,v 1.1 2020/01/03 02:35:51 tsutsui Exp $
  		src++;
  		dest += 4;
  	}
-@@ -1328,9 +1316,12 @@ bool PDTCONV::Read_PDT11(char* image) {
+@@ -1328,9 +1318,12 @@ bool PDTCONV::Read_PDT11(char* image) {
  		cur += 4;
  	}
  	src = image + width*height;
@@ -61,7 +110,7 @@ $NetBSD: patch-system_file.cc,v 1.1 2020/01/03 02:35:51 tsutsui Exp $
  	return true;
  }
  
-@@ -1475,8 +1466,8 @@ bool G00CONV::Read_Type1(char* image) {
+@@ -1475,8 +1468,8 @@ bool G00CONV::Read_Type1(char* image) {
  	srcend = uncompress_data + uncompress_size;
  	dest = image; destend = image + width*height*4;
  	while(dest < destend && src < srcend) {
@@ -72,7 +121,7 @@ $NetBSD: patch-system_file.cc,v 1.1 2020/01/03 02:35:51 tsutsui Exp $
  	}
  	delete[] uncompress_data;
  	return true;
-@@ -1541,16 +1532,17 @@ bool G00CONV::Read_Type2(char* image) {
+@@ -1541,16 +1534,17 @@ bool G00CONV::Read_Type2(char* image) {
  
  void G00CONV::Copy_32bpp(char* image, int x, int y, const char* src, int bpl, int h) {
  	int i;
@@ -94,7 +143,7 @@ $NetBSD: patch-system_file.cc,v 1.1 2020/01/03 02:35:51 tsutsui Exp $
  	}
  }
  
-@@ -1560,10 +1552,10 @@ void GRPCONV::CopyRGBA_rev(char* image, 
+@@ -1560,10 +1554,10 @@ void GRPCONV::CopyRGBA_rev(char* image, 
  	int len = width * height;
  	int i;
  	unsigned char* s = (unsigned char*)buf;
@@ -108,7 +157,7 @@ $NetBSD: patch-system_file.cc,v 1.1 2020/01/03 02:35:51 tsutsui Exp $
  	}
  	return;
  }
-@@ -1576,9 +1568,10 @@ void GRPCONV::CopyRGBA(char* image, cons
+@@ -1576,9 +1570,10 @@ void GRPCONV::CopyRGBA(char* image, cons
  	/* 色変換を行う */
  	int len = width * height;
  	int i;
@@ -121,7 +170,7 @@ $NetBSD: patch-system_file.cc,v 1.1 2020/01/03 02:35:51 tsutsui Exp $
  		buf += 4;
  	}
  	return;
-@@ -1588,10 +1581,10 @@ void GRPCONV::CopyRGB(char* image, const
+@@ -1588,10 +1583,10 @@ void GRPCONV::CopyRGB(char* image, const
  	int len = width * height;
  	int i;
  	unsigned char* s = (unsigned char*)buf;

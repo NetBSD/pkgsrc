@@ -1,10 +1,11 @@
-$NetBSD: patch-scn2k_scn2k__cmd.cc,v 1.3 2021/12/27 05:11:34 dholland Exp $
+$NetBSD: patch-scn2k_scn2k__cmd.cc,v 1.4 2026/03/04 10:27:20 tsutsui Exp $
 
 - don't assume signed char for arm and powerpc
 - fix wrong casts
 - silence const warning
 - remove chunk of text in #if 0 that doesn't necessarily tokenize
   (depending apparently on character set settings)
+- appease -Wwrite-strings warnings
 
 --- scn2k/scn2k_cmd.cc.orig	2008-08-31 09:52:12.000000000 +0000
 +++ scn2k/scn2k_cmd.cc
@@ -141,6 +142,15 @@ $NetBSD: patch-scn2k_scn2k__cmd.cc,v 1.3 2021/12/27 05:11:34 dholland Exp $
  		// numerical atom
  		d += 6;
  		value = read_little_endian_int(d-4);
+@@ -720,7 +667,7 @@ int Cmd::GetLeftToken(const char*& d, Va
+ 	return value;
+ }
+ 
+-static char* op_str[70] = {
++static const char* op_str[70] = {
+ //	 0      1      2      3      4      5      6      7      8     9
+ 	"+",   "-",   "*",   "/",   "%",   "&",   "|",   "^",   "<<",  ">>",	// +00
+ 	"err.","err.","err.","err.","err.","err.","err.","err.","err.","err.",	// +10
 @@ -1001,7 +948,7 @@ dprintf("enum.<");
  			int count = GetArgs(d);
  			args[pt] = VarInfo(count);
