@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2025/04/15 15:17:49 adam Exp $
+# $NetBSD: Makefile,v 1.19 2026/03/04 13:47:59 adam Exp $
 
-DISTNAME=	Wand-0.6.13
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	2
+DISTNAME=	wand-0.7.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/Wand/}
 
@@ -13,8 +12,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
-
-WHEEL_NAME=	${DISTNAME:tl}
 
 # 'make test' doesn't work, but running 'pytest' in ${WRKSRC} gives
 # 2 failed, 562 passed, 6 skipped, 2 warnings
