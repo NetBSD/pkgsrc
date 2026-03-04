@@ -1,7 +1,9 @@
-$NetBSD: patch-scn2k_scn2k__text.cc,v 1.1 2020/01/03 02:35:51 tsutsui Exp $
+$NetBSD: patch-scn2k_scn2k__text.cc,v 1.2 2026/03/04 10:27:20 tsutsui Exp $
 
 - don't assume signed char for arm and powerpc
 - explicitly use NULL to pass NULL pointer via varargs
+- appease -Wwrite-strings warnings
+- fix a missing return value that causes SIGSEGV on netbsd-10 with gcc10
 
 --- scn2k/scn2k_text.cc.orig	2008-08-31 15:26:43.000000000 +0000
 +++ scn2k/scn2k_text.cc
@@ -32,7 +34,24 @@ $NetBSD: patch-scn2k_scn2k__text.cc,v 1.1 2020/01/03 02:35:51 tsutsui Exp $
  	}
  	text_stream.Add(str_top);
  	return;
-@@ -1874,7 +1874,7 @@ void TextWindow::MakeWaku(PicContainer& 
+@@ -1538,7 +1538,7 @@ void movebtn_drag(int from_x, int from_y
+ 	fprintf(stderr,"drag.\n");
+ }
+ #define BTNCNT 10
+-static char* btnname[BTNCNT] = {
++static const char* btnname[BTNCNT] = {
+ 	"MOVE",
+ 	"CLEAR",
+ 	"READJUMP",
+@@ -1780,6 +1780,7 @@ BacklogItem& BacklogItem::operator =(con
+ 	koe = p.koe;
+ 	face = p.face;
+ 	text = p.text;
++	return *this;
+ }
+ void BacklogItem::SetSavepos(int p) {
+ 	Clear();
+@@ -1874,7 +1875,7 @@ void TextWindow::MakeWaku(PicContainer& 
  		}
  		int x, y, w, h;
  		sprintf(key, "#WAKU.%03d.000.%s_BOX", waku_no, btnname[i]);
@@ -41,7 +60,7 @@ $NetBSD: patch-scn2k_scn2k__text.cc,v 1.1 2020/01/03 02:35:51 tsutsui Exp $
  		int sx, sy, sdx, sdy, cnt;
  		const char* d = data + 9 + btnpos[i]*24*8;
  		sx = read_little_endian_int(d);
-@@ -1901,7 +1901,7 @@ TextWindow::TextWindow(PicContainer& par
+@@ -1901,7 +1902,7 @@ TextWindow::TextWindow(PicContainer& par
  	sprintf(key, "#WINDOW.%03d.MOJI_REP", win_no);  if (config.GetParam(key, 2, &rep1, &rep2) == -1) return;
  	sprintf(key, "#WINDOW.%03d.MOJI_CNT", win_no);  if (config.GetParam(key, 2, &cntw, &cnth) == -1) return;
  	sprintf(key, "#WINDOW.%03d.POS", win_no);       if (config.GetParam(key, 3, &posd, &posx, &posy) == -1) return;
