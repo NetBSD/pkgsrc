@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1532 2026/03/04 00:22:58 tnn Exp $
+$NetBSD: CHANGES-2026,v 1.1533 2026/03/04 05:46:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2063,3 +2063,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/deskflow to 1.26.0 [tnn 2026-03-03]
 	Added graphics/qt6-qt-color-widgets version 3.0.0 [tnn 2026-03-04]
 	Updated graphics/flameshot to 13.3.0 [tnn 2026-03-04]
+	Updated graphics/py-tifffile to 2026.3.3 [adam 2026-03-04]
+	Updated databases/py-sqlalchemy to 2.0.48 [adam 2026-03-04]
