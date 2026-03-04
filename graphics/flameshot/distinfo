@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2025/05/05 08:59:03 tnn Exp $
+$NetBSD: distinfo,v 1.2 2026/03/04 00:21:47 tnn Exp $
 
-BLAKE2s (flameshot-12.1.0.tar.gz) = 220b50c2033bd4b8532a10e33ceb0059f1a439daccc8bb3f8c666e45ffd8ff50
-SHA512 (flameshot-12.1.0.tar.gz) = 159bf3a8ff406b3881dcc77fc48d9e7cc0d595bd47ee2363396d7efc95f69160cf25ccf99cd1b2c2b527baeadf91c209784a7bca23ed5f17caacc385e161c83c
-Size (flameshot-12.1.0.tar.gz) = 15618560 bytes
+BLAKE2s (flameshot-13.3.0.tar.gz) = 1888a264b98c5952e5f870b38dffc69ff9dbf201bb22ed34dda350e7bee97df7
+SHA512 (flameshot-13.3.0.tar.gz) = 0f991b58e6e828aceb94d1e7eb4e1b5d946d94ad6434ee5324b1177ec3d235298887b767c6c671124ea82d56e24a05909a21cf13a29777bbcd2358f14a7f2362
+Size (flameshot-13.3.0.tar.gz) = 16081429 bytes
 SHA1 (patch-src_CMakeLists.txt) = 7e84235f6a761c4951a3ca436920be5d10f6d128
