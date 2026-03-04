@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2025/12/25 18:01:01 osa Exp $
+# $NetBSD: options.mk,v 1.3 2026/03/04 18:47:08 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -185,7 +185,7 @@ CONFIGURE_ARGS+=	--with-http_realip_module
 .if !empty(PKG_OPTIONS:Mnginx-redis) || make(makesum) || make(mdi) || make(distclean)
 REDIS_GH_ACCOUNT=		osokin
 REDIS_GH_PROJECT=		ngx_http_redis
-REDIS_VERSION=			59eb1c3
+REDIS_VERSION=			0.4.1
 REDIS_DISTNAME=			${REDIS_GH_PROJECT}-${REDIS_VERSION}
 REDIS_DISTFILE=			${REDIS_GH_ACCOUNT}-${REDIS_DISTNAME}_GH.tar.gz
 SITES.${REDIS_DISTFILE}=	-${CODELOAD_SITE_GITHUB:=${REDIS_GH_ACCOUNT}/${REDIS_GH_PROJECT}/tar.gz/${REDIS_VERSION}?dummy=${REDIS_DISTFILE}}
@@ -387,7 +387,7 @@ PLIST.rtmp=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mnginx-njs) || make(makesum) || make(mdi) || make(distclean)
-NJS_VERSION=		0.9.4
+NJS_VERSION=		0.9.6
 NJS_DISTNAME=		njs-${NJS_VERSION}
 NJS_DISTFILE=		${NJS_DISTNAME}.tar.gz
 SITES.${NJS_DISTFILE}=	-${MASTER_SITE_GITHUB:=nginx/njs/archive/}${NJS_VERSION}.tar.gz
@@ -395,6 +395,7 @@ DISTFILES+=		${NJS_DISTFILE}
 DSO_EXTMODS+=		njs
 NJS_SUBDIR=		/nginx
 PLIST.njs=		yes
+.include "../../lang/quickjs/buildlink3.mk"
 .  if !empty(PKG_OPTIONS:Mnginx-njs-xml)
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
@@ -419,7 +420,7 @@ PLIST.upload=			yes
 .if !empty(PKG_OPTIONS:Mnginx-gssapi) || make(makesum) || make(mdi) || make(distclean)
 GSSAPI_GH_ACCOUNT=		stnoonan
 GSSAPI_GH_PROJECT=		spnego-http-auth-nginx-module
-GSSAPI_VERSION=			c3dbfbd
+GSSAPI_VERSION=			59f5670
 GSSAPI_DISTNAME=		${GSSAPI_GH_PROJECT}-${GSSAPI_VERSION}
 GSSAPI_DISTFILE=		${GSSAPI_GH_ACCOUNT}-${GSSAPI_DISTNAME}_GH.tar.gz
 SITES.${GSSAPI_DISTFILE}=	-${CODELOAD_SITE_GITHUB:=${GSSAPI_GH_ACCOUNT}/${GSSAPI_GH_PROJECT}/tar.gz/${GSSAPI_VERSION}?dummy=${GSSAPI_DISTFILE}}
@@ -443,7 +444,7 @@ PLIST.sts=		yes
 .if !empty(PKG_OPTIONS:Mnginx-vts) || make(makesum) || make(mdi) || make(distclean)
 VTS_GH_ACCOUNT=		vozlt
 VTS_GH_PROJECT=		nginx-module-vts
-VTS_VERSION=		d65ce17
+VTS_VERSION=		d421ab0
 VTS_DISTNAME=		${VTS_GH_PROJECT}-${VTS_VERSION}
 VTS_DISTFILE=		${VTS_GH_ACCOUNT}-${VTS_DISTNAME}_GH.tar.gz
 SITES.${VTS_DISTFILE}=	-${CODELOAD_SITE_GITHUB:=${VTS_GH_ACCOUNT}/${VTS_GH_PROJECT}/tar.gz/${VTS_VERSION}?dummy=${VTS_DISTFILE}}

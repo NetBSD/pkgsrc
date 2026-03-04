@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2026/01/07 08:49:18 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/03/04 18:47:08 osa Exp $
 
-DISTNAME=	freenginx-1.29.4
+DISTNAME=	freenginx-1.29.5
 PKGNAME=	${DISTNAME:S/-/-devel-/1}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://freenginx.org/download/
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -113,6 +112,9 @@ post-patch:
 .if !empty(PKG_OPTIONS:Mnginx-naxsi)
 	${SED} -i.bak '308,309s/MSIZE/NAXSI_MSIZE/g' \
 		${WRKSRC}/..${NAXSI_SUBDIR}/libinjection/src/libinjection_sqli.c
+.endif
+.if !empty(PKG_OPTIONS:Mnginx-njs)
+	cd ${WRKSRC} && ${PATCH} < ${PATCHDIR}/extra-patch-auto-quickjs
 .endif
 .if !empty(PKG_OPTIONS:Mnginx-upload)
 	cd ${WRKSRC} && ${PATCH} < ${PATCHDIR}/extra-patch-ngx_http_upload_module.c
