@@ -1,6 +1,7 @@
-$NetBSD: patch-window_picture.cc,v 1.1 2020/01/03 02:35:51 tsutsui Exp $
+$NetBSD: patch-window_picture.cc,v 1.2 2026/03/04 14:15:03 tsutsui Exp $
 
 - avoid unaligned copy for RISC cpus
+- try to use SDL_WM_SetCaption() with utf-8 conversion
 
 --- window/picture.cc.orig	2008-01-06 05:17:14.000000000 +0000
 +++ window/picture.cc
@@ -27,3 +28,22 @@ $NetBSD: patch-window_picture.cc,v 1.1 2020/01/03 02:35:51 tsutsui Exp $
  			}
  			if (i == len) {
  				is_mask = NO_MASK;
+@@ -1009,8 +1009,16 @@ bool PicRoot::with_mask(Surface* s) {
+ #endif /* USE_X11 */
+ void PicRoot::SetWindowCaption(const char* caption) {
+ #if USE_X11
+-//	SDL_WM_SetCaption(caption, 0);
+-	// SDLの関数では2バイト文字をサポートしてくれないので、同等の内容に修正
++	// SDL 1.2 でも utf-8 をまず仮定する
++	// SetWindowCaption() の呼び出し側では kconv() で EUC 変換されている
++	char *caption_utf8 = SDL_iconv_string("UTF-8", "euc-jp",
++	    caption, strlen(caption) + 1);
++	if (caption_utf8 != NULL) {
++		SDL_WM_SetCaption(caption_utf8, 0);
++		SDL_free(caption_utf8);
++		return;
++	}
++	// 変換に失敗した場合は同等の内容にフォールバック
+ 	SDL_SysWMinfo info;
+ 	memset(&info,0,sizeof(info));
+ 	SDL_VERSION(&(info.version));

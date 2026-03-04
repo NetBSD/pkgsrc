@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2026/03/04 12:38:01 tsutsui Exp $
+$NetBSD: distinfo,v 1.8 2026/03/04 14:15:03 tsutsui Exp $
 
 BLAKE2s (xclannad-7hc.tar.gz) = 313c00a10aaeba1fc7bcc69578f2976f5df00414636a27ee19d498cee52ae5ad
 SHA512 (xclannad-7hc.tar.gz) = 5d14c1ca6932d0a013e36c2af51d0d4de2cb73e4c438ccf2bebf03f223a62649203726cc552f975e3177ea614f79c1d2d0d36220116289f0bb8f65a74997ac27
@@ -22,6 +22,6 @@ SHA1 (patch-system_system__config.cc) = 0db7eaeb60b540c0c5afc480f820a4f07e200f7f
 SHA1 (patch-window_SDL__rotozoom.cc) = 7f21616ba4889df0b70fa11c57eb378c3a3ac369
 SHA1 (patch-window_button.cc) = 301d30641ee6342803e2d5307118d25b31d165cc
 SHA1 (patch-window_event.cc) = 7468049d02e3a7f40a4de23e590bbb29f0f458a9
-SHA1 (patch-window_picture.cc) = dacce976d13167f18a5a3186840f6625277c3bfc
+SHA1 (patch-window_picture.cc) = 01aec47b0206041652fbdabdf3a541f00079d326
 SHA1 (patch-window_widget.cc) = dbd5ac42bb2702a1efb32ac68bf9b5f91357006e
 SHA1 (patch-xlovesys.cc) = 88e227d3ad0ca49de6c4a373cda5c31fb9fcc8ce
