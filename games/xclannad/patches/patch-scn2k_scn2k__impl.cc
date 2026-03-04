@@ -1,7 +1,19 @@
-$NetBSD: patch-scn2k_scn2k__impl.cc,v 1.1 2020/03/26 02:33:34 joerg Exp $
+$NetBSD: patch-scn2k_scn2k__impl.cc,v 1.2 2026/03/04 10:27:20 tsutsui Exp $
 
---- scn2k/scn2k_impl.cc.orig	2020-03-26 01:19:18.835162701 +0000
+- appease -Wwrite-strings warnings
+- appease -Wconversion-null warning
+
+--- scn2k/scn2k_impl.cc.orig	2008-08-31 09:52:11.000000000 +0000
 +++ scn2k/scn2k_impl.cc
+@@ -138,7 +138,7 @@ err:
+ 	fprintf(stderr,"Cannot open scenario number %d\n",new_scn_number);
+ 	throw std::invalid_argument("Scn2k::OpenScript");
+ 
+-	return false;
++	return NULL;
+ }
+ bool Scn2k::ChangeScript(int new_scn_number, int call_no) {
+ 	int old_scn_number = scn_number;
 @@ -1268,7 +1268,7 @@ void Scn2k::LoadImpl(const char* save) {
  			sscanf(save, "Point=%d", &save_point);
  		} else if (strncmp(save, "Title=", 6) == 0) {

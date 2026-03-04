@@ -1,9 +1,19 @@
-$NetBSD: patch-system_system__config.cc,v 1.1 2020/01/03 02:35:51 tsutsui Exp $
+$NetBSD: patch-system_system__config.cc,v 1.2 2026/03/04 10:27:20 tsutsui Exp $
 
-Fix casts in printfs that cause build error on LP64 machines.
+- Fix casts in printfs that cause build error on LP64 machines.
+- Appease -Wwrite-strings warnings
 
 --- system/system_config.cc.orig	2008-08-31 09:52:12.000000000 +0000
 +++ system/system_config.cc
+@@ -212,7 +212,7 @@ public:
+ 		return;
+ 	}
+ 	const char* PatchOriginal(const char* data) {
+-		static char* table = "?\"',.:;=<>";
++		static const char* table = "?\"',.:;=<>";
+ 		if (new_data) delete[] new_data;
+ 		if (old_data) delete[] old_data;
+ 		new_data = 0; old_data = 0;
 @@ -367,14 +367,14 @@ public:
  			fprintf(f, ") ");
  		}
