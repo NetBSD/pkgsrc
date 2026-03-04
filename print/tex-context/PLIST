@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2026/02/17 10:49:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2026/03/04 19:40:46 markd Exp $
 bin/mtxrun
 share/texmf-dist/fonts/opentype/public/context/LatinModernMathCompanion-Regular.otf
 share/texmf-dist/fonts/opentype/public/context/RalphSmithsFormalScriptCompanion-Regular.otf
@@ -2796,6 +2796,7 @@ share/texmf-dist/tex/context/modules/mkxl/s-math-tests.mkxl
 share/texmf-dist/tex/context/modules/mkxl/s-math-tweaks.mkxl
 share/texmf-dist/tex/context/modules/mkxl/s-math-verbatim.mkxl
 share/texmf-dist/tex/context/modules/mkxl/s-physics-texunits.mkxl
+share/texmf-dist/tex/context/modules/mkxl/s-present-sheikah.mkxl
 share/texmf-dist/tex/context/modules/mkxl/s-publications-show.mkxl
 share/texmf-dist/tex/context/modules/mkxl/s-signals-example.mkxl
 share/texmf-dist/tex/context/modules/mkxl/s-spacing-show.mkxl
