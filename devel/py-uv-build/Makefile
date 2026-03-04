@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2025/12/08 19:43:55 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2026/03/04 09:27:52 adam Exp $
 
 DISTNAME=	uv_build-${UV_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uv-build/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/astral-sh/uv
 COMMENT=	The uv build backend
-LICENSE=	mit OR apache-2.0
 
 .include "../../devel/py-uv/Makefile.common"
 
