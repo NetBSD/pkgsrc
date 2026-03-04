@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/05/05 08:59:03 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/03/04 00:21:47 tnn Exp $
 bin/flameshot
 man/man1/flameshot.1
 share/applications/org.flameshot.Flameshot.desktop
@@ -9,13 +9,17 @@ share/fish/vendor_completions.d/flameshot.fish
 share/flameshot/translations/Internationalization_bg.qm
 share/flameshot/translations/Internationalization_ca.qm
 share/flameshot/translations/Internationalization_cs.qm
+share/flameshot/translations/Internationalization_da.qm
 share/flameshot/translations/Internationalization_de_DE.qm
 share/flameshot/translations/Internationalization_el.qm
+share/flameshot/translations/Internationalization_en.qm
 share/flameshot/translations/Internationalization_es.qm
+share/flameshot/translations/Internationalization_et.qm
 share/flameshot/translations/Internationalization_eu.qm
 share/flameshot/translations/Internationalization_fa.qm
 share/flameshot/translations/Internationalization_fi.qm
 share/flameshot/translations/Internationalization_fr.qm
+share/flameshot/translations/Internationalization_ga.qm
 share/flameshot/translations/Internationalization_gl.qm
 share/flameshot/translations/Internationalization_grc.qm
 share/flameshot/translations/Internationalization_he.qm
@@ -29,11 +33,16 @@ share/flameshot/translations/Internationalization_nb_NO.qm
 share/flameshot/translations/Internationalization_nl.qm
 share/flameshot/translations/Internationalization_nl_NL.qm
 share/flameshot/translations/Internationalization_pl.qm
+share/flameshot/translations/Internationalization_pt.qm
 share/flameshot/translations/Internationalization_pt_BR.qm
+share/flameshot/translations/Internationalization_ro.qm
 share/flameshot/translations/Internationalization_ru.qm
 share/flameshot/translations/Internationalization_sk.qm
 share/flameshot/translations/Internationalization_sr_SP.qm
 share/flameshot/translations/Internationalization_sv_SE.qm
+share/flameshot/translations/Internationalization_sw.qm
+share/flameshot/translations/Internationalization_ta.qm
+share/flameshot/translations/Internationalization_th.qm
 share/flameshot/translations/Internationalization_tr.qm
 share/flameshot/translations/Internationalization_uk.qm
 share/flameshot/translations/Internationalization_vi.qm
