@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.97 2026/02/26 18:20:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.98 2026/03/04 07:04:23 adam Exp $
 bin/node
 bin/npm
 bin/npx
@@ -368,6 +368,7 @@ lib/node_modules/npm/lib/commands/stop.js
 lib/node_modules/npm/lib/commands/team.js
 lib/node_modules/npm/lib/commands/test.js
 lib/node_modules/npm/lib/commands/token.js
+lib/node_modules/npm/lib/commands/trust/circleci.js
 lib/node_modules/npm/lib/commands/trust/github.js
 lib/node_modules/npm/lib/commands/trust/gitlab.js
 lib/node_modules/npm/lib/commands/trust/index.js
@@ -594,6 +595,16 @@ lib/node_modules/npm/man/man7/scripts.7
 lib/node_modules/npm/man/man7/scripts.7.gz
 lib/node_modules/npm/man/man7/workspaces.7
 lib/node_modules/npm/man/man7/workspaces.7.gz
+lib/node_modules/npm/node_modules/@gar/promise-retry/LICENSE
+lib/node_modules/npm/node_modules/@gar/promise-retry/lib/index.js
+lib/node_modules/npm/node_modules/@gar/promise-retry/node_modules/retry/License
+lib/node_modules/npm/node_modules/@gar/promise-retry/node_modules/retry/example/dns.js
+lib/node_modules/npm/node_modules/@gar/promise-retry/node_modules/retry/example/stop.js
+lib/node_modules/npm/node_modules/@gar/promise-retry/node_modules/retry/index.js
+lib/node_modules/npm/node_modules/@gar/promise-retry/node_modules/retry/lib/retry.js
+lib/node_modules/npm/node_modules/@gar/promise-retry/node_modules/retry/lib/retry_operation.js
+lib/node_modules/npm/node_modules/@gar/promise-retry/node_modules/retry/package.json
+lib/node_modules/npm/node_modules/@gar/promise-retry/package.json
 lib/node_modules/npm/node_modules/@isaacs/fs-minipass/LICENSE
 lib/node_modules/npm/node_modules/@isaacs/fs-minipass/dist/commonjs/index.js
 lib/node_modules/npm/node_modules/@isaacs/fs-minipass/dist/commonjs/package.json
@@ -1072,9 +1083,6 @@ lib/node_modules/npm/node_modules/diff/libesm/util/params.js
 lib/node_modules/npm/node_modules/diff/libesm/util/string.js
 lib/node_modules/npm/node_modules/diff/package.json
 lib/node_modules/npm/node_modules/diff/release-notes.md
-lib/node_modules/npm/node_modules/encoding/LICENSE
-lib/node_modules/npm/node_modules/encoding/lib/encoding.js
-lib/node_modules/npm/node_modules/encoding/package.json
 lib/node_modules/npm/node_modules/env-paths/index.js
 lib/node_modules/npm/node_modules/env-paths/license
 lib/node_modules/npm/node_modules/env-paths/package.json
@@ -1165,6 +1173,7 @@ lib/node_modules/npm/node_modules/iconv-lite/encodings/utf16.js
 lib/node_modules/npm/node_modules/iconv-lite/encodings/utf32.js
 lib/node_modules/npm/node_modules/iconv-lite/encodings/utf7.js
 lib/node_modules/npm/node_modules/iconv-lite/lib/bom-handling.js
+lib/node_modules/npm/node_modules/iconv-lite/lib/helpers/merge-exports.js
 lib/node_modules/npm/node_modules/iconv-lite/lib/index.js
 lib/node_modules/npm/node_modules/iconv-lite/lib/streams.js
 lib/node_modules/npm/node_modules/iconv-lite/package.json
