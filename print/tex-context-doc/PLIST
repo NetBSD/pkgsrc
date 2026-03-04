@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2026/02/17 10:49:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/03/04 19:40:47 markd Exp $
 man/man1/context.1
 man/man1/mtxrun-babel.1
 man/man1/mtxrun-bibtex.1
@@ -1154,6 +1154,7 @@ share/texmf-dist/doc/context/sources/general/manuals/musings/musings-performance
 share/texmf-dist/doc/context/sources/general/manuals/musings/musings-plain.tex
 share/texmf-dist/doc/context/sources/general/manuals/musings/musings-riscv.tex
 share/texmf-dist/doc/context/sources/general/manuals/musings/musings-roadmap.tex
+share/texmf-dist/doc/context/sources/general/manuals/musings/musings-rpi.tex
 share/texmf-dist/doc/context/sources/general/manuals/musings/musings-shift.tex
 share/texmf-dist/doc/context/sources/general/manuals/musings/musings-sideeffects.tex
 share/texmf-dist/doc/context/sources/general/manuals/musings/musings-speed.tex
@@ -1362,6 +1363,7 @@ share/texmf-dist/doc/context/sources/general/manuals/spacing/spacing-spaces.tex
 share/texmf-dist/doc/context/sources/general/manuals/spacing/spacing-style.tex
 share/texmf-dist/doc/context/sources/general/manuals/spacing/spacing-titlepage.tex
 share/texmf-dist/doc/context/sources/general/manuals/spreadsheets/spreadsheets-mkiv.tex
+share/texmf-dist/doc/context/sources/general/manuals/sql/demo-sql.tex
 share/texmf-dist/doc/context/sources/general/manuals/sql/sql-mkiv.tex
 share/texmf-dist/doc/context/sources/general/manuals/start/en/hasseltbook.bib
 share/texmf-dist/doc/context/sources/general/manuals/start/en/hasseltbook.pdf
