@@ -1,4 +1,4 @@
-$NetBSD: patch-system_file.cc,v 1.2 2026/03/04 10:27:20 tsutsui Exp $
+$NetBSD: patch-system_file.cc,v 1.3 2026/03/04 12:38:01 tsutsui Exp $
 
 - avoid unaligned copy for RISC cpus (XXX: handle NetBSD only)
 - fix a missing return value warning
@@ -15,7 +15,7 @@ $NetBSD: patch-system_file.cc,v 1.2 2026/03/04 10:27:20 tsutsui Exp $
  	0, 0, "", "pdt", 
  	"seen.txt", "allanm.anl", "allard.ard", "allcur.cur", 
  	0, 0, "koe", "bgm", "mov", "gan"};
-@@ -107,7 +107,7 @@ char* FILESEARCH::default_dirnames[TYPEM
+@@ -107,14 +107,14 @@ char* FILESEARCH::default_dirnames[TYPEM
  **	Find したものをReadすると内容が得られる。
  */
  
@@ -24,6 +24,14 @@ $NetBSD: patch-system_file.cc,v 1.2 2026/03/04 10:27:20 tsutsui Exp $
  	struct stat sb;
  	/* 変数初期化 */
  	arcname = 0;
+ 	list_point = 0;
+ 	filenames_orig = 0;
+ 	next = 0;
+-	if (aname[0] == '\0') {arcname=new char[1]; arcname[0]='\0';return;} // NULFILE
++	if (aname == NULL || aname[0] == '\0') {arcname=new char[1]; arcname[0]='\0';return;} // NULFILE
+ 	/* ディレクトリか否かのチェック */
+ 	if (stat(aname,&sb) == -1) { /* error */
+ 		perror("stat");
 @@ -614,8 +614,9 @@ void FILESEARCH::SetFileInformation(FILE
  	/* 適当に初期化 */
  	if (filenames[type] != 0 &&
