@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.2 2026/01/22 12:32:38 nia Exp $
+# $NetBSD: Makefile.common,v 1.3 2026/03/05 14:02:34 nia Exp $
 # used by www/palemoon/Makefile
 # used by www/palemoon-gtk3/Makefile
 #
 # for build instructions see
 # https://developer.palemoon.org/build/linux/
 
-PM_VER=		34.0.1
+PM_VER=		34.1.0
 CATEGORIES=	www
 
 DISTINFO_FILE=	${.CURDIR}/../../www/palemoon/distinfo
@@ -25,7 +25,7 @@ SITES.palemoon.tar.gz= \
 	-https://repo.palemoon.org/MoonchildProductions/Pale-Moon/archive/${PM_VER}_Release.tar.gz
 
 SITES.uxp.tar.gz= \
-	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_20260121.tar.gz
+	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_20260301.tar.gz
 
 SITES.psutil.tar.gz= \
 	-https://files.pythonhosted.org/packages/7b/58/2675697b6831e6ac4b7b7bc4e5dcdb24a2f39f8411186573eb0de16eb6d5/psutil-3.4.2.tar.gz
