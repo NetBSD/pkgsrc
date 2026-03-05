@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1550 2026/03/05 09:00:52 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1551 2026/03/05 09:10:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2099,3 +2099,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-fakefs to 6.1.4 [adam 2026-03-05]
 	Updated net/libtorrent to 0.16.7 [adam 2026-03-05]
 	Updated net/rtorrent to 0.16.7 [adam 2026-03-05]
+	Updated textproc/py-pallets-sphinx-themes to 2.5.0 [adam 2026-03-05]
+	Updated textproc/py-sphinx-autodoc-typehints to 3.9.6 [adam 2026-03-05]
