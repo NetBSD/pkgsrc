@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1551 2026/03/05 09:10:17 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1552 2026/03/05 09:35:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2101,3 +2101,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/rtorrent to 0.16.7 [adam 2026-03-05]
 	Updated textproc/py-pallets-sphinx-themes to 2.5.0 [adam 2026-03-05]
 	Updated textproc/py-sphinx-autodoc-typehints to 3.9.6 [adam 2026-03-05]
+	Updated www/p5-Plack-Middleware-Session to 0.36 [wiz 2026-03-05]
