@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2026/02/22 20:52:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.59 2026/03/05 07:39:47 mrg Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -2624,6 +2624,9 @@ ${PYSITELIB}/yt_dlp/extractor/tf1.pyo
 ${PYSITELIB}/yt_dlp/extractor/tfo.py
 ${PYSITELIB}/yt_dlp/extractor/tfo.pyc
 ${PYSITELIB}/yt_dlp/extractor/tfo.pyo
+${PYSITELIB}/yt_dlp/extractor/thechosen.py
+${PYSITELIB}/yt_dlp/extractor/thechosen.pyc
+${PYSITELIB}/yt_dlp/extractor/thechosen.pyo
 ${PYSITELIB}/yt_dlp/extractor/theguardian.py
 ${PYSITELIB}/yt_dlp/extractor/theguardian.pyc
 ${PYSITELIB}/yt_dlp/extractor/theguardian.pyo
