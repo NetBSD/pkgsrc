@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2026/02/17 14:45:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/03/05 16:40:32 wiz Exp $
 
 DISTNAME=	sbws-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -36,10 +36,6 @@ REPLACE_PYTHON+=	scripts/tools/scale-v3bw-with-budget.py
 # involved.
 do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} -s tests/unit -vv
-
-# https://gitlab.torproject.org/tpo/network-health/sbws/-/issues/40247
-post-install:
-	${RM} -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/tests
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
