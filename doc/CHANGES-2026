@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1554 2026/03/05 09:56:31 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1555 2026/03/05 10:38:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2105,3 +2105,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/p5-Plack-Middleware-Session to 0.36 [wiz 2026-03-05]
 	Updated textproc/py-tabulate to 0.10.0 [adam 2026-03-05]
 	Updated devel/py-inline-snapshot to 0.32.4 [adam 2026-03-05]
+	Updated databases/postgresql-timescaledb to 2.25.2 [adam 2026-03-05]
