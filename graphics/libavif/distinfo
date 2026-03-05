@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2025/05/11 10:11:51 wiz Exp $
+$NetBSD: distinfo,v 1.7 2026/03/05 07:16:19 adam Exp $
 
-BLAKE2s (libavif-1.3.0.tar.gz) = f23815eb841fab9eebb24e484cbbde6153b36ab26934d993d2c77a023bedadb3
-SHA512 (libavif-1.3.0.tar.gz) = a411579c851b7c46ddbd93c3549295e0901d822c817f5378b2c75b6a4f16eba1dffdf611bd1789dedeba776e701690a7437f9caeb9eb6dc382fc64935949dbf4
-Size (libavif-1.3.0.tar.gz) = 14062497 bytes
+BLAKE2s (libavif-1.4.0.tar.gz) = 3caa9af74081b0ebdca6b797dc5f31646de9756324bf747f24244e2182ba88ab
+SHA512 (libavif-1.4.0.tar.gz) = ca32105d2b175a315a04404df660b685653f082ebc71233f35b8b5d2d467b1b1d714e3ffc63fcf06371e8cedeabfa99c97f187466897423fb221d32648a161c4
+Size (libavif-1.4.0.tar.gz) = 14418584 bytes
