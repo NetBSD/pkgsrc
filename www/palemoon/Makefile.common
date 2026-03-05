@@ -5,7 +5,7 @@
 # for build instructions see
 # https://developer.palemoon.org/build/linux/
 
-PM_VER=		34.0.1
+PM_VER=		34.1.0
 CATEGORIES=	www
 
 DISTINFO_FILE=	${.CURDIR}/../../www/palemoon/distinfo
@@ -25,7 +25,7 @@ SITES.palemoon.tar.gz= \
 	-https://repo.palemoon.org/MoonchildProductions/Pale-Moon/archive/${PM_VER}_Release.tar.gz
 
 SITES.uxp.tar.gz= \
-	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_20260121.tar.gz
+	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_20260301.tar.gz
 
 SITES.psutil.tar.gz= \
 	-https://files.pythonhosted.org/packages/7b/58/2675697b6831e6ac4b7b7bc4e5dcdb24a2f39f8411186573eb0de16eb6d5/psutil-3.4.2.tar.gz
