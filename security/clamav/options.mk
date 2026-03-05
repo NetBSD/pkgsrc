@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2025/08/31 14:49:46 bouyer Exp $
+# $NetBSD: options.mk,v 1.11 2026/03/05 06:55:33 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clamav
 PKG_SUPPORTED_OPTIONS=	clamav-milter clamav-experimental clamav-unit-test
@@ -31,9 +31,9 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_EXPERIMENTAL=on
 .if ${PKG_OPTIONS:Mclamav-unit-test}
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_TESTS=on
 TEST_TARGET=			check
-.if make(test)
-ALLOW_NETWORK_ACCESS=		yes                 
-.endif
+.  if make(test)
+ALLOW_NETWORK_ACCESS=		yes
+.  endif
 BUILDLINK_DEPMETHOD.check=	build
 .  include "../../devel/check/buildlink3.mk"
 .endif
