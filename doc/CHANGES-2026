@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1545 2026/03/04 19:42:55 markd Exp $
+$NetBSD: CHANGES-2026,v 1.1546 2026/03/05 06:55:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2090,3 +2090,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/tex-context-doc to 20260219 [markd 2026-03-04]
 	Updated print/tex-context-legacy to 2025.78010 [markd 2026-03-04]
 	Updated print/tex-context-legacy-doc to 2025.78010 [markd 2026-03-04]
+	Updated security/clamav to 1.4.4 [taca 2026-03-05]
