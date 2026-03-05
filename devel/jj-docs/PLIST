@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/02/06 09:58:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/03/05 15:17:36 wiz Exp $
 share/doc/jj/FAQ.html
 share/doc/jj/assets/images/favicon.png
 share/doc/jj/assets/javascripts/bundle.f55a23d4.min.js
@@ -59,6 +59,7 @@ share/doc/jj/design/copy-tracking.html
 share/doc/jj/design/git-submodule-storage.html
 share/doc/jj/design/git-submodules.html
 share/doc/jj/design/jj-converge-command.html
+share/doc/jj/design/managed-config.html
 share/doc/jj/design/run.html
 share/doc/jj/design/secure-config.html
 share/doc/jj/design/sparse-v2.html
