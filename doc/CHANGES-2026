@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1558 2026/03/05 15:16:50 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1559 2026/03/05 15:17:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2110,3 +2110,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/palemoon to 34.1.0nb1 [nia 2026-03-05]
 	Updated net/arti to 2.1.0 [wiz 2026-03-05]
 	Updated devel/jj to 0.39.0 [wiz 2026-03-05]
+	Updated devel/jj-docs to 0.39.0 [wiz 2026-03-05]
