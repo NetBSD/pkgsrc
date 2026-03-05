@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26895 2026/03/04 09:28:32 adam Exp $
+$NetBSD: TODO,v 1.26896 2026/03/05 06:58:35 taca Exp $
 
 Suggested new packages
 ======================
@@ -398,8 +398,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-ncdf-1.6.9
 	o SQLiteCpp-2.5.0
 	o Sigil-2.7.0
-	o SOGo-5.12.4
-	o SOPE-5.12.4
+	o SOGo-5.12.5
+	o SOPE-5.12.5
 	o TiffIO-140a
 	o aarch64-none-elf-binutils-2.45
 	o aarch64-none-elf-gcc-14.3.0
@@ -523,7 +523,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cinepaint-1.4.4
 	o circos-0.69
 	o cjk-lyx-1.4.4
-	o clamav-1.4.3
 	o classpath-0.99
 	o classpath-gui-0.99
 	o clusterssh-4.16
