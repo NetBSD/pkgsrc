@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2026/02/17 14:45:55 wiz Exp $
+$NetBSD: distinfo,v 1.5 2026/03/05 16:40:32 wiz Exp $
 
 BLAKE2s (sbws-2.2.0.tar.bz2) = 144d8eb2bb33515fbf6560e08b9b1c9d86fc052058e16a0f5d90062d298bf3a8
 SHA512 (sbws-2.2.0.tar.bz2) = 8b0c81a540c8c6f5e96d782921d78cec240696e8d385b1d28124674cb911c1d86471fcaddb4af94fec057487a28c87e4e8f42a6c48678a1656b4a7ae697d6059
 Size (sbws-2.2.0.tar.bz2) = 4137765 bytes
+SHA1 (patch-pyproject.toml) = 03352bcd7dbf8847c6d214a21d329f3894b5d4be
