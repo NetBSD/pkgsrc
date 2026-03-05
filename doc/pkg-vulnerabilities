@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.741 2026/03/02 22:42:24 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.742 2026/03/05 16:49:34 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28894,7 +28894,7 @@ py{27,39,310,311,312,313,314}-django>=5<5.2.8	denial-of-service	https://nvd.nist
 py{27,39,310,311,312,313,314}-django<4.2.26	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-64459
 py{27,39,310,311,312,313,314}-django>=5<5.2.8	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-64459
 py{27,39,310,311,312,313,314}-octoprint<1.11.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-64187
-quickjs-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-12745
+quickjs<20250913nb1	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-12745
 firefox<145		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-87/
 firefox140<140.5	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-88/
 firefox115<115.30	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-89/
