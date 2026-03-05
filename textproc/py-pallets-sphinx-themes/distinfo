@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2025/04/08 15:37:32 adam Exp $
+$NetBSD: distinfo,v 1.10 2026/03/05 09:04:53 adam Exp $
 
-BLAKE2s (pallets_sphinx_themes-2.3.0.tar.gz) = e52d6b6996f0745280735d137b98b47bc27a913ecefae843c1ade2161ae64608
-SHA512 (pallets_sphinx_themes-2.3.0.tar.gz) = 9c76ab7e8e2cecaaecab7ccc621bac685b28394d16e4d35d79b8dc7745ceff88cba23b04efeb1faf0b6a987cf173c9fc77364a7306bfe5029e5129fed791b5a8
-Size (pallets_sphinx_themes-2.3.0.tar.gz) = 21029 bytes
+BLAKE2s (pallets_sphinx_themes-2.5.0.tar.gz) = a1fcb5d694fdac1dc8739542aeccd5838c76811429ef6c14ccafb18386f8ac3e
+SHA512 (pallets_sphinx_themes-2.5.0.tar.gz) = f5e83335025531e9cdfdf8cd3df6e19a5e78e78fbc4700e75a44c08072a1de8c3673da8325d6239669142d6872ff62dea074f2b3e664d296a61bbdb93be0e8aa
+Size (pallets_sphinx_themes-2.5.0.tar.gz) = 216582 bytes

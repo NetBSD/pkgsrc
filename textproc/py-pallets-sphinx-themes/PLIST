@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/08 15:37:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/03/05 09:04:53 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -7,9 +7,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/pallets_sphinx_themes/__init__.py
 ${PYSITELIB}/pallets_sphinx_themes/__init__.pyc
 ${PYSITELIB}/pallets_sphinx_themes/__init__.pyo
-${PYSITELIB}/pallets_sphinx_themes/theme_check.py
-${PYSITELIB}/pallets_sphinx_themes/theme_check.pyc
-${PYSITELIB}/pallets_sphinx_themes/theme_check.pyo
 ${PYSITELIB}/pallets_sphinx_themes/themes/__init__.py
 ${PYSITELIB}/pallets_sphinx_themes/themes/__init__.pyc
 ${PYSITELIB}/pallets_sphinx_themes/themes/__init__.pyo
@@ -39,6 +36,9 @@ ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/layout.html
 ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/localtoc.html
 ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/project.html
 ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/relations.html
+${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/static/atkinson/AtkinsonHyperlegibleMonoVF-Variable.woff2
+${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/static/atkinson/AtkinsonHyperlegibleNextVF-Variable.woff2
+${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/static/atkinson/LICENSE.txt
 ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/static/describe_version.js
 ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/static/pocoo.css
 ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/theme.conf
