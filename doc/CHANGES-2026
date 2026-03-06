@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1560 2026/03/06 06:13:59 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1561 2026/03/06 06:24:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2115,3 +2115,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-wrapt to 2.1.2 [adam 2026-03-06]
 	Updated converters/py-charset-normalizer to 3.4.5 [adam 2026-03-06]
 	Updated textproc/py-sphinx-autodoc-typehints to 3.9.7 [adam 2026-03-06]
+	Updated geography/libmaxminddb to 1.13.3 [adam 2026-03-06]
+	Updated geography/py-maxminddb to 3.1.1 [adam 2026-03-06]
+	Updated databases/py-tortoise-orm to 1.1.6 [adam 2026-03-06]
