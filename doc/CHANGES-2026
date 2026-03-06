@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1566 2026/03/06 08:22:35 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1567 2026/03/06 09:31:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2124,3 +2124,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/rumdl to 0.1.42 [pin 2026-03-06]
 	Updated audio/spotify-qt to 4.0.3 [pin 2026-03-06]
 	Updated textproc/treemd to 0.5.9 [pin 2026-03-06]
+	Added lang/py-python-discovery version 1.1.0 [adam 2026-03-06]
+	Updated devel/py-filelock to 3.25.0 [adam 2026-03-06]
