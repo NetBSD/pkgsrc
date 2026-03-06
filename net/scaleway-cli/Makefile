@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2026/02/24 08:45:32 bsiegert Exp $
+# $NetBSD: Makefile,v 1.19 2026/03/06 21:07:57 bsiegert Exp $
 
 DISTNAME=	scaleway-cli-2.42.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=scaleway/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
