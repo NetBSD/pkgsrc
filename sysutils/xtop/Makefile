@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2026/02/26 12:47:24 pin Exp $
+# $NetBSD: Makefile,v 1.3 2026/03/06 11:21:45 pin Exp $
 
-DISTNAME=	xtop-0.3.1
+DISTNAME=	xtop-0.3.4
 CATEGORIES=	sysutils
 MASTER_SITES=	https://static.crates.io/crates/xtop/
 EXTRACT_SUFX=	.crate
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mabognar/xtop/
-COMMENT=	TODO: Short description of the package
+COMMENT=	System monitor TUI
 LICENSE=	mit
 
 .include "cargo-depends.mk"
