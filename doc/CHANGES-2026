@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1561 2026/03/06 06:24:05 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1562 2026/03/06 06:50:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2118,3 +2118,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/libmaxminddb to 1.13.3 [adam 2026-03-06]
 	Updated geography/py-maxminddb to 3.1.1 [adam 2026-03-06]
 	Updated databases/py-tortoise-orm to 1.1.6 [adam 2026-03-06]
+	Updated math/py-astropy-iers-data to 0.2026.3.2.0.47.4 [adam 2026-03-06]
+	Updated time/py-types-python-dateutil to 2.9.0.20260305 [adam 2026-03-06]
