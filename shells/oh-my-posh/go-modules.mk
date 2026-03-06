@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.120 2026/02/21 15:12:40 pin Exp $
+# $NetBSD: go-modules.mk,v 1.121 2026/03/06 08:15:43 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -57,8 +57,8 @@ GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.zip
 GO_MODULE_FILES+=	github.com/dsnet/compress/@v/v0.0.1.mod
 GO_MODULE_FILES+=	github.com/dsnet/compress/@v/v0.0.1.zip
 GO_MODULE_FILES+=	github.com/dsnet/golib/@v/v0.0.0-20171103203638-1ea166775780.mod
-GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.9.1.mod
-GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.9.1.zip
+GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.10.0.mod
+GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.10.0.zip
 GO_MODULE_FILES+=	github.com/erikgeiser/coninput/@v/v0.0.0-20211004153227-1c3628e74d0f.mod
 GO_MODULE_FILES+=	github.com/erikgeiser/coninput/@v/v0.0.0-20211004153227-1c3628e74d0f.zip
 GO_MODULE_FILES+=	github.com/esimov/stackblur-go/@v/v1.1.1.mod
@@ -130,8 +130,8 @@ GO_MODULE_FILES+=	github.com/sahilm/fuzzy/@v/v0.1.1.mod
 GO_MODULE_FILES+=	github.com/sahilm/fuzzy/@v/v0.1.1.zip
 GO_MODULE_FILES+=	github.com/sergi/go-diff/@v/v1.4.0.mod
 GO_MODULE_FILES+=	github.com/sergi/go-diff/@v/v1.4.0.zip
-GO_MODULE_FILES+=	github.com/shirou/gopsutil/v4/@v/v4.26.1.mod
-GO_MODULE_FILES+=	github.com/shirou/gopsutil/v4/@v/v4.26.1.zip
+GO_MODULE_FILES+=	github.com/shirou/gopsutil/v4/@v/v4.26.2.mod
+GO_MODULE_FILES+=	github.com/shirou/gopsutil/v4/@v/v4.26.2.zip
 GO_MODULE_FILES+=	github.com/shopspring/decimal/@v/v1.4.0.mod
 GO_MODULE_FILES+=	github.com/shopspring/decimal/@v/v1.4.0.zip
 GO_MODULE_FILES+=	github.com/shurcoo!l/gofontwoff/@v/v0.0.0-20181114050219-180f79e6909d.mod
