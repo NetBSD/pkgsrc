@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1571 2026/03/06 13:48:36 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1572 2026/03/06 21:09:10 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2133,3 +2133,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/py-icalendar to 7.0.3 [adam 2026-03-06]
 	Added textproc/py-annotated-doc version 0.0.4 [adam 2026-03-06]
 	Added devel/py-typer version 0.24.1 [adam 2026-03-06]
+	Updated lang/go125 to 1.25.8 [bsiegert 2026-03-06]
+	Updated lang/go126 to 1.26.1 [bsiegert 2026-03-06]
