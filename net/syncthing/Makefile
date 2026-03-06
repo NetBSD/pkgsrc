@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.203 2026/03/02 15:02:33 abs Exp $
+# $NetBSD: Makefile,v 1.204 2026/03/06 21:07:58 bsiegert Exp $
 
 # Protocol breaks require tech-pkg@ discussion and MAINTAINER approval.
 # Update to 2.0.0 is very much on hold until 1) upstream withdraws the
@@ -6,6 +6,7 @@
 # Update to 1.30.0 is on hold until after 2025Q3, just because it's recent.
 DISTNAME=	syncthing-source-v1.30.0
 PKGNAME=	${DISTNAME:S,source-v,,}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
