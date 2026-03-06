@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/06 13:33:09 adam Exp $
+
+BLAKE2s (annotated_doc-0.0.4.tar.gz) = 0ea3d4e4a9ead668155c1389a1271a6dc2c408b4bca697e65e484e9f0f10b248
+SHA512 (annotated_doc-0.0.4.tar.gz) = 2beb6bde827e5c5f42daadcc8ac4b2b5911fa9448a5d5fadf461839ce166ba4cc1cbf9d7acb09c927f5970fdebf2f7c8433b6426ee5bbe11cf221e450344050b
+Size (annotated_doc-0.0.4.tar.gz) = 7288 bytes
