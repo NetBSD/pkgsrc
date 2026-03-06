@@ -1,0 +1,1 @@
+bin/typer @PREFIX@/bin/typer-@PYVERSSUFFIX@

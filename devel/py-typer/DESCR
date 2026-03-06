@@ -1,0 +1,6 @@
+Typer is a library for building CLI applications that users will
+love using and developers will love creating. Based on Python type
+hints.
+
+It's also a command line tool to run scripts, automatically converting
+them to CLI applications.
