@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.781 2026/02/22 15:20:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.782 2026/03/06 09:28:40 adam Exp $
 #
 
 COMMENT=	Programming languages
@@ -286,6 +286,7 @@ SUBDIR+=	py-pydemumble
 SUBDIR+=	py-pyformlang
 SUBDIR+=	py-pygls
 SUBDIR+=	py-pyrex
+SUBDIR+=	py-python-discovery
 SUBDIR+=	py-python-lua
 SUBDIR+=	py-pythonz
 SUBDIR+=	py-six
