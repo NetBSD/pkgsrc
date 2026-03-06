@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1579 2026/02/23 14:49:57 taca Exp $
+# $NetBSD: Makefile,v 1.1580 2026/03/06 13:33:09 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1052,6 +1052,7 @@ SUBDIR+=	py-Whoosh
 SUBDIR+=	py-X
 SUBDIR+=	py-acora
 SUBDIR+=	py-alabaster
+SUBDIR+=	py-annotated-doc
 SUBDIR+=	py-antlr4
 SUBDIR+=	py-anyascii
 SUBDIR+=	py-astropy-sphinx-theme
