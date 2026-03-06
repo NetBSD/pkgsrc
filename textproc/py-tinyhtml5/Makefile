@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/12/12 09:51:54 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/03/06 13:04:37 adam Exp $
 
-DISTNAME=	tinyhtml5-2.0.0
+DISTNAME=	tinyhtml5-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tinyhtml5/}
