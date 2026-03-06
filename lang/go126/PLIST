@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/02/22 15:20:08 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/03/06 20:57:34 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go126/CONTRIBUTING.md
@@ -2631,7 +2631,6 @@ go126/src/cmd/go/testdata/script/mod_init_invalid_major.txt
 go126/src/cmd/go/testdata/script/mod_init_issue74784.txt
 go126/src/cmd/go/testdata/script/mod_init_path.txt
 go126/src/cmd/go/testdata/script/mod_init_tidy.txt
-go126/src/cmd/go/testdata/script/mod_init_version.txt
 go126/src/cmd/go/testdata/script/mod_insecure_issue63845.txt
 go126/src/cmd/go/testdata/script/mod_install_hint.txt
 go126/src/cmd/go/testdata/script/mod_install_pkg_version.txt
@@ -2991,7 +2990,6 @@ go126/src/cmd/go/testdata/script/work_implicit_go_requirement.txt
 go126/src/cmd/go/testdata/script/work_init_gowork.txt
 go126/src/cmd/go/testdata/script/work_init_path.txt
 go126/src/cmd/go/testdata/script/work_init_toolchain.txt
-go126/src/cmd/go/testdata/script/work_init_version.txt
 go126/src/cmd/go/testdata/script/work_install_submodule.txt
 go126/src/cmd/go/testdata/script/work_issue51204.txt
 go126/src/cmd/go/testdata/script/work_issue54048.txt
@@ -7456,6 +7454,7 @@ go126/src/internal/poll/fd_windows_test.go
 go126/src/internal/poll/fd_writev_libc.go
 go126/src/internal/poll/fd_writev_unix.go
 go126/src/internal/poll/file_plan9.go
+go126/src/internal/poll/fstatat_unix.go
 go126/src/internal/poll/hook_cloexec.go
 go126/src/internal/poll/hook_unix.go
 go126/src/internal/poll/hook_windows.go
@@ -9329,6 +9328,9 @@ go126/src/os/stat_test.go
 go126/src/os/stat_unix.go
 go126/src/os/stat_wasip1.go
 go126/src/os/stat_windows.go
+go126/src/os/statat.go
+go126/src/os/statat_other.go
+go126/src/os/statat_unix.go
 go126/src/os/sticky_bsd.go
 go126/src/os/sticky_notbsd.go
 go126/src/os/sys.go
@@ -14072,7 +14074,11 @@ go126/test/fixedbugs/issue76950.go
 go126/test/fixedbugs/issue7740.go
 go126/test/fixedbugs/issue7742.go
 go126/test/fixedbugs/issue7746.go
+go126/test/fixedbugs/issue77534.go
 go126/test/fixedbugs/issue7760.go
+go126/test/fixedbugs/issue77604.go
+go126/test/fixedbugs/issue77613.go
+go126/test/fixedbugs/issue77779.go
 go126/test/fixedbugs/issue7794.go
 go126/test/fixedbugs/issue7863.go
 go126/test/fixedbugs/issue7867.go
