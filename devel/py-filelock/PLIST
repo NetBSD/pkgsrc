@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2026/02/13 07:32:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/03/06 09:30:58 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -9,6 +9,9 @@ ${PYSITELIB}/filelock/__init__.pyo
 ${PYSITELIB}/filelock/_api.py
 ${PYSITELIB}/filelock/_api.pyc
 ${PYSITELIB}/filelock/_api.pyo
+${PYSITELIB}/filelock/_async_read_write.py
+${PYSITELIB}/filelock/_async_read_write.pyc
+${PYSITELIB}/filelock/_async_read_write.pyo
 ${PYSITELIB}/filelock/_error.py
 ${PYSITELIB}/filelock/_error.pyc
 ${PYSITELIB}/filelock/_error.pyo
