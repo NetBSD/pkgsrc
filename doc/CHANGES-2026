@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1568 2026/03/06 11:21:09 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1569 2026/03/06 11:22:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2127,3 +2127,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added lang/py-python-discovery version 1.1.0 [adam 2026-03-06]
 	Updated devel/py-filelock to 3.25.0 [adam 2026-03-06]
 	Updated net/piratebay to 0.2.1 [pin 2026-03-06]
+	Updated sysutils/xtop to 0.3.4 [pin 2026-03-06]
