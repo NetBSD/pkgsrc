@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1559 2026/03/05 15:17:45 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1560 2026/03/06 06:13:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2111,3 +2111,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/arti to 2.1.0 [wiz 2026-03-05]
 	Updated devel/jj to 0.39.0 [wiz 2026-03-05]
 	Updated devel/jj-docs to 0.39.0 [wiz 2026-03-05]
+	Updated misc/py-platformdirs to 4.9.4 [adam 2026-03-06]
+	Updated devel/py-wrapt to 2.1.2 [adam 2026-03-06]
+	Updated converters/py-charset-normalizer to 3.4.5 [adam 2026-03-06]
+	Updated textproc/py-sphinx-autodoc-typehints to 3.9.7 [adam 2026-03-06]
