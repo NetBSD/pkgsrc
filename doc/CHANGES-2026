@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1565 2026/03/06 08:20:36 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1566 2026/03/06 08:22:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2123,3 +2123,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 29.7.1 [pin 2026-03-06]
 	Updated textproc/rumdl to 0.1.42 [pin 2026-03-06]
 	Updated audio/spotify-qt to 4.0.3 [pin 2026-03-06]
+	Updated textproc/treemd to 0.5.9 [pin 2026-03-06]
