@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/06 09:28:41 adam Exp $
+
+BLAKE2s (python_discovery-1.1.0.tar.gz) = 8311c41c8af97d73be52d1c2ef854eaf664345000293e979c5372c777c403ad5
+SHA512 (python_discovery-1.1.0.tar.gz) = 80650fba8dd637b78286c0d029e748ecb5201d94cb9faa3ece87bdafee5c51f00609738d9452bb95b88464752fcd95e5d8248e035950a5c645fc5391fb143226
+Size (python_discovery-1.1.0.tar.gz) = 55674 bytes
