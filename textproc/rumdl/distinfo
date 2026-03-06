@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2026/03/04 14:55:53 pin Exp $
+$NetBSD: distinfo,v 1.17 2026/03/06 08:17:28 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -699,9 +699,9 @@ Size (reqwest-0.13.2.crate) = 158064 bytes
 BLAKE2s (ring-0.17.14.crate) = 1480ea4de12099a897e831682ebaf48ed6e688e06f58e79e496a06e227ed58bd
 SHA512 (ring-0.17.14.crate) = 88d38205dc1a1f89bd4ae887ec5c168e68a4b749b3ac0612674092331e99d14a9b8d0f4a98d72c1a3853bcc9da420402336da3ee053bedcfd598da8de93afa14
 Size (ring-0.17.14.crate) = 1502610 bytes
-BLAKE2s (rumdl-0.1.38.tar.gz) = 72b0cb9dd78b29742071f939990fcf86078481fb0cd6e2f708a7972f73c79bfa
-SHA512 (rumdl-0.1.38.tar.gz) = fddba0332ab869a906756b9e8d01d203e99ec88950e659630a884982d09026e6d8a37fbf032c9fef570e11d76c33ecbe06bbef3dda3c6a3bcf723d69c7e17ae4
-Size (rumdl-0.1.38.tar.gz) = 2257151 bytes
+BLAKE2s (rumdl-0.1.42.tar.gz) = 7564dccd5e15bc1f776f847c67f2e877b625d527ac8896040897f4aa080938e8
+SHA512 (rumdl-0.1.42.tar.gz) = 2605065fd9c999ca2cdc1af9ffe2e7850619e63e834fab9cbe809e5658faf00aa1d943ea45dc35b5aa00459dadd7fd6cb9750a88cfbab8aa5fc7c6f4f24a5711
+Size (rumdl-0.1.42.tar.gz) = 2269119 bytes
 BLAKE2s (rustc_version-0.4.1.crate) = f0d198d0457135ca7572b41cd2440f1b0ca075013f53b384d07c00db8c5d2e84
 SHA512 (rustc_version-0.4.1.crate) = 7aa8a487ca7411b6d23cae62f7568fa3474a7b1fd1589621071be3428a550ed3b7c4ad68277a8f86849e5900397d7d0e9d678f5d423742a045dc7c660fa6c598
 Size (rustc_version-0.4.1.crate) = 12245 bytes
