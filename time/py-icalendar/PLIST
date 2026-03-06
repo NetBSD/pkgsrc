@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2026/02/25 13:50:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2026/03/06 13:07:55 adam Exp $
 bin/icalendar-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -257,6 +257,7 @@ ${PYSITELIB}/icalendar/tests/calendars/example.ics
 ${PYSITELIB}/icalendar/tests/calendars/fuzz_testcase_0_char_in_component_name.ics
 ${PYSITELIB}/icalendar/tests/calendars/fuzz_testcase_invalid_month.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_104_broken_calendar.ics
+${PYSITELIB}/icalendar/tests/calendars/issue_1231_recurrence.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_127_categories_with_commas.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_156_RDATE_with_PERIOD_TZID_khal.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_156_RDATE_with_PERIOD_TZID_khal_2.ics
@@ -538,12 +539,18 @@ ${PYSITELIB}/icalendar/tests/test_issue_1066_calendar_uid.pyo
 ${PYSITELIB}/icalendar/tests/test_issue_1073_pyodide_import.py
 ${PYSITELIB}/icalendar/tests/test_issue_1073_pyodide_import.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_1073_pyodide_import.pyo
+${PYSITELIB}/icalendar/tests/test_issue_1124_no_utc_vtimezone.py
+${PYSITELIB}/icalendar/tests/test_issue_1124_no_utc_vtimezone.pyc
+${PYSITELIB}/icalendar/tests/test_issue_1124_no_utc_vtimezone.pyo
 ${PYSITELIB}/icalendar/tests/test_issue_1129.py
 ${PYSITELIB}/icalendar/tests/test_issue_1129.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_1129.pyo
 ${PYSITELIB}/icalendar/tests/test_issue_116.py
 ${PYSITELIB}/icalendar/tests/test_issue_116.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_116.pyo
+${PYSITELIB}/icalendar/tests/test_issue_1231.py
+${PYSITELIB}/icalendar/tests/test_issue_1231.pyc
+${PYSITELIB}/icalendar/tests/test_issue_1231.pyo
 ${PYSITELIB}/icalendar/tests/test_issue_127_categories_comma_escaping.py
 ${PYSITELIB}/icalendar/tests/test_issue_127_categories_comma_escaping.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_127_categories_comma_escaping.pyo
