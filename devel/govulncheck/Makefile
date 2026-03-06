@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2026/02/24 08:45:25 bsiegert Exp $
+# $NetBSD: Makefile,v 1.32 2026/03/06 21:07:50 bsiegert Exp $
 
 DISTNAME=	vuln-1.1.4
 PKGNAME=	${DISTNAME:S/vuln/govulncheck/}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=	vuln
