@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/01/15 19:46:57 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/03/06 20:57:33 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go125/CONTRIBUTING.md
@@ -7276,6 +7276,7 @@ go125/src/internal/poll/fd_windows_test.go
 go125/src/internal/poll/fd_writev_libc.go
 go125/src/internal/poll/fd_writev_unix.go
 go125/src/internal/poll/file_plan9.go
+go125/src/internal/poll/fstatat_unix.go
 go125/src/internal/poll/hook_cloexec.go
 go125/src/internal/poll/hook_unix.go
 go125/src/internal/poll/hook_windows.go
@@ -9065,6 +9066,9 @@ go125/src/os/stat_test.go
 go125/src/os/stat_unix.go
 go125/src/os/stat_wasip1.go
 go125/src/os/stat_windows.go
+go125/src/os/statat.go
+go125/src/os/statat_other.go
+go125/src/os/statat_unix.go
 go125/src/os/sticky_bsd.go
 go125/src/os/sticky_notbsd.go
 go125/src/os/sys.go
