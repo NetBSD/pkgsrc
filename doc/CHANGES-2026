@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1576 2026/03/07 11:40:08 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1577 2026/03/07 11:49:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2141,3 +2141,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/gperftools to 2.18.1 [adam 2026-03-07]
 	Updated audio/taglib to 2.2.1 [adam 2026-03-07]
 	Updated www/py-multipart to 1.3.1 [adam 2026-03-07]
+	Updated archivers/py-brotlicffi to 1.2.0.1 [adam 2026-03-07]
+	Updated devel/py-vulture to 2.15 [adam 2026-03-07]
