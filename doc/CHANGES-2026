@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1574 2026/03/07 11:01:49 bsiegert Exp $
+$NetBSD: CHANGES-2026,v 1.1575 2026/03/07 11:34:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2137,3 +2137,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/go126 to 1.26.1 [bsiegert 2026-03-06]
 	Updated math/gnumeric112 to 1.12.60 [bsiegert 2026-03-07]
 	Updated misc/goffice0.10 to 0.10.60 [bsiegert 2026-03-07]
+	Updated devel/libuv to 1.52.1 [adam 2026-03-07]
+	Updated devel/gperftools to 2.18.1 [adam 2026-03-07]
