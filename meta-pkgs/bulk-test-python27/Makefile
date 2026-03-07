@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/10/21 07:04:30 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/03/07 11:50:03 nia Exp $
 
-DISTNAME=	bulk-test-python27-20251021
+DISTNAME=	bulk-test-python27-20260307
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -23,7 +23,6 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 
 DEPENDS+=	python27-[0-9]*:../../lang/python27
 
-DEPENDS+=	arcticfox-[0-9]*:../../www/arcticfox
 DEPENDS+=	getmail5-[0-9]*:../../mail/getmail5
 DEPENDS+=	mailman<3:../../mail/mailman
 DEPENDS+=	offlineimap-[0-9]*:../../mail/offlineimap
