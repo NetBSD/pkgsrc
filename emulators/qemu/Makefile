@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.398 2026/02/15 07:37:37 adam Exp $
+# $NetBSD: Makefile,v 1.399 2026/03/07 10:24:28 bsiegert Exp $
 
 .include "../../emulators/qemu/version.mk"
 
 DISTNAME=	qemu-${QEMU_VERSION}
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -21,8 +22,6 @@ USE_LANGUAGES+=		c c++
 USE_TOOLS+=		bison gdbus-codegen flex makeinfo perl:build pod2man pkg-config
 UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
-
-CONFLICTS+=	qemu-guest-agent-[0-9]*
 
 # https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
 GCC_REQD+=	7
@@ -56,6 +55,7 @@ CONFIGURE_ARGS+=	--smbd=${PREFIX}/sbin/smbd
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--enable-curses
 CONFIGURE_ARGS+=	--enable-fdt=system
+CONFIGURE_ARGS+=	--disable-guest-agent
 CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
 ALL_ENV+=		MESON_RSP_THRESHOLD=262144
 
@@ -133,7 +133,6 @@ UE_ARCHS+=		s390x sh4 sh4eb sparc sparc32plus sparc64
 UE_ARCHS+=		x86_64 xtensa xtensaeb
 
 .if ${OPSYS} == "NetBSD"
-PLIST.ga=		yes
 PLIST.nbd=		yes
 .  if !exists(/usr/include/machine/trap.h)	\
 	|| "1"=="1"	# XXX usermode emulation is broken
@@ -144,7 +143,6 @@ USER_EMUL=		i386 x86_64
 .  endif
 .elif ${OPSYS:M*BSD} || ${OPSYS} == "DragonFly"
 USER_EMUL=		i386 x86_64
-PLIST.ga=		yes
 PLIST.nbd=		yes
 .elif ${OPSYS} == "Darwin"
 USER_EMUL=
@@ -160,12 +158,12 @@ CONFIGURE_ARGS+=	--disable-linux-user
 USER_EMUL=		${UE_ARCHS}
 .  endif
 PLIST.bridge-helper=	yes
-PLIST.ga=		yes
 PLIST.nbd=		yes
 PLIST.pr-helper=	yes
+.  if ${MACHINE_PLATFORM:M*-i386} || ${MACHINE_PLATFORM:M*-x86_64}
 PLIST.vmsr-helper=	yes
+.  endif
 .elif ${MACHINE_PLATFORM:MSunOS-5.11-*}
-PLIST.ga=		yes
 PLIST.nbd=		yes
 CONFIGURE_ARGS+=	--disable-coroutine-pool
 .endif
@@ -178,7 +176,7 @@ CONFIGURE_ARGS+=	--enable-plugins
 CONFIGURE_ARGS+=	--disable-plugins
 .endif
 
-PLIST_VARS+=		${UE_ARCHS} bridge-helper ga keymap nbd pr-helper vmsr-helper
+PLIST_VARS+=		${UE_ARCHS} bridge-helper keymap nbd pr-helper vmsr-helper
 .for pvar in ${USER_EMUL}
 PLIST.${pvar}=		yes
 .endfor
