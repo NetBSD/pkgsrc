@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1588 2026/03/07 13:41:25 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1589 2026/03/07 13:42:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2154,3 +2154,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/ruby-mime-types-data to 3.2026.0303 [taca 2026-03-07]
 	Updated security/ruby-airbrussh to 1.6.1 [taca 2026-03-07]
 	Updated sysutils/ruby-specinfra to 2.95.0 [taca 2026-03-07]
+	Updated time/ruby-tzinfo-data to 1.2026.1 [taca 2026-03-07]
