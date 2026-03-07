@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1585 2026/03/07 13:26:56 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1586 2026/03/07 13:28:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2151,3 +2151,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-io-event to 1.14.3 [taca 2026-03-07]
 	Updated devel/ruby-irb to 1.17.0 [taca 2026-03-07]
 	Updated lang/ruby-cucumber-gherkin to 39.0.0 [taca 2026-03-07]
+	Updated mail/ruby-mime-types-data to 3.2026.0303 [taca 2026-03-07]
