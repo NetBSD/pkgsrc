@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/12 21:37:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/03/07 11:49:13 adam Exp $
 bin/vulture
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -57,6 +57,9 @@ ${PYSITELIB}/vulture/whitelists/pint_whitelist.pyo
 ${PYSITELIB}/vulture/whitelists/socketserver_whitelist.py
 ${PYSITELIB}/vulture/whitelists/socketserver_whitelist.pyc
 ${PYSITELIB}/vulture/whitelists/socketserver_whitelist.pyo
+${PYSITELIB}/vulture/whitelists/ssl_whitelist.py
+${PYSITELIB}/vulture/whitelists/ssl_whitelist.pyc
+${PYSITELIB}/vulture/whitelists/ssl_whitelist.pyo
 ${PYSITELIB}/vulture/whitelists/string_whitelist.py
 ${PYSITELIB}/vulture/whitelists/string_whitelist.pyc
 ${PYSITELIB}/vulture/whitelists/string_whitelist.pyo
