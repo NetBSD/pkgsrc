@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2026/03/03 21:49:01 yhardy Exp $
+# $NetBSD: Makefile,v 1.140 2026/03/07 21:38:44 wiz Exp $
 
 DISTNAME=	mupdf-1.27.2-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -11,7 +11,7 @@ COMMENT=	Lightweight PDF, XPS and E-book viewer and toolkit
 LICENSE=	gnu-agpl-v3
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	bash pkg-config gmake
 
 USE_CC_FEATURES=	c99
 USE_CXX_FEATURES=	c++11
