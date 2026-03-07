@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1589 2026/03/07 13:42:56 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1590 2026/03/07 13:49:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2155,3 +2155,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ruby-airbrussh to 1.6.1 [taca 2026-03-07]
 	Updated sysutils/ruby-specinfra to 2.95.0 [taca 2026-03-07]
 	Updated time/ruby-tzinfo-data to 1.2026.1 [taca 2026-03-07]
+	Updated www/ruby-aws-partitions to 1.1223.0 [taca 2026-03-07]
