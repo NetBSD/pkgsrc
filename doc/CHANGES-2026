@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1583 2026/03/07 13:22:30 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1584 2026/03/07 13:25:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2149,3 +2149,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-curses to 1.6.0 [taca 2026-03-07]
 	Added archivers/ruby-zlib version 3.2.3 [taca 2026-03-07]
 	Updated devel/ruby-io-event to 1.14.3 [taca 2026-03-07]
+	Updated devel/ruby-irb to 1.17.0 [taca 2026-03-07]
