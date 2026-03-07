@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1578 2026/03/07 12:10:44 nia Exp $
+$NetBSD: CHANGES-2026,v 1.1579 2026/03/07 13:05:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2144,3 +2144,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/py-brotlicffi to 1.2.0.1 [adam 2026-03-07]
 	Updated devel/py-vulture to 2.15 [adam 2026-03-07]
 	Removed www/arcticfox [nia 2026-03-07]
+	Updated databases/ruby-sequel to 5.102.0 [taca 2026-03-07]
