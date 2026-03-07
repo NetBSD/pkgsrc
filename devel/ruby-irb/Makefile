@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/02/03 15:14:55 taca Exp $
+# $NetBSD: Makefile,v 1.8 2026/03/07 13:25:12 taca Exp $
 
-DISTNAME=	irb-1.16.0
+DISTNAME=	irb-1.17.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,9 +9,6 @@ COMMENT=	Interactive Ruby command-line tool
 LICENSE=	2-clause-bsd OR ruby-license
 
 USE_LANGUAGES=	# none
-
-# Ruby 4.0.1 has irb 1.16.0 gem
-RUBY_VERSIONS_ACCEPTED=	32 33 34
 
 RUBYGEM_MANPAGES=	yes
 RUBYGEM_OPTIONS+=	--format-executable
