@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.121 2026/02/23 14:30:28 taca Exp $
+# $NetBSD: Makefile,v 1.122 2026/03/07 11:50:03 nia Exp $
 
-DISTNAME=	bulk-medium-20260223
+DISTNAME=	bulk-medium-20260307
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -124,7 +124,6 @@ DEPENDS+=	xentools415-[0-9]*:../../sysutils/xentools415
 .endif
 DEPENDS+=	ispell-[0-9]*:../../textproc/ispell
 DEPENDS+=	apache>=2.4:../../www/apache24
-DEPENDS+=	arcticfox-[0-9]*:../../www/arcticfox
 DEPENDS+=	nginx-[0-9]*:../../www/nginx
 
 #
