@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.103 2026/03/03 21:13:54 tnn Exp $
+@comment $NetBSD: PLIST,v 1.104 2026/03/07 10:24:28 bsiegert Exp $
 bin/elf2dmp
 ${PLIST.aarch64}bin/qemu-aarch64
 ${PLIST.aarch64_be}bin/qemu-aarch64_be
@@ -6,7 +6,6 @@ ${PLIST.alpha}bin/qemu-alpha
 ${PLIST.arm}bin/qemu-arm
 ${PLIST.armeb}bin/qemu-armeb
 bin/qemu-edid
-${PLIST.ga}bin/qemu-ga
 ${PLIST.hexagon}bin/qemu-hexagon
 ${PLIST.hppa}bin/qemu-hppa
 ${PLIST.i386}bin/qemu-i386
@@ -78,10 +77,8 @@ ${PLIST.doc}man/man1/qemu-storage-daemon.1
 ${PLIST.doc}man/man1/qemu.1
 ${PLIST.doc}man/man7/qemu-block-drivers.7
 ${PLIST.doc}man/man7/qemu-cpu-models.7
-${PLIST.doc}${PLIST.ga}man/man7/qemu-ga-ref.7
 ${PLIST.doc}man/man7/qemu-qmp-ref.7
 ${PLIST.doc}man/man7/qemu-storage-daemon-qmp-ref.7
-${PLIST.doc}${PLIST.ga}man/man8/qemu-ga.8
 ${PLIST.doc}man/man8/qemu-nbd.8
 ${PLIST.doc}man/man8/qemu-pr-helper.8
 share/applications/qemu.desktop
