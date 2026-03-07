@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1909 2026/03/02 20:26:35 yhardy Exp $
+# $NetBSD: Makefile,v 1.1910 2026/03/07 11:52:41 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -71,7 +71,6 @@ SUBDIR+=	apache24
 SUBDIR+=	apachetop
 SUBDIR+=	apaste
 SUBDIR+=	apisprout
-SUBDIR+=	arcticfox
 SUBDIR+=	asp2php
 SUBDIR+=	august
 SUBDIR+=	awstats
