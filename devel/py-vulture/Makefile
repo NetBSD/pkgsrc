@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/04/12 21:37:07 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/03/07 11:49:13 adam Exp $
 
-DISTNAME=	vulture-2.14
+DISTNAME=	vulture-2.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vulture/}
 
@@ -20,6 +19,9 @@ USE_LANGUAGES=	# none
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
 .endif
+
+pre-build:
+	${RM} -fr ${WRKSRC}/dev
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
