@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1572 2026/03/06 21:09:10 bsiegert Exp $
+$NetBSD: CHANGES-2026,v 1.1573 2026/03/07 10:53:46 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2135,3 +2135,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/py-typer version 0.24.1 [adam 2026-03-06]
 	Updated lang/go125 to 1.25.8 [bsiegert 2026-03-06]
 	Updated lang/go126 to 1.26.1 [bsiegert 2026-03-06]
+	Updated math/gnumeric112 to 1.12.60 [bsiegert 2026-03-07]
