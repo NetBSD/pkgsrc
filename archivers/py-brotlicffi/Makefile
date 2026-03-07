@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/11/24 09:21:48 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/03/07 11:46:10 adam Exp $
 
-DISTNAME=	brotlicffi-1.2.0.0
+DISTNAME=	brotlicffi-1.2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/brotlicffi/}

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/11/24 09:21:48 wiz Exp $
+$NetBSD: distinfo,v 1.4 2026/03/07 11:46:10 adam Exp $
 
-BLAKE2s (brotlicffi-1.2.0.0.tar.gz) = f73114e892d7eae01facaf1a459b0a1bc94e56a551fbe0b6f6790883f1f65f4b
-SHA512 (brotlicffi-1.2.0.0.tar.gz) = d49fcd39d8429a40fb99c734956037d6022627e09a49595d2cd908100974c6b77da376406315bc2d339b6fb6278c596a29956f9b6b80b241e1c7f12b707a2ffb
-Size (brotlicffi-1.2.0.0.tar.gz) = 476682 bytes
+BLAKE2s (brotlicffi-1.2.0.1.tar.gz) = 192eee702a67cad81de54ea707bd4051eeb0c6e4a2067ce93a1655e18dce51a9
+SHA512 (brotlicffi-1.2.0.1.tar.gz) = be854bad4fe5331ce44f40ccd906b61d2f31f628746d41b14efc860cc4a8807d98f732f4c9243979ce82034f47e1703e1a23651e0748ea5f22b40c4f7b63432c
+Size (brotlicffi-1.2.0.1.tar.gz) = 478156 bytes
