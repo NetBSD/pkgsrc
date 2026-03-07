@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2026/01/18 09:20:22 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/03/07 11:50:03 nia Exp $
 
-DISTNAME=	bulk-test-icu-20260118
+DISTNAME=	bulk-test-icu-20260307
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -109,7 +109,6 @@ DEPENDS+=	${PYPKGPREFIX}-ICU-[0-9]*:../../textproc/py-ICU
 DEPENDS+=	split-thai-[0-9]*:../../textproc/split-thai
 DEPENDS+=	upmendex-[0-9]*:../../textproc/upmendex
 DEPENDS+=	libical-[0-9]*:../../time/libical
-DEPENDS+=	arcticfox-[0-9]*:../../www/arcticfox
 DEPENDS+=	cppcms-[0-9]*:../../www/cppcms
 DEPENDS+=	firefox-[0-9]*:../../www/firefox
 DEPENDS+=	firefox-esr-[0-9]*:../../www/firefox-esr
