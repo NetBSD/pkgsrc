@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.5 2026/03/07 13:19:17 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
+${GEM_EXTSDIR}/zlib.${RUBY_DLEXT}
+${GEM_LIBDIR}/BSDL
+${GEM_LIBDIR}/COPYING
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/ext/zlib/extconf.rb
+${GEM_LIBDIR}/ext/zlib/zlib.c
+${GEM_LIBDIR}/lib/zlib.${RUBY_DLEXT}
+${GEM_LIBDIR}/zlib.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
