@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2026/02/06 10:04:21 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2026/03/07 09:51:41 bsiegert Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
@@ -6,7 +6,7 @@
 #       Also look in ${WRKSRC}/third-party/versions.mak for pjproject
 
 DISTNAME=	asterisk-19.8.1
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	comms net audio
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	https://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -32,7 +32,7 @@ MKPIE_SUPPORTED=	NO
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=		bison gmake perl:run pkg-config tar bash
+USE_TOOLS+=		bison gmake perl:run pkg-config tar bash:run
 USE_LANGUAGES=		c c++
 REPLACE_BASH+=		contrib/scripts/astversion
 REPLACE_BASH+=		contrib/scripts/ast_coredumper
