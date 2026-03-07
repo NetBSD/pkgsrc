@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.133 2026/02/02 15:16:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.134 2026/03/07 13:05:15 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -98,6 +98,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/auto_literal_strings.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/blank.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/caller_logging.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/columns_introspection.rb
+${GEM_LIBDIR}/lib/sequel/extensions/connection_checkout_event_callback.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/connection_expiration.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/connection_validator.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/constant_sql_override.rb
