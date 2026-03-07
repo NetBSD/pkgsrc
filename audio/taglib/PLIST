@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2026/02/18 07:39:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2026/03/07 11:37:41 adam Exp $
 bin/taglib-config
 include/taglib/aifffile.h
 include/taglib/aiffproperties.h
@@ -134,9 +134,9 @@ lib/cmake/taglib/taglib-targets-noconfig.cmake
 lib/cmake/taglib/taglib-targets.cmake
 lib/libtag.so
 lib/libtag.so.2
-lib/libtag.so.2.2.0
+lib/libtag.so.2.2.1
 lib/libtag_c.so
 lib/libtag_c.so.2
-lib/libtag_c.so.2.2.0
+lib/libtag_c.so.2.2.1
 lib/pkgconfig/taglib.pc
 lib/pkgconfig/taglib_c.pc
