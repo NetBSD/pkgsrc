@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1581 2026/03/07 13:11:50 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1582 2026/03/07 13:20:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2147,3 +2147,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/ruby-sequel to 5.102.0 [taca 2026-03-07]
 	Updated devel/ruby-cucumber-messages to 32.2.0 [taca 2026-03-07]
 	Updated devel/ruby-curses to 1.6.0 [taca 2026-03-07]
+	Added archivers/ruby-zlib version 3.2.3 [taca 2026-03-07]
