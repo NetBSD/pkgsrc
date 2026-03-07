@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/08/16 07:07:53 adam Exp $
+# $NetBSD: Makefile,v 1.10 2026/03/07 11:39:42 adam Exp $
 
-DISTNAME=	multipart-1.3.0
+DISTNAME=	multipart-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/multipart/}
