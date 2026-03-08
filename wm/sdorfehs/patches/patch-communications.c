@@ -1,10 +1,10 @@
-$NetBSD: patch-communications.c,v 1.2 2024/10/31 10:50:55 pin Exp $
+$NetBSD: patch-communications.c,v 1.3 2026/03/08 12:50:48 pin Exp $
 
 Rename local variables to avoid name clash on SunOS.
 
---- communications.c.orig	2024-10-31 10:29:35.665002807 +0000
+--- communications.c.orig	2026-03-08 12:35:21.063208852 +0000
 +++ communications.c
-@@ -49,27 +49,27 @@ init_control_socket_path(void)
+@@ -49,27 +49,27 @@ listen_for_commands(void)
  void
  listen_for_commands(void)
  {
@@ -12,7 +12,7 @@ Rename local variables to avoid name clash on SunOS.
 +	struct sockaddr_un lsun;
  
  	if ((rp_glob_screen.control_socket_fd = socket(AF_UNIX,
- 	    SOCK_STREAM | SOCK_NONBLOCK, 0)) == -1)
+ 	    SOCK_STREAM | SOCK_NONBLOCK | SOCK_CLOEXEC, 0)) == -1)
  		err(1, "socket");
  
 -	if (strlen(rp_glob_screen.control_socket_path) >= sizeof(sun.sun_path))
@@ -40,16 +40,16 @@ Rename local variables to avoid name clash on SunOS.
  		err(1, "bind %s", rp_glob_screen.control_socket_path);
  
  	if (chmod(rp_glob_screen.control_socket_path, 0600) == -1)
-@@ -85,7 +85,7 @@ listen_for_commands(void)
+@@ -186,7 +186,7 @@ send_command(int interactive, char *cmd)
  int
- send_command(int interactive, unsigned char *cmd)
+ send_command(int interactive, char *cmd)
  {
 -	struct sockaddr_un sun;
 +	struct sockaddr_un lsun;
- 	char *wcmd, *bufstart;
- 	char ret[BUFSZ+1];
+ 	char *wcmd, *response;
  	char success = 0;
-@@ -109,16 +109,16 @@ send_command(int interactive, unsigned c
+ 	ssize_t len;
+@@ -207,16 +207,16 @@ send_command(int interactive, char *cmd)
  	if ((fd = socket(AF_UNIX, SOCK_STREAM, 0)) == -1)
  		err(1, "socket");
  
