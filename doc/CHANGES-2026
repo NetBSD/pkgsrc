@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1597 2026/03/08 11:18:36 fox Exp $
+$NetBSD: CHANGES-2026,v 1.1598 2026/03/08 11:24:14 fox Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2163,3 +2163,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/nono to 1.6.6 [jun 2026-03-08]
 	Updated sysutils/fd-find to 10.4.1 [pin 2026-03-08]
 	Updated audio/fasttracker2 to 2.10 [fox 2026-03-08]
+	Updated sysutils/py-Glances to 4.5.1 [fox 2026-03-08]
