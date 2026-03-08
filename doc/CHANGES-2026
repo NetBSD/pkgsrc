@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1600 2026/03/08 12:16:35 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.1601 2026/03/08 12:45:58 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2166,3 +2166,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-Glances to 4.5.1 [fox 2026-03-08]
 	Added editors/redox version 0.2.0 [pin 2026-03-08]
 	Updated geography/qgis to 3.44.8 [gdt 2026-03-08]
+	Updated devel/nextpnr-himbaechel to 0.9nb1 [ryoon 2026-03-08]
