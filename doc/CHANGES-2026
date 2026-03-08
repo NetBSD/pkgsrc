@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1598 2026/03/08 11:24:14 fox Exp $
+$NetBSD: CHANGES-2026,v 1.1599 2026/03/08 12:14:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2164,3 +2164,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/fd-find to 10.4.1 [pin 2026-03-08]
 	Updated audio/fasttracker2 to 2.10 [fox 2026-03-08]
 	Updated sysutils/py-Glances to 4.5.1 [fox 2026-03-08]
+	Added editors/redox version 0.2.0 [pin 2026-03-08]
