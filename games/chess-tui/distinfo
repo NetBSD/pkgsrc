@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2026/01/18 16:16:41 pin Exp $
+$NetBSD: distinfo,v 1.13 2026/03/08 13:27:12 pin Exp $
 
 BLAKE2s (aho-corasick-1.1.4.crate) = 1419308c5b0745af6cfa18dd4c9639f7078f564e9dacbe2b17b03df42c393409
 SHA512 (aho-corasick-1.1.4.crate) = c77e35191b00546f5e499fab154170cedd619599e7250f92db9fba0a41c833eb426f214e58b00c5c39f8757406b33492b3241cb8cb233ce384ad0683c3ee4b62
@@ -81,9 +81,9 @@ Size (cexpr-0.6.0.crate) = 17966 bytes
 BLAKE2s (cfg-if-1.0.4.crate) = 517b7cff4f133f9b02492c0db281822fd02c24941a7aa4f9b1502895dc5e58d9
 SHA512 (cfg-if-1.0.4.crate) = 176e04df7ba783b7143bb84397b777f5c5a1305c08a5c3a218d4a66830620be89ed68992ba27686165bcd3fb2f34b2daf80b2a1d4b481ecc267c988e84d28e9d
 Size (cfg-if-1.0.4.crate) = 9360 bytes
-BLAKE2s (chess-tui-2.3.0.tar.gz) = c316af1eaa63d65ca91e3f0219335ed4a78906857a11b97cd1f12b153f7c995a
-SHA512 (chess-tui-2.3.0.tar.gz) = 48277a5d25c17aa1843280e4ad2095724c4902ce3d532e968a9725d7afa3aeb4d3c83698f32384fc3c02897649b39b8554e138861ccebb8f7fa5eeb6578ca741
-Size (chess-tui-2.3.0.tar.gz) = 8612689 bytes
+BLAKE2s (chess-tui-2.5.1.tar.gz) = 5ffffb234b4d240ab1a42fb4fecce165543f9286318b81ba12d06042b6f30675
+SHA512 (chess-tui-2.5.1.tar.gz) = 9034bf20db8fdfc62ce474f538bb5b0baec6f446010ca3990705e2057a54eb14e0bb230743da3e80d5b2ee394a5f29224fb9ae16403f2a53dce0453a7cf7a16f
+Size (chess-tui-2.5.1.tar.gz) = 22531517 bytes
 BLAKE2s (chrono-0.4.42.crate) = 72c5d8a1978ab715e15123defd74393dc4993664e1362fed0eb07fb3e93912d6
 SHA512 (chrono-0.4.42.crate) = 776b4b127c1a07ddce587aad341fa1022cebaa90ad667064809b3f83fc33aa355c811d7df445d6aae405265660deba9d8514d909391e47ea26d968bd4f24becf
 Size (chrono-0.4.42.crate) = 238174 bytes
