@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2025/11/04 00:54:47 gdt Exp $
+@comment $NetBSD: PLIST,v 1.36 2026/03/08 12:16:29 gdt Exp $
 bin/qgis
 bin/qgis_bench
 bin/qgis_mapserver
@@ -2653,6 +2653,7 @@ share/qgis/i18n/qgis_ru.qm
 share/qgis/i18n/qgis_sc.qm
 share/qgis/i18n/qgis_sk.qm
 share/qgis/i18n/qgis_sv.qm
+share/qgis/i18n/qgis_ta.qm
 share/qgis/i18n/qgis_tr.qm
 share/qgis/i18n/qgis_uk.qm
 share/qgis/i18n/qgis_vi.qm
@@ -8852,6 +8853,7 @@ share/qgis/resources/srs.db
 share/qgis/resources/symbology-style.xml
 share/qgis/resources/themes/Blend of Gray/icons/arrow-down-disabled.svg
 share/qgis/resources/themes/Blend of Gray/icons/arrow-down.svg
+share/qgis/resources/themes/Blend of Gray/icons/arrow-up-disabled.svg
 share/qgis/resources/themes/Blend of Gray/icons/arrow-up.svg
 share/qgis/resources/themes/Blend of Gray/icons/caret-down.svg
 share/qgis/resources/themes/Blend of Gray/icons/caret-right.svg
@@ -8875,6 +8877,7 @@ share/qgis/resources/themes/Blend of Gray/style.qss
 share/qgis/resources/themes/Blend of Gray/variables.qss
 share/qgis/resources/themes/Night Mapping/icons/arrow-down-disabled.svg
 share/qgis/resources/themes/Night Mapping/icons/arrow-down.svg
+share/qgis/resources/themes/Night Mapping/icons/arrow-up-disabled.svg
 share/qgis/resources/themes/Night Mapping/icons/arrow-up.svg
 share/qgis/resources/themes/Night Mapping/icons/caret-down.svg
 share/qgis/resources/themes/Night Mapping/icons/caret-right.svg
