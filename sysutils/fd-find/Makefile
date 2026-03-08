@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2026/01/23 12:45:09 pin Exp $
+# $NetBSD: Makefile,v 1.18 2026/03/08 10:25:55 pin Exp $
 
-DISTNAME=	fd-find-10.3.0
-PKGREVISION=	1
+DISTNAME=	fd-find-10.4.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sharkdp/}
 GITHUB_PROJECT=	fd
@@ -14,7 +13,7 @@ LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.77.2
+RUST_REQ=	1.90.0
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
