@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2026/02/17 13:55:58 pin Exp $
+$NetBSD: distinfo,v 1.7 2026/03/08 13:28:11 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -516,9 +516,9 @@ Size (pad-0.1.6.crate) = 4963 bytes
 BLAKE2s (pager-0.16.1.crate) = 152dd51c08d8526fdb617b2e072fda29aae8dcdfa24c2d46918ec5f03cc03247
 SHA512 (pager-0.16.1.crate) = 0a2a80fe12d2de7f6fd0e3a078d8d1fd3d154df068c80e29bff8034f498bc09866d4b4142d5d4eec1a7ba28ac75be65c374ee386bfe4190426a3c79594ebea16
 Size (pager-0.16.1.crate) = 9444 bytes
-BLAKE2s (paltoquet-0.11.0.crate) = 4d6c0f35656ed272d8fb56600ba713c21893e6147fdf09015ff79a8e3b668211
-SHA512 (paltoquet-0.11.0.crate) = 2a2ce3306f97780154a91e04fe16a8b8e7ba81d6bbe0fcb1dab5150f4fb6ece83ac48ceeaccf68c611d410316bb30ffefc1196cdf50248874ebf6fbe84d80f4b
-Size (paltoquet-0.11.0.crate) = 20305 bytes
+BLAKE2s (paltoquet-0.12.0.crate) = 79bb6dc1790e9385843812f22674792a87088d2f699957dfb853cf23e22a316f
+SHA512 (paltoquet-0.12.0.crate) = b8dcaa22bb980f1390b950bbcfc1215832b14cd05583fe38ddaac81109b1e6b009ab43c8c935cf21a67e5dd8d862d8538347af82b01b8e99e675d88bf78c80a5
+Size (paltoquet-0.12.0.crate) = 30373 bytes
 BLAKE2s (pariter-0.5.1.crate) = a376fd73a5240e2ad8132ceda8d92f89e9826e1b8d7f010ef0b3ad896a5016a4
 SHA512 (pariter-0.5.1.crate) = 99e58620ba605f1d332245cef39ac120b865a5c36d4fe00313f6cc194fbf0d3faf688ce62a6f132344bac8b4e8f30083a09f1efd084d3a5f169e82145cb3fd80
 Size (pariter-0.5.1.crate) = 4180059 bytes
@@ -693,9 +693,9 @@ Size (shlex-1.3.0.crate) = 18713 bytes
 BLAKE2s (simd-adler32-0.3.7.crate) = 4e97d965efa10d40728db8210a078be56385eaa8c9226af960f1685713576ea7
 SHA512 (simd-adler32-0.3.7.crate) = 2976bb7fa153854ecd0d68ccdc108bf81d5da374839d53ce9dfb27e80d8db258bb817ea3dac73921e408541d75e2797b6d20fa63c42c1e8a935b6d75dee14bac
 Size (simd-adler32-0.3.7.crate) = 12086 bytes
-BLAKE2s (simd-csv-0.10.2.crate) = 565622ddadc38785fbf6d5dcfe69b6db1ccec779ccc00eaa05b2eb52507a18e7
-SHA512 (simd-csv-0.10.2.crate) = a25af4c99fac7c3588aea7a171d435189416d2233f76c85419d74c6c547bf41bb61d9dfafe133dbd0ca873a2976dbc1eceeeab2a2bd1ee85a3d21d4b91f4d1ff
-Size (simd-csv-0.10.2.crate) = 44067 bytes
+BLAKE2s (simd-csv-0.11.1.crate) = 815909585762fecef13bfd506187000c817b1a994370337d5fff185af5483725
+SHA512 (simd-csv-0.11.1.crate) = a75cbf5dac5466ac5c202cdc0a5ee4331e8c829f0f3d66a32d0b87534365362ab8ec43084a1ca359bcf3c0ea10623aac3938a9c9754526ea5c6396c04c010f0e
+Size (simd-csv-0.11.1.crate) = 46104 bytes
 BLAKE2s (simd-json-0.14.3.crate) = a9939b5ba238daf5c1f43b4f3eb021b031fe1b53142c7b272ae16fe700857a06
 SHA512 (simd-json-0.14.3.crate) = 8f12b4380be506e59dffda9d28aa52475b4d52e149bdb4e7e1dbff05a320d27bad014707b8966c0f74f74e297506edf8b2d9f1ffaf86efa1104ecc27376f6d28
 Size (simd-json-0.14.3.crate) = 169109 bytes
@@ -960,9 +960,9 @@ Size (wit-bindgen-0.46.0.crate) = 60508 bytes
 BLAKE2s (writeable-0.6.1.crate) = 9bf774d998fabc47fba2a73cb060d3ae04a8fe45be12f70d37db6896b7582f86
 SHA512 (writeable-0.6.1.crate) = 686ca04702815096ac529ae6b9b80a30338f42eb5d414331992518c467c1827462673fcbbeb293818bbe570bd2723e9c60324522071c1b790c862fa6652c1385
 Size (writeable-0.6.1.crate) = 24068 bytes
-BLAKE2s (xan-0.55.0.tar.gz) = ee116f24f6b1e1363c882a72101e1ff241a0e9764cd1c80eef059bc61aa08cdc
-SHA512 (xan-0.55.0.tar.gz) = 941ebf8f4e2c340ec368f0b2cc51795361d60eef90c5f26438df57470902d16670524247ae66dc067edd5bccb0ddda6ecac6ca32b4ea0cf6017b39f6ba1cdabd
-Size (xan-0.55.0.tar.gz) = 5948090 bytes
+BLAKE2s (xan-0.56.0.tar.gz) = 146057ba126cbbb5929f6013ffc5677a311f9d522b792c026cb3c8d45c8d787c
+SHA512 (xan-0.56.0.tar.gz) = 33a2fd05f3e780804b3982c8b01ffdbd7e73782a00271c17738efa3a21f9d7604604c5d15766111836604a49fd9bec2ac46af565f4bff5b0ade244eda0190d02
+Size (xan-0.56.0.tar.gz) = 7529124 bytes
 BLAKE2s (yoke-0.8.0.crate) = 58cbc8841faa0513fad28ecf83c1f39c9d0bea64e4d1474bac402361a77e6bbe
 SHA512 (yoke-0.8.0.crate) = 6b6efbfd2bcb7e06fd6f9ae7bd213a54fedc7550273e2613fee3b8791bbe1038a7e7209142cc673d71fd57b7184cbb1209115ecd15c647db1a74f2966d593276
 Size (yoke-0.8.0.crate) = 28726 bytes
