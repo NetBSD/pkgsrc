@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1609 2026/03/08 13:46:17 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1610 2026/03/08 13:57:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2175,3 +2175,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/typo3-13 to 13.4.26 [taca 2026-03-08]
 	Updated www/wordpress to 6.9.1 [taca 2026-03-08]
 	Updated www/php-ja-wordpress to 6.9.1 [taca 2026-03-08]
+	Updated devel/ruby-async to 2.38.0 [taca 2026-03-08]
