@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/12/19 14:40:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/03/08 13:24:26 taca Exp $
 ${CC_DOCDIR}/README
 ${CC_WEBDIR}/LICENSE.TXT
 ${CC_WEBDIR}/application/bootstrap/app.php
@@ -950,7 +950,6 @@ ${CC_WEBDIR}/concrete/config/api/site.php
 ${CC_WEBDIR}/concrete/config/api/system.php
 ${CC_WEBDIR}/concrete/config/app.php
 ${CC_WEBDIR}/concrete/config/captcha.php
-${CC_WEBDIR}/concrete/config/coding_style.php
 ${CC_WEBDIR}/concrete/config/concrete.php
 ${CC_WEBDIR}/concrete/config/conversations.php
 ${CC_WEBDIR}/concrete/config/database.php
@@ -10341,12 +10340,16 @@ ${CC_WEBDIR}/concrete/src/Summary/Template/RenderableTemplateInterface.php
 ${CC_WEBDIR}/concrete/src/Summary/Template/Renderer.php
 ${CC_WEBDIR}/concrete/src/Summary/Template/RendererFilterer.php
 ${CC_WEBDIR}/concrete/src/Summary/Template/TemplateLocator.php
-${CC_WEBDIR}/concrete/src/Support/CodingStyle/Differ.php
+${CC_WEBDIR}/concrete/src/Support/CodingStyle/FileFlag.php
+${CC_WEBDIR}/concrete/src/Support/CodingStyle/Fixer/EnsureDefinedOrDieFixer.php
 ${CC_WEBDIR}/concrete/src/Support/CodingStyle/Fixer/InlineTagFixer.php
-${CC_WEBDIR}/concrete/src/Support/CodingStyle/PhpFixer.php
-${CC_WEBDIR}/concrete/src/Support/CodingStyle/PhpFixerOptions.php
-${CC_WEBDIR}/concrete/src/Support/CodingStyle/PhpFixerRuleResolver.php
-${CC_WEBDIR}/concrete/src/Support/CodingStyle/PhpFixerRunner.php
+${CC_WEBDIR}/concrete/src/Support/CodingStyle/Fixer/LogicalOperatorsFixer.php
+${CC_WEBDIR}/concrete/src/Support/CodingStyle/Fixer/NoAliasLanguageConstructCallFixer.php
+${CC_WEBDIR}/concrete/src/Support/CodingStyle/Fixer/Traits/DefinedOrDie.php
+${CC_WEBDIR}/concrete/src/Support/CodingStyle/FixerRegistry.php
+${CC_WEBDIR}/concrete/src/Support/CodingStyle/PHPCSFixerConfigurator.php
+${CC_WEBDIR}/concrete/src/Support/CodingStyle/RuleCustomisationPolicy.php
+${CC_WEBDIR}/concrete/src/Support/CodingStyle/autoload.php
 ${CC_WEBDIR}/concrete/src/Support/Facade/Application.php
 ${CC_WEBDIR}/concrete/src/Support/Facade/Config.php
 ${CC_WEBDIR}/concrete/src/Support/Facade/Cookie.php
@@ -10719,6 +10722,7 @@ ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20241204161559.ph
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20241210181033.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20241217194138.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20250227155410.php
+${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20250302004500.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20250827152432.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/RepeatableMigrationInterface.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Routine/AddPageDraftsBooleanTrait.php
@@ -15750,8 +15754,10 @@ ${CC_WEBDIR}/concrete/vendor/mlocati/concrete5-translation-library/src/Parser/Dy
 ${CC_WEBDIR}/concrete/vendor/mlocati/concrete5-translation-library/src/Parser/DynamicItem/PermissionKeyCategory.php
 ${CC_WEBDIR}/concrete/vendor/mlocati/concrete5-translation-library/src/Parser/DynamicItem/SelectAttributeValue.php
 ${CC_WEBDIR}/concrete/vendor/mlocati/concrete5-translation-library/src/Parser/DynamicItem/Tree.php
+${CC_WEBDIR}/concrete/vendor/mlocati/concrete5-translation-library/src/Parser/InstalledPackage.php
 ${CC_WEBDIR}/concrete/vendor/mlocati/concrete5-translation-library/src/Parser/Php.php
 ${CC_WEBDIR}/concrete/vendor/mlocati/concrete5-translation-library/src/Parser/ThemePresets.php
+${CC_WEBDIR}/concrete/vendor/mlocati/concrete5-translation-library/src/Parser/Twig.php
 ${CC_WEBDIR}/concrete/vendor/mlocati/concrete5-translation-library/src/ParserFactory.php
 ${CC_WEBDIR}/concrete/vendor/mlocati/concrete5-translation-library/src/Util/ConfigFile.php
 ${CC_WEBDIR}/concrete/vendor/mlocati/concrete5-translation-library/src/Util/ConfigFileFakeClass.php
@@ -17354,6 +17360,7 @@ ${CC_WEBDIR}/concrete/vendor/phpseclib/phpseclib/phpseclib/Math/Common/FiniteFie
 ${CC_WEBDIR}/concrete/vendor/phpseclib/phpseclib/phpseclib/Math/Common/FiniteField/Integer.php
 ${CC_WEBDIR}/concrete/vendor/phpseclib/phpseclib/phpseclib/Math/PrimeField.php
 ${CC_WEBDIR}/concrete/vendor/phpseclib/phpseclib/phpseclib/Math/PrimeField/Integer.php
+${CC_WEBDIR}/concrete/vendor/phpseclib/phpseclib/phpseclib/Net/SCP.php
 ${CC_WEBDIR}/concrete/vendor/phpseclib/phpseclib/phpseclib/Net/SFTP.php
 ${CC_WEBDIR}/concrete/vendor/phpseclib/phpseclib/phpseclib/Net/SFTP/Stream.php
 ${CC_WEBDIR}/concrete/vendor/phpseclib/phpseclib/phpseclib/Net/SSH2.php
