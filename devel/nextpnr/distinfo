@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2025/12/25 16:32:53 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2026/03/08 12:45:35 ryoon Exp $
 
 BLAKE2s (nextpnr-0.9.tar.gz) = a6cf76a56e5386aef9b1c9e10af12d18cc1c3bd443b95c1d2aa528d56c97165e
 SHA512 (nextpnr-0.9.tar.gz) = 33fa5a0eab38b30fc3c1a180bdde8d2721afacc83746b9540dac1799dbc78bc6974c0d32455455fe9118a820d4ee0b4a34c26888658fdfe5456ffd4a75c9ff1b
 Size (nextpnr-0.9.tar.gz) = 4744423 bytes
 SHA1 (patch-CMakeLists.txt) = 75bc9c144429373e8b836053a9412c8742707d23
 SHA1 (patch-bba_CMakeLists.txt) = 50ff854a0cd649c5b0e62eeb25e3396fad4f3b71
+SHA1 (patch-himbaechel_uarch_gowin_gowin__arch__gen.py) = 5ecf4b1eb70c5a5c3b7a6f754caf31dc46827b3a
