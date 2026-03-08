@@ -1,4 +1,4 @@
-$NetBSD: patch-src_tools_linefind.cpp,v 1.1 2026/01/04 10:15:27 wiz Exp $
+$NetBSD: patch-src_tools_linefind.cpp,v 1.2 2026/03/08 20:08:05 adam Exp $
 
 error: no matching function for call to 'max(double, float)'
 
@@ -9,7 +9,7 @@ error: no matching function for call to 'max(double, float)'
          vigra::FindAverageAndVariance<float> mean;   // init functor
          vigra::inspectImage(srcImageRange(src, vigra::RGBToGrayAccessor<typename SrcIMG::PixelType>()), mean);
 -        const double minVal = std::max(mean.average() - 3 * sqrt(mean.variance()), 1e-6f);
-+        const double minVal = std::max(mean.average() - 3 * sqrt(mean.variance()), 1e-6);
++        const double minVal = std::max(mean.average() - 3.0 * sqrt(mean.variance()), 1e-6);
          const double maxVal = mean.average() + 3 * sqrt(mean.variance());
          vigra_ext::applyMapping(srcImageRange(src), destImage(dest), minVal, maxVal, 1);
      }
@@ -18,7 +18,7 @@ error: no matching function for call to 'max(double, float)'
          vigra::FindAverageAndVariance<float> mean;   // init functor
          vigra::inspectImage(srcImageRange(src), mean);
 -        const double minVal = std::max(mean.average() - 3 * sqrt(mean.variance()), 1e-6f);
-+        const double minVal = std::max(mean.average() - 3 * sqrt(mean.variance()), 1e-6);
++        const double minVal = std::max(mean.average() - 3.0 * sqrt(mean.variance()), 1e-6);
          const double maxVal = mean.average() + 3 * sqrt(mean.variance());
          vigra_ext::applyMapping(srcImageRange(src), destImage(dest), minVal, maxVal, 1);
      }
