@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2025/11/30 15:02:29 fox Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/03/08 11:22:25 fox Exp $
 bin/glances-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -67,6 +67,9 @@ ${PYSITELIB}/glances/exports/__init__.pyo
 ${PYSITELIB}/glances/exports/export.py
 ${PYSITELIB}/glances/exports/export.pyc
 ${PYSITELIB}/glances/exports/export.pyo
+${PYSITELIB}/glances/exports/export_asyncio.py
+${PYSITELIB}/glances/exports/export_asyncio.pyc
+${PYSITELIB}/glances/exports/export_asyncio.pyo
 ${PYSITELIB}/glances/exports/glances_cassandra/__init__.py
 ${PYSITELIB}/glances/exports/glances_cassandra/__init__.pyc
 ${PYSITELIB}/glances/exports/glances_cassandra/__init__.pyo
@@ -109,6 +112,9 @@ ${PYSITELIB}/glances/exports/glances_mongodb/__init__.pyo
 ${PYSITELIB}/glances/exports/glances_mqtt/__init__.py
 ${PYSITELIB}/glances/exports/glances_mqtt/__init__.pyc
 ${PYSITELIB}/glances/exports/glances_mqtt/__init__.pyo
+${PYSITELIB}/glances/exports/glances_nats/__init__.py
+${PYSITELIB}/glances/exports/glances_nats/__init__.pyc
+${PYSITELIB}/glances/exports/glances_nats/__init__.pyo
 ${PYSITELIB}/glances/exports/glances_opentsdb/__init__.py
 ${PYSITELIB}/glances/exports/glances_opentsdb/__init__.pyc
 ${PYSITELIB}/glances/exports/glances_opentsdb/__init__.pyo
@@ -145,6 +151,9 @@ ${PYSITELIB}/glances/globals.pyo
 ${PYSITELIB}/glances/history.py
 ${PYSITELIB}/glances/history.pyc
 ${PYSITELIB}/glances/history.pyo
+${PYSITELIB}/glances/jwt_utils.py
+${PYSITELIB}/glances/jwt_utils.pyc
+${PYSITELIB}/glances/jwt_utils.pyo
 ${PYSITELIB}/glances/logger.py
 ${PYSITELIB}/glances/logger.pyc
 ${PYSITELIB}/glances/logger.pyo
@@ -169,6 +178,12 @@ ${PYSITELIB}/glances/outputs/glances_curses.pyo
 ${PYSITELIB}/glances/outputs/glances_curses_browser.py
 ${PYSITELIB}/glances/outputs/glances_curses_browser.pyc
 ${PYSITELIB}/glances/outputs/glances_curses_browser.pyo
+${PYSITELIB}/glances/outputs/glances_json_serializer.py
+${PYSITELIB}/glances/outputs/glances_json_serializer.pyc
+${PYSITELIB}/glances/outputs/glances_json_serializer.pyo
+${PYSITELIB}/glances/outputs/glances_mcp.py
+${PYSITELIB}/glances/outputs/glances_mcp.pyc
+${PYSITELIB}/glances/outputs/glances_mcp.pyo
 ${PYSITELIB}/glances/outputs/glances_restful_api.py
 ${PYSITELIB}/glances/outputs/glances_restful_api.pyc
 ${PYSITELIB}/glances/outputs/glances_restful_api.pyo
@@ -260,6 +275,9 @@ ${PYSITELIB}/glances/plugins/gpu/cards/__init__.pyo
 ${PYSITELIB}/glances/plugins/gpu/cards/amd.py
 ${PYSITELIB}/glances/plugins/gpu/cards/amd.pyc
 ${PYSITELIB}/glances/plugins/gpu/cards/amd.pyo
+${PYSITELIB}/glances/plugins/gpu/cards/intel.py
+${PYSITELIB}/glances/plugins/gpu/cards/intel.pyc
+${PYSITELIB}/glances/plugins/gpu/cards/intel.pyo
 ${PYSITELIB}/glances/plugins/gpu/cards/nvidia.py
 ${PYSITELIB}/glances/plugins/gpu/cards/nvidia.pyc
 ${PYSITELIB}/glances/plugins/gpu/cards/nvidia.pyo
@@ -287,6 +305,24 @@ ${PYSITELIB}/glances/plugins/network/__init__.pyo
 ${PYSITELIB}/glances/plugins/now/__init__.py
 ${PYSITELIB}/glances/plugins/now/__init__.pyc
 ${PYSITELIB}/glances/plugins/now/__init__.pyo
+${PYSITELIB}/glances/plugins/npu/__init__.py
+${PYSITELIB}/glances/plugins/npu/__init__.pyc
+${PYSITELIB}/glances/plugins/npu/__init__.pyo
+${PYSITELIB}/glances/plugins/npu/cards/__init__.py
+${PYSITELIB}/glances/plugins/npu/cards/__init__.pyc
+${PYSITELIB}/glances/plugins/npu/cards/__init__.pyo
+${PYSITELIB}/glances/plugins/npu/cards/amd.py
+${PYSITELIB}/glances/plugins/npu/cards/amd.pyc
+${PYSITELIB}/glances/plugins/npu/cards/amd.pyo
+${PYSITELIB}/glances/plugins/npu/cards/intel.py
+${PYSITELIB}/glances/plugins/npu/cards/intel.pyc
+${PYSITELIB}/glances/plugins/npu/cards/intel.pyo
+${PYSITELIB}/glances/plugins/npu/cards/npu.py
+${PYSITELIB}/glances/plugins/npu/cards/npu.pyc
+${PYSITELIB}/glances/plugins/npu/cards/npu.pyo
+${PYSITELIB}/glances/plugins/npu/cards/rockchip.py
+${PYSITELIB}/glances/plugins/npu/cards/rockchip.pyc
+${PYSITELIB}/glances/plugins/npu/cards/rockchip.pyo
 ${PYSITELIB}/glances/plugins/percpu/__init__.py
 ${PYSITELIB}/glances/plugins/percpu/__init__.pyc
 ${PYSITELIB}/glances/plugins/percpu/__init__.pyo
@@ -421,6 +457,9 @@ share/doc/glances-${PYVERSSUFFIX}/AUTHORS
 share/doc/glances-${PYVERSSUFFIX}/CONTRIBUTING.md
 share/doc/glances-${PYVERSSUFFIX}/COPYING
 share/doc/glances-${PYVERSSUFFIX}/NEWS.rst
+share/doc/glances-${PYVERSSUFFIX}/README-pypi.rst
 share/doc/glances-${PYVERSSUFFIX}/README.rst
 share/doc/glances-${PYVERSSUFFIX}/SECURITY.md
 share/doc/glances-${PYVERSSUFFIX}/glances.conf
+share/doc/glances-${PYVERSSUFFIX}/short.jinja
+share/doc/glances-${PYVERSSUFFIX}/with-logo.jinja
