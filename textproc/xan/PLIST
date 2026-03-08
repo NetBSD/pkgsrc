@@ -1,16 +1,18 @@
-@comment $NetBSD: PLIST,v 1.4 2026/02/17 13:55:58 pin Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/03/08 13:28:11 pin Exp $
 bin/xan
 share/doc/xan/LOVE_LETTER.md
 share/doc/xan/NOTES.md
+share/doc/xan/PIPELINES.md
 share/doc/xan/README.md
 share/doc/xan/XANZINE.md
 share/doc/xan/blog/csv_base_jumping.md
+share/doc/xan/blog/img/csv-base-jumping.png
 share/doc/xan/cmd/agg.md
 share/doc/xan/cmd/behead.md
 share/doc/xan/cmd/bins.md
+share/doc/xan/cmd/bisect.md
 share/doc/xan/cmd/blank.md
 share/doc/xan/cmd/cat.md
-share/doc/xan/cmd/cluster.md
 share/doc/xan/cmd/complete.md
 share/doc/xan/cmd/count.md
 share/doc/xan/cmd/dedup.md
@@ -72,7 +74,6 @@ share/doc/xan/cmd/window.md
 share/doc/xan/cookbook/dates.md
 share/doc/xan/cookbook/dedup.md
 share/doc/xan/cookbook/frequency_tables.md
-share/doc/xan/cookbook/misc.md
 share/doc/xan/cookbook/urls.md
 share/doc/xan/gazettes/1_2023_sep.md
 share/doc/xan/gazettes/2_2023_oct.md
@@ -99,6 +100,9 @@ share/doc/xan/img/grid/view-grid.png
 share/doc/xan/img/grid/view.png
 share/doc/xan/img/hist.png
 share/doc/xan/img/line.png
+share/doc/xan/img/pipelines/separate-log1.png
+share/doc/xan/img/pipelines/separate-log2.png
+share/doc/xan/img/pipelines/twitter-heatmap.png
 share/doc/xan/img/progress.gif
 share/doc/xan/img/scatter.png
 share/doc/xan/img/view.png
