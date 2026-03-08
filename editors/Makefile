@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.262 2026/01/19 07:42:37 wiz Exp $
+# $NetBSD: Makefile,v 1.263 2026/03/08 12:13:46 pin Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -131,6 +131,7 @@ SUBDIR+=	py-editor
 SUBDIR+=	py-jedi
 SUBDIR+=	qemacs
 SUBDIR+=	qtcreator
+SUBDIR+=	redox
 SUBDIR+=	reovim
 SUBDIR+=	retext
 SUBDIR+=	rox-edit
