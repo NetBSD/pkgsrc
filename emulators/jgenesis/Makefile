@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2026/03/02 12:07:43 pin Exp $
+# $NetBSD: Makefile,v 1.13 2026/03/08 06:45:48 wiz Exp $
 
 DISTNAME=	jgenesis-0.11.2
 CATEGORIES=	emulators
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/jsgroth/jgenesis/
 COMMENT=	Sega Genesis - Sega CD - SNES - Master System - Game Gear emulator
 LICENSE=	mit
 
+TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 DEPENDS+=	zenity-[0-9]*:../../x11/zenity
 
 .include "cargo-depends.mk"
