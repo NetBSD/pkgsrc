@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2024/10/31 10:50:54 pin Exp $
+$NetBSD: distinfo,v 1.10 2026/03/08 12:50:48 pin Exp $
 
-BLAKE2s (sdorfehs-1.6.tar.gz) = 2a9f460a3a0791423beeae49e63194d2ca3e373e9fe8d1931b29ab693a2e9fcb
-SHA512 (sdorfehs-1.6.tar.gz) = 0f9d873f349783bd000f3f3fe80216157550fdfdd3ce20831a932fd743c03b02de592279bd676416d27c5ff57ed85e1c62f6c5cde1cc717394d52b028e5955cb
-Size (sdorfehs-1.6.tar.gz) = 122042 bytes
+BLAKE2s (sdorfehs-1.7.tar.gz) = cc72d133edea9ba63f809289af9e6383ea7ba8c88b682dba510c0102159e6046
+SHA512 (sdorfehs-1.7.tar.gz) = 5df7493fe9e47064345845a87cd4948f2fdacd5c91d72f24f215d817e54412466109f4cbc92e8456c5e2a81ff23bb915cabd9d5e2f79f7d5716557267a6c4501
+Size (sdorfehs-1.7.tar.gz) = 122660 bytes
 SHA1 (patch-Makefile) = 12f2f98ab14e527578551df5e0f82fe2c5bd4e0a
-SHA1 (patch-actions.c) = 16db4e7dcf383fa91e605d6a0a6c6572ca7a22cc
-SHA1 (patch-communications.c) = 8ab29408c4a4f16927db18382b6faaf9828459b1
+SHA1 (patch-actions.c) = d6acf8a15ca983274760ab3bd27662701a0d06fc
+SHA1 (patch-communications.c) = 9e5bc1d9cfe87082c13bb5fe87f9800309063308
