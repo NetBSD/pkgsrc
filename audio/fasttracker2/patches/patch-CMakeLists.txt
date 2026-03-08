@@ -1,16 +1,15 @@
-$NetBSD: patch-CMakeLists.txt,v 1.9 2025/11/03 14:46:16 fox Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.10 2026/03/08 11:11:38 fox Exp $
 
 Only define __LINUX_ALSA__ on Linux.
 
 --- CMakeLists.txt.orig	2025-09-17 18:17:34.000000000 +0000
 +++ CMakeLists.txt
-@@ -32,10 +32,6 @@ find_package(Threads REQUIRED)
+@@ -32,9 +32,6 @@ find_package(Threads REQUIRED)
  target_link_libraries(ft2-clone
      PRIVATE m Threads::Threads ${SDL2_LIBRARIES})
  
 -target_compile_definitions(ft2-clone
 -    PRIVATE HAS_MIDI
--    PRIVATE HAS_LIBFLAC)
 -
  if(UNIX)
      if(APPLE)
