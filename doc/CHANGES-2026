@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1604 2026/03/08 13:24:42 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1605 2026/03/08 13:27:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2170,3 +2170,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated wm/sdorfehs to 1.7 [pin 2026-03-08]
 	Updated textproc/television to 0.15.3 [pin 2026-03-08]
 	Updated www/php-concrete-cms to 9.4.8 [taca 2026-03-08]
+	Updated games/chess-tui to 2.5.1 [pin 2026-03-08]
