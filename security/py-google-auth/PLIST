@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2026/01/12 22:03:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2026/03/09 17:02:34 wiz Exp $
 ${PYSITELIB}/google/auth/__init__.py
 ${PYSITELIB}/google/auth/__init__.pyc
 ${PYSITELIB}/google/auth/__init__.pyo
@@ -59,6 +59,9 @@ ${PYSITELIB}/google/auth/aio/transport/__init__.pyo
 ${PYSITELIB}/google/auth/aio/transport/aiohttp.py
 ${PYSITELIB}/google/auth/aio/transport/aiohttp.pyc
 ${PYSITELIB}/google/auth/aio/transport/aiohttp.pyo
+${PYSITELIB}/google/auth/aio/transport/mtls.py
+${PYSITELIB}/google/auth/aio/transport/mtls.pyc
+${PYSITELIB}/google/auth/aio/transport/mtls.pyo
 ${PYSITELIB}/google/auth/aio/transport/sessions.py
 ${PYSITELIB}/google/auth/aio/transport/sessions.pyc
 ${PYSITELIB}/google/auth/aio/transport/sessions.pyo
