@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.228 2026/02/26 13:03:54 wiz Exp $
+# $NetBSD: Makefile,v 1.229 2026/03/09 20:38:49 wiz Exp $
 
 DISTNAME=	mame-0.286
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mamedev/}
 GITHUB_TAG=	${DISTNAME:S/-//S/.//}
@@ -42,6 +43,7 @@ MAKE_FLAGS+=		PRECOMPILE=0
 MAKE_FLAGS+=		OPTIMIZE=2
 MAKE_FLAGS+=		NO_USE_PORTAUDIO=1
 MAKE_FLAGS+=		NO_USE_PULSEAUDIO=1
+MAKE_FLAGS+=		OSD=sdl3
 
 .if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "x86_64"
 # \todo Arch detection for aarch64 fails, investigate why
@@ -125,15 +127,19 @@ do-install:
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../converters/utf8proc/buildlink3.mk"
-.include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/SDL3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../graphics/glm/buildlink3.mk"
-.include "../../fonts/SDL2_ttf/buildlink3.mk"
+.include "../../fonts/SDL3_ttf/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
 .include "../../textproc/rapidjson/buildlink3.mk"
+.if ${OPSYS} != Darwin
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.endif
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
