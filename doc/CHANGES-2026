@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1612 2026/03/09 03:08:40 jnemeth Exp $
+$NetBSD: CHANGES-2026,v 1.1613 2026/03/09 03:16:57 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2185,3 +2185,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/postfix-pgsql to 3.11.0 [taca 2026-03-08]
 	Updated mail/postfix-sqlite to 3.11.0 [taca 2026-03-08]
 	Added mail/cyrus-imapd310 version 3.10.2 [jnemeth 2026-03-09]
+	Added mail/cyrus-imapd312 version 3.12.1 [jnemeth 2026-03-09]
