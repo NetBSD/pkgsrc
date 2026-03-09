@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2026/01/25 23:09:55 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/03/09 12:48:24 adam Exp $
 
-DISTNAME=	black-26.1.0
+DISTNAME=	black-26.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/black/}
@@ -11,14 +11,14 @@ COMMENT=	Uncompromising Python code formatter
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme-[0-9]*:../../devel/py-hatch-fancy-pypi-readme
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.3.0:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27.0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-click>=8.0.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-mypy_extensions>=0.4.3:../../lang/py-mypy_extensions
 DEPENDS+=	${PYPKGPREFIX}-packaging>=22.0:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.9.0:../../devel/py-pathspec
+DEPENDS+=	${PYPKGPREFIX}-pathspec>=1.0.0:../../devel/py-pathspec
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2:../../misc/py-platformdirs
-DEPENDS+=	${PYPKGPREFIX}-pytokens>=0.3.0:../../devel/py-pytokens
+DEPENDS+=	${PYPKGPREFIX}-pytokens>=0.4.0:../../devel/py-pytokens
 # only needed for blackd:
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.10:../../www/py-aiohttp
 
