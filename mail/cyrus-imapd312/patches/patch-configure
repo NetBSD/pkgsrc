@@ -1,0 +1,210 @@
+$NetBSD: patch-configure,v 1.1 2026/03/09 03:16:44 jnemeth Exp $
+
+Fix SunOS build of the libcyrus.a library.
+Don't mess with PYTHON variable.
+
+--- configure.orig	2026-01-12 08:00:27.936155462 +0000
++++ configure
+@@ -31303,7 +31303,7 @@ elif test "${with_perl}" != "no"; then
+ 
+ 
+     case "${target_os}" in
+-        linux*|netbsd*|freebsd*|dragonfly*|openbsd*)
++        linux*|netbsd*|freebsd*|dragonfly*|openbsd*|solaris2*)
+             { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for perl cccdlflags needed on \"${target_os}\"" >&5
+ printf %s "checking for perl cccdlflags needed on \"${target_os}\"... " >&6; }
+             eval `${PERL} -V:cccdlflags`
+@@ -32223,92 +32223,74 @@ printf "%s\n" "$as_me: WARNING: could no
+ fi
+ 
+ 
+-    if test -z $PYTHON;
+-    then
+-        if test -z "python2";
+-        then
+-            PYTHON="python3"
+-        else
+-            PYTHON="python2"
+-        fi
+-    fi
+-    PYTHON_NAME=`basename $PYTHON`
+-    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking $PYTHON_NAME module: git" >&5
+-printf %s "checking $PYTHON_NAME module: git... " >&6; }
+-    $PYTHON -c "import git" 2>/dev/null
+-    if test $? -eq 0;
+-    then
+-        { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+-printf "%s\n" "yes" >&6; }
+-        eval HAVE_PYMOD_GIT=yes
+-    else
+-        { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-printf "%s\n" "no" >&6; }
+-        eval HAVE_PYMOD_GIT=no
+-        #
+-        if test -n ""
+-        then
+-            as_fn_error $? "failed to find required module git" "$LINENO" 5
+-            exit 1
+-        fi
+-    fi
+-
+-case $HAVE_PYMOD_GIT in #(
+-  yes) :
+-     ;; #(
+-  *) :
+-
+-    unset PYTHON # work around AX_PYTHON_MODULE not cleaning up
+-
+-    if test -z $PYTHON;
+-    then
+-        if test -z "python3";
+-        then
+-            PYTHON="python3"
+-        else
+-            PYTHON="python3"
+-        fi
+-    fi
+-    PYTHON_NAME=`basename $PYTHON`
+-    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking $PYTHON_NAME module: git" >&5
+-printf %s "checking $PYTHON_NAME module: git... " >&6; }
+-    $PYTHON -c "import git" 2>/dev/null
+-    if test $? -eq 0;
+-    then
+-        { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+-printf "%s\n" "yes" >&6; }
++#XXX Don't look for git
++#XXX    PYTHON_NAME=`basename $PYTHON`
++#XXX    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking $PYTHON_NAME module: git" >&5
++#XXXprintf %s "checking $PYTHON_NAME module: git... " >&6; }
++#XXX    $PYTHON -c "import git" 2>/dev/null
++#XXX    if test $? -eq 0;
++#XXX    then
++#XXX        { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
++#XXXprintf "%s\n" "yes" >&6; }
++#XXX        eval HAVE_PYMOD_GIT=yes
++#XXX    else
++#XXX        { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
++#XXXprintf "%s\n" "no" >&6; }
++#XXX        eval HAVE_PYMOD_GIT=no
++#XXX        #
++#XXX        if test -n ""
++#XXX        then
++#XXX            as_fn_error $? "failed to find required module git" "$LINENO" 5
++#XXX            exit 1
++#XXX        fi
++#XXX    fi
++#XXX
++#XXXcase $HAVE_PYMOD_GIT in #(
++#XXX  yes) :
++#XXX     ;; #(
++#XXX  *) :
++#XXX
++#XXX    PYTHON_NAME=`basename $PYTHON`
++#XXX    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking $PYTHON_NAME module: git" >&5
++#XXXprintf %s "checking $PYTHON_NAME module: git... " >&6; }
++#XXX    $PYTHON -c "import git" 2>/dev/null
++#XXX    if test $? -eq 0;
++#XXX    then
++#XXX        { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
++#XXXprintf "%s\n" "yes" >&6; }
++#XXX        eval HAVE_PYMOD_GIT=yes
++#XXX    else
++#XXX        { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
++#XXXprintf "%s\n" "no" >&6; }
++#XXX        eval HAVE_PYMOD_GIT=no
++#XXX        #
++#XXX        if test -n ""
++#XXX        then
++#XXX            as_fn_error $? "failed to find required module git" "$LINENO" 5
++#XXX            exit 1
++#XXX        fi
++#XXX    fi
++#XXX
++#XXX    case $HAVE_PYMOD_GIT in #(
++#XXX  yes) :
++#XXX     ;; #(
++#XXX  *) :
++#XXX
++#XXX    if test -z "$ENABLE_RELEASE_CHECKS_TRUE"; then :
++#XXX  as_fn_error $? "No GitPython, cannot regenerate docs" "$LINENO" 5
++#XXXelse
++#XXX  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: WARNING: No GitPython, won't be able to regenerate docs" >&5
++#XXXprintf "%s\n" "$as_me: WARNING: No GitPython, won't be able to regenerate docs" >&2;}
++#XXXfi
++#XXX ;; #(
++#XXX  *) :
++#XXX     ;;
++#XXXesac
++#XXX ;; #(
++#XXX  *) :
++#XXX     ;;
++#XXXesac
+         eval HAVE_PYMOD_GIT=yes
+-    else
+-        { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-printf "%s\n" "no" >&6; }
+-        eval HAVE_PYMOD_GIT=no
+-        #
+-        if test -n ""
+-        then
+-            as_fn_error $? "failed to find required module git" "$LINENO" 5
+-            exit 1
+-        fi
+-    fi
+-
+-    case $HAVE_PYMOD_GIT in #(
+-  yes) :
+-     ;; #(
+-  *) :
+-
+-    if test -z "$ENABLE_RELEASE_CHECKS_TRUE"; then :
+-  as_fn_error $? "No GitPython, cannot regenerate docs" "$LINENO" 5
+-else
+-  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: WARNING: No GitPython, won't be able to regenerate docs" >&5
+-printf "%s\n" "$as_me: WARNING: No GitPython, won't be able to regenerate docs" >&2;}
+-fi
+- ;; #(
+-  *) :
+-     ;;
+-esac
+- ;; #(
+-  *) :
+-     ;;
+-esac
+ 
+ # XXX icky and slightly bogus* to have to duplicate this python2/python3 mess,
+ # XXX but i think it's not worth generalising now when we'll surely drop
+@@ -32317,15 +32299,6 @@ esac
+ # XXX doesn't actually check both despite looking like it will.  that's fine...
+ # XXX it only works if both modules are installed for the same python anyway!)
+ 
+-    if test -z $PYTHON;
+-    then
+-        if test -z "python2";
+-        then
+-            PYTHON="python3"
+-        else
+-            PYTHON="python2"
+-        fi
+-    fi
+     PYTHON_NAME=`basename $PYTHON`
+     { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking $PYTHON_NAME module: sphinx_rtd_theme" >&5
+ printf %s "checking $PYTHON_NAME module: sphinx_rtd_theme... " >&6; }
+@@ -32352,17 +32325,6 @@ case $HAVE_PYMOD_SPHINX_RTD_THEME in #(
+      ;; #(
+   *) :
+ 
+-    unset PYTHON # work around AX_PYTHON_MODULE not cleaning up
+-
+-    if test -z $PYTHON;
+-    then
+-        if test -z "python3";
+-        then
+-            PYTHON="python3"
+-        else
+-            PYTHON="python3"
+-        fi
+-    fi
+     PYTHON_NAME=`basename $PYTHON`
+     { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking $PYTHON_NAME module: sphinx_rtd_theme" >&5
+ printf %s "checking $PYTHON_NAME module: sphinx_rtd_theme... " >&6; }
