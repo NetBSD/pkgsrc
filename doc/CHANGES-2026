@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1647 2026/03/09 17:27:08 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1648 2026/03/09 17:32:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2225,3 +2225,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-ruff to 0.15.5 [wiz 2026-03-09]
 	Updated comms/py-textual to 8.0.2 [wiz 2026-03-09]
 	Updated textproc/tree-sitter-elixir to 0.3.5 [wiz 2026-03-09]
+	Updated textproc/lowdown to 3.0.0 [wiz 2026-03-09]
