@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2025/04/12 09:50:45 adam Exp $
+# $NetBSD: Makefile,v 1.19 2026/03/09 16:54:19 wiz Exp $
 
-DISTNAME=	codespell-2.4.1
+DISTNAME=	codespell-2.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/codespell/}
 
@@ -18,6 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON=	bin/codespell
+REPLACE_BASH+=	tools/gen_OX.sh
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
