@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2026/02/16 11:12:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.56 2026/03/09 16:58:26 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -328,6 +328,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/gkeonprem.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/gmail.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/gmailpostmastertools.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/gmailpostmastertools.v1beta1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/gmailpostmastertools.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/groupsmigration.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/groupssettings.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/healthcare.v1.json
