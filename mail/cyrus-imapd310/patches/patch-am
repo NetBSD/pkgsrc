@@ -1,0 +1,19 @@
+$NetBSD: patch-am,v 1.1 2026/03/09 03:07:50 jnemeth Exp $
+
+--- tools/config2header.orig	2025-06-27 02:57:17.000000000 +0000
++++ tools/config2header
+@@ -76,6 +76,14 @@ while (scalar @ARGV) {
+ }
+ 
+ my $use_gcc_extension = (exists $vars{CC} and $vars{CC} eq 'gcc');
++ 
++#
++# Skip any CC options such as -pipe
++# The last two parameters are the .c and .h files
++#
++while ($#ARGV > 2) {
++	shift @ARGV;
++}
+ 
+ die "wrong number of arguments" if scalar @ARGV != 2;
+ my ($cfile, $hfile) = @ARGV;
