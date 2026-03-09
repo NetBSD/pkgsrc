@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26919 2026/03/09 17:20:53 wiz Exp $
+$NetBSD: TODO,v 1.26920 2026/03/09 17:27:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1176,7 +1176,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
-	o rumdl-0.1.43
+	o rumdl-0.1.43 [needs rust 1.94]
 	o rust-1.94.0 [wip]
 	o rvault-0.4
 	o rvm-1.20
@@ -1293,7 +1293,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.0.4
-	o tree-sitter-elixir-0.3.5
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o ttftot42-0.4.1
