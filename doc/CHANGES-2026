@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1639 2026/03/09 16:56:27 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1640 2026/03/09 16:58:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2217,3 +2217,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/py-beets to 2.7.1 [wiz 2026-03-09]
 	Updated devel/py-codespell to 2.4.2 [wiz 2026-03-09]
 	Updated devel/py-dotenv to 1.2.2 [wiz 2026-03-09]
+	Updated www/py-google-api-python-client to 2.192.0 [wiz 2026-03-09]
