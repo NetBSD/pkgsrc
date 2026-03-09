@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1637 2026/03/09 16:52:33 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1638 2026/03/09 16:54:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2215,3 +2215,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/fzf to 0.70.0 [wiz 2026-03-09]
 	Updated textproc/moor to 2.11.1 [wiz 2026-03-09]
 	Updated audio/py-beets to 2.7.1 [wiz 2026-03-09]
+	Updated devel/py-codespell to 2.4.2 [wiz 2026-03-09]
