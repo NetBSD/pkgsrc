@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1641 2026/03/09 17:02:42 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1642 2026/03/09 17:03:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2219,3 +2219,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-dotenv to 1.2.2 [wiz 2026-03-09]
 	Updated www/py-google-api-python-client to 2.192.0 [wiz 2026-03-09]
 	Updated security/py-google-auth to 2.49.0 [wiz 2026-03-09]
+	Updated devel/py-googleapis-common-protos to 1.73.0 [wiz 2026-03-09]
