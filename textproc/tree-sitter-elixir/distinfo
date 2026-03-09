@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/02/09 14:13:52 wiz Exp $
+$NetBSD: distinfo,v 1.9 2026/03/09 17:27:00 wiz Exp $
 
-BLAKE2s (tree-sitter-elixir-0.3.4.tar.gz) = 9df77f53b64dbf2c2db013d1247aa529264b598223985aa6ccce45f2918d4ba8
-SHA512 (tree-sitter-elixir-0.3.4.tar.gz) = b3433cfd81a2bc8392c1238e476e1266ddf4d1b201fe3a725a3e3d801d48deb2a7344318144f64021101df108241f0f3a808ac4e75f81be71fe6968e52ca8d30
-Size (tree-sitter-elixir-0.3.4.tar.gz) = 561177 bytes
+BLAKE2s (tree-sitter-elixir-0.3.5.tar.gz) = f5266f4116076f9756d1489f3d56e5f0e33a80e8b2e94259150bd38006b0e04b
+SHA512 (tree-sitter-elixir-0.3.5.tar.gz) = bac9a054892da94f3ce492d90ab8bc9fd407a10536517eb93e66ddda1d945898a863dd52932efd863c91b1691da4bd5c60c13fa27689d3ff8052301634bcdb1c
+Size (tree-sitter-elixir-0.3.5.tar.gz) = 561256 bytes
