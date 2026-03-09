@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2026/02/09 12:44:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2026/03/09 16:52:24 wiz Exp $
 bin/beet-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -63,6 +63,9 @@ ${PYSITELIB}/beets/library/exceptions.pyo
 ${PYSITELIB}/beets/library/library.py
 ${PYSITELIB}/beets/library/library.pyc
 ${PYSITELIB}/beets/library/library.pyo
+${PYSITELIB}/beets/library/migrations.py
+${PYSITELIB}/beets/library/migrations.pyc
+${PYSITELIB}/beets/library/migrations.pyo
 ${PYSITELIB}/beets/library/models.py
 ${PYSITELIB}/beets/library/models.pyc
 ${PYSITELIB}/beets/library/models.pyo
@@ -170,6 +173,9 @@ ${PYSITELIB}/beets/util/hidden.pyo
 ${PYSITELIB}/beets/util/id_extractors.py
 ${PYSITELIB}/beets/util/id_extractors.pyc
 ${PYSITELIB}/beets/util/id_extractors.pyo
+${PYSITELIB}/beets/util/lyrics.py
+${PYSITELIB}/beets/util/lyrics.pyc
+${PYSITELIB}/beets/util/lyrics.pyo
 ${PYSITELIB}/beets/util/m3u.py
 ${PYSITELIB}/beets/util/m3u.pyc
 ${PYSITELIB}/beets/util/m3u.pyo
