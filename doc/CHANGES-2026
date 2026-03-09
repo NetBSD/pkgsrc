@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1624 2026/03/09 08:52:19 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1625 2026/03/09 10:20:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2198,3 +2198,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Downgraded devel/ruby-async to 2.37.0 [taca 2026-03-09]
 	Updated devel/py-smmap to 5.0.3 [adam 2026-03-09]
 	Updated net/py-moto to 5.1.22 [adam 2026-03-09]
+	Updated devel/zix to 0.6.2nb2 [adam 2026-03-09]
+	Updated multimedia/gstreamer1 to 1.28.1 [adam 2026-03-09]
