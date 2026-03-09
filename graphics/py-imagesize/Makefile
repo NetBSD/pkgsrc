@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2025/04/22 20:17:27 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/03/09 17:04:50 wiz Exp $
 
-DISTNAME=	imagesize-1.4.1
+DISTNAME=	imagesize-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/imagesize/}
 
@@ -15,8 +14,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
-# as of 1.4.1
-# 1 failed, 44 passed
+# as of 2.0.0
+# 1 failed, 81 passed
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
