@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1618 2026/03/09 03:33:21 jnemeth Exp $
+$NetBSD: CHANGES-2026,v 1.1619 2026/03/09 03:35:26 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2191,3 +2191,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added textproc/p5-Pod-POM-View-Restructured version 1.000003 [jnemeth 2026-03-09]
 	Added textproc/py-sphinxcontrib-actdiag version 3.0.0 [jnemeth 2026-03-09]
 	Added textproc/py-sphinxcontrib-blockdiag version 3.0.0 [jnemeth 2026-03-09]
+	Added textproc/py-sphinxcontrib-nwdiag version 2.0.0 [jnemeth 2026-03-09]
