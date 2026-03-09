@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/09 03:39:26 jnemeth Exp $
+
+BLAKE2s (sphinxcontrib-programoutput2-2.0a1.tar.gz) = 2356ba73295f203cec3542499f164648b0ca43f2c9ab419f8e59bff13add48a2
+SHA512 (sphinxcontrib-programoutput2-2.0a1.tar.gz) = e4d3b656b20bcebb114a324375e43a30e802e829a146593dddabc9b4fb4a279531f8c693385077f58b0b7ad6d54fa44b42afbd87602f9b2c71d7a9069f00cc6b
+Size (sphinxcontrib-programoutput2-2.0a1.tar.gz) = 28422 bytes
