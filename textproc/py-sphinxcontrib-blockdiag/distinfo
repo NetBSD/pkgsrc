@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/09 03:33:02 jnemeth Exp $
+
+BLAKE2s (sphinxcontrib-blockdiag-3.0.0.tar.gz) = b162b49b8cdbf1cfcb6280cff2cd0a637cff8f526801ffa18f948f0e58e8071f
+SHA512 (sphinxcontrib-blockdiag-3.0.0.tar.gz) = e173b4149368b8c13d08da6cd423ebba218ff0265b629242b6076f3781cc1ffe0fa007556cd0019f40bd5e5ed1c0f7953f7713f3dc56eceac3e53cc22b892238
+Size (sphinxcontrib-blockdiag-3.0.0.tar.gz) = 6070 bytes
