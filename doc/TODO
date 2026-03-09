@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26899 2026/03/08 12:11:54 pin Exp $
+$NetBSD: TODO,v 1.26900 2026/03/09 03:08:40 jnemeth Exp $
 
 Suggested new packages
 ======================
@@ -545,7 +545,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cvs-fast-export-1.56
 	o cxref-1.6e
 	o cygwin_lib-1.5.24.2
-	o cyrus-imapd-3.4.3
 	o dap-3.10
 	o darktable-5.4
 	o dcc-2.3.167
