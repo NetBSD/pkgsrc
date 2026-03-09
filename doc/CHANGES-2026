@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1652 2026/03/09 19:06:09 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.1653 2026/03/09 20:38:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2230,3 +2230,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/digikam-gmic-qt to 3.6.0.20251230 [wiz 2026-03-09]
 	Updated mail/neomutt to 20260105nb3 [wiz 2026-03-09]
 	Updated www/chromium to 145.0.7632.159 [kikadf 2026-03-09]
+	Updated emulators/mame to 0.286nb1 [wiz 2026-03-09]
