@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.101 2025/10/26 12:20:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.102 2026/03/09 12:35:30 tnn Exp $
 
 DISTNAME=	imlib2-1.12.5
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 EXTRACT_SUFX=	.tar.xz
@@ -51,6 +52,7 @@ SUBST_SED.shlib+=	-e 's,"\.so",".${SHLIB_SUFFIX}",'
 .include "options.mk"
 
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
