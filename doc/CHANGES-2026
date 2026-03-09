@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1643 2026/03/09 17:05:00 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1644 2026/03/09 17:06:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2221,3 +2221,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-google-auth to 2.49.0 [wiz 2026-03-09]
 	Updated devel/py-googleapis-common-protos to 1.73.0 [wiz 2026-03-09]
 	Updated graphics/py-imagesize to 2.0.0 [wiz 2026-03-09]
+	Updated devel/py-jaraco.context to 6.1.1 [wiz 2026-03-09]
