@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile.in,v 1.1 2026/03/09 03:16:43 jnemeth Exp $
+
+Rename httpd.8 to cyrus-httpd.8 to not conflict with an installed
+web server.
+
+--- Makefile.in.orig	2026-01-12 06:36:19.642724602 +0000
++++ Makefile.in
+@@ -3184,7 +3184,7 @@ dist_man8_MANS = \
+     man/deliver.8 \
+     man/fetchnews.8 \
+     man/fud.8 \
+-    man/httpd.8 \
++    man/cyrus-httpd.8 \
+     man/idled.8 \
+     man/imapd.8 \
+     man/ipurge.8 \
