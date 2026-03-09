@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/09 03:37:17 jnemeth Exp $
+
+BLAKE2s (sphinxcontrib_phpdomain-0.13.2.tar.gz) = 34179a96b64124b82de3fb41d4a0980c91f523853fa2056763d4badb10284ef4
+SHA512 (sphinxcontrib_phpdomain-0.13.2.tar.gz) = 8f09a5a84919b89c9a37649cb8f9e4ed70b6cea2529d41f1523322e004ef13ce27e98566ab2f0344439d0d48400e1e1ee34f5df349fa799f38fa02d127e669c7
+Size (sphinxcontrib_phpdomain-0.13.2.tar.gz) = 52406 bytes
