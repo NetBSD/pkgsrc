@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/10/30 15:35:35 adam Exp $
+# $NetBSD: Makefile,v 1.32 2026/03/09 10:19:53 adam Exp $
 
 .include "../../multimedia/gstreamer1/version.mk"
 
@@ -20,7 +20,7 @@ PYTHON_SELF_CONFLICT=	yes
 TEST_TARGET=		check
 
 .include "../../devel/py-gobject3-common/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.20.1
+BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.28.1
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"

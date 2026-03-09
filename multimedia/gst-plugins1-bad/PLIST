@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2026/02/13 18:50:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.30 2026/03/09 10:19:53 adam Exp $
 include/gstreamer-1.0/gst/analytics/analytics-meta-prelude.h
 include/gstreamer-1.0/gst/analytics/analytics.h
 include/gstreamer-1.0/gst/analytics/gstanalytics_image_util.h
@@ -20,11 +20,14 @@ include/gstreamer-1.0/gst/basecamerabinsrc/gstbasecamerasrc.h
 include/gstreamer-1.0/gst/basecamerabinsrc/gstcamerabin-enum.h
 include/gstreamer-1.0/gst/basecamerabinsrc/gstcamerabinpreview.h
 include/gstreamer-1.0/gst/codecparsers/codecparsers-prelude.h
+include/gstreamer-1.0/gst/codecparsers/gstav1bitwriter.h
 include/gstreamer-1.0/gst/codecparsers/gstav1parser.h
+include/gstreamer-1.0/gst/codecparsers/gsth264bitwriter.h
 include/gstreamer-1.0/gst/codecparsers/gsth264parser.h
 include/gstreamer-1.0/gst/codecparsers/gsth265parser.h
 include/gstreamer-1.0/gst/codecparsers/gsth266parser.h
 include/gstreamer-1.0/gst/codecparsers/gstjpeg2000sampling.h
+include/gstreamer-1.0/gst/codecparsers/gstjpegbitwriter.h
 include/gstreamer-1.0/gst/codecparsers/gstjpegparser.h
 include/gstreamer-1.0/gst/codecparsers/gstlcevcmeta.h
 include/gstreamer-1.0/gst/codecparsers/gstmpeg4parser.h
@@ -103,6 +106,7 @@ include/gstreamer-1.0/gst/webrtc/webrtc.h
 include/gstreamer-1.0/gst/webrtc/webrtc_fwd.h
 lib/girepository-1.0/GstAnalytics-1.0.typelib
 lib/girepository-1.0/GstBadAudio-1.0.typelib
+lib/girepository-1.0/GstCodecParsers-1.0.typelib
 lib/girepository-1.0/GstCodecs-1.0.typelib
 lib/girepository-1.0/GstDxva-1.0.typelib
 lib/girepository-1.0/GstInsertBin-1.0.typelib
@@ -245,6 +249,7 @@ lib/pkgconfig/gstreamer-transcoder-1.0.pc
 lib/pkgconfig/gstreamer-webrtc-1.0.pc
 share/gir-1.0/GstAnalytics-1.0.gir
 share/gir-1.0/GstBadAudio-1.0.gir
+share/gir-1.0/GstCodecParsers-1.0.gir
 share/gir-1.0/GstCodecs-1.0.gir
 share/gir-1.0/GstDxva-1.0.gir
 share/gir-1.0/GstInsertBin-1.0.gir
