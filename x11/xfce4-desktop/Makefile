@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2026/01/27 08:41:07 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2026/03/09 21:14:44 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -13,6 +13,8 @@ HOMEPAGE=	https://docs.xfce.org/xfce/xfdesktop/start
 COMMENT=	Xfce desktop background manager
 
 USE_LANGUAGES=	c99
+# Work around parsing bug triggered in older GCC versions, e.g., 7.5.
+GCC_REQD+=	10
 USE_TOOLS+=	gdbus-codegen
 
 BUILD_DEFS+=		PKG_SYSCONFBASE
