@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/09 03:31:14 jnemeth Exp $
+
+BLAKE2s (sphinxcontrib-actdiag-3.0.0.tar.gz) = be09821e696b6541554a96f2a898c4110ea339555c93b3de4c385a872b12d329
+SHA512 (sphinxcontrib-actdiag-3.0.0.tar.gz) = b6cb595c2f5a6ac5c816b7b8424239c8ce1787420776f6e001721818d64d546f97d03baacef636464fb29a4f7a62d6f89dec7894b942e87d2b07d78edecc7ecd
+Size (sphinxcontrib-actdiag-3.0.0.tar.gz) = 6201 bytes
