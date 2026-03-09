@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2026/03/09 11:38:16 adam Exp $
+include/SDL3_ttf/SDL_textengine.h
+include/SDL3_ttf/SDL_ttf.h
+lib/cmake/SDL3_ttf/Findharfbuzz.cmake
+lib/cmake/SDL3_ttf/Findplutosvg.cmake
+lib/cmake/SDL3_ttf/Findplutovg.cmake
+lib/cmake/SDL3_ttf/PkgConfigHelper.cmake
+lib/cmake/SDL3_ttf/SDL3_ttf-shared-targets-relwithdebinfo.cmake
+lib/cmake/SDL3_ttf/SDL3_ttf-shared-targets.cmake
+lib/cmake/SDL3_ttf/SDL3_ttfConfig.cmake
+lib/cmake/SDL3_ttf/SDL3_ttfConfigVersion.cmake
+lib/libSDL3_ttf.so
+lib/libSDL3_ttf.so.0
+lib/libSDL3_ttf.so.0.2.2
+lib/pkgconfig/sdl3-ttf.pc
+share/licenses/SDL3_ttf/LICENSE.txt
