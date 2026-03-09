@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1622 2026/03/09 03:40:59 jnemeth Exp $
+$NetBSD: CHANGES-2026,v 1.1623 2026/03/09 07:12:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2195,3 +2195,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added textproc/py-sphinxcontrib-phpdomain version 0.13.2 [jnemeth 2026-03-09]
 	Added textproc/py-sphinxcontrib-programoutput2 version 2.0a1 [jnemeth 2026-03-09]
 	Added textproc/py-sphinxcontrib-seqdiag version 3.0.0 [jnemeth 2026-03-09]
+	Downgraded devel/ruby-async to 2.37.0 [taca 2026-03-09]
