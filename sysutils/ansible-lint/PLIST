@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2026/02/27 07:00:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2026/03/09 12:50:06 adam Exp $
 bin/ansible-lint
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -136,6 +136,10 @@ ${PYSITELIB}/ansiblelint/rules/jinja.md
 ${PYSITELIB}/ansiblelint/rules/jinja.py
 ${PYSITELIB}/ansiblelint/rules/jinja.pyc
 ${PYSITELIB}/ansiblelint/rules/jinja.pyo
+${PYSITELIB}/ansiblelint/rules/jinja_template_extension.md
+${PYSITELIB}/ansiblelint/rules/jinja_template_extension.py
+${PYSITELIB}/ansiblelint/rules/jinja_template_extension.pyc
+${PYSITELIB}/ansiblelint/rules/jinja_template_extension.pyo
 ${PYSITELIB}/ansiblelint/rules/key_order.md
 ${PYSITELIB}/ansiblelint/rules/key_order.py
 ${PYSITELIB}/ansiblelint/rules/key_order.pyc
