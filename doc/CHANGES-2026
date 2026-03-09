@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1621 2026/03/09 03:39:31 jnemeth Exp $
+$NetBSD: CHANGES-2026,v 1.1622 2026/03/09 03:40:59 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2194,3 +2194,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added textproc/py-sphinxcontrib-nwdiag version 2.0.0 [jnemeth 2026-03-09]
 	Added textproc/py-sphinxcontrib-phpdomain version 0.13.2 [jnemeth 2026-03-09]
 	Added textproc/py-sphinxcontrib-programoutput2 version 2.0a1 [jnemeth 2026-03-09]
+	Added textproc/py-sphinxcontrib-seqdiag version 3.0.0 [jnemeth 2026-03-09]
