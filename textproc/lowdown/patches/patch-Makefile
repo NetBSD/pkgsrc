@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile,v 1.9 2025/11/19 15:54:26 gutteridge Exp $
+$NetBSD: patch-Makefile,v 1.10 2026/03/09 17:32:36 wiz Exp $
 
 Libtoolize for portable shared libraries.
 
---- Makefile.orig	2025-11-17 03:25:46.000000000 +0000
+--- Makefile.orig	2026-03-07 20:47:42.000000000 +0000
 +++ Makefile
 @@ -1,5 +1,6 @@
  .PHONY: regress regen_regress valgrind
@@ -11,9 +11,9 @@ Libtoolize for portable shared libraries.
  
  include Makefile.configure
  WWWDIR		 = /var/www/vhosts/kristaps.bsd.lv/htdocs/lowdown
-@@ -189,7 +190,12 @@ REGRESS_ARGS	+= "--parse-no-deflists"
+@@ -200,7 +201,12 @@ REGRESS_ENV	 = LC_ALL=C.UTF-8
  
- REGRESS_ENV	 = LC_ALL=en_US.UTF-8
+ REGRESS_ENV	 = LC_ALL=C.UTF-8
  
 -all: bins lowdown.pc $(LIB_SO)
 +LIBTOOL                 = libtool --tag=CC
@@ -24,8 +24,8 @@ Libtoolize for portable shared libraries.
 +
  bins: lowdown lowdown-diff
  
- www: all $(HTMLS) $(PDFS) $(THUMBS) lowdown.tar.gz lowdown.tar.gz.sha512
-@@ -202,15 +208,20 @@ installwww: www
+ www: all $(HTMLS) $(PDFS) $(THUMBS) $(TEXTS) lowdown.tar.gz lowdown.tar.gz.sha512
+@@ -213,15 +219,20 @@ installwww: www
  	$(INSTALL) -m 0444 lowdown.tar.gz $(WWWDIR)/snapshots
  	$(INSTALL) -m 0444 lowdown.tar.gz.sha512 $(WWWDIR)/snapshots
  
@@ -49,7 +49,7 @@ Libtoolize for portable shared libraries.
  $(LIB_SO): $(OBJS) $(COMPAT_OBJS)
  	$(CC) $(LINKER_SOFLAG) -o $(LIB_SOVER) $(OBJS) $(COMPAT_OBJS) \
  		$(LDFLAGS) $(LDADD_MD5) -lm \
-@@ -240,8 +251,8 @@ install: bins
+@@ -251,8 +262,8 @@ install: bins
  	$(INSTALL_DATA) share/man/* $(DESTDIR)$(SHAREDIR)/lowdown/man
  	$(INSTALL_DATA) share/ms/* $(DESTDIR)$(SHAREDIR)/lowdown/ms
  	$(INSTALL_DATA) share/odt/* $(DESTDIR)$(SHAREDIR)/lowdown/odt
@@ -60,7 +60,7 @@ Libtoolize for portable shared libraries.
  	for f in $(MAN1S) $(MAN5S) ; do \
  		name=`basename $$f .html` ; \
  		section=$${name##*.} ; \
-@@ -272,6 +283,9 @@ install_lib_common: lowdown.pc
+@@ -283,6 +294,9 @@ uninstall_shared: uninstall_lib_common
  uninstall_shared: uninstall_lib_common
  	rm -f $(LIBDIR)/$(LIB_SOVER) $(LIBDIR)/$(LIB_SO)
  
@@ -70,9 +70,9 @@ Libtoolize for portable shared libraries.
  install_shared: $(LIB_SO) install_lib_common
  	$(INSTALL_LIB) $(LIB_SOVER) $(DESTDIR)$(LIBDIR)
  	( cd $(DESTDIR)$(LIBDIR) && ln -sf $(LIB_SOVER) $(LIB_SO) )
-@@ -344,6 +358,9 @@ diff.diff.pdf: diff.md diff.old.md lowdo
- 
- $(HTMLS): versions.xml lowdown
+@@ -370,6 +384,9 @@ $(HTMLS): versions.xml lowdown
+ .xml.html:
+ 	sblg -t template.xml -s date -o $@ -C $< $< versions.xml
  
 +.c.lo:
 +	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c -o $@ $<
@@ -80,18 +80,21 @@ Libtoolize for portable shared libraries.
  .md.xml: lowdown
  	( echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>" ; \
  	  echo "<article data-sblg-article=\"1\">" ; \
-@@ -396,13 +413,13 @@ lowdown.tar.gz:
+@@ -424,15 +441,15 @@ lowdown.tar.gz:
  	( cd .dist/ && tar zcf ../$@ lowdown-$(VERSION) )
  	rm -rf .dist/
  
 -$(OBJS) $(COMPAT_OBJS) main.o: config.h
-+$(LT_OBJS) $(LT_COMPAT_OBJS) main.lo: config.h
++$(LT_OBJS) $(COMPAT_OBJS) main.o: config.h
  
 -$(OBJS): extern.h lowdown.h
 +$(LT_OBJS): extern.h lowdown.h
  
 -term.o: term.h
 +term.lo: term.h
+ 
+-roff.o roff_manpage.o: roff.h
++roff.lo roff_manpage.lo: roff.h
  
 -main.o: lowdown.h
 +main.lo: lowdown.h
