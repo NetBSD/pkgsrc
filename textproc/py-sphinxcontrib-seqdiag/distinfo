@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/09 03:40:54 jnemeth Exp $
+
+BLAKE2s (sphinxcontrib-seqdiag-3.0.0.tar.gz) = a1808fb65bdd106d24f8d3ddc6e9d2eb10b8ee7554b01bff320860e944aaab76
+SHA512 (sphinxcontrib-seqdiag-3.0.0.tar.gz) = fd1bcbda3f73eec56314b4ad3054725e9c1b946c6fe3b8b950b5fc3a97ad4d12aa695e5741946cf86bbc8f62f77873400d09afbc568ad593c04fad1810c3e4fe
+Size (sphinxcontrib-seqdiag-3.0.0.tar.gz) = 6196 bytes
