@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2026/03/09 03:07:50 jnemeth Exp $
+
+Fix SunOS build of the libcyrus.a library.
+
+--- configure.orig	2024-10-28 05:48:03.051142678 +0000
++++ configure
+@@ -29744,7 +29744,7 @@ elif test "${with_perl}" != "no"; then
+ 
+ 
+     case "${target_os}" in
+-        linux*|netbsd*|freebsd*|dragonfly*|openbsd*)
++        linux*|netbsd*|freebsd*|dragonfly*|openbsd*|solaris2*)
+             { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for perl cccdlflags needed on \"${target_os}\"" >&5
+ printf %s "checking for perl cccdlflags needed on \"${target_os}\"... " >&6; }
+             eval `${PERL} -V:cccdlflags`
