@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1580 2026/03/06 13:33:09 adam Exp $
+# $NetBSD: Makefile,v 1.1581 2026/03/09 03:45:24 jnemeth Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -815,6 +815,7 @@ SUBDIR+=	p5-Pod-Elemental-PerlMunger
 SUBDIR+=	p5-Pod-Eventual
 SUBDIR+=	p5-Pod-Markdown
 SUBDIR+=	p5-Pod-POM
+SUBDIR+=	p5-Pod-POM-View-Restructured
 SUBDIR+=	p5-Pod-Parser
 SUBDIR+=	p5-Pod-Readme
 SUBDIR+=	p5-Pod-Spell
@@ -1226,8 +1227,10 @@ SUBDIR+=	py-sphinx-lv2-theme
 SUBDIR+=	py-sphinx-notfound-page
 SUBDIR+=	py-sphinx-rtd-theme
 SUBDIR+=	py-sphinx-theme-cloud
+SUBDIR+=	py-sphinxcontrib-actdiag
 SUBDIR+=	py-sphinxcontrib-applehelp
 SUBDIR+=	py-sphinxcontrib-bibtex
+SUBDIR+=	py-sphinxcontrib-blockdiag
 SUBDIR+=	py-sphinxcontrib-devhelp
 SUBDIR+=	py-sphinxcontrib-htmlhelp
 SUBDIR+=	py-sphinxcontrib-httpdomain
@@ -1235,8 +1238,12 @@ SUBDIR+=	py-sphinxcontrib-jquery
 SUBDIR+=	py-sphinxcontrib-jsmath
 SUBDIR+=	py-sphinxcontrib-log-cabinet
 SUBDIR+=	py-sphinxcontrib-newsfeed
+SUBDIR+=	py-sphinxcontrib-nwdiag
+SUBDIR+=	py-sphinxcontrib-phpdomain
+SUBDIR+=	py-sphinxcontrib-programoutput2
 SUBDIR+=	py-sphinxcontrib-qthelp
 SUBDIR+=	py-sphinxcontrib-serializinghtml
+SUBDIR+=	py-sphinxcontrib-seqdiag
 SUBDIR+=	py-sphinxcontrib-spelling
 SUBDIR+=	py-sphinxcontrib-websupport
 SUBDIR+=	py-sphinxygen
