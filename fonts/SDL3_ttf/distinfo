@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/09 11:38:16 adam Exp $
+
+BLAKE2s (SDL3_ttf-3.2.2.tar.gz) = 69790a5f48265e39f8e9ecbee154f064c14cfaf68c7fe5605fdc1d2727ef91b1
+SHA512 (SDL3_ttf-3.2.2.tar.gz) = 3cbab124642e23bd751f5a919c0094c8f9e004b566fbd57e6a61f92d0c8d0a14b9b6613faaff8093c4e523a81f07a4145870c29e1eb66eb5b5a5ff2c37c0806b
+Size (SDL3_ttf-3.2.2.tar.gz) = 1545950 bytes
