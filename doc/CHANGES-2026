@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1630 2026/03/09 16:35:49 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1631 2026/03/09 16:36:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2208,3 +2208,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-black to 26.3.0 [adam 2026-03-09]
 	Updated sysutils/ansible-lint to 26.3.0 [adam 2026-03-09]
 	Updated www/libkiwix to 14.2.0 [wiz 2026-03-09]
+	Updated www/kiwix-tools to 3.8.2 [wiz 2026-03-09]
