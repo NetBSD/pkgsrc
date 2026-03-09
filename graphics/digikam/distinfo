@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.69 2025/12/25 19:00:04 wiz Exp $
+$NetBSD: distinfo,v 1.70 2026/03/09 17:51:13 wiz Exp $
 
-BLAKE2s (digiKam-8.8.0.tar.xz) = 29d38fd11f9e23fa9d8e5df4d35996986e476eee5637f4085cec7b8771d629e5
-SHA512 (digiKam-8.8.0.tar.xz) = eb10afff5639657ff4ca4870c0c02c89dd00a627fec0b64262c4f9f50048819f82024da8d943c23288313076723fcf4c04d6cc281e4890e0f5d9f36e33bf3b33
-Size (digiKam-8.8.0.tar.xz) = 61419860 bytes
-SHA1 (patch-core_libs_threads_actionthreadbase.cpp) = 03d88d42ccb26ca1012e181574e2decdf22d2501
+BLAKE2s (digiKam-9.0.0.tar.xz) = 51045c4b08b79a2c3816587118c2cb8af0a90dc2e4047fa59af0cea8782b5e2d
+SHA512 (digiKam-9.0.0.tar.xz) = 8b9e4362424971edd9c7c9d634ecbb5687db3bfb97e3df1678848b7336b8c68b7f7cae9ccbdbf664d5a0fdf19e3c835165cb8c4167eebc08e2bc2b9490c3ceb7
+Size (digiKam-9.0.0.tar.xz) = 53858376 bytes
