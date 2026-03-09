@@ -1,0 +1,25 @@
+$NetBSD: patch-aq,v 1.1 2026/03/09 03:07:50 jnemeth Exp $
+
+* cast to unsigned long for platform sizeof(time_t) > sizeof(unsigned long).
+  https://bugzilla.cyrusimap.org/show_bug.cgi?id=3376
+
+--- imap/sync_client.c.orig	2024-07-29 01:37:07.000000000 +0000
++++ imap/sync_client.c
+@@ -174,7 +174,7 @@ enum {
+ };
+ 
+ static int do_daemon_work(const char *sync_shutdown_file,
+-                   unsigned long timeout, unsigned long min_delta,
++                   time_t timeout, time_t min_delta,
+                    int *restartp)
+ {
+     int r = 0;
+@@ -329,7 +329,7 @@ static void replica_disconnect(void)
+ }
+ 
+ static void do_daemon(const char *sync_shutdown_file,
+-                      unsigned long timeout, unsigned long min_delta)
++                      time_t timeout, time_t min_delta)
+ {
+     int r = 0;
+     int restart = 1;
