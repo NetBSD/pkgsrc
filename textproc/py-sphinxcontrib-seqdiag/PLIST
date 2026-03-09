@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2026/03/09 03:40:54 jnemeth Exp $
+${PYSITELIB}/sphinxcontrib/seqdiag.py
+${PYSITELIB}/sphinxcontrib/seqdiag.pyc
+${PYSITELIB}/sphinxcontrib/seqdiag.pyo
+${PYSITELIB}/sphinxcontrib_seqdiag-${PKGVERSION}-py3.13-nspkg.pth
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
