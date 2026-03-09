@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1615 2026/03/09 03:23:01 jnemeth Exp $
+$NetBSD: CHANGES-2026,v 1.1616 2026/03/09 03:29:10 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2188,3 +2188,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added mail/cyrus-imapd312 version 3.12.1 [jnemeth 2026-03-09]
 	Added mail/cyrus-imapd32 version 3.2.12 [jnemeth 2026-03-09]
 	Added mail/cyrus-imapd38 version 3.8.6 [jnemeth 2026-03-09]
+	Added textproc/p5-Pod-POM-View-Restructured version 1.000003 [jnemeth 2026-03-09]
