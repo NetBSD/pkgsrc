@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26902 2026/03/09 12:50:25 adam Exp $
+$NetBSD: TODO,v 1.26903 2026/03/09 16:35:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -558,6 +558,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o di-6.2.2.2 [pkg/59938]
 	o diction-1.14
 	o diesel-2.3.0
+	o digikam-9.0
 	o direvent-5.2
 	o discount-3.0.1.2 [wip/discount3; breaks p5-Text-Markdown-Discount]
 	o distcc-pump-3.3.5
@@ -849,7 +850,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
 	o libkactivities4-5.81.0
-	o libkiwix-14.2.0
 	o liblzo-2.10
 	o libmatchbox-1.14
 	o libmcs-0.7.2
