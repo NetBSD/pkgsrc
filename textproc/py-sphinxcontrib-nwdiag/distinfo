@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/09 03:34:59 jnemeth Exp $
+
+BLAKE2s (sphinxcontrib-nwdiag-2.0.0.tar.gz) = 6eba139e9cd5612f3bf3aa7da534b34d3a5bcf52a23339a57083742072b101ca
+SHA512 (sphinxcontrib-nwdiag-2.0.0.tar.gz) = a77d8259a4c1f238dec20ef0c260e6e0ad4665ab13e0124a5cdd3dc135969b44c218131746cc9f955a3dd088bf3b17e23354f8edc0409a239ca2e02d38ec645a
+Size (sphinxcontrib-nwdiag-2.0.0.tar.gz) = 7938 bytes
