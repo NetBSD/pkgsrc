@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.114 2026/02/27 11:30:30 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2026/03/09 18:18:39 wiz Exp $
 
 DISTNAME=		neomutt-20260105
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=neomutt/}
 #GITHUB_TAG=		${PKGVERSION_NOREV}
-# use head of 'release' branch as of 20260227 for IMAP fixes
-GITHUB_TAG=		00c71a044efd8f2b3764d4083c96d52e9bf4904c
+# use head of 'release' branch as of 20260303 for IMAP fixes
+GITHUB_TAG=		147d7bb59aedf95844c570675e175d72fc936037
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.neomutt.org/
