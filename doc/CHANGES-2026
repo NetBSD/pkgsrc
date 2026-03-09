@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1627 2026/03/09 11:54:35 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1628 2026/03/09 11:55:19 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2204,3 +2204,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added fonts/SDL3_ttf version 3.2.2 [adam 2026-03-09]
 	Updated devel/py-ipython to 9.11.0 [adam 2026-03-09]
 	Updated devel/py-scikit-build-core to 0.12.2 [adam 2026-03-09]
+	Updated geography/py-sbf2 to 1.0.4 [gdt 2026-03-09]
