@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/12/09 13:45:59 wiz Exp $
+$NetBSD: distinfo,v 1.4 2026/03/09 16:36:20 wiz Exp $
 
-BLAKE2s (kiwix-tools-3.8.1.tar.gz) = 012cd027e75d9f66c045bf43eb1081f8df56cd717602371aac3b3b5a11a6b0c2
-SHA512 (kiwix-tools-3.8.1.tar.gz) = 715c639ba0ddc68cf65e23a2034e778e86c656ead3393237faebc0b6252df3c2091ba5db5f3a90208ffdab50e0122eb9072d0125ac644ce9c074cee26887a89c
-Size (kiwix-tools-3.8.1.tar.gz) = 541929 bytes
+BLAKE2s (kiwix-tools-3.8.2.tar.gz) = d48371f1c2e22511804a27cd7833dd1203db14cfbca43d1ece756e1820799e8f
+SHA512 (kiwix-tools-3.8.2.tar.gz) = 69dd83c68df713b59d0566879eb337bcd31974712c7dd4ec5d30994be80196ac04ed71be02ba94b12ca46ba22b3dc45d65212479133d4afdf978f8b8100baad7
+Size (kiwix-tools-3.8.2.tar.gz) = 542248 bytes
