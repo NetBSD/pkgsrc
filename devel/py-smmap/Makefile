@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/04/12 20:54:47 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/03/09 08:43:42 adam Exp $
 
-DISTNAME=	smmap-5.0.2
+DISTNAME=	smmap-5.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/smmap/}
 
