@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/12/09 13:45:08 wiz Exp $
+$NetBSD: distinfo,v 1.4 2026/03/09 16:35:38 wiz Exp $
 
-BLAKE2s (libkiwix-14.1.1.tar.gz) = 9012efd6a494c711e61d3e7a3e4b5c3baa607a1a9ec4a253fa40637ba631555a
-SHA512 (libkiwix-14.1.1.tar.gz) = 921797af389476f24e755f8f64ed400c7ddb114832788ef6d05c427e444aee01298a8c7a33b8b818cce3f2e541ff86de53880cb1c8d4e3e4c21f13e7ac7f0d2a
-Size (libkiwix-14.1.1.tar.gz) = 1302934 bytes
+BLAKE2s (libkiwix-14.2.0.tar.gz) = 8f59c4834826c613388a2b29dc88473b5e28316114e216380cd33109ac486be0
+SHA512 (libkiwix-14.2.0.tar.gz) = 5ee080652c1359a8ba2fa13188cb5fea98f24f2876b3dfaa497858a3db68d6544f88b822a63520105ed1b9ca520cffd95a3bdb1aa679688880ca19c2543191da
+Size (libkiwix-14.2.0.tar.gz) = 1305709 bytes
