@@ -1,6 +1,7 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.1 2021/04/04 11:10:37 nia Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.2 2026/03/10 09:09:53 adam Exp $
 
 Use exact-lua-version-finding cmake script.
+Fix build on Darwin.
 
 --- src/CMakeLists.txt.orig	2019-09-13 15:35:59.000000000 +0000
 +++ src/CMakeLists.txt
@@ -13,3 +14,46 @@ Use exact-lua-version-finding cmake script.
  FIND_PACKAGE(PNG REQUIRED)
  FIND_PACKAGE(Gettext REQUIRED)
  FIND_PACKAGE(Boost 1.46.1 REQUIRED)
+@@ -106,8 +106,10 @@ IF (NOT DISABLE_TRANSLATIONS)
+         FIND_PACKAGE(Iconv REQUIRED)
+     ELSEIF (CMAKE_SYSTEM_NAME STREQUAL "Darwin" OR BEOS OR CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
+         FIND_PACKAGE(LibIntl REQUIRED)
++        IF (NOT CMAKE_SYSTEM_NAME STREQUAL "Darwin")
+         FIND_PACKAGE(LibIconv REQUIRED)
+-    ELSEIF (CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
++        ENDIF()
++    ELSEIF (CMAKE_SYSTEM_NAME STREQUAL "OpenBSD" OR CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
+         FIND_PACKAGE(LibIntl REQUIRED)
+     ELSEIF (CMAKE_SYSTEM_NAME STREQUAL SunOS)
+         # explicit linking to libintl is required on Solaris
+@@ -451,6 +453,21 @@ IF (CMAKE_SYSTEM_NAME STREQUAL "OpenBSD"
+         ${X11_LIBRARIES}
+         ${LIBINTL_LIBRARIES}
+         ${EXTRA_LIBRARIES})
++ELSEIF(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
++    TARGET_LINK_LIBRARIES(valyriatear
++        ${INTERNAL_LIBRARIES}
++        ${SDL2_LIBRARY}
++        ${SDL2_TTF_LIBRARY}
++        ${SDL2_IMAGE_LIBRARY}
++        ${OPENGL_LIBRARIES}
++        ${GLEW_LIBRARY}
++        ${OPENAL_LIBRARY}
++        ${VORBISFILE_LIBRARIES}
++        ${PNG_LIBRARIES}
++        ${LUA_LIBRARIES}
++        ${LIBINTL_LIBRARIES}
++        ${EXTRA_LIBRARIES}
++        ${Iconv_LIBRARIES})
+ ELSE()
+     TARGET_LINK_LIBRARIES(valyriatear
+         ${INTERNAL_LIBRARIES}
+@@ -482,7 +499,7 @@ IF (UNIX)
+ ENDIF()
+ 
+ # Copy frameworks, resources etc.
+-if (APPLE)
++if (FALSE)
+     file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/../dat DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/../Resources/ FILES_MATCHING PATTERN "*.lua" PATTERN "*.png")
+     file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/../img DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/../Resources/ FILES_MATCHING PATTERN "*.lua" PATTERN "*.png" PATTERN "*.ttf")
+     file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/../mus DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/../Resources/ FILES_MATCHING PATTERN "*.ogg")
