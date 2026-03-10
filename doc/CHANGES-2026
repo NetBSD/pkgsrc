@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1663 2026/03/10 16:26:23 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1664 2026/03/10 16:27:27 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2249,3 +2249,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-coveralls to 4.1.0 [adam 2026-03-10]
 	Updated devel/py-faker to 40.8.0 [adam 2026-03-10]
 	Updated sysutils/fd-find to 10.4.2 [pin 2026-03-10]
+	Updated devel/cargo-nextest to 0.9.130 [pin 2026-03-10]
