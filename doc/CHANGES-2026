@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1665 2026/03/10 16:30:41 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1666 2026/03/10 18:16:52 osa Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2251,3 +2251,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/fd-find to 10.4.2 [pin 2026-03-10]
 	Updated devel/cargo-nextest to 0.9.130 [pin 2026-03-10]
 	Added security/cargo-auditable version 0.7.4 [pin 2026-03-10]
+	Updated www/freenginx-devel to 1.29.6 [osa 2026-03-10]
