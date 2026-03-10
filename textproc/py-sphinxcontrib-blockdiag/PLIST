@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2026/03/09 03:33:02 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/03/10 07:56:43 wiz Exp $
 ${PYSITELIB}/sphinxcontrib/blockdiag.py
 ${PYSITELIB}/sphinxcontrib/blockdiag.pyc
 ${PYSITELIB}/sphinxcontrib/blockdiag.pyo
-${PYSITELIB}/sphinxcontrib_blockdiag-${PKGVERSION}-py3.13-nspkg.pth
+${PYSITELIB}/sphinxcontrib_blockdiag-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
