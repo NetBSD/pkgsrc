@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.87 2025/10/01 11:13:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.88 2026/03/10 05:58:05 wiz Exp $
 ${PLIST.introspection}bin/hb-info
 ${PLIST.introspection}bin/hb-shape
 ${PLIST.introspection}bin/hb-subset
+${PLIST.introspection}bin/hb-vector
 include/harfbuzz/hb-aat-layout.h
 include/harfbuzz/hb-aat.h
 include/harfbuzz/hb-blob.h
@@ -33,6 +34,7 @@ include/harfbuzz/hb-ot-shape.h
 include/harfbuzz/hb-ot-var.h
 include/harfbuzz/hb-ot.h
 include/harfbuzz/hb-paint.h
+include/harfbuzz/hb-raster.h
 include/harfbuzz/hb-script-list.h
 include/harfbuzz/hb-set.h
 include/harfbuzz/hb-shape-plan.h
@@ -41,6 +43,7 @@ include/harfbuzz/hb-style.h
 include/harfbuzz/hb-subset-serialize.h
 include/harfbuzz/hb-subset.h
 include/harfbuzz/hb-unicode.h
+include/harfbuzz/hb-vector.h
 include/harfbuzz/hb-version.h
 include/harfbuzz/hb.h
 lib/cmake/harfbuzz/harfbuzz-config.cmake
@@ -48,14 +51,22 @@ ${PLIST.introspection}lib/girepository-1.0/HarfBuzz-0.0.typelib
 ${PLIST.introspection}lib/libharfbuzz-gobject.so
 ${PLIST.introspection}lib/libharfbuzz-gobject.so.0
 ${PLIST.introspection}lib/libharfbuzz-gobject.so.0.${SOVER}.0
+lib/libharfbuzz-raster.so
+lib/libharfbuzz-raster.so.0
+lib/libharfbuzz-raster.so.0.${SOVER}.0
 lib/libharfbuzz-subset.so
 lib/libharfbuzz-subset.so.0
 lib/libharfbuzz-subset.so.0.${SOVER}.0
+lib/libharfbuzz-vector.so
+lib/libharfbuzz-vector.so.0
+lib/libharfbuzz-vector.so.0.${SOVER}.0
 lib/libharfbuzz.so
 lib/libharfbuzz.so.0
 lib/libharfbuzz.so.0.${SOVER}.0
 ${PLIST.introspection}lib/pkgconfig/harfbuzz-gobject.pc
+lib/pkgconfig/harfbuzz-raster.pc
 lib/pkgconfig/harfbuzz-subset.pc
+lib/pkgconfig/harfbuzz-vector.pc
 lib/pkgconfig/harfbuzz.pc
 ${PLIST.introspection}share/gir-1.0/HarfBuzz-0.0.gir
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/HarfBuzz.png
