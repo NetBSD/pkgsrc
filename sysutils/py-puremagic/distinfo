@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2026/02/22 14:15:28 wiz Exp $
+$NetBSD: distinfo,v 1.14 2026/03/10 06:12:15 adam Exp $
 
-BLAKE2s (puremagic-2.0.0.tar.gz) = 7af3964606512eda592de902269bcc3d72a8c2c676a22b7ba6023e0d4aa76a89
-SHA512 (puremagic-2.0.0.tar.gz) = d7815612896eb2d40d2ff603078621e117091bd2af1763ec8098c577b76d5dc2057901433dc74553ba6cbf5aa4e5e47d35413bad04994b7bbb59a23499954c2c
-Size (puremagic-2.0.0.tar.gz) = 1119578 bytes
+BLAKE2s (puremagic-2.0.2.tar.gz) = 6c9500e4b73b3f75b6bc80cf8ef688aa20d3814cb0281f829587d8b5bb2afdbe
+SHA512 (puremagic-2.0.2.tar.gz) = b92fb1ad23a95a44e7ddee7e5a0f07a694dcbc95e8508816f59f5ac8b2f16afcb10f8da5e1b3d11834bd6e23e395c5b482e9f47a62012c4915d26ae4660a2853
+Size (puremagic-2.0.2.tar.gz) = 1129446 bytes
