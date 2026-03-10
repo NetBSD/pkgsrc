@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2024/05/09 09:58:05 adam Exp $
+# $NetBSD: Makefile,v 1.51 2026/03/10 08:27:33 adam Exp $
 
-DISTNAME=	tinyproxy-1.11.2
+DISTNAME=	tinyproxy-1.11.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tinyproxy/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -38,7 +38,7 @@ CONF_FILES=	${EGDIR}/tinyproxy.conf.default ${PKG_SYSCONFDIR}/tinyproxy.conf
 
 SUBST_CLASSES+=		docs
 SUBST_STAGE.docs=	pre-configure
-SUBST_FILES.docs=	docs/man5/tinyproxy.conf.txt.in docs/man8/tinyproxy.txt.in etc/tinyproxy.conf.in
+SUBST_FILES.docs=	docs/man5/tinyproxy.conf.txt.in etc/tinyproxy.conf.in
 SUBST_VARS.docs=	TINYPROXY_USER
 SUBST_VARS.docs+=	TINYPROXY_GROUP
 SUBST_VARS.docs+=	PKG_SYSCONFDIR
