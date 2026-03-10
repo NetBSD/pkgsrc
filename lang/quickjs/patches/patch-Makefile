@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile,v 1.7 2025/11/12 11:49:38 leot Exp $
+$NetBSD: patch-Makefile,v 1.8 2026/03/10 17:24:10 osa Exp $
 
 Portability patch for NetBSD.
 
---- Makefile.orig	2025-09-13 08:48:28.000000000 +0000
+--- Makefile.orig	2025-12-22 14:12:46.000000000 +0000
 +++ Makefile
 @@ -22,10 +22,14 @@
  # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
@@ -21,7 +21,7 @@ Portability patch for NetBSD.
  CONFIG_FREEBSD=y
  endif
  # Windows cross compilation from Linux
-@@ -77,6 +81,13 @@ CONFIG_CLANG=y
+@@ -81,6 +85,13 @@ CONFIG_CLANG=y
  CONFIG_DEFAULT_AR=y
  CONFIG_LTO=
  endif
@@ -35,7 +35,18 @@ Portability patch for NetBSD.
  
  ifdef CONFIG_WIN32
    ifdef CONFIG_M32
-@@ -243,11 +254,17 @@ QJS_LIB_OBJS=$(OBJDIR)/quickjs.o $(OBJDI
+@@ -217,8 +228,10 @@ QJSC_CC=$(CC)
+ QJSC=./qjsc$(EXE)
+ endif
+ PROGS+=libquickjs.a
++PROGS+=libquickjs.so
+ ifdef CONFIG_LTO
+ PROGS+=libquickjs.lto.a
++PROGS+=libquickjs.lto.so
+ endif
+ 
+ # examples
+@@ -247,11 +260,17 @@ QJS_LIB_OBJS=$(OBJDIR)/quickjs.o $(OBJDI
  
  QJS_OBJS=$(OBJDIR)/qjs.o $(OBJDIR)/repl.o $(QJS_LIB_OBJS)
  
@@ -54,7 +65,7 @@ Portability patch for NetBSD.
  LIBS+=$(EXTRA_LIBS)
  
  $(OBJDIR):
-@@ -285,6 +302,9 @@ QJSC_DEFINES:=-DCONFIG_CC=\"$(QJSC_CC)\"
+@@ -289,6 +308,9 @@ QJSC_DEFINES:=-DCONFIG_CC=\"$(QJSC_CC)\"
  ifdef CONFIG_LTO
  QJSC_DEFINES+=-DCONFIG_LTO
  endif
@@ -64,16 +75,34 @@ Portability patch for NetBSD.
  QJSC_HOST_DEFINES:=-DCONFIG_CC=\"$(HOST_CC)\" -DCONFIG_PREFIX=\"$(PREFIX)\"
  
  $(OBJDIR)/qjsc.o: CFLAGS+=$(QJSC_DEFINES)
-@@ -368,10 +388,9 @@ install: all
+@@ -302,10 +324,14 @@ endif
+ 
+ libquickjs$(LTOEXT).a: $(QJS_LIB_OBJS)
+ 	$(AR) rcs $@ $^
++libquickjs$(LTOEXT).so: $(QJS_LIB_OBJS)
++	$(CC) -shared -Wl,-soname=$@.0 $(LDFLAGS) -o $@ $^
+ 
+ ifdef CONFIG_LTO
+ libquickjs.a: $(patsubst %.o, %.nolto.o, $(QJS_LIB_OBJS))
+ 	$(AR) rcs $@ $^
++libquickjs.so: $(patsubst %.o, %.nolto.o, $(QJS_LIB_OBJS))
++	$(CC) -shared -Wl,-soname=$@.0 $(LDFLAGS) -o $@ $^
+ endif # CONFIG_LTO
+ 
+ libquickjs.fuzz.a: $(patsubst %.o, %.fuzz.o, $(QJS_LIB_OBJS))
+@@ -372,10 +398,12 @@ install: all
  	mkdir -p "$(DESTDIR)$(PREFIX)/bin"
  	$(STRIP) qjs$(EXE) qjsc$(EXE)
  	install -m755 qjs$(EXE) qjsc$(EXE) "$(DESTDIR)$(PREFIX)/bin"
 -	mkdir -p "$(DESTDIR)$(PREFIX)/lib/quickjs"
 -	install -m644 libquickjs.a "$(DESTDIR)$(PREFIX)/lib/quickjs"
++	mkdir -p "$(DESTDIR)$(PREFIX)/lib"
 +	install -m644 libquickjs.a "$(DESTDIR)$(PREFIX)/lib"
++	install -m644 libquickjs.so "$(DESTDIR)$(PREFIX)/lib"
  ifdef CONFIG_LTO
 -	install -m644 libquickjs.lto.a "$(DESTDIR)$(PREFIX)/lib/quickjs"
 +	install -m644 libquickjs.lto.a "$(DESTDIR)$(PREFIX)/lib"
++	install -m644 libquickjs.lto.so "$(DESTDIR)$(PREFIX)/lib"
  endif
  	mkdir -p "$(DESTDIR)$(PREFIX)/include/quickjs"
  	install -m644 quickjs.h quickjs-libc.h "$(DESTDIR)$(PREFIX)/include/quickjs"
