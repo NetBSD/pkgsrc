@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1659 2026/03/10 13:51:36 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1660 2026/03/10 13:56:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2242,3 +2242,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-numpy to 2.4.3 [adam 2026-03-10]
 	Updated textproc/py-sphinx-autodoc-typehints to 3.9.8 [adam 2026-03-10]
 	Updated textproc/py-sphinx-autoapi to 3.8.0 [adam 2026-03-10]
+	Updated textproc/py-rst2pdf to 0.105 [adam 2026-03-10]
+	Updated textproc/py-phonenumbers to 9.0.25 [adam 2026-03-10]
