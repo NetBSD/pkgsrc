@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/10/23 20:37:16 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/03/10 09:09:53 adam Exp $
 
 DISTNAME=	ValyriaTear-src-with-deps-1.1.0
 PKGNAME=	${DISTNAME:tl:S/-src-with-deps//1}
@@ -16,11 +16,10 @@ TOOL_DEPENDS+=	dos2unix-[0-9]*:../../converters/dos2unix
 
 WRKSRC=		${WRKDIR}/ValyriaTear
 
-USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config msgfmt
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config msgfmt
 
-CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 LDFLAGS+=	${BUILDLINK_LDADD.gettext}
 
@@ -31,12 +30,13 @@ post-extract:
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/lua51/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
