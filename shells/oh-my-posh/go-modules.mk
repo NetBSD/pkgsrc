@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.121 2026/03/06 08:15:43 pin Exp $
+# $NetBSD: go-modules.mk,v 1.122 2026/03/10 19:29:26 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -103,8 +103,8 @@ GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.20.mod
 GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.20.zip
 GO_MODULE_FILES+=	github.com/mattn/go-localereader/@v/v0.0.1.mod
 GO_MODULE_FILES+=	github.com/mattn/go-localereader/@v/v0.0.1.zip
-GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.20.mod
-GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.20.zip
+GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.21.mod
+GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.21.zip
 GO_MODULE_FILES+=	github.com/mitchellh/copystructure/@v/v1.2.0.mod
 GO_MODULE_FILES+=	github.com/mitchellh/copystructure/@v/v1.2.0.zip
 GO_MODULE_FILES+=	github.com/mitchellh/go-wordwrap/@v/v1.0.1.mod
@@ -186,8 +186,8 @@ GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20201204225414-ed752295db88.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20210616094352-59db8d763f22.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20210809222454-d867a43fc93e.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.1.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.41.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.41.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.42.0.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.42.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.6.0.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.5.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.34.0.mod
