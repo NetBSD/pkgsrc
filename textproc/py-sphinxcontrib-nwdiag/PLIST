@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/03/09 03:34:59 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/03/10 07:56:43 wiz Exp $
 ${PYSITELIB}/sphinxcontrib/nwdiag.py
 ${PYSITELIB}/sphinxcontrib/nwdiag.pyc
 ${PYSITELIB}/sphinxcontrib/nwdiag.pyo
@@ -8,7 +8,7 @@ ${PYSITELIB}/sphinxcontrib/packetdiag.pyo
 ${PYSITELIB}/sphinxcontrib/rackdiag.py
 ${PYSITELIB}/sphinxcontrib/rackdiag.pyc
 ${PYSITELIB}/sphinxcontrib/rackdiag.pyo
-${PYSITELIB}/sphinxcontrib_nwdiag-${PKGVERSION}-py3.13-nspkg.pth
+${PYSITELIB}/sphinxcontrib_nwdiag-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL

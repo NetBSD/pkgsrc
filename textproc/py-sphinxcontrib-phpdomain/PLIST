@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2026/03/09 03:37:17 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/03/10 07:56:43 wiz Exp $
 ${PYSITELIB}/sphinxcontrib/phpdomain.py
 ${PYSITELIB}/sphinxcontrib/phpdomain.pyc
 ${PYSITELIB}/sphinxcontrib/phpdomain.pyo
-${PYSITELIB}/sphinxcontrib_phpdomain-${PKGVERSION}-py3.13-nspkg.pth
+${PYSITELIB}/sphinxcontrib_phpdomain-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL

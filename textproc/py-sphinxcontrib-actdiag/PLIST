@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2026/03/09 03:31:14 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/03/10 07:56:43 wiz Exp $
 ${PYSITELIB}/sphinxcontrib/actdiag.py
 ${PYSITELIB}/sphinxcontrib/actdiag.pyc
 ${PYSITELIB}/sphinxcontrib/actdiag.pyo
-${PYSITELIB}/sphinxcontrib_actdiag-${PKGVERSION}-py3.13-nspkg.pth
+${PYSITELIB}/sphinxcontrib_actdiag-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
