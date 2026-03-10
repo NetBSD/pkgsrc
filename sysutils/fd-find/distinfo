@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2026/03/08 10:25:55 pin Exp $
+$NetBSD: distinfo,v 1.18 2026/03/10 16:26:03 pin Exp $
 
 BLAKE2s (aho-corasick-1.1.4.crate) = 1419308c5b0745af6cfa18dd4c9639f7078f564e9dacbe2b17b03df42c393409
 SHA512 (aho-corasick-1.1.4.crate) = c77e35191b00546f5e499fab154170cedd619599e7250f92db9fba0a41c833eb426f214e58b00c5c39f8757406b33492b3241cb8cb233ce384ad0683c3ee4b62
@@ -99,9 +99,9 @@ Size (faccess-0.2.4.crate) = 7262 bytes
 BLAKE2s (fastrand-2.3.0.crate) = 17b53f60ee5cb0e59aa32c5e6d48a968a714aeb8d905b7e0dc37f8c8392813bc
 SHA512 (fastrand-2.3.0.crate) = 267fecbb7459c8840f03425733d278dd6c4e7637b85b99552877117ed5e8015e094d86aa95841f77064136b7f382276c3cb2c2bef7b2881d272f4aa57c5cf947
 Size (fastrand-2.3.0.crate) = 15076 bytes
-BLAKE2s (fd-find-10.4.1.tar.gz) = 2f5cee8dcff14ba09d5e164bc87e9ef367f2d05f89ebf6a293c14657cc6e8dca
-SHA512 (fd-find-10.4.1.tar.gz) = c2651abada738548906b385105b9e9bc6e94ba3f8ea32218df22f44e88e6d11c0f38e83595f7a224ca5f472555ba47c0a66e6b826a0ffffe3f28a2d1cbdcfcb1
-Size (fd-find-10.4.1.tar.gz) = 145461 bytes
+BLAKE2s (fd-find-10.4.2.tar.gz) = a9017237fb4d6202e58838118d0407f08d5042e023de67ef4a5e7bd7855928b3
+SHA512 (fd-find-10.4.2.tar.gz) = 115a2563ee4e80910c74d18a78a9fefcde2d530e6598ee03265e28e95685055e34d2a974d85aa2a173e8f104730a95ec87bcc86bbbe65ced80a903def169fe2d
+Size (fd-find-10.4.2.tar.gz) = 145560 bytes
 BLAKE2s (filetime-0.2.27.crate) = 6d8355d049060294bbe31407c78b52aea1ea9acd41873c208e6288e83538f918
 SHA512 (filetime-0.2.27.crate) = f1daa3074b0686b54e6232b663ddcc442c991e35a49743630206f40b55d710687d9eebc525a47ac747bc123d8301d8374fea7c1dc6d05ea916e76612bc4c70dd
 Size (filetime-0.2.27.crate) = 16678 bytes
