@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2025/11/16 11:21:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/03/10 17:24:10 osa Exp $
 bin/qjs
 bin/qjsc
 include/quickjs/quickjs-libc.h
 include/quickjs/quickjs.h
 lib/libquickjs.a
+lib/libquickjs.so
 share/doc/quickjs/examples/fib.c
 share/doc/quickjs/examples/fib_module.js
 share/doc/quickjs/examples/hello.js
@@ -13,8 +14,7 @@ share/doc/quickjs/examples/pi_bigint.js
 share/doc/quickjs/examples/point.c
 share/doc/quickjs/examples/test_fib.js
 share/doc/quickjs/examples/test_point.js
-share/doc/quickjs/quickjs.html
-share/doc/quickjs/quickjs.pdf
+share/doc/quickjs/quickjs.texi
 share/doc/quickjs/tests/assert.js
 share/doc/quickjs/tests/bjson.c
 share/doc/quickjs/tests/fixture_cyclic_import.js

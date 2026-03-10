@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.17 2025/11/16 11:21:57 adam Exp $
+# $NetBSD: Makefile,v 1.18 2026/03/10 17:24:10 osa Exp $
 
 NAME=		quickjs
-QJS_DATE=	2025-09-13
+QJS_DATE=	2025-12-22
 VERSION=	${QJS_DATE:S/-//g}
 DISTNAME=	${NAME}-${QJS_DATE}
 PKGNAME=	${NAME}-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	https://bellard.org/quickjs/
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=bellard/}
+GITHUB_PROJECT=	${NAME}
+GITHUB_TAG=	f1139494d18a2053630c5ed3384a42bb70db3c53
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://bellard.org/quickjs/
@@ -44,7 +44,7 @@ pre-configure:
 	${ECHO} '{ "x" : 1, "tab": [ 1, 2, 3 ] }' > ${WRKSRC}/examples/message.json
 
 post-install:
-	cd ${WRKSRC}/doc && ${INSTALL_DATA} *.html *.pdf ${DESTDIR}${PREFIX}/share/doc/quickjs/
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} *.texi ${DESTDIR}${PREFIX}/share/doc/quickjs/
 	cd ${WRKSRC}/examples && ${INSTALL_DATA} *.js *.c *.json ${DESTDIR}${PREFIX}/share/doc/quickjs/examples/
 	cd ${WRKSRC}/tests && ${INSTALL_DATA} *.js *.c ${DESTDIR}${PREFIX}/share/doc/quickjs/tests/
 
