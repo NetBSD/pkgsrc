@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1661 2026/03/10 14:07:21 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1662 2026/03/10 14:14:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2246,3 +2246,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-phonenumbers to 9.0.25 [adam 2026-03-10]
 	Updated textproc/ugrep to 7.6.0 [adam 2026-03-10]
 	Updated devel/shfmt to 3.13.0 [adam 2026-03-10]
+	Updated devel/py-coveralls to 4.1.0 [adam 2026-03-10]
+	Updated devel/py-faker to 40.8.0 [adam 2026-03-10]
