@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/08/15 06:36:06 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/03/10 13:07:07 adam Exp $
 
-BLAKE2s (kiwisolver-1.4.9.tar.gz) = f307c4d0f059d6f1eca9bd07b63ae4f328b6ab12010c3e42db1a8f4bde78b225
-SHA512 (kiwisolver-1.4.9.tar.gz) = 3446c6a24e93d22ba6f29d272e3e2b3f945dcab4da4669c43ca310b15b8283ed9da3326d51fae02345f10bb13ede62d8a2b0a86ea9b902f850e7f97c9ffdadb2
-Size (kiwisolver-1.4.9.tar.gz) = 97564 bytes
+BLAKE2s (kiwisolver-1.5.0.tar.gz) = 46f6a6935767eb067acd3e2398eabc9e66b72543f45eef2d882d138b98a52330
+SHA512 (kiwisolver-1.5.0.tar.gz) = e16d5aaf1ce0ca177e3b10fe37d56de7a5bccae65def03c6c79655330fec9c1a82eecfcd8e67d0c8471d4061e3b0c97210cc10b1f869ed4fbde79e0c95596877
+Size (kiwisolver-1.5.0.tar.gz) = 103482 bytes
