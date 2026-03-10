@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.14 2025/11/12 11:58:19 leot Exp $
+$NetBSD: distinfo,v 1.15 2026/03/10 17:24:10 osa Exp $
 
-BLAKE2s (quickjs-2025-09-13.tar.xz) = 1dd767416ef10f6f3be0ada60edd5c478e08a6df5813b345e7830038b1e416b0
-SHA512 (quickjs-2025-09-13.tar.xz) = 077acba8b318b19cd2660fae0ca03099185b688dba46c89a6456b455639813eefc282975cd1eebdb3c49f62217b9506c6abad86d777b08cb49fe234beef918a2
-Size (quickjs-2025-09-13.tar.xz) = 595964 bytes
-SHA1 (patch-Makefile) = c3f827f36e41ca78a9b5144092276db8a9ac4a5e
+BLAKE2s (quickjs-2025-12-22-f1139494d18a2053630c5ed3384a42bb70db3c53.tar.gz) = a5bae8ec27d69c04c58f8f6fa24cf4fc7dd1d2a230c5949f285bc10d1ab5b814
+SHA512 (quickjs-2025-12-22-f1139494d18a2053630c5ed3384a42bb70db3c53.tar.gz) = ea63f60326795b4b5866b62c97a2ce72aa178c9650b256aead10ab0582bb4893d44acc7f98973ef6fc39ea3842fdc013b65abd8ccaf503d61d4f5c77158f223c
+Size (quickjs-2025-12-22-f1139494d18a2053630c5ed3384a42bb70db3c53.tar.gz) = 618177 bytes
+SHA1 (patch-Makefile) = 38d3b7660678bf9d8ef5d5b9d96687d30b0c47ba
 SHA1 (patch-qjs.c) = bfabed96cfdd40214fede3069485394af2faef4f
 SHA1 (patch-qjsc.c) = bffd0222579f3996bc21116694343a7dd65d8f33
 SHA1 (patch-quickjs-libc.c) = 39c2b553ef04b308e7c477590edd345b62acc528
-SHA1 (patch-quickjs.c) = 0bd06241a4262168124171adf7cf963809e74915
+SHA1 (patch-quickjs.c) = 57d4356c59469c4671a0a1944f9f8ea4ee67a9e6
