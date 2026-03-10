@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.16 2025/11/17 11:00:55 wiz Exp $
+# $NetBSD: Makefile.common,v 1.17 2026/03/10 20:40:57 wiz Exp $
 # used by graphics/giflib/Makefile
 # used by graphics/giflib-util/Makefile
 
-DISTNAME=	giflib-5.2.2
+DISTNAME=	giflib-6.1.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=giflib/}
 
@@ -16,3 +16,5 @@ DISTINFO_FILE=	${.CURDIR}/../../graphics/giflib/distinfo
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
+
+CFLAGS.NetBSD+=	-DHAVE_REALLOCARRAY

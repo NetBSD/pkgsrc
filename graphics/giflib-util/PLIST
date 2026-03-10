@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/09/18 23:02:59 nia Exp $
-bin/gif2rgb
+@comment $NetBSD: PLIST,v 1.7 2026/03/10 20:40:57 wiz Exp $
 bin/gifbuild
 bin/gifclrmp
 bin/giffix
