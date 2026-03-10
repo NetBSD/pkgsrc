@@ -1,58 +1,38 @@
-$NetBSD: patch-Makefile,v 1.9 2024/09/19 09:01:15 nia Exp $
+$NetBSD: patch-Makefile,v 1.10 2026/03/10 20:40:57 wiz Exp $
 
 - Libtoolize.
 - Allow override of PREFIX.
 - Allow separate installation of utilities.
 - Move quantize.c back into libgif.so to fix various library users.
 
---- Makefile.orig	2024-02-19 01:01:50.000000000 +0000
+--- Makefile.orig	2026-03-10 17:50:52.000000000 +0000
 +++ Makefile
-@@ -8,13 +8,13 @@
- #
- OFLAGS = -O0 -g
- OFLAGS  = -O2
--CFLAGS  = -std=gnu99 -fPIC -Wall -Wno-format-truncation $(OFLAGS)
-+CFLAGS += -std=gnu99 -fPIC
- 
- SHELL = /bin/sh
- TAR = tar
- INSTALL = install
- 
--PREFIX = /usr/local
-+PREFIX?= /usr/local
- BINDIR = $(PREFIX)/bin
- INCDIR = $(PREFIX)/include
- LIBDIR = $(PREFIX)/lib
-@@ -29,13 +29,13 @@ LIBPOINT=0
- LIBVER=$(LIBMAJOR).$(LIBMINOR).$(LIBPOINT)
- 
+@@ -36,11 +36,11 @@ HEADERS = gif_hash.h  gif_lib.h  gif_lib_private.h
  SOURCES = dgif_lib.c egif_lib.c gifalloc.c gif_err.c gif_font.c \
--	gif_hash.c openbsd-reallocarray.c
-+	gif_hash.c openbsd-reallocarray.c quantize.c
+ 	gif_hash.c openbsd-reallocarray.c quantize.c
  HEADERS = gif_hash.h  gif_lib.h  gif_lib_private.h
 -OBJECTS = $(SOURCES:.c=.o)
 +OBJECTS = $(SOURCES:.c=.lo)
  
--USOURCES = qprintf.c quantize.c getarg.c 
-+USOURCES = qprintf.c getarg.c 
+ USOURCES = qprintf.c getarg.c
  UHEADERS = getarg.h
 -UOBJECTS = $(USOURCES:.c=.o)
 +UOBJECTS = $(USOURCES:.c=.lo)
  
  UNAME:=$(shell uname)
  
-@@ -61,7 +61,7 @@ UTILS = $(INSTALLABLE) \
- 	gifsponge \
- 	gifwedge
+@@ -75,7 +75,7 @@ UTILS = $(INSTALLABLE) \
+ 	gifwedge \
+ 	gif2rgb
  
 -LDLIBS=libgif.a -lm
 +LDLIBS=-lm
  
- MANUAL_PAGES = \
- 	doc/gif2rgb.xml \
-@@ -72,45 +72,30 @@ MANUAL_PAGES = \
- 	doc/giftext.xml \
- 	doc/giftool.xml
+ MANUAL_PAGES_1 = \
+ 	doc/gifbuild.xml \
+@@ -91,52 +91,37 @@ MANUAL_PAGES_7_MAN = $(MANUAL_PAGES_7:%.xml=%.7)
+ MANUAL_PAGES_1_MAN = $(MANUAL_PAGES_1:%.xml=%.1)
+ MANUAL_PAGES_7_MAN = $(MANUAL_PAGES_7:%.xml=%.7)
  
 -SOEXTENSION	= so
 +SOEXTENSION	= la
@@ -70,66 +50,79 @@ $NetBSD: patch-Makefile,v 1.9 2024/09/19 09:01:15 nia Exp $
 -LIBUTILSOMAJOR	= libutil.$(LIBMAJOR).$(SOEXTENSION)
 -endif
  
--all: $(LIBGIFSO) libgif.a $(LIBUTILSO) libutil.a $(UTILS)
+ SHARED_LIBS = $(LIBGIFSO) $(LIBUTILSO)
+ STATIC_LIBS = libgif.a libutil.a
+ 
+-all: shared-lib static-lib $(UTILS)
 -ifeq ($(UNAME), Darwin)
 -else
 -	$(MAKE) -C doc
 -endif
 +all: $(LIBGIFSO) $(LIBUTILSO)
  
--$(UTILS):: libgif.a libutil.a
+-$(UTILS):: $(STATIC_LIBS)
 +.SUFFIXES: .lo
+ 
+ shared-lib: $(SHARED_LIBS)
+ 
+ static-lib: $(STATIC_LIBS)
  
 -$(LIBGIFSO): $(OBJECTS) $(HEADERS)
 -ifeq ($(UNAME), Darwin)
 -	$(CC) $(CFLAGS) -dynamiclib -current_version $(LIBVER) $(OBJECTS) -o $(LIBGIFSO)
 -else
--	$(CC) $(CFLAGS) -shared $(LDFLAGS) -Wl,-soname -Wl,$(LIBGIFSOMAJOR) -o $(LIBGIFSO) $(OBJECTS)
+-	$(CC) $(CFLAGS) $(CPPFLAGS) -shared $(LDFLAGS) -Wl,-soname -Wl,$(LIBGIFSOMAJOR) -o $(LIBGIFSO) $(OBJECTS)
 -endif
 +.c.lo:
 +	$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) -c $<
-+
-+.libs/libgif.a: $(LIBGIFSO)
-+.libs/libutil.a: $(LIBUTILSO)
  
 -libgif.a: $(OBJECTS) $(HEADERS)
 -	$(AR) rcs libgif.a $(OBJECTS)
++.libs/libgif.a: $(LIBGIFSO)
++.libs/libutil.a: $(LIBUTILSO)
+ 
 +$(UTILS): .libs/libutil.a .libs/libgif.a
 +
 +$(LIBGIFSO): $(OBJECTS) $(HEADERS)
 +	$(LIBTOOL) --mode=link --tag=CC $(CC) $(CFLAGS) $(LDFLAGS) -version-info $(LIBMAJOR):0:0 -rpath $(PREFIX)/lib -o $(LIBGIFSO) $(OBJECTS)
- 
++
  $(LIBUTILSO): $(UOBJECTS) $(UHEADERS)
 -ifeq ($(UNAME), Darwin)
--	$(CC) $(CFLAGS) -dynamiclib -current_version $(LIBVER) $(OBJECTS) -o $(LIBUTILSO)
+-	$(CC) $(CFLAGS) -dynamiclib -current_version $(LIBVER) $(UOBJECTS) -o $(LIBUTILSO)
 -else
--	$(CC) $(CFLAGS) -shared $(LDFLAGS) -Wl,-soname -Wl,$(LIBUTILMAJOR) -o $(LIBUTILSO) $(UOBJECTS)
+-	$(CC) $(CFLAGS) $(CPPLAGS) -shared $(LDFLAGS) -Wl,-soname -Wl,$(LIBUTILSOMAJOR) -o $(LIBUTILSO) $(UOBJECTS)
 -endif
 +	$(LIBTOOL) --mode=link --tag=CC $(CC) $(CFLAGS) $(LDFLAGS) -version-info $(LIBMAJOR):0:0 -rpath $(PREFIX)/lib -o $(LIBUTILSO) $(UOBJECTS)
  
  libutil.a: $(UOBJECTS) $(UHEADERS)
  	$(AR) rcs libutil.a $(UOBJECTS)
-@@ -129,11 +114,7 @@ reflow:
+@@ -166,11 +151,7 @@ spellcheck:
  
- # Installation/uninstallation
+ # Install/uninstall
  
 -ifeq ($(UNAME), Darwin)
 -install: all install-bin install-include install-lib
 -else
- install: all install-bin install-include install-lib install-man
+ install: all install-bin install-include install-lib install-man install-doc
 -endif
  
  install-bin: $(INSTALLABLE)
  	$(INSTALL) -d "$(DESTDIR)$(BINDIR)"
-@@ -143,10 +124,7 @@ install-include:
+@@ -178,15 +159,9 @@ install-include:
+ install-include:
+ 	$(INSTALL) -d "$(DESTDIR)$(INCDIR)"
  	$(INSTALL) -m 644 gif_lib.h "$(DESTDIR)$(INCDIR)"
- install-lib:
+-install-static-lib:
++install-lib:
  	$(INSTALL) -d "$(DESTDIR)$(LIBDIR)"
 -	$(INSTALL) -m 644 libgif.a "$(DESTDIR)$(LIBDIR)/libgif.a"
+-install-shared-lib:
+-	$(INSTALL) -d "$(DESTDIR)$(LIBDIR)"
 -	$(INSTALL) -m 755 $(LIBGIFSO) "$(DESTDIR)$(LIBDIR)/$(LIBGIFSOVER)"
 -	ln -sf $(LIBGIFSOVER) "$(DESTDIR)$(LIBDIR)/$(LIBGIFSOMAJOR)"
 -	ln -sf $(LIBGIFSOMAJOR) "$(DESTDIR)$(LIBDIR)/$(LIBGIFSO)"
+-install-lib: install-static-lib install-shared-lib
 +	$(LIBTOOL) --mode=install --tag=CC $(BSD_INSTALL_LIB) $(LIBGIFSO) "$(DESTDIR)$(LIBDIR)"
  install-man:
- 	$(INSTALL) -d "$(DESTDIR)$(MANDIR)/man1"
- 	$(INSTALL) -m 644 $(MANUAL_PAGES) "$(DESTDIR)$(MANDIR)/man1"
+ 	$(INSTALL) -d "$(DESTDIR)$(MANDIR)/man1" "$(DESTDIR)$(MANDIR)/man7"
+ 	$(INSTALL) -m 644 $(MANUAL_PAGES_1_MAN) "$(DESTDIR)$(MANDIR)/man1"
