@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2026/01/11 10:19:06 adam Exp $
+# $NetBSD: Makefile,v 1.23 2026/03/10 13:54:42 adam Exp $
 
-DISTNAME=	rst2pdf-0.104
+DISTNAME=	rst2pdf-0.105
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rst2pdf/}
