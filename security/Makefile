@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.999 2026/03/01 00:52:25 js Exp $
+# $NetBSD: Makefile,v 1.1000 2026/03/10 16:30:16 pin Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -49,6 +49,7 @@ SUBDIR+=	botan3
 SUBDIR+=	ca-certificates
 SUBDIR+=	caff
 SUBDIR+=	cargo-audit
+SUBDIR+=	cargo-auditable
 SUBDIR+=	ccid
 SUBDIR+=	cfs
 SUBDIR+=	cfssl
