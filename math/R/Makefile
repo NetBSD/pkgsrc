@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.279 2026/02/18 08:50:07 wiz Exp $
+# $NetBSD: Makefile,v 1.280 2026/03/10 21:48:07 mef Exp $
 
 #
 # If updating this package, please try to ensure PLIST.Darwin is kept in sync
@@ -69,6 +69,11 @@ CONFIGURE_ARGS+=	--without-x
 USE_TOOLS+=		xmkmf
 CONFIGURE_ARGS+=	--with-x
 PLIST.x11=		yes
+.endif
+
+PLIST_VARS+=         darwin
+.if ${OPSYS} == "Darwin"
+PLIST.darwin=                yes
 .endif
 
 # Think about making this consistent with Numpy, using a full

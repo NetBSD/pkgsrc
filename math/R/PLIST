@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2026/02/16 23:44:02 mef Exp $
+@comment $NetBSD: PLIST,v 1.44 2026/03/10 21:48:07 mef Exp $
 bin/R
 bin/Rscript
 info/R-FAQ.info.gz
@@ -1890,6 +1890,7 @@ lib/R/share/texmf/tex/latex/Rd.sty
 lib/R/share/texmf/tex/latex/Sweave.sty
 lib/R/share/texmf/tex/latex/jss.cls
 lib/R/share/texmf/tex/latex/omscmtt.fd
+${PLIST.darwin}lib/R/share/zoneinfo/America/Coyhaique
 lib/pkgconfig/libR.pc
 man/man1/R.1
 man/man1/Rscript.1
