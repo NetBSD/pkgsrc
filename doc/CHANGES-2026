@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1666 2026/03/10 18:16:52 osa Exp $
+$NetBSD: CHANGES-2026,v 1.1667 2026/03/10 18:20:45 osa Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2252,3 +2252,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-nextest to 0.9.130 [pin 2026-03-10]
 	Added security/cargo-auditable version 0.7.4 [pin 2026-03-10]
 	Updated www/freenginx-devel to 1.29.6 [osa 2026-03-10]
+	Updated lang/quickjs to 20251222 [osa 2026-03-10]
