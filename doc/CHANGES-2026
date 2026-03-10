@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1653 2026/03/09 20:38:57 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1654 2026/03/10 05:58:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2231,3 +2231,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/neomutt to 20260105nb3 [wiz 2026-03-09]
 	Updated www/chromium to 145.0.7632.159 [kikadf 2026-03-09]
 	Updated emulators/mame to 0.286nb1 [wiz 2026-03-09]
+	Updated fonts/harfbuzz to 13.0.1 [wiz 2026-03-10]
