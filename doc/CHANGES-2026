@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1668 2026/03/10 19:27:39 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1669 2026/03/10 19:28:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2254,3 +2254,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/freenginx-devel to 1.29.6 [osa 2026-03-10]
 	Updated lang/quickjs to 20251222 [osa 2026-03-10]
 	Updated devel/ast-grep to 0.41.1 [pin 2026-03-10]
+	Updated net/xfr to 0.9.3 [pin 2026-03-10]
