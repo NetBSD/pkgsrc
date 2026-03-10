@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1656 2026/03/10 06:14:54 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1657 2026/03/10 08:27:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2236,3 +2236,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-puremagic to 2.0.2 [adam 2026-03-10]
 	Updated lang/py-python-discovery to 1.1.2 [adam 2026-03-10]
 	Updated devel/py-filelock to 3.25.1 [adam 2026-03-10]
+	Updated net/rclone to 1.73.2 [adam 2026-03-10]
+	Updated www/tinyproxy to 1.11.3 [adam 2026-03-10]
