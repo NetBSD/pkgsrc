@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1675 2026/03/11 07:09:04 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1676 2026/03/11 08:14:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2262,3 +2262,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-configargparse to 1.7.5 [adam 2026-03-11]
 	Updated www/curl to 8.19.0 [wiz 2026-03-11]
 	Updated www/libcurl-gnutls to 8.19.0 [wiz 2026-03-11]
+	Updated emulators/ppsspp to 1.20.2 [adam 2026-03-11]
+	Updated emulators/ppsspp-qt to 1.20.2 [adam 2026-03-11]
+	Updated emulators/libretro-ppsspp to 1.20.2 [adam 2026-03-11]
