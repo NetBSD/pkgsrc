@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2026/01/25 10:08:11 markd Exp $
+# $NetBSD: Makefile,v 1.51 2026/03/11 19:50:44 markd Exp $
 
 DISTNAME=	collection-pictures
-PKGNAME=	texlive-${DISTNAME}-2025pre2
+PKGNAME=	texlive-${DISTNAME}-2025pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	77389
@@ -242,7 +242,7 @@ DEPENDS+=	tex-tikz-cd-[0-9]*:../../graphics/tex-tikz-cd
 # depend tikzcodeblocks
 # depend tikzdotncross
 # depend tikzducks
-# depend tikzfill
+DEPENDS+=	tex-tikzfill-[0-9]*:../../graphics/tex-tikzfill
 # depend tikzfxgraph
 DEPENDS+=	tex-tikzinclude-[0-9]*:../../graphics/tex-tikzinclude
 # depend tikzlings
