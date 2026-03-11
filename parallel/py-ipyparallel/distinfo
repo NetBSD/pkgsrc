@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/10/10 05:05:42 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/03/11 12:39:09 adam Exp $
 
-BLAKE2s (ipyparallel-9.0.2.tar.gz) = ede9e1dcf244f12a857173c827fb19b06e35a72266a6c59c0b34155028a9550c
-SHA512 (ipyparallel-9.0.2.tar.gz) = c7719a9313a3bdf40300a09888f056884cbcf77158fec1eef4cd242ce956e2b6fa1917b35c1997d0b375dc8e590212c6c23f533c1a20673c59eaf411fbded7bf
-Size (ipyparallel-9.0.2.tar.gz) = 4407304 bytes
+BLAKE2s (ipyparallel-9.1.0.tar.gz) = 5a48de2b2cbc74b712ea3514aa91e0299cb8cf50f223afbd4b207ddfddb267b1
+SHA512 (ipyparallel-9.1.0.tar.gz) = f62689a5991e7d923d796a1a2caf03c7f0ed4ffc41f70d77002aac9ae24be67b2268e386b3652819c3826beb94b245593874564b707251efdcf4ebe4a9293706
+Size (ipyparallel-9.1.0.tar.gz) = 4427086 bytes
