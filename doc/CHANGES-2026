@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1684 2026/03/11 11:29:16 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1685 2026/03/11 11:55:47 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2302,3 +2302,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/fast_float to 8.2.4 [adam 2026-03-11]
 	Updated databases/openldap to 2.6.13 [adam 2026-03-11]
 	Updated misc/dpkg to 1.23.7 [adam 2026-03-11]
+	Updated geography/py-spartn to 1.0.9 [gdt 2026-03-11]
