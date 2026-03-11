@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.355 2026/03/01 08:01:11 taca Exp $
+# $NetBSD: Makefile,v 1.356 2026/03/11 15:25:57 taca Exp $
 
 .include "../../mail/postfix/Makefile.common"
 
@@ -74,7 +74,7 @@ do-install:
 		${DESTDIR}${PREFIX}/sbin/qshape
 	${INSTALL_MAN} ${WRKSRC}/man/man1/qshape.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-.for dir in ${POSTFIX_QUEUE_SUBDIR}
+.for dir in ${POSTFIX_QUEUE_SUBDIRS}
 	${RMDIR} ${DESTDIR}${POSTFIX_QUEUE_DIR}/${dir}
 .endfor
 .if ${OPSYS} == "Darwin"
