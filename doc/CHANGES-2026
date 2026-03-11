@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1676 2026/03/11 08:14:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1677 2026/03/11 08:35:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2265,3 +2265,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/ppsspp to 1.20.2 [adam 2026-03-11]
 	Updated emulators/ppsspp-qt to 1.20.2 [adam 2026-03-11]
 	Updated emulators/libretro-ppsspp to 1.20.2 [adam 2026-03-11]
+	Removed multimedia/ffplay2 [wiz 2026-03-11]
+	Removed multimedia/ffmpeg2 [wiz 2026-03-11]
