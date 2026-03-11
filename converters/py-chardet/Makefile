@@ -1,4 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2025/04/13 07:22:37 adam Exp $
+# $NetBSD: Makefile,v 1.38 2026/03/11 06:57:35 wiz Exp $
+#
+# There is controversy about the license change in version 7.0.0.
+# Please don't update this package to 7+ for now.
 
 DISTNAME=	chardet-5.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
