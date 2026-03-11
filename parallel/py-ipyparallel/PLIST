@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2025/10/10 05:05:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/03/11 12:39:09 adam Exp $
 bin/ipcluster-${PYVERSSUFFIX}
 bin/ipcontroller-${PYVERSSUFFIX}
 bin/ipengine-${PYVERSSUFFIX}
@@ -163,8 +163,8 @@ ${PYSITELIB}/ipyparallel/joblib.pyo
 ${PYSITELIB}/ipyparallel/labextension/package.json
 ${PYSITELIB}/ipyparallel/labextension/schemas/ipyparallel-labextension/package.json.orig
 ${PYSITELIB}/ipyparallel/labextension/schemas/ipyparallel-labextension/plugin.json
-${PYSITELIB}/ipyparallel/labextension/static/296.d653fe61840342b9fd43.js
-${PYSITELIB}/ipyparallel/labextension/static/remoteEntry.1f964956b2e7c690229e.js
+${PYSITELIB}/ipyparallel/labextension/static/296.b6ecd41e505c19336bc4.js
+${PYSITELIB}/ipyparallel/labextension/static/remoteEntry.310b8f5a2893b50c4fc7.js
 ${PYSITELIB}/ipyparallel/labextension/static/style.js
 ${PYSITELIB}/ipyparallel/labextension/static/third-party-licenses.json
 ${PYSITELIB}/ipyparallel/logger.py
@@ -242,6 +242,9 @@ ${PYSITELIB}/ipyparallel/tests/test_executor.pyo
 ${PYSITELIB}/ipyparallel/tests/test_joblib.py
 ${PYSITELIB}/ipyparallel/tests/test_joblib.pyc
 ${PYSITELIB}/ipyparallel/tests/test_joblib.pyo
+${PYSITELIB}/ipyparallel/tests/test_label.py
+${PYSITELIB}/ipyparallel/tests/test_label.pyc
+${PYSITELIB}/ipyparallel/tests/test_label.pyo
 ${PYSITELIB}/ipyparallel/tests/test_launcher.py
 ${PYSITELIB}/ipyparallel/tests/test_launcher.pyc
 ${PYSITELIB}/ipyparallel/tests/test_launcher.pyo
@@ -290,8 +293,8 @@ ${PYSITELIB}/ipyparallel/util.pyo
 share/jupyter/labextensions/ipyparallel-labextension/package.json
 share/jupyter/labextensions/ipyparallel-labextension/schemas/ipyparallel-labextension/package.json.orig
 share/jupyter/labextensions/ipyparallel-labextension/schemas/ipyparallel-labextension/plugin.json
-share/jupyter/labextensions/ipyparallel-labextension/static/296.d653fe61840342b9fd43.js
-share/jupyter/labextensions/ipyparallel-labextension/static/remoteEntry.1f964956b2e7c690229e.js
+share/jupyter/labextensions/ipyparallel-labextension/static/296.b6ecd41e505c19336bc4.js
+share/jupyter/labextensions/ipyparallel-labextension/static/remoteEntry.310b8f5a2893b50c4fc7.js
 share/jupyter/labextensions/ipyparallel-labextension/static/style.js
 share/jupyter/labextensions/ipyparallel-labextension/static/third-party-licenses.json
 share/jupyter/nbextensions/ipyparallel/clusterlist.css
