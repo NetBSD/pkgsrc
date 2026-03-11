@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2025/11/12 07:32:12 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/03/11 11:03:01 adam Exp $
 
-DISTNAME=	libjwt-3.2.3
+DISTNAME=	libjwt-3.3.2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=benmcollins/}
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.xz
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/benmcollins/libjwt
