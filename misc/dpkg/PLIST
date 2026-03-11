@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2026/01/30 13:16:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2026/03/11 11:29:00 adam Exp $
 bin/dpkg
 bin/dpkg-architecture
 bin/dpkg-buildapi
@@ -272,7 +272,6 @@ man/fr/man1/dpkg-name.1
 man/fr/man1/dpkg-parsechangelog.1
 man/fr/man1/dpkg-query.1
 man/fr/man1/dpkg-realpath.1
-man/fr/man1/dpkg-scanpackages.1
 man/fr/man1/dpkg-scansources.1
 man/fr/man1/dpkg-shlibdeps.1
 man/fr/man1/dpkg-source.1
@@ -641,6 +640,7 @@ man/sv/man5/deb-src-symbols.5
 man/sv/man5/deb-substvars.5
 man/sv/man5/deb-symbols.5
 man/sv/man5/deb-triggers.5
+man/sv/man5/deb.5
 man/sv/man5/deb822.5
 man/sv/man5/dpkg.cfg.5
 man/sv/man5/dsc.5

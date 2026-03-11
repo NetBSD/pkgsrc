@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2026/01/30 13:16:04 adam Exp $
+# $NetBSD: Makefile,v 1.80 2026/03/11 11:29:00 adam Exp $
 
-DISTNAME=	dpkg_1.23.5
+DISTNAME=	dpkg_1.23.7
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/dpkg/}
