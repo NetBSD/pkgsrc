@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1677 2026/03/11 08:35:03 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1678 2026/03/11 08:58:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2267,3 +2267,21 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/libretro-ppsspp to 1.20.2 [adam 2026-03-11]
 	Removed multimedia/ffplay2 [wiz 2026-03-11]
 	Removed multimedia/ffmpeg2 [wiz 2026-03-11]
+	Updated www/nginx-devel to 1.29.6 [adam 2026-03-11]
+	Updated security/py-acme to 5.4.0 [adam 2026-03-11]
+	Updated security/py-certbot to 5.4.0 [adam 2026-03-11]
+	Updated security/py-certbot-apache to 5.4.0 [adam 2026-03-11]
+	Updated security/py-certbot-dns-cloudflare to 5.4.0 [adam 2026-03-11]
+	Updated security/py-certbot-dns-digitalocean to 5.4.0 [adam 2026-03-11]
+	Updated security/py-certbot-dns-dnsimple to 5.4.0 [adam 2026-03-11]
+	Updated security/py-certbot-dns-dnsmadeeasy to 5.4.0 [adam 2026-03-11]
+	Updated security/py-certbot-dns-gehirn to 5.4.0 [adam 2026-03-11]
+	Updated security/py-certbot-dns-google to 5.4.0 [adam 2026-03-11]
+	Updated security/py-certbot-dns-linode to 5.4.0 [adam 2026-03-11]
+	Updated security/py-certbot-dns-luadns to 5.4.0 [adam 2026-03-11]
+	Updated security/py-certbot-dns-nsone to 5.4.0 [adam 2026-03-11]
+	Updated security/py-certbot-dns-ovh to 5.4.0 [adam 2026-03-11]
+	Updated security/py-certbot-dns-rfc2136 to 5.4.0 [adam 2026-03-11]
+	Updated security/py-certbot-dns-route53 to 5.4.0 [adam 2026-03-11]
+	Updated security/py-certbot-dns-sakuracloud to 5.4.0 [adam 2026-03-11]
+	Updated security/py-certbot-nginx to 5.4.0 [adam 2026-03-11]
