@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2025/01/07 20:01:35 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/03/11 13:56:15 adam Exp $
 
-BLAKE2s (tables-3.10.2.tar.gz) = d2fe13a016ea15db4cce3c03c77913e30054609566b14d324c0f45c4b133e893
-SHA512 (tables-3.10.2.tar.gz) = c2a1781113d31b35a75a2ce34fe0e922824340efd3077df419913ec6bdb4b0a59ee0601736423c34baf9d61aa0a7122f0b0440e4000cfe61a6dde5f369574450
-Size (tables-3.10.2.tar.gz) = 4779722 bytes
-SHA1 (patch-setup.py) = 5f93282073c1e96f8406293fc6d096f5548b80b3
+BLAKE2s (tables-3.11.1.tar.gz) = d52e9c64f83b2ea34045efaaa313a570e8f8def7eaed1aff7f5949fe0a1e9888
+SHA512 (tables-3.11.1.tar.gz) = 4e398a2b481e199a9d9dc0e46787f87fa1b8e01ad0e742c748b7bec814cad610a3cabb9a8ef6ab115596d7240e03f28775bdba724fe03b235531ab3b2f6578d9
+Size (tables-3.11.1.tar.gz) = 4790533 bytes
+SHA1 (patch-setup.py) = 2b6c11296ece751b69b18294d78fe35e69514622
