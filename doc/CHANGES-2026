@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1688 2026/03/11 14:03:47 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1689 2026/03/11 15:19:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2309,3 +2309,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-mmh3 to 5.2.1 [adam 2026-03-11]
 	Updated math/py-tables to 3.11.1 [adam 2026-03-11]
 	Updated converters/py-chardet to 7.0.1 [adam 2026-03-11]
+	Updated www/php-ja-wordpress to 6.9.1nb1 [taca 2026-03-11]
