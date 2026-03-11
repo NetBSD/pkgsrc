@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1685 2026/03/11 11:55:47 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.1686 2026/03/11 12:39:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2303,3 +2303,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/openldap to 2.6.13 [adam 2026-03-11]
 	Updated misc/dpkg to 1.23.7 [adam 2026-03-11]
 	Updated geography/py-spartn to 1.0.9 [gdt 2026-03-11]
+	Updated security/sqlmap to 1.10.3 [adam 2026-03-11]
+	Updated parallel/py-ipyparallel to 9.1.0 [adam 2026-03-11]
