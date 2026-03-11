@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1692 2026/03/11 19:46:55 markd Exp $
+$NetBSD: CHANGES-2026,v 1.1693 2026/03/11 22:01:24 agc Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2322,3 +2322,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-simpleeval to 1.0.4 [adam 2026-03-11]
 	Updated graphics/tex-tikzfill to 1.0.1 [markd 2026-03-11]
 	Updated graphics/tex-tikzfill-doc to 1.0.1 [markd 2026-03-11]
+	Added pkgtools/depgraph version 20260309 [agc 2026-03-11]
