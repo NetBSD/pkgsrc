@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1691 2026/03/11 17:45:51 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1692 2026/03/11 19:46:55 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2320,3 +2320,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/postfix-sqlite to 3.11.1 [taca 2026-03-11]
 	Updated devel/wabt to 1.0.40 [adam 2026-03-11]
 	Updated math/py-simpleeval to 1.0.4 [adam 2026-03-11]
+	Updated graphics/tex-tikzfill to 1.0.1 [markd 2026-03-11]
+	Updated graphics/tex-tikzfill-doc to 1.0.1 [markd 2026-03-11]
