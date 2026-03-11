@@ -1,0 +1,108 @@
+.\" $NetBSD: depgraph.1,v 1.1 2026/03/11 21:54:30 agc Exp $
+.\"
+.\" Copyright (c) 2026 Alistair Crooks <agc@NetBSD.org>
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+.\" IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+.\" OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+.\" IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+.\" INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+.\" NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+.\" DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+.\" THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+.\" (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+.\" THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+.\"
+.Dd March 10, 2026
+.Dt DEPGRAPH 1
+.Os
+.Sh NAME
+.Nm depgraph
+.Nd script to show third party package dependencies and licensing information
+.Sh SYNOPSIS
+.Nm
+.Op Fl V
+.Op Fl a
+.Op Fl j
+.Op Fl l
+.Op Fl m
+.Op Fl v
+.Op Fl x
+.Op Ar component No ...
+.Sh DESCRIPTION
+The
+.Nm
+script displays the dependency graph for packages, and
+optionally candisplay version information, and licensing
+information, where known, for the individual packages.
+It is useful for finding out the installed versions of
+the packages installed on a system.
+The
+.Nm
+utility can also record some metadata about the machine on which
+the report is run.
+It can also output the information as a normal dependency graph,
+or, alternatively, in JSON format.
+This is useful for reporting into ingest engines, for further data analysis,
+and also to inform Software Bill Of Materials (SBOM) reporting.
+.Sh OPTIONS
+The following options are available:
+.Bl -tag -width inits
+.It Fl V
+This option prints the version number of the utility to standard output, and exits.
+.It Fl a
+prints all metadata information, such as license, metadata, full name and version
+of each package, and machine uptime.
+.It Fl j
+Output the information to standard output formatted as standard JSON.
+This could be useful for further analysis of the data, or for SBOM
+reporting.
+.It Fl l
+Output the licensing information for each package that is selected.
+.It Fl m
+Output the metadata of the machine and build of the kernel onto
+standard output.
+.It Fl v
+When printing dependency graphs, output the name and version numbers of all selected packages.
+.It Fl x
+Allow internal debugging information to be displayed as the dependency graph is produced.
+.El
+.Pp
+Packages may be selected by placing either their base name, or full name and version, on the command line,
+after any options.
+If no package names are proivided, then the information for all user-installed packages are reported.
+See
+.Xr pkg_info 1
+and its
+.It Fl u
+option for more information on what constitutes a user-installed package.
+.Sh EXIT STATUS
+.Nm
+exits with status 2 if an unknown option is given,
+otherwise, with status 0.
+.Sh SEE ALSO
+.Xr awk 1 ,
+.Xr pkg_info 1 ,
+.Xr sed 1 ,
+.Xr uname 1 ,
+.Xr sysctl 8
+.Sh HISTORY
+The
+.Nm
+program was first seen in
+.Nx 12 .
+.Sh AUTHORS
+The
+.Nm
+script was written by
+.An Alistair Crooks Aq Mt agc@NetBSD.org .
