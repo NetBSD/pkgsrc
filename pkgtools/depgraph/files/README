@@ -1,0 +1,217 @@
+This is depgraph, which prints a dependency graph of packages
+installed in a system, and can be used for reporting on individual
+packages, or on all user-installed -- see pkg_info(1) -- packages on a
+system. This is intended to aid in SBOM reporting.
+
+> ./depgraph.sh clang
+clang
+|--libxml2
+|----xmlcatmgr
+|--llvm
+|----libxml2
+|------xmlcatmgr
+|----python313
+|------libffi
+|------libuuid
+|------mpdecimal
+|------readline
+|------sqlite3
+|----zstd
+|------lz4
+|--perl
+|--python313
+|----libffi
+|----libuuid
+|----mpdecimal
+|----readline
+|----sqlite3
+>
+
+It can also be used to print full name and version information about each package
+
+> ./depgraph.sh -v clang
+clang-19.1.7nb2
+|--libxml2-2.14.6nb2
+|----xmlcatmgr-2.2nb1
+|--llvm-19.1.7nb1
+|----libxml2-2.14.6nb2
+|------xmlcatmgr-2.2nb1
+|----python313-3.13.12
+|------libffi-3.5.2
+|------libuuid-2.40.2
+|------mpdecimal-4.0.1
+|------readline-8.3nb1
+|------sqlite3-3.51.2
+|----zstd-1.5.7
+|------lz4-1.10.0
+|--perl-5.42.0nb1
+|--python313-3.13.12
+|----libffi-3.5.2
+|----libuuid-2.40.2
+|----mpdecimal-4.0.1
+|----readline-8.3nb1
+|----sqlite3-3.51.2
+>
+
+It can also be used to print licensing information about each package
+
+> ./depgraph.sh -l -v clang
+clang-19.1.7nb2 (apache-2.0)
+|--libxml2-2.14.6nb2 (modified-bsd)
+|----xmlcatmgr-2.2nb1 (modified-bsd)
+|--llvm-19.1.7nb1 (apache-2.0)
+|----libxml2-2.14.6nb2 (modified-bsd)
+|------xmlcatmgr-2.2nb1 (modified-bsd)
+|----python313-3.13.12 (python-software-foundation)
+|------libffi-3.5.2 (mit)
+|------libuuid-2.40.2 (modified-bsd)
+|------mpdecimal-4.0.1 (2-clause-bsd)
+|------readline-8.3nb1 (gnu-gpl-v3)
+|------sqlite3-3.51.2 (public-domain)
+|----zstd-1.5.7 (modified-bsd OR gnu-gpl-v2)
+|------lz4-1.10.0 (2-clause-bsd)
+|--perl-5.42.0nb1 (gnu-gpl-v2 OR artistic)
+|--python313-3.13.12 (python-software-foundation)
+|----libffi-3.5.2 (mit)
+|----libuuid-2.40.2 (modified-bsd)
+|----mpdecimal-4.0.1 (2-clause-bsd)
+|----readline-8.3nb1 (gnu-gpl-v3)
+|----sqlite3-3.51.2 (public-domain)
+>
+
+It can also be used to print metadata about the machine
+
+> ./depgraph.sh -l -v -m clang
+# Report version: 20260309
+# Machine metadata: NetBSD agc-vm-20250222.localdomain 11.99.5 NetBSD 11.99.5 (GENERIC64) #0: Sun Mar  8 23:54:17 PDT 2026  agc@agc-vm-20250222.localdomain:/usr/build/obj/usr/src/sys/arch/evbarm/compile/GENERIC64 evbarm
+# Date run: Wed Mar 11 21:00:44 UTC 2026
+# localbase: /usr/pkg
+# uptime:  2:00PM  up 2 days,  1:18, 5 users, load averages: 8.30, 7.70, 5.62
+clang-19.1.7nb2 (apache-2.0)
+|--libxml2-2.14.6nb2 (modified-bsd)
+|----xmlcatmgr-2.2nb1 (modified-bsd)
+|--llvm-19.1.7nb1 (apache-2.0)
+|----libxml2-2.14.6nb2 (modified-bsd)
+|------xmlcatmgr-2.2nb1 (modified-bsd)
+|----python313-3.13.12 (python-software-foundation)
+|------libffi-3.5.2 (mit)
+|------libuuid-2.40.2 (modified-bsd)
+|------mpdecimal-4.0.1 (2-clause-bsd)
+|------readline-8.3nb1 (gnu-gpl-v3)
+|------sqlite3-3.51.2 (public-domain)
+|----zstd-1.5.7 (modified-bsd OR gnu-gpl-v2)
+|------lz4-1.10.0 (2-clause-bsd)
+|--perl-5.42.0nb1 (gnu-gpl-v2 OR artistic)
+|--python313-3.13.12 (python-software-foundation)
+|----libffi-3.5.2 (mit)
+|----libuuid-2.40.2 (modified-bsd)
+|----mpdecimal-4.0.1 (2-clause-bsd)
+|----readline-8.3nb1 (gnu-gpl-v3)
+|----sqlite3-3.51.2 (public-domain)
+>
+
+And finally, all output can be formatted in JSON:
+
+> ./depgraph.sh -l -v -m -j clang
+{"Report version":"20260309","metadata":"NetBSD agc-vm-20250222.localdomain 11.99.5 NetBSD 11.99.5 (GENERIC64) #0: Sun Mar  8 23:54:17 PDT 2026  agc@agc-vm-20250222.localdomain:/usr/build/obj/usr/src/sys/arch/evbarm/compile/GENERIC64 evbarm","date":"Wed Mar 11 21:01:32 UTC 2026","localbase":"/usr/pkg","uptime":" 2:01PM  up 2 days,  1:19, 5 users, load averages: 8.25, 7.77, 5.77"}{"package":"clang-19.1.7nb2","license":"apache-2.0","prereq0":{"package":"libxml2-2.14.6nb2","license":"modified-bsd","prereq0":{"package":"xmlcatmgr-2.2nb1","license":"modified-bsd"}},"prereq1":{"package":"llvm-19.1.7nb1","license":"apache-2.0","prereq0":{"package":"libxml2-2.14.6nb2","license":"modified-bsd","prereq0":{"package":"xmlcatmgr-2.2nb1","license":"modified-bsd"}},"prereq1":{"package":"python313-3.13.12","license":"python-software-foundation","prereq0":{"package":"libffi-3.5.2","license":"mit"},"prereq1":{"package":"libuuid-2.40.2","license":"modified-bsd"},"prereq2":
+{"package":"mpdecimal-4.0.1","license":"2-clause-bsd"},"prereq3":{"package":"readline-8.3nb1","license":"gnu-gpl-v3"},"prereq4":{"package":"sqlite3-3.51.2","license":"public-domain"}},"prereq2":{"package":"zstd-1.5.7","license":"modified-bsd OR gnu-gpl-v2","prereq0":{"package":"lz4-1.10.0","license":"2-clause-bsd"}}},"prereq2":{"package":"perl-5.42.0nb1","license":"gnu-gpl-v2 OR artistic"},"prereq3":{"package":"python313-3.13.12","license":"python-software-foundation","prereq0":{"package":"libffi-3.5.2","license":"mit"},"prereq1":{"package":"libuuid-2.40.2","license":"modified-bsd"},"prereq2":{"package":"mpdecimal-4.0.1","license":"2-clause-bsd"},"prereq3":{"package":"readline-8.3nb1","license":"gnu-gpl-v3"},"prereq4":{"package":"sqlite3-3.51.2","license":"public-domain"}}}>
+
+or, seen through the eyes of a JSON formatter:
+
+[2026/03/11 Wed 14:02:20] agc@agc-vm-20250222 ~/local/sbom-20260309 [5261] > ./depgraph.sh -l -v -m -j clang | jq .
+{
+  "Report version": "20260309",
+  "metadata": "NetBSD agc-vm-20250222.localdomain 11.99.5 NetBSD 11.99.5 (GENERIC64) #0: Sun Mar  8 23:54:17 PDT 2026  agc@agc-vm-20250222.localdomain:/usr/build/obj/usr/src/sys/arch/evbarm/compile/GENERIC64 evbarm",
+  "date": "Wed Mar 11 21:02:31 UTC 2026",
+  "localbase": "/usr/pkg",
+  "uptime": " 2:02PM  up 2 days,  1:20, 5 users, load averages: 8.14, 7.83, 5.92"
+}
+{
+  "package": "clang-19.1.7nb2",
+  "license": "apache-2.0",
+  "prereq0": {
+    "package": "libxml2-2.14.6nb2",
+    "license": "modified-bsd",
+    "prereq0": {
+      "package": "xmlcatmgr-2.2nb1",
+      "license": "modified-bsd"
+    }
+  },
+  "prereq1": {
+    "package": "llvm-19.1.7nb1",
+    "license": "apache-2.0",
+    "prereq0": {
+      "package": "libxml2-2.14.6nb2",
+      "license": "modified-bsd",
+      "prereq0": {
+        "package": "xmlcatmgr-2.2nb1",
+        "license": "modified-bsd"
+      }
+    },
+    "prereq1": {
+      "package": "python313-3.13.12",
+      "license": "python-software-foundation",
+      "prereq0": {
+        "package": "libffi-3.5.2",
+        "license": "mit"
+      },
+      "prereq1": {
+        "package": "libuuid-2.40.2",
+        "license": "modified-bsd"
+      },
+      "prereq2": {
+        "package": "mpdecimal-4.0.1",
+        "license": "2-clause-bsd"
+      },
+      "prereq3": {
+        "package": "readline-8.3nb1",
+        "license": "gnu-gpl-v3"
+      },
+      "prereq4": {
+        "package": "sqlite3-3.51.2",
+        "license": "public-domain"
+      }
+    },
+    "prereq2": {
+      "package": "zstd-1.5.7",
+      "license": "modified-bsd OR gnu-gpl-v2",
+      "prereq0": {
+        "package": "lz4-1.10.0",
+        "license": "2-clause-bsd"
+      }
+    }
+  },
+  "prereq2": {
+    "package": "perl-5.42.0nb1",
+    "license": "gnu-gpl-v2 OR artistic"
+  },
+  "prereq3": {
+    "package": "python313-3.13.12",
+    "license": "python-software-foundation",
+    "prereq0": {
+      "package": "libffi-3.5.2",
+      "license": "mit"
+    },
+    "prereq1": {
+      "package": "libuuid-2.40.2",
+      "license": "modified-bsd"
+    },
+    "prereq2": {
+      "package": "mpdecimal-4.0.1",
+      "license": "2-clause-bsd"
+    },
+    "prereq3": {
+      "package": "readline-8.3nb1",
+      "license": "gnu-gpl-v3"
+    },
+    "prereq4": {
+      "package": "sqlite3-3.51.2",
+      "license": "public-domain"
+    }
+  }
+}
+>
+
+Alistair Crooks
+agc@netbsd.org
+Wed Mar 11 14:06:16 PDT 2026
