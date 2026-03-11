@@ -1,0 +1,5 @@
+This is a collection of TikZ libraries which add further
+options to fill TikZ paths with images and patterns. The
+libraries comprise fillings with images from files and from
+TikZ pictures. Also, patterns of hexagons and of rhombi are
+provided.

@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2026/03/11 19:44:29 markd Exp $
+share/texmf-dist/doc/latex/tikzfill/CHANGES.md
+share/texmf-dist/doc/latex/tikzfill/README.md
+share/texmf-dist/doc/latex/tikzfill/tikzfill-doc.sty
+share/texmf-dist/doc/latex/tikzfill/tikzfill.pdf
+share/texmf-dist/doc/latex/tikzfill/tikzfill.tex
