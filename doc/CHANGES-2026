@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1683 2026/03/11 11:05:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1684 2026/03/11 11:29:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2300,3 +2300,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/libjwt to 3.3.2 [adam 2026-03-11]
 	Updated finance/py-stripe to 14.4.1 [adam 2026-03-11]
 	Updated math/fast_float to 8.2.4 [adam 2026-03-11]
+	Updated databases/openldap to 2.6.13 [adam 2026-03-11]
+	Updated misc/dpkg to 1.23.7 [adam 2026-03-11]
