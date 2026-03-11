@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.309 2026/02/06 10:04:59 wiz Exp $
+# $NetBSD: Makefile,v 1.310 2026/03/11 10:22:58 adam Exp $
 
-DISTNAME=	graphviz-12.2.1
-PKGREVISION=	8
+DISTNAME=	graphviz-14.1.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITLAB:=api/v4/projects/4207231/packages/generic/graphviz-releases/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz
@@ -14,12 +13,11 @@ LICENSE=	epl-v1.0
 CHECK_FILES_SKIP+=		${PREFIX}/lib/graphviz/config6
 CHECK_PORTABILITY_SKIP+=	windows/*
 
-USE_LANGUAGES=		c c++
 USE_CC_FEATURES=	c11
 USE_CXX_FEATURES=	c++17 unique_ptr
-
-USE_TOOLS+=		automake autoreconf makeinfo bison flex gmake groff pkg-config
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+USE_TOOLS+=		automake autoreconf makeinfo bison flex gmake groff pkg-config
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has sub-configures
 CONFIGURE_ARGS+=	--disable-d
