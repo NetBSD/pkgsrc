@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2026/02/13 12:13:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2026/03/11 10:38:31 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -96,9 +96,6 @@ ${PYSITELIB}/pypdf/_version.pyo
 ${PYSITELIB}/pypdf/_writer.py
 ${PYSITELIB}/pypdf/_writer.pyc
 ${PYSITELIB}/pypdf/_writer.pyo
-${PYSITELIB}/pypdf/_xobj_image_helpers.py
-${PYSITELIB}/pypdf/_xobj_image_helpers.pyc
-${PYSITELIB}/pypdf/_xobj_image_helpers.pyo
 ${PYSITELIB}/pypdf/annotations/__init__.py
 ${PYSITELIB}/pypdf/annotations/__init__.pyc
 ${PYSITELIB}/pypdf/annotations/__init__.pyo
@@ -141,6 +138,9 @@ ${PYSITELIB}/pypdf/generic/_fit.pyo
 ${PYSITELIB}/pypdf/generic/_image_inline.py
 ${PYSITELIB}/pypdf/generic/_image_inline.pyc
 ${PYSITELIB}/pypdf/generic/_image_inline.pyo
+${PYSITELIB}/pypdf/generic/_image_xobject.py
+${PYSITELIB}/pypdf/generic/_image_xobject.pyc
+${PYSITELIB}/pypdf/generic/_image_xobject.pyo
 ${PYSITELIB}/pypdf/generic/_link.py
 ${PYSITELIB}/pypdf/generic/_link.pyc
 ${PYSITELIB}/pypdf/generic/_link.pyo
