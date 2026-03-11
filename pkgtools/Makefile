@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2026/01/09 14:40:01 wiz Exp $
+# $NetBSD: Makefile,v 1.129 2026/03/11 21:54:30 agc Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -13,6 +13,7 @@ SUBDIR+=	check-portability
 SUBDIR+=	compat_headers
 SUBDIR+=	createbuildlink
 SUBDIR+=	cwrappers
+SUBDIR+=	depgraph
 SUBDIR+=	dfdisk
 SUBDIR+=	digest
 SUBDIR+=	distbb

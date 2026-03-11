@@ -1,0 +1,22 @@
+This is depgraph, which prints a dependency graph of packages
+installed in a system, and can be used for reporting on individual
+packages, or on all user-installed -- see pkg_info(1) -- packages on a
+system. This is intended to aid in SBOM reporting.
+
+% depgraph libxml2
+libxml2
+|--xmlcatmgr
+% depgraph -v libxml2
+libxml2-2.14.6nb2
+|--xmlcatmgr-2.2nb1
+% depgraph -v -l libxml2
+libxml2-2.14.6nb2 (modified-bsd)
+|--xmlcatmgr-2.2nb1 (modified-bsd)
+% depgraph -j libxml2 | jq .
+{
+  "package": "libxml2",
+  "prereq0": {
+    "package": "xmlcatmgr"
+  }
+}
+%
