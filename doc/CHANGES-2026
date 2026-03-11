@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1681 2026/03/11 10:38:54 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1682 2026/03/11 10:57:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2292,3 +2292,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/py-pikepdf to 10.5.0 [adam 2026-03-11]
 	Updated devel/py-pkgconfig to 1.6.0 [adam 2026-03-11]
 	Updated textproc/py-pdf to 6.8.0 [adam 2026-03-11]
+	Updated databases/sqlite3 to 3.52.0 [adam 2026-03-11]
+	Updated databases/sqlite3-docs to 3.52.0 [adam 2026-03-11]
+	Updated databases/sqlite3-tcl to 3.52.0 [adam 2026-03-11]
+	Updated devel/lemon to 1.0.3.52.0 [adam 2026-03-11]
+	Updated databases/py-apsw to 3.52.0.0 [adam 2026-03-11]
