@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2026/03/11 19:44:29 markd Exp $
+share/texmf-dist/tex/latex/tikzfill/tikzfill-common.sty
+share/texmf-dist/tex/latex/tikzfill/tikzfill.hexagon.sty
+share/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
+share/texmf-dist/tex/latex/tikzfill/tikzfill.rhombus.sty
+share/texmf-dist/tex/latex/tikzfill/tikzfill.sty
+share/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.hexagon.code.tex
+share/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
+share/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.rhombus.code.tex
