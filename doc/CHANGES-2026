@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1693 2026/03/11 22:01:24 agc Exp $
+$NetBSD: CHANGES-2026,v 1.1694 2026/03/11 23:22:42 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2323,3 +2323,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/tex-tikzfill to 1.0.1 [markd 2026-03-11]
 	Updated graphics/tex-tikzfill-doc to 1.0.1 [markd 2026-03-11]
 	Added pkgtools/depgraph version 20260309 [agc 2026-03-11]
+	Updated chat/matrix-synapse to 1.149.1 [gdt 2026-03-11]
