@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.106 2026/02/16 12:00:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.107 2026/03/11 10:08:03 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/_distutils_hack/__init__.py
 ${PYSITELIB}/_distutils_hack/__init__.pyc
 ${PYSITELIB}/_distutils_hack/__init__.pyo
@@ -6,12 +12,6 @@ ${PYSITELIB}/_distutils_hack/override.py
 ${PYSITELIB}/_distutils_hack/override.pyc
 ${PYSITELIB}/_distutils_hack/override.pyo
 ${PYSITELIB}/distutils-precedence.pth
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/setuptools/__init__.py
 ${PYSITELIB}/setuptools/__init__.pyc
 ${PYSITELIB}/setuptools/__init__.pyo
@@ -768,7 +768,6 @@ ${PYSITELIB}/setuptools/command/install_lib.pyo
 ${PYSITELIB}/setuptools/command/install_scripts.py
 ${PYSITELIB}/setuptools/command/install_scripts.pyc
 ${PYSITELIB}/setuptools/command/install_scripts.pyo
-${PYSITELIB}/setuptools/command/launcher manifest.xml
 ${PYSITELIB}/setuptools/command/rotate.py
 ${PYSITELIB}/setuptools/command/rotate.pyc
 ${PYSITELIB}/setuptools/command/rotate.pyo
@@ -864,6 +863,7 @@ ${PYSITELIB}/setuptools/installer.pyo
 ${PYSITELIB}/setuptools/launch.py
 ${PYSITELIB}/setuptools/launch.pyc
 ${PYSITELIB}/setuptools/launch.pyo
+${PYSITELIB}/setuptools/launcher manifest.xml
 ${PYSITELIB}/setuptools/logging.py
 ${PYSITELIB}/setuptools/logging.pyc
 ${PYSITELIB}/setuptools/logging.pyo
