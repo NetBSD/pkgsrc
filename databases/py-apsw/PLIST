@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/11/06 16:15:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/03/11 10:57:18 adam Exp $
 bin/apsw-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -12,6 +12,9 @@ ${PYSITELIB}/apsw/__main__.py
 ${PYSITELIB}/apsw/__main__.pyc
 ${PYSITELIB}/apsw/__main__.pyo
 ${PYSITELIB}/apsw/_unicode.so
+${PYSITELIB}/apsw/aio.py
+${PYSITELIB}/apsw/aio.pyc
+${PYSITELIB}/apsw/aio.pyo
 ${PYSITELIB}/apsw/bestpractice.py
 ${PYSITELIB}/apsw/bestpractice.pyc
 ${PYSITELIB}/apsw/bestpractice.pyo
@@ -35,12 +38,29 @@ ${PYSITELIB}/apsw/shell.pyo
 ${PYSITELIB}/apsw/speedtest.py
 ${PYSITELIB}/apsw/speedtest.pyc
 ${PYSITELIB}/apsw/speedtest.pyo
+${PYSITELIB}/apsw/sqlite_extra.json
+${PYSITELIB}/apsw/sqlite_extra.py
+${PYSITELIB}/apsw/sqlite_extra.pyc
+${PYSITELIB}/apsw/sqlite_extra.pyo
+${PYSITELIB}/apsw/sqlite_extra_binaries/README.md
 ${PYSITELIB}/apsw/tests/__main__.py
 ${PYSITELIB}/apsw/tests/__main__.pyc
 ${PYSITELIB}/apsw/tests/__main__.pyo
+${PYSITELIB}/apsw/tests/aiotest.py
+${PYSITELIB}/apsw/tests/aiotest.pyc
+${PYSITELIB}/apsw/tests/aiotest.pyo
+${PYSITELIB}/apsw/tests/async_meta.py
+${PYSITELIB}/apsw/tests/async_meta.pyc
+${PYSITELIB}/apsw/tests/async_meta.pyo
 ${PYSITELIB}/apsw/tests/carray.py
 ${PYSITELIB}/apsw/tests/carray.pyc
 ${PYSITELIB}/apsw/tests/carray.pyo
+${PYSITELIB}/apsw/tests/extratest.py
+${PYSITELIB}/apsw/tests/extratest.pyc
+${PYSITELIB}/apsw/tests/extratest.pyo
+${PYSITELIB}/apsw/tests/fork_checker.py
+${PYSITELIB}/apsw/tests/fork_checker.pyc
+${PYSITELIB}/apsw/tests/fork_checker.pyo
 ${PYSITELIB}/apsw/tests/ftstests.py
 ${PYSITELIB}/apsw/tests/ftstests.pyc
 ${PYSITELIB}/apsw/tests/ftstests.pyo
