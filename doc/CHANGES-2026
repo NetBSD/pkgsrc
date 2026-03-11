@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1674 2026/03/11 07:08:49 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1675 2026/03/11 07:09:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2261,3 +2261,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/adguardhome to 0.107.73 [adam 2026-03-11]
 	Updated devel/py-configargparse to 1.7.5 [adam 2026-03-11]
 	Updated www/curl to 8.19.0 [wiz 2026-03-11]
+	Updated www/libcurl-gnutls to 8.19.0 [wiz 2026-03-11]
