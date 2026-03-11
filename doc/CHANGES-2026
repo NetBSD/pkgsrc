@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1672 2026/03/10 20:42:39 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1673 2026/03/11 06:38:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2258,3 +2258,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 29.8.0 [pin 2026-03-10]
 	Updated graphics/giflib to 6.1.2 [wiz 2026-03-10]
 	Updated graphics/giflib-util to 6.1.2 [wiz 2026-03-10]
+	Updated security/adguardhome to 0.107.73 [adam 2026-03-11]
+	Updated devel/py-configargparse to 1.7.5 [adam 2026-03-11]
