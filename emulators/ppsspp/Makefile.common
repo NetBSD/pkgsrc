@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.3 2025/12/17 22:59:13 nia Exp $
+# $NetBSD: Makefile.common,v 1.4 2026/03/11 08:13:42 adam Exp $
 # used by emulators/ppsspp/Makefile
 # used by emulators/ppsspp-qt/Makefile
 # used by emulators/libretro-ppsspp/Makefile
 
-DISTNAME=	ppsspp-1.18.1
+DISTNAME=	ppsspp-1.20.2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hrydgard/}
 GITHUB_PROJECT=	ppsspp
@@ -13,29 +13,25 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
+USE_CXX_FEATURES=	c++17
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 
 DISTINFO_FILE=	${.CURDIR}/../../emulators/ppsspp/distinfo
 PATCHDIR=	${.CURDIR}/../../emulators/ppsspp/patches
 
-USE_CXX_FEATURES+=	c++17
-
 LDFLAGS.NetBSD+=	-lrt
 
-# use libraries from pkgsrc
+# Use libraries from pkgsrc.
 CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_FFMPEG=ON
-CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_LIBZIP=ON
 CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_LIBSDL2=ON
 CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_LIBPNG=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_LIBZIP=ON
 CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_MINIUPNPC=ON
 CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_SNAPPY=ON
 CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_ZSTD=ON
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
-
 # let pkgsrc take care of this
 CMAKE_CONFIGURE_ARGS+=	-DUSE_CCACHE=OFF
-
 # we're open source
 CMAKE_CONFIGURE_ARGS+=	-DUSE_DISCORD=OFF
 
@@ -47,16 +43,17 @@ CMAKE_CONFIGURE_ARGS+=	-DARMIPS_PRECOMPILE_HEADERS=OFF
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_PCH=OFF
 .endif
 
-.include "../../devel/cmake/build.mk"
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/tool.mk"
-# don't change this, newer versions of ffmpeg break fmv
-.include "../../multimedia/ffmpeg2/buildlink3.mk"
+# See https://github.com/hrydgard/ppsspp/issues/20812
+.include "../../multimedia/ffmpeg8/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/pthread.buildlink3.mk"

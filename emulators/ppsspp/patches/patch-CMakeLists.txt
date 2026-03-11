@@ -1,0 +1,32 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/03/11 08:13:43 adam Exp $
+
+Fix build on NetBSD.
+Use freetype2 from pkgsrc.
+
+--- CMakeLists.txt.orig	2026-03-10 13:32:16.000000000 +0000
++++ CMakeLists.txt
+@@ -2077,7 +2077,7 @@ endif()
+ 	)
+ endif()
+ 
+-if(LINUX OR ANDROID OR MACOSX OR IOS)
++if(LINUX OR ANDROID OR MACOSX OR IOS OR UNIX)
+ 	list(APPEND aemu_postoffice
+ 		ext/aemu_postoffice/client/sock_impl_linux.c
+ 	)
+@@ -2952,13 +2952,13 @@ if(ATLAS_TOOL)
+ endif()
+ 
+ if(ATLAS_TOOL)
+-	include_directories(ext/freetype/include)
++        find_package(Freetype REQUIRED)
+ 
+ 	set(AtlasToolSource
+ 		ext/native/tools/atlastool.cpp
+ 	)
+ 	add_executable(AtlasTool ${AtlasToolSource})
+-	target_link_libraries(AtlasTool ${LinkCommon} freetype)
++	target_link_libraries(AtlasTool ${LinkCommon} Freetype::Freetype)
+ 	setup_target_project(AtlasTool atlastool)
+ endif()
+ 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/04/13 16:19:29 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/03/11 08:13:42 adam Exp $
 bin/PPSSPPSDL
 share/applications/PPSSPPSDL.desktop
 share/icons/hicolor/128x128/apps/ppsspp.png
@@ -13,7 +13,12 @@ share/icons/hicolor/96x96/apps/ppsspp.png
 share/icons/hicolor/scalable/apps/ppsspp.svg
 share/mime/packages/ppsspp.xml
 share/ppsspp/assets/7z.png
-share/ppsspp/assets/Roboto-Condensed.ttf
+share/ppsspp/assets/Inconsolata-Regular.ttf
+share/ppsspp/assets/Roboto_Condensed-Bold.ttf
+share/ppsspp/assets/Roboto_Condensed-Italic.ttf
+share/ppsspp/assets/Roboto_Condensed-Light.ttf
+share/ppsspp/assets/Roboto_Condensed-Regular.ttf
+share/ppsspp/assets/adhoc-servers.json
 share/ppsspp/assets/asciifont_atlas.meta
 share/ppsspp/assets/asciifont_atlas.zim
 share/ppsspp/assets/compat.ini
@@ -49,9 +54,10 @@ share/ppsspp/assets/flash0/font/ltn9.pgf
 share/ppsspp/assets/font_atlas.meta
 share/ppsspp/assets/font_atlas.zim
 share/ppsspp/assets/gamecontrollerdb.txt
-share/ppsspp/assets/icon_regular_72.png
+share/ppsspp/assets/infra-dns.json
 share/ppsspp/assets/lang/ar_AE.ini
 share/ppsspp/assets/lang/az_AZ.ini
+share/ppsspp/assets/lang/be_BY.ini
 share/ppsspp/assets/lang/bg_BG.ini
 share/ppsspp/assets/lang/ca_ES.ini
 share/ppsspp/assets/lang/cz_CZ.ini
@@ -95,7 +101,6 @@ share/ppsspp/assets/lang/vi_VN.ini
 share/ppsspp/assets/lang/zh_CN.ini
 share/ppsspp/assets/lang/zh_TW.ini
 share/ppsspp/assets/langregion.ini
-share/ppsspp/assets/logo.png
 share/ppsspp/assets/ppge_atlas.meta
 share/ppsspp/assets/ppge_atlas.zim
 share/ppsspp/assets/rargray.png
@@ -118,11 +123,12 @@ share/ppsspp/assets/shaders/bloom.fsh
 share/ppsspp/assets/shaders/bloomnoblur.fsh
 share/ppsspp/assets/shaders/cartoon.fsh
 share/ppsspp/assets/shaders/cartoon.vsh
-share/ppsspp/assets/shaders/checkers.fsh
 share/ppsspp/assets/shaders/colorcorrection.fsh
 share/ppsspp/assets/shaders/crt.fsh
 share/ppsspp/assets/shaders/defaultshaders.ini
 share/ppsspp/assets/shaders/fakereflections.fsh
+share/ppsspp/assets/shaders/fsr_easu.fsh
+share/ppsspp/assets/shaders/fsr_rcas.fsh
 share/ppsspp/assets/shaders/fxaa.fsh
 share/ppsspp/assets/shaders/fxaa.vsh
 share/ppsspp/assets/shaders/natural.fsh
@@ -147,12 +153,21 @@ share/ppsspp/assets/shaders/upscale_spline36.vsh
 share/ppsspp/assets/shaders/videoAA.fsh
 share/ppsspp/assets/shaders/vignette.fsh
 share/ppsspp/assets/themes/1995.ini
+share/ppsspp/assets/themes/alpine.ini
 share/ppsspp/assets/themes/defaultthemes.ini
 share/ppsspp/assets/themes/slateforest.ini
+share/ppsspp/assets/themes/strawberry.ini
 share/ppsspp/assets/themes/vinewood.ini
-share/ppsspp/assets/ui_atlas.meta
-share/ppsspp/assets/ui_atlas.zim
-share/ppsspp/assets/unknown.png
+share/ppsspp/assets/ui_images/bg.png
+share/ppsspp/assets/ui_images/drop_shadow.png
+share/ppsspp/assets/ui_images/icon.png
+share/ppsspp/assets/ui_images/icon_gold.png
+share/ppsspp/assets/ui_images/images.svg
+share/ppsspp/assets/ui_images/psp_display.png
+share/ppsspp/assets/ui_images/retroachievements_logo.png
+share/ppsspp/assets/ui_images/stick.png
+share/ppsspp/assets/ui_images/stick_line.png
+share/ppsspp/assets/upload/index.html
 share/ppsspp/assets/vfpu/vfpu_asin_lut65536.dat
 share/ppsspp/assets/vfpu/vfpu_asin_lut_deltas.dat
 share/ppsspp/assets/vfpu/vfpu_asin_lut_indices.dat

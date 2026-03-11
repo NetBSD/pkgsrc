@@ -1,0 +1,16 @@
+$NetBSD: patch-ext_CMakeLists.txt,v 1.1 2026/03/11 08:13:43 adam Exp $
+
+Use freetype2 from pkgsrc.
+
+--- ext/CMakeLists.txt.orig	2026-03-11 08:03:07.281019249 +0000
++++ ext/CMakeLists.txt
+@@ -42,9 +42,6 @@ set(FT_REQUIRE_BROTLI OFF CACHE BOOL "" FORCE)
+ set(FT_REQUIRE_PNG OFF CACHE BOOL "" FORCE)
+ set(FT_REQUIRE_HARFBUZZ OFF CACHE BOOL "" FORCE)
+ set(FT_REQUIRE_BROTLI OFF CACHE BOOL "" FORCE)
+-if(NOT LIBRETRO)
+-    add_subdirectory(freetype)
+-endif()
+ 
+ if(NOT LIBRETRO)
+     add_subdirectory(imgui)
