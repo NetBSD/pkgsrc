@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2025/05/26 05:18:16 adam Exp $
+$NetBSD: distinfo,v 1.23 2026/03/11 06:37:52 adam Exp $
 
-BLAKE2s (configargparse-1.7.1.tar.gz) = 583e92de70a351c14b57434782a3574b1cd42de2ad607f895aed8db7c4d079c9
-SHA512 (configargparse-1.7.1.tar.gz) = 50d237604717c6e71294a6ada8dbb44af04d6c6e500af592bf9aa7574ed05ac258f15dbcbfb99ef7c4d1941ef8a2cdd396db779225f67ffb4a4faea22216f3db
-Size (configargparse-1.7.1.tar.gz) = 43958 bytes
+BLAKE2s (configargparse-1.7.5.tar.gz) = 5d57a89c3f71414a834366c5a2be2d85d36c11cd33617b71b8b549065ea71d45
+SHA512 (configargparse-1.7.5.tar.gz) = 7b6541d0e38ef54ecd3c87d4bd986d041db54b069112d01b24bcb5741d729f73826722e8b0c6bb4959c6066a8b5c6b57a4234b78526879ef8472edfd63eb5de6
+Size (configargparse-1.7.5.tar.gz) = 53548 bytes
