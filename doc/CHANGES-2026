@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1689 2026/03/11 15:19:56 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1690 2026/03/11 15:27:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2310,3 +2310,11 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-tables to 3.11.1 [adam 2026-03-11]
 	Updated converters/py-chardet to 7.0.1 [adam 2026-03-11]
 	Updated www/php-ja-wordpress to 6.9.1nb1 [taca 2026-03-11]
+	Updated mail/postfix to 3.11.1 [taca 2026-03-11]
+	Updated mail/postfix-cdb to 3.11.1 [taca 2026-03-11]
+	Updated mail/postfix-ldap to 3.11.1 [taca 2026-03-11]
+	Updated mail/postfix-lmdb to 3.11.1 [taca 2026-03-11]
+	Updated mail/postfix-mysql to 3.11.1 [taca 2026-03-11]
+	Updated mail/postfix-pcre to 3.11.1 [taca 2026-03-11]
+	Updated mail/postfix-pgsql to 3.11.1 [taca 2026-03-11]
+	Updated mail/postfix-sqlite to 3.11.1 [taca 2026-03-11]
