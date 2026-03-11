@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1113 2026/03/04 00:22:32 tnn Exp $
+# $NetBSD: Makefile,v 1.1114 2026/03/11 19:44:29 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -820,6 +820,8 @@ SUBDIR+=	tex-tikz-cd
 SUBDIR+=	tex-tikz-cd-doc
 SUBDIR+=	tex-tikz-feynhand
 SUBDIR+=	tex-tikz-feynhand-doc
+SUBDIR+=	tex-tikzfill
+SUBDIR+=	tex-tikzfill-doc
 SUBDIR+=	tex-tikzinclude
 SUBDIR+=	tex-tikzinclude-doc
 SUBDIR+=	tex-tikzmark
