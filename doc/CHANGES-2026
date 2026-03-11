@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1680 2026/03/11 10:28:28 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1681 2026/03/11 10:38:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2289,3 +2289,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-tornado to 6.5.5 [adam 2026-03-11]
 	Updated graphics/graphviz to 14.1.3 [adam 2026-03-11]
 	Updated graphics/gource to 0.56 [adam 2026-03-11]
+	Updated print/py-pikepdf to 10.5.0 [adam 2026-03-11]
+	Updated devel/py-pkgconfig to 1.6.0 [adam 2026-03-11]
+	Updated textproc/py-pdf to 6.8.0 [adam 2026-03-11]
