@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.3 2025/02/19 01:24:11 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2026/03/11 08:34:08 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cmus
 
 PKG_SUPPORTED_OPTIONS+=		alsa mad musepack faad
-PKG_SUPPORTED_OPTIONS+=		wavpack ffmpeg opus jack pulseaudio
+PKG_SUPPORTED_OPTIONS+=		wavpack opus jack pulseaudio
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	mod
 PKG_OPTIONS_GROUP.mod=		modplug mikmod
@@ -86,17 +86,6 @@ CONFIGURE_ARGS+=	CONFIG_WAVPACK=y
 PLIST.wavpack=		yes
 .else
 CONFIGURE_ARGS+=	CONFIG_WAVPACK=n
-.endif
-
-# FFMPEG support
-#
-.if !empty(PKG_OPTIONS:Mffmpeg)
-# Does not build with ffmpeg[34].
-.include "../../multimedia/ffmpeg2/buildlink3.mk"
-CONFIGURE_ARGS+=	CONFIG_FFMPEG=y
-PLIST.ffmpeg=		yes
-.else
-CONFIGURE_ARGS+=	CONFIG_FFMPEG=n
 .endif
 
 # modplay support
