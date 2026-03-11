@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/12 07:43:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/03/11 13:06:27 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -7,19 +7,3 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/lazy_loader/__init__.py
 ${PYSITELIB}/lazy_loader/__init__.pyc
 ${PYSITELIB}/lazy_loader/__init__.pyo
-${PYSITELIB}/lazy_loader/tests/__init__.py
-${PYSITELIB}/lazy_loader/tests/__init__.pyc
-${PYSITELIB}/lazy_loader/tests/__init__.pyo
-${PYSITELIB}/lazy_loader/tests/fake_pkg/__init__.py
-${PYSITELIB}/lazy_loader/tests/fake_pkg/__init__.pyc
-${PYSITELIB}/lazy_loader/tests/fake_pkg/__init__.pyi
-${PYSITELIB}/lazy_loader/tests/fake_pkg/__init__.pyo
-${PYSITELIB}/lazy_loader/tests/fake_pkg/some_func.py
-${PYSITELIB}/lazy_loader/tests/fake_pkg/some_func.pyc
-${PYSITELIB}/lazy_loader/tests/fake_pkg/some_func.pyo
-${PYSITELIB}/lazy_loader/tests/import_np_parallel.py
-${PYSITELIB}/lazy_loader/tests/import_np_parallel.pyc
-${PYSITELIB}/lazy_loader/tests/import_np_parallel.pyo
-${PYSITELIB}/lazy_loader/tests/test_lazy_loader.py
-${PYSITELIB}/lazy_loader/tests/test_lazy_loader.pyc
-${PYSITELIB}/lazy_loader/tests/test_lazy_loader.pyo

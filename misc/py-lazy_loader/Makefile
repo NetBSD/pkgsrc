@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/04/12 07:43:08 adam Exp $
+# $NetBSD: Makefile,v 1.7 2026/03/11 13:06:27 adam Exp $
 
-DISTNAME=	lazy_loader-0.4
+DISTNAME=	lazy_loader-0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lazy_loader/}
 
