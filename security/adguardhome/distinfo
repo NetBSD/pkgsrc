@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.5 2026/02/23 13:22:14 adam Exp $
+$NetBSD: distinfo,v 1.6 2026/03/11 06:35:28 adam Exp $
 
-BLAKE2s (adguardhome-0.107.72.tar.gz) = 7c7fe10c521c23947c8f04a9041450d6a30779bfefda770046adbffee393f3a4
-SHA512 (adguardhome-0.107.72.tar.gz) = c15a6b91ea4edfa85068c6386fecd6d35c7f13500ba3727dd7f1afe86d909d761d9cd0d147131cdd652948ff84af5078a4e2d7f3fd095e7fcbc7eaac9155484f
-Size (adguardhome-0.107.72.tar.gz) = 2367820 bytes
-BLAKE2s (adguardhome_frontend-0.107.72.tar.gz) = e43763ecc209d22b4b35aceb18f6447cb3c1a845589e160fe3aad00b5511edc7
-SHA512 (adguardhome_frontend-0.107.72.tar.gz) = eca6ab55bf874d9230b98254264ce40aa12954f307fec5ce538486c065d62e5fbe1f3afd45a8ed4b375f2e71d4e7fc93eacf01da47ac3e3fbd6874e5b98629ae
-Size (adguardhome_frontend-0.107.72.tar.gz) = 2591664 bytes
+BLAKE2s (adguardhome-0.107.73.tar.gz) = f857dc4c10cc7dd79bd32ea80898ad4eb6fa84e5f2a7619cd070f1717ad9a110
+SHA512 (adguardhome-0.107.73.tar.gz) = bae9cba07924af8c650af7cf5d1fdff33e6c64f0a5f1cc3757f9dd9a51b1a0910413a903bf8ce53569617490913bc13cc4b2d2280e0626c91aec6921a49ebdaf
+Size (adguardhome-0.107.73.tar.gz) = 2367844 bytes
+BLAKE2s (adguardhome_frontend-0.107.73.tar.gz) = eb506d0cfdfcc9bbd8bb3c2290c004faf44353077ddda1eab133f61816b62838
+SHA512 (adguardhome_frontend-0.107.73.tar.gz) = 28d0a9a8fbf070b55fdbf7f0b8047f80f6d3fe1e91b57868bf86a1a6f7b973427088edd82cb3b745f3fe4a9cbe540141e840587b6bdf85a7c5a312833fc753f0
+Size (adguardhome_frontend-0.107.73.tar.gz) = 2590478 bytes
 BLAKE2s (cloud.google.com_go_@v_v0.123.0.mod) = afb1302fadef31f0bbbb948bc5159854620df8e0c5446d8382379fdf64e2f0eb
 SHA512 (cloud.google.com_go_@v_v0.123.0.mod) = 82baa96acdb74b0d25966e01bcf97293ae4360671d890ed2c21aa372e11a6431a6190e109103650e6fbabca48020554c3cb92777e806ff5a177fa4b4aaec24b4
 Size (cloud.google.com_go_@v_v0.123.0.mod) = 2733 bytes
