@@ -1,3 +1,0 @@
-FFplay is a very simple and portable media player using the FFmpeg
-libraries and the SDL library.  It is mostly used as a testbed for
-the various FFmpeg APIs.
