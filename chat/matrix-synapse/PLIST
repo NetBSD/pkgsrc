@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.68 2026/02/26 14:10:44 gdt Exp $
+@comment $NetBSD: PLIST,v 1.69 2026/03/11 23:22:35 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -2045,6 +2045,7 @@ ${PYSITELIB}/synapse/synapse_rust/__init__.pyi
 ${PYSITELIB}/synapse/synapse_rust/acl.pyi
 ${PYSITELIB}/synapse/synapse_rust/events.pyi
 ${PYSITELIB}/synapse/synapse_rust/http_client.pyi
+${PYSITELIB}/synapse/synapse_rust/msc4388_rendezvous.pyi
 ${PYSITELIB}/synapse/synapse_rust/push.pyi
 ${PYSITELIB}/synapse/synapse_rust/rendezvous.pyi
 ${PYSITELIB}/synapse/synapse_rust/segmenter.pyi
