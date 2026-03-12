@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1702 2026/03/12 09:58:48 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1703 2026/03/12 10:44:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2344,3 +2344,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-astropy-iers-data to 0.2026.3.9.0.47.45 [adam 2026-03-12]
 	Updated lang/nodejs to 25.8.1 [adam 2026-03-12]
 	Updated lang/nodejs22 to 22.22.1 [adam 2026-03-12]
+	Updated devel/py-scikit-build to 0.19.0 [adam 2026-03-12]
+	Updated graphics/py-imageio to 2.37.3 [adam 2026-03-12]
