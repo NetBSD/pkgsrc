@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/09/15 17:04:38 taca Exp $
+# $NetBSD: Makefile,v 1.5 2026/03/12 15:56:25 taca Exp $
 
-DISTNAME=	typhoeus-1.5.0
+DISTNAME=	typhoeus-1.6.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,7 +8,7 @@ HOMEPAGE=	https://github.com/typhoeus/typhoeus
 COMMENT=	Wraps libcurl in order to make fast and reliable requests
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-ethon>=0.9.0:../../www/ruby-ethon
+DEPENDS+=	${RUBY_PKGPREFIX}-ethon>=0.18.0:../../www/ruby-ethon
 
 USE_LANGUAGES=	# none
 
