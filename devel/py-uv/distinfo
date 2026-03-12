@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2026/03/04 09:27:52 adam Exp $
+$NetBSD: distinfo,v 1.17 2026/03/12 13:21:19 adam Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -1452,9 +1452,6 @@ Size (sync_wrapper-1.0.2.crate) = 6958 bytes
 BLAKE2s (synstructure-0.13.2.crate) = 674ef97e051051a22c4ec20f4b53a60e382b933bd94e75d853ebb2f98a3a797d
 SHA512 (synstructure-0.13.2.crate) = 2698f4e80b93f7cf1d8ae97c4c42a7f61e7b7081f7f1bbb94d7f48ab7ae813a666d73c49ba3812cda9155e0138b55cc246fb96e5858e411a8d32bafb3e2b2afb
 Size (synstructure-0.13.2.crate) = 18950 bytes
-BLAKE2s (sys-info-0.9.1.crate) = 12245f0f4d7928c519ff98ed5595167eff5e174d5681832f28e76a786b10408a
-SHA512 (sys-info-0.9.1.crate) = 52e23efd5bba1ce07d7fffb8c2d6864a8056b1e8ce1b85c4d2d4b37b9d57dfa5a6c0eae9e2018e07af47469c3f7812ccbd27351cbd6c95a7b788ec87cd544b2e
-Size (sys-info-0.9.1.crate) = 20589 bytes
 BLAKE2s (system-configuration-0.7.0.crate) = 6586e0714b9e78b590ff23f9476c4f53876dc7578a4451827f888b42dbc34b4c
 SHA512 (system-configuration-0.7.0.crate) = c63948e2ac21e22171189795a06db7c79be47fb6e8903a1958b89b5afdd76b8c99de11697efc03584bd004b3b0c20739e75f71eae89ba67881b808eb314caf1f
 Size (system-configuration-0.7.0.crate) = 18064 bytes
@@ -1719,9 +1716,9 @@ Size (utf8parse-0.2.2.crate) = 13499 bytes
 BLAKE2s (uuid-1.21.0.crate) = b0179f6c77b3923d2c4b75d76097daf876ac079453f131d3c284a454bc577830
 SHA512 (uuid-1.21.0.crate) = af0eccf18ddc91b72e0043ece56e7a4679181d9a85b84d04dd2012f4215d43bbbfcb3114e8b086841aa4512beb6bebad4d43a092cba7f5efdd4771f70317c6e5
 Size (uuid-1.21.0.crate) = 62247 bytes
-BLAKE2s (uv-0.10.8.tar.gz) = af272082b83c166f0b0e8184afeb7532034e53f4c7e83667b160be5a01c606ef
-SHA512 (uv-0.10.8.tar.gz) = 35a8911ab98efc45080641fd0cd00dcf13e7afb230492db916dc37f9fb7ae007bd8fd7ca7a02f09159354b4fc30edd4360299cdaa785ce1168e4bd4505ee7845
-Size (uv-0.10.8.tar.gz) = 3936600 bytes
+BLAKE2s (uv-0.10.9.tar.gz) = c91197c8b4427c3b584269468cf256c795bd9690561eff76f5850b1f3f3dde05
+SHA512 (uv-0.10.9.tar.gz) = b34a1cad35f9d3d66a0c3c682d63f390255a0d390b2badb19ad56596bf14a37c8d1c8aa49123d19b06a8755fe7a70653267aa1d183b5b42bff2c3b95bd2fc858
+Size (uv-0.10.9.tar.gz) = 3945685 bytes
 BLAKE2s (valuable-0.1.1.crate) = df7602da20aa0212438759173532cf82c56ba05307e036b22bfddb318e2f82b7
 SHA512 (valuable-0.1.1.crate) = d8a4bffdc8a166d1ee11b87dd91cd68e5c898916b14db7039ad2faaad34f4bfef76f3fc3d17d6e7bf05e495778f7c9d5223fbf45331bd114f93fb6ec950eadbf
 Size (valuable-0.1.1.crate) = 28679 bytes
