@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2026/03/11 15:19:44 taca Exp $
+$NetBSD: distinfo,v 1.29 2026/03/12 16:08:38 taca Exp $
 
-BLAKE2s (php-ja-wordpress-20260227/wordpress-6.9.1-ja.tar.gz) = aadd53cfe5a006f51788b981b7e723e5a88105a63e608f0029c45252cb34b904
-SHA512 (php-ja-wordpress-20260227/wordpress-6.9.1-ja.tar.gz) = 9b4cdbfc1d1a36e3f3d46a02e6eb1bff948c64749938a774dff0227398d20909533eec966713c6880255be4f6d99cbdfa1ef7c0d3394213bc6c93ba4318aa9f8
-Size (php-ja-wordpress-20260227/wordpress-6.9.1-ja.tar.gz) = 34370806 bytes
+BLAKE2s (php-ja-wordpress-20260312/wordpress-6.9.2-ja.tar.gz) = 23f86a6ff2cad31346e52deeb7c754e8a540b0bd8a54bdd453eff7ce020dc937
+SHA512 (php-ja-wordpress-20260312/wordpress-6.9.2-ja.tar.gz) = 97b2ac21fa8b3b73412a3d4e4c8c9c835bc8cd54d34198862420114ff9988b6b5e63dc7cf63e7207a56e8d70301a2cbd0f956bb311cdbc9af61d6eac4849aa90
+Size (php-ja-wordpress-20260312/wordpress-6.9.2-ja.tar.gz) = 34370215 bytes
