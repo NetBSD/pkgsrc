@@ -1,4 +1,4 @@
-$NetBSD: patch-skbuild_platform__specifics_platform__factory.py,v 1.3 2023/05/15 20:57:36 adam Exp $
+$NetBSD: patch-skbuild_platform__specifics_platform__factory.py,v 1.4 2026/03/12 10:41:27 adam Exp $
 
 Add SunOS support.
 
@@ -10,6 +10,6 @@ Add SunOS support.
  
 -    if this_platform in {"freebsd", "netbsd", "os400", "openbsd"}:
 +    if this_platform in {"freebsd", "netbsd", "os400", "openbsd", "sunos"}:
-         from . import bsd
+         from . import bsd  # noqa: PLC0415
  
          return bsd.BSDPlatform()
