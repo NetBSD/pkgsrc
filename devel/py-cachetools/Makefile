@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2026/01/28 07:46:57 adam Exp $
+# $NetBSD: Makefile,v 1.33 2026/03/12 05:25:37 adam Exp $
 
-DISTNAME=	cachetools-6.2.6
+DISTNAME=	cachetools-7.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cachetools/}
