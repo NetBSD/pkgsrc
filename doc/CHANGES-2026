@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1695 2026/03/12 00:59:33 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.1696 2026/03/12 05:21:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2325,3 +2325,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Added pkgtools/depgraph version 20260309 [agc 2026-03-11]
 	Updated chat/matrix-synapse to 1.149.1 [gdt 2026-03-11]
 	Updated graphics/zxing-cpp to 3.0.2 [ryoon 2026-03-12]
+	Updated textproc/py-black to 26.3.1 [adam 2026-03-12]
+	Updated textproc/py-ujson to 5.12.0 [adam 2026-03-12]
+	Updated devel/py-filelock to 3.25.2 [adam 2026-03-12]
+	Updated devel/py-virtualenv to 21.2.0 [adam 2026-03-12]
