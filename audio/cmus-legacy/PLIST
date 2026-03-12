@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2024/03/16 17:53:11 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/03/12 20:28:42 wiz Exp $
 bin/cmus
 bin/cmus-remote
 ${PLIST.faad}lib/cmus/ip/aac.so
-${PLIST.ffmpeg}lib/cmus/ip/ffmpeg.so
 lib/cmus/ip/flac.so
 ${PLIST.mad}lib/cmus/ip/mad.so
 ${PLIST.mikmod}lib/cmus/ip/mikmod.so
