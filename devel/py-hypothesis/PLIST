@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2026/01/11 08:16:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.51 2026/03/12 05:45:45 adam Exp $
 bin/hypothesis-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -123,12 +123,6 @@ ${PYSITELIB}/hypothesis/internal/conjecture/data.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/datatree.py
 ${PYSITELIB}/hypothesis/internal/conjecture/datatree.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/datatree.pyo
-${PYSITELIB}/hypothesis/internal/conjecture/dfa/__init__.py
-${PYSITELIB}/hypothesis/internal/conjecture/dfa/__init__.pyc
-${PYSITELIB}/hypothesis/internal/conjecture/dfa/__init__.pyo
-${PYSITELIB}/hypothesis/internal/conjecture/dfa/lstar.py
-${PYSITELIB}/hypothesis/internal/conjecture/dfa/lstar.pyc
-${PYSITELIB}/hypothesis/internal/conjecture/dfa/lstar.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/engine.py
 ${PYSITELIB}/hypothesis/internal/conjecture/engine.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/engine.pyo
