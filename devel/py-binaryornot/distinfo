@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:18:13 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/03/12 05:33:28 adam Exp $
 
-BLAKE2s (binaryornot-0.4.4.tar.gz) = cbe5cf3f17da4a7445fc18d9b2fd32237ac906269770627ba99bdf855ccec709
-SHA512 (binaryornot-0.4.4.tar.gz) = 379e71b41824b9389ea02c64223e26c57694d07b749c197e3a6b9f10558c8d502e9b93a13ae6c3a4bca49064ffc650ce822073dc312fb06e50e06b8a3f04f419
-Size (binaryornot-0.4.4.tar.gz) = 371054 bytes
+BLAKE2s (binaryornot-0.6.0.tar.gz) = 04953fd37a1567d7af8a5b98045ffc89a506fdb095c2406363d2c4c15b47406b
+SHA512 (binaryornot-0.6.0.tar.gz) = df92e603c2b8ebb751c61a9c9aaf4d7849c07490e9541c1fde7f8bb7c90e54a88d09b5ac4abc43764ddeeb7847d0c7dee1f66cd8e63005d047657be4fb86d499
+Size (binaryornot-0.6.0.tar.gz) = 478718 bytes
