@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2025/10/09 07:57:30 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/03/12 05:35:35 adam Exp $
 
-DISTNAME=	cookiecutter-2.6.0
+DISTNAME=	cookiecutter-2.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cookiecutter/}
 
