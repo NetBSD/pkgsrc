@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.105 2026/01/10 11:40:02 adam Exp $
+# $NetBSD: Makefile,v 1.106 2026/03/12 05:21:00 adam Exp $
 
-DISTNAME=	virtualenv-20.36.1
+DISTNAME=	virtualenv-21.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
@@ -10,11 +10,12 @@ HOMEPAGE=	https://virtualenv.pypa.io/
 COMMENT=	Virtual Python Environment builder
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.3:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.17.1:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.4:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.7:../../devel/py-distlib
-DEPENDS+=	${PYPKGPREFIX}-filelock>=3.20.1:../../devel/py-filelock
+DEPENDS+=	${PYPKGPREFIX}-filelock>=3.24.2:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.9.1:../../misc/py-platformdirs
+DEPENDS+=	${PYPKGPREFIX}-python-discovery>=1:../../lang/py-python-discovery
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7.2.7:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-enable-subprocess>=1:../../devel/py-coverage-enable-subprocess
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=3.7:../../devel/py-flaky
@@ -36,8 +37,6 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.13.2:../../devel/py-typing-extensi
 .endif
 
 post-install:
-	# see patches
-	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/virtualenv/create/via_global_ref/api.py.orig
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} virtualenv virtualenv-${PYVERSSUFFIX} || ${TRUE}
 
