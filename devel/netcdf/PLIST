@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/10/27 11:28:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/03/12 06:02:45 adam Exp $
 bin/nc-config
 bin/nc4print
 bin/nccopy
@@ -13,6 +13,7 @@ hdf5/lib/plugin/lib__nch5shuffle.la
 hdf5/lib/plugin/lib__nch5szip.la
 hdf5/lib/plugin/lib__nczhdf5filters.la
 hdf5/lib/plugin/lib__nczstdfilters.la
+include/ncudfplugins.h
 include/netcdf.h
 include/netcdf_aux.h
 include/netcdf_dispatch.h
@@ -23,6 +24,7 @@ include/netcdf_json.h
 include/netcdf_mem.h
 include/netcdf_meta.h
 include/netcdf_proplist.h
+include/netcdf_vutils.h
 lib/libnetcdf.la
 lib/libnetcdf.settings
 lib/pkgconfig/netcdf.pc
