@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1714 2026/03/12 15:58:57 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1715 2026/03/12 16:08:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2360,3 +2360,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-sass-embedded to 1.98.0 [taca 2026-03-12]
 	Updated www/ruby-typhoeus to 1.6.0 [taca 2026-03-12]
 	Updated www/wordpress to 6.9.2 [taca 2026-03-12]
+	Updated www/php-ja-wordpress to 6.9.2 [taca 2026-03-12]
