@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1703 2026/03/12 10:44:07 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1704 2026/03/12 12:12:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2346,3 +2346,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nodejs22 to 22.22.1 [adam 2026-03-12]
 	Updated devel/py-scikit-build to 0.19.0 [adam 2026-03-12]
 	Updated graphics/py-imageio to 2.37.3 [adam 2026-03-12]
+	Updated devel/serie to 0.7.0 [pin 2026-03-12]
