@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.15 2026/03/04 09:27:52 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.16 2026/03/12 13:21:19 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aes-0.8.4
@@ -484,7 +484,6 @@ CARGO_CRATE_DEPENDS+=	svgtypes-0.16.1
 CARGO_CRATE_DEPENDS+=	syn-2.0.117
 CARGO_CRATE_DEPENDS+=	sync_wrapper-1.0.2
 CARGO_CRATE_DEPENDS+=	synstructure-0.13.2
-CARGO_CRATE_DEPENDS+=	sys-info-0.9.1
 CARGO_CRATE_DEPENDS+=	system-configuration-0.7.0
 CARGO_CRATE_DEPENDS+=	system-configuration-sys-0.6.0
 CARGO_CRATE_DEPENDS+=	tagu-0.1.6
