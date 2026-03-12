@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1708 2026/03/12 15:42:29 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1709 2026/03/12 15:46:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2354,3 +2354,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv to 0.10.9 [adam 2026-03-12]
 	Updated devel/py-uv-build to 0.10.9 [adam 2026-03-12]
 	Updated lang/ruby34 to 3.4.9 [taca 2026-03-12]
+	Updated archivers/php-pecl-zip to 1.22.8 [taca 2026-03-12]
