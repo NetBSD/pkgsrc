@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2025/08/20 20:00:02 adam Exp $
+# $NetBSD: Makefile,v 1.27 2026/03/12 05:13:51 adam Exp $
 
-DISTNAME=	ujson-5.11.0
+DISTNAME=	ujson-5.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/ujson/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/esnme/ultrajson
+HOMEPAGE=	https://github.com/ultrajson/ultrajson
 COMMENT=	Ultra fast JSON encoder and decoder for Python
 LICENSE=	modified-bsd
 
