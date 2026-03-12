@@ -1,4 +1,4 @@
-$NetBSD: patch-Cargo.toml,v 1.1 2025/12/07 11:24:57 adam Exp $
+$NetBSD: patch-Cargo.toml,v 1.2 2026/03/12 12:21:15 adam Exp $
 
 Local path to defguard_version crate.
 
@@ -9,7 +9,7 @@ Local path to defguard_version crate.
  
  [dependencies]
 -defguard_version = { git = "https://github.com/DefGuard/defguard.git", rev = "8649a9ba225d7bd2066a09c9e1347705c34bd158" }
-+defguard_version = { path = "../defguard-1.5.1/crates/defguard_version" }
++defguard_version = { path = "../defguard-1.6.4/crates/defguard_version" }
  # base `axum` deps
  axum = { version = "0.8", features = ["ws"] }
  axum-client-ip = "0.7"
