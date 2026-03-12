@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26928 2026/03/12 13:21:41 adam Exp $
+$NetBSD: TODO,v 1.26929 2026/03/12 21:58:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -388,16 +388,16 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-25.2.7 [wip]
-	o MesaLib-26.0.1
+	o MesaLib-26.0.2
 	o OdfConverter-4.0
 	o PACK-0.0.4
-	o PageEdit-2.7.0
+	o PageEdit-2.7.5
 	o R-GRASS-0.3.9
 	o R-RSQLite-2.6
 	o R-mapproj-3
 	o R-ncdf-1.6.9
 	o SQLiteCpp-2.5.0
-	o Sigil-2.7.0
+	o Sigil-2.7.5
 	o SOGo-5.12.5
 	o SOPE-5.12.5
 	o TiffIO-140a
@@ -1145,6 +1145,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qconf-2.5
 	o qgis-4.0
 	o qore-2.2.0
+	o qtcreator-19.0
 	o qutebrowser-3.0.1
 	o radare2-6.0
 	o rails-6.1.0
@@ -1331,6 +1332,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wbm-virtual-server-6.16
 	o wcalc-2.4
 	o webkit-gtk-2.50.5 [wip]
+	o webkit-gtk-2.50.6
 	o webmin-2.600
 	o websvn-2.6.0
 	o wgetpaste-2.30
