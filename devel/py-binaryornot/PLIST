@@ -1,16 +1,29 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/16 14:20:56 nils Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2026/03/12 05:33:28 adam Exp $
+bin/binaryornot
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/binaryornot/__init__.py
 ${PYSITELIB}/binaryornot/__init__.pyc
 ${PYSITELIB}/binaryornot/__init__.pyo
+${PYSITELIB}/binaryornot/__main__.py
+${PYSITELIB}/binaryornot/__main__.pyc
+${PYSITELIB}/binaryornot/__main__.pyo
 ${PYSITELIB}/binaryornot/check.py
 ${PYSITELIB}/binaryornot/check.pyc
 ${PYSITELIB}/binaryornot/check.pyo
+${PYSITELIB}/binaryornot/data/__init__.py
+${PYSITELIB}/binaryornot/data/__init__.pyc
+${PYSITELIB}/binaryornot/data/__init__.pyo
+${PYSITELIB}/binaryornot/data/binary_extensions.csv
+${PYSITELIB}/binaryornot/data/binary_formats.csv
+${PYSITELIB}/binaryornot/data/encodings.csv
 ${PYSITELIB}/binaryornot/helpers.py
 ${PYSITELIB}/binaryornot/helpers.pyc
 ${PYSITELIB}/binaryornot/helpers.pyo
+${PYSITELIB}/binaryornot/py.typed
+${PYSITELIB}/binaryornot/tree.py
+${PYSITELIB}/binaryornot/tree.pyc
+${PYSITELIB}/binaryornot/tree.pyo

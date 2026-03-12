@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/05/02 17:14:02 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/03/12 05:33:28 adam Exp $
 
-DISTNAME=	binaryornot-0.4.4
+DISTNAME=	binaryornot-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/binaryornot/}
 
@@ -11,11 +10,9 @@ HOMEPAGE=	https://github.com/audreyr/binaryornot
 COMMENT=	Guess whether a file is binary or text
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
