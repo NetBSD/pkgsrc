@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1710 2026/03/12 15:48:17 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1711 2026/03/12 15:50:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2356,3 +2356,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/ruby34 to 3.4.9 [taca 2026-03-12]
 	Updated archivers/php-pecl-zip to 1.22.8 [taca 2026-03-12]
 	Updated devel/ruby-rspec-rails to 8.0.4 [taca 2026-03-12]
+	Updated www/ruby-aws-partitions to 1.1224.0 [taca 2026-03-12]
