@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2025/12/27 08:42:45 adam Exp $
+$NetBSD: distinfo,v 1.18 2026/03/12 10:43:45 adam Exp $
 
-BLAKE2s (imageio-2.37.2.tar.gz) = a0997754e048174c33bc659e8cec1af59879c6c4b219bfb8abea53f0367d288e
-SHA512 (imageio-2.37.2.tar.gz) = 2859b6aba54e14fe1bb6758ee3415affa48979848eed63b7a58b6a1f0c820d9e5eb85e97d75e75de64543be5d7868e0fbb0d3c10a47f099c905d287bc2fc967f
-Size (imageio-2.37.2.tar.gz) = 389600 bytes
+BLAKE2s (imageio-2.37.3.tar.gz) = 56b8fd58af4464a7c0af84d975ddf0d3690014b5380d00cfdf0b816d0b7663a1
+SHA512 (imageio-2.37.3.tar.gz) = ffb015df9690269b246512f118343d849d4069b18ed7664cb5f31e6eb3d6d3e63978f524c28ad3e955767662779b339b9558c66136b85cfa6de3f966894475b4
+Size (imageio-2.37.3.tar.gz) = 389673 bytes
