@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.3 2025/10/23 20:39:05 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/03/12 12:19:38 adam Exp $
 
-PKGREVISION= 1
 .include "../../security/defguard/version.mk"
 
 DISTNAME=	defguard-${DEFGUARD_VERSION}
@@ -9,11 +8,6 @@ COMMENT=	True Zero-Trust WireGuard VPN with 2FA/MFA
 
 # Building web requires pnpm, which can't be easily build.
 EXTRA_DIST+=	${DISTNAME}-web-dist${EXTRACT_SUFX}
-
-USE_TOOLS+=	pkg-config
-MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 
 INSTALLATION_DIRS=	bin
 
