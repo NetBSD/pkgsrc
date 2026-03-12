@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2023/07/19 13:10:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2026/03/12 00:59:16 ryoon Exp $
 
 BUILDLINK_TREE+=	zxing-cpp
 
@@ -9,7 +9,7 @@ USE_CXX_FEATURES+=			c++17
 
 BUILDLINK_API_DEPENDS.zxing-cpp+=	zxing-cpp>=1.2.0
 BUILDLINK_ABI_DEPENDS.zxing-cpp+=	zxing-cpp>=2.0.0
-BUILDLINK_PKGSRCDIR.zxing-cpp?=		../../graphics/zxing-cpp
+BUILDLINK_PKGSRCDIR.zxing-cpp?=		../../wip/zxing-cpp
 .endif	# ZXING_CPP_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-zxing-cpp
