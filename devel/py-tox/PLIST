@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2025/01/23 16:25:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/03/12 05:26:51 adam Exp $
 bin/tox-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -50,6 +50,9 @@ ${PYSITELIB}/tox/config/loader/ini/replace.pyo
 ${PYSITELIB}/tox/config/loader/memory.py
 ${PYSITELIB}/tox/config/loader/memory.pyc
 ${PYSITELIB}/tox/config/loader/memory.pyo
+${PYSITELIB}/tox/config/loader/native.py
+${PYSITELIB}/tox/config/loader/native.pyc
+${PYSITELIB}/tox/config/loader/native.pyo
 ${PYSITELIB}/tox/config/loader/replacer.py
 ${PYSITELIB}/tox/config/loader/replacer.pyc
 ${PYSITELIB}/tox/config/loader/replacer.pyo
@@ -68,6 +71,9 @@ ${PYSITELIB}/tox/config/loader/toml/__init__.pyo
 ${PYSITELIB}/tox/config/loader/toml/_api.py
 ${PYSITELIB}/tox/config/loader/toml/_api.pyc
 ${PYSITELIB}/tox/config/loader/toml/_api.pyo
+${PYSITELIB}/tox/config/loader/toml/_product.py
+${PYSITELIB}/tox/config/loader/toml/_product.pyc
+${PYSITELIB}/tox/config/loader/toml/_product.pyo
 ${PYSITELIB}/tox/config/loader/toml/_replace.py
 ${PYSITELIB}/tox/config/loader/toml/_replace.pyc
 ${PYSITELIB}/tox/config/loader/toml/_replace.pyo
@@ -204,6 +210,9 @@ ${PYSITELIB}/tox/session/cmd/legacy.pyo
 ${PYSITELIB}/tox/session/cmd/list_env.py
 ${PYSITELIB}/tox/session/cmd/list_env.pyc
 ${PYSITELIB}/tox/session/cmd/list_env.pyo
+${PYSITELIB}/tox/session/cmd/man.py
+${PYSITELIB}/tox/session/cmd/man.pyc
+${PYSITELIB}/tox/session/cmd/man.pyo
 ${PYSITELIB}/tox/session/cmd/quickstart.py
 ${PYSITELIB}/tox/session/cmd/quickstart.pyc
 ${PYSITELIB}/tox/session/cmd/quickstart.pyo
@@ -225,9 +234,21 @@ ${PYSITELIB}/tox/session/cmd/run/single.pyo
 ${PYSITELIB}/tox/session/cmd/schema.py
 ${PYSITELIB}/tox/session/cmd/schema.pyc
 ${PYSITELIB}/tox/session/cmd/schema.pyo
-${PYSITELIB}/tox/session/cmd/show_config.py
-${PYSITELIB}/tox/session/cmd/show_config.pyc
-${PYSITELIB}/tox/session/cmd/show_config.pyo
+${PYSITELIB}/tox/session/cmd/show_config/__init__.py
+${PYSITELIB}/tox/session/cmd/show_config/__init__.pyc
+${PYSITELIB}/tox/session/cmd/show_config/__init__.pyo
+${PYSITELIB}/tox/session/cmd/show_config/common.py
+${PYSITELIB}/tox/session/cmd/show_config/common.pyc
+${PYSITELIB}/tox/session/cmd/show_config/common.pyo
+${PYSITELIB}/tox/session/cmd/show_config/ini.py
+${PYSITELIB}/tox/session/cmd/show_config/ini.pyc
+${PYSITELIB}/tox/session/cmd/show_config/ini.pyo
+${PYSITELIB}/tox/session/cmd/show_config/json_format.py
+${PYSITELIB}/tox/session/cmd/show_config/json_format.pyc
+${PYSITELIB}/tox/session/cmd/show_config/json_format.pyo
+${PYSITELIB}/tox/session/cmd/show_config/toml_format.py
+${PYSITELIB}/tox/session/cmd/show_config/toml_format.pyc
+${PYSITELIB}/tox/session/cmd/show_config/toml_format.pyo
 ${PYSITELIB}/tox/session/cmd/version_flag.py
 ${PYSITELIB}/tox/session/cmd/version_flag.pyc
 ${PYSITELIB}/tox/session/cmd/version_flag.pyo
@@ -265,6 +286,9 @@ ${PYSITELIB}/tox/tox_env/python/api.pyo
 ${PYSITELIB}/tox/tox_env/python/dependency_groups.py
 ${PYSITELIB}/tox/tox_env/python/dependency_groups.pyc
 ${PYSITELIB}/tox/tox_env/python/dependency_groups.pyo
+${PYSITELIB}/tox/tox_env/python/extras.py
+${PYSITELIB}/tox/tox_env/python/extras.pyc
+${PYSITELIB}/tox/tox_env/python/extras.pyo
 ${PYSITELIB}/tox/tox_env/python/package.py
 ${PYSITELIB}/tox/tox_env/python/package.pyc
 ${PYSITELIB}/tox/tox_env/python/package.pyo
@@ -289,6 +313,9 @@ ${PYSITELIB}/tox/tox_env/python/pip/req/util.pyo
 ${PYSITELIB}/tox/tox_env/python/pip/req_file.py
 ${PYSITELIB}/tox/tox_env/python/pip/req_file.pyc
 ${PYSITELIB}/tox/tox_env/python/pip/req_file.pyo
+${PYSITELIB}/tox/tox_env/python/pylock.py
+${PYSITELIB}/tox/tox_env/python/pylock.pyc
+${PYSITELIB}/tox/tox_env/python/pylock.pyo
 ${PYSITELIB}/tox/tox_env/python/runner.py
 ${PYSITELIB}/tox/tox_env/python/runner.pyc
 ${PYSITELIB}/tox/tox_env/python/runner.pyo
@@ -313,6 +340,9 @@ ${PYSITELIB}/tox/tox_env/python/virtual_env/package/util.pyo
 ${PYSITELIB}/tox/tox_env/python/virtual_env/runner.py
 ${PYSITELIB}/tox/tox_env/python/virtual_env/runner.pyc
 ${PYSITELIB}/tox/tox_env/python/virtual_env/runner.pyo
+${PYSITELIB}/tox/tox_env/python/virtual_env/subprocess_adapter.py
+${PYSITELIB}/tox/tox_env/python/virtual_env/subprocess_adapter.pyc
+${PYSITELIB}/tox/tox_env/python/virtual_env/subprocess_adapter.pyo
 ${PYSITELIB}/tox/tox_env/register.py
 ${PYSITELIB}/tox/tox_env/register.pyc
 ${PYSITELIB}/tox/tox_env/register.pyo
