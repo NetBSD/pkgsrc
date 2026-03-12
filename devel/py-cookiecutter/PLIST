@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/12 09:54:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/03/12 05:35:35 adam Exp $
 bin/cookiecutter-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -7,7 +7,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.md
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/cookiecutter/VERSION.txt
 ${PYSITELIB}/cookiecutter/__init__.py
 ${PYSITELIB}/cookiecutter/__init__.pyc
 ${PYSITELIB}/cookiecutter/__init__.pyo
