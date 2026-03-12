@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1705 2026/03/12 12:13:59 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1706 2026/03/12 12:21:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2348,3 +2348,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/py-imageio to 2.37.3 [adam 2026-03-12]
 	Updated devel/serie to 0.7.0 [pin 2026-03-12]
 	Updated net/xfr to 0.9.4 [pin 2026-03-12]
+	Updated security/defguard to 1.6.4 [adam 2026-03-12]
+	Updated security/defguard-gateway to 1.6.3 [adam 2026-03-12]
+	Updated security/defguard-proxy to 1.6.3 [adam 2026-03-12]
