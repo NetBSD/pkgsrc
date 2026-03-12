@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/09/15 15:54:15 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/03/12 10:41:26 adam Exp $
 
-DISTNAME=	scikit_build-0.18.1
+DISTNAME=	scikit_build-0.19.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-build/}
@@ -21,6 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools>=42.0.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-wheel>=0.32.0:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-build>=0.7:../../devel/py-build
 TEST_DEPENDS+=	${PYPKGPREFIX}-cython>=0.25.1:../../devel/py-cython
+TEST_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=1.10.4:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
