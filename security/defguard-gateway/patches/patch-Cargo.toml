@@ -1,18 +1,18 @@
-$NetBSD: patch-Cargo.toml,v 1.2 2025/10/21 18:31:28 adam Exp $
+$NetBSD: patch-Cargo.toml,v 1.3 2026/03/12 12:20:32 adam Exp $
 
 Paths to local crates.
 
---- Cargo.toml.orig	2025-10-21 13:13:54.651018185 +0000
+--- Cargo.toml.orig	2026-02-16 12:39:45.000000000 +0000
 +++ Cargo.toml
-@@ -4,7 +4,7 @@ version = "1.5.1"
- edition = "2021"
- 
- [dependencies]
--defguard_version = { git = "https://github.com/DefGuard/defguard.git", rev = "8649a9ba225d7bd2066a09c9e1347705c34bd158" }
-+defguard_version = { path = "../defguard-1.5.1/crates/defguard_version" }
+@@ -7,7 +7,7 @@ edition = "2024"
  axum = "0.8"
  base64 = "0.22"
  clap = { version = "4.5", features = ["derive", "env"] }
+-defguard_version = { git = "https://github.com/DefGuard/defguard.git", rev = "1441bdedb231d99cdf26641597df03e901ea3e8f" }
++defguard_version = { path = "../defguard-1.6.4/crates/defguard_version" }
+ defguard_wireguard_rs = "0.9"
+ env_logger = "0.11"
+ gethostname = "1.0"
 @@ -35,7 +35,7 @@ tonic-prost = "0.14"
  tower = "0.5"
  

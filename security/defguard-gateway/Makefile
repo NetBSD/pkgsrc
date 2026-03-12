@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2025/10/23 20:39:05 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/03/12 12:20:32 adam Exp $
 
-PKGREVISION= 1
 .include "../../security/defguard/version.mk"
 
-DISTNAME=	defguard-gateway-${DEFGUARD_VERSION}
+DISTNAME=	defguard-gateway-1.6.3
 GITHUB_PROJECT=	gateway
 
 COMMENT=	True Zero-Trust WireGuard VPN with 2FA/MFA
@@ -16,11 +15,6 @@ NFTNL_REV=	1a1147271f43b9d7182a114bb056a5224c35d38f
 DISTFILES+=	nftnl-${NFTNL_REV}.tar.gz
 
 SITES.nftnl-${NFTNL_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=defguard/}nftnl-rs/archive/${NFTNL_REV}.tar.gz
-
-USE_TOOLS+=	pkg-config
-MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 
 INSTALLATION_DIRS=	bin
 
