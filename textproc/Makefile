@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1581 2026/03/09 03:45:24 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1582 2026/03/12 02:52:45 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1242,8 +1242,8 @@ SUBDIR+=	py-sphinxcontrib-nwdiag
 SUBDIR+=	py-sphinxcontrib-phpdomain
 SUBDIR+=	py-sphinxcontrib-programoutput2
 SUBDIR+=	py-sphinxcontrib-qthelp
-SUBDIR+=	py-sphinxcontrib-serializinghtml
 SUBDIR+=	py-sphinxcontrib-seqdiag
+SUBDIR+=	py-sphinxcontrib-serializinghtml
 SUBDIR+=	py-sphinxcontrib-spelling
 SUBDIR+=	py-sphinxcontrib-websupport
 SUBDIR+=	py-sphinxygen
