@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2025/09/15 17:04:38 taca Exp $
+$NetBSD: distinfo,v 1.7 2026/03/12 15:56:25 taca Exp $
 
-BLAKE2s (typhoeus-1.5.0.gem) = f9349fbddc0c783aeabc3e60a174a77d439dd33b2004a34820afca1a85b3138f
-SHA512 (typhoeus-1.5.0.gem) = 006479d5023b4b812add09abedb225f54aa86797a936bb3a3ebe4e3d36b157dc6eab9eba9a67228f1d1ed47a8f68ea09424fc43fc4a6c66c1db7d96907dec905
-Size (typhoeus-1.5.0.gem) = 38912 bytes
+BLAKE2s (typhoeus-1.6.0.gem) = ec41a3fec6f37bfbd9e48a6411eb470ea69e7e28c444ad5221abeeefa5bd6bef
+SHA512 (typhoeus-1.6.0.gem) = bcb0497236db06012716fb0d576f90c187f85f911bfb9f19da1c9ae199b2167678b365477256e6bdf08a2bcc0de73b562b58cd613f14cabeb8cde9a841f2c239
+Size (typhoeus-1.6.0.gem) = 39424 bytes
