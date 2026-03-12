@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1707 2026/03/12 13:21:41 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1708 2026/03/12 15:42:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2353,3 +2353,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/defguard-proxy to 1.6.3 [adam 2026-03-12]
 	Updated devel/py-uv to 0.10.9 [adam 2026-03-12]
 	Updated devel/py-uv-build to 0.10.9 [adam 2026-03-12]
+	Updated lang/ruby34 to 3.4.9 [taca 2026-03-12]
