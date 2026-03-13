@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/11/11 10:38:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/03/13 08:29:17 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -24,6 +24,9 @@ ${PYSITELIB}/blessed/formatters.pyo
 ${PYSITELIB}/blessed/keyboard.py
 ${PYSITELIB}/blessed/keyboard.pyc
 ${PYSITELIB}/blessed/keyboard.pyo
+${PYSITELIB}/blessed/line_editor.py
+${PYSITELIB}/blessed/line_editor.pyc
+${PYSITELIB}/blessed/line_editor.pyo
 ${PYSITELIB}/blessed/mouse.py
 ${PYSITELIB}/blessed/mouse.pyc
 ${PYSITELIB}/blessed/mouse.pyo
