@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.94 2026/03/09 17:02:34 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2026/03/13 07:23:21 wiz Exp $
 
 DISTNAME=	google_auth-2.49.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google_auth/}
 
@@ -13,6 +14,7 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-asn1-modules>=0.2.1:../../security/py-asn1-modules
 DEPENDS+=	${PYPKGPREFIX}-rsa>=3.1.4:../../security/py-rsa
+DEPENDS+=	${PYPKGPREFIX}-JWT>=2.0:../../textproc/py-JWT
 TEST_DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.6.2:../../www/py-aiohttp
 TEST_DEPENDS+=	${PYPKGPREFIX}-aioresponses-[0-9]*:../../net/py-aioresponses
 TEST_DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
@@ -31,7 +33,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
 USE_LANGUAGES=	# none
 
 # as of 2.49.0
-# 2 failed, 1570 passed, 17 skipped, 91 warnings
+# 1 failed, 1571 passed, 17 skipped, 91 warnings
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
