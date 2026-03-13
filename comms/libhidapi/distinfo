@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.9 2023/05/23 17:54:04 nikita Exp $
+$NetBSD: distinfo,v 1.10 2026/03/13 10:37:25 tsutsui Exp $
 
-BLAKE2s (hidapi-0.14.0.tar.gz) = b2121c1d82fb4ddfddd66179a36c417f5a7bae08f8e040df8bb3c51aa57b3f12
-SHA512 (hidapi-0.14.0.tar.gz) = 66a045144f90b41438898b82f0398e80223323ebfe6e4f197d2713696bb3ae60f36aea5a37a9999b34b12294783fd7e4c28c6e785462559cbe21276009da1eac
-Size (hidapi-0.14.0.tar.gz) = 348221 bytes
+BLAKE2s (hidapi-0.15.0.tar.gz) = 194b619bd498bee0708388a97dd04f2af6e0065deb74d4aafa8572f6195e97d4
+SHA512 (hidapi-0.15.0.tar.gz) = a4ddd13a80a84956872fa52aa861b40e4959f301d8d91afe0feaf9dbd87394561e1fdd20cbf8cf47200845f80a8db8a934bc2e3025fe6f16435e37c17621e7b6
+Size (hidapi-0.15.0.tar.gz) = 363838 bytes
 SHA1 (patch-Makefile.am) = 8e39fc4650601af39c510107ca2b3c85029fb2df
 SHA1 (patch-configure.ac) = caf23d94ec0af608f63dfd3acba7b3624af78bdc
 SHA1 (patch-libusb_Makefile.am) = 2caf718bd7538bcc43b7eaea75dc5a7024f12581
+SHA1 (patch-netbsd_CMakeLists.txt) = 6a9ddb4e69be23cc34f59aee71520e17795b647a
+SHA1 (patch-netbsd_hid.c) = 1a882a1fc276fcc0175b1c0b84d27efdb7eeb748

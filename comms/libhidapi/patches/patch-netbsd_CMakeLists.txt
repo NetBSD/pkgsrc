@@ -1,0 +1,22 @@
+$NetBSD: patch-netbsd_CMakeLists.txt,v 1.1 2026/03/13 10:37:25 tsutsui Exp $
+
+- check iconv(3) arg type as libusb
+
+--- netbsd/CMakeLists.txt.orig	2026-03-13 06:26:53.507574456 +0000
++++ netbsd/CMakeLists.txt
+@@ -10,6 +10,15 @@ find_package(Threads REQUIRED)
+ 
+ target_link_libraries(hidapi_netbsd PRIVATE Threads::Threads)
+ 
++# check for error: "conflicting types for 'iconv'"
++check_c_source_compiles("#include<iconv.h>
++    extern size_t iconv (iconv_t cd, const char **inbuf, size_t *inbytesleft, char **outbuf, size_t *outbytesleft);
++    int main() {}"
++HIDAPI_ICONV_CONST)
++if(HIDAPI_ICONV_CONST)
++    target_compile_definitions(hidapi_netbsd PRIVATE "ICONV_CONST=const")
++endif()
++
+ set_target_properties(hidapi_netbsd
+     PROPERTIES
+         EXPORT_NAME "netbsd"

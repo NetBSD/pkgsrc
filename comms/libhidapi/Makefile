@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2025/08/20 11:34:48 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/03/13 10:37:25 tsutsui Exp $
 
 GITHUB_PROJECT=	hidapi
-GITHUB_TAG=	${GITHUB_PROJECT}-0.14.0
+GITHUB_TAG=	${GITHUB_PROJECT}-0.15.0
 DISTNAME=	${GITHUB_TAG}
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	comms devel
@@ -24,7 +24,7 @@ PKGCONFIG_OVERRIDE+=	pc/hidapi-hidraw.pc.in
 PKGCONFIG_OVERRIDE+=	pc/hidapi-libusb.pc.in
 PKGCONFIG_OVERRIDE+=	pc/hidapi.pc.in
 
-PLIST_VARS+=	libusb hidraw
+PLIST_VARS+=	libusb hidraw netbsd
 
 PLIST_SUBST+=	PKGVERSION=${PKGVERSION_NOREV}
 
@@ -34,6 +34,8 @@ PLIST_SUBST+=	PKGVERSION=${PKGVERSION_NOREV}
 PLIST.libusb=	yes
 .  if ${OPSYS} == "Linux"
 PLIST.hidraw=	yes
+.  elif ${OPSYS} == "NetBSD"
+PLIST.netbsd=	yes
 .  endif
 .endif
 
