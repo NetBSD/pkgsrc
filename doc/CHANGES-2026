@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1725 2026/03/13 13:17:54 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1726 2026/03/13 13:23:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2375,3 +2375,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-scrapy to 2.14.2 [adam 2026-03-13]
 	Updated math/py-simpleeval to 1.0.5 [adam 2026-03-13]
 	Updated textproc/py-phonenumbers to 9.0.26 [adam 2026-03-13]
+	Updated devel/py-nose2 to 0.16.0 [adam 2026-03-13]
