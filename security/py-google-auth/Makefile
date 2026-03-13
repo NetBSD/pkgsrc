@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.95 2026/03/13 07:23:21 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2026/03/13 08:32:44 adam Exp $
 
-DISTNAME=	google_auth-2.49.0
+DISTNAME=	google_auth-2.49.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google_auth/}
 
@@ -14,6 +13,7 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-asn1-modules>=0.2.1:../../security/py-asn1-modules
 DEPENDS+=	${PYPKGPREFIX}-rsa>=3.1.4:../../security/py-rsa
+# pyjwt
 DEPENDS+=	${PYPKGPREFIX}-JWT>=2.0:../../textproc/py-JWT
 TEST_DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.6.2:../../www/py-aiohttp
 TEST_DEPENDS+=	${PYPKGPREFIX}-aioresponses-[0-9]*:../../net/py-aioresponses
