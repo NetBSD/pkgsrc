@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1728 2026/03/13 15:13:02 msaitoh Exp $
+$NetBSD: CHANGES-2026,v 1.1729 2026/03/13 15:55:30 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2378,3 +2378,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-nose2 to 0.16.0 [adam 2026-03-13]
 	Updated sysutils/intel-microcode-netbsd to 20260210-rev1 [msaitoh 2026-03-13]
 	Updated sysutils/intel-microcode-netbsd to 20260227 [msaitoh 2026-03-13]
+	Updated net/ruby-addressable to 2.8.9 [tsutsui 2026-03-13]
