@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/03/13 08:42:38 adam Exp $
+# $NetBSD: Makefile,v 1.33 2026/03/13 10:56:21 adam Exp $
 
 DISTNAME=	node-v20.20.1
 EXTRACT_SUFX=	.tar.xz
@@ -12,9 +12,6 @@ FORCE_CXX_STD=		gnu++20
 
 # XXX: figure out a way to add rpaths to torque
 MAKE_ENV+=	LD_LIBRARY_PATH=${PREFIX}/lib
-
-# ImportError: cannot import name 'FancyURLopener' from 'urllib'
-#PYTHON_VERSIONS_INCOMPATIBLE=	314
 
 CONFIGURE_ARGS+=	--shared-nghttp3
 CONFIGURE_ARGS+=	--shared-ngtcp2
