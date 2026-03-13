@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2026/01/07 08:49:18 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2026/03/13 21:02:49 hauke Exp $
 
 PKGNAME=	hiawatha-${PKGVER}
-PKGREVISION=	1
 DISTNAME=	hiawatha-v${PKGVER}
-PKGVER=		11.8
+PKGVER=		12.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITLAB:=hsleisink/hiawatha/-/archive/v${PKGVER}/}
 EXTRACT_SUFX=	.tar.gz
@@ -131,7 +130,6 @@ post-extract:
 
 post-install:
 .if !empty(PKG_OPTIONS:Mmbedtls-private)
-	rm -r ${DESTDIR}${PREFIX}/include
 	rm ${DESTDIR}${PREFIX}/lib/hiawatha/*.a
 .endif
 .if empty(PKG_OPTIONS:Mletsencrypt)
