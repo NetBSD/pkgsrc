@@ -25,7 +25,7 @@
 #
 # Usage: depgraph [-V] [-v] [pkg...]
 
-DEPGRAPH_VERSION=20260309
+DEPGRAPH_VERSION=20260312
 
 case "$(uname -s)" in
 NetBSD)
@@ -136,7 +136,7 @@ dopkg() {
 		# llvm-19.1.7{,nb*}
 		# llvm>=19.1.7
 		deps=$(${pkg_info} -nq "${name}" | \
-			${sed} -E -e 's/(>=.*|\-\[0\-\9\]\*|\-[0-9.]+)(\{.*\})?$//' | \
+			${sed} -E -e 's/(>=.*|\-\[0\-9\]\*|\-[0-9.]+)(\{.*\})?$//' | \
 			${sort} -u)
 		for dep in ${deps}; do
 			if ${json}; then
