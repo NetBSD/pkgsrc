@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/12/27 08:56:26 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/03/13 11:11:11 adam Exp $
 
-DISTNAME=	cyclonedx_bom-7.2.1
+DISTNAME=	cyclonedx_bom-7.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cyclonedx-bom/}
@@ -12,9 +12,9 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-chardet>=5.1:../../converters/py-chardet
-DEPENDS+=	${PYPKGPREFIX}-cyclonedx-python-lib>=8.0:../../security/py-cyclonedx-python-lib
+DEPENDS+=	${PYPKGPREFIX}-cyclonedx-python-lib>=11.0:../../security/py-cyclonedx-python-lib
 DEPENDS+=	${PYPKGPREFIX}-packageurl>=0.11:../../devel/py-packageurl
-DEPENDS+=	${PYPKGPREFIX}-packaging>=24:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-packaging>=26:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pip-requirements-parser>=32.0:../../devel/py-pip-requirements-parser
 TEST_DEPENDS+=	${PYPKGPREFIX}-ddt>=1.7.2:../../devel/py-ddt
 TEST_DEPENDS+=	${PYPKGPREFIX}-pdm>=2.11:../../devel/py-pdm
