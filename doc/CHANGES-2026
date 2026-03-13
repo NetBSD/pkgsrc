@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1723 2026/03/13 10:39:02 tsutsui Exp $
+$NetBSD: CHANGES-2026,v 1.1724 2026/03/13 11:14:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2371,3 +2371,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nodejs20 to 20.20.1 [adam 2026-03-13]
 	Updated devel/capnproto to 1.4.0 [adam 2026-03-13]
 	Updated comms/libhidapi to 0.15.0 [tsutsui 2026-03-13]
+	Updated security/py-cyclonedx-bom to 7.2.2 [adam 2026-03-13]
+	Updated www/py-scrapy to 2.14.2 [adam 2026-03-13]
