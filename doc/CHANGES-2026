@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1727 2026/03/13 15:09:46 msaitoh Exp $
+$NetBSD: CHANGES-2026,v 1.1728 2026/03/13 15:13:02 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2377,3 +2377,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-phonenumbers to 9.0.26 [adam 2026-03-13]
 	Updated devel/py-nose2 to 0.16.0 [adam 2026-03-13]
 	Updated sysutils/intel-microcode-netbsd to 20260210-rev1 [msaitoh 2026-03-13]
+	Updated sysutils/intel-microcode-netbsd to 20260227 [msaitoh 2026-03-13]
