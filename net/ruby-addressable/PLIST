@@ -1,11 +1,8 @@
-@comment $NetBSD: PLIST,v 1.14 2026/01/11 04:47:01 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/03/13 15:55:13 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
-${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/addressable.gemspec
 ${GEM_LIBDIR}/lib/addressable.rb
 ${GEM_LIBDIR}/lib/addressable/idna.rb
 ${GEM_LIBDIR}/lib/addressable/idna/native.rb
@@ -13,17 +10,4 @@ ${GEM_LIBDIR}/lib/addressable/idna/pure.rb
 ${GEM_LIBDIR}/lib/addressable/template.rb
 ${GEM_LIBDIR}/lib/addressable/uri.rb
 ${GEM_LIBDIR}/lib/addressable/version.rb
-${GEM_LIBDIR}/spec/addressable/idna_spec.rb
-${GEM_LIBDIR}/spec/addressable/net_http_compat_spec.rb
-${GEM_LIBDIR}/spec/addressable/security_spec.rb
-${GEM_LIBDIR}/spec/addressable/template_spec.rb
-${GEM_LIBDIR}/spec/addressable/uri_spec.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/tasks/clobber.rake
-${GEM_LIBDIR}/tasks/gem.rake
-${GEM_LIBDIR}/tasks/git.rake
-${GEM_LIBDIR}/tasks/metrics.rake
-${GEM_LIBDIR}/tasks/profile.rake
-${GEM_LIBDIR}/tasks/rspec.rake
-${GEM_LIBDIR}/tasks/yard.rake
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
