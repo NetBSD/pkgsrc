@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2025/04/23 09:13:34 hauke Exp $
+# $NetBSD: options.mk,v 1.7 2026/03/13 21:24:38 hauke Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.hiawatha
 PKG_SUPPORTED_OPTIONS=		cache letsencrypt monitor rproxy tomahawk
@@ -52,13 +52,13 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_TOMAHAWK=off
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_TLS=on
 CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_MBEDTLS=on
 CONF_FILES+=	${EGDIR}/letsencrypt.conf ${PKG_SYSCONFDIR}/letsencrypt.conf
-.include "../../security/mbedtls3/buildlink3.mk"
+.include "../../security/mbedtls4/buildlink3.mk"
 .endif
 .if !empty(PKG_OPTIONS:Mmbedtls-private)
 # Should the enclosed mbedtls be replaced by an update?
 HIAWATHA_REPLACE_MBEDTLS=	no
 .if !empty(HIAWATHA_REPLACE_MBEDTLS:Myes)
-MTVER=		3.6.3
+MTVER=		4.0
 DISTFILES+=	mbedtls-${MTVER}.tar.bz2
 SITES.mbedtls-${MTVER}.tar.bz2= \
 		${MASTER_SITE_GITHUB:=Mbed-TLS/mbedtls/releases/download/mbedtls-${MTVER}/}
