@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2026/02/09 10:07:28 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/03/13 08:29:17 adam Exp $
 
-DISTNAME=	blessed-1.30.0
+DISTNAME=	blessed-1.33.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/blessed/}
@@ -11,7 +11,7 @@ COMMENT=	Wrapper around terminal styling, screen positioning, and input
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
-DEPENDS+=	${PYPKGPREFIX}-wcwidth>=0.5:../../devel/py-wcwidth
+DEPENDS+=	${PYPKGPREFIX}-wcwidth>=0.6:../../devel/py-wcwidth
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
