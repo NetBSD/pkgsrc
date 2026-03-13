@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1724 2026/03/13 11:14:16 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1725 2026/03/13 13:17:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2373,3 +2373,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated comms/libhidapi to 0.15.0 [tsutsui 2026-03-13]
 	Updated security/py-cyclonedx-bom to 7.2.2 [adam 2026-03-13]
 	Updated www/py-scrapy to 2.14.2 [adam 2026-03-13]
+	Updated math/py-simpleeval to 1.0.5 [adam 2026-03-13]
+	Updated textproc/py-phonenumbers to 9.0.26 [adam 2026-03-13]
