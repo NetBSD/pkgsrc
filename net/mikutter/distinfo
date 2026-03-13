@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.192 2025/02/08 14:13:53 tsutsui Exp $
+$NetBSD: distinfo,v 1.193 2026/03/13 17:09:49 tsutsui Exp $
 
 BLAKE2s (mikutter-5.1.1.tar.gz) = 0639e3a47a333237d05ab772f45bc7070e73cbc74f0172571996f4ed41467be3
 SHA512 (mikutter-5.1.1.tar.gz) = 65f52cf0385b8cda1f6714fd47e8bb19a5c7be2e264c9a447af1d266b08d1a8a97d46d347c2e78d5fbb7e90aff88f31372b57154414be3be6fd57a3dfc0863eb
 Size (mikutter-5.1.1.tar.gz) = 2384508 bytes
 SHA1 (patch-core_config.rb) = a3167ba101f840983d9d27ea36252ec5e0b0435d
+SHA1 (patch-core_mui_cairo__markup__generator.rb) = 196b7c8a0bc5384fb189f854e3a5fc695849a520
+SHA1 (patch-core_mui_cairo__sub__parts__message__base.rb) = 661a41e96b4b64d796de9348b46cb6b8f9664301
 SHA1 (patch-mikutter.rb) = 9eaf234bb01f8a429c84d5055537284b7e0450aa
+SHA1 (patch-plugin_gtk3_widget_miraclepainter.rb) = 85e440f46d40f570f5bfc5af772ecebdeb2b9c3d
