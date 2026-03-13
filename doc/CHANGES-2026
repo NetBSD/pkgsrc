@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1720 2026/03/13 07:23:31 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1721 2026/03/13 08:33:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2366,3 +2366,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated pkgtools/depgraph to 20260312 [agc 2026-03-12]
 	Updated textproc/py-JWT to 2.12.0 [adam 2026-03-13]
 	Updated security/py-google-auth to 2.49.0nb1 [wiz 2026-03-13]
+	Updated devel/py-blessed to 1.33.0 [adam 2026-03-13]
+	Updated security/py-google-auth to 2.49.1 [adam 2026-03-13]
