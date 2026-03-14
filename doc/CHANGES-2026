@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1737 2026/03/14 19:56:10 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1738 2026/03/14 23:46:22 morr Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2388,3 +2388,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-JWT to 2.12.1 [adam 2026-03-14]
 	Updated www/chromium to 146.0.7680.80 [kikadf 2026-03-14]
 	Updated sysutils/libpciaccess to 0.19 [wiz 2026-03-14]
+	Updated editors/vim-share to 9.2.0167 [morr 2026-03-14]
