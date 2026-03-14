@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2026/03/13 07:14:17 adam Exp $
+$NetBSD: distinfo,v 1.27 2026/03/14 12:50:05 adam Exp $
 
-BLAKE2s (pyjwt-2.12.0.tar.gz) = cdc8e79421d0922907f103818513343d2b83cacf13c231c8f658fe3a7947bfd0
-SHA512 (pyjwt-2.12.0.tar.gz) = 177ae71b1c11712cf6a4c2b8a98ee3869494c0cb5c6515b51fb0ffda218eab273b91a340b19e51dc03d4c2cf8f681ef898cbfbcfc74ec1756516466de9cf0ab7
-Size (pyjwt-2.12.0.tar.gz) = 102511 bytes
+BLAKE2s (pyjwt-2.12.1.tar.gz) = 1391ac0ce6268b183c01161c6679d735f4352d5ed744ce0a80ca50c1495f24f7
+SHA512 (pyjwt-2.12.1.tar.gz) = ad1e925b9aa39017bd83863233b39de06a919daed664d5835e58def47f6fb4435fab057a37a5fa8a7543f691f5fc9f82e6d879ef0ad60960f982a214b305078a
+Size (pyjwt-2.12.1.tar.gz) = 102564 bytes
