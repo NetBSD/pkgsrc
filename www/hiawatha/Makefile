@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2026/03/13 21:02:49 hauke Exp $
+# $NetBSD: Makefile,v 1.54 2026/03/14 13:03:20 hauke Exp $
 
 PKGNAME=	hiawatha-${PKGVER}
 DISTNAME=	hiawatha-v${PKGVER}
@@ -80,21 +80,6 @@ SUBST_STAGE.uid=	pre-configure
 SUBST_MESSAGE.uid=	Configuring Hiawatha user and group.
 SUBST_FILES.uid=	config/hiawatha.conf.in
 SUBST_VARS.uid=		HIAWATHA_USER HIAWATHA_GROUP
-
-.if !empty(HIAWATHA_REPLACE_MBEDTLS:Myes)
-SUBST_CLASSES+=		mbopt
-SUBST_STAGE.mbopt=	pre-configure
-SUBST_MESSAGE.mbopt=	Setting options for updated mbedtls library.
-SUBST_FILES.mbopt=	mbedtls/include/mbedtls/mbedtls_config.h
-# Enable threading support
-SUBST_SED.mbopt=	-E -e 's,^//(\#define MBEDTLS_THREADING_PTHREAD),\1,g'
-SUBST_SED.mbopt+=	-e 's,^//(\#define MBEDTLS_THREADING_C),\1,g'
-SUBST_SED.mbopt+=	-e 's,^//(\#define MBEDTLS_SSL_PROTO_TLS1_3),\1,g'
-SUBST_SED.mbopt+=	-e 's,^//(\#define MBEDTLS_SSL_TLS1_3_COMPATIBILITY_MODE),\1,g'
-# Disable secp192r1 and secp192k1
-SUBST_SED.mbopt+=	-e 's,(^\#define MBEDTLS_ECP_DP_SECP192R1_ENABLED),//\1,g'
-SUBST_SED.mbopt+=	-e 's,(^\#define MBEDTLS_ECP_DP_SECP192K1_ENABLED),//\1,g'
-.endif
 
 # mbedtls-private
 PRINT_PLIST_AWK+=	{ gsub(/^lib\/hiawatha\/libmbed.+$$/, "$${PLIST.mbedtls-private}&"); }
