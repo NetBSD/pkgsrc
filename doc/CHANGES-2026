@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1732 2026/03/13 21:03:01 hauke Exp $
+$NetBSD: CHANGES-2026,v 1.1733 2026/03/14 11:30:02 fox Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2382,3 +2382,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ruby-public_suffix to 7.0.5 [tsutsui 2026-03-13]
 	Updated net/mikutter to 5.1.1nb7 [tsutsui 2026-03-13]
 	Updated www/hiawatha to 12.0 [hauke 2026-03-13]
+	Updated audio/fasttracker2 to 2.11 [fox 2026-03-14]
