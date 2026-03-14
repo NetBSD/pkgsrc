@@ -1,10 +1,10 @@
-$NetBSD: patch-components_system__cpu_cpu__probe.cc,v 1.15 2026/02/15 09:04:04 kikadf Exp $
+$NetBSD: patch-components_system__cpu_cpu__probe.cc,v 1.16 2026/03/14 12:40:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/system_cpu/cpu_probe.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- components/system_cpu/cpu_probe.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ components/system_cpu/cpu_probe.cc
 @@ -20,6 +20,10 @@
  #include "components/system_cpu/cpu_probe_mac.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-media_gpu_v4l2_v4l2__utils.cc,v 1.7 2026/02/15 09:04:07 kikadf Exp $
+$NetBSD: patch-media_gpu_v4l2_v4l2__utils.cc,v 1.8 2026/03/14 12:40:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/v4l2/v4l2_utils.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- media/gpu/v4l2/v4l2_utils.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ media/gpu/v4l2/v4l2_utils.cc
 @@ -18,7 +18,7 @@
  #include <map>
@@ -15,7 +15,7 @@ $NetBSD: patch-media_gpu_v4l2_v4l2__utils.cc,v 1.7 2026/02/15 09:04:07 kikadf Ex
  #include <drm_fourcc.h>
  #endif
  
-@@ -244,7 +244,7 @@ std::optional<VideoFrameLayout> V4L2Form
+@@ -243,7 +243,7 @@ std::optional<VideoFrameLayout> V4L2Form
    }
    const VideoPixelFormat video_format = video_fourcc->ToVideoPixelFormat();
    uint64_t modifiers = gfx::NativePixmapHandle::kNoModifier;

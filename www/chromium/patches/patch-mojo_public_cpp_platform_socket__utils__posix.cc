@@ -1,10 +1,10 @@
-$NetBSD: patch-mojo_public_cpp_platform_socket__utils__posix.cc,v 1.15 2026/02/15 09:04:07 kikadf Exp $
+$NetBSD: patch-mojo_public_cpp_platform_socket__utils__posix.cc,v 1.16 2026/03/14 12:40:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/public/cpp/platform/socket_utils_posix.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- mojo/public/cpp/platform/socket_utils_posix.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ mojo/public/cpp/platform/socket_utils_posix.cc
 @@ -30,7 +30,7 @@ bool IsRecoverableError() {
  }

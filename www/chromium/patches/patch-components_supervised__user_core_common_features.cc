@@ -1,12 +1,12 @@
-$NetBSD: patch-components_supervised__user_core_common_features.cc,v 1.15 2026/02/15 09:04:04 kikadf Exp $
+$NetBSD: patch-components_supervised__user_core_common_features.cc,v 1.16 2026/03/14 12:40:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/common/features.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- components/supervised_user/core/common/features.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ components/supervised_user/core/common/features.cc
-@@ -32,7 +32,7 @@ BASE_FEATURE(kAllowSubframeLocalWebAppro
+@@ -30,7 +30,7 @@ BASE_FEATURE(kAllowSubframeLocalWebAppro
  #endif
  
  #if BUILDFLAG(IS_IOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-components_supervised__user_core_common_features.cc,v 1.15 2026/0
  const int kLocalWebApprovalBottomSheetLoadTimeoutDefaultValueMs = 5000;
  
  const base::FeatureParam<int> kLocalWebApprovalBottomSheetLoadTimeoutMs{
-@@ -41,7 +41,7 @@ const base::FeatureParam<int> kLocalWebA
+@@ -39,7 +39,7 @@ const base::FeatureParam<int> kLocalWebA
  #endif  // BUILDFLAG(IS_IOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_WIN)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-components_supervised__user_core_common_features.cc,v 1.15 2026/0
  BASE_FEATURE(kEnableLocalWebApprovalErrorDialog,
               base::FEATURE_ENABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
-@@ -53,7 +53,7 @@ BASE_FEATURE(kLocalWebApprovalsWidgetSup
+@@ -51,7 +51,7 @@ BASE_FEATURE(kLocalWebApprovalsWidgetSup
  // TODO(crbug.com/435635774): Release the interstitial v3 in all platforms.
  BASE_FEATURE(kSupervisedUserBlockInterstitialV3,
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || \
@@ -33,7 +33,7 @@ $NetBSD: patch-components_supervised__user_core_common_features.cc,v 1.15 2026/0
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -89,7 +89,7 @@ bool IsLocalWebApprovalsEnabledForSubfra
+@@ -87,7 +87,7 @@ bool IsLocalWebApprovalsEnabledForSubfra
    return base::FeatureList::IsEnabled(kAllowSubframeLocalWebApprovals);
  }
  

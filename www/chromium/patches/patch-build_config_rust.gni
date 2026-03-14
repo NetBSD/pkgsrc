@@ -1,10 +1,10 @@
-$NetBSD: patch-build_config_rust.gni,v 1.15 2026/02/15 09:03:56 kikadf Exp $
+$NetBSD: patch-build_config_rust.gni,v 1.16 2026/03/14 12:40:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/rust.gni.orig	2026-02-03 22:07:10.000000000 +0000
+--- build/config/rust.gni.orig	2026-03-11 22:12:25.000000000 +0000
 +++ build/config/rust.gni
 @@ -67,7 +67,8 @@ declare_args() {
    # set this to the output of `rustc -V`. Changing this string will cause all
@@ -16,11 +16,22 @@ $NetBSD: patch-build_config_rust.gni,v 1.15 2026/02/15 09:03:56 kikadf Exp $
  
    # Whether artifacts produced by the Rust compiler can participate in ThinLTO.
    #
-@@ -161,6 +162,13 @@ if (enable_rust) {
+@@ -180,6 +181,24 @@ if (enable_rust) {
    } else {
      toolchain_has_rust = custom_toolchain_supports_platform
      rustc_revision = rustc_version
-+    rust_revision_pieces = string_split(rustc_revision, " ")
++    # Example:
++    # rustc 1.88.0 c8f94230282a8e8c1148f3e657f0199aad909228 (c8f94230282a8e8c1148f3e657f0199aad909228-1-llvmorg-21-init-9266-g09006611 chromium)
++    # Trim it down as much as we can using GN.
++    rustc_revision = string_replace(rustc_revision, "rustc ", "")
++    rustc_revision = string_replace(rustc_revision, " chromium", "")
++    rustc_revision = string_replace(rustc_revision, "init-", "")
++    rustc_revision = string_replace(rustc_revision, "llvmorg-", "")
++    rustc_revision = string_replace(rustc_revision, " ", "")
++    rustc_revision = string_replace(rustc_revision, ".", "")
++    rustc_revision = string_replace(rustc_revision, "(", "-")
++    rustc_revision = string_replace(rustc_revision, ")", "")
++    rust_revision_pieces = string_split(rustc_version, " ")
 +    rust_version_pieces = string_split(rust_revision_pieces[1], ".")
 +    if (rust_version_pieces[1] == "85") {
 +      rustc_nightly_capability = false
@@ -30,7 +41,7 @@ $NetBSD: patch-build_config_rust.gni,v 1.15 2026/02/15 09:03:56 kikadf Exp $
    }
  }
  
-@@ -196,7 +204,7 @@ if (is_linux || is_chromeos) {
+@@ -215,7 +234,7 @@ if (is_linux || is_chromeos) {
    if (current_cpu == "arm64") {
      rust_abi_target = "aarch64-unknown-linux-gnu"
    } else if (current_cpu == "x86") {
@@ -39,7 +50,7 @@ $NetBSD: patch-build_config_rust.gni,v 1.15 2026/02/15 09:03:56 kikadf Exp $
    } else if (current_cpu == "x64") {
      rust_abi_target = "x86_64-unknown-linux-gnu"
    } else if (current_cpu == "arm") {
-@@ -336,7 +344,11 @@ if (is_linux || is_chromeos) {
+@@ -355,7 +374,11 @@ if (is_linux || is_chromeos) {
    }
  }
  

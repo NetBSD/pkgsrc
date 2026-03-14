@@ -1,14 +1,14 @@
-$NetBSD: patch-media_video_video__encode__accelerator__adapter.cc,v 1.15 2026/02/15 09:04:07 kikadf Exp $
+$NetBSD: patch-media_video_video__encode__accelerator__adapter.cc,v 1.16 2026/03/14 12:40:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/video_encode_accelerator_adapter.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- media/video/video_encode_accelerator_adapter.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ media/video/video_encode_accelerator_adapter.cc
 @@ -468,7 +468,7 @@ void VideoEncodeAcceleratorAdapter::Init
+ #endif  // BUILDFLAG(USE_PROPRIETARY_CODECS)
  
-   auto format = PIXEL_FORMAT_I420;
    auto storage_type = VideoEncodeAccelerator::Config::StorageType::kShmem;
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

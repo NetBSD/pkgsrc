@@ -1,20 +1,20 @@
-$NetBSD: patch-net_tools_net__watcher_net__watcher.cc,v 1.16 2026/02/15 09:04:08 kikadf Exp $
+$NetBSD: patch-net_tools_net__watcher_net__watcher.cc,v 1.17 2026/03/14 12:40:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/tools/net_watcher/net_watcher.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- net/tools/net_watcher/net_watcher.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ net/tools/net_watcher/net_watcher.cc
-@@ -32,7 +32,7 @@
+@@ -31,7 +31,7 @@
  #include "net/proxy_resolution/proxy_config_service.h"
  #include "net/proxy_resolution/proxy_config_with_annotation.h"
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "net/base/network_change_notifier_linux.h"
+ #include "third_party/abseil-cpp/absl/container/flat_hash_set.h"
  #endif
- 
 @@ -42,7 +42,7 @@
  
  namespace {

@@ -1,10 +1,10 @@
-$NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.15 2026/02/15 09:04:08 kikadf Exp $
+$NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.16 2026/03/14 12:40:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/udp_socket_posix.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- net/socket/udp_socket_posix.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ net/socket/udp_socket_posix.cc
 @@ -78,6 +78,32 @@ constexpr int kBindRetries = 10;
  constexpr int kPortStart = 1024;
@@ -94,7 +94,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.15 2026/02/15 09:04:08 kikad
    if (last_error == EADDRNOTAVAIL)
      return ERR_ADDRESS_IN_USE;
  #endif
-@@ -971,9 +1010,17 @@ int UDPSocketPosix::JoinGroup(const IPAd
+@@ -972,9 +1011,17 @@ int UDPSocketPosix::JoinGroup(const IPAd
      case IPAddress::kIPv4AddressSize: {
        if (addr_family_ != AF_INET)
          return ERR_ADDRESS_INVALID;
@@ -112,7 +112,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.15 2026/02/15 09:04:08 kikad
        mreq.imr_multiaddr = ToInAddr(group_address);
        int rv = setsockopt(socket_, IPPROTO_IP, IP_ADD_MEMBERSHIP,
                            &mreq, sizeof(mreq));
-@@ -1008,9 +1055,17 @@ int UDPSocketPosix::LeaveGroup(const IPA
+@@ -1009,9 +1056,17 @@ int UDPSocketPosix::LeaveGroup(const IPA
      case IPAddress::kIPv4AddressSize: {
        if (addr_family_ != AF_INET)
          return ERR_ADDRESS_INVALID;

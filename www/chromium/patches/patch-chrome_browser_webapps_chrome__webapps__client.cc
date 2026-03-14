@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_webapps_chrome__webapps__client.cc,v 1.7 2026/02/15 09:04:01 kikadf Exp $
+$NetBSD: patch-chrome_browser_webapps_chrome__webapps__client.cc,v 1.8 2026/03/14 12:40:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/webapps/chrome_webapps_client.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/webapps/chrome_webapps_client.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/webapps/chrome_webapps_client.cc
 @@ -11,7 +11,7 @@
  #include "url/origin.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_chrome__pages.cc,v 1.15 2026/02/15 09:04:00 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_chrome__pages.cc,v 1.16 2026/03/14 12:40:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/chrome_pages.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/ui/chrome_pages.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/ui/chrome_pages.cc
 @@ -87,12 +87,12 @@
  #include "components/signin/public/identity_manager/identity_manager.h"
@@ -30,7 +30,7 @@ $NetBSD: patch-chrome_browser_ui_chrome__pages.cc,v 1.15 2026/02/15 09:04:00 kik
                                     || url.SchemeIs(webapps::kIsolatedAppScheme)
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -416,7 +416,7 @@ void ShowChromeTips(Browser* browser) {
+@@ -413,7 +413,7 @@ void ShowChromeTips(Browser* browser) {
    ShowSingletonTab(browser, GURL(kChromeTipsURL));
  }
  
@@ -39,7 +39,7 @@ $NetBSD: patch-chrome_browser_ui_chrome__pages.cc,v 1.15 2026/02/15 09:04:00 kik
  void ShowChromeWhatsNew(Browser* browser) {
    ShowSingletonTab(browser, GURL(kChromeUIWhatsNewURL));
  }
-@@ -760,7 +760,7 @@ void ShowShortcutCustomizationApp(Profil
+@@ -761,7 +761,7 @@ void ShowShortcutCustomizationApp(Profil
  }
  #endif  // BUILDFLAG(IS_CHROMEOS)
  

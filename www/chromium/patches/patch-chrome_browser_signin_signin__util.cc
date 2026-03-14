@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_signin_signin__util.cc,v 1.15 2026/02/15 09:03:59 kikadf Exp $
+$NetBSD: patch-chrome_browser_signin_signin__util.cc,v 1.16 2026/03/14 12:40:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/signin/signin_util.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/signin/signin_util.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/signin/signin_util.cc
 @@ -49,7 +49,7 @@
  #include "services/network/public/mojom/cookie_manager.mojom.h"
@@ -12,8 +12,8 @@ $NetBSD: patch-chrome_browser_signin_signin__util.cc,v 1.15 2026/02/15 09:03:59 
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
- #include "chrome/browser/ui/browser_dialogs.h"
  #include "chrome/browser/ui/browser_finder.h"
+ #include "chrome/browser/ui/dialogs/browser_dialogs.h"
  #include "components/strings/grit/components_strings.h"
 @@ -100,7 +100,7 @@ CookiesMover::CookiesMover(base::WeakPtr
  CookiesMover::~CookiesMover() = default;
