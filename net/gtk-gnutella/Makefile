@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.145 2026/02/06 10:05:32 wiz Exp $
+# $NetBSD: Makefile,v 1.146 2026/03/14 12:45:56 adam Exp $
 
-DISTNAME=	gtk-gnutella-1.2.2
-PKGREVISION=	24
+DISTNAME=	gtk-gnutella-1.3.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk-gnutella/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,6 +10,7 @@ HOMEPAGE=	https://gtk-gnutella.sourceforge.net/
 COMMENT=	GTK-based gnutella client
 LICENSE=	gnu-gpl-v2
 
+USE_CC_FEATURES=	c99
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt pkg-config
 HAS_CONFIGURE=		yes
@@ -26,6 +26,11 @@ CONFIGURE_ARGS+=	--cc=${CC:Q}
 CONFIGURE_ARGS+=	--cflags=${CFLAGS:Unone:Q}
 CONFIGURE_ARGS+=	--yacc="yacc"
 
+.include "../../mk/compiler.mk"
+.if ${PKGSRC_COMPILER:Mgcc}
+# expected 'int' but argument is of type '_Bool'
+CPPFLAGS+=	-Wno-incompatible-pointer-types
+.endif
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "options.mk"
