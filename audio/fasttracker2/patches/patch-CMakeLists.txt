@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.10 2026/03/08 11:11:38 fox Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.11 2026/03/14 11:29:36 fox Exp $
 
 Only define __LINUX_ALSA__ on Linux.
 
@@ -9,7 +9,7 @@ Only define __LINUX_ALSA__ on Linux.
      PRIVATE m Threads::Threads ${SDL2_LIBRARIES})
  
 -target_compile_definitions(ft2-clone
--    PRIVATE HAS_MIDI
+-    PRIVATE HAS_MIDI)
 -
  if(UNIX)
      if(APPLE)
