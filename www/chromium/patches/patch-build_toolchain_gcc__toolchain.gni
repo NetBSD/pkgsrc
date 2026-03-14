@@ -1,10 +1,10 @@
-$NetBSD: patch-build_toolchain_gcc__toolchain.gni,v 1.15 2026/02/15 09:03:56 kikadf Exp $
+$NetBSD: patch-build_toolchain_gcc__toolchain.gni,v 1.16 2026/03/14 12:40:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/toolchain/gcc_toolchain.gni.orig	2026-02-03 22:07:10.000000000 +0000
+--- build/toolchain/gcc_toolchain.gni.orig	2026-03-11 22:12:25.000000000 +0000
 +++ build/toolchain/gcc_toolchain.gni
 @@ -46,6 +46,13 @@ if (enable_resource_allowlist_generation
        "enable_resource_allowlist_generation=true does not work for target_os=$target_os")
@@ -29,7 +29,7 @@ $NetBSD: patch-build_toolchain_gcc__toolchain.gni,v 1.15 2026/02/15 09:03:56 kik
  
        # Generate a map file to be used for binary size analysis.
        # Map file adds ~10% to the link time on a z620.
-@@ -908,22 +915,12 @@ template("gcc_toolchain") {
+@@ -913,22 +920,12 @@ template("gcc_toolchain") {
  # actually just be doing a native compile.
  template("clang_toolchain") {
    gcc_toolchain(target_name) {

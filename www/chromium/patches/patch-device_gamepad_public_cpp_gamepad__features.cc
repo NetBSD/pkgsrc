@@ -1,10 +1,10 @@
-$NetBSD: patch-device_gamepad_public_cpp_gamepad__features.cc,v 1.2 2026/02/15 09:04:06 kikadf Exp $
+$NetBSD: patch-device_gamepad_public_cpp_gamepad__features.cc,v 1.3 2026/03/14 12:40:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- device/gamepad/public/cpp/gamepad_features.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- device/gamepad/public/cpp/gamepad_features.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ device/gamepad/public/cpp/gamepad_features.cc
 @@ -38,7 +38,7 @@ BASE_FEATURE(kGamepadRawInputChangeEvent
  BASE_FEATURE(kIgnorePS5GamepadsInWgi, base::FEATURE_ENABLED_BY_DEFAULT);

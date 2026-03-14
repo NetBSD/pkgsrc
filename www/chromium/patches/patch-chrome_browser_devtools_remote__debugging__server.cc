@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_devtools_remote__debugging__server.cc,v 1.14 2026/02/15 09:03:57 kikadf Exp $
+$NetBSD: patch-chrome_browser_devtools_remote__debugging__server.cc,v 1.15 2026/03/14 12:40:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/devtools/remote_debugging_server.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/devtools/remote_debugging_server.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/devtools/remote_debugging_server.cc
 @@ -49,7 +49,7 @@ namespace {
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_devtools_remote__debugging__server.cc,v 1.14 2026/
  bool g_enable_default_user_data_dir_check_for_chromium_branding_for_testing =
      false;
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-@@ -179,7 +179,7 @@ IsRemoteDebuggingAllowed(const std::opti
+@@ -167,7 +167,7 @@ IsRemoteDebuggingAllowed(const std::opti
      return base::unexpected(
          RemoteDebuggingServer::NotStartedReason::kDisabledByPolicy);
    }
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_devtools_remote__debugging__server.cc,v 1.14 2026/
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
    constexpr bool default_user_data_dir_check_enabled = true;
  #else
-@@ -300,7 +300,7 @@ void RemoteDebuggingServer::EnableTether
+@@ -294,7 +294,7 @@ void RemoteDebuggingServer::EnableTether
    g_tethering_enabled = true;
  }
  

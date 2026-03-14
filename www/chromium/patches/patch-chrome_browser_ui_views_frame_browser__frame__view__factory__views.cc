@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_browser__frame__view__factory__views.cc,v 1.7 2026/02/15 09:04:00 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_browser__frame__view__factory__views.cc,v 1.8 2026/03/14 12:40:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_frame_view_factory_views.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/ui/views/frame/browser_frame_view_factory_views.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/ui/views/frame/browser_frame_view_factory_views.cc
 @@ -17,7 +17,7 @@
  #include "chrome/browser/ui/views/frame/browser_frame_view_win.h"

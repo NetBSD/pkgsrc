@@ -1,21 +1,21 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_browser__view.cc,v 1.15 2026/02/15 09:04:00 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_browser__view.cc,v 1.16 2026/03/14 12:40:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_view.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/ui/views/frame/browser_view.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/ui/views/frame/browser_view.cc
-@@ -2359,7 +2359,7 @@ void BrowserView::ToolbarSizeChanged(boo
+@@ -2437,7 +2437,7 @@ void BrowserView::ToolbarSizeChanged(boo
  }
  
  void BrowserView::TabDraggingStatusChanged(bool is_dragging) {
 -#if !BUILDFLAG(IS_LINUX)
 +#if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_BSD)
-   std::vector<ContentsWebView*> contents_web_views =
-       GetAllVisibleContentsWebViews();
+   UpdateFastResizeForContentViews(is_dragging);
  
-@@ -6014,7 +6014,7 @@ void BrowserView::MaybeShowProfileSwitch
+   if (!is_dragging) {
+@@ -5924,7 +5924,7 @@ void BrowserView::MaybeShowProfileSwitch
  }
  
  void BrowserView::MaybeShowSupervisedUserProfileSignInIPH() {
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_browser__view.cc,v 1.15 2026/02/15 
    if (!ShouldShowAvatarToolbarIPH()) {
      return;
    }
-@@ -6024,7 +6024,7 @@ void BrowserView::MaybeShowSupervisedUse
+@@ -5934,7 +5934,7 @@ void BrowserView::MaybeShowSupervisedUse
  }
  
  void BrowserView::MaybeShowSignInBenefitsIPH() {

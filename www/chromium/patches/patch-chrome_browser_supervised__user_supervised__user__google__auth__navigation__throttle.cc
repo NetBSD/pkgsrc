@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_supervised__user_supervised__user__google__auth__navigation__throttle.cc,v 1.15 2026/02/15 09:03:59 kikadf Exp $
+$NetBSD: patch-chrome_browser_supervised__user_supervised__user__google__auth__navigation__throttle.cc,v 1.16 2026/03/14 12:40:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_google_auth_navigation_throttle.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/supervised_user/supervised_user_google_auth_navigation_throttle.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/supervised_user/supervised_user_google_auth_navigation_throttle.cc
-@@ -33,12 +33,12 @@
+@@ -33,13 +33,13 @@
  #include "chrome/browser/supervised_user/child_accounts/child_account_service_android.h"
  #include "components/signin/public/identity_manager/identity_manager.h"
  #include "ui/android/view_android.h"
@@ -16,12 +16,13 @@ $NetBSD: patch-chrome_browser_supervised__user_supervised__user__google__auth__n
  #include "chrome/browser/supervised_user/supervised_user_verification_page.h"
  #endif
  
+ namespace {
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
- namespace {
+ 
  bool IsYouTubeInfrastructureSubframe(content::NavigationHandle* handle) {
    if (handle->GetNavigatingFrameType() != content::FrameType::kSubframe) {
-@@ -160,7 +160,7 @@ SupervisedUserGoogleAuthNavigationThrott
+@@ -173,7 +173,7 @@ SupervisedUserGoogleAuthNavigationThrott
      return content::NavigationThrottle::DEFER;
    }
  

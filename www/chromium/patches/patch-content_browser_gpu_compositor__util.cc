@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_gpu_compositor__util.cc,v 1.15 2026/02/15 09:04:04 kikadf Exp $
+$NetBSD: patch-content_browser_gpu_compositor__util.cc,v 1.16 2026/03/14 12:40:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/gpu/compositor_util.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- content/browser/gpu/compositor_util.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ content/browser/gpu/compositor_util.cc
 @@ -143,7 +143,7 @@ std::vector<GpuFeatureData> GetGpuFeatur
        "video_decode",
@@ -24,3 +24,12 @@ $NetBSD: patch-content_browser_gpu_compositor__util.cc,v 1.15 2026/02/15 09:04:0
            !base::FeatureList::IsEnabled(media::kAcceleratedVideoEncodeLinux)),
  #else
            command_line.HasSwitch(switches::kDisableAcceleratedVideoEncode)),
+@@ -217,7 +217,7 @@ std::vector<GpuFeatureData> GetGpuFeatur
+                             ? gpu::kGpuFeatureStatusEnabled
+                             : gpu::kGpuFeatureStatusDisabled);
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   features.emplace_back(
+       "webgpu_on_vk_via_gl_interop",
+       SafeGetFeatureStatus(gpu_feature_info,

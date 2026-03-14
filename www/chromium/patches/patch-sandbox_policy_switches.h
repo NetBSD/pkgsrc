@@ -1,10 +1,10 @@
-$NetBSD: patch-sandbox_policy_switches.h,v 1.15 2026/02/15 09:04:09 kikadf Exp $
+$NetBSD: patch-sandbox_policy_switches.h,v 1.16 2026/03/14 12:40:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/switches.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- sandbox/policy/switches.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ sandbox/policy/switches.h
 @@ -24,7 +24,8 @@ SANDBOX_POLICY_EXPORT extern const char 
  SANDBOX_POLICY_EXPORT extern const char kGpuSandboxAllowSysVShm[];

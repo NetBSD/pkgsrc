@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf Exp $
+$NetBSD: patch-chrome_browser_about__flags.cc,v 1.16 2026/03/14 12:40:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/about_flags.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/about_flags.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/about_flags.cc
 @@ -331,13 +331,13 @@
  #include "components/stylus_handwriting/win/features.h"
@@ -20,11 +20,20 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
 -    BUILDFLAG(IS_WIN)
 +    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/contextual_cueing/contextual_cueing_features.h"  // nogncheck
+ #include "chrome/browser/enterprise/data_protection/data_protection_features.h"
  #include "chrome/browser/enterprise/profile_management/profile_management_features.h"
- #include "chrome/browser/enterprise/webstore/features.h"
-@@ -821,6 +821,31 @@ const FeatureEntry::FeatureVariation
-          std::size(kWebIdentityDigitalIdentityCredentialHighRiskDialogParam),
-          nullptr}};
+@@ -354,7 +354,7 @@
+ #include "components/enterprise/platform_auth/platform_auth_features.h"
+ #endif
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/enterprise/reporting/reporting_features.h"
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
+ 
+@@ -787,6 +787,27 @@ const FeatureEntry::FeatureVariation
+          "identity request to Android OS",
+          kWebIdentityDigitalIdentityCredentialHighRiskDialogParam, nullptr}};
  
 +#if BUILDFLAG(IS_BSD)
 +const FeatureEntry::FeatureParam kAudioBackendPulseAudio[] = {
@@ -37,24 +46,20 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
 +        { "audio-backend", "alsa" }};
 +const FeatureEntry::FeatureVariation
 +    kAudioBackendVariations[] = {
-+        {"using PulseAudio by default if available", kAudioBackendPulseAudio,
-+         std::size(kAudioBackendPulseAudio),
-+         nullptr},
-+        {"using sndio by default if available", kAudioBackendSndio,
-+         std::size(kAudioBackendSndio),
-+         nullptr},
-+        {"using audioio by default if available", kAudioBackendAudioIO,
-+         std::size(kAudioBackendAudioIO),
-+         nullptr},
-+        {"using ALSA by default if available", kAudioBackendAlsa,
-+         std::size(kAudioBackendAlsa),
-+         nullptr}};
++        {"using PulseAudio by default if available",
++         kAudioBackendPulseAudio, nullptr},
++        {"using sndio by default if available",
++         kAudioBackendSndio, nullptr},
++        {"using audioio by default if available",
++         kAudioBackendAudioIO, nullptr},
++        {"using ALSA by default if available",
++         kAudioBackendAlsa, nullptr}};
 +#endif
 +
- const FeatureEntry::FeatureParam kClipboardMaximumAge60Seconds[] = {
-     {"UIClipboardMaximumAge", "60"}};
- const FeatureEntry::FeatureParam kClipboardMaximumAge90Seconds[] = {
-@@ -1292,7 +1317,7 @@ const FeatureEntry::FeatureVariation kRe
+ const FeatureEntry::FeatureParam kMBIModeLegacy[] = {{"mode", "legacy"}};
+ const FeatureEntry::FeatureParam kMBIModeEnabledPerRenderProcessHost[] = {
+     {"mode", "per_render_process_host"}};
+@@ -1211,7 +1232,7 @@ const FeatureEntry::FeatureVariation
  };
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -63,7 +68,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
  
  // A limited number of combinations of the rich autocompletion params.
  const FeatureEntry::FeatureParam kOmniboxRichAutocompletionAggressive1[] = {
-@@ -3912,7 +3937,7 @@ const FeatureEntry::FeatureVariation kAn
+@@ -3411,7 +3432,7 @@ const FeatureEntry::FeatureVariation kAn
  #endif  // BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -72,7 +77,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
  const flags_ui::FeatureEntry::FeatureParam kPwaNavigationCapturingDefaultOn[] =
      {{"link_capturing_state", "on_by_default"}};
  const flags_ui::FeatureEntry::FeatureParam kPwaNavigationCapturingDefaultOff[] =
-@@ -3942,7 +3967,7 @@ const flags_ui::FeatureEntry::FeatureVar
+@@ -3437,7 +3458,7 @@ const flags_ui::FeatureEntry::FeatureVar
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) ||
          // BUILDFLAG(IS_CHROMEOS)
  
@@ -81,7 +86,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
  const FeatureEntry::Choice kReplaceSyncPromosWithSignInPromosChoices[] = {
      {"Default", "", ""},
      {"Disabled", switches::kDisableFeatures,
-@@ -4179,7 +4204,7 @@ const FeatureEntry::FeatureVariation kSe
+@@ -3636,7 +3657,7 @@ const FeatureEntry::FeatureVariation kSe
  #endif  // BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -90,7 +95,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
  const FeatureEntry::FeatureParam kContextualCueingEnabledNoEngagementCap[] = {
      {"BackoffTime", "0h"},
      {"BackoffMultiplierBase", "0.0"},
-@@ -4963,7 +4988,7 @@ const FeatureEntry::FeatureVariation
+@@ -4375,7 +4396,7 @@ const FeatureEntry::FeatureVariation
  };
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -99,8 +104,8 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
  const FeatureEntry::FeatureParam kNtpCustomizeChromeAutoOpenOnEveryNTP[] = {
      {"max_customize_chrome_auto_shown_count", "5"},
      {"max_customize_chrome_auto_shown_session_count", "5"}};
-@@ -5081,7 +5106,7 @@ const FeatureEntry::FeatureVariation kSe
-      nullptr}};
+@@ -4476,7 +4497,7 @@ const FeatureEntry::FeatureVariation kSe
+      kSeamlessSigninCompactSignin, nullptr}};
  #endif  // BUILDFLAG(IS_ANDROID)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
@@ -108,16 +113,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
  const FeatureEntry::FeatureParam kProfilePickerTextVariation1[] = {
      {"profile-picker-variation", "keep-work-and-life-separate"}};
  const FeatureEntry::FeatureParam kProfilePickerTextVariation2[] = {
-@@ -5742,7 +5767,7 @@ const FeatureEntry kFeatureEntries[] = {
-     },
- #endif  // BUILDFLAG(IS_WIN)
- 
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-     {
-         "fluent-overlay-scrollbars",
-         flag_descriptions::kFluentOverlayScrollbarsName,
-@@ -6035,7 +6060,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -5448,7 +5469,7 @@ const FeatureEntry kFeatureEntries[] = {
       flag_descriptions::kEnableIsolatedWebAppDevModeName,
       flag_descriptions::kEnableIsolatedWebAppDevModeDescription, kOsDesktop,
       FEATURE_VALUE_TYPE(features::kIsolatedWebAppDevMode)},
@@ -126,7 +122,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"enable-iwa-key-distribution-component",
       flag_descriptions::kEnableIwaKeyDistributionComponentName,
       flag_descriptions::kEnableIwaKeyDistributionComponentDescription,
-@@ -6226,7 +6251,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -5639,7 +5660,7 @@ const FeatureEntry kFeatureEntries[] = {
       FEATURE_VALUE_TYPE(media::kUseSCContentSharingPicker)},
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -135,7 +131,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"pulseaudio-loopback-for-cast",
       flag_descriptions::kPulseaudioLoopbackForCastName,
       flag_descriptions::kPulseaudioLoopbackForCastDescription, kOsLinux,
-@@ -6246,6 +6271,16 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -5654,6 +5675,16 @@ const FeatureEntry kFeatureEntries[] = {
       flag_descriptions::kWaylandSessionManagementName,
       flag_descriptions::kWaylandSessionManagementDescription, kOsLinux,
       FEATURE_VALUE_TYPE(features::kWaylandSessionManagement)},
@@ -152,7 +148,16 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
  #endif  // BUILDFLAG(IS_LINUX)
  
  #if BUILDFLAG(ENABLE_VR)
-@@ -7088,7 +7123,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -6149,7 +6180,7 @@ const FeatureEntry kFeatureEntries[] = {
+      flag_descriptions::kFillOnAccountSelectDescription, kOsAll,
+      FEATURE_VALUE_TYPE(password_manager::features::kFillOnAccountSelect)},
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+     {"first-run-desktop-refresh",
+      flag_descriptions::kFirstRunDesktopRefreshName,
+      flag_descriptions::kFirstRunDesktopRefreshDescription,
+@@ -6485,7 +6516,7 @@ const FeatureEntry kFeatureEntries[] = {
                                      "MlUrlScoring")},
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -161,7 +166,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"contextual-search-box-uses-contextual-search-provider",
       flag_descriptions::kContextualSearchBoxUsesContextualSearchProviderName,
       flag_descriptions::
-@@ -7485,7 +7520,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -6893,7 +6924,7 @@ const FeatureEntry kFeatureEntries[] = {
                                      kNumSrpZpsRelatedSearches,
                                      "PowerTools")},
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -170,7 +175,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"history-embeddings", flag_descriptions::kHistoryEmbeddingsName,
       flag_descriptions::kHistoryEmbeddingsDescription, kOsDesktop,
       FEATURE_VALUE_TYPE(history_embeddings::kHistoryEmbeddings)},
-@@ -7676,7 +7711,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -7078,7 +7109,7 @@ const FeatureEntry kFeatureEntries[] = {
                                      "NtpRealboxNext")},
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -179,8 +184,8 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"ntp-customize-chrome-auto-open",
       flag_descriptions::kNtpCustomizeChromeAutoOpenName,
       flag_descriptions::kNtpCustomizeChromeAutoOpenDescription, kOsDesktop,
-@@ -7959,7 +7994,7 @@ const FeatureEntry kFeatureEntries[] = {
- #endif  // BUILDFLAG(ENABLE_PDF)
+@@ -7324,7 +7355,7 @@ const FeatureEntry kFeatureEntries[] = {
+ #endif  // BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(ENABLE_PRINTING)
 -#if BUILDFLAG(IS_LINUX)
@@ -188,16 +193,16 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"cups-ipp-printing-backend",
       flag_descriptions::kCupsIppPrintingBackendName,
       flag_descriptions::kCupsIppPrintingBackendDescription, kOsDesktop,
-@@ -8828,7 +8863,7 @@ const FeatureEntry kFeatureEntries[] = {
-      FEATURE_VALUE_TYPE(media::kGlobalMediaControlsUpdatedUI)},
- #endif  // !BUILDFLAG(IS_CHROMEOS)
+@@ -8177,7 +8208,7 @@ const FeatureEntry kFeatureEntries[] = {
+      FEATURE_VALUE_TYPE(ash::features::kGesturePropertiesDBusService)},
+ #endif  // BUILDFLAG(IS_CHROMEOS)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
      {"enable-network-service-sandbox",
       flag_descriptions::kEnableNetworkServiceSandboxName,
       flag_descriptions::kEnableNetworkServiceSandboxDescription,
-@@ -9366,7 +9401,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -8698,7 +8729,7 @@ const FeatureEntry kFeatureEntries[] = {
       flag_descriptions::kGlobalVaapiLockDescription, kOsCrOS | kOsLinux,
       FEATURE_VALUE_TYPE(media::kGlobalVaapiLock)},
  
@@ -206,7 +211,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {
          "ui-debug-tools",
          flag_descriptions::kUIDebugToolsName,
-@@ -9805,7 +9840,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -9147,7 +9178,7 @@ const FeatureEntry kFeatureEntries[] = {
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -215,7 +220,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"auto-picture-in-picture-for-video-playback",
       flag_descriptions::kAutoPictureInPictureForVideoPlaybackName,
       flag_descriptions::kAutoPictureInPictureForVideoPlaybackDescription,
-@@ -9990,7 +10025,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -9328,7 +9359,7 @@ const FeatureEntry kFeatureEntries[] = {
       flag_descriptions::kReduceTransferSizeUpdatedIPCDescription, kOsAll,
       FEATURE_VALUE_TYPE(network::features::kReduceTransferSizeUpdatedIPC)},
  
@@ -224,7 +229,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"reduce-user-agent-data-linux-platform-version",
       flag_descriptions::kReduceUserAgentDataLinuxPlatformVersionName,
       flag_descriptions::kReduceUserAgentDataLinuxPlatformVersionDescription,
-@@ -10512,7 +10547,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -9827,7 +9858,7 @@ const FeatureEntry kFeatureEntries[] = {
       flag_descriptions::kRcapsDynamicProfileCountryDescription, kOsAll,
       FEATURE_VALUE_TYPE(switches::kDynamicProfileCountry)},
  
@@ -233,7 +238,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"enable-generic-oidc-auth-profile-management",
       flag_descriptions::kEnableGenericOidcAuthProfileManagementName,
       flag_descriptions::kEnableGenericOidcAuthProfileManagementDescription,
-@@ -10527,7 +10562,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -9842,7 +9873,7 @@ const FeatureEntry kFeatureEntries[] = {
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -242,7 +247,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"enable-user-navigation-capturing-pwa",
       flag_descriptions::kPwaNavigationCapturingName,
       flag_descriptions::kPwaNavigationCapturingDescription,
-@@ -10925,7 +10960,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -10245,7 +10276,7 @@ const FeatureEntry kFeatureEntries[] = {
       flag_descriptions::kResponsiveIframesDescription, kOsAll,
       FEATURE_VALUE_TYPE(blink::features::kResponsiveIframes)},
  
@@ -251,7 +256,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"replace-sync-promos-with-sign-in-promos-desktop",
       flag_descriptions::kReplaceSyncPromosWithSignInPromosName,
       flag_descriptions::kReplaceSyncPromosWithSignInPromosDescription,
-@@ -11309,7 +11344,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -10601,7 +10632,7 @@ const FeatureEntry kFeatureEntries[] = {
           segmentation_platform::features::kSegmentationSurveyPage)},
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -260,7 +265,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"autofill-enable-buy-now-pay-later",
       flag_descriptions::kAutofillEnableBuyNowPayLaterName,
       flag_descriptions::kAutofillEnableBuyNowPayLaterDescription,
-@@ -11388,7 +11423,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -10680,7 +10711,7 @@ const FeatureEntry kFeatureEntries[] = {
           password_manager::features::kPasswordFormClientsideClassifier)},
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -269,7 +274,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"contextual-cueing", flag_descriptions::kContextualCueingName,
       flag_descriptions::kContextualCueingDescription, kOsDesktop,
       FEATURE_WITH_PARAMS_VALUE_TYPE(contextual_cueing::kContextualCueing,
-@@ -11750,7 +11785,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -11071,7 +11102,7 @@ const FeatureEntry kFeatureEntries[] = {
       FEATURE_VALUE_TYPE(ui::kUseNewEtc1Encoder)},
  #endif  // !BUILDFLAG(IS_ANDROID)
  
@@ -278,7 +283,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"automatic-usb-detach", flag_descriptions::kAutomaticUsbDetachName,
       flag_descriptions::kAutomaticUsbDetachDescription, kOsAndroid | kOsLinux,
       FEATURE_VALUE_TYPE(features::kAutomaticUsbDetach)},
-@@ -11786,7 +11821,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -11102,7 +11133,7 @@ const FeatureEntry kFeatureEntries[] = {
  #endif  // !BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -287,17 +292,17 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"autofill-enable-amount-extraction",
       flag_descriptions::kAutofillEnableAmountExtractionName,
       flag_descriptions::kAutofillEnableAmountExtractionDescription,
-@@ -11933,7 +11968,7 @@ const FeatureEntry kFeatureEntries[] = {
-          apps::chrome_app_deprecation::kAllowUserInstalledChromeApps)},
- #endif  // BUILDFLAG(IS_CHROMEOS)
+@@ -11254,7 +11285,7 @@ const FeatureEntry kFeatureEntries[] = {
+      FEATURE_VALUE_TYPE(
+          feature_engagement::kIPHAutofillCreditCardBenefitFeature)},
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
      {"chrome-web-store-navigation-throttle",
       flag_descriptions::kChromeWebStoreNavigationThrottleName,
       flag_descriptions::kChromeWebStoreNavigationThrottleDescription,
-@@ -11962,7 +11997,7 @@ const FeatureEntry kFeatureEntries[] = {
-      FEATURE_VALUE_TYPE(supervised_user::kSupervisedUserBlockInterstitialV3)},
+@@ -11300,7 +11331,7 @@ const FeatureEntry kFeatureEntries[] = {
+          supervised_user::kSupervisedUserUseUrlFilteringService)},
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
@@ -305,7 +310,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"autofill-enable-amount-extraction-testing",
       flag_descriptions::kAutofillEnableAmountExtractionTestingName,
       flag_descriptions::kAutofillEnableAmountExtractionTestingDescription,
-@@ -11977,7 +12012,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -11315,7 +11346,7 @@ const FeatureEntry kFeatureEntries[] = {
       flag_descriptions::kEnableWebAppPredictableAppUpdatingDescription, kOsAll,
       FEATURE_VALUE_TYPE(features::kWebAppPredictableAppUpdating)},
  
@@ -314,7 +319,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"root-scrollbar-follows-browser-theme",
       flag_descriptions::kRootScrollbarFollowsTheme,
       flag_descriptions::kRootScrollbarFollowsThemeDescription,
-@@ -12239,7 +12274,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -11569,7 +11600,7 @@ const FeatureEntry kFeatureEntries[] = {
  #endif  // BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -323,7 +328,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"tab-group-home", tabs::flag_descriptions::kTabGroupHomeName,
       tabs::flag_descriptions::kTabGroupHomeDescription, kOsDesktop,
       FEATURE_VALUE_TYPE(tabs::kTabGroupHome)},
-@@ -12322,7 +12357,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -11639,7 +11670,7 @@ const FeatureEntry kFeatureEntries[] = {
  #endif  // BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -332,7 +337,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"enable-site-search-allow-user-override-policy",
       flag_descriptions::kEnableSiteSearchAllowUserOverridePolicyName,
       flag_descriptions::kEnableSiteSearchAllowUserOverridePolicyDescription,
-@@ -12418,7 +12453,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -11720,7 +11751,7 @@ const FeatureEntry kFeatureEntries[] = {
  #endif  // BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -341,7 +346,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"autofill-enable-buy-now-pay-later-for-klarna",
       flag_descriptions::kAutofillEnableBuyNowPayLaterForKlarnaName,
       flag_descriptions::kAutofillEnableBuyNowPayLaterForKlarnaDescription,
-@@ -12491,7 +12526,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -11784,7 +11815,7 @@ const FeatureEntry kFeatureEntries[] = {
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -350,7 +355,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"autofill-enable-buy-now-pay-later-for-externally-linked",
       flag_descriptions::kAutofillEnableBuyNowPayLaterForExternallyLinkedName,
       flag_descriptions::
-@@ -12782,7 +12817,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -12093,7 +12124,7 @@ const FeatureEntry kFeatureEntries[] = {
  #endif  // !BUILDFLAG(IS_ANDROID),
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -359,8 +364,8 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"enable-ntp-enterprise-shortcuts",
       flag_descriptions::kEnableNtpEnterpriseShortcutsName,
       flag_descriptions::kEnableNtpEnterpriseShortcutsDescription,
-@@ -12924,7 +12959,7 @@ const FeatureEntry kFeatureEntries[] = {
-          autofill::features::kAutofillAndPasswordsInSameSurface)},
+@@ -12204,7 +12235,7 @@ const FeatureEntry kFeatureEntries[] = {
+ #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
 -    BUILDFLAG(IS_WIN)
@@ -368,7 +373,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"contextual-suggestion-ui-improvements",
       flag_descriptions::kContextualSuggestionsUiImprovementsName,
       flag_descriptions::kContextualSuggestionsUiImprovementsDescription,
-@@ -12944,7 +12979,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -12224,7 +12255,7 @@ const FeatureEntry kFeatureEntries[] = {
           autofill::features::kAutofillPreferBuyNowPayLaterBlocklists)},
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -377,7 +382,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"autofill-enable-ai-based-amount-extraction",
       flag_descriptions::kAutofillEnableAiBasedAmountExtractionName,
       flag_descriptions::kAutofillEnableAiBasedAmountExtractionDescription,
-@@ -13015,7 +13050,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -12306,7 +12337,7 @@ const FeatureEntry kFeatureEntries[] = {
       FEATURE_VALUE_TYPE(features::kCryptographyComplianceCnsa)},
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -386,7 +391,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"lens-reinvocation-affordance",
       flag_descriptions::kLensSearchReinvocationAffordanceName,
       flag_descriptions::kLensSearchReinvocationAffordanceDescription,
-@@ -13073,7 +13108,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -12364,7 +12395,7 @@ const FeatureEntry kFeatureEntries[] = {
       STRING_VALUE_TYPE(variations::switches::kVariationsSeedCorpus, "")},
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -395,7 +400,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"passkey-unlock-manager", flag_descriptions::kPasskeyUnlockManagerName,
       flag_descriptions::kPasskeyUnlockManagerDescription, kOsDesktop,
       FEATURE_VALUE_TYPE(device::kPasskeyUnlockManager)},
-@@ -13114,7 +13149,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -12405,7 +12436,7 @@ const FeatureEntry kFeatureEntries[] = {
       FEATURE_VALUE_TYPE(features::kUserValueDefaultBrowserStrings)},
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -404,7 +409,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"read-anything-read-aloud-ts-text-segmentation",
       flag_descriptions::kReadAnythingReadAloudTsTextSegmentationName,
       flag_descriptions::kReadAnythingReadAloudTsTextSegmentationDescription,
-@@ -13126,7 +13161,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -12417,7 +12448,7 @@ const FeatureEntry kFeatureEntries[] = {
       flag_descriptions::kHandleMdmErrorsForDasherAccountsDescription, kOsAll,
       FEATURE_VALUE_TYPE(switches::kHandleMdmErrorsForDasherAccounts)},
  
@@ -413,7 +418,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"profile-creation-decline-signin-cta-experiment",
       flag_descriptions::kProfileCreationDeclineSigninCTAExperimentName,
       flag_descriptions::kProfileCreationDeclineSigninCTAExperimentDescription,
-@@ -13134,7 +13169,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -12425,7 +12456,7 @@ const FeatureEntry kFeatureEntries[] = {
       FEATURE_VALUE_TYPE(switches::kProfileCreationDeclineSigninCTAExperiment)},
  #endif
  
@@ -422,7 +427,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"profile-creation-friction-reduction-experiment-prefill-name-requirement",
       flag_descriptions::
           kProfileCreationFrictionReductionExperimentPrefillNameRequirementName,
-@@ -13146,7 +13181,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -12437,7 +12468,7 @@ const FeatureEntry kFeatureEntries[] = {
               kProfileCreationFrictionReductionExperimentPrefillNameRequirement)},
  #endif
  
@@ -431,7 +436,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"profile-creation-friction-reduction-experiment-remove-signin-step",
       flag_descriptions::
           kProfileCreationFrictionReductionExperimentRemoveSigninStepName,
-@@ -13158,7 +13193,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -12449,7 +12480,7 @@ const FeatureEntry kFeatureEntries[] = {
               kProfileCreationFrictionReductionExperimentRemoveSigninStep)},
  #endif
  
@@ -440,7 +445,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"profile-creation-friction-reduction-experiment-skip-customize-profile",
       flag_descriptions::
           kProfileCreationFrictionReductionExperimentSkipCustomizeProfileName,
-@@ -13170,7 +13205,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -12461,7 +12492,7 @@ const FeatureEntry kFeatureEntries[] = {
               kProfileCreationFrictionReductionExperimentSkipCustomizeProfile)},
  #endif
  
@@ -449,7 +454,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"show-profile-picker-to-all-users-experiment",
       flag_descriptions::kShowProfilePickerToAllUsersExperimentName,
       flag_descriptions::kShowProfilePickerToAllUsersExperimentDescription,
-@@ -13178,7 +13213,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -12469,7 +12500,7 @@ const FeatureEntry kFeatureEntries[] = {
       FEATURE_VALUE_TYPE(switches::kShowProfilePickerToAllUsersExperiment)},
  #endif
  
@@ -458,7 +463,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"open-all-profiles-from-profile-picker-experiment",
       flag_descriptions::kOpenAllProfilesFromProfilePickerExperimentName,
       flag_descriptions::kOpenAllProfilesFromProfilePickerExperimentDescription,
-@@ -13221,7 +13256,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -12512,7 +12543,7 @@ const FeatureEntry kFeatureEntries[] = {
                                      "AndroidDesktopZoomScaling")},
  #endif
  
@@ -467,7 +472,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"profile-picker-text-variations",
       flag_descriptions::kProfilePickerTextVariationsName,
       flag_descriptions::kProfilePickerTextVariationsDescription,
-@@ -13232,7 +13267,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -12523,7 +12554,7 @@ const FeatureEntry kFeatureEntries[] = {
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -476,7 +481,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"lens-overlay-optimization-filter",
       flag_descriptions::kLensOverlayOptimizationFilterName,
       flag_descriptions::kLensOverlayOptimizationFilterDescription, kOsDesktop,
-@@ -13251,7 +13286,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -12542,7 +12573,7 @@ const FeatureEntry kFeatureEntries[] = {
       FEATURE_VALUE_TYPE(network::features::kConnectionAllowlists)},
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -485,7 +490,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"read-anything-with-readability-enabled",
       flag_descriptions::kReadAnythingWithReadabilityName,
       flag_descriptions::kReadAnythingWithReadabilityDescription, kOsDesktop,
-@@ -13259,7 +13294,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -12550,7 +12581,7 @@ const FeatureEntry kFeatureEntries[] = {
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -494,7 +499,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"read-anything-omnibox-chip",
       flag_descriptions::kReadAnythingOmniboxChipName,
       flag_descriptions::kReadAnythingOmniboxChipDescription, kOsDesktop,
-@@ -13303,7 +13338,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -12579,7 +12610,7 @@ const FeatureEntry kFeatureEntries[] = {
           autofill::features::kAutofillDisableBnplCountryCheckForTesting)},
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -503,7 +508,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"infobar-prioritization", flag_descriptions::kInfobarPrioritizationName,
       flag_descriptions::kInfobarPrioritizationDescription, kOsDesktop,
       FEATURE_VALUE_TYPE(infobars::features::kInfobarPrioritization)},
-@@ -13321,7 +13356,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -12597,7 +12628,7 @@ const FeatureEntry kFeatureEntries[] = {
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -512,7 +517,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"read-anything-immersive-reading-mode",
       flag_descriptions::kReadAnythingImmersiveReadingModeName,
       flag_descriptions::kReadAnythingImmersiveReadingModeDescription,
-@@ -13334,7 +13369,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -12610,7 +12641,7 @@ const FeatureEntry kFeatureEntries[] = {
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -521,7 +526,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"lens-overlay-non-blocking-privacy-notice",
       flag_descriptions::kLensOverlayNonBlockingPrivacyNoticeName,
       flag_descriptions::kLensOverlayNonBlockingPrivacyNoticeDescription,
-@@ -13407,7 +13442,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -12683,7 +12714,7 @@ const FeatureEntry kFeatureEntries[] = {
  #endif  // BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -530,7 +535,7 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"enable-your-saved-info-settings-page",
       flag_descriptions::kYourSavedInfoSettingsPageName,
       flag_descriptions::kYourSavedInfoSettingsPageDescription, kOsDesktop,
-@@ -13504,14 +13539,14 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -12780,14 +12811,14 @@ const FeatureEntry kFeatureEntries[] = {
           autofill::features::
               kAutofillAiBasedAmountExtractionIgnoreSeenTermsForTesting)},
  
@@ -547,3 +552,21 @@ $NetBSD: patch-chrome_browser_about__flags.cc,v 1.15 2026/02/15 09:03:57 kikadf 
      {"read-anything-line-focus", flag_descriptions::kReadAnythingLineFocusName,
       flag_descriptions::kReadAnythingLineFocusDescription, kOsDesktop,
       FEATURE_VALUE_TYPE(features::kReadAnythingLineFocus)},
+@@ -12811,7 +12842,7 @@ const FeatureEntry kFeatureEntries[] = {
+      FEATURE_VALUE_TYPE(payments::android::kDeduplicateNativePaymentApps)},
+ #endif
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+     {"password-upload-ui-update",
+      flag_descriptions::kPasswordUploadUiUpdateName,
+      flag_descriptions::kPasswordUploadUiUpdateDescription,
+@@ -12840,7 +12871,7 @@ const FeatureEntry kFeatureEntries[] = {
+      FEATURE_VALUE_TYPE(chrome::android::kAlwaysDrawCompositedToolbarHairline)},
+ #endif
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+     {"saas-usage-reporting", flag_descriptions::kSaasUsageReportingName,
+      flag_descriptions::kSaasUsageReportingDescription,
+      kOsLinux | kOsMac | kOsWin,

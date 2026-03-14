@@ -1,12 +1,21 @@
-$NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.14 2026/02/15 09:04:04 kikadf Exp $
+$NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.15 2026/03/14 12:40:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/signin/public/base/signin_switches.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- components/signin/public/base/signin_switches.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ components/signin/public/base/signin_switches.h
-@@ -94,7 +94,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+@@ -62,7 +62,7 @@ bool IsAvatarSyncPromoFeatureEnabled();
+ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+ base::TimeDelta GetAvatarSyncPromoFeatureMinimumCookeAgeParam();
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // A HaTS survey flag for the survey to gather user feedback before any changes
+ // to the FRE as part of Chrome Desktop FRE Refresh project.
+ //
+@@ -106,7 +106,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kChromeAndroidIdentitySurveyBookmarkPromo);
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -15,7 +24,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.14 2026/02/1
  // Enables surveys to measure the effectiveness of the identity model.
  // These surveys would be displayed after interactions such as signin, profile
  // switching, etc. Please keep sorted alphabetically.
-@@ -126,7 +126,7 @@ BASE_DECLARE_FEATURE(kChromeIdentitySurv
+@@ -183,7 +183,7 @@ BASE_DECLARE_FEATURE_PARAM(
  // LINT.ThenChange(//chrome/browser/signin/signin_hats_util.cc)
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
@@ -24,7 +33,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.14 2026/02/1
  // Controls the duration for which the launch of an identity survey is delayed.
  COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kChromeIdentitySurveyLaunchWithDelay);
-@@ -290,7 +290,7 @@ BASE_DECLARE_FEATURE_PARAM(base::TimeDel
+@@ -353,7 +353,7 @@ BASE_DECLARE_FEATURE_PARAM(base::TimeDel
                             kOfferMigrationToDiceUsersMinTimeBetweenDialogs);
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)
  
@@ -33,16 +42,16 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.14 2026/02/1
  // Experimenting with a button to all profiles from the profile picker.
  COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kOpenAllProfilesFromProfilePickerExperiment);
-@@ -299,7 +299,7 @@ extern const base::FeatureParam<int>
+@@ -362,7 +362,7 @@ extern const base::FeatureParam<int>
      kMaxProfilesCountToShowOpenAllButtonInProfilePicker;
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- // Experimenting with changing the secondary CTA for FRE and new profile
- // creation.
+ // Add new entry points for uploading passwords to account storage and update
+ // existing ones.
  COMPONENT_EXPORT(SIGNIN_SWITCHES)
-@@ -370,7 +370,7 @@ extern const base::FeatureParam<int> kCo
+@@ -448,7 +448,7 @@ extern const base::FeatureParam<int> kCo
  COMPONENT_EXPORT(SIGNIN_SWITCHES)
  extern const base::FeatureParam<int> kContextualSigninPromoDismissedThreshold;
  
@@ -51,3 +60,12 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.14 2026/02/1
  // Uses the Material Next theme for the signin promo.
  COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kSignInPromoMaterialNextUI);
+@@ -491,7 +491,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+ BASE_DECLARE_FEATURE(kSupportAddSessionEmailPrefill);
+ #endif
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // Kill switch for displaying sign-in errors in the profile picker.
+ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+ BASE_DECLARE_FEATURE(kSupportErrorsInProfilePicker);

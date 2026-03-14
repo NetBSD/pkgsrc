@@ -1,12 +1,12 @@
-$NetBSD: patch-content_utility_on__device__model_on__device__model__sandbox__init.cc,v 1.11 2026/02/15 09:04:05 kikadf Exp $
+$NetBSD: patch-content_utility_on__device__model_on__device__model__sandbox__init.cc,v 1.12 2026/03/14 12:40:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/on_device_model/on_device_model_sandbox_init.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- content/utility/on_device_model/on_device_model_sandbox_init.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ content/utility/on_device_model/on_device_model_sandbox_init.cc
-@@ -17,16 +17,20 @@
+@@ -18,16 +18,20 @@
  #include "services/on_device_model/ml/gpu_blocklist.h"  // nogncheck
  #endif
  
@@ -29,7 +29,7 @@ $NetBSD: patch-content_utility_on__device__model_on__device__model__sandbox__ini
  #include "base/feature_list.h"
  #include "third_party/dawn/include/dawn/dawn_proc.h"          // nogncheck
  #include "third_party/dawn/include/dawn/native/DawnNative.h"  // nogncheck
-@@ -37,7 +41,7 @@ namespace on_device_model {
+@@ -38,7 +42,7 @@ namespace on_device_model {
  
  namespace {
  
@@ -38,7 +38,7 @@ $NetBSD: patch-content_utility_on__device__model_on__device__model__sandbox__ini
  constexpr uint32_t kVendorIdAMD = 0x1002;
  constexpr uint32_t kVendorIdIntel = 0x8086;
  constexpr uint32_t kVendorIdNVIDIA = 0x10DE;
-@@ -66,12 +70,12 @@ void UpdateSandboxOptionsForGpu(
+@@ -67,12 +71,12 @@ void UpdateSandboxOptionsForGpu(
  #endif
  
  #if !BUILDFLAG(IS_FUCHSIA) && \
@@ -53,7 +53,7 @@ $NetBSD: patch-content_utility_on__device__model_on__device__model__sandbox__ini
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -81,7 +85,7 @@ BASE_FEATURE(kOnDeviceModelWarmDrivers,
+@@ -82,7 +86,7 @@ BASE_FEATURE(kOnDeviceModelWarmDrivers,
  
  bool ShouldWarmDrivers() {
  #if BUILDFLAG(IS_FUCHSIA) || \
@@ -62,7 +62,7 @@ $NetBSD: patch-content_utility_on__device__model_on__device__model__sandbox__ini
    return false;
  #else
    bool is_gpu_not_blocklisted = true;
-@@ -121,7 +125,7 @@ bool PreSandboxInit() {
+@@ -122,7 +126,7 @@ bool PreSandboxInit() {
      // good measure we initialize a device instance for any adapter with an
      // appropriate backend on top of any integrated or discrete GPU.
  #if !BUILDFLAG(IS_FUCHSIA) && \
@@ -71,7 +71,7 @@ $NetBSD: patch-content_utility_on__device__model_on__device__model__sandbox__ini
      dawnProcSetProcs(&dawn::native::GetProcs());
      auto instance = std::make_unique<dawn::native::Instance>();
      const wgpu::RequestAdapterOptions adapter_options{
-@@ -153,7 +157,7 @@ bool PreSandboxInit() {
+@@ -154,7 +158,7 @@ bool PreSandboxInit() {
    return true;
  }
  
@@ -80,7 +80,7 @@ $NetBSD: patch-content_utility_on__device__model_on__device__model__sandbox__ini
  void AddSandboxLinuxOptions(sandbox::policy::SandboxLinux::Options& options) {
    // Make sure any necessary vendor-specific options are set.
    gpu::GPUInfo info;
-@@ -165,6 +169,7 @@ void AddSandboxLinuxOptions(sandbox::pol
+@@ -166,6 +170,7 @@ void AddSandboxLinuxOptions(sandbox::pol
  }
  
  bool PreSandboxHook(sandbox::policy::SandboxLinux::Options options) {
@@ -88,7 +88,7 @@ $NetBSD: patch-content_utility_on__device__model_on__device__model__sandbox__ini
    std::vector<sandbox::syscall_broker::BrokerFilePermission> file_permissions =
        content::FilePermissionsForGpu(options);
    file_permissions.push_back(
-@@ -173,6 +178,7 @@ bool PreSandboxHook(sandbox::policy::San
+@@ -174,6 +179,7 @@ bool PreSandboxHook(sandbox::policy::San
  
    sandbox::policy::SandboxLinux::GetInstance()->StartBrokerProcess(
        content::CommandSetForGPU(options), file_permissions, options);

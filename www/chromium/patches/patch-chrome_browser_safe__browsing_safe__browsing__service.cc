@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_safe__browsing_safe__browsing__service.cc,v 1.1 2026/02/15 09:03:59 kikadf Exp $
+$NetBSD: patch-chrome_browser_safe__browsing_safe__browsing__service.cc,v 1.2 2026/03/14 12:40:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/safe_browsing/safe_browsing_service.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/safe_browsing/safe_browsing_service.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/safe_browsing/safe_browsing_service.cc
 @@ -80,7 +80,7 @@
  #include "services/preferences/public/mojom/tracked_preference_validation_delegate.mojom.h"

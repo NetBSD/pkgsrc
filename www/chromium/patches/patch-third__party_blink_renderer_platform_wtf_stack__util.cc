@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_wtf_stack__util.cc,v 1.15 2026/02/15 09:04:11 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_wtf_stack__util.cc,v 1.16 2026/03/14 12:40:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ third_party/blink/renderer/platform/wtf/stack_util.cc
 @@ -22,6 +22,15 @@ extern "C" void* __libc_stack_end;  // N
  #include <sanitizer/asan_interface.h>
@@ -59,16 +59,16 @@ $NetBSD: patch-third__party_blink_renderer_platform_wtf_stack__util.cc,v 1.15 20
    pthread_attr_t attr;
    int error;
  #if BUILDFLAG(IS_FREEBSD)
-@@ -124,7 +136,7 @@ void* GetStackStartImpl() {
-     pthread_attr_destroy(&attr);
-     return UNSAFE_TODO(reinterpret_cast<uint8_t*>(base) + size);
+@@ -125,7 +137,7 @@ void* GetStackStartImpl() {
+     // SAFETY: Computation on the results of pthread_attr_getstack().
+     return UNSAFE_BUFFERS(reinterpret_cast<uint8_t*>(base) + size);
    }
 -#if BUILDFLAG(IS_FREEBSD)
 +#if BUILDFLAG(IS_FREEBSD) || BUILDFLAG(IS_NETBSD)
    pthread_attr_destroy(&attr);
  #endif
  #if defined(__GLIBC__)
-@@ -156,6 +168,13 @@ void* GetStackStartImpl() {
+@@ -157,6 +169,13 @@ void* GetStackStartImpl() {
    ::GetCurrentThreadStackLimits(&lowLimit, &highLimit);
    return reinterpret_cast<void*>(highLimit);
  #endif

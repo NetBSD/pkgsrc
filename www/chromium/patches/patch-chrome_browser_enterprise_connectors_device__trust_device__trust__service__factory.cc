@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_connectors_device__trust_device__trust__service__factory.cc,v 1.15 2026/02/15 09:03:57 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_connectors_device__trust_device__trust__service__factory.cc,v 1.16 2026/03/14 12:40:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/device_trust/device_trust_service_factory.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/enterprise/connectors/device_trust/device_trust_service_factory.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/enterprise/connectors/device_trust/device_trust_service_factory.cc
 @@ -22,7 +22,7 @@
  #include "components/policy/core/common/management/management_service.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_enterprise_connectors_device__trust_device__trust_
  #include "chrome/browser/browser_process.h"
  #include "chrome/browser/enterprise/connectors/device_trust/attestation/browser/browser_attestation_service.h"
  #include "chrome/browser/enterprise/connectors/device_trust/attestation/browser/device_attester.h"
-@@ -53,7 +53,7 @@ bool IsProfileManaged(Profile* profile) 
+@@ -57,7 +57,7 @@ bool IsProfileManaged(Profile* profile) 
    return management_service && management_service->IsManaged();
  }
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_enterprise_connectors_device__trust_device__trust_
  policy::CloudPolicyStore* GetUserCloudPolicyStore(Profile* profile) {
    policy::CloudPolicyManager* user_policy_manager =
        profile->GetCloudPolicyManager();
-@@ -105,7 +105,7 @@ DeviceTrustServiceFactory::DeviceTrustSe
+@@ -109,7 +109,7 @@ DeviceTrustServiceFactory::DeviceTrustSe
    DependsOn(DeviceTrustConnectorServiceFactory::GetInstance());
    DependsOn(policy::ManagementServiceFactory::GetInstance());
  

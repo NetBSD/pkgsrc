@@ -1,0 +1,16 @@
+$NetBSD: patch-third__party_rust_bytemuck_v1_BUILD.gn,v 1.1 2026/03/14 12:40:42 kikadf Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/rust/bytemuck/v1/BUILD.gn.orig	2026-03-11 22:12:25.000000000 +0000
++++ third_party/rust/bytemuck/v1/BUILD.gn
+@@ -52,7 +52,6 @@ cargo_crate("lib") {
+     "derive",
+     "extern_crate_alloc",
+     "min_const_generics",
+-    "nightly_portable_simd",
+     "rustversion",
+   ]
+ 

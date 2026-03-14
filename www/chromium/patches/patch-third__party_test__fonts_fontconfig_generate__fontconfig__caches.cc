@@ -1,26 +1,26 @@
-$NetBSD: patch-third__party_test__fonts_fontconfig_generate__fontconfig__caches.cc,v 1.15 2026/02/15 09:04:12 kikadf Exp $
+$NetBSD: patch-third__party_test__fonts_fontconfig_generate__fontconfig__caches.cc,v 1.16 2026/03/14 12:40:43 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/test_fonts/fontconfig/generate_fontconfig_caches.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- third_party/test_fonts/fontconfig/generate_fontconfig_caches.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ third_party/test_fonts/fontconfig/generate_fontconfig_caches.cc
-@@ -28,7 +28,7 @@ int main() {
+@@ -28,6 +28,7 @@ int main() {
    // fontconfig cache.
    //     $ echo -n /test_fonts | md5sum
    //     fb5c91b2895aa445d23aebf7f9e2189c  -
--  static const char kCacheKey[] = "fb5c91b2895aa445d23aebf7f9e2189c";
-+  static const char kCacheKey[] = "cd4b5bc7-6cfc-41dc-8982-f2db624179ba";
++  //static const char kCacheKey[] = "cd4b5bc7-6cfc-41dc-8982-f2db624179ba";
+   static const char kCacheKey[] = "fb5c91b2895aa445d23aebf7f9e2189c";
  
    // fontconfig writes the mtime of the test_fonts directory into the cache. It
-   // presumably checks this later to ensure that the cache is still up to date.
-@@ -56,7 +56,7 @@ int main() {
+@@ -56,7 +57,8 @@ int main() {
    FcFini();
  
    // Check existence of intended fontconfig cache file.
 -  auto cache = fontconfig_caches + "/" + kCacheKey + "-le64.cache-11";
-+  auto cache = fontconfig_caches + "/" + kCacheKey + "-x86_64.cache-" + FC_CACHE_VERSION;
++  //auto cache = fontconfig_caches + "/" + kCacheKey + "-x86_64.cache-" + FC_CACHE_VERSION;
++  auto cache = fontconfig_caches + "/" + kCacheKey + "-le64.cache-" + FC_CACHE_VERSION;
    bool cache_exists = access(cache.c_str(), F_OK) == 0;
    return !cache_exists;
  }

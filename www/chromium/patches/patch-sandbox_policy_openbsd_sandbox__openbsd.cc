@@ -1,10 +1,10 @@
-$NetBSD: patch-sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.15 2026/02/15 09:04:09 kikadf Exp $
+$NetBSD: patch-sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.16 2026/03/14 12:40:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2026-02-14 15:42:44.747593954 +0000
+--- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2026-03-14 12:24:26.689096752 +0000
 +++ sandbox/policy/openbsd/sandbox_openbsd.cc
 @@ -0,0 +1,445 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
@@ -230,7 +230,7 @@ $NetBSD: patch-sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.15 2026/02/15 09:0
 +      ufile = _UNVEIL_CDM;
 +      break;
 +    default:
-+      unveil("/dev/null", "r");
++      unveil("/dev/null", "rw");
 +      goto done;
 +  }
 +
@@ -354,7 +354,7 @@ $NetBSD: patch-sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.15 2026/02/15 09:0
 +      break;
 +    case sandbox::mojom::Sandbox::kGpu:
 +    case sandbox::mojom::Sandbox::kOnDeviceModelExecution:
-+      SetPledge("stdio drm inet rpath flock cpath wpath prot_exec recvfd sendfd tmppath unix", NULL);
++      SetPledge("stdio drm inet rpath flock cpath wpath prot_exec recvfd sendfd unix", NULL);
 +      break;
 +    case sandbox::mojom::Sandbox::kAudio:
 +      SetPledge(NULL, "@PKG_SYSCONFBASE@/chromium/pledge.utility_audio");

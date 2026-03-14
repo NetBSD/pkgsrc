@@ -1,10 +1,10 @@
-$NetBSD: patch-media_gpu_vaapi_vaapi__jpeg__encoder.cc,v 1.1 2026/02/15 09:04:07 kikadf Exp $
+$NetBSD: patch-media_gpu_vaapi_vaapi__jpeg__encoder.cc,v 1.2 2026/03/14 12:40:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/vaapi/vaapi_jpeg_encoder.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- media/gpu/vaapi/vaapi_jpeg_encoder.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ media/gpu/vaapi/vaapi_jpeg_encoder.cc
 @@ -98,24 +98,24 @@ void FillHuffmanTableParameters(
  

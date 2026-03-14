@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_renderer__host_media_service__video__capture__device__launcher.cc,v 1.15 2026/02/15 09:04:05 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_media_service__video__capture__device__launcher.cc,v 1.16 2026/03/14 12:40:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/media/service_video_capture_device_launcher.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- content/browser/renderer_host/media/service_video_capture_device_launcher.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ content/browser/renderer_host/media/service_video_capture_device_launcher.cc
 @@ -24,7 +24,7 @@
  #include "media/base/media_switches.h"

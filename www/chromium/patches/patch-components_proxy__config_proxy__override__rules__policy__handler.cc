@@ -1,10 +1,10 @@
-$NetBSD: patch-components_proxy__config_proxy__override__rules__policy__handler.cc,v 1.1 2026/02/15 09:04:03 kikadf Exp $
+$NetBSD: patch-components_proxy__config_proxy__override__rules__policy__handler.cc,v 1.2 2026/03/14 12:40:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/proxy_config/proxy_override_rules_policy_handler.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- components/proxy_config/proxy_override_rules_policy_handler.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ components/proxy_config/proxy_override_rules_policy_handler.cc
 @@ -28,7 +28,7 @@ policy::PolicyErrorPath CreateNewPath(
    return path;
@@ -31,23 +31,32 @@ $NetBSD: patch-components_proxy__config_proxy__override__rules__policy__handler.
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    // This code should run to set errors for
-   // `kEnableProxyOverrideRulesForAllUsers`, but the regular proxy override
-   // rules policy might still be valid so we ignore the returned boolean.
-@@ -78,7 +78,7 @@ bool ProxyOverrideRulesPolicyHandler::Ch
-     return false;
-   }
+   // `kEnableProxyOverrideRulesForAllUsers`.
+   enabled_for_all_users_handler_.CheckPolicySettings(policies, errors);
+@@ -74,7 +74,7 @@ bool ProxyOverrideRulesPolicyHandler::Ch
+ 
+   policy::SchemaValidatingPolicyHandler::CheckPolicySettings(policies, errors);
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    const policy::PolicyMap::Entry* proxy_override_rules_policy =
        policies.Get(policy_name());
    if (proxy_override_rules_policy &&
-@@ -126,7 +126,7 @@ void ProxyOverrideRulesPolicyHandler::Ap
- 
+@@ -109,7 +109,7 @@ bool ProxyOverrideRulesPolicyHandler::Ch
+ void ProxyOverrideRulesPolicyHandler::ApplyPolicySettings(
+     const policy::PolicyMap& policies,
+     PrefValueMap* prefs) {
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+   // ALWAYS update affiliation, even if kProxyOverrideRules is not set.
+   // This ensures the state is captured in the Managed pref store and
+   // kept in sync with the latest policy bundle's affiliation status.
+@@ -136,7 +136,7 @@ void ProxyOverrideRulesPolicyHandler::Ap
    prefs->SetValue(proxy_config::prefs::kProxyOverrideRules,
                    policy_value->Clone());
+ 
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    prefs->SetInteger(proxy_config::prefs::kProxyOverrideRulesScope,
                      policy->scope);
-   prefs->SetBoolean(proxy_config::prefs::kProxyOverrideRulesAffiliation,
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)

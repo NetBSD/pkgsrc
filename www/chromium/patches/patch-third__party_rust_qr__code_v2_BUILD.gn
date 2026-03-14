@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_rust_qr__code_v2_BUILD.gn,v 1.11 2026/02/15 09:04:12 kikadf Exp $
+$NetBSD: patch-third__party_rust_qr__code_v2_BUILD.gn,v 1.12 2026/03/14 12:40:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/rust/qr_code/v2/BUILD.gn.orig	2026-02-03 22:07:10.000000000 +0000
+--- third_party/rust/qr_code/v2/BUILD.gn.orig	2026-03-11 22:12:25.000000000 +0000
 +++ third_party/rust/qr_code/v2/BUILD.gn
 @@ -40,6 +40,10 @@ cargo_crate("lib") {
    cargo_pkg_repository = "https://github.com/RCasatta/qr_code"

@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_swiftshader_src_System_Linux_MemFd.cpp,v 1.15 2026/02/15 09:04:12 kikadf Exp $
+$NetBSD: patch-third__party_swiftshader_src_System_Linux_MemFd.cpp,v 1.16 2026/03/14 12:40:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/swiftshader/src/System/Linux/MemFd.cpp.orig	2026-02-03 22:07:10.000000000 +0000
+--- third_party/swiftshader/src/System/Linux/MemFd.cpp.orig	2026-03-11 22:12:25.000000000 +0000
 +++ third_party/swiftshader/src/System/Linux/MemFd.cpp
 @@ -25,6 +25,7 @@
  #	define MFD_CLOEXEC 0x0001U

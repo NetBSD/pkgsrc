@@ -1,12 +1,12 @@
-$NetBSD: patch-printing_mojom_printing__context__mojom__traits__unittest.cc,v 1.14 2026/02/15 09:04:08 kikadf Exp $
+$NetBSD: patch-printing_mojom_printing__context__mojom__traits__unittest.cc,v 1.15 2026/03/14 12:40:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/mojom/printing_context_mojom_traits_unittest.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- printing/mojom/printing_context_mojom_traits_unittest.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ printing/mojom/printing_context_mojom_traits_unittest.cc
-@@ -81,7 +81,7 @@ base::Value::Dict GenerateSampleSystemPr
+@@ -81,7 +81,7 @@ base::DictValue GenerateSampleSystemPrin
               "file:///foo/bar.pdf");
    }
  
@@ -15,14 +15,14 @@ $NetBSD: patch-printing_mojom_printing__context__mojom__traits__unittest.cc,v 1.
    data.Set(kLinuxSystemPrintDialogDataPrinter, "printer-name");
    data.Set(kLinuxSystemPrintDialogDataPrintSettings, "print-settings-foo");
    data.Set(kLinuxSystemPrintDialogDataPageSetup, "page-setup-bar");
-@@ -93,7 +93,7 @@ base::Value::Dict GenerateSampleSystemPr
+@@ -93,7 +93,7 @@ base::DictValue GenerateSampleSystemPrin
    return data;
  }
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- base::Value::Dict GenerateSampleSystemPrintDialogDataPortal() {
-   base::Value::Dict data;
+ base::DictValue GenerateSampleSystemPrintDialogDataPortal() {
+   base::DictValue data;
    data.Set(kLinuxSystemPrintDialogDataPrintSettingsBin,
 @@ -132,7 +132,7 @@ const PageMargins kPrintSettingsCustomMa
                                                         /*top=*/10583,

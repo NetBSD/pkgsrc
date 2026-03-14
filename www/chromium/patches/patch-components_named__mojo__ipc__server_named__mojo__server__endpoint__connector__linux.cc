@@ -1,13 +1,13 @@
-$NetBSD: patch-components_named__mojo__ipc__server_named__mojo__server__endpoint__connector__linux.cc,v 1.14 2026/02/15 09:04:03 kikadf Exp $
+$NetBSD: patch-components_named__mojo__ipc__server_named__mojo__server__endpoint__connector__linux.cc,v 1.15 2026/03/14 12:40:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/named_mojo_ipc_server/named_mojo_server_endpoint_connector_linux.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- components/named_mojo_ipc_server/named_mojo_server_endpoint_connector_linux.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ components/named_mojo_ipc_server/named_mojo_server_endpoint_connector_linux.cc
-@@ -7,6 +7,10 @@
- #include <sys/socket.h>
+@@ -8,6 +8,10 @@
+ #include <sys/stat.h>
  #include <sys/types.h>
  
 +#if BUILDFLAG(IS_FREEBSD) || BUILDFLAG(IS_NETBSD)
@@ -17,7 +17,7 @@ $NetBSD: patch-components_named__mojo__ipc__server_named__mojo__server__endpoint
  #include <memory>
  #include <utility>
  
-@@ -84,12 +88,24 @@ void NamedMojoServerEndpointConnectorLin
+@@ -86,12 +90,24 @@ void NamedMojoServerEndpointConnectorLin
  
    auto info = std::make_unique<ConnectionInfo>();
    socklen_t len = sizeof(info->credentials);
@@ -42,3 +42,12 @@ $NetBSD: patch-components_named__mojo__ipc__server_named__mojo__server__endpoint
  
    mojo::PlatformChannelEndpoint endpoint(
        mojo::PlatformHandle(std::move(connection_fd)));
+@@ -116,7 +132,7 @@ bool NamedMojoServerEndpointConnectorLin
+   if (!options_.require_same_peer_user) {
+     // Allow any user to write to the UDS. fchmod doesn't work after bind(), so
+     // we need to call chmod on the socket filename, which is the server name.
+-    if (chmod(options_.server_name.c_str(), 0o666) != 0) {
++    if (chmod(options_.server_name.c_str(), 0666) != 0) {
+       PLOG(ERROR) << "chmod failed";
+       return false;
+     }

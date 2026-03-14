@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_media_webrtc_webrtc__logging__controller.h,v 1.15 2026/02/15 09:03:58 kikadf Exp $
+$NetBSD: patch-chrome_browser_media_webrtc_webrtc__logging__controller.h,v 1.16 2026/03/14 12:40:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/webrtc_logging_controller.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/media/webrtc/webrtc_logging_controller.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/media/webrtc/webrtc_logging_controller.h
-@@ -135,7 +135,7 @@ class WebRtcLoggingController
+@@ -131,7 +131,7 @@ class WebRtcLoggingController
  
    base::RepeatingCallback<void(const std::string&)> GetLogMessageCallback();
  
@@ -15,9 +15,9 @@ $NetBSD: patch-chrome_browser_media_webrtc_webrtc__logging__controller.h,v 1.15 
    // Ensures that the WebRTC Logs directory exists and then grants render
    // process access to the 'WebRTC Logs' directory, and invokes |callback| with
    // the ids necessary to create a DirectoryEntry object.
-@@ -199,7 +199,7 @@ class WebRtcLoggingController
+@@ -195,7 +195,7 @@ class WebRtcLoggingController
  
-   content::BrowserContext* GetBrowserContext() const;
+   webrtc_logging::ApiType GetApiType() const;
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)

@@ -1,12 +1,12 @@
-$NetBSD: patch-net_url__request_url__request__context__builder.cc,v 1.15 2026/02/15 09:04:08 kikadf Exp $
+$NetBSD: patch-net_url__request_url__request__context__builder.cc,v 1.16 2026/03/14 12:40:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/url_request/url_request_context_builder.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- net/url_request/url_request_context_builder.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ net/url_request/url_request_context_builder.cc
-@@ -451,7 +451,7 @@ std::unique_ptr<URLRequestContext> URLRe
+@@ -446,7 +446,7 @@ std::unique_ptr<URLRequestContext> URLRe
    }
  
    if (!proxy_resolution_service_) {

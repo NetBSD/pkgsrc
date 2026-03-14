@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 1.14 2026/02/15 09:04:00 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 1.15 2026/03/14 12:40:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc
-@@ -191,7 +191,7 @@ BrowserView* GetBrowserViewForContext(co
+@@ -193,7 +193,7 @@ BrowserView* GetBrowserViewForContext(co
  
  void UpdateSystemDnDDragImage(TabDragContext* attached_context,
                                const gfx::ImageSkia& image) {
@@ -23,8 +23,8 @@ $NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    ref->can_release_capture_ = false;
  #endif
-   ref->start_point_in_screen_ = gfx::Point(offset_from_source_view.x(),
-@@ -1006,7 +1006,7 @@ TabDragController::Liveness TabDragContr
+   ref->start_point_in_screen_ =
+@@ -1022,7 +1022,7 @@ TabDragController::Liveness TabDragContr
        CHECK_EQ(SetCapture(target_context), Liveness::kAlive);
      }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 
      // EndMoveLoop is going to snap the window back to its original location.
      // Hide it so users don't see this. Hiding a window in Linux aura causes
      // it to lose capture so skip it.
-@@ -2159,7 +2159,7 @@ void TabDragController::CompleteDrag() {
+@@ -2202,7 +2202,7 @@ void TabDragController::CompleteDrag() {
      }
  
      // If source window was maximized - maximize the new window as well.
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 
      // Keeping maximized state breaks snap to Grid on Windows when dragging
      // tabs from maximized windows. TODO:(crbug.com/727051) Explore doing this
      // for other desktop OS's. kMaximizedStateRetainedOnTabDrag in
-@@ -2593,7 +2593,7 @@ TabDragController::Liveness TabDragContr
+@@ -2643,7 +2643,7 @@ TabDragController::Liveness TabDragContr
      }
    }
  

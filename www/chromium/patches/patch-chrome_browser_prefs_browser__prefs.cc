@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_prefs_browser__prefs.cc,v 1.15 2026/02/15 09:03:59 kikadf Exp $
+$NetBSD: patch-chrome_browser_prefs_browser__prefs.cc,v 1.16 2026/03/14 12:40:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/prefs/browser_prefs.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/prefs/browser_prefs.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/prefs/browser_prefs.cc
-@@ -313,7 +313,7 @@
+@@ -315,7 +315,7 @@
  #include "chrome/browser/devtools/devtools_window.h"
  #endif  // BUILDFLAG(ENABLE_DEVTOOLS_FRONTEND)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_prefs_browser__prefs.cc,v 1.15 2026/02/15 09:03:59
  #include "chrome/browser/ui/webui/whats_new/whats_new_ui.h"
  #endif
  
-@@ -496,11 +496,11 @@
+@@ -498,11 +498,11 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -29,7 +29,7 @@ $NetBSD: patch-chrome_browser_prefs_browser__prefs.cc,v 1.15 2026/02/15 09:03:59
  #include "chrome/browser/browser_switcher/browser_switcher_prefs.h"
  #include "chrome/browser/enterprise/signin/enterprise_signin_prefs.h"
  #endif
-@@ -528,7 +528,7 @@
+@@ -530,7 +530,7 @@
  #include "chrome/browser/sessions/session_service_log.h"
  #endif
  
@@ -38,7 +38,7 @@ $NetBSD: patch-chrome_browser_prefs_browser__prefs.cc,v 1.15 2026/02/15 09:03:59
  #include "ui/color/system_theme.h"
  #endif
  
-@@ -1451,7 +1451,7 @@ void RegisterLocalState(PrefRegistrySimp
+@@ -1496,7 +1496,7 @@ void RegisterLocalState(PrefRegistrySimp
    on_device_translation::RegisterLocalStatePrefs(registry);
  #endif  // BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION)
  
@@ -47,7 +47,7 @@ $NetBSD: patch-chrome_browser_prefs_browser__prefs.cc,v 1.15 2026/02/15 09:03:59
    WhatsNewUI::RegisterLocalStatePrefs(registry);
  #endif
  
-@@ -1607,7 +1607,7 @@ void RegisterLocalState(PrefRegistrySimp
+@@ -1657,7 +1657,7 @@ void RegisterLocalState(PrefRegistrySimp
  #endif  // BUILDFLAG(ENABLE_PDF_SAVE_TO_DRIVE)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -56,7 +56,7 @@ $NetBSD: patch-chrome_browser_prefs_browser__prefs.cc,v 1.15 2026/02/15 09:03:59
    registry->RegisterBooleanPref(prefs::kChromeForTestingAllowed, true);
  #endif
  
-@@ -1989,13 +1989,13 @@ void RegisterProfilePrefs(user_prefs::Pr
+@@ -2049,13 +2049,13 @@ void RegisterProfilePrefs(user_prefs::Pr
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

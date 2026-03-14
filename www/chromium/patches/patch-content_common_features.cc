@@ -1,12 +1,12 @@
-$NetBSD: patch-content_common_features.cc,v 1.15 2026/02/15 09:04:05 kikadf Exp $
+$NetBSD: patch-content_common_features.cc,v 1.16 2026/03/14 12:40:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/features.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- content/common/features.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ content/common/features.cc
-@@ -172,7 +172,7 @@ BASE_FEATURE(kDocumentPolicyNegotiation,
+@@ -184,7 +184,7 @@ BASE_FEATURE(kDocumentPolicyNegotiation,
  BASE_FEATURE(kEmbeddingRequiresOptIn, base::FEATURE_DISABLED_BY_DEFAULT);
  
  // Enables error reporting for JS errors inside DevTools frontend host
@@ -15,7 +15,7 @@ $NetBSD: patch-content_common_features.cc,v 1.15 2026/02/15 09:04:05 kikadf Exp 
  BASE_FEATURE(kEnableDevToolsJsErrorReporting,
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -276,7 +276,7 @@ BASE_FEATURE_ENUM_PARAM(FontDataServiceT
+@@ -288,7 +288,7 @@ BASE_FEATURE_ENUM_PARAM(FontDataServiceT
                          FontDataServiceTypefaceType::kDwrite,
                          &font_data_service_typeface);
  #endif  // BUILDFLAG(IS_WIN)
@@ -24,7 +24,7 @@ $NetBSD: patch-content_common_features.cc,v 1.15 2026/02/15 09:04:05 kikadf Exp 
  BASE_FEATURE(kFontDataServiceLinux, base::FEATURE_DISABLED_BY_DEFAULT);
  const base::FeatureParam<FontDataServiceTypefaceType>::Option
      font_data_service_typeface[] = {
-@@ -290,11 +290,11 @@ BASE_FEATURE_ENUM_PARAM(FontDataServiceT
+@@ -302,11 +302,11 @@ BASE_FEATURE_ENUM_PARAM(FontDataServiceT
                          &font_data_service_typeface);
  #endif  // BUILDFLAG(IS_LINUX)
  

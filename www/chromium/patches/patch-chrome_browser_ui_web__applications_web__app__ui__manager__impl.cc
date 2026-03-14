@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_web__applications_web__app__ui__manager__impl.cc,v 1.15 2026/02/15 09:04:00 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_web__applications_web__app__ui__manager__impl.cc,v 1.16 2026/03/14 12:40:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc
-@@ -597,7 +597,7 @@ void WebAppUiManagerImpl::MaybeShowIPHPr
+@@ -612,7 +612,7 @@ void WebAppUiManagerImpl::MaybeShowIPHPr
      Browser* browser,
      Profile* profile,
      const std::string& app_id) {
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_web__applications_web__app__ui__manager__impl.c
    WebAppProvider* provider = WebAppProvider::GetForWebApps(profile);
    CHECK(provider);
  
-@@ -818,7 +818,7 @@ void WebAppUiManagerImpl::ClearWebAppSit
+@@ -833,7 +833,7 @@ void WebAppUiManagerImpl::ClearWebAppSit
    }
  }
  

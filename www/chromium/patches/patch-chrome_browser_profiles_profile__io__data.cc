@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_profiles_profile__io__data.cc,v 1.7 2026/02/15 09:03:59 kikadf Exp $
+$NetBSD: patch-chrome_browser_profiles_profile__io__data.cc,v 1.8 2026/03/14 12:40:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/profiles/profile_io_data.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/profiles/profile_io_data.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/profiles/profile_io_data.cc
 @@ -17,7 +17,7 @@
  #include "url/gurl.h"

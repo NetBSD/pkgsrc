@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_perfetto_protos_perfetto_trace_ftrace_v4l2.proto,v 1.15 2026/02/15 09:04:12 kikadf Exp $
+$NetBSD: patch-third__party_perfetto_protos_perfetto_trace_ftrace_v4l2.proto,v 1.16 2026/03/14 12:40:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/protos/perfetto/trace/ftrace/v4l2.proto.orig	2026-02-03 22:07:10.000000000 +0000
+--- third_party/perfetto/protos/perfetto/trace/ftrace/v4l2.proto.orig	2026-03-11 22:12:25.000000000 +0000
 +++ third_party/perfetto/protos/perfetto/trace/ftrace/v4l2.proto
 @@ -10,7 +10,7 @@ message V4l2QbufFtraceEvent {
    optional uint32 field = 2;
