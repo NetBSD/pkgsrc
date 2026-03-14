@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.43 2024/04/03 21:18:22 wiz Exp $
+$NetBSD: distinfo,v 1.44 2026/03/14 19:55:58 wiz Exp $
 
-BLAKE2s (libpciaccess-0.18.1.tar.xz) = d629fb54e2d995647fe02c5b6a097cfda0e53d487b135e86cbd8b0d60b6ea59b
-SHA512 (libpciaccess-0.18.1.tar.xz) = ef27999446e735df2331e94219ee3dafe9198a2472bb452f63ef9c9c446d5431f9e231e224cfabdeba1402974a5a0064546f9abced4d1770f994f5fc0c2b3310
-Size (libpciaccess-0.18.1.tar.xz) = 64452 bytes
-SHA1 (patch-src_meson.build) = f564273d2d683c243044bfb3a9c18f11a7cc78af
+BLAKE2s (libpciaccess-0.19.tar.xz) = 95a3276054c8f1b352cab371a22f34bf413ecca318bbaa4d4cc0c7b653a3769c
+SHA512 (libpciaccess-0.19.tar.xz) = a20ea0ef3d650e2cdc18423ea4770780ce273c35115eece85dbbb59e5f2e24bdbaf88e53b1648f2c5d4fa34b015a3fe8318721bf5655a86a835db323e6ecd4f7
+Size (libpciaccess-0.19.tar.xz) = 64732 bytes
 SHA1 (patch-src_netbsd__pci.c) = 6f7ac3a3cad128756aed8e823af57e8737157d1b
 SHA1 (patch-src_solx__devfs.c) = 18bfd9899da30061199232ae2ebc5ead8d4d7a47
