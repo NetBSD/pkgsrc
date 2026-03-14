@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1733 2026/03/14 11:30:02 fox Exp $
+$NetBSD: CHANGES-2026,v 1.1734 2026/03/14 12:41:03 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2383,3 +2383,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/mikutter to 5.1.1nb7 [tsutsui 2026-03-13]
 	Updated www/hiawatha to 12.0 [hauke 2026-03-13]
 	Updated audio/fasttracker2 to 2.11 [fox 2026-03-14]
+	Updated www/chromium to 146.0.7680.75 [kikadf 2026-03-14]
