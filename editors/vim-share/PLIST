@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.83 2026/02/28 16:11:28 morr Exp $
+@comment $NetBSD: PLIST,v 1.84 2026/03/14 23:45:31 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -656,6 +656,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/nanorc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/neomuttrc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/netrc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/nginx.vim
+share/vim/${VIM_SUBDIR}/ftplugin/nickel.vim
 share/vim/${VIM_SUBDIR}/ftplugin/nim.vim
 share/vim/${VIM_SUBDIR}/ftplugin/nix.vim
 share/vim/${VIM_SUBDIR}/ftplugin/nroff.vim
@@ -822,6 +823,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/xdefaults.vim
 share/vim/${VIM_SUBDIR}/ftplugin/xf86conf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/xhtml.vim
 share/vim/${VIM_SUBDIR}/ftplugin/xinetd.vim
+share/vim/${VIM_SUBDIR}/ftplugin/xkb.vim
 share/vim/${VIM_SUBDIR}/ftplugin/xml.vim
 share/vim/${VIM_SUBDIR}/ftplugin/xmodmap.vim
 share/vim/${VIM_SUBDIR}/ftplugin/xs.vim
@@ -900,6 +902,7 @@ share/vim/${VIM_SUBDIR}/indent/graphql.vim
 share/vim/${VIM_SUBDIR}/indent/gyp.vim
 share/vim/${VIM_SUBDIR}/indent/haml.vim
 share/vim/${VIM_SUBDIR}/indent/hamster.vim
+share/vim/${VIM_SUBDIR}/indent/handlebars.vim
 share/vim/${VIM_SUBDIR}/indent/hare.vim
 share/vim/${VIM_SUBDIR}/indent/hcl.vim
 share/vim/${VIM_SUBDIR}/indent/hog.vim
@@ -1400,6 +1403,7 @@ share/vim/${VIM_SUBDIR}/syntax/gitrebase.vim
 share/vim/${VIM_SUBDIR}/syntax/gitsendemail.vim
 share/vim/${VIM_SUBDIR}/syntax/gkrellmrc.vim
 share/vim/${VIM_SUBDIR}/syntax/gleam.vim
+share/vim/${VIM_SUBDIR}/syntax/glimmer.vim
 share/vim/${VIM_SUBDIR}/syntax/glsl.vim
 share/vim/${VIM_SUBDIR}/syntax/gnash.vim
 share/vim/${VIM_SUBDIR}/syntax/gnuplot.vim
@@ -1422,6 +1426,7 @@ share/vim/${VIM_SUBDIR}/syntax/gvpr.vim
 share/vim/${VIM_SUBDIR}/syntax/gyp.vim
 share/vim/${VIM_SUBDIR}/syntax/haml.vim
 share/vim/${VIM_SUBDIR}/syntax/hamster.vim
+share/vim/${VIM_SUBDIR}/syntax/handlebars.vim
 share/vim/${VIM_SUBDIR}/syntax/hare.vim
 share/vim/${VIM_SUBDIR}/syntax/haredoc.vim
 share/vim/${VIM_SUBDIR}/syntax/haskell.vim
