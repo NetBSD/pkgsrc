@@ -1,31 +1,7 @@
-$NetBSD: distinfo,v 1.38 2022/12/25 18:08:51 wiz Exp $
+$NetBSD: distinfo,v 1.39 2026/03/14 12:45:56 adam Exp $
 
-BLAKE2s (gtk-gnutella-1.2.2.tar.xz) = 53058fd39e1b9e85f5f0c576fe20ce30d195e7482a54ef867ae221afa8268839
-SHA512 (gtk-gnutella-1.2.2.tar.xz) = 5d8692f4075c2188f22f68011148dd25e6a05453374b1baf1f66599a129b6f3c9e887330e38d270c4a83b8e40cfd4315845ec0d0e1f8cc82f7dcdf4a0217c78b
-Size (gtk-gnutella-1.2.2.tar.xz) = 21313212 bytes
-SHA1 (patch-Configure) = 483d8697f12a7553e5833aff837452e44dad5395
-SHA1 (patch-config__h.SH) = 0dd2be9d27cb1451df37a68b994563c3ce662fe3
-SHA1 (patch-scripts_nm-list) = 19254a666122799fa6aeee80c6ecccc30484e68b
-SHA1 (patch-src_core_bogons.c) = c0c570128a3d1ec54c97095a792f9ba8a9fa2436
-SHA1 (patch-src_core_dmesh.c) = 448a24c276a1da19e2198746f8b39cdb2e48c517
-SHA1 (patch-src_core_downloads.c) = 98f447b1595bbff511ccafa7d14457b918a1dc43
-SHA1 (patch-src_core_fileinfo.c) = 7e8c0a7feddb6ec4848f8538c7100180d7fd656b
-SHA1 (patch-src_core_g2_gwc.c) = 2003bd4aba252c6c8450417b6f4982c6568a9a95
-SHA1 (patch-src_core_geo__ip.c) = 4876b6beaff039f69a18fbd0a182586e755313ab
-SHA1 (patch-src_core_hcache.c) = 4461ac3ecb977cac978203298b9c79931295dd54
-SHA1 (patch-src_core_hostiles.c) = 869fd549b53a7b8b73bf4b6a6c5dd0dd5a2197e0
-SHA1 (patch-src_core_huge.c) = 4c256a37f4cd8325dbb33590ec1d5f94023680db
-SHA1 (patch-src_core_ignore.c) = 7750d9c46fcc6c674225055f893f5030ac07bce0
-SHA1 (patch-src_core_ipp__cache.c) = d622599c6ee299359637840b0ad00e7e427a3d0e
-SHA1 (patch-src_core_parq.c) = 648c3ec007384f7244359252f63ca0922bf5ffb6
-SHA1 (patch-src_core_spam.c) = f06b449265a83d8bded5cedc6b5625c952003bd5
-SHA1 (patch-src_core_spam__sha1.c) = 43d366d85447c6a5e3ffac6d9fe5c2cf80357ac9
-SHA1 (patch-src_core_upload__stats.c) = ab33b495d0410d74165cc0679cd826e7a9ba4654
-SHA1 (patch-src_core_whitelist.c) = 1aa28bb296adefcf61e190032f0117cc9369dc85
-SHA1 (patch-src_dht_routing.c) = 10a1d34eda2a968aad9af71806a268f0eb24d762
-SHA1 (patch-src_lib_getgateway.c) = 9fdccb2bb127d9c45dd2a3ab82056c679a2b90ae
-SHA1 (patch-src_lib_memusage.c) = c4caffea0d400b0bd44c2400b2cd83f1e8407519
-SHA1 (patch-src_lib_pow2.h) = 536be1ba7fba9f5d397f055ea369e0dc047840d0
+BLAKE2s (gtk-gnutella-1.3.1.tar.xz) = 426ffb4193eae5efe6ccd10daa16da59dc7b718d1517851f2e8f57793485b88c
+SHA512 (gtk-gnutella-1.3.1.tar.xz) = 0cac8d97bc2710e7e7ea203e5f3ba6ccbf0e3b9cac345db6738a1e8dfa59098a874156bfda1b8977fd69069c19b6b62aaa6158a274beb5257ef42f4fa92680e0
+Size (gtk-gnutella-1.3.1.tar.xz) = 22506152 bytes
 SHA1 (patch-src_lib_prop.c) = 748393346a7b14505db56e0cae24072d87e62cb8
 SHA1 (patch-src_lib_symbols.c) = 770e412eb9586cbe8a6b054d8fd8f71d2866164a
-SHA1 (patch-src_sdbm_tmp.c) = 199cdade27761a220490cbdb60daaa93e97f3409
