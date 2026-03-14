@@ -1,10 +1,10 @@
-$NetBSD: patch-content_gpu_gpu__main.cc,v 1.15 2026/02/15 09:04:05 kikadf Exp $
+$NetBSD: patch-content_gpu_gpu__main.cc,v 1.16 2026/03/14 12:40:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/gpu/gpu_main.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- content/gpu/gpu_main.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ content/gpu/gpu_main.cc
 @@ -108,10 +108,14 @@
  #include "sandbox/win/src/sandbox.h"
@@ -59,7 +59,7 @@ $NetBSD: patch-content_gpu_gpu__main.cc,v 1.15 2026/02/15 09:04:05 kikadf Exp $
    // Thread type delegate of the process should be registered before
    // thread type change below for the main thread and for thread pool in
    // ChildProcess constructor.
-@@ -485,7 +490,7 @@ int GpuMain(MainFunctionParams parameter
+@@ -484,7 +489,7 @@ int GpuMain(MainFunctionParams parameter
  
  namespace {
  
@@ -68,7 +68,7 @@ $NetBSD: patch-content_gpu_gpu__main.cc,v 1.15 2026/02/15 09:04:05 kikadf Exp $
  bool StartSandboxLinux(gpu::GpuWatchdogThread* watchdog_thread,
                         const gpu::GPUInfo* gpu_info,
                         const gpu::GpuPreferences& gpu_prefs) {
-@@ -533,7 +538,7 @@ bool StartSandboxLinux(gpu::GpuWatchdogT
+@@ -532,7 +537,7 @@ bool StartSandboxLinux(gpu::GpuWatchdogT
    sandbox_options.accelerated_video_encode_enabled =
        !gpu_prefs.disable_accelerated_video_encode;
  

@@ -1,12 +1,12 @@
-$NetBSD: patch-components_password__manager_core_browser_password__manager.cc,v 1.15 2026/02/15 09:04:03 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_browser_password__manager.cc,v 1.16 2026/03/14 12:40:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_manager.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- components/password_manager/core/browser/password_manager.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ components/password_manager/core/browser/password_manager.cc
-@@ -611,12 +611,12 @@ void PasswordManager::RegisterProfilePre
+@@ -610,12 +610,12 @@ void PasswordManager::RegisterProfilePre
    registry->RegisterListPref(prefs::kPasswordManagerPromoCardsList);
  #endif  // BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS)
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || \
@@ -21,7 +21,7 @@ $NetBSD: patch-components_password__manager_core_browser_password__manager.cc,v 
    registry->RegisterIntegerPref(prefs::kRelaunchChromeBubbleDismissedCounter,
                                  0);
  #endif
-@@ -629,7 +629,7 @@ void PasswordManager::RegisterProfilePre
+@@ -628,7 +628,7 @@ void PasswordManager::RegisterProfilePre
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -30,7 +30,7 @@ $NetBSD: patch-components_password__manager_core_browser_password__manager.cc,v 
    registry->RegisterBooleanPref(prefs::kDeletingUndecryptablePasswordsEnabled,
                                  true);
  #endif
-@@ -659,7 +659,7 @@ void PasswordManager::RegisterLocalPrefs
+@@ -658,7 +658,7 @@ void PasswordManager::RegisterLocalPrefs
    registry->RegisterBooleanPref(prefs::kOsPasswordBlank, false);
    registry->RegisterBooleanPref(prefs::kIsBiometricAvailable, false);
  #endif  // BUILDFLAG(IS_WIN)

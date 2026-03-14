@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_chrome__paths.cc,v 1.15 2026/02/15 09:04:01 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__paths.cc,v 1.16 2026/03/14 12:40:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_paths.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/common/chrome_paths.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/common/chrome_paths.cc
 @@ -31,7 +31,7 @@
  #include "base/apple/foundation_util.h"
@@ -76,13 +76,13 @@ $NetBSD: patch-chrome_common_chrome__paths.cc,v 1.15 2026/02/15 09:04:01 kikadf 
      case chrome::DIR_NATIVE_MESSAGING:
  #if BUILDFLAG(IS_MAC)
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
-@@ -474,6 +474,9 @@ bool PathProvider(int key, base::FilePat
+@@ -477,6 +477,9 @@ bool PathProvider(int key, base::FilePat
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
        cur = base::FilePath(
            FILE_PATH_LITERAL("/etc/opt/chrome/native-messaging-hosts"));
 +#elif BUILDFLAG(IS_FREEBSD) || BUILDFLAG(IS_NETBSD)
 +      cur = base::FilePath(FILE_PATH_LITERAL(
 +          "@PREFIX@/etc/chromium/native-messaging-hosts"));
- #else
-       cur = base::FilePath(
-           FILE_PATH_LITERAL("/etc/chromium/native-messaging-hosts"));
+ #elif BUILDFLAG(GOOGLE_CHROME_FOR_TESTING_BRANDING)
+       cur = base::FilePath(FILE_PATH_LITERAL(
+           "/etc/opt/chrome_for_testing/native-messaging-hosts"));

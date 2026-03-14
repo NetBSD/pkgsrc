@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.15 2026/02/15 09:03:57 kikadf Exp $
+$NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.16 2026/03/14 12:40:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/app/chrome_main_delegate.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/app/chrome_main_delegate.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/app/chrome_main_delegate.cc
 @@ -102,7 +102,7 @@
  #include "ui/base/ui_base_switches.h"
@@ -108,7 +108,7 @@ $NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.15 2026/02/15 09:03:57 k
    ui::SetOzonePlatformForLinuxIfNeeded(*base::CommandLine::ForCurrentProcess());
  #endif
    ui::OzonePlatform::PreEarlyInitialization();
-@@ -995,7 +995,7 @@ void ChromeMainDelegate::CommonEarlyInit
+@@ -983,7 +983,7 @@ void ChromeMainDelegate::CommonEarlyInit
  
    const bool emit_crashes =
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -117,7 +117,7 @@ $NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.15 2026/02/15 09:03:57 k
        IsCanaryDev();
  #else
        false;
-@@ -1137,7 +1137,7 @@ std::optional<int> ChromeMainDelegate::B
+@@ -1125,7 +1125,7 @@ std::optional<int> ChromeMainDelegate::B
      return 0;  // Got a --credits switch; exit with a success error code.
    }
  
@@ -126,7 +126,7 @@ $NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.15 2026/02/15 09:03:57 k
    // This will directly exit if the user asked for help.
    HandleHelpSwitches(command_line);
  #endif
-@@ -1453,7 +1453,7 @@ void ChromeMainDelegate::PreSandboxStart
+@@ -1441,7 +1441,7 @@ void ChromeMainDelegate::PreSandboxStart
      CHECK(!loaded_locale.empty()) << "Locale could not be found for " << locale;
    }
  

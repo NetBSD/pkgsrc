@@ -1,10 +1,10 @@
-$NetBSD: patch-extensions_shell_browser_shell__extensions__api__client.h,v 1.15 2026/02/15 09:04:06 kikadf Exp $
+$NetBSD: patch-extensions_shell_browser_shell__extensions__api__client.h,v 1.16 2026/03/14 12:40:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/shell/browser/shell_extensions_api_client.h.orig	2026-02-03 22:07:10.000000000 +0000
+--- extensions/shell/browser/shell_extensions_api_client.h.orig	2026-03-11 22:12:25.000000000 +0000
 +++ extensions/shell/browser/shell_extensions_api_client.h
 @@ -42,14 +42,14 @@ class ShellExtensionsAPIClient : public 
        content::BrowserContext* browser_context) const override;

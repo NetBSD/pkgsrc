@@ -1,12 +1,12 @@
-$NetBSD: patch-components_policy_core_common_cloud_cloud__policy__util.cc,v 1.15 2026/02/15 09:04:03 kikadf Exp $
+$NetBSD: patch-components_policy_core_common_cloud_cloud__policy__util.cc,v 1.16 2026/03/14 12:40:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/common/cloud/cloud_policy_util.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- components/policy/core/common/cloud/cloud_policy_util.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ components/policy/core/common/cloud/cloud_policy_util.cc
-@@ -23,7 +23,7 @@
+@@ -24,7 +24,7 @@
  #include "base/win/wincred_shim.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-components_policy_core_common_cloud_cloud__policy__util.cc,v 1.15
  #include <pwd.h>
  #include <sys/types.h>
  #include <unistd.h>
-@@ -38,10 +38,15 @@
+@@ -39,10 +39,15 @@
  #import <SystemConfiguration/SCDynamicStoreCopySpecific.h>
  #endif
  
@@ -32,7 +32,7 @@ $NetBSD: patch-components_policy_core_common_cloud_cloud__policy__util.cc,v 1.15
  #include <algorithm>
  #include <utility>
  
-@@ -92,7 +97,7 @@ const int kMinimumVersionForExtensionIns
+@@ -93,7 +98,7 @@ const int kMinimumVersionForExtensionIns
  }  // namespace
  
  std::string GetMachineName() {
@@ -41,7 +41,7 @@ $NetBSD: patch-components_policy_core_common_cloud_cloud__policy__util.cc,v 1.15
    char hostname[HOST_NAME_MAX];
    if (gethostname(hostname, HOST_NAME_MAX) == 0)  // Success.
      return hostname;
-@@ -148,7 +153,7 @@ std::string GetMachineName() {
+@@ -149,7 +154,7 @@ std::string GetMachineName() {
  
  std::string GetOSVersion() {
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_APPLE) || \
@@ -50,7 +50,7 @@ $NetBSD: patch-components_policy_core_common_cloud_cloud__policy__util.cc,v 1.15
    return base::SysInfo::OperatingSystemVersion();
  #elif BUILDFLAG(IS_WIN)
    base::win::OSInfo::VersionNumber version_number =
-@@ -170,7 +175,7 @@ std::string GetOSArchitecture() {
+@@ -171,7 +176,7 @@ std::string GetOSArchitecture() {
  }
  
  std::string GetOSUsername() {

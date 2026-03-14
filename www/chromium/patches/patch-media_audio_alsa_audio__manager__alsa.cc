@@ -1,12 +1,12 @@
-$NetBSD: patch-media_audio_alsa_audio__manager__alsa.cc,v 1.15 2026/02/15 09:04:06 kikadf Exp $
+$NetBSD: patch-media_audio_alsa_audio__manager__alsa.cc,v 1.16 2026/03/14 12:40:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/alsa/audio_manager_alsa.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- media/audio/alsa/audio_manager_alsa.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ media/audio/alsa/audio_manager_alsa.cc
-@@ -103,7 +103,9 @@ void AudioManagerAlsa::GetAlsaAudioDevic
+@@ -102,7 +102,9 @@ void AudioManagerAlsa::GetAlsaAudioDevic
    int card = -1;
  
    // Loop through the physical sound cards to get ALSA device hints.
@@ -16,7 +16,7 @@ $NetBSD: patch-media_audio_alsa_audio__manager__alsa.cc,v 1.15 2026/02/15 09:04:
      void** hints = nullptr;
      int error = wrapper_->DeviceNameHint(card, kPcmInterfaceName, &hints);
      if (!error) {
-@@ -115,7 +117,9 @@ void AudioManagerAlsa::GetAlsaAudioDevic
+@@ -114,7 +116,9 @@ void AudioManagerAlsa::GetAlsaAudioDevic
        DLOG(WARNING) << "GetAlsaAudioDevices: unable to get device hints: "
                      << wrapper_->StrError(error);
      }
@@ -26,7 +26,7 @@ $NetBSD: patch-media_audio_alsa_audio__manager__alsa.cc,v 1.15 2026/02/15 09:04:
  }
  
  void AudioManagerAlsa::GetAlsaDevicesInfo(AudioManagerAlsa::StreamType type,
-@@ -199,7 +203,11 @@ bool AudioManagerAlsa::IsAlsaDeviceAvail
+@@ -198,7 +202,11 @@ bool AudioManagerAlsa::IsAlsaDeviceAvail
    // goes through software conversion if needed (e.g. incompatible
    // sample rate).
    // TODO(joi): Should we prefer "hw" instead?
@@ -38,7 +38,7 @@ $NetBSD: patch-media_audio_alsa_audio__manager__alsa.cc,v 1.15 2026/02/15 09:04:
    return device_name.starts_with(kDeviceTypeDesired);
  }
  
-@@ -250,7 +258,9 @@ bool AudioManagerAlsa::HasAnyAlsaAudioDe
+@@ -249,7 +257,9 @@ bool AudioManagerAlsa::HasAnyAlsaAudioDe
    // Loop through the sound cards.
    // Don't use snd_device_name_hint(-1,..) since there is an access violation
    // inside this ALSA API with libasound.so.2.0.0.
@@ -48,7 +48,7 @@ $NetBSD: patch-media_audio_alsa_audio__manager__alsa.cc,v 1.15 2026/02/15 09:04:
      int error = wrapper_->DeviceNameHint(card, kPcmInterfaceName, &hints);
      if (!error) {
        const std::string_view unwanted_type =
-@@ -279,7 +289,9 @@ bool AudioManagerAlsa::HasAnyAlsaAudioDe
+@@ -278,7 +288,9 @@ bool AudioManagerAlsa::HasAnyAlsaAudioDe
        DLOG(WARNING) << "HasAnyAudioDevice: unable to get device hints: "
                      << wrapper_->StrError(error);
      }

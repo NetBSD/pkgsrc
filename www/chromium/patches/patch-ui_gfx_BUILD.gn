@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_gfx_BUILD.gn,v 1.15 2026/02/15 09:04:13 kikadf Exp $
+$NetBSD: patch-ui_gfx_BUILD.gn,v 1.16 2026/03/14 12:40:44 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/BUILD.gn.orig	2026-02-03 22:07:10.000000000 +0000
+--- ui/gfx/BUILD.gn.orig	2026-03-11 22:12:25.000000000 +0000
 +++ ui/gfx/BUILD.gn
-@@ -636,7 +636,7 @@ source_set("memory_buffer_sources") {
+@@ -642,7 +642,7 @@ source_set("memory_buffer_sources") {
      deps += [ "//build/config/linux/libdrm" ]
    }
  

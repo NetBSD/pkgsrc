@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_web__applications_web__app.cc,v 1.7 2026/02/15 09:04:01 kikadf Exp $
+$NetBSD: patch-chrome_browser_web__applications_web__app.cc,v 1.8 2026/03/14 12:40:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/web_app.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/web_applications/web_app.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/web_applications/web_app.cc
 @@ -77,7 +77,7 @@
  #include "url/origin.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_web__applications_web__app.cc,v 1.7 2026/02/15 09:
  #include "components/webapps/isolated_web_apps/scheme.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -755,7 +755,7 @@ void WebApp::SetCurrentOsIntegrationStat
+@@ -777,7 +777,7 @@ void WebApp::SetCurrentOsIntegrationStat
  void WebApp::SetIsolationData(IsolationData isolation_data) {
    CHECK(manifest_id_.is_valid()
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

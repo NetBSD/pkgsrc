@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_service__host_utility__process__host.cc,v 1.14 2026/02/15 09:04:05 kikadf Exp $
+$NetBSD: patch-content_browser_service__host_utility__process__host.cc,v 1.15 2026/03/14 12:40:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/service_host/utility_process_host.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- content/browser/service_host/utility_process_host.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ content/browser/service_host/utility_process_host.cc
-@@ -63,7 +63,7 @@
+@@ -64,7 +64,7 @@
  #include "content/browser/v8_snapshot_files.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-content_browser_service__host_utility__process__host.cc,v 1.14 20
  #include "base/files/file_util.h"
  #include "base/files/scoped_file.h"
  #include "base/pickle.h"
-@@ -92,7 +92,7 @@ namespace content {
+@@ -93,7 +93,7 @@ namespace content {
  
  namespace {
  
@@ -24,7 +24,7 @@ $NetBSD: patch-content_browser_service__host_utility__process__host.cc,v 1.14 20
  base::ScopedFD PassNetworkContextParentDirs(
      std::vector<base::FilePath> network_context_parent_dirs) {
    base::Pickle pickle;
-@@ -489,7 +489,7 @@ bool UtilityProcessHost::StartProcess() 
+@@ -501,7 +501,7 @@ bool UtilityProcessHost::StartProcess() 
        GetV8SnapshotFilesToPreload(*cmd_line));
  #endif  // BUILDFLAG(IS_POSIX)
  
@@ -33,7 +33,7 @@ $NetBSD: patch-content_browser_service__host_utility__process__host.cc,v 1.14 20
    // The network service should have access to the parent directories
    // necessary for its usage.
    if (options_.sandbox_type_ == sandbox::mojom::Sandbox::kNetwork) {
-@@ -507,7 +507,7 @@ bool UtilityProcessHost::StartProcess() 
+@@ -519,7 +519,7 @@ bool UtilityProcessHost::StartProcess() 
        video_capture::mojom::VideoCaptureService::Name_) {
      bool pass_gpu_buffer_flag =
          switches::IsVideoCaptureUseGpuMemoryBufferEnabled();

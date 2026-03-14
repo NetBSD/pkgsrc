@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.15 2026/02/15 09:03:58 kikadf Exp $
+$NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.16 2026/03/14 12:40:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/metrics/chrome_metrics_service_client.cc
-@@ -209,11 +209,11 @@
+@@ -208,11 +208,11 @@
  #include "chrome/browser/metrics/google_update_metrics_provider_mac.h"
  #endif
  
@@ -20,7 +20,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.15
  #include "chrome/browser/metrics/chrome_metrics_service_crash_reporter.h"
  #endif
  
-@@ -231,7 +231,7 @@
+@@ -230,7 +230,7 @@
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -29,7 +29,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.15
  #include "chrome/browser/ui/tabs/tab_metrics_provider.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -251,7 +251,7 @@ const int kMaxHistogramGatheringWaitDura
+@@ -250,7 +250,7 @@ const int kMaxHistogramGatheringWaitDura
  // Needs to be kept in sync with the writer in
  // third_party/crashpad/crashpad/handler/handler_main.cc.
  const char kCrashpadHistogramAllocatorName[] = "CrashpadMetrics";
@@ -38,7 +38,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.15
  ChromeMetricsServiceCrashReporter& GetCrashReporter() {
    static base::NoDestructor<ChromeMetricsServiceCrashReporter> crash_reporter;
    return *crash_reporter;
-@@ -561,7 +561,7 @@ void ChromeMetricsServiceClient::Registe
+@@ -560,7 +560,7 @@ void ChromeMetricsServiceClient::Registe
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -47,7 +47,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.15
    metrics::structured::StructuredMetricsService::RegisterPrefs(registry);
  
  #if !BUILDFLAG(IS_CHROMEOS)
-@@ -654,7 +654,7 @@ std::string ChromeMetricsServiceClient::
+@@ -653,7 +653,7 @@ std::string ChromeMetricsServiceClient::
  void ChromeMetricsServiceClient::OnEnvironmentUpdate(std::string* environment) {
    // TODO(https://bugs.chromium.org/p/crashpad/issues/detail?id=135): call this
    // on Mac when the Crashpad API supports it.
@@ -56,7 +56,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.15
    // Register the environment with the crash reporter. Note that there is a
    // window from startup to this point during which crash reports will not have
    // an environment set.
-@@ -754,7 +754,7 @@ void ChromeMetricsServiceClient::Initial
+@@ -753,7 +753,7 @@ void ChromeMetricsServiceClient::Initial
          this, local_state);
    }
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -65,7 +65,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.15
    metrics::structured::Recorder::GetInstance()->SetUiTaskRunner(
        base::SequencedTaskRunner::GetCurrentDefault());
  #endif
-@@ -814,7 +814,7 @@ void ChromeMetricsServiceClient::Registe
+@@ -813,7 +813,7 @@ void ChromeMetricsServiceClient::Registe
    metrics_service_->RegisterMetricsProvider(
        std::make_unique<metrics::CPUMetricsProvider>());
  
@@ -74,7 +74,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.15
    metrics_service_->RegisterMetricsProvider(
        std::make_unique<metrics::MotherboardMetricsProvider>());
  #endif
-@@ -910,7 +910,7 @@ void ChromeMetricsServiceClient::Registe
+@@ -909,7 +909,7 @@ void ChromeMetricsServiceClient::Registe
        std::make_unique<GoogleUpdateMetricsProviderMac>());
  #endif
  
@@ -83,7 +83,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.15
    metrics_service_->RegisterMetricsProvider(
        std::make_unique<DesktopPlatformFeaturesMetricsProvider>());
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-@@ -1009,7 +1009,7 @@ void ChromeMetricsServiceClient::Registe
+@@ -1008,7 +1008,7 @@ void ChromeMetricsServiceClient::Registe
        std::make_unique<HttpsEngagementMetricsProvider>());
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -92,7 +92,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.15
    metrics_service_->RegisterMetricsProvider(
        std::make_unique<TabMetricsProvider>(
            g_browser_process->profile_manager()));
-@@ -1021,7 +1021,7 @@ void ChromeMetricsServiceClient::Registe
+@@ -1020,7 +1020,7 @@ void ChromeMetricsServiceClient::Registe
        std::make_unique<PowerMetricsProvider>());
  #endif
  
@@ -101,7 +101,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.15
    metrics_service_->RegisterMetricsProvider(
        metrics::CreateDesktopSessionMetricsProvider());
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || (BUILDFLAG(IS_LINUX)
-@@ -1227,7 +1227,7 @@ bool ChromeMetricsServiceClient::Registe
+@@ -1226,7 +1226,7 @@ bool ChromeMetricsServiceClient::Registe
    }
  #endif
  
@@ -110,9 +110,9 @@ $NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.15
    // This creates the DesktopProfileSessionDurationsServices if it didn't exist
    // already.
    metrics::DesktopProfileSessionDurationsServiceFactory::GetForBrowserContext(
-@@ -1578,7 +1578,7 @@ void ChromeMetricsServiceClient::CreateS
+@@ -1577,7 +1577,7 @@ void ChromeMetricsServiceClient::CreateS
    recorder =
-       base::MakeRefCounted<metrics::structured::AshStructuredMetricsRecorder>(
+       std::make_unique<metrics::structured::AshStructuredMetricsRecorder>(
            cros_system_profile_provider_.get());
 -#elif BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
 +#elif BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)

@@ -1,12 +1,12 @@
-$NetBSD: patch-v8_BUILD.gn,v 1.15 2026/02/15 09:04:15 kikadf Exp $
+$NetBSD: patch-v8_BUILD.gn,v 1.16 2026/03/14 12:40:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/BUILD.gn.orig	2026-02-03 22:07:10.000000000 +0000
+--- v8/BUILD.gn.orig	2026-03-11 22:12:25.000000000 +0000
 +++ v8/BUILD.gn
-@@ -1006,6 +1006,9 @@ external_v8_defines = [
+@@ -1014,6 +1014,9 @@ external_v8_defines = [
    "V8_TARGET_OS_CHROMEOS",
    "V8_TARGET_ARCH_ARM64",
    "V8_TARGET_ARCH_PPC64",
@@ -16,7 +16,7 @@ $NetBSD: patch-v8_BUILD.gn,v 1.15 2026/02/15 09:04:15 kikadf Exp $
  ]
  
  enabled_external_v8_defines = [
-@@ -1086,6 +1089,15 @@ if (target_os == "android") {
+@@ -1094,6 +1097,15 @@ if (target_os == "android") {
  } else if (target_os == "chromeos") {
    enabled_external_v8_defines += [ "V8_HAVE_TARGET_OS" ]
    enabled_external_v8_defines += [ "V8_TARGET_OS_CHROMEOS" ]
@@ -32,7 +32,7 @@ $NetBSD: patch-v8_BUILD.gn,v 1.15 2026/02/15 09:04:15 kikadf Exp $
  }
  
  # Some V8_TARGET_ARCH_ defines that affect Api constants (see usages of
-@@ -1830,7 +1842,6 @@ config("strict_warnings") {
+@@ -1844,7 +1856,6 @@ config("strict_warnings") {
      }
      cflags += [
        "-Wmissing-field-initializers",
@@ -40,7 +40,7 @@ $NetBSD: patch-v8_BUILD.gn,v 1.15 2026/02/15 09:04:15 kikadf Exp $
      ]
    }
  }
-@@ -2529,6 +2540,23 @@ action("generate_bytecode_builtins_list"
+@@ -2624,6 +2635,23 @@ action("generate_bytecode_builtins_list"
    ]
  }
  
@@ -64,7 +64,7 @@ $NetBSD: patch-v8_BUILD.gn,v 1.15 2026/02/15 09:04:15 kikadf Exp $
  # Template to generate different V8 snapshots based on different runtime flags.
  # Can be invoked with run_mksnapshot(<name>). The target will resolve to
  # run_mksnapshot_<name>. If <name> is "default", no file suffixes will be used.
-@@ -2547,7 +2575,11 @@ template("run_mksnapshot") {
+@@ -2642,7 +2670,11 @@ template("run_mksnapshot") {
      suffix = "_$name"
    }
    action("run_mksnapshot_" + name) {
@@ -77,7 +77,7 @@ $NetBSD: patch-v8_BUILD.gn,v 1.15 2026/02/15 09:04:15 kikadf Exp $
      if (v8_verify_deterministic_mksnapshot) {
        # We archive the snapshot executable when verifying snapshot
        # determinism to ease debugging.
-@@ -2677,6 +2709,12 @@ template("run_mksnapshot") {
+@@ -2772,6 +2804,12 @@ template("run_mksnapshot") {
        if (!v8_enable_builtins_profiling && v8_enable_builtins_reordering) {
          args += [ "--reorder-builtins" ]
        }
@@ -90,7 +90,7 @@ $NetBSD: patch-v8_BUILD.gn,v 1.15 2026/02/15 09:04:15 kikadf Exp $
      }
  
      # This is needed to distinguish between generating code for the simulator
-@@ -4870,7 +4908,7 @@ v8_header_set("v8_internal_headers") {
+@@ -4982,7 +5020,7 @@ v8_header_set("v8_internal_headers") {
        # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
        # based on Darwin and thus POSIX-compliant to a similar degree.
        if (is_linux || is_chromeos || is_mac || is_ios ||
@@ -99,7 +99,7 @@ $NetBSD: patch-v8_BUILD.gn,v 1.15 2026/02/15 09:04:15 kikadf Exp $
          sources += [ "src/trap-handler/handler-inside-posix.h" ]
        } else if (is_win) {
          sources += [ "src/trap-handler/handler-inside-win.h" ]
-@@ -6301,7 +6339,7 @@ v8_source_set("v8_base_without_compiler"
+@@ -6437,7 +6475,7 @@ v8_source_set("v8_base_without_compiler"
        # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
        # based on Darwin and thus POSIX-compliant to a similar degree.
        if (is_linux || is_chromeos || is_mac || is_ios ||
@@ -108,7 +108,7 @@ $NetBSD: patch-v8_BUILD.gn,v 1.15 2026/02/15 09:04:15 kikadf Exp $
          sources += [
            "src/trap-handler/handler-inside-posix.cc",
            "src/trap-handler/handler-outside-posix.cc",
-@@ -6983,7 +7021,7 @@ v8_component("v8_libbase") {
+@@ -7130,7 +7168,7 @@ v8_component("v8_libbase") {
      }
    }
  
@@ -117,7 +117,7 @@ $NetBSD: patch-v8_BUILD.gn,v 1.15 2026/02/15 09:04:15 kikadf Exp $
      sources += [
        "src/base/debug/stack_trace_posix.cc",
        "src/base/platform/platform-linux.cc",
-@@ -6994,6 +7032,27 @@ v8_component("v8_libbase") {
+@@ -7141,6 +7179,27 @@ v8_component("v8_libbase") {
        "dl",
        "rt",
      ]

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_headless_headless__mode__util.cc,v 1.14 2026/02/15 09:03:58 kikadf Exp $
+$NetBSD: patch-chrome_browser_headless_headless__mode__util.cc,v 1.15 2026/03/14 12:40:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/headless/headless_mode_util.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/headless/headless_mode_util.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/headless/headless_mode_util.cc
 @@ -13,7 +13,7 @@
  // New headless mode is available on Linux, Windows and Mac platforms.
@@ -24,12 +24,12 @@ $NetBSD: patch-chrome_browser_headless_headless__mode__util.cc,v 1.14 2026/02/15
  #include "ui/gl/gl_switches.h"               // nogncheck
  #include "ui/ozone/public/ozone_switches.h"  // nogncheck
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -94,7 +94,7 @@ class HeadlessModeHandleImpl : public He
-       command_line->AppendSwitchPath(switches::kUserDataDir, user_data_dir);
+@@ -95,7 +95,7 @@ class HeadlessModeHandleImpl : public He
+       command_line.AppendSwitchPath(switches::kUserDataDir, user_data_dir);
      }
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
      // Headless mode on Linux relies on ozone/headless platform.
-     command_line->AppendSwitchASCII(::switches::kOzonePlatform,
-                                     switches::kHeadless);
+     command_line.AppendSwitchASCII(::switches::kOzonePlatform,
+                                    switches::kHeadless);

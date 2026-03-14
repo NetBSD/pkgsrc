@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_mojo__caller__security__checker.cc,v 1.15 2026/02/15 09:04:08 kikadf Exp $
+$NetBSD: patch-remoting_host_mojo__caller__security__checker.cc,v 1.16 2026/03/14 12:40:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/mojo_caller_security_checker.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- remoting/host/mojo_caller_security_checker.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ remoting/host/mojo_caller_security_checker.cc
 @@ -32,7 +32,7 @@
  namespace remoting {
@@ -15,7 +15,7 @@ $NetBSD: patch-remoting_host_mojo__caller__security__checker.cc,v 1.15 2026/02/1
  constexpr auto kAllowedCallerProgramNames =
      base::MakeFixedFlatSet<base::FilePath::StringViewType>({
          "remote-open-url",
-@@ -60,7 +60,7 @@ bool IsTrustedMojoEndpoint(
+@@ -61,7 +61,7 @@ bool IsTrustedMojoEndpoint(
      const named_mojo_ipc_server::ConnectionInfo& caller) {
  #if BUILDFLAG(IS_MAC)
    return IsProcessTrusted(caller.audit_token, kAllowedIdentifiers);
@@ -24,7 +24,7 @@ $NetBSD: patch-remoting_host_mojo__caller__security__checker.cc,v 1.15 2026/02/1
  
    // TODO: yuweih - see if it's possible to move away from PID-based security
    // checks, which might be susceptible of PID reuse attacks.
-@@ -84,7 +84,7 @@ bool IsTrustedMojoEndpoint(
+@@ -85,7 +85,7 @@ bool IsTrustedMojoEndpoint(
    base::FilePath::StringType program_name =
        caller_process_image_path.BaseName().value();
    if (!kAllowedCallerProgramNames.contains(program_name)) {

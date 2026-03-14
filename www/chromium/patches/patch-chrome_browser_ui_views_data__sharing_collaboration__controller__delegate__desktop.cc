@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_data__sharing_collaboration__controller__delegate__desktop.cc,v 1.7 2026/02/15 09:04:00 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_data__sharing_collaboration__controller__delegate__desktop.cc,v 1.8 2026/03/14 12:40:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/data_sharing/collaboration_controller_delegate_desktop.cc.orig	2026-02-03 22:07:10.000000000 +0000
+--- chrome/browser/ui/views/data_sharing/collaboration_controller_delegate_desktop.cc.orig	2026-03-11 22:12:25.000000000 +0000
 +++ chrome/browser/ui/views/data_sharing/collaboration_controller_delegate_desktop.cc
 @@ -95,7 +95,7 @@ DialogText GetPromptDialogTextFromStatus
        break;
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_views_data__sharing_collaboration__controller__
    if (base::FeatureList::IsEnabled(
            syncer::kReplaceSyncPromosWithSignInPromos) &&
        status.signin_status != collaboration::SigninStatus::kSigninDisabled) {
-@@ -436,7 +436,7 @@ void CollaborationControllerDelegateDesk
+@@ -434,7 +434,7 @@ void CollaborationControllerDelegateDesk
        chrome::ShowBrowserModal(browser_, std::move(dialog_model));
  }
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_views_data__sharing_collaboration__controller__
  void CollaborationControllerDelegateDesktop::
      MaybeShowSignInUiForHistorySyncOptin() {
    collaboration::ServiceStatus status = GetServiceStatus();
-@@ -521,7 +521,7 @@ void CollaborationControllerDelegateDesk
+@@ -519,7 +519,7 @@ void CollaborationControllerDelegateDesk
    }
  
    AccountInfo account_for_promo =
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_views_data__sharing_collaboration__controller__
        signin_ui_util::GetSingleAccountForPromos(
            IdentityManagerFactory::GetForProfile(browser_->profile()));
  #else
-@@ -556,7 +556,7 @@ void CollaborationControllerDelegateDesk
+@@ -554,7 +554,7 @@ void CollaborationControllerDelegateDesk
                .SetLabel(dialog_text.ok_button_text)
                .SetEnabled(true));
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_ui_views_data__sharing_collaboration__controller__
    if (base::FeatureList::IsEnabled(
            syncer::kReplaceSyncPromosWithSignInPromos)) {
      dialog_builder.SetFootnote(ui::DialogModelLabel(dialog_text.footnote));
-@@ -607,7 +607,7 @@ void CollaborationControllerDelegateDesk
+@@ -605,7 +605,7 @@ void CollaborationControllerDelegateDesk
          .Run(CollaborationControllerDelegate::Outcome::kSuccess);
    }
  
