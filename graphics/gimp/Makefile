@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.429 2026/02/06 10:04:59 wiz Exp $
+# $NetBSD: Makefile,v 1.430 2026/03/15 07:29:21 wiz Exp $
 
-DISTNAME=	gimp-3.0.8
-PKGREVISION=	2
+DISTNAME=	gimp-3.2.0
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -95,9 +94,9 @@ PLIST_VARS+=	xmc
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.12.4
 .include "../../fonts/fontconfig/buildlink3.mk"
-BUILDLINK_API_DEPENDS.babl+=		babl>=0.1.114
+BUILDLINK_API_DEPENDS.babl+=		babl>=0.1.118
 .include "../../graphics/babl/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.62
+BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.66
 .include "../../graphics/gegl/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
@@ -111,7 +110,7 @@ BUILDLINK_API_DEPENDS.gexiv2+=		gexiv2>=0.14
 .include "../../graphics/libjxl/buildlink3.mk"
 .include "../../graphics/libmypaint/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
-.include "../../graphics/mypaint-brushes1/buildlink3.mk"
+.include "../../graphics/mypaint-brushes/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
