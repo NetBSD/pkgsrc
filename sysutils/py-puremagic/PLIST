@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/02/22 14:15:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/03/15 13:19:41 wiz Exp $
 bin/puremagic
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -20,6 +20,9 @@ ${PYSITELIB}/puremagic/py.typed
 ${PYSITELIB}/puremagic/scanners/__init__.py
 ${PYSITELIB}/puremagic/scanners/__init__.pyc
 ${PYSITELIB}/puremagic/scanners/__init__.pyo
+${PYSITELIB}/puremagic/scanners/cfbf_scanner.py
+${PYSITELIB}/puremagic/scanners/cfbf_scanner.pyc
+${PYSITELIB}/puremagic/scanners/cfbf_scanner.pyo
 ${PYSITELIB}/puremagic/scanners/hdf5_scanner.py
 ${PYSITELIB}/puremagic/scanners/hdf5_scanner.pyc
 ${PYSITELIB}/puremagic/scanners/hdf5_scanner.pyo
