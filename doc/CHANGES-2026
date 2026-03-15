@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1763 2026/03/15 13:27:51 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1764 2026/03/15 13:36:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2418,3 +2418,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-puremagic to 2.1.0 [wiz 2026-03-15]
 	Updated net/libtorrent-rasterbar to 2.0.12 [wiz 2026-03-15]
 	Updated devel/py-ruff to 0.15.6 [wiz 2026-03-15]
+	Updated comms/py-textual to 8.1.1 [wiz 2026-03-15]
