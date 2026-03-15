@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.148 2026/03/11 10:56:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.149 2026/03/15 09:36:08 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -10,6 +10,7 @@ share/doc/sqlite3/appfileformat.html
 share/doc/sqlite3/appfunc.html
 share/doc/sqlite3/arch.html
 share/doc/sqlite3/assert.html
+share/doc/sqlite3/asyncvfs.html
 share/doc/sqlite3/atomiccommit.html
 share/doc/sqlite3/autoinc.html
 share/doc/sqlite3/backup.html
@@ -246,7 +247,6 @@ share/doc/sqlite3/chronology.html
 share/doc/sqlite3/cintro.html
 share/doc/sqlite3/cksumvfs.html
 share/doc/sqlite3/cli.html
-share/doc/sqlite3/climode.html
 share/doc/sqlite3/codeofconduct.html
 share/doc/sqlite3/codeofethics.html
 share/doc/sqlite3/compile.html
@@ -723,6 +723,7 @@ share/doc/sqlite3/releaselog/3_50_4.html
 share/doc/sqlite3/releaselog/3_51_0.html
 share/doc/sqlite3/releaselog/3_51_1.html
 share/doc/sqlite3/releaselog/3_51_2.html
+share/doc/sqlite3/releaselog/3_51_3.html
 share/doc/sqlite3/releaselog/3_52_0.html
 share/doc/sqlite3/releaselog/3_5_0.html
 share/doc/sqlite3/releaselog/3_5_1.html
@@ -980,7 +981,6 @@ share/doc/sqlite3/syntax/window-defn.html
 share/doc/sqlite3/syntax/window-function-invocation.html
 share/doc/sqlite3/syntax/with-clause.html
 share/doc/sqlite3/syntaxdiagrams.html
-share/doc/sqlite3/tcljson.html
 share/doc/sqlite3/tclsqlite.html
 share/doc/sqlite3/tempfiles.html
 share/doc/sqlite3/testing.html
