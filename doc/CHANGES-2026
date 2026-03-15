@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1741 2026/03/15 06:32:33 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1742 2026/03/15 06:33:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2392,3 +2392,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Clone to 0.48 [wiz 2026-03-15]
 	Updated devel/p5-Date-Manip to 6.99 [wiz 2026-03-15]
 	Updated time/p5-DateTime-TimeZone to 2.67 [wiz 2026-03-15]
+	Updated devel/p5-Module-Build-Tiny to 0.053 [wiz 2026-03-15]
