@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2026/01/14 09:49:23 adam Exp $
+$NetBSD: distinfo,v 1.13 2026/03/15 18:19:48 wiz Exp $
 
-BLAKE2s (colordiff-1.0.22.tar.gz) = 0b25c41d12cd3499eca544cc445228f698546bf0d7e5bbd824b2f46a33409d8c
-SHA512 (colordiff-1.0.22.tar.gz) = 33de1985a5833a1fa709fd47feee97fcdf04acfd235301bca883483eb9a3f188bfd3312314182e65e24fa750239120e864aeef85856a94a65a1e64de5cf3ec31
-Size (colordiff-1.0.22.tar.gz) = 25032 bytes
+BLAKE2s (colordiff-1.0.22-repack/colordiff-1.0.22.tar.gz) = 8961d293f42adfb2913abefba099eb059ddd8c47eb06e2e8114149f9eda17e92
+SHA512 (colordiff-1.0.22-repack/colordiff-1.0.22.tar.gz) = 3975505f56679ec5f037ade07104a03e845b9d335a4fd9d3a0514b0fcffa81241218f168381a5cc7c844c52a4b2e8facf476cc79dd078520757b8f9ed050f6e9
+Size (colordiff-1.0.22-repack/colordiff-1.0.22.tar.gz) = 23162 bytes

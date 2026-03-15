@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.22 2026/01/14 09:49:23 adam Exp $
+# $NetBSD: Makefile,v 1.23 2026/03/15 18:19:48 wiz Exp $
 
 DISTNAME=	colordiff-1.0.22
 CATEGORIES=	devel
 MASTER_SITES=	https://www.colordiff.org/
+# PR 60080, remove on next update
+DIST_SUBDIR=	colordiff-1.0.22-repack
 
-MAINTAINER=	pkgsrc-users@netbsd.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.colordiff.org/
 COMMENT=	Colour-highlighted 'diff' output
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
