@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.2 2025/11/23 13:38:20 ryoon Exp $
+# $NetBSD: modules.mk,v 1.3 2026/03/15 08:54:13 wiz Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # GTK4 modules.  It takes care of rebuilding the corresponding databases at
@@ -16,7 +16,7 @@ BUILDLINK_PREFIX.gtk4=	${PREFIX}
 GTK4_IMMODULES=		YES
 .endif
 
-.if defined(GTK4_IMMODULES) && !empty(GTK4_IMMODULES:M[Yy][Ee][Ss])
+.if !empty(GTK4_IMMODULES:M[Yy][Ee][Ss])
 FILES_SUBST+=		GTK4_IMMODULES_DB=${GTK4_IMMODULES_DB:Q}
 GTK4_IMMODULES_DB=	${BUILDLINK_PREFIX.gtk4}/lib/gtk-4.0/4.0.0/immodules.cache
 INSTALL_TEMPLATES+=	../../x11/gtk4/files/immodules.tmpl
