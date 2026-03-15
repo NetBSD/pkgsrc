@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1770 2026/03/15 15:39:45 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1771 2026/03/15 15:40:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2425,3 +2425,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-mocha to 3.1.0 [taca 2026-03-15]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.7.33 [taca 2026-03-15]
 	Updated www/ruby-aws-partitions to 1.1226.0 [taca 2026-03-15]
+	Updated www/ruby-aws-sdk-s3 to 1.216.0 [taca 2026-03-15]
