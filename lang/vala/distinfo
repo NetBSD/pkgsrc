@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.80 2025/03/30 09:03:13 adam Exp $
+$NetBSD: distinfo,v 1.81 2026/03/15 19:04:26 wiz Exp $
 
 BLAKE2s (vala-0.56.18.tar.xz) = ec0de6d5b4aea8f9c3043ad74c81a3a00f27430cb5fa1ae2caf7098a7d5bbceb
 SHA512 (vala-0.56.18.tar.xz) = 7ba820942ac40b54a62cbcd8a1d94d5add022b4a2c69e1276fc9fca38361d5878f3f852d270e0a5ef4bca6bd2df3a65f14b410c600b82a46da4123c90a3107e7
 Size (vala-0.56.18.tar.xz) = 3995244 bytes
 SHA1 (patch-build-aux_testrunner.sh) = d30ce05459b398a18e9dbd4420f28d8bfdf7323a
+SHA1 (patch-libvaladoc_charts_chart.vala) = ed179aea35d12a0db07f554d244144570d50c4c5
+SHA1 (patch-vapi_libgvc.vapi) = 82405923b7d622268ee177aa28c2dae44ff85e67
