@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1761 2026/03/15 13:19:51 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1762 2026/03/15 13:22:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2416,3 +2416,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/miniflux to 2.2.18 [wiz 2026-03-15]
 	Updated fonts/py-fonttools to 4.62.1 [wiz 2026-03-15]
 	Updated sysutils/py-puremagic to 2.1.0 [wiz 2026-03-15]
+	Updated net/libtorrent-rasterbar to 2.0.12 [wiz 2026-03-15]
