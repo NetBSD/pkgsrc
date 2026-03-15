@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26932 2026/03/15 09:41:31 wiz Exp $
+$NetBSD: TODO,v 1.26933 2026/03/15 11:14:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -600,6 +600,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o eric5-5.4.6
 	o erlang-28.0.1
 	o es-0.83
+	o esbuild-0.27.4
 	o esh-0.8.5
 	o ess-18.10.2
 	o etach-1.4.1
@@ -714,7 +715,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o grafana-12.3.1 [wip]
-	o grafana-12.4.0
+	o grafana-12.4.1
 	o grafx2-2.8.3137
 	o gramps-6.0.6
 	o grantlee-5.0.0
@@ -740,6 +741,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o h8300-elf-gcc-7.1.0
 	o hamster-applet-2.32.1
 	o hanzim-3.5
+	o harfbuzz-13.1.1
 	o harminv-1.4.1
 	o hashcash-1.23
 	o haskell-mode-13.20
@@ -794,6 +796,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jed-0.99-18
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jjui-0.10.1
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -808,6 +811,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kdesdk-thumbnailers-20.08.0
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
+	o keepassxc-2.7.12
 	o keybinder-0.3.2
 	o kfilemetadata-5.81.0
 	o kgb-bot-1.55
@@ -823,6 +827,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lbdb-49
 	o lcc-4.2
 	o ldapsdk-6.0.7
+	o lerc-4.1.0
 	o lgeneral-1.3.1
 	o libadwaita-1.9 [needs gtk4>4.21]
 	o libbaloo4-21.04.0
@@ -858,6 +863,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libreoffice-26.2.1
 	o libretro-core-info-1.9.1
 	o libthai-0.2.2
+	o libtorrent-rasterbar-2.0.12
 	o libtrace-4.0.16
 	o libvirt-12.0
 	o libxdg-basedir-1.2.3
@@ -866,7 +872,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
 	o llvm-21.1.8 [wip]
-	o llvm-22.1.0
+	o llvm-22.1.1
 	o lmbench-3
 	o lnav-0.12.4 [wip]
 	o log4cxx-0.11.0
@@ -922,6 +928,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mingw-binutils-2.36.1
 	o mini_sendmail-1.3.9
 	o minicom-2.10
+	o miniflux-2.2.18
 	o miniircd-2.1
 	o miniupnpd-2.3.7
 	o mipsel-none-elf-binutils-2.36.1
@@ -1122,6 +1129,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
+	o py-fonttools-4.62.1
 	o py-grpcio-1.78.1
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
@@ -1131,12 +1139,18 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
 	o py-protobuf-7.34.0
+	o py-puremagic-2.1.0
+	o py-ruff-0.15.6
 	o py-simpletal-5.1
+	o py-sip-qt6-13.11.1
+	o py-sip6-6.15.2
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
+	o py-textual-8.1.1
 	o py-tokyocabinet-0.6
 	o py-torch-2.10
 	o py-uliweb-0.6
+	o py-uv-build-0.10.10
 	o py-wat-0.6.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1174,7 +1188,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
-	o rumdl-0.1.43 [needs rust 1.94]
+	o rumdl-0.1.51 [needs rust 1.94]
 	o rust-1.94.0 [wip]
 	o rvault-0.4
 	o rvm-1.20
@@ -1246,6 +1260,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
 	o systrace-1.6e
+	o tabiew-0.13.0
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-4.0.4.29a
 	o tads-3.0.16
@@ -1292,6 +1307,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.0.4
+	o tree-sitter-0.26.7
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o ttftot42-0.4.1
@@ -1390,6 +1406,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o yices2-2.6.2
 	o yodl-4.03.03
 	o yorick-2.1.05
+	o yt-dlp-2026.3.13
 	o yubikey-manager-5.1.1
 	o yudit-3.0.7
 	o z-push-2.6.1
