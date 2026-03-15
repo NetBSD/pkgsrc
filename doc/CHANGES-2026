@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1774 2026/03/15 18:59:30 maya Exp $
+$NetBSD: CHANGES-2026,v 1.1775 2026/03/15 19:04:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2429,3 +2429,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 29.9.0 [pin 2026-03-15]
 	Updated devel/fq to 0.17.0 [wiz 2026-03-15]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2026Q1 branch [maya 2026-03-15]
+	Updated lang/vala to 0.56.18nb3 [wiz 2026-03-15]
