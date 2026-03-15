@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1766 2026/03/15 15:29:26 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1767 2026/03/15 15:31:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2421,3 +2421,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated comms/py-textual to 8.1.1 [wiz 2026-03-15]
 	Updated www/squid7 to 7.5 [taca 2026-03-15]
 	Updated lang/php84 to 8.4.19 [taca 2026-03-15]
+	Updated lang/php85 to 8.5.4 [taca 2026-03-15]
