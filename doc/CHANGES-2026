@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1747 2026/03/15 09:37:12 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1748 2026/03/15 09:41:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2402,3 +2402,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-testtools to 2.8.7 [adam 2026-03-15]
 	Updated databases/sqlite3 to 3.51.3 [adam 2026-03-15]
 	Updated databases/py-apsw to 3.51.3.0 [adam 2026-03-15]
+	Updated devel/libadwaita to 1.8.0 [wiz 2026-03-15]
