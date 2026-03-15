@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2026/02/17 06:36:11 adam Exp $
+# $NetBSD: Makefile,v 1.31 2026/03/15 16:55:55 tnn Exp $
 
 DISTNAME=	pybind11-3.0.2
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pybind11/}
@@ -14,6 +15,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build-core>=0.11.2:../../devel/py-scikit-bu
 TOOL_DEPENDS+=	cmake>=3.15:../../devel/cmake
 
 USE_LANGUAGES=	c c++
+
+pre-build:
+	${RM} -f ${WRKSRC}/include/pybind11/detail/holder_caster_foreign_helpers.h.orig
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
