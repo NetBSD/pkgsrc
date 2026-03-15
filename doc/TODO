@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26931 2026/03/14 19:56:11 wiz Exp $
+$NetBSD: TODO,v 1.26932 2026/03/15 09:41:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -723,7 +723,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gstreamer-1.28.1
-	o gtk4-4.22.0
+	o gtk4-4.22.1
 	o gtklevel9-5.1
 	o gtklife-5.3
 	o gtkmagnetic-23
@@ -824,7 +824,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lcc-4.2
 	o ldapsdk-6.0.7
 	o lgeneral-1.3.1
-	o libadwaita-1.9
+	o libadwaita-1.9 [needs gtk4>4.21]
 	o libbaloo4-21.04.0
 	o libbpg-0.9.8
 	o libburn-1.5.4
