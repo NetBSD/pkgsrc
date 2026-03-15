@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2025/09/21 15:49:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.60 2026/03/15 13:18:48 wiz Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
@@ -95,6 +95,21 @@ ${PYSITELIB}/fontTools/designspaceLib/statNames.pyo
 ${PYSITELIB}/fontTools/designspaceLib/types.py
 ${PYSITELIB}/fontTools/designspaceLib/types.pyc
 ${PYSITELIB}/fontTools/designspaceLib/types.pyo
+${PYSITELIB}/fontTools/diff/__init__.py
+${PYSITELIB}/fontTools/diff/__init__.pyc
+${PYSITELIB}/fontTools/diff/__init__.pyo
+${PYSITELIB}/fontTools/diff/__main__.py
+${PYSITELIB}/fontTools/diff/__main__.pyc
+${PYSITELIB}/fontTools/diff/__main__.pyo
+${PYSITELIB}/fontTools/diff/color.py
+${PYSITELIB}/fontTools/diff/color.pyc
+${PYSITELIB}/fontTools/diff/color.pyo
+${PYSITELIB}/fontTools/diff/diff.py
+${PYSITELIB}/fontTools/diff/diff.pyc
+${PYSITELIB}/fontTools/diff/diff.pyo
+${PYSITELIB}/fontTools/diff/utils.py
+${PYSITELIB}/fontTools/diff/utils.pyc
+${PYSITELIB}/fontTools/diff/utils.pyo
 ${PYSITELIB}/fontTools/encodings/MacRoman.py
 ${PYSITELIB}/fontTools/encodings/MacRoman.pyc
 ${PYSITELIB}/fontTools/encodings/MacRoman.pyo
@@ -563,12 +578,6 @@ ${PYSITELIB}/fontTools/ttLib/tables/F__e_a_t.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/G_D_E_F_.py
 ${PYSITELIB}/fontTools/ttLib/tables/G_D_E_F_.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/G_D_E_F_.pyo
-${PYSITELIB}/fontTools/ttLib/tables/G_M_A_P_.py
-${PYSITELIB}/fontTools/ttLib/tables/G_M_A_P_.pyc
-${PYSITELIB}/fontTools/ttLib/tables/G_M_A_P_.pyo
-${PYSITELIB}/fontTools/ttLib/tables/G_P_K_G_.py
-${PYSITELIB}/fontTools/ttLib/tables/G_P_K_G_.pyc
-${PYSITELIB}/fontTools/ttLib/tables/G_P_K_G_.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/G_P_O_S_.py
 ${PYSITELIB}/fontTools/ttLib/tables/G_P_O_S_.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/G_P_O_S_.pyo
@@ -596,18 +605,12 @@ ${PYSITELIB}/fontTools/ttLib/tables/L_T_S_H_.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/M_A_T_H_.py
 ${PYSITELIB}/fontTools/ttLib/tables/M_A_T_H_.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/M_A_T_H_.pyo
-${PYSITELIB}/fontTools/ttLib/tables/M_E_T_A_.py
-${PYSITELIB}/fontTools/ttLib/tables/M_E_T_A_.pyc
-${PYSITELIB}/fontTools/ttLib/tables/M_E_T_A_.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/M_V_A_R_.py
 ${PYSITELIB}/fontTools/ttLib/tables/M_V_A_R_.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/M_V_A_R_.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/O_S_2f_2.py
 ${PYSITELIB}/fontTools/ttLib/tables/O_S_2f_2.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/O_S_2f_2.pyo
-${PYSITELIB}/fontTools/ttLib/tables/S_I_N_G_.py
-${PYSITELIB}/fontTools/ttLib/tables/S_I_N_G_.pyc
-${PYSITELIB}/fontTools/ttLib/tables/S_I_N_G_.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/S_T_A_T_.py
 ${PYSITELIB}/fontTools/ttLib/tables/S_T_A_T_.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/S_T_A_T_.pyo

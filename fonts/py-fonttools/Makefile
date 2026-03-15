@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.130 2025/12/13 18:34:52 adam Exp $
+# $NetBSD: Makefile,v 1.131 2026/03/15 13:18:48 wiz Exp $
 
-DISTNAME=	fonttools-4.61.1
+DISTNAME=	fonttools-4.62.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	fonts python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/FontTools/}
@@ -21,9 +21,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0:../../devel/py-test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
-# as of 4.61.0
+# as of 4.62.1
 # https://github.com/fonttools/fonttools/issues/3660
-# 8 failed, 4538 passed, 65 skipped, 2 xfailed, 28 warnings
+# 8 failed, 4581 passed, 65 skipped, 2 xfailed, 28 warnings
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
