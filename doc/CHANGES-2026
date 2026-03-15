@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1745 2026/03/15 07:29:32 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1746 2026/03/15 09:28:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2396,3 +2396,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/babl to 0.1.124 [wiz 2026-03-15]
 	Updated graphics/gegl to 0.4.68 [wiz 2026-03-15]
 	Updated graphics/gimp to 3.2.0 [wiz 2026-03-15]
+	Updated comms/srtp to 2.8.0 [adam 2026-03-15]
+	Updated math/py-mpmath to 1.4.1 [adam 2026-03-15]
+	Updated devel/py-pykka to 4.4.2 [adam 2026-03-15]
+	Updated devel/py-testtools to 2.8.7 [adam 2026-03-15]
