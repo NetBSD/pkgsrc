@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.95 2025/08/17 09:31:57 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2026/03/15 06:31:16 wiz Exp $
 
-DISTNAME=	Date-Manip-6.98
+DISTNAME=	Date-Manip-6.99
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Date/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SB/SBECK/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Date-Manip
