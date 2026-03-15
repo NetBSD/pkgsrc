@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/02/24 20:00:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/03/15 09:25:15 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -14,6 +14,9 @@ ${PYSITELIB}/mpmath/__main__.pyo
 ${PYSITELIB}/mpmath/_interactive.py
 ${PYSITELIB}/mpmath/_interactive.pyc
 ${PYSITELIB}/mpmath/_interactive.pyo
+${PYSITELIB}/mpmath/_version.py
+${PYSITELIB}/mpmath/_version.pyc
+${PYSITELIB}/mpmath/_version.pyo
 ${PYSITELIB}/mpmath/calculus/__init__.py
 ${PYSITELIB}/mpmath/calculus/__init__.pyc
 ${PYSITELIB}/mpmath/calculus/__init__.pyo
@@ -272,6 +275,7 @@ ${PYSITELIB}/mpmath/tests/test_torture.pyo
 ${PYSITELIB}/mpmath/tests/test_trig.py
 ${PYSITELIB}/mpmath/tests/test_trig.pyc
 ${PYSITELIB}/mpmath/tests/test_trig.pyo
+${PYSITELIB}/mpmath/tests/test_version_frozen.sh
 ${PYSITELIB}/mpmath/tests/test_visualization.py
 ${PYSITELIB}/mpmath/tests/test_visualization.pyc
 ${PYSITELIB}/mpmath/tests/test_visualization.pyo
