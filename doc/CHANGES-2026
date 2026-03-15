@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1749 2026/03/15 11:45:49 leot Exp $
+$NetBSD: CHANGES-2026,v 1.1750 2026/03/15 11:46:07 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2404,3 +2404,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/py-apsw to 3.51.3.0 [adam 2026-03-15]
 	Updated devel/libadwaita to 1.8.0 [wiz 2026-03-15]
 	Updated devel/opa to 1.14.1 [leot 2026-03-15]
+	Updated devel/conftest to 0.67.0 [leot 2026-03-15]
