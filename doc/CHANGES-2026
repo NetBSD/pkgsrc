@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1773 2026/03/15 18:23:45 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1774 2026/03/15 18:59:30 maya Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2428,3 +2428,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-aws-sdk-s3 to 1.216.0 [taca 2026-03-15]
 	Updated shells/oh-my-posh to 29.9.0 [pin 2026-03-15]
 	Updated devel/fq to 0.17.0 [wiz 2026-03-15]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2026Q1 branch [maya 2026-03-15]
