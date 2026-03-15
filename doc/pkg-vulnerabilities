@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.743 2026/03/15 17:39:34 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.744 2026/03/15 17:48:16 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30204,3 +30204,4 @@ wordpress-[0-9]*	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-202
 zabbix-server-{mysql,postgresql}<6.0.41	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2026-23925
 zookeeper<3.8.6	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-24281
 zookeeper<3.8.6	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-24308
+firefox<148.0.2		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2026-19/
