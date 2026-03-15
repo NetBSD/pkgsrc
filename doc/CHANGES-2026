@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1750 2026/03/15 11:46:07 leot Exp $
+$NetBSD: CHANGES-2026,v 1.1751 2026/03/15 11:46:27 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2405,3 +2405,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/libadwaita to 1.8.0 [wiz 2026-03-15]
 	Updated devel/opa to 1.14.1 [leot 2026-03-15]
 	Updated devel/conftest to 0.67.0 [leot 2026-03-15]
+	Updated devel/regal to 0.39.0 [leot 2026-03-15]
