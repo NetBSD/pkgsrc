@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.46 2026/02/17 13:44:26 taca Exp $
+$NetBSD: distinfo,v 1.47 2026/03/15 15:34:11 taca Exp $
 
-BLAKE2s (mocha-3.0.2.gem) = 9b9e218e6601b500eb4a11405b628d46a4e9f42b82195088c75aad20af810a7d
-SHA512 (mocha-3.0.2.gem) = 42d10ce6533a896fceb452eb1036f71410a966500108376aa1434c0ae1d45dc1615da7be756ef221c834fd289b802498ecd1dbe8c765e4132eba7b2dd3d9833d
-Size (mocha-3.0.2.gem) = 72704 bytes
+BLAKE2s (mocha-3.1.0.gem) = e88a4936da06a864f61837151dfb8312312c2e6d04f58d313589dd69572ffb6c
+SHA512 (mocha-3.1.0.gem) = 1609036ebf9aa64f5a15ffd709aa37c88c54bb5bfe560eef4d93707e065a51ae8aabc01ddda485213612fff349ca1c665ef12a86e1b18450e9e3154fe000bc94
+Size (mocha-3.1.0.gem) = 73216 bytes
