@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.311 2026/01/05 12:44:55 adam Exp $
+# $NetBSD: Makefile,v 1.312 2026/03/15 16:37:42 tnn Exp $
 
 .include "Makefile.common"
+PKGREVISION=	1
 
 CATEGORIES=	devel gnome
 COMMENT=	Some useful routines for C programming (glib2)
@@ -80,6 +81,11 @@ SUBST_FILES.xdg=	glib/gcharset.c glib/gutils.c gio/xdgmime/xdgmime.c
 SUBST_SED.xdg=		-e 's,/usr/local/share/:/usr/share/,${PREFIX}/share,'
 SUBST_SED.xdg+=		-e 's,/etc/xdg,${PKG_SYSCONFDIR}/xdg,'
 SUBST_SED.xdg+=		-e 's,/usr/share/locale,${PREFIX}/${PKGLOCALEDIR}/locale,'
+
+SUBST_CLASSES+=		libdirs
+SUBST_STAGE.libdirs=	pre-configure
+SUBST_FILES.libdirs+=	girepository/gitypelib.c
+SUBST_VARS.libdirs+=	PREFIX
 
 PKGCONFIG_OVERRIDE+=	output/meson-private/gio-2.0.pc
 PKGCONFIG_OVERRIDE+=	output/meson-private/gio-unix-2.0.pc
