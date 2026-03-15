@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1771 2026/03/15 15:40:40 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1772 2026/03/15 17:20:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2426,3 +2426,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ruby-kramdown-rfc2629 to 1.7.33 [taca 2026-03-15]
 	Updated www/ruby-aws-partitions to 1.1226.0 [taca 2026-03-15]
 	Updated www/ruby-aws-sdk-s3 to 1.216.0 [taca 2026-03-15]
+	Updated shells/oh-my-posh to 29.9.0 [pin 2026-03-15]
