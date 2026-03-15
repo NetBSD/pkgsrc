@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1767 2026/03/15 15:31:02 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1768 2026/03/15 15:34:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2422,3 +2422,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/squid7 to 7.5 [taca 2026-03-15]
 	Updated lang/php84 to 8.4.19 [taca 2026-03-15]
 	Updated lang/php85 to 8.5.4 [taca 2026-03-15]
+	Updated devel/ruby-mocha to 3.1.0 [taca 2026-03-15]
