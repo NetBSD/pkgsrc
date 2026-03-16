@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:31:10 nia Exp $
+$NetBSD: distinfo,v 1.14 2026/03/16 13:55:36 nia Exp $
 
 BLAKE2s (swish-e-2.4.5.tar.gz) = ed4a09f29e91a024640b2776305fbcd4deca143de7b1fb3c6bfe6d250bb26bfc
 SHA512 (swish-e-2.4.5.tar.gz) = eebb9f8a09a30abb68fe840bfec686f45721ac0e7d006aaae543b50c62c3484107148ff9b942310a597280c8eb69e6f974cd7409d37fc4269b3d34f4f5134aef
@@ -15,6 +15,7 @@ SHA1 (patch-src_db__native.c) = f845c49a2d5fd6d1436a5b6a52350e6333bb5e74
 SHA1 (patch-src_db__read.c) = f95833b15ee4e797613d7bfd9cd1705eaa4b60c5
 SHA1 (patch-src_db__write.c) = aef2f748675c459086d75f2bf7e3c50963f8a9ec
 SHA1 (patch-src_dump.c) = 4f8a2242cea218aa18b9c8519df54aa7a485630a
+SHA1 (patch-src_filter.c) = 65c93454917fe56bc8a1d9e9b95160455c57860c
 SHA1 (patch-src_index.c) = e9abd6b2c8be0a1aa53166413d1ab37762b5edb6
 SHA1 (patch-src_merge.c) = ab2fe40304697635d01657bdcab6faeb245a4c75
 SHA1 (patch-src_result__sort.c) = 438293733093084926f7e310ef77421055f09ae1
