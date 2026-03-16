@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.746 2026/03/16 16:09:39 kim Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.747 2026/03/16 16:23:38 kim Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26459,7 +26459,7 @@ python39-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-606
 python310-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6069
 python311-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6069
 python312-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6069
-python313-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6069
+python313<3.13.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6069
 rabbitmq<4.0.8	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-50200
 wabt-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6273
 wabt-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6274
