@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.91 2026/03/15 13:27:43 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.92 2026/03/16 09:23:48 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -211,7 +211,7 @@ CARGO_CRATE_DEPENDS+=	litemap-0.8.0
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.13
 CARGO_CRATE_DEPENDS+=	log-0.4.29
 CARGO_CRATE_DEPENDS+=	lsp-server-0.7.9
-CARGO_CRATE_DEPENDS+=	lsp-types-0.95.1
+#CARGO_CRATE_DEPENDS+=	lsp-types-0.95.1
 CARGO_CRATE_DEPENDS+=	manyhow-0.11.4
 CARGO_CRATE_DEPENDS+=	manyhow-macros-0.11.4
 CARGO_CRATE_DEPENDS+=	markdown-1.0.0
@@ -318,9 +318,9 @@ CARGO_CRATE_DEPENDS+=	rustc-stable-hash-0.1.2
 CARGO_CRATE_DEPENDS+=	rustix-1.1.3
 CARGO_CRATE_DEPENDS+=	rustversion-1.0.22
 CARGO_CRATE_DEPENDS+=	ryu-1.0.20
-CARGO_CRATE_DEPENDS+=	salsa-0.26.0
-CARGO_CRATE_DEPENDS+=	salsa-macro-rules-0.26.0
-CARGO_CRATE_DEPENDS+=	salsa-macros-0.26.0
+#CARGO_CRATE_DEPENDS+=	salsa-0.26.0
+#CARGO_CRATE_DEPENDS+=	salsa-macro-rules-0.26.0
+#CARGO_CRATE_DEPENDS+=	salsa-macros-0.26.0
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	schemars-1.2.1
 CARGO_CRATE_DEPENDS+=	schemars_derive-1.2.1
