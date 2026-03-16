@@ -1,11 +1,14 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:29:21 nia Exp $
+$NetBSD: distinfo,v 1.12 2026/03/16 11:31:45 nia Exp $
 
 BLAKE2s (bk_edit-0.6.23.tar.gz) = 10445fdfc5a34b33e09ef8671a36cf2757902a19afde29564f3408bdcb9efa38
 SHA512 (bk_edit-0.6.23.tar.gz) = ffbf32e29d494f21cbf5fac85eda81454213e641f0166d933fee630ca638b86ce66af9f6943b173b031244aff0bb3263d416f634721538ca1349cbc1a9050fc6
 Size (bk_edit-0.6.23.tar.gz) = 113434 bytes
 SHA1 (patch-aa) = 5849d18f67e6f99ab93a47b326e400d30099af89
-SHA1 (patch-ab) = 35434dd2df53738c6941f01f7fdd780bf20ea3fb
+SHA1 (patch-ab) = 5d1bf15c646010230aed96fd53f8578024809eb4
 SHA1 (patch-ac) = f2d604127d303ad1293c2990671a807a772da2ac
 SHA1 (patch-ad) = e1161633ecd78e5c195e97a70710f4af99950a76
 SHA1 (patch-ae) = c9be8f24f93a885c4a2adaca103e3b487a5200e0
 SHA1 (patch-configure) = 967818c8bb1b777c9adb0897e55f6741038cfbb8
+SHA1 (patch-src_bk__edit__dialog__config.c) = 16f729407bfd909289ab748e34040e3f6f74f85f
+SHA1 (patch-src_bk__edit__misc.c) = aa7f1598c18be9f36dbc0a61600637714d01d76f
+SHA1 (patch-src_bk__edit__url__handler.c) = 70799f6638b874fb23437299b96c8a9dd48b8c79

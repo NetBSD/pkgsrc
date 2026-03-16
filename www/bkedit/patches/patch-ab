@@ -1,11 +1,19 @@
-$NetBSD: patch-ab,v 1.1 2006/06/25 13:46:37 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2026/03/16 11:31:45 nia Exp $
 
 Fixes gcc4 error:
 error: invalid lvalue in decrement
 
 --- src/bk_edit_recent_document.c.orig	2003-11-29 13:14:14.000000000 +0000
 +++ src/bk_edit_recent_document.c
-@@ -115,10 +115,13 @@ static void ok (GtkWidget *dialog, void 
+@@ -21,6 +21,7 @@
+  *
+  */
+ 
++#include <stdlib.h>
+ #include <string.h>
+ 
+ #include <gtk/gtk.h>
+@@ -115,10 +116,13 @@ static void ok (GtkWidget *dialog, void 
  {
  	GList *list = config_recent_documents_list_get (conf);
  	GList *l = list;
