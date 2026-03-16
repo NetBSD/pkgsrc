@@ -1,13 +1,15 @@
-$NetBSD: patch-configure,v 1.12 2024/09/25 20:27:24 triaxx Exp $
+$NetBSD: patch-configure,v 1.13 2026/03/16 12:12:19 nia Exp $
 
 Use system zlib for linking.
 Add rpath.
 Get all LDFLAGS for FreeType2.
 Use correct install_name with path on Darwin.
+Remove -Werror flags that are suitable for development but not for
+packaging for a wide range of OSes and architectures.
 
---- configure.orig	2024-09-18 07:34:15.000000000 +0000
+--- configure.orig	2025-09-09 09:36:39.000000000 +0000
 +++ configure
-@@ -4837,7 +4837,7 @@ CFLAGSAUX_STANDARDTMP="\$(CFLAGS_STANDAR
+@@ -4845,7 +4845,7 @@ CFLAGSAUX_STANDARDTMP="\$(CFLAGS_STANDAR
  CFLAGSAUX_DEBUGTMP="\$(CFLAGS_DEBUG)"
  CFLAGSAUX_PROFILETMP="\$(CFLAGS_PROFILE)"
  LDFLAGSAUXTMP="\$(LDFLAGS)"
@@ -16,7 +18,7 @@ Use correct install_name with path on Darwin.
  
  # purposefully do not include "help" output for this
  # Check whether --enable-save_confaux was given.
-@@ -5593,10 +5593,7 @@ case $host in
+@@ -5601,10 +5601,7 @@ case $host in
          *-sun*|*-solaris*)
          CC_OPT_FLAGS_TO_TRY="-O2 -DNDEBUG"
          CFLAGS_LARGEFILE="-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64"
@@ -28,7 +30,18 @@ Use correct install_name with path on Darwin.
          if test x"$GCC" = x"yes"; then
              CC_OPT_FLAGS_TO_TRY="-O2 -DNDEBUG"
              CC_DBG_FLAGS_TO_TRY="-gdwarf-2 -g3 -O0"
-@@ -9251,7 +9248,7 @@ fi
+@@ -5630,8 +5627,8 @@ esac
+ if test x"$GCC" = x"yes"; then
+     cflags_to_try="-Wall -Wstrict-prototypes -Wundef \
+ -Wmissing-declarations -Wmissing-prototypes -Wwrite-strings \
+--fno-strict-aliasing -Werror=declaration-after-statement \
+--fno-builtin -fno-common -Werror=return-type -Wno-unused-local-typedefs $CFLAGS_LARGEFILE"
++-fno-strict-aliasing \
++-fno-builtin -fno-common -Wno-unused-local-typedefs $CFLAGS_LARGEFILE"
+     optflags_to_try="$CC_OPT_FLAGS_TO_TRY"
+     dbgflags_to_try="$CC_DBG_FLAGS_TO_TRY"
+ else
+@@ -9257,7 +9254,7 @@ fi
  fi
  
  if test x$with_libpaper != xno; then
@@ -37,7 +50,7 @@ Use correct install_name with path on Darwin.
  
  printf "%s\n" "#define USE_LIBPAPER 1" >>confdefs.h
  
-@@ -13333,11 +13330,11 @@ case $host in
+@@ -13496,11 +13493,11 @@ case $host in
      ;;
      *-darwin*)
        DYNAMIC_CFLAGS="-fPIC $DYNAMIC_CFLAGS"
@@ -54,7 +67,7 @@ Use correct install_name with path on Darwin.
        DYNAMIC_LIBS=""
        SO_LIB_EXT=""
        DLL_EXT=".dylib"
-@@ -13354,11 +13351,11 @@ case $host in
+@@ -13517,11 +13514,11 @@ case $host in
          #fi
          # ^^^ untested
        fi
