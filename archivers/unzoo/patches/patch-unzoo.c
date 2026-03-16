@@ -1,4 +1,6 @@
-$NetBSD: patch-unzoo.c,v 1.1 2020/03/26 22:29:47 rillig Exp $
+$NetBSD: patch-unzoo.c,v 1.2 2026/03/16 12:10:21 nia Exp $
+
+Fix implicit declaration of mkdir, utime.
 
 unzoo.c: In function 'IsMatchName':
 unzoo.c:1268:40: error: array subscript has type 'char' [-Werror=char-subscripts]
@@ -16,17 +18,21 @@ On NetBSD-8.0-x86_64 using GCC 5.5.0 the memory below IsSpec is BufArch,
 which means that pattern matching depended on the contents of the archive
 before.
 
---- unzoo.c.orig	2020-03-26 22:01:16.074248902 +0000
+--- unzoo.c.orig	2026-03-16 11:45:18.028989167 +0000
 +++ unzoo.c
-@@ -244,6 +244,7 @@
+@@ -243,7 +243,11 @@
+ *H  Initial revision
  *H
  */
++#include        <sys/types.h>
++#include        <sys/stat.h>
  #include        <stdio.h>
-+#include	<string.h>
++#include        <string.h>
++#include        <utime.h>
  
  
  /****************************************************************************
-@@ -1265,10 +1266,10 @@ int             IsMatchName ( pat, str )
+@@ -1265,10 +1269,10 @@ int             IsMatchName ( pat, str )
      /* try to match the name part                                          */
      while ( *pat != '\0' || *str != '\0' ) {
          if      ( *pat==*str                  ) { pat++;       str++;       }
