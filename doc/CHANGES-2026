@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1776 2026/03/16 09:05:09 sborrill Exp $
+$NetBSD: CHANGES-2026,v 1.1777 2026/03/16 12:20:47 roy Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2431,3 +2431,4 @@ Changes to the packages collection and infrastructure in 2026:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2026Q1 branch [maya 2026-03-15]
 	Updated lang/vala to 0.56.18nb3 [wiz 2026-03-15]
 	Updated sysutils/gam to 7.36.01 [sborrill 2026-03-16]
+	Updated net/dhcpcd to 10.3.1 [roy 2026-03-16]
