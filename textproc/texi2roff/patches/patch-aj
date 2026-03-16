@@ -1,8 +1,29 @@
-$NetBSD: patch-aj,v 1.1.1.1 2001/05/30 11:45:41 agc Exp $
+$NetBSD: patch-aj,v 1.2 2026/03/16 13:57:32 nia Exp $
 
---- texi2roff.c.orig	Mon May 28 12:51:54 2001
-+++ texi2roff.c	Mon May 28 12:53:48 2001
-@@ -70,6 +70,9 @@
+--- texi2roff.c.orig	1992-05-06 20:13:22.000000000 +0000
++++ texi2roff.c
+@@ -9,6 +9,8 @@
+  */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
++#include <unistd.h>
+ #ifndef __TURBOC__
+ #include <sys/types.h>
+ #endif
+@@ -27,9 +29,8 @@ int transparent = NO;	/* for -t flag */
+  *	- initialize tables and other strings
+  * 	- open files and pass them to process().
+  */
+-main(argc, argv)
+-int argc;
+-char *argv[];
++int
++main(int argc, char *argv[])
+ {
+     int c, errflg = 0;
+     FILE *in;
+@@ -70,6 +71,9 @@ char *argv[];
  		case 'e':
  		    macropkg = ME;
  		    break;
@@ -12,7 +33,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2001/05/30 11:45:41 agc Exp $
  		default:
  		    errflg++;
  		    break;
-@@ -86,7 +89,7 @@
+@@ -86,7 +90,7 @@ char *argv[];
  	}
      if (errflg) {
  	(void) fprintf(stderr,

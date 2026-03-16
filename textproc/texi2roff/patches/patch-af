@@ -1,9 +1,12 @@
-$NetBSD: patch-af,v 1.1.1.1 2001/05/30 11:45:41 agc Exp $
+$NetBSD: patch-af,v 1.2 2026/03/16 13:57:32 nia Exp $
 
---- translate.c.orig	Mon May 28 11:39:14 2001
-+++ translate.c	Mon May 28 12:18:03 2001
-@@ -11,6 +11,10 @@
+--- translate.c.orig	1992-02-20 18:16:40.000000000 +0000
++++ translate.c
+@@ -9,8 +9,13 @@
+  */
+ 
  #include <stdio.h>
++#include <stdlib.h>
  #include "texi2roff.h"
  
 +#ifndef TDEBUG
@@ -13,7 +16,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/05/30 11:45:41 agc Exp $
  extern int transparent;		/* -t flag: dont discard things	   */
  int	displaylevel = 0;	/* nesting level of 'display' text */
  int	inmacroarg = NO;	/* protect roff macro args flag */
-@@ -78,6 +82,9 @@
+@@ -78,6 +83,9 @@ translate(in, inname)
  
      while (fgets(input, MAXLINELEN, in) != NULL) {
  	++linecount;
@@ -23,7 +26,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/05/30 11:45:41 agc Exp $
  	inp = input;
  	*output = 0;
  	if (*inp == '.')		/* protect leading '.' in input */
-@@ -118,13 +125,99 @@
+@@ -118,13 +126,99 @@ translate(in, inname)
  }
  
  /*
@@ -124,7 +127,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/05/30 11:45:41 agc Exp $
      if (++stackptr == MAXDEPTH) {					\
  	errormsg("stack overflow - commands nested too deeply", "");	\
  	return NULL;							\
-@@ -160,6 +253,13 @@
+@@ -160,6 +254,13 @@ char	*outstring;
      FILE	    *fp;	/* for @include files */
      extern int	    process();	/* for @include files */
  
@@ -138,7 +141,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/05/30 11:45:41 agc Exp $
      if (init == NO) {
  	(void) strcpy(fontstack[0], defaultfont);
  	(void) strcpy(curfont, defaultfont);
-@@ -169,12 +269,17 @@
+@@ -169,12 +270,17 @@ char	*outstring;
      s = inp;
      if (stackptr > 0 && STREQ(token, stack[stackptr]->texend)) {
      /* have fetched closing token of current Texinfo command */
@@ -159,7 +162,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/05/30 11:45:41 agc Exp $
  	    }
  	}
  	if (!discarding)
-@@ -209,6 +314,9 @@
+@@ -209,6 +315,9 @@ char	*outstring;
  	    return "";  		/* flush rest of line if any */
  	}
      } else if (*token != '@') { 	/* ordinary piece of text */
@@ -169,7 +172,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/05/30 11:45:41 agc Exp $
  	if (!discarding)
  	    (void) strcat(outstring, token);
  	if (*token == '\n') {
-@@ -220,10 +328,23 @@
+@@ -220,10 +329,23 @@ char	*outstring;
  	    if (!discarding)
  		errormsg("unrecognized Texinfo command ", token);
  	} else {
@@ -195,7 +198,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/05/30 11:45:41 agc Exp $
  		break;
  	    case DISPLAY:
  		++displaylevel;
-@@ -249,6 +370,16 @@
+@@ -249,6 +371,16 @@ char	*outstring;
  		if (!discarding && !transparent) {
  		    discarding = YES;
  		    discardlevel = stackptr;
@@ -212,7 +215,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/05/30 11:45:41 agc Exp $
  		}
  		break;
  	    case ITEMIZING:
-@@ -277,8 +408,7 @@
+@@ -277,8 +409,7 @@ char	*outstring;
  		break;
  	    case END:
  		s = gettoken(eatwhitespace(s),tempstr);
@@ -222,7 +225,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/05/30 11:45:41 agc Exp $
  		break;
  	    case FOOTNOTE:
  		PUSH(tptr);
-@@ -297,11 +427,56 @@
+@@ -297,11 +428,56 @@ char	*outstring;
  		for (cp = tempstr; strchr(" \t\n",*s) == NULL; *cp++ = *s++)
  			;
  		*cp = '\0';
@@ -284,7 +287,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/05/30 11:45:41 agc Exp $
  		}
  		break;
  	    default:
-@@ -406,6 +581,13 @@
+@@ -406,6 +582,13 @@ gettoken(s, token)
  		++s;
  	    break;
  	case '@':

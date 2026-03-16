@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:23:35 nia Exp $
+$NetBSD: distinfo,v 1.7 2026/03/16 13:57:32 nia Exp $
 
 BLAKE2s (texi2roff-2.0.tar.gz) = 3c752f3cd45c05b49d34c428088c07a98e252aa581ef5e7a20d428c4441a927f
 SHA512 (texi2roff-2.0.tar.gz) = 749dc564c77c8429ca4fdd72f84ea15c959ae8c40e04f5b8eb5eb7c5d6813e433fa7655330ffef47539b133b659fba5e60734e1a0c89be6510f72119d332dcaf
@@ -8,9 +8,9 @@ SHA1 (patch-ab) = 51247760c874f5e90eda28787fb8c3fa265e7d43
 SHA1 (patch-ac) = 00c26fae8707f2246767fb772ec2d54d97f50780
 SHA1 (patch-ad) = f41275060ea862a44b1c8dd2828ea0f2a2b4dbd0
 SHA1 (patch-ae) = e71ab16bbda0c9b9af874c4d8b98fc957f5c249b
-SHA1 (patch-af) = b5e249c70ffce47df4e0835d8b78b74221bb2e17
+SHA1 (patch-af) = edbfb2da7f89883f2fb122be8fc7855b7d984f33
 SHA1 (patch-ag) = 69433277dba428b693b92c0131baecf48a50ea8f
 SHA1 (patch-ah) = afd0be8af817268282ef019c4a8bd80da1496daa
 SHA1 (patch-ai) = 61f095c7d912d3b6f1789f9b7124e5d510e52b3c
-SHA1 (patch-aj) = b4109e2b7238f8c07236010fad97780e4eedf126
+SHA1 (patch-aj) = 0669c29a6ee1353d9a743c388e630f3c95bd067e
 SHA1 (patch-ak) = 09759964e9e35c78ce629832ff93246054be54b3
