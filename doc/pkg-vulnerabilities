@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.744 2026/03/15 17:48:16 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.745 2026/03/16 16:07:33 hauke Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29544,9 +29544,9 @@ gpac-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-1
 gpac-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-1416
 gpac-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-1417
 gpac-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-1418
-hiawatha-[0-9]*	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-57783
-hiawatha-[0-9]*	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2025-57784
-hiawatha-[0-9]*	double-free	https://nvd.nist.gov/vuln/detail/CVE-2025-57785
+hiawatha<11.8	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-57783
+hiawatha<11.8	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2025-57784
+hiawatha<11.8	double-free	https://nvd.nist.gov/vuln/detail/CVE-2025-57785
 py{27,310,311,312,313,314}-gi-docgen<2025.5	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-11687
 py{27,310,311,312,313,314}-python-multipart<0.0.22	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2026-24486
 #qgis-[0-9]*	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2026-24480	# CI/CD vulnerability
