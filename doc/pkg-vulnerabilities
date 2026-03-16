@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.748 2026/03/16 16:32:54 kim Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.749 2026/03/16 16:36:49 kim Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29007,7 +29007,7 @@ kissfft-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-34297
 python310-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13836
 python311-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13836
 python312-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13836
-python313-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13836
+python313<3.13.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13836
 python314<3.14.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13836
 python310-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13837
 python311-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13837
