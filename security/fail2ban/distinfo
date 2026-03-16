@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.10 2023/07/02 08:03:38 wiz Exp $
 
-BLAKE2s (fail2ban-1.0.2.tar.gz) = 976d8b8b54f316d54f1ca975f1f0aebf3b151260c1af07a29ee2f9a8fea836ca
-SHA512 (fail2ban-1.0.2.tar.gz) = 688a84361b5794e1658f53d2d200ce752fe1e3320ddb1742c32c4b4b82a79ace16ae464e7ea3eeb94a0e862bcac73c2d3a0e61dd7b28e179a4c857f950d74dbb
-Size (fail2ban-1.0.2.tar.gz) = 583295 bytes
+BLAKE2s (fail2ban-1.1.0.tar.gz) = 68434e84ba699560b9a8b0a75c4c9f61cb94357212b7b8c23cec4765ee81913d
+SHA512 (fail2ban-1.1.0.tar.gz) = 9bff7b9c41e58a953901800468e5c4153c9db6af01c7eb18111ad8620b40d03a0771020472fb759b2809d250e2bb45471e6c7e8283e72ea48290ecf7bf921821
+Size (fail2ban-1.1.0.tar.gz) = 603854 bytes
 SHA1 (patch-doc_Makefile) = b17d28b1ef79b0cf86e4cd5d6eaa3e3d1bc2da39
