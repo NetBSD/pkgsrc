@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 09:59:35 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/03/16 12:17:18 nia Exp $
 
 BLAKE2s (vorbisgain-0.37.tar.gz) = 65fbd20026ac3906914f19b1a93e5e37fef8afe3880ac37597ac1e7a63b842b5
 SHA512 (vorbisgain-0.37.tar.gz) = 67181834e1a0d7c6e1ccd984e2d30ebf1dcdff84caa77f75e5e771de8414904810e966a43852b7184e075d2428fd8b431124835efc370ce6504b8b2756746e04
 Size (vorbisgain-0.37.tar.gz) = 208977 bytes
+SHA1 (patch-misc.c) = 2e6ddb3e0a63b71f3fe086c830c8976fee566f41
