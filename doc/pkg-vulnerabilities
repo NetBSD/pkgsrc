@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.747 2026/03/16 16:23:38 kim Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.748 2026/03/16 16:32:54 kim Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27255,7 +27255,7 @@ python39-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-819
 python310-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8194
 python311-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8194
 python312-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8194
-python313-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8194
+python313<3.13.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8194
 anubis<1.21.3		cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-54414
 asterisk<18.26.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-49832
 asterisk>=20<20.15.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-49832
