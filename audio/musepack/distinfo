@@ -1,9 +1,14 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 09:59:17 nia Exp $
+$NetBSD: distinfo,v 1.9 2026/03/16 12:15:01 nia Exp $
 
 BLAKE2s (musepack_src_r475.tar.gz) = 5380ecec6cc0985772c9df4a4158a07fc772539eb06dd01a52f5c5ef61d75d41
 SHA512 (musepack_src_r475.tar.gz) = 23aa16152b27ba99ff7f4672b8f91562ee9ad829bbe1ee066693eabf69844ee9f8e4b3eebf1bac78e6994119fbb53b034479a1b996576aeecbfba7d797f130b0
 Size (musepack_src_r475.tar.gz) = 188737 bytes
 SHA1 (patch-CMakeLists.txt) = c4a9dd61c1f8691d8321e6ee5f6939cd44eb7a15
+SHA1 (patch-common_tags.c) = b11eb715ec8609f9191d27e0511a0c21065df7dd
 SHA1 (patch-libmpcdec_CMakeLists.txt) = d5db7fac0d99f2bae6edd98e0e4498b6acf676db
+SHA1 (patch-mpc2sv8_mpc2sv8.c) = 94b1895669fae2add73952748e91ad67fe073fca
+SHA1 (patch-mpcdec_mpcdec.c) = 9e88ce8b5f5b0b46829d5a4b909420ef0f3bdd07
 SHA1 (patch-mpcenc_keyboard.c) = 42e038f003c64369e245e3688f6f0783bd2d443a
+SHA1 (patch-mpcenc_mpcenc.c) = 03251711023111a28d8158dd52569e2fadca597a
 SHA1 (patch-mpcenc_mpcenc.h) = 507b4aa9e7a99a93d42efaf97e03855ed6970a13
+SHA1 (patch-mpcenc_pipeopen.c) = e6d9e33381a0e3512bb7bd17ebf768f735d5bd37
