@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1785 2026/03/17 20:44:05 bouyer Exp $
+$NetBSD: CHANGES-2026,v 1.1786 2026/03/17 21:20:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2443,3 +2443,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/libssh to 0.114 [bsiegert 2026-03-17]
 	Updated sysutils/xenkernel418 to 20260317 [bouyer 2026-03-17]
 	Updated sysutils/xentools418 to 20260317 [bouyer 2026-03-17]
+	Updated textproc/expat to 2.7.5 [wiz 2026-03-17]
