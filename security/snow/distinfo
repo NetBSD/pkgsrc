@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:18:01 nia Exp $
+$NetBSD: distinfo,v 1.6 2026/03/17 07:25:03 nia Exp $
 
 BLAKE2s (snow-20130616.tar.gz) = 98b1cc97859c09c920125901af01215b6695b134fb8f530b8548ef729ab617bf
 SHA512 (snow-20130616.tar.gz) = 4e3167a9f5c706d117c8af534c4f324ab405bd909b67e3cb3e98d6534f322272a54c776bbad595055d58aaed2890a7bb610236470ec3e49b9228c2c83b152b8d
 Size (snow-20130616.tar.gz) = 16210 bytes
+SHA1 (patch-snow.h) = baad078bfe4ca838c6c493437d029456d44b5eb0
