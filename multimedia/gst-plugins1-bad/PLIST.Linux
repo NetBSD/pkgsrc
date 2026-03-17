@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.9 2025/11/27 12:46:19 tnn Exp $
+@comment $NetBSD: PLIST.Linux,v 1.10 2026/03/17 18:23:49 tnn Exp $
 include/gstreamer-1.0/gst/cuda/cuda-gst.h
 include/gstreamer-1.0/gst/cuda/cuda-prelude.h
 include/gstreamer-1.0/gst/cuda/gstcuda.h
@@ -10,11 +10,32 @@ include/gstreamer-1.0/gst/cuda/gstcudamemorypool.h
 include/gstreamer-1.0/gst/cuda/gstcudanvrtc.h
 include/gstreamer-1.0/gst/cuda/gstcudastream.h
 include/gstreamer-1.0/gst/cuda/gstcudautils.h
+include/gstreamer-1.0/gst/hip/gsthip-enums.h
+include/gstreamer-1.0/gst/hip/gsthip-interop.h
+include/gstreamer-1.0/gst/hip/gsthip.h
+include/gstreamer-1.0/gst/hip/gsthip_fwd.h
+include/gstreamer-1.0/gst/hip/gsthipbufferpool.h
+include/gstreamer-1.0/gst/hip/gsthipdevice.h
+include/gstreamer-1.0/gst/hip/gsthipevent.h
+include/gstreamer-1.0/gst/hip/gsthiploader.h
+include/gstreamer-1.0/gst/hip/gsthipmemory.h
+include/gstreamer-1.0/gst/hip/gsthiprtc.h
+include/gstreamer-1.0/gst/hip/gsthipstream.h
+include/gstreamer-1.0/gst/hip/gsthiputils.h
+include/gstreamer-1.0/gst/hip/hip-gst.h
+include/gstreamer-1.0/gst/hip/hip-prelude.h
 lib/girepository-1.0/CudaGst-1.0.typelib
 lib/girepository-1.0/GstCuda-1.0.typelib
+lib/girepository-1.0/GstHip-1.0.typelib
+lib/gstreamer-1.0/libgsthip.so
 lib/libgstcuda-1.0.so
 lib/libgstcuda-1.0.so.0
 lib/libgstcuda-1.0.so.0.${SHLIBVER}.0
+lib/libgsthip.so
+lib/libgsthip.so.0
+lib/libgsthip.so.0.${SHLIBVER}.0
 lib/pkgconfig/gstreamer-cuda-1.0.pc
+lib/pkgconfig/gstreamer-hip-1.0.pc
 share/gir-1.0/CudaGst-1.0.gir
 share/gir-1.0/GstCuda-1.0.gir
+share/gir-1.0/GstHip-1.0.gir
