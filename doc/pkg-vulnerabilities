@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.749 2026/03/16 16:36:49 kim Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.750 2026/03/17 19:35:03 bsiegert Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27039,7 +27039,7 @@ hdf5-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-6516
 firefox<140		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-51/
 firefox115<115.25	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-52/
 firefox128<128.12	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-53/
-libssh<0.11.2	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2025-5318
+libssh<0.112	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2025-5318
 podman<5.5.2	man-in-the-middle-attack	https://nvd.nist.gov/vuln/detail/CVE-2025-6032
 moodle<3.11.19	session-fixation		https://nvd.nist.gov/vuln/detail/CVE-2025-53021
 chromium<138.0.7204.49	heap-corruption			https://nvd.nist.gov/vuln/detail/CVE-2025-6555
@@ -27140,9 +27140,9 @@ hdf5-[0-9]*	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2025-7068
 hdf5-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-7069
 liboqs<0.14.0	weak-encryption	https://nvd.nist.gov/vuln/detail/CVE-2025-52473
 libsoup-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-7370
-libssh<0.11.2	double-free		https://nvd.nist.gov/vuln/detail/CVE-2025-5351
-libssh<0.11.2	incorrect-calculation	https://nvd.nist.gov/vuln/detail/CVE-2025-5372
-libssh<0.11.2	unspecified		https://nvd.nist.gov/vuln/detail/CVE-2025-5987
+libssh<0.112	double-free		https://nvd.nist.gov/vuln/detail/CVE-2025-5351
+libssh<0.112	incorrect-calculation	https://nvd.nist.gov/vuln/detail/CVE-2025-5372
+libssh<0.112	unspecified		https://nvd.nist.gov/vuln/detail/CVE-2025-5987
 LuaJIT2<2.1.1713773202	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-25176
 LuaJIT2<2.1.1713773202	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-25177
 LuaJIT2<2.1.1713773202	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-25178
@@ -27233,7 +27233,7 @@ mbedtls<3.6.4		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-202
 mbedtls>=3.6.1<3.6.4	side-channel			https://nvd.nist.gov/vuln/detail/CVE-2025-49087
 powerdns-recursor<5.0.12	cache-poisoning		https://nvd.nist.gov/vuln/detail/CVE-2025-30192
 py{27,39,310,311,312,313}-starlette<0.47.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-54121
-libssh<0.11.2	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-4878
+libssh<0.112	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-4878
 viewvc<1.2.4	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-54141
 chromium<138.0.7204.168	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-8010
 chromium<138.0.7204.168	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-8011
@@ -27275,8 +27275,8 @@ glpi<10.0.19	authorization-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-533
 go123<1.23.11		command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-4674
 go124<1.24.5		command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-4674
 libsoup-[0-9]*		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-8197
-libssh<0.11.2		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-5449
-libssh-[0-9]*		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-8114
+libssh<0.112		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-5449
+libssh<0.113		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-8114
 openexr<3.3.3		heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-48071
 openexr<3.3.3		heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-48072
 openexr<3.3.3		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-48073
@@ -27391,7 +27391,7 @@ intellij-ce-bin<2025.2	cross-site-scripting			https://nvd.nist.gov/vuln/detail/C
 jetty<9.4.58		denial-of-service			https://nvd.nist.gov/vuln/detail/CVE-2025-5115
 libsixel<1.8.7		stack-overflow				https://nvd.nist.gov/vuln/detail/CVE-2025-9300
 libsndfile-[0-9]*	buffer-overflow				https://nvd.nist.gov/vuln/detail/CVE-2025-52194
-libssh<0.11.2		integer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-4877
+libssh<0.112		integer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-4877
 postgresql-server>=13<13.22	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-8713
 postgresql-server>=14<14.19	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-8713
 postgresql-server>=15<15.14	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-8713
@@ -27537,7 +27537,7 @@ wireshark<4.4.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-9817
 ffmpeg6-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-9951
 ffmpeg7-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-9951
 ffmpeg8-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-9951
-libssh<0.11.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8277
+libssh<0.113	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8277
 py{27,39,310,311,312,313}-installer<6.0.0	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2025-59042
 py{27,39,310,311,312,313}-octoprint<1.11.3	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-58180
 shibboleth-sp<3.5.1	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-9943
