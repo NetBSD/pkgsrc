@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.750 2026/03/17 19:35:03 bsiegert Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.751 2026/03/17 20:53:53 bouyer Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27211,7 +27211,7 @@ unbound<1.23.1	cache-poisoning		https://nvd.nist.gov/vuln/detail/CVE-2025-5994
 vim<9.1.1552	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-53905
 vim<9.1.1551	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-53906
 xenkernel415-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-27465
-xenkernel418-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-27465
+xenkernel418<20250701	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-27465
 7-zip<25.00	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-53816
 7-zip<25.00	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-53817
 gpac-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-7797
@@ -27226,7 +27226,7 @@ wolfssl<5.8.2	weak-cryptography		https://nvd.nist.gov/vuln/detail/CVE-2025-7394
 wolfssl<5.8.2	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-7395
 wolfssl<5.8.2	side-channel			https://nvd.nist.gov/vuln/detail/CVE-2025-7396
 xenkernel415-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-1713
-xenkernel418-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-1713
+xenkernel418<20250701	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-1713
 ruby{31,32,33,34}-thor<1.4.0	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-54314
 mbedtls<3.6.4		use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2025-47917
 mbedtls<3.6.4		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-48965
@@ -27559,12 +27559,12 @@ erlang<27.3.4.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-4803
 erlang<27.3.4.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-48039
 erlang<27.3.4.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-48040
 erlang<27.3.4.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-48041
-xenkernel418-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-27466
-xenkernel418-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-58142
-xenkernel418-[0-9]*	race-condition			https://nvd.nist.gov/vuln/detail/CVE-2025-58143
-xenkernel420<4.20.2	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-27466
-xenkernel420<4.20.2	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-58142
-xenkernel420<4.20.2	race-condition			https://nvd.nist.gov/vuln/detail/CVE-2025-58143
+xenkernel418<20260317	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-27466
+xenkernel418<20260317	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-58142
+xenkernel418<20260317	race-condition			https://nvd.nist.gov/vuln/detail/CVE-2025-58143
+xenkernel420<20251113	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-27466
+xenkernel420<20251113	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-58142
+xenkernel420<20251113	race-condition			https://nvd.nist.gov/vuln/detail/CVE-2025-58143
 # xenkernel for ARM, not packaged in pkgsrc
 #xenkernel-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-58144
 #xenkernel-[0-9]*	privilege-escalation		https://nvd.nist.gov/vuln/detail/CVE-2025-58145
@@ -28771,12 +28771,12 @@ vault<1.21.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12044
 py{27,39,310,311,312,313,314}-brotli<1.2.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6176
 qt5-qtconnectivity<5.15.19	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-23050
 qt6-qtconnectivity<6.9.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-23050
-xenkernel418-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58147
-xenkernel420<4.20.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58147
-xenkernel418-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58148
-xenkernel420<4.20.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58148
-xenkernel418-[0-9]*	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-58149
-xenkernel420<4.20.2	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-58149
+xenkernel418<20260317	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58147
+xenkernel420<20251113	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58147
+xenkernel418<20260317	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58148
+xenkernel420<20251113	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58148
+xenkernel418<20260317	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-58149
+xenkernel420<20251113	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-58149
 python39<3.9.25		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6075
 python310<3.10.20	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6075
 python311<3.11.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6075
@@ -29614,10 +29614,10 @@ ruby{32,33,34}-activestorage80<8.0.2.1	command-injection	https://nvd.nist.gov/vu
 salt<3007.9	code-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-62348
 salt<3007.9	improper-authentication	https://nvd.nist.gov/vuln/detail/CVE-2025-62349
 tcpflow<1.6.2	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-25061
-xenkernel418-[0-9]*	buffer-overrun				https://nvd.nist.gov/vuln/detail/CVE-2025-58150
-xenkernel420-[0-9]*	buffer-overrun				https://nvd.nist.gov/vuln/detail/CVE-2025-58150
-xenkernel418-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-23553
-xenkernel420-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-23553
+xenkernel418<20260317	buffer-overrun				https://nvd.nist.gov/vuln/detail/CVE-2025-58150
+xenkernel420<20260317	buffer-overrun				https://nvd.nist.gov/vuln/detail/CVE-2025-58150
+xenkernel418<20260317	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-23553
+xenkernel420<20260317	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-23553
 mediawiki<1.43.4	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-11173
 mediawiki<1.43.5	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-11261
 mediawiki<1.43.4	unspecified		https://nvd.nist.gov/vuln/detail/CVE-2025-61634
