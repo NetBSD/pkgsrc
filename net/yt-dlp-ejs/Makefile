@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2026/02/28 13:32:08 ktnb Exp $
+# $NetBSD: Makefile,v 1.9 2026/03/17 14:38:02 wiz Exp $
 
-DISTNAME=	yt_dlp_ejs-0.5.0-py3-none-any
+DISTNAME=	yt_dlp_ejs-0.7.0-py3-none-any
 PKGNAME=	${DISTNAME:S/_/-/g:C/-py3.*//}
 CATEGORIES=	net python
 MASTER_SITES=	https://files.pythonhosted.org/packages/py3/y/yt_dlp_ejs/
