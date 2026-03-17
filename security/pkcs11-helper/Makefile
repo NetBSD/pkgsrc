@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2026/02/06 10:05:50 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2026/03/17 07:27:26 nia Exp $
 
 DISTNAME=	pkcs11-helper-1.31.0
 PKGREVISION=	2
@@ -20,6 +20,8 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--enable-strict
 CONFIGURE_ARGS+=	--enable-pedantic
+
+CFLAGS.SunOS+=		-D_XOPEN_SOURCE=500
 
 PKGCONFIG_OVERRIDE+=	lib/libpkcs11-helper-1.pc.in
 
