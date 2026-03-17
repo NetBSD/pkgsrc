@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:17:00 nia Exp $
+$NetBSD: distinfo,v 1.9 2026/03/17 08:11:14 nia Exp $
 
 BLAKE2s (arirang-1.6.tar.gz) = 667aeaed64d7733055a01a03c66b251a1634f6f45a34357559d9262110c0d280
 SHA512 (arirang-1.6.tar.gz) = 0a07a4eee0819f0f6d979aae60557beaab2f6e69360a6ac0af37ff58b78cadfcd339720b2f138d091ffa843490e5b9fbd430cbdc89e9b9e4d5269ec277410c6c
 Size (arirang-1.6.tar.gz) = 54170 bytes
 SHA1 (patch-Makefile) = 28c47ff5a915e2abb1e99d027e0af6938fe0bc75
-SHA1 (patch-aa) = 2205992fdb39583e2dca69aeaa59d149b973cc62
+SHA1 (patch-aa) = 3612814dc30664c79eb52146a50586dbc6e51ac3
+SHA1 (patch-grabhead.c) = e2f63a02921b5b1ca6b4894bf7d5a847e1fb0e55
+SHA1 (patch-rule.c) = 4e7409b38f2a92b5f4bfa681aab4aff2c0af4c5c
