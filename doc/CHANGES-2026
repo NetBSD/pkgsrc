@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1777 2026/03/16 12:20:47 roy Exp $
+$NetBSD: CHANGES-2026,v 1.1778 2026/03/17 11:07:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2432,3 +2432,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/vala to 0.56.18nb3 [wiz 2026-03-15]
 	Updated sysutils/gam to 7.36.01 [sborrill 2026-03-16]
 	Updated net/dhcpcd to 10.3.1 [roy 2026-03-16]
+	Updated devel/ast-grep to 0.42.0 [pin 2026-03-17]
