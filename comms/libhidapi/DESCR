@@ -7,6 +7,7 @@ HIDAPI has four back-ends:
 	* Windows (using hid.dll)
 	* Linux/hidraw (using the Kernel's hidraw driver)
 	* Linux/libusb (using libusb-1.0)
+	* NetBSD (using uhid(4) and drvctl(4))
 	* Mac (using IOHidManager)
 
-This package includes only the libusb backend.
+This package includes the libusb, Linux hidraw, and NetBSD backend.

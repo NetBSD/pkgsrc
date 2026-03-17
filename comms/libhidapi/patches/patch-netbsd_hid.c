@@ -1,4 +1,4 @@
-$NetBSD: patch-netbsd_hid.c,v 1.1 2026/03/13 10:37:25 tsutsui Exp $
+$NetBSD: patch-netbsd_hid.c,v 1.2 2026/03/17 19:13:40 tsutsui Exp $
 
 - don't assume roothub addr is always zero (see NetBSD PR/60073)
 - check iconv(3) arg type properly
@@ -24,22 +24,25 @@ $NetBSD: patch-netbsd_hid.c,v 1.1 2026/03/13 10:37:25 tsutsui Exp $
  
  		strlcpy(devpath, "/dev/", sizeof(devpath));
  		strlcat(devpath, arr[i], sizeof(devpath));
-@@ -732,7 +737,13 @@ struct hid_device_info HID_API_EXPORT * 
+@@ -732,7 +737,17 @@ struct hid_device_info HID_API_EXPORT * 
  		if (bus == -1)
  			continue;
  
--		enumerate_usb_devices(bus, 0, hid_enumerate_callback, &hed);
-+		/* ehci/ohci/uhci/dwctwo etc. use 'addr 1' for root hubs */
++		/*
++		 * ehci/ohci/uhci/dwctwo etc. use 'addr 1' for root hubs
++		 * but xhci uses 'addr 0' on NetBSD.
++		 * Check addr 0 (that would be unused on other than xhci)
++		 * and then check addr 1 if there is no device at addr 0.
++		 */
 +		prev_end = hed.end;
-+		enumerate_usb_devices(bus, 1, hid_enumerate_callback, &hed);
-+		/* xhci uses 'addr 0' so check it if no device at addr 1 */
+ 		enumerate_usb_devices(bus, 0, hid_enumerate_callback, &hed);
 +		if (hed.end == prev_end)
-+			enumerate_usb_devices(bus, 0,
++			enumerate_usb_devices(bus, 1,
 +			    hid_enumerate_callback, &hed);
  
  		close(bus);
  	}
-@@ -1087,7 +1098,7 @@ int HID_API_EXPORT_CALL hid_get_indexed_
+@@ -1087,7 +1102,7 @@ int HID_API_EXPORT_CALL hid_get_indexed_
  	struct usb_string_desc usd;
  	usb_string_descriptor_t *str;
  	iconv_t ic;
@@ -48,7 +51,7 @@ $NetBSD: patch-netbsd_hid.c,v 1.1 2026/03/13 10:37:25 tsutsui Exp $
  	size_t srcleft;
  	char *dst;
  	size_t dstleft;
-@@ -1131,7 +1142,7 @@ int HID_API_EXPORT_CALL hid_get_indexed_
+@@ -1131,7 +1146,7 @@ int HID_API_EXPORT_CALL hid_get_indexed_
  		return -1;
  	}
  
