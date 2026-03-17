@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2024/07/07 08:55:44 nia Exp $
+$NetBSD: distinfo,v 1.10 2026/03/17 08:15:12 nia Exp $
 
 BLAKE2s (ddos_scan.tar) = 0be1c3304486db4a7964b863a31346eb5bed49b1abf19bb5fbb68d80bb45e184
 SHA512 (ddos_scan.tar) = 073fd54dc34ddd1678406dc66474f8cd677cf0957ec728e76e4c59019ef709fb3b3e5d1468f3265cb3ee76184ba536a33db5c4613242ca040895176bc7023f88
 Size (ddos_scan.tar) = 30720 bytes
 SHA1 (patch-aa) = 05c0a087c453b5e48dbce16bb641388d691a8975
-SHA1 (patch-ab) = d74cc9a603f20e144c77444b2c956e53c8511b55
+SHA1 (patch-ab) = f05795a626a22609d232244cd25e4e6a8118a4ae
