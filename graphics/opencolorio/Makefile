@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2026/01/13 11:57:54 adam Exp $
+# $NetBSD: Makefile,v 1.20 2026/03/17 03:07:01 maya Exp $
 
 DISTNAME=	OpenColorIO-2.5.1
 PKGNAME=	${DISTNAME:tl}
@@ -63,7 +63,7 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.13
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../math/imath/buildlink3.mk"
-BUILDLINK_API_DEPENDS.expat+=	expat>=2.4.1
+BUILDLINK_API_DEPENDS.expat+=	expat>=2.6.0
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/yaml-cpp/buildlink3.mk"
 PY_PATCHPLIST=	yes
