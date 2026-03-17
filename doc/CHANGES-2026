@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1782 2026/03/17 14:38:10 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1783 2026/03/17 19:01:24 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2437,3 +2437,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/prose to 0.6.2 [pin 2026-03-17]
 	Updated net/powerdns-recursor to 5.4.0 [wiz 2026-03-17]
 	Updated net/yt-dlp-ejs to 0.7.0 [wiz 2026-03-17]
+	Updated sysutils/xenkernel420 to 20260317 [bouyer 2026-03-17]
+	Updated sysutils/xentools420 to 20260317 [bouyer 2026-03-17]
+	Updated sysutils/xenstoretools to 20260317 [bouyer 2026-03-17]
