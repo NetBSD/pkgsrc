@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:15:14 nia Exp $
+$NetBSD: distinfo,v 1.9 2026/03/17 14:59:35 nia Exp $
 
 BLAKE2s (libast-0.7.tar.gz) = c7c7a3a837971ebbd835f548eadf78e3920c42f0afd6f3588d991dd5e189721e
 SHA512 (libast-0.7.tar.gz) = 0af1d508af88ce0a2f29fe7841e23759be7c6540a1e2698980c289245ba284fdbf76c593e457c0cd6cfc54dcb6d891b01a3fd4d4a6ecc511fb2de698c9a3046d
 Size (libast-0.7.tar.gz) = 508654 bytes
+SHA1 (patch-include_libast__internal.h) = 8166957d03e2db719371b9188510678bfca2ed80
