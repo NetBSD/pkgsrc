@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1781 2026/03/17 13:42:50 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1782 2026/03/17 14:38:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2436,3 +2436,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/difftastic to 0.68.0 [pin 2026-03-17]
 	Updated textproc/prose to 0.6.2 [pin 2026-03-17]
 	Updated net/powerdns-recursor to 5.4.0 [wiz 2026-03-17]
+	Updated net/yt-dlp-ejs to 0.7.0 [wiz 2026-03-17]
