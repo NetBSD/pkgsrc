@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1779 2026/03/17 11:09:37 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1780 2026/03/17 11:10:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2434,3 +2434,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/dhcpcd to 10.3.1 [roy 2026-03-16]
 	Updated devel/ast-grep to 0.42.0 [pin 2026-03-17]
 	Updated devel/difftastic to 0.68.0 [pin 2026-03-17]
+	Updated textproc/prose to 0.6.2 [pin 2026-03-17]
