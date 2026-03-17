@@ -1,8 +1,18 @@
-$NetBSD: patch-seccure.c,v 1.1 2013/03/02 17:57:53 joerg Exp $
+$NetBSD: patch-seccure.c,v 1.2 2026/03/17 07:25:58 nia Exp $
 
---- seccure.c.orig	2013-03-01 23:39:45.000000000 +0000
+--- seccure.c.orig	2009-04-09 12:42:50.000000000 +0000
 +++ seccure.c
-@@ -685,10 +685,11 @@ int app_verify(const char *pubkey, const
+@@ -41,6 +41,9 @@
+ #include <fcntl.h>
+ #include <errno.h>
+ #include <assert.h>
++#if defined(__sun) || defined(__linux__)
++#include <alloca.h>
++#endif
+ #include <termios.h>
+ #include <getopt.h>
+ #include <sys/mman.h>
+@@ -685,10 +688,11 @@ int app_verify(const char *pubkey, const
      fatal("Invalid verification key (wrong length)");
    
    if (decompress_from_string(&Q, pubkey, DF_COMPACT, cp)) {
@@ -18,7 +28,7 @@ $NetBSD: patch-seccure.c,v 1.1 2013/03/02 17:57:53 joerg Exp $
      
      err = gcry_md_open(&mh, GCRY_MD_SHA512, 0);
      if (gcry_err_code(err))
-@@ -700,7 +701,7 @@ int app_verify(const char *pubkey, const
+@@ -700,7 +704,7 @@ int app_verify(const char *pubkey, const
  	fatal_errno("Cannot open signature file", errno);
  
        if (opt_sigbin) {
@@ -27,7 +37,7 @@ $NetBSD: patch-seccure.c,v 1.1 2013/03/02 17:57:53 joerg Exp $
  	  if (ferror(sigfile))
  	    fatal_errno("Cannot read signature", errno);
  	  else {
-@@ -711,11 +712,11 @@ int app_verify(const char *pubkey, const
+@@ -711,11 +715,11 @@ int app_verify(const char *pubkey, const
  	}
        }
        else {
@@ -42,7 +52,7 @@ $NetBSD: patch-seccure.c,v 1.1 2013/03/02 17:57:53 joerg Exp $
        }
        
        if (fclose(sigfile))
-@@ -727,12 +728,12 @@ int app_verify(const char *pubkey, const
+@@ -727,12 +731,12 @@ int app_verify(const char *pubkey, const
  
      if (opt_sigappend) {
        if (opt_sigbin)
@@ -58,7 +68,7 @@ $NetBSD: patch-seccure.c,v 1.1 2013/03/02 17:57:53 joerg Exp $
        }
      }
      else
-@@ -751,7 +752,7 @@ int app_verify(const char *pubkey, const
+@@ -751,7 +755,7 @@ int app_verify(const char *pubkey, const
  	
      if (! opt_sigbin) {
        if (! sig)
@@ -67,7 +77,7 @@ $NetBSD: patch-seccure.c,v 1.1 2013/03/02 17:57:53 joerg Exp $
        if (strlen(sig) != cp->sig_len_compact) {
  	print_quiet("Invalid signature (wrong length)!\n", 1);
  	goto error;
-@@ -763,7 +764,7 @@ int app_verify(const char *pubkey, const
+@@ -763,7 +767,7 @@ int app_verify(const char *pubkey, const
  	}
      }
      else
