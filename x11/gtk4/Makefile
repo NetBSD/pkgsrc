@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2026/02/24 18:05:00 kikadf Exp $
+# $NetBSD: Makefile,v 1.72 2026/03/17 14:43:04 nia Exp $
 
 DISTNAME=	gtk-4.20.3
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
@@ -33,6 +33,8 @@ MESON_ARGS+=		-Dintrospection=enabled
 MESON_ARGS+=		-Dmedia-gstreamer=disabled
 MESON_ARGS+=		-Dvulkan=disabled
 MESON_ARGS+=		-Df16c=disabled
+
+LDFLAGS.SunOS+=		-lsocket
 
 PKGCONFIG_OVERRIDE+=	output/meson-private/gtk4.pc
 PKGCONFIG_OVERRIDE+=	output/meson-private/gtk4-wayland.pc
