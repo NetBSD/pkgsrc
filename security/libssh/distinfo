@@ -1,12 +1,9 @@
-$NetBSD: distinfo,v 1.34 2025/05/01 18:19:22 tnn Exp $
+$NetBSD: distinfo,v 1.35 2026/03/17 19:33:33 bsiegert Exp $
 
-BLAKE2s (libssh-0.11.1.tar.xz) = 097094811bc8708196c48f9b237d2da6ebd5d3b48cf19d0d6f69e8cec83a5cd9
-SHA512 (libssh-0.11.1.tar.xz) = 284d376ad9ea30b0274b4ac754b27d168286dca862ece43ef15ca6d89e66865ad7a6703cc12dd4a8564a60b8449ae9b36e6496fd51d34cc27ac4030f6cf216d6
-Size (libssh-0.11.1.tar.xz) = 621108 bytes
+BLAKE2s (libssh-0.11.4.tar.xz) = d25e69defcccff547fac66700f8fd30d1af90c2a65a4be19d2be4ffad3ddba56
+SHA512 (libssh-0.11.4.tar.xz) = 00c7e1317dcca8feab07eb3d6feb7bbc74c563149173d439d618f431386c4ca1d6f258567ef0599f08275a3a165c04105568f55e6ed7f0fe1a88382e2ebdc850
+Size (libssh-0.11.4.tar.xz) = 626652 bytes
 SHA1 (patch-CompilerChecks.cmake) = 8a650be5b69e956a0a54f54b71c4927ce685b8ca
 SHA1 (patch-examples_sshd__direct-tcpip.c) = 62de8625d58dbc03c38b0eb23f6e7f20a46e91de
-SHA1 (patch-src_misc.c) = f022c1a888ef1d9a7f1963981a989a82c41afcb3
-SHA1 (patch-tests_CMakeLists.txt) = 42728a0af04fababbbe973c3408ea31038b59276
-SHA1 (patch-tests_client_torture__session.c) = d3c67c2e17afb8e980486815b1debb6c8d9eb060
+SHA1 (patch-tests_CMakeLists.txt) = b5baa8db2161d3f1c7aab317b2919de5dbca6e6a
 SHA1 (patch-tests_torture.c) = 2c70e9d827f15ec36a62e0d0f5dd98774f24f79e
-SHA1 (patch-tests_unittests_torture__misc.c) = aba0eb9f590a5c91152dc026fcba714acef823be
