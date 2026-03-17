@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:17:00 nia Exp $
+$NetBSD: distinfo,v 1.7 2026/03/17 08:12:43 nia Exp $
 
 BLAKE2s (avcheck-0.91.tar.gz) = 0a169b741c792ab6fb6187c86ae8db3000ccdbd4f8911e2d5d923aee3dc769fb
 SHA512 (avcheck-0.91.tar.gz) = 0277aa43910ca99b7db317f70b2d337520c2964d82273338ccf3b0632c933df223c4f62314ad081836c400b256d85fff88ed421de121fcbb2accacb1141aafd6
 Size (avcheck-0.91.tar.gz) = 47799 bytes
+SHA1 (patch-avcheck.c) = a428580ac3abd47f0f82dfa39bc945b1e563b499
