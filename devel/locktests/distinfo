@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/03/17 15:00:29 nia Exp $
 
 BLAKE2s (locktests.tar.gz) = f30bbb58adbeed8aef5f00abd76c220e5b606c74e45599316395cd909ea19784
 SHA512 (locktests.tar.gz) = 908bed15535f3329e5f5f7833ff5f993cb69a5242c532372f9fbe4bfadf6e76efa67f877b0dad22c481336eed11eb5d2d01dd37d3910c8be6965e4cf07525533
 Size (locktests.tar.gz) = 12354 bytes
+SHA1 (patch-locktests.c) = 3ec2f92c053c128427ff23d90d65089244b7a786
