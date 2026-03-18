@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2025/12/15 14:30:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.59 2026/03/18 14:58:17 taca Exp $
 share/doc/roundcube/CHANGELOG.md
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
@@ -2220,6 +2220,27 @@ share/roundcube/vendor/masterminds/html5/src/HTML5/Serializer/OutputRules.php
 share/roundcube/vendor/masterminds/html5/src/HTML5/Serializer/README.md
 share/roundcube/vendor/masterminds/html5/src/HTML5/Serializer/RulesInterface.php
 share/roundcube/vendor/masterminds/html5/src/HTML5/Serializer/Traverser.php
+share/roundcube/vendor/mlocati/ip-lib/LICENSE.txt
+share/roundcube/vendor/mlocati/ip-lib/README.md
+share/roundcube/vendor/mlocati/ip-lib/composer.json
+share/roundcube/vendor/mlocati/ip-lib/ip-lib.php
+share/roundcube/vendor/mlocati/ip-lib/src/Address/AddressInterface.php
+share/roundcube/vendor/mlocati/ip-lib/src/Address/AssignedRange.php
+share/roundcube/vendor/mlocati/ip-lib/src/Address/IPv4.php
+share/roundcube/vendor/mlocati/ip-lib/src/Address/IPv6.php
+share/roundcube/vendor/mlocati/ip-lib/src/Address/Type.php
+share/roundcube/vendor/mlocati/ip-lib/src/Factory.php
+share/roundcube/vendor/mlocati/ip-lib/src/ParseStringFlag.php
+share/roundcube/vendor/mlocati/ip-lib/src/Range/AbstractRange.php
+share/roundcube/vendor/mlocati/ip-lib/src/Range/Pattern.php
+share/roundcube/vendor/mlocati/ip-lib/src/Range/RangeInterface.php
+share/roundcube/vendor/mlocati/ip-lib/src/Range/Single.php
+share/roundcube/vendor/mlocati/ip-lib/src/Range/Subnet.php
+share/roundcube/vendor/mlocati/ip-lib/src/Range/Type.php
+share/roundcube/vendor/mlocati/ip-lib/src/Service/BinaryMath.php
+share/roundcube/vendor/mlocati/ip-lib/src/Service/NumberInChunks.php
+share/roundcube/vendor/mlocati/ip-lib/src/Service/RangesFromBoundaryCalculator.php
+share/roundcube/vendor/mlocati/ip-lib/src/Service/UnsignedIntegerMath.php
 share/roundcube/vendor/pear/auth_sasl/Auth/SASL.php
 share/roundcube/vendor/pear/auth_sasl/Auth/SASL/Anonymous.php
 share/roundcube/vendor/pear/auth_sasl/Auth/SASL/Common.php
