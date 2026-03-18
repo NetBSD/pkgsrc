@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.2 2007/04/24 22:31:19 abs Exp $
+$NetBSD: patch-aa,v 1.3 2026/03/18 17:01:56 nia Exp $
 
 --- bulk_mailer.c.orig	2000-05-24 19:34:33.000000000 +0000
-+++ bulk_mailer.c	2007-04-12 13:08:43.000000000 +0000
-@@ -101,7 +101,7 @@
++++ bulk_mailer.c
+@@ -86,6 +86,8 @@
+  */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
++#include <unistd.h>
+ #include <ctype.h>
+ #include <sys/types.h>
+ #include <sys/socket.h>
+@@ -101,7 +103,7 @@
  #include "patchlevel.h"
  
  #ifndef PIPECOMMAND
@@ -11,7 +20,25 @@ $NetBSD: patch-aa,v 1.2 2007/04/24 22:31:19 abs Exp $
  #endif
  
  #ifndef HAVE_STRERROR
-@@ -291,6 +291,7 @@
+@@ -115,17 +117,6 @@ extern char *sys_errlist[];
+ extern int errno;
+ #endif
+ 
+-#ifndef HAVE_STRDUP
+-char *strdup();
+-#endif
+-#ifndef STDC_HEADERS
+-char *strchr();
+-char *strrchr();
+-#endif
+-char *malloc ();
+-char *realloc ();
+-char *mktemp ();
+-
+ /*
+  * (default) max different domains per envelope.
+  * if the worst-case delay is 30 minutes per delivery attempt,
+@@ -291,6 +282,7 @@ char *str;
  #endif
  
  
@@ -19,7 +46,7 @@ $NetBSD: patch-aa,v 1.2 2007/04/24 22:31:19 abs Exp $
  /*
   * copy the first 'len' characters of a string into malloc'ed
   * memory, appending a NUL to the copy.
-@@ -307,6 +308,7 @@
+@@ -307,6 +299,7 @@ int len;
      result[len] = '\0';
      return result;
  }
