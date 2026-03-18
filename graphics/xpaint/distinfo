@@ -1,15 +1,19 @@
-$NetBSD: distinfo,v 1.30 2025/12/08 21:05:41 vins Exp $
+$NetBSD: distinfo,v 1.31 2026/03/18 15:14:35 nia Exp $
 
 BLAKE2s (xpaint-3.1.4.tar.bz2) = 70c36e6d8c61aa215cc291d08fb4de9515d719dff276b8abeb2f6187d75e9b06
 SHA512 (xpaint-3.1.4.tar.bz2) = ea81f0f0eaad2072fe487efba933b6f0a4f2a4d8ae7548169b8e765cf1232c9944149a822173350af91309535d8f3625b8e58814811a5f4491fa3e2fcdf92e1d
 Size (xpaint-3.1.4.tar.bz2) = 1630009 bytes
 SHA1 (patch-Makefile.am) = 7cb1373eb79a8fe9ff823351cd1c65261acc9166
+SHA1 (patch-brushOp.c) = ed370343091cf240336d333b7ec1765006a6348d
 SHA1 (patch-dynPenOp.c) = 847dd5da0f393a2c414dd8799f84c77e5d15e063
-SHA1 (patch-fileBrowser.c) = c4e9d3ee66b5bfadac4e138c4dd7dd471dc946df
+SHA1 (patch-fileBrowser.c) = b6da916ef0b11057d1b20213c17048cb99128a37
 SHA1 (patch-main.c) = 5d764c282b2e8798e3690ff99bea7117a83df4a8
 SHA1 (patch-misc.h) = a4a3b037880062a2bd5310cbbe045ceabeeaa7b4
+SHA1 (patch-print.c) = 47eb6695332cf04672f1b225f68e145a89cf89d0
 SHA1 (patch-util_Makefile) = b885c20eaaff01f9a6ee15796f041d5a753c371a
 SHA1 (patch-vxp2ps_Makefile) = 30ef714b8541c551fd520956bda7aab7e90a6d77
 SHA1 (patch-vxp2ps_vxp2ps.c) = cbf9205b87ba71dba1ed3720704e95247ffbd1c0
 SHA1 (patch-vxp2ps_vxp2tex.c) = 7a6fbe40723e417261e31b3cafbfef73820e14a1
+SHA1 (patch-xpaintrw_readWriteBMP.c) = 0c6dc93bd4e9ea84e1274fd2950017ee9e26eca4
+SHA1 (patch-xpaintrw_readWriteSGI.c) = 812c87cb69427f3ef9a9671e92547e0a165509a2
 SHA1 (patch-xpaintrw_rwTable.c) = 784fd7c3831dc9b17efe60ab3ae439c7601b6894
