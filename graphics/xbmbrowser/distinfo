@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:47:24 nia Exp $
+$NetBSD: distinfo,v 1.10 2026/03/18 14:47:39 nia Exp $
 
 BLAKE2s (xbmbrowser5.1.tar.gz) = e7e24a928ab8f13c804c1e3e41d8abc0d3b5d276ace5f7bd8303a8546696590d
 SHA512 (xbmbrowser5.1.tar.gz) = eb89843e894115354866ca9f600ec9105ec2c2fb7768fcaec170b7365be591349ddd7829acd08b5ab8f7a24af6f4cfb97ccf7773eb1001341b29d1f79c6aa0d0
 Size (xbmbrowser5.1.tar.gz) = 74397 bytes
+SHA1 (patch-IconLabel.c) = 9b7695d371d5330e8f5f0b421ebe1ec20b0a64c4
 SHA1 (patch-aa) = 1c1087555ca33e3319810b8f66cf510b047f8233
-SHA1 (patch-ab) = cc7e87ea599664f94ff8c791efb3d4820197cc45
+SHA1 (patch-ab) = c628d9b16dc60ca4425d844c093ed930dd6aae20
 SHA1 (patch-ac) = e78c96437e4dbf41f064983fe0a96a08bf3a67f6
-SHA1 (patch-ad) = 335297bb9c7df40007118e162e0624214d249677
+SHA1 (patch-ad) = d6471f1c4541ba1f533d1f6ad6e2d597d08d9a3e
 SHA1 (patch-ae) = 51b95dde72bcb95b426401458088750eb026cc43

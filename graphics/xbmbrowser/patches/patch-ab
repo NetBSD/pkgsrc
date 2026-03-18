@@ -1,16 +1,27 @@
-$NetBSD: patch-ab,v 1.1 2006/06/26 16:11:43 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2026/03/18 14:47:39 nia Exp $
 
---- xbmbrowser.h.orig	2006-06-26 15:27:35.000000000 +0000
+--- xbmbrowser.h.orig	1995-07-19 03:45:03.000000000 +0000
 +++ xbmbrowser.h
-@@ -27,6 +27,7 @@
+@@ -25,8 +25,10 @@
+ #include <X11/StringDefs.h>
+ 
  #include <stdio.h>             /* C library includes */
++#include <stdlib.h>
  #include <dirent.h>            /* Filename length (and dir functions) */
  #include <assert.h>            /* debugging assertions */
 +#include <limits.h>
  
  #include <X11/Xaw/Form.h>      /* widget includes */
  #include <X11/Xaw/Box.h>
-@@ -82,8 +83,13 @@ enum FileType {
+@@ -39,6 +41,7 @@
+ #include <X11/Xaw/List.h>
+ #include <X11/Xaw/Paned.h>
+ #include <X11/Xaw/Viewport.h>
++#include <X11/Xmu/Drawing.h>
+ 
+ #include "IconLabel.h"         /* Special Widget -- IconLabel */
+ 
+@@ -82,8 +85,13 @@ enum FileType {
  /* item structure */
  typedef struct _item {
    struct _item     *next;               /* next item */
@@ -24,7 +35,7 @@ $NetBSD: patch-ab,v 1.1 2006/06/26 16:11:43 joerg Exp $
    time_t            mtime;              /* last modification time */
    enum FileType     type;               /* file type */
    Boolean           visible;            /* visible to user? */
-@@ -167,6 +173,18 @@ ext Widget     menu_bitmap, menu_pixmap;
+@@ -167,6 +175,18 @@ ext Widget     menu_bitmap, menu_pixmap;
  ext Widget     menu_directory, menu_other;
  
  /* substitution strings for function argument macro substitions */
@@ -43,7 +54,7 @@ $NetBSD: patch-ab,v 1.1 2006/06/26 16:11:43 joerg Exp $
  ext char     dir_name[MAXNAMLEN];     /* %d the current directory */
  ext char     file_name[MAXNAMLEN];    /* %f current filename */
  ext char     base_name[MAXNAMLEN];    /* %b basename for current file */
-@@ -177,6 +195,7 @@ ext char     init_dir[MAXNAMLEN];     /*
+@@ -177,6 +197,7 @@ ext char     init_dir[MAXNAMLEN];     /*
  
  /* Information strings for display in application label */
  ext char     label_info[MAXNAMLEN];   /* label to show when outside bitmap */
@@ -51,3 +62,11 @@ $NetBSD: patch-ab,v 1.1 2006/06/26 16:11:43 joerg Exp $
  ext Item    *current_item;            /* which item the user is pointing to */
  
  /* some external variables */
+@@ -228,6 +249,7 @@ extern void    init_stipple();       /* 
+ extern Item   *get_files();          /* Scan a directory and initialise items */
+ extern time_t  check_file_time();    /* check if a file was modified */
+ 
++extern void  read_user_menus();
+ 
+ /*********** Macros ************/
+ 
