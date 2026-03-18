@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2021/10/26 10:54:07 nia Exp $
+$NetBSD: distinfo,v 1.24 2026/03/18 17:04:39 nia Exp $
 
 BLAKE2s (majordomo-1.94.5.tgz) = 74e635a5c657f5e8716c67090090b08edacbbb5bd1fca65737d1aa595e58c833
 SHA512 (majordomo-1.94.5.tgz) = d771ee99f31110676ce526687c8c2f47e0b45afd14643fb10b46bed0e238cd9edc6394fb385ac5ed0bbf19e5ca3c368f7af06a3dc17ccccddac4999678285136
@@ -13,7 +13,7 @@ SHA1 (patch-ag) = 759a32dacb26221d83de97b463b2131b0f52a914
 SHA1 (patch-ah) = ac08fa5d2fa321afe7fdf72783f8f2c887073bcd
 SHA1 (patch-ai) = ed36da4ae9aced322dd5c9c2119becf54f12a6aa
 SHA1 (patch-aj) = e423f61f6b493ae6ae30dda8b0de3ffa10caeefe
-SHA1 (patch-ak) = ea8a6b5e7ae563dd91fcb727d8c2634bdc65de02
+SHA1 (patch-ak) = 045f90d6dd8b0466a3426318b4b8b56f70d96315
 SHA1 (patch-al) = 776088c5916b1b0516e8abaecd69870ba57f4a76
 SHA1 (patch-am) = 74e46f28cb152e152594d949b0116f1370dd1ae3
 SHA1 (patch-an) = 2e9a38d7d9eb46f472cec555349f19cad0a5036b
