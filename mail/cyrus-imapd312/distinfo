@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2026/03/09 03:16:43 jnemeth Exp $
+$NetBSD: distinfo,v 1.2 2026/03/18 18:15:21 nia Exp $
 
 BLAKE2s (cyrus-imapd-3.12.1.tar.gz) = 24d07259b14e762f1ed59becd9ba14ec7d1e799bd73bba3f32d0535a97259b16
 SHA512 (cyrus-imapd-3.12.1.tar.gz) = 3089cbe79c176b4af922700426e04fa69cfe2aa23ddf393077499f7489228ad301402abbd3a17d8797700b77dcaabbe31540276e287e7bec79571a372dc37e82
@@ -8,6 +8,7 @@ SHA1 (patch-Makefile.in) = 3bb072eb7042f3496796ede24994b077d26c404f
 SHA1 (patch-configure) = 6da0341a5ce1f58be3068ad3f6ed47c6a23787f7
 SHA1 (patch-docsrc_conf.py) = 5474342cb1bb99e8e54ff4b011463bb0a5131a9c
 SHA1 (patch-docsrc_imap_concepts_overview__and__concepts.rst) = 4971c769790fe6b648c697a82961d32d93f7bcbb
+SHA1 (patch-lib_ptrarray.c) = ecd40f40094e2ba764f240cceaeb6c90a9dc89f0
 SHA1 (patch-docsrc_imap_developer_compiling.rst) = 3dd9b2be508a216f851dc7c8d880782ce6ad3464
 SHA1 (patch-docsrc_imap_download_installation_manage-dav.rst) = 2982b81eeac52d01aa8a50844a7f583bf87f9372
 SHA1 (patch-docsrc_imap_quickstart_introduction.rst) = aea770e1e22b47fe2bcc1183f690f69f192c26a5
