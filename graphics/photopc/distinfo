@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:46:40 nia Exp $
+$NetBSD: distinfo,v 1.9 2026/03/18 14:39:30 nia Exp $
 
 BLAKE2s (photopc-3.07.tar.gz) = bdfa8eac1aa33ebbcbc67577ee448fa1a9a083f19ac37ec552279b0474f3e23e
 SHA512 (photopc-3.07.tar.gz) = 2346da12e8276024a33582806898660da74613edd7fe8ee3f707e505197ba6072c31d58a24b540021e60117d81f553360a7efa57924db9cd0a4e428d64c0c1d3
 Size (photopc-3.07.tar.gz) = 183668 bytes
+SHA1 (patch-ctimez.c) = 5040124e6050a037c243f41e5d05736371a3d516
+SHA1 (patch-eph__cmd.c) = 2d46dc9cdc88842f33f5229619cefa76b30d9e44
+SHA1 (patch-fnames.c) = 0701316a98d12fab510b195aba96e85eb9cf3aeb
