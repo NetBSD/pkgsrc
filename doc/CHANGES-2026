@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1789 2026/03/18 15:00:02 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1790 2026/03/18 22:10:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2450,3 +2450,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/roundcube-plugin-enigma to 1.6.14 [taca 2026-03-18]
 	Updated mail/roundcube-plugin-password to 1.6.14 [taca 2026-03-18]
 	Updated mail/roundcube-plugin-zipdownload to 1.6.14 [taca 2026-03-18]
+	Updated mail/neomutt to 20260105nb4 [wiz 2026-03-18]
