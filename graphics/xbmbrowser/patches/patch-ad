@@ -1,8 +1,16 @@
-$NetBSD: patch-ad,v 1.1 2006/06/26 16:11:43 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2026/03/18 14:47:39 nia Exp $
 
---- xbmbrowser.c.orig	2006-06-26 15:30:08.000000000 +0000
+--- xbmbrowser.c.orig	1995-07-19 03:49:10.000000000 +0000
 +++ xbmbrowser.c
-@@ -279,7 +279,11 @@ main(argc, argv)
+@@ -224,6 +224,7 @@ static void usage()
+ }
+ 
+ 
++int
+ main(argc, argv)
+   int argc;
+   char **argv;
+@@ -279,7 +280,11 @@ main(argc, argv)
    { extern char *getenv();
      (void) strcpy(home_dir, getenv("HOME"));
      if( strcmp(home_dir,"/") != 0 )
@@ -14,7 +22,7 @@ $NetBSD: patch-ad,v 1.1 2006/06/26 16:11:43 joerg Exp $
    }
  
    /* Initialize other substitution strings */
-@@ -314,7 +318,11 @@ main(argc, argv)
+@@ -314,7 +319,11 @@ main(argc, argv)
    /* Initialize user menus from the appropiate RC file */
    /* Do this before we chdir() into some other directory */
    { FILE *rc;
@@ -26,7 +34,7 @@ $NetBSD: patch-ad,v 1.1 2006/06/26 16:11:43 joerg Exp $
  
       menu_global = menu_bitmap = menu_pixmap =
          menu_directory = menu_other = NULL;
-@@ -358,9 +366,15 @@ main(argc, argv)
+@@ -358,9 +367,15 @@ main(argc, argv)
      fprintf(stderr,"xbmbrowser: couldn't chdir to '%s'\n",argv[1]);
      exit(-1);
    }
