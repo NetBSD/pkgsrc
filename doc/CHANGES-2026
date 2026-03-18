@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1786 2026/03/17 21:20:20 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1787 2026/03/18 09:15:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2444,3 +2444,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/xenkernel418 to 20260317 [bouyer 2026-03-17]
 	Updated sysutils/xentools418 to 20260317 [bouyer 2026-03-17]
 	Updated textproc/expat to 2.7.5 [wiz 2026-03-17]
+	Updated net/yt-dlp-ejs to 0.8.0 [wiz 2026-03-18]
