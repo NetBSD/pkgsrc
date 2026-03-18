@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26946 2026/03/17 10:13:10 wiz Exp $
+$NetBSD: TODO,v 1.26947 2026/03/18 09:15:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -485,7 +485,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o binutils-2.46
 	o binutils-mips-current-2.36.1
 	o bioperl-1.7.8
-	o blender-5.0
+	o blender-5.1
 	o bliz++-0.10
 	o blogbench-1.2
 	o bluefish-2.2.19
@@ -527,6 +527,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o classpath-0.99
 	o classpath-gui-0.99
 	o clusterssh-4.16
+	o cmake-4.3
 	o colord-1.4.5
 	o colortail-0.3.3
 	o commit-patch-2.6
