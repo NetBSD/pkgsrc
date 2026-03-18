@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2025/04/21 20:23:27 wiz Exp $
+$NetBSD: distinfo,v 1.34 2026/03/18 16:19:54 nia Exp $
 
 BLAKE2s (xv-3.10a-enhancements.20070520-20081216.diff) = 1333e3066444f6adf64e83c33a129a46143678d4b2c805f3740baae1320d3449
 SHA512 (xv-3.10a-enhancements.20070520-20081216.diff) = d7152799f6ec65404496b8d83a93681122fe1280741ffe4d20d7dc1b3791873081c778b3d9806f1217b9d45f5b5bfce6fdbfb655c26ed5e87388a6f517c4f2f7
@@ -14,7 +14,7 @@ SHA1 (patch-bits_br__webp) = 47f2495f0e8d443e0e20b718593de331cf319dea
 SHA1 (patch-config.h) = 44e0c07e6bdef840b2e2c5b793d7854252254117
 SHA1 (patch-vdcomp.c) = 4c603cdc2c01925fed283b2aa6030d1933cdaddc
 SHA1 (patch-xv.c) = 6f4024903cb8b35a6ab2aba656b540f0df2566fb
-SHA1 (patch-xv.h) = 9af141caf2a17eac2eed1c24a2468df268f5ce20
+SHA1 (patch-xv.h) = 6def469a332abe3f4ee909caa6b93353d41114ca
 SHA1 (patch-xvbmp.c) = 5d5b01dabf235051394055ee6897c9d2500efe46
 SHA1 (patch-xvbrowse.c) = f15e6e8e4db2776f072f34355ecad7844a764c2a
 SHA1 (patch-xvdir.c) = 070714b588bc28f5d6e8974a88c960c6ab9df94f
