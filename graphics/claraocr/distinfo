@@ -1,7 +1,15 @@
-$NetBSD: distinfo,v 1.9 2021/12/29 09:18:42 dholland Exp $
+$NetBSD: distinfo,v 1.10 2026/03/18 10:08:43 nia Exp $
 
 BLAKE2s (clara-0.9.9.tar.gz) = 3357bd4ee883aa2b06c44b9889cec6ef16e4d528bac99ee922aa68823f85a27f
 SHA512 (clara-0.9.9.tar.gz) = 55baed83b08be4fd8bd145b2934c2e1d5e485444751f773f338d608e7a0dc81a74d3c3b0c2c887774cb57439c4f15706671e80358a0e6b9a93a2fc1d54f7ce3a
 Size (clara-0.9.9.tar.gz) = 419529 bytes
 SHA1 (patch-aa) = bfabc610299887e9b8331357d457657aa8c0eb26
-SHA1 (patch-pgmblock.c) = 39bab4e3a0ae68d76ecfb62090bd02f30e268d07
+SHA1 (patch-build.c) = 3ea0551f0663ce6716c5848cc122c59ebf58f2db
+SHA1 (patch-clara.c) = eae77c9f11f2c52e89f180ea6a8ddd23502b9616
+SHA1 (patch-event.c) = ce7568692f5e03f50c88eeeddcc5e078922afb54
+SHA1 (patch-html.c) = a802fbc0f2301546d26dbd623c0bd97f25bba31f
+SHA1 (patch-pgmblock.c) = db0f74fde472ced305cb701191743a0e5544e0ab
+SHA1 (patch-preproc.c) = 35f3d17c1b21a3fb2e88287b5864fc309bd099b5
+SHA1 (patch-revision.c) = adffc18d612316d35b083051c674cd7fad996e08
+SHA1 (patch-skel.c) = 499e220dbfc2618c8f8a94c71da243f1073b3ede
+SHA1 (patch-symbol.c) = da6199b260c331cc58487a72d94a3a57eab23a7f
