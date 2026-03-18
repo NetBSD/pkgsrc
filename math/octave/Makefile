@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.279 2026/02/26 15:45:32 adam Exp $
+# $NetBSD: Makefile,v 1.280 2026/03/18 15:47:44 maya Exp $
 
 DISTNAME=	octave-11.1.0
 CATEGORIES=	math
@@ -108,6 +108,10 @@ post-install:
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .endif
+
+# Alternative to std::from_chars in the C++ library (GCC 10, NetBSD 10)
+.include "../../math/fast_float/buildlink3.mk"
+
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
