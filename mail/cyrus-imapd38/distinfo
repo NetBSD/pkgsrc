@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2026/03/09 03:22:44 jnemeth Exp $
+$NetBSD: distinfo,v 1.2 2026/03/18 18:17:27 nia Exp $
 
 BLAKE2s (cyrus-imapd-3.8.6.tar.gz) = 836d0fb39163ef20e2f4239aeb672fb2025eaeff06f01229221ad16b5f237f0c
 SHA512 (cyrus-imapd-3.8.6.tar.gz) = 998a4f4fbb2b3c350a964ac16229b74b0a433cbb8fce246c5d72cf32d9482381d4085f5712c6a901163e8003ef6da1e0a592a218f19349d8f37627935efee87f
@@ -8,3 +8,4 @@ SHA1 (patch-ao) = c01c9d32b4d73cbc32d2ad8bfca8b8b021ca2474
 SHA1 (patch-aq) = bedd7e2d8e751577fa02f8f4cd91c00bd20b8a21
 SHA1 (patch-configure) = 3d44f8ba4f6cd829c4adf83a2a0c4e829386b514
 SHA1 (patch-imap_idlemsg.c) = fa7e0a66702a200112cf6ad8d65f22e0a2d5b1f6
+SHA1 (patch-lib_ptrarray.c) = ecd40f40094e2ba764f240cceaeb6c90a9dc89f0
