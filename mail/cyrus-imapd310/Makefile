@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/03/09 03:07:49 jnemeth Exp $
+# $NetBSD: Makefile,v 1.2 2026/03/18 18:14:11 nia Exp $
 
 DISTNAME=	cyrus-imapd-3.10.2
 CATEGORIES=	mail
@@ -13,7 +13,7 @@ LICENSE=	original-bsd # like license
 MAKE_JOBS_SAFE=	no
 
 USE_TOOLS+=		perl:run makedepend pkg-config gmake bison bash:run
-USE_TOOLS+=		autoconf automake autoreconf
+USE_TOOLS+=		autoconf automake autoreconf flex
 USE_LANGUAGES+=		c c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -54,6 +54,9 @@ CONFIGURE_ARGS+=	--enable-replication
 
 CONFIGURE_ARGS+=	andrew_cv_runpath_switch=${COMPILER_RPATH_FLAG}
 
+LDFLAGS.FreeBSD+=	-lm
+LDFLAGS.OpenBSD+=	-lm
+
 .include "options.mk"
 
 MAKE_ENV+=		PERL=${PERL5:Q}
@@ -76,6 +79,8 @@ REPLACE_PERL+=		tools/masssievec
 REPLACE_PERL+=		tools/mkimap
 REPLACE_PERL+=		tools/mknewsgroups
 REPLACE_PERL+=		tools/rehash
+
+REPLACE_SH+=		perl/imap/cyradm.sh
 
 # Override default Perl install location
 SUBST_CLASSES+=		perldir
