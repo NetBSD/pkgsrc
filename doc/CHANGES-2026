@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1788 2026/03/18 09:16:37 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1789 2026/03/18 15:00:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2446,3 +2446,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/expat to 2.7.5 [wiz 2026-03-17]
 	Updated net/yt-dlp-ejs to 0.8.0 [wiz 2026-03-18]
 	Updated net/yt-dlp to 2026.3.17 [wiz 2026-03-18]
+	Updated mail/roundcube to 1.6.14 [taca 2026-03-18]
+	Updated mail/roundcube-plugin-enigma to 1.6.14 [taca 2026-03-18]
+	Updated mail/roundcube-plugin-password to 1.6.14 [taca 2026-03-18]
+	Updated mail/roundcube-plugin-zipdownload to 1.6.14 [taca 2026-03-18]
