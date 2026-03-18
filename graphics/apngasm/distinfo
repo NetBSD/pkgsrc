@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2025/10/17 08:08:32 wiz Exp $
+$NetBSD: distinfo,v 1.3 2026/03/18 09:39:06 nia Exp $
 
 BLAKE2s (apngasm-3.1.10.tar.gz) = 3a0c37422e74267832c3523022af45e675dba78726b664ed5ed8f0d1dab35e7e
 SHA512 (apngasm-3.1.10.tar.gz) = 670d75251ddc771f9b2b4a1f401066f2012a6814bec781b918f1d9e8960835654c66c3d19b4c8920d5186d85af12cdc4bba8b61c8f3d349b4fc70513d8ecb34e
 Size (apngasm-3.1.10.tar.gz) = 620031 bytes
-SHA1 (patch-cli_CMakeLists.txt) = 455dce33ad6b1a2bf69b838d116be207f7beeaae
+SHA1 (patch-cli_CMakeLists.txt) = c9711eda15a4dc464a7f5362f954532ea48493f3
 SHA1 (patch-lib_CMakeLists.txt) = e6a2eec9e68156766c668d084f217cc2182d968d

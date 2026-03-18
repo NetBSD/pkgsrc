@@ -1,8 +1,10 @@
-$NetBSD: patch-cli_CMakeLists.txt,v 1.1 2025/10/17 08:08:32 wiz Exp $
+$NetBSD: patch-cli_CMakeLists.txt,v 1.2 2026/03/18 09:39:06 nia Exp $
 
 boost 1.89 made system header-only.
 
---- cli/CMakeLists.txt.orig	2025-10-17 08:06:16.222044715 +0000
+Honour PKGMANDIR.
+
+--- cli/CMakeLists.txt.orig	2021-11-26 06:44:20.000000000 +0000
 +++ cli/CMakeLists.txt
 @@ -34,7 +34,7 @@ endif ()
  if (APPLE OR WIN32)
@@ -13,3 +15,19 @@ boost 1.89 made system header-only.
  include_directories(${Boost_INCLUDE_DIRS})
  
  # Generate executable
+@@ -76,6 +76,8 @@ endif ()
+ include(${PROJECT_BINARY_DIR}/../lib/manifest.txt)
+ configure_file(${PROJECT_SOURCE_DIR}/package/CMakeLists.txt.in ${PACKAGE_DIR}/CMakeLists.txt @ONLY)
+ 
++include(GNUInstallDirs)
++
+ if (UNIX OR APPLE OR MINGW)
+   add_custom_target(
+     package-cli
+@@ -83,5 +85,5 @@ if (UNIX OR APPLE OR MINGW)
+     COMMAND ${CMAKE_MAKE_PROGRAM} package
+     WORKING_DIRECTORY ${PACKAGE_DIR}
+   )
+-  install(FILES ${PROJECT_SOURCE_DIR}/../docs/man/apngasm.1 DESTINATION ${CMAKE_INSTALL_PREFIX}/man/man1)
++  install(FILES ${PROJECT_SOURCE_DIR}/../docs/man/apngasm.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
+ endif ()
