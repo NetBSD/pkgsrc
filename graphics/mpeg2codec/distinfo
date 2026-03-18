@@ -1,6 +1,12 @@
-$NetBSD: distinfo,v 1.10 2025/04/21 20:21:51 wiz Exp $
+$NetBSD: distinfo,v 1.11 2026/03/18 14:38:19 nia Exp $
 
 BLAKE2s (mpeg2vidcodec_v12.tar.gz) = 6e4c5db18e5edb095625676707b77794b4525ac0325d828711e604c4f655098f
 SHA512 (mpeg2vidcodec_v12.tar.gz) = 2a46f486102ac2a1ae99a0f75b196c5aa01f8a99a6230723a2000ca8411adbca6c3e07d70f7cb269b17ce5fa4bf318e6dd4bfa83ecf8e137e8efca2bb352735c
 Size (mpeg2vidcodec_v12.tar.gz) = 259790 bytes
 SHA1 (patch-aa) = c63ce332e4dd9de55180ee124afcaa3c2c33f70f
+SHA1 (patch-src_mpeg2dec_getbits.c) = ae978eccfbcc2018299cabc8fdc25a684f0cc095
+SHA1 (patch-src_mpeg2dec_mpeg2dec.c) = d79683a6756637ef325adea612195e6ba2d25554
+SHA1 (patch-src_mpeg2dec_spatscal.c) = 189052a65b537b945a16cd5606f54da07e034455
+SHA1 (patch-src_mpeg2dec_store.c) = 3aec0fd24efd401c06c074194e5fa62ee9b8cd5d
+SHA1 (patch-src_mpeg2dec_subspic.c) = db65e66eb73555cb9de36f43c4456d8ca47e98fd
+SHA1 (patch-src_mpeg2enc_readpic.c) = 41a09ab1a4a25e81076973f1a893dd47ded0b383
