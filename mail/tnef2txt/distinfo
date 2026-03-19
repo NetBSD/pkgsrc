@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:54:33 nia Exp $
+$NetBSD: distinfo,v 1.7 2026/03/19 07:54:09 nia Exp $
 
 BLAKE2s (tnef2txt-1.4.tar.gz) = 6c61aa32d013345041a0c31ec507fbe23a8508f7db59663a560d2368dcdddb14
 SHA512 (tnef2txt-1.4.tar.gz) = f31b45620325f2769799b21796ec93008cc634c3dc07ae452e466c086e052f6440a9d77d6b475c622d9b37bf159342ee19943ef10e6018e22f645c2d939fcbae
 Size (tnef2txt-1.4.tar.gz) = 36568 bytes
 SHA1 (patch-aa) = 166a353bd13a4231c77816a1231a95ef21f22d4d
+SHA1 (patch-tnef.c) = 053d1b539c95e47418102a1fcf05162d1d038e39
