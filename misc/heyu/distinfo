@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:59:05 nia Exp $
+$NetBSD: distinfo,v 1.14 2026/03/19 14:55:20 nia Exp $
 
 BLAKE2s (heyu-1.35/x10_heyu.tgz) = 1f070f0cd29faeacb2749d22a9693dc54d260dbbf2d453f331703fe101289dec
 SHA512 (heyu-1.35/x10_heyu.tgz) = 1e02e8aecbd644c683681c4dc05d2942b43fc60a8d6e4b51923bf1f070d2ee98d71cbb4a80dcf0b37fbc52115ef40105fa801ed74fdcd906e269a785a79a8ed4
@@ -10,4 +10,8 @@ SHA1 (patch-ad) = 976436d32022f9eaa68b4661b6ee7025d9bb5f1c
 SHA1 (patch-ae) = 376c89f594b1ee1b06759b3f3b813a92f74ae1ee
 SHA1 (patch-af) = 05586be9010ec36bbde847de13d2d112b5d1501e
 SHA1 (patch-ag) = a8e9d04fea0e1d79bc9ee7999d32e8df9cba1e71
-SHA1 (patch-ah) = 70a99172f97034860045843316229108e04dff89
+SHA1 (patch-date.c) = 69241ecc38034b341632065983bfe157b4c17b1b
+SHA1 (patch-info.c) = 674267f0c753a20a1b2c081e198b396004f5bbc4
+SHA1 (patch-preset.c) = bc848380acf22822d61278d4924a825a5b9dcd77
+SHA1 (patch-reset.c) = 7b393021e07beeb9d0ee2883498fdf2c3394aec6
+SHA1 (patch-turn.c) = d3a242a8322127cbd6dae2f4eaea2c1dd35a8a9c
