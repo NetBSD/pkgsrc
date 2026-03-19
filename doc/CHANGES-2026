@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1794 2026/03/19 13:26:10 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1795 2026/03/19 14:57:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2455,3 +2455,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/php-nextcloud to 32.0.6 [gdt 2026-03-19]
 	Updated graphics/kf6-prison to 6.18.0nb4 [wiz 2026-03-19]
 	Updated graphics/prison to 5.116.0nb9 [wiz 2026-03-19]
+	Updated www/firefox to 148.0.2 [ryoon 2026-03-19]
