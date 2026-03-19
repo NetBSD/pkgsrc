@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2026/01/07 08:47:40 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2026/03/19 17:49:26 jperkin Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -43,6 +43,8 @@ INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${PHP_EGDIR} \
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
 CFLAGS+=	-DSQLITE_ENABLE_LOCKING_STYLE=0 -DSQLITE_WITHOUT_ZONEMALLOC
 .endif
+
+LIBS.SunOS+=	-lsocket -lnsl
 
 .include "../../mk/compiler.mk"
 
