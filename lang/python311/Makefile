@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2026/03/04 06:51:45 adam Exp $
+# $NetBSD: Makefile,v 1.45 2026/03/19 16:58:45 adam Exp $
 
 .include "dist.mk"
 
@@ -38,7 +38,6 @@ USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
-CONFIGURE_ARGS+=	--with-system-expat
 CONFIGURE_ARGS+=	--with-system-ffi
 CONFIGURE_ARGS+=	--without-ensurepip
 CONFIGURE_ARGS+=	--without-system-expat # requires expat_config.h
