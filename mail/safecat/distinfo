@@ -1,8 +1,14 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:54:29 nia Exp $
+$NetBSD: distinfo,v 1.17 2026/03/19 07:50:46 nia Exp $
 
 BLAKE2s (safecat-1.13.tar.gz) = 58a2c076ab94d0fcde2de072d16df7a1e6dafc0fe012d7d2bd720181702fcc22
 SHA512 (safecat-1.13.tar.gz) = e6f7401b55a61f70715b3d222c8286c0125c5e7b3b132e5e8d3c8573a6c45dba75b29a459c7e93d7c0760300f0a62635d8ea4eacde9b0b1ff7637b3f6c63e210
 Size (safecat-1.13.tar.gz) = 33953 bytes
 SHA1 (patch-Makefile) = e6db6ab21c37d4b1ff9d71f9dd4d17880e370725
-SHA1 (patch-hier.c) = b4483673a6eb3a2c55da096a1b01a3a5a9a053a9
+SHA1 (patch-alloc.c) = 4bff394dfd4ac827ce1dd1246608c14a534824cd
+SHA1 (patch-auto-str.c) = e94b4e13edbe0bcf215585598631f7450840a7df
+SHA1 (patch-hier.c) = 01804b50ae8bc58458999a75840e11cf9edb0c57
+SHA1 (patch-install.c) = 2181355ae659abd8c9f4c407a123156b3617c369
+SHA1 (patch-instcheck.c) = c58069f70450adf5b31de508985f1907de2a4cca
+SHA1 (patch-readwrite.h) = 512a2d13eae9f33d534d28bc95d3fdbb8a0b68c1
+SHA1 (patch-safecat.c) = 8513c43536791f03d4292d2f0a7b156a6db5f65b
 SHA1 (patch-tryulong32.c) = 2ffcf9c1dc8ca5182c915ec9b4da571d67d11dec
