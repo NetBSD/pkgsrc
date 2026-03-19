@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26948 2026/03/18 22:10:50 wiz Exp $
+$NetBSD: TODO,v 1.26949 2026/03/19 13:14:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -678,7 +678,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o glusterfs-11.1
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-48
+	o gnome-50.0
 	o gnome-applets-3.14.0
 	o gnome-bluetooth-2.30.0
 	o gnome-chess-3.12.3
@@ -813,6 +813,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
 	o keybinder-0.3.2
+	o kf6-prison-6.25
 	o kfilemetadata-5.81.0
 	o kgb-bot-1.55
 	o kicad-9.0
@@ -1186,6 +1187,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
+	o samba-4.24
+	o samtools-1.23.1
 	o sarg-2.4.0
 	o sasm-3.12.1
 	o scew-1.1.7

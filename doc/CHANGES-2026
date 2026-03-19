@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1792 2026/03/19 12:41:35 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.1793 2026/03/19 13:14:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2453,3 +2453,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/neomutt to 20260105nb4 [wiz 2026-03-18]
 	Updated mail/roundcube to 1.6.14nb1 [taca 2026-03-19]
 	Updated www/php-nextcloud to 32.0.6 [gdt 2026-03-19]
+	Updated graphics/kf6-prison to 6.18.0nb4 [wiz 2026-03-19]
