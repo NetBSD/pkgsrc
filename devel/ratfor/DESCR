@@ -1,5 +1,5 @@
 Ratfor is a preprocessor for Fortran code that allows the use C-like
-flow expressions.  Ratfor was invented by Brian Kernigham.  Statements
+flow expressions.  Ratfor was invented by Brian Kernighan.  Statements
 on a line may be separated by a ";". Statements may be grouped
 together with braces }.  Do loops do not require statement numbers
 because {} defines the range, etc.  The Fortran relational operators
