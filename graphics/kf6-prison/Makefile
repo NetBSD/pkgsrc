@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2026/02/06 10:05:01 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/03/19 13:14:06 wiz Exp $
 
 DISTNAME=	prison-${KF6VER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -16,7 +16,8 @@ USE_TOOLS+=	pkg-config
 
 .include "../../converters/qrencode/buildlink3.mk"
 .include "../../graphics/libdmtx/buildlink3.mk"
-.include "../../graphics/zxing-cpp/buildlink3.mk"
+# TODO: restore when updating to 6.25+
+#.include "../../graphics/zxing-cpp/buildlink3.mk"
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"
 .include "../../multimedia/qt6-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
