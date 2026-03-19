@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.345 2026/02/26 15:44:56 adam Exp $
+# $NetBSD: Makefile,v 1.346 2026/03/19 22:55:41 nia Exp $
 
 DISTNAME=	wireshark-4.6.4
 CATEGORIES=	net
@@ -78,6 +78,7 @@ SUBST_SED.lemon=	-e 's,/usr/share,${PREFIX}/share,g'
 .include "../../devel/libsmi/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
+.include "../../devel/xxhash/buildlink3.mk"
 .include "../../geography/libmaxminddb/buildlink3.mk"
 .include "../../lang/python/application.mk"
 BUILDLINK_API_DEPENDS.libcares+=	libcares>=1.13.0
