@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2026/03/15 06:29:34 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/03/19 09:04:51 wiz Exp $
 
 DISTNAME=	Clone-0.48
 PKGNAME=	p5-${DISTNAME}
@@ -13,6 +13,9 @@ LICENSE=	${PERL5_LICENSE}
 TEST_DEPENDS+=	p5-B-COW-[0-9]*:../../devel/p5-B-COW
 
 PERL5_PACKLIST=		auto/Clone/.packlist
+
+# 0.48 distfile has extended attributes; needs fixing upstream
+EXTRACT_USING=	gtar
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
