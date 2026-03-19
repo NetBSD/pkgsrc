@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2026/03/03 21:24:21 tnn Exp $
+# $NetBSD: Makefile,v 1.42 2026/03/19 10:55:04 kikadf Exp $
 
 DISTNAME=	alacritty-0.16.1
 CATEGORIES=	x11
@@ -46,7 +46,7 @@ SUBST_SED.rtld=		-e 's,libc::RTLD_LAZY,& | libc::RTLD_GLOBAL,g'
 PYTHON_FOR_BUILD_ONLY=		tool
 
 INSTALLATION_DIRS=	bin share/applications ${PKGMANDIR}/man1 \
-			${PKGMANDIR}/man5 share/icons/hicolor/scalable/apps
+			${PKGMANDIR}/man5 share/pixmaps
 
 PLIST_SRC=		${PLIST_SRC_DFLT}
 
@@ -67,7 +67,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/extra/linux/Alacritty.desktop \
                  ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/extra/logo/alacritty-term.svg \
-		${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps
+		${DESTDIR}${PREFIX}/share/pixmaps/Alacritty.svg
 .if ${OPSYS} == "Darwin"
 	cd ${WRKSRC}/target/release/osx && ${PAX} -rwpe Alacritty.app ${DESTDIR}${PREFIX}/Applications
 .endif
