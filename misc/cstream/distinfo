@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:59:00 nia Exp $
+$NetBSD: distinfo,v 1.9 2026/03/19 14:52:29 nia Exp $
 
 BLAKE2s (cstream-3.1.1.tar.gz) = 95db93df79c54ff99daf7d9ee3804731bc440700f6cb5ca7f82b45b3f2cb2f1a
 SHA512 (cstream-3.1.1.tar.gz) = 8d6364da622711f6888fd221b2f36f5da23d2a562d5a797d58d7ef361415481de8ab9ae55ae856d47c2d0141d570e22a61ab0ce9954c043877196df168f2f43a
 Size (cstream-3.1.1.tar.gz) = 96609 bytes
+SHA1 (patch-cstream.c) = a8f44733d15192ff8b87d0d77f82c036748e4022
