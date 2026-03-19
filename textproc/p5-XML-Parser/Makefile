@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.60 2025/07/04 08:48:40 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2026/03/19 15:22:30 wiz Exp $
 
-DISTNAME=	XML-Parser-2.47
+DISTNAME=	XML-Parser-2.48
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TO/TODDR/}
 
 MAINTAINER=	bad@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/XML-Parser
@@ -13,10 +12,18 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 TOOL_DEPENDS+=	p5-Devel-CheckLib-[0-9]*:../../devel/p5-Devel-CheckLib
+DEPENDS+=	p5-File-ShareDir-[0-9]*:../../devel/p5-File-ShareDir
+TOOL_DEPENDS+=	p5-File-ShareDir-Install-[0-9]*:../../devel/p5-File-ShareDir-Install
 
 PERL5_PACKLIST=		auto/XML/Parser/.packlist
 MAKE_PARAMS+=		EXPATLIBPATH=${BUILDLINK_PREFIX.expat}/lib
 MAKE_PARAMS+=		EXPATINCPATH=${BUILDLINK_PREFIX.expat}/include
+
+# as of 2.48
+# Failed 2/42 test programs. 0/321 subtests failed.
+.if make(test)
+ALLOW_NETWORK_ACCESS=	yes
+.endif
 
 post-extract:
 	${RM} -f ${WRKSRC}/inc/Devel/CheckLib.pm
