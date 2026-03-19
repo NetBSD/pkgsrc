@@ -25,7 +25,7 @@
 #
 # Usage: depgraph [-V] [-v] [pkg...]
 
-DEPGRAPH_VERSION=20260312
+DEPGRAPH_VERSION=20260319
 
 case "$(uname -s)" in
 NetBSD)
@@ -40,32 +40,28 @@ license=false
 nameversion=false
 metadata=false
 
-# short script to look for an executable $2, and if found, to place
-# path in $1
+# find the path for the program/utility $2
+# set $1 with that information
 # taken from pkgsrc bootstrap
 which_prog()
 {
-	local IFS _var _name _d -
-	set -f
-
 	_var="$1"; _name="$2"
 
-	eval _d=\"\$$_var\"
-	if [ -n "$_d" ]; then
+	eval _tmp=\"\$$_var\"
+	if [ "x$_tmp" != "x" ]; then
 		# Variable is already set (by the user, for example)
 		return 0
 	fi
 
-	IFS=:
-	for _d in $PATH ; do
+	for _d in `echo $PATH | tr ':' ' '`; do
 		if [ -f "$_d/$_name" ] && [ -x "$_d/$_name" ]; then
 			# Program found
 			eval $_var=\""$_d/$_name"\"
-			return 0
+			return 1
 		fi
 	done
 
-	return 1
+	die "$_name not found in path."
 }
 
 # get the correct programs
