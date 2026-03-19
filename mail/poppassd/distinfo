@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.21 2021/10/26 10:54:21 nia Exp $
+$NetBSD: distinfo,v 1.22 2026/03/19 07:53:03 nia Exp $
 
 BLAKE2s (qpopper4.1.0.tar.gz) = 21bb8c30bda4c0c5da79215acf84e2f31e90020ce0322dd2b8ec3b33e2ad23cc
 SHA512 (qpopper4.1.0.tar.gz) = 01e3ac13fa446bded84628a29a23849f623d5e5f85fdb77126cc4c2e20785c658fbc3d8a356eafd9f0ed2e879c6b4f6a754b6b685ea51b784c2cd0458c389c8b
 Size (qpopper4.1.0.tar.gz) = 1239530 bytes
 SHA1 (patch-aa) = f80e0e2c820aa93ddfab40b6506edd44a78b1e04
 SHA1 (patch-ab) = b5e9e55a8bbfe1edd5a63abfeff44dc6ee853701
-SHA1 (patch-ac) = 5f6ea3f46f88e2569bb2665d168955384c52b090
+SHA1 (patch-ac) = 751c386d22c2e616fea970aa77cdc0124202bc59
 SHA1 (patch-ad) = 049020d3c93fda18734eb07034faf5640f33c24c
 SHA1 (patch-af) = 83488041a0bf7e5bae07bf4e32ab065735a696f5
 SHA1 (patch-ag) = 1593366df600fc52b84b1ca6e8a825142c9c7400
