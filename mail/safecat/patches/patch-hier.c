@@ -1,10 +1,22 @@
-$NetBSD: patch-hier.c,v 1.2 2016/04/01 11:20:58 jperkin Exp $
+$NetBSD: patch-hier.c,v 1.3 2026/03/19 07:50:46 nia Exp $
 
 Use PKGMANDIR.
 
 --- hier.c.orig	2001-04-14 11:09:54.000000000 +0000
 +++ hier.c
-@@ -7,11 +7,8 @@ void hier()
+@@ -1,5 +1,11 @@
+ #include "auto_home.h"
+ 
++void h(char *, int, int, int);
++
++void d(char *, char *, int, int, int);
++
++void c(char *, char *, char *file, int, int, int);
++
+ void hier()
+ {
+   h(auto_home,-1,-1,02755);
+@@ -7,11 +13,8 @@ void hier()
    c(auto_home,"bin","safecat",-1,-1,0755);
    c(auto_home,"bin","maildir",-1,-1,0755);
  
