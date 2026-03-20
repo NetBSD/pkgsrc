@@ -1,10 +1,12 @@
-$NetBSD: patch-ad,v 1.1 2005/12/18 22:02:35 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2026/03/20 20:29:11 nia Exp $
 
---- timelimit.c.orig	2005-12-18 21:54:52.000000000 +0000
+--- timelimit.c.orig	1998-10-28 20:30:06.000000000 +0000
 +++ timelimit.c
-@@ -30,7 +30,6 @@ static char info[] = "timelimit: a  util
+@@ -29,8 +29,8 @@ static char info[] = "timelimit: a  util
+ #include <sys/wait.h>
  #include <unistd.h>
  #include <stdlib.h>
++#include <string.h>
  #include <errno.h>
 -extern int errno;
  #include "common.h"
