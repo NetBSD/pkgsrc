@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2026/03/19 13:14:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/03/20 22:14:27 markd Exp $
 include/KF6/Prison/Prison/Barcode
 include/KF6/Prison/Prison/MeCard
 include/KF6/Prison/Prison/Prison
@@ -7,6 +7,15 @@ include/KF6/Prison/Prison/mecard.h
 include/KF6/Prison/Prison/prison.h
 include/KF6/Prison/Prison/prison_export.h
 include/KF6/Prison/prison_version.h
+include/KF6/PrisonScanner/Prison/Format
+include/KF6/PrisonScanner/Prison/ImageScanner
+include/KF6/PrisonScanner/Prison/ScanResult
+include/KF6/PrisonScanner/Prison/VideoScanner
+include/KF6/PrisonScanner/Prison/format.h
+include/KF6/PrisonScanner/Prison/imagescanner.h
+include/KF6/PrisonScanner/Prison/prisonscanner_export.h
+include/KF6/PrisonScanner/Prison/scanresult.h
+include/KF6/PrisonScanner/Prison/videoscanner.h
 lib/cmake/KF6Prison/KF6PrisonConfig.cmake
 lib/cmake/KF6Prison/KF6PrisonConfigVersion.cmake
 lib/cmake/KF6Prison/KF6PrisonTargets-noconfig.cmake
@@ -14,9 +23,16 @@ lib/cmake/KF6Prison/KF6PrisonTargets.cmake
 lib/libKF6Prison.so
 lib/libKF6Prison.so.6
 lib/libKF6Prison.so.${PKGVERSION}
+lib/libKF6PrisonScanner.so
+lib/libKF6PrisonScanner.so.6
+lib/libKF6PrisonScanner.so.${PKGVERSION}
 qt6/qml/org/kde/prison/kde-qmlmodule.version
 qt6/qml/org/kde/prison/libprisonquickplugin.so
 qt6/qml/org/kde/prison/prisonquickplugin.qmltypes
 qt6/qml/org/kde/prison/qmldir
+qt6/qml/org/kde/prison/scanner/kde-qmlmodule.version
+qt6/qml/org/kde/prison/scanner/libprisonscannerquickplugin.so
+qt6/qml/org/kde/prison/scanner/prisonscannerquickplugin.qmltypes
+qt6/qml/org/kde/prison/scanner/qmldir
 share/qlogging-categories6/prison.categories
 share/qlogging-categories6/prison.renamecategories

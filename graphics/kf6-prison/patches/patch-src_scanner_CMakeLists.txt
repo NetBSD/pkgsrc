@@ -1,0 +1,16 @@
+$NetBSD: patch-src_scanner_CMakeLists.txt,v 1.1 2026/03/20 22:14:27 markd Exp $
+
+Reverse https://invent.kde.org/frameworks/prison/-/commit/abc05e05bfe7244317cb635186233d656a4b7cea
+so that builds with extra-cmake-modules-6.18
+
+--- src/scanner/CMakeLists.txt.orig	2026-03-07 20:33:44.000000000 +0000
++++ src/scanner/CMakeLists.txt
+@@ -60,7 +60,7 @@ ecm_generate_headers(PrisonScanner_Camel
+         ImageScanner
+         ScanResult
+         VideoScanner
+-    SHARED_PREFIX Prison
++    OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/Prison
+     REQUIRED_HEADERS PrisonScanner_HEADERS
+ )
+ 
