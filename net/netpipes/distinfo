@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:06:07 nia Exp $
+$NetBSD: distinfo,v 1.7 2026/03/20 20:29:11 nia Exp $
 
 BLAKE2s (netpipes-4.2-export.tar.gz) = 932353d2044fc318e270d77560407d8d2c73ee30dd851f932a40ba177b37f258
 SHA512 (netpipes-4.2-export.tar.gz) = e107668d78220e0f8eac0c4dca975cf95d9b4873c385a682b395ddcfbf5c650cf1effd92307374495703d41d28075ad208cffb6c39d00121339585f1387a428f
@@ -6,7 +6,7 @@ Size (netpipes-4.2-export.tar.gz) = 74977 bytes
 SHA1 (patch-aa) = 25c4760f1a50f1e120b691b49088f149b5c54029
 SHA1 (patch-ab) = e2ff692a1153687c5c42da9df06cdc3012c6989a
 SHA1 (patch-ac) = 4cc8af134622dec798094dc043ad65c1e1154cf0
-SHA1 (patch-ad) = dfa0eeb9b6a723b6d91fa234e4cfeaad66e6ec8c
+SHA1 (patch-ad) = beee1fea22b6948c62b4ed554e750b9a3b5b0f8a
 SHA1 (patch-ae) = 482c06d563769b637c30e9c37fa35d920cee2651
 SHA1 (patch-af) = 8080accff1770403b3245832a74dd7a322be1649
 SHA1 (patch-ag) = 314faa08f019f4a8620164b1cb8db731b7dabf02
