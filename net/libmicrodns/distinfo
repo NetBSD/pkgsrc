@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:05:55 nia Exp $
+$NetBSD: distinfo,v 1.4 2026/03/20 11:06:59 nia Exp $
 
 BLAKE2s (microdns-0.2.0.tar.xz) = 191c3bcff37c8e5c5614823f734b83cdfbe1c964c4cc27bad8b8e07e7a163151
 SHA512 (microdns-0.2.0.tar.xz) = fc642d463f52409e76515897e3662b7b08ee35dc760e595980c343a4fd24f1b76cdfbd4f91ea2115a02243be8ae8908670440ead96715c8983abb2a8559702b6
 Size (microdns-0.2.0.tar.xz) = 50544 bytes
+SHA1 (patch-src_mdns.c) = c3e063698e9e1cedde69c5830e85810cd6954643
