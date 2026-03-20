@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/03/09 08:49:48 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/03/20 09:47:41 nia Exp $
 
 DISTNAME=	gopherus-1.2.2
 CATEGORIES=	net
@@ -13,6 +13,8 @@ LICENSE=	2-clause-bsd
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake
 MAKE_FILE=	Makefile.lin
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 BINDIR=			${PREFIX}/bin
 DOCDIR=			${PREFIX}/share/doc/gopherus
