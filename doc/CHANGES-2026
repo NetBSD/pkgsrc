@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1800 2026/03/20 14:09:38 sborrill Exp $
+$NetBSD: CHANGES-2026,v 1.1801 2026/03/20 22:16:10 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2461,3 +2461,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated pkgtools/depgraph to 20260319 [agc 2026-03-19]
 	Updated mail/mutt to 2.3.1 [tron 2026-03-20]
 	Added emulators/suse15_gcc12 15.5 [sborrill 2026-03-20]
+	Updated graphics/kf6-prison to 6.24.0 [markd 2026-03-20]
