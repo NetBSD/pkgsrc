@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/03/24 14:40:56 nia Exp $
+# $NetBSD: Makefile,v 1.15 2026/03/20 20:27:00 nia Exp $
 
 DISTNAME=	lft-3.8
 PKGNAME=	lft-3.80
@@ -12,6 +12,8 @@ LICENSE=	lft-license
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+
+CFLAGS.SunOS+=		-Dalloca=__builtin_alloca
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man8
 
