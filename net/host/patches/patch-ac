@@ -1,10 +1,20 @@
-$NetBSD: patch-ac,v 1.5 2017/09/20 11:18:13 jperkin Exp $
+$NetBSD: patch-ac,v 1.6 2026/03/20 10:01:16 nia Exp $
+
+Fix implicit declaration of strchr(3) and friends.
 
 IRIX support.
 
---- host.h.orig	2006-10-03 15:54:29.000000000 +0200
-+++ host.h	2006-10-03 15:55:13.000000000 +0200
-@@ -151,7 +151,7 @@
+--- host.h.orig	2007-01-09 21:16:02.000000000 +0000
++++ host.h
+@@ -37,6 +37,7 @@
+ #include <sys/stat.h>
+ 
+ #include <stdio.h>
++#include <string.h>
+ #include <assert.h>
+ #include <ctype.h>
+ #include <errno.h>
+@@ -151,7 +152,7 @@ extern int errno;
  extern int h_errno;			/* defined in the resolver library */
  #endif
  
