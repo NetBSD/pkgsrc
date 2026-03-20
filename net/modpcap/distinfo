@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:06:01 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/03/20 20:27:30 nia Exp $
 
 BLAKE2s (modcap.c) = d958819f1ae5fd8c0c69dcfaecf6b865625fe33e69fb554c514096e5ab3953ba
 SHA512 (modcap.c) = d59ce0fe47b9628c0805b990f9e82a48cd8ebdbe81aba0a283e09de8c25c51386a747b357d5626783254a8dd35219d857b49b351a27b1226e81f3254e6a7807e
 Size (modcap.c) = 31124 bytes
-SHA1 (patch-aa) = 4c568040d21e766d5506a88abd18291ad0c53a2c
+SHA1 (patch-aa) = c0b225f6de7187040f2f3fd8c42b86a72e94f0ea

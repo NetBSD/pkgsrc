@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/11/29 07:25:04 agc Exp $
+$NetBSD: patch-aa,v 1.2 2026/03/20 20:27:31 nia Exp $
 
---- modcap.c	2010/05/26 16:25:26	1.1
-+++ modcap.c	2010/05/26 16:28:42
-@@ -581,6 +581,7 @@
+--- modcap.c.orig	2026-03-20 20:12:34.192388185 +0000
++++ modcap.c
+@@ -68,6 +68,7 @@
+ #include <stdio.h>
+ #include <stdarg.h>
+ #include <string.h>
++#include <strings.h>
+ #include <unistd.h>
+ #include <time.h>
+ #include <stdlib.h>
+@@ -581,6 +582,7 @@ void SetMinPps()
  	guint32 Prev_sec=0;
  	guint32 Prev_usec=0;
  	int 	NSP;
@@ -10,7 +18,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/11/29 07:25:04 agc Exp $
  
  	if (Param > MICRO)
  	{
-@@ -629,7 +630,7 @@
+@@ -629,7 +631,7 @@ void SetMinPps()
  			/// Store beginning of burst
  			Prev_sec=PR.header.ts_sec;
  			Prev_usec=PR.header.ts_usec;
@@ -19,7 +27,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/11/29 07:25:04 agc Exp $
  			{
  				/// Read, shift
  				ReadRec(&PR);
-@@ -666,6 +667,7 @@
+@@ -666,6 +668,7 @@ void SetMinMbps()
  	guint32 Prev_usec=0;
  	guint32 NSB=0;
  	guint32	NSP=0;
@@ -27,7 +35,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/11/29 07:25:04 agc Exp $
  
          /// From MegaBits/sec to Bytes/sec
  	unsigned long LParam = (unsigned long)(Param*1024*1024/8);
-@@ -715,13 +717,13 @@
+@@ -715,13 +718,13 @@ void SetMinMbps()
  			/// Store beginning of burst
  			Prev_sec=PR.header.ts_sec;
  			Prev_usec=PR.header.ts_usec;
@@ -43,7 +51,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/11/29 07:25:04 agc Exp $
  				while (PR.header.ts_usec >= MICRO)
  				{
  					PR.header.ts_usec -= MICRO;
-@@ -755,6 +757,7 @@
+@@ -755,6 +758,7 @@ void ChangeIP()
  	int		DeltaCks;
  	guint16		cks;
  	guint32		Checksum=0;
@@ -51,7 +59,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/11/29 07:25:04 agc Exp $
  
  	*ip0 = 0;
  	inet_aton(ip1, &dst);
-@@ -791,7 +794,7 @@
+@@ -791,7 +795,7 @@ void ChangeIP()
  			RunLen = IPHeader;
  			bzero (&Rec.body[ETHEADER+10],2);
  			Checksum=0;
@@ -60,7 +68,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/11/29 07:25:04 agc Exp $
  				Checksum+=(guint16)((Rec.body[ETHEADER+i]<<8)+Rec.body[ETHEADER+i+1]);
                          Checksum = (Checksum >> 16) + (Checksum & 0xFFFF);
  			Checksum+= (Checksum >> 16);
-@@ -906,6 +909,7 @@
+@@ -906,6 +910,7 @@ void ChangePort ()
  			guint32 IPHeader=(Rec.body[ETHEADER+0] & 0x0F)<<2;
  			guint32 TCPHeader= IPHeader+ETHEADER;
                          guint32 RunLen = (Rec.body[ETHEADER+2]<<8) + (Rec.body[ETHEADER+3]) - IPHeader;
@@ -68,7 +76,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/11/29 07:25:04 agc Exp $
  
  			/// Repalce PORT
  			Rec.body[match]	  = (port2 & 0xFF00)>>8;
-@@ -914,7 +918,7 @@
+@@ -914,7 +919,7 @@ void ChangePort ()
  			/// Clear Previous Checksum    a Bytes
  			bzero (&Rec.body[TCPHeader+16],2);
  			/// Summ Header and Dat
