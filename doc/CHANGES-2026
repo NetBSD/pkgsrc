@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1798 2026/03/19 18:39:40 agc Exp $
+$NetBSD: CHANGES-2026,v 1.1799 2026/03/20 08:55:25 tron Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2459,3 +2459,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox-l10n to 148.0.2 [ryoon 2026-03-19]
 	Updated textproc/p5-XML-Parser to 2.48 [wiz 2026-03-19]
 	Updated pkgtools/depgraph to 20260319 [agc 2026-03-19]
+	Updated mail/mutt to 2.3.1 [tron 2026-03-20]
