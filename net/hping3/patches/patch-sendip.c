@@ -1,4 +1,4 @@
-$NetBSD: patch-sendip.c,v 1.1 2017/06/14 12:17:30 jperkin Exp $
+$NetBSD: patch-sendip.c,v 1.2 2026/03/20 11:04:14 nia Exp $
 
 Darwin compatibility, from Homebrew.
 
@@ -9,7 +9,7 @@ Darwin compatibility, from Homebrew.
  	ip->tos		= ip_tos;
  
 -#if defined OSTYPE_FREEBSD || defined OSTYPE_NETBSD || defined OSTYPE_BSDI
-+#if defined OSTYPE_DARWIN || OSTYPE_FREEBSD || defined OSTYPE_NETBSD || defined OSTYPE_BSDI
++#if defined OSTYPE_DARWIN || defined OSTYPE_FREEBSD || defined OSTYPE_NETBSD || defined OSTYPE_BSDI
  /* FreeBSD */
  /* NetBSD */
  	ip->tot_len	= packetsize;
@@ -18,7 +18,7 @@ Darwin compatibility, from Homebrew.
  	}
  
 -#if defined OSTYPE_FREEBSD || defined OSTYPE_NETBSD | defined OSTYPE_BSDI
-+#if defined OSTYPE_DARWIN || OSTYPE_FREEBSD || defined OSTYPE_NETBSD | defined OSTYPE_BSDI
++#if defined OSTYPE_DARWIN || defined OSTYPE_FREEBSD || defined OSTYPE_NETBSD | defined OSTYPE_BSDI
  /* FreeBSD */
  /* NetBSD */
  	ip->frag_off	|= more_fragments;
