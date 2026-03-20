@@ -1,0 +1,7 @@
+Linux compatibility package based on the openSUSE Linux distribution.
+Please visit http://www.opensuse.org/ for more information about openSUSE
+Linux.
+
+The GNU Compiler Collection (GCC) includes front ends for C, C++, Objective-C,
+Fortran, Java, and Go, as well as libraries for these languages (libstdc++,
+libgcj,...).
