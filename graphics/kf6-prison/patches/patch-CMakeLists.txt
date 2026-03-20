@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/03/20 22:14:27 markd Exp $
+
+allow extra-cmake-modules-6.18.0 temporarily
+
+--- CMakeLists.txt.orig	2026-03-07 20:33:44.000000000 +0000
++++ CMakeLists.txt
+@@ -5,7 +5,7 @@ project(prison VERSION ${KF_VERSION})
+ 
+ # ECM setup
+ include(FeatureSummary)
+-find_package(ECM 6.24.0 NO_MODULE)
++find_package(ECM 6.18.0 NO_MODULE)
+ set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://commits.kde.org/extra-cmake-modules")
+ feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
+ set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" "${ECM_MODULE_PATH}")

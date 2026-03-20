@@ -1,0 +1,18 @@
+$NetBSD: patch-src_lib_CMakeLists.txt,v 1.1 2026/03/20 22:14:27 markd Exp $
+
+Reverse https://invent.kde.org/frameworks/prison/-/commit/abc05e05bfe7244317cb635186233d656
+a4b7cea
+so that builds with extra-cmake-modules-6.18
+
+--- src/lib/CMakeLists.txt.orig	2026-03-07 20:33:44.000000000 +0000
++++ src/lib/CMakeLists.txt
+@@ -104,8 +104,8 @@ ecm_generate_headers(Prison_CamelCase_HE
+     Barcode
+     Prison
+     MeCard
+-    SHARED_PREFIX Prison
+     REQUIRED_HEADERS Prison_HEADERS
++    OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/Prison
+ )
+ 
+ ecm_generate_qdoc(KF6Prison prison.qdocconf)
