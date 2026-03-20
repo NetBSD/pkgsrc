@@ -1,18 +1,17 @@
-$NetBSD: patch-aa,v 1.2 2005/12/18 21:45:29 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2026/03/20 09:58:53 nia Exp $
 
 --- bounce.c.orig	2000-02-18 21:58:52.000000000 +0000
 +++ bounce.c
-@@ -11,6 +11,9 @@
- #ifdef _AIX
+@@ -12,6 +12,8 @@
  #include <sys/select.h>
  #endif
-+#ifdef __NetBSD__
-+#include <string.h> /* memset() for FD_*() macros */
-+#endif
  
++#include <string.h>
++
  #include <fcntl.h>
  #include <errno.h>
-@@ -27,7 +30,6 @@
+ #include <netinet/in.h>
+@@ -27,7 +29,6 @@
  #define    DEFAULT_PORT   1523
  
  char sbuf[16384], cbuf[16384];
@@ -20,7 +19,7 @@ $NetBSD: patch-aa,v 1.2 2005/12/18 21:45:29 joerg Exp $
  /* extern char *sys_errlist[]; */
  
  void sigchld() {
-@@ -39,7 +41,6 @@ void communicate(int sfd, int cfd) {
+@@ -39,7 +40,6 @@ void communicate(int sfd, int cfd) {
      char *chead, *ctail, *shead, *stail;
      int num, nfd, spos, cpos;
  

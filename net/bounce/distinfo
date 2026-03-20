@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:05:25 nia Exp $
+$NetBSD: distinfo,v 1.10 2026/03/20 09:58:53 nia Exp $
 
 BLAKE2s (bounce-0.0.tar.gz) = f99867cdfb49767d2fc6772e9433a02f0f8174181c10fbb44b2a52b11deebee8
 SHA512 (bounce-0.0.tar.gz) = 9898612f3dc8028d035f58944140ed4a83d04c321562a69859740969bce2d8eb65b28d6ecc7c9e21514742672be86f6cb79dabcae0c2ce5fa1ceed0003281fad
 Size (bounce-0.0.tar.gz) = 3439 bytes
-SHA1 (patch-aa) = 89469c2b8608796006a817dcbb5e5b3bf21007ef
+SHA1 (patch-aa) = 3c364a59c8918493a186a2d94535c628e9483573
 SHA1 (patch-ab) = 199f3c84c5389a97b4e18f81d1c771717a0ffdd2
