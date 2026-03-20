@@ -1,9 +1,12 @@
-$NetBSD: patch-ab,v 1.4 2025/04/21 20:59:12 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2026/03/20 09:30:13 nia Exp $
 
---- wdic_wob_v3.0.c.orig	Mon Jan  3 06:29:42 2005
+--- wdic_wob_v3.0.c.orig	2005-01-03 12:29:42.000000000 +0000
 +++ wdic_wob_v3.0.c
-@@ -13,6 +13,9 @@
+@@ -11,8 +11,12 @@
+ #include <ctype.h>
+ #include <unistd.h>
  #include <string.h>
++#include <strings.h>
  #include <netdb.h>
  #include <sys/socket.h>
 +#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__APPLE__) || defined(__DragonFly__)
@@ -12,7 +15,7 @@ $NetBSD: patch-ab,v 1.4 2025/04/21 20:59:12 wiz Exp $
  
  #define VERSION	"v3.0"
  #define URL	"engdic.empas.com"
-@@ -66,7 +69,7 @@ void parse_result(int sd) {
+@@ -66,7 +70,7 @@ void parse_result(int sd) {
  
                                  if(main_start==1) { 
  				  if(strcmp("<br>", buf) == 0) { printf("\n");	}

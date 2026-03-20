@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2025/04/21 20:59:12 wiz Exp $
+$NetBSD: distinfo,v 1.9 2026/03/20 09:30:13 nia Exp $
 
 BLAKE2s (wdic_wob_v3.0.tar.gz) = e07c91a098f2f9e6e65602a1bb83abd1e22a897e2e93c2c617308116b8eebc82
 SHA512 (wdic_wob_v3.0.tar.gz) = faab7b26a4aa77e32bb5477b905f75a8dc60a88f6ef3e605346d5abc659f7184e94bb8d75154f42db278dd6d2c7289e3d90ec2317a3c41a2076c0ebbbaa954e3
 Size (wdic_wob_v3.0.tar.gz) = 2885 bytes
 SHA1 (patch-aa) = ae02cde47a0004219557eabdd197daf3940f53cd
-SHA1 (patch-ab) = a0177b9c05525de87f605266750ee09ca2ab6ba6
+SHA1 (patch-ab) = 71d16aab5df75170a72f78aca23d5265994493ed
