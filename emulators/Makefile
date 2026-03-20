@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.379 2026/02/14 14:17:10 nia Exp $
+# $NetBSD: Makefile,v 1.380 2026/03/20 14:08:21 sborrill Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -408,6 +408,7 @@ SUBDIR+=	suse15_binutils
 SUBDIR+=	suse15_expat
 SUBDIR+=	suse15_fontconfig
 SUBDIR+=	suse15_freetype2
+SUBDIR+=	suse15_gcc12
 SUBDIR+=	suse15_glib2
 SUBDIR+=	suse15_glx
 SUBDIR+=	suse15_gtk3
