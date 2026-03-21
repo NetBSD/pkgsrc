@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2025/12/24 13:28:31 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.36 2026/03/21 01:50:53 ktnb Exp $
 bin/kitten
 bin/kitty
 lib/kitty/__main__.py
@@ -41,6 +41,12 @@ lib/kitty/kittens/clipboard/__init__.pyo
 lib/kitty/kittens/clipboard/main.py
 lib/kitty/kittens/clipboard/main.pyc
 lib/kitty/kittens/clipboard/main.pyo
+lib/kitty/kittens/command_palette/__init__.py
+lib/kitty/kittens/command_palette/__init__.pyc
+lib/kitty/kittens/command_palette/__init__.pyo
+lib/kitty/kittens/command_palette/main.py
+lib/kitty/kittens/command_palette/main.pyc
+lib/kitty/kittens/command_palette/main.pyo
 lib/kitty/kittens/desktop_ui/__init__.py
 lib/kitty/kittens/desktop_ui/__init__.pyc
 lib/kitty/kittens/desktop_ui/__init__.pyo
@@ -501,6 +507,8 @@ lib/kitty/kitty/rgb.pyc
 lib/kitty/kitty/rgb.pyo
 lib/kitty/kitty/rounded_rect_fragment.glsl
 lib/kitty/kitty/rounded_rect_vertex.glsl
+lib/kitty/kitty/screenshot_fragment.glsl
+lib/kitty/kitty/screenshot_vertex.glsl
 lib/kitty/kitty/search_query_parser.py
 lib/kitty/kitty/search_query_parser.pyc
 lib/kitty/kitty/search_query_parser.pyo
@@ -554,6 +562,9 @@ lib/kitty/kitty/window.pyo
 lib/kitty/kitty/window_list.py
 lib/kitty/kitty/window_list.pyc
 lib/kitty/kitty/window_list.pyo
+lib/kitty/kitty/window_title_bar.py
+lib/kitty/kitty/window_title_bar.pyc
+lib/kitty/kitty/window_title_bar.pyo
 lib/kitty/kitty/xdg.py
 lib/kitty/kitty/xdg.pyc
 lib/kitty/kitty/xdg.pyo
@@ -623,6 +634,7 @@ man/man1/kitten-broadcast.1
 man/man1/kitten-choose-files.1
 man/man1/kitten-choose-fonts.1
 man/man1/kitten-clipboard.1
+man/man1/kitten-command-palette.1
 man/man1/kitten-desktop-ui.1
 man/man1/kitten-diff.1
 man/man1/kitten-edit-in-kitty.1
@@ -666,7 +678,7 @@ share/doc/kitty/html/_images/screenshot.png
 share/doc/kitty/html/_images/social_previews/summary_actions_1745a1bd.png
 share/doc/kitty/html/_images/social_previews/summary_binary_478594b0.png
 share/doc/kitty/html/_images/social_previews/summary_build_e554a463.png
-share/doc/kitty/html/_images/social_previews/summary_changelog_18b76604.png
+share/doc/kitty/html/_images/social_previews/summary_changelog_0f9613f0.png
 share/doc/kitty/html/_images/social_previews/summary_clipboard_673291d1.png
 share/doc/kitty/html/_images/social_previews/summary_color-stack_b2e66ffc.png
 share/doc/kitty/html/_images/social_previews/summary_conf_6d817f14.png
@@ -674,7 +686,7 @@ share/doc/kitty/html/_images/social_previews/summary_deccara_77e64daf.png
 share/doc/kitty/html/_images/social_previews/summary_desktop-notifications_9e55697a.png
 share/doc/kitty/html/_images/social_previews/summary_faq_6acfb156.png
 share/doc/kitty/html/_images/social_previews/summary_file-transfer-protocol_67d60cd4.png
-share/doc/kitty/html/_images/social_previews/summary_generated_color-names_d5b08547.png
+share/doc/kitty/html/_images/social_previews/summary_generated_color-names_a1b155fe.png
 share/doc/kitty/html/_images/social_previews/summary_generated_launch_2c8ae1a7.png
 share/doc/kitty/html/_images/social_previews/summary_generated_matching_f5ed7c14.png
 share/doc/kitty/html/_images/social_previews/summary_generated_rc_4121b4bb.png
@@ -731,6 +743,7 @@ share/doc/kitty/html/_images/social_previews/summary_support_daeae705.png
 share/doc/kitty/html/_images/social_previews/summary_text-sizing-protocol_974e580e.png
 share/doc/kitty/html/_images/social_previews/summary_underlines_c33f785f.png
 share/doc/kitty/html/_images/social_previews/summary_unscroll_98a1c6ca.png
+share/doc/kitty/html/_images/social_previews/summary_wide-gamut-colors_93c46a12.png
 share/doc/kitty/html/_images/splits.png
 share/doc/kitty/html/_images/themes.png
 share/doc/kitty/html/_images/transfer.png
@@ -803,7 +816,9 @@ share/doc/kitty/html/_sources/support.rst.txt
 share/doc/kitty/html/_sources/text-sizing-protocol.rst.txt
 share/doc/kitty/html/_sources/underlines.rst.txt
 share/doc/kitty/html/_sources/unscroll.rst.txt
+share/doc/kitty/html/_sources/wide-gamut-colors.rst.txt
 share/doc/kitty/html/_static/basic.css
+share/doc/kitty/html/_static/base-stemmer.js
 share/doc/kitty/html/_static/check-solid.svg
 share/doc/kitty/html/_static/clipboard.min.js
 share/doc/kitty/html/_static/copy-button.svg
@@ -815,6 +830,7 @@ share/doc/kitty/html/_static/custom.js
 share/doc/kitty/html/_static/debug.css
 share/doc/kitty/html/_static/doctools.js
 share/doc/kitty/html/_static/documentation_options.js
+share/doc/kitty/html/_static/english-stemmer.js
 share/doc/kitty/html/_static/file.png
 share/doc/kitty/html/_static/kitty.svg
 share/doc/kitty/html/_static/language_data.js
@@ -907,6 +923,7 @@ share/doc/kitty/html/support.html
 share/doc/kitty/html/text-sizing-protocol.html
 share/doc/kitty/html/underlines.html
 share/doc/kitty/html/unscroll.html
+share/doc/kitty/html/wide-gamut-colors.html
 share/icons/hicolor/256x256/apps/kitty.png
 share/icons/hicolor/scalable/apps/kitty.svg
 share/terminfo/x/xterm-kitty
