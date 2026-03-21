@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1801 2026/03/20 22:16:10 markd Exp $
+$NetBSD: CHANGES-2026,v 1.1802 2026/03/21 01:51:12 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2462,3 +2462,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/mutt to 2.3.1 [tron 2026-03-20]
 	Added emulators/suse15_gcc12 15.5 [sborrill 2026-03-20]
 	Updated graphics/kf6-prison to 6.24.0 [markd 2026-03-20]
+	Updated x11/kitty to 0.46.1 [ktnb 2026-03-21]
