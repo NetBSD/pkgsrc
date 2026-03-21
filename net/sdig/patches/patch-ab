@@ -1,10 +1,12 @@
-$NetBSD: patch-ab,v 1.2 2003/04/07 15:01:22 bouyer Exp $
+$NetBSD: patch-ab,v 1.3 2026/03/21 09:42:00 nia Exp $
 
---- sdig.c.orig	Tue Jul 23 05:03:20 2002
-+++ sdig.c	Thu Apr  3 12:22:07 2003
-@@ -25,16 +25,21 @@
+--- sdig.c.orig	2002-07-23 03:03:20.000000000 +0000
++++ sdig.c
+@@ -24,17 +24,23 @@
+ #include <stdarg.h>
  #include <stdlib.h> 
  #include <string.h> 
++#include <strings.h>
  #include <unistd.h> 
 -#include <arpa/inet.h> 
 -#include <netinet/in.h> 
@@ -27,7 +29,7 @@ $NetBSD: patch-ab,v 1.2 2003/04/07 15:01:22 bouyer Exp $
  
  	stype	*firstsw = NULL;
  	rtype	*firstrt = NULL;
-@@ -114,7 +119,7 @@
+@@ -114,7 +120,7 @@ static int findport(unsigned char *mac, 
  
  	/* build the OID for the mapping of MAC addresses to port numbers */
  
@@ -36,15 +38,15 @@ $NetBSD: patch-ab,v 1.2 2003/04/07 15:01:22 bouyer Exp $
  		mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
  
  	debug(5, "findport: query is [%s]\n", query);
-@@ -355,6 +360,7 @@
+@@ -355,6 +361,7 @@ static char *macmfr(unsigned char *inmac
  	snprintf(macfind, sizeof(macfind), "%02x %02x %02x", 
  		inmac[0], inmac[1], inmac[2]);
  
-+	debug("looking for MAC prefix [%s] in %s\n", macfind, mactable);
++	debug(1, "looking for MAC prefix [%s] in %s\n", macfind, mactable);
  	while (fgets(buf, sizeof(buf), macdb)) {
  		buf[strlen(buf) - 1] = '\0';
  
-@@ -494,14 +500,13 @@
+@@ -494,14 +501,13 @@ static void do_ifdescr(stype *sw, long p
  
  	/* first get the switch's ifnum for the port */
  	
@@ -61,7 +63,7 @@ $NetBSD: patch-ab,v 1.2 2003/04/07 15:01:22 bouyer Exp $
  
  	ifdescr = snmpget_str(sw->ip, sw->pw, query);
  
-@@ -728,6 +733,7 @@
+@@ -728,6 +734,7 @@ int main(int argc, char **argv)
  {
  	char	*prog, *query, *conf = NULL, *mac = NULL;
  	int	i;
@@ -69,7 +71,7 @@ $NetBSD: patch-ab,v 1.2 2003/04/07 15:01:22 bouyer Exp $
  
  	printf("Switch Digger %s - http://www.exploits.org/sdig/\n\n",
  		VERSION);
-@@ -791,7 +797,10 @@
+@@ -791,7 +798,10 @@ int main(int argc, char **argv)
  			mac, query);
  
  		checkmac(mac);
