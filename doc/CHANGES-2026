@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1807 2026/03/21 12:06:55 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1808 2026/03/21 16:28:41 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2468,3 +2468,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-asn1 to 0.6.3 [wiz 2026-03-21]
 	Updated www/nghttp2 to 1.68.1 [wiz 2026-03-21]
 	Updated www/nghttp2-tools to 1.68.1 [wiz 2026-03-21]
+	Updated www/chromium to 146.0.7680.153 [kikadf 2026-03-21]
