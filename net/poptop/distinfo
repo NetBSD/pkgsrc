@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:06:31 nia Exp $
+$NetBSD: distinfo,v 1.16 2026/03/21 09:45:31 nia Exp $
 
 BLAKE2s (pptpd-1.3.4.tar.gz) = be0bb4df05ccd539ce64e8982b8d01ef1a0b42269b9b52977c7a13915cdc580b
 SHA512 (pptpd-1.3.4.tar.gz) = 382cc7ce9db7f2b6ffe0a075a319267310f736ca1b93e9867e9d5abb3c56edf49d3cf2bba83d6ae778834e0e18a21fddf29444106c8143a3016ca704ac538b1e
@@ -15,3 +15,4 @@ SHA1 (patch-ai) = c03b43e2d3c1df51df8ab030560a44949557046f
 SHA1 (patch-aj) = 40f9e760f1812d05fa5a641f7da1325d8dbf7072
 SHA1 (patch-ak) = 3d3135f3ad0596a5391e660352becd8447ecbf63
 SHA1 (patch-al) = 16751276f053b28c2554b79cd12d0a9a1f19667b
+SHA1 (patch-compat.c) = 91804d369e4ee7e23188485035446fe9077eda89
