@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2025/09/21 15:14:01 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2026/03/21 12:03:19 wiz Exp $
 
-DISTNAME=	pyopenssl-25.3.0
+DISTNAME=	pyopenssl-26.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyopenssl/OpenSSL/}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyopenssl/}
@@ -20,8 +20,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.9:../../devel/py-typing-extensions
 .endif
 
-# as of 25.3.0
-# 1 failed, 464 passed, 1 skipped, 349 warnings, 3 errors
+# as of 26.0.0
+# 1 failed, 469 passed, 1 skipped, 357 warnings, 3 errors
 
 .include "../../lang/python/wheel.mk"
 .include "../../security/openssl/buildlink3.mk"
