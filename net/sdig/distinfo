@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:06:55 nia Exp $
+$NetBSD: distinfo,v 1.8 2026/03/21 09:42:00 nia Exp $
 
 BLAKE2s (sdig-0.30.tar.gz) = 4713daec95fb7f4090f4e4f512cbcd7afa9874588333e3c4481e112caa2a7558
 SHA512 (sdig-0.30.tar.gz) = 953ee1ab325db0808bc800bb3355d04e75b003f3c110e769d5ebf4ec49af726e928065360fff2bf541c70be70200aa767da8cfcd63f8c813b481db68822306cd
@@ -7,5 +7,6 @@ BLAKE2s (mactable.gz) = ef08dadc517d3a5d937f9e25b4e2b887685b3faf18114945171d2361
 SHA512 (mactable.gz) = ac7d4b7ab6cb5a1d8dd9c765913e316c916b576d8602418dfa0b925e972546c1fd099a316721cf2a031044b512fa9acff3413dd511420bc3d52ca02b13217eb1
 Size (mactable.gz) = 36490 bytes
 SHA1 (patch-aa) = f70967610ce3aadc5e67d82cbf8d0d5325cf9c8c
-SHA1 (patch-ab) = 3b2d671d7d0ca66f8afe5c55bf075c6b62a9c95a
+SHA1 (patch-ab) = a1b87a4edd8eb02dbdd0cb0ae12882157c58f604
 SHA1 (patch-ac) = 0e5304f2d774ae8932ba5694b511410d52314f85
+SHA1 (patch-nbname.c) = cd5016adf4255ec3f807850776bcf63066a68d34
