@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2026/02/24 07:41:41 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/03/21 10:37:37 nia Exp $
 
 DISTNAME=	wireguard-tools-1.0.20260223
 CATEGORIES=	net
@@ -19,6 +19,8 @@ MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=	SYSCONFDIR=${PKG_SYSCONFDIR}
 MAKE_FLAGS+=	WITH_BASHCOMPLETION=yes
 MAKE_FLAGS+=	WITH_SYSTEMDUNITS=no
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
