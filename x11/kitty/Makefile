@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.82 2026/03/06 21:08:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.83 2026/03/21 01:50:53 ktnb Exp $
 
-DISTNAME=	kitty-0.45.0
-PKGREVISION=	4
+DISTNAME=	kitty-0.46.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kovidgoyal/}
 GITHUB_PROJECT=	kitty
@@ -13,7 +12,7 @@ HOMEPAGE=	https://sw.kovidgoyal.net/kitty/index.html
 COMMENT=	GPU based terminal emulator
 LICENSE=	gnu-gpl-v3
 
-GO_VERSION_REQD+=	124
+GO_VERSION_REQD+=	126
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake pkg-config
@@ -45,7 +44,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 PY_PATCHPLIST=			yes
 
 pre-configure:
-	cd ${BUILDLINK_DIR}/bin && ${LN} -s ${PREFIX}/bin/go124 go
+	cd ${BUILDLINK_DIR}/bin && ${LN} -s ${PREFIX}/bin/go126 go
 
 do-build:
 	cd ${WRKSRC} && ${MAKE_ENV} ${PYTHONBIN} setup.py linux-package
