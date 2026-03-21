@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:07:04 nia Exp $
+$NetBSD: distinfo,v 1.11 2026/03/21 10:35:44 nia Exp $
 
 BLAKE2s (tspc-2.1.1-src.tgz) = ead6c6362e8d5d7579b64fea48ea33dde8e5732b2869c53d909fe8571f9b51d4
 SHA512 (tspc-2.1.1-src.tgz) = 421d16637d710bbc0a0cef898a3dfb97484910a1f01d0a99d9fd2f613b2019f0f5422f8278e3b5a921819380deff7cc9b12a3a979307be894380879f6ed74747
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = 6dc480d452d433ff4444349bcb1de800cb48e8b5
 SHA1 (patch-ac) = a89fda0331837399062c3486306adbd0b0e78474
 SHA1 (patch-ad) = e138a9a274607cbf8162868596b7399df9041c51
 SHA1 (patch-man-man8-tspc.8) = 9338dca0267de2b9b7ddd90f9631e0c08043c245
+SHA1 (patch-src_lib_cnfchk.c) = 87d34bb36a06426eb13d7b8d5ae87496d4e0d82e
