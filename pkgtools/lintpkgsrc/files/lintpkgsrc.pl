@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.130 2023/10/16 22:16:55 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.131 2026/03/21 02:20:57 gutteridge Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1364,7 +1364,8 @@ sub check_distfiles($pkgsrcdir, $pkgdistdir) {
 	return unless $opt{r};
 	verbose("Unlinking unreferenced distfiles\n");
 	foreach my $distfile (@unref_distfiles) {
-		unlink("$pkgdistdir/$distfile");
+		unlink("$pkgdistdir/$distfile")
+		    or warn "Could not unlink $pkgdistdir/$distfile: $!";
 	}
 }
 
@@ -1390,6 +1391,7 @@ sub remove_orphaned_distfiles($dldistfiles, $pkgdistfiles, $pkgdistdir) {
 		verbose("Unlinking 'orphaned' distfiles\n");
 		foreach my $distfile (@orphan) {
 			unlink("$pkgdistdir/$distfile")
+			    or warn "Could not unlink $pkgdistdir/$distfile: $!";
 		}
 	}
 }
@@ -1415,7 +1417,8 @@ sub remove_parented_distfiles($dldistfiles, $pkgdistfiles, $pkgdistdir) {
 	if ($opt{r}) {
 		verbose("Unlinking 'parented' distfiles\n");
 		foreach my $distfile (@parent) {
-			unlink("$pkgdistdir/$distfile");
+			unlink("$pkgdistdir/$distfile")
+			    or warn "Could not unlink $pkgdistdir/$distfile: $!";
 		}
 	}
 }
@@ -1487,7 +1490,7 @@ sub list_prebuilt_packages($pkgsrcdir) {
 	return unless $opt{r};
 	verbose("Unlinking listed prebuilt packages\n");
 	foreach my $pkgfile (@matched_prebuiltpackages) {
-		unlink($pkgfile);
+		unlink($pkgfile) or warn "Could not unlink $pkgfile: $!";
 	}
 }
 
