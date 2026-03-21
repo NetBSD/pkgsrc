@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2002/05/07 22:25:04 hubertf Exp $
+$NetBSD: patch-ab,v 1.6 2026/03/21 10:38:34 nia Exp $
 
---- scripts/upchk.orig	Tue Jun 19 11:15:24 2001
-+++ scripts/upchk	Tue Jun 19 11:15:51 2001
+--- scripts/upchk.orig	2001-05-31 23:30:24.000000000 +0000
++++ scripts/upchk
 @@ -24,7 +24,7 @@
  #
  
  # change this to the full path AND name of your upclient executable:
 -upclient="/usr/local/sbin/upclient"
-+upclient="@PREFIX@/bin/upclient"
++upclient="/usr/pkg/bin/upclient"
  
  # change this to the name of your upclient's pidfile (as defined in
  # config.h of the upclient distribution)

@@ -1,16 +1,20 @@
-$NetBSD: patch-ac,v 1.8 2006/09/19 22:25:48 joerg Exp $
+$NetBSD: patch-ac,v 1.9 2026/03/21 10:38:34 nia Exp $
 
 --- src/stats-bsd.c.orig	2001-06-16 19:12:53.000000000 +0000
 +++ src/stats-bsd.c
-@@ -10,6 +10,7 @@
+@@ -10,17 +10,28 @@
  #include "stats.h"
  
  /* System includes */
 +#include <sys/param.h>
  #include <kvm.h>
  #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
  #include <errno.h>
-@@ -17,10 +18,16 @@
++#include <err.h>
+ #include <fcntl.h>
++#include <unistd.h>
  #include <limits.h>
  #include <syslog.h>
  #include <sys/time.h>
@@ -28,7 +32,7 @@ $NetBSD: patch-ac,v 1.8 2006/09/19 22:25:48 joerg Exp $
  
  /**
   * @desc	Get statistics
-@@ -75,6 +82,35 @@ void getstats(unsigned long *puptime, do
+@@ -75,6 +86,35 @@ void getstats(unsigned long *puptime, do
    }
  
    if(cfg_sendidle) {
@@ -64,7 +68,7 @@ $NetBSD: patch-ac,v 1.8 2006/09/19 22:25:48 joerg Exp $
      static kvm_t *kp;
      static int initialized = 0;
      static struct nlist namelist [] = {
-@@ -131,5 +167,6 @@ void getstats(unsigned long *puptime, do
+@@ -131,5 +171,6 @@ void getstats(unsigned long *puptime, do
      } else {
        cfg_sendidle = 0;
      }
