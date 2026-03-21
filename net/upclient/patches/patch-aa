@@ -1,8 +1,32 @@
-$NetBSD: patch-aa,v 1.8 2003/07/02 18:22:42 jmmv Exp $
+$NetBSD: patch-aa,v 1.9 2026/03/21 10:38:34 nia Exp $
 
---- src/options.c.orig	2001-06-16 21:15:04.000000000 +0200
+--- src/options.c.orig	2001-06-16 19:15:04.000000000 +0000
 +++ src/options.c
-@@ -294,13 +294,10 @@ int read_config(void) {
+@@ -8,7 +8,10 @@
+ #include "options.h"
+ 
+ /* System includes */
+-#include "stdio.h"
++#include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
++#include <ctype.h>
+ 
+ /**
+  * Global variables, very ugly, watch through sunglasses!
+@@ -158,9 +161,10 @@ static int process_option(const char *ke
+  * @desc	isblank() for Solaris
+  */
+ #if defined(PLATFORM_SOLARIS)
+-static int isblank(const char chr) {
++static int my_isblank(const char chr) {
+   return(chr == ' ' || chr == '\t');
+ }
++#define isblank my_isblank
+ #endif
+ 
+ /**
+@@ -294,13 +298,10 @@ int read_config(void) {
  
    /* Try to open config file in current directory */
    if(!(fp = fopen(CONFIGFILE, "r"))) {
