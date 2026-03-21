@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1805 2026/03/21 12:04:20 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1806 2026/03/21 12:06:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2466,3 +2466,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated pkgtools/lintpkgsrc to 2026.03.21 [gutteridge 2026-03-21]
 	Updated security/py-OpenSSL to 26.0.0 [wiz 2026-03-21]
 	Updated security/py-asn1 to 0.6.3 [wiz 2026-03-21]
+	Updated www/nghttp2 to 1.68.1 [wiz 2026-03-21]
