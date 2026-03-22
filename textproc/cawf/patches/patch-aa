@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/01/20 17:59:13 tv Exp $
+$NetBSD: patch-aa,v 1.2 2026/03/22 10:31:53 nia Exp $
 
---- Makefile.orig	2005-01-20 12:32:21.000000000 -0500
+--- Makefile.orig	1997-02-22 08:26:18.000000000 +0000
 +++ Makefile
-@@ -34,10 +34,6 @@
+@@ -34,25 +34,21 @@
  #
  #DEFS = -DUNIX -DMALLOCH
  
@@ -12,8 +12,14 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/01/20 17:59:13 tv Exp $
 -
  HDR = ansi.h cawf.h cawflib.h proto.h regexp.h regmagic.h
  
- SRC = cawf.c device.c error.c expand.c expr.c getopt.c macsup.c nreq.c \
-@@ -49,10 +45,10 @@ OBJ = cawf.o device.o error.o expand.o e
+-SRC = cawf.c device.c error.c expand.c expr.c getopt.c macsup.c nreq.c \
++SRC = cawf.c device.c error.c expand.c expr.c macsup.c nreq.c \
+       output.c pass2.c pass3.c  regerror.c regexp.c store.c string.c
+ 
+-OBJ = cawf.o device.o error.o expand.o expr.o getopt.o macsup.o nreq.o \
++OBJ = cawf.o device.o error.o expand.o expr.o macsup.o nreq.o \
+       output.o pass2.o pass3.o  regerror.o regexp.o store.o string.o
+ 
  all:	bsfilt cawf
  
  bsfilt: bsfilt.c

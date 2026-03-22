@@ -1,7 +1,12 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:21:46 nia Exp $
+$NetBSD: distinfo,v 1.7 2026/03/22 10:31:53 nia Exp $
 
 BLAKE2s (cawf-4.10/cawf.zip) = 4cf311409090f4d9894b8ceac57bc53f6c199f484bd09219566c8f5183c01db5
 SHA512 (cawf-4.10/cawf.zip) = d36b6f0c6411c6d01f153d68044e693fa5d05f9145d56995fb656171fe1eb0402b6e2f8ea5f45bdce570b0993f42099dd8a051700904121b9df806562da82d07
 Size (cawf-4.10/cawf.zip) = 287677 bytes
-SHA1 (patch-aa) = 21ff1ae5d3fb3a32cb855c2b4353ffbe62ebcd17
+SHA1 (patch-aa) = d305540447e96a6115f5570283ed1d0258eea599
 SHA1 (patch-ab) = 52fa93c4903539f5cf56e2c904b7ffea3610899f
+SHA1 (patch-bsfilt.c) = aa7d48adadb234a6b61764155067d6075c3be6de
+SHA1 (patch-cawf.c) = d632e82b4c234ef5bd825cb57c3a24dc02060014
+SHA1 (patch-expr.c) = ffe12c124f475b4352593c38d80be8c1c95ea12f
+SHA1 (patch-macsup.c) = db14ec8a74e7cece0c2418fe108af8d64c2918f5
+SHA1 (patch-string.c) = aa5dcb75022d7633af6b7b8e8c560a2cd3380f29
