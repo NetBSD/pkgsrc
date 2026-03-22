@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26950 2026/03/20 15:47:01 wiz Exp $
+$NetBSD: TODO,v 1.26951 2026/03/22 07:10:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -391,13 +391,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o MesaLib-26.0.2
 	o OdfConverter-4.0
 	o PACK-0.0.4
-	o PageEdit-2.7.5
+	o PageEdit-2.7.6
 	o R-GRASS-0.3.9
 	o R-RSQLite-2.6
 	o R-mapproj-3
 	o R-ncdf-1.6.9
 	o SQLiteCpp-2.5.0
-	o Sigil-2.7.5
+	o Sigil-2.7.6
 	o SOGo-5.12.5
 	o SOPE-5.12.5
 	o TiffIO-140a
@@ -1099,6 +1099,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o portsentry-2.0.2 [wip]
 	o posh-0.14.1
 	o postal-0.72
+	o pound-4.21 [pkg/60114]
 	o povray-3.7.0.0
 	o powerpc-none-elf-binutils-2.36.1
 	o powerpc-none-elf-gcc-9.3.0
@@ -1351,7 +1352,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o whowatch-1.8.5
 	o widelands-1.3
 	o windowlab-1.40
-	o wine-11.0
+	o wine-11.5
 	o wine-devel-9.22
 	o wiredtiger-10.0.0
 	o wkhtmltopdf-0.12.6
