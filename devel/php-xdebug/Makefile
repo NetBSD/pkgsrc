@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2026/02/11 08:27:07 taca Exp $
+# $NetBSD: Makefile,v 1.62 2026/03/22 13:23:46 taca Exp $
 
 MODNAME=		xdebug
-PECL_VERSION=		3.5.0
+PECL_VERSION=		3.5.1
 CATEGORIES=		devel
 EXTRACT_SUFX=		.tgz
 
