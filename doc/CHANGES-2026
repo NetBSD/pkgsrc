@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1812 2026/03/22 13:27:31 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1813 2026/03/22 15:53:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2473,3 +2473,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/ruby40 to 4.0.2 [taca 2026-03-22]
 	Updated devel/php-xdebug to 3.5.1 [taca 2026-03-22]
 	Updated textproc/ruby-review to 5.11.0 [taca 2026-03-22]
+	Updated x11/dunst to 1.13.2 [wiz 2026-03-22]
