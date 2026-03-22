@@ -1,8 +1,15 @@
-$NetBSD: patch-ad,v 1.1 2006/01/02 23:22:33 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2026/03/22 09:42:59 nia Exp $
 
---- util.c.orig	2006-01-02 23:21:16.000000000 +0000
+--- util.c.orig	2000-11-13 02:01:49.000000000 +0000
 +++ util.c
-@@ -9,7 +9,6 @@
+@@ -1,5 +1,6 @@
+ /* util.c: general utilities module for newsfetch program */
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <sys/types.h>
+ #include <fcntl.h>
+ #include <sys/stat.h>
+@@ -9,7 +10,6 @@
  #include <string.h>
  #include "newsfetch.h"
  
