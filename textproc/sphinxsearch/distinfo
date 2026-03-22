@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:23:32 nia Exp $
+$NetBSD: distinfo,v 1.13 2026/03/22 13:09:43 nia Exp $
 
 BLAKE2s (sphinx-2.2.11-release.tar.gz) = 0399a166db059549b16b9e041182be23e3286fc5cb352b2246e58f7c8788ebd1
 SHA512 (sphinx-2.2.11-release.tar.gz) = cf1a262a5b0fbf0bd2827ec6ec629edeaf709ce855a6e7b509b65342baaeb26c02717ca63f1578d32c83d21e2fd6d1e92dceb34660e6351b93cd96fd4e623689
 Size (sphinx-2.2.11-release.tar.gz) = 3061998 bytes
+SHA1 (patch-api_libsphinxclient_sphinxclient.c) = 90da4756f585fc24d423f539aad054341be8b8b7
+SHA1 (patch-api_libsphinxclient_test.c) = f32ea3e26381a4bd79c2795d486a7589bc99b451
 SHA1 (patch-configure) = bf9d86e90a22399ffbfe617e0af75b3158cddd01
 SHA1 (patch-src_searchd.cpp) = 3296b155503e4bbbac1ba2174824fdb36cd2578c
 SHA1 (patch-src_sphinxstd.h) = 1838881a57cdcea330e8f07914e574b29de18c89
