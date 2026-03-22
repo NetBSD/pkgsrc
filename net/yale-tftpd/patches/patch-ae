@@ -1,17 +1,18 @@
-$NetBSD: patch-ae,v 1.3 2012/01/25 09:56:08 he Exp $
+$NetBSD: patch-ae,v 1.4 2026/03/22 09:42:12 nia Exp $
 
 A number of changes to make this build with no warnings under -Wall.
 
 --- classes/access.c.orig	1994-10-05 05:20:44.000000000 +0000
 +++ classes/access.c
-@@ -1,4 +1,6 @@
+@@ -1,4 +1,7 @@
  #include <stdio.h>
 +#include <stdlib.h>
 +#include <string.h>
++#include <strings.h>
  #include <ctype.h>
  #include <sys/types.h>
  #include <sys/stat.h>
-@@ -39,7 +41,7 @@ typedef struct ACCESSLISTHEAD {
+@@ -39,7 +42,7 @@ typedef struct ACCESSLISTHEAD {
  
  #if defined (__STDC__)
  
@@ -20,7 +21,7 @@ A number of changes to make this build with no warnings under -Wall.
  			AccessGroup self,
  			FILE* file
  		);
-@@ -51,13 +53,14 @@ typedef struct ACCESSLISTHEAD {
+@@ -51,13 +54,14 @@ typedef struct ACCESSLISTHEAD {
  			listhead_t* alp,
  			condition_t* condition
  		);
@@ -37,7 +38,7 @@ A number of changes to make this build with no warnings under -Wall.
  			listhead_t* alp,
  			FILE* file
  		);
-@@ -69,6 +72,9 @@ typedef struct ACCESSLISTHEAD {
+@@ -69,6 +73,9 @@ typedef struct ACCESSLISTHEAD {
  			condition_t* ptr
  		);
  	static int accessListVerifyAddress ();
@@ -47,7 +48,7 @@ A number of changes to make this build with no warnings under -Wall.
  #else
  	static int	accessList_dispose ();
  	static int	accessList_addCondition ();
-@@ -92,7 +98,6 @@ AccessGroup
+@@ -92,7 +99,6 @@ AccessGroup
  accessGroup_new ()
  {
  	AccessGroup self;
@@ -55,7 +56,7 @@ A number of changes to make this build with no warnings under -Wall.
  
  	self = (AccessGroup)calloc (1, sizeof (*self));
  	return self;
-@@ -123,9 +128,9 @@ AccessGroup self;
+@@ -123,9 +129,9 @@ AccessGroup self;
   */
  int
  accessGroup_add (self, argc, argv)
@@ -68,7 +69,7 @@ A number of changes to make this build with no warnings under -Wall.
  {
  	condition_t condition;
  	int list;
-@@ -137,14 +142,13 @@ char	**argv;
+@@ -137,14 +143,13 @@ char	**argv;
  }
  
  
@@ -88,7 +89,7 @@ A number of changes to make this build with no warnings under -Wall.
  	char *tcp;
  
  	/* get enough space for the condition */
-@@ -218,9 +222,10 @@ int type;
+@@ -218,9 +223,10 @@ int type;
  
  
  /* Debugging function */
@@ -101,7 +102,7 @@ A number of changes to make this build with no warnings under -Wall.
  {
  	register int i;
  
-@@ -365,9 +370,10 @@ static char* permNames[] ={ "deny", "rea
+@@ -365,9 +371,10 @@ static char* permNames[] ={ "deny", "rea
  				? "<unknown>" : permNames[N])
  
  
@@ -114,7 +115,7 @@ A number of changes to make this build with no warnings under -Wall.
  {
  	char* permission;
  	char addrbuf[32], maskbuf[32];
-@@ -426,7 +432,7 @@ condition_t* ptr;
+@@ -426,7 +433,7 @@ condition_t* ptr;
  	}
  	av++; ac--;
  
@@ -123,7 +124,7 @@ A number of changes to make this build with no warnings under -Wall.
  		int addlist;
  		listhead_t* hp;
  		condition_t* cp;
-@@ -435,7 +441,9 @@ condition_t* ptr;
+@@ -435,7 +442,9 @@ condition_t* ptr;
  			self->accessError = "-<list> not implemented yet";
  			return 0;
  		}

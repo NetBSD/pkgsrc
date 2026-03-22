@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.7 2012/01/25 09:56:08 he Exp $
+$NetBSD: patch-ad,v 1.8 2026/03/22 09:42:12 nia Exp $
 
 A number of changes to make this build with no warnings under -Wall.
 
@@ -13,8 +13,11 @@ A number of changes to make this build with no warnings under -Wall.
  #endif /* not lint */
  
  /*
-@@ -43,9 +43,13 @@ static char sccsid[] = "@(#)tftpd.c	5.12
- #include <sys/signal.h>
+@@ -40,12 +40,15 @@ static char sccsid[] = "@(#)tftpd.c	5.12
+ #include <sys/ioctl.h>
+ #include <sys/wait.h>
+ #include <sys/stat.h>
+-#include <sys/signal.h>
  #include <sys/time.h>
  #include <sys/param.h>
 +#ifdef __sun
@@ -27,7 +30,11 @@ A number of changes to make this build with no warnings under -Wall.
  #include <arpa/tftp.h>
  
  #include <netdb.h>
-@@ -56,19 +60,45 @@ static char sccsid[] = "@(#)tftpd.c	5.12
+@@ -53,22 +56,49 @@ static char sccsid[] = "@(#)tftpd.c	5.12
+ #include <stdio.h>
+ #include <errno.h>
+ #include <ctype.h>
++#include <signal.h>
  #include <syslog.h>
  #include <string.h>
  
