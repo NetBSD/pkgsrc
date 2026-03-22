@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:12:04 nia Exp $
+$NetBSD: distinfo,v 1.7 2026/03/22 10:32:42 nia Exp $
 
 BLAKE2s (cnprint-3.30b/cnprint330b.c) = 256577844a4611dd00ab1fcca1ae94b2e45f0398ff4fbedba906c6e451d7ee76
 SHA512 (cnprint-3.30b/cnprint330b.c) = e8620085a4d2b8123970669a05ad973875c9af81f6c0c7b93269c09c82ef6beb390857092d281aa0f24723f0d85c0518e1550407405d32b1c248fd57f860805d
@@ -45,4 +45,4 @@ Size (cnprint-3.30b/cc48s.2.gz) = 391896 bytes
 BLAKE2s (cnprint-3.30b/hbf.tar.gz) = c14ae3342845c03137ba51b10681eec5f0a29b3bcf179964a1917bfc876836ef
 SHA512 (cnprint-3.30b/hbf.tar.gz) = 2573cc0c1fa89f65491d8703311b7d9ef3ef5664e9d1b5b73ff9c8bbf4a33a62e01fc61c67e4799cf79a7d1be4424873f39916710f3f2d052ef9f04ee4153e28
 Size (cnprint-3.30b/hbf.tar.gz) = 3512320 bytes
-SHA1 (patch-aa) = b9ab727c530a197bd7a8de75d57f8f163e886dc1
+SHA1 (patch-aa) = c271034007bc82eeb970d27bf3a51b0ca91a244c
