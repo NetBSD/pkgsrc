@@ -1,21 +1,22 @@
-$NetBSD: patch-ai,v 1.5 2012/01/25 09:56:08 he Exp $
+$NetBSD: patch-ai,v 1.6 2026/03/22 09:42:12 nia Exp $
 
 A number of changes to make this build with no warnings under -Wall.
 
 --- tftpyale.c.orig	1995-03-20 20:11:11.000000000 +0000
 +++ tftpyale.c
-@@ -2,8 +2,9 @@
+@@ -2,8 +2,10 @@
  #include <string.h>
  #include <syslog.h>
  #include <ctype.h>
 -#include <arpa/tftp.h>
++#include <unistd.h>
  #include <sys/types.h>
 +#include <arpa/inet.h>
 +#include <arpa/tftp.h>
  #include <sys/stat.h>
  #include <netinet/in.h>
  #include "tftpyale.h"
-@@ -73,6 +74,10 @@ static char*		accessFormatError;
+@@ -73,6 +75,10 @@ static char*		accessFormatError;
  static char*		cfgets();
  static struct stat	configStat;
  static int		defaultAccessList;
@@ -26,7 +27,7 @@ A number of changes to make this build with no warnings under -Wall.
  
  /* for debugging printouts */
  static char* permNames[] ={ "deny", "readonly", "writeonly", "readwrite" };
-@@ -90,12 +95,12 @@ static char* permNames[] ={ "deny", "rea
+@@ -90,12 +96,12 @@ static char* permNames[] ={ "deny", "rea
  #define CMD_INPUT_WAIT		7
  
  /* Add a file restriction clause to the list */
@@ -41,7 +42,7 @@ A number of changes to make this build with no warnings under -Wall.
  
  	ac--; av++;
  	if (ac != 2) {
-@@ -104,7 +109,7 @@ char**	av;
+@@ -104,7 +110,7 @@ char**	av;
  	}
  
  	/* get list number */
@@ -50,7 +51,7 @@ A number of changes to make this build with no warnings under -Wall.
  	if (list <= 0) {
  		accessFormatError = "list argument not positive integer";
  		return 0;
-@@ -142,6 +147,7 @@ int	*lineCount;
+@@ -142,6 +148,7 @@ int	*lineCount;
  /* Return whether the file named by the argument stat structure
   * is the same as the configuration file.
   */
@@ -58,7 +59,7 @@ A number of changes to make this build with no warnings under -Wall.
  isConfigFile (sb)
  struct stat* sb;
  {
-@@ -157,27 +163,24 @@ struct stat* sb;
+@@ -157,27 +164,24 @@ struct stat* sb;
   * qualified (starts with '/') check to see if the
   * prefix matches the default directory.
   */
@@ -92,7 +93,7 @@ A number of changes to make this build with no warnings under -Wall.
  
  	return list ? list : defaultAccessList;
  }
-@@ -202,7 +205,7 @@ char* arg;
+@@ -202,7 +206,7 @@ char* arg;
   * on the file and check to see if it's been modified since
   * the last read.
   */
@@ -101,7 +102,7 @@ A number of changes to make this build with no warnings under -Wall.
  readConfigFile(argc, argv)
  int	argc;
  char**	argv;
-@@ -216,12 +219,14 @@ char**	argv;
+@@ -216,12 +220,14 @@ char**	argv;
  	struct stat statb;
  	Config	cnf;
  
@@ -117,7 +118,7 @@ A number of changes to make this build with no warnings under -Wall.
  	}
  	if (configf == 0) {
  		fileName = dfltConfigFile;
-@@ -238,7 +243,7 @@ char**	argv;
+@@ -238,7 +244,7 @@ char**	argv;
  	}
  	if (tftpDebugLevel > 3) {
  		syslog(LOG_DEBUG, "configFile = '%s'; FILE* = 0x%08x",
@@ -126,7 +127,7 @@ A number of changes to make this build with no warnings under -Wall.
  	}
  
  	/* See if the file has been changed since the last time we
-@@ -250,7 +255,7 @@ char**	argv;
+@@ -250,7 +256,7 @@ char**	argv;
  	fstat(fileno(configf), &statb);
  	configStat = statb;
  	if (statb.st_mtime == configModTime)
@@ -135,7 +136,7 @@ A number of changes to make this build with no warnings under -Wall.
  	configModTime = statb.st_mtime;
  
  	/* Read the config file */
-@@ -262,14 +267,13 @@ char**	argv;
+@@ -262,14 +268,13 @@ char**	argv;
  	config_setoptions (cnf, config_getoptions (cnf)& ~CFG_OPT_CASEMAP);
  
  	while (cfgets (buf, sizeof buf, configf, &configLineNumber) != NULL) {
@@ -151,7 +152,7 @@ A number of changes to make this build with no warnings under -Wall.
  		  /* specify default directory */
  		  case CMD_DEFAULT_DIR:
  			if (cargc != 2)
-@@ -446,7 +450,7 @@ char*	buf;
+@@ -446,7 +451,7 @@ char*	buf;
  
  	/* squeeze out current and parent entries */
  	{
@@ -160,7 +161,7 @@ A number of changes to make this build with no warnings under -Wall.
  
  		for (i=0, j=0; i < num; i++) {
  			char* cur = obuf[i];
-@@ -481,28 +485,28 @@ char*	buf;
+@@ -481,28 +486,28 @@ char*	buf;
  
  static struct CMDS {
  	char* cmdName;
@@ -205,7 +206,7 @@ A number of changes to make this build with no warnings under -Wall.
  	extern char* dfltDefaultDirectory;
  	extern char* dfltRootDirectory;
  	extern int dfltDebugLevel;
-@@ -603,12 +607,14 @@ int type;
+@@ -603,12 +608,14 @@ int type;
  
  
  #ifndef DEBUG
