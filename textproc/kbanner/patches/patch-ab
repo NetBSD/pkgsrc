@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2012/12/20 21:33:07 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2026/03/22 10:34:48 nia Exp $
 
 --- kbanner.c.orig	1993-10-15 08:43:31.000000000 +0000
 +++ kbanner.c
@@ -47,7 +47,18 @@ $NetBSD: patch-ab,v 1.2 2012/12/20 21:33:07 joerg Exp $
    -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
    -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
    -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,62,-1,-1,-1,63,
-@@ -121,7 +123,7 @@ char *argv[];
+@@ -82,6 +84,10 @@ int b_encoding[]={
+   exit(1);\
+ }
+ 
++void kbanner(FILE *);
++int kgetchar(FILE *);
++
++int
+ main(argc,argv)
+ int argc;
+ char *argv[];
+@@ -121,7 +127,7 @@ char *argv[];
    }
    if(landscape)
      column=1;
@@ -56,7 +67,15 @@ $NetBSD: patch-ab,v 1.2 2012/12/20 21:33:07 joerg Exp $
      fprintf(stderr,"%s: Not enough memory\n",com);
      exit(1);
    }
-@@ -199,8 +201,7 @@ FILE *fp;
+@@ -142,6 +148,7 @@ char *argv[];
+   exit(0);
+ }
+ 
++void
+ kbanner(fp)
+ FILE *fp;
+ {
+@@ -199,8 +206,7 @@ FILE *fp;
    kputchar(-1);
  }
  
@@ -66,3 +85,11 @@ $NetBSD: patch-ab,v 1.2 2012/12/20 21:33:07 joerg Exp $
  {
    int i,j,k;
    if((c==-1)||(column==col)){
+@@ -275,6 +281,7 @@ unsigned int c;
+   col++;
+ }
+ 
++int
+ kgetchar(fp)
+ FILE *fp;
+ {
