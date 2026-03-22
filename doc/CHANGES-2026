@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1817 2026/03/22 16:04:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1818 2026/03/22 16:53:54 morr Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2478,3 +2478,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/libzim to 9.5.1 [wiz 2026-03-22]
 	Updated textproc/lowdown to 3.0.1 [wiz 2026-03-22]
 	Updated textproc/tree-sitter-rust to 0.24.1 [wiz 2026-03-22]
+	Updated editors/vim-share to 9.2.0219 [morr 2026-03-22]
