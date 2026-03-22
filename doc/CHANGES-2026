@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1819 2026/03/22 17:12:14 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1820 2026/03/22 23:48:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2480,3 +2480,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/tree-sitter-rust to 0.24.1 [wiz 2026-03-22]
 	Updated editors/vim-share to 9.2.0219 [morr 2026-03-22]
 	Updated mail/neomutt to 20260105nb5 [wiz 2026-03-22]
+	Updated textproc/git-delta to 0.19.1 [wiz 2026-03-22]
