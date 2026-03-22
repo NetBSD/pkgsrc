@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2026/03/15 12:51:57 wiz Exp $
+$NetBSD: distinfo,v 1.16 2026/03/22 16:00:16 wiz Exp $
 
 BLAKE2s (charm.land_bubbles_v2_@v_v2.0.0.mod) = 4c774af175aad1a825c6d7fa33f1547acf7a75751218e0eb8157852f4956b96f
 SHA512 (charm.land_bubbles_v2_@v_v2.0.0.mod) = 82a4640e58d2a0c6b54130517d461fa1b76266e31635f2f9d3b039520a3529e05326a4df758e33962b859ebad38ac20b0213b1fb256ce7ab6339a6eb621e3dde
@@ -171,6 +171,6 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (jjui-0.10.1.tar.gz) = 87dc8183f6a5d7ae1e21e7c9f7fbb06b89c41886500cc391f97e34c2f719a4e6
-SHA512 (jjui-0.10.1.tar.gz) = 8ff2657f068a452a9e55f8e0d98d9413e1bba353e7c2bdb0a701f03f99b2d223fea85a8d0a725f30681c2cf38b101f0f341fb4dfdc76618ce02914b7c3058128
-Size (jjui-0.10.1.tar.gz) = 225804 bytes
+BLAKE2s (jjui-0.10.2.tar.gz) = 380d04b17f8488641248d4fb1cb10fdae52e3160f041a7905b34ea30c86ad5fa
+SHA512 (jjui-0.10.2.tar.gz) = 41ecae52e510415a59f5d71420a809c7e8e1be1c49261d0b67936d45bacfe26919e6a1fb5b906c3da7b7fe9ec9fa5a6ee83f641aefd12316de3517ab61480924
+Size (jjui-0.10.2.tar.gz) = 226670 bytes
