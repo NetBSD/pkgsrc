@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26955 2026/03/22 16:01:24 wiz Exp $
+$NetBSD: TODO,v 1.26956 2026/03/22 16:02:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -885,7 +885,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lnav-0.12.4 [wip]
 	o log4cxx-0.11.0
 	o lohit-fonts-2.4.2
-	o lowdown-3.0.1
 	o lq-sp-1.3.4.14
 	o lsh-2.1
 	o lua-5.5
