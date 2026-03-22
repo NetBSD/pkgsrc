@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.84 2026/03/14 23:45:31 morr Exp $
+@comment $NetBSD: PLIST,v 1.85 2026/03/22 16:52:45 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -831,6 +831,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/xsd.vim
 share/vim/${VIM_SUBDIR}/ftplugin/xslt.vim
 share/vim/${VIM_SUBDIR}/ftplugin/yacc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/yaml.vim
+share/vim/${VIM_SUBDIR}/ftplugin/yara.vim
 share/vim/${VIM_SUBDIR}/ftplugin/zathurarc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/zig.vim
 share/vim/${VIM_SUBDIR}/ftplugin/zimbu.vim
