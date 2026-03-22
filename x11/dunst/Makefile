@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2026/01/27 08:40:53 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2026/03/22 15:53:15 wiz Exp $
 
-DISTNAME=	dunst-1.13.1
-PKGREVISION=	1
+DISTNAME=	dunst-1.13.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dunst-project/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,9 +13,7 @@ LICENSE=	modified-bsd
 USE_TOOLS+=	bash:test gmake pod2man pkg-config
 
 # FAIL test_calculate_dimensions_height_min: dim.h == expected_height (test/draw.c:321) (0 ticks, 0.000 sec)
-# FAIL test_pattern_match: rule_field_matches_string("asd", "") (test/rules.c:44) (0 ticks, 0.000 sec)
-# Total: 202 tests (3 ticks, 0.030 sec), 2643 assertions
-# Pass: 200, fail: 2, skip: 0.
+# Pass: 210, fail: 1, skip: 0.
 TEST_TARGET=	test
 
 MAKE_FLAGS+=	SYSTEMD=0
