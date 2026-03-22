@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2026/02/14 07:41:01 taca Exp $
+# $NetBSD: Makefile,v 1.78 2026/03/22 10:33:14 nia Exp $
 
 DISTNAME=	groonga-14.0.6
 PKGREVISION=	2
@@ -24,6 +24,8 @@ EXTRACT_USING=	bsdtar
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-ruby=${RUBY}
+
+CPPFLAGS.SunOS+=	-Dalloca=__builtin_alloca
 
 PKGCONFIG_OVERRIDE+=	groonga.pc.in
 
