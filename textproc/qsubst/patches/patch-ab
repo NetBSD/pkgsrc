@@ -1,17 +1,16 @@
-$NetBSD: patch-ab,v 1.3 2006/05/16 18:43:45 christos Exp $
+$NetBSD: patch-ab,v 1.4 2026/03/22 13:10:13 nia Exp $
 
---- qsubst.c.orig	2001-04-22 01:35:35.000000000 -0400
-+++ qsubst.c	2006-05-16 14:39:11.923906738 -0400
-@@ -105,7 +105,7 @@
+--- qsubst.c.orig	2001-04-22 05:35:35.000000000 +0000
++++ qsubst.c
+@@ -105,6 +105,7 @@
  #include <signal.h>
  #include <stdio.h>
  #include <stdlib.h>
--#include <strings.h>
 +#include <string.h>
+ #include <strings.h>
  #include <termcap.h>
  #include <termios.h>
- #include <unistd.h>
-@@ -148,12 +148,23 @@
+@@ -148,12 +149,23 @@ static struct termios orig_tio;
  static void tstp_self(void)
  {
   void (*old_tstp)(int);
@@ -35,7 +34,7 @@ $NetBSD: patch-ab,v 1.3 2006/05/16 18:43:45 christos Exp $
   signal(SIGTSTP,old_tstp);
  }
  
-@@ -166,9 +177,9 @@
+@@ -166,9 +178,9 @@ static void sigtstp(int sig)
    { tstp_self();
      return;
    }
@@ -47,7 +46,7 @@ $NetBSD: patch-ab,v 1.3 2006/05/16 18:43:45 christos Exp $
  }
  
  static void limit_above_below(void)
-@@ -181,7 +192,7 @@
+@@ -181,7 +193,7 @@ static void limit_above_below(void)
    }
  }
  
@@ -56,7 +55,7 @@ $NetBSD: patch-ab,v 1.3 2006/05/16 18:43:45 christos Exp $
  {
   return( isascii(c) &&
  	 ( isalnum(c) ||
-@@ -231,7 +242,7 @@
+@@ -231,7 +243,7 @@ static int getc_cbreak(void)
   tio.c_lflag &= ~(ICANON|ECHOKE|ECHOE|ECHO|ECHONL);
   tio.c_cc[VMIN] = 1;
   tio.c_cc[VTIME] = 0;
@@ -65,7 +64,7 @@ $NetBSD: patch-ab,v 1.3 2006/05/16 18:43:45 christos Exp $
   switch (read(0,&c,1))
    { case -1:
         break;
-@@ -240,7 +251,7 @@
+@@ -240,7 +252,7 @@ static int getc_cbreak(void)
      case 1:
         break;
    }
