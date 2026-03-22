@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/07/02 00:24:35 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2026/03/22 10:32:42 nia Exp $
 
---- cnprint330b.c.orig	Tue Jul  2 01:22:08 2002
+--- cnprint330b.c.orig	2026-03-22 09:54:09.786287348 +0000
 +++ cnprint330b.c
-@@ -6216,7 +6216,7 @@
+@@ -5023,6 +5023,7 @@ void set_doc_defaults()
+ 	color.gray = color.red = color.green = color.blue = 0.0;
+ }
+ 
++int
+ main(int argc, char **argv)
+ {
+     int     j, jmax, c, endfile, buftoosmall;
+@@ -6216,7 +6217,7 @@ void getroot()
  	if (s==NULL) {
  		defpath[0]='\0';
  #ifdef unix
