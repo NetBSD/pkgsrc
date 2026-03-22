@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.310 2026/03/11 10:22:58 adam Exp $
+# $NetBSD: Makefile,v 1.311 2026/03/22 12:33:01 nia Exp $
 
 DISTNAME=	graphviz-14.1.3
 CATEGORIES=	graphics
@@ -88,6 +88,8 @@ LUA_VERSIONS_INCOMPATIBLE=	51
 
 REPLACE_PERL+=		contrib/dotmcl.pl contrib/dirgraph/dirgraph.pl
 REPLACE_PYTHON+=	cmd/dot/dot_sandbox
+
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__ # flockfile
 
 .include "../../mk/bsd.prefs.mk"
 
