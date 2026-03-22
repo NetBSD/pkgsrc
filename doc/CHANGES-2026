@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1811 2026/03/22 13:27:18 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1812 2026/03/22 13:27:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2472,3 +2472,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-pdf to 6.9.1 [wiz 2026-03-22]
 	Updated lang/ruby40 to 4.0.2 [taca 2026-03-22]
 	Updated devel/php-xdebug to 3.5.1 [taca 2026-03-22]
+	Updated textproc/ruby-review to 5.11.0 [taca 2026-03-22]
