@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:17:18 nia Exp $
+$NetBSD: distinfo,v 1.8 2026/03/23 19:12:51 kim Exp $
 
-BLAKE2s (lynis-2.6.2.tar.gz) = 330aeb4d3a289b9c6fbb637823cc3069b4adf72f32bd807523e7135270997590
-SHA512 (lynis-2.6.2.tar.gz) = 3aeb94c416236f8fd30b6e6ede015fa539b6138a2b43eb659f609a41b60fbb05671256d8d2d72e632c4b90dad9e7201a3b932e8cbd53945752f5b7cf4e7a3970
-Size (lynis-2.6.2.tar.gz) = 271113 bytes
-SHA1 (patch-include_functions) = 157c720799d27adc8e90266f78de8da2db4b58cb
-SHA1 (patch-lynis) = f35b682d9c30afdd6bc4e35ca684a4bd7209f63d
+BLAKE2s (lynis-3.1.6.tar.gz) = 970a1d15fdf8d8a2906ae7e992599c57a62e1ed46af2a952a61469d2c7e414b8
+SHA512 (lynis-3.1.6.tar.gz) = a462be0e4177033b01db7573b1a30c46e1b263cda782963b6f2fdc1f79309362961cd1ae667d974e586500e21f903ebe36f208cc6b69a4017076f3586d7c4ba8
+Size (lynis-3.1.6.tar.gz) = 354692 bytes
+SHA1 (patch-include_functions) = fd4d4a6545e0f3f42a3d4503cb57fb269bb9cf29
+SHA1 (patch-lynis) = ed043fe50a71b874225ef9074e588b7cfa86f522
