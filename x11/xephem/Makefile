@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2026/02/02 23:47:53 gdt Exp $
+# $NetBSD: Makefile,v 1.79 2026/03/23 10:12:16 nia Exp $
 
 VERSION=	4.2.0
 DISTNAME=	XEphem-${VERSION}
@@ -37,7 +37,7 @@ USE_TOOLS+=		gmake pax perl:run
 X11_LDFLAGS+=		${LIBS}
 MAKE_ENV+=		X11_LDFLAGS=${X11_LDFLAGS:Q}
 
-LIBS.SunOS+=		-lnsl -lsocket
+LDFLAGS.SunOS+=		-lnsl -lsocket
 
 # \todo Evaluate and perhaps modernize this section.
 REPLACE_PERL+=		auxil/*.pl
