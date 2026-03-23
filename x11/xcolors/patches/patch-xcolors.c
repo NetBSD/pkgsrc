@@ -1,6 +1,6 @@
-$NetBSD: patch-xcolors.c,v 1.1 2013/01/17 16:06:49 joerg Exp $
+$NetBSD: patch-xcolors.c,v 1.2 2026/03/23 10:49:12 nia Exp $
 
---- xcolors.c.orig	2013-01-16 14:05:59.000000000 +0000
+--- xcolors.c.orig	1994-06-07 17:08:19.000000000 +0000
 +++ xcolors.c
 @@ -26,12 +26,16 @@ static char*id="$XConsortium: xcolors.c,
  #include <X11/Xaw/Label.h>
@@ -19,6 +19,15 @@ $NetBSD: patch-xcolors.c,v 1.1 2013/01/17 16:06:49 joerg Exp $
  String fallback_resources[] = {
      "*Label.Font: 5x7",
      "*panes.Width: 985",
+@@ -181,7 +185,7 @@ XtActionsRec actionTable[] = {
+     {"set-background", set_background},
+ };
+ 
+-
++int
+ main(argc, argv)
+      int argc;
+      char *argv[];
 @@ -274,11 +278,7 @@ main(argc, argv)
      /* NOTREACHED */
  }
