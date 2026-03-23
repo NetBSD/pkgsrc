@@ -1,10 +1,14 @@
-$NetBSD: distinfo,v 1.35 2026/02/19 10:20:00 wiz Exp $
+$NetBSD: distinfo,v 1.36 2026/03/23 13:09:13 nia Exp $
 
 BLAKE2s (i3-4.25.1.tar.xz) = 760bce3bd75e0585b2fa0d21473e348221660e1525fe9318f71e3ffb85ffa6b7
 SHA512 (i3-4.25.1.tar.xz) = 10d44f7efcfb23089edf5ec9783ddd3b9dca5592f4d5b101ec7158cd75ec73d917e3025250968c1c8e2d44c64d749855000a07b16059c582c1e80b1220ac7c81
 Size (i3-4.25.1.tar.xz) = 1357556 bytes
 SHA1 (patch-etc_config) = d3f649e8d4dc7cae7eb3c1548fa8d81224e4dacb
 SHA1 (patch-etc_config.keycodes) = 6adde0b3a56576805facd951fa9d32bfd6c88011
+SHA1 (patch-i3-config-wizard_main.c) = 79e7b2f63f893357b808a6ce8ee28d3a501efed2
+SHA1 (patch-libi3_get__process__filename.c) = 7de46b0f26aa46ed6864ffd1cc5850ec6315c7a8
+SHA1 (patch-libi3_ucs2__conversion.c) = 78a15da32993c6ab24359eab539f96bbfbb3d998
 SHA1 (patch-meson.build) = 89ec2c7f594f8f13c13b522c7635cb59626554af
 SHA1 (patch-src_config.c) = 7985366b892f240379daa19d9b7baeddb22f66ee
 SHA1 (patch-src_log.c) = 19b33b43d1716ead4bad36e2afd52ff30af017c1
+SHA1 (patch-src_sd-daemon.c) = 94ea1d383c28a1156e60214f8da357ab9dd35af3
