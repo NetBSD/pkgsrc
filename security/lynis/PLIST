@@ -1,11 +1,15 @@
-@comment $NetBSD: PLIST,v 1.3 2018/01/30 08:43:02 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/03/23 19:12:51 kim Exp $
 bin/lynis
+lib/lynis/db/control-links.db
 lib/lynis/db/fileperms.db
 lib/lynis/db/hints.db
 lib/lynis/db/integrity.db
+lib/lynis/db/languages/az
 lib/lynis/db/languages/br
 lib/lynis/db/languages/cn
+lib/lynis/db/languages/da
 lib/lynis/db/languages/de
+lib/lynis/db/languages/de-AT
 lib/lynis/db/languages/en
 lib/lynis/db/languages/en-GB
 lib/lynis/db/languages/en-US
@@ -15,8 +19,10 @@ lib/lynis/db/languages/fr
 lib/lynis/db/languages/gr
 lib/lynis/db/languages/he
 lib/lynis/db/languages/hu
+lib/lynis/db/languages/id
 lib/lynis/db/languages/it
 lib/lynis/db/languages/ja
+lib/lynis/db/languages/ko
 lib/lynis/db/languages/nb-NO
 lib/lynis/db/languages/nl
 lib/lynis/db/languages/nl-BE
@@ -25,10 +31,12 @@ lib/lynis/db/languages/pl
 lib/lynis/db/languages/pt
 lib/lynis/db/languages/ru
 lib/lynis/db/languages/se
+lib/lynis/db/languages/sk
 lib/lynis/db/languages/tr
 lib/lynis/db/malware-susp.db
 lib/lynis/db/malware.db
 lib/lynis/db/sbl.db
+lib/lynis/db/software-eol.db
 lib/lynis/db/tests.db
 lib/lynis/extras/README
 lib/lynis/extras/bash_completion.d/lynis
@@ -46,6 +54,7 @@ lib/lynis/include/data_upload
 lib/lynis/include/functions
 lib/lynis/include/helper_audit_dockerfile
 lib/lynis/include/helper_configure
+lib/lynis/include/helper_generate
 lib/lynis/include/helper_show
 lib/lynis/include/helper_system_remote_scan
 lib/lynis/include/helper_update
@@ -61,6 +70,7 @@ lib/lynis/include/tests_containers
 lib/lynis/include/tests_crypto
 lib/lynis/include/tests_custom.template
 lib/lynis/include/tests_databases
+lib/lynis/include/tests_dns
 lib/lynis/include/tests_file_integrity
 lib/lynis/include/tests_file_permissions
 lib/lynis/include/tests_filesystems
@@ -68,6 +78,7 @@ lib/lynis/include/tests_firewalls
 lib/lynis/include/tests_hardening
 lib/lynis/include/tests_homedirs
 lib/lynis/include/tests_insecure_services
+lib/lynis/include/tests_kerberos
 lib/lynis/include/tests_kernel
 lib/lynis/include/tests_kernel_hardening
 lib/lynis/include/tests_ldap
@@ -80,7 +91,7 @@ lib/lynis/include/tests_nameservices
 lib/lynis/include/tests_networking
 lib/lynis/include/tests_php
 lib/lynis/include/tests_ports_packages
-lib/lynis/include/tests_printers_spools
+lib/lynis/include/tests_printers_spoolers
 lib/lynis/include/tests_scheduling
 lib/lynis/include/tests_shells
 lib/lynis/include/tests_snmp
