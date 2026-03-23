@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1821 2026/03/23 13:11:47 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1822 2026/03/23 13:14:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2482,3 +2482,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/neomutt to 20260105nb5 [wiz 2026-03-22]
 	Updated textproc/git-delta to 0.19.1 [wiz 2026-03-22]
 	Updated textproc/dasel to 3.4.0 [wiz 2026-03-23]
+	Updated net/slumber to 5.2.0 [wiz 2026-03-23]
