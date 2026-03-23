@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2021/06/23 20:27:16 nia Exp $
+# $NetBSD: Makefile,v 1.9 2026/03/23 19:12:51 kim Exp $
 #
 
-DISTNAME=	lynis-2.6.2
+DISTNAME=	lynis-3.1.6
 CATEGORIES=	security
-MASTER_SITES=	https://cisofy.com/files/
+MASTER_SITES=	https://downloads.cisofy.com/lynis/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cisofy.com/solutions/
+HOMEPAGE=	https://cisofy.com/lynis/
 COMMENT=	Perform security health scans
 LICENSE=	gnu-gpl-v3
 
