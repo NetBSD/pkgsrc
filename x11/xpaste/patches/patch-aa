@@ -1,19 +1,20 @@
-$NetBSD: patch-aa,v 1.1 2003/09/29 09:20:12 seb Exp $
+$NetBSD: patch-aa,v 1.2 2026/03/23 10:12:50 nia Exp $
 
---- Xju.c.orig	2003-09-29 08:30:33.000000000 +0000
+--- Xju.c.orig	2026-03-23 09:47:44.787227079 +0000
 +++ Xju.c
-@@ -5,3 +5,3 @@
+@@ -5,3 +5,4 @@
   */
 -#include <varargs.h>
++#include <stdio.h>
 +#include <stdarg.h>
  #include <X11/Intrinsic.h>
-@@ -11,4 +11,3 @@ extern Widget root;
+@@ -11,4 +12,3 @@ extern Widget root;
  
 -void SetArgs(va_alist)
 -va_dcl
 +void SetArgs(Arg **arglist, ...)
  {
-@@ -23,9 +22,6 @@ va_dcl
+@@ -23,9 +23,6 @@ va_dcl
  	unsigned i;
 -	Arg **arglist;
  	Cardinal *count;
@@ -24,7 +25,7 @@ $NetBSD: patch-aa,v 1.1 2003/09/29 09:20:12 seb Exp $
 -	arglist = va_arg(argindex, Arg **);
 +	va_start(argindex, arglist);
  	count = va_arg(argindex, Cardinal *);
-@@ -46,6 +42,5 @@ va_dcl
+@@ -46,6 +43,5 @@ va_dcl
  	/* Set new Arg list */
 -	va_start(argindex);
 +	va_start(argindex, arglist);
@@ -32,13 +33,13 @@ $NetBSD: patch-aa,v 1.1 2003/09/29 09:20:12 seb Exp $
  	/* skip past first two arguments */
 -	(void) va_arg(argindex, Arg **);
  	(void) va_arg(argindex, int *);
-@@ -60,4 +55,3 @@ va_dcl
+@@ -60,4 +56,3 @@ va_dcl
  
 -Widget CreateWidget(va_alist) 
 -va_dcl
 +Widget CreateWidget(char *name, ...) 
  {
-@@ -80,9 +74,7 @@ va_dcl
+@@ -80,9 +75,7 @@ va_dcl
  	Widget w, parent;
 -	char *name;
  	WidgetClass class;
@@ -49,7 +50,7 @@ $NetBSD: patch-aa,v 1.1 2003/09/29 09:20:12 seb Exp $
  	/* Get first three arguments */
 -	name = va_arg(argindex, char *);
  	class = va_arg(argindex, WidgetClass);
-@@ -104,6 +96,5 @@ va_dcl
+@@ -104,6 +97,5 @@ va_dcl
  	/* Set new Arg list */
 -	va_start(argindex);
 +	va_start(argindex, name);
@@ -57,13 +58,13 @@ $NetBSD: patch-aa,v 1.1 2003/09/29 09:20:12 seb Exp $
  	/* skip past first three arguments */
 -	(void) va_arg(argindex, char *);
  	(void) va_arg(argindex, WidgetClass);
-@@ -125,4 +116,3 @@ va_dcl
+@@ -125,4 +117,3 @@ va_dcl
  	
 -void QueryWidget(va_alist)
 -va_dcl
 +void QueryWidget(Widget w, ...)
  {
-@@ -140,8 +130,4 @@ va_dcl
+@@ -140,8 +131,4 @@ va_dcl
  	Cardinal count;
 -	Widget w;
 -
@@ -73,7 +74,7 @@ $NetBSD: patch-aa,v 1.1 2003/09/29 09:20:12 seb Exp $
 -	w = va_arg(argindex, Widget);
 +	va_start(argindex, w);
  
-@@ -161,6 +147,3 @@ va_dcl
+@@ -161,6 +148,3 @@ va_dcl
  	/* Set new Arg list */
 -	va_start(argindex);
 -
@@ -81,13 +82,13 @@ $NetBSD: patch-aa,v 1.1 2003/09/29 09:20:12 seb Exp $
 -	(void) va_arg(argindex, Widget);
 +	va_start(argindex, w);
  
-@@ -176,4 +159,3 @@ va_dcl
+@@ -176,4 +160,3 @@ va_dcl
  	
 -void ConfigureWidget(va_alist)
 -va_dcl
 +void ConfigureWidget(Widget w, ...)
  {
-@@ -191,8 +173,4 @@ va_dcl
+@@ -191,8 +174,4 @@ va_dcl
  	Cardinal count;
 -	Widget w;
  
@@ -97,7 +98,7 @@ $NetBSD: patch-aa,v 1.1 2003/09/29 09:20:12 seb Exp $
 -	w = va_arg(argindex, Widget);
 +	va_start(argindex, w);
  
-@@ -212,6 +190,3 @@ va_dcl
+@@ -212,6 +191,3 @@ va_dcl
  	/* Set new Arg list */
 -	va_start(argindex);
 -
