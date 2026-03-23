@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.39 2021/10/26 09:59:37 nia Exp $
+$NetBSD: distinfo,v 1.40 2026/03/23 13:11:30 nia Exp $
 
 BLAKE2s (xmms-1.2.11.tar.bz2) = 5cbc0d28ee4f9c8c7c77b5870d2e6ae193992814088a1567a27b61a8d68b1c29
 SHA512 (xmms-1.2.11.tar.bz2) = cc813f5e060b890aabc9d73f427daa94c474e2858390d336eba1d48bd082aeb295ce508d08d01067fe6341d0888af0dc6de185c54d0d2ee8519c915d7b849b94
 Size (xmms-1.2.11.tar.bz2) = 2581032 bytes
+SHA1 (patch-Output_solaris_Sun.h) = 53f48f24b8842156c4c372ed02f86a832881b438
 SHA1 (patch-aa) = 91b17156a2d0a48d8610552993357bf522aacbd0
 SHA1 (patch-ab) = 806b1e8e974fe1100be90eca1ce582b9d80f3ab2
 SHA1 (patch-ac) = 3f09b5522d37e682cac13735b12f625a2c1e71c8
@@ -16,3 +17,6 @@ SHA1 (patch-aq) = 2a16fbd747e03df4ef0fbb94e45c79e9c3de9ac8
 SHA1 (patch-ar) = b9cf22e3ab585ef255a533e56a3430f49f2fba4f
 SHA1 (patch-aw) = eed1a2b95f8d92bb75c118f64a4e33b97b9b4ee5
 SHA1 (patch-ax) = 252a76fe3d0c96b850cd6cec5a8a7d02f80912ee
+SHA1 (patch-libxmms_xmmsctrl.c) = 5ce53132af08eb454373d760a7ab5411aeb99759
+SHA1 (patch-wmxmms_getopt.c) = 66f1d787bef53cce9021f698f59b77b3acc3deff
+SHA1 (patch-xmms_getopt.c) = aa8cb2f75296697098b81da70c3510c6430f06a7
