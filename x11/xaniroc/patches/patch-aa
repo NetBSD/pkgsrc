@@ -1,8 +1,20 @@
-$NetBSD: patch-aa,v 1.1 2005/04/14 07:28:40 tron Exp $
+$NetBSD: patch-aa,v 1.2 2026/03/23 11:32:02 nia Exp $
 
 --- xaniroc.c.orig	1994-01-07 10:51:13.000000000 +0000
-+++ xaniroc.c	2005-04-14 08:18:12.000000000 +0100
-@@ -62,22 +62,19 @@
++++ xaniroc.c
+@@ -19,9 +19,10 @@
+  */
+ 
+ #include <stdio.h>				/* get standard I/O functions */
++#include <stdlib.h>				/* get standard lib functions */
+ #include <X11/Xlib.h>				/* get the X library definitions */
+ #include <X11/Xutil.h>				/* get the X11 utility definitions */
+-#include <sys/signal.h>                         /* get signal definitions */
++#include <signal.h>                             /* get signal definitions */
+ #include <sys/time.h>                           /* get time definitions */
+ #include <string.h>                             /* get string functions */
+ #include "bitmaps.h"                            /* get the bitmaps for the cursor */
+@@ -62,22 +63,19 @@ GC		gc_xor,				/* GC's */
   ***************************************************************************************************
   */
  
@@ -28,7 +40,7 @@ $NetBSD: patch-aa,v 1.1 2005/04/14 07:28:40 tron Exp $
  {
  
  /***************************************************************************************************
-@@ -311,6 +308,7 @@
+@@ -311,6 +309,7 @@ void main(int argc, char *argv[])
  			if(i >= 24) i = 0;
  		}
  	}
@@ -36,7 +48,7 @@ $NetBSD: patch-aa,v 1.1 2005/04/14 07:28:40 tron Exp $
  } /*end of main */
  
  /***************************************************************************************************
-@@ -387,11 +385,7 @@
+@@ -387,11 +386,7 @@ int pointer_in_rootwindow(void)
   *				        signal handler that cleans up the cursor
   ***************************************************************************************************
   */
