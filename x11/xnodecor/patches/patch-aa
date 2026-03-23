@@ -1,12 +1,14 @@
-$NetBSD: patch-aa,v 1.2 2012/07/30 03:48:17 dholland Exp $
+$NetBSD: patch-aa,v 1.3 2026/03/23 10:13:25 nia Exp $
 
 - Use standard headers.
 
---- xnodecor.c.orig	Wed Jan  7 00:44:25 2004
+--- xnodecor.c.orig	2026-03-23 09:49:59.884863702 +0000
 +++ xnodecor.c
-@@ -39,6 +39,7 @@
+@@ -38,7 +38,9 @@
+ #include <X11/Xutil.h>
  #include <stdlib.h>
  #include <string.h>
++#include <strings.h>
  #include <stdio.h>
 +#include <unistd.h>
   
