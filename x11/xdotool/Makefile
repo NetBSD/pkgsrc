@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/04/06 08:07:15 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/03/23 10:48:23 nia Exp $
 
 DISTNAME=	xdotool-3.20211022.1
 PKGREVISION=	1
@@ -18,6 +18,8 @@ MAKE_ENV+=	WITHOUT_RPATH_FIX=1
 USE_TOOLS+=	gmake pod2man pkg-config
 
 USE_LANGUAGES=	c99
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 SUBST_CLASSES+=			fix-getopt
 SUBST_STAGE.fix-getopt=		pre-build
