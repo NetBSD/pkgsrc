@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:34:33 nia Exp $
+$NetBSD: distinfo,v 1.9 2026/03/23 10:50:44 nia Exp $
 
 BLAKE2s (XBanner1.31.tar.gz) = 7ec4df19f346398313a1475a41c0161d2ef415142e9d54f906fcf58128d4be50
 SHA512 (XBanner1.31.tar.gz) = 86adc2985c86943262b326618bcc0ae4f9234a1a78ef525e2936ec2909f7076795e0aacd6c03a94401a6db55efefde35b43118c26329345488be57f5ad08cb11
@@ -13,3 +13,6 @@ SHA1 (patch-ag) = c4ab7f4cda4e2c3f9c34524ce4a43154e83dadb8
 SHA1 (patch-ah) = 482fbcf6a6bc28558f1797599980cbf3d4b1e909
 SHA1 (patch-ai) = e947acbbbace4f216fec399abc786fb600242dbb
 SHA1 (patch-aj) = 799e52cf3cbe411625dbed8b60d7d8177265954c
+SHA1 (patch-freetemp.c) = 89dc267207a4a9f4b77e007c1d18cea42d73435f
+SHA1 (patch-xb__check.c) = 1f444f85a054194f1c7398d14f3d3261a3ef7b6b
+SHA1 (patch-xb__config.h) = 481fa97961d534a85cb556acb3f11f67c88c778c
