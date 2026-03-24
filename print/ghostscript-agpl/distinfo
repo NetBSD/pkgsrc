@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.57 2026/03/16 12:12:19 nia Exp $
+$NetBSD: distinfo,v 1.58 2026/03/24 10:42:21 jmcneill Exp $
 
 BLAKE2s (ghostscript-10.06.0.tar.xz) = 52cf486c0daa8286f4e68e10a277c5cc66ac3ce1e7db5d781b16b42161ccc6b1
 SHA512 (ghostscript-10.06.0.tar.xz) = e9efa6a334cf34703f565f5043dd794452270415b34c2bea260e9dac6c72ebbcbedfa2e4cb9029841f8f582bbce91be8160e135a190081f3262bcf04417f80f1
 Size (ghostscript-10.06.0.tar.xz) = 68955484 bytes
+SHA1 (patch-base_gdevmpla.c) = ae36e9930262cb0ac0b26cb22c246ddec808bb3e
 SHA1 (patch-base_gserrors_h) = 36c8fcf27fcb0bfdcc075ad96efe3e44fb727d9a
 SHA1 (patch-base_lib.mak) = 1a10fc045e2d703095357a4cf40b97d83f90ad6a
 SHA1 (patch-base_mkromfs.c) = 9d9afbd0fbb8c70c8f4f7de3cadc5b54541f0db0
