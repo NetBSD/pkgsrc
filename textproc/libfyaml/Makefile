@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/02/27 13:47:24 adam Exp $
+# $NetBSD: Makefile,v 1.10 2026/03/24 23:34:49 maya Exp $
 
 DISTNAME=	libfyaml-0.9.5
 CATEGORIES=	textproc
@@ -13,6 +13,14 @@ LICENSE=	mit
 PKGCONFIG_OVERRIDE+=	cmake/libfyaml.pc.in
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
+
+.if ${MACHINE_ARCH} == "i386"
+# This package seems to be confused by i386 + AVX2/AVX512,
+# and tries to use 64-bit assembly. This is a quick working fix.
+# Note: "portable" here seems to mean "windows compiler friendly
+# assembly syntax".
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_PORTABLE_TARGET=ON
+.endif
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/atomic64.mk"
