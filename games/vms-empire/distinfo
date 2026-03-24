@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.12 2025/02/08 10:49:45 triaxx Exp $
+$NetBSD: distinfo,v 1.13 2026/03/24 12:46:06 wiz Exp $
 
-BLAKE2s (vms-empire-1.18.tar.gz) = 907c6b8e672f0e829f77626b51afc5a76a42c525d6d90e510015b8e6c8c697ab
-SHA512 (vms-empire-1.18.tar.gz) = 0e191c1e88d5c144040d7dfd7db81d51ae09feee3a7571e2db940813dafa858ee8f23bfcc1f7796a6ddff82562970d0be5006f9422eb17009c70acc4f467c914
-Size (vms-empire-1.18.tar.gz) = 111335 bytes
-SHA1 (patch-aa) = 7b436863cd3148af5ca720a5ffde052323d2db30
-SHA1 (patch-edit.c) = 1543bd36d879cf06c773010d8b92320d63b41ca7
+BLAKE2s (vms-empire-1.19.tar.gz) = 9d7e6b38f13f7d9f6789929829ac35fd0e60d8a4ad483e6581dd02bfbeb9cdbe
+SHA512 (vms-empire-1.19.tar.gz) = 826197896a1b99c028fd1072370068370816600c0f96e1370eef672ae33102b618eda1d84e16d094e2182c6c4cdb7ba500064f8014824af78fd27ba3d12a9b3c
+Size (vms-empire-1.19.tar.gz) = 113348 bytes
+SHA1 (patch-aa) = ac55b4a22d2b7cde990cdbc193c75e3339d6bab2
+SHA1 (patch-edit.c) = d413719ea09eb8e92facd16be36e95020e3ee1b8
 SHA1 (patch-game.c) = b44f515a9ce4c4fa095af70e424a69afc8c48e6d
 SHA1 (patch-object.c) = ca6b0deb031389dd448100af8192346f0f00b258
 SHA1 (patch-term.c) = 7aaad65ba85040e39352ee7685889be84f9ca105

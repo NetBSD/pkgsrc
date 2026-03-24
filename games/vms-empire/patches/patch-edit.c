@@ -1,10 +1,19 @@
-$NetBSD: patch-edit.c,v 1.2 2025/02/08 10:49:45 triaxx Exp $
+$NetBSD: patch-edit.c,v 1.3 2026/03/24 12:46:06 wiz Exp $
 
 Fix ctype(3) functions usage.
 
---- edit.c.orig	2024-02-11 16:53:28.000000000 +0000
+--- edit.c.orig	2026-03-24 12:40:47.000000000 +0000
 +++ edit.c
-@@ -305,7 +305,7 @@ Set object to move in a direction.
+@@ -148,7 +148,7 @@ char e_cursor(loc_t *edit_cursor) {
+ 		e = getch();
+ 	}
+ 	(void)nocrmode(); /* reset terminal */
+-	return toupper(e);
++	return toupper((unsigned char)e);
+ }
+ 
+ /*
+@@ -306,7 +306,7 @@ void e_stasis(loc_t loc) {
  static char dirs[] = "WEDCXZAQ";
  
  void e_stasis(loc_t loc) {
@@ -13,7 +22,7 @@ Fix ctype(3) functions usage.
  		huh(); /* no object here */
  	} else if (game.user_map[loc].contents == 'X') {
  		huh();
-@@ -421,7 +421,7 @@ Beginning of move to location.
+@@ -422,7 +422,7 @@ void e_move(loc_t *path_start, loc_t loc) {
  */
  
  void e_move(loc_t *path_start, loc_t loc) {
@@ -22,12 +31,3 @@ Fix ctype(3) functions usage.
  		huh(); /* nothing there? */
  	} else if (game.user_map[loc].contents == 'X') {
  		huh(); /* enemy city? */
-@@ -493,7 +493,7 @@ void e_piece_info(loc_t edit_cursor, cha
- 	int type;
- 	char *p;
- 
--	ab = toupper(ab);
-+	ab = toupper((unsigned char)ab);
- 	p = strchr(type_chars, ab);
- 	type = p - type_chars;
- 
