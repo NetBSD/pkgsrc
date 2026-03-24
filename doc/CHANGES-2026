@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1825 2026/03/24 12:46:16 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1826 2026/03/24 13:11:53 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2486,3 +2486,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/lynis to 3.1.6 [kim 2026-03-23]
 	Updated sysutils/gam to 7.38.00 [sborrill 2026-03-24]
 	Updated games/vms-empire to 1.19 [wiz 2026-03-24]
+	Updated www/firefox140 to 140.9.0 [gutteridge 2026-03-24]
