@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.6 2025/02/08 10:49:45 triaxx Exp $
+$NetBSD: patch-aa,v 1.7 2026/03/24 12:46:06 wiz Exp $
 
 o Turn off optimizations present in DEBUG
 o Link against (generic) curses
 o Honors user's CFLAGS and LDFLAGS
 
---- Makefile.orig	2016-01-11 18:19:51.000000000 +0000
+--- Makefile.orig	2026-03-24 12:40:47.000000000 +0000
 +++ Makefile
-@@ -9,18 +9,18 @@ VERS=1.14
+@@ -14,18 +14,18 @@ VERSION=$(shell sed -n <NEWS '/^[0-9]/s/:.*//p' | head
  
  # Use -g to compile the program for debugging.
  #DEBUG = -g -DDEBUG
@@ -23,12 +23,12 @@ o Honors user's CFLAGS and LDFLAGS
  # You shouldn't have to modify anything below this line.
  
  # There's a dynamic format in the object-display routines; suppress the warning
--CFLAGS = $(DEBUG) $(PROFILE) -Wall -Wno-format-security
-+CFLAGS += $(DEBUG) $(PROFILE) -Wall -Wno-format-security
+-CFLAGS = $(DEBUG) $(PROFILE) -Wall -Wextra -Werror -Wno-format-security -Wno-unused-parameter
++CFLAGS += $(DEBUG) $(PROFILE) -Wall -Wextra -Wno-format-security -Wno-unused-parameter
  
  FILES = \
  	attack.c \
-@@ -59,7 +59,7 @@ OFILES = \
+@@ -66,7 +66,7 @@ vms-empire: $(OFILES)
  all: vms-empire
  
  vms-empire: $(OFILES)
