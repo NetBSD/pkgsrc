@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1827 2026/03/24 13:12:44 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.1828 2026/03/24 13:18:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2488,3 +2488,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/vms-empire to 1.19 [wiz 2026-03-24]
 	Updated www/firefox140 to 140.9.0 [gutteridge 2026-03-24]
 	Updated www/firefox140-l10n to 140.9.0 [gutteridge 2026-03-24]
+	Updated devel/py-ruff to 0.15.7 [wiz 2026-03-24]
