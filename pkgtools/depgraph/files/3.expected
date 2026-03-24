@@ -106,3 +106,4 @@ port2pkg
 |--perl
 |--pkglint
 neatvi
+depgraph
