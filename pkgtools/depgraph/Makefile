@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/03/11 21:54:30 agc Exp $
+# $NetBSD: Makefile,v 1.2 2026/03/24 18:10:06 agc Exp $
 
 DISTNAME=		depgraph-${VERSION}
 CATEGORIES=		pkgtools
@@ -17,7 +17,8 @@ INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 
 .include "../../mk/bsd.prefs.mk"
 
-VERSION!=	${AWK} -F= '/^DEPGRAPH_VERSION=/ {print $$2}' ${FILESDIR}/depgraph.sh
+GRAB_VERSION=	${AWK} -F= '/^DEPGRAPH_VERSION=/ {print $$2}' ${FILESDIR}/depgraph.sh
+VERSION=	${GRAB_VERSION:sh}
 
 do-extract:
 	${CP} -R ${FILESDIR} ${WRKSRC}

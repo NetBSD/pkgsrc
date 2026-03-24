@@ -430,3 +430,7 @@
   "package": "neatvi-09",
   "license": "isc"
 }
+{
+  "package": "depgraph-20260320",
+  "license": "modified-bsd"
+}
