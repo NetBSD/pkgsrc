@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1824 2026/03/24 12:33:07 sborrill Exp $
+$NetBSD: CHANGES-2026,v 1.1825 2026/03/24 12:46:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2485,3 +2485,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/slumber to 5.2.0 [wiz 2026-03-23]
 	Updated security/lynis to 3.1.6 [kim 2026-03-23]
 	Updated sysutils/gam to 7.38.00 [sborrill 2026-03-24]
+	Updated games/vms-empire to 1.19 [wiz 2026-03-24]
