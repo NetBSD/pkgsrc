@@ -25,7 +25,7 @@
 #
 # Usage: depgraph [-V] [-v] [pkg...]
 
-DEPGRAPH_VERSION=20260319
+DEPGRAPH_VERSION=20260320
 
 case "$(uname -s)" in
 NetBSD)
@@ -100,6 +100,12 @@ dopkg() {
 	local str="$2"
 	local prereq=0
 
+	installed_name="$(${pkg_info} -e ${name})"
+	case "${installed_name}" in
+	"")	printf "depgraph: %s: not installed\n" "${name}"
+		return 1
+		;;
+	esac
 	case "${name}" in
 	"")	;;
 	*)
@@ -116,7 +122,7 @@ dopkg() {
 			lic=""
 		fi
 		if ${nameversion}; then
-			s=$(${pkg_info} -e "${name}")
+			s="${installed_name}"
 		else
 			s="${name}"
 		fi

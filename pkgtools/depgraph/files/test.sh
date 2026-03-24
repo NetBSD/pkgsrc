@@ -38,3 +38,8 @@ echo "7. license, version numbers and json"
 ./depgraph.sh -l -v -j | jq . > 7.out
 diff 7.expected 7.out
 rm -f 7.out
+
+echo "8. package that's not installed"
+./depgraph.sh clung EMACS not-there > 8.out
+diff 8.expected 8.out
+rm -f 8.out
