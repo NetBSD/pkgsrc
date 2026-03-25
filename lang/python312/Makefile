@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2026/03/20 14:01:10 adam Exp $
+# $NetBSD: Makefile,v 1.36 2026/03/25 22:52:08 wiz Exp $
 
 .include "dist.mk"
 
@@ -250,7 +250,9 @@ CONFIGURE_ENV+=		ac_cv_lib_intl_textdomain=yes
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.if ${OPSYS} == NetBSD && ${OPSYS_VERSION} < 119905
 PREFER.expat=	pkgsrc # needs expat_config.h
+.endif
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
