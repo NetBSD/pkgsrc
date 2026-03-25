@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1847 2026/03/25 23:01:11 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1848 2026/03/25 23:01:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2523,3 +2523,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated parallel/opencl-clang to 20.1.2 [wiz 2026-03-25]
 	Updated parallel/spirv-headers to 1.4.335.0 [wiz 2026-03-25]
 	Updated parallel/spirv-llvm-translator to 20.1.10 [wiz 2026-03-25]
+	Updated parallel/spirv-tools to 2025.5 [wiz 2026-03-25]
