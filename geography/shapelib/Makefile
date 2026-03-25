@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/09/23 22:16:52 gdt Exp $
+# $NetBSD: Makefile,v 1.13 2026/03/25 23:34:15 gdt Exp $
 
-VERSION=		1.6.2
+VERSION=		1.6.3
 #VERSION_RC=		rc2
 DISTNAME=		shapelib-${VERSION}${VERSION_RC}
 CATEGORIES=		geography
@@ -22,12 +22,8 @@ USE_LIBTOOL=		YES
 # BSD make tries to build things that need shplib.la before it is built.
 USE_TOOLS+=		gmake
 
-# Earlier, we installed only some things, perhaps because there were a
-# lot of binaries with non-namespaced names.  Now, we patch out
-# contrib, and the set of installed binaries seems reasonable.
-# \todo Perhaps revisit this, if upstream addreses
+# We patch out contrib.   Resolve this with upstream:
 #   https://github.com/OSGeo/shapelib/issues/151
-#INSTALL_TARGET=		install-libLTLIBRARIES install-libshp_la_includeHEADERS install-pkgconfigDATA
 
 TEST_TARGET=		check
 
