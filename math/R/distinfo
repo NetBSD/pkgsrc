@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.114 2026/02/16 23:44:02 mef Exp $
+$NetBSD: distinfo,v 1.115 2026/03/25 01:47:18 maya Exp $
 
 BLAKE2s (R-4.5.2.tar.gz) = 89aaf25d047df226ec7340bf5550db5223163bec0b5ff1d5a3bfae691aa2106a
 SHA512 (R-4.5.2.tar.gz) = abc4ff1a1b18a1f480e7bceb3267074e30453b5a571034b4c2a1c53e1650a1bafaf86bc6ca37f117a2e4f6617039dedeedef4ba8743f38720fc70e4bed2ff0a4
 Size (R-4.5.2.tar.gz) = 40546249 bytes
-SHA1 (patch-configure.ac) = 61904b7918019204634d61bce2421c01c81ed640
+SHA1 (patch-configure.ac) = 9d5d4d33a5150493812b4eb8a4991a3f5d1161c8
 SHA1 (patch-src_extra_xdr_xdr__mem.c) = 2e607b070db8b24a6ad5501e9c7c1549bf1b1d82
 SHA1 (patch-src_extra_xdr_xdr__stdio.c) = 91ea16599693e9dc14e631880fbe1c52f0f2009f
 SHA1 (patch-src_include_R__ext_Error.h) = 2d1eaebff5e57d73d301f7e818daa0b959a5c0f2

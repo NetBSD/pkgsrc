@@ -1,4 +1,6 @@
-$NetBSD: patch-configure.ac,v 1.14 2026/02/16 23:44:02 mef Exp $
+$NetBSD: patch-configure.ac,v 1.15 2026/03/25 01:47:18 maya Exp $
+
+Fix Darwin -install_name path for libR.dylib
 
 on NetBSD/amd64 9.4: getting
 
@@ -20,9 +22,9 @@ release    line #
 10.99.12   4770   withval=$with_blas; if test "${withval}" = no; then
  9.3       4392   withval=$with_blas; R_ARG_USE(blas)
 
---- configure.ac	2026-01-03 17:00:22.984847292 +0900
-+++ configure.ac	2026-01-03 17:00:22.984847292 +0900
-@@ -33,6 +33,7 @@
+--- configure.ac.orig	2025-04-20 22:15:02.000000000 +0000
++++ configure.ac
+@@ -33,6 +33,7 @@ m4_define([R_VERSION],
  AC_INIT([R],[R_VERSION],[https://bugs.r-project.org],[R],[https://www.r-project.org])
  AC_CONFIG_SRCDIR([src/include/Defn.h])
  AC_CONFIG_AUX_DIR([tools])
@@ -30,7 +32,7 @@ release    line #
  
  ### * Information on the package.
  
-@@ -317,6 +318,8 @@
+@@ -322,6 +323,8 @@ AC_ARG_ENABLE([BLAS-shlib],
  ## As from R 3.2.0 split up -L... and -lR
  if test "${want_R_shlib}" = yes; then
    LIBR0="-L\"\$(R_HOME)/lib\$(R_ARCH)\""
@@ -39,3 +41,14 @@ release    line #
    LIBR1=-lR
  else
    LIBR0=
+@@ -1864,8 +1867,8 @@ dnl     ;;
+     DYLIB_EXT=".dylib"
+     dylib_ldflags="${darwin_dylib_ldflags}"
+     MAJR_VERSION=`echo "${PACKAGE_VERSION}" | sed  -e "s/[[\.]][[1-9]]$/.0/"` 
+-    LIBR_LDFLAGS="-install_name libR.dylib -compatibility_version ${MAJR_VERSION}  -current_version ${PACKAGE_VERSION}  -headerpad_max_install_names"
+-    RLAPACK_LDFLAGS="-install_name libRlapack.dylib -compatibility_version ${MAJR_VERSION} -current_version ${PACKAGE_VERSION}  -headerpad_max_install_names"
++    LIBR_LDFLAGS="-install_name ${PREFIX}/lib/R/lib/libR.dylib -compatibility_version ${MAJR_VERSION}  -current_version ${PACKAGE_VERSION}  -headerpad_max_install_names"
++    RLAPACK_LDFLAGS="-install_name ${PREFIX}/lib/R/lib/libRlapack.dylib -compatibility_version ${MAJR_VERSION} -current_version ${PACKAGE_VERSION}  -headerpad_max_install_names"
+     ## don't use version in libRblas so we can replace it with any BLAS implementation
+     RBLAS_LDFLAGS="-install_name libRblas.dylib -headerpad_max_install_names"
+     ;;
