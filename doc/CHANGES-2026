@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1834 2026/03/25 18:49:35 maya Exp $
+$NetBSD: CHANGES-2026,v 1.1835 2026/03/25 21:59:44 maya Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2495,3 +2495,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nodejs24 to 24.14.1 [adam 2026-03-25]
 	Updated lang/nodejs22 to 22.22.2 [adam 2026-03-25]
 	Updated lang/nodejs20 to 20.20.2 [adam 2026-03-25]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2026Q1 branch [maya 2026-03-25]
