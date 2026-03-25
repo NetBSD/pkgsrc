@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26963 2026/03/24 13:18:18 wiz Exp $
+$NetBSD: TODO,v 1.26964 2026/03/25 22:45:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -827,6 +827,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o knot-resolver-1.1.1
 	o kodi-16.1
 	o kqtquickcharts4-20.12.3
+	o krita-6.0
 	o kronolith-4.2.14
 	o ktorrent3-3.3.4
 	o latexmk-486
@@ -971,6 +972,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o nsca-ng-1.6
+	o nss-3.122.0 [wiz]
 	o ntop-5.0
 	o nts-82
 	o nuitka-0.6.14.4
@@ -1000,6 +1002,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o olvwm-4.5
 	o oo2c-2.1.11
 	o opal-3.16.2
+	o openblas-0.3.32
 	o opencl-3.0.19
 	o opencpn-5.12.4
 	o opencpn-plugin-draw-1.8.5.2
