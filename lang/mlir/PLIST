@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/05/09 05:51:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/03/25 22:56:27 wiz Exp $
 bin/mlir-tblgen
 include/mlir-c/AffineExpr.h
 include/mlir-c/AffineMap.h
@@ -12,6 +12,7 @@ include/mlir-c/Dialect/AMDGPU.h
 include/mlir-c/Dialect/Arith.h
 include/mlir-c/Dialect/Async.h
 include/mlir-c/Dialect/ControlFlow.h
+include/mlir-c/Dialect/EmitC.h
 include/mlir-c/Dialect/Func.h
 include/mlir-c/Dialect/GPU.h
 include/mlir-c/Dialect/IRDL.h
@@ -71,11 +72,16 @@ include/mlir/Analysis/Presburger/QuasiPolynomial.h
 include/mlir/Analysis/Presburger/Simplex.h
 include/mlir/Analysis/Presburger/Utils.h
 include/mlir/Analysis/SliceAnalysis.h
+include/mlir/Analysis/SliceWalk.h
 include/mlir/Analysis/SymbolTableAnalysis.h
 include/mlir/Analysis/TopologicalSortUtils.h
 include/mlir/AsmParser/AsmParser.h
 include/mlir/AsmParser/AsmParserState.h
 include/mlir/AsmParser/CodeComplete.h
+include/mlir/Bindings/Python/Diagnostics.h
+include/mlir/Bindings/Python/IRTypes.h
+include/mlir/Bindings/Python/Nanobind.h
+include/mlir/Bindings/Python/NanobindAdaptors.h
 include/mlir/Bindings/Python/PybindAdaptors.h
 include/mlir/Bytecode/BytecodeImplementation.h
 include/mlir/Bytecode/BytecodeOpInterface.cpp.inc
@@ -123,7 +129,12 @@ include/mlir/Conversion/ControlFlowToLLVM/ControlFlowToLLVM.h
 include/mlir/Conversion/ControlFlowToSCF/ControlFlowToSCF.h
 include/mlir/Conversion/ControlFlowToSPIRV/ControlFlowToSPIRV.h
 include/mlir/Conversion/ControlFlowToSPIRV/ControlFlowToSPIRVPass.h
+include/mlir/Conversion/ConvertToLLVM/ToLLVMAttrInterface.cpp.inc
+include/mlir/Conversion/ConvertToLLVM/ToLLVMAttrInterface.h.inc
 include/mlir/Conversion/ConvertToLLVM/ToLLVMInterface.h
+include/mlir/Conversion/ConvertToLLVM/ToLLVMInterface.td
+include/mlir/Conversion/ConvertToLLVM/ToLLVMOpInterface.cpp.inc
+include/mlir/Conversion/ConvertToLLVM/ToLLVMOpInterface.h.inc
 include/mlir/Conversion/ConvertToLLVM/ToLLVMPass.h
 include/mlir/Conversion/ConvertToSPIRV/ConvertToSPIRVPass.h
 include/mlir/Conversion/FuncToEmitC/FuncToEmitC.h
@@ -132,14 +143,16 @@ include/mlir/Conversion/FuncToLLVM/ConvertFuncToLLVM.h
 include/mlir/Conversion/FuncToLLVM/ConvertFuncToLLVMPass.h
 include/mlir/Conversion/FuncToSPIRV/FuncToSPIRV.h
 include/mlir/Conversion/FuncToSPIRV/FuncToSPIRVPass.h
+include/mlir/Conversion/GPUCommon/AttrToSPIRVConverter.h
 include/mlir/Conversion/GPUCommon/GPUCommonPass.h
+include/mlir/Conversion/GPUCommon/GPUToLLVM.h
 include/mlir/Conversion/GPUToLLVMSPV/GPUToLLVMSPVPass.h
+include/mlir/Conversion/GPUToNVVM/GPUToNVVM.h
 include/mlir/Conversion/GPUToNVVM/GPUToNVVMPass.h
 include/mlir/Conversion/GPUToROCDL/GPUToROCDLPass.h
 include/mlir/Conversion/GPUToROCDL/Runtimes.h
 include/mlir/Conversion/GPUToSPIRV/GPUToSPIRV.h
 include/mlir/Conversion/GPUToSPIRV/GPUToSPIRVPass.h
-include/mlir/Conversion/GPUToVulkan/ConvertGPUToVulkanPass.h
 include/mlir/Conversion/IndexToLLVM/IndexToLLVM.h
 include/mlir/Conversion/IndexToSPIRV/IndexToSPIRV.h
 include/mlir/Conversion/LLVMCommon/ConversionTarget.h
@@ -151,6 +164,8 @@ include/mlir/Conversion/LLVMCommon/StructBuilder.h
 include/mlir/Conversion/LLVMCommon/TypeConverter.h
 include/mlir/Conversion/LLVMCommon/VectorPattern.h
 include/mlir/Conversion/LinalgToStandard/LinalgToStandard.h
+include/mlir/Conversion/MathToEmitC/MathToEmitC.h
+include/mlir/Conversion/MathToEmitC/MathToEmitCPass.h
 include/mlir/Conversion/MathToFuncs/MathToFuncs.h
 include/mlir/Conversion/MathToLLVM/MathToLLVM.h
 include/mlir/Conversion/MathToLibm/MathToLibm.h
@@ -163,6 +178,7 @@ include/mlir/Conversion/MemRefToLLVM/AllocLikeConversion.h
 include/mlir/Conversion/MemRefToLLVM/MemRefToLLVM.h
 include/mlir/Conversion/MemRefToSPIRV/MemRefToSPIRV.h
 include/mlir/Conversion/MemRefToSPIRV/MemRefToSPIRVPass.h
+include/mlir/Conversion/MeshToMPI/MeshToMPI.h
 include/mlir/Conversion/NVGPUToNVVM/NVGPUToNVVM.h
 include/mlir/Conversion/NVVMToLLVM/NVVMToLLVM.h
 include/mlir/Conversion/OpenACCToSCF/ConvertOpenACCToSCF.h
@@ -181,6 +197,7 @@ include/mlir/Conversion/SCFToGPU/SCFToGPUPass.h
 include/mlir/Conversion/SCFToOpenMP/SCFToOpenMP.h
 include/mlir/Conversion/SCFToSPIRV/SCFToSPIRV.h
 include/mlir/Conversion/SCFToSPIRV/SCFToSPIRVPass.h
+include/mlir/Conversion/SPIRVCommon/AttrToLLVMConverter.h
 include/mlir/Conversion/SPIRVToLLVM/SPIRVToLLVM.h
 include/mlir/Conversion/SPIRVToLLVM/SPIRVToLLVMPass.h
 include/mlir/Conversion/ShapeToStandard/ShapeToStandard.h
@@ -202,6 +219,7 @@ include/mlir/Conversion/VectorToLLVM/ConvertVectorToLLVMPass.h
 include/mlir/Conversion/VectorToSCF/VectorToSCF.h
 include/mlir/Conversion/VectorToSPIRV/VectorToSPIRV.h
 include/mlir/Conversion/VectorToSPIRV/VectorToSPIRVPass.h
+include/mlir/Conversion/VectorToXeGPU/VectorToXeGPU.h
 include/mlir/Debug/BreakpointManager.h
 include/mlir/Debug/BreakpointManagers/FileLineColLocBreakpointManager.h
 include/mlir/Debug/BreakpointManagers/TagBreakpointManager.h
@@ -448,6 +466,10 @@ include/mlir/Dialect/DLTI/DLTIDialect.h.inc
 include/mlir/Dialect/DLTI/DLTITypes.cpp.inc
 include/mlir/Dialect/DLTI/DLTITypes.h.inc
 include/mlir/Dialect/DLTI/Traits.h
+include/mlir/Dialect/DLTI/TransformOps/DLTITransformOps.cpp.inc
+include/mlir/Dialect/DLTI/TransformOps/DLTITransformOps.h
+include/mlir/Dialect/DLTI/TransformOps/DLTITransformOps.h.inc
+include/mlir/Dialect/DLTI/TransformOps/DLTITransformOps.td
 include/mlir/Dialect/EmitC/IR/EmitC.cpp.inc
 include/mlir/Dialect/EmitC/IR/EmitC.h
 include/mlir/Dialect/EmitC/IR/EmitC.h.inc
@@ -482,7 +504,6 @@ include/mlir/Dialect/Func/TransformOps/FuncTransformOps.cpp.inc
 include/mlir/Dialect/Func/TransformOps/FuncTransformOps.h
 include/mlir/Dialect/Func/TransformOps/FuncTransformOps.h.inc
 include/mlir/Dialect/Func/TransformOps/FuncTransformOps.td
-include/mlir/Dialect/Func/Transforms/DecomposeCallGraphTypes.h
 include/mlir/Dialect/Func/Transforms/FuncConversions.h
 include/mlir/Dialect/Func/Transforms/OneToNFuncConversions.h
 include/mlir/Dialect/Func/Transforms/Passes.h
@@ -514,6 +535,7 @@ include/mlir/Dialect/GPU/IR/GPUOpsTypes.h.inc
 include/mlir/Dialect/GPU/IR/ParallelLoopMapperAttr.td
 include/mlir/Dialect/GPU/IR/ParallelLoopMapperEnums.cpp.inc
 include/mlir/Dialect/GPU/IR/ParallelLoopMapperEnums.h.inc
+include/mlir/Dialect/GPU/IR/ValueBoundsOpInterfaceImpl.h
 include/mlir/Dialect/GPU/Pipelines/Passes.h
 include/mlir/Dialect/GPU/TransformOps/GPUTransformOps.cpp.inc
 include/mlir/Dialect/GPU/TransformOps/GPUTransformOps.h
@@ -528,7 +550,8 @@ include/mlir/Dialect/GPU/Transforms/Passes.capi.h.inc
 include/mlir/Dialect/GPU/Transforms/Passes.h
 include/mlir/Dialect/GPU/Transforms/Passes.h.inc
 include/mlir/Dialect/GPU/Transforms/Passes.td
-include/mlir/Dialect/GPU/Transforms/Utils.h
+include/mlir/Dialect/GPU/Utils/DistributionUtils.h
+include/mlir/Dialect/GPU/Utils/GPUUtils.h
 include/mlir/Dialect/IRDL/IR/IRDL.cpp.inc
 include/mlir/Dialect/IRDL/IR/IRDL.h
 include/mlir/Dialect/IRDL/IR/IRDL.h.inc
@@ -643,6 +666,7 @@ include/mlir/Dialect/LLVMIR/ROCDLOpsTypes.h.inc
 include/mlir/Dialect/LLVMIR/Transforms/AddComdats.h
 include/mlir/Dialect/LLVMIR/Transforms/DIExpressionLegalization.h
 include/mlir/Dialect/LLVMIR/Transforms/DIExpressionRewriter.h
+include/mlir/Dialect/LLVMIR/Transforms/InlinerInterfaceImpl.h
 include/mlir/Dialect/LLVMIR/Transforms/LegalizeForExport.h
 include/mlir/Dialect/LLVMIR/Transforms/OptimizeForNVVM.h
 include/mlir/Dialect/LLVMIR/Transforms/Passes.h
@@ -801,6 +825,8 @@ include/mlir/Dialect/Mesh/IR/MeshOps.cpp.inc
 include/mlir/Dialect/Mesh/IR/MeshOps.h
 include/mlir/Dialect/Mesh/IR/MeshOps.h.inc
 include/mlir/Dialect/Mesh/IR/MeshOps.td
+include/mlir/Dialect/Mesh/IR/MeshTypes.cpp.inc
+include/mlir/Dialect/Mesh/IR/MeshTypes.h.inc
 include/mlir/Dialect/Mesh/Interfaces/ShardingInterface.cpp.inc
 include/mlir/Dialect/Mesh/Interfaces/ShardingInterface.h
 include/mlir/Dialect/Mesh/Interfaces/ShardingInterface.h.inc
@@ -850,6 +876,9 @@ include/mlir/Dialect/OpenACC/OpenACCOpsDialect.cpp.inc
 include/mlir/Dialect/OpenACC/OpenACCOpsDialect.h.inc
 include/mlir/Dialect/OpenACC/OpenACCOpsEnums.cpp.inc
 include/mlir/Dialect/OpenACC/OpenACCOpsEnums.h.inc
+include/mlir/Dialect/OpenACC/OpenACCOpsInterfaces.cpp.inc
+include/mlir/Dialect/OpenACC/OpenACCOpsInterfaces.h.inc
+include/mlir/Dialect/OpenACC/OpenACCOpsInterfaces.td
 include/mlir/Dialect/OpenACC/OpenACCOpsTypes.cpp.inc
 include/mlir/Dialect/OpenACC/OpenACCOpsTypes.h.inc
 include/mlir/Dialect/OpenACC/OpenACCOpsTypes.td
@@ -870,6 +899,7 @@ include/mlir/Dialect/OpenACCMPCommon/Interfaces/OpenACCMPOpsInterfaces.td
 include/mlir/Dialect/OpenMP/OmpCommon.td
 include/mlir/Dialect/OpenMP/OpenMPAttrDefs.td
 include/mlir/Dialect/OpenMP/OpenMPClauseOperands.h
+include/mlir/Dialect/OpenMP/OpenMPClauseOps.h.inc
 include/mlir/Dialect/OpenMP/OpenMPClauses.td
 include/mlir/Dialect/OpenMP/OpenMPDialect.h
 include/mlir/Dialect/OpenMP/OpenMPDialect.td
@@ -945,20 +975,23 @@ include/mlir/Dialect/Ptr/IR/PtrOpsDialect.h.inc
 include/mlir/Dialect/Ptr/IR/PtrOpsTypes.cpp.inc
 include/mlir/Dialect/Ptr/IR/PtrOpsTypes.h.inc
 include/mlir/Dialect/Ptr/IR/PtrTypes.h
-include/mlir/Dialect/Quant/FakeQuantSupport.h
-include/mlir/Dialect/Quant/QuantDialectBytecode.cpp.inc
-include/mlir/Dialect/Quant/QuantDialectBytecode.td
-include/mlir/Dialect/Quant/QuantOps.cpp.inc
-include/mlir/Dialect/Quant/QuantOps.h
-include/mlir/Dialect/Quant/QuantOps.h.inc
-include/mlir/Dialect/Quant/QuantOps.td
-include/mlir/Dialect/Quant/QuantOpsBase.td
-include/mlir/Dialect/Quant/QuantOpsDialect.cpp.inc
-include/mlir/Dialect/Quant/QuantOpsDialect.h.inc
-include/mlir/Dialect/Quant/QuantOpsTypes.cpp.inc
-include/mlir/Dialect/Quant/QuantOpsTypes.h.inc
-include/mlir/Dialect/Quant/QuantTypes.h
-include/mlir/Dialect/Quant/UniformSupport.h
+include/mlir/Dialect/Quant/IR/Quant.h
+include/mlir/Dialect/Quant/IR/QuantBase.td
+include/mlir/Dialect/Quant/IR/QuantDialectBytecode.cpp.inc
+include/mlir/Dialect/Quant/IR/QuantDialectBytecode.td
+include/mlir/Dialect/Quant/IR/QuantOps.cpp.inc
+include/mlir/Dialect/Quant/IR/QuantOps.h.inc
+include/mlir/Dialect/Quant/IR/QuantOps.td
+include/mlir/Dialect/Quant/IR/QuantOpsDialect.cpp.inc
+include/mlir/Dialect/Quant/IR/QuantOpsDialect.h.inc
+include/mlir/Dialect/Quant/IR/QuantOpsTypes.cpp.inc
+include/mlir/Dialect/Quant/IR/QuantOpsTypes.h.inc
+include/mlir/Dialect/Quant/IR/QuantTypes.h
+include/mlir/Dialect/Quant/Transforms/Passes.h
+include/mlir/Dialect/Quant/Transforms/Passes.h.inc
+include/mlir/Dialect/Quant/Transforms/Passes.td
+include/mlir/Dialect/Quant/Utils/FakeQuantSupport.h
+include/mlir/Dialect/Quant/Utils/UniformSupport.h
 include/mlir/Dialect/SCF/IR/DeviceMappingAttrInterface.cpp.inc
 include/mlir/Dialect/SCF/IR/DeviceMappingAttrInterface.h.inc
 include/mlir/Dialect/SCF/IR/DeviceMappingAttributes.cpp.inc
@@ -1019,7 +1052,6 @@ include/mlir/Dialect/SPIRV/IR/SPIRVGroupOps.td
 include/mlir/Dialect/SPIRV/IR/SPIRVImageOps.td
 include/mlir/Dialect/SPIRV/IR/SPIRVIntegerDotProductOps.td
 include/mlir/Dialect/SPIRV/IR/SPIRVIntelExtOps.td
-include/mlir/Dialect/SPIRV/IR/SPIRVJointMatrixOps.td
 include/mlir/Dialect/SPIRV/IR/SPIRVLogicalOps.td
 include/mlir/Dialect/SPIRV/IR/SPIRVMatrixOps.td
 include/mlir/Dialect/SPIRV/IR/SPIRVMemoryOps.td
@@ -1035,6 +1067,7 @@ include/mlir/Dialect/SPIRV/IR/SPIRVOpsDialect.cpp.inc
 include/mlir/Dialect/SPIRV/IR/SPIRVOpsDialect.h.inc
 include/mlir/Dialect/SPIRV/IR/SPIRVOpsTypes.cpp.inc
 include/mlir/Dialect/SPIRV/IR/SPIRVOpsTypes.h.inc
+include/mlir/Dialect/SPIRV/IR/SPIRVPrimitiveOps.td
 include/mlir/Dialect/SPIRV/IR/SPIRVSerialization.inc
 include/mlir/Dialect/SPIRV/IR/SPIRVStructureOps.td
 include/mlir/Dialect/SPIRV/IR/SPIRVTypes.h
@@ -1096,6 +1129,9 @@ include/mlir/Dialect/SparseTensor/Transforms/Passes.h
 include/mlir/Dialect/SparseTensor/Transforms/Passes.h.inc
 include/mlir/Dialect/SparseTensor/Transforms/Passes.td
 include/mlir/Dialect/SparseTensor/Utils/Merger.h
+include/mlir/Dialect/Tensor/Extensions/AllExtensions.h
+include/mlir/Dialect/Tensor/Extensions/MeshShardingExtensions.h
+include/mlir/Dialect/Tensor/IR/ShardingInterfaceImpl.h
 include/mlir/Dialect/Tensor/IR/Tensor.h
 include/mlir/Dialect/Tensor/IR/TensorBase.td
 include/mlir/Dialect/Tensor/IR/TensorInferTypeOpInterfaceImpl.h
@@ -1137,6 +1173,9 @@ include/mlir/Dialect/Tosa/IR/TosaOpsDialect.cpp.inc
 include/mlir/Dialect/Tosa/IR/TosaOpsDialect.h.inc
 include/mlir/Dialect/Tosa/IR/TosaOpsTypes.cpp.inc
 include/mlir/Dialect/Tosa/IR/TosaOpsTypes.h.inc
+include/mlir/Dialect/Tosa/IR/TosaOpsTypesBase.cpp.inc
+include/mlir/Dialect/Tosa/IR/TosaOpsTypesBase.h.inc
+include/mlir/Dialect/Tosa/IR/TosaShapeOps.td
 include/mlir/Dialect/Tosa/IR/TosaTypesBase.td
 include/mlir/Dialect/Tosa/IR/TosaUtilOps.td
 include/mlir/Dialect/Tosa/Transforms/Passes.h
@@ -1345,6 +1384,8 @@ include/mlir/IR/BuiltinOps.cpp.inc
 include/mlir/IR/BuiltinOps.h
 include/mlir/IR/BuiltinOps.h.inc
 include/mlir/IR/BuiltinOps.td
+include/mlir/IR/BuiltinTypeConstraints.cpp.inc
+include/mlir/IR/BuiltinTypeConstraints.h.inc
 include/mlir/IR/BuiltinTypeInterfaces.cpp.inc
 include/mlir/IR/BuiltinTypeInterfaces.h
 include/mlir/IR/BuiltinTypeInterfaces.h.inc
@@ -1376,9 +1417,11 @@ include/mlir/IR/Location.h
 include/mlir/IR/MLIRContext.h
 include/mlir/IR/Matchers.h
 include/mlir/IR/ODSSupport.h
-include/mlir/IR/OpAsmInterface.cpp.inc
-include/mlir/IR/OpAsmInterface.h.inc
 include/mlir/IR/OpAsmInterface.td
+include/mlir/IR/OpAsmOpInterface.cpp.inc
+include/mlir/IR/OpAsmOpInterface.h.inc
+include/mlir/IR/OpAsmTypeInterface.cpp.inc
+include/mlir/IR/OpAsmTypeInterface.h.inc
 include/mlir/IR/OpBase.td
 include/mlir/IR/OpDefinition.h
 include/mlir/IR/OpImplementation.h
@@ -1415,6 +1458,7 @@ include/mlir/IR/UseDefLists.h
 include/mlir/IR/Utils.td
 include/mlir/IR/Value.h
 include/mlir/IR/ValueRange.h
+include/mlir/IR/VectorTypes.h
 include/mlir/IR/Verifier.h
 include/mlir/IR/Visitors.h
 include/mlir/InitAllDialects.h
@@ -1664,6 +1708,7 @@ include/mlir/Transforms/SROA.h
 include/mlir/Transforms/Transforms.capi.cpp.inc
 include/mlir/Transforms/Transforms.capi.h.inc
 include/mlir/Transforms/ViewOpGraph.h
+include/mlir/Transforms/WalkPatternRewriteDriver.h
 lib/cmake/mlir/AddMLIR.cmake
 lib/cmake/mlir/AddMLIRPython.cmake
 lib/cmake/mlir/MLIRConfig.cmake
@@ -1672,7 +1717,7 @@ lib/cmake/mlir/MLIRDetectPythonEnv.cmake
 lib/cmake/mlir/MLIRTargets-release.cmake
 lib/cmake/mlir/MLIRTargets.cmake
 lib/libMLIR-C.so
-lib/libMLIR-C.so.19.1
+lib/libMLIR-C.so.20.1
 lib/libMLIRAMDGPUDialect.a
 lib/libMLIRAMDGPUToROCDL.a
 lib/libMLIRAMDGPUTransforms.a
@@ -1728,6 +1773,7 @@ lib/libMLIRCAPIAsync.a
 lib/libMLIRCAPIControlFlow.a
 lib/libMLIRCAPIConversion.a
 lib/libMLIRCAPIDebug.a
+lib/libMLIRCAPIEmitC.a
 lib/libMLIRCAPIExecutionEngine.a
 lib/libMLIRCAPIFunc.a
 lib/libMLIRCAPIGPU.a
@@ -1774,6 +1820,7 @@ lib/libMLIRConvertToLLVMPass.a
 lib/libMLIRConvertToSPIRVPass.a
 lib/libMLIRCopyOpInterface.a
 lib/libMLIRDLTIDialect.a
+lib/libMLIRDLTITransformOps.a
 lib/libMLIRDataLayoutInterfaces.a
 lib/libMLIRDebug.a
 lib/libMLIRDerivedAttributeOpInterface.a
@@ -1803,9 +1850,9 @@ lib/libMLIRGPUToLLVMSPV.a
 lib/libMLIRGPUToNVVMTransforms.a
 lib/libMLIRGPUToROCDLTransforms.a
 lib/libMLIRGPUToSPIRV.a
-lib/libMLIRGPUToVulkanTransforms.a
 lib/libMLIRGPUTransformOps.a
 lib/libMLIRGPUTransforms.a
+lib/libMLIRGPUUtils.a
 lib/libMLIRIR.a
 lib/libMLIRIRDL.a
 lib/libMLIRIndexDialect.a
@@ -1835,6 +1882,7 @@ lib/libMLIRMPIDialect.a
 lib/libMLIRMaskableOpInterface.a
 lib/libMLIRMaskingOpInterface.a
 lib/libMLIRMathDialect.a
+lib/libMLIRMathToEmitC.a
 lib/libMLIRMathToFuncs.a
 lib/libMLIRMathToLLVM.a
 lib/libMLIRMathToLibm.a
@@ -1850,6 +1898,7 @@ lib/libMLIRMemRefTransforms.a
 lib/libMLIRMemRefUtils.a
 lib/libMLIRMemorySlotInterfaces.a
 lib/libMLIRMeshDialect.a
+lib/libMLIRMeshToMPI.a
 lib/libMLIRMeshTransforms.a
 lib/libMLIRMlirOptMain.a
 lib/libMLIRNVGPUDialect.a
@@ -1885,6 +1934,7 @@ lib/libMLIRPolynomialDialect.a
 lib/libMLIRPresburger.a
 lib/libMLIRPtrDialect.a
 lib/libMLIRQuantDialect.a
+lib/libMLIRQuantTransforms.a
 lib/libMLIRQuantUtils.a
 lib/libMLIRQuery.a
 lib/libMLIRQueryLib.a
@@ -1907,6 +1957,7 @@ lib/libMLIRSCFToSPIRV.a
 lib/libMLIRSCFTransformOps.a
 lib/libMLIRSCFTransforms.a
 lib/libMLIRSCFUtils.a
+lib/libMLIRSPIRVAttrToLLVMConversion.a
 lib/libMLIRSPIRVBinaryUtils.a
 lib/libMLIRSPIRVConversion.a
 lib/libMLIRSPIRVDeserialization.a
@@ -1939,8 +1990,10 @@ lib/libMLIRTargetLLVM.a
 lib/libMLIRTargetLLVMIRExport.a
 lib/libMLIRTargetLLVMIRImport.a
 lib/libMLIRTblgenLib.a
+lib/libMLIRTensorAllExtensions.a
 lib/libMLIRTensorDialect.a
 lib/libMLIRTensorInferTypeOpInterfaceImpl.a
+lib/libMLIRTensorMeshShardingExtensions.a
 lib/libMLIRTensorTilingInterfaceImpl.a
 lib/libMLIRTensorToLinalg.a
 lib/libMLIRTensorToSPIRV.a
@@ -1982,6 +2035,7 @@ lib/libMLIRVectorToLLVM.a
 lib/libMLIRVectorToLLVMPass.a
 lib/libMLIRVectorToSCF.a
 lib/libMLIRVectorToSPIRV.a
+lib/libMLIRVectorToXeGPU.a
 lib/libMLIRVectorTransformOps.a
 lib/libMLIRVectorTransforms.a
 lib/libMLIRVectorUtils.a
@@ -1992,14 +2046,14 @@ lib/libMLIRX86VectorTransforms.a
 lib/libMLIRXeGPUDialect.a
 lib/libMLIRXeGPUTransforms.a
 lib/libmlir_arm_runner_utils.so
-lib/libmlir_arm_runner_utils.so.19.1
+lib/libmlir_arm_runner_utils.so.20.1
 lib/libmlir_arm_sme_abi_stubs.so
-lib/libmlir_arm_sme_abi_stubs.so.19.1
+lib/libmlir_arm_sme_abi_stubs.so.20.1
 lib/libmlir_async_runtime.so
-lib/libmlir_async_runtime.so.19.1
+lib/libmlir_async_runtime.so.20.1
 lib/libmlir_c_runner_utils.so
-lib/libmlir_c_runner_utils.so.19.1
+lib/libmlir_c_runner_utils.so.20.1
 lib/libmlir_float16_utils.so
-lib/libmlir_float16_utils.so.19.1
+lib/libmlir_float16_utils.so.20.1
 lib/libmlir_runner_utils.so
-lib/libmlir_runner_utils.so.19.1
+lib/libmlir_runner_utils.so.20.1

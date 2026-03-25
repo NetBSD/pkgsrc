@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_Driver_ToolChains_Gnu.cpp,v 1.4 2024/07/07 14:00:21 wiz Exp $
+$NetBSD: patch-lib_Driver_ToolChains_Gnu.cpp,v 1.5 2026/03/25 22:56:25 wiz Exp $
 
 On SunOS always use the GCC that was used to build clang.
 
---- lib/Driver/ToolChains/Gnu.cpp.orig	2024-06-15 17:21:32.000000000 +0000
+--- lib/Driver/ToolChains/Gnu.cpp.orig	2026-02-21 07:22:27.510926289 +0000
 +++ lib/Driver/ToolChains/Gnu.cpp
-@@ -2382,6 +2382,11 @@ void Generic_GCC::GCCInstallationDetecto
+@@ -2348,6 +2348,11 @@ void Generic_GCC::GCCInstallationDetector::AddDefaultG
      // /usr/gcc/<version> as a prefix.
  
      SmallVector<std::pair<GCCVersion, std::string>, 8> SolarisPrefixes;

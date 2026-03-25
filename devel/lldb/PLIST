@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2025/06/12 06:51:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2026/03/25 22:56:25 wiz Exp $
 bin/lldb
 bin/lldb-argdumper
 bin/lldb-dap
@@ -50,6 +50,7 @@ include/lldb/API/SBPlatform.h
 include/lldb/API/SBProcess.h
 include/lldb/API/SBProcessInfo.h
 include/lldb/API/SBProcessInfoList.h
+include/lldb/API/SBProgress.h
 include/lldb/API/SBQueue.h
 include/lldb/API/SBQueueItem.h
 include/lldb/API/SBReproducer.h
@@ -155,21 +156,6 @@ include/lldb/Core/ThreadedCommunication.h
 include/lldb/Core/UniqueCStringMap.h
 include/lldb/Core/UserSettingsController.h
 include/lldb/Core/Value.h
-include/lldb/Core/ValueObject.h
-include/lldb/Core/ValueObjectCast.h
-include/lldb/Core/ValueObjectChild.h
-include/lldb/Core/ValueObjectConstResult.h
-include/lldb/Core/ValueObjectConstResultCast.h
-include/lldb/Core/ValueObjectConstResultChild.h
-include/lldb/Core/ValueObjectConstResultImpl.h
-include/lldb/Core/ValueObjectDynamicValue.h
-include/lldb/Core/ValueObjectList.h
-include/lldb/Core/ValueObjectMemory.h
-include/lldb/Core/ValueObjectRegister.h
-include/lldb/Core/ValueObjectSyntheticFilter.h
-include/lldb/Core/ValueObjectUpdater.h
-include/lldb/Core/ValueObjectVTable.h
-include/lldb/Core/ValueObjectVariable.h
 include/lldb/Core/dwarf.h
 include/lldb/DataFormatters/CXXFunctionPointer.h
 include/lldb/DataFormatters/DataVisualization.h
@@ -177,6 +163,7 @@ include/lldb/DataFormatters/DumpValueObjectOptions.h
 include/lldb/DataFormatters/FormatCache.h
 include/lldb/DataFormatters/FormatClasses.h
 include/lldb/DataFormatters/FormatManager.h
+include/lldb/DataFormatters/FormatterSection.h
 include/lldb/DataFormatters/FormattersContainer.h
 include/lldb/DataFormatters/FormattersHelpers.h
 include/lldb/DataFormatters/LanguageCategory.h
@@ -250,6 +237,7 @@ include/lldb/Host/Terminal.h
 include/lldb/Host/ThreadLauncher.h
 include/lldb/Host/Time.h
 include/lldb/Host/XML.h
+include/lldb/Host/aix/HostInfoAIX.h
 include/lldb/Host/android/HostInfoAndroid.h
 include/lldb/Host/common/GetOptInc.h
 include/lldb/Host/common/NativeBreakpointList.h
@@ -305,8 +293,10 @@ include/lldb/Interpreter/CommandOptionValidators.h
 include/lldb/Interpreter/CommandReturnObject.h
 include/lldb/Interpreter/Interfaces/OperatingSystemInterface.h
 include/lldb/Interpreter/Interfaces/ScriptedInterface.h
+include/lldb/Interpreter/Interfaces/ScriptedInterfaceUsages.h
 include/lldb/Interpreter/Interfaces/ScriptedPlatformInterface.h
 include/lldb/Interpreter/Interfaces/ScriptedProcessInterface.h
+include/lldb/Interpreter/Interfaces/ScriptedStopHookInterface.h
 include/lldb/Interpreter/Interfaces/ScriptedThreadInterface.h
 include/lldb/Interpreter/Interfaces/ScriptedThreadPlanInterface.h
 include/lldb/Interpreter/OptionArgParser.h
@@ -392,6 +382,7 @@ include/lldb/Symbol/VariableList.h
 include/lldb/Target/ABI.h
 include/lldb/Target/AppleArm64ExceptionClass.h
 include/lldb/Target/AssertFrameRecognizer.h
+include/lldb/Target/CoreFileMemoryRanges.h
 include/lldb/Target/DynamicLoader.h
 include/lldb/Target/DynamicRegisterInfo.h
 include/lldb/Target/ExecutionContext.h
@@ -426,6 +417,7 @@ include/lldb/Target/RegisterNumber.h
 include/lldb/Target/RegisterTypeBuilder.h
 include/lldb/Target/RemoteAwarePlatform.h
 include/lldb/Target/Runtime.h
+include/lldb/Target/ScriptedThreadPlan.h
 include/lldb/Target/SectionLoadHistory.h
 include/lldb/Target/SectionLoadList.h
 include/lldb/Target/StackFrame.h
@@ -447,9 +439,9 @@ include/lldb/Target/ThreadPlanCallFunction.h
 include/lldb/Target/ThreadPlanCallFunctionUsingABI.h
 include/lldb/Target/ThreadPlanCallOnFunctionExit.h
 include/lldb/Target/ThreadPlanCallUserExpression.h
-include/lldb/Target/ThreadPlanPython.h
 include/lldb/Target/ThreadPlanRunToAddress.h
 include/lldb/Target/ThreadPlanShouldStopHere.h
+include/lldb/Target/ThreadPlanSingleThreadTimeout.h
 include/lldb/Target/ThreadPlanStack.h
 include/lldb/Target/ThreadPlanStepInRange.h
 include/lldb/Target/ThreadPlanStepInstruction.h
@@ -461,6 +453,7 @@ include/lldb/Target/ThreadPlanStepThrough.h
 include/lldb/Target/ThreadPlanStepUntil.h
 include/lldb/Target/ThreadPlanTracer.h
 include/lldb/Target/ThreadSpec.h
+include/lldb/Target/TimeoutResumeAll.h
 include/lldb/Target/Trace.h
 include/lldb/Target/TraceCursor.h
 include/lldb/Target/TraceDumper.h
@@ -488,6 +481,7 @@ include/lldb/Utility/DataBufferLLVM.h
 include/lldb/Utility/DataEncoder.h
 include/lldb/Utility/DataExtractor.h
 include/lldb/Utility/Diagnostics.h
+include/lldb/Utility/DiagnosticsRendering.h
 include/lldb/Utility/Endian.h
 include/lldb/Utility/Environment.h
 include/lldb/Utility/ErrorMessages.h
@@ -508,6 +502,7 @@ include/lldb/Utility/OptionDefinition.h
 include/lldb/Utility/Predicate.h
 include/lldb/Utility/ProcessInfo.h
 include/lldb/Utility/RangeMap.h
+include/lldb/Utility/RealpathPrefixes.h
 include/lldb/Utility/RegisterValue.h
 include/lldb/Utility/RegularExpression.h
 include/lldb/Utility/Scalar.h
@@ -541,6 +536,21 @@ include/lldb/Utility/VASPrintf.h
 include/lldb/Utility/VMRange.h
 include/lldb/Utility/XcodeSDK.h
 include/lldb/Utility/ZipFile.h
+include/lldb/ValueObject/ValueObject.h
+include/lldb/ValueObject/ValueObjectCast.h
+include/lldb/ValueObject/ValueObjectChild.h
+include/lldb/ValueObject/ValueObjectConstResult.h
+include/lldb/ValueObject/ValueObjectConstResultCast.h
+include/lldb/ValueObject/ValueObjectConstResultChild.h
+include/lldb/ValueObject/ValueObjectConstResultImpl.h
+include/lldb/ValueObject/ValueObjectDynamicValue.h
+include/lldb/ValueObject/ValueObjectList.h
+include/lldb/ValueObject/ValueObjectMemory.h
+include/lldb/ValueObject/ValueObjectRegister.h
+include/lldb/ValueObject/ValueObjectSyntheticFilter.h
+include/lldb/ValueObject/ValueObjectUpdater.h
+include/lldb/ValueObject/ValueObjectVTable.h
+include/lldb/ValueObject/ValueObjectVariable.h
 include/lldb/Version/Version.h
 include/lldb/lldb-defines.h
 include/lldb/lldb-enumerations.h
@@ -554,8 +564,8 @@ include/lldb/lldb-public.h
 include/lldb/lldb-types.h
 include/lldb/lldb-versioning.h
 lib/liblldb.so
-lib/liblldb.so.19.1
 lib/liblldb.so.${PKGVERSION}
+lib/liblldb.so.20.1
 lib/lua/${LUA_VERSION}/lldb.so
 ${PYSITELIB}/lldb/__init__.py
 ${PYSITELIB}/lldb/_lldb.so
