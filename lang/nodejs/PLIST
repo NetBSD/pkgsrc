@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.98 2026/03/04 07:04:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.99 2026/03/25 16:40:15 adam Exp $
 bin/node
 bin/npm
 bin/npx
@@ -659,6 +659,7 @@ lib/node_modules/npm/node_modules/@npmcli/arborist/lib/from-path.js
 lib/node_modules/npm/node_modules/@npmcli/arborist/lib/gather-dep-set.js
 lib/node_modules/npm/node_modules/@npmcli/arborist/lib/index.js
 lib/node_modules/npm/node_modules/@npmcli/arborist/lib/inventory.js
+lib/node_modules/npm/node_modules/@npmcli/arborist/lib/isolated-classes.js
 lib/node_modules/npm/node_modules/@npmcli/arborist/lib/link.js
 lib/node_modules/npm/node_modules/@npmcli/arborist/lib/node.js
 lib/node_modules/npm/node_modules/@npmcli/arborist/lib/optional-set.js
