@@ -1,19 +1,12 @@
-$NetBSD: distinfo,v 1.47 2025/05/09 05:53:52 adam Exp $
+$NetBSD: distinfo,v 1.48 2026/03/25 22:56:27 wiz Exp $
 
-BLAKE2s (cmake-19.1.7.src.tar.xz) = 420fe22b00305abc7924fd6cb58bc1ba1c17c6e79a6b51ffb406163db7f1805c
-SHA512 (cmake-19.1.7.src.tar.xz) = 3ff56e1a61dbace35d8c168ad5c94c5a09d92eb683494bfe1deabcb3640cf79b7422d44903d049d2298d54c2874f9a60c4f13f6795a3949e7eaefd5d42e62621
-Size (cmake-19.1.7.src.tar.xz) = 9300 bytes
-BLAKE2s (llvm-19.1.7.src.tar.xz) = 5a3e1c1d0dfcff66dd537c0c18c05cd968c11541fa5613504102fde25de325fc
-SHA512 (llvm-19.1.7.src.tar.xz) = 140275e35d2046fcbfc38241fed7bae92d34b761c09a5209e298a4241958a91e069dab76454efa32325d2f1205f0f0f25d886518533df55948a78b14e88b41a8
-Size (llvm-19.1.7.src.tar.xz) = 67828200 bytes
-BLAKE2s (runtimes-19.1.7.src.tar.xz) = 196d02c1a9acc62eb19e300df6e2213312b3522a518322dd7eab47559e0884e0
-SHA512 (runtimes-19.1.7.src.tar.xz) = 6b87dafe809b49560c72b9872f4e2795de70c66000af2272ad46fc044e5c88a3415aaa444f80d37946da14127cd4645b2a7420e3e184641215f415b709d801d8
-Size (runtimes-19.1.7.src.tar.xz) = 7224 bytes
+BLAKE2s (llvm-project-20.1.8.src.tar.xz) = c1587d5118d1d27f773127d6b72528b9d6f0eb78156b2679ebd4132369572e45
+SHA512 (llvm-project-20.1.8.src.tar.xz) = f330e72e6a1da468569049437cc0ba7a41abb816ccece7367189344f7ebfef730f4788ac7af2bef0aa8a49341c15ab1d31e941ffa782f264d11fe0dc05470773
+Size (llvm-project-20.1.8.src.tar.xz) = 147242952 bytes
 SHA1 (patch-CMakeLists.txt) = c53cef61bdaeaf5216b78330992357a632a2b0b2
 SHA1 (patch-cmake_config-ix.cmake) = f5cd0c949d35020d1051f95417e7944aa71a3d54
 SHA1 (patch-cmake_modules_AddLLVM.cmake) = 4e6668e0c3e13423ce3e19304f4ad60f66d41562
 SHA1 (patch-include_llvm-c_DataTypes.h) = ff547cae5bdf90c5a1371b9eb196e7537a03b18d
 SHA1 (patch-include_llvm_Analysis_ConstantFolding.h) = 0a8db4d876b749dd492fced6fbc8c4faf3ff2450
-SHA1 (patch-lib_Target_CSKY_MCTargetDesc_CSKYMCCodeEmitter.cpp) = a769f1533a136f9c50630e3219cafbf005e4e4e1
 SHA1 (patch-tools_llvm-shlib_CMakeLists.txt) = 4f3d0f527735126293519b42d7fd33dc41a910c2
 SHA1 (patch-utils_llvm-lit_CMakeLists.txt) = 8b18659fe7189c9077b0409e123d41c01e8c8610

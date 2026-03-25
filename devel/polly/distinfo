@@ -1,11 +1,5 @@
-$NetBSD: distinfo,v 1.33 2025/05/09 05:51:24 adam Exp $
+$NetBSD: distinfo,v 1.34 2026/03/25 22:56:25 wiz Exp $
 
-BLAKE2s (cmake-19.1.7.src.tar.xz) = 420fe22b00305abc7924fd6cb58bc1ba1c17c6e79a6b51ffb406163db7f1805c
-SHA512 (cmake-19.1.7.src.tar.xz) = 3ff56e1a61dbace35d8c168ad5c94c5a09d92eb683494bfe1deabcb3640cf79b7422d44903d049d2298d54c2874f9a60c4f13f6795a3949e7eaefd5d42e62621
-Size (cmake-19.1.7.src.tar.xz) = 9300 bytes
-BLAKE2s (polly-19.1.7.src.tar.xz) = df7da79b785e69934f650c605fe34f17e194ab7e6aa3a694f8e48df6d44f0e9f
-SHA512 (polly-19.1.7.src.tar.xz) = 7d2c5eeb1a4fd9951f469d847e550840a83cca026b27037448ed1ff86afd0174dcf2e5863bfd2546802d4d935b1cc499b4e9521014c0673ff09cbb8380b28da0
-Size (polly-19.1.7.src.tar.xz) = 9163308 bytes
-BLAKE2s (runtimes-19.1.7.src.tar.xz) = 196d02c1a9acc62eb19e300df6e2213312b3522a518322dd7eab47559e0884e0
-SHA512 (runtimes-19.1.7.src.tar.xz) = 6b87dafe809b49560c72b9872f4e2795de70c66000af2272ad46fc044e5c88a3415aaa444f80d37946da14127cd4645b2a7420e3e184641215f415b709d801d8
-Size (runtimes-19.1.7.src.tar.xz) = 7224 bytes
+BLAKE2s (llvm-project-20.1.8.src.tar.xz) = c1587d5118d1d27f773127d6b72528b9d6f0eb78156b2679ebd4132369572e45
+SHA512 (llvm-project-20.1.8.src.tar.xz) = f330e72e6a1da468569049437cc0ba7a41abb816ccece7367189344f7ebfef730f4788ac7af2bef0aa8a49341c15ab1d31e941ffa782f264d11fe0dc05470773
+Size (llvm-project-20.1.8.src.tar.xz) = 147242952 bytes

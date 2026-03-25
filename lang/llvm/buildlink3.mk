@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2025/06/29 21:10:47 bsiegert Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2026/03/25 22:56:27 wiz Exp $
 
 BUILDLINK_TREE+=	llvm
 
@@ -13,8 +13,7 @@ LLVM_BUILDLINK3_MK:=
 GCC_REQD+=		14
 .endif
 
-BUILDLINK_API_DEPENDS.llvm+=	llvm>=19.1.0
-BUILDLINK_ABI_DEPENDS.llvm?=	llvm>=19.1.7
+BUILDLINK_API_DEPENDS.llvm+=	llvm>=20.1.0
 BUILDLINK_PKGSRCDIR.llvm?=	../../lang/llvm
 
 LLVM_CONFIG_PATH?=		${BUILDLINK_PREFIX.llvm}/bin/llvm-config
@@ -36,8 +35,10 @@ BUILDLINK_FILES.llvm+=		bin/llvm-bitcode-strip
 BUILDLINK_FILES.llvm+=		bin/llvm-c-test
 BUILDLINK_FILES.llvm+=		bin/llvm-cat
 BUILDLINK_FILES.llvm+=		bin/llvm-cfi-verify
+BUILDLINK_FILES.llvm+=		bin/llvm-cgdata
 BUILDLINK_FILES.llvm+=		bin/llvm-config
 BUILDLINK_FILES.llvm+=		bin/llvm-cov
+BUILDLINK_FILES.llvm+=		bin/llvm-ctxprof-util
 BUILDLINK_FILES.llvm+=		bin/llvm-cvtres
 BUILDLINK_FILES.llvm+=		bin/llvm-cxxdump
 BUILDLINK_FILES.llvm+=		bin/llvm-cxxfilt

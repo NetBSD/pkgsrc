@@ -1,16 +1,7 @@
-$NetBSD: distinfo,v 1.26 2025/05/09 05:51:25 adam Exp $
+$NetBSD: distinfo,v 1.27 2026/03/25 22:56:26 wiz Exp $
 
-BLAKE2s (cmake-19.1.7.src.tar.xz) = 420fe22b00305abc7924fd6cb58bc1ba1c17c6e79a6b51ffb406163db7f1805c
-SHA512 (cmake-19.1.7.src.tar.xz) = 3ff56e1a61dbace35d8c168ad5c94c5a09d92eb683494bfe1deabcb3640cf79b7422d44903d049d2298d54c2874f9a60c4f13f6795a3949e7eaefd5d42e62621
-Size (cmake-19.1.7.src.tar.xz) = 9300 bytes
-BLAKE2s (libcxx-19.1.7.src.tar.xz) = 2b55587e75dc39ca13d12b5edd3bbb30a143a51ba34cd1fe4ae83365636f93f0
-SHA512 (libcxx-19.1.7.src.tar.xz) = 0b12b5e41ca6efda2f61a421084525de6c2726998907f641fc5d095579f858150cba0202f66a7c1f6010982610878c828bc80736c9e10ad2857fa7a3bc1dcc3c
-Size (libcxx-19.1.7.src.tar.xz) = 4718816 bytes
-BLAKE2s (libcxxabi-19.1.7.src.tar.xz) = d3e7a4d15ab26d9dca872b9f5b920f157e333b6535654203f030cc6ed4e2a19b
-SHA512 (libcxxabi-19.1.7.src.tar.xz) = 14b96835625f56fff34b2cebf7ed4dc9edb979ed4af3e0b685ea3f407ffd414e649182f8fba609a277d824cf1d092b8a26c99663c17ff4247367f0804df5bf95
-Size (libcxxabi-19.1.7.src.tar.xz) = 583696 bytes
-BLAKE2s (runtimes-19.1.7.src.tar.xz) = 196d02c1a9acc62eb19e300df6e2213312b3522a518322dd7eab47559e0884e0
-SHA512 (runtimes-19.1.7.src.tar.xz) = 6b87dafe809b49560c72b9872f4e2795de70c66000af2272ad46fc044e5c88a3415aaa444f80d37946da14127cd4645b2a7420e3e184641215f415b709d801d8
-Size (runtimes-19.1.7.src.tar.xz) = 7224 bytes
-SHA1 (patch-src_CMakeLists.txt) = 70e5937bcc1b06fd63f97fb33b06fc3c44e330e3
+BLAKE2s (llvm-project-20.1.8.src.tar.xz) = c1587d5118d1d27f773127d6b72528b9d6f0eb78156b2679ebd4132369572e45
+SHA512 (llvm-project-20.1.8.src.tar.xz) = f330e72e6a1da468569049437cc0ba7a41abb816ccece7367189344f7ebfef730f4788ac7af2bef0aa8a49341c15ab1d31e941ffa782f264d11fe0dc05470773
+Size (llvm-project-20.1.8.src.tar.xz) = 147242952 bytes
+SHA1 (patch-src_CMakeLists.txt) = fcfadc20db2c0c9095b8ae9b25a5988384209115
 SHA1 (patch-src_demangle_Utility.h) = 7a4850869f9f4ce858d2cceeb999934c28292a95

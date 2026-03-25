@@ -1,12 +1,12 @@
-$NetBSD: patch-libcxx_include_CMakeLists.txt,v 1.4 2025/05/09 05:51:26 adam Exp $
+$NetBSD: patch-libcxx_include_CMakeLists.txt,v 1.5 2026/03/25 22:56:28 wiz Exp $
 
 * Generate __config_site and __assertion_handler under source directory. This is wrong.
   This fixes non-pthreads wasi-libcxx-14.0.6 build.
 
---- libcxx/include/CMakeLists.txt.orig	2024-10-15 08:17:37.000000000 +0000
+--- libcxx/include/CMakeLists.txt.orig	2025-07-08 23:06:32.000000000 +0000
 +++ libcxx/include/CMakeLists.txt
-@@ -1018,9 +1018,13 @@ set(files
-   wctype.h
+@@ -2082,9 +2082,13 @@ set(files
+   __cxx03/wctype.h
    )
  
 +configure_file("__config_site.in" "${CMAKE_CURRENT_SOURCE_DIR}/__config_site" @ONLY)

@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/05/09 05:51:25 adam Exp $
-include/CMakeLists.txt
+@comment $NetBSD: PLIST,v 1.7 2026/03/25 22:56:27 wiz Exp $
 include/__libunwind_config.h
 include/libunwind.h
 include/libunwind.modulemap

@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2026/01/30 18:37:56 jakllsch Exp $
+# $NetBSD: Makefile,v 1.18 2026/03/25 22:56:26 wiz Exp $
 
-PKGREVISION= 2
 .include "../../lang/llvm/version.mk"
 
-DISTNAME=	flang-${LLVM_VERSION}.src
-PKGNAME=	${DISTNAME:S/.src//}
+PKGNAME=	flang-${LLVM_VERSION}
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
