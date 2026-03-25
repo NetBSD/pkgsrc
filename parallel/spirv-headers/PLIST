@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/09/23 09:30:31 tnn Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/03/25 23:00:44 wiz Exp $
 include/spirv/1.0/GLSL.std.450.h
 include/spirv/1.0/OpenCL.std.h
 include/spirv/1.0/extinst.glsl.std.450.grammar.json
@@ -40,6 +40,7 @@ include/spirv/unified1/AMD_gcn_shader.h
 include/spirv/unified1/AMD_shader_ballot.h
 include/spirv/unified1/AMD_shader_explicit_vertex_parameter.h
 include/spirv/unified1/AMD_shader_trinary_minmax.h
+include/spirv/unified1/ArmMotionEngine.100.h
 include/spirv/unified1/DebugInfo.h
 include/spirv/unified1/GLSL.std.450.h
 include/spirv/unified1/NonSemanticClspvReflection.h
@@ -50,6 +51,7 @@ include/spirv/unified1/NonSemanticVkspReflection.h
 include/spirv/unified1/OpenCL.std.h
 include/spirv/unified1/OpenCLDebugInfo100.h
 include/spirv/unified1/TOSA.001000.1.h
+include/spirv/unified1/extinst.arm.motion-engine.100.grammar.json
 include/spirv/unified1/extinst.debuginfo.grammar.json
 include/spirv/unified1/extinst.glsl.std.450.grammar.json
 include/spirv/unified1/extinst.nonsemantic.clspvreflection.grammar.json
