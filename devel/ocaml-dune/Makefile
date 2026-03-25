@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2026/03/01 12:38:23 gdt Exp $
+# $NetBSD: Makefile,v 1.20 2026/03/25 03:19:00 maya Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -22,10 +22,18 @@ CONFIGURE_ARGS=		--libdir ${PREFIX}/lib/ocaml --libdir ${PREFIX}/${OCAML_SITELIB
 
 BUILD_TARGET=		release
 MAKE_ENV+=		MAKE_JOBS=${MAKE_JOBS:U1}
-INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${OCAML_SITELIBDIR}/dune
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${OCAML_SITELIBDIR}/dune
 
 OCAML_USE_FINDLIB=	yes
 OCAML_FINDLIB_DIRS=	dune
+
+# The configure script has a `--mandir' option, but it doesn't seem to be respected.
+post-install:
+	@${STEP_MSG} Fixing man page installation directory
+.for section in man1 man5
+	${RUN} ${MV} ${DESTDIR}${PREFIX}/man/${section}/* \
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/${section}/ || ${TRUE}
+.endfor
 
 .include "../../lang/ocaml/ocaml.mk"
 
