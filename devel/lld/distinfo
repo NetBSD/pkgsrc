@@ -1,13 +1,7 @@
-$NetBSD: distinfo,v 1.25 2025/05/09 05:51:23 adam Exp $
+$NetBSD: distinfo,v 1.26 2026/03/25 22:56:24 wiz Exp $
 
-BLAKE2s (cmake-19.1.7.src.tar.xz) = 420fe22b00305abc7924fd6cb58bc1ba1c17c6e79a6b51ffb406163db7f1805c
-SHA512 (cmake-19.1.7.src.tar.xz) = 3ff56e1a61dbace35d8c168ad5c94c5a09d92eb683494bfe1deabcb3640cf79b7422d44903d049d2298d54c2874f9a60c4f13f6795a3949e7eaefd5d42e62621
-Size (cmake-19.1.7.src.tar.xz) = 9300 bytes
-BLAKE2s (lld-19.1.7.src.tar.xz) = 280a0a31f1789124da361df636c439a6e38d963970fb377ae792eb8a17e0aecb
-SHA512 (lld-19.1.7.src.tar.xz) = 346b556db83a2c50eba61e906b2255a77822a320e93b9e2b10d2d5c48e293080caa48b3eb203da13a6d94ba099766e2663aeb1e79a26c64c5396fd936bc036b5
-Size (lld-19.1.7.src.tar.xz) = 1645472 bytes
-BLAKE2s (runtimes-19.1.7.src.tar.xz) = 196d02c1a9acc62eb19e300df6e2213312b3522a518322dd7eab47559e0884e0
-SHA512 (runtimes-19.1.7.src.tar.xz) = 6b87dafe809b49560c72b9872f4e2795de70c66000af2272ad46fc044e5c88a3415aaa444f80d37946da14127cd4645b2a7420e3e184641215f415b709d801d8
-Size (runtimes-19.1.7.src.tar.xz) = 7224 bytes
+BLAKE2s (llvm-project-20.1.8.src.tar.xz) = c1587d5118d1d27f773127d6b72528b9d6f0eb78156b2679ebd4132369572e45
+SHA512 (llvm-project-20.1.8.src.tar.xz) = f330e72e6a1da468569049437cc0ba7a41abb816ccece7367189344f7ebfef730f4788ac7af2bef0aa8a49341c15ab1d31e941ffa782f264d11fe0dc05470773
+Size (llvm-project-20.1.8.src.tar.xz) = 147242952 bytes
 SHA1 (patch-ELF_Config.h) = 484d0818bd4a92f2faafa1337d3f2f08cab4c0fc
 SHA1 (patch-ELF_Options.td) = c81907d6e5e099ed2c26de972c6744b7197de3d3

@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2026/01/07 08:46:41 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2026/03/25 22:56:25 wiz Exp $
 
-PKGREVISION= 3
 .include "../../lang/llvm/version.mk"
 
-DISTNAME=	lldb-${LLVM_VERSION}.src
-PKGNAME=	${DISTNAME:S/.src//}
+PKGNAME=	lldb-${LLVM_VERSION}
 CATEGORIES=	devel lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,27 +12,28 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm
 DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../lang/clang
-DEPENDS+=	swig3>=3.0:../../devel/swig3
+#DEPENDS+=	swig3>=3.0:../../devel/swig3
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-USE_CXX_FEATURES=	c++14
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 GCC_REQD+=		7
 PY_PATCHPLIST=		yes
 
+# FIXME: currently build fails when libcxx is also installed.
 CMAKE_CONFIGURE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH:Q}
+#CMAKE_CONFIGURE_ARGS+=	-DLLVM_ENABLE_LIBCXX=ON
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 CMAKE_CONFIGURE_ARGS+=	-DHAVE_CXX_ATOMICS64_WITHOUT_LIB=ON
 CMAKE_CONFIGURE_ARGS+=	-DLLDB_CODESIGN_IDENTITY=""
-CMAKE_CONFIGURE_ARGS+=	-DLLDB_USE_SYSTEM_SIX=ON
 CMAKE_CONFIGURE_ARGS+=	-DPYTHON_HOME=${PREFIX}
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
-LUA_VERSIONS_ACCEPTED=	53
-PLIST_SUBST+=		LUA_VERSION=${LUA_VERSION:R}
+LUA_VERSIONS_INCOMPATIBLE=	51 52
+PLIST_SUBST+=			LUA_VERSION=${LUA_VERSION:R}
 
 REPLACE_PERL+=		scripts/disasm-gdb-remote.pl
 
@@ -75,11 +74,13 @@ NOT_FOR_PLATFORM+=	NetBSD-*-aarch64 NetBSD-*-powerpc
 .include "../../devel/swig4/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/clang/buildlink3.mk"
+#.include "../../lang/libcxx/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/tool.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

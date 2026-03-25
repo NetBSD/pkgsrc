@@ -1,23 +1,14 @@
-# $NetBSD: Makefile,v 1.40 2025/05/09 19:37:13 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/03/25 22:56:27 wiz Exp $
 
-PKGREVISION= 1
 .include "../../lang/llvm/version.mk"
 
-DISTNAME=	libunwind-${LLVM_VERSION}.src
-PKGNAME=	${DISTNAME:S/.src//}
+PKGNAME=	libunwind-${LLVM_VERSION}
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://libunwind.llvm.org/
 COMMENT=	LLVM libunwind
 LICENSE=	apache-2.0
-
-# libunwind requires libcxx source code to build
-LIBCXX=		libcxx-${LLVM_VERSION}.src
-EXTRA_DIST+=	${LIBCXX}${EXTRACT_SUFX}
-
-SITES.${LIBCXX}${EXTRACT_SUFX}=	\
-	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
@@ -36,12 +27,6 @@ GCC_REQD+=		10	# must be in sync with libcxx
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
 INSTALLATION_DIRS=	include
-
-post-extract:
-	${LN} -f -s ${WRKDIR}/${LIBCXX} ${WRKDIR}/libcxx
-
-post-install:
-	cd ${WRKSRC}/include && ${PAX} -rw . ${DESTDIR}${PREFIX}/include
 
 .include "../../devel/cmake/build.mk"
 BUILDLINK_DEPMETHOD.llvm=	build

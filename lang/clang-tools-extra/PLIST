@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.11 2025/05/09 05:51:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/03/25 22:56:25 wiz Exp $
 bin/clang-apply-replacements
 bin/clang-change-namespace
 bin/clang-doc
 bin/clang-include-cleaner
 bin/clang-include-fixer
 bin/clang-move
-bin/clang-pseudo
 bin/clang-query
 bin/clang-reorder-fields
 bin/clang-tidy
@@ -74,6 +73,7 @@ include/clang-tidy/bugprone/ArgumentCommentCheck.h
 include/clang-tidy/bugprone/AssertSideEffectCheck.h
 include/clang-tidy/bugprone/AssignmentInIfConditionCheck.h
 include/clang-tidy/bugprone/BadSignalToKillThreadCheck.h
+include/clang-tidy/bugprone/BitwisePointerCastCheck.h
 include/clang-tidy/bugprone/BoolPointerImplicitConversionCheck.h
 include/clang-tidy/bugprone/BranchCloneCheck.h
 include/clang-tidy/bugprone/CastingThroughVoidCheck.h
@@ -93,6 +93,7 @@ include/clang-tidy/bugprone/ImplicitWideningOfMultiplicationResultCheck.h
 include/clang-tidy/bugprone/InaccurateEraseCheck.h
 include/clang-tidy/bugprone/IncDecInConditionsCheck.h
 include/clang-tidy/bugprone/IncorrectEnableIfCheck.h
+include/clang-tidy/bugprone/IncorrectEnableSharedFromThisCheck.h
 include/clang-tidy/bugprone/IncorrectRoundingsCheck.h
 include/clang-tidy/bugprone/InfiniteLoopCheck.h
 include/clang-tidy/bugprone/IntegerDivisionCheck.h
@@ -106,8 +107,10 @@ include/clang-tidy/bugprone/MoveForwardingReferenceCheck.h
 include/clang-tidy/bugprone/MultiLevelImplicitPointerConversionCheck.h
 include/clang-tidy/bugprone/MultipleNewInOneExpressionCheck.h
 include/clang-tidy/bugprone/MultipleStatementMacroCheck.h
+include/clang-tidy/bugprone/NarrowingConversionsCheck.h
 include/clang-tidy/bugprone/NoEscapeCheck.h
 include/clang-tidy/bugprone/NonZeroEnumToBoolConversionCheck.h
+include/clang-tidy/bugprone/NondeterministicPointerIterationOrderCheck.h
 include/clang-tidy/bugprone/NotNullTerminatedResultCheck.h
 include/clang-tidy/bugprone/OptionalValueConversionCheck.h
 include/clang-tidy/bugprone/ParentVirtualCallCheck.h
@@ -139,6 +142,7 @@ include/clang-tidy/bugprone/SuspiciousStringCompareCheck.h
 include/clang-tidy/bugprone/SuspiciousStringviewDataUsageCheck.h
 include/clang-tidy/bugprone/SwappedArgumentsCheck.h
 include/clang-tidy/bugprone/SwitchMissingDefaultCaseCheck.h
+include/clang-tidy/bugprone/TaggedUnionMemberCountCheck.h
 include/clang-tidy/bugprone/TerminatingContinueCheck.h
 include/clang-tidy/bugprone/ThrowKeywordMissingCheck.h
 include/clang-tidy/bugprone/TooSmallLoopVariableCheck.h
@@ -180,7 +184,6 @@ include/clang-tidy/cppcoreguidelines/InterfacesGlobalInitCheck.h
 include/clang-tidy/cppcoreguidelines/MacroUsageCheck.h
 include/clang-tidy/cppcoreguidelines/MisleadingCaptureDefaultByValueCheck.h
 include/clang-tidy/cppcoreguidelines/MissingStdForwardCheck.h
-include/clang-tidy/cppcoreguidelines/NarrowingConversionsCheck.h
 include/clang-tidy/cppcoreguidelines/NoMallocCheck.h
 include/clang-tidy/cppcoreguidelines/NoSuspendWithLockCheck.h
 include/clang-tidy/cppcoreguidelines/OwningMemoryCheck.h
@@ -294,6 +297,7 @@ include/clang-tidy/modernize/UseDesignatedInitializersCheck.h
 include/clang-tidy/modernize/UseEmplaceCheck.h
 include/clang-tidy/modernize/UseEqualsDefaultCheck.h
 include/clang-tidy/modernize/UseEqualsDeleteCheck.h
+include/clang-tidy/modernize/UseIntegerSignComparisonCheck.h
 include/clang-tidy/modernize/UseNodiscardCheck.h
 include/clang-tidy/modernize/UseNoexceptCheck.h
 include/clang-tidy/modernize/UseNullptrCheck.h
@@ -344,6 +348,7 @@ include/clang-tidy/performance/UnnecessaryValueParamCheck.h
 include/clang-tidy/portability/RestrictSystemIncludesCheck.h
 include/clang-tidy/portability/SIMDIntrinsicsCheck.h
 include/clang-tidy/portability/StdAllocatorConstCheck.h
+include/clang-tidy/portability/TemplateVirtualMemberFunctionCheck.h
 include/clang-tidy/readability/AvoidConstParamsInDecls.h
 include/clang-tidy/readability/AvoidNestedConditionalOperatorCheck.h
 include/clang-tidy/readability/AvoidReturnWithVoidValueCheck.h
@@ -431,10 +436,6 @@ lib/libclangIncludeCleaner.a
 lib/libclangIncludeFixer.a
 lib/libclangIncludeFixerPlugin.a
 lib/libclangMove.a
-lib/libclangPseudo.a
-lib/libclangPseudoCLI.a
-lib/libclangPseudoCXX.a
-lib/libclangPseudoGrammar.a
 lib/libclangQuery.a
 lib/libclangReorderFields.a
 lib/libclangTidy.a
