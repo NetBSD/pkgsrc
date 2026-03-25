@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1836 2026/03/25 22:45:48 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1837 2026/03/25 22:48:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2497,3 +2497,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nodejs20 to 20.20.2 [adam 2026-03-25]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2026Q1 branch [maya 2026-03-25]
 	Updated devel/p5-Clone to 0.49 [wiz 2026-03-25]
+	Updated devel/nss to 3.122.0 [wiz 2026-03-25]
