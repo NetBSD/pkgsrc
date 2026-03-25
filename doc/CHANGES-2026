@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1850 2026/03/25 23:06:11 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1851 2026/03/25 23:14:34 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2526,3 +2526,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated parallel/spirv-llvm-translator to 20.1.10 [wiz 2026-03-25]
 	Updated parallel/spirv-tools to 2025.5 [wiz 2026-03-25]
 	Updated parallel/openmp to 20.1.8 [wiz 2026-03-25]
+	Updated chat/element-web to 1.12.12 [gdt 2026-03-25]
