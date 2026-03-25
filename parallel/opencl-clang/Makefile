@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2026/01/07 08:48:32 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/03/25 23:00:25 wiz Exp $
 
-DISTNAME=	opencl-clang-19.1.0
-PKGREVISION=	2
+DISTNAME=	opencl-clang-20.1.2
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=intel/}
-GITHUB_PROJECT=	opencl-clang	# do not remove this, it breaks cwrappers
+GITHUB_PROJECT=	opencl-clang
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,7 +15,7 @@ USE_CXX_FEATURES=	c++17
 FORCE_CXX_STD=		c++17
 USE_LANGUAGES=		c c++
 
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+CFLAGS+=		-I${PREFIX}/include/LLVMSPIRVLib
 
 BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--no-undefined
 BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,-Bsymbolic
