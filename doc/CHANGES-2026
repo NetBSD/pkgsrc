@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1838 2026/03/25 22:51:44 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.1839 2026/03/25 22:53:04 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2499,3 +2499,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Clone to 0.49 [wiz 2026-03-25]
 	Updated devel/nss to 3.122.0 [wiz 2026-03-25]
 	Updated x11/xfce4-panel to 4.20.7 [gutteridge 2026-03-25]
+	Updated meta-pkgs/xfce4 to 4.20.0nb15 [gutteridge 2026-03-25]
