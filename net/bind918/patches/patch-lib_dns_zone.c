@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_dns_zone.c,v 1.1 2022/12/11 01:57:55 sekiya Exp $
+$NetBSD: patch-lib_dns_zone.c,v 1.2 2026/03/25 15:12:51 taca Exp $
 
 No need to use atomic 64-bit integers for flags fit within 32-bit width.
 
---- lib/dns/zone.c.orig	2021-09-07 09:37:05.000000000 +0000
+--- lib/dns/zone.c.orig	2026-03-13 21:59:39.922910242 +0000
 +++ lib/dns/zone.c
-@@ -246,8 +246,13 @@ struct dns_zone {
+@@ -278,8 +278,13 @@ struct dns_zone {
  	int32_t journalsize;
  	dns_rdataclass_t rdclass;
  	dns_zonetype_t type;
@@ -18,7 +18,7 @@ No need to use atomic 64-bit integers for flags fit within 32-bit width.
  	unsigned int db_argc;
  	char **db_argv;
  	isc_time_t expiretime;
-@@ -405,7 +410,11 @@ struct dns_zone {
+@@ -434,7 +439,11 @@ struct dns_zone {
  	/*%
  	 * Autosigning/key-maintenance options
  	 */
@@ -30,7 +30,7 @@ No need to use atomic 64-bit integers for flags fit within 32-bit width.
  
  	/*%
  	 * True if added by "rndc addzone"
-@@ -537,12 +546,14 @@ typedef enum {
+@@ -566,12 +575,14 @@ typedef enum {
  						      * notify due to the zone
  						      * just being loaded for
  						      * the first time. */
@@ -44,4 +44,4 @@ No need to use atomic 64-bit integers for flags fit within 32-bit width.
 +#endif
  } dns_zoneflg_t;
  
- #define DNS_ZONE_OPTION(z, o)	 ((atomic_load_relaxed(&(z)->options) & (o)) != 0)
+ #define DNS_ZONE_OPTION(z, o) ((atomic_load_relaxed(&(z)->options) & (o)) != 0)
