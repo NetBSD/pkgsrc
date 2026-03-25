@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.196 2026/02/10 17:49:27 gdt Exp $
+# $NetBSD: Makefile,v 1.197 2026/03/25 23:16:39 gdt Exp $
 
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
@@ -83,6 +83,9 @@ INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/gdal
 PLIST_VARS+=	le
 
 .include "../../mk/endian.mk"
+
+PLIST_SUBST+=		VERSION=${VERSION_BASE}
+PRINT_PLIST_AWK+=	{ gsub(/${VERSION_BASE}/, "$${VERSION}") }
 
 # In ogr/ogrsf_frmts/CMakeLists.txt, the building of the miramon
 # sub-system is dependent on "NOT WORDS_BIGENDIAN".
