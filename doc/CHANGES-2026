@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1830 2026/03/25 08:18:46 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.1831 2026/03/25 11:48:32 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2491,3 +2491,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-ruff to 0.15.7 [wiz 2026-03-24]
 	Updated pkgtools/depgraph to 20260320 [agc 2026-03-24]
 	Updated www/chromium to 146.0.7680.164 [kikadf 2026-03-25]
+	Updated www/squid6 to 6.14nb3 [sborrill 2026-03-25]
