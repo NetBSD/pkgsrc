@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/10/23 20:36:14 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/03/25 22:18:42 wiz Exp $
 
 R_PKGNAME=	git2r
 R_PKGVER=	0.35.0
@@ -16,7 +16,7 @@ TEST_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 TEST_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
-#USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c
 
 .include "../../devel/libgit2/buildlink3.mk"
