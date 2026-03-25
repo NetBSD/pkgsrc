@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.43 2025/12/29 22:46:55 js Exp $
+$NetBSD: distinfo,v 1.44 2026/03/25 23:14:25 gdt Exp $
 
-BLAKE2s (element-v1.12.7.tar.gz) = 8bb638b63bf4fe429ebcd408ebf605dd578af9b5301957e7a699db99ed4a4ee8
-SHA512 (element-v1.12.7.tar.gz) = 9a9f3f4bd47e858fecf8c3b652df4f3331cc2574b88f43a3757774ee65ae4b3f1dfea72961dce6a291ed2953d946dcda5d58e1503b3e74ef3e5b0aa658c737ee
-Size (element-v1.12.7.tar.gz) = 39675081 bytes
+BLAKE2s (element-v1.12.12.tar.gz) = 9f877f39cc0f5e6bfc81ef28d89f233b4610c052914d0be4dea3695f3c927b91
+SHA512 (element-v1.12.12.tar.gz) = 6b5c33e93b6070a797073fa00450900d4bc8ee7cff5f979e2effb047d1f1587275dcf788e140519a50f7c1707d79578291ed566c8f8258439547d376220cbe2f
+Size (element-v1.12.12.tar.gz) = 38727651 bytes
