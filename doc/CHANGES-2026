@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1829 2026/03/24 18:11:33 agc Exp $
+$NetBSD: CHANGES-2026,v 1.1830 2026/03/25 08:18:46 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2490,3 +2490,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox140-l10n to 140.9.0 [gutteridge 2026-03-24]
 	Updated devel/py-ruff to 0.15.7 [wiz 2026-03-24]
 	Updated pkgtools/depgraph to 20260320 [agc 2026-03-24]
+	Updated www/chromium to 146.0.7680.164 [kikadf 2026-03-25]
