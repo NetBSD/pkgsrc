@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1854 2026/03/25 23:34:20 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.1855 2026/03/25 23:36:39 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2531,3 +2531,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/gdal-lib to 3.12.3 [gdt 2026-03-25]
 	Updated geography/py-rtcm to 1.1.12 [gdt 2026-03-25]
 	Updated geography/shapelib to 1.6.3 [gdt 2026-03-25]
+	Updated net/iodine to 0.8.0 [gdt 2026-03-25]
