@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2025/04/12 11:55:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/03/25 22:59:24 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.thirdparty
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/llvmlite/__init__.py
 ${PYSITELIB}/llvmlite/__init__.pyc
@@ -19,6 +20,9 @@ ${PYSITELIB}/llvmlite/binding/analysis.pyo
 ${PYSITELIB}/llvmlite/binding/common.py
 ${PYSITELIB}/llvmlite/binding/common.pyc
 ${PYSITELIB}/llvmlite/binding/common.pyo
+${PYSITELIB}/llvmlite/binding/config.py
+${PYSITELIB}/llvmlite/binding/config.pyc
+${PYSITELIB}/llvmlite/binding/config.pyo
 ${PYSITELIB}/llvmlite/binding/context.py
 ${PYSITELIB}/llvmlite/binding/context.pyc
 ${PYSITELIB}/llvmlite/binding/context.pyo
@@ -41,6 +45,9 @@ ${PYSITELIB}/llvmlite/binding/linker.pyo
 ${PYSITELIB}/llvmlite/binding/module.py
 ${PYSITELIB}/llvmlite/binding/module.pyc
 ${PYSITELIB}/llvmlite/binding/module.pyo
+${PYSITELIB}/llvmlite/binding/newpassmanagers.py
+${PYSITELIB}/llvmlite/binding/newpassmanagers.pyc
+${PYSITELIB}/llvmlite/binding/newpassmanagers.pyo
 ${PYSITELIB}/llvmlite/binding/object_file.py
 ${PYSITELIB}/llvmlite/binding/object_file.pyc
 ${PYSITELIB}/llvmlite/binding/object_file.pyo
@@ -50,15 +57,9 @@ ${PYSITELIB}/llvmlite/binding/options.pyo
 ${PYSITELIB}/llvmlite/binding/orcjit.py
 ${PYSITELIB}/llvmlite/binding/orcjit.pyc
 ${PYSITELIB}/llvmlite/binding/orcjit.pyo
-${PYSITELIB}/llvmlite/binding/passmanagers.py
-${PYSITELIB}/llvmlite/binding/passmanagers.pyc
-${PYSITELIB}/llvmlite/binding/passmanagers.pyo
 ${PYSITELIB}/llvmlite/binding/targets.py
 ${PYSITELIB}/llvmlite/binding/targets.pyc
 ${PYSITELIB}/llvmlite/binding/targets.pyo
-${PYSITELIB}/llvmlite/binding/transforms.py
-${PYSITELIB}/llvmlite/binding/transforms.pyc
-${PYSITELIB}/llvmlite/binding/transforms.pyo
 ${PYSITELIB}/llvmlite/binding/typeref.py
 ${PYSITELIB}/llvmlite/binding/typeref.pyc
 ${PYSITELIB}/llvmlite/binding/typeref.pyo
