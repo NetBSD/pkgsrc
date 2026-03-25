@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2026/03/15 12:53:31 gdt Exp $
+$NetBSD: distinfo,v 1.4 2026/03/25 23:32:41 gdt Exp $
 
-BLAKE2s (pyrtcm-1.1.11.tar.gz) = e52761678e22ec1370c0870eb9c490d45a997e8b8ce03ceeb3671c035690093b
-SHA512 (pyrtcm-1.1.11.tar.gz) = dddcc61ad224d1a67b1655b95366542d304d95ade828dee90d30896e7916c10ad9c30cf4743225bc8fc49634b55ecd455db2f4d7b5aca367baeeda98479c6aa1
-Size (pyrtcm-1.1.11.tar.gz) = 147593 bytes
+BLAKE2s (pyrtcm-1.1.12.tar.gz) = 47722753d01e0740a7560ea841349893a75281e7d900eb40cc0e3c939b12ce57
+SHA512 (pyrtcm-1.1.12.tar.gz) = 729c24b65df93dc9df8ee8ba9bfaf7aaa99acbd96bacd5b75ba58966cd3e4c2c80d65563254e96707102bb3200cabd41f47f97abcc18ccd5c6825efaf46f7ca5
+Size (pyrtcm-1.1.12.tar.gz) = 148434 bytes
