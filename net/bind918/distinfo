@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.37 2026/03/01 06:51:06 taca Exp $
+$NetBSD: distinfo,v 1.38 2026/03/25 15:12:51 taca Exp $
 
-BLAKE2s (bind-9.18.46.tar.xz) = bd2c1f556689e328240188732de691b53327eb5dd4a8b907b29fe43e21b1eeb9
-SHA512 (bind-9.18.46.tar.xz) = 92cd1ac5f65ed6f400191f8b81bc4501fc590c9ebe8ffdd1310e67ec784b00d5977a78106b0c2221c90f4b69b9050aae054bad0def0f6d03de94ea98686ad166
-Size (bind-9.18.46.tar.xz) = 5447520 bytes
+BLAKE2s (bind-9.18.47.tar.xz) = faff330d5e6936a76c1a803884611f0cae726041b97d102f1782b53b2ae36e7d
+SHA512 (bind-9.18.47.tar.xz) = 8135d453c0dd99947c93b9fb8fe1a52c5657f1c675b503dbfb745dfc9bb278121dc307d590bae99b439b093e87cb2bd0bf07d0a32ffd8a39841752559a0df1e8
+Size (bind-9.18.47.tar.xz) = 5448920 bytes
 SHA1 (patch-bin_named_main.c) = 4e4a763c478f1fcecb7e65968cf6ca20dacf01f1
 SHA1 (patch-bin_named_os.c) = 5ecb0883076575d8ac5fcad68f9daad6c9be0d0b
 SHA1 (patch-bin_named_server.c) = 52190897c4c4b141d98ca5bca7cc3eb4c83ac584
@@ -18,7 +18,7 @@ SHA1 (patch-lib_dns_sdb.c) = ed447ec7a134e620765b25ee36124a19dfd9fab0
 SHA1 (patch-lib_dns_sdlz.c) = 4fc15a577c64501c10c144eab147e54686e80309
 SHA1 (patch-lib_dns_validator.c) = 03dd60d4c38be7248d1e07f2c29ddd543b5f7454
 SHA1 (patch-lib_dns_view.c) = 5b092f0344b92d003f1fe1f28e4cc4c76b2505cf
-SHA1 (patch-lib_dns_zone.c) = cd7bc1e76caf1d664393efa318786c2b33c000de
+SHA1 (patch-lib_dns_zone.c) = 37e34e03c396787dda0df8856fb6de0a207abc60
 SHA1 (patch-lib_isc_include_isc_netmgr.h) = 48ac44c6a9b81e6b442deba6c075653d3691464b
 SHA1 (patch-lib_isc_net.c) = 743de2701fa96ef25e5689f40e381628cff641d5
 SHA1 (patch-lib_isc_netmgr_netmgr-int.h) = d84993edf254605f85421fbdd2fc523255c7316d
