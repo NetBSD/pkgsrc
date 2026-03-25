@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2025/05/09 19:37:14 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/03/25 23:06:03 wiz Exp $
 
-PKGREVISION= 1
 .include "../../lang/llvm/version.mk"
 
-DISTNAME=	openmp-${LLVM_VERSION}.src
-PKGNAME=	${DISTNAME:S/.src//}
+PKGNAME=	openmp-${LLVM_VERSION}
 CATEGORIES=	parallel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
