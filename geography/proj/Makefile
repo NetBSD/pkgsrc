@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2026/03/02 13:52:17 gdt Exp $
+# $NetBSD: Makefile,v 1.65 2026/03/25 23:18:07 gdt Exp $
 
 VERSION_BASE=	9.8.0
 # Accommodate testing RCs (names like 9.0RC1, unpacking to 9.0).
@@ -54,7 +54,7 @@ CXXFLAGS.SunOS+=	-fpermissive
 # being supported in c++; this doesn't make sense, but use float-store
 # to avoid having to figure it out.
 .include "../../mk/bsd.prefs.mk"
-.if (${MACHINE_ARCH} == "i386")
+.if ${MACHINE_ARCH} == "i386"
 CFLAGS+=		-ffloat-store
 .endif
 
