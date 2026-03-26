@@ -1,0 +1,5 @@
+This package provides Source Serif for LaTeX. It includes both
+Type1 and OpenType fonts and selects the latter when using
+XeLaTeX or LuaLaTeX. This package used to be called
+"sourceserifpro" and contains an alias package for backwards
+compatibility.
