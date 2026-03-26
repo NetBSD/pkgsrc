@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2025/05/14 12:26:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/03/26 19:24:39 markd Exp $
 share/texmf-dist/doc/latex/tkz-grapheur/README.md
 share/texmf-dist/doc/latex/tkz-grapheur/tkz-grapheur-doc-en.pdf
 share/texmf-dist/doc/latex/tkz-grapheur/tkz-grapheur-doc-en.tex
 share/texmf-dist/doc/latex/tkz-grapheur/tkz-grapheur-doc-fr.pdf
 share/texmf-dist/doc/latex/tkz-grapheur/tkz-grapheur-doc-fr.tex
+share/texmf-dist/doc/latex/tkz-grapheur/tkz-grapheur-docctan.zip
 share/texmf-dist/doc/latex/tkz-grapheur/tkz-grapheur-examples-integrals.pdf
-share/texmf-dist/doc/latex/tkz-grapheur/tkz-grapheur-examples-integrals.tex
 share/texmf-dist/doc/latex/tkz-grapheur/tkz-grapheur-exemples-integrales.pdf
-share/texmf-dist/doc/latex/tkz-grapheur/tkz-grapheur-exemples-integrales.tex

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/05/14 12:26:18 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/03/26 19:24:39 markd Exp $
 
-BLAKE2s (tkz-grapheur.doc.r75120.tar.xz) = 665174bd051b11edad1bb87be4bcf355c177c9dc017ecc2761626a75b0eaed28
-SHA512 (tkz-grapheur.doc.r75120.tar.xz) = 1ba3949a11233165fb3c4cd3cd9dad4fa6761e74dc5a53710b2fb1a9fadf749deadf2e4d6a3e5b266450d91be5e96a245708794a27c49b1544848ee83aebd720
-Size (tkz-grapheur.doc.r75120.tar.xz) = 2692744 bytes
+BLAKE2s (tkz-grapheur.doc.r78455.tar.xz) = f9dc5d64fe49fde64037fcbcbc743f1ddc5b56946a556b06c44d5a1234dbbbc9
+SHA512 (tkz-grapheur.doc.r78455.tar.xz) = 2b6400bc3c79b2f28116081acd71a6b38e9e23d3f92bc3916356a84b27924401399d71165ac143fda53c9c8acbba189ec1be121fb84df581c3ebf62e02025d7d
+Size (tkz-grapheur.doc.r78455.tar.xz) = 4882748 bytes
