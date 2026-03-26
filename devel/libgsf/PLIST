@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2025/12/10 09:09:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.45 2026/03/26 06:19:33 adam Exp $
 bin/gsf
 bin/gsf-office-thumbnailer
 bin/gsf-vba-dump
@@ -114,6 +114,7 @@ share/locale/id/LC_MESSAGES/libgsf.mo
 share/locale/it/LC_MESSAGES/libgsf.mo
 share/locale/ja/LC_MESSAGES/libgsf.mo
 share/locale/ka/LC_MESSAGES/libgsf.mo
+share/locale/kk/LC_MESSAGES/libgsf.mo
 share/locale/ko/LC_MESSAGES/libgsf.mo
 share/locale/lt/LC_MESSAGES/libgsf.mo
 share/locale/lv/LC_MESSAGES/libgsf.mo
