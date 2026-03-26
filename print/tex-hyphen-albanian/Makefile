@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/05/07 11:49:40 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/03/26 08:07:40 markd Exp $
 
 DISTNAME=	hyphen-albanian
-PKGNAME=	tex-${DISTNAME}-2025
-TEXLIVE_REV=	73410
+PKGNAME=	tex-${DISTNAME}-2026
+TEXLIVE_REV=	78069
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Hyphenation patterns for Albanian

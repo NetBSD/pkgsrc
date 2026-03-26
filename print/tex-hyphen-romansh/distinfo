@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/05/07 11:44:24 markd Exp $
+$NetBSD: distinfo,v 1.11 2026/03/26 08:07:46 markd Exp $
 
-BLAKE2s (hyphen-romansh.r74115.tar.xz) = 1c2ecef717f56e8f90891de5dcb113b62e5672f8c936a66fd09f6b6c9333c641
-SHA512 (hyphen-romansh.r74115.tar.xz) = ac756745f4550f512bb09dedd8dc4e8ab39ae67d3c7284a90828b0a2b40f389c51840e33bc7e57d908a5f9c630927e2927b91b6587e315e44d73e7bae705f572
-Size (hyphen-romansh.r74115.tar.xz) = 4232 bytes
+BLAKE2s (hyphen-romansh.r78069.tar.xz) = bd29ad8e9f2c6e8b92b070a5fd6e030d9d6187df4a024dab5f303dc873c94840
+SHA512 (hyphen-romansh.r78069.tar.xz) = 859bdc09a249117ebdf23798284044ed2ef073d00643ce3370626e3e93f7bcf1b3f9d9d724b3dd5a71d0f1e85abb253bd550bafb237a1ec146ad88311ef1ca5c
+Size (hyphen-romansh.r78069.tar.xz) = 4236 bytes

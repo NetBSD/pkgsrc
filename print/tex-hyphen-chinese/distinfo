@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/05/07 11:44:19 markd Exp $
+$NetBSD: distinfo,v 1.14 2026/03/26 08:07:41 markd Exp $
 
-BLAKE2s (hyphen-chinese.r74115.tar.xz) = 7c81853afa3f616a5927bf437ca043df7560d2e9d29020f2b0e916d65e660d90
-SHA512 (hyphen-chinese.r74115.tar.xz) = 0a8b3df91d302095ca36b86f2e1e3a5a17eb14712034183748438ea9a599ba7830079968c8e3a270659d760bed4a350710e0ff62cfb06e576c0154f3fc91c2a2
-Size (hyphen-chinese.r74115.tar.xz) = 3316 bytes
+BLAKE2s (hyphen-chinese.r78069.tar.xz) = c688e1eee8423a8a4dce167d23fb9f9093b3abb5e9fae0364e1cc09e16d961c2
+SHA512 (hyphen-chinese.r78069.tar.xz) = db933b365a2235fae36a19059c9c78a9d34252302298d8367ea52e9c99aa362ea774c230ffa9f5664e85331a8107c44baa7936e197e0e5677773521850d8da42
+Size (hyphen-chinese.r78069.tar.xz) = 3224 bytes

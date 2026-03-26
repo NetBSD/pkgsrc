@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/05/07 11:44:22 markd Exp $
+$NetBSD: distinfo,v 1.13 2026/03/26 08:07:44 markd Exp $
 
-BLAKE2s (hyphen-indonesian.r73410.tar.xz) = 38da2a5f8f02612333364a3d3c9bb7a380d7e41b262ae0253f60cc5600cd2c34
-SHA512 (hyphen-indonesian.r73410.tar.xz) = e6cb9bfc94e2463cc7b88942355a859c9714ab0b6f3656f3a96ff88ef5a8ab4401ac5d63b038c34bf274bbfa340a0bb2b9c690a4b8fddd8530748235bac3c2ec
-Size (hyphen-indonesian.r73410.tar.xz) = 2412 bytes
+BLAKE2s (hyphen-indonesian.r78069.tar.xz) = 7afe9ef62be187e181f2f58fec9aaa6cfac4588a1a7c128ad24426cc2ef6ac3a
+SHA512 (hyphen-indonesian.r78069.tar.xz) = 27b588e0de7c2653e5331cc3625f110d23204d589416ec3ef61bd6b3c3c99ee63d7db57473d81f159dcbefe47ff582737a127039651afa2d81ac1c95082447a5
+Size (hyphen-indonesian.r78069.tar.xz) = 2412 bytes

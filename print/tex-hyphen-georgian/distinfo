@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/05/07 11:44:21 markd Exp $
+$NetBSD: distinfo,v 1.11 2026/03/26 08:07:43 markd Exp $
 
-BLAKE2s (hyphen-georgian.r73410.tar.xz) = a39f24b8186199c1db62ee3d0d3c7d3b47978c5e6201d37c922217b8b09730a0
-SHA512 (hyphen-georgian.r73410.tar.xz) = 5274c24d684eff1feb3d9a6cc1fe6be3f3aee8219e291b1c802a61185ea6d94e296a9670d8ee84f0b9627036af827f9339df5792c1f6fcd7bdfd31535ee4cb9d
-Size (hyphen-georgian.r73410.tar.xz) = 11032 bytes
+BLAKE2s (hyphen-georgian.r78069.tar.xz) = 2445ad20e0746540f8f451d8bb8be618f07d2f33a3c360388c8eee5eb4c9913b
+SHA512 (hyphen-georgian.r78069.tar.xz) = 7b56c77c6c9c9b8d68b58622358524915f0e96e8fedcf7646fa29d64e4966c94086f2321a5f61fc062fe42fdff3a7fd6b86e868cd5ea07af049286e956ad003b
+Size (hyphen-georgian.r78069.tar.xz) = 11040 bytes

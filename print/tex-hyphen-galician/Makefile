@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2025/05/07 11:44:21 markd Exp $
+# $NetBSD: Makefile,v 1.14 2026/03/26 08:07:43 markd Exp $
 
 DISTNAME=	hyphen-galician
-PKGNAME=	tex-${DISTNAME}-2025
-TEXLIVE_REV=	73410
+PKGNAME=	tex-${DISTNAME}-2026
+TEXLIVE_REV=	78069
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation patterns for Galician

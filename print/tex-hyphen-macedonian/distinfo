@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/05/07 11:44:23 markd Exp $
+$NetBSD: distinfo,v 1.6 2026/03/26 08:07:45 markd Exp $
 
-BLAKE2s (hyphen-macedonian.r73410.tar.xz) = d0a450bc7204baad983a5af6e39d6a2d2f928753b8fa8ddb25ff6542a0d276e4
-SHA512 (hyphen-macedonian.r73410.tar.xz) = 21f28eb952d019a3063bbab803f351278968d50b05f5e7810bedb055f16e8d23160e6cf1f2e208436ff7934691bc782496325fc313d58a8e180b9ef8c3aad4f8
-Size (hyphen-macedonian.r73410.tar.xz) = 5536 bytes
+BLAKE2s (hyphen-macedonian.r78069.tar.xz) = 3f1db0ccf6c8881bf15849bf2d136ca3edd5a915c0cea7779e5da7e9a6939282
+SHA512 (hyphen-macedonian.r78069.tar.xz) = e0fbfdff4a606d1702a505581885a9db4928f2ec5c35077492478cbb568fe6c8fa23eae0fe792279cd9ec6a6516e3a0d9c41ec18b67b434d5dc4d669d3a1662b
+Size (hyphen-macedonian.r78069.tar.xz) = 5532 bytes

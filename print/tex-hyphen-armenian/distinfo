@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/05/07 11:44:18 markd Exp $
+$NetBSD: distinfo,v 1.11 2026/03/26 08:07:40 markd Exp $
 
-BLAKE2s (hyphen-armenian.r73410.tar.xz) = 67f742cf92d6660d2560e10c36961c04e187d04c8c94497538a31a502ea08284
-SHA512 (hyphen-armenian.r73410.tar.xz) = 97e69e17fce813ee0292675e307d56547cead81ad5168d2865377d9352c4f2de3031b3c0d7f3dbee7404d4770e4ecbf04b9d2db91a208fb7bbc6f7dce9b3466e
-Size (hyphen-armenian.r73410.tar.xz) = 2616 bytes
+BLAKE2s (hyphen-armenian.r78069.tar.xz) = aec0aa1d9b567b80909bd5bd5ab05bdebc96e7f5972bf3d4507fabf010d15d12
+SHA512 (hyphen-armenian.r78069.tar.xz) = da11b8894bcca538acdd879bb5a34d78f0b80e542d363cc6ee59af321c6a6562627ec1c7eba1a950d44084555996323ac9a0e117fe6f145d7693da81d5823cf8
+Size (hyphen-armenian.r78069.tar.xz) = 2620 bytes

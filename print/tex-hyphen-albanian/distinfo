@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/05/07 11:49:40 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/03/26 08:07:40 markd Exp $
 
-BLAKE2s (hyphen-albanian.r73410.tar.xz) = b9f81b61b4c12a65fbc8a83a07e7f5b63d6a2a2f4ce16090e917076ed9e89329
-SHA512 (hyphen-albanian.r73410.tar.xz) = 07e14a47a57b0c685dcfdc84037d1984693c097d1dff2b1c24f79cc724c0c5b103e49b7a4977760cb71e43a42c4b1c4b5227bab6107106058bc868b80ca0af79
-Size (hyphen-albanian.r73410.tar.xz) = 3352 bytes
+BLAKE2s (hyphen-albanian.r78069.tar.xz) = 6aeb70f44dadabf729bfbde2c52847fb6f6259c56c08e6bbaa2c1e64b1582a0f
+SHA512 (hyphen-albanian.r78069.tar.xz) = c6c32e9038d177a99b0cdf3aa86344771ae086337eecf3632f91a9585d6d7714a26ba977065945b38630a0fca05eb1fce574b4bb09d93679ebfe47bece7e742c
+Size (hyphen-albanian.r78069.tar.xz) = 3364 bytes
