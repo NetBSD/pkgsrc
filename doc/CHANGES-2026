@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1858 2026/03/26 05:07:25 scole Exp $
+$NetBSD: CHANGES-2026,v 1.1859 2026/03/26 05:42:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2535,3 +2535,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-nextest to 0.9.132 [pin 2026-03-26]
 	Updated graphics/scrot to 2.0.0 [pin 2026-03-26]
 	Updated textproc/split-thai to 2.42 [scole 2026-03-26]
+	Updated textproc/icu to 78.3 [adam 2026-03-26]
+	Updated textproc/py-ICU to 2.16.2 [adam 2026-03-26]
