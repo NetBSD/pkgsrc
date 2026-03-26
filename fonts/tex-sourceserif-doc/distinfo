@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/26 10:16:38 markd Exp $
+
+BLAKE2s (sourceserif.doc.r78252.tar.xz) = 68c2f08eb261bca0f16f32e2bfa2cdabb6468c339dd636320793ec701b324799
+SHA512 (sourceserif.doc.r78252.tar.xz) = 9007e3b08b73263706521f3012f6dee563e74db9cf52a503ca49c2aec9c04c83fa6080ffa503cb29e0e2730a7b00138bf9cdddac1675b1a55a9d3dd4e9f4c125
+Size (sourceserif.doc.r78252.tar.xz) = 678544 bytes
