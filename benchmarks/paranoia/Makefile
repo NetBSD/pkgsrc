@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/10/09 14:06:00 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/03/26 00:15:57 gdt Exp $
 
 DISTNAME=		paranoia
 PKGNAME=		paranoia-960101
@@ -19,9 +19,12 @@ WRKSRC=			${WRKDIR}
 
 INSTALLATION_DIRS=	bin
 
-# The use of -ffloat-store in CFLAGS is controversial.  The point of
-# the program is to test the compiler/machine environment, and
-# therefore this Makefile should not set non-default flags.
+# The point of the program is to test standard arithmetic.  However,
+# operating systems may offer extended (non-standard!) precision by
+# default.  Ask for IEEE754 compliance.
+# \todo Validate that this flag is always ok, and if trouble
+# conditionalize it.
+CFLAGS+=	-fexcess-precision=standard
 
 do-build:
 	(cd ${WRKSRC} ; ${CC} ${CFLAGS} -o paranoia paranoia.c -lm)
