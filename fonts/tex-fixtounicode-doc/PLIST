@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2026/03/26 08:32:36 markd Exp $
+share/texmf-dist/doc/latex/fixtounicode/README.md
+share/texmf-dist/doc/latex/fixtounicode/fixtounicode.pdf
+share/texmf-dist/doc/latex/fixtounicode/manifest.txt
