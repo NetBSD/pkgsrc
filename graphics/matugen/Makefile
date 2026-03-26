@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2026/02/26 12:53:02 pin Exp $
+# $NetBSD: Makefile,v 1.23 2026/03/26 19:34:35 pin Exp $
 
-DISTNAME=	matugen-4.0.0
+DISTNAME=	matugen-4.1.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=InioX/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,9 +12,9 @@ LICENSE=	gnu-gpl-v2
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.93.1
+#RUST_REQ=	1.94.0
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.93.1 on amd64
+#This package is confirmed to build with Rust 1.94.0 on amd64
 
 INSTALLATION_DIRS=	share/examples/matugen
 
