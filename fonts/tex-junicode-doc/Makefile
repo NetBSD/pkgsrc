@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2025/05/08 10:46:58 markd Exp $
+# $NetBSD: Makefile,v 1.7 2026/03/26 09:34:34 markd Exp $
 
 DISTNAME=	junicode.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.209
-TEXLIVE_REV=	71871
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.218
+TEXLIVE_REV=	77682
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/junicode
