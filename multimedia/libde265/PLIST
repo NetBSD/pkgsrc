@@ -1,13 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2025/05/04 09:04:43 adam Exp $
-bin/bjoentegaard
-bin/block-rate-estim
+@comment $NetBSD: PLIST,v 1.4 2026/03/26 13:54:01 wiz Exp $
 bin/dec265
-bin/enc265
-bin/gen-enc-table
-bin/rd-curves
-bin/tests
-bin/yuv-distortion
 include/libde265/de265-version.h
 include/libde265/de265.h
-lib/libde265.la
+lib/cmake/libde265/libde265-config-noconfig.cmake
+lib/cmake/libde265/libde265-config-version.cmake
+lib/cmake/libde265/libde265-config.cmake
+lib/libde265.so
+lib/libde265.so.0
+lib/libde265.so.0.1.11
 lib/pkgconfig/libde265.pc
