@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2023/10/02 20:34:58 triaxx Exp $
+# $NetBSD: Makefile,v 1.111 2026/03/26 14:00:32 wiz Exp $
 
 .include "../../devel/py-mercurial/version.mk"
 
@@ -7,7 +7,7 @@ CATEGORIES=	devel scm
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mercurial-scm.org/
 COMMENT=	Fast, lightweight source control management system (meta package)
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 # OR newer
