@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2026/03/24 23:34:49 maya Exp $
+# $NetBSD: Makefile,v 1.11 2026/03/26 13:58:33 wiz Exp $
 
-DISTNAME=	libfyaml-0.9.5
+DISTNAME=	libfyaml-0.9.6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pantoniou/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
