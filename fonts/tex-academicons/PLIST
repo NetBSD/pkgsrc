@@ -1,4 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2019/01/24 11:40:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/03/26 08:25:18 markd Exp $
+share/texmf-dist/fonts/enc/dvips/academicons/academicons.enc
+share/texmf-dist/fonts/map/dvips/academicons/academicons.map
+share/texmf-dist/fonts/opentype/public/academicons/academicons.otf
+share/texmf-dist/fonts/tfm/public/academicons/academicons.tfm
 share/texmf-dist/fonts/truetype/public/academicons/academicons.ttf
-share/texmf-dist/tex/latex/academicons/academicons.sty
-share/texmf-dist/tex/latex/academicons/tuacademicons.fd
+share/texmf-dist/fonts/type1/public/academicons/Academicons.pfb
+share/texmf-dist/tex/generic/academicons/academicons-generic.tex
+share/texmf-dist/tex/generic/academicons/academicons-pdftex.tex
+share/texmf-dist/tex/generic/academicons/academicons-xeluatex.tex
+share/texmf-dist/tex/generic/academicons/academicons.sty
+share/texmf-dist/tex/generic/academicons/tuacademicons.fd
+share/texmf-dist/tex/generic/academicons/uacademicons.fd
