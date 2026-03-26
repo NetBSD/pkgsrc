@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26982 2026/03/26 14:33:31 wiz Exp $
+$NetBSD: TODO,v 1.26983 2026/03/26 14:34:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1123,7 +1123,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-OTXv2-1.5.2
 	o py-cassa-1.11.0
 	o py-chardet-7.0.1 [we need to decide how to handle https://github.com/chardet/chardet/issues/327]
-	o py-charset-normalizer-3.4.6
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-cutadapt-5.2 [wip]
 	o py-cxfreeze-8.5.3
