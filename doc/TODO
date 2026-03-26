@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26968 2026/03/25 23:01:41 wiz Exp $
+$NetBSD: TODO,v 1.26969 2026/03/26 05:42:56 adam Exp $
 
 Suggested new packages
 ======================
@@ -766,7 +766,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o icedtea-web-1.6.2
 	o ices-mp3-2.0.2
 	o icinga-base-2.12.3
-	o icu-78.3
 	o idzebra-2.2.2
 	o ike-2.0.1 [pkg/37032]
 	o imp-6.2.12
