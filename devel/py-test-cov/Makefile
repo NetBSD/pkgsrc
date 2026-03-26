@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2025/10/10 08:48:29 adam Exp $
+# $NetBSD: Makefile,v 1.30 2026/03/26 14:47:55 wiz Exp $
 
-DISTNAME=	pytest_cov-7.0.0
+DISTNAME=	pytest_cov-7.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-cov/}
@@ -22,8 +22,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
 USE_LANGUAGES=	# none
 
 # needs to be installed for testing, this setting is not enoough
-# as of 4.0.0:
-# 3 failed, 115 passed, 6 skipped, 4 xpassed, 1 warning
+# as of 7.1.0:
+# 1 failed, 205 passed, 3 skipped
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
 .include "../../lang/python/wheel.mk"

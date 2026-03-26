@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2025/10/10 08:48:29 adam Exp $
+$NetBSD: distinfo,v 1.27 2026/03/26 14:47:55 wiz Exp $
 
-BLAKE2s (pytest_cov-7.0.0.tar.gz) = 45332566e94cf60bd54d2128b6fbec2f672bcba13ece2ca3d0660f27bd104e24
-SHA512 (pytest_cov-7.0.0.tar.gz) = 6a3822209b139b06f175e20549f997c532d1c1d9bc79fa3fdff9dca8ea870a110cf75056ddfb68fc447018033bd223c0de492be9a8c756a02739b70d3f2772a7
-Size (pytest_cov-7.0.0.tar.gz) = 54328 bytes
+BLAKE2s (pytest_cov-7.1.0.tar.gz) = 2fe96b3c269bfbfecb5943d5b99921ae56cecd2b2322c62c5c7d2e7b526f89cf
+SHA512 (pytest_cov-7.1.0.tar.gz) = 914e24466a4049b1ee712e5cda516e7bb004b2fdd00851e448eaec14110eaceba5a965728183dcf36f2a2b25bf45ea9b662b8aa89b999c15929c4cc992af11bb
+Size (pytest_cov-7.1.0.tar.gz) = 55592 bytes
