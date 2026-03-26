@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1906 2026/03/26 19:40:00 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1907 2026/03/26 19:41:34 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2720,3 +2720,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 29.9.2 [pin 2026-03-26]
 	Updated sysutils/onefetch to 2.27.1 [pin 2026-03-26]
 	Updated editors/redox to 0.3.0 [pin 2026-03-26]
+	Updated editors/tp-note to 1.25.19 [pin 2026-03-26]
