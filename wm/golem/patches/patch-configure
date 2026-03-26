@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2026/03/26 02:17:11 dholland Exp $
+
+Use standard headers.
+
+--- configure~	2002-02-02 21:13:45.000000000 +0000
++++ configure
+@@ -2274,6 +2274,7 @@ else
+ #include "confdefs.h"
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <dlfcn.h>
+ int main() {
+ 	FILE *fp = fopen("./conftestval", "w");
