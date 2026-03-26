@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1870 2026/03/26 10:28:35 markd Exp $
+$NetBSD: CHANGES-2026,v 1.1871 2026/03/26 10:35:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2669,3 +2669,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed fonts/tex-sourcesanspro-doc [markd 2026-03-26]
 	Removed fonts/tex-sourceserifpro [markd 2026-03-26]
 	Removed fonts/tex-sourceserifpro-doc [markd 2026-03-26]
+	Updated emulators/qemu to 10.2.2 [adam 2026-03-26]
+	Updated sysutils/qemu-guest-agent to 10.2.2 [adam 2026-03-26]
