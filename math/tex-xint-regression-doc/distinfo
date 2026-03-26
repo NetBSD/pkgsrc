@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/05/14 12:18:46 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/03/26 19:35:18 markd Exp $
 
-BLAKE2s (xint-regression.doc.r75111.tar.xz) = 3745f7fa3244f1c7f5a898ea4062c19493b06597f84766e2b85f30977533a040
-SHA512 (xint-regression.doc.r75111.tar.xz) = c8ca4ca9a1ee7447097e080e6b2364b059d4d204efa54264dcf3a44a6f3da8ce5f370b1df3fbb15f13764504e41becf001e4a534ae9341ac5ee161cb7e065520
-Size (xint-regression.doc.r75111.tar.xz) = 355452 bytes
+BLAKE2s (xint-regression.doc.r77909.tar.xz) = 03b6f4292744ada35884b43912d207984349867c4e6741fddbabc96895b0579a
+SHA512 (xint-regression.doc.r77909.tar.xz) = 5a256c0598c62675f238e0c71d4c35e053ad38288db95f74f4983b95b3d642edc5209b09ef2b6ea9f69a53299ccaa6436244fec26a9ceff18e1f3f7d2002a973
+Size (xint-regression.doc.r77909.tar.xz) = 401216 bytes
