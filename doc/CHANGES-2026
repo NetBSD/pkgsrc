@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1888 2026/03/26 14:32:26 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1889 2026/03/26 14:33:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2695,3 +2695,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/p5-TimeDate to 2.35 [wiz 2026-03-26]
 	Updated textproc/p5-XML-Parser to 2.51 [wiz 2026-03-26]
 	Updated graphics/openexr to 3.4.7 [wiz 2026-03-26]
+	Updated devel/py-attrs to 26.1.0 [wiz 2026-03-26]
