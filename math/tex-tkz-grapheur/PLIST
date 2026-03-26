@@ -1,2 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2025/05/14 12:26:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/03/26 19:24:39 markd Exp $
+share/texmf-dist/tex/latex/tkz-grapheur/tkz-grapheur-calc.tex
+share/texmf-dist/tex/latex/tkz-grapheur/tkz-grapheur-en.tex
+share/texmf-dist/tex/latex/tkz-grapheur/tkz-grapheur-fr.tex
+share/texmf-dist/tex/latex/tkz-grapheur/tkz-grapheur-lua.tex
 share/texmf-dist/tex/latex/tkz-grapheur/tkz-grapheur.sty
