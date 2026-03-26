@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.452 2026/03/09 11:38:16 adam Exp $
+# $NetBSD: Makefile,v 1.453 2026/03/26 08:32:36 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -558,6 +558,8 @@ SUBDIR+=	tex-fge
 SUBDIR+=	tex-fge-doc
 SUBDIR+=	tex-fira
 SUBDIR+=	tex-fira-doc
+SUBDIR+=	tex-fixtounicode
+SUBDIR+=	tex-fixtounicode-doc
 SUBDIR+=	tex-foekfont
 SUBDIR+=	tex-foekfont-doc
 SUBDIR+=	tex-fonetika

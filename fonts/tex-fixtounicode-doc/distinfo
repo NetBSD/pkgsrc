@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/26 08:32:36 markd Exp $
+
+BLAKE2s (fixtounicode.doc.r78112.tar.xz) = 56a733f5bd0e6f04b59d391ffae14de5612f1b75601352642a823e9c4f9e7ecb
+SHA512 (fixtounicode.doc.r78112.tar.xz) = 73e3e3fd737f77fd5511d798545b355d3af6fde155e356b9f81672dda3db6e382adefece407936851dd52143790217daa500ad287f2ccb3287c8f214410c1599
+Size (fixtounicode.doc.r78112.tar.xz) = 520808 bytes
