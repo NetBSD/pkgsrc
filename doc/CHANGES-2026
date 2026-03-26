@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1902 2026/03/26 19:34:53 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1903 2026/03/26 19:36:38 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2709,3 +2709,11 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/feluda to 1.12.0 [pin 2026-03-26]
 	Updated devel/gitui to 0.28.1 [pin 2026-03-26]
 	Updated graphics/matugen to 4.1.0 [pin 2026-03-26]
+	Updated math/tex-tkz-grapheur to 0.30d [markd 2026-03-26]
+	Updated math/tex-tkz-grapheur-doc to 0.30d [markd 2026-03-26]
+	Updated math/tex-unicode-math to 0.8r.78251 [markd 2026-03-26]
+	Updated math/tex-unicode-math-doc to 0.8r.78251 [markd 2026-03-26]
+	Updated math/tex-xint to 1.4o [markd 2026-03-26]
+	Updated math/tex-xint-doc to 1.4o [markd 2026-03-26]
+	Updated math/tex-xint-regression to 0.1.3 [markd 2026-03-26]
+	Updated math/tex-xint-regression-doc to 0.1.3 [markd 2026-03-26]
