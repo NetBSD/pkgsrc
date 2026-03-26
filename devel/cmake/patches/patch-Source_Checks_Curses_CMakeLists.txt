@@ -1,11 +1,11 @@
-$NetBSD: patch-Source_Checks_Curses_CMakeLists.txt,v 1.8 2025/12/21 19:24:08 adam Exp $
+$NetBSD: patch-Source_Checks_Curses_CMakeLists.txt,v 1.9 2026/03/26 09:00:32 adam Exp $
 
 Don't insist on ncurses.
 
---- Source/Checks/Curses/CMakeLists.txt.orig	2025-12-08 18:33:58.000000000 +0000
+--- Source/Checks/Curses/CMakeLists.txt.orig	2026-03-17 13:29:16.000000000 +0000
 +++ Source/Checks/Curses/CMakeLists.txt
 @@ -1,7 +1,6 @@
- cmake_minimum_required(VERSION 3.13...4.0 FATAL_ERROR)
+ cmake_minimum_required(VERSION 3.13...4.1 FATAL_ERROR)
  project(CheckCurses C)
  
 -set(CURSES_NEED_NCURSES TRUE)
