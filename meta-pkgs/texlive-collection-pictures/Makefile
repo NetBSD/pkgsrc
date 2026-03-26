@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.51 2026/03/11 19:50:44 markd Exp $
+# $NetBSD: Makefile,v 1.52 2026/03/26 20:00:33 markd Exp $
 
 DISTNAME=	collection-pictures
 PKGNAME=	texlive-${DISTNAME}-2025pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	77389
+TEXLIVE_REV=	78426
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -190,6 +190,7 @@ DEPENDS+=	tex-spath3-[0-9]*:../../graphics/tex-spath3
 # depend spectralsequences
 # depend strands
 # depend sunpath
+# depend svg-animate
 # depend swimgraf
 # depend syntaxdi
 # depend table-fct
