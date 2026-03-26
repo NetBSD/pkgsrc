@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2024/02/18 09:58:31 markd Exp $
+# $NetBSD: Makefile,v 1.6 2026/03/26 08:50:36 markd Exp $
 
 DISTNAME=	dictsym
-PKGNAME=	tex-${DISTNAME}-2023
-TEXLIVE_REV=	69720
+PKGNAME=	tex-${DISTNAME}-2025
+TEXLIVE_REV=	78251
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/dictsym
 COMMENT=	DictSym font and macro package
 LICENSE=	lppl-1.3c
+
+DEPENDS+=	tex-psnfss-[0-9]*:../../fonts/tex-psnfss
 
 TEX_MAP_FILES+=	dictsym.map
 
