@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/05/10 00:42:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/03/26 09:24:02 markd Exp $
 share/texmf-dist/doc/fonts/japanese-otf/COPYRIGHT
 share/texmf-dist/doc/fonts/japanese-otf/ChangeLog.md
 share/texmf-dist/doc/fonts/japanese-otf/README
@@ -44,6 +44,9 @@ share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/sp_kr_utf.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/svs_list_jpn.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/svs_list_kor.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/svs_list_min_jpn.tex
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/svs_list_min_kor.tex
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/svs_list_min_sch.tex
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/svs_list_min_tch.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/svs_list_sch.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/svs_list_tch.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/uotf-cid-h.tex
@@ -60,3 +63,4 @@ share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/utfmacro-cjk.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/utfmacro-haranoaji.map
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/utfmacro-ibmplex.map
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/utfmacro-kozuka.map
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/utfmacro-noembed.map
