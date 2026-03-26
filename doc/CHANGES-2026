@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1868 2026/03/26 09:02:08 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1869 2026/03/26 09:32:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2613,3 +2613,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ccache to 4.13.2 [adam 2026-03-26]
 	Updated devel/cmake to 4.3.0 [adam 2026-03-26]
 	Updated devel/cmake-gui to 4.3.0 [adam 2026-03-26]
+	Updated devel/protobuf to 34.1 [adam 2026-03-26]
+	Updated devel/py-protobuf to 7.34.1 [adam 2026-03-26]
