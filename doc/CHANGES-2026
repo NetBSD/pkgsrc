@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1895 2026/03/26 14:41:20 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1896 2026/03/26 14:44:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2702,3 +2702,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-importlib-metadata to 9.0.0 [wiz 2026-03-26]
 	Updated devel/py-jaraco.context to 6.1.2 [wiz 2026-03-26]
 	Updated lang/py-pygls to 2.1.1 [wiz 2026-03-26]
+	Updated textproc/py-sphinx-autodoc-typehints to 3.9.11 [wiz 2026-03-26]
