@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.453 2026/03/26 08:32:36 markd Exp $
+# $NetBSD: Makefile,v 1.454 2026/03/26 10:23:27 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -865,10 +865,10 @@ SUBDIR+=	tex-semaphor-doc
 SUBDIR+=	tex-skull
 SUBDIR+=	tex-sourcecodepro
 SUBDIR+=	tex-sourcecodepro-doc
-SUBDIR+=	tex-sourcesanspro
-SUBDIR+=	tex-sourcesanspro-doc
-SUBDIR+=	tex-sourceserifpro
-SUBDIR+=	tex-sourceserifpro-doc
+SUBDIR+=	tex-sourcesans
+SUBDIR+=	tex-sourcesans-doc
+SUBDIR+=	tex-sourceserif
+SUBDIR+=	tex-sourceserif-doc
 SUBDIR+=	tex-starfont
 SUBDIR+=	tex-starfont-doc
 SUBDIR+=	tex-staves
