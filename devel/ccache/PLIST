@@ -1,11 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2025/09/15 14:41:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/03/26 08:59:02 adam Exp $
 bin/ccache
 man/man1/ccache.1
-share/doc/ccache/AUTHORS.adoc
 share/doc/ccache/AUTHORS.html
-share/doc/ccache/LICENSE.adoc
 share/doc/ccache/LICENSE.html
-share/doc/ccache/MANUAL.adoc
 share/doc/ccache/MANUAL.html
-share/doc/ccache/NEWS.adoc
 share/doc/ccache/NEWS.html
