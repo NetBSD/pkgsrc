@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.38 2026/01/25 09:09:58 markd Exp $
+# $NetBSD: Makefile,v 1.39 2026/03/26 10:25:33 markd Exp $
 
 DISTNAME=	collection-fontsextra
-PKGNAME=	texlive-${DISTNAME}-2025pre1
+PKGNAME=	texlive-${DISTNAME}-2025pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	77044
+TEXLIVE_REV=	78246
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -341,8 +341,8 @@ DEPENDS+=	tex-semaphor-[0-9]*:../../fonts/tex-semaphor
 # depend simpleicons
 DEPENDS+=	tex-skull-[0-9]*:../../fonts/tex-skull
 DEPENDS+=	tex-sourcecodepro-[0-9]*:../../fonts/tex-sourcecodepro
-DEPENDS+=	tex-sourcesanspro-[0-9]*:../../fonts/tex-sourcesanspro
-DEPENDS+=	tex-sourceserifpro-[0-9]*:../../fonts/tex-sourceserifpro
+DEPENDS+=	tex-sourcesans-[0-9]*:../../fonts/tex-sourcesans
+DEPENDS+=	tex-sourceserif-[0-9]*:../../fonts/tex-sourceserif
 # depend spectral
 # depend splentinex
 # depend srbtiks
