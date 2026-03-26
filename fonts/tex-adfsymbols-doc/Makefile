@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2025/05/09 22:25:44 markd Exp $
+# $NetBSD: Makefile,v 1.7 2026/03/26 08:42:06 markd Exp $
 
 DISTNAME=	adfsymbols.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.4
-TEXLIVE_REV=	74819
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.5
+TEXLIVE_REV=	78315
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/adfsymbols
