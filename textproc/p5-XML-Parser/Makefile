@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2026/03/19 15:22:30 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2026/03/26 14:30:31 wiz Exp $
 
-DISTNAME=	XML-Parser-2.48
+DISTNAME=	XML-Parser-2.51
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TO/TODDR/}
@@ -19,14 +19,9 @@ PERL5_PACKLIST=		auto/XML/Parser/.packlist
 MAKE_PARAMS+=		EXPATLIBPATH=${BUILDLINK_PREFIX.expat}/lib
 MAKE_PARAMS+=		EXPATINCPATH=${BUILDLINK_PREFIX.expat}/include
 
-# as of 2.48
-# Failed 2/42 test programs. 0/321 subtests failed.
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
-
-post-extract:
-	${RM} -f ${WRKSRC}/inc/Devel/CheckLib.pm
 
 .include "../../lang/perl5/module.mk"
 .include "../../textproc/expat/buildlink3.mk"
