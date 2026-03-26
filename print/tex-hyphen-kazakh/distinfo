@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/26 08:12:17 markd Exp $
+
+BLAKE2s (hyphen-kazakh.r78069.tar.xz) = 8212e86ffd467162bc65f3d59c3cf7dd7156a5ad1ab0765ca1092b90fc332a58
+SHA512 (hyphen-kazakh.r78069.tar.xz) = a08f0600108bcc24d86fee03f7975a81c7dd8287705475ff89c1cb818b033cc4758d8acd6cd2a27bc3faf8fe52827dfe6d41aef804914d4d47a3e635b640cd09
+Size (hyphen-kazakh.r78069.tar.xz) = 4972 bytes
