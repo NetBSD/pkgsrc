@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1879 2026/03/26 13:40:56 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1880 2026/03/26 13:41:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2686,3 +2686,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated fonts/harfbuzz to 13.2.1 [wiz 2026-03-26]
 	Updated fonts/harfbuzz-icu to 13.2.1 [wiz 2026-03-26]
 	Updated textproc/jsoncpp to 1.9.7 [wiz 2026-03-26]
+	Updated graphics/libavif to 1.4.1 [wiz 2026-03-26]
