@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1890 2026/03/26 14:34:27 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1891 2026/03/26 14:36:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2697,3 +2697,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/openexr to 3.4.7 [wiz 2026-03-26]
 	Updated devel/py-attrs to 26.1.0 [wiz 2026-03-26]
 	Updated converters/py-charset-normalizer to 3.4.6 [wiz 2026-03-26]
+	Updated security/py-cyclonedx-python-lib to 11.7.0 [wiz 2026-03-26]
