@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1873 2026/03/26 11:24:58 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1874 2026/03/26 12:59:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2676,3 +2676,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-fakefs to 6.1.6 [adam 2026-03-26]
 	Updated archivers/libarchive to 3.8.6 [adam 2026-03-26]
 	Updated devel/re2c to 4.5 [adam 2026-03-26]
+	Updated www/py-whitenoise to 6.12.0 [adam 2026-03-26]
+	Updated www/py-uvicorn to 0.42.0 [adam 2026-03-26]
