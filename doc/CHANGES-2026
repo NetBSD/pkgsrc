@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1878 2026/03/26 13:38:32 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1879 2026/03/26 13:40:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2685,3 +2685,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/fuse-emulator-utils to 1.4.4 [adam 2026-03-26]
 	Updated fonts/harfbuzz to 13.2.1 [wiz 2026-03-26]
 	Updated fonts/harfbuzz-icu to 13.2.1 [wiz 2026-03-26]
+	Updated textproc/jsoncpp to 1.9.7 [wiz 2026-03-26]
