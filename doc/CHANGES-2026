@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1874 2026/03/26 12:59:26 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1875 2026/03/26 13:11:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2678,3 +2678,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/re2c to 4.5 [adam 2026-03-26]
 	Updated www/py-whitenoise to 6.12.0 [adam 2026-03-26]
 	Updated www/py-uvicorn to 0.42.0 [adam 2026-03-26]
+	Updated net/libtorrent to 0.16.8 [adam 2026-03-26]
+	Updated net/rtorrent to 0.16.8 [adam 2026-03-26]
