@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1855 2026/03/25 23:36:39 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.1856 2026/03/26 04:34:06 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2532,3 +2532,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/py-rtcm to 1.1.12 [gdt 2026-03-25]
 	Updated geography/shapelib to 1.6.3 [gdt 2026-03-25]
 	Updated net/iodine to 0.8.0 [gdt 2026-03-25]
+	Updated devel/cargo-nextest to 0.9.132 [pin 2026-03-26]
