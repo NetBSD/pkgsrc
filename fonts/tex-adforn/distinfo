@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/05/09 22:23:08 markd Exp $
+$NetBSD: distinfo,v 1.8 2026/03/26 08:38:53 markd Exp $
 
-BLAKE2s (adforn.r74834.tar.xz) = 0619b01d3705ad6b0289d6ed712328d068a937b482e0fb2124d930dbd0d18371
-SHA512 (adforn.r74834.tar.xz) = 0270367ce67adbb2b30772f002c4c536548732f1c03af9c672169a62ba7330abda06375026b6fdd07548104771728e40fe7bc0ede594aea723db682facbaab9e
-Size (adforn.r74834.tar.xz) = 38600 bytes
+BLAKE2s (adforn.r78315.tar.xz) = a8a272cdda2e5d9ca915e97d6118c34e9cf67166a8410432c9a3e6ecc409cb29
+SHA512 (adforn.r78315.tar.xz) = fc8c7c3a3febda9ce061990bb665fdb8f068135a8981fad2bdbf084a6cb4baf700d03659a82e843d662e66636d52f8f4a96ad3fee7afccf5b5cd2f258e51ea0f
+Size (adforn.r78315.tar.xz) = 38540 bytes
