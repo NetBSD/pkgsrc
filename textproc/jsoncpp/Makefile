@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/09/12 06:42:32 adam Exp $
+# $NetBSD: Makefile,v 1.20 2026/03/26 13:40:47 wiz Exp $
 
-DISTNAME=	jsoncpp-1.9.6
+DISTNAME=	jsoncpp-1.9.7
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=open-source-parsers/}
 
