@@ -1,4 +1,4 @@
-This package supports the free fonts GentiumPlus and
-GentiumBookPlus as TrueType (see package gentium-sil) and
-defines missing typefaces. All font features are available by
-special macros.
+This package supports the free TrueType Gentium fonts from the
+gentium-sil package and defines missing typefaces. All font
+features are available via special macros. The package works
+only for LuaLaTeX/XeLaTeX.
