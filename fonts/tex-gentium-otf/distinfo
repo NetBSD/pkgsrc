@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/05/13 09:28:33 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/03/26 09:15:37 markd Exp $
 
-BLAKE2s (gentium-otf.r74545.tar.xz) = cacfb9b52d92bcdf45caf5076759734566f1c0bc140b7df74a8f7939f0e12cf5
-SHA512 (gentium-otf.r74545.tar.xz) = 78e0a6538038b1f5710c32e9a2c03a043f9653fedd8415c522e3cd86ea7536c687dc452efa0204f2e35cb8dcc98d750ac8aae1aebfc69486a50eefd5647f2c86
-Size (gentium-otf.r74545.tar.xz) = 1828 bytes
+BLAKE2s (gentium-otf.r77682.tar.xz) = ddd269753bd1f891596a883284e1b88988f99009e3230fefd7a02e9df0fd078f
+SHA512 (gentium-otf.r77682.tar.xz) = fee2c6cc732522e6095d261b1258f2cba36510031598cf8d14c755510aeb269e0a52d4f2470ea3b986a1d679e9036258cade0bc43795b533fce7303a97ebbe28
+Size (gentium-otf.r77682.tar.xz) = 2100 bytes
