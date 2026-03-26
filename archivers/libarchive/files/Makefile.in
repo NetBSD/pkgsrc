@@ -951,6 +951,7 @@ am__libarchive_test_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/test/test_read_format_lha_bugfix_0.c \
 	libarchive/test/test_read_format_lha_filename.c \
 	libarchive/test/test_read_format_lha_filename_utf16.c \
+	libarchive/test/test_read_format_lha_oversize_header.c \
 	libarchive/test/test_read_format_mtree.c \
 	libarchive/test/test_read_format_mtree_crash747.c \
 	libarchive/test/test_read_format_pax_bz2.c \
@@ -963,6 +964,7 @@ am__libarchive_test_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/test/test_read_format_rar_invalid1.c \
 	libarchive/test/test_read_format_rar_overflow.c \
 	libarchive/test/test_read_format_rar5.c \
+	libarchive/test/test_read_format_rar5_loop_bug.c \
 	libarchive/test/test_read_format_raw.c \
 	libarchive/test/test_read_format_tar.c \
 	libarchive/test/test_read_format_tar_V_negative_size.c \
@@ -1395,6 +1397,7 @@ am_libarchive_test_OBJECTS = $(am__objects_20) $(am__objects_21) \
 	libarchive/test/test-test_read_format_lha_bugfix_0.$(OBJEXT) \
 	libarchive/test/test-test_read_format_lha_filename.$(OBJEXT) \
 	libarchive/test/test-test_read_format_lha_filename_utf16.$(OBJEXT) \
+	libarchive/test/test-test_read_format_lha_oversize_header.$(OBJEXT) \
 	libarchive/test/test-test_read_format_mtree.$(OBJEXT) \
 	libarchive/test/test-test_read_format_mtree_crash747.$(OBJEXT) \
 	libarchive/test/test-test_read_format_pax_bz2.$(OBJEXT) \
@@ -1407,6 +1410,7 @@ am_libarchive_test_OBJECTS = $(am__objects_20) $(am__objects_21) \
 	libarchive/test/test-test_read_format_rar_invalid1.$(OBJEXT) \
 	libarchive/test/test-test_read_format_rar_overflow.$(OBJEXT) \
 	libarchive/test/test-test_read_format_rar5.$(OBJEXT) \
+	libarchive/test/test-test_read_format_rar5_loop_bug.$(OBJEXT) \
 	libarchive/test/test-test_read_format_raw.$(OBJEXT) \
 	libarchive/test/test-test_read_format_tar.$(OBJEXT) \
 	libarchive/test/test-test_read_format_tar_V_negative_size.$(OBJEXT) \
@@ -2056,11 +2060,13 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_lha_bugfix_0.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_lha_filename.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_lha_filename_utf16.Po \
+	libarchive/test/$(DEPDIR)/test-test_read_format_lha_oversize_header.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_mtree.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_mtree_crash747.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_pax_bz2.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_rar.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_rar5.Po \
+	libarchive/test/$(DEPDIR)/test-test_read_format_rar5_loop_bug.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_data.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_header.Po \
@@ -3277,6 +3283,7 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_read_format_lha_bugfix_0.c \
 	libarchive/test/test_read_format_lha_filename.c \
 	libarchive/test/test_read_format_lha_filename_utf16.c \
+	libarchive/test/test_read_format_lha_oversize_header.c \
 	libarchive/test/test_read_format_mtree.c \
 	libarchive/test/test_read_format_mtree_crash747.c \
 	libarchive/test/test_read_format_pax_bz2.c \
@@ -3289,6 +3296,7 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_read_format_rar_invalid1.c \
 	libarchive/test/test_read_format_rar_overflow.c \
 	libarchive/test/test_read_format_rar5.c \
+	libarchive/test/test_read_format_rar5_loop_bug.c \
 	libarchive/test/test_read_format_raw.c \
 	libarchive/test/test_read_format_tar.c \
 	libarchive/test/test_read_format_tar_V_negative_size.c \
@@ -3582,9 +3590,11 @@ libarchive_test_EXTRA_DIST = \
 	libarchive/test/test_read_format_7zip_lzma2_sparc.7z.uu \
 	libarchive/test/test_read_format_7zip_malformed.7z.uu \
 	libarchive/test/test_read_format_7zip_malformed2.7z.uu \
+	libarchive/test/test_read_format_7zip_malformed3.7z.uu \
 	libarchive/test/test_read_format_7zip_packinfo_digests.7z.uu \
 	libarchive/test/test_read_format_7zip_ppmd.7z.uu \
 	libarchive/test/test_read_format_7zip_sfx_elf.elf.uu \
+	libarchive/test/test_read_format_7zip_sfx_elf64trunc.elf.uu \
 	libarchive/test/test_read_format_7zip_sfx_modified_pe.exe.uu \
 	libarchive/test/test_read_format_7zip_sfx_pe.exe.uu \
 	libarchive/test/test_read_format_7zip_solid_zstd.7z.uu \
@@ -3646,6 +3656,7 @@ libarchive_test_EXTRA_DIST = \
 	libarchive/test/test_read_format_lha_lh0.lzh.uu \
 	libarchive/test/test_read_format_lha_lh6.lzh.uu \
 	libarchive/test/test_read_format_lha_lh7.lzh.uu \
+	libarchive/test/test_read_format_lha_oversize_header.lzh.uu \
 	libarchive/test/test_read_format_lha_withjunk.lzh.uu \
 	libarchive/test/test_read_format_mtree.mtree.uu \
 	libarchive/test/test_read_format_mtree_nomagic.mtree.uu \
@@ -3700,6 +3711,7 @@ libarchive_test_EXTRA_DIST = \
 	libarchive/test/test_read_format_rar5_invalid_dict_reference.rar.uu \
 	libarchive/test/test_read_format_rar5_leftshift1.rar.uu \
 	libarchive/test/test_read_format_rar5_leftshift2.rar.uu \
+	libarchive/test/test_read_format_rar5_loop_bug.rar.uu \
 	libarchive/test/test_read_format_rar5_multiarchive.part01.rar.uu \
 	libarchive/test/test_read_format_rar5_multiarchive.part02.rar.uu \
 	libarchive/test/test_read_format_rar5_multiarchive.part03.rar.uu \
@@ -6018,6 +6030,9 @@ libarchive/test/test-test_read_format_lha_filename.$(OBJEXT):  \
 libarchive/test/test-test_read_format_lha_filename_utf16.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/test-test_read_format_lha_oversize_header.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_read_format_mtree.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
@@ -6052,6 +6067,9 @@ libarchive/test/test-test_read_format_rar_overflow.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_read_format_rar5.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/test-test_read_format_rar5_loop_bug.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_read_format_raw.$(OBJEXT):  \
@@ -7007,11 +7025,13 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_lha_bugfix_0.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_lha_filename.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_lha_filename_utf16.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_lha_oversize_header.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_mtree.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_mtree_crash747.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_pax_bz2.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_rar.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_rar5.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_rar5_loop_bug.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_data.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_header.Po@am__quote@ # am--include-marker
@@ -13860,6 +13880,20 @@ libarchive/test/test-test_read_format_lha_filename_utf16.obj: libarchive/test/te
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_lha_filename_utf16.obj `if test -f 'libarchive/test/test_read_format_lha_filename_utf16.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_lha_filename_utf16.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_lha_filename_utf16.c'; fi`
 
+libarchive/test/test-test_read_format_lha_oversize_header.o: libarchive/test/test_read_format_lha_oversize_header.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_lha_oversize_header.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_lha_oversize_header.Tpo -c -o libarchive/test/test-test_read_format_lha_oversize_header.o `test -f 'libarchive/test/test_read_format_lha_oversize_header.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_lha_oversize_header.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_lha_oversize_header.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_lha_oversize_header.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_lha_oversize_header.c' object='libarchive/test/test-test_read_format_lha_oversize_header.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_lha_oversize_header.o `test -f 'libarchive/test/test_read_format_lha_oversize_header.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_lha_oversize_header.c
+
+libarchive/test/test-test_read_format_lha_oversize_header.obj: libarchive/test/test_read_format_lha_oversize_header.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_lha_oversize_header.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_lha_oversize_header.Tpo -c -o libarchive/test/test-test_read_format_lha_oversize_header.obj `if test -f 'libarchive/test/test_read_format_lha_oversize_header.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_lha_oversize_header.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_lha_oversize_header.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_lha_oversize_header.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_lha_oversize_header.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_lha_oversize_header.c' object='libarchive/test/test-test_read_format_lha_oversize_header.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_lha_oversize_header.obj `if test -f 'libarchive/test/test_read_format_lha_oversize_header.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_lha_oversize_header.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_lha_oversize_header.c'; fi`
+
 libarchive/test/test-test_read_format_mtree.o: libarchive/test/test_read_format_mtree.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_mtree.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_mtree.Tpo -c -o libarchive/test/test-test_read_format_mtree.o `test -f 'libarchive/test/test_read_format_mtree.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_mtree.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_mtree.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_mtree.Po
@@ -14027,6 +14061,20 @@ libarchive/test/test-test_read_format_rar5.obj: libarchive/test/test_read_format
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_rar5.c' object='libarchive/test/test-test_read_format_rar5.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_rar5.obj `if test -f 'libarchive/test/test_read_format_rar5.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_rar5.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_rar5.c'; fi`
+
+libarchive/test/test-test_read_format_rar5_loop_bug.o: libarchive/test/test_read_format_rar5_loop_bug.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_rar5_loop_bug.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_rar5_loop_bug.Tpo -c -o libarchive/test/test-test_read_format_rar5_loop_bug.o `test -f 'libarchive/test/test_read_format_rar5_loop_bug.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_rar5_loop_bug.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_rar5_loop_bug.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_rar5_loop_bug.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_rar5_loop_bug.c' object='libarchive/test/test-test_read_format_rar5_loop_bug.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_rar5_loop_bug.o `test -f 'libarchive/test/test_read_format_rar5_loop_bug.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_rar5_loop_bug.c
+
+libarchive/test/test-test_read_format_rar5_loop_bug.obj: libarchive/test/test_read_format_rar5_loop_bug.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_rar5_loop_bug.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_rar5_loop_bug.Tpo -c -o libarchive/test/test-test_read_format_rar5_loop_bug.obj `if test -f 'libarchive/test/test_read_format_rar5_loop_bug.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_rar5_loop_bug.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_rar5_loop_bug.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_rar5_loop_bug.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_rar5_loop_bug.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_rar5_loop_bug.c' object='libarchive/test/test-test_read_format_rar5_loop_bug.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_rar5_loop_bug.obj `if test -f 'libarchive/test/test_read_format_rar5_loop_bug.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_rar5_loop_bug.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_rar5_loop_bug.c'; fi`
 
 libarchive/test/test-test_read_format_raw.o: libarchive/test/test_read_format_raw.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_raw.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_raw.Tpo -c -o libarchive/test/test-test_read_format_raw.o `test -f 'libarchive/test/test_read_format_raw.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_raw.c
@@ -17297,11 +17345,13 @@ distclean: distclean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_lha_bugfix_0.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_lha_filename.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_lha_filename_utf16.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_lha_oversize_header.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_mtree.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_mtree_crash747.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_pax_bz2.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar5.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar5_loop_bug.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_data.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_header.Po
@@ -18106,11 +18156,13 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_lha_bugfix_0.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_lha_filename.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_lha_filename_utf16.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_lha_oversize_header.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_mtree.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_mtree_crash747.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_pax_bz2.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar5.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar5_loop_bug.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_data.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_header.Po
