@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/05/14 12:14:33 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/03/26 19:32:05 markd Exp $
 
-BLAKE2s (xint.r63562.tar.xz) = e937f9c3d1852960982c4bb9941a02984cdfdd281f90d9820ef1822a9cc45d9d
-SHA512 (xint.r63562.tar.xz) = 7c98cd18683bc57dbae80c74fcf30995519f5c6176b5af4865ecf3adce844ac0a58c5cef2bb96e30f9d244da37effbc0b164a544dbdfb9f69ef0314c0be1436b
-Size (xint.r63562.tar.xz) = 80860 bytes
+BLAKE2s (xint.r76255.tar.xz) = d0f8c697ea643a2e9e603eade04557775b98e95a91c6476b0fb539bce0c39217
+SHA512 (xint.r76255.tar.xz) = da0d6c71bb58350e45802620b64f032207744c82920990b2850cea747614b35bd9b776f888f9e5603b35da8d4bf6a881a89bccc9f894dab1764bbac98f94e2a2
+Size (xint.r76255.tar.xz) = 82652 bytes

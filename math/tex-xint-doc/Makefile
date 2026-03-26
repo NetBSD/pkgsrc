@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/05/14 12:14:33 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/03/26 19:32:05 markd Exp $
 
 DISTNAME=	xint.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.4m
-TEXLIVE_REV=	63562
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.4o
+TEXLIVE_REV=	76255
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/xint
