@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1898 2026/03/26 17:53:52 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1899 2026/03/26 17:54:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2705,3 +2705,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-sphinx-autodoc-typehints to 3.9.11 [wiz 2026-03-26]
 	Updated devel/py-test-cov to 7.1.0 [wiz 2026-03-26]
 	Updated net/xfr to 0.9.6 [pin 2026-03-26]
+	Updated sysutils/broot to 1.56.1 [pin 2026-03-26]
