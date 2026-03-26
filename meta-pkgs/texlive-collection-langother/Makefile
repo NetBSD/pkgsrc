@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2025/05/07 12:07:26 markd Exp $
+# $NetBSD: Makefile,v 1.20 2026/03/26 19:56:17 markd Exp $
 
 DISTNAME=	collection-langother
 PKGNAME=	texlive-${DISTNAME}-2025pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	74620
+TEXLIVE_REV=	78421
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -38,6 +38,7 @@ DEPENDS+=	tex-ctib-[0-9]*:../../print/tex-ctib
 DEPENDS+=	tex-ethiop-[0-9]*:../../print/tex-ethiop
 DEPENDS+=	tex-ethiop-t1-[0-9]*:../../fonts/tex-ethiop-t1
 DEPENDS+=	tex-fc-[0-9]*:../../fonts/tex-fc
+# depend fonts-arundina
 DEPENDS+=	tex-fonts-tlwg-[0-9]*:../../fonts/tex-fonts-tlwg
 # depend hebrew-fonts
 # hindawi-latex-template is documentation only
