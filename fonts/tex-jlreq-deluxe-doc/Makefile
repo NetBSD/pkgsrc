@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2024/02/25 18:42:37 markd Exp $
+# $NetBSD: Makefile,v 1.5 2026/03/26 09:30:02 markd Exp $
 
 DISTNAME=	jlreq-deluxe.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.5.0
-TEXLIVE_REV=	69971
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.6.0
+TEXLIVE_REV=	78373
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/jlreq-deluxe
