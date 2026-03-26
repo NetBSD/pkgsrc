@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:25:13 nia Exp $
+$NetBSD: distinfo,v 1.13 2026/03/26 02:17:11 dholland Exp $
 
 BLAKE2s (golem-0.0.5.tar.gz) = 024cd51f35e8b73f946b792950fbd173fa9b8a1fa4c0e514f4168e527f596609
 SHA512 (golem-0.0.5.tar.gz) = af02e19ea687e2eea6705f0d394cbe77da53cb57f6d81a15e637993d8851ac83089a195b67e9486ff7d90d7abc69ddbde6143a3a6146bc5c496874c783aee71d
@@ -13,5 +13,7 @@ SHA1 (patch-ag) = 29b9e2068191a84d30224eb1103e68601a3da220
 SHA1 (patch-ah) = a60ccac1bb4d818c7ac11c5acadd131e25f6803d
 SHA1 (patch-ai) = 580b4cbccb7039b476a3469a63d1d888d86e0993
 SHA1 (patch-aj) = 7e9df0996e972b174dfe833705219e937f11ab28
+SHA1 (patch-configure) = c22a449ec0893c613fc87880f33fa5a992790ca0
+SHA1 (patch-configure.in) = 36d99b1d1f166b17e81e4422a79d6a6acb2ec303
 SHA1 (patch-plugins_pager_pager.c) = 452d962e34132770a7ab1a6d2449a519a552c4b8
 SHA1 (patch-src_placement_c) = 938b6701ce8b86e3a1dc923f64acf1949a4ab006

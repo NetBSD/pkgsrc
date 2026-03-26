@@ -1,0 +1,14 @@
+$NetBSD: patch-configure.in,v 1.1 2026/03/26 02:17:11 dholland Exp $
+
+Use standard headers.
+
+--- configure.in~	2002-02-02 21:13:45.000000000 +0000
++++ configure.in
+@@ -59,6 +59,7 @@ EOF
+ 	AC_TRY_COMMAND($CC $SHARED_FLAG -o conftest.so conftest.c 1>&AC_FD_CC) &&
+ 	AC_TRY_RUN([
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <dlfcn.h>
+ int main() {
+ 	FILE *fp = fopen("./conftestval", "w");
