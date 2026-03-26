@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/04/28 19:46:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/03/26 14:39:12 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -16,6 +16,9 @@ ${PYSITELIB}/importlib_metadata/_collections.pyo
 ${PYSITELIB}/importlib_metadata/_compat.py
 ${PYSITELIB}/importlib_metadata/_compat.pyc
 ${PYSITELIB}/importlib_metadata/_compat.pyo
+${PYSITELIB}/importlib_metadata/_context.py
+${PYSITELIB}/importlib_metadata/_context.pyc
+${PYSITELIB}/importlib_metadata/_context.pyo
 ${PYSITELIB}/importlib_metadata/_functools.py
 ${PYSITELIB}/importlib_metadata/_functools.pyc
 ${PYSITELIB}/importlib_metadata/_functools.pyo
@@ -28,18 +31,12 @@ ${PYSITELIB}/importlib_metadata/_meta.pyo
 ${PYSITELIB}/importlib_metadata/_text.py
 ${PYSITELIB}/importlib_metadata/_text.pyc
 ${PYSITELIB}/importlib_metadata/_text.pyo
-${PYSITELIB}/importlib_metadata/_typing.py
-${PYSITELIB}/importlib_metadata/_typing.pyc
-${PYSITELIB}/importlib_metadata/_typing.pyo
 ${PYSITELIB}/importlib_metadata/compat/__init__.py
 ${PYSITELIB}/importlib_metadata/compat/__init__.pyc
 ${PYSITELIB}/importlib_metadata/compat/__init__.pyo
 ${PYSITELIB}/importlib_metadata/compat/py311.py
 ${PYSITELIB}/importlib_metadata/compat/py311.pyc
 ${PYSITELIB}/importlib_metadata/compat/py311.pyo
-${PYSITELIB}/importlib_metadata/compat/py39.py
-${PYSITELIB}/importlib_metadata/compat/py39.pyc
-${PYSITELIB}/importlib_metadata/compat/py39.pyo
 ${PYSITELIB}/importlib_metadata/diagnose.py
 ${PYSITELIB}/importlib_metadata/diagnose.pyc
 ${PYSITELIB}/importlib_metadata/diagnose.pyo
