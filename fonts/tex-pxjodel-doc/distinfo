@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:28:26 nia Exp $
+$NetBSD: distinfo,v 1.4 2026/03/26 10:03:46 markd Exp $
 
-BLAKE2s (pxjodel.doc.r55006.tar.xz) = 4713ece42d4f3d3b7d43c8a7f5ffab4cdda2e45f1061d1505704cc892f1a48fe
-SHA512 (pxjodel.doc.r55006.tar.xz) = e7f8c3ae9e32ac296116743feaf6cca0be3b376b3c34adaa2a90e41f0c4aa329f1330e257e99fbd43025f46e340be48c1d7cb2f1131c7a722a4f7913ddea1a81
-Size (pxjodel.doc.r55006.tar.xz) = 110152 bytes
+BLAKE2s (pxjodel.doc.r77682.tar.xz) = 7b8003511fe6c941693520eb14545b1662c2074a5b61763cfba28e7272bc2e6c
+SHA512 (pxjodel.doc.r77682.tar.xz) = 34ade4c0b4670328435a5146ee9f3d9b2bd65137878d9e9fcfcced053045cad8d360bbd09cb4108c8c9a9806835b90cd36fe2ba7b5f809ab185b1b975f6f2d40
+Size (pxjodel.doc.r77682.tar.xz) = 111900 bytes

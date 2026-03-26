@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/21 08:56:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/03/26 10:03:46 markd Exp $
 share/texmf-dist/fonts/tfm/public/pxjodel/jodhgothb-hq.tfm
 share/texmf-dist/fonts/tfm/public/pxjodel/jodhgothbn-h.tfm
 share/texmf-dist/fonts/tfm/public/pxjodel/jodhgothbn-v.tfm
@@ -8,9 +8,9 @@ share/texmf-dist/fonts/tfm/public/pxjodel/jodhgothebn-v.tfm
 share/texmf-dist/fonts/tfm/public/pxjodel/jodhgothr-hq.tfm
 share/texmf-dist/fonts/tfm/public/pxjodel/jodhgothrn-h.tfm
 share/texmf-dist/fonts/tfm/public/pxjodel/jodhgothrn-v.tfm
-share/texmf-dist/fonts/tfm/public/pxjodel/jodhmgothe-hq.tfm
-share/texmf-dist/fonts/tfm/public/pxjodel/jodhmgothen-h.tfm
-share/texmf-dist/fonts/tfm/public/pxjodel/jodhmgothen-v.tfm
+share/texmf-dist/fonts/tfm/public/pxjodel/jodhmgothr-hq.tfm
+share/texmf-dist/fonts/tfm/public/pxjodel/jodhmgothrn-h.tfm
+share/texmf-dist/fonts/tfm/public/pxjodel/jodhmgothrn-v.tfm
 share/texmf-dist/fonts/tfm/public/pxjodel/jodhminb-hq.tfm
 share/texmf-dist/fonts/tfm/public/pxjodel/jodhminbn-h.tfm
 share/texmf-dist/fonts/tfm/public/pxjodel/jodhminbn-v.tfm
@@ -23,7 +23,7 @@ share/texmf-dist/fonts/tfm/public/pxjodel/jodhminrn-v.tfm
 share/texmf-dist/fonts/tfm/public/pxjodel/zu-jodhgothb-hq.tfm
 share/texmf-dist/fonts/tfm/public/pxjodel/zu-jodhgotheb-hq.tfm
 share/texmf-dist/fonts/tfm/public/pxjodel/zu-jodhgothr-hq.tfm
-share/texmf-dist/fonts/tfm/public/pxjodel/zu-jodhmgothe-hq.tfm
+share/texmf-dist/fonts/tfm/public/pxjodel/zu-jodhmgothr-hq.tfm
 share/texmf-dist/fonts/tfm/public/pxjodel/zu-jodhminb-hq.tfm
 share/texmf-dist/fonts/tfm/public/pxjodel/zu-jodhminl-hq.tfm
 share/texmf-dist/fonts/tfm/public/pxjodel/zu-jodhminr-hq.tfm
@@ -36,9 +36,9 @@ share/texmf-dist/fonts/vf/public/pxjodel/jodhgothebn-v.vf
 share/texmf-dist/fonts/vf/public/pxjodel/jodhgothr-hq.vf
 share/texmf-dist/fonts/vf/public/pxjodel/jodhgothrn-h.vf
 share/texmf-dist/fonts/vf/public/pxjodel/jodhgothrn-v.vf
-share/texmf-dist/fonts/vf/public/pxjodel/jodhmgothe-hq.vf
-share/texmf-dist/fonts/vf/public/pxjodel/jodhmgothen-h.vf
-share/texmf-dist/fonts/vf/public/pxjodel/jodhmgothen-v.vf
+share/texmf-dist/fonts/vf/public/pxjodel/jodhmgothr-hq.vf
+share/texmf-dist/fonts/vf/public/pxjodel/jodhmgothrn-h.vf
+share/texmf-dist/fonts/vf/public/pxjodel/jodhmgothrn-v.vf
 share/texmf-dist/fonts/vf/public/pxjodel/jodhminb-hq.vf
 share/texmf-dist/fonts/vf/public/pxjodel/jodhminbn-h.vf
 share/texmf-dist/fonts/vf/public/pxjodel/jodhminbn-v.vf
@@ -51,7 +51,7 @@ share/texmf-dist/fonts/vf/public/pxjodel/jodhminrn-v.vf
 share/texmf-dist/fonts/vf/public/pxjodel/zu-jodhgothb-hq.vf
 share/texmf-dist/fonts/vf/public/pxjodel/zu-jodhgotheb-hq.vf
 share/texmf-dist/fonts/vf/public/pxjodel/zu-jodhgothr-hq.vf
-share/texmf-dist/fonts/vf/public/pxjodel/zu-jodhmgothe-hq.vf
+share/texmf-dist/fonts/vf/public/pxjodel/zu-jodhmgothr-hq.vf
 share/texmf-dist/fonts/vf/public/pxjodel/zu-jodhminb-hq.vf
 share/texmf-dist/fonts/vf/public/pxjodel/zu-jodhminl-hq.vf
 share/texmf-dist/fonts/vf/public/pxjodel/zu-jodhminr-hq.vf

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/21 08:56:13 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/03/26 10:03:46 markd Exp $
 
 DISTNAME=	pxjodel
-PKGNAME=	tex-${DISTNAME}-0.3
-TEXLIVE_REV=	55006
+PKGNAME=	tex-${DISTNAME}-0.3a
+TEXLIVE_REV=	77682
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pxjodel
