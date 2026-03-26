@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2024/02/18 10:30:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/03/26 09:52:50 markd Exp $
+share/texmf-dist/fonts/afm/public/newpx/NewPXBBMI.afm
 share/texmf-dist/fonts/afm/public/newpx/NewPXBMI.afm
 share/texmf-dist/fonts/afm/public/newpx/NewPXBMI_gnu.afm
 share/texmf-dist/fonts/afm/public/newpx/NewPXMI.afm
@@ -58,6 +59,7 @@ share/texmf-dist/fonts/opentype/public/newpx/npxsups-BoldSlanted.otf
 share/texmf-dist/fonts/opentype/public/newpx/npxsups-Italic.otf
 share/texmf-dist/fonts/opentype/public/newpx/npxsups-Regular.otf
 share/texmf-dist/fonts/opentype/public/newpx/npxsups-Slanted.otf
+share/texmf-dist/fonts/tfm/public/newpx/NewPXBBMI.tfm
 share/texmf-dist/fonts/tfm/public/newpx/NewPXBMI.tfm
 share/texmf-dist/fonts/tfm/public/newpx/NewPXBMI_gnu.tfm
 share/texmf-dist/fonts/tfm/public/newpx/NewPXMI.tfm
@@ -323,6 +325,7 @@ share/texmf-dist/fonts/tfm/public/newpx/zplTOsF-Italic-ts1.tfm
 share/texmf-dist/fonts/tfm/public/newpx/zplTOsF-Regular-ts1.tfm
 share/texmf-dist/fonts/tfm/public/newpx/zplTOsF-Slanted-ts1.tfm
 share/texmf-dist/fonts/tfm/public/newpx/zplb-x.tfm
+share/texmf-dist/fonts/tfm/public/newpx/zplbbmi.tfm
 share/texmf-dist/fonts/tfm/public/newpx/zplbexa.tfm
 share/texmf-dist/fonts/tfm/public/newpx/zplbexx.tfm
 share/texmf-dist/fonts/tfm/public/newpx/zplbmi.tfm
@@ -521,6 +524,7 @@ share/texmf-dist/fonts/tfm/public/newpx/ztm-Regular-tosf-sc-ly1.tfm
 share/texmf-dist/fonts/tfm/public/newpx/ztm-Regular-tosf-sc-ot1.tfm
 share/texmf-dist/fonts/tfm/public/newpx/ztm-Regular-tosf-sc-t1.tfm
 share/texmf-dist/fonts/tfm/public/newpx/ztm-Regular-tosf-t1.tfm
+share/texmf-dist/fonts/type1/public/newpx/NewPXBBMI.pfb
 share/texmf-dist/fonts/type1/public/newpx/NewPXBMI.pfb
 share/texmf-dist/fonts/type1/public/newpx/NewPXBMI_gnu.pfb
 share/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb
@@ -549,6 +553,8 @@ share/texmf-dist/fonts/type1/public/newpx/zplri.pfb
 share/texmf-dist/fonts/type1/public/newpx/zplrsl.pfb
 share/texmf-dist/fonts/type1/public/newpx/zplx-bold.pfb
 share/texmf-dist/fonts/type1/public/newpx/zplx-regular.pfb
+share/texmf-dist/fonts/vf/public/newpx/zplbbmi.vf
+share/texmf-dist/fonts/vf/public/newpx/zplbbmi1.vf
 share/texmf-dist/fonts/vf/public/newpx/zplbexa.vf
 share/texmf-dist/fonts/vf/public/newpx/zplbexx.vf
 share/texmf-dist/fonts/vf/public/newpx/zplbmi.vf
