@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.123 2026/03/15 17:19:52 pin Exp $
+# $NetBSD: go-modules.mk,v 1.124 2026/03/26 19:37:26 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -28,8 +28,8 @@ GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.mod
 GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.zip
 GO_MODULE_FILES+=	github.com/bahlo/generic-list-go/@v/v0.2.0.mod
 GO_MODULE_FILES+=	github.com/bahlo/generic-list-go/@v/v0.2.0.zip
-GO_MODULE_FILES+=	github.com/buger/jsonparser/@v/v1.1.1.mod
-GO_MODULE_FILES+=	github.com/buger/jsonparser/@v/v1.1.1.zip
+GO_MODULE_FILES+=	github.com/buger/jsonparser/@v/v1.1.2.mod
+GO_MODULE_FILES+=	github.com/buger/jsonparser/@v/v1.1.2.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.3.10.mod
@@ -175,8 +175,8 @@ GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.48.0.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.48.0.zip
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20241217172543-b2144cdd0a67.mod
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20241217172543-b2144cdd0a67.zip
-GO_MODULE_FILES+=	golang.org/x/image/@v/v0.37.0.mod
-GO_MODULE_FILES+=	golang.org/x/image/@v/v0.37.0.zip
+GO_MODULE_FILES+=	golang.org/x/image/@v/v0.38.0.mod
+GO_MODULE_FILES+=	golang.org/x/image/@v/v0.38.0.zip
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.34.0.mod
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.34.0.zip
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.20.0.mod
