@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2026/01/25 10:00:31 markd Exp $
+# $NetBSD: Makefile,v 1.35 2026/03/26 19:59:25 markd Exp $
 
 DISTNAME=	collection-mathscience
 PKGNAME=	texlive-${DISTNAME}-2025pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	77452
+TEXLIVE_REV=	78328
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -46,6 +46,7 @@ DEPENDS+=	tex-amstex-[0-9]*:../../print/tex-amstex
 # depend bropd
 # depend broydensolve
 DEPENDS+=	tex-bussproofs-[0-9]*:../../print/tex-bussproofs
+# depend bussproofs-colorful
 # depend bussproofs-extra
 # depend bytefield
 # depend calculation
@@ -95,6 +96,7 @@ DEPENDS+=	tex-concrete-[0-9]*:../../fonts/tex-concrete
 # depend diffcoeff
 # depend digiconfigs
 # depend dijkstra
+# depend dnsrecord
 # depend domaincoloring
 # depend drawmatrix
 # depend drawstack
@@ -218,6 +220,7 @@ DEPENDS+=	tex-oubraces-[0-9]*:../../print/tex-oubraces
 DEPENDS+=	tex-physics-[0-9]*:../../math/tex-physics
 # depend physics-patch
 # depend physics2
+# depend physics3
 # depend physunits
 # depend pinoutikz
 # depend pm-isomath
@@ -253,6 +256,7 @@ DEPENDS+=	tex-physics-[0-9]*:../../math/tex-physics
 # depend sciposter
 # depend sclang-prettifier
 # depend scratchx
+# depend seqcalc
 # depend sesamanuel
 # depend sfg
 # depend shuffle
