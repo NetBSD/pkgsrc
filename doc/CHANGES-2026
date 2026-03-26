@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1867 2026/03/26 08:53:20 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1868 2026/03/26 09:02:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2610,3 +2610,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/tex-hyphen-welsh to 2026 [markd 2026-03-26]
 	Added print/tex-hyphen-kazakh version 2026 [markd 2026-03-26]
 	Updated devel/wayland to 1.25.0 [wiz 2026-03-26]
+	Updated devel/ccache to 4.13.2 [adam 2026-03-26]
+	Updated devel/cmake to 4.3.0 [adam 2026-03-26]
+	Updated devel/cmake-gui to 4.3.0 [adam 2026-03-26]
