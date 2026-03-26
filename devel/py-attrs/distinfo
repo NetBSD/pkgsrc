@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2025/10/12 17:11:01 wiz Exp $
+$NetBSD: distinfo,v 1.24 2026/03/26 14:33:22 wiz Exp $
 
-BLAKE2s (attrs-25.4.0.tar.gz) = cfef3c51647e5333b29fb586823dd6fd0498a14e3c484b295b87d6a4bef7095b
-SHA512 (attrs-25.4.0.tar.gz) = 945ea1766adf7e8c8cc8b8f8c63c3dca652553522cede6a09d479f9919a41d43539819da2fe6fdc0e0b42822e353c7cb04b79fb9cecfd54bde5e301574a82341
-Size (attrs-25.4.0.tar.gz) = 934251 bytes
+BLAKE2s (attrs-26.1.0.tar.gz) = 7a0ae72f765af94d66290f5e23901272af76a88cbf1f6b9fe62260e0231e5267
+SHA512 (attrs-26.1.0.tar.gz) = f9ae9f3a3d313c5f111870d14308fdbb3e2d75a077e76a3b8304d6b9688902c256d7d5b097eaa41e674c29db08c5034e635ee564252096c62f64b6b817f145ae
+Size (attrs-26.1.0.tar.gz) = 952055 bytes
