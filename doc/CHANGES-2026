@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1857 2026/03/26 04:34:49 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1858 2026/03/26 05:07:25 scole Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2534,3 +2534,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/iodine to 0.8.0 [gdt 2026-03-25]
 	Updated devel/cargo-nextest to 0.9.132 [pin 2026-03-26]
 	Updated graphics/scrot to 2.0.0 [pin 2026-03-26]
+	Updated textproc/split-thai to 2.42 [scole 2026-03-26]
