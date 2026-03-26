@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1871 2026/03/26 10:35:22 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1872 2026/03/26 11:00:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2671,3 +2671,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed fonts/tex-sourceserifpro-doc [markd 2026-03-26]
 	Updated emulators/qemu to 10.2.2 [adam 2026-03-26]
 	Updated sysutils/qemu-guest-agent to 10.2.2 [adam 2026-03-26]
+	Updated net/haproxy to 3.3.6 [adam 2026-03-26]
+	Updated devel/py-anyio to 4.13.0 [adam 2026-03-26]
+	Updated devel/py-fakefs to 6.1.6 [adam 2026-03-26]
