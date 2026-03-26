@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/05/13 09:28:33 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/03/26 09:15:37 markd Exp $
 
 DISTNAME=	gentium-otf.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.02
-TEXLIVE_REV=	74545
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.01
+TEXLIVE_REV=	77682
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/gentium-otf
