@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2026/01/25 10:20:51 markd Exp $
+# $NetBSD: Makefile,v 1.41 2026/03/26 20:09:06 markd Exp $
 
 DISTNAME=	collection-publishers
 PKGNAME=	texlive-${DISTNAME}-2025pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	77395
+TEXLIVE_REV=	78371
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -69,8 +69,10 @@ DEPENDS+=	tex-classicthesis-[0-9]*:../../print/tex-classicthesis
 # depend cmpj
 # depend confproc
 # depend contract
+# depend cqjtuthesis
 # depend cquthesis
 # depend dccpaper
+# depend deutschesmuseum
 # depend dithesis
 # depend dlrg-templates
 # depend ebook
@@ -119,6 +121,7 @@ DEPENDS+=	tex-elsarticle-[0-9]*:../../print/tex-elsarticle
 # depend hu-berlin-bundle
 # depend hustthesis
 # depend hustvisual
+# depend iacrj
 # depend iaria
 # depend iaria-lite
 # depend icsv
@@ -137,9 +140,11 @@ DEPENDS+=	tex-ieeetran-[0-9]*:../../print/tex-IEEEtran
 # depend jnuexam
 # depend jourcl
 # depend jourrr
+# depend jouthesis
 # depend jpsj
 # depend jsonresume
 # depend jwjournal
+# depend jyu-chem-thesis
 # depend kdgdocs
 # depend kdpcover
 # depend kfupm-math-exam
@@ -188,8 +193,10 @@ DEPENDS+=	tex-ieeetran-[0-9]*:../../print/tex-IEEEtran
 # depend nstc-proposal
 # depend nwafuthesis
 # depend nwejm
+# depend nxtlatex
 # depend nxuthesis
 # depend omgtudoc-asoiu
+# depend onlinebrief24
 # depend onrannual
 # depend opteng
 # depend oststud
