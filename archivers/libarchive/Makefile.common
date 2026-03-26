@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.26 2026/01/06 11:55:20 adam Exp $
+# $NetBSD: Makefile.common,v 1.27 2026/03/26 11:20:04 adam Exp $
 # used by archivers/bsdtar/Makefile
 # used by archivers/libarchive/Makefile
 
-DISTNAME=	libarchive-3.8.5
+DISTNAME=	libarchive-3.8.6
 CATEGORIES=	archivers
 MASTER_SITES=	https://www.libarchive.org/downloads/
 DISTFILES=	# empty
