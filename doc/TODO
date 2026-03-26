@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26971 2026/03/26 08:02:13 wiz Exp $
+$NetBSD: TODO,v 1.26972 2026/03/26 08:53:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1358,7 +1358,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wMosaic-3.8.22
 	o wandio-4.2.3
 	o wap-utils-1.4.1
-	o wayland-1.25
 	o wbm-virtual-server-6.16
 	o wcalc-2.4
 	o webkit-gtk-2.50.6 [wip]
