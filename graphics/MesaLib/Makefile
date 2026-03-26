@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.218 2026/03/26 08:47:17 wiz Exp $
+# $NetBSD: Makefile,v 1.219 2026/03/26 08:47:30 wiz Exp $
 
 DISTNAME=	mesa-21.3.9
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -73,9 +73,9 @@ MESON_ARGS+=		-Dgallium-xa=disabled
 MESON_ARGS+=		-Ddri3=false
 .  endif
 PLIST.kms=		yes
-.if ${OPSYS} != "Darwin"
+.  if ${OPSYS} != "Darwin"
 PLIST.drikms=		yes
-.endif
+.  endif
 .  if ${MACHINE_ARCH:M*arm*} || \
       ${MACHINE_CPU} == "aarch64"
 GALLIUM_DRIVERS+=	freedreno vc4 etnaviv tegra panfrost lima
