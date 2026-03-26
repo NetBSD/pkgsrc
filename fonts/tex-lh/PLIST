@@ -1,4 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/10 22:39:05 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/03/26 09:38:52 markd Exp $
+share/texmf-dist/fonts/pk/ljfour/lh/lh-t2a/labx1095.600pk
+share/texmf-dist/fonts/pk/ljfour/lh/lh-t2a/labx1200.600pk
+share/texmf-dist/fonts/pk/ljfour/lh/lh-t2a/labx1728.600pk
+share/texmf-dist/fonts/pk/ljfour/lh/lh-t2a/larm0600.600pk
+share/texmf-dist/fonts/pk/ljfour/lh/lh-t2a/larm0800.600pk
+share/texmf-dist/fonts/pk/ljfour/lh/lh-t2a/larm1095.600pk
+share/texmf-dist/fonts/pk/ljfour/lh/lh-t2a/larm1200.600pk
+share/texmf-dist/fonts/pk/ljfour/lh/lh-t2a/larm1728.600pk
+share/texmf-dist/fonts/pk/ljfour/lh/lh-t2a/lati1200.600pk
 share/texmf-dist/fonts/source/lh/base/fikparm.mf
 share/texmf-dist/fonts/source/lh/base/lcyrbeg.mf
 share/texmf-dist/fonts/source/lh/base/lcyrdefs.mf
@@ -250,6 +259,9 @@ share/texmf-dist/fonts/source/lh/lh-t2a/labsr8.mf
 share/texmf-dist/fonts/source/lh/lh-t2a/labsr9.mf
 share/texmf-dist/fonts/source/lh/lh-t2a/labtl10.mf
 share/texmf-dist/fonts/source/lh/lh-t2a/labto10.mf
+share/texmf-dist/fonts/source/lh/lh-t2a/labx1095.mf
+share/texmf-dist/fonts/source/lh/lh-t2a/labx1200.mf
+share/texmf-dist/fonts/source/lh/lh-t2a/labx1728.mf
 share/texmf-dist/fonts/source/lh/lh-t2a/lacodes.mf
 share/texmf-dist/fonts/source/lh/lh-t2a/lalb8.mf
 share/texmf-dist/fonts/source/lh/lh-t2a/lali8.mf
@@ -282,8 +294,14 @@ share/texmf-dist/fonts/source/lh/lh-t2a/laosl9.mf
 share/texmf-dist/fonts/source/lh/lh-t2a/laoslc9.mf
 share/texmf-dist/fonts/source/lh/lh-t2a/laoti10.mf
 share/texmf-dist/fonts/source/lh/lh-t2a/laqi8.mf
+share/texmf-dist/fonts/source/lh/lh-t2a/larm0600.mf
+share/texmf-dist/fonts/source/lh/lh-t2a/larm0800.mf
+share/texmf-dist/fonts/source/lh/lh-t2a/larm1095.mf
+share/texmf-dist/fonts/source/lh/lh-t2a/larm1200.mf
+share/texmf-dist/fonts/source/lh/lh-t2a/larm1728.mf
 share/texmf-dist/fonts/source/lh/lh-t2a/lasq8.mf
 share/texmf-dist/fonts/source/lh/lh-t2a/lassdc10.mf
+share/texmf-dist/fonts/source/lh/lh-t2a/lati1200.mf
 share/texmf-dist/fonts/source/lh/lh-t2b/ilblb8.mf
 share/texmf-dist/fonts/source/lh/lh-t2b/ilbli8.mf
 share/texmf-dist/fonts/source/lh/lh-t2b/ilblo8.mf
@@ -542,6 +560,15 @@ share/texmf-dist/fonts/source/lh/specific/lgnoncl.mf
 share/texmf-dist/fonts/source/lh/specific/lgnoncu.mf
 share/texmf-dist/fonts/source/lh/specific/lgrucl.mf
 share/texmf-dist/fonts/source/lh/specific/lgrucu.mf
+share/texmf-dist/fonts/tfm/lh/lh-t2a/labx1095.tfm
+share/texmf-dist/fonts/tfm/lh/lh-t2a/labx1200.tfm
+share/texmf-dist/fonts/tfm/lh/lh-t2a/labx1728.tfm
+share/texmf-dist/fonts/tfm/lh/lh-t2a/larm0600.tfm
+share/texmf-dist/fonts/tfm/lh/lh-t2a/larm0800.tfm
+share/texmf-dist/fonts/tfm/lh/lh-t2a/larm1095.tfm
+share/texmf-dist/fonts/tfm/lh/lh-t2a/larm1200.tfm
+share/texmf-dist/fonts/tfm/lh/lh-t2a/larm1728.tfm
+share/texmf-dist/fonts/tfm/lh/lh-t2a/lati1200.tfm
 share/texmf-dist/tex/latex/lh/lh-lcy.sty
 share/texmf-dist/tex/latex/lh/lh-lcyccr.sty
 share/texmf-dist/tex/latex/lh/lh-lcyxccr.sty
