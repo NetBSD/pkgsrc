@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2025/05/07 11:44:25 markd Exp $
+# $NetBSD: Makefile,v 1.11 2026/03/26 08:07:48 markd Exp $
 
 DISTNAME=	hyphen-thai
-PKGNAME=	tex-${DISTNAME}-2025
-TEXLIVE_REV=	73410
+PKGNAME=	tex-${DISTNAME}-2026
+TEXLIVE_REV=	78069
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Thai hyphenation patterns

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/05/07 11:44:23 markd Exp $
+$NetBSD: distinfo,v 1.13 2026/03/26 08:07:45 markd Exp $
 
-BLAKE2s (hyphen-lithuanian.r73410.tar.xz) = 19f6614c70f767a95be44975d9a1ace4b7afd5eb5ec83831f568a25b94d00bc5
-SHA512 (hyphen-lithuanian.r73410.tar.xz) = e21bdf74ad6a5f734a2fcf3d5ef30b14c7a13c173c2802c2a78831a9ed6d6142a5018ca536329db78fad8caf54b33a7c393af8a918bfb2ac6b7f650fb3213a99
-Size (hyphen-lithuanian.r73410.tar.xz) = 7436 bytes
+BLAKE2s (hyphen-lithuanian.r78069.tar.xz) = caab4a84e40ecaccb42be5ee4d26a59a85427be686b276bb11701dbc01c410e9
+SHA512 (hyphen-lithuanian.r78069.tar.xz) = 993d1f4346a5ba77c23b615c52f4043f8e73ba3fadffce00d9653bd3c75b1ca6d5ec6874aeb2ae8222bc5bab2010109a2b4dc0c7d874c8577a3596c936f83b15
+Size (hyphen-lithuanian.r78069.tar.xz) = 7424 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/05/07 11:44:23 markd Exp $
+$NetBSD: distinfo,v 1.13 2026/03/26 08:07:46 markd Exp $
 
-BLAKE2s (hyphen-norwegian.r73410.tar.xz) = 21f51e2caed5626cbde4678637f5a939447098f6c1f036a8e6169a41eac85e4a
-SHA512 (hyphen-norwegian.r73410.tar.xz) = ce62abb79b3aedf1c056f9e297c8a32a039de59100426f2ff577cb2e650a1c71fb23c78e794fe747ed5a22840c58082c53126dc160f54463f2e984439e677196
-Size (hyphen-norwegian.r73410.tar.xz) = 96216 bytes
+BLAKE2s (hyphen-norwegian.r78069.tar.xz) = 4b5cdd48fdea5c4a6fc3acc2d41c1db01067c62a30e9aeea6824dac897eae954
+SHA512 (hyphen-norwegian.r78069.tar.xz) = ce4ae8c8912de4b80f71f22097d806ce26a8779ef87a6887e84a1c1b838800e3885049c70bcf1e01088c3765131c30a5e66493c1d352ced169c8c1b175644a1b
+Size (hyphen-norwegian.r78069.tar.xz) = 96224 bytes

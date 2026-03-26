@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/05/07 11:44:25 markd Exp $
+$NetBSD: distinfo,v 1.11 2026/03/26 08:07:48 markd Exp $
 
-BLAKE2s (hyphen-turkmen.r73410.tar.xz) = 84f8e3606a8b0e949d32f15a0f522703942b4da24a97e719dcb82dad28b86eb1
-SHA512 (hyphen-turkmen.r73410.tar.xz) = 94d09158df98526c15ce8886a12e7fc732a62b2161fcfea0011a98581425c0452b6f8abe1be968430a9cb0b33a2bef45b41a3bcc0e7abc66f8fcee74063f974b
-Size (hyphen-turkmen.r73410.tar.xz) = 6284 bytes
+BLAKE2s (hyphen-turkmen.r78069.tar.xz) = b98bcd99fcd032883f5ae327f3e59eb83a74123450b0e32a5acecfd504236443
+SHA512 (hyphen-turkmen.r78069.tar.xz) = 99c09f751a1807ce1ee5842627cc9b7f77c6e6cb53e2505eba9c5dfba7fe156e5ccd1d8a4d664cdb5b24e7ce449c8a352c961b6c83804ee6ae003def10dad2ef
+Size (hyphen-turkmen.r78069.tar.xz) = 6284 bytes

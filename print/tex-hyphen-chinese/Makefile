@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2025/05/07 11:44:19 markd Exp $
+# $NetBSD: Makefile,v 1.17 2026/03/26 08:07:41 markd Exp $
 
 DISTNAME=	hyphen-chinese
-PKGNAME=	tex-${DISTNAME}-2025
-TEXLIVE_REV=	74115
+PKGNAME=	tex-${DISTNAME}-2026
+TEXLIVE_REV=	78069
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation patterns for Chinese

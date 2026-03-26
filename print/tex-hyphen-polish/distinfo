@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/05/07 11:44:23 markd Exp $
+$NetBSD: distinfo,v 1.13 2026/03/26 08:07:46 markd Exp $
 
-BLAKE2s (hyphen-polish.r73410.tar.xz) = 98dbe640b3e2f96440f3265c8c546011cc8c2e4d39ef468748d6ad9b5be9c2a0
-SHA512 (hyphen-polish.r73410.tar.xz) = a092676b0e97d79a85827e98a14af8ed9d1a095e7fc9eccbf1f018dc99c2c46003b501c87eb9362b3331153f27c414f6dca43eab3471d8153737b4a6c35f1efc
-Size (hyphen-polish.r73410.tar.xz) = 12508 bytes
+BLAKE2s (hyphen-polish.r78069.tar.xz) = 17be8c7b7af9e901c209895fba5f7bf515e261439ef50b0cec0fa27a3d9e65eb
+SHA512 (hyphen-polish.r78069.tar.xz) = d7265e7c76e29763641a5cd208427902fdb2c347f09578f199d403795210a173301a2a069921302a0ac1c124c618defadaced5c1cf96e001def8185a21b297aa
+Size (hyphen-polish.r78069.tar.xz) = 12500 bytes

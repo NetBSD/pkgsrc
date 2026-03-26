@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/05/07 11:44:24 markd Exp $
+$NetBSD: distinfo,v 1.13 2026/03/26 08:07:47 markd Exp $
 
-BLAKE2s (hyphen-sanskrit.r73410.tar.xz) = 0a87b2168c1f9731f8471055124132c3792f62f145d94b2a6fe119c2784c5337
-SHA512 (hyphen-sanskrit.r73410.tar.xz) = 669262bfa007cb8aa30bae37be16e398b6f2d3e0e75a80c8988a0ac296adc87035c74843167b6495ea0b2cec5bb1f4fdace67828a46a45303db9be19246aebb3
-Size (hyphen-sanskrit.r73410.tar.xz) = 3588 bytes
+BLAKE2s (hyphen-sanskrit.r78069.tar.xz) = b9c9b70d10778610eda2e9b6a9ce3431e9adc6fc80885f37c18ca07c59020cda
+SHA512 (hyphen-sanskrit.r78069.tar.xz) = 322a1b50d4964953e7aebea49dd03b6b1cbc97b4d07d08783bb607a3f20e900be2358e870fe706f321d1312dceaa8777856e01ffc104028cb2f99904b9316884
+Size (hyphen-sanskrit.r78069.tar.xz) = 3596 bytes

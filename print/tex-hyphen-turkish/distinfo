@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/05/07 11:44:25 markd Exp $
+$NetBSD: distinfo,v 1.13 2026/03/26 08:07:48 markd Exp $
 
-BLAKE2s (hyphen-turkish.r73410.tar.xz) = ea3909cd710b6bc87c9c7a47954aa793099516625280716af8e69c983777ffe8
-SHA512 (hyphen-turkish.r73410.tar.xz) = 7ba0e810f2780831486a7bb8790d7589ca0fccfd78c8316cfb37289dc66f02b0e8fbfc3ca91a198614e88ba0ee04b995a320ab5b74cf5102d4a2bdec8fd5a40f
-Size (hyphen-turkish.r73410.tar.xz) = 3860 bytes
+BLAKE2s (hyphen-turkish.r78069.tar.xz) = 92515bb3819979995eba15d994b5581800f5530041852ed9d2f97ffe1cf60d73
+SHA512 (hyphen-turkish.r78069.tar.xz) = c28157280dad4ac8ce003a8a68c546dda74dc51fd137280b883e3249306f1dca58611986a275ec43af71e1038c0b10f473577321cd8bbe325a29aff2c7237fcc
+Size (hyphen-turkish.r78069.tar.xz) = 3868 bytes

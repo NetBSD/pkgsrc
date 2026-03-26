@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/05/07 11:44:19 markd Exp $
+$NetBSD: distinfo,v 1.14 2026/03/26 08:07:41 markd Exp $
 
-BLAKE2s (hyphen-coptic.r73410.tar.xz) = 72b665efee00046101df5a33905762f77cd985110ebe904c21a08c2463a03300
-SHA512 (hyphen-coptic.r73410.tar.xz) = 3a492b64b99971c885a82815aa630ddf5d195f80afaa9a04f0d0449ef94ee9100e10456520d8b751fdc75e7d0f206948c5eeb5f8c5bbbbd0e158f27cff98b25f
-Size (hyphen-coptic.r73410.tar.xz) = 6168 bytes
+BLAKE2s (hyphen-coptic.r78069.tar.xz) = 676f0399d01c6d228e252159b7cff66cdbe7d029e96abb9f6f00d60241348dda
+SHA512 (hyphen-coptic.r78069.tar.xz) = 4dccedba21b986bf65b5a5e3ab121e482a526b3372cbb2c3720b383ebbfbe1cbb231c2af4c0a6af9157df9eb8aafaa5462c088ad7f77e76cc4445c69782a8035
+Size (hyphen-coptic.r78069.tar.xz) = 6148 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/05/07 11:44:25 markd Exp $
+$NetBSD: distinfo,v 1.13 2026/03/26 08:07:48 markd Exp $
 
-BLAKE2s (hyphen-uppersorbian.r73410.tar.xz) = d6c8dc42a6d618f58aad5eacab625b6be2fe4531411e381fcf20b2ad895daa32
-SHA512 (hyphen-uppersorbian.r73410.tar.xz) = 560d70530a97c0b634c51c3f6923282cd315f1be8cb533098375bb72162de628ebd6074e541818c0791faec94fdfb4ef99548f0a8b24067994f72ea2e9d65bb7
-Size (hyphen-uppersorbian.r73410.tar.xz) = 5508 bytes
+BLAKE2s (hyphen-uppersorbian.r78069.tar.xz) = ef2792670ae42ff9ee94673523fbb9913e7c67ea1a943911e43efb97e2c72891
+SHA512 (hyphen-uppersorbian.r78069.tar.xz) = 81c4e9c64b6b74e01e92cdde42b4a2cf52372ae9beee2d4e02875c23a58981adca758ac36a3b30d3cfbc926810da3b23c732f5e8c7783a2cf87381c5cf63cdfb
+Size (hyphen-uppersorbian.r78069.tar.xz) = 5504 bytes

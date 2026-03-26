@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/05/07 11:44:26 markd Exp $
+$NetBSD: distinfo,v 1.13 2026/03/26 08:07:48 markd Exp $
 
-BLAKE2s (hyphen-welsh.r73410.tar.xz) = 4ce094c5f13781df87028df256b55e954a2bd5ab48fa1f34f3cf502f93a3a916
-SHA512 (hyphen-welsh.r73410.tar.xz) = 8a8a83b7596db194c6e12389f467c5013dfba45a18dbbf4ec53c6200ff180d09f826dad90d17784ead0c325d3df1531636f6ef5b1570c4b257d89b628dafb271
-Size (hyphen-welsh.r73410.tar.xz) = 19984 bytes
+BLAKE2s (hyphen-welsh.r78069.tar.xz) = 0cf5e0709fd9a619cfad659e33850fb1d5cd00179f39200c6266afb116722838
+SHA512 (hyphen-welsh.r78069.tar.xz) = 5b3a5431a816e53c7eae7229ad99a523ca2d397bd2135eba5bf87bdacd9d3e51910c5e54d6dc79338c91c6e4aab645a9968d06e1d40f0039559b5f5244a673f6
+Size (hyphen-welsh.r78069.tar.xz) = 19988 bytes

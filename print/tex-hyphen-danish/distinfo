@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/05/07 11:44:20 markd Exp $
+$NetBSD: distinfo,v 1.13 2026/03/26 08:07:42 markd Exp $
 
-BLAKE2s (hyphen-danish.r73410.tar.xz) = 10424966aec918f927359dd7c51d2a717fed0bebb360bb06278d7894cd3ba4d7
-SHA512 (hyphen-danish.r73410.tar.xz) = b4a33945a9b8b4a05ba05ca54c4e1565cd00742d128e153bb772863bfac23fc39873ea1191780c4260a999570d23676b89332e4a196b57da2268fa7a92a001de
-Size (hyphen-danish.r73410.tar.xz) = 5756 bytes
+BLAKE2s (hyphen-danish.r78069.tar.xz) = df40879a99cb5b2bb77929711257bdebf168e05b9098247c0b196ad79f1d23bc
+SHA512 (hyphen-danish.r78069.tar.xz) = 73b67526362f4c808c15ef8d04726565da697ba59c8f6749c6fd574e21143234401fb17b25f9408e2d098f9d41b16f2e202bd63b4753fe6a42cf5d19c9a0590a
+Size (hyphen-danish.r78069.tar.xz) = 5748 bytes

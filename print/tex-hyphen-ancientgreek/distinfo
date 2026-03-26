@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2025/05/07 11:44:17 markd Exp $
+$NetBSD: distinfo,v 1.15 2026/03/26 08:07:40 markd Exp $
 
-BLAKE2s (hyphen-ancientgreek.r74823.tar.xz) = 1c4bca175b0adb64f48d7121511cad632e9ecdce2b582ba456d18b8be5ec8a44
-SHA512 (hyphen-ancientgreek.r74823.tar.xz) = d3edde9443aba5d0c7b87b248bf0184bca03cc2ed7994efed807f03c38f98b54129bc523634530f1afab2714789a643f5d38848382f6538cfeb52969e6e198fd
-Size (hyphen-ancientgreek.r74823.tar.xz) = 38252 bytes
+BLAKE2s (hyphen-ancientgreek.r78069.tar.xz) = 087b8673a7594f833c8ccf3017b26891f46d1703dc6e491674749681212213f1
+SHA512 (hyphen-ancientgreek.r78069.tar.xz) = a473f01224a3c6a2823cb66b23e101dc963c295dacc364c5b7efce2924c89b9042294565ee31960743d1902da75dde0752ba45386026fbe7465034842364f093
+Size (hyphen-ancientgreek.r78069.tar.xz) = 38280 bytes

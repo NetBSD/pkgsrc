@@ -1,10 +1,10 @@
-$NetBSD: patch-tex_generic_config_language.dat,v 1.1 2025/05/07 11:44:18 markd Exp $
+$NetBSD: patch-tex_generic_config_language.dat,v 1.2 2026/03/26 08:07:41 markd Exp $
 
 Trim languages. They will be added automatically as each package is installed.
 
---- tex/generic/config/language.dat.orig	2025-02-18 00:40:41.000000000 +0000
+--- tex/generic/config/language.dat.orig	2026-02-23 00:40:53.000000000 +0000
 +++ tex/generic/config/language.dat
-@@ -58,169 +58,3 @@ dumylang	dumyhyph.tex    % for testing a
+@@ -58,171 +58,3 @@ dumylang	dumyhyph.tex    % for testing a
  nohyphenation	zerohyph.tex    % a language with no patterns at all.
  
  % (end of static file language.us)
@@ -110,6 +110,8 @@ Trim languages. They will be added automatically as each package is installed.
 -irish loadhyph-ga.tex
 -% from hyphen-italian:
 -italian loadhyph-it.tex
+-% from hyphen-kazakh:
+-kazakh loadhyph-kk.tex
 -% from hyphen-kurmanji:
 -kurmanji loadhyph-kmr.tex
 -% from hyphen-latin:

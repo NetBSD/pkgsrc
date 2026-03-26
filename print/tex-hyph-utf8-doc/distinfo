@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2025/05/07 11:44:26 markd Exp $
+$NetBSD: distinfo,v 1.18 2026/03/26 08:07:48 markd Exp $
 
-BLAKE2s (hyph-utf8.doc.r74823.tar.xz) = af0ee1df319a0ceea368622029a837e22a75c6ce18daa649dfdbebaf4aa8d392
-SHA512 (hyph-utf8.doc.r74823.tar.xz) = 2645106f7c41549ac38a8204964dcf075fbba795487b794c2e0721c5df8f61ccc50d3965d577c27ec0bf1a0448b785c052ad5f69060d5a319066d8fb87079341
-Size (hyph-utf8.doc.r74823.tar.xz) = 268432 bytes
+BLAKE2s (hyph-utf8.doc.r78069.tar.xz) = c47b1423f5ab6ec380cd50a092b75ed892505b88e56e78bad03ea276983447d0
+SHA512 (hyph-utf8.doc.r78069.tar.xz) = b6ef5a619ead6ca756a880cac22dc18219cc3521699a05c72629e9549941cfe9ce9eabc3d62faf2ed55e40829b79ef79a2643e10db8c3e0120df2f6d89ddadd9
+Size (hyph-utf8.doc.r78069.tar.xz) = 268452 bytes

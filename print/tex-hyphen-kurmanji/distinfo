@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/05/07 11:44:22 markd Exp $
+$NetBSD: distinfo,v 1.11 2026/03/26 08:07:45 markd Exp $
 
-BLAKE2s (hyphen-kurmanji.r73410.tar.xz) = 62922ce36bc6564210072328971cc462f2872fbafe60b8317197829caf7cb6b6
-SHA512 (hyphen-kurmanji.r73410.tar.xz) = 03e7906dbe6260bbf38ad1c5bfbcd42b3594e56f667d7abe8062347dc3a6b5ddf9022356c9846dba33dc29c47f16d7e17c8b20acf1e29b1671e813bcef0a856d
-Size (hyphen-kurmanji.r73410.tar.xz) = 2704 bytes
+BLAKE2s (hyphen-kurmanji.r78069.tar.xz) = 1be61cab3d5b55527f022c898751060bfc5067fdfee54641e30302a895e258c4
+SHA512 (hyphen-kurmanji.r78069.tar.xz) = 19878db2775d3dad30321d175eba2f6f35858c02994ce8e7e00d3cd41e22f798f4ce6a2e86eb7b70f5bbe8cda759ff92bd65a2950f3d07f4a996daf4d78da74b
+Size (hyphen-kurmanji.r78069.tar.xz) = 2700 bytes

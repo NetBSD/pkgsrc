@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/05/07 11:44:19 markd Exp $
+$NetBSD: distinfo,v 1.13 2026/03/26 08:07:42 markd Exp $
 
-BLAKE2s (hyphen-croatian.r73410.tar.xz) = f9871d58541c766496c1543167608a600091eeaab31973f606db55d44bacd689
-SHA512 (hyphen-croatian.r73410.tar.xz) = a2cb861915155ae165a70a4e1e4f6806063aac300cd4ab8db1b94c599c49e7c95c12bdf301782d19f048628c44405bcffcb9ecb7ae8713d176114a3c1753a177
-Size (hyphen-croatian.r73410.tar.xz) = 5540 bytes
+BLAKE2s (hyphen-croatian.r78069.tar.xz) = 8e430c7686adfc53b041d5b2906a6caa2c2c877881761321df2bc444b87da217
+SHA512 (hyphen-croatian.r78069.tar.xz) = e0a77801b4f104bf3ffa03db61b8cdd51824c8ee1e6dd40c120f604c62390777110f90b0eaf39c7a392296159bac68e182d1aef32375ed9733ca9d63d9a57867
+Size (hyphen-croatian.r78069.tar.xz) = 5568 bytes

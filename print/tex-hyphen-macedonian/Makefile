@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2025/05/07 11:44:23 markd Exp $
+# $NetBSD: Makefile,v 1.5 2026/03/26 08:07:45 markd Exp $
 
 DISTNAME=	hyphen-macedonian
-PKGNAME=	tex-${DISTNAME}-2025
-TEXLIVE_REV=	73410
+PKGNAME=	tex-${DISTNAME}-2026
+TEXLIVE_REV=	78069
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Macedonian hyphenation patterns

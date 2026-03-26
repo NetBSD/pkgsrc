@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/05/07 11:44:21 markd Exp $
+$NetBSD: distinfo,v 1.12 2026/03/26 08:07:43 markd Exp $
 
-BLAKE2s (hyphen-galician.r73410.tar.xz) = 108c965ac784b23a92c4a57778d6e9b1d11f4da1a227f8db0cb9f8f09f983613
-SHA512 (hyphen-galician.r73410.tar.xz) = b1d9f733ec7d3a42f7c98c45522e218d2c8605bef14753cf355a428b47a723be26f02f4a3d53172c17e3adae9cfbcb86650a06154b04f7ad5602556613313f6f
-Size (hyphen-galician.r73410.tar.xz) = 10348 bytes
+BLAKE2s (hyphen-galician.r78069.tar.xz) = 9ddf075318f9f0b6eb420bf41b11544ebfff104f1b97882b5f2a8d1b7eec0b2c
+SHA512 (hyphen-galician.r78069.tar.xz) = 57489ea5726a482cadd57ee3d77bc758b976acb0ceb28bf959921d1d64ef1ebd44ef9ef5db175be41e7bfaf755aa83f0c48aa501d7d0bd7e126e68f884347218
+Size (hyphen-galician.r78069.tar.xz) = 10372 bytes
