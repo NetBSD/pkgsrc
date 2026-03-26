@@ -1,13 +1,7 @@
-$NetBSD: distinfo,v 1.168 2026/03/10 05:58:05 wiz Exp $
+$NetBSD: distinfo,v 1.169 2026/03/26 13:38:03 wiz Exp $
 
-BLAKE2s (harfbuzz-13.0.1.tar.xz) = 6cc65ffd1ec2b8feb7f7115828c118dff5d3f38a13cc7e460d2f0f1170ddf4c8
-SHA512 (harfbuzz-13.0.1.tar.xz) = edc856198fc7ed49133d9cc978c70de371c5076f67e28a4fa51be2f0651031ef108967deefb29a0116f1de8a9316c6a686f039726d4dbae84d295461a24fdc90
-Size (harfbuzz-13.0.1.tar.xz) = 19426688 bytes
-SHA1 (patch-src_hb-raster-svg-base.hh) = ebf5e0a71d20713081776641c80bae6090606c9e
-SHA1 (patch-src_hb-raster-svg-clip.cc) = 7bd89fc7e88cc48dc50a5331078b982281764524
-SHA1 (patch-src_hb-raster-svg-fill.cc) = f413b7f2aedf91873967ee7dd9d4adaaa4b25cc2
-SHA1 (patch-src_hb-raster-svg-parse.cc) = a1c734cc665b0ac0e4e88fa65390962a6e04d75e
-SHA1 (patch-src_hb-raster-svg-parse.hh) = fa0771ef3c08f853da0de1ccd2c4d8f2575d8cde
-SHA1 (patch-src_hb-vector-svg-utils.hh) = 25784ce6de206ce6bee9e22c675e9b982171d09a
+BLAKE2s (harfbuzz-13.2.1.tar.xz) = afc8298b75897744332696b88ecab9ef27a1e1f55ea9226ba60241859187602c
+SHA512 (harfbuzz-13.2.1.tar.xz) = 3a13ac59813304baebc0fbdbdaf7e7a8af508bb37901d6e1eb2186b1de3d702507e24271286297195719f8d7e3982cc4dcc5c290bc52ef172ebf35b8cfb6a70f
+Size (harfbuzz-13.2.1.tar.xz) = 19508960 bytes
 SHA1 (patch-src_meson.build) = 5b46f9933d5dea1f842fccf63eb92faae1f7c90f
 SHA1 (patch-util_meson.build) = 50c5146c723a734ee42609dcc384de0feb46369e

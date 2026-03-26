@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.88 2026/03/10 05:58:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.89 2026/03/26 13:38:03 wiz Exp $
 ${PLIST.introspection}bin/hb-info
+${PLIST.introspection}bin/hb-raster
 ${PLIST.introspection}bin/hb-shape
 ${PLIST.introspection}bin/hb-subset
 ${PLIST.introspection}bin/hb-vector
