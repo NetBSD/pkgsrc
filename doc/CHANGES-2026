@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1892 2026/03/26 14:37:57 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1893 2026/03/26 14:39:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2699,3 +2699,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/py-charset-normalizer to 3.4.6 [wiz 2026-03-26]
 	Updated security/py-cyclonedx-python-lib to 11.7.0 [wiz 2026-03-26]
 	Updated www/py-google-api-python-client to 2.193.0 [wiz 2026-03-26]
+	Updated devel/py-importlib-metadata to 9.0.0 [wiz 2026-03-26]
