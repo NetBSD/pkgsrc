@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1859 2026/03/26 05:42:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1860 2026/03/26 05:59:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2537,3 +2537,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/split-thai to 2.42 [scole 2026-03-26]
 	Updated textproc/icu to 78.3 [adam 2026-03-26]
 	Updated textproc/py-ICU to 2.16.2 [adam 2026-03-26]
+	Updated textproc/py-tomli to 2.4.1 [adam 2026-03-26]
+	Updated devel/py-build to 1.4.2 [adam 2026-03-26]
