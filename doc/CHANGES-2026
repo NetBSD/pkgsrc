@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1860 2026/03/26 05:59:35 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1861 2026/03/26 06:21:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2539,3 +2539,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-ICU to 2.16.2 [adam 2026-03-26]
 	Updated textproc/py-tomli to 2.4.1 [adam 2026-03-26]
 	Updated devel/py-build to 1.4.2 [adam 2026-03-26]
+	Updated devel/libgsf to 1.14.56 [adam 2026-03-26]
+	Updated graphics/freetype2 to 2.14.3 [adam 2026-03-26]
