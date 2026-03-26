@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1886 2026/03/26 14:29:33 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1887 2026/03/26 14:30:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2693,3 +2693,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/p5-Crypt-RIPEMD160 to 0.11 [wiz 2026-03-26]
 	Updated security/p5-Net-SSLeay to 1.96 [wiz 2026-03-26]
 	Updated time/p5-TimeDate to 2.35 [wiz 2026-03-26]
+	Updated textproc/p5-XML-Parser to 2.51 [wiz 2026-03-26]
