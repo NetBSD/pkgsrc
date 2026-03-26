@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1882 2026/03/26 13:58:41 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1883 2026/03/26 14:05:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2689,3 +2689,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/libavif to 1.4.1 [wiz 2026-03-26]
 	Updated multimedia/libde265 to 1.0.18 [wiz 2026-03-26]
 	Updated textproc/libfyaml to 0.9.6 [wiz 2026-03-26]
+	Updated lang/ruby33 to 3.3.11 [taca 2026-03-26]
