@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:28:10 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/03/26 09:38:52 markd Exp $
 
-BLAKE2s (tex-lh-15878/lh.tar.xz) = a700717a680e015e3cf83c0aecd12f6a80d8908dbdfb5784dac56f7099735e7f
-SHA512 (tex-lh-15878/lh.tar.xz) = ce5afeed347982ea1e012e3470fdf8e52ae45f41d5ab57ae88b1b220960db491c568d8549c08644cdfbb5553fd97ecebf9db5730aa42986562c8a84d6b323a69
-Size (tex-lh-15878/lh.tar.xz) = 172048 bytes
+BLAKE2s (lh.r77838.tar.xz) = 62a24697e2e0eff9d6783d6ef35184374837902c8ae0f88a9da1512e7f394135
+SHA512 (lh.r77838.tar.xz) = 299fd6bb3539acc95cb1823f325277f19c10f6f71d419aaf5937f7d98b5f7f7780df702aa8c07398923a803a2380f1b075b1a85205d8da1abdba90ea446ad776
+Size (lh.r77838.tar.xz) = 361316 bytes
