@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2025/12/09 13:49:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2026/03/26 14:36:13 wiz Exp $
 ${PYSITELIB}/cyclonedx/__init__.py
 ${PYSITELIB}/cyclonedx/__init__.pyc
 ${PYSITELIB}/cyclonedx/__init__.pyo
@@ -166,6 +166,9 @@ ${PYSITELIB}/cyclonedx/schema/_res/cryptography-defs.SNAPSHOT.schema.json
 ${PYSITELIB}/cyclonedx/schema/_res/jsf-0.82.SNAPSHOT.schema.json
 ${PYSITELIB}/cyclonedx/schema/_res/spdx.SNAPSHOT.schema.json
 ${PYSITELIB}/cyclonedx/schema/_res/spdx.SNAPSHOT.xsd
+${PYSITELIB}/cyclonedx/schema/deprecation.py
+${PYSITELIB}/cyclonedx/schema/deprecation.pyc
+${PYSITELIB}/cyclonedx/schema/deprecation.pyo
 ${PYSITELIB}/cyclonedx/schema/schema.py
 ${PYSITELIB}/cyclonedx/schema/schema.pyc
 ${PYSITELIB}/cyclonedx/schema/schema.pyo
