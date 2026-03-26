@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/05/14 12:14:33 markd Exp $
-share/texmf-dist/doc/generic/xint/CHANGES.html
+@comment $NetBSD: PLIST,v 1.2 2026/03/26 19:32:05 markd Exp $
 share/texmf-dist/doc/generic/xint/README.md
-share/texmf-dist/doc/generic/xint/sourcexint.pdf
 share/texmf-dist/doc/generic/xint/xint.pdf
+share/texmf-dist/doc/generic/xint/xintchanges.md
