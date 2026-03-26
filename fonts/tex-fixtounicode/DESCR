@@ -1,0 +1,10 @@
+This package provides utility functions in expl3 and LaTeX2e
+syntax for setting tounicode mappings for 7/8 bit fonts. The
+package provides a unified interface which enables mappings for
+both pdfTeX and LuaTeX. The aim is to make it easier to make
+legacy (text) symbol packages, which often use arbitary glyph
+names and encodings, accessible for the two engines currently
+capable of producing accessible PDFs. The package provides a
+limited workaround for LuaTeX 1.22 and earlier, which make the
+provision of such mappings more challenging. Full support
+requires pdfTeX or LuaTeX 1.24 or later.
