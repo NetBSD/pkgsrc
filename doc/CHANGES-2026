@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1862 2026/03/26 06:31:40 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1863 2026/03/26 07:43:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2543,3 +2543,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/freetype2 to 2.14.3 [adam 2026-03-26]
 	Updated devel/meson to 1.10.2 [adam 2026-03-26]
 	Updated devel/py-coverage to 7.13.5 [adam 2026-03-26]
+	Updated graphics/png to 1.6.56 [wiz 2026-03-26]
