@@ -1,0 +1,5 @@
+This package provides Source Sans for LaTeX. It includes both
+Type1 and OpenType fonts and selects the latter when using
+XeLaTeX or LuaLaTeX. This package used to be called
+"sourcesanspro" and contains an alias package for backwards
+compatibility.

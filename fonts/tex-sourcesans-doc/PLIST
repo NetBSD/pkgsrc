@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2026/03/26 10:11:59 markd Exp $
+share/texmf-dist/doc/latex/sourcesans/LICENSE.txt
+share/texmf-dist/doc/latex/sourcesans/LPPL.txt
+share/texmf-dist/doc/latex/sourcesans/README.md
+share/texmf-dist/doc/latex/sourcesans/sourcesans-otf-specimen.pdf
+share/texmf-dist/doc/latex/sourcesans/sourcesans-otf-specimen.tex
+share/texmf-dist/doc/latex/sourcesans/sourcesans-type1-specimen.pdf
+share/texmf-dist/doc/latex/sourcesans/sourcesans-type1-specimen.tex
+share/texmf-dist/doc/latex/sourcesans/sourcesans.pdf
+share/texmf-dist/doc/latex/sourcesans/sourcesans.tex

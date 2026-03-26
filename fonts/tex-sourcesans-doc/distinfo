@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/26 10:11:59 markd Exp $
+
+BLAKE2s (sourcesans.doc.r78246.tar.xz) = f1d4dc85d23540dc32c379624a6eb162a0c511f3a13915e0722663155a3f610c
+SHA512 (sourcesans.doc.r78246.tar.xz) = bff9b948cce2c11e5fda7741e3694dc2517e1ed32ecc1a8bece068458c0e450ea1063d26c64ce97b7ec9ec798c01757746c9155dd3e2b3e4b52b03278c008fac
+Size (sourcesans.doc.r78246.tar.xz) = 954672 bytes
