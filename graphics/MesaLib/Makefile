@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.217 2025/05/08 08:30:01 tnn Exp $
+# $NetBSD: Makefile,v 1.218 2026/03/26 08:47:17 wiz Exp $
 
 DISTNAME=	mesa-21.3.9
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -51,7 +51,7 @@ PLIST_VARS+=		i830 i915 i965 r100 r200 nouveau_dri
 PLIST_VARS+=		r300 svga nouveau iris
 
 # other features
-PLIST_VARS+=		arm kms vaapi xa
+PLIST_VARS+=		arm drikms kms vaapi xa
 
 .if ${MESALIB_SUPPORTS_DRI} == "yes"
 BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.100
@@ -73,6 +73,9 @@ MESON_ARGS+=		-Dgallium-xa=disabled
 MESON_ARGS+=		-Ddri3=false
 .  endif
 PLIST.kms=		yes
+.if ${OPSYS} != "Darwin"
+PLIST.drikms=		yes
+.endif
 .  if ${MACHINE_ARCH:M*arm*} || \
       ${MACHINE_CPU} == "aarch64"
 GALLIUM_DRIVERS+=	freedreno vc4 etnaviv tegra panfrost lima
