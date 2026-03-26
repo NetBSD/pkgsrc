@@ -1,10 +1,10 @@
-$NetBSD: patch-Source_QtDialog_CMakeLists.txt,v 1.6 2025/08/20 11:34:12 wiz Exp $
+$NetBSD: patch-Source_QtDialog_CMakeLists.txt,v 1.7 2026/03/26 09:00:32 adam Exp $
 
 Do not make app bundle on Darwin.
 
---- Source/QtDialog/CMakeLists.txt.orig	2025-08-05 14:55:57.000000000 +0000
+--- Source/QtDialog/CMakeLists.txt.orig	2026-03-17 13:29:16.000000000 +0000
 +++ Source/QtDialog/CMakeLists.txt
-@@ -263,7 +263,7 @@ target_link_libraries(
+@@ -237,7 +237,7 @@ target_link_libraries(
      CMakeGUILib
    )
  
@@ -13,7 +13,7 @@ Do not make app bundle on Darwin.
  set_property(TARGET cmake-gui PROPERTY CMake_QT_MAJOR_VERSION "${CMake_QT_MAJOR_VERSION}")
  target_link_libraries(cmake-gui
    PRIVATE
-@@ -277,7 +277,7 @@ target_link_libraries(cmake-gui
+@@ -251,7 +251,7 @@ target_link_libraries(cmake-gui
  if(WIN32)
    target_sources(CMakeGUIMainLib INTERFACE CMakeSetup.rc)
  endif()
@@ -22,7 +22,7 @@ Do not make app bundle on Darwin.
    target_sources(CMakeGUIMainLib INTERFACE CMakeSetup.icns)
    set(MACOSX_BUNDLE_ICON_FILE CMakeSetup.icns)
    set_source_files_properties(CMakeSetup.icns PROPERTIES
-@@ -307,7 +307,7 @@ Checks: '-*,llvm-twine-local'
+@@ -281,7 +281,7 @@ Checks: '-*,llvm-twine-local'
  ...
  ")
  
@@ -31,16 +31,16 @@ Do not make app bundle on Darwin.
    set_target_properties(cmake-gui PROPERTIES
      OUTPUT_NAME CMake
      MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/Info.plist.in"
-@@ -329,7 +329,7 @@ install(TARGETS cmake-gui
-   RUNTIME DESTINATION bin ${COMPONENT}
-   BUNDLE DESTINATION "${CMAKE_BUNDLE_LOCATION}" ${COMPONENT})
+@@ -303,7 +303,7 @@ install(TARGETS cmake-gui
+   RUNTIME DESTINATION ${CMake_INSTALL_BIN_DIR} ${COMPONENT}
+   BUNDLE  DESTINATION .                        ${COMPONENT})
  
 -if(UNIX AND NOT APPLE)
 +if(UNIX)
    foreach(size IN ITEMS 32 128)
      install(
        FILES       "${CMAKE_CURRENT_SOURCE_DIR}/CMakeSetup${size}.png"
-@@ -348,14 +348,14 @@ if(UNIX AND NOT APPLE)
+@@ -322,14 +322,14 @@ if(UNIX AND NOT APPLE)
      ${COMPONENT})
  endif()
  
@@ -48,12 +48,26 @@ Do not make app bundle on Darwin.
 +if(FALSE)
    install(CODE "
      execute_process(COMMAND ln -s \"../MacOS/CMake\" cmake-gui
-         WORKING_DIRECTORY \$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/bin)
+         WORKING_DIRECTORY \$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/${CMake_INSTALL_BIN_DIR})
    " ${COMPONENT})
  endif()
  
 -if(CMake_INSTALL_DEPENDENCIES AND (APPLE OR WIN32))
 +if(CMake_INSTALL_DEPENDENCIES AND WIN32)
-   # install rules for including 3rd party libs such as Qt
-   # if a system Qt is used (e.g. installed in /usr/lib/), it will not be included in the installation
-   set(fixup_exe "\$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/bin/cmake-gui${CMAKE_EXECUTABLE_SUFFIX}")
+   if(COMMAND qt_generate_deploy_app_script)
+     # Qt libraries are found via @rpath, so point the runtime path at them.
+     set_property(TARGET cmake-gui PROPERTY INSTALL_RPATH "@executable_path/../Frameworks")
+@@ -342,11 +342,11 @@ if(CMake_INSTALL_DEPENDENCIES AND (APPLE
+     # install rules for including 3rd party libs such as Qt
+     # if a system Qt is used (e.g. installed in /usr/lib/), it will not be included in the installation
+     set(fixup_exe "\$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/${CMake_INSTALL_BIN_DIR}/cmake-gui${CMAKE_EXECUTABLE_SUFFIX}")
+-    if(APPLE)
++    if(FALSE)
+       set(fixup_exe "\$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/${CMake_INSTALL_APP_DIR_SLASH}MacOS/CMake")
+     endif()
+     get_property(_Qt_Core_LOCATION TARGET Qt${CMake_QT_MAJOR_VERSION}::Core PROPERTY LOCATION)
+-    if(APPLE AND _Qt_Core_LOCATION MATCHES [[^(.*)/[^/]*\.framework/]])
++    if(FALSE AND _Qt_Core_LOCATION MATCHES [[^(.*)/[^/]*\.framework/]])
+       set(Qt_LIB_DIR "${CMAKE_MATCH_1}")
+     else()
+       get_filename_component(Qt_LIB_DIR "${_Qt_Core_LOCATION}" PATH)
