@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/05/07 11:44:17 markd Exp $
+$NetBSD: distinfo,v 1.11 2026/03/26 08:07:40 markd Exp $
 
-BLAKE2s (hyphen-afrikaans.r73410.tar.xz) = de71b0fc68f6d8935002cbbf69bd778a1d89b036f6e5294e89cecd914acc2714
-SHA512 (hyphen-afrikaans.r73410.tar.xz) = 06316355f2f2fad8f991d74d8c4a5cb02e3698c16db22654590c5591259e4a5dd74bba3978921242866317d735cdf95739c7184155dbc6c74e179709724baa2a
-Size (hyphen-afrikaans.r73410.tar.xz) = 37012 bytes
+BLAKE2s (hyphen-afrikaans.r78069.tar.xz) = 25c69782e4839405a1e6f7b3a6d132a732aaceb5cae5ac914c8932997e75d1c7
+SHA512 (hyphen-afrikaans.r78069.tar.xz) = 2c00d0723c06809728695deeb8d78e4f4aecf951aaf46ccf00aede446fadbe92b37445eebd7dd94ded423a1c18dabc4f68921cd2a65a73e35a3961f58c033175
+Size (hyphen-afrikaans.r78069.tar.xz) = 37008 bytes

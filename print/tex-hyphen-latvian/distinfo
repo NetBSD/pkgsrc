@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/05/07 11:44:23 markd Exp $
+$NetBSD: distinfo,v 1.11 2026/03/26 08:07:45 markd Exp $
 
-BLAKE2s (hyphen-latvian.r73410.tar.xz) = 36f666251b06cd3f0cd992134e259e91ccd88ec6fc01ec2f0618d5b30bd912ed
-SHA512 (hyphen-latvian.r73410.tar.xz) = 5a8a921691865d8c06619a9ea1d7e6e6e510c8dfd3a3e7bd5bcfad7854ab312a85f31f4e4a8c8035175207bd3e5c0b0a3b020f3a8606997109d4d4e3a5058ee6
-Size (hyphen-latvian.r73410.tar.xz) = 52388 bytes
+BLAKE2s (hyphen-latvian.r78069.tar.xz) = 397b5ad74d9bd71646361671878b804196a470108355ab9a7ed3e3b1fffd476a
+SHA512 (hyphen-latvian.r78069.tar.xz) = ed4a1dbb549795509b843ae7b14fc4ad6fea1b6519aafc775d9facee523f9e1acde2e8d5ccc3761ac7cad58136949026051d0d53ae022d5909066d6622d81679
+Size (hyphen-latvian.r78069.tar.xz) = 52448 bytes

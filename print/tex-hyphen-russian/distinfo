@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/05/07 11:44:24 markd Exp $
+$NetBSD: distinfo,v 1.13 2026/03/26 08:07:47 markd Exp $
 
-BLAKE2s (hyphen-russian.r73410.tar.xz) = 27d7c5b72040258756ad355def564a45395ad57341017bf74bdfbdf1c6c9643d
-SHA512 (hyphen-russian.r73410.tar.xz) = 85dda7047887073498ad5fedde3560d1951dea080750baf108a3fe8fefd06d7d88b35c196e0181164518ed615a84faab31d12ba3589e2fccb09e2c6658f18b39
-Size (hyphen-russian.r73410.tar.xz) = 34428 bytes
+BLAKE2s (hyphen-russian.r78069.tar.xz) = a39381939021c20a14394ccc0b2c6a3d07ca59ecd5ef43a7cadb8da7e5aeb894
+SHA512 (hyphen-russian.r78069.tar.xz) = e117b8f6d33bc8dcb0af3c77c55c4ea9c8ec3918c2eaf1be7cf1f81f89d5ad9757ddb000c7f4900e5dad71d548395aeda2e410396a69a695505c9e14c0029e5c
+Size (hyphen-russian.r78069.tar.xz) = 34300 bytes

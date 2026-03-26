@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/05/07 11:44:18 markd Exp $
+$NetBSD: distinfo,v 1.6 2026/03/26 08:07:41 markd Exp $
 
-BLAKE2s (hyphen-belarusian.r73410.tar.xz) = 6055ac46852491cd4249ceed3907f82b23b95b63a4a464e61094aaec540a8210
-SHA512 (hyphen-belarusian.r73410.tar.xz) = 1f171fc8a816ef6a509eb178dd743743e85a4fc81885092344fd6837039cf54a27aa43890baf686be3ba44e5700d864888b9b2d07a7951d7d70f19cefb3a3af8
-Size (hyphen-belarusian.r73410.tar.xz) = 11816 bytes
+BLAKE2s (hyphen-belarusian.r78069.tar.xz) = b459f24f2b0e1ecbd37a806aa1ee438e24c2eb81604d1ffe9f6ab78450258242
+SHA512 (hyphen-belarusian.r78069.tar.xz) = 88533d558299c2af60f7bb71c88e3d453cfc16aca78b2fb91dd68a8bce322c8552451698dec40d2d6c04125cf8529f8728a615b60fc4b269e453d4ddbd2c0d64
+Size (hyphen-belarusian.r78069.tar.xz) = 11972 bytes

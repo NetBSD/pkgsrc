@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/05/07 11:44:25 markd Exp $
+$NetBSD: distinfo,v 1.13 2026/03/26 08:07:47 markd Exp $
 
-BLAKE2s (hyphen-spanish.r73410.tar.xz) = afd4dc1600bf7fe7917ab82bbd435359b1f860b635684f6e10d5cda94709e4b5
-SHA512 (hyphen-spanish.r73410.tar.xz) = 8c5c66d08aab66674c27750f3d123644299b3e1b0316b15c72b90962e3de668034cfe1770244f53cb6ef51a4e31e8511e6f448ea6977875c5a9339da854dc761
-Size (hyphen-spanish.r73410.tar.xz) = 16384 bytes
+BLAKE2s (hyphen-spanish.r78069.tar.xz) = f83b8e7df9988abd5f248db0db5565a952cd765c25cd850e6bd15df492da1bda
+SHA512 (hyphen-spanish.r78069.tar.xz) = 0fbd0bbba635dd482d844e2987e997b6c3c170527645bd1932548701f998e74e6d863285c226b5040e560eb0b28066b797c37617da6939633e9f9830347c53a7
+Size (hyphen-spanish.r78069.tar.xz) = 16428 bytes

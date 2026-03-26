@@ -1,10 +1,10 @@
-$NetBSD: patch-tex_generic_config_language.dat.lua,v 1.1 2025/05/07 11:44:18 markd Exp $
+$NetBSD: patch-tex_generic_config_language.dat.lua,v 1.2 2026/03/26 08:07:41 markd Exp $
 
 Trim languages. They will be added automatically as each package is installed.
 
---- tex/generic/config/language.dat.lua.orig	2025-02-19 00:40:48.000000000 +0000
+--- tex/generic/config/language.dat.lua.orig	2026-02-23 00:40:53.000000000 +0000
 +++ tex/generic/config/language.dat.lua
-@@ -33,754 +33,4 @@ return {
+@@ -33,763 +33,4 @@ return {
          -- dumylang and zerohyph are dumped in the format,
          -- since they contain either very few or no patterns at all
  -- END of language.us.lua (missing '}' appended after all entries)
@@ -476,6 +476,15 @@ Trim languages. They will be added automatically as each package is installed.
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-it.pat.txt',
+-		hyphenation = '',
+-	},
+--- from hyphen-kazakh:
+-	['kazakh'] = {
+-		loader = 'loadhyph-kk.tex',
+-		lefthyphenmin = 2,
+-		righthyphenmin = 2,
+-		synonyms = {  },
+-		patterns = 'hyph-kk.pat.txt',
 -		hyphenation = '',
 -	},
 --- from hyphen-kurmanji:

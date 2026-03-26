@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/05/07 11:44:19 markd Exp $
+$NetBSD: distinfo,v 1.13 2026/03/26 08:07:42 markd Exp $
 
-BLAKE2s (hyphen-czech.r73410.tar.xz) = f4d4cec9096df7b4994e49e3096bf511a41d49507cc15eab0c428426ee695aeb
-SHA512 (hyphen-czech.r73410.tar.xz) = d42b1925ec71a6ff81b34ac4c791eac2f5257fa0d86d9dae9f497555aac464f059c550cfb3cec5ed10155e87808bc02dd07ecba82f541a9075a37a1816684566
-Size (hyphen-czech.r73410.tar.xz) = 15756 bytes
+BLAKE2s (hyphen-czech.r78069.tar.xz) = 1f9626998f73374fa446a55279cc76e29e7fb0492235b6baa7abfd387dc66372
+SHA512 (hyphen-czech.r78069.tar.xz) = d6b32a80d6f70c3490d6c0dbd4f52cb9e2bb17ea9d15340e0b0f829d4eeb7317dccc22cfa79af70c4f6862b58f182cad9a136800375708774620aee4cfafbfa2
+Size (hyphen-czech.r78069.tar.xz) = 15760 bytes

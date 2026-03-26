@@ -1,10 +1,10 @@
-$NetBSD: patch-tex_generic_config_language.def,v 1.1 2025/05/07 11:44:18 markd Exp $
+$NetBSD: patch-tex_generic_config_language.def,v 1.2 2026/03/26 08:07:41 markd Exp $
 
 Trim languages. They will be added automatically as each package is installed.
 
---- tex/generic/config/language.def.orig	2025-02-17 00:40:22.000000000 +0000
+--- tex/generic/config/language.def.orig	2026-02-23 00:40:53.000000000 +0000
 +++ tex/generic/config/language.def
-@@ -28,172 +28,6 @@
+@@ -28,174 +28,6 @@
  \addlanguage {USenglish}{hyphen}{}{2}{3} %%% This MUST be the first non-comment
                                           %%% line of the file
  
@@ -110,6 +110,8 @@ Trim languages. They will be added automatically as each package is installed.
 -\addlanguage{irish}{loadhyph-ga.tex}{}{2}{3}
 -% from hyphen-italian:
 -\addlanguage{italian}{loadhyph-it.tex}{}{2}{2}
+-% from hyphen-kazakh:
+-\addlanguage{kazakh}{loadhyph-kk.tex}{}{2}{2}
 -% from hyphen-kurmanji:
 -\addlanguage{kurmanji}{loadhyph-kmr.tex}{}{2}{2}
 -% from hyphen-latin:

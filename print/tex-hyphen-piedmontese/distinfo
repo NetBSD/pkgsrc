@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/05/07 11:44:23 markd Exp $
+$NetBSD: distinfo,v 1.11 2026/03/26 08:07:46 markd Exp $
 
-BLAKE2s (hyphen-piedmontese.r73410.tar.xz) = 409e9aaf24a0b3914a4303ab2551eed18958616eeb08db588490c66384ada01b
-SHA512 (hyphen-piedmontese.r73410.tar.xz) = 7ef0ff21121fdf0e0c74d26ab4383d8f61dab09067837c9b679d82feb01e95870aade063b55e4fc269b82f188ebd810ef8fd173e3cee6301a2c1c3299d8a2772
-Size (hyphen-piedmontese.r73410.tar.xz) = 3332 bytes
+BLAKE2s (hyphen-piedmontese.r78069.tar.xz) = 549d2a185e246ef3385a2b11fea70d46075490472c714168797cf037e0bd959c
+SHA512 (hyphen-piedmontese.r78069.tar.xz) = a3c2edcb1df6087bed0ed1b84603b9efc4d4b9f159410c1a600ce247d7aab95e3d8e8fc400d8f77e4b7048b923e3a42e96a9bca73c0ebddf0a9a4e1482db95c8
+Size (hyphen-piedmontese.r78069.tar.xz) = 3336 bytes
