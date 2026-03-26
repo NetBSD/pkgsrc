@@ -1,6 +1,25 @@
-@comment $NetBSD: PLIST,v 1.2 2026/01/18 10:50:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/03/26 13:58:33 wiz Exp $
+bin/fy-compose
+bin/fy-dump
+bin/fy-filter
+bin/fy-join
+bin/fy-testsuite
 bin/fy-tool
+bin/fy-ypath
 include/libfyaml.h
+include/libfyaml/libfyaml-align.h
+include/libfyaml/libfyaml-allocator.h
+include/libfyaml/libfyaml-atomics.h
+include/libfyaml/libfyaml-blake3.h
+include/libfyaml/libfyaml-composer.h
+include/libfyaml/libfyaml-core.h
+include/libfyaml/libfyaml-docbuild.h
+include/libfyaml/libfyaml-dociter.h
+include/libfyaml/libfyaml-endian.h
+include/libfyaml/libfyaml-path-exec.h
+include/libfyaml/libfyaml-thread.h
+include/libfyaml/libfyaml-util.h
+include/libfyaml/libfyaml-vlsize.h
 lib/cmake/libfyaml/libfyaml-config-version.cmake
 lib/cmake/libfyaml/libfyaml-config.cmake
 lib/cmake/libfyaml/libfyaml-targets-noconfig.cmake
@@ -9,3 +28,10 @@ lib/libfyaml.so
 lib/libfyaml.so.0
 lib/libfyaml.so.${PKGVERSION}
 lib/pkgconfig/libfyaml.pc
+man/man1/fy-compose.1
+man/man1/fy-dump.1
+man/man1/fy-filter.1
+man/man1/fy-join.1
+man/man1/fy-testsuite.1
+man/man1/fy-tool.1
+man/man1/fy-ypath.1
