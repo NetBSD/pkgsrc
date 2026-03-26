@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2024/08/01 06:44:22 pin Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/03/26 04:34:28 pin Exp $
 bin/scrot
 man/man1/scrot.1
+share/bash-completion/completions/scrot
 share/doc/scrot/AUTHORS
 share/doc/scrot/CONTRIBUTING.md
 share/doc/scrot/ChangeLog
@@ -8,3 +9,4 @@ share/doc/scrot/FAQ.md
 share/doc/scrot/README.md
 share/doc/scrot/TODO.md
 share/doc/scrot/scrot.png
+share/zsh/site-functions/_scrot
