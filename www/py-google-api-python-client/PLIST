@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2026/03/09 16:58:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.57 2026/03/26 14:37:48 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -237,6 +237,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/deploymentmanager.alpha.j
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/deploymentmanager.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/deploymentmanager.v2beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/developerconnect.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/developerknowledge.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dfareporting.v3.3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dfareporting.v3.4.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dfareporting.v3.5.json
