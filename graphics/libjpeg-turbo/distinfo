@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.34 2025/12/11 09:39:23 adam Exp $
+$NetBSD: distinfo,v 1.35 2026/03/27 10:48:22 adam Exp $
 
-BLAKE2s (libjpeg-turbo-3.1.3.tar.gz) = 223fefe2f26be34ab608d85395f61e8b218e1c2c905115554eccf5c721de8265
-SHA512 (libjpeg-turbo-3.1.3.tar.gz) = d95bf0689fb2862ad5ea9e902b73724098d911d9c312aa69157bec9de77f32e4d5ac7dfa105d844110cc66dbdb0336056ba7f96781fcbc848b72fd0661604d50
-Size (libjpeg-turbo-3.1.3.tar.gz) = 2516606 bytes
-SHA1 (patch-simd_arm__aarch32_jsimd.c) = 0d35d6f0727709d4e894202a3a297fc66383c377
+BLAKE2s (libjpeg-turbo-3.1.4.tar.gz) = 317d98df59b7f576703dbbebc32d9e0c2dbb93f75f8604d244b9b8e0ac1b3889
+SHA512 (libjpeg-turbo-3.1.4.tar.gz) = 992bd226cb645736649f802dfd8888962eff2ae8d556938fd6219dc4f409e2e3f793233b0e4328bff7b7c8ad6bf02242e2b9ac1f4d973b722becc72204035ee5
+Size (libjpeg-turbo-3.1.4.tar.gz) = 2528165 bytes
+SHA1 (patch-simd_arm__aarch32_jsimd.c) = db5ac609a3897d249e6b29f601086cce78cd7406
 SHA1 (patch-simd_arm__aarch64_jsimd.c) = 76c5e81403f70a8ea8bca8ae2266066fff5ec6f9
 SHA1 (patch-src_jpeglib.h) = 6be231604acd6a55f3a6d135cfaef20897e2926d
