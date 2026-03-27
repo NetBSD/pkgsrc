@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2026/02/16 14:46:07 pin Exp $
+# $NetBSD: Makefile,v 1.42 2026/03/27 22:38:33 tnn Exp $
 
 DISTNAME=	simp-3.10.3
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Kl4rry/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,7 +12,6 @@ COMMENT=	Fast and simple GPU-accelerated image manipulation program
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
-TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 TOOL_DEPENDS+=	cargo-about-[0-9]*:../../devel/cargo-about
 
 .include "cargo-depends.mk"
@@ -27,6 +27,12 @@ RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libxcb}/lib
 
 CARGO_NO_DEFAULT_FEATURES=	YES
 CARGO_FEATURES+=		gtk3
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
+.endif
 
 .include "../../lang/rust/cargo.mk"
 .include "../../x11/gtk3/buildlink3.mk"
