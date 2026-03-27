@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2025/08/31 10:24:56 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/03/27 09:06:02 adam Exp $
 
-DISTNAME=	setuptools_rust-1.12.0
+DISTNAME=	setuptools_rust-1.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools-rust/}
