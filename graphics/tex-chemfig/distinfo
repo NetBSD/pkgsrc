@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/02/03 04:07:36 markd Exp $
+$NetBSD: distinfo,v 1.11 2026/03/27 23:41:17 markd Exp $
 
-BLAKE2s (chemfig.r69227.tar.xz) = a3c1d3e8dbbdb106847028ad6d4bbda9fb528d85a70d87d47a5a346856e5647b
-SHA512 (chemfig.r69227.tar.xz) = 1f5908b759c39314eb999b4d1e60ac364888e4d6193673bd387ea838eb9bc257500b0603055b2182cd5be581dc1d674ed4eaee6ec4b0ce225f72ddb77f67ac80
-Size (chemfig.r69227.tar.xz) = 27456 bytes
+BLAKE2s (chemfig.r78296.tar.xz) = a4af8ed8f3ca117c4ad7a9316ea3c128bc6b410a781643e6db42562efecb83f9
+SHA512 (chemfig.r78296.tar.xz) = d9e97cc239869913000f75fab559d1e57e4014852e2f4c30b1de99bdc2ead87427a96dfa4deaf5e99e05c7e9f21cf709f58df1d795b51eebbe98cfcbe94b5f17
+Size (chemfig.r78296.tar.xz) = 25236 bytes
