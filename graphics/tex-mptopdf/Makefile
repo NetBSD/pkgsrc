@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.14 2024/03/24 10:53:52 markd Exp $
+# $NetBSD: Makefile,v 1.15 2026/03/27 23:55:51 markd Exp $
 
 DISTNAME=	mptopdf
-PKGNAME=	tex-${DISTNAME}-2024
-TEXLIVE_REV=	69363
+PKGNAME=	tex-${DISTNAME}-2025
+TEXLIVE_REV=	78010
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pdf-mps-supp
 COMMENT=	Script to convert mpost to PDF
+LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	tex-supp-pdf<2010
 DEPENDS+=	tex-kpathsea-[0-9]*:../../print/tex-kpathsea
