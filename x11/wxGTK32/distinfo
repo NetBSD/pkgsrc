@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.20 2025/12/21 21:40:02 adam Exp $
+$NetBSD: distinfo,v 1.21 2026/03/27 09:10:59 adam Exp $
 
-BLAKE2s (wxWidgets-3.2.9.tar.bz2) = a33c26006e69a20d29b5a359222186d3d25d7f9572066be2711d5aa5b551c970
-SHA512 (wxWidgets-3.2.9.tar.bz2) = 6fe5caa3deaa02df0ef1891e417625b7719cffc9968a2d43e5fbca349ec9fdb8d4fc85fb422f835df751af3a816f946fb9d0d008163924be1669e54ce2346df7
-Size (wxWidgets-3.2.9.tar.bz2) = 27366567 bytes
-SHA1 (patch-configure) = fca343fc17c685c273df993ca86a57ac9898d0ae
+BLAKE2s (wxWidgets-3.2.10.tar.bz2) = 7922895681ac843576d3061cb816c82835c678a481b25a7239ec52c1ca615149
+SHA512 (wxWidgets-3.2.10.tar.bz2) = 71b3dea2d8ad0cb48563b168dc1a8b79eaf3a7df9faf8fd5d09ac9ea57067fccf3992a22db53b46205422c79bb50c271752f7ff6d993003501b17d91cc1f7899
+Size (wxWidgets-3.2.10.tar.bz2) = 27509679 bytes
+SHA1 (patch-configure) = 044ae7e6a8b741ffc94d36bb01d30bb75e75907e
 SHA1 (patch-src_unix_glegl.cpp) = 1610bc04a0f8155138b169eb68f4b03e60ccecd9
 SHA1 (patch-src_unix_utilsunx.cpp) = be61cc3931e8aa8cf790cfedf6f916a84970f074

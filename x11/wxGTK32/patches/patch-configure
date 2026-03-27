@@ -1,31 +1,10 @@
-$NetBSD: patch-configure,v 1.6 2025/12/21 21:40:03 adam Exp $
+$NetBSD: patch-configure,v 1.7 2026/03/27 09:10:59 adam Exp $
 
-Fix change-install-names script.
 Use standard sonames on SunOS.
 
---- configure.orig	2025-12-07 22:59:42.000000000 +0000
+--- configure.orig	2026-02-28 12:50:12.000000000 +0000
 +++ configure
-@@ -34272,16 +34272,13 @@ rm -f core conftest.err conftest.$ac_obj
-             cat <<EOF >change-install-names
- #!/bin/sh
- set -e
--libdir=\$(cd lib ; pwd -P)
--libnames=\$(cd lib ; ls -1 libwx*${WX_RELEASE}.dylib)
-+libnames=\$(cd lib ; ls -1 libwx*${WX_RELEASE}.[0-9].[0-9].[0-9].dylib)
- changes=''
- for dep in \${libnames} ; do
--    target=\$(readlink \${4}/\${dep})
--    changes="\${changes} -change \${libdir}\${target} \${3}/\${dep}"
-+    changes="\${changes} -change \${4}/\${dep} \${3}/\${dep}"
- done
- for i in \${libnames} ; do
--    lib=\$(readlink \${1}/\${i})
--    ${HOST_PREFIX}install_name_tool \${changes} -id \${3}/\${i} \${libdir}/\${lib}
-+    ${HOST_PREFIX}install_name_tool \${changes} -id \${3}/\${i} \${1}/\${i}
- done
- 
- if test -f "\${2}/wxrc-${WX_RELEASE}" ; then
-@@ -44583,7 +44580,8 @@ fi
+@@ -44587,7 +44587,8 @@ fi
        *-*-solaris2* )
          SONAME_FLAG="-h "
          USE_SOVERSION=1
