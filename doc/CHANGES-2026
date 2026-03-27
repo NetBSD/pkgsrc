@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1921 2026/03/27 13:20:07 wen Exp $
+$NetBSD: CHANGES-2026,v 1.1922 2026/03/27 13:25:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2741,3 +2741,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/broot to 1.56.2 [pin 2026-03-27]
 	Updated editors/redox to 0.3.1 [pin 2026-03-27]
 	Updated time/p5-DateTime-Format-ISO8601 to 0.19 [wen 2026-03-27]
+	Updated time/p5-DateTime-Format-Natural to 1.25 [wen 2026-03-27]
