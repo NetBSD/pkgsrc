@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1915 2026/03/27 10:22:29 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1916 2026/03/27 10:52:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2734,3 +2734,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-cryptography_vectors to 46.0.6 [adam 2026-03-27]
 	Updated databases/py-pypika-tortoise to 0.6.5 [adam 2026-03-27]
 	Updated databases/py-tortoise-orm to 1.1.7 [adam 2026-03-27]
+	Updated graphics/libjpeg-turbo to 3.1.4 [adam 2026-03-27]
+	Updated devel/py-proto-plus to 1.27.2 [adam 2026-03-27]
