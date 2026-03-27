@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2026/03/06 06:23:42 adam Exp $
+# $NetBSD: Makefile,v 1.48 2026/03/27 10:22:07 adam Exp $
 
-DISTNAME=	tortoise_orm-1.1.6
+DISTNAME=	tortoise_orm-1.1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tortoise-orm/}
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend>0:../../devel/py-pdm_backend
 DEPENDS+=	${PYPKGPREFIX}-aiosqlite>=0.16.0:../../databases/py-aiosqlite
 DEPENDS+=	${PYPKGPREFIX}-anyio>0:../../devel/py-anyio
 DEPENDS+=	${PYPKGPREFIX}-iso8601>=2.1.0:../../time/py-iso8601
-DEPENDS+=	${PYPKGPREFIX}-pypika-tortoise>=0.6.3:../../databases/py-pypika-tortoise
+DEPENDS+=	${PYPKGPREFIX}-pypika-tortoise>=0.6.5:../../databases/py-pypika-tortoise
 # accel
 DEPENDS+=	${PYPKGPREFIX}-ciso8601>=2.1.2:../../time/py-ciso8601
 DEPENDS+=	${PYPKGPREFIX}-orjson>=0:../../textproc/py-orjson
