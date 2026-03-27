@@ -1,12 +1,12 @@
-$NetBSD: patch-src_megacmdcommonutils.h,v 1.1 2025/02/15 07:40:14 wiz Exp $
+$NetBSD: patch-src_megacmdcommonutils.h,v 1.2 2026/03/27 11:06:04 kikadf Exp $
 
 * BSDs use the functions of linux
 
---- src/megacmdcommonutils.h.orig	2025-02-07 09:44:39.977015171 +0100
+--- src/megacmdcommonutils.h.orig	2026-03-21 08:58:56.000000000 +0000
 +++ src/megacmdcommonutils.h
-@@ -269,7 +269,8 @@ void sleepMilliSeconds(long microseconds
- 
- bool isValidEmail(std::string email);
+@@ -347,7 +347,8 @@ void sleepMilliSeconds(long microseconds
+  */
+ bool isValidEmail(const std::string &email);
  
 -#ifdef __linux__
 +#if defined(__linux__) || defined(__FreeBSD__) || defined(__OpenBSD__) || \
