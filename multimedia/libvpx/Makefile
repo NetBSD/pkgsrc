@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2026/02/17 01:53:46 gutteridge Exp $
+# $NetBSD: Makefile,v 1.111 2026/03/27 21:35:19 tnn Exp $
 
 DISTNAME=	libvpx-1.16.0
 PKGREVISION=	1
@@ -25,8 +25,7 @@ CONFIGURE_ARGS+=	--disable-unit-tests
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
-    (${OPSYS} == "Darwin" && ${MACHINE_ARCH} == "aarch64")
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
 .endif
 
