@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2025/05/10 01:45:00 markd Exp $
+$NetBSD: distinfo,v 1.25 2026/03/27 23:52:33 markd Exp $
 
-BLAKE2s (mcf2graph.doc.r74038.tar.xz) = e7a11ed8315d2f5f251a17411baeb5f848b6aa2973d4917eccd8de407ed14d43
-SHA512 (mcf2graph.doc.r74038.tar.xz) = cb1a194d26e9b127ccf84f4fa3b82b4bad4f8210307c60f2dff0b855d6cd5f2235bd60d7592b180b87234a1e35de566c65a48aee2d936ce8fe58e71552bce4b6
-Size (mcf2graph.doc.r74038.tar.xz) = 1550584 bytes
+BLAKE2s (mcf2graph.doc.r76506.tar.xz) = e5b2ea3621f998ed05ee68b624d42605f76155949a5eb4a9aef27fa73379a2cc
+SHA512 (mcf2graph.doc.r76506.tar.xz) = ddba3627e2484005d7ec0e8a02dcbe66b05e2a7c7e3c637e7bd2f0896553100d6b377677c81af612a11cdc15129fb59c4a938797bd060480b6ca7fba647ba5b3
+Size (mcf2graph.doc.r76506.tar.xz) = 1546524 bytes
