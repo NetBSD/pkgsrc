@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.113 2026/02/17 06:32:37 adam Exp $
+$NetBSD: distinfo,v 1.114 2026/03/27 10:06:27 adam Exp $
 
 BLAKE2s (asn1-0.22.0.crate) = 7e7420078762cd29a9053df025d2cca979928af5c44c37b411d0f6a22772ffbf
 SHA512 (asn1-0.22.0.crate) = 403c9fccf8a4c7f487a52528b23fd37790770526b75187b3634744ab9aff072eccdec5bf309e8532df6eb86fe70e60535d0783638c77c248b37296a0993feedf
@@ -21,9 +21,9 @@ Size (cc-1.2.37.crate) = 90111 bytes
 BLAKE2s (cfg-if-1.0.3.crate) = 773d265ae00262e765780665def7f307e8a6ad41861c8d7932e40f1704e1b3ee
 SHA512 (cfg-if-1.0.3.crate) = afe424a191c2aaaffec3d114e0116d0324d12117aeb22df78e47ad6752444bc5acb074ab0a174476b71e584a37743f9dcc2b0e8036d590fcc5afc7c55f86122b
 Size (cfg-if-1.0.3.crate) = 8719 bytes
-BLAKE2s (cryptography-46.0.5.tar.gz) = 02e5f9a3221fe950a6e675ddc91fa15507b85d0212e0895fbbffc7e1be9a8a82
-SHA512 (cryptography-46.0.5.tar.gz) = 5bc5ea5b85c600504c46e2376a45cee749f41e2b4a6eb639b05d289370dcdc82b2ace423532f5591da16ca56ea32919e47ec154cb72bf7e1f5f3f923c744a185
-Size (cryptography-46.0.5.tar.gz) = 750064 bytes
+BLAKE2s (cryptography-46.0.6.tar.gz) = 30624e5d579ce1ebf4d0ab1dbbdaa16b1a1647b92a53308333c49a6a6700ae5a
+SHA512 (cryptography-46.0.6.tar.gz) = c8207d0d3a687570bd0b1b371a30f76a9ba2b4494495cfdc0734c4839e477e64568695e5d37895acc13ee5477368904906013b48099cf39bde8d1973e2a4ebcf
+Size (cryptography-46.0.6.tar.gz) = 750542 bytes
 BLAKE2s (find-msvc-tools-0.1.1.crate) = 21981b3a2f30d28492a23a07de8e0eeea46f7d0ac2043d39aa1d70527d48ac84
 SHA512 (find-msvc-tools-0.1.1.crate) = cc91ce79858db4a6feb3ff0fe24d7b29a523285247116a42b27affacc3f034afc0d458ac8716922f5fec5f23deafd62e875ec899d4ea58531d028535c22e137e
 Size (find-msvc-tools-0.1.1.crate) = 30228 bytes
