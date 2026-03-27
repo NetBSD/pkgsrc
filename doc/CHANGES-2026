@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1923 2026/03/27 13:38:25 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1924 2026/03/27 22:59:57 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2744,3 +2744,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/p5-DateTime-Format-Natural to 1.25 [wen 2026-03-27]
 	Updated math/py-simpleeval to 1.0.7 [adam 2026-03-27]
 	Updated print/py-pikepdf to 10.5.1 [adam 2026-03-27]
+	Updated textproc/tex-latexdiff to 1.4.0 [markd 2026-03-27]
+	Updated textproc/tex-latexdiff-doc to 1.4.0 [markd 2026-03-27]
+	Updated textproc/tex-lwarp to 0.921 [markd 2026-03-27]
+	Updated textproc/tex-lwarp-doc to 0.921 [markd 2026-03-27]
