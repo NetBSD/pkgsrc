@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2026/01/27 08:39:46 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2026/03/27 21:59:06 tnn Exp $
 
 DISTNAME=	oculante-0.9.2
 PKGREVISION=	4
@@ -40,11 +40,15 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk3}/lib
 CARGO_NO_DEFAULT_FEATURES=	YES
 CARGO_FEATURES+=		avif_native notan/glsl-to-spirv
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
+.endif
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/oculante \
 		${DESTDIR}${PREFIX}/bin
-
-DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 .include "../../lang/rust/cargo.mk"
 .include "../../x11/libX11/buildlink3.mk"
