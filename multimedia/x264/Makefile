@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/12/22 05:56:46 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/03/27 21:21:44 tnn Exp $
 
 # Download https://code.videolan.org/videolan/x264/-/archive/stable/x264-stable.tar.bz2
 # Rename to x264-<last-commit-date>.tar.bz2 and upload to MASTER_SITE_LOCAL.
@@ -30,8 +30,7 @@ SUPERSEDES+=	x264-devel-[0-9]*
     ${MACHINE_PLATFORM:MNetBSD-*-mips*} || \
     ${MACHINE_PLATFORM:MDarwin-*-powerpc*}
 CONFIGURE_ARGS+=	--disable-asm
-.elif ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
-    (${OPSYS} == "Darwin" && ${MACHINE_ARCH} == "aarch64")
+.elif ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		nasm>=2.13.0:../../devel/nasm
 .endif
 
