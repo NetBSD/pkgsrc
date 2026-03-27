@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2026/03/27 12:25:11 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2026/03/27 16:01:08 tnn Exp $
 
 DISTNAME=	libde265-1.0.18
 CATEGORIES=	multimedia
@@ -13,6 +13,8 @@ LICENSE=	gnu-lgpl-v3
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++17
 PKGCONFIG_OVERRIDE+=	libde265.pc.in
+
+BUILDLINK_TRANSFORM.NetBSD+=	opt:-std=c++17:-std=gnu++17	# alloca
 
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_SDL=OFF
 
