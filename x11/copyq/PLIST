@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/10/25 11:46:39 kikadf Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/03/27 11:09:20 kikadf Exp $
 bin/copyq
 lib/copyq/plugins/libitemencrypted.so
 lib/copyq/plugins/libitemfakevim.so
@@ -19,6 +19,8 @@ share/copyq/themes/light.ini
 share/copyq/themes/main_window.css
 share/copyq/themes/main_window_simple.css
 share/copyq/themes/menu.css
+share/copyq/themes/nord.ini
+share/copyq/themes/nord_light.ini
 share/copyq/themes/notification.css
 share/copyq/themes/paper.ini
 share/copyq/themes/simple.ini
@@ -33,6 +35,7 @@ share/copyq/translations/copyq_da.qm
 share/copyq/translations/copyq_de.qm
 share/copyq/translations/copyq_el.qm
 share/copyq/translations/copyq_es.qm
+share/copyq/translations/copyq_et.qm
 share/copyq/translations/copyq_fa.qm
 share/copyq/translations/copyq_fi.qm
 share/copyq/translations/copyq_fr.qm
@@ -59,6 +62,8 @@ share/copyq/translations/copyq_uk.qm
 share/copyq/translations/copyq_vi.qm
 share/copyq/translations/copyq_zh_CN.qm
 share/copyq/translations/copyq_zh_TW.qm
+share/gnome-shell/extensions/copyq-clipboard@hluk.github.com/extension.js
+share/gnome-shell/extensions/copyq-clipboard@hluk.github.com/metadata.json
 share/icons/hicolor/128x128/apps/copyq.png
 share/icons/hicolor/16x16/apps/copyq.png
 share/icons/hicolor/22x22/apps/copyq.png
@@ -68,4 +73,4 @@ share/icons/hicolor/48x48/apps/copyq.png
 share/icons/hicolor/64x64/apps/copyq.png
 share/icons/hicolor/scalable/apps/copyq.svg
 share/icons/hicolor/scalable/apps/copyq_mask.svg
-share/metainfo/com.github.hluk.copyq.appdata.xml
+share/metainfo/com.github.hluk.copyq.metainfo.xml
