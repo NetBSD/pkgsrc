@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1919 2026/03/27 11:18:12 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1920 2026/03/27 11:20:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2739,3 +2739,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/megacmd to 2.5.0 [kikadf 2026-03-27]
 	Updated x11/copyq to 14.0.0 [kikadf 2026-03-27]
 	Updated sysutils/broot to 1.56.2 [pin 2026-03-27]
+	Updated editors/redox to 0.3.1 [pin 2026-03-27]
