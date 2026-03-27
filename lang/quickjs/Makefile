@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2026/03/10 17:24:10 osa Exp $
+# $NetBSD: Makefile,v 1.19 2026/03/27 20:24:07 nia Exp $
 
 NAME=		quickjs
 QJS_DATE=	2025-12-22
@@ -19,6 +19,8 @@ USE_TOOLS+=	gmake
 MAKE_FLAGS=	prefix=${PREFIX}
 TEST_TARGET=	test
 AUTO_MKDIRS=	yes
+
+CFLAGS+=	-fPIC
 
 # Requires C11 atomics support
 USE_CC_FEATURES=	c11
