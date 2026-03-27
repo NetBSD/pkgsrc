@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1909 2026/03/26 23:44:40 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.1910 2026/03/27 09:03:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2723,3 +2723,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/tp-note to 1.25.19 [pin 2026-03-26]
 	Updated devel/kdiff3 to 1.12.4 [gutteridge 2026-03-26]
 	Updated x11/kitty to 0.46.2 [ktnb 2026-03-26]
+	Updated www/py-w3lib to 2.4.1 [adam 2026-03-27]
+	Updated www/py-werkzeug to 3.1.7 [adam 2026-03-27]
