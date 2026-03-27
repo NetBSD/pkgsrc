@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2026/03/13 13:16:09 adam Exp $
+$NetBSD: distinfo,v 1.16 2026/03/27 13:35:56 adam Exp $
 
-BLAKE2s (simpleeval-1.0.5.tar.gz) = 811a8a57eaec559d2f92054a08e295d81fea805f23567a767e58d83881e18f23
-SHA512 (simpleeval-1.0.5.tar.gz) = c136c95106c0db4a7b143b4ad989116164b37e1bfad4719c4b9dbb5f4a81e0d80e3f0c3755e6b52163fa614aafdeefda82006326bdeaf582c6a5c94c18e922d3
-Size (simpleeval-1.0.5.tar.gz) = 40853 bytes
+BLAKE2s (simpleeval-1.0.7.tar.gz) = 848e858ea0a5d836db7bf3d952ba54b4a5bed9adcc5b404a7f7fe1767ec3e480
+SHA512 (simpleeval-1.0.7.tar.gz) = 467cc5ce98708a23a92ac30e0fc4b4c32f84c9ac0eafd1d6c9049bc9c27986594416609c86a415c0ba9bf52380507c79bf161595dde267952cb76de83ee18a73
+Size (simpleeval-1.0.7.tar.gz) = 30250 bytes
