@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2026/02/16 14:46:07 pin Exp $
+$NetBSD: distinfo,v 1.21 2026/03/27 22:38:33 tnn Exp $
 
 BLAKE2s (ab_glyph-0.2.32.crate) = a1bd2a114f0cae7af4e1dc5f86421476ddc0abc68c8cc8f85baffa7375db8c88
 SHA512 (ab_glyph-0.2.32.crate) = aa28fc87201abc6cd14bfb2371420be102e82f9317d952db5e0f576e867dcee61e3a54d65e39489459e3dd238baef77b46418ff20a2a9c9cf9e4a6ddf1277fb0
@@ -1632,3 +1632,4 @@ Size (zune-jpeg-0.4.21.crate) = 68268 bytes
 BLAKE2s (zune-jpeg-0.5.12.crate) = a2a2e4e65ae004d3469ab6907a6512026552c9521eca679fb0adecfdff4edbd7
 SHA512 (zune-jpeg-0.5.12.crate) = 6c956a8df09e5c89a7ad7cbc673567b142a2945b67ef9e60881564689ea03cb9cac83a13bc2e5997a3abdd63bb65ae208e45f27a6157fd54f60d7d0a0f8f927c
 Size (zune-jpeg-0.5.12.crate) = 86116 bytes
+SHA1 (patch-.._vendor_x11rb-0.13.2_src_xcb__ffi_raw__ffi_ffi.rs) = b80ac1ecb6b77a77c6510c8421c78a0984a28073
