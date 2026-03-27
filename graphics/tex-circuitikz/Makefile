@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2025/05/09 23:19:37 markd Exp $
+# $NetBSD: Makefile,v 1.18 2026/03/27 23:45:43 markd Exp $
 
 DISTNAME=	circuitikz
-PKGNAME=	tex-${DISTNAME}-1.7.2
-TEXLIVE_REV=	74723
+PKGNAME=	tex-${DISTNAME}-1.8.5
+TEXLIVE_REV=	77600
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/circuitikz
