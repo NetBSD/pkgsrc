@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1917 2026/03/27 11:06:27 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.1918 2026/03/27 11:09:48 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2737,3 +2737,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/libjpeg-turbo to 3.1.4 [adam 2026-03-27]
 	Updated devel/py-proto-plus to 1.27.2 [adam 2026-03-27]
 	Updated net/megacmd to 2.5.0 [kikadf 2026-03-27]
+	Updated x11/copyq to 14.0.0 [kikadf 2026-03-27]
