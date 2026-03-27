@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2026/02/21 05:32:23 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2026/03/27 18:13:03 wiz Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	33
@@ -17,6 +17,7 @@ PATCH_SITES=				http://www.gregroelofs.com/code/
 MAINTAINER=	tsutsui@NetBSD.org
 #HOMEPAGE=	http://www.trilon.com/xv/
 # and...	http://www.sonic.net/~roelofs/greg_xv.html
+# official jumbo patch repository: https://github.com/jasper-software/xv
 COMMENT=	X11 program that displays images of various formats
 LICENSE=	xv-license
 
