@@ -1,11 +1,17 @@
-The package causes LaTeX to directly produce HTML5 output,
-using external utility programs only for the final conversion
-of text and images. Math may be represented by SVG files or
-MathJax. Documents may be produced by LaTeX, LuaLaTeX, or
-XeLaTeX. A texlua script removes the need for system utilities
-such as make and gawk, and also supports xindy and latexmk.
-Configuration is automatic at the first manual compile. Print
-and HTML versions of each document may coexist, each with its
-own set of auxiliary files. Support files are self-generated on
-request. Assistance is provided for HTML import into EPUB
-conversion software and word processors.
+This package converts LaTeX to HTML by using LaTeX to process
+the user's document and generate HTML tags. External utility
+programs are only used for the final conversion of text and
+images. Math may be represented by SVG files or MathJax.
+Hundreds of LaTeX packages are supported, and their load order
+is automatically verified. Documents may be produced by LaTeX,
+LuaLaTeX, XeLaTeX, and by several CJK engines, classes, and
+packages. A texlua script automates compilation, index,
+glossary, and batch image processing, and also supports
+latexmk. Configuration is semi-automatic at the first manual
+compile. Support files are self-generated. Print and HTML
+versions of each document may coexist. Assistance is provided
+for HTML import into EPUB conversion software and word
+processors. Requirements include the commonly-available Poppler
+utilities, and Perl. Detailed installation instructions are
+included for each of the major operating systems and TeX
+distributions. A quick-start tutorial is provided.
