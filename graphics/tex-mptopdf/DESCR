@@ -5,4 +5,6 @@ ConTeXt. They can be used independently of the rest of ConTeXt,
 yet are maintained as part of it. So in TeX Live we pull them
 out to this separate package for the benefit of LaTeX users who
 do not install the rest of ConTeXt. This can be found on CTAN
-in macros/pdftex/graphics.
+in macros/pdftex/graphics. The files originally come from the
+ConTeXt distribution. TL uses the repackaging from
+https://github.com/gucci-on-fleek/context-packaging.

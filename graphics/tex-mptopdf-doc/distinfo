@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/03/24 10:53:52 markd Exp $
+$NetBSD: distinfo,v 1.13 2026/03/27 23:55:51 markd Exp $
 
-BLAKE2s (mptopdf.doc.r69363.tar.xz) = 70a1abe2ea9a9c2b049843acf01346489cfb901c49d1e75d857ff49bea948863
-SHA512 (mptopdf.doc.r69363.tar.xz) = 46b4dbe5a903601078da34238dc449ad932dbc44fdbb6df33b53554fbbe8d47307ba99e971ab197e468a8689d731f989c02097ca2b8ab07c575ec05e2866e81a
-Size (mptopdf.doc.r69363.tar.xz) = 13620 bytes
+BLAKE2s (mptopdf.doc.r78010.tar.xz) = fcc8bc4d16304b422301df00e26b914d3683329ec66b70d1d521eb27ebcf3a3d
+SHA512 (mptopdf.doc.r78010.tar.xz) = 041270bec2870402459bed308a17eecdcae0e233bef222a707be252f0766cf36d7c2cd2835182f80599c45523215c11017637fcddfe3a44af360ebe04971fe07
+Size (mptopdf.doc.r78010.tar.xz) = 16608 bytes
