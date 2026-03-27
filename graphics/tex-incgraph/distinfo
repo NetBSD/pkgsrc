@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/03/20 10:13:49 markd Exp $
+$NetBSD: distinfo,v 1.6 2026/03/27 23:49:20 markd Exp $
 
-BLAKE2s (incgraph.r70635.tar.xz) = 17483456ff74bc0320644d42a7cf637b74fe7dd65ec7c023470f35fa2bab1fab
-SHA512 (incgraph.r70635.tar.xz) = 4acae7640b2cdbc3b7e9e7bef20882ad3f263c856303068cb3d64a1076456d4c979ff3733a2f6e5d41b8b3d4d66c6c97dd06696d741371861a3ef04c455a6877
-Size (incgraph.r70635.tar.xz) = 5724 bytes
+BLAKE2s (incgraph.r78271.tar.xz) = d0cd6df148eed9473fe5881c237b11dab84b97c5238e92e320776e92d4f57d72
+SHA512 (incgraph.r78271.tar.xz) = c8b72b552267a4c18f1b27c78623dbe395c7d920b5ac5f86d3a52e147d744720b24a9d56834224c5e36cac41864282ef479d58089635fd13652afebc0f05cab6
+Size (incgraph.r78271.tar.xz) = 5824 bytes
