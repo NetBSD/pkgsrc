@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1911 2026/03/27 09:08:45 adam Exp $
+$NetBSD: CHANGES-2026,v 1.1912 2026/03/27 09:17:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2727,3 +2727,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-werkzeug to 3.1.7 [adam 2026-03-27]
 	Updated devel/py-setuptools-rust to 1.12.1 [adam 2026-03-27]
 	Updated devel/py-pylru to 1.2.2 [adam 2026-03-27]
+	Updated x11/wxGTK32 to 3.2.10 [adam 2026-03-27]
+	Updated net/rclone to 1.73.3 [adam 2026-03-27]
