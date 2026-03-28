@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/05/14 12:32:32 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/03/28 00:02:53 markd Exp $
 
-BLAKE2s (tzplot.r64537.tar.xz) = c675ac171d7560a968ac350357890864dd938f3439a3d68db9596370072d2fb2
-SHA512 (tzplot.r64537.tar.xz) = 78d2a67470340caaf6ee286f0dbfb9b8706cd4b0a689a64592c11f6b8a5108a61d33a24d36262aa5b802b8893ba440365fcd1280eac4cf7d3e514f6820ad21ca
-Size (tzplot.r64537.tar.xz) = 25292 bytes
+BLAKE2s (tzplot.r77181.tar.xz) = 0ec1fdf33f8e8de731db2e36bc6b1f879413e6630544af03189a317796b73253
+SHA512 (tzplot.r77181.tar.xz) = 515392b4af5bfc92a5bc83c60dc02eb1eda551ab7fedcb3e6d39382e0e588ff653ece8d4ed07ca476956c26787e56ffeb0139971e79b6f110add475b6f7b7bc9
+Size (tzplot.r77181.tar.xz) = 25924 bytes
