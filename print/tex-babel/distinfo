@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2025/05/07 12:21:19 markd Exp $
+$NetBSD: distinfo,v 1.30 2026/03/28 23:33:58 markd Exp $
 
-BLAKE2s (babel.r75053.tar.xz) = e78211d0aebf45220719f0b7025a2ad89f35b69a1992527db22afbd74db07ff4
-SHA512 (babel.r75053.tar.xz) = afe4062dd2556c27caf7e889a29588801268c6d54c4c4f77c67a5efa5153bbdf1d0a7590ea6ad70ba1313e93348c8b006ce9f6bf16dc7038a93d839e8aa614d3
-Size (babel.r75053.tar.xz) = 238736 bytes
+BLAKE2s (babel.r78485.tar.xz) = a1fef7d5790998b7e616e959b9ce651737faacd2367ff51ef8d1385e6ce5e8fb
+SHA512 (babel.r78485.tar.xz) = b68ee65f22d470db3916a988ed075085191d24104cc37fcaaf3291dc270d0621eea592679c21147dceb44f865f8257e552300023e65f0bc2573b6965a440bb36
+Size (babel.r78485.tar.xz) = 244608 bytes
