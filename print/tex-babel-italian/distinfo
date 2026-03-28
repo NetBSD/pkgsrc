@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/05/07 12:31:04 markd Exp $
+$NetBSD: distinfo,v 1.11 2026/03/28 23:48:30 markd Exp $
 
-BLAKE2s (babel-italian.r72520.tar.xz) = 6106f1379adc8b4a3a56f2db4845aad41280eefede9d89f1ad066ec317393b06
-SHA512 (babel-italian.r72520.tar.xz) = a84dc915810cefcde4b6debb03f778d242700a4ca6bac78b9bb8e528d356518995a677bfc0913738bfee7027dfe6227217f096b81eebcb91de56e26ecebec4fb
-Size (babel-italian.r72520.tar.xz) = 3896 bytes
+BLAKE2s (babel-italian.r77371.tar.xz) = ed6f7bcbde2212111156d0c786e8064d9013d79f1bbe9b9dbe6340495d7365ad
+SHA512 (babel-italian.r77371.tar.xz) = 0b7eb3f2b8115c8b4b170cdf7b0d16d465d20aac5f38c76716a206e63cb2c7e72365465843bd3a7bd5ddb95389be43346ddc450e009e69b43ceb52ba69deb6e5
+Size (babel-italian.r77371.tar.xz) = 3944 bytes
