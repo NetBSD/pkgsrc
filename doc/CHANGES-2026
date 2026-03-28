@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1930 2026/03/28 10:40:25 kardel Exp $
+$NetBSD: CHANGES-2026,v 1.1931 2026/03/28 12:03:56 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2768,3 +2768,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ocaml-dune to 3.22.0 [wiz 2026-03-28]
 	Updated devel/ocaml-dune-configurator to 3.22.0 [wiz 2026-03-28]
 	Updated net/lldpd to 1.0.21 [kardel 2026-03-28]
+	Updated devel/opa to 1.15.0 [leot 2026-03-28]
