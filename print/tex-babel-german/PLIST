@@ -1,5 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/26 04:03:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/03/28 23:42:47 markd Exp $
 share/texmf-dist/tex/generic/babel-german/austrian.ldf
+share/texmf-dist/tex/generic/babel-german/babel-german.def
+share/texmf-dist/tex/generic/babel-german/german-at-1901.ldf
+share/texmf-dist/tex/generic/babel-german/german-at.ldf
+share/texmf-dist/tex/generic/babel-german/german-austria-1901.ldf
+share/texmf-dist/tex/generic/babel-german/german-austria.ldf
+share/texmf-dist/tex/generic/babel-german/german-ch-1901.ldf
+share/texmf-dist/tex/generic/babel-german/german-ch.ldf
+share/texmf-dist/tex/generic/babel-german/german-de-1901.ldf
+share/texmf-dist/tex/generic/babel-german/german-de.ldf
+share/texmf-dist/tex/generic/babel-german/german-germany-1901.ldf
+share/texmf-dist/tex/generic/babel-german/german-germany.ldf
+share/texmf-dist/tex/generic/babel-german/german-switzerland-1901.ldf
+share/texmf-dist/tex/generic/babel-german/german-switzerland.ldf
 share/texmf-dist/tex/generic/babel-german/german.ldf
 share/texmf-dist/tex/generic/babel-german/germanb.ldf
 share/texmf-dist/tex/generic/babel-german/naustrian.ldf
