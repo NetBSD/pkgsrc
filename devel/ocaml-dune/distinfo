@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2026/02/16 12:22:54 wiz Exp $
+$NetBSD: distinfo,v 1.19 2026/03/28 10:22:15 wiz Exp $
 
-BLAKE2s (dune-3.21.1.tar.gz) = 22a26520b4ab707fa4161760ca33b060c0ff013fcaed1c46f7a7d6434930eb73
-SHA512 (dune-3.21.1.tar.gz) = a304fc6bb854c3a1d5b86b3d3a942e140387ae82e52be240289ef89413d6e6017bc6869363aba3898d6a6be1cb31f4fe8b9264c735c87a1e18cad82a26054acb
-Size (dune-3.21.1.tar.gz) = 3431470 bytes
+BLAKE2s (dune-3.22.0.tar.gz) = 9a687018d5d4159b9903f347565709f2954cdaaf819d171dd4541dbfad9bd3b9
+SHA512 (dune-3.22.0.tar.gz) = c46a35ed385ab6d8cbb833c8db56acdae8806b10c17daeab756dbae7769f766feada28abdd2a369dcf23bd4bad6b876c4562c4b11e9083abdc01b58e49cae5e9
+Size (dune-3.22.0.tar.gz) = 3568918 bytes
 SHA1 (patch-otherlibs_configurator_src_v1.ml) = 74ddbf037c59ed81eb858042463fa5016027d9b8
 SHA1 (patch-otherlibs_stdune_src_readdir.c) = 931f784972ddd7f364e9dfe004f41669fd560225
 SHA1 (patch-vendor_notty_src-unix_native_winsize.c) = d970c142e55e217477a54f11801e2d2365e12e7f
