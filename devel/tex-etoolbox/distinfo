@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/05/09 23:58:25 markd Exp $
+$NetBSD: distinfo,v 1.14 2026/03/28 22:19:33 markd Exp $
 
-BLAKE2s (etoolbox.r73881.tar.xz) = 6f6f4ef83bb7f500d643ebf0d044187244d15d2aa42e025623945ca7da859722
-SHA512 (etoolbox.r73881.tar.xz) = 81f2ffaa8bbf5bdd3268c5fb7fff4bf75561a84896f0469da64abf404021682ebffb73afdcc34fde006a836bce33d163dd8d8da04bf67b89ce92590a6ece4b8a
-Size (etoolbox.r73881.tar.xz) = 8760 bytes
+BLAKE2s (etoolbox.r77682.tar.xz) = 924b34edd6208a44ff2de8d3a9831a264608c4d2917e65df2394dbb6c03df558
+SHA512 (etoolbox.r77682.tar.xz) = 0de30a7f0329add368a764d28d5be57b23a5c552e80472d48b5e0c78be6c13c6e032bd09620ad2690198f88dbfcaa723dd22bdbf3054da1b63a8e115f7a45ecb
+Size (etoolbox.r77682.tar.xz) = 8780 bytes
