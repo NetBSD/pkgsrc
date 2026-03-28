@@ -1,11 +1,13 @@
-This package manages culturally-determined typographical (and
-other) rules for a wide range of languages. A document may
-select a single language to be supported, or it may select
-several, in which case the document may switch from one
-language to another in a variety of ways. Babel uses
-contributed configuration files that provide the detail of what
-has to be done for each language, as well as .ini files for
-about 300 languages from around the World, including many
-written in non-Latin and RTL scripts. Many of them work with
-pdfLaTeX, as well as with XeLaTeX and LuaLaTeX, out of the box.
-A few even work with plain formats.
+Babel is the multilingual environment for LaTeX (tailored for
+LuaTeX, pdfTeX and XeTeX), and sometimes Plain. Its aim is to
+provide a comprehensive localization framework for different
+languages, scripts and cultures based on the latest advances on
+international standards (Unicode, W3C, OpenType). It supports
+about 300 languages (with various levels of coverage) across
+about 45 scripts, including complex (like CJK, Indic) and RTL
+ones. Besides the traditional .ldf files, there are many
+locales built on a modern core that utilizes descriptive .ini
+files, with tools providing precise control over hyphenation
+and line breaking, captions, date formats (across various
+calendars), spacing, transliteration, numbering and other
+locale-specific typographical rules.
