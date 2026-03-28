@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.37 2026/03/15 11:45:44 leot Exp $
+# $NetBSD: go-modules.mk,v 1.38 2026/03/28 12:03:49 leot Exp $
 
 GO_MODULE_FILES+=	github.com/agnivade/levenshtein/@v/v1.2.1.mod
 GO_MODULE_FILES+=	github.com/agnivade/levenshtein/@v/v1.2.1.zip
@@ -322,8 +322,8 @@ GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/api/@v/v0.0.0-2026012801
 GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/api/@v/v0.0.0-20260128011058-8636f8732409.zip
 GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/rpc/@v/v0.0.0-20260128011058-8636f8732409.mod
 GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/rpc/@v/v0.0.0-20260128011058-8636f8732409.zip
-GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.79.1.mod
-GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.79.1.zip
+GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.79.3.mod
+GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.79.3.zip
 GO_MODULE_FILES+=	google.golang.org/protobuf/@v/v1.36.11.mod
 GO_MODULE_FILES+=	google.golang.org/protobuf/@v/v1.36.11.zip
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.mod
@@ -332,6 +332,8 @@ GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v1.0.0-20201130134442-10cb98267c6c.mod
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v1.0.0-20201130134442-10cb98267c6c.zip
 GO_MODULE_FILES+=	gopkg.in/ini.v1/@v/v1.67.1.mod
 GO_MODULE_FILES+=	gopkg.in/ini.v1/@v/v1.67.1.zip
+GO_MODULE_FILES+=	gopkg.in/natefinch/lumberjack.v2/@v/v2.2.1.mod
+GO_MODULE_FILES+=	gopkg.in/natefinch/lumberjack.v2/@v/v2.2.1.zip
 GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.2.2.mod
 GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.4.0.mod
 GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.0-20200313102051-9f266ea9e77c.mod

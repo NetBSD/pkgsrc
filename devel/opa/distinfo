@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2026/03/15 11:45:44 leot Exp $
+$NetBSD: distinfo,v 1.38 2026/03/28 12:03:49 leot Exp $
 
 BLAKE2s (github.com_agnivade_levenshtein_@v_v1.2.1.mod) = 81d2217602cc601452b8bcb4d82d0f384351b9d4eda024cbdf27a580912b3365
 SHA512 (github.com_agnivade_levenshtein_@v_v1.2.1.mod) = a442860c017809a11e1cdaa0165dc15d87490e0513f94e0ad47f7fe6decdb28b2db3d24973fc7214a570d9ffce419b74e4a6c3c25f7332b1c432a7c639d92f3b
@@ -966,12 +966,12 @@ Size (google.golang.org_genproto_googleapis_rpc_@v_v0.0.0-20260128011058-8636f87
 BLAKE2s (google.golang.org_genproto_googleapis_rpc_@v_v0.0.0-20260128011058-8636f8732409.zip) = 8c405821e25730e20f10766a717e9aa09732df4b855942fbb1c8c8fb31d942d8
 SHA512 (google.golang.org_genproto_googleapis_rpc_@v_v0.0.0-20260128011058-8636f8732409.zip) = 3f4d90fcc57f52a34491cf52e3ccb527e1ce36f22d2520b8016a05fe72ad4c05feba390ba7524232f909cfa088bec659b9e8ae2f68d11294cde87d551f7676f4
 Size (google.golang.org_genproto_googleapis_rpc_@v_v0.0.0-20260128011058-8636f8732409.zip) = 39793 bytes
-BLAKE2s (google.golang.org_grpc_@v_v1.79.1.mod) = 1c2cf3ba5ee65a730bf9d3633b565b1014066550f782c610466f72c2b57810a5
-SHA512 (google.golang.org_grpc_@v_v1.79.1.mod) = ad6bbb25da5fbbeaec8e4fe1722e686dba97c7a6a2164b3ce9d68bfb72156925ed17ba9c23e31abdfe3cc0b21005ca9b65d7aad165a77baf13776bd10dfaee6f
-Size (google.golang.org_grpc_@v_v1.79.1.mod) = 1734 bytes
-BLAKE2s (google.golang.org_grpc_@v_v1.79.1.zip) = c9302a7cd25938b1242a450c54c13bde9a61d694fe0ef9ae8e76f92b25818cdb
-SHA512 (google.golang.org_grpc_@v_v1.79.1.zip) = 12c01d53b6da225abb5c9e00b433d109d88a2f9c3f6baf66cfdb8b8cd8a9f5cb6c9cb6f72006b86ee003173e7e219a196f33ccd5904587583132e8deca2e2471
-Size (google.golang.org_grpc_@v_v1.79.1.zip) = 2776029 bytes
+BLAKE2s (google.golang.org_grpc_@v_v1.79.3.mod) = 1c2cf3ba5ee65a730bf9d3633b565b1014066550f782c610466f72c2b57810a5
+SHA512 (google.golang.org_grpc_@v_v1.79.3.mod) = ad6bbb25da5fbbeaec8e4fe1722e686dba97c7a6a2164b3ce9d68bfb72156925ed17ba9c23e31abdfe3cc0b21005ca9b65d7aad165a77baf13776bd10dfaee6f
+Size (google.golang.org_grpc_@v_v1.79.3.mod) = 1734 bytes
+BLAKE2s (google.golang.org_grpc_@v_v1.79.3.zip) = 0036a26c9c70df2c3e675fbb27e11b232a888c25f34a4e156352b669c6291e9d
+SHA512 (google.golang.org_grpc_@v_v1.79.3.zip) = d0efe71b2553db8de973e37d2080dfa135cdf42ac21dd492b30490558d729ca05fce63ca1d6aaef3b96d2508295a6b73dd95d461f83dd8966ed79cf7e1d52e48
+Size (google.golang.org_grpc_@v_v1.79.3.zip) = 2779269 bytes
 BLAKE2s (google.golang.org_protobuf_@v_v1.36.11.mod) = f1c27cc7fd7ad2c8c22e99eb8012c01dde7c96370d4dda31dc48892730d31d67
 SHA512 (google.golang.org_protobuf_@v_v1.36.11.mod) = 0b400139a771d8651da5bd9e5695d5d2809c5844b9d53432855238d7338714d0529d4c3d5ce7e6897b0f5e286a3611834769200dae1b1faaa6c01ed9abc80143
 Size (google.golang.org_protobuf_@v_v1.36.11.mod) = 124 bytes
@@ -996,6 +996,12 @@ Size (gopkg.in_ini.v1_@v_v1.67.1.mod) = 77 bytes
 BLAKE2s (gopkg.in_ini.v1_@v_v1.67.1.zip) = 290cdf9725a442d4a472517bd3bc1c8153b60be41e72d05585f805dd62644e2c
 SHA512 (gopkg.in_ini.v1_@v_v1.67.1.zip) = f03412ad5ac941984843b9b6374b3c636f24b964179f01ba7e2458c3cdd02488460da2b1c8a21f0c757e6082b313d6126c2c183a74be2b7a414de70605275ed4
 Size (gopkg.in_ini.v1_@v_v1.67.1.zip) = 72601 bytes
+BLAKE2s (gopkg.in_natefinch_lumberjack.v2_@v_v2.2.1.mod) = a62ecc2cd10df8393849fe76fdd533c876e2d5071ee14eda610d099ae8546f3c
+SHA512 (gopkg.in_natefinch_lumberjack.v2_@v_v2.2.1.mod) = b33443afc28ce8d1327d51b517d681f7604def20f87b3b8575d47059e283cd1b17129053ae0057c7f9c8e2418b28858a2efa9e368cba20a5fc29862366e5bfd7
+Size (gopkg.in_natefinch_lumberjack.v2_@v_v2.2.1.mod) = 49 bytes
+BLAKE2s (gopkg.in_natefinch_lumberjack.v2_@v_v2.2.1.zip) = 5df26b8c85eb952133a5b3e2df8e2b569a9280c3eaf9a17d57fa332e5517b608
+SHA512 (gopkg.in_natefinch_lumberjack.v2_@v_v2.2.1.zip) = f56b2f21501f8b53708b0c8a20c7166061e26421b0ed6bba6fb621284dde3152577eb9d91773e2636e81f62eaec4dc88231bd7dca6ff1ccd17eb97ddf2d734f7
+Size (gopkg.in_natefinch_lumberjack.v2_@v_v2.2.1.zip) = 18115 bytes
 BLAKE2s (gopkg.in_yaml.v2_@v_v2.2.2.mod) = 691acd4b5c50e04e1b7c87adca46561b84e6c3af636d689c92392dc056e48d28
 SHA512 (gopkg.in_yaml.v2_@v_v2.2.2.mod) = 916ff67ddb6c2ba39905db4277ce42596d9ca5a42f8aa7f47f16335e78d91a1b30419fd1b7b6967b37e248363397ec527b38d2f500b3546edda5d2bce1944379
 Size (gopkg.in_yaml.v2_@v_v2.2.2.mod) = 95 bytes
@@ -1008,9 +1014,9 @@ Size (gopkg.in_yaml.v3_@v_v3.0.0-20200313102051-9f266ea9e77c.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 17da54ba1894b4653d4c1ab1ae6e9fe03928a96c69cdc8db6b6ea9e34d673991
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 307ca9123efc577ca04828996ee9d8edbb51794ccb4b8d9f169ba689e7276aa5f6ae106a04b22b7fab853ffacfebcbf74468b64eaefd57445864c1fbc77fad9d
 Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
-BLAKE2s (opa-1.14.1.tar.gz) = 0ffc177af5699af727c3b4c0dcd03685951adb71c7f8e12db4ccde50e64fffed
-SHA512 (opa-1.14.1.tar.gz) = 9efb5ff3e175981c2c54bfc97aef3336e98f45b32c10cd82d933184cbd5f906410e79680efae2987db433bb4d59448574b2dbd20edbea2ef93646f4e3cac923b
-Size (opa-1.14.1.tar.gz) = 20759329 bytes
+BLAKE2s (opa-1.15.0.tar.gz) = 384c5beb2a31456974f6fb09c48433a58bee9f2cdb90e2b7d8ba041abc7a7151
+SHA512 (opa-1.15.0.tar.gz) = 00f1ff5a9cfba9f776885ad51deb8dbf5e5f843bb6bf54dddaa055cec80cd720d65dbca5b849ccf63bedb34a25b7a86ead7e841d2af683c4985e82245eeb5ec8
+Size (opa-1.15.0.tar.gz) = 20791637 bytes
 BLAKE2s (oras.land_oras-go_v2_@v_v2.6.0.mod) = 001865222181bb581953513833fae101359dae72d5c2473973fc2ce410806b15
 SHA512 (oras.land_oras-go_v2_@v_v2.6.0.mod) = 815563c90321f2eed25659de0de14be0819403b82f95aa998680d3fe761e13dd3009552638667a3211a96cda7232e8ab7a1a2f886290f6b98a8559e6c34884e6
 Size (oras.land_oras-go_v2_@v_v2.6.0.mod) = 188 bytes
