@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2024/02/03 01:45:17 markd Exp $
+# $NetBSD: Makefile,v 1.5 2026/03/28 23:44:21 markd Exp $
 
 DISTNAME=	babel-hebrew
-PKGNAME=	tex-${DISTNAME}-2.4a
-TEXLIVE_REV=	68016
+PKGNAME=	tex-${DISTNAME}-2.5
+TEXLIVE_REV=	77914
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/babel-hebrew
