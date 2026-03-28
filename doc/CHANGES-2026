@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1924 2026/03/27 22:59:57 markd Exp $
+$NetBSD: CHANGES-2026,v 1.1925 2026/03/28 00:04:28 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2748,3 +2748,17 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/tex-latexdiff-doc to 1.4.0 [markd 2026-03-27]
 	Updated textproc/tex-lwarp to 0.921 [markd 2026-03-27]
 	Updated textproc/tex-lwarp-doc to 0.921 [markd 2026-03-27]
+	Updated graphics/tex-chemfig to 1.71 [markd 2026-03-27]
+	Updated graphics/tex-chemfig-doc to 1.71 [markd 2026-03-27]
+	Updated graphics/tex-circuitikz to 1.8.5 [markd 2026-03-27]
+	Updated graphics/tex-circuitikz-doc to 1.8.5 [markd 2026-03-27]
+	Updated graphics/tex-incgraph to 1.4.0 [markd 2026-03-27]
+	Updated graphics/tex-incgraph-doc to 1.4.0 [markd 2026-03-27]
+	Updated graphics/tex-mcf2graph to 5.29 [markd 2026-03-27]
+	Updated graphics/tex-mcf2graph-doc to 5.29 [markd 2026-03-27]
+	Updated graphics/tex-mptopdf to 2025 [markd 2026-03-27]
+	Updated graphics/tex-mptopdf-doc to 2025 [markd 2026-03-27]
+	Updated graphics/tex-pst-barcode to 0.20 [markd 2026-03-27]
+	Updated graphics/tex-pst-barcode-doc to 0.20 [markd 2026-03-27]
+	Updated graphics/tex-tzplot to 2.2 [markd 2026-03-28]
+	Updated graphics/tex-tzplot-doc to 2.2 [markd 2026-03-28]
