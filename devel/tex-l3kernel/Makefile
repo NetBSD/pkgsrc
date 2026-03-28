@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2025/05/11 11:02:53 markd Exp $
+# $NetBSD: Makefile,v 1.28 2026/03/28 22:25:40 markd Exp $
 
 DISTNAME=	l3kernel
-PKGNAME=	tex-${DISTNAME}-2025
-TEXLIVE_REV=	75045
+PKGNAME=	tex-${DISTNAME}-2025.77438
+TEXLIVE_REV=	77438
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/l3kernel
@@ -18,6 +18,7 @@ DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-l3backend-[0-9]*:../../devel/tex-l3backend
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-lm-[0-9]*:../../fonts/tex-lm
+DEPENDS+=	tex-lua-uni-algos-[0-9]*:../../print/tex-lua-uni-algos
 DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 DEPENDS+=	tex-psnfss-[0-9]*:../../fonts/tex-psnfss
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
