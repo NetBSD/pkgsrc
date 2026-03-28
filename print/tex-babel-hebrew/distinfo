@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/02/03 01:45:17 markd Exp $
+$NetBSD: distinfo,v 1.6 2026/03/28 23:44:21 markd Exp $
 
-BLAKE2s (babel-hebrew.r68016.tar.xz) = b557633af51bdbbe696162412b92848e188ff852507739af6b0970ccd4cfd5b0
-SHA512 (babel-hebrew.r68016.tar.xz) = 7feecb0fecb5ba203e494c9ca8810c7e58df692617c7ef1e15128bc3d2c947fda90267c21b0dcb2743b18fbcc120da2a0f1ca0ba76cb74cb2e53b3039dfb1c5d
-Size (babel-hebrew.r68016.tar.xz) = 12044 bytes
+BLAKE2s (babel-hebrew.r77914.tar.xz) = 35f9e8b4ad950a69b8901c3d28fa9c88025a1b8c9cc3486bdee65849c5efb240
+SHA512 (babel-hebrew.r77914.tar.xz) = acedab649ecf14a4ff1daf79dc7b35378fd0be4f1c6cf89d38ce8a7eb9adfbe7778c02a00f62e0a67d7ffc6cce4a25508a3e7d0a8fa57ec26b555185b233b879
+Size (babel-hebrew.r77914.tar.xz) = 14208 bytes
