@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.8 2026/03/10 17:24:10 osa Exp $
+$NetBSD: patch-Makefile,v 1.9 2026/03/28 04:54:38 pho Exp $
 
 Portability patch for NetBSD.
 
@@ -35,18 +35,26 @@ Portability patch for NetBSD.
  
  ifdef CONFIG_WIN32
    ifdef CONFIG_M32
-@@ -217,8 +228,10 @@ QJSC_CC=$(CC)
+@@ -211,14 +222,18 @@ PROGS=qjs$(EXE) qjsc$(EXE) run-test262$(
+ ifneq ($(CROSS_PREFIX),)
+ QJSC_CC=gcc
+ QJSC=./host-qjsc
++QJSC_CMD=$(QJSC)
+ PROGS+=$(QJSC)
+ else
+ QJSC_CC=$(CC)
  QJSC=./qjsc$(EXE)
++QJSC_CMD=LD_LIBRARY_PATH=. $(QJSC)
  endif
  PROGS+=libquickjs.a
-+PROGS+=libquickjs.so
++PROGS+=libquickjs.so libquickjs.so.0
  ifdef CONFIG_LTO
  PROGS+=libquickjs.lto.a
-+PROGS+=libquickjs.lto.so
++PROGS+=libquickjs.lto.so libquickjs.lto.so.0
  endif
  
  # examples
-@@ -247,11 +260,17 @@ QJS_LIB_OBJS=$(OBJDIR)/quickjs.o $(OBJDI
+@@ -247,23 +262,29 @@ QJS_LIB_OBJS=$(OBJDIR)/quickjs.o $(OBJDI
  
  QJS_OBJS=$(OBJDIR)/qjs.o $(OBJDIR)/repl.o $(QJS_LIB_OBJS)
  
@@ -65,7 +73,21 @@ Portability patch for NetBSD.
  LIBS+=$(EXTRA_LIBS)
  
  $(OBJDIR):
-@@ -289,6 +308,9 @@ QJSC_DEFINES:=-DCONFIG_CC=\"$(QJSC_CC)\"
+ 	mkdir -p $(OBJDIR) $(OBJDIR)/examples $(OBJDIR)/tests
+ 
+-qjs$(EXE): $(QJS_OBJS)
++qjs$(EXE): $(filter-out $(QJS_LIB_OBJS),$(QJS_OBJS)) libquickjs.so
+ 	$(CC) $(LDFLAGS) $(LDEXPORT) -o $@ $^ $(LIBS)
+ 
+ qjs-debug$(EXE): $(patsubst %.o, %.debug.o, $(QJS_OBJS))
+ 	$(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
+ 
+-qjsc$(EXE): $(OBJDIR)/qjsc.o $(QJS_LIB_OBJS)
++qjsc$(EXE): $(OBJDIR)/qjsc.o $(QJS_LIB_OBJS) libquickjs.so
+ 	$(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
+ 
+ fuzz_eval: $(OBJDIR)/fuzz_eval.o $(OBJDIR)/fuzz_common.o libquickjs.fuzz.a
+@@ -289,6 +310,9 @@ QJSC_DEFINES:=-DCONFIG_CC=\"$(QJSC_CC)\"
  ifdef CONFIG_LTO
  QJSC_DEFINES+=-DCONFIG_LTO
  endif
@@ -75,22 +97,34 @@ Portability patch for NetBSD.
  QJSC_HOST_DEFINES:=-DCONFIG_CC=\"$(HOST_CC)\" -DCONFIG_PREFIX=\"$(PREFIX)\"
  
  $(OBJDIR)/qjsc.o: CFLAGS+=$(QJSC_DEFINES)
-@@ -302,10 +324,14 @@ endif
+@@ -302,17 +326,25 @@ endif
  
  libquickjs$(LTOEXT).a: $(QJS_LIB_OBJS)
  	$(AR) rcs $@ $^
-+libquickjs$(LTOEXT).so: $(QJS_LIB_OBJS)
-+	$(CC) -shared -Wl,-soname=$@.0 $(LDFLAGS) -o $@ $^
++libquickjs$(LTOEXT).so.0: $(QJS_LIB_OBJS)
++	$(CC) -shared -Wl,-soname=$@ $(LDFLAGS) -o $@ $^
++libquickjs$(LTOEXT).so: libquickjs$(LTOEXT).so.0
++	ln -sf $< $@
  
  ifdef CONFIG_LTO
  libquickjs.a: $(patsubst %.o, %.nolto.o, $(QJS_LIB_OBJS))
  	$(AR) rcs $@ $^
-+libquickjs.so: $(patsubst %.o, %.nolto.o, $(QJS_LIB_OBJS))
-+	$(CC) -shared -Wl,-soname=$@.0 $(LDFLAGS) -o $@ $^
++libquickjs.so.0: $(patsubst %.o, %.nolto.o, $(QJS_LIB_OBJS))
++	$(CC) -shared -Wl,-soname=$@ $(LDFLAGS) -o $@ $^
++libquickjs.so: libquickjs.so.0
++	ln -sf $< $@
  endif # CONFIG_LTO
  
  libquickjs.fuzz.a: $(patsubst %.o, %.fuzz.o, $(QJS_LIB_OBJS))
-@@ -372,10 +398,12 @@ install: all
+ 	$(AR) rcs $@ $^
+ 
+ repl.c: $(QJSC) repl.js
+-	$(QJSC) -s -c -o $@ -m repl.js
++	$(QJSC_CMD) -s -c -o $@ -m repl.js
+ 
+ ifneq ($(wildcard unicode/UnicodeData.txt),)
+ $(OBJDIR)/libunicode.o $(OBJDIR)/libunicode.nolto.o: libunicode-table.h
+@@ -372,10 +404,14 @@ install: all
  	mkdir -p "$(DESTDIR)$(PREFIX)/bin"
  	$(STRIP) qjs$(EXE) qjsc$(EXE)
  	install -m755 qjs$(EXE) qjsc$(EXE) "$(DESTDIR)$(PREFIX)/bin"
@@ -98,11 +132,37 @@ Portability patch for NetBSD.
 -	install -m644 libquickjs.a "$(DESTDIR)$(PREFIX)/lib/quickjs"
 +	mkdir -p "$(DESTDIR)$(PREFIX)/lib"
 +	install -m644 libquickjs.a "$(DESTDIR)$(PREFIX)/lib"
-+	install -m644 libquickjs.so "$(DESTDIR)$(PREFIX)/lib"
++	install -m755 libquickjs.so.0 "$(DESTDIR)$(PREFIX)/lib"
++	(cd "$(DESTDIR)$(PREFIX)/lib" && ln -sf libquickjs.so.0 libquickjs.so)
  ifdef CONFIG_LTO
 -	install -m644 libquickjs.lto.a "$(DESTDIR)$(PREFIX)/lib/quickjs"
 +	install -m644 libquickjs.lto.a "$(DESTDIR)$(PREFIX)/lib"
-+	install -m644 libquickjs.lto.so "$(DESTDIR)$(PREFIX)/lib"
++	install -m755 libquickjs.lto.so.0 "$(DESTDIR)$(PREFIX)/lib"
++	(cd "$(DESTDIR)$(PREFIX)/lib" && ln -sf libquickjs.lto.so.0 libquickjs.lto.so)
  endif
  	mkdir -p "$(DESTDIR)$(PREFIX)/include/quickjs"
  	install -m644 quickjs.h quickjs-libc.h "$(DESTDIR)$(PREFIX)/include/quickjs"
+@@ -390,7 +426,7 @@ HELLO_OPTS=-fno-string-normalize -fno-ma
+            -fno-date -fno-module-loader
+ 
+ hello.c: $(QJSC) $(HELLO_SRCS)
+-	$(QJSC) -e $(HELLO_OPTS) -o $@ $(HELLO_SRCS)
++	$(QJSC_CMD) -e $(HELLO_OPTS) -o $@ $(HELLO_SRCS)
+ 
+ examples/hello: $(OBJDIR)/hello.o $(QJS_LIB_OBJS)
+ 	$(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
+@@ -401,12 +437,12 @@ HELLO_MODULE_OPTS=-fno-string-normalize 
+            -fno-typedarray -fno-regexp -fno-json -fno-eval -fno-proxy \
+            -fno-date -m
+ examples/hello_module: $(QJSC) libquickjs$(LTOEXT).a $(HELLO_MODULE_SRCS)
+-	$(QJSC) $(HELLO_MODULE_OPTS) -o $@ $(HELLO_MODULE_SRCS)
++	$(QJSC_CMD) $(HELLO_MODULE_OPTS) -o $@ $(HELLO_MODULE_SRCS)
+ 
+ # use of an external C module (static compilation)
+ 
+ test_fib.c: $(QJSC) examples/test_fib.js
+-	$(QJSC) -e -M examples/fib.so,fib -m -o $@ examples/test_fib.js
++	$(QJSC_CMD) -e -M examples/fib.so,fib -m -o $@ examples/test_fib.js
+ 
+ examples/test_fib: $(OBJDIR)/test_fib.o $(OBJDIR)/examples/fib.o libquickjs$(LTOEXT).a
+ 	$(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
