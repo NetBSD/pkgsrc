@@ -4,8 +4,7 @@ higher-level ideas such as the Designer Interface. Some of them
 work as stand alone packages, providing new functionality, and
 can be used on top of LaTeX2e with no changes to the existing
 kernel. The present release includes: l3draw, a code-level
-interface for constructing drawings; l3str, support for string
-manipulation; xcoffins, which allows the alignment of boxes
-using a series of 'handle' positions, supplementing the simple
-TeX reference point; xgalley, which controls boxes receiving
-text for typesetting.
+interface for constructing drawings; xcoffins, which allows the
+alignment of boxes using a series of 'handle' positions,
+supplementing the simple TeX reference point; xgalley, which
+controls boxes receiving text for typesetting.
