@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2025/05/10 01:15:11 markd Exp $
+# $NetBSD: Makefile,v 1.14 2026/03/28 22:45:19 markd Exp $
 
 DISTNAME=	latexbug.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.0p
-TEXLIVE_REV=	72762
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.0r
+TEXLIVE_REV=	78389
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/latexbug

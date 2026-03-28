@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/05/10 01:15:11 markd Exp $
+$NetBSD: distinfo,v 1.14 2026/03/28 22:45:19 markd Exp $
 
-BLAKE2s (latexbug.doc.r72762.tar.xz) = 44c8fc9a256fdafe918efc748af2d10d05908fe88063c7763c6377729516ff5b
-SHA512 (latexbug.doc.r72762.tar.xz) = 77250d1da1c4a2a51ff174fd0ba8067587436bfcad419ef477a75f8fe6eb0a618b2b4eb6e9129d5fa02b670f70254aeb34a2070d9c8be87b0a8dac85e0c8a35b
-Size (latexbug.doc.r72762.tar.xz) = 220860 bytes
+BLAKE2s (latexbug.doc.r78389.tar.xz) = f54ddcd588a6708f622adfb68b74a300281570673f37effb22ae3918629d88b8
+SHA512 (latexbug.doc.r78389.tar.xz) = e2f543bfd525577d2176c4b0f9ce6329dffd53e20c555ca4d2e263fc9b220b6c7074bdf00ee2fa3a91bd626e7778840e570c0615e078775a64208562b89bdc6a
+Size (latexbug.doc.r78389.tar.xz) = 219440 bytes
