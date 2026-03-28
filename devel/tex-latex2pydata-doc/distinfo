@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/05/13 09:17:41 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/03/28 22:41:45 markd Exp $
 
-BLAKE2s (latex2pydata.doc.r74766.tar.xz) = 5d5139ddf2e9ae24ef3d4e425a6a638f62e9ad8111548818918144568de82bf3
-SHA512 (latex2pydata.doc.r74766.tar.xz) = bfe850ae46ad3bb4582dd84728dea2f42c5004daddc042b56ed1aa3cae0c30e3ca00e548449b674b766c87535a65215dac921fa1b4d40c0fedc08e61fe8a624f
-Size (latex2pydata.doc.r74766.tar.xz) = 317844 bytes
+BLAKE2s (latex2pydata.doc.r78166.tar.xz) = 9c6e85d04ac3f1e3abb869d893a532dff02fff179564724459b0f518613143de
+SHA512 (latex2pydata.doc.r78166.tar.xz) = fd1955a2bb773fb1159841e72be1cccbe5b147f389bd1db5ff75fd8dfff1462b0741bd5c365e51f06fc857d157da52e09806f63154fbe1cc833ba4c7673daae2
+Size (latex2pydata.doc.r78166.tar.xz) = 317712 bytes
