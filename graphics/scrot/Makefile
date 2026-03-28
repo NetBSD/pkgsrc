@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2026/03/26 04:34:28 pin Exp $
+# $NetBSD: Makefile,v 1.53 2026/03/28 08:53:53 tnn Exp $
 
 DISTNAME=	scrot-2.0.0
 CATEGORIES=	graphics
@@ -19,9 +19,10 @@ USE_TOOLS+=	pkg-config
 .endif
 
 .include "../../graphics/imlib2/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
