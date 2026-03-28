@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:12:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/03/28 23:35:36 markd Exp $
 
-BLAKE2s (tex-babel-breton-30257/babel-breton.tar.xz) = e013cc599bcd1b6e62c333bfcb9e473928a91952f3729675dda27d44965527bd
-SHA512 (tex-babel-breton-30257/babel-breton.tar.xz) = 2231598d6dad67d7280021e98238f3eafed62739af5d0628ce0a4fe472897330f99701508a5756fc3cfe3a2a69641cd67cf6b1c150be95ec8ab260a1d3a9c8db
-Size (tex-babel-breton-30257/babel-breton.tar.xz) = 2736 bytes
+BLAKE2s (babel-breton.r77470.tar.xz) = f2e287fce56ca45fb82af0059baa0f087cfca17f823ed51f3f0af65d10f459c9
+SHA512 (babel-breton.r77470.tar.xz) = a4f6b618904355d98c7344d9099d11e19890e524988ca53e6ec18952945777c6bfbc535e3473ed82382466384c45c1c2fbbfc50c86e34b2bb16115deb3f3c92a
+Size (babel-breton.r77470.tar.xz) = 2500 bytes
