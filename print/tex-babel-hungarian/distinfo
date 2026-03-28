@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/05/07 12:29:13 markd Exp $
+$NetBSD: distinfo,v 1.9 2026/03/28 23:46:15 markd Exp $
 
-BLAKE2s (babel-hungarian.r75084.tar.xz) = 5b00483aedba61cc72635f47ee85cc1eb2fa2d68d5ebd5d398185a490b1d6ede
-SHA512 (babel-hungarian.r75084.tar.xz) = 797c3a6ed7876ff8ab662929aa21810f2173d880135752af3739d1e30fcd013277986de052d7a7a39b30af0125df80af1abbb73042e68faef9065de284d46bdf
-Size (babel-hungarian.r75084.tar.xz) = 54336 bytes
+BLAKE2s (babel-hungarian.r77586.tar.xz) = 3bdb516c18bcf5321e7e29a34bec09fbce3adf4a3ef3cb4762b4a9fd3aa81ff1
+SHA512 (babel-hungarian.r77586.tar.xz) = 6d990980aa3fc1dde3602f4c5aabf58cda96aa7d62f30aa3e6d41a81254c29e43193c1511309beedb7141ab370a4f11673298ff48b90d2d19d3703b4f1be41d2
+Size (babel-hungarian.r77586.tar.xz) = 47260 bytes
