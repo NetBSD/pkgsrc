@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1931 2026/03/28 12:03:56 leot Exp $
+$NetBSD: CHANGES-2026,v 1.1932 2026/03/28 14:40:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2769,3 +2769,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ocaml-dune-configurator to 3.22.0 [wiz 2026-03-28]
 	Updated net/lldpd to 1.0.21 [kardel 2026-03-28]
 	Updated devel/opa to 1.15.0 [leot 2026-03-28]
+	Updated lang/ruby32-base to 3.2.11 [taca 2026-03-28]
+	Updated devel/ruby-readline to 3.2.11 [taca 2026-03-28]
+	Updated lang/ruby32 to 3.2.11 [taca 2026-03-28]
