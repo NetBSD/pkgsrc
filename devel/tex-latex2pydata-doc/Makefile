@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/05/13 09:17:41 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/03/28 22:41:45 markd Exp $
 
 DISTNAME=	latex2pydata.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.6.0
-TEXLIVE_REV=	74766
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.7.0
+TEXLIVE_REV=	78166
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/latex2pydata
