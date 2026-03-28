@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1932 2026/03/28 14:40:05 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1933 2026/03/28 22:48:59 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2772,3 +2772,22 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/ruby32-base to 3.2.11 [taca 2026-03-28]
 	Updated devel/ruby-readline to 3.2.11 [taca 2026-03-28]
 	Updated lang/ruby32 to 3.2.11 [taca 2026-03-28]
+	Updated devel/tex-etoolbox to 2.5m [markd 2026-03-28]
+	Updated devel/tex-etoolbox-doc to 2.5m [markd 2026-03-28]
+	Updated devel/tex-l3backend to 2025.76924 [markd 2026-03-28]
+	Updated devel/tex-l3backend-doc to 2025.76924 [markd 2026-03-28]
+	Updated devel/tex-l3kernel to 2025.77438 [markd 2026-03-28]
+	Updated devel/tex-l3kernel-doc to 2025.77438 [markd 2026-03-28]
+	Updated devel/tex-l3packages to 2025.76637 [markd 2026-03-28]
+	Updated devel/tex-l3packages-doc to 2025.76637 [markd 2026-03-28]
+	Updated devel/tex-l3experimental to 2025.76637 [markd 2026-03-28]
+	Updated devel/tex-l3backend-dev to 2025.77954 [markd 2026-03-28]
+	Updated devel/tex-l3backend-dev-doc to 2025.77954 [markd 2026-03-28]
+	Updated devel/tex-l3kernel-dev to 2026 [markd 2026-03-28]
+	Updated devel/tex-l3kernel-dev-doc to 2026 [markd 2026-03-28]
+	Updated devel/tex-latex2pydata to 0.7.0 [markd 2026-03-28]
+	Updated devel/tex-latex2pydata-doc to 0.7.0 [markd 2026-03-28]
+	Updated devel/tex-latexbug to 1.0r [markd 2026-03-28]
+	Updated devel/tex-latexbug-doc to 1.0r [markd 2026-03-28]
+	Updated devel/tex-tlshell to 2026 [markd 2026-03-28]
+	Updated devel/tex-tlshell-doc to 2026 [markd 2026-03-28]
