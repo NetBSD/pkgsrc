@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/05/12 12:33:33 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/03/28 22:39:12 markd Exp $
 
-BLAKE2s (l3kernel-dev.doc.r75056.tar.xz) = ed59ed6fc5d2c48eeaf0cc3387cd4908e65fb5eed6cb677d4a63809a3de8a086
-SHA512 (l3kernel-dev.doc.r75056.tar.xz) = 34d0191346fcc0875f3c78ed09cfd08819fb61d9d8e29c5e162ac664a43adc093834ce0c27924ee90a420021ab9c6b6ef158b5ef9f680eab403decfd8b7235e4
-Size (l3kernel-dev.doc.r75056.tar.xz) = 11993736 bytes
+BLAKE2s (l3kernel-dev.doc.r78446.tar.xz) = b3ec401967847d8e033020e7dfbc1842c809eea06bf2a90fd8ea75c9d173fed0
+SHA512 (l3kernel-dev.doc.r78446.tar.xz) = e4694e51de4bfb36fc0a84eb0461f2a8fe65dbe37c9fa5f68df53cccf7faa14ddec2bf4c113497f3dc1e7af25c92e863ab67345869862052c6fd6d898a2d59d9
+Size (l3kernel-dev.doc.r78446.tar.xz) = 12174248 bytes
