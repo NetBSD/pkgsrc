@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.12 2025/05/11 10:55:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/03/28 22:30:47 markd Exp $
 share/texmf-dist/tex/latex/l3experimental/l3draw/l3draw.sty
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str-format.sty
 share/texmf-dist/tex/latex/l3experimental/xcoffins/xcoffins.sty
 share/texmf-dist/tex/latex/l3experimental/xgalley/l3galley.sty
 share/texmf-dist/tex/latex/l3experimental/xgalley/xgalley.sty
