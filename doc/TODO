@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26994 2026/03/28 10:22:24 wiz Exp $
+$NetBSD: TODO,v 1.26995 2026/03/28 22:55:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -627,6 +627,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o felt-3.07 [wip]
 	o fet-6.0.1
 	o ffmpeg8-8.1
+	o fifengine-0.4.3
 	o filerunner-14.06.18.10
 	o firefox-149.0
 	o flashplayer-0.4.13
