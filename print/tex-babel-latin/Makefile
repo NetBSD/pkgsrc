@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2025/05/07 12:33:07 markd Exp $
+# $NetBSD: Makefile,v 1.7 2026/03/28 23:50:38 markd Exp $
 
 DISTNAME=	babel-latin
-PKGNAME=	tex-${DISTNAME}-4.1
-TEXLIVE_REV=	75070
+PKGNAME=	tex-${DISTNAME}-4.3
+TEXLIVE_REV=	76176
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/babel-latin
