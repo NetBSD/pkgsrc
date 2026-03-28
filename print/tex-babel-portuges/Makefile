@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/04/15 00:38:41 markd Exp $
+# $NetBSD: Makefile,v 1.7 2026/03/28 23:52:17 markd Exp $
 
 DISTNAME=	babel-portuges
-PKGNAME=	tex-${DISTNAME}-1.2t
-TEXLIVE_REV=	59883
+PKGNAME=	tex-${DISTNAME}-1.2u
+TEXLIVE_REV=	77682
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/babel-portuges
