@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1928 2026/03/28 10:22:24 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1929 2026/03/28 10:22:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2766,3 +2766,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/tex-latex-doc to 20251101 [markd 2026-03-28]
 	Updated databases/p5-DBD-CSV to 0.62 [wen 2026-03-28]
 	Updated devel/ocaml-dune to 3.22.0 [wiz 2026-03-28]
+	Updated devel/ocaml-dune-configurator to 3.22.0 [wiz 2026-03-28]
