@@ -1,6 +1,16 @@
-LaTeX is a widely-used macro package for TeX, providing many basic
-document formating commands extended by a wide range of packages.  It
-is a development of Leslie Lamport's original LaTeX 2.09, and
-superseded the older system in June 1994.  This package includes
-a bunch of required packages, which LaTeX authors are "entitled to
-assume" will be present on any system running LaTeX.
+LaTeX is a widely-used macro package (format) for TeX,
+providing many basic document formatting commands extended by a
+wide range of packages. It was originally created by Leslie
+Lamport, whose last release was LaTeX 2.09. The current LaTeX
+superseded that release in June 1994. The basic distribution is
+catalogued separately, at latex-base. Apart from a large set of
+contributed packages and third-party documentation (elsewhere
+on the archive), the distribution includes: a number of
+required packages, which LaTeX authors may assume will be
+present on any system running LaTeX; and a minimal set of
+documentation detailing differences from the 'old' version of
+LaTeX in the areas of user commands, font selection and
+control, class and package writing, font encodings,
+configuration options and modification of LaTeX. For
+downloading details, documentation links, etc., see the linked
+catalogue entries above.
