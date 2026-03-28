@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/05/07 12:33:07 markd Exp $
+$NetBSD: distinfo,v 1.8 2026/03/28 23:50:38 markd Exp $
 
-BLAKE2s (babel-latin.r75070.tar.xz) = 489624abb76f798b766dca0c62528d097bce30cea56e522e882570b33a0d67b3
-SHA512 (babel-latin.r75070.tar.xz) = 10593446aa59d517682633fc98f697cc54ed2310f1208d5606444dcb3ab777b5b5dbe5166d527c05e484024db3f72fc3ed473e5ed659265e0bd2cba3783838ad
-Size (babel-latin.r75070.tar.xz) = 7336 bytes
+BLAKE2s (babel-latin.r76176.tar.xz) = c541fa1dd5c9dc65f59ff9fc2329478405767ec914321e6b024cba6ee68d9ada
+SHA512 (babel-latin.r76176.tar.xz) = a64ff7b7aab3a3f440a8f3491a8809931d6f9d4c3b65b35a5ab10d46cedeac1746c9b6701c31abb50ab7ff8477b65222cec73342c33d008d1132c83e9fb89cdf
+Size (babel-latin.r76176.tar.xz) = 7420 bytes
