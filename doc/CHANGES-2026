@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1929 2026/03/28 10:22:40 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1930 2026/03/28 10:40:25 kardel Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2767,3 +2767,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/p5-DBD-CSV to 0.62 [wen 2026-03-28]
 	Updated devel/ocaml-dune to 3.22.0 [wiz 2026-03-28]
 	Updated devel/ocaml-dune-configurator to 3.22.0 [wiz 2026-03-28]
+	Updated net/lldpd to 1.0.21 [kardel 2026-03-28]
