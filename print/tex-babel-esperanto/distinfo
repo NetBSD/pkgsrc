@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:12:31 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/03/28 23:37:10 markd Exp $
 
-BLAKE2s (tex-babel-esperanto-30265/babel-esperanto.tar.xz) = b368a8f8e6963d182bfb0f77a1d78197c78c4453dd66e4126c97cb24db7d31e5
-SHA512 (tex-babel-esperanto-30265/babel-esperanto.tar.xz) = 22f53a4ae176fa7b928c2207b01159cb4e04237796cebe69b6ef28f96f1886854c89c2ebd8fae81219916a7651cadd5a70c685ca881d4bbab7eafc325ea8a4ab
-Size (tex-babel-esperanto-30265/babel-esperanto.tar.xz) = 2576 bytes
+BLAKE2s (babel-esperanto.r77682.tar.xz) = fe20d757d13c6727f1e5ab471f1d97d279542e5faebd783f1fd7be6669758b84
+SHA512 (babel-esperanto.r77682.tar.xz) = a94349c8b73220dd87e8d52693e9070085b2502368a9bad15bfd3c3f1fcf637b4c46fdea0d5237c2640abfb80639b3e7f5462a46b1329965ad6954f9ef779af0
+Size (babel-esperanto.r77682.tar.xz) = 2464 bytes
