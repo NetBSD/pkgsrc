@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1926 2026/03/28 00:19:30 markd Exp $
+$NetBSD: CHANGES-2026,v 1.1927 2026/03/28 00:49:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2764,3 +2764,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/tex-tzplot-doc to 2.2 [markd 2026-03-28]
 	Updated print/tex-latex to 20251101 [markd 2026-03-28]
 	Updated print/tex-latex-doc to 20251101 [markd 2026-03-28]
+	Updated databases/p5-DBD-CSV to 0.62 [wen 2026-03-28]
