@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2025/08/02 03:59:47 taca Exp $
+$NetBSD: distinfo,v 1.10 2026/03/29 13:17:20 taca Exp $
 
-BLAKE2s (rex-bin_tools-0.1.12.gem) = 4b2ffea8ec3b537e374cbdf923795f6223e5ae1900101268d2822889505fa0ad
-SHA512 (rex-bin_tools-0.1.12.gem) = 023c6e455823e0311dabeefef8420aa9622cd729a25f83a829e341b373a89d9947b965bc2603cfc74e689cca16c362ed95b9f72508976aeef54b9c947fec7ad7
-Size (rex-bin_tools-0.1.12.gem) = 76288 bytes
+BLAKE2s (rex-bin_tools-0.1.15.gem) = 3be951551d4b395ce240beb6a611f5b94a87c35a8900cf613f8be3f26cceca41
+SHA512 (rex-bin_tools-0.1.15.gem) = a7ac2a9cb0ec830c621fffef71984105f759ca705c9bb66036240b9b4368e331208d44f3d3f52d5ced35e212e526ec9a6f87d6334c8a54db9a2ff4b5a9ff40c1
+Size (rex-bin_tools-0.1.15.gem) = 76288 bytes
