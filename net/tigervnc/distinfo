@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.31 2026/03/04 05:38:05 wiz Exp $
+$NetBSD: distinfo,v 1.32 2026/03/29 19:01:16 wiz Exp $
 
-BLAKE2s (tigervnc-1.16.0.tar.gz) = ddc858ff6653e37c8a2c493b2a67f9b52cf7604a3fce08fe5ff1bd01cb01ac94
-SHA512 (tigervnc-1.16.0.tar.gz) = 42dd3cf31836323e602f54504da99589396f6ffdd41ae55ab11470604f7733fa3d8baffcbbe673ef63f5831c0db1ae112475c1724a11bb2503fb0cf52e3f0422
-Size (tigervnc-1.16.0.tar.gz) = 2221043 bytes
+BLAKE2s (tigervnc-1.16.2.tar.gz) = 64874e33173a5024e1f7eb63a83097b1653d06a9f7c6cdebe465582cb43b1d66
+SHA512 (tigervnc-1.16.2.tar.gz) = acc2a380b3dc7237d9cc1500cd55cc9a6a295ef0aba21678f53d23673b44610717d3d462377ab32e9ea0f5ca9f4959335bf8645c442a8205a7ed62696de927cc
+Size (tigervnc-1.16.2.tar.gz) = 2222162 bytes
 BLAKE2s (xorg-server-1.20.13.tar.xz) = d5fd79e44b64fb79506673ab2a851b2bfad0ee5dd1bbb6477f645ca05237a9fc
 SHA512 (xorg-server-1.20.13.tar.xz) = 4e0b7bd4e070dc52cb2c51c2056feb133de2c0487d359392ed63abba9702910cd2e2983e9415973d8d6e9672eac78be6f39202687fc56610877914ce722554b3
 Size (xorg-server-1.20.13.tar.xz) = 5122260 bytes
