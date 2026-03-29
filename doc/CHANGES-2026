@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1973 2026/03/29 17:02:30 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1974 2026/03/29 17:05:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2963,3 +2963,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/powerdns to 5.0.3 [wiz 2026-03-29]
 	Updated graphics/gimp to 3.2.2 [wiz 2026-03-29]
 	Updated graphics/gegl to 0.4.70 [wiz 2026-03-29]
+	Updated textproc/jnv to 0.7.0 [wiz 2026-03-29]
