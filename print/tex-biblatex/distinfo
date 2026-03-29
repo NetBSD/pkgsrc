@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2024/03/25 10:51:15 markd Exp $
+$NetBSD: distinfo,v 1.19 2026/03/29 01:17:37 markd Exp $
 
-BLAKE2s (biblatex.r70725.tar.xz) = 6b22f9885164c07ccab8a4486b77d6a098fbfd00e63db4f8b4ccac8fa5e86cb5
-SHA512 (biblatex.r70725.tar.xz) = 850277bccb98ed6a8b9676dd7f5279c0ffe97b30277adfcf29b41edea12f79ccfa8789628f009c481f530160943198488a9d21b3c1e93ec86d2dfc40a212b9db
-Size (biblatex.r70725.tar.xz) = 256768 bytes
+BLAKE2s (biblatex.r77682.tar.xz) = 05204357e2fa7e9798636710ddcaade8d073f1b2e179496965948d525e71c3b7
+SHA512 (biblatex.r77682.tar.xz) = c2e448786f1c55adc1de1f6e98d45d158c17172e31ed1f7a8ef39093ad38aa149bb61262bc18e3818a689bd8254456aa5a04ee4e785c7afa7d25dc322ccba518
+Size (biblatex.r77682.tar.xz) = 258376 bytes
