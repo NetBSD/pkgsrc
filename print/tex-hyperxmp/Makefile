@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2025/05/08 10:56:42 markd Exp $
+# $NetBSD: Makefile,v 1.8 2026/03/29 11:03:39 markd Exp $
 
 DISTNAME=	hyperxmp
-PKGNAME=	tex-${DISTNAME}-5.13
-TEXLIVE_REV=	70694
+PKGNAME=	tex-${DISTNAME}-5.13.78281
+TEXLIVE_REV=	78281
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/hyperxmp
@@ -22,6 +22,7 @@ DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-intcalc-[0-9]*:../../print/tex-intcalc
 DEPENDS+=	tex-kvoptions-[0-9]*:../../print/tex-kvoptions
 DEPENDS+=	tex-luacode-[0-9]*:../../print/tex-luacode
+DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 DEPENDS+=	tex-pdfescape-[0-9]*:../../print/tex-pdfescape
 DEPENDS+=	tex-stringenc-[0-9]*:../../print/tex-stringenc
 DEPENDS+=	tex-totpages-[0-9]*:../../print/tex-totpages
