@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2025/05/10 00:15:52 markd Exp $
+# $NetBSD: Makefile,v 1.11 2026/03/29 03:38:20 markd Exp $
 
 DISTNAME=	fmtcount
-PKGNAME=	tex-${DISTNAME}-3.10
-TEXLIVE_REV=	73812
+PKGNAME=	tex-${DISTNAME}-3.12
+TEXLIVE_REV=	77682
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/fmtcount
