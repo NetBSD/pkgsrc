@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:13:27 nia Exp $
+$NetBSD: distinfo,v 1.10 2026/03/29 10:36:34 markd Exp $
 
-BLAKE2s (geometry.r54080.tar.xz) = b1b7edf14734bb23758493c5b54fe8f8088be703ba1c9adb9643115e2ed7cec7
-SHA512 (geometry.r54080.tar.xz) = ca5393e23639894401094084c3c2e30acf12491dcbd3968a4af79037b6dfb6b86f07acfec6886d89a261991cbdebdc846d9804f125aecd4cd77c3e71968bcfe4
-Size (geometry.r54080.tar.xz) = 8700 bytes
+BLAKE2s (geometry.r78315.tar.xz) = cef1ac4120364b76a282490cea36c7f00b0c5e0901bdbfa1d0a531f64018270d
+SHA512 (geometry.r78315.tar.xz) = 1c7120b50db68c40ae22b9cbd138189474c9c6e000742b65654097c0d9838aa23d81be3414fb621a7515d083e2d92f6b4d68e0f3a96c2073d10bf756482b6812
+Size (geometry.r78315.tar.xz) = 8744 bytes
