@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/04/08 06:14:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/03/29 01:19:47 markd Exp $
 share/texmf-dist/tex/latex/biblatex-apa/american-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/apa.bbx
 share/texmf-dist/tex/latex/biblatex-apa/apa.cbx
@@ -8,9 +8,11 @@ share/texmf-dist/tex/latex/biblatex-apa/austrian-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/brazilian-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/british-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/catalan-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/czech-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/danish-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/dutch-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/english-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/estonian-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/finnish-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/french-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/galician-apa.lbx
@@ -25,6 +27,7 @@ share/texmf-dist/tex/latex/biblatex-apa/norwegian-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/nswissgerman-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/nynorsk-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/portuguese-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/romanian-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/russian-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/slovene-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/spanish-apa.lbx
