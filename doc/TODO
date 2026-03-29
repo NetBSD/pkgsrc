@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27000 2026/03/29 16:55:33 wiz Exp $
+$NetBSD: TODO,v 1.27001 2026/03/29 16:59:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -672,7 +672,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gens-2.15.5
 	o gettext-1.0
 	o gfract-0.33
-	o gimp-3.2.2
 	o git-cinnabar-0.7.2
 	o gitea-1.24.3
 	o gjs-1.70.1
