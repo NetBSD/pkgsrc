@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1986 2026/03/29 17:41:06 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1987 2026/03/29 17:43:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2976,3 +2976,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-astroid to 4.1.2 [wiz 2026-03-29]
 	Updated audio/py-beets to 2.8.0 [wiz 2026-03-29]
 	Updated devel/py-googleapis-common-protos to 1.73.1 [wiz 2026-03-29]
+	Updated www/py-nh3 to 0.3.4 [wiz 2026-03-29]
