@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/03/21 17:03:44 taca Exp $
+# $NetBSD: Makefile,v 1.8 2026/03/29 13:45:34 taca Exp $
 
-DISTNAME=	http-form_data-2.3.0
+DISTNAME=	http-form_data-3.0.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
