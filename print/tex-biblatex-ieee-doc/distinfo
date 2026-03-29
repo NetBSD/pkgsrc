@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/05/09 22:50:00 markd Exp $
+$NetBSD: distinfo,v 1.12 2026/03/29 01:22:43 markd Exp $
 
-BLAKE2s (biblatex-ieee.doc.r74621.tar.xz) = 27dda14c5a07c5e2981c36033dc763fde6f981e7834225280665b1fc3e23f98e
-SHA512 (biblatex-ieee.doc.r74621.tar.xz) = b067f17c5316606672865f7555f531a24a14eabdc9da424a62c8c69802165deac212f4140a91542c21f3efd8968bc02658ec27a7b95ff816c8f1642184c1b554
-Size (biblatex-ieee.doc.r74621.tar.xz) = 574024 bytes
+BLAKE2s (biblatex-ieee.doc.r75952.tar.xz) = 197d3d2afb1093e27cfeecb0bb816427045a4d6aaa80b43def2e4f6f2884f4a6
+SHA512 (biblatex-ieee.doc.r75952.tar.xz) = 36f64a0f5e3c204123f86be466b8c3adcd82f966dcb834f1d789027b068d9cb5db1634a2ed262be16bfc0be287b5ee175709c22e33f03eda085339e752fea5c0
+Size (biblatex-ieee.doc.r75952.tar.xz) = 574240 bytes
