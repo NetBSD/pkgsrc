@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:13:26 nia Exp $
+$NetBSD: distinfo,v 1.4 2026/03/29 10:33:08 markd Exp $
 
-BLAKE2s (gckanbun.doc.r58754.tar.xz) = b542421004c9ead4b9c66fbb5fcd69cc58460881c3be13d149ec7e61c912200f
-SHA512 (gckanbun.doc.r58754.tar.xz) = 201dcf0ecf62b39ca8249f6fc9dcdaf1716c32102d0115924a37c4e0fb588af3d86130409c8f928a762a3a423273711136e9c2fe3fe33ad708a11d37a292b64f
-Size (gckanbun.doc.r58754.tar.xz) = 76744 bytes
+BLAKE2s (gckanbun.doc.r77307.tar.xz) = 0db3c84c28e7b79993a8822e68d58e9e82c796793cbc37dba2c31ac163d35f04
+SHA512 (gckanbun.doc.r77307.tar.xz) = b7626ac98089712bd22fa96c35cf12dd653d216967a9db2df745ab709934dd0e95d74eed97ee2650f0beaad7502667470d5170e9160779fc9fbb01966aadeec0
+Size (gckanbun.doc.r77307.tar.xz) = 379672 bytes
