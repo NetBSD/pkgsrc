@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2026/03/22 15:58:28 wiz Exp $
+$NetBSD: distinfo,v 1.19 2026/03/29 15:25:15 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -144,9 +144,9 @@ Size (darling_core-0.21.3.crate) = 74471 bytes
 BLAKE2s (darling_macro-0.21.3.crate) = e9a8a39740cb31c26264c3ee2276e4d65367cec4e67fd96e12d51930fc8d3e90
 SHA512 (darling_macro-0.21.3.crate) = 1931eb12cf86c6a66de874fc460ce086f7f970c7b45927057019f2a8c7fec66b3d5f6ed0b49412884c44d9c98515d71f41caa134f494f358923be1d00076553f
 Size (darling_macro-0.21.3.crate) = 2535 bytes
-BLAKE2s (delta-0.19.1.tar.gz) = 2f55bc3581271c2d2f515bec6b61f9b7e03d22969f81dd614267410a2e48f39d
-SHA512 (delta-0.19.1.tar.gz) = 9e322a5d886b597d59d15691dfd273be884c96631c0be1628db5d886e499d56b8809732c0b3663cb8ceedc66705436164af92c057f641e627f98626e7cd2deef
-Size (delta-0.19.1.tar.gz) = 543285 bytes
+BLAKE2s (delta-0.19.2.tar.gz) = e4b2e78e1e136a9c768589fa3245392229e0814f9855e4c376a24d2ccddd9680
+SHA512 (delta-0.19.2.tar.gz) = c965d6e4dcaa952798f02266533ca0f4fef8c5a6fbc186ce4c9764abe6c855b3ff7140a0681e88088726a02f0013fabff64376b7c24ced0e7689e386e2f22e1b
+Size (delta-0.19.2.tar.gz) = 544059 bytes
 BLAKE2s (deranged-0.3.11.crate) = bfcf1fcac8bda51a4bcfc279f6900ed06df16264aa68c75d3df95db7b83e3e1b
 SHA512 (deranged-0.3.11.crate) = 48485666d3e50eb7976e91bed36bddbaea80fac4ac664723130069bd7d17893b6d1a2b82a4c3dd61677162e4305ba5ea8aec7bc2793d1b8b92dd1666c204fc43
 Size (deranged-0.3.11.crate) = 18043 bytes

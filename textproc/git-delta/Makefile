@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2026/03/22 15:58:28 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/03/29 15:25:15 pin Exp $
 
-DISTNAME=	delta-0.19.1
+DISTNAME=	delta-0.19.2
 PKGNAME=	git-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dandavison/}
@@ -13,9 +13,9 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.79.0
+#RUST_REQ=	1.94.1
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.79.0 on amd64
+#This package is confirmed to build with Rust 1.94.1 on amd64
 
 INSTALLATION_DIRS+=	share/git-delta
 
