@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1943 2026/03/29 09:13:48 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1944 2026/03/29 09:16:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2878,3 +2878,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ruby-ruby_smb to 3.3.17 [taca 2026-03-29]
 	Updated security/ruby-bcrypt to 3.1.22 [taca 2026-03-29]
 	Updated devel/p5-Clone to 0.50 [wiz 2026-03-29]
+	Updated converters/p5-JSON to 4.11 [wiz 2026-03-29]
