@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2025/04/20 20:30:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/03/29 17:13:46 wiz Exp $
 bin/ikhal
 bin/khal
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -13,9 +13,6 @@ ${PYSITELIB}/khal/__init__.pyo
 ${PYSITELIB}/khal/__main__.py
 ${PYSITELIB}/khal/__main__.pyc
 ${PYSITELIB}/khal/__main__.pyo
-${PYSITELIB}/khal/_compat.py
-${PYSITELIB}/khal/_compat.pyc
-${PYSITELIB}/khal/_compat.pyo
 ${PYSITELIB}/khal/calendar_display.py
 ${PYSITELIB}/khal/calendar_display.pyc
 ${PYSITELIB}/khal/calendar_display.pyo

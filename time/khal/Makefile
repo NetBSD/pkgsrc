@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2026/01/06 11:18:19 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2026/03/29 17:13:46 wiz Exp $
 
-DISTNAME=	khal-0.13.0
+DISTNAME=	khal-0.14.0
 CATEGORIES=	time net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/khal/}
 
@@ -24,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-xdg>=0.17:../../devel/py-xdg
 DEPENDS+=	${PYPKGPREFIX}-setproctitle-[0-9]*:../../sysutils/py-setproctitle
 # for the man page
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-newsfeed-[0-9]*:../../textproc/py-sphinxcontrib-newsfeed
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinxfeed-lsaffre-[0-9]*:../../textproc/py-sphinxfeed-lsaffre
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
