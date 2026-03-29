@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/02/11 07:53:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/03/29 13:57:44 taca Exp $
 bin/redmine61_generate_secret_token${RUBY_SUFFIX}.sh
 bin/redmine61_load_default_data${RUBY_SUFFIX}.sh
 bin/redmine61_migrate_db${RUBY_SUFFIX}.sh
@@ -42,6 +42,7 @@ ${RM_DIR}/app/assets/images/calendar.png
 ${RM_DIR}/app/assets/images/cancel.png
 ${RM_DIR}/app/assets/images/changeset.png
 ${RM_DIR}/app/assets/images/chevron-down.svg
+${RM_DIR}/app/assets/images/chevron-left-idnt.svg
 ${RM_DIR}/app/assets/images/chevron-right-idnt.svg
 ${RM_DIR}/app/assets/images/close.png
 ${RM_DIR}/app/assets/images/close_hl.png
@@ -2043,6 +2044,7 @@ ${RM_DIR}/test/system/list_autofill_test.rb
 ${RM_DIR}/test/system/messages_test.rb
 ${RM_DIR}/test/system/my_page_test.rb
 ${RM_DIR}/test/system/oauth_provider_test.rb
+${RM_DIR}/test/system/query_test.rb
 ${RM_DIR}/test/system/quick_jump_test.rb
 ${RM_DIR}/test/system/reactions_test.rb
 ${RM_DIR}/test/system/repositories_test.rb
