@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2026/03/25 08:07:12 kikadf Exp $
+$NetBSD: distinfo,v 1.36 2026/03/29 19:18:49 tnn Exp $
 
 BLAKE2s (Inflector-0.11.4.crate) = 2f8b4a805230be3b58267c7fb6b9c26c2ec966378d195673d1128a851cca515d
 SHA512 (Inflector-0.11.4.crate) = f1f6463e033b6d3c16c51dc1e1a3f5569954308b95b59058294b7f9310919bbda797e99e6a07529071bb83f0688867a243997d33795a7136b0af73977004296e
@@ -1746,6 +1746,8 @@ SHA1 (patch-third__party_blink_renderer_platform_widget_compositing_blink__categ
 SHA1 (patch-third__party_blink_renderer_platform_wtf_container__annotations.h) = 8b2af34eab32ea4a575ed05ad4ba5e645a69a62d
 SHA1 (patch-third__party_blink_renderer_platform_wtf_math__extras.h) = 374a8c5409c0df333fd1919e7d838b7e3dcb26d8
 SHA1 (patch-third__party_blink_renderer_platform_wtf_stack__util.cc) = ec569cc6ee0438b99b4cd6879565d8f6325c31bc
+SHA1 (patch-third__party_boringssl_src_crypto_cpu__aarch64__openbsd.cc) = 069c4d4de357fc02cb5bdd813ab11eab54d3ce38
+SHA1 (patch-third__party_boringssl_src_include_openssl_target.h) = 2e0d758f07c46f718ad0502b63fbac179aa4b822
 SHA1 (patch-third__party_brotli_common_platform.h) = 2a5402ccbd5f293f16f7ac13b0efc737eb805856
 SHA1 (patch-third__party_cpuinfo_cpuinfo.gni) = 19fc26b0d9aad5b6c6cde4178fecad7d01b113b1
 SHA1 (patch-third__party_crabbyavif_BUILD.gn) = 84d270468134419f80d2e5c7df814c24d10b3b2a
@@ -1873,7 +1875,7 @@ SHA1 (patch-third__party_webrtc_modules_desktop__capture_linux_x11_x__server__pi
 SHA1 (patch-third__party_webrtc_modules_portal_pipewire__utils.h) = 91c92067503c4bba89c2d9a1ab7f41f9441fee1f
 SHA1 (patch-third__party_webrtc_modules_video__coding_codecs_av1_libaom__av1__encoder.cc) = b1362a6b41ed259b9487f025c1bec6f9ee2e3961
 SHA1 (patch-third__party_webrtc_rtc__base_byte__order.h) = 9efcac94b0fc46a832a4bf66a89beda4d520587e
-SHA1 (patch-third__party_webrtc_rtc__base_cpu__info.cc) = 7572da337a55267fc380fd0f39a876e4f5bb9ac8
+SHA1 (patch-third__party_webrtc_rtc__base_cpu__info.cc) = ffe9e707ad08426bfb7c2271848fd61c203baa02
 SHA1 (patch-third__party_webrtc_rtc__base_ip__address.cc) = f41bca32c967d4523ea4675f48e96219dcc708a1
 SHA1 (patch-third__party_webrtc_rtc__base_net__helpers.cc) = 0ff389dbd207a81566635eaca25d2658be087678
 SHA1 (patch-third__party_webrtc_rtc__base_network.cc) = 4bed6079f52fc6774a8599eef4c918395f1b4660
@@ -1881,8 +1883,8 @@ SHA1 (patch-third__party_webrtc_rtc__base_physical__socket__server.cc) = 99214b1
 SHA1 (patch-third__party_webrtc_rtc__base_physical__socket__server.h) = 5481cd559ac921472721f6f11958640a4150f0ec
 SHA1 (patch-third__party_webrtc_rtc__base_platform__thread__types.cc) = 72763b7bd7f52fcdc2136a993b7ef041b414c728
 SHA1 (patch-third__party_widevine_cdm_widevine.gni) = 7d9af4b55d8d048ba38ac3fba93ea40e722e9b81
-SHA1 (patch-third__party_zlib_BUILD.gn) = 8226a19604e1d0f9c2820d6469e52fc468dfdb52
-SHA1 (patch-third__party_zlib_cpu__features.c) = bc08eb27e4dec589f9e471f7ac0b3eec63c4fb90
+SHA1 (patch-third__party_zlib_BUILD.gn) = e8e7b8263e52161aa02d4be3e8cc936f06f261f5
+SHA1 (patch-third__party_zlib_cpu__features.c) = 39c414766d93aa0aca20ab91d9b982c2f856d092
 SHA1 (patch-tools_code__cache__generator_BUILD.gn) = 4fe8df5ab270e836c08d185f47c9392662f3e7f1
 SHA1 (patch-tools_generate__shim__headers_generate__shim__headers.py) = 158734dc4a587751272b12b35a390aca244bc414
 SHA1 (patch-tools_generate__stubs_rules.gni) = 6cf1dbfefccc5a86f6d22b3d92c3aa56d06db329
