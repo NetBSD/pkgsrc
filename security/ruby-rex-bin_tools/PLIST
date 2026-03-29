@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/11 13:42:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/03/29 13:17:19 taca Exp $
 bin/msfbinscan${RUBY_SUFFIX}
 bin/msfelfscan${RUBY_SUFFIX}
 bin/msfmachscan${RUBY_SUFFIX}
 bin/msfpescan${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/workflows/verify.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.travis.yml
