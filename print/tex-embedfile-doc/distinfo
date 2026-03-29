@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/04/01 10:51:30 markd Exp $
+$NetBSD: distinfo,v 1.5 2026/03/29 03:10:26 markd Exp $
 
-BLAKE2s (embedfile.doc.r65528.tar.xz) = 82b4652b70524fd71ff4727a835bfe1ac2a4be17aa63b39cf4396f7a423159a7
-SHA512 (embedfile.doc.r65528.tar.xz) = bb2e63963298b2c3a35c71b83eecd6464c7e4841e1098177ee78e56d15e072a88e6c58964e9292d70d495cce513b46d7b542d30574a41f4d0643df1f3b6842fd
-Size (embedfile.doc.r65528.tar.xz) = 407664 bytes
+BLAKE2s (embedfile.doc.r77682.tar.xz) = d97d521aba714e52518ba22e3b9ca2226827b1dc8ef9eec5c632a910a3695f19
+SHA512 (embedfile.doc.r77682.tar.xz) = e1e163b2d98d8b3fd07461afe544dbdf12adff66ddec61bbc1000880e587018fbc533e6cd91c99ac4e5fe14b5de55e5520b565b2d3eeffc567f64dfb4b9f906e
+Size (embedfile.doc.r77682.tar.xz) = 407292 bytes
