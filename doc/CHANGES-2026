@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1964 2026/03/29 13:59:44 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1965 2026/03/29 14:06:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2927,3 +2927,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed archivers/ruby-zlib [taca 2026-03-29]
 	Updated devel/ruby-redmine61 to 6.1.2 [taca 2026-03-29]
 	Updated devel/ruby-redmine60 to 6.0.9 [taca 2026-03-29]
+	Updated devel/ruby-redmine51 to 5.1.12 [taca 2026-03-29]
