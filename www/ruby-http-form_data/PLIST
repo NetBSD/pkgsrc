@@ -1,18 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2020/03/21 17:03:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/03/29 13:45:34 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.editorconfig
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.rspec
-${GEM_LIBDIR}/.rubocop.yml
-${GEM_LIBDIR}/.travis.yml
-${GEM_LIBDIR}/.yardopts
-${GEM_LIBDIR}/CHANGES.md
-${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Guardfile
+${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/appveyor.yml
 ${GEM_LIBDIR}/http-form_data.gemspec
 ${GEM_LIBDIR}/lib/http/form_data.rb
 ${GEM_LIBDIR}/lib/http/form_data/composite_io.rb
@@ -23,14 +13,13 @@ ${GEM_LIBDIR}/lib/http/form_data/part.rb
 ${GEM_LIBDIR}/lib/http/form_data/readable.rb
 ${GEM_LIBDIR}/lib/http/form_data/urlencoded.rb
 ${GEM_LIBDIR}/lib/http/form_data/version.rb
-${GEM_LIBDIR}/spec/fixtures/expected-multipart-body.tpl
-${GEM_LIBDIR}/spec/fixtures/the-http-gem.info
-${GEM_LIBDIR}/spec/lib/http/form_data/composite_io_spec.rb
-${GEM_LIBDIR}/spec/lib/http/form_data/file_spec.rb
-${GEM_LIBDIR}/spec/lib/http/form_data/multipart_spec.rb
-${GEM_LIBDIR}/spec/lib/http/form_data/part_spec.rb
-${GEM_LIBDIR}/spec/lib/http/form_data/urlencoded_spec.rb
-${GEM_LIBDIR}/spec/lib/http/form_data_spec.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/support/fixtures_helper.rb
+${GEM_LIBDIR}/sig/http/form_data.rbs
+${GEM_LIBDIR}/sig/http/form_data/composite_io.rbs
+${GEM_LIBDIR}/sig/http/form_data/file.rbs
+${GEM_LIBDIR}/sig/http/form_data/multipart.rbs
+${GEM_LIBDIR}/sig/http/form_data/multipart/param.rbs
+${GEM_LIBDIR}/sig/http/form_data/part.rbs
+${GEM_LIBDIR}/sig/http/form_data/readable.rbs
+${GEM_LIBDIR}/sig/http/form_data/urlencoded.rbs
+${GEM_LIBDIR}/sig/http/form_data/version.rbs
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
