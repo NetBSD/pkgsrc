@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/05/10 00:15:52 markd Exp $
+$NetBSD: distinfo,v 1.12 2026/03/29 03:38:20 markd Exp $
 
-BLAKE2s (fmtcount.doc.r73812.tar.xz) = ab920218ce289ef77be77f65f7a00959280411e8e5c4e86e5e51e64c304ac8cf
-SHA512 (fmtcount.doc.r73812.tar.xz) = 0dea5dfb1271d229cff60e2c7f7e49ff826d4bb379bb8434ae8823e527886e9bb2bb32710d22a9c03e64322b46e795102fd80966182063de61495d4763705ccc
-Size (fmtcount.doc.r73812.tar.xz) = 621824 bytes
+BLAKE2s (fmtcount.doc.r77682.tar.xz) = c597d7131b5cf0fad1c0d7605d54dcc975848ea31069f2d37bf00c6ff5e1d3e5
+SHA512 (fmtcount.doc.r77682.tar.xz) = 05752f37111971b768f7e967f63d01b394cf169f629b9e05e5495280ef0e25d7a435383960c7af4d94ced24f3e3f6205ca3f6a468a08c7b5f92f8bc67d7482f9
+Size (fmtcount.doc.r77682.tar.xz) = 607940 bytes
