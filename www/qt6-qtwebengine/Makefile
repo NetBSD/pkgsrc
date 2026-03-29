@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2026/03/29 16:43:50 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2026/03/29 16:54:28 tnn Exp $
 
 DISTNAME=	qtwebengine-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtwebengine-${QTVERSION}
@@ -68,7 +68,6 @@ CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_audioio=ON
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
 CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_sndio=ON
 .endif
-CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_pulseaudio=ON
 
 CONFIGURE_ENV+=			NINJAFLAGS=-j${_MAKE_JOBS_N:U1}
 
@@ -104,6 +103,8 @@ SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE PYTHONBIN EXTRA_C
 
 NOT_PAX_MPROTECT_SAFE+=	qt6/libexec/QtWebEngineProcess
 
+.include "options.mk"
+
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ninja -j ${_MAKE_JOBS_N:U1} ${BUILD_TARGET}
 
@@ -115,7 +116,6 @@ do-install:
 .include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 .include "../../audio/libopus/buildlink3.mk"
-.include "../../audio/pulseaudio/buildlink3.mk"
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
