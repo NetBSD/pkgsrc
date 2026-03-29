@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.752 2026/03/19 22:05:29 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.753 2026/03/29 12:21:48 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30301,3 +30301,11 @@ wolfssl<5.9.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-3548
 wolfssl<5.9.0	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2026-3579
 wolfssl<5.9.0	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2026-3580
 xpdf<4.0.7	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-4407
+GMT-[0-9]*		stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2026-33147
+ImageMagick<7.1.2.18	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-33535
+ImageMagick6<6.9.13.43	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-33535
+ImageMagick<7.1.2.18	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-33536
+ImageMagick6<6.9.13.43	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2026-33536
+SOGo<5.12.5		cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-71276
+SOGo<5.12.5		security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2026-33550
+awstats-[0-9]*		command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-63261
