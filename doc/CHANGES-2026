@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1947 2026/03/29 11:04:31 markd Exp $
+$NetBSD: CHANGES-2026,v 1.1948 2026/03/29 13:08:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2903,3 +2903,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/tex-hyperref-doc to 7.01p [markd 2026-03-29]
 	Updated print/tex-hyperxmp to 5.13.78281 [markd 2026-03-29]
 	Updated print/tex-hyperxmp-doc to 5.13.78281 [markd 2026-03-29]
+	Updated security/ruby-metasploit-payloads to 2.0.244 [taca 2026-03-29]
