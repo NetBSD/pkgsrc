@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2026/03/09 16:52:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2026/03/29 17:39:58 wiz Exp $
 bin/beet-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -158,12 +158,18 @@ ${PYSITELIB}/beets/util/artresizer.pyo
 ${PYSITELIB}/beets/util/bluelet.py
 ${PYSITELIB}/beets/util/bluelet.pyc
 ${PYSITELIB}/beets/util/bluelet.pyo
+${PYSITELIB}/beets/util/color.py
+${PYSITELIB}/beets/util/color.pyc
+${PYSITELIB}/beets/util/color.pyo
 ${PYSITELIB}/beets/util/config.py
 ${PYSITELIB}/beets/util/config.pyc
 ${PYSITELIB}/beets/util/config.pyo
 ${PYSITELIB}/beets/util/deprecation.py
 ${PYSITELIB}/beets/util/deprecation.pyc
 ${PYSITELIB}/beets/util/deprecation.pyo
+${PYSITELIB}/beets/util/diff.py
+${PYSITELIB}/beets/util/diff.pyc
+${PYSITELIB}/beets/util/diff.pyo
 ${PYSITELIB}/beets/util/functemplate.py
 ${PYSITELIB}/beets/util/functemplate.pyc
 ${PYSITELIB}/beets/util/functemplate.pyo
@@ -173,6 +179,9 @@ ${PYSITELIB}/beets/util/hidden.pyo
 ${PYSITELIB}/beets/util/id_extractors.py
 ${PYSITELIB}/beets/util/id_extractors.pyc
 ${PYSITELIB}/beets/util/id_extractors.pyo
+${PYSITELIB}/beets/util/layout.py
+${PYSITELIB}/beets/util/layout.pyc
+${PYSITELIB}/beets/util/layout.pyo
 ${PYSITELIB}/beets/util/lyrics.py
 ${PYSITELIB}/beets/util/lyrics.pyc
 ${PYSITELIB}/beets/util/lyrics.pyo
@@ -335,6 +344,9 @@ ${PYSITELIB}/beetsplug/kodiupdate.pyo
 ${PYSITELIB}/beetsplug/lastgenre/__init__.py
 ${PYSITELIB}/beetsplug/lastgenre/__init__.pyc
 ${PYSITELIB}/beetsplug/lastgenre/__init__.pyo
+${PYSITELIB}/beetsplug/lastgenre/client.py
+${PYSITELIB}/beetsplug/lastgenre/client.pyc
+${PYSITELIB}/beetsplug/lastgenre/client.pyo
 ${PYSITELIB}/beetsplug/lastgenre/genres-tree.yaml
 ${PYSITELIB}/beetsplug/lastgenre/genres.txt
 ${PYSITELIB}/beetsplug/lastimport.py
