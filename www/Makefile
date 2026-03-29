@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1910 2026/03/07 11:52:41 nia Exp $
+# $NetBSD: Makefile,v 1.1911 2026/03/29 13:38:12 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1074,6 +1074,7 @@ SUBDIR+=	ruby-jekyll-watch
 SUBDIR+=	ruby-jquery-rails
 SUBDIR+=	ruby-jsmin
 SUBDIR+=	ruby-liquid
+SUBDIR+=	ruby-llhttp
 SUBDIR+=	ruby-llhttp-ffi
 SUBDIR+=	ruby-loofah
 SUBDIR+=	ruby-mechanize
