@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1936 2026/03/29 03:53:20 markd Exp $
+$NetBSD: CHANGES-2026,v 1.1937 2026/03/29 07:03:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2871,3 +2871,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/tex-fragoli-doc to 1.2.3 [markd 2026-03-29]
 	Updated print/tex-fvextra to 1.14.0 [markd 2026-03-29]
 	Updated print/tex-fvextra-doc to 1.14.0 [markd 2026-03-29]
+	Updated devel/ruby-ffi to 1.17.4 [taca 2026-03-29]
