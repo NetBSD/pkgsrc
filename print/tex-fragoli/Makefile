@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/05/13 10:09:33 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/03/29 03:48:24 markd Exp $
 
 DISTNAME=	fragoli
-PKGNAME=	tex-${DISTNAME}-1.1.1
-TEXLIVE_REV=	74788
+PKGNAME=	tex-${DISTNAME}-1.2.3
+TEXLIVE_REV=	76924
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/fragoli
@@ -23,6 +23,7 @@ DEPENDS+=	tex-ulem-[0-9]*:../../print/tex-ulem
 DEPENDS+=	tex-units-[0-9]*:../../print/tex-units
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
 DEPENDS+=	tex-xstring-[0-9]*:../../print/tex-xstring
+DEPENDS+=	tex-varwidth-[0-9]*:../../print/tex-varwidth
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
