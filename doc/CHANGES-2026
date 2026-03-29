@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1979 2026/03/29 17:21:45 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1980 2026/03/29 17:24:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2969,3 +2969,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/tree-sitter-heex to 0.9.0 [wiz 2026-03-29]
 	Updated textproc/tree-sitter-rust to 0.24.2 [wiz 2026-03-29]
 	Updated misc/py-installer to 1.0.0 [wiz 2026-03-29]
+	Updated graphics/libjpeg-turbo to 3.1.4.1 [wiz 2026-03-29]
