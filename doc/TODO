@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26995 2026/03/28 22:55:22 wiz Exp $
+$NetBSD: TODO,v 1.26996 2026/03/29 09:13:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -500,7 +500,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cacti-spine-1.2.30
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-9.3.1
+	o calibre-9.6
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
 	o canna-3.7p5
