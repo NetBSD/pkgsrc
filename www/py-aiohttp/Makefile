@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.103 2026/01/05 01:36:08 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2026/03/29 17:37:00 wiz Exp $
 
-DISTNAME=	aiohttp-3.13.3
+DISTNAME=	aiohttp-3.13.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp/}
@@ -35,8 +35,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 # need to package: proxy (!?)
-# as of 3.13.3
-# 8 failed, 3632 passed, 77 skipped, 8 xfailed, 42 errors, 2 subtests passed
+# as of 3.13.4
+# 8 failed, 3711 passed, 77 skipped, 8 xfailed, 42 errors, 2 subtests passed
 pre-test:
 	cd ${WRKSRC} && ${RM} -f tests/test_proxy_functional.py tests/autobahn/test_autobahn.py
 
