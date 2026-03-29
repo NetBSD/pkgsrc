@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/05/07 20:25:59 markd Exp $
+$NetBSD: distinfo,v 1.14 2026/03/29 10:47:53 markd Exp $
 
-BLAKE2s (graphics-def.doc.r70970.tar.xz) = 0e6fc28a9ead6fec3a2fe04971685e3684173b9566fd55c434be1d6785128a77
-SHA512 (graphics-def.doc.r70970.tar.xz) = 71137ab8417be762cfebe388fc0ec5fcccf6283c24045648b65a4aa66ea73791cadda023f470b7c626a66a183e38257c265008a8ab43e5c2d3acf632a9630520
-Size (graphics-def.doc.r70970.tar.xz) = 604 bytes
+BLAKE2s (graphics-def.doc.r76719.tar.xz) = b3b6cf116c8c663f65bb891320aed4a23bf6fff8ba14dbd66e8ecd531b855b50
+SHA512 (graphics-def.doc.r76719.tar.xz) = 3d63e17a5899452abda47a1dbf19630100384eacec9f7bbda564f10c49e3a93fe3fa59b6256df96704cbddcb7361c1a2887706c26e1167abacfe30c5e8ea6bf3
+Size (graphics-def.doc.r76719.tar.xz) = 604 bytes
