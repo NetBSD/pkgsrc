@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:13:22 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/03/29 03:35:09 markd Exp $
 
-BLAKE2s (tex-flowfram-35291/flowfram.doc.tar.xz) = 9363a52ad1151d43e911499100e8308c951a998b9f0108dd0b79588b36d5927f
-SHA512 (tex-flowfram-35291/flowfram.doc.tar.xz) = 57aa3b23f43fb279bbe5e5336ccd377482784564351bea87a385c9d1b0b3316377b40fc603aedb51f0a4cfcc564fdf6bd5c6835d8d7b47e7412b57fcca2dd2c0
-Size (tex-flowfram-35291/flowfram.doc.tar.xz) = 1763760 bytes
+BLAKE2s (flowfram.doc.r78101.tar.xz) = 314bf67ed223d2fe1894390cbf942b5f038e79ef7b7dd8785f03578c08778850
+SHA512 (flowfram.doc.r78101.tar.xz) = 0067f88f712e795abec32efb288aa0a35dbcd5ba9f97e94ae83b2ab58c5992e457e0f71e91690178ab2e31311ea02be4b27d2123d243b421389b3b655bf93a3a
+Size (flowfram.doc.r78101.tar.xz) = 4755368 bytes
