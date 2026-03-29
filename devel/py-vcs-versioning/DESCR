@@ -1,0 +1,2 @@
+Core VCS versioning functionality extracted as a standalone library
+that can be used independently of setuptools.
