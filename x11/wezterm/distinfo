@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2025/03/08 10:05:54 wiz Exp $
+$NetBSD: distinfo,v 1.5 2026/03/29 09:10:55 wiz Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -963,9 +963,9 @@ Size (memoffset-0.9.1.crate) = 9032 bytes
 BLAKE2s (metal-0.31.0.crate) = 1d3f034621b5751a69e4902fb0460df5d9d239667d8d1a702082edd3b6060ce6
 SHA512 (metal-0.31.0.crate) = afbc5af8d0f8f2d5476dffd4dd1865a3a938d79f2d55c20cf36ca740f81a11dc8dcb2e74551b0d9290fbb668516bf70f3a5b414e9f2a1ba5703abd041a267740
 Size (metal-0.31.0.crate) = 3034257 bytes
-BLAKE2s (metrics-0.23.0.crate) = 518bf29ffaba1cf363cf550df47f4edd56eede094fa1fa05ca829028ca3329c8
-SHA512 (metrics-0.23.0.crate) = 77fa47383bf390cd8a66abda9a2492ea39831070744ebcbc048e8312523c1feca5e9a671352040efb7352fb4a55b8d7a44591224a6b12c6f66c456cf2ac85635
-Size (metrics-0.23.0.crate) = 44598 bytes
+BLAKE2s (metrics-0.23.1.crate) = 5c2f3c71e13678734651e4c9974b8cd1eae2ebd9695a748766be9a0c36b838a6
+SHA512 (metrics-0.23.1.crate) = cc22137a6e81ef98eb8353d0c1b048f5132b375c4cf6ff2541cd07d2b570f18713f0429b471be5b5271c01ad93c1fbd33b841419aa4644208999c4835c986e42
+Size (metrics-0.23.1.crate) = 46552 bytes
 BLAKE2s (mime-0.3.17.crate) = e23a88b0ed8165afbdd7f3e448484d032c04a1a5e037fef76bd679a2a55ecc36
 SHA512 (mime-0.3.17.crate) = e6d2ca92bb58fc747c1bb65a7f9023e5dbf4b94966003a72e4913bcaaeccdd6752725cdbd5081e0fd69d9e8f364d79664fcbe70061737d5c39e5b3e3a154a0d1
 Size (mime-0.3.17.crate) = 15712 bytes
@@ -2097,4 +2097,5 @@ Size (zvariant_derive-4.2.0.crate) = 11057 bytes
 BLAKE2s (zvariant_utils-2.1.0.crate) = b142d63425365aedf109bafac551bf52a32897836b938d4835a415a0444db92c
 SHA512 (zvariant_utils-2.1.0.crate) = 345b70d1106b37df41426efdb1ba49bf270e00898381c2a8021b5761c59efdea55def45cb2e2598b130b6cba8733503f3997a55578bca90867ab3e8f2346f80e
 Size (zvariant_utils-2.1.0.crate) = 7043 bytes
-SHA1 (patch-Cargo.toml) = 5bb7fa0fc153bee64ebc952cf1959ca393ffaa94
+SHA1 (patch-Cargo.lock) = 3c8ee3cea948565cad50afa792c4e48f01af6dc0
+SHA1 (patch-Cargo.toml) = 0fab0bf4380c5f66da2258f7bd8d110797fa0fa9
