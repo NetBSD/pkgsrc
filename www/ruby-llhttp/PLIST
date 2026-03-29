@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2026/03/29 13:37:32 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
+${GEM_EXTSDIR}/llhttp_ext.${RUBY_DLEXT}
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/ext/llhttp/api.c
+${GEM_LIBDIR}/ext/llhttp/extconf.rb
+${GEM_LIBDIR}/ext/llhttp/http.c
+${GEM_LIBDIR}/ext/llhttp/llhttp.c
+${GEM_LIBDIR}/ext/llhttp/llhttp.h
+${GEM_LIBDIR}/ext/llhttp/llhttp_ext.c
+${GEM_LIBDIR}/lib/llhttp.rb
+${GEM_LIBDIR}/lib/llhttp/delegate.rb
+${GEM_LIBDIR}/lib/llhttp/error.rb
+${GEM_LIBDIR}/lib/llhttp/parser.rb
+${GEM_LIBDIR}/lib/llhttp/version.rb
+${GEM_LIBDIR}/lib/llhttp_ext.${RUBY_DLEXT}
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
