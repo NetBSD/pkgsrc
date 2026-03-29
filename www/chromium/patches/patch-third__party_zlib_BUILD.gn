@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_zlib_BUILD.gn,v 1.16 2026/03/14 12:40:43 kikadf Exp $
+$NetBSD: patch-third__party_zlib_BUILD.gn,v 1.17 2026/03/29 19:18:49 tnn Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/zlib/BUILD.gn.orig	2026-03-11 22:12:25.000000000 +0000
+--- third_party/zlib/BUILD.gn.orig	2026-03-20 23:29:56.000000000 +0000
 +++ third_party/zlib/BUILD.gn
 @@ -123,7 +123,7 @@ if (use_arm_neon_optimizations) {
      defines = [ "CRC32_ARMV8_CRC32" ]
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_zlib_BUILD.gn,v 1.16 2026/03/14 12:40:43 kikadf Exp 
        defines += [ "ARMV8_OS_LINUX" ]
      } else if (is_mac) {
        defines += [ "ARMV8_OS_MACOS" ]
-@@ -133,6 +133,10 @@ if (use_arm_neon_optimizations) {
+@@ -133,6 +133,12 @@ if (use_arm_neon_optimizations) {
        defines += [ "ARMV8_OS_FUCHSIA" ]
      } else if (is_win) {
        defines += [ "ARMV8_OS_WINDOWS" ]
@@ -23,10 +23,12 @@ $NetBSD: patch-third__party_zlib_BUILD.gn,v 1.16 2026/03/14 12:40:43 kikadf Exp 
 +      defines += [ "ARMV8_OS_OPENBSD" ]
 +    } else if (is_freebsd) {
 +      defines += [ "ARMV8_OS_FREEBSD" ]
++    } else if (is_netbsd) {
++      defines += [ "ARMV8_OS_NETBSD" ]
      } else {
        assert(false, "Unsupported ARM OS")
      }
-@@ -414,7 +418,7 @@ static_library("minizip") {
+@@ -414,7 +420,7 @@ static_library("minizip") {
      ]
    }
  
