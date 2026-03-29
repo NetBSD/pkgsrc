@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/08/19 20:09:27 wiz Exp $
+$NetBSD: distinfo,v 1.2 2026/03/29 10:55:32 markd Exp $
 
-BLAKE2s (hvarabic.r59423.tar.xz) = c809e2ba920ab8ae553a9df217162c4eba5305b3c980905b4d4db4b3159ed0ad
-SHA512 (hvarabic.r59423.tar.xz) = 2f9af35f3e3ebf6d90ed05a77fcd6d6c079d3a476c26e0704e6f6b74899badc3eb0cc79d37f5f9e8b6a2846edb869bf57fc5b4bf14e834629d126bc71b77e42a
-Size (hvarabic.r59423.tar.xz) = 1468 bytes
+BLAKE2s (hvarabic.r76924.tar.xz) = efd2f3704c9e2a49d42011461544c7935ab462882d9c7542214694600d0b1c26
+SHA512 (hvarabic.r76924.tar.xz) = fb04b9031c4eaf25457bc04146bbe2f7db103d8fcb4a62eebee46ba7b75aed694104b4e5334485e03d05dee793d1aadc067e26d8de1390e7ea2053753415c0be
+Size (hvarabic.r76924.tar.xz) = 1472 bytes
