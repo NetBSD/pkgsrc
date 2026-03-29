@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1941 2026/03/29 07:32:44 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1942 2026/03/29 07:38:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2876,3 +2876,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ruby-rdtool to 0.6.39 [taca 2026-03-29]
 	Updated mail/ruby-mime-types-data to 3.2026.0317 [taca 2026-03-29]
 	Updated net/ruby-ruby_smb to 3.3.17 [taca 2026-03-29]
+	Updated security/ruby-bcrypt to 3.1.22 [taca 2026-03-29]
