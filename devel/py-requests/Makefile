@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2025/08/19 05:27:37 adam Exp $
+# $NetBSD: Makefile,v 1.69 2026/03/29 18:34:21 wiz Exp $
 
-DISTNAME=	requests-2.32.5
+DISTNAME=	requests-2.33.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests/}
@@ -25,12 +25,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-trustme-[0-9]*:../../security/py-trustme
 USE_LANGUAGES=		# none
 REPLACE_PYTHON+=	requests/certs.py
 
-# as of 2.32.4
-# with default settings (no network access):
-# 143 failed, 452 passed, 15 skipped, 1 xfailed, 14 warnings
-# for testing:
-#ALLOW_NETWORK_ACCESS=	yes
-# 595 passed, 15 skipped, 1 xpassed, 18 warnings
+.if make(test)
+ALLOW_NETWORK_ACCESS=	yes
+.endif
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
