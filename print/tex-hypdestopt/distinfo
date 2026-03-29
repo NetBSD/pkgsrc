@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/05/08 11:10:21 markd Exp $
+$NetBSD: distinfo,v 1.5 2026/03/29 10:57:48 markd Exp $
 
-BLAKE2s (hypdestopt.r71991.tar.xz) = 300c8005e039dad7cad19d5b5c6afe769159650bdc0886faa5aa3cfdd8d16ed2
-SHA512 (hypdestopt.r71991.tar.xz) = d5b72ac28b8771b35e83beb13761a91722925547dc503ea3822737384a3f0adf62c13ed8e8ae0045d60ba9231bf51c32a638c7c6d7081f712c05abcdb1d3f0eb
-Size (hypdestopt.r71991.tar.xz) = 2852 bytes
+BLAKE2s (hypdestopt.r77682.tar.xz) = 65f858febfae4658c52e2d0a75d2546d362e8001c978b4224c79e5684f8c1b4c
+SHA512 (hypdestopt.r77682.tar.xz) = 0b5bbd9555f7e2cf50360092269e61bdeb51b9590b88d6a9733164c7d0dc3797468a5ad9460f9583f3534efe59c94fa37e7abd08e9c68f11048aaa6bc96ecbf9
+Size (hypdestopt.r77682.tar.xz) = 2864 bytes
