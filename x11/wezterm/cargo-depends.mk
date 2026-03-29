@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2025/03/08 10:05:54 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2026/03/29 09:10:55 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -316,7 +316,7 @@ CARGO_CRATE_DEPENDS+=	memmap2-0.9.5
 CARGO_CRATE_DEPENDS+=	memmem-0.1.1
 CARGO_CRATE_DEPENDS+=	memoffset-0.9.1
 CARGO_CRATE_DEPENDS+=	metal-0.31.0
-CARGO_CRATE_DEPENDS+=	metrics-0.23.0
+CARGO_CRATE_DEPENDS+=	metrics-0.23.1
 CARGO_CRATE_DEPENDS+=	mime-0.3.17
 CARGO_CRATE_DEPENDS+=	minimal-lexical-0.2.1
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.7.4
