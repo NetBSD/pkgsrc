@@ -1,30 +1,44 @@
-$NetBSD: patch-third__party_webrtc_rtc__base_cpu__info.cc,v 1.12 2026/03/14 12:40:43 kikadf Exp $
+$NetBSD: patch-third__party_webrtc_rtc__base_cpu__info.cc,v 1.13 2026/03/29 19:18:49 tnn Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/rtc_base/cpu_info.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- third_party/webrtc/rtc_base/cpu_info.cc.orig	2026-03-20 23:29:56.000000000 +0000
 +++ third_party/webrtc/rtc_base/cpu_info.cc
-@@ -37,7 +37,9 @@
+@@ -37,9 +37,13 @@
  #include <intrin.h>
  #endif
  #if defined(WEBRTC_ARCH_ARM_FAMILY) && defined(WEBRTC_LINUX)
 +#if !defined(WEBRTC_BSD)
  #include <asm/hwcap.h>
 +#endif
++#if !defined(__NetBSD__)
  #include <sys/auxv.h>
  #endif
++#endif
  
-@@ -178,7 +180,11 @@ bool Supports(ISA instruction_set_archit
+ // Parts of this file derived from Chromium's base/cpu.cc.
+ 
+@@ -178,11 +182,21 @@ bool Supports(ISA instruction_set_architecture) {
      return 0 != (android_getCpuFeatures() & ANDROID_CPU_ARM_FEATURE_NEON);
  #elif defined(WEBRTC_LINUX)
      uint64_t hwcap = 0;
-+#if defined(WEBRTC_BSD)
++#if defined(WEBRTC_BSD) && defined(__NetBSD__)
++    hwcap = 0;
++#elif defined(WEBRTC_BSD)
 +    elf_aux_info(AT_HWCAP, &hwcap, sizeof(hwcap));
 +#else
      hwcap = getauxval(AT_HWCAP);
 +#endif
  #if defined(__aarch64__)
++#if defined(__NetBSD__)
++    return true; /* No need to check. ASIMD/NEON mandatory in ARMV8.0-A */
++#else
      if ((hwcap & HWCAP_ASIMD) != 0) {
+       return true;
+     }
++#endif
+ #else
+     if ((hwcap & HWCAP_NEON) != 0) {
        return true;
