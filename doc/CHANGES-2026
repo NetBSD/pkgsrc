@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1961 2026/03/29 13:47:30 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1962 2026/03/29 13:52:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2924,3 +2924,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-http to 6.0.2 [taca 2026-03-29]
 	Updated www/ruby-http-form_data to 3.0.1 [taca 2026-03-29]
 	Updated www/ruby-loofah to 2.25.1 [taca 2026-03-29]
+	Removed archivers/ruby-zlib [taca 2026-03-29]
