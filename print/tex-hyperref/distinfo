@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2025/05/10 00:33:04 markd Exp $
+$NetBSD: distinfo,v 1.27 2026/03/29 11:00:49 markd Exp $
 
-BLAKE2s (hyperref.r72773.tar.xz) = 8c16c1d41ec6d41a45a19974265d97e23f4f20a80da91654fcb452578ae29297
-SHA512 (hyperref.r72773.tar.xz) = dece11f0aae3c06f12fabc165a5c0b4505165b721c2d1c357d813157befea5874a22fef3396200cb33e164270cd97b10c5949be16029c1b6bbae70cc625cc59c
-Size (hyperref.r72773.tar.xz) = 88712 bytes
+BLAKE2s (hyperref.r77682.tar.xz) = 1370dea4cf3a66373f598e1d1ed8fff79ddbcc29b562facb261e7fc69005e8a4
+SHA512 (hyperref.r77682.tar.xz) = dfabe2555fd971dbbd161a7e347b4113ddaffe6fc96d3082d1dc9aa4ec7ebda5a9a5ce930f6f5d9a9f8287174f7a6a67f97cbd152ea6ad178b5f22a174fed8ae
+Size (hyperref.r77682.tar.xz) = 89084 bytes
