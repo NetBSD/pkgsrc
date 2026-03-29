@@ -1,3 +1,6 @@
-The footnote package by Mark Wooding dates back to 1997 and has
-not been made hyperref compatible. The aim of the present
-package is to do that.
+This package provides a footnote environment allowing verbatim
+material and a savenotes environment which captures footnotes
+across problematic environments. It is a successor to the
+footnote package by Mark Wooding which had various
+compatibility issues with modern packages (hyperref, color,
+xcolor, babel-french).
