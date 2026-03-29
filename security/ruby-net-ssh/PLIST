@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2024/10/13 16:48:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.21 2026/03/29 13:13:41 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.dockerignore
 ${GEM_LIBDIR}/.github/FUNDING.yml
@@ -13,6 +13,7 @@ ${GEM_LIBDIR}/CHANGES.txt
 ${GEM_LIBDIR}/DEVELOPMENT.md
 ${GEM_LIBDIR}/Dockerfile
 ${GEM_LIBDIR}/Dockerfile.openssl3
+${GEM_LIBDIR}/Dockerfile.zlib_ng
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Gemfile.noed25519
 ${GEM_LIBDIR}/Gemfile.norbnacl
