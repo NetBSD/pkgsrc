@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1933 2026/03/28 22:48:59 markd Exp $
+$NetBSD: CHANGES-2026,v 1.1934 2026/03/29 00:10:19 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2791,3 +2791,18 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/tex-latexbug-doc to 1.0r [markd 2026-03-28]
 	Updated devel/tex-tlshell to 2026 [markd 2026-03-28]
 	Updated devel/tex-tlshell-doc to 2026 [markd 2026-03-28]
+	Updated print/tex-babel to 26.5 [markd 2026-03-28]
+	Updated print/tex-babel-doc to 26.5 [markd 2026-03-28]
+	Updated print/tex-babel-breton to 1.0i [markd 2026-03-28]
+	Updated print/tex-babel-esperanto to 1.5a [markd 2026-03-28]
+	Updated print/tex-babel-french to 4.0e [markd 2026-03-28]
+	Updated print/tex-babel-german to 3.1 [markd 2026-03-28]
+	Updated print/tex-babel-hebrew to 2.5 [markd 2026-03-28]
+	Updated print/tex-babel-hungarian to 1.6a [markd 2026-03-28]
+	Updated print/tex-babel-italian to 1.5.02 [markd 2026-03-28]
+	Updated print/tex-babel-latin to 4.3 [markd 2026-03-28]
+	Updated print/tex-babel-portuges to 1.2u [markd 2026-03-28]
+	Updated print/tex-babel-slovenian to 1.2p [markd 2026-03-28]
+	Updated print/tex-beamer to 3.77 [markd 2026-03-29]
+	Updated print/tex-beamer-doc to 3.77 [markd 2026-03-29]
+	Updated print/tex-beamertheme-metropolis to 1.2.78281 [markd 2026-03-29]
