@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1967 2026/03/29 14:29:08 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1968 2026/03/29 14:33:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2954,3 +2954,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/ruby-actionmailbox80 to 8.0.5 [taca 2026-03-29]
 	Updated textproc/ruby-actiontext80 to 8.0.5 [taca 2026-03-29]
 	Updated www/ruby-rails80 to 8.0.5 [taca 2026-03-29]
+	Updated mail/roundcube to 1.6.15 [taca 2026-03-29]
+	Updated mail/roundcube-plugin-enigma to 1.6.15 [taca 2026-03-29]
+	Updated mail/roundcube-plugin-password to 1.6.15 [taca 2026-03-29]
+	Updated mail/roundcube-plugin-zipdownload to 1.6.15 [taca 2026-03-29]
