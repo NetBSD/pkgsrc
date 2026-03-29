@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26999 2026/03/29 15:25:37 pin Exp $
+$NetBSD: TODO,v 1.27000 2026/03/29 16:55:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -632,6 +632,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o fifengine-0.4.3
 	o filerunner-14.06.18.10
 	o firefox-149.0
+	o fish-4.6
 	o flashplayer-0.4.13
 	o flops-2.2
 	o flow-tools-0.411
@@ -666,10 +667,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gcombust-0.1.55
 	o gdb-17.1
 	o gdb7-7.12
+	o gedit-50
 	o geneweb-7.0.0
 	o gens-2.15.5
 	o gettext-1.0
 	o gfract-0.33
+	o gimp-3.2.2
 	o git-cinnabar-0.7.2
 	o gitea-1.24.3
 	o gjs-1.70.1
@@ -964,6 +967,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o netramet-50
 	o nettle-4.0 [wip; wait at least for https://gitlab.com/gnutls/gnutls/-/issues/1791 to be fixed]
 	o newmail-1.0.2
+	o nginx-devel-1.29.7
 	o nicotine-plus-3.3.10
 	o nim-2.2.6
 	o nios2-binutils-2.36.1
