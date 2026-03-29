@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1965 2026/03/29 14:06:54 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1966 2026/03/29 14:08:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2928,3 +2928,16 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-redmine61 to 6.1.2 [taca 2026-03-29]
 	Updated devel/ruby-redmine60 to 6.0.9 [taca 2026-03-29]
 	Updated devel/ruby-redmine51 to 5.1.12 [taca 2026-03-29]
+	Updated devel/ruby-activesupport72 to 7.2.3.1 [taca 2026-03-29]
+	Updated devel/ruby-activemodel72 to 7.2.3.1 [taca 2026-03-29]
+	Updated devel/ruby-activejob72 to 7.2.3.1 [taca 2026-03-29]
+	Updated databases/ruby-activerecord72 to 7.2.3.1 [taca 2026-03-29]
+	Updated www/ruby-actionview72 to 7.2.3.1 [taca 2026-03-29]
+	Updated www/ruby-actionpack72 to 7.2.3.1 [taca 2026-03-29]
+	Updated www/ruby-actioncable72 to 7.2.3.1 [taca 2026-03-29]
+	Updated devel/ruby-railties72 to 7.2.3.1 [taca 2026-03-29]
+	Updated devel/ruby-activestorage72 to 7.2.3.1 [taca 2026-03-29]
+	Updated mail/ruby-actionmailer72 to 7.2.3.1 [taca 2026-03-29]
+	Updated mail/ruby-actionmailbox72 to 7.2.3.1 [taca 2026-03-29]
+	Updated textproc/ruby-actiontext72 to 7.2.3.1 [taca 2026-03-29]
+	Updated www/ruby-rails72 to 7.2.3.1 [taca 2026-03-29]
