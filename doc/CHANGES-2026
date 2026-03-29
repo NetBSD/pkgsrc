@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1951 2026/03/29 13:19:55 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1952 2026/03/29 13:23:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2907,3 +2907,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ruby-net-ssh to 7.3.2 [taca 2026-03-29]
 	Updated security/ruby-rex-bin_tools to 0.1.15 [taca 2026-03-29]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.7.35 [taca 2026-03-29]
+	Updated www/ruby-aws-partitions to 1.1231.0 [taca 2026-03-29]
