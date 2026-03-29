@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/04/01 10:51:30 markd Exp $
+# $NetBSD: Makefile,v 1.3 2026/03/29 03:10:26 markd Exp $
 
 DISTNAME=	embedfile
-PKGNAME=	tex-${DISTNAME}-2.12
-TEXLIVE_REV=	65528
+PKGNAME=	tex-${DISTNAME}-2.13
+TEXLIVE_REV=	77682
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/embedfile
