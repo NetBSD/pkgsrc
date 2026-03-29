@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2024/11/13 01:30:10 markd Exp $
+# $NetBSD: Makefile,v 1.12 2026/03/29 02:53:35 markd Exp $
 
 DISTNAME=	colortbl.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.0i
-TEXLIVE_REV=	71883
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.0k
+TEXLIVE_REV=	77682
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/colortbl
