@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27006 2026/03/29 17:21:45 wiz Exp $
+$NetBSD: TODO,v 1.27007 2026/03/29 17:24:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -855,7 +855,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
-	o libjpeg-turbo-3.1.4.1
 	o libkactivities4-5.81.0
 	o liblzo-2.10
 	o libmatchbox-1.14
