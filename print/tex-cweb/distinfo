@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2025/05/09 23:35:11 markd Exp $
+$NetBSD: distinfo,v 1.19 2026/03/29 03:02:32 markd Exp $
 
-BLAKE2s (cweb.r73848.tar.xz) = 57013a633e13240f6753da6654f40084602342b2fad47227dc95b5f33c914e41
-SHA512 (cweb.r73848.tar.xz) = 249f9e357dd7b18f601541a946504b40ecfb32fd48b3c92cd331639bd3f23fafb0016ffc9fea7bdd1cf964cc8fc7c17e72d5fc7fe63edb195d1b462ef9e64f50
-Size (cweb.r73848.tar.xz) = 27448 bytes
+BLAKE2s (cweb.r77830.tar.xz) = efd97fead5496e4ce0dea1f739fe7edee4c9617b17bb5326926361d906c5eed9
+SHA512 (cweb.r77830.tar.xz) = 2f25634dbc8484b35144d5b0a7228e010d375e4c751473e2d50aed5b7e563ec58c0619073c9ed9f1675cdc488ebbd462be490b576eba575259bc71fa060fe66e
+Size (cweb.r77830.tar.xz) = 27464 bytes
