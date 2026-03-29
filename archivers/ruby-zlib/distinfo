@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2026/03/07 13:19:17 taca Exp $
-
-BLAKE2s (zlib-3.2.3.gem) = 477fd583c3f88df396d5923430be438c77d0b72ccb17f55d751550f05dc54d3f
-SHA512 (zlib-3.2.3.gem) = ee60c02ffbd25566f019f227dd361e57ad04d21e15d2dc94cd6e18df730c1f971b4dfd41c431f85983635dab65b695383ca625fee6ebf7533d00a07e3313bb85
-Size (zlib-3.2.3.gem) = 39424 bytes
