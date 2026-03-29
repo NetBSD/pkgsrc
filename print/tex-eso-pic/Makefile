@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2023/06/11 06:26:41 markd Exp $
+# $NetBSD: Makefile,v 1.13 2026/03/29 03:13:42 markd Exp $
 
 DISTNAME=	eso-pic
-PKGNAME=	tex-${DISTNAME}-3.0c
-TEXLIVE_REV=	67001
+PKGNAME=	tex-${DISTNAME}-3.0d
+TEXLIVE_REV=	77682
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/eso-pic
