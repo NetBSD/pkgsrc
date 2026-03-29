@@ -1,11 +1,11 @@
-$NetBSD: patch-Gemfile,v 1.6 2026/02/11 07:51:14 taca Exp $
+$NetBSD: patch-Gemfile,v 1.7 2026/03/29 13:59:32 taca Exp $
 
 * Relax dependency.
 * Do not load gem for developemt and test.
 
---- Gemfile.orig	2026-01-06 02:25:03.000000000 +0000
+--- Gemfile.orig	2026-03-17 07:40:04.000000000 +0000
 +++ Gemfile
-@@ -2,26 +2,26 @@ source 'https://rubygems.org'
+@@ -2,7 +2,7 @@ source 'https://rubygems.org'
  
  ruby '>= 3.1.0', '< 3.4.0'
  
@@ -14,11 +14,7 @@ $NetBSD: patch-Gemfile,v 1.6 2026/02/11 07:51:14 taca Exp $
  gem 'rouge', '~> 4.5'
  gem 'mini_mime', '~> 1.1.0'
  gem "actionpack-xml_parser"
- gem 'roadie-rails', '~> 3.2.0'
- gem 'marcel'
- gem 'mail', '~> 2.8.1'
--gem 'nokogiri', '~> 1.18.3'
-+gem 'nokogiri', '>= 1.18.3'
+@@ -13,15 +13,15 @@ gem 'nokogiri', Gem.ruby_version >= Gem:
  gem 'i18n', '~> 1.14.1'
  gem 'rbpdf', '~> 1.21.4'
  gem 'addressable'
@@ -30,11 +26,11 @@ $NetBSD: patch-Gemfile,v 1.6 2026/02/11 07:51:14 taca Exp $
  #  Ruby Standard Gems
 -gem 'csv', '~> 3.2.8'
 -gem 'net-imap', '~> 0.4.20'
-+gem 'csv', '>=3.2.8'
-+gem 'net-imap', '>=0.4.20'
++gem 'csv', '>= 3.2.8'
++gem 'net-imap', '>= 0.4.20'
  gem 'net-pop', '~> 0.1.2'
 -gem 'net-smtp', '~> 0.4.0'
-+gem 'net-smtp', '>=0.4.0'
++gem 'net-smtp', '>= 0.4.0'
  
  # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
  gem 'tzinfo-data', platforms: [:mingw, :x64_mingw, :mswin]
