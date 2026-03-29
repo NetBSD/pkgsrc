@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2021/06/03 06:53:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/03/29 03:18:34 markd Exp $
 share/texmf-dist/doc/latex/europecv/CHANGELOG.rst
 share/texmf-dist/doc/latex/europecv/CONTRIBUTING.md
 share/texmf-dist/doc/latex/europecv/LICENSE
 share/texmf-dist/doc/latex/europecv/README.md
+share/texmf-dist/doc/latex/europecv/assets/lppl-1.3c.svg
 share/texmf-dist/doc/latex/europecv/europecv.pdf
 share/texmf-dist/doc/latex/europecv/europecv.tex
 share/texmf-dist/doc/latex/europecv/examples/EuropeFlagCMYK-eps-converted-to.pdf
