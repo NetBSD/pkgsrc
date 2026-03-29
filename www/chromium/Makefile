@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2026/03/25 08:07:12 kikadf Exp $
+# $NetBSD: Makefile,v 1.50 2026/03/29 16:43:50 tnn Exp $
 
 DISTNAME=			chromium-${VERSION}
 VERSION=			146.0.7680.164
@@ -33,17 +33,33 @@ USE_TOOLS+=			bash bison flex:pkgsrc gmake pax perl pkg-config
 TOOLS_PLATFORM.flex=		# override the platform definition to use pkgsrc's flex.
 USE_LANGUAGES=			c c++
 
+CHECK_PORTABILITY_SKIP+=	docs/website/site/for-testers/bug-reporting-guidelines/hanging-tabs/crash-with-gdb
+CHECK_PORTABILITY_SKIP+=	remoting/host/installer/mac/Scripts/remoting_preflight.sh
+CHECK_PORTABILITY_SKIP+=	remoting/host/installer/mac/Scripts/remoting_postflight.sh
+CHECK_PORTABILITY_SKIP+=	remoting/host/installer/mac/tools/ksregister.sh
+CHECK_PORTABILITY_SKIP+=	remoting/host/installer/mac/tools/ksunregister.sh
+CHECK_PORTABILITY_SKIP+=	remoting/tools/get_mac_crd_version.sh
+CHECK_PORTABILITY_SKIP+=	remoting/tools/register_local_nm_hosts.sh
+CHECK_PORTABILITY_SKIP+=	remoting/tools/set_android_flags.sh
 CHECK_PORTABILITY_SKIP+=	third_party/dawn/third_party/dxc/utils/buildit/build_llvm
 CHECK_PORTABILITY_SKIP+=	third_party/ffmpeg/configure
+CHECK_PORTABILITY_SKIP+=	third_party/flatbuffers/src/tests/KotlinTest.sh
 CHECK_PORTABILITY_SKIP+=	third_party/fontconfig/src/.gitlab-ci/fedora-cross.sh
+CHECK_PORTABILITY_SKIP+=	third_party/litert/src/tflite/swift/docsgen/TensorFlowLiteSwift/scripts/download_frameworks.sh
 CHECK_PORTABILITY_SKIP+=	third_party/llvm/flang/tools/f18/flang.sh.in
 CHECK_PORTABILITY_SKIP+=	third_party/nearby/src/embedded/build.sh
+CHECK_PORTABILITY_SKIP+=	third_party/openscreen/src/third_party/protobuf/src/google/protobuf/compiler/zip_output_unittest.sh
 CHECK_PORTABILITY_SKIP+=	third_party/protobuf/post_process_dist.sh
+CHECK_PORTABILITY_SKIP+=	third_party/protobuf/src/google/protobuf/compiler/zip_output_unittest.sh
 CHECK_PORTABILITY_SKIP+=	third_party/rust-src/vendor/libdbus-sys-0.2.5/vendor/dbus/tools/cmake-format
 CHECK_PORTABILITY_SKIP+=	third_party/rust-toolchain/lib/rustlib/src/rust/vendor/libdbus-sys-0.2.5/vendor/dbus/tools/cmake-format
 CHECK_PORTABILITY_SKIP+=	third_party/sqlite/src/configure
+CHECK_PORTABILITY_SKIP+=	third_party/tflite/src/tensorflow/lite/swift/docsgen/TensorFlowLiteSwift/scripts/download_frameworks.sh
 CHECK_PORTABILITY_SKIP+=	third_party/xdg-utils/scripts/xdg-terminal
 CHECK_PORTABILITY_SKIP+=	third_party/xdg-utils/scripts/xdg-terminal.in
+CHECK_PORTABILITY_SKIP+=	tools/perf/cli_tools/android/record-hardware-events
+CHECK_PORTABILITY_SKIP+=	v8/tools/cppgc/export_to_github.sh
+CHECK_PORTABILITY_SKIP+=	v8/tools/cppgc/test_cmake.sh
 CHECK_PORTABILITY_SKIP+=	v8/tools/profiling/run-llprof.sh
 CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
 
