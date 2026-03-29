@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2026/02/06 10:06:10 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/03/29 16:43:50 tnn Exp $
 
 DISTNAME=	qtwebengine-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtwebengine-${QTVERSION}
@@ -73,10 +73,15 @@ CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_pulseaudio=ON
 CONFIGURE_ENV+=			NINJAFLAGS=-j${_MAKE_JOBS_N:U1}
 
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/dawn/third_party/dxc/utils/buildit/build_llvm
-CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/protobuf/post_process_dist.sh
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/nearby/src/embedded/build.sh
+CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/openscreen/src/third_party/protobuf/src/google/protobuf/compiler/zip_output_unittest.sh
+CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/perfetto/tools/mm_events
+CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/protobuf/post_process_dist.sh
+CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/protobuf/src/google/protobuf/compiler/zip_output_unittest.sh
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/xdg-utils/scripts/xdg-terminal
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/xdg-utils/scripts/xdg-terminal.in
+CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/v8/tools/cppgc/export_to_github.sh
+CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/v8/tools/cppgc/test_cmake.sh
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/v8/tools/profiling/run-llprof.sh
 
 SUBST_CLASSES+=		path
