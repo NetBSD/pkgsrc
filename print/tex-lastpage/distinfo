@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/05/10 01:09:52 markd Exp $
+$NetBSD: distinfo,v 1.12 2026/03/29 20:00:51 markd Exp $
 
-BLAKE2s (lastpage.r73639.tar.xz) = 79868d6d674ccccf313a1607346131f4790d421e67a6fe8960f43f892b9b1d6f
-SHA512 (lastpage.r73639.tar.xz) = be7b86c7fc00aab5df8df8f2403eb9f71a5d5055fb7f904f87eb8d79e278d0fa37021d08156bda7c1c7fa69fb2a8ff414212f19e82f1fe7320c470cefe687028
-Size (lastpage.r73639.tar.xz) = 4680 bytes
+BLAKE2s (lastpage.r77682.tar.xz) = 1f7ad541833f9e68f0e5ed52cc7553cb71ebd6fd92aca0799da5210267911d00
+SHA512 (lastpage.r77682.tar.xz) = 11dabad848e1d7412f475893a0d615c207bb7fa280e09bf9325dd2aa942a5a15a0b19045a0cef9b3ea37e234fb3cf0b585c35f7c775634d143e7aba48cf17ec4
+Size (lastpage.r77682.tar.xz) = 4784 bytes
