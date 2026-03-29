@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2025/01/23 19:31:09 riastradh Exp $
+$NetBSD: distinfo,v 1.3 2026/03/29 17:21:34 wiz Exp $
 
-BLAKE2s (installer-0.7.0.tar.gz) = 4187ebf5520c582b10d1c434bb3e41ef5eaf9a1c279740a6fc8f5c71f8b6944d
-SHA512 (installer-0.7.0.tar.gz) = e89c2d28ca73d9c4291d645dda675fdcfcaba2e4f8765b9fa4a2f211e27711510f3d171b96a6b024c11808ba7f06b7b560a7cb31fafba815bd5c7396f26789f7
-Size (installer-0.7.0.tar.gz) = 474349 bytes
-SHA1 (patch-src_installer_____main____.py) = b8660b711da4706eb0bfe2205b9a27492285ef69
-SHA1 (patch-tests_test__main.py) = 7128de09ad9d3cdab2969579892ca138332859ed
+BLAKE2s (installer-1.0.0.tar.gz) = ca2bf2b1c8b8d8b25fbcc7514fbe76d821649fe8e668b000446048f80b9e5c17
+SHA512 (installer-1.0.0.tar.gz) = 0d869af7ecbf7fb20e24fa9a3b63b808fab12fd2bd495113fe47d0cd9efc51c2a3bccb463dba8f54bc89ebcc65756f108db02f1382d047ad76cc59d2459ce4ca
+Size (installer-1.0.0.tar.gz) = 462685 bytes
+SHA1 (patch-src_installer_____main____.py) = 199b5c03e6d7c649b11cd711d051bf92ed5a7ca8
