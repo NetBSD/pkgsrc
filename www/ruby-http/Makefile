@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2025/08/11 11:56:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2026/03/29 13:42:24 taca Exp $
 #
 
-DISTNAME=	http-5.3.1
+DISTNAME=	http-6.0.2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,10 +9,8 @@ HOMEPAGE=	https://github.com/httprb/http
 COMMENT=	Simple Ruby DSL for making HTTP requests
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.8<3:../../net/ruby-addressable
 DEPENDS+=	${RUBY_PKGPREFIX}-http-cookie>=1.0<2:../../www/ruby-http-cookie
-DEPENDS+=	${RUBY_PKGPREFIX}-http-form_data>=2.2<3.0:../../www/ruby-http-form_data
-DEPENDS+=	${RUBY_PKGPREFIX}-llhttp-ffi>=0.5.0:../../www/ruby-llhttp-ffi
+DEPENDS+=	${RUBY_PKGPREFIX}-llhttp>=0.6.1<0.7:../../www/ruby-llhttp
 
 USE_LANGUAGES=	# none
 
