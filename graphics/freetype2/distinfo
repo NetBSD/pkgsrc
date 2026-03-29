@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.81 2026/03/02 10:15:07 adam Exp $
+$NetBSD: distinfo,v 1.81.2.1 2026/03/29 16:46:33 bsiegert Exp $
 
-BLAKE2s (freetype-2.14.2.tar.xz) = 9341cd1560a380bd30b79364c14f653eb1cd05317c152e3fafe71e6500536611
-SHA512 (freetype-2.14.2.tar.xz) = cf4716510e8edc1344b105359b80ee212d687147ebea1cf410cd8e57eb66380029042f9ad2bf0df184cbb669a63dc36089c0f068fbe1af086038a5bb7fd3ea40
-Size (freetype-2.14.2.tar.xz) = 2667092 bytes
+BLAKE2s (freetype-2.14.3.tar.xz) = 340f06f8bc3e5b544323205bd87b5f4e282a4c4f8613a20ad4339324dc9ebf7b
+SHA512 (freetype-2.14.3.tar.xz) = 43de86ea70b4b47f6efaae67f3440f65a24ffac29dc6d11203a9764e4f1a749ce1ba7645acd23525220b3ba12ddad8687b962b9f1254e2c0a86070854e85d5a0
+Size (freetype-2.14.3.tar.xz) = 2670220 bytes
 SHA1 (patch-builds_unix_freetype-config.in) = 60217b884a0f50c90f89529eaf909ded2693e3be
 SHA1 (patch-builds_unix_unix-cc.in) = 8f336ea7d2dec4624596e0fa7a2adb2556e0c15b
