@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2025/10/20 05:59:44 adam Exp $
+# $NetBSD: Makefile,v 1.50 2026/03/29 18:49:23 wiz Exp $
 
-DISTNAME=	setuptools_scm-9.2.2
+DISTNAME=	setuptools_scm-10.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools_scm/}
@@ -11,6 +11,7 @@ COMMENT=	Manage your versions by scm tags
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-vcs-versioning>=0:../../devel/py-vcs-versioning
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 TEST_DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
@@ -25,8 +26,8 @@ USE_LANGUAGES=	# none
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.0.0:../../textproc/py-tomli
 .endif
 
-# test status as of 9.2.0
-# 2 failed, 386 passed, 15 skipped, 1 xfailed
+# test status as of 10.0.5
+# 2 failed, 134 passed, 6 skipped
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} setuptools-scm setuptools-scm-${PYVERSSUFFIX} || ${TRUE}
