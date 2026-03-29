@@ -1,0 +1,5 @@
+This Sphinx extension is a fork of Fergus Doyle's sphinxfeed package
+which itself is derived from Dan Mackinlay's sphinxcontrib.feed
+package. It relies on Lars Kiesow's python-feedgen package instead
+of the defunct feedformatter package or of Django utils to generate
+the feed.

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/29 17:12:42 wiz Exp $
+
+BLAKE2s (sphinxfeed_lsaffre-0.3.5.tar.gz) = 5dfb130ff940a623f5c25d4cc669fe125a9a7be13a318c15815ab586d3d10df2
+SHA512 (sphinxfeed_lsaffre-0.3.5.tar.gz) = 26a8671221c8f4745f75e3283c9992455c72afdc54ea3dcef22e66c34b77c412981747fba2480c5e91cc7af64cd56e2be4387adb01772a311019a111ab6be5f1
+Size (sphinxfeed_lsaffre-0.3.5.tar.gz) = 5613 bytes
