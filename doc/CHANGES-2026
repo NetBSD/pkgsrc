@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1939 2026/03/29 07:29:15 taca Exp $
+$NetBSD: CHANGES-2026,v 1.1940 2026/03/29 07:30:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2874,3 +2874,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-ffi to 1.17.4 [taca 2026-03-29]
 	Updated devel/ruby-google-protobuf to 4.34.1 [taca 2026-03-29]
 	Updated textproc/ruby-rdtool to 0.6.39 [taca 2026-03-29]
+	Updated mail/ruby-mime-types-data to 3.2026.0317 [taca 2026-03-29]
