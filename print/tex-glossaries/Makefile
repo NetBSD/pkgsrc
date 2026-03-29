@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2025/05/07 20:17:45 markd Exp $
+# $NetBSD: Makefile,v 1.34 2026/03/29 10:42:15 markd Exp $
 
 DISTNAME=	glossaries
-PKGNAME=	tex-${DISTNAME}-4.6
-TEXLIVE_REV=	74942
+PKGNAME=	tex-${DISTNAME}-5.0
+TEXLIVE_REV=	78288
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/glossaries
@@ -10,9 +10,11 @@ COMMENT=	Create glossaries and lists of acronyms
 LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
+DEPENDS+=	tex-datatool-[0-9]*:../../print/tex-datatool
 DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+DEPENDS+=	tex-mfirstuc-[0-9]*:../../print/tex-mfirstuc
 DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 DEPENDS+=	tex-supertabular-[0-9]*:../../print/tex-supertabular
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
