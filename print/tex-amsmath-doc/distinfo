@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2025/05/09 22:30:26 markd Exp $
+$NetBSD: distinfo,v 1.21 2026/03/29 01:15:20 markd Exp $
 
-BLAKE2s (amsmath.doc.r72779.tar.xz) = bc6d1f0af09e3e54268a2594af31f4996a42b764ce88310212c28f8e3e1cfbd4
-SHA512 (amsmath.doc.r72779.tar.xz) = 8411c432c36e904b6c334b53798fb197081e82e853348ebc9ba9af7dfaaa38428372a08c941ba32b92fe0101215d57895ab8c72dced46f3ff53a5e2baa3207f0
-Size (amsmath.doc.r72779.tar.xz) = 2421300 bytes
+BLAKE2s (amsmath.doc.r78101.tar.xz) = 0194bad878a594119480dbd6810c8e6467322089dc8bb2efd14c4b676ad4e01c
+SHA512 (amsmath.doc.r78101.tar.xz) = ebabe57a440eaed0b603f1e3cece25855c985814a96a4a455d8777bb418a6f3bdcfda563a072b19d1b1f3c13bdbcc466cbf0cca0960870c5b046be89b400031b
+Size (amsmath.doc.r78101.tar.xz) = 2386936 bytes
