@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/04/08 23:17:22 markd Exp $
+$NetBSD: distinfo,v 1.5 2026/03/29 10:50:17 markd Exp $
 
-BLAKE2s (hologo.doc.r61719.tar.xz) = cc8991b4eabcf22e46929dea0dcfe5d0aa4efb979f28c287beb15a0db781e8da
-SHA512 (hologo.doc.r61719.tar.xz) = f92326ed2d0bb3ac455a54889b469f69563d4a91e80883bfcf0ce92fb55c0dd63423be8ec800696f8c078bede28929e8a79d43174e8cd1a802b4a6ac88cff178
-Size (hologo.doc.r61719.tar.xz) = 578024 bytes
+BLAKE2s (hologo.doc.r77682.tar.xz) = af78e7df9ab7e0886fec9e1b11e1bc1cfbee8469a7ab316d424cef80c7cc06e7
+SHA512 (hologo.doc.r77682.tar.xz) = 16d8c8acc6000ecf2e6e36415214312b7ddf297e0ef1709e189aa8d1a7050371a6ac75c13b97fb7b5c5a810a3377aa7b51928b8c67f0cffc2f48bb029e5d7d95
+Size (hologo.doc.r77682.tar.xz) = 580796 bytes
