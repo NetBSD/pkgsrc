@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1970 2026/03/29 15:29:44 pin Exp $
+$NetBSD: CHANGES-2026,v 1.1971 2026/03/29 16:55:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2960,3 +2960,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/roundcube-plugin-zipdownload to 1.6.15 [taca 2026-03-29]
 	Updated textproc/git-delta to 0.19.2 [pin 2026-03-29]
 	Added textproc/jsongrep version 0.8.0 [pin 2026-03-29]
+	Updated net/powerdns to 5.0.3 [wiz 2026-03-29]
