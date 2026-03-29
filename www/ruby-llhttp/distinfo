@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/29 13:37:32 taca Exp $
+
+BLAKE2s (llhttp-0.6.1.gem) = 74f426d5546f51ef0eb1f9990f9f1b7a8d56609e14c159d91e2b452d72040ba5
+SHA512 (llhttp-0.6.1.gem) = 92f538620695d3d815c9afe96e6113d0e206d7dfea5c7d39eec42e098fbefaa68b0e3ee443981c16f727d248ee7045d4cc775f657e03a8a3c1bcdfd349268750
+Size (llhttp-0.6.1.gem) = 54784 bytes
