@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/04/03 11:39:00 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/03/29 10:39:04 markd Exp $
 
-BLAKE2s (gincltex.doc.r64967.tar.xz) = eff5c64beeca6e2b820a08745845a050d9f4a4ccb139e4c8d29467fbc422755e
-SHA512 (gincltex.doc.r64967.tar.xz) = 86ee14069c5522d7c0713a532627bf29e8cf71ec4c86184377cdcd8a73dcf0f034be9e92b8ff7c2caef8310f968c956d712f3281eb6e4d36e83a3464149489b9
-Size (gincltex.doc.r64967.tar.xz) = 168440 bytes
+BLAKE2s (gincltex.doc.r78251.tar.xz) = 82794209cc69cf83f53b42ca0756a57551fd750bb6e1c8a561dc3dd0db7c64a1
+SHA512 (gincltex.doc.r78251.tar.xz) = b105e922ede36706524d94932d2430c382ab16f7aeb37f6d36e30f66314f4f4629a4cc8761e278880248c36bf167620e922665c7b0e8cfb79de39eb04546f6b4
+Size (gincltex.doc.r78251.tar.xz) = 168440 bytes
