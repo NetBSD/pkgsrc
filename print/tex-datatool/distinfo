@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/05/09 23:40:10 markd Exp $
+$NetBSD: distinfo,v 1.13 2026/03/29 03:05:04 markd Exp $
 
-BLAKE2s (datatool.r75019.tar.xz) = c51201c2a6cac365c77272c7091811d57b3dfef142d45fab68d790c90d703290
-SHA512 (datatool.r75019.tar.xz) = 1afbf45702def2dff0293eeaec21cb137b370269803ab868dd2266d7e2148b850bb783c3c83dac687e7fce771d6fed9c17563e30b4aa9989f5216ab7fe13308f
-Size (datatool.r75019.tar.xz) = 163348 bytes
+BLAKE2s (datatool.r77021.tar.xz) = e404d8671a314db6b87e2d90a7a36c3bdfaa420d8ed49d7f20566321b9629048
+SHA512 (datatool.r77021.tar.xz) = 22f56b4513cac4d3934c4c6ce4be47407d547daaec85f585a6d933595675bf927fea6e175f72d6477cb056e6e1a4441b423c468e548b2850517011dab6649165
+Size (datatool.r77021.tar.xz) = 163456 bytes
