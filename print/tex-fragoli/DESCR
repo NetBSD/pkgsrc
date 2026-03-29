@@ -5,8 +5,8 @@ used at Goethe University Frankfurt. It includes a
 comprehensive set of commands for text formatting and various
 types of bracketing, ensuring a consistent style --
 particularly when distinguishing between meta-language and
-object-language within a single derivation or formula.
-Formula-Style is losely based on the accompanying material to
+object-language within a single derivation or formula. The
+formula style is loosely based on the accompanying material to
 an introductory course to linguistic semantics by Prof. Dr.
 Thomas Ede Zimmermann. The package brings together and refines
 a collection of LaTeX commands and concepts developed over the
