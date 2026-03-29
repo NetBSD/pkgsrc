@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2026/01/18 04:55:05 taca Exp $
+# $NetBSD: Makefile,v 1.17 2026/03/29 07:37:50 taca Exp $
 
-DISTNAME=	bcrypt-3.1.21
+DISTNAME=	bcrypt-3.1.22
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
