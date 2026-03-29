@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1994 2026/03/29 18:58:45 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1995 2026/03/29 19:01:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2984,3 +2984,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/py-vcs-versioning version 1.1.1 [wiz 2026-03-29]
 	Updated devel/py-setuptools_scm to 10.0.5 [wiz 2026-03-29]
 	Updated comms/py-textual to 8.2.1 [wiz 2026-03-29]
+	Updated net/tigervnc to 1.16.2 [wiz 2026-03-29]
