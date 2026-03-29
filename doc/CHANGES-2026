@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1995 2026/03/29 19:01:25 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1996 2026/03/29 20:02:04 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2985,3 +2985,9 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-setuptools_scm to 10.0.5 [wiz 2026-03-29]
 	Updated comms/py-textual to 8.2.1 [wiz 2026-03-29]
 	Updated net/tigervnc to 1.16.2 [wiz 2026-03-29]
+	Updated print/tex-jsclasses to 20250510 [markd 2026-03-29]
+	Updated print/tex-koma-script to 3.49.2 [markd 2026-03-29]
+	Updated print/tex-kotex-oblivoir to 3.5 [markd 2026-03-29]
+	Updated print/tex-kotex-oblivoir-doc to 3.5 [markd 2026-03-29]
+	Updated print/tex-lastpage to 2.1h [markd 2026-03-29]
+	Updated print/tex-lastpage-doc to 2.1h [markd 2026-03-29]
