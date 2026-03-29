@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1988 2026/03/29 18:21:55 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1989 2026/03/29 18:22:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2978,3 +2978,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-googleapis-common-protos to 1.73.1 [wiz 2026-03-29]
 	Updated www/py-nh3 to 0.3.4 [wiz 2026-03-29]
 	Updated textproc/py-pdf to 6.9.2 [wiz 2026-03-29]
+	Updated sysutils/py-puremagic to 2.1.1 [wiz 2026-03-29]
