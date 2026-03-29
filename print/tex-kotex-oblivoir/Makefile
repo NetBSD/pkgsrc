@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2025/05/10 01:05:19 markd Exp $
+# $NetBSD: Makefile,v 1.14 2026/03/29 19:58:01 markd Exp $
 
 DISTNAME=	kotex-oblivoir
-PKGNAME=	tex-${DISTNAME}-3.4.2
-TEXLIVE_REV=	74884
+PKGNAME=	tex-${DISTNAME}-3.5
+TEXLIVE_REV=	78115
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/kotex-oblivoir
