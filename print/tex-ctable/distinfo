@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:13:03 nia Exp $
+$NetBSD: distinfo,v 1.6 2026/03/29 02:58:39 markd Exp $
 
-BLAKE2s (tex-ctable-38672/ctable.tar.xz) = a60024af9b75211c4e7c4b1d8c1591a681c45d3c6e7ecb3a18eda79ffd0e1dd8
-SHA512 (tex-ctable-38672/ctable.tar.xz) = f63a9cbfaad0876407e3b465c3cb3e1ef79ee7a468886ae72d8cb2c031ff81ec03d59005d20d024fa82a1d7c4d7d785398c30d8472af06b16531c6faa331d87b
-Size (tex-ctable-38672/ctable.tar.xz) = 3624 bytes
+BLAKE2s (ctable.r77682.tar.xz) = af01669b85779f58c7f4dc9c00d90cf051221c6a6ae367a276ac3ab52c605215
+SHA512 (ctable.r77682.tar.xz) = e0f00db8c34a0d777c4bd2ef854e9e1e4f1ded0538bbba93ea09750ea505c557ebe45e2725685f062d865cd50c686c1445dbb20313578fae2cfa6e5c1f0dec27
+Size (ctable.r77682.tar.xz) = 3652 bytes
