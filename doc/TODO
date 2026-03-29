@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27016 2026/03/29 18:22:33 wiz Exp $
+$NetBSD: TODO,v 1.27017 2026/03/29 18:30:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -960,6 +960,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nap-1.5.3
 	o nas-auscope-1.9.4
 	o ncview-2.1.11
+	o neovim-0.12.0
 	o netramet-50
 	o nettle-4.0 [wip; wait at least for https://gitlab.com/gnutls/gnutls/-/issues/1791 to be fixed]
 	o newmail-1.0.2
@@ -1142,7 +1143,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pandas-3.0.0
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
-	o py-pyrate-limiter-4.1.0
 	o py-requests-2.33.0
 	o py-ruff-0.15.8
 	o py-setuptools_scm-10.0.5
