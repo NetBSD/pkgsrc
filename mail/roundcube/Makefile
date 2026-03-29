@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.102 2026/03/19 03:55:29 taca Exp $
+# $NetBSD: Makefile,v 1.103 2026/03/29 14:31:58 taca Exp $
 
 DISTNAME=	roundcubemail-${RC_VERS}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/mail-/-/:S/-complete//}
-PKGREVISION=	1
 
 MAINTAINER=	taca@NetBSD.org
 COMMENT=	Browser-based multilingual IMAP client
