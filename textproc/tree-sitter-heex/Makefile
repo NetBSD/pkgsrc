@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/01/31 17:58:44 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/03/29 17:15:09 wiz Exp $
 
-DISTNAME=	tree-sitter-heex-0.8.0
+DISTNAME=	tree-sitter-heex-0.9.0
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=phoenixframework/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
