@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:13:23 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/03/29 03:43:11 markd Exp $
 
-BLAKE2s (fontaxes.r55920.tar.xz) = d2e2003b63f4131814b89f72b81a0bf7a01219dbc836319e6062f58d0e49ed52
-SHA512 (fontaxes.r55920.tar.xz) = 49a2a2a3cc34370fc8db7c08446b2d12cb7b8a9ce6913568d7588c051683e24b859af23c440df1c815ab1b65f5b5de32242df344dad8102eba7ec1383b02c112
-Size (fontaxes.r55920.tar.xz) = 3344 bytes
+BLAKE2s (fontaxes.r77682.tar.xz) = 0944a1ec3c0e17651fa87e0193f2282f4e6481da5935cfb4dc3c599894cc6cb0
+SHA512 (fontaxes.r77682.tar.xz) = 54970390d95e0e510bfc25e258d28b31b61094c7f43b28a574372688041f0be02d5e9f5faba87f730949e07d6e8f40d26a772afb20266f4a366a3f198ac3ae8b
+Size (fontaxes.r77682.tar.xz) = 4092 bytes
