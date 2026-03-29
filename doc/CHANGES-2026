@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1983 2026/03/29 17:37:10 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.1984 2026/03/29 17:38:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2973,3 +2973,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/openexr to 3.4.8 [wiz 2026-03-29]
 	Updated devel/re2c to 4.5.1 [wiz 2026-03-29]
 	Updated www/py-aiohttp to 3.13.4 [wiz 2026-03-29]
+	Updated devel/py-astroid to 4.1.2 [wiz 2026-03-29]
