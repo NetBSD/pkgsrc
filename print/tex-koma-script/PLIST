@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.19 2025/05/10 01:02:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.20 2026/03/29 19:55:55 markd Exp $
+share/texmf-dist/doc/latex/koma-script/CONTRIBUTING.md
 share/texmf-dist/doc/latex/koma-script/MANIFEST.md
 share/texmf-dist/doc/latex/koma-script/README.md
+share/texmf-dist/doc/latex/koma-script/authors.txt
 share/texmf-dist/doc/latex/koma-script/book-remarkbox-nopatch-de.pdf
 share/texmf-dist/doc/latex/koma-script/book-remarkbox-nopatch-en.pdf
 share/texmf-dist/doc/latex/koma-script/book-remarkbox-patch-de.pdf
