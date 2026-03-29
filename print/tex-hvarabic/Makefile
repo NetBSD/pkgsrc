@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/08/19 20:09:27 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/03/29 10:55:32 markd Exp $
 
 DISTNAME=	hvarabic
-PKGNAME=	tex-${DISTNAME}-0.02
-TEXLIVE_REV=	59423
+PKGNAME=	tex-${DISTNAME}-0.02.76924
+TEXLIVE_REV=	76924
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/hvarabic
