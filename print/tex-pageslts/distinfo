@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/05/10 22:41:28 markd Exp $
+$NetBSD: distinfo,v 1.8 2026/03/30 19:57:25 markd Exp $
 
-BLAKE2s (pageslts.r73400.tar.xz) = 0f95ce3747b175501c11d30bd510e73cf685f1aca313e435665e5c82386aadb4
-SHA512 (pageslts.r73400.tar.xz) = b6047cbe4f5020163be4a3de82e79a7e76d8fc09e2860cb97544d05229985bc835ce10740c44a049a0c0cbcef1bd9e097e3b87285383b23ef5d31ab173e6d35f
-Size (pageslts.r73400.tar.xz) = 8644 bytes
+BLAKE2s (pageslts.r76054.tar.xz) = 0a7cd9fcf54abf01702b44cb1c75a2c152a84e680699b813e11df302635bd7d1
+SHA512 (pageslts.r76054.tar.xz) = 831c8c862eba6fb2bc130b353340fe2ee903da61b974f206dd7b867fdf6211e54bb0fb78b15612108dfc5ef79126e46372f90303f17a6c6b468519e36d21796d
+Size (pageslts.r76054.tar.xz) = 8728 bytes
