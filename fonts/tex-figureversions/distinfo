@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/30 19:51:51 markd Exp $
+
+BLAKE2s (figureversions.r75069.tar.xz) = 5cd302152c0a0b2bccf91489727e2e3ebfd54e334ac5637a26784779947b2e1e
+SHA512 (figureversions.r75069.tar.xz) = d42dbf2280390b40873e7ad58801694bf6c22adff386664975528c698c2ae49f39503c717682d77af0a960779cb572bc36d272ecfb241565a673ccf01ec4730c
+Size (figureversions.r75069.tar.xz) = 3336 bytes

@@ -1,0 +1,5 @@
+The figureversions package defines several commands to switch
+between figure versions, which determine the appearance of
+numbers in your document. The package works with many font
+packages available on CTAN as well as with most OpenType fonts
+under XeTeX and LuaTeX in combination with fontspec.
