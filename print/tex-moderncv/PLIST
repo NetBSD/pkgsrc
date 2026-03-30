@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/05/11 11:59:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/03/30 08:51:22 markd Exp $
 share/texmf-dist/tex/latex/moderncv/moderncv.cls
 share/texmf-dist/tex/latex/moderncv/moderncvbodyi.sty
 share/texmf-dist/tex/latex/moderncv/moderncvbodyii.sty
@@ -16,7 +16,7 @@ share/texmf-dist/tex/latex/moderncv/moderncvcolorgrey.sty
 share/texmf-dist/tex/latex/moderncv/moderncvcolororange.sty
 share/texmf-dist/tex/latex/moderncv/moderncvcolorpurple.sty
 share/texmf-dist/tex/latex/moderncv/moderncvcolorred.sty
-share/texmf-dist/tex/latex/moderncv/moderncvcolors.tex
+share/texmf-dist/tex/latex/moderncv/moderncvcolors.sty
 share/texmf-dist/tex/latex/moderncv/moderncvcompatibility.sty
 share/texmf-dist/tex/latex/moderncv/moderncvdebugtools.sty
 share/texmf-dist/tex/latex/moderncv/moderncvfooti.sty
