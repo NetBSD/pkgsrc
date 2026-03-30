@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/05/08 09:51:29 markd Exp $
+$NetBSD: distinfo,v 1.5 2026/03/30 10:21:19 markd Exp $
 
-BLAKE2s (nfssext-cfr.r72454.tar.xz) = 639335a669a7f65c09d09dc6624b4eaa814f3b578df1421723ea372e260c10a9
-SHA512 (nfssext-cfr.r72454.tar.xz) = 182309dc62e359de96531aa293f1bfdb4c4f0f28d1311b3ec7e418d9203bec80d60a2aa61250c684781046a35972ed413d92ec7e1a10050d4c0ca616461e4ad5
-Size (nfssext-cfr.r72454.tar.xz) = 8708 bytes
+BLAKE2s (nfssext-cfr.r77682.tar.xz) = 11564c0bce8c96567b8400b02dff46368cb70f79c21dd9f16f4be9e89d341171
+SHA512 (nfssext-cfr.r77682.tar.xz) = 544c380be346341de42acc38f71876f48198e5879f59cc73451a67b80a43f7b295457e7430ec818fa84e29b5cf1576e16292038980770ce6427d137808b69b5e
+Size (nfssext-cfr.r77682.tar.xz) = 8960 bytes
