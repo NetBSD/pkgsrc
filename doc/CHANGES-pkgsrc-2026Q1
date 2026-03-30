@@ -1,4 +1,7 @@
-$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.1 2026/03/25 21:58:37 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.2 2026/03/30 15:43:19 bsiegert Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
+
+Pullup ticket #7058 - requested by taca
+graphics/freetype2: security fix
 
