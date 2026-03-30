@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/02/18 10:22:12 markd Exp $
+$NetBSD: distinfo,v 1.10 2026/03/30 08:01:54 markd Exp $
 
-BLAKE2s (marginnote.r68204.tar.xz) = e45bbed407b2c5d8cb4d9c990f6e33f140ba69b04b1e40f46c72e58ed406e997
-SHA512 (marginnote.r68204.tar.xz) = 6643a77d01d59bc371d301e738b59957bd63cfa0fc98a554f853d1599392ceb5e88663651563445633df704bbc3ef74510ebd6150c44911314225259982f114b
-Size (marginnote.r68204.tar.xz) = 3312 bytes
+BLAKE2s (marginnote.r77682.tar.xz) = 23bb4fb6e04215a92cae58a3607bd9460fa3d5b42c0622f6efbed2f2add29ca1
+SHA512 (marginnote.r77682.tar.xz) = 445c3414a3e8072b46b7838b7e52367647507191968dca399e9315eb445888563d0033ad394ab9a65fd138a7ac0ac602700dea25645026fe8e7716dcdc4ced03
+Size (marginnote.r77682.tar.xz) = 3352 bytes
