@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2026/03/19 17:37:13 adam Exp $
+$NetBSD: distinfo,v 1.4 2026/03/30 16:06:23 adam Exp $
 
-BLAKE2s (ppsspp-1.20.2.tar.xz) = 3d6771d500c7b19d3d5652e36a059bd162797d5a3195bf46f888c4bc5d7c85ae
-SHA512 (ppsspp-1.20.2.tar.xz) = 22a99bd8b084fc553bdd3a82cb375eac7f0d197d52905412a356a43712132d61375c7f27e6456acae7af2f44085cc14a21017fe11ccb89d574643caadb7ee51a
-Size (ppsspp-1.20.2.tar.xz) = 60504476 bytes
+BLAKE2s (ppsspp-1.20.3.tar.xz) = 29f73253d48331fecd743b1297a900dfb0fd95eba7b29a07041677d585a61086
+SHA512 (ppsspp-1.20.3.tar.xz) = 0399ff9120efbda8958088d95aa774fa9c0d5d5b5d77de38180b7fe5d0f783335501b90465640f4a6c5a70e15d46bc463c07dc8a8e3dd79a81a6c342ba9bf66d
+Size (ppsspp-1.20.3.tar.xz) = 60499536 bytes
 SHA1 (patch-CMakeLists.txt) = 6c90ee328cfe183aedeb1670a06330c3d81462ca
 SHA1 (patch-Common_CPUDetect.cpp) = c3a302d6c9b373eb8ad9a99f9508d86e4da2effd
-SHA1 (patch-ext_CMakeLists.txt) = 823d4ada59cb52996062b3586b8eed93f75f2edf
+SHA1 (patch-ext_CMakeLists.txt) = 33c81693dcbfaa8d80550727c924f52a55e8268c
 SHA1 (patch-ext_aemu__postoffice_client_sock__impl.h) = cba4052d22fdb9eca1f6411c4ee005225c7433a6

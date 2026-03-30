@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.4 2026/03/11 08:13:42 adam Exp $
+# $NetBSD: Makefile.common,v 1.5 2026/03/30 16:06:23 adam Exp $
 # used by emulators/ppsspp/Makefile
 # used by emulators/ppsspp-qt/Makefile
 # used by emulators/libretro-ppsspp/Makefile
 
-DISTNAME=	ppsspp-1.20.2
+DISTNAME=	ppsspp-1.20.3
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hrydgard/}
 GITHUB_PROJECT=	ppsspp
