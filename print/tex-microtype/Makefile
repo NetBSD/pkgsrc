@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2025/05/10 01:54:13 markd Exp $
+# $NetBSD: Makefile,v 1.20 2026/03/30 08:37:57 markd Exp $
 
 DISTNAME=	microtype
-PKGNAME=	tex-${DISTNAME}-3.2a
-TEXLIVE_REV=	73928
+PKGNAME=	tex-${DISTNAME}-3.2d
+TEXLIVE_REV=	78228
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/microtype
