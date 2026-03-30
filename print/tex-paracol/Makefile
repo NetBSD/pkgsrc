@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2025/05/10 22:43:41 markd Exp $
+# $NetBSD: Makefile,v 1.3 2026/03/30 20:03:26 markd Exp $
 
 DISTNAME=	paracol
-PKGNAME=	tex-${DISTNAME}-1.36
-TEXLIVE_REV=	72651
+PKGNAME=	tex-${DISTNAME}-1.37
+TEXLIVE_REV=	77682
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/paracol

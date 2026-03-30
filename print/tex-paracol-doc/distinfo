@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2025/05/10 22:43:42 markd Exp $
+$NetBSD: distinfo,v 1.3 2026/03/30 20:03:26 markd Exp $
 
-BLAKE2s (paracol.doc.r72651.tar.xz) = 9b9c2033dfd825712ff931949f1767b4df904b77fe747f74f4e00a3581b91556
-SHA512 (paracol.doc.r72651.tar.xz) = cc1d4681ececf6e5ba6dd386180cea2cdc5d14866e3cd03bb085e3e7e013fe0875126fb369b3757b940859ddc6cea3760ef6a88075ee89e1218501418bf2e06b
-Size (paracol.doc.r72651.tar.xz) = 2466756 bytes
+BLAKE2s (paracol.doc.r77682.tar.xz) = fcccc13955313e02ac494ba2b37f75314a54d1cba0573802089c3074dcf18910
+SHA512 (paracol.doc.r77682.tar.xz) = 4da06bbebe89d561041748ae8ab9f7863dee2e3c07349b4db3f8aac975265475e4a2b81a4c9d1890e94423722eb055010ae87d33f53d1d7ad6de8d9b7cab1e45
+Size (paracol.doc.r77682.tar.xz) = 2466588 bytes
