@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2025/05/12 08:19:55 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/03/30 07:56:05 markd Exp $
 share/texmf-dist/tex/luatex/luatexja/addons/luatexja-adjust.sty
 share/texmf-dist/tex/luatex/luatexja/addons/luatexja-ajmacros.sty
-share/texmf-dist/tex/luatex/luatexja/addons/luatexja-fontspec-27c.sty
-share/texmf-dist/tex/luatex/luatexja/addons/luatexja-fontspec-29c.sty
 share/texmf-dist/tex/luatex/luatexja/addons/luatexja-fontspec-29e.sty
 share/texmf-dist/tex/luatex/luatexja/addons/luatexja-fontspec.sty
 share/texmf-dist/tex/luatex/luatexja/addons/luatexja-otf.sty
@@ -29,10 +27,12 @@ share/texmf-dist/tex/luatex/luatexja/ltj-base.sty
 share/texmf-dist/tex/luatex/luatexja/ltj-charrange.lua
 share/texmf-dist/tex/luatex/luatexja/ltj-compat.lua
 share/texmf-dist/tex/luatex/luatexja/ltj-debug.lua
+share/texmf-dist/tex/luatex/luatexja/ltj-direction-20251230.lua
 share/texmf-dist/tex/luatex/luatexja/ltj-direction.lua
 share/texmf-dist/tex/luatex/luatexja/ltj-inputbuf.lua
 share/texmf-dist/tex/luatex/luatexja/ltj-ivd_aj1.lua
 share/texmf-dist/tex/luatex/luatexja/ltj-jfmglue.lua
+share/texmf-dist/tex/luatex/luatexja/ltj-jfont-20251230.lua
 share/texmf-dist/tex/luatex/luatexja/ltj-jfont.lua
 share/texmf-dist/tex/luatex/luatexja/ltj-jisx0208.lua
 share/texmf-dist/tex/luatex/luatexja/ltj-kinsoku.tex
@@ -45,6 +45,7 @@ share/texmf-dist/tex/luatex/luatexja/ltj-plain.sty
 share/texmf-dist/tex/luatex/luatexja/ltj-pretreat.lua
 share/texmf-dist/tex/luatex/luatexja/ltj-rmlgbm.lua
 share/texmf-dist/tex/luatex/luatexja/ltj-ruby.lua
+share/texmf-dist/tex/luatex/luatexja/ltj-setwidth-20251230.lua
 share/texmf-dist/tex/luatex/luatexja/ltj-setwidth.lua
 share/texmf-dist/tex/luatex/luatexja/ltj-stack.lua
 share/texmf-dist/tex/luatex/luatexja/ltj-unicode-ccfix.lua
