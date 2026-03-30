@@ -1,4 +1,4 @@
-mwcls is a set of document classes for LaTeX 2e designed with
+mwcls is a set of document classes for LaTeX2e designed with
 Polish typographical tradition in mind. Classes include:
 'mwart' (which is a replacement for 'article'), 'mwrep'
 (replacing 'report'), and 'mwbk' (replacing 'book'). Most
