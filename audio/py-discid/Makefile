@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/07/27 08:34:04 adam Exp $
+# $NetBSD: Makefile,v 1.4 2026/03/30 15:30:13 adam Exp $
 
-DISTNAME=	discid-1.3.0
+DISTNAME=	discid-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/discid/}
