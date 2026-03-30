@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.380 2026/01/27 08:39:26 wiz Exp $
+# $NetBSD: Makefile,v 1.381 2026/03/30 21:32:53 wiz Exp $
 
-DISTNAME=		gnucash-5.14
-PKGREVISION=		2
+DISTNAME=		gnucash-5.15
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gnucash/}
 GITHUB_RELEASE=		${PKGVERSION_NOREV}
@@ -41,11 +40,11 @@ CMAKE_CONFIGURE_ARGS+=	-DWITH_AQBANKING=OFF
 CMAKE_CONFIGURE_ARGS+=	-DPERL_EXECUTABLE=${PERL5:Q}
 CMAKE_CONFIGURE_ARGS+=	-DCOMPILE_GSCHEMAS=OFF
 
-# as of 5.9
+# as of 5.15
 # before 'make install'
-# 44% tests passed, 72 tests failed out of 129
+# 43% tests passed, 75 tests failed out of 132
 # after 'make install'
-# 89% tests passed, 14 tests failed out of 129
+# 86% tests passed, 18 tests failed out of 132
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib
 REPLACE_PERL+=		common/gnc-test-env.pl
 REPLACE_PERL+=		libgnucash/backend/xml/test/grab-types.pl

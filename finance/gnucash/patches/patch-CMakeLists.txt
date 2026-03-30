@@ -1,0 +1,19 @@
+$NetBSD: patch-CMakeLists.txt,v 1.6 2026/03/30 21:32:53 wiz Exp $
+
+https://github.com/Gnucash/gnucash/commit/14bc748671879d2269fde3edb693b2f02122866c
+
+--- CMakeLists.txt.orig	2026-03-28 21:58:52.000000000 +0000
++++ CMakeLists.txt
+@@ -605,11 +605,7 @@ if (Boost_FOUND)
+  if (Boost_VERSION VERSION_LESS "1.89.0")
+   find_package(Boost 1.67.0  COMPONENTS date_time filesystem locale program_options regex system)
+  else()
+-  if (Boost_VERSION VERSION_LESS "1.90.0")
+-    find_package(Boost 1.67.0  COMPONENTS date_time filesystem locale program_options regex)
+-  else()
+-    find_package(Boost 1.67.0  COMPONENTS date_time locale program_options regex)
+-  endif()
++  find_package(Boost 1.67.0  COMPONENTS date_time filesystem locale program_options regex)
+  endif()
+ endif()
+ 
