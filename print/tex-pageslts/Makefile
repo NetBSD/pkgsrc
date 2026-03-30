@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2025/05/10 22:41:28 markd Exp $
+# $NetBSD: Makefile,v 1.8 2026/03/30 19:57:25 markd Exp $
 
 DISTNAME=	pageslts
-PKGNAME=	tex-${DISTNAME}-2.0d
-TEXLIVE_REV=	73400
+PKGNAME=	tex-${DISTNAME}-2.0g
+TEXLIVE_REV=	76054
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	Provide labels for the last page in each page numbering group
+HOMEPAGE=	https://ctan.org/pkg/pageslts
+COMMENT=	Variants of last page labels
 LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-alphalph-[0-9]*:../../print/tex-alphalph
