@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2025/05/11 11:59:02 markd Exp $
+$NetBSD: distinfo,v 1.10 2026/03/30 08:51:22 markd Exp $
 
-BLAKE2s (moderncv.doc.r71837.tar.xz) = 30920ac7ecd4787f79025c699f81136b7f7865c6f69db216dd6e7cdc9c91bebf
-SHA512 (moderncv.doc.r71837.tar.xz) = ab7f430f84afa5ce2874ac027dbbcaf359c81cfe9b5dd5c550ba5225fdc5c5ad1df0897fd8d732ae2a7263d9a446307604e7d234c28ba597ae0fe870a2fb6ff4
-Size (moderncv.doc.r71837.tar.xz) = 178768 bytes
+BLAKE2s (moderncv.doc.r77552.tar.xz) = 41f10f7f64214405669e25d4a196fe8caba32f87d65b152f25a1f3f84f07fe61
+SHA512 (moderncv.doc.r77552.tar.xz) = 8d7fac82db5e28f6af83491823a16e7ae92c6d8b630d32332a51f3b8f2ba29d2c218a3e9126b7a05ce5289fe2aa79f64ad4403ffd5d8e70b2fb566b85f1f0fe2
+Size (moderncv.doc.r77552.tar.xz) = 179020 bytes

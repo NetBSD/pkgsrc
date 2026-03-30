@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2025/05/11 11:59:01 markd Exp $
+# $NetBSD: Makefile,v 1.14 2026/03/30 08:51:22 markd Exp $
 
 DISTNAME=	moderncv
-PKGNAME=	tex-${DISTNAME}-2.4.1
-TEXLIVE_REV=	71837
+PKGNAME=	tex-${DISTNAME}-2.5.1
+TEXLIVE_REV=	77552
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/moderncv
