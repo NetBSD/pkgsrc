@@ -1,6 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2022/04/15 05:54:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/03/30 07:50:54 markd Exp $
 share/texmf-dist/tex/luatex/lua-uni-algos/lua-uni-algos.lua
 share/texmf-dist/tex/luatex/lua-uni-algos/lua-uni-case.lua
+share/texmf-dist/tex/luatex/lua-uni-algos/lua-uni-data-parser.lua
+share/texmf-dist/tex/luatex/lua-uni-algos/lua-uni-data-preload.lua
+share/texmf-dist/tex/luatex/lua-uni-algos/lua-uni-data.lua
 share/texmf-dist/tex/luatex/lua-uni-algos/lua-uni-graphemes.lua
 share/texmf-dist/tex/luatex/lua-uni-algos/lua-uni-normalize.lua
 share/texmf-dist/tex/luatex/lua-uni-algos/lua-uni-parse.lua
+share/texmf-dist/tex/luatex/lua-uni-algos/lua-uni-stage-tables.lua
+share/texmf-dist/tex/luatex/lua-uni-algos/lua-uni-words.lua
