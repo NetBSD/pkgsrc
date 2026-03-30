@@ -1,33 +1,33 @@
-The bundle comprises packages to provide: aliascnt: 'alias
-counters'; bmpsize: get bitmap size and resolution data;
-centernot: a horizontally-centred \not symbol; chemarr:
-extensible chemists' reaction arrows; classlist: record
-information about document class(es) used; colonequals: poor
-man's mathematical relation symbols; dvipscol: dvips colour
-stack management; engord: define counter-printing operations
-producing English ordinals; eolgrab: collect arguments
-delimited by end of line; flags: setting and clearing flags in
-bit fields and converting the bit field into a decimal number;
-holtxdoc: extra documentation macros; hypbmsec: bookmarks in
-sectioning commands; hypgotoe: experimental package for links
-to embedded files; hyphsubst: substitute hyphenation patterns;
-ifdraft: switch for option draft; iflang: provides expandable
-checks for the current language; pdfcolparallel: fixes colour
-problems in package parallel; pdfcolparcolumns: fixes colour
-problems in package parcolumns; pdfcrypt: setting PDF
-encryption; protecteddef: define a command that protected
-against expansion; resizegather: automatically resize overly
-large equations; rotchiffre: performs simple rotation cyphers;
-scrindex: redefines environment 'theindex' of package 'index',
-if a class from KOMA-Script is loaded; setouterhbox: set \hbox
-in outer horizontal mode; settobox: getting box sizes;
-stackrel: extensions of the \stackrel command; stampinclude:
-selects the files for \include by inspecting the timestamp of
-the .aux file(s); tabularht: tabulars with height
-specification; tabularkv: key value interface for tabular
-parameters; thepdfnumber: canonical numbers for use in PDF
-files and elsewhere; twoopt: commands with two optional
-arguments; Each of the packages is represented by two files, a
-.dtx (documented source) and a PDF file; the .ins file
-necessary for installation is extracted by running the .dtx
-file with Plain TeX.
+The bundle comprises packages to provide: bmpsize: get bitmap
+size and resolution data; centernot: a horizontally-centred
+\not symbol; chemarr: extensible chemists' reaction arrows;
+classlist: record information about document class(es) used;
+colonequals: poor man's mathematical relation symbols;
+dvipscol: dvips colour stack management; engord: define
+counter-printing operations producing English ordinals;
+eolgrab: collect arguments delimited by end of line; flags:
+setting and clearing flags in bit fields and converting the bit
+field into a decimal number; holtxdoc: extra documentation
+macros; hypbmsec: bookmarks in sectioning commands; hypgotoe:
+experimental package for links to embedded files; hyphsubst:
+substitute hyphenation patterns; ifdraft: switch for option
+draft; iflang: provides expandable checks for the current
+language; pdfcolparallel: fixes colour problems in package
+parallel; pdfcolparcolumns: fixes colour problems in package
+parcolumns; pdfcrypt: setting PDF encryption; protecteddef:
+define a command that protected against expansion;
+resizegather: automatically resize overly large equations;
+rotchiffre: performs simple rotation cyphers; scrindex:
+redefines environment 'theindex' of package 'index', if a class
+from KOMA-Script is loaded; setouterhbox: set \hbox in outer
+horizontal mode; settobox: getting box sizes; stackrel:
+extensions of the \stackrel command; stampinclude: selects the
+files for \include by inspecting the timestamp of the .aux
+file(s); tabularht: tabulars with height specification;
+tabularkv: key value interface for tabular parameters;
+thepdfnumber: canonical numbers for use in PDF files and
+elsewhere; twoopt: commands with two optional arguments; Each
+of the packages is represented by two files, a .dtx (documented
+source) and a PDF file; the .ins file necessary for
+installation is extracted by running the .dtx file with Plain
+TeX.

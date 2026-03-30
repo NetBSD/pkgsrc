@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/05/12 09:27:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/03/30 10:45:36 markd Exp $
 share/texmf-dist/bibtex/bib/oberdiek/oberdiek-bundle.bib
 share/texmf-dist/bibtex/bib/oberdiek/oberdiek-source.bib
 share/texmf-dist/tex/generic/oberdiek/engord.sty
@@ -11,7 +11,6 @@ share/texmf-dist/tex/generic/oberdiek/protecteddef.sty
 share/texmf-dist/tex/generic/oberdiek/rotchiffre.sty
 share/texmf-dist/tex/generic/oberdiek/setouterhbox.sty
 share/texmf-dist/tex/generic/oberdiek/thepdfnumber.sty
-share/texmf-dist/tex/latex/oberdiek/aliascnt.sty
 share/texmf-dist/tex/latex/oberdiek/bmpsize-base.sty
 share/texmf-dist/tex/latex/oberdiek/bmpsize-dvipdfm.def
 share/texmf-dist/tex/latex/oberdiek/bmpsize-dvipdfmx.def

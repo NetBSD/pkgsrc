@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.13 2025/05/12 09:27:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/03/30 10:45:36 markd Exp $
 share/texmf-dist/doc/latex/oberdiek/README.md
-share/texmf-dist/doc/latex/oberdiek/aliascnt.pdf
 share/texmf-dist/doc/latex/oberdiek/bmpsize.pdf
 share/texmf-dist/doc/latex/oberdiek/centernot.pdf
 share/texmf-dist/doc/latex/oberdiek/chemarr-example.tex
