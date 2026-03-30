@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2025/12/23 13:47:35 ktnb Exp $
+# $NetBSD: options.mk,v 1.3 2026/03/30 15:11:36 ktnb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mu
 PKG_SUPPORTED_OPTIONS=	mu-emacs guile
@@ -17,6 +17,8 @@ PLIST_SRC=	PLIST
 INFO_FILES=	yes
 USE_TOOLS+=	makeinfo
 PLIST_SRC+=	PLIST.emacs
+EMACS_VERSIONS_ACCEPTED=	emacs30 emacs30nox emacs29 emacs29nox
+EMACS_VERSIONS_ACCEPTED+=	emacs28 emacs28nox
 .else
 MESON_ARGS+=	-Demacs=disabled
 .endif
@@ -30,7 +32,7 @@ PLIST_SRC+=	PLIST.guile
 # TODO: update for meson
 # CONFIGURE_ENV+= ac_cv_path_GUILE=guile
 USE_TOOLS+= makeinfo
-MESON_ARGS+=	-Dguile=enabled
+MESON_ARGS+=	-Dscm=enabled
 .else
-MESON_ARGS+=	-Dguile=disabled
+MESON_ARGS+=	-Dscm=disabled
 .endif
