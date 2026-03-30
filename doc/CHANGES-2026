@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1999 2026/03/30 07:39:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2000 2026/03/30 08:24:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2995,3 +2995,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/mysql80-cluster to 8.0.45 [jnemeth 2026-03-30]
 	Updated databases/py-peewee to 4.0.3 [adam 2026-03-30]
 	Updated devel/py-inline-snapshot to 0.32.5 [adam 2026-03-30]
+	Updated games/scummvm to 2026.2.0 [adam 2026-03-30]
+	Updated security/easy-rsa to 3.2.6 [adam 2026-03-30]
