@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2025/11/30 14:19:13 fox Exp $
+@comment $NetBSD: PLIST,v 1.18 2026/03/30 10:22:27 fox Exp $
 bin/wolfssl-config
 include/wolfssl/callbacks.h
 include/wolfssl/certs_test.h
@@ -131,6 +131,7 @@ include/wolfssl/wolfcrypt/pwdbased.h
 include/wolfssl/wolfcrypt/random.h
 include/wolfssl/wolfcrypt/rc2.h
 include/wolfssl/wolfcrypt/ripemd.h
+include/wolfssl/wolfcrypt/rng_bank.h
 include/wolfssl/wolfcrypt/rsa.h
 include/wolfssl/wolfcrypt/sakke.h
 include/wolfssl/wolfcrypt/settings.h
@@ -153,20 +154,24 @@ include/wolfssl/wolfcrypt/wc_encrypt.h
 include/wolfssl/wolfcrypt/wc_lms.h
 include/wolfssl/wolfcrypt/wc_mlkem.h
 include/wolfssl/wolfcrypt/wc_port.h
+include/wolfssl/wolfcrypt/wc_slhdsa.h
 include/wolfssl/wolfcrypt/wc_xmss.h
+include/wolfssl/wolfcrypt/wolfentropy.h
 include/wolfssl/wolfcrypt/wolfevent.h
 include/wolfssl/wolfcrypt/wolfmath.h
 include/wolfssl/wolfcrypt/xmss.h
 include/wolfssl/wolfio.h
+lib/cmake/wolfssl/wolfssl-config-version.cmake
+lib/cmake/wolfssl/wolfssl-config.cmake
+lib/cmake/wolfssl/wolfssl-targets.cmake
 lib/libwolfssl.la
 lib/pkgconfig/wolfssl.pc
 share/doc/wolfssl/QUIC.md
 share/doc/wolfssl/README.txt
-share/doc/wolfssl/example/async_client.c
-share/doc/wolfssl/example/async_server.c
 share/doc/wolfssl/example/client.c
 share/doc/wolfssl/example/echoclient.c
 share/doc/wolfssl/example/echoserver.c
+share/doc/wolfssl/example/ocsp_responder.c
 share/doc/wolfssl/example/sctp-client-dtls.c
 share/doc/wolfssl/example/sctp-client.c
 share/doc/wolfssl/example/sctp-server-dtls.c
