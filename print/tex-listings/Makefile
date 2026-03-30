@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2025/05/08 10:17:31 markd Exp $
+# $NetBSD: Makefile,v 1.17 2026/03/30 07:48:26 markd Exp $
 
 DISTNAME=	listings
-PKGNAME=	tex-${DISTNAME}-1.10c
-TEXLIVE_REV=	72368
+PKGNAME=	tex-${DISTNAME}-1.11b
+TEXLIVE_REV=	77682
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/listings
