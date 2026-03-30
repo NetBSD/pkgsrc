@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2005 2026/03/30 09:28:55 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2006 2026/03/30 10:20:07 fox Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3035,3 +3035,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/perl5 to 5.42.2 [wiz 2026-03-30]
 	Updated converters/py-fastbencode to 0.3.10 [adam 2026-03-30]
 	Updated misc/py-pbs-installer to 2026.3.25 [adam 2026-03-30]
+	Updated audio/fasttracker2 to 2.12 [fox 2026-03-30]
