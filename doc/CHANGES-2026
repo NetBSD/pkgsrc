@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2014 2026/03/30 15:32:35 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2015 2026/03/30 16:07:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3052,3 +3052,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/mu to 1.14.0 [ktnb 2026-03-30]
 	Updated audio/py-discid to 1.4.0 [adam 2026-03-30]
 	Updated devel/py-xdis to 6.3.0 [adam 2026-03-30]
+	Updated lang/vala to 0.56.19 [adam 2026-03-30]
+	Updated emulators/ppsspp to 1.20.3 [adam 2026-03-30]
