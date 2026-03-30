@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2000 2026/03/30 08:24:15 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2001 2026/03/30 08:53:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2997,3 +2997,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-inline-snapshot to 0.32.5 [adam 2026-03-30]
 	Updated games/scummvm to 2026.2.0 [adam 2026-03-30]
 	Updated security/easy-rsa to 3.2.6 [adam 2026-03-30]
+	Updated devel/py-poetry-core to 2.3.2 [adam 2026-03-30]
+	Updated devel/py-poetry to 2.3.3 [adam 2026-03-30]
