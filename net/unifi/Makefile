@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2025/03/14 13:21:07 abs Exp $
+# $NetBSD: Makefile,v 1.38 2026/03/30 22:05:18 gdt Exp $
 
 DISTNAME=	unifi-8.6.9
 CATEGORIES=	net
@@ -25,7 +25,7 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 
 # Unifi bundles snappy-java-1.0.5.jar, which contains native code.
 # We can use the bundled snappy-java but we must recompile the native portion
-# because it only ship linux binaries. The rcd script takes care of loading the
+# because it only ships linux binaries. The rcd script takes care of loading the
 # correct library.
 SNAPPY_JAVA=		snappy-java-1.0.5.4
 # github.mk only works for the main MASTER_SITES definition and does
