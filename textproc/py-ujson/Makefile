@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2026/03/12 05:13:51 adam Exp $
+# $NetBSD: Makefile,v 1.28 2026/03/30 08:11:50 wiz Exp $
 
 DISTNAME=	ujson-5.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	c c++
+
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/src/ujson/python/version.h
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
