@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:34:32 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2026/03/30 08:57:14 markd Exp $
 
 DISTNAME=	mwcls
-PKGNAME=	tex-${DISTNAME}-0.75
-TEXLIVE_REV=	44352
+PKGNAME=	tex-${DISTNAME}-0.77
+TEXLIVE_REV=	77050
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/mwcls
 COMMENT=	Polish-oriented document classes
 LICENSE=	lppl-1.2
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
