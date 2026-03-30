@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.109 2026/03/15 19:04:26 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2026/03/30 15:50:31 adam Exp $
 
-DISTNAME=	vala-0.56.18
-PKGREVISION=	3
+DISTNAME=	vala-0.56.19
 CATEGORIES=	lang gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vala/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -19,7 +18,6 @@ USE_TOOLS+=		bison flex gmake pkg-config
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	libvala.pc.in
 PKGCONFIG_OVERRIDE+=	vapigen/vapigen.pc.in
-
 TEST_TARGET=		check
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.48.0
