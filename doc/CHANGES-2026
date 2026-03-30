@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2012 2026/03/30 14:12:57 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.2013 2026/03/30 15:11:56 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3049,3 +3049,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-gunicorn to 25.3.0 [adam 2026-03-30]
 	Updated audio/spotify-player to 0.23.0 [pin 2026-03-30]
 	Updated net/megacmd to 2.5.1 [kikadf 2026-03-30]
+	Updated mail/mu to 1.14.0 [ktnb 2026-03-30]
