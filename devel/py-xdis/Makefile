@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2025/10/18 17:28:28 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2026/03/30 15:31:56 adam Exp $
 
-DISTNAME=	xdis-6.1.8
+DISTNAME=	xdis-6.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xdis/}
@@ -11,7 +11,7 @@ COMMENT=	Python cross-version byte-code disassembler and marshal routines
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-click>=7.0.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
