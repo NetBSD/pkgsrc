@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/05/10 01:12:20 markd Exp $
+$NetBSD: distinfo,v 1.6 2026/03/30 07:39:14 markd Exp $
 
-BLAKE2s (latex-lab.doc.r73665.tar.xz) = fa5922f0d4609031e82b3466156896092edf7f326ece4360ab3a64b56787ddde
-SHA512 (latex-lab.doc.r73665.tar.xz) = b287aae579f69e28b8069262326d6703f7dfbb3d76757e619b6c6d274bf0652206143d18452502fb9c543e6bba4464de492f0329935405009fb09c0a64983ac7
-Size (latex-lab.doc.r73665.tar.xz) = 8882528 bytes
+BLAKE2s (latex-lab.doc.r76739.tar.xz) = e19833ec5733da1a11a4cf59b7f68557bc22dc745d890947a29d5c0443f8d0f0
+SHA512 (latex-lab.doc.r76739.tar.xz) = 3979f1e2ee7d1b74813d4e3f4ca2a1099108379e6b7bd0ec9043021684b8ff216181c63f28dc7be821935caef41a6600124605ff81055b1cd9985fe0b87f6f0e
+Size (latex-lab.doc.r76739.tar.xz) = 5686380 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/05/10 01:12:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/03/30 07:39:14 markd Exp $
 share/texmf-dist/doc/latex/latex-lab/README.md
 share/texmf-dist/doc/latex/latex-lab/blocks-code.pdf
 share/texmf-dist/doc/latex/latex-lab/blocks-code.tex
@@ -11,13 +11,15 @@ share/texmf-dist/doc/latex/latex-lab/documentmetadata-support-doc.pdf
 share/texmf-dist/doc/latex/latex-lab/documentmetadata-support-doc.tex
 share/texmf-dist/doc/latex/latex-lab/latex-lab-amsmath.pdf
 share/texmf-dist/doc/latex/latex-lab/latex-lab-bib.pdf
-share/texmf-dist/doc/latex/latex-lab/latex-lab-block.pdf
+share/texmf-dist/doc/latex/latex-lab/latex-lab-context.pdf
 share/texmf-dist/doc/latex/latex-lab/latex-lab-firstaid.pdf
 share/texmf-dist/doc/latex/latex-lab/latex-lab-float.pdf
 share/texmf-dist/doc/latex/latex-lab/latex-lab-footnotes.pdf
 share/texmf-dist/doc/latex/latex-lab/latex-lab-graphic.pdf
+share/texmf-dist/doc/latex/latex-lab/latex-lab-l3doc-tagging.pdf
 share/texmf-dist/doc/latex/latex-lab/latex-lab-marginpar.pdf
 share/texmf-dist/doc/latex/latex-lab/latex-lab-math.pdf
+share/texmf-dist/doc/latex/latex-lab/latex-lab-mathintent.pdf
 share/texmf-dist/doc/latex/latex-lab/latex-lab-mathpkg.pdf
 share/texmf-dist/doc/latex/latex-lab/latex-lab-mathtools.pdf
 share/texmf-dist/doc/latex/latex-lab/latex-lab-minipage.pdf
@@ -28,7 +30,9 @@ share/texmf-dist/doc/latex/latex-lab/latex-lab-sec.pdf
 share/texmf-dist/doc/latex/latex-lab/latex-lab-table.pdf
 share/texmf-dist/doc/latex/latex-lab/latex-lab-testphase.pdf
 share/texmf-dist/doc/latex/latex-lab/latex-lab-text.pdf
+share/texmf-dist/doc/latex/latex-lab/latex-lab-tikz.pdf
 share/texmf-dist/doc/latex/latex-lab/latex-lab-title.pdf
 share/texmf-dist/doc/latex/latex-lab/latex-lab-toc-hyperref-changes.pdf
 share/texmf-dist/doc/latex/latex-lab/latex-lab-toc-kernel-changes.pdf
 share/texmf-dist/doc/latex/latex-lab/latex-lab-toc.pdf
+share/texmf-dist/doc/latex/latex-lab/latex-lab-unicode-math.pdf
