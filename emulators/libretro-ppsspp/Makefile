@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2026/03/11 08:13:43 adam Exp $
+# $NetBSD: Makefile,v 1.23 2026/03/30 16:06:23 adam Exp $
 
 .include "../../emulators/ppsspp/Makefile.common"
 
@@ -14,11 +14,16 @@ CMAKE_CONFIGURE_ARGS+=	-DLIBRETRO=ON
 
 INSTALLATION_DIRS+=	lib/libretro
 
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+
 post-install:
 	# clean up rubbish
 	${RM} -rf ${DESTDIR}${PREFIX}/share/applications
+	${RM} -rf ${DESTDIR}${PREFIX}/share/assets
 	${RM} -rf ${DESTDIR}${PREFIX}/share/icons
-	${INSTALL_LIB} ${WRKSRC}/${CMAKE_BUILD_DIR}/lib/ppsspp_libretro.so \
-		${DESTDIR}${PREFIX}/lib/libretro/ppsspp_libretro.so
+	${INSTALL_LIB} ${WRKSRC}/${CMAKE_BUILD_DIR}/lib/ppsspp_libretro.${SOEXT} \
+		${DESTDIR}${PREFIX}/lib/libretro/ppsspp_libretro.${SOEXT}
 
 .include "../../mk/bsd.pkg.mk"
