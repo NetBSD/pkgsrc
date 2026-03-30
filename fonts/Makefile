@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.454 2026/03/26 10:23:27 markd Exp $
+# $NetBSD: Makefile,v 1.455 2026/03/30 19:51:50 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -556,6 +556,8 @@ SUBDIR+=	tex-feyn
 SUBDIR+=	tex-feyn-doc
 SUBDIR+=	tex-fge
 SUBDIR+=	tex-fge-doc
+SUBDIR+=	tex-figureversions
+SUBDIR+=	tex-figureversions-doc
 SUBDIR+=	tex-fira
 SUBDIR+=	tex-fira-doc
 SUBDIR+=	tex-fixtounicode
