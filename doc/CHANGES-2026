@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2003 2026/03/30 08:58:17 markd Exp $
+$NetBSD: CHANGES-2026,v 1.2004 2026/03/30 08:58:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3032,3 +3032,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/tex-musixtex-doc to 1.41 [markd 2026-03-30]
 	Updated print/tex-mwcls to 0.77 [markd 2026-03-30]
 	Updated print/tex-mwcls-doc to 0.77 [markd 2026-03-30]
+	Updated lang/perl5 to 5.42.2 [wiz 2026-03-30]
