@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2026/03/26 23:44:25 ktnb Exp $
+$NetBSD: distinfo,v 1.40 2026/03/30 16:55:13 ktnb Exp $
 
 BLAKE2s (github.com__a_l_tree_bigfloat_@v_v0.2.0.mod) = ed554d44b1070ae79986f3ff61e6ad4ed12060fb78fe6f2273733f762721d1e0
 SHA512 (github.com__a_l_tree_bigfloat_@v_v0.2.0.mod) = 09bbd28b9ce42a919f22339bdeb2b798a728cf3b7f5f7fd61bec418fa360893c4ebd72f0957be4c855621f96d9a146ef8f0074f5ac4154c04f537ae3ad3592c4
@@ -218,3 +218,4 @@ SHA1 (patch-glfw_wl__init.c) = 3dc143fba1a5fa5c15563aecc027cd6af872a0e0
 SHA1 (patch-kitty_binary.h) = e8e6e9b16a1bd7d0304bca919ad10dd932142da5
 SHA1 (patch-kitty_data-types.h) = 1def5a8b129a7d25fdf98bd1d7b15b214b7c4960
 SHA1 (patch-kitty_threading.h) = 04886ab09ac2ab6f4925cd20e739e6b634299d55
+SHA1 (patch-setup.py) = 1a15e1dc4487c436b456957ce45404610663e4a1
