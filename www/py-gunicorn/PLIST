@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2026/02/16 12:48:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2026/03/30 11:14:58 adam Exp $
 bin/gunicorn-${PYVERSSUFFIX}
 bin/gunicornc-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -34,9 +34,9 @@ ${PYSITELIB}/gunicorn/asgi/__init__.pyo
 ${PYSITELIB}/gunicorn/asgi/lifespan.py
 ${PYSITELIB}/gunicorn/asgi/lifespan.pyc
 ${PYSITELIB}/gunicorn/asgi/lifespan.pyo
-${PYSITELIB}/gunicorn/asgi/message.py
-${PYSITELIB}/gunicorn/asgi/message.pyc
-${PYSITELIB}/gunicorn/asgi/message.pyo
+${PYSITELIB}/gunicorn/asgi/parser.py
+${PYSITELIB}/gunicorn/asgi/parser.pyc
+${PYSITELIB}/gunicorn/asgi/parser.pyo
 ${PYSITELIB}/gunicorn/asgi/protocol.py
 ${PYSITELIB}/gunicorn/asgi/protocol.pyc
 ${PYSITELIB}/gunicorn/asgi/protocol.pyo
