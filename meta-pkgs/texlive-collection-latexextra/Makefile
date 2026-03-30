@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2026/03/26 19:47:09 markd Exp $
+# $NetBSD: Makefile,v 1.100 2026/03/30 19:53:58 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2025pre3
+PKGNAME=	texlive-${DISTNAME}-2025pre4
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	78436
@@ -41,6 +41,7 @@ DEPENDS+=	tex-advdate-[0-9]*:../../print/tex-advdate
 # depend alchemist
 # depend alertmessage
 # depend aliascnt
+DEPENDS+=	tex-aliascnt-[0-9]*:../../print/tex-aliascnt
 # depend alnumsec
 DEPENDS+=	tex-alphalph-[0-9]*:../../print/tex-alphalph
 # depend alterqcm
@@ -567,7 +568,7 @@ DEPENDS+=	tex-excludeonly-[0-9]*:../../print/tex-excludeonly
 # depend fgruler
 # depend fifo-stack
 # depend figsize
-# depend figureversions
+DEPENDS+=	tex-figureversions-[0-9]*:../../fonts/tex-figureversions
 DEPENDS+=	tex-filecontents-[0-9]*:../../print/tex-filecontents
 # depend filecontentsdef
 # depend filedate
