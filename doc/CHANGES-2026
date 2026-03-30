@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1996 2026/03/29 20:02:04 markd Exp $
+$NetBSD: CHANGES-2026,v 1.1997 2026/03/30 02:38:45 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2991,3 +2991,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/tex-kotex-oblivoir-doc to 3.5 [markd 2026-03-29]
 	Updated print/tex-lastpage to 2.1h [markd 2026-03-29]
 	Updated print/tex-lastpage-doc to 2.1h [markd 2026-03-29]
+	Updated comms/asterisk21 to 21.12.2 [jnemeth 2026-03-30]
