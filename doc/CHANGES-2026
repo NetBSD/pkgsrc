@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2009 2026/03/30 10:50:47 markd Exp $
+$NetBSD: CHANGES-2026,v 1.2010 2026/03/30 11:15:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3045,3 +3045,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/tex-oberdiek to 2025 [markd 2026-03-30]
 	Updated print/tex-oberdiek-doc to 2025 [markd 2026-03-30]
 	Updated print/tex-overpic to 2.2 [markd 2026-03-30]
+	Updated textproc/py-regex to 2026.3.32 [adam 2026-03-30]
+	Updated www/py-gunicorn to 25.3.0 [adam 2026-03-30]
