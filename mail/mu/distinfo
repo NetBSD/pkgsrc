@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2026/01/29 16:41:56 ktnb Exp $
+$NetBSD: distinfo,v 1.14 2026/03/30 15:11:36 ktnb Exp $
 
-BLAKE2s (mu-1.12.15.tar.gz) = 0630bbe7e611ec02513feae0548b1f272f484714e3a4cf888f8e9f442c9f9704
-SHA512 (mu-1.12.15.tar.gz) = a8c95f62de6cffe44f98d54b36b68a70ae738e7a8c70badda21ffa9782811a3859bf508818c63a52f3a94f465001c705d34a32cbc469f4e16840754eb8e4bc4e
-Size (mu-1.12.15.tar.gz) = 1039899 bytes
+BLAKE2s (mu-1.14.0.tar.gz) = 27a042810bfcb7554c80337b2a85113289ea848209510d8bec5e6102e5fa237c
+SHA512 (mu-1.14.0.tar.gz) = 14f047df37b959fab8f8032b029e4f417acffd1d49cc06d033b03d668bf0c14dea202fa27462f26185434ed425b2d8b99b4f2fdcc86776487e7cd48769eff90f
+Size (mu-1.14.0.tar.gz) = 1042551 bytes
 SHA1 (patch-lib_message_mu-contact.hh) = dce9b6da318ccb7f6103a9d7796fdf3cf57e187e
 SHA1 (patch-mu4e_meson.build) = 8578ab905d8bb4e26b7ad27cf6cb3d68d353c7e1

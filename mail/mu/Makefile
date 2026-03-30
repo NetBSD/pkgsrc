@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2026/01/29 16:41:56 ktnb Exp $
+# $NetBSD: Makefile,v 1.24 2026/03/30 15:11:36 ktnb Exp $
 
-DISTNAME=	mu-1.12.15
+DISTNAME=	mu-1.14.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=djcb/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -19,14 +19,14 @@ PYTHON_FOR_BUILD_ONLY=		tool
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 REPLACE_PYTHON+=		build-aux/date.py
 
-USE_CXX_FEATURES+=	c++17 charconv
+USE_CXX_FEATURES+=	c++20 charconv
 
 .include "options.mk"
 
 .include "../../lang/python/application.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/meson/build.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.80.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mail/gmime3/buildlink3.mk"
 .include "../../textproc/xapian/buildlink3.mk"
