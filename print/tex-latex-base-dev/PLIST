@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/02/18 10:13:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/03/30 07:32:21 markd Exp $
 share/texmf-dist/tex/latex-dev/base/alltt.sty
 share/texmf-dist/tex/latex-dev/base/ansinew.def
 share/texmf-dist/tex/latex-dev/base/applemac.def
@@ -45,6 +45,7 @@ share/texmf-dist/tex/latex-dev/base/hyphen.ltx
 share/texmf-dist/tex/latex-dev/base/idx.tex
 share/texmf-dist/tex/latex-dev/base/ifthen.sty
 share/texmf-dist/tex/latex-dev/base/inputenc.sty
+share/texmf-dist/tex/latex-dev/base/l3in2edoc.cls
 share/texmf-dist/tex/latex-dev/base/lablst.tex
 share/texmf-dist/tex/latex-dev/base/latex.ltx
 share/texmf-dist/tex/latex-dev/base/latex209.def
@@ -67,6 +68,7 @@ share/texmf-dist/tex/latex-dev/base/ltluatex.lua
 share/texmf-dist/tex/latex-dev/base/ltluatex.tex
 share/texmf-dist/tex/latex-dev/base/ltnews.cls
 share/texmf-dist/tex/latex-dev/base/ltxcheck.tex
+share/texmf-dist/tex/latex-dev/base/ltxdoc-extra.ltx
 share/texmf-dist/tex/latex-dev/base/ltxdoc.cfg
 share/texmf-dist/tex/latex-dev/base/ltxdoc.cls
 share/texmf-dist/tex/latex-dev/base/ltxguide.cls

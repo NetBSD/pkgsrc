@@ -1,7 +1,7 @@
-This package provides a testing release for upcoming LaTeX2e
+This package provides a test release for upcoming LaTeX2e
 kernel changes. Testing by the LaTeX team itself suggests that
 the code is stable and usable, but wider use by knowledgeable
-users is required by adding these changes to the release LaTeX
-kernel. Typically, the code here will be used by a TeX system
-to create dedicated formats, for example pdflatex-dev, which
-can then be used explicitly for testing.
+users is desired. The code here is used by TeX systems to
+create dedicated formats, for example pdflatex-dev and
+lualatex-dev, which can then be used explicitly for testing,
+simply by changing your program invocation.
