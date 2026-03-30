@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2011 2026/03/30 13:05:08 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2012 2026/03/30 14:12:57 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3048,3 +3048,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-regex to 2026.3.32 [adam 2026-03-30]
 	Updated www/py-gunicorn to 25.3.0 [adam 2026-03-30]
 	Updated audio/spotify-player to 0.23.0 [pin 2026-03-30]
+	Updated net/megacmd to 2.5.1 [kikadf 2026-03-30]
