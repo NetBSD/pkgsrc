@@ -1,0 +1,2 @@
+This package introduces aliases for counters that share the
+same counter register and 'clear' list.

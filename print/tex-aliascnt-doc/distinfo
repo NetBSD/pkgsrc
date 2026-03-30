@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/30 19:46:23 markd Exp $
+
+BLAKE2s (aliascnt.doc.r78321.tar.xz) = e4a40a78a411cca90f780d2dfe6641a90f5a02540749971182bc7aa5f19f8fa8
+SHA512 (aliascnt.doc.r78321.tar.xz) = 3766c51adc0e429e355663811a32c2fc2a97da88bcf793b616159ec573629974b9dd905c66ae1c09057d3bc823dcdae42acee6da639fff5587390433f58b58ba
+Size (aliascnt.doc.r78321.tar.xz) = 325356 bytes
