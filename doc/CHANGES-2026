@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2019 2026/03/30 21:33:04 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2020 2026/03/30 21:34:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3064,3 +3064,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/nono to 1.7.0 [jun 2026-03-30]
 	Updated games/greed to 4.5 [wiz 2026-03-30]
 	Updated finance/gnucash to 5.15 [wiz 2026-03-30]
+	Updated finance/gnucash-docs to 5.15 [wiz 2026-03-30]
