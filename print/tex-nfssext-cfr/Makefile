@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2025/05/08 09:51:29 markd Exp $
+# $NetBSD: Makefile,v 1.5 2026/03/30 10:21:19 markd Exp $
 
 DISTNAME=	nfssext-cfr
-PKGNAME=	tex-${DISTNAME}-1.1
-TEXLIVE_REV=	72454
+PKGNAME=	tex-${DISTNAME}-1.3
+TEXLIVE_REV=	77682
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/nfssext-cfr
