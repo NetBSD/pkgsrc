@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2025/05/10 01:12:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/03/30 07:39:13 markd Exp $
 share/texmf-dist/tex/latex/latex-lab/bib-latex-lab-testphase.ltx
 share/texmf-dist/tex/latex/latex-lab/block-latex-lab-testphase.ltx
+share/texmf-dist/tex/latex/latex-lab/context-latex-lab-testphase.ltx
 share/texmf-dist/tex/latex/latex-lab/documentmetadata-support.ltx
 share/texmf-dist/tex/latex/latex-lab/firstaid-latex-lab-testphase.ltx
 share/texmf-dist/tex/latex/latex-lab/float-latex-lab-testphase.ltx
@@ -11,23 +12,30 @@ share/texmf-dist/tex/latex/latex-lab/latex-lab-footmisc.ltx
 share/texmf-dist/tex/latex/latex-lab/latex-lab-footnotes.ltx
 share/texmf-dist/tex/latex/latex-lab/latex-lab-kernel-changes.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-math.ltx
+share/texmf-dist/tex/latex/latex-lab/latex-lab-mathintent.ltx
 share/texmf-dist/tex/latex/latex-lab/latex-lab-mathpkg.ltx
 share/texmf-dist/tex/latex/latex-lab/latex-lab-mathtools.ltx
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-bib.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-block.sty
+share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-context.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-firstaid.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-float.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-graphic.sty
+share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-l3doc.sty
+share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-latest.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-marginpar.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-math.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-minipage.sty
+share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-names.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-new-or-1.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-new-or-2.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-sec.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-table.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-text.sty
+share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-tikz.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-title.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-toc.sty
+share/texmf-dist/tex/latex/latex-lab/latex-lab-unicode-math.ltx
 share/texmf-dist/tex/latex/latex-lab/marginpar-latex-lab-testphase.ltx
 share/texmf-dist/tex/latex/latex-lab/math-latex-lab-testphase.ltx
 share/texmf-dist/tex/latex/latex-lab/minipage-latex-lab-testphase.ltx
@@ -42,5 +50,6 @@ share/texmf-dist/tex/latex/latex-lab/tabular-latex-lab-testphase.ltx
 share/texmf-dist/tex/latex/latex-lab/tagpdf-latex-lab-testphase.ltx
 share/texmf-dist/tex/latex/latex-lab/tagpdf-ns-latex-lab.def
 share/texmf-dist/tex/latex/latex-lab/text-latex-lab-testphase.ltx
+share/texmf-dist/tex/latex/latex-lab/tikz-latex-lab-testphase.ltx
 share/texmf-dist/tex/latex/latex-lab/title-latex-lab-testphase.ltx
 share/texmf-dist/tex/latex/latex-lab/toc-latex-lab-testphase.ltx
