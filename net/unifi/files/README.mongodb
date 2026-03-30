@@ -1,10 +1,6 @@
-Ubiquiti recommends using mongodb 3.6 with Unifi.
+Ubiquiti recommends using mongodb 4 or later with Unifi.
 
-Unifi in pkgsrc can use either mongodb3 or mongodb4
-- mongodb3 (the default, and the last 3.4 version of mongodb before
-  the switch to server-side-public-license)
-- mongodb4 (requires the 'new' server-side-public-license, and
-  is not officially supported by Ubiquiti)
+Unifi in pkgsrc can use either mongodb4 or mongodb6.
 
 Recommended process of switching between them:
 - Login to unifi, and download a full backup
