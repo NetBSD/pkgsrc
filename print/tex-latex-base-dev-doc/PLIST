@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/05/11 03:53:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/03/30 07:32:21 markd Exp $
 share/texmf-dist/doc/latex-dev/base/README.md
 share/texmf-dist/doc/latex-dev/base/alltt.pdf
 share/texmf-dist/doc/latex-dev/base/bugs.txt
@@ -29,6 +29,8 @@ share/texmf-dist/doc/latex-dev/base/ifthen.pdf
 share/texmf-dist/doc/latex-dev/base/inputenc.pdf
 share/texmf-dist/doc/latex-dev/base/lamport-manual.err
 share/texmf-dist/doc/latex-dev/base/lamport-manual.pdf
+share/texmf-dist/doc/latex-dev/base/latex-cmds.pdf
+share/texmf-dist/doc/latex-dev/base/latex-cmds.tex
 share/texmf-dist/doc/latex-dev/base/latexrelease.pdf
 share/texmf-dist/doc/latex-dev/base/latexsym.pdf
 share/texmf-dist/doc/latex-dev/base/lb2.err
@@ -143,6 +145,10 @@ share/texmf-dist/doc/latex-dev/base/ltnews40.pdf
 share/texmf-dist/doc/latex-dev/base/ltnews40.tex
 share/texmf-dist/doc/latex-dev/base/ltnews41.pdf
 share/texmf-dist/doc/latex-dev/base/ltnews41.tex
+share/texmf-dist/doc/latex-dev/base/ltnews42.pdf
+share/texmf-dist/doc/latex-dev/base/ltnews42.tex
+share/texmf-dist/doc/latex-dev/base/ltnews43.pdf
+share/texmf-dist/doc/latex-dev/base/ltnews43.tex
 share/texmf-dist/doc/latex-dev/base/ltpara-code.pdf
 share/texmf-dist/doc/latex-dev/base/ltpara-code.tex
 share/texmf-dist/doc/latex-dev/base/ltpara-doc.pdf
