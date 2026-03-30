@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2024/02/18 10:28:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/03/30 08:54:29 markd Exp $
 bin/musixflx
 bin/musixtex
 share/texmf-dist/dvips/musixtex/psslurs.pro
@@ -9,11 +9,13 @@ share/texmf-dist/tex/generic/musixtex/musixbbm.tex
 share/texmf-dist/tex/generic/musixtex/musixblx.tex
 share/texmf-dist/tex/generic/musixtex/musixbm.tex
 share/texmf-dist/tex/generic/musixtex/musixcho.tex
+share/texmf-dist/tex/generic/musixtex/musixcls.tex
 share/texmf-dist/tex/generic/musixtex/musixcpt.tex
 share/texmf-dist/tex/generic/musixtex/musixcrd.tex
 share/texmf-dist/tex/generic/musixtex/musixdat.tex
 share/texmf-dist/tex/generic/musixtex/musixdbr.tex
 share/texmf-dist/tex/generic/musixtex/musixdia.tex
+share/texmf-dist/tex/generic/musixtex/musixebgr.tex
 share/texmf-dist/tex/generic/musixtex/musixec.tex
 share/texmf-dist/tex/generic/musixtex/musixeng.tex
 share/texmf-dist/tex/generic/musixtex/musixesf.tex
@@ -45,6 +47,7 @@ share/texmf-dist/tex/generic/musixtex/musixste.tex
 share/texmf-dist/tex/generic/musixtex/musixstf.tex
 share/texmf-dist/tex/generic/musixtex/musixstr.tex
 share/texmf-dist/tex/generic/musixtex/musixsty.tex
+share/texmf-dist/tex/generic/musixtex/musixt1.def
 share/texmf-dist/tex/generic/musixtex/musixtex.tex
 share/texmf-dist/tex/generic/musixtex/musixthacc.tex
 share/texmf-dist/tex/generic/musixtex/musixtmr.tex
