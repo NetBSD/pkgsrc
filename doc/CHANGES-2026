@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2015 2026/03/30 16:07:13 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2016 2026/03/30 20:06:26 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3054,3 +3054,10 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-xdis to 6.3.0 [adam 2026-03-30]
 	Updated lang/vala to 0.56.19 [adam 2026-03-30]
 	Updated emulators/ppsspp to 1.20.3 [adam 2026-03-30]
+	Added print/tex-aliascnt version 1.7 [markd 2026-03-30]
+	Added print/tex-aliascnt-doc version 1.7 [markd 2026-03-30]
+	Added fonts/tex-figureversions version 1.0.1 [markd 2026-03-30]
+	Added fonts/tex-figureversions-doc version 1.0.1 [markd 2026-03-30]
+	Updated print/tex-pageslts to 2.0g [markd 2026-03-30]
+	Updated print/tex-paracol to 1.37 [markd 2026-03-30]
+	Updated print/tex-paracol-doc to 1.37 [markd 2026-03-30]
