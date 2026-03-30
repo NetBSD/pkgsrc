@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/05/13 09:23:19 markd Exp $
+$NetBSD: distinfo,v 1.14 2026/03/30 08:44:52 markd Exp $
 
-BLAKE2s (minted.r74487.tar.xz) = 0cf24bf30a1f2600e0f8d514282a1461cc42052dce05a314f8d15401f3d0f461
-SHA512 (minted.r74487.tar.xz) = 6a3ed874fadecd7b6e8b74ff4131a688a5c6e01011a23d7564c744a59124fe39fb1a34554ed5e365af5668ea15b141e276a1e7bd463a2b286a9ef6a86f40abd2
-Size (minted.r74487.tar.xz) = 1290956 bytes
+BLAKE2s (minted.r78270.tar.xz) = 85a20d4c72dbb880384f5c0f4d9e19619e2358c9d6f81183d392af74d1eab73c
+SHA512 (minted.r78270.tar.xz) = c1052da89e96fa8daa35f6ad3d691897db58b60b6a426455ce1e647c1efe2679e9a6705788bfba4bbb94207a6f5cbe76ff5efc80c699eb4ad23776fabb4f01e6
+Size (minted.r78270.tar.xz) = 1295096 bytes
