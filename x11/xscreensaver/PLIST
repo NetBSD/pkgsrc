@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.61 2026/01/16 14:53:05 hauke Exp $
+@comment $NetBSD: PLIST,v 1.62 2026/03/31 12:26:33 hauke Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
@@ -19,6 +19,7 @@ libexec/xscreensaver/atunnel
 libexec/xscreensaver/barcode
 libexec/xscreensaver/batteredplanet
 libexec/xscreensaver/beats
+libexec/xscreensaver/bestill
 libexec/xscreensaver/binaryhorizon
 libexec/xscreensaver/binaryring
 libexec/xscreensaver/blaster
@@ -33,6 +34,7 @@ libexec/xscreensaver/boxfit
 libexec/xscreensaver/braid
 libexec/xscreensaver/bsod
 libexec/xscreensaver/bubble3d
+libexec/xscreensaver/bubblecolors
 libexec/xscreensaver/bumps
 libexec/xscreensaver/cage
 libexec/xscreensaver/carousel
@@ -60,6 +62,7 @@ libexec/xscreensaver/config/atunnel.xml
 libexec/xscreensaver/config/barcode.xml
 libexec/xscreensaver/config/batteredplanet.xml
 libexec/xscreensaver/config/beats.xml
+libexec/xscreensaver/config/bestill.xml
 libexec/xscreensaver/config/binaryhorizon.xml
 libexec/xscreensaver/config/binaryring.xml
 libexec/xscreensaver/config/blaster.xml
@@ -74,6 +77,7 @@ libexec/xscreensaver/config/boxfit.xml
 libexec/xscreensaver/config/braid.xml
 libexec/xscreensaver/config/bsod.xml
 libexec/xscreensaver/config/bubble3d.xml
+libexec/xscreensaver/config/bubblecolors.xml
 libexec/xscreensaver/config/bumps.xml
 libexec/xscreensaver/config/cage.xml
 libexec/xscreensaver/config/carousel.xml
@@ -100,6 +104,7 @@ libexec/xscreensaver/config/cubocteversion.xml
 libexec/xscreensaver/config/cwaves.xml
 libexec/xscreensaver/config/cynosure.xml
 libexec/xscreensaver/config/dangerball.xml
+libexec/xscreensaver/config/darktransit.xml
 libexec/xscreensaver/config/decayscreen.xml
 libexec/xscreensaver/config/deco.xml
 libexec/xscreensaver/config/deepstars.xml
@@ -108,7 +113,9 @@ libexec/xscreensaver/config/demon.xml
 libexec/xscreensaver/config/discoball.xml
 libexec/xscreensaver/config/discrete.xml
 libexec/xscreensaver/config/distort.xml
+libexec/xscreensaver/config/downfall.xml
 libexec/xscreensaver/config/drift.xml
+libexec/xscreensaver/config/driftclouds.xml
 libexec/xscreensaver/config/droste.xml
 libexec/xscreensaver/config/dumpsterfire.xml
 libexec/xscreensaver/config/dymaxionmap.xml
@@ -156,6 +163,7 @@ libexec/xscreensaver/config/glschool.xml
 libexec/xscreensaver/config/glslideshow.xml
 libexec/xscreensaver/config/glsnake.xml
 libexec/xscreensaver/config/gltext.xml
+libexec/xscreensaver/config/goldenapollian.xml
 libexec/xscreensaver/config/goop.xml
 libexec/xscreensaver/config/grav.xml
 libexec/xscreensaver/config/gravitywell.xml
@@ -220,6 +228,7 @@ libexec/xscreensaver/config/neontriangulator.xml
 libexec/xscreensaver/config/nerverot.xml
 libexec/xscreensaver/config/noof.xml
 libexec/xscreensaver/config/noseguy.xml
+libexec/xscreensaver/config/noxfire.xml
 libexec/xscreensaver/config/pacman.xml
 libexec/xscreensaver/config/papercube.xml
 libexec/xscreensaver/config/pedal.xml
@@ -238,6 +247,7 @@ libexec/xscreensaver/config/polyominoes.xml
 libexec/xscreensaver/config/polytopes.xml
 libexec/xscreensaver/config/pong.xml
 libexec/xscreensaver/config/popsquares.xml
+libexec/xscreensaver/config/prococean.xml
 libexec/xscreensaver/config/projectiveplane.xml
 libexec/xscreensaver/config/protophore.xml
 libexec/xscreensaver/config/providence.xml
@@ -249,6 +259,7 @@ libexec/xscreensaver/config/queens.xml
 libexec/xscreensaver/config/raverhoop.xml
 libexec/xscreensaver/config/razzledazzle.xml
 libexec/xscreensaver/config/rdbomb.xml
+libexec/xscreensaver/config/rigrekt.xml
 libexec/xscreensaver/config/ripples.xml
 libexec/xscreensaver/config/rocks.xml
 libexec/xscreensaver/config/romanboy.xml
@@ -295,12 +306,15 @@ libexec/xscreensaver/config/tessellimage.xml
 libexec/xscreensaver/config/timetunnel.xml
 libexec/xscreensaver/config/topblock.xml
 libexec/xscreensaver/config/topologica.xml
+libexec/xscreensaver/config/trainmandala.xml
 libexec/xscreensaver/config/triangle.xml
+libexec/xscreensaver/config/trizm.xml
 libexec/xscreensaver/config/tronbit.xml
 libexec/xscreensaver/config/truchet.xml
 libexec/xscreensaver/config/truchetzoom.xml
 libexec/xscreensaver/config/twang.xml
 libexec/xscreensaver/config/unicrud.xml
+libexec/xscreensaver/config/universeball.xml
 libexec/xscreensaver/config/unknownpleasures.xml
 libexec/xscreensaver/config/vermiculate.xml
 libexec/xscreensaver/config/vfeedback.xml
@@ -311,6 +325,7 @@ libexec/xscreensaver/config/wander.xml
 libexec/xscreensaver/config/webcollage.xml
 libexec/xscreensaver/config/whirlwindwarp.xml
 libexec/xscreensaver/config/winduprobot.xml
+libexec/xscreensaver/config/worldpieces.xml
 libexec/xscreensaver/config/wormhole.xml
 libexec/xscreensaver/config/xanalogtv.xml
 libexec/xscreensaver/config/xflame.xml
@@ -335,6 +350,7 @@ libexec/xscreensaver/cubocteversion
 libexec/xscreensaver/cwaves
 libexec/xscreensaver/cynosure
 libexec/xscreensaver/dangerball
+libexec/xscreensaver/darktransit
 libexec/xscreensaver/decayscreen
 libexec/xscreensaver/deco
 libexec/xscreensaver/deepstars
@@ -343,7 +359,9 @@ libexec/xscreensaver/demon
 libexec/xscreensaver/discoball
 libexec/xscreensaver/discrete
 libexec/xscreensaver/distort
+libexec/xscreensaver/downfall
 libexec/xscreensaver/drift
+libexec/xscreensaver/driftclouds
 libexec/xscreensaver/droste
 libexec/xscreensaver/dumpsterfire
 libexec/xscreensaver/dymaxionmap
@@ -391,6 +409,7 @@ libexec/xscreensaver/glschool
 libexec/xscreensaver/glslideshow
 libexec/xscreensaver/glsnake
 libexec/xscreensaver/gltext
+libexec/xscreensaver/goldenapollian
 libexec/xscreensaver/goop
 libexec/xscreensaver/grav
 libexec/xscreensaver/gravitywell
@@ -456,6 +475,7 @@ libexec/xscreensaver/neontriangulator
 libexec/xscreensaver/nerverot
 libexec/xscreensaver/noof
 libexec/xscreensaver/noseguy
+libexec/xscreensaver/noxfire
 libexec/xscreensaver/pacman
 libexec/xscreensaver/papercube
 libexec/xscreensaver/pedal
@@ -474,6 +494,7 @@ libexec/xscreensaver/polyominoes
 libexec/xscreensaver/polytopes
 libexec/xscreensaver/pong
 libexec/xscreensaver/popsquares
+libexec/xscreensaver/prococean
 libexec/xscreensaver/projectiveplane
 libexec/xscreensaver/protophore
 libexec/xscreensaver/providence
@@ -485,6 +506,7 @@ libexec/xscreensaver/queens
 libexec/xscreensaver/raverhoop
 libexec/xscreensaver/razzledazzle
 libexec/xscreensaver/rdbomb
+libexec/xscreensaver/rigrekt
 libexec/xscreensaver/ripples
 libexec/xscreensaver/rocks
 libexec/xscreensaver/romanboy
@@ -531,12 +553,15 @@ libexec/xscreensaver/tessellimage
 libexec/xscreensaver/timetunnel
 libexec/xscreensaver/topblock
 libexec/xscreensaver/topologica
+libexec/xscreensaver/trainmandala
 libexec/xscreensaver/triangle
+libexec/xscreensaver/trizm
 libexec/xscreensaver/tronbit
 libexec/xscreensaver/truchet
 libexec/xscreensaver/truchetzoom
 libexec/xscreensaver/twang
 libexec/xscreensaver/unicrud
+libexec/xscreensaver/universeball
 libexec/xscreensaver/unknownpleasures
 libexec/xscreensaver/vermiculate
 libexec/xscreensaver/vfeedback
@@ -548,6 +573,7 @@ libexec/xscreensaver/webcollage
 libexec/xscreensaver/webcollage-helper
 libexec/xscreensaver/whirlwindwarp
 libexec/xscreensaver/winduprobot
+libexec/xscreensaver/worldpieces
 libexec/xscreensaver/wormhole
 libexec/xscreensaver/xanalogtv
 libexec/xscreensaver/xflame
@@ -584,6 +610,7 @@ man/man6/atunnel.6
 man/man6/barcode.6
 man/man6/batteredplanet.6
 man/man6/beats.6
+man/man6/bestill.6
 man/man6/binaryhorizon.6
 man/man6/binaryring.6
 man/man6/blaster.6
@@ -598,6 +625,7 @@ man/man6/boxfit.6
 man/man6/braid.6
 man/man6/bsod.6
 man/man6/bubble3d.6
+man/man6/bubblecolors.6
 man/man6/bumps.6
 man/man6/cage.6
 man/man6/carousel.6
@@ -624,6 +652,7 @@ man/man6/cubocteversion.6
 man/man6/cwaves.6
 man/man6/cynosure.6
 man/man6/dangerball.6
+man/man6/darktransit.6
 man/man6/decayscreen.6
 man/man6/deco.6
 man/man6/deepstars.6
@@ -632,7 +661,9 @@ man/man6/demon.6
 man/man6/discoball.6
 man/man6/discrete.6
 man/man6/distort.6
+man/man6/downfall.6
 man/man6/drift.6
+man/man6/driftclouds.6
 man/man6/droste.6
 man/man6/dymaxionmap.6
 man/man6/elementalring.6
@@ -679,6 +710,7 @@ man/man6/glschool.6
 man/man6/glslideshow.6
 man/man6/glsnake.6
 man/man6/gltext.6
+man/man6/goldenapollian.6
 man/man6/goop.6
 man/man6/grav.6
 man/man6/gravitywell.6
@@ -742,6 +774,7 @@ man/man6/neontriangulator.6
 man/man6/nerverot.6
 man/man6/noof.6
 man/man6/noseguy.6
+man/man6/noxfire.6
 man/man6/pacman.6
 man/man6/papercube.6
 man/man6/pedal.6
@@ -760,6 +793,7 @@ man/man6/polyominoes.6
 man/man6/polytopes.6
 man/man6/pong.6
 man/man6/popsquares.6
+man/man6/prococean.6
 man/man6/projectiveplane.6
 man/man6/protophore.6
 man/man6/providence.6
@@ -771,6 +805,7 @@ man/man6/queens.6
 man/man6/raverhoop.6
 man/man6/razzledazzle.6
 man/man6/rdbomb.6
+man/man6/rigrekt.6
 man/man6/ripples.6
 man/man6/rocks.6
 man/man6/romanboy.6
@@ -817,12 +852,15 @@ man/man6/tessellimage.6
 man/man6/timetunnel.6
 man/man6/topblock.6
 man/man6/topologica.6
+man/man6/trainmandala.6
 man/man6/triangle.6
+man/man6/trizm.6
 man/man6/tronbit.6
 man/man6/truchet.6
 man/man6/truchetzoom.6
 man/man6/twang.6
 man/man6/unicrud.6
+man/man6/universeball.6
 man/man6/unknownpleasures.6
 man/man6/vermiculate.6
 man/man6/vfeedback.6
@@ -833,6 +871,7 @@ man/man6/wander.6
 man/man6/webcollage.6
 man/man6/whirlwindwarp.6
 man/man6/winduprobot.6
+man/man6/worldpieces.6
 man/man6/wormhole.6
 man/man6/xanalogtv.6
 man/man6/xflame.6
