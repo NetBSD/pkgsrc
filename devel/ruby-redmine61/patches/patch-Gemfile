@@ -1,11 +1,11 @@
-$NetBSD: patch-Gemfile,v 1.1 2026/02/11 07:53:37 taca Exp $
+$NetBSD: patch-Gemfile,v 1.1.2.1 2026/03/31 13:02:19 maya Exp $
 
 * Relax dependency.
 * Do not load gem for developemt and test.
 
---- Gemfile.orig	2026-01-06 02:25:05.000000000 +0000
+--- Gemfile.orig	2026-03-17 07:40:07.000000000 +0000
 +++ Gemfile
-@@ -2,14 +2,14 @@ source 'https://rubygems.org'
+@@ -2,7 +2,7 @@ source 'https://rubygems.org'
  
  ruby '>= 3.2.0', '< 3.5.0'
  
@@ -14,14 +14,6 @@ $NetBSD: patch-Gemfile,v 1.1 2026/02/11 07:53:37 taca Exp $
  gem 'rouge', '~> 4.5'
  gem 'mini_mime', '~> 1.1.0'
  gem "actionpack-xml_parser"
- gem 'roadie-rails', '~> 3.3.0'
- gem 'marcel'
- gem 'mail', '~> 2.8.1'
--gem 'nokogiri', '~> 1.18.3'
-+gem 'nokogiri', '~> 1.18'
- gem 'i18n', '~> 1.14.1'
- gem 'rbpdf', '~> 1.21.4'
- gem 'addressable'
 @@ -38,17 +38,17 @@ gem 'rotp', '>= 5.0.0'
  gem 'rqrcode'
  
