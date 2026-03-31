@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2037 2026/03/31 19:16:19 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2038 2026/03/31 20:03:48 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3138,3 +3138,15 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/ncdu2 to 2.9.2 [wiz 2026-03-31]
 	Updated lang/sbcl to 2.6.3 [ktnb 2026-03-31]
 	Updated archivers/xz to 5.8.3 [wiz 2026-03-31]
+	Updated print/tex-tools to 20251101 [markd 2026-03-31]
+	Updated print/tex-tools-doc to 20251101 [markd 2026-03-31]
+	Updated print/tex-transparent to 1.6 [markd 2026-03-31]
+	Updated print/tex-transparent-doc to 1.6 [markd 2026-03-31]
+	Updated print/tex-unicode-data to 1.19 [markd 2026-03-31]
+	Updated print/tex-unicode-data-doc to 1.19 [markd 2026-03-31]
+	Updated print/tex-xepersian to 26.01.01 [markd 2026-03-31]
+	Updated print/tex-xepersian-doc to 26.01.01 [markd 2026-03-31]
+	Updated print/tex-xkeyval to 2.10 [markd 2026-03-31]
+	Updated print/tex-xkeyval-doc to 2.10 [markd 2026-03-31]
+	Updated print/tex-zref to 2.37 [markd 2026-03-31]
+	Updated print/tex-zref-doc to 2.37 [markd 2026-03-31]
