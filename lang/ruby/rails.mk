@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.187.2.1 2026/03/31 13:31:41 maya Exp $
+# $NetBSD: rails.mk,v 1.187.2.2 2026/03/31 13:37:47 maya Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -49,7 +49,7 @@ _RUBY_RAILS_MK=	# defined
 #
 RUBY_RAILS61_VERSION?=	6.1.7.10
 RUBY_RAILS72_VERSION?=	7.2.3.1
-RUBY_RAILS80_VERSION?=	8.0.4
+RUBY_RAILS80_VERSION?=	8.0.5
 
 RUBY_RAILS_ACCEPTED?=	# empty
 RUBY_RAILS_DEFAULT?=	72
