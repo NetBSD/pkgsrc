@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/02/23 08:57:52 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/03/31 13:12:48 adam Exp $
 
-DISTNAME=	async_lru-2.2.0
+DISTNAME=	async_lru-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/async-lru/}
