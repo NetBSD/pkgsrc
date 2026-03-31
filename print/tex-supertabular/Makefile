@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2025/05/08 08:39:43 markd Exp $
+# $NetBSD: Makefile,v 1.9 2026/03/31 09:42:12 markd Exp $
 
 DISTNAME=	supertabular
-PKGNAME=	tex-${DISTNAME}-4.2c
-TEXLIVE_REV=	71854
+PKGNAME=	tex-${DISTNAME}-4.2c.77682
+TEXLIVE_REV=	77682
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/supertabular

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2025/05/08 08:39:43 markd Exp $
+$NetBSD: distinfo,v 1.7 2026/03/31 09:42:12 markd Exp $
 
-BLAKE2s (supertabular.r71854.tar.xz) = 2286a1104c685a096f4e7b65853aea0821f6c98f23f2e17e0ab0a650393ddf07
-SHA512 (supertabular.r71854.tar.xz) = 0cd20330929b05ea4510c05ffe9c1a7897e8eaa2aab75a8f520cdce82e14a9e84d560963a388641e8918c0ce226fc985a68a77e677e806590b9adf408408497a
-Size (supertabular.r71854.tar.xz) = 4020 bytes
+BLAKE2s (supertabular.r77682.tar.xz) = 05fd0f4010ae775060df41a483c83a1b71e3092b73c4e83e38303c7c620cf12f
+SHA512 (supertabular.r77682.tar.xz) = 7911ec5abdd4bdfad70e8a01a9f8ad30fc7cb691cbd5d4e13309ce0b491ad1a014d1669d64d4340cbd983dd16c9b6e29d11c618bcf1abf71a8f816b47920ceba
+Size (supertabular.r77682.tar.xz) = 4084 bytes
