@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:14:20 nia Exp $
+$NetBSD: distinfo,v 1.14 2026/03/31 08:01:43 markd Exp $
 
-BLAKE2s (pgfplots.doc.r59243.tar.xz) = 431f6b08a2cd27450e421c8c6a95762c3f207888b3b9bb504e49fb511432b141
-SHA512 (pgfplots.doc.r59243.tar.xz) = 998246b7c5415e910ff168ffea064aed80957a9f29b09875f8871c9f04d2a52c50a33f7f3cd490a1195c5566ce310330cfba0a5bb7155eb14b944e05e9d1557c
-Size (pgfplots.doc.r59243.tar.xz) = 13086872 bytes
+BLAKE2s (pgfplots.doc.r77682.tar.xz) = 8dd5dccc0b26c2dff224b0958d7faeab6fee9c9a32b45130773097ac444d2b42
+SHA512 (pgfplots.doc.r77682.tar.xz) = 2d3bade56efbb7d00350e070e20bcd7d34230fbaa9eafe7d40087988c3f0ed11b227ce9b980a4edf3076aab63fc02454b70cb2df4f40569abb68ecd41ac79537
+Size (pgfplots.doc.r77682.tar.xz) = 12997780 bytes
