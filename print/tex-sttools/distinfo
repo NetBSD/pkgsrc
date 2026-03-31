@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/05/10 23:27:34 markd Exp $
+$NetBSD: distinfo,v 1.14 2026/03/31 09:37:26 markd Exp $
 
-BLAKE2s (sttools.r74941.tar.xz) = d5adb9c5c01ba78a5f14f14764aec3d0fec3bc6f47cc15ceb0011238984c5bd7
-SHA512 (sttools.r74941.tar.xz) = 366ebaed2e2f390d431f46b70ba2bc8b9332aae3cc75bcf7e343b1e622effe2f123a3055e2ba8b2e3a9b9957b8fe5a948954f537b1e2a617caa12cc9759672b7
-Size (sttools.r74941.tar.xz) = 14048 bytes
+BLAKE2s (sttools.r77682.tar.xz) = dcd9d9bb33c902f6a8ced76151b002a9242631c200d0e223086d1590a59d04fd
+SHA512 (sttools.r77682.tar.xz) = 1aec9639771d08f2c6af2112ee227e9c88a93e9325535c5a41272d67fb29383cb7d22938c1b2dd7c24dd961a333374b525f8ec4cfd69eb070f9985476b64a38c
+Size (sttools.r77682.tar.xz) = 12916 bytes

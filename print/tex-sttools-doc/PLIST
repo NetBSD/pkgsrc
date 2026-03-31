@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2016/08/07 09:09:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/03/31 09:37:26 markd Exp $
 share/texmf-dist/doc/latex/sttools/README.md
 share/texmf-dist/doc/latex/sttools/cuted.pdf
 share/texmf-dist/doc/latex/sttools/floatpag.pdf
 share/texmf-dist/doc/latex/sttools/flushend.pdf
-share/texmf-dist/doc/latex/sttools/midfloat.pdf
 share/texmf-dist/doc/latex/sttools/stabular.pdf
 share/texmf-dist/doc/latex/sttools/stfloats.pdf
 share/texmf-dist/doc/latex/sttools/sttools.pdf
-share/texmf-dist/doc/latex/sttools/texsort.pdf
