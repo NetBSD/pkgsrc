@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/05/07 12:41:54 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/03/31 08:15:16 markd Exp $
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/arabicdigits.map
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/arabicdigits.tec
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/bengalidigits.map
@@ -74,6 +74,7 @@ share/texmf-dist/tex/latex/polyglossia/gloss-chinese.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-ckb-Arab.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-ckb-Latn.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-ckb.ldf
+share/texmf-dist/tex/latex/polyglossia/gloss-classicallatin.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-classiclatin.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-cop.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-coptic.ldf
@@ -107,6 +108,7 @@ share/texmf-dist/tex/latex/polyglossia/gloss-divehi.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-dsb.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-dutch.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-dv.ldf
+share/texmf-dist/tex/latex/polyglossia/gloss-ecclesiasticallatin.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-ecclesiasticlatin.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-el-monoton.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-el-polyton.ldf
