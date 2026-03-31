@@ -1,12 +1,10 @@
-$NetBSD: distinfo,v 1.100 2026/01/16 23:12:45 hauke Exp $
+$NetBSD: distinfo,v 1.101 2026/03/31 12:26:33 hauke Exp $
 
-BLAKE2s (xscreensaver-6.14.tar.gz) = ff2fc65ea42769f6401bcb2891f5cd24451865182672d36752957b3e90733794
-SHA512 (xscreensaver-6.14.tar.gz) = 2ef426f7ae862e7b4665014843451410e30dce8dcc16b98e94c58c0a904bba8ab9eb0f561599ea57eb68df49265171507074026784fdbff23fafeb87175e47df
-Size (xscreensaver-6.14.tar.gz) = 25206667 bytes
+BLAKE2s (xscreensaver-6.15.tar.gz) = 0ffb59dd16ba07894de90830843166aad4d1dee159f14a5156441c962a9311b1
+SHA512 (xscreensaver-6.15.tar.gz) = 0f7284ad0cf3be7c5f9aafa9b5a37795d1dd358d47fe9bb69dca916e767be5e00308a9fcc7f2057391f48921fde30142a4d5c92ef1bd67428e8f927de4a50d8c
+Size (xscreensaver-6.15.tar.gz) = 34014219 bytes
 SHA1 (patch-configure) = 4821b6f4400976990b6042677960a53e25f03a24
 SHA1 (patch-driver_XScreenSaver.ad.in) = 28a921f7506338cac25da20cfa7cbb900e5957c1
 SHA1 (patch-driver_xscreensaver-settings.desktop.in) = 524d54cbc0e6baf491a176955fce75076240a395
 SHA1 (patch-driver_xscreensaver.desktop.in) = 2cd34016e705da23e54e32d7b282f1388f0e0419
-SHA1 (patch-hacks_glx_Makefile.in) = 690d534f9381cfe6247f135afc11d732d9f35e64
 SHA1 (patch-hacks_glx_xshadertoy-compile.pl) = 939a50730e3a7a8f6006dbef4dc13f6202c449ef
-SHA1 (patch-hacks_glx_xshadertoy.c) = 9fc777f270af137a96bca7dfd6f461be6d5e492b
