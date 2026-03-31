@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2026/03/26 09:31:53 adam Exp $
+# $NetBSD: Makefile,v 1.103 2026/03/31 17:42:29 wiz Exp $
 #
 # When updating this, please also update devel/py-protobuf.
 #
@@ -22,6 +22,9 @@ LICENSE=	modified-bsd
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 FORCE_CXX_STD=		c++17
+
+# https://github.com/protocolbuffers/protobuf/issues/26383
+GCC_REQD+=	13
 
 CMAKE_CONFIGURE_ARGS+=	-Dprotobuf_ABSL_PROVIDER=package
 # FIXME: Currently libupd makes net/grpc build fail.
