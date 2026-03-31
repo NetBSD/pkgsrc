@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.106 2026/02/24 19:20:34 adam Exp $
+# $NetBSD: Makefile,v 1.107 2026/03/31 04:53:29 adam Exp $
 
-DISTNAME=	ansible-13.4.0
+DISTNAME=	ansible-13.5.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible/}
 
@@ -16,7 +16,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 # Each ansible release tracks a specific release branch of ansible-core.
 # Enforce this by using an upper limit for the dependency version.
 # PLEASE KEEP THE UPPER LIMIT WHEN UPGRADING THIS PACKAGE.
-DEPENDS+=	ansible-core>=2.20.3<2.21:../../sysutils/ansible-core
+DEPENDS+=	ansible-core>=2.20.4<2.21:../../sysutils/ansible-core
 
 USE_LANGUAGES=	# none
 
@@ -74,6 +74,7 @@ CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/cyberark/conjur/dev/*
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/cyberark/conjur/roles/conjur_host_identity/tests/test.sh*
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/google/cloud/scripts/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/google/cloud/test-fixtures/cloud-function-source/*.sh
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/graphiant/naas/configs/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/hetzner/hcloud/scripts/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/grafana/grafana/tools/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/infinidat/infinibox/bin/*.sh
