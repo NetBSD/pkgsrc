@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/03/21 19:55:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/03/31 09:22:46 markd Exp $
+share/texmf-dist/doc/latex/sjtutex/CHANGELOG.md
 share/texmf-dist/doc/latex/sjtutex/README.md
 share/texmf-dist/doc/latex/sjtutex/sjtutex.pdf
