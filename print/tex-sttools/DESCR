@@ -1,5 +1,4 @@
 A collection of tools and macros, providing: miscellaneous
 float control, page styles for floats, multipage tabulars, even
 columns at end of twocolumn region, switching between one- and
-two-column anywhere, simulating the effect of "midfloats", a
-package to manipulate numerical lists and arrays.
+two-column anywhere,
