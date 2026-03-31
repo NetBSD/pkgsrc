@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.674 2026/02/17 18:41:01 markd Exp $
+# $NetBSD: Makefile,v 1.675 2026/03/31 13:58:20 khorben Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -309,6 +309,7 @@ SUBDIR+=	qbrew
 SUBDIR+=	qt6-qtsensors
 SUBDIR+=	qt6gtk2
 SUBDIR+=	qterm
+SUBDIR+=	raspberrypi-usbboot
 SUBDIR+=	raspberrypi-userland
 SUBDIR+=	reed
 SUBDIR+=	rhash
