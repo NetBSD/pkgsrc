@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.69 2026/02/17 15:47:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.70 2026/03/31 04:35:21 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -52,6 +52,9 @@ ${PYSITELIB}/faker/providers/__init__.pyo
 ${PYSITELIB}/faker/providers/address/__init__.py
 ${PYSITELIB}/faker/providers/address/__init__.pyc
 ${PYSITELIB}/faker/providers/address/__init__.pyo
+${PYSITELIB}/faker/providers/address/ar_DZ/__init__.py
+${PYSITELIB}/faker/providers/address/ar_DZ/__init__.pyc
+${PYSITELIB}/faker/providers/address/ar_DZ/__init__.pyo
 ${PYSITELIB}/faker/providers/address/az_AZ/__init__.py
 ${PYSITELIB}/faker/providers/address/az_AZ/__init__.pyc
 ${PYSITELIB}/faker/providers/address/az_AZ/__init__.pyo
@@ -145,6 +148,9 @@ ${PYSITELIB}/faker/providers/address/fr_CA/__init__.pyo
 ${PYSITELIB}/faker/providers/address/fr_CH/__init__.py
 ${PYSITELIB}/faker/providers/address/fr_CH/__init__.pyc
 ${PYSITELIB}/faker/providers/address/fr_CH/__init__.pyo
+${PYSITELIB}/faker/providers/address/fr_DZ/__init__.py
+${PYSITELIB}/faker/providers/address/fr_DZ/__init__.pyc
+${PYSITELIB}/faker/providers/address/fr_DZ/__init__.pyo
 ${PYSITELIB}/faker/providers/address/fr_FR/__init__.py
 ${PYSITELIB}/faker/providers/address/fr_FR/__init__.pyc
 ${PYSITELIB}/faker/providers/address/fr_FR/__init__.pyo
