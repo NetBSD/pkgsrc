@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2025 2026/03/31 08:16:29 markd Exp $
+$NetBSD: CHANGES-2026,v 1.2026 2026/03/31 09:43:50 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3092,3 +3092,23 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/tex-pmhanguljamo-doc to 1.3 [markd 2026-03-31]
 	Updated print/tex-polyglossia to 2.9 [markd 2026-03-31]
 	Updated print/tex-polyglossia-doc to 2.9 [markd 2026-03-31]
+	Updated print/tex-quran to 2.42 [markd 2026-03-31]
+	Updated print/tex-quran-doc to 2.42 [markd 2026-03-31]
+	Updated print/tex-rerunfilecheck to 1.11 [markd 2026-03-31]
+	Updated print/tex-rerunfilecheck-doc to 1.11 [markd 2026-03-31]
+	Updated print/tex-schulmathematik to 1.7.1 [markd 2026-03-31]
+	Updated print/tex-schulmathematik-doc to 1.7.1 [markd 2026-03-31]
+	Updated print/tex-showlabels to 1.9.3 [markd 2026-03-31]
+	Updated print/tex-showlabels-doc to 1.9.3 [markd 2026-03-31]
+	Updated print/tex-simplekv to 0.32 [markd 2026-03-31]
+	Updated print/tex-simplekv-doc to 0.32 [markd 2026-03-31]
+	Updated print/tex-siunitx to 3.5.1 [markd 2026-03-31]
+	Updated print/tex-siunitx-doc to 3.5.1 [markd 2026-03-31]
+	Updated print/tex-sjtutex to 2.3.1 [markd 2026-03-31]
+	Updated print/tex-sjtutex-doc to 2.3.1 [markd 2026-03-31]
+	Updated print/tex-soul to 3.2 [markd 2026-03-31]
+	Updated print/tex-soul-doc to 3.2 [markd 2026-03-31]
+	Updated print/tex-sttools to 3.5 [markd 2026-03-31]
+	Updated print/tex-sttools-doc to 3.5 [markd 2026-03-31]
+	Updated print/tex-supertabular to 4.2c.77682 [markd 2026-03-31]
+	Updated print/tex-supertabular-doc to 4.2c.77682 [markd 2026-03-31]
