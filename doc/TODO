@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27030 2026/03/31 11:15:04 wiz Exp $
+$NetBSD: TODO,v 1.27031 2026/03/31 19:16:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1201,6 +1201,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o samtools-1.23.1
 	o sarg-2.4.0
 	o sasm-3.12.1
+	o scamper-20260331 [pkg/60151]
 	o scew-1.1.7
 	o scilab-5.5.2
 	o scm-5f3 [dholland has a partial update]
