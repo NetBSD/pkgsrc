@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2026/03/31 13:57:50 khorben Exp $
+
+BLAKE2s (usbboot-1.0.tar.gz) = 02e024234b5bd33ecf6955e94ff1aee2176c409b36a20b657acae38cccb5383d
+SHA512 (usbboot-1.0.tar.gz) = 3653fe3c15c5f98998e3dfcbd4e028ab02f450616f5f0f26a75e5f8dd79a9759794fa4bbf718fca08417071e1cdfd2a46706cb2f4ef8cd0d39b7c3936b176906
+Size (usbboot-1.0.tar.gz) = 127060298 bytes
+SHA1 (patch-Makefile) = 8c9b8795674ea0466e245527c5b0ed77e9f76013
+SHA1 (patch-fmemopen.c) = 011a7ee5a974ba17907eafe1b38ef76c6b74d4a3

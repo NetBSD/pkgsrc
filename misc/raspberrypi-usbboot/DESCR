@@ -1,0 +1,10 @@
+This contains the Raspberry Pi USB device boot software known as rpiboot. The
+rpiboot tool provides a file server for loading software into memory on a
+Raspberry Pi for provisioning. By default, it boots the device with firmware
+that makes it appear to the host as a USB mass-storage device. The host
+operating system then treats it as a standard USB drive, allowing the filesystem
+to be accessed. An operating system image can be written to the device using the
+Raspberry Pi Imager.
+
+On Compute Module 4 and newer devices, rpiboot is also used to update the
+bootloader SPI flash EEPROM.
