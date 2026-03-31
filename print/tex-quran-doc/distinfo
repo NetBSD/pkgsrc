@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/05/10 23:03:22 markd Exp $
+$NetBSD: distinfo,v 1.4 2026/03/31 09:00:34 markd Exp $
 
-BLAKE2s (quran.doc.r75029.tar.xz) = faad755aa572112082befd2d4c3680333a7246b99719e85a1d270024695cab65
-SHA512 (quran.doc.r75029.tar.xz) = e0ba57cb112ea61f821a72e8fbf6926e04ec868a8f7800970aba70dfa4489edb6e07566c1fe9f28c7c78e30585eab377aa7bfbdf1af159be865f37e32c9e7c99
-Size (quran.doc.r75029.tar.xz) = 1050484 bytes
+BLAKE2s (quran.doc.r78362.tar.xz) = b91267bdce729a5011fde90dc3dc95db0041c312d2505e5eea405a4b9802b0d6
+SHA512 (quran.doc.r78362.tar.xz) = 1f3286504ce47b7ad1c4d0773a55480994edbc45ca9edd450f831b5edc109279d3872ff26a0c03bb9bb5840a9089d39ffaaeaceaf71ea8e255e9ac73546ade10
+Size (quran.doc.r78362.tar.xz) = 1050800 bytes
