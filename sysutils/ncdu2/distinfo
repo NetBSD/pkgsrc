@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/06/12 07:20:24 wiz Exp $
+$NetBSD: distinfo,v 1.5 2026/03/31 18:01:01 wiz Exp $
 
-BLAKE2s (ncdu-2.8.2.tar.gz) = 560baad7b14f78cc6412e969277e326df173d104cb6a653b35986a0916559c9e
-SHA512 (ncdu-2.8.2.tar.gz) = 8c1ac30825995c77e8edfee2306abea665988a41670806826ab1fd192b231e2ce1979b657bbd917fd054679eaa0437a31d62c1b7b155166132f656d9ae359fe7
-Size (ncdu-2.8.2.tar.gz) = 72200 bytes
+BLAKE2s (ncdu-2.9.2.tar.gz) = ed986f9d73b01d68ea2979799bd8c03ff9a3dd865bfa1c8d80a6ae66236311b3
+SHA512 (ncdu-2.9.2.tar.gz) = 57fc6f5d2d5d7bf18b9201c4be07c88dbf5998929678a13f276e775db44740173bf03d5ab3c062492016af741074e0304e7df8a3eb05e8d68ff17aa4ff0724a8
+Size (ncdu-2.9.2.tar.gz) = 74529 bytes
