@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2023/06/17 10:43:51 markd Exp $
+# $NetBSD: Makefile,v 1.7 2026/03/31 09:27:09 markd Exp $
 
 DISTNAME=	soul.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-3.1
-TEXLIVE_REV=	67365
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.2
+TEXLIVE_REV=	78291
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/soul
