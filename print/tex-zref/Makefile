@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2024/02/18 10:59:54 markd Exp $
+# $NetBSD: Makefile,v 1.5 2026/03/31 20:02:50 markd Exp $
 
 DISTNAME=	zref
-PKGNAME=	tex-${DISTNAME}-2.35
-TEXLIVE_REV=	68278
+PKGNAME=	tex-${DISTNAME}-2.37
+TEXLIVE_REV=	78317
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/zref
