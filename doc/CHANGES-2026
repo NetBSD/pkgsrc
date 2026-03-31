@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2030 2026/03/31 12:27:04 hauke Exp $
+$NetBSD: CHANGES-2026,v 1.2031 2026/03/31 13:13:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3128,3 +3128,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/glm to 1.0.3nb1 [adam 2026-03-31]
 	Updated games/supertux to 0.7.0 [adam 2026-03-31]
 	Updated x11/xscreensaver to 6.15 [hauke 2026-03-31]
+	Updated math/py-numpy to 2.4.4 [adam 2026-03-31]
+	Updated devel/py-pygit2 to 1.19.2 [adam 2026-03-31]
+	Updated devel/py-async-lru to 2.3.0 [adam 2026-03-31]
