@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2020 2026/03/30 21:34:04 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2021 2026/03/31 01:46:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3065,3 +3065,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/greed to 4.5 [wiz 2026-03-30]
 	Updated finance/gnucash to 5.15 [wiz 2026-03-30]
 	Updated finance/gnucash-docs to 5.15 [wiz 2026-03-30]
+	Downgraded textproc/ruby-rdtool to 0.6.38nb2 [taca 2026-03-31]
