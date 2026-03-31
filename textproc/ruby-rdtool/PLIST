@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2026/03/29 07:29:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/03/31 01:45:26 taca Exp $
 bin/rd2${RUBY_SUFFIX}
 bin/rdswap.rb${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -44,9 +44,7 @@ ${GEM_LIBDIR}/lib/rd/rd2html-ext-lib.rb
 ${GEM_LIBDIR}/lib/rd/rd2html-ext-opt.rb
 ${GEM_LIBDIR}/lib/rd/rd2html-lib.rb
 ${GEM_LIBDIR}/lib/rd/rd2html-opt.rb
-${GEM_LIBDIR}/lib/rd/rd2html5-lib.rb
 ${GEM_LIBDIR}/lib/rd/rd2man-lib.rb
-${GEM_LIBDIR}/lib/rd/rd2man-opt.rb
 ${GEM_LIBDIR}/lib/rd/rd2rdo-lib.rb
 ${GEM_LIBDIR}/lib/rd/rd2rmi-lib.rb
 ${GEM_LIBDIR}/lib/rd/rdblockparser.ry
@@ -89,11 +87,7 @@ ${GEM_LIBDIR}/test/test-output-format-visitor.rb
 ${GEM_LIBDIR}/test/test-parser-util.rb
 ${GEM_LIBDIR}/test/test-rbl-file.rb
 ${GEM_LIBDIR}/test/test-rbl-suite.rb
-${GEM_LIBDIR}/test/test-rd2-cli.rb
 ${GEM_LIBDIR}/test/test-rd2html-lib.rb
-${GEM_LIBDIR}/test/test-rd2html5-lib.rb
-${GEM_LIBDIR}/test/test-rd2man-lib.rb
-${GEM_LIBDIR}/test/test-rdswap-cli.rb
 ${GEM_LIBDIR}/test/test-rdtree.rb
 ${GEM_LIBDIR}/test/test-rdvisitor.rb
 ${GEM_LIBDIR}/test/test-reference-resolver.rb
