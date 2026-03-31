@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2026/03/07 17:38:42 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2026/03/31 07:03:54 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.21
@@ -82,8 +82,8 @@ CARGO_CRATE_DEPENDS+=	num-conv-0.2.0
 CARGO_CRATE_DEPENDS+=	num-derive-0.4.2
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.19
 CARGO_CRATE_DEPENDS+=	num_threads-0.1.7
-CARGO_CRATE_DEPENDS+=	objc2-core-foundation-0.3.1
-CARGO_CRATE_DEPENDS+=	objc2-io-kit-0.3.1
+CARGO_CRATE_DEPENDS+=	objc2-core-foundation-0.3.2
+CARGO_CRATE_DEPENDS+=	objc2-io-kit-0.3.2
 CARGO_CRATE_DEPENDS+=	once_cell-1.21.3
 CARGO_CRATE_DEPENDS+=	ordered-float-4.6.0
 CARGO_CRATE_DEPENDS+=	parking_lot-0.12.5
@@ -137,7 +137,7 @@ CARGO_CRATE_DEPENDS+=	strum-0.27.2
 CARGO_CRATE_DEPENDS+=	strum_macros-0.27.2
 CARGO_CRATE_DEPENDS+=	syn-1.0.109
 CARGO_CRATE_DEPENDS+=	syn-2.0.117
-CARGO_CRATE_DEPENDS+=	sysinfo-0.38.3
+CARGO_CRATE_DEPENDS+=	sysinfo-0.38.4
 CARGO_CRATE_DEPENDS+=	terminfo-0.9.0
 CARGO_CRATE_DEPENDS+=	termios-0.3.3
 CARGO_CRATE_DEPENDS+=	termwiz-0.23.3
