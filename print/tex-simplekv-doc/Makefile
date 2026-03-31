@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2024/03/21 19:53:20 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/03/31 09:13:02 markd Exp $
 
 DISTNAME=	simplekv.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.2c
-TEXLIVE_REV=	68439
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.32
+TEXLIVE_REV=	77682
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/simplekv
