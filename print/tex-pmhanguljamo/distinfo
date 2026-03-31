@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/05/10 22:53:47 markd Exp $
+$NetBSD: distinfo,v 1.5 2026/03/31 08:09:12 markd Exp $
 
-BLAKE2s (pmhanguljamo.r73884.tar.xz) = 6997b5b6f21a5326c371c67f81de23e0ca50492554ee56ed92c08fa4436f28b1
-SHA512 (pmhanguljamo.r73884.tar.xz) = 6c278b40bd3b5ee9075e9fbb521f56ac2d58e4f79b90b9f877a4312abc2cd32857bbfaca8f22e4bdd01098b9f2f9a77229de084f3112ddff90d5bc18bebf64ac
-Size (pmhanguljamo.r73884.tar.xz) = 10076 bytes
+BLAKE2s (pmhanguljamo.r78114.tar.xz) = 6331084a6f7e4acbff4b2d32fb0a80d4631dcb427a9c7be47cc6143ca30b44ed
+SHA512 (pmhanguljamo.r78114.tar.xz) = bec230ec4b102af07923a9892b5bbafcd04f9c34cade7d96c0f4754689ff017caeae17ef1c511b3fd4fec6c7ed047774ad55c791cb8ee7b8dfe03931884cfad2
+Size (pmhanguljamo.r78114.tar.xz) = 10328 bytes
