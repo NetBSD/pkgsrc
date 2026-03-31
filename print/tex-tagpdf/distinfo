@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/05/10 23:34:35 markd Exp $
+$NetBSD: distinfo,v 1.5 2026/03/31 10:28:28 markd Exp $
 
-BLAKE2s (tagpdf.r74760.tar.xz) = a1719f8b7d7527db8021c94112261a328cd40ae85c212431ea0633085499c3a3
-SHA512 (tagpdf.r74760.tar.xz) = 594bf3770ebf9b6021bfcdc8ccdc64332df8eff2561401b49c54950fa0413cbe9f7d36811b27fd8422176b0066d9bddc98ad69fb9ce2cdb817658b673e34ca0a
-Size (tagpdf.r74760.tar.xz) = 40340 bytes
+BLAKE2s (tagpdf.r78445.tar.xz) = 709be726379696507bbbd05a89403cb9da458b5552d4f0c69a41e5af44a28c89
+SHA512 (tagpdf.r78445.tar.xz) = c0cc665de2512de5dae36e39ad164e188e10d2afbc435f218e216f1c7b8245edec4d9723fc3d1acb5538b907a62fd2d0b140a95a0fb23e381f237263e0550432
+Size (tagpdf.r78445.tar.xz) = 43720 bytes
