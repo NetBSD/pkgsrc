@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2025/10/27 08:52:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/03/31 13:10:49 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -47,6 +47,7 @@ ${PYSITELIB}/pygit2/decl/config.h
 ${PYSITELIB}/pygit2/decl/describe.h
 ${PYSITELIB}/pygit2/decl/diff.h
 ${PYSITELIB}/pygit2/decl/errors.h
+${PYSITELIB}/pygit2/decl/filter.h
 ${PYSITELIB}/pygit2/decl/graph.h
 ${PYSITELIB}/pygit2/decl/index.h
 ${PYSITELIB}/pygit2/decl/indexer.h
