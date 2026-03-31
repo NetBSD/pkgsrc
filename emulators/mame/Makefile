@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.229 2026/03/09 20:38:49 wiz Exp $
+# $NetBSD: Makefile,v 1.230 2026/03/31 11:14:55 wiz Exp $
 
-DISTNAME=	mame-0.286
-PKGREVISION=	1
+DISTNAME=	mame-0.287
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mamedev/}
 GITHUB_TAG=	${DISTNAME:S/-//S/.//}
