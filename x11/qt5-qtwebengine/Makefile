@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2026/02/06 10:06:19 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2026/03/31 11:58:03 tnn Exp $
 # FIXME: build fails when protobuf and abseil packages are installed.
 
 DISTNAME=	qtwebengine-everywhere-opensource-src-${QTVERSION}
@@ -22,7 +22,9 @@ TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 #TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
 #TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
+.endif
 TOOL_DEPENDS+=	nodejs>=14:../../lang/nodejs
 
 #JPEG_ACCEPTED=	libjpeg-turbo
