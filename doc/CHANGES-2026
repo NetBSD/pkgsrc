@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2038 2026/03/31 20:03:48 markd Exp $
+$NetBSD: CHANGES-2026,v 1.2039 2026/03/31 20:24:39 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3150,3 +3150,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/tex-xkeyval-doc to 2.10 [markd 2026-03-31]
 	Updated print/tex-zref to 2.37 [markd 2026-03-31]
 	Updated print/tex-zref-doc to 2.37 [markd 2026-03-31]
+	Updated net/gh to 2.89.0 [bsiegert 2026-03-31]
