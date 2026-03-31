@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2025/10/09 07:57:26 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/03/31 13:19:37 adam Exp $
 
-DISTNAME=	cairosvg-2.8.2
+DISTNAME=	cairosvg-2.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cairosvg/}
