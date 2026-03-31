@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/05/10 23:58:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/03/31 19:46:52 markd Exp $
 share/texmf-dist/tex/latex/tools/.tex
 share/texmf-dist/tex/latex/tools/afterpage.sty
 share/texmf-dist/tex/latex/tools/array-2016-10-06.sty
@@ -23,6 +23,7 @@ share/texmf-dist/tex/latex/tools/longtable-2020-01-07.sty
 share/texmf-dist/tex/latex/tools/longtable.sty
 share/texmf-dist/tex/latex/tools/multicol-2017-04-11.sty
 share/texmf-dist/tex/latex/tools/multicol-2019-10-01.sty
+share/texmf-dist/tex/latex/tools/multicol-2024-05-23.sty
 share/texmf-dist/tex/latex/tools/multicol.sty
 share/texmf-dist/tex/latex/tools/q.tex
 share/texmf-dist/tex/latex/tools/r.tex
