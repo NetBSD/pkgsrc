@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.78 2026/02/24 19:20:34 adam Exp $
+$NetBSD: distinfo,v 1.79 2026/03/31 04:53:30 adam Exp $
 
-BLAKE2s (ansible-13.4.0.tar.gz) = d2b93da4f276bb9f2427d3335efddce473dc597f70844461ca159acb7e4af157
-SHA512 (ansible-13.4.0.tar.gz) = 9ee82f208760a39d13d9b530760a0c26e65f656756793e7955fbaa1d7c3e4a22b9d95b52f208cb15bf8eec5c0b19347b7f013c09fb08a37f8ca3a782d8da16d9
-Size (ansible-13.4.0.tar.gz) = 52775271 bytes
+BLAKE2s (ansible-13.5.0.tar.gz) = bc3ed6c3c5b8027320b5818000f5c2062c0c537894b6e53191f969c382ff59fd
+SHA512 (ansible-13.5.0.tar.gz) = 663b8672ed3c43370cc0f16fd2b644b614388b842dfb1a0bc1b73b42b6bcbe4ad467bd187e64daf4af0c1ab67d0a3fe44604adf5a9376436e6864d6495c3cda1
+Size (ansible-13.5.0.tar.gz) = 52737499 bytes
