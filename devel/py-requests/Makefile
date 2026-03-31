@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2026/03/29 18:34:21 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2026/03/31 04:33:45 adam Exp $
 
-DISTNAME=	requests-2.33.0
+DISTNAME=	requests-2.33.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests/}
@@ -11,10 +11,10 @@ COMMENT=	HTTP library, written in Python, for human beings
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-certifi>=2017.4.17:../../security/py-certifi
+DEPENDS+=	${PYPKGPREFIX}-certifi>=2023.5.7:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-charset-normalizer>=2:../../converters/py-charset-normalizer
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.5:../../www/py-idna
-DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.21.1:../../www/py-urllib3
+DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.26:../../www/py-urllib3
 TEST_DEPENDS+=	${PYPKGPREFIX}-Socks>=1.5.8:../../net/py-Socks
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpbin>=2.0.0:../../www/py-test-httpbin
