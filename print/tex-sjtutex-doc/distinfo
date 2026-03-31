@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2025/05/10 23:21:17 markd Exp $
+$NetBSD: distinfo,v 1.3 2026/03/31 09:22:46 markd Exp $
 
-BLAKE2s (sjtutex.doc.r74786.tar.xz) = 583ad83a747bd139f66de91c0fca2b3c5bdaa6f5b329797b9963c1c92daef0e8
-SHA512 (sjtutex.doc.r74786.tar.xz) = dc4da5ae93c6f4b59114c0c3cdfa2af7ab752ce20c37ec9b6162e1b75c1102c457b674c8ac03f80f1f4f9979cd1278703de00ca291c21d1fca9fcc9bb3d6c45c
-Size (sjtutex.doc.r74786.tar.xz) = 712528 bytes
+BLAKE2s (sjtutex.doc.r78164.tar.xz) = 618c72dbc8efdc57945bf0d22b42460cc80d2f469bfb9e72109ba1a5e06f1703
+SHA512 (sjtutex.doc.r78164.tar.xz) = 1a1eb5e17d8220caf577e29a4963e455e03711046cd54281f486a931de42bcf564fb7adf27db6d3453d3e3c7bbac1a450462c2494b9eab31b233472d00f477b5
+Size (sjtutex.doc.r78164.tar.xz) = 733660 bytes
