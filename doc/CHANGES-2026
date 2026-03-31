@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2027 2026/03/31 10:54:09 markd Exp $
+$NetBSD: CHANGES-2026,v 1.2028 2026/03/31 11:15:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3124,3 +3124,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/tex-tex-ini-files-doc to 2026 [markd 2026-03-31]
 	Updated graphics/tex-tikzfill to 1.1.0 [markd 2026-03-31]
 	Updated graphics/tex-tikzfill-doc to 1.1.0 [markd 2026-03-31]
+	Updated emulators/mame to 0.287 [wiz 2026-03-31]
