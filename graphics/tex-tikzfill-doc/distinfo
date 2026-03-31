@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2026/03/11 19:44:29 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/03/31 10:52:45 markd Exp $
 
-BLAKE2s (tikzfill.doc.r76924.tar.xz) = fb43ae63e4fc9524bce4f09b013005437b36e33773bcefd84b7deb8f591bce7e
-SHA512 (tikzfill.doc.r76924.tar.xz) = 30c9ea278c3914cd3dbbc2d52ef318df381974d68c458179704837d5c2ac18af8e56b850ab547fd4c6fd50a934be254886841163588a73581dcba78da15a9588
-Size (tikzfill.doc.r76924.tar.xz) = 626980 bytes
+BLAKE2s (tikzfill.doc.r78515.tar.xz) = eeea4e480610a81a79b372b487671a3405eb41c684138b9b64170c7fcb77766b
+SHA512 (tikzfill.doc.r78515.tar.xz) = 3994b86e7b22bc70ce58f078e0f0453e25517dd0257c0276990e80f230e3ef58476454e6c712cb667554abcb02d6bddca8007ab8d8a26b8f10321356aed15e99
+Size (tikzfill.doc.r78515.tar.xz) = 890372 bytes
