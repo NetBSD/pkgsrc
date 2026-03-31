@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2025/05/08 09:35:17 markd Exp $
+$NetBSD: distinfo,v 1.18 2026/03/31 07:56:13 markd Exp $
 
-BLAKE2s (pgf.doc.r71527.tar.xz) = 72ebcc14d16c8114282c636a0498059537ff50fd52fa66310d1cbaa59082e656
-SHA512 (pgf.doc.r71527.tar.xz) = ae726a4ae7c83993cc3bbf3f10f3481d4293dbfa309b5f7b130d480621a72cb1d8bc0e9dc0d49c02f3c5d5f259e6d85ab3f9905369ebe10f879940e31823c9fb
-Size (pgf.doc.r71527.tar.xz) = 9995120 bytes
+BLAKE2s (pgf.doc.r78101.tar.xz) = b1f8bb3cb0bc2345cb3063a3041c45ad6355958471fd10f3838bd396af7e69a9
+SHA512 (pgf.doc.r78101.tar.xz) = aaeeb1e8a09e9496b42fbb74c65ffdb4b93f193bcc67b18f13b78f701eccd3bf292a27dfbb8bd6c47630a4ac7685fd1b071bad070da9fb6ddb8493a4029b9a3a
+Size (pgf.doc.r78101.tar.xz) = 10281484 bytes
