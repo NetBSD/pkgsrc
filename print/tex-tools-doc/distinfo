@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2025/05/10 23:58:51 markd Exp $
+$NetBSD: distinfo,v 1.24 2026/03/31 19:46:52 markd Exp $
 
-BLAKE2s (tools.doc.r72739.tar.xz) = b515234c87232d98d45f65fbaa55b4ad888aa9bfced9ce27b681c319f18cfd0d
-SHA512 (tools.doc.r72739.tar.xz) = c462f5a95f1310d7bf51d35ed2d1b7c92a11ca283d1ca292fdb90b74cbb7c545768615582d269342f82fe0bf620d03ff4ca61bd17599861071b21cf41424da38
-Size (tools.doc.r72739.tar.xz) = 6348432 bytes
+BLAKE2s (tools.doc.r76708.tar.xz) = e181e88010195dda172fedf146eac1b5f511cac9515327d668cf5d555daf26c0
+SHA512 (tools.doc.r76708.tar.xz) = 0ce154729a3f53a4cce1f6bdcd13e8ac23938211e5064a0b2faeadccecc7f39a907d72773a371a1e1ede345e57a4695d00e777a7b1ad0bd2b4f09d6daa97f61f
+Size (tools.doc.r76708.tar.xz) = 6352332 bytes
