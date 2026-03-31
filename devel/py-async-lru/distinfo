@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/02/23 08:57:52 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/03/31 13:12:48 adam Exp $
 
-BLAKE2s (async_lru-2.2.0.tar.gz) = 561acd477ffe720d6acccb85a908d524629a487a27b383f372d5862825afbb03
-SHA512 (async_lru-2.2.0.tar.gz) = f0fa279457918881768076379c276283983be20a18437a0d5b570c14e55f37f2a18f102e072e74f8a5c39cf2380bd81e9daa14b358ff257f875e2fee2aee6e57
-Size (async_lru-2.2.0.tar.gz) = 14654 bytes
+BLAKE2s (async_lru-2.3.0.tar.gz) = 66202d38e4cf120a6fbc380d18ebb34ef4eeb45e100a5863e1de881cfda73558
+SHA512 (async_lru-2.3.0.tar.gz) = 5e093c1d0c498a9b75841f1a8a253a50095a6c5658854293b207a8097862de943833e8e8bc7ed04f5afd11ab4b0e6f0d435a1dcfc68b1f364ffb5d113a61bc1f
+Size (async_lru-2.3.0.tar.gz) = 16332 bytes
