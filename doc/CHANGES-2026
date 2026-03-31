@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2029 2026/03/31 12:02:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2030 2026/03/31 12:27:04 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3127,3 +3127,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/mame to 0.287 [wiz 2026-03-31]
 	Updated graphics/glm to 1.0.3nb1 [adam 2026-03-31]
 	Updated games/supertux to 0.7.0 [adam 2026-03-31]
+	Updated x11/xscreensaver to 6.15 [hauke 2026-03-31]
