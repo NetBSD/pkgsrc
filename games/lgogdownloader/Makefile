@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2026/02/06 10:04:51 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2026/03/31 17:55:55 wiz Exp $
 
 DISTNAME=	lgogdownloader-3.18
 PKGREVISION=	2
@@ -11,8 +11,10 @@ HOMEPAGE=	https://github.com/Sude-/lgogdownloader
 COMMENT=	Download games from GOG
 LICENSE=	public-domain # actually, dwtfywtpl
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++17
+FORCE_CXX_STD=		c++17
+USE_TOOLS+=		pkg-config
 
 CMAKE_CONFIGURE_ARGS+=	-DJSONCPP_INCLUDE_DIR=${BUILDLINK_DIR}/include/json
 
