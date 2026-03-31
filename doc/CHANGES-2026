@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2028 2026/03/31 11:15:04 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2029 2026/03/31 12:02:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3125,3 +3125,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/tex-tikzfill to 1.1.0 [markd 2026-03-31]
 	Updated graphics/tex-tikzfill-doc to 1.1.0 [markd 2026-03-31]
 	Updated emulators/mame to 0.287 [wiz 2026-03-31]
+	Updated graphics/glm to 1.0.3nb1 [adam 2026-03-31]
+	Updated games/supertux to 0.7.0 [adam 2026-03-31]
