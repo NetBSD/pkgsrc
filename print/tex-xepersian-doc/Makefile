@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2025/05/11 00:18:42 markd Exp $
+# $NetBSD: Makefile,v 1.6 2026/03/31 19:58:33 markd Exp $
 
 DISTNAME=	xepersian.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-25.2.2
-TEXLIVE_REV=	73697
+PKGNAME=	tex-${DISTNAME:S/./-/}-26.01.01
+TEXLIVE_REV=	77682
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/xepersian
 COMMENT=	Documentation for tex-xepersian
 LICENSE=	lppl-1.3c
 
-REPLACE_PYTHON+=	doc/xelatex/xepersian/*.py
+REPLACE_PYTHON+=	doc/latex/xepersian/*.py
 
 .include "../../lang/python/application.mk"
 .include "../../print/texlive/package.mk"
