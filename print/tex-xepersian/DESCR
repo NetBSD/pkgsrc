@@ -1,5 +1,6 @@
 This package provides a convenient interface for typesetting
-Persian and English texts in LaTeX, using the XeTeX engine. The
-name xepersian is derived from the words experience and persian
-and captures the author's philosophy of writing the package for
-the best Persian typesetting experience in TeX.
+Persian and English texts in LaTeX, using the LuaTeX or the
+XeTeX engine. The name "XePersian" is derived from the words
+experience and persian and captures the author's philosophy of
+writing the package for the best Persian typesetting experience
+in TeX.
