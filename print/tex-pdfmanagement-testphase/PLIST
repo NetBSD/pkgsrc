@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2024/02/15 18:45:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/03/31 07:47:30 markd Exp $
 share/texmf-dist/tex/latex/pdfmanagement-testphase/color-ltx.sty
 share/texmf-dist/tex/latex/pdfmanagement-testphase/colorspace-patches-tmp-ltx.sty
 share/texmf-dist/tex/latex/pdfmanagement-testphase/hgeneric-testphase.def
+share/texmf-dist/tex/latex/pdfmanagement-testphase/hgeneric.def
 share/texmf-dist/tex/latex/pdfmanagement-testphase/hyperref-colorschemes.def
 share/texmf-dist/tex/latex/pdfmanagement-testphase/l3backend-testphase-dvipdfmx.def
 share/texmf-dist/tex/latex/pdfmanagement-testphase/l3backend-testphase-dvips.def
@@ -11,7 +12,10 @@ share/texmf-dist/tex/latex/pdfmanagement-testphase/l3backend-testphase-pdftex.de
 share/texmf-dist/tex/latex/pdfmanagement-testphase/l3backend-testphase-xetex.def
 share/texmf-dist/tex/latex/pdfmanagement-testphase/l3backend-testphase.lua
 share/texmf-dist/tex/latex/pdfmanagement-testphase/l3pdffield-testphase.sty
+share/texmf-dist/tex/latex/pdfmanagement-testphase/l3pdffield.sty
+share/texmf-dist/tex/latex/pdfmanagement-testphase/lualinksplit.lua
 share/texmf-dist/tex/latex/pdfmanagement-testphase/pdfmanagement-firstaid.sty
-share/texmf-dist/tex/latex/pdfmanagement-testphase/pdfmanagement-testphase.ltx
 share/texmf-dist/tex/latex/pdfmanagement-testphase/pdfmanagement-testphase.sty
+share/texmf-dist/tex/latex/pdfmanagement-testphase/pdfmanagement.ltx
+share/texmf-dist/tex/latex/pdfmanagement-testphase/pdfmanagement.sty
 share/texmf-dist/tex/latex/pdfmanagement-testphase/xcolor-patches-tmp-ltx.sty
