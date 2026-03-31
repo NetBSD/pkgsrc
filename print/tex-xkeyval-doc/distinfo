@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/09/01 05:52:07 markd Exp $
+$NetBSD: distinfo,v 1.10 2026/03/31 20:00:29 markd Exp $
 
-BLAKE2s (xkeyval.doc.r63616.tar.xz) = 8c711f5b05c9e3b0592426f8fa78975efbec54a5ad03c409ee6effab44ffbe87
-SHA512 (xkeyval.doc.r63616.tar.xz) = f7948832c943d3746c3115950259430724abee49316aaac0343e0959ddce796ab8064583d048f71ad39332df966557da9a2ec3c2752c16b333cc55bcd2cf3c7e
-Size (xkeyval.doc.r63616.tar.xz) = 422472 bytes
+BLAKE2s (xkeyval.doc.r77682.tar.xz) = 8ccdd5c774865b08fe77ea34f932ccfe7d8bd72f48e193463038dde18e2c3967
+SHA512 (xkeyval.doc.r77682.tar.xz) = f206ddba63537bd6bbb1ccd1a86ccb2f4c476f8a928060f5ca21b0cb97c6b7342c434cdf5b075a8636b9f1309321f6e01690c913ceeb6653bb954f6cb0667a8f
+Size (xkeyval.doc.r77682.tar.xz) = 573640 bytes
