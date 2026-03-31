@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2025/05/10 23:38:12 markd Exp $
+$NetBSD: distinfo,v 1.18 2026/03/31 10:38:48 markd Exp $
 
-BLAKE2s (tcolorbox.r72624.tar.xz) = 16b50a56b086af6321f3f5007926e2fe33dc028ef6a2275e95b4794b6cd6f88f
-SHA512 (tcolorbox.r72624.tar.xz) = 70d2d64ec44df645739ac5c83f4379c49dc9c4713b1c7bbfae8cb13ceeb97712a00ae40ba2964783f62e2ba7c53b8c839802e0e777660908ddeef168afe39558
-Size (tcolorbox.r72624.tar.xz) = 234320 bytes
+BLAKE2s (tcolorbox.r77682.tar.xz) = 491733f612b246eaa2407d4c9af122703312a0c45f734d8fad52bf53e4e6cf4f
+SHA512 (tcolorbox.r77682.tar.xz) = 12de23f3f4d61fe9590b941b90b07261cd518351dbb940853ef571041a23c340dfed135ec28f8ea19a4594ee7ef42bb5594fec8406ff142df8bab2ec39e6208b
+Size (tcolorbox.r77682.tar.xz) = 235328 bytes
