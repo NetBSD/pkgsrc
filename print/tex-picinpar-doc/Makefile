@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2023/04/01 22:01:16 markd Exp $
+# $NetBSD: Makefile,v 1.5 2026/03/31 08:04:04 markd Exp $
 
 DISTNAME=	picinpar.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.3
-TEXLIVE_REV=	65097
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.3a
+TEXLIVE_REV=	77682
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/picinpar

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/04/01 22:01:16 markd Exp $
+$NetBSD: distinfo,v 1.6 2026/03/31 08:04:04 markd Exp $
 
-BLAKE2s (picinpar.r65097.tar.xz) = 1367536dcb9bae749a903166a551fd29652c0149defbdc17b847bf95d6bcbd08
-SHA512 (picinpar.r65097.tar.xz) = 114b1e715384513f87f2a6772a6176ade44ac7053a8eb19410fb92862e721865dcc9350f08d77874296ae6402eb8d8da4b4b26ff4a96d035666814a3d3e21682
-Size (picinpar.r65097.tar.xz) = 5380 bytes
+BLAKE2s (picinpar.r77682.tar.xz) = 7fef435efed49c047ec80fe7e8ac84bddd95dc7f7a54b6d275a99b6765569807
+SHA512 (picinpar.r77682.tar.xz) = b228642f089a5b4d72b0f40e84e4d4ddce42aabdd24c4b4e672244947dd6427e3153f165d2db41f060acde9e769bde368a6b76296b612e1362d6bd440f37c07b
+Size (picinpar.r77682.tar.xz) = 5544 bytes
