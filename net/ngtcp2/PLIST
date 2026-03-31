@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2026/02/26 17:28:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2026/03/31 13:16:10 adam Exp $
 include/ngtcp2/ngtcp2.h
 include/ngtcp2/version.h
 lib/cmake/ngtcp2/ngtcp2Config.cmake
@@ -8,6 +8,6 @@ lib/cmake/ngtcp2/ngtcp2Targets.cmake
 lib/libngtcp2.a
 lib/libngtcp2.so
 lib/libngtcp2.so.16
-lib/libngtcp2.so.16.7.4
+lib/libngtcp2.so.16.8.0
 lib/pkgconfig/libngtcp2.pc
 share/doc/ngtcp2/README.rst
