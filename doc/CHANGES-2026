@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2024 2026/03/31 07:04:13 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2025 2026/03/31 08:16:29 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3072,3 +3072,23 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/ansible-core to 2.20.4 [adam 2026-03-31]
 	Updated sysutils/ansible to 13.5.0 [adam 2026-03-31]
 	Updated sysutils/xtop to 0.3.7 [pin 2026-03-31]
+	Updated print/tex-bxjscls to 2.9e [markd 2026-03-31]
+	Updated print/tex-bxjscls-doc to 2.9e [markd 2026-03-31]
+	Updated print/tex-pdflscape to 0.14 [markd 2026-03-31]
+	Updated print/tex-pdflscape-doc to 0.14 [markd 2026-03-31]
+	Updated print/tex-pdfmanagement-testphase to 0.96y [markd 2026-03-31]
+	Updated print/tex-pdfmanagement-testphase-doc to 0.96y [markd 2026-03-31]
+	Updated print/tex-pdfpages to 0.6g [markd 2026-03-31]
+	Updated print/tex-pdfpages-doc to 0.6g [markd 2026-03-31]
+	Updated print/tex-pgf to 3.1.11a [markd 2026-03-31]
+	Updated print/tex-pgf-doc to 3.1.11a [markd 2026-03-31]
+	Updated print/tex-pgfplots to 1.18.2 [markd 2026-03-31]
+	Updated print/tex-pgfplots-doc to 1.18.2 [markd 2026-03-31]
+	Updated print/tex-picinpar to 1.3a [markd 2026-03-31]
+	Updated print/tex-picinpar-doc to 1.3a [markd 2026-03-31]
+	Updated print/tex-picture to 2.0 [markd 2026-03-31]
+	Updated print/tex-picture-doc to 2.0 [markd 2026-03-31]
+	Updated print/tex-pmhanguljamo to 1.3 [markd 2026-03-31]
+	Updated print/tex-pmhanguljamo-doc to 1.3 [markd 2026-03-31]
+	Updated print/tex-polyglossia to 2.9 [markd 2026-03-31]
+	Updated print/tex-polyglossia-doc to 2.9 [markd 2026-03-31]
