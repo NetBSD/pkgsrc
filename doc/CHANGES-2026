@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2031 2026/03/31 13:13:11 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2032 2026/03/31 13:19:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3131,3 +3131,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-numpy to 2.4.4 [adam 2026-03-31]
 	Updated devel/py-pygit2 to 1.19.2 [adam 2026-03-31]
 	Updated devel/py-async-lru to 2.3.0 [adam 2026-03-31]
+	Updated net/ngtcp2 to 1.22.0 [adam 2026-03-31]
+	Updated converters/py-cairosvg to 2.9.0 [adam 2026-03-31]
