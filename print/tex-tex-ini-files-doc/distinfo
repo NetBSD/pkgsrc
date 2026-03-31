@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/05/11 01:05:49 markd Exp $
+$NetBSD: distinfo,v 1.6 2026/03/31 10:44:50 markd Exp $
 
-BLAKE2s (tex-ini-files.doc.r73863.tar.xz) = 211913958f995703e22936b02d4507089909715435b6a61de16942b11ad7967b
-SHA512 (tex-ini-files.doc.r73863.tar.xz) = 1cfd1789361934f62438edacd8926409d95a3a23e6345033dcb3d76349d7488ffc29a93c386cd204988ebdc8c5d48d7d251182b0b4bf24395924ae81da28482b
-Size (tex-ini-files.doc.r73863.tar.xz) = 1392 bytes
+BLAKE2s (tex-ini-files.doc.r78524.tar.xz) = d495bff9376c187328e82bf10beb47e8265c97bde92cab17aec392128b2b6fb0
+SHA512 (tex-ini-files.doc.r78524.tar.xz) = e82eca90c5c9ac70d928a2c67682714b9a3ede07ca0c32dae2d0f05066b287f41c18fce279a188238efaf5dd2671d0efe49a2349c060300730324807a5e3ac04
+Size (tex-ini-files.doc.r78524.tar.xz) = 1472 bytes
