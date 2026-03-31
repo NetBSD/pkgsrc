@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/05/10 23:16:03 markd Exp $
+$NetBSD: distinfo,v 1.6 2026/03/31 09:08:03 markd Exp $
 
-BLAKE2s (schulmathematik.doc.r74961.tar.xz) = cd30eb9ed917b7aa7eb1b70cf01c6d413775e5f105f64f757e4c7f5be0d93f52
-SHA512 (schulmathematik.doc.r74961.tar.xz) = c76da9875c1d999263c55704e2d3cb8a981fee5fd4832dc11fd8eef26561c8fff6bef5dc12cc8ccdd280990b6594311e5093e401a2b7985f7f2d6643f3750fff
-Size (schulmathematik.doc.r74961.tar.xz) = 368892 bytes
+BLAKE2s (schulmathematik.doc.r76924.tar.xz) = bd42590aaed8ca7f404292717becb7ce0bce3edc2cef8dad71a4937fbe440037
+SHA512 (schulmathematik.doc.r76924.tar.xz) = 2e9542b5d458dce1770dee7a572f2012f0f25959196aa8985541b1cbd3ae555887993b5b78ef7fa651f3917ee9c10ad6c880fa7af18d574c0be343afabd6e39b
+Size (schulmathematik.doc.r76924.tar.xz) = 369172 bytes
