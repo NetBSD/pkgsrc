@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2026/03/31 10:17:47 markd Exp $
+share/texmf-dist/doc/latex/tabularray/CHANGELOG.md
+share/texmf-dist/doc/latex/tabularray/README.md
+share/texmf-dist/doc/latex/tabularray/tabularray.pdf
+share/texmf-dist/doc/latex/tabularray/tabularray.tex

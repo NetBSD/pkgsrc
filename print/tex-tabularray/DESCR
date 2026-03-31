@@ -1,3 +1,12 @@
-tabularray is a reimplementation of tables in LaTeX using the LaTeX3
-core. It allows a separation of content and style and includes the
-flexiblity of the tabu package.
+LaTeX tables are implemented using TeX commands such as
+\halign, \noalign, \span, and \omit. In order to implement new
+features, many macro packages have modified the inner table
+commands inside LaTeX. This makes package code complicated,
+difficult to maintain, and often conflicts with each other. At
+present, the LaTeX3 programming layer is basically mature. This
+tabularray package will discard the old \halign commands and
+directly use LaTeX3 functions to parse the table, and then
+typeset the entire table. Under the premise of being compatible
+with the basic syntax of LaTeX2 tables, this macro package will
+completely separate the content and style of the table, and the
+style of the table can be completely set in keyval way.

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/03/31 10:17:47 markd Exp $
+
+BLAKE2s (tabularray.doc.r78251.tar.xz) = 0fd7f5a72bb5ec7443abb1e69804ecc055220dff5dfb74aed98c1a71c6a12edf
+SHA512 (tabularray.doc.r78251.tar.xz) = c0e0fa276bd456cff4e51f813e76eeb488262ba4d0dc05c1e92333466a08b16ea7abe6c7a2822153db95a2e5dce047bc810f372e32b4fe09ddcfab401a12eef0
+Size (tabularray.doc.r78251.tar.xz) = 775492 bytes
