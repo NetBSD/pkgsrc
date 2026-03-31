@@ -1,34 +1,15 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2025/09/28 15:58:14 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2026/03/31 10:47:12 adam Exp $
 
-Do not look for boost_system library.
 Fix packaging on Darwin.
 
---- CMakeLists.txt.orig	2021-12-22 23:01:57.000000000 +0000
+--- CMakeLists.txt.orig	2026-03-15 05:38:50.000000000 +0000
 +++ CMakeLists.txt
-@@ -39,7 +39,7 @@ project(SUPERTUX)
- 
- ### CMake configuration
- 
--cmake_minimum_required(VERSION 3.1)
-+cmake_minimum_required(VERSION 3.5)
- if(COMMAND cmake_policy)
-   cmake_policy(SET CMP0003 NEW)
-   cmake_policy(SET CMP0008 NEW)
-@@ -171,7 +171,7 @@ if(ENABLE_BOOST_STATIC_LIBS)
- else(ENABLE_BOOST_STATIC_LIBS)
-   set(Boost_USE_STATIC_LIBS FALSE)
- endif(ENABLE_BOOST_STATIC_LIBS)
--find_package(Boost REQUIRED COMPONENTS filesystem system date_time locale)
-+find_package(Boost REQUIRED COMPONENTS filesystem date_time locale)
- include_directories(SYSTEM ${Boost_INCLUDE_DIR})
- link_directories(${Boost_LIBRARY_DIRS})
- 
-@@ -1188,7 +1188,7 @@ configure_file(data/levels/misc/menu.stl
- include(InstallRequiredSystemLibraries)
- set(DIRS ${Boost_LIBRARY_DIRS} ${CMAKE_CURRENT_BINARY_DIR}/external/squirrel ${CMAKE_CURRENT_BINARY_DIR}/external/tinygettext)
- 
--if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin" AND NOT DISABLE_CPACK_BUNDLING)
-+if(FALSE)
-   set(INFOPLIST_CFBUNDLEEXECUTABLE "SuperTux")
- 
-   find_package(png)
+@@ -83,7 +83,7 @@ if(WIN32 AND NOT UNIX)
+   set(INSTALL_SUBDIR_SHARE "data" CACHE STRING "Installation subdir for data")
+   set(INSTALL_SUBDIR_DOC "doc" CACHE STRING "Installation subdir for docs")
+ else()
+-  if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin" AND DISABLE_CPACK_BUNDLING)
++  if(FALSE)
+     set(INSTALL_SUBDIR_BIN "SuperTux.app/Contents/MacOS" CACHE STRING "Installation subdir for binaries")
+     set(INSTALL_SUBDIR_SHARE "SuperTux.app/Contents/Resources/data" CACHE STRING "Installation subdir for data")
+     set(INSTALL_SUBDIR_DOC "SuperTux.app/Contents/Resources" CACHE STRING "Installation subdir for docs")

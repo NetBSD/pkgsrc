@@ -1,12 +1,12 @@
-$NetBSD: patch-src_audio_openal__sound__source.hpp,v 1.1 2025/09/28 15:58:14 adam Exp $
+$NetBSD: patch-src_audio_openal__sound__source.hpp,v 1.2 2026/03/31 10:47:13 adam Exp $
 
 Fix build on Darwin.
 
---- src/audio/openal_sound_source.hpp.orig	2025-09-28 15:35:30.674258557 +0000
+--- src/audio/openal_sound_source.hpp.orig	2026-03-15 05:38:51.000000000 +0000
 +++ src/audio/openal_sound_source.hpp
-@@ -17,7 +17,7 @@
- #ifndef HEADER_SUPERTUX_AUDIO_OPENAL_SOUND_SOURCE_HPP
- #define HEADER_SUPERTUX_AUDIO_OPENAL_SOUND_SOURCE_HPP
+@@ -16,7 +16,7 @@
+ 
+ #pragma once
  
 -#include <al.h>
 +#include <AL/al.h>
