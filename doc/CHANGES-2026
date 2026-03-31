@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2035 2026/03/31 18:01:12 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2036 2026/03/31 18:05:19 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3136,3 +3136,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/dnsdist to 2.0.3 [wiz 2026-03-31]
 	Added misc/raspberrypi-usbboot version 1.0 [khorben 2026-03-31]
 	Updated sysutils/ncdu2 to 2.9.2 [wiz 2026-03-31]
+	Updated lang/sbcl to 2.6.3 [ktnb 2026-03-31]
