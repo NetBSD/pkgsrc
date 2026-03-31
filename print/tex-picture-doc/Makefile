@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/05/03 05:30:43 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/03/31 08:06:56 markd Exp $
 
 DISTNAME=	picture.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.6
-TEXLIVE_REV=	54867
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.0
+TEXLIVE_REV=	78315
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/picture

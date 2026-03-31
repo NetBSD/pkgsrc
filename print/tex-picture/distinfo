@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:14:20 nia Exp $
+$NetBSD: distinfo,v 1.4 2026/03/31 08:06:56 markd Exp $
 
-BLAKE2s (picture.r54867.tar.xz) = 21c1545c0a1e86e9cc9aaca87e68b4a2626a1dc6030f1be383a279f376c2beb7
-SHA512 (picture.r54867.tar.xz) = 9dbb4e17b455a6a18bae6309864412b975d07a1a11e908e1023ab8e990ded0956ccf3826e72d9878f3597eaa4d185c8b147d2c7d2149618bdb0b09fce8e20e90
-Size (picture.r54867.tar.xz) = 2300 bytes
+BLAKE2s (picture.r78315.tar.xz) = dae0fc7e38b91b8d53196ffe1a42566f23c675058a74e2e59b610e683027e8f6
+SHA512 (picture.r78315.tar.xz) = f9a1738bd0b1dc74dbc58bd498e64261d11720570b56d1b04935aca38ee9cb4141ad119c3fd5fc6361ee9e27f38eb0997416eff05495d7ea1ef65e53c7b54332
+Size (picture.r78315.tar.xz) = 2672 bytes
