@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/09/01 11:09:49 markd Exp $
+$NetBSD: distinfo,v 1.5 2026/03/31 09:03:57 markd Exp $
 
-BLAKE2s (rerunfilecheck.doc.r63869.tar.xz) = 0e692a188515f51c8e8a43bb2f296dbc73e5ea810cd434a85a8e70638027815f
-SHA512 (rerunfilecheck.doc.r63869.tar.xz) = 7c570d38c989aaeb7db5271501c5384ba8b8601396f629d7ffee32baaf1c289592bb5d69d2cb2784cfb2008fdc047098d43dc20803e4b90eac59848c15dd0cb7
-Size (rerunfilecheck.doc.r63869.tar.xz) = 331404 bytes
+BLAKE2s (rerunfilecheck.doc.r77682.tar.xz) = 9d10090ce0abc0788c3ae8ca035fb035594ac1a20e121b084d55f94e8fa27a41
+SHA512 (rerunfilecheck.doc.r77682.tar.xz) = 4fab0b5e7c13fbcdf43625302207dfd501964d301fcd276e50bf8ad09feb45ed0a76cb01f6da8ab9190097ff7342a39b802fd6c65e8624775269bcde8c71d0e0
+Size (rerunfilecheck.doc.r77682.tar.xz) = 330220 bytes
