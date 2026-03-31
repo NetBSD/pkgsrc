@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2021 2026/03/31 01:46:28 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2022 2026/03/31 04:38:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3066,3 +3066,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated finance/gnucash to 5.15 [wiz 2026-03-30]
 	Updated finance/gnucash-docs to 5.15 [wiz 2026-03-30]
 	Downgraded textproc/ruby-rdtool to 0.6.38nb2 [taca 2026-03-31]
+	Updated devel/py-requests to 2.33.1 [adam 2026-03-31]
+	Updated devel/py-faker to 40.12.0 [adam 2026-03-31]
+	Updated time/py-dateparser to 1.4.0 [adam 2026-03-31]
