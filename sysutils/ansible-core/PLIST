@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2025/12/10 12:43:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/03/31 04:43:22 adam Exp $
 bin/ansible
 bin/ansible-config
 bin/ansible-console
@@ -1468,6 +1468,9 @@ ${PYSITELIB}/ansible/plugins/cliconf/__init__.pyo
 ${PYSITELIB}/ansible/plugins/connection/__init__.py
 ${PYSITELIB}/ansible/plugins/connection/__init__.pyc
 ${PYSITELIB}/ansible/plugins/connection/__init__.pyo
+${PYSITELIB}/ansible/plugins/connection/_paramiko_ssh.py
+${PYSITELIB}/ansible/plugins/connection/_paramiko_ssh.pyc
+${PYSITELIB}/ansible/plugins/connection/_paramiko_ssh.pyo
 ${PYSITELIB}/ansible/plugins/connection/local.py
 ${PYSITELIB}/ansible/plugins/connection/local.pyc
 ${PYSITELIB}/ansible/plugins/connection/local.pyo
@@ -2033,6 +2036,9 @@ ${PYSITELIB}/ansible_test/_internal/ci/__init__.pyo
 ${PYSITELIB}/ansible_test/_internal/ci/azp.py
 ${PYSITELIB}/ansible_test/_internal/ci/azp.pyc
 ${PYSITELIB}/ansible_test/_internal/ci/azp.pyo
+${PYSITELIB}/ansible_test/_internal/ci/gha.py
+${PYSITELIB}/ansible_test/_internal/ci/gha.pyc
+${PYSITELIB}/ansible_test/_internal/ci/gha.pyo
 ${PYSITELIB}/ansible_test/_internal/ci/local.py
 ${PYSITELIB}/ansible_test/_internal/ci/local.pyc
 ${PYSITELIB}/ansible_test/_internal/ci/local.pyo
