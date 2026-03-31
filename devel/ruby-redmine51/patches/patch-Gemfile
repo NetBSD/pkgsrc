@@ -1,9 +1,9 @@
-$NetBSD: patch-Gemfile,v 1.8 2026/02/11 07:50:27 taca Exp $
+$NetBSD: patch-Gemfile,v 1.8.2.1 2026/03/31 13:22:00 maya Exp $
 
 * Relax dependency.
 * Do not load gem for developemt and test.
 
---- Gemfile.orig	2026-01-06 02:25:01.000000000 +0000
+--- Gemfile.orig	2026-03-17 07:40:01.000000000 +0000
 +++ Gemfile
 @@ -2,19 +2,19 @@ source 'https://rubygems.org'
  
@@ -19,8 +19,8 @@ $NetBSD: patch-Gemfile,v 1.8 2026/02/11 07:50:27 taca Exp $
  gem 'roadie-rails', '~> 3.1.0'
  gem 'marcel'
  gem 'mail', '~> 2.8.1'
--gem 'nokogiri', Gem.ruby_version >= Gem::Version.new('3.1') ? '1.18.3' : '~> 1.15.7'
-+gem 'nokogiri', Gem.ruby_version >= Gem::Version.new('3.1') ? '>= 1.18.3' : '>= 1.15.7'
+-gem 'nokogiri', Gem.ruby_version >= Gem::Version.new('3.1') ? '1.18.9' : '~> 1.15.7'
++gem 'nokogiri', Gem.ruby_version >= Gem::Version.new('3.1') ? '>= 1.18.9' : '~> 1.15.7'
  gem 'i18n', '~> 1.14.1'
  gem 'rbpdf', '~> 1.21.3'
  gem 'addressable'
