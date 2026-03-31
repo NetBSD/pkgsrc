@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.148 2026/03/10 13:16:15 adam Exp $
+# $NetBSD: Makefile,v 1.149 2026/03/31 13:09:01 adam Exp $
 
-DISTNAME=	numpy-2.4.3
+DISTNAME=	numpy-2.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
