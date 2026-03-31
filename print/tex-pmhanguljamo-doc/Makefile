@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2025/05/10 22:53:47 markd Exp $
+# $NetBSD: Makefile,v 1.5 2026/03/31 08:09:13 markd Exp $
 
 DISTNAME=	pmhanguljamo.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.1.2
-TEXLIVE_REV=	73884
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.3
+TEXLIVE_REV=	78114
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pmhanguljamo
