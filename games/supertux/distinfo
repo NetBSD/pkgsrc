@@ -1,15 +1,12 @@
-$NetBSD: distinfo,v 1.10 2025/09/28 15:58:14 adam Exp $
+$NetBSD: distinfo,v 1.11 2026/03/31 10:47:12 adam Exp $
 
-BLAKE2s (SuperTux-v0.6.3-Source.tar.gz) = 9a3227e7426b437b3e529654897a95fd52b2c15135ff1ae08957c37704d62d24
-SHA512 (SuperTux-v0.6.3-Source.tar.gz) = c6540bab1b3befbd975756031c4587e5569d9613d9539dc829c728b574d1a4da92816d6a7e68947b32963cc13d9b8b52312701c199138640e9f89e5885433798
-Size (SuperTux-v0.6.3-Source.tar.gz) = 182065428 bytes
-SHA1 (patch-CMakeLists.txt) = 5eb49b7df01402e08f744121dad4b4c533dbdc8f
-SHA1 (patch-external_SDL__ttf_CMakeLists.txt) = bc16239630b099b92f308497d052ff9352c2b8b7
+BLAKE2s (SuperTux-v0.7.0-Source.tar.gz) = 5294f7e605956dc2a5b46e66451af850d81074ff91bc12f0b60d78b1d128ca4b
+SHA512 (SuperTux-v0.7.0-Source.tar.gz) = 15bc4f84e1453be25ac3fa3496443e4e20d805f8c4d50148235f4dc82d188bef974fc720653cab36350d8b631c74539e4a74c33259fdaac6a516f44f8ed65297
+Size (SuperTux-v0.7.0-Source.tar.gz) = 292623271 bytes
+SHA1 (patch-CMakeLists.txt) = 6979c7a97eee2b4ee32d55103b37fa71dad4c42e
 SHA1 (patch-external_SDL__ttf_configure) = da5e257847458e0a4410be3b03299062d167d441
-SHA1 (patch-external_partio__zip_zip__manager.hpp) = 9b91692444a55d8a4d3c5c7c82cc591ee52454c3
-SHA1 (patch-external_physfs_src_physfs__platform__unix.c) = 2c8c6d7be1e02098065f5b177038ef71bac35dc5
-SHA1 (patch-external_squirrel_CMakeLists.txt) = 5e294e66a85b4bec48f2c28a38aacb543a9ee389
-SHA1 (patch-external_tinygettext_CMakeLists.txt) = 63ee77cfad60ba524a9fbd6076a48f7d5b48034d
-SHA1 (patch-external_tinygettext_include_tinygettext_iconv.hpp) = 4e9cf8c227af45ca2ae149fb18f29a9ad2a31b98
-SHA1 (patch-src_audio_openal__sound__source.hpp) = 03e62244d028b215c4c173e0f71a2f2667065e48
+SHA1 (patch-mk_cmake_SuperTux_BuildCPack.cmake) = a2f8fe0ab25001d399058ed14fc6df5c7a3e241b
+SHA1 (patch-mk_cmake_SuperTux_BuildInstall.cmake) = c0096b9cf23bce06723ef45d43d3b95d22b0e303
+SHA1 (patch-src_audio_openal__sound__source.hpp) = 6fd1c3baba9b84515ab212154e2b72c5a3edca12
 SHA1 (patch-src_audio_sound__manager.hpp) = 702188e8f2e4e9f0d515a1bc2943ac0dd42d6563
+SHA1 (patch-src_supertux_error__handler.cpp) = 6c245d3960ae4e91020848f4c5e1265fcc86aac8
