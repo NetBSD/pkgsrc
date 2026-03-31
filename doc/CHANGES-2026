@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2026 2026/03/31 09:43:50 markd Exp $
+$NetBSD: CHANGES-2026,v 1.2027 2026/03/31 10:54:09 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3112,3 +3112,15 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/tex-sttools-doc to 3.5 [markd 2026-03-31]
 	Updated print/tex-supertabular to 4.2c.77682 [markd 2026-03-31]
 	Updated print/tex-supertabular-doc to 4.2c.77682 [markd 2026-03-31]
+	Updated print/tex-tabularray to 2025C [markd 2026-03-31]
+	Added print/tex-tabularray-doc version 2025C [markd 2026-03-31]
+	Updated print/tex-tabularray-abnt to 2025.76924 [markd 2026-03-31]
+	Updated print/tex-tabularray-abnt-doc to 2025.76924 [markd 2026-03-31]
+	Updated print/tex-tagpdf to 0.99z [markd 2026-03-31]
+	Updated print/tex-tagpdf-doc to 0.99z [markd 2026-03-31]
+	Updated print/tex-tcolorbox to 6.9.0 [markd 2026-03-31]
+	Updated print/tex-tcolorbox-doc to 6.9.0 [markd 2026-03-31]
+	Updated print/tex-tex-ini-files to 2026 [markd 2026-03-31]
+	Updated print/tex-tex-ini-files-doc to 2026 [markd 2026-03-31]
+	Updated graphics/tex-tikzfill to 1.1.0 [markd 2026-03-31]
+	Updated graphics/tex-tikzfill-doc to 1.1.0 [markd 2026-03-31]
