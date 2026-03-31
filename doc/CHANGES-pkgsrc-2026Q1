@@ -1,7 +1,61 @@
-$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.2 2026/03/30 15:43:19 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.3 2026/03/31 14:41:48 maya Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
+
+Pullup ticket #7057 - requested by wiz
+graphics/png: Security fix
 
 Pullup ticket #7058 - requested by taca
 graphics/freetype2: security fix
 
+Pullup ticket #7059 - requested by taca
+lang/ruby33: Security fix
+
+Pullup ticket #7060 - requested by taca
+lang/ruby32-base: Security fix
+
+Pullup ticket #7061 - requested by taca
+databases/ruby-activerecord72: Security fix
+devel/ruby-activejob72: Security fix
+devel/ruby-activemodel72: Security fix
+devel/ruby-activestorage72: Security fix
+devel/ruby-activesupport72: Security fix
+devel/ruby-activesupport72: Security fix
+devel/ruby-railties72: Security fix
+devel/ruby-railties72: Security fix
+mail/ruby-actionmailbox72: Security fix
+mail/ruby-actionmailer72: Security fix
+textproc/ruby-actiontext72: Security fix
+www/ruby-actioncable72: Security fix
+www/ruby-actionpack72: Security fix
+www/ruby-actionpack72: Security fix
+www/ruby-actionview72: Security fix
+www/ruby-rails72: Security fix
+
+Pullup ticket #7062 - requested by taca
+databases/ruby-activerecord80: Security fix
+devel/ruby-activejob80: Security fix
+devel/ruby-activemodel80: Security fix
+devel/ruby-activestorage80: Security fix
+devel/ruby-activesupport80: Security fix
+devel/ruby-railties80: Security fix
+mail/ruby-actionmailbox80: Security fix
+mail/ruby-actionmailer80: Security fix
+textproc/ruby-actiontext80: Security fix
+www/ruby-actioncable80: Security fix
+www/ruby-actionpack80: Security fix
+www/ruby-actionview80: Security fix
+www/ruby-rails80: Security fix
+
+Pullup ticket #7063 - requested by taca
+devel/ruby-redmine61: Security fix
+
+Pullup ticket #7064 - requested by taca
+devel/ruby-redmine60: Security fix
+
+Pullup ticket #7065 - requested by taca
+devel/ruby-redmine51: Security fix
+
+Pullup ticket #7066 - requested by taca
+mail/roundcube-plugin-password: Security fix
+mail/roundcube: Security fix
