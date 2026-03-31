@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2023 2026/03/31 04:53:51 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2024 2026/03/31 07:04:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3071,3 +3071,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/py-dateparser to 1.4.0 [adam 2026-03-31]
 	Updated sysutils/ansible-core to 2.20.4 [adam 2026-03-31]
 	Updated sysutils/ansible to 13.5.0 [adam 2026-03-31]
+	Updated sysutils/xtop to 0.3.7 [pin 2026-03-31]
