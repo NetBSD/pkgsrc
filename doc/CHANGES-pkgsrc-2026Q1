@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.3 2026/03/31 14:41:48 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.4 2026/04/01 21:17:06 maya Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -10,6 +10,7 @@ graphics/freetype2: security fix
 
 Pullup ticket #7059 - requested by taca
 lang/ruby33: Security fix
+lang/ruby34: Build fix
 
 Pullup ticket #7060 - requested by taca
 lang/ruby32-base: Security fix
