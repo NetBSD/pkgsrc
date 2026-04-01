@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2042 2026/04/01 07:50:06 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2043 2026/04/01 11:53:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3157,3 +3157,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/gdk-pixbuf2 to 2.44.6 [adam 2026-04-01]
 	Updated graphics/graphviz to 14.1.4 [adam 2026-04-01]
 	Updated devel/lazygit to 0.60.0 [adam 2026-04-01]
+	Updated devel/py-pybind11 to 3.0.3 [adam 2026-04-01]
+	Updated textproc/py-mkdocs-get-deps to 0.2.2 [adam 2026-04-01]
