@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/10/09 07:58:00 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/04/01 11:53:16 adam Exp $
 
-DISTNAME=	mkdocs_get_deps-0.2.0
+DISTNAME=	mkdocs_get_deps-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mkdocs-get-deps/}
