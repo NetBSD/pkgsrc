@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2043 2026/04/01 11:53:36 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2044 2026/04/01 12:33:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3159,3 +3159,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/lazygit to 0.60.0 [adam 2026-04-01]
 	Updated devel/py-pybind11 to 3.0.3 [adam 2026-04-01]
 	Updated textproc/py-mkdocs-get-deps to 0.2.2 [adam 2026-04-01]
+	Updated devel/py-vulture to 2.16 [adam 2026-04-01]
+	Updated devel/py-test-env to 1.6.0 [adam 2026-04-01]
