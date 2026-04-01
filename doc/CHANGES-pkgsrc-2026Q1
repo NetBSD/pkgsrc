@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.4 2026/04/01 21:17:06 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.5 2026/04/01 21:21:20 maya Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -60,3 +60,6 @@ devel/ruby-redmine51: Security fix
 Pullup ticket #7066 - requested by taca
 mail/roundcube-plugin-password: Security fix
 mail/roundcube: Security fix
+
+Pullup ticket #7067 - requested by wiz
+graphics/xplot: Build fix
