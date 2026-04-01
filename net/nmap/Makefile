@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.152 2025/10/23 20:38:52 wiz Exp $
+# $NetBSD: Makefile,v 1.153 2026/04/01 13:00:04 adam Exp $
 
-PKGREVISION= 1
 .include "Makefile.common"
 
 COMMENT=	Network/port scanner with OS detection
