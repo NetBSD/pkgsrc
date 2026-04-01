@@ -1,1 +1,2 @@
 bin/sphobjinv @PREFIX@/bin/sphobjinv-@PYVERSSUFFIX@
+bin/sphobjinv-textconv @PREFIX@/bin/sphobjinv-textconv-@PYVERSSUFFIX@
