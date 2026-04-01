@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/04/01 08:49:01 tnn Exp $
+
+- fix 32-bit arm build
+
+--- CMakeLists.txt.orig	2026-04-01 08:19:44.119980606 +0000
++++ CMakeLists.txt
+@@ -127,7 +127,7 @@ if(CMAKE_SYSTEM_PROCESSOR_LC MATCHES "x8
+     set(CMAKE_SYSTEM_PROCESSOR ${CPU_TYPE})
+   endif()
+ elseif(CMAKE_SYSTEM_PROCESSOR_LC STREQUAL "aarch64" OR
+-  CMAKE_SYSTEM_PROCESSOR_LC MATCHES "^arm")
++  CMAKE_SYSTEM_PROCESSOR_LC MATCHES "^e?arm")
+   if(BITS EQUAL 64)
+     set(CPU_TYPE arm64)
+   else()
