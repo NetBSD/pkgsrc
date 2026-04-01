@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2046 2026/04/01 13:00:37 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2047 2026/04/01 14:30:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3167,3 +3167,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/nmap to 7.99 [adam 2026-04-01]
 	Updated net/ndiff to 7.99 [adam 2026-04-01]
 	Updated net/zenmap to 7.99 [adam 2026-04-01]
+	Updated www/ruby-rack to 3.2.6 [taca 2026-04-01]
