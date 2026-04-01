@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.36 2026/03/29 17:24:31 wiz Exp $
+$NetBSD: distinfo,v 1.37 2026/04/01 08:49:01 tnn Exp $
 
 BLAKE2s (libjpeg-turbo-3.1.4.1.tar.gz) = 4563273544a3c7ada586875174553bd8edf94499b0ebcf1c447eb27990e7c992
 SHA512 (libjpeg-turbo-3.1.4.1.tar.gz) = 5c67fa6a528e35963736e0361ae6952f6f253b74cd31e8795de60a80287b123c4f35a333ca03934011b01f72110c13b26d13320fce2969287428cebde153c730
 Size (libjpeg-turbo-3.1.4.1.tar.gz) = 2528617 bytes
+SHA1 (patch-CMakeLists.txt) = ed81aa8def09bd03ff0c0a31ef2d7cac0bf06c8f
 SHA1 (patch-simd_arm__aarch32_jsimd.c) = db5ac609a3897d249e6b29f601086cce78cd7406
 SHA1 (patch-simd_arm__aarch64_jsimd.c) = 76c5e81403f70a8ea8bca8ae2266066fff5ec6f9
 SHA1 (patch-src_jpeglib.h) = 6be231604acd6a55f3a6d135cfaef20897e2926d
