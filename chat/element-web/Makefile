@@ -1,17 +1,13 @@
-# $NetBSD: Makefile,v 1.42 2026/03/25 23:14:25 gdt Exp $
+# $NetBSD: Makefile,v 1.43 2026/04/01 23:46:58 js Exp $
 
 DISTNAME=	element-v${PKGVERSION_NOREV}
 PKGNAME=	element-web-1.12.12
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_GITHUB:=element-hq/}
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
-
-# GPG key:
-#   https://packages.riot.im/element-release-key.asc
-#   712B FBEE 92DC A452 52DB  17D7 C7BE 97EF A179 B100
-#   
-# GPG signature:
-#   https://github.com/vector-im/element-web/releases/download/v${PKGVERSION_NOREV}/element-v${PKGVERSION_NOREV}.tar.gz.asc
+# Using the normal GitHub fetching only works for one distfile, even when
+# trying to hack around it.
+MASTER_SITES=	https://github.com/element-hq/element-web/releases/download/v${PKGVERSION_NOREV}/
+DISTFILES=	${DISTNAME}.tar.gz
+DISTFILES+=	${DISTNAME}.tar.gz.asc
 
 MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://element.io/
@@ -27,5 +23,10 @@ INSTALLATION_DIRS+=	share/element-web
 
 do-install:
 	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/share/element-web
+
+verify-signature:
+	gpgv --keyring ${FILESDIR}/gpgkey-element.gpg \
+		${DISTDIR}/${DISTNAME}.tar.gz.asc \
+		${DISTDIR}/${DISTNAME}.tar.gz
 
 .include "../../mk/bsd.pkg.mk"
