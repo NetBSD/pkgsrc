@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2053 2026/04/01 19:52:25 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2054 2026/04/01 21:56:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3174,3 +3174,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated fonts/harfbuzz-icu to 14.0.0 [wiz 2026-04-01]
 	Updated devel/wayland-protocols to 1.48 [wiz 2026-04-01]
 	Updated devel/py-uv-dynamic-versioning to 0.14.0 [wiz 2026-04-01]
+	Updated net/bind918 to 9.18.48 [taca 2026-04-01]
