@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2040 2026/04/01 05:57:39 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2041 2026/04/01 06:50:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3154,3 +3154,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/openvpn to 2.7.1 [adam 2026-04-01]
 	Updated textproc/py-orjson to 3.11.8 [adam 2026-04-01]
 	Updated www/py-aiohttp to 3.13.5 [adam 2026-04-01]
+	Updated graphics/gdk-pixbuf2 to 2.44.6 [adam 2026-04-01]
+	Updated graphics/graphviz to 14.1.4 [adam 2026-04-01]
