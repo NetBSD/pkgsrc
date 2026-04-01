@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.89 2026/03/26 13:38:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.90 2026/04/01 19:41:08 wiz Exp $
 ${PLIST.introspection}bin/hb-info
 ${PLIST.introspection}bin/hb-raster
 ${PLIST.introspection}bin/hb-shape
@@ -21,6 +21,7 @@ ${PLIST.introspection}include/harfbuzz/hb-glib.h
 ${PLIST.introspection}include/harfbuzz/hb-gobject-enums.h
 ${PLIST.introspection}include/harfbuzz/hb-gobject-structs.h
 ${PLIST.introspection}include/harfbuzz/hb-gobject.h
+include/harfbuzz/hb-gpu.h
 ${PLIST.graphite2}include/harfbuzz/hb-graphite2.h
 include/harfbuzz/hb-map.h
 include/harfbuzz/hb-ot-color.h
@@ -52,6 +53,9 @@ ${PLIST.introspection}lib/girepository-1.0/HarfBuzz-0.0.typelib
 ${PLIST.introspection}lib/libharfbuzz-gobject.so
 ${PLIST.introspection}lib/libharfbuzz-gobject.so.0
 ${PLIST.introspection}lib/libharfbuzz-gobject.so.0.${SOVER}.0
+lib/libharfbuzz-gpu.so
+lib/libharfbuzz-gpu.so.0
+lib/libharfbuzz-gpu.so.0.61400.0
 lib/libharfbuzz-raster.so
 lib/libharfbuzz-raster.so.0
 lib/libharfbuzz-raster.so.0.${SOVER}.0
@@ -65,6 +69,7 @@ lib/libharfbuzz.so
 lib/libharfbuzz.so.0
 lib/libharfbuzz.so.0.${SOVER}.0
 ${PLIST.introspection}lib/pkgconfig/harfbuzz-gobject.pc
+lib/pkgconfig/harfbuzz-gpu.pc
 lib/pkgconfig/harfbuzz-raster.pc
 lib/pkgconfig/harfbuzz-subset.pc
 lib/pkgconfig/harfbuzz-vector.pc
@@ -122,6 +127,10 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-11-0-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-11-2-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-11-3-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-12-1-0.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-13-0-0.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-13-1-0.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-13-2-0.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-14-0-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-2-0-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-2-1-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-2-2-0.html
@@ -165,6 +174,7 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/clusters.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/core-api.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/customizing-unicode-functions.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/deprecated-api-index.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/favicon.ico
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/fonts-and-faces-custom-functions.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/fonts-and-faces-native-opentype.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/fonts-and-faces-variable.html
@@ -188,6 +198,7 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-fontations.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ft.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-gdi.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-glib.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-gpu.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-graphite2.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-icu.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-map.html
@@ -201,6 +212,7 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-name.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-shape.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-var.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-paint.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-raster.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-set.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-shape-plan.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-shape.html
@@ -208,8 +220,13 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-style.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-subset.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-unicode.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-uniscribe.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-vector.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-version.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz.devhelp2
+${PLIST.doc}share/gtk-doc/html/harfbuzz/hb-gpu.png
+${PLIST.doc}share/gtk-doc/html/harfbuzz/hb-raster.png
+${PLIST.doc}share/gtk-doc/html/harfbuzz/hb-subset.png
+${PLIST.doc}share/gtk-doc/html/harfbuzz/hb-vector.png
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/home.png
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/index.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/install-harfbuzz.html
@@ -232,6 +249,7 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/object-model.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/opentype-api.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/opentype-shaping-models.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/reference-manual.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/rendering-api.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/reordering-in-levels-0-and-1.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/right-insensitive.png
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/right.png
