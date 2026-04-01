@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2050 2026/04/01 19:41:19 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2051 2026/04/01 19:41:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3171,3 +3171,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added fonts/nerd-fonts-Monaspace version 1.400 [wiz 2026-04-01]
 	Updated net/arti to 2.2.0 [wiz 2026-04-01]
 	Updated fonts/harfbuzz to 14.0.0 [wiz 2026-04-01]
+	Updated fonts/harfbuzz-icu to 14.0.0 [wiz 2026-04-01]
