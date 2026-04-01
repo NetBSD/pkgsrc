@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2026/02/01 11:05:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2026/04/01 06:40:42 adam Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-pixdata
 bin/gdk-pixbuf-query-loaders
@@ -30,7 +30,7 @@ ${PLIST.introspection}lib/girepository-1.0/GdkPixbuf-2.0.typelib
 ${PLIST.introspection}lib/girepository-1.0/GdkPixdata-2.0.typelib
 lib/libgdk_pixbuf-2.0.so
 lib/libgdk_pixbuf-2.0.so.0
-lib/libgdk_pixbuf-2.0.so.0.4400.5
+lib/libgdk_pixbuf-2.0.so.0.4400.6
 lib/pkgconfig/gdk-pixbuf-2.0.pc
 man/man1/gdk-pixbuf-csource.1
 man/man1/gdk-pixbuf-query-loaders.1
