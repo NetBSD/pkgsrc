@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2025/10/09 08:02:00 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2026/04/01 08:59:11 tnn Exp $
 
 PKGNAME=	${PYPKGPREFIX}-Tk-${PY_DISTVERSION}
 PKGREVISION=	9
@@ -35,6 +35,7 @@ PY_SETUP_SUBST+=	X11LIB=
 PY_SETUP_SUBST+=	X11LIB=\'X11\'
 .endif
 
+.include "../../mk/atomic64.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/srcdist.mk"
 .include "../../lang/tcl/buildlink3.mk"
