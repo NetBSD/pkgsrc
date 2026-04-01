@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2026/03/05 15:08:28 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/04/01 19:34:53 wiz Exp $
 
-DISTNAME=	arti-arti-v2.1.0
+DISTNAME=	arti-arti-v2.2.0
 PKGNAME=	${DISTNAME:S/arti-v//}
 CATEGORIES=	net
 # TODO: modify gitlab fetch to allow hosted gitlab instances
