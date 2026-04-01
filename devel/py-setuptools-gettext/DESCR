@@ -1,0 +1,2 @@
+This plugin adds build_mo, clean_mo and install_mo subcommands for setup.py as
+well as hooking those into standard commands.
