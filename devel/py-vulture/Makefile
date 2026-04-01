@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2026/03/07 11:49:13 adam Exp $
+# $NetBSD: Makefile,v 1.10 2026/04/01 12:31:04 adam Exp $
 
-DISTNAME=	vulture-2.15
+DISTNAME=	vulture-2.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vulture/}
