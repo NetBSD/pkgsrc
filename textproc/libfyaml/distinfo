@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.7 2026/03/26 13:58:33 wiz Exp $
+$NetBSD: distinfo,v 1.8 2026/04/01 08:53:14 tnn Exp $
 
 BLAKE2s (libfyaml-0.9.6.tar.gz) = a5b4c5ea3dc0935b45a71345ed7bb60998a9f062887b598588034e02c2593672
 SHA512 (libfyaml-0.9.6.tar.gz) = 71f01fdbfa8a3675bdd6697929bb8ee85672befa5ed815ef30813987c2f75f8ef0959e70d1b17d02ccadabc967f1dfd5b7f46a10a83fca7b1a9ed7455c52e344
 Size (libfyaml-0.9.6.tar.gz) = 1146628 bytes
+SHA1 (patch-CMakeLists.txt) = 07f4012a4a84718134c6b13659eda0cc861a7efa
+SHA1 (patch-include_libfyaml_libfyaml-util.h) = 4318fa32aad5ffd22541c90580d90173c6394742
+SHA1 (patch-include_libfyaml_libfyaml-vlsize.h) = 8ac53eeaeb1ca93dea87ff2adf998d515fb40ca3
 SHA1 (patch-src_lib_fy-walk.c) = 42156d0ec45256a8434ca2c95b97bf474553c02a
