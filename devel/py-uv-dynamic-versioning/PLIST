@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/02/27 13:30:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/04/01 19:52:17 wiz Exp $
 bin/uv-dynamic-versioning-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -23,6 +23,9 @@ ${PYSITELIB}/uv_dynamic_versioning/main.pyo
 ${PYSITELIB}/uv_dynamic_versioning/metadata_hook.py
 ${PYSITELIB}/uv_dynamic_versioning/metadata_hook.pyc
 ${PYSITELIB}/uv_dynamic_versioning/metadata_hook.pyo
+${PYSITELIB}/uv_dynamic_versioning/monkeypatch.py
+${PYSITELIB}/uv_dynamic_versioning/monkeypatch.pyc
+${PYSITELIB}/uv_dynamic_versioning/monkeypatch.pyo
 ${PYSITELIB}/uv_dynamic_versioning/schemas.py
 ${PYSITELIB}/uv_dynamic_versioning/schemas.pyc
 ${PYSITELIB}/uv_dynamic_versioning/schemas.pyo
