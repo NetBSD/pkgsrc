@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/05/28 04:46:11 adam Exp $
+$NetBSD: distinfo,v 1.8 2026/04/01 12:39:35 adam Exp $
 
-BLAKE2s (sphobjinv-2.3.1.3.tar.gz) = 232fc2663cf898c2643a7d0599b485bdf7761b1985a7ee1ba7dd4d740640c527
-SHA512 (sphobjinv-2.3.1.3.tar.gz) = f1cfbd30c90dec8716ac66968b3ce69ce62f1f5b0d13921c4d608e3864d77111c0a755de8124fdcc667443c5a0419606953f238aeeb332d31ddd55e17701e5cb
-Size (sphobjinv-2.3.1.3.tar.gz) = 268835 bytes
+BLAKE2s (sphobjinv-2.4.tar.gz) = f91f6a413dd3febcf513bd82ed8eca5de4adc3fe37eef8c67475d1921bc55ca0
+SHA512 (sphobjinv-2.4.tar.gz) = bf08001a61bb9924d4dd9803cbc56d6d6d122f4d4598b808fc51befd1ad2ea7bf85b24aef9464b8828be420e10c87fdd96da58c2d1f5f280cc9e4f8e65416d0a
+Size (sphobjinv-2.4.tar.gz) = 249997 bytes

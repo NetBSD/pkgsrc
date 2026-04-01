@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2026/01/06 11:18:46 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/04/01 12:39:35 adam Exp $
 
-DISTNAME=	sphobjinv-2.3.1.3
+DISTNAME=	sphobjinv-2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphobjinv/}
@@ -24,8 +24,10 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
 post-install:
+.for bin in sphobjinv sphobjinv-textconv
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} sphobjinv sphobjinv-${PYVERSSUFFIX} || ${TRUE}
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
