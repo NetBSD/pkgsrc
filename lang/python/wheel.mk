@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.22 2025/05/11 19:34:25 gdt Exp $
+# $NetBSD: wheel.mk,v 1.23 2026/04/01 20:35:38 wiz Exp $
 #
 # Build and install Python wheels
 #
@@ -24,6 +24,11 @@
 
 # Variables:
 #
+# PY_RENAME_BINARIES:	List of binaries (in ${PREFIX}/bin) that should
+#			be renamed to have a '-${PYVERSSUFFIX}'
+#			suffix. This allows parallel installation of a
+#			package for different Python versions.
+#
 # WHEELFILE:		Path to the wheelfile to be installed.
 #			Only needs to be set if do-build is redefined.
 #
@@ -48,6 +53,8 @@ PLIST_SUBST+=	WHEEL_INFODIR=${_WHEEL_INFODIR}
 WHEEL_ARGS?=	# empty
 
 PRINT_PLIST_AWK+=	{ gsub(/${_WHEEL_INFODIR:S,.,\.,g}/, "$${WHEEL_INFODIR}") }
+
+PY_RENAME_BINARIES?=	# empty
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -75,6 +82,9 @@ do-install:
 		--prefix ${PREFIX:Q} \
 		${PYINSTALL_EXEC} \
 		${WHEELFILE}
+.for f in ${PY_RENAME_BINARIES}
+	cd ${DESTDIR}/${PREFIX}/bin && ${MV} $f $f-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 .endif
 
 USE_PYTEST?=	yes
