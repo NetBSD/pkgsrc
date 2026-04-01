@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/04/01 08:53:14 tnn Exp $
+
+https://github.com/pantoniou/libfyaml/commit/238082d09eb2453a9b6e98f359fb0eed05086694.patch
+
+--- CMakeLists.txt.orig	2026-03-15 13:48:50.000000000 +0000
++++ CMakeLists.txt
+@@ -606,7 +606,7 @@ set(TARGET_HAS_NEON FALSE)
+ # Use portable implementations instead
+ if(WIN32)
+     message(STATUS "Windows detected: using portable SIMD implementations")
+-elseif(TARGET_CPU_ANY_X86 AND NOT ENABLE_PORTABLE_TARGET)
++elseif(TARGET_CPU_X86_64 AND NOT ENABLE_PORTABLE_TARGET)
+     check_c_source_compiles("
+         #include <emmintrin.h>
+         int main() { __m128i a = _mm_setzero_si128(); return 0; }
