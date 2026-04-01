@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/14 12:56:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/04/01 12:39:35 adam Exp $
 bin/sphobjinv-${PYVERSSUFFIX}
+bin/sphobjinv-textconv-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
