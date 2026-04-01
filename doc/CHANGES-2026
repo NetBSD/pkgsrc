@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2045 2026/04/01 12:39:58 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2046 2026/04/01 13:00:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3163,3 +3163,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-test-env to 1.6.0 [adam 2026-04-01]
 	Updated net/py-softlayer to 6.2.9 [adam 2026-04-01]
 	Updated textproc/py-sphobjinv to 2.4 [adam 2026-04-01]
+	Added devel/py-setuptools-gettext version 0.1.16 [adam 2026-04-01]
+	Updated net/nmap to 7.99 [adam 2026-04-01]
+	Updated net/ndiff to 7.99 [adam 2026-04-01]
+	Updated net/zenmap to 7.99 [adam 2026-04-01]
