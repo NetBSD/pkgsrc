@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1.2.2 2026/04/01 21:20:54 maya Exp $
+
+--- configure.orig	2026-04-01 06:45:49.790687683 +0000
++++ configure
+@@ -655,7 +655,7 @@ cat > conftest.$ac_ext << EOF
+ #line 656 "configure"
+ #include "confdefs.h"
+ 
+-main(){return(0);}
++int main(){return(0);}
+ EOF
+ if { (eval echo configure:661: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+   ac_cv_prog_cc_works=yes
