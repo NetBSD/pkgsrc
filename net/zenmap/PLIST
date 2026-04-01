@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/15 12:02:01 abs Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/04/01 13:00:05 adam Exp $
 bin/zenmap
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -375,3 +375,14 @@ ${PYSITELIB}/zenmapGUI/higwidgets/higtextviewers.pyo
 ${PYSITELIB}/zenmapGUI/higwidgets/higwindows.py
 ${PYSITELIB}/zenmapGUI/higwidgets/higwindows.pyc
 ${PYSITELIB}/zenmapGUI/higwidgets/higwindows.pyo
+share/locale/de/LC_MESSAGES/zenmap.mo
+share/locale/es/LC_MESSAGES/zenmap.mo
+share/locale/fr/LC_MESSAGES/zenmap.mo
+share/locale/hi/LC_MESSAGES/zenmap.mo
+share/locale/hr/LC_MESSAGES/zenmap.mo
+share/locale/it/LC_MESSAGES/zenmap.mo
+share/locale/ja/LC_MESSAGES/zenmap.mo
+share/locale/pl/LC_MESSAGES/zenmap.mo
+share/locale/pt_BR/LC_MESSAGES/zenmap.mo
+share/locale/ru/LC_MESSAGES/zenmap.mo
+share/locale/zh/LC_MESSAGES/zenmap.mo
