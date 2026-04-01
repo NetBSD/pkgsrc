@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.6 2026/02/22 20:40:55 js Exp $
+# $NetBSD: options.mk,v 1.7 2026/04/01 23:19:24 js Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.objfw
-.if ${MACHINE_ARCH} != "alpha" && \
+.if ${OPSYS} != "Darwin" && \
+	${MACHINE_ARCH} != "alpha" && \
 	${MACHINE_ARCH} != "coldfire" && \
 	${MACHINE_ARCH} != "hppa" && \
 	${MACHINE_ARCH} != "ia64" && \
@@ -11,6 +12,8 @@ PKG_OPTIONS_VAR=		PKG_OPTIONS.objfw
 	${MACHINE_ARCH} != "sh3eb" && \
 	${MACHINE_ARCH} != "sh3el" && \
 	${MACHINE_ARCH} != "vax"
+# Always use the system compiler on Darwin, as that has the best ObjC support.
+# Clang is not available on the architectures listed above.
 PKG_SUPPORTED_OPTIONS=		clang
 PKG_SUGGESTED_OPTIONS+=		clang
 .endif
@@ -22,14 +25,13 @@ PKG_SUGGESTED_OPTIONS+=		openssl
 
 .if !empty(PKG_OPTIONS:Mclang)
 CONFIGURE_ARGS+=	OBJC=clang
-.  if ${OPSYS} != "Darwin"
-# Darwin already has Clang as the default compiler.
 TOOL_DEPENDS+=		clang>=3.2:../../lang/clang
 PKGSRC_COMPILER=	clang
-.  endif
 .else
+.  if ${OPSYS} != "Darwin"
 # Need to explicitly set GCC, as configure prefers Clang.
 CONFIGURE_ARGS+=	OBJC=gcc
+.  endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mopenssl)
