@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2026/02/23 13:27:15 adam Exp $
+$NetBSD: distinfo,v 1.15 2026/04/01 12:33:07 adam Exp $
 
-BLAKE2s (pytest_env-1.5.0.tar.gz) = 6df32f21308270a7cf4f0cc63d72726002fa880cae9848e362f29d09e8e7cc6c
-SHA512 (pytest_env-1.5.0.tar.gz) = d01fa03103d1e3b4485f43643d7352ebd568a2cf6edf09054b8358d4cda10000f1cab5d9d70cdc11e7bd751764c46a3c0bc23fb7ef89bc0947c5e78b59efab78
-Size (pytest_env-1.5.0.tar.gz) = 15271 bytes
+BLAKE2s (pytest_env-1.6.0.tar.gz) = 6f8b6428272ad2238531b813f3d6cc37847934b6b344323356634546f5e4c15f
+SHA512 (pytest_env-1.6.0.tar.gz) = 3b5e0dc01654dd56497c45e03e4372c9f1be193ef3210ed1a48a09b20f4033e6f1a62fcfbf726dd43c1a4eed4e1f26095c3f1c1b510d428690e2e7349f228ea6
+Size (pytest_env-1.6.0.tar.gz) = 16163 bytes
