@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/01 19:08:00 wiz Exp $
+
+BLAKE2s (monaspace-nerdfonts-v1.400.zip) = 2b873015af58b07223233ef0b6bfce768812e9f60f1e4dbb7c65d1cc321eedb0
+SHA512 (monaspace-nerdfonts-v1.400.zip) = f5ddcb3e16cfc27beb215cd996bf63eb994e3f3d6a13b48e632a69d1453b44cb3a1e5cdeaa61988317b2e6e40d57b0e54d1925fb4dca7f75f4cd37e44672fa8a
+Size (monaspace-nerdfonts-v1.400.zip) = 330723456 bytes
