@@ -1,0 +1,23 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2026/04/01 13:00:05 adam Exp $
+
+Don't install ndiff.
+
+--- pyproject.toml.orig	2026-04-01 12:55:12.423831238 +0000
++++ pyproject.toml
+@@ -24,8 +24,6 @@ Changelog = "https://nmap.org/changelog"
+ [project.gui-scripts]
+ zenmap = "zenmapGUI.App:run"
+ 
+-[project.scripts]
+-ndiff = "ndiff:run_main"
+ 
+ [tool.setuptools]
+ packages = [
+@@ -44,7 +42,6 @@ packages = [
+ "radialnet.gui",
+ "radialnet.util",
+ ]
+-py-modules = ["ndiff"]
+ 
+ [tool.setuptools.dynamic]
+ version = {attr = "zenmapCore.Version.VERSION"}
