@@ -1,4 +1,6 @@
-$NetBSD: patch-src_bootstrap_src_core_build__steps_install.rs,v 1.4 2026/01/13 20:48:23 wiz Exp $
+$NetBSD: patch-src_bootstrap_src_core_build__steps_install.rs,v 1.5 2026/04/02 19:06:34 wiz Exp $
+
+Drop "docs" from installation (takes forever), add "rust".
 
 --- src/bootstrap/src/core/build_steps/install.rs.orig	2025-10-28 16:34:16.000000000 +0000
 +++ src/bootstrap/src/core/build_steps/install.rs

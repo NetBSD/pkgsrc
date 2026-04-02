@@ -37,6 +37,11 @@ else
 		powerpc*)	# Now needed due to bloat
 				madd="-mlongcall"
 				;;
+		m68k-*)	# needed due to exceeding 16-bit offsets
+			# ref.
+			# relocation truncated to fit: R_68K_PC16 against ...
+				madd="-mlong-jump-table-offsets"
+				;;
 	esac
 	# We build both for -8 and -9 due to ABI differences,
 	# so can't just test $gnuarch...  Yes, a vile hack.

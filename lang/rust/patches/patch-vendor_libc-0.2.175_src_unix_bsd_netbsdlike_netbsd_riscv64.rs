@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_libc-0.2.175_src_unix_bsd_netbsdlike_netbsd_riscv64.rs,v 1.1 2026/01/13 20:48:23 wiz Exp $
+$NetBSD: patch-vendor_libc-0.2.175_src_unix_bsd_netbsdlike_netbsd_riscv64.rs,v 1.2 2026/04/02 19:06:34 wiz Exp $
 
 Unbreak this module.
 
@@ -8,79 +8,64 @@ for NetBSD/risc64 with this, whereas it did not earlier.
 
 --- vendor/libc-0.2.175/src/unix/bsd/netbsdlike/netbsd/riscv64.rs.orig	2025-11-02 16:57:14.244169978 +0000
 +++ vendor/libc-0.2.175/src/unix/bsd/netbsdlike/netbsd/riscv64.rs
-@@ -1,16 +1,16 @@
+@@ -1,28 +1,48 @@
 -use PT_FIRSTMACH;
+-
+ use crate::prelude::*;
 +use crate::PT_FIRSTMACH;
  
- use crate::prelude::*;
- 
  pub type __greg_t = u64;
- pub type __cpu_simple_lock_nv_t = c_int;
- pub type __gregset = [__greg_t; _NGREG];
+-pub type __cpu_simple_lock_nv_t = c_int;
+-pub type __gregset = [__greg_t; _NGREG];
 -pub type __fregset = [__freg; _NFREG];
-+pub type __fpregset = [__fpreg; _NFREG];
++pub type __cpu_simple_lock_nv_t = c_uint;
++pub type __gregset_t = [__greg_t; _NGREG];
++pub type __fregset_t = [__fpreg; _NFREG];
++
++s_no_extra_traits! {
++    pub union __fpreg {
++        pub u_u64: u64,
++        pub u_d: c_double,
++    }
++}
  
  s! {
      pub struct mcontext_t {
-         pub __gregs: __gregset,
+-        pub __gregs: __gregset,
 -        pub __fregs: __fpregset,
-+        pub __fpregs: __fpregset,
++        pub __gregs: __gregset_t,
++        pub __fregs: __fregset_t,
          __spare: [crate::__greg_t; 7],
      }
  }
-@@ -22,6 +22,55 @@ s_no_extra_traits! {
+ 
+-s_no_extra_traits! {
+-    pub union __fpreg {
+-        pub u_u64: u64,
+-        pub u_d: c_double,
++cfg_if! {
++    if #[cfg(feature = "extra_traits")] {
++        impl PartialEq for __fpreg {
++            fn eq(&self, other: &__fpreg) -> bool {
++                unsafe { self.u_u64 == other.u_u64 || self.u_d == other.u_d }
++            }
++        }
++        impl Eq for __fpreg {}
++        impl hash::Hash for __fpreg {
++            fn hash<H: hash::Hasher>(&self, state: &mut H) {
++                unsafe {
++                    self.u_u64.hash(state);
++                }
++            }
++        }
      }
  }
  
-+cfg_if! {
-+    if #[cfg(feature = "extra_traits")] {
-+//      use ::self::fmt;
-+//      use ::self::hash;
-+        use core::marker::Copy;
-+        use core::clone::Clone;
-+        #[cfg(libc_union)]
-+        impl PartialEq for __fpreg {
-+            fn eq(&self, other: &__fpreg) -> bool {
-+                unsafe {
-+                    self.u_64 == other.u_64
-+                        || self.u_d == other.u_d
-+                }
-+            }
-+        }
-+        #[cfg(libc_union)]
-+        impl Eq for __fpreg {}
-+        #[cfg(libc_union)]
-+        impl ::fmt::Debug for __fpreg {
-+            fn fmt(&self, f: &mut ::fmt::Formatter) -> ::fmt::Result {
-+                unsafe {
-+                    f.debug_struct("__fpreg")
-+                        .field("u_u64", &self.u_64)
-+                        .field("u_d", &self.u_d)
-+                        .finish()
-+                }
-+            }
-+        }
-+        #[cfg(libc_union)]
-+        impl ::hash::Hash for __fpreg {
-+            fn hash<H: ::hash::Hasher>(&self, state: &mut H) {
-+                unsafe {
-+                    self.u_64.hash(state);
-+                    self.u_d.hash(state);
-+                }
-+            }
-+        }
-+        #[cfg(libc_union)]
-+        impl ::Copy for __fpreg {}
-+        #[cfg(libc_union)]
-+        impl ::Clone for __fpreg {
-+            fn clone(&self) -> __fpreg {
-+                *self
-+            }
-+        }
-+    }
-+}
-+
-+
- pub(crate) const _ALIGNBYTES: usize = size_of::<c_long>() - 1;
+-pub(crate) const _ALIGNBYTES: usize = size_of::<c_long>() - 1;
++// gcc for riscv64 defines `BIGGEST_ALIGNMENT`, but it's mesured in bits.
++pub(crate) const __BIGGEST_ALIGNMENT_IN_BITS__: usize = 128;
++// `_ALIGNBYTES` is measured in, well, bytes.
++pub(crate) const _ALIGNBYTES: usize = (__BIGGEST_ALIGNMENT_IN_BITS__ / 8) - 1;
  
  pub const PT_GETREGS: c_int = PT_FIRSTMACH + 0;
+ pub const PT_SETREGS: c_int = PT_FIRSTMACH + 1;

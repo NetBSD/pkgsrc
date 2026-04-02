@@ -1,4 +1,4 @@
-# $NetBSD: do-cross.mk,v 1.16 2025/08/25 17:51:11 wiz Exp $
+# $NetBSD: do-cross.mk,v 1.17 2026/04/02 19:06:34 wiz Exp $
 # Do all the NetBSD cross builds
 # Collect the bootstrap kits in dist/
 
@@ -14,6 +14,7 @@ SHORT_TARGETS+=		arm64_be
 SHORT_TARGETS+=		i386
 SHORT_TARGETS+=		riscv64
 SHORT_TARGETS+=		mipsel	# produces mips32 (not mips1) executables
+#SHORT_TARGETS+=	m68k
 
 # Conditional local overrides of ROOT.* variables:
 .sinclude "local-roots.mk"
@@ -29,6 +30,7 @@ ROOT.arm64_be?=		/u/evbarm64eb
 ROOT.i386?=		/u/i386
 ROOT.mipsel?=		/u/mipsel
 ROOT.riscv64?=		/u/riscv64
+ROOT.m68k?=		/u/m68k
 
 # Mapping to GNU triple
 G_TGT.armv7=		armv7--netbsdelf-eabihf
@@ -40,6 +42,7 @@ G_TGT.arm64_be=		aarch64_be--netbsd
 G_TGT.i386=		i486--netbsdelf
 G_TGT.mipsel=		mipsel--netbsd
 G_TGT.riscv64=		riscv64--netbsd
+G_TGT.m68k=		m68k--netbsdelf
 
 # Mapping to rust's TARGET specification
 TGT.armv7=		armv7-unknown-netbsd-eabihf
@@ -51,6 +54,7 @@ TGT.arm64_be=		aarch64_be-unknown-netbsd
 TGT.i386=		i586-unknown-netbsd
 TGT.mipsel=		mipsel-unknown-netbsd
 TGT.riscv64=		riscv64gc-unknown-netbsd
+TGT.m68k=		m68k-unknown-netbsd
 
 # Optional target tweak for bootstrap files
 #TT.powerpc=		powerpc-unknown-netbsd90
@@ -59,25 +63,31 @@ WRKDIR=		${.CURDIR}/work
 SCRIPTS=	${WRKDIR}/scripts
 
 #DEBUG=		echo
+ECHO?=		echo
 
 # Make list of make targets
 .for st in ${SHORT_TARGETS}
 MTGTS+=	do-${st}
 .endfor
 
+.PHONY:	all
+
 all: ${MTGTS}
 
 # Define the individual build targets, used above
 .for st in ${SHORT_TARGETS}
-CA.${st}=--host=${TGT.${st}}
-CA.${st}+=--target=${TGT.${st}}
-CA.${st}+=--set=target.${TGT.${st}}.cc=${SCRIPTS}/gcc-wrap
-CA.${st}+=--set=target.${TGT.${st}}.cxx=${SCRIPTS}/c++-wrap
-CA.${st}+=--set=target.${TGT.${st}}.linker=${SCRIPTS}/gcc-wrap
-CA.${st}+=--set=target.${TGT.${st}}.ar=${ROOT.${st}}/tools/bin/${G_TGT.${st}}-ar
+CA.${st}=	--host=${TGT.${st}}
+CA.${st}+=	--target=${TGT.${st}}
+CA.${st}+=	--set=target.${TGT.${st}}.cc=${SCRIPTS}/gcc-wrap
+CA.${st}+=	--set=target.${TGT.${st}}.cxx=${SCRIPTS}/c++-wrap
+CA.${st}+=	--set=target.${TGT.${st}}.linker=${SCRIPTS}/gcc-wrap
+CA.${st}+=	--set=target.${TGT.${st}}.ar=${ROOT.${st}}/tools/bin/${G_TGT.${st}}-ar
+
+.PHONY:	do-${st}
+
 do-${st}:
 	mkdir -p dist
-	@echo "=======> Cross-building rust for ${st}"
+	@${ECHO} "=======> Cross-building rust for ${st}"
 	${DEBUG} make -f Makefile clean
 	${DEBUG} env \
 		CROSS_ROOT=${ROOT.${st}} \
@@ -95,13 +105,13 @@ do-${st}:
 		src=$${distdir}/$${comp}-${V_NOREV}-${TGT.${st}}.tar.xz; \
 		tgt=dist/$${comp}-${VERSION}-$${TT}.tar.xz; \
 		if [ ! -f "$${tgt}" ]; then \
-			echo ln $${src} $${tgt}; \
+			${ECHO} ln $${src} $${tgt}; \
 			${DEBUG} ln $${src} $${tgt}; \
 		fi; \
 	done; \
 	src_comp=rust-src-${V_NOREV}.tar.xz; \
 	if [ ! -f dist/$${src_comp} ]; then \
-		echo ln $${distdir}/$${src_comp} dist; \
+		${ECHO} ln $${distdir}/$${src_comp} dist; \
 		${DEBUG} ln $${distdir}/$${src_comp} dist; \
 	fi
 .endfor

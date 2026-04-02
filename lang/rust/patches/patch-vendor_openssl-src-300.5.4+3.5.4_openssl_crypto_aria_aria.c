@@ -1,9 +1,9 @@
-$NetBSD: patch-vendor_openssl-src-300.5.2+3.5.2_openssl_crypto_aria_aria.c,v 1.1 2026/01/13 20:48:23 wiz Exp $
+$NetBSD: patch-vendor_openssl-src-300.5.4+3.5.4_openssl_crypto_aria_aria.c,v 1.1 2026/04/02 19:06:35 wiz Exp $
 
 Make this build also if bswap32 is already defined, as for NetBSD/i586.
 
---- vendor/openssl-src-300.5.2+3.5.2/openssl/crypto/aria/aria.c.orig	2025-11-02 17:14:42.569500518 +0000
-+++ vendor/openssl-src-300.5.2+3.5.2/openssl/crypto/aria/aria.c
+--- vendor/openssl-src-300.5.4+3.5.4/openssl/crypto/aria/aria.c.orig	2025-11-02 17:14:42.569500518 +0000
++++ vendor/openssl-src-300.5.4+3.5.4/openssl/crypto/aria/aria.c
 @@ -32,9 +32,11 @@
  #define rotl32(v, r) (((uint32_t)(v) << (r)) | ((uint32_t)(v) >> (32 - r)))
  #define rotr32(v, r) (((uint32_t)(v) >> (r)) | ((uint32_t)(v) << (32 - r)))

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.53 2026/02/12 15:30:12 gutteridge Exp $
+# $NetBSD: options.mk,v 1.54 2026/04/02 19:06:34 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
@@ -76,6 +76,14 @@ CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
 CONFIGURE_ARGS+=	--set rust.lld=false
 .endif
 
+# Rust bumps into NetBSD's limit of 256 TLS keys per process, at least
+# on aarch64 with "fatal runtime error: out of TLS keys, aborting"
+# (for some incomprehensible reason this isn't triggered on NetBSD/amd64 10.1)
+.if ${MACHINE_PLATFORM:MNetBSD-*-aarch64*}
+# So try to bump that per-process limit:
+MAKE_ENV+=		PTHREAD_KEYS_MAX=512
+.endif
+
 #
 # Link cargo statically against "native" libraries.
 # (openssl and curl specifically).
@@ -93,7 +101,7 @@ BUILDLINK_API_DEPENDS.curl+= 	curl>=7.67.0
 # where the linking of rust-analyzer fails because it's now too big
 # for 24-bit word-based PC-relative relocation offsets.
 # Apply on or for powerpc:
-.if ${MACHINE_PLATFORM:M*-powerpc} || \
+.if ${MACHINE_PLATFORM:MNetBSD-*-powerpc} || \
     (!empty(TARGET) && ${TARGET:Mpowerpc-*})
 CONFIGURE_ARGS+=	--tools="cargo,clippy,rustdoc,rustfmt,analysis,src,wasm-component-ld"
 # rust-analyzer dropped from list

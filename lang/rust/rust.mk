@@ -1,4 +1,4 @@
-# $NetBSD: rust.mk,v 1.18 2026/03/04 12:17:34 jperkin Exp $
+# $NetBSD: rust.mk,v 1.19 2026/04/02 19:06:34 wiz Exp $
 #
 # This file determines the type of rust package to use.
 #
@@ -26,7 +26,7 @@
 # RUST_REQ
 #	The minimum version of Rust required by the package.
 #
-#	Default: 1.56.1
+#	Default: 1.85.0
 #
 # RUST_RUNTIME
 #	Whether rust is a runtime dependency.
@@ -38,7 +38,7 @@
 .include "../../mk/bsd.fast.prefs.mk"
 .include "platform.mk"
 
-RUST_REQ?=	1.56.1
+RUST_REQ?=	1.85.0
 RUST_RUNTIME?=	no
 
 .if ${MACHINE_PLATFORM:M*-*-earm*}
