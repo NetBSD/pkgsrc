@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2062 2026/04/02 12:12:42 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2063 2026/04/02 12:13:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3187,3 +3187,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/openssh to 10.3p1 [wiz 2026-04-02]
 	Updated devel/cargo-release to 1.1.2 [pin 2026-04-02]
 	Updated devel/pango to 1.57.1 [pin 2026-04-02]
+	Updated net/slumber to 5.2.4 [pin 2026-04-02]
