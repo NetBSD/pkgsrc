@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/02/09 20:34:10 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2026/04/02 11:37:22 tnn Exp $
 
 .include "../../lang/go/version.mk"
 GO_BOOTSTRAP_REQD=	120
@@ -100,6 +100,7 @@ post-extract:
 do-build:
 	cd ${WRKSRC}/src && \
 		env \
+		GOMAXPROCS=1 \
 		GOROOT_BOOTSTRAP=${GOROOT_BOOTSTRAP:Q} \
 		GOROOT_FINAL=${GOROOT_FINAL:Q} \
 		${GOOPT} \
