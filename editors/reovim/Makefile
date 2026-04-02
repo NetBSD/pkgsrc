@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2026/01/15 18:43:43 pin Exp $
+# $NetBSD: Makefile,v 1.6 2026/04/02 14:11:48 pin Exp $
 
 DISTNAME=	reovim-0.8.1
+# The MSRV relaxing patch no longer works.
+# reovim v0.14.x requires Rust >= 1.92.
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ds1sqe/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
