@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2058 2026/04/02 08:52:24 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2059 2026/04/02 10:06:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3182,3 +3182,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-test-mypy-plugins to 4.0.0 [adam 2026-04-02]
 	Updated graphics/py-Pillow to 12.2.0 [adam 2026-04-02]
 	Updated textproc/py-colored to 2.3.2 [adam 2026-04-02]
+	Updated lang/nodejs to 25.9.0 [adam 2026-04-02]
+	Updated misc/indi to 2.2.0 [adam 2026-04-02]
