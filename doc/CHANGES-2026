@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2056 2026/04/02 06:15:59 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2057 2026/04/02 07:55:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3178,3 +3178,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated news/newsraft to 0.36 [ktnb 2026-04-02]
 	Updated devel/py-types-setuptools to 82.0.0.20260402 [adam 2026-04-02]
 	Updated time/py-types-python-dateutil to 2.9.0.20260402 [adam 2026-04-02]
+	Updated lang/py-mypy to 1.20.0 [adam 2026-04-02]
+	Updated devel/py-test-mypy-plugins to 4.0.0 [adam 2026-04-02]
