@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2026/01/25 23:27:13 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2026/04/02 07:53:54 adam Exp $
 
-DISTNAME=	mypy-1.19.1
+DISTNAME=	mypy-1.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mypy/}
 
@@ -13,8 +12,8 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-mypy_extensions>=1.0.0:../../lang/py-mypy_extensions
-DEPENDS+=	${PYPKGPREFIX}-librt>=0:../../lang/py-librt
-DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.9.0:../../devel/py-pathspec
+DEPENDS+=	${PYPKGPREFIX}-librt>=0.8.0:../../lang/py-librt
+DEPENDS+=	${PYPKGPREFIX}-pathspec>=1.0.0:../../devel/py-pathspec
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.6.0:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-attrs>=18.0:../../devel/py-attrs
 TEST_DEPENDS+=	${PYPKGPREFIX}-filelock>=3.3.0:../../devel/py-filelock
@@ -35,11 +34,7 @@ DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
 REPLACE_PYTHON+=	mypy/typeshed/scripts/update-stubtest-whitelist.py
 REPLACE_PYTHON+=	mypy/typeshed/tests/*.py
 
-post-install:
-.for bin in dmypy mypy mypyc stubgen stubtest
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
-.endfor
+PY_RENAME_BINARIES=	dmypy mypy mypyc stubgen stubtest
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
