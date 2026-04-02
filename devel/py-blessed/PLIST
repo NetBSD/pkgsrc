@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2026/03/13 08:29:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/04/02 13:26:59 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -15,6 +15,9 @@ ${PYSITELIB}/blessed/color.pyo
 ${PYSITELIB}/blessed/colorspace.py
 ${PYSITELIB}/blessed/colorspace.pyc
 ${PYSITELIB}/blessed/colorspace.pyo
+${PYSITELIB}/blessed/cursor_shape.py
+${PYSITELIB}/blessed/cursor_shape.pyc
+${PYSITELIB}/blessed/cursor_shape.pyo
 ${PYSITELIB}/blessed/dec_modes.py
 ${PYSITELIB}/blessed/dec_modes.pyc
 ${PYSITELIB}/blessed/dec_modes.pyo
