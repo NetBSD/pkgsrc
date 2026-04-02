@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.99 2026/03/25 16:40:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.100 2026/04/02 10:01:40 adam Exp $
 bin/node
 bin/npm
 bin/npx
@@ -597,13 +597,7 @@ lib/node_modules/npm/man/man7/workspaces.7
 lib/node_modules/npm/man/man7/workspaces.7.gz
 lib/node_modules/npm/node_modules/@gar/promise-retry/LICENSE
 lib/node_modules/npm/node_modules/@gar/promise-retry/lib/index.js
-lib/node_modules/npm/node_modules/@gar/promise-retry/node_modules/retry/License
-lib/node_modules/npm/node_modules/@gar/promise-retry/node_modules/retry/example/dns.js
-lib/node_modules/npm/node_modules/@gar/promise-retry/node_modules/retry/example/stop.js
-lib/node_modules/npm/node_modules/@gar/promise-retry/node_modules/retry/index.js
-lib/node_modules/npm/node_modules/@gar/promise-retry/node_modules/retry/lib/retry.js
-lib/node_modules/npm/node_modules/@gar/promise-retry/node_modules/retry/lib/retry_operation.js
-lib/node_modules/npm/node_modules/@gar/promise-retry/node_modules/retry/package.json
+lib/node_modules/npm/node_modules/@gar/promise-retry/lib/retry.js
 lib/node_modules/npm/node_modules/@gar/promise-retry/package.json
 lib/node_modules/npm/node_modules/@isaacs/fs-minipass/LICENSE
 lib/node_modules/npm/node_modules/@isaacs/fs-minipass/dist/commonjs/index.js
@@ -1087,10 +1081,6 @@ lib/node_modules/npm/node_modules/diff/release-notes.md
 lib/node_modules/npm/node_modules/env-paths/index.js
 lib/node_modules/npm/node_modules/env-paths/license
 lib/node_modules/npm/node_modules/env-paths/package.json
-lib/node_modules/npm/node_modules/err-code/bower.json
-lib/node_modules/npm/node_modules/err-code/index.js
-lib/node_modules/npm/node_modules/err-code/index.umd.js
-lib/node_modules/npm/node_modules/err-code/package.json
 lib/node_modules/npm/node_modules/exponential-backoff/LICENSE
 lib/node_modules/npm/node_modules/exponential-backoff/dist/backoff.js
 lib/node_modules/npm/node_modules/exponential-backoff/dist/delay/always/always.delay.js
@@ -1181,9 +1171,6 @@ lib/node_modules/npm/node_modules/iconv-lite/package.json
 lib/node_modules/npm/node_modules/ignore-walk/LICENSE
 lib/node_modules/npm/node_modules/ignore-walk/lib/index.js
 lib/node_modules/npm/node_modules/ignore-walk/package.json
-lib/node_modules/npm/node_modules/imurmurhash/imurmurhash.js
-lib/node_modules/npm/node_modules/imurmurhash/imurmurhash.min.js
-lib/node_modules/npm/node_modules/imurmurhash/package.json
 lib/node_modules/npm/node_modules/ini/LICENSE
 lib/node_modules/npm/node_modules/ini/lib/ini.js
 lib/node_modules/npm/node_modules/ini/package.json
@@ -1644,9 +1631,6 @@ lib/node_modules/npm/node_modules/promise-call-limit/dist/commonjs/package.json
 lib/node_modules/npm/node_modules/promise-call-limit/dist/esm/index.js
 lib/node_modules/npm/node_modules/promise-call-limit/dist/esm/package.json
 lib/node_modules/npm/node_modules/promise-call-limit/package.json
-lib/node_modules/npm/node_modules/promise-retry/LICENSE
-lib/node_modules/npm/node_modules/promise-retry/index.js
-lib/node_modules/npm/node_modules/promise-retry/package.json
 lib/node_modules/npm/node_modules/promzard/LICENSE
 lib/node_modules/npm/node_modules/promzard/lib/index.js
 lib/node_modules/npm/node_modules/promzard/package.json
@@ -1679,15 +1663,6 @@ lib/node_modules/npm/node_modules/read/dist/commonjs/read.js
 lib/node_modules/npm/node_modules/read/dist/esm/package.json
 lib/node_modules/npm/node_modules/read/dist/esm/read.js
 lib/node_modules/npm/node_modules/read/package.json
-lib/node_modules/npm/node_modules/retry/License
-lib/node_modules/npm/node_modules/retry/Makefile
-lib/node_modules/npm/node_modules/retry/equation.gif
-lib/node_modules/npm/node_modules/retry/example/dns.js
-lib/node_modules/npm/node_modules/retry/example/stop.js
-lib/node_modules/npm/node_modules/retry/index.js
-lib/node_modules/npm/node_modules/retry/lib/retry.js
-lib/node_modules/npm/node_modules/retry/lib/retry_operation.js
-lib/node_modules/npm/node_modules/retry/package.json
 lib/node_modules/npm/node_modules/safer-buffer/LICENSE
 lib/node_modules/npm/node_modules/safer-buffer/Porting-Buffer.md
 lib/node_modules/npm/node_modules/safer-buffer/dangerous.js
@@ -1929,12 +1904,6 @@ lib/node_modules/npm/node_modules/tuf-js/dist/updater.js
 lib/node_modules/npm/node_modules/tuf-js/dist/utils/tmpfile.js
 lib/node_modules/npm/node_modules/tuf-js/dist/utils/url.js
 lib/node_modules/npm/node_modules/tuf-js/package.json
-lib/node_modules/npm/node_modules/unique-filename/LICENSE
-lib/node_modules/npm/node_modules/unique-filename/lib/index.js
-lib/node_modules/npm/node_modules/unique-filename/package.json
-lib/node_modules/npm/node_modules/unique-slug/LICENSE
-lib/node_modules/npm/node_modules/unique-slug/lib/index.js
-lib/node_modules/npm/node_modules/unique-slug/package.json
 lib/node_modules/npm/node_modules/util-deprecate/History.md
 lib/node_modules/npm/node_modules/util-deprecate/LICENSE
 lib/node_modules/npm/node_modules/util-deprecate/browser.js
