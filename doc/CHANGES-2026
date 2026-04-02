@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2066 2026/04/02 12:17:48 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2067 2026/04/02 12:18:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3191,3 +3191,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/tlrc to 1.13.0 [pin 2026-04-02]
 	Updated textproc/scooter to 0.9.0 [pin 2026-04-02]
 	Updated textproc/television to 0.15.4 [pin 2026-04-02]
+	Updated time/clock-rs to 0.2.0 [pin 2026-04-02]
