@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.19 2026/01/30 16:10:21 leot Exp $
+$NetBSD: distinfo,v 1.20 2026/04/02 17:25:44 leot Exp $
 
-BLAKE2s (neovim-0.11.6.tar.gz) = a4c28b4ffa193a199ca044072447d9c1927e6edab5e26fa5d2563d199ff50939
-SHA512 (neovim-0.11.6.tar.gz) = 52e958bc610faa2611a741613a4adf3263dc1060efde6b8bc7f67c68aefc37b44ec47ca2532f55d213b0dff64b2f4174f5e15127a87d39f0c5908141b38270ee
-Size (neovim-0.11.6.tar.gz) = 13012085 bytes
+BLAKE2s (neovim-0.11.7.tar.gz) = 64c2b0143e79227615309b3178aad7611c8d9fe4b1e66c54fe464d8a68bce198
+SHA512 (neovim-0.11.7.tar.gz) = 23e13f8c2964bff4d69c69cce137aaaaae9d0219750793da1834d099478f7a9d7170ae3d66cf096824ff42bbd0c9196e4a31858b84032533678e359fe75c6f79
+Size (neovim-0.11.7.tar.gz) = 13018335 bytes
 SHA1 (patch-runtime_lua_vim_treesitter___meta_misc.lua) = 1786ffc397926ae2587e82fba3959cb02e7b249c
 SHA1 (patch-runtime_lua_vim_treesitter_languagetree.lua) = b356fd420a72a3384e9170b53a02cf4780eaa92b
 SHA1 (patch-src_nvim_lua_treesitter.c) = 776a7bf680fe00399ecbafdc3ce7323b312b3cdb
