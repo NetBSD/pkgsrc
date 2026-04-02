@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.99 2026/03/24 13:18:06 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2026/04/02 19:07:40 wiz Exp $
 
-DISTNAME=	ruff-0.15.7
+DISTNAME=	ruff-0.15.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ruff/}
@@ -11,14 +11,14 @@ COMMENT=	Extremely fast Python linter, written in Rust
 LICENSE=	mit
 
 USE_LANGUAGES=	c c++
-RUST_REQ=	1.91
+RUST_REQ=	1.92
 
 # for tikv-jemalloc-sys
 USE_TOOLS+=	gmake
 
 # Depends on an unpublished crate. Can't use cargo.mk to fetch it.
 LSP_TYPES_REV=	e15db0593f0ecbbd80599c3f5880e4bf5da1ca0c
-SALSA_REV=	53421c2fff87426fa0bb51cab06632b87646de13
+SALSA_REV=	2f687a17ceea8ec7aaa605561ccbde938ccef086
 DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	lsp-types-${LSP_TYPES_REV}.tar.gz
 DISTFILES+=	salsa-${SALSA_REV}.tar.gz
