@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2026/03/26 14:34:17 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/04/02 13:23:14 adam Exp $
 
-DISTNAME=	charset_normalizer-3.4.6
+DISTNAME=	charset_normalizer-3.4.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/charset-normalizer/}
