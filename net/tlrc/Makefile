@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2025/10/03 15:54:45 pin Exp $
+# $NetBSD: Makefile,v 1.16 2026/04/02 12:14:24 pin Exp $
 
-DISTNAME=	tlrc-1.12.0
+DISTNAME=	tlrc-1.13.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tldr-pages/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,7 +15,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-RUST_REQ=		1.83.0
+RUST_REQ=		1.88.0
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 post-install:
