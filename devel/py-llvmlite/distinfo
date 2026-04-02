@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.29 2026/03/25 22:59:24 wiz Exp $
+$NetBSD: distinfo,v 1.30 2026/04/02 13:16:49 adam Exp $
 
-BLAKE2s (llvmlite-0.46.0.tar.gz) = f74dbeb5dc03deaf52301a32621ae49ecc3f830945f796b86536e0dc21b043e9
-SHA512 (llvmlite-0.46.0.tar.gz) = abb59e8edea3d7e162d7bb2eb4792f1e10baf961d1bd55caad5e309b7ef9c059877924ac8f731ab753d773bf7f68020f1bf2a1c7e8d504dc958775610adff126
-Size (llvmlite-0.46.0.tar.gz) = 193456 bytes
-SHA1 (patch-setup.py) = c5b929ef9d65d0d962cf5ff7fe4d0a5764751074
+BLAKE2s (llvmlite-0.47.0.tar.gz) = 6e9f2d62e52944e84a2673ac1f7eb029be1b5d15fe51a292462635174bcf66df
+SHA512 (llvmlite-0.47.0.tar.gz) = f277528bc56f8c9857c562ac629b0795ffbd944dd80c7e3f3a160402a6754fbf98e1abfced47eb5af677a33c3f1e129b0a7a7c8358e9f05e4b60e1571187409c
+Size (llvmlite-0.47.0.tar.gz) = 193614 bytes
