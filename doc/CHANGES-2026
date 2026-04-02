@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2068 2026/04/02 13:18:42 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2069 2026/04/02 13:23:45 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3194,3 +3194,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/clock-rs to 0.2.0 [pin 2026-04-02]
 	Updated devel/py-llvmlite to 0.47.0 [adam 2026-04-02]
 	Updated math/py-numba to 0.65.0 [adam 2026-04-02]
+	Updated www/esbuild to 0.27.5 [kikadf 2026-04-02]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27036 2026/04/02 08:31:28 wiz Exp $
+$NetBSD: TODO,v 1.27037 2026/04/02 13:23:45 kikadf Exp $
 
 Suggested new packages
 ======================
@@ -602,7 +602,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o eric5-5.4.6
 	o erlang-28.0.1
 	o es-0.83
-	o esbuild-0.27.4
 	o esh-0.8.5
 	o ess-18.10.2
 	o etach-1.4.1
