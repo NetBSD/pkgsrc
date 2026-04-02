@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2026/03/08 12:52:10 pin Exp $
+# $NetBSD: Makefile,v 1.18 2026/04/02 12:17:28 pin Exp $
 
-DISTNAME=	television-0.15.3
+DISTNAME=	television-0.15.4
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alexpasmantier/}
 
@@ -13,12 +13,6 @@ LICENSE=	mit
 
 RUST_REQ=		1.90.0
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
-
-# Depends on an unpublished crate. Can't use cargo.mk to fetch it.
-NUCLEO_REV=	4a5b53c7fa7abb8d777c49dc5850033ae108683e
-DISTFILES=	${DEFAULT_DISTFILES}
-DISTFILES+=	nucleo-${NUCLEO_REV}.tar.gz
-SITES.nucleo-${NUCLEO_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=alexpasmantier/}nucleo/archive/${NUCLEO_REV}.tar.gz
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/tv.1 \
