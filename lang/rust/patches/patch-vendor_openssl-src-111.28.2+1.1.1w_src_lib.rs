@@ -1,8 +1,8 @@
-$NetBSD: patch-vendor_openssl-src-111.28.2+1.1.1w_src_lib.rs,v 1.4 2025/10/18 17:14:36 he Exp $
+$NetBSD: patch-vendor_openssl-src-111.28.2+1.1.1w_src_lib.rs,v 1.5 2026/04/02 19:06:35 wiz Exp $
 
 Add the various NetBSD targets.
 
---- vendor/openssl-src-111.28.2+1.1.1w/src/lib.rs.orig	2025-05-18 13:26:41.970702318 +0000
+--- vendor/openssl-src-111.28.2+1.1.1w/src/lib.rs.orig	2026-02-11 07:30:54.000000000 +0000
 +++ vendor/openssl-src-111.28.2+1.1.1w/src/lib.rs
 @@ -239,6 +239,8 @@ impl Build {
              "aarch64-unknown-freebsd" => "BSD-generic64",
@@ -31,15 +31,18 @@ Add the various NetBSD targets.
              "i686-apple-darwin" => "darwin-i386-cc",
              "i686-linux-android" => "linux-elf",
              "i686-pc-windows-gnu" => "mingw",
-@@ -264,6 +269,7 @@ impl Build {
+@@ -264,8 +269,10 @@ impl Build {
              "i686-unknown-freebsd" => "BSD-x86-elf",
              "i686-unknown-linux-gnu" => "linux-elf",
              "i686-unknown-linux-musl" => "linux-elf",
 +            "i686-unknown-netbsd" => "BSD-x86-elf",
              "loongarch64-unknown-linux-gnu" => "linux-generic64",
              "loongarch64-unknown-linux-musl" => "linux-generic64",
++            "m68k-unknown-netbsd" => NetBSD-generic32,
              "mips-unknown-linux-gnu" => "linux-mips32",
-@@ -274,9 +280,11 @@ impl Build {
+             "mips-unknown-linux-musl" => "linux-mips32",
+             "mips64-unknown-linux-gnuabi64" => "linux64-mips64",
+@@ -274,9 +281,11 @@ impl Build {
              "mips64el-unknown-linux-muslabi64" => "linux64-mips64",
              "mipsel-unknown-linux-gnu" => "linux-mips32",
              "mipsel-unknown-linux-musl" => "linux-mips32",
@@ -51,7 +54,7 @@ Add the various NetBSD targets.
              "powerpc64-unknown-freebsd" => "BSD-generic64",
              "powerpc64-unknown-linux-gnu" => "linux-ppc64",
              "powerpc64-unknown-linux-musl" => "linux-ppc64",
-@@ -284,8 +292,10 @@ impl Build {
+@@ -284,8 +293,10 @@ impl Build {
              "powerpc64le-unknown-linux-gnu" => "linux-ppc64le",
              "powerpc64le-unknown-linux-musl" => "linux-ppc64le",
              "riscv64gc-unknown-linux-gnu" => "linux-generic64",
