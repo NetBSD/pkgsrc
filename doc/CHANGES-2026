@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2071 2026/04/02 13:28:58 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2072 2026/04/02 14:08:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3199,3 +3199,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/py-charset-normalizer to 3.4.7 [adam 2026-04-02]
 	Updated devel/py-blessed to 1.38.0 [adam 2026-04-02]
 	Updated textproc/py-types-docutils to 0.22.3.20260322 [adam 2026-04-02]
+	Updated emulators/jgenesis to 0.11.4 [pin 2026-04-02]
