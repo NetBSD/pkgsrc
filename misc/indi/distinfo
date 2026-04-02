@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.15 2026/02/14 18:28:36 adam Exp $
+$NetBSD: distinfo,v 1.16 2026/04/02 10:05:42 adam Exp $
 
-BLAKE2s (indi-2.1.9.tar.gz) = 733a7b7312c25d39e2644943ad32ca1509d80ff9f2b721b25146c5b70c497a5e
-SHA512 (indi-2.1.9.tar.gz) = c3ed7bc362f032f07f619c6c56eb3a5f1fc00f76a31b800ecdd9d3a6a5eaa3fe01f7a216e5613d251224a52c6f7bf3e0684920b7020626bc030b2c74d1d03626
-Size (indi-2.1.9.tar.gz) = 3331587 bytes
+BLAKE2s (indi-2.2.0.tar.gz) = d2eec50dc46e82a7134b2a5ac16a4243d29246cf4209745f15e50e331d0a4403
+SHA512 (indi-2.2.0.tar.gz) = 757fb016c954261c55b7d2d8492172107763ffb3d25647aed184b12922014e0c3ad3c0de5345ce6b7f7015e2f6be8e348d6b68f4db11eecd0601a9655a3b0432
+Size (indi-2.2.0.tar.gz) = 3397549 bytes
 SHA1 (patch-drivers_auxiliary_gemini__flatpanel__adapters.cpp) = dad2832f6894c3f8b6e5000071febe44c0ba76b8
 SHA1 (patch-drivers_auxiliary_wandererbox__plus__v3.cpp) = 04e8f5d4316fd8ed7bc1d0736cbdf621385a53c3
 SHA1 (patch-drivers_auxiliary_wandererbox__pro__v3.cpp) = 411f51c73f8d1fb860aacb523f7e2b0c0b10e33a

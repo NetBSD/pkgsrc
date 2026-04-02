@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2026/02/14 18:28:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/04/02 10:05:42 adam Exp $
 bin/indi_Excalibur
 bin/indi_aaf2_focus
 bin/indi_aagsolo_weather
@@ -6,7 +6,10 @@ bin/indi_activefocuser_focus
 bin/indi_alluna_tcs2
 bin/indi_alpaca_ccd
 bin/indi_alpaca_dome
+bin/indi_alpaca_filterwheel
+bin/indi_alpaca_focuser
 bin/indi_alpaca_server
+bin/indi_alpaca_telescope
 bin/indi_alto
 bin/indi_arduinost4
 bin/indi_astrolink4
@@ -15,6 +18,7 @@ bin/indi_astromech_lpm
 bin/indi_astromechfoc
 bin/indi_astrometry
 bin/indi_astrotrac_telescope
+bin/indi_avalon_upas
 bin/indi_baader_dome
 bin/indi_camelot_rotator
 bin/indi_celestron_dewpower
@@ -49,6 +53,7 @@ bin/indi_getdevice
 bin/indi_getprop
 bin/indi_giotto
 bin/indi_gpusb
+bin/indi_hakos_roof
 bin/indi_hid_test
 bin/indi_hitecastrodc_focus
 bin/indi_hitech_weather
@@ -90,6 +95,7 @@ bin/indi_manual_wheel
 bin/indi_mbox_weather
 bin/indi_meta_weather
 bin/indi_microtouch_focus
+bin/indi_mlastro_rpa
 bin/indi_moonlite_focus
 bin/indi_moonlitedro_focus
 bin/indi_myDewControllerPro
@@ -135,6 +141,7 @@ bin/indi_safetymonitor
 bin/indi_scopedome_dome
 bin/indi_script_dome
 bin/indi_script_telescope
+bin/indi_seestar_ccd
 bin/indi_sestosenso2_focus
 bin/indi_sestosenso_focus
 bin/indi_setprop
@@ -147,6 +154,7 @@ bin/indi_simulator_gps
 bin/indi_simulator_guide
 bin/indi_simulator_io
 bin/indi_simulator_lightpanel
+bin/indi_simulator_pac
 bin/indi_simulator_receiver
 bin/indi_simulator_rotator
 bin/indi_simulator_sqm
@@ -180,6 +188,7 @@ bin/indi_uranus_weather
 bin/indi_usbdewpoint
 bin/indi_usbfocusv3_focus
 bin/indi_vantage_weather
+bin/indi_wake_on_lan
 bin/indi_wanderer_cover
 bin/indi_wanderer_dew_terminator
 bin/indi_wanderer_eclipse
@@ -208,6 +217,7 @@ include/libindi/alignment/ClientAPIForMathPluginManagement.h
 include/libindi/alignment/Common.h
 include/libindi/alignment/ConvexHull.h
 include/libindi/alignment/DriverCommon.h
+include/libindi/alignment/HaltonSequence.h
 include/libindi/alignment/InMemoryDatabase.h
 include/libindi/alignment/MapPropertiesToInMemoryDatabase.h
 include/libindi/alignment/MathPlugin.h
@@ -236,6 +246,7 @@ include/libindi/fitskeyword.h
 include/libindi/hotplugcapabledevice.h
 include/libindi/hotplugmanager.h
 include/libindi/httplib.h
+include/libindi/imusensorfusion.h
 include/libindi/indi_hidapi.h
 include/libindi/indiapi.h
 include/libindi/indibase.h
@@ -266,6 +277,7 @@ include/libindi/indilightboxinterface.h
 include/libindi/indilogger.h
 include/libindi/indimacros.h
 include/libindi/indioutputinterface.h
+include/libindi/indipacinterface.h
 include/libindi/indipowerinterface.h
 include/libindi/indiproperties.h
 include/libindi/indiproperty.h
