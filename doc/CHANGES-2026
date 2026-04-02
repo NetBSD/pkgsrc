@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2074 2026/04/02 17:25:50 leot Exp $
+$NetBSD: CHANGES-2026,v 1.2075 2026/04/02 19:06:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3202,3 +3202,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/jgenesis to 0.11.4 [pin 2026-04-02]
 	Updated net/lagrange to 1.20.3 [pin 2026-04-02]
 	Updated editors/neovim to 0.11.7 [leot 2026-04-02]
+	Updated lang/rust to 1.94.1 [wiz 2026-04-02]
