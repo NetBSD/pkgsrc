@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/02/24 10:49:21 adam Exp $
+# $NetBSD: Makefile,v 1.7 2026/04/02 13:28:04 adam Exp $
 
-DISTNAME=	types_docutils-0.22.3.20260223
+DISTNAME=	types_docutils-0.22.3.20260322
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/types-docutils/}
