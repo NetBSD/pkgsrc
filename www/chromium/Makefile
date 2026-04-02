@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2026/03/29 16:43:50 tnn Exp $
+# $NetBSD: Makefile,v 1.51 2026/04/02 13:25:29 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			146.0.7680.164
+VERSION=			146.0.7680.177
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -22,7 +22,7 @@ EB_DISTNAME=			${MAKE} -C ../../www/esbuild -V DISTNAME
 GITHUB_SUBMODULES+=		evanw esbuild v${EB_DISTNAME:sh:C/^.*-//} esbuild
 
 # LLVM_MAJOR_VERSION
-LLVM_MV=			19
+LLVM_MV=			20
 
 MAINTAINER=			kikadf@NetBSD.org
 HOMEPAGE=			https://www.chromium.org/Home
@@ -32,6 +32,7 @@ LICENSE=			modified-bsd AND gnu-lgpl-v3 AND mpl-2.0
 USE_TOOLS+=			bash bison flex:pkgsrc gmake pax perl pkg-config
 TOOLS_PLATFORM.flex=		# override the platform definition to use pkgsrc's flex.
 USE_LANGUAGES=			c c++
+
 
 CHECK_PORTABILITY_SKIP+=	docs/website/site/for-testers/bug-reporting-guidelines/hanging-tabs/crash-with-gdb
 CHECK_PORTABILITY_SKIP+=	remoting/host/installer/mac/Scripts/remoting_preflight.sh
