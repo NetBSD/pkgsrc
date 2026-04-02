@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2026/03/25 22:59:24 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/04/02 13:16:49 adam Exp $
 
-DISTNAME=	llvmlite-0.46.0
+DISTNAME=	llvmlite-0.47.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/llvmlite/}
@@ -15,8 +15,8 @@ TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 # As of 0.45.0, this supports llvm 20.
 
-USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++17
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 
 .include "../../mk/bsd.prefs.mk"
