@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.27 2026/02/22 13:53:07 taca Exp $
+# $NetBSD: eol-packages,v 1.28 2026/04/02 08:31:28 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1258,3 +1258,9 @@ Package: Rails (7.1)
 eol date: October 29, 2025
 URL: https://guides.rubyonrails.org/maintenance_policy.html
 Description: Upgrade to a newer version.
+
+Package: ruby (3.2)
+eol date: March 31, 2026
+URL: https://www.ruby-lang.org/en/downloads/branches/
+Description: Update to Ruby 3.3 or later.
+
