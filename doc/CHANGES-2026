@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2060 2026/04/02 10:32:51 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2061 2026/04/02 12:11:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3185,3 +3185,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nodejs to 25.9.0 [adam 2026-04-02]
 	Updated misc/indi to 2.2.0 [adam 2026-04-02]
 	Updated security/openssh to 10.3p1 [wiz 2026-04-02]
+	Updated devel/cargo-release to 1.1.2 [pin 2026-04-02]
