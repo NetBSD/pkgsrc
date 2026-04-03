@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2084 2026/04/03 16:11:28 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2085 2026/04/03 17:34:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3308,3 +3308,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/jj to 0.40.0 [wiz 2026-04-03]
 	Updated x11/wezterm to 20260117.154428 [wiz 2026-04-03]
 	Updated devel/py-mercurial to 7.2.1 [wiz 2026-04-03]
+	Updated devel/py-hg-evolve to 12.0.0 [wiz 2026-04-03]
