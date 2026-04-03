@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/05/11 11:56:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/04/03 01:24:51 markd Exp $
 bin/make4ht
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-aeneas.lua
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-booktabs.lua
@@ -16,6 +16,7 @@ share/texmf-dist/scripts/make4ht/domfilters/make4ht-odtpartable.lua
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-odtsvg.lua
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-sectionid.lua
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-t4htlinks.lua
+share/texmf-dist/scripts/make4ht/domfilters/make4ht-tablecaption.lua
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-tablerows.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-common_domfilters.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-common_filters.lua
