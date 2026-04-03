@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2026/03/28 22:22:06 markd Exp $
+$NetBSD: distinfo,v 1.16 2026/04/03 00:33:29 markd Exp $
 
-BLAKE2s (l3backend.r76924.tar.xz) = 96cd58e9a19950265d26998f5a1335e8eaabeea7fc274bf1ac2c89cc1bba14de
-SHA512 (l3backend.r76924.tar.xz) = dbc3f7b699ca69504c61b207286daeffe0da699ad2a6439fa271691b5b825b156a4a3e1e67b423daaa86a011bd671d56259ca7e285e2bd9d15131b5a88ee6865
-Size (l3backend.r76924.tar.xz) = 16544 bytes
+BLAKE2s (l3backend.r78544.tar.xz) = 4306254ae363976c8373ea12bf232f06079dcb131e5a157ac109268796d39395
+SHA512 (l3backend.r78544.tar.xz) = 333937499e648b3f704ec43aad49415e4a4ea75346aa7d638eef116df85416c7b174aa3de6abdca7208af9cb721a5e1180bc36417429af4ce12ef1fe696794a6
+Size (l3backend.r78544.tar.xz) = 16532 bytes
