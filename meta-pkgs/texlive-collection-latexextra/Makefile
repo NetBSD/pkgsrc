@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.100 2026/03/30 19:53:58 markd Exp $
+# $NetBSD: Makefile,v 1.101 2026/04/03 03:11:10 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2025pre4
+PKGNAME=	texlive-${DISTNAME}-2026pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	78436
+TEXLIVE_REV=	78568
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -40,7 +40,6 @@ DEPENDS+=	tex-advdate-[0-9]*:../../print/tex-advdate
 # depend akletter
 # depend alchemist
 # depend alertmessage
-# depend aliascnt
 DEPENDS+=	tex-aliascnt-[0-9]*:../../print/tex-aliascnt
 # depend alnumsec
 DEPENDS+=	tex-alphalph-[0-9]*:../../print/tex-alphalph
@@ -160,6 +159,7 @@ DEPENDS+=	tex-bold-extra-[0-9]*:../../print/tex-bold-extra
 # depend bookest
 # depend booklet
 # depend bookshelf
+# depend booktabstabular
 # depend boolexpr
 # depend bophook
 DEPENDS+=	tex-boxedminipage-[0-9]*:../../print/tex-boxedminipage
@@ -640,6 +640,7 @@ DEPENDS+=	tex-ftcap-[0-9]*:../../print/tex-ftcap
 # depend fullminipage
 # depend fullwidth
 # depend functional
+DEPENDS+=	tex-functional-[0-9]*:../../devel/tex-functional
 DEPENDS+=	tex-fundus-calligra-[0-9]*:../../print/tex-fundus-calligra
 # depend fundus-cyr
 # depend fundus-sueterlin
@@ -943,7 +944,7 @@ DEPENDS+=	tex-manfnt-[0-9]*:../../fonts/tex-manfnt
 # depend marginfit
 DEPENDS+=	tex-marginfix-[0-9]*:../../print/tex-marginfix
 DEPENDS+=	tex-marginnote-[0-9]*:../../print/tex-marginnote
-# depend markdown
+DEPENDS+=	tex-markdown-[0-9]*:../../textproc/tex-markdown
 DEPENDS+=	tex-mathalpha-[0-9]*:../../fonts/tex-mathalpha
 # depend mathastext
 # depend mathexam
@@ -971,6 +972,7 @@ DEPENDS+=	tex-media9-[0-9]*:../../print/tex-media9
 # depend metacapture
 # depend metalogox
 # depend metanorma
+# depend metaphor
 # depend metastr
 # depend method
 # depend metre
@@ -988,7 +990,7 @@ DEPENDS+=	tex-minifp-[0-9]*:../../math/tex-minifp
 DEPENDS+=	tex-minitoc-[0-9]*:../../print/tex-minitoc
 # depend minorrevision
 DEPENDS+=	tex-minted-[0-9]*:../../print/tex-minted
-# depend minted-code
+DEPENDS+=	tex-minted-code-[0-9]*:../../print/tex-minted-code
 # depend minutes
 # depend mla-paper
 DEPENDS+=	tex-mleftright-[0-9]*:../../print/tex-mleftright
@@ -1038,7 +1040,7 @@ DEPENDS+=	tex-mwe-[0-9]*:../../print/tex-mwe
 # depend mycv
 # depend mylatex
 # depend mylatexformat
-# depend nag
+DEPENDS+=	tex-nag-[0-9]*:../../print/tex-nag
 # depend nameauth
 # depend namespc
 # depend ncclatex
@@ -1143,7 +1145,7 @@ DEPENDS+=	tex-paralist-[0-9]*:../../print/tex-paralist
 # depend pbalance
 DEPENDS+=	tex-pbox-[0-9]*:../../print/tex-pbox
 # depend pbsheet
-# depend pdf14
+DEPENDS+=	tex-pdf14-[0-9]*:../../print/tex-pdf14
 # depend pdfannotations
 DEPENDS+=	tex-pdfcol-[0-9]*:../../print/tex-pdfcol
 DEPENDS+=	tex-pdfcolmk-[0-9]*:../../print/tex-pdfcolmk
@@ -1249,7 +1251,7 @@ DEPENDS+=	tex-rcsinfo-[0-9]*:../../print/tex-rcsinfo
 # depend readablecv
 DEPENDS+=	tex-readarray-[0-9]*:../../print/tex-readarray
 DEPENDS+=	tex-realboxes-[0-9]*:../../print/tex-realboxes
-# depend realscripts
+DEPENDS+=	tex-realscripts-[0-9]*:../../print/tex-realscripts
 # depend recipe
 # depend recipebook
 # depend recipecard
@@ -1357,6 +1359,7 @@ DEPENDS+=	tex-silence-[0-9]*:../../print/tex-silence
 # depend simplecd
 # depend simplecv
 # depend simpleinvoice
+# depend simplesystemtex
 # depend simplex
 # depend simplivre
 # depend sitem
@@ -1444,7 +1447,7 @@ DEPENDS+=	tex-svninfo-[0-9]*:../../print/tex-svninfo
 DEPENDS+=	tex-tabls-[0-9]*:../../print/tex-tabls
 # depend tablvar
 # depend tabstackengine
-# depend tabto-ltx
+DEPENDS+=	tex-tabto-ltx-[0-9]*:../../print/tex-tabto-ltx
 DEPENDS+=	tex-tabu-[0-9]*:../../print/tex-tabu
 # depend tabular2
 # depend tabularborder
@@ -1454,7 +1457,6 @@ DEPENDS+=	tex-tabularray-[0-9]*:../../print/tex-tabularray
 DEPENDS+=	tex-tabulary-[0-9]*:../../print/tex-tabulary
 # depend tagging
 # depend tagpair
-DEPENDS+=	tex-tagpdf-[0-9]*:../../print/tex-tagpdf
 # depend talk
 # depend tamefloats
 # depend tangocolors
@@ -1662,7 +1664,7 @@ DEPENDS+=	tex-yagusylo-[0-9]*:../../print/tex-yagusylo
 # depend ycbook
 DEPENDS+=	tex-ydoc-[0-9]*:../../print/tex-ydoc
 # depend yplan
-# depend zebra-goodies
+# depend zebra
 # depend zed-csp
 # depend zennote
 # depend ziffer
