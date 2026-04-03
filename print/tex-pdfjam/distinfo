@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/05/14 12:56:44 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/04/03 23:40:00 markd Exp $
 
-BLAKE2s (pdfjam.r75152.tar.xz) = c58127bf68995591ec7da377b008d7fec1a439ac5557821aeff272fd0087df4d
-SHA512 (pdfjam.r75152.tar.xz) = c5a8706b6316103fe597d2b4ef136ca64e77af914581a8b6112d78b7611bfdd4d73789e4e883016db66649387636ef98276d0d1d40c18a54643fb6f21c65fc6a
-Size (pdfjam.r75152.tar.xz) = 13808 bytes
+BLAKE2s (pdfjam.r78572.tar.xz) = 3f16a8df036402458002da7a030c6d203a2733c5ec1a41c77054198304e2bed7
+SHA512 (pdfjam.r78572.tar.xz) = 675ba7b85deed74198d8d9ddec542e648874093c18c55f1c83b1c6f2bb95853cdb4be8f8b6955b57d45bab07ff1a208d075f0e74c2c1e6c7cafb7eb50b58e733
+Size (pdfjam.r78572.tar.xz) = 13972 bytes
