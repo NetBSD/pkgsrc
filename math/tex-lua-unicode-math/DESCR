@@ -1,0 +1,2 @@
+A faster and more compatible package to support using OpenType
+math fonts in LuaLaTeX as an alternative for unicode-math.
