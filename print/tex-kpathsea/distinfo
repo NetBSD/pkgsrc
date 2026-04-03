@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.28 2025/05/11 04:26:25 markd Exp $
+$NetBSD: distinfo,v 1.29 2026/04/03 06:01:02 markd Exp $
 
-BLAKE2s (kpathsea.r73918.tar.xz) = 3a9d56523c65d526428838e72945d9de2e5aaf50867af90a85247c2ed2a17439
-SHA512 (kpathsea.r73918.tar.xz) = d19b3d4c3873b421628d9b614c77d0417737c312e739261afeca6eba9655f95826772a119df75c1fe07a7ca084e99c6fb4448ac3d3b095ae85915089e1de5e09
-Size (kpathsea.r73918.tar.xz) = 33116 bytes
-SHA1 (patch-texmf-dist_web2c_fmtutil.cnf) = 22c928cfebd2c4e6cc38ca736ff317c9efee88ab
+BLAKE2s (kpathsea.r77861.tar.xz) = ccb31d60cb242ed73de9a299c031ff39701e77d512d763f20e238bca7f7196ac
+SHA512 (kpathsea.r77861.tar.xz) = 9dbbfe0025424e8a970258f3b6d9a3c037efa1ec2b45e80d0f0463140050009ce379652a3e7fbf9d6b4cc3337e5b92bb9341cbcc200630b32f9c20a97b63edf6
+Size (kpathsea.r77861.tar.xz) = 33624 bytes
+SHA1 (patch-texmf-dist_web2c_fmtutil.cnf) = 96bb37198f6431dd9639f631e86c3bc8cbe4e7fc
 SHA1 (patch-texmf-dist_web2c_mktex.opt) = 1b74cf2cd00d1831d9eacf272913ccc9a5c10539
 SHA1 (patch-texmf-dist_web2c_mktexdir) = a09f91ed257c4f8ffdabc5fcfac6f82458b73e76
 SHA1 (patch-texmf-dist_web2c_mktexnam) = 350d837d18199b23336d7437a3172675e87b83f0
