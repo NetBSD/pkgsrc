@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/12/04 11:05:10 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2026/04/03 01:16:24 markd Exp $
 
-BLAKE2s (markdown.r76710.tar.xz) = 842f328c92f4ef81b97296cfef184274f1bf3ce54d616a2c4dad9e32777be9c7
-SHA512 (markdown.r76710.tar.xz) = 82334a12605136a8cc7b708141efe40253c59f130fa966460316a52cbb366deb04f3c169503bd23f209a67d8a8bec7e5c111bfb6707c35f38a382abdd44cec5c
-Size (markdown.r76710.tar.xz) = 98468 bytes
+BLAKE2s (markdown.r78531.tar.xz) = 15f73b18127b12b85e7002f4bf1517ab71a410dee2690da32193afac0ee83453
+SHA512 (markdown.r78531.tar.xz) = 300cd136f5ff257a0002d1f460412d11ede6d42dd190901c58d600cbf4663a64e66339ed26f5b2c46f80184fca15290d5c1f143fc045b50f55f869ea37011cdd
+Size (markdown.r78531.tar.xz) = 100344 bytes

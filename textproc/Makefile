@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1584 2026/03/29 17:13:22 wiz Exp $
+# $NetBSD: Makefile,v 1.1585 2026/04/03 01:16:24 markd Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1459,6 +1459,7 @@ SUBDIR+=	tex-lwarp-doc
 SUBDIR+=	tex-makeindex
 SUBDIR+=	tex-makeindex-doc
 SUBDIR+=	tex-markdown
+SUBDIR+=	tex-markdown-doc
 SUBDIR+=	tex-xindy
 SUBDIR+=	tex-xindy-doc
 SUBDIR+=	tex-xmltex

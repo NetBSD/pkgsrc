@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/03 01:16:24 markd Exp $
+share/texmf-dist/doc/context/third/markdown/examples/context-mkiv.tex
+share/texmf-dist/doc/context/third/markdown/examples/example.md
+share/texmf-dist/doc/context/third/markdown/examples/scientists.csv
+share/texmf-dist/doc/generic/markdown/CHANGES.md
+share/texmf-dist/doc/generic/markdown/DEPENDS.txt
+share/texmf-dist/doc/generic/markdown/README.md
+share/texmf-dist/doc/generic/markdown/VERSION
+share/texmf-dist/doc/generic/markdown/markdown.css
+share/texmf-dist/doc/generic/markdown/markdown.html
+share/texmf-dist/doc/generic/markdown/markdown.pdf
+share/texmf-dist/doc/generic/markdown/markdown.png
+share/texmf-dist/doc/latex/markdown/examples/example.md
+share/texmf-dist/doc/latex/markdown/examples/latex-luatex.tex
+share/texmf-dist/doc/latex/markdown/examples/latex-pdftex.tex
+share/texmf-dist/doc/latex/markdown/examples/latex-tex4ht.tex
+share/texmf-dist/doc/latex/markdown/examples/latex-xetex.tex
+share/texmf-dist/doc/latex/markdown/examples/scientists.csv
+share/texmf-dist/doc/man/man1/markdown2tex.1
+share/texmf-dist/doc/man/man1/markdown2tex.man1.pdf
+share/texmf-dist/doc/optex/markdown/examples/example.md
+share/texmf-dist/doc/optex/markdown/examples/optex.tex
+share/texmf-dist/doc/optex/markdown/examples/scientists.csv

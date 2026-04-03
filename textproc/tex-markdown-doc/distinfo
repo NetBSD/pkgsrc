@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/03 01:16:24 markd Exp $
+
+BLAKE2s (markdown.doc.r78531.tar.xz) = 0c09712111917f806b6fa477695c68eb1f1a3007859ab06bedfd6f33c479193e
+SHA512 (markdown.doc.r78531.tar.xz) = b89606348b1c5c885f087b494ee595c3720ea459846f165a642338badaba089d291d97d9be7b1f1d0f9fbebfbf2b63d78d7633c1f1d917c76487eb3d97ccd529
+Size (markdown.doc.r78531.tar.xz) = 1616448 bytes
