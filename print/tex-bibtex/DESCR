@@ -1,5 +1,11 @@
-BibTeX allows the user to store his citation data in generic form,
-while printing citations in a document in the form specified by a
-BibTeX style, to be specified in the document itself.  BibTeX itself
-is an ASCII-only program; there is, however, a version that copes with
-8-bit character sets.
+BibTeX allows the user to store his citation data in generic
+form, while printing citations in a document in the form
+specified by a BibTeX style, to be specified in the document
+itself (one often needs a LaTeX citation-style package, such as
+natbib, as well). BibTeX knows nothing about Unicode sorting
+algorithms or scripts, although it will pass on whatever bytes
+it reads. Its descendant bibtexu does support Unicode, via the
+ICU library. The older alternative bibtex8 supports 8-bit
+character sets. Another Unicode-aware alternative is the
+(independently developed) biber program, used with the BibLaTeX
+package to typeset its output.
