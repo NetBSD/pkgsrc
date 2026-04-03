@@ -1,0 +1,3 @@
+This is an expl3(-generic) package for plain TeX, LaTeX, and
+ConTeXt that allows you to execute Lua code in LuaTeX or any
+other TeX engine that exposes the shell.
