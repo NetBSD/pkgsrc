@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.961 2026/04/03 00:48:01 markd Exp $
+# $NetBSD: Makefile,v 1.962 2026/04/03 01:21:08 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1150,6 +1150,7 @@ SUBDIR+=	tex-mathcomp-doc
 SUBDIR+=	tex-mathdots
 SUBDIR+=	tex-mathdots-doc
 SUBDIR+=	tex-mathtools
+SUBDIR+=	tex-mathtools-doc
 SUBDIR+=	tex-mdframed
 SUBDIR+=	tex-mdframed-doc
 SUBDIR+=	tex-mdwtools
