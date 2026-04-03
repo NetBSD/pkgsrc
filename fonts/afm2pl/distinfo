@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2025/05/11 02:56:03 markd Exp $
+$NetBSD: distinfo,v 1.16 2026/04/03 03:20:29 markd Exp $
 
-BLAKE2s (texlive-20250308-source.tar.xz) = 95df483deb69cf662c0ff7e7a9ba6b1763acb3b8a18d16aa11fde197c0f74e67
-SHA512 (texlive-20250308-source.tar.xz) = 0837c935488b96cfc8dd79f1298f283b467ab68b4163cee9cb04b79e80195982fdc5ae8a80058dc7d3e99206bfda8b3bdd11340425b08f60cbef70d5a0e22702
-Size (texlive-20250308-source.tar.xz) = 111136556 bytes
+BLAKE2s (texlive-20260301-source.tar.xz) = 72dce1424d150288820bede681e8ac55ba738bf6ccf5a3398617a88ab5afdfc1
+SHA512 (texlive-20260301-source.tar.xz) = c2ea189fee82475e3013e5e6d7bdbbeef80fe33d3636b99b35bf7c8d0ff06b48dcc54d12f4c3959a0fc9e24b80f9c4878a417d4b55ef4880ff238aefbcf189a3
+Size (texlive-20260301-source.tar.xz) = 99377088 bytes
