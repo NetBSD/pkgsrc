@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/03 01:00:24 markd Exp $
+share/texmf-dist/scripts/lua-tinyyaml/tinyyaml.lua
