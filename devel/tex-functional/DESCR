@@ -1,0 +1,8 @@
+This package provides an intuitive functional programming
+interface for LaTeX2, which is an alternative choice to expl3
+or LuaTeX, if you want to do programming in LaTeX. Although
+there are functions in LaTeX3 programming layer (expl3), the
+evaluation of them is from outside to inside. With this
+package, the evaluation of functions is from inside to outside,
+which is the same as other programming languages such as Lua.
+In this way, it is rather easy to debug code too.
