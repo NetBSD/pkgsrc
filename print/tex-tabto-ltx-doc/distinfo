@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/03 02:23:44 markd Exp $
+
+BLAKE2s (tabto-ltx.doc.r78101.tar.xz) = 4243e0fec316d5a0b7551ed9dfc533575aebccc6d98938a3738e892acff4bfd0
+SHA512 (tabto-ltx.doc.r78101.tar.xz) = d3a0e883cdb7a2c513dbe803191740216c06a5e2ed503f69dfce17c6ddbdbee7d9344358c1f7cfd9b740d043da6775e0230f3a8baa6e4b785fb53296a09699ec
+Size (tabto-ltx.doc.r78101.tar.xz) = 53812 bytes
