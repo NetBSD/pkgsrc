@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/03 00:43:21 markd Exp $
+share/texmf-dist/doc/latex/l3experimental/CHANGELOG.md
+share/texmf-dist/doc/latex/l3experimental/README.md
+share/texmf-dist/doc/latex/l3experimental/l3draw/l3draw-code.pdf
+share/texmf-dist/doc/latex/l3experimental/l3draw/l3draw-code.tex
+share/texmf-dist/doc/latex/l3experimental/l3draw/l3draw.pdf
+share/texmf-dist/doc/latex/l3experimental/xcoffins/xcoffins.pdf

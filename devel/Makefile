@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4604 2026/04/01 12:53:30 adam Exp $
+# $NetBSD: Makefile,v 1.4605 2026/04/03 00:43:21 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -3714,6 +3714,7 @@ SUBDIR+=	tex-l3backend-dev
 SUBDIR+=	tex-l3backend-dev-doc
 SUBDIR+=	tex-l3backend-doc
 SUBDIR+=	tex-l3experimental
+SUBDIR+=	tex-l3experimental-doc
 SUBDIR+=	tex-l3kernel
 SUBDIR+=	tex-l3kernel-dev
 SUBDIR+=	tex-l3kernel-dev-doc
