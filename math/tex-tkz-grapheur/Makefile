@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2026/03/26 19:24:39 markd Exp $
+# $NetBSD: Makefile,v 1.3 2026/04/03 01:45:08 markd Exp $
 
 DISTNAME=	tkz-grapheur
-PKGNAME=	tex-${DISTNAME}-0.30d
-TEXLIVE_REV=	78455
+PKGNAME=	tex-${DISTNAME}-0.30e
+TEXLIVE_REV=	78565
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/tkz-grapheur
