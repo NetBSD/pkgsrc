@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/03 02:19:29 markd Exp $
+share/texmf-dist/doc/lualatex/seatingchart/README.md
+share/texmf-dist/doc/lualatex/seatingchart/seatingchart-doc-de.pdf
+share/texmf-dist/doc/lualatex/seatingchart/seatingchart-doc-de.tex
+share/texmf-dist/doc/lualatex/seatingchart/seatingchart-doc-en.pdf
+share/texmf-dist/doc/lualatex/seatingchart/seatingchart-doc-en.tex
+share/texmf-dist/doc/lualatex/seatingchart/seatingchart-example.pdf
+share/texmf-dist/doc/lualatex/seatingchart/seatingchart-example.tex

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1115 2026/04/03 01:59:23 markd Exp $
+# $NetBSD: Makefile,v 1.1116 2026/04/03 02:19:29 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -793,6 +793,8 @@ SUBDIR+=	tex-repere-doc
 SUBDIR+=	tex-roex
 SUBDIR+=	tex-roundrect
 SUBDIR+=	tex-roundrect-doc
+SUBDIR+=	tex-seatingchart
+SUBDIR+=	tex-seatingchart-doc
 SUBDIR+=	tex-shapes
 SUBDIR+=	tex-shapes-doc
 SUBDIR+=	tex-slideshow

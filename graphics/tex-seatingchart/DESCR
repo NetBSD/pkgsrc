@@ -1,0 +1,6 @@
+This package enables the visualization of seating charts,
+whereby the seating layouts (i.e. the arrangement of seats in a
+room) and the seating scheme (i.e. the selection and labeling
+of occupied seats) can be controlled independently of each
+other. The package should be considered experimental and
+requires LuaLaTeX.

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/03 02:19:29 markd Exp $
+
+BLAKE2s (seatingchart.doc.r76924.tar.xz) = 30ada7c2377bc8d67f791b4decbc6459b4c729ce1a59320204fbffd17d715283
+SHA512 (seatingchart.doc.r76924.tar.xz) = bb082dabfa79a9d08f89f624975eb3cb342d30932ce86dc82943c671a541ab3323f2593c817aa8fe0290c5367abb21e34d48b61ed08e15c243e66be3d0561f95
+Size (seatingchart.doc.r76924.tar.xz) = 1023340 bytes
