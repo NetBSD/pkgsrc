@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.102 2026/04/03 03:13:20 markd Exp $
+# $NetBSD: Makefile,v 1.103 2026/04/03 23:42:36 markd Exp $
 
 DISTNAME=	collection-latexextra
 PKGNAME=	texlive-${DISTNAME}-2026pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	78568
+TEXLIVE_REV=	78578
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -235,6 +235,7 @@ DEPENDS+=	tex-classpack-[0-9]*:../../print/tex-classpack
 # depend clefval
 DEPENDS+=	tex-cleveref-[0-9]*:../../print/tex-cleveref
 # depend cleveref-forward
+# depend cleveref-icelandic
 # depend cleveref-usedon
 # depend clicks
 # depend clipboard
