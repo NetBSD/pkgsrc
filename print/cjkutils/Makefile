@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2025/11/28 07:33:29 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/04/03 03:29:02 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	cjkutils-4.8.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print
 
 MAINTAINER=	rxg@NetBSD.org,hubertf@NetBSD.org
