@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2025/05/11 02:36:34 markd Exp $
+# $NetBSD: Makefile,v 1.14 2026/04/03 03:39:03 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	seetexk-20200908
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
