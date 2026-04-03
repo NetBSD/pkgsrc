@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2026/03/04 19:40:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/04/03 05:50:40 markd Exp $
 bin/mtxrun
 share/texmf-dist/fonts/opentype/public/context/LatinModernMathCompanion-Regular.otf
 share/texmf-dist/fonts/opentype/public/context/RalphSmithsFormalScriptCompanion-Regular.otf
@@ -102,6 +102,8 @@ share/texmf-dist/scripts/context/lua/mtx-fixpdf.lua
 share/texmf-dist/scripts/context/lua/mtx-flac.lua
 share/texmf-dist/scripts/context/lua/mtx-fonts.lua
 share/texmf-dist/scripts/context/lua/mtx-grep.lua
+share/texmf-dist/scripts/context/lua/mtx-install-modules.lua
+share/texmf-dist/scripts/context/lua/mtx-install.lua
 share/texmf-dist/scripts/context/lua/mtx-interface.lua
 share/texmf-dist/scripts/context/lua/mtx-kpse.lua
 share/texmf-dist/scripts/context/lua/mtx-metapost.lua
@@ -129,6 +131,7 @@ share/texmf-dist/scripts/context/lua/mtx-tools.lua
 share/texmf-dist/scripts/context/lua/mtx-unicode.lua
 share/texmf-dist/scripts/context/lua/mtx-unzip.lua
 share/texmf-dist/scripts/context/lua/mtx-update.lua
+share/texmf-dist/scripts/context/lua/mtx-use-tlmgr.lua
 share/texmf-dist/scripts/context/lua/mtx-vscode.lua
 share/texmf-dist/scripts/context/lua/mtx-watch.lua
 share/texmf-dist/scripts/context/lua/mtx-youless.lua
@@ -1620,6 +1623,7 @@ share/texmf-dist/tex/context/base/mkxl/meta-fnt.mkxl
 share/texmf-dist/tex/context/base/mkxl/meta-fun.mkxl
 share/texmf-dist/tex/context/base/mkxl/meta-grd.mkxl
 share/texmf-dist/tex/context/base/mkxl/meta-imp-bitmaps.mkxl
+share/texmf-dist/tex/context/base/mkxl/meta-imp-cistercian.mkxl
 share/texmf-dist/tex/context/base/mkxl/meta-imp-clock.mkxl
 share/texmf-dist/tex/context/base/mkxl/meta-imp-demo.mkxl
 share/texmf-dist/tex/context/base/mkxl/meta-imp-experiments.mkxl
@@ -2294,6 +2298,7 @@ share/texmf-dist/tex/context/interface/mkiv/i-help.xml
 share/texmf-dist/tex/context/interface/mkiv/i-hemistich.xml
 share/texmf-dist/tex/context/interface/mkiv/i-hiding.xml
 share/texmf-dist/tex/context/interface/mkiv/i-highlight.xml
+share/texmf-dist/tex/context/interface/mkiv/i-horizontalbox.xml
 share/texmf-dist/tex/context/interface/mkiv/i-hspace.xml
 share/texmf-dist/tex/context/interface/mkiv/i-hyphenation.xml
 share/texmf-dist/tex/context/interface/mkiv/i-imposition.xml
@@ -2473,6 +2478,7 @@ share/texmf-dist/tex/context/interface/mkiv/i-userdata.xml
 share/texmf-dist/tex/context/interface/mkiv/i-variables.xml
 share/texmf-dist/tex/context/interface/mkiv/i-verbatim.xml
 share/texmf-dist/tex/context/interface/mkiv/i-version.xml
+share/texmf-dist/tex/context/interface/mkiv/i-verticalbox.xml
 share/texmf-dist/tex/context/interface/mkiv/i-viewerlayer.xml
 share/texmf-dist/tex/context/interface/mkiv/i-visual.xml
 share/texmf-dist/tex/context/interface/mkiv/i-visualizer.xml
