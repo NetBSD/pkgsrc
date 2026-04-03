@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2026/03/04 19:41:48 markd Exp $
+$NetBSD: distinfo,v 1.6 2026/04/03 05:52:54 markd Exp $
 
-BLAKE2s (context-legacy.doc.r78010.tar.xz) = 7f1697d398a4666ebc1a28f556ef6a7f84a822fbfea82dae4d70e9b564353858
-SHA512 (context-legacy.doc.r78010.tar.xz) = 3f2a8cb0717b20c99115435a071874dc7852d004694f81d71c9b15273fa6239a4b2265245e2a3de04771548315c38bce5d7132059b7ece1f10fe68d39b16ea2d
-Size (context-legacy.doc.r78010.tar.xz) = 39140 bytes
+BLAKE2s (context-legacy.doc.r78526.tar.xz) = 4c4b709085dd9a31fe8f8c09bb30cab4260c18a9c2bcb8f97ada5a70b3a1f454
+SHA512 (context-legacy.doc.r78526.tar.xz) = c17225073eb41f1c6d4d54276f717dc1688ade4bebb71994bd942949f82155b1c49837c88e3ebf1916f41e384d5d7b527ee8aa54418b71e9509e96a6c9bf9be7
+Size (context-legacy.doc.r78526.tar.xz) = 39148 bytes
