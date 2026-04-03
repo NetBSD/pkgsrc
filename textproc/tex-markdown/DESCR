@@ -1,7 +1,5 @@
-The Markdown package converts CommonMark markup to TeX commands. The
-functionality is provided both as a Lua module and as plain TeX, LaTeX, and
-ConTeXt macro packages that can be used to directly typeset TeX documents
-containing markdown markup. Unlike other converters, the Markdown package
-does not require any external programs, and makes it easy to redefine how
-each and every markdown element is rendered.  Creative abuse of the markdown
-syntax is encouraged.
+The package provides facilities for the conversion of markdown
+and YAML markup to plain TeX. These are provided both in form
+of a Lua module and in form of plain TeX, LaTeX, and ConTeXt
+macro packages that enable the direct inclusion of markdown and
+YAML documents inside TeX documents.
