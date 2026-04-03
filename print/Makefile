@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.962 2026/04/03 01:21:08 markd Exp $
+# $NetBSD: Makefile,v 1.963 2026/04/03 01:49:50 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1103,6 +1103,8 @@ SUBDIR+=	tex-longfbox
 SUBDIR+=	tex-longfbox-doc
 SUBDIR+=	tex-ltabptch
 SUBDIR+=	tex-ltabptch-doc
+SUBDIR+=	tex-ltx-talk
+SUBDIR+=	tex-ltx-talk-doc
 SUBDIR+=	tex-ltxcmds
 SUBDIR+=	tex-ltxcmds-doc
 SUBDIR+=	tex-ltxmisc
