@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.964 2026/04/03 01:54:05 markd Exp $
+# $NetBSD: Makefile,v 1.965 2026/04/03 02:10:12 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1222,6 +1222,8 @@ SUBDIR+=	tex-mweights
 SUBDIR+=	tex-mweights-doc
 SUBDIR+=	tex-na-box
 SUBDIR+=	tex-na-box-doc
+SUBDIR+=	tex-nag
+SUBDIR+=	tex-nag-doc
 SUBDIR+=	tex-natbib
 SUBDIR+=	tex-natbib-doc
 SUBDIR+=	tex-ncctools

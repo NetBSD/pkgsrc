@@ -1,0 +1,5 @@
+Old habits die hard. All the same, there are commands, classes
+and packages which are outdated and superseded. The nag package
+provides routines to warn the user about the use of such
+obsolete things. As an example, we provide an extension that
+detects many of the "sins" described in l2tabu.

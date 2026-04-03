@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/03 02:10:13 markd Exp $
+share/texmf-dist/tex/latex/nag/nag-abort.cfg
+share/texmf-dist/tex/latex/nag/nag-experimental.cfg
+share/texmf-dist/tex/latex/nag/nag-l2tabu.cfg
+share/texmf-dist/tex/latex/nag/nag-orthodox.cfg
+share/texmf-dist/tex/latex/nag/nag.sty
