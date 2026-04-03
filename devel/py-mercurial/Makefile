@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.111 2026/03/26 12:34:39 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2026/04/03 16:11:18 wiz Exp $
 #
-# Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
+# Changelog sometimes at: https://mercurial-scm.org/news
 
 DISTNAME=	mercurial-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -30,7 +30,7 @@ PYTHON_SELF_CONFLICT=		yes
 .include "version.mk"
 
 USE_TOOLS+=	bash:test
-# Test status as of 7.1 as !root
+# Test status as of 7.2.1 as !root
 # tests/test-revlog-mmapindex.t (race condition / buffer)
 
 .if make(test)
