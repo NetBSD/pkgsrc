@@ -1,6 +1,6 @@
-$NetBSD: patch-readline_Make,v 1.1 2017/12/12 07:13:01 spz Exp $
+$NetBSD: patch-readline_Make,v 1.2 2026/04/03 16:46:05 spz Exp $
 
---- readline/Make.orig	1995-02-24 21:19:59.000000000 +0000
+--- readline/Make.orig	2026-04-03 13:09:38.833736724 +0000
 +++ readline/Make
 @@ -34,8 +34,8 @@ INCDIR = ..
  READLINE_DEFINES = $(TYPES) -DVI_MODE
@@ -13,3 +13,12 @@ $NetBSD: patch-readline_Make,v 1.1 2017/12/12 07:13:01 spz Exp $
  
  # A good alternative is gcc -traditional.
  #CC = gcc -traditional
+@@ -77,7 +77,7 @@ all: ../lreadline.a
+ 
+ ../lreadline.a:	$(OBJECTS)
+ 	$(RM) -f $@
+-	$(AR) clq $@ $(OBJECTS)
++	$(AR) qc $@ $(OBJECTS)
+ 	-if [ -f /usr/bin/ranlib -o -f /bin/ranlib ]; then ranlib $@; fi
+ 
+ readline: readline.h chardefs.h $(OBJECTS)
