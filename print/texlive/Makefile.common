@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2025/05/11 02:20:06 markd Exp $
+# $NetBSD: Makefile.common,v 1.11 2026/04/03 03:17:27 markd Exp $
 # used by converters/dvi2tty/Makefile
 # used by fonts/afm2pl/Makefile
 # used by fonts/gsftopkk/Makefile
@@ -31,8 +31,8 @@
 # used by textproc/upmendex/Makefile
 # used by textproc/xindy/Makefile
 
-DISTNAME=	texlive-20250308-source
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2025/
+DISTNAME=	texlive-20260301-source
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2026/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER?=	minskim@NetBSD.org
