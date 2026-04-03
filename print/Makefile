@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.965 2026/04/03 02:10:12 markd Exp $
+# $NetBSD: Makefile,v 1.966 2026/04/03 02:14:43 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1311,6 +1311,8 @@ SUBDIR+=	tex-pb-diagram-doc
 SUBDIR+=	tex-pbibtex-base
 SUBDIR+=	tex-pbibtex-base-doc
 SUBDIR+=	tex-pbox
+SUBDIR+=	tex-pdf14
+SUBDIR+=	tex-pdf14-doc
 SUBDIR+=	tex-pdfcol
 SUBDIR+=	tex-pdfcol-doc
 SUBDIR+=	tex-pdfcolfoot

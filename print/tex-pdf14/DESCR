@@ -1,0 +1,7 @@
+Starting with TeX Live 2010, the various formats, that directly
+generate PDF, default to generating PDF 1.5. This is generally
+a good thing, but it can lead to compatibility issues with some
+older PDF viewers. This package changes the version of PDF
+generated with formats (based on pdfTeX or LuaTeX in PDF mode),
+back to 1.4 for documents that need to achieve maximal
+compatibility with old viewers.
