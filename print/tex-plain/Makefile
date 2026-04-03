@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2021/06/06 12:24:14 markd Exp $
+# $NetBSD: Makefile,v 1.20 2026/04/03 06:09:50 markd Exp $
 
 DISTNAME=	plain
-PKGNAME=	tex-${DISTNAME}-3.141592653.57963
-TEXLIVE_REV=	57963
+PKGNAME=	tex-${DISTNAME}-3.1415926535
+TEXLIVE_REV=	75712
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/plain
