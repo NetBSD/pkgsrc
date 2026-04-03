@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/03 02:19:29 markd Exp $
+share/texmf-dist/tex/lualatex/seatingchart/seatingchart-tu-chemnitz.sc
+share/texmf-dist/tex/lualatex/seatingchart/seatingchart.lua
+share/texmf-dist/tex/lualatex/seatingchart/seatingchart.sty
