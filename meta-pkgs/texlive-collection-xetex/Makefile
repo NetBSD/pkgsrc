@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2025/05/13 11:57:47 markd Exp $
+# $NetBSD: Makefile,v 1.22 2026/04/03 02:31:32 markd Exp $
 
 DISTNAME=	collection-xetex
-PKGNAME=	texlive-${DISTNAME}-2025pre1
+PKGNAME=	texlive-${DISTNAME}-2026pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	71515
+TEXLIVE_REV=	77786
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -29,7 +29,6 @@ DEPENDS+=	tex-arabxetex-[0-9]*:../../print/tex-arabxetex
 # depend philokalia
 DEPENDS+=	tex-polyglossia-[0-9]*:../../print/tex-polyglossia
 # depend ptext
-DEPENDS+=	tex-realscripts-[0-9]*:../../print/tex-realscripts
 # depend simple-resume-cv
 # depend simple-thesis-dissertation
 # depend tetragonos
