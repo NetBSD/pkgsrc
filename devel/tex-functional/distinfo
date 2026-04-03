@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/03 02:05:24 markd Exp $
+
+BLAKE2s (functional.r76924.tar.xz) = eb4de825f7cd28a3e8ff7f110fb43478ae1f377e70812462330039f6a4e7bb45
+SHA512 (functional.r76924.tar.xz) = 46c3d9ceffddb984f809180c51f0da05137ce2c65c672fdeb0fd7d171da42c494899429048933537e13628409844bbcebba41bfc7f8bc7d1a2d0633e6ec76d5c
+Size (functional.r76924.tar.xz) = 11216 bytes
