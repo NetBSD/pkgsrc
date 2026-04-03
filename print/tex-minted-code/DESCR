@@ -1,0 +1,3 @@
+With package minted one can typeset LaTeX code with unicode
+characters. This package minted-code defines several
+environments to simplify the application.

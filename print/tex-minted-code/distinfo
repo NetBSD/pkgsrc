@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/03 01:54:05 markd Exp $
+
+BLAKE2s (minted-code.r76529.tar.xz) = a53d0a445b2d156660119da344e1261b5aee146a949fbf5f05d247aa32bd831c
+SHA512 (minted-code.r76529.tar.xz) = ff6884f1067615b37b3122a9f1b615954111deeea4822f5a669067101172b96a4319f668bb5356d334baecc24651b43d14a91dfe6d01c9758e452011d06193c2
+Size (minted-code.r76529.tar.xz) = 1412 bytes

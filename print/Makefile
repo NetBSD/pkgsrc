@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.963 2026/04/03 01:49:50 markd Exp $
+# $NetBSD: Makefile,v 1.964 2026/04/03 01:54:05 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1185,6 +1185,8 @@ SUBDIR+=	tex-milog-doc
 SUBDIR+=	tex-minitoc
 SUBDIR+=	tex-minitoc-doc
 SUBDIR+=	tex-minted
+SUBDIR+=	tex-minted-code
+SUBDIR+=	tex-minted-code-doc
 SUBDIR+=	tex-minted-doc
 SUBDIR+=	tex-mkpattern
 SUBDIR+=	tex-mkpattern-doc
