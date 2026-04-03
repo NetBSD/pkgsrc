@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/04/03 15:37:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/04/03 15:39:49 wiz Exp $
 
 # VERSION must match the output of:
 # git -c "core.abbrev=8" show -s "--format=%cd-%h" "--date=format:%Y%m%d-%H%M%S"
@@ -105,5 +105,4 @@ do-install:
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
 .include "../../x11/xcb-util-image/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
