@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/05/14 12:56:44 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/04/03 23:40:00 markd Exp $
 
 DISTNAME=	pdfjam.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-4.2
-TEXLIVE_REV=	75152
+PKGNAME=	tex-${DISTNAME:S/./-/}-4.3
+TEXLIVE_REV=	78572
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pdfjam
