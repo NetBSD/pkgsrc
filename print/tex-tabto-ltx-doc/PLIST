@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/03 02:23:44 markd Exp $
+share/texmf-dist/doc/latex/tabto-ltx/README
+share/texmf-dist/doc/latex/tabto-ltx/tabto-doc.pdf
+share/texmf-dist/doc/latex/tabto-ltx/tabto-doc.tex
