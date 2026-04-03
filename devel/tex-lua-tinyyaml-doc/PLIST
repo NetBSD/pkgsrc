@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/03 01:00:24 markd Exp $
+share/texmf-dist/doc/luatex/lua-tinyyaml/README.md
+share/texmf-dist/doc/luatex/lua-tinyyaml/lua-tinyyaml.pdf
+share/texmf-dist/doc/luatex/lua-tinyyaml/lua-tinyyaml.tex

@@ -1,0 +1,4 @@
+This package provides a YAML (subset) parser written in pure
+Lua. It supports a subset of the YAML 1.2 specifications. It is
+required by several other LuaTeX packages including markdown
+and citeproc-lua.

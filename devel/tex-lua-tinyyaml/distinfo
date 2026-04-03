@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/03 01:00:24 markd Exp $
+
+BLAKE2s (lua-tinyyaml.r73671.tar.xz) = 004a1bf9d87d589791daab9cf8c5fb003fe24af937b7fb3680884f63e34abc9c
+SHA512 (lua-tinyyaml.r73671.tar.xz) = 8dc998562742e65727a8053c6b42e1ffd6bc6f618d873145b8d71b6243adfce41afebd8dfe68733b9977eb3def7ec837c3c264ec2350b40bf917d013ce7a1960
+Size (lua-tinyyaml.r73671.tar.xz) = 5616 bytes
