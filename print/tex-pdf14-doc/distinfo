@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/03 02:14:43 markd Exp $
+
+BLAKE2s (pdf14.doc.r76924.tar.xz) = b8c1c089900d07df167672135d27609946dbcb666e0a911082636cd8fd526675
+SHA512 (pdf14.doc.r76924.tar.xz) = 7d1ba3f229bc8635e61ec4426adbf9912c0cb068da92b6d58c2bfd9172a57fda623756090e1b047da8cfe01b5168b146b72f7a2db81b5d3b8fc0e28232c3c0e0
+Size (pdf14.doc.r76924.tar.xz) = 362692 bytes
