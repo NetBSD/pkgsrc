@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/03 02:10:13 markd Exp $
+share/texmf-dist/doc/latex/nag/README
+share/texmf-dist/doc/latex/nag/nag.pdf
+share/texmf-dist/doc/latex/nag/nagdemo.tex

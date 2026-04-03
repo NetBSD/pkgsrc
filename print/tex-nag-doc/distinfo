@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/03 02:10:13 markd Exp $
+
+BLAKE2s (nag.doc.r77682.tar.xz) = a0361eceec7a73db07624aab79b0cf73d5f54d5cefd05e960c6d30f7d8c80309
+SHA512 (nag.doc.r77682.tar.xz) = fdc7f764ec7b0ed53b93329ad7f876e765a6fca1b6a60d1e5e3aa3fa45516d9150cc5d396a85832ee43ce03c6672c892dfdded53f9cadafb8a089d437fdec824
+Size (nag.doc.r77682.tar.xz) = 438652 bytes
