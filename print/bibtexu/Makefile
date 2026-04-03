@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2026/01/07 08:48:32 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/04/03 03:28:15 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
-PKGNAME=	bibtexu-4.02
-PKGREVISION=	7
+PKGNAME=	bibtexu-4.03
 CATEGORIES=	print
 
 HOMEPAGE=	https://ctan.org/pkg/bibtexu
