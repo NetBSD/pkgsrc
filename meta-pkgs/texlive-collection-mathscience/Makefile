@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.36 2026/04/03 03:01:12 markd Exp $
+# $NetBSD: Makefile,v 1.37 2026/04/03 23:43:53 markd Exp $
 
 DISTNAME=	collection-mathscience
 PKGNAME=	texlive-${DISTNAME}-2026pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	78537
+TEXLIVE_REV=	78574
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -273,6 +273,7 @@ DEPENDS+=	tex-siunitx-[0-9]*:../../print/tex-siunitx
 # depend spalign
 # depend spbmark
 # depend stanli
+# depend statementsp
 DEPENDS+=	tex-statex-[0-9]*:../../print/tex-statex
 # depend statex2
 # depend statistics
