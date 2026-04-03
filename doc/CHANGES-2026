@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2081 2026/04/03 07:58:02 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2082 2026/04/03 07:58:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3305,3 +3305,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/tex-pdftex-doc to 2026 [markd 2026-04-03]
 	Updated print/tex-plain to 3.1415926535 [markd 2026-04-03]
 	Updated devel/jj-docs to 0.40.0 [wiz 2026-04-03]
+	Updated devel/jj to 0.40.0 [wiz 2026-04-03]
