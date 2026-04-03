@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2026/04/03 03:11:10 markd Exp $
+# $NetBSD: Makefile,v 1.102 2026/04/03 03:13:20 markd Exp $
 
 DISTNAME=	collection-latexextra
 PKGNAME=	texlive-${DISTNAME}-2026pre1
@@ -639,7 +639,6 @@ DEPENDS+=	tex-ftcap-[0-9]*:../../print/tex-ftcap
 # depend fullblck
 # depend fullminipage
 # depend fullwidth
-# depend functional
 DEPENDS+=	tex-functional-[0-9]*:../../devel/tex-functional
 DEPENDS+=	tex-fundus-calligra-[0-9]*:../../print/tex-fundus-calligra
 # depend fundus-cyr
