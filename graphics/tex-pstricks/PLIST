@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/04/10 12:36:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/04/03 01:31:32 markd Exp $
 share/texmf-dist/dvips/pstricks/pst-algparser.pro
 share/texmf-dist/dvips/pstricks/pst-dots.pro
 share/texmf-dist/dvips/pstricks/pst-dots97.pro
@@ -12,11 +12,19 @@ share/texmf-dist/tex/generic/pstricks/config/gastex.cfg
 share/texmf-dist/tex/generic/pstricks/config/textures.cfg
 share/texmf-dist/tex/generic/pstricks/config/vtex.cfg
 share/texmf-dist/tex/generic/pstricks/config/xdvipdfmx.cfg
+share/texmf-dist/tex/generic/pstricks/pst-code-arc.tex
+share/texmf-dist/tex/generic/pstricks/pst-code-box.tex
+share/texmf-dist/tex/generic/pstricks/pst-code-circle_ellipse.tex
+share/texmf-dist/tex/generic/pstricks/pst-code-grid.tex
+share/texmf-dist/tex/generic/pstricks/pst-code-pspicture.tex
+share/texmf-dist/tex/generic/pstricks/pst-code-put.tex
+share/texmf-dist/tex/generic/pstricks/pst-code-ref_rot.tex
 share/texmf-dist/tex/generic/pstricks/pst-fp.tex
 share/texmf-dist/tex/generic/pstricks/pst-key.tex
 share/texmf-dist/tex/generic/pstricks/pstricks-arrows.tex
 share/texmf-dist/tex/generic/pstricks/pstricks-color.tex
 share/texmf-dist/tex/generic/pstricks/pstricks-dots.tex
+share/texmf-dist/tex/generic/pstricks/pstricks-plain.tex
 share/texmf-dist/tex/generic/pstricks/pstricks-tex.def
 share/texmf-dist/tex/generic/pstricks/pstricks-xetex.def
 share/texmf-dist/tex/generic/pstricks/pstricks.con
