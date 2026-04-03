@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2026/01/25 10:11:09 markd Exp $
+# $NetBSD: Makefile,v 1.30 2026/04/03 03:06:12 markd Exp $
 
 DISTNAME=	collection-plaingeneric
-PKGNAME=	texlive-${DISTNAME}-2025pre2
+PKGNAME=	texlive-${DISTNAME}-2026pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	75599
+TEXLIVE_REV=	78552
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -120,6 +120,7 @@ DEPENDS+=	tex-tex4ht-[0-9]*:../../print/tex-tex4ht
 DEPENDS+=	tex-texinfo-[0-9]*:../../print/tex-texinfo
 DEPENDS+=	tex-timetable-[0-9]*:../../print/tex-timetable
 # depend tokmap
+# depend tokstools
 DEPENDS+=	tex-tracklang-[0-9]*:../../print/tex-tracklang
 # depend transparent-io
 DEPENDS+=	tex-treetex-[0-9]*:../../print/tex-treetex
