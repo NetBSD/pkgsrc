@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2026/04/03 01:49:50 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/04/03 23:36:06 markd Exp $
 
-BLAKE2s (ltx-talk.doc.r78559.tar.xz) = b54fbd0056df23e1341c397598f0281dfc17dfc6796c38957c14dfeae3645816
-SHA512 (ltx-talk.doc.r78559.tar.xz) = 0e6187439a2c653124a404ad8a9081975a7be8dc7f28778db5a98ba1052df4b181ea0e0ac064073eae1dcfe35b31c1be7bd30f4423f46232c8205a46d3d3d3c9
-Size (ltx-talk.doc.r78559.tar.xz) = 866368 bytes
+BLAKE2s (ltx-talk.doc.r78575.tar.xz) = d4026105fd4a1ad03d8ac3c50d96c3e6fc6f845b83339823168b187184d394d2
+SHA512 (ltx-talk.doc.r78575.tar.xz) = e086004a1e23b73c48cff582a7ba018d6729c1f22d38c0450dbeabcb9a01a5bf584c92910a3f5c24d8ebe9d894eb1ee6f99a6c74f9557573da93bf879a7b3bde
+Size (ltx-talk.doc.r78575.tar.xz) = 864684 bytes
