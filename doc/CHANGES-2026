@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2079 2026/04/03 03:50:39 markd Exp $
+$NetBSD: CHANGES-2026,v 1.2080 2026/04/03 06:10:46 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3285,3 +3285,22 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/mendexk to 3.10 [markd 2026-04-03]
 	Updated textproc/upmendex to 1.22 [markd 2026-04-03]
 	Updated textproc/xindy to 2.5.1nb13 [markd 2026-04-03]
+	Updated print/tex-bibtex to 0.99e [markd 2026-04-03]
+	Updated print/tex-bibtex-doc to 0.99e [markd 2026-04-03]
+	Updated print/tex-context to 20260325 [markd 2026-04-03]
+	Updated print/tex-context-doc to 20260325 [markd 2026-04-03]
+	Updated print/tex-context-legacy to 2026 [markd 2026-04-03]
+	Updated print/tex-context-legacy-doc to 2026 [markd 2026-04-03]
+	Updated print/tex-dvipdfmx to 2026 [markd 2026-04-03]
+	Updated print/tex-dvipdfmx-doc to 2026 [markd 2026-04-03]
+	Updated print/tex-hitex to 2026 [markd 2026-04-03]
+	Updated print/tex-hitex-doc to 2026 [markd 2026-04-03]
+	Updated print/tex-kpathsea to 2026 [markd 2026-04-03]
+	Updated print/tex-kpathsea-doc to 2026 [markd 2026-04-03]
+	Updated print/tex-latex-bin to 2026 [markd 2026-04-03]
+	Updated print/tex-latex-bin-doc to 2026 [markd 2026-04-03]
+	Updated print/tex-luatex to 1.24.0 [markd 2026-04-03]
+	Updated print/tex-luatex-doc to 1.24.0 [markd 2026-04-03]
+	Updated print/tex-pdftex to 2026 [markd 2026-04-03]
+	Updated print/tex-pdftex-doc to 2026 [markd 2026-04-03]
+	Updated print/tex-plain to 3.1415926535 [markd 2026-04-03]
