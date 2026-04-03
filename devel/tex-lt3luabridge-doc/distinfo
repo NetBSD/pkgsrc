@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/03 00:53:57 markd Exp $
+
+BLAKE2s (lt3luabridge.doc.r76924.tar.xz) = 787fb63f034f991870537550444cd7aa4c62f2b59deec378211ff9db55bad342
+SHA512 (lt3luabridge.doc.r76924.tar.xz) = 46d55147e8cad3403e1eec816b3d16613d95b69baf5ca3b0ff6cb0eccc5b1cec6752e25a9614d1a1d1937c8fcec36b34648523135f97bf7eb9f5c6d7b41580a2
+Size (lt3luabridge.doc.r76924.tar.xz) = 500508 bytes

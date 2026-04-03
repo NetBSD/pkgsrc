@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4605 2026/04/03 00:43:21 markd Exp $
+# $NetBSD: Makefile,v 1.4606 2026/04/03 00:53:57 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -3725,6 +3725,8 @@ SUBDIR+=	tex-latex2pydata
 SUBDIR+=	tex-latex2pydata-doc
 SUBDIR+=	tex-latexbug
 SUBDIR+=	tex-latexbug-doc
+SUBDIR+=	tex-lt3luabridge
+SUBDIR+=	tex-lt3luabridge-doc
 SUBDIR+=	tex-lualibs
 SUBDIR+=	tex-lualibs-doc
 SUBDIR+=	tex-luatexbase

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/03 00:53:57 markd Exp $
+share/texmf-dist/tex/generic/lt3luabridge/lt3luabridge.sty
+share/texmf-dist/tex/generic/lt3luabridge/lt3luabridge.tex
+share/texmf-dist/tex/generic/lt3luabridge/t-lt3luabridge.tex
