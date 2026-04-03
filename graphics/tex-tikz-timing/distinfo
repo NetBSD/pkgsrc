@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/03 01:59:23 markd Exp $
+
+BLAKE2s (tikz-timing.r64967.tar.xz) = ded63ffcf07d6cef5da246ea62151e5899331301b449d7078843c9eebba4a403
+SHA512 (tikz-timing.r64967.tar.xz) = 2c3af958ff5509a470b4e1f93bdbb063f5b911a81de12d749fbd7dc6810715a473814d6d8694a81a49d2f45f1f468ef9d441fe07c2269c9c9a9094e350228b36
+Size (tikz-timing.r64967.tar.xz) = 19084 bytes
