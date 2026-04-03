@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2025/09/28 12:55:55 bsiegert Exp $
+# $NetBSD: Makefile,v 1.26 2026/04/03 02:55:24 markd Exp $
 
 DISTNAME=	collection-latexrecommended
-PKGNAME=	texlive-${DISTNAME}-2025
-PKGREVISION=	1
+PKGNAME=	texlive-${DISTNAME}-2026
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	73720
+TEXLIVE_REV=	78568
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -51,6 +50,8 @@ DEPENDS+=	tex-l3experimental-[0-9]*:../../devel/tex-l3experimental
 DEPENDS+=	tex-latexbug-[0-9]*:../../devel/tex-latexbug
 DEPENDS+=	tex-lineno-[0-9]*:../../print/tex-lineno
 DEPENDS+=	tex-listings-[0-9]*:../../print/tex-listings
+DEPENDS+=	tex-ltx-talk-[0-9]*:../../print/tex-ltx-talk
+DEPENDS+=	tex-lua-unicode-math-[0-9]*:../../math/tex-lua-unicode-math
 DEPENDS+=	tex-mathspec-[0-9]*:../../math/tex-mathspec
 DEPENDS+=	tex-mathtools-[0-9]*:../../print/tex-mathtools
 DEPENDS+=	tex-mdwtools-[0-9]*:../../print/tex-mdwtools
@@ -62,7 +63,6 @@ DEPENDS+=	tex-ntgclass-[0-9]*:../../print/tex-ntgclass
 DEPENDS+=	tex-parskip-[0-9]*:../../print/tex-parskip
 DEPENDS+=	tex-pdfcolfoot-[0-9]*:../../print/tex-pdfcolfoot
 DEPENDS+=	tex-pdflscape-[0-9]*:../../print/tex-pdflscape
-DEPENDS+=	tex-pdfmanagement-testphase-[0-9]*:../../print/tex-pdfmanagement-testphase
 DEPENDS+=	tex-pdfpages-[0-9]*:../../print/tex-pdfpages
 DEPENDS+=	tex-polyglossia-[0-9]*:../../print/tex-polyglossia
 DEPENDS+=	tex-psfrag-[0-9]*:../../print/tex-psfrag
