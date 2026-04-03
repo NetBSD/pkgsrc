@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.120 2026/01/27 08:40:28 wiz Exp $
+# $NetBSD: Makefile,v 1.121 2026/04/03 03:42:35 markd Exp $
 
-PKGREVISION= 2
 .include "../../print/texlive/Makefile.common"
 
-PKGNAME=	web2c-2025
+PKGNAME=	web2c-2026
 CATEGORIES=	print
 
 HOMEPAGE=	https://www.tug.org/web2c/
@@ -49,6 +48,8 @@ CONFIGURE_ARGS+=	--with-system-cairo
 CONFIGURE_ARGS+=	--with-system-gmp
 CONFIGURE_ARGS+=	--with-gmp-includes=${BUILDLINK_PREFIX.gmp}/include
 CONFIGURE_ARGS+=	--with-gmp-libdir=${BUILDLINK_PREFIX.gmp}/lib
+CONFIGURE_ARGS+=	--with-system-graphite2
+CONFIGURE_ARGS+=	--with-system-harfbuzz
 CONFIGURE_ARGS+=	--with-system-mpfi
 CONFIGURE_ARGS+=	--with-system-mpfr
 CONFIGURE_ARGS+=	--with-mpfr-includes=${BUILDLINK_PREFIX.mpfr}/include
@@ -67,7 +68,9 @@ INSTALL_DIRS=		${WRKDIR}/${DISTNAME}/texk/web2c
 
 .include "../../archivers/zziplib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/graphite2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../math/mpfi/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2025/05/11 02:33:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.20 2026/04/03 03:42:35 markd Exp $
 bin/aleph
 bin/bibtex
 bin/ctangle
@@ -50,7 +50,6 @@ bin/pltotf
 bin/pmpost
 bin/pooltype
 bin/ppltotf
-bin/ptex
 bin/ptftopl
 bin/r-mpost
 bin/r-pmpost
@@ -127,7 +126,6 @@ man/man1/ovf2ovp.1
 man/man1/ovp2ovf.1
 man/man1/patgen.1
 man/man1/pbibtex.1
-man/man1/pdfetex.1
 man/man1/pdflatex-dev.1
 man/man1/pdflatex.1
 man/man1/pdftex.1
