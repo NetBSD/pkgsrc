@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2026/03/28 23:42:47 markd Exp $
+$NetBSD: distinfo,v 1.13 2026/04/03 23:30:35 markd Exp $
 
-BLAKE2s (babel-german.r78437.tar.xz) = 10cde0aaaab8f02797b8119d2730f577c25cc343531f4adabc82f7f5dc00be99
-SHA512 (babel-german.r78437.tar.xz) = 0c06e8f9d8910d86349b55e3c086147ada8d6d0471dba369c46dd702a8f7da616297096271895aac1bb69a2e44c090355082d75ae3f11d0326bb63b300945bfa
-Size (babel-german.r78437.tar.xz) = 6732 bytes
+BLAKE2s (babel-german.r78579.tar.xz) = ebe6cb4d82c4703e455e13251ed3e6f07cf6786c53eb31b7021cbad0dff1a1d3
+SHA512 (babel-german.r78579.tar.xz) = 99158d51375d856b9a9569ee1a21ac304a7f5acc36b45ffbbf912780331ccb4a0b6a91d3f28396eccc00093b89ce231943d930548218a33a33f33f4e5a42c7a2
+Size (babel-german.r78579.tar.xz) = 6740 bytes
