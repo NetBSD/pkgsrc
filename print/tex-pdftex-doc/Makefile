@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2024/04/22 11:57:16 markd Exp $
+# $NetBSD: Makefile,v 1.30 2026/04/03 06:08:20 markd Exp $
 
 DISTNAME=	pdftex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2022
-PKGREVISION=	1
-TEXLIVE_REV=	66243
+PKGNAME=	tex-${DISTNAME:S/./-/}-2026
+TEXLIVE_REV=	78401
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pdftex
@@ -14,6 +13,8 @@ TEXLIVE_IGNORE_PATTERNS=	texmf-dist/doc/man
 
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	texmf-dist/doc/pdftex/manual/syntaxform.pl
+
+CHECK_INTERPRETER_SKIP+=	share/texmf-dist/doc/pdftex/tests/38-interword-space-at-font-switch/compare_pdfs.rb
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
