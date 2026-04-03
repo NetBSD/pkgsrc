@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.52 2026/03/26 20:00:33 markd Exp $
+# $NetBSD: Makefile,v 1.53 2026/04/03 03:02:41 markd Exp $
 
 DISTNAME=	collection-pictures
-PKGNAME=	texlive-${DISTNAME}-2025pre3
+PKGNAME=	texlive-${DISTNAME}-2026pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	78426
+TEXLIVE_REV=	78538
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -43,6 +43,7 @@ DEPENDS+=	tex-circuitikz-[0-9]*:../../graphics/tex-circuitikz
 # depend coffeestains
 # depend coloredbelts
 # depend combinedgraphics
+# depend corasdiagram
 # depend curve
 # depend curve2e
 DEPENDS+=	tex-curves-[0-9]*:../../print/tex-curves
@@ -232,7 +233,7 @@ DEPENDS+=	tex-tikz-cd-[0-9]*:../../graphics/tex-tikz-cd
 # depend tikz-sfc
 # depend tikz-shields
 # depend tikz-swigs
-# depend tikz-timing
+DEPENDS+=	tex-tikz-timing-[0-9]*:../../graphics/tex-tikz-timing
 # depend tikz-trackschematic
 # depend tikz-truchet
 # depend tikz2d-fr
