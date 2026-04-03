@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/05/11 04:17:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/04/03 06:05:48 markd Exp $
 man/man1/dviluatex.1
 man/man1/luatex.1
 man/man1/texlua.1
@@ -8,6 +8,8 @@ share/texmf-dist/doc/luatex/base/NEWS
 share/texmf-dist/doc/luatex/base/graphics/Makefile
 share/texmf-dist/doc/luatex/base/graphics/fontdir.fig
 share/texmf-dist/doc/luatex/base/graphics/fontdir.pdf
+share/texmf-dist/doc/luatex/base/graphics/luaharfbuzz-Documentation-subset.pdf
+share/texmf-dist/doc/luatex/base/graphics/luaharfbuzz-Documentation.pdf
 share/texmf-dist/doc/luatex/base/graphics/luaharfbuzz.pdf
 share/texmf-dist/doc/luatex/base/luatex-backend.tex
 share/texmf-dist/doc/luatex/base/luatex-callbacks.tex
