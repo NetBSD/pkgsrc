@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/04/12 11:18:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/04/03 17:34:18 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -13,9 +13,6 @@ ${PYSITELIB}/hgext3rd/evolve/cmdrewrite.pyo
 ${PYSITELIB}/hgext3rd/evolve/compat.py
 ${PYSITELIB}/hgext3rd/evolve/compat.pyc
 ${PYSITELIB}/hgext3rd/evolve/compat.pyo
-${PYSITELIB}/hgext3rd/evolve/dagutil.py
-${PYSITELIB}/hgext3rd/evolve/dagutil.pyc
-${PYSITELIB}/hgext3rd/evolve/dagutil.pyo
 ${PYSITELIB}/hgext3rd/evolve/debugcmd.py
 ${PYSITELIB}/hgext3rd/evolve/debugcmd.pyc
 ${PYSITELIB}/hgext3rd/evolve/debugcmd.pyo
@@ -64,9 +61,6 @@ ${PYSITELIB}/hgext3rd/evolve/rewind.pyo
 ${PYSITELIB}/hgext3rd/evolve/rewriteutil.py
 ${PYSITELIB}/hgext3rd/evolve/rewriteutil.pyc
 ${PYSITELIB}/hgext3rd/evolve/rewriteutil.pyo
-${PYSITELIB}/hgext3rd/evolve/safeguard.py
-${PYSITELIB}/hgext3rd/evolve/safeguard.pyc
-${PYSITELIB}/hgext3rd/evolve/safeguard.pyo
 ${PYSITELIB}/hgext3rd/evolve/stablerange.py
 ${PYSITELIB}/hgext3rd/evolve/stablerange.pyc
 ${PYSITELIB}/hgext3rd/evolve/stablerange.pyo
