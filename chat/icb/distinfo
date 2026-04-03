@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2024/04/19 17:00:47 chuck Exp $
+$NetBSD: distinfo,v 1.24 2026/04/03 16:46:05 spz Exp $
 
 BLAKE2s (icb-5.0.9.tar.gz) = e36c28e37b84806ff0b2eab323710be73251b31a231d639ad4f0e2a519d38adf
 SHA512 (icb-5.0.9.tar.gz) = d72a30cd671242dceb98defae80780bffd2aaaddfea2bf50d0970368f2601dd203b13939d102ce9af3c8d46373addcd2bcf385a1bb8e3c3b3674c21072fd8d00
@@ -59,7 +59,7 @@ SHA1 (patch-icb_parse.c) = 5ed95b8cbd409323683fdc6364b934e8ccaa7a23
 SHA1 (patch-icb_signals.c) = 1b648d7137ad361e43d4cd472fe811d16ec5cac7
 SHA1 (patch-murgil_contoport.c) = 2ee05addd21be0d906b5147efac1f48841d72298
 SHA1 (patch-murgil_makeport.c) = cacfa30605bcc688a8a48f6152527de82d04a9c8
-SHA1 (patch-readline_Make) = fbc7e816b29ed1ae6ea2beb8f61d269e8248bb11
+SHA1 (patch-readline_Make) = 95881edeef64b2fc281e089752d6e684bc670e50
 SHA1 (patch-readline_funmap.c) = 262d16194937918928963d1809f683f91419eff0
 SHA1 (patch-readline_keymaps.c) = 3f9534f18bbfbbdb11d66ca9db390524af252ac0
 SHA1 (patch-readline_vi__mode.c) = 48ed2f4a0070491014e940bcc9a6edffa986cb2a
