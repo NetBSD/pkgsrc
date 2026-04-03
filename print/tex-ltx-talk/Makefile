@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2026/04/03 01:49:50 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/04/03 23:36:06 markd Exp $
 
 DISTNAME=	ltx-talk
-PKGNAME=	tex-${DISTNAME}-0.4.8
-TEXLIVE_REV=	78559
+PKGNAME=	tex-${DISTNAME}-0.4.9
+TEXLIVE_REV=	78575
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/ltx-talk
