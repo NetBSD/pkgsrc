@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/03 01:05:39 markd Exp $
+
+BLAKE2s (lua-unicode-math.doc.r78498.tar.xz) = 432288ebdd704a4321de7decdd549dcff282f629d92031af5619ed4202b52a52
+SHA512 (lua-unicode-math.doc.r78498.tar.xz) = ce73e69afbea8a2ebbcce95a974066cb3c042ab63876fff94b462ce1a0de991eff84ba2ded9d572cac8e34631ab207832d6c0da136ea86e723824108b83027cf
+Size (lua-unicode-math.doc.r78498.tar.xz) = 96004 bytes
