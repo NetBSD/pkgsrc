@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.35 2026/03/26 19:59:25 markd Exp $
+# $NetBSD: Makefile,v 1.36 2026/04/03 03:01:12 markd Exp $
 
 DISTNAME=	collection-mathscience
-PKGNAME=	texlive-${DISTNAME}-2025pre3
+PKGNAME=	texlive-${DISTNAME}-2026pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	78328
+TEXLIVE_REV=	78537
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -65,6 +65,7 @@ DEPENDS+=	tex-chemgreek-[0-9]*:../../print/tex-chemgreek
 # depend chemmacros
 # depend chemnum
 # depend chemobabel
+# depend chempid
 # depend chemplants
 # depend chemschemex
 # depend chemsec
@@ -238,6 +239,7 @@ DEPENDS+=	tex-physics-[0-9]*:../../math/tex-physics
 # depend quantikz
 # depend quantum-chemistry-bonn
 # depend quantumcubemodel
+# depend quickderivs
 # depend quickreaction
 # depend quiver
 # depend qworld
