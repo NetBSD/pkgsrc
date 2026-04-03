@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2026/01/25 09:53:51 markd Exp $
+# $NetBSD: Makefile,v 1.23 2026/04/03 02:53:10 markd Exp $
 
 DISTNAME=	collection-latex
-PKGNAME=	texlive-${DISTNAME}-2025.77034
+PKGNAME=	texlive-${DISTNAME}-2026
 CATEGORIES=	meta-pkgs
-TEXLIVE_REV=	77034
+TEXLIVE_REV=	78568
 MASTER_SITES=	# empty
 
 MAINTAINER=	minskim@NetBSD.org
@@ -63,6 +63,7 @@ DEPENDS+=	tex-natbib>=8.31b:../../print/tex-natbib
 DEPENDS+=	tex-oberdiek>=2009nb2:../../print/tex-oberdiek
 DEPENDS+=	tex-pagesel-[0-9]*:../../print/tex-pagesel
 DEPENDS+=	tex-pdfescape-[0-9]*:../../print/tex-pdfescape
+DEPENDS+=	tex-pdfmanagement-testphase-[0-9]*:../../print/tex-pdfmanagement-testphase
 DEPENDS+=	tex-pdftexcmds-[0-9]*:../../print/tex-pdftexcmds
 DEPENDS+=	tex-pslatex-[0-9]*:../../print/tex-pslatex
 DEPENDS+=	tex-psnfss>=9.2anb1:../../fonts/tex-psnfss
@@ -70,6 +71,7 @@ DEPENDS+=	tex-pspicture>=2009:../../print/tex-pspicture
 DEPENDS+=	tex-refcount-[0-9]*:../../print/tex-refcount
 DEPENDS+=	tex-rerunfilecheck-[0-9]*:../../print/tex-rerunfilecheck
 DEPENDS+=	tex-stringenc-[0-9]*:../../print/tex-stringenc
+DEPENDS+=	tex-tagpdf-[0-9]*:../../print/tex-tagpdf
 DEPENDS+=	tex-tools>=2009:../../print/tex-tools
 DEPENDS+=	tex-uniquecounter-[0-9]*:../../print/tex-uniquecounter
 DEPENDS+=	tex-url>=3.4:../../print/tex-url
