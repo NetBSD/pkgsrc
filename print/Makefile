@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.960 2026/04/02 06:30:19 wiz Exp $
+# $NetBSD: Makefile,v 1.961 2026/04/03 00:48:01 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1080,6 +1080,7 @@ SUBDIR+=	tex-letterspacing
 SUBDIR+=	tex-lettrine
 SUBDIR+=	tex-lettrine-doc
 SUBDIR+=	tex-lineno
+SUBDIR+=	tex-lineno-doc
 SUBDIR+=	tex-lipsum
 SUBDIR+=	tex-lipsum-doc
 SUBDIR+=	tex-listing

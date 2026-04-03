@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/03 00:48:01 markd Exp $
+share/texmf-dist/doc/latex/lineno/CHANGEs.txt
+share/texmf-dist/doc/latex/lineno/COPYING.txt
+share/texmf-dist/doc/latex/lineno/README.md
+share/texmf-dist/doc/latex/lineno/SRCFILEs.txt
+share/texmf-dist/doc/latex/lineno/fnlineno.pdf
+share/texmf-dist/doc/latex/lineno/fnlineno.tex
+share/texmf-dist/doc/latex/lineno/lineno.pdf
+share/texmf-dist/doc/latex/lineno/lineno.tex
+share/texmf-dist/doc/latex/lineno/lnosuppl.pdf
+share/texmf-dist/doc/latex/lineno/lnosuppl.tex
+share/texmf-dist/doc/latex/lineno/ulineno.pdf
+share/texmf-dist/doc/latex/lineno/ulineno.tex
