@@ -1,0 +1,6 @@
+This package provides macros and an environment to generate
+timing diagrams (digital waveforms) without much effort. The
+TikZ package is used to produce the graphics. The diagrams may
+be inserted into text (paragraphs, \hbox, etc.) and into
+tikzpictures. A tabular-like environment is provided to produce
+larger timing diagrams.

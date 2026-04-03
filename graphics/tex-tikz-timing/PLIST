@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/03 01:59:23 markd Exp $
+share/texmf-dist/tex/latex/tikz-timing/tikz-timing-advnodes.sty
+share/texmf-dist/tex/latex/tikz-timing/tikz-timing-arrows.sty
+share/texmf-dist/tex/latex/tikz-timing/tikz-timing-beamer.sty
+share/texmf-dist/tex/latex/tikz-timing/tikz-timing-clockarrows.sty
+share/texmf-dist/tex/latex/tikz-timing/tikz-timing-columntype.sty
+share/texmf-dist/tex/latex/tikz-timing/tikz-timing-counters.sty
+share/texmf-dist/tex/latex/tikz-timing/tikz-timing-either.sty
+share/texmf-dist/tex/latex/tikz-timing/tikz-timing-ifsym.sty
+share/texmf-dist/tex/latex/tikz-timing/tikz-timing-interval.sty
+share/texmf-dist/tex/latex/tikz-timing/tikz-timing-nicetabs.sty
+share/texmf-dist/tex/latex/tikz-timing/tikz-timing-overlays.sty
+share/texmf-dist/tex/latex/tikz-timing/tikz-timing.sty
