@@ -6,5 +6,4 @@ can be used on top of LaTeX2e with no changes to the existing
 kernel. The present release includes: l3draw, a code-level
 interface for constructing drawings; xcoffins, which allows the
 alignment of boxes using a series of 'handle' positions,
-supplementing the simple TeX reference point; xgalley, which
-controls boxes receiving text for typesetting.
+supplementing the simple TeX reference point;
