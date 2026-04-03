@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2025/04/10 19:29:18 pin Exp $
+# $NetBSD: Makefile,v 1.9 2026/04/03 15:37:48 wiz Exp $
 
 # VERSION must match the output of:
 # git -c "core.abbrev=8" show -s "--format=%cd-%h" "--date=format:%Y%m%d-%H%M%S"
-DISTNAME=	wezterm-20250307.120843
+DISTNAME=	wezterm-20260117.154428
 VERSION=	${PKGVERSION_NOREV:S/./-/}-${GITHUB_TAG:C/(........).*/\1/}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wezterm/}
-GITHUB_TAG=	622e404be29f861589067d109bd16b643acee2c8
+GITHUB_TAG=	05343b387085842b434d267f91b6b0ec157e4331
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	https://wezterm.org/
@@ -21,19 +21,17 @@ DEPENDS+=	nerd-fonts-Symbols-[0-9]*:../../fonts/nerd-fonts-Symbols
 DEPENDS+=	roboto-fonts-[0-9]*:../../fonts/roboto-fonts
 DEPENDS+=	noto-emoji-ttf-[0-9]*:../../fonts/noto-emoji-ttf
 
-# wezterm just takes HEAD, but that will lead to distfile problems; hardcode the heads as of 20250216
-GITHUB_SUBMODULES+=	harfbuzz harfbuzz b97ef6c702910f4317cc364c7d67c380047b237f deps/harfbuzz/harfbuzz
-GITHUB_SUBMODULES+=	glennrp libpng b525503b78392335a43558c6a053e0209140762d deps/freetype/libpng
-GITHUB_SUBMODULES+=	madler zlib 7108497fda9d4536a1afade7f42266e06dca4488 deps/freetype/zlib
-GITHUB_SUBMODULES+=	freetype freetype b1f47850878d232eea372ab167e760ccac4c4e32 deps/freetype/freetype2
-# xcb-imdkit-rs _also_ needs a submodule
+# xcb-imdkit-rs needs a submodule
 GITHUB_SUBMODULES+=	fcitx xcb-imdkit 44f5c8219bcae9e6afc2391dc50486efcf0bdf06 ../xcb-imdkit-rs-${XCB_IMDKIT_RS_REV}/deps/xcb-imdkit
 
 # Depends on an unpublished crate. Can't use cargo.mk to fetch it.
-XCB_IMDKIT_RS_REV=	358e226573461fe540efb920e2aad740e3c6fab1
+FINL_UNICODE_REV=	a1892f26245529f2ef3877a9ebd610c96cec07a6
+XCB_IMDKIT_RS_REV=	212330f7c6c37794d78061a773e8f4f9e4785bbb
 DISTFILES=		${DEFAULT_DISTFILES}
+DISTFILES+=		finl_unicode-${FINL_UNICODE_REV}.tar.gz
 DISTFILES+=		xcb-imdkit-rs-${XCB_IMDKIT_RS_REV}.tar.gz
 
+SITES.finl_unicode-${FINL_UNICODE_REV}.tar.gz+=		-${MASTER_SITE_GITHUB:=wez/}finl_unicode/archive/${FINL_UNICODE_REV}.tar.gz
 SITES.xcb-imdkit-rs-${XCB_IMDKIT_RS_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=wez/}xcb-imdkit-rs/archive/${XCB_IMDKIT_RS_REV}.tar.gz
 
 CHECK_PORTABILITY_SKIP=	get-deps
@@ -97,11 +95,15 @@ do-install:
 
 .include "../../lang/rust/cargo.mk"
 .include "../../devel/wayland/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../fonts/harfbuzz/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
 .include "../../x11/xcb-util-image/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
