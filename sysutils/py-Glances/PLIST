@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2026/03/08 11:22:25 fox Exp $
+@comment $NetBSD: PLIST,v 1.20 2026/04/04 21:31:09 wiz Exp $
 bin/glances-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -223,7 +223,6 @@ ${PYSITELIB}/glances/password_list.pyo
 ${PYSITELIB}/glances/plugins/__init__.py
 ${PYSITELIB}/glances/plugins/__init__.pyc
 ${PYSITELIB}/glances/plugins/__init__.pyo
-${PYSITELIB}/glances/plugins/__pycache__/__init__.py
 ${PYSITELIB}/glances/plugins/alert/__init__.py
 ${PYSITELIB}/glances/plugins/alert/__init__.pyc
 ${PYSITELIB}/glances/plugins/alert/__init__.pyo
