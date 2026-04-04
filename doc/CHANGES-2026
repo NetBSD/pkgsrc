@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2086 2026/04/04 00:14:43 markd Exp $
+$NetBSD: CHANGES-2026,v 1.2087 2026/04/04 05:21:01 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3316,3 +3316,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/tex-ltx-talk-doc to 0.4.9 [markd 2026-04-03]
 	Updated print/tex-pdfjam to 4.3 [markd 2026-04-03]
 	Updated print/tex-pdfjam-doc to 4.3 [markd 2026-04-03]
+	Updated print/tex-texlive.infra to 2026 [markd 2026-04-04]
+	Updated print/tex-texlive-scripts to 2026 [markd 2026-04-04]
+	Updated print/tex-texlive-scripts-doc to 2026 [markd 2026-04-04]
+	Updated print/tex-texlive-scripts-extra to 2026 [markd 2026-04-04]
+	Updated print/tex-texlive-scripts-extra-doc to 2026 [markd 2026-04-04]
