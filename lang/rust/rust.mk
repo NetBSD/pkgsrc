@@ -1,4 +1,4 @@
-# $NetBSD: rust.mk,v 1.19 2026/04/02 19:06:34 wiz Exp $
+# $NetBSD: rust.mk,v 1.20 2026/04/04 18:48:49 tnn Exp $
 #
 # This file determines the type of rust package to use.
 #
@@ -61,4 +61,8 @@ BUILDLINK_DEPMETHOD.rust?=		build
 .  endif
 BUILDLINK_API_DEPENDS.rust+=		rust>=${RUST_REQ}
 .  include "${RUST_DIR}/buildlink3.mk"
+.endif
+
+.if ${OPSYS} == "NetBSD"
+ALL_ENV+=	PTHREAD_KEYS_MAX=512
 .endif
