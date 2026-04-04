@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.4 2025/05/11 11:13:26 markd Exp $
+$NetBSD: distinfo,v 1.5 2026/04/04 05:12:56 markd Exp $
 
-BLAKE2s (texlive-scripts-extra.r71746.tar.xz) = 8771421c18e48da4177fb7f9e557cdbde308874491519b638acf2821a628e4a4
-SHA512 (texlive-scripts-extra.r71746.tar.xz) = d012f6368700cada41eb39da92ecc57fb67b14ed6f962b7858b52700ba6c31f0b88430c39515f0c560af2024038328dfe4df742ee7adc01a9942ea775986a60f
-Size (texlive-scripts-extra.r71746.tar.xz) = 22016 bytes
+BLAKE2s (texlive-scripts-extra.r78162.tar.xz) = 8859b7d1a423827f740d5e30e18dd2f160c8a8e05f5cd5cc1dc0401f997e993e
+SHA512 (texlive-scripts-extra.r78162.tar.xz) = 1c78c711e8eb7de3302f930e81a2af7b40d75f8aa10a1f543d63a112ebaec39f749d6d2f03d2bb17eab2a7bb4b73335d59f68cd8141e79126fc8802afbaaabd0
+Size (texlive-scripts-extra.r78162.tar.xz) = 22124 bytes
 SHA1 (patch-bin_e2pall) = e8d08dc3082a1cdda05fea5bdfe4996b68d3401b
 SHA1 (patch-bin_kpsetool) = 6eb57faed69cd64cbd0bb744bcb0701bba00b6f7
 SHA1 (patch-bin_kpsewhere) = ff0459b542ddd31c7b970ad8fcd65023c66701eb
-SHA1 (patch-bin_texconfig) = 4c75f6ff5a58da43bc9699bc0d2252c05b8c2b9a
+SHA1 (patch-bin_texconfig) = 0d49cf4e4484491da2dc89ecd38f9357a30e04c1
 SHA1 (patch-bin_texconfig-dialog) = add288966c170b10cd51b92d4339c178dd0dc5c6
 SHA1 (patch-bin_texconfig-sys) = 7bf4fbf29e5e7584e559494a5a018af4baef0a21
 SHA1 (patch-bin_texlinks) = 9507f62bcc6f5aec12dad126b1464c5427a63a5a
