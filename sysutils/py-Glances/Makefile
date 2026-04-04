@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2026/03/30 10:33:25 fox Exp $
+# $NetBSD: Makefile,v 1.47 2026/04/04 21:31:09 wiz Exp $
 
 DISTNAME=	glances-4.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/g/G/}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/glances/}
 
@@ -41,9 +42,8 @@ post-extract:
 	${RM} -fR ${WRKSRC}/glances/outputs/static
 
 post-install:
-	# remove pycache below pycache
-	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/glances/plugins/__pycache__/__pycache__/*
-	${RMDIR} ${DESTDIR}${PREFIX}/${PYSITELIB}/glances/plugins/__pycache__/__pycache__/
+	# remove file in pycache
+	${RM} -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/glances/plugins/__pycache__/__init__.py
 	cd ${DESTDIR}${PREFIX} && \
 	${MV} bin/glances bin/glances-${PYVERSSUFFIX} && \
 	${MV} ${PKGMANDIR}/man1/glances.1 ${PKGMANDIR}/man1/glances-${PYVERSSUFFIX}.1 && \
