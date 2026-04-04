@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2089 2026/04/04 21:49:07 kim Exp $
+$NetBSD: CHANGES-2026,v 1.2090 2026/04/04 23:58:30 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3323,3 +3323,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/tex-texlive-scripts-extra-doc to 2026 [markd 2026-04-04]
 	Updated sysutils/py-Glances to 4.5.2nb1 [wiz 2026-04-04]
 	Updated security/ca-certificates to 20260223 [kim 2026-04-04]
+	Updated print/tex-pdfjam to 4.3.1 [markd 2026-04-04]
+	Updated print/tex-pdfjam-doc to 4.3.1 [markd 2026-04-04]
