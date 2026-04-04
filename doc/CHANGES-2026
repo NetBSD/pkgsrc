@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2085 2026/04/03 17:34:26 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2086 2026/04/04 00:14:43 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3309,3 +3309,10 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/wezterm to 20260117.154428 [wiz 2026-04-03]
 	Updated devel/py-mercurial to 7.2.1 [wiz 2026-04-03]
 	Updated devel/py-hg-evolve to 12.0.0 [wiz 2026-04-03]
+	Updated print/tex-babel-german to 3.2 [markd 2026-04-03]
+	Updated print/tex-hologo to 1.17 [markd 2026-04-03]
+	Updated print/tex-hologo-doc to 1.17 [markd 2026-04-03]
+	Updated print/tex-ltx-talk to 0.4.9 [markd 2026-04-03]
+	Updated print/tex-ltx-talk-doc to 0.4.9 [markd 2026-04-03]
+	Updated print/tex-pdfjam to 4.3 [markd 2026-04-03]
+	Updated print/tex-pdfjam-doc to 4.3 [markd 2026-04-03]
