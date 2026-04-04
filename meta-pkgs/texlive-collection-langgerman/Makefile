@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2025/05/13 12:01:48 markd Exp $
+# $NetBSD: Makefile,v 1.21 2026/04/04 05:37:08 markd Exp $
 
 DISTNAME=	collection-langgerman
-PKGNAME=	texlive-${DISTNAME}-2025
+PKGNAME=	texlive-${DISTNAME}-2026
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	74675
