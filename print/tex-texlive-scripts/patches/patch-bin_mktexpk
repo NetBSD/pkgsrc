@@ -1,10 +1,10 @@
-$NetBSD: patch-bin_mktexpk,v 1.1 2020/05/10 03:56:44 markd Exp $
+$NetBSD: patch-bin_mktexpk,v 1.2 2026/04/04 05:10:10 markd Exp $
 
 use full path for commands
 
---- bin/mktexpk.orig	2009-06-03 06:07:21.000000000 -0700
+--- bin/mktexpk.orig	2025-10-16 14:46:21.000000000 +0000
 +++ bin/mktexpk
-@@ -60,8 +60,8 @@ fi
+@@ -78,8 +78,8 @@ fi
  mt_max_args=2
  
  # Common code for all scripts.
@@ -15,7 +15,7 @@ use full path for commands
  test -n "$MT_MKTEX_OPT" || MT_MKTEX_OPT="$MT_TEXMFMAIN/web2c/mktex.opt"
  if test ! -f "$MT_MKTEX_OPT"; then
    echo "$progname: Cannot find mktex.opt; check your installation." >&2
-@@ -87,7 +87,7 @@ esac
+@@ -105,7 +105,7 @@ esac
  
  NAME=$1
  
@@ -24,16 +24,16 @@ use full path for commands
    # determine the progname of metafont to use; prefer mf-nowin.
    if (mf-nowin --version) >/dev/null 2>&1; then
      MF="mf-nowin -progname=mf"
-@@ -145,7 +145,7 @@ else
+@@ -163,7 +163,7 @@ else
      ps2pk)
        # grep for the font in $PSMAPFILE.  These are base font names, such as
        # rpplr (the original) or pplr0 (an interim step) or pplr8r (current).
 -      : ${PSMAPFILE=`kpsewhich --format=map psfonts.map ps2pk.map`}
 +      : ${PSMAPFILE=`@KPSEWHICH@ --format=map psfonts.map ps2pk.map`}
-       pattern="^$NAME"'([ 	]|$)' 
-       psline=`egrep "$pattern" $PSMAPFILE | tail -1`
+       pattern="^$NAME"'\([ 	]|$\)' 
+       psline=`grep "$pattern" $PSMAPFILE | tail -1`
        if test -n "$psline"; then
-@@ -165,7 +165,7 @@ else
+@@ -183,7 +183,7 @@ else
          # Guessing the name of the type1 font file as fallback:
          ANAME=`echo $NAME | sed 's/8r$/8a/'`
          for i in $NAME.pfa $NAME.pfb $ANAME.pfa $ANAME.pfb; do
