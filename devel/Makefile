@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4607 2026/04/03 01:00:23 markd Exp $
+# $NetBSD: Makefile,v 1.4608 2026/04/04 19:10:40 tnn Exp $
 #
 
 COMMENT=	Development utilities
@@ -3707,6 +3707,8 @@ SUBDIR+=	tex-elocalloc
 SUBDIR+=	tex-elocalloc-doc
 SUBDIR+=	tex-etoolbox
 SUBDIR+=	tex-etoolbox-doc
+SUBDIR+=	tex-functional
+SUBDIR+=	tex-functional-doc
 SUBDIR+=	tex-inlinedef
 SUBDIR+=	tex-inlinedef-doc
 SUBDIR+=	tex-l3backend
