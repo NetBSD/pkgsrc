@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.36 2025/06/30 18:56:48 adam Exp $
+$NetBSD: distinfo,v 1.37 2026/04/05 07:30:32 wiz Exp $
 
-BLAKE2s (pygments-2.19.2.tar.gz) = 1abfc4e23687e4142c1ef36b566c4e5ac159969c0764b92fe66fd3133097a9ff
-SHA512 (pygments-2.19.2.tar.gz) = 3ead3a1fa4c7d86b415287949099cb0e5667ea71f7f69aa3de359bbb5c2f234d90fa5a41ec9c74cb041593e465b934d54bbb7dc87669683f04b94dd3aa6ca03c
-Size (pygments-2.19.2.tar.gz) = 4968631 bytes
+BLAKE2s (pygments-2.20.0.tar.gz) = 2f22b7feec323783a25147cc2a8e704f013c521c3d7f476d7f50f8e893c32649
+SHA512 (pygments-2.20.0.tar.gz) = 7d073ead03b1722f862a72a962346f2d76bafb472f58fd5038061ca09675483f3b427bec700fe4ef49da9cace9e65b0d5414cda5ee20ebc056759e0c422f4547
+Size (pygments-2.20.0.tar.gz) = 4955991 bytes
