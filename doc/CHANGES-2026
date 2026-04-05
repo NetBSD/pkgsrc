@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2125 2026/04/05 12:13:35 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2126 2026/04/05 12:14:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3360,3 +3360,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/jnv to 0.7.1 [wiz 2026-04-05]
 	Updated textproc/jsongrep to 0.8.1 [wiz 2026-04-05]
 	Updated devel/ast-grep to 0.42.1 [wiz 2026-04-05]
+	Updated devel/alex to 3.5.4.2 [wiz 2026-04-05]
