@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2026/04/04 21:31:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2026/04/05 08:06:36 fox Exp $
 bin/glances-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -73,6 +73,9 @@ ${PYSITELIB}/glances/exports/export_asyncio.pyo
 ${PYSITELIB}/glances/exports/glances_cassandra/__init__.py
 ${PYSITELIB}/glances/exports/glances_cassandra/__init__.pyc
 ${PYSITELIB}/glances/exports/glances_cassandra/__init__.pyo
+${PYSITELIB}/glances/exports/glances_clickhouse/__init__.py
+${PYSITELIB}/glances/exports/glances_clickhouse/__init__.pyc
+${PYSITELIB}/glances/exports/glances_clickhouse/__init__.pyo
 ${PYSITELIB}/glances/exports/glances_couchdb/__init__.py
 ${PYSITELIB}/glances/exports/glances_couchdb/__init__.pyc
 ${PYSITELIB}/glances/exports/glances_couchdb/__init__.pyo
@@ -223,6 +226,7 @@ ${PYSITELIB}/glances/password_list.pyo
 ${PYSITELIB}/glances/plugins/__init__.py
 ${PYSITELIB}/glances/plugins/__init__.pyc
 ${PYSITELIB}/glances/plugins/__init__.pyo
+${PYSITELIB}/glances/plugins/__pycache__/__init__.py
 ${PYSITELIB}/glances/plugins/alert/__init__.py
 ${PYSITELIB}/glances/plugins/alert/__init__.pyc
 ${PYSITELIB}/glances/plugins/alert/__init__.pyo
@@ -244,6 +248,9 @@ ${PYSITELIB}/glances/plugins/containers/engines/__init__.pyo
 ${PYSITELIB}/glances/plugins/containers/engines/docker.py
 ${PYSITELIB}/glances/plugins/containers/engines/docker.pyc
 ${PYSITELIB}/glances/plugins/containers/engines/docker.pyo
+${PYSITELIB}/glances/plugins/containers/engines/lxd.py
+${PYSITELIB}/glances/plugins/containers/engines/lxd.pyc
+${PYSITELIB}/glances/plugins/containers/engines/lxd.pyo
 ${PYSITELIB}/glances/plugins/containers/engines/podman.py
 ${PYSITELIB}/glances/plugins/containers/engines/podman.pyc
 ${PYSITELIB}/glances/plugins/containers/engines/podman.pyo
