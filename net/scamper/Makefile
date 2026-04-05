@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2026/01/07 08:48:27 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/04/05 20:55:32 maya Exp $
 #
 
-DISTNAME=	scamper-cvs-20251113
+DISTNAME=	scamper-cvs-20260331
 PKGNAME=	${DISTNAME:S/-cvs//}
 PKGREVISION=	1
 CATEGORIES=	net
