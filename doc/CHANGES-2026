@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2127 2026/04/05 17:17:43 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2128 2026/04/05 21:01:13 maya Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3362,3 +3362,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ast-grep to 0.42.1 [wiz 2026-04-05]
 	Updated devel/alex to 3.5.4.2 [wiz 2026-04-05]
 	Updated games/einstein-puzzle to 2.5 [wiz 2026-04-05]
+	Updated net/scamper to 20260331nb1 [maya 2026-04-05]
