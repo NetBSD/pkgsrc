@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2090 2026/04/04 23:58:30 markd Exp $
+$NetBSD: CHANGES-2026,v 1.2091 2026/04/05 01:46:49 iquiw Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3325,3 +3325,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ca-certificates to 20260223 [kim 2026-04-04]
 	Updated print/tex-pdfjam to 4.3.1 [markd 2026-04-04]
 	Updated print/tex-pdfjam-doc to 4.3.1 [markd 2026-04-04]
+	Updated devel/task to 3.49.1 [iquiw 2026-04-05]
