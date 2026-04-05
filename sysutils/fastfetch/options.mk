@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2026/04/05 21:08:04 maya Exp $
+# $NetBSD: options.mk,v 1.17 2026/04/05 21:13:52 maya Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fastfetch
 PKG_OPTIONS_OPTIONAL_GROUPS=	server sound
@@ -9,10 +9,6 @@ PKG_SUPPORTED_OPTIONS=	chafa dconf dbus glib2 imagemagick libelf opencl \
 			python sqlite3 threads xfce4-wm
 PKG_SUGGESTED_OPTIONS=	glib2 x11
 
-.if ${OPSYS} != "Darwin"
-PKG_SUPPORTED_OPTIONS+=	libdrm
-PKG_SUGGESTED_OPTIONS+=	libdrm
-.endif
 
 CHECK_BUILTIN.pthread:= yes
 .include "../../mk/pthread.builtin.mk"
@@ -26,6 +22,11 @@ PKG_SUGGESTED_OPTIONS+=	threads
 .if ${MESALIB_SUPPORTS_EGL:tl} == "yes"
 PKG_SUPPORTED_OPTIONS+= opengl
 PKG_SUGGESTED_OPTIONS+= opengl
+.endif
+
+.if ${MESALIB_SUPPORTS_DRI:tl} == "yes"
+PKG_SUPPORTED_OPTIONS+=	libdrm
+PKG_SUGGESTED_OPTIONS+=	libdrm
 .endif
 
 PKG_SUGGESTED_OPTIONS.Linux+=		dbus pulseaudio sqlite3
