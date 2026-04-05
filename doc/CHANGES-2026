@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2123 2026/04/05 12:08:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2124 2026/04/05 12:10:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3358,3 +3358,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-werkzeug-docs to 3.1.8 [wiz 2026-04-05]
 	Updated sysutils/fzf to 0.71.0 [wiz 2026-04-05]
 	Updated textproc/jnv to 0.7.1 [wiz 2026-04-05]
+	Updated textproc/jsongrep to 0.8.1 [wiz 2026-04-05]
