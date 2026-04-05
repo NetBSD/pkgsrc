@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/01/04 09:34:44 wiz Exp $
+$NetBSD: distinfo,v 1.7 2026/04/05 17:17:33 wiz Exp $
 
-BLAKE2s (einstein-puzzle-2.2.tar.gz) = d8d714423fa74f2148700f54a92a52eef385426e139e151cd39041b7f3d78c28
-SHA512 (einstein-puzzle-2.2.tar.gz) = 0a049192794f23521c29802e8c877a7d04300b3bbebfbb3d0d11f87459992e0568e664627e4f4330d56e454496bb196a593887ab383363b9c8d5e2d2f4f5976e
-Size (einstein-puzzle-2.2.tar.gz) = 647477 bytes
-SHA1 (patch-Makefile) = f1cda1051cc0e0284f1410a38ebf95957b207f55
+BLAKE2s (einstein-puzzle-2.5.tar.gz) = 79c8f971fe6a10dec6715fac76884605dc06ddce22179cb45603fdb2b60e9c00
+SHA512 (einstein-puzzle-2.5.tar.gz) = dd21cf23fac611018947512278651fc7f5dd7b12b6bfe04e3851bb5df7b5a2c49473c6a43d53249ad084f5e51290956b4d716e9c2eb14e4c57ca18b12ee1beae
+Size (einstein-puzzle-2.5.tar.gz) = 645139 bytes

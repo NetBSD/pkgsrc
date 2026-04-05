@@ -1,32 +1,20 @@
-# $NetBSD: Makefile,v 1.7 2025/01/06 21:49:11 ktnb Exp $
+# $NetBSD: Makefile,v 1.8 2026/04/05 17:17:33 wiz Exp $
 
-DISTNAME=	einstein-puzzle-2.2
-PKGREVISION=	3
+DISTNAME=	einstein-puzzle-2.5
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_GITHUB:=jordan-evens/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=0-wiz-0/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/jordan-evens/einstein-puzzle/
+HOMEPAGE=	https://github.com/0-wiz-0/einstein-puzzle/
 COMMENT=	Computer implementation of a puzzle invented by Albert Einstein
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c++11
-USE_TOOLS+=	gmake
+USE_LANGUAGES=		c++
+USE_CXX_FEATURES+=	c++11
 
-MAKE_FLAGS+=		PREFIX=${PREFIX}
-
-INSTALLATION_DIRS+=	libexec
-
-post-build:
-	${ECHO} '#!/bin/sh' > ${WRKDIR}/einstein.sh
-	${ECHO} "cd ${PREFIX}/share/einstein/res && ${PREFIX}/libexec/einstein" >> ${WRKDIR}/einstein.sh
-
-post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/einstein ${DESTDIR}${PREFIX}/libexec
-	${INSTALL_SCRIPT} ${WRKDIR}/einstein.sh ${DESTDIR}${PREFIX}/bin/einstein
-
-.include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../devel/SDL_ttf/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
+.include "../../audio/SDL2_mixer/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
+.include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
