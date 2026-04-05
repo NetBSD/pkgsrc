@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.5 2026/04/01 21:21:20 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.6 2026/04/05 16:15:20 maya Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -63,3 +63,12 @@ mail/roundcube: Security fix
 
 Pullup ticket #7067 - requested by wiz
 graphics/xplot: Build fix
+
+Pullup ticket #7068 - requested by taca
+www/ruby-rack: Security fix
+
+Pullup ticket #7069 - requested by ktnb
+x11/kitty: Build fix
+
+Pullup ticket #7070 - requested by taca
+net/bind918: Security fix
