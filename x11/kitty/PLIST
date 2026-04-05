@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2026/03/21 01:50:53 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.36.2.1 2026/04/05 16:12:32 maya Exp $
 bin/kitten
 bin/kitty
 lib/kitty/__main__.py
@@ -292,7 +292,7 @@ lib/kitty/kitty/fonts/render.py
 lib/kitty/kitty/fonts/render.pyc
 lib/kitty/kitty/fonts/render.pyo
 ${PLIST.wayland}lib/kitty/kitty/glfw-wayland.so
-lib/kitty/kitty/glfw-x11.so
+${PLIST.x11}lib/kitty/kitty/glfw-x11.so
 lib/kitty/kitty/graphics_fragment.glsl
 lib/kitty/kitty/graphics_vertex.glsl
 lib/kitty/kitty/guess_mime_type.py
@@ -588,7 +588,7 @@ lib/kitty/shell-integration/zsh/kitty-integration
 lib/kitty/shell-integration/zsh/kitty.zsh
 lib/kitty/terminfo/kitty.termcap
 lib/kitty/terminfo/kitty.terminfo
-lib/kitty/terminfo/x/xterm-kitty
+${PLIST.x11}lib/kitty/terminfo/x/xterm-kitty
 man/man1/kitten-@-action.1
 man/man1/kitten-@-close-tab.1
 man/man1/kitten-@-close-window.1
@@ -657,8 +657,8 @@ man/man1/kitten-update-self.1
 man/man1/kitten.1
 man/man1/kitty.1
 man/man5/kitty.conf.5
-share/applications/kitty-open.desktop
-share/applications/kitty.desktop
+${PLIST.x11}share/applications/kitty-open.desktop
+${PLIST.x11}share/applications/kitty.desktop
 share/doc/kitty/html/.buildinfo
 share/doc/kitty/html/.nojekyll
 share/doc/kitty/html/_downloads/055e3591463099e42785a872ce39996a/quick_access_terminal.conf
@@ -926,6 +926,6 @@ share/doc/kitty/html/unscroll.html
 share/doc/kitty/html/wide-gamut-colors.html
 share/icons/hicolor/256x256/apps/kitty.png
 share/icons/hicolor/scalable/apps/kitty.svg
-share/terminfo/x/xterm-kitty
+${PLIST.x11}share/terminfo/x/xterm-kitty
 @pkgdir share/man/man5
 @pkgdir share/man/man1

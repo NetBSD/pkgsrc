@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2026/03/21 01:50:53 ktnb Exp $
+# $NetBSD: Makefile,v 1.83.2.1 2026/04/05 16:12:32 maya Exp $
 
 DISTNAME=	kitty-0.46.1
 CATEGORIES=	x11
@@ -38,32 +38,77 @@ USE_NCURSES=	yes
 
 CHECK_INTERPRETER_SKIP=	lib/kitty/shell-integration/ssh/askpass.py
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PY_PATCHPLIST=			yes
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=		pre-configure
+SUBST_MESSAGE.prefix=	Point to pkgsrc fonts always
+SUBST_FILES.prefix+=	setup.py
+SUBST_VARS.prefix+=		PREFIX
+
+
+.include "../../mk/bsd.prefs.mk"
+
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
+
+.if ${OPSYS} == "Darwin"
+INSTALLATION_DIRS+=	${PREFIX}/share/doc/kitty/html
+INSTALLATION_DIRS+=	${PREFIX}/share/icons/hicolor/256x256/apps
+INSTALLATION_DIRS+=	${PREFIX}/share/icons/hicolor/scalable/apps
+.endif
+
+
+PLIST_VARS+=		x11
+
+# regardless if you build for wayland, kitty will still build the x11
+# stuff. kitty will never build x11 stuff on darwin.
+.if ${OPSYS} != "Darwin"
+PLIST.x11=	yes
+.endif
 
 pre-configure:
 	cd ${BUILDLINK_DIR}/bin && ${LN} -s ${PREFIX}/bin/go126 go
 
 do-build:
+.if ${OPSYS} == "Darwin"
+	cd ${WRKSRC} && ${MAKE_ENV} ${PYTHONBIN} setup.py kitty.app
+.else
 	cd ${WRKSRC} && ${MAKE_ENV} ${PYTHONBIN} setup.py linux-package
+.endif
 
 do-install:
 	cd ${WRKSRC} && ${MAKE_ENV} ${PYTHONBIN} setup.py linux-package \
 	    --prefix ${DESTDIR}${PREFIX}
+.if ${OPSYS} == "Darwin"
+	${MV} ${WRKSRC}/docs/_build/man/*.1 \
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ || ${TRUE}
+	${MV} ${WRKSRC}/docs/_build/man/*.5 \
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/ || ${TRUE}
+	${MV} ${WRKSRC}/docs/_build/html \
+	    ${DESTDIR}${PREFIX}/share/doc/kitty/ || ${TRUE}
+	${INSTALL_PROGRAM} \
+	    ${WRKSRC}/kitty.app/Contents/Resources/kitty/kitty/launcher/kitty \
+	    ${DESTDIR}${PREFIX}/lib/kitty/kitty/launcher/
+	${MV} ${WRKSRC}/logo/kitty.svg \
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/ || ${TRUE}
+	${MV} ${WRKSRC}/logo/kitty.png \
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/256x256/apps/ || ${TRUE}
+# we don't want to override existing fonts
+	${RM} -rf ${DESTDIR}${PREFIX}/share/fonts
+.else
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/* \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/share/man/man5/* \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/ || ${TRUE}
+.endif
 # pkgsrc framwork only handles optimization level 1 files correctly
 	${FIND} ${DESTDIR} -type f -name *.opt-2.pyc -print0 | ${XARGS} -0 ${RM} -rf
 	${FIND} ${DESTDIR} -name '*.orig' -exec rm -rf '{}' ';'
 
 
 .include "go-modules.mk"
-
-.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
 .include "../../graphics/freetype2/buildlink3.mk"
