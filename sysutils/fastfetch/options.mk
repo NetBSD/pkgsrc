@@ -1,13 +1,18 @@
-# $NetBSD: options.mk,v 1.15 2025/07/14 17:11:06 vins Exp $
+# $NetBSD: options.mk,v 1.16 2026/04/05 21:08:04 maya Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fastfetch
 PKG_OPTIONS_OPTIONAL_GROUPS=	server sound
 PKG_OPTIONS_GROUP.server=	wayland x11
 PKG_OPTIONS_GROUP.sound=	oss pulseaudio
 
-PKG_SUPPORTED_OPTIONS=	chafa dconf dbus glib2 imagemagick libdrm libelf opencl \
+PKG_SUPPORTED_OPTIONS=	chafa dconf dbus glib2 imagemagick libelf opencl \
 			python sqlite3 threads xfce4-wm
-PKG_SUGGESTED_OPTIONS=	glib2 libdrm x11
+PKG_SUGGESTED_OPTIONS=	glib2 x11
+
+.if ${OPSYS} != "Darwin"
+PKG_SUPPORTED_OPTIONS+=	libdrm
+PKG_SUGGESTED_OPTIONS+=	libdrm
+.endif
 
 CHECK_BUILTIN.pthread:= yes
 .include "../../mk/pthread.builtin.mk"
