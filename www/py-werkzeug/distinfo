@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.48 2026/03/27 09:02:54 adam Exp $
+$NetBSD: distinfo,v 1.49 2026/04/05 12:04:51 wiz Exp $
 
-BLAKE2s (werkzeug-3.1.7.tar.gz) = f423ddedce3c123b66743bd15762369f62454a674b9525beae3cd93e9c3544e2
-SHA512 (werkzeug-3.1.7.tar.gz) = 6764b63347e83ae918bdb4466356323f6c0d0357d35a8139363153a4acc156ad1dc8a823b7ef31c958ad2c01232507470b6e2a9cb8e3b1830fc4a588bd882655
-Size (werkzeug-3.1.7.tar.gz) = 875700 bytes
+BLAKE2s (werkzeug-3.1.8.tar.gz) = af521f37da8f5388ce73e832bf44028c55e707156b26fb6213838008602155c9
+SHA512 (werkzeug-3.1.8.tar.gz) = 78c1a4fe38b5e071defe7003af58bf50c38a5cc8132641c69e9ecaaa6ddba00856919082c239a1f1c8eeb2fe44e2a5d20a769baffc8ce3c110450461517eda87
+Size (werkzeug-3.1.8.tar.gz) = 875852 bytes
