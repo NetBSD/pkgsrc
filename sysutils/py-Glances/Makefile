@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2026/04/05 08:35:51 fox Exp $
+# $NetBSD: Makefile,v 1.51 2026/04/05 20:49:33 wiz Exp $
 
 DISTNAME=	glances-4.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/g/G/}
@@ -42,6 +42,7 @@ post-extract:
 
 post-install:
 	# remove file in pycache
+	# https://github.com/nicolargo/glances/issues/3516
 	${RM} -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/glances/plugins/__pycache__/__init__.py
 	${RM} -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/glances/plugins/__pycache__/__pycache__/__init__.cpython-313.opt-1.pyc
 	${RM} -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/glances/plugins/__pycache__/__pycache__/__init__.cpython-313.pyc
