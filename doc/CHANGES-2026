@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2119 2026/04/05 12:02:53 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2120 2026/04/05 12:05:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3354,3 +3354,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated comms/py-textual to 8.2.3 [wiz 2026-04-05]
 	Updated time/py-tzdata to 2026.1 [wiz 2026-04-05]
 	Updated devel/py-urwid to 4.0.0 [wiz 2026-04-05]
+	Updated www/py-werkzeug to 3.1.8 [wiz 2026-04-05]
