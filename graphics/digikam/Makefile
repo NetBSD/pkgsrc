@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.269 2026/03/09 17:51:13 wiz Exp $
+# $NetBSD: Makefile,v 1.270 2026/04/05 07:21:44 wiz Exp $
 
 DISTNAME=	digiKam-9.0.0
 PKGNAME=	${DISTNAME:tl}
@@ -23,6 +23,10 @@ CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_QT6=TRUE
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_KFILEMETADATASUPPORT=ON
 
 USE_TOOLS+=	flex bison msgmerge perl:run pkg-config
+
+# not a shell script, '==' is correct
+# see https://techbase.kde.org/Development/Tutorials/Solid/Device_Actions
+CHECK_PORTABILITY_SKIP+=	core/data/hotplug/digikam-opencamera.desktop.cmake.in
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
