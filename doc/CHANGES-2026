@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2109 2026/04/05 11:36:36 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2110 2026/04/05 11:37:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3344,3 +3344,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-click to 8.3.2 [wiz 2026-04-05]
 	Updated devel/py-dunamai to 1.26.1 [wiz 2026-04-05]
 	Updated devel/py-google-api-core to 2.30.2 [wiz 2026-04-05]
+	Updated security/py-google-auth-httplib2 to 0.3.1 [wiz 2026-04-05]
