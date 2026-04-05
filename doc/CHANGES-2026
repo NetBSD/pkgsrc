@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2121 2026/04/05 12:05:17 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2122 2026/04/05 12:06:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3356,3 +3356,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-urwid to 4.0.0 [wiz 2026-04-05]
 	Updated www/py-werkzeug to 3.1.8 [wiz 2026-04-05]
 	Updated www/py-werkzeug-docs to 3.1.8 [wiz 2026-04-05]
+	Updated sysutils/fzf to 0.71.0 [wiz 2026-04-05]
