@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2025/06/30 18:56:47 adam Exp $
+# $NetBSD: Makefile,v 1.55 2026/04/05 07:30:32 wiz Exp $
 
-DISTNAME=	pygments-2.19.2
+DISTNAME=	pygments-2.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygments/}
@@ -13,12 +13,13 @@ LICENSE=	2-clause-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 TEST_DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 TEST_DEPENDS+=	${PYPKGPREFIX}-wcag-contrast-ratio-[0-9]*:../../graphics/py-wcag-contrast-ratio
+#
+# py-test pulls in py-pygments, so make sure to 'make install'
+# before installing test dependencies
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} pygmentize pygmentize-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES+=	pygmentize
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
