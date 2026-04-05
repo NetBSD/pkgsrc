@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.180 2026/03/31 12:26:33 hauke Exp $
+# $NetBSD: Makefile,v 1.181 2026/04/05 10:15:48 wiz Exp $
 
 DISTNAME=		xscreensaver-6.15
 CATEGORIES=		x11
 MASTER_SITES=		https://www.jwz.org/xscreensaver/
+DIST_SUBDIR=		xcreensaver-6.15-rerelease
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Screen saver and locker for the X window system
