@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2098 2026/04/05 08:18:46 fox Exp $
+$NetBSD: CHANGES-2026,v 1.2099 2026/04/05 11:24:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3333,3 +3333,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-Glances to 4.5.3nb1 [fox 2026-04-05]
 	Updated www/miniflux to 2.2.19 [wiz 2026-04-05]
 	Updated audio/fasttracker2 to 2.13 [fox 2026-04-05]
+	Updated sysutils/hwdata to 0.406 [wiz 2026-04-05]

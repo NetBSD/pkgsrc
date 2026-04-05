@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27042 2026/04/05 10:08:25 wiz Exp $
+$NetBSD: TODO,v 1.27043 2026/04/05 11:24:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -768,7 +768,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o horde-5.2.9
 	o hplip-3.25.6
 	o html2wml-0.4.11
-	o hwdata-0.406
 	o hydrogen-1.2.6
 	o ibus-hangul-1.5.4
 	o icdprog-0.5
