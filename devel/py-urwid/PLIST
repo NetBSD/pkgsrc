@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2025/04/12 21:37:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2026/04/05 12:02:43 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -13,12 +13,6 @@ ${PYSITELIB}/urwid/canvas.pyo
 ${PYSITELIB}/urwid/command_map.py
 ${PYSITELIB}/urwid/command_map.pyc
 ${PYSITELIB}/urwid/command_map.pyo
-${PYSITELIB}/urwid/container.py
-${PYSITELIB}/urwid/container.pyc
-${PYSITELIB}/urwid/container.pyo
-${PYSITELIB}/urwid/decoration.py
-${PYSITELIB}/urwid/decoration.pyc
-${PYSITELIB}/urwid/decoration.pyo
 ${PYSITELIB}/urwid/display/__init__.py
 ${PYSITELIB}/urwid/display/__init__.pyc
 ${PYSITELIB}/urwid/display/__init__.pyo
@@ -204,6 +198,3 @@ ${PYSITELIB}/urwid/widget/widget_decoration.pyo
 ${PYSITELIB}/urwid/widget/wimp.py
 ${PYSITELIB}/urwid/widget/wimp.pyc
 ${PYSITELIB}/urwid/widget/wimp.pyo
-${PYSITELIB}/urwid/wimp.py
-${PYSITELIB}/urwid/wimp.pyc
-${PYSITELIB}/urwid/wimp.pyo
