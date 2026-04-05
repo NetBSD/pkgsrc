@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.38 2025/05/03 17:26:03 leot Exp $
+# $NetBSD: options.mk,v 1.38.8.1 2026/04/05 20:49:41 maya Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wireshark
 PKG_SUPPORTED_OPTIONS=		doc http2 http3 ilbc lua spandsp
@@ -19,6 +19,7 @@ PRINT_PLIST_AWK+=	/^man\// { $$0 = "$${PLIST.doc}" $$0 }
 PRINT_PLIST_AWK+=	/^share\/doc\/.*\.html$$/ { $$0 = "$${PLIST.doc}" $$0 }
 TOOL_DEPENDS+=          libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=          ${RUBY_PKGPREFIX}-asciidoctor>=1.5:../../textproc/ruby-asciidoctor
+CMAKE_CONFIGURE_ARGS+=	-DASCIIDOCTOR_EXECUTABLE=${PREFIX}/bin/asciidoctor${RUBY_SUFFIX}
 .else
 CMAKE_CONFIGURE_ARGS+=  -DCMAKE_DISABLE_FIND_PACKAGE_Asciidoctor=TRUE
 .endif
