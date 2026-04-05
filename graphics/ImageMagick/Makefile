@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.364 2026/02/24 06:44:25 triaxx Exp $
+# $NetBSD: Makefile,v 1.365 2026/04/05 16:27:49 wiz Exp $
 
 #PKGREVISION= 1
 .include "Makefile.common"
@@ -78,6 +78,8 @@ SUBST_SED.fix-pc=	-e 's,@PKG_CONFIG@,pkg-config,g'
 # failed to convert strong functions and variables: Invalid type identifier
 CTF_FILES_SKIP+=	lib/libMagickCore-7.Q16HDRI.so.*
 CTF_FILES_SKIP+=	lib/libMagickWand-7.Q16HDRI.so.*
+
+CHECK_PORTABILITY_SKIP+=	app-image/AppRun.in
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/config/policy*xml ${DESTDIR}${EGDIR}
