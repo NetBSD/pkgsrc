@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2105 2026/04/05 11:31:31 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2106 2026/04/05 11:33:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3340,3 +3340,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ocaml-dune-configurator to 3.22.1 [wiz 2026-04-05]
 	Updated graphics/openexr to 3.4.9 [wiz 2026-04-05]
 	Updated textproc/tree-sitter to 0.26.8 [wiz 2026-04-05]
+	Updated devel/SDL3 to 3.4.4 [wiz 2026-04-05]
