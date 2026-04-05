@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2026/02/17 15:25:58 adam Exp $
+$NetBSD: distinfo,v 1.3 2026/04/05 11:35:14 wiz Exp $
 
-BLAKE2s (dunamai-1.26.0.tar.gz) = 8488c2a8b77d3ff96333ae7eb5691d15d235c8b01d371ec1111c1dd61088f7fb
-SHA512 (dunamai-1.26.0.tar.gz) = 3521ca2185f982c6f69e8c76496e1e3735069fa6d725654fd513082c150bcfe36a6e89b6d06980c9364a345f11fa830dfc18b7af10db7274ca8b022db43550e3
-Size (dunamai-1.26.0.tar.gz) = 45500 bytes
+BLAKE2s (dunamai-1.26.1.tar.gz) = c6e85d385d7f7169fbdaad0aa30674532351a6e691a507a895b4b923db556289
+SHA512 (dunamai-1.26.1.tar.gz) = 1c900b0b665cdca3ddce38f9c31ce674e630d31fb1fdb66e06242dabc24453cb25921d1b73ebff3238287d235696f33e7bd72c3992115bf7a1f63ffb11b95408
+Size (dunamai-1.26.1.tar.gz) = 45567 bytes
