@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2093 2026/04/05 07:23:46 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2094 2026/04/05 07:25:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3328,3 +3328,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/task to 3.49.1 [iquiw 2026-04-05]
 	Updated security/p5-Crypt-RIPEMD160 to 0.12 [wiz 2026-04-05]
 	Updated textproc/p5-XML-Parser to 2.56 [wiz 2026-04-05]
+	Updated www/p5-libwww to 6.82 [wiz 2026-04-05]
