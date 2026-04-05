@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.6 2026/04/05 16:15:20 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.7 2026/04/05 20:50:33 maya Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -72,3 +72,6 @@ x11/kitty: Build fix
 
 Pullup ticket #7070 - requested by taca
 net/bind918: Security fix
+
+Pullup ticket #7071 - requested by gutteridge
+net/wireshark: Build fix
