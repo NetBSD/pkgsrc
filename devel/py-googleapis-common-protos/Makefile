@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2026/03/29 17:40:54 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/04/05 11:38:34 wiz Exp $
 
-DISTNAME=	googleapis_common_protos-1.73.1
+DISTNAME=	googleapis_common_protos-1.74.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/googleapis-common-protos/}
