@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2026/02/03 14:10:23 taca Exp $
+# $NetBSD: Makefile,v 1.21 2026/04/05 14:20:50 taca Exp $
 
 DISTNAME=	redmine-themes-1.4.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
@@ -20,7 +20,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-redmine${RM_VER}-yh-theme>=1.6:../../devel/ruby-redm
 
 META_PACKAGE=		yes
 
-RUBY_VERSIONS_ACCEPTED=	32 33
+RUBY_VERSIONS_ACCEPTED=	32 33 34
 
 .include "../../devel/ruby-redmine/redmine.mk"
 .include "../../lang/ruby/rubyversion.mk"
