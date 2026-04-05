@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2101 2026/04/05 11:27:37 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2102 2026/04/05 11:29:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3336,3 +3336,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/hwdata to 0.406 [wiz 2026-04-05]
 	Updated fonts/harfbuzz to 14.1.0 [wiz 2026-04-05]
 	Updated fonts/harfbuzz-icu to 14.1.0 [wiz 2026-04-05]
+	Updated devel/ocaml-dune to 3.22.1 [wiz 2026-04-05]
