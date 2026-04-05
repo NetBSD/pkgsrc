@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2096 2026/04/05 08:06:55 fox Exp $
+$NetBSD: CHANGES-2026,v 1.2097 2026/04/05 08:18:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3331,3 +3331,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/p5-libwww to 6.82 [wiz 2026-04-05]
 	Updated textproc/py-pygments to 2.20.0 [wiz 2026-04-05]
 	Updated sysutils/py-Glances to 4.5.3nb1 [fox 2026-04-05]
+	Updated www/miniflux to 2.2.19 [wiz 2026-04-05]
