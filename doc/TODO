@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27069 2026/04/06 15:30:49 leot Exp $
+$NetBSD: TODO,v 1.27070 2026/04/06 18:42:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -777,6 +777,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o inform-6.34
 	o ingo-3.2.8
 	o input-pad-1.4.2
+	o intercal-0.34
 	o ipe-7.2.29
 	o ipopt-3.12.12
 	o ipv6-toolkit-2.0
