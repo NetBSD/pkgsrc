@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2026/04/02 17:25:44 leot Exp $
+# $NetBSD: Makefile,v 1.24 2026/04/06 15:30:41 leot Exp $
 
-DISTNAME=	neovim-0.11.7
+DISTNAME=	neovim-0.12.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -50,13 +50,6 @@ post-install:
 	${TOOLBASE}/bin/patchelf ${DESTDIR}${PREFIX}/bin/nvim \
 		--replace-needed ${BUILDLINK_DIR.lua-lpeg}/lib/lua/5.1/lpeg.so lpeg.so
 .endif
-
-# due to pkgsrc patches, remove when they are gone
-.PHONY: cleanorig
-post-install: cleanorig
-cleanorig:
-	${RM} ${DESTDIR}${PREFIX}/share/nvim/runtime/lua/vim/treesitter/_meta/misc.lua.orig
-	${RM} ${DESTDIR}${PREFIX}/share/nvim/runtime/lua/vim/treesitter/languagetree.lua.orig
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../converters/utf8proc/buildlink3.mk"
