@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2026/04/06 13:46:38 nia Exp $
+
+BLAKE2s (nchat-5.14.44.tar.gz) = 004b57425a19b0ea71a22ca2232064c4d17fbf3782c44e47c707322fadf2b424
+SHA512 (nchat-5.14.44.tar.gz) = 9b6e77b6521ef7e785cfc80e39df3e0a1718913af55e91c5c99a7661a9c0c1543dcb88db45442b82f36ac75ca1452ab4681f8e0d440bbd68b544dbe535046f46
+Size (nchat-5.14.44.tar.gz) = 7996752 bytes
+SHA1 (patch-lib_ncutil_ext_sqlite__modern__cpp_configure) = 03abb00974428a1fbda26a8f5c9cb74ca4a9ad57
+SHA1 (patch-lib_ncutil_src_fileutil.cpp) = ae1ce3ca1f8ebc7c53be7690323f60af7107392d
+SHA1 (patch-lib_tgchat_ext_td_tdutils_td_utils_port_detail_KQueue.cpp) = de142a044e3a03186ff493c8fa72218221251ef7
+SHA1 (patch-src_main.cpp) = 83fcdbaaa9f41a372f5b7c5477e28a43e5e9cce3
+SHA1 (patch-src_uicontroller.cpp) = 42c9ee8d91b7f72c4df9b76c09b1c577e68db168
+SHA1 (patch-src_uikeydump.cpp) = 111ee9bc7a7e19fdd11b7cd5d28c593438bb40fa

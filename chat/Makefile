@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.309 2026/01/28 10:39:24 wiz Exp $
+# $NetBSD: Makefile,v 1.310 2026/04/06 13:46:37 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -80,6 +80,7 @@ SUBDIR+=	mcabber
 SUBDIR+=	meanwhile
 SUBDIR+=	miniircd
 SUBDIR+=	mumble
+SUBDIR+=	nchat
 SUBDIR+=	neonmodem
 SUBDIR+=	ngircd
 SUBDIR+=	ninja
