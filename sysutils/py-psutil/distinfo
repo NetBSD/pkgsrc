@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.65 2026/01/30 13:00:21 adam Exp $
+$NetBSD: distinfo,v 1.66 2026/04/06 16:53:11 fox Exp $
 
 BLAKE2s (psutil-7.2.2.tar.gz) = 21da95acab2183abcd1363b4adbd71899b2901afa3253e12fe424276a7b35dd9
 SHA512 (psutil-7.2.2.tar.gz) = 2de05c69d152a8582a4d8f1f02233cae5927baaa35f8797e4b0745f33e6b3c7239b9a54b719b0582b0b6c5b4bbc86d2e1e226c3e9854e4e5be9c5e349c704961
 Size (psutil-7.2.2.tar.gz) = 493740 bytes
+SHA1 (patch-psutil___psbsd.py) = b747e338433aec67195163d3bbb0b559f0cfacde
+SHA1 (patch-psutil_arch_netbsd_cpu.c) = 0470c9ee13db1f92d7f94c1db7e934fecd775a08
+SHA1 (patch-psutil_arch_netbsd_mem.c) = e1fbdc49451f8931a579d78b7de852967e096d49
+SHA1 (patch-psutil_arch_netbsd_proc.c) = e1298ef850ce59bed47edf8e6d2b604148ceb92c
