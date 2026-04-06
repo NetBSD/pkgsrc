@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2026/02/08 10:55:32 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/04/06 17:24:34 wiz Exp $
 
 DISTNAME=		simage-1.8.3
 PKGREVISION=		3
@@ -17,6 +17,8 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--with-xwd --with-mpeg2enc
+
+CFLAGS+=		-Wno-implicit-function-declaration
 
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
