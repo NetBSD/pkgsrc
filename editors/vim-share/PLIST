@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.85 2026/03/22 16:52:45 morr Exp $
+@comment $NetBSD: PLIST,v 1.86 2026/04/06 21:38:35 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -171,6 +171,7 @@ share/vim/${VIM_SUBDIR}/compiler/jjs.vim
 share/vim/${VIM_SUBDIR}/compiler/jq.vim
 share/vim/${VIM_SUBDIR}/compiler/jshint.vim
 share/vim/${VIM_SUBDIR}/compiler/jsonlint.vim
+share/vim/${VIM_SUBDIR}/compiler/just.vim
 share/vim/${VIM_SUBDIR}/compiler/make.vim
 share/vim/${VIM_SUBDIR}/compiler/maven.vim
 share/vim/${VIM_SUBDIR}/compiler/mcs.vim
@@ -818,6 +819,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/vue.vim
 share/vim/${VIM_SUBDIR}/ftplugin/wat.vim
 share/vim/${VIM_SUBDIR}/ftplugin/wget.vim
 share/vim/${VIM_SUBDIR}/ftplugin/wget2.vim
+share/vim/${VIM_SUBDIR}/ftplugin/wks.vim
 share/vim/${VIM_SUBDIR}/ftplugin/xcompose.vim
 share/vim/${VIM_SUBDIR}/ftplugin/xdefaults.vim
 share/vim/${VIM_SUBDIR}/ftplugin/xf86conf.vim
@@ -1920,6 +1922,7 @@ share/vim/${VIM_SUBDIR}/syntax/wget.vim
 share/vim/${VIM_SUBDIR}/syntax/wget2.vim
 share/vim/${VIM_SUBDIR}/syntax/whitespace.vim
 share/vim/${VIM_SUBDIR}/syntax/winbatch.vim
+share/vim/${VIM_SUBDIR}/syntax/wks.vim
 share/vim/${VIM_SUBDIR}/syntax/wml.vim
 share/vim/${VIM_SUBDIR}/syntax/wsh.vim
 share/vim/${VIM_SUBDIR}/syntax/wsml.vim
