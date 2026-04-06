@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2128 2026/04/05 21:01:13 maya Exp $
+$NetBSD: CHANGES-2026,v 1.2129 2026/04/06 13:46:49 nia Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3363,3 +3363,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/alex to 3.5.4.2 [wiz 2026-04-05]
 	Updated games/einstein-puzzle to 2.5 [wiz 2026-04-05]
 	Updated net/scamper to 20260331nb1 [maya 2026-04-05]
+	Added chat/nchat version 5.14.44 [nia 2026-04-06]
