@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2026/04/05 20:49:33 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2026/04/06 16:20:01 wiz Exp $
 
 DISTNAME=	glances-4.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/g/G/}
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-orjson>=0:../../textproc/py-orjson
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-selenium-[0-9]*:../../www/py-selenium
 # DEPENDS for WebUI/RestFull API
-#TEST_DEPENDS+=	${PYPKGPREFIX}-fastapi-[0-9]*:../../wip/py-fastapi
+#TEST_DEPENDS+=	${PYPKGPREFIX}-fastapi>=0.82.0:../../wip/py-fastapi
 #TEST_DEPENDS+=	${PYPKGPREFIX}-uvicorn-[0-9]*:../../www/py-uvicorn
 
 # for testing
@@ -36,18 +36,14 @@ SUBST_MESSAGE.prefix=	Set correct prefix in setup.py
 SUBST_FILES.prefix=	pyproject.toml
 SUBST_SED.prefix=	-e 's,share/man,${PKGMANDIR},'
 
+PY_RENAME_BINARIES+=	glances
+
 post-extract:
 	# Removes the nodejs component which is not required.
 	${RM} -fR ${WRKSRC}/glances/outputs/static
 
 post-install:
-	# remove file in pycache
-	# https://github.com/nicolargo/glances/issues/3516
-	${RM} -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/glances/plugins/__pycache__/__init__.py
-	${RM} -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/glances/plugins/__pycache__/__pycache__/__init__.cpython-313.opt-1.pyc
-	${RM} -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/glances/plugins/__pycache__/__pycache__/__init__.cpython-313.pyc
 	cd ${DESTDIR}${PREFIX} && \
-	${MV} bin/glances bin/glances-${PYVERSSUFFIX} && \
 	${MV} ${PKGMANDIR}/man1/glances.1 ${PKGMANDIR}/man1/glances-${PYVERSSUFFIX}.1 && \
 	${MV} share/doc/glances share/doc/glances-${PYVERSSUFFIX}
 
