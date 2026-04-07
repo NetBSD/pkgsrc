@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27070 2026/04/06 18:42:55 wiz Exp $
+$NetBSD: TODO,v 1.27071 2026/04/07 12:23:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -893,7 +893,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lua-sql-postgres-2.4.0
 	o lua-sql-sqlite3-2.4.0
 	o lumina-1.6.2
-	o m4-1.4.21 [ryoon will update after pkgsrc-2026Q1]
 	o mDNSResponder-nss-1310.80.1
 	o maelstrom-sdl-3.0.7
 	o magento-2.4.1
