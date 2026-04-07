@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.19 2025/10/18 16:11:54 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.20 2026/04/07 18:28:55 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -176,10 +176,10 @@ CARGO_CRATE_DEPENDS+=	serde-1.0.228
 CARGO_CRATE_DEPENDS+=	serde_core-1.0.228
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.228
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.145
-CARGO_CRATE_DEPENDS+=	serde_spanned-1.0.2
+CARGO_CRATE_DEPENDS+=	serde_spanned-1.0.4
 CARGO_CRATE_DEPENDS+=	serde_yaml-0.9.34+deprecated
 CARGO_CRATE_DEPENDS+=	shlex-1.3.0
-CARGO_CRATE_DEPENDS+=	signal-hook-0.3.18
+CARGO_CRATE_DEPENDS+=	signal-hook-0.4.3
 CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.4.6
 CARGO_CRATE_DEPENDS+=	simd-adler32-0.3.7
 CARGO_CRATE_DEPENDS+=	slab-0.4.11
@@ -197,11 +197,12 @@ CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.69
 CARGO_CRATE_DEPENDS+=	thiserror-impl-2.0.17
 CARGO_CRATE_DEPENDS+=	tiny-skia-0.11.4
 CARGO_CRATE_DEPENDS+=	tiny-skia-path-0.11.4
-CARGO_CRATE_DEPENDS+=	toml-0.9.7
-CARGO_CRATE_DEPENDS+=	toml_datetime-0.7.2
-CARGO_CRATE_DEPENDS+=	toml_edit-0.23.6
-CARGO_CRATE_DEPENDS+=	toml_parser-1.0.3
-CARGO_CRATE_DEPENDS+=	toml_writer-1.0.3
+CARGO_CRATE_DEPENDS+=	toml-0.9.11+spec-1.1.0
+CARGO_CRATE_DEPENDS+=	toml_datetime-0.7.5+spec-1.1.0
+CARGO_CRATE_DEPENDS+=	toml_edit-0.23.10+spec-1.0.0
+CARGO_CRATE_DEPENDS+=	toml_edit-0.24.0+spec-1.1.0
+CARGO_CRATE_DEPENDS+=	toml_parser-1.0.6+spec-1.1.0
+CARGO_CRATE_DEPENDS+=	toml_writer-1.0.6+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	tracing-0.1.41
 CARGO_CRATE_DEPENDS+=	tracing-core-0.1.34
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.19
@@ -270,7 +271,7 @@ CARGO_CRATE_DEPENDS+=	windows_x86_64_gnullvm-0.53.1
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.42.2
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.52.6
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.53.1
-CARGO_CRATE_DEPENDS+=	winit-0.30.12
+CARGO_CRATE_DEPENDS+=	winit-0.30.13
 CARGO_CRATE_DEPENDS+=	winnow-0.7.13
 CARGO_CRATE_DEPENDS+=	winreg-0.55.0
 CARGO_CRATE_DEPENDS+=	wio-0.2.2
