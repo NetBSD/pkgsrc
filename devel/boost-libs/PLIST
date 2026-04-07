@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2026/02/09 21:51:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.53 2026/04/07 18:16:42 tnn Exp $
 lib/cmake/Boost-${PKGVERSION}/BoostConfig.cmake
 lib/cmake/Boost-${PKGVERSION}/BoostConfigVersion.cmake
 lib/cmake/BoostDetectToolset-${PKGVERSION}.cmake
@@ -14,6 +14,14 @@ lib/cmake/boost_chrono-${PKGVERSION}/boost_chrono-config-version.cmake
 lib/cmake/boost_chrono-${PKGVERSION}/boost_chrono-config.cmake
 lib/cmake/boost_chrono-${PKGVERSION}/libboost_chrono-variant-shared.cmake
 lib/cmake/boost_chrono-${PKGVERSION}/libboost_chrono-variant-static.cmake
+${PLIST.cobalt}lib/cmake/boost_cobalt-${PKGVERSION}/boost_cobalt-config-version.cmake
+${PLIST.cobalt}lib/cmake/boost_cobalt-${PKGVERSION}/boost_cobalt-config.cmake
+${PLIST.cobalt}lib/cmake/boost_cobalt-${PKGVERSION}/libboost_cobalt-variant-shared.cmake
+${PLIST.cobalt}lib/cmake/boost_cobalt-${PKGVERSION}/libboost_cobalt-variant-static.cmake
+${PLIST.cobalt}lib/cmake/boost_cobalt_io-${PKGVERSION}/boost_cobalt_io-config-version.cmake
+${PLIST.cobalt}lib/cmake/boost_cobalt_io-${PKGVERSION}/boost_cobalt_io-config.cmake
+${PLIST.cobalt}lib/cmake/boost_cobalt_io-${PKGVERSION}/libboost_cobalt_io-variant-shared.cmake
+${PLIST.cobalt}lib/cmake/boost_cobalt_io-${PKGVERSION}/libboost_cobalt_io-variant-static.cmake
 lib/cmake/boost_container-${PKGVERSION}/boost_container-config-version.cmake
 lib/cmake/boost_container-${PKGVERSION}/boost_container-config.cmake
 lib/cmake/boost_container-${PKGVERSION}/libboost_container-variant-shared.cmake
@@ -185,6 +193,12 @@ lib/libboost_charconv.so.${PKGVERSION}
 lib/libboost_chrono.a
 lib/libboost_chrono.so
 lib/libboost_chrono.so.${PKGVERSION}
+${PLIST.cobalt}lib/libboost_cobalt.a
+${PLIST.cobalt}lib/libboost_cobalt.so
+${PLIST.cobalt}lib/libboost_cobalt.so.${PKGVERSION}
+${PLIST.cobalt}lib/libboost_cobalt_io.a
+${PLIST.cobalt}lib/libboost_cobalt_io.so
+${PLIST.cobalt}lib/libboost_cobalt_io.so.${PKGVERSION}
 lib/libboost_container.a
 lib/libboost_container.so
 lib/libboost_container.so.${PKGVERSION}
