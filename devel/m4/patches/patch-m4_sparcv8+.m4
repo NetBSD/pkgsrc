@@ -1,6 +1,7 @@
-$NetBSD: patch-m4_sparcv8+.m4,v 1.1 2021/11/15 13:20:04 nia Exp $
+$NetBSD: patch-m4_sparcv8+.m4,v 1.2 2026/04/07 12:23:36 wiz Exp $
 
 pkg/56498: "devel/m4" build fails on netbsd-9/sparc
+Sent to bug-m4 mailing list on 2026-04-07.
 
 --- m4/sparcv8+.m4.orig	2021-04-22 20:28:47.000000000 +0000
 +++ m4/sparcv8+.m4
