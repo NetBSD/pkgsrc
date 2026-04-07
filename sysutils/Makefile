@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1187 2026/02/20 01:55:00 gutteridge Exp $
+# $NetBSD: Makefile,v 1.1188 2026/04/07 18:43:27 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -894,6 +894,7 @@ SUBDIR+=	usbutil
 SUBDIR+=	user_cygwin
 SUBDIR+=	user_darwin
 SUBDIR+=	user_irix
+SUBDIR+=	uutils-coreutils
 SUBDIR+=	vbetool
 SUBDIR+=	vcdimager
 SUBDIR+=	vidc-tools
