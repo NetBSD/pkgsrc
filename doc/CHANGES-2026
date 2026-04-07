@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2143 2026/04/07 21:35:53 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.2144 2026/04/07 21:37:53 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3378,3 +3378,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added sysutils/uutils-coreutils version 0.8.0 [pin 2026-04-07]
 	Updated editors/vim-share to 9.2.0319 [morr 2026-04-07]
 	Updated x11/xfce4-desktop to 4.20.2 [gutteridge 2026-04-07]
+	Updated sysutils/xfce4-thunar to 4.20.8 [gutteridge 2026-04-07]
