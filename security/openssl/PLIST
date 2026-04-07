@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2026/01/28 07:38:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2026/04/07 18:37:35 wiz Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -5248,6 +5248,8 @@ man/man3/USERNOTICE_free.3
 man/man3/USERNOTICE_new.3
 man/man3/X509V3_EXT_d2i.3
 man/man3/X509V3_EXT_i2d.3
+man/man3/X509V3_EXT_print.3
+man/man3/X509V3_EXT_print_fp.3
 man/man3/X509V3_add1_i2d.3
 man/man3/X509V3_get_d2i.3
 man/man3/X509V3_set_ctx.3
