@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.123 2025/05/01 11:32:44 gdt Exp $
+# $NetBSD: Makefile,v 1.124 2026/04/07 14:12:48 tnn Exp $
 
-BRANCHNAME=	1.21
-DISTNAME=	krb5-${BRANCHNAME}.3
+BRANCHNAME=	1.22
+DISTNAME=	krb5-${BRANCHNAME}.2
 PKGNAME=	mit-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	security
 # It is not clear how stable this URL scheme is.
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/${BRANCHNAME}/
@@ -39,8 +38,7 @@ USE_LANGUAGES=		c
 # c99, and configure checks for that.  The code uses strdup(3):
 # https://pubs.opengroup.org/onlinepubs/9799919799/functions/strdup.html
 # and that's hidden by default on Linux, with gnu99 making it visible.
-USE_CC_FEATURES+=	gnu99
-# Further, the build fails in c23 mode, 
+USE_CC_FEATURES+=	c99
 FORCE_C_STD=		gnu99
 
 USE_LIBTOOL=		yes
