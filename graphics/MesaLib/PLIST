@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2026/04/06 10:47:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.54 2026/04/07 11:33:07 wiz Exp $
 ${PLIST.kms}include/EGL/egl.h
 ${PLIST.kms}include/EGL/eglext.h
 ${PLIST.kms}include/EGL/eglextchromium.h
@@ -43,7 +43,7 @@ ${PLIST.arm}lib/dri/ingenic-drm_dri.so
 ${PLIST.iris}lib/dri/iris_dri.so
 ${PLIST.arm}lib/dri/kgsl_dri.so
 ${PLIST.arm}lib/dri/kirin_dri.so
-${PLIST.glx}lib/dri/kms_swrast_dri.so
+${PLIST.kms}lib/dri/kms_swrast_dri.so
 ${PLIST.arm}lib/dri/lima_dri.so
 ${PLIST.arm}lib/dri/mali-dp_dri.so
 ${PLIST.arm}lib/dri/mcde_dri.so
@@ -70,7 +70,7 @@ ${PLIST.arm}lib/dri/st7586_dri.so
 ${PLIST.arm}lib/dri/st7735r_dri.so
 ${PLIST.arm}lib/dri/stm_dri.so
 ${PLIST.arm}lib/dri/sun4i-drm_dri.so
-${PLIST.kms}lib/dri/swrast_dri.so
+${PLIST.glx}lib/dri/swrast_dri.so
 ${PLIST.arm}lib/dri/tegra_dri.so
 ${PLIST.arm}lib/dri/vc4_dri.so
 ${PLIST.svga}lib/dri/vmwgfx_dri.so
