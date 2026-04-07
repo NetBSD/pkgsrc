@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.55 2025/04/28 17:24:43 tnn Exp $
+$NetBSD: distinfo,v 1.56 2026/04/07 12:23:36 wiz Exp $
 
-BLAKE2s (m4-1.4.19.tar.gz) = f1380114d839935b2afa53fdd7162dc5df2bbeb6d5eab48528916a138f483cbc
-SHA512 (m4-1.4.19.tar.gz) = f5dd0f02fcae65a176a16af9a8e1747c26e9440c6c224003ba458d3298b777a75ffb189aee9051fb0c4840b2a48278be4a51d959381af0b1d627570f478c58f2
-Size (m4-1.4.19.tar.gz) = 2953876 bytes
-SHA1 (patch-configure) = 941bba8b1a10c3fc305d20abdb247cf45e44d534
-SHA1 (patch-lib_gl__list.h) = cf0b6776d3c7b758dc10387232df48cd37942616
-SHA1 (patch-lib_gl__oset.h) = 69fa55daea013dc4835411dbe43516408806259b
-SHA1 (patch-lib_sigsegv.c) = 5f49ac75d55aae5a5ad5530a212ec25e15c679e8
-SHA1 (patch-lib_strerror_override.c) = 29905fecf6c92f75c4999f1e3cb56e14fe2f4aae
-SHA1 (patch-m4_sparcv8+.m4) = 761e592a700ea47ac0ba15d960f073115005dedd
+BLAKE2s (m4-1.4.21.tar.gz) = 99bf52b43b7ff479a4c99bca41186b5983448abd940054682a2646f94855ce89
+SHA512 (m4-1.4.21.tar.gz) = 4d573245d31e14a1b2856abf7cd16f82ec01036956bb2c9ee09e6d9d3fcca518cf77d6864c915d4defa07771bf8503241017b37ce9027dcf4fafdd0fb20db582
+Size (m4-1.4.21.tar.gz) = 3558201 bytes
+SHA1 (patch-configure) = ba2ffe2c03dc215a9f0d08a7162382ca9127d9a4
+SHA1 (patch-lib_sigsegv.c) = d773bc9690261b1749cceda8396536384f662665
+SHA1 (patch-m4_sparcv8+.m4) = 612dc5fb22124bc43054f5efa88d73982b514143
