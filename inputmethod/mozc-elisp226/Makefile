@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2026/02/06 10:05:07 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/04/07 12:20:11 tsutsui Exp $
 
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/mozc-/mozc-elisp-/}
 PKGREVISION=	45
@@ -11,6 +11,7 @@ EMACS_VERSIONS_ACCEPTED=	emacs26 emacs26nox
 EMACS_VERSIONS_ACCEPTED+=	emacs27 emacs27nox
 EMACS_VERSIONS_ACCEPTED+=	emacs28 emacs28nox
 EMACS_VERSIONS_ACCEPTED+=	emacs29 emacs29nox
+EMACS_VERSIONS_ACCEPTED+=	emacs30 emacs30nox
 
 .include "../../editors/emacs/modules.mk"
 
