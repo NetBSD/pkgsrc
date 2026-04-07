@@ -1,9 +1,9 @@
-$NetBSD: patch-.._vendor_memchr-2.7.6_src_arch_aarch64_memchr.rs,v 1.1 2025/11/02 16:12:34 pin Exp $
+$NetBSD: patch-.._vendor_memchr-2.8.0_src_arch_aarch64_memchr.rs,v 1.1 2026/04/07 18:38:35 pin Exp $
 
 Do not try to use neon on big-endian aarch64.
 
---- ../vendor/memchr-2.7.6/src/arch/aarch64/memchr.rs.orig	2025-02-15 09:11:32.497322345 +0000
-+++ ../vendor/memchr-2.7.6/src/arch/aarch64/memchr.rs
+--- ../vendor/memchr-2.8.0/src/arch/aarch64/memchr.rs.orig	2025-02-15 09:11:32.497322345 +0000
++++ ../vendor/memchr-2.8.0/src/arch/aarch64/memchr.rs
 @@ -8,7 +8,7 @@ available for `aarch64` targets.)
  
  macro_rules! defraw {

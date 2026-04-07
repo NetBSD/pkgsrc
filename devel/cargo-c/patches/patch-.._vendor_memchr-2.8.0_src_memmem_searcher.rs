@@ -1,9 +1,9 @@
-$NetBSD: patch-.._vendor_memchr-2.7.6_src_memmem_searcher.rs,v 1.1 2025/11/02 16:12:35 pin Exp $
+$NetBSD: patch-.._vendor_memchr-2.8.0_src_memmem_searcher.rs,v 1.1 2026/04/07 18:38:35 pin Exp $
 
 Don't try to use neon / SIMD on big-endian aarch64.
 
---- ../vendor/memchr-2.7.6/src/memmem/searcher.rs.orig	2025-02-15 09:20:25.984377323 +0000
-+++ ../vendor/memchr-2.7.6/src/memmem/searcher.rs
+--- ../vendor/memchr-2.8.0/src/memmem/searcher.rs.orig	2025-02-15 09:20:25.984377323 +0000
++++ ../vendor/memchr-2.8.0/src/memmem/searcher.rs
 @@ -3,7 +3,7 @@ use crate::arch::all::{
      rabinkarp, twoway,
  };
