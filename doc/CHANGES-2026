@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2132 2026/04/07 09:02:51 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2133 2026/04/07 12:23:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3367,3 +3367,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/neovim to 0.12.0 [leot 2026-04-06]
 	Updated editors/vim-share to 9.2.0315 [morr 2026-04-06]
 	Updated mail/neomutt to 20260406 [wiz 2026-04-07]
+	Updated devel/m4 to 1.4.21 [wiz 2026-04-07]
