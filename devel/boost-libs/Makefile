@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2026/02/09 21:51:29 wiz Exp $
+# $NetBSD: Makefile,v 1.126 2026/04/07 18:16:42 tnn Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -13,13 +13,14 @@ INSTALLATION_DIRS+=	lib
 
 BJAM_ARGS+=		--without-headers
 BJAM_ARGS+=		--without-python
-PLIST_VARS+=		context fiber log stacktrace_from_exception
+PLIST_VARS+=		cobalt context fiber log stacktrace_from_exception
 
 .include "../../mk/compiler.mk"
 
 # pch enabled build is generally fragile and breaks with RELRO
 BJAM_ARGS+=		pch=off
 
+BJAM_ARGS+=		--without-cobalt	# C++20
 .if ${MACHINE_ARCH} == alpha || ${MACHINE_ARCH} == m68k || ${MACHINE_ARCH} == sparc64
 BJAM_ARGS+=		--without-context
 BJAM_ARGS+=		--without-coroutine
@@ -80,10 +81,12 @@ do-install: boost-install-libs boost-install-cmake
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/lib/cmake/boost_headers-*/*.cmake
 
+PRINT_PLIST_AWK+=	/boost_cobalt/ { $$0 = "$${PLIST.cobalt}"$$0 }
 PRINT_PLIST_AWK+=	/boost_context/ { $$0 = "$${PLIST.context}"$$0 }
 PRINT_PLIST_AWK+=	/boost_coroutine/ { $$0 = "$${PLIST.context}"$$0 }
 PRINT_PLIST_AWK+=	/boost_fiber/ { $$0 = "$${PLIST.fiber}"$$0 }
 PRINT_PLIST_AWK+=	/boost_log/ { $$0 = "$${PLIST.log}"$$0 }
+PRINT_PLIST_AWK+=	/boost_stacktrace_addr2line/ { $$0 = "$${PLIST.stacktrace_addr2line}"$$0 }
 PRINT_PLIST_AWK+=	/boost_stacktrace_from_exception/ { $$0 = "$${PLIST.stacktrace_from_exception}"$$0 }
 
 .include "../../archivers/bzip2/buildlink3.mk"
