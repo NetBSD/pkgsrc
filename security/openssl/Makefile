@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.316 2026/01/28 07:38:55 adam Exp $
+# $NetBSD: Makefile,v 1.317 2026/04/07 18:37:35 wiz Exp $
 
 # Remember to upload-distfiles when updating OpenSSL -- otherwise it
 # is not possible for users who have bootstrapped without OpenSSL
 # to install it and enable HTTPS fetching.
-DISTNAME=	openssl-3.6.1
+DISTNAME=	openssl-3.6.2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openssl/}
 GITHUB_RELEASE=	${DISTNAME}
