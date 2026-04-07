@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2138 2026/04/07 18:30:58 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2139 2026/04/07 18:37:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3373,3 +3373,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/dav1d to 1.5.3 [ryoon 2026-04-07]
 	Updated x11/alacritty to 0.17.0 [pin 2026-04-07]
 	Updated editors/kibi to 0.3.3 [pin 2026-04-07]
+	Updated security/openssl to 3.6.2 [wiz 2026-04-07]
