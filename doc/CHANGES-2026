@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2141 2026/04/07 18:43:52 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2142 2026/04/07 20:57:39 morr Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3376,3 +3376,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/openssl to 3.6.2 [wiz 2026-04-07]
 	Updated devel/cargo-c to 0.10.21 [pin 2026-04-07]
 	Added sysutils/uutils-coreutils version 0.8.0 [pin 2026-04-07]
+	Updated editors/vim-share to 9.2.0319 [morr 2026-04-07]
