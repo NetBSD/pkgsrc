@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.16 2012/06/02 07:51:04 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/04/07 12:23:36 wiz Exp $
 bin/gm4
 gnu/bin/m4
 gnu/man/man1/m4.1
 info/m4.info
 man/man1/gm4.1
+share/examples/m4/barem4.m4
 share/examples/m4/capitalize.m4
 share/examples/m4/capitalize2.m4
 share/examples/m4/comments.m4
@@ -41,6 +42,7 @@ share/examples/m4/stack.m4
 share/examples/m4/stack_sep.m4
 share/examples/m4/sync-lines.m4
 share/examples/m4/sysv-args.m4
+share/examples/m4/testbarem4.m4
 share/examples/m4/trace.m4
 share/examples/m4/translit.m4
 share/examples/m4/undivert.m4
