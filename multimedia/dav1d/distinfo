@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2025/02/07 03:08:31 ryoon Exp $
+$NetBSD: distinfo,v 1.18 2026/04/07 16:43:09 ryoon Exp $
 
-BLAKE2s (dav1d-1.5.1.tar.xz) = 5e197ec50b25ba828ff05f08270d87d746bdf9b3a53cbaf5f22c5e1e27539eef
-SHA512 (dav1d-1.5.1.tar.xz) = 3582dff4f797ebe2c137b28549a7214f11869ae308e3c78440849a3a501b12c326d3fa604126ccff4b648f37ab260c003c63385c70ba91e11f3442f20ad455db
-Size (dav1d-1.5.1.tar.xz) = 1020760 bytes
+BLAKE2s (dav1d-1.5.3.tar.xz) = 3c198003e784d90ad9f19115ce2b82c7a42d2024ee6e8912059669f37ec1434e
+SHA512 (dav1d-1.5.3.tar.xz) = 3d6a1a67a3c7d171747fd244566b23c66c174c4aad1964fef95367b2b33a187abb544e83dccc27d9cda409c8156b7c44a8bf33af810e8fa79d08cb5f3796fa54
+Size (dav1d-1.5.3.tar.xz) = 1022836 bytes
