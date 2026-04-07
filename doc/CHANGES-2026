@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2131 2026/04/06 22:02:11 morr Exp $
+$NetBSD: CHANGES-2026,v 1.2132 2026/04/07 09:02:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3366,3 +3366,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added chat/nchat version 5.14.44 [nia 2026-04-06]
 	Updated editors/neovim to 0.12.0 [leot 2026-04-06]
 	Updated editors/vim-share to 9.2.0315 [morr 2026-04-06]
+	Updated mail/neomutt to 20260406 [wiz 2026-04-07]
