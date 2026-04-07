@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2135 2026/04/07 14:33:10 tsutsui Exp $
+$NetBSD: CHANGES-2026,v 1.2136 2026/04/07 16:43:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3370,3 +3370,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/m4 to 1.4.21 [wiz 2026-04-07]
 	Updated security/mit-krb5 to 1.22.2 [tnn 2026-04-07]
 	Updated net/mikutter to 5.1.1nb8 [tsutsui 2026-04-07]
+	Updated multimedia/dav1d to 1.5.3 [ryoon 2026-04-07]
