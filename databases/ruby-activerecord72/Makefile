@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/12/13 16:45:12 taca Exp $
+# $NetBSD: Makefile,v 1.2 2026/04/08 14:54:19 taca Exp $
 
 DISTNAME=	activerecord-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-activerecord${RUBY_RAILS}-${RAILS_VERSION}
@@ -16,12 +16,6 @@ USE_LANGUAGES=	# none
 
 RUBY_RAILS_ACCEPTED=	72
 RUBY_RAILS_STRICT_DEP=	yes
-
-.include "../../lang/ruby/rubyversion.mk"
-
-.if ${RUBY_VER} < 33
-DEPENDS+=	${RUBY_PKGPREFIX}-timeout>=0.4.0:../../time/ruby-timeout
-.endif
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2026/03/07 13:25:12 taca Exp $
+# $NetBSD: Makefile,v 1.9 2026/04/08 14:54:19 taca Exp $
 
 DISTNAME=	irb-1.17.0
 CATEGORIES=	devel
@@ -26,9 +26,6 @@ PLIST_SUBST+=		PKGVERSION_NOREV=${PKGVERSION_NOREV}
 
 .if ${RUBY_VER} < 34
 DEPENDS+=	${RUBY_PKGPREFIX}-pp>=0.6.0:../../textproc/ruby-pp
-.  if ${RUBY_VER} < 33
-DEPENDS+=	${RUBY_PKGPREFIX}-reline>=0.4.2:../../devel/ruby-reline
-.  endif
 .endif
 
 pre-configure:
