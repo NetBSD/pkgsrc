@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2024/12/11 13:52:48 taca Exp $
-${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/BSDL
-${GEM_LIBDIR}/COPYING
-${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/lib/securerandom.rb
-${GEM_HOME}/specifications/${GEM_NAME}.gemspec
