@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2026/02/11 07:27:17 taca Exp $
-
-BLAKE2s (tsort-0.2.0.gem) = 015895cfb4a4da77af2c41e2a9d1fa4f69a82ecaf164cbf655b4e782959d628e
-SHA512 (tsort-0.2.0.gem) = 5b868917cb19582a92d0d76f3220e8b1544be72bd4ea23be9d9e420b1320ac06c609d06c03c11ecc31dff6c2524eac45b789ef959d45bdcc18cb6fbab11155f8
-Size (tsort-0.2.0.gem) = 10240 bytes
