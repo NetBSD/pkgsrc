@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2025/11/17 11:00:21 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2026/04/08 12:35:58 wiz Exp $
 
 DISTNAME=	nas-1.9.4.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -22,6 +22,9 @@ USE_IMAKE=		yes
 MAKE_FLAGS+=		CDEBUGFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		EXTRA_LDOPTIONS=${LDFLAGS:Q}
 MAKE_FLAGS+=		SHLIBGLOBALSFLAGS=${LDFLAGS:Q}
+
+CFLAGS+=		-Wno-implicit-function-declaration
+CFLAGS+=		-Wno-implicit-int
 
 PKG_SYSCONFSUBDIR=	nas
 
