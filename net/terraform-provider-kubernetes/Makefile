@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2026/03/06 21:07:58 bsiegert Exp $
+# $NetBSD: Makefile,v 1.67 2026/04/08 05:45:04 bsiegert Exp $
 
 DISTNAME=	terraform-provider-kubernetes-1.11.4
-PKGREVISION=	59
+PKGREVISION=	60
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 GITHUB_PROJECT=	${PKGBASE}
