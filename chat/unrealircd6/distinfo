@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2022/04/24 13:46:58 nia Exp $
+$NetBSD: distinfo,v 1.3 2026/04/08 12:38:47 wiz Exp $
 
 BLAKE2s (unrealircd-6.0.3.tar.gz) = 2f5fa9a2dfef120080317c94d354f52d0e6eb1c12ce5a7a508a8ffe934c95820
 SHA512 (unrealircd-6.0.3.tar.gz) = be3b823eee42e5ecf7ffbdcac0d56cf4ff4cde8aa082affa8c2f78518a3c54a2d8bb3956cf2b95060958d7c3382ca8da00e6f7b816670cf3ba48e3b8588adba3
 Size (unrealircd-6.0.3.tar.gz) = 8673998 bytes
+SHA1 (patch-configure) = 914660696d1b6760ac709f9b3428171878541841
 SHA1 (patch-include_h.h) = 3fa85b08f1d9e317a45cb8f54a61e0560617e72d

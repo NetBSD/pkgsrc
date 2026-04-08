@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2026/04/08 12:38:47 wiz Exp $
+
+Add missing header for exit().
+
+--- configure.orig	2026-04-08 12:37:39.914899456 +0000
++++ configure
+@@ -6050,6 +6050,7 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
++#include <stdlib.h>
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ int main() {
