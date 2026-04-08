@@ -1,7 +1,10 @@
-# $NetBSD: Makefile.common,v 1.1 2026/04/08 13:35:58 sborrill Exp $
+# $NetBSD: Makefile.common,v 1.2 2026/04/08 16:08:47 sborrill Exp $
 #
 # used by net/vnstat/Makefile
 # used by net/vnstati/Makefile
+#
+# If altering the version, remember to remove any PKGREVISION lines
+# from the above Makefiles
 
 DISTNAME=	vnstat-2.13
 CATEGORIES=	net
@@ -12,8 +15,10 @@ HOMEPAGE=	https://humdi.net/vnstat/
 COMMENT=	Small network traffic monitor
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	-disable-extra-paths
+CONFIGURE_ARGS+=	--localstatedir='${VARBASE}'
+CONFIGURE_ARGS+=	--sysconfdir='${PKG_SYSCONFDIR}'
 
 SUBST_CLASSES+=			fix-dbpath
 SUBST_STAGE.fix-dbpath=		pre-configure
