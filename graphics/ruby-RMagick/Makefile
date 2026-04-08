@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2026/02/23 15:48:28 taca Exp $
+# $NetBSD: Makefile,v 1.196 2026/04/08 14:54:20 taca Exp $
 
 DISTNAME=	rmagick-6.2.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rmagick/RMagick/}
@@ -16,11 +16,6 @@ USE_LANGUAGES=		c c++
 FORCE_C_STD=		c99
 
 BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--no-as-needed
-
-.include "../../lang/ruby/rubyversion.mk"
-.if ${RUBY_VER} < 33
-DEPENDS+=	${RUBY_PKGPREFIX}-observer>=0.1<1:../../devel/ruby-observer
-.endif
 
 .include "../../devel/ruby-pkg-config/tool.mk"
 .include "../../lang/ruby/gem.mk"

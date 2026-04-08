@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2026/03/29 14:07:37 taca Exp $
+# $NetBSD: Makefile,v 1.5 2026/04/08 14:54:19 taca Exp $
 
 DISTNAME=	activesupport-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-activesupport${RUBY_RAILS}-${RAILS_VERSION}
@@ -18,12 +18,6 @@ USE_LANGUAGES=	# none
 
 RUBY_RAILS_ACCEPTED=	72
 RUBY_RAILS_STRICT_DEP=	yes
-
-.include "../../lang/ruby/rubyversion.mk"
-.if ${RUBY_VER} < 33
-DEPENDS+=	${RUBY_PKGPREFIX}-benchmark>=0.3:../../benchmarks/ruby-benchmark
-DEPENDS+=	${RUBY_PKGPREFIX}-securerandom>=0.3:../../security/ruby-securerandom
-.endif
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/04/08 14:29:34 taca Exp $
+# $NetBSD: Makefile,v 1.4 2026/04/08 14:54:20 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
@@ -114,9 +114,6 @@ post-install: unicorn-post-install
 .if ${RUBY_VER} < 34
 DEPENDS+=	${RUBY_PKGPREFIX}-csv>=3.3.2<3.4:../../textproc/ruby-csv
 DEPENDS+=	${RUBY_PKGPREFIX}-net-imap>=0.5.7:../../net/ruby-net-imap
-.  if ${RUBY_VER} < 33
-DEPENDS+=	${RUBY_PKGPREFIX}-net-smtp>=0.5.1:../../net/ruby-net-smtp
-.  endif
 .endif
 
 .include "options.mk"
