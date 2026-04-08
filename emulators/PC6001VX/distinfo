@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.53 2025/11/23 18:32:28 tsutsui Exp $
+$NetBSD: distinfo,v 1.54 2026/04/08 13:39:14 tsutsui Exp $
 
 BLAKE2s (PC6001VX_4.3.0_src.tar.gz) = 2b452547efcd25af06cedbcf7b5b3f6bf158383845fa227a0bff88adfb891e99
 SHA512 (PC6001VX_4.3.0_src.tar.gz) = 63f41d494cb5c434eadbcc75d5ed1b1db8adb1c5d3c46d6d3775fdb69222e0b67ba254cb2b92aee521930d51431140da9d0651ab158df035ca2912b88bdbeb6f
 Size (PC6001VX_4.3.0_src.tar.gz) = 5991508 bytes
+SHA1 (patch-src_console.cpp) = f4bed6e9f4564bf50bd115b028c1511efdac8b2a
