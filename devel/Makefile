@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4612 2026/04/08 14:40:47 taca Exp $
+# $NetBSD: Makefile,v 1.4613 2026/04/08 14:58:36 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3468,7 +3468,6 @@ SUBDIR+=	ruby-instance_storage
 SUBDIR+=	ruby-io-console
 SUBDIR+=	ruby-io-event
 SUBDIR+=	ruby-io-like
-SUBDIR+=	ruby-irb
 SUBDIR+=	ruby-iruby
 SUBDIR+=	ruby-jirametrics
 SUBDIR+=	ruby-kgio

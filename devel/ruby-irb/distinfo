@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2026/03/07 13:25:12 taca Exp $
-
-BLAKE2s (irb-1.17.0.gem) = 43a23ed7dbf023147880f7d64b0d50de9e91cd34d65334767a510c4c8913f9ef
-SHA512 (irb-1.17.0.gem) = b9bf1e1468b8398bcffb2e55b2a91336a5378f1a3bcb92c352d48bf347b1739fd6e7df26959ed99c5826c4b5070f94366b4bc0b8deb2abfbf81b60b6465491ad
-Size (irb-1.17.0.gem) = 102912 bytes
