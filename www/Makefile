@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1911 2026/03/29 13:38:12 taca Exp $
+# $NetBSD: Makefile,v 1.1912 2026/04/08 15:08:31 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1132,7 +1132,6 @@ SUBDIR+=	ruby-stimulus-rails
 SUBDIR+=	ruby-tag
 SUBDIR+=	ruby-typhoeus
 SUBDIR+=	ruby-unicorn
-SUBDIR+=	ruby-uri
 SUBDIR+=	ruby-url_mount
 SUBDIR+=	ruby-useragent
 SUBDIR+=	ruby-webrick

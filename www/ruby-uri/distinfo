@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2026/01/18 15:43:21 taca Exp $
-
-BLAKE2s (uri-1.1.1.gem) = 0f004e582830307d9e8a7901ab5cd489cb0f7f734700e54529cfe0411c9d2d7f
-SHA512 (uri-1.1.1.gem) = aa5c68a3999e1cd5841ca6125f277c82d5e6867d1ad510d9d2655c89a48b723a77ca8caca06fffc75ff6f141d331ff84fa8f6a72fd3632a565689b8766f3f6e2
-Size (uri-1.1.1.gem) = 37376 bytes
