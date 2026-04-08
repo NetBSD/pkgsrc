@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2026/01/07 08:47:18 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2026/04/08 12:31:19 wiz Exp $
 
 DISTNAME=	gphoto2-2.5.28
 PKGREVISION=	6
@@ -22,6 +22,8 @@ CONFIGURE_ARGS+=	--with-jpeg-prefix=${JPEGBASE}
 TEST_TARGET=		check
 
 CFLAGS.Darwin+=	-D_DARWIN_C_SOURCE
+CFLAGS+=	-Wno-int-conversion
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 .include "../../devel/cdk/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
