@@ -1,4 +1,4 @@
-$NetBSD: patch-x11vnc_unixpw.c,v 1.2 2018/12/18 15:53:46 tnn Exp $
+$NetBSD: patch-src_unixpw.c,v 1.1 2026/04/08 12:49:57 wiz Exp $
 
 * Use openpty(3) if available
 

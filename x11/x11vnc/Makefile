@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2026/02/06 10:06:20 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.105 2026/04/08 12:49:57 wiz Exp $
 
 DISTNAME=	x11vnc-0.9.17
 PKGREVISION=	3
@@ -14,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	autoconf automake autoreconf gmake pkg-config
 GNU_CONFIGURE=	yes
+
+CFLAGS+=	-Wno-implicit-function-declaration
 
 .include "options.mk"
 
