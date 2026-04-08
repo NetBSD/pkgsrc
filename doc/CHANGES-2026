@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2161 2026/04/08 15:08:49 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2162 2026/04/08 15:10:57 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3398,3 +3398,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed textproc/ruby-pp [taca 2026-04-08]
 	Removed time/ruby-timeout [taca 2026-04-08]
 	Removed www/ruby-uri [taca 2026-04-08]
+	Updated graphics/ruby-cairo to 1.18.5 [tsutsui 2026-04-08]
