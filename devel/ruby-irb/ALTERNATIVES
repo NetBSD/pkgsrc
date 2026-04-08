@@ -1,1 +1,0 @@
-bin/irb @PREFIX@/bin/irb-@PKGVERSION_NOREV@-@RUBY_SUFFIX@
