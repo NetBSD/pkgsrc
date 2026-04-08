@@ -1,4 +1,4 @@
-# $NetBSD: redmine.mk,v 1.17 2026/02/18 16:26:21 taca Exp $
+# $NetBSD: redmine.mk,v 1.18 2026/04/08 14:02:52 taca Exp $
 
 .if !defined(_RUBY_REDMINE_MK)
 _RUBY_REDMINE_MK=	# defined
@@ -9,7 +9,7 @@ _RUBY_REDMINE_MK=	# defined
 # RM_VERSION_DEFAULT
 #	Select default Redmine version.
 #
-#	Possible values: 51 60 61
+#	Possible values: 60 61
 #	Default: 61
 #
 #
@@ -19,14 +19,14 @@ _RUBY_REDMINE_MK=	# defined
 #	Ruby version to use. This variable should not be set in
 #	packages.  It assumes that it is  used by bulk build tools.
 #
-#	Possible values: 51 60 61
+#	Possible values: 60 61
 #	Default: ${RUBY_VERSION_DEFAULT}
 #
 # === Package-settable variables ===
 #
 # RM_VERSIONS_SUPPORTED
 #	Supported Redmine version.
-#	Possible values: 51 60 61
+#	Possible values: 60 61
 #	Default: 60
 #
 #
@@ -34,7 +34,7 @@ _RUBY_REDMINE_MK=	# defined
 #
 # RM_VER
 #	Redmine version.
-#	Possible values: 51 60 61
+#	Possible values: 60 61
 #	Default: 60
 #
 # RM_DIR
@@ -55,7 +55,7 @@ RM_VERSION_REQD?=	${PKGNAME_REQD:C/${RUBY_PKGPREFIX}-redmine([0-9]+)-.*/\1/}
 .endif
 
 RM_VERSION_DEFAULT?=	61
-RM_VERSIONS_SUPPORTED?=	61 60 51
+RM_VERSIONS_SUPPORTED?=	61 60
 
 RM_VERSION?=	# empty
 RM_VER?=	# empty
