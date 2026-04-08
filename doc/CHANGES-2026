@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2146 2026/04/08 05:43:59 bsiegert Exp $
+$NetBSD: CHANGES-2026,v 1.2147 2026/04/08 13:38:57 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3382,3 +3382,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated meta-pkgs/xfce4 to 4.20.0nb16 [gutteridge 2026-04-07]
 	Updated lang/go125 to 1.25.9 [bsiegert 2026-04-08]
 	Updated lang/go126 to 1.26.2 [bsiegert 2026-04-08]
+	Updated net/vnstat to 2.13 [sborrill 2026-04-08]
+	Added net/vnstati 2.13 [sborrill 2026-04-08]
