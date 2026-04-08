@@ -1,4 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2026/04/08 13:37:32 sborrill Exp $
+# $NetBSD: Makefile,v 1.2 2026/04/08 16:10:20 sborrill Exp $
+# Version is in Makefile.common shared with net/vnstati
+# PKGREVISION should be bumped here
+
+PKGREVISION=	1
 
 PKGNAME=	${DISTNAME:S/-/i-/}
 
@@ -11,6 +15,7 @@ CONFLICTS+=		vnstat<2.13
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 DEPENDS+=	vnstat>=2.13:../../net/vnstat
+BUILD_TARGET=	vnstati
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vnstati			\
