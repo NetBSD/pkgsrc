@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2151 2026/04/08 14:32:28 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2152 2026/04/08 14:34:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3388,3 +3388,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/ruby-mime-types-data to 3.2026.0407 [taca 2026-04-08]
 	Removed mail/ruby-roadie-rails31 [taca 2026-04-08]
 	Removed devel/ruby-observer [taca 2026-04-08]
+	Removed devel/ruby-tsort [taca 2026-04-08]
