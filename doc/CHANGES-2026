@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2148 2026/04/08 14:01:56 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2149 2026/04/08 14:08:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3385,3 +3385,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/vnstat to 2.13 [sborrill 2026-04-08]
 	Added net/vnstati 2.13 [sborrill 2026-04-08]
 	Removed devel/ruby-redmine51 [taca 2026-04-08]
+	Updated mail/ruby-mime-types-data to 3.2026.0407 [taca 2026-04-08]
