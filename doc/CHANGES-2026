@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2162 2026/04/08 15:10:57 tsutsui Exp $
+$NetBSD: CHANGES-2026,v 1.2163 2026/04/08 19:54:04 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3399,3 +3399,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed time/ruby-timeout [taca 2026-04-08]
 	Removed www/ruby-uri [taca 2026-04-08]
 	Updated graphics/ruby-cairo to 1.18.5 [tsutsui 2026-04-08]
+	Updated pkgtools/mktool to 1.5.7 [jperkin 2026-04-08]
