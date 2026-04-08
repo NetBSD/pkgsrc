@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.26 2025/05/03 16:51:15 nia Exp $
+$NetBSD: distinfo,v 1.27 2026/04/08 12:49:57 wiz Exp $
 
 BLAKE2s (x11vnc-0.9.17.tar.gz) = afca0d47d38c54bfd38a08140191248c9ed3b48f0a19a80f668a52a0e7605582
 SHA512 (x11vnc-0.9.17.tar.gz) = 687c41e03cca43dbca6ffdeb40960dddfba54ba00cf890f89f63fd66b9559a4c09602f84c1d4b7ffd7ac58818b90893013925d94a45a6feb83ab8cf7a02c1fe8
 Size (x11vnc-0.9.17.tar.gz) = 1691520 bytes
 SHA1 (patch-configure.ac) = 8ec2a6c8727614aacec4fb18340b16a215902ca5
 SHA1 (patch-src_uinput.c) = 37976b4bfe07535a8b183496e384456aa11bf0bf
-SHA1 (patch-x11vnc_unixpw.c) = bb611f4b307a54ef2898de635acde59da9102074
+SHA1 (patch-src_unixpw.c) = bb611f4b307a54ef2898de635acde59da9102074
