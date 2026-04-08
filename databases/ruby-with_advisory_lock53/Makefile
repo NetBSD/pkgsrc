@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/02/11 07:36:40 taca Exp $
+# $NetBSD: Makefile,v 1.2 2026/04/08 14:29:33 taca Exp $
 
 DISTNAME=	with_advisory_lock-5.3.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/-/53-/}
@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/ClosureTree/with_advisory_lock
 COMMENT=	Advisory locking for ActiveRecord
 LICENSE=	mit
 
-RUBY_VERSIONS_ACCEPTED=	32 33 34
+RUBY_VERSIONS_ACCEPTED=	33 34
 
 # This pacakge is assumed to used by redmine51, redmine60 and redmine61.
 # To shared by multiple rails, omit dependency here.

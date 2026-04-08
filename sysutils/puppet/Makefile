@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2026/02/03 16:05:54 taca Exp $
+# $NetBSD: Makefile,v 1.67 2026/04/08 14:29:34 taca Exp $
 
 DISTNAME=		puppet-7.24.0
 PKGREVISION=		1
@@ -20,7 +20,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-puppet-resource_api>=1.5<2:../../sysutils/ruby-puppe
 DEPENDS+=	${RUBY_PKGPREFIX}-scanf>=1.0.0<2:../../devel/ruby-scanf
 DEPENDS+=	${RUBY_PKGPREFIX}-semantic_puppet>=1.0<2:../../devel/ruby-semantic_puppet
 
-RUBY_VERSIONS_ACCEPTED=	32 33 34
+RUBY_VERSIONS_ACCEPTED=	33 34
 
 RUBYGEM_OPTIONS+=	--format-executable
 RUBYGEM_MANPAGES=	yes
