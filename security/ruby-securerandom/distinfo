@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2024/12/16 09:09:11 taca Exp $
-
-BLAKE2s (securerandom-0.4.1.gem) = 5fbd8d161eef07f4cc90a9a311d617030937e7cd85e9341f32ce9f7ab8fa4f5d
-SHA512 (securerandom-0.4.1.gem) = 33a7927215fd6941b562302868d8a25e48a9a04d2e12826d3673ff7d6d7cdc791913fd3f76facc06847f59f98af5932b817934a0519445d4d232d694ec81cd56
-Size (securerandom-0.4.1.gem) = 7168 bytes
