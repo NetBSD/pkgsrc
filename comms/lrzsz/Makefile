@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2025/04/28 17:00:09 tnn Exp $
+# $NetBSD: Makefile,v 1.38 2026/04/08 11:44:57 tnn Exp $
 
 DISTNAME=	lrzsz-0.12.20
 PKGREVISION=	1
@@ -18,6 +18,7 @@ GNU_CONFIGURE=		yes
 CFLAGS+=	-Wno-error=implicit-int
 CFLAGS+=	-Wno-error=implicit-function-declaration
 CFLAGS+=	-Wno-error=incompatible-pointer-types
+CPPFLAGS.Linux+=-DSTRICT_PROTOTYPES=1	# XXX glibc 2.43
 
 .if (${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" \
 	|| ${OPSYS} == "Linux" || ${OPSYS} == "Haiku")
