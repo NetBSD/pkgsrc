@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: vnstatd.sh,v 1.2 2026/04/08 13:35:58 sborrill Exp $
+# $NetBSD: vnstatd.sh,v 1.3 2026/04/08 16:08:47 sborrill Exp $
 #
 
 # PROVIDE: vnstatd
@@ -10,7 +10,7 @@ $_rc_subr_loaded . /etc/rc.subr
 
 name="vnstatd"
 rcvar=$name
-command="@PREFIX@/bin/${name}"
+command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
 command_args="-d -p $pidfile"
 dbdir="@VARBASE@/db/vnstat"
