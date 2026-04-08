@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2026/01/27 08:39:37 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2026/04/08 13:04:01 wiz Exp $
 
 DISTNAME=	cinepaint-1.0-4
 PKGNAME=	cinepaint-1.0.4
@@ -21,6 +21,10 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config msgfmt gmake flex
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-python
+
+CFLAGS+=		-Wno-incompatible-pointer-types
+CFLAGS+=		-Wno-implicit-function-declaration
+CFLAGS+=		-Wno-int-conversion
 
 LDFLAGS.SunOS+=		-lstdc++ -lsocket -lX11
 
