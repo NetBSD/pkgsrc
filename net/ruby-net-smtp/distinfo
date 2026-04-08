@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2025/02/09 14:41:50 taca Exp $
-
-BLAKE2s (net-smtp-0.5.1.gem) = 363b41cf733227cd64f6929c9520f1d810bc26401048cb225f885f1b559e1a0d
-SHA512 (net-smtp-0.5.1.gem) = f9a1a74443af62a62d7adf37eb920ea40f7ec30b94559fca3cb1c6ef4505ba5c6a0df324b4f4469ac3c5497f6d8f55c869d946e02865058296be8a5ed48c7f55
-Size (net-smtp-0.5.1.gem) = 17408 bytes
