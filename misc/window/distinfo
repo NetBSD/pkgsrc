@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2026/04/08 14:50:53 buhrow Exp $
+$NetBSD: distinfo,v 1.9 2026/04/08 19:43:47 buhrow Exp $
 
-BLAKE2s (window-20260302.tar.gz) = a316fecd3aebcabb7b61749f1ace67a3799feb48dea67fefa53298ad3dd8aa8a
-SHA512 (window-20260302.tar.gz) = 55f93b85925e11f2e42f51910cc76a6bc34c10283906f7f939a92555b5b63c3d5471afb8f98f17f769645233a617229f794c3df36cc37754aaca66e54345ebc0
-Size (window-20260302.tar.gz) = 84075 bytes
+BLAKE2s (window-20260407.tar.gz) = 97f8b3bdf473eba5dd9b3ad864002df6cb601b5ad683a44b71780eae82078cae
+SHA512 (window-20260407.tar.gz) = 04298526f9aa31ece4acf5b793c225bfd8a1318c2c3711907501421d4825a1fe615c24ae29b79ec1ecbc153b25ed4a9cf63780818bc80d3e4657be9e9d93b9b4
+Size (window-20260407.tar.gz) = 84074 bytes
 SHA1 (patch-ww.h) = 19281574830d256c7e2f80b12a176f07c56beb8e
 SHA1 (patch-wwframe.c) = 81fe73d55e81e0b5f8f7803068688994d71fe714
 SHA1 (patch-wwlabel.c) = a7a72a85720822d1388f31b107432a074b1a260e
