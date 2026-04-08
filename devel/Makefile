@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4609 2026/04/08 14:00:18 taca Exp $
+# $NetBSD: Makefile,v 1.4610 2026/04/08 14:32:04 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3505,7 +3505,6 @@ SUBDIR+=	ruby-necromancer
 SUBDIR+=	ruby-needle
 SUBDIR+=	ruby-nenv
 SUBDIR+=	ruby-neovim
-SUBDIR+=	ruby-observer
 SUBDIR+=	ruby-octokit
 SUBDIR+=	ruby-octokit4
 SUBDIR+=	ruby-ole
