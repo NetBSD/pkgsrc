@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2026/03/02 23:50:10 buhrow Exp $
+# $NetBSD: Makefile,v 1.8 2026/04/08 19:43:47 buhrow Exp $
 
-DISTNAME=	window-20260302
-PKGREVISION=	2
+DISTNAME=	window-20260407
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
