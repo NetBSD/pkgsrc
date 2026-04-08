@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/01/26 17:32:13 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2026/04/08 12:29:31 wiz Exp $
 
 DISTNAME=	detex-2.8
 CATEGORIES=	textproc
@@ -11,6 +11,9 @@ COMMENT=	Remove LaTeX commands
 LICENSE=	modified-bsd # nearly
 
 USE_TOOLS+=	lex
+
+CFLAGS+=	-Wno-implicit-function-declaration
+CFLAGS+=	-Wno-implicit-int
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
