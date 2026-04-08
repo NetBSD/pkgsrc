@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2026/03/06 21:08:03 bsiegert Exp $
+# $NetBSD: Makefile,v 1.10 2026/04/08 05:45:09 bsiegert Exp $
 
 DISTNAME=	lima-1.2.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lima-vm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
