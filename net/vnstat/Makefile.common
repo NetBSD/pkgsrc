@@ -1,0 +1,34 @@
+# $NetBSD: Makefile.common,v 1.1 2026/04/08 13:35:58 sborrill Exp $
+#
+# used by net/vnstat/Makefile
+# used by net/vnstati/Makefile
+
+DISTNAME=	vnstat-2.13
+CATEGORIES=	net
+MASTER_SITES=	http://humdi.net/vnstat/
+
+MAINTAINER=	sborrill@NetBSD.org
+HOMEPAGE=	https://humdi.net/vnstat/
+COMMENT=	Small network traffic monitor
+LICENSE=	gnu-gpl-v2
+
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	gmake
+
+SUBST_CLASSES+=			fix-dbpath
+SUBST_STAGE.fix-dbpath=		pre-configure
+SUBST_MESSAGE.fix-dbpath=	Fixing path to database files
+SUBST_FILES.fix-dbpath=		src/common.h cfg/vnstat.conf
+SUBST_FILES.fix-dbpath+=	man/vnstat.1 man/vnstatd.8
+SUBST_FILES.fix-dbpath+=	man/vnstati.1
+SUBST_SED.fix-dbpath=		-e 's,/var/lib/,${VARBASE}/db/,g'
+
+SUBST_CLASSES+=			fix-etcpath
+SUBST_STAGE.fix-etcpath=	pre-configure
+SUBST_MESSAGE.fix-etcpath=	Fixing path to configuration files
+SUBST_FILES.fix-etcpath=	src/cfg.c
+SUBST_FILES.fix-etcpath+=	man/vnstat.1 man/vnstatd.8
+SUBST_FILES.fix-etcpath+=	man/vnstati.1
+SUBST_SED.fix-etcpath=		-e 's,/etc/,${PKG_SYSCONFDIR}/,g'
+
+BUILD_DEFS+=	PKG_SYSCONFDIR VARBASE
