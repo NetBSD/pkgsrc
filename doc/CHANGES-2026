@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2157 2026/04/08 14:59:06 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2158 2026/04/08 15:03:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3394,3 +3394,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/ruby-readline [taca 2026-04-08]
 	Removed lang/ruby32-base [taca 2026-04-08]
 	Removed devel/ruby-irb [taca 2026-04-08]
+	Removed security/ruby-securerandom [taca 2026-04-08]
