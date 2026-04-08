@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.688 2026/03/09 03:24:35 jnemeth Exp $
+# $NetBSD: Makefile,v 1.689 2026/04/08 14:11:20 taca Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -414,7 +414,6 @@ SUBDIR+=	ruby-mime-types1
 SUBDIR+=	ruby-mini_mime
 SUBDIR+=	ruby-roadie
 SUBDIR+=	ruby-roadie-rails
-SUBDIR+=	ruby-roadie-rails31
 SUBDIR+=	ruby-roadie-rails32
 SUBDIR+=	ruby-roadie-rails33
 SUBDIR+=	ruby-tmail
