@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2025/08/30 22:45:25 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2026/04/08 12:27:19 wiz Exp $
 
 DISTNAME=	lcms-1.19
 PKGREVISION=	7
@@ -14,6 +14,8 @@ COMMENT=	Little Color Management System -- a color management library
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 TEST_TARGET=		check
+
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 # lcms does not need zlib, but will look for it and link it to tifficc
 # if present.  Therefore, we don't enjoin lcms from finding zlib, but
