@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.318 2026/04/08 14:45:10 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.319 2026/04/08 15:24:16 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -576,7 +576,7 @@ MULTI+=	RUBY_VER=${RUBY_VERS:U${RUBY_VERSION_DEFAULT}}
 #	any specific version of ruby command.  In this case, package's
 #	name begin with "ruby-".
 #	If RUBY_NOVERSION is "No" (default), the package's name begins
-#	with ${RUBY_NAME}; "ruby32", "ruby33" and so on.
+#	with ${RUBY_NAME}; "ruby33", "ruby34" and so on.
 #
 #	It also affects to RUBY_DOC, RUBY_EG...
 #
