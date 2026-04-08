@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4611 2026/04/08 14:34:39 taca Exp $
+# $NetBSD: Makefile,v 1.4612 2026/04/08 14:40:47 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3539,7 +3539,6 @@ SUBDIR+=	ruby-rb_sys
 SUBDIR+=	ruby-rbtree
 SUBDIR+=	ruby-rcsparse
 SUBDIR+=	ruby-rd-mode
-SUBDIR+=	ruby-readline
 SUBDIR+=	ruby-red-colors
 SUBDIR+=	ruby-red-datasets
 SUBDIR+=	ruby-redmine-flatly-light-theme
