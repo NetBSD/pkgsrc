@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/03/08 13:28:11 pin Exp $
+# $NetBSD: Makefile,v 1.8 2026/04/09 18:12:26 pin Exp $
 
-DISTNAME=	xan-0.56.0
+DISTNAME=	xan-0.57.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=medialab/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

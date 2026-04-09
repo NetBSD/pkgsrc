@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/03/08 13:28:11 pin Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/04/09 18:12:26 pin Exp $
 bin/xan
 share/doc/xan/LOVE_LETTER.md
 share/doc/xan/NOTES.md
@@ -75,6 +75,7 @@ share/doc/xan/cookbook/dates.md
 share/doc/xan/cookbook/dedup.md
 share/doc/xan/cookbook/frequency_tables.md
 share/doc/xan/cookbook/urls.md
+share/doc/xan/design/dates_overhaul.md
 share/doc/xan/gazettes/1_2023_sep.md
 share/doc/xan/gazettes/2_2023_oct.md
 share/doc/xan/gazettes/3_2023_nov.md
