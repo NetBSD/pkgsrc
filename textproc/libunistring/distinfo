@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2026/04/09 05:56:04 wiz Exp $
+$NetBSD: distinfo,v 1.20 2026/04/09 05:59:30 wiz Exp $
 
 BLAKE2s (libunistring-1.4.2.tar.gz) = d7b7b08a113d29fdc7ff55e1f76b969c09e2706596367a4d9b1f67c50ddbe0f4
 SHA512 (libunistring-1.4.2.tar.gz) = 9a0b1442703bfb49d55b0a9f5fb4a8aa2a511e90cc0e7d3d6a477dea038ee0f7625bb50063bfb24b374ad11fb5525036e56e7c72e892b583a56df74e1968a671
 Size (libunistring-1.4.2.tar.gz) = 5046603 bytes
-SHA1 (patch-tests_pselect.c) = bd5c3bd4f5b7f41856d409f165be0e53e8aaee80
+SHA1 (patch-tests_pselect.c) = 2b70096d8c283fe2164c082a31248cdcc3f35685
