@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2166 2026/04/08 20:37:11 buhrow Exp $
+$NetBSD: CHANGES-2026,v 1.2167 2026/04/09 05:50:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3403,3 +3403,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-cryptography to 46.0.7 [wiz 2026-04-08]
 	Updated security/py-cryptography_vectors to 46.0.7 [wiz 2026-04-08]
 	Updated misc/window to 20260407 [buhrow 2026-04-08]
+	Updated graphics/png to 1.6.57 [wiz 2026-04-09]
