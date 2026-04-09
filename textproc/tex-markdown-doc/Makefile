@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2026/04/03 01:16:24 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/04/09 07:25:11 wiz Exp $
 
 DISTNAME=	markdown.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-3.14.1
+PKGREVISION=	1
 TEXLIVE_REV=	78531
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
