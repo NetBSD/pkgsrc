@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/06/05 14:42:22 dkazankov Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/04/09 07:24:02 wiz Exp $
 ${OCAML_SITELIB}/ocplib-simplex/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocplib-simplex/OcplibSimplex.a
 ${OCAML_SITELIB}/ocplib-simplex/OcplibSimplex.cma
@@ -67,3 +67,4 @@ ${OCAML_SITELIB}/ocplib-simplex/version.mli
 share/doc/ocplib-simplex/CHANGES.md
 share/doc/ocplib-simplex/LICENSE
 share/doc/ocplib-simplex/README.md
+share/doc/ocplib-simplex/odoc-config.sexp
