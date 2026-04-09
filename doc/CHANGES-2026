@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2191 2026/04/09 20:04:12 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2192 2026/04/09 21:53:02 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3433,3 +3433,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox140 to 140.9.1 [gutteridge 2026-04-09]
 	Updated www/firefox140-l10n to 140.9.1 [gutteridge 2026-04-09]
 	Updated mail/neomutt to 20260406nb1 [wiz 2026-04-09]
+	Updated x11/xfce4-screenshooter to 1.11.3 [gutteridge 2026-04-09]
