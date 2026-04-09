@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2168 2026/04/09 05:56:16 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2169 2026/04/09 07:18:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3405,3 +3405,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/window to 20260407 [buhrow 2026-04-08]
 	Updated graphics/png to 1.6.57 [wiz 2026-04-09]
 	Updated textproc/libunistring to 1.4.2 [wiz 2026-04-09]
+	Updated lang/python313 to 3.13.13 [adam 2026-04-09]
+	Updated lang/py313-html-docs to 3.13.13 [adam 2026-04-09]
+	Updated lang/python314 to 3.14.4 [adam 2026-04-09]
+	Updated lang/py314-html-docs to 3.14.4 [adam 2026-04-09]
