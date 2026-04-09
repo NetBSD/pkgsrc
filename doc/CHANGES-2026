@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2181 2026/04/09 17:17:13 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2182 2026/04/09 17:18:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3423,3 +3423,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/serie to 0.7.1 [pin 2026-04-09]
 	Updated editors/redox to 0.3.2 [pin 2026-04-09]
 	Updated editors/reovim to 0.14.4 [pin 2026-04-09]
+	Updated editors/tp-note to 1.25.20 [pin 2026-04-09]
