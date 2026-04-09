@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2188 2026/04/09 18:14:43 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2189 2026/04/09 18:37:27 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3430,3 +3430,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/xan to 0.57.0 [pin 2026-04-09]
 	Updated wm/herbstluftwm to 0.9.6 [pin 2026-04-09]
 	Updated wm/pekwm to 0.4.4 [pin 2026-04-09]
+	Updated www/firefox140 to 140.9.1 [gutteridge 2026-04-09]
