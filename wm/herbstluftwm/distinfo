@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2024/10/10 17:08:25 nia Exp $
+$NetBSD: distinfo,v 1.14 2026/04/09 18:13:23 pin Exp $
 
-BLAKE2s (herbstluftwm-0.9.5.tar.gz) = 8eabb56323356a3e086edb063fc588a591a68dc9316d9f73f610ae3223c0e9c6
-SHA512 (herbstluftwm-0.9.5.tar.gz) = a85fd1ab16b873f512d6965cc4a93524e3ed4a15079d0d4ee54012e217bd41db3b54729c1b30ee361c34b38799f95bc537099056ba7a5f791bf2be6724bc92c3
-Size (herbstluftwm-0.9.5.tar.gz) = 556773 bytes
+BLAKE2s (herbstluftwm-0.9.6.tar.gz) = 02703e56f2e8e5339a9c82eeb8a6addaba6106d9745d0a79b9a1d1264f6f7292
+SHA512 (herbstluftwm-0.9.6.tar.gz) = 08a1b336f59aae978474997fbf4e5c9b99cdee4e8eab5c87762947e569f90f978c8f662b3f4fc4a0b7ae6f2f24d336bc3c771223af16723df457ff496b1a08e0
+Size (herbstluftwm-0.9.6.tar.gz) = 603996 bytes
 SHA1 (patch-CMakeLists.txt) = d373394ad059eb455e2e5abc1feea0e21f1b53e6
 SHA1 (patch-src_xmainloop.cpp) = 2cc2272c2f26707aa422ec7e51723b14c91fe802
