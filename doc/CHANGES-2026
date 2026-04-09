@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2189 2026/04/09 18:37:27 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.2190 2026/04/09 18:39:36 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3431,3 +3431,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated wm/herbstluftwm to 0.9.6 [pin 2026-04-09]
 	Updated wm/pekwm to 0.4.4 [pin 2026-04-09]
 	Updated www/firefox140 to 140.9.1 [gutteridge 2026-04-09]
+	Updated www/firefox140-l10n to 140.9.1 [gutteridge 2026-04-09]
