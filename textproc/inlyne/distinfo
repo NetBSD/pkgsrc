@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2025/02/06 11:26:29 pin Exp $
+$NetBSD: distinfo,v 1.9 2026/04/09 08:56:34 wiz Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -1746,3 +1746,4 @@ Size (zvariant_derive-4.2.0.crate) = 11057 bytes
 BLAKE2s (zvariant_utils-2.1.0.crate) = b142d63425365aedf109bafac551bf52a32897836b938d4835a415a0444db92c
 SHA512 (zvariant_utils-2.1.0.crate) = 345b70d1106b37df41426efdb1ba49bf270e00898381c2a8021b5761c59efdea55def45cb2e2598b130b6cba8733503f3997a55578bca90867ab3e8f2346f80e
 Size (zvariant_utils-2.1.0.crate) = 7043 bytes
+SHA1 (patch-.._vendor_metrics-0.24.0_src_recorder_mod.rs) = e71a2029a0a094f195fa5d6b47caeecc9a94cda0
