@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.356 2026/04/02 19:06:34 wiz Exp $
+# $NetBSD: Makefile,v 1.357 2026/04/09 09:25:47 jperkin Exp $
 
 DISTNAME=	rustc-1.94.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -77,6 +77,7 @@ MAKE_ENV+=		CARGO_BUILD_JOBS=${_MAKE_JOBS_N}
 
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 MAKE_ENV.SunOS+=	AR=gar
+MAKE_ENV.SunOS+=	BOOTSTRAP_SKIP_TARGET_SANITY=1
 
 # Debugging of crate resolution
 # Annoyingly, this makes the powerpc build succeed...
