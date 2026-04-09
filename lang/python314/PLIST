@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2026/02/03 20:30:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/04/09 07:17:29 adam Exp $
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1237,7 +1237,7 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-25.3-py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-26.0.1-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -2687,6 +2687,9 @@ lib/python${PY_VER_SUFFIX}/test/mp_preload.pyo
 lib/python${PY_VER_SUFFIX}/test/mp_preload_flush.py
 lib/python${PY_VER_SUFFIX}/test/mp_preload_flush.pyc
 lib/python${PY_VER_SUFFIX}/test/mp_preload_flush.pyo
+lib/python${PY_VER_SUFFIX}/test/mp_preload_large_sysargv.py
+lib/python${PY_VER_SUFFIX}/test/mp_preload_large_sysargv.pyc
+lib/python${PY_VER_SUFFIX}/test/mp_preload_large_sysargv.pyo
 lib/python${PY_VER_SUFFIX}/test/mp_preload_main.py
 lib/python${PY_VER_SUFFIX}/test/mp_preload_main.pyc
 lib/python${PY_VER_SUFFIX}/test/mp_preload_main.pyo
@@ -3916,6 +3919,9 @@ lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_capi.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_code.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_code.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_code.pyo
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_collections.py
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_collections.pyc
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_collections.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_cprofile.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_cprofile.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_cprofile.pyo
@@ -3931,6 +3937,9 @@ lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_dict.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_enumerate.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_enumerate.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_enumerate.pyo
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_frame.py
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_frame.pyc
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_frame.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_func_annotations.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_func_annotations.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_func_annotations.pyo
@@ -5023,9 +5032,6 @@ lib/python${PY_VER_SUFFIX}/test/test_pyrepl/__init__.pyo
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/__main__.py
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/__main__.pyc
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/__main__.pyo
-lib/python${PY_VER_SUFFIX}/test/test_pyrepl/eio_test_script.py
-lib/python${PY_VER_SUFFIX}/test/test_pyrepl/eio_test_script.pyc
-lib/python${PY_VER_SUFFIX}/test/test_pyrepl/eio_test_script.pyo
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/support.py
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/support.pyc
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/support.pyo
@@ -5523,6 +5529,9 @@ lib/python${PY_VER_SUFFIX}/test/test_tools/msgfmt_data/fuzzy.po
 lib/python${PY_VER_SUFFIX}/test/test_tools/msgfmt_data/general.json
 lib/python${PY_VER_SUFFIX}/test/test_tools/msgfmt_data/general.mo
 lib/python${PY_VER_SUFFIX}/test/test_tools/msgfmt_data/general.po
+lib/python${PY_VER_SUFFIX}/test/test_tools/test_compute_changes.py
+lib/python${PY_VER_SUFFIX}/test/test_tools/test_compute_changes.pyc
+lib/python${PY_VER_SUFFIX}/test/test_tools/test_compute_changes.pyo
 lib/python${PY_VER_SUFFIX}/test/test_tools/test_freeze.py
 lib/python${PY_VER_SUFFIX}/test/test_tools/test_freeze.pyc
 lib/python${PY_VER_SUFFIX}/test/test_tools/test_freeze.pyo
