@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2026/04/09 06:22:51 mrg Exp $
+$NetBSD: distinfo,v 1.17 2026/04/09 06:30:03 mrg Exp $
 
 BLAKE2s (gcc-12.5.0-1.diff) = 2e5b0c6e8cececdddf451c07f55a47e693410cb4c50aedb8534ec345810d05c6
 SHA512 (gcc-12.5.0-1.diff) = 6137995194e2c5b1bbedef6efd1083018ee03cadbb29c2e1a8bda7ef49a76b13c307749f5a1ee4284d399d200a5a46aa888feacc2bfaf743de25f16b00640c76
@@ -19,6 +19,10 @@ SHA1 (patch-gcc_config_arm_elf.h) = 57748157084319cb92d892f2ea5b2f3355567551
 SHA1 (patch-gcc_config_arm_netbsd-eabi.h) = 85eb89de6f2e64fac50251f06d7e4eab35903dae
 SHA1 (patch-gcc_config_arm_netbsd-elf.h) = 367d83c808fd7b5b1989d0490b532ad06b425b31
 SHA1 (patch-gcc_config_nvptx_gen-opt.sh) = 67b8c84f198561c1d964a50946937a0a9cc26749
+SHA1 (patch-gcc_config_rs6000_rs6000-logue.cc) = 8852ee6656836836b882f673448873190c44466b
+SHA1 (patch-gcc_config_rs6000_rs6000.cc) = 9aa2e73720f380c45a59e9e3b4c2b4fd0c4d689e
+SHA1 (patch-gcc_config_rs6000_sysv4.h) = be389b7b2a784ca4cd8dd8b8cefb03ae158d368c
+SHA1 (patch-gcc_config_rs6000_t-netbsd) = 2deb4b1735c95903aa4f66447a87cb41155d82b7
 SHA1 (patch-gcc_configure) = f13d23c46315d18fdbc3bbbad26d0763e2b27690
 SHA1 (patch-gcc_genmatch.cc) = e902ba7ee27e61a632bd8a976c0b16168ef47b85
 SHA1 (patch-gcc_targhooks.cc) = 3bd54b7c3efc310aa2277f33cbd87b4a877cafea
