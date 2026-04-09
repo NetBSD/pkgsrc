@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2184 2026/04/09 17:20:38 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2185 2026/04/09 18:11:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3426,3 +3426,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/tp-note to 1.25.20 [pin 2026-04-09]
 	Updated sysutils/parallel-disk-usage to 0.23.0 [pin 2026-04-09]
 	Updated textproc/rumdl to 0.1.68 [pin 2026-04-09]
+	Updated shells/oh-my-posh to 29.9.4 [pin 2026-04-09]
