@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2026/03/24 12:32:36 sborrill Exp $
+# $NetBSD: Makefile,v 1.25 2026/04/09 09:47:12 sborrill Exp $
 
-DISTNAME=	gam-7.38.00
+DISTNAME=	gam-7.40.00
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GAM-team/}
 GITHUB_PROJECT=	GAM
@@ -8,7 +8,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 # The version internally sometimes has leading zeros removed
 VERSION_TRIM=	${PKGVERSION_NOREV:C/\.0([0-9])/.\1/g}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	sborrill@NetBSD.org
 HOMEPAGE=	https://github.com/GAM-team/GAM
 COMMENT=	Command line tool for Google Workspace admins
 LICENSE=	apache-2.0
