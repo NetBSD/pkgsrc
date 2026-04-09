@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2026/03/27 11:19:19 pin Exp $
+# $NetBSD: Makefile,v 1.4 2026/04/09 17:15:03 pin Exp $
 
-DISTNAME=	redox-0.3.1
+DISTNAME=	redox-0.3.2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=JackDerksen/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,9 +12,9 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.94.1
+#RUST_REQ=	1.95.0
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.94.1 on amd64
+#This package is confirmed to build with Rust 1.95.0 on amd64
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
