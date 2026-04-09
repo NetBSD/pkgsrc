@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2025/03/05 06:24:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.34 2026/04/09 07:11:41 wiz Exp $
 bin/h5cc
 bin/h5clear
 bin/h5copy
@@ -13,6 +13,8 @@ bin/h5import
 bin/h5jam
 bin/h5ls
 bin/h5mkgrp
+${PLIST.mpi}bin/h5pcc
+${PLIST.mpi}bin/h5perf
 bin/h5perf_serial
 bin/h5repack
 bin/h5repart
@@ -21,6 +23,7 @@ bin/h5unjam
 ${PLIST.hl}bin/h5watch
 bin/mirror_server
 bin/mirror_server_stop
+${PLIST.mpi}bin/ph5diff
 cmake/hdf5-config-version.cmake
 cmake/hdf5-config.cmake
 cmake/hdf5-targets-noconfig.cmake
