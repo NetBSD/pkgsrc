@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/02/25 15:44:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/04/09 05:56:04 wiz Exp $
 include/unicase.h
 include/uniconv.h
 include/unictype.h
@@ -13,7 +13,6 @@ include/unistring/cdefs.h
 include/unistring/iconveh.h
 include/unistring/inline.h
 include/unistring/localcharset.h
-include/unistring/stdbool.h
 include/unistring/stdint.h
 include/unistring/version.h
 include/unistring/woe32dll.h
