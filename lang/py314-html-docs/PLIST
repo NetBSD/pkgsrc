@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2026/02/03 20:30:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/04/09 07:17:30 adam Exp $
 share/doc/python3.14/.buildinfo
 share/doc/python3.14/404.html
 share/doc/python3.14/_downloads/6dc1f3f4f0e6ca13cb42ddf4d6cbc8af/tzinfo_examples.py
+share/doc/python3.14/_images/datetime-inheritance.svg
 share/doc/python3.14/_images/hashlib-blake2-tree.png
 share/doc/python3.14/_images/kde_example.png
 share/doc/python3.14/_images/mac_installer_01_introduction.png
@@ -55,6 +56,7 @@ share/doc/python3.14/_sources/c-api/import.rst.txt
 share/doc/python3.14/_sources/c-api/index.rst.txt
 share/doc/python3.14/_sources/c-api/init.rst.txt
 share/doc/python3.14/_sources/c-api/init_config.rst.txt
+share/doc/python3.14/_sources/c-api/interp-lifecycle.rst.txt
 share/doc/python3.14/_sources/c-api/intro.rst.txt
 share/doc/python3.14/_sources/c-api/iter.rst.txt
 share/doc/python3.14/_sources/c-api/iterator.rst.txt
@@ -74,6 +76,7 @@ share/doc/python3.14/_sources/c-api/object.rst.txt
 share/doc/python3.14/_sources/c-api/objimpl.rst.txt
 share/doc/python3.14/_sources/c-api/perfmaps.rst.txt
 share/doc/python3.14/_sources/c-api/picklebuffer.rst.txt
+share/doc/python3.14/_sources/c-api/profiling.rst.txt
 share/doc/python3.14/_sources/c-api/refcounting.rst.txt
 share/doc/python3.14/_sources/c-api/reflection.rst.txt
 share/doc/python3.14/_sources/c-api/sequence.rst.txt
@@ -81,8 +84,12 @@ share/doc/python3.14/_sources/c-api/set.rst.txt
 share/doc/python3.14/_sources/c-api/slice.rst.txt
 share/doc/python3.14/_sources/c-api/stable.rst.txt
 share/doc/python3.14/_sources/c-api/structures.rst.txt
+share/doc/python3.14/_sources/c-api/subinterpreters.rst.txt
+share/doc/python3.14/_sources/c-api/synchronization.rst.txt
 share/doc/python3.14/_sources/c-api/sys.rst.txt
+share/doc/python3.14/_sources/c-api/threads.rst.txt
 share/doc/python3.14/_sources/c-api/time.rst.txt
+share/doc/python3.14/_sources/c-api/tls.rst.txt
 share/doc/python3.14/_sources/c-api/tuple.rst.txt
 share/doc/python3.14/_sources/c-api/type.rst.txt
 share/doc/python3.14/_sources/c-api/typehints.rst.txt
@@ -154,6 +161,8 @@ share/doc/python3.14/_sources/howto/sorting.rst.txt
 share/doc/python3.14/_sources/howto/timerfd.rst.txt
 share/doc/python3.14/_sources/howto/unicode.rst.txt
 share/doc/python3.14/_sources/howto/urllib2.rst.txt
+share/doc/python3.14/_sources/improve-page-nojs.rst.txt
+share/doc/python3.14/_sources/improve-page.rst.txt
 share/doc/python3.14/_sources/installing/index.rst.txt
 share/doc/python3.14/_sources/library/__future__.rst.txt
 share/doc/python3.14/_sources/library/__main__.rst.txt
@@ -421,6 +430,7 @@ share/doc/python3.14/_sources/library/test.rst.txt
 share/doc/python3.14/_sources/library/text.rst.txt
 share/doc/python3.14/_sources/library/textwrap.rst.txt
 share/doc/python3.14/_sources/library/threading.rst.txt
+share/doc/python3.14/_sources/library/threadsafety.rst.txt
 share/doc/python3.14/_sources/library/time.rst.txt
 share/doc/python3.14/_sources/library/timeit.rst.txt
 share/doc/python3.14/_sources/library/tk.rst.txt
@@ -607,6 +617,7 @@ share/doc/python3.14/c-api/import.html
 share/doc/python3.14/c-api/index.html
 share/doc/python3.14/c-api/init.html
 share/doc/python3.14/c-api/init_config.html
+share/doc/python3.14/c-api/interp-lifecycle.html
 share/doc/python3.14/c-api/intro.html
 share/doc/python3.14/c-api/iter.html
 share/doc/python3.14/c-api/iterator.html
@@ -626,6 +637,7 @@ share/doc/python3.14/c-api/object.html
 share/doc/python3.14/c-api/objimpl.html
 share/doc/python3.14/c-api/perfmaps.html
 share/doc/python3.14/c-api/picklebuffer.html
+share/doc/python3.14/c-api/profiling.html
 share/doc/python3.14/c-api/refcounting.html
 share/doc/python3.14/c-api/reflection.html
 share/doc/python3.14/c-api/sequence.html
@@ -633,8 +645,12 @@ share/doc/python3.14/c-api/set.html
 share/doc/python3.14/c-api/slice.html
 share/doc/python3.14/c-api/stable.html
 share/doc/python3.14/c-api/structures.html
+share/doc/python3.14/c-api/subinterpreters.html
+share/doc/python3.14/c-api/synchronization.html
 share/doc/python3.14/c-api/sys.html
+share/doc/python3.14/c-api/threads.html
 share/doc/python3.14/c-api/time.html
+share/doc/python3.14/c-api/tls.html
 share/doc/python3.14/c-api/tuple.html
 share/doc/python3.14/c-api/type.html
 share/doc/python3.14/c-api/typehints.html
@@ -737,6 +753,8 @@ share/doc/python3.14/howto/sorting.html
 share/doc/python3.14/howto/timerfd.html
 share/doc/python3.14/howto/unicode.html
 share/doc/python3.14/howto/urllib2.html
+share/doc/python3.14/improve-page-nojs.html
+share/doc/python3.14/improve-page.html
 share/doc/python3.14/index.html
 share/doc/python3.14/installing/index.html
 share/doc/python3.14/library/__future__.html
@@ -1005,6 +1023,7 @@ share/doc/python3.14/library/test.html
 share/doc/python3.14/library/text.html
 share/doc/python3.14/library/textwrap.html
 share/doc/python3.14/library/threading.html
+share/doc/python3.14/library/threadsafety.html
 share/doc/python3.14/library/time.html
 share/doc/python3.14/library/timeit.html
 share/doc/python3.14/library/tk.html
