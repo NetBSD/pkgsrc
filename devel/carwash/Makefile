@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2026/03/04 14:57:18 pin Exp $
+# $NetBSD: Makefile,v 1.9 2026/04/09 17:12:52 pin Exp $
 
-DISTNAME=	carwash-0.3.4
-# v0.3.5 requires Rust >= 1.93
+DISTNAME=	carwash-0.3.5
 CATEGORIES=	devel
 #MASTER_SITES=	${MASTER_SITE_GITHUB:=epistates/}
 #GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,7 +14,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.85.0
+RUST_REQ=	1.93.0
 USE_TOOLS+=	pkg-config gmake perl
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
