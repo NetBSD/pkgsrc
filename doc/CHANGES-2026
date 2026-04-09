@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2173 2026/04/09 07:44:46 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2174 2026/04/09 07:49:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3414,3 +3414,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/shfmt to 3.13.1 [adam 2026-04-09]
 	Updated net/rclone to 1.73.4 [adam 2026-04-09]
 	Updated devel/protobuf-c to 1.5.2nb3 [wiz 2026-04-09]
+	Updated cad/tnt-mmtl to 1.2.2nb18 [wiz 2026-04-09]
