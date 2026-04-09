@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2024/03/01 06:19:33 kim Exp $
+# $NetBSD: Makefile,v 1.20 2026/04/09 05:56:04 wiz Exp $
 
-DISTNAME=	libunistring-1.2
+DISTNAME=	libunistring-1.4.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=libunistring/}
 
-MAINTAINER=	gdt@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/libunistring/
 COMMENT=	Unicode string library
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 # or-later OR or-later
