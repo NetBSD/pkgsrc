@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.6 2026/03/10 14:06:55 adam Exp $
+# $NetBSD: go-modules.mk,v 1.7 2026/04/09 07:30:59 adam Exp $
 
 GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.24.mod
 GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.24.zip
@@ -23,8 +23,8 @@ GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.17.0.mod
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.17.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.42.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.42.0.zip
-GO_MODULE_FILES+=	golang.org/x/term/@v/v0.40.0.mod
-GO_MODULE_FILES+=	golang.org/x/term/@v/v0.40.0.zip
+GO_MODULE_FILES+=	golang.org/x/term/@v/v0.41.0.mod
+GO_MODULE_FILES+=	golang.org/x/term/@v/v0.41.0.zip
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.38.0.mod
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.38.0.zip
 GO_MODULE_FILES+=	mvdan.cc/editorconfig/@v/v0.3.0.mod
