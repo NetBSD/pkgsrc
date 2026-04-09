@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2175 2026/04/09 09:36:28 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2176 2026/04/09 09:47:42 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3417,3 +3417,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated cad/tnt-mmtl to 1.2.2nb18 [wiz 2026-04-09]
 	Updated devel/buf to 1.67.0 [adam 2026-04-09]
 	Updated devel/sdl12-compat to 1.2.76 [adam 2026-04-09]
+	Updated sysutils/gam to 7.40.00 [sborrill 2026-04-09]
