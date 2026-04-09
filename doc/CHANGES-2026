@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2177 2026/04/09 15:27:04 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2178 2026/04/09 17:13:11 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3419,3 +3419,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/sdl12-compat to 1.2.76 [adam 2026-04-09]
 	Updated sysutils/gam to 7.40.00 [sborrill 2026-04-09]
 	Updated lang/php85 to 8.5.5 [taca 2026-04-09]
+	Updated devel/carwash to 0.3.5 [pin 2026-04-09]
