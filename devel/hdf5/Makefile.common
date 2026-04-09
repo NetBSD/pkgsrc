@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2025/03/19 09:18:14 adam Exp $
+# $NetBSD: Makefile.common,v 1.30 2026/04/09 07:11:41 wiz Exp $
 # used by devel/hdf5/Makefile
 # used by devel/hdf5-c++/Makefile
 
@@ -24,16 +24,17 @@ CHECK_PORTABILITY_SKIP+=	HDF5Examples/*/*/*
 CHECK_PORTABILITY_SKIP+=	bin/snapshot
 CHECK_PORTABILITY_SKIP+=	hl/tools/h5watch/testh5watch.sh.in
 CHECK_PORTABILITY_SKIP+=	java/test/junit.sh.in
+# bash script
+CHECK_PORTABILITY_SKIP+=	utils/subfiling_vfd/h5fuse.in
+REPLACE_BASH+=			utils/subfiling_vfd/h5fuse.in
 
 # it appears that this file is informative only and is not actually
 # used by any installed tools
 CHECK_WRKREF_SKIP=	${PREFIX}/lib/libhdf5.settings
 
-REPLACE_BASH+=		utils/subfiling_vfd/h5fuse.in
-
-SUBST_CLASSES+=		unwrap
-SUBST_STAGE.unwrap=	post-install
-SUBST_SED.unwrap=	-e "s,${WRAPPER_BINDIR}/,,g"
+#SUBST_CLASSES+=	unwrap
+#SUBST_STAGE.unwrap=	post-install
+#SUBST_SED.unwrap=	-e "s,${WRAPPER_BINDIR}/,,g"
 
 post-extract:
 	${CP} ${WRKSRC}/config/freebsd ${WRKSRC}/config/netbsd
