@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.7 2026/04/05 20:50:33 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.8 2026/04/09 18:07:01 maya Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -75,3 +75,9 @@ net/bind918: Security fix
 
 Pullup ticket #7071 - requested by gutteridge
 net/wireshark: Build fix
+
+Pullup ticket #7072 - requested by morr
+editors/vim-share: Security fix
+
+Pullup ticket #7073 - requested by morr
+editors/vim-share: Security fix
