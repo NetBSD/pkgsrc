@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2170 2026/04/09 07:24:11 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2171 2026/04/09 07:25:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3410,3 +3410,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/python314 to 3.14.4 [adam 2026-04-09]
 	Updated lang/py314-html-docs to 3.14.4 [adam 2026-04-09]
 	Updated math/ocaml-ocplib-simplex to 0.5.1nb3 [wiz 2026-04-09]
+	Updated textproc/tex-markdown-doc to 3.14.1nb1 [wiz 2026-04-09]
