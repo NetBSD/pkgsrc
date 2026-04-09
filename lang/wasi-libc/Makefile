@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2026/03/25 22:56:28 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/04/09 18:44:08 gutteridge Exp $
 
 DISTNAME=	wasi-libc-0.0.0pre20250809
 CATEGORIES=	lang
@@ -47,8 +47,8 @@ MAKE_FLAGS+=	INSTALL_DIR=${DESTDIR}${PREFIX}/wasi
 #BUILD_TARGET=	finish
 BUILD_TARGET=	no-check-symbols
 
-# iconv.h from libiconv get pulled in on SunOS (via clang)
-# It conflicts with musl libc so must be removed.
+# iconv.h from libiconv gets pulled in on SunOS (via clang).
+# It conflicts with musl libc, so must be removed.
 pre-configure:
 	rm -f ${BUILDLINK_DIR}/include/iconv.h
 	${MKDIR} ${WRKSRC}/build/wasm32-wasi/resource-dir/lib/wasi
