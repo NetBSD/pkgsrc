@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2026/02/20 21:41:15 triaxx Exp $
+# $NetBSD: Makefile,v 1.14 2026/04/09 06:30:03 mrg Exp $
 
 PKGNAME=	${GCC_PKGNAME}-${GCC12_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc12-libs needs to be bumped to be at least 1 more than the
 ## PKGREVISION of this package!
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	The GNU Compiler Collection (GCC) - 12.0 Release Series
 
 LANGS=			c

@@ -1,0 +1,10 @@
+--- gcc/config/rs6000/t-netbsd.orig	2024-06-20 01:08:06.000000000 -0700
++++ gcc/config/rs6000/t-netbsd	2024-12-17 15:48:58.969841508 -0800
+@@ -34,3 +34,7 @@
+ MULTILIB_EXCEPTIONS	=
+ 
+ MULTILIB_MATCHES	= ${MULTILIB_MATCHES_FLOAT}
++
++# It is important that crtbegin.o, etc., aren't surprised by stuff in .sdata.
++CRTSTUFF_T_CFLAGS += -msdata=none
++CRTSTUFF_T_CFLAGS_S += -msdata=none
