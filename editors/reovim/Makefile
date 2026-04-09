@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/04/02 14:11:48 pin Exp $
+# $NetBSD: Makefile,v 1.7 2026/04/09 17:16:54 pin Exp $
 
-DISTNAME=	reovim-0.8.1
-# The MSRV relaxing patch no longer works.
-# reovim v0.14.x requires Rust >= 1.92.
+DISTNAME=	reovim-0.14.4
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ds1sqe/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,6 +12,8 @@ LICENSE=	gnu-agpl-v3
 
 .include "cargo-depends.mk"
 
+RUST_REQ=	1.92.0
+
 INSTALLATION_DIRS=	bin
 
 do-install:
@@ -21,4 +21,5 @@ do-install:
 		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
+.include "../../devel/protobuf/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
