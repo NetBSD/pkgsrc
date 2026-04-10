@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.17 2026/01/08 14:26:29 adam Exp $
+$NetBSD: distinfo,v 1.18 2026/04/10 08:40:57 adam Exp $
 
-BLAKE2s (bird-3.2.0.tar.gz) = 129f84bd8e224462afceabde6a6dc3a18205adfe33fc0afb90b3ccaa7219c6be
-SHA512 (bird-3.2.0.tar.gz) = df26edb9329ef548c4029689858cb4c5c490a28d0813bd14b2e6028798933d534bd4bb4e60ab754df190ef4c6a9b4e2d571af0d2bb539619109a306a793d5c50
-Size (bird-3.2.0.tar.gz) = 2737808 bytes
+BLAKE2s (bird-3.2.1.tar.gz) = 1a576051e4df75b5b84eeb0fc0bd335e4c3b59efe7c1920ee94d6ef9ec732fa7
+SHA512 (bird-3.2.1.tar.gz) = e7f5f18a387b7e37c801630e4fd49ca5dcad18d9123dc9badb78811ea95dfe0e2ad2963b709b0a44658ffb17ebbe89eacfb24705594f46dead815bc4c3a6e220
+Size (bird-3.2.1.tar.gz) = 2759143 bytes
 SHA1 (patch-Makefile.in) = e5bea06cf3cc7f7d8f6711c8e67c000b0f79e665
 SHA1 (patch-configure) = 41939832d43a1c6d5b4a331be957a4c38f207f60
 SHA1 (patch-doc_bird.conf.example) = 4b8799ed0bc6bf8ed0e8a9966f54ab9bea0bacb1
