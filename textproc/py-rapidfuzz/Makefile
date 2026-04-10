@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2025/11/02 20:28:01 adam Exp $
+# $NetBSD: Makefile,v 1.45 2026/04/10 07:33:12 adam Exp $
 
-DISTNAME=	rapidfuzz-3.14.3
+DISTNAME=	rapidfuzz-3.14.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rapidfuzz/}
