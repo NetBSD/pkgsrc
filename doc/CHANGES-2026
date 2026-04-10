@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2197 2026/04/10 08:21:07 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2198 2026/04/10 08:41:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3448,3 +3448,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-xml2rfc to 3.33.0 [adam 2026-04-10]
 	Updated net/libtorrent to 0.16.9 [adam 2026-04-10]
 	Updated net/rtorrent to 0.16.9 [adam 2026-04-10]
+	Updated net/ettercap to 0.8.4.1 [adam 2026-04-10]
+	Updated net/ettercap-gtk to 0.8.4.1 [adam 2026-04-10]
+	Updated net/bird to 3.2.1 [adam 2026-04-10]
