@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.22 2026/01/08 14:59:35 wiz Exp $
+$NetBSD: distinfo,v 1.23 2026/04/10 09:54:49 adam Exp $
 
-BLAKE2s (libsodium-1.0.21.tar.gz) = c991d247e9005e1c58d21fbdf8ab1dc88d25a2776fdaadf781ff10ec763afb58
-SHA512 (libsodium-1.0.21.tar.gz) = ee8cc2f3f5707b172bf75d8c04afbd5f0c83c6f94dbab3f988f07aab716d96f1662556a59e09b3d83c3bd5c22f59327ad95937bf499d523c86146f4df830f777
-Size (libsodium-1.0.21.tar.gz) = 2046164 bytes
-SHA1 (patch-src_libsodium_crypto__ipcrypt_crypto_ipcrypt.c) = ea63c9412b829f2be518fa21e6ff8270e35b9745
-SHA1 (patch-src_libsodium_crypto__ipcrypt_ipcrypt__armcrypto.c) = 5207c10696ef733599e7e0093ffe0fd09845e1ff
-SHA1 (patch-src_libsodium_include_sodium_crypto__ipcrypt.h) = 6ffd155b6e46f8d3e00562abddef11773f75e9e6
+BLAKE2s (libsodium-1.0.22.tar.gz) = aa48fb176b76124d53f2e1171e4db8949a3cb8f4fbc8e73af4f49060b9d5ea4f
+SHA512 (libsodium-1.0.22.tar.gz) = 8f392de781f09578d9a32000a4198e8d199ab910743017af3b3c5cae8053f745bcc885a9417fcaffb03b832400d829aef3a93c065bbb77b92598d882b6dcf187
+Size (libsodium-1.0.22.tar.gz) = 2008529 bytes

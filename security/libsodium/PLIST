@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2026/01/08 14:54:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/04/10 09:54:49 adam Exp $
 include/sodium.h
 include/sodium/core.h
 include/sodium/crypto_aead_aegis128l.h
@@ -25,12 +25,16 @@ include/sodium/crypto_generichash.h
 include/sodium/crypto_generichash_blake2b.h
 include/sodium/crypto_hash.h
 include/sodium/crypto_hash_sha256.h
+include/sodium/crypto_hash_sha3.h
 include/sodium/crypto_hash_sha512.h
 include/sodium/crypto_ipcrypt.h
 include/sodium/crypto_kdf.h
 include/sodium/crypto_kdf_blake2b.h
 include/sodium/crypto_kdf_hkdf_sha256.h
 include/sodium/crypto_kdf_hkdf_sha512.h
+include/sodium/crypto_kem.h
+include/sodium/crypto_kem_mlkem768.h
+include/sodium/crypto_kem_xwing.h
 include/sodium/crypto_kx.h
 include/sodium/crypto_onetimeauth.h
 include/sodium/crypto_onetimeauth_poly1305.h
