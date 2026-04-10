@@ -1,12 +1,35 @@
-@comment $NetBSD: PLIST,v 1.1 2026/02/17 21:53:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/04/10 09:59:24 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/croniter/__init__.py
 ${PYSITELIB}/croniter/__init__.pyc
 ${PYSITELIB}/croniter/__init__.pyo
 ${PYSITELIB}/croniter/croniter.py
 ${PYSITELIB}/croniter/croniter.pyc
 ${PYSITELIB}/croniter/croniter.pyo
+${PYSITELIB}/croniter/tests/__init__.py
+${PYSITELIB}/croniter/tests/__init__.pyc
+${PYSITELIB}/croniter/tests/__init__.pyo
+${PYSITELIB}/croniter/tests/base.py
+${PYSITELIB}/croniter/tests/base.pyc
+${PYSITELIB}/croniter/tests/base.pyo
+${PYSITELIB}/croniter/tests/test_croniter.py
+${PYSITELIB}/croniter/tests/test_croniter.pyc
+${PYSITELIB}/croniter/tests/test_croniter.pyo
+${PYSITELIB}/croniter/tests/test_croniter_dst_repetition.py
+${PYSITELIB}/croniter/tests/test_croniter_dst_repetition.pyc
+${PYSITELIB}/croniter/tests/test_croniter_dst_repetition.pyo
+${PYSITELIB}/croniter/tests/test_croniter_hash.py
+${PYSITELIB}/croniter/tests/test_croniter_hash.pyc
+${PYSITELIB}/croniter/tests/test_croniter_hash.pyo
+${PYSITELIB}/croniter/tests/test_croniter_random.py
+${PYSITELIB}/croniter/tests/test_croniter_random.pyc
+${PYSITELIB}/croniter/tests/test_croniter_random.pyo
+${PYSITELIB}/croniter/tests/test_croniter_range.py
+${PYSITELIB}/croniter/tests/test_croniter_range.pyc
+${PYSITELIB}/croniter/tests/test_croniter_range.pyo
+${PYSITELIB}/croniter/tests/test_croniter_speed.py
+${PYSITELIB}/croniter/tests/test_croniter_speed.pyc
+${PYSITELIB}/croniter/tests/test_croniter_speed.pyo
