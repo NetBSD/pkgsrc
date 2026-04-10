@@ -1,8 +1,13 @@
-# $NetBSD: Makefile,v 1.45 2025/04/15 07:20:37 adam Exp $
+# $NetBSD: Makefile,v 1.46 2026/04/10 17:38:51 he Exp $
 
-DISTNAME=	exabgp-4.2.25
+DISTNAME=	exabgp-5.0.8
+#DISTNAME=	${GITHUB_TAG}
+#GITHUB_PROJECT=	exabgp
+#GITHUB_TAG=	ee218bd03eee3e749bdbc102b0e8d3e8f6be6c6d
+#PKGNAME=	${GITHUB_PROJECT}-5.0.6a
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Exa-Networks/}
+#DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	he@NetBSD.org
 HOMEPAGE=	https://github.com/Exa-Networks/exabgp/
@@ -18,6 +23,7 @@ REPLACE_PERL+=		etc/exabgp/run/watchdog-1.pl
 
 REPLACE_PYTHON+=	etc/exabgp/run/*.run
 REPLACE_PYTHON+=	etc/exabgp/run/*.py
+REPLACE_PYTHON+=	etc/exabgp/example-api-program.run
 
 CHECK_PORTABILITY_SKIP+=	dev/release/google
 
