@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.59 2026/03/26 13:11:00 adam Exp $
+$NetBSD: distinfo,v 1.60 2026/04/10 08:20:46 adam Exp $
 
-BLAKE2s (libtorrent-0.16.8.tar.gz) = aed12ef31d67130e9fa76256646a1a94c37a35c8297a165f7a3555434e86ffc5
-SHA512 (libtorrent-0.16.8.tar.gz) = 24b8e907b18ad0e324546db702ef910fa6f7d3f8e09b14737e5e215c5396e1aee44dd8b357af42c2bfc389d895bfb5b9710ff0be1e195f468651f1176963bc98
-Size (libtorrent-0.16.8.tar.gz) = 475438 bytes
+BLAKE2s (libtorrent-0.16.9.tar.gz) = e13f2adffa62d6bec781e033763950d571da23126ba1f0aae82a0341e91901ae
+SHA512 (libtorrent-0.16.9.tar.gz) = 3da1657969f07bb4a67bffcf345ac8020bf76ff09ab74a417020624a8ae6aa43ad498ba5c7ae5a10a276ef9c7a0ed52b43e6cee386e116d0b8a39398e6e1dd51
+Size (libtorrent-0.16.9.tar.gz) = 478451 bytes
 SHA1 (patch-src_data_chunk__list.cc) = 581e38ccd2e31b991e1a95dcd4836a7bda11e4e6
 SHA1 (patch-src_data_memory__chunk.cc) = 25c1e529223ab4873f61430e922949eeb29637c4
