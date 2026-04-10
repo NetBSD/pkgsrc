@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27079 2026/04/10 17:25:08 kikadf Exp $
+$NetBSD: TODO,v 1.27080 2026/04/10 20:12:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1341,6 +1341,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o virtuoso-7.2.0p1
 	o visual-regexp-3.1
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
+	o vulkan-headers-1.4.349
 	o wMosaic-3.8.22
 	o wandio-4.2.3
 	o wap-utils-1.4.1
