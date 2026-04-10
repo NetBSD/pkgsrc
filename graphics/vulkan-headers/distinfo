@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/12/22 14:43:12 adam Exp $
+$NetBSD: distinfo,v 1.14 2026/04/10 20:15:06 wiz Exp $
 
-BLAKE2s (vulkan-headers-1.4.335.tar.gz) = ca132f4ac44adae5655521fbf66076bea5dd6933faa5271552e1c89b5c6477f7
-SHA512 (vulkan-headers-1.4.335.tar.gz) = e0df34634106c321c6e196282b74be1b953e25fb4837850efd2dacecadc7ecfbdbc81db8b7b35f073ca5748ccef336f3e766e4325615570b0eb3a883a728c8ba
-Size (vulkan-headers-1.4.335.tar.gz) = 2871458 bytes
+BLAKE2s (vulkan-headers-1.4.349.tar.gz) = 72f9f24c0ea3c98083e1079c577ea0776ad748fba3e9754dbdb5f2a2515631f2
+SHA512 (vulkan-headers-1.4.349.tar.gz) = ca42dff1cc1b4549f604eb91daf1ba1208403436a64a566b60c2ca6dbe9041e4cd09f95c3e12044f731130e9edf9982df87cb6f263b1bc09edc56f8af95bdd30
+Size (vulkan-headers-1.4.349.tar.gz) = 3262099 bytes
