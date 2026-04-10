@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2200 2026/04/10 12:57:06 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2201 2026/04/10 12:59:12 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3456,3 +3456,20 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/lazygit to 0.61.0 [adam 2026-04-10]
 	Updated devel/catch2 to 3.14.0 [adam 2026-04-10]
 	Updated net/iperf3 to 3.21 [adam 2026-04-10]
+	Updated devel/ruby-atk to 4.3.6 [tsutsui 2026-04-10]
+	Updated devel/ruby-gio2 to 4.3.6 [tsutsui 2026-04-10]
+	Updated devel/ruby-glib2 to 4.3.6 [tsutsui 2026-04-10]
+	Updated devel/ruby-gobject-introspection to 4.3.6 [tsutsui 2026-04-10]
+	Updated devel/ruby-pango to 4.3.6 [tsutsui 2026-04-10]
+	Updated graphics/ruby-cairo-gobject to 4.3.6 [tsutsui 2026-04-10]
+	Updated graphics/ruby-clutter to 4.3.6 [tsutsui 2026-04-10]
+	Updated graphics/ruby-clutter-gdk to 4.3.6 [tsutsui 2026-04-10]
+	Updated graphics/ruby-clutter-gtk to 4.3.6 [tsutsui 2026-04-10]
+	Updated graphics/ruby-gdk3 to 4.3.6 [tsutsui 2026-04-10]
+	Updated graphics/ruby-gdk_pixbuf2 to 4.3.6 [tsutsui 2026-04-10]
+	Updated graphics/ruby-rsvg2 to 4.3.6 [tsutsui 2026-04-10]
+	Updated multimedia/ruby-clutter-gstreamer to 4.3.6 [tsutsui 2026-04-10]
+	Updated multimedia/ruby-gstreamer to 4.3.6 [tsutsui 2026-04-10]
+	Updated print/ruby-poppler to 4.3.6 [tsutsui 2026-04-10]
+	Updated x11/ruby-gtk3 to 4.3.6 [tsutsui 2026-04-10]
+	Updated x11/ruby-gtksourceview3 to 4.3.6 [tsutsui 2026-04-10]
