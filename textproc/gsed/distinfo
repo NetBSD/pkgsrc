@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.35 2026/03/25 22:48:38 wiz Exp $
+$NetBSD: distinfo,v 1.36 2026/04/10 09:50:52 jperkin Exp $
 
 BLAKE2s (sed-4.9.tar.xz) = 106e94f33309ff895f952e9200ab27817004f10fae357ad3a6d952f44932b312
 SHA512 (sed-4.9.tar.xz) = 36157a4b4a2430cf421b7bd07f1675d680d9f1616be96cf6ad6ee74a9ec0fe695f8d0b1e1f0b008bbb33cc7fcde5e1c456359bbbc63f8aebdd4fedc3982cf6dc
 Size (sed-4.9.tar.xz) = 1397092 bytes
 SHA1 (patch-Makefile.in) = fb8766d941af00f0f66d903ee7fa4016e987cce2
+SHA1 (patch-gnulib-tests_localename.c) = 27172a2604f8545937d2f19293d1c412b4dd0b61
 SHA1 (patch-gnulib-tests_pselect.c) = d25ce77076386804a01a0085d6619c9896ecf5d3
 SHA1 (patch-gnulib-tests_vma-iter.c) = fc021e079c623a352a2f2c98f94794c7c0ce2197
 SHA1 (patch-sed_compile.c) = 692265f5d3dacda9b54339f168e00546cb36a94d
