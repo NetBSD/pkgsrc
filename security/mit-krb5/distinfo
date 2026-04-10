@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.83 2026/04/07 14:12:48 tnn Exp $
+$NetBSD: distinfo,v 1.84 2026/04/10 10:38:05 jperkin Exp $
 
 BLAKE2s (krb5-1.22.2.tar.gz) = d43a371657c4def55ee2502f9b5ac6ab2e9263b077dd94fecc717cb3cd85e6f5
 SHA512 (krb5-1.22.2.tar.gz) = 3237cacfb2019285107991a3211e0d74944c605942ab38a8b4b372703b8f02f5779fa2de80c4e201bd59703d557f37ac346bdc5ea14b986b0a0db23eb422fc6f
@@ -17,6 +17,7 @@ SHA1 (patch-include_osconf.hin) = d31a8164f417bc31a787c8e16d1bd24f27b7140d
 SHA1 (patch-kadmin_cli_ss_wrapper.c) = e32e6180f8d508cb2eb18489ce2fef0a1ad0f51d
 SHA1 (patch-kprop_kproplog.c) = cbfd43495d40ecd9edf427c3dfb135b0fe2c9546
 SHA1 (patch-lib_apputils_Makefile.in) = 085004041a2bb8c4bb3074c2e71e71f22f4f06d7
+SHA1 (patch-lib_apputils_net-server.c) = 4defa579117eb02d8e22d228a381b4ffa31a05c7
 SHA1 (patch-lib_apputils_udppktinfo.c) = 47ac861181faebfe5f95c28be329ce917ece872c
 SHA1 (patch-lib_gssapi_Makefile.in) = 806b089d3b12ea9a17c6caab59cbdeb6ec17bbc3
 SHA1 (patch-lib_gssapi_krb5_import__name.c) = 7445639b82eadf9b1feb1448c1654fa6ddc937aa
@@ -24,8 +25,9 @@ SHA1 (patch-lib_kdb_Makefile.in) = 0c45e34ea8b5d0270c386d430b0d37469e8440ea
 SHA1 (patch-lib_kdb_kdb__log.c) = dc759fae6099e7586686bcf14d7cd775854e0360
 SHA1 (patch-lib_krb5_ccache_Makefile.in) = 330ae21ec3b290ae16478c2c49a138acac5bf2fd
 SHA1 (patch-lib_krb5_ccache_ccbase.c) = 421b8f1f4fb9d42580e6cd493006b63eb077ce9e
+SHA1 (patch-lib_krb5_os_addr.c) = c01eedbff966e0e61b68df71a7b19f714474449b
 SHA1 (patch-lib_krb5_os_expand__path.c) = 20530c7a29cef443713d2c6e50b934ec0366796e
-SHA1 (patch-lib_krb5_os_locate__kdc.c) = fe0e9b3a5ad6c394e2a24d3e00192427661190ad
+SHA1 (patch-lib_krb5_os_locate__kdc.c) = dd2469f4e78c25f01e90d4b388cce4a88beab733
 SHA1 (patch-plugins_kdb_db2_Makefile.in) = eae56f7f450a299bdf1d86ee491af1fd51bd1d0c
 SHA1 (patch-plugins_kdb_db2_libdb2_Makefile.in) = b4b7e8e4192b5e5318f1e42c49315789619f3ae9
 SHA1 (patch-plugins_kdb_ldap_ldap__util_Makefile.in) = 7aa0f44cc02c523c837e7e3e1766624d2323deb9

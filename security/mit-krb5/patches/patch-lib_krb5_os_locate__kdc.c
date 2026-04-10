@@ -1,8 +1,9 @@
-$NetBSD: patch-lib_krb5_os_locate__kdc.c,v 1.1 2026/04/07 14:12:48 tnn Exp $
+$NetBSD: patch-lib_krb5_os_locate__kdc.c,v 1.2 2026/04/10 10:38:05 jperkin Exp $
 
 https://github.com/krb5/krb5/commit/ad4dcf1856dadc4b352b5c8ff08e51c7290fb41f
+Avoid sun conflict.
 
---- lib/krb5/os/locate_kdc.c.orig	2025-08-20 19:44:32.000000000 +0000
+--- lib/krb5/os/locate_kdc.c.orig	2026-01-29 23:18:10.000000000 +0000
 +++ lib/krb5/os/locate_kdc.c
 @@ -214,8 +214,8 @@ oom:
  }
@@ -25,6 +26,29 @@ https://github.com/krb5/krb5/commit/ad4dcf1856dadc4b352b5c8ff08e51c7290fb41f
      krb5_error_code code;
      size_t i;
      int default_port;
+@@ -297,16 +296,16 @@ locate_srv_conf_1(krb5_context context,
+ 
+ #ifndef _WIN32
+         if (hostspec[0] == '/') {
+-            struct sockaddr_un sun = { 0 };
++            struct sockaddr_un sockun = { 0 };
+ 
+-            sun.sun_family = AF_UNIX;
+-            if (strlcpy(sun.sun_path, hostspec, sizeof(sun.sun_path)) >=
+-                sizeof(sun.sun_path)) {
++            sockun.sun_family = AF_UNIX;
++            if (strlcpy(sockun.sun_path, hostspec, sizeof(sockun.sun_path)) >=
++                sizeof(sockun.sun_path)) {
+                 code = ENAMETOOLONG;
+                 goto cleanup;
+             }
+-            code = add_addr_to_list(serverlist, UNIXSOCK, AF_UNIX, sizeof(sun),
+-                                    (struct sockaddr *)&sun);
++            code = add_addr_to_list(serverlist, UNIXSOCK, AF_UNIX, sizeof(sockun),
++                                    (struct sockaddr *)&sockun);
+             if (code)
+                 goto cleanup;
+             continue;
 @@ -587,8 +586,8 @@ prof_locate_server(krb5_context context,
   * Return a NULL *host_out if there are any problems parsing the URI.
   */
