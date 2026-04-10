@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.37 2026/02/11 22:54:14 wiz Exp $
+# $NetBSD: metadata.mk,v 1.38 2026/04/10 08:41:35 wiz Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -59,9 +59,6 @@ ${_BUILD_INFO_FILE}: ${_PLIST_NOKEYWORDS}
 		fi;							\
 		${ECHO} "CATEGORIES=${CATEGORIES}";			\
 		${ECHO} "MAINTAINER=${MAINTAINER}";			\
-		if [ -n "${OWNER}" ]; then				\
-			${ECHO} "OWNER=${OWNER}";			\
-		fi;							\
 		if [ -n "${PREV_PKGPATH}" ]; then			\
 			${ECHO} "PREV_PKGPATH=${PREV_PKGPATH}";		\
 		fi;							\

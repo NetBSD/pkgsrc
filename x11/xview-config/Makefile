@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/10/29 05:07:24 asau Exp $
+# $NetBSD: Makefile,v 1.33 2026/04/10 08:41:36 wiz Exp $
 
 DISTNAME=		xview3.2p1-X11R6
 PKGNAME=		xview-config-3.2.1
@@ -6,7 +6,7 @@ PKGREVISION=		6
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-OWNER=			dholland@NetBSD.org
+MAINTAINER=		dholland@NetBSD.org
 COMMENT=		OpenLook Toolkit config files
 LICENSE=		sun-openlook-license
 
