@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2209 2026/04/10 20:42:59 sjmulder Exp $
+$NetBSD: CHANGES-2026,v 1.2210 2026/04/10 20:45:15 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3480,4 +3480,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/exabgp to 5.0.8 [he 2026-04-10]
 	Updated graphics/vulkan-headers to 1.4.349 [wiz 2026-04-10]
 	Updated math/bcal to 2.5 [sjmulder 2026-04-10]
-	Updated textproc/glow to 2.1.2nb9 [sjmulder 2026-04-10]
+	Updated textproc/glow to 2.1.2 [sjmulder 2026-04-10]
