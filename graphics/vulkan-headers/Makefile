@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2025/12/22 14:43:12 adam Exp $
+# $NetBSD: Makefile,v 1.17 2026/04/10 20:15:06 wiz Exp $
 
-DISTNAME=	vulkan-headers-1.4.335
+DISTNAME=	vulkan-headers-1.4.349
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
 GITHUB_PROJECT=	Vulkan-Headers
-GITHUB_TAG=	vulkan-sdk-${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/KhronosGroup/Vulkan-Headers
 COMMENT=	Headers for Vulkan Graphics API
 LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 USE_LANGUAGES=	c c++
 
 REPLACE_PYTHON+=	registry/*.py
