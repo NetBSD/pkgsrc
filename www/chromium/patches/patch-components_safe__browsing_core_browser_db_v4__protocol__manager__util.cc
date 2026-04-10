@@ -1,10 +1,10 @@
-$NetBSD: patch-components_safe__browsing_core_browser_db_v4__protocol__manager__util.cc,v 1.16 2026/03/14 12:40:32 kikadf Exp $
+$NetBSD: patch-components_safe__browsing_core_browser_db_v4__protocol__manager__util.cc,v 1.17 2026/04/10 17:31:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/safe_browsing/core/browser/db/v4_protocol_manager_util.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- components/safe_browsing/core/browser/db/v4_protocol_manager_util.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ components/safe_browsing/core/browser/db/v4_protocol_manager_util.cc
 @@ -112,7 +112,7 @@ std::ostream& operator<<(std::ostream& o
  PlatformType GetCurrentPlatformType() {

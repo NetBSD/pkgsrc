@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_vulkan-validation-layers_src_layers_external_vma_vk__mem__alloc.h,v 1.16 2026/03/14 12:40:43 kikadf Exp $
+$NetBSD: patch-third__party_vulkan-validation-layers_src_layers_external_vma_vk__mem__alloc.h,v 1.17 2026/04/10 17:32:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/vulkan-validation-layers/src/layers/external/vma/vk_mem_alloc.h.orig	2026-03-11 22:12:25.000000000 +0000
+--- third_party/vulkan-validation-layers/src/layers/external/vma/vk_mem_alloc.h.orig	2026-04-06 16:25:54.000000000 +0000
 +++ third_party/vulkan-validation-layers/src/layers/external/vma/vk_mem_alloc.h
 @@ -2971,7 +2971,7 @@ static void* vma_aligned_alloc(size_t al
  

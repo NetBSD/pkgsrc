@@ -1,12 +1,12 @@
-$NetBSD: patch-components_viz_service_display__embedder_skia__output__surface__impl.cc,v 1.16 2026/03/14 12:40:33 kikadf Exp $
+$NetBSD: patch-components_viz_service_display__embedder_skia__output__surface__impl.cc,v 1.17 2026/04/10 17:31:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/display_embedder/skia_output_surface_impl.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- components/viz/service/display_embedder/skia_output_surface_impl.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ components/viz/service/display_embedder/skia_output_surface_impl.cc
-@@ -1533,7 +1533,7 @@ GrBackendFormat SkiaOutputSurfaceImpl::G
+@@ -1532,7 +1532,7 @@ GrBackendFormat SkiaOutputSurfaceImpl::G
                                          VK_IMAGE_TILING_OPTIMAL, vk_format,
                                          si_format, image_context->color_space(),
                                          image_context->ycbcr_info());

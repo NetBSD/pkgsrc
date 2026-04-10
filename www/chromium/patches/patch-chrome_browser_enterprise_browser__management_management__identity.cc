@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_managed__ui.cc,v 1.16 2026/03/14 12:40:27 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_browser__management_management__identity.cc,v 1.1 2026/04/10 17:31:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/managed_ui.cc.orig	2026-03-11 22:12:25.000000000 +0000
-+++ chrome/browser/ui/managed_ui.cc
-@@ -433,7 +433,7 @@ std::optional<std::string> GetDeviceMana
+--- chrome/browser/enterprise/browser_management/management_identity.cc.orig	2026-04-06 16:25:54.000000000 +0000
++++ chrome/browser/enterprise/browser_management/management_identity.cc
+@@ -86,7 +86,7 @@ std::optional<std::string> GetDeviceMana
        g_browser_process->platform_part()->browser_policy_connector_ash();
    return connector->GetEnterpriseDomainManager();
  #else
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_managed__ui.cc,v 1.16 2026/03/14 12:40:27 kikad
    if (base::FeatureList::IsEnabled(
            features::kEnterpriseManagementDisclaimerUsesCustomLabel)) {
      std::string custom_management_label =
-@@ -463,7 +463,7 @@ std::optional<std::string> GetAccountMan
+@@ -116,7 +116,7 @@ std::optional<std::string> GetAccountMan
      return std::nullopt;
    }
  

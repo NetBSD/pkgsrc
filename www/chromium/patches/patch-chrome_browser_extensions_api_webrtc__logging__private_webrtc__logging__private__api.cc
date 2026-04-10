@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_extensions_api_webrtc__logging__private_webrtc__logging__private__api.cc,v 1.16 2026/03/14 12:40:26 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_api_webrtc__logging__private_webrtc__logging__private__api.cc,v 1.17 2026/04/10 17:31:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/webrtc_logging_private/webrtc_logging_private_api.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/extensions/api/webrtc_logging_private/webrtc_logging_private_api.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/extensions/api/webrtc_logging_private/webrtc_logging_private_api.cc
 @@ -28,7 +28,7 @@
  #include "extensions/browser/process_manager.h"
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_extensions_api_webrtc__logging__private_webrtc__lo
    if (extension) {
      enabled_by_permissions =
          extension->permissions_data()->active_permissions().HasAPIPermission(
-@@ -557,7 +557,7 @@ void WebrtcLoggingPrivateStartEventLoggi
+@@ -565,7 +565,7 @@ void WebrtcLoggingPrivateStartEventLoggi
  
  ExtensionFunction::ResponseAction
  WebrtcLoggingPrivateGetLogsDirectoryFunction::Run() {

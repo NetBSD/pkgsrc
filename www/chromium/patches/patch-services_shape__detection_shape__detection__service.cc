@@ -1,10 +1,10 @@
-$NetBSD: patch-services_shape__detection_shape__detection__service.cc,v 1.12 2026/03/14 12:40:40 kikadf Exp $
+$NetBSD: patch-services_shape__detection_shape__detection__service.cc,v 1.13 2026/04/10 17:31:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/shape_detection/shape_detection_service.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- services/shape_detection/shape_detection_service.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ services/shape_detection/shape_detection_service.cc
 @@ -22,7 +22,7 @@
  #elif BUILDFLAG(IS_ANDROID)

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_autofill_core_common_autofill__payments__features.cc,v 1.16 2026/03/14 12:40:30 kikadf Exp $
+$NetBSD: patch-components_autofill_core_common_autofill__payments__features.cc,v 1.17 2026/04/10 17:31:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_payments_features.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- components/autofill/core/common/autofill_payments_features.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ components/autofill/core/common/autofill_payments_features.cc
 @@ -32,7 +32,7 @@ BASE_FEATURE(kAutofillEnableAiBasedAmoun
  // of the allowlisted merchant websites.
@@ -69,7 +69,7 @@ $NetBSD: patch-components_autofill_core_common_autofill__payments__features.cc,v
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -173,7 +173,7 @@ BASE_FEATURE(kAutofillEnableFlatRateCard
+@@ -169,7 +169,7 @@ BASE_FEATURE(kAutofillEnableFlatRateCard
  // Payments Autofill UI.
  BASE_FEATURE(kAutofillEnableFlatRateCardBenefitsFromCurinos,
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -78,7 +78,25 @@ $NetBSD: patch-components_autofill_core_common_autofill__payments__features.cc,v
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -325,7 +325,7 @@ const base::FeatureParam<int> kAutofillV
+@@ -247,7 +247,7 @@ BASE_FEATURE(kAutofillEnableTouchToFillR
+ // the card, and FIDO is not.
+ BASE_FEATURE(kAutofillEnableVcn3dsAuthentication,
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+              base::FEATURE_ENABLED_BY_DEFAULT);
+ #else
+              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -271,7 +271,7 @@ BASE_FEATURE(kAutofillEnableWalletBrandi
+ // eligibility.
+ BASE_FEATURE(kAutofillPreferBuyNowPayLaterBlocklists,
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+              base::FEATURE_ENABLED_BY_DEFAULT);
+ #else
+              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -329,7 +329,7 @@ const base::FeatureParam<int> kAutofillV
      /*default_value=*/180};
  
  bool ShouldShowImprovedUserConsentForCreditCardSave() {

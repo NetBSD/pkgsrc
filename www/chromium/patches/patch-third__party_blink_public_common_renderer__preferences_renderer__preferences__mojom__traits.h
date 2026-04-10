@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_public_common_renderer__preferences_renderer__preferences__mojom__traits.h,v 1.16 2026/03/14 12:40:40 kikadf Exp $
+$NetBSD: patch-third__party_blink_public_common_renderer__preferences_renderer__preferences__mojom__traits.h,v 1.17 2026/04/10 17:31:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/public/common/renderer_preferences/renderer_preferences_mojom_traits.h.orig	2026-03-11 22:12:25.000000000 +0000
+--- third_party/blink/public/common/renderer_preferences/renderer_preferences_mojom_traits.h.orig	2026-04-06 16:25:54.000000000 +0000
 +++ third_party/blink/public/common/renderer_preferences/renderer_preferences_mojom_traits.h
 @@ -185,7 +185,7 @@ struct BLINK_COMMON_EXPORT
      return data.send_subresource_notification;

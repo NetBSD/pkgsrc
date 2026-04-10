@@ -1,10 +1,10 @@
-$NetBSD: patch-tools_gn_src_util_exe__path.cc,v 1.16 2026/03/14 12:40:43 kikadf Exp $
+$NetBSD: patch-tools_gn_src_util_exe__path.cc,v 1.17 2026/04/10 17:32:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/gn/src/util/exe_path.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- tools/gn/src/util/exe_path.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ tools/gn/src/util/exe_path.cc
 @@ -15,7 +15,7 @@
  #include <windows.h>

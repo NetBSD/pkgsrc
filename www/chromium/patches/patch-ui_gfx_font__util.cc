@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gfx_font__util.cc,v 1.16 2026/03/14 12:40:44 kikadf Exp $
+$NetBSD: patch-ui_gfx_font__util.cc,v 1.17 2026/04/10 17:32:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/font_util.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- ui/gfx/font_util.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ ui/gfx/font_util.cc
 @@ -7,7 +7,7 @@
  #include "build/build_config.h"

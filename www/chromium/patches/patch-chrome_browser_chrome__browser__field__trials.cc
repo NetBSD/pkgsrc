@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_chrome__browser__field__trials.cc,v 1.16 2026/03/14 12:40:25 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__browser__field__trials.cc,v 1.17 2026/04/10 17:31:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_field_trials.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/chrome_browser_field_trials.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/chrome_browser_field_trials.cc
-@@ -51,7 +51,7 @@
+@@ -53,12 +53,12 @@
  #include "chromeos/ash/services/multidevice_setup/public/cpp/first_run_field_trial.h"
  #endif
  
@@ -15,7 +15,22 @@ $NetBSD: patch-chrome_browser_chrome__browser__field__trials.cc,v 1.16 2026/03/1
  #include "base/nix/xdg_util.h"
  #include "ui/base/ui_base_features.h"
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -107,7 +107,7 @@ void ChromeBrowserFieldTrials::RegisterF
+ 
+-#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "base/check_deref.h"
+ #include "chrome/browser/first_run/first_run.h"
+ #include "chrome/browser/signin/before_fre_refresh_hats_field_trial.h"
+@@ -94,7 +94,7 @@ void ChromeBrowserFieldTrials::SetUpClie
+   }
+ #endif
+ 
+-#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   // This trial is client controlled on Mac and Linux because the survey is
+   // triggered on the very first run of Chrome. These platforms do not support
+   // variations seed on the first run.
+@@ -125,7 +125,7 @@ void ChromeBrowserFieldTrials::RegisterF
      base::FeatureList* feature_list) {
    variations::FeatureOverrides feature_overrides(*feature_list);
  

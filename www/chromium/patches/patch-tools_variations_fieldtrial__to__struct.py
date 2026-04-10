@@ -1,12 +1,12 @@
-$NetBSD: patch-tools_variations_fieldtrial__to__struct.py,v 1.16 2026/03/14 12:40:43 kikadf Exp $
+$NetBSD: patch-tools_variations_fieldtrial__to__struct.py,v 1.17 2026/04/10 17:32:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/variations/fieldtrial_to_struct.py.orig	2026-03-11 22:12:25.000000000 +0000
+--- tools/variations/fieldtrial_to_struct.py.orig	2026-04-06 16:25:54.000000000 +0000
 +++ tools/variations/fieldtrial_to_struct.py
-@@ -33,6 +33,9 @@ _platforms = [
+@@ -31,6 +31,9 @@ _platforms = [
      'linux',
      'mac',
      'windows',

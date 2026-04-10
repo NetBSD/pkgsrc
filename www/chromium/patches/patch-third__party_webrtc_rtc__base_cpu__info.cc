@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_webrtc_rtc__base_cpu__info.cc,v 1.13 2026/03/29 19:18:49 tnn Exp $
+$NetBSD: patch-third__party_webrtc_rtc__base_cpu__info.cc,v 1.14 2026/04/10 17:32:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/rtc_base/cpu_info.cc.orig	2026-03-20 23:29:56.000000000 +0000
+--- third_party/webrtc/rtc_base/cpu_info.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ third_party/webrtc/rtc_base/cpu_info.cc
 @@ -37,9 +37,13 @@
  #include <intrin.h>
@@ -20,7 +20,7 @@ $NetBSD: patch-third__party_webrtc_rtc__base_cpu__info.cc,v 1.13 2026/03/29 19:1
  
  // Parts of this file derived from Chromium's base/cpu.cc.
  
-@@ -178,11 +182,21 @@ bool Supports(ISA instruction_set_architecture) {
+@@ -178,11 +182,21 @@ bool Supports(ISA instruction_set_archit
      return 0 != (android_getCpuFeatures() & ANDROID_CPU_ARM_FEATURE_NEON);
  #elif defined(WEBRTC_LINUX)
      uint64_t hwcap = 0;

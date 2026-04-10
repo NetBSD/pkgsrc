@@ -1,12 +1,12 @@
-$NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.16 2026/03/14 12:40:37 kikadf Exp $
+$NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.17 2026/04/10 17:31:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/udp_socket_posix.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- net/socket/udp_socket_posix.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ net/socket/udp_socket_posix.cc
-@@ -78,6 +78,32 @@ constexpr int kBindRetries = 10;
+@@ -82,6 +82,32 @@ constexpr int kBindRetries = 10;
  constexpr int kPortStart = 1024;
  constexpr int kPortEnd = 65535;
  
@@ -39,7 +39,16 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.16 2026/03/14 12:40:37 kikad
  int GetSocketFDHash(int fd) {
    return fd ^ 1595649551;
  }
-@@ -559,12 +585,17 @@ int UDPSocketPosix::SetRecvTos() {
+@@ -135,7 +161,7 @@ uint32_t GetInterfaceForDestination(cons
+ }
+ #endif  // BUILDFLAG(IS_MAC)
+ 
+-#if !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS) && !BUILDFLAG(IS_FUCHSIA)
++#if !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS) && !BUILDFLAG(IS_FUCHSIA) && !BUILDFLAG(IS_BSD)
+ // Helper for IPv4 SSM. Sets sin_len on macOS, no-op on Linux.
+ group_source_req CreateIPv4SourceGroupRequest(const IPAddress& group_address,
+                                               const IPAddress& source_address,
+@@ -674,12 +700,17 @@ int UDPSocketPosix::SetRecvTos() {
  #endif  // BUILDFLAG(IS_APPLE)
    }
  
@@ -58,7 +67,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.16 2026/03/14 12:40:37 kikad
    if (confirm) {
      sendto_flags_ |= MSG_CONFIRM;
    } else {
-@@ -585,7 +616,7 @@ int UDPSocketPosix::SetBroadcast(bool br
+@@ -700,7 +731,7 @@ int UDPSocketPosix::SetBroadcast(bool br
    DCHECK_CALLED_ON_VALID_THREAD(thread_checker_);
    int value = broadcast ? 1 : 0;
    int rv;
@@ -67,7 +76,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.16 2026/03/14 12:40:37 kikad
    // SO_REUSEPORT on OSX permits multiple processes to each receive
    // UDP multicast or broadcast datagrams destined for the bound
    // port.
-@@ -906,9 +937,17 @@ int UDPSocketPosix::SetMulticastOptions(
+@@ -1037,9 +1068,17 @@ int UDPSocketPosix::SetMulticastOptions(
    if (multicast_interface_ != 0) {
      switch (addr_family_) {
        case AF_INET: {
@@ -85,7 +94,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.16 2026/03/14 12:40:37 kikad
          int rv = setsockopt(socket_, IPPROTO_IP, IP_MULTICAST_IF,
                              reinterpret_cast<const char*>(&mreq), sizeof(mreq));
          if (rv)
-@@ -943,7 +982,7 @@ int UDPSocketPosix::DoBind(const IPEndPo
+@@ -1074,7 +1113,7 @@ int UDPSocketPosix::DoBind(const IPEndPo
  #if BUILDFLAG(IS_CHROMEOS)
    if (last_error == EINVAL)
      return ERR_ADDRESS_IN_USE;
@@ -94,7 +103,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.16 2026/03/14 12:40:37 kikad
    if (last_error == EADDRNOTAVAIL)
      return ERR_ADDRESS_IN_USE;
  #endif
-@@ -972,9 +1011,17 @@ int UDPSocketPosix::JoinGroup(const IPAd
+@@ -1103,9 +1142,17 @@ int UDPSocketPosix::JoinGroup(const IPAd
      case IPAddress::kIPv4AddressSize: {
        if (addr_family_ != AF_INET)
          return ERR_ADDRESS_INVALID;
@@ -112,7 +121,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.16 2026/03/14 12:40:37 kikad
        mreq.imr_multiaddr = ToInAddr(group_address);
        int rv = setsockopt(socket_, IPPROTO_IP, IP_ADD_MEMBERSHIP,
                            &mreq, sizeof(mreq));
-@@ -1009,9 +1056,17 @@ int UDPSocketPosix::LeaveGroup(const IPA
+@@ -1140,9 +1187,17 @@ int UDPSocketPosix::LeaveGroup(const IPA
      case IPAddress::kIPv4AddressSize: {
        if (addr_family_ != AF_INET)
          return ERR_ADDRESS_INVALID;
@@ -130,3 +139,34 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.16 2026/03/14 12:40:37 kikad
        mreq.imr_multiaddr = ToInAddr(group_address);
        int rv = setsockopt(socket_, IPPROTO_IP, IP_DROP_MEMBERSHIP,
                            &mreq, sizeof(mreq));
+@@ -1174,7 +1229,7 @@ int UDPSocketPosix::LeaveGroup(const IPA
+ int UDPSocketPosix::SetSourceGroupMembership(const IPAddress& group_address,
+                                              const IPAddress& source_address,
+                                              int option) const {
+-#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_IOS) || BUILDFLAG(IS_FUCHSIA)
++#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_IOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+   return ERR_NOT_IMPLEMENTED;
+ #else
+   uint32_t interface_index = multicast_interface_;
+@@ -1200,6 +1255,10 @@ int UDPSocketPosix::SetSourceGroupMember
+ #endif
+ }
+ 
++#if !defined(MCAST_JOIN_SOURCE_GROUP)
++#define MCAST_JOIN_SOURCE_GROUP 0
++#endif
++
+ int UDPSocketPosix::JoinSourceGroup(const IPAddress& group_address,
+                                     const IPAddress& source_address) const {
+   DCHECK_CALLED_ON_VALID_THREAD(thread_checker_);
+@@ -1216,6 +1275,10 @@ int UDPSocketPosix::JoinSourceGroup(cons
+                                   MCAST_JOIN_SOURCE_GROUP);
+ }
+ 
++#if !defined(MCAST_LEAVE_SOURCE_GROUP)
++#define MCAST_LEAVE_SOURCE_GROUP 0
++#endif
++
+ int UDPSocketPosix::LeaveSourceGroup(const IPAddress& group_address,
+                                      const IPAddress& source_address) const {
+   DCHECK_CALLED_ON_VALID_THREAD(thread_checker_);
