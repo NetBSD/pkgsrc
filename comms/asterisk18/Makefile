@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2026/02/06 10:04:20 wiz Exp $
+# $NetBSD: Makefile,v 1.178 2026/04/10 08:41:34 wiz Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
@@ -19,7 +19,7 @@ COMMENT=	The Asterisk Software PBX
 LICENSE=	gnu-gpl-v2
 
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
-OWNER=		jnemeth@NetBSD.org
+MAINTAINER=	jnemeth@NetBSD.org
 HOMEPAGE=	https://www.asterisk.org/
 
 MAKE_JOBS_SAFE=	NO

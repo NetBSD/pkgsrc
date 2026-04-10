@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2060 2025/10/12 17:01:28 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2061 2026/04/10 08:41:35 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -103,11 +103,7 @@ COMMENT?=		(no description)
 DEPENDS?=		# empty
 DESCR_SRC?=		${PKGDIR}/DESCR
 INTERACTIVE_STAGE?=	none
-.if defined(OWNER)
-MAINTAINER=		${OWNER}
-.else
 MAINTAINER?=		pkgsrc-users@NetBSD.org
-.endif
 PKGWILDCARD?=		${PKGBASE}-[0-9]*
 TEST_DEPENDS?=		# empty
 TOOL_DEPENDS?=		# empty

@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.204 2025/04/21 21:52:20 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.205 2026/04/10 08:41:35 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -676,7 +676,7 @@ DISTNAME=       foo-17.43
     <itemizedlist>
 
       <listitem><para>Changing <varname>HOMEPAGE</varname>,
-      <varname>MAINTAINER</varname>, <varname>OWNER</varname>, or
+      <varname>MAINTAINER</varname>, or
       comments in Makefile.</para></listitem>
 
       <listitem><para>Changing build variables if the resulting binary
