@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2026/04/09 17:16:54 pin Exp $
+$NetBSD: distinfo,v 1.5 2026/04/10 18:29:41 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -1191,4 +1191,4 @@ Size (zune-core-0.5.1.crate) = 27883 bytes
 BLAKE2s (zune-jpeg-0.5.13.crate) = 941f5f553a2b01c2ce691b147b4ffbc57e2a66d2643842444c3b4d6df62ff2f3
 SHA512 (zune-jpeg-0.5.13.crate) = e5d4ba1657ee5bfca5a7b3625c55d9e8b59b0f4c56b9dcfb483f83bf89e6a5537c9927c1b1e7f8308524fa2ad8b528642ea978418155b4ab9d6de3d19e7aab0d
 Size (zune-jpeg-0.5.13.crate) = 88872 bytes
-SHA1 (patch-server_lib_drivers_module-loader_src_discovery.rs) = c297e103aa05d53ba33d8d0a0d9bbbed594fa1a4
+SHA1 (patch-server_lib_drivers_module-loader_src_discovery.rs) = 6865f45a41a68b0d9a8b52e7ed48a051c9879ef4
