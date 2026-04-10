@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2026/01/08 09:56:17 adam Exp $
+# $NetBSD: Makefile,v 1.44 2026/04/10 14:32:30 wiz Exp $
 
 DISTNAME=	hwloc-2.12.2
 CATEGORIES=	parallel
@@ -16,6 +16,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-picky
 CONFIGURE_ARGS+=	--disable-opencl
 TEST_TARGET=		check
+
+# bash completion script
+CHECK_PORTABILITY_SKIP+=	contrib/completion/test-bash-completion.sh.in
 
 .include "../../mk/bsd.prefs.mk"
 
