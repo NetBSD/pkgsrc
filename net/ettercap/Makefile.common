@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.5 2026/02/06 13:31:21 adam Exp $
+# $NetBSD: Makefile.common,v 1.6 2026/04/10 08:38:57 adam Exp $
 # used by net/ettercap/Makefile
 # used by net/ettercap-gtk/Makefile
 
-DISTNAME=	ettercap-0.8.4
+DISTNAME=	ettercap-0.8.4.1
 CATEGORIES=	net security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Ettercap/}
 GITHUB_PROJECT=	ettercap  # explicit for WRKSRC in net/ettercap-gtk
