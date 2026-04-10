@@ -1,10 +1,10 @@
-$NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.16 2026/03/14 12:40:33 kikadf Exp $
+$NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.17 2026/04/10 17:31:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/content_main_runner_impl.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- content/app/content_main_runner_impl.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ content/app/content_main_runner_impl.cc
 @@ -152,18 +152,21 @@
  #include "content/browser/posix_file_descriptor_info_impl.h"
@@ -96,13 +96,8 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.16 2026/03/14 12:4
      // On Linux/ChromeOS, the HangWatcher can't start until after the sandbox is
      // initialized, because the sandbox can't be started with multiple threads.
      // TODO(mpdenton): start the HangWatcher after the sandbox is initialized.
-@@ -848,13 +865,15 @@ int ContentMainRunnerImpl::Initialize(Co
-   g_fds->Set(kTraceOutputSharedMemoryDescriptor,
-              kTraceOutputSharedMemoryDescriptor +
+@@ -853,11 +870,10 @@ int ContentMainRunnerImpl::Initialize(Co
                   base::GlobalDescriptors::kBaseDescriptor);
-+  g_fds->Set(kPseudonymizationSaltDescriptor,
-+             kPseudonymizationSaltDescriptor +
-+                 base::GlobalDescriptors::kBaseDescriptor);
  #endif  // !BUILDFLAG(IS_ANDROID)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OPENBSD)
@@ -115,7 +110,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.16 2026/03/14 12:4
  
  #endif  // !BUILDFLAG(IS_WIN)
  
-@@ -1010,7 +1029,7 @@ int ContentMainRunnerImpl::Initialize(Co
+@@ -1015,7 +1031,7 @@ int ContentMainRunnerImpl::Initialize(Co
      // SeatbeltExecServer.
      CHECK(sandbox::Seatbelt::IsSandboxed());
    }
@@ -124,13 +119,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.16 2026/03/14 12:4
    // In sandboxed processes and zygotes, certain resource should be pre-warmed
    // as they cannot be initialized under a sandbox. In addition, loading these
    // resources in zygotes (including the unsandboxed zygote) allows them to be
-@@ -1020,10 +1039,22 @@ int ContentMainRunnerImpl::Initialize(Co
-       process_type == switches::kZygoteProcess) {
-     PreSandboxInit();
-   }
-+#elif BUILDFLAG(IS_BSD)
-+  PreSandboxInit();
- #elif BUILDFLAG(IS_IOS) && !BUILDFLAG(IS_IOS_TVOS)
+@@ -1029,6 +1045,16 @@ int ContentMainRunnerImpl::Initialize(Co
    ChildProcessEnterSandbox();
  #endif
  
@@ -147,7 +136,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.16 2026/03/14 12:4
    delegate_->SandboxInitialized(process_type);
  
  #if BUILDFLAG(USE_ZYGOTE)
-@@ -1141,6 +1172,11 @@ NO_STACK_PROTECTOR int ContentMainRunner
+@@ -1146,6 +1172,11 @@ NO_STACK_PROTECTOR int ContentMainRunner
  
    RegisterMainThreadFactories();
  

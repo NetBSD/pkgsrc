@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_host__main.cc,v 1.16 2026/03/14 12:40:38 kikadf Exp $
+$NetBSD: patch-remoting_host_host__main.cc,v 1.17 2026/04/10 17:31:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/host_main.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- remoting/host/host_main.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ remoting/host/host_main.cc
 @@ -47,7 +47,7 @@ namespace remoting {
  // Known entry points.
@@ -22,9 +22,9 @@ $NetBSD: patch-remoting_host_host__main.cc,v 1.16 2026/03/14 12:40:38 kikadf Exp
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  int XSessionChooserMain();
+ int UserSystemdEnvMain();
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
- 
-@@ -70,7 +70,7 @@ void Usage(const base::FilePath& program
+@@ -71,7 +71,7 @@ void Usage(const base::FilePath& program
        "\n"
        "Options:\n"
  
@@ -33,7 +33,7 @@ $NetBSD: patch-remoting_host_host__main.cc,v 1.16 2026/03/14 12:40:38 kikadf Exp
        "  --audio-pipe-name=<pipe> - Sets the pipe name to capture audio on "
        "Linux.\n"
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -150,7 +150,7 @@ MainRoutineFn SelectMainRoutine(const st
+@@ -151,7 +151,7 @@ MainRoutineFn SelectMainRoutine(const st
      main_routine = &SingleProcessHostProcessMain;
    } else if (process_type == kProcessTypeNetwork) {
      main_routine = &NetworkProcessMain;
@@ -42,7 +42,7 @@ $NetBSD: patch-remoting_host_host__main.cc,v 1.16 2026/03/14 12:40:38 kikadf Exp
    } else if (process_type == kProcessTypeDaemon) {
      main_routine = &DaemonProcessMain;
    } else if (process_type == kProcessTypeDesktop) {
-@@ -164,7 +164,7 @@ MainRoutineFn SelectMainRoutine(const st
+@@ -165,7 +165,7 @@ MainRoutineFn SelectMainRoutine(const st
    } else if (process_type == kProcessTypeUrlForwarderConfigurator) {
      main_routine = &UrlForwarderConfiguratorMain;
  #endif  // BUILDFLAG(IS_WIN)
@@ -50,8 +50,8 @@ $NetBSD: patch-remoting_host_host__main.cc,v 1.16 2026/03/14 12:40:38 kikadf Exp
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    } else if (process_type == kProcessTypeXSessionChooser) {
      main_routine = &XSessionChooserMain;
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -232,7 +232,7 @@ int HostMain(int argc, char** argv) {
+   } else if (process_type == kProcessTypeUserSystemdEnv) {
+@@ -235,7 +235,7 @@ int HostMain(int argc, char** argv) {
    // Note that we enable crash reporting only if the user has opted in to having
    // the crash reports uploaded.
    if (IsUsageStatsAllowed()) {
@@ -60,7 +60,7 @@ $NetBSD: patch-remoting_host_host__main.cc,v 1.16 2026/03/14 12:40:38 kikadf Exp
      InitializeCrashpadReporting();
  #elif BUILDFLAG(IS_WIN)
      // TODO: joedow - Enable crash reporting for the RDP process.
-@@ -276,7 +276,7 @@ int HostMain(int argc, char** argv) {
+@@ -279,7 +279,7 @@ int HostMain(int argc, char** argv) {
    // Mac, where the broker process is the agent process broker.
    is_broker_process |= main_routine == &SingleProcessHostProcessMain;
  #endif

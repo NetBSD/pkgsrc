@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_zlib_cpu__features.c,v 1.17 2026/03/29 19:18:49 tnn Exp $
+$NetBSD: patch-third__party_zlib_cpu__features.c,v 1.18 2026/04/10 17:32:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/zlib/cpu_features.c.orig	2026-03-20 23:29:56.000000000 +0000
+--- third_party/zlib/cpu_features.c.orig	2026-04-06 16:25:54.000000000 +0000
 +++ third_party/zlib/cpu_features.c
-@@ -39,7 +39,9 @@ int ZLIB_INTERNAL riscv_cpu_enable_vclmul = 0;
+@@ -39,7 +39,9 @@ int ZLIB_INTERNAL riscv_cpu_enable_vclmu
  #ifndef CPU_NO_SIMD
  
  #if defined(ARMV8_OS_ANDROID) || defined(ARMV8_OS_LINUX) || \
@@ -17,7 +17,7 @@ $NetBSD: patch-third__party_zlib_cpu__features.c,v 1.17 2026/03/29 19:18:49 tnn 
  #include <pthread.h>
  #endif
  
-@@ -56,6 +58,14 @@ int ZLIB_INTERNAL riscv_cpu_enable_vclmul = 0;
+@@ -56,6 +58,14 @@ int ZLIB_INTERNAL riscv_cpu_enable_vclmu
  #include <windows.h>
  #elif defined(ARMV8_OS_IOS)
  #include <sys/sysctl.h>

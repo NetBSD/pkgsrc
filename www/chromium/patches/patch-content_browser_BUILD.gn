@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_BUILD.gn,v 1.16 2026/03/14 12:40:33 kikadf Exp $
+$NetBSD: patch-content_browser_BUILD.gn,v 1.17 2026/04/10 17:31:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/BUILD.gn.orig	2026-03-11 22:12:25.000000000 +0000
+--- content/browser/BUILD.gn.orig	2026-04-06 16:25:54.000000000 +0000
 +++ content/browser/BUILD.gn
-@@ -2610,6 +2610,14 @@ source_set("browser") {
+@@ -2636,6 +2636,14 @@ source_set("browser") {
      ]
    }
  
@@ -21,7 +21,7 @@ $NetBSD: patch-content_browser_BUILD.gn,v 1.16 2026/03/14 12:40:33 kikadf Exp $
    if (is_linux || is_chromeos) {
      sources -=
          [ "file_system_access/file_path_watcher/file_path_watcher_stub.cc" ]
-@@ -2661,6 +2669,15 @@ source_set("browser") {
+@@ -2687,6 +2695,15 @@ source_set("browser") {
      deps += [ "//media/mojo/mojom" ]
    }
  
@@ -34,6 +34,6 @@ $NetBSD: patch-content_browser_BUILD.gn,v 1.16 2026/03/14 12:40:33 kikadf Exp $
 +    ]
 +  }
 +
-   if (enable_smart_card) {
-     # TODO(crbug.com/470349523): Migrate more smart card files to use this flag.
-     defines += [ "ENABLE_SMART_CARD" ]
+   if (is_p2p_enabled) {
+     sources += [
+       "renderer_host/p2p/socket_dispatcher_host.cc",

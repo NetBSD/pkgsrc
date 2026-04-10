@@ -1,12 +1,12 @@
-$NetBSD: patch-content_renderer_render__thread__impl.cc,v 1.16 2026/03/14 12:40:34 kikadf Exp $
+$NetBSD: patch-content_renderer_render__thread__impl.cc,v 1.17 2026/04/10 17:31:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/renderer/render_thread_impl.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- content/renderer/render_thread_impl.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ content/renderer/render_thread_impl.cc
-@@ -201,6 +201,8 @@
+@@ -203,6 +203,8 @@
  
  #if BUILDFLAG(IS_APPLE)
  #include <malloc/malloc.h>
@@ -15,7 +15,7 @@ $NetBSD: patch-content_renderer_render__thread__impl.cc,v 1.16 2026/03/14 12:40:
  #else
  #include <malloc.h>
  #endif
-@@ -922,7 +924,7 @@ media::GpuVideoAcceleratorFactories* Ren
+@@ -933,7 +935,7 @@ media::GpuVideoAcceleratorFactories* Ren
        /*lose_context_when_out_of_memory=*/true);
  
    const bool enable_video_decode_accelerator =
@@ -24,7 +24,7 @@ $NetBSD: patch-content_renderer_render__thread__impl.cc,v 1.16 2026/03/14 12:40:
        base::FeatureList::IsEnabled(media::kAcceleratedVideoDecodeLinux) &&
  #endif  // BUILDFLAG(IS_LINUX)
        !cmd_line->HasSwitch(switches::kDisableAcceleratedVideoDecode) &&
-@@ -931,7 +933,7 @@ media::GpuVideoAcceleratorFactories* Ren
+@@ -942,7 +944,7 @@ media::GpuVideoAcceleratorFactories* Ren
         gpu::kGpuFeatureStatusEnabled);
  
    const bool enable_video_encode_accelerator =
@@ -33,7 +33,7 @@ $NetBSD: patch-content_renderer_render__thread__impl.cc,v 1.16 2026/03/14 12:40:
        base::FeatureList::IsEnabled(media::kAcceleratedVideoEncodeLinux) &&
  #else
        !cmd_line->HasSwitch(switches::kDisableAcceleratedVideoEncode) &&
-@@ -1620,7 +1622,7 @@ RenderThreadImpl::CreateMediaMojoCodecFa
+@@ -1638,7 +1640,7 @@ RenderThreadImpl::CreateMediaMojoCodecFa
      bool enable_video_encode_accelerator) {
    mojo::PendingRemote<media::mojom::VideoEncodeAcceleratorProvider>
        vea_provider;

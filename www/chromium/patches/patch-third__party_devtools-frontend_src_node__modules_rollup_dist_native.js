@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_devtools-frontend_src_node__modules_rollup_dist_native.js,v 1.2 2026/03/14 12:40:41 kikadf Exp $
+$NetBSD: patch-third__party_devtools-frontend_src_node__modules_rollup_dist_native.js,v 1.3 2026/04/10 17:32:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/devtools-frontend/src/node_modules/rollup/dist/native.js.orig	2026-03-11 22:12:25.000000000 +0000
+--- third_party/devtools-frontend/src/node_modules/rollup/dist/native.js.orig	2026-04-06 16:25:54.000000000 +0000
 +++ third_party/devtools-frontend/src/node_modules/rollup/dist/native.js
 @@ -13,6 +13,18 @@ const bindingsByPlatformAndArch = {
  		arm64: { base: 'darwin-arm64' },

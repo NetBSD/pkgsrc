@@ -1,12 +1,12 @@
-$NetBSD: patch-remoting_host_ipc__constants.h,v 1.1 2026/03/14 12:40:38 kikadf Exp $
+$NetBSD: patch-remoting_host_ipc__constants.h,v 1.2 2026/04/10 17:31:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/ipc_constants.h.orig	2026-03-11 22:12:25.000000000 +0000
+--- remoting/host/ipc_constants.h.orig	2026-04-06 16:25:54.000000000 +0000
 +++ remoting/host/ipc_constants.h
-@@ -38,7 +38,7 @@ extern const char kAgentProcessBrokerMes
+@@ -39,7 +39,7 @@ extern const char kAgentProcessBrokerMes
  const mojo::NamedPlatformChannel::ServerName& GetAgentProcessBrokerServerName();
  #endif
  

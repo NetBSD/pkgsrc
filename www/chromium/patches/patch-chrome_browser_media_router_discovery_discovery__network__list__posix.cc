@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_media_router_discovery_discovery__network__list__posix.cc,v 1.16 2026/03/14 12:40:26 kikadf Exp $
+$NetBSD: patch-chrome_browser_media_router_discovery_discovery__network__list__posix.cc,v 1.17 2026/04/10 17:31:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/router/discovery/discovery_network_list_posix.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/media/router/discovery/discovery_network_list_posix.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/media/router/discovery/discovery_network_list_posix.cc
 @@ -5,11 +5,12 @@
  #include "chrome/browser/media/router/discovery/discovery_network_list.h"
@@ -49,6 +49,6 @@ $NetBSD: patch-chrome_browser_media_router_discovery_discovery__network__list__p
 +}
 +#endif
 +
- void GetDiscoveryNetworkInfoListImpl(
-     const struct ifaddrs* if_list,
-     std::vector<DiscoveryNetworkInfo>* network_info_list) {
+ base::span<const uint8_t> SocketAddressAsByteSpan(const sll* ll_addr) {
+   // SAFETY: The size of SOCKET_ADDRESS() can be reliably retrieved via
+   // SOCKET_ADDRESS_LEN().

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_chrome__paths.cc,v 1.16 2026/03/14 12:40:29 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__paths.cc,v 1.17 2026/04/10 17:31:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_paths.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/common/chrome_paths.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/common/chrome_paths.cc
 @@ -31,7 +31,7 @@
  #include "base/apple/foundation_util.h"

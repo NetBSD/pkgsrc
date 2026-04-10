@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_media_webrtc_chrome__screen__enumerator.h,v 1.16 2026/03/14 12:40:26 kikadf Exp $
+$NetBSD: patch-chrome_browser_media_webrtc_chrome__screen__enumerator.h,v 1.17 2026/04/10 17:31:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/chrome_screen_enumerator.h.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/media/webrtc/chrome_screen_enumerator.h.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/media/webrtc/chrome_screen_enumerator.h
 @@ -18,7 +18,7 @@
  namespace aura {

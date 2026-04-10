@@ -1,21 +1,21 @@
-$NetBSD: patch-chrome_browser_ui_ui__features.cc,v 1.16 2026/03/14 12:40:28 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_ui__features.cc,v 1.17 2026/04/10 17:31:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/ui_features.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/ui/ui_features.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/ui/ui_features.cc
-@@ -33,7 +33,7 @@ BASE_FEATURE(kBrowserWidgetCacheThemeSer
- BASE_FEATURE(kCreateNewTabGroupAppMenuTopLevel,
-              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -38,7 +38,7 @@ BASE_FEATURE(kGlassToolbar, base::FEATUR
+ 
+ BASE_FEATURE(kDetachedTabs, base::FEATURE_DISABLED_BY_DEFAULT);
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  BASE_FEATURE(kDseIntegrity, base::FEATURE_ENABLED_BY_DEFAULT);
  // Enables the feature to remove the last confirmation dialog when relaunching
  // to update Chrome.
-@@ -313,7 +313,7 @@ BASE_FEATURE(kViewsFirstRunDialog, base:
+@@ -297,7 +297,7 @@ BASE_FEATURE(kViewsFirstRunDialog, base:
  BASE_FEATURE(kViewsJSAppModalDialog, base::FEATURE_DISABLED_BY_DEFAULT);
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_ui__features.cc,v 1.16 2026/03/14 12:40:28 kika
  BASE_FEATURE(kUsePortalAccentColor, base::FEATURE_ENABLED_BY_DEFAULT);
  #endif
  
-@@ -513,7 +513,7 @@ bool IsBookmarkTabGroupConversionEnabled
+@@ -449,7 +449,7 @@ bool IsBookmarkTabGroupConversionEnabled
    return base::FeatureList::IsEnabled(kBookmarkTabGroupConversion);
  }
  
@@ -33,8 +33,8 @@ $NetBSD: patch-chrome_browser_ui_ui__features.cc,v 1.16 2026/03/14 12:40:28 kika
  BASE_FEATURE(kSessionRestoreInfobar, base::FEATURE_DISABLED_BY_DEFAULT);
  
  BASE_FEATURE_PARAM(bool,
-@@ -576,7 +576,7 @@ BASE_FEATURE_PARAM(bool,
-                    "tab_groups_focusing_pinned_tabs",
+@@ -530,7 +530,7 @@ BASE_FEATURE_PARAM(bool,
+                    "tab_groups_focusing_default_to_focused",
                     false);
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)

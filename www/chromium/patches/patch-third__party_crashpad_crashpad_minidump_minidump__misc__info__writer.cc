@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_crashpad_crashpad_minidump_minidump__misc__info__writer.cc,v 1.16 2026/03/14 12:40:41 kikadf Exp $
+$NetBSD: patch-third__party_crashpad_crashpad_minidump_minidump__misc__info__writer.cc,v 1.17 2026/04/10 17:31:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crashpad/crashpad/minidump/minidump_misc_info_writer.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- third_party/crashpad/crashpad/minidump/minidump_misc_info_writer.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ third_party/crashpad/crashpad/minidump/minidump_misc_info_writer.cc
 @@ -159,6 +159,12 @@ std::string MinidumpMiscInfoDebugBuildSt
    static constexpr char kOS[] = "win";

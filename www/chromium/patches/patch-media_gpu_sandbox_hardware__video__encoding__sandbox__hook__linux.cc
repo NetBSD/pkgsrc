@@ -1,10 +1,10 @@
-$NetBSD: patch-media_gpu_sandbox_hardware__video__encoding__sandbox__hook__linux.cc,v 1.16 2026/03/14 12:40:36 kikadf Exp $
+$NetBSD: patch-media_gpu_sandbox_hardware__video__encoding__sandbox__hook__linux.cc,v 1.17 2026/04/10 17:31:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.cc
 @@ -18,12 +18,15 @@
  #include "media/gpu/v4l2/v4l2_device.h"

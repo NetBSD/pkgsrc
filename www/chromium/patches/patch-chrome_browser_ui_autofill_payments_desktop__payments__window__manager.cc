@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_autofill_payments_desktop__payments__window__manager.cc,v 1.16 2026/03/14 12:40:27 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_autofill_payments_desktop__payments__window__manager.cc,v 1.17 2026/04/10 17:31:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc
 @@ -31,7 +31,7 @@
  #include "ui/gfx/geometry/rect.h"

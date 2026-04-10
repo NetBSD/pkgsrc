@@ -1,10 +1,10 @@
-$NetBSD: patch-components_device__signals_core_browser_browser__utils.h,v 1.15 2026/03/14 12:40:30 kikadf Exp $
+$NetBSD: patch-components_device__signals_core_browser_browser__utils.h,v 1.16 2026/04/10 17:31:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/browser/browser_utils.h.orig	2026-03-11 22:12:25.000000000 +0000
+--- components/device_signals/core/browser/browser_utils.h.orig	2026-04-06 16:25:54.000000000 +0000
 +++ components/device_signals/core/browser/browser_utils.h
 @@ -38,7 +38,7 @@ bool GetSiteIsolationEnabled();
  std::string GetHostName();

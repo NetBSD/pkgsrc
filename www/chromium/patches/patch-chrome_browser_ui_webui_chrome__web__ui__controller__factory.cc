@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__controller__factory.cc,v 1.16 2026/03/14 12:40:29 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__controller__factory.cc,v 1.17 2026/04/10 17:31:51 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc
-@@ -115,17 +115,17 @@
+@@ -114,17 +114,17 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -27,7 +27,7 @@ $NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__controller__factory.cc,v
  #include "chrome/browser/ui/webui/whats_new/whats_new_ui.h"
  #endif
  
-@@ -274,7 +274,7 @@ void ChromeWebUIControllerFactory::GetFa
+@@ -265,7 +265,7 @@ void ChromeWebUIControllerFactory::GetFa
      const std::vector<int>& desired_sizes_in_pixel,
      favicon_base::FaviconResultsCallback callback) const {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -36,7 +36,7 @@ $NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__controller__factory.cc,v
    if (page_url.SchemeIs(webapps::kIsolatedAppScheme)) {
      ReadIsolatedWebAppFaviconsFromDisk(profile, page_url, std::move(callback));
      return;
-@@ -414,7 +414,7 @@ base::RefCountedMemory* ChromeWebUIContr
+@@ -405,7 +405,7 @@ base::RefCountedMemory* ChromeWebUIContr
      return NewTabPageUI::GetFaviconResourceBytes(scale_factor);
    }
  
@@ -45,7 +45,7 @@ $NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__controller__factory.cc,v
    if (page_url.host() == chrome::kChromeUIWhatsNewHost) {
      return WhatsNewUI::GetFaviconResourceBytes(scale_factor);
    }
-@@ -453,7 +453,7 @@ base::RefCountedMemory* ChromeWebUIContr
+@@ -444,7 +444,7 @@ base::RefCountedMemory* ChromeWebUIContr
    }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

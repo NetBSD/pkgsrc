@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_zlib_BUILD.gn,v 1.17 2026/03/29 19:18:49 tnn Exp $
+$NetBSD: patch-third__party_zlib_BUILD.gn,v 1.18 2026/04/10 17:32:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/zlib/BUILD.gn.orig	2026-03-20 23:29:56.000000000 +0000
+--- third_party/zlib/BUILD.gn.orig	2026-04-06 16:25:54.000000000 +0000
 +++ third_party/zlib/BUILD.gn
 @@ -123,7 +123,7 @@ if (use_arm_neon_optimizations) {
      defines = [ "CRC32_ARMV8_CRC32" ]

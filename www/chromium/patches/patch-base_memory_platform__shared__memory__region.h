@@ -1,12 +1,12 @@
-$NetBSD: patch-base_memory_platform__shared__memory__region.h,v 1.16 2026/03/14 12:40:23 kikadf Exp $
+$NetBSD: patch-base_memory_platform__shared__memory__region.h,v 1.17 2026/04/10 17:31:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/platform_shared_memory_region.h.orig	2026-03-11 22:12:25.000000000 +0000
+--- base/memory/platform_shared_memory_region.h.orig	2026-04-06 16:25:54.000000000 +0000
 +++ base/memory/platform_shared_memory_region.h
-@@ -99,7 +99,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
+@@ -104,7 +104,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
  #if BUILDFLAG(IS_FUCHSIA)
      kNotVmo,
  #endif
@@ -15,7 +15,7 @@ $NetBSD: patch-base_memory_platform__shared__memory__region.h,v 1.16 2026/03/14 
      kFcntlFailed,
      kReadOnlyFdNotReadOnly,
      kUnexpectedReadOnlyFd,
-@@ -230,7 +230,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
+@@ -249,7 +249,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
                             CheckPlatformHandlePermissionsCorrespondToMode);
    static PlatformSharedMemoryRegion Create(Mode mode,
                                             size_t size

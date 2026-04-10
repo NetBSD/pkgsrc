@@ -1,12 +1,12 @@
-$NetBSD: patch-tools_v8__context__snapshot_BUILD.gn,v 1.16 2026/03/14 12:40:43 kikadf Exp $
+$NetBSD: patch-tools_v8__context__snapshot_BUILD.gn,v 1.17 2026/04/10 17:32:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/v8_context_snapshot/BUILD.gn.orig	2026-03-11 22:12:25.000000000 +0000
+--- tools/v8_context_snapshot/BUILD.gn.orig	2026-04-06 16:25:54.000000000 +0000
 +++ tools/v8_context_snapshot/BUILD.gn
-@@ -36,6 +36,24 @@ buildflag_header("buildflags") {
+@@ -38,6 +38,24 @@ buildflag_header("buildflags") {
    ]
  }
  
@@ -31,7 +31,7 @@ $NetBSD: patch-tools_v8__context__snapshot_BUILD.gn,v 1.16 2026/03/14 12:40:43 k
  if (use_v8_context_snapshot) {
    action("generate_v8_context_snapshot") {
      script = "//build/gn_run_binary.py"
-@@ -63,6 +81,9 @@ if (use_v8_context_snapshot) {
+@@ -65,6 +83,9 @@ if (use_v8_context_snapshot) {
        ":v8_context_snapshot_generator($v8_snapshot_toolchain)",
        "//v8:run_mksnapshot_default",
      ]

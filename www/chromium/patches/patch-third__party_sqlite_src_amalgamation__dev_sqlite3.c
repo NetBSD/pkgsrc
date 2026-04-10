@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_sqlite_src_amalgamation__dev_sqlite3.c,v 1.16 2026/03/14 12:40:42 kikadf Exp $
+$NetBSD: patch-third__party_sqlite_src_amalgamation__dev_sqlite3.c,v 1.17 2026/04/10 17:32:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/sqlite/src/amalgamation_dev/sqlite3.c.orig	2026-03-11 22:12:25.000000000 +0000
+--- third_party/sqlite/src/amalgamation_dev/sqlite3.c.orig	2026-04-06 16:25:54.000000000 +0000
 +++ third_party/sqlite/src/amalgamation_dev/sqlite3.c
-@@ -14554,7 +14554,7 @@ struct fts5_api {
+@@ -14749,7 +14749,7 @@ struct fts5_api {
  ** But _XOPEN_SOURCE define causes problems for Mac OS X, so omit
  ** it.
  */
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_sqlite_src_amalgamation__dev_sqlite3.c,v 1.16 2026/0
  #  define _XOPEN_SOURCE 600
  #endif
  
-@@ -21110,6 +21110,9 @@ SQLITE_PRIVATE int sqlite3HeapNearlyFull
+@@ -21336,6 +21336,9 @@ SQLITE_PRIVATE int sqlite3HeapNearlyFull
  ** The alloca() routine never returns NULL.  This will cause code paths
  ** that deal with sqlite3StackAlloc() failures to be unreachable.
  */

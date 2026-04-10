@@ -1,12 +1,12 @@
-$NetBSD: patch-content_common_features.cc,v 1.16 2026/03/14 12:40:34 kikadf Exp $
+$NetBSD: patch-content_common_features.cc,v 1.17 2026/04/10 17:31:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/features.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- content/common/features.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ content/common/features.cc
-@@ -184,7 +184,7 @@ BASE_FEATURE(kDocumentPolicyNegotiation,
+@@ -177,7 +177,7 @@ BASE_FEATURE(kDocumentPolicyNegotiation,
  BASE_FEATURE(kEmbeddingRequiresOptIn, base::FEATURE_DISABLED_BY_DEFAULT);
  
  // Enables error reporting for JS errors inside DevTools frontend host
@@ -15,26 +15,32 @@ $NetBSD: patch-content_common_features.cc,v 1.16 2026/03/14 12:40:34 kikadf Exp 
  BASE_FEATURE(kEnableDevToolsJsErrorReporting,
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -288,7 +288,7 @@ BASE_FEATURE_ENUM_PARAM(FontDataServiceT
+@@ -281,12 +281,12 @@ BASE_FEATURE_ENUM_PARAM(FontDataServiceT
                          FontDataServiceTypefaceType::kDwrite,
                          &font_data_service_typeface);
  #endif  // BUILDFLAG(IS_WIN)
--#if BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- BASE_FEATURE(kFontDataServiceLinux, base::FEATURE_DISABLED_BY_DEFAULT);
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  const base::FeatureParam<FontDataServiceTypefaceType>::Option
      font_data_service_typeface[] = {
-@@ -302,11 +302,11 @@ BASE_FEATURE_ENUM_PARAM(FontDataServiceT
-                         &font_data_service_typeface);
+         {FontDataServiceTypefaceType::kFreetype, "Freetype"},
+         {FontDataServiceTypefaceType::kFontations, "Fontations"}};
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ BASE_FEATURE(kFontDataServiceLinux, base::FEATURE_ENABLED_BY_DEFAULT);
+ BASE_FEATURE_ENUM_PARAM(FontDataServiceTypefaceType,
+                         kFontDataServiceTypefaceType,
+@@ -305,11 +305,11 @@ BASE_FEATURE_ENUM_PARAM(FontDataServiceT
  #endif  // BUILDFLAG(IS_LINUX)
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  bool IsFontDataServiceEnabled() {
  #if BUILDFLAG(IS_WIN)
    return base::FeatureList::IsEnabled(features::kFontDataServiceAllWebContents);
 -#elif BUILDFLAG(IS_LINUX)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    return base::FeatureList::IsEnabled(features::kFontDataServiceLinux);
- #else
-   return false;
+ #elif BUILDFLAG(IS_CHROMEOS)
+   return base::FeatureList::IsEnabled(features::kFontDataServiceChromeOS);

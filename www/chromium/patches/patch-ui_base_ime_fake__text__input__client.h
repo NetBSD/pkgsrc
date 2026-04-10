@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_ime_fake__text__input__client.h,v 1.16 2026/03/14 12:40:43 kikadf Exp $
+$NetBSD: patch-ui_base_ime_fake__text__input__client.h,v 1.17 2026/04/10 17:32:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ime/fake_text_input_client.h.orig	2026-03-11 22:12:25.000000000 +0000
+--- ui/base/ime/fake_text_input_client.h.orig	2026-04-06 16:25:54.000000000 +0000
 +++ ui/base/ime/fake_text_input_client.h
 @@ -107,7 +107,7 @@ class FakeTextInputClient : public TextI
    void SetTextEditCommandForNextKeyEvent(TextEditCommand command) override;

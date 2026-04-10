@@ -1,12 +1,12 @@
-$NetBSD: patch-content_common_features.h,v 1.16 2026/03/14 12:40:34 kikadf Exp $
+$NetBSD: patch-content_common_features.h,v 1.17 2026/04/10 17:31:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/features.h.orig	2026-03-11 22:12:25.000000000 +0000
+--- content/common/features.h.orig	2026-04-06 16:25:54.000000000 +0000
 +++ content/common/features.h
-@@ -72,7 +72,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDis
+@@ -71,7 +71,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDis
  CONTENT_EXPORT BASE_DECLARE_FEATURE(
      kDocumentIsolationPolicyWithoutSiteIsolation);
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kDocumentPolicyNegotiation);
@@ -15,21 +15,23 @@ $NetBSD: patch-content_common_features.h,v 1.16 2026/03/14 12:40:34 kikadf Exp $
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnableDevToolsJsErrorReporting);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnforceSameDocumentOriginInvariants);
-@@ -110,7 +110,7 @@ enum class FontDataServiceTypefaceType {
+@@ -109,8 +109,8 @@ enum class FontDataServiceTypefaceType {
  CONTENT_EXPORT BASE_DECLARE_FEATURE_PARAM(FontDataServiceTypefaceType,
                                            kFontDataServiceTypefaceType);
  #endif  // BUILDFLAG(IS_WIN)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 -#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kFontDataServiceLinux);
- enum class FontDataServiceTypefaceType {
-   kFreetype,
-@@ -120,7 +120,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE_PARA
+ #else
+ CONTENT_EXPORT BASE_DECLARE_FEATURE(kFontDataServiceChromeOS);
+@@ -123,7 +123,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE_PARA
                                            kFontDataServiceTypefaceType);
- #endif  // BUILDFLAG(IS_LINUX)
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  bool IsFontDataServiceEnabled();
  #endif
  
