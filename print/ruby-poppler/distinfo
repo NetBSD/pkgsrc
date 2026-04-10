@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.30 2026/02/07 08:41:20 tsutsui Exp $
+$NetBSD: distinfo,v 1.31 2026/04/10 12:41:10 tsutsui Exp $
 
-BLAKE2s (poppler-4.3.5.gem) = a5ed6943e33906f0c076ea803ae5e3a46e6f92f091016d090759874df4eff91e
-SHA512 (poppler-4.3.5.gem) = 4b717b92572373f7d742a51f6722a294a6e7cac778b4d8d5af4fb66dc6aff30de56f1cf8d8fc35bd26dfd864788f106bfcc596d55f9ea5fbbb4bee5f883b8831
-Size (poppler-4.3.5.gem) = 95232 bytes
+BLAKE2s (poppler-4.3.6.gem) = da902ffaf9232d21cbac7dddde663bcb69b7883aff7e14c798ec6d294af1fdae
+SHA512 (poppler-4.3.6.gem) = b2c6967a3a39fdc864e3b6de74292516ddc74199f26e098ffd75096d07584eef43d04bd59f79b6d8462382f49ff1b235cb6ee0b69fc0cdb94b2b6cee1d7fdb78
+Size (poppler-4.3.6.gem) = 95232 bytes
