@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.29 2026/02/07 08:41:19 tsutsui Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2026/04/10 12:41:09 tsutsui Exp $
 
 BUILDLINK_TREE+=	ruby-pango
 
 .if !defined(RUBY_PANGO_BUILDLINK3_MK)
 RUBY_PANGO_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.ruby-pango+=	${RUBY_PKGPREFIX}-pango>=4.3.5
-BUILDLINK_ABI_DEPENDS.ruby-pango+=	${RUBY_PKGPREFIX}-pango>=4.3.5
+BUILDLINK_API_DEPENDS.ruby-pango+=	${RUBY_PKGPREFIX}-pango>=4.3.6
+BUILDLINK_ABI_DEPENDS.ruby-pango+=	${RUBY_PKGPREFIX}-pango>=4.3.6
 BUILDLINK_PKGSRCDIR.ruby-pango?=	../../devel/ruby-pango
 
 .include "../../devel/pango/buildlink3.mk"
