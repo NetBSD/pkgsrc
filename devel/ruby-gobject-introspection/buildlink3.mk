@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.22 2026/02/07 08:41:18 tsutsui Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2026/04/10 12:41:08 tsutsui Exp $
 
 BUILDLINK_TREE+=	ruby-gobject-introspection
 
 .if !defined(RUBY_GOBJECT_INTROSPECTION_BUILDLINK3_MK)
 RUBY_GOBJECT_INTROSPECTION_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.ruby-gobject-introspection+=	${RUBY_PKGPREFIX}-gobject-introspection>=4.3.5
-BUILDLINK_ABI_DEPENDS.ruby-gobject-introspection+=	${RUBY_PKGPREFIX}-gobject-introspection>=4.3.5
+BUILDLINK_API_DEPENDS.ruby-gobject-introspection+=	${RUBY_PKGPREFIX}-gobject-introspection>=4.3.6
+BUILDLINK_ABI_DEPENDS.ruby-gobject-introspection+=	${RUBY_PKGPREFIX}-gobject-introspection>=4.3.6
 BUILDLINK_PKGSRCDIR.ruby-gobject-introspection?=	../../devel/ruby-gobject-introspection
 
 .include "../../devel/gobject-introspection/buildlink3.mk"
