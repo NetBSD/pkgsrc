@@ -1,6 +1,6 @@
-$NetBSD: patch-setup.py,v 1.4 2026/03/30 16:55:13 ktnb Exp $
+$NetBSD: patch-setup.py,v 1.5 2026/04/10 14:48:27 jperkin Exp $
 
-Only point to the pkgsrc fonts for darwin
+Only point to the pkgsrc fonts for Darwin.
 
 --- setup.py.orig	2026-03-27 19:19:48.618708465 +0000
 +++ setup.py
@@ -9,7 +9,7 @@ Only point to the pkgsrc fonts for darwin
          if is_macos:
              candidates = (
 -                os.path.expanduser('~/Library/Fonts'), '/Library/Fonts', '/System/Library/Fonts', '/Network/Library/Fonts')
-+                '@PREFIX@/share/fonts/'
++                '@PREFIX@/share/fonts/',
 +            )
              for candidate in candidates:
                  q = os.path.join(candidate, filename)
