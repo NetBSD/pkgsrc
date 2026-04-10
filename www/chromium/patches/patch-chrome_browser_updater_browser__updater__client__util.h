@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_updater_browser__updater__client__util.h,v 1.1 2026/03/14 12:40:29 kikadf Exp $
+$NetBSD: patch-chrome_browser_updater_browser__updater__client__util.h,v 1.2 2026/04/10 17:31:51 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/updater/browser_updater_client_util.h.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/updater/browser_updater_client_util.h.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/updater/browser_updater_client_util.h
 @@ -20,7 +20,7 @@ namespace updater {
  extern const char kUpdaterName[];

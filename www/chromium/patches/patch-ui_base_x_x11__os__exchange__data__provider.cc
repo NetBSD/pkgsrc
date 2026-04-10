@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_x_x11__os__exchange__data__provider.cc,v 1.1 2026/03/14 12:40:44 kikadf Exp $
+$NetBSD: patch-ui_base_x_x11__os__exchange__data__provider.cc,v 1.2 2026/04/10 17:32:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_os_exchange_data_provider.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- ui/base/x/x11_os_exchange_data_provider.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ ui/base/x/x11_os_exchange_data_provider.cc
 @@ -28,7 +28,7 @@
  #include "ui/gfx/x/atom_cache.h"

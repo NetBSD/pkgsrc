@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_task__manager_task__manager__table__model.cc,v 1.16 2026/03/14 12:40:28 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_task__manager_task__manager__table__model.cc,v 1.17 2026/04/10 17:31:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/task_manager/task_manager_table_model.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/ui/task_manager/task_manager_table_model.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/ui/task_manager/task_manager_table_model.cc
-@@ -375,7 +375,7 @@ TaskManagerTableModel::~TaskManagerTable
+@@ -364,7 +364,7 @@ TaskManagerTableModel::~TaskManagerTable
    // Note: system_total_time_ is used for both since there is no functional
    // difference between browser & system (they are essentially the same tab).
    // Instead, the data is routed to the platform appropriate bucket.
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_task__manager_task__manager__table__model.cc,v 
    task_manager::RecordTabSwitchEvent(CategoryRecord::kBrowser,
                                       system_total_time_);
  #elif BUILDFLAG(IS_CHROMEOS)
-@@ -508,7 +508,7 @@ std::u16string TaskManagerTableModel::Ge
+@@ -497,7 +497,7 @@ std::u16string TaskManagerTableModel::Ge
                   ? stringifier_->backgrounded_string()
                   : stringifier_->foregrounded_string();
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_task__manager_task__manager__table__model.cc,v 
      case IDS_TASK_MANAGER_OPEN_FD_COUNT_COLUMN: {
        const int fd_count = observed_task_manager()->GetOpenFdCount(tasks_[row]);
        return fd_count >= 0 ? base::FormatNumber(fd_count)
-@@ -666,7 +666,7 @@ int TaskManagerTableModel::CompareValues
+@@ -655,7 +655,7 @@ int TaskManagerTableModel::CompareValues
        return BooleanCompare(is_proc1_bg, is_proc2_bg);
      }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_task__manager_task__manager__table__model.cc,v 
      case IDS_TASK_MANAGER_OPEN_FD_COUNT_COLUMN: {
        const int proc1_fd_count =
            observed_task_manager()->GetOpenFdCount(tasks_[row1]);
-@@ -985,7 +985,7 @@ void TaskManagerTableModel::UpdateRefres
+@@ -954,7 +954,7 @@ void TaskManagerTableModel::UpdateRefres
        type = REFRESH_TYPE_KEEPALIVE_COUNT;
        break;
  

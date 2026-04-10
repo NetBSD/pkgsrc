@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_regional__capabilities_regional__capabilities__service__factory.cc,v 1.12 2026/03/14 12:40:27 kikadf Exp $
+$NetBSD: patch-chrome_browser_regional__capabilities_regional__capabilities__service__factory.cc,v 1.13 2026/04/10 17:31:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/regional_capabilities/regional_capabilities_service_factory.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/regional_capabilities/regional_capabilities_service_factory.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/regional_capabilities/regional_capabilities_service_factory.cc
 @@ -21,7 +21,7 @@
  #include "chrome/browser/regional_capabilities/regional_capabilities_service_client_chromeos.h"
@@ -15,12 +15,21 @@ $NetBSD: patch-chrome_browser_regional__capabilities_regional__capabilities__ser
  #include "chrome/browser/regional_capabilities/regional_capabilities_service_client_linux.h"
  #endif
  
-@@ -72,7 +72,7 @@ RegionalCapabilitiesServiceFactory::Buil
+@@ -36,7 +36,7 @@ CreateRegionalCapabilitiesServiceClient(
  #elif BUILDFLAG(IS_CHROMEOS)
-       std::make_unique<RegionalCapabilitiesServiceClientChromeOS>(
-           g_browser_process->variations_service());
+   return std::make_unique<RegionalCapabilitiesServiceClientChromeOS>(
+       g_browser_process->variations_service());
 -#elif BUILDFLAG(IS_LINUX)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-       std::make_unique<RegionalCapabilitiesServiceClientLinux>(
-           g_browser_process->variations_service());
+   return std::make_unique<RegionalCapabilitiesServiceClientLinux>(
+       g_browser_process->variations_service());
  #else
+@@ -61,7 +61,7 @@ RegionalCapabilitiesServiceFactory::GetI
+   return instance.get();
+ }
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // static
+ bool RegionalCapabilitiesServiceFactory::
+     IsInSearchEngineChoiceScreenRegionForSystemProfile(Profile* profile) {

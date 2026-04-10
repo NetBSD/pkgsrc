@@ -1,10 +1,10 @@
-$NetBSD: patch-components_user__education_views_help__bubble__view.cc,v 1.16 2026/03/14 12:40:33 kikadf Exp $
+$NetBSD: patch-components_user__education_views_help__bubble__view.cc,v 1.17 2026/04/10 17:31:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/user_education/views/help_bubble_view.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- components/user_education/views/help_bubble_view.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ components/user_education/views/help_bubble_view.cc
 @@ -269,7 +269,7 @@ DEFINE_CLASS_ELEMENT_IDENTIFIER_VALUE(He
  // TODO(https://crbug.com/382611284): Temporarily handle the case when the
@@ -15,7 +15,7 @@ $NetBSD: patch-components_user__education_views_help__bubble__view.cc,v 1.16 202
  class HelpBubbleView::PrimaryWidgetObserver : public views::WidgetObserver {
   public:
    explicit PrimaryWidgetObserver(HelpBubbleView& help_bubble)
-@@ -733,7 +733,7 @@ HelpBubbleView::HelpBubbleView(
+@@ -732,7 +732,7 @@ HelpBubbleView::HelpBubbleView(
      event_relay_->Init(this);
    }
  
@@ -24,7 +24,7 @@ $NetBSD: patch-components_user__education_views_help__bubble__view.cc,v 1.16 202
    primary_widget_observer_ = std::make_unique<PrimaryWidgetObserver>(*this);
  #endif
  
-@@ -845,7 +845,7 @@ gfx::Rect HelpBubbleView::GetAnchorRect(
+@@ -844,7 +844,7 @@ gfx::Rect HelpBubbleView::GetAnchorRect(
  void HelpBubbleView::OnBeforeBubbleWidgetInit(views::Widget::InitParams* params,
                                                views::Widget* widget) const {
    BubbleDialogDelegateView::OnBeforeBubbleWidgetInit(params, widget);

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_chrome__browser__main__extra__parts__enterprise.cc,v 1.6 2026/03/14 12:40:25 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_chrome__browser__main__extra__parts__enterprise.cc,v 1.7 2026/04/10 17:31:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/chrome_browser_main_extra_parts_enterprise.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/enterprise/chrome_browser_main_extra_parts_enterprise.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/enterprise/chrome_browser_main_extra_parts_enterprise.cc
 @@ -7,7 +7,7 @@
  #include "components/enterprise/buildflags/buildflags.h"

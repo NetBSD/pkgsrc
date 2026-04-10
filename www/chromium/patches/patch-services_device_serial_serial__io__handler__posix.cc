@@ -1,10 +1,10 @@
-$NetBSD: patch-services_device_serial_serial__io__handler__posix.cc,v 1.16 2026/03/14 12:40:39 kikadf Exp $
+$NetBSD: patch-services_device_serial_serial__io__handler__posix.cc,v 1.17 2026/04/10 17:31:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/serial/serial_io_handler_posix.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- services/device/serial/serial_io_handler_posix.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ services/device/serial/serial_io_handler_posix.cc
 @@ -70,7 +70,7 @@ bool BitrateToSpeedConstant(int bitrate,
      BITRATE_TO_SPEED_CASE(9600)

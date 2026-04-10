@@ -1,10 +1,10 @@
-$NetBSD: patch-media_base_video__frame.cc,v 1.16 2026/03/14 12:40:36 kikadf Exp $
+$NetBSD: patch-media_base_video__frame.cc,v 1.17 2026/04/10 17:31:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- media/base/video_frame.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ media/base/video_frame.cc
 @@ -86,7 +86,7 @@ std::string VideoFrame::StorageTypeToStr
        return "OWNED_MEMORY";
@@ -15,7 +15,7 @@ $NetBSD: patch-media_base_video__frame.cc,v 1.16 2026/03/14 12:40:36 kikadf Exp 
      case VideoFrame::STORAGE_DMABUFS:
        return "DMABUFS";
  #endif
-@@ -424,7 +424,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
+@@ -425,7 +425,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
          plane_size.width() * VideoFrame::BytesPerElement(*format, plane);
    }
    uint64_t modifier = gfx::NativePixmapHandle::kNoModifier;
@@ -24,7 +24,7 @@ $NetBSD: patch-media_base_video__frame.cc,v 1.16 2026/03/14 12:40:36 kikadf Exp 
    bool is_native_buffer = !shared_image->IsSharedMemoryForVideoFrame();
    if (is_native_buffer) {
      const auto gmb_handle = shared_image->CloneGpuMemoryBufferHandle();
-@@ -698,7 +698,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
+@@ -687,7 +687,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
    return frame;
  }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-media_base_video__frame.cc,v 1.16 2026/03/14 12:40:36 kikadf Exp 
  // static
  scoped_refptr<VideoFrame> VideoFrame::WrapExternalDmabufs(
      const VideoFrameLayout& layout,
-@@ -1394,7 +1394,7 @@ scoped_refptr<gpu::ClientSharedImage> Vi
+@@ -1403,7 +1403,7 @@ scoped_refptr<gpu::ClientSharedImage> Vi
    return wrapped_frame_ ? wrapped_frame_->shared_image() : shared_image_;
  }
  

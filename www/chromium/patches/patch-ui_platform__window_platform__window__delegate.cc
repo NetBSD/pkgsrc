@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_platform__window_platform__window__delegate.cc,v 1.16 2026/03/14 12:40:45 kikadf Exp $
+$NetBSD: patch-ui_platform__window_platform__window__delegate.cc,v 1.17 2026/04/10 17:32:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/platform_window/platform_window_delegate.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- ui/platform_window/platform_window_delegate.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ ui/platform_window/platform_window_delegate.cc
 @@ -58,7 +58,7 @@ gfx::Insets PlatformWindowDelegate::Calc
    return gfx::Insets();

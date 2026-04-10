@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_renderer__host_render__process__host__impl.h,v 1.16 2026/03/14 12:40:34 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_render__process__host__impl.h,v 1.17 2026/04/10 17:31:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_process_host_impl.h.orig	2026-03-11 22:12:25.000000000 +0000
+--- content/browser/renderer_host/render_process_host_impl.h.orig	2026-04-06 16:25:54.000000000 +0000
 +++ content/browser/renderer_host/render_process_host_impl.h
-@@ -104,7 +104,7 @@
+@@ -107,7 +107,7 @@
  #include "media/fuchsia_media_codec_provider_impl.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl.h,v 1.
  #include "content/browser/child_thread_type_switcher_linux.h"
  #include "media/mojo/mojom/video_encode_accelerator.mojom.h"
  #endif
-@@ -1027,7 +1027,7 @@ class CONTENT_EXPORT RenderProcessHostIm
+@@ -1034,7 +1034,7 @@ class CONTENT_EXPORT RenderProcessHostIm
      mojo::Remote<media::mojom::VideoEncodeAcceleratorProviderFactory>
          video_encode_accelerator_factory_remote_;
  #endif
@@ -24,7 +24,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl.h,v 1.
      ChildThreadTypeSwitcher child_thread_type_switcher_;
  #endif
    };
-@@ -1283,7 +1283,7 @@ class CONTENT_EXPORT RenderProcessHostIm
+@@ -1290,7 +1290,7 @@ class CONTENT_EXPORT RenderProcessHostIm
    // if the request isn't handled on the IO thread.
    void OnBindHostReceiver(mojo::GenericPendingReceiver receiver);
  

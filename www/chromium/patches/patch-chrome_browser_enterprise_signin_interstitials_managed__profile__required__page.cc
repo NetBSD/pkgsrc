@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_signin_interstitials_managed__profile__required__page.cc,v 1.15 2026/03/14 12:40:26 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_signin_interstitials_managed__profile__required__page.cc,v 1.16 2026/04/10 17:31:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/signin/interstitials/managed_profile_required_page.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/enterprise/signin/interstitials/managed_profile_required_page.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/enterprise/signin/interstitials/managed_profile_required_page.cc
 @@ -95,7 +95,7 @@ void ManagedProfileRequiredPage::Command
  

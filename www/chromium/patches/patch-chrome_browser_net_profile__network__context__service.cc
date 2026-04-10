@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_net_profile__network__context__service.cc,v 1.16 2026/03/14 12:40:26 kikadf Exp $
+$NetBSD: patch-chrome_browser_net_profile__network__context__service.cc,v 1.17 2026/04/10 17:31:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/net/profile_network_context_service.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- chrome/browser/net/profile_network_context_service.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ chrome/browser/net/profile_network_context_service.cc
 @@ -145,7 +145,7 @@
  #endif
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_net_profile__network__context__service.cc,v 1.16 2
  #include "chrome/browser/enterprise/client_certificates/certificate_provisioning_service_factory.h"
  #include "chrome/browser/policy/chrome_browser_policy_connector.h"
  #include "components/enterprise/browser/controller/chrome_browser_cloud_management_controller.h"
-@@ -302,7 +302,7 @@ void UpdateCookieSettings(Profile* profi
+@@ -321,7 +321,7 @@ void UpdateCookieSettings(Profile* profi
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_net_profile__network__context__service.cc,v 1.16 2
  std::unique_ptr<net::ClientCertStore> GetWrappedCertStore(
      Profile* profile,
      std::unique_ptr<net::ClientCertStore> platform_store) {
-@@ -1248,7 +1248,7 @@ ProfileNetworkContextService::CreateClie
+@@ -1267,7 +1267,7 @@ ProfileNetworkContextService::CreateClie
        std::make_unique<net::ClientCertStoreNSS>(
            base::BindRepeating(&CreateCryptoModuleBlockingPasswordDelegate,
                                kCryptoModulePasswordClientAuth));
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_net_profile__network__context__service.cc,v 1.16 2
    return GetWrappedCertStore(profile_, std::move(store));
  #else
    return store;
-@@ -1287,7 +1287,7 @@ std::vector<uint8_t>
+@@ -1306,7 +1306,7 @@ std::vector<uint8_t>
  ProfileNetworkContextService::GetEncryptedCachePrimaryKey() {
    std::string encoded_encrypted_primary_key = profile_->GetPrefs()->GetString(
        enterprise_connectors::kEncryptedCachePrimaryKey);

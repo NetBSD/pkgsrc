@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.16 2026/03/14 12:40:45 kikadf Exp $
+$NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.17 2026/04/10 17:32:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/controls/textfield/textfield.cc.orig	2026-03-11 22:12:25.000000000 +0000
+--- ui/views/controls/textfield/textfield.cc.orig	2026-04-06 16:25:54.000000000 +0000
 +++ ui/views/controls/textfield/textfield.cc
 @@ -87,7 +87,7 @@
  #include "base/win/win_util.h"
@@ -51,7 +51,7 @@ $NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.16 2026/03/14 12:40:
  // TODO(crbug.com/41452689): Implement this method to support Korean IME
  // reconversion feature on native text fields (e.g. find bar).
  bool Textfield::SetCompositionFromExistingText(
-@@ -2589,7 +2589,7 @@ ui::TextEditCommand Textfield::GetComman
+@@ -2600,7 +2600,7 @@ ui::TextEditCommand Textfield::GetComman
  #endif
          return ui::TextEditCommand::DELETE_BACKWARD;
        }
@@ -60,7 +60,7 @@ $NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.16 2026/03/14 12:40:
        // Only erase by line break on Linux and ChromeOS.
        if (shift) {
          return ui::TextEditCommand::DELETE_TO_BEGINNING_OF_LINE;
-@@ -2597,7 +2597,7 @@ ui::TextEditCommand Textfield::GetComman
+@@ -2608,7 +2608,7 @@ ui::TextEditCommand Textfield::GetComman
  #endif
        return ui::TextEditCommand::DELETE_WORD_BACKWARD;
      case ui::VKEY_DELETE:
