@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/04/10 11:34:29 jperkin Exp $
+
+If you are going to include ifdefs for HAVE_ALLOCA_H it might be a good idea to
+actually test for it.
+
+--- CMakeLists.txt.orig	2026-04-10 11:23:12.030869415 +0000
++++ CMakeLists.txt
+@@ -70,6 +70,7 @@ if (ENABLE_SDL)
+ 	find_package(SDL2)
+ endif()
+ 
++CHECK_INCLUDE_FILE(alloca.h HAVE_ALLOCA_H)
+ CHECK_INCLUDE_FILE(malloc.h HAVE_MALLOC_H)
+ CHECK_FUNCTION_EXISTS(posix_memalign HAVE_POSIX_MEMALIGN)
+ 
