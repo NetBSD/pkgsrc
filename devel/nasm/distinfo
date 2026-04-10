@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.39 2025/11/08 01:43:44 ryoon Exp $
+$NetBSD: distinfo,v 1.40 2026/04/10 09:36:39 jperkin Exp $
 
 BLAKE2s (nasm-3.01.tar.xz) = 2033aac1add7082357ff032977389f4886d82a1027eb54286e9f5ef239da800b
 SHA512 (nasm-3.01.tar.xz) = ca9550ad3239cfaa9546a908e8de86e11a7c7dd9d6006f42d272d0b025b601cdb205e60b8b3929f31123ef450dd0f0403e1300328cadf0ffdfd459f443944482
 Size (nasm-3.01.tar.xz) = 1499136 bytes
 SHA1 (patch-Makefile.in) = 7c3066b1cd3af540ea39023c53a2f4949d10e68d
 SHA1 (patch-doc_Makefile.in) = b9507bf63f071790ed46293f915bb40d32a31d61
-SHA1 (patch-include_compiler.h) = 99abc011c363263651e0dad6625ca88af6b53c13
+SHA1 (patch-include_compiler.h) = e74758be522c11f3560e6ff3ad5d38cac5727b77
