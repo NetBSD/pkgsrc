@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2196 2026/04/10 07:52:11 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2197 2026/04/10 08:21:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3446,3 +3446,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-ansible-compat to 26.3.0 [adam 2026-04-10]
 	Updated sysutils/ansible-lint to 26.4.0 [adam 2026-04-10]
 	Updated textproc/py-xml2rfc to 3.33.0 [adam 2026-04-10]
+	Updated net/libtorrent to 0.16.9 [adam 2026-04-10]
+	Updated net/rtorrent to 0.16.9 [adam 2026-04-10]
