@@ -1,0 +1,14 @@
+$NetBSD: patch-src_interfaces_CMakeLists.txt,v 1.1 2026/04/10 08:38:57 adam Exp $
+
+Don't generate exports (.tbd files on Darwin). This makes PLIST portable.
+
+--- src/interfaces/CMakeLists.txt.orig	2026-04-10 08:33:32.223754783 +0000
++++ src/interfaces/CMakeLists.txt
+@@ -102,7 +102,6 @@ endif()
+ add_library(ec_interfaces SHARED ../ec_interfaces.c
+ ${EC_TEXT_SRC} ${EC_DAEMON_SRC} ${EC_WDG_SRC} ${EC_CURSES_SRC} ${EC_GTK_SRC})
+ set_target_properties(ec_interfaces PROPERTIES
+-  ENABLE_EXPORTS On
+   POSITION_INDEPENDENT_CODE ON
+   #  LINK_INTERFACE_LIBRARIES ""
+   OUTPUT_NAME ettercap-ui
