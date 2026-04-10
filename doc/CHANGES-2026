@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2204 2026/04/10 17:25:08 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.2205 2026/04/10 17:32:27 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3476,3 +3476,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ruby-addressable to 2.9.0 [tsutsui 2026-04-10]
 	Updated lang/php84 to 8.4.20 [taca 2026-04-10]
 	Updated www/esbuild to 0.28.0 [kikadf 2026-04-10]
+	Updated www/chromium to 147.0.7727.55 [kikadf 2026-04-10]
