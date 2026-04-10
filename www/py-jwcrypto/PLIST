@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/14 19:31:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/04/10 07:35:42 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/jwcrypto/__init__.py
 ${PYSITELIB}/jwcrypto/__init__.pyc
 ${PYSITELIB}/jwcrypto/__init__.pyo
@@ -31,5 +30,8 @@ ${PYSITELIB}/jwcrypto/tests-cookbook.pyo
 ${PYSITELIB}/jwcrypto/tests.py
 ${PYSITELIB}/jwcrypto/tests.pyc
 ${PYSITELIB}/jwcrypto/tests.pyo
+${PYSITELIB}/jwcrypto/version.py
+${PYSITELIB}/jwcrypto/version.pyc
+${PYSITELIB}/jwcrypto/version.pyo
 share/doc/jwcrypto/LICENSE
 share/doc/jwcrypto/README.md
