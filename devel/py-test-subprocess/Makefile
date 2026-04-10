@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/04/12 21:10:58 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/04/10 04:06:21 adam Exp $
 
-DISTNAME=	pytest_subprocess-1.5.3
+DISTNAME=	pytest_subprocess-1.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-subprocess/}
 
@@ -13,8 +12,9 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-test>=4.0.0:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-rerunfailures-[0-9]*:../../devel/py-test-rerunfailures
+TEST_DEPENDS+=	${PYPKGPREFIX}-anyio-[0-9]*:../../devel/py-anyio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.15.1:../../devel/py-test-asyncio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-rerunfailures-[0-9]*:../../devel/py-test-rerunfailures
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
