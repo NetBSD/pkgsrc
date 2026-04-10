@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.14 2026/03/26 13:54:01 wiz Exp $
+$NetBSD: distinfo,v 1.15 2026/04/10 11:34:29 jperkin Exp $
 
 BLAKE2s (libde265-1.0.18.tar.gz) = c4bcc7238224414cc822a50fcd4ea7d52e53e5cf2fa1d49d9e7d23fb98ec1c01
 SHA512 (libde265-1.0.18.tar.gz) = 7d812bea985c2e81e2e0a671e0030312628d04386b6ce987c4330e1778b2c9c2246834d357a0c4c73ca0ebade804e897329d04980e7b2034a3da3f9fabcf4c53
 Size (libde265-1.0.18.tar.gz) = 287704 bytes
+SHA1 (patch-CMakeLists.txt) = 8634ecedecea2da040ade750938cfb83c7171a70
+SHA1 (patch-cmake_config.h.in) = 5d37e8331db11c93cb31c2aaf9074f7b3f1a8877
