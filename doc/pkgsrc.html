@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
 <title>The pkgsrc guide</title>
 <link rel="stylesheet" type="text/css" href="/global.css">
 <meta name="generator" content="DocBook XSL Stylesheets VX.X.X">
@@ -3689,23 +3689,7 @@ converters    games         mbone         print         x11
     maintain the package (especially if you feel you have no special
     insight), set it to <code class="email">&lt;<a class="email" href="mailto:pkgsrc-users@NetBSD.org">pkgsrc-users@NetBSD.org</a>&gt;</code>.  This
     special value is a code point indicating that there is no
-    maintainer, but the variable is mandatory, absent
-    <code class="varname">OWNER</code>.</p></li>
-<li class="listitem">
-<p><code class="varname">OWNER</code> can be used instead of
-    <code class="varname">MAINTAINER</code> in relatively rare circumstances
-    when the package is such that modifying it is riskier than normal.
-    This is a stronger form of being the maintainer, with an
-    expectation that others will ask for almost all changes, except
-    revbumps and accommodating structural changes.  Someone who becomes
-    <code class="varname">OWNER</code> has a strong obligation to keep the
-    package very well maintained, to answer queries promptly and to be
-    a steward of the package on behalf of users.  In this case,
-    <code class="varname">MAINTAINER</code> should be omitted.</p>
-<p>Because of the friction that <code class="varname">OWNER</code> adds,
-    PMC may downgrade it to <code class="varname">MAINTAINER</code> at any
-    time.</p>
-</li>
+    maintainer.</p></li>
 <li class="listitem"><p><code class="varname">HOMEPAGE</code> is a URL where users can
     find more information about the package.</p></li>
 <li class="listitem"><p><code class="varname">COMMENT</code> is a one-line
@@ -8099,7 +8083,7 @@ DISTNAME=       foo-17.43
     <code class="varname">PKGREVISION</code> are:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>Changing <code class="varname">HOMEPAGE</code>,
-      <code class="varname">MAINTAINER</code>, <code class="varname">OWNER</code>, or
+      <code class="varname">MAINTAINER</code>, or
       comments in Makefile.</p></li>
 <li class="listitem"><p>Changing build variables if the resulting binary
       package is the same.</p></li>
@@ -14131,10 +14115,6 @@ source packages</h2></div></div></div>
 <tr>
 <td>RUBY_RAILS</td>
 <td>RUBY_RAILS61_VERSION</td>
-</tr>
-<tr>
-<td>RUBY_RAILS70_VERSION</td>
-<td>RUBY_RAILS71_VERSION</td>
 </tr>
 <tr>
 <td>RUBY_RAILS72_VERSION</td>
