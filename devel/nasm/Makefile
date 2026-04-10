@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2025/11/08 01:43:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.73 2026/04/10 16:54:28 schwarz Exp $
 
 DISTNAME=	nasm-3.01
 CATEGORIES=	devel lang
@@ -14,7 +14,7 @@ USE_LANGUAGE=		c
 USE_CC_FEATURES=	c17
 FORCE_C_STD=		c17
 
-USE_TOOLS+=		gmake makeinfo perl
+USE_TOOLS+=		gmake makeinfo perl gsed
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/nasm
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/nasm/html
