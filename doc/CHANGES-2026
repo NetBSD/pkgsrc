@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2198 2026/04/10 08:41:20 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2199 2026/04/10 09:59:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3451,3 +3451,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ettercap to 0.8.4.1 [adam 2026-04-10]
 	Updated net/ettercap-gtk to 0.8.4.1 [adam 2026-04-10]
 	Updated net/bird to 3.2.1 [adam 2026-04-10]
+	Updated security/libsodium to 1.0.22 [adam 2026-04-10]
+	Updated time/py-croniter to 6.2.2 [adam 2026-04-10]
