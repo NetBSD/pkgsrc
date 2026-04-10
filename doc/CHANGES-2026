@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2192 2026/04/09 21:53:02 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.2193 2026/04/10 04:08:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3434,3 +3434,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox140-l10n to 140.9.1 [gutteridge 2026-04-09]
 	Updated mail/neomutt to 20260406nb1 [wiz 2026-04-09]
 	Updated x11/xfce4-screenshooter to 1.11.3 [gutteridge 2026-04-09]
+	Updated textproc/py-lxml to 6.0.3 [adam 2026-04-10]
+	Updated devel/py-test to 9.0.3 [adam 2026-04-10]
+	Updated devel/py-test-subprocess to 1.5.4 [adam 2026-04-10]
+	Updated www/py-test-httpx to 0.36.2 [adam 2026-04-10]
