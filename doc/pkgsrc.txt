@@ -2932,20 +2932,7 @@ The third section contains the following variables.
     when packaging a new program, set MAINTAINER to yourself. If you don't
     intend to maintain the package (especially if you feel you have no special
     insight), set it to <pkgsrc-users@NetBSD.org>. This special value is a code
-    point indicating that there is no maintainer, but the variable is
-    mandatory, absent OWNER.
-
-  * OWNER can be used instead of MAINTAINER in relatively rare circumstances
-    when the package is such that modifying it is riskier than normal. This is
-    a stronger form of being the maintainer, with an expectation that others
-    will ask for almost all changes, except revbumps and accommodating
-    structural changes. Someone who becomes OWNER has a strong obligation to
-    keep the package very well maintained, to answer queries promptly and to be
-    a steward of the package on behalf of users. In this case, MAINTAINER
-    should be omitted.
-
-    Because of the friction that OWNER adds, PMC may downgrade it to MAINTAINER
-    at any time.
+    point indicating that there is no maintainer.
 
   * HOMEPAGE is a URL where users can find more information about the package.
 
@@ -6462,7 +6449,7 @@ trivial that no reasonable person would want to upgrade", and this is the rough
 test for when increasing PKGREVISION is appropriate. Examples of changes that
 do not merit increasing PKGREVISION are:
 
-  * Changing HOMEPAGE, MAINTAINER, OWNER, or comments in Makefile.
+  * Changing HOMEPAGE, MAINTAINER, or comments in Makefile.
 
   * Changing build variables if the resulting binary package is the same.
 
@@ -10073,7 +10060,6 @@ RUBY_INC                          RUBY_LIB
 RUBY_LIB_BASE                     RUBY_NAME
 RUBY_NOVERSION                    RUBY_PKGPREFIX
 RUBY_RAILS                        RUBY_RAILS61_VERSION
-RUBY_RAILS70_VERSION              RUBY_RAILS71_VERSION
 RUBY_RAILS72_VERSION              RUBY_RAILS80_VERSION
 RUBY_RAILS_ACCEPTED               RUBY_RAILS_DEFAULT
 RUBY_RAILS_REQD                   RUBY_RAILS_STRICT_DEP
