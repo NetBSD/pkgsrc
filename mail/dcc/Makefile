@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:34:19 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/04/10 08:41:35 wiz Exp $
 
 DISTNAME=		dcc-1.3.159
 PKGREVISION=		6
@@ -6,8 +6,8 @@ CATEGORIES=		mail
 MASTER_SITES=		https://www.dcc-servers.net/src/dcc/old/
 EXTRACT_SUFX=		.tar.Z
 
-# OWNER_PROXY=		gdt
-OWNER=			petar@smokva.net
+# MAINTAINER_PROXY=	gdt
+MAINTAINER=		petar@smokva.net
 HOMEPAGE=		https://www.dcc-servers.net/dcc/
 COMMENT=		Anti-spam content filter
 LICENSE=		dcc-free-license

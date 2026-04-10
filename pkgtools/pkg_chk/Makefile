@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.93 2025/09/30 16:07:38 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2026/04/10 08:41:36 wiz Exp $
 
 PKGNAME=	pkg_chk-2.0.13
 CATEGORIES=	pkgtools
 
-OWNER=		abs@NetBSD.org
+MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Check installed package versions against pkgsrc
 LICENSE=	2-clause-bsd
