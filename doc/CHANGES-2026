@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2212 2026/04/11 02:34:00 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.2213 2026/04/11 05:08:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3483,3 +3483,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/glow to 2.1.2 [sjmulder 2026-04-10]
 	Updated editors/micro to 2.0.15 [sjmulder 2026-04-10]
 	Updated x11/xfce4-terminal to 1.2.0 [gutteridge 2026-04-11]
+	Updated net/p5-Net-CIDR-Lite to 0.23 [wiz 2026-04-11]
