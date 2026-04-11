@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2025/11/30 14:13:09 jnemeth Exp $
+$NetBSD: distinfo,v 1.19 2026/04/11 08:31:06 taca Exp $
 
 BLAKE2s (mysql-boost-8.0.44.tar.gz) = 17489835c71b9be2ba352f1ac4bc56200696beff13b0c8f84216b2986ab5bbf3
 SHA512 (mysql-boost-8.0.44.tar.gz) = f6881d6f88a4060796e1eac47c1ffe3ea005c27f1b0509fd97774ba5b1e7bf86d0f8c4e13126750f0cc3dd86af92c26459ae8fecf9e8f0f058dab43e93bb3b42
@@ -22,13 +22,6 @@ SHA1 (patch-libmysql_CMakeLists.txt) = 7b83faf1751ad40f20bca1ebcdac0cebb1370443
 SHA1 (patch-mysys_kqueue__timers.cc) = 837474b779c24dd0af67444c2adbcf07b73e0d36
 SHA1 (patch-mysys_stacktrace.cc) = 6792ceaae3c3b0d70bd8b6c848a128d50397e6f4
 SHA1 (patch-packaging_solaris_CMakeLists.txt) = 135c4aa07d9b20a9b56b8f1616821abfedb52ecb
-SHA1 (patch-plugin_x_protocol_plugin_message__field__chain.cc) = d114fcfdc80338674481af19fa428683aff3a527
-SHA1 (patch-plugin_x_protocol_stream_decompression__input__stream.h) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-plugin_x_src_io_vio__input__stream.h) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-plugin_x_src_prepare__param__handler.cc) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-plugin_x_tests_driver_connector_session__holder.cc) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-plugin_x_tests_driver_formatters_message__formatter.cc) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-plugin_x_tests_driver_processor_send__message__block__processor.cc) = adc83b19e793491b1c6ea0fd8b46cd9f32e592fc
 SHA1 (patch-router_CMakeLists.txt) = 9bfd1278c42070ada0606dfff34a66b8b95d0413
 SHA1 (patch-router_src_harness_include_mysql_harness_net_ts_impl_netif.h) = ade643148787438d6d6f1f7b2636bbd0af87d70f
 SHA1 (patch-router_src_harness_include_mysql_harness_net_ts_internet.h) = 29e019236423aaa77b71b273d009404e4fbafe73
