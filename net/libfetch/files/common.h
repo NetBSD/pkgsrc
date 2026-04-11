@@ -1,6 +1,6 @@
-/*	$NetBSD: common.h,v 1.25 2025/03/30 09:57:52 nia Exp $	*/
+/*	$NetBSD: common.h,v 1.26 2026/04/11 10:41:52 wiz Exp $	*/
 /*-
- * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
+ * Copyright (c) 1998-2004 Dag-Erling CoÃ¯dan SmÃ¸rgrav
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
