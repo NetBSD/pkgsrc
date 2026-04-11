@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2217 2026/04/11 11:40:03 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2218 2026/04/11 16:14:35 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3488,3 +3488,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 29.10.0 [pin 2026-04-11]
 	Updated sysutils/xtop to 0.3.8 [pin 2026-04-11]
 	Updated devel/meld to 3.22.2nb17 [wiz 2026-04-11]
+	Updated editors/nano to 8.0 [schwarz 2026-04-11]
