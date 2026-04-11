@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2025/11/17 11:01:19 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/04/11 21:19:21 christos Exp $
 
 DISTNAME=		trn-4.0-test77
 PKGNAME=		trn-4.77
@@ -67,6 +67,7 @@ CONFIGURE_ARGS+=	-d -e -D bin=${PREFIX:Q}/bin \
 			-D servername=${PKG_SYSCONFDIR}'/server' \
 			-D d_nntp \
 			-U d_local \
+			-U d_uwait \
 			-D libs=' ' \
 			-D usevfork=false \
 			-D inews=${PREFIX:Q}'/bin/inews' \
@@ -82,6 +83,7 @@ SUBST_CLASSES+=		pipe2
 SUBST_STAGE.pipe2=	pre-configure
 SUBST_FILES.pipe2=	filter.c
 SUBST_SED.pipe2+=	-e 's|pipe2|trn_pipe2|g'
+CPPFLAGS+= -Wno-implicit-function-declaration
 
 INSTALLATION_DIRS+=	share/trn
 
