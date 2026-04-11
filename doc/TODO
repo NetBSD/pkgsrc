@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27081 2026/04/10 20:15:19 wiz Exp $
+$NetBSD: TODO,v 1.27082 2026/04/11 17:08:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1237,6 +1237,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o spcaview-20060501
 	o spirv-tools-2026.1 [needs llvm >20]
 	o spl-1.0pre6
+	o sqlite-3.53.0
 	o sqlrelay-2.1.1
 	o squeak-6.0
 	o squeak-vm-4.10.2.2765
