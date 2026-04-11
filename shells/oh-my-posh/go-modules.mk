@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.125 2026/04/09 18:11:02 pin Exp $
+# $NetBSD: go-modules.mk,v 1.126 2026/04/11 05:25:30 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -175,10 +175,10 @@ GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.48.0.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.48.0.zip
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20241217172543-b2144cdd0a67.mod
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20241217172543-b2144cdd0a67.zip
-GO_MODULE_FILES+=	golang.org/x/image/@v/v0.38.0.mod
-GO_MODULE_FILES+=	golang.org/x/image/@v/v0.38.0.zip
-GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.34.0.mod
-GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.34.0.zip
+GO_MODULE_FILES+=	golang.org/x/image/@v/v0.39.0.mod
+GO_MODULE_FILES+=	golang.org/x/image/@v/v0.39.0.zip
+GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.35.0.mod
+GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.35.0.zip
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.20.0.mod
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.20.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20190916202348-b4ddaad3f8a3.mod
@@ -190,11 +190,11 @@ GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.43.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.43.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.6.0.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.5.mod
-GO_MODULE_FILES+=	golang.org/x/text/@v/v0.35.0.mod
-GO_MODULE_FILES+=	golang.org/x/text/@v/v0.35.0.zip
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.36.0.mod
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.36.0.zip
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20180917221912-90fa682c2a6e.mod
-GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.42.0.mod
-GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.42.0.zip
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.43.0.mod
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.43.0.zip
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.mod
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v1.0.0-20190902080502-41f04d3bba15.mod
 GO_MODULE_FILES+=	gopkg.in/ini.v1/@v/v1.67.1.mod
