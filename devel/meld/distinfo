@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.72 2024/12/10 08:22:10 wiz Exp $
+$NetBSD: distinfo,v 1.73 2026/04/11 11:39:51 wiz Exp $
 
 BLAKE2s (meld-3.22.2.tar.xz) = 1a8286945b1b97b23fc856bf170982dc48ec767261e5e307408e8693d62bdb4c
 SHA512 (meld-3.22.2.tar.xz) = fd8b12567cd8dcf77f265d831c9ac9ba33d13fb78c95b01b496b016308ff4159963b4610a68f41d04a52cc5bcc13bb4568d24bbade5bd79246111e463e413284
 Size (meld-3.22.2.tar.xz) = 676376 bytes
 SHA1 (patch-meld_melddoc.py) = 9a9e1bc3943b9699013f9b51ed630109d0ea95e6
+SHA1 (patch-meld_vc___vc.py) = 1861c9dec96c6756f4dd0dfa1b2f3bb57bdf0455
