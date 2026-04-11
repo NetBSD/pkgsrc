@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2214 2026/04/11 05:24:48 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2215 2026/04/11 05:26:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3485,3 +3485,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/xfce4-terminal to 1.2.0 [gutteridge 2026-04-11]
 	Updated net/p5-Net-CIDR-Lite to 0.23 [wiz 2026-04-11]
 	Updated devel/serie to 0.7.2 [pin 2026-04-11]
+	Updated shells/oh-my-posh to 29.10.0 [pin 2026-04-11]
