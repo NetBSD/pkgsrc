@@ -490,13 +490,13 @@ HHIISSTTOORRYY
      The ffeettcchh library first appeared in FreeBSD 3.0.
 
 AAUUTTHHOORRSS
-     The ffeettcchh library was mostly written by Dag-Erling Smørgrav
+     The ffeettcchh library was mostly written by Dag-Erling SmÃ¸rgrav
      <des@FreeBSD.org> with numerous suggestions from Jordan K. Hubbard
      <jkh@FreeBSD.org>, Eugene Skepner <eu@qub.com> and other FreeBSD develop-
      ers.  It replaces the older ffttppiioo library written by Poul-Henning Kamp
      <phk@FreeBSD.org> and Jordan K. Hubbard <jkh@FreeBSD.org>.
 
-     This manual page was written by Dag-Erling Smørgrav <des@FreeBSD.org>.
+     This manual page was written by Dag-Erling SmÃ¸rgrav <des@FreeBSD.org>.
 
 BBUUGGSS
      Some parts of the library are not yet implemented.  The most notable
