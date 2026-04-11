@@ -1,14 +1,15 @@
-$NetBSD: patch-ac,v 1.9 2014/06/29 19:03:30 dholland Exp $
+$NetBSD: patch-ac,v 1.10 2026/04/11 21:19:21 christos Exp $
 
 - Don't belch on single quotes in uname output.
 - Dragonfly support.
 - Always use pkgsrc termcap.
 - Use assorted pkgsrc tools.
 - Don't embed the tools path of sleep into installed scripts.
+- fix compilation warnings
 
---- Configure.orig	2001-02-22 19:17:39.000000000 +0000
-+++ Configure
-@@ -1260,7 +1260,6 @@ mkdir
+--- Configure.orig	2010-09-02 02:12:26.000000000 -0400
++++ Configure	2026-04-11 17:13:48.980370032 -0400
+@@ -1260,7 +1260,6 @@
  mv
  rm
  sed
@@ -16,7 +17,7 @@ $NetBSD: patch-ac,v 1.9 2014/06/29 19:03:30 dholland Exp $
  sort
  tail
  touch
-@@ -1366,6 +1365,7 @@ for file in $trylist; do
+@@ -1366,6 +1365,7 @@
  		;;
  	esac
  done
@@ -24,7 +25,7 @@ $NetBSD: patch-ac,v 1.9 2014/06/29 19:03:30 dholland Exp $
  case "$egrep" in
  egrep)
  	echo "Substituting grep for egrep."
-@@ -1507,7 +1507,7 @@ case "$config_sh" in
+@@ -1507,7 +1507,7 @@
  myuname=`( ($uname -a) 2>/dev/null || hostname) 2>&1`
  # tr '[A-Z]' '[a-z]' would not work in EBCDIC
  # because the A-Z/a-z are not consecutive.
@@ -33,7 +34,7 @@ $NetBSD: patch-ac,v 1.9 2014/06/29 19:03:30 dholland Exp $
  	./tr '[A-Z]' '[a-z]' | tr $trnl ' '`
  newmyuname="$myuname"
  dflt=n
-@@ -2540,7 +2540,7 @@ EOM
+@@ -2540,7 +2540,7 @@
      esac
      ;;
  *)  case "$d_inews" in
@@ -42,7 +43,33 @@ $NetBSD: patch-ac,v 1.9 2014/06/29 19:03:30 dholland Exp $
      "$define")
  	set dflt installinews bin
  	eval $prefixit
-@@ -4412,6 +4412,9 @@ case "$nm_so_opt" in
+@@ -3046,6 +3046,7 @@
+ echo " "
+ echo "Checking for GNU cc in disguise and/or its version number..." >&4
+ $cat >gccvers.c <<EOM
++#include <stdlib.h>
+ #include <stdio.h>
+ int main() {
+ #ifdef __GNUC__
+@@ -4096,7 +4097,8 @@
+ echo "Checking your choice of C compiler and flags for coherency..." >&4
+ $cat > try.c <<'EOF'
+ #include <stdio.h>
+-main() { printf("Ok\n"); exit(0); }
++#include <stdlib.h>
++int main(void) { printf("Ok\n"); exit(0); }
+ EOF
+ set X $cc $optimize $ccflags -o try $ldflags try.c $libs
+ shift
+@@ -4302,6 +4304,7 @@
+ echo " "
+ echo "Checking for GNU C Library..." >&4
+ cat >gnulibc.c <<EOM
++#include <stdlib.h>
+ #include <stdio.h>
+ int
+ main()
+@@ -4412,6 +4415,9 @@
  			nm_so_opt='--dynamic'
  		fi
  		;;
@@ -52,7 +79,7 @@ $NetBSD: patch-ac,v 1.9 2014/06/29 19:03:30 dholland Exp $
  	esac
  	;;
  esac
-@@ -4855,10 +4858,54 @@ set getpwent d_getpwent
+@@ -4855,10 +4861,54 @@
  eval $inlibc
  
  : where do we get termlib routines from
@@ -108,7 +135,7 @@ $NetBSD: patch-ac,v 1.9 2014/06/29 19:03:30 dholland Exp $
  	ar t $xxx >grimble
  	if $contains tputs$_o grimble >/dev/null 2>&1; then
  		termlib='-lcurses'
-@@ -4882,10 +4929,10 @@ case "$xxx" in
+@@ -4882,10 +4932,10 @@
  esac
  case "$xxx" in
  x)
@@ -121,7 +148,7 @@ $NetBSD: patch-ac,v 1.9 2014/06/29 19:03:30 dholland Exp $
  		d_havetlib="$define"
  		echo "Termlib library found." >&4
  		;;
-@@ -4901,17 +4948,17 @@ x)
+@@ -4901,17 +4951,17 @@
  esac
  case "$xxx" in
  x)
@@ -143,7 +170,7 @@ $NetBSD: patch-ac,v 1.9 2014/06/29 19:03:30 dholland Exp $
  		;;
  	*)
  		xxx=x
-@@ -4928,6 +4975,7 @@ x)
+@@ -4928,6 +4978,7 @@
  		echo "Terminfo library found." >&4
  		;;
  	/*)
@@ -151,7 +178,7 @@ $NetBSD: patch-ac,v 1.9 2014/06/29 19:03:30 dholland Exp $
  		termlib="$xxx"
  		d_havetlib="$define"
  		echo "Terminfo library found." >&4
-@@ -4958,25 +5006,6 @@ x)
+@@ -4958,25 +5009,6 @@
  esac
  case "$xxx" in
  x)
@@ -177,7 +204,7 @@ $NetBSD: patch-ac,v 1.9 2014/06/29 19:03:30 dholland Exp $
  	dflt=y
  rp="Your system appears to NOT have termlib-style routines. Is this true?"
  	. ./myread
-@@ -5000,6 +5029,7 @@ EOM
+@@ -5000,6 +5032,7 @@
  	esac
  	;;
  esac
@@ -185,7 +212,7 @@ $NetBSD: patch-ac,v 1.9 2014/06/29 19:03:30 dholland Exp $
  
  : Decide whether to ignore the ORGANIZATION environment variable
  case "$d_ignoreorg" in
-@@ -6223,14 +6253,14 @@ active='$active'
+@@ -6223,14 +6256,14 @@
  acttimes='$acttimes'
  aphostcmd='$aphostcmd'
  archobjs='$archobjs'
@@ -203,7 +230,7 @@ $NetBSD: patch-ac,v 1.9 2014/06/29 19:03:30 dholland Exp $
  cc='$cc'
  ccflags='$ccflags'
  cf_by='$cf_by'
-@@ -6240,7 +6270,7 @@ cntrydist='$cntrydist'
+@@ -6240,7 +6273,7 @@
  comm='$comm'
  contains='$contains'
  contdist='$contdist'
@@ -212,7 +239,7 @@ $NetBSD: patch-ac,v 1.9 2014/06/29 19:03:30 dholland Exp $
  cpp='$cpp'
  cppflags='$cppflags'
  cpplast='$cpplast'
-@@ -6305,21 +6335,21 @@ d_xenix='$d_xenix'
+@@ -6305,21 +6338,21 @@
  d_xthread='$d_xthread'
  date='$date'
  defeditor='$defeditor'
@@ -239,7 +266,7 @@ $NetBSD: patch-ac,v 1.9 2014/06/29 19:03:30 dholland Exp $
  groupdesc='$groupdesc'
  hint='$hint'
  hostbits='$hostbits'
-@@ -6376,10 +6406,10 @@ mboxchar='$mboxchar'
+@@ -6376,10 +6409,10 @@
  mimecap='$mimecap'
  mips='$mips'
  mips_type='$mips_type'
@@ -252,7 +279,7 @@ $NetBSD: patch-ac,v 1.9 2014/06/29 19:03:30 dholland Exp $
  myactive='$myactive'
  myuname='$myuname'
  n='$n'
-@@ -6417,11 +6447,11 @@ prefixexp='$prefixexp'
+@@ -6417,11 +6450,11 @@
  prefshell='$prefshell'
  privlib='$privlib'
  privlibexp='$privlibexp'
@@ -266,7 +293,7 @@ $NetBSD: patch-ac,v 1.9 2014/06/29 19:03:30 dholland Exp $
  sendmail='$sendmail'
  servername='$servername'
  sharpbang='$sharpbang'
-@@ -6442,7 +6472,7 @@ strings='$strings'
+@@ -6442,7 +6475,7 @@
  strn='$strn'
  subscriptions='$subscriptions'
  sysman='$sysman'
@@ -275,7 +302,7 @@ $NetBSD: patch-ac,v 1.9 2014/06/29 19:03:30 dholland Exp $
  tee='$tee'
  termlib='$termlib'
  test='$test'
-@@ -6450,7 +6480,7 @@ threaddir='$threaddir'
+@@ -6450,7 +6483,7 @@
  tk='$tk'
  tkinc='$tkinc'
  tklibs='$tklibs'
