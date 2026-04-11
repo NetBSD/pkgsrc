@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2026/02/07 16:25:04 schwarz Exp $
+@comment $NetBSD: PLIST,v 1.36 2026/04/11 16:14:35 schwarz Exp $
 bin/nano
 bin/rnano
 info/nano.info
@@ -28,6 +28,7 @@ share/locale/is/LC_MESSAGES/nano.mo
 share/locale/it/LC_MESSAGES/nano.mo
 share/locale/ja/LC_MESSAGES/nano.mo
 share/locale/ka/LC_MESSAGES/nano.mo
+share/locale/kk/LC_MESSAGES/nano.mo
 share/locale/ko/LC_MESSAGES/nano.mo
 share/locale/ms/LC_MESSAGES/nano.mo
 share/locale/nb/LC_MESSAGES/nano.mo
@@ -55,7 +56,6 @@ share/nano/changelog.nanorc
 share/nano/cmake.nanorc
 share/nano/css.nanorc
 share/nano/default.nanorc
-share/nano/elisp.nanorc
 share/nano/email.nanorc
 share/nano/extra/ada.nanorc
 share/nano/extra/fortran.nanorc
