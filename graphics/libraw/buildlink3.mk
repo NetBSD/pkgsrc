@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2025/04/24 14:14:30 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2026/04/11 17:08:22 wiz Exp $
 
 BUILDLINK_TREE+=	libraw
 
@@ -9,11 +9,6 @@ BUILDLINK_API_DEPENDS.libraw+=	libraw>=0.16.0
 BUILDLINK_ABI_DEPENDS.libraw+=	libraw>=0.21.1nb2
 BUILDLINK_PKGSRCDIR.libraw?=	../../graphics/libraw
 
-pkgbase := libraw
-.include "../../mk/pkg-build-options.mk"
-.if ${PKG_BUILD_OPTIONS.libraw:Mjasper}
-.  include "../../graphics/jasper/buildlink3.mk"
-.endif
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .endif	# LIBRAW_BUILDLINK3_MK
