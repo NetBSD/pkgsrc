@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.29 2025/06/11 23:49:34 gutteridge Exp $
+$NetBSD: distinfo,v 1.30 2026/04/11 02:33:44 gutteridge Exp $
 
-BLAKE2s (xfce4-terminal-1.1.5.tar.xz) = d1ae716f56277d0a32ae0c8cc82bbe66a5d2cfe35a8cb9e17a0838c0b076b907
-SHA512 (xfce4-terminal-1.1.5.tar.xz) = 075ce32f60198ab6f99ac08f9b00328c70cc3b35a082dcdbf245028a31f471fb5758c2d5569f6ccdce9593c70040f8a88d87ea53b86e021e603a85413b6f89c5
-Size (xfce4-terminal-1.1.5.tar.xz) = 440192 bytes
+BLAKE2s (xfce4-terminal-1.2.0.tar.xz) = b18b081fef6ac63a4f3f1230344943f48954d59603f292ae95ea3f07a5d0a563
+SHA512 (xfce4-terminal-1.2.0.tar.xz) = b0ac9330d7df046955bad43a535a1eb58bb7461d97d7145924df6e179c2b276817ecd607b72fae881d5e724a3ee5b29f2bd309ebadda5b88cc0afab52b33da13
+Size (xfce4-terminal-1.2.0.tar.xz) = 451388 bytes
+SHA1 (patch-terminal_terminal-window-dropdown.c) = a5cc9ce1907f1f945712b187ce3db0f34ca0f9ac
