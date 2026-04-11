@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2026/03/31 07:03:54 pin Exp $
+# $NetBSD: Makefile,v 1.6 2026/04/11 05:26:58 pin Exp $
 
-DISTNAME=	xtop-0.3.7
+DISTNAME=	xtop-0.3.8
 CATEGORIES=	sysutils
 MASTER_SITES=	https://static.crates.io/crates/xtop/
 EXTRACT_SUFX=	.crate
