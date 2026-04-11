@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2025/09/21 15:11:38 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/04/11 17:09:09 wiz Exp $
 
 .include "../../graphics/freeimage/Makefile.common"
 
 PKGNAME=	freeimageplus-3.18.0
-PKGREVISION=	16
+PKGREVISION=	17
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Library for supporting PNG, BMP, JPEG, and TIFF (C++ wrapper)
