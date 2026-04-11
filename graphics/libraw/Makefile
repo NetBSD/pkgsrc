@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2025/04/24 14:14:30 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/04/11 17:08:22 wiz Exp $
 
-DISTNAME=	LibRaw-0.21.1
+DISTNAME=	LibRaw-0.22.1
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://www.libraw.org/data/
 
@@ -20,7 +19,7 @@ CONFIGURE_ARGS+=	--disable-examples
 PKGCONFIG_OVERRIDE+=	libraw.pc.in
 PKGCONFIG_OVERRIDE+=	libraw_r.pc.in
 
-.include "options.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
