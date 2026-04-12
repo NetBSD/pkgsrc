@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2242 2026/04/12 15:01:25 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2243 2026/04/12 15:03:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3512,3 +3512,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ruby-train-core to 3.16.1 [taca 2026-04-12]
 	Updated security/ruby-metasploit-payloads to 2.0.245 [taca 2026-04-12]
 	Updated security/ruby-rex-core to 0.1.36 [taca 2026-04-12]
+	Updated security/ruby-vault to 0.20.1 [taca 2026-04-12]
