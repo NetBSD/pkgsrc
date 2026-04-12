@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2256 2026/04/12 15:58:20 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2257 2026/04/12 16:02:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3526,3 +3526,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-sass-embedded to 1.99.0 [taca 2026-04-12]
 	Updated www/ruby-selenium-webdriver to 4.43.0 [taca 2026-04-12]
 	Updated databases/ruby-odbc to 0.999993 [taca 2026-04-12]
+	Updated editors/kakoune to 2026.04.12 [wiz 2026-04-12]
