@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2026/04/05 07:23:36 wiz Exp $
+$NetBSD: distinfo,v 1.23 2026/04/12 05:39:12 wiz Exp $
 
-BLAKE2s (XML-Parser-2.56.tar.gz) = 21cdc96881d597d32a8725e56b1d0ae732bfae60e478076f572efdf2e72cc72d
-SHA512 (XML-Parser-2.56.tar.gz) = e197b18274d1a909756053c7ed57838c04088314b62a42e6be5ce4a0f934c601e4e430fcc55d44b972d4124041020dffc2174e35142d605c148097d4a6f76fdc
-Size (XML-Parser-2.56.tar.gz) = 319278 bytes
+BLAKE2s (XML-Parser-2.57.tar.gz) = 317c7a5459dea6c62e05e9c31e5348133c6137957dc51d7afe404bc39f8fa0f6
+SHA512 (XML-Parser-2.57.tar.gz) = 21e2d9ff12ce5dea31d386ee15f14dac91d8697183284b581b6a2c674cb586a8aa04f6480b9e22d497c4db84a691cf133cbbc0e87fe20a7c3d305de2b56bb5a5
+Size (XML-Parser-2.57.tar.gz) = 452146 bytes
