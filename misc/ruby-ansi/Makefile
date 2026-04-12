@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2026/02/05 10:58:08 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/04/12 14:48:55 taca Exp $
 
-DISTNAME=	ansi-1.5.0
+DISTNAME=	ansi-1.6.0
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
