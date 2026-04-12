@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.57 2026/03/01 07:11:48 taca Exp $
+$NetBSD: distinfo,v 1.58 2026/04/12 14:32:18 taca Exp $
 
-BLAKE2s (sqlite3-2.9.1.gem) = abe727abb48c103f24ad3f6561627c67b404831f1b4d95981a059a20ca7011db
-SHA512 (sqlite3-2.9.1.gem) = 62e8a5e716190912a409f7062e380143d084c65a82992bfb6b4ad462e559f73bff0d3974b85edd2fc989d715a64410bc53a38ae5caefd90f4e72808137a1f843
-Size (sqlite3-2.9.1.gem) = 3275776 bytes
+BLAKE2s (sqlite3-2.9.2.gem) = 59dc2a9c2122d7446317cda9f348162e697ff7ec33f334dc51a8a0f8f0ac00b6
+SHA512 (sqlite3-2.9.2.gem) = f3b239c83f361507fc00ddca2379c3aa8976d07ccb75ecf3020d6cd01fdeb52e18671ad3ec53c6d129fc3c2ff2b1c329ee05ff05a916a3e3b86f978c110233db
+Size (sqlite3-2.9.2.gem) = 3276288 bytes
