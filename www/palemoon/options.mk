@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2026/02/22 11:05:44 nia Exp $
+# $NetBSD: options.mk,v 1.3 2026/04/12 08:46:30 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.palemoon
 PKG_SUPPORTED_OPTIONS=		dbus pulseaudio

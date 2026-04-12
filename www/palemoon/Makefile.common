@@ -5,7 +5,7 @@
 # for build instructions see
 # https://developer.palemoon.org/build/linux/
 
-PM_VER=		34.1.0
+PM_VER=		34.2.0
 CATEGORIES=	www
 
 DISTINFO_FILE=	${.CURDIR}/../../www/palemoon/distinfo
@@ -14,7 +14,6 @@ PATCHDIR=	${.CURDIR}/../../www/palemoon/patches
 DIST_SUBDIR=	palemoon-${PM_VER}
 DISTFILES+=	palemoon.tar.gz
 DISTFILES+=	uxp.tar.gz
-DISTFILES+=	psutil.tar.gz
 
 # The default bundled copy of ICU does not contain big-endian
 # data files, so this one is generated manually.
@@ -25,10 +24,7 @@ SITES.palemoon.tar.gz= \
 	-https://repo.palemoon.org/MoonchildProductions/Pale-Moon/archive/${PM_VER}_Release.tar.gz
 
 SITES.uxp.tar.gz= \
-	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_20260301.tar.gz
-
-SITES.psutil.tar.gz= \
-	-https://files.pythonhosted.org/packages/7b/58/2675697b6831e6ac4b7b7bc4e5dcdb24a2f39f8411186573eb0de16eb6d5/psutil-3.4.2.tar.gz
+	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_20260406.tar.gz
 
 SITES.icudt${ICU_MAJOR}b.dat.gz=	${MASTER_SITE_LOCAL}
 
@@ -71,7 +67,6 @@ CONFIGURE_ARGS+=	--enable-optimize="-O2 -w"
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk${PM_GTK_VER}
 CONFIGURE_ARGS+=	--enable-devtools
 CONFIGURE_ARGS+=	--enable-av1
-CONFIGURE_ARGS+=	--enable-jxl
 CONFIGURE_ARGS+=	--disable-webrtc
 CONFIGURE_ARGS+=	--disable-gamepad
 CONFIGURE_ARGS+=	--disable-tests
@@ -148,8 +143,6 @@ pre-configure:
 
 pre-patch:
 	${MV} ${WRKDIR}/uxp/* ${WRKSRC}/platform/
-	${RM} -rf ${WRKSRC}/platform/python/psutil
-	${MV} ${WRKDIR}/psutil-3.4.2 ${WRKSRC}/platform/python/psutil
 
 pre-build:
 	${TOUCH} ${WRKSRC}/platform/configure
