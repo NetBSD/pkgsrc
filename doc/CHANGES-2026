@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2244 2026/04/12 15:07:08 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2245 2026/04/12 15:10:44 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3514,3 +3514,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ruby-rex-core to 0.1.36 [taca 2026-04-12]
 	Updated security/ruby-vault to 0.20.1 [taca 2026-04-12]
 	Updated textproc/ruby-libxml to 6.0.0 [taca 2026-04-12]
+	Updated net/mikutter to 5.1.2 [tsutsui 2026-04-12]
