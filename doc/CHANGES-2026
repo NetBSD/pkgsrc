@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2223 2026/04/12 05:39:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2224 2026/04/12 08:46:48 nia Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3493,3 +3493,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/mle to 1.8.1 [ktnb 2026-04-12]
 	Updated graphics/p5-Image-ExifTool to 13.55 [wiz 2026-04-12]
 	Updated textproc/p5-XML-Parser to 2.57 [wiz 2026-04-12]
+	Updated www/palemoon to 34.2.0 [nia 2026-04-12]
