@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/01/18 14:13:33 taca Exp $
+# $NetBSD: Makefile,v 1.8 2026/04/12 15:19:07 taca Exp $
 
-DISTNAME=	simple-rss-2.1.0
+DISTNAME=	simple-rss-2.2.0
 CATEGORIES=	textproc
 
 MAINTAINER=	minskim@NetBSD.org
