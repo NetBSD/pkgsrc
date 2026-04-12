@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2026/01/18 15:07:06 taca Exp $
+# $NetBSD: Makefile,v 1.21 2026/04/12 15:25:34 taca Exp $
 
-DISTNAME=	html-proofer-5.2.0
+DISTNAME=	html-proofer-5.2.1
 CATEGORIES=	www
 
 MAINTAINER=	ryoon@NetBSD.org
