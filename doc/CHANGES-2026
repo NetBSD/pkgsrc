@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2248 2026/04/12 15:19:17 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2249 2026/04/12 15:21:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3518,3 +3518,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ruby-multi_json to 1.20.1 [taca 2026-04-12]
 	Updated textproc/ruby-rdiscount to 2.2.7.4 [taca 2026-04-12]
 	Updated textproc/ruby-simple-rss to 2.2.0 [taca 2026-04-12]
+	Updated textproc/ruby-yard to 0.9.39 [taca 2026-04-12]
