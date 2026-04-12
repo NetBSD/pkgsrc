@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2226 2026/04/12 11:25:24 fox Exp $
+$NetBSD: CHANGES-2026,v 1.2227 2026/04/12 12:21:49 he Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3496,3 +3496,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/palemoon to 34.2.0 [nia 2026-04-12]
 	Updated audio/fasttracker2 to 2.15 [fox 2026-04-12]
 	Updated security/wolfssl to 5.9.1 [fox 2026-04-12]
+	Updated net/exabgp to 5.0.9 [he 2026-04-12]
