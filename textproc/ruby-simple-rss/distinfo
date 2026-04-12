@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2026/01/18 14:13:33 taca Exp $
+$NetBSD: distinfo,v 1.10 2026/04/12 15:19:07 taca Exp $
 
-BLAKE2s (simple-rss-2.1.0.gem) = c908ad15c6465992d8f64c5ccdfb306a24372ddcd18f17cb2f077f4d12de2d61
-SHA512 (simple-rss-2.1.0.gem) = 71b8ea76293e964b5c9d6497920d1f8807f09cd9bb0e3ca8d1405cebafd1359ca82d4b8fecc94cf14bb9076aba36a8a4894b1587482df994c97085822bf26742
-Size (simple-rss-2.1.0.gem) = 48128 bytes
+BLAKE2s (simple-rss-2.2.0.gem) = faa429bbe151387361409ca933e014d3cd25946e52b3d91035bca20d65dece6c
+SHA512 (simple-rss-2.2.0.gem) = e8e751941158fba4cec9bc01f908597bab44cb4e64d3a1400a96925857b5b5c5bdf4f49c11d01761610a17d99fcc7c10408d380e1097c925456fe44aecde1553
+Size (simple-rss-2.2.0.gem) = 51712 bytes

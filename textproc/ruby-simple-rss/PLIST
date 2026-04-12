@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2026/01/18 14:13:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/04/12 15:19:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -11,10 +11,14 @@ ${GEM_LIBDIR}/test/base/empty_tag_test.rb
 ${GEM_LIBDIR}/test/base/encoding_test.rb
 ${GEM_LIBDIR}/test/base/enumerable_test.rb
 ${GEM_LIBDIR}/test/base/feed_attributes_test.rb
+${GEM_LIBDIR}/test/base/feed_merging_and_diffing_test.rb
+${GEM_LIBDIR}/test/base/fetch_integration_test.rb
 ${GEM_LIBDIR}/test/base/fetch_test.rb
+${GEM_LIBDIR}/test/base/filtering_and_validation_test.rb
 ${GEM_LIBDIR}/test/base/hash_xml_serialization_test.rb
 ${GEM_LIBDIR}/test/base/item_attributes_test.rb
 ${GEM_LIBDIR}/test/base/json_serialization_test.rb
+${GEM_LIBDIR}/test/base/media_and_enclosure_helpers_test.rb
 ${GEM_LIBDIR}/test/data/atom.xml
 ${GEM_LIBDIR}/test/data/atom_with_entry_attrs.xml
 ${GEM_LIBDIR}/test/data/atom_with_feed_attrs.xml
