@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2224 2026/04/12 08:46:48 nia Exp $
+$NetBSD: CHANGES-2026,v 1.2225 2026/04/12 11:21:06 fox Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3494,3 +3494,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/p5-Image-ExifTool to 13.55 [wiz 2026-04-12]
 	Updated textproc/p5-XML-Parser to 2.57 [wiz 2026-04-12]
 	Updated www/palemoon to 34.2.0 [nia 2026-04-12]
+	Updated audio/fasttracker2 to 2.15 [fox 2026-04-12]
