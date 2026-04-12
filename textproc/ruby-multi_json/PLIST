@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2026/01/18 14:30:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/04/12 15:12:59 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -9,17 +9,15 @@ ${GEM_LIBDIR}/lib/multi_json/adapter.rb
 ${GEM_LIBDIR}/lib/multi_json/adapter_error.rb
 ${GEM_LIBDIR}/lib/multi_json/adapter_selector.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/fast_jsonparser.rb
-${GEM_LIBDIR}/lib/multi_json/adapters/gson.rb
-${GEM_LIBDIR}/lib/multi_json/adapters/jr_jackson.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/json_gem.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/oj.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/oj_common.rb
-${GEM_LIBDIR}/lib/multi_json/adapters/ok_json.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/yajl.rb
-${GEM_LIBDIR}/lib/multi_json/convertible_hash_keys.rb
+${GEM_LIBDIR}/lib/multi_json/concurrency.rb
+${GEM_LIBDIR}/lib/multi_json/deprecated.rb
 ${GEM_LIBDIR}/lib/multi_json/options.rb
 ${GEM_LIBDIR}/lib/multi_json/options_cache.rb
+${GEM_LIBDIR}/lib/multi_json/options_cache/mutex_store.rb
 ${GEM_LIBDIR}/lib/multi_json/parse_error.rb
-${GEM_LIBDIR}/lib/multi_json/vendor/okjson.rb
 ${GEM_LIBDIR}/lib/multi_json/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
