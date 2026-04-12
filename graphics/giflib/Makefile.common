@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.17 2026/03/10 20:40:57 wiz Exp $
+# $NetBSD: Makefile.common,v 1.18 2026/04/12 18:29:17 wiz Exp $
 # used by graphics/giflib/Makefile
 # used by graphics/giflib-util/Makefile
 
-DISTNAME=	giflib-6.1.2
+DISTNAME=	giflib-6.1.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=giflib/}
 
