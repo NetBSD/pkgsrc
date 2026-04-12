@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2026/04/10 17:38:51 he Exp $
+$NetBSD: distinfo,v 1.24 2026/04/12 12:21:09 he Exp $
 
-BLAKE2s (exabgp-5.0.8.tar.gz) = 78d29e529a1885d758634df7d380190a0c6e52705e60ae1602d61ed073c69472
-SHA512 (exabgp-5.0.8.tar.gz) = eeb7266509abec9ad365702036b4f5d9940f3e0bc192cc35b1a5daf4fe5fe176235cd910820f5b710c8c4b680ab422e9b2ce88ce19c2611732e12855ee678ffc
-Size (exabgp-5.0.8.tar.gz) = 3402753 bytes
+BLAKE2s (exabgp-5.0.9.tar.gz) = bd456c4d6f52e84339fb76a4b5157cab6ac0a77626d435d65b6ab2a11a96d1b8
+SHA512 (exabgp-5.0.9.tar.gz) = 09ff5da010f0ebfb31a8646299f59dde9fb38398b66a845cf015865432f8c831d39dfe9b8f7de9339383de2eb753b687492b746768178aee1c74c59db33647b3
+Size (exabgp-5.0.9.tar.gz) = 3403693 bytes
