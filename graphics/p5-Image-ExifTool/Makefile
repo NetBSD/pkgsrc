@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.87 2026/02/15 09:18:34 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2026/04/12 05:38:27 wiz Exp $
 
 # Author requests that we package only "production" versions.  See
 # https://exiftool.org/history.html for NEWS content and which
 # versions are blessed.   Note that repology gets this wrong.
-DISTNAME=	Image-ExifTool-13.50
+DISTNAME=	Image-ExifTool-13.55
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	graphics perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Image/}
-MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=exiftool/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=exiftool/}
+MASTER_SITES+=	${MASTER_SITE_PERL_CPAN:=Image/}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://exiftool.org/
