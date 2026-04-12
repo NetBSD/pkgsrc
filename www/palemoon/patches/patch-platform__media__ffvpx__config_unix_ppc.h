@@ -1,4 +1,4 @@
-$NetBSD: patch-platform__media__ffvpx__config_unix_ppc.h,v 1.2 2026/01/20 17:13:01 nia Exp $
+$NetBSD: patch-platform__media__ffvpx__config_unix_ppc.h,v 1.3 2026/04/12 08:46:30 nia Exp $
 
 NetBSD/powerpc support.
 
