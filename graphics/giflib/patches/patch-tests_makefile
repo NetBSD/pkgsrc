@@ -1,0 +1,18 @@
+$NetBSD: patch-tests_makefile,v 1.1 2026/04/12 18:29:17 wiz Exp $
+
+NetBSD's head(1) does not support --bytes, nor negative arguments to -c.
+
+--- tests/makefile.orig	2026-04-12 18:24:32.471859148 +0000
++++ tests/makefile
+@@ -106,9 +106,9 @@ giffix-rebuild:
+ 
+ giffix-rebuild:
+ 	@echo "Rebuilding giffix test."
+-	@head --bytes=-20 <$(PICS)/treescap.gif | $(UTILS)/giffix 2>/dev/null | $(UTILS)/gifbuild -d >giffixed.ico
++	@head -c 387 <$(PICS)/treescap.gif | $(UTILS)/giffix 2>/dev/null | $(UTILS)/gifbuild -d >giffixed.ico
+ giffix-regress:
+-	@head --bytes=-20 <$(PICS)/treescap.gif | $(UTILS)/giffix 2>/dev/null | $(UTILS)/gifbuild -d | ./tapdiffer "giffix: Testing giffix behavior" giffixed.ico
++	@head -c 387 <$(PICS)/treescap.gif | $(UTILS)/giffix 2>/dev/null | $(UTILS)/gifbuild -d | ./tapdiffer "giffix: Testing giffix behavior" giffixed.ico
+ 
+ gifinto-regress:
+ 	@rm -f $@.giflib.tmp
