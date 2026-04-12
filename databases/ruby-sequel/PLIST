@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.134 2026/03/07 13:05:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.135 2026/04/12 14:30:10 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -127,6 +127,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/index_caching.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/inflector.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/integer64.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/is_distinct_from.rb
+${GEM_LIBDIR}/lib/sequel/extensions/lit_require_frozen.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/looser_typecasting.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/migration.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/mssql_emulate_lateral_with_apply.rb
