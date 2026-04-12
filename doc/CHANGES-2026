@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2235 2026/04/12 14:43:50 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2236 2026/04/12 14:46:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3505,3 +3505,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-async to 2.39.0 [taca 2026-04-12]
 	Updated devel/ruby-rb_sys to 0.9.126 [taca 2026-04-12]
 	Updated devel/ruby-regexp_parser to 2.12.0 [taca 2026-04-12]
+	Updated graphics/ruby-RMagick to 6.3.0 [taca 2026-04-12]
