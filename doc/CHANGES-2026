@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2253 2026/04/12 15:33:41 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2254 2026/04/12 15:37:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3523,3 +3523,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-http-cookie to 1.1.4 [taca 2026-04-12]
 	Updated www/ruby-rack-session to 2.1.2 [taca 2026-04-12]
 	Updated www/ruby-rails-html-sanitizer to 1.7.0 [taca 2026-04-12]
+	Updated www/ruby-sass-embedded to 1.99.0 [taca 2026-04-12]
