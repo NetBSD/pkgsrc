@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2227 2026/04/12 12:21:49 he Exp $
+$NetBSD: CHANGES-2026,v 1.2228 2026/04/12 13:52:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3497,3 +3497,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/fasttracker2 to 2.15 [fox 2026-04-12]
 	Updated security/wolfssl to 5.9.1 [fox 2026-04-12]
 	Updated net/exabgp to 5.0.9 [he 2026-04-12]
+	Updated databases/ruby-activeldap to 7.2.3 [taca 2026-04-12]
