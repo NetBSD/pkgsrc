@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2240 2026/04/12 14:54:51 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2241 2026/04/12 14:57:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3510,3 +3510,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/ruby-ansi to 1.6.0 [taca 2026-04-12]
 	Updated net/ruby-amq-protocol to 2.7.0 [taca 2026-04-12]
 	Updated net/ruby-train-core to 3.16.1 [taca 2026-04-12]
+	Updated security/ruby-metasploit-payloads to 2.0.245 [taca 2026-04-12]
