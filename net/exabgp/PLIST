@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2026/04/10 17:38:51 he Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/04/12 12:21:09 he Exp $
 bin/exabgp
 bin/exabgp-cli
 bin/exabgp-healthcheck
@@ -895,6 +895,9 @@ ${PYSITELIB}/exabgp/data/__init__.pyo
 ${PYSITELIB}/exabgp/data/check.py
 ${PYSITELIB}/exabgp/data/check.pyc
 ${PYSITELIB}/exabgp/data/check.pyo
+${PYSITELIB}/exabgp/debug/__init__.py
+${PYSITELIB}/exabgp/debug/__init__.pyc
+${PYSITELIB}/exabgp/debug/__init__.pyo
 ${PYSITELIB}/exabgp/debug/intercept.py
 ${PYSITELIB}/exabgp/debug/intercept.pyc
 ${PYSITELIB}/exabgp/debug/intercept.pyo

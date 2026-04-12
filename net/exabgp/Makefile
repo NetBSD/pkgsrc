@@ -1,13 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2026/04/10 17:38:51 he Exp $
+# $NetBSD: Makefile,v 1.47 2026/04/12 12:21:09 he Exp $
 
-DISTNAME=	exabgp-5.0.8
-#DISTNAME=	${GITHUB_TAG}
-#GITHUB_PROJECT=	exabgp
-#GITHUB_TAG=	ee218bd03eee3e749bdbc102b0e8d3e8f6be6c6d
-#PKGNAME=	${GITHUB_PROJECT}-5.0.6a
+DISTNAME=	exabgp-5.0.9
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Exa-Networks/}
-#DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	he@NetBSD.org
 HOMEPAGE=	https://github.com/Exa-Networks/exabgp/
