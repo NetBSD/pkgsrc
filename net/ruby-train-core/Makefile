@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2024/09/22 06:05:33 taca Exp $
+# $NetBSD: Makefile,v 1.26 2026/04/12 14:54:41 taca Exp $
 
-DISTNAME=	train-core-3.12.7
+DISTNAME=	train-core-3.16.1
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,7 +9,7 @@ COMMENT=	Transport interface to talk to a selected set of backends
 LICENSE=	apache-2.0
 
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.5<3:../../net/ruby-addressable
-DEPENDS+=	${RUBY_PKGPREFIX}-ffi>=1.14.0:../../devel/ruby-ffi
+DEPENDS+=	${RUBY_PKGPREFIX}-ffi>=1.16.0<1.18:../../devel/ruby-ffi
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-shellout>=2.0:../../devel/ruby-mixlib-shellout
 DEPENDS+=	${RUBY_PKGPREFIX}-net-scp>=1.2:../../security/ruby-net-scp
 #DEPENDS+=	${RUBY_PKGPREFIX}-net-ssh>=2.9:../../security/ruby-net-ssh
