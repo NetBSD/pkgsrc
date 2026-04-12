@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/01/25 13:50:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/04/12 14:51:10 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/ChangeLog.md
 ${GEM_LIBDIR}/LICENSE
@@ -8,6 +8,7 @@ ${GEM_LIBDIR}/lib/amq/endianness.rb
 ${GEM_LIBDIR}/lib/amq/int_allocator.rb
 ${GEM_LIBDIR}/lib/amq/pack.rb
 ${GEM_LIBDIR}/lib/amq/protocol.rb
+${GEM_LIBDIR}/lib/amq/protocol/channel_close.rb
 ${GEM_LIBDIR}/lib/amq/protocol/client.rb
 ${GEM_LIBDIR}/lib/amq/protocol/constants.rb
 ${GEM_LIBDIR}/lib/amq/protocol/exceptions.rb
