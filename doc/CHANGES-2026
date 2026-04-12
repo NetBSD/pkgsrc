@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2221 2026/04/12 02:11:22 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.2222 2026/04/12 05:38:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3491,3 +3491,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/nano to 9.0 [schwarz 2026-04-11]
 	Updated graphics/libraw to 0.22.1 [wiz 2026-04-11]
 	Updated editors/mle to 1.8.1 [ktnb 2026-04-12]
+	Updated graphics/p5-Image-ExifTool to 13.55 [wiz 2026-04-12]
