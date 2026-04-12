@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2024/06/28 13:01:31 ktnb Exp $
+$NetBSD: distinfo,v 1.6 2026/04/12 02:30:03 ktnb Exp $
 
 BLAKE2s (s-nail-14.9.25.tar.gz) = ec72336121f187b4154b7663aa9efb6d14b4ae8c6f09efee822b3f2068f6140b
 SHA512 (s-nail-14.9.25.tar.gz) = 151397918bd872c59f0e7e9244f9cab8b0795e4449754de4274436b0946b22f64e7e757be41a350bc517f41de2afa113b4e83ac8c4a65508d725f02f255ae39c
 Size (s-nail-14.9.25.tar.gz) = 1107097 bytes
 SHA1 (patch-mk_make-install.sh) = a7537f2e6b65fc32a6257f1def5b06bc39e2fe91
+SHA1 (patch-src_mx_iconv.c) = 98e2a165130f7ff808a829e86fa925ac236ec3d0
