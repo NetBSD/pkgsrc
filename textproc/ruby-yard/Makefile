@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2026/01/18 14:31:58 taca Exp $
+# $NetBSD: Makefile,v 1.22 2026/04/12 15:20:54 taca Exp $
 
-DISTNAME=	yard-0.9.38
+DISTNAME=	yard-0.9.39
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
