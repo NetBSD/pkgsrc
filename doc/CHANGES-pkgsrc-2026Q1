@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.9 2026/04/10 19:10:52 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.10 2026/04/12 11:37:17 bsiegert Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -85,4 +85,16 @@ editors/vim-share: Security fix
 Pullup ticket #7074 - requested by gutteridge
 www/firefox140: security fix
 www/firefox140-l10n: dependent update
+
+Pullup ticket #7075 - requested by taca
+lang/perl5: security fix
+
+Pullup ticket #7076 - requested by taca
+archivers/xz: security fix
+
+Pullup ticket #7077 - requested by taca
+graphics/png: security fix
+
+Pullup ticket #7078 - requested by nia
+www/palemoon: security fix
 
