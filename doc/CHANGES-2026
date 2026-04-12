@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2231 2026/04/12 14:35:07 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2232 2026/04/12 14:37:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3501,3 +3501,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/ruby-sequel to 5.103.0 [taca 2026-04-12]
 	Updated databases/ruby-sqlite3 to 2.9.2 [taca 2026-04-12]
 	Updated devel/ruby-inline to 3.14.4 [taca 2026-04-12]
+	Updated devel/ruby-io-event to 1.15.1 [taca 2026-04-12]
