@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2025/10/23 20:36:43 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/04/12 02:11:00 ktnb Exp $
 
-DISTNAME=	mle-1.7.2
-PKGREVISION=	1
+DISTNAME=	mle-1.8.1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=adsr/}
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ktnb@NetBSD.org
 HOMEPAGE=	https://github.com/adsr/mle/
