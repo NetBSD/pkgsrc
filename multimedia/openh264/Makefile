@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/02/18 10:13:33 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/04/12 18:25:34 tnn Exp $
 
 DISTNAME=	openh264-2.6.0
 CATEGORIES=	multimedia
@@ -21,6 +21,8 @@ MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	ARCH=${MACHINE_ARCH}
 MAKE_FLAGS+=	HAVE_GMP_API=No
 MAKE_FLAGS+=	USE_STACK_PROTECTOR=No
+
+CXXFLAGS.SunOS+=	-fpermissive #  signed char / int8_t cast confusion
 
 .include "../../mk/bsd.prefs.mk"
 
