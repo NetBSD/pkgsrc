@@ -1,17 +1,14 @@
-$NetBSD: distinfo,v 1.39 2026/03/15 10:10:21 nia Exp $
+$NetBSD: distinfo,v 1.40 2026/04/12 08:46:30 nia Exp $
 
-BLAKE2s (palemoon-34.1.0/icudt78b.dat.gz) = f7414c79346600686ea9e0660e2604156b04cf655cb70e04915fdfd15f24ce93
-SHA512 (palemoon-34.1.0/icudt78b.dat.gz) = 5ea8779e6f8809cdd30662da7fc1f578274d8a9ea79ed0f2ae63807bb9ae0bcbe1f8302d4ba4d58d2997d46a3bcb10f0697288b16e19c7cfb5af288358cde314
-Size (palemoon-34.1.0/icudt78b.dat.gz) = 13078670 bytes
-BLAKE2s (palemoon-34.1.0/palemoon.tar.gz) = bc4f35998ec11e1b8b0dd2dc49bf258ebc5624a0e2304b98815e98a7d75cc86d
-SHA512 (palemoon-34.1.0/palemoon.tar.gz) = a279fcf17effc2f625cfb5e1b0bae3b05dc442534064361a1ee506b6f2e8dedd5de9d202538537e7f6c711d95fadf9be9191f59a7f2ee32e89fff68b367960c9
-Size (palemoon-34.1.0/palemoon.tar.gz) = 5608394 bytes
-BLAKE2s (palemoon-34.1.0/psutil.tar.gz) = 7a2c5c938910795453cf1cdfd5fbfa4dc8cac15e6eb43a5e9aba91ac032b37ce
-SHA512 (palemoon-34.1.0/psutil.tar.gz) = 95c246ed4ce68a476f83868312101d88dafa9d4cef96ff60af646a443c00e6cc447d37cc1ac4e85224db16c24390575174bb7ef76f48cb839fe2e93749107ffb
-Size (palemoon-34.1.0/psutil.tar.gz) = 274361 bytes
-BLAKE2s (palemoon-34.1.0/uxp.tar.gz) = 205cba4d1afa0002232a82deece2d31abf4e924a7e2501a943035bd1897ab9b9
-SHA512 (palemoon-34.1.0/uxp.tar.gz) = 664561e3ea648c6496e21a3799bb5a7c9f38247df7efb1ee523c29d7bdb3b772296ce9599b2aa5ca51dcc63849791e8c1ead78e55afaa0510ecfaab5c1e5dc46
-Size (palemoon-34.1.0/uxp.tar.gz) = 282416947 bytes
+BLAKE2s (palemoon-34.2.0/icudt78b.dat.gz) = f7414c79346600686ea9e0660e2604156b04cf655cb70e04915fdfd15f24ce93
+SHA512 (palemoon-34.2.0/icudt78b.dat.gz) = 5ea8779e6f8809cdd30662da7fc1f578274d8a9ea79ed0f2ae63807bb9ae0bcbe1f8302d4ba4d58d2997d46a3bcb10f0697288b16e19c7cfb5af288358cde314
+Size (palemoon-34.2.0/icudt78b.dat.gz) = 13078670 bytes
+BLAKE2s (palemoon-34.2.0/palemoon.tar.gz) = 4e266f19d25a76181d5f1f023cd02730b7f88be1691c3054b83f4baa63fbc0bd
+SHA512 (palemoon-34.2.0/palemoon.tar.gz) = 8866faa3b0385d5520c8006c413c8b475ffa682b7101d4aed548f5bc94e0c8b9cdd0888be772e6e32de89a64416dcd039548839fed9b23d3ac89db0c038671ff
+Size (palemoon-34.2.0/palemoon.tar.gz) = 5608561 bytes
+BLAKE2s (palemoon-34.2.0/uxp.tar.gz) = 9ed20d39cc91e329a526da7d4749f4051147a7dc2c1ca9fd9dffd85c7cb77e82
+SHA512 (palemoon-34.2.0/uxp.tar.gz) = 3ab2ccbbf50e5421620367a864eb1112518e4cc95ac0fa6f2391de6e8cddaba8cde47c06c0647de90442e9b4a03e362cd08ef6fd6c3a32b89f1f5561ba1ac1ab
+Size (palemoon-34.2.0/uxp.tar.gz) = 282444637 bytes
 SHA1 (patch-palemoon_app_profile_palemoon.js) = 0687dccbb5adff1ee0ea71fef4ebd46174a434d4
 SHA1 (patch-platform__ipc__chromium__src__third__party__libevent__kqueue.c) = 4064ba31a324ed9fdcae64274b6a632be7d45fa0
 SHA1 (patch-platform__media__ffvpx__config_unix_ppc.h) = 731460ac18461aa90cfbb137e34904b0a2894d77
@@ -24,12 +21,6 @@ SHA1 (patch-platform_media_ffvpx_libavutil_arm_bswap.h) = f4d4777533c2c307e1d544
 SHA1 (patch-platform_media_libaom_config_linux_arm_config_aom__config.h) = 69ef22fe9892c2288accb6eb00b4533d8cee0299
 SHA1 (patch-platform_media_libcubeb_src_cubeb__sun.c) = ce27774d772d65fa60b6be5bee82fbe4f787f3d1
 SHA1 (patch-platform_media_libtheora_moz.build) = a7bad662dabb87c6a85542a4a50f8ed693064bc6
-SHA1 (patch-platform_media_libvpx_config_linux_arm64_vp9__rtcd.h) = 734ba54699cdea44247b6502aa89643dda34b31c
-SHA1 (patch-platform_media_libvpx_config_linux_arm64_vpx__config.asm) = 984ca4f74cb3d84102163524a7dedc946c151378
-SHA1 (patch-platform_media_libvpx_config_linux_arm64_vpx__config.h) = d54131f4cff7379f6e9527f517c6082364a7abdd
-SHA1 (patch-platform_media_libvpx_config_linux_arm64_vpx__dsp__rtcd.h) = 82e216926df5845900b0d8e25444f3d1229842f1
-SHA1 (patch-platform_media_libvpx_config_linux_arm_vpx__config.h) = a580208cd342d7dc27985118e1707772e0cccf02
-SHA1 (patch-platform_media_libvpx_moz.build) = d83fd82fc3354d281cf1a16a95ebd5975d95fcaf
 SHA1 (patch-platform_nsprpub_pr_include_md__netbsd.cfg) = 1dc06ad2dc49eb3297dc0651dce546cff6882f7b
 SHA1 (patch-platform_nsprpub_pr_include_md__netbsd.h) = 72de23f42dc38d9cfacf41776e53af613a0c4f19
 SHA1 (patch-platform_nsprpub_pr_include_private_pprthred.h) = eeee6714ba27e6465701bffbc404915ceb0c9e55

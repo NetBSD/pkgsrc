@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2026/01/20 17:13:00 nia Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/04/12 08:46:30 nia Exp $
 bin/palemoon
 lib/${PKGNAME}/application.ini
 lib/${PKGNAME}/browser/blocklist.xml
