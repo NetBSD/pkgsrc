@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2019/10/30 15:09:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/04/12 14:34:39 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/History.rdoc
 ${GEM_LIBDIR}/Manifest.txt
-${GEM_LIBDIR}/README.txt
+${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/demo/fastmath.rb
 ${GEM_LIBDIR}/demo/hello.rb
