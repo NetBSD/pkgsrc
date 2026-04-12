@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/12/14 10:04:32 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/04/12 16:02:12 wiz Exp $
 
-DISTNAME=	kakoune-2025.06.03
+DISTNAME=	kakoune-2026.04.12
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mawww/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -20,7 +20,8 @@ MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 MAKE_FLAGS+=	CXXFLAGS-debug-no=
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 
-LDFLAGS.SunOS+=	-lsocket -lnsl
+CXXFLAGS.Darwin=	-Wno-deprecated-declarations
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

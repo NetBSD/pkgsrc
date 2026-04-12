@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/12/14 10:04:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/04/12 16:02:12 wiz Exp $
 bin/kak
 libexec/kak/kak
 man/man1/kak.1
@@ -53,6 +53,7 @@ share/kak/rc/filetype/asciidoc.kak
 share/kak/rc/filetype/awk.kak
 share/kak/rc/filetype/c-family.kak
 share/kak/rc/filetype/cabal.kak
+share/kak/rc/filetype/capnp.kak
 share/kak/rc/filetype/clojure.kak
 share/kak/rc/filetype/cmake.kak
 share/kak/rc/filetype/coffee.kak
@@ -96,7 +97,9 @@ share/kak/rc/filetype/haml.kak
 share/kak/rc/filetype/hare.kak
 share/kak/rc/filetype/haskell.kak
 share/kak/rc/filetype/hbs.kak
+share/kak/rc/filetype/hjson.kak
 share/kak/rc/filetype/html.kak
+share/kak/rc/filetype/hyprlang.kak
 share/kak/rc/filetype/i3.kak
 share/kak/rc/filetype/ini.kak
 share/kak/rc/filetype/janet.kak
@@ -104,10 +107,13 @@ share/kak/rc/filetype/java.kak
 share/kak/rc/filetype/javascript.kak
 share/kak/rc/filetype/jinja.kak
 share/kak/rc/filetype/json.kak
+share/kak/rc/filetype/json5.kak
 share/kak/rc/filetype/julia.kak
 share/kak/rc/filetype/just.kak
 share/kak/rc/filetype/kakrc.kak
+share/kak/rc/filetype/kdl.kak
 share/kak/rc/filetype/kickstart.kak
+share/kak/rc/filetype/kitty.kak
 share/kak/rc/filetype/kotlin.kak
 share/kak/rc/filetype/latex.kak
 share/kak/rc/filetype/ledger.kak
@@ -140,6 +146,7 @@ share/kak/rc/filetype/python.kak
 share/kak/rc/filetype/r.kak
 share/kak/rc/filetype/ragel.kak
 share/kak/rc/filetype/restructuredtext.kak
+share/kak/rc/filetype/ron.kak
 share/kak/rc/filetype/ruby.kak
 share/kak/rc/filetype/rust.kak
 share/kak/rc/filetype/sass.kak
@@ -148,7 +155,9 @@ share/kak/rc/filetype/scheme.kak
 share/kak/rc/filetype/scss.kak
 share/kak/rc/filetype/sh.kak
 share/kak/rc/filetype/sml.kak
+share/kak/rc/filetype/snakefile.kak
 share/kak/rc/filetype/sql.kak
+share/kak/rc/filetype/sshconfig.kak
 share/kak/rc/filetype/svelte.kak
 share/kak/rc/filetype/swift.kak
 share/kak/rc/filetype/systemd.kak
@@ -169,6 +178,7 @@ share/kak/rc/filetype/zig.kak
 share/kak/rc/tools/autorestore.asciidoc
 share/kak/rc/tools/autorestore.kak
 share/kak/rc/tools/autowrap.kak
+share/kak/rc/tools/blocking-editor-in-client
 share/kak/rc/tools/clang.kak
 share/kak/rc/tools/comment.kak
 share/kak/rc/tools/ctags.kak
@@ -192,9 +202,11 @@ share/kak/rc/tools/rust/racer.kak
 share/kak/rc/tools/spell.kak
 share/kak/rc/windowing/appleterminal.kak
 share/kak/rc/windowing/detection.kak
+share/kak/rc/windowing/hyprland.kak
 share/kak/rc/windowing/iterm.kak
 share/kak/rc/windowing/kitty.kak
 share/kak/rc/windowing/new-client.kak
+share/kak/rc/windowing/niri.kak
 share/kak/rc/windowing/repl/dtach.kak
 share/kak/rc/windowing/repl/kitty.kak
 share/kak/rc/windowing/repl/tmux.kak
