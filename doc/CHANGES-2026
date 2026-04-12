@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2229 2026/04/12 14:30:23 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2230 2026/04/12 14:32:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3499,3 +3499,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/exabgp to 5.0.9 [he 2026-04-12]
 	Updated databases/ruby-activeldap to 7.2.3 [taca 2026-04-12]
 	Updated databases/ruby-sequel to 5.103.0 [taca 2026-04-12]
+	Updated databases/ruby-sqlite3 to 2.9.2 [taca 2026-04-12]
