@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2277 2026/04/13 13:58:15 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.2278 2026/04/13 14:41:19 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3565,3 +3565,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/stellarium to 26.1 [adam 2026-04-13]
 	Updated misc/py-platformdirs to 4.9.6 [adam 2026-04-13]
 	Added graphics/vulkan-loader version 1.4.341.0 [kikadf 2026-04-13]
+	Added graphics/glslang version 1.4.341.0 [kikadf 2026-04-13]
