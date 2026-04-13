@@ -1,0 +1,7 @@
+A minimal seat management daemon, and a universal
+seat management library.
+Seat management takes care of mediating access to
+shared devices (graphics, input), without requiring
+the applications needing access to be root.
+Seat management library allowing applications to
+use whatever seat management is available.
