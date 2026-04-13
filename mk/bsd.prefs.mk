@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.462 2025/10/22 08:37:18 nat Exp $
+# $NetBSD: bsd.prefs.mk,v 1.463 2026/04/13 15:43:03 tnn Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -287,6 +287,14 @@ NATIVE_LOWER_VARIANT_VERSION!=	/usr/bin/awk '{ print $$3; exit 0; }' /etc/releas
 .  elif !empty(_UNAME_V:Mtribblix-*)
 NATIVE_OS_VARIANT=		Tribblix
 NATIVE_LOWER_VARIANT_VERSION!=	/usr/bin/awk '{ print $$2; exit 0; }' /etc/release
+.  elif !empty(_UNAME_V:Millumos-*)
+NATIVE_OS_VARIANT!=		/usr/bin/awk '{ print $$1; exit 0; }' /etc/release
+.    if ${NATIVE_OS_VARIANT} == "OpenIndiana"
+NATIVE_LOWER_VARIANT_VERSION!=	/usr/bin/awk '{ print $$3; exit 0; }' /etc/release
+.    else
+NATIVE_OS_VARIANT=		Illumos
+NATIVE_LOWER_VARIANT_VERSION=	${_UNAME_V}
+.    endif
 .  else
 NATIVE_OS_VARIANT=		Solaris
 NATIVE_LOWER_VARIANT_VERSION=	${_UNAME_V}
