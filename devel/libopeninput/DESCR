@@ -1,0 +1,4 @@
+The libinput is an input device management and event
+handling library to linux.
+The libopeninput is a wscons(4) and kqueue(2) based
+reimplementation of libinput, originally to OpenBSD.
