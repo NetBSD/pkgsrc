@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2272 2026/04/13 13:16:56 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.2273 2026/04/13 13:18:15 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3559,3 +3559,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ocaml-dune-configurator to 3.22.2 [wiz 2026-04-13]
 	Updated meta-pkgs/bulk-medium to 20260413 [tnn 2026-04-13]
 	Updated graphics/vulkan-headers to 1.4.341.0 [kikadf 2026-04-13]
+	Updated graphics/vulkan-tools to 1.4.341.0 [kikadf 2026-04-13]
