@@ -1,6 +1,6 @@
-$NetBSD: patch-otherlibs_stdune_src_readdir.c,v 1.1 2026/01/11 18:09:04 alnsn Exp $
+$NetBSD: patch-otherlibs_stdune_src_readdir.c,v 1.2 2026/04/13 11:54:18 tnn Exp $
 
-Extend conditional for HAIKU to SunOS, for no apparent reason.
+SunOS has no DT_REG, like Haiku.
 
 \todo File upstream.  
 
