@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/13 15:43:44 kikadf Exp $
+include/libliftoff.h
+lib/libliftoff.so
+lib/libliftoff.so.0
+lib/libliftoff.so.${PKGVERSION}
+lib/pkgconfig/libliftoff.pc
