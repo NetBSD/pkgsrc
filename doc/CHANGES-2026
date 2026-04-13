@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2264 2026/04/13 08:29:20 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2265 2026/04/13 08:30:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3534,3 +3534,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/redox to 0.4.0 [pin 2026-04-13]
 	Updated editors/tp-note to 1.26.0 [pin 2026-04-13]
 	Updated shells/nushell to 0.112.1 [pin 2026-04-13]
+	Updated textproc/television to 0.15.5 [pin 2026-04-13]
