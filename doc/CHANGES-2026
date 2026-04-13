@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2275 2026/04/13 13:22:34 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.2276 2026/04/13 13:34:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3562,3 +3562,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/vulkan-tools to 1.4.341.0 [kikadf 2026-04-13]
 	Updated parallel/spirv-headers to 1.4.341.0 [kikadf 2026-04-13]
 	Updated parallel/spirv-tools to 1.4.341.0 [kikadf 2026-04-13]
+	Updated misc/stellarium to 26.1 [adam 2026-04-13]
+	Updated misc/py-platformdirs to 4.9.6 [adam 2026-04-13]
