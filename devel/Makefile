@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4613 2026/04/08 14:58:36 taca Exp $
+# $NetBSD: Makefile,v 1.4614 2026/04/13 15:21:06 kikadf Exp $
 #
 
 COMMENT=	Development utilities
@@ -1065,6 +1065,7 @@ SUBDIR+=	libnjs
 SUBDIR+=	libntlm
 SUBDIR+=	liboil
 SUBDIR+=	liboop
+SUBDIR+=	libopeninput
 SUBDIR+=	libopensmtpd
 SUBDIR+=	libosip
 SUBDIR+=	libowfat
