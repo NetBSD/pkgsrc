@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.70 2026/03/11 08:57:31 adam Exp $
+$NetBSD: distinfo,v 1.71 2026/04/13 12:44:46 adam Exp $
 
-BLAKE2s (certbot_dns_google-5.4.0.tar.gz) = abd98e6e323ac5aaa6fa379a24bd3065b1f2904183fda83e9a26491c38a1535c
-SHA512 (certbot_dns_google-5.4.0.tar.gz) = bd095bb606d9de30afc1ce338a0479ec615cec07608e01acccecaaeb276631448e283eae0140b4517e9ced73687ab4e07bd7ebf4e434238052c46405c9430e7f
-Size (certbot_dns_google-5.4.0.tar.gz) = 25010 bytes
+BLAKE2s (certbot_dns_google-5.5.0.tar.gz) = 2a01d2e3636c36fa6a89b7fcbb55b87247fa20ed1f30904d5e86e23052abdfd5
+SHA512 (certbot_dns_google-5.5.0.tar.gz) = dca56a6fce196adc505fc922e8368907ddb4f3c309c5d8a1b1817a43720e7900221d823b907099df5470e859fc2705dadb9b31a9206e49ff02b69ff51f7424e9
+Size (certbot_dns_google-5.5.0.tar.gz) = 25077 bytes

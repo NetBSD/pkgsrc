@@ -1,9 +1,9 @@
-$NetBSD: patch-src_certbot__nginx___internal_constants.py,v 1.2 2025/09/15 11:16:02 adam Exp $
+$NetBSD: patch-src_certbot___internal_plugins_nginx_constants.py,v 1.1 2026/04/13 12:44:45 adam Exp $
 
 Look for nginx.conf in PKG_SYSCONFDIR
 
---- src/certbot_nginx/_internal/constants.py.orig	2025-09-02 15:46:13.000000000 +0000
-+++ src/certbot_nginx/_internal/constants.py
+--- src/certbot/_internal/plugins/nginx/constants.py.orig	2025-09-02 15:46:13.000000000 +0000
++++ src/certbot/_internal/plugins/nginx/constants.py
 @@ -2,19 +2,8 @@
  import platform
  from typing import Any
