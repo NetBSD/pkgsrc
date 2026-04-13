@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2281 2026/04/13 15:39:33 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.2282 2026/04/13 15:45:05 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3569,3 +3569,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/libopeninput version 1.30.2 [kikadf 2026-04-13]
 	Added devel/input-headers version 1.30.2 [kikadf 2026-04-13]
 	Added devel/libevdev-chunk version 20231111 [kikadf 2026-04-13]
+	Added graphics/libliftoff version 0.5.0 [kikadf 2026-04-13]
