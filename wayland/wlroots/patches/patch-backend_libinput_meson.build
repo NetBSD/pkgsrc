@@ -1,0 +1,16 @@
+$NetBSD: patch-backend_libinput_meson.build,v 1.1 2026/04/13 17:20:09 kikadf Exp $
+
+* libopeninput lacks libinput_device_get_id_bustype() 
+
+--- backend/libinput/meson.build.orig	2025-09-12 15:10:06.534197806 +0000
++++ backend/libinput/meson.build
+@@ -28,4 +28,8 @@ wlr_files += files(
+ features += { 'libinput-backend': true }
+ wlr_deps += libinput
+ 
+-internal_config.set10('HAVE_LIBINPUT_BUSTYPE', libinput.version().version_compare('>=1.26.0'))
++if host_machine.system() == 'netbsd'
++	internal_config.set10('HAVE_LIBINPUT_BUSTYPE', false)
++else
++	internal_config.set10('HAVE_LIBINPUT_BUSTYPE', libinput.version().version_compare('>=1.26.0'))
++endif
