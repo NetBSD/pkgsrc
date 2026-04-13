@@ -1,13 +1,13 @@
-$NetBSD: patch-main_cel.c,v 1.1 2025/10/27 06:58:39 jnemeth Exp $
+$NetBSD: patch-main_cel.c,v 1.2 2026/04/13 03:47:12 jnemeth Exp $
 
---- main/cel.c.orig	2015-10-09 21:48:48.000000000 +0000
+--- main/cel.c.orig	2026-04-09 16:37:03.000000000 +0000
 +++ main/cel.c
-@@ -790,7 +790,7 @@ struct ast_channel *ast_cel_fabricate_ch
+@@ -680,7 +680,7 @@ static int cel_format_eventtime(struct cel_config *cfg
  	}
  
  	if (ast_strlen_zero(cfg->general->date_format)) {
--		snprintf(timebuf, sizeof(timebuf), "%ld.%06ld", (long) record.event_time.tv_sec,
-+		snprintf(timebuf, sizeof(timebuf), "%jd.%06ld", (intmax_t) record.event_time.tv_sec,
- 				(long) record.event_time.tv_usec);
+-		snprintf(timebuf, len, "%ld.%06ld", (long) eventtime.tv_sec,
++		snprintf(timebuf, len, "%jd.%06ld", (intmax_t) eventtime.tv_sec,
+ 				(long) eventtime.tv_usec);
  	} else {
  		struct ast_tm tm;
