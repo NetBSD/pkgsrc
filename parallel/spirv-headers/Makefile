@@ -1,20 +1,15 @@
-# $NetBSD: Makefile,v 1.11 2026/03/25 23:00:44 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/04/13 13:19:10 kikadf Exp $
 
-# This version should be kept in sync with what
-# parallel/spirv-llvm-translator's ${WRKSRC}/spirv-headers-tag.conf
-# contains.
-DISTNAME=	SPIRV-Headers-1.4.335.0
+.include "../../graphics/vulkan-headers/Makefile.common"
+
+DISTNAME=	SPIRV-Headers-${SDK_VERSION}
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	parallel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
-GITHUB_TAG=	vulkan-sdk-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/KhronosGroup/SPIRV-Headers
 COMMENT=	Headers for translation between SPIR-V and LLVM IR
 LICENSE=	mit
-
-USE_LANGUAGES=	c c++
 
 WRKSRC=		${WRKDIR}/SPIRV-Headers-${GITHUB_TAG}
 
