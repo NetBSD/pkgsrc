@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2026/03/25 23:01:21 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/04/13 13:22:21 kikadf Exp $
 
-DISTNAME=	SPIRV-Tools-2025.5
+.include "../../graphics/vulkan-headers/Makefile.common"
+
+DISTNAME=	SPIRV-Tools-${SDK_VERSION}
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	parallel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/KhronosGroup/SPIRV-Tools/
@@ -12,12 +12,11 @@ COMMENT=	API and commands for processing SPIR-V modules
 LICENSE=	apache-2.0
 
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	cmake/SPIRV-Tools-shared.pc.in
 PKGCONFIG_OVERRIDE+=	cmake/SPIRV-Tools.pc.in
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
+WRKSRC=		${WRKDIR}/SPIRV-Tools-${GITHUB_TAG}
 
 REPLACE_SH+=	tools/lesspipe/spirv-lesspipe.sh
 
