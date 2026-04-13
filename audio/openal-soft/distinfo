@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2026/01/26 14:35:36 adam Exp $
+$NetBSD: distinfo,v 1.30 2026/04/13 18:07:26 tnn Exp $
 
 BLAKE2s (openal-soft-1.25.1.tar.bz2) = 53051e01f058b5bdd5c79da8fb58fb0316e7d6b6858e6a20973ae52391d69452
 SHA512 (openal-soft-1.25.1.tar.bz2) = 9207c93e18f2789d97dfec710b5fcedf9ed7df70581ba356678ef4db3f6ee9b634b5b56d206d077866384e1309f0622f8f3f7100f0349d7c4e970cf443441c93
@@ -7,4 +7,5 @@ SHA1 (patch-CMakeLists.txt) = 5440e78b4558ff165823c8274131fa0c30c7c563
 SHA1 (patch-alc_alconfig.cpp) = 5fe00b60f6f31165be951324659f5c7ee1898859
 SHA1 (patch-alc_backends_alsa.cpp) = 3ee7f86e544d9b33ccbe9422eb87b9540623053a
 SHA1 (patch-common_alformat.hpp) = 7c0b567b5c0e9b941f179029b08a76a2f5891b40
+SHA1 (patch-common_althreads.h) = 316de49f7a923a1a1535e49639f5e6bccf0c08d3
 SHA1 (patch-include_AL_al.h) = e11858155db9d48ca8ae0d4e28479ec4d674411b
