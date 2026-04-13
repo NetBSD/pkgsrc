@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1117 2026/04/13 13:57:46 kikadf Exp $
+# $NetBSD: Makefile,v 1.1118 2026/04/13 14:40:41 kikadf Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -194,6 +194,7 @@ SUBDIR+=	glitz
 SUBDIR+=	gliv
 SUBDIR+=	glm
 SUBDIR+=	glpng
+SUBDIR+=	glslang
 SUBDIR+=	glu
 SUBDIR+=	glw
 SUBDIR+=	glx-utils
