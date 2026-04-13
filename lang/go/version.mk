@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.247 2026/04/08 05:43:35 bsiegert Exp $
+# $NetBSD: version.mk,v 1.248 2026/04/13 09:52:34 tnn Exp $
 
 #
 # If bsd.prefs.mk is included before go-package.mk in a package, then this
@@ -75,7 +75,7 @@ GOOS=			${LOWER_OPSYS}
 .endif
 GO_PLATFORM=		${GOOS}_${GOARCH}
 
-.if ${NATIVE_OPSYS} == "Sunos" && ${NATIVE_OS_VARIANT} != "Solaris"
+.if ${NATIVE_OPSYS} == "SunOS" && ${NATIVE_OS_VARIANT} != "Solaris"
 NATIVE_GOOS=		illumos
 .else
 NATIVE_GOOS=		${NATIVE_LOWER_OPSYS}
