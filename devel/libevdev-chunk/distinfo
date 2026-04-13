@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2026/04/13 15:36:31 kikadf Exp $
+
+BLAKE2s (libevdev-openbsd-20231111.tar.gz) = 1289c09f72ec62cee42f4b81c4f276068dd4cfc5be8abd7f3388c7ba6a6d201d
+SHA512 (libevdev-openbsd-20231111.tar.gz) = 2aec90ba4314d7fb9db3158c2e6381a61e9e07c6ec9a4378614d119f7fcbd4403cffd541c00989ad6205d3ea796e0d3a5b635aa5ce7773d99a8b8b1cc5d9cdf1
+Size (libevdev-openbsd-20231111.tar.gz) = 15012 bytes
+SHA1 (patch-libevdev.c) = e7caf1c0cbbd6e1083069237779380131c567e99
+SHA1 (patch-libevdev_libevdev.h) = 3c2044cdaebfad69bffcd413808ff66497b6bc6c
