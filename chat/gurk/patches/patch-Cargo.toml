@@ -1,0 +1,29 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2026/04/13 09:43:10 wiz Exp $
+
+Depends on unpublished crates. Can't use cargo.mk to fetch it.
+
+--- Cargo.toml.orig	2026-03-19 13:34:29.000000000 +0000
++++ Cargo.toml
+@@ -29,9 +29,10 @@ dev = ["prost", "base64", "serde_json"]
+ dev = ["prost", "base64", "serde_json"]
+ 
+ [dependencies]
+-presage = { git = "https://github.com/whisperfish/presage", rev = "fe3ed54c4844ae51c3a9fa49cf80a7816a31a425", default-features = false }
+-presage-store-sqlite = { git = "https://github.com/whisperfish/presage", rev = "fe3ed54c4844ae51c3a9fa49cf80a7816a31a425", default-features = false }
++presage = { path = "../presage-fe3ed54c4844ae51c3a9fa49cf80a7816a31a425/presage", default-features = false }
++presage-store-sqlite = { path = "../presage-fe3ed54c4844ae51c3a9fa49cf80a7816a31a425/presage-store-sqlite", default-features = false }
+ 
++
+ # dev feature dependenciestoml
+ prost = { version = "0.13.4", optional = true }
+ base64 = { version = "0.22.1", optional = true }
+@@ -125,6 +126,6 @@ harness = false
+ [patch.crates-io]
+ # signal-protocol uses a fork of this library via the patch mechanism of cargo.
+ # Since it is not transitive, we have to add the patch here explicitly.
+-"curve25519-dalek" = { git = 'https://github.com/signalapp/curve25519-dalek', tag = 'signal-curve25519-4.1.3' }
+-libsqlite3-sys = { version = "0.36.0", git = "https://github.com/boxdot/rusqlite", rev = 'd4523ff6cdb6472db55789ae92d518989ee8bfd6' }
+-sqlx = { version = "0.8.6", git = "https://github.com/gferon/sqlx", rev = "53c3a26c1b484175f3beb21853a1061b488bf7af" }
++curve25519-dalek = { path = "../curve25519-dalek-7c6d34756355a3566a704da84dce7b1c039a6572/curve25519-dalek" }
++libsqlite3-sys = { path = "../rusqlite-d4523ff6cdb6472db55789ae92d518989ee8bfd6/libsqlite3-sys" }
++sqlx = { path = "../sqlx-53c3a26c1b484175f3beb21853a1061b488bf7af" }
