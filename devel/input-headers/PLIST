@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/13 15:24:45 kikadf Exp $
+include/linux/freebsd/input-event-codes.h
+include/linux/freebsd/input.h
+include/linux/input-event-codes.h
+include/linux/input.h
+include/linux/linux/input-event-codes.h
+include/linux/linux/input.h
