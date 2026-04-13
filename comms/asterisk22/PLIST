@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2026/02/16 03:21:59 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/04/13 02:50:22 jnemeth Exp $
 lib/asterisk/libasteriskpj.so
 lib/asterisk/libasteriskpj.so.2
 lib/asterisk/modules/app_adsiprog.so
@@ -212,6 +212,7 @@ lib/asterisk/modules/res_ari_recordings.so
 lib/asterisk/modules/res_ari_sounds.so
 lib/asterisk/modules/res_audiosocket.so
 lib/asterisk/modules/res_calendar.so
+lib/asterisk/modules/res_cdrel_custom.so
 lib/asterisk/modules/res_clialiases.so
 lib/asterisk/modules/res_clioriginate.so
 lib/asterisk/modules/res_config_curl.so
@@ -2340,6 +2341,8 @@ share/doc/asterisk/ChangeLog-22.8.1.html
 share/doc/asterisk/ChangeLog-22.8.1.md
 share/doc/asterisk/ChangeLog-22.8.2.html
 share/doc/asterisk/ChangeLog-22.8.2.md
+share/doc/asterisk/ChangeLog-22.9.0.html
+share/doc/asterisk/ChangeLog-22.9.0.md
 share/doc/asterisk/IAX2-security.pdf
 share/doc/asterisk/IAX2-security.txt
 share/doc/asterisk/LICENSE
