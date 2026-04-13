@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2262 2026/04/13 08:26:10 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2263 2026/04/13 08:27:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3532,3 +3532,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated comms/asterisk22 to 22.9.0 [jnemeth 2026-04-13]
 	Updated comms/asterisk23 to 23.3.0 [jnemeth 2026-04-13]
 	Updated editors/redox to 0.4.0 [pin 2026-04-13]
+	Updated editors/tp-note to 1.26.0 [pin 2026-04-13]
