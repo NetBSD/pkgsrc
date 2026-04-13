@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2288 2026/04/13 17:50:07 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.2289 2026/04/13 19:59:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3574,5 +3574,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/mise to 2026.4.11 [pin 2026-04-13]
 	Updated textproc/rumdl to 0.1.71 [pin 2026-04-13]
 	Added wayland/xwayland version 24.1.9 [kikadf 2026-04-13]
-	Removed x11/modular-xorg-xwayland [kikadf 2026-04-13]
+	Removed x11/modular-xorg-xwayland successor wayland/xwayland [kikadf 2026-04-13]
 	Added wayland/wlroots version 0.19.2 [kikadf 2026-04-13]
