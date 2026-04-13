@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.122 2026/03/07 11:50:03 nia Exp $
+# $NetBSD: Makefile,v 1.123 2026/04/13 13:05:33 tnn Exp $
 
-DISTNAME=	bulk-medium-20260307
+DISTNAME=	bulk-medium-20260413
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -86,7 +86,6 @@ DEPENDS+=	php82>=8.2<8.3:../../lang/php82
 DEPENDS+=	php83>=8.3<8.4:../../lang/php83
 DEPENDS+=	php84>=8.4<8.5:../../lang/php84
 DEPENDS+=	php85>=8.5<8.6:../../lang/php85
-DEPENDS+=	ruby32-base-[0-9]*:../../lang/ruby32-base
 DEPENDS+=	ruby33-[0-9]*:../../lang/ruby33
 DEPENDS+=	ruby34-[0-9]*:../../lang/ruby34
 DEPENDS+=	ruby40-[0-9]*:../../lang/ruby40
