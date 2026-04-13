@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.179 2026/02/06 10:05:24 wiz Exp $
+# $NetBSD: Makefile,v 1.180 2026/04/13 13:31:03 adam Exp $
 
-DISTNAME=	stellarium-25.4
-PKGREVISION=	2
+DISTNAME=	stellarium-26.1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Stellarium/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
