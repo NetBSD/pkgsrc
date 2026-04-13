@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2026/04/02 12:17:28 pin Exp $
+$NetBSD: distinfo,v 1.16 2026/04/13 08:30:11 pin Exp $
 
 BLAKE2s (addr2line-0.25.1.crate) = cc5c422ec48ccef5c2c46379d2f600644609490afafea5020f2020815d1146e6
 SHA512 (addr2line-0.25.1.crate) = c400f3b6ccaff8a1c0d7d82c708a1784b8fd5ba64b6e420e85819d59b1cadb55fa59c852925093b921469f272d1d5140cf12f013ae75d1e1bc85021097df8fc2
@@ -810,9 +810,9 @@ Size (syn-1.0.109.crate) = 237611 bytes
 BLAKE2s (syn-2.0.111.crate) = 59e384935e8312b487a780865026ad631dfdc775720b9246d94b06af3e5751f4
 SHA512 (syn-2.0.111.crate) = f30fc819fc6c942cde044b6bbe608f96736070717f28da71ab4ff68aa9e780416829152da11a83513fbc0de88337c2157e4fd1e4a029ebcbb64daeaa54dbf768
 Size (syn-2.0.111.crate) = 302117 bytes
-BLAKE2s (television-0.15.4.tar.gz) = 2193d2dc01747d4dc33d09cd0658bc38884c582ada94de46644dbf2060e514b9
-SHA512 (television-0.15.4.tar.gz) = 47c9555a9d88fd64b97d0d5c9b89e6eec8c970a2acb7a6f2f0fcb8fd4986fa52b7305f71570db7bd1e6575a7b8d9e283b95dd899f8c3445accb6935bf4f480d2
-Size (television-0.15.4.tar.gz) = 20457530 bytes
+BLAKE2s (television-0.15.5.tar.gz) = bc11715be8c989f573d593a3e5477a7f8fb03698a3f6ef61a2e6636ff05d6cd5
+SHA512 (television-0.15.5.tar.gz) = 42c9a79b76c155d1e401fe1225bef5b2f5ff00aa5d9c477cd436ed576eb93acab73474b3d872b74a829f312fb40d17b77533c910a9923c11528a766646eb56e0
+Size (television-0.15.5.tar.gz) = 25372245 bytes
 BLAKE2s (television-nucleo-0.5.0.crate) = 138a28c4159c9cd2e49153e2741a34d7d14d312f448300a2d0de50e05e46f924
 SHA512 (television-nucleo-0.5.0.crate) = 09bdbb6042946060a2d8e299d3617b1520c94d9011fd450d2f7e2c383dc9554a7a297babe7ccdc648dab0a9f621f34710c496e0d61ed78867224eac0f738aac6
 Size (television-nucleo-0.5.0.crate) = 39143 bytes
