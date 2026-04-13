@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2259 2026/04/12 18:29:41 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2260 2026/04/13 02:50:30 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3529,3 +3529,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/kakoune to 2026.04.12 [wiz 2026-04-12]
 	Updated graphics/giflib to 6.1.3 [wiz 2026-04-12]
 	Updated graphics/giflib-util to 6.1.3 [wiz 2026-04-12]
+	Updated comms/asterisk22 to 22.9.0 [jnemeth 2026-04-13]
