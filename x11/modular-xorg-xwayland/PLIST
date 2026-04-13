@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2023/03/30 08:45:05 wiz Exp $
-bin/Xwayland
-lib/pkgconfig/xwayland.pc
-man/man1/Xwayland.1
-share/applications/org.freedesktop.Xwayland.desktop
