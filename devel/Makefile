@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4614 2026/04/13 15:21:06 kikadf Exp $
+# $NetBSD: Makefile,v 1.4615 2026/04/13 15:26:05 kikadf Exp $
 #
 
 COMMENT=	Development utilities
@@ -865,6 +865,7 @@ SUBDIR+=	immer
 SUBDIR+=	imsg-compat
 SUBDIR+=	include-what-you-use
 SUBDIR+=	iniparser
+SUBDIR+=	input-headers
 SUBDIR+=	intel2gas
 SUBDIR+=	intellij-ce-bin
 SUBDIR+=	intellij-ue-bin
