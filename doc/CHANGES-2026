@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2260 2026/04/13 02:50:30 jnemeth Exp $
+$NetBSD: CHANGES-2026,v 1.2261 2026/04/13 03:47:26 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3530,3 +3530,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/giflib to 6.1.3 [wiz 2026-04-12]
 	Updated graphics/giflib-util to 6.1.3 [wiz 2026-04-12]
 	Updated comms/asterisk22 to 22.9.0 [jnemeth 2026-04-13]
+	Updated comms/asterisk23 to 23.3.0 [jnemeth 2026-04-13]
