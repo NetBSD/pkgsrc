@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1188 2026/04/07 18:43:27 pin Exp $
+# $NetBSD: Makefile,v 1.1189 2026/04/13 15:50:30 kikadf Exp $
 #
 
 COMMENT=	System utilities
@@ -725,6 +725,7 @@ SUBDIR+=	screenfetch
 SUBDIR+=	screentest
 SUBDIR+=	scriptisto
 SUBDIR+=	scsiinfo
+SUBDIR+=	seatd
 SUBDIR+=	service-config
 SUBDIR+=	setquota
 SUBDIR+=	sets2rootfs
