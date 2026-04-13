@@ -1,0 +1,4 @@
+On Linux libevdev is a wrapper library for evdev devices.
+NetBSD doesn't use evdev directly, but a layer emulating
+libinput. Some applications bypass libinput and use some libevdev
+functions directly. This chunk library provides the needed functions.
