@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/13 14:38:43 kikadf Exp $
+bin/glslang
+bin/glslangValidator
+include/glslang/Include/ResourceLimits.h
+include/glslang/Include/glslang_c_interface.h
+include/glslang/Include/glslang_c_shader_types.h
+include/glslang/Include/visibility.h
+include/glslang/MachineIndependent/Versions.h
+include/glslang/Public/ResourceLimits.h
+include/glslang/Public/ShaderLang.h
+include/glslang/Public/resource_limits_c.h
+include/glslang/SPIRV/GlslangToSpv.h
+include/glslang/SPIRV/Logger.h
+include/glslang/SPIRV/SpvTools.h
+include/glslang/SPIRV/disassemble.h
+include/glslang/SPIRV/spirv.hpp11
+include/glslang/build_info.h
+lib/cmake/glslang/glslang-config-version.cmake
+lib/cmake/glslang/glslang-config.cmake
+lib/cmake/glslang/glslang-targets-debug.cmake
+lib/cmake/glslang/glslang-targets.cmake
+lib/libGenericCodeGen.a
+lib/libMachineIndependent.a
+lib/libOSDependent.a
+lib/libSPIRV.a
+lib/libglslang-default-resource-limits.a
+lib/libglslang.a
