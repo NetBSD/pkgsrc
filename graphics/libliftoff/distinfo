@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/13 15:43:44 kikadf Exp $
+
+BLAKE2s (libliftoff-0.5.0.tar.gz) = 5d871ea62eca5427919cf15fdd818cd182e10f8cf17437131081abe1bcb64a9a
+SHA512 (libliftoff-0.5.0.tar.gz) = 0ca13a298af6510b85adb30282014474e623f9759bf09fcd865ef4e9634db4401cd5e5bd5ab9e2c5848a5bfd59cd43e3035103814c355d9c164880a7a1108c74
+Size (libliftoff-0.5.0.tar.gz) = 38939 bytes
