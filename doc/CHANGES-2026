@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2287 2026/04/13 17:10:43 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.2288 2026/04/13 17:50:07 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3575,3 +3575,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/rumdl to 0.1.71 [pin 2026-04-13]
 	Added wayland/xwayland version 24.1.9 [kikadf 2026-04-13]
 	Removed x11/modular-xorg-xwayland [kikadf 2026-04-13]
+	Added wayland/wlroots version 0.19.2 [kikadf 2026-04-13]
