@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/13 16:52:50 kikadf Exp $
+bin/Xwayland
+lib/pkgconfig/xwayland.pc
+man/man1/Xwayland.1
+share/applications/org.freedesktop.Xwayland.desktop
