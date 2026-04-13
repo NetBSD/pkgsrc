@@ -1,0 +1,12 @@
+An OpenGL GLSL and OpenGL|ES GLSL (ESSL) front-end for reference validation and
+translation of GLSL/ESSL into an internal abstract syntax tree (AST).
+
+An HLSL front-end for translation of an approximation of HLSL to glslang's AST
+form.
+
+Translates glslang's AST to the Khronos-specified SPIR-V intermediate language.
+
+An API for getting reflection information from the AST, reflection
+types/variables/etc. from the HLL source (not the SPIR-V).
+
+glslang is command-line tool for accessing the functionality above.
