@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/13 15:49:39 kikadf Exp $
+bin/seatd
+bin/seatd-launch
+include/libseat.h
+lib/libseat.so
+lib/libseat.so.1
+lib/pkgconfig/libseat.pc
+man/man1/seatd-launch.1
+man/man1/seatd.1
