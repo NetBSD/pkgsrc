@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2285 2026/04/13 16:08:46 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2286 2026/04/13 16:54:57 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3573,3 +3573,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated pkgtools/x11-links to 1.37 [kikadf 2026-04-13]
 	Updated devel/mise to 2026.4.11 [pin 2026-04-13]
 	Updated textproc/rumdl to 0.1.71 [pin 2026-04-13]
+	Added wayland/xwayland version 24.1.9 [kikadf 2026-04-13]
