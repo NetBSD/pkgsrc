@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1118 2026/04/13 14:40:41 kikadf Exp $
+# $NetBSD: Makefile,v 1.1119 2026/04/13 15:44:41 kikadf Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -336,6 +336,7 @@ SUBDIR+=	libkdcraw
 SUBDIR+=	libkdcraw-qt5
 SUBDIR+=	libkexiv2
 SUBDIR+=	libksane
+SUBDIR+=	libliftoff
 SUBDIR+=	liblqr
 SUBDIR+=	libmypaint
 SUBDIR+=	libotf
