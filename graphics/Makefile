@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1116 2026/04/03 02:19:29 markd Exp $
+# $NetBSD: Makefile,v 1.1117 2026/04/13 13:57:46 kikadf Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -875,6 +875,7 @@ SUBDIR+=	vp
 SUBDIR+=	vtk
 SUBDIR+=	vtk-docs
 SUBDIR+=	vulkan-headers
+SUBDIR+=	vulkan-loader
 SUBDIR+=	vulkan-tools
 SUBDIR+=	vv
 SUBDIR+=	wallust
