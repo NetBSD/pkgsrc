@@ -1,0 +1,26 @@
+$NetBSD: patch-config_memory.source,v 1.1 2026/04/14 12:53:47 kikadf Exp $
+
+* NetBSD support
+
+--- config/memory.source.orig	2026-03-18 10:39:49.620486824 +0000
++++ config/memory.source
+@@ -6,13 +6,17 @@ file("/proc/meminfo") {
+   MemTotal = RegEx("^MemTotal:[\t ]*([0-9]+)[\t ]")
+   MemFree = RegEx("^MemFree:[\t ]*([0-9]+)[\t ]")
+   MemCache = RegEx( "^Cached:[\t ]*([0-9]+)[\t ]")
+-  MemBuff = Regex("^Buffers:[\t ]*([0-9]+)[\t ]")
++  MemBuff = RegEx("^Buffers:[\t ]*([0-9]+)[\t ]")
++  MemShared = RegEx("^MemShared:[\t ]*([0-9]+)[\t ]")
+ }
+ 
++Set IsNetBSD = MemShared.count
+ Set XPageSize = BSDCtl("vm.stats.vm.v_page_size")
+ Set XMemTotal = If(!Ident(BSDCtl),MemTotal,Val(BSDCtl("vm.stats.vm.v_page_count"))*XPageSize)
+ Set XMemFree = If(!Ident(BSDCtl),MemFree,Val(BSDCtl("vm.stats.vm.v_free_count"))*XPageSize)
+ Set XMemCache = If(!Ident(BSDCtl),MemCache,Val(BSDCtl("vm.stats.vm.v_inactive_count"))*XPageSize)
+ Set XMemBuff = If(!Ident(BSDCtl),MemBuff,Val(BSDCtl("vm.stats.vm_laundry_count"))*XPageSize)
+-Set XMemUtilization = (XMemTotal-XMemFree-XMemCache-XMemBuff)/XMemTotal
++Set XMemUtil_NetBSD = (XMemTotal-XMemFree)/XMemTotal
++Set XMemUtil = (XMemTotal-XMemFree-XMemCache-XMemBuff)/XMemTotal
++Set XMemUtilization = If(IsNetBSD,XMemUtil_NetBSD,XMemUtil)
+ Set XMemPresent = If(Ident(BSDCtl),$XPageSize!="",MemTotal.count)
