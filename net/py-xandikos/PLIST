@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2026/01/21 09:50:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/04/14 13:57:22 adam Exp $
 bin/xandikos-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -10,6 +10,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/tests/__init__.py
 ${PYSITELIB}/tests/__init__.pyc
 ${PYSITELIB}/tests/__init__.pyo
+${PYSITELIB}/tests/conftest.py
+${PYSITELIB}/tests/conftest.pyc
+${PYSITELIB}/tests/conftest.pyo
 ${PYSITELIB}/tests/test_access.py
 ${PYSITELIB}/tests/test_access.pyc
 ${PYSITELIB}/tests/test_access.pyo
@@ -19,6 +22,9 @@ ${PYSITELIB}/tests/test_apache.pyo
 ${PYSITELIB}/tests/test_api.py
 ${PYSITELIB}/tests/test_api.pyc
 ${PYSITELIB}/tests/test_api.pyo
+${PYSITELIB}/tests/test_auth.py
+${PYSITELIB}/tests/test_auth.pyc
+${PYSITELIB}/tests/test_auth.pyo
 ${PYSITELIB}/tests/test_caldav.py
 ${PYSITELIB}/tests/test_caldav.pyc
 ${PYSITELIB}/tests/test_caldav.pyo
@@ -52,6 +58,9 @@ ${PYSITELIB}/tests/test_insufficient_index_handling.pyo
 ${PYSITELIB}/tests/test_main.py
 ${PYSITELIB}/tests/test_main.pyc
 ${PYSITELIB}/tests/test_main.pyo
+${PYSITELIB}/tests/test_multi_user.py
+${PYSITELIB}/tests/test_multi_user.pyc
+${PYSITELIB}/tests/test_multi_user.pyo
 ${PYSITELIB}/tests/test_performance.py
 ${PYSITELIB}/tests/test_performance.pyc
 ${PYSITELIB}/tests/test_performance.pyo
@@ -118,12 +127,18 @@ ${PYSITELIB}/xandikos/collation.pyo
 ${PYSITELIB}/xandikos/davcommon.py
 ${PYSITELIB}/xandikos/davcommon.pyc
 ${PYSITELIB}/xandikos/davcommon.pyo
+${PYSITELIB}/xandikos/fs.py
+${PYSITELIB}/xandikos/fs.pyc
+${PYSITELIB}/xandikos/fs.pyo
 ${PYSITELIB}/xandikos/icalendar.py
 ${PYSITELIB}/xandikos/icalendar.pyc
 ${PYSITELIB}/xandikos/icalendar.pyo
 ${PYSITELIB}/xandikos/infit.py
 ${PYSITELIB}/xandikos/infit.pyc
 ${PYSITELIB}/xandikos/infit.pyo
+${PYSITELIB}/xandikos/multi_user.py
+${PYSITELIB}/xandikos/multi_user.pyc
+${PYSITELIB}/xandikos/multi_user.pyo
 ${PYSITELIB}/xandikos/py.typed
 ${PYSITELIB}/xandikos/quota.py
 ${PYSITELIB}/xandikos/quota.pyc
