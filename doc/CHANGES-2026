@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2296 2026/04/14 11:00:17 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.2297 2026/04/14 11:35:55 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3585,3 +3585,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/R to 4.5.2nb1 [jperkin 2026-04-14]
 	Added wayland/labwc version 0.9.6 [kikadf 2026-04-14]
 	Added devel/basu version 0.2.1 [kikadf 2026-04-14]
+	Added wayland/sway version 1.11 [kikadf 2026-04-14]
