@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2026/02/04 11:33:15 adam Exp $
+# $NetBSD: Makefile,v 1.13 2026/04/14 11:43:30 jperkin Exp $
 
 DISTNAME=	zlib-ng-2.3.3
 CATEGORIES=	archivers
@@ -15,7 +15,7 @@ USE_LANGUAGES=		c c++
 CMAKE_CONFIGURE_ARGS+=	-DWITH_GTEST=OFF
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,${WRKSRC}/zlib-ng.map
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,${WRKSRC}/${CMAKE_BUILD_DIR}/zlib-ng.map
 
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}
 # For Darwin
