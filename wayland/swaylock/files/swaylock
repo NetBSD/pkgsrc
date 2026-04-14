@@ -1,0 +1,2 @@
+# $NetBSD: swaylock,v 1.1 2026/04/14 13:27:07 kikadf Exp $
+auth	required	@PREFIX@/lib/security/pam_pwauth_suid.so

@@ -1,0 +1,4 @@
+A screen locking utility for Wayland compositors.
+It is compatible with any Wayland compositors
+which implements the ext-session-lock-v1 Wayland
+protocol.
