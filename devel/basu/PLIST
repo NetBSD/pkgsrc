@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/14 10:58:09 kikadf Exp $
+bin/basuctl
+include/basu/_sd-common.h
+include/basu/sd-bus-protocol.h
+include/basu/sd-bus-vtable.h
+include/basu/sd-bus.h
+include/basu/sd-id128.h
+lib/libbasu.so
+lib/libbasu.so.0
+lib/pkgconfig/basu.pc
