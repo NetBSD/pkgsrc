@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2305 2026/04/14 12:42:10 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.2306 2026/04/14 12:48:16 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3601,3 +3601,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-types-yaml to 6.0.12.20260408 [adam 2026-04-14]
 	Added wayland/swaybg version 1.2.2 [kikadf 2026-04-14]
 	Added wayland/gtk-layer-shell version 0.10.1 [kikadf 2026-04-14]
+	Added devel/chrono-date version 3.0.4 [kikadf 2026-04-14]
