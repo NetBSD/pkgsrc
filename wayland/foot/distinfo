@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2026/04/14 12:11:48 kikadf Exp $
+
+BLAKE2s (foot-1.25.0.tar.gz) = 19c79d76e58c0e4d024a4fea3658d7790d813cb42b9f1ab498693391cb2b9ab5
+SHA512 (foot-1.25.0.tar.gz) = 2b8d9070e9cf9c36bc481ff927a0df0619c1c0aae9d7e654b841b98b016149bcb667a46ae7c270c5b166f108edc6700246d275152e4d399cf36505e861fbaeba
+Size (foot-1.25.0.tar.gz) = 621034 bytes
+SHA1 (patch-char32.c) = 833e1f2e6d7cbd9985bb5307bb0b097e5c26b4ef
+SHA1 (patch-config.c) = f3639ee869c2a667f66bf10880b9fab2f5e35c73
+SHA1 (patch-meson.build) = ed84dfab137e9a0be7d464d5f78b8dcbe94956f8
+SHA1 (patch-server.c) = 2d27b2c391e3c624ef6573faca641050549f5966
+SHA1 (patch-slave.c) = 7ed9560294fbbecfca49f4c09e6617fa7e8f131d
+SHA1 (patch-utils_xtgettcap.c) = c19b19367a863fae012b15b447d2389671ddd90d

@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2026/04/14 12:11:49 kikadf Exp $
+
+* Install config file to examples
+
+--- meson.build.orig	2026-02-06 09:47:48.610608225 +0000
++++ meson.build
+@@ -373,7 +373,7 @@ if systemd.found() or custom_systemd_uni
+ endif
+ 
+ scdoc = dependency('scdoc', native: true, required: get_option('docs'))
+-install_data('foot.ini', install_dir: join_paths(get_option('sysconfdir'), 'xdg', 'foot'))
++install_data('foot.ini', install_dir: join_paths(get_option('datadir'), 'examples', 'foot'))
+ if scdoc.found()
+   install_data(
+     'LICENSE', 'README.md', 'CHANGELOG.md',
