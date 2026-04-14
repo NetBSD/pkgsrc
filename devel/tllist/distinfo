@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/14 11:43:50 kikadf Exp $
+
+BLAKE2s (tllist-1.1.0.tar.gz) = 507301e516bc59ee8398ae5aa0b3b51b7198c80e3f30cebd77deac827aa20e7b
+SHA512 (tllist-1.1.0.tar.gz) = 8675203674f7517f66f99a158d190f80ea6d1a4e587d053ebd61cfabc17e890b417b761083de4931f95e2403b2bab40e12f8b5cd168fc35097a9194442c23d51
+Size (tllist-1.1.0.tar.gz) = 7671 bytes
