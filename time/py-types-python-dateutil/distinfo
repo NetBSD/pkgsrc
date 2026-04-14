@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2026/04/02 06:15:38 adam Exp $
+$NetBSD: distinfo,v 1.19 2026/04/14 12:32:07 adam Exp $
 
-BLAKE2s (types_python_dateutil-2.9.0.20260402.tar.gz) = 35402483498f20f5f37af89351cf4d2bd6375cd45ac515027f33281053ff39c0
-SHA512 (types_python_dateutil-2.9.0.20260402.tar.gz) = 856eed7a6b1dfb5d655ca6a0521f48275c4560888028c42327e956993350617ed9d11751d70c0239b6a331c557b6c91f743d5dc02b9e5fe256f64973536c588a
-Size (types_python_dateutil-2.9.0.20260402.tar.gz) = 16941 bytes
+BLAKE2s (types_python_dateutil-2.9.0.20260408.tar.gz) = c064e66f1f35185e0d14ca132e10919834c6805e44ef9873fe0f85039ba77e21
+SHA512 (types_python_dateutil-2.9.0.20260408.tar.gz) = 4b4ca3ed3f06490340e9e945ff3abfa1569387ab68af1d180c5ef3a766e46fa6e607865577cf9a6290e48b4b533b4b8d55df6e06850cd631c877444664db241f
+Size (types_python_dateutil-2.9.0.20260408.tar.gz) = 16981 bytes
