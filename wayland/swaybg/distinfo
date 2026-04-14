@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/14 12:35:52 kikadf Exp $
+
+BLAKE2s (swaybg-1.2.2.tar.gz) = a15a5f0217c731219fc6176c77f8fb5083d57f80331da22ee8acf6953457998a
+SHA512 (swaybg-1.2.2.tar.gz) = b3123f1c635b85147c8d66221d014333d232d698c575e929481df0cee5ea3fc11cef951ca1fe705e95cb07f8ae5e6de6b3a315a4ab9059611b9b42ca412834b2
+Size (swaybg-1.2.2.tar.gz) = 16995 bytes
