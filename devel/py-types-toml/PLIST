@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2024/04/10 09:21:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/04/14 12:34:02 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/toml-stubs/METADATA.toml
 ${PYSITELIB}/toml-stubs/__init__.pyi
 ${PYSITELIB}/toml-stubs/decoder.pyi
 ${PYSITELIB}/toml-stubs/encoder.pyi
 ${PYSITELIB}/toml-stubs/ordered.pyi
+${PYSITELIB}/toml-stubs/py.typed
 ${PYSITELIB}/toml-stubs/tz.pyi
