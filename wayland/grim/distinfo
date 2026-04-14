@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/14 13:40:59 kikadf Exp $
+
+BLAKE2s (grim-1.5.0.tar.gz) = 36aad43255f8a982eb234e65748b319f7348f0a9b348823221be290f33333298
+SHA512 (grim-1.5.0.tar.gz) = 5a3d0b3dc7bad5dbb3b18649c5fd27ebd0bb03251d6aa2b3ea2fb3b04192bdef923d1fb82234a1281f48cb4d1f014feda2ab3e2ec009e4bbccc81fc04924b9de
+Size (grim-1.5.0.tar.gz) = 20805 bytes
