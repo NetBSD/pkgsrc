@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2026/04/14 13:36:36 kikadf Exp $
+# $NetBSD: Makefile,v 1.14 2026/04/14 13:44:08 kikadf Exp $
 #
 
 COMMENT=	Packages to support the Wayland protocol
 
 SUBDIR+=	foot
+SUBDIR+=	grim
 SUBDIR+=	gtk-layer-shell
 SUBDIR+=	gtk4-layer-shell
 SUBDIR+=	labwc
