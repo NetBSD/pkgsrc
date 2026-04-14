@@ -1,0 +1,18 @@
+$NetBSD: patch-date.pc.in,v 1.1 2026/04/14 12:46:17 kikadf Exp $
+
+* date.pc for pkg-config
+  from Arch Linux
+
+--- date.pc.in.orig	2025-12-30 17:59:51.476545818 +0000
++++ date.pc.in
+@@ -0,0 +1,10 @@
++prefix=@CMAKE_INSTALL_PREFIX@
++exec_prefix=${prefix}
++libdir=${prefix}/lib
++includedir=${prefix}/include
++
++Name: date
++Description: A date and time library based on the C++11/14/17 <chrono> header
++Version: @VERSION@
++Libs: -L${libdir} -ldate-tz
++Cflags: -I${includedir} @TZ_COMPILE_DEFINITIONS@

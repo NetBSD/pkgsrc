@@ -1,0 +1,36 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/04/14 12:46:17 kikadf Exp $
+
+* Install date.pc for pkg-config
+  from Arch Linux
+
+--- CMakeLists.txt.orig	2025-05-28 17:53:02.000000000 +0000
++++ CMakeLists.txt
+@@ -186,6 +186,15 @@ if( BUILD_TZ_LIB )
+     endif( )
+ endif( )
+ 
++if ( BUILD_TZ_LIB )
++  # Cflags: -I${includedir} @TZ_COMPILE_DEFINITIONS@
++  set( TZ_COMPILE_DEFINITIONS "$<IF:$<TARGET_EXISTS:date-tz>,-D$<JOIN:$<TARGET_PROPERTY:date-tz,INTERFACE_COMPILE_DEFINITIONS>, -D>,>" )
++  configure_file(date.pc.in date.pc.cf @ONLY)
++  file( GENERATE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/date.pc"
++    INPUT "${CMAKE_CURRENT_BINARY_DIR}/date.pc.cf" )
++
++endif( )
++
+ #[===================================================================[
+    installation
+ #]===================================================================]
+@@ -231,6 +240,12 @@ if( ENABLE_DATE_INSTALL )
+     DESTINATION ${CONFIG_LOC})
+ endif( )
+ 
++if ( BUILD_TZ_LIB )
++  install(
++    FILES ${CMAKE_BINARY_DIR}/date.pc
++    DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
++endif( )
++
+ #[===================================================================[
+    testing
+ #]===================================================================]

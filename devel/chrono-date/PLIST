@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/14 12:46:17 kikadf Exp $
+include/date/date.h
+include/date/islamic.h
+include/date/iso_week.h
+include/date/julian.h
+include/date/solar_hijri.h
+include/date/tz.h
+lib/cmake/date/dateConfig.cmake
+lib/cmake/date/dateConfigVersion.cmake
+lib/cmake/date/dateTargets-release.cmake
+lib/cmake/date/dateTargets.cmake
+lib/libdate-tz.so
+lib/libdate-tz.so.3
+lib/libdate-tz.so.${PKGVERSION}
+lib/pkgconfig/date.pc
