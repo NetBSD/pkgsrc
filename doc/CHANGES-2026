@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2309 2026/04/14 12:56:39 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2310 2026/04/14 13:06:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3607,3 +3607,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added wayland/sfwbar version 1.0_beta17 [kikadf 2026-04-14]
 	Updated databases/py-peewee to 4.0.4 [adam 2026-04-14]
 	Updated devel/py-more-itertools to 11.0.2 [adam 2026-04-14]
+	Updated devel/py-build to 1.4.3 [adam 2026-04-14]
+	Updated devel/py-bitarray to 3.8.1 [adam 2026-04-14]
