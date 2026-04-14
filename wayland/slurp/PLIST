@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/14 13:35:41 kikadf Exp $
+bin/slurp
+man/man1/slurp.1

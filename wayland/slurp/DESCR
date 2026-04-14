@@ -1,0 +1,3 @@
+Slurp is a tool for selecting a region in a Wayland
+compositor and printing it to the standard output.
+It is commonly used with grim for taking screenshots.

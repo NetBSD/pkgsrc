@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/14 13:35:41 kikadf Exp $
+
+BLAKE2s (slurp-1.5.0.tar.gz) = fd219af150a87cd0b5d8cb6986d64a284c4631c86a12472134d333968172ecd9
+SHA512 (slurp-1.5.0.tar.gz) = 77c4efdaa4ac411f43c598e5d654bcf61f969a5e403df6110757a7b217e02d55d0ba797729e42f8219d3bba79f58bcb36746799de765d3b25f301bf9ac3c1888
+Size (slurp-1.5.0.tar.gz) = 18790 bytes
