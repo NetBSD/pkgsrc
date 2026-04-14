@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/14 09:49:28 kikadf Exp $
+
+BLAKE2s (libsfdo-0.1.4.tar.gz) = 73e4d513b8e310b1dea1ac563f0ccecf7c3402a113b27ca853076dbba03c94ea
+SHA512 (libsfdo-0.1.4.tar.gz) = 53360c39a537bb158dff1bd69c5abe1f2682929e946ce0d4fe55a424820946399995d883cbd89bf04bc6a0abe8db593adcbf3c716020d746aac4d73ba9d80023
+Size (libsfdo-0.1.4.tar.gz) = 56106 bytes
