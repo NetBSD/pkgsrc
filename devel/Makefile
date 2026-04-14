@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4617 2026/04/14 09:58:19 kikadf Exp $
+# $NetBSD: Makefile,v 1.4618 2026/04/14 10:59:59 kikadf Exp $
 #
 
 COMMENT=	Development utilities
@@ -198,6 +198,7 @@ SUBDIR+=	avl
 SUBDIR+=	avltree
 SUBDIR+=	bacon
 SUBDIR+=	bam
+SUBDIR+=	basu
 SUBDIR+=	bats
 SUBDIR+=	bazel
 SUBDIR+=	bcc
