@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/14 13:40:59 kikadf Exp $
+bin/grim
+man/man1/grim.1
