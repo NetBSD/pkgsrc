@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/09/15 11:57:36 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/04/14 07:18:56 adam Exp $
 
-BLAKE2s (zope_configuration-7.0.tar.gz) = 7004dad0b521e2142edc8ba6374d42c5b6c1e08ff6629d33f30abba6412c227b
-SHA512 (zope_configuration-7.0.tar.gz) = 52a5493c9b19918f6f4ba13c798af8fc8e31b53275cd2d52c4fa1a6b4c14c580c764d92d02b8f3736df037291f3fa54fa4a34e940a649fc1ce7ee611312bc2bf
-Size (zope_configuration-7.0.tar.gz) = 84347 bytes
+BLAKE2s (zope_configuration-7.1.tar.gz) = 9d04d7d365e6b0579abebce7112ae2dea30807bd4566f95ebe341c395ee3183a
+SHA512 (zope_configuration-7.1.tar.gz) = 2bf608971a7d75cb622aaca0f1884c7bb9385a64da2dba743830b5bd76b990c7ed183f9a5a160fc3f40a5e1bd00b43023a01caf1f9bd1d8e149b7b7b27c3a391
+Size (zope_configuration-7.1.tar.gz) = 84561 bytes
