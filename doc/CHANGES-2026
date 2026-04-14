@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2300 2026/04/14 12:09:54 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2301 2026/04/14 12:12:42 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3590,3 +3590,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added fonts/fcft version 3.3.3 [kikadf 2026-04-14]
 	Updated devel/py-uv to 0.11.6 [adam 2026-04-14]
 	Updated devel/py-uv-build to 0.11.6 [adam 2026-04-14]
+	Added wayland/foot version 1.25.0 [kikadf 2026-04-14]
