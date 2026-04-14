@@ -1,0 +1,16 @@
+$NetBSD: patch-src_libsystemd_libsystemd.sym,v 1.1 2026/04/14 10:58:10 kikadf Exp $
+
+* Drop unused symbols from version script (from upstream)
+
+--- src/libsystemd/libsystemd.sym.orig	2022-12-16 11:13:02.000000000 +0100
++++ src/libsystemd/libsystemd.sym
+@@ -72,9 +72,6 @@ global:
+         sd_bus_get_current_message;
+         sd_bus_get_current_handler;
+         sd_bus_get_current_userdata;
+-        sd_bus_attach_event;
+-        sd_bus_detach_event;
+-        sd_bus_get_event;
+         sd_bus_add_filter;
+         sd_bus_add_match;
+         sd_bus_add_object;
