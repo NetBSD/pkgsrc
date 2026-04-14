@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2026/03/04 09:27:52 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/04/14 12:09:05 adam Exp $
 
 DISTNAME=	uv_build-${UV_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -9,10 +9,10 @@ COMMENT=	The uv build backend
 
 .include "../../devel/py-uv/Makefile.common"
 
+PY_RENAME_BINARIES=	uv-build
+
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/uv_build/__init__.py.orig
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} uv-build uv-build-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../devel/py-maturin/tool.mk"
 .include "../../lang/python/wheel.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.19 2026/03/12 13:21:19 adam Exp $
+# $NetBSD: Makefile.common,v 1.20 2026/04/14 12:09:05 adam Exp $
 # used by devel/py-uv/Makefile
 # used by devel/py-uv-build/Makefile
 
-UV_VERSION=	0.10.9
+UV_VERSION=	0.11.6
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/astral-sh/uv
@@ -12,6 +12,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 CFLAGS+=	-Wno-implicit-function-declaration
 
-RUST_REQ=	1.91.0
+RUST_REQ=	1.92.0
 
 .include "${.CURDIR}/../../devel/py-uv/cargo-depends.mk"
