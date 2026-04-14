@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2310 2026/04/14 13:06:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2311 2026/04/14 13:07:09 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3609,3 +3609,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-more-itertools to 11.0.2 [adam 2026-04-14]
 	Updated devel/py-build to 1.4.3 [adam 2026-04-14]
 	Updated devel/py-bitarray to 3.8.1 [adam 2026-04-14]
+	Added wayland/gtk4-layer-shell version 1.3.0 [kikadf 2026-04-14]
