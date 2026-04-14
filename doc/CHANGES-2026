@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2320 2026/04/14 13:57:37 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2321 2026/04/14 14:49:59 osa Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3623,3 +3623,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-fsspec to 2026.3.0 [adam 2026-04-14]
 	Updated devel/py-fakefs to 6.2.0 [adam 2026-04-14]
 	Updated net/py-xandikos to 0.3.7 [adam 2026-04-14]
+	Updated www/freenginx to 1.28.0nb2 [osa 2026-04-14]
+	Updated www/freenginx to 1.30.0 [osa 2026-04-14]
+	Updated www/freenginx-devel to 1.30.0 [osa 2026-04-14]
