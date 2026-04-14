@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2026/04/14 12:53:47 kikadf Exp $
+
+BLAKE2s (sfwbar-1.0_beta17.tar.gz) = b088dacefd56c0cdbd52d094a30540e411085c53060ea877d0e893867c21c0bd
+SHA512 (sfwbar-1.0_beta17.tar.gz) = f9444ace3e01997aecba7bf2a6e1edfdbe6bf67022d7ec60874e2f86da20e0e3c1a41defa7720f74eb1ff646ce65fa0343a89186883c3ac7ae59001e22aeaf23
+Size (sfwbar-1.0_beta17.tar.gz) = 518367 bytes
+SHA1 (patch-config_memory.source) = b0cd1d907322841b19160be3d19074d63168bdc0
+SHA1 (patch-modules_network.c) = b91f130ff7b53a162315f6ab0372a8a383c49510
