@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/14 09:49:28 kikadf Exp $
+include/sfdo-basedir.h
+include/sfdo-common.h
+include/sfdo-desktop-file.h
+include/sfdo-desktop.h
+include/sfdo-icon.h
+include/sfdo-version.h
+lib/libsfdo-basedir.so
+lib/libsfdo-basedir.so.0
+lib/libsfdo-desktop-file.so
+lib/libsfdo-desktop-file.so.0
+lib/libsfdo-desktop.so
+lib/libsfdo-desktop.so.0
+lib/libsfdo-icon.so
+lib/libsfdo-icon.so.0
+lib/pkgconfig/libsfdo-basedir.pc
+lib/pkgconfig/libsfdo-desktop-file.pc
+lib/pkgconfig/libsfdo-desktop.pc
+lib/pkgconfig/libsfdo-icon.pc
