@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.292 2026/03/25 22:48:10 wiz Exp $
+# $NetBSD: Makefile,v 1.293 2026/04/14 09:39:46 wiz Exp $
 #
 # release notes
 # https://firefox-source-docs.mozilla.org/security/nss/releases/index.html
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
-NSS_RELEASE=		3.122.0
+NSS_RELEASE=		3.122.1
 PKGNAME=		nss-${NSS_RELEASE}
 CATEGORIES=		devel security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_DIST_DIR_VERSION:S/_0$//}_RTM/src/}
