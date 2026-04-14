@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4618 2026/04/14 10:59:59 kikadf Exp $
+# $NetBSD: Makefile,v 1.4619 2026/04/14 11:45:07 kikadf Exp $
 #
 
 COMMENT=	Development utilities
@@ -3757,6 +3757,7 @@ SUBDIR+=	tkdiff
 SUBDIR+=	tklib
 SUBDIR+=	tl-expected
 SUBDIR+=	tla
+SUBDIR+=	tllist
 SUBDIR+=	tlsh
 SUBDIR+=	tmake
 SUBDIR+=	tokei
