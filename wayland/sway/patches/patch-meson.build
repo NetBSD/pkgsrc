@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2026/04/14 11:32:14 kikadf Exp $
+
+* Install config files to examples
+
+--- meson.build.orig	2025-12-13 15:37:00.995711394 +0000
++++ meson.build
+@@ -214,7 +214,7 @@ configure_file(
+ 	configuration: config,
+ 	input: 'config.in',
+ 	output: '@BASENAME@',
+-	install_dir: join_paths(sysconfdir, 'sway')
++	install_dir: join_paths(datadir, 'examples', 'sway')
+ )
+ 
+ install_data(

@@ -1,0 +1,8 @@
+Sway is a tiling Wayland compositor and a drop-in replacement
+for the i3 window manager for X11. It works with your existing
+i3 configuration and supports most of i3's features, plus
+a few extras.
+Sway allows you to arrange your application windows logically,
+rather than spatially. Windows are arranged into a grid by
+default which maximizes the efficiency of your screen and can
+be quickly manipulated using only the keyboard.

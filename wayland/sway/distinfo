@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1 2026/04/14 11:32:14 kikadf Exp $
+
+BLAKE2s (sway-1.11.tar.gz) = 08578ebdaaafd31f89219294389dcad8e918b80181444b47f927a09e1132c737
+SHA512 (sway-1.11.tar.gz) = 7366b494308b8773e6051a67286e7abe422bb390f58def8df143d6334b949ef4c5df7e8086332053ff57ec65518f5b04f11a2c31bb57a31dd234eda82457aed5
+Size (sway-1.11.tar.gz) = 5583731 bytes
+SHA1 (patch-common_stringop.c) = 1d89d81d0e665dec83b312e4d47645923dedbea3
+SHA1 (patch-common_util.c) = 6092b87d425096740409e00b0d9dac3bc5dae8f7
+SHA1 (patch-meson.build) = 40b74709af65b55b4f3e93a5fa45b783f88b6463
+SHA1 (patch-sway_commands.c) = 792b1746fcfccafa1ac2bb7386012a31e327d63a
+SHA1 (patch-sway_commands_move.c) = 8b5682f523ccc626e376c4dcceac53a2c2a739f3
+SHA1 (patch-sway_commands_rename.c) = 831cd230384eecba4bd86696163eb4fa385f4cf4
+SHA1 (patch-sway_commands_workspace.c) = ae2389a3d5d9ff453de3d55e5be5ff6fa447c1d3
+SHA1 (patch-sway_input_input-manager.c) = 911f6a14325ba87130cef81e5bc3ad4772e07613
+SHA1 (patch-sway_ipc-json.c) = 8baeb0f81994ec456161d164a28b3dc6a33953c7
+SHA1 (patch-sway_tree_output.c) = 5e8aa608a2a77013d7d0ceef7b74bf1c8a334bf3
+SHA1 (patch-sway_tree_workspace.c) = c62b76e90b3ae1cbaf958fb4cf42a5d8fee4705a
+SHA1 (patch-swaybar_i3bar.c) = b71e4c995ab4b64f76d6604f1010e83d459e4c29
+SHA1 (patch-swaybar_tray_icon.c) = 4cb661059fb46e207e0da1f3a716c1f8a63d8604
