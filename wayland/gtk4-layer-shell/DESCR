@@ -1,0 +1,8 @@
+A library for using the Layer Shell and Session Lock Wayland
+protocols with GTK4. This Library is compatible with C, C++
+and any language that supports GObject introspection files
+(Python, Vala, etc). The Layer Shell protocol allows building
+desktop shell components such as panels, notifications and
+wallpapers. It can be used to anchor your windows to a corner
+or edge of the output, or stretch them across the entire output.
+The Session Lock protocol allows building lock screens.

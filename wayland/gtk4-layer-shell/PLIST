@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/14 13:05:20 kikadf Exp $
+include/gtk4-layer-shell/gtk4-layer-shell.h
+include/gtk4-layer-shell/gtk4-session-lock.h
+lib/girepository-1.0/Gtk4LayerShell-1.0.typelib
+lib/girepository-1.0/Gtk4SessionLock-1.0.typelib
+lib/libgtk4-layer-shell.so
+lib/libgtk4-layer-shell.so.0
+lib/libgtk4-layer-shell.so.${PKGVERSION}
+lib/liblayer-shell-preload.so
+lib/pkgconfig/gtk4-layer-shell-0.pc
+share/gir-1.0/Gtk4LayerShell-1.0.gir
+share/gir-1.0/Gtk4SessionLock-1.0.gir
+share/vala/vapi/gtk4-layer-shell-0.deps
+share/vala/vapi/gtk4-layer-shell-0.vapi
