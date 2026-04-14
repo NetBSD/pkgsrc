@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2311 2026/04/14 13:07:09 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.2312 2026/04/14 13:18:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3610,3 +3610,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-build to 1.4.3 [adam 2026-04-14]
 	Updated devel/py-bitarray to 3.8.1 [adam 2026-04-14]
 	Added wayland/gtk4-layer-shell version 1.3.0 [kikadf 2026-04-14]
+	Updated security/py-authlib to 1.6.10 [adam 2026-04-14]
+	Updated textproc/py-lxml to 6.0.4 [adam 2026-04-14]
