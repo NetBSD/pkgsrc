@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2314 2026/04/14 13:28:32 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.2315 2026/04/14 13:31:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3614,3 +3614,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-lxml to 6.0.4 [adam 2026-04-14]
 	Added wayland/swayidle version 1.9.0 [kikadf 2026-04-14]
 	Added wayland/swaylock version 1.8.5 [kikadf 2026-04-14]
+	Updated math/py-xarray to 2026.4.0 [adam 2026-04-14]
+	Updated devel/py-poetry to 2.3.4 [adam 2026-04-14]
