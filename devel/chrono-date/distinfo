@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2026/04/14 12:46:17 kikadf Exp $
+
+BLAKE2s (chrono-date-3.0.4.tar.gz) = 167b7a65379e4e7f78480ca4fd5f162f3895e255692f688ef927948ca7d5acbc
+SHA512 (chrono-date-3.0.4.tar.gz) = 9bffca5c7cfd1769f66bef330fe4ef0ad2512a8afd229ddb4043a4f166741e697c7a5fbdddf29f7157b3fc2c2c2a80fa7cff45078f1d8ab248d3b07e14518fcf
+Size (chrono-date-3.0.4.tar.gz) = 830670 bytes
+SHA1 (patch-CMakeLists.txt) = 3f8b905b7838dae17ad393597207315ada14d333
+SHA1 (patch-date.pc.in) = 1422d97051bbdf2022ba2aba65e0e2fa63489199
