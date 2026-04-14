@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2301 2026/04/14 12:12:42 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.2302 2026/04/14 12:29:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3591,3 +3591,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv to 0.11.6 [adam 2026-04-14]
 	Updated devel/py-uv-build to 0.11.6 [adam 2026-04-14]
 	Added wayland/foot version 1.25.0 [kikadf 2026-04-14]
+	Updated archivers/py-zipp to 3.23.1 [adam 2026-04-14]
+	Updated graphics/py-tifffile to 2026.4.11 [adam 2026-04-14]
