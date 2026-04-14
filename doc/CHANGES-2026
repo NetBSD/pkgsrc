@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2316 2026/04/14 13:36:52 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.2317 2026/04/14 13:38:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3617,3 +3617,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-xarray to 2026.4.0 [adam 2026-04-14]
 	Updated devel/py-poetry to 2.3.4 [adam 2026-04-14]
 	Added wayland/slurp version 1.5.0 [kikadf 2026-04-14]
+	Updated sysutils/py-kazoo to 2.11.0 [adam 2026-04-14]
+	Updated textproc/py-pugjs to 6.0.2 [adam 2026-04-14]
