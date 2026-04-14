@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/02/18 10:43:39 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/04/14 13:37:32 adam Exp $
 
-DISTNAME=	pypugjs-6.0.1
+DISTNAME=	pypugjs-6.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	textproc lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypugjs/}
