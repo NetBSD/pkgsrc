@@ -1,4 +1,7 @@
-$NetBSD: patch-configure.ac,v 1.15 2026/03/25 01:47:18 maya Exp $
+$NetBSD: patch-configure.ac,v 1.16 2026/04/14 10:33:41 jperkin Exp $
+
+Do not add any system paths to R_LD_LIBRARY_PATH, it conflicts at runtime
+with what has been correctly written to the RPATH.
 
 Fix Darwin -install_name path for libR.dylib
 
@@ -41,6 +44,15 @@ release    line #
    LIBR1=-lR
  else
    LIBR0=
+@@ -936,7 +939,7 @@ case "${host_os}" in
+     ## Not so bad in later versions of Darwin, 
+     ## where DYLD_FALLBACK_LIBRARY_PATH is used (see below).
+     ;;
+-  *)
++  noboguspaths*)
+     for arg in ${LDFLAGS}; do
+       case "${arg}" in
+         -L*)
 @@ -1864,8 +1867,8 @@ dnl     ;;
      DYLIB_EXT=".dylib"
      dylib_ldflags="${darwin_dylib_ldflags}"
@@ -52,3 +64,12 @@ release    line #
      ## don't use version in libRblas so we can replace it with any BLAS implementation
      RBLAS_LDFLAGS="-install_name libRblas.dylib -headerpad_max_install_names"
      ;;
+@@ -2895,7 +2898,7 @@ for arg in ${LDFLAGS} ${FLIBS} ${BLAS_LI
+   case "${arg}" in
+     -L*)
+       lib=`echo ${arg} | sed "s/^-L//"`
+-      r_want_lib=true
++      r_want_lib=false
+       ## don't add anything for Darwin
+       case "${host_os}" in darwin*) r_want_lib=false ;; esac
+       ## Do not add non-existent directories.
