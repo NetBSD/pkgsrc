@@ -402,6 +402,7 @@ SUBDIR+=	stone-soup
 SUBDIR+=	stone-soup-sdl
 SUBDIR+=	stratagus
 SUBDIR+=	sudoku-cli
+SUBDIR+=	suika3
 SUBDIR+=	supertux
 SUBDIR+=	supertuxkart
 SUBDIR+=	svb

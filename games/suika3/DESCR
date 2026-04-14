@@ -1,0 +1,4 @@
+Suika3 is a high-performance cross-platform 2D game engine with
+DSL for visual novels.
+
+This package provides the core engine and tools for game development.

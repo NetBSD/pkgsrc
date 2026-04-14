@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (suika3-26.04.9.tar.gz) = cfc1a5d2700dcca04b06a2b826698985f0bbcf4da28ae0af25ab9285f117a7ed
+SHA512 (suika3-26.04.9.tar.gz) = 4ddab321aee07449b3683a8c93feed30fb53031e7815fe9d374cd980d113d44adae9f022059b04cf10e72da063b1f727e13a87da91fa86d75f212c9ff99d7265
+Size (suika3-26.04.9.tar.gz) = 62235499 bytes
