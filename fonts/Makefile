@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.457 2026/04/01 19:40:14 markd Exp $
+# $NetBSD: Makefile,v 1.458 2026/04/14 12:07:05 kikadf Exp $
 #
 
 COMMENT=	Fonts
@@ -81,6 +81,7 @@ SUBDIR+=	efont-unicode
 SUBDIR+=	elstob-font
 SUBDIR+=	encodings
 SUBDIR+=	evermono-ttf
+SUBDIR+=	fcft
 SUBDIR+=	fira
 SUBDIR+=	fntsample
 SUBDIR+=	font-adobe-100dpi
