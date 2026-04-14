@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/14 12:41:02 kikadf Exp $
+
+BLAKE2s (gtk-layer-shell-0.10.1.tar.gz) = 4ab7b36137bb85ac049a2545e9670953e8da0a0ac4c97414285a82540778f59e
+SHA512 (gtk-layer-shell-0.10.1.tar.gz) = 8366b6f11ab9c1a5361f3c858507369c35904662c2cb260a4ad87cc89b93fe8ad2b8789c9df6d4d43623346292faa9705f5fe6f73c8fdc325eb7ad2180f0d659
+Size (gtk-layer-shell-0.10.1.tar.gz) = 140575 bytes
