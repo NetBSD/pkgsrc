@@ -1,10 +1,21 @@
-$NetBSD: patch-parsedate.y,v 1.1 2020/07/05 13:35:31 rhialto Exp $
+$NetBSD: patch-parsedate.y,v 1.2 2026/04/14 14:26:36 christos Exp $
 
-Add date grammar rules for old articles from olduse.net.
+- Add date grammar rules for old articles from olduse.net.
+- replace ctype.h
 
---- parsedate.y.orig	2000-05-27 00:31:17.000000000 +0000
-+++ parsedate.y
-@@ -134,6 +134,10 @@ item	: time {
+
+--- parsedate.y.orig	2000-05-25 01:11:42.000000000 -0400
++++ parsedate.y	2026-04-14 10:12:10.491640369 -0400
+@@ -19,7 +19,7 @@
+ /* SUPPRESS 595 on yypvt *//* Automatic variable may be used before set */
+ #include <stdio.h>
+ #include <sys/types.h>
+-#include <ctype.h>
++#include "myctype.h"
+ #include "config.h"
+ /*#include "config2.h"*/
+ #include <time.h>
+@@ -134,6 +134,10 @@
  	| rel {
  	    yyHaveRel = 1;
  	}
@@ -15,7 +26,7 @@ Add date grammar rules for old articles from olduse.net.
  	;
  
  time	: tUNUMBER o_merid {
-@@ -259,6 +263,24 @@ date	: tUNUMBER '/' tUNUMBER {
+@@ -259,6 +263,24 @@
  	    yyMonth = $4;
  	    yyYear = $5;
  	}
@@ -40,7 +51,7 @@ Add date grammar rules for old articles from olduse.net.
  	;
  
  rel	: tSNUMBER tSEC_UNIT {
-@@ -283,6 +305,21 @@ o_merid	: /* NULL */ {
+@@ -283,6 +305,21 @@
  	}
  	;
  
@@ -62,7 +73,7 @@ Add date grammar rules for old articles from olduse.net.
  %%
  
  /* Month and day table. */
-@@ -692,6 +729,9 @@ date_lex()
+@@ -692,6 +729,9 @@
  	if (isdigit(c) || c == '-' || c == '+') {
  	    if (c == '-' || c == '+') {
  		sign = c == '-' ? -1 : 1;
@@ -72,7 +83,7 @@ Add date grammar rules for old articles from olduse.net.
  		yyInput++;
  		if (!isdigit(*yyInput))
  		    /* Skip the plus or minus sign. */
-@@ -703,6 +743,9 @@ date_lex()
+@@ -703,6 +743,9 @@
  		i = 10 * i + c - '0';
  	    yyInput--;
  	    yylval.Number = sign < 0 ? -i : i;
@@ -82,7 +93,7 @@ Add date grammar rules for old articles from olduse.net.
  	    return sign ? tSNUMBER : tUNUMBER;
  	}
  
-@@ -713,9 +756,15 @@ date_lex()
+@@ -713,9 +756,15 @@
  		    *p++ = isupper(c) ? tolower(c) : c;
  	    *p = '\0';
  	    yyInput--;
@@ -98,7 +109,7 @@ Add date grammar rules for old articles from olduse.net.
  	return *yyInput++;
      }
  }
-@@ -799,7 +848,7 @@ main(ac, av)
+@@ -799,7 +848,7 @@
  	    continue;
  	}
  #endif /* YYDEBUG */

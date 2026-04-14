@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.19 2026/04/11 21:19:21 christos Exp $
+$NetBSD: distinfo,v 1.20 2026/04/14 14:26:36 christos Exp $
 
 BLAKE2s (trn-4.0-test77.tar.gz) = be296a41d6bef98afdceb1a72389f48a66d661e930c7f626f9917b8083a68d1f
 SHA512 (trn-4.0-test77.tar.gz) = 9b76ba004fb47dfd162afcfec51630431e8ad7099e5151d4a21b55c8fa670227d6e0756029e57312872c8f4ea986112af50508144caf59adb065212a661f408a
 Size (trn-4.0-test77.tar.gz) = 564694 bytes
-SHA1 (patch-ac) = b406c66669d088eb0140bf99f9589985feb4d4bf
+SHA1 (patch-ac) = 6d52e39a7eecf17a354d87b8a1c9a3c8bde7e8e9
 SHA1 (patch-ad) = f6d102af2b6e3095ea765f622085464193d94835
 SHA1 (patch-ae) = 6cc777ff94540345a433e88ab355fe18a23d60d1
-SHA1 (patch-parsedate.y) = 99213bd37f0708b65276a1f920b757a65ba29b33
-SHA1 (patch-term.h) = f6d63863327961c2e3af5d7d273c85b876406718
+SHA1 (patch-common.h) = 22cc22cddacdcd917c5bf7f16e9c6a2597726ee1
+SHA1 (patch-myctype.h) = 69e0cd3f22a4cc7e55a4613fc320a13d5c83d645
+SHA1 (patch-parsedate.y) = 152fae5b8a2c493da3e0f3812ff678b7ba916fd0
+SHA1 (patch-term.h) = f5a519c0e8f7496f44b2e170763259600846606e
