@@ -1,0 +1,24 @@
+$NetBSD: patch-meson.build,v 1.1 2026/04/14 12:06:06 kikadf Exp $
+
+* Check for uselocale before using it
+
+--- meson.build.orig	2025-12-27 11:27:58.000000000 +0000
++++ meson.build
+@@ -79,6 +79,7 @@ pixman = dependency('pixman-1')
+ stdthreads = cc.find_library('stdthreads', required: false)
+ system_nanosvg = cc.find_library('nanosvg', required: get_option('system-nanosvg'))
+ system_nanosvgrast = cc.find_library('nanosvgrast', required: get_option('system-nanosvg'))
++uselocale = cc.has_function('uselocale')
+ 
+ tllist = dependency('tllist', version: '>=1.0.1', fallback: 'tllist')
+ 
+@@ -88,6 +89,9 @@ endif
+ if utf8proc.found()
+   add_project_arguments('-DFCFT_HAVE_UTF8PROC', language: 'c')
+ endif
++if uselocale
++  add_project_arguments('-DFCFT_HAVE_USELOCALE', language: 'c')
++endif
+ 
+ if freetype.version().version_compare('>=24.2.18')  # 2.12.0, TODO: double-check...
+   if get_option('svg-backend') == 'librsvg'

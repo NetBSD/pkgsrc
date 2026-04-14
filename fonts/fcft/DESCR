@@ -1,0 +1,5 @@
+fcft is a small font loading and glyph rasterization library built on-top of
+FontConfig, FreeType2 and pixman.
+
+It can load and cache fonts from a fontconfig-formatted name string,
+e.g. Monospace:size=12, optionally with user configured fallback fonts.
