@@ -1,4 +1,6 @@
-$NetBSD: patch-term.h,v 1.1 2026/04/11 21:19:21 christos Exp $
+$NetBSD: patch-term.h,v 1.2 2026/04/14 14:26:36 christos Exp $
+
+Include the proper files to avoid warnings
 
 --- term.h.orig	2010-09-02 02:12:26.000000000 -0400
 +++ term.h	2026-04-11 17:02:03.362870720 -0400

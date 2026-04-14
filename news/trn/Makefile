@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2026/04/11 21:19:21 christos Exp $
+# $NetBSD: Makefile,v 1.56 2026/04/14 14:26:36 christos Exp $
 
 DISTNAME=		trn-4.0-test77
 PKGNAME=		trn-4.77
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=trn/}
 
