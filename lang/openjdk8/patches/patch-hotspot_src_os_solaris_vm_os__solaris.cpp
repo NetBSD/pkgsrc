@@ -1,23 +1,10 @@
-$NetBSD: patch-hotspot_src_os_solaris_vm_os__solaris.cpp,v 1.1 2015/07/03 20:40:59 fhajny Exp $
+$NetBSD: patch-hotspot_src_os_solaris_vm_os__solaris.cpp,v 1.2 2026/04/14 11:33:32 jperkin Exp $
 
 Misc SunOS casts.
 
---- hotspot/src/os/solaris/vm/os_solaris.cpp.orig	2015-06-10 10:31:52.000000000 +0000
+--- hotspot/src/os/solaris/vm/os_solaris.cpp.orig	2026-01-23 00:36:25.000000000 +0000
 +++ hotspot/src/os/solaris/vm/os_solaris.cpp
-@@ -113,6 +113,12 @@
- 
- #define MAX_PATH (2 * K)
- 
-+/* Declare madvise where it is not declared for C++, like Solaris */
-+#if defined(__sun) && defined(_XOPEN_SOURCE)
-+extern "C" int memcntl(caddr_t, size_t, int, caddr_t, int, int);
-+extern "C" int madvise(caddr_t, size_t, int);
-+#endif
-+
- // for timer info max values which include all bits
- #define ALL_64_BITS CONST64(0xFFFFFFFFFFFFFFFF)
- 
-@@ -534,7 +540,7 @@ static bool assign_distribution(processo
+@@ -478,7 +482,7 @@ static bool assign_distribution(processo
    const processorid_t limit_id = max_id + 1;
    // Make up markers for available processors.
    bool* available_id = NEW_C_HEAP_ARRAY(bool, limit_id, mtInternal);
@@ -26,7 +13,7 @@ Misc SunOS casts.
      available_id[c] = false;
    }
    for (uint a = 0; a < id_length; a += 1) {
-@@ -557,7 +563,7 @@ static bool assign_distribution(processo
+@@ -501,7 +505,7 @@ static bool assign_distribution(processo
      // ... find the next available processor in the board.
      for (uint slot = 0; slot < processors_per_board; slot += 1) {
        uint try_id = board * processors_per_board + slot;
@@ -35,7 +22,7 @@ Misc SunOS casts.
          distribution[assigned] = try_id;
          available_id[try_id] = false;
          assigned += 1;
-@@ -565,7 +571,7 @@ static bool assign_distribution(processo
+@@ -509,7 +513,7 @@ static bool assign_distribution(processo
        }
      }
      board += 1;
@@ -44,7 +31,7 @@ Misc SunOS casts.
        board = 0;
      }
    }
-@@ -622,7 +628,7 @@ bool os::bind_to_processor(uint processo
+@@ -573,7 +577,7 @@ bool os::bind_to_processor(uint processo
  bool os::getenv(const char* name, char* buffer, int len) {
    char* val = ::getenv( name );
    if ( val == NULL
@@ -53,7 +40,7 @@ Misc SunOS casts.
      if (len > 0)  buffer[0] = 0; // return a null string
      return false;
    }
-@@ -801,7 +807,7 @@ void os::init_system_properties_values()
+@@ -752,7 +756,7 @@ void os::init_system_properties_values()
      } else {
        int inserted = 0;
        int i;
@@ -62,7 +49,7 @@ Misc SunOS casts.
          uint_t flags = path->dls_flags & LA_SER_MASK;
          if (((flags & LA_SER_LIBPATH) == 0) && !inserted) {
            strcat(library_path, common_path);
-@@ -907,7 +913,8 @@ extern "C" void* java_start(void* thread
+@@ -858,7 +862,8 @@ extern "C" void* java_start(void* thread
    // in java_to_os_priority. So we save the native priority
    // in the osThread and recall it here.
  
@@ -72,7 +59,7 @@ Misc SunOS casts.
      if ( UseThreadPriorities ) {
        int prio = osthr->native_priority();
        if (ThreadPriorityVerbose) {
-@@ -2786,7 +2793,7 @@ void os::numa_make_global(char *addr, si
+@@ -2717,7 +2722,7 @@ void os::numa_make_global(char *addr, si
  // Get the number of the locality groups.
  size_t os::numa_get_groups_num() {
    size_t n = Solaris::lgrp_nlgrps(Solaris::lgrp_cookie());
@@ -81,7 +68,7 @@ Misc SunOS casts.
  }
  
  // Get a list of leaf locality groups. A leaf lgroup is group that
-@@ -2798,7 +2805,7 @@ size_t os::numa_get_leaf_groups(int *ids
+@@ -2729,7 +2734,7 @@ size_t os::numa_get_leaf_groups(int *ids
       return 1;
     }
     int result_size = 0, top = 1, bottom = 0, cur = 0;
@@ -90,7 +77,7 @@ Misc SunOS casts.
       int r = Solaris::lgrp_children(Solaris::lgrp_cookie(), ids[cur],
                                      (Solaris::lgrp_id_t*)&ids[top], size - top);
       if (r == -1) {
-@@ -2918,7 +2925,7 @@ char *os::scan_pages(char *start, char*
+@@ -2849,7 +2854,7 @@ char *os::scan_pages(char *start, char*
            }
  
          if ((validity[i] & 2) != 0 && page_expected->lgrp_id > 0) {
@@ -99,7 +86,7 @@ Misc SunOS casts.
              break;
            }
          }
-@@ -4685,7 +4692,7 @@ const char * signames[] = {
+@@ -4645,7 +4650,7 @@ const char * signames[] = {
  const char* os::exception_name(int exception_code, char* buf, size_t size) {
    if (0 < exception_code && exception_code <= SIGRTMAX) {
      // signal
@@ -108,7 +95,7 @@ Misc SunOS casts.
         jio_snprintf(buf, size, "%s", signames[exception_code]);
      } else {
         jio_snprintf(buf, size, "SIG%d", exception_code);
-@@ -5017,7 +5024,7 @@ void os::init(void) {
+@@ -4985,7 +4990,7 @@ void os::init(void) {
    // If the pagesize of the VM is greater than 8K determine the appropriate
    // number of initial guard pages.  The user can change this with the
    // command line arguments, if needed.
@@ -117,7 +104,7 @@ Misc SunOS casts.
      StackYellowPages = 1;
      StackRedPages = 1;
      StackShadowPages = round_to((StackShadowPages*8*K), vm_page_size()) / vm_page_size();
-@@ -5038,7 +5045,7 @@ jint os::init_2(void) {
+@@ -5006,7 +5011,7 @@ jint os::init_2(void) {
  
    // Allocate a single page and mark it as readable for safepoint polling.  Also
    // use this first mmap call to check support for MAP_ALIGN.
@@ -126,7 +113,7 @@ Misc SunOS casts.
                                                        page_size,
                                                        MAP_PRIVATE | MAP_ALIGN,
                                                        PROT_READ);
-@@ -5090,7 +5097,7 @@ jint os::init_2(void) {
+@@ -5058,7 +5063,7 @@ jint os::init_2(void) {
    // stack on a power of 2 boundary.  The real fix for this
    // should be to fix the guard page mechanism.
  
