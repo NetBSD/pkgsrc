@@ -1,0 +1,5 @@
+Idle management daemon, which is compatible with
+any Wayland compositors which implements the
+ext-idle-notify protocol. The swayidle listens for
+idle activity and executes tasks on various idle-
+related events.
