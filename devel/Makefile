@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4619 2026/04/14 11:45:07 kikadf Exp $
+# $NetBSD: Makefile,v 1.4620 2026/04/14 12:47:32 kikadf Exp $
 #
 
 COMMENT=	Development utilities
@@ -267,6 +267,7 @@ SUBDIR+=	cgdb
 SUBDIR+=	cgen
 SUBDIR+=	check
 SUBDIR+=	chmlib
+SUBDIR+=	chrono-date
 SUBDIR+=	chrpath
 SUBDIR+=	clib
 SUBDIR+=	clion-bin
