@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2298 2026/04/14 11:45:40 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.2299 2026/04/14 12:07:39 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3587,3 +3587,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/basu version 0.2.1 [kikadf 2026-04-14]
 	Added wayland/sway version 1.11 [kikadf 2026-04-14]
 	Added devel/tllist version 1.1.0 [kikadf 2026-04-14]
+	Added fonts/fcft version 3.3.3 [kikadf 2026-04-14]
