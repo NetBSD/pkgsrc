@@ -1,0 +1,26 @@
+$NetBSD: distinfo,v 1.1 2026/04/14 10:58:09 kikadf Exp $
+
+BLAKE2s (basu/v0.2.1.tar.gz) = f7b340b81f7fb9952b58129cb7dd95da20d7f3f8d9a3b11003360fc943e51bd7
+SHA512 (basu/v0.2.1.tar.gz) = b1f6a35e4d93d099c5c92a8ea68f8a93429a614f1a63de7346e256437525bee5b87c1a5ad2e0dad2ff0bdc88b525cf1931f048e032bd1f1ff007b4d5eee90c59
+Size (basu/v0.2.1.tar.gz) = 239042 bytes
+SHA1 (patch-src_basic_alloc-util.h) = 7ada7a5df59b1f1ec2751a7bcb50b26f0368feae
+SHA1 (patch-src_basic_fileio.h) = 6398bbead3c315fbfc6a7ec3bb7bda22a4a10d1b
+SHA1 (patch-src_basic_log.h) = 7bd42dd43f6ae2c4ccce8b1c76f0fb346d0aa33f
+SHA1 (patch-src_basic_macro.h) = 796666644ac3fb1a7b3e5d314a15dd74467b3f55
+SHA1 (patch-src_basic_memfd-util.c) = a300bdcf4df7edaa07f3469389174330e639b967
+SHA1 (patch-src_basic_missing.h) = 39f30fbf35bd429390bbb90a62f9ca45c2c86040
+SHA1 (patch-src_basic_socket-util.c) = 7f037f0d1f2092acb287fb1c7e8186d7a07a7d0e
+SHA1 (patch-src_basic_socket-util.h) = 6ff848ab3063f705d693e40d24e157077afcb7d7
+SHA1 (patch-src_busctl_busctl.c) = b431ae6b65a0f65b63b9ce69d1912c34fd6f9f8f
+SHA1 (patch-src_libsystemd_libsystemd.sym) = 17f312781b9f1bc95e855ee05c4874e1c8d9a2c9
+SHA1 (patch-src_libsystemd_sd-bus_bus-dump.c) = 0c8eeafcca6f1d2d9ff7da3bf207aa6efc376404
+SHA1 (patch-src_libsystemd_sd-bus_bus-gvariant.c) = eda28f53d11995d62c398e345c9c8df8e77a347f
+SHA1 (patch-src_libsystemd_sd-bus_bus-message.h) = 7a42f1dae88e72369f63a38c0eb2fd6b533a9ed3
+SHA1 (patch-src_libsystemd_sd-bus_bus-protocol.h) = a1313ce260ad3d70455ead5fc62e076e555c5e73
+SHA1 (patch-src_libsystemd_sd-bus_bus-socket.c) = 6fcd97ecfb443c4e6093c5cafc252c994f0dfffc
+SHA1 (patch-src_libsystemd_sd-bus_bus-track.c) = 8d4aa978177845ba56b4e7431a7a492283693f87
+SHA1 (patch-src_libsystemd_sd-bus_test-bus-chat.c) = 30e8d7e8db8fa8a8f172796933f1e0fe756af91a
+SHA1 (patch-src_libsystemd_sd-bus_test-bus-creds.c) = 70453efa597f96f4638d13b79ae96641a8c16bcd
+SHA1 (patch-src_libsystemd_sd-bus_test-bus-objects.c) = ef83e5763f7b950ded42927832fec12b43c9b536
+SHA1 (patch-src_libsystemd_sd-bus_test-bus-server.c) = 515cb87965d54c35ec97fb125aed9ef056af711b
+SHA1 (patch-src_test_tests.c) = 6f29b5eea228b3ee6106135e8153e31cdbd21a40
