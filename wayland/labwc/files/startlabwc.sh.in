@@ -1,0 +1,17 @@
+#!/bin/sh
+set -eu
+
+: ${XDG_CURRENT_DESKTOP:=labwc}
+: ${XDG_RUNTIME_DIR:=/tmp/$(id -un)-runtime}
+: ${XDG_CONFIG_DIRS:=@PKG_SYSCONFBASE@/xdg}
+: ${XDG_DATA_DIRS:=@PREFIX@/share}
+: ${QT_QPA_PLATFORM:=wayland;xcb}
+
+export XDG_CURRENT_DESKTOP XDG_RUNTIME_DIR QT_QPA_PLATFORM
+export XDG_CONFIG_DIRS XDG_DATA_DIRS
+
+[ -d "${XDG_RUNTIME_DIR}" ] || mkdir -p -m 700 "${XDG_RUNTIME_DIR}"
+
+exec @PREFIX@/bin/seatd-launch \
+     @PREFIX@/bin/dbus-run-session \
+     @PREFIX@/bin/labwc "$@"
