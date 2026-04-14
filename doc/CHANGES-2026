@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2307 2026/04/14 12:51:42 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2308 2026/04/14 12:54:59 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3604,3 +3604,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/chrono-date version 3.0.4 [kikadf 2026-04-14]
 	Updated devel/jemalloc to 5.3.1 [adam 2026-04-14]
 	Updated devel/lazygit to 0.61.1 [adam 2026-04-14]
+	Added wayland/sfwbar version 1.0_beta17 [kikadf 2026-04-14]
