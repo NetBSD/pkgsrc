@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/14 12:41:02 kikadf Exp $
+include/gtk-layer-shell/gtk-layer-shell.h
+lib/girepository-1.0/GtkLayerShell-0.1.typelib
+lib/libgtk-layer-shell.so
+lib/libgtk-layer-shell.so.0
+lib/libgtk-layer-shell.so.${PKGVERSION}
+lib/pkgconfig/gtk-layer-shell-0.pc
+share/gir-1.0/GtkLayerShell-0.1.gir
+share/vala/vapi/gtk-layer-shell-0.deps
+share/vala/vapi/gtk-layer-shell-0.vapi
