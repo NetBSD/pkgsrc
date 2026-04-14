@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2026/03/02 20:31:12 yhardy Exp $
+# $NetBSD: Makefile,v 1.47 2026/04/14 20:23:16 yhardy Exp $
 
-DISTNAME=	streamlink-8.1.2
+DISTNAME=	streamlink-8.3.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=streamlink/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
