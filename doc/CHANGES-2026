@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2289 2026/04/13 19:59:35 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2290 2026/04/14 06:51:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3576,3 +3576,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added wayland/xwayland version 24.1.9 [kikadf 2026-04-13]
 	Removed x11/modular-xorg-xwayland successor wayland/xwayland [kikadf 2026-04-13]
 	Added wayland/wlroots version 0.19.2 [kikadf 2026-04-13]
+	Updated graphics/raqm to 0.10.5 [adam 2026-04-14]
+	Updated devel/mold to 2.41.0 [adam 2026-04-14]
