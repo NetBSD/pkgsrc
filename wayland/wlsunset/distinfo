@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/15 08:43:25 kikadf Exp $
+
+BLAKE2s (wlsunset-0.4.0.tar.gz) = 7dd0b7da50f25dd22a580775a3c747a7633491661753fa3a6d2c985692ba4c0b
+SHA512 (wlsunset-0.4.0.tar.gz) = f72a067a5458931a6394bbccfa1ec5d3790beb5ccce42f2ad865ac6e839c5996363c0806636e337358c8d14cd0a73cb3db37bfc6f3faf26fee2e40a837f69efa
+Size (wlsunset-0.4.0.tar.gz) = 14876 bytes
