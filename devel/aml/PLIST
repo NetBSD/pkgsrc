@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/15 08:01:12 kikadf Exp $
+include/aml1/aml.h
+lib/libaml.so
+lib/libaml.so.1
+lib/libaml.so.${PKGVERSION}
+lib/pkgconfig/aml1.pc

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/15 08:01:12 kikadf Exp $
+
+BLAKE2s (aml-1.0.0.tar.gz) = d69e8dd970fbec963e5ad833e49f26782e118bc2950ce4ca9fa9da82fc9d5c40
+SHA512 (aml-1.0.0.tar.gz) = ae9139fbecec1ebbb10e0d96d9530955ada447edf7fcf7d9db015d78d1626bcdedf0f01d095dc2f0bb040b453b72e66ed824ee6755e7a638cfd02c4b9834c184
+Size (aml-1.0.0.tar.gz) = 21997 bytes
