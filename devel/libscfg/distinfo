@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/15 07:58:19 kikadf Exp $
+
+BLAKE2s (libscfg/v0.2.0.tar.gz) = 380fffd3ee1ac43d7dd5e57bfeba72665c3dd4648aac3a8754f901513122ff96
+SHA512 (libscfg/v0.2.0.tar.gz) = 9a342308e8fa45f0e60712b99bc3d034261ad1869b27b75ae8768daa36fcbe8333a0845bd77196005de8be520a6e31d39c17998d0f0428d1c22a1591f850d8cd
+Size (libscfg/v0.2.0.tar.gz) = 5282 bytes
