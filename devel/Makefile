@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4623 2026/04/15 08:05:11 kikadf Exp $
+# $NetBSD: Makefile,v 1.4624 2026/04/15 20:46:24 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1152,6 +1152,7 @@ SUBDIR+=	lua-basexx
 SUBDIR+=	lua-binaryheap
 SUBDIR+=	lua-bit32
 SUBDIR+=	lua-busted
+SUBDIR+=	lua-cffi
 SUBDIR+=	lua-check
 SUBDIR+=	lua-cliargs
 SUBDIR+=	lua-compat53
