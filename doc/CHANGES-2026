@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2328 2026/04/15 07:56:05 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.2329 2026/04/15 07:59:21 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3636,3 +3636,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added wayland/wl-clipboard version 2.3.0 [kikadf 2026-04-15]
 	Added wayland/wlr-randr version 0.5.0 [kikadf 2026-04-15]
 	Added wayland/swappy version 1.8.0 [kikadf 2026-04-15]
+	Added devel/libscfg version 0.2.0 [kikadf 2026-04-15]
