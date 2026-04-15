@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/15 08:05:37 adam Exp $
+
+BLAKE2s (audioop_lts-0.2.2.tar.gz) = e711cf4ba3f56e338a1d2ca84a5c1aab311bc65cbb258e02f6e4bab016ec4fd7
+SHA512 (audioop_lts-0.2.2.tar.gz) = e7ed20da985c0aff20fe60ef8f3a36b7306c86677b969509840efce0667d65880c922edff61453aa25fde036aa1d46b1890e78ddfaa6be8468d4203ef074df16
+Size (audioop_lts-0.2.2.tar.gz) = 30686 bytes
