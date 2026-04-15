@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/08/12 07:34:16 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/04/15 11:18:07 adam Exp $
 
-BLAKE2s (sord-0.16.18.tar.xz) = c8b3d615f95dd767bc5ba02edaecb6a7764e20e1b62dc8952acaef72b030b321
-SHA512 (sord-0.16.18.tar.xz) = e271d97c77187d7ed0a9c8fe0a65fcf50e269ba79dba4e8d55781ffe3715888c5388d90812d76a48e89ecc9c5e047e0d53ff40333fde7dbbf12dffc496d05e31
-Size (sord-0.16.18.tar.xz) = 102300 bytes
+BLAKE2s (sord-0.16.22.tar.xz) = a9e7ce8da71fd86d8e2aedb544abef87b4cd86d5c0f6a0dc96a75c408dd1b0f2
+SHA512 (sord-0.16.22.tar.xz) = 3821500f810e3b1cdbd763db419445c931d8b61de571f475646f11a5740c521c93c47ecab2e81a580a0d94bf432faa0de78fe3be1138c87bf9baca8fe23bb0cd
+Size (sord-0.16.22.tar.xz) = 107548 bytes
