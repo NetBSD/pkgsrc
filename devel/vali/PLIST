@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/15 08:04:23 kikadf Exp $
+bin/vali
+include/vali.h
+lib/libvali.so
+lib/libvali.so.${PKGVERSION}
+lib/libvali.so.1
+lib/pkgconfig/vali.pc
