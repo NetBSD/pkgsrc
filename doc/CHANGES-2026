@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2332 2026/04/15 08:07:51 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.2333 2026/04/15 08:09:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3640,3 +3640,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/aml version 1.0.0 [kikadf 2026-04-15]
 	Added devel/vali version 0.1.1 [kikadf 2026-04-15]
 	Added wayland/kanshi version 1.9.0 [kikadf 2026-04-15]
+	Added audio/py-audioop-lts version 0.2.2 [adam 2026-04-15]
+	Added audio/py-standard-chunk version 3.13.0 [adam 2026-04-15]
+	Added audio/py-standard-aifc version 3.13.0 [adam 2026-04-15]
+	Added audio/py-standard-sunau version 3.13.0 [adam 2026-04-15]
