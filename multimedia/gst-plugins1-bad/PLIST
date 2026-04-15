@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2026/03/09 10:19:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2026/04/15 09:58:12 adam Exp $
 include/gstreamer-1.0/gst/analytics/analytics-meta-prelude.h
 include/gstreamer-1.0/gst/analytics/analytics.h
 include/gstreamer-1.0/gst/analytics/gstanalytics_image_util.h
@@ -295,6 +295,7 @@ share/locale/id/LC_MESSAGES/gst-plugins-bad-1.0.mo
 share/locale/it/LC_MESSAGES/gst-plugins-bad-1.0.mo
 share/locale/ja/LC_MESSAGES/gst-plugins-bad-1.0.mo
 share/locale/ka/LC_MESSAGES/gst-plugins-bad-1.0.mo
+share/locale/kk/LC_MESSAGES/gst-plugins-bad-1.0.mo
 share/locale/ky/LC_MESSAGES/gst-plugins-bad-1.0.mo
 share/locale/lt/LC_MESSAGES/gst-plugins-bad-1.0.mo
 share/locale/lv/LC_MESSAGES/gst-plugins-bad-1.0.mo
