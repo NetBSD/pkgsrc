@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2341 2026/04/15 08:46:19 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.2342 2026/04/15 08:47:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3656,3 +3656,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added wayland/lswt version 2.0.0 [kikadf 2026-04-15]
 	Added wayland/wlsunset version 0.4.0 [kikadf 2026-04-15]
 	Added wayland/wtype version 0.4 [kikadf 2026-04-15]
+	Updated archivers/libarchive to 3.8.7 [adam 2026-04-15]
