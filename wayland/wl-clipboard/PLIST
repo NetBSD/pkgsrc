@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/15 07:49:39 kikadf Exp $
+bin/wl-copy
+bin/wl-paste
+man/man1/wl-clipboard.1
+man/man1/wl-copy.1
+man/man1/wl-paste.1
+share/bash-completion/completions/wl-copy
+share/bash-completion/completions/wl-paste
+share/zsh/site-functions/_wl-copy
+share/zsh/site-functions/_wl-paste
