@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/15 08:07:05 kikadf Exp $
+
+BLAKE2s (kanshi-1.9.0.tar.gz) = 3b57de6f46ffcb188a8d6525611209a6efc2bf74fb32d61451b8b4f5b2fc4dc2
+SHA512 (kanshi-1.9.0.tar.gz) = 1eeb1ec70c233345d61bfa8da5765b5e97be176ffa8be4d04154d67d4df8eec8176898ec4529a49144e4eaa977c94876e040acd93e1266095bc32e59bd19a0e8
+Size (kanshi-1.9.0.tar.gz) = 24045 bytes
