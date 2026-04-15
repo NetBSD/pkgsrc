@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/15 08:41:19 kikadf Exp $
+bin/lswt
+man/man1/lswt.1
+share/bash-completion/completions/lswt

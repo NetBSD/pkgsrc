@@ -1,0 +1,4 @@
+lswt lists all toplevels ("Windows") advertised by
+a Wayland server. The default output prints the title
+and app-id the toplevels and - if available - their
+state in human readable form.
