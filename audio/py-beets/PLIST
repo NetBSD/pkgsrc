@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2026/03/29 17:39:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.30 2026/04/15 10:53:40 adam Exp $
 bin/beet-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -170,6 +170,9 @@ ${PYSITELIB}/beets/util/deprecation.pyo
 ${PYSITELIB}/beets/util/diff.py
 ${PYSITELIB}/beets/util/diff.pyc
 ${PYSITELIB}/beets/util/diff.pyo
+${PYSITELIB}/beets/util/extension.py
+${PYSITELIB}/beets/util/extension.pyc
+${PYSITELIB}/beets/util/extension.pyo
 ${PYSITELIB}/beets/util/functemplate.py
 ${PYSITELIB}/beets/util/functemplate.pyc
 ${PYSITELIB}/beets/util/functemplate.pyo
@@ -206,6 +209,9 @@ ${PYSITELIB}/beetsplug/_utils/art.pyo
 ${PYSITELIB}/beetsplug/_utils/musicbrainz.py
 ${PYSITELIB}/beetsplug/_utils/musicbrainz.pyc
 ${PYSITELIB}/beetsplug/_utils/musicbrainz.pyo
+${PYSITELIB}/beetsplug/_utils/playcount.py
+${PYSITELIB}/beetsplug/_utils/playcount.pyc
+${PYSITELIB}/beetsplug/_utils/playcount.pyo
 ${PYSITELIB}/beetsplug/_utils/requests.py
 ${PYSITELIB}/beetsplug/_utils/requests.pyc
 ${PYSITELIB}/beetsplug/_utils/requests.pyo
@@ -349,6 +355,9 @@ ${PYSITELIB}/beetsplug/lastgenre/client.pyc
 ${PYSITELIB}/beetsplug/lastgenre/client.pyo
 ${PYSITELIB}/beetsplug/lastgenre/genres-tree.yaml
 ${PYSITELIB}/beetsplug/lastgenre/genres.txt
+${PYSITELIB}/beetsplug/lastgenre/utils.py
+${PYSITELIB}/beetsplug/lastgenre/utils.pyc
+${PYSITELIB}/beetsplug/lastgenre/utils.pyo
 ${PYSITELIB}/beetsplug/lastimport.py
 ${PYSITELIB}/beetsplug/lastimport.pyc
 ${PYSITELIB}/beetsplug/lastimport.pyo
