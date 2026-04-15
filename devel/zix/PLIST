@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/03/09 09:49:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/04/15 11:19:09 adam Exp $
 include/zix-0/zix/allocator.h
 include/zix-0/zix/attributes.h
 include/zix-0/zix/btree.h
@@ -14,6 +14,7 @@ include/zix-0/zix/status.h
 include/zix-0/zix/string_view.h
 include/zix-0/zix/thread.h
 include/zix-0/zix/tree.h
+include/zix-0/zix/warnings.h
 include/zix-0/zix/zix.h
 lib/libzix-0.so
 lib/libzix-0.so.${PKGVERSION}
@@ -35,6 +36,7 @@ ${PLIST.doc}share/doc/zix-0/html/api/zix_btree_iteration.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_btree_modification.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_btree_searching.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_btree_setup.html
+${PLIST.doc}share/doc/zix-0/html/api/zix_btree_types.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_data_structures.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_digest.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_environment.html
@@ -48,11 +50,11 @@ ${PLIST.doc}share/doc/zix-0/html/api/zix_fs_ops.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_fs_queries.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_fs_resolution.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_hash.html
-${PLIST.doc}share/doc/zix-0/html/api/zix_hash_datatypes.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_hash_iteration.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_hash_modification.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_hash_searching.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_hash_setup.html
+${PLIST.doc}share/doc/zix-0/html/api/zix_hash_types.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_path.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_path_concatenation.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_path_decomposition.html
@@ -61,6 +63,7 @@ ${PLIST.doc}share/doc/zix-0/html/api/zix_path_queries.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_ring.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_ring_read.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_ring_setup.html
+${PLIST.doc}share/doc/zix-0/html/api/zix_ring_types.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_ring_write.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_sem.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_status.html
@@ -72,6 +75,7 @@ ${PLIST.doc}share/doc/zix-0/html/api/zix_tree_iteration.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_tree_modification.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_tree_searching.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_tree_setup.html
+${PLIST.doc}share/doc/zix-0/html/api/zix_tree_types.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_utilities.html
 ${PLIST.doc}share/doc/zix-0/html/error_handling.html
 ${PLIST.doc}share/doc/zix-0/html/genindex.html
