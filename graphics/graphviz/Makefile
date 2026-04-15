@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.312 2026/04/01 06:49:33 adam Exp $
+# $NetBSD: Makefile,v 1.313 2026/04/15 09:57:02 adam Exp $
 
-DISTNAME=	graphviz-14.1.4
+DISTNAME=	graphviz-14.1.5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITLAB:=api/v4/projects/4207231/packages/generic/graphviz-releases/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz
@@ -100,7 +100,7 @@ XAW_TYPE=		standard
 # Forces link with -lgomp directly instead of via dlopen()
 # so we don't overflow thread-local storage in ld.elf_so
 CFLAGS+=		-fopenmp
-CONFIGURE_ARGS+=	CFLAGS="${CFLAGS}"
+CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:M*:Q}
 .endif
 
 .if ${OPSYS} == "FreeBSD"
