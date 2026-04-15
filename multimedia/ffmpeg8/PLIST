@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/01/02 12:36:13 yhardy Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/04/15 17:26:34 wiz Exp $
 bin/ffmpeg8
 bin/ffprobe8
 include/ffmpeg8/libavcodec/ac3_parser.h
@@ -15,6 +15,7 @@ include/ffmpeg8/libavcodec/defs.h
 include/ffmpeg8/libavcodec/dirac.h
 include/ffmpeg8/libavcodec/dv_profile.h
 include/ffmpeg8/libavcodec/dxva2.h
+include/ffmpeg8/libavcodec/exif.h
 include/ffmpeg8/libavcodec/jni.h
 include/ffmpeg8/libavcodec/mediacodec.h
 include/ffmpeg8/libavcodec/packet.h
@@ -147,31 +148,31 @@ include/ffmpeg8/libswscale/version_major.h
 lib/ffmpeg8/libavcodec.a
 lib/ffmpeg8/libavcodec.so
 lib/ffmpeg8/libavcodec.so.62
-lib/ffmpeg8/libavcodec.so.62.11.100
+lib/ffmpeg8/libavcodec.so.62.28.100
 lib/ffmpeg8/libavdevice.a
 lib/ffmpeg8/libavdevice.so
 lib/ffmpeg8/libavdevice.so.62
-lib/ffmpeg8/libavdevice.so.62.1.100
+lib/ffmpeg8/libavdevice.so.62.3.100
 lib/ffmpeg8/libavfilter.a
 lib/ffmpeg8/libavfilter.so
 lib/ffmpeg8/libavfilter.so.11
-lib/ffmpeg8/libavfilter.so.11.4.100
+lib/ffmpeg8/libavfilter.so.11.14.100
 lib/ffmpeg8/libavformat.a
 lib/ffmpeg8/libavformat.so
 lib/ffmpeg8/libavformat.so.62
-lib/ffmpeg8/libavformat.so.62.3.100
+lib/ffmpeg8/libavformat.so.62.12.100
 lib/ffmpeg8/libavutil.a
 lib/ffmpeg8/libavutil.so
 lib/ffmpeg8/libavutil.so.60
-lib/ffmpeg8/libavutil.so.60.8.100
+lib/ffmpeg8/libavutil.so.60.26.100
 lib/ffmpeg8/libswresample.a
 lib/ffmpeg8/libswresample.so
 lib/ffmpeg8/libswresample.so.6
-lib/ffmpeg8/libswresample.so.6.1.100
+lib/ffmpeg8/libswresample.so.6.3.100
 lib/ffmpeg8/libswscale.a
 lib/ffmpeg8/libswscale.so
 lib/ffmpeg8/libswscale.so.9
-lib/ffmpeg8/libswscale.so.9.1.100
+lib/ffmpeg8/libswscale.so.9.5.100
 lib/ffmpeg8/pkgconfig/libavcodec.pc
 lib/ffmpeg8/pkgconfig/libavdevice.pc
 lib/ffmpeg8/pkgconfig/libavfilter.pc
@@ -204,6 +205,7 @@ share/doc/ffmpeg8/build_system.txt
 ${PLIST.doc}share/doc/ffmpeg8/community.html
 ${PLIST.doc}share/doc/ffmpeg8/default.css
 ${PLIST.doc}share/doc/ffmpeg8/developer.html
+${PLIST.doc}share/doc/ffmpeg8/drawvg-reference.html
 share/doc/ffmpeg8/errno.txt
 ${PLIST.doc}share/doc/ffmpeg8/faq.html
 ${PLIST.doc}share/doc/ffmpeg8/fate.html
