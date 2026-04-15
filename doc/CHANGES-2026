@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2339 2026/04/15 08:42:04 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.2340 2026/04/15 08:44:12 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3654,3 +3654,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/glibmm2.68 to 2.88.0 [adam 2026-04-15]
 	Added wayland/labwc-tweaks version 0.1.0 [kikadf 2026-04-15]
 	Added wayland/lswt version 2.0.0 [kikadf 2026-04-15]
+	Added wayland/wlsunset version 0.4.0 [kikadf 2026-04-15]
