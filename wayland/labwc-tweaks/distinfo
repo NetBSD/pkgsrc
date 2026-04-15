@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/15 08:38:03 kikadf Exp $
+
+BLAKE2s (labwc-tweaks-0.1.0.tar.gz) = 9b8bd1d5a53632c59d629f31fc8b365bd125296d81f6c6a780da7363aca6959f
+SHA512 (labwc-tweaks-0.1.0.tar.gz) = 369b45587dd1eb711e178f7740d19d91c34c455d0d8cc164111a24f99552962ad06fb3b792bd6f6376d2051942528a81eb8955bc00782dce7b0b13b7c1b3f55a
+Size (labwc-tweaks-0.1.0.tar.gz) = 259951 bytes
