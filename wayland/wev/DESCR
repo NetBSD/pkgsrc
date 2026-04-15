@@ -1,0 +1,4 @@
+wev opens an xdg-shell toplevel on the default
+Wayland display (via the WAYLAND_DISPLAY
+environment variable), then prints events
+associated with that display.
