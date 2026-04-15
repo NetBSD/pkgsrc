@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/15 08:47:51 kikadf Exp $
+bin/wvkbd-mobintl
+man/man1/wvkbd.1
