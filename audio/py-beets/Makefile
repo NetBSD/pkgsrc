@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2026/03/29 17:39:58 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2026/04/15 10:53:40 adam Exp $
 
-DISTNAME=	beets-2.8.0
+DISTNAME=	beets-2.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beets/}
@@ -16,9 +16,9 @@ DEPENDS+=	${PYPKGPREFIX}-Unidecode>=1.3.6:../../textproc/py-Unidecode
 DEPENDS+=	${PYPKGPREFIX}-confuse>=2.2.0:../../devel/py-confuse
 DEPENDS+=	${PYPKGPREFIX}-jellyfish-[0-9]*:../../textproc/py-jellyfish
 DEPENDS+=	${PYPKGPREFIX}-lap>=0.5.12:../../math/py-lap
-DEPENDS+=	${PYPKGPREFIX}-mediafile>=0.12.0:../../audio/py-mediafile
+DEPENDS+=	${PYPKGPREFIX}-mediafile>=0.16.0:../../audio/py-mediafile
 DEPENDS+=	${PYPKGPREFIX}-musicbrainz-ngs>=0.4:../../audio/py-musicbrainz-ngs
-DEPENDS+=	${PYPKGPREFIX}-numpy>=2.3.4:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-numpy>=2.3.5:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-packaging>=24.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.5.0:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.32.5:../../devel/py-requests
