@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/15 08:49:59 kikadf Exp $
+
+BLAKE2s (wev/1.1.0.tar.gz) = c71c5168ab80a3cd3b1cdf64645ce74274f2aa1eae4fe83d638530aed7cc0ccf
+SHA512 (wev/1.1.0.tar.gz) = c38516cb5e56ba44252ca2c78b14c0f4b0a26ba2aaeaee917474f751154711a3cd8ab96747167f7ab384c771d1554944e107d56571d0b2abacc4772e18cbc2d2
+Size (wev/1.1.0.tar.gz) = 11163 bytes

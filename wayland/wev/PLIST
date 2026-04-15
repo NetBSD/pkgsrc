@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/15 08:49:58 kikadf Exp $
+bin/wev
+man/man1/wev.1
