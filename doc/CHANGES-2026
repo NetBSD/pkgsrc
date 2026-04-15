@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2351 2026/04/15 11:16:11 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2352 2026/04/15 11:17:21 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3669,3 +3669,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/py-mediafile to 0.16.1 [adam 2026-04-15]
 	Updated audio/py-beets to 2.9.0 [adam 2026-04-15]
 	Updated devel/cargo-nextest to 0.9.133 [pin 2026-04-15]
+	Updated editors/redox to 0.4.1 [pin 2026-04-15]
