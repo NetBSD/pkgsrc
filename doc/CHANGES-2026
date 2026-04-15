@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2347 2026/04/15 09:58:39 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2348 2026/04/15 10:08:48 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3664,3 +3664,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added wayland/wf-recorder version 0.6.0 [kikadf 2026-04-15]
 	Updated graphics/graphviz to 14.1.5 [adam 2026-04-15]
 	Updated multimedia/gstreamer1 to 1.28.2 [adam 2026-04-15]
+	Updated x11/dunst to 1.13.2nb1 [kikadf 2026-04-15]
