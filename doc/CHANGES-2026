@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2324 2026/04/15 06:32:59 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2325 2026/04/15 06:48:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3630,3 +3630,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/luanti to 5.15.2 [ktnb 2026-04-15]
 	Updated devel/buf to 1.68.1 [adam 2026-04-15]
 	Updated devel/py-test-mypy-plugins to 4.0.1 [adam 2026-04-15]
+	Updated devel/cargo-outdated to 0.19.0 [adam 2026-04-15]
+	Updated www/py-uvicorn to 0.44.0 [adam 2026-04-15]
+	Updated www/py-respx to 0.23.1 [adam 2026-04-15]
