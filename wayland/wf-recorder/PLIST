@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/15 08:52:10 kikadf Exp $
+bin/wf-recorder
+man/man1/wf-recorder.1
+share/fish/vendor_completions.d/wf-recorder.fish
