@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2026/04/15 08:48:29 kikadf Exp $
+# $NetBSD: Makefile,v 1.26 2026/04/15 08:50:31 kikadf Exp $
 #
 
 COMMENT=	Packages to support the Wayland protocol
@@ -18,6 +18,7 @@ SUBDIR+=	sway
 SUBDIR+=	swaybg
 SUBDIR+=	swayidle
 SUBDIR+=	swaylock
+SUBDIR+=	wev
 SUBDIR+=	wl-clipboard
 SUBDIR+=	wlopm
 SUBDIR+=	wlsunset
