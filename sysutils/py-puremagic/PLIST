@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2026/03/15 13:19:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/04/15 18:39:39 wiz Exp $
 bin/puremagic
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -20,9 +20,15 @@ ${PYSITELIB}/puremagic/py.typed
 ${PYSITELIB}/puremagic/scanners/__init__.py
 ${PYSITELIB}/puremagic/scanners/__init__.pyc
 ${PYSITELIB}/puremagic/scanners/__init__.pyo
+${PYSITELIB}/puremagic/scanners/asf_scanner.py
+${PYSITELIB}/puremagic/scanners/asf_scanner.pyc
+${PYSITELIB}/puremagic/scanners/asf_scanner.pyo
 ${PYSITELIB}/puremagic/scanners/cfbf_scanner.py
 ${PYSITELIB}/puremagic/scanners/cfbf_scanner.pyc
 ${PYSITELIB}/puremagic/scanners/cfbf_scanner.pyo
+${PYSITELIB}/puremagic/scanners/ebml_scanner.py
+${PYSITELIB}/puremagic/scanners/ebml_scanner.pyc
+${PYSITELIB}/puremagic/scanners/ebml_scanner.pyo
 ${PYSITELIB}/puremagic/scanners/hdf5_scanner.py
 ${PYSITELIB}/puremagic/scanners/hdf5_scanner.pyc
 ${PYSITELIB}/puremagic/scanners/hdf5_scanner.pyo
@@ -35,6 +41,9 @@ ${PYSITELIB}/puremagic/scanners/json_scanner.pyo
 ${PYSITELIB}/puremagic/scanners/mpeg_audio_scanner.py
 ${PYSITELIB}/puremagic/scanners/mpeg_audio_scanner.pyc
 ${PYSITELIB}/puremagic/scanners/mpeg_audio_scanner.pyo
+${PYSITELIB}/puremagic/scanners/ogg_scanner.py
+${PYSITELIB}/puremagic/scanners/ogg_scanner.pyc
+${PYSITELIB}/puremagic/scanners/ogg_scanner.pyo
 ${PYSITELIB}/puremagic/scanners/pdf_scanner.py
 ${PYSITELIB}/puremagic/scanners/pdf_scanner.pyc
 ${PYSITELIB}/puremagic/scanners/pdf_scanner.pyo
