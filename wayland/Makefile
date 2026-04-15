@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2026/04/15 08:46:04 kikadf Exp $
+# $NetBSD: Makefile,v 1.25 2026/04/15 08:48:29 kikadf Exp $
 #
 
 COMMENT=	Packages to support the Wayland protocol
@@ -25,6 +25,7 @@ SUBDIR+=	wlr-randr
 SUBDIR+=	wlrctl
 SUBDIR+=	wlroots
 SUBDIR+=	wtype
+SUBDIR+=	wvkbd
 SUBDIR+=	xwayland
 
 .include "../mk/misc/category.mk"
