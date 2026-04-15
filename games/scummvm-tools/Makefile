@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.89 2026/01/27 08:39:33 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2026/04/15 10:31:22 adam Exp $
 
-DISTNAME=	scummvm-tools-2.1.0
-PKGREVISION=	33
+DISTNAME=	scummvm-tools-2.9.0
 CATEGORIES=	games
 MASTER_SITES=	https://www.scummvm.org/frs/scummvm-tools/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -11,6 +10,7 @@ HOMEPAGE=	https://scummvm.sourceforge.net/
 COMMENT=	Conversion and compression tools for ScummVM
 LICENSE=	gnu-gpl-v2
 
+USE_CXX_FEATURES=	c++11
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
@@ -25,7 +25,7 @@ INSTALLATION_DIRS=	bin
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../x11/wxGTK30/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../x11/wxGTK32/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
