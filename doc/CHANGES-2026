@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2323 2026/04/15 01:49:03 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.2324 2026/04/15 06:32:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3628,3 +3628,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/freenginx-devel to 1.30.0 [osa 2026-04-14]
 	Updated multimedia/streamlink to 8.3.0 [yhardy 2026-04-14]
 	Updated games/luanti to 5.15.2 [ktnb 2026-04-15]
+	Updated devel/buf to 1.68.1 [adam 2026-04-15]
+	Updated devel/py-test-mypy-plugins to 4.0.1 [adam 2026-04-15]
