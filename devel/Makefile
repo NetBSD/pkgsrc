@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4622 2026/04/15 08:01:57 kikadf Exp $
+# $NetBSD: Makefile,v 1.4623 2026/04/15 08:05:11 kikadf Exp $
 #
 
 COMMENT=	Development utilities
@@ -3786,6 +3786,7 @@ SUBDIR+=	uno
 SUBDIR+=	userspace-rcu
 SUBDIR+=	uthash
 SUBDIR+=	valgrind
+SUBDIR+=	vali
 SUBDIR+=	vanessa_adt
 SUBDIR+=	vanessa_logger
 SUBDIR+=	vanessa_socket
