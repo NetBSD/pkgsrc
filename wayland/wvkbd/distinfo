@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/15 08:47:51 kikadf Exp $
+
+BLAKE2s (wvkbd-0.19.4.tar.gz) = 29bd1a0e9ebfd5703f503a775458d870bd90b4d0558c4b0d89c8fd58881dee5e
+SHA512 (wvkbd-0.19.4.tar.gz) = 097343c632f53217a6ff4e590692b2037beead8895572d8471e2fefcf9ae96ac844d1b0958e420ae8467eb362cb62c67b96cc0125400cafd24d84fbca2e9dfaf
+Size (wvkbd-0.19.4.tar.gz) = 1476675 bytes
