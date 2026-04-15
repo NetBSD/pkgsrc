@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2023/12/06 00:09:38 gdt Exp $
+# $NetBSD: Makefile,v 1.14 2026/04/15 12:51:20 ktnb Exp $
 
-DISTNAME=		oksh-7.4
+DISTNAME=		oksh-7.8
 CATEGORIES=		shells
 MASTER_SITES=		${MASTER_SITE_GITHUB:=ibara/}
 GITHUB_TAG=		${DISTNAME}
