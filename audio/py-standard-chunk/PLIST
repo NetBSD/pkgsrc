@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/15 08:06:40 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/chunk/__init__.py
+${PYSITELIB}/chunk/__init__.pyc
+${PYSITELIB}/chunk/__init__.pyo
