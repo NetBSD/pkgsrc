@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/15 07:52:28 kikadf Exp $
+bin/wlr-randr
+man/man1/wlr-randr.1
