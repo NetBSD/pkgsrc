@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4621 2026/04/15 07:59:04 kikadf Exp $
+# $NetBSD: Makefile,v 1.4622 2026/04/15 08:01:57 kikadf Exp $
 #
 
 COMMENT=	Development utilities
@@ -150,6 +150,7 @@ SUBDIR+=	alex
 SUBDIR+=	alire
 SUBDIR+=	allegro
 SUBDIR+=	allegro5
+SUBDIR+=	aml
 SUBDIR+=	amtk
 SUBDIR+=	android-tools-adb
 SUBDIR+=	anjuta
