@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/15 08:07:24 adam Exp $
+
+BLAKE2s (standard_aifc-3.13.0.tar.gz) = 92030b01264b1883c7322b5237421b3aba7699a86c16a3a9d2b5c3651fcc5bd2
+SHA512 (standard_aifc-3.13.0.tar.gz) = 021291853a6c00c812f5a83e803980edd81cbeb47e2f20513372aeaf837825d94288cc46c36e37b789d1abadd2bd51fde974c90543be4983cbf373170cd1ee10
+Size (standard_aifc-3.13.0.tar.gz) = 15240 bytes
