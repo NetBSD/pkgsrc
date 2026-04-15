@@ -1,0 +1,5 @@
+Command line interface which allows setting
+the size, scale, orientation of the output
+for a screen. This utility requires the
+compositor to implement the
+wlr-output-management protocol.

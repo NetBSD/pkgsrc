@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/15 07:52:28 kikadf Exp $
+
+BLAKE2s (wlr-randr-0.5.0.tar.gz) = 8d9d01e3b1cf26903ec1b76415acdcf7411135e742bc75e15c6cd17d8014ad73
+SHA512 (wlr-randr-0.5.0.tar.gz) = 83c6980c4ba917bdaa55f618b4ecdf713639d302b9ab7a7dfdfbefb6e394051cad5589d9aedd8a4576d81edcd7e981be0495ea59a88db70839e2dad58fe310ff
+Size (wlr-randr-0.5.0.tar.gz) = 15311 bytes
