@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2344 2026/04/15 08:50:43 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.2345 2026/04/15 08:52:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3659,3 +3659,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/libarchive to 3.8.7 [adam 2026-04-15]
 	Added wayland/wvkbd version 0.19.4 [kikadf 2026-04-15]
 	Added wayland/wev version 1.1.0 [kikadf 2026-04-15]
+	Updated devel/py-hypothesis to 6.152.1 [adam 2026-04-15]
+	Updated devel/py-cbor2 to 5.9.0 [adam 2026-04-15]
