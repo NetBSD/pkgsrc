@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2354 2026/04/15 11:20:20 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2355 2026/04/15 11:20:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3672,3 +3672,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/redox to 0.4.1 [pin 2026-04-15]
 	Updated textproc/television to 0.15.6 [pin 2026-04-15]
 	Updated x11/xterm to 409 [pin 2026-04-15]
+	Updated textproc/serd to 0.32.8 [adam 2026-04-15]
+	Updated textproc/sord to 0.16.22 [adam 2026-04-15]
+	Updated converters/sratom to 0.6.22 [adam 2026-04-15]
+	Updated devel/zix to 0.8.0 [adam 2026-04-15]
+	Updated audio/lilv to 0.26.4 [adam 2026-04-15]
