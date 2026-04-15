@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/15 08:08:18 adam Exp $
+
+BLAKE2s (standard_sunau-3.13.0.tar.gz) = dc9aafd9ff1b94741acc54d5aa06356987e778073261c4756b9c17688634126b
+SHA512 (standard_sunau-3.13.0.tar.gz) = 62baeacce642519b5d98c744fefa6e6de576e35ab56893ef329a76c1e7bcccd8f311dfc0ed83eb0a732a5010094940c0d8221eb45a432ff6fd14e1a042f86923
+Size (standard_sunau-3.13.0.tar.gz) = 9368 bytes
