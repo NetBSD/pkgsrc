@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.726 2026/01/19 09:40:13 markd Exp $
+# $NetBSD: Makefile,v 1.727 2026/04/15 08:08:18 adam Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -386,6 +386,7 @@ SUBDIR+=	puddletag
 SUBDIR+=	pulseaudio
 SUBDIR+=	py-acoustid
 SUBDIR+=	py-audio
+SUBDIR+=	py-audioop-lts
 SUBDIR+=	py-audioread
 SUBDIR+=	py-beets
 SUBDIR+=	py-discid
@@ -400,6 +401,9 @@ SUBDIR+=	py-music21
 SUBDIR+=	py-musicbrainz-ngs
 SUBDIR+=	py-mutagen
 SUBDIR+=	py-soundfile
+SUBDIR+=	py-standard-aifc
+SUBDIR+=	py-standard-chunk
+SUBDIR+=	py-standard-sunau
 SUBDIR+=	qjackctl
 SUBDIR+=	qmmp
 SUBDIR+=	qsynth
