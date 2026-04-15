@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4620 2026/04/14 12:47:32 kikadf Exp $
+# $NetBSD: Makefile,v 1.4621 2026/04/15 07:59:04 kikadf Exp $
 #
 
 COMMENT=	Development utilities
@@ -1085,6 +1085,7 @@ SUBDIR+=	librfuncs
 SUBDIR+=	librlog
 SUBDIR+=	librxspencer
 SUBDIR+=	libsafec
+SUBDIR+=	libscfg
 SUBDIR+=	libsfdo
 SUBDIR+=	libsigc++
 SUBDIR+=	libsigc++3
