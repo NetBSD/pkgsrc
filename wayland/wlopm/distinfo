@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/04/15 08:18:02 kikadf Exp $
+
+BLAKE2s (wlopm/v1.0.0.tar.gz) = ac18076399b7678871a7f696d3f1c9d866c24124605b8288c57e5ecde7d46de4
+SHA512 (wlopm/v1.0.0.tar.gz) = 6765f4abd46013c4b887972633798956cae8b60c3abd039aa74f3f70ae76696ea015a39dac68898950a939fe808d77e06a4b050b18b38b42eab1402d81926abd
+Size (wlopm/v1.0.0.tar.gz) = 19451 bytes
+SHA1 (patch-Makefile) = 8ef79cf3953f73a1f9e9bdce7ef1f58235ee39b7
