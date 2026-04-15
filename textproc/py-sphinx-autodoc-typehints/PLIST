@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2026/03/02 12:53:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/04/15 18:50:24 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -33,6 +33,9 @@ ${PYSITELIB}/sphinx_autodoc_typehints/_resolver/__init__.pyo
 ${PYSITELIB}/sphinx_autodoc_typehints/_resolver/_attrs.py
 ${PYSITELIB}/sphinx_autodoc_typehints/_resolver/_attrs.pyc
 ${PYSITELIB}/sphinx_autodoc_typehints/_resolver/_attrs.pyo
+${PYSITELIB}/sphinx_autodoc_typehints/_resolver/_instance_vars.py
+${PYSITELIB}/sphinx_autodoc_typehints/_resolver/_instance_vars.pyc
+${PYSITELIB}/sphinx_autodoc_typehints/_resolver/_instance_vars.pyo
 ${PYSITELIB}/sphinx_autodoc_typehints/_resolver/_stubs.py
 ${PYSITELIB}/sphinx_autodoc_typehints/_resolver/_stubs.pyc
 ${PYSITELIB}/sphinx_autodoc_typehints/_resolver/_stubs.pyo
