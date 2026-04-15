@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/15 08:52:10 kikadf Exp $
+
+BLAKE2s (wf-recorder-0.6.0.tar.gz) = 446f8921b3e5901ac548022ce77f01ca25e6448380c531bd40404adca55795ea
+SHA512 (wf-recorder-0.6.0.tar.gz) = 23ae01fecbbe846daef98650b52229159c72121b6861b44e3f7dd64aceacd16e5fdfae61dccbb348bf38a0a3602b14f001ad9b5ab1520063ff0798e42e131c59
+Size (wf-recorder-0.6.0.tar.gz) = 33545 bytes
