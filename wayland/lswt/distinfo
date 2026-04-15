@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2026/04/15 08:41:19 kikadf Exp $
+
+BLAKE2s (lswt/v2.0.0.tar.gz) = b3a67bf0e58a57de6f0412e8328aad6a909df9e04c35f9ce893649b2cc67ae1a
+SHA512 (lswt/v2.0.0.tar.gz) = 147c4a0f7f2410230b9a27adb669ce7004f19701bf50d8e3c540fedb79ad37a282ce7968d2f1abdef6991b297f5d2b6b913ffbf4a4ef3ebc4481ff0cc803a01f
+Size (lswt/v2.0.0.tar.gz) = 27758 bytes
+SHA1 (patch-Makefile) = 8fef2cc560d1144d6d8617036e13669c23faaef1
+SHA1 (patch-lswt.c) = 80b45564ea1ea1ad7f50d3d489f2d04171b43d69
