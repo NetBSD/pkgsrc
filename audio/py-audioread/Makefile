@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2025/02/23 18:42:24 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/04/15 08:10:07 adam Exp $
 
-DISTNAME=	audioread-3.0.1
+DISTNAME=	audioread-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/audioread/}
 
@@ -11,13 +10,15 @@ HOMEPAGE=	https://github.com/sampsyo/audioread
 COMMENT=	Audio file decoder
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>0:../../devel/py-poetry-core
 
 USE_LANGUAGES=	# none
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} test
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} >= 313
+DEPENDS+=	${PYPKGPREFIX}-standard-aifc>=3.13:../../audio/py-standard-aifc
+DEPENDS+=	${PYPKGPREFIX}-standard-sunau>=3.13:../../audio/py-standard-sunau
+.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

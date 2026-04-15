@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/02/23 18:42:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/04/15 08:10:07 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -27,6 +27,3 @@ ${PYSITELIB}/audioread/maddec.pyo
 ${PYSITELIB}/audioread/rawread.py
 ${PYSITELIB}/audioread/rawread.pyc
 ${PYSITELIB}/audioread/rawread.pyo
-${PYSITELIB}/audioread/version.py
-${PYSITELIB}/audioread/version.pyc
-${PYSITELIB}/audioread/version.pyo
