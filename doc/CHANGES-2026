@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2353 2026/04/15 11:18:23 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2354 2026/04/15 11:20:20 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3671,3 +3671,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-nextest to 0.9.133 [pin 2026-04-15]
 	Updated editors/redox to 0.4.1 [pin 2026-04-15]
 	Updated textproc/television to 0.15.6 [pin 2026-04-15]
+	Updated x11/xterm to 409 [pin 2026-04-15]
