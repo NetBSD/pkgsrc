@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/15 07:58:19 kikadf Exp $
+include/scfg.h
+lib/libscfg.so
+lib/libscfg.so.${PKGVERSION}
+lib/libscfg.so.2
+lib/pkgconfig/scfg.pc
