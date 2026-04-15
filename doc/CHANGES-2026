@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2366 2026/04/15 18:39:49 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2367 2026/04/15 18:41:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3688,3 +3688,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-maturin to 1.13.1 [wiz 2026-04-15]
 	Updated textproc/py-pdf to 6.10.0 [wiz 2026-04-15]
 	Updated sysutils/py-puremagic to 2.2.0 [wiz 2026-04-15]
+	Updated comms/py-rich to 15.0.0 [wiz 2026-04-15]
