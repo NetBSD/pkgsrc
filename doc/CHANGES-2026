@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2360 2026/04/15 17:29:50 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2361 2026/04/15 17:31:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3682,3 +3682,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/ffplay8 to 8.1 [wiz 2026-04-15]
 	Updated textproc/libzim to 9.6.0 [wiz 2026-04-15]
 	Updated devel/py-google-api-core to 2.30.3 [wiz 2026-04-15]
+	Updated www/py-google-api-python-client to 2.194.0 [wiz 2026-04-15]
