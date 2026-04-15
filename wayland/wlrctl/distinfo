@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/15 08:14:48 kikadf Exp $
+
+BLAKE2s (wlrctl/v0.2.2.tar.gz) = 82460cbcf87d800137ca146613d455dd3e9b6cf50552ab735b8d790824daadfa
+SHA512 (wlrctl/v0.2.2.tar.gz) = f4f9593e2de70e932bfa7fb3b203caba368b4322cb8aad54f3bc2365c3cfc18c9ebe0836bd239da4a7ce641a96001b2ed0d8d4f7d234124ffe2d8aa7c499e701
+Size (wlrctl/v0.2.2.tar.gz) = 26455 bytes
