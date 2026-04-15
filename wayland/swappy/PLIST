@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/15 07:55:14 kikadf Exp $
+bin/swappy
+man/man1/swappy.1
+share/applications/swappy.desktop
+share/icons/hicolor/scalable/apps/swappy.svg
+share/locale/de/LC_MESSAGES/swappy.mo
+share/locale/en/LC_MESSAGES/swappy.mo
+share/locale/fr/LC_MESSAGES/swappy.mo
+share/locale/pt_BR/LC_MESSAGES/swappy.mo
+share/locale/tr/LC_MESSAGES/swappy.mo
+share/locale/zh_CN/LC_MESSAGES/swappy.mo

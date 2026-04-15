@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/15 07:55:14 kikadf Exp $
+
+BLAKE2s (swappy-1.8.0.tar.gz) = 79167c145a5d10868f707d908474b3a7582293fdb5c8ee6242410539ed612c1f
+SHA512 (swappy-1.8.0.tar.gz) = e139ab3de544fe7008c00822ac66bb86f8ff8fabadef8aed8b445a1c8389bc0297d1be045bcd368b66533a9bef23ad4735302eaf5428334cc6723991fb3e32fd
+Size (swappy-1.8.0.tar.gz) = 697882 bytes
