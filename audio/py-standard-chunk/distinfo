@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/15 08:06:40 adam Exp $
+
+BLAKE2s (standard_chunk-3.13.0.tar.gz) = 1943756c38361a69015b7d0e3c7c6f022d5217ecead06eae9a626514dffb65ad
+SHA512 (standard_chunk-3.13.0.tar.gz) = ddd837eb77c8a81fed7dbb28c790031269cbafe80428a6ca4b789cc20ef6f2537c6cb1bd333e94357377245e7bc2c680a5ceadc1f1dc73304057eace332ac188
+Size (standard_chunk-3.13.0.tar.gz) = 4672 bytes
