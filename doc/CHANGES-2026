@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2369 2026/04/15 18:50:34 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2370 2026/04/15 18:52:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3691,3 +3691,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated comms/py-rich to 15.0.0 [wiz 2026-04-15]
 	Updated devel/py-ruff to 0.15.10 [wiz 2026-04-15]
 	Updated textproc/py-sphinx-autodoc-typehints to 3.10.1 [wiz 2026-04-15]
+	Updated textproc/dasel to 3.4.1 [wiz 2026-04-15]
