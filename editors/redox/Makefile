@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2026/04/13 08:25:45 pin Exp $
+# $NetBSD: Makefile,v 1.6 2026/04/15 11:17:00 pin Exp $
 
-DISTNAME=	redox-0.4.0
+DISTNAME=	redox-0.4.1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=JackDerksen/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
