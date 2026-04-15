@@ -1,8 +1,9 @@
-$NetBSD: patch-tools_meson.build,v 1.1 2024/11/05 18:22:30 adam Exp $
+$NetBSD: patch-tools_meson.build,v 1.2 2026/04/15 11:19:42 adam Exp $
 
 Install completions to correct location.
+Skip lv2bench because it is not portable.
 
---- tools/meson.build.orig	2024-11-05 16:39:57.297190423 +0000
+--- tools/meson.build.orig	2026-02-10 18:47:41.000000000 +0000
 +++ tools/meson.build
 @@ -29,7 +29,7 @@ endforeach
  
@@ -13,3 +14,12 @@ Install completions to correct location.
    rename: 'lilv',
  )
  
+@@ -63,7 +63,7 @@ endif
+ # lv2bench (uses clock_gettime) #
+ #################################
+ 
+-if host_machine.system() != 'windows'
++if false
+   rt_dep = cc.find_library('rt', required: false)
+ 
+   clock_gettime_code = '''#include <time.h>
