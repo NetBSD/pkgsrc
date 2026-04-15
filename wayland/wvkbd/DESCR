@@ -1,0 +1,5 @@
+This project aims to deliver a minimal but practically
+usable implementation of a wlroots on-screen keyboard
+in legible C. This will only be a keyboard, not a
+feedback buzzer, led blinker, or anything that requires
+more than what's needed to input text quickly.
