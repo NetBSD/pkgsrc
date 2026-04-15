@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/04/15 07:49:39 kikadf Exp $
+
+BLAKE2s (wl-clipboard-2.3.0.tar.gz) = cb64237c1d680a50d8f45355b9b3157adf336fd58392972700d29d9ef33282ed
+SHA512 (wl-clipboard-2.3.0.tar.gz) = 101dd7a18fbaee0754318cf9ec8403068df4091ccc5d3dd0bd1e46627d56a183c718c206816c08e5dbadf6fd5c747fa0c95eca1925fa27c7eeda133909696f9b
+Size (wl-clipboard-2.3.0.tar.gz) = 51077 bytes
+SHA1 (patch-src_wl-paste.c) = f4e56358a72999cd182300b12136059295c7d8b0
