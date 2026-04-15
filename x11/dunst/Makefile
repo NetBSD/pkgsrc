@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2026/03/22 15:53:15 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/04/15 10:07:17 kikadf Exp $
 
 DISTNAME=	dunst-1.13.2
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dunst-project/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,7 +18,8 @@ USE_TOOLS+=	bash:test gmake pod2man pkg-config
 TEST_TARGET=	test
 
 MAKE_FLAGS+=	SYSTEMD=0
-MAKE_FLAGS+=	WAYLAND=0
+
+.include "options.mk"
 
 REPLACE_SH+=	contrib/progress-notify.sh
 REPLACE_BASH+=	contrib/dunst_xr_theme_changer.sh
