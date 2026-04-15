@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2362 2026/04/15 17:33:18 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2363 2026/04/15 17:35:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3684,3 +3684,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-google-api-core to 2.30.3 [wiz 2026-04-15]
 	Updated www/py-google-api-python-client to 2.194.0 [wiz 2026-04-15]
 	Updated security/py-google-auth to 2.49.2 [wiz 2026-04-15]
+	Updated lang/py-librt to 0.9.0 [wiz 2026-04-15]
