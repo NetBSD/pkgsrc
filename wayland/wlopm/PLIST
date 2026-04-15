@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/15 08:18:02 kikadf Exp $
+bin/wlopm
+man/man1/wlopm.1
+share/bash-completion/completions/wlopm/bash-completion

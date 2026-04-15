@@ -1,0 +1,26 @@
+$NetBSD: patch-Makefile,v 1.1 2026/04/15 08:18:02 kikadf Exp $
+
+* Fix pathes
+* Create BASHCOMPDIR before install the completion file
+
+--- Makefile.orig	2024-12-05 03:07:02.000000000 +0000
++++ Makefile
+@@ -1,8 +1,8 @@
+ SCANNER := wayland-scanner
+ 
+-PREFIX=/usr/local
++PREFIX=@PREFIX@
+ BINDIR=$(PREFIX)/bin
+-MANDIR=$(PREFIX)/share/man
++MANDIR=$(PREFIX)/@PKGMANDIR@
+ BASHCOMPDIR=$(PREFIX)/share/bash-completion/completions
+ 
+ CFLAGS+=-Wall -Werror -Wextra -Wpedantic -Wno-unused-parameter -Wconversion -Wformat-security -Wformat -Wsign-conversion -Wfloat-conversion -Wunused-result -Wno-strict-prototypes
+@@ -26,6 +26,7 @@ install: wlopm
+ 	install wlopm $(DESTDIR)$(BINDIR)
+ 	install -d $(DESTDIR)$(MANDIR)/man1
+ 	install -m 644 wlopm.1 $(DESTDIR)$(MANDIR)/man1
++	install -d $(DESTDIR)$(BASHCOMPDIR)/wlopm
+ 	install bash-completion $(DESTDIR)$(BASHCOMPDIR)/wlopm
+ 
+ uninstall:
