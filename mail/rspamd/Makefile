@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.134 2026/02/11 08:35:14 taca Exp $
+# $NetBSD: Makefile,v 1.135 2026/04/15 20:48:56 wiz Exp $
 #
 # When updating this, run 'make cfgfiles'.
+# XXX: as of 4.0.1 this adds two extra entries (worker-hs_helper*)
+# XXX: removed manually
 
-DISTNAME=	rspamd-3.14.3
+DISTNAME=	rspamd-4.0.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rspamd/}
 
@@ -13,6 +15,7 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
 DEPENDS+=	ragel-[0-9]*:../../devel/ragel
+TEST_DEPENDS+=	lua-cffi-[0-9]*:../../devel/lua-cffi
 
 USE_TOOLS+=	perl pkg-config
 USE_LANGUAGES=	c c++
@@ -69,7 +72,7 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_LUAJIT=OFF
 # Assumes inotify == Linux
 CMAKE_CONFIGURE_ARGS.SunOS+=	-DHAVE_INOTIFY_INIT=NO
 
-REPLACE_PERL+=	utils/rspamd_stats.pl
+REPLACE_PERL+=	utils/*.pl
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/local.d
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/lua.local.d
@@ -109,10 +112,10 @@ post-extract:
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR} ${DESTDIR}${PREFIX}/share/examples/rspamd
 
-# wiz 20231103:
-# as of rspamd-3.7.1, the ninja generator has problems in some environments:
-# ninja: error: manifest 'build.ninja' still dirty after 100 tries, perhaps system time is not set
-CMAKE_GENERATORS_INCOMPATIBLE=	ninja
+# as of 4.0.1
+# 952 tests 946 passed 2244 assertions 2 failed 0 errors 4 unassertive 0 pending
+
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/src:${WRKSRC}/${CMAKE_BUILD_DIR}/contrib/replxx:${WRKSRC}/${CMAKE_BUILD_DIR}/contrib/aho-corasick:${WRKSRC}/${CMAKE_BUILD_DIR}/contrib/libev:${WRKSRC}/${CMAKE_BUILD_DIR}/contrib/kann
 
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
