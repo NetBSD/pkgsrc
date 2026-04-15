@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/15 08:07:05 kikadf Exp $
+bin/kanshi
+man/man1/kanshi.1
+man/man5/kanshi.5
