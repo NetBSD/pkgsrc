@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2364 2026/04/15 17:50:08 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2365 2026/04/15 18:36:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3686,3 +3686,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-google-auth to 2.49.2 [wiz 2026-04-15]
 	Updated lang/py-librt to 0.9.0 [wiz 2026-04-15]
 	Updated devel/py-maturin to 1.13.1 [wiz 2026-04-15]
+	Updated textproc/py-pdf to 6.10.0 [wiz 2026-04-15]
