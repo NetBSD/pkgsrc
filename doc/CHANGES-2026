@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2355 2026/04/15 11:20:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2356 2026/04/15 12:51:38 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3677,3 +3677,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/sratom to 0.6.22 [adam 2026-04-15]
 	Updated devel/zix to 0.8.0 [adam 2026-04-15]
 	Updated audio/lilv to 0.26.4 [adam 2026-04-15]
+	Updated shells/oksh to 7.8 [ktnb 2026-04-15]
