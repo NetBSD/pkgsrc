@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2026/02/28 09:50:36 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/04/15 11:19:42 adam Exp $
 bin/lv2apply
-bin/lv2bench
 bin/lv2info
 bin/lv2ls
 include/lilv-0/lilv/lilv.h
@@ -10,7 +9,6 @@ lib/liblilv-0.so.${PKGVERSION}
 lib/liblilv-0.so.0
 lib/pkgconfig/lilv-0.pc
 man/man1/lv2apply.1
-man/man1/lv2bench.1
 man/man1/lv2info.1
 man/man1/lv2ls.1
 share/bash_completion.d/lilv
