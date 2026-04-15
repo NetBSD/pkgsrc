@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2026/01/27 08:39:07 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/04/15 11:18:38 adam Exp $
 
-DISTNAME=	sratom-0.6.18
-PKGREVISION=	3
+DISTNAME=	sratom-0.6.22
 CATEGORIES=	converters
 MASTER_SITES=	https://download.drobilla.net/
 EXTRACT_SUFX=	.tar.xz
@@ -30,8 +29,8 @@ SUBST_SED.sphinx+=	-e "s,'sphinxygen','sphinxygen-${PYVERSSUFFIX}',"
 .include "../../audio/lv2/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/tool.mk"
-BUILDLINK_API_DEPENDS.serd+=	serd>=0.30.0
+BUILDLINK_API_DEPENDS.serd+=	serd>=0.30.10
 .include "../../textproc/serd/buildlink3.mk"
-BUILDLINK_API_DEPENDS.sord+=	sord>=0.14.0
+BUILDLINK_API_DEPENDS.sord+=	sord>=0.16.16
 .include "../../textproc/sord/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
