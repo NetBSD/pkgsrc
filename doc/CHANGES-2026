@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2337 2026/04/15 08:37:43 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2338 2026/04/15 08:39:26 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3652,3 +3652,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/glib2-tools to 2.88.0 [adam 2026-04-15]
 	Updated devel/gdbus-codegen to 2.88.0 [adam 2026-04-15]
 	Updated devel/glibmm2.68 to 2.88.0 [adam 2026-04-15]
+	Added wayland/labwc-tweaks version 0.1.0 [kikadf 2026-04-15]
