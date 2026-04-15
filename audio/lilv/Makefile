@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.54 2026/01/27 08:38:59 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/04/15 11:19:42 adam Exp $
 
-DISTNAME=	lilv-0.24.26
-PKGREVISION=	3
+DISTNAME=	lilv-0.26.4
 CATEGORIES=	audio
 MASTER_SITES=	https://download.drobilla.net/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://drobilla.net/software/lilv.html
+HOMEPAGE=	https://gitlab.com/lv2/lilv
 COMMENT=	C library to make the use of LV2 plugins as simple as possible
 LICENSE=	isc
 
@@ -41,6 +40,6 @@ BUILDLINK_API_DEPENDS.lv2+=	lv2>=1.18.0
 .include "../../lang/python/tool.mk"
 BUILDLINK_API_DEPENDS.serd+=	serd>=0.30.10
 .include "../../textproc/serd/buildlink3.mk"
-BUILDLINK_API_DEPENDS.sord+=	sord>=0.16.15
+BUILDLINK_API_DEPENDS.sord+=	sord>=0.16.20
 .include "../../textproc/sord/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

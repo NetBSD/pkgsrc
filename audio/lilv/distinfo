@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2025/08/12 07:36:12 adam Exp $
+$NetBSD: distinfo,v 1.15 2026/04/15 11:19:42 adam Exp $
 
-BLAKE2s (lilv-0.24.26.tar.xz) = 456554c32e2733de6d880026ba8b995a8728e659c7b466c59841a0c65a9813f5
-SHA512 (lilv-0.24.26.tar.xz) = 3d360d63391554f62d1dd44b9ba0fc28e4ccde9640da1e28ef3f127c23c9f03974b66c5bbb83f022f18810284a0e25060127d580ca2fad6213fe88920618c2ae
-Size (lilv-0.24.26.tar.xz) = 106044 bytes
-SHA1 (patch-tools_meson.build) = 224cadb13cb88b43700353092b9b810384ae9bc8
+BLAKE2s (lilv-0.26.4.tar.xz) = f529ae9d7735454e76608922d0fe3e2aca9de25e3f9a4bb1088c9499aaa277ff
+SHA512 (lilv-0.26.4.tar.xz) = 634b3f5e7a1763f9ea84dc8e41991e7dfa631457fc3c7beb8c7f627f1447da9e2d27f8389423de6ca508aaf00ef74c3b671166f194cd889952b267f7f0491cb6
+Size (lilv-0.26.4.tar.xz) = 116284 bytes
+SHA1 (patch-tools_meson.build) = 68cec02f55d981e0de4e678ac24c8f8f1f177cbc
