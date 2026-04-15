@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/15 08:04:23 kikadf Exp $
+
+BLAKE2s (vali-0.1.1.tar.gz) = d859e6baab2ec7f704c9296334d8c2bcf77e7818b2eaaef152fcc4dfab23f8b2
+SHA512 (vali-0.1.1.tar.gz) = fa551feb9da27eada04916f4b5fb25cea580feb98a5c26b8ba9dde3721afa115ad12019ddd5cf72ecae380f47f7cf5e35e13a8995f2a6ab875ee86d91624b610
+Size (vali-0.1.1.tar.gz) = 30275 bytes
