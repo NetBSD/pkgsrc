@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/15 20:46:08 wiz Exp $
+
+BLAKE2s (cffi-lua-0.2.4.tar.gz) = 3dfee25ecaad80693e10a00330afdc197e808c224046d570c5978f0aa4ff018c
+SHA512 (cffi-lua-0.2.4.tar.gz) = cebbfcdd2f5aa55d5e792ef775f0463260dd0781dce44a75248d9a7938486f21d06fe8daa69a0fad2486c6bcb001e1db2d59f86a835f27ca2ca13e76aad90352
+Size (cffi-lua-0.2.4.tar.gz) = 116870 bytes

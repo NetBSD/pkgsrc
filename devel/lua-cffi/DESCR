@@ -1,0 +1,8 @@
+This is a portable C FFI for Lua, based on `libffi` and aiming to be mostly
+compatible with LuaJIT FFI, but written from scratch. Compatibility is
+preserved where reasonable, but not where not easily implementable (e.g.
+the parser extensions for 64-bit `cdata` and so on). Thanks to `libffi`,
+it works on many operating systems and CPU architectures. The `cffi-lua`
+codebase itself does not contain any non-portable code (with the exception
+of things such as Windows calling convention handling on x86, and some
+adjustments for big endian architectures).
