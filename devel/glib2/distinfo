@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.341 2026/03/15 16:37:42 tnn Exp $
+$NetBSD: distinfo,v 1.342 2026/04/15 08:33:00 adam Exp $
 
-BLAKE2s (glib-2.86.4.tar.xz) = cfa4fdd8307ae8e8671d6588092fa3fe2213333a5fa8231004c1830979871f9f
-SHA512 (glib-2.86.4.tar.xz) = 13e8beb84f3464f50c9764d0d3c6822a4bb41ae65e6c3ffac4200a5b441acdd2eb6f838a6b0722cae501e367ce9cfd4f8516b684a391c2f088a593172abcacd9
-Size (glib-2.86.4.tar.xz) = 5692304 bytes
+BLAKE2s (glib-2.88.0.tar.xz) = 4623f7355733d27a2637c92f216d218ef316f5898b97d43e7d2d45a63fee6dd7
+SHA512 (glib-2.88.0.tar.xz) = ceead8d88720db17dc6bbff7aff14f261f90afc5e8261448aae0657f89b5fcc616cf62f4b049be88a4ddd3f50a869bbcdb66b29777da4969a47987828ecac280
+Size (glib-2.88.0.tar.xz) = 5788396 bytes
 SHA1 (patch-gio_gcredentialsprivate.h) = f719ae41a9eb1d2f04d866b246fa5176543f2df9
 SHA1 (patch-gio_gdbus-2.0_codegen_meson.build) = 9bd0befe0dd547f6f2d818e52bee14e31a017ac7
 SHA1 (patch-gio_glib-compile-schemas.c) = 4fc8e8ba62bef01762007ebf21569053374808d0
@@ -11,11 +11,13 @@ SHA1 (patch-gio_gunixcredentialsmessage.c) = c13119ddd6262db7c03e53857e987f0c495
 SHA1 (patch-gio_gunixmounts.c) = c5d6f75c9b77078682ba171243108cb850b0faab
 SHA1 (patch-gio_inotify_inotify-kernel.c) = 78544b4c32ef3b44e8721b1c07407f46a9e8c8a4
 SHA1 (patch-gio_meson.build) = 818a1edffec511e70e4b71e639d349816d6b009e
+SHA1 (patch-gio_tests_iptosmessage.c) = 8a62ba3a79032d8e37bcfa8ccdda8448fee22a96
 SHA1 (patch-gio_tests_meson.build) = 864fb2e438c4537e37c2c2e39388d0d0e1795c8c
 SHA1 (patch-girepository_gitypelib.c) = 6a5a49ac9a746028115e261820a2b0f1c1380ea2
 SHA1 (patch-glib_gatomic.c) = 5d08e19cc1c2557a5c007af8b368968217ce65b0
 SHA1 (patch-glib_gatomic.h) = d1c39c3594a5c89d196349e5eafb5512795f55f8
 SHA1 (patch-glib_genviron.c) = 45e382a4b5412c69b310fd26482eff6faffa2c0d
+SHA1 (patch-glib_glib-unix.c) = 71ae715b1193b1d447e66efa02a42cc72f32d020
 SHA1 (patch-glib_gspawn-posix.c) = ac7536dbb14662d9a8ea27fb32ca911a3b4ab43d
 SHA1 (patch-glib_gthread.c) = 2485f63f27090f99e846c3b58432f6450cc95158
 SHA1 (patch-glib_tests_hash.c) = a7e19ca55fcbbc0b188c34755cae5b6b65b67f1a
