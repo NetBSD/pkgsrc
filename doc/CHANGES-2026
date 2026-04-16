@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2378 2026/04/16 06:35:41 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2379 2026/04/16 06:36:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3714,3 +3714,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/wasi-libcxx to 21.1.8 [wiz 2026-04-16]
 	Updated devel/cvise to 2.12.0nb1 [wiz 2026-04-16]
 	Updated devel/include-what-you-use to 0.25 [wiz 2026-04-16]
+	Updated devel/py-llvmlite to 0.47.0nb1 [wiz 2026-04-16]
