@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2396 2026/04/16 11:38:09 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2397 2026/04/16 12:29:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3740,3 +3740,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/mise to 2026.4.14 [pin 2026-04-16]
 	Updated textproc/rumdl to 0.1.72 [pin 2026-04-16]
 	Updated textproc/xan to 0.57.1 [pin 2026-04-16]
+	Updated games/vms-empire to 1.20 [wiz 2026-04-16]
