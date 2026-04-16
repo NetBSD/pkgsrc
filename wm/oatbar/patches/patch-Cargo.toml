@@ -1,0 +1,14 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2026/04/16 07:56:21 pin Exp $
+
+Use starship-battery instead of dead crate.
+
+--- Cargo.toml.orig	2026-04-16 07:25:23.321639492 +0000
++++ Cargo.toml
+@@ -131,6 +131,6 @@ gdk4 = { version = "0.11", optional = true }
+ futures-util = "0.3.31"
+ gtk4 = { version = "0.11", optional = true }
+ gdk4 = { version = "0.11", optional = true }
+-battery = "0.7.8"
++battery = { package = "starship-battery", version = "0.11.0" }
+ rmcp = { version = "1.3.0", features = ["macros", "server", "transport-io"], optional = true }
+ schemars = { version = "1.2", optional = true }
