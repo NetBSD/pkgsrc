@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.52 2026/04/16 08:22:02 wiz Exp $	*/
+/*	$NetBSD: ftp.c,v 1.53 2026/04/16 08:24:04 wiz Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2009, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -867,9 +867,7 @@ retry_mode:
 		int low = CHECK_FLAG('l');
 #endif
 		int d;
-#ifdef INET6
 		char hname[INET6_ADDRSTRLEN];
-#endif
 
 		switch (u.ss.ss_family) {
 		case AF_INET6:
@@ -910,7 +908,6 @@ retry_mode:
 			    (a >> 8) & 0xff, a & 0xff,
 			    ((unsigned int)p >> 8) & 0xff, p & 0xff);
 			break;
-#ifdef INET6
 		case AF_INET6:
 			e = -1;
 			u.sin6.sin6_scope_id = 0;
@@ -940,7 +937,6 @@ retry_mode:
 				    2, port >> 8, port & 0xff);
 			}
 			break;
-#endif
 		default:
 			e = FTP_PROTOCOL_ERROR; /* XXX: error code should be prepared */
 			goto ouch;
@@ -1124,6 +1120,7 @@ ftp_get_proxy(struct url * url, const char *flags)
 		return (NULL);
 	if (fetch_no_proxy_match(url->host))
 		return (NULL);
+
 	if (((p = getenv("FTP_PROXY")) || (p = getenv("ftp_proxy")) ||
 		(p = getenv("HTTP_PROXY")) || (p = getenv("http_proxy"))) &&
 	    *p && (purl = fetchParseURL(p)) != NULL) {
