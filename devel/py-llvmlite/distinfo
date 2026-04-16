@@ -1,5 +1,17 @@
-$NetBSD: distinfo,v 1.30 2026/04/02 13:16:49 adam Exp $
+$NetBSD: distinfo,v 1.31 2026/04/16 06:36:45 wiz Exp $
 
+BLAKE2s (cmake-20.1.8.src.tar.xz) = 39070395d68854d6d9781a700093a638e304bbf68888ba1e6bfb07e2deb01b57
+SHA512 (cmake-20.1.8.src.tar.xz) = 0ff6018c0753f208e990e45403c4ae5764a0ac83a8d80d8db7d3c7dbface14a7c8339893d8f757ff2d7b3662253ba356cf157ae7072a0be170a9dc028f4d7a74
+Size (cmake-20.1.8.src.tar.xz) = 8652 bytes
+BLAKE2s (libunwind-20.1.8.src.tar.xz) = 75a1b3977136c96da2a227b5c3ddd030e4594aeaf16ab43b367e33cf1ddf4761
+SHA512 (libunwind-20.1.8.src.tar.xz) = edeac406abbf9fa98a794b9ca1a7524d10b0a43f919b4aac3c339344171d3bafe748c71bc06e709728b396779de7cabe36c2e594290dc7c1b19d29b0564efddb
+Size (libunwind-20.1.8.src.tar.xz) = 120780 bytes
+BLAKE2s (lld-20.1.8.src.tar.xz) = bbfb711cef99026bc3999bf08dd1c283ba20453c04dd0a6519c08a40efbd028d
+SHA512 (lld-20.1.8.src.tar.xz) = 305547d4eb16bf8b1c93a61463385a2467a71d3df5e1121265b806bd7563ea4549767c266a206eb55928b12b0dc13a5c67d264898231e50ebef49f1b3275d9f6
+Size (lld-20.1.8.src.tar.xz) = 1720228 bytes
+BLAKE2s (llvm-20.1.8.src.tar.xz) = 040b14dea1435ccf5b4ce08e4d2310c880f421ff5e7e0bcd686fa32e53708979
+SHA512 (llvm-20.1.8.src.tar.xz) = 4781d494fcb9a3d21cc9b76718e15f2d357573bfec53d9779c9ad6e871103beccf4023afc8f60ef1d463acde58c083e083cdc5a74001a3da361d8dbf160b01b7
+Size (llvm-20.1.8.src.tar.xz) = 72698776 bytes
 BLAKE2s (llvmlite-0.47.0.tar.gz) = 6e9f2d62e52944e84a2673ac1f7eb029be1b5d15fe51a292462635174bcf66df
 SHA512 (llvmlite-0.47.0.tar.gz) = f277528bc56f8c9857c562ac629b0795ffbd944dd80c7e3f3a160402a6754fbf98e1abfced47eb5af677a33c3f1e129b0a7a7c8358e9f05e4b60e1571187409c
 Size (llvmlite-0.47.0.tar.gz) = 193614 bytes
