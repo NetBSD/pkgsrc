@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2026/03/25 22:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2026/04/16 06:35:33 wiz Exp $
 
-DISTNAME=	include-what-you-use-0.24
+DISTNAME=	include-what-you-use-0.25
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=include-what-you-use/}
 
