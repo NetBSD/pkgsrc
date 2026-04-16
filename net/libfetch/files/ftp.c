@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.53 2026/04/16 08:24:04 wiz Exp $	*/
+/*	$NetBSD: ftp.c,v 1.54 2026/04/16 08:25:05 wiz Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2009, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -649,7 +649,7 @@ ftp_closefn(void *v)
 	fetch_close(io->dconn);
 	io->dconn = NULL;
 	io->dir = -1;
-	ftp_chkerr(io->cconn);
+	(void)ftp_chkerr(io->cconn);
 	fetch_cache_put(io->cconn, ftp_disconnect);
 	free(io);
 	return;
