@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.47 2026/04/16 08:32:12 wiz Exp $	*/
+/*	$NetBSD: http.c,v 1.48 2026/04/16 10:15:06 wiz Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2003 Thomas Klausner <wiz@NetBSD.org>
@@ -768,7 +768,7 @@ http_connect(struct url *URL, struct url *purl, const char *flags, int *cached)
 	if (purl && strcasecmp(URL->scheme, SCHEME_HTTPS) != 0) {
 		URL = purl;
 	} else if (strcasecmp(URL->scheme, SCHEME_FTP) == 0) {
-
+		/* can't talk http to an ftp server */
 		/* XXX should set an error code */
 		return (NULL);
 	}
@@ -797,7 +797,7 @@ http_connect(struct url *URL, struct url *purl, const char *flags, int *cached)
 			http_seterr(conn->err);
 			goto ouch;
 		}
-		/* Read and discard the rest of the proxy response */
+		/* Read and discard the rest of the proxy response (if any) */
 		do {
 			switch ((h = http_next_header(conn, &p))) {
 			case hdr_syserror:
