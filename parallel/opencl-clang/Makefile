@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2026/03/25 23:00:25 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/04/16 06:38:42 wiz Exp $
 
-DISTNAME=	opencl-clang-20.1.2
+DISTNAME=	opencl-clang-21.1.3
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=intel/}
 GITHUB_PROJECT=	opencl-clang
