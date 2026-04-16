@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.32 2026/03/25 22:56:27 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2026/04/16 06:33:52 wiz Exp $
 
 BUILDLINK_TREE+=	llvm
 
 .if !defined(LLVM_BUILDLINK3_MK)
 LLVM_BUILDLINK3_MK:=
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} == "NetBSD" && ${OS_VERSION:M9.*}
 # Gcc 8 (induced elsewhere) blows up on per-process VM space.
 # Ref. https://mail-index.netbsd.org/pkgsrc-users/2025/06/21/msg041678.html
@@ -13,7 +13,7 @@ LLVM_BUILDLINK3_MK:=
 GCC_REQD+=		14
 .endif
 
-BUILDLINK_API_DEPENDS.llvm+=	llvm>=20.1.0
+BUILDLINK_API_DEPENDS.llvm+=	llvm>=21.1.0
 BUILDLINK_PKGSRCDIR.llvm?=	../../lang/llvm
 
 LLVM_CONFIG_PATH?=		${BUILDLINK_PREFIX.llvm}/bin/llvm-config

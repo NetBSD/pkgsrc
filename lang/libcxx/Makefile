@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2026/03/25 22:56:26 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/04/16 06:33:51 wiz Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -16,7 +16,8 @@ LICENSE=	apache-2.0
 USE_CXX_FEATURES=	c++20
 USE_LANGUAGES=		c c++
 SSP_SUPPORTED=		no
-GCC_REQD+=		14 # must be in sync with libcxxabi
+# for __decay
+GCC_REQD+=		15 # must be in sync with libcxxabi
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_CXX_ABI=system-libcxxabi

@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.40 2026/03/25 22:56:25 wiz Exp $
+$NetBSD: distinfo,v 1.41 2026/04/16 06:33:50 wiz Exp $
 
-BLAKE2s (llvm-project-20.1.8.src.tar.xz) = c1587d5118d1d27f773127d6b72528b9d6f0eb78156b2679ebd4132369572e45
-SHA512 (llvm-project-20.1.8.src.tar.xz) = f330e72e6a1da468569049437cc0ba7a41abb816ccece7367189344f7ebfef730f4788ac7af2bef0aa8a49341c15ab1d31e941ffa782f264d11fe0dc05470773
-Size (llvm-project-20.1.8.src.tar.xz) = 147242952 bytes
-SHA1 (patch-cmake_modules_LLDBStandalone.cmake) = 773d420c3fd2c9b4af6af9d42c5778e96a1ae52b
+BLAKE2s (llvm-project-21.1.8.src.tar.xz) = e6db98fed167ddd56b49c7eb46c4de7e7e8e08158e9c99ae79806983bcb60ae9
+SHA512 (llvm-project-21.1.8.src.tar.xz) = cae4c44e7bf678071723da63ad5839491d717a7233e7f4791aa408207f3ea42f52de939ad15189b112c02a0770f1bb8d59bae6ad31ef53417a6eea7770fe52ab
+Size (llvm-project-21.1.8.src.tar.xz) = 158958576 bytes
+SHA1 (patch-cmake_modules_FindCursesAndPanel.cmake) = 2312c82627645e418498fbe36b20b7a4a2b41b24
 SHA1 (patch-source_API_CMakeLists.txt) = 32840580507b3a7d05e76485da5830e92a76bb06
 SHA1 (patch-source_Plugins_Process_NetBSD_NativeProcessNetBSD.cpp) = 5c193615d4c2c33e6d7d0c0e820adc3832e124ea
-SHA1 (patch-tools_debugserver_source_CMakeLists.txt) = 1ff050a3fb3c58b93facb308cad6217bafbabd9d

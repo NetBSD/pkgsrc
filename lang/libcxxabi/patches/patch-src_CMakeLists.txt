@@ -1,8 +1,8 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.4 2026/03/25 22:56:27 wiz Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.5 2026/04/16 06:33:51 wiz Exp $
 
 Fix build.
 
---- src/CMakeLists.txt.orig	2025-04-16 00:23:49.000000000 +0000
+--- src/CMakeLists.txt.orig	2025-10-21 08:14:55.000000000 +0000
 +++ src/CMakeLists.txt
 @@ -57,6 +57,7 @@ if (MSVC_IDE OR XCODE)
  endif()
@@ -12,19 +12,21 @@ Fix build.
  include_directories("${LIBCXXABI_LIBCXX_PATH}/src")
  
  if (LIBCXXABI_HAS_CXA_THREAD_ATEXIT_IMPL)
-@@ -172,7 +173,6 @@ if (LIBCXXABI_USE_LLVM_UNWINDER)
-     target_link_libraries(cxxabi_shared_objects PUBLIC unwind_shared)
-   endif()
+@@ -174,7 +175,7 @@ if (LIBCXXABI_USE_LLVM_UNWINDER)
  endif()
--target_link_libraries(cxxabi_shared_objects PRIVATE cxx-headers ${LIBCXXABI_LIBRARIES})
+ target_link_libraries(cxxabi_shared_objects
+   PUBLIC cxxabi-headers
+-  PRIVATE cxx-headers runtimes-libc-headers ${LIBCXXABI_LIBRARIES})
++  PRIVATE runtimes-libc-headers ${LIBCXXABI_LIBRARIES})
  if (NOT CXX_SUPPORTS_NOSTDLIBXX_FLAG)
    target_link_libraries(cxxabi_shared_objects PRIVATE ${LIBCXXABI_BUILTINS_LIBRARY})
  endif()
-@@ -274,7 +274,6 @@ if (LIBCXXABI_USE_LLVM_UNWINDER AND LIBC
-   target_link_libraries(cxxabi_static_objects PUBLIC unwind_static_objects) # propagate usage requirements
-   target_sources(cxxabi_static_objects PUBLIC $<TARGET_OBJECTS:unwind_static_objects>)
+@@ -277,7 +278,7 @@ if (LIBCXXABI_USE_LLVM_UNWINDER AND LIBC
  endif()
--target_link_libraries(cxxabi_static_objects PRIVATE cxx-headers ${LIBCXXABI_STATIC_LIBRARIES} ${LIBCXXABI_LIBRARIES})
- target_link_libraries(cxxabi_static_objects PUBLIC cxxabi-headers)
+ target_link_libraries(cxxabi_static_objects
+   PUBLIC cxxabi-headers
+-  PRIVATE cxx-headers runtimes-libc-headers ${LIBCXXABI_STATIC_LIBRARIES} ${LIBCXXABI_LIBRARIES})
++  PRIVATE runtimes-libc-headers ${LIBCXXABI_STATIC_LIBRARIES} ${LIBCXXABI_LIBRARIES})
  set_target_properties(cxxabi_static_objects
    PROPERTIES
+     CXX_EXTENSIONS OFF

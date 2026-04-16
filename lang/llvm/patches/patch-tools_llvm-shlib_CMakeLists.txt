@@ -1,15 +1,15 @@
-$NetBSD: patch-tools_llvm-shlib_CMakeLists.txt,v 1.11 2024/07/06 15:45:06 adam Exp $
+$NetBSD: patch-tools_llvm-shlib_CMakeLists.txt,v 1.12 2026/04/16 06:33:52 wiz Exp $
 
 Add style linking for SunOS.
 
---- tools/llvm-shlib/CMakeLists.txt.orig	2024-04-17 00:21:15.000000000 +0000
+--- tools/llvm-shlib/CMakeLists.txt.orig	2025-10-21 08:14:55.000000000 +0000
 +++ tools/llvm-shlib/CMakeLists.txt
-@@ -44,6 +44,8 @@ if(LLVM_BUILD_LLVM_DYLIB)
+@@ -53,6 +53,8 @@ if(LLVM_BUILD_LLVM_DYLIB)
    list(REMOVE_DUPLICATES LIB_NAMES)
    if("${CMAKE_SYSTEM_NAME}" STREQUAL "Darwin")
      set(LIB_NAMES -Wl,-all_load ${LIB_NAMES})
 +  elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "SunOS")
 +    set(LIB_NAMES -Wl,-Bsymbolic -Wl,-z -Wl,allextract ${LIB_NAMES} -Wl,-z -Wl,defaultextract)
    else()
-     configure_file(
-     ${CMAKE_CURRENT_SOURCE_DIR}/simple_version_script.map.in
+     if("${CMAKE_CFG_INTDIR}" STREQUAL ".")
+       configure_file(

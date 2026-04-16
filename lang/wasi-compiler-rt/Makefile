@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2026/03/25 22:56:28 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/04/16 06:33:52 wiz Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -97,7 +97,6 @@ CXXFLAGS+=		-O2
 PKGSRC_COMPILER=	clang
 CLANGBASE=		${PREFIX}
 #.include "../../devel/cmake/build.mk"
-.include "../../devel/editline/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"

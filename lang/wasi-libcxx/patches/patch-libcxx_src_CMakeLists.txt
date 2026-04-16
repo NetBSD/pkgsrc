@@ -1,0 +1,15 @@
+$NetBSD: patch-libcxx_src_CMakeLists.txt,v 1.1 2026/04/16 06:33:53 wiz Exp $
+
+Fix build.
+
+--- libcxx/src/CMakeLists.txt.orig	2025-12-12 10:35:47.000000000 +0000
++++ libcxx/src/CMakeLists.txt
+@@ -209,7 +209,7 @@ endif()
+ 
+ # Maybe force some symbols to be weak, not weak or not exported.
+ # TODO: This shouldn't depend on the platform, and ideally it should be done in the sources.
+-if (APPLE AND LIBCXX_CXX_ABI MATCHES "libcxxabi$"
++if (FALSE AND LIBCXX_CXX_ABI MATCHES "libcxxabi$"
+           AND NOT LIBCXX_STATICALLY_LINK_ABI_IN_SHARED_LIBRARY)
+   target_link_libraries(cxx_shared PRIVATE
+     "-Wl,-force_symbols_not_weak_list,${CMAKE_CURRENT_SOURCE_DIR}/../lib/notweak.exp"

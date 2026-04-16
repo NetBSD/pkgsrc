@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2026/03/25 22:56:25 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2026/04/16 06:33:50 wiz Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm
 DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../lang/clang
-#DEPENDS+=	swig3>=3.0:../../devel/swig3
+DEPENDS+=	swig3>=3.0:../../devel/swig3
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_CXX_FEATURES=	c++17
@@ -32,8 +32,8 @@ CMAKE_CONFIGURE_ARGS+=	-DPYTHON_HOME=${PREFIX}
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
-LUA_VERSIONS_INCOMPATIBLE=	51 52
-PLIST_SUBST+=			LUA_VERSION=${LUA_VERSION:R}
+LUA_VERSIONS_ACCEPTED=	54
+PLIST_SUBST+=		LUA_VERSION=${LUA_VERSION:R}
 
 REPLACE_PERL+=		scripts/disasm-gdb-remote.pl
 
@@ -41,9 +41,7 @@ REPLACE_PYTHON+=	bindings/python/get-python-config.py
 REPLACE_PYTHON+=	bindings/python/lldb-python
 REPLACE_PYTHON+=	scripts/analyze-project-deps.py
 REPLACE_PYTHON+=	scripts/generate-sbapi-dwarf-enum.py
-REPLACE_PYTHON+=	scripts/reproducer-replay.py
 REPLACE_PYTHON+=	scripts/verify_api.py
-REPLACE_PYTHON+=	utils/lldb-repro/lldb-repro.py
 REPLACE_PYTHON+=	utils/lui/lui.py
 REPLACE_PYTHON+=	utils/lui/sandbox.py
 
@@ -81,6 +79,5 @@ NOT_FOR_PLATFORM+=	NetBSD-*-aarch64 NetBSD-*-powerpc
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/tool.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

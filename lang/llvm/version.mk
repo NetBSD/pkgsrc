@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.20 2026/03/25 22:56:27 wiz Exp $
+# $NetBSD: version.mk,v 1.21 2026/04/16 06:33:52 wiz Exp $
 # used by devel/lld
 # used by devel/lldb
 # used by devel/polly
@@ -14,7 +14,7 @@
 # used by lang/wasi-libcxx
 # used by parallel/openmp
 
-LLVM_VERSION=	20.1.8
+LLVM_VERSION=	21.1.8
 
 DISTNAME=	llvm-project-${LLVM_VERSION}.src
 MASTER_SITES=	${MASTER_SITE_GITHUB:=llvm/}
@@ -29,6 +29,7 @@ LLVM_MAJOR_VERSION=	${LLVM_VERSION:tu:C/\\.[[:digit:]\.]*//}
 EXTRACT_ELEMENTS=	${DISTNAME}/${PKGBASE:S/wasi-//}
 EXTRACT_ELEMENTS+=	${DISTNAME}/cmake
 EXTRACT_ELEMENTS+=	${DISTNAME}/runtimes
+EXTRACT_ELEMENTS+=	${DISTNAME}/third-party
 
 .include "../../mk/bsd.prefs.mk"
 
