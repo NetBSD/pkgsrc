@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2025/10/09 07:58:02 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/04/16 07:27:12 adam Exp $
 
-DISTNAME=	pybtex-0.25.1
+DISTNAME=	pybtex-0.26.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pybtex/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://pybtex.org/
 COMMENT=	BibTeX-compatible bibliography processor written in Python
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-latexcodec>=1.0.4:../../print/py-latexcodec
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.01:../../textproc/py-yaml
 
@@ -18,11 +18,9 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} pybtex pybtex-${PYVERSSUFFIX} && \
-	${MV} pybtex-convert pybtex-convert-${PYVERSSUFFIX} && \
-	${MV} pybtex-format pybtex-format-${PYVERSSUFFIX} || ${TRUE}
+REPLACE_PYTHON=		src/pybtex/charwidths/make_charwidths.py
+PY_RENAME_BINARIES=	pybtex pybtex-convert pybtex-format
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

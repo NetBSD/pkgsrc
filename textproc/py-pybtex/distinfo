@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2025/07/22 07:12:07 adam Exp $
+$NetBSD: distinfo,v 1.10 2026/04/16 07:27:12 adam Exp $
 
-BLAKE2s (pybtex-0.25.1.tar.gz) = 4695be9d0edc429dd691ba5df6fc78d28b43e6a18c188a57c84713aab375118b
-SHA512 (pybtex-0.25.1.tar.gz) = 3a9a5afe76a376757a3228bb32dced1c0427c445bba51353ac71dccaa3d0996191be18571f6259feab79ae533422a0b66f4544a2fc2757a0afccedda0b053f2b
-Size (pybtex-0.25.1.tar.gz) = 406157 bytes
+BLAKE2s (pybtex-0.26.1.tar.gz) = 598a600ef3545bcce1dc24a6cb87ffe7ed32a1912d008bf01cc5bcd082743790
+SHA512 (pybtex-0.26.1.tar.gz) = b34b8349ff0f475612040a09669f5f515023e3bedc8ffc2022fa74dab7c5d2f7cf153fc88a673f196f0ea140a6fe1a12769f5b190dab139d3cc856569456a3a7
+Size (pybtex-0.26.1.tar.gz) = 692991 bytes

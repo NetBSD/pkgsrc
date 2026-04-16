@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/07/22 07:12:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/04/16 07:27:12 adam Exp $
 bin/pybtex-${PYVERSSUFFIX}
 bin/pybtex-convert-${PYVERSSUFFIX}
 bin/pybtex-format-${PYVERSSUFFIX}
@@ -7,8 +7,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
 ${PYSITELIB}/pybtex/__init__.py
 ${PYSITELIB}/pybtex/__init__.pyc
 ${PYSITELIB}/pybtex/__init__.pyo
