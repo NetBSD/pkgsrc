@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/07/06 15:45:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/04/16 06:33:49 wiz Exp $
 bin/ld.lld
 bin/ld64.lld
 bin/lld
@@ -6,6 +6,7 @@ bin/lld-link
 bin/wasm-ld
 include/lld/Common/Args.h
 include/lld/Common/Arrays.h
+include/lld/Common/BPSectionOrdererBase.inc
 include/lld/Common/CommonLinkerContext.h
 include/lld/Common/DWARF.h
 include/lld/Common/Driver.h
@@ -17,6 +18,7 @@ include/lld/Common/Reproduce.h
 include/lld/Common/Strings.h
 include/lld/Common/TargetOptionsCommandFlags.h
 include/lld/Common/Timer.h
+include/lld/Common/Utils.h
 include/lld/Common/Version.h
 lib/cmake/lld/LLDConfig.cmake
 lib/cmake/lld/LLDConfigVersion.cmake
