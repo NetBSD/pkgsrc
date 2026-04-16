@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2390 2026/04/16 10:00:18 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2391 2026/04/16 10:16:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3732,3 +3732,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-grpcio to 1.80.0 [adam 2026-04-16]
 	Updated net/py-grpcio-testing to 1.80.0 [adam 2026-04-16]
 	Updated net/py-grpcio-tools to 1.80.0 [adam 2026-04-16]
+	Updated net/libfetch to 2.40nb5 [wiz 2026-04-16]
