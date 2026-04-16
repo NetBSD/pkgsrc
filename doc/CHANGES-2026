@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2389 2026/04/16 09:59:09 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2390 2026/04/16 10:00:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3727,3 +3727,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated wm/oatbar to 0.3.1 [pin 2026-04-16]
 	Updated net/libfetch to 2.40nb3 [wiz 2026-04-16]
 	Updated net/libfetch to 2.40nb4 [wiz 2026-04-16]
+	Updated devel/protobuf to 34.1nb1 [adam 2026-04-16]
+	Updated net/grpc to 1.80.0 [adam 2026-04-16]
+	Updated net/py-grpcio to 1.80.0 [adam 2026-04-16]
+	Updated net/py-grpcio-testing to 1.80.0 [adam 2026-04-16]
+	Updated net/py-grpcio-tools to 1.80.0 [adam 2026-04-16]
