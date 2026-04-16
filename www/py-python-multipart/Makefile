@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2026/01/26 14:36:56 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/04/16 13:04:29 adam Exp $
 
-DISTNAME=	python_multipart-0.0.22
+DISTNAME=	python_multipart-0.0.26
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-multipart/}
