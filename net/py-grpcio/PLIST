@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2025/04/13 12:25:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/04/16 09:58:01 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/grpc/__init__.py
 ${PYSITELIB}/grpc/__init__.pyc
 ${PYSITELIB}/grpc/__init__.pyo
@@ -21,6 +26,8 @@ ${PYSITELIB}/grpc/_cython/_credentials/roots.pem
 ${PYSITELIB}/grpc/_cython/_cygrpc/__init__.py
 ${PYSITELIB}/grpc/_cython/_cygrpc/__init__.pyc
 ${PYSITELIB}/grpc/_cython/_cygrpc/__init__.pyo
+${PYSITELIB}/grpc/_cython/_cygrpc/private_key_signing/private_key_signer_py_wrapper.cc
+${PYSITELIB}/grpc/_cython/_cygrpc/private_key_signing/private_key_signer_py_wrapper.h
 ${PYSITELIB}/grpc/_cython/cygrpc.so
 ${PYSITELIB}/grpc/_grpcio_metadata.py
 ${PYSITELIB}/grpc/_grpcio_metadata.pyc
@@ -169,8 +176,3 @@ ${PYSITELIB}/grpc/framework/interfaces/face/face.pyo
 ${PYSITELIB}/grpc/framework/interfaces/face/utilities.py
 ${PYSITELIB}/grpc/framework/interfaces/face/utilities.pyc
 ${PYSITELIB}/grpc/framework/interfaces/face/utilities.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
