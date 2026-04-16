@@ -1,11 +1,11 @@
-$NetBSD: patch-setup.py,v 1.8 2024/05/15 21:13:50 wiz Exp $
+$NetBSD: patch-setup.py,v 1.9 2026/04/16 09:58:01 adam Exp $
 
 Use pthread on FreeBSD.
 Use external protobuf.
 
---- setup.py.orig	2024-04-26 06:29:22.000000000 +0000
+--- setup.py.orig	2026-03-24 23:15:03.000000000 +0000
 +++ setup.py
-@@ -211,7 +211,7 @@ if EXTRA_ENV_LINK_ARGS is None:
+@@ -226,7 +226,7 @@ if EXTRA_ENV_LINK_ARGS is None:
          EXTRA_ENV_LINK_ARGS += " -Wl,-exported_symbol,_{}".format(
              _EXT_INIT_SYMBOL
          )
@@ -14,7 +14,7 @@ Use external protobuf.
          EXTRA_ENV_LINK_ARGS += " -lpthread"
          if check_linker_need_libatomic():
              EXTRA_ENV_LINK_ARGS += " -latomic"
-@@ -227,13 +227,9 @@ EXTRA_LINK_ARGS = shlex.split(EXTRA_ENV_
+@@ -244,13 +244,9 @@ EXTRA_LINK_ARGS = shlex.split(EXTRA_ENV_
  if BUILD_WITH_STATIC_LIBSTDCXX:
      EXTRA_LINK_ARGS.append("-static-libstdc++")
  
@@ -26,9 +26,9 @@ Use external protobuf.
 -    os.path.normpath(include_dir) for include_dir in protoc_lib_deps.CC_INCLUDES
 -]
  PROTO_INCLUDE = os.path.normpath(protoc_lib_deps.PROTO_INCLUDE)
+ PROTO_PATH_PREFIX = os.path.normpath("google/protobuf")
  
- GRPC_PYTHON_TOOLS_PACKAGE = "grpc_tools"
-@@ -248,7 +244,7 @@ if "win32" in sys.platform:
+@@ -266,7 +262,7 @@ if "win32" in sys.platform:
      )
      if "64bit" in platform.architecture()[0]:
          DEFINE_MACROS += (("MS_WIN64", 1),)
@@ -37,7 +37,7 @@ Use external protobuf.
      DEFINE_MACROS += (("HAVE_PTHREAD", 1),)
  
  
-@@ -286,7 +282,7 @@ def extension_modules():
+@@ -305,7 +301,7 @@ def extension_modules():
          os.path.join("grpc_tools", "main.cc"),
          os.path.join("grpc_root", "src", "compiler", "python_generator.cc"),
          os.path.join("grpc_root", "src", "compiler", "proto_parser_helper.cc"),
@@ -46,7 +46,7 @@ Use external protobuf.
  
      plugin_ext = Extension(
          name="grpc_tools._protoc_compiler",
-@@ -295,8 +291,7 @@ def extension_modules():
+@@ -314,8 +310,7 @@ def extension_modules():
              ".",
              "grpc_root",
              os.path.join("grpc_root", "include"),
