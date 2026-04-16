@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2375 2026/04/16 06:30:50 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2376 2026/04/16 06:34:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3697,3 +3697,18 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/lua-cffi version 0.2.4 [wiz 2026-04-15]
 	Updated mail/rspamd to 4.0.1 [wiz 2026-04-15]
 	Updated devel/meld to 3.22.2nb18 [wiz 2026-04-16]
+	Updated devel/lld to 21.1.8 [wiz 2026-04-16]
+	Updated devel/lldb to 21.1.8 [wiz 2026-04-16]
+	Updated devel/polly to 21.1.8 [wiz 2026-04-16]
+	Updated lang/clang to 21.1.8 [wiz 2026-04-16]
+	Updated lang/clang-tools-extra to 21.1.8 [wiz 2026-04-16]
+	Updated lang/compiler-rt to 21.1.8 [wiz 2026-04-16]
+	Updated lang/flang to 21.1.8 [wiz 2026-04-16]
+	Updated lang/libcxx to 21.1.8 [wiz 2026-04-16]
+	Updated lang/libcxxabi to 21.1.8 [wiz 2026-04-16]
+	Updated lang/libunwind to 21.1.8 [wiz 2026-04-16]
+	Updated lang/llvm to 21.1.8 [wiz 2026-04-16]
+	Updated lang/mlir to 21.1.8 [wiz 2026-04-16]
+	Updated lang/wasi-compiler-rt to 21.1.8 [wiz 2026-04-16]
+	Updated lang/wasi-libc to 0.0.0pre20250809 [wiz 2026-04-16]
+	Updated lang/wasi-libcxx to 21.1.8 [wiz 2026-04-16]
