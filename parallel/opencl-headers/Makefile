@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/08/20 11:35:09 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/04/16 12:33:52 adam Exp $
 
-DISTNAME=	opencl-headers-2024.10.24
+DISTNAME=	opencl-headers-2025.07.22
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
 GITHUB_PROJECT=	OpenCL-Headers
