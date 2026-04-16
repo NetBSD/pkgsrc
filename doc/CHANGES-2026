@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2400 2026/04/16 12:50:24 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2401 2026/04/16 13:04:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3747,3 +3747,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/adguardhome to 0.107.74 [adam 2026-04-16]
 	Updated security/libgcrypt to 1.12.2 [adam 2026-04-16]
 	Updated security/libfido2 to 1.17.0 [adam 2026-04-16]
+	Updated devel/py-dm-tree to 0.1.10 [adam 2026-04-16]
+	Updated www/py-python-multipart to 0.0.26 [adam 2026-04-16]
