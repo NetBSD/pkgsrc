@@ -1,9 +1,9 @@
-$NetBSD: patch-tree_CMakeLists.txt,v 1.2 2025/04/15 16:02:34 adam Exp $
+$NetBSD: patch-tree_CMakeLists.txt,v 1.3 2026/04/16 13:02:33 adam Exp $
 
 Use system pybind11 and absl.
 https://github.com/google-deepmind/tree/pull/73
 
---- tree/CMakeLists.txt.orig	2025-01-30 17:23:48.000000000 +0000
+--- tree/CMakeLists.txt.orig	2026-03-31 14:56:46.000000000 +0000
 +++ tree/CMakeLists.txt
 @@ -7,8 +7,8 @@ cmake_policy(SET CMP0135 NEW)
  
@@ -49,8 +49,8 @@ https://github.com/google-deepmind/tree/pull/73
 -
 -FetchContent_Declare(
 -  absl
--  URL         ${ABSEIL_REPO}/archive/refs/tags/20220623.2.tar.gz
--  URL_HASH    SHA256=773652c0fc276bcd5c461668dc112d0e3b6cde499600bfe3499c5fdda4ed4a5b
+-  URL         ${ABSEIL_REPO}/archive/refs/tags/20260107.1.tar.gz
+-  URL_HASH    SHA256=4314e2a7cbac89cac25a2f2322870f343d81579756ceff7f431803c2c9090195
 -  CMAKE_ARGS  ${ABSEIL_CMAKE_ARGS}
 -  EXCLUDE_FROM_ALL
 -  ${ABSEIL_FIND_PACKAGE_ARGS})
@@ -63,14 +63,14 @@ https://github.com/google-deepmind/tree/pull/73
  
 -FetchContent_Declare(
 -  pybind11
--  URL       https://github.com/pybind/pybind11/archive/refs/tags/v2.10.1.tar.gz
--  URL_HASH  SHA256=111014b516b625083bef701df7880f78c2243835abdb263065b6b59b960b6bad
+-  URL       https://github.com/pybind/pybind11/archive/refs/tags/v3.0.1.tar.gz
+-  URL_HASH  SHA256=741633da746b7c738bb71f1854f957b9da660bcd2dce68d71949037f0969d0ca
 -  ${PYBIND11_FIND_PACKAGE_ARGS})
 -
 -FetchContent_MakeAvailable(absl pybind11)
 -
-+find_package(pybind11 REQUIRED CONFIG)
 +find_package(absl REQUIRED)
++find_package(pybind11 REQUIRED CONFIG)
  # Define pybind11 tree module.
  pybind11_add_module(_tree tree.h tree.cc)
  
