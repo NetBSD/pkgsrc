@@ -1,11 +1,11 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2024/02/21 10:47:10 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2026/04/16 12:50:09 adam Exp $
 
 Remove overzealous compiler options and let pkgsrc define the
 stack protection to use.
 
---- CMakeLists.txt.orig	2023-11-13 07:19:20.000000000 +0000
+--- CMakeLists.txt.orig	2026-04-15 07:02:42.000000000 +0000
 +++ CMakeLists.txt
-@@ -90,7 +90,6 @@ if(NOT MSVC)
+@@ -92,7 +92,6 @@ if(NOT MSVC)
  endif()
  
  check_c_compiler_flag("-Wshorten-64-to-32" HAVE_SHORTEN_64_TO_32)
@@ -13,7 +13,7 @@ stack protection to use.
  
  check_include_files(cbor.h HAVE_CBOR_H)
  check_include_files(endian.h HAVE_ENDIAN_H)
-@@ -295,47 +294,13 @@ else()
+@@ -300,47 +299,10 @@ else()
  
  	add_compile_options(-Wall)
  	add_compile_options(-Wextra)
@@ -26,7 +26,7 @@ stack protection to use.
 -	add_compile_options(-Wimplicit-fallthrough)
 -	add_compile_options(-pedantic)
 -	add_compile_options(-pedantic-errors)
- 
+-
 -	set(EXTRA_CFLAGS "-Wconversion -Wsign-conversion")
 -
 -	if(WIN32)
@@ -43,8 +43,7 @@ stack protection to use.
 -	endif()
 -
 -	set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -g2")
-+	set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -g")
- 	set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -fno-omit-frame-pointer")
+-	set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -fno-omit-frame-pointer")
 -	set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -D_FORTIFY_SOURCE=2")
  
  	if(CRYPTO_VERSION VERSION_GREATER_EQUAL 3.0)
@@ -57,7 +56,7 @@ stack protection to use.
 -endif()
 -
 -# Avoid https://gcc.gnu.org/bugzilla/show_bug.cgi?id=66425
--if(CMAKE_COMPILER_IS_GNUCC)
+-if(CMAKE_C_COMPILER_ID STREQUAL "GNU")
 -	add_compile_options(-Wno-unused-result)
  endif()
  
