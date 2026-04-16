@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.8 2026/04/09 18:12:26 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.9 2026/04/16 11:37:03 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -254,7 +254,7 @@ CARGO_CRATE_DEPENDS+=	servo_arc-0.4.1
 CARGO_CRATE_DEPENDS+=	sha2-0.10.9
 CARGO_CRATE_DEPENDS+=	shlex-1.3.0
 CARGO_CRATE_DEPENDS+=	simd-adler32-0.3.7
-CARGO_CRATE_DEPENDS+=	simd-csv-0.11.1
+CARGO_CRATE_DEPENDS+=	simd-csv-0.12.0
 CARGO_CRATE_DEPENDS+=	simd-json-0.14.3
 CARGO_CRATE_DEPENDS+=	simdutf8-0.1.5
 CARGO_CRATE_DEPENDS+=	siphasher-1.0.1
