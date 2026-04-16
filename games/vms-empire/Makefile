@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2026/03/24 12:46:06 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/04/16 12:29:42 wiz Exp $
 
-DISTNAME=	vms-empire-1.19
+DISTNAME=	vms-empire-1.20
 CATEGORIES=	games
 MASTER_SITES=	http://www.catb.org/~esr/vms-empire/
 
