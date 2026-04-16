@@ -1,6 +1,7 @@
-$NetBSD: patch-edit.c,v 1.3 2026/03/24 12:46:06 wiz Exp $
+$NetBSD: patch-edit.c,v 1.4 2026/04/16 12:34:46 wiz Exp $
 
 Fix ctype(3) functions usage.
+https://gitlab.com/esr/vms-empire/-/work_items/6
 
 --- edit.c.orig	2026-03-24 12:40:47.000000000 +0000
 +++ edit.c
