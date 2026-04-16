@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.13 2026/03/25 22:56:25 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2026/04/16 06:33:50 wiz Exp $
 
 BUILDLINK_TREE+=	polly
 
 .if !defined(POLLY_BUILDLINK3_MK)
 POLLY_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.polly+=	polly>=20.1.0
+BUILDLINK_API_DEPENDS.polly+=	polly>=21.1.0
 BUILDLINK_PKGSRCDIR.polly?=	../../devel/polly
 
 .include "../../lang/llvm/buildlink3.mk"
