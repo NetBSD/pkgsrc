@@ -1,8 +1,8 @@
-$NetBSD: patch-.._vendor_rattler__pty-0.2.9_src_unix_pty__process.rs,v 1.1 2026/04/13 16:07:24 pin Exp $
+$NetBSD: patch-.._vendor_rattler__pty-0.2.9_src_unix_pty__process.rs,v 1.2 2026/04/16 11:32:42 pin Exp $
 
-NetBSD uses the POSIX ptsname.
+https://github.com/conda/rattler/pull/2343
 
---- ../vendor/rattler_pty-0.2.9/src/unix/pty_process.rs.orig	2026-04-13 14:41:10.214991451 +0000
+--- ../vendor/rattler_pty-0.2.9/src/unix/pty_process.rs.orig	2026-04-16 08:50:14.491255314 +0000
 +++ ../vendor/rattler_pty-0.2.9/src/unix/pty_process.rs
 @@ -27,6 +27,9 @@ use nix::pty::ptsname_r;
  #[cfg(target_os = "linux")]
@@ -14,12 +14,13 @@ NetBSD uses the POSIX ptsname.
  /// Start a process in a forked tty so you can interact with it the same as you would
  /// within a terminal
  ///
-@@ -112,7 +115,11 @@ impl PtyProcess {
+@@ -112,7 +115,12 @@ impl PtyProcess {
          unlockpt(&master_fd)?;
  
          // on Linux this is the libc function, on OSX this is our implementation of ptsname_r
-+        #[cfg(any(target_os = "linux", target_os = "android"))]
++        #[cfg(not(target_os = "netbsd"))]
          let slave_name = ptsname_r(&master_fd)?;
++
 +        // But NetBSD uses the POSIX ptsname instead
 +        #[cfg(target_os = "netbsd")]
 +        let slave_name = unsafe { ptsname(&master_fd) }?;
