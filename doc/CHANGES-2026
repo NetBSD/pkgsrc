@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2405 2026/04/16 19:15:12 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2406 2026/04/16 21:12:14 morr Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3754,3 +3754,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-json5 to 0.14.0 [adam 2026-04-16]
 	Updated www/php-contao-manager to 1.10.13 [taca 2026-04-16]
 	Removed www/syncstorage-rs [wiz 2026-04-16]
+	Updated editors/vim-share to 9.2.0357 [morr 2026-04-16]
+	Updated editors/vim-share to 9.2.0357 [sh 2026-04-16]
