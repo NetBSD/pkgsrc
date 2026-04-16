@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2026/04/13 08:59:48 adam Exp $
+$NetBSD: distinfo,v 1.16 2026/04/16 10:33:38 adam Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -1581,9 +1581,9 @@ Size (valuable-0.1.1.crate) = 28679 bytes
 BLAKE2s (value-bag-1.12.0.crate) = de9b2a2ccd74cd392c6f9c278ed8a2e287c12dd64043a1ed2dc33d088a2ed5a8
 SHA512 (value-bag-1.12.0.crate) = 2f2942e5b5793c7789518e6e939e6b18546fad6ead1f7c735ee0cb4b784ff7316bbb21e6ed70b16e7b2a59c5cf1c3e1b104cebde8391f58f92df01dcf2d06c70
 Size (value-bag-1.12.0.crate) = 44222 bytes
-BLAKE2s (vaultwarden-1.35.6.tar.gz) = e478e7abd288b1fa8b2d25df65331b82f2ffc71c7f710f29aa5b09af9c6159bf
-SHA512 (vaultwarden-1.35.6.tar.gz) = 27ac997a0e208fd6cbb165e78835e2d2bc283d63d9d401d3bbc46a7fcb5f6bc1c6d2e0c8f4fb71c1978cc34da519390de8eca2ee64dd14872167bf2868688f97
-Size (vaultwarden-1.35.6.tar.gz) = 720909 bytes
+BLAKE2s (vaultwarden-1.35.7.tar.gz) = 3889dbb836e8e151877e41a16e0a11566515d05844c30a4ee21dc27caf6585c5
+SHA512 (vaultwarden-1.35.7.tar.gz) = e9e5571d272b4d4eb306d890f1e208230133b4f1dfe9f3c2b925b8d96f9f716efc67c9fef11a1a0c9af3a0a03a153726da3375b4909368846e96586e87c695aa
+Size (vaultwarden-1.35.7.tar.gz) = 720893 bytes
 BLAKE2s (vcpkg-0.2.15.crate) = 0ec9e97d0e23d59f0a4095773e1136e15f2054fb86bcceb309774638768ea8c4
 SHA512 (vcpkg-0.2.15.crate) = 7322a21e8811b2fe4e79e09dc321458068ecdf1953f05d36233f3278ecc0b1dfc64194db7010dd46fcf692285f42475beb090c6c6cac0c8f9fe0eb5c770e3172
 Size (vcpkg-0.2.15.crate) = 228735 bytes
