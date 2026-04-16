@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.39 2026/04/15 18:50:24 wiz Exp $
+$NetBSD: distinfo,v 1.40 2026/04/16 10:43:42 adam Exp $
 
-BLAKE2s (sphinx_autodoc_typehints-3.10.1.tar.gz) = 837f557dbe56b228a209b4c94a81a756ce049f382a20b1158a2a35965f48db13
-SHA512 (sphinx_autodoc_typehints-3.10.1.tar.gz) = 18a9896cf3286fad2811da92eaa235fcc708916c03c83b1508d9ab69dab3d90ae70013c0427e4eb884ebe376cf3d518e19b9c304a818c10fd83c97a34efa6724
-Size (sphinx_autodoc_typehints-3.10.1.tar.gz) = 73190 bytes
+BLAKE2s (sphinx_autodoc_typehints-3.10.2.tar.gz) = 25163792011361bd2631ab749c53f8ae87bfb4b0b93ebc453b2034157f0646eb
+SHA512 (sphinx_autodoc_typehints-3.10.2.tar.gz) = 58780573ba8ca74191ffbba1629e1b618b6b4689f0c67525195b88442417f657e4588e54197cfd98f4998ae75c50570039bd2bd99b0926ceed958d113fe76a7c
+Size (sphinx_autodoc_typehints-3.10.2.tar.gz) = 74241 bytes
