@@ -1,6 +1,7 @@
-$NetBSD: patch-usermove.c,v 1.3 2026/04/16 12:29:43 wiz Exp $
+$NetBSD: patch-usermove.c,v 1.4 2026/04/16 12:34:46 wiz Exp $
 
 Fix ctype(3) functions usage.
+https://gitlab.com/esr/vms-empire/-/work_items/6
 
 --- usermove.c.orig	2026-04-16 12:16:09.000000000 +0000
 +++ usermove.c
