@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2399 2026/04/16 12:40:27 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2400 2026/04/16 12:50:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3745,3 +3745,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ngtcp2 to 1.22.1 [adam 2026-04-16]
 	Updated security/py-authlib to 1.6.11 [adam 2026-04-16]
 	Updated security/adguardhome to 0.107.74 [adam 2026-04-16]
+	Updated security/libgcrypt to 1.12.2 [adam 2026-04-16]
+	Updated security/libfido2 to 1.17.0 [adam 2026-04-16]
