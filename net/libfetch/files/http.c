@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.46 2026/04/16 08:20:45 wiz Exp $	*/
+/*	$NetBSD: http.c,v 1.47 2026/04/16 08:32:12 wiz Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2003 Thomas Klausner <wiz@NetBSD.org>
@@ -765,8 +765,15 @@ http_connect(struct url *URL, struct url *purl, const char *flags, int *cached)
 #endif
 
 	curl = (purl != NULL) ? purl : URL;
+	if (purl && strcasecmp(URL->scheme, SCHEME_HTTPS) != 0) {
+		URL = purl;
+	} else if (strcasecmp(URL->scheme, SCHEME_FTP) == 0) {
 
-	if ((conn = fetch_cache_get(URL, af)) != NULL) {
+		/* XXX should set an error code */
+		return (NULL);
+	}
+
+	if ((conn = fetch_cache_get(curl, af)) != NULL) {
 		*cached = 1;
 		return (conn);
 	}
@@ -779,16 +786,18 @@ http_connect(struct url *URL, struct url *purl, const char *flags, int *cached)
 				URL->host, URL->port);
 		http_cmd(conn, "Host: %s:%d\r\n",
 				URL->host, URL->port);
+		/* proxy authorization */
+		if (*purl->user || *purl->pwd)
+			http_basic_auth(conn, "Proxy-Authorization",
+			    purl->user, purl->pwd);
+		else if ((p = getenv("HTTP_PROXY_AUTH")) != NULL && *p != '\0')
+			http_authorize(conn, "Proxy-Authorization", p);
 		http_cmd(conn, "\r\n");
 		if (http_get_reply(conn) != HTTP_OK) {
 			http_seterr(conn->err);
 			goto ouch;
 		}
 		/* Read and discard the rest of the proxy response */
-		if (fetch_getln(conn) < 0) {
-			fetch_syserr();
-			goto ouch;
-		}
 		do {
 			switch ((h = http_next_header(conn, &p))) {
 			case hdr_syserror:
