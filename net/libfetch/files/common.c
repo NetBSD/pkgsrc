@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.33 2026/04/11 10:41:52 wiz Exp $	*/
+/*	$NetBSD: common.c,v 1.34 2026/04/16 08:20:45 wiz Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -631,7 +631,7 @@ fetch_getln(conn_t *conn)
 			return (-1);
 		if (len == 0)
 			break;
-		next = memchr(conn->buf + conn->buflen, '\n', len);
+		next = memchr(conn->buf + conn->buflen, '\n', (size_t)len);
 		conn->buflen += len;
 		if (conn->buflen == conn->bufsize && next == NULL) {
 			tmp = conn->buf;
@@ -717,7 +717,7 @@ fetch_write(conn_t *conn, const void *buf, size_t len)
 		errno = 0;
 #ifdef WITH_SSL
 		if (conn->ssl != NULL)
-			wlen = SSL_write(conn->ssl, buf, len);
+			wlen = SSL_write(conn->ssl, buf, (int)len);
 		else
 #endif
 #ifndef MSG_NOSIGNAL
