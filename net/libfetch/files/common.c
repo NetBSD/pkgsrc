@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.35 2026/04/16 08:28:21 wiz Exp $	*/
+/*	$NetBSD: common.c,v 1.36 2026/04/16 08:29:51 wiz Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -762,6 +762,22 @@ fetch_close(conn_t *conn)
 {
 	int ret;
 
+#ifdef WITH_SSL
+	if (conn->ssl) {
+		SSL_shutdown(conn->ssl);
+		SSL_set_connect_state(conn->ssl);
+		SSL_free(conn->ssl);
+		conn->ssl = NULL;
+	}
+	if (conn->ssl_ctx) {
+		SSL_CTX_free(conn->ssl_ctx);
+		conn->ssl_ctx = NULL;
+	}
+	if (conn->ssl_cert) {
+		X509_free(conn->ssl_cert);
+		conn->ssl_cert = NULL;
+	}
+#endif
 	ret = close(conn->sd);
 	if (conn->cache_url)
 		fetchFreeURL(conn->cache_url);
