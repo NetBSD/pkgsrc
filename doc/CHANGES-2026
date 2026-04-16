@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2385 2026/04/16 06:42:01 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2386 2026/04/16 07:31:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3721,3 +3721,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated parallel/spirv-llvm-translator to 21.1.6 [wiz 2026-04-16]
 	Updated meta-pkgs/bulk-test-llvm to 20260410 [wiz 2026-04-16]
 	Updated graphics/png to 1.6.58 [wiz 2026-04-16]
+	Updated textproc/py-pybtex to 0.26.1 [adam 2026-04-16]
+	Updated databases/py-sqlalchemy to 2.0.49 [adam 2026-04-16]
+	Updated textproc/py-pdf to 6.10.2 [adam 2026-04-16]
