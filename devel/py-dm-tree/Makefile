@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2026/01/14 12:57:33 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/04/16 13:02:33 adam Exp $
 
-DISTNAME=	dm_tree-0.1.9
+DISTNAME=	dm_tree-0.1.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dm-tree/}
 
@@ -17,7 +16,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-attrs>=18.2.0:../../devel/py-attrs
 TEST_DEPENDS+=	${PYPKGPREFIX}-numpy>=1.21:../../math/py-numpy
 TEST_DEPENDS+=	${PYPKGPREFIX}-wrapt>=1.11.2:../../devel/py-wrapt
 
-USE_CXX_FEATURES=	c++14
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c++
 USE_TOOLS+=		cmake gmake
 
