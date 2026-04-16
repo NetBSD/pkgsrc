@@ -1,20 +1,20 @@
-$NetBSD: patch-CMakeLists.txt,v 1.7 2025/01/24 09:40:40 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.8 2026/04/16 06:35:04 wiz Exp $
 
 Do not force -Werror.
 Do not set -O3 optimization flags.
 
---- CMakeLists.txt.orig	2024-11-10 09:58:12.000000000 +0000
+--- CMakeLists.txt.orig	2026-04-10 12:50:48.000000000 +0000
 +++ CMakeLists.txt
-@@ -171,7 +171,7 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU"
+@@ -173,7 +173,7 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU"
      OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
    # XXX figure out how to get "-std=c++17 -fno-rtti" from LLVM.  That's how we
    # get those options in the Automake path...
--  set(COMMON_FLAGS "-Wall -Wextra -Werror -pedantic -Wno-unused-parameter")
-+  set(COMMON_FLAGS "-Wall -Wextra -pedantic -Wno-unused-parameter")
+-  set(COMMON_FLAGS "-Wall -Wextra -Werror -Wno-unused-parameter")
++  set(COMMON_FLAGS "-Wall -Wextra -Wno-unused-parameter")
    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${COMMON_FLAGS}")
    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COMMON_FLAGS} -std=c++17 -fno-rtti -fno-strict-aliasing")
    if(SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG)
-@@ -197,8 +197,6 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU"
+@@ -199,8 +199,6 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU"
      set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-error=deprecated-declarations")
    endif()
  
