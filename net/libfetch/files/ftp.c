@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.54 2026/04/16 08:25:05 wiz Exp $	*/
+/*	$NetBSD: ftp.c,v 1.55 2026/04/16 10:15:39 wiz Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2009, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -920,21 +920,18 @@ retry_mode:
 					goto ouch;
 			}
 			if (e != FTP_OK) {
-				unsigned char *ap = (void *)&u.sin6.sin6_addr.s6_addr;
-				uint16_t port = ntohs(u.sin6.sin6_port);
+				uint8_t aa[sizeof(u.sin6.sin6_addr)];
+				memcpy(aa, &u.sin6.sin6_addr, sizeof(aa));
+				p = ntohs(u.sin6.sin6_port);
 				e = ftp_cmd(conn,
-				    "LPRT %d,%d,%u,%u,%u,%u,%u,%u,%u,%u,"
-				    "%u,%u,%u,%u,%u,%u,%u,%u,%d,%d,%d\r\n",
+				    "LPRT %d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d\r\n",
 				    6, 16,
-				    (unsigned)ap[0], (unsigned)ap[1],
-				    (unsigned)ap[2], (unsigned)ap[3],
-				    (unsigned)ap[4], (unsigned)ap[5],
-				    (unsigned)ap[6], (unsigned)ap[7],
-				    (unsigned)ap[8], (unsigned)ap[9],
-				    (unsigned)ap[10], (unsigned)ap[11],
-				    (unsigned)ap[12], (unsigned)ap[13],
-				    (unsigned)ap[14], (unsigned)ap[15],
-				    2, port >> 8, port & 0xff);
+				    aa[ 0], aa[ 1], aa[ 2], aa[ 3],
+				    aa[ 4], aa[ 5], aa[ 6], aa[ 7],
+				    aa[ 8], aa[ 9], aa[10], aa[11],
+				    aa[12], aa[13], aa[14], aa[15],
+				    2,
+				    ((unsigned int)p >> 8) & 0xff, p & 0xff);
 			}
 			break;
 		default:
