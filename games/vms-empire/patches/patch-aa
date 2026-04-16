@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.7 2026/03/24 12:46:06 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2026/04/16 12:29:43 wiz Exp $
 
 o Turn off optimizations present in DEBUG
 o Link against (generic) curses
 o Honors user's CFLAGS and LDFLAGS
 
---- Makefile.orig	2026-03-24 12:40:47.000000000 +0000
+--- Makefile.orig	2026-04-16 12:16:09.000000000 +0000
 +++ Makefile
-@@ -14,18 +14,18 @@ VERSION=$(shell sed -n <NEWS '/^[0-9]/s/:.*//p' | head
+@@ -12,20 +12,20 @@ MANDIR      ?= $(DATADIR)/man
  
  # Use -g to compile the program for debugging.
  #DEBUG = -g -DDEBUG
@@ -21,6 +21,8 @@ o Honors user's CFLAGS and LDFLAGS
 +LIBS = -lcurses
  
  # You shouldn't have to modify anything below this line.
+ 
+ VERSION=$(shell sed -n <NEWS '/^[0-9]/s/:.*//p' | head -1)
  
  # There's a dynamic format in the object-display routines; suppress the warning
 -CFLAGS = $(DEBUG) $(PROFILE) -Wall -Wextra -Werror -Wno-format-security -Wno-unused-parameter
