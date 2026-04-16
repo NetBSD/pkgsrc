@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2376 2026/04/16 06:34:28 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2377 2026/04/16 06:35:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3712,3 +3712,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/wasi-compiler-rt to 21.1.8 [wiz 2026-04-16]
 	Updated lang/wasi-libc to 0.0.0pre20250809 [wiz 2026-04-16]
 	Updated lang/wasi-libcxx to 21.1.8 [wiz 2026-04-16]
+	Updated devel/cvise to 2.12.0nb1 [wiz 2026-04-16]
