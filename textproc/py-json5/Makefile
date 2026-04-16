@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2026/01/08 14:27:53 adam Exp $
+# $NetBSD: Makefile,v 1.10 2026/04/16 13:44:25 adam Exp $
 
-DISTNAME=	json5-0.13.0
+DISTNAME=	json5-0.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/json5/}
@@ -14,9 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} pyjson5 pyjson5-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	pyjson5
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
