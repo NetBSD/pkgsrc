@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2374 2026/04/15 20:49:04 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2375 2026/04/16 06:30:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3696,3 +3696,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated wayland/xwayland to 24.1.10 [wiz 2026-04-15]
 	Added devel/lua-cffi version 0.2.4 [wiz 2026-04-15]
 	Updated mail/rspamd to 4.0.1 [wiz 2026-04-15]
+	Updated devel/meld to 3.22.2nb18 [wiz 2026-04-16]
