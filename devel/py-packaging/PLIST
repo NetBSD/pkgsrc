@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/01/22 20:20:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/04/17 05:39:40 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -20,12 +20,18 @@ ${PYSITELIB}/packaging/_musllinux.pyo
 ${PYSITELIB}/packaging/_parser.py
 ${PYSITELIB}/packaging/_parser.pyc
 ${PYSITELIB}/packaging/_parser.pyo
-${PYSITELIB}/packaging/_structures.py
-${PYSITELIB}/packaging/_structures.pyc
-${PYSITELIB}/packaging/_structures.pyo
 ${PYSITELIB}/packaging/_tokenizer.py
 ${PYSITELIB}/packaging/_tokenizer.pyc
 ${PYSITELIB}/packaging/_tokenizer.pyo
+${PYSITELIB}/packaging/dependency_groups.py
+${PYSITELIB}/packaging/dependency_groups.pyc
+${PYSITELIB}/packaging/dependency_groups.pyo
+${PYSITELIB}/packaging/direct_url.py
+${PYSITELIB}/packaging/direct_url.pyc
+${PYSITELIB}/packaging/direct_url.pyo
+${PYSITELIB}/packaging/errors.py
+${PYSITELIB}/packaging/errors.pyc
+${PYSITELIB}/packaging/errors.pyo
 ${PYSITELIB}/packaging/licenses/__init__.py
 ${PYSITELIB}/packaging/licenses/__init__.pyc
 ${PYSITELIB}/packaging/licenses/__init__.pyo
