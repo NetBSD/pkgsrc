@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2025/10/11 18:37:20 vins Exp $
+# $NetBSD: Makefile,v 1.28 2026/04/17 19:14:28 vins Exp $
 
-DISTNAME=	got-portable-0.120
+DISTNAME=	got-portable-0.124
 PKGNAME=	${DISTNAME:S/-portable//}
 CATEGORIES=	devel
 MASTER_SITES=	https://gameoftrees.org/releases/portable/
@@ -19,6 +19,8 @@ BUILD_DEFS+=	VARBASE
 USE_TOOLS+=	pkg-config yacc ksh:test perl:test
 USE_CURSES=	halfdelay resize_term wgetnstr wide
 FAKE_NCURSES=	yes
+
+CPPFLAGS+=	-DOPENSSL_API_COMPAT=0x10100000	# HMAC_CTX_new()
 
 PKG_GROUPS=		_gotd
 PKG_USERS=		_gotd:_gotd
