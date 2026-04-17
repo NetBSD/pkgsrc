@@ -40,18 +40,18 @@ Building packages
 Where `$PREFIX` is where you've chosen to install packages
 (typically `/usr/pkg`)
 
-On NetBSD, `bmake` is simply the built-in `make` tool.
+On NetBSD, `bmake` is simply the built-in `make` tool
 
 To build packages in bulk, tools such as `pkgtools/pbulk` and
-`pkgtools/pkg_comp` can be used.
+`pkgtools/pkg_comp` can be used
 
 Community / Troubleshooting
 ---------------------------
 
-- Join the community IRC channel [#pkgsrc @ libera.chat](https://web.libera.chat/#pkgsrc).
+- Join the community IRC channel [#pkgsrc @ libera.chat](https://web.libera.chat/#pkgsrc)
 - Join the community Matrix room [#pkgsrc:netbsd.org](https://matrix.to/#/#pkgsrc:netbsd.org)
 - Subscribe to the [pkgsrc-users](https://www.NetBSD.org/mailinglists/#pkgsrc-users) mailing list
-- Send bugs and patches [via web form](https://www.NetBSD.org/cgi-bin/sendpr.cgi?gndb=netbsd) (use the `pkg` category).
+- Send bugs and patches [via web form](https://www.NetBSD.org/cgi-bin/sendpr.cgi?gndb=netbsd) (use the `pkg` category)
 
 Latest sources
 --------------
