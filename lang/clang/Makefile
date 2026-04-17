@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2026/03/25 22:56:25 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2026/04/17 12:06:36 wiz Exp $
 
 .include "Makefile.common"
 
@@ -20,6 +20,9 @@ PLIST_VARS+=	ARM
 	${PKG_BUILD_OPTIONS.llvm:Mllvm-target-aarch64}
 PLIST.ARM=	yes
 .endif
+
+# libclang-cpp.so uses connect(), socket(), ...
+LDFLAGS.SunOS+=	-lsocket
 
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
