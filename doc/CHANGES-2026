@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2411 2026/04/17 10:33:24 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2412 2026/04/17 12:47:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3763,3 +3763,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-testtools to 2.9.0 [adam 2026-04-17]
 	Updated www/py-pylsqpack to 0.3.24 [adam 2026-04-17]
 	Updated lang/py-python-discovery to 1.2.2 [adam 2026-04-17]
+	Updated databases/sqlite3 to 3.53.0 [adam 2026-04-17]
+	Updated databases/sqlite3-docs to 3.53.0 [adam 2026-04-17]
+	Updated databases/sqlite3-diff to 3.53.0 [adam 2026-04-17]
+	Updated databases/sqlite3-tcl to 3.53.0 [adam 2026-04-17]
+	Updated devel/lemon to 1.0.3.53.0 [adam 2026-04-17]
