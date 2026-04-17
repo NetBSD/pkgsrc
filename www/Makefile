@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1912 2026/04/08 15:08:31 taca Exp $
+# $NetBSD: Makefile,v 1.1913 2026/04/17 07:08:45 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1175,7 +1175,6 @@ SUBDIR+=	swiftsurf
 SUBDIR+=	swiggle
 SUBDIR+=	swill
 SUBDIR+=	swish-e
-SUBDIR+=	syncstorage-rs
 SUBDIR+=	syndication
 SUBDIR+=	tcl-cgi
 SUBDIR+=	thin
