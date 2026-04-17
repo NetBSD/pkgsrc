@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.63 2025/12/28 10:07:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.64 2026/04/17 08:35:42 adam Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -113,6 +113,7 @@ include/util/idtree.h
 include/util/idtree_random.h
 include/util/signal.h
 include/util/substitute.h
+include/util/talloc_keep_secret.h
 include/util/tfork.h
 include/util/time.h
 include/util_ldb.h
@@ -173,6 +174,7 @@ ${PYSITELIB}/ldb.so
 ${PYSITELIB}/samba/__init__.py
 ${PYSITELIB}/samba/_glue.so
 ${PYSITELIB}/samba/_ldb.so
+${PYSITELIB}/samba/asn1.py
 ${PYSITELIB}/samba/auth.so
 ${PYSITELIB}/samba/auth_util.py
 ${PYSITELIB}/samba/colour.py
@@ -269,6 +271,7 @@ ${PYSITELIB}/samba/emulate/traffic.py
 ${PYSITELIB}/samba/emulate/traffic_packets.py
 ${PYSITELIB}/samba/forest_update.py
 ${PYSITELIB}/samba/functional_level.py
+${PYSITELIB}/samba/generate_csr.py
 ${PYSITELIB}/samba/gensec.so
 ${PYSITELIB}/samba/getopt.py
 ${PYSITELIB}/samba/gkdi.py
@@ -315,6 +318,7 @@ ${PYSITELIB}/samba/kcc/graph.py
 ${PYSITELIB}/samba/kcc/graph_utils.py
 ${PYSITELIB}/samba/kcc/kcc_utils.py
 ${PYSITELIB}/samba/kcc/ldif_import_export.py
+${PYSITELIB}/samba/key_credential_link.py
 ${PYSITELIB}/samba/logger.py
 ${PYSITELIB}/samba/lsa_utils.py
 ${PYSITELIB}/samba/mdb_util.py
@@ -330,6 +334,8 @@ ${PYSITELIB}/samba/netbios.so
 ${PYSITELIB}/samba/netcmd/__init__.py
 ${PYSITELIB}/samba/netcmd/common.py
 ${PYSITELIB}/samba/netcmd/computer.py
+${PYSITELIB}/samba/netcmd/computer_generate_csr.py
+${PYSITELIB}/samba/netcmd/computer_keytrust.py
 ${PYSITELIB}/samba/netcmd/contact.py
 ${PYSITELIB}/samba/netcmd/dbcheck.py
 ${PYSITELIB}/samba/netcmd/delegation.py
@@ -402,7 +408,9 @@ ${PYSITELIB}/samba/netcmd/user/delete.py
 ${PYSITELIB}/samba/netcmd/user/disable.py
 ${PYSITELIB}/samba/netcmd/user/edit.py
 ${PYSITELIB}/samba/netcmd/user/enable.py
+${PYSITELIB}/samba/netcmd/user/generate_csr.py
 ${PYSITELIB}/samba/netcmd/user/getgroups.py
+${PYSITELIB}/samba/netcmd/user/keytrust.py
 ${PYSITELIB}/samba/netcmd/user/list.py
 ${PYSITELIB}/samba/netcmd/user/move.py
 ${PYSITELIB}/samba/netcmd/user/password.py
@@ -540,6 +548,7 @@ ${PYSITELIB}/samba/tests/domain_backup.py
 ${PYSITELIB}/samba/tests/domain_backup_offline.py
 ${PYSITELIB}/samba/tests/dsdb.py
 ${PYSITELIB}/samba/tests/dsdb_api.py
+${PYSITELIB}/samba/tests/dsdb_dn.py
 ${PYSITELIB}/samba/tests/dsdb_dns.py
 ${PYSITELIB}/samba/tests/dsdb_lock.py
 ${PYSITELIB}/samba/tests/dsdb_quiet_env_tests.py
@@ -567,6 +576,7 @@ ${PYSITELIB}/samba/tests/kcc/graph_utils.py
 ${PYSITELIB}/samba/tests/kcc/kcc_utils.py
 ${PYSITELIB}/samba/tests/kcc/ldif_import_export.py
 ${PYSITELIB}/samba/tests/key_credential_link.py
+${PYSITELIB}/samba/tests/key_credential_link_samdb.py
 ${PYSITELIB}/samba/tests/krb5/alias_tests.py
 ${PYSITELIB}/samba/tests/krb5/as_canonicalization_tests.py
 ${PYSITELIB}/samba/tests/krb5/as_req_tests.py
@@ -586,12 +596,14 @@ ${PYSITELIB}/samba/tests/krb5/kdc_base_test.py
 ${PYSITELIB}/samba/tests/krb5/kdc_tests.py
 ${PYSITELIB}/samba/tests/krb5/kdc_tgs_tests.py
 ${PYSITELIB}/samba/tests/krb5/kdc_tgt_tests.py
+${PYSITELIB}/samba/tests/krb5/key_trust_tests.py
 ${PYSITELIB}/samba/tests/krb5/kpasswd_tests.py
 ${PYSITELIB}/samba/tests/krb5/lockout_tests.py
 ${PYSITELIB}/samba/tests/krb5/ms_kile_client_principal_lookup_tests.py
 ${PYSITELIB}/samba/tests/krb5/netlogon.py
 ${PYSITELIB}/samba/tests/krb5/nt_hash_tests.py
 ${PYSITELIB}/samba/tests/krb5/pac_align_tests.py
+${PYSITELIB}/samba/tests/krb5/pkinit_certificate_mapping_tests.py
 ${PYSITELIB}/samba/tests/krb5/pkinit_tests.py
 ${PYSITELIB}/samba/tests/krb5/protected_users_tests.py
 ${PYSITELIB}/samba/tests/krb5/raw_testcase.py
@@ -710,8 +722,10 @@ ${PYSITELIB}/samba/tests/samba_tool/user.py
 ${PYSITELIB}/samba/tests/samba_tool/user_auth_policy.py
 ${PYSITELIB}/samba/tests/samba_tool/user_auth_silo.py
 ${PYSITELIB}/samba/tests/samba_tool/user_check_password_script.py
+${PYSITELIB}/samba/tests/samba_tool/user_generate_csr.py
 ${PYSITELIB}/samba/tests/samba_tool/user_get_kerberos_ticket.py
 ${PYSITELIB}/samba/tests/samba_tool/user_getpassword_gmsa.py
+${PYSITELIB}/samba/tests/samba_tool/user_keytrust.py
 ${PYSITELIB}/samba/tests/samba_tool/user_virtualCryptSHA.py
 ${PYSITELIB}/samba/tests/samba_tool/user_virtualCryptSHA_base.py
 ${PYSITELIB}/samba/tests/samba_tool/user_virtualCryptSHA_gpg.py
@@ -993,6 +1007,7 @@ lib/samba/vfs/acl_tdb.${SHLIB_EXT}
 lib/samba/vfs/acl_xattr.${SHLIB_EXT}
 lib/samba/vfs/aio_fork.${SHLIB_EXT}
 lib/samba/vfs/aio_pthread.${SHLIB_EXT}
+lib/samba/vfs/aio_ratelimit.${SHLIB_EXT}
 lib/samba/vfs/audit.${SHLIB_EXT}
 lib/samba/vfs/cap.${SHLIB_EXT}
 lib/samba/vfs/catia.${SHLIB_EXT}
@@ -1113,6 +1128,7 @@ man/man8/vfs_acl_tdb.8
 man/man8/vfs_acl_xattr.8
 man/man8/vfs_aio_fork.8
 man/man8/vfs_aio_pthread.8
+man/man8/vfs_aio_ratelimit.8
 man/man8/vfs_audit.8
 man/man8/vfs_cap.8
 man/man8/vfs_catia.8
@@ -1187,6 +1203,8 @@ share/locale/fr/LC_MESSAGES/pam_winbind.mo
 share/locale/hu/LC_MESSAGES/pam_winbind.mo
 share/locale/it/LC_MESSAGES/pam_winbind.mo
 share/locale/ja/LC_MESSAGES/pam_winbind.mo
+share/locale/ka/LC_MESSAGES/net.mo
+share/locale/ka/LC_MESSAGES/pam_winbind.mo
 share/locale/ko/LC_MESSAGES/pam_winbind.mo
 share/locale/nb/LC_MESSAGES/pam_winbind.mo
 share/locale/nl/LC_MESSAGES/pam_winbind.mo
