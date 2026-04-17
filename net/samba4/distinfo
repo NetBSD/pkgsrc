@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.123 2026/03/02 10:07:43 adam Exp $
+$NetBSD: distinfo,v 1.124 2026/04/17 08:35:42 adam Exp $
 
-BLAKE2s (samba-4.23.6.tar.gz) = 2fe87bc32e1ede1ba719addd8b4b884c343f923ba448921430aaa117d9664f48
-SHA512 (samba-4.23.6.tar.gz) = 61dc2a80f1ea5a7a04bc45ba7896107fd1c619ec3f841f9f6adb9c166a3ce3a5cee7b0d097cfa2c768ba65e35167c0739099cc76a5478c0d6f41521a621336c9
-Size (samba-4.23.6.tar.gz) = 43306831 bytes
+BLAKE2s (samba-4.24.1.tar.gz) = 81f222a99a98a6ca31c87e49c6548efb2b92bca8d06737909cf24bd045fb0e14
+SHA512 (samba-4.24.1.tar.gz) = 419653355fd609443b1cd321986e7e83c6479a52d7a998e1197846cdb591305b1173b77022a65cf643c46a3a8810de05499a9eba903b839a87fac7a270ebc85f
+Size (samba-4.24.1.tar.gz) = 43389244 bytes
 SHA1 (patch-buildtools_wafsamba_samba__conftests.py) = d927db17124d2bb5b382885e70a41f84c3929926
 SHA1 (patch-buildtools_wafsamba_samba__install.py) = d801340617da325e3bb70a90350e45cc8e383c2d
 SHA1 (patch-buildtools_wafsamba_samba__pidl.py) = b9015694b80c0e6382d75c806fd6e0eb92e5f998
@@ -21,7 +21,7 @@ SHA1 (patch-lib_util_charset_charset__macosxfs.c) = 9772fc52fff48aec2a7e279223f7
 SHA1 (patch-lib_util_smb__threads.h) = 817591a2b69f31ac29497a2006fe21f0b4b0aaea
 SHA1 (patch-lib_util_tfork.c) = a9acb5561c5bba76450c48904a22019c8b14cbec
 SHA1 (patch-lib_util_time.h) = 5048614e301cf6922ff7fa6693fa58bfe17ff10e
-SHA1 (patch-lib_util_util__crypt.c) = cb76f52dd3b0bf98b1ebe7be6bfa36c3c644955d
+SHA1 (patch-lib_util_util__crypt.c) = 1cd30f2bad4d469745a7e2ca146c591c8ecfec96
 SHA1 (patch-libcli_dns_wscript__build) = 4103a144aa1bb4662fd7a62270941f1a3d01fe89
 SHA1 (patch-nsswitch_stress-nss-libwbclient.c) = c546f00184b0d22b6c150e210962cdfc6fc12df2
 SHA1 (patch-nsswitch_winbind__nss__netbsd.c) = 1214bfbd7714b64f3ff3eb97b6f24e3d2629370f
@@ -39,7 +39,6 @@ SHA1 (patch-source3_smbd_smb1__process.c) = ff59b9b4f4bdfff2761613ff84fbd669899e
 SHA1 (patch-source3_utils_net__offlinejoin.c) = defb3ad930ba88ec040bda8899efd24e2a95f294
 SHA1 (patch-source4_auth_gensec_wscript__build) = 01f3cdf787833e05f2e0b49ff0af7c8bbad2c161
 SHA1 (patch-source4_dsdb_samdb_ldb__modules_wscript__build__server) = 47f55ec16b667a0a4d38de5ac89a117f2ac8f898
-SHA1 (patch-source4_kdc_db-glue.c) = 23dc5352b0b174b7cc63bb913e7c03eaaecd8f2a
 SHA1 (patch-source4_scripting_wscript__build) = aac6894d49f5c17a28d26cb627be8cef1902bb1e
 SHA1 (patch-third__party_heimdal__build_roken.h) = 59d5523676fe8c0315e969247f26b4ea2f900402
 SHA1 (patch-third__party_heimdal_include_heim__threads.h) = 5ad13530cf9688e46f9ad487bb0fddab668c8276
