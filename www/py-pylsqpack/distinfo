@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/10/20 10:11:22 adam Exp $
+$NetBSD: distinfo,v 1.6 2026/04/17 10:26:56 adam Exp $
 
-BLAKE2s (pylsqpack-0.3.23.tar.gz) = fdb000d1fb91bcf8dc6bc04bcf492c62d65aa43115eb550a463ae85a8222268e
-SHA512 (pylsqpack-0.3.23.tar.gz) = c16ea8b85450c4ce941c592711466c20a49f8b2be4aed9369793535f6bf902cde7342031ef7095a5eb4c67aaa88e28ea8c0702be66251485243023e6c46577ff
-Size (pylsqpack-0.3.23.tar.gz) = 676891 bytes
+BLAKE2s (pylsqpack-0.3.24.tar.gz) = 9f46cce14ba751f3ee3e942059abe3f31a6234db3897eb542ffadf84ca7abfa6
+SHA512 (pylsqpack-0.3.24.tar.gz) = 04efa117a679d04a2a7e3ffc9943fe5b51155d92ebf4aea89606878328c70d19f7943a29650cd4751ca8e09bd5a5b63e0049e87576bc2315cf998f5af0757abe
+Size (pylsqpack-0.3.24.tar.gz) = 677187 bytes
