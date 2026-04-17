@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2412 2026/04/17 12:47:26 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2413 2026/04/17 12:53:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3768,3 +3768,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/sqlite3-diff to 3.53.0 [adam 2026-04-17]
 	Updated databases/sqlite3-tcl to 3.53.0 [adam 2026-04-17]
 	Updated devel/lemon to 1.0.3.53.0 [adam 2026-04-17]
+	Updated databases/py-apsw to 3.53.0.0 [adam 2026-04-17]
+	Updated misc/py-pbs-installer to 2026.4.7 [adam 2026-04-17]
