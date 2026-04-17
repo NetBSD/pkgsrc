@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2026/03/15 09:27:56 adam Exp $
+$NetBSD: distinfo,v 1.25 2026/04/17 10:19:34 adam Exp $
 
-BLAKE2s (testtools-2.8.7.tar.gz) = c62f3f7037ab76db4bab073d27bbc10dded416ab2879383edd43491d0672b95a
-SHA512 (testtools-2.8.7.tar.gz) = 673f85058cf1c6d30b9283e67905c9e156304b682bcee7240a42cf2946d0aa0743cf2ae67968582ae58f21feba6a9769c54afd3e1544c966f72ccb2ceb948fac
-Size (testtools-2.8.7.tar.gz) = 219464 bytes
+BLAKE2s (testtools-2.9.0.tar.gz) = 7ce36237c57eac79b812cce96bb8324cd77de41302a0fd3ed0efb38743b3cdde
+SHA512 (testtools-2.9.0.tar.gz) = ab0f8b94d67e432d2ea2edff3e351368607e4e55e8ea8f5c1fa66a186317bb81bd5948745b4d523472f0a60acc7d216d704b1888098e4dff0f28150dce1a7395
+Size (testtools-2.9.0.tar.gz) = 220801 bytes
