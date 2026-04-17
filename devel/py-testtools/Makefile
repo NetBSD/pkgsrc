@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2026/03/15 09:27:56 adam Exp $
+# $NetBSD: Makefile,v 1.33 2026/04/17 10:19:34 adam Exp $
 
-DISTNAME=	testtools-2.8.7
+DISTNAME=	testtools-2.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/testtools/}
@@ -12,7 +12,6 @@ LICENSE=	mit AND python-software-foundation
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-fixtures>=2.0:../../devel/py-fixtures
 # circular test dependency
 # https://github.com/testing-cabal/testscenarios/issues/4
