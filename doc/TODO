@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27119 2026/04/16 19:15:12 wiz Exp $
+$NetBSD: TODO,v 1.27120 2026/04/17 08:39:55 adam Exp $
 
 Suggested new packages
 ======================
@@ -1189,7 +1189,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
-	o samba-4.24.0
 	o samtools-1.23.1
 	o sarg-2.4.0
 	o sasm-3.12.1
