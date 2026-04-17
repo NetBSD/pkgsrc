@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2410 2026/04/17 10:19:54 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2411 2026/04/17 10:33:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3755,10 +3755,11 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/php-contao-manager to 1.10.13 [taca 2026-04-16]
 	Removed www/syncstorage-rs [wiz 2026-04-16]
 	Updated editors/vim-share to 9.2.0357 [morr 2026-04-16]
-	Updated editors/vim-share to 9.2.0357 [sh 2026-04-16]
 	Updated math/fast_float to 8.2.5 [adam 2026-04-17]
 	Updated devel/py-packaging to 26.1 [adam 2026-04-17]
 	Updated net/samba4 to 4.24.1 [adam 2026-04-17]
 	Updated devel/nss to 3.123.0 [wiz 2026-04-17]
 	Updated databases/postgresql-timescaledb to 2.26.3 [adam 2026-04-17]
 	Updated devel/py-testtools to 2.9.0 [adam 2026-04-17]
+	Updated www/py-pylsqpack to 0.3.24 [adam 2026-04-17]
+	Updated lang/py-python-discovery to 1.2.2 [adam 2026-04-17]
