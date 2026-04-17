@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27121 2026/04/17 09:31:30 wiz Exp $
+$NetBSD: TODO,v 1.27122 2026/04/17 09:33:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1230,7 +1230,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o softhsm-2.6.1
 	o sparsehash-2.0.4
 	o spcaview-20060501
-	o spirv-tools-2026.1
 	o spl-1.0pre6
 	o sqlite-3.53.0
 	o sqlrelay-2.1.1
@@ -1253,7 +1252,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o swi-prolog-packages-9.2.9
 	o syft-0.68.1
 	o sympa-6.2.76
-	o syncstorage-rs-0.22.2
 	o syncthing-2.0
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
