@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.10 2026/04/12 11:37:17 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.11 2026/04/17 17:03:57 maya Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -98,3 +98,5 @@ graphics/png: security fix
 Pullup ticket #7078 - requested by nia
 www/palemoon: security fix
 
+Pullup ticket #7079 - requested by morr
+editors/vim-share: Security fix
