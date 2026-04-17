@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2024/11/08 13:43:37 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2026/04/17 09:38:54 adam Exp $
 
 BUILDLINK_TREE+=	postgresql17-client
 
@@ -32,6 +32,10 @@ pkgbase := postgresql17-client
 .if ${PKG_BUILD_OPTIONS.postgresql17-client:Mgssapi}
 BUILDLINK_API_DEPENDS.mit-krb5+=	mit-krb5>=1.11	# gss_store_cred_into
 .  include "../../security/mit-krb5/buildlink3.mk"
+.endif
+
+.if ${PKG_BUILD_OPTIONS.postgresql17-client:Micu}
+.  include "../../textproc/icu/buildlink3.mk"
 .endif
 .endif # POSTGRESQL17_CLIENT_BUILDLINK3_MK
 
