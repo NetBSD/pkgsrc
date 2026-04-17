@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/12/01 16:21:32 vins Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/04/17 19:14:28 vins Exp $
 bin/gitwrapper
 bin/got
 bin/gotadmin
@@ -32,11 +32,14 @@ man/man5/got.conf.5
 man/man5/gotd-secrets.conf.5
 man/man5/gotd.conf.5
 man/man5/gotwebd.conf.5
+man/man7/got-portable.7
 man/man8/gotctl.8
 man/man8/gotd.8
+man/man8/gotwebctl.8
 man/man8/gotwebd.8
 sbin/cvg
 sbin/gotd
+sbin/gotwebctl
 sbin/gotwebd
 share/doc/got/CHANGELOG
 share/doc/got/README
