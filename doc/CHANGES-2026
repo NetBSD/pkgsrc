@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2406 2026/04/16 21:12:14 morr Exp $
+$NetBSD: CHANGES-2026,v 1.2407 2026/04/17 05:39:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3756,3 +3756,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed www/syncstorage-rs [wiz 2026-04-16]
 	Updated editors/vim-share to 9.2.0357 [morr 2026-04-16]
 	Updated editors/vim-share to 9.2.0357 [sh 2026-04-16]
+	Updated math/fast_float to 8.2.5 [adam 2026-04-17]
+	Updated devel/py-packaging to 26.1 [adam 2026-04-17]
