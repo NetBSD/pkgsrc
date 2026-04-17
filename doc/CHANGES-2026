@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2408 2026/04/17 08:39:55 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2409 2026/04/17 09:31:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3759,3 +3759,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/fast_float to 8.2.5 [adam 2026-04-17]
 	Updated devel/py-packaging to 26.1 [adam 2026-04-17]
 	Updated net/samba4 to 4.24.1 [adam 2026-04-17]
+	Updated devel/nss to 3.123.0 [wiz 2026-04-17]
