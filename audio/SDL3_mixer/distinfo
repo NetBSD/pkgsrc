@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/18 15:08:09 js Exp $
+
+BLAKE2s (SDL3_mixer-3.2.0.tar.gz) = 85c5547d79e56bec44540c94f41f8e4d88e878427ce86f7abfe6419de53194e1
+SHA512 (SDL3_mixer-3.2.0.tar.gz) = 7cc70664540b005b09febd3795380ab81362707b5a55939ec7c315958503bd327c4d7f7fd1664ac3bf710f4c13f02a1de25ff04bd10f9ee27cd2508374064b1e
+Size (SDL3_mixer-3.2.0.tar.gz) = 4946591 bytes

@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/18 15:08:09 js Exp $
+include/SDL3_mixer/SDL_mixer.h
+lib/cmake/SDL3_mixer/FindFLAC.cmake
+lib/cmake/SDL3_mixer/FindFluidSynth.cmake
+lib/cmake/SDL3_mixer/FindOgg.cmake
+lib/cmake/SDL3_mixer/FindOpus.cmake
+lib/cmake/SDL3_mixer/FindOpusFile.cmake
+lib/cmake/SDL3_mixer/FindVorbis.cmake
+lib/cmake/SDL3_mixer/Findgme.cmake
+lib/cmake/SDL3_mixer/Findlibxmp-lite.cmake
+lib/cmake/SDL3_mixer/Findlibxmp.cmake
+lib/cmake/SDL3_mixer/Findmpg123.cmake
+lib/cmake/SDL3_mixer/Findtremor.cmake
+lib/cmake/SDL3_mixer/Findwavpack.cmake
+lib/cmake/SDL3_mixer/PkgConfigHelper.cmake
+lib/cmake/SDL3_mixer/SDL3_mixer-shared-targets-relwithdebinfo.cmake
+lib/cmake/SDL3_mixer/SDL3_mixer-shared-targets.cmake
+lib/cmake/SDL3_mixer/SDL3_mixerConfig.cmake
+lib/cmake/SDL3_mixer/SDL3_mixerConfigVersion.cmake
+lib/libSDL3_mixer.0.2.0.dylib
+lib/libSDL3_mixer.0.dylib
+lib/libSDL3_mixer.dylib
+lib/pkgconfig/sdl3-mixer.pc
+share/licenses/SDL3_mixer/LICENSE.txt
