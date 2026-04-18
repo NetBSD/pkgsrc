@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2026/02/06 10:04:44 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/04/18 22:51:12 nia Exp $
 
 DISTNAME=	ClassiCube-1.3.6
 PKGNAME=	${DISTNAME:tl}
@@ -14,6 +14,8 @@ LICENSE=	modified-bsd
 USE_TOOLS+=	gmake
 
 TOOL_DEPENDS+=	dos2unix-[0-9]*:../../converters/dos2unix
+
+FORCE_C_STD=	gnu89
 
 BUILD_TARGET=	default
 
