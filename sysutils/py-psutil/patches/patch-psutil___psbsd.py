@@ -1,8 +1,10 @@
-$NetBSD: patch-psutil___psbsd.py,v 1.9 2026/04/06 16:53:12 fox Exp $
+$NetBSD: patch-psutil___psbsd.py,v 1.10 2026/04/18 10:25:08 fox Exp $
 
 Remove dependency on procfs.
 
-Upstream: https://github.com/giampaolo/psutil/pull/2805
+Upstream:
+- https://github.com/giampaolo/psutil/pull/2805
+- https://github.com/giampaolo/psutil/pull/2822
 
 --- psutil/_psbsd.py.orig	2026-01-20 14:38:58.000000000 +0000
 +++ psutil/_psbsd.py
@@ -63,3 +65,12 @@ Upstream: https://github.com/giampaolo/psutil/pull/2805
          # Note: the C ext is returning some metrics we are not exposing:
          # traps, faults and forks.
          ctxsw, intrs, soft_intrs, syscalls, _traps, _faults, _forks = (
+@@ -651,7 +618,7 @@ class Process:
+             try:
+                 return cext.proc_cmdline(self.pid)
+             except OSError as err:
+-                if err.errno == errno.EINVAL:
++                if err.errno in (errno.EINVAL, errno.EFAULT):
+                     pid, name, ppid = self.pid, self._name, self._ppid
+                     if cext.proc_is_zombie(self.pid):
+                         raise ZombieProcess(pid, name, ppid) from err
