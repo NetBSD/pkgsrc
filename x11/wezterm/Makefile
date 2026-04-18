@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2026/04/18 14:56:36 ktnb Exp $
+# $NetBSD: Makefile,v 1.12 2026/04/18 15:00:16 ktnb Exp $
 
 # VERSION must match the output of:
 # git -c "core.abbrev=8" show -s "--format=%cd-%h" "--date=format:%Y%m%d-%H%M%S"
@@ -103,7 +103,9 @@ do-install:
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-#.include "../../lang/libunwind/buildlink3.mk"
+.if ${OPSYS} == "Darwin"
+.include "../../lang/libunwind/buildlink3.mk"
+.endif
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
