@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2026/04/03 15:39:49 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/04/18 14:56:36 ktnb Exp $
 
 # VERSION must match the output of:
 # git -c "core.abbrev=8" show -s "--format=%cd-%h" "--date=format:%Y%m%d-%H%M%S"
@@ -94,12 +94,16 @@ do-install:
 .include "cargo-depends.mk"
 
 .include "../../lang/rust/cargo.mk"
+.include "../../devel/wayland/platform.mk"
+.if ${PLATFORM_SUPPORTS_WAYLAND:tl} == yes
 .include "../../devel/wayland/buildlink3.mk"
+.endif
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+#.include "../../lang/libunwind/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"

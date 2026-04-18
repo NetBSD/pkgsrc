@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2026/04/03 15:37:48 wiz Exp $
+$NetBSD: distinfo,v 1.7 2026/04/18 14:56:36 ktnb Exp $
 
 BLAKE2s (addr2line-0.25.1.crate) = cc5c422ec48ccef5c2c46379d2f600644609490afafea5020f2020815d1146e6
 SHA512 (addr2line-0.25.1.crate) = c400f3b6ccaff8a1c0d7d82c708a1784b8fd5ba64b6e420e85819d59b1cadb55fa59c852925093b921469f272d1d5140cf12f013ae75d1e1bc85021097df8fc2
@@ -2197,5 +2197,10 @@ BLAKE2s (zvariant_utils-2.1.0.crate) = b142d63425365aedf109bafac551bf52a32897836
 SHA512 (zvariant_utils-2.1.0.crate) = 345b70d1106b37df41426efdb1ba49bf270e00898381c2a8021b5761c59efdea55def45cb2e2598b130b6cba8733503f3997a55578bca90867ab3e8f2346f80e
 Size (zvariant_utils-2.1.0.crate) = 7043 bytes
 SHA1 (patch-Cargo.toml) = 8dc1fdccd70431cfd3950c0326236e243432a19d
+SHA1 (patch-async__ossl_Cargo.toml) = 5aca84ebb0cf82014278e22f7263f54171bd0c2d
+SHA1 (patch-config_src_font.rs) = 30d81cff72a0aa6e839642c11543f998feed3d60
 SHA1 (patch-deps_freetype_build.rs) = 1f5d4ab3aba583e4ed5912e316948a6d3e2f68f3
 SHA1 (patch-deps_harfbuzz_build.rs) = 6b77be70aa4ffb975ffd55488fb2b02032091f10
+SHA1 (patch-wezterm-font_Cargo.toml) = 2354517d3857b7650a2c3660c870bc22c84d1df7
+SHA1 (patch-wezterm-font_src_lib.rs) = 355b94198b195bf807f80680d2f0b90b1470cdfa
+SHA1 (patch-wezterm-font_src_locator_mod.rs) = 93b31e9dc5fbc5c1f6bc485fbed3b111e62ac025
