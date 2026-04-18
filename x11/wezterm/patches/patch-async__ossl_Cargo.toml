@@ -1,0 +1,18 @@
+$NetBSD: patch-async__ossl_Cargo.toml,v 1.1 2026/04/18 14:56:36 ktnb Exp $
+
+Don't use vendored OpenSSL on Darwin
+
+--- async_ossl/Cargo.toml.orig	2026-01-17 15:44:28.000000000 +0000
++++ async_ossl/Cargo.toml
+@@ -11,9 +11,9 @@ publish = false
+ [dependencies]
+ async-io.workspace = true
+ 
+-[target.'cfg(not(any(windows, target_os="macos")))'.dependencies]
++[target.'cfg(not(windows))'.dependencies]
+ openssl.workspace = true
+ 
+-[target.'cfg(any(windows, target_os="macos"))'.dependencies]
++[target.'cfg(windows)'.dependencies]
+ openssl = { workspace = true, features=["vendored"] }
+ 

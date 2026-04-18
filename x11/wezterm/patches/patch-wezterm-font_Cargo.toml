@@ -1,0 +1,15 @@
+$NetBSD: patch-wezterm-font_Cargo.toml,v 1.1 2026/04/18 14:56:36 ktnb Exp $
+
+Always use fontconfig, even on Darwin
+
+--- wezterm-font/Cargo.toml.orig	2026-04-15 15:27:09.918072082 +0000
++++ wezterm-font/Cargo.toml
+@@ -40,7 +40,7 @@ wezterm-input-types.workspace = true
+ wezterm-term = { workspace=true, features=["use_serde"] }
+ wezterm-toast-notification.workspace = true
+ 
+-[target.'cfg(any(target_os = "android", all(unix, not(target_os = "macos"))))'.dependencies]
++[target.'cfg(unix)'.dependencies]
+ fontconfig.workspace = true
+ 
+ [target."cfg(windows)".dependencies]
