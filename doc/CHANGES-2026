@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2420 2026/04/18 15:09:52 js Exp $
+$NetBSD: CHANGES-2026,v 1.2421 2026/04/18 19:56:18 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3776,3 +3776,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/megacmd to 2.5.2 [kikadf 2026-04-18]
 	Updated wayland/wlroots to 0.19.3 [kikadf 2026-04-18]
 	Added audio/SDL3_mixer to 3.2.0 [js 2026-04-18]
+	Updated sysutils/u-boot-sopine-baseboard to 2024.10 [jmcneill 2026-04-18]
