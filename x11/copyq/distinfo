@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2026/03/27 11:09:20 kikadf Exp $
+$NetBSD: distinfo,v 1.9 2026/04/18 09:23:28 kikadf Exp $
 
-BLAKE2s (copyq-14.0.0.tar.gz) = ec55759f23cdca2c8230008f6a5e3022718626f94f55a58f5d50807f7c0d75cb
-SHA512 (copyq-14.0.0.tar.gz) = ddbbd489bc3e703b2c93743308fa2ec88d6eb563002428ce5436504c2ffa9dcd569629d9e7a1ad60d81dc9c15da8e2acb5de5224060c24ae6570fb40ef12e8cf
-Size (copyq-14.0.0.tar.gz) = 3670542 bytes
-SHA1 (patch-CMakeLists.txt) = 1a114ef64c117215420e919543ef8b73372b12ba
+BLAKE2s (copyq-15.0.0.tar.gz) = 239be055d6e153aff4ab617d23cffd957719c62c4da4c02264f700638619adb1
+SHA512 (copyq-15.0.0.tar.gz) = 9f8cf5c71b661aa4c7628c567dfe18a3171594ccf81fdd72d83b844b3b953045673d8424d26cee31c2c06332ccb4847019af750408393493f9f304c3a2d1a526
+Size (copyq-15.0.0.tar.gz) = 3699124 bytes
