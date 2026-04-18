@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/04/14 10:52:51 kikadf Exp $
+# $NetBSD: Makefile,v 1.2 2026/04/18 09:31:41 kikadf Exp $
 
-DISTNAME=	labwc-0.9.6
+DISTNAME=	labwc-0.9.7
 CATEGORIES=	wayland
 MASTER_SITES=	${MASTER_SITE_GITHUB:=labwc/}
 
