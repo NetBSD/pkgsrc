@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2462 2026/04/19 17:19:31 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2463 2026/04/19 17:20:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3818,3 +3818,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/meson to 1.11.0 [wiz 2026-04-19]
 	Updated textproc/py-lxml to 6.1.0 [wiz 2026-04-19]
 	Updated devel/py-mako to 1.3.11 [wiz 2026-04-19]
+	Updated audio/py-mediafile to 0.16.2 [wiz 2026-04-19]
