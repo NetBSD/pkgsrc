@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/12/13 20:50:45 abs Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/04/19 12:07:59 rhialto Exp $
 bin/${SIMHPREFIX}3b2
 bin/${SIMHPREFIX}3b2-400
 bin/${SIMHPREFIX}3b2-700
@@ -31,6 +31,7 @@ bin/${SIMHPREFIX}infoserver1000
 bin/${SIMHPREFIX}infoserver150vxt
 bin/${SIMHPREFIX}intel-mds
 bin/${SIMHPREFIX}lgp
+bin/${SIMHPREFIX}linc
 bin/${SIMHPREFIX}microvax1
 bin/${SIMHPREFIX}microvax2
 bin/${SIMHPREFIX}microvax2000
