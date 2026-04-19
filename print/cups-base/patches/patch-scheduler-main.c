@@ -1,8 +1,8 @@
-$NetBSD: patch-scheduler-main.c,v 1.4 2023/06/23 06:46:48 wiz Exp $
+$NetBSD: patch-scheduler-main.c,v 1.5 2026/04/19 14:52:23 wiz Exp $
 
 Add a PidFile configuration directive to write a PID file.
 
---- scheduler/main.c.orig	2023-06-22 10:17:14.000000000 +0000
+--- scheduler/main.c.orig	2026-04-17 12:22:45.000000000 +0000
 +++ scheduler/main.c
 @@ -63,6 +63,7 @@
   * Local functions...
@@ -12,7 +12,7 @@ Add a PidFile configuration directive to write a PID file.
  static void		parent_handler(int sig);
  static void		process_children(void);
  static void		sigchld_handler(int sig);
-@@ -675,6 +676,13 @@ main(int  argc,				/* I - Number of comm
+@@ -673,6 +674,13 @@ main(int  argc,				/* I - Number of command-line args 
  #endif /* __APPLE__ */
  
   /*
@@ -26,7 +26,7 @@ Add a PidFile configuration directive to write a PID file.
    * Send server-started event...
    */
  
-@@ -1166,6 +1174,7 @@ main(int  argc,				/* I - Number of comm
+@@ -1164,6 +1172,7 @@ main(int  argc,				/* I - Number of command-line args 
                    "Scheduler shutting down due to program error.");
    }
  
@@ -34,7 +34,7 @@ Add a PidFile configuration directive to write a PID file.
   /*
    * Close all network clients...
    */
-@@ -1191,6 +1200,12 @@ main(int  argc,				/* I - Number of comm
+@@ -1189,6 +1198,12 @@ main(int  argc,				/* I - Number of command-line args 
    */
  
    cupsdDeleteTemporaryPrinters(1);
@@ -47,10 +47,14 @@ Add a PidFile configuration directive to write a PID file.
  
  #ifdef __APPLE__
   /*
-@@ -2127,6 +2142,36 @@ service_checkout(int shutdown)          
- 
- 
- /*
+@@ -2136,6 +2151,36 @@ service_checkout(int shutdown)          /* I - Shuttin
+   if (OnDemand && shutdown)
+     xpc_transaction_end();
+ #  endif /* __APPLE__ */
++}
++
++
++/*
 + * 'create_pidfile()' - Create PID file.
 + */
 +static int
@@ -77,10 +81,6 @@ Add a PidFile configuration directive to write a PID file.
 +  }
 +  (void)close(fd);
 +  return (1);
-+}
-+
-+
-+/*
-  * 'usage()' - Show scheduler usage.
-  */
+ }
+ 
  

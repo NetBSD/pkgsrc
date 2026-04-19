@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.47 2025/12/12 09:27:39 wiz Exp $
+$NetBSD: distinfo,v 1.48 2026/04/19 14:52:23 wiz Exp $
 
-BLAKE2s (cups-2.4.16-source.tar.gz) = a8bc5711414a67e7aa837d95b03c50c0c4dcd4b31c81081c3bf01528a4597774
-SHA512 (cups-2.4.16-source.tar.gz) = ee0d2afdba7b713c8249912dd738c4fa87efb6f7cdb0a48a48be299d03ae4b1a02773418d6ffc4f7c5731bbae2c859bcc39695f9b93cc422ec6124b7ba179734
-Size (cups-2.4.16-source.tar.gz) = 8159166 bytes
+BLAKE2s (cups-2.4.17-source.tar.gz) = d16f0bb335d74ad6a6aa4dbb7d7f2cf1153c1451d45ad114a5c228862768cd4b
+SHA512 (cups-2.4.17-source.tar.gz) = a454a870f175327ff86e10bc8136ee1d0d939015953b6ebd12e9fce3cdfc91eb09c7553a85085611e884b864c62a6d16aac8e008b3484493211bdc6de2a370fa
+Size (cups-2.4.17-source.tar.gz) = 8161554 bytes
 SHA1 (patch-ae) = 7f12aa886208f9e634d5c3fd3bc1fd4a385f22a6
 SHA1 (patch-ai) = d4aa1b59c77fa2cbf614eb661d9a791311b399c2
 SHA1 (patch-at) = 9517bff0bf2c892f0723a25f243ba188f7781393
@@ -18,7 +18,7 @@ SHA1 (patch-doc-help-man-cups-files.conf.html) = 1af4ff8b768d3c2fc5e5b5b11a77ca6
 SHA1 (patch-man_cups-files.conf.5) = 51c06d39e20bf8c39c784fec1f32f6c8100cf821
 SHA1 (patch-scheduler-conf.c) = 3e8dda2dc04c31a58a902c70161724a57bdc3e43
 SHA1 (patch-scheduler-conf.h) = cd5c49579795c69b50abbff2b0f9604ffe8bfa5a
-SHA1 (patch-scheduler-main.c) = 347df789f10b77e4594a3e1a6d586a4c5e7d3749
-SHA1 (patch-scheduler_auth.c) = 63309d001f541f309ff1111abd54fc6b6527e6e1
+SHA1 (patch-scheduler-main.c) = d0b944e4f283ef943241fb8b29ea2f278c28b7c8
+SHA1 (patch-scheduler_auth.c) = 5d6505917dd11e6fe71a3fa9217075d7248cfe23
 SHA1 (patch-scheduler_dirsvc.c) = 1dba98dc171df733acb99e5f31ad838845a917bc
 SHA1 (patch-tools_ippfind.c) = f0774fcf5ece380fd6fa09adb3c068910ddfa367
