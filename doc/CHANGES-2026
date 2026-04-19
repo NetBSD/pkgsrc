@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2445 2026/04/19 14:38:52 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2446 2026/04/19 14:39:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3801,3 +3801,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-aws-partitions to 1.1240.0 [taca 2026-04-19]
 	Updated www/ruby-aws-sdk-core to 3.245.0 [taca 2026-04-19]
 	Updated www/ruby-css-parser to 2.0.0 [taca 2026-04-19]
+	Updated graphics/OpenJPH to 0.27.0 [wiz 2026-04-19]
