@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/11/03 06:29:14 taca Exp $
+$NetBSD: distinfo,v 1.2 2026/04/19 14:41:11 taca Exp $
 
-BLAKE2s (propshaft-1.3.1.gem) = 4a67bff5e0694212d6122d39b5bc265affc879070e0bbf01b6b169dabc7f8822
-SHA512 (propshaft-1.3.1.gem) = a32e73c7a2b223d007ec0eec09706bf12012fc6fba1920166badf25b3a41dd3efb78120155bfb50117eeef4b9b96de49b647ba5c38301f5e6354b1473aae0f79
-Size (propshaft-1.3.1.gem) = 18432 bytes
+BLAKE2s (propshaft-1.3.2.gem) = 016f4ac61ff853f7406fc104795d97f752b70d46e4b5b05a1a5e1b16cc980c19
+SHA512 (propshaft-1.3.2.gem) = 638cf8262fa1938500ffe6b989b20762a12f7f81e10b52095211073924d2884e5baa5e4b8db690ccfe8983b328f4e1e72962069fcbd026ee23f7994175d57067
+Size (propshaft-1.3.2.gem) = 18432 bytes
