@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2026/03/29 13:17:19 taca Exp $
+# $NetBSD: Makefile,v 1.9 2026/04/19 14:22:55 taca Exp $
 
-DISTNAME=	rex-bin_tools-0.1.15
+DISTNAME=	rex-bin_tools-0.1.16
 CATEGORIES=	security
 
 MAINTAINER=	minskim@NetBSD.org
