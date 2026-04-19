@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.755 2026/04/19 18:28:48 vins Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.756 2026/04/19 19:28:09 vins Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30311,3 +30311,4 @@ SOGo<5.12.5		security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2026-33550
 awstats-[0-9]*		command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-63261
 ruby32-*	eol	https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 opensmtpd<7.8.0p1	denial-of-service	https://www.openbsd.org/errata78.html
+inetutils<2.7nb1	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2026-24061
