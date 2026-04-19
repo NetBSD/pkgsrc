@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2467 2026/04/19 17:34:29 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2468 2026/04/19 17:35:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3823,3 +3823,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-ruff to 0.15.11 [wiz 2026-04-19]
 	Updated audio/libifp to 1.0.1.0 [wiz 2026-04-19]
 	Updated audio/ifp-line to 0.4.1 [wiz 2026-04-19]
+	Updated devel/cargo-edit to 0.13.10 [pin 2026-04-19]
