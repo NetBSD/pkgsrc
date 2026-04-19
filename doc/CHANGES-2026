@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2469 2026/04/19 17:37:38 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2470 2026/04/19 17:38:56 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3825,3 +3825,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/ifp-line to 0.4.1 [wiz 2026-04-19]
 	Updated devel/cargo-edit to 0.13.10 [pin 2026-04-19]
 	Updated devel/cargo-modules to 0.26.0 [pin 2026-04-19]
+	Updated textproc/treemd to 0.5.10 [pin 2026-04-19]
