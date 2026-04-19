@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.756 2026/04/19 19:28:09 vins Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.757 2026/04/19 20:00:29 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29433,7 +29433,7 @@ freerdp2<3.21.0	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-23534
 freerdp2<3.21.0	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-23732
 freerdp2<3.21.0	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2026-23883
 freerdp2<3.21.0	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2026-23884
-inetutils<2.8	remote-authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2026-24061
+inetutils<2.7nb1	remote-authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2026-24061
 nodejs20<20.20.0	security-bypass				https://nvd.nist.gov/vuln/detail/CVE-2025-55130
 nodejs22<22.22.0	security-bypass				https://nvd.nist.gov/vuln/detail/CVE-2025-55130
 nodejs24<24.13.0	security-bypass				https://nvd.nist.gov/vuln/detail/CVE-2025-55130
@@ -30311,4 +30311,3 @@ SOGo<5.12.5		security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2026-33550
 awstats-[0-9]*		command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-63261
 ruby32-*	eol	https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 opensmtpd<7.8.0p1	denial-of-service	https://www.openbsd.org/errata78.html
-inetutils<2.7nb1	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2026-24061
