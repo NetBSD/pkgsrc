@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2426 2026/04/19 07:57:47 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2427 2026/04/19 07:58:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3782,3 +3782,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/iceauth to 1.0.11 [wiz 2026-04-19]
 	Updated x11/ico to 1.0.7 [wiz 2026-04-19]
 	Updated x11/listres to 1.0.7 [wiz 2026-04-19]
+	Updated x11/mkcomposecache to 1.2.3 [wiz 2026-04-19]
