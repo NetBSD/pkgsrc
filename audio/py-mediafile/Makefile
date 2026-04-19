@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2026/04/15 10:52:45 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/04/19 17:20:08 wiz Exp $
 
-DISTNAME=	mediafile-0.16.1
+DISTNAME=	mediafile-0.16.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mediafile/}
