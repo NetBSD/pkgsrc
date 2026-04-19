@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2424 2026/04/19 07:54:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2425 2026/04/19 07:56:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3780,3 +3780,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/fasttracker2 to 2.17 [fox 2026-04-19]
 	Updated x11/editres to 1.1.0 [wiz 2026-04-19]
 	Updated x11/iceauth to 1.0.11 [wiz 2026-04-19]
+	Updated x11/ico to 1.0.7 [wiz 2026-04-19]
