@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 09:59:03 nia Exp $
+$NetBSD: distinfo,v 1.14 2026/04/19 17:34:19 wiz Exp $
 
-BLAKE2s (ifp-line-0.3.tar.gz) = c586042f16ac183f0d61f9c667d0eeb35743d3116310b81f45f01f0d4f7bb0c4
-SHA512 (ifp-line-0.3.tar.gz) = 516ad85fdaf69111581b013b2517c7083656436d429a86ec5ca4b7dcaf1c841538f98138cce8839d990a34550f11cc6bc9dedc701b0123b9cb73a91a7d78694d
-Size (ifp-line-0.3.tar.gz) = 138272 bytes
-SHA1 (patch-Makefile_am) = a273f2e813b43b717155a2dcf7bc1372d23b936b
-SHA1 (patch-Makefile_in) = cf64aab56fbf9d7b58535a341c93176a6709b02b
+BLAKE2s (ifp-line-0.4.1.tar.gz) = 4e097818f4060f2cd76917c9241dd87a4e63797544c082d29186daaf7c2541ab
+SHA512 (ifp-line-0.4.1.tar.gz) = 797dd1a175c620195ab2f2b125feb5790588d87de551d88b20c20a93ac5423de55aa369818544093424697306f1bea1fb04d4730be74eab448286dc6f187718f
+Size (ifp-line-0.4.1.tar.gz) = 165528 bytes
 SHA1 (patch-ifp__routines.c) = 654fbb77f3404e987e7fb777da7cd0e1e92f4b72
