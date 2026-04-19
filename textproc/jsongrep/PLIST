@@ -1,2 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2026/03/29 15:28:31 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/04/19 16:08:20 pin Exp $
 bin/jg
+man/man1/jg-generate-man.1
+man/man1/jg-generate-shell.1
+man/man1/jg-generate.1
+man/man1/jg.1
+share/bash-completion/completions/jg
+share/zsh/site-functions/_jg
