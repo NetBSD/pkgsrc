@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2025/05/18 01:21:42 taca Exp $
+$NetBSD: distinfo,v 1.16 2026/04/19 14:18:00 taca Exp $
 
-BLAKE2s (metasploit-concern-5.0.5.gem) = a93ec20a80df80f720d2f053b611885dcd7e49f79b5b90e55e836e4c0eea6c22
-SHA512 (metasploit-concern-5.0.5.gem) = 231775f6ca1c9194fb0104290fbf305f5ed80c5b4509c2736ce279331c9d76db00ee851869d896d5e03f628ab5b64e5bb4ea754d46ea44384218dc30288515ec
-Size (metasploit-concern-5.0.5.gem) = 12800 bytes
+BLAKE2s (metasploit-concern-5.0.6.gem) = 7a04cdc6907d25c6285f503640accf58d08498699d6385082bd990790b433c61
+SHA512 (metasploit-concern-5.0.6.gem) = 7720e11222bcffad50193e476aff0c225611237eb35a375a5ada245ae5df2819d811f4a5944c574375b72e3699f8843831a319c6546967ffb06dd6a05b4dd17f
+Size (metasploit-concern-5.0.6.gem) = 12800 bytes
