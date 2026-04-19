@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/11/03 06:29:14 taca Exp $
+# $NetBSD: Makefile,v 1.2 2026/04/19 14:41:11 taca Exp $
 
-DISTNAME=	propshaft-1.3.1
+DISTNAME=	propshaft-1.3.2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
