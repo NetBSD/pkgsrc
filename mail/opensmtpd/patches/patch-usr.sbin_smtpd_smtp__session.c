@@ -1,8 +1,8 @@
-$NetBSD: patch-usr.sbin_smtpd_smtp__session.c,v 1.2 2025/11/02 20:13:39 vins Exp $
+$NetBSD: patch-usr.sbin_smtpd_smtp__session.c,v 1.3 2026/04/19 18:16:47 vins Exp $
 
 Add a patch to handle long usernames during SMTP authentication.
 
---- usr.sbin/smtpd/smtp_session.c.orig	2025-07-30 20:26:49.764391744 +0000
+--- usr.sbin/smtpd/smtp_session.c.orig	2026-03-26 17:09:54.833595248 +0000
 +++ usr.sbin/smtpd/smtp_session.c
 @@ -80,6 +80,7 @@ enum {
  	TX_ERROR_ENVELOPE,
@@ -37,18 +37,18 @@ Add a patch to handle long usernames during SMTP authentication.
  		/* buf is a byte string, NUL terminate. */
  		buf[len] = '\0';
  
-@@ -2021,9 +2031,12 @@ smtp_rfc4954_auth_login(struct smtp_sess
+@@ -2025,9 +2035,12 @@ smtp_rfc4954_auth_login(struct smtp_sess
  
  	case STATE_AUTH_USERNAME:
  		memset(s->username, 0, sizeof(s->username));
 -		if (base64_decode(arg, (unsigned char *)s->username,
 -				  sizeof(s->username) - 1) == -1)
-+		if (base64_decode(arg, (unsigned char *)buf,
-+				  sizeof(buf) - 1) == -1)
++ 		if (base64_decode(arg, (unsigned char *)buf,
++ 				  sizeof(buf) - 1) == -1)
  			goto abort;
 +		if (strlcpy(s->username, buf, sizeof(s->username))
-+		    >= sizeof(s->username))
-+			s->flags |= SF_USERTOOLONG;
++		  >= sizeof(s->username))
++ 			s->flags |= SF_USERTOOLONG;
  
- 		smtp_enter_state(s, STATE_AUTH_PASSWORD);
- 		smtp_reply(s, "334 UGFzc3dvcmQ6");
+ 		if (s->username[strcspn(s->username, "\r\n")] != '\0')
+ 			goto abort;
