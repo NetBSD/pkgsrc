@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2026/04/05 12:10:24 wiz Exp $
+$NetBSD: distinfo,v 1.3 2026/04/19 14:47:33 wiz Exp $
 
 BLAKE2s (aho-corasick-1.1.3.crate) = 36150b5dacb72fa7cd0d33aee15e14857914224878f0af76eabcb9daa68e3ae0
 SHA512 (aho-corasick-1.1.3.crate) = ba422a54688c4678fcf16e34fdf3ed06c333e6e3fc8b75af9272a215add494d43ebaef319021134b61327fd5d3572aec0dc655b714ffb3bc71ba3c265c9ebb69
@@ -234,9 +234,9 @@ Size (jql-runner-8.1.2.crate) = 19385 bytes
 BLAKE2s (js-sys-0.3.88.crate) = c04f4ff7e08135ebcde0b262a043ff5e2e6f9774ed810a17bf7ad37cbebe5601
 SHA512 (js-sys-0.3.88.crate) = 058ccb19d26888181ac3c66d46650ad3b05d1b2d41dd24a7cb1b15d133e836e496c4c1a27f8ffbba398db9b0f6ac87058d2e63de9abf088291481aac018af1f3
 Size (js-sys-0.3.88.crate) = 91615 bytes
-BLAKE2s (jsongrep-0.8.1.tar.gz) = ef01e6e91bf4c461b18d577555953612bb3c63bb81955c6115c9c1a35e1c763e
-SHA512 (jsongrep-0.8.1.tar.gz) = 168ed299d05e00402941ed7667f4e0440b03f2c062411d9f5daf1758a6daedf9b5727a6a02cd8612435f29ef1eea4cfcd3f318dc195997735308dbddadd32e42
-Size (jsongrep-0.8.1.tar.gz) = 413089 bytes
+BLAKE2s (jsongrep-0.9.0.tar.gz) = d12f34d44f385a52a65f78a6182804b2c84532c8db4dff7fecf38a0de5392c2e
+SHA512 (jsongrep-0.9.0.tar.gz) = a774a2e6cea0441a25119bce61d2c9d99d50d78e9faf84d76899815ecc50b946cb9eb4988e99a15a80be6c772f3cf6bc4ae0f319802dcadbf88e174ef21c2938
+Size (jsongrep-0.9.0.tar.gz) = 443452 bytes
 BLAKE2s (jsonpath-rust-1.0.4.crate) = 3e02ef9b568c7de59dba6cbebc45624a2c375d4a2bc316e1e259cb71cd766376
 SHA512 (jsonpath-rust-1.0.4.crate) = ce6dc4c9c67b1b9dcf3783653fc6effb745e03b8a2e117cdc2c8a01e1cc74b4d74e2b4f99b27140cb1f8824fd9eb2d6a64b2d493ea57f2cb0adf3f6a237ef977
 Size (jsonpath-rust-1.0.4.crate) = 41406 bytes
