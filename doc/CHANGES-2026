@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2465 2026/04/19 17:29:34 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2466 2026/04/19 17:32:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3821,3 +3821,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/py-mediafile to 0.16.2 [wiz 2026-04-19]
 	Updated textproc/tree-sitter-c-sharp to 0.23.5 [wiz 2026-04-19]
 	Updated devel/py-ruff to 0.15.11 [wiz 2026-04-19]
+	Updated audio/libifp to 1.0.1.0 [wiz 2026-04-19]
