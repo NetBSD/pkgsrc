@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2026/01/25 15:55:03 vins Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/04/19 18:59:34 vins Exp $
 bin/fastfetch
 man/man1/fastfetch.1
 share/bash-completion/completions/fastfetch
@@ -29,6 +29,7 @@ share/fastfetch/presets/examples/29.jsonc
 share/fastfetch/presets/examples/3.jsonc
 share/fastfetch/presets/examples/30.jsonc
 share/fastfetch/presets/examples/31.jsonc
+share/fastfetch/presets/examples/32.jsonc
 share/fastfetch/presets/examples/4.jsonc
 share/fastfetch/presets/examples/5.jsonc
 share/fastfetch/presets/examples/6.jsonc
