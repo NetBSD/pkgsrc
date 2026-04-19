@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2443 2026/04/19 14:34:43 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2444 2026/04/19 14:36:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3799,3 +3799,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ruby-commonmarker to 2.8.1 [taca 2026-04-19]
 	Updated textproc/ruby-yard to 0.9.43 [taca 2026-04-19]
 	Updated www/ruby-aws-partitions to 1.1240.0 [taca 2026-04-19]
+	Updated www/ruby-aws-sdk-core to 3.245.0 [taca 2026-04-19]
