@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2471 2026/04/19 18:17:41 vins Exp $
+$NetBSD: CHANGES-2026,v 1.2472 2026/04/19 18:46:10 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3827,3 +3827,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-modules to 0.26.0 [pin 2026-04-19]
 	Updated textproc/treemd to 0.5.10 [pin 2026-04-19]
 	Updated mail/opensmtpd to 7.8.0p1 [vins 2026-04-19]
+	Updated chat/toot to 0.52.1 [vins 2026-04-19]
