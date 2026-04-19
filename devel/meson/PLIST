@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/12/20 22:49:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2026/04/19 17:14:21 wiz Exp $
 bin/meson
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -629,6 +629,9 @@ ${PYSITELIB}/mesonbuild/scripts/pycompile.pyo
 ${PYSITELIB}/mesonbuild/scripts/python_info.py
 ${PYSITELIB}/mesonbuild/scripts/python_info.pyc
 ${PYSITELIB}/mesonbuild/scripts/python_info.pyo
+${PYSITELIB}/mesonbuild/scripts/rc.py
+${PYSITELIB}/mesonbuild/scripts/rc.pyc
+${PYSITELIB}/mesonbuild/scripts/rc.pyo
 ${PYSITELIB}/mesonbuild/scripts/regen_checker.py
 ${PYSITELIB}/mesonbuild/scripts/regen_checker.pyc
 ${PYSITELIB}/mesonbuild/scripts/regen_checker.pyo
