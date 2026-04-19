@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2025/01/19 18:34:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2026/04/19 14:53:25 wiz Exp $
 include/libexif/_stdint.h
 include/libexif/exif-byte-order.h
 include/libexif/exif-content.h
@@ -22,6 +22,7 @@ share/doc/libexif/ChangeLog
 share/doc/libexif/NEWS
 share/doc/libexif/README
 share/doc/libexif/SECURITY.md
+share/locale/ar/LC_MESSAGES/libexif-12.mo
 share/locale/be/LC_MESSAGES/libexif-12.mo
 share/locale/bs/LC_MESSAGES/libexif-12.mo
 share/locale/cs/LC_MESSAGES/libexif-12.mo
