@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/09/03 16:06:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/04/19 14:14:17 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/main.yml
 ${GEM_LIBDIR}/.gitignore
@@ -11,6 +11,8 @@ ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/gemfiles/css_parser_1.gemfile
+${GEM_LIBDIR}/gemfiles/css_parser_2.gemfile
 ${GEM_LIBDIR}/lib/roadie.rb
 ${GEM_LIBDIR}/lib/roadie/asset_provider.rb
 ${GEM_LIBDIR}/lib/roadie/asset_scanner.rb
