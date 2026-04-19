@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2024/09/22 07:42:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/04/19 14:32:52 taca Exp $
 bin/yard${RUBY_SUFFIX}
 bin/yardoc${RUBY_SUFFIX}
 bin/yri${RUBY_SUFFIX}
@@ -95,6 +95,12 @@ ${GEM_LIBDIR}/lib/yard/handlers/c/struct_handler.rb
 ${GEM_LIBDIR}/lib/yard/handlers/c/symbol_handler.rb
 ${GEM_LIBDIR}/lib/yard/handlers/common/method_handler.rb
 ${GEM_LIBDIR}/lib/yard/handlers/processor.rb
+${GEM_LIBDIR}/lib/yard/handlers/rbs/attribute_handler.rb
+${GEM_LIBDIR}/lib/yard/handlers/rbs/base.rb
+${GEM_LIBDIR}/lib/yard/handlers/rbs/constant_handler.rb
+${GEM_LIBDIR}/lib/yard/handlers/rbs/method_handler.rb
+${GEM_LIBDIR}/lib/yard/handlers/rbs/mixin_handler.rb
+${GEM_LIBDIR}/lib/yard/handlers/rbs/namespace_handler.rb
 ${GEM_LIBDIR}/lib/yard/handlers/ruby/alias_handler.rb
 ${GEM_LIBDIR}/lib/yard/handlers/ruby/attribute_handler.rb
 ${GEM_LIBDIR}/lib/yard/handlers/ruby/base.rb
@@ -151,6 +157,8 @@ ${GEM_LIBDIR}/lib/yard/parser/base.rb
 ${GEM_LIBDIR}/lib/yard/parser/c/c_parser.rb
 ${GEM_LIBDIR}/lib/yard/parser/c/comment_parser.rb
 ${GEM_LIBDIR}/lib/yard/parser/c/statement.rb
+${GEM_LIBDIR}/lib/yard/parser/rbs/rbs_parser.rb
+${GEM_LIBDIR}/lib/yard/parser/rbs/statement.rb
 ${GEM_LIBDIR}/lib/yard/parser/ruby/ast_node.rb
 ${GEM_LIBDIR}/lib/yard/parser/ruby/legacy/irb/slex.rb
 ${GEM_LIBDIR}/lib/yard/parser/ruby/legacy/ruby_lex.rb
@@ -233,6 +241,7 @@ ${GEM_LIBDIR}/lib/yard/templates/helpers/base_helper.rb
 ${GEM_LIBDIR}/lib/yard/templates/helpers/filter_helper.rb
 ${GEM_LIBDIR}/lib/yard/templates/helpers/html_helper.rb
 ${GEM_LIBDIR}/lib/yard/templates/helpers/html_syntax_highlight_helper.rb
+${GEM_LIBDIR}/lib/yard/templates/helpers/markup/hybrid_markdown.rb
 ${GEM_LIBDIR}/lib/yard/templates/helpers/markup/rdoc_markdown.rb
 ${GEM_LIBDIR}/lib/yard/templates/helpers/markup/rdoc_markup.rb
 ${GEM_LIBDIR}/lib/yard/templates/helpers/markup_helper.rb
