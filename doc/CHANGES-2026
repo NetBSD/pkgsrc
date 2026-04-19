@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2435 2026/04/19 14:11:22 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2436 2026/04/19 14:14:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3791,3 +3791,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/open-simh to 4.1.0.20260413 [rhialto 2026-04-19]
 	Updated databases/ruby-sqlite3 to 2.9.3 [taca 2026-04-19]
 	Updated mail/ruby-mime-types-data to 3.2026.0414 [taca 2026-04-19]
+	Updated mail/ruby-roadie to 5.3.0 [taca 2026-04-19]
