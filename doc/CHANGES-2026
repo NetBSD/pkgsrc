@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2452 2026/04/19 14:52:43 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2453 2026/04/19 14:52:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3808,3 +3808,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/jsongrep to 0.9.0 [wiz 2026-04-19]
 	Updated print/libcups to 2.4.17 [wiz 2026-04-19]
 	Updated print/cups-base to 2.4.17 [wiz 2026-04-19]
+	Updated print/cups to 2.4.17 [wiz 2026-04-19]
