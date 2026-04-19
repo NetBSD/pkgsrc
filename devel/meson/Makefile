@@ -1,4 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2026/04/19 17:14:21 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2026/04/19 17:29:20 wiz Exp $
+#
+# Release notes in markdown format:
+# https://github.com/mesonbuild/meson/tree/master/docs/markdown/
 
 DISTNAME=	meson-1.11.0
 CATEGORIES=	devel python
