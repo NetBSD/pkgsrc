@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2433 2026/04/19 12:24:46 rhialto Exp $
+$NetBSD: CHANGES-2026,v 1.2434 2026/04/19 14:03:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3789,3 +3789,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/lsof to 4.91nb8 [wiz 2026-04-19]
 	Updated devel/meld to 3.22.2nb19 [wiz 2026-04-19]
 	Updated emulators/open-simh to 4.1.0.20260413 [rhialto 2026-04-19]
+	Updated databases/ruby-sqlite3 to 2.9.3 [taca 2026-04-19]
