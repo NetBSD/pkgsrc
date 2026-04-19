@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.144 2025/12/26 08:59:48 kim Exp $
+# $NetBSD: Makefile,v 1.145 2026/04/19 08:55:59 wiz Exp $
 
 DISTNAME=		lsof_4.91
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.mirrorservice.org/sites/lsof.itap.purdue.edu/pub/tools/unix/lsof/
 MASTER_SITES+=		ftp://ftp.mirrorservice.org/sites/lsof.itap.purdue.edu/pub/tools/unix/lsof/OLD/
