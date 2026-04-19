@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.74 2026/02/26 12:45:43 pin Exp $
+$NetBSD: distinfo,v 1.75 2026/04/19 15:58:01 pin Exp $
 
-BLAKE2s (feh-3.11.3.tar.bz2) = 4df4f12f12fbd04f79d6034a52c3767ef890d6c9d56c0fcbea01a8385349eb18
-SHA512 (feh-3.11.3.tar.bz2) = b5b009c9a1b1416ba6aec150c96309106b03a17a0be636c1d008a5817e3895306e7c02167c11a97c04c2ef46efe848648c2163977733efebc45caa4a9a3befb5
-Size (feh-3.11.3.tar.bz2) = 2109841 bytes
+BLAKE2s (feh-3.12.1.tar.bz2) = 9a88788c95e2dd2e51b5d46dc43ac7b7f5dcfce920978852ed2495f771b8c7a6
+SHA512 (feh-3.12.1.tar.bz2) = 86da730832edc9b2d6427edcd184b53a5a093afa483fc55fae1b0e06f1ebc241edd1f40236a4e32b734de9262e5d3ca03501cce4d374d94f3cc0f168d1204cdb
+Size (feh-3.12.1.tar.bz2) = 2110520 bytes
 SHA1 (patch-config.mk) = af7990e42c4c0a351c0d40eeb8221cd619ef72fb
 SHA1 (patch-src_gib__imlib.c) = 4f231e1bd8698e0bff796fab6b553649c31e1650
 SHA1 (patch-src_imlib_c) = 925d2536b69f99acc949cb6bd67422d001335492
