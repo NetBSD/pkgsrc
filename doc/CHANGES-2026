@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2450 2026/04/19 14:47:45 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2451 2026/04/19 14:52:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3806,3 +3806,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-propshaft to 1.3.2 [taca 2026-04-19]
 	Updated devel/jjui to 0.10.3 [wiz 2026-04-19]
 	Updated textproc/jsongrep to 0.9.0 [wiz 2026-04-19]
+	Updated print/libcups to 2.4.17 [wiz 2026-04-19]
