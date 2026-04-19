@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2458 2026/04/19 15:58:21 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2459 2026/04/19 16:08:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3814,3 +3814,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/libxmlb to 0.3.26 [wiz 2026-04-19]
 	Updated graphics/openexr to 3.4.10 [wiz 2026-04-19]
 	Updated graphics/feh to 3.12.1 [pin 2026-04-19]
+	Updated textproc/jsongrep to 0.9.0nb1 [pin 2026-04-19]
