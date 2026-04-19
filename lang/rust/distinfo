@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.196 2026/04/02 19:06:34 wiz Exp $
+$NetBSD: distinfo,v 1.197 2026/04/19 20:53:35 wiz Exp $
 
 BLAKE2s (rust-1.93.1-aarch64-apple-darwin.tar.gz) = 79c7b27c43db89e7dd8165b6aa067944004ab5b3483b5ae39b1390b714a7cf6a
 SHA512 (rust-1.93.1-aarch64-apple-darwin.tar.gz) = a1335f2101121fff361c8f7b4f02242402e26144b745c27ddb774c3831c589cb9b9d987789a3f680ac5e7230aad74d1af12c782c5036f7bdd99b4615620b56fa
@@ -130,6 +130,7 @@ SHA1 (patch-src_llvm-project_llvm_cmake_modules_AddLLVM.cmake) = e1b2eb2f0b3cf1c
 SHA1 (patch-src_llvm-project_llvm_include_llvm-c_DataTypes.h) = cb011fc19957883c01725797f7c85ed1b20f96f1
 SHA1 (patch-src_llvm-project_llvm_include_llvm_Analysis_ConstantFolding.h) = 75019dcb3dbca6cda33ba329dbe483101dcf48e7
 SHA1 (patch-src_llvm-project_llvm_utils_FileCheck_FileCheck.cpp) = 2587c2f4d11ad8f75bf8a16de625135b26bacc15
+SHA1 (patch-src_tools_cargo_src_bin_cargo_commands_help.rs) = 463de040af81f7c760736e0165e1b27537a2a52f
 SHA1 (patch-src_tools_cargo_src_cargo_core_profiles.rs) = e1af7fde97416e0a269ee34efd37f4f47fcf7a95
 SHA1 (patch-src_tools_cargo_tests_testsuite_build.rs) = 333ec513b9b94750b2424a7c1b21c809e6ea25b8
 SHA1 (patch-src_tools_rust-installer_install-template.sh) = f222961e0fd4bac2f680f90d34a3e01864e3cebb
