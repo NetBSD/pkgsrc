@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2422 2026/04/19 05:50:19 fox Exp $
+$NetBSD: CHANGES-2026,v 1.2423 2026/04/19 07:51:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3778,3 +3778,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added audio/SDL3_mixer to 3.2.0 [js 2026-04-18]
 	Updated sysutils/u-boot-sopine-baseboard to 2024.10 [jmcneill 2026-04-18]
 	Updated audio/fasttracker2 to 2.17 [fox 2026-04-19]
+	Updated x11/editres to 1.1.0 [wiz 2026-04-19]
