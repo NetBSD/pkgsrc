@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2428 2026/04/19 07:59:50 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2429 2026/04/19 08:00:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3784,3 +3784,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/listres to 1.0.7 [wiz 2026-04-19]
 	Updated x11/mkcomposecache to 1.2.3 [wiz 2026-04-19]
 	Updated fonts/mkfontscale to 1.2.4 [wiz 2026-04-19]
+	Updated mail/xbiff to 1.0.6 [wiz 2026-04-19]
