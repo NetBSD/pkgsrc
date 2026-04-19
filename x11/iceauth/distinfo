@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/03/11 08:06:21 wiz Exp $
+$NetBSD: distinfo,v 1.13 2026/04/19 07:54:12 wiz Exp $
 
-BLAKE2s (iceauth-1.0.10.tar.xz) = 6923e40241eb57d427a6329d6c0893e244ad6a02f84caa272977572ef6874ad7
-SHA512 (iceauth-1.0.10.tar.xz) = cfadac03a3f72f3c0bb58f67984a033847c76e7e3fdd9ebce583c0554d7f9484faf5053d878f5a82a543cdcc8e2ef8acecadb8830bd3c53584d7ec950cb51cc3
-Size (iceauth-1.0.10.tar.xz) = 134560 bytes
+BLAKE2s (iceauth-1.0.11.tar.xz) = 863fa26e1d3492a7f461b5ec51d1df065a9e7f6a9d8427d7425928245d71ca0a
+SHA512 (iceauth-1.0.11.tar.xz) = 7b3dffb2c1209e00bc11301ace3f802f052ae1062fba20011787ac185e2fd3a6c96ede3ddf37d9be3e41fa91f381e42e71fd61a7e63e8e3945351e16af2f57a6
+Size (iceauth-1.0.11.tar.xz) = 140540 bytes
