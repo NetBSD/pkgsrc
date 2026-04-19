@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2025/01/19 18:34:55 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/04/19 14:53:25 wiz Exp $
 
-DISTNAME=	libexif-0.6.25
+DISTNAME=	libexif-0.6.26
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libexif/}
 GITHUB_PROJECT=	libexif
