@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2026/04/19 08:55:59 wiz Exp $
+# $NetBSD: Makefile,v 1.146 2026/04/19 08:56:32 wiz Exp $
 
 DISTNAME=		lsof_4.91
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -41,7 +41,7 @@ TEST_TARGET=		test
 INTERACTIVE_STAGE+=	test
 
 .include "../../mk/compiler.mk"
-.if !empty(CC_VERSION:Mgcc-1[45]*)
+.if ${CC_VERSION:Mgcc-1[45]*}
 CFLAGS+=		-Wno-implicit-function-declaration
 .endif
 
