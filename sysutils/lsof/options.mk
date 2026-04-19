@@ -1,27 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2019/11/04 21:28:48 rillig Exp $
+# $NetBSD: options.mk,v 1.3 2026/04/19 08:57:07 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.lsof
 PKG_SUPPORTED_OPTIONS=		lsof-more-secure lsof-less-secure-sockets
-
-.if defined(LSOF_MORE_SECURE)
-.  if !empty(LSOF_MORE_SECURE:M1)
-PKG_LEGACY_OPTIONS+=			lsof-more-secure
-PKG_OPTIONS_DEPRECATED_WARNINGS+=	"Deprecated variable LSOF_MORE_SECURE set to 1, use PKG_OPTIONS.lsof+=lsof-more-secure instead."
-.  elif !empty(LSOF_MORE_SECURE:M0)
-PKG_LEGACY_OPTIONS+=			-lsof-more-secure
-PKG_OPTIONS_DEPRECATED_WARNINGS+=	"Deprecated variable LSOF_MORE_SECURE set to 0, use PKG_OPTIONS.lsof+=-lsof-more-secure instead."
-.  endif
-.endif
-
-.if defined(LSOF_LESS_SECURE_SOCKETS)
-.  if !empty(LSOF_LESS_SECURE_SOCKETS:M1)
-PKG_LEGACY_OPTIONS+=			lsof-less-secure-sockets
-PKG_OPTIONS_DEPRECATED_WARNINGS+=	"Deprecated variable LSOF_LESS_SECURE_SOCKETS set to 1, use PKG_OPTIONS.lsof+=lsof-less-secure-sockets instead."
-.  elif !empty(LSOF_LESS_SECURE_SOCKETS:M0)
-PKG_LEGACY_OPTIONS+=			-lsof-less-secure-sockets
-PKG_OPTIONS_DEPRECATED_WARNINGS+=	"Deprecated variable LSOF_LESS_SECURE_SOCKETS set to 0, use PKG_OPTIONS.lsof+=lsof-less-secure-sockets instead."
-.  endif
-.endif
 
 .include "../../mk/bsd.options.mk"
 
