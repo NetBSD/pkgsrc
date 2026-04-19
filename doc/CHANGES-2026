@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2460 2026/04/19 17:14:33 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2461 2026/04/19 17:17:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3816,3 +3816,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/feh to 3.12.1 [pin 2026-04-19]
 	Updated textproc/jsongrep to 0.9.0nb1 [pin 2026-04-19]
 	Updated devel/meson to 1.11.0 [wiz 2026-04-19]
+	Updated textproc/py-lxml to 6.1.0 [wiz 2026-04-19]
