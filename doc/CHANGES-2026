@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2497 2026/04/20 14:41:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2498 2026/04/20 15:48:59 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3863,3 +3863,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-aenum to 3.1.17 [adam 2026-04-20]
 	Updated devel/py-editables to 0.6 [adam 2026-04-20]
 	Updated graphics/gimp to 3.2.4 [wiz 2026-04-20]
+	Updated x11/xfind to 1.0.4 [vins 2026-04-20]
