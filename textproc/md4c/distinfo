@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2024/02/10 16:34:13 wiz Exp $
+$NetBSD: distinfo,v 1.4 2026/04/20 12:35:00 adam Exp $
 
-BLAKE2s (md4c-0.5.2.tar.gz) = 4bb0cb910ffcae990fd2cc6625130802baabd1a49b0e7fca8e81491d10026786
-SHA512 (md4c-0.5.2.tar.gz) = 30607ba39d6c59329f5a56a90cd816ff60b82ea752ac2b9df356d756529cfc49170019fae5df32fa94afc0e2a186c66eaf56fa6373d18436c06ace670675ba85
-Size (md4c-0.5.2.tar.gz) = 237973 bytes
+BLAKE2s (md4c-0.5.3.tar.gz) = 2908609b5e7d601f11fe476f4470d584670ddf0783f96ac2724e54f7ce41d935
+SHA512 (md4c-0.5.3.tar.gz) = 213d6b9fbad24b2bfb4fa0a8124cb4c20861da2cb57790882aa0e5ff8c18903450f1d9ffdbcc0547debd103137777059f27a526cd818294f698b5ffdbfe7fbcb
+Size (md4c-0.5.3.tar.gz) = 244633 bytes
