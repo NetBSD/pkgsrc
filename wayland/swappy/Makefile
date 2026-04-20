@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/04/15 07:55:14 kikadf Exp $
+# $NetBSD: Makefile,v 1.2 2026/04/20 05:11:15 wiz Exp $
 
 DISTNAME=	swappy-1.8.0
 CATEGORIES=	wayland
@@ -21,6 +21,7 @@ SUBST_SED.nogit+=	-e 's/git =/\#git =/g'
 SUBST_SED.nogit+=	-e 's/git.found()/false/g'
 
 .include "../../devel/meson/build.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
