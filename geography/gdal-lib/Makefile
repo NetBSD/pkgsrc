@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.197 2026/03/25 23:16:39 gdt Exp $
+# $NetBSD: Makefile,v 1.198 2026/04/20 06:31:37 wiz Exp $
 
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
-#PKGREVISION=	0
+PKGREVISION=	1
 
 COMMENT=	Translator library for raster geospatial data formats
 
@@ -22,6 +22,7 @@ USE_PKGLOCALEDIR=	yes
 
 # To find out what can be set in the cmake build.
 # \todo Hoist to cmake/build.mk.
+.PHONY: cmake-options
 cmake-options:
 	(cd ${WRKSRC}/cmake-pkgsrc-build && cmake -L ..) > OPTIONS
 
@@ -73,6 +74,14 @@ CMAKE_CONFIGURE_ARGS+=	-DNetCDF_DIR=${BUILDLINK_PREFIX.netcdf}
 #CMAKE_CONFIGURE_ARGS+=	-Dxerces
 #CMAKE_CONFIGURE_ARGS+=	-Dxerces-inc=${BUILDLINK_PREFIX.xerces-c}/include
 #CMAKE_CONFIGURE_ARGS+=	-Dxerces-lib=-L${BUILDLINK_PREFIX.xerces-c}/lib\ -lxerces-c
+
+SUBST_CLASSES+=		rpath
+SUBST_SED.rpath+=	-E
+SUBST_SED.rpath+=	-e 's!(CONFIG_LIBS=.)!\1${COMPILER_RPATH_FLAG}${PREFIX}/lib !'
+SUBST_SED.rpath+=	-e 's!(CONFIG_DEP_LIBS=.)!\1${COMPILER_RPATH_FLAG}${PREFIX}/lib !'
+SUBST_STAGE.rpath=	pre-configure
+SUBST_FILES.rpath+=	cmake/template/gdal-config.in
+SUBST_MESSAGE.rpath=	Fixing rpath in config script.
 
 .include "options.mk"
 
