@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2476 2026/04/20 05:38:24 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2477 2026/04/20 05:53:36 fox Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3835,3 +3835,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/rclone to 1.73.5 [adam 2026-04-20]
 	Updated editors/neovim to 0.12.1 [adam 2026-04-20]
 	Updated shells/nushell to 0.112.2 [adam 2026-04-20]
+	Updated sysutils/py-Glances to 4.5.4 [fox 2026-04-20]
