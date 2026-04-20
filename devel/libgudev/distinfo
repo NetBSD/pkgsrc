@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2025/05/04 10:11:28 vins Exp $
+$NetBSD: distinfo,v 1.2 2026/04/20 19:30:37 vins Exp $
 
 BLAKE2s (libgudev-238.tar.xz) = 4c899e88830e2c2e112c7132d33828223ed02b31260120f8bb94327d9e1c6143
 SHA512 (libgudev-238.tar.xz) = 684061b4fc64a6ea3dd1ac34835279330c7eb2728fad6e3a9d34c0d501be3103d0f96c6d6866c8e257a0027e4f78a6314cb8ba81cda5ddf42ee9ea1a576ec5dc
 Size (libgudev-238.tar.xz) = 30548 bytes
+SHA1 (patch-meson.build) = 903812d56d2d83a73f8b8b1692186319f5ab6730

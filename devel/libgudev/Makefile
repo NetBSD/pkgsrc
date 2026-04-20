@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2025/10/23 20:36:30 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/04/20 19:30:37 vins Exp $
 
 DISTNAME=	libgudev-238
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +11,9 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/libgudev
 COMMENT=	GObject bindings to libudev
 LICENSE=	gnu-lgpl-v2
 
-ONLY_FOR_PLATFORM=	Linux-*-*	# sysutils/libudev
+# Other platforms currently lack libudev support.
+#
+BROKEN_EXCEPT_ON_PLATFORM=	Linux-*-* FreeBSD-*-* NetBSD-*-* OpenBSD-*-*
 
 USE_TOOLS+=	pkg-config
 
@@ -22,9 +24,16 @@ MESON_ARGS+=	-Dintrospection=enabled \
 		-Dtests=disabled \
 		-Dvapi=disabled
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS:M*BSD}
+.  include "../../devel/libudev-bsd/buildlink3.mk"
+.elif ${OPSYS} == "Linux"
 # udev_device_get_current_tags()
 BUILDLINK_API_DEPENDS.libudev+=   libudev>=3.2.14
-.include "../../sysutils/libudev/buildlink3.mk"
+.  include "../../sysutils/libudev/buildlink3.mk"
+.endif
+
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"

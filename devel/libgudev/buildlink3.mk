@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2025/10/23 20:36:30 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2026/04/20 19:30:37 vins Exp $
 
 BUILDLINK_TREE+=	libgudev
 
@@ -6,12 +6,18 @@ BUILDLINK_TREE+=	libgudev
 LIBGUDEV_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgudev+=	libgudev>=238
-BUILDLINK_ABI_DEPENDS.libgudev?=		libgudev>=238nb2
+BUILDLINK_ABI_DEPENDS.libgudev?=	libgudev>=238nb3
 BUILDLINK_PKGSRCDIR.libgudev?=		../../devel/libgudev
 
 BUILDLINK_INCDIRS.libgudev?=	include/gudev-1.0/gudev
 
-.include "../../sysutils/libudev/buildlink3.mk"
+.if ${OPSYS:M*BSD}
+.  include "../../devel/libudev-bsd/buildlink3.mk"
+.elif ${OPSYS} == "Linux"
+# udev_device_get_current_tags()
+BUILDLINK_API_DEPENDS.libudev+=   libudev>=3.2.14
+.  include "../../sysutils/libudev/buildlink3.mk"
+.endif
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .endif	# LIBGUDEV_BUILDLINK3_MK
 
