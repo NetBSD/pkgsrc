@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.60 2026/04/13 08:28:58 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.61 2026/04/20 05:38:01 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -592,7 +592,7 @@ CARGO_CRATE_DEPENDS+=	rustls-native-certs-0.8.3
 CARGO_CRATE_DEPENDS+=	rustls-pki-types-1.14.0
 CARGO_CRATE_DEPENDS+=	rustls-platform-verifier-0.6.2
 CARGO_CRATE_DEPENDS+=	rustls-platform-verifier-android-0.1.1
-CARGO_CRATE_DEPENDS+=	rustls-webpki-0.103.10
+CARGO_CRATE_DEPENDS+=	rustls-webpki-0.103.12
 CARGO_CRATE_DEPENDS+=	rustversion-1.0.22
 CARGO_CRATE_DEPENDS+=	ryu-1.0.23
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
