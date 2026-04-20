@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2025/09/16 20:25:18 gutteridge Exp $
+# $NetBSD: Makefile,v 1.44 2026/04/20 05:56:57 wiz Exp $
 
 DISTNAME=		udunits-2.2.26
 PKGREVISION=		1
@@ -14,6 +14,8 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 USE_LANGUAGES+=		c
+
+CFLAGS+=		-Wno-implicit-function-declaration
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
