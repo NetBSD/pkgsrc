@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.70 2026/04/13 08:28:58 pin Exp $
+$NetBSD: distinfo,v 1.71 2026/04/20 05:38:01 adam Exp $
 
 BLAKE2s (addr2line-0.25.1.crate) = cc5c422ec48ccef5c2c46379d2f600644609490afafea5020f2020815d1146e6
 SHA512 (addr2line-0.25.1.crate) = c400f3b6ccaff8a1c0d7d82c708a1784b8fd5ba64b6e420e85819d59b1cadb55fa59c852925093b921469f272d1d5140cf12f013ae75d1e1bc85021097df8fc2
@@ -1236,9 +1236,9 @@ Size (num-traits-0.2.19.crate) = 51631 bytes
 BLAKE2s (num_threads-0.1.7.crate) = 40dc4f59622c31f0e84e4c744bbe548f8803fd4fe0bbebf503125b10cc6670f1
 SHA512 (num_threads-0.1.7.crate) = 60eecfe49c1afca8efa320c5f4d0cd794f6adf8924193682c903307f484ca0a1ddb56102a772232aca040f29651bbe26ddc1c4939e1f030e229d179837e06bda
 Size (num_threads-0.1.7.crate) = 7455 bytes
-BLAKE2s (nushell-0.112.1.tar.gz) = 1d2d626214978f4ad8af64bfb7687aa8f231c20bb94831be8bb51feb49690c2c
-SHA512 (nushell-0.112.1.tar.gz) = 913b3d0068f7939aeee7dba28980581626e10373825721a63270782ac446b92715179504016265652db3b71cfea1a8282a84d2ba85328b6b700cced436af4b7a
-Size (nushell-0.112.1.tar.gz) = 3942402 bytes
+BLAKE2s (nushell-0.112.2.tar.gz) = 419a658f3ba3fdae972475aa193f4c0c61e2a7162fa7a1b5a3cc2431e352b700
+SHA512 (nushell-0.112.2.tar.gz) = e6541e184a50cbc4909faaf9c2f862a9f6a8346372eab9063ddbc12bd05a7924f49b01269f4356eccf45f4fdea029497d64c4699d3284231ca2a28af0e2acdfc
+Size (nushell-0.112.2.tar.gz) = 3942814 bytes
 BLAKE2s (objc2-0.6.4.crate) = 03984ea4800cf1d8a2e90069a61b8f49d271f19910bbab0ac7d493f6d1646fc4
 SHA512 (objc2-0.6.4.crate) = 3176d8f44a3245d08972404b8c544962c02e6bb8f198660ee3bd532b376b5a2f7a5f5585f126968c414e58347011dc6ee919f881b78854a7a3d9bb3b190abae9
 Size (objc2-0.6.4.crate) = 275200 bytes
@@ -1779,9 +1779,9 @@ Size (rustls-platform-verifier-0.6.2.crate) = 58924 bytes
 BLAKE2s (rustls-platform-verifier-android-0.1.1.crate) = c8d0240ebc3809d2fbfd7805badb53674ced7d89a17a1cd06880a158d2227cb6
 SHA512 (rustls-platform-verifier-android-0.1.1.crate) = f3f21b88b448f46e08da4303d225f10765d21f2397d4fbe44d5f9cf9da5ced84fa5adc5881f1db66a324cef818537e4a79bad2260b8027894029ba7e6ec16533
 Size (rustls-platform-verifier-android-0.1.1.crate) = 13919 bytes
-BLAKE2s (rustls-webpki-0.103.10.crate) = 8a25f6400685d2a3e5e9cb1bb61a26d751395a7416ec006263285b891df126f4
-SHA512 (rustls-webpki-0.103.10.crate) = a3ddc6ca5ecb5f4a25e8cbd1252cd2e8ac7937a9376a5d1a0c60d405c561d896365c6c3c4711d191c9c8d308b34388235c2316ea83f4508518e2c3413a6cbc13
-Size (rustls-webpki-0.103.10.crate) = 85648 bytes
+BLAKE2s (rustls-webpki-0.103.12.crate) = 513c0c97067e9e91f4c84897c02e161198a14fc5f33f7fe68b8919baaadba4ce
+SHA512 (rustls-webpki-0.103.12.crate) = 0673be70c4378356ceb6839e5c56befaa1303c854da63e29583bdfdf1049c5f9a817b070f67c4849cad4c207d504dc6d739dd013b5bb311d02b3eee748b5de73
+Size (rustls-webpki-0.103.12.crate) = 87202 bytes
 BLAKE2s (rustversion-1.0.22.crate) = 94885d422b9c942ceab679e86d0a2b8e6f322f655091475a6a475f0b796f48b9
 SHA512 (rustversion-1.0.22.crate) = 7929352df3e5279ac88cebb26ca89bb13c755f46986d2d1f514d18a3239a63638bf64f8ff153920569d173185d988d692ee676335afba0bf72d47f71babe0e15
 Size (rustversion-1.0.22.crate) = 21096 bytes
