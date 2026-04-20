@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27144 2026/04/20 09:58:36 wiz Exp $
+$NetBSD: TODO,v 1.27145 2026/04/20 14:41:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -668,7 +668,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gens-2.15.5
 	o gettext-1.0
 	o gfract-0.33
-	o gimp-3.2.4
 	o git-cinnabar-0.7.2
 	o gitea-1.24.3
 	o gjs-1.70.1
@@ -890,6 +889,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lua-sql-postgres-2.4.0
 	o lua-sql-sqlite3-2.4.0
 	o lumina-1.6.2
+	o lxqt-2.4
 	o mDNSResponder-nss-1310.80.1
 	o maelstrom-sdl-3.0.7
 	o magento-2.4.1
