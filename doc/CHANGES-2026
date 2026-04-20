@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2484 2026/04/20 11:18:51 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2485 2026/04/20 12:19:01 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3844,3 +3844,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/slumber to 5.2.5 [wiz 2026-04-20]
 	Updated www/nghttp2 to 1.69.0 [adam 2026-04-20]
 	Updated www/nghttp2-tools to 1.69.0 [adam 2026-04-20]
+	Updated editors/redox to 0.5.0 [pin 2026-04-20]
