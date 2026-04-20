@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2026/01/07 18:30:07 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/04/20 06:22:58 wiz Exp $
 
 BLAKE2s (slurm-25.11.1.tar.bz2) = d905b951c3798d3c66f8e7a34b25758b06171f73a8e1de6425565486697c0512
 SHA512 (slurm-25.11.1.tar.bz2) = 248219a2519d3cb05a87241d878eb775315054fd93287f38bc9600c45dabb6138a75dc6e041894459ee104b0b80fdbf68e08287337c8ea5553438ced30fc0217
@@ -10,6 +10,7 @@ SHA1 (patch-src_common_run__command.c) = fd6886dc71c35d7bc6dee6339cf6fa504b1c0ab
 SHA1 (patch-src_common_xsched.c) = b0e96e4b6b098961e90c3d3e1ea33ed8c6fbe1a1
 SHA1 (patch-src_common_xsched.h) = b777c2460d21ed5ae8f5a31068521d5c134f42b5
 SHA1 (patch-src_conmgr_workers.c) = d31479b6609fcbd3d995a48aab9853313fdcb5c5
+SHA1 (patch-src_plugins_acct__gather__profile_hdf5_Makefile.in) = 9f0fe1d5c3f365e8302ded6aae79f46caa27fb74
 SHA1 (patch-src_plugins_task_Makefile.in) = 6aefcbcef2f9a31941dcbe6488ec4ee0a57f5f02
 SHA1 (patch-src_slurmctld_trigger__mgr.c) = b15af6e486a0857530edb20908bcc46f6005103d
 SHA1 (patch-src_slurmd_slurmd_req.c) = b86087999264b1b224bfadea8afe998768ccf1ad
