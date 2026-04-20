@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2025/11/03 16:47:31 vins Exp $
+# $NetBSD: Makefile,v 1.8 2026/04/20 16:06:01 vins Exp $
 
-DISTNAME=	xfile-src-1.0.2
+DISTNAME=	xfile-src-1.1.0
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	sysutils x11
 MASTER_SITES=	https://fastestcode.org/dl/
@@ -33,8 +33,8 @@ SHAREDIR=	${PREFIX}/share/${PKGBASE}
 
 SUBST_CLASSES+=		pkgsrc
 SUBST_STAGE.pkgsrc=	pre-configure
-SUBST_FILES.pkgsrc=	mf/Makefile.pkgsrc src/mkicons.sh README.pkgsrc
-SUBST_VARS.pkgsrc+=	PKGBASE PREFIX PKGMANDIR SED SHAREDIR
+SUBST_FILES.pkgsrc=	mf/Makefile.pkgsrc README.pkgsrc
+SUBST_VARS.pkgsrc+=	PKGBASE PREFIX PKGMANDIR SHAREDIR
 SUBST_MESSAGE.pkgsrc=	Replacing pkgsrc placeholders
 
 .include "options.mk"

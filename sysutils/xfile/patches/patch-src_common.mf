@@ -1,11 +1,9 @@
-$NetBSD: patch-src_common.mf,v 1.3 2025/08/03 07:23:07 vins Exp $
+$NetBSD: patch-src_common.mf,v 1.4 2026/04/20 16:06:01 vins Exp $
 
 * Use standard CFLAGS and LDFLAGS.
-* Point to default awk implementation path.
 * Provide a pkgsrc-compliant install target.
-* Build and install DBus support.
 
---- src/common.mf.orig	2025-08-02 15:14:30.000000000 +0000
+--- src/common.mf.orig	2026-04-08 12:57:57.000000000 +0000
 +++ src/common.mf
 @@ -4,8 +4,6 @@
  X_LIBS = -lX11 -lXinerama -lXm -lXt -lXpm
@@ -29,21 +27,8 @@ $NetBSD: patch-src_common.mf,v 1.3 2025/08/03 07:23:07 vins Exp $
  
  # Built-in icons
  icons.h: mkicons.sh icons/*.xpm
-@@ -31,7 +29,7 @@ xfile.ad: $(APPDEFS_CORE)
- 
- # Default (fallback) resources
- defaults.c: xfile.ad
--	awk -f adtoc.awk xfile.ad > $@
-+	$(AWK) -f adtoc.awk xfile.ad > $@
- 
- # Manpage
- MANUAL = man/intro.man man/gui.man man/db.man man/appres.man \
-@@ -49,24 +47,24 @@ clean:
- 
- # Dependencies
- .depend: $(XFILE_OBJS:.o=.c) icons.h
--	$(CC) -MM $(INCDIRS) $(XFILE_OBJS:.o=.c) > .depend
-+	$(CC) -MM $(CFLAGS) $(DEFINES) $(XFILE_OBJS:.o=.c) > .depend
+@@ -52,20 +50,20 @@ clean:
+ 	$(CC) -MM $(INCDIRS) $(XFILE_OBJS:.o=.c) > .depend
  
  # Install
 -common_install: xfile xfile.ad xfile.1
@@ -59,8 +44,7 @@ $NetBSD: patch-src_common.mf,v 1.3 2025/08/03 07:23:07 vins Exp $
 -	install -o 0 -g 0 -m 755 -d $(SHAREDIR)/icons
 -	for n in icons/*.xpm; do install -o 0 -g 0 -m 664 $$n $(SHAREDIR)/$$n; done
 -	install -o 0 -g 0 -m 644 icons/README $(SHAREDIR)/README.icons
--	install -o 0 -g 0 -m 644 xbm/cabinet.xpm $(PREFIX)/share/pixmaps/xfile_48x48.xpm
--
+-	-install -o 0 -g 0 -m 644 xbm/cabinet.xpm $(PREFIX)/share/pixmaps/xfile_48x48.xpm
 +common_install:: xfile xfile.ad xfile.1
 +	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
 +	$(BSD_INSTALL_PROGRAM) xfile $(DESTDIR)$(BINDIR)
@@ -75,7 +59,6 @@ $NetBSD: patch-src_common.mf,v 1.3 2025/08/03 07:23:07 vins Exp $
 +	$(BSD_INSTALL_DATA) xbm/cabinet.xpm $(DESTDIR)$(PIXMAPDIR)/xfile_48x48.xpm
 +	$(BSD_INSTALL_DATA) ../README $(DESTDIR)$(DOCDIR)
 +	$(BSD_INSTALL_DATA) icons/README $(DESTDIR)$(DOCDIR)/README.icons
-+	
+ 
  # Removal
  uninstall:
- 	rm -f $(PREFIX)/bin/xfile
