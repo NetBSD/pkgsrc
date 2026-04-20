@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/11/15 12:02:44 ryoon Exp $
+$NetBSD: distinfo,v 1.14 2026/04/20 08:20:49 wiz Exp $
 
-BLAKE2s (ghdl-5.1.1.tar.gz) = e643837ad1087e7bd1e98d7b0415bd08231e2bfa381415d1be207d8acae7ef96
-SHA512 (ghdl-5.1.1.tar.gz) = b70051d49b5f4e427b116512ef29589b826308de1b33f2c4f8fd49c50eaeaf6e09be454c8455665b59f8f7b5cb82c9c198a1c29ebf8ca1110e7126f3e10f5567
-Size (ghdl-5.1.1.tar.gz) = 7894213 bytes
+BLAKE2s (ghdl-6.0.0.tar.gz) = cc96b2e142ae610dd918f7bdead0e2de1ffa3253e18571ce3a357fa580f65f8f
+SHA512 (ghdl-6.0.0.tar.gz) = 9e37fd127638e7676811ef2d43f5b08822f05ea16821773051b8497f5504491eef7970295ddf9ff4969c58a78ab9b34af386144d67740fc3cfd1347e6104519d
+Size (ghdl-6.0.0.tar.gz) = 8056568 bytes
