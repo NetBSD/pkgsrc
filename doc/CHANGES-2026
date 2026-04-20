@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2493 2026/04/20 13:03:00 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2494 2026/04/20 13:11:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3856,3 +3856,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pybind11 to 3.0.4 [adam 2026-04-20]
 	Updated devel/py-importlib-resources to 7.1.0 [adam 2026-04-20]
 	Updated converters/py-simplejson to 4.0.1 [adam 2026-04-20]
+	Updated devel/ccache to 4.13.4 [adam 2026-04-20]
+	Updated audio/fluidsynth to 2.5.4 [adam 2026-04-20]
