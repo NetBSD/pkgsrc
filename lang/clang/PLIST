@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2026/04/16 06:33:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.47 2026/04/20 15:22:57 tnn Exp $
 bin/amdgpu-arch
 bin/analyze-build
 bin/c-index-test
@@ -992,7 +992,7 @@ ${PLIST.ARM}lib/clang/21/include/arm_neon.h
 lib/clang/21/include/arm_neon_sve_bridge.h
 ${PLIST.ARM}lib/clang/21/include/arm_sme.h
 ${PLIST.ARM}lib/clang/21/include/arm_sve.h
-lib/clang/21/include/arm_vector_types.h
+${PLIST.ARM}lib/clang/21/include/arm_vector_types.h
 lib/clang/21/include/armintr.h
 lib/clang/21/include/avx10_2_512bf16intrin.h
 lib/clang/21/include/avx10_2_512convertintrin.h
