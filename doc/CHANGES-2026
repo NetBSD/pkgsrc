@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2498 2026/04/20 15:48:59 vins Exp $
+$NetBSD: CHANGES-2026,v 1.2499 2026/04/20 16:08:10 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3864,3 +3864,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-editables to 0.6 [adam 2026-04-20]
 	Updated graphics/gimp to 3.2.4 [wiz 2026-04-20]
 	Updated x11/xfind to 1.0.4 [vins 2026-04-20]
+	Updated sysutils/xfile to 1.1.0 [vins 2026-04-20]
