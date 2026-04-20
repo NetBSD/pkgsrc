@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2026/03/26 17:53:31 pin Exp $
+$NetBSD: distinfo,v 1.8 2026/04/20 12:25:25 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -777,9 +777,9 @@ Size (rustls-platform-verifier-0.6.2.crate) = 58924 bytes
 BLAKE2s (rustls-platform-verifier-android-0.1.1.crate) = c8d0240ebc3809d2fbfd7805badb53674ced7d89a17a1cd06880a158d2227cb6
 SHA512 (rustls-platform-verifier-android-0.1.1.crate) = f3f21b88b448f46e08da4303d225f10765d21f2397d4fbe44d5f9cf9da5ced84fa5adc5881f1db66a324cef818537e4a79bad2260b8027894029ba7e6ec16533
 Size (rustls-platform-verifier-android-0.1.1.crate) = 13919 bytes
-BLAKE2s (rustls-webpki-0.103.9.crate) = 53c7010a221685a07485148a7979d40ec3d519a6f8cc402138a2770cec58817f
-SHA512 (rustls-webpki-0.103.9.crate) = b50e41ffe38b7fe423d4c2b3eba830f31701c1048ada46cd5b8cdb4c738b0c8590558d607fc1fa7a0d8a8296fb7f931cc9f27b2751f799cd3ed6bac3b763333c
-Size (rustls-webpki-0.103.9.crate) = 85813 bytes
+BLAKE2s (rustls-webpki-0.103.12.crate) = 513c0c97067e9e91f4c84897c02e161198a14fc5f33f7fe68b8919baaadba4ce
+SHA512 (rustls-webpki-0.103.12.crate) = 0673be70c4378356ceb6839e5c56befaa1303c854da63e29583bdfdf1049c5f9a817b070f67c4849cad4c207d504dc6d739dd013b5bb311d02b3eee748b5de73
+Size (rustls-webpki-0.103.12.crate) = 87202 bytes
 BLAKE2s (rustversion-1.0.22.crate) = 94885d422b9c942ceab679e86d0a2b8e6f322f655091475a6a475f0b796f48b9
 SHA512 (rustversion-1.0.22.crate) = 7929352df3e5279ac88cebb26ca89bb13c755f46986d2d1f514d18a3239a63638bf64f8ff153920569d173185d988d692ee676335afba0bf72d47f71babe0e15
 Size (rustversion-1.0.22.crate) = 21096 bytes
@@ -1275,9 +1275,9 @@ Size (writeable-0.6.2.crate) = 25181 bytes
 BLAKE2s (x509-parser-0.18.1.crate) = a5f2838a9880a6e075ead6b25c4078314403bbd5f9d59df631663b87ee4edee4
 SHA512 (x509-parser-0.18.1.crate) = a30af92885d157b837832b7a3242fc8dbe5eacbce97ce5cb92a8c5e948324ec38150ca709734eb191a914f4f34d4d521ba313b72a57541a62cb254e8808535ef
 Size (x509-parser-0.18.1.crate) = 102625 bytes
-BLAKE2s (xfr-0.9.6.tar.gz) = 260c2c62ffa2370ad60bba17a10463d331aca7f1c90bd97f868bddb697f45a3c
-SHA512 (xfr-0.9.6.tar.gz) = 05f251784f9457180e049df6a63c236335294a0c3a9d84b37419b81787aadeb3b5fef43a37a9ddc47c9ff416f25bb767f25bc5bc972c66f222bcf19e57ec39f4
-Size (xfr-0.9.6.tar.gz) = 761984 bytes
+BLAKE2s (xfr-0.9.8.tar.gz) = 605fa150bb0db37dbd27377717d9cfa892dbdfcecd14d7f086b8583063ffebde
+SHA512 (xfr-0.9.8.tar.gz) = 82cf7cf7f69b60ba21e200e6ef9641c8243c5d808c7346663921ca32fa53a80553728567d2ace0f59111d805d0c425961e2f79a1daf575f7cea981dd8e1d17e6
+Size (xfr-0.9.8.tar.gz) = 771539 bytes
 BLAKE2s (yasna-0.5.2.crate) = 25391034f1d4c9715add3175629a012024dc2a34fa85b4dc85c4dce2c100742a
 SHA512 (yasna-0.5.2.crate) = 7532b6d06b34b0a5e2b769c5d2647f910bec481d98482bf9cea212f1bd1466336d7cb117d0c2e240e7673b2825f1d091619f79814bad836d25cf3a6ca2be63e5
 Size (yasna-0.5.2.crate) = 34859 bytes
