@@ -1,6 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.7 2025/08/25 18:14:39 pho Exp $
-
-Do not insist on old cmake policies (allows build with cmake 4).
+$NetBSD: patch-CMakeLists.txt,v 1.8 2026/04/20 18:05:26 adam Exp $
 
 Get X265_VERSION and X265_LATEST_TAG from outside.
 
@@ -11,34 +9,9 @@ Solaris ld: Passing "-Wa,--noexecstack" to gcc will generate an ELF section
             requesting a non executable stack. I don't know if Solaris ld
             is complying or just ignoring it.
 
---- CMakeLists.txt.orig	2024-11-22 12:07:34.000000000 +0000
+--- CMakeLists.txt.orig	2026-04-19 06:29:17.000000000 +0000
 +++ CMakeLists.txt
-@@ -6,15 +6,9 @@ if(NOT CMAKE_BUILD_TYPE)
-         FORCE)
- endif()
- message(STATUS "cmake version ${CMAKE_VERSION}")
--if(POLICY CMP0025)
--    cmake_policy(SET CMP0025 OLD) # report Apple's Clang as just Clang
--endif()
- if(POLICY CMP0042)
-     cmake_policy(SET CMP0042 NEW) # MACOSX_RPATH
- endif()
--if(POLICY CMP0054)
--    cmake_policy(SET CMP0054 OLD) # Only interpret if() arguments as variables or keywords when unquoted
--endif()
- 
- project (x265)
- cmake_minimum_required (VERSION 2.8.8) # OBJECT libraries require 2.8.8
-@@ -168,7 +162,7 @@ if(APPLE)
-   add_definitions(-DMACOS=1)
- endif()
- 
--if(${CMAKE_CXX_COMPILER_ID} STREQUAL "Clang")
-+if(${CMAKE_CXX_COMPILER_ID} MATCHES "Clang|AppleClang")
-     set(CLANG 1)
- endif()
- if(${CMAKE_CXX_COMPILER_ID} STREQUAL "Intel")
-@@ -207,6 +201,11 @@ if(HAVE_INT_TYPES_H)
+@@ -241,6 +241,11 @@ if(HAVE_INT_TYPES_H)
      add_definitions(-DHAVE_INT_TYPES_H=1)
  endif()
  
@@ -50,16 +23,16 @@ Solaris ld: Passing "-Wa,--noexecstack" to gcc will generate an ELF section
  if(INTEL_CXX AND UNIX)
      set(GCC 1) # treat icpc roughly like gcc
  elseif(CLANG)
-@@ -614,7 +613,7 @@ endif(ARM64)
+@@ -754,7 +759,7 @@ endif(ARM64 OR RISCV64)
  
  option(WARNINGS_AS_ERRORS "Stop compiles on first warning" OFF)
  if(WARNINGS_AS_ERRORS)
 -    if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
 +    if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang|AppleClang")
          add_definitions(-Werror)
-         add_definitions(-Wno-unused)
      elseif(MSVC)
-@@ -658,7 +657,6 @@ if(POWER)
+         add_definitions(/WX)
+@@ -797,7 +802,6 @@ if(POWER)
      endif()
  endif()
  
@@ -67,7 +40,7 @@ Solaris ld: Passing "-Wa,--noexecstack" to gcc will generate an ELF section
  include_directories(. common encoder "${PROJECT_BINARY_DIR}")
  
  option(ENABLE_PPA "Enable PPA profiling instrumentation" OFF)
-@@ -906,7 +904,11 @@ if(ENABLE_SHARED)
+@@ -1084,7 +1088,11 @@ if(ENABLE_SHARED)
          elseif(CYGWIN)
              # Cygwin is not officially supported or tested. MinGW with msys is recommended.
          else()

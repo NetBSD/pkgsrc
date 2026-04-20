@@ -1,19 +1,19 @@
-$NetBSD: patch-common_cpu.cpp,v 1.4 2024/04/05 13:45:50 ryoon Exp $
+$NetBSD: patch-common_cpu.cpp,v 1.5 2026/04/20 18:05:26 adam Exp $
 
 Retire detect512, make enable512 a global.
 
---- common/cpu.cpp.orig	2024-04-04 09:39:50.000000000 +0000
+--- common/cpu.cpp.orig	2026-04-19 06:29:17.000000000 +0000
 +++ common/cpu.cpp
-@@ -62,7 +62,7 @@ static void sigill_handler(int sig)
- #endif // if X265_ARCH_ARM
+@@ -63,7 +63,7 @@ static void sigill_handler(int sig)
  
  namespace X265_NS {
+ #if X265_ARCH_X86
 -static bool enable512 = false;
 +bool enable512 = false;
+ #endif
  const cpu_name_t cpu_names[] =
  {
- #if X265_ARCH_X86
-@@ -135,10 +135,6 @@ uint64_t PFX(cpu_xgetbv)(int xcr);
+@@ -150,10 +150,6 @@ uint64_t PFX(cpu_xgetbv)(int xcr);
  #pragma warning(disable: 4309) // truncation of constant value
  #endif
  
