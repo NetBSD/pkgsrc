@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2024/12/01 05:00:41 mef Exp $
+$NetBSD: distinfo,v 1.6 2026/04/20 06:06:38 wiz Exp $
 
 BLAKE2s (R/s2_1.1.7.tar.gz) = ac2d079302b55e2ed7df820b597ff9056f859822b8f18297f8db17b9d92bb775
 SHA512 (R/s2_1.1.7.tar.gz) = 3c2b6b83a11b8979781cfc56c58fd6d788fda62cdc8a7d635b84219f4cf530eea06068b5418a07e3e04ed3455ec2d7b3e1d7a8d91b133514e94d31dab2be477a
 Size (R/s2_1.1.7.tar.gz) = 2381288 bytes
+SHA1 (patch-src_absl_debugging_internal_elf__mem__image.cc) = 03d9a93c21aa4c0c9acd328ddc4b5b7aacb2a54a
