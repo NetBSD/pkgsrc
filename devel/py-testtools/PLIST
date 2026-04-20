@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2026/02/24 20:02:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/04/20 05:07:31 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -6,6 +6,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/testtools/__init__.py
 ${PYSITELIB}/testtools/__init__.pyc
 ${PYSITELIB}/testtools/__init__.pyo
+${PYSITELIB}/testtools/_types.py
+${PYSITELIB}/testtools/_types.pyc
+${PYSITELIB}/testtools/_types.pyo
 ${PYSITELIB}/testtools/_version.py
 ${PYSITELIB}/testtools/_version.pyc
 ${PYSITELIB}/testtools/_version.pyi
