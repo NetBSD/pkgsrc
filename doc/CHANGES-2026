@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2492 2026/04/20 12:53:19 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2493 2026/04/20 13:03:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3854,3 +3854,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-test-codspeed to 4.4.0 [adam 2026-04-20]
 	Updated devel/py-test-mypy-plugins to 4.0.2 [adam 2026-04-20]
 	Updated devel/py-pybind11 to 3.0.4 [adam 2026-04-20]
+	Updated devel/py-importlib-resources to 7.1.0 [adam 2026-04-20]
+	Updated converters/py-simplejson to 4.0.1 [adam 2026-04-20]
