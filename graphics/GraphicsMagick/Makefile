@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.155 2026/02/06 10:04:57 wiz Exp $
+# $NetBSD: Makefile,v 1.156 2026/04/20 18:14:06 adam Exp $
 
-PKGREVISION=	17
+PKGREVISION=	18
 .include "Makefile.common"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
