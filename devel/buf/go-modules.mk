@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.3 2026/04/15 06:29:52 adam Exp $
+# $NetBSD: go-modules.mk,v 1.4 2026/04/20 18:08:34 adam Exp $
 
 GO_MODULE_FILES+=	buf.build/gen/go/bufbuild/bufplugin/protocolbuffers/go/@v/v1.36.11-20250718181942-e35f9b667443.1.mod
 GO_MODULE_FILES+=	buf.build/gen/go/bufbuild/bufplugin/protocolbuffers/go/@v/v1.36.11-20250718181942-e35f9b667443.1.zip
@@ -40,8 +40,8 @@ GO_MODULE_FILES+=	github.com/!microsoft/go-winio/@v/v0.6.2.mod
 GO_MODULE_FILES+=	github.com/!microsoft/go-winio/@v/v0.6.2.zip
 GO_MODULE_FILES+=	github.com/antlr4-go/antlr/v4/@v/v4.13.1.mod
 GO_MODULE_FILES+=	github.com/antlr4-go/antlr/v4/@v/v4.13.1.zip
-GO_MODULE_FILES+=	github.com/bufbuild/protocompile/@v/v0.14.2-0.20260414204819-0b1a6cd46bcb.mod
-GO_MODULE_FILES+=	github.com/bufbuild/protocompile/@v/v0.14.2-0.20260414204819-0b1a6cd46bcb.zip
+GO_MODULE_FILES+=	github.com/bufbuild/protocompile/@v/v0.14.2-0.20260417153234-65c782f91a0b.mod
+GO_MODULE_FILES+=	github.com/bufbuild/protocompile/@v/v0.14.2-0.20260417153234-65c782f91a0b.zip
 GO_MODULE_FILES+=	github.com/bufbuild/protoplugin/@v/v0.0.0-20260414125817-25d1d281b46b.mod
 GO_MODULE_FILES+=	github.com/bufbuild/protoplugin/@v/v0.0.0-20260414125817-25d1d281b46b.zip
 GO_MODULE_FILES+=	github.com/cespare/xxhash/v2/@v/v2.3.0.mod
