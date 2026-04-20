@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2489 2026/04/20 12:25:49 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2490 2026/04/20 12:27:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3849,3 +3849,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/starship to 1.25.0 [pin 2026-04-20]
 	Updated net/termscp to 1.0.0 [pin 2026-04-20]
 	Updated net/xfr to 0.9.8 [pin 2026-04-20]
+	Updated sysutils/xtop to 0.3.9 [pin 2026-04-20]
