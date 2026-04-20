@@ -1,0 +1,15 @@
+$NetBSD: patch-pandas___libs_meson.build,v 1.1 2026/04/20 09:22:35 wiz Exp $
+
+https://github.com/pandas-dev/pandas/commit/0e978b68ba68e0f3b1f8b9f6b5a38072948638f0
+
+--- pandas/_libs/meson.build.orig	2025-09-29 22:12:09.000000000 +0000
++++ pandas/_libs/meson.build
+@@ -116,7 +116,7 @@ foreach ext_name, ext_dict : libs_sources
+         ext_dict.get('sources'),
+         cython_args: cython_args,
+         include_directories: [inc_np, inc_pd],
+-        dependencies: ext_dict.get('deps', ''),
++        dependencies: ext_dict.get('deps', []),
+         subdir: 'pandas/_libs',
+         install: true
+     )
