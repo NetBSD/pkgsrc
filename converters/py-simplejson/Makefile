@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2025/10/02 14:46:05 adam Exp $
+# $NetBSD: Makefile,v 1.58 2026/04/20 13:02:41 adam Exp $
 
-DISTNAME=	simplejson-3.20.2
+DISTNAME=	simplejson-4.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/simplejson/}

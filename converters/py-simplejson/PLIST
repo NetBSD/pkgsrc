@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2025/04/13 07:22:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/04/20 13:02:41 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -35,6 +35,9 @@ ${PYSITELIB}/simplejson/tests/__init__.pyo
 ${PYSITELIB}/simplejson/tests/_cibw_runner.py
 ${PYSITELIB}/simplejson/tests/_cibw_runner.pyc
 ${PYSITELIB}/simplejson/tests/_cibw_runner.pyo
+${PYSITELIB}/simplejson/tests/_helpers.py
+${PYSITELIB}/simplejson/tests/_helpers.pyc
+${PYSITELIB}/simplejson/tests/_helpers.pyo
 ${PYSITELIB}/simplejson/tests/test_bigint_as_string.py
 ${PYSITELIB}/simplejson/tests/test_bigint_as_string.pyc
 ${PYSITELIB}/simplejson/tests/test_bigint_as_string.pyo
@@ -74,6 +77,9 @@ ${PYSITELIB}/simplejson/tests/test_float.pyo
 ${PYSITELIB}/simplejson/tests/test_for_json.py
 ${PYSITELIB}/simplejson/tests/test_for_json.pyc
 ${PYSITELIB}/simplejson/tests/test_for_json.pyo
+${PYSITELIB}/simplejson/tests/test_free_threading.py
+${PYSITELIB}/simplejson/tests/test_free_threading.pyc
+${PYSITELIB}/simplejson/tests/test_free_threading.pyo
 ${PYSITELIB}/simplejson/tests/test_indent.py
 ${PYSITELIB}/simplejson/tests/test_indent.pyc
 ${PYSITELIB}/simplejson/tests/test_indent.pyo
@@ -116,6 +122,9 @@ ${PYSITELIB}/simplejson/tests/test_str_subclass.pyo
 ${PYSITELIB}/simplejson/tests/test_subclass.py
 ${PYSITELIB}/simplejson/tests/test_subclass.pyc
 ${PYSITELIB}/simplejson/tests/test_subclass.pyo
+${PYSITELIB}/simplejson/tests/test_subinterpreters.py
+${PYSITELIB}/simplejson/tests/test_subinterpreters.pyc
+${PYSITELIB}/simplejson/tests/test_subinterpreters.pyo
 ${PYSITELIB}/simplejson/tests/test_tool.py
 ${PYSITELIB}/simplejson/tests/test_tool.pyc
 ${PYSITELIB}/simplejson/tests/test_tool.pyo
