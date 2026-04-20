@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27142 2026/04/20 08:20:59 wiz Exp $
+$NetBSD: TODO,v 1.27143 2026/04/20 09:53:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -960,7 +960,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o netramet-50
 	o nettle-4.0 [wip; wait at least for https://gitlab.com/gnutls/gnutls/-/issues/1791 to be fixed]
 	o newmail-1.0.2
-	o nginx-1.30
 	o nginx-devel-1.29.7
 	o nicotine-plus-3.3.10
 	o nim-2.2.6
@@ -1138,7 +1137,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-omniORBpy-3.7
-	o py-pandas-3.0.0
+	o py-pandas-3.0.1
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
 	o py-simpletal-5.1
