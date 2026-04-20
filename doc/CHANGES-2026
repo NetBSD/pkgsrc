@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2501 2026/04/20 16:35:54 vins Exp $
+$NetBSD: CHANGES-2026,v 1.2502 2026/04/20 18:08:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3867,3 +3867,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/xfile to 1.1.0 [vins 2026-04-20]
 	Updated graphics/ximaging to 1.9.1 [vins 2026-04-20]
 	Updated comms/syncterm to 1.8 [vins 2026-04-20]
+	Updated multimedia/x265 to 4.2 [adam 2026-04-20]
+	Updated devel/buf to 1.68.2 [adam 2026-04-20]
