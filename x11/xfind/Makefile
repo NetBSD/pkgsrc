@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/10/12 08:24:30 vins Exp $
+# $NetBSD: Makefile,v 1.4 2026/04/20 15:48:19 vins Exp $
 
 DISTNAME=	xfind-src
-PKGNAME=	xfind-1.0.3
-PKGREVISION=	1
+PKGNAME=	xfind-1.0.4
 CATEGORIES=	x11
 MASTER_SITES=	https://fastestcode.org/dl/
 DIST_SUBDIR=	${PKGNAME_NOREV}
