@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.6 2025/10/12 06:01:33 vins Exp $
+$NetBSD: distinfo,v 1.7 2026/04/20 16:34:27 vins Exp $
 
-BLAKE2s (syncterm-1.7-src.tgz) = e6fd824f92a3a52d5546063aca83c2e0b627225244e7b28dbd4df0bac9d3811e
-SHA512 (syncterm-1.7-src.tgz) = 3d1826eb36336c5b450932f0400f88d1fcb0819cf67e68daf2acfcb337f9d33faa789904b57c60a4c354ceffbfc651bdf367528632e0bc155933d85c20e1fabc
-Size (syncterm-1.7-src.tgz) = 11002120 bytes
+BLAKE2s (syncterm-1.8-src.tgz) = 893c0871ebc78576ef8b91fdb8e3448e8350b761eeb0a941fd01bb5c2cca9743
+SHA512 (syncterm-1.8-src.tgz) = 5f3fb052720bdc45992e3581471472348db19d7643694007a6873595c377e5bfcc1834ef51f54611bf007df910fe70f5228548d6b7b69c0ba95b0d00c2571398
+Size (syncterm-1.8-src.tgz) = 14642645 bytes
 SHA1 (patch-src_build_Common.gmake) = daf111dc2742c2d21bdb87ef9250c4dad761f790
 SHA1 (patch-src_sbbs3_zmodem.c) = 0efa8f5a778c23384be2fcbf80ee8413d244930a
 SHA1 (patch-src_syncterm_GNUmakefile) = fb15798bf0fc75482e687b9ee1e2989560578df9
 SHA1 (patch-src_syncterm_conn__pty.c) = b9b97f189ff6a0583488ea6b236ae6a29a76ebfd
-SHA1 (patch-src_syncterm_syncterm.man.in) = 77a5a605d51c76a423bc8a374346cd945fda087a
+SHA1 (patch-src_syncterm_syncterm.man.in) = 28bb1480d210c86352c1549989087e739441b5fa
 SHA1 (patch-src_xpdev_Common.gmake) = 331aaa099a7966aba0895238cd5c1ef649ae14a6
 SHA1 (patch-src_xpdev_genwrap.h) = 170c70ff745e6cc5dc53b187505e7ff5e0d47417
 SHA1 (patch-src_xpdev_sockwrap.h) = 1baa36e682afc8ffd7998925011d1e49a2cc77d6
