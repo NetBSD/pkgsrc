@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.60 2026/02/22 10:53:32 wiz Exp $
+$NetBSD: distinfo,v 1.61 2026/04/20 13:11:28 adam Exp $
 
-BLAKE2s (fluidsynth-2.5.3.tar.gz) = 8e373991b232b57b014d87b4f3969ce11722bf243666d361ff7809fa4b3bb746
-SHA512 (fluidsynth-2.5.3.tar.gz) = 704d14f16a2d9adfc19700fd79dc96c76557876b15abc3afa7d2b9545e2e19810ee797b8614851b81243e3fc8d0871b4053080321a0fa292141a7a522431eeeb
-Size (fluidsynth-2.5.3.tar.gz) = 2114732 bytes
+BLAKE2s (fluidsynth-2.5.4.tar.gz) = 69a8c2fb87999e8e9abde75e5cf03c4ab76e3c99fded777f13c8ac8dcbeee664
+SHA512 (fluidsynth-2.5.4.tar.gz) = 7539e32a56309ce61c4178dad38ac8aae82ebab37398e1a7b6d1e2d5abd0af73ae7af35358e655a935666c7e6fde30885a0d6e4b7ad8b129ab02f6aad8f18dd0
+Size (fluidsynth-2.5.4.tar.gz) = 2115539 bytes
 SHA1 (patch-include_fluidsynth_log.h) = ea7ed3939306fff3f6f2362eb641f3162ad0395b
