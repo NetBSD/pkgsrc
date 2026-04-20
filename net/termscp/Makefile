@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2025/12/20 20:05:18 pin Exp $
+# $NetBSD: Makefile,v 1.25 2026/04/20 12:24:24 pin Exp $
 
-DISTNAME=	termscp-0.19.1
+DISTNAME=	termscp-1.0.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=veeso/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,7 +11,6 @@ COMMENT=	Feature rich TUI file transfer and explorer
 LICENSE=	mit
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
-TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
 
 # See, https://github.com/briansmith/ring/issues/1999
 .include "../../mk/compiler/i386-sse2.mk"
