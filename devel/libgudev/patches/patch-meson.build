@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2026/04/20 19:30:38 vins Exp $
+
+Respect eudev versioning and allow it to build with libudev-bsd.
+
+--- meson.build.orig	2026-04-20 19:03:29.195905624 +0000
++++ meson.build
+@@ -41,7 +41,7 @@ vapidir = join_paths(datadir, 'vala', 'v
+ cc = meson.get_compiler('c')
+ 
+ glib_req = '>= 2.38.0'
+-libudev_req = '>= 251'
++libudev_req = '>= 243'
+ 
+ glib_dep = dependency('glib-2.0', version: glib_req)
+ gobject_dep = dependency('gobject-2.0', version: glib_req)
