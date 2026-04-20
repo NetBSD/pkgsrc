@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2478 2026/04/20 06:24:56 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2479 2026/04/20 06:31:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3837,3 +3837,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/nushell to 0.112.2 [adam 2026-04-20]
 	Updated sysutils/py-Glances to 4.5.4 [fox 2026-04-20]
 	Updated devel/lua-gi to 0.9.2nb5 [wiz 2026-04-20]
+	Updated geography/gdal-lib to 3.12.3nb1 [wiz 2026-04-20]
