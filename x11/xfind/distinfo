@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2025/10/12 08:24:30 vins Exp $
+$NetBSD: distinfo,v 1.4 2026/04/20 15:48:19 vins Exp $
 
-BLAKE2s (xfind-1.0.3/xfind-src.tar.xz) = b56c7abfcd27cc23a192d963ecad700087f86b9813a50cc80277c2a20fa2120f
-SHA512 (xfind-1.0.3/xfind-src.tar.xz) = b8bd28d371e332f05b0bc1f350744b57f9f0844a9381604777a7fb16ac8abb09d5bcafb7f1159f9d29d1f2d37cf07f091d36e033f1535f0b5de020098d37f2c9
-Size (xfind-1.0.3/xfind-src.tar.xz) = 15676 bytes
+BLAKE2s (xfind-1.0.4/xfind-src.tar.xz) = 259c3309d06e02f39cee80a0351ce90155ba863f4e1f6b33211af5095ca33100
+SHA512 (xfind-1.0.4/xfind-src.tar.xz) = ba7d5ac03b37b98912af652e74792b42f9e9b854e4a537cdd7764dfd8c1778a1d75f17fbfdd93510bbfedd7727f8cdc69314bc4010156d861fdbcc6d83736de7
+Size (xfind-1.0.4/xfind-src.tar.xz) = 15896 bytes
 SHA1 (patch-make.local) = 5c5d0185088748a234a0e182ad2e4ca30971b01a
