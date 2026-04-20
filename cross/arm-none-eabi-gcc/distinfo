@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2026/02/25 09:15:03 triaxx Exp $
+$NetBSD: distinfo,v 1.18 2026/04/20 03:49:24 js Exp $
 
 BLAKE2s (gcc-14.3.0.tar.xz) = 70036c7d07767bba3476d19a6fd52f0b09dc05651c6cf5d136afe18ffa3b63a9
 SHA512 (gcc-14.3.0.tar.xz) = cb4e3259640721bbd275c723fe4df53d12f9b1673afb3db274c22c6aa457865dccf2d6ea20b4fd4c591f6152e6d4b87516c402015900f06ce9d43af66d3b7a93
@@ -7,7 +7,16 @@ BLAKE2s (newlib-4.5.0.20241231.tar.gz) = a5392dea147808d50a5a58f801b45795b05a7ba
 SHA512 (newlib-4.5.0.20241231.tar.gz) = d391ea3ac68ddb722909ef790f81ba4d6c35d9b2e0fcdb029f91a6c47db9ee94a686a2bdff211fb84025e1a317e257acfa59abda3fd2bc6609966798e1c604dc
 Size (newlib-4.5.0.20241231.tar.gz) = 9081514 bytes
 SHA1 (patch-gcc_config_arm_arm.h) = 2209c88f457bf8be72410f12ea899f8757ed0ada
+SHA1 (patch-gcc_plugin.cc) = 85facfdab177478fa423fafd0b4f7c1704e2f270
+SHA1 (patch-include_safe-ctype.h) = ffcaf03789db2dcc93e72a8f918b4251c369259b
 SHA1 (patch-libcc1_configure) = aec9713e7d8cd0bb4af1e25282cc161a3375e926
 SHA1 (patch-libcc1_connection.cc) = 2acd56a6f62b29ed3f02eecb7bf103e4564a442c
+SHA1 (patch-libcody_buffer.cc) = e214878a48c4ab9688d2a0dbe21bb43d81bc9ef2
+SHA1 (patch-libcody_client.cc) = 910fecb286993259597521a684dc561379e906e6
+SHA1 (patch-libcody_cody.hh) = 027ddbddf2c8c64c08a3ebce40d8eb7172ef848e
+SHA1 (patch-libcody_server.cc) = b21d32444ca6fc1637a5318d519c671d6a8aff66
 SHA1 (patch-libiberty_Makefile.in) = 6b7c61efc45586040c414fb6c716209064dbb432
+SHA1 (patch-libiberty_fibheap.c) = f11678ec725c773a18d03236ab4387d9ec9eef7d
+SHA1 (patch-libiberty_filedescriptor.c) = 51ad6812739b459d8cb37b6bd8afd5afb92dabd3
+SHA1 (patch-libiberty_pex-unix.c) = 7cf523e46d6c669785293f82fa8cf0b6c2b69895
 SHA1 (patch-zlib_zutil.h) = fe698a26a16fb2a290c5658616d8a945f97f33d3
