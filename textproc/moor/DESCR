@@ -21,4 +21,4 @@ been using Less.
   --wrap or by pressing w
 - Follows output as long as you are on the last line, just like tail -f
 - Renders terminal hyperlinks properly
-- Mouse Scrolling works out of the box (but look here for tradeoffs)
+- Mouse Scrolling works out of the box
