@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2503 2026/04/20 18:09:33 jperkin Exp $
+$NetBSD: CHANGES-2026,v 1.2504 2026/04/20 18:32:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3870,3 +3870,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/x265 to 4.2 [adam 2026-04-20]
 	Updated devel/buf to 1.68.2 [adam 2026-04-20]
 	Updated pkgtools/pkgin to 26.4.0 [jperkin 2026-04-20]
+	Added devel/gitlogue version 0.9.0 [pin 2026-04-20]
