@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2025/10/23 20:36:08 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/04/20 16:34:27 vins Exp $
 
-DISTNAME=	syncterm-1.7-src
+DISTNAME=	syncterm-1.8-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=syncterm/}
 EXTRACT_SUFX=	.tgz
@@ -31,6 +30,8 @@ CFLAGS.SunOS+=	-DNEEDS_CFMAKERAW -DNEEDS_FORKPTY # missing on SunOS
 .if ${MACHINE_ENDIAN} == "big"
 CFLAGS+=	-D__BIG_ENDIAN__		  # build on any big-endian arch
 .endif
+
+LDFLAGS+=	-lrt				  # shm_open()
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,12 +1,12 @@
-$NetBSD: patch-src_syncterm_syncterm.man.in,v 1.3 2025/10/12 06:01:33 vins Exp $
+$NetBSD: patch-src_syncterm_syncterm.man.in,v 1.4 2026/04/20 16:34:27 vins Exp $
 
 Do not embed DESTDIR in installed man paths.
 
---- src/syncterm/syncterm.man.in.orig	2025-02-11 18:23:24.000000000 +0000
+--- src/syncterm/syncterm.man.in.orig	2026-04-18 20:39:38.000000000 +0000
 +++ src/syncterm/syncterm.man.in
-@@ -119,7 +119,7 @@ The curses and ANSI modes are not necess
- a traditional screen mode. As such, filler will be added around the terminal
- screen. For some display sizes, unpredictable results may occur.
+@@ -139,7 +139,7 @@ In edit submenus (Edit Directory Entry, 
+ press \fB[\fP or \fB]\fP to navigate to the previous or next item
+ without returning to the parent list.
  .SH FILES
 -.IP \fI%%DESTDIR%%%%PREFIX%%/etc/syncterm.lst\fR
 +.IP \fI%%SYSTEM_LIST_DIR%%/syncterm.lst\fR
