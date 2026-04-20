@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2026/04/09 07:37:16 adam Exp $
+$NetBSD: distinfo,v 1.38 2026/04/20 05:22:39 adam Exp $
 
 BLAKE2s (bazil.org_fuse_@v_v0.0.0-20230120002735-62a210ff1fd5.mod) = 225c0fa58b0aa6a73d54a7fdc0a60aa15c9d7146d69852db44eaf94e951a7dda
 SHA512 (bazil.org_fuse_@v_v0.0.0-20230120002735-62a210ff1fd5.mod) = b6373bd882fed647d2429188ed33b4b336c51325daf868658b906e13b2e7a9d97b4233cca393728ea2f1bd07195552137917ab83a2efe2a494d62b06f514326b
@@ -3054,9 +3054,9 @@ Size (moul.io_http2curl_v2_@v_v2.3.0.mod) = 111 bytes
 BLAKE2s (moul.io_http2curl_v2_@v_v2.3.0.zip) = eb27d5414da4cc460bb369eec75503343a33238d49c69948e7a09fcbffb8f5aa
 SHA512 (moul.io_http2curl_v2_@v_v2.3.0.zip) = 993cc5935f86dd82e7dfaa4509ca3097a7bcc3b5e7f840472289b31cdb0d996cc912d9cc26b5b183447d89fa29d7aef2e389bcf3e5fb2102d3741e8b924360f2
 Size (moul.io_http2curl_v2_@v_v2.3.0.zip) = 26908 bytes
-BLAKE2s (rclone-1.73.4.tar.gz) = df84d1f6a52c655ca3c659be0f67ffb4fd960791ad46310ab9e8472426d0959f
-SHA512 (rclone-1.73.4.tar.gz) = 8580af22c3d26eae0f303c067360a8ddf3f2552bbdcd496a3bd51c7a4fc0398790f28d21dc786b2bfa5b7fd1f047f25a0470c2139d68c73bbfb32f0abe937ca9
-Size (rclone-1.73.4.tar.gz) = 17726471 bytes
+BLAKE2s (rclone-1.73.5.tar.gz) = 6b4e5960e8260d913f4c67dba822b0bf61c8cc7870c6b9dde27fa6651580b0c0
+SHA512 (rclone-1.73.5.tar.gz) = 3bc79ad8a12d39ac2c318135c9c5b5f4879a62696a686b9f5cbe057d041c45c1219ed05461f1eec4291b8a5236cc947ee8a79b7e4eaccac40840247dcd8c48da
+Size (rclone-1.73.5.tar.gz) = 17724666 bytes
 BLAKE2s (rsc.io_binaryregexp_@v_v0.2.0.mod) = 351240374eb48b99bb43b8b52aa8467662e22b18ebf216f4c123858fe706c2f8
 SHA512 (rsc.io_binaryregexp_@v_v0.2.0.mod) = db50ff677b0bdccbc1a1ad3df7c5cc76f2fcccf3ab99d08d1c2868440eb9b893fe89452f4286f7d42f2f16abf0f4acda67fe86e174dcfa730a743aafcc166774
 Size (rsc.io_binaryregexp_@v_v0.2.0.mod) = 36 bytes
