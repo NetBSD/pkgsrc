@@ -1,0 +1,16 @@
+$NetBSD: patch-src_plugins_acct__gather__profile_hdf5_Makefile.in,v 1.1 2026/04/20 06:22:58 wiz Exp $
+
+Fix
+undefined reference to `H5PTget_next'
+
+--- src/plugins/acct_gather_profile/hdf5/Makefile.in.orig	2026-04-20 06:19:44.155706582 +0000
++++ src/plugins/acct_gather_profile/hdf5/Makefile.in
+@@ -563,7 +563,7 @@ HDF5_API_SOURCES = hdf5_api.c hdf5_api.h
+ @BUILD_HDF5_TRUE@noinst_LTLIBRARIES = libhdf5_api.la
+ @BUILD_HDF5_TRUE@libhdf5_api_la_SOURCES = $(HDF5_API_SOURCES)
+ @BUILD_HDF5_TRUE@libhdf5_api_la_LDFLAGS = $(HDF5_LDFLAGS)
+-@BUILD_HDF5_TRUE@libhdf5_api_la_LIBADD = $(HDF5_LIBS)
++@BUILD_HDF5_TRUE@libhdf5_api_la_LIBADD = $(HDF5_LIBS) -lhdf5_hl
+ @BUILD_HDF5_TRUE@acct_gather_profile_hdf5_la_SOURCES = $(HDF5_SOURCES)
+ @BUILD_HDF5_TRUE@acct_gather_profile_hdf5_la_LDFLAGS = \
+ @BUILD_HDF5_TRUE@	$(PLUGIN_FLAGS) $(HDF5_LDFLAGS)
