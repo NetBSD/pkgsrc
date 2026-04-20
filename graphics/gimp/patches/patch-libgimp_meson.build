@@ -1,0 +1,16 @@
+$NetBSD: patch-libgimp_meson.build,v 1.1 2026/04/20 14:41:09 wiz Exp $
+
+This is a hack.
+pkgsrc as of 20260420 does not provide the necessary glib2 introspection files.
+
+--- libgimp/meson.build.orig	2026-04-20 14:36:25.118223673 +0000
++++ libgimp/meson.build
+@@ -384,7 +384,7 @@ endif
+   gio_specific_vapi = ''
+ endif
+ 
+-if glib.version().version_compare('>=2.87.3')
++if glib.version().version_compare('>=3.87.3')
+   if not platform_windows
+     glib_specific_gir = 'GLibUnix-2.0'
+   else
