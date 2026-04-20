@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2025/12/30 08:32:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2026/04/20 18:26:59 adam Exp $
 bin/borg
 bin/borgfs
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -185,9 +185,9 @@ ${PYSITELIB}/borg/testsuite/file_integrity.pyo
 ${PYSITELIB}/borg/testsuite/hashindex.py
 ${PYSITELIB}/borg/testsuite/hashindex.pyc
 ${PYSITELIB}/borg/testsuite/hashindex.pyo
-${PYSITELIB}/borg/testsuite/hashindex_stress.py
-${PYSITELIB}/borg/testsuite/hashindex_stress.pyc
-${PYSITELIB}/borg/testsuite/hashindex_stress.pyo
+${PYSITELIB}/borg/testsuite/hashindex_pytest.py
+${PYSITELIB}/borg/testsuite/hashindex_pytest.pyc
+${PYSITELIB}/borg/testsuite/hashindex_pytest.pyo
 ${PYSITELIB}/borg/testsuite/helpers.py
 ${PYSITELIB}/borg/testsuite/helpers.pyc
 ${PYSITELIB}/borg/testsuite/helpers.pyo
