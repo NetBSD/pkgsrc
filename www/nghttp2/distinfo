@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.79 2026/03/21 12:06:21 wiz Exp $
+$NetBSD: distinfo,v 1.80 2026/04/20 11:18:24 adam Exp $
 
-BLAKE2s (nghttp2-1.68.1.tar.xz) = d095e1af16f46bbd310e1a38ff0075389c4ee99b1a4201c499eb479cf031b088
-SHA512 (nghttp2-1.68.1.tar.xz) = d41d3422127d3190feedcd738bc477c00fa74068afbd5a08d84e954aaf20e172ea593a11db21cd70ddc63fe9550dab42cee55605d75dd4bca0f24ac1cd4b75d7
-Size (nghttp2-1.68.1.tar.xz) = 1675948 bytes
+BLAKE2s (nghttp2-1.69.0.tar.xz) = 71f495f06b67bfd3f5fcce79bab216a3a9ae60e4961f5afbafefd52627cc6f99
+SHA512 (nghttp2-1.69.0.tar.xz) = 31858cfd4a85995d006753c40393a7c23d2bfdd54fdb355757bef1a72b42177d31fff958e9e765a19d83e949eac77998e2bbe933b9390d1f2a1365506f5f6271
+Size (nghttp2-1.69.0.tar.xz) = 1696336 bytes
