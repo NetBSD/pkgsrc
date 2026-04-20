@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/08/24 19:51:30 wiz Exp $
+$NetBSD: distinfo,v 1.3 2026/04/20 13:51:11 adam Exp $
 
-BLAKE2s (editables-0.5.tar.gz) = f97e2a6f408a1557bb1af6eeaad95a78158d64a90ed7785179e633967d5ebe92
-SHA512 (editables-0.5.tar.gz) = eba54a4624d4df6b2aaf33a46da1dfd4b218da4f89c5832401b074eae089bc59e1eae9e16291374c9f0406923e4c9d02682dabbc91ad263203cb897ba7dc796f
-Size (editables-0.5.tar.gz) = 14744 bytes
+BLAKE2s (editables-0.6.tar.gz) = 7dcb5acd60a71d905759f4c627147c1327f935d8cb90acd5e078be18995ec1e7
+SHA512 (editables-0.6.tar.gz) = 9852fa7ab154b8f24572814b79ad2425edca2c5a54307e446674c33366f405c588af5a7c87344513912e7c707c5ecafc415f3b70c3b61eca39ba8fa53524d742
+Size (editables-0.6.tar.gz) = 16763 bytes
