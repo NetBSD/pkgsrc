@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.32 2026/04/16 06:33:50 wiz Exp $
+$NetBSD: distinfo,v 1.33 2026/04/20 10:02:51 tnn Exp $
 
 BLAKE2s (llvm-project-21.1.8.src.tar.xz) = e6db98fed167ddd56b49c7eb46c4de7e7e8e08158e9c99ae79806983bcb60ae9
 SHA512 (llvm-project-21.1.8.src.tar.xz) = cae4c44e7bf678071723da63ad5839491d717a7233e7f4791aa408207f3ea42f52de939ad15189b112c02a0770f1bb8d59bae6ad31ef53417a6eea7770fe52ab
 Size (llvm-project-21.1.8.src.tar.xz) = 158958576 bytes
 SHA1 (patch-CMakeLists.txt) = f8b0a0ad43481ec0c2923ec19c3c4f2ce81a4c82
 SHA1 (patch-cmake_config-ix.cmake) = 1a67378de34b048477ef80237ab8a76272288a55
+SHA1 (patch-lib_sanitizer__common_sanitizer__linux.cpp) = a58be997665264e16406ced3fdc2d1677ba41c8d
