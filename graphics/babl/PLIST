@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2026/03/15 07:16:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.36 2026/04/20 06:41:02 wiz Exp $
 bin/babl
 include/babl-0.1/babl/babl-introspect.h
 include/babl-0.1/babl/babl-macros.h
@@ -86,7 +86,7 @@ lib/babl-0.1/ycbcr.${SHLIB_EXT}
 lib/girepository-1.0/Babl-0.1.typelib
 lib/libbabl-0.1.${SHLIB_EXT}
 ${PLIST.not_Darwin}lib/libbabl-0.1.${SHLIB_EXT}.0
-${PLIST.not_Darwin}lib/libbabl-0.1.${SHLIB_EXT}.0.223.1
+${PLIST.not_Darwin}lib/libbabl-0.1.${SHLIB_EXT}.0.225.1
 ${PLIST.Darwin}lib/libbabl-0.1.0.${SHLIB_EXT}
 lib/pkgconfig/babl-0.1.pc
 share/gir-1.0/Babl-0.1.gir
