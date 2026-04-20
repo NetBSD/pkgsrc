@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2026/04/05 08:09:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2026/04/20 05:53:16 fox Exp $
 bin/glances-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -304,6 +304,15 @@ ${PYSITELIB}/glances/plugins/mem/__init__.pyo
 ${PYSITELIB}/glances/plugins/memswap/__init__.py
 ${PYSITELIB}/glances/plugins/memswap/__init__.pyc
 ${PYSITELIB}/glances/plugins/memswap/__init__.pyo
+${PYSITELIB}/glances/plugins/mpp/__init__.py
+${PYSITELIB}/glances/plugins/mpp/__init__.pyc
+${PYSITELIB}/glances/plugins/mpp/__init__.pyo
+${PYSITELIB}/glances/plugins/mpp/cards/mpp.py
+${PYSITELIB}/glances/plugins/mpp/cards/mpp.pyc
+${PYSITELIB}/glances/plugins/mpp/cards/mpp.pyo
+${PYSITELIB}/glances/plugins/mpp/cards/rockchip_mpp.py
+${PYSITELIB}/glances/plugins/mpp/cards/rockchip_mpp.pyc
+${PYSITELIB}/glances/plugins/mpp/cards/rockchip_mpp.pyo
 ${PYSITELIB}/glances/plugins/network/__init__.py
 ${PYSITELIB}/glances/plugins/network/__init__.pyc
 ${PYSITELIB}/glances/plugins/network/__init__.pyo
