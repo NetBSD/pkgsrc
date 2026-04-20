@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2025/12/14 19:02:51 vins Exp $
+# $NetBSD: Makefile,v 1.4 2026/04/20 18:44:42 vins Exp $
 
 DISTNAME=	sndio-1.10.0
 PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.sndio.org/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	http://www.sndio.org/
 COMMENT=	Small audio and MIDI framework
 LICENSE=	isc
