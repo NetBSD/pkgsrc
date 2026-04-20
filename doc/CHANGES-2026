@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2482 2026/04/20 09:53:08 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2483 2026/04/20 09:58:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3841,3 +3841,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/babl to 0.1.126 [wiz 2026-04-20]
 	Updated cad/ghdl to 6.0.0 [wiz 2026-04-20]
 	Updated www/nginx to 1.30.0 [wiz 2026-04-20]
+	Updated net/slumber to 5.2.5 [wiz 2026-04-20]
