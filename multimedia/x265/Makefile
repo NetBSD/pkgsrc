@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2026/02/18 07:58:02 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2026/04/20 18:05:25 adam Exp $
 
-DISTNAME=	x265_4.1
+DISTNAME=	x265_4.2
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	multimedia
 MASTER_SITES=	https://bitbucket.org/multicoreware/x265_git/downloads/
@@ -18,15 +18,6 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_PIC=ON
 # Set version here instead of relying on git; see patch-CMakeLists.txt
 CMAKE_CONFIGURE_ARGS+=	-DX265_VERSION=${PKGVERSION_NOREV}
 CMAKE_CONFIGURE_ARGS+=	-DX265_LATEST_TAG=${PKGVERSION_NOREV}
-# https://bitbucket.org/multicoreware/x265_git/issues/1008/build-fails-with-cmake-4
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
-
-SUBST_CLASSES+=		cr
-SUBST_STAGE.cr=		post-extract
-SUBST_FILES.cr+=	*
-SUBST_FILES.cr+=	*/*
-SUBST_FILTER_CMD.cr=	${TR} -d '\r'
-SUBST_NOOP_OK.cr=	yes
 
 .include "options.mk"
 
