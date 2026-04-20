@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/11/15 12:02:44 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/04/20 08:20:49 wiz Exp $
 bin/ghdl
 bin/ghwdump
 include/ghdl/libghw.h
@@ -8,6 +8,7 @@ include/ghdl/vhpi_user.h
 include/ghdl/vpi_user.h
 lib/ghdl/ansi_color.sh
 lib/ghdl/ieee/v08/ieee-obj08.cf
+lib/ghdl/ieee/v19/ieee-obj19.cf
 lib/ghdl/ieee/v87/ieee-obj87.cf
 lib/ghdl/ieee/v93/ieee-obj93.cf
 lib/ghdl/src/ieee/math_complex-body.vhdl
@@ -51,11 +52,15 @@ lib/ghdl/src/ieee2008/numeric_std_unsigned.vhdl
 lib/ghdl/src/ieee2008/std_logic_1164-body.vhdl
 lib/ghdl/src/ieee2008/std_logic_1164.vhdl
 lib/ghdl/src/ieee2008/std_logic_textio.vhdl
-lib/ghdl/src/std/env-body.vhdl
-lib/ghdl/src/std/env.vhdl
+lib/ghdl/src/std/v08/env-body.vhdl
+lib/ghdl/src/std/v08/env.vhdl
 lib/ghdl/src/std/v08/standard.vhdl
 lib/ghdl/src/std/v08/textio-body.vhdl
 lib/ghdl/src/std/v08/textio.vhdl
+lib/ghdl/src/std/v19/env-body.vhdl
+lib/ghdl/src/std/v19/env.vhdl
+lib/ghdl/src/std/v19/textio-body.vhdl
+lib/ghdl/src/std/v19/textio.vhdl
 lib/ghdl/src/std/v87/standard.vhdl
 lib/ghdl/src/std/v87/textio-body.vhdl
 lib/ghdl/src/std/v87/textio.vhdl
@@ -83,6 +88,7 @@ lib/ghdl/src/vital95/vital_primitives.vhdl
 lib/ghdl/src/vital95/vital_timing-body.vhdl
 lib/ghdl/src/vital95/vital_timing.vhdl
 lib/ghdl/std/v08/std-obj08.cf
+lib/ghdl/std/v19/std-obj19.cf
 lib/ghdl/std/v87/std-obj87.cf
 lib/ghdl/std/v93/std-obj93.cf
 lib/ghdl/vendors/README.md
@@ -101,7 +107,7 @@ lib/ghdl/vendors/config.sh
 lib/ghdl/vendors/filter.analyze.sh
 lib/ghdl/vendors/shared.psm1
 lib/ghdl/vendors/shared.sh
-lib/libghdl-5_1_1.so
+lib/libghdl-6_0_0.so
 lib/libghdl.a
 lib/libghdl.link
 lib/libghdlvpi.so
