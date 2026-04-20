@@ -1,20 +1,16 @@
-$NetBSD: distinfo,v 1.7 2025/11/03 16:47:31 vins Exp $
+$NetBSD: distinfo,v 1.8 2026/04/20 16:06:01 vins Exp $
 
-BLAKE2s (xfile-1.0.2/xfile-addon.tar.xz) = 4ea033bd0c59337797eaa106e5f2e7d1064a79e3a8895a6af0b6d1e8b4739781
-SHA512 (xfile-1.0.2/xfile-addon.tar.xz) = db64405367fe4594369b21c0cdeffda3fa8de53e0e468dde09d9c6f295fc5e2b7225ab593ca6917f4b487a71bd4df7c41257b0a881124a3f0a7758707f94477d
-Size (xfile-1.0.2/xfile-addon.tar.xz) = 9848 bytes
-BLAKE2s (xfile-1.0.2/xfile-slanted-icons.tar.xz) = 05d15677163ae69cd7184af0f96006303129d70ab4bebecf5187399f4b6b2761
-SHA512 (xfile-1.0.2/xfile-slanted-icons.tar.xz) = 0598f553d8f45487ceedd0495a115d0f1618e2fb18657e3d9ce7ae3ef0040c9b06aa9bf7224eeb59856f9e9f1258a666a4c52f46ca5edd25f8e29e4105387d50
-Size (xfile-1.0.2/xfile-slanted-icons.tar.xz) = 1772 bytes
-BLAKE2s (xfile-1.0.2/xfile-src-1.0.2.tar.xz) = 63ae56ff67684964b2cf8593a3830a35315ca2cfe9ccfda11d7795e5849b40be
-SHA512 (xfile-1.0.2/xfile-src-1.0.2.tar.xz) = 801249d41fe7a52ccfe39368fd5711fc237ea8eff98ea6d6c9ab441d20d63993671e1d754ca56404f922597e0619af87c193080c4ef40c2c524290475e4ae1de
-Size (xfile-1.0.2/xfile-src-1.0.2.tar.xz) = 120828 bytes
-BLAKE2s (xfile-1.0.2/xfile-xdgsvc-src.tar.xz) = 17134f7556d67f1d340733e106c2b17903306ec07ad760fcd418f09b8f35df93
-SHA512 (xfile-1.0.2/xfile-xdgsvc-src.tar.xz) = df53d6db5eef47d3c1252d2a9346f0c56ec474622c54ebe0f3cb39ce45cca876315fa9e2ac333295f0be46e812b21b8d2e14bc08f9dc5914cd3aee2cdfac87b4
-Size (xfile-1.0.2/xfile-xdgsvc-src.tar.xz) = 3616 bytes
+BLAKE2s (xfile-1.1.0/xfile-addon.tar.xz) = ff4e29d0ef3e4bfdf7fed6a0498400e5c6a5440901b8599d6c3d819ac425c236
+SHA512 (xfile-1.1.0/xfile-addon.tar.xz) = a6b62fc105c9b4126ad42d45617d618bac37c24ac869ef15e11ebe6cac160c9dd36a016d6429f178df3d6268adcdfcdfce3377ad90f55a51837f34cbd37b6433
+Size (xfile-1.1.0/xfile-addon.tar.xz) = 9896 bytes
+BLAKE2s (xfile-1.1.0/xfile-slanted-icons.tar.xz) = 05d15677163ae69cd7184af0f96006303129d70ab4bebecf5187399f4b6b2761
+SHA512 (xfile-1.1.0/xfile-slanted-icons.tar.xz) = 0598f553d8f45487ceedd0495a115d0f1618e2fb18657e3d9ce7ae3ef0040c9b06aa9bf7224eeb59856f9e9f1258a666a4c52f46ca5edd25f8e29e4105387d50
+Size (xfile-1.1.0/xfile-slanted-icons.tar.xz) = 1772 bytes
+BLAKE2s (xfile-1.1.0/xfile-src-1.1.0.tar.xz) = a04b2de7eb61327f19c158b1430db87e4581a1fc3c8b71d51b3d5ad35b1556a7
+SHA512 (xfile-1.1.0/xfile-src-1.1.0.tar.xz) = 698eb44fd9945e49e6205660a68c3b4f66417cf33a1a74624ea362c9ce46b65c110fafd677632f76a6ad034c905fc570f92dc60c3129b9ce1c5514e906dabc59
+Size (xfile-1.1.0/xfile-src-1.1.0.tar.xz) = 123828 bytes
 SHA1 (patch-Makefile) = 1316be75730b7823d5f0f00adb243bc5b9100f26
 SHA1 (patch-mf_Makefile.pkgsrc) = 1be35b7c590b81366b22871883f783c5fa559cce
-SHA1 (patch-src_common.mf) = cb9bea7fe9d4223777b39c9cbe2514069c3861e6
-SHA1 (patch-src_mkicons.sh) = fba5d7bd304d14bdbbee39146302f8c427601b1a
+SHA1 (patch-src_common.mf) = d96c20197f7c462a511e3d6bc740e306c427e6d4
 SHA1 (patch-src_res_prefs.ad) = 5046e54572835754a4572001eefa8bd077ade04f
 SHA1 (patch-src_xdgsvc.mf) = 776de35bc93df1b63345a542bf712f328642e6c6
