@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2026/04/15 11:17:00 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2026/04/20 12:18:42 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -93,8 +93,21 @@ CARGO_CRATE_DEPENDS+=	thiserror-2.0.18
 CARGO_CRATE_DEPENDS+=	thiserror-impl-2.0.18
 CARGO_CRATE_DEPENDS+=	tiff-0.11.3
 CARGO_CRATE_DEPENDS+=	tree-sitter-0.26.8
+CARGO_CRATE_DEPENDS+=	tree-sitter-c-0.24.1
+CARGO_CRATE_DEPENDS+=	tree-sitter-cpp-0.23.4
+CARGO_CRATE_DEPENDS+=	tree-sitter-css-0.25.0
+CARGO_CRATE_DEPENDS+=	tree-sitter-go-0.25.0
+CARGO_CRATE_DEPENDS+=	tree-sitter-html-0.23.2
+CARGO_CRATE_DEPENDS+=	tree-sitter-javascript-0.25.0
+CARGO_CRATE_DEPENDS+=	tree-sitter-json-0.24.8
 CARGO_CRATE_DEPENDS+=	tree-sitter-language-0.1.7
+CARGO_CRATE_DEPENDS+=	tree-sitter-lua-0.5.0
+CARGO_CRATE_DEPENDS+=	tree-sitter-md-0.5.3
+CARGO_CRATE_DEPENDS+=	tree-sitter-python-0.25.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-rust-0.24.2
+CARGO_CRATE_DEPENDS+=	tree-sitter-toml-ng-0.7.0
+CARGO_CRATE_DEPENDS+=	tree-sitter-typescript-0.23.2
+CARGO_CRATE_DEPENDS+=	tree-sitter-yaml-0.7.2
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.24
 CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.13.2
 CARGO_CRATE_DEPENDS+=	wasi-0.11.1+wasi-snapshot-preview1
