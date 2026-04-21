@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_ozone_platform_wayland_host_wayland__exchange__data__provider.cc,v 1.2 2026/04/10 17:32:02 kikadf Exp $
+$NetBSD: patch-ui_ozone_platform_wayland_host_wayland__exchange__data__provider.cc,v 1.3 2026/04/21 15:21:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_exchange_data_provider.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- ui/ozone/platform/wayland/host/wayland_exchange_data_provider.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ ui/ozone/platform/wayland/host/wayland_exchange_data_provider.cc
 @@ -74,7 +74,7 @@ int MimeTypeToFormat(const std::string& 
    if (mime_type == ui::kMimeTypeDataTransferCustomData) {

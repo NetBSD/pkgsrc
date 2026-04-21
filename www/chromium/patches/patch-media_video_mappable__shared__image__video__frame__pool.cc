@@ -1,10 +1,10 @@
-$NetBSD: patch-media_video_mappable__shared__image__video__frame__pool.cc,v 1.2 2026/04/10 17:31:56 kikadf Exp $
+$NetBSD: patch-media_video_mappable__shared__image__video__frame__pool.cc,v 1.3 2026/04/21 15:21:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/mappable_shared_image_video_frame_pool.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- media/video/mappable_shared_image_video_frame_pool.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ media/video/mappable_shared_image_video_frame_pool.cc
 @@ -685,7 +685,7 @@ void MappableSharedImageVideoFramePool::
    }

@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_perfetto_src_base_periodic__task.cc,v 1.17 2026/04/10 17:32:00 kikadf Exp $
+$NetBSD: patch-third__party_perfetto_src_base_periodic__task.cc,v 1.18 2026/04/21 15:21:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/periodic_task.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- third_party/perfetto/src/base/periodic_task.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ third_party/perfetto/src/base/periodic_task.cc
 @@ -24,9 +24,10 @@
  #include "perfetto/base/time.h"

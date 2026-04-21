@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_vulkan__memory__allocator_include_vk__mem__alloc.h,v 1.17 2026/04/10 17:32:01 kikadf Exp $
+$NetBSD: patch-third__party_vulkan__memory__allocator_include_vk__mem__alloc.h,v 1.18 2026/04/21 15:21:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/vulkan_memory_allocator/include/vk_mem_alloc.h.orig	2026-04-06 16:25:54.000000000 +0000
+--- third_party/vulkan_memory_allocator/include/vk_mem_alloc.h.orig	2026-04-14 23:31:37.000000000 +0200
 +++ third_party/vulkan_memory_allocator/include/vk_mem_alloc.h
 @@ -2760,7 +2760,7 @@ void* vma_aligned_alloc(size_t alignment
  

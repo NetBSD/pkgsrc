@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.17 2026/04/10 17:32:02 kikadf Exp $
+$NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.18 2026/04/21 15:21:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/controls/textfield/textfield.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- ui/views/controls/textfield/textfield.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ ui/views/controls/textfield/textfield.cc
 @@ -87,7 +87,7 @@
  #include "base/win/win_util.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-net_third__party_quiche_BUILD.gn,v 1.17 2026/04/10 17:31:57 kikadf Exp $
+$NetBSD: patch-net_third__party_quiche_BUILD.gn,v 1.18 2026/04/21 15:21:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/third_party/quiche/BUILD.gn.orig	2026-04-06 16:25:54.000000000 +0000
+--- net/third_party/quiche/BUILD.gn.orig	2026-04-14 23:31:37.000000000 +0200
 +++ net/third_party/quiche/BUILD.gn
 @@ -28,7 +28,7 @@ import("//net/third_party/quiche/src/bui
  import("//testing/libfuzzer/fuzzer_test.gni")

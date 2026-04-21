@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_web__apps_web__app__integration__test__driver.cc,v 1.17 2026/04/10 17:31:51 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_web__apps_web__app__integration__test__driver.cc,v 1.18 2026/04/21 15:21:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc
 @@ -564,7 +564,7 @@ std::string GetFileExtension(FileExtensi
  }

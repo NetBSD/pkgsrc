@@ -1,10 +1,10 @@
-$NetBSD: patch-components_live__caption_caption__util.cc,v 1.17 2026/04/10 17:31:53 kikadf Exp $
+$NetBSD: patch-components_live__caption_caption__util.cc,v 1.18 2026/04/21 15:21:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/live_caption/caption_util.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- components/live_caption/caption_util.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ components/live_caption/caption_util.cc
 @@ -139,7 +139,7 @@ bool IsHeadlessCaptionFeatureSupported()
  std::string GetCaptionSettingsUrl() {

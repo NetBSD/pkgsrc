@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_skia_src_ports_SkOSFile__posix.cpp,v 1.17 2026/04/10 17:32:00 kikadf Exp $
+$NetBSD: patch-third__party_skia_src_ports_SkOSFile__posix.cpp,v 1.18 2026/04/21 15:21:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/skia/src/ports/SkOSFile_posix.cpp.orig	2026-04-06 16:25:54.000000000 +0000
+--- third_party/skia/src/ports/SkOSFile_posix.cpp.orig	2026-04-14 23:31:37.000000000 +0200
 +++ third_party/skia/src/ports/SkOSFile_posix.cpp
 @@ -25,7 +25,7 @@
  #endif

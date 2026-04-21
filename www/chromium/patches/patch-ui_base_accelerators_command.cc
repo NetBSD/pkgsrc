@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_accelerators_command.cc,v 1.16 2026/04/10 17:32:01 kikadf Exp $
+$NetBSD: patch-ui_base_accelerators_command.cc,v 1.17 2026/04/21 15:21:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/accelerators/command.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- ui/base/accelerators/command.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ ui/base/accelerators/command.cc
 @@ -80,7 +80,7 @@ std::string Command::CommandPlatform() {
    return ui::kKeybindingPlatformMac;

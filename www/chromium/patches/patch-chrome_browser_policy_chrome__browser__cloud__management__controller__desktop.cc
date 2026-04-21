@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_policy_chrome__browser__cloud__management__controller__desktop.cc,v 1.17 2026/04/10 17:31:49 kikadf Exp $
+$NetBSD: patch-chrome_browser_policy_chrome__browser__cloud__management__controller__desktop.cc,v 1.18 2026/04/21 15:21:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/policy/chrome_browser_cloud_management_controller_desktop.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- chrome/browser/policy/chrome_browser_cloud_management_controller_desktop.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ chrome/browser/policy/chrome_browser_cloud_management_controller_desktop.cc
 @@ -59,7 +59,7 @@
  #include "chrome/browser/policy/browser_dm_token_storage_mac.h"

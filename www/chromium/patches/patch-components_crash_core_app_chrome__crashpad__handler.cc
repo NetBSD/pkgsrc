@@ -1,10 +1,10 @@
-$NetBSD: patch-components_crash_core_app_chrome__crashpad__handler.cc,v 1.17 2026/04/10 17:31:52 kikadf Exp $
+$NetBSD: patch-components_crash_core_app_chrome__crashpad__handler.cc,v 1.18 2026/04/21 15:21:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/crash/core/app/chrome_crashpad_handler.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- components/crash/core/app/chrome_crashpad_handler.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ components/crash/core/app/chrome_crashpad_handler.cc
 @@ -6,5 +6,9 @@
  extern "C" int CrashpadHandlerMain(int argc, char* argv[]);

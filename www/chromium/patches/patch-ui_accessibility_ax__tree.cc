@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_accessibility_ax__tree.cc,v 1.16 2026/04/10 17:32:01 kikadf Exp $
+$NetBSD: patch-ui_accessibility_ax__tree.cc,v 1.17 2026/04/21 15:21:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/ax_tree.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- ui/accessibility/ax_tree.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ ui/accessibility/ax_tree.cc
 @@ -699,7 +699,7 @@ struct AXTreeUpdateState {
    // (crrev.com/c/2892259).

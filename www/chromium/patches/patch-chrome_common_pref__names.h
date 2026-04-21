@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_pref__names.h,v 1.17 2026/04/10 17:31:52 kikadf Exp $
+$NetBSD: patch-chrome_common_pref__names.h,v 1.18 2026/04/21 15:21:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/pref_names.h.orig	2026-04-06 16:25:54.000000000 +0000
+--- chrome/common/pref_names.h.orig	2026-04-14 23:31:37.000000000 +0200
 +++ chrome/common/pref_names.h
 @@ -1271,7 +1271,7 @@ inline constexpr char kGeminiSettings[] 
  inline constexpr char kAllowedDomainsForApps[] =
