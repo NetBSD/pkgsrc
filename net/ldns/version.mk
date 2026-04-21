@@ -1,8 +1,8 @@
-# $NetBSD: version.mk,v 1.2 2025/08/15 07:07:11 adam Exp $
+# $NetBSD: version.mk,v 1.3 2026/04/21 09:19:56 adam Exp $
 # used by net/ldns/Makefile
 # used by net/drill/Makefile
 
-LDNS_VERSION=	1.8.4
+LDNS_VERSION=	1.9.0
 
 DISTNAME=	ldns-${LDNS_VERSION}
 CATEGORIES=	net
