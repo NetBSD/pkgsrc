@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_themes_theme__service.cc,v 1.17 2026/04/10 17:31:50 kikadf Exp $
+$NetBSD: patch-chrome_browser_themes_theme__service.cc,v 1.18 2026/04/21 15:21:11 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/themes/theme_service.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- chrome/browser/themes/theme_service.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ chrome/browser/themes/theme_service.cc
 @@ -76,7 +76,7 @@
  #include "extensions/browser/extension_registry_observer.h"

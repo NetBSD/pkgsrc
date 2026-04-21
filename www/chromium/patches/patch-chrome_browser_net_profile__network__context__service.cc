@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_net_profile__network__context__service.cc,v 1.17 2026/04/10 17:31:49 kikadf Exp $
+$NetBSD: patch-chrome_browser_net_profile__network__context__service.cc,v 1.18 2026/04/21 15:21:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/net/profile_network_context_service.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- chrome/browser/net/profile_network_context_service.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ chrome/browser/net/profile_network_context_service.cc
 @@ -145,7 +145,7 @@
  #endif
@@ -33,12 +33,3 @@ $NetBSD: patch-chrome_browser_net_profile__network__context__service.cc,v 1.17 2
    return GetWrappedCertStore(profile_, std::move(store));
  #else
    return store;
-@@ -1306,7 +1306,7 @@ std::vector<uint8_t>
- ProfileNetworkContextService::GetEncryptedCachePrimaryKey() {
-   std::string encoded_encrypted_primary_key = profile_->GetPrefs()->GetString(
-       enterprise_connectors::kEncryptedCachePrimaryKey);
--  return base::Base64Decode(encoded_encrypted_primary_key).value_or({});
-+  return base::Base64Decode(encoded_encrypted_primary_key).value_or(std::vector<uint8_t>{});
- }
- 
- #endif  // BUILDFLAG(ENTERPRISE_CACHE_ENCRYPTION)

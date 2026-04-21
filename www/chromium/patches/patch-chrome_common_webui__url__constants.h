@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_webui__url__constants.h,v 1.17 2026/04/10 17:31:52 kikadf Exp $
+$NetBSD: patch-chrome_common_webui__url__constants.h,v 1.18 2026/04/21 15:21:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/webui_url_constants.h.orig	2026-04-06 16:25:54.000000000 +0000
+--- chrome/common/webui_url_constants.h.orig	2026-04-14 23:31:37.000000000 +0200
 +++ chrome/common/webui_url_constants.h
 @@ -428,12 +428,12 @@ bool IsSystemWebUIHost(std::string_view 
  #endif  // BUILDFLAG(IS_CHROMEOS)

@@ -1,10 +1,10 @@
-$NetBSD: patch-base_files_drive__info.h,v 1.17 2026/04/10 17:31:46 kikadf Exp $
+$NetBSD: patch-base_files_drive__info.h,v 1.18 2026/04/21 15:21:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/drive_info.h.orig	2026-04-06 16:25:54.000000000 +0000
+--- base/files/drive_info.h.orig	2026-04-14 23:31:37.000000000 +0200
 +++ base/files/drive_info.h
 @@ -48,7 +48,7 @@ struct BASE_EXPORT DriveInfo {
    std::optional<bool> has_seek_penalty;

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_paint__preview_player_player__compositor__delegate.cc,v 1.17 2026/04/10 17:31:53 kikadf Exp $
+$NetBSD: patch-components_paint__preview_player_player__compositor__delegate.cc,v 1.18 2026/04/21 15:21:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/paint_preview/player/player_compositor_delegate.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- components/paint_preview/player/player_compositor_delegate.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ components/paint_preview/player/player_compositor_delegate.cc
 @@ -394,8 +394,8 @@ void PlayerCompositorDelegate::ValidateP
    auto chrome_version = capture_result_->proto.metadata().chrome_version();

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_browser__management_browser__management__service.cc,v 1.15 2026/04/10 17:31:48 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_browser__management_browser__management__service.cc,v 1.16 2026/04/21 15:21:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/browser_management/browser_management_service.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- chrome/browser/enterprise/browser_management/browser_management_service.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ chrome/browser/enterprise/browser_management/browser_management_service.cc
 @@ -50,7 +50,7 @@ GetManagementStatusProviders(Profile* pr
  

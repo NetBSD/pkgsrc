@@ -1,12 +1,15 @@
-# $NetBSD: Makefile,v 1.52 2026/04/10 17:31:46 kikadf Exp $
+# $NetBSD: Makefile,v 1.53 2026/04/21 15:21:07 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			147.0.7727.55
+VERSION=			147.0.7727.101
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
 
+PROFILE_DISTFILES=		chromium-${VERSION}-profdata${EXTRACT_SUFX_C}
+SITES.${PROFILE_DISTFILES}=	https://nerd.hu/distfiles/
 DISTFILES+=			${DISTNAME}-lite${EXTRACT_SUFX_C}
+DISTFILES+=			${PROFILE_DISTFILES}
 
 # Sources to build on NetBSD
 NB_VERSION=			v145.1
@@ -22,7 +25,7 @@ EB_DISTNAME=			${MAKE} -C ../../www/esbuild -V DISTNAME
 GITHUB_SUBMODULES+=		evanw esbuild v${EB_DISTNAME:sh:C/^.*-//} esbuild
 
 # LLVM_MAJOR_VERSION
-LLVM_MV=			20
+LLVM_MV=			21
 
 MAINTAINER=			kikadf@NetBSD.org
 HOMEPAGE=			https://www.chromium.org/Home
@@ -32,7 +35,6 @@ LICENSE=			modified-bsd AND gnu-lgpl-v3 AND mpl-2.0
 USE_TOOLS+=			bash bison flex:pkgsrc gmake pax perl pkg-config
 TOOLS_PLATFORM.flex=		# override the platform definition to use pkgsrc's flex.
 USE_LANGUAGES=			c c++
-
 
 CHECK_PORTABILITY_SKIP+=	docs/website/site/for-testers/bug-reporting-guidelines/hanging-tabs/crash-with-gdb
 CHECK_PORTABILITY_SKIP+=	remoting/host/installer/mac/Scripts/remoting_preflight.sh
@@ -160,8 +162,8 @@ GN_SYSTEM_LIBS+=	libxslt
 GN_SYSTEM_LIBS+=	openh264
 GN_SYSTEM_LIBS+=	opus
 
-# while not llvm-21
-GN_ARGS+=	chrome_pgo_phase=0
+# llvm-21 compatible
+#GN_ARGS+=	chrome_pgo_phase=0
 
 GN_ARGS+=	clang_use_chrome_plugins=false
 GN_ARGS+=	disable_fieldtrial_testing_config=true
@@ -267,6 +269,7 @@ post-extract:
 	${CP} ${FILESDIR}/chromium.sh.in ${WRKSRC}/chromium.sh
 
 pre-configure:
+	# Build intternal ffmpeg
 	cd ${WRKSRC}/media/ffmpeg && \
 		${PYTHONBIN} scripts/build_ffmpeg.py \
 		${LOWER_OPSYS} ${FFMPEG_TARGET} --config-only --branding=${FFMPEG_BRAND}
@@ -275,6 +278,11 @@ pre-configure:
 .for ffmpeg_part in ${FFMPEG_PARTS}
 	cp -pR ${FFMPEG_BDIR}/${ffmpeg_part} ${FFMPEG_CDIR}
 .endfor
+
+	# Prepare profdata
+	cd ${WRKSRC}/chrome/build/pgo_profiles && \
+		_p=$$(echo *.profdata) && \
+		llvm-profdata merge $${_p}.txt --output=$${_p}
 
 	# Create symlink to NetBSD nodejs command.
 	${MKDIR} ${WRKSRC}/third_party/node/${LOWER_OPSYS}/node-${LOWER_OPSYS}/bin

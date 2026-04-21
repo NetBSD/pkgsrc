@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_side__panel_customize__chrome_customize__chrome__page__handler.h,v 1.13 2026/04/10 17:31:51 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_side__panel_customize__chrome_customize__chrome__page__handler.h,v 1.14 2026/04/21 15:21:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/side_panel/customize_chrome/customize_chrome_page_handler.h.orig	2026-04-06 16:25:54.000000000 +0000
+--- chrome/browser/ui/webui/side_panel/customize_chrome/customize_chrome_page_handler.h.orig	2026-04-14 23:31:37.000000000 +0200
 +++ chrome/browser/ui/webui/side_panel/customize_chrome/customize_chrome_page_handler.h
 @@ -217,7 +217,7 @@ class CustomizeChromePageHandler
    // value needs to be requeried by the page.
