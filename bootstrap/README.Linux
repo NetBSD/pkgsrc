@@ -1,4 +1,4 @@
-$NetBSD: README.Linux,v 1.15 2024/10/22 11:54:53 nia Exp $
+$NetBSD: README.Linux,v 1.16 2026/04/21 17:37:00 bsiegert Exp $
 
 # General
 
@@ -42,6 +42,11 @@ installed prior to attempting bootstrap:
 
 apt install cvs libncurses libncurses-dev gcc g++ zlib1g-dev \
 		zlib1g libssl-dev libudev-dev gawk
+
+# Slackware
+
+On a fresh installation of Slackware, you need to install the diffutils
+package if it is not already installed.
 
 # RedHat and derivatives
 
