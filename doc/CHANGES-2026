@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2508 2026/04/21 04:55:43 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2509 2026/04/21 05:12:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3879,3 +3879,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/py-psycopg2 to 2.9.12 [adam 2026-04-21]
 	Updated databases/redis to 8.6.2 [adam 2026-04-21]
 	Updated databases/py-redis to 7.4.0 [adam 2026-04-21]
+	Updated games/vms-empire to 1.21 [wiz 2026-04-21]
