@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2026/01/26 00:17:33 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/04/21 13:41:32 wiz Exp $
 
-DISTNAME=		libXpm-3.5.18
+DISTNAME=		libXpm-3.5.19
 CATEGORIES=		x11 graphics
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.xz
