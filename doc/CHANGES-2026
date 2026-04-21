@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2509 2026/04/21 05:12:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2510 2026/04/21 06:37:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3880,3 +3880,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/redis to 8.6.2 [adam 2026-04-21]
 	Updated databases/py-redis to 7.4.0 [adam 2026-04-21]
 	Updated games/vms-empire to 1.21 [wiz 2026-04-21]
+	Updated archivers/7-zip to 26.00 [adam 2026-04-21]
+	Updated sysutils/ansible-core to 2.20.5 [adam 2026-04-21]
