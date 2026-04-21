@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2512 2026/04/21 13:40:31 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.2513 2026/04/21 13:41:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3886,3 +3886,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ldns to 1.9.0 [adam 2026-04-21]
 	Updated net/drill to 1.9.0 [adam 2026-04-21]
 	Updated www/firefox140 to 140.10.0 [gutteridge 2026-04-21]
+	Updated x11/libXpm to 3.5.19 [wiz 2026-04-21]
