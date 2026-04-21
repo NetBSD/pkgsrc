@@ -1,12 +1,20 @@
-$NetBSD: patch-aa,v 1.8 2026/04/16 12:29:43 wiz Exp $
+$NetBSD: patch-aa,v 1.9 2026/04/21 05:12:14 wiz Exp $
 
 o Turn off optimizations present in DEBUG
 o Link against (generic) curses
 o Honors user's CFLAGS and LDFLAGS
 
---- Makefile.orig	2026-04-16 12:16:09.000000000 +0000
+--- Makefile.orig	2026-04-21 01:49:16.000000000 +0000
 +++ Makefile
-@@ -12,20 +12,20 @@ MANDIR      ?= $(DATADIR)/man
+@@ -5,20 +5,20 @@
+ # See the file COPYING, distributed with empire, for restriction
+ # and warranty information.
+ 
+-PREFIX      ?= /usr/local
++PREFIX      ?= $(PREFIX)/local
+ BINDIR      ?= $(PREFIX)/bin
+ DATADIR     ?= $(PREFIX)/share
+ MANDIR      ?= $(DATADIR)/man
  
  # Use -g to compile the program for debugging.
  #DEBUG = -g -DDEBUG
@@ -22,7 +30,8 @@ o Honors user's CFLAGS and LDFLAGS
  
  # You shouldn't have to modify anything below this line.
  
- VERSION=$(shell sed -n <NEWS '/^[0-9]/s/:.*//p' | head -1)
+@@ -43,7 +43,7 @@ VERSION=$(shell sed -n <NEWS.adoc '/^[0-9]/s/:.*//p' |
+ # Build
  
  # There's a dynamic format in the object-display routines; suppress the warning
 -CFLAGS = $(DEBUG) $(PROFILE) -Wall -Wextra -Werror -Wno-format-security -Wno-unused-parameter
@@ -30,8 +39,8 @@ o Honors user's CFLAGS and LDFLAGS
  
  FILES = \
  	attack.c \
-@@ -66,7 +66,7 @@ vms-empire: $(OFILES)
- all: vms-empire
+@@ -82,7 +82,7 @@ vms-empire: $(OFILES)
+ all: vms-empire vms-empire.1
  
  vms-empire: $(OFILES)
 -	$(CC) $(PROFILE) -o vms-empire $(OFILES) $(LIBS)
@@ -39,3 +48,31 @@ o Honors user's CFLAGS and LDFLAGS
  
  attack.o:: extern.h empire.h
  compmove.o:: extern.h empire.h
+@@ -126,20 +126,18 @@ install: empire.6 uninstall
+ install: empire.6 uninstall
+ 	install -m 0755 -d $(DESTDIR)$(BINDIR)
+ 	install -m 0755 -d $(DESTDIR)$(MANDIR)/man6
+-	install -m 0755 -d $(DESTDIR)/usr/share/applications/
+-	install -m 0755 -d $(DESTDIR)/usr/share/icons/hicolor/48x48/apps/
+-	install -m 0755 -d $(DESTDIR)/usr/share/appdata
++	install -m 0755 -d $(DESTDIR)$(PREFIX)/share/applications/
++	install -m 0755 -d $(DESTDIR)$(PREFIX)/share/icons/hicolor/48x48/apps/
++	install -m 0755 -d $(DESTDIR)$(PREFIX)/share/appdata
+ 	install -m 0755 vms-empire $(DESTDIR)$(BINDIR)/
+ 	install -m 0644 empire.6 $(DESTDIR)$(MANDIR)/man6/vms-empire.6
+-	install -m 0644 vms-empire.desktop $(DESTDIR)/usr/share/applications/
+-	install -m 0644 vms-empire.png $(DESTDIR)/usr/share/icons/hicolor/48x48/apps/
+-	install -m 0644 vms-empire.xml $(DESTDIR)/usr/share/appdata/
++	install -m 0644 vms-empire.desktop $(DESTDIR)$(PREFIX)/share/applications/
++	install -m 0644 vms-empire.png $(DESTDIR)$(PREFIX)/share/icons/hicolor/48x48/apps/
+ 
+ uninstall:
+ 	rm -f $(BINDIR)/vms-empire $(MANDIR)/man6/vms-empire.6
+-	rm -f /usr/share/applications/vms-empire.desktop
+-	rm -f /usr/share/icons/hicolor/48x48/apps/vms-empire.png
+-	rm -f /usr/share/appdata/vms-empire.xml
++	rm -f $(PREFIX)/share/applications/vms-empire.desktop
++	rm -f $(PREFIX)/share/icons/hicolor/48x48/apps/vms-empire.png
+ 
+ # Export
+ 

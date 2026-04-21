@@ -1,11 +1,6 @@
-$NetBSD: distinfo,v 1.15 2026/04/16 12:34:46 wiz Exp $
+$NetBSD: distinfo,v 1.16 2026/04/21 05:12:14 wiz Exp $
 
-BLAKE2s (vms-empire-1.20.tar.gz) = 467bdfd94d2b656c4e7acc95ad462c0c1e435e3c8faa63014572a72e35d5b3bc
-SHA512 (vms-empire-1.20.tar.gz) = f8d7e44cc2a9523b978b109a9c0994874227a554cfcdd05ddee66bdd79d5e557584e0a536de03744fc3f05c866f91bdf4e29ec3b42038d7a04c7a448e2551173
-Size (vms-empire-1.20.tar.gz) = 114918 bytes
-SHA1 (patch-aa) = 1dd1269a0e9c1d368c93c9a679ad7ab8373a369c
-SHA1 (patch-edit.c) = d046511e799b13c6c0914bf127fe81280155308e
-SHA1 (patch-game.c) = 4476aab0b21392c4853fe72d7a362b62cb7eb7db
-SHA1 (patch-object.c) = e5c0b67ac0f6bbc255168ed5eb7e9066bac8a576
-SHA1 (patch-term.c) = e80c76c44847b0181500baa8d7ea4d0ea28b41a7
-SHA1 (patch-usermove.c) = 279ea76ef7602a2f46627d32233d58587b928c83
+BLAKE2s (vms-empire-1.21.tar.gz) = 50333a75f5083f842796be1071e1edd22213296049d0ec947bf081272c4152cc
+SHA512 (vms-empire-1.21.tar.gz) = 889f96548e4a7d3b4e14bbc05dc793f7546a98482078b243f8282b4bbfe104faf68fe15ee9e748bcbacfceab5e1399401c5f3963fe6d4e2acb17b7db33ce331d
+Size (vms-empire-1.21.tar.gz) = 113309 bytes
+SHA1 (patch-aa) = 5b5649521dd9ee8a0b25468f4c0bd97f0fbc99a6
