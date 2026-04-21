@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.92 2026/04/20 05:11:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.93 2026/04/21 18:29:06 bsiegert Exp $
 ${PLIST.introspection}bin/hb-info
 ${PLIST.introspection}bin/hb-raster
 ${PLIST.introspection}bin/hb-shape
@@ -55,7 +55,7 @@ ${PLIST.introspection}lib/libharfbuzz-gobject.so.0
 ${PLIST.introspection}lib/libharfbuzz-gobject.so.0.${SOVER}.0
 lib/libharfbuzz-gpu.so
 lib/libharfbuzz-gpu.so.0
-lib/libharfbuzz-gpu.so.0.61420.0
+lib/libharfbuzz-gpu.so.0.${SOVER}.0
 lib/libharfbuzz-raster.so
 lib/libharfbuzz-raster.so.0
 lib/libharfbuzz-raster.so.0.${SOVER}.0
@@ -131,6 +131,8 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-13-0-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-13-1-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-13-2-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-14-0-0.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-14-1-0.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-14-2-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-2-0-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-2-1-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-2-2-0.html
@@ -225,6 +227,7 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-version.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz.devhelp2
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/hb-gpu.png
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/hb-raster.png
+${PLIST.doc}share/gtk-doc/html/harfbuzz/hb-shape.png
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/hb-subset.png
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/hb-vector.png
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/home.png
