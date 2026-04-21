@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_browser__management_management__identity.cc,v 1.1 2026/04/10 17:31:48 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_browser__management_management__identity.cc,v 1.2 2026/04/21 15:21:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/browser_management/management_identity.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- chrome/browser/enterprise/browser_management/management_identity.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ chrome/browser/enterprise/browser_management/management_identity.cc
 @@ -86,7 +86,7 @@ std::optional<std::string> GetDeviceMana
        g_browser_process->platform_part()->browser_policy_connector_ash();

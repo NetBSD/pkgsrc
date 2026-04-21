@@ -1,10 +1,10 @@
-$NetBSD: patch-components_visited__url__ranking_public_url__visit__util.cc,v 1.17 2026/04/10 17:31:54 kikadf Exp $
+$NetBSD: patch-components_visited__url__ranking_public_url__visit__util.cc,v 1.18 2026/04/21 15:21:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/visited_url_ranking/public/url_visit_util.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- components/visited_url_ranking/public/url_visit_util.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ components/visited_url_ranking/public/url_visit_util.cc
 @@ -68,7 +68,7 @@ PlatformType GetPlatformInput() {
    return PlatformType::kWindows;

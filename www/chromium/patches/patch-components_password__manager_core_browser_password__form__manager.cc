@@ -1,10 +1,10 @@
-$NetBSD: patch-components_password__manager_core_browser_password__form__manager.cc,v 1.17 2026/04/10 17:31:53 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_browser_password__form__manager.cc,v 1.18 2026/04/21 15:21:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_form_manager.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- components/password_manager/core/browser/password_form_manager.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ components/password_manager/core/browser/password_form_manager.cc
 @@ -236,7 +236,7 @@ bool ShouldUploadCrowdsourcingVotes(cons
    return false;

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.17 2026/04/10 17:31:47 kikadf Exp $
+$NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.18 2026/04/21 15:21:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/app/chrome_main_delegate.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- chrome/app/chrome_main_delegate.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ chrome/app/chrome_main_delegate.cc
 @@ -103,7 +103,7 @@
  #include "ui/base/ui_base_switches.h"

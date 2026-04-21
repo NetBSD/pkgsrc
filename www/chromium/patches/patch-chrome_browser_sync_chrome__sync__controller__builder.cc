@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_sync_chrome__sync__controller__builder.cc,v 1.17 2026/04/10 17:31:49 kikadf Exp $
+$NetBSD: patch-chrome_browser_sync_chrome__sync__controller__builder.cc,v 1.18 2026/04/21 15:21:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sync/chrome_sync_controller_builder.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- chrome/browser/sync/chrome_sync_controller_builder.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ chrome/browser/sync/chrome_sync_controller_builder.cc
 @@ -297,7 +297,7 @@ ChromeSyncControllerBuilder::Build(synce
  #if BUILDFLAG(ENABLE_SPELLCHECK)

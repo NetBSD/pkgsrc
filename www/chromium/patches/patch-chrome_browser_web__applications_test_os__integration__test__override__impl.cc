@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__override__impl.cc,v 1.17 2026/04/10 17:31:52 kikadf Exp $
+$NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__override__impl.cc,v 1.18 2026/04/21 15:21:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/test/os_integration_test_override_impl.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- chrome/browser/web_applications/test/os_integration_test_override_impl.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ chrome/browser/web_applications/test/os_integration_test_override_impl.cc
 @@ -46,7 +46,7 @@
  #include "third_party/skia/include/core/SkBitmap.h"

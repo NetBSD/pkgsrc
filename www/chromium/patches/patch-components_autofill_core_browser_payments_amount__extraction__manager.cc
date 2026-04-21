@@ -1,10 +1,10 @@
-$NetBSD: patch-components_autofill_core_browser_payments_amount__extraction__manager.cc,v 1.15 2026/04/10 17:31:52 kikadf Exp $
+$NetBSD: patch-components_autofill_core_browser_payments_amount__extraction__manager.cc,v 1.16 2026/04/21 15:21:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/payments/amount_extraction_manager.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- components/autofill/core/browser/payments/amount_extraction_manager.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ components/autofill/core/browser/payments/amount_extraction_manager.cc
 @@ -270,7 +270,7 @@ void AmountExtractionManager::OnCheckout
                                               /*timeout_reached=*/false);

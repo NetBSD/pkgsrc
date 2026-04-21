@@ -1,10 +1,10 @@
-$NetBSD: patch-media_mojo_mojom_video__frame__mojom__traits.cc,v 1.17 2026/04/10 17:31:56 kikadf Exp $
+$NetBSD: patch-media_mojo_mojom_video__frame__mojom__traits.cc,v 1.18 2026/04/21 15:21:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/mojo/mojom/video_frame_mojom_traits.cc.orig	2026-04-06 16:25:54.000000000 +0000
+--- media/mojo/mojom/video_frame_mojom_traits.cc.orig	2026-04-14 23:31:37.000000000 +0200
 +++ media/mojo/mojom/video_frame_mojom_traits.cc
 @@ -23,7 +23,7 @@
  #include "ui/gfx/mojom/color_space_mojom_traits.h"
@@ -33,7 +33,7 @@ $NetBSD: patch-media_mojo_mojom_video__frame__mojom__traits.cc,v 1.17 2026/04/10
  // static
  bool StructTraits<
      media::mojom::ColorPlaneLayoutDataView,
-@@ -381,7 +381,7 @@ bool StructTraits<media::mojom::VideoFra
+@@ -414,7 +414,7 @@ bool StructTraits<media::mojom::VideoFra
      frame = media::VideoFrame::WrapTrackingToken(
          format, *metadata.tracking_token, coded_size, visible_rect,
          natural_size, timestamp);

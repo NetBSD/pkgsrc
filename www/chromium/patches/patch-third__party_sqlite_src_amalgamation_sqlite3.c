@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_sqlite_src_amalgamation_sqlite3.c,v 1.17 2026/04/10 17:32:00 kikadf Exp $
+$NetBSD: patch-third__party_sqlite_src_amalgamation_sqlite3.c,v 1.18 2026/04/21 15:21:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/sqlite/src/amalgamation/sqlite3.c.orig	2026-04-06 16:25:54.000000000 +0000
+--- third_party/sqlite/src/amalgamation/sqlite3.c.orig	2026-04-14 23:31:37.000000000 +0200
 +++ third_party/sqlite/src/amalgamation/sqlite3.c
 @@ -14749,7 +14749,7 @@ struct fts5_api {
  ** But _XOPEN_SOURCE define causes problems for Mac OS X, so omit

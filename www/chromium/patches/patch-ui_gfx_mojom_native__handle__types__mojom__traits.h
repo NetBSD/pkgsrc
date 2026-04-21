@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gfx_mojom_native__handle__types__mojom__traits.h,v 1.17 2026/04/10 17:32:02 kikadf Exp $
+$NetBSD: patch-ui_gfx_mojom_native__handle__types__mojom__traits.h,v 1.18 2026/04/21 15:21:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/mojom/native_handle_types_mojom_traits.h.orig	2026-04-06 16:25:54.000000000 +0000
+--- ui/gfx/mojom/native_handle_types_mojom_traits.h.orig	2026-04-14 23:31:37.000000000 +0200
 +++ ui/gfx/mojom/native_handle_types_mojom_traits.h
 @@ -18,7 +18,7 @@
  #include "ui/gfx/gpu_memory_buffer_handle.h"
