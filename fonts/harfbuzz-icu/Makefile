@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2026/01/21 08:08:49 adam Exp $
+# $NetBSD: Makefile,v 1.34 2026/04/21 20:54:47 wiz Exp $
 
 # XXX: hack to override meson installation
 INSTALL_DIRS=
@@ -11,6 +11,7 @@ COMMENT=	OpenType text shaping engine (ICU integration)
 
 FORCE_CXX_STD=	gnu++17
 
+MESON_ARGS+=	-Ddocs=disabled
 MESON_ARGS+=	-Dicu=enabled
 MESON_ARGS+=	-Dtests=disabled # FIXME: build takes forever
 
