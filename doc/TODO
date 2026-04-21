@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27147 2026/04/21 13:41:41 wiz Exp $
+$NetBSD: TODO,v 1.27148 2026/04/21 15:46:53 abs Exp $
 
 Suggested new packages
 ======================
@@ -1257,7 +1257,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o swi-prolog-packages-9.2.9
 	o syft-0.68.1
 	o sympa-6.2.76
-	o syncthing-2.0
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
 	o systrace-1.6e
