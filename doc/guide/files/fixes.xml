@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.205 2026/04/10 08:41:35 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.206 2026/04/21 20:32:44 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1566,9 +1566,11 @@ gnu++03, gnu++11, gnu++14, gnu++17, gnu++20
     <filename>../../lang/rust/cargo.mk</filename>.</para>
 
     <orderedlist>
-      <listitem><para>Generate a list of those dependencies with
-      <command>make CARGO_ARGS="build --release" build &amp;&amp;
-      make print-cargo-depends > cargo-depends.mk</command>.</para></listitem>
+      <listitem><para>It will usually depend on a lot of other code
+      (distributed in so-called crates). Generate a list of those
+      dependencies with <command>make extract &amp;&amp; make
+      print-cargo-depends >
+      cargo-depends.mk</command>.</para></listitem>
 
       <listitem><para>Prepend
       <literal>.include "cargo-depends.mk"</literal> to any other
