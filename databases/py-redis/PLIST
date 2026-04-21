@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2025/11/21 09:07:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/04/21 04:55:25 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -81,6 +81,12 @@ ${PYSITELIB}/redis/asyncio/multidb/failure_detector.pyo
 ${PYSITELIB}/redis/asyncio/multidb/healthcheck.py
 ${PYSITELIB}/redis/asyncio/multidb/healthcheck.pyc
 ${PYSITELIB}/redis/asyncio/multidb/healthcheck.pyo
+${PYSITELIB}/redis/asyncio/observability/__init__.py
+${PYSITELIB}/redis/asyncio/observability/__init__.pyc
+${PYSITELIB}/redis/asyncio/observability/__init__.pyo
+${PYSITELIB}/redis/asyncio/observability/recorder.py
+${PYSITELIB}/redis/asyncio/observability/recorder.pyc
+${PYSITELIB}/redis/asyncio/observability/recorder.pyo
 ${PYSITELIB}/redis/asyncio/retry.py
 ${PYSITELIB}/redis/asyncio/retry.pyc
 ${PYSITELIB}/redis/asyncio/retry.pyo
@@ -246,6 +252,9 @@ ${PYSITELIB}/redis/credentials.pyo
 ${PYSITELIB}/redis/data_structure.py
 ${PYSITELIB}/redis/data_structure.pyc
 ${PYSITELIB}/redis/data_structure.pyo
+${PYSITELIB}/redis/driver_info.py
+${PYSITELIB}/redis/driver_info.pyc
+${PYSITELIB}/redis/driver_info.pyo
 ${PYSITELIB}/redis/event.py
 ${PYSITELIB}/redis/event.pyc
 ${PYSITELIB}/redis/event.pyo
@@ -294,9 +303,27 @@ ${PYSITELIB}/redis/multidb/failover.pyo
 ${PYSITELIB}/redis/multidb/failure_detector.py
 ${PYSITELIB}/redis/multidb/failure_detector.pyc
 ${PYSITELIB}/redis/multidb/failure_detector.pyo
-${PYSITELIB}/redis/multidb/healthcheck.py
-${PYSITELIB}/redis/multidb/healthcheck.pyc
-${PYSITELIB}/redis/multidb/healthcheck.pyo
+${PYSITELIB}/redis/observability/__init__.py
+${PYSITELIB}/redis/observability/__init__.pyc
+${PYSITELIB}/redis/observability/__init__.pyo
+${PYSITELIB}/redis/observability/attributes.py
+${PYSITELIB}/redis/observability/attributes.pyc
+${PYSITELIB}/redis/observability/attributes.pyo
+${PYSITELIB}/redis/observability/config.py
+${PYSITELIB}/redis/observability/config.pyc
+${PYSITELIB}/redis/observability/config.pyo
+${PYSITELIB}/redis/observability/metrics.py
+${PYSITELIB}/redis/observability/metrics.pyc
+${PYSITELIB}/redis/observability/metrics.pyo
+${PYSITELIB}/redis/observability/providers.py
+${PYSITELIB}/redis/observability/providers.pyc
+${PYSITELIB}/redis/observability/providers.pyo
+${PYSITELIB}/redis/observability/recorder.py
+${PYSITELIB}/redis/observability/recorder.pyc
+${PYSITELIB}/redis/observability/recorder.pyo
+${PYSITELIB}/redis/observability/registry.py
+${PYSITELIB}/redis/observability/registry.pyc
+${PYSITELIB}/redis/observability/registry.pyo
 ${PYSITELIB}/redis/ocsp.py
 ${PYSITELIB}/redis/ocsp.pyc
 ${PYSITELIB}/redis/ocsp.pyo
