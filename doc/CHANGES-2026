@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2510 2026/04/21 06:37:53 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2511 2026/04/21 09:20:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3882,3 +3882,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/vms-empire to 1.21 [wiz 2026-04-21]
 	Updated archivers/7-zip to 26.00 [adam 2026-04-21]
 	Updated sysutils/ansible-core to 2.20.5 [adam 2026-04-21]
+	Updated devel/mimalloc to 3.3.1 [adam 2026-04-21]
+	Updated net/ldns to 1.9.0 [adam 2026-04-21]
+	Updated net/drill to 1.9.0 [adam 2026-04-21]
