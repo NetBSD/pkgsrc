@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/12/16 22:28:31 roy Exp $
+$NetBSD: distinfo,v 1.4 2026/04/21 17:07:42 roy Exp $
 
-BLAKE2s (dhcpsd-0.0.6.tar.xz) = a623c776818760e36f7128906e9c9cfa577c2a5b68120cb95cc77a3ae6331da9
-SHA512 (dhcpsd-0.0.6.tar.xz) = f473cceeaac9a0362832dbaa1e3fe3ecb52c147f7401c51bb2209250cd9ef2a4499d34dbfeeeb4bdbc4cea994222486c48bfc1666ee888f536a26e1a081eb5c6
-Size (dhcpsd-0.0.6.tar.xz) = 96544 bytes
+BLAKE2s (dhcpsd-0.0.7.tar.xz) = 2973f00284429b9768b18adf6630cdabd7c9b7bc864b447b9ac22007f3b13a6f
+SHA512 (dhcpsd-0.0.7.tar.xz) = 72a0da041ef559ae630f553b27630dc18271e61c2fa0040eca169699e63635658b9aa6a1b3739b87b203b9c4c0a30a42f870afa91fc59f7bef5a606ef96766c1
+Size (dhcpsd-0.0.7.tar.xz) = 102992 bytes
