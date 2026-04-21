@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.458 2026/04/14 12:07:05 kikadf Exp $
+# $NetBSD: Makefile,v 1.459 2026/04/21 20:53:53 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -139,6 +139,7 @@ SUBDIR+=	greybeard
 SUBDIR+=	gsftopkk
 SUBDIR+=	gucharmap
 SUBDIR+=	harfbuzz
+SUBDIR+=	harfbuzz-docs
 SUBDIR+=	harfbuzz-icu
 SUBDIR+=	hubot-sans-ttf
 SUBDIR+=	ibm-plex-otf
