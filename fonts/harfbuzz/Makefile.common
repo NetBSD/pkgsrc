@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.82 2026/04/20 05:11:38 adam Exp $
+# $NetBSD: Makefile.common,v 1.83 2026/04/21 20:53:41 wiz Exp $
 # used by fonts/harfbuzz-icu/Makefile
+# used by fonts/harfbuzz-docs/Makefile
 
 DISTNAME=	harfbuzz-14.2.0
 CATEGORIES=	fonts
