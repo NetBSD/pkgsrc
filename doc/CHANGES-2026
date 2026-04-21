@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2516 2026/04/21 15:46:53 abs Exp $
+$NetBSD: CHANGES-2026,v 1.2517 2026/04/21 17:08:01 roy Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3890,3 +3890,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox140-l10n to 140.10.0 [gutteridge 2026-04-21]
 	Updated www/chromium to 147.0.7727.101 [kikadf 2026-04-21]
 	Updated net/syncthing to 2.0.16 [abs 2026-04-21]
+	Updated net/dhcpsd to 0.0.7 [roy 2026-04-21]
