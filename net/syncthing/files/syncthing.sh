@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: syncthing.sh,v 1.3 2022/05/18 20:45:36 triaxx Exp $
+# $NetBSD: syncthing.sh,v 1.4 2026/04/21 15:45:47 abs Exp $
 #
 # PROVIDE: syncthing
 # REQUIRE: DAEMON
@@ -25,8 +25,8 @@ load_rc_config $name
 : ${syncthing_logfile:=@VARBASE@/log/syncthing.log}
 
 command="@PREFIX@/bin/syncthing"
-command_args="-logfile ${syncthing_logfile}"
-command_args="${command_args} -home ${syncthing_home} > /dev/null &"
+command_args="--logfile ${syncthing_logfile}"
+command_args="${command_args} --home ${syncthing_home} > /dev/null &"
 
 syncthing_env="STNODEFAULTFOLDER=1"
 syncthing_env="${syncthing_env} USER=${syncthing_user}"
