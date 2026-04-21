@@ -7048,8 +7048,9 @@ have the package include ../../lang/go/go-module.mk.
 If a program is written in Rust and uses Cargo to build, have the package
 include ../../lang/rust/cargo.mk.
 
- 1. Generate a list of those dependencies with make CARGO_ARGS="build
-    --release" build && make print-cargo-depends > cargo-depends.mk.
+ 1. It will usually depend on a lot of other code (distributed in so-called
+    crates). Generate a list of those dependencies with make extract && make
+    print-cargo-depends > cargo-depends.mk.
 
  2. Prepend .include "cargo-depends.mk" to any other .includes.
 

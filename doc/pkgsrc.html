@@ -8831,9 +8831,11 @@ gnu++03, gnu++11, gnu++14, gnu++17, gnu++20
     have the package include
     <code class="filename">../../lang/rust/cargo.mk</code>.</p>
 <div class="orderedlist"><ol class="orderedlist" type="1">
-<li class="listitem"><p>Generate a list of those dependencies with
-      <span class="command"><strong>make CARGO_ARGS="build --release" build &amp;&amp;
-      make print-cargo-depends &gt; cargo-depends.mk</strong></span>.</p></li>
+<li class="listitem"><p>It will usually depend on a lot of other code
+      (distributed in so-called crates). Generate a list of those
+      dependencies with <span class="command"><strong>make extract &amp;&amp; make
+      print-cargo-depends &gt;
+      cargo-depends.mk</strong></span>.</p></li>
 <li class="listitem"><p>Prepend
       <code class="literal">.include "cargo-depends.mk"</code> to any other
       <code class="literal">.include</code>s.</p></li>
