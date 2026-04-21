@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1082 2026/04/13 17:04:02 kikadf Exp $
+# $NetBSD: Makefile,v 1.1083 2026/04/21 21:15:35 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -210,6 +210,7 @@ SUBDIR+=	libxfce4ui
 SUBDIR+=	libxfce4util
 SUBDIR+=	libxfce4windowing
 SUBDIR+=	libxkbcommon
+SUBDIR+=	libxkbcommon-docs
 SUBDIR+=	libxkbfile
 SUBDIR+=	libxklavier
 SUBDIR+=	libxshmfence
