@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2506 2026/04/21 04:43:23 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2507 2026/04/21 04:47:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3874,3 +3874,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated pkgtools/pkgin to 26.4.0 [jperkin 2026-04-20]
 	Added devel/gitlogue version 0.9.0 [pin 2026-04-20]
 	Updated shells/yash to 2.61 [vins 2026-04-20]
+	Updated devel/meson to 1.11.1 [adam 2026-04-21]
+	Updated devel/py-cachetools to 7.0.6 [adam 2026-04-21]
+	Updated databases/py-psycopg2 to 2.9.12 [adam 2026-04-21]
