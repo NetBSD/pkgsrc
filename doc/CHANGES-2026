@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2514 2026/04/21 13:42:14 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.2515 2026/04/21 15:21:42 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3888,3 +3888,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox140 to 140.10.0 [gutteridge 2026-04-21]
 	Updated x11/libXpm to 3.5.19 [wiz 2026-04-21]
 	Updated www/firefox140-l10n to 140.10.0 [gutteridge 2026-04-21]
+	Updated www/chromium to 147.0.7727.101 [kikadf 2026-04-21]
