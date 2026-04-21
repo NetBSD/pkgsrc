@@ -1,49 +1,9 @@
-# $NetBSD: Makefile,v 1.61 2026/01/07 08:49:36 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2026/04/21 21:15:13 wiz Exp $
 
-DISTNAME=	xkbcommon-1.13.1
-PKGNAME=	lib${DISTNAME}
+.include "Makefile.common"
+
 PKGREVISION=	1
-CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GITHUB:=xkbcommon/}
-GITHUB_TAG=	${DISTNAME}
 
-MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://xkbcommon.org/
-COMMENT=	Library to handle keyboard descriptions
-LICENSE=	mit
+MESON_ARGS+=	-Denable-docs=false
 
-USE_TOOLS+=	bison pkg-config
-
-MESON_ARGS+=	-Denable-wayland=false
-
-MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output
-
-PYTHON_FOR_BUILD_ONLY=	tool
-
-PKGCONFIG_OVERRIDE+=		output/meson-private/xkbcommon.pc
-PKGCONFIG_OVERRIDE+=		output/meson-private/xkbcommon-x11.pc
-PKGCONFIG_OVERRIDE_STAGE=	post-configure
-
-.include "../../mk/bsd.prefs.mk"
-
-# native X has a different locale path (lib) than modular X (share)
-.if ${X11_TYPE} == native
-MESON_ARGS+=	-Dx-locale-root=${X11BASE}/lib/X11/locale
-.endif
-
-.include "options.mk"
-
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-Wl,--version-script=./xkbcommon.map
-BUILDLINK_TRANSFORM+=	rm:-Wl,--version-script=./xkbcommon-x11.map
-.endif
-
-.include "../../devel/xorg-util-macros/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.10
-.include "../../x11/libxcb/buildlink3.mk"
-.include "../../x11/xkeyboard-config/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../devel/meson/build.mk"
-# for tests
-.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
