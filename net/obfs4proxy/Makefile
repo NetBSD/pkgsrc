@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2026/03/06 21:07:57 bsiegert Exp $
+# $NetBSD: Makefile,v 1.84.2.1 2026/04/22 14:32:08 maya Exp $
 
 DISTNAME=	obfs4proxy-0.0.11
-PKGREVISION=	47
+PKGREVISION=	48
 CATEGORIES=	net security
 MASTER_SITES=	https://people.torproject.org/~yawning/releases/obfs4proxy/
 EXTRACT_SUFX=	.tar.xz

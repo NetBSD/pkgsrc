@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2026/03/06 21:08:03 bsiegert Exp $
+# $NetBSD: Makefile,v 1.64.2.1 2026/04/22 14:32:15 maya Exp $
 
 DISTNAME=		direnv-2.37.1
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=direnv/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
