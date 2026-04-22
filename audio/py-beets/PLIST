@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2026/04/15 10:53:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2026/04/22 08:08:37 adam Exp $
 bin/beet-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -24,12 +24,18 @@ ${PYSITELIB}/beets/autotag/match.py
 ${PYSITELIB}/beets/autotag/match.pyc
 ${PYSITELIB}/beets/autotag/match.pyo
 ${PYSITELIB}/beets/config_default.yaml
+${PYSITELIB}/beets/context.py
+${PYSITELIB}/beets/context.pyc
+${PYSITELIB}/beets/context.pyo
 ${PYSITELIB}/beets/dbcore/__init__.py
 ${PYSITELIB}/beets/dbcore/__init__.pyc
 ${PYSITELIB}/beets/dbcore/__init__.pyo
 ${PYSITELIB}/beets/dbcore/db.py
 ${PYSITELIB}/beets/dbcore/db.pyc
 ${PYSITELIB}/beets/dbcore/db.pyo
+${PYSITELIB}/beets/dbcore/pathutils.py
+${PYSITELIB}/beets/dbcore/pathutils.pyc
+${PYSITELIB}/beets/dbcore/pathutils.pyo
 ${PYSITELIB}/beets/dbcore/query.py
 ${PYSITELIB}/beets/dbcore/query.pyc
 ${PYSITELIB}/beets/dbcore/query.pyo
@@ -60,6 +66,9 @@ ${PYSITELIB}/beets/library/__init__.pyo
 ${PYSITELIB}/beets/library/exceptions.py
 ${PYSITELIB}/beets/library/exceptions.pyc
 ${PYSITELIB}/beets/library/exceptions.pyo
+${PYSITELIB}/beets/library/fields.py
+${PYSITELIB}/beets/library/fields.pyc
+${PYSITELIB}/beets/library/fields.pyo
 ${PYSITELIB}/beets/library/library.py
 ${PYSITELIB}/beets/library/library.pyc
 ${PYSITELIB}/beets/library/library.pyo
