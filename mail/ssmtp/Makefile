@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/10/24 22:09:50 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2026/04/22 23:26:37 cheusov Exp $
 #
 # TLS functionality needs testing. Please let me know the result,
 # and preferably info about your system.
@@ -18,7 +18,7 @@ COMMENT=	Extremely simple MTA to forward mail to a mail hub
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV:S/.orig$//}
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake autoreconf autoconf
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
 
@@ -42,6 +42,9 @@ INSTALLATION_DIRS+=	${EGDIR}
 
 MAKE_FLAGS+=		prefix=${DESTDIR}${PREFIX}
 MAKE_FLAGS+=		mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fvi
 
 post-extract:
 	@${RM} -rf ${WRKSRC}/RCS
