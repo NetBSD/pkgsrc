@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2026/04/22 17:24:19 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/04/22 17:25:47 wiz Exp $
 
 DISTNAME=	cups-browsed-2.1.1
 PKGREVISION=	7
@@ -18,11 +18,11 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gdbus-codegen pkg-config
 
 RCD_SCRIPTS=	cups-browsed
-CONF_FILES+=	${PREFIX}/share/examples/cups-filters/cups-browsed.conf ${PKG_SYSCONFDIR}/cups/cups-browsed.conf
+CONF_FILES+=	${PREFIX}/share/examples/cups-browsed/cups-browsed.conf ${PKG_SYSCONFDIR}/cups/cups-browsed.conf
 
 .include "options.mk"
 
-INSTALLATION_DIRS+=	share/examples/cups-filters
+INSTALLATION_DIRS+=	share/examples/cups-browsed
 
 post-extract:
 	${CP} ${FILESDIR}/cups-browsed-daemonize.sh ${WRKSRC}
@@ -35,7 +35,7 @@ SUBST_VARS.daemonize=		PREFIX VARBASE
 
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/cups/cups-browsed.conf \
-		${DESTDIR}${PREFIX}/share/examples/cups-filters/cups-browsed.conf
+		${DESTDIR}${PREFIX}/share/examples/cups-browsed/cups-browsed.conf
 	${INSTALL_SCRIPT} ${WRKSRC}/cups-browsed-daemonize.sh ${DESTDIR}${PREFIX}/libexec/cups-browsed
 
 .include "../../graphics/lcms2/buildlink3.mk"
