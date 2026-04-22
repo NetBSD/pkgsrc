@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2026/02/17 13:12:43 adam Exp $
+# $NetBSD: Makefile,v 1.27 2026/04/22 10:26:58 adam Exp $
 
-DISTNAME=	publicsuffixlist-1.0.2.20260217
+DISTNAME=	publicsuffixlist-1.0.2.20260422
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/publicsuffixlist/}
@@ -16,9 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} publicsuffixlist-download publicsuffixlist-download-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	publicsuffixlist-download
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
