@@ -1,8 +1,14 @@
-$NetBSD: distinfo,v 1.1 2025/09/29 14:13:00 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2026/04/22 23:17:35 js Exp $
 
 BLAKE2s (fpc-3.2.2.i386-netbsd.tar) = ff050a0a727621299ce8558719354cef0b76907fbd1f80a3e2bae0f973d3aa8f
 SHA512 (fpc-3.2.2.i386-netbsd.tar) = 8aae6450150b86f4c309bc8a821af5762f06ae5df69bda1f53985312de29c56d60f0b62c28eed323f8dd43008a53bf1d27a5ad5ee23ab549a50bba44b2f32389
 Size (fpc-3.2.2.i386-netbsd.tar) = 161630720 bytes
+BLAKE2s (fpc-3.2.2.intelarm64-macosx.dmg) = a59fb35ff3b60b1c56aeb524d7ab11688b2278e42a2b905fdd97aa0594ee0ee8
+SHA512 (fpc-3.2.2.intelarm64-macosx.dmg) = 4094e7080ae4fad46cdfdec6ced8726f169659dfd3b11eb1e51dd9ea138665c4fac196cb73e54e10e29767523436b1cbb7d90b843da84f6ee9db1f38eb1597ca
+Size (fpc-3.2.2.intelarm64-macosx.dmg) = 274206896 bytes
+BLAKE2s (fpc-3.2.2.powerpc-macosx.dmg) = c8c39eb2131057069faabd62bc833c34bec5634bdb6ea821ef3a90b69832152a
+SHA512 (fpc-3.2.2.powerpc-macosx.dmg) = 44c7717ff0b57e2458c9728250eb7682f55be822ccc6f3a5970d8a1af478aa4e661998c9782971203ad1a5a759d1aaed9b549635b971175a32bfeb0fa9d02fb8
+Size (fpc-3.2.2.powerpc-macosx.dmg) = 158746504 bytes
 BLAKE2s (fpc-3.2.2.source.tar.gz) = 5a7590a4525910a137fe8bd4ae0f21212f5305e25f7bdd65c7f365878b521f83
 SHA512 (fpc-3.2.2.source.tar.gz) = 6d320b4e0805d63c40d3037f9d2078068c2c9fcdeb6ac073a6fcc19249bd6325dc542fcc7fc6dbb7e69507dcd84cf9e720e7d73925afe955e2a24e8c7d92606a
 Size (fpc-3.2.2.source.tar.gz) = 52240052 bytes
