@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2522 2026/04/22 06:38:37 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2523 2026/04/22 07:06:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3897,3 +3897,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added x11/libxkbcommon-docs version 1.13.1 [wiz 2026-04-21]
 	Updated devel/py-uv to 0.11.7 [adam 2026-04-22]
 	Updated devel/py-uv-build to 0.11.7 [adam 2026-04-22]
+	Updated devel/buf to 1.68.3 [adam 2026-04-22]
