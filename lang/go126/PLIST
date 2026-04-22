@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/03/06 20:57:34 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2026/04/22 14:24:43 maya Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go126/CONTRIBUTING.md
@@ -1296,6 +1296,7 @@ go126/src/cmd/compile/internal/test/locals_test.go
 go126/src/cmd/compile/internal/test/logic_test.go
 go126/src/cmd/compile/internal/test/math_test.go
 go126/src/cmd/compile/internal/test/memcombine_test.go
+go126/src/cmd/compile/internal/test/memoverlap_test.go
 go126/src/cmd/compile/internal/test/mergelocals_test.go
 go126/src/cmd/compile/internal/test/move_test.go
 go126/src/cmd/compile/internal/test/mulconst_test.go
@@ -7741,6 +7742,9 @@ go126/src/internal/syscall/unix/faccessat_syscall.go
 go126/src/internal/syscall/unix/fallocate_bsd_386.go
 go126/src/internal/syscall/unix/fallocate_bsd_64bit.go
 go126/src/internal/syscall/unix/fallocate_bsd_arm.go
+go126/src/internal/syscall/unix/fchmodat_linux.go
+go126/src/internal/syscall/unix/fchmodat_other.go
+go126/src/internal/syscall/unix/fchmodat_test.go
 go126/src/internal/syscall/unix/fcntl_js.go
 go126/src/internal/syscall/unix/fcntl_unix.go
 go126/src/internal/syscall/unix/fcntl_wasip1.go
@@ -10073,6 +10077,7 @@ go126/src/runtime/preempt_wasm.s
 go126/src/runtime/preempt_xreg.go
 go126/src/runtime/print.go
 go126/src/runtime/print_quoted_test.go
+go126/src/runtime/print_test.go
 go126/src/runtime/proc.go
 go126/src/runtime/proc_runtime_test.go
 go126/src/runtime/proc_test.go
@@ -10083,24 +10088,33 @@ go126/src/runtime/race.go
 go126/src/runtime/race/README
 go126/src/runtime/race/doc.go
 go126/src/runtime/race/internal/amd64v1/doc.go
+go126/src/runtime/race/internal/amd64v1/race_darwin.patch
 go126/src/runtime/race/internal/amd64v1/race_darwin.syso
+go126/src/runtime/race/internal/amd64v1/race_freebsd.patch
 go126/src/runtime/race/internal/amd64v1/race_freebsd.syso
+go126/src/runtime/race/internal/amd64v1/race_linux.patch
 go126/src/runtime/race/internal/amd64v1/race_linux.syso
 go126/src/runtime/race/internal/amd64v1/race_netbsd.syso
 go126/src/runtime/race/internal/amd64v1/race_openbsd.syso
+go126/src/runtime/race/internal/amd64v1/race_windows.patch
 go126/src/runtime/race/internal/amd64v1/race_windows.syso
 go126/src/runtime/race/internal/amd64v3/doc.go
+go126/src/runtime/race/internal/amd64v3/race_linux.patch
 go126/src/runtime/race/internal/amd64v3/race_linux.syso
 go126/src/runtime/race/mkcgo.sh
 go126/src/runtime/race/output_test.go
 go126/src/runtime/race/race.go
 go126/src/runtime/race/race_darwin_amd64.go
 go126/src/runtime/race/race_darwin_arm64.go
+go126/src/runtime/race/race_darwin_arm64.patch
 go126/src/runtime/race/race_darwin_arm64.syso
+go126/src/runtime/race/race_linux_arm64.patch
 go126/src/runtime/race/race_linux_arm64.syso
+go126/src/runtime/race/race_linux_loong64.patch
 go126/src/runtime/race/race_linux_loong64.syso
 go126/src/runtime/race/race_linux_ppc64le.syso
 go126/src/runtime/race/race_linux_riscv64.syso
+go126/src/runtime/race/race_linux_s390x.patch
 go126/src/runtime/race/race_linux_s390x.syso
 go126/src/runtime/race/race_linux_test.go
 go126/src/runtime/race/race_test.go
@@ -14078,7 +14092,11 @@ go126/test/fixedbugs/issue77534.go
 go126/test/fixedbugs/issue7760.go
 go126/test/fixedbugs/issue77604.go
 go126/test/fixedbugs/issue77613.go
+go126/test/fixedbugs/issue77635.go
+go126/test/fixedbugs/issue77635b.go
 go126/test/fixedbugs/issue77779.go
+go126/test/fixedbugs/issue77815.go
+go126/test/fixedbugs/issue77919.go
 go126/test/fixedbugs/issue7794.go
 go126/test/fixedbugs/issue7863.go
 go126/test/fixedbugs/issue7867.go
