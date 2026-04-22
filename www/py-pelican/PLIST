@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/08/26 13:09:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/04/22 09:05:05 adam Exp $
 bin/pelican
 bin/pelican-import
 bin/pelican-plugins
@@ -15,8 +15,6 @@ ${PYSITELIB}/pelican/__init__.pyo
 ${PYSITELIB}/pelican/__main__.py
 ${PYSITELIB}/pelican/__main__.pyc
 ${PYSITELIB}/pelican/__main__.pyo
-${PYSITELIB}/pelican/build/aarch64-apple-darwin/debug/install/COPYING.txt
-${PYSITELIB}/pelican/build/aarch64-apple-darwin/debug/install/pelican
 ${PYSITELIB}/pelican/cache.py
 ${PYSITELIB}/pelican/cache.pyc
 ${PYSITELIB}/pelican/cache.pyo
