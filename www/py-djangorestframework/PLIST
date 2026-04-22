@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2025/08/07 04:57:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2026/04/22 07:34:47 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -64,9 +64,6 @@ ${PYSITELIB}/rest_framework/compat.pyo
 ${PYSITELIB}/rest_framework/decorators.py
 ${PYSITELIB}/rest_framework/decorators.pyc
 ${PYSITELIB}/rest_framework/decorators.pyo
-${PYSITELIB}/rest_framework/documentation.py
-${PYSITELIB}/rest_framework/documentation.pyc
-${PYSITELIB}/rest_framework/documentation.pyo
 ${PYSITELIB}/rest_framework/exceptions.py
 ${PYSITELIB}/rest_framework/exceptions.pyc
 ${PYSITELIB}/rest_framework/exceptions.pyo
@@ -187,9 +184,6 @@ ${PYSITELIB}/rest_framework/routers.pyo
 ${PYSITELIB}/rest_framework/schemas/__init__.py
 ${PYSITELIB}/rest_framework/schemas/__init__.pyc
 ${PYSITELIB}/rest_framework/schemas/__init__.pyo
-${PYSITELIB}/rest_framework/schemas/coreapi.py
-${PYSITELIB}/rest_framework/schemas/coreapi.pyc
-${PYSITELIB}/rest_framework/schemas/coreapi.pyo
 ${PYSITELIB}/rest_framework/schemas/generators.py
 ${PYSITELIB}/rest_framework/schemas/generators.pyc
 ${PYSITELIB}/rest_framework/schemas/generators.pyo
@@ -219,14 +213,6 @@ ${PYSITELIB}/rest_framework/static/rest_framework/css/bootstrap.min.css.map
 ${PYSITELIB}/rest_framework/static/rest_framework/css/default.css
 ${PYSITELIB}/rest_framework/static/rest_framework/css/font-awesome-4.0.3.css
 ${PYSITELIB}/rest_framework/static/rest_framework/css/prettify.css
-${PYSITELIB}/rest_framework/static/rest_framework/docs/css/base.css
-${PYSITELIB}/rest_framework/static/rest_framework/docs/css/highlight.css
-${PYSITELIB}/rest_framework/static/rest_framework/docs/css/jquery.json-view.min.css
-${PYSITELIB}/rest_framework/static/rest_framework/docs/img/favicon.ico
-${PYSITELIB}/rest_framework/static/rest_framework/docs/img/grid.png
-${PYSITELIB}/rest_framework/static/rest_framework/docs/js/api.js
-${PYSITELIB}/rest_framework/static/rest_framework/docs/js/highlight.pack.js
-${PYSITELIB}/rest_framework/static/rest_framework/docs/js/jquery.json-view.min.js
 ${PYSITELIB}/rest_framework/static/rest_framework/fonts/fontawesome-webfont.eot
 ${PYSITELIB}/rest_framework/static/rest_framework/fonts/fontawesome-webfont.svg
 ${PYSITELIB}/rest_framework/static/rest_framework/fonts/fontawesome-webfont.ttf
@@ -241,7 +227,6 @@ ${PYSITELIB}/rest_framework/static/rest_framework/img/glyphicons-halflings.png
 ${PYSITELIB}/rest_framework/static/rest_framework/img/grid.png
 ${PYSITELIB}/rest_framework/static/rest_framework/js/ajax-form.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/bootstrap.min.js
-${PYSITELIB}/rest_framework/static/rest_framework/js/coreapi-0.1.1.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/csrf.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/default.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/jquery-3.7.1.min.js
@@ -258,21 +243,6 @@ ${PYSITELIB}/rest_framework/templates/rest_framework/admin/list_value.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/admin/simple_list_value.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/api.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/base.html
-${PYSITELIB}/rest_framework/templates/rest_framework/docs/auth/basic.html
-${PYSITELIB}/rest_framework/templates/rest_framework/docs/auth/session.html
-${PYSITELIB}/rest_framework/templates/rest_framework/docs/auth/token.html
-${PYSITELIB}/rest_framework/templates/rest_framework/docs/document.html
-${PYSITELIB}/rest_framework/templates/rest_framework/docs/error.html
-${PYSITELIB}/rest_framework/templates/rest_framework/docs/index.html
-${PYSITELIB}/rest_framework/templates/rest_framework/docs/interact.html
-${PYSITELIB}/rest_framework/templates/rest_framework/docs/langs/javascript-intro.html
-${PYSITELIB}/rest_framework/templates/rest_framework/docs/langs/javascript.html
-${PYSITELIB}/rest_framework/templates/rest_framework/docs/langs/python-intro.html
-${PYSITELIB}/rest_framework/templates/rest_framework/docs/langs/python.html
-${PYSITELIB}/rest_framework/templates/rest_framework/docs/langs/shell-intro.html
-${PYSITELIB}/rest_framework/templates/rest_framework/docs/langs/shell.html
-${PYSITELIB}/rest_framework/templates/rest_framework/docs/link.html
-${PYSITELIB}/rest_framework/templates/rest_framework/docs/sidebar.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/filters/base.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/filters/ordering.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/filters/search.html
@@ -305,7 +275,6 @@ ${PYSITELIB}/rest_framework/templates/rest_framework/login_base.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/pagination/numbers.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/pagination/previous_and_next.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/raw_data_form.html
-${PYSITELIB}/rest_framework/templates/rest_framework/schema.js
 ${PYSITELIB}/rest_framework/templates/rest_framework/vertical/checkbox.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/vertical/checkbox_multiple.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/vertical/dict_field.html
