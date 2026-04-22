@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2520 2026/04/21 21:16:22 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2521 2026/04/22 06:26:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3893,5 +3893,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/dhcpsd to 0.0.7 [roy 2026-04-21]
 	Added fonts/harfbuzz-docs version 14.2.0 [wiz 2026-04-21]
 	Updated fonts/harfbuzz to 14.2.0nb1 [wiz 2026-04-21]
-	Updated x11/libxkbcommon to 1.13.1nb1 [wiz 2026-04-21]
+	Updated x11/libxkbcommon to 1.13.1nb2 [wiz 2026-04-21]
 	Added x11/libxkbcommon-docs version 1.13.1 [wiz 2026-04-21]
