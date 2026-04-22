@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2025/08/26 13:09:10 adam Exp $
+# $NetBSD: Makefile,v 1.23 2026/04/22 09:05:05 adam Exp $
 
-DISTNAME=	pelican-4.11.0
+DISTNAME=	pelican-4.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pelican/}
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend-[0-9]*:../../devel/py-pdm_backend
 DEPENDS+=	${PYPKGPREFIX}-Unidecode>=1.3.7:../../textproc/py-Unidecode
 DEPENDS+=	${PYPKGPREFIX}-blinker>=1.7.0:../../devel/py-blinker
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.2:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-docutils>=0.20.1:../../textproc/py-docutils
+DEPENDS+=	${PYPKGPREFIX}-docutils>=0.22.0:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-feedgenerator>=2.1.0:../../www/py-feedgenerator
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1.2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-ordered-set>=4.1.0:../../devel/py-ordered-set
@@ -30,9 +30,6 @@ REPLACE_PYTHON+=	pelican/tools/pelican_import.py
 REPLACE_PYTHON+=	pelican/tools/pelican_quickstart.py
 REPLACE_PYTHON+=	pelican/tools/pelican_themes.py
 REPLACE_PYTHON+=	pelican/tools/templates/publishconf.py.jinja2
-
-post-extract:
-	${RM} ${WRKSRC}/pelican/.DS_Store
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"

@@ -1,14 +1,14 @@
-$NetBSD: patch-pyproject.toml,v 1.2 2025/08/26 13:09:10 adam Exp $
+$NetBSD: patch-pyproject.toml,v 1.3 2026/04/22 09:05:05 adam Exp $
 
 Do not install tests, some filenames contain UTF characters.
 
---- pyproject.toml.orig	2025-01-15 17:04:08.303952500 +0000
+--- pyproject.toml.orig	2026-04-20 15:29:45.000000000 +0000
 +++ pyproject.toml
-@@ -118,6 +118,7 @@ source-includes = [
-     "docs/changelog.rst",
-     "samples/",
+@@ -119,6 +119,7 @@ source-includes = [
  ]
-+excludes = ["pelican/tests"]
+ excludes = [
+     "pelican/build/",
++    "pelican/tests/",
+ ]
  
  [tool.ruff.lint]
- select = [
