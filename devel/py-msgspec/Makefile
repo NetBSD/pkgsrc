@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/11/24 14:56:15 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/04/22 08:56:10 adam Exp $
 
-DISTNAME=	msgspec-0.20.0
+DISTNAME=	msgspec-0.21.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/msgspec/}
