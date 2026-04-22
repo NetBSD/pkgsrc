@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2025/11/17 13:47:10 adam Exp $
+# $NetBSD: Makefile,v 1.19 2026/04/22 08:02:35 adam Exp $
 
-DISTNAME=	pytest_randomly-4.0.1
+DISTNAME=	pytest_randomly-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-randomly/}
