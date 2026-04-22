@@ -1,11 +1,11 @@
-# $NetBSD: go-modules.mk,v 1.4 2026/04/20 18:08:34 adam Exp $
+# $NetBSD: go-modules.mk,v 1.5 2026/04/22 07:06:19 adam Exp $
 
 GO_MODULE_FILES+=	buf.build/gen/go/bufbuild/bufplugin/protocolbuffers/go/@v/v1.36.11-20250718181942-e35f9b667443.1.mod
 GO_MODULE_FILES+=	buf.build/gen/go/bufbuild/bufplugin/protocolbuffers/go/@v/v1.36.11-20250718181942-e35f9b667443.1.zip
 GO_MODULE_FILES+=	buf.build/gen/go/bufbuild/protodescriptor/protocolbuffers/go/@v/v1.36.11-20250109164928-1da0de137947.1.mod
 GO_MODULE_FILES+=	buf.build/gen/go/bufbuild/protodescriptor/protocolbuffers/go/@v/v1.36.11-20250109164928-1da0de137947.1.zip
-GO_MODULE_FILES+=	buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/@v/v1.36.11-20260209202127-80ab13bee0bf.1.mod
-GO_MODULE_FILES+=	buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/@v/v1.36.11-20260209202127-80ab13bee0bf.1.zip
+GO_MODULE_FILES+=	buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/@v/v1.36.11-20260415201107-50325440f8f2.1.mod
+GO_MODULE_FILES+=	buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/@v/v1.36.11-20260415201107-50325440f8f2.1.zip
 GO_MODULE_FILES+=	buf.build/gen/go/bufbuild/registry/connectrpc/go/@v/v1.19.1-20260126144947-819582968857.2.mod
 GO_MODULE_FILES+=	buf.build/gen/go/bufbuild/registry/connectrpc/go/@v/v1.19.1-20260126144947-819582968857.2.zip
 GO_MODULE_FILES+=	buf.build/gen/go/bufbuild/registry/protocolbuffers/go/@v/v1.36.11-20260126144947-819582968857.1.mod
@@ -14,8 +14,8 @@ GO_MODULE_FILES+=	buf.build/gen/go/pluginrpc/pluginrpc/protocolbuffers/go/@v/v1.
 GO_MODULE_FILES+=	buf.build/gen/go/pluginrpc/pluginrpc/protocolbuffers/go/@v/v1.36.11-20241007202033-cf42259fcbfc.1.zip
 GO_MODULE_FILES+=	buf.build/go/app/@v/v0.2.1-0.20260407195847-833f8f978cda.mod
 GO_MODULE_FILES+=	buf.build/go/app/@v/v0.2.1-0.20260407195847-833f8f978cda.zip
-GO_MODULE_FILES+=	buf.build/go/bufplugin/@v/v0.9.0.mod
-GO_MODULE_FILES+=	buf.build/go/bufplugin/@v/v0.9.0.zip
+GO_MODULE_FILES+=	buf.build/go/bufplugin/@v/v0.10.0.mod
+GO_MODULE_FILES+=	buf.build/go/bufplugin/@v/v0.10.0.zip
 GO_MODULE_FILES+=	buf.build/go/bufprivateusage/@v/v0.1.0.mod
 GO_MODULE_FILES+=	buf.build/go/bufprivateusage/@v/v0.1.0.zip
 GO_MODULE_FILES+=	buf.build/go/interrupt/@v/v1.1.0.mod
@@ -40,8 +40,8 @@ GO_MODULE_FILES+=	github.com/!microsoft/go-winio/@v/v0.6.2.mod
 GO_MODULE_FILES+=	github.com/!microsoft/go-winio/@v/v0.6.2.zip
 GO_MODULE_FILES+=	github.com/antlr4-go/antlr/v4/@v/v4.13.1.mod
 GO_MODULE_FILES+=	github.com/antlr4-go/antlr/v4/@v/v4.13.1.zip
-GO_MODULE_FILES+=	github.com/bufbuild/protocompile/@v/v0.14.2-0.20260417153234-65c782f91a0b.mod
-GO_MODULE_FILES+=	github.com/bufbuild/protocompile/@v/v0.14.2-0.20260417153234-65c782f91a0b.zip
+GO_MODULE_FILES+=	github.com/bufbuild/protocompile/@v/v0.14.2-0.20260420203553-9e5399662822.mod
+GO_MODULE_FILES+=	github.com/bufbuild/protocompile/@v/v0.14.2-0.20260420203553-9e5399662822.zip
 GO_MODULE_FILES+=	github.com/bufbuild/protoplugin/@v/v0.0.0-20260414125817-25d1d281b46b.mod
 GO_MODULE_FILES+=	github.com/bufbuild/protoplugin/@v/v0.0.0-20260414125817-25d1d281b46b.zip
 GO_MODULE_FILES+=	github.com/cespare/xxhash/v2/@v/v2.3.0.mod
@@ -65,8 +65,8 @@ GO_MODULE_FILES+=	github.com/docker/cli/@v/v29.4.0+incompatible.mod
 GO_MODULE_FILES+=	github.com/docker/cli/@v/v29.4.0+incompatible.zip
 GO_MODULE_FILES+=	github.com/docker/docker-credential-helpers/@v/v0.9.5.mod
 GO_MODULE_FILES+=	github.com/docker/docker-credential-helpers/@v/v0.9.5.zip
-GO_MODULE_FILES+=	github.com/docker/go-connections/@v/v0.6.0.mod
-GO_MODULE_FILES+=	github.com/docker/go-connections/@v/v0.6.0.zip
+GO_MODULE_FILES+=	github.com/docker/go-connections/@v/v0.7.0.mod
+GO_MODULE_FILES+=	github.com/docker/go-connections/@v/v0.7.0.zip
 GO_MODULE_FILES+=	github.com/docker/go-units/@v/v0.5.0.mod
 GO_MODULE_FILES+=	github.com/docker/go-units/@v/v0.5.0.zip
 GO_MODULE_FILES+=	github.com/felixge/httpsnoop/@v/v1.0.4.mod
