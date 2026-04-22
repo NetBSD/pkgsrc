@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2015/10/20 10:53:24 tnn Exp $
+$NetBSD: patch-ab,v 1.5 2026/04/22 23:27:00 cheusov Exp $
 
 --- ssmtp.c.orig	2009-11-23 09:55:11.000000000 +0000
 +++ ssmtp.c
@@ -11,3 +11,45 @@ $NetBSD: patch-ab,v 1.4 2015/10/20 10:53:24 tnn Exp $
  #include <sys/socket.h>
  #include <netinet/in.h>
  #include <sys/param.h>
+@@ -55,21 +57,21 @@ bool_t use_oldauth = False;		/* use old
+ 
+ #define ARPADATE_LENGTH 32		/* Current date in RFC format */
+ char arpadate[ARPADATE_LENGTH];
+-char *auth_user = (char)NULL;
+-char *auth_pass = (char)NULL;
+-char *auth_method = (char)NULL;		/* Mechanism for SMTP authentication */
+-char *mail_domain = (char)NULL;
+-char *from = (char)NULL;		/* Use this as the From: address */
++char *auth_user = NULL;
++char *auth_pass = NULL;
++char *auth_method = NULL;		/* Mechanism for SMTP authentication */
++char *mail_domain = NULL;
++char *from = NULL;		/* Use this as the From: address */
+ char *hostname;
+ char *mailhost = "mailhub";
+-char *minus_f = (char)NULL;
+-char *minus_F = (char)NULL;
++char *minus_f = NULL;
++char *minus_F = NULL;
+ char *gecos;
+-char *prog = (char)NULL;
++char *prog = NULL;
+ char *root = NULL;
+-char *tls_cert = "/etc/ssl/certs/ssmtp.pem";	/* Default Certificate */
+-char *uad = (char)NULL;
+-char *config_file = (char)NULL;		/* alternate configuration file */
++char *tls_cert = "/home/cheusov/pkg/home/cheusov/pkg/etc/ssmtp/ssmtp.pem";	/* Default Certificate */
++char *uad = NULL;
++char *config_file = NULL;		/* alternate configuration file */
+ 
+ headers_t headers, *ht;
+ 
+@@ -1457,7 +1459,7 @@ int ssmtp(char *argv[])
+ 	from = from_format(uad, override_from);
+ 
+ 	/* Now to the delivery of the message */
+-	(void)signal(SIGALRM, (void(*)())handler);	/* Catch SIGALRM */
++	(void)signal(SIGALRM, (void(*)(int))handler);	/* Catch SIGALRM */
+ 	(void)alarm((unsigned) MAXWAIT);			/* Set initial timer */
+ 	if(setjmp(TimeoutJmpBuf) != 0) {
+ 		/* Then the timer has gone off and we bail out */
