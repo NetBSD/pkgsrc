@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/10/22 16:45:19 vins Exp $
+$NetBSD: distinfo,v 1.9 2026/04/22 18:00:46 vins Exp $
 
-BLAKE2s (worker-5.2.2.tar.zst) = bfe0c7329dd6ac2ec8be4ab6046f166c1f1284ae9dae4b49e7b0ab304c94da01
-SHA512 (worker-5.2.2.tar.zst) = 7a7f76f41f4a1820a5a23f8f668148ca7817d9dffa61b2fe79c5ce294a8152be87f4c5fdb32c345631fa8386f51f1c149ac9f1d341589ea04ed044b749ed82af
-Size (worker-5.2.2.tar.zst) = 1399363 bytes
+BLAKE2s (worker-5.4.0.tar.zst) = 1f2fca7d6e29cb867088b2ec10b54e3fa56f19f9bfd98f9222fbe0fe6eaaab85
+SHA512 (worker-5.4.0.tar.zst) = e72e5b3e09ce6031eff599b912267d010b97a26443b7055908f4127315f5818309136d179d8e24fc8779951fd49ba4122399376413280d2be4f1518f126cbfd9
+Size (worker-5.4.0.tar.zst) = 1417370 bytes
