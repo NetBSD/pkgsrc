@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2025/08/16 01:11:39 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/04/22 17:24:19 wiz Exp $
+libexec/cups-browsed
 libexec/cups/backend/implicitclass
 man/man5/cups-browsed.conf.5
 man/man8/cups-browsed.8
