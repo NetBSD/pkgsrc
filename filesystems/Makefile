@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.59 2024/04/18 04:03:22 pho Exp $
+# $NetBSD: Makefile,v 1.60 2026/04/22 17:49:20 vins Exp $
 #
 
 COMMENT=	File systems, and file system related packages
 
+SUBDIR+=	avfs
 SUBDIR+=	cloudfuse
 SUBDIR+=	cocofs
 SUBDIR+=	fsx
