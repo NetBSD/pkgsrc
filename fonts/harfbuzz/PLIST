@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.88 2026/03/10 05:58:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.88.2.1 2026/04/22 14:50:21 maya Exp $
 ${PLIST.introspection}bin/hb-info
 ${PLIST.introspection}bin/hb-shape
 ${PLIST.introspection}bin/hb-subset
@@ -121,6 +121,7 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-11-0-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-11-2-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-11-3-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-12-1-0.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-13-0-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-2-0-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-2-1-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-2-2-0.html
@@ -200,6 +201,7 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-name.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-shape.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-var.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-paint.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-raster.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-set.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-shape-plan.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-shape.html
@@ -207,6 +209,7 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-style.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-subset.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-unicode.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-uniscribe.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-vector.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-version.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz.devhelp2
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/home.png
