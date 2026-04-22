@@ -1,0 +1,13 @@
+$NetBSD: patch-configure.in,v 1.1 2026/04/22 23:27:01 cheusov Exp $
+
+--- configure.in.orig	2026-04-22 23:16:20.270764687 +0000
++++ configure.in
+@@ -52,7 +52,7 @@ AC_ARG_ENABLE(ssl,
+ [  --enable-ssl           support for secure connection to mail server])
+ if test x$enableval = xyes ; then
+ 	AC_DEFINE(HAVE_SSL)
+-	LIBS="$LIBS -lssl"
++	LIBS="$LIBS -lssl -lcrypto"
+ fi
+ enableval=""
+ 
