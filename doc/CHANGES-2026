@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2525 2026/04/22 07:36:11 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2526 2026/04/22 08:04:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3904,3 +3904,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-test-django to 4.12.0 [adam 2026-04-22]
 	Updated www/py-djangorestframework to 3.17.1 [adam 2026-04-22]
 	Updated www/py-django-polymorphic to 4.11.2 [adam 2026-04-22]
+	Updated devel/py-test-randomly to 4.1.0 [adam 2026-04-22]
+	Updated devel/py-test-check to 2.8.0 [adam 2026-04-22]
