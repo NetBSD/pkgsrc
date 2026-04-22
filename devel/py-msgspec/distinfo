@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/11/24 14:56:15 adam Exp $
+$NetBSD: distinfo,v 1.4 2026/04/22 08:56:10 adam Exp $
 
-BLAKE2s (msgspec-0.20.0.tar.gz) = a7ecd8c20a9ddc82aabb2032ea8f04010e89cb6459c2de983cccfaae705925a0
-SHA512 (msgspec-0.20.0.tar.gz) = 41fea07bac025684e914fb9a60590c389b4eaac0a45fd22ccbb629062561dbfe0b5a0b63e304ee74a0a97e1bb262b96f5c47637cef47b2c97090f8d333774001
-Size (msgspec-0.20.0.tar.gz) = 317862 bytes
+BLAKE2s (msgspec-0.21.1.tar.gz) = 27416b2bb6b7108502ae7316b3e18774db898cd9667dfec19b33f59838c19070
+SHA512 (msgspec-0.21.1.tar.gz) = ebafe54ea0fd41e4177b77d44ac6cd3fd878c83f7189e9595e9b0080e75c0d1a57476554123d44af2f02d1db771d8b27e2e93d0703b428796d334c86e9c60b98
+Size (msgspec-0.21.1.tar.gz) = 319193 bytes
