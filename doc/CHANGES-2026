@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2523 2026/04/22 07:06:40 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2524 2026/04/22 07:28:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3898,3 +3898,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv to 0.11.7 [adam 2026-04-22]
 	Updated devel/py-uv-build to 0.11.7 [adam 2026-04-22]
 	Updated devel/buf to 1.68.3 [adam 2026-04-22]
+	Updated www/py-django to 6.0.4 [adam 2026-04-22]
+	Updated www/py-django4 to 4.2.30 [adam 2026-04-22]
+	Added www/py-django5 version 5.2.13 [adam 2026-04-22]
