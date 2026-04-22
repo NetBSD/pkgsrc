@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2026/03/10 14:06:55 adam Exp $
+# $NetBSD: Makefile,v 1.37.2.1 2026/04/22 14:32:02 maya Exp $
 
 DISTNAME=	shfmt-3.13.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mvdan/}
 GITHUB_PROJECT=	sh

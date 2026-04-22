@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2026/03/06 21:08:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.57.2.1 2026/04/22 14:32:20 maya Exp $
 
 DISTNAME=	gotosocial-0.19.0
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=superseriousbusiness/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

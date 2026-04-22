@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11.2.1 2026/04/10 19:09:35 bsiegert Exp $
+$NetBSD: distinfo,v 1.11.2.2 2026/04/22 14:32:19 maya Exp $
 
 BLAKE2s (firefox-140.9.1esr.source.tar.xz) = 0602c185e37132155cbd4b9bc9b795295b99bc81eb2bf7c282bf5b29b21aa0d9
 SHA512 (firefox-140.9.1esr.source.tar.xz) = 119a4e4e536fd4534adcc4a546a988e553285f9326bf16e9771854ec2dc7d039a729aedc5925623e172260a5e154172c56a011f131068736eb2a89a8de611840

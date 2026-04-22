@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2026/03/06 21:08:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.61.2.1 2026/04/22 14:32:12 maya Exp $
 
 DISTNAME=		age-1.3.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_GITHUB:=FiloSottile/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}

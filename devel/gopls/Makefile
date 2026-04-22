@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.115 2026/03/06 21:07:50 bsiegert Exp $
+# $NetBSD: Makefile,v 1.115.2.1 2026/04/22 14:32:00 maya Exp $
 #
 # Release notes:
 # https://github.com/golang/tools/releases
 
 DISTNAME=	gopls-0.21.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=	tools

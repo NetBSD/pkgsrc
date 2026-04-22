@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.808 2026/03/06 21:07:59 bsiegert Exp $
+# $NetBSD: Makefile,v 1.808.2.1 2026/04/22 14:32:11 maya Exp $
 
 DISTNAME=	pkglint-23.20.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rillig/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}

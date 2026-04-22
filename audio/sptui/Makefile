@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2026/03/06 21:07:45 bsiegert Exp $
+# $NetBSD: Makefile,v 1.21.2.1 2026/04/22 14:31:54 maya Exp $
 
 DISTNAME=	sptui-0.1.2
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=szktkfm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

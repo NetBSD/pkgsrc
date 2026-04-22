@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12.2.1 2026/04/10 19:09:35 bsiegert Exp $
+# $NetBSD: Makefile,v 1.12.2.2 2026/04/22 14:32:19 maya Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		140.9
