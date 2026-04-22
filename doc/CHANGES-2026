@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2521 2026/04/22 06:26:43 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2522 2026/04/22 06:38:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3895,3 +3895,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated fonts/harfbuzz to 14.2.0nb1 [wiz 2026-04-21]
 	Updated x11/libxkbcommon to 1.13.1nb2 [wiz 2026-04-21]
 	Added x11/libxkbcommon-docs version 1.13.1 [wiz 2026-04-21]
+	Updated devel/py-uv to 0.11.7 [adam 2026-04-22]
+	Updated devel/py-uv-build to 0.11.7 [adam 2026-04-22]
