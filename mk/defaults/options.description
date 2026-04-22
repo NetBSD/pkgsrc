@@ -63,6 +63,7 @@ auth-sqlite		Use SQLite for the jabberd2 authorization database.
 av1			AOmedia Video 1 video codec support
 avahi			Enable DNS service discovery and multicast DNS support.
 avahi-howl		Enable howl compatibility in avahi.
+avfs			Use AVFS to access the content of archives and remote directories.
 avx			Enable use of x86 Advanced Vector Extensions.
 bacula-static		Enable building of statically linked versions of the Bacula daemons.
 batch			Enable batch mode support.
