@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2026/02/06 10:05:42 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/04/22 17:24:19 wiz Exp $
 
 DISTNAME=	cups-browsed-2.1.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenPrinting/}
 GITHUB_PROJECT=	cups-browsed
@@ -24,9 +24,19 @@ CONF_FILES+=	${PREFIX}/share/examples/cups-filters/cups-browsed.conf ${PKG_SYSCO
 
 INSTALLATION_DIRS+=	share/examples/cups-filters
 
+post-extract:
+	${CP} ${FILESDIR}/cups-browsed-daemonize.sh ${WRKSRC}
+
+SUBST_CLASSES+=			daemonize
+SUBST_STAGE.daemonize=		pre-configure
+SUBST_MESSAGE.daemonize=	Customizing daemonizing script
+SUBST_FILES.daemonize=		cups-browsed-daemonize.sh
+SUBST_VARS.daemonize=		PREFIX VARBASE
+
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/cups/cups-browsed.conf \
 		${DESTDIR}${PREFIX}/share/examples/cups-filters/cups-browsed.conf
+	${INSTALL_SCRIPT} ${WRKSRC}/cups-browsed-daemonize.sh ${DESTDIR}${PREFIX}/libexec/cups-browsed
 
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
