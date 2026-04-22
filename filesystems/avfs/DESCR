@@ -1,0 +1,8 @@
+AVFS is a virtual file system, which enables all programs to look inside
+archived or compressed files, or access remote files without recompiling
+the programs or changing the kernel.
+
+At the moment it supports floppies, tar and gzip files, zip, bzip2, ar
+and rar files, ftp sessions, http, webdav, rsh/rcp, ssh/scp. Quite a
+few other handlers are implemented with the Midnight Commander's
+external FS.
