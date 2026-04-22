@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2530 2026/04/22 11:28:30 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2531 2026/04/22 17:24:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3914,3 +3914,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py-mypy to 1.20.2 [adam 2026-04-22]
 	Updated www/py-scrapy to 2.15.0 [adam 2026-04-22]
 	Updated geography/py-obspy to 1.5.0 [adam 2026-04-22]
+	Updated print/cups-browsed to 2.1.1nb7 [wiz 2026-04-22]
