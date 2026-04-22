@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2026/03/13 11:13:57 adam Exp $
+# $NetBSD: Makefile,v 1.37 2026/04/22 11:13:56 adam Exp $
 
-DISTNAME=	scrapy-2.14.2
+DISTNAME=	scrapy-2.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Scrapy/}
@@ -32,11 +32,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-testfixtures-[0-9]*:../../devel/py-testfixtures
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PY_RENAME_BINARIES=	scrapy
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} scrapy scrapy-${PYVERSSUFFIX} || ${TRUE}
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL cryptography

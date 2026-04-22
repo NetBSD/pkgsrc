@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2026/01/08 16:07:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/04/22 11:13:56 adam Exp $
 bin/scrapy-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -82,6 +82,9 @@ ${PYSITELIB}/scrapy/core/downloader/contextfactory.pyo
 ${PYSITELIB}/scrapy/core/downloader/handlers/__init__.py
 ${PYSITELIB}/scrapy/core/downloader/handlers/__init__.pyc
 ${PYSITELIB}/scrapy/core/downloader/handlers/__init__.pyo
+${PYSITELIB}/scrapy/core/downloader/handlers/_httpx.py
+${PYSITELIB}/scrapy/core/downloader/handlers/_httpx.pyc
+${PYSITELIB}/scrapy/core/downloader/handlers/_httpx.pyo
 ${PYSITELIB}/scrapy/core/downloader/handlers/base.py
 ${PYSITELIB}/scrapy/core/downloader/handlers/base.pyc
 ${PYSITELIB}/scrapy/core/downloader/handlers/base.pyo
@@ -426,6 +429,12 @@ ${PYSITELIB}/scrapy/utils/__init__.pyo
 ${PYSITELIB}/scrapy/utils/_compression.py
 ${PYSITELIB}/scrapy/utils/_compression.pyc
 ${PYSITELIB}/scrapy/utils/_compression.pyo
+${PYSITELIB}/scrapy/utils/_deps_compat.py
+${PYSITELIB}/scrapy/utils/_deps_compat.pyc
+${PYSITELIB}/scrapy/utils/_deps_compat.pyo
+${PYSITELIB}/scrapy/utils/_download_handlers.py
+${PYSITELIB}/scrapy/utils/_download_handlers.pyc
+${PYSITELIB}/scrapy/utils/_download_handlers.pyo
 ${PYSITELIB}/scrapy/utils/asyncgen.py
 ${PYSITELIB}/scrapy/utils/asyncgen.pyc
 ${PYSITELIB}/scrapy/utils/asyncgen.pyo
@@ -498,6 +507,9 @@ ${PYSITELIB}/scrapy/utils/python.pyo
 ${PYSITELIB}/scrapy/utils/reactor.py
 ${PYSITELIB}/scrapy/utils/reactor.pyc
 ${PYSITELIB}/scrapy/utils/reactor.pyo
+${PYSITELIB}/scrapy/utils/reactorless.py
+${PYSITELIB}/scrapy/utils/reactorless.pyc
+${PYSITELIB}/scrapy/utils/reactorless.pyo
 ${PYSITELIB}/scrapy/utils/request.py
 ${PYSITELIB}/scrapy/utils/request.pyc
 ${PYSITELIB}/scrapy/utils/request.pyo
