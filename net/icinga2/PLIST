@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/02/19 18:02:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/04/23 13:11:14 adam Exp $
 ${PLIST.mysql}lib/icinga2/libmysql_shim.so
 ${PLIST.mysql}lib/icinga2/libmysql_shim.so.${PKGVERSION}
 ${PLIST.pgsql}lib/icinga2/libpgsql_shim.so
@@ -9,7 +9,7 @@ man/man8/icinga2.8
 sbin/icinga2
 share/doc/icinga2/AUTHORS
 share/doc/icinga2/CHANGELOG.md
-share/doc/icinga2/COPYING
+share/doc/icinga2/LICENSE.md
 share/doc/icinga2/NEWS
 share/doc/icinga2/README.md
 share/doc/icinga2/markdown/01-about.md
@@ -114,6 +114,7 @@ ${PLIST.livestatus}share/examples/icinga2/features-available/livestatus.conf
 share/examples/icinga2/features-available/mainlog.conf
 ${PLIST.notification}share/examples/icinga2/features-available/notification.conf
 ${PLIST.perfdata}share/examples/icinga2/features-available/opentsdb.conf
+share/examples/icinga2/features-available/otlpmetrics.conf
 ${PLIST.perfdata}share/examples/icinga2/features-available/perfdata.conf
 share/examples/icinga2/features-available/syslog.conf
 share/examples/icinga2/icinga2.conf
@@ -165,6 +166,7 @@ share/icinga2/include/plugins-contrib.d/network-components.conf
 share/icinga2/include/plugins-contrib.d/network-services.conf
 share/icinga2/include/plugins-contrib.d/operating-system.conf
 share/icinga2/include/plugins-contrib.d/raid-controller.conf
+share/icinga2/include/plugins-contrib.d/smart-advanced.conf
 share/icinga2/include/plugins-contrib.d/smart-attributes.conf
 share/icinga2/include/plugins-contrib.d/storage.conf
 share/icinga2/include/plugins-contrib.d/systemd.conf
