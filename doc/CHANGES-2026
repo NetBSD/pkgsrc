@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2534 2026/04/23 05:39:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2535 2026/04/23 07:22:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3920,3 +3920,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-build to 1.4.4 [adam 2026-04-23]
 	Updated devel/py-click to 8.3.3 [adam 2026-04-23]
 	Updated graphics/oxipng to 10.1.1 [adam 2026-04-23]
+	Updated textproc/ugrep to 7.7.0 [adam 2026-04-23]
+	Updated net/openvpn to 2.7.2 [adam 2026-04-23]
