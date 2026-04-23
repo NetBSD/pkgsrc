@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.56 2026/04/10 08:20:47 adam Exp $
+$NetBSD: distinfo,v 1.57 2026/04/23 13:51:33 adam Exp $
 
-BLAKE2s (rtorrent-0.16.9.tar.gz) = ba2770d0390f574ed6a6415488638d535953b273509eaa71c2902c71ab59a58e
-SHA512 (rtorrent-0.16.9.tar.gz) = d6c023d007f163227c76d3aa5b7c2fc7ee704631e00389e3b5e446a660449716642b3129326765f76e418fd6feac1e6d6cb38e22ebb9a17731d3a246660a73ef
-Size (rtorrent-0.16.9.tar.gz) = 858107 bytes
+BLAKE2s (rtorrent-0.16.10.tar.gz) = 6d02ddfc0ed73577862e8faee7dfd6ba5ca7dbc1ae4e0385790ee576220361a9
+SHA512 (rtorrent-0.16.10.tar.gz) = 5d1601b136e6126139b56c2d2bc55b4b05728549be2a4a7a7c004e9884fdf8e28f37efba1077a395299adef1034f7ce489c5cbf09a0017f31e92768e5eb3d76b
+Size (rtorrent-0.16.10.tar.gz) = 858621 bytes
 SHA1 (patch-src_display_canvas.h) = c097e0ac95b2df2c3c54dbf4367f7f9f76adbd10
 SHA1 (patch-src_utils_directory.h) = 77280b6ab0ba69c77c5bb88eca7beb11954415ad
