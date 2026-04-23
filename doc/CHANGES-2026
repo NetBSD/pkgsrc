@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2537 2026/04/23 07:54:20 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2538 2026/04/23 08:24:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3927,3 +3927,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-idna to 3.13 [adam 2026-04-23]
 	Updated devel/py-typer to 0.24.2 [adam 2026-04-23]
 	Updated security/p5-CryptX to 0.088 [wiz 2026-04-23]
+	Updated shells/dash to 0.5.13.3 [adam 2026-04-23]
+	Updated sysutils/ansible to 13.6.0 [adam 2026-04-23]
