@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.34 2026/04/16 12:37:03 adam Exp $
+# $NetBSD: Makefile,v 1.35 2026/04/23 09:25:05 adam Exp $
 
-DISTNAME=	authlib-1.6.11
+DISTNAME=	joserfc-1.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
-MASTER_SITES=	${MASTER_SITE_PYPI:=A/Authlib/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=j/joserfc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://authlib.org/
-COMMENT=	Ultimate Python library in building OAuth and OpenID Connect servers
+HOMEPAGE=	https://github.com/authlib/joserfc
+COMMENT=	Python library for JOSE RFCs, including JWS, JWE, JWK, JWA, JWT
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
