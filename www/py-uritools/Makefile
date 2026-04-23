@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/01/28 10:27:48 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/04/23 07:30:10 adam Exp $
 
-DISTNAME=	uritools-6.0.1
+DISTNAME=	uritools-6.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uritools/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/tkem/uritools/
 COMMENT=	URI parsing, classification and composition
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
