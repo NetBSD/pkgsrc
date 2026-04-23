@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2026/03/05 09:00:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2026/04/23 13:51:33 adam Exp $
 include/torrent/bitfield.h
 include/torrent/chunk_manager.h
 include/torrent/common.h
@@ -52,6 +52,7 @@ include/torrent/peer/peer_list.h
 include/torrent/rate.h
 include/torrent/runtime/network_manager.h
 include/torrent/runtime/socket_manager.h
+include/torrent/system/thread.h
 include/torrent/throttle.h
 include/torrent/torrent.h
 include/torrent/tracker/dht_controller.h
@@ -72,7 +73,7 @@ include/torrent/utils/resume.h
 include/torrent/utils/scheduler.h
 include/torrent/utils/signal_bitfield.h
 include/torrent/utils/string_manip.h
-include/torrent/utils/thread.h
+include/torrent/utils/unordered_vector.h
 include/torrent/utils/uri_parser.h
 lib/libtorrent.la
 lib/pkgconfig/libtorrent.pc
