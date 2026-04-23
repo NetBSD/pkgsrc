@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2026/02/02 23:14:54 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2026/04/23 08:42:39 adam Exp $
 
 COMMENT=	Fast C routines to compute DFTs (single and double precision)
-PKGREVISION=	4
 
 SUPERSEDES=	fftwf-[0-9]*
 CONFLICTS+=	fftwf-[0-9]*

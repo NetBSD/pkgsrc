@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.7 2024/12/03 18:22:29 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2026/04/23 08:42:39 adam Exp $
 # used by math/fftw/Makefile
 # used by math/fftw-long/Makefile
 # used by math/fftw-quad/Makefile
 
-DISTNAME=	fftw-3.3.10
+DISTNAME=	fftw-3.3.11
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.fftw.org/pub/fftw/
 MASTER_SITES+=	http://www.fftw.org/
@@ -17,8 +17,7 @@ DISTINFO_FILE=	${.CURDIR}/../../math/fftw/distinfo
 
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
-USE_TOOLS+=		perl
+USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 GNU_CONFIGURE_STRICT=	no
