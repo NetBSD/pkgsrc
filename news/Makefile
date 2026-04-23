@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.55 2025/09/01 18:43:50 vins Exp $
+# $NetBSD: Makefile,v 1.56 2026/04/23 18:17:45 pin Exp $
 #
 
 COMMENT=	Network news
 
+SUBDIR+=	bulletty
 SUBDIR+=	bystand
 SUBDIR+=	canlock-hp
 SUBDIR+=	cleanscore
+SUBDIR+=	eilmeldung
 SUBDIR+=	flnews
 SUBDIR+=	heirloom-news
 SUBDIR+=	inn
