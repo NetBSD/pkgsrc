@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2026/02/06 11:01:42 adam Exp $
+# $NetBSD: Makefile,v 1.24 2026/04/23 13:11:14 adam Exp $
 
-DISTNAME=	icinga2-2.15.2
+DISTNAME=	icinga2-2.16.0
 CATEGORIES=	net sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=icinga/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -8,7 +8,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	ef@math.uni-bonn.de
 HOMEPAGE=	https://icinga.com/docs/icinga-2/latest/doc/01-about/
 COMMENT=	Monitoring system
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v3
 
 ICINGA2_USER?=		icinga
 ICINGA2_GROUP?=		icinga
@@ -22,8 +22,8 @@ PKG_USERS_VARS+=	ICINGA2_USER
 PKG_GROUPS_VARS+=	ICINGA2_GROUP ICINGA2_COMMAND_GROUP
 BUILD_DEFS+=		ICINGA2_USER ICINGA2_GROUP ICINGA2_COMMAND_GROUP VARBASE PKG_SYSCONFBASE
 
-USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++17
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		flex bison
 
 RCD_SCRIPTS=		icinga2
@@ -161,6 +161,7 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/icinga2
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
+.include "../../devel/protobuf/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
