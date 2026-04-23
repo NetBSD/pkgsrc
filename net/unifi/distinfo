@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2025/03/14 13:21:07 abs Exp $
+$NetBSD: distinfo,v 1.25 2026/04/23 17:55:56 abs Exp $
 
 BLAKE2s (snappy-1.0.5.tar.gz) = 956b30e6d0dd96ce2002ac4aa112a813e184969cebcfbf532802d0ed2d3bab36
 SHA512 (snappy-1.0.5.tar.gz) = 4f772673dd1bf482f13db0f09299b46d0ee47b7052c43e69c2c5361d352031152f3132c25faf86ffcf1bfbe0e68625d7eef8fa669be873b568adfc160a82f25b
@@ -6,8 +6,8 @@ Size (snappy-1.0.5.tar.gz) = 1731382 bytes
 BLAKE2s (snappy-java-1.0.5.4.tar.gz) = 529aff555db6e098ec59b6357b253d122094e580f1275ee6ae5f714486a51a47
 SHA512 (snappy-java-1.0.5.4.tar.gz) = 4fce5c0c0ce294ba789fd33dd8aeed92b6c58e004ac8e569ee1840fe4fbeb47b1f3edff75619aee0ebbda65476ec56b15a4aeead360d98dbc3d45d295ab028bd
 Size (snappy-java-1.0.5.4.tar.gz) = 6041905 bytes
-BLAKE2s (unifi-8.6.9.zip) = 1a8443d15a9658f7632c8cf9f41bac1bd5d43902c3efadf3024570c9b189796d
-SHA512 (unifi-8.6.9.zip) = 61a4ddb5e3214f92cd8645c5c134181d3ee31354af7d7be237cee68138c9d807769d26ef608266d35f0d432c02d40cf59bfbe875839cce3046186e40714df5d1
-Size (unifi-8.6.9.zip) = 166991856 bytes
+BLAKE2s (unifi-10.1.89.zip) = f0a202690fc0643fb0c5eedad15f1361116773985a3d7f48be2e372d90b235bd
+SHA512 (unifi-10.1.89.zip) = c7f9c25a83a8fede71493054279eacde35b16f89c0364e7a15d86e6d1911def3c152a871a4bf01dd7d1b37d0f2fffaa4f7deab526a0e878de6a87b010c8592f6
+Size (unifi-10.1.89.zip) = 144339191 bytes
 SHA1 (patch-snappy-java-1.0.5.4_Makefile) = 86a4ab3075cef0ac6475dee253efa98a91915b12
 SHA1 (patch-snappy-java-1.0.5.4_Makefile.common) = d574d053351d2fcd55b7846f4de0fe3fa77e821e
