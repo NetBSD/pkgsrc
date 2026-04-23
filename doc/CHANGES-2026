@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2547 2026/04/23 15:55:06 osa Exp $
+$NetBSD: CHANGES-2026,v 1.2548 2026/04/23 18:13:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3945,3 +3945,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/rtorrent to 0.16.10 [adam 2026-04-23]
 	Updated www/freenginx to 1.30.0nb1 [osa 2026-04-23]
 	Updated www/freenginx-devel to 1.30.0nb1 [osa 2026-04-23]
+	Added news/bulletty version 0.2.2 [pin 2026-04-23]
