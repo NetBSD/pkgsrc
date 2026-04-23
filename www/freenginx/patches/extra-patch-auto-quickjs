@@ -1,0 +1,15 @@
+--- ../njs-0.9.7/auto/quickjs.orig	2026-02-07 10:37:18.963401856 -0500
++++ ../njs-0.9.7/auto/quickjs	2026-02-07 10:38:27.281755406 -0500
+@@ -42,9 +42,9 @@
+     fi
+ 
+     if [ $njs_found = no ]; then
+-        njs_feature="QuickJS library -I/usr/include/quickjs/ -L/usr/lib/quickjs/ -lquickjs"
+-        njs_feature_incs="$NJS_QUICKJS_DEFAULT_INCS /usr/include/quickjs/"
+-        njs_feature_libs="-L/usr/lib/quickjs/ -lquickjs -lm -ldl -lpthread"
++        njs_feature="QuickJS library -I/usr/pkg/include/quickjs -L/usr/pkg/lib -lquickjs"
++        njs_feature_incs="$NJS_QUICKJS_DEFAULT_INCS /usr/include/quickjs"
++        njs_feature_libs="-L/usr/pkg/lib -lquickjs -lm -ldl -lpthread"
+ 
+         . auto/feature
+     fi
