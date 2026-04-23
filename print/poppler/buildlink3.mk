@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.116 2026/02/06 10:05:44 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.117 2026/04/23 11:43:37 jperkin Exp $
 
 BUILDLINK_TREE+=	poppler
 
@@ -19,6 +19,7 @@ USE_CXX_FEATURES+=	c++20
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../security/gpgmepp/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .endif # POPPLER_BUILDLINK3_MK
 
