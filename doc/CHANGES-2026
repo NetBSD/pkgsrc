@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2541 2026/04/23 09:28:59 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2542 2026/04/23 10:05:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3936,3 +3936,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-certifi to 2026.4.22 [adam 2026-04-23]
 	Added security/py-joserfc version 1.6.4 [adam 2026-04-23]
 	Updated security/py-authlib to 1.7.0 [adam 2026-04-23]
+	Updated lang/oracle-jdk21 to 21.0.11 [adam 2026-04-23]
