@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2026/01/26 09:15:24 adam Exp $
+# $NetBSD: Makefile,v 1.21 2026/04/23 05:39:10 adam Exp $
 
-DISTNAME=	oxipng-10.1.0
+DISTNAME=	oxipng-10.1.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shssoichiro/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
