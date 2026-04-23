@@ -1,0 +1,5 @@
+bulletty is a TUI feed reader and aggregator (RSS and Atom).
+Read your subscriptions directly in your terminal. It downloads the entries for
+offline reading so all the data is local and yours: your subscriptions,
+highlights, comments, etc. All in a universal format: Markdown. Back up and
+sync your data directory your own way.
