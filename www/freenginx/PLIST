@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/12/25 18:57:20 osa Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/04/23 15:38:10 osa Exp $
 ${PLIST.dso}${PLIST.ndk}libexec/freenginx/ndk_http_module.so
 ${PLIST.dso}${PLIST.arrayvar}libexec/freenginx/ngx_http_array_var_module.so
 ${PLIST.dso}${PLIST.brotli}libexec/freenginx/ngx_http_brotli_filter_module.so
@@ -9,6 +9,7 @@ ${PLIST.dso}${PLIST.dav}libexec/freenginx/ngx_http_dav_ext_module.so
 ${PLIST.dso}${PLIST.echo}libexec/freenginx/ngx_http_echo_module.so
 ${PLIST.dso}${PLIST.encses}libexec/freenginx/ngx_http_encrypted_session_module.so
 ${PLIST.dso}${PLIST.forminput}libexec/freenginx/ngx_http_form_input_module.so
+${PLIST.dso}${PLIST.geoip}libexec/freenginx/ngx_http_geoip_module.so
 ${PLIST.dso}${PLIST.geoip2}libexec/freenginx/ngx_http_geoip2_module.so
 ${PLIST.dso}${PLIST.headmore}libexec/freenginx/ngx_http_headers_more_filter_module.so
 ${PLIST.dso}${PLIST.imagefilter}libexec/freenginx/ngx_http_image_filter_module.so
@@ -24,6 +25,7 @@ ${PLIST.dso}${PLIST.vts}libexec/freenginx/ngx_http_vhost_traffic_status_module.s
 ${PLIST.dso}${PLIST.mail}libexec/freenginx/ngx_mail_module.so
 ${PLIST.dso}${PLIST.nchan}libexec/freenginx/ngx_nchan_module.so
 ${PLIST.dso}${PLIST.rtmp}libexec/freenginx/ngx_rtmp_module.so
+${PLIST.dso}${PLIST.geoip}libexec/freenginx/ngx_stream_geoip_module.so
 ${PLIST.dso}${PLIST.geoip2}libexec/freenginx/ngx_stream_geoip2_module.so
 ${PLIST.dso}${PLIST.njs}libexec/freenginx/ngx_stream_js_module.so
 ${PLIST.dso}${PLIST.stream}libexec/freenginx/ngx_stream_module.so
