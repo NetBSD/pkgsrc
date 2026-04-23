@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2548 2026/04/23 18:13:49 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2549 2026/04/23 18:18:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3946,3 +3946,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/freenginx to 1.30.0nb1 [osa 2026-04-23]
 	Updated www/freenginx-devel to 1.30.0nb1 [osa 2026-04-23]
 	Added news/bulletty version 0.2.2 [pin 2026-04-23]
+	Added news/eilmeldung version 1.4.3 [pin 2026-04-23]
