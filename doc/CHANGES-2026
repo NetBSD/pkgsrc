@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2540 2026/04/23 09:22:41 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2541 2026/04/23 09:28:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3934,3 +3934,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cmake-gui to 4.3.2 [adam 2026-04-23]
 	Updated devel/py-pathspec to 1.1.0 [adam 2026-04-23]
 	Updated security/py-certifi to 2026.4.22 [adam 2026-04-23]
+	Added security/py-joserfc version 1.6.4 [adam 2026-04-23]
+	Updated security/py-authlib to 1.7.0 [adam 2026-04-23]
