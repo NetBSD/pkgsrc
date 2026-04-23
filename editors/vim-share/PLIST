@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.86 2026/04/06 21:38:35 morr Exp $
+@comment $NetBSD: PLIST,v 1.87 2026/04/23 22:24:03 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -528,6 +528,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/gdb.vim
 share/vim/${VIM_SUBDIR}/ftplugin/gdscript.vim
 share/vim/${VIM_SUBDIR}/ftplugin/gdshader.vim
 share/vim/${VIM_SUBDIR}/ftplugin/gel.vim
+share/vim/${VIM_SUBDIR}/ftplugin/ghostty.vim
 share/vim/${VIM_SUBDIR}/ftplugin/git.vim
 share/vim/${VIM_SUBDIR}/ftplugin/gitattributes.vim
 share/vim/${VIM_SUBDIR}/ftplugin/gitcommit.vim
