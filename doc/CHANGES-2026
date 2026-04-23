@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2544 2026/04/23 13:14:45 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2545 2026/04/23 13:15:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3940,3 +3940,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/icinga2 to 2.16.0 [adam 2026-04-23]
 	Updated www/py-uvicorn to 0.46.0 [adam 2026-04-23]
 	Updated net/xfr to 0.9.10 [pin 2026-04-23]
+	Updated textproc/rumdl to 0.1.80 [pin 2026-04-23]
