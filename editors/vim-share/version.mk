@@ -1,7 +1,7 @@
-# $NetBSD: version.mk,v 1.166 2026/04/16 21:11:01 morr Exp $
+# $NetBSD: version.mk,v 1.167 2026/04/23 22:24:03 morr Exp $
 
 VIM_VERSION=		9.2
-VIM_PATCHLEVEL=		0357
+VIM_PATCHLEVEL=		0390
 # Changelog: see https://github.com/vim/vim/commits/master/ or
 # with git clone: $ git log --pretty=format:"- %s"
 VIM_SUBDIR=		vim92
