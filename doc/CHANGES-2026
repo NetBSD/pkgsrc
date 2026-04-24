@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2555 2026/04/24 10:17:49 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2556 2026/04/24 10:24:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3957,3 +3957,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-greenlet to 3.4.0 [adam 2026-04-24]
 	Updated devel/py-filelock to 3.29.0 [adam 2026-04-24]
 	Updated devel/py-faker to 40.15.0 [adam 2026-04-24]
+	Updated www/py-scrapy to 2.15.1 [adam 2026-04-24]
+	Updated converters/py-simplejson to 4.1.0 [adam 2026-04-24]
