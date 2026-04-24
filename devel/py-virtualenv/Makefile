@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.106 2026/03/12 05:21:00 adam Exp $
+# $NetBSD: Makefile,v 1.107 2026/04/24 09:41:14 adam Exp $
 
-DISTNAME=	virtualenv-21.2.0
+DISTNAME=	virtualenv-21.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.7:../../devel/py-distlib
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.24.2:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.9.1:../../misc/py-platformdirs
-DEPENDS+=	${PYPKGPREFIX}-python-discovery>=1:../../lang/py-python-discovery
+DEPENDS+=	${PYPKGPREFIX}-python-discovery>=1.2.2:../../lang/py-python-discovery
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7.2.7:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-enable-subprocess>=1:../../devel/py-coverage-enable-subprocess
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=3.7:../../devel/py-flaky
