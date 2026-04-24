@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.56 2026/03/29 16:55:23 wiz Exp $
+$NetBSD: distinfo,v 1.57 2026/04/24 17:09:51 wiz Exp $
 
-BLAKE2s (pdns-5.0.3.tar.bz2) = bd32b008055784136c94706481079848c3166b9f8e54170dee60ceed3a602648
-SHA512 (pdns-5.0.3.tar.bz2) = 05ec277e793b6b92f0cba2f5625b8aa88fc3f1db45688cb1cfaa5b580f8bb9ea6d81f5503ef6abc9fff6d83441acf797e2c1b5d12400fe5dc0f403859a69de9f
-Size (pdns-5.0.3.tar.bz2) = 1492444 bytes
+BLAKE2s (pdns-5.0.4.tar.bz2) = 2792cb29e162d51aff1dde3d0d9780d9c94ab9ccd1de6a9302b0092e47a015d1
+SHA512 (pdns-5.0.4.tar.bz2) = 0839a6fcbca6c807aa62c9d5e06fff2e8bceb78825b3c7b4e9ccf80a3e0848123403bc5604a2092ba313df0e711df176d93af1e0d1e26478cb6ed0d0dcab601a
+Size (pdns-5.0.4.tar.bz2) = 1475132 bytes
 SHA1 (patch-pdns_misc.hh) = ffc2eea374157e25cae17743db900ff6e3101a66
 SHA1 (patch-pdns_qtype.hh) = 4d086e28e7bacc624cf7db199ac16ebafec88e04
 SHA1 (patch-pdns_version.cc) = 2b6d65a08a3b481a659908b74d5e573284f8b05e
