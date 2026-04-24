@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.70 2026/03/31 04:35:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.71 2026/04/24 10:17:28 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -622,6 +622,9 @@ ${PYSITELIB}/faker/providers/color/vi_VN/__init__.pyo
 ${PYSITELIB}/faker/providers/company/__init__.py
 ${PYSITELIB}/faker/providers/company/__init__.pyc
 ${PYSITELIB}/faker/providers/company/__init__.pyo
+${PYSITELIB}/faker/providers/company/ar_DZ/__init__.py
+${PYSITELIB}/faker/providers/company/ar_DZ/__init__.pyc
+${PYSITELIB}/faker/providers/company/ar_DZ/__init__.pyo
 ${PYSITELIB}/faker/providers/company/az_AZ/__init__.py
 ${PYSITELIB}/faker/providers/company/az_AZ/__init__.pyc
 ${PYSITELIB}/faker/providers/company/az_AZ/__init__.pyo
@@ -676,6 +679,9 @@ ${PYSITELIB}/faker/providers/company/fil_PH/__init__.pyo
 ${PYSITELIB}/faker/providers/company/fr_CH/__init__.py
 ${PYSITELIB}/faker/providers/company/fr_CH/__init__.pyc
 ${PYSITELIB}/faker/providers/company/fr_CH/__init__.pyo
+${PYSITELIB}/faker/providers/company/fr_DZ/__init__.py
+${PYSITELIB}/faker/providers/company/fr_DZ/__init__.pyc
+${PYSITELIB}/faker/providers/company/fr_DZ/__init__.pyo
 ${PYSITELIB}/faker/providers/company/fr_FR/__init__.py
 ${PYSITELIB}/faker/providers/company/fr_FR/__init__.pyc
 ${PYSITELIB}/faker/providers/company/fr_FR/__init__.pyo
@@ -775,6 +781,9 @@ ${PYSITELIB}/faker/providers/credit_card/zh_CN/__init__.pyo
 ${PYSITELIB}/faker/providers/currency/__init__.py
 ${PYSITELIB}/faker/providers/currency/__init__.pyc
 ${PYSITELIB}/faker/providers/currency/__init__.pyo
+${PYSITELIB}/faker/providers/currency/ar_DZ/__init__.py
+${PYSITELIB}/faker/providers/currency/ar_DZ/__init__.pyc
+${PYSITELIB}/faker/providers/currency/ar_DZ/__init__.pyo
 ${PYSITELIB}/faker/providers/currency/az_AZ/__init__.py
 ${PYSITELIB}/faker/providers/currency/az_AZ/__init__.pyc
 ${PYSITELIB}/faker/providers/currency/az_AZ/__init__.pyo
@@ -829,6 +838,9 @@ ${PYSITELIB}/faker/providers/currency/fa_IR/__init__.pyo
 ${PYSITELIB}/faker/providers/currency/fr_CA/__init__.py
 ${PYSITELIB}/faker/providers/currency/fr_CA/__init__.pyc
 ${PYSITELIB}/faker/providers/currency/fr_CA/__init__.pyo
+${PYSITELIB}/faker/providers/currency/fr_DZ/__init__.py
+${PYSITELIB}/faker/providers/currency/fr_DZ/__init__.pyc
+${PYSITELIB}/faker/providers/currency/fr_DZ/__init__.pyo
 ${PYSITELIB}/faker/providers/currency/fr_FR/__init__.py
 ${PYSITELIB}/faker/providers/currency/fr_FR/__init__.pyc
 ${PYSITELIB}/faker/providers/currency/fr_FR/__init__.pyo
@@ -880,6 +892,9 @@ ${PYSITELIB}/faker/providers/date_time/__init__.pyo
 ${PYSITELIB}/faker/providers/date_time/ar_AA/__init__.py
 ${PYSITELIB}/faker/providers/date_time/ar_AA/__init__.pyc
 ${PYSITELIB}/faker/providers/date_time/ar_AA/__init__.pyo
+${PYSITELIB}/faker/providers/date_time/ar_DZ/__init__.py
+${PYSITELIB}/faker/providers/date_time/ar_DZ/__init__.pyc
+${PYSITELIB}/faker/providers/date_time/ar_DZ/__init__.pyo
 ${PYSITELIB}/faker/providers/date_time/ar_EG/__init__.py
 ${PYSITELIB}/faker/providers/date_time/ar_EG/__init__.pyc
 ${PYSITELIB}/faker/providers/date_time/ar_EG/__init__.pyo
@@ -1033,6 +1048,9 @@ ${PYSITELIB}/faker/providers/file/en_US/__init__.pyo
 ${PYSITELIB}/faker/providers/geo/__init__.py
 ${PYSITELIB}/faker/providers/geo/__init__.pyc
 ${PYSITELIB}/faker/providers/geo/__init__.pyo
+${PYSITELIB}/faker/providers/geo/ar_DZ/__init__.py
+${PYSITELIB}/faker/providers/geo/ar_DZ/__init__.pyc
+${PYSITELIB}/faker/providers/geo/ar_DZ/__init__.pyo
 ${PYSITELIB}/faker/providers/geo/bn_BD/__init__.py
 ${PYSITELIB}/faker/providers/geo/bn_BD/__init__.pyc
 ${PYSITELIB}/faker/providers/geo/bn_BD/__init__.pyo
@@ -1051,6 +1069,9 @@ ${PYSITELIB}/faker/providers/geo/en_IE/__init__.pyo
 ${PYSITELIB}/faker/providers/geo/en_US/__init__.py
 ${PYSITELIB}/faker/providers/geo/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/geo/en_US/__init__.pyo
+${PYSITELIB}/faker/providers/geo/fr_DZ/__init__.py
+${PYSITELIB}/faker/providers/geo/fr_DZ/__init__.pyc
+${PYSITELIB}/faker/providers/geo/fr_DZ/__init__.pyo
 ${PYSITELIB}/faker/providers/geo/pl_PL/__init__.py
 ${PYSITELIB}/faker/providers/geo/pl_PL/__init__.pyc
 ${PYSITELIB}/faker/providers/geo/pl_PL/__init__.pyo
@@ -1213,6 +1234,9 @@ ${PYSITELIB}/faker/providers/job/__init__.pyo
 ${PYSITELIB}/faker/providers/job/ar_AA/__init__.py
 ${PYSITELIB}/faker/providers/job/ar_AA/__init__.pyc
 ${PYSITELIB}/faker/providers/job/ar_AA/__init__.pyo
+${PYSITELIB}/faker/providers/job/ar_DZ/__init__.py
+${PYSITELIB}/faker/providers/job/ar_DZ/__init__.pyc
+${PYSITELIB}/faker/providers/job/ar_DZ/__init__.pyo
 ${PYSITELIB}/faker/providers/job/az_AZ/__init__.py
 ${PYSITELIB}/faker/providers/job/az_AZ/__init__.pyc
 ${PYSITELIB}/faker/providers/job/az_AZ/__init__.pyo
@@ -1267,6 +1291,9 @@ ${PYSITELIB}/faker/providers/job/fi_FI/__init__.pyo
 ${PYSITELIB}/faker/providers/job/fr_CH/__init__.py
 ${PYSITELIB}/faker/providers/job/fr_CH/__init__.pyc
 ${PYSITELIB}/faker/providers/job/fr_CH/__init__.pyo
+${PYSITELIB}/faker/providers/job/fr_DZ/__init__.py
+${PYSITELIB}/faker/providers/job/fr_DZ/__init__.pyc
+${PYSITELIB}/faker/providers/job/fr_DZ/__init__.pyo
 ${PYSITELIB}/faker/providers/job/fr_FR/__init__.py
 ${PYSITELIB}/faker/providers/job/fr_FR/__init__.pyc
 ${PYSITELIB}/faker/providers/job/fr_FR/__init__.pyo
@@ -1936,6 +1963,9 @@ ${PYSITELIB}/faker/providers/sbn/sbn.pyo
 ${PYSITELIB}/faker/providers/ssn/__init__.py
 ${PYSITELIB}/faker/providers/ssn/__init__.pyc
 ${PYSITELIB}/faker/providers/ssn/__init__.pyo
+${PYSITELIB}/faker/providers/ssn/ar_DZ/__init__.py
+${PYSITELIB}/faker/providers/ssn/ar_DZ/__init__.pyc
+${PYSITELIB}/faker/providers/ssn/ar_DZ/__init__.pyo
 ${PYSITELIB}/faker/providers/ssn/az_AZ/__init__.py
 ${PYSITELIB}/faker/providers/ssn/az_AZ/__init__.pyc
 ${PYSITELIB}/faker/providers/ssn/az_AZ/__init__.pyo
@@ -2011,6 +2041,9 @@ ${PYSITELIB}/faker/providers/ssn/fil_PH/__init__.pyo
 ${PYSITELIB}/faker/providers/ssn/fr_CH/__init__.py
 ${PYSITELIB}/faker/providers/ssn/fr_CH/__init__.pyc
 ${PYSITELIB}/faker/providers/ssn/fr_CH/__init__.pyo
+${PYSITELIB}/faker/providers/ssn/fr_DZ/__init__.py
+${PYSITELIB}/faker/providers/ssn/fr_DZ/__init__.pyc
+${PYSITELIB}/faker/providers/ssn/fr_DZ/__init__.pyo
 ${PYSITELIB}/faker/providers/ssn/fr_FR/__init__.py
 ${PYSITELIB}/faker/providers/ssn/fr_FR/__init__.pyc
 ${PYSITELIB}/faker/providers/ssn/fr_FR/__init__.pyo
