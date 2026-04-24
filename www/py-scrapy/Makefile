@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2026/04/22 11:13:56 adam Exp $
+# $NetBSD: Makefile,v 1.38 2026/04/24 10:23:19 adam Exp $
 
-DISTNAME=	scrapy-2.15.0
+DISTNAME=	scrapy-2.15.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Scrapy/}
