@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2026/03/12 05:26:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/04/24 09:51:40 adam Exp $
 bin/tox-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -292,6 +292,9 @@ ${PYSITELIB}/tox/tox_env/python/extras.pyo
 ${PYSITELIB}/tox/tox_env/python/package.py
 ${PYSITELIB}/tox/tox_env/python/package.pyc
 ${PYSITELIB}/tox/tox_env/python/package.pyo
+${PYSITELIB}/tox/tox_env/python/pep723.py
+${PYSITELIB}/tox/tox_env/python/pep723.pyc
+${PYSITELIB}/tox/tox_env/python/pep723.pyo
 ${PYSITELIB}/tox/tox_env/python/pip/__init__.py
 ${PYSITELIB}/tox/tox_env/python/pip/__init__.pyc
 ${PYSITELIB}/tox/tox_env/python/pip/__init__.pyo
@@ -337,6 +340,9 @@ ${PYSITELIB}/tox/tox_env/python/virtual_env/package/pyproject.pyo
 ${PYSITELIB}/tox/tox_env/python/virtual_env/package/util.py
 ${PYSITELIB}/tox/tox_env/python/virtual_env/package/util.pyc
 ${PYSITELIB}/tox/tox_env/python/virtual_env/package/util.pyo
+${PYSITELIB}/tox/tox_env/python/virtual_env/pep723_runner.py
+${PYSITELIB}/tox/tox_env/python/virtual_env/pep723_runner.pyc
+${PYSITELIB}/tox/tox_env/python/virtual_env/pep723_runner.pyo
 ${PYSITELIB}/tox/tox_env/python/virtual_env/runner.py
 ${PYSITELIB}/tox/tox_env/python/virtual_env/runner.pyc
 ${PYSITELIB}/tox/tox_env/python/virtual_env/runner.pyo
@@ -376,3 +382,4 @@ ${PYSITELIB}/tox/util/spinner.pyo
 ${PYSITELIB}/tox/version.py
 ${PYSITELIB}/tox/version.pyc
 ${PYSITELIB}/tox/version.pyo
+man/man1/tox-${PYVERSSUFFIX}.1
