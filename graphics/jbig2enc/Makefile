@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/08/30 22:45:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/04/24 08:50:43 adam Exp $
 
-DISTNAME=	jbig2enc-0.30
-PKGREVISION=	2
+DISTNAME=	jbig2enc-0.31
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=agl/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -13,9 +12,8 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		aclocal autoconf autoheader automake
+USE_TOOLS+=		aclocal autoconf autoheader automake pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib
 
 REPLACE_PYTHON=		jbig2topdf.py
 
