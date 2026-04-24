@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2026/03/17 13:42:39 wiz Exp $
+$NetBSD: distinfo,v 1.49 2026/04/24 17:10:41 wiz Exp $
 
 BLAKE2s (anstyle-1.0.13.crate) = 7d55c4634306f10a1cbdca2c99c816b49f90ec4f63c8c1c7592a99ddc233037b
 SHA512 (anstyle-1.0.13.crate) = 1a92c4bf6ff7262c0f5fe72ff66eaf11f0c84e84a06746767918903c0416ba5d33ac54ff9a2c6cde37e26bb2287675d3f0a8a7efa95eb013c9be388b8139661e
@@ -120,9 +120,9 @@ Size (mio-1.1.1.crate) = 105630 bytes
 BLAKE2s (once_cell-1.21.3.crate) = 5b077d9ff947a795057e5647e50cf1bead07170110d0adb8337b88fa28b9e289
 SHA512 (once_cell-1.21.3.crate) = 32a87506c6f4598f3ca2c88556014ef2093d5db9a08602335e847caa537a866492fa74c894e7e1da2e4289a1d3dbffcb90a9e37a4a1453203832f434b8206990
 Size (once_cell-1.21.3.crate) = 34534 bytes
-BLAKE2s (pdns-recursor-5.4.0.tar.xz) = 6af490a6bfec870ee5877c9f831d2218c72e20baa0599a3afd19a56568e00076
-SHA512 (pdns-recursor-5.4.0.tar.xz) = acc53b1583270302402d8c01a9f215cffda66690c0d11021c5aa6f9821556999246aed34390bfefc01d5d43a77e904800c812acba93ed8e66f99fbf763fbf383
-Size (pdns-recursor-5.4.0.tar.xz) = 1392752 bytes
+BLAKE2s (pdns-recursor-5.4.1.tar.xz) = 332a05c3fff77b40927cb3bd347ad2f0809a365a2690def2ba8feac0b2aad575
+SHA512 (pdns-recursor-5.4.1.tar.xz) = 70896397c80985f4ee4313b06e40187c3a4fc9d7e3c9e171943128fde5b000551f486ca9e9942e5640299cac39731c552f8d9c12a5a8cd5174f9e70dbf7f7e83
+Size (pdns-recursor-5.4.1.tar.xz) = 1393844 bytes
 BLAKE2s (percent-encoding-2.3.2.crate) = 81bf57454974d77f50aa665cf53179715469e81774d992a2d3769ad118d70d5b
 SHA512 (percent-encoding-2.3.2.crate) = 495b4aac88a7a46420811671d6bd82817e4eb2fe51d5068d11c5b50d0d927895d54c855cb07d4f4ad5a2d42b22f9419ad0183c14781dbfa240804fd49761035a
 Size (percent-encoding-2.3.2.crate) = 11583 bytes
