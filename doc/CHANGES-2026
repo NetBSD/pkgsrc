@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2559 2026/04/24 16:26:17 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2560 2026/04/24 17:10:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3963,3 +3963,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-wheel to 0.47.0 [adam 2026-04-24]
 	Updated chat/soju to 0.10.1 [tm 2026-04-24]
 	Updated games/vms-empire to 1.22 [wiz 2026-04-24]
+	Updated net/powerdns to 5.0.4 [wiz 2026-04-24]
