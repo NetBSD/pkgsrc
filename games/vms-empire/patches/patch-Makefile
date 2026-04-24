@@ -1,0 +1,43 @@
+$NetBSD: patch-Makefile,v 1.1 2026/04/24 16:26:02 wiz Exp $
+
+o Honors LDFLAGS
+o DESTDIR support
+
+--- Makefile.orig	2026-04-24 15:43:55.000000000 +0000
++++ Makefile
+@@ -82,7 +82,7 @@ vms-empire: $(OFILES)
+ all: vms-empire vms-empire.1
+ 
+ vms-empire: $(OFILES)
+-	$(CC) $(PROFILE) -o vms-empire $(OFILES) $(LIBS)
++	$(CC) $(PROFILE) -o vms-empire $(OFILES) $(LIBS) $(LDFLAGS)
+ 
+ attack.o:: extern.h empire.h
+ compmove.o:: extern.h empire.h
+@@ -124,16 +124,16 @@ install: empire.6 uninstall
+ # Install/uninstall
+ 
+ install: empire.6 uninstall
+-	install -m 0755 -d $(BINDIR)
+-	install -m 0755 -d $(MANDIR)/man6
+-	install -m 0755 -d $(DATADIR)/applications/
+-	install -m 0755 -d $(DATADIR)/icons/hicolor/48x48/apps/
+-	install -m 0755 -d $(DATADIR)/appdata
+-	install -m 0755 vms-empire $(BINDIR)/
+-	install -m 0644 empire.6 $(MANDIR)/man6/vms-empire.6
+-	install -m 0644 vms-empire.desktop $(DATADIR)/applications/
+-	install -m 0644 vms-empire.png $(DATADIR)/icons/hicolor/48x48/apps/
+-	install -m 0644 vms-empire.adoc $(DATADIR)/appdata/
++	install -m 0755 -d $(DESTDIR)$(BINDIR)
++	install -m 0755 -d $(DESTDIR)$(MANDIR)/man6
++	install -m 0755 -d $(DESTDIR)$(DATADIR)/applications/
++	install -m 0755 -d $(DESTDIR)$(DATADIR)/icons/hicolor/48x48/apps/
++	install -m 0755 -d $(DESTDIR)$(DATADIR)/appdata
++	install -m 0755 vms-empire $(DESTDIR)$(BINDIR)/
++	install -m 0644 empire.6 $(DESTDIR)$(MANDIR)/man6/vms-empire.6
++	install -m 0644 vms-empire.desktop $(DESTDIR)$(DATADIR)/applications/
++	install -m 0644 vms-empire.png $(DESTDIR)$(DATADIR)/icons/hicolor/48x48/apps/
++	install -m 0644 vms-empire.adoc $(DESTDIR)$(DATADIR)/appdata/
+ 
+ uninstall:
+ 	rm -f $(BINDIR)/vms-empire $(MANDIR)/man6/vms-empire.6
