@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2026/04/24 09:41:14 adam Exp $
+# $NetBSD: Makefile,v 1.108 2026/04/24 10:06:29 adam Exp $
 
 DISTNAME=	virtualenv-21.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -31,16 +31,14 @@ USE_LANGUAGES=	c # for tests
 
 REPLACE_PYTHON=	virtualenv.py
 
+PY_RENAME_BINARIES=	virtualenv
+
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.13.2:../../devel/py-typing-extensions
 .endif
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} virtualenv virtualenv-${PYVERSSUFFIX} || ${TRUE}
-
-.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
