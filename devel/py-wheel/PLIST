@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2026/01/26 08:21:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/04/24 11:08:02 adam Exp $
 bin/wheel-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -20,6 +20,9 @@ ${PYSITELIB}/wheel/_commands/__init__.pyo
 ${PYSITELIB}/wheel/_commands/convert.py
 ${PYSITELIB}/wheel/_commands/convert.pyc
 ${PYSITELIB}/wheel/_commands/convert.pyo
+${PYSITELIB}/wheel/_commands/info.py
+${PYSITELIB}/wheel/_commands/info.pyc
+${PYSITELIB}/wheel/_commands/info.pyo
 ${PYSITELIB}/wheel/_commands/pack.py
 ${PYSITELIB}/wheel/_commands/pack.pyc
 ${PYSITELIB}/wheel/_commands/pack.pyo
