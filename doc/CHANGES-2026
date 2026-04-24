@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2551 2026/04/24 09:21:37 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2552 2026/04/24 09:51:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3950,3 +3950,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/vim-share to 9.2.0390 [sh 2026-04-23]
 	Updated graphics/jbig2enc to 0.31 [adam 2026-04-24]
 	Updated net/haproxy to 3.3.7 [adam 2026-04-24]
+	Updated devel/py-virtualenv to 21.2.4 [adam 2026-04-24]
+	Updated devel/py-tox to 4.53.0 [adam 2026-04-24]
