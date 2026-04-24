@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2557 2026/04/24 11:08:18 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2558 2026/04/24 11:49:46 tm Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3961,3 +3961,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/py-simplejson to 4.1.0 [adam 2026-04-24]
 	Updated devel/py-dulwich to 1.2.0 [adam 2026-04-24]
 	Updated devel/py-wheel to 0.47.0 [adam 2026-04-24]
+	Updated chat/soju to 0.10.1 [tm 2026-04-24]
