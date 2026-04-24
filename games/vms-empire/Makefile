@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2026/04/21 05:12:14 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/04/24 16:26:02 wiz Exp $
 
-DISTNAME=	vms-empire-1.21
+DISTNAME=	vms-empire-1.22
 CATEGORIES=	games
 MASTER_SITES=	http://www.catb.org/~esr/vms-empire/
 
@@ -15,6 +15,9 @@ USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=	DEBUG=${CFLAGS:Q}
+# avoid hardcoded ncurses
+MAKE_FLAGS+=	LIBS=-lcurses
 
 SUBST_CLASSES+=		makefile
 SUBST_SED.makefile+=	-e "s,asciidoctor,asciidoctor${RUBY_SUFFIX},"
