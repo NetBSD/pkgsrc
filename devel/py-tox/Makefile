@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2026/03/12 05:26:51 adam Exp $
+# $NetBSD: Makefile,v 1.66 2026/04/24 09:51:40 adam Exp $
 
-DISTNAME=	tox-4.49.1
+DISTNAME=	tox-4.53.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tox/}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://tox.wiki/
 COMMENT=	Virtualenv-based automation of test activities
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.21:../../textproc/py-docutils
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.5:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.29:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-cachetools>=7.0.3:../../devel/py-cachetools
@@ -19,6 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-packaging>=26:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=4.9.4:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=1.6:../../devel/py-pluggy
 DEPENDS+=	${PYPKGPREFIX}-project-api>=1.10:../../devel/py-project-api
+DEPENDS+=	${PYPKGPREFIX}-python-discovery>=1.2.2:../../lang/py-python-discovery
 DEPENDS+=	${PYPKGPREFIX}-tomli_w>=1.2:../../textproc/py-tomli_w
 DEPENDS+=	${PYPKGPREFIX}-virtualenv>=21.1:../../devel/py-virtualenv
 
@@ -48,9 +50,13 @@ DEPENDS+=	${PYPKGPREFIX}-tomli>=2.4:../../textproc/py-tomli
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.15:../../devel/py-typing-extensions
 .endif
 
+PY_RENAME_BINARIES=	tox
+
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
+
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} tox tox-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX} && \
+	${MV} share/man/man1/tox.1 ${PKGMANDIR}/man1/tox-${PYVERSSUFFIX}.1 || ${TRUE}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
