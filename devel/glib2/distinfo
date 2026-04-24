@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.342 2026/04/15 08:33:00 adam Exp $
+$NetBSD: distinfo,v 1.343 2026/04/24 08:02:58 mrg Exp $
 
 BLAKE2s (glib-2.88.0.tar.xz) = 4623f7355733d27a2637c92f216d218ef316f5898b97d43e7d2d45a63fee6dd7
 SHA512 (glib-2.88.0.tar.xz) = ceead8d88720db17dc6bbff7aff14f261f90afc5e8261448aae0657f89b5fcc616cf62f4b049be88a4ddd3f50a869bbcdb66b29777da4969a47987828ecac280
@@ -17,7 +17,7 @@ SHA1 (patch-girepository_gitypelib.c) = 6a5a49ac9a746028115e261820a2b0f1c1380ea2
 SHA1 (patch-glib_gatomic.c) = 5d08e19cc1c2557a5c007af8b368968217ce65b0
 SHA1 (patch-glib_gatomic.h) = d1c39c3594a5c89d196349e5eafb5512795f55f8
 SHA1 (patch-glib_genviron.c) = 45e382a4b5412c69b310fd26482eff6faffa2c0d
-SHA1 (patch-glib_glib-unix.c) = 71ae715b1193b1d447e66efa02a42cc72f32d020
+SHA1 (patch-glib_glib-unix.c) = 1c7ef6437680317f5e28c3e75bca26cfec48351f
 SHA1 (patch-glib_gspawn-posix.c) = ac7536dbb14662d9a8ea27fb32ca911a3b4ab43d
 SHA1 (patch-glib_gthread.c) = 2485f63f27090f99e846c3b58432f6450cc95158
 SHA1 (patch-glib_tests_hash.c) = a7e19ca55fcbbc0b188c34755cae5b6b65b67f1a
