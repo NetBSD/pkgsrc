@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2026/02/25 14:41:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.41 2026/04/24 11:07:18 adam Exp $
 bin/dul-receive-pack-${PYVERSSUFFIX}
 bin/dul-upload-pack-${PYVERSSUFFIX}
 bin/dulwich-${PYVERSSUFFIX}
@@ -26,6 +26,9 @@ ${PYSITELIB}/dulwich/aiohttp/__init__.pyo
 ${PYSITELIB}/dulwich/aiohttp/server.py
 ${PYSITELIB}/dulwich/aiohttp/server.pyc
 ${PYSITELIB}/dulwich/aiohttp/server.pyo
+${PYSITELIB}/dulwich/am.py
+${PYSITELIB}/dulwich/am.pyc
+${PYSITELIB}/dulwich/am.pyo
 ${PYSITELIB}/dulwich/annotate.py
 ${PYSITELIB}/dulwich/annotate.pyc
 ${PYSITELIB}/dulwich/annotate.pyo
@@ -68,25 +71,6 @@ ${PYSITELIB}/dulwich/commit_graph.pyo
 ${PYSITELIB}/dulwich/config.py
 ${PYSITELIB}/dulwich/config.pyc
 ${PYSITELIB}/dulwich/config.pyo
-${PYSITELIB}/dulwich/contrib/README.swift.rst
-${PYSITELIB}/dulwich/contrib/__init__.py
-${PYSITELIB}/dulwich/contrib/__init__.pyc
-${PYSITELIB}/dulwich/contrib/__init__.pyo
-${PYSITELIB}/dulwich/contrib/greenthreads.py
-${PYSITELIB}/dulwich/contrib/greenthreads.pyc
-${PYSITELIB}/dulwich/contrib/greenthreads.pyo
-${PYSITELIB}/dulwich/contrib/paramiko_vendor.py
-${PYSITELIB}/dulwich/contrib/paramiko_vendor.pyc
-${PYSITELIB}/dulwich/contrib/paramiko_vendor.pyo
-${PYSITELIB}/dulwich/contrib/release_robot.py
-${PYSITELIB}/dulwich/contrib/release_robot.pyc
-${PYSITELIB}/dulwich/contrib/release_robot.pyo
-${PYSITELIB}/dulwich/contrib/requests_vendor.py
-${PYSITELIB}/dulwich/contrib/requests_vendor.pyc
-${PYSITELIB}/dulwich/contrib/requests_vendor.pyo
-${PYSITELIB}/dulwich/contrib/swift.py
-${PYSITELIB}/dulwich/contrib/swift.pyc
-${PYSITELIB}/dulwich/contrib/swift.pyo
 ${PYSITELIB}/dulwich/credentials.py
 ${PYSITELIB}/dulwich/credentials.pyc
 ${PYSITELIB}/dulwich/credentials.pyo

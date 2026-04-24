@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2026/02/25 14:41:34 adam Exp $
+# $NetBSD: Makefile,v 1.78 2026/04/24 11:07:18 adam Exp $
 
-DISTNAME=	dulwich-1.1.0
+DISTNAME=	dulwich-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dulwich/}
@@ -25,11 +25,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.6.0:../../devel/py-typing-extensions
 .endif
 
-post-install:
-.for bin in dul-receive-pack dul-upload-pack dulwich
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
-.endfor
+PY_RENAME_BINARIES=	dul-receive-pack dul-upload-pack dulwich
 
 pre-test:
 	# uses atheris
