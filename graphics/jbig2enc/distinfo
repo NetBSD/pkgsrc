@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2024/12/28 09:09:47 adam Exp $
+$NetBSD: distinfo,v 1.6 2026/04/24 08:50:43 adam Exp $
 
-BLAKE2s (jbig2enc-0.30.tar.gz) = 7eaf9cb95be4302f0a87a552c9d56393ed58bfd400da01c2a8875fbce746d007
-SHA512 (jbig2enc-0.30.tar.gz) = d20f7d3b9e8f633bd1d72af426ba5dba2104903072fdcd6b998550b5abee92fa02fea5542bfb4366cf6d9bdea3d747b64e9de5eccd7ef4653549780a2d3f26c6
-Size (jbig2enc-0.30.tar.gz) = 1214245 bytes
+BLAKE2s (jbig2enc-0.31.tar.gz) = b3fd6854d55339373ff34961f3c50d14fa62e60c31a3cc31dd3f7c816b7593db
+SHA512 (jbig2enc-0.31.tar.gz) = f43d5182274549b268fe01deaadbc667f5eb663e69c60723396ccd107348c78ce5c7b0a0a90451dee53363e5b549c783b5159eedab57db82e10c65057671b6d6
+Size (jbig2enc-0.31.tar.gz) = 1224750 bytes
 SHA1 (patch-src_Makefile.am) = 4a757a78c15c2a979e168d3052a857632b61e21b
