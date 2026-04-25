@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2567 2026/04/25 13:31:31 vins Exp $
+$NetBSD: CHANGES-2026,v 1.2568 2026/04/25 19:03:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3971,3 +3971,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/fox to 1.6.59 [vins 2026-04-25]
 	Updated sysutils/xfe to 2.1.6 [vins 2026-04-25]
 	Added devel/libgusb version 0.4.9 [vins 2026-04-25]
+	Updated devel/cargo-about to 0.9.0 [pin 2026-04-25]
