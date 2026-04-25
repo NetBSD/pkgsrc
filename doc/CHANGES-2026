@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2570 2026/04/25 19:06:19 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2571 2026/04/25 19:07:20 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3974,3 +3974,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-about to 0.9.0 [pin 2026-04-25]
 	Updated devel/mise to 2026.4.20 [pin 2026-04-25]
 	Updated security/gpg-tui to 0.11.2 [pin 2026-04-25]
+	Updated textproc/rumdl to 0.1.81 [pin 2026-04-25]
