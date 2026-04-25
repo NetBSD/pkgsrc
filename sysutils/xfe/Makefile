@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2025/10/23 20:39:30 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2026/04/25 10:00:26 vins Exp $
 
-DISTNAME=	xfe-1.45
-PKGREVISION=	8
+DISTNAME=	xfe-2.1.6
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xfe/}
 EXTRACT_SUFX=	.tar.xz
@@ -20,14 +19,18 @@ GNU_CONFIGURE=		yes
 LDFLAGS.DragonFly=	-lXft -lX11
 PTHREAD_AUTO_VARS=	yes
 
+ICON_THEMES=		yes
+
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure
-SUBST_FILES.conf=	src/XFileExplorer.cpp src/xfedefs.h
+SUBST_FILES.conf=	src/foxhacks.cpp src/help.h src/XFileExplorer.cpp
 SUBST_SED.conf=		-e "s|/usr/local|${PREFIX}|"
 SUBST_MESSAGE.conf=	Fixing hardcoded path.
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../security/polkit/buildlink3.mk"
