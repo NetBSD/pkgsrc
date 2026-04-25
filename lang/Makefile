@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.784 2026/04/08 14:42:45 taca Exp $
+# $NetBSD: Makefile,v 1.785 2026/04/25 22:05:36 alnsn Exp $
 #
 
 COMMENT=	Programming languages
@@ -345,6 +345,7 @@ SUBDIR+=	siod
 SUBDIR+=	smalltalk
 SUBDIR+=	smlnj
 SUBDIR+=	snobol
+SUBDIR+=	souffle
 SUBDIR+=	spago
 SUBDIR+=	spark2014-13
 SUBDIR+=	spark2014-14
