@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.198 2026/04/20 06:31:37 wiz Exp $
+# $NetBSD: Makefile,v 1.199 2026/04/25 22:49:14 gdt Exp $
 
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
-PKGREVISION=	1
+#PKGREVISION=	0
 
 COMMENT=	Translator library for raster geospatial data formats
 
