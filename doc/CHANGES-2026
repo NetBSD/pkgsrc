@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2566 2026/04/25 10:00:53 vins Exp $
+$NetBSD: CHANGES-2026,v 1.2567 2026/04/25 13:31:31 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3970,3 +3970,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-anita to 2.18 [gson 2026-04-25]
 	Updated x11/fox to 1.6.59 [vins 2026-04-25]
 	Updated sysutils/xfe to 2.1.6 [vins 2026-04-25]
+	Added devel/libgusb version 0.4.9 [vins 2026-04-25]
