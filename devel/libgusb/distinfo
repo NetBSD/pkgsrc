@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/25 13:08:55 vins Exp $
+
+BLAKE2s (libgusb-0.4.9.tar.gz) = d19803c446513393cd17c11b295b73061060eccb2c140d5d80c30156eee3ea4d
+SHA512 (libgusb-0.4.9.tar.gz) = 22cce771c488963ea078cf2914b4e731afa9a7babb94570c9412147e6a3af142deac41b9a7a80cdf74960f9001bb30312923d53e0f96eb15bf99e96207b047d4
+Size (libgusb-0.4.9.tar.gz) = 63026 bytes
