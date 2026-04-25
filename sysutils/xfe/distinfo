@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.18 2023/01/09 19:45:51 vins Exp $
+$NetBSD: distinfo,v 1.19 2026/04/25 10:00:26 vins Exp $
 
-BLAKE2s (xfe-1.45.tar.xz) = 6a9b0c4bc2b12b63adc60f1c0de545c5bb00b14d94fe0a870a79707656681e69
-SHA512 (xfe-1.45.tar.xz) = 3d511fec3070b39c08b83c19178890dea6f7a306dee0c51a98b6ed8eafc5148973da6d803beb2053be131d389dd74eef829459fe39e212f53b983b19d5d1cb4f
-Size (xfe-1.45.tar.xz) = 1375220 bytes
+BLAKE2s (xfe-2.1.6.tar.xz) = 7bd03ac7b8aa0acaa47c55a6b91097bc81d96d6e8110760aad3f3f2983c3a557
+SHA512 (xfe-2.1.6.tar.xz) = b7df53f4968a3148aa3c6a46f6510de285d425a3e2de250f70e64d62e216b47638346e82455fb84d4a0f252c1f2d900063b51a6dd296af4bd4224b3316473639
+Size (xfe-2.1.6.tar.xz) = 3232636 bytes
+SHA1 (patch-src_SearchWindow.cpp) = c1d0d2c63ede939371854f00c89e8c0f33846121
+SHA1 (patch-src_main.cpp) = 49761f0ceb14a2885fad3b51a12294615e49ab26
+SHA1 (patch-src_xfedefs.h) = 33c208054191cadff67044b4d421efd4448b6d78
