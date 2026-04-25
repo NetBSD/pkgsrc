@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2573 2026/04/25 22:06:48 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.2574 2026/04/25 22:46:09 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3977,3 +3977,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/rumdl to 0.1.81 [pin 2026-04-25]
 	Updated textproc/scooter to 0.9.1 [pin 2026-04-25]
 	Added lang/souffle version 2.5 [alnsn 2026-04-25]
+	Updated geography/gdal-lib to 3.12.4nb1 [gdt 2026-04-25]
+	Updated geography/py-gdal to 3.12.4 [gdt 2026-04-25]
