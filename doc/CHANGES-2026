@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2563 2026/04/24 18:16:28 rhialto Exp $
+$NetBSD: CHANGES-2026,v 1.2564 2026/04/25 08:09:17 gson Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3967,3 +3967,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/powerdns-recursor to 5.4.1 [wiz 2026-04-24]
 	Updated net/dnsdist to 2.0.5 [wiz 2026-04-24]
 	Updated news/pan to 0.165 [rhialto 2026-04-24]
+	Updated misc/py-anita to 2.18 [gson 2026-04-25]
