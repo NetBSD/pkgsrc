@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2572 2026/04/25 19:08:33 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2573 2026/04/25 22:06:48 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3976,3 +3976,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/gpg-tui to 0.11.2 [pin 2026-04-25]
 	Updated textproc/rumdl to 0.1.81 [pin 2026-04-25]
 	Updated textproc/scooter to 0.9.1 [pin 2026-04-25]
+	Added lang/souffle version 2.5 [alnsn 2026-04-25]
