@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/05/04 10:11:28 vins Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/04/25 19:35:46 vins Exp $
 include/gudev-1.0/gudev/gudev.h
 include/gudev-1.0/gudev/gudevclient.h
 include/gudev-1.0/gudev/gudevdevice.h
@@ -6,9 +6,11 @@ include/gudev-1.0/gudev/gudevenumerator.h
 include/gudev-1.0/gudev/gudevenums.h
 include/gudev-1.0/gudev/gudevenumtypes.h
 include/gudev-1.0/gudev/gudevtypes.h
-lib/girepository-1.0/GUdev-1.0.typelib
+${PLIST.introspection}lib/girepository-1.0/GUdev-1.0.typelib
 lib/libgudev-1.0.so
 lib/libgudev-1.0.so.0
 lib/libgudev-1.0.so.0.3.0
 lib/pkgconfig/gudev-1.0.pc
-share/gir-1.0/GUdev-1.0.gir
+${PLIST.introspection}share/gir-1.0/GUdev-1.0.gir
+${PLIST.vapi}share/vala/vapi/gudev-1.0.deps
+${PLIST.vapi}share/vala/vapi/gudev-1.0.vapi
