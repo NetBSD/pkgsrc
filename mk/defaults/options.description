@@ -911,6 +911,7 @@ softhsm			Enable SoftHSM for key management.
 softhsm2		Enable SoftHSM version 2 for key management.
 soju-moderncsqlite	Use an alternative SQLite library that does not require CGO.
 sonic			Enable Sonic audio algorithm support.
+souffle-64bit		Enable 64-bit numbers in Datalog tuples.
 spacetime		Enable memory profiling with Spacetime.
 spamassassin		Enable SpamAssassin support.
 spamassassin-perl-warnings	Enable Perl warnings at run-time.
