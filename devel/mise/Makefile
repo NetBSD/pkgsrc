@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.109 2026/04/16 11:32:42 pin Exp $
+# $NetBSD: Makefile,v 1.110 2026/04/25 19:04:26 pin Exp $
 
-DISTNAME=		mise-2026.4.14
+DISTNAME=		mise-2026.4.20
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=jdx/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -12,7 +12,7 @@ LICENSE=		mit
 
 CFLAGS+=		-Wno-implicit-function-declaration
 
-RUST_REQ=		1.88.0
+RUST_REQ=		1.91.0
 USE_LANGUAGES=		c
 USE_TOOLS+=		pkg-config
 
