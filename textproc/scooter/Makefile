@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2026/04/02 12:15:54 pin Exp $
+# $NetBSD: Makefile,v 1.11 2026/04/25 19:08:02 pin Exp $
 
-DISTNAME=	scooter-0.9.0
+DISTNAME=	scooter-0.9.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=thomasschafer/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,9 +12,9 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.94.1
+#RUST_REQ=	1.96.0-beta.4
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.94.1 on amd64
+#This package is confirmed to build with Rust 1.96.0-beta.4 on amd64
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
