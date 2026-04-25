@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4625 2026/04/20 18:31:27 pin Exp $
+# $NetBSD: Makefile,v 1.4626 2026/04/25 13:30:15 vins Exp $
 #
 
 COMMENT=	Development utilities
@@ -1033,6 +1033,7 @@ SUBDIR+=	libgphoto2
 SUBDIR+=	libgsf
 SUBDIR+=	libgtextutils
 SUBDIR+=	libgudev
+SUBDIR+=	libgusb
 SUBDIR+=	libgweather
 SUBDIR+=	libhandy
 SUBDIR+=	libhfs
