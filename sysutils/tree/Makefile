@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2026/02/14 08:36:51 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/04/25 09:33:56 sjmulder Exp $
 
 DISTNAME=	tree-1.8.0
 CATEGORIES=	sysutils
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	gmake
 NO_CONFIGURE=	yes
 
+# uses empy parens function declarations, but also C++ style comments
+CFLAGS+=	-std=c99
 CFLAGS.Linux+=	-DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
 
 MAKE_FLAGS+=	prefix=${PREFIX}
