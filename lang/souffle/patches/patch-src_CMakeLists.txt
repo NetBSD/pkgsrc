@@ -1,0 +1,69 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2026/04/25 22:03:11 alnsn Exp $
+
+Fixes for bin/souffle-compile.py script:
+ - Fix ${PYTHON_EXECUTABLE} shebang.
+ - Don't use .buildlink/bin/c++ wrapper.
+ - Extract rpath directories from link flags (cmake detects
+   only .buildlink paths).
+ - Extract -I flags from compile flags. Keep .buildlink/include
+   directories detected by cmake for tests.
+ - Resolve .buildlink/lib/*.so symlinks to real paths.
+
+--- src/CMakeLists.txt.orig	2025-03-24 14:18:36.000000000 +0000
++++ src/CMakeLists.txt
+@@ -537,7 +537,19 @@ endif ()
+ 
+ list(JOIN SOUFFLE_COMPILED_OPTS " " SOUFFLE_COMPILED_CXX_OPTIONS)
+ 
+-list(JOIN SOUFFLE_COMPILED_LIBS " " SOUFFLE_COMPILED_LINK_OPTIONS1)
++# Find .buildlink libraries and resolve them to real paths.
++set(SOUFFLE_COMPILED_LIBS_RESOLVED "")
++foreach (lib IN LISTS SOUFFLE_COMPILED_LIBS)
++  string(FIND "${lib}" "${BUILDLINK_DIR}" found_at)
++  if (found_at EQUAL 0)
++    file(READ_SYMLINK "${lib}" resolved)
++    list(APPEND SOUFFLE_COMPILED_LIBS_RESOLVED "${resolved}")
++  else ()
++    list(APPEND SOUFFLE_COMPILED_LIBS_RESOLVED "${lib}")
++  endif ()
++endforeach ()
++
++list(JOIN SOUFFLE_COMPILED_LIBS_RESOLVED " " SOUFFLE_COMPILED_LINK_OPTIONS1)
+ list(JOIN SOUFFLE_COMPILED_LINK_OPTS " " SOUFFLE_COMPILED_LINK_OPTIONS2)
+ set(SOUFFLE_COMPILED_LINK_OPTIONS "")
+ string(APPEND SOUFFLE_COMPILED_LINK_OPTIONS " ${SOUFFLE_COMPILED_LINK_OPTIONS1}" " ${SOUFFLE_COMPILED_LINK_OPTIONS2}")
+@@ -546,10 +558,21 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "MSVC"
+   set(SOUFFLE_COMPILED_LINK_OPTIONS "/link ${SOUFFLE_COMPILED_LINK_OPTIONS}")
+ endif ()
+ 
++# Extract rpaths from link flags. It overwrites already built SOUFFLE_COMPILED_RPATHS.
++separate_arguments(SOUFFLE_COMPILED_RPATHS UNIX_COMMAND "${SOUFFLE_COMPILED_CXX_LINK_FLAGS}")
++list(FILTER SOUFFLE_COMPILED_RPATHS INCLUDE REGEX "^${COMPILER_RPATH_FLAG}")
++list(TRANSFORM SOUFFLE_COMPILED_RPATHS REPLACE "${COMPILER_RPATH_FLAG}" "")
+ list(JOIN SOUFFLE_COMPILED_RPATHS "${OS_PATH_DELIMITER}" SOUFFLE_COMPILED_RPATH_LIST)
+ 
++# SOUFFLE_COMPILED_INCS found so far are all .buildlink/include
++# directories. We keep them only because they're required to run
++# tests. Normal ${LOCALBASE}/include directories are extracted from
++# compile flags and added to the front.
+ list(TRANSFORM SOUFFLE_COMPILED_INCS PREPEND "-I")
+-list(JOIN SOUFFLE_COMPILED_INCS " " SOUFFLE_COMPILED_INCLUDES)
++separate_arguments(SOUFFLE_COMPILED_INC_FLAGS UNIX_COMMAND ${SOUFFLE_COMPILED_CXX_FLAGS})
++list(FILTER SOUFFLE_COMPILED_INC_FLAGS INCLUDE REGEX "^-I")
++list(APPEND SOUFFLE_COMPILED_INC_FLAGS ${SOUFFLE_COMPILED_INCS})
++list(JOIN SOUFFLE_COMPILED_INC_FLAGS " " SOUFFLE_COMPILED_INCLUDES)
+ 
+ list(TRANSFORM SOUFFLE_COMPILED_DEFS PREPEND "-D")
+ list(JOIN SOUFFLE_COMPILED_DEFS " " SOUFFLE_COMPILED_DEFINITIONS)
+@@ -558,9 +581,9 @@ file(READ ${CMAKE_CURRENT_SOURCE_DIR}/so
+ 
+ # json parameters injected at the begining of souffle-compile.py
+ set(SOUFFLE_COMPILE_PY
+-"#!/usr/bin/env python3
++"#!${PYTHON_EXECUTABLE}
+ JSON_DATA_TEXT = \"\"\"{
+-  \"compiler\": \"${SOUFFLE_COMPILED_CXX_COMPILER}\",
++  \"compiler\": \"${SOUFFLE_COMPILE_PY_COMPILER}\",
+   \"compiler_id\": \"${SOUFFLE_COMPILED_CXX_COMPILER_ID}\",
+   \"compiler_version\": \"${SOUFFLE_COMPILED_CXX_COMPILER_VERSION}\",
+   \"msvc_version\": \"${MSVC_VERSION}\",
