@@ -1,5 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2026/04/25 22:45:50 gdt Exp $
+# $NetBSD: Makefile,v 1.67 2026/04/25 23:06:21 gdt Exp $
 
+# Note that 9.8.0 caused problems with ETRF due to the EPSG database
+# adding an ensemble, and this release reverts the EPSG database
+# upgrade.
 VERSION_BASE=	9.8.1
 # Accommodate testing RCs (names like 9.0RC1, unpacking to 9.0).
 #VERSION_RC=	RC1
