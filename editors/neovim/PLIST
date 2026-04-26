@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.14 2026/04/06 15:30:41 leot Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/04/26 08:53:07 adam Exp $
 bin/nvim
+@pkgdir lib/nvim
 man/man1/nvim.1
 ${PLIST.desktop}share/applications/nvim.desktop
 share/icons/hicolor/128x128/apps/nvim.png
@@ -1162,22 +1163,23 @@ share/nvim/runtime/lua/vim/_ftplugin/lua.lua
 share/nvim/runtime/lua/vim/_init_packages.lua
 share/nvim/runtime/lua/vim/_inspector.lua
 share/nvim/runtime/lua/vim/_meta.lua
-share/nvim/runtime/lua/vim/_meta/api.lua
-share/nvim/runtime/lua/vim/_meta/api_keysets.lua
+share/nvim/runtime/lua/vim/_meta/api.gen.lua
+share/nvim/runtime/lua/vim/_meta/api_keysets.gen.lua
 share/nvim/runtime/lua/vim/_meta/api_keysets_extra.lua
 share/nvim/runtime/lua/vim/_meta/base64.lua
 share/nvim/runtime/lua/vim/_meta/builtin.lua
 share/nvim/runtime/lua/vim/_meta/builtin_types.lua
+share/nvim/runtime/lua/vim/_meta/events.lua
 share/nvim/runtime/lua/vim/_meta/json.lua
 share/nvim/runtime/lua/vim/_meta/lpeg.lua
 share/nvim/runtime/lua/vim/_meta/misc.lua
 share/nvim/runtime/lua/vim/_meta/mpack.lua
-share/nvim/runtime/lua/vim/_meta/options.lua
+share/nvim/runtime/lua/vim/_meta/options.gen.lua
 share/nvim/runtime/lua/vim/_meta/re.lua
 share/nvim/runtime/lua/vim/_meta/regex.lua
 share/nvim/runtime/lua/vim/_meta/spell.lua
-share/nvim/runtime/lua/vim/_meta/vimfn.lua
-share/nvim/runtime/lua/vim/_meta/vvars.lua
+share/nvim/runtime/lua/vim/_meta/vimfn.gen.lua
+share/nvim/runtime/lua/vim/_meta/vvars.gen.lua
 share/nvim/runtime/lua/vim/_meta/vvars_extra.lua
 share/nvim/runtime/lua/vim/_watch.lua
 share/nvim/runtime/lua/vim/deprecated/health.lua
@@ -2129,4 +2131,3 @@ share/nvim/runtime/tutor/zh/vim-01-beginner.tutor
 share/nvim/runtime/tutor/zh/vim-01-beginner.tutor.json
 share/nvim/runtime/tutor/zh/vim-02-beginner.tutor
 share/nvim/runtime/tutor/zh/vim-02-beginner.tutor.json
-@pkgdir lib/nvim
