@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2026/04/26 10:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2026/04/26 21:01:14 wiz Exp $
 
 DISTNAME=	ruff-0.15.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,12 +16,7 @@ RUST_REQ=	1.92
 # for tikv-jemalloc-sys
 USE_TOOLS+=	gmake
 
-# Depends on an unpublished crate. Can't use cargo.mk to fetch it.
-LSP_TYPES_REV=	e15db0593f0ecbbd80599c3f5880e4bf5da1ca0c
-DISTFILES=	${DEFAULT_DISTFILES}
-DISTFILES+=	lsp-types-${LSP_TYPES_REV}.tar.gz
-
-SITES.lsp-types-${LSP_TYPES_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=astral-sh/}lsp-types/archive/${LSP_TYPES_REV}.tar.gz
+CARGO_GITHUB_CRATES+=	astral-sh lsp-types e15db0593f0ecbbd80599c3f5880e4bf5da1ca0c
 
 MAKE_ENV+=	CARGO_NET_OFFLINE=true
 
