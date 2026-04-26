@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2025/09/22 17:40:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2026/04/26 09:01:42 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -13,7 +13,11 @@ ${PYSITELIB}/cryptography_vectors/HMAC/rfc-4231-sha224.txt
 ${PYSITELIB}/cryptography_vectors/HMAC/rfc-4231-sha256.txt
 ${PYSITELIB}/cryptography_vectors/HMAC/rfc-4231-sha384.txt
 ${PYSITELIB}/cryptography_vectors/HMAC/rfc-4231-sha512.txt
+${PYSITELIB}/cryptography_vectors/HPKE/hpke-pq-test-vectors.json
+${PYSITELIB}/cryptography_vectors/HPKE/test-vectors.json
 ${PYSITELIB}/cryptography_vectors/KDF/ansx963_2001.txt
+${PYSITELIB}/cryptography_vectors/KDF/argon2d.txt
+${PYSITELIB}/cryptography_vectors/KDF/argon2i.txt
 ${PYSITELIB}/cryptography_vectors/KDF/argon2id.txt
 ${PYSITELIB}/cryptography_vectors/KDF/hkdf-generated.txt
 ${PYSITELIB}/cryptography_vectors/KDF/nist-800-108-KBKDF-CTR.txt
@@ -87,6 +91,7 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/EC/compressed_points.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/EC/ec-missing-curve.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/EC/explicit_parameters_private_key.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/EC/explicit_parameters_wap_wsg_idm_ecid_wtls11_private_key.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/EC/high-bit-set.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/EC/secp128r1_private_key.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/EC/secp256k1-explicit-no-seed.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/EC/secp256k1-pub-explicit-no-seed.pem
@@ -106,6 +111,7 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/EC/sect163k1-spki.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/EC/sect163r2-spki.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/EC/sect233k1-spki.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/EC/sect233r1-spki.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/EC/truncated-private-key.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDH/KASValidityTest_ECCStaticUnified_KDFConcat_NOKC_init.fax
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDH/KASValidityTest_ECCStaticUnified_KDFConcat_NOKC_resp.fax
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDH/KASValidityTest_ECCStaticUnified_NOKC_ZZOnly_init.fax
@@ -139,6 +145,17 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/ed448-pkcs8.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/ed448-pub.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/ed448-pub.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/rfc8032.txt
+${PYSITELIB}/cryptography_vectors/asymmetric/MLDSA/kat_MLDSA_44_det_pure.rsp
+${PYSITELIB}/cryptography_vectors/asymmetric/MLDSA/kat_MLDSA_65_det_pure.rsp
+${PYSITELIB}/cryptography_vectors/asymmetric/MLDSA/kat_MLDSA_87_det_pure.rsp
+${PYSITELIB}/cryptography_vectors/asymmetric/MLDSA/mldsa44_priv.der
+${PYSITELIB}/cryptography_vectors/asymmetric/MLDSA/mldsa44_pub.der
+${PYSITELIB}/cryptography_vectors/asymmetric/MLDSA/mldsa65_noseed_priv.der
+${PYSITELIB}/cryptography_vectors/asymmetric/MLKEM/kat_MLKEM_1024.rsp
+${PYSITELIB}/cryptography_vectors/asymmetric/MLKEM/kat_MLKEM_512.rsp
+${PYSITELIB}/cryptography_vectors/asymmetric/MLKEM/kat_MLKEM_768.rsp
+${PYSITELIB}/cryptography_vectors/asymmetric/MLKEM/mlkem768.der
+${PYSITELIB}/cryptography_vectors/asymmetric/MLKEM/mlkem768.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/dsa-p256.pub
 ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-dsa.pub
 ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-ed25519-non-singular-crit-opt-val.pub
@@ -213,6 +230,7 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/ecc_private_with_rfc5915_ext.
 ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/ed25519-scrypt.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/enc-ec-sha1-128-rc4.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/enc-rsa-3des.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/enc-rsa-pkcs8-pbkdf2-0iter.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/enc-rsa-pkcs8.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/enc-unknown-algorithm.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/enc-unknown-kdf.pem
@@ -252,6 +270,7 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/unenc-rsa-pkcs8.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/unenc-rsa-pkcs8.pub.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/unknown-oid.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/withdompar_private.pkcs8.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/wrong-pem-delimiter-rsa.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/RSA/FIPS_186-2/KeyGenRSA.rsp
 ${PYSITELIB}/cryptography_vectors/asymmetric/RSA/FIPS_186-2/Readme.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/RSA/FIPS_186-2/SigGen15_186-2.rsp
