@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2026/04/26 19:25:13 vins Exp $
+# $NetBSD: Makefile,v 1.32 2026/04/26 19:48:17 vins Exp $
 
 DISTNAME=	colord-1.4.8
+PKGREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	https://www.freedesktop.org/software/colord/releases/ \
 		http://ftp.slackware.com/pub/slackware/slackware64-current/source/l/colord/
@@ -30,7 +31,7 @@ PKG_HOME.colord=	/nonexistent
 
 # required to generate man pages
 TOOL_DEPENDS+=		docbook-xsl-ns-[0-9]*:../../textproc/docbook-xsl-ns
-DOCBOOK_MANPAGE_XSL=	${SHAREDIR}/xsl/docbook-ns/html/docbook.xsl
+DOCBOOK_MANPAGE_XSL=	${SHAREDIR}/xsl/docbook-ns/manpages/docbook.xsl
 
 CONF_FILES+=		share/dbus-1/system.d/org.freedesktop.ColorManager.conf \
 			${PKG_SYSCONFDIR}/dbus-1/system.d/org.freedesktop.ColorManager.conf
