@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.4 2024/05/03 06:33:44 jperkin Exp $
+$NetBSD: patch-configure,v 1.5 2026/04/26 08:24:07 tron Exp $
 
 - Allow build as an unpriviliged user
 - Fix Kerberos related build failure under Solaris
 
---- configure.orig	2024-03-09 10:29:18.000000000 +0000
-+++ configure
-@@ -10491,7 +10491,7 @@ fi
+--- configure.orig	2026-04-26 03:50:45.000000000 +0100
++++ configure	2026-04-26 09:20:20.999671764 +0100
+@@ -11312,7 +11312,7 @@
  
  if test x$mutt_cv_setgid = xyes; then
          DOTLOCK_GROUP='mail'
@@ -14,7 +14,7 @@ $NetBSD: patch-configure,v 1.4 2024/05/03 06:33:44 jperkin Exp $
  else
          DOTLOCK_GROUP=''
          DOTLOCK_PERMISSION=755
-@@ -10800,6 +10800,7 @@ fi
+@@ -11642,6 +11642,7 @@
      case "`$KRB5CFGPATH --version`" in
        "Kerberos 5 "*)	GSSAPI_IMPL="MIT";;
        ?eimdal*)		GSSAPI_IMPL="Heimdal";;
@@ -22,7 +22,7 @@ $NetBSD: patch-configure,v 1.4 2024/05/03 06:33:44 jperkin Exp $
        *)		GSSAPI_IMPL="Unknown";;
      esac
          LIBS="$saved_LIBS $GSSAPI_LIBS"
-@@ -10964,7 +10965,7 @@ fi
+@@ -11831,7 +11832,7 @@
      if test "$GSSAPI_IMPL" != "none"
    then
      CPPFLAGS="$saved_CPPFLAGS $GSSAPI_CFLAGS"
@@ -31,7 +31,7 @@ $NetBSD: patch-configure,v 1.4 2024/05/03 06:33:44 jperkin Exp $
      then
        ac_fn_c_check_header_compile "$LINENO" "gssapi/gssapi_generic.h" "ac_cv_header_gssapi_gssapi_generic_h" "$ac_includes_default"
  if test "x$ac_cv_header_gssapi_gssapi_generic_h" = xyes
-@@ -11082,7 +11083,7 @@ fi
+@@ -11914,7 +11915,7 @@
  rm -f confcache
        as_fn_error $? "GSSAPI libraries not found" "$LINENO" 5
      fi
@@ -39,4 +39,4 @@ $NetBSD: patch-configure,v 1.4 2024/05/03 06:33:44 jperkin Exp $
 +    if test "$GSSAPI_IMPL" = "Heimdal" || test "$GSSAPI_IMPL" = "Solaris"
      then
  
- printf "%s\n" "#define HAVE_HEIMDAL 1" >>confdefs.h
+ printf '%s\n' "#define HAVE_HEIMDAL 1" >>confdefs.h
