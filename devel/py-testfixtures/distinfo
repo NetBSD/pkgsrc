@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/12/26 21:42:50 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/04/26 08:19:44 adam Exp $
 
-BLAKE2s (testfixtures-10.0.0.tar.gz) = f99ef04fd72c22d3d71a88922abbdcf7f346d02ecca9ecb82d82e0c4ebfcf8a3
-SHA512 (testfixtures-10.0.0.tar.gz) = 64585315fb9a05957f262f9da289256d3155d41ced026388f7d8efc0c42052bfb24dbb1573609d2909321d62e5fc833e2fce6623615661ed8689147746ef2d70
-Size (testfixtures-10.0.0.tar.gz) = 147464 bytes
+BLAKE2s (testfixtures-11.0.0.tar.gz) = 88e564f92bc5fba18cb087916bbc66a76b696dec77428cab3fdb682357d643d4
+SHA512 (testfixtures-11.0.0.tar.gz) = 1ae22532b7bc0425128b0ea57a3b02ffa5daca38a017da15003c4e62bfc088852d50275937beb7e5b436e4718e27c40c35c7f3e2143769abe71dd1fb1d6d3bd6
+Size (testfixtures-11.0.0.tar.gz) = 152532 bytes
