@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.44 2025/08/25 17:51:11 wiz Exp $
+# $NetBSD: cargo.mk,v 1.45 2026/04/26 21:00:57 wiz Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -18,6 +18,18 @@
 #      make print-cargo-depends > cargo-depends.mk
 #
 # See also www/geckodriver for a full example.
+#
+# Some dependencies are pulled in from git repositories directly (not
+# using crates.io). You can define CARGO_GITHUB_CRATES for
+# those. Every entry in CARGO_GITHUB_CRATES consists of three parts
+# ("user", "name", "hash") separated by spaces, where "user" is the
+# github user account (first part of the github URL), "name" is the
+# github project name (second part of the github URL) and "hash" is
+# the git revision to fetch. For example:
+#
+# CARGO_GITHUB_CRATES=	foo bar 12345
+#
+# will fetch https://github.com/foo/bar/ revision 12345
 
 MASTER_SITES?=	-${MASTER_SITE_CRATESIO}${PKGBASE}/${PKGVERSION_NOREV}/download
 
@@ -31,6 +43,19 @@ CARGO_WRKSRC?=		${WRKSRC}
 
 # TODO: some Cargo.lock files include git+https sources which need to be fetched from the URL (not necessarily resolving to a crate.io url)
 DISTFILES?=			${DEFAULT_DISTFILES}
+
+.if defined(CARGO_GITHUB_CRATES)
+SUBST_CLASSES+=			gitcrate
+SUBST_FILES.gitcrate+=		Cargo.toml
+SUBST_MESSAGE.gitcrate=		Replacing github crate path with local path.
+SUBST_STAGE.gitcrate=		pre-configure
+.  for user name hash in ${CARGO_GITHUB_CRATES}
+DISTFILES+=			${name}-${hash}.tar.gz
+SITES.${name}-${hash}.tar.gz+=	-${MASTER_SITE_GITHUB:=${user}/}${name}/archive/${hash}.tar.gz
+SUBST_SED.gitcrate+=		-E -e 's!git.*github.com/${user}/${name}.*${hash}(.),!path = \1../${name}-${hash}\1,!'
+.  endfor
+.endif
+
 .for crate in ${CARGO_CRATE_DEPENDS}
 DISTFILES+=			${crate}.crate
 .  if ${crate:M*+*}
