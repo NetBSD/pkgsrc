@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2026/04/17 05:39:40 adam Exp $
+$NetBSD: distinfo,v 1.23 2026/04/26 10:35:26 wiz Exp $
 
-BLAKE2s (packaging-26.1.tar.gz) = c7d3708382b277e71a40a7b24b2d861df1047ee37c6485b0a483f0199f872df5
-SHA512 (packaging-26.1.tar.gz) = 37dfdc50da2701016ff8caf7053c7d06ed3c8762ed22e43f8001c12b99b00251f960d50e8bfa0294e37069091135ef6006c7b3b92d05fde2b934cf336f0fbe1d
-Size (packaging-26.1.tar.gz) = 215519 bytes
+BLAKE2s (packaging-26.2.tar.gz) = 32d139a516269a20a6ff823200c8fe4edbed60463161b6f1abc41becbe49f2ad
+SHA512 (packaging-26.2.tar.gz) = cefa0ac8cfade3e86d73c62e79aff75e7e24337495f6e675c20ddd3fa3f3431eb48764a34e5ab0bcdacc0d2204afdc0088686d1f3f6880e9a8ae055da4867f15
+Size (packaging-26.2.tar.gz) = 228134 bytes
