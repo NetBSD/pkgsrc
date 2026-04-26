@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2610 2026/04/26 16:55:56 vins Exp $
+$NetBSD: CHANGES-2026,v 1.2611 2026/04/26 19:17:32 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4023,3 +4023,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/cups to 2.4.18 [wiz 2026-04-26]
 	Updated graphics/colord to 1.4.8 [vins 2026-04-26]
 	Updated graphics/colord-gtk to 0.3.1 [vins 2026-04-26]
+	Added textproc/docbook-xsl-ns version 1.79.2 [vins 2026-04-26]
