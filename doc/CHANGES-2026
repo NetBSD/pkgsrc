@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2594 2026/04/26 10:10:53 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2595 2026/04/26 10:13:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4007,3 +4007,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/py-mediafile to 0.17.0 [adam 2026-04-26]
 	Updated devel/task to 3.50.0 [iquiw 2026-04-26]
 	Updated audio/game-music-emu to 0.6.5 [wiz 2026-04-26]
+	Updated graphics/libhighway to 1.4.0 [wiz 2026-04-26]
