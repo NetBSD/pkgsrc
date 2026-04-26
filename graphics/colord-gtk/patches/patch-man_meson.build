@@ -1,0 +1,14 @@
+$NetBSD: patch-man_meson.build,v 1.1 2026/04/26 20:02:41 vins Exp $
+
+Fix detection of docbook. 
+
+--- man/meson.build.orig	2026-04-26 19:50:35.214232322 +0000
++++ man/meson.build
+@@ -1,6 +1,6 @@
+ xsltproc = find_program('xsltproc')
+ 
+-stylesheet_url = 'http://docbook.sourceforge.net/release/xsl-ns/current/manpages/docbook.xsl'
++stylesheet_url = '@DOCBOOK_MANPAGE_XSL@'
+ ret = run_command(xsltproc, '--nonet', stylesheet_url)
+ if ret.returncode() != 0
+   error('Cannot build man pages without docbook-xsl-ns')

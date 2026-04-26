@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2026/04/26 16:55:31 vins Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2026/04/26 20:02:40 vins Exp $
 
 BUILDLINK_TREE+=	colord-gtk
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	colord-gtk
 COLORD_GTK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.colord-gtk+=	colord-gtk>=0.3.1
-BUILDLINK_ABI_DEPENDS.colord-gtk?=	colord-gtk>=0.3.1
+BUILDLINK_ABI_DEPENDS.colord-gtk?=	colord-gtk>=0.3.1nb1
 BUILDLINK_PKGSRCDIR.colord-gtk?=	../../graphics/colord-gtk
 
 pkgbase :=      colord-gtk
