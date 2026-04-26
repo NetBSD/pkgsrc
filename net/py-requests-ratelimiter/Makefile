@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2026/04/05 11:45:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/04/26 10:37:35 wiz Exp $
 
-DISTNAME=	requests_ratelimiter-0.9.3
+DISTNAME=	requests_ratelimiter-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests-ratelimiter/}
