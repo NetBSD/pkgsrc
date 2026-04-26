@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2026/04/26 15:53:56 vins Exp $
+# $NetBSD: Makefile,v 1.31 2026/04/26 19:25:13 vins Exp $
 
 DISTNAME=	colord-1.4.8
 CATEGORIES=	graphics gnome
@@ -28,8 +28,9 @@ PKG_GECOS.colord=	ColorManager daemon
 PKG_SHELL.colord=	${NOLOGIN}
 PKG_HOME.colord=	/nonexistent
 
-TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl	# man pages
-DOCBOOK_MANPAGE_XSL=	${SHAREDIR}/xsl/docbook/html/docbook.xsl
+# required to generate man pages
+TOOL_DEPENDS+=		docbook-xsl-ns-[0-9]*:../../textproc/docbook-xsl-ns
+DOCBOOK_MANPAGE_XSL=	${SHAREDIR}/xsl/docbook-ns/html/docbook.xsl
 
 CONF_FILES+=		share/dbus-1/system.d/org.freedesktop.ColorManager.conf \
 			${PKG_SYSCONFDIR}/dbus-1/system.d/org.freedesktop.ColorManager.conf
