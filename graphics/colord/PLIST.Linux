@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2026/04/26 14:48:56 vins Exp $
+lib/udev/rules.d/69-cd-sensors.rules
+lib/udev/rules.d/95-cd-devices.rules

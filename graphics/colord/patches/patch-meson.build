@@ -1,0 +1,59 @@
+$NetBSD: patch-meson.build,v 1.1 2026/04/26 14:48:56 vins Exp $
+
+* Make udev support optional.
+* Do not require bash-completion.
+
+--- meson.build.orig	2025-06-23 14:06:37.000000000 +0000
++++ meson.build
+@@ -118,9 +118,16 @@ giounix = dependency('gio-unix-2.0', ver
+ lcms = dependency('lcms2', version : '>= 2.6')
+ sqlite = dependency('sqlite3')
+ gusb = dependency('gusb', version : '>= 0.2.7')
+-gudev = dependency('gudev-1.0')
+ libm = cc.find_library('m', required: false)
+-libudev = dependency('libudev')
++
++if get_option('udev')
++  libudev = dependency('libudev')
++  gudev = dependency('gudev-1.0')
++  conf.set('HAVE_UDEV', '1')
++else
++  libudev = []
++  gudev = []
++endif
+ 
+ if get_option('udev_rules')
+   udev = dependency('udev')
+@@ -165,7 +172,10 @@ if get_option('session_example')
+   colord_gtk = dependency('colord-gtk', version : '>= 0.1.24')
+ endif
+ if get_option('bash_completion')
+-  bash_completion = dependency('bash-completion', version : '>= 2.0')
++  bash = find_program('bash', required : false)
++  if bash.found() == false                 
++    warning('bash completions enabled but bash shell could not be found')
++  endif
+ endif
+ 
+ if get_option('sane')
+@@ -243,6 +253,11 @@ sysconfdir = join_paths(prefix, get_opti
+ mandir = join_paths(prefix, get_option('mandir'))
+ includedir = join_paths(prefix, get_option('includedir'))
+ 
++if get_option('bash_completion')
++  completionsdir = join_paths(prefix, get_option('completionsdir'))
++  conf.set_quoted('COMPLETIONSDIR', completionsdir)
++endif
++
+ conf.set_quoted('SYSCONFDIR', sysconfdir)
+ conf.set_quoted('BINDIR', bindir)
+ conf.set_quoted('LIBDIR', libdir)
+@@ -251,7 +266,7 @@ conf.set_quoted('LIBEXECDIR', libexecdir
+ conf.set_quoted('LOCALSTATEDIR', localstatedir)
+ 
+ cd_system_profiles_dir = join_paths(localstatedir,
+-                                    'lib', 'colord', 'icc')
++                                    'db', 'colord', 'icc')
+ conf.set_quoted('CD_SYSTEM_PROFILES_DIR', cd_system_profiles_dir)
+ 
+ conf.set_quoted('GETTEXT_PACKAGE', meson.project_name())

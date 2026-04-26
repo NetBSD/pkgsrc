@@ -1,0 +1,19 @@
+$NetBSD: patch-src_plugins_meson.build,v 1.1 2026/04/26 14:48:57 vins Exp $
+
+Make udev support optional.
+
+--- src/plugins/meson.build.orig	2025-06-23 14:06:37.000000000 +0000
++++ src/plugins/meson.build
+@@ -15,6 +15,7 @@ shared_module('colord_sensor_example',
+     gio,
+   ],
+ )
++if get_option('udev')
+ shared_module('colord_sensor_camera',
+   sources : [
+     'cd-plugin-camera.c',
+@@ -74,3 +75,4 @@ if get_option('sane')
+     ],
+   )
+ endif
++endif
