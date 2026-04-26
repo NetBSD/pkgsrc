@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2026/01/25 08:32:53 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/04/26 08:32:27 adam Exp $
 
-DISTNAME=	minizip-ng-4.1.0
+DISTNAME=	minizip-ng-4.1.2
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zlib-ng/}
 GITHUB_PROJECT=	minizip-ng
@@ -18,6 +18,7 @@ PKGCONFIG_OVERRIDE=	minizip.pc.cmakein
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=YES
 CMAKE_CONFIGURE_ARGS+=	-DMZ_COMPAT=NO
+CMAKE_CONFIGURE_ARGS+=	-DMZ_PPMD=NO
 
 PLIST_VARS+=	libcomp zlib
 
