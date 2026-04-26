@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/08/11 12:19:44 wiz Exp $
+$NetBSD: distinfo,v 1.6 2026/04/26 10:10:42 wiz Exp $
 
-BLAKE2s (game-music-emu-0.6.4.tar.gz) = 777ecb1b9ec90a1f3dd933dfc6f6be0511751836dd7163d374afdedf778acde0
-SHA512 (game-music-emu-0.6.4.tar.gz) = b5da7f0ea9f3f5698157dd1feb5071cbc3bb44c96a2c1675162c7be384c755d6e01f5d98c4a6bd9ef7b1904b8eed3dab54dd2edac19cd18a7312c6cf7a91d98a
-Size (game-music-emu-0.6.4.tar.gz) = 343669 bytes
+BLAKE2s (game-music-emu-0.6.5.tar.gz) = 88ead47eb7c6f0db60215094f15b4c42a844e6555f40fc79b46f4149d013d28e
+SHA512 (game-music-emu-0.6.5.tar.gz) = c28fc36098f5e083ef43cda3f037275d7f071868ab44abf577da3f07bd9f2ffae8a65fa842b060df42baa98ad6b5f42817001749fb3c08a4023dea7334d513e9
+Size (game-music-emu-0.6.5.tar.gz) = 349606 bytes
