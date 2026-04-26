@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2607 2026/04/26 12:23:28 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2608 2026/04/26 12:23:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4020,3 +4020,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/dasel to 3.8.0 [wiz 2026-04-26]
 	Updated print/libcups to 2.4.18 [wiz 2026-04-26]
 	Updated print/cups-base to 2.4.18 [wiz 2026-04-26]
+	Updated print/cups to 2.4.18 [wiz 2026-04-26]
