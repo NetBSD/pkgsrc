@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2024/11/07 18:43:22 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/04/26 04:33:24 wiz Exp $
 
-DISTNAME=	xrandr-1.5.3
+DISTNAME=	xrandr-1.5.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,15 +12,15 @@ LICENSE=	mit
 
 DEPENDS+=	nickle-[0-9]*:../../math/nickle
 
-GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
 SUBST_CLASSES+=		nickle
 SUBST_SED.nickle=	-e "s,.!/usr/bin/env nickle,${PREFIX}/bin/nickle,"
-SUBST_FILES.nickle=	xkeystone
+SUBST_FILES.nickle=	output/xkeystone
 SUBST_STAGE.nickle=	post-build
 SUBST_MESSAGE.nickle=	Fixing path to nickle.
 
+.include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.libXrandr+=	libXrandr>=1.5.0
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
