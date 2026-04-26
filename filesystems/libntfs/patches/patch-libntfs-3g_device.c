@@ -1,4 +1,4 @@
-$NetBSD: patch-libntfs-3g_device.c,v 1.2 2023/09/08 10:23:07 vins Exp $
+$NetBSD: patch-libntfs-3g_device.c,v 1.3 2026/04/26 04:29:44 wiz Exp $
 
 Use DIOCGPARTINFO on NetBSD to get the device size in blocks.
 
@@ -16,10 +16,13 @@ Use DIOCGPARTINFO on NetBSD to get the device size in blocks.
  /**
   * ntfs_device_alloc - allocate an ntfs device structure and pre-initialize it
   * @name:	name of the device (must be present)
-@@ -596,6 +601,24 @@ s64 ntfs_device_size_get(struct ntfs_dev
- 		}
- 	}
- #endif
+@@ -593,6 +598,24 @@ s64 ntfs_device_size_get(struct ntfs_device *dev, int 
+ 				(unsigned long long) blocks,
+ 				(unsigned long long) blocks);
+ 			return blocks * sector_size / block_size;
++		}
++	}
++#endif
 +#ifdef DIOCGPARTINFO
 +	{
 +		/* NetBSD */
@@ -35,9 +38,6 @@ Use DIOCGPARTINFO on NetBSD to get the device size in blocks.
 +						secsize, psize, psize);
 +				return psize * secsize / block_size;
 +			}
-+		}
-+	}
-+#endif
- 	/*
- 	 * We couldn't figure it out by using a specialized ioctl,
- 	 * so do binary search to find the size of the device.
+ 		}
+ 	}
+ #endif

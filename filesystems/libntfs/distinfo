@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.7 2023/09/08 10:23:07 vins Exp $
+$NetBSD: distinfo,v 1.8 2026/04/26 04:29:43 wiz Exp $
 
 BLAKE2s (ntfs-3g_ntfsprogs-2022.10.3.tgz) = 7a32e7473300114064611e219b6689e293b7bebaea915c541afed133f0b7ca93
 SHA512 (ntfs-3g_ntfsprogs-2022.10.3.tgz) = 891589483954423b19bef6e8a174fb4311ad92b6397a0db80f77c72b746bf18c2fa12457a571947f92755637a6bc784188920d4f017ae12a420819ab0d74af59
 Size (ntfs-3g_ntfsprogs-2022.10.3.tgz) = 1324320 bytes
 SHA1 (patch-Makefile.in) = e8788b9a008493510631e032f3a1d2244ba52ff0
-SHA1 (patch-configure) = 22ede9302d0c04f0fc3819ad6764afe9656008d4
+SHA1 (patch-configure) = d5dec4324a17b8e60c539c56e1fad9a7f30c4528
 SHA1 (patch-include_ntfs-3g_compat.h) = 78ea127359416c9106eef7025a2ccc84fd0b4447
 SHA1 (patch-include_ntfs-3g_types.h) = bb6414b8991e8a05f32fce88d4915448bc498d58
 SHA1 (patch-libntfs-3g_Makefile.in) = 7930c0d04906969f39a731fe67bb8fe8a15c5c9d
 SHA1 (patch-libntfs-3g_compat.c) = 5cecaa8f8d4fe463094592f11f4757a434e903dd
-SHA1 (patch-libntfs-3g_device.c) = 2d2a9f2517df4535a6d19028384151c64d9afbe2
+SHA1 (patch-libntfs-3g_device.c) = 9e2a6a3414c809852aec33b28df19978fd822c4e
 SHA1 (patch-libntfs-3g_mft.c) = 992eaaae18b29a14f553bed2e53be0a0a915a7eb
 SHA1 (patch-ntfsprogs_Makefile.in) = 9acd073006c54009cedeafc766c964e9b5f11468
-SHA1 (patch-ntfsprogs_ntfsclone.c) = 62850f27bcc28c59e126f1ced467f9b64cd5b10e
+SHA1 (patch-ntfsprogs_ntfsclone.c) = 4f3919444366f06d7e92b3371d046ea8780e1554
 SHA1 (patch-src_Makefile.in) = 6d946cd2078d0983281d3e92af6e54bf3483bca1
 SHA1 (patch-src_ntfs-3g.c) = 9ae108fec22dc2a4219cd4ae5077d9eea17ab700
