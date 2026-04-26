@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2026/04/20 05:31:11 adam Exp $
+$NetBSD: distinfo,v 1.23 2026/04/26 08:53:07 adam Exp $
 
-BLAKE2s (neovim-0.12.1.tar.gz) = e471805adb3aa55811d5157bd60760fe726d438c0a8c963a4910c527d7063810
-SHA512 (neovim-0.12.1.tar.gz) = f0cbd3e4806354f33a3f2e0b9f0889b3c6269df4491e550d61bec29880f1468bc4b0d8cee1b15ceafd67f1d48359d70890431505f55837c921d315f89fd12cf7
-Size (neovim-0.12.1.tar.gz) = 13652732 bytes
+BLAKE2s (neovim-0.12.2.tar.gz) = 20b33dc20434cc34f63fde7bf79c702e81bfb4165a8b83777d27fc4aaa97dd9c
+SHA512 (neovim-0.12.2.tar.gz) = 5e05ea39d8c166a41384c8c453b51333554601beb6decccd7bc01943c5c656c5c72abf17a75aa693c2ef6446abb9f3490d2a19233a1bdb9ebd5817d60954d70e
+Size (neovim-0.12.2.tar.gz) = 13689620 bytes
