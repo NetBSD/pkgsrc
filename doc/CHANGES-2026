@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2580 2026/04/26 04:36:54 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2581 2026/04/26 04:37:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3985,3 +3985,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/xrandr to 1.5.4 [wiz 2026-04-26]
 	Updated x11/xbitmaps to 1.1.4 [wiz 2026-04-26]
 	Updated x11/xf86-video-nv to 2.1.24 [wiz 2026-04-26]
+	Updated fonts/font-util to 1.4.2 [wiz 2026-04-26]
