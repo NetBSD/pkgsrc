@@ -1,22 +1,17 @@
-$NetBSD: patch-ntfsprogs_ntfsclone.c,v 1.2 2023/09/08 10:23:07 vins Exp $
+$NetBSD: patch-ntfsprogs_ntfsclone.c,v 1.3 2026/04/26 04:29:44 wiz Exp $
 
 Fix for NetBSD's statvfs(2).
 
 --- ntfsprogs/ntfsclone.c.orig	2021-09-13 07:34:39.000000000 +0000
 +++ ntfsprogs/ntfsclone.c
-@@ -71,6 +71,19 @@
+@@ -71,6 +71,14 @@
   */
  #define NTFS_DO_NOT_CHECK_ENDIANS
  
 +#ifdef __NetBSD__
-+#  include <sys/param.h>
-+   /* NetBSD versions later than 2.99.9 have statvfs(2) instead of statfs(2) */
-+#  if __NetBSD_Version__ >= 299000900
-+#    include <sys/statvfs.h>
-+#    define F_TYPE     f_fsid
-+#  else
-+#    define F_TYPE     f_type
-+#  endif
++#  include <sys/statvfs.h>
++#  define fstatfs      fstatvfs
++#  define F_TYPE       f_fsid
 +#else
 +#  define F_TYPE       f_type
 +#endif
@@ -24,11 +19,20 @@ Fix for NetBSD's statvfs(2).
  #include "param.h"
  #include "debug.h"
  #include "types.h"
-@@ -166,8 +179,12 @@ static struct {
+@@ -105,7 +113,7 @@
+ #undef HAVE_WINDOWS_H
+ #endif
+ 
+-#if defined(__sun) | defined(HAVE_WINDOWS_H)
++#if defined(__sun) || defined(HAVE_WINDOWS_H)
+ #define NO_STATFS 1	/* statfs(2) and f_type are not universal */
+ #endif
+ 
+@@ -166,8 +174,12 @@ static struct {
  	char *output;
  	char *volume;
  #ifndef NO_STATFS
-+#if defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900)
++#if defined(__NetBSD__)
 +	struct statvfs stfs;
 +#else
  	struct statfs stfs;
@@ -37,7 +41,7 @@ Fix for NetBSD's statvfs(2).
  } opt;
  
  struct bitmap {
-@@ -852,7 +869,7 @@ static void copy_cluster(int rescue, u64
+@@ -852,7 +864,7 @@ static void copy_cluster(int rescue, u64 rescue_lcn, u
  #ifndef NO_STATFS
  		int err = errno;
  		perr_printf("Write failed");
@@ -46,7 +50,7 @@ Fix for NetBSD's statvfs(2).
  			Printf("Apparently you tried to clone to a remote "
  			       "Windows computer but they don't\nhave "
  			       "efficient sparse file handling by default. "
-@@ -2312,7 +2329,7 @@ static void set_filesize(s64 filesize)
+@@ -2312,7 +2324,7 @@ static void set_filesize(s64 filesize)
  		Printf("WARNING: Couldn't get filesystem type: "
  		       "%s\n", strerror(errno));
  	else
