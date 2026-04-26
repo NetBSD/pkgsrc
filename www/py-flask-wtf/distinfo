@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2025/02/07 13:59:36 adam Exp $
+$NetBSD: distinfo,v 1.22 2026/04/26 10:20:16 wiz Exp $
 
-BLAKE2s (flask_wtf-1.2.2.tar.gz) = aec7cf38e0b04ac7b8ac138063a76a00b1fa1f23e3d0537ece7dd9d3a7b2c7f4
-SHA512 (flask_wtf-1.2.2.tar.gz) = 6f06de7cd8dc1676011457f40c0d0f288d49808e272fd6b5e07c6ef352e807290c7898feff37a249e5d2e83ea320259f63043629dc42d52d52d5ec5116ed6c85
-Size (flask_wtf-1.2.2.tar.gz) = 42641 bytes
+BLAKE2s (flask_wtf-1.3.0.tar.gz) = 9812037103afcecadad3834155a0b48c7e886ab4d4f67653da26a439e02c4731
+SHA512 (flask_wtf-1.3.0.tar.gz) = 88c9e49f60e3d75c2d3c0bd7becf7b0cd61218daf58a511232041397620ce0f1af0b97737bf711b21466a55f0d922d85e66b9a2104cae98d0ae6dfa738384b14
+Size (flask_wtf-1.3.0.tar.gz) = 50414 bytes
