@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2026/04/26 14:48:56 vins Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2026/04/26 15:11:33 vins Exp $
 
 BUILDLINK_TREE+=	colord
 
@@ -20,6 +20,7 @@ pkgbase :=      colord
 .  include "../../devel/gobject-introspection/buildlink3.mk"
 .elif ${PKG_BUILD_OPTIONS.colord:Mudev}
 .  include "../../devel/libgudev/buildlink3.mk"
+.endif
 
 .endif	# COLORD_BUILDLINK3_MK
 
