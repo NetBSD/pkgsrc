@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2612 2026/04/26 19:44:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2613 2026/04/26 19:46:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4025,3 +4025,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/colord-gtk to 0.3.1 [vins 2026-04-26]
 	Added textproc/docbook-xsl-ns version 1.79.2 [vins 2026-04-26]
 	Updated x11/editres to 1.1.1 [wiz 2026-04-26]
+	Updated textproc/expat to 2.8.0 [wiz 2026-04-26]
