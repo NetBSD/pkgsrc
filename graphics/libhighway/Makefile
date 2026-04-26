@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2025/08/20 19:31:43 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/04/26 10:13:11 wiz Exp $
 
-DISTNAME=	highway-1.3.0
+DISTNAME=	highway-1.4.0
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}

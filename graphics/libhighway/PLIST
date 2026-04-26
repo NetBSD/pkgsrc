@@ -1,15 +1,19 @@
-@comment $NetBSD: PLIST,v 1.5 2025/08/20 19:31:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/04/26 10:13:11 wiz Exp $
 include/hwy/abort.h
 include/hwy/aligned_allocator.h
 include/hwy/auto_tune.h
 include/hwy/base.h
+include/hwy/bit_set.h
 include/hwy/cache_control.h
 include/hwy/contrib/algo/copy-inl.h
+include/hwy/contrib/algo/count-inl.h
 include/hwy/contrib/algo/find-inl.h
+include/hwy/contrib/algo/minmax-inl.h
 include/hwy/contrib/algo/transform-inl.h
 include/hwy/contrib/bit_pack/bit_pack-inl.h
 include/hwy/contrib/dot/dot-inl.h
 include/hwy/contrib/image/image.h
+include/hwy/contrib/math/fast_math-inl.h
 include/hwy/contrib/math/math-inl.h
 include/hwy/contrib/matvec/matvec-inl.h
 include/hwy/contrib/random/random-inl.h
