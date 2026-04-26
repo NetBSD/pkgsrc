@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/08/11 12:19:44 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/04/26 10:10:42 wiz Exp $
 
-DISTNAME=	game-music-emu-0.6.4
+DISTNAME=	game-music-emu-0.6.5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libgme/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
