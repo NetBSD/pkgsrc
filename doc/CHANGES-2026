@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2595 2026/04/26 10:13:19 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2596 2026/04/26 10:18:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4008,3 +4008,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/task to 3.50.0 [iquiw 2026-04-26]
 	Updated audio/game-music-emu to 0.6.5 [wiz 2026-04-26]
 	Updated graphics/libhighway to 1.4.0 [wiz 2026-04-26]
+	Updated textproc/ov to 0.52.0 [wiz 2026-04-26]
