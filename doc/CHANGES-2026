@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2588 2026/04/26 08:24:23 tron Exp $
+$NetBSD: CHANGES-2026,v 1.2589 2026/04/26 08:33:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3996,3 +3996,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-testfixtures to 11.0.0 [adam 2026-04-26]
 	Updated databases/py-peewee to 4.0.5 [adam 2026-04-26]
 	Updated mail/mutt to 2.3.2 [tron 2026-04-26]
+	Updated security/libgpg-error to 1.60 [adam 2026-04-26]
+	Updated archivers/minizip-ng to 4.1.2 [adam 2026-04-26]
