@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2026/04/26 16:55:31 vins Exp $
+$NetBSD: distinfo,v 1.5 2026/04/26 20:02:40 vins Exp $
 
 BLAKE2s (colord-gtk-0.3.1.tar.gz) = b2f7b5a6645edbfdc0bbc11fa99169abdcdf79b2ce5c6a6971b1c55c4bb5551a
 SHA512 (colord-gtk-0.3.1.tar.gz) = 772ecb4a88e47975458814304dcaf76484b6054ba132bcf1da6f08ab87e3f00b7589a5b4d34109d594f394028661e10d4151840e1baefa98c8aa364be764c742
 Size (colord-gtk-0.3.1.tar.gz) = 24895 bytes
+SHA1 (patch-man_meson.build) = 9c8d0f095838787b23ac093672a7d265fe02c4bf
