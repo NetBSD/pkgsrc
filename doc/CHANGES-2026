@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2605 2026/04/26 12:20:15 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2606 2026/04/26 12:23:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4018,3 +4018,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated comms/py-textual to 8.2.4 [wiz 2026-04-26]
 	Updated textproc/rumdl to 0.1.82 [wiz 2026-04-26]
 	Updated textproc/dasel to 3.8.0 [wiz 2026-04-26]
+	Updated print/libcups to 2.4.18 [wiz 2026-04-26]
