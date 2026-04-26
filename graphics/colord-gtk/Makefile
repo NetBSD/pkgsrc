@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2026/04/26 15:06:35 vins Exp $
+# $NetBSD: Makefile,v 1.21 2026/04/26 16:55:31 vins Exp $
 
-DISTNAME=	colord-gtk-0.2.0
-PKGREVISION=	19
+DISTNAME=	colord-gtk-0.3.1
 CATEGORIES=	graphics
-MASTER_SITES=	https://www.freedesktop.org/software/colord/releases/
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=hughsie/}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.freedesktop.org/software/colord/
@@ -13,17 +12,18 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config xgettext
 
-# Needs docbook-xsl-ns
-MESON_ARGS+=	-Ddocs=false
-MESON_ARGS+=	-Dman=false
+USE_PKGLOCALEDIR=	yes
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
+MESON_ARGS+=	-Dman=false
+
+.include "options.mk"
+
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
-PKGCONFIG_OVERRIDE+=		output/meson-private/colord-gtk.pc
 
 .include "../../devel/meson/build.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/colord/buildlink3.mk"
-.include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
+.include "../../textproc/libxslt/xsltproc-nonet.mk"
 .include "../../mk/bsd.pkg.mk"
