@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2026/04/26 08:46:05 adam Exp $
+
+BLAKE2s (jdk-25.0.3_linux-aarch64_bin.tar.gz) = 03aa7977f6ae984a856cd5f6cd70fe7392fe2f75bbc44238c916519dcc5fdba2
+SHA512 (jdk-25.0.3_linux-aarch64_bin.tar.gz) = bcdd39308aa8490dfbb6d2b086f49de18cbdacbb49f4a866abc551ff87b1c07a718853b732610071a315cc196e1397cb400d7bff4d6fd04da3c87db39ec3afd9
+Size (jdk-25.0.3_linux-aarch64_bin.tar.gz) = 214624753 bytes
+BLAKE2s (jdk-25.0.3_linux-x64_bin.tar.gz) = 6ed96af755dc882577ef168425969e2c20f6b3f5d83d0558962e6f66d766791f
+SHA512 (jdk-25.0.3_linux-x64_bin.tar.gz) = 906f501ca15eadf6bdfdfd21ba5b5821c11a37f92ed2e59cf1cc3ca2afe639a95b5640ae005b8c95f7c671bf1314b30d618c67a55d3dadb69ddd3c3232573b32
+Size (jdk-25.0.3_linux-x64_bin.tar.gz) = 216868920 bytes
+BLAKE2s (jdk-25.0.3_macos-aarch64_bin.tar.gz) = a908376476dc9523983b75a65e3c3a668c040a68abe4f178c09468ab2007b814
+SHA512 (jdk-25.0.3_macos-aarch64_bin.tar.gz) = 7c30a690cd664d4f8decf682654a39f7c046c8f7cce811fe444b69f7651196400f6a92ff673c0decd385d3b44bb979e2f58866a7dc6b28befbb353a053403a07
+Size (jdk-25.0.3_macos-aarch64_bin.tar.gz) = 209299914 bytes
+BLAKE2s (jdk-25.0.3_macos-x64_bin.tar.gz) = 817e3b6996afc0958a0be26f11d01349e713b7ec0fcc67e50bc9cda2182209bb
+SHA512 (jdk-25.0.3_macos-x64_bin.tar.gz) = 45e2f9882774ff039d0ed98fe61f895c378238fa42e070ef4509ed23760c984c7aaa0eda512232925d587e8be3df2a4513d23599b2299c376176dea4d23934f6
+Size (jdk-25.0.3_macos-x64_bin.tar.gz) = 211595175 bytes
