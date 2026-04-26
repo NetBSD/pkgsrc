@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.131 2026/04/14 12:55:09 adam Exp $
+# $NetBSD: Makefile,v 1.132 2026/04/26 08:21:20 adam Exp $
 
-DISTNAME=	peewee-4.0.4
+DISTNAME=	peewee-4.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/peewee/}
@@ -22,6 +22,7 @@ FILES_SUBST+=	PKGMANDIR=${PKGMANDIR}
 MESSAGE_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
 
 REPLACE_PYTHON+=	pwiz.py
+PY_RENAME_BINARIES=	pwiz
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
@@ -29,7 +30,6 @@ post-build:
 	cd ${WRKSRC}/docs && ${BUILD_MAKE_CMD} man
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} pwiz pwiz-${PYVERSSUFFIX} || ${TRUE}
 	${INSTALL_MAN} ${WRKSRC}/docs/_build/man/peewee.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/peewee-${PYVERSSUFFIX}.1
 
