@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2026/04/08 05:45:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.20 2026/04/26 10:18:31 wiz Exp $
 
-DISTNAME=		ov-0.51.1
-PKGREVISION=		3
+DISTNAME=		ov-0.52.0
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=noborus/}
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}
@@ -16,7 +15,7 @@ WRKSRC=			${WRKDIR}
 .include "go-modules.mk"
 
 GOFLAGS=		-ldflags "-X main.Version=${PKGVERSION_NOREV}"
-GO_BUILD_PATTERN=	./...
+#GO_BUILD_PATTERN=	./...
 
 AUTO_MKDIRS=		yes
 
