@@ -1,0 +1,16 @@
+$NetBSD: patch-meson__options.txt,v 1.1 2026/04/26 14:48:56 vins Exp $
+
+* Add option to specify bash completions directory.
+* Add option to toggle libudev support.
+
+--- meson_options.txt.orig	2025-06-23 14:06:37.000000000 +0000
++++ meson_options.txt
+@@ -1,6 +1,8 @@
+ option('daemon', type : 'boolean', value : true, description : 'build the daemon')
+ option('session_example', type : 'boolean', value : false, description : 'Enable session example')
+ option('bash_completion', type : 'boolean', value : true, description : 'Enable bash completion')
++option('completionsdir', type : 'string', value : '', description : 'Destination directory for bash completions')
++option('udev', type: 'boolean', value: false, description: 'Enable libudev support')
+ option('udev_rules', type: 'boolean', value: true, description: 'Install udev rules')
+ option('systemd', type : 'boolean', value : true, description : 'Enable systemd integration')
+ option('systemd_root_prefix', type: 'string', value: '', description: 'Directory to base systemd’s installation directories on')

@@ -1,0 +1,28 @@
+$NetBSD: patch-src_meson.build,v 1.1 2026/04/26 14:48:57 vins Exp $
+
+Make udev support optional.
+
+--- src/meson.build.orig	2025-06-23 14:06:37.000000000 +0000
++++ src/meson.build
+@@ -30,6 +30,12 @@ if get_option('systemd')
+   colord_extra_deps += libsystemd
+ endif
+ 
++colord_extra_sources = []
++if get_option('udev')
++  colord_extra_sources += 'cd-sensor-client.c'
++endif
++
++
+ executable(
+   'colord',
+   resources_src,
+@@ -49,7 +55,7 @@ executable(
+     'cd-profile.c',
+     'cd-profile-db.c',
+     'cd-sensor.c',
+-    'cd-sensor-client.c',
++    colord_extra_sources, 
+   ],
+   include_directories : [
+     colord_incdir,
