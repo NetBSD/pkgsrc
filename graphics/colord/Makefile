@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2026/01/07 08:47:15 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/04/26 14:48:56 vins Exp $
 
-DISTNAME=	colord-1.3.5
-PKGREVISION=	23
+DISTNAME=	colord-1.4.8
 CATEGORIES=	graphics gnome
-MASTER_SITES=	https://www.freedesktop.org/software/colord/releases/
+MASTER_SITES=	https://www.freedesktop.org/software/colord/releases/ \
+		http://ftp.slackware.com/pub/slackware/slackware64-current/source/l/colord/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	youri@NetBSD.org
@@ -11,62 +11,80 @@ HOMEPAGE=	https://www.freedesktop.org/software/colord/
 COMMENT=	Device color profile management daemon
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake intltool autoconf aclocal automake msgfmt
+USE_TOOLS+=		pkg-config intltool msgfmt
+USE_PKGLOCALEDIR=	yes
 
-COLORD_USER=	colord
-COLORD_GROUP=	colord
-PKG_GROUPS+=	${COLORD_GROUP}
-PKG_USERS+=	${COLORD_USER}:${COLORD_GROUP}
 BUILD_DEFS+=	VARBASE
+SHAREDIR=	${PREFIX}/share
+EGDIR=		${SHAREDIR}/examples/colord
 
-PKGCONFIG_OVERRIDE+=	lib/colorhug/colorhug.pc.in
-PKGCONFIG_OVERRIDE+=	lib/colord/colord.pc.in
+USE_PKGLOCALEDIR=	yes
 
-# XXX dependency for man pages missing from pkgsrc
-CONFIGURE_ENV+=		ac_cv_path_DOCBOOK2MAN=no
+COLORD_USER=		colord
+COLORD_GROUP=		colord
+PKG_GROUPS+=		${COLORD_GROUP}
+PKG_USERS+=		${COLORD_USER}:${COLORD_GROUP}
+PKG_GECOS.colord=	ColorManager daemon
+PKG_SHELL.colord=	${NOLOGIN}
+PKG_HOME.colord=	/nonexistent
 
-CONFIGURE_ARGS+=	--disable-gusb
-CONFIGURE_ARGS+=	--disable-udev
-CONFIGURE_ARGS+=	--disable-bash-completion
-CONFIGURE_ARGS+=	--disable-systemd-login
-CONFIGURE_ARGS+=	--disable-argyllcms-sensor # XXX not useful?
-CONFIGURE_ARGS+=	--disable-print-profiles
-CONFIGURE_ARGS+=	--with-daemon-user=colord
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl	# man pages
+DOCBOOK_MANPAGE_XSL=	${SHAREDIR}/xsl/docbook/html/docbook.xsl
 
-PKGCONFIG_OVERRIDE+=	lib/colorhug/colorhug.pc.in
-PKGCONFIG_OVERRIDE+=	lib/colord/colord.pc.in
+CONF_FILES+=		share/dbus-1/system.d/org.freedesktop.ColorManager.conf \
+			${PKG_SYSCONFDIR}/dbus-1/system.d/org.freedesktop.ColorManager.conf
 
-CONF_DIR=	${PREFIX}/share/examples/colord
-CONF_FILES+=	${CONF_DIR}/org.freedesktop.ColorManager.conf \
-		${PKG_SYSCONFDIR}/dbus-1/system.d/org.freedesktop.ColorManager.conf
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_MESSAGE.paths=	Replacing hard-coded paths.
+SUBST_FILES.paths=	client/cd-util.c examples/cd-libcolord-icc.c \
+			man/meson.build lib/colord/cd-icc-store.c \
+			src/cd-main.c src/cd-profile.c client/run.sh
+SUBST_SED.paths+=	-e "s:/usr/local/share:${SHAREDIR}:g"
+SUBST_SED.paths+=	-e "s:/usr/share/color:${SHAREDIR}/color:g"
+SUBST_SED.paths+=	-e "s:/var/lib/:@VARBASE/db:g"
+SUBST_VARS.paths+=	DOCBOOK_MANPAGE_XSL SH
 
-SUBST_CLASSES+=		prefix
-SUBST_MESSAGE.prefix=	Fix prefix
-SUBST_STAGE.prefix=	pre-configure
-SUBST_FILES.prefix=	lib/colord/cd-icc-store.c
-SUBST_FILES.prefix+=	src/cd-main.c
-SUBST_FILES.prefix+=	client/cd-util.c
-SUBST_VARS.prefix=	PREFIX VARBASE
 
-INSTALLATION_DIRS+=	share/vala/vapi
+SUBST_CLASSES+=		target
+SUBST_STAGE.target=	pre-build
+SUBST_MESSAGE.target=	Replacing meson custom target.
+SUBST_FILES.target=	data/cmf/meson.build \
+			data/illuminant/meson.build \
+			data/profiles/meson.build
+SUBST_SED.target+=	-e "s:cd_create_profile:run_cd_create_profile:g"
+SUBST_SED.target+=	-e "s:cd_idt8:run_cd_idt8:g"
 
-pre-configure:
-	cd ${WRKSRC} && autoreconf
+MESON_ARGS+=		-Dlocalstatedir=${VARBASE} \
+			-Ddaemon_user=colord \
+			-Dman=true \
+			-Dbash_completion=true \
+			-Dcompletionsdir=share/bash-completion/completions \
+			-Dpnp_ids=${SHAREDIR}/hwdata/pnp.ids \
+			-Dargyllcms_sensor=false \
+			-Dsystemd=false
 
-TOOL_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
+.include "../../mk/bsd.prefs.mk"
 
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/lib/colord/colord.vapi ${DESTDIR}${PREFIX}/share/vala/vapi/
+.if ${OPSYS} == "Linux"
+MESON_ARGS+=	-Dudev_rules=true
+.else
+MESON_ARGS+=	-Dudev_rules=false
+.endif
 
+.include "options.mk"
+
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
-.include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/libgusb/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../security/polkit/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/consolekit/buildlink3.mk"
+.include "../../sysutils/hwdata/buildlink3.mk"
+.include "../../textproc/libxslt/xsltproc-nonet.mk"
 
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
