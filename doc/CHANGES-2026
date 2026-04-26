@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2584 2026/04/26 04:41:33 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2585 2026/04/26 06:48:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3989,3 +3989,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/p5-Crypt-RIPEMD160 to 0.14 [wiz 2026-04-26]
 	Updated time/p5-DateTime-TimeZone to 2.68 [wiz 2026-04-26]
 	Updated textproc/p5-XML-Parser to 2.58 [wiz 2026-04-26]
+	Updated sysutils/coreutils to 9.11 [wiz 2026-04-26]
