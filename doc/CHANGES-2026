@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2603 2026/04/26 10:55:41 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2604 2026/04/26 12:18:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4016,3 +4016,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-requests-ratelimiter to 0.10.0 [wiz 2026-04-26]
 	Updated devel/py-ruff to 0.15.12 [wiz 2026-04-26]
 	Updated comms/py-textual to 8.2.4 [wiz 2026-04-26]
+	Updated textproc/rumdl to 0.1.82 [wiz 2026-04-26]
