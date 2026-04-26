@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.12 2026/04/22 14:51:18 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.13 2026/04/26 19:36:39 bsiegert Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -107,3 +107,10 @@ lang/go126: Security fix
 
 Pullup ticket #7082 - requested by bsiegert
 fonts/harfbuzz: Install fix
+
+Pullup ticket #7083 - requested by gutteridge
+www/firefox140: security fix
+www/firefox140-l10n: dependent update
+
+Pullup ticket #7084 - requested by morr
+editors/vim-share: security fix
