@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2026/04/26 19:14:59 vins Exp $
+
+BLAKE2s (docbook-xsl-1.79.2.tar.bz2) = 061e88129b696a0c65043f596d8891ffd24e0ffe53c4b0208a3b96e9036f4d26
+SHA512 (docbook-xsl-1.79.2.tar.bz2) = dc5a2f08a804d0b2badb167b11fe22d53d7861e6238690e09507d09a696e7dce6b0da6e0dbfe84275db23d71006a4b89e3348eb271052341091a26395ec5862c
+Size (docbook-xsl-1.79.2.tar.bz2) = 23404486 bytes
+SHA1 (patch-catalog.xml) = f7a4a4c7c5509f71256ccfacd0f9798ef8be5eb7
+SHA1 (patch-lib_lib.xsl) = 0787b83d01871f2a22a1e4257e4dfad89221041b
