@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2026/04/17 05:39:40 adam Exp $
+# $NetBSD: Makefile,v 1.28 2026/04/26 10:35:26 wiz Exp $
 
-DISTNAME=	packaging-26.1
+DISTNAME=	packaging-26.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/packaging/}
@@ -12,12 +12,15 @@ LICENSE=	modified-bsd OR apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.0.2:../../devel/py-pyparsing
 TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+# cyclic dependency
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+#TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
+TEST_DEPENDS+=	${PYPKGPREFIX}-tomli_w-[0-9]*:../../textproc/py-tomli_w
 
 USE_LANGUAGES=	# none
 
-# as of 25.0
-# 25 failed, 26922 passed, 1 skipped
+# as of 26.2
+# 61512 passed, 1 skipped, 332 deselected
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
