@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2026/02/16 21:47:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.40 2026/04/26 09:01:42 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -59,8 +59,11 @@ ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/ed25519.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/ed448.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/hashes.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/hmac.pyi
+${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/hpke.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/kdf.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/keys.pyi
+${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/mldsa.pyi
+${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/mlkem.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/poly1305.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/rsa.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/x25519.pyi
@@ -87,6 +90,9 @@ ${PYSITELIB}/cryptography/hazmat/decrepit/ciphers/__init__.pyo
 ${PYSITELIB}/cryptography/hazmat/decrepit/ciphers/algorithms.py
 ${PYSITELIB}/cryptography/hazmat/decrepit/ciphers/algorithms.pyc
 ${PYSITELIB}/cryptography/hazmat/decrepit/ciphers/algorithms.pyo
+${PYSITELIB}/cryptography/hazmat/decrepit/ciphers/modes.py
+${PYSITELIB}/cryptography/hazmat/decrepit/ciphers/modes.pyc
+${PYSITELIB}/cryptography/hazmat/decrepit/ciphers/modes.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/__init__.py
 ${PYSITELIB}/cryptography/hazmat/primitives/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/__init__.pyo
@@ -96,6 +102,9 @@ ${PYSITELIB}/cryptography/hazmat/primitives/_asymmetric.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/_cipheralgorithm.py
 ${PYSITELIB}/cryptography/hazmat/primitives/_cipheralgorithm.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/_cipheralgorithm.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/_modes.py
+${PYSITELIB}/cryptography/hazmat/primitives/_modes.pyc
+${PYSITELIB}/cryptography/hazmat/primitives/_modes.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/_serialization.py
 ${PYSITELIB}/cryptography/hazmat/primitives/_serialization.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/_serialization.pyo
@@ -117,6 +126,12 @@ ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/ed25519.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/ed448.py
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/ed448.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/ed448.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/mldsa.py
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/mldsa.pyc
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/mldsa.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/mlkem.py
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/mlkem.pyc
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/mlkem.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/padding.py
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/padding.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/padding.pyo
@@ -162,6 +177,9 @@ ${PYSITELIB}/cryptography/hazmat/primitives/hashes.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/hmac.py
 ${PYSITELIB}/cryptography/hazmat/primitives/hmac.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/hmac.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/hpke.py
+${PYSITELIB}/cryptography/hazmat/primitives/hpke.pyc
+${PYSITELIB}/cryptography/hazmat/primitives/hpke.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/__init__.py
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/__init__.pyo
