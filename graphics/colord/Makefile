@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2026/04/26 14:48:56 vins Exp $
+# $NetBSD: Makefile,v 1.30 2026/04/26 15:53:56 vins Exp $
 
 DISTNAME=	colord-1.4.8
 CATEGORIES=	graphics gnome
@@ -33,6 +33,10 @@ DOCBOOK_MANPAGE_XSL=	${SHAREDIR}/xsl/docbook/html/docbook.xsl
 
 CONF_FILES+=		share/dbus-1/system.d/org.freedesktop.ColorManager.conf \
 			${PKG_SYSCONFDIR}/dbus-1/system.d/org.freedesktop.ColorManager.conf
+
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+PKGCONFIG_OVERRIDE+=		output/meson-private/colord.pc \
+				output/meson-private/colorhug.pc
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
