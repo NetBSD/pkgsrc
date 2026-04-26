@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2586 2026/04/26 06:48:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2587 2026/04/26 08:21:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3991,3 +3991,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/p5-XML-Parser to 2.58 [wiz 2026-04-26]
 	Updated sysutils/coreutils to 9.11 [wiz 2026-04-26]
 	Updated misc/gnuls to 9.11 [wiz 2026-04-26]
+	Updated time/py-tzdata to 2026.2 [adam 2026-04-26]
+	Updated devel/py-zope.interface to 8.4 [adam 2026-04-26]
+	Updated devel/py-testfixtures to 11.0.0 [adam 2026-04-26]
+	Updated databases/py-peewee to 4.0.5 [adam 2026-04-26]
