@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.758 2026/04/27 07:10:38 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.759 2026/04/27 08:18:32 jperkin Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30333,7 +30333,7 @@ kaput-cli-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/t
 librespot-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 meli-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 mise<2026.4.20	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
-mktool-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
+mktool<1.5.8	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 moccasin-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 monolith-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 ncspot-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
