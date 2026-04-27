@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.24 2026/04/01 20:40:06 wiz Exp $
+# $NetBSD: wheel.mk,v 1.25 2026/04/27 22:38:34 gdt Exp $
 #
 # Build and install Python wheels
 #
@@ -24,10 +24,12 @@
 
 # Variables:
 #
-# PY_RENAME_BINARIES:	List of binaries (in ${PREFIX}/bin) that should
+# PY_RENAME_BINARIES:	List of files in ${PREFIX}/bin that should
 #			be renamed to have a '-${PYVERSSUFFIX}'
 #			suffix. This allows parallel installation of a
 #			package for different Python versions.
+#			(Add ALTERNATIVES if humans desire to run
+#			the program using the unversioned name.)
 #
 # WHEELFILE:		Path to the wheelfile to be installed.
 #			Only needs to be set if do-build is redefined.
