@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2627 2026/04/27 13:31:08 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2628 2026/04/27 13:40:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4042,3 +4042,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated inputmethod/librime to 1.16.1nb1 [wiz 2026-04-27]
 	Updated geography/py-nmeagps to 1.1.4 [gdt 2026-04-27]
 	Updated textproc/uriparser to 1.0.1 [wiz 2026-04-27]
+	Updated wayland/xwayland to 24.1.11 [wiz 2026-04-27]
