@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/02/06 22:47:44 khorben Exp $
-#
+# $NetBSD: Makefile,v 1.11 2026/04/27 12:50:41 wiz Exp $
 
 DISTNAME=	DeforaOS-Artwork-0.1.4
 PKGNAME=	deforaos-icon-theme-0.1.4
@@ -13,7 +12,7 @@ COMMENT=	Artwork for the DeforaOS desktop
 LICENSE=	cc-by-sa-v3.0
 
 TOOL_DEPENDS+=	awesome-ttf-[0-9]*:../../fonts/awesome-ttf
-TOOL_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
+TOOL_DEPENDS+=	GraphicsMagick-[0-9]*:../../graphics/GraphicsMagick
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
