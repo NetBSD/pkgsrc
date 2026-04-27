@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2026/03/31 18:01:01 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/04/27 08:32:54 wiz Exp $
 
 DISTNAME=	ncdu-2.9.2
 CATEGORIES=	sysutils
@@ -10,6 +10,8 @@ HOMEPAGE=	https://dev.yorhel.nl/ncdu
 LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
+
+BROKEN=		"Needs an update for zig-0.16"
 
 # Temporary required, a zig build system parser is being written.
 ALLOW_NETWORK_ACCESS=	yes
