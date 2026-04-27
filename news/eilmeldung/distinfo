@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2026/04/23 18:16:55 pin Exp $
+$NetBSD: distinfo,v 1.2 2026/04/27 07:58:13 pin Exp $
 
 BLAKE2s (addr2line-0.25.1.crate) = cc5c422ec48ccef5c2c46379d2f600644609490afafea5020f2020815d1146e6
 SHA512 (addr2line-0.25.1.crate) = c400f3b6ccaff8a1c0d7d82c708a1784b8fd5ba64b6e420e85819d59b1cadb55fa59c852925093b921469f272d1d5140cf12f013ae75d1e1bc85021097df8fc2
@@ -513,9 +513,9 @@ Size (dunce-1.0.5.crate) = 8244 bytes
 BLAKE2s (dyn-clone-1.0.20.crate) = 7231af3126aa2ebfd0a5bf5c1e248ace0ec3bfbbc32a153249c69da91018c828
 SHA512 (dyn-clone-1.0.20.crate) = 5910c39f1ce031fb89d4974530a60b66848038e2f2bc78bdb3d34e6f40075fb4457b8a604309bedc4012fa46b17212e81dfb376cc6b45fa2dee823a86264690f
 Size (dyn-clone-1.0.20.crate) = 13134 bytes
-BLAKE2s (eilmeldung-1.4.3.tar.gz) = e51feab56a81b71b52caf76672a368d67daf08696801903484f6948af2c6b853
-SHA512 (eilmeldung-1.4.3.tar.gz) = 0036e67c5b99b34e7c36c237e0f5ee0fd7585b4f0b6b26a0a9858cf3c0ade1ab1de04b6f663de3f8bf1d2a191edc5a1b73d8f328d14370cfa3b991b15ce388fa
-Size (eilmeldung-1.4.3.tar.gz) = 5770086 bytes
+BLAKE2s (eilmeldung-1.4.4.tar.gz) = 392fe75a861286e70160dc9685133f1f22c7d6c387dc5668bc569852240f6c48
+SHA512 (eilmeldung-1.4.4.tar.gz) = 3c3a0699a266b1674ca3d376ca8b838d8f8fdb56c71a285e5fba5e7f5738d12168cd85d7e10827e3d8d6e84572bf0caaecd8ef4adc1b486c7754aaa1d2c5fcc5
+Size (eilmeldung-1.4.4.tar.gz) = 5777270 bytes
 BLAKE2s (either-1.15.0.crate) = 7c84d6a0e5f2b2ab835c6a5a557e2b80af4b533e6d792d546a42ac2f5b846e22
 SHA512 (either-1.15.0.crate) = d70c34d903e8e5088fd065a6da6673eadb569a20af183fa9bd6418940b37c8c2a777c44dbdab1b9960890cba5cb7464b805667ac42f4e05499ddcd4277d24e3f
 Size (either-1.15.0.crate) = 20114 bytes
@@ -2499,4 +2499,3 @@ Size (zvariant_derive-5.10.0.crate) = 16592 bytes
 BLAKE2s (zvariant_utils-3.3.0.crate) = 9dc2c0c28a434b74ad49042694b7bb9b6649a12dec80687690c50cb2b768903a
 SHA512 (zvariant_utils-3.3.0.crate) = 55644ac7f81d60b414ac13e0da4db190ca58bc9d1d7ab82c447e0995d23970d3ebd9322ce7c066303e8455141bd91e2125618d924aaf17109d7015d49289f4d7
 Size (zvariant_utils-3.3.0.crate) = 15417 bytes
-SHA1 (patch-src_config_mod.rs) = 68c979d3600013c0deb65f8d93e960e886e9d981
