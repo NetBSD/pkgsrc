@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux-x86_64,v 1.1 2025/03/31 09:33:32 adam Exp $
+@comment $NetBSD: PLIST.Linux-x86_64,v 1.2 2026/04/27 09:42:14 wiz Exp $
 bin/oracle-jdk21-jar
 bin/oracle-jdk21-jarsigner
 bin/oracle-jdk21-java
@@ -157,6 +157,7 @@ java/oracle-jdk21/legal/java.base/aes.md
 java/oracle-jdk21/legal/java.base/asm.md
 java/oracle-jdk21/legal/java.base/c-libutl.md
 java/oracle-jdk21/legal/java.base/cldr.md
+java/oracle-jdk21/legal/java.base/gcc.md
 java/oracle-jdk21/legal/java.base/icu.md
 java/oracle-jdk21/legal/java.base/public_suffix.md
 java/oracle-jdk21/legal/java.base/siphash.md
