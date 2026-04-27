@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.400 2026/03/26 10:34:45 adam Exp $
+# $NetBSD: Makefile,v 1.401 2026/04/27 10:25:01 adam Exp $
 
 .include "../../emulators/qemu/version.mk"
 
@@ -12,9 +12,16 @@ HOMEPAGE=	https://www.qemu.org/
 COMMENT=	Machine emulator and virtualizer
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-distlib-[0-9]*:../../devel/py-distlib
-TOOL_DEPENDS+=	meson-[0-9]*:../../devel/meson
+# From pythondeps.toml
+TOOL_DEPENDS+=	meson>=1.5.0:../../devel/meson
 TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+# From python/scripts/mkvenv.py
+TOOL_DEPENDS+=	${PYPKGPREFIX}-distlib-[0-9]*:../../devel/py-distlib
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pycotap>=1.1.0:../../devel/py-pycotap
+DEPENDS+=	${PYPKGPREFIX}-pip>=20.3.4:../../devel/py-pip
+DEPENDS+=	${PYPKGPREFIX}-qemu.qmp>=0.0.5:../../emulators/py-qemu.qmp
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=44.1.1:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-wheel>=0.34.2:../../devel/py-wheel
 
 USE_CURSES=		resize_term wide
 USE_LANGUAGES+=		c c++
@@ -88,7 +95,6 @@ NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-alpha
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-hppa
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-loongarch64
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-microblaze
-NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-microblazeel
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mips64
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mips64el
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-ppc64
@@ -124,7 +130,7 @@ UE_ARCHS+=		alpha arm armeb
 UE_ARCHS+=		hexagon hppa
 UE_ARCHS+=		i386
 UE_ARCHS+=		loongarch64
-UE_ARCHS+=		m68k microblaze microblazeel
+UE_ARCHS+=		m68k microblaze
 UE_ARCHS+=		mips mips64 mips64el mipsel mipsn32 mipsn32el
 UE_ARCHS+=		or1k ppc ppc64 ppc64le
 UE_ARCHS+=		riscv32 riscv64
