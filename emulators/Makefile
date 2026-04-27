@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.380 2026/03/20 14:08:21 sborrill Exp $
+# $NetBSD: Makefile,v 1.381 2026/04/27 10:23:49 adam Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -183,6 +183,7 @@ SUBDIR+=	picodrive
 SUBDIR+=	ppsspp
 SUBDIR+=	ppsspp-qt
 SUBDIR+=	py-keystone
+SUBDIR+=	py-qemu.qmp
 SUBDIR+=	py-unicorn
 SUBDIR+=	qemu
 SUBDIR+=	qemu7

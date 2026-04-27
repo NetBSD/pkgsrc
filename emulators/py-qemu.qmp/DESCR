@@ -1,0 +1,6 @@
+qemu.qmp is a QEMU Monitor Protocol (QMP) library written in Python, using
+asyncio. It is used to send QMP messages to running QEMU emulators.
+
+This library can be used to communicate with QEMU emulators, the QEMU Guest
+Agent (QGA), the QEMU Storage Daemon (QSD), or any other utility or application
+that speaks QMP.

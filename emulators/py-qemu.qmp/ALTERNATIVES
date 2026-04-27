@@ -1,0 +1,3 @@
+bin/qmp-shell @PREFIX@/bin/qmp-shell-@PYVERSSUFFIX@
+bin/qmp-shell-wrap @PREFIX@/bin/qmp-shell-wrap-@PYVERSSUFFIX@
+bin/qmp-tui @PREFIX@/bin/qmp-tui-@PYVERSSUFFIX@
