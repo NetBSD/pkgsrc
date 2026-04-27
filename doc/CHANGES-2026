@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2617 2026/04/27 07:59:44 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2618 2026/04/27 08:17:33 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4030,3 +4030,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/mise to 2026.4.23 [pin 2026-04-27]
 	Updated news/eilmeldung to 1.4.4 [pin 2026-04-27]
 	Updated textproc/rumdl to 0.1.83 [pin 2026-04-27]
+	Updated pkgtools/mktool to 1.5.8 [jperkin 2026-04-27]
