@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/04/15 19:03:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/04/27 13:40:03 wiz Exp $
 
-DISTNAME=	xwayland-24.1.10
+DISTNAME=	xwayland-24.1.11
 CATEGORIES=	wayland
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.xz
