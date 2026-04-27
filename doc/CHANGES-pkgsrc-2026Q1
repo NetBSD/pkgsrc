@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.14 2026/04/27 12:29:25 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.15 2026/04/27 18:55:38 bsiegert Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -117,4 +117,7 @@ editors/vim-share: security fix
 
 Pullup ticket #7081 - requested by wiz
 graphics/MesaLib: macOS build fix, PR pkg/60124
+
+Pullup ticket #7085 - requested by abs
+net/unifi: security fix
 
