@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2615 2026/04/27 07:56:12 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2616 2026/04/27 07:58:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4028,3 +4028,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/expat to 2.8.0 [wiz 2026-04-26]
 	Updated devel/git-cliff to 2.13.1 [pin 2026-04-27]
 	Updated devel/mise to 2026.4.23 [pin 2026-04-27]
+	Updated news/eilmeldung to 1.4.4 [pin 2026-04-27]
