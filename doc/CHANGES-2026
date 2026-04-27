@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2624 2026/04/27 10:51:31 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2625 2026/04/27 10:52:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4039,3 +4039,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/qemu to 11.0.0 [adam 2026-04-27]
 	Updated sysutils/qemu-guest-agent to 11.0.0 [adam 2026-04-27]
 	Updated security/gnupg2 to 2.5.19 [adam 2026-04-27]
+	Updated inputmethod/librime to 1.16.1nb1 [wiz 2026-04-27]
