@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27171 2026/04/26 19:58:19 wiz Exp $
+$NetBSD: TODO,v 1.27172 2026/04/27 10:17:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -622,6 +622,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o faces-1.7.7
 	o facter-2.4.5
 	o fakeroot-1.6.5
+	o fcitx5-5.1.12
+	o fcitx5-chinese-addons-5.1.12 [needs fcitx 5.1.12]
 	o fd-3.01j
 	o felt-3.07 [wip]
 	o fet-6.0.1
