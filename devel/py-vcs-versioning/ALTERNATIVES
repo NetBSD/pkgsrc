@@ -1,0 +1,1 @@
+bin/vcs-versioning @PREFIX@/bin/vcs-versioning-@PYVERSSUFFIX@
