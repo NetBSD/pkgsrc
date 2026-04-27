@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/10/23 18:37:13 vins Exp $
+# $NetBSD: Makefile,v 1.3 2026/04/27 18:51:24 vins Exp $
 
-DISTNAME=	acme-client-1.3.5
+DISTNAME=	acme-client-1.3.6
 CATEGORIES=	security
 # repo at	https://git.wolfsden.cz/acme-client-portable
 MASTER_SITES=	https://files.wolfsden.cz/releases/acme-client/
@@ -33,19 +33,14 @@ CONFIGURE_ARGS+=	--enable-libtls
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Replacing hard-coded paths.
-SUBST_FILES.paths=	usr.sbin/acme-client/acme-client.1
-SUBST_FILES.paths+=	usr.sbin/acme-client/acme-client.conf.5
-SUBST_FILES.paths+=	acme-client.conf
-SUBST_SED.paths+=	-e "s:/etc/acme:${PKG_SYSCONFDIR}/acme:g"
+SUBST_FILES.paths=	etc/examples/acme-client.conf \
+			usr.sbin/acme-client/main.c \
+			usr.sbin/acme-client/acme-client.1 \
+			usr.sbin/acme-client/acme-client.conf.5
+SUBST_SED.paths=	-e "s:/etc/acme:${PKG_SYSCONFDIR}/acme:g"
 SUBST_SED.paths+=	-e "s:/etc/examples:${PREFIX}/${EGDIR}:g"
-SUBST_VARS.paths+=	PKG_SYSCONFDIR SSLDIR
 
-post-extract:
-	${RUN}${CP} ${FILESDIR}/acme-client.conf ${WRKSRC}
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/acme-client.conf \
-		${DESTDIR}${PREFIX}/${EGDIR}
+MAKE_FLAGS+=		examplesdir=${PREFIX}/${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
