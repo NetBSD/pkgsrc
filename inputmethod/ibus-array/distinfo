@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/11/16 12:01:08 wiz Exp $
+$NetBSD: distinfo,v 1.12 2026/04/27 10:16:56 wiz Exp $
 
-BLAKE2s (ibus-array-0.2.2.tar.gz) = 7641e8a81fe70c92ff92b4e369f07826b4ae041d080a1443dcd4f3dca40ef2ff
-SHA512 (ibus-array-0.2.2.tar.gz) = 1d65bdf830162b252f9b648658548f5d025b6ebf6aa825c0e7b264a64a4a155748594cbfbdcad5def5cfca5d98fe38d94bbd7a374c025759a04c35a36816cebb
-Size (ibus-array-0.2.2.tar.gz) = 2836658 bytes
+BLAKE2s (ibus-array-0.3.0.tar.gz) = 191b9d66c6c59a41f4bf292f9c77f86e0f1535c0a119dfa5791dd61da573b020
+SHA512 (ibus-array-0.3.0.tar.gz) = 87d97308b7c5afd5624549137c11a6db1cc3f9c4780ff1716db464ea3c0247f0a00cd3f4517a9e5f45b90faf8d1e5e309d5596c45c2585bed3fdd217e7179009
+Size (ibus-array-0.3.0.tar.gz) = 3891438 bytes
