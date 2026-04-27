@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2026/04/15 19:03:17 wiz Exp $
+$NetBSD: distinfo,v 1.3 2026/04/27 13:40:03 wiz Exp $
 
-BLAKE2s (xwayland-24.1.10.tar.xz) = 1cdf441a7279fa29114e1bed06f2c09912bc1b853d41b7d96a7154140798740b
-SHA512 (xwayland-24.1.10.tar.xz) = bceba1db7f4d7ac92d2b2a3c8f6f7ab0cc093f396fe89406f8dba25e32ffc3edfa552df246cbfb3b0708c1d28b3e179694d11870b063d5b8f9ab2db9fb861a8f
-Size (xwayland-24.1.10.tar.xz) = 1305612 bytes
+BLAKE2s (xwayland-24.1.11.tar.xz) = 8b1c18c9b5436a5d1828a5c7b48369f1d4f3f95b9f333b247a67234951495662
+SHA512 (xwayland-24.1.11.tar.xz) = 586d7e60c8bf0d92cec66451284c6c43b960010f14a1e204b5de722c610dc067481fd6ece0ffae615ca53ca2d0262e2a3dbb916d04811b8d57c1085bc363f5e9
+Size (xwayland-24.1.11.tar.xz) = 1305372 bytes
