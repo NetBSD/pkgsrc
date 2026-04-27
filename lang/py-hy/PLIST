@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2026/01/14 18:51:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/04/27 10:22:49 wiz Exp $
 bin/hy-${PYVERSSUFFIX}
 bin/hy2py-${PYVERSSUFFIX}
 bin/hyc-${PYVERSSUFFIX}
@@ -31,14 +31,11 @@ ${PYSITELIB}/hy/core/__init__.py
 ${PYSITELIB}/hy/core/__init__.pyc
 ${PYSITELIB}/hy/core/__init__.pyo
 ${PYSITELIB}/hy/core/hy_repr.hy
-${PYSITELIB}/hy/core/hy_repr.pyc
 ${PYSITELIB}/hy/core/macros.hy
-${PYSITELIB}/hy/core/macros.pyc
 ${PYSITELIB}/hy/core/result_macros.py
 ${PYSITELIB}/hy/core/result_macros.pyc
 ${PYSITELIB}/hy/core/result_macros.pyo
 ${PYSITELIB}/hy/core/util.hy
-${PYSITELIB}/hy/core/util.pyc
 ${PYSITELIB}/hy/errors.py
 ${PYSITELIB}/hy/errors.pyc
 ${PYSITELIB}/hy/errors.pyo
@@ -58,7 +55,6 @@ ${PYSITELIB}/hy/models.py
 ${PYSITELIB}/hy/models.pyc
 ${PYSITELIB}/hy/models.pyo
 ${PYSITELIB}/hy/pyops.hy
-${PYSITELIB}/hy/pyops.pyc
 ${PYSITELIB}/hy/reader/__init__.py
 ${PYSITELIB}/hy/reader/__init__.pyc
 ${PYSITELIB}/hy/reader/__init__.pyo
