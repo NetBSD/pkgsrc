@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/04/27 11:59:16 gdt Exp $
+# $NetBSD: Makefile,v 1.10 2026/04/27 12:51:41 wiz Exp $
 
 VERSION=	1.1.4
 DISTTAIL=	nmeagps
@@ -14,11 +14,12 @@ HOMEPAGE=	https://github.com/semuconsulting/pynmeagps
 COMMENT=	Python parser for NMEA 0183 (GNSS-relevant subset)
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
+
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 USE_LANGUAGES=	# none
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
