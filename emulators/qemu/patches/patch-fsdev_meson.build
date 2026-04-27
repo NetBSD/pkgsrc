@@ -1,14 +1,15 @@
-$NetBSD: patch-fsdev_meson.build,v 1.2 2026/01/05 10:11:37 adam Exp $
+$NetBSD: patch-fsdev_meson.build,v 1.3 2026/04/27 10:25:01 adam Exp $
 
 Enable fsdev support on NetBSD.
 
---- fsdev/meson.build.orig	2025-12-23 19:48:56.000000000 +0000
+--- fsdev/meson.build.orig	2026-04-21 19:36:25.000000000 +0000
 +++ fsdev/meson.build
-@@ -5,6 +5,6 @@ fsdev_ss.add(when: ['CONFIG_FSDEV_9P'],
+@@ -5,7 +5,7 @@ fsdev_ss.add(when: ['CONFIG_FSDEV_9P'],
    '9p-marshal.c',
    'qemu-fsdev.c',
- ), if_false: files('qemu-fsdev-dummy.c'))
+ ))
 -if host_os in ['linux', 'darwin', 'freebsd']
 +if host_os in ['linux', 'darwin', 'freebsd', 'netbsd']
    system_ss.add_all(fsdev_ss)
+   stub_ss.add(files('qemu-fsdev-dummy.c'))
  endif
