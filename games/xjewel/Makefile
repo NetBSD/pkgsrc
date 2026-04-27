@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2026/01/03 16:19:03 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/04/27 08:47:02 wiz Exp $
 
 DISTNAME=	xjewel-1.6
 PKGREVISION=	3
@@ -12,6 +12,8 @@ COMMENT=	X windows-based dropping jewels game
 USE_IMAKE=	yes
 USE_TOOLS+=	gzcat bdftopcf mkfontdir
 USE_GAMESGROUP=	yes
+
+MAKE_FLAGS=	XBINDIR=${TOOLS_DIR}/bin
 
 BUILD_DEFS+=	VARBASE
 
