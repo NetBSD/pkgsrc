@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2623 2026/04/27 10:31:33 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2624 2026/04/27 10:51:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4038,3 +4038,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added emulators/py-qemu.qmp version 0.0.6 [adam 2026-04-27]
 	Updated emulators/qemu to 11.0.0 [adam 2026-04-27]
 	Updated sysutils/qemu-guest-agent to 11.0.0 [adam 2026-04-27]
+	Updated security/gnupg2 to 2.5.19 [adam 2026-04-27]
