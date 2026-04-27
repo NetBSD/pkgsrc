@@ -1,6 +1,6 @@
-The DocBook XSL stylesheets provide a serie of ready-to-use templates to
-process documents based on the DocBook XML DTD. They can generate different
-types of output files, like XHTML, slides, manpages, JavaDoc...
+The DocBook XSL stylesheets provide a series of ready-to-use templates to
+process documents, based on the DocBook XML DTD. They can generate
+different types of output files, like XHTML, slides, manpages, JavaDoc...
 
-These are namespace-aware XSLT stylesheets for the DocBook DTD and its
-derivatives (Simplified DocBook, etc.).
+These are ithe namespace-aware XSLT stylesheets for the DocBook DTD and
+its derivatives (Simplified DocBook, etc.).
