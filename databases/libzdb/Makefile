@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2026/01/15 08:34:52 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/04/27 08:20:35 wiz Exp $
 
 DISTNAME=	libzdb-3.5.0
 PKGREVISION=	1
@@ -16,6 +16,8 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 
 USE_CXX_FEATURES+=	c++20
+# uses #include <format>
+GCC_REQD+=		13
 
 PKGCONFIG_OVERRIDE+=	zdb.pc.in
 
