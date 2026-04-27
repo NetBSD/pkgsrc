@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2025/12/17 22:36:22 nia Exp $
+# $NetBSD: Makefile,v 1.35 2026/04/27 08:16:13 wiz Exp $
 
 DISTNAME=		xtel-3.3.0
 PKGREVISION=		15
@@ -28,6 +28,7 @@ SUBST_MESSAGE.fontdir=	Fixing imake font directory.
 SUBST_FILES.fontdir=	fonts/Makefile
 SUBST_SED.fontdir=	-e 's,^[^A-Z]*FONTDIR =.*,FONTDIR = '${FONTDIR:Q},
 
+MAKE_FLAGS=		XBINDIR=${TOOLS_DIR}/bin
 INSTALLATION_DIRS=	share/examples/xtel
 INSTALL_MAKE_FLAGS=	PPPDIR=${PREFIX}/share/examples/xtel
 
