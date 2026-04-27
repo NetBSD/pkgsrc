@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.13 2026/04/26 19:36:39 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.14 2026/04/27 12:29:25 bsiegert Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -114,3 +114,7 @@ www/firefox140-l10n: dependent update
 
 Pullup ticket #7084 - requested by morr
 editors/vim-share: security fix
+
+Pullup ticket #7081 - requested by wiz
+graphics/MesaLib: macOS build fix, PR pkg/60124
+
