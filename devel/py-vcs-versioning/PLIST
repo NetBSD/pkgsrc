@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2026/03/29 18:46:13 wiz Exp $
-bin/vcs-versioning
+@comment $NetBSD: PLIST,v 1.2 2026/04/27 20:43:32 wiz Exp $
+bin/vcs-versioning-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
