@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.1 2026/04/25 22:03:11 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2026/04/27 10:32:03 wiz Exp $
 
-DISTNAME=       souffle-2.5
-GITHUB_TAG=     ${PKGVERSION_NOREV}
+DISTNAME=	souffle-2.5
+GITHUB_TAG=	${PKGVERSION_NOREV}
 CATEGORIES=	lang
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=souffle-lang/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=souffle-lang/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://souffle-lang.github.io/
-COMMENT=	Souffle is a variant of Datalog
+COMMENT=	Variant of Datalog
 LICENSE=	upl-1.0
 
-USE_TOOLS+=		flex bison pkg-config
+USE_TOOLS+=		flex bison pkg-config git
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++17
 PTHREAD_AUTO_VARS=	yes
