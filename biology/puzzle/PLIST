@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2026/01/04 00:10:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/04/27 09:39:28 wiz Exp $
+bin/ppuzzle
 bin/puzzle
 share/doc/puzzle/tree-puzzle.pdf
 share/examples/puzzle/EF.3trees

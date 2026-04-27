@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2026/01/04 00:10:35 wiz Exp $
+$NetBSD: distinfo,v 1.11 2026/04/27 09:39:28 wiz Exp $
 
 BLAKE2s (tree-puzzle-5.2.tar.gz) = 6fd972a74294fec757ff4526bd7b7903c67cac4501c918737e96e4b477000148
 SHA512 (tree-puzzle-5.2.tar.gz) = 5b9a729b120cba59f59ba426acd439cf396826ea01e75361b23387ccb9baf295d2512f21af96071a5f7b7507db4ff4d6b135cf6c5b6233a8b438532d31abe751
 Size (tree-puzzle-5.2.tar.gz) = 875142 bytes
+SHA1 (patch-configure) = 4d93f4463f1c90f6f7f6a6cb2565f320ba695842
 SHA1 (patch-src_sprng_primes-lcg64.c) = d6859be4e54329bc2191dc686178cdd81ef01279

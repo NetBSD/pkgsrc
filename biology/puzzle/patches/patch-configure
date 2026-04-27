@@ -1,0 +1,62 @@
+$NetBSD: patch-configure,v 1.1 2026/04/27 09:39:28 wiz Exp $
+
+Add header for exit().
+
+--- configure.orig	2004-07-14 19:36:33.000000000 +0000
++++ configure
+@@ -3028,6 +3028,7 @@ cat > conftest.c <<EOF
+  if test  "$MPICC0" != ""  ; then
+  if test  "$MPICCSET" = ""  ; then
+ cat > conftest.c <<EOF
++#include<stdlib.h>
+ #include<mpi.h>
+ int main (int argc, char **argv)
+ {
+@@ -3080,6 +3081,7 @@ cat > conftest.c <<EOF
+  if test  "$MPICC1" != ""  ; then
+  if test  "$MPICCSET" = ""  ; then
+ cat > conftest.c <<EOF
++#include<stdlib.h>
+ #include<mpi.h>
+ int main (int argc, char **argv)
+ {
+@@ -3132,6 +3134,7 @@ cat > conftest.c <<EOF
+  if test  "$MPICC2" != ""  ; then
+  if test  "$MPICCSET" = ""  ; then
+ cat > conftest.c <<EOF
++#include<stdlib.h>
+ #include<mpi.h>
+ int main (int argc, char **argv)
+ {
+@@ -3184,6 +3187,7 @@ cat > conftest.c <<EOF
+  if test  "$MPICC3" != ""  ; then
+  if test  "$MPICCSET" = ""  ; then
+ cat > conftest.c <<EOF
++#include<stdlib.h>
+ #include<mpi.h>
+ int main (int argc, char **argv)
+ {
+@@ -3236,6 +3240,7 @@ cat > conftest.c <<EOF
+  if test  "$MPICC4" != ""  ; then
+  if test  "$MPICCSET" = ""  ; then
+ cat > conftest.c <<EOF
++#include<stdlib.h>
+ #include<mpi.h>
+ int main (int argc, char **argv)
+ {
+@@ -3288,6 +3293,7 @@ cat > conftest.c <<EOF
+  if test  "$MPICC5" != ""  ; then
+  if test  "$MPICCSET" = ""  ; then
+ cat > conftest.c <<EOF
++#include<stdlib.h>
+ #include<mpi.h>
+ int main (int argc, char **argv)
+ {
+@@ -3340,6 +3346,7 @@ cat > conftest.c <<EOF
+  if test  "$MPICC6" != ""  ; then
+  if test  "$MPICCSET" = ""  ; then
+ cat > conftest.c <<EOF
++#include<stdlib.h>
+ #include<mpi.h>
+ int main (int argc, char **argv)
+ {
