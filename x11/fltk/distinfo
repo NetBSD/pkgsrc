@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.33 2025/07/28 10:06:48 micha Exp $
+$NetBSD: distinfo,v 1.34 2026/04/27 08:26:01 micha Exp $
 
-BLAKE2s (fltk-1.4.4-source.tar.bz2) = e096e4d068c3ba7e8484a539367d9f65b8a9c470cb94f7c33098f8821f5924d6
-SHA512 (fltk-1.4.4-source.tar.bz2) = 4890bee3093bf53adf2c127713b4e338ce7c587ff5371778e05cb987676eb9a248e221d98a60a1a9aec023a4cf9d180b84e973dd7b0b177ef37a902c4b3cf4b7
-Size (fltk-1.4.4-source.tar.bz2) = 8465974 bytes
+BLAKE2s (fltk-1.4.5-source.tar.bz2) = 8f41297700e342a5f03019eccd384bbc0db302fdf6f8a2af4e41332b29be40e8
+SHA512 (fltk-1.4.5-source.tar.bz2) = ed0c692c1abe6c1675eb75c8562d9d0449c6db39b53d26423bc6fc6e1b97602e727eadf7d58f8a1f9bfb7d088d7f5aeba01619de626f6728a72469b0feea47aa
+Size (fltk-1.4.5-source.tar.bz2) = 8464904 bytes
 SHA1 (patch-FL_Fl__Cairo.H) = 8d6b8779040c466881502d82245789f69b6a019d
 SHA1 (patch-cairo_Makefile) = 578c24fac83e61f68c934159f28f5abd05896d27
 SHA1 (patch-configure) = 1beca8af8341f344623f04b9d89cac53119cf1ef
