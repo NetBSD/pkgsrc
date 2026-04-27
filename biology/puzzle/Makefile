@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2026/01/04 00:10:35 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/04/27 09:39:28 wiz Exp $
 
 DISTNAME=	tree-puzzle-5.2
 PKGNAME=	${DISTNAME:S/^tree-//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	biology
 MASTER_SITES=	http://www.tree-puzzle.de/
 
@@ -12,6 +12,8 @@ COMMENT=	Maximum likelihood analysis of molecular sequence data
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
+# mv: rename pstep.o to ppstep.o: No such file or directory
+# and link errors
 MAKE_JOBS_SAFE=	no
 
 INSTALLATION_DIRS=	share/doc/puzzle \
