@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/04/27 10:23:50 adam Exp $
+
+BLAKE2s (qemu_qmp-0.0.6.tar.gz) = 9c1957aeeb2fdffeaaac2d45ba620b0fa6ec0dc6587f23bd7344aef14fc3d4de
+SHA512 (qemu_qmp-0.0.6.tar.gz) = c7eba0dbb855609f1f423800f143453b77f9eb428d8d10c5648d3df96f2ab3b7e51b39863aa1094c7dfc45dd59c0ff605a0cd485e435b55353c0cb300c6cb552
+Size (qemu_qmp-0.0.6.tar.gz) = 81799 bytes
