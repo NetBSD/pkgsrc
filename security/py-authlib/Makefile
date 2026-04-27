@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2026/04/23 09:28:39 adam Exp $
+# $NetBSD: Makefile,v 1.37 2026/04/27 05:45:44 wiz Exp $
 
 DISTNAME=	authlib-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
-MASTER_SITES=	${MASTER_SITE_PYPI:=j/joserfc/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/authlib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/authlib/joserfc
