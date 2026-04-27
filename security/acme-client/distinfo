@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1 2025/10/20 19:09:17 vins Exp $
+$NetBSD: distinfo,v 1.2 2026/04/27 18:51:24 vins Exp $
 
-BLAKE2s (acme-client-1.3.5.tar.gz) = 10a942592124cf90c1ea1d1deecd3748cd1fe37d8835412d056500ba2c5ab6fc
-SHA512 (acme-client-1.3.5.tar.gz) = cfd8ada04b8a3e9d5ccf7193bafe309f2e6b4a5b6fb7c99b1d651b08190a43a053a479abf00fb2a4ba9bab839979a212b71388dc6f162c9176033766defd3a6c
-Size (acme-client-1.3.5.tar.gz) = 221427 bytes
-SHA1 (patch-acme-client.conf) = 2b6508a16bdcc3d59c37185e040b10b1623e9e04
+BLAKE2s (acme-client-1.3.6.tar.gz) = 48a05dbf1302a8653d0b0db4e2828ca34df64a5fe30e4a13c1454acd1374f56f
+SHA512 (acme-client-1.3.6.tar.gz) = 873a4cb5d3e02a29af9bf7244a52367ecc41693f3e7bfa3a01aae0bba9e13f53e6aa6acfeb1d63b9d0ea9673cebde4a9ea5beef68ad636fdcf8a7093c2f28863
+Size (acme-client-1.3.6.tar.gz) = 220192 bytes
 SHA1 (patch-compat__vis.c) = 0a2db8965e1a8d8c66418db8189d5871487794fa
