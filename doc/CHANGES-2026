@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2634 2026/04/28 07:13:44 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2635 2026/04/28 07:48:56 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4050,3 +4050,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/p5-PerlMagick to 7.1.2.21 [wiz 2026-04-28]
 	Updated net/openvpn to 2.7.3 [adam 2026-04-28]
 	Updated graphics/vigra to 1.12.4 [adam 2026-04-28]
+	Updated devel/lxqt-build-tools to 2.4.0 [pin 2026-04-28]
