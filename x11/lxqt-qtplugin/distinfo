@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2025/11/11 03:05:35 gutteridge Exp $
+$NetBSD: distinfo,v 1.17 2026/04/28 08:23:32 pin Exp $
 
-BLAKE2s (lxqt-qtplugin-2.3.0.tar.xz) = b27502fdec8c45be55a54f06c8249499745d6cfc78d90212ad9feb38d39f1133
-SHA512 (lxqt-qtplugin-2.3.0.tar.xz) = c782e74a72cf133499d085dd4683147e5b40872b84031246c417dc81882d6d30c6c8eeee5300b5c08da54bf8364f12fb4165be0b769a12cc28844b91fbeb2f18
-Size (lxqt-qtplugin-2.3.0.tar.xz) = 24300 bytes
+BLAKE2s (lxqt-qtplugin-2.4.0.tar.xz) = ff5f0294cab7bf978798e639d22ba0d85caaafbc041973af225cbf7ffea8bcb0
+SHA512 (lxqt-qtplugin-2.4.0.tar.xz) = b5671f4d975449d768152c08287733a63e3f64d8868bebe11ffa11f8b5336adcd257fcf738c9196f7de217b099e356886a539279dd6ff2c3657afd3961ff2933
+Size (lxqt-qtplugin-2.4.0.tar.xz) = 25100 bytes
