@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.4 2026/04/12 08:46:30 nia Exp $
+# $NetBSD: Makefile.common,v 1.5 2026/04/28 22:04:29 nia Exp $
 # used by www/palemoon/Makefile
 # used by www/palemoon-gtk3/Makefile
 #
 # for build instructions see
 # https://developer.palemoon.org/build/linux/
 
-PM_VER=		34.2.0
+PM_VER=		34.2.1
 CATEGORIES=	www
 
 DISTINFO_FILE=	${.CURDIR}/../../www/palemoon/distinfo
@@ -24,7 +24,7 @@ SITES.palemoon.tar.gz= \
 	-https://repo.palemoon.org/MoonchildProductions/Pale-Moon/archive/${PM_VER}_Release.tar.gz
 
 SITES.uxp.tar.gz= \
-	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_20260406.tar.gz
+	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_20260428.tar.gz
 
 SITES.icudt${ICU_MAJOR}b.dat.gz=	${MASTER_SITE_LOCAL}
 
