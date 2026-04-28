@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2664 2026/04/28 09:10:34 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2665 2026/04/28 09:19:24 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4083,3 +4083,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/lxqt-panel to 2.4.0 [pin 2026-04-28]
 	Updated www/py-url-normalize to 3.0.0 [adam 2026-04-28]
 	Updated devel/py-typer to 0.25.0 [adam 2026-04-28]
+	Updated sysutils/gam to 7.42.00 [sborrill 2026-04-28]
