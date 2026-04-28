@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2669 2026/04/28 09:58:24 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2670 2026/04/28 10:09:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4089,3 +4089,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/dos2unix to 7.5.5 [adam 2026-04-28]
 	Updated security/py-acme-tiny to 5.0.3 [adam 2026-04-28]
 	Updated shells/oh-my-posh to 29.11.0 [pin 2026-04-28]
+	Updated mail/py-checkdmarc to 5.15.2 [adam 2026-04-28]
