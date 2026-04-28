@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/04/28 01:25:31 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/04/28 08:47:26 pin Exp $
 bin/pavucontrol-qt
 share/applications/pavucontrol-qt.desktop
 share/pavucontrol-qt/translations/pavucontrol-qt_ar.qm
@@ -28,6 +28,7 @@ share/pavucontrol-qt/translations/pavucontrol-qt_id.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_it.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_ja.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_ka.qm
+share/pavucontrol-qt/translations/pavucontrol-qt_kk.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_kn.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_ko.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_lg.qm
