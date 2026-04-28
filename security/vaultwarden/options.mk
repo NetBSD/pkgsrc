@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2026/02/24 10:27:33 adam Exp $
+# $NetBSD: options.mk,v 1.10 2026/04/28 08:36:15 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vaultwarden
 PKG_SUPPORTED_OPTIONS=		web-vault
@@ -30,7 +30,7 @@ RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-client}/
 
 .if !empty(PKG_OPTIONS:Mweb-vault)
 WEB_VAULT_FILE=		bw_web_v${WEB_VAULT_VERS}.tar.gz
-WEB_VAULT_VERS=		2026.1.1
+WEB_VAULT_VERS=		2026.3.1
 DISTFILES+=		${WEB_VAULT_FILE}
 SITES.${WEB_VAULT_FILE}= ${MASTER_SITE_GITHUB:=dani-garcia/bw_web_builds/releases/download/v${WEB_VAULT_VERS}/}
 
