@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2026/02/06 10:06:15 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2026/04/28 07:56:50 pin Exp $
 
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
-DISTNAME=	liblxqt-2.3.0
-PKGREVISION=	3
+DISTNAME=	liblxqt-2.4.0
 CATEGORIES=	x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,7 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config perl
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.3.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.4.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 LDFLAGS.SunOS+=			-lsocket
