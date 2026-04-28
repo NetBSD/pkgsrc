@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/11/11 03:11:22 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/04/28 08:30:24 pin Exp $
 bin/lxqt-runner
 man/man1/lxqt-runner.1
 share/examples/autostart/lxqt-runner.desktop
@@ -32,6 +32,7 @@ share/lxqt/translations/lxqt-runner/lxqt-runner_it.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_ja.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_ka.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_kab.qm
+share/lxqt/translations/lxqt-runner/lxqt-runner_kk.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_ko.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_lg.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_lt.qm

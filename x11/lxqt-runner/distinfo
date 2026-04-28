@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2025/11/11 03:11:22 gutteridge Exp $
+$NetBSD: distinfo,v 1.18 2026/04/28 08:30:24 pin Exp $
 
-BLAKE2s (lxqt-runner-2.3.0.tar.xz) = 44953209a69ccdda5c4bab3c20e6d78f9d0cd2bfd6697ffc1bba33c769d837d0
-SHA512 (lxqt-runner-2.3.0.tar.xz) = 0d2a7d6ceba0ff7bc13daefa503994d8500b2f6ed9e513afaf0b5be1ec33c35796a3c5f00b8fde7ace996619c6028eb5459e86f22f0bcd261e2530332b7a5049
-Size (lxqt-runner-2.3.0.tar.xz) = 233588 bytes
+BLAKE2s (lxqt-runner-2.4.0.tar.xz) = f26d5e8ae68c74dc9144b4ffb10dc29d91e75bad4585e1bd156f9fbbaa12daa2
+SHA512 (lxqt-runner-2.4.0.tar.xz) = 6a16fe4cc4e8269b3a727cff1cef478d617909d3f54ebdb09c2bd59b09a9b7f31fb660f0431b40dd5b5f98d567cd47db58a8bc9849f01782707b875c37ee7042
+Size (lxqt-runner-2.4.0.tar.xz) = 235852 bytes
 SHA1 (patch-autostart_CMakeLists.txt) = 2c8a3e36ddb9f7c0ac4fafc76fc2ea6fcb6083f9
