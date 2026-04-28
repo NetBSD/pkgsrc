@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/07/28 21:25:49 dkazankov Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/04/28 09:04:50 adam Exp $
 bin/url-normalize-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -49,6 +49,9 @@ ${PYSITELIB}/url_normalize/py.typed
 ${PYSITELIB}/url_normalize/tools.py
 ${PYSITELIB}/url_normalize/tools.pyc
 ${PYSITELIB}/url_normalize/tools.pyo
+${PYSITELIB}/url_normalize/url_humanize.py
+${PYSITELIB}/url_normalize/url_humanize.pyc
+${PYSITELIB}/url_normalize/url_humanize.pyo
 ${PYSITELIB}/url_normalize/url_normalize.py
 ${PYSITELIB}/url_normalize/url_normalize.pyc
 ${PYSITELIB}/url_normalize/url_normalize.pyo
