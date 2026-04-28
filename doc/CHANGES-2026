@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2631 2026/04/27 20:47:52 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2632 2026/04/28 06:07:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4046,3 +4046,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/acme-client to 1.3.6 [vins 2026-04-27]
 	Updated devel/py-vcs-versioning to 1.1.1nb1 [wiz 2026-04-27]
 	Updated mail/neomutt to 20260406nb2 [wiz 2026-04-27]
+	Updated graphics/ImageMagick to 7.1.2.21 [wiz 2026-04-28]
