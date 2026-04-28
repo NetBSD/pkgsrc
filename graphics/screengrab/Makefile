@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2026/02/06 10:05:06 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/04/28 08:37:54 pin Exp $
 
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
-DISTNAME=	screengrab-3.1.0
-PKGREVISION=	3
+DISTNAME=	screengrab-3.2.0
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,7 +17,7 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/screengrab \
 		-L${PREFIX}/lib/screengrab/
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.3.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.4.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"
