@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2659 2026/04/28 08:41:37 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2660 2026/04/28 08:43:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4077,3 +4077,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/py-simplejson to 4.1.1 [adam 2026-04-28]
 	Updated graphics/screengrab to 3.2.0 [pin 2026-04-28]
 	Updated x11/lxqt-config to 2.4.0 [pin 2026-04-28]
+	Updated sysutils/pcmanfm-qt to 2.4.0 [pin 2026-04-28]
