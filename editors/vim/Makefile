@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2023/09/16 12:43:13 rhialto Exp $
+# $NetBSD: Makefile,v 1.81 2026/04/28 12:11:52 morr Exp $
 
 PKGNAME=		vim-${VIM_VERSION}.${VIM_PATCHLEVEL}
 
@@ -13,7 +13,11 @@ CONFLICTS+=		vim-gtk2-[0-9]* vim-gtk3-[0-9]* vim-motif-[0-9]*
 CONFIGURE_ARGS+=	--enable-gui=no --without-x
 CONFIGURE_ARGS+=	--with-tlib=${BUILDLINK_LIBNAME.termcap}
 
+.if ${OPSYS} == "Cygwin"
+BUILD_TARGET=		vim.exe
+.else
 BUILD_TARGET=		vim
+.endif
 INSTALL_TARGET=		installvimbin installvimdiff installtutorbin
 TEST_TARGET=		check
 
