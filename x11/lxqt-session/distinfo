@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.21 2025/11/11 03:06:15 gutteridge Exp $
+$NetBSD: distinfo,v 1.22 2026/04/28 09:20:04 pin Exp $
 
-BLAKE2s (lxqt-session-2.3.0.tar.xz) = b9232416b2a657fdee681d515bac935e4b12993f5fdc4648559fa8409317c393
-SHA512 (lxqt-session-2.3.0.tar.xz) = d366e39e365b2986f524681e13de94d36e1b3b4aa7933423b19ea1defbded9cffac31a2ba62553b7d57a3975f6d849ed6b19f6b3d011481c1d81d94470872bb4
-Size (lxqt-session-2.3.0.tar.xz) = 221240 bytes
+BLAKE2s (lxqt-session-2.4.0.tar.xz) = 9762b3975815048081e53ba05492f47a7c82a5f739e09260ed921e7eabacdb8c
+SHA512 (lxqt-session-2.4.0.tar.xz) = ab016a09cae36cbcf223187cf94b2d1c46d281c665a4709bc60f50024aa51046f61f4685993960d8bfcdc7a2f15d9700814ec577a9b73e54409aab670a3e1c39
+Size (lxqt-session-2.4.0.tar.xz) = 224600 bytes
 SHA1 (patch-CMakeLists.txt) = c1e1e86f8339753228d707fdd2e5773a30dc80fd
 SHA1 (patch-autostart_CMakeLists.txt) = a791cc51e03e794e1bf81bf0d6f8462ba11e2e84
