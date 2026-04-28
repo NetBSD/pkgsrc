@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2025/11/11 02:54:33 gutteridge Exp $
+$NetBSD: distinfo,v 1.17 2026/04/28 08:08:43 pin Exp $
 
-BLAKE2s (lximage-qt-2.3.0.tar.xz) = ac31576fe496daa6ce669f0e58692fa279810f2b181823a94945c325cf9eaa2d
-SHA512 (lximage-qt-2.3.0.tar.xz) = 6cc25cedc08c08f47993731f539e78152e65dbd4c72923cb32750ff3dec7491fd3a5dac14a173e51bb4880e19938fa5c744f2521cf4c736320f7c4d22a7b953a
-Size (lximage-qt-2.3.0.tar.xz) = 862192 bytes
+BLAKE2s (lximage-qt-2.4.0.tar.xz) = 89508cfa335f96066df55eeeb7894646a450df80a30875ad5959fd4fe6fbf4d6
+SHA512 (lximage-qt-2.4.0.tar.xz) = 9724ea2607bedf4b982d34fae7f06ffa1463e381c832db16bbae7bf64d2f472ad01dca826b9854155675243dd4f0fcbfde7865bf6e282d97072e3a515218f503
+Size (lximage-qt-2.4.0.tar.xz) = 869496 bytes
