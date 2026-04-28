@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2025/11/11 03:06:15 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/04/28 09:20:04 pin Exp $
 bin/lxqt-config-session
 bin/lxqt-leave
 bin/lxqt-session
@@ -45,6 +45,7 @@ share/lxqt/translations/lxqt-config-session/lxqt-config-session_id.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_it.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_ja.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_ka.qm
+share/lxqt/translations/lxqt-config-session/lxqt-config-session_kk.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_ko.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_lg.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_lt.qm
