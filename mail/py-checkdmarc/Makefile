@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2026/02/25 13:41:49 adam Exp $
+# $NetBSD: Makefile,v 1.30 2026/04/28 10:08:26 adam Exp $
 
-DISTNAME=	checkdmarc-5.14.1
+DISTNAME=	checkdmarc-5.15.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/checkdmarc/}
@@ -27,8 +27,7 @@ USE_LANGUAGES=	# none
 
 REPLACE_PYTHON=	checkdmarc.py
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} checkdmarc checkdmarc-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	checkdmarc
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
