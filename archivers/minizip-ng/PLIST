@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/04/26 08:32:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/04/28 08:14:33 adam Exp $
 include/minizip-ng/mz.h
 include/minizip-ng/mz_config.h
 include/minizip-ng/mz_crypt.h
@@ -14,7 +14,6 @@ include/minizip-ng/mz_strm_pkcrypt.h
 include/minizip-ng/mz_strm_split.h
 include/minizip-ng/mz_strm_wzaes.h
 ${PLIST.zlib}include/minizip-ng/mz_strm_zlib.h
-include/minizip-ng/mz_strm_zstd.h
 include/minizip-ng/mz_zip.h
 include/minizip-ng/mz_zip_rw.h
 lib/cmake/minizip-ng/minizip-ng-config-version.cmake
