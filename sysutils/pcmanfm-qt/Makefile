@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2026/02/06 10:05:56 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/04/28 08:42:48 pin Exp $
 
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
-DISTNAME=	pcmanfm-qt-2.3.0
-PKGREVISION=	3
+DISTNAME=	pcmanfm-qt-2.4.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -26,7 +25,7 @@ CONF_FILES+=		${AUTOSTART_CONF}/lxqt-desktop.desktop \
 CONF_FILES+=		${SETTINGS_CONF}/settings.conf \
 			${PKG_SYSCONFDIR}/pcmanfm-qt/lxqt/settings.conf
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.3.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.4.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../devel/cmake/build.mk"
