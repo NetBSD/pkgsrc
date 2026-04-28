@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2671 2026/04/28 11:54:31 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2672 2026/04/28 13:07:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4091,3 +4091,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 29.11.0 [pin 2026-04-28]
 	Updated mail/py-checkdmarc to 5.15.2 [adam 2026-04-28]
 	Updated devel/mise to 2026.4.24 [pin 2026-04-28]
+	Updated devel/py-pydantic-core to 2.46.3 [adam 2026-04-28]
+	Updated devel/py-pydantic to 2.13.3 [adam 2026-04-28]
