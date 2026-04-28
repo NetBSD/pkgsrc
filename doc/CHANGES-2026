@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2657 2026/04/28 08:38:04 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2658 2026/04/28 08:39:05 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4075,3 +4075,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/lxqt-archiver to 1.4.0 [pin 2026-04-28]
 	Updated security/vaultwarden to 1.35.8 [adam 2026-04-28]
 	Updated converters/py-simplejson to 4.1.1 [adam 2026-04-28]
+	Updated graphics/screengrab to 3.2.0 [pin 2026-04-28]
