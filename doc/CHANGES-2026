@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2662 2026/04/28 08:48:40 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2663 2026/04/28 08:50:56 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4080,3 +4080,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/pcmanfm-qt to 2.4.0 [pin 2026-04-28]
 	Updated sysutils/lxqt-powermanagement to 2.4.0 [pin 2026-04-28]
 	Updated audio/pavucontrol-qt to 2.4.0 [pin 2026-04-28]
+	Updated x11/lxqt-panel to 2.4.0 [pin 2026-04-28]
