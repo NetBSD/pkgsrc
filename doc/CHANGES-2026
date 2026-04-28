@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2667 2026/04/28 09:25:56 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2668 2026/04/28 09:55:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4086,3 +4086,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/gam to 7.42.00 [sborrill 2026-04-28]
 	Updated x11/lxqt-session to 2.4.0 [pin 2026-04-28]
 	Updated meta-pkgs/lxqt to 2.4.0 [pin 2026-04-28]
+	Updated converters/dos2unix to 7.5.5 [adam 2026-04-28]
+	Updated security/py-acme-tiny to 5.0.3 [adam 2026-04-28]
