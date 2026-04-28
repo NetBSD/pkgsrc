@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2637 2026/04/28 07:53:37 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2638 2026/04/28 07:55:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4053,3 +4053,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/lxqt-build-tools to 2.4.0 [pin 2026-04-28]
 	Updated x11/libqtxdg to 4.4.0 [pin 2026-04-28]
 	Updated x11/qtxdg-tools to 4.4.0 [pin 2026-04-28]
+	Updated sysutils/lxqt-menu-data to 2.4.0 [pin 2026-04-28]
