@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.229 2026/04/20 18:14:08 adam Exp $
+# $NetBSD: Makefile,v 1.230 2026/04/28 06:06:55 wiz Exp $
 
-PKGREVISION= 1
 .include "../../graphics/ImageMagick/Makefile.common"
 
 PKGNAME=	p5-PerlMagick-${DISTVERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://imagemagick.org/script/perl-magick.php
+HOMEPAGE=	https://imagemagick.org/perl-magick/
 COMMENT=	Object-oriented Perl interface to ImageMagick
 
 DISTINFO_FILE=	${.CURDIR}/../../graphics/ImageMagick/distinfo
