@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2025/11/11 03:00:22 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/04/28 08:40:28 pin Exp $
 bin/lxqt-config
 bin/lxqt-config-appearance
 bin/lxqt-config-brightness
@@ -101,6 +101,7 @@ share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_id.qm
 share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_it.qm
 share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_ja.qm
 share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_ka.qm
+share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_kk.qm
 share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_ko.qm
 share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_lg.qm
 share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_lt.qm
@@ -185,6 +186,7 @@ share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associati
 share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associations_en_GB.qm
 share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associations_es.qm
 share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associations_et.qm
+share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associations_eu.qm
 share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associations_fi.qm
 share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associations_fr.qm
 share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associations_gl.qm
@@ -274,6 +276,7 @@ share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_da.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_de.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_el.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_en_GB.qm
+share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_eo.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_es.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_et.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_eu.qm
