@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.105 2026/04/27 07:55:52 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.106 2026/04/28 11:53:22 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -833,7 +833,6 @@ CARGO_CRATE_DEPENDS+=	tls_codec_derive-0.4.2
 CARGO_CRATE_DEPENDS+=	tokio-1.52.1
 CARGO_CRATE_DEPENDS+=	tokio-macros-2.7.0
 CARGO_CRATE_DEPENDS+=	tokio-native-tls-0.3.1
-CARGO_CRATE_DEPENDS+=	tokio-retry-0.3.1
 CARGO_CRATE_DEPENDS+=	tokio-rustls-0.26.4
 CARGO_CRATE_DEPENDS+=	tokio-stream-0.1.18
 CARGO_CRATE_DEPENDS+=	tokio-util-0.7.18
