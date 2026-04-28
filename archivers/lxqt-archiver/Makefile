@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2026/02/06 10:04:12 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2026/04/28 08:35:06 pin Exp $
 
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
-DISTNAME=	lxqt-archiver-1.3.0
-PKGREVISION=	3
+DISTNAME=	lxqt-archiver-1.4.0
 CATEGORIES=	archivers
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,7 +14,7 @@ USE_TOOLS+=	pkg-config perl bsdtar:run gzip:run 7za:run gtar:run bzip2:run unzip
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.3.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.4.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 BUILDLINK_API_DEPENDS.qt6-qtbase+=      qt6-qtbase>=6.6.0
