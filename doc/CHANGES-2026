@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2647 2026/04/28 08:15:44 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2648 2026/04/28 08:17:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4064,3 +4064,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/lxqt-policykit to 2.4.0 [pin 2026-04-28]
 	Updated archivers/7-zip to 26.01 [adam 2026-04-28]
 	Updated archivers/minizip-ng to 4.2.1 [adam 2026-04-28]
+	Updated x11/lxqt-admin to 2.4.0 [pin 2026-04-28]
