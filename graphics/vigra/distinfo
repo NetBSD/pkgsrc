@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.21 2025/12/25 16:17:19 adam Exp $
+$NetBSD: distinfo,v 1.22 2026/04/28 07:13:13 adam Exp $
 
-BLAKE2s (vigra-1.12.3-src.tar.gz) = 9029ae2aea5afdc10ee0a8eb3c68cc0a5a5bf9ef1b46e9ef0bcc84b8a1edf8e1
-SHA512 (vigra-1.12.3-src.tar.gz) = e2f28ded5538fb088409f51bb1c210c951b7a5ab1611f94b329d66e7b4b6903715bdbbb3d5f2ef927ed282b548fd067b6d8527409236f72346bd7780a5a5799a
-Size (vigra-1.12.3-src.tar.gz) = 34206860 bytes
+BLAKE2s (vigra-1.12.4-src.tar.gz) = 54978813a1a80290f4fd385a9e22c3826b1cd2cad5b75161e47922ba387c3254
+SHA512 (vigra-1.12.4-src.tar.gz) = e5eb266f8b3e0822e6b48efb67e558bf21b005f64b6496c2c69e64fac969dfdad251f61d7cc334fbadeaf8c4f8d2134ae4de87246eb6b1b740c4ad6bc7ad3945
+Size (vigra-1.12.4-src.tar.gz) = 34207556 bytes
 SHA1 (patch-config_FindOpenEXR.cmake) = 8649351dc0a3e1df4827214b53431358c1b70972
 SHA1 (patch-include-vigra-mathutil.hxx) = 45a3e37c24d28a5a5ff9f70281f93c9e0e77348d
