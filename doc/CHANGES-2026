@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2670 2026/04/28 10:09:00 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2671 2026/04/28 11:54:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4090,3 +4090,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-acme-tiny to 5.0.3 [adam 2026-04-28]
 	Updated shells/oh-my-posh to 29.11.0 [pin 2026-04-28]
 	Updated mail/py-checkdmarc to 5.15.2 [adam 2026-04-28]
+	Updated devel/mise to 2026.4.24 [pin 2026-04-28]
