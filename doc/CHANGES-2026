@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2651 2026/04/28 08:24:42 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2652 2026/04/28 08:27:01 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4068,3 +4068,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/libdbusmenu-lxqt to 0.4.0 [pin 2026-04-28]
 	Updated security/lxqt-openssh-askpass to 2.4.0 [pin 2026-04-28]
 	Updated x11/lxqt-qtplugin to 2.4.0 [pin 2026-04-28]
+	Updated x11/lxqt-globalkeys to 2.4.0 [pin 2026-04-28]
