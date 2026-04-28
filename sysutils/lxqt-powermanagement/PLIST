@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/11/11 03:04:32 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/04/28 08:45:08 pin Exp $
 bin/lxqt-config-powermanagement
 bin/lxqt-powermanagement
 share/applications/lxqt-config-powermanagement.desktop
@@ -27,6 +27,7 @@ share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_it.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_ja.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_ka.qm
+share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_kk.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_ko.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_lg.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_lt.qm
@@ -69,6 +70,7 @@ share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_it.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_ja.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_ka.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_kab.qm
+share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_kk.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_ko.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_lg.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_lt.qm
