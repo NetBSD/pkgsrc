@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2643 2026/04/28 08:07:26 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2644 2026/04/28 08:09:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4059,3 +4059,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/lxqt-themes to 2.4.0 [pin 2026-04-28]
 	Updated x11/qtermwidget to 2.4.0 [pin 2026-04-28]
 	Updated x11/qterminal to 2.4.0 [pin 2026-04-28]
+	Updated graphics/lximage-qt to 2.4.0 [pin 2026-04-28]
