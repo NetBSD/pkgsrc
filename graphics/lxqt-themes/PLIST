@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/11/11 02:48:42 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/04/28 08:01:47 pin Exp $
 share/icons/hicolor/scalable/apps/lxqt.svg
 share/icons/hicolor/scalable/places/start-here-lxqt.svg
 share/lxqt/graphics/README
@@ -99,6 +99,7 @@ share/lxqt/themes/Clearlooks/assets/scrollbars/handle-v.png
 share/lxqt/themes/Clearlooks/assets/scrollbars/scrollbar-h.png
 share/lxqt/themes/Clearlooks/assets/scrollbars/scrollbar-v.png
 share/lxqt/themes/Clearlooks/assets/scrollbars/slider-active.png
+share/lxqt/themes/Clearlooks/assets/scrollbars/slider-v.png
 share/lxqt/themes/Clearlooks/assets/scrollbars/slider.png
 share/lxqt/themes/Clearlooks/assets/scrollbars/subpage.png
 share/lxqt/themes/Clearlooks/lxqt-config.qss
