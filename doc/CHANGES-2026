@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2640 2026/04/28 08:00:20 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2641 2026/04/28 08:02:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4056,3 +4056,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/lxqt-menu-data to 2.4.0 [pin 2026-04-28]
 	Updated x11/liblxqt to 2.4.0 [pin 2026-04-28]
 	Updated x11/libfm-qt to 2.4.0 [pin 2026-04-28]
+	Updated graphics/lxqt-themes to 2.4.0 [pin 2026-04-28]
