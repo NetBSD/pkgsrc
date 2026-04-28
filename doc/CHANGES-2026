@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2654 2026/04/28 08:31:32 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2655 2026/04/28 08:34:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4071,3 +4071,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/lxqt-globalkeys to 2.4.0 [pin 2026-04-28]
 	Updated x11/lxqt-notificationd to 2.4.0 [pin 2026-04-28]
 	Updated x11/lxqt-runner to 2.4.0 [pin 2026-04-28]
+	Updated security/lxqt-sudo to 2.4.0 [pin 2026-04-28]
