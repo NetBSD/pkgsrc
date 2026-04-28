@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2674 2026/04/28 17:46:31 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2675 2026/04/28 22:04:52 nia Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4095,3 +4095,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pydantic to 2.13.3 [adam 2026-04-28]
 	Updated mail/opendmarc to 1.4.2nb4 [jperkin 2026-04-28]
 	Updated textproc/treemd to 0.5.11 [pin 2026-04-28]
+	Updated www/palemoon-gtk3 to 34.2.1 [nia 2026-04-28]
+	Updated www/palemoon to 34.2.1 [nia 2026-04-28]
