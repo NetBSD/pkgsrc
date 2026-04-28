@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2025/04/28 01:39:15 gutteridge Exp $
+$NetBSD: distinfo,v 1.4 2026/04/28 08:18:40 pin Exp $
 
-BLAKE2s (libdbusmenu-lxqt-0.3.0.tar.xz) = 768765b77eec6246056979054e17b46c7e1d09811f7e95039e9d13651936cdb4
-SHA512 (libdbusmenu-lxqt-0.3.0.tar.xz) = 32cf42661f324cb61b4b87b09ab0f8dc60c63f855b3c7d711c17e228337f87fa067a50180be877744a3471b30e4ee6e363d117903a391420d4a9d9166ce02115
-Size (libdbusmenu-lxqt-0.3.0.tar.xz) = 40084 bytes
+BLAKE2s (libdbusmenu-lxqt-0.4.0.tar.xz) = 1c48f7303b2de5e118cb90c00f0b8265a242e1700132388d2c3d2278b6bdc856
+SHA512 (libdbusmenu-lxqt-0.4.0.tar.xz) = c51653485fbd0c203f6b2bbcbd6a237fa65589bc5c4410c50d9487691f230bd6ff9b6615f22429de219c8afbf6c29b05706b9de56520a09de52bf9b4f565659e
+Size (libdbusmenu-lxqt-0.4.0.tar.xz) = 40380 bytes
 SHA1 (patch-tools_CMakeLists.txt) = 56c1f4e958a41a933408c42d100e9f545842b864
