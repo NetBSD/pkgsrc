@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2680 2026/04/29 16:10:36 fox Exp $
+$NetBSD: CHANGES-2026,v 1.2681 2026/04/29 16:19:45 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4102,3 +4102,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/curl to 8.20.0 [wiz 2026-04-29]
 	Updated security/stunnel to 5.78 [sborrill 2026-04-29]
 	Updated sysutils/htop to 3.5.1 [fox 2026-04-29]
+	Updated geography/qgis to 3.44.9 [gdt 2026-04-29]
