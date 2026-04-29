@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2679 2026/04/29 13:41:18 sborrill Exp $
+$NetBSD: CHANGES-2026,v 1.2680 2026/04/29 16:10:36 fox Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4101,3 +4101,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/p5-Starman to 0.4018 [wiz 2026-04-29]
 	Updated www/curl to 8.20.0 [wiz 2026-04-29]
 	Updated security/stunnel to 5.78 [sborrill 2026-04-29]
+	Updated sysutils/htop to 3.5.1 [fox 2026-04-29]
