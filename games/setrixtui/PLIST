@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2026/04/29 19:14:03 wiz Exp $
+bin/setrixtui

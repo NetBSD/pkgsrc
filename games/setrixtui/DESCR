@@ -1,0 +1,8 @@
+Setrixtui is a Setris/Sandtrix-style game in the terminal. Place
+coloured blocks; when they lock, they turn into sand.
+
+Clear lines by making a single colour connect the left edge to the
+right edge (8-neighbour, path can be diagonal).
+
+Matching piece colours and completing those spans scores points;
+remaining sand falls under gravity.
