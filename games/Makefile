@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.562 2026/02/08 09:55:07 wiz Exp $
+# $NetBSD: Makefile,v 1.563 2026/04/29 19:14:22 wiz Exp $
 #
 
 COMMENT=	Games
@@ -383,6 +383,7 @@ SUBDIR+=	scummvm-bass
 SUBDIR+=	scummvm-fotaq
 SUBDIR+=	scummvm-tools
 SUBDIR+=	sdlpop
+SUBDIR+=	setrixtui
 SUBDIR+=	sex
 SUBDIR+=	sienna
 SUBDIR+=	simgear
