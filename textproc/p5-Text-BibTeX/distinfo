@@ -1,6 +1,11 @@
-$NetBSD: distinfo,v 1.30 2025/05/30 01:12:18 wen Exp $
+$NetBSD: distinfo,v 1.31 2026/04/29 21:08:24 markd Exp $
 
 BLAKE2s (Text-BibTeX-0.91.tar.gz) = a4ac900154e40a05c18e5bc4f24d7d168549b0e6fe885508550def49ba7778af
 SHA512 (Text-BibTeX-0.91.tar.gz) = 7b2f010630b3fc51e9256d52349b16e99c560154216c0f76402d382ad80317296edf74b4b3013df6f2ac941afac199f346bdd2a05236df41e440ec87cf3d07f0
 Size (Text-BibTeX-0.91.tar.gz) = 302052 bytes
+SHA1 (patch-btparse_src_lex__auxiliary.c) = 466491d86300ceee2607b5fd510b5c39fd7f3df2
+SHA1 (patch-btparse_src_names.c) = 67942f8f93fa01b0cfda1629bfe133d2cf83585a
+SHA1 (patch-btparse_src_string__util.c) = ecced2901422189da2d2208b03e010917539b43a
+SHA1 (patch-btparse_src_sym.h) = cd2053641221a5a8e7b6f3f9b0c5cf72816a133b
+SHA1 (patch-btparse_src_util.c) = 5e40e65cc33aa2bc0c17b630abcf6617268be0b1
 SHA1 (patch-inc_MyBuilder.pm) = c584445f48a0e390925cefe8e7b1222aa129b1d6
