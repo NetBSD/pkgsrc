@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2678 2026/04/29 07:06:01 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2679 2026/04/29 13:41:18 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4100,3 +4100,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ruby-nokogiri to 1.19.3 [tsutsui 2026-04-29]
 	Updated www/p5-Starman to 0.4018 [wiz 2026-04-29]
 	Updated www/curl to 8.20.0 [wiz 2026-04-29]
+	Updated security/stunnel to 5.78 [sborrill 2026-04-29]
