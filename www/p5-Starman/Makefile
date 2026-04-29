@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2025/07/04 08:49:31 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/04/29 06:52:22 wiz Exp $
 
-DISTNAME=	Starman-0.4015
+DISTNAME=	Starman-0.4018
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	www perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plack/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MI/MIYAGAWA/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Starman
@@ -22,7 +21,12 @@ DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-HTTP-Parser-XS-[0-9]*:../../www/p5-HTTP-Parser-XS
 DEPENDS+=	p5-Net-Server>=0.91:../../net/p5-Net-Server
 DEPENDS+=	p5-Plack>=0.9931:../../www/p5-Plack
-#DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
+TEST_DEPENDS+=	p5-Test-SharedFork-[0-9]*:../../devel/p5-Test-SharedFork
+TEST_DEPENDS+=	p5-LWP-Protocol-https-[0-9]*:../../www/p5-LWP-Protocol-https
+
+.if make(test)
+ALLOW_NETWORK_ACCESS=	yes
+.endif
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
