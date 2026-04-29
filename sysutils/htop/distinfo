@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2025/05/03 16:55:04 nia Exp $
+$NetBSD: distinfo,v 1.29 2026/04/29 16:10:16 fox Exp $
 
-BLAKE2s (htop-3.4.1.tar.xz) = 37587be9f93dba387c44a2e18e5ad8a808bf23e36d80a6256222746dbe730181
-SHA512 (htop-3.4.1.tar.xz) = 34c3ce18873c17ad865eb417a9dfd28e58e6e3b428f495bf2b4d08393c77ce69fcb32cde08d489c2fa6a1561dc738ee338b316ec14f327305b325de99a2a70b5
-Size (htop-3.4.1.tar.xz) = 427444 bytes
+BLAKE2s (htop-3.5.1.tar.xz) = 51d0ce81ab2e2f68ddd333a8700d7aa0372fefbd9582be581cb9faf2067ccac6
+SHA512 (htop-3.5.1.tar.xz) = c942cf3e9ddaca4716fdf953968fa242c20d86a69b4be4f2c3e961f8b8cf88defb6d12553432ea061cc1ea46318d5ead722d68a6083ec3208a7b678ae30eb245
+Size (htop-3.5.1.tar.xz) = 461728 bytes
