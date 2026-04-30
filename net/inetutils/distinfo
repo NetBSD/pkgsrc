@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.8 2026/04/19 19:15:38 vins Exp $
+$NetBSD: distinfo,v 1.9 2026/04/30 05:44:15 wiz Exp $
 
-BLAKE2s (inetutils-2.7.tar.gz) = 537183861935001f209af6f8a4a1d9e223bb879aedc4ec0f180a98aaeda2feee
-SHA512 (inetutils-2.7.tar.gz) = 8f36bea126108e8f48f2c436c9ff11684f3bd51c4e48090f0ab8626b8c5878b6dc8c64b84cd7a6220913f68c8602b37c8ac632fe9ef530bf5018c6e51ee1a90b
-Size (inetutils-2.7.tar.gz) = 3157952 bytes
+BLAKE2s (inetutils-2.8.tar.gz) = 4c862ef324da6b9b1ad62d24e56de4918425776fd7d204efaaecd7cdf595e80c
+SHA512 (inetutils-2.8.tar.gz) = 00b33c9d712cf670f16dbefc963fed880088ff67f506df54fd02fdfc0f8c05d379faba5d602c8772c4dc4fd72e1fa8733777d5840784aa86e092eeb5d0f905f7
+Size (inetutils-2.8.tar.gz) = 2985957 bytes
 SHA1 (patch-libinetutils_libinetutils.h) = 4fd40c71340a90cbe606b71655555d98dfc7e2c6
 SHA1 (patch-ping_Makefile.in) = bfc193800d353496ce2dc639803c356eef7a655a
 SHA1 (patch-src_Makefile.in) = a8321822fdd68db4ec86ad232b59aaad92583297
 SHA1 (patch-src_syslogd.c) = 608579f47456d85b29520e7021c86cf80f6faa1c
-SHA1 (patch-telnetd_utility.c) = b47deef43e1b701af085b59ae09604b5a911113c
