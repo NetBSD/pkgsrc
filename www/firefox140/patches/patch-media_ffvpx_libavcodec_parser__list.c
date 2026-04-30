@@ -1,7 +1,7 @@
 $NetBSD$
 
 Fix build failure due to incompatible pointer types.
-error: initialization of 'const AVCodecParser *' from incompatible pointer type 'const FFCodecParser *'
+https://github.com/mozilla-firefox/firefox/commit/930757b47bf1ce3522468f384570634032f0500b
 
 --- media/ffvpx/libavcodec/parser_list.c.orig	2026-04-27 16:08:57.000000000 +0000
 +++ media/ffvpx/libavcodec/parser_list.c
