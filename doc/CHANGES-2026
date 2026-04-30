@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2696 2026/04/30 11:10:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2697 2026/04/30 11:25:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4161,3 +4161,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ugrep to 7.8.0 [adam 2026-04-30]
 	Updated devel/py-inline-snapshot to 0.32.7 [adam 2026-04-30]
 	Updated biology/py-pydicom to 3.0.2 [adam 2026-04-30]
+	Updated mail/exim to 4.99.2 [adam 2026-04-30]
+	Updated mail/exim-html to 4.99.2 [adam 2026-04-30]
