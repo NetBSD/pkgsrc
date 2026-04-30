@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2708 2026/04/30 12:31:27 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2709 2026/04/30 16:24:09 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4178,3 +4178,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-scrapy to 2.15.2 [adam 2026-04-30]
 	Updated devel/py-test-codspeed to 4.5.0 [adam 2026-04-30]
 	Updated devel/py-test-order to 1.4.0 [adam 2026-04-30]
+	Updated devel/glib2 to 2.88.0nb1 [tsutsui 2026-04-30]
