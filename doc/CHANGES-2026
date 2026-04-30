@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2695 2026/04/30 10:20:25 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2696 2026/04/30 11:10:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4158,3 +4158,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/indi to 2.2.1.1 [adam 2026-04-30]
 	Updated devel/py-zope.event to 6.2 [adam 2026-04-30]
 	Updated devel/py-pathspec to 1.1.1 [adam 2026-04-30]
+	Updated textproc/ugrep to 7.8.0 [adam 2026-04-30]
+	Updated devel/py-inline-snapshot to 0.32.7 [adam 2026-04-30]
+	Updated biology/py-pydicom to 3.0.2 [adam 2026-04-30]
