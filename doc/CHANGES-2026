@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2705 2026/04/30 12:08:34 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.2706 2026/04/30 12:15:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4171,3 +4171,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/sniffnet to 1.5.0 [pin 2026-04-30]
 	Updated textproc/rumdl to 0.1.84 [pin 2026-04-30]
 	Updated ham/hamlib to 4.7.1 [gdt 2026-04-30]
+	Updated security/py-fido2 to 2.2.0 [adam 2026-04-30]
+	Updated devel/py-pip to 26.1 [adam 2026-04-30]
