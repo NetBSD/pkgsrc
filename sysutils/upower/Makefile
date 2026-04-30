@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2025/10/23 20:39:28 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2026/04/30 16:24:01 vins Exp $
 
-DISTNAME=	upower-v1.90.9
+DISTNAME=	upower-v1.91.2
 PKGNAME=	${DISTNAME:S/v//}
-PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	https://gitlab.freedesktop.org/upower/upower/-/archive/v${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -46,7 +45,6 @@ MESON_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR} \
 		-Degdir=${EGDIR} \
 		-Dzshcompletiondir=${PREFIX}/share/zsh/site-functions \
 		-Dman=true \
-		-Dgtk-doc=false \
 		-Didevice=disabled
 
 .if ${OPSYS} =="Linux"
@@ -71,6 +69,9 @@ BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--as-needed
 BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--no-as-needed
 BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,--no-as-needed:-Wl,-zrecord
 BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,--as-needed:-Wl,-zignore
+
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+PKGCONFIG_OVERRIDE+=		output/meson-private/upower-glib.pc
 
 # with --nonet, xsltproc needs a helping hand finding some dtds
 XSLTPROC_PATH=	${PREFIX}/share/doc/dbus
