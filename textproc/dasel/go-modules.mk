@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.4 2026/03/02 11:38:48 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.5 2026/04/30 18:37:30 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/agext/levenshtein/@v/v1.2.1.mod
 GO_MODULE_FILES+=	github.com/agext/levenshtein/@v/v1.2.1.zip
@@ -32,8 +32,8 @@ GO_MODULE_FILES+=	github.com/clipperhouse/uax29/v2/@v/v2.5.0.mod
 GO_MODULE_FILES+=	github.com/clipperhouse/uax29/v2/@v/v2.5.0.zip
 GO_MODULE_FILES+=	github.com/erikgeiser/coninput/@v/v0.0.0-20211004153227-1c3628e74d0f.mod
 GO_MODULE_FILES+=	github.com/erikgeiser/coninput/@v/v0.0.0-20211004153227-1c3628e74d0f.zip
-GO_MODULE_FILES+=	github.com/goccy/go-json/@v/v0.10.5.mod
-GO_MODULE_FILES+=	github.com/goccy/go-json/@v/v0.10.5.zip
+GO_MODULE_FILES+=	github.com/goccy/go-json/@v/v0.10.6.mod
+GO_MODULE_FILES+=	github.com/goccy/go-json/@v/v0.10.6.zip
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.7.0.mod
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.7.0.zip
 GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.24.0.mod
