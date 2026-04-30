@@ -1,0 +1,13 @@
+$NetBSD: patch-etc_UPower.conf.d_meson.build,v 1.1 2026/04/30 16:24:01 vins Exp $
+
+Install to doc dir.
+
+--- etc/UPower.conf.d/meson.build.orig	2026-04-30 15:21:03.158090371 +0000
++++ etc/UPower.conf.d/meson.build
+@@ -1,5 +1,5 @@
+ install_data(
+     'README.md',
+     install_tag: 'doc',
+-    install_dir: get_option('sysconfdir') / 'UPower' / 'UPower.conf.d',
++    install_dir: get_option('datadir') / 'doc' / 'UPower',
+ )
