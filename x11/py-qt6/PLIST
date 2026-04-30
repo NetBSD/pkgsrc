@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/12/07 13:33:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/04/30 07:05:41 adam Exp $
 bin/pylupdate6-${PYVERSSUFFIX}
 bin/pyuic6-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -317,6 +317,7 @@ ${PYSITELIB}/PyQt6/bindings/QtGui/qpointingdevice.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpolygon.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpygui_native_interface.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpygui_qlist.sip
+${PYSITELIB}/PyQt6/bindings/QtGui/qpygui_qmap.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpygui_vulkan.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qquaternion.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qrasterwindow.sip
@@ -702,7 +703,6 @@ ${PYSITELIB}/PyQt6/bindings/QtWidgets/qdrawutil.sip
 ${PYSITELIB}/PyQt6/bindings/QtWidgets/qerrormessage.sip
 ${PYSITELIB}/PyQt6/bindings/QtWidgets/qfiledialog.sip
 ${PYSITELIB}/PyQt6/bindings/QtWidgets/qfileiconprovider.sip
-${PYSITELIB}/PyQt6/bindings/QtWidgets/qfilesystemmodel.sip
 ${PYSITELIB}/PyQt6/bindings/QtWidgets/qfocusframe.sip
 ${PYSITELIB}/PyQt6/bindings/QtWidgets/qfontcombobox.sip
 ${PYSITELIB}/PyQt6/bindings/QtWidgets/qfontdialog.sip
