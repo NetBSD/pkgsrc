@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2026/04/21 09:18:19 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/04/30 12:22:57 adam Exp $
 
-DISTNAME=	mimalloc-3.3.1
+DISTNAME=	mimalloc-3.3.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=microsoft/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
