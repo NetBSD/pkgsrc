@@ -1,9 +1,9 @@
-$NetBSD: patch-.._presage-fe3ed54c4844ae51c3a9fa49cf80a7816a31a425_presage-store-sqlite_Cargo.toml,v 1.1 2026/04/13 09:43:10 wiz Exp $
+$NetBSD: patch-.._presage-600c4ede51865f7de6ca21507e738a7bd70cc7ae_presage-store-sqlite_Cargo.toml,v 1.1 2026/04/30 08:36:58 wiz Exp $
 
 Use pkgsrc distfile instead of fetch during build.
 
---- ../presage-fe3ed54c4844ae51c3a9fa49cf80a7816a31a425/presage-store-sqlite/Cargo.toml.orig	2026-04-11 21:19:36.111846897 +0000
-+++ ../presage-fe3ed54c4844ae51c3a9fa49cf80a7816a31a425/presage-store-sqlite/Cargo.toml
+--- ../presage-600c4ede51865f7de6ca21507e738a7bd70cc7ae/presage-store-sqlite/Cargo.toml.orig	2026-04-11 21:19:36.111846897 +0000
++++ ../presage-600c4ede51865f7de6ca21507e738a7bd70cc7ae/presage-store-sqlite/Cargo.toml
 @@ -17,7 +17,7 @@ serde_json = "1.0.135"
  prost = "0.13.4"
  serde_json = "1.0.135"
