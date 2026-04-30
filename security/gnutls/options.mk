@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2026/02/09 19:35:36 adam Exp $
+# $NetBSD: options.mk,v 1.9 2026/04/30 05:33:43 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnutls
 PKG_SUPPORTED_OPTIONS=	brotli dane pkcs11 zstd
@@ -18,6 +18,7 @@ PLIST_VARS+=	pkcs11
 .if !empty(PKG_OPTIONS:Mpkcs11)
 PLIST.pkcs11=	yes
 BUILDLINK_API_DEPENDS.p11-kit+=	p11-kit>=0.23.1
+PRINT_PLIST_AWK+=	{ gsub(/^bin\/p11tool/, "$${PLIST.pkcs11}&"); }
 .include "../../security/p11-kit/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-p11-kit
