@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2026/04/28 08:45:08 pin Exp $
+# $NetBSD: Makefile,v 1.49 2026/04/30 16:25:57 vins Exp $
 
+PKGREVISION= 1
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	lxqt-powermanagement-2.4.0
