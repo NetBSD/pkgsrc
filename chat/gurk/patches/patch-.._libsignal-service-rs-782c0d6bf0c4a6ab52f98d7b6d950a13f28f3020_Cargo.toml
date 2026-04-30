@@ -1,0 +1,27 @@
+$NetBSD: patch-.._libsignal-service-rs-782c0d6bf0c4a6ab52f98d7b6d950a13f28f3020_Cargo.toml,v 1.1 2026/04/30 08:36:58 wiz Exp $
+
+Use pkgsrc distfile instead of fetch during build.
+
+--- ../libsignal-service-rs-782c0d6bf0c4a6ab52f98d7b6d950a13f28f3020/Cargo.toml.orig	2026-04-04 08:09:25.000000000 +0000
++++ ../libsignal-service-rs-782c0d6bf0c4a6ab52f98d7b6d950a13f28f3020/Cargo.toml
+@@ -7,13 +7,13 @@ readme = "README.md"
+ readme = "README.md"
+ 
+ [dependencies]
+-libsignal-protocol = { git = "https://github.com/signalapp/libsignal", tag = "v0.91.0" }
+-libsignal-core = { git = "https://github.com/signalapp/libsignal", tag = "v0.91.0" }
+-libsignal-net = { git = "https://github.com/signalapp/libsignal", tag = "v0.91.0", optional = true }
+-libsignal-net-infra = { git = "https://github.com/signalapp/libsignal", tag = "v0.91.0", optional = true }
+-signal-crypto = { git = "https://github.com/signalapp/libsignal", tag = "v0.91.0" }
+-zkgroup = { git = "https://github.com/signalapp/libsignal", tag = "v0.91.0" }
+-usernames = { git = "https://github.com/signalapp/libsignal", tag = "v0.91.0" }
++libsignal-protocol = { path = "../libsignal-8418be45dba3ebc17127b5c6b76ce02886350524/rust/protocol" }
++libsignal-core = { path = "../libsignal-8418be45dba3ebc17127b5c6b76ce02886350524/rust/core" }
++libsignal-net = { path = "../libsignal-8418be45dba3ebc17127b5c6b76ce02886350524/rust/net", optional = true }
++libsignal-net-infra = { path = "../libsignal-8418be45dba3ebc17127b5c6b76ce02886350524/rust/net/infra", optional = true }
++signal-crypto = { path = "../libsignal-8418be45dba3ebc17127b5c6b76ce02886350524/rust/crypto" }
++zkgroup = { path = "../libsignal-8418be45dba3ebc17127b5c6b76ce02886350524/rust/zkgroup" }
++usernames = { path = "../libsignal-8418be45dba3ebc17127b5c6b76ce02886350524/rust/usernames" }
+ 
+ aes = "0.8"
+ aes-gcm = "0.10"
