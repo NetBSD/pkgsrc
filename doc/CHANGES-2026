@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2711 2026/04/30 18:37:40 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2712 2026/04/30 18:51:59 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4181,3 +4181,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/glib2 to 2.88.0nb1 [tsutsui 2026-04-30]
 	Updated www/p5-Dancer to 1.3522 [wiz 2026-04-30]
 	Updated textproc/dasel to 3.8.1 [wiz 2026-04-30]
+	Updated www/firefox140 to 140.10.1 [gutteridge 2026-04-30]
