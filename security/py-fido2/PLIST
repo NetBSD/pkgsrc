@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/09/27 18:18:20 gdt Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/04/30 12:11:14 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -8,6 +8,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.MPLv2
 ${PYSITELIB}/fido2/__init__.py
 ${PYSITELIB}/fido2/__init__.pyc
 ${PYSITELIB}/fido2/__init__.pyo
+${PYSITELIB}/fido2/arkg.py
+${PYSITELIB}/fido2/arkg.pyc
+${PYSITELIB}/fido2/arkg.pyo
 ${PYSITELIB}/fido2/attestation/__init__.py
 ${PYSITELIB}/fido2/attestation/__init__.pyc
 ${PYSITELIB}/fido2/attestation/__init__.pyo
