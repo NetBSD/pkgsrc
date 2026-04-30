@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/11/11 12:34:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/04/30 06:38:38 adam Exp $
 qt6/include/QtJsonRpc/${PKGVERSION}/QtJsonRpc/private/qhttpmessagestreamparser_p.h
 qt6/include/QtJsonRpc/${PKGVERSION}/QtJsonRpc/private/qjsonrpcprotocol_p.h
 qt6/include/QtJsonRpc/${PKGVERSION}/QtJsonRpc/private/qjsonrpcprotocol_p_p.h
@@ -33,6 +33,7 @@ qt6/lib/cmake/Qt6JsonRpcPrivate/Qt6JsonRpcPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6JsonRpcPrivate/Qt6JsonRpcPrivateDependencies.cmake
 qt6/lib/cmake/Qt6JsonRpcPrivate/Qt6JsonRpcPrivateTargets-release.cmake
 qt6/lib/cmake/Qt6JsonRpcPrivate/Qt6JsonRpcPrivateTargets.cmake
+qt6/lib/cmake/Qt6JsonRpcPrivate/Qt6JsonRpcPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6JsonRpcPrivate/Qt6JsonRpcPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6JsonRpcPrivate/Qt6JsonRpcPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6LanguageServerPrivate/Qt6LanguageServerPrivateAdditionalTargetInfo.cmake
@@ -42,6 +43,7 @@ qt6/lib/cmake/Qt6LanguageServerPrivate/Qt6LanguageServerPrivateConfigVersionImpl
 qt6/lib/cmake/Qt6LanguageServerPrivate/Qt6LanguageServerPrivateDependencies.cmake
 qt6/lib/cmake/Qt6LanguageServerPrivate/Qt6LanguageServerPrivateTargets-release.cmake
 qt6/lib/cmake/Qt6LanguageServerPrivate/Qt6LanguageServerPrivateTargets.cmake
+qt6/lib/cmake/Qt6LanguageServerPrivate/Qt6LanguageServerPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6LanguageServerPrivate/Qt6LanguageServerPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6LanguageServerPrivate/Qt6LanguageServerPrivateVersionlessTargets.cmake
 qt6/lib/libQt6JsonRpc.a

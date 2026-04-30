@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/11/11 12:34:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/04/30 06:38:37 adam Exp $
 lib/pkgconfig/Qt6Bluetooth.pc
 lib/pkgconfig/Qt6Nfc.pc
 qt6/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/lecmaccalculator_p.h
@@ -109,6 +109,7 @@ qt6/lib/cmake/Qt6Bluetooth/Qt6BluetoothConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Bluetooth/Qt6BluetoothDependencies.cmake
 qt6/lib/cmake/Qt6Bluetooth/Qt6BluetoothTargets-release.cmake
 qt6/lib/cmake/Qt6Bluetooth/Qt6BluetoothTargets.cmake
+qt6/lib/cmake/Qt6Bluetooth/Qt6BluetoothTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Bluetooth/Qt6BluetoothVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Bluetooth/Qt6BluetoothVersionlessTargets.cmake
 qt6/lib/cmake/Qt6BluetoothPrivate/Qt6BluetoothPrivateAdditionalTargetInfo.cmake
@@ -117,6 +118,7 @@ qt6/lib/cmake/Qt6BluetoothPrivate/Qt6BluetoothPrivateConfigVersion.cmake
 qt6/lib/cmake/Qt6BluetoothPrivate/Qt6BluetoothPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6BluetoothPrivate/Qt6BluetoothPrivateDependencies.cmake
 qt6/lib/cmake/Qt6BluetoothPrivate/Qt6BluetoothPrivateTargets.cmake
+qt6/lib/cmake/Qt6BluetoothPrivate/Qt6BluetoothPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6BluetoothPrivate/Qt6BluetoothPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6BluetoothPrivate/Qt6BluetoothPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtConnectivityTestsConfig.cmake
@@ -126,6 +128,7 @@ qt6/lib/cmake/Qt6Connectivity/Qt6ConnectivityConfigVersion.cmake
 qt6/lib/cmake/Qt6Connectivity/Qt6ConnectivityConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Connectivity/Qt6ConnectivityExtraProperties.cmake
 qt6/lib/cmake/Qt6Connectivity/Qt6ConnectivityTargets.cmake
+qt6/lib/cmake/Qt6Connectivity/Qt6ConnectivityTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Connectivity/Qt6ConnectivityVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Connectivity/Qt6ConnectivityVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Nfc/Qt6NfcAdditionalTargetInfo.cmake
@@ -135,6 +138,7 @@ qt6/lib/cmake/Qt6Nfc/Qt6NfcConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Nfc/Qt6NfcDependencies.cmake
 qt6/lib/cmake/Qt6Nfc/Qt6NfcTargets-release.cmake
 qt6/lib/cmake/Qt6Nfc/Qt6NfcTargets.cmake
+qt6/lib/cmake/Qt6Nfc/Qt6NfcTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Nfc/Qt6NfcVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Nfc/Qt6NfcVersionlessTargets.cmake
 qt6/lib/cmake/Qt6NfcPrivate/Qt6NfcPrivateAdditionalTargetInfo.cmake
@@ -143,6 +147,7 @@ qt6/lib/cmake/Qt6NfcPrivate/Qt6NfcPrivateConfigVersion.cmake
 qt6/lib/cmake/Qt6NfcPrivate/Qt6NfcPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6NfcPrivate/Qt6NfcPrivateDependencies.cmake
 qt6/lib/cmake/Qt6NfcPrivate/Qt6NfcPrivateTargets.cmake
+qt6/lib/cmake/Qt6NfcPrivate/Qt6NfcPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6NfcPrivate/Qt6NfcPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6NfcPrivate/Qt6NfcPrivateVersionlessTargets.cmake
 qt6/lib/libQt6Bluetooth.prl

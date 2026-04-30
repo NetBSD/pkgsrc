@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2026/02/06 10:05:05 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/04/30 06:38:40 adam Exp $
 
 DISTNAME=	qtshadertools-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtshadertools-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	Qt6 shadertools
 CATEGORIES=	graphics
 LICENSE=	gnu-gpl-v3

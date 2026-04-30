@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/11/11 12:34:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/04/30 06:38:39 adam Exp $
 lib/pkgconfig/Qt6NetworkAuth.pc
 qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qabstractoauth2_p.h
 qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qabstractoauth_p.h
@@ -9,6 +9,7 @@ qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qoauth2authorizati
 qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qoauth2deviceauthorizationflow_p.h
 qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qoauthhttpserverreplyhandler_p.h
 qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qoauthoobreplyhandler_p.h
+qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qoauthurischemereplyhandler_p.h
 qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qtnetworkauth-config_p.h
 qt6/include/QtNetworkAuth/QAbstractOAuth
 qt6/include/QtNetworkAuth/QAbstractOAuth2
@@ -44,6 +45,7 @@ qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthDependencies.cmake
 qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthTargets-release.cmake
 qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthTargets.cmake
+qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthVersionlessTargets.cmake
 qt6/lib/cmake/Qt6NetworkAuthPrivate/Qt6NetworkAuthPrivateAdditionalTargetInfo.cmake
@@ -52,6 +54,7 @@ qt6/lib/cmake/Qt6NetworkAuthPrivate/Qt6NetworkAuthPrivateConfigVersion.cmake
 qt6/lib/cmake/Qt6NetworkAuthPrivate/Qt6NetworkAuthPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6NetworkAuthPrivate/Qt6NetworkAuthPrivateDependencies.cmake
 qt6/lib/cmake/Qt6NetworkAuthPrivate/Qt6NetworkAuthPrivateTargets.cmake
+qt6/lib/cmake/Qt6NetworkAuthPrivate/Qt6NetworkAuthPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6NetworkAuthPrivate/Qt6NetworkAuthPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6NetworkAuthPrivate/Qt6NetworkAuthPrivateVersionlessTargets.cmake
 qt6/lib/libQt6NetworkAuth.prl

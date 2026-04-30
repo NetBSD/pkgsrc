@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST.Darwin,v 1.2 2025/06/30 15:18:53 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.3 2026/04/30 06:38:41 adam Exp $
 qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechDarwinPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechDarwinPluginConfig.cmake
 qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechDarwinPluginConfigVersion.cmake
 qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechDarwinPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechDarwinPluginTargets-release.cmake
 qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechDarwinPluginTargets.cmake
+qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechDarwinPluginTargetsPrecheck.cmake
 qt6/plugins/texttospeech/libqtexttospeech_speech_macos.so
 qt6/plugins/texttospeech/libqtexttospeech_speechdarwin.so

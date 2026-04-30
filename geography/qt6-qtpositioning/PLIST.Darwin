@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1 2023/08/03 20:01:31 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.2 2026/04/30 06:38:39 adam Exp $
 qt6/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryCLPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryCLPluginConfig.cmake
 qt6/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryCLPluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryCLPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryCLPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryCLPluginTargets.cmake
+qt6/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryCLPluginTargetsPrecheck.cmake
 qt6/plugins/position/libqtposition_cl.so

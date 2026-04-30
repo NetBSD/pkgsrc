@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/11/11 12:34:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/04/30 06:38:40 adam Exp $
 lib/pkgconfig/Qt6SerialPort.pc
 qt6/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialport_p.h
 qt6/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialportinfo_p.h
@@ -22,6 +22,7 @@ qt6/lib/cmake/Qt6SerialPort/Qt6SerialPortConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6SerialPort/Qt6SerialPortDependencies.cmake
 qt6/lib/cmake/Qt6SerialPort/Qt6SerialPortTargets-release.cmake
 qt6/lib/cmake/Qt6SerialPort/Qt6SerialPortTargets.cmake
+qt6/lib/cmake/Qt6SerialPort/Qt6SerialPortTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6SerialPort/Qt6SerialPortVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6SerialPort/Qt6SerialPortVersionlessTargets.cmake
 qt6/lib/cmake/Qt6SerialPortPrivate/Qt6SerialPortPrivateAdditionalTargetInfo.cmake
@@ -30,6 +31,7 @@ qt6/lib/cmake/Qt6SerialPortPrivate/Qt6SerialPortPrivateConfigVersion.cmake
 qt6/lib/cmake/Qt6SerialPortPrivate/Qt6SerialPortPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6SerialPortPrivate/Qt6SerialPortPrivateDependencies.cmake
 qt6/lib/cmake/Qt6SerialPortPrivate/Qt6SerialPortPrivateTargets.cmake
+qt6/lib/cmake/Qt6SerialPortPrivate/Qt6SerialPortPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6SerialPortPrivate/Qt6SerialPortPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6SerialPortPrivate/Qt6SerialPortPrivateVersionlessTargets.cmake
 qt6/lib/libQt6SerialPort.prl

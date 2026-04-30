@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/11/11 12:34:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/04/30 06:38:40 adam Exp $
 lib/pkgconfig/Qt6RemoteObjects.pc
 lib/pkgconfig/Qt6RemoteObjectsQml.pc
 lib/pkgconfig/Qt6RepParser.pc
@@ -75,6 +75,7 @@ qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_remoteobjectsConfigVersion.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_remoteobjectsConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_remoteobjectsTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_remoteobjectsTargets.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_remoteobjectsTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsConfig.cmake
 qt6/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsConfigVersion.cmake
@@ -83,6 +84,7 @@ qt6/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsDependencies.cmake
 qt6/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsMacros.cmake
 qt6/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsTargets-release.cmake
 qt6/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsTargets.cmake
+qt6/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsVersionlessTargets.cmake
 qt6/lib/cmake/Qt6RemoteObjectsPrivate/Qt6RemoteObjectsPrivateAdditionalTargetInfo.cmake
@@ -91,6 +93,7 @@ qt6/lib/cmake/Qt6RemoteObjectsPrivate/Qt6RemoteObjectsPrivateConfigVersion.cmake
 qt6/lib/cmake/Qt6RemoteObjectsPrivate/Qt6RemoteObjectsPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6RemoteObjectsPrivate/Qt6RemoteObjectsPrivateDependencies.cmake
 qt6/lib/cmake/Qt6RemoteObjectsPrivate/Qt6RemoteObjectsPrivateTargets.cmake
+qt6/lib/cmake/Qt6RemoteObjectsPrivate/Qt6RemoteObjectsPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6RemoteObjectsPrivate/Qt6RemoteObjectsPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6RemoteObjectsPrivate/Qt6RemoteObjectsPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlAdditionalTargetInfo.cmake
@@ -100,6 +103,7 @@ qt6/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlDependencies.cmake
 qt6/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlTargets-release.cmake
 qt6/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlTargets.cmake
+qt6/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlVersionlessTargets.cmake
 qt6/lib/cmake/Qt6RemoteObjectsQmlPrivate/Qt6RemoteObjectsQmlPrivateAdditionalTargetInfo.cmake
@@ -108,6 +112,7 @@ qt6/lib/cmake/Qt6RemoteObjectsQmlPrivate/Qt6RemoteObjectsQmlPrivateConfigVersion
 qt6/lib/cmake/Qt6RemoteObjectsQmlPrivate/Qt6RemoteObjectsQmlPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6RemoteObjectsQmlPrivate/Qt6RemoteObjectsQmlPrivateDependencies.cmake
 qt6/lib/cmake/Qt6RemoteObjectsQmlPrivate/Qt6RemoteObjectsQmlPrivateTargets.cmake
+qt6/lib/cmake/Qt6RemoteObjectsQmlPrivate/Qt6RemoteObjectsQmlPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6RemoteObjectsQmlPrivate/Qt6RemoteObjectsQmlPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6RemoteObjectsQmlPrivate/Qt6RemoteObjectsQmlPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6RemoteObjectsTools/Qt6RemoteObjectsToolsAdditionalTargetInfo.cmake
@@ -117,6 +122,7 @@ qt6/lib/cmake/Qt6RemoteObjectsTools/Qt6RemoteObjectsToolsConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6RemoteObjectsTools/Qt6RemoteObjectsToolsDependencies.cmake
 qt6/lib/cmake/Qt6RemoteObjectsTools/Qt6RemoteObjectsToolsTargets-release.cmake
 qt6/lib/cmake/Qt6RemoteObjectsTools/Qt6RemoteObjectsToolsTargets.cmake
+qt6/lib/cmake/Qt6RemoteObjectsTools/Qt6RemoteObjectsToolsTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6RemoteObjectsTools/Qt6RemoteObjectsToolsVersionlessTargets.cmake
 qt6/lib/cmake/Qt6RepParser/Qt6RepParserAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6RepParser/Qt6RepParserConfig.cmake
@@ -124,6 +130,7 @@ qt6/lib/cmake/Qt6RepParser/Qt6RepParserConfigVersion.cmake
 qt6/lib/cmake/Qt6RepParser/Qt6RepParserConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6RepParser/Qt6RepParserDependencies.cmake
 qt6/lib/cmake/Qt6RepParser/Qt6RepParserTargets.cmake
+qt6/lib/cmake/Qt6RepParser/Qt6RepParserTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6RepParser/Qt6RepParserVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6RepParser/Qt6RepParserVersionlessTargets.cmake
 qt6/lib/libQt6RemoteObjects.prl

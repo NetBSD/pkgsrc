@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST.Darwin,v 1.8 2025/11/25 06:12:39 wiz Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.9 2026/04/30 06:38:39 adam Exp $
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfcamera_p.h
-qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfcamerafactory_p.h
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfcamerarotationtracker_p.h
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfcapturephotooutputdelegate_p.h
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfimagecapture_p.h
@@ -11,6 +10,8 @@ qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/privat
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qcgwindowcapture_p.h
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qcvimagevideobuffer_p.h
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpeghwaccel_videotoolbox_p.h
+${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpegdarwinhwframehelpers_p.h
+${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpegdarwinintegrationfactory_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qautoresetevent_kqueue_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qavfcamerabase_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qavfcameradebug_p.h
@@ -30,4 +31,5 @@ qt6/lib/cmake/Qt6Multimedia/Qt6QDarwinMediaPluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6QDarwinMediaPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6QDarwinMediaPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6QDarwinMediaPluginTargets.cmake
+qt6/lib/cmake/Qt6Multimedia/Qt6QDarwinMediaPluginTargetsPrecheck.cmake
 qt6/plugins/multimedia/libdarwinmediaplugin.dylib
