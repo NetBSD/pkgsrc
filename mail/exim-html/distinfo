@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.43 2025/12/18 15:19:41 adam Exp $
+$NetBSD: distinfo,v 1.44 2026/04/30 11:25:01 adam Exp $
 
-BLAKE2s (exim-html-4.99.1.tar.xz) = 4728d82675511bbb6c2369041948d1bc450aac28057882b63122aa20c47d706c
-SHA512 (exim-html-4.99.1.tar.xz) = ad5775d2655137b9594113828d9d0f8f7bd1a23c5d75ae83bc3bcd0bb71df44843dda96fc2d30ecdc07064d78ffa6107de4ddf318857c5ad4652bc0c91dde054
-Size (exim-html-4.99.1.tar.xz) = 584952 bytes
+BLAKE2s (exim-html-4.99.2.tar.xz) = 312890bc222b3646e04aeec0eccd736168de45ce7360eb4eb6025422e01db758
+SHA512 (exim-html-4.99.2.tar.xz) = 000f10d22d96a5cdb91be84c19b28ed2f696596904f3da40c8df8759ae6705b1ae4a6fa5cdba159eaa7a0d728d8aa4496e82961b8e8074dc7697091b89b8ea93
+Size (exim-html-4.99.2.tar.xz) = 584464 bytes
