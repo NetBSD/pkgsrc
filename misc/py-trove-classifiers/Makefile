@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2026/01/16 06:42:33 adam Exp $
+# $NetBSD: Makefile,v 1.48 2026/04/30 09:30:47 adam Exp $
 
-DISTNAME=	trove_classifiers-2026.1.14.14
+DISTNAME=	trove_classifiers-2026.4.28.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trove-classifiers/}
@@ -15,9 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} trove-classifiers trove-classifiers-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	trove-classifiers
 
 # as of 2025.11.14.15
 # 2 failed, 16 passed
