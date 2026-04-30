@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.126 2026/03/26 06:19:33 adam Exp $
+# $NetBSD: Makefile,v 1.127 2026/04/30 09:10:08 adam Exp $
 
-DISTNAME=	libgsf-1.14.56
+DISTNAME=	libgsf-1.14.57
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgsf/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnome.org/
 COMMENT=	GNOME structured file library
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
+
+TEST_DEPENDS+=	p5-XML-Parser>=0:../../textproc/p5-XML-Parser
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
