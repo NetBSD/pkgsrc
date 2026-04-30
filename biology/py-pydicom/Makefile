@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2026/02/06 08:38:37 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/04/30 11:10:10 adam Exp $
 
-DISTNAME=	pydicom-3.0.1
+DISTNAME=	pydicom-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydicom/}
@@ -14,9 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} pydicom pydicom-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	pydicom
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
