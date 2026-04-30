@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2693 2026/04/30 09:16:33 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2694 2026/04/30 09:38:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4153,3 +4153,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated chat/gurk to 0.9.3 [wiz 2026-04-30]
 	Updated devel/libgsf to 1.14.57 [adam 2026-04-30]
 	Updated databases/postgresql-timescaledb to 2.26.4 [adam 2026-04-30]
+	Updated misc/py-trove-classifiers to 2026.4.28.13 [adam 2026-04-30]
+	Updated devel/py-pydantic-settings to 2.14.0 [adam 2026-04-30]
