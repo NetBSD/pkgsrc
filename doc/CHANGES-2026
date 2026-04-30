@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2688 2026/04/30 05:44:26 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2689 2026/04/30 06:17:43 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4111,3 +4111,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/lcms2 to 2.19 [wiz 2026-04-30]
 	Updated security/gnutls to 3.8.13 [wiz 2026-04-30]
 	Updated net/inetutils to 2.8 [wiz 2026-04-30]
+	Updated inputmethod/ibus to 1.5.34 [tsutsui 2026-04-30]
