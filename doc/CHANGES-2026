@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2686 2026/04/30 05:13:16 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2687 2026/04/30 05:33:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4100,6 +4100,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ruby-nokogiri to 1.19.3 [tsutsui 2026-04-29]
 	Updated www/p5-Starman to 0.4018 [wiz 2026-04-29]
 	Updated www/curl to 8.20.0 [wiz 2026-04-29]
+	Updated www/libcurl-gnutls to 8.20.0 [wiz 2026-04-29]
 	Updated security/stunnel to 5.78 [sborrill 2026-04-29]
 	Updated sysutils/htop to 3.5.1 [fox 2026-04-29]
 	Updated geography/qgis to 3.44.9 [gdt 2026-04-29]
@@ -4108,3 +4109,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 29.12.0 [pin 2026-04-29]
 	Updated databases/postgresql-postgis2 to 3.6.3 [gdt 2026-04-29]
 	Updated graphics/lcms2 to 2.19 [wiz 2026-04-30]
+	Updated security/gnutls to 3.8.13 [wiz 2026-04-30]
