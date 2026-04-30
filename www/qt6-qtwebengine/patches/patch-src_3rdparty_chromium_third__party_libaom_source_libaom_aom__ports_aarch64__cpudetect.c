@@ -1,12 +1,12 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_libaom_source_libaom_aom__ports_aarch64__cpudetect.c,v 1.2 2026/03/29 16:57:04 tnn Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_libaom_source_libaom_aom__ports_aarch64__cpudetect.c,v 1.3 2026/04/30 06:39:43 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/third_party/libaom/source/libaom/aom_ports/aarch64_cpudetect.c.orig	2026-01-23 19:06:19.000000000 +0000
+--- src/3rdparty/chromium/third_party/libaom/source/libaom/aom_ports/aarch64_cpudetect.c.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/third_party/libaom/source/libaom/aom_ports/aarch64_cpudetect.c
-@@ -127,9 +127,98 @@ static int arm_get_cpu_caps(void) {
+@@ -127,10 +127,98 @@ static int arm_get_cpu_caps(void) {
    return flags;
  }
  
@@ -15,7 +15,6 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_libaom_source_libaom_aom__port
 +#include <sys/sysctl.h>
 +#include <machine/cpu.h>
 +#include <machine/armreg.h>
- 
 +
 +static int arm_get_cpu_caps(void) {
 +  int flags = 0;
@@ -87,9 +86,9 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_libaom_source_libaom_aom__port
 +}
 +
 +#elif defined(__linux__) || defined(__FreeBSD__)  // end defined(AOM_USE_ANDROID_CPU_FEATURES)
-+
+ 
  #include <sys/auxv.h>
-+
+ 
 +#if defined(__FreeBSD__)
 +static unsigned long getauxval(unsigned long type)
 +{
@@ -103,6 +102,7 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_libaom_source_libaom_aom__port
 +    return ret;
 +}
 +#endif
- 
++
  // Define hwcap values ourselves: building with an old auxv header where these
  // hwcap values are not defined should not prevent features from being enabled.
+ #define AOM_AARCH64_HWCAP_CRC32 (1 << 7)

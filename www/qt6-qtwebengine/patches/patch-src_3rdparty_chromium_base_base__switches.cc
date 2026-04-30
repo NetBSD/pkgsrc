@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_base_base__switches.cc,v 1.1 2025/12/21 09:38:13 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_base__switches.cc,v 1.2 2026/04/30 06:39:35 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/base_switches.cc.orig	2025-10-02 00:36:39.000000000 +0000
+--- src/3rdparty/chromium/base/base_switches.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/base/base_switches.cc
-@@ -133,7 +133,7 @@ const char kDisableHighResTimer[] = "dis
- const char kDisableUsbKeyboardDetect[] = "disable-usb-keyboard-detect";
+@@ -135,7 +135,7 @@ const char kDisableUsbKeyboardDetect[] =
+ const char kForceHighResTimeTicks[] = "force-high-res-timeticks";
  #endif
  
 -#if BUILDFLAG(IS_LINUX)

@@ -1,0 +1,17 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_ipcz_src_BUILD.gn,v 1.1 2026/04/30 06:39:43 adam Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/third_party/ipcz/src/BUILD.gn.orig	2026-03-16 11:40:07.000000000 +0000
++++ src/3rdparty/chromium/third_party/ipcz/src/BUILD.gn
+@@ -7,7 +7,7 @@ import("//build_overrides/ipcz.gni")
+ import("//testing/libfuzzer/fuzzer_test.gni")
+ import("//testing/test.gni")
+ 
+-enable_multiprocess_tests = is_linux
++enable_multiprocess_tests = is_linux && !is_bsd
+ 
+ buildflag_header("test_buildflags") {
+   header = "test_buildflags.h"

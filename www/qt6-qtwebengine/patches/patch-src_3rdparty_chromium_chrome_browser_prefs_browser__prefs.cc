@@ -1,43 +1,35 @@
-$NetBSD: patch-src_3rdparty_chromium_chrome_browser_prefs_browser__prefs.cc,v 1.1 2025/12/21 09:38:19 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_chrome_browser_prefs_browser__prefs.cc,v 1.2 2026/04/30 06:39:36 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/chrome/browser/prefs/browser_prefs.cc.orig	2025-11-14 07:55:10.000000000 +0000
+--- src/3rdparty/chromium/chrome/browser/prefs/browser_prefs.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/chrome/browser/prefs/browser_prefs.cc
-@@ -318,7 +318,7 @@
- #include "components/ntp_tiles/custom_links_manager_impl.h"
- #endif  // BUILDFLAG(IS_ANDROID)
+@@ -326,7 +326,7 @@
+ #include "chrome/browser/devtools/devtools_window.h"
+ #endif  // BUILDFLAG(ENABLE_DEVTOOLS_FRONTEND)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/ui/webui/whats_new/whats_new_ui.h"
  #endif
  
-@@ -488,18 +488,18 @@
+@@ -493,11 +493,11 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS_ASH)
-+    BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include "components/device_signals/core/browser/pref_names.h"  // nogncheck due to crbug.com/1125897
- #endif
- 
- // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
- // of lacros-chrome is complete.
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD) || \
-     (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
- #include "chrome/browser/browser_switcher/browser_switcher_prefs.h"
  #endif
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/browser_switcher/browser_switcher_prefs.h"
  #include "chrome/browser/enterprise/signin/enterprise_signin_prefs.h"
  #endif
- 
-@@ -534,7 +534,7 @@
+@@ -525,7 +525,7 @@
  #include "chrome/browser/sessions/session_service_log.h"
  #endif
  
@@ -46,7 +38,7 @@ $NetBSD: patch-src_3rdparty_chromium_chrome_browser_prefs_browser__prefs.cc,v 1.
  #include "ui/color/system_theme.h"
  #endif
  
-@@ -1746,7 +1746,7 @@ void RegisterLocalState(PrefRegistrySimp
+@@ -1705,7 +1705,7 @@ void RegisterLocalState(PrefRegistrySimp
    on_device_translation::RegisterLocalStatePrefs(registry);
  #endif  // BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION)
  
@@ -55,7 +47,7 @@ $NetBSD: patch-src_3rdparty_chromium_chrome_browser_prefs_browser__prefs.cc,v 1.
    WhatsNewUI::RegisterLocalStatePrefs(registry);
  #endif
  
-@@ -1917,7 +1917,7 @@ void RegisterLocalState(PrefRegistrySimp
+@@ -1860,7 +1860,7 @@ void RegisterLocalState(PrefRegistrySimp
  #endif  // BUILDFLAG(ENABLE_PDF)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -64,15 +56,15 @@ $NetBSD: patch-src_3rdparty_chromium_chrome_browser_prefs_browser__prefs.cc,v 1.
    registry->RegisterBooleanPref(prefs::kChromeForTestingAllowed, true);
  #endif
  
-@@ -2282,12 +2282,12 @@ void RegisterProfilePrefs(user_prefs::Pr
+@@ -2231,12 +2231,12 @@ void RegisterProfilePrefs(user_prefs::Pr
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS_ASH)
-+    BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    device_signals::RegisterProfilePrefs(registry);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
-         // BUILDFLAG(IS_CHROMEOS_ASH)
+         // BUILDFLAG(IS_CHROMEOS)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

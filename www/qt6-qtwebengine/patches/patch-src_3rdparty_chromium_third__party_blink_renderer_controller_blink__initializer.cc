@@ -1,12 +1,12 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_blink_renderer_controller_blink__initializer.cc,v 1.1 2025/12/21 09:38:39 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_blink_renderer_controller_blink__initializer.cc,v 1.2 2026/04/30 06:39:43 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/third_party/blink/renderer/controller/blink_initializer.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/third_party/blink/renderer/controller/blink_initializer.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/third_party/blink/renderer/controller/blink_initializer.cc
-@@ -81,12 +81,12 @@
+@@ -82,12 +82,12 @@
  #include "third_party/blink/renderer/controller/private_memory_footprint_provider.h"
  #endif
  
@@ -30,8 +30,8 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_blink_renderer_controller_blin
    binders.Add<mojom::blink::MemoryUsageMonitorLinux>(
        ConvertToBaseRepeatingCallback(
            CrossThreadBindRepeating(&MemoryUsageMonitorPosix::Bind)),
-@@ -302,7 +302,7 @@ void BlinkInitializer::RegisterMemoryWat
- #endif
+@@ -303,7 +303,7 @@ void BlinkInitializer::RegisterMemoryWat
+   MemorySaverController::Initialize();
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
 -    BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_WIN)

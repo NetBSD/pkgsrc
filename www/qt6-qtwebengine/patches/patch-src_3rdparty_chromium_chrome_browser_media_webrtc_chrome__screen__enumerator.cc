@@ -1,17 +1,17 @@
-$NetBSD: patch-src_3rdparty_chromium_chrome_browser_media_webrtc_chrome__screen__enumerator.cc,v 1.1 2025/12/21 09:38:19 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_chrome_browser_media_webrtc_chrome__screen__enumerator.cc,v 1.2 2026/04/30 06:39:36 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/chrome/browser/media/webrtc/chrome_screen_enumerator.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/chrome/browser/media/webrtc/chrome_screen_enumerator.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/chrome/browser/media/webrtc/chrome_screen_enumerator.cc
 @@ -21,7 +21,7 @@
- #if BUILDFLAG(IS_CHROMEOS_ASH)
+ #if BUILDFLAG(IS_CHROMEOS)
  #include "ash/shell.h"
  #include "ui/aura/window.h"
--#elif BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_LINUX)
-+#elif BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+-#elif BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "base/functional/callback.h"
  #include "content/public/browser/desktop_capture.h"
  #endif
@@ -19,8 +19,8 @@ $NetBSD: patch-src_3rdparty_chromium_chrome_browser_media_webrtc_chrome__screen_
      DestructorAtExit root_windows_for_testing_ = LAZY_INSTANCE_INITIALIZER;
  }  // namespace
  
--#elif BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_LINUX)
-+#elif BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+-#elif BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  namespace {
  base::LazyInstance<std::unique_ptr<webrtc::DesktopCapturer>>::DestructorAtExit
      g_desktop_capturer_for_testing = LAZY_INSTANCE_INITIALIZER;
@@ -28,21 +28,21 @@ $NetBSD: patch-src_3rdparty_chromium_chrome_browser_media_webrtc_chrome__screen_
    return stream_devices_set;
  }
  
--#elif BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_LINUX)
-+#elif BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+-#elif BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  blink::mojom::StreamDevicesSetPtr EnumerateScreens(
      blink::mojom::MediaStreamType stream_type) {
    DCHECK_CURRENTLY_ON(content::BrowserThread::UI);
-@@ -130,7 +130,7 @@ void ChromeScreenEnumerator::SetRootWind
+@@ -132,7 +132,7 @@ void ChromeScreenEnumerator::SetRootWind
    root_windows_for_testing_.Get() = std::move(root_windows);
  }
  
--#elif BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_LINUX)
-+#elif BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+-#elif BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  void ChromeScreenEnumerator::SetDesktopCapturerForTesting(
      std::unique_ptr<webrtc::DesktopCapturer> capturer) {
    g_desktop_capturer_for_testing.Get() = std::move(capturer);
-@@ -143,7 +143,7 @@ void ChromeScreenEnumerator::EnumerateSc
+@@ -145,7 +145,7 @@ void ChromeScreenEnumerator::EnumerateSc
      ScreensCallback screens_callback) const {
    DCHECK_CURRENTLY_ON(content::BrowserThread::IO);
  

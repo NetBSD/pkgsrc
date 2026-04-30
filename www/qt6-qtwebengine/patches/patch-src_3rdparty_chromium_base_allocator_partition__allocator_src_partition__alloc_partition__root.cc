@@ -1,21 +1,21 @@
-$NetBSD: patch-src_3rdparty_chromium_base_allocator_partition__allocator_src_partition__alloc_partition__root.cc,v 1.1 2025/12/21 09:38:12 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_allocator_partition__allocator_src_partition__alloc_partition__root.cc,v 1.2 2026/04/30 06:39:35 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/allocator/partition_allocator/src/partition_alloc/partition_root.cc.orig	2025-10-02 00:36:39.000000000 +0000
+--- src/3rdparty/chromium/base/allocator/partition_allocator/src/partition_alloc/partition_root.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/base/allocator/partition_allocator/src/partition_alloc/partition_root.cc
-@@ -44,7 +44,7 @@
+@@ -51,7 +51,7 @@
  #include "wow64apiset.h"
  #endif
  
 -#if PA_BUILDFLAG(IS_LINUX) || PA_BUILDFLAG(IS_CHROMEOS)
 +#if PA_BUILDFLAG(IS_LINUX) || PA_BUILDFLAG(IS_CHROMEOS) || PA_BUILDFLAG(IS_BSD)
  #include <pthread.h>
- #if PA_CONFIG(ENABLE_SHADOW_METADATA)
- #include <sys/mman.h>
-@@ -297,7 +297,7 @@ void PartitionAllocMallocInitOnce() {
+ #endif  // PA_BUILDFLAG(IS_LINUX) || PA_BUILDFLAG(IS_CHROMEOS)
+ 
+@@ -300,7 +300,7 @@ void PartitionAllocMallocInitOnce() {
      return;
    }
  
@@ -24,7 +24,7 @@ $NetBSD: patch-src_3rdparty_chromium_base_allocator_partition__allocator_src_par
    // When fork() is called, only the current thread continues to execute in the
    // child process. If the lock is held, but *not* by this thread when fork() is
    // called, we have a deadlock.
-@@ -1117,7 +1117,7 @@ void PartitionRoot::Init(PartitionOption
+@@ -1006,7 +1006,7 @@ void PartitionRoot::Init(PartitionOption
      // apple OSes.
      PA_CHECK((internal::SystemPageSize() == (size_t{1} << 12)) ||
               (internal::SystemPageSize() == (size_t{1} << 14)));

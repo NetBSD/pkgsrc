@@ -1,4 +1,4 @@
-$NetBSD: patch-src_3rdparty_chromium_sandbox_policy_netbsd_sandbox__netbsd.h,v 1.1 2025/12/21 09:38:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_sandbox_policy_netbsd_sandbox__netbsd.h,v 1.2 2026/04/30 06:39:42 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
@@ -6,7 +6,7 @@ $NetBSD: patch-src_3rdparty_chromium_sandbox_policy_netbsd_sandbox__netbsd.h,v 1
 
 --- src/3rdparty/chromium/sandbox/policy/netbsd/sandbox_netbsd.h.orig	2024-12-21 10:25:10.569588425 +0000
 +++ src/3rdparty/chromium/sandbox/policy/netbsd/sandbox_netbsd.h
-@@ -0,0 +1,278 @@
+@@ -0,0 +1,276 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -174,8 +174,6 @@ $NetBSD: patch-src_3rdparty_chromium_sandbox_policy_netbsd_sandbox__netbsd.h,v 1
 +  // this returns what will actually happen once InitializeSandbox()
 +  // is called from inside these processes.
 +  int GetStatus();
-+
-+  static std::string GetSandboxTypeInEnglish(sandbox::mojom::Sandbox sandbox_type);
 +
 +  // Returns true if the current process is single-threaded or if the number
 +  // of threads cannot be determined.

@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_base_process_process__posix.cc,v 1.1 2025/12/21 09:38:15 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_process_process__posix.cc,v 1.2 2026/04/30 06:39:35 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/process/process_posix.cc.orig	2025-05-29 01:27:28.000000000 +0000
+--- src/3rdparty/chromium/base/process/process_posix.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/base/process/process_posix.cc
-@@ -23,10 +23,15 @@
- #include "base/trace_event/base_tracing.h"
+@@ -25,10 +25,15 @@
+ #include "base/trace_event/trace_event.h"
  #include "build/build_config.h"
  
 -#if BUILDFLAG(IS_MAC)
@@ -23,7 +23,7 @@ $NetBSD: patch-src_3rdparty_chromium_base_process_process__posix.cc,v 1.1 2025/1
  #if BUILDFLAG(CLANG_PROFILING)
  #include "base/test/clang_profiling.h"
  #endif
-@@ -99,7 +104,7 @@ bool WaitpidWithTimeout(base::ProcessHan
+@@ -104,7 +109,7 @@ bool WaitpidWithTimeout(base::ProcessHan
  }
  #endif
  
@@ -32,7 +32,7 @@ $NetBSD: patch-src_3rdparty_chromium_base_process_process__posix.cc,v 1.1 2025/1
  // Using kqueue on Mac so that we can wait on non-child processes.
  // We can't use kqueues on child processes because we need to reap
  // our own children using wait.
-@@ -376,7 +381,7 @@ bool Process::WaitForExitWithTimeoutImpl
+@@ -387,7 +392,7 @@ bool Process::WaitForExitWithTimeoutImpl
    const bool exited = (parent_pid < 0);
  
    if (!exited && parent_pid != our_pid) {
@@ -41,7 +41,7 @@ $NetBSD: patch-src_3rdparty_chromium_base_process_process__posix.cc,v 1.1 2025/1
      // On Mac we can wait on non child processes.
      return WaitForSingleNonChildProcess(handle, timeout);
  #else
-@@ -413,7 +418,56 @@ void Process::Exited(int exit_code) cons
+@@ -424,7 +429,56 @@ void Process::Exited(int exit_code) cons
  
  int Process::GetOSPriority() const {
    DCHECK(IsValid());

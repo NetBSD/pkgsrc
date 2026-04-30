@@ -1,12 +1,30 @@
-$NetBSD: patch-src_3rdparty_chromium_gpu_command__buffer_service_shared__image_shared__image__factory.cc,v 1.1 2025/12/21 09:38:30 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_gpu_command__buffer_service_shared__image_shared__image__factory.cc,v 1.2 2026/04/30 06:39:41 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/gpu/command_buffer/service/shared_image/shared_image_factory.cc
-@@ -143,7 +143,7 @@ gfx::GpuMemoryBufferType GetNativeBuffer
+@@ -50,7 +50,7 @@
+ #include "gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.h"
+ #include "gpu/vulkan/vulkan_device_queue.h"
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+ #include "gpu/command_buffer/service/shared_image/external_vk_image_backing_factory.h"
+ #endif
+ 
+@@ -104,7 +104,7 @@ const char* GmbTypeToString(gfx::GpuMemo
+     case gfx::IO_SURFACE_BUFFER:
+       return "platform";
+ #endif
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+     case gfx::NATIVE_PIXMAP:
+       return "platform";
+ #endif
+@@ -125,7 +125,7 @@ gfx::GpuMemoryBufferType GetNativeBuffer
    return gfx::GpuMemoryBufferType::IO_SURFACE_BUFFER;
  #elif BUILDFLAG(IS_ANDROID)
    return gfx::GpuMemoryBufferType::ANDROID_HARDWARE_BUFFER;
@@ -15,3 +33,12 @@ $NetBSD: patch-src_3rdparty_chromium_gpu_command__buffer_service_shared__image_s
    return gfx::GpuMemoryBufferType::NATIVE_PIXMAP;
  #elif BUILDFLAG(IS_WIN)
    return gfx::GpuMemoryBufferType::DXGI_SHARED_HANDLE;
+@@ -297,7 +297,7 @@ SharedImageFactory::SharedImageFactory(
+         context_state_, workarounds_);
+     factories_.push_back(std::move(ozone_factory));
+   }
+-#if BUILDFLAG(ENABLE_VULKAN) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_FUCHSIA))
++#if BUILDFLAG(ENABLE_VULKAN) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD))
+   if (gr_context_type_ == GrContextType::kVulkan) {
+     auto external_vk_image_factory =
+         std::make_unique<ExternalVkImageBackingFactory>(context_state_);

@@ -1,30 +1,30 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_webrtc_rtc__base_physical__socket__server.cc,v 1.1 2025/12/21 09:38:45 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_webrtc_rtc__base_physical__socket__server.cc,v 1.2 2026/04/30 06:39:44 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/third_party/webrtc/rtc_base/physical_socket_server.cc.orig	2025-09-25 11:10:42.000000000 +0000
+--- src/3rdparty/chromium/third_party/webrtc/rtc_base/physical_socket_server.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/third_party/webrtc/rtc_base/physical_socket_server.cc
-@@ -54,7 +54,7 @@
- #include "rtc_base/time_utils.h"
- #include "system_wrappers/include/field_trial.h"
+@@ -61,7 +61,7 @@
+ #undef SetPort
+ #endif
  
 -#if defined(WEBRTC_LINUX)
 +#if defined(WEBRTC_LINUX) && !defined(WEBRTC_BSD)
+ #include <asm-generic/socket.h>
  #include <linux/sockios.h>
- #endif
- 
-@@ -74,7 +74,7 @@ typedef void* SockOptArg;
- 
+ #include <sys/epoll.h>
+@@ -78,7 +78,7 @@
+ typedef void* SockOptArg;
  #endif  // WEBRTC_POSIX
  
--#if defined(WEBRTC_POSIX) && !defined(WEBRTC_MAC) && !defined(__native_client__)
-+#if defined(WEBRTC_POSIX) && !defined(WEBRTC_MAC) && !defined(__native_client__) && !defined(WEBRTC_BSD)
- 
+-#if defined(WEBRTC_POSIX) && !defined(WEBRTC_MAC)
++#if defined(WEBRTC_POSIX) && !defined(WEBRTC_MAC) && !defined(WEBRTC_BSD)
  int64_t GetSocketRecvTimestamp(int socket) {
    struct timeval tv_ioctl;
-@@ -329,7 +329,7 @@ int PhysicalSocket::GetOption(Option opt
+   int ret = ioctl(socket, SIOCGSTAMP, &tv_ioctl);
+@@ -331,7 +331,7 @@ int PhysicalSocket::GetOption(Option opt
      return -1;
    }
    if (opt == OPT_DONTFRAGMENT) {
@@ -33,7 +33,7 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_webrtc_rtc__base_physical__soc
      *value = (*value != IP_PMTUDISC_DONT) ? 1 : 0;
  #endif
    } else if (opt == OPT_DSCP) {
-@@ -358,7 +358,7 @@ int PhysicalSocket::SetOption(Option opt
+@@ -360,7 +360,7 @@ int PhysicalSocket::SetOption(Option opt
    if (TranslateOption(opt, &slevel, &sopt) == -1)
      return -1;
    if (opt == OPT_DONTFRAGMENT) {
@@ -42,7 +42,7 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_webrtc_rtc__base_physical__soc
      value = (value) ? IP_PMTUDISC_DO : IP_PMTUDISC_DONT;
  #endif
    } else if (opt == OPT_DSCP) {
-@@ -389,7 +389,7 @@ int PhysicalSocket::SetOption(Option opt
+@@ -391,7 +391,7 @@ int PhysicalSocket::SetOption(Option opt
  int PhysicalSocket::Send(const void* pv, size_t cb) {
    int sent = DoSend(
        s_, reinterpret_cast<const char*>(pv), static_cast<int>(cb),
@@ -51,7 +51,7 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_webrtc_rtc__base_physical__soc
        // Suppress SIGPIPE. Without this, attempting to send on a socket whose
        // other end is closed will result in a SIGPIPE signal being raised to
        // our process, which by default will terminate the process, which we
-@@ -418,7 +418,7 @@ int PhysicalSocket::SendTo(const void* b
+@@ -420,7 +420,7 @@ int PhysicalSocket::SendTo(const void* b
    size_t len = addr.ToSockAddrStorage(&saddr);
    int sent =
        DoSendTo(s_, static_cast<const char*>(buffer), static_cast<int>(length),
@@ -60,25 +60,25 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_webrtc_rtc__base_physical__soc
                 // Suppress SIGPIPE. See above for explanation.
                 MSG_NOSIGNAL,
  #else
-@@ -697,7 +697,7 @@ int PhysicalSocket::TranslateOption(Opti
+@@ -698,7 +698,7 @@ int PhysicalSocket::TranslateOption(Opti
        *slevel = IPPROTO_IP;
        *sopt = IP_DONTFRAGMENT;
        break;
--#elif defined(WEBRTC_MAC) || defined(BSD) || defined(__native_client__)
-+#elif defined(WEBRTC_MAC) || defined(WEBRTC_BSD) || defined(__native_client__)
+-#elif defined(WEBRTC_MAC) || defined(BSD)
++#elif defined(WEBRTC_MAC) || defined(WEBRTC_BSD)
        RTC_LOG(LS_WARNING) << "Socket::OPT_DONTFRAGMENT not supported.";
        return -1;
  #elif defined(WEBRTC_POSIX)
-@@ -746,7 +746,7 @@ int PhysicalSocket::TranslateOption(Opti
+@@ -747,7 +747,7 @@ int PhysicalSocket::TranslateOption(Opti
        return -1;
  #endif
      case OPT_RECV_ECN:
 -#if defined(WEBRTC_POSIX)
-+#if defined(WEBRTC_POSIX) && defined(IP_RECVTOS)
++#if defined(WEBRTC_POSIX) && defined(IP_RECVTOS) 
        if (family_ == AF_INET6) {
          *slevel = IPPROTO_IPV6;
          *sopt = IPV6_RECVTCLASS;
-@@ -766,10 +766,19 @@ int PhysicalSocket::TranslateOption(Opti
+@@ -767,10 +767,19 @@ int PhysicalSocket::TranslateOption(Opti
        *sopt = SO_KEEPALIVE;
        break;
      case OPT_TCP_KEEPCNT:
@@ -98,7 +98,7 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_webrtc_rtc__base_physical__soc
        *slevel = IPPROTO_TCP;
  #if !defined(WEBRTC_MAC)
        *sopt = TCP_KEEPIDLE;
-@@ -777,12 +786,18 @@ int PhysicalSocket::TranslateOption(Opti
+@@ -778,12 +787,18 @@ int PhysicalSocket::TranslateOption(Opti
        *sopt = TCP_KEEPALIVE;
  #endif
        break;

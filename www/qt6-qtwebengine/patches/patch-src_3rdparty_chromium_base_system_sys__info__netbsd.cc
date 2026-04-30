@@ -1,12 +1,12 @@
-$NetBSD: patch-src_3rdparty_chromium_base_system_sys__info__netbsd.cc,v 1.1 2025/12/21 09:38:16 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_system_sys__info__netbsd.cc,v 1.2 2026/04/30 06:39:35 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/system/sys_info_netbsd.cc.orig	2024-12-21 10:25:09.641329812 +0000
+--- src/3rdparty/chromium/base/system/sys_info_netbsd.cc.orig	2026-04-22 12:29:46.457819617 +0000
 +++ src/3rdparty/chromium/base/system/sys_info_netbsd.cc
-@@ -0,0 +1,88 @@
+@@ -0,0 +1,98 @@
 +// Copyright 2011 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -18,6 +18,7 @@ $NetBSD: patch-src_3rdparty_chromium_base_system_sys__info__netbsd.cc,v 1.1 2025
 +#include <sys/param.h>
 +#include <sys/shm.h>
 +#include <sys/sysctl.h>
++#include <uvm/uvm_extern.h>
 +
 +#include "base/notreached.h"
 +#include "base/posix/sysctl.h"
@@ -28,8 +29,9 @@ $NetBSD: patch-src_3rdparty_chromium_base_system_sys__info__netbsd.cc,v 1.1 2025
 +uint64_t AmountOfMemory(int pages_name) {
 +  long pages = sysconf(pages_name);
 +  long page_size = sysconf(_SC_PAGESIZE);
-+  if (pages < 0 || page_size < 0)
++  if (pages < 0 || page_size < 0) {
 +    return 0;
++  }
 +  return static_cast<uint64_t>(pages) * static_cast<uint64_t>(page_size);
 +}
 +
@@ -55,7 +57,15 @@ $NetBSD: patch-src_3rdparty_chromium_base_system_sys__info__netbsd.cc,v 1.1 2025
 +
 +// static
 +uint64_t SysInfo::AmountOfAvailablePhysicalMemoryImpl() {
-+  return AmountOfMemory(_SC_PHYS_PAGES);
++  // With NetBSD-11
++  //return AmountOfMemory(_SC_AVPHYS_PAGES);
++  struct uvmexp_sysctl uvmexp;
++  size_t len = sizeof(uvmexp);
++  int mib[] = { CTL_VM, VM_UVMEXP2 };
++  if (sysctl(mib, std::size(mib), &uvmexp, &len, NULL, 0) <0) {
++    NOTREACHED();
++  }
++  return static_cast<uint64_t>(uvmexp.free);
 +}
 +
 +// static

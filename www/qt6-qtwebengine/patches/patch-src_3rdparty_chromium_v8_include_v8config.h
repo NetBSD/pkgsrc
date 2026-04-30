@@ -1,14 +1,14 @@
-$NetBSD: patch-src_3rdparty_chromium_v8_include_v8config.h,v 1.1 2025/12/21 09:38:50 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_v8_include_v8config.h,v 1.2 2026/04/30 06:39:46 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/v8/include/v8config.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/v8/include/v8config.h.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/v8/include/v8config.h
-@@ -201,6 +201,9 @@ path. Add it with -I<path> to the comman
-   && !defined(V8_TARGET_OS_FUCHSIA) \
+@@ -207,6 +207,9 @@ path. Add it with -I<path> to the comman
    && !defined(V8_TARGET_OS_IOS) \
+   && !defined(V8_TARGET_OS_TVOS) \
    && !defined(V8_TARGET_OS_LINUX) \
 +  && !defined(V8_TARGET_OS_OPENBSD) \
 +  && !defined(V8_TARGET_OS_FREEBSD) \
@@ -16,9 +16,9 @@ $NetBSD: patch-src_3rdparty_chromium_v8_include_v8config.h,v 1.1 2025/12/21 09:3
    && !defined(V8_TARGET_OS_MACOS) \
    && !defined(V8_TARGET_OS_WIN) \
    && !defined(V8_TARGET_OS_CHROMEOS)
-@@ -213,6 +216,9 @@ path. Add it with -I<path> to the comman
-   || defined(V8_TARGET_OS_FUCHSIA) \
+@@ -220,6 +223,9 @@ path. Add it with -I<path> to the comman
    || defined(V8_TARGET_OS_IOS) \
+   || defined(V8_TARGET_OS_TVOS) \
    || defined(V8_TARGET_OS_LINUX) \
 +  || defined(V8_TARGET_OS_OPENBSD) \
 +  || defined(V8_TARGET_OS_FREEBSD) \
@@ -26,7 +26,7 @@ $NetBSD: patch-src_3rdparty_chromium_v8_include_v8config.h,v 1.1 2025/12/21 09:3
    || defined(V8_TARGET_OS_MACOS) \
    || defined(V8_TARGET_OS_WIN) \
    || defined(V8_TARGET_OS_CHROMEOS)
-@@ -236,6 +242,22 @@ path. Add it with -I<path> to the comman
+@@ -247,6 +253,22 @@ path. Add it with -I<path> to the comman
  # define V8_TARGET_OS_LINUX
  #endif
  
@@ -49,13 +49,12 @@ $NetBSD: patch-src_3rdparty_chromium_v8_include_v8config.h,v 1.1 2025/12/21 09:3
  #ifdef V8_OS_MACOS
  # define V8_TARGET_OS_MACOS
  #endif
-@@ -381,7 +403,8 @@ path. Add it with -I<path> to the comman
- // preserve_most in clang >= 17 (see https://reviews.llvm.org/D143425).
+@@ -395,6 +417,8 @@ path. Add it with -I<path> to the comman
  #if (defined(_M_X64) || defined(__x86_64__)            /* x64 (everywhere) */  \
       || ((defined(__AARCH64EL__) || defined(_M_ARM64)) /* arm64, but ... */    \
--         && !defined(_WIN32)))                         /* not on windows */    \
-+         && !defined(_WIN32)                           /* not on windows */    \
-+         && !defined(__OpenBSD__)))                    /* not on OpenBSD */    \
+          && !defined(_WIN32)))                         /* not on windows */    \
++     && !defined(__OpenBSD__)                          /* not on OpenBSD */    \
++     && !defined(__NetBSD__)                           /* not on NetBSD */     \
       && !defined(COMPONENT_BUILD)                      /* no component build */\
       && __clang_major__ >= 17                          /* clang >= 17 */
  # define V8_HAS_ATTRIBUTE_PRESERVE_MOST (__has_attribute(preserve_most))

@@ -1,10 +1,10 @@
-$NetBSD: patch-src_3rdparty_chromium_base_process_process__metrics.cc,v 1.1 2025/12/21 09:38:15 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_process_process__metrics.cc,v 1.2 2026/04/30 06:39:35 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/process/process_metrics.cc.orig	2025-05-29 01:27:28.000000000 +0000
+--- src/3rdparty/chromium/base/process/process_metrics.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/base/process/process_metrics.cc
 @@ -17,7 +17,7 @@ namespace base {
  namespace {
@@ -24,28 +24,17 @@ $NetBSD: patch-src_3rdparty_chromium_base_process_process__metrics.cc,v 1.1 2025
    GetSystemMemoryInfo(&system_metrics.memory_info_);
    GetVmStatInfo(&system_metrics.vmstat_info_);
    GetSystemDiskInfo(&system_metrics.disk_info_);
-@@ -73,7 +73,7 @@ Value::Dict SystemMetrics::ToDict() cons
-   Value::Dict res;
- 
-   res.Set("committed_memory", static_cast<int>(committed_memory_));
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
-   Value::Dict meminfo = memory_info_.ToDict();
-   meminfo.Merge(vmstat_info_.ToDict());
-   res.Set("meminfo", std::move(meminfo));
-@@ -100,7 +100,6 @@ std::unique_ptr<ProcessMetrics> ProcessM
+@@ -79,7 +79,7 @@ std::unique_ptr<ProcessMetrics> ProcessM
  #endif  // !BUILDFLAG(IS_MAC)
  }
  
 -#if !BUILDFLAG(IS_FREEBSD) || !BUILDFLAG(IS_POSIX)
++#if BUILDFLAG(IS_POSIX)
  double ProcessMetrics::GetPlatformIndependentCPUUsage(
      TimeDelta cumulative_cpu) {
    TimeTicks time = TimeTicks::Now();
-@@ -129,10 +128,9 @@ ProcessMetrics::GetPlatformIndependentCP
-     return GetPlatformIndependentCPUUsage(cpu_usage);
-   });
- }
--#endif
+@@ -112,7 +112,7 @@ ProcessMetrics::GetPlatformIndependentCP
+ #endif
  
  #if BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
 -    BUILDFLAG(IS_AIX)

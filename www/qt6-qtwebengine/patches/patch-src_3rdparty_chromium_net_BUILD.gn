@@ -1,12 +1,12 @@
-$NetBSD: patch-src_3rdparty_chromium_net_BUILD.gn,v 1.1 2025/12/21 09:38:33 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_net_BUILD.gn,v 1.2 2026/04/30 06:39:41 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/net/BUILD.gn.orig	2025-05-29 01:27:28.000000000 +0000
+--- src/3rdparty/chromium/net/BUILD.gn.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/net/BUILD.gn
-@@ -130,7 +130,7 @@ net_configs = [
+@@ -131,7 +131,7 @@ net_configs = [
    "//build/config/compiler:wexit_time_destructors",
  ]
  
@@ -15,7 +15,7 @@ $NetBSD: patch-src_3rdparty_chromium_net_BUILD.gn,v 1.1 2025/12/21 09:38:33 mark
    net_configs += [ "//build/config/linux:libresolv" ]
  }
  
-@@ -1294,6 +1294,23 @@ jumbo_component("net") {
+@@ -1373,6 +1373,23 @@ jumbo_component("net") {
      ]
    }
  
@@ -34,12 +34,12 @@ $NetBSD: patch-src_3rdparty_chromium_net_BUILD.gn,v 1.1 2025/12/21 09:38:33 mark
 +      "base/address_tracker_linux.cc",
 +      "base/network_interfaces_linux.cc",
 +    ]
-+  }   
++  }
 +
    if (is_mac) {
      sources += [
        "base/network_notification_thread_mac.cc",
-@@ -1458,7 +1471,7 @@ jumbo_component("net") {
+@@ -1539,7 +1552,7 @@ jumbo_component("net") {
    }
  
    # Use getifaddrs() on POSIX platforms, except Linux.
@@ -48,16 +48,16 @@ $NetBSD: patch-src_3rdparty_chromium_net_BUILD.gn,v 1.1 2025/12/21 09:38:33 mark
      sources += [
        "base/network_interfaces_getifaddrs.cc",
        "base/network_interfaces_getifaddrs.h",
-@@ -2125,7 +2138,7 @@ static_library("test_support") {
+@@ -2272,7 +2285,7 @@ static_library("test_support") {
      ]
    }
  
 -  if (is_linux || is_chromeos || is_android) {
-+  if ((is_linux || is_chromeos || is_android) && !is_bsd) {
++  if (!is_bsd && (is_linux || is_chromeos || is_android)) {
      sources += [
        "base/address_tracker_linux_test_util.cc",
        "base/address_tracker_linux_test_util.h",
-@@ -2934,14 +2947,14 @@ target(_test_target_type, "net_unittests
+@@ -3070,14 +3083,14 @@ target(_test_target_type, "net_unittests
      ]
    }
  
@@ -74,7 +74,7 @@ $NetBSD: patch-src_3rdparty_chromium_net_BUILD.gn,v 1.1 2025/12/21 09:38:33 mark
      sources += [
        "base/address_tracker_linux_unittest.cc",
        "base/network_interfaces_linux_unittest.cc",
-@@ -3034,6 +3047,10 @@ target(_test_target_type, "net_unittests
+@@ -3178,6 +3191,10 @@ target(_test_target_type, "net_unittests
      ]
    }
  
@@ -85,16 +85,16 @@ $NetBSD: patch-src_3rdparty_chromium_net_BUILD.gn,v 1.1 2025/12/21 09:38:33 mark
    if (enable_websockets) {
      sources += [
        "server/http_connection_unittest.cc",
-@@ -3100,7 +3117,7 @@ target(_test_target_type, "net_unittests
-     ]
-   }
+@@ -3234,7 +3251,7 @@ target(_test_target_type, "net_unittests
+   ]
+   data_deps = [ "//testing/buildbot/filters:net_unittests_filters" ]
  
 -  if (is_linux || is_chromeos) {
 +  if ((is_linux || is_chromeos) && !is_bsd) {
      sources += [ "tools/quic/quic_simple_server_test.cc" ]
    }
  
-@@ -3239,7 +3256,7 @@ target(_test_target_type, "net_unittests
+@@ -3364,7 +3381,7 @@ target(_test_target_type, "net_unittests
    }
  
    # Use getifaddrs() on POSIX platforms, except Linux.

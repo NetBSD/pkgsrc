@@ -1,14 +1,14 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_angle_src_common_system__utils__linux.cpp,v 1.1 2025/12/21 09:38:39 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_angle_src_common_system__utils__linux.cpp,v 1.2 2026/04/30 06:39:43 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/third_party/angle/src/common/system_utils_linux.cpp.orig	2025-10-02 00:36:39.000000000 +0000
+--- src/3rdparty/chromium/third_party/angle/src/common/system_utils_linux.cpp.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/third_party/angle/src/common/system_utils_linux.cpp
-@@ -17,8 +17,15 @@
- 
- #include <array>
+@@ -15,10 +15,17 @@
+ #include <sys/types.h>
+ #include <unistd.h>
  
 +#if ANGLE_PLATFORM_OPENBSD
 +#include <pthread_np.h>
@@ -16,6 +16,8 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_angle_src_common_system__utils
 +#include <pthread.h>
 +#endif
 +
+ #include <array>
+ 
  namespace angle
  {
 +#if ANGLE_PLATFORM_LINUX

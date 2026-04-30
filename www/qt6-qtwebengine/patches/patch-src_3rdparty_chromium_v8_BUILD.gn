@@ -1,12 +1,12 @@
-$NetBSD: patch-src_3rdparty_chromium_v8_BUILD.gn,v 1.1 2025/12/21 09:38:50 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_v8_BUILD.gn,v 1.2 2026/04/30 06:39:46 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/v8/BUILD.gn.orig	2025-05-29 01:27:28.000000000 +0000
+--- src/3rdparty/chromium/v8/BUILD.gn.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/v8/BUILD.gn
-@@ -908,6 +908,9 @@ external_v8_defines = [
+@@ -977,6 +977,9 @@ external_v8_defines = [
    "V8_TARGET_OS_MACOS",
    "V8_TARGET_OS_WIN",
    "V8_TARGET_OS_CHROMEOS",
@@ -16,7 +16,7 @@ $NetBSD: patch-src_3rdparty_chromium_v8_BUILD.gn,v 1.1 2025/12/21 09:38:50 markd
  ]
  
  enabled_external_v8_defines = [
-@@ -984,6 +987,15 @@ if (target_os == "android") {
+@@ -1051,6 +1054,15 @@ if (target_os == "android") {
  } else if (target_os == "chromeos") {
    enabled_external_v8_defines += [ "V8_HAVE_TARGET_OS" ]
    enabled_external_v8_defines += [ "V8_TARGET_OS_CHROMEOS" ]
@@ -32,7 +32,7 @@ $NetBSD: patch-src_3rdparty_chromium_v8_BUILD.gn,v 1.1 2025/12/21 09:38:50 markd
  }
  
  disabled_external_v8_defines = external_v8_defines - enabled_external_v8_defines
-@@ -2413,6 +2425,23 @@ action("generate_bytecode_builtins_list"
+@@ -2440,6 +2452,23 @@ action("generate_bytecode_builtins_list"
    ]
  }
  
@@ -56,7 +56,7 @@ $NetBSD: patch-src_3rdparty_chromium_v8_BUILD.gn,v 1.1 2025/12/21 09:38:50 markd
  # Template to generate different V8 snapshots based on different runtime flags.
  # Can be invoked with run_mksnapshot(<name>). The target will resolve to
  # run_mksnapshot_<name>. If <name> is "default", no file suffixes will be used.
-@@ -2431,7 +2460,11 @@ template("run_mksnapshot") {
+@@ -2458,7 +2487,11 @@ template("run_mksnapshot") {
      suffix = "_$name"
    }
    action("run_mksnapshot_" + name) {
@@ -69,7 +69,7 @@ $NetBSD: patch-src_3rdparty_chromium_v8_BUILD.gn,v 1.1 2025/12/21 09:38:50 markd
      if (v8_verify_deterministic_mksnapshot) {
        # We archive the snapshot executable when verifying snapshot
        # determinism to ease debugging.
-@@ -2538,6 +2571,12 @@ template("run_mksnapshot") {
+@@ -2588,6 +2621,12 @@ template("run_mksnapshot") {
        if (!v8_enable_builtins_profiling && v8_enable_builtins_reordering) {
          args += [ "--reorder-builtins" ]
        }
@@ -81,8 +81,8 @@ $NetBSD: patch-src_3rdparty_chromium_v8_BUILD.gn,v 1.1 2025/12/21 09:38:50 markd
 +      }
      }
  
-     if (v8_enable_turboshaft_csa) {
-@@ -4648,7 +4687,7 @@ v8_header_set("v8_internal_headers") {
+     # This is needed to distinguish between generating code for the simulator
+@@ -4747,7 +4786,7 @@ v8_header_set("v8_internal_headers") {
        # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
        # based on Darwin and thus POSIX-compliant to a similar degree.
        if (is_linux || is_chromeos || is_mac || is_ios ||
@@ -91,7 +91,7 @@ $NetBSD: patch-src_3rdparty_chromium_v8_BUILD.gn,v 1.1 2025/12/21 09:38:50 markd
          sources += [ "src/trap-handler/handler-inside-posix.h" ]
        } else if (is_win) {
          sources += [ "src/trap-handler/handler-inside-win.h" ]
-@@ -6083,7 +6122,7 @@ v8_source_set("v8_base_without_compiler"
+@@ -6204,7 +6243,7 @@ v8_source_set("v8_base_without_compiler"
        # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
        # based on Darwin and thus POSIX-compliant to a similar degree.
        if (is_linux || is_chromeos || is_mac || is_ios ||
@@ -100,7 +100,7 @@ $NetBSD: patch-src_3rdparty_chromium_v8_BUILD.gn,v 1.1 2025/12/21 09:38:50 markd
          sources += [
            "src/trap-handler/handler-inside-posix.cc",
            "src/trap-handler/handler-outside-posix.cc",
-@@ -6704,7 +6743,7 @@ v8_component("v8_libbase") {
+@@ -6862,7 +6901,7 @@ v8_component("v8_libbase") {
      }
    }
  
@@ -109,7 +109,7 @@ $NetBSD: patch-src_3rdparty_chromium_v8_BUILD.gn,v 1.1 2025/12/21 09:38:50 markd
      sources += [
        "src/base/debug/stack_trace_posix.cc",
        "src/base/platform/platform-linux.cc",
-@@ -6715,6 +6754,27 @@ v8_component("v8_libbase") {
+@@ -6873,6 +6912,27 @@ v8_component("v8_libbase") {
        "dl",
        "rt",
      ]

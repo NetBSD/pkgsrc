@@ -1,12 +1,12 @@
-$NetBSD: patch-src_3rdparty_chromium_net_socket_udp__socket__posix.cc,v 1.1 2025/12/21 09:38:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_net_socket_udp__socket__posix.cc,v 1.2 2026/04/30 06:39:41 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/net/socket/udp_socket_posix.cc.orig	2025-05-29 01:27:28.000000000 +0000
+--- src/3rdparty/chromium/net/socket/udp_socket_posix.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/net/socket/udp_socket_posix.cc
-@@ -78,6 +78,32 @@ constexpr int kBindRetries = 10;
+@@ -75,6 +75,32 @@ constexpr int kBindRetries = 10;
  constexpr int kPortStart = 1024;
  constexpr int kPortEnd = 65535;
  
@@ -39,7 +39,7 @@ $NetBSD: patch-src_3rdparty_chromium_net_socket_udp__socket__posix.cc,v 1.1 2025
  int GetSocketFDHash(int fd) {
    return fd ^ 1595649551;
  }
-@@ -522,12 +548,17 @@ int UDPSocketPosix::SetRecvTos() {
+@@ -524,12 +550,17 @@ int UDPSocketPosix::SetRecvTos() {
  #endif  // BUILDFLAG(IS_APPLE)
    }
  
@@ -58,7 +58,7 @@ $NetBSD: patch-src_3rdparty_chromium_net_socket_udp__socket__posix.cc,v 1.1 2025
    if (confirm) {
      sendto_flags_ |= MSG_CONFIRM;
    } else {
-@@ -548,7 +579,7 @@ int UDPSocketPosix::SetBroadcast(bool br
+@@ -550,7 +581,7 @@ int UDPSocketPosix::SetBroadcast(bool br
    DCHECK_CALLED_ON_VALID_THREAD(thread_checker_);
    int value = broadcast ? 1 : 0;
    int rv;
@@ -67,7 +67,7 @@ $NetBSD: patch-src_3rdparty_chromium_net_socket_udp__socket__posix.cc,v 1.1 2025
    // SO_REUSEPORT on OSX permits multiple processes to each receive
    // UDP multicast or broadcast datagrams destined for the bound
    // port.
-@@ -849,9 +880,17 @@ int UDPSocketPosix::SetMulticastOptions(
+@@ -857,9 +888,17 @@ int UDPSocketPosix::SetMulticastOptions(
    if (multicast_interface_ != 0) {
      switch (addr_family_) {
        case AF_INET: {
@@ -85,8 +85,8 @@ $NetBSD: patch-src_3rdparty_chromium_net_socket_udp__socket__posix.cc,v 1.1 2025
          int rv = setsockopt(socket_, IPPROTO_IP, IP_MULTICAST_IF,
                              reinterpret_cast<const char*>(&mreq), sizeof(mreq));
          if (rv)
-@@ -886,7 +925,7 @@ int UDPSocketPosix::DoBind(const IPEndPo
- #if BUILDFLAG(IS_CHROMEOS_ASH)
+@@ -894,7 +933,7 @@ int UDPSocketPosix::DoBind(const IPEndPo
+ #if BUILDFLAG(IS_CHROMEOS)
    if (last_error == EINVAL)
      return ERR_ADDRESS_IN_USE;
 -#elif BUILDFLAG(IS_APPLE)
@@ -94,7 +94,7 @@ $NetBSD: patch-src_3rdparty_chromium_net_socket_udp__socket__posix.cc,v 1.1 2025
    if (last_error == EADDRNOTAVAIL)
      return ERR_ADDRESS_IN_USE;
  #endif
-@@ -914,9 +953,17 @@ int UDPSocketPosix::JoinGroup(const IPAd
+@@ -922,9 +961,17 @@ int UDPSocketPosix::JoinGroup(const IPAd
      case IPAddress::kIPv4AddressSize: {
        if (addr_family_ != AF_INET)
          return ERR_ADDRESS_INVALID;
@@ -109,10 +109,10 @@ $NetBSD: patch-src_3rdparty_chromium_net_socket_udp__socket__posix.cc,v 1.1 2025
        mreq.imr_ifindex = multicast_interface_;
        mreq.imr_address.s_addr = htonl(INADDR_ANY);
 +#endif
-       memcpy(&mreq.imr_multiaddr, group_address.bytes().data(),
-              IPAddress::kIPv4AddressSize);
+       mreq.imr_multiaddr = ToInAddr(group_address);
        int rv = setsockopt(socket_, IPPROTO_IP, IP_ADD_MEMBERSHIP,
-@@ -954,9 +1001,17 @@ int UDPSocketPosix::LeaveGroup(const IPA
+                           &mreq, sizeof(mreq));
+@@ -959,9 +1006,17 @@ int UDPSocketPosix::LeaveGroup(const IPA
      case IPAddress::kIPv4AddressSize: {
        if (addr_family_ != AF_INET)
          return ERR_ADDRESS_INVALID;
@@ -127,6 +127,6 @@ $NetBSD: patch-src_3rdparty_chromium_net_socket_udp__socket__posix.cc,v 1.1 2025
        mreq.imr_ifindex = multicast_interface_;
        mreq.imr_address.s_addr = INADDR_ANY;
 +#endif
-       memcpy(&mreq.imr_multiaddr, group_address.bytes().data(),
-              IPAddress::kIPv4AddressSize);
+       mreq.imr_multiaddr = ToInAddr(group_address);
        int rv = setsockopt(socket_, IPPROTO_IP, IP_DROP_MEMBERSHIP,
+                           &mreq, sizeof(mreq));

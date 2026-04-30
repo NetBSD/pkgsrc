@@ -1,4 +1,4 @@
-$NetBSD: patch-src_3rdparty_chromium_media_audio_sndio_audio__manager__sndio.h,v 1.1 2025/12/21 09:38:31 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_media_audio_sndio_audio__manager__sndio.h,v 1.2 2026/04/30 06:39:41 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
@@ -40,7 +40,7 @@ $NetBSD: patch-src_3rdparty_chromium_media_audio_sndio_audio__manager__sndio.h,v
 +  void GetAudioOutputDeviceNames(AudioDeviceNames* device_names) override;
 +  AudioParameters GetInputStreamParameters(
 +      const std::string& device_id) override;
-+  const char* GetName() override;
++  const std::string_view GetName() override;
 +
 +  // Implementation of AudioManagerBase.
 +  AudioOutputStream* MakeLinearOutputStream(

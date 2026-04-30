@@ -1,4 +1,4 @@
-$NetBSD: patch-src_3rdparty_chromium_base_process_process__iterator__netbsd.cc,v 1.1 2025/12/21 09:38:15 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_process_process__iterator__netbsd.cc,v 1.2 2026/04/30 06:39:35 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
@@ -6,7 +6,7 @@ $NetBSD: patch-src_3rdparty_chromium_base_process_process__iterator__netbsd.cc,v
 
 --- src/3rdparty/chromium/base/process/process_iterator_netbsd.cc.orig	2024-12-21 10:25:09.617721988 +0000
 +++ src/3rdparty/chromium/base/process/process_iterator_netbsd.cc
-@@ -0,0 +1,132 @@
+@@ -0,0 +1,134 @@
 +// Copyright 2013 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -80,8 +80,9 @@ $NetBSD: patch-src_3rdparty_chromium_base_process_process__iterator__netbsd.cc,v
 +    kinfo_proc2& kinfo = kinfo_procs_[index_of_kinfo_proc_];
 +
 +    // Skip processes just awaiting collection
-+    if ((kinfo.p_pid > 0) && (kinfo.p_stat == SZOMB))
++    if ((kinfo.p_pid > 0) && (kinfo.p_stat == SZOMB)) {
 +      continue;
++    }
 +
 +    int mib[] = { CTL_KERN, KERN_PROC_ARGS, kinfo.p_pid };
 +
@@ -120,11 +121,12 @@ $NetBSD: patch-src_3rdparty_chromium_base_process_process__iterator__netbsd.cc,v
 +    entry_.ppid_ = kinfo.p_ppid;
 +    entry_.gid_ = kinfo.p__pgid;
 +    size_t last_slash = data.rfind('/', exec_name_end);
-+    if (last_slash == std::string::npos)
++    if (last_slash == std::string::npos) {
 +      entry_.exe_file_.assign(data, 0, exec_name_end);
-+    else
++    } else {
 +      entry_.exe_file_.assign(data, last_slash + 1,
 +                              exec_name_end - last_slash - 1);
++    }
 +    // Start w/ the next entry next time through
 +    ++index_of_kinfo_proc_;
 +    // Done

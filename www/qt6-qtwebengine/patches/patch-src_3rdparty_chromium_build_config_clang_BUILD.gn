@@ -1,20 +1,22 @@
-$NetBSD: patch-src_3rdparty_chromium_build_config_clang_BUILD.gn,v 1.1 2025/12/21 09:38:17 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_build_config_clang_BUILD.gn,v 1.2 2026/04/30 06:39:35 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/build/config/clang/BUILD.gn.orig	2025-05-29 01:27:28.000000000 +0000
+--- src/3rdparty/chromium/build/config/clang/BUILD.gn.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/build/config/clang/BUILD.gn
-@@ -257,6 +257,11 @@ clang_lib("compiler_profile") {
-     # This is only used when `toolchain_has_rust` to support Rust linking.
-     #
-     # Don't define libname which makes this target do nothing.
-+  } else if (is_bsd) {
+@@ -268,7 +268,12 @@ template("clang_lib") {
+ 
+ # Adds a dependency on the Clang runtime library clang_rt.builtins.
+ clang_lib("compiler_builtins") {
+-  if (is_mac) {
++  if (is_bsd) {
 +    # Since there's no Rust in the toolchain, there's no concern that we'll use
 +    # the Rust stdlib's intrinsics here.
 +    #
 +    # Don't define libname which makes this target do nothing.
-   } else if (is_mac) {
-     libname = "profile_osx"
++  } else if (is_mac) {
+     libname = "osx"
    } else if (is_ios) {
+     if (target_platform == "iphoneos") {

@@ -1,12 +1,12 @@
-$NetBSD: patch-src_3rdparty_chromium_media_base_media__switches.cc,v 1.1 2025/12/21 09:38:31 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_media_base_media__switches.cc,v 1.2 2026/04/30 06:39:41 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/media/base/media_switches.cc.orig	2025-10-02 00:36:39.000000000 +0000
+--- src/3rdparty/chromium/media/base/media_switches.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/media/base/media_switches.cc
-@@ -20,7 +20,7 @@
+@@ -19,7 +19,7 @@
  #include "ui/gl/gl_features.h"
  #include "ui/gl/gl_utils.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-src_3rdparty_chromium_media_base_media__switches.cc,v 1.1 2025/12
  #include "base/cpu.h"
  #endif
  
-@@ -60,7 +60,7 @@ const char kReportVp9AsAnUnsupportedMime
+@@ -67,7 +67,7 @@ const char kReportVp9AsAnUnsupportedMime
      "report-vp9-as-an-unsupported-mime-type";
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FREEBSD) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-src_3rdparty_chromium_media_base_media__switches.cc,v 1.1 2025/12
  // The Alsa device to use when opening an audio input stream.
  const char kAlsaInputDevice[] = "alsa-input-device";
  // The Alsa device to use when opening an audio stream.
-@@ -373,7 +373,7 @@ BASE_FEATURE(kUseSCContentSharingPicker,
+@@ -382,7 +382,7 @@ BASE_FEATURE(kUseSCContentSharingPicker,
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -33,7 +33,7 @@ $NetBSD: patch-src_3rdparty_chromium_media_base_media__switches.cc,v 1.1 2025/12
  // Enables system audio mirroring using pulseaudio.
  BASE_FEATURE(kPulseaudioLoopbackForCast,
               "PulseaudioLoopbackForCast",
-@@ -383,6 +383,31 @@ BASE_FEATURE(kPulseaudioLoopbackForCast,
+@@ -392,6 +392,31 @@ BASE_FEATURE(kPulseaudioLoopbackForCast,
  BASE_FEATURE(kPulseaudioLoopbackForScreenShare,
               "PulseaudioLoopbackForScreenShare",
               base::FEATURE_DISABLED_BY_DEFAULT);
@@ -65,7 +65,7 @@ $NetBSD: patch-src_3rdparty_chromium_media_base_media__switches.cc,v 1.1 2025/12
  #endif  // BUILDFLAG(IS_LINUX)
  
  // When enabled, MediaCapabilities will check with GPU Video Accelerator
-@@ -630,7 +655,7 @@ BASE_FEATURE(kFileDialogsBlockPictureInP
+@@ -715,7 +740,7 @@ BASE_FEATURE(kFileDialogsTuckPictureInPi
  #endif  // !BUILDFLAG(IS_ANDROID)
  
  // Show toolbar button that opens dialog for controlling media sessions.
@@ -74,7 +74,7 @@ $NetBSD: patch-src_3rdparty_chromium_media_base_media__switches.cc,v 1.1 2025/12
  BASE_FEATURE(kGlobalMediaControls,
               "GlobalMediaControls",
               base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -654,7 +679,7 @@ BASE_FEATURE(kGlobalMediaControlsUpdated
+@@ -739,7 +764,7 @@ BASE_FEATURE(kGlobalMediaControlsUpdated
  
  #if !BUILDFLAG(IS_ANDROID)
  // If enabled, users can request Media Remoting without fullscreen-in-tab.
@@ -83,16 +83,16 @@ $NetBSD: patch-src_3rdparty_chromium_media_base_media__switches.cc,v 1.1 2025/12
  BASE_FEATURE(kMediaRemotingWithoutFullscreen,
               "MediaRemotingWithoutFullscreen",
               base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -667,7 +692,7 @@ BASE_FEATURE(kMediaRemotingWithoutFullsc
+@@ -752,7 +777,7 @@ BASE_FEATURE(kMediaRemotingWithoutFullsc
  
  // Show picture-in-picture button in Global Media Controls.
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  BASE_FEATURE(kGlobalMediaControlsPictureInPicture,
               "GlobalMediaControlsPictureInPicture",
               base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -699,7 +724,7 @@ BASE_FEATURE(kUnifiedAutoplay,
+@@ -790,7 +815,7 @@ BASE_FEATURE(kUnifiedAutoplay,
               "UnifiedAutoplay",
               base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -101,7 +101,7 @@ $NetBSD: patch-src_3rdparty_chromium_media_base_media__switches.cc,v 1.1 2025/12
  // Enable vaapi/v4l2 video decoding on linux. This is already enabled by default
  // on chromeos, but needs an experiment on linux.
  BASE_FEATURE(kAcceleratedVideoDecodeLinux,
-@@ -808,7 +833,7 @@ BASE_FEATURE(kVSyncMjpegDecoding,
+@@ -869,7 +894,7 @@ BASE_FEATURE(kVSyncMjpegDecoding,
               "VSyncMjpegDecoding",
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // defined(ARCH_CPU_X86_FAMILY) && BUILDFLAG(IS_CHROMEOS)
@@ -110,8 +110,8 @@ $NetBSD: patch-src_3rdparty_chromium_media_base_media__switches.cc,v 1.1 2025/12
  // Enable H264 temporal layer encoding with V4L2 HW encoder on ChromeOS.
  BASE_FEATURE(kV4L2H264TemporalLayerHWEncoding,
               "V4L2H264TemporalLayerHWEncoding",
-@@ -1379,7 +1404,7 @@ BASE_FEATURE(kUseGTFOOutOfProcessVideoDe
-              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -1472,7 +1497,7 @@ BASE_FEATURE(kUseOutOfProcessVideoDecodi
+ #endif
  #endif  // BUILDFLAG(ALLOW_OOP_VIDEO_DECODER)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
@@ -119,7 +119,7 @@ $NetBSD: patch-src_3rdparty_chromium_media_base_media__switches.cc,v 1.1 2025/12
  // Spawn utility processes to perform hardware encode acceleration instead of
  // using the GPU process.
  BASE_FEATURE(kUseOutOfProcessVideoEncoding,
-@@ -1463,7 +1488,7 @@ BASE_FEATURE(kRecordWebAudioEngagement,
+@@ -1556,7 +1581,7 @@ BASE_FEATURE(kRecordWebAudioEngagement,
               "RecordWebAudioEngagement",
               base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -128,3 +128,12 @@ $NetBSD: patch-src_3rdparty_chromium_media_base_media__switches.cc,v 1.1 2025/12
  // Reduces the number of buffers needed in the output video frame pool to
  // populate the Renderer pipeline for hardware accelerated VideoDecoder in
  // non-low latency scenarios.
+@@ -1879,7 +1904,7 @@ bool IsSystemLoopbackCaptureSupported() 
+ #elif BUILDFLAG(IS_MAC)
+   return (IsMacSckSystemLoopbackCaptureSupported() ||
+           IsMacCatapSystemLoopbackCaptureSupported());
+-#elif BUILDFLAG(IS_LINUX) && defined(USE_PULSEAUDIO)
++#elif (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && defined(USE_PULSEAUDIO)
+   return true;
+ #else
+   return false;

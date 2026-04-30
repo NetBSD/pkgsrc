@@ -1,10 +1,10 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_boringssl_src_crypto_cpu__aarch64__openbsd.cc,v 1.1 2026/03/29 16:57:04 tnn Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_boringssl_src_crypto_cpu__aarch64__openbsd.cc,v 1.2 2026/04/30 06:39:43 adam Exp $
 
 Add NetBSD support.
 
---- src/3rdparty/chromium/third_party/boringssl/src/crypto/cpu_aarch64_openbsd.cc.orig	2026-01-23 19:06:19.000000000 +0000
+--- src/3rdparty/chromium/third_party/boringssl/src/crypto/cpu_aarch64_openbsd.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/third_party/boringssl/src/crypto/cpu_aarch64_openbsd.cc
-@@ -59,3 +59,67 @@ void OPENSSL_cpuid_setup(void) {
+@@ -57,3 +57,65 @@ void OPENSSL_cpuid_setup(void) {
  }
  
  #endif  // OPENSSL_AARCH64 && OPENSSL_OPENBSD && !OPENSSL_STATIC_ARMCAP
@@ -17,12 +17,10 @@ Add NetBSD support.
 +#include <machine/armreg.h>
 +#include <stdio.h>
 +
-+#include <openssl/arm_arch.h>
-+
 +#include "internal.h"
 +
 +
-+void OPENSSL_cpuid_setup(void) {
++void OPENSSL_cpuid_setup() {
 +  size_t len;
 +  unsigned int curcpu;
 +  int mib[] = { CTL_HW, HW_NCPU };

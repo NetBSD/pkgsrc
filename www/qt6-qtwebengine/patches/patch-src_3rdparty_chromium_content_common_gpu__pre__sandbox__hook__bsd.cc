@@ -1,10 +1,10 @@
-$NetBSD: patch-src_3rdparty_chromium_content_common_gpu__pre__sandbox__hook__bsd.cc,v 1.1 2025/12/21 09:38:27 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_content_common_gpu__pre__sandbox__hook__bsd.cc,v 1.2 2026/04/30 06:39:40 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/content/common/gpu_pre_sandbox_hook_bsd.cc.orig	2024-12-21 10:25:10.309586963 +0000
+--- src/3rdparty/chromium/content/common/gpu_pre_sandbox_hook_bsd.cc.orig	2026-04-22 12:29:48.621187039 +0000
 +++ src/3rdparty/chromium/content/common/gpu_pre_sandbox_hook_bsd.cc
 @@ -0,0 +1,68 @@
 +// Copyright 2023 The Chromium Authors
@@ -55,14 +55,14 @@ $NetBSD: patch-src_3rdparty_chromium_content_common_gpu__pre__sandbox__hook__bsd
 +  }
 +}
 +
++}  // namespace
++
 +bool LoadLibrariesForGpu(
 +    const sandbox::policy::SandboxSeccompBPF::Options& options) {
 +  LoadVulkanLibraries();
 +
 +  return true;
 +}
-+
-+}  // namespace
 +
 +bool GpuPreSandboxHook(sandbox::policy::SandboxLinux::Options options) {
 +  if (!LoadLibrariesForGpu(options))

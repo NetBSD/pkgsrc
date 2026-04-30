@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_ui_gfx_mojom_native__handle__types__mojom__traits.h,v 1.1 2025/12/21 09:38:48 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_ui_gfx_mojom_native__handle__types__mojom__traits.h,v 1.2 2026/04/30 06:39:45 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/ui/gfx/mojom/native_handle_types_mojom_traits.h.orig	2025-10-02 00:36:39.000000000 +0000
+--- src/3rdparty/chromium/ui/gfx/mojom/native_handle_types_mojom_traits.h.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/ui/gfx/mojom/native_handle_types_mojom_traits.h
 @@ -18,7 +18,7 @@
- #include "ui/gfx/gpu_memory_buffer.h"
+ #include "ui/gfx/gpu_memory_buffer_handle.h"
  #include "ui/gfx/mojom/native_handle_types.mojom-shared.h"
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE)
@@ -15,7 +15,7 @@ $NetBSD: patch-src_3rdparty_chromium_ui_gfx_mojom_native__handle__types__mojom__
  #include "ui/gfx/native_pixmap_handle.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE)
  
-@@ -46,7 +46,7 @@ struct COMPONENT_EXPORT(GFX_NATIVE_HANDL
+@@ -49,7 +49,7 @@ struct COMPONENT_EXPORT(GFX_NATIVE_HANDL
  };
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-src_3rdparty_chromium_ui_gfx_mojom_native__handle__types__mojom__
  template <>
  struct COMPONENT_EXPORT(GFX_NATIVE_HANDLE_TYPES_SHARED_MOJOM_TRAITS)
      StructTraits<gfx::mojom::NativePixmapPlaneDataView,
-@@ -74,13 +74,13 @@ struct COMPONENT_EXPORT(GFX_NATIVE_HANDL
+@@ -77,13 +77,13 @@ struct COMPONENT_EXPORT(GFX_NATIVE_HANDL
      return pixmap_handle.planes;
    }
  
@@ -40,12 +40,12 @@ $NetBSD: patch-src_3rdparty_chromium_ui_gfx_mojom_native__handle__types__mojom__
    static bool supports_zero_copy_webgpu_import(
        const gfx::NativePixmapHandle& pixmap_handle) {
      return pixmap_handle.supports_zero_copy_webgpu_import;
-@@ -159,7 +159,7 @@ struct COMPONENT_EXPORT(GFX_NATIVE_HANDL
-   static PlatformHandle mach_port(gfx::GpuMemoryBufferHandle& handle);
+@@ -207,7 +207,7 @@ struct COMPONENT_EXPORT(GFX_NATIVE_HANDL
+   static IOSurfaceHandle io_surface_handle(gfx::GpuMemoryBufferHandle& handle);
  #endif  // BUILDFLAG(IS_APPLE)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE) || BUILDFLAG(IS_BSD)
    static gfx::NativePixmapHandle& native_pixmap_handle(
        gfx::GpuMemoryBufferHandle& handle) {
-     return handle.native_pixmap_handle;
+     return handle.native_pixmap_handle_;

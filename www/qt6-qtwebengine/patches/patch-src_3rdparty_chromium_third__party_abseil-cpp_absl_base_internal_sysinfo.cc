@@ -1,10 +1,10 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_abseil-cpp_absl_base_internal_sysinfo.cc,v 1.1 2025/12/21 09:38:38 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_abseil-cpp_absl_base_internal_sysinfo.cc,v 1.2 2026/04/30 06:39:43 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/third_party/abseil-cpp/absl/base/internal/sysinfo.cc.orig	2024-11-21 04:36:37.000000000 +0000
+--- src/3rdparty/chromium/third_party/abseil-cpp/absl/base/internal/sysinfo.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/third_party/abseil-cpp/absl/base/internal/sysinfo.cc
 @@ -30,7 +30,7 @@
  #include <sys/syscall.h>
@@ -15,7 +15,7 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_abseil-cpp_absl_base_internal_
  #include <sys/sysctl.h>
  #endif
  
-@@ -194,6 +194,7 @@ static double GetNominalCPUFrequency() {
+@@ -198,6 +198,7 @@ static double GetNominalCPUFrequency() {
  
  #else
  
@@ -23,7 +23,7 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_abseil-cpp_absl_base_internal_
  // Helper function for reading a long from a file. Returns true if successful
  // and the memory location pointed to by value is set to the value read.
  static bool ReadLongFromFile(const char *file, long *value) {
-@@ -226,6 +227,7 @@ static bool ReadLongFromFile(const char 
+@@ -230,6 +231,7 @@ static bool ReadLongFromFile(const char 
    }
    return ret;
  }
@@ -31,7 +31,7 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_abseil-cpp_absl_base_internal_
  
  #if defined(ABSL_INTERNAL_UNSCALED_CYCLECLOCK_FREQUENCY_IS_CPU_FREQUENCY)
  
-@@ -325,9 +327,11 @@ static double GetNominalCPUFrequency() {
+@@ -329,9 +331,11 @@ static double GetNominalCPUFrequency() {
    // a new mode (turbo mode). Essentially, those frequencies cannot
    // always be relied upon. The same reasons apply to /proc/cpuinfo as
    // well.
@@ -43,7 +43,7 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_abseil-cpp_absl_base_internal_
  
  #if defined(ABSL_INTERNAL_UNSCALED_CYCLECLOCK_FREQUENCY_IS_CPU_FREQUENCY)
    // On these platforms, the TSC frequency is the nominal CPU
-@@ -346,10 +350,12 @@ static double GetNominalCPUFrequency() {
+@@ -350,10 +354,12 @@ static double GetNominalCPUFrequency() {
    // If CPU scaling is in effect, we want to use the *maximum*
    // frequency, not whatever CPU speed some random processor happens
    // to be using now.
@@ -56,3 +56,16 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_abseil-cpp_absl_base_internal_
  
    return 1.0;
  #endif  // !ABSL_INTERNAL_UNSCALED_CYCLECLOCK_FREQUENCY_IS_CPU_FREQUENCY
+@@ -465,6 +471,12 @@ pid_t GetTID() {
+   return reinterpret_cast<pid_t>(thread);
+ }
+ 
++#elif defined(__OpenBSD__)
++
++pid_t GetTID() {
++  return getthrid();
++}
++
+ #elif defined(__Fuchsia__)
+ 
+ pid_t GetTID() {

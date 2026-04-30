@@ -1,10 +1,10 @@
-$NetBSD: patch-src_3rdparty_chromium_ui_base_ui__base__switches.cc,v 1.1 2025/12/21 09:38:47 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_ui_base_ui__base__switches.cc,v 1.2 2026/04/30 06:39:45 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/ui/base/ui_base_switches.cc.orig	2025-10-02 00:36:39.000000000 +0000
+--- src/3rdparty/chromium/ui/base/ui_base_switches.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/ui/base/ui_base_switches.cc
 @@ -24,13 +24,13 @@ const char kDisableModalAnimations[] = "
  const char kShowMacOverlayBorders[] = "show-mac-overlay-borders";
@@ -21,4 +21,4 @@ $NetBSD: patch-src_3rdparty_chromium_ui_base_ui__base__switches.cc,v 1.1 2025/12
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  // Specify the toolkit used to construct the Linux GUI.
  const char kUiToolkitFlag[] = "ui-toolkit";
- // Disables GTK IME integration.
+ // Specify the GTK version to be loaded.

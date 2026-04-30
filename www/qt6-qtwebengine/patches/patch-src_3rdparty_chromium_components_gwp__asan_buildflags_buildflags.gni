@@ -1,0 +1,20 @@
+$NetBSD: patch-src_3rdparty_chromium_components_gwp__asan_buildflags_buildflags.gni,v 1.1 2026/04/30 06:39:38 adam Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/components/gwp_asan/buildflags/buildflags.gni.orig	2026-03-16 11:40:07.000000000 +0000
++++ src/3rdparty/chromium/components/gwp_asan/buildflags/buildflags.gni
+@@ -10,10 +10,7 @@ import("//build/config/compiler/compiler
+ # Android component builds are disabled due to https://crbug.com/976399
+ # Android requires frame pointers for unwinding, unwind tables aren't shipped in
+ # official builds.
+-supported_platform =
+-    is_linux || is_chromeos || is_mac || is_ios ||
+-    (is_win && (current_cpu == "x64" || current_cpu == "arm64")) ||
+-    (is_android && !is_component_build && enable_frame_pointers)
++supported_platform = false
+ 
+ declare_args() {
+   # Is GWP-ASan malloc/PartitionAlloc hooking enabled for chrome/ on a given

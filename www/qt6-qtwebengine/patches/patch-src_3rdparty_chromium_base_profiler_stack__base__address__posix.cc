@@ -1,12 +1,12 @@
-$NetBSD: patch-src_3rdparty_chromium_base_profiler_stack__base__address__posix.cc,v 1.1 2025/12/21 09:38:15 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_profiler_stack__base__address__posix.cc,v 1.2 2026/04/30 06:39:35 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/profiler/stack_base_address_posix.cc.orig	2025-05-29 01:27:28.000000000 +0000
+--- src/3rdparty/chromium/base/profiler/stack_base_address_posix.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/base/profiler/stack_base_address_posix.cc
-@@ -17,6 +17,14 @@
+@@ -18,6 +18,14 @@
  #include "base/files/scoped_file.h"
  #endif
  
@@ -21,7 +21,7 @@ $NetBSD: patch-src_3rdparty_chromium_base_profiler_stack__base__address__posix.c
  #if BUILDFLAG(IS_CHROMEOS)
  extern "C" void* __libc_stack_end;
  #endif
-@@ -45,7 +53,21 @@ std::optional<uintptr_t> GetAndroidMainT
+@@ -49,7 +57,21 @@ std::optional<uintptr_t> GetAndroidMainT
  
  #if !BUILDFLAG(IS_LINUX)
  uintptr_t GetThreadStackBaseAddressImpl(pthread_t pthread_id) {
@@ -43,7 +43,7 @@ $NetBSD: patch-src_3rdparty_chromium_base_profiler_stack__base__address__posix.c
    // pthread_getattr_np will crash on ChromeOS & Linux if we are in the sandbox
    // and pthread_id refers to a different thread, due to the use of
    // sched_getaffinity().
-@@ -58,12 +80,14 @@ uintptr_t GetThreadStackBaseAddressImpl(
+@@ -62,12 +84,14 @@ uintptr_t GetThreadStackBaseAddressImpl(
                        << logging::SystemErrorCodeToString(result);
    // See crbug.com/617730 for limitations of this approach on Linux-like
    // systems.
@@ -58,12 +58,12 @@ $NetBSD: patch-src_3rdparty_chromium_base_profiler_stack__base__address__posix.c
    const uintptr_t base_address = reinterpret_cast<uintptr_t>(address) + size;
    return base_address;
  }
-@@ -80,7 +104,7 @@ std::optional<uintptr_t> GetThreadStackB
+@@ -84,7 +108,7 @@ std::optional<uintptr_t> GetThreadStackB
    // trying to work around the problem.
    return std::nullopt;
  #else
--  const bool is_main_thread = id == GetCurrentProcId();
-+  const bool is_main_thread = id == checked_cast<PlatformThreadId>(GetCurrentProcId());
+-  const bool is_main_thread = id.raw() == GetCurrentProcId();
++  const bool is_main_thread = id.raw() == (checked_cast<uint64_t>(GetCurrentProcId()));
    if (is_main_thread) {
  #if BUILDFLAG(IS_ANDROID)
      // The implementation of pthread_getattr_np() in Bionic reads proc/self/maps

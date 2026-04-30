@@ -1,10 +1,10 @@
-$NetBSD: patch-src_3rdparty_chromium_ui_gfx_mojom_native__handle__types__mojom__traits.cc,v 1.1 2025/12/21 09:38:48 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_ui_gfx_mojom_native__handle__types__mojom__traits.cc,v 1.2 2026/04/30 06:39:45 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/ui/gfx/mojom/native_handle_types_mojom_traits.cc.orig	2025-10-02 00:36:39.000000000 +0000
+--- src/3rdparty/chromium/ui/gfx/mojom/native_handle_types_mojom_traits.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/ui/gfx/mojom/native_handle_types_mojom_traits.cc
 @@ -14,7 +14,7 @@
  #include "ui/gfx/mac/io_surface.h"
@@ -47,21 +47,21 @@ $NetBSD: patch-src_3rdparty_chromium_ui_gfx_mojom_native__handle__types__mojom__
    out->modifier = data.modifier();
    out->supports_zero_copy_webgpu_import =
        data.supports_zero_copy_webgpu_import();
-@@ -190,7 +190,7 @@ gfx::mojom::GpuMemoryBufferPlatformHandl
-       NOTREACHED();
+@@ -211,7 +211,7 @@ gfx::mojom::GpuMemoryBufferPlatformHandl
+     case gfx::IO_SURFACE_BUFFER:
+       return Tag::kIoSurfaceHandle;
  #endif  // BUILDFLAG(IS_APPLE)
-     case gfx::NATIVE_PIXMAP:
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE) || BUILDFLAG(IS_BSD)
+     case gfx::NATIVE_PIXMAP:
        return Tag::kNativePixmapHandle;
- #else
-       NOTREACHED();
-@@ -259,7 +259,7 @@ bool UnionTraits<gfx::mojom::GpuMemoryBu
-       }
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE)
+@@ -292,7 +292,7 @@ bool UnionTraits<gfx::mojom::GpuMemoryBu
+ #endif
        return true;
  #endif  // BUILDFLAG(IS_APPLE)
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE) || BUILDFLAG(IS_BSD)
      case Tag::kNativePixmapHandle:
-       handle->type = gfx::NATIVE_PIXMAP;
-       return data.ReadNativePixmapHandle(&handle->native_pixmap_handle);
+       gmb_handle->type = gfx::NATIVE_PIXMAP;
+       return data.ReadNativePixmapHandle(&gmb_handle->native_pixmap_handle_);

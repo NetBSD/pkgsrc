@@ -1,12 +1,21 @@
-$NetBSD: patch-src_3rdparty_chromium_chrome_browser_extensions_api_image__writer__private_removable__storage__provider.cc,v 1.1 2025/12/21 09:38:18 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_chrome_browser_extensions_api_image__writer__private_removable__storage__provider.cc,v 1.2 2026/04/30 06:39:36 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/chrome/browser/extensions/api/image_writer_private/removable_storage_provider.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/chrome/browser/extensions/api/image_writer_private/removable_storage_provider.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/chrome/browser/extensions/api/image_writer_private/removable_storage_provider.cc
-@@ -20,6 +20,7 @@ static base::LazyInstance<scoped_refptr<
+@@ -9,6 +9,8 @@
+ #include "base/task/thread_pool.h"
+ #include "content/public/browser/browser_thread.h"
+ 
++#include "base/notimplemented.h"
++
+ namespace extensions {
+ 
+ // A device list to be returned when testing.
+@@ -20,6 +22,7 @@ static base::LazyInstance<scoped_refptr<
  
  void RemovableStorageProvider::GetAllDevices(DeviceListReadyCallback callback) {
    DCHECK_CURRENTLY_ON(content::BrowserThread::UI);
@@ -14,7 +23,7 @@ $NetBSD: patch-src_3rdparty_chromium_chrome_browser_extensions_api_image__writer
    if (g_test_device_list.Get().get() != nullptr) {
      base::SingleThreadTaskRunner::GetCurrentDefault()->PostTask(
          FROM_HERE,
-@@ -33,6 +34,9 @@ void RemovableStorageProvider::GetAllDev
+@@ -33,6 +36,9 @@ void RemovableStorageProvider::GetAllDev
         base::TaskShutdownBehavior::SKIP_ON_SHUTDOWN},
        base::BindOnce(&RemovableStorageProvider::PopulateDeviceList),
        std::move(callback));

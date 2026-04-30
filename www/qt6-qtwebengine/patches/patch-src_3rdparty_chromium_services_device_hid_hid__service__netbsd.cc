@@ -1,4 +1,4 @@
-$NetBSD: patch-src_3rdparty_chromium_services_device_hid_hid__service__netbsd.cc,v 1.1 2025/12/21 09:38:37 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_services_device_hid_hid__service__netbsd.cc,v 1.2 2026/04/30 06:39:42 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
@@ -13,7 +13,7 @@ $NetBSD: patch-src_3rdparty_chromium_services_device_hid_hid__service__netbsd.cc
 +
 +#include "services/device/hid/hid_service_netbsd.h"
 +
-+#include "base/notreached.h"
++#include "base/notimplemented.h"
 +#include "services/device/hid/hid_connection.h"
 +
 +namespace device {

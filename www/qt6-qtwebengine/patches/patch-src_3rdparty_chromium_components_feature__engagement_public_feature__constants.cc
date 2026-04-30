@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_components_feature__engagement_public_feature__constants.cc,v 1.1 2025/12/21 09:38:22 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_components_feature__engagement_public_feature__constants.cc,v 1.2 2026/04/30 06:39:38 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/components/feature_engagement/public/feature_constants.cc.orig	2025-11-14 07:55:10.000000000 +0000
+--- src/3rdparty/chromium/components/feature_engagement/public/feature_constants.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/components/feature_engagement/public/feature_constants.cc
-@@ -19,7 +19,7 @@ BASE_FEATURE(kIPHDemoMode, "IPH_DemoMode
- BASE_FEATURE(kIPHDummyFeature, "IPH_Dummy", base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -34,7 +34,7 @@ bool IsOnDeviceStorageEnabled() {
+ }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
@@ -15,16 +15,16 @@ $NetBSD: patch-src_3rdparty_chromium_components_feature__engagement_public_featu
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
  BASE_FEATURE(kEsbDownloadRowPromoFeature,
               "EsbDownloadRowPromo",
-@@ -668,7 +668,7 @@ BASE_FEATURE(kDefaultBrowserTriggerCrite
+@@ -829,7 +829,7 @@ BASE_FEATURE(kDefaultBrowserTriggerCrite
+ 
  #endif  // BUILDFLAG(IS_IOS)
  
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
- BASE_FEATURE(kIPHAutofillCardInfoRetrievalSuggestionFeature,
-              "IPH_AutofillCardInfoRetrievalSuggestion",
-              base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -811,7 +811,7 @@ BASE_FEATURE(kIPHScalableIphGamingFeatur
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD) || \
+     BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
+ BASE_FEATURE(kIPHAutofillBnplAffirmOrZipSuggestionFeature,
+              "IPH_AutofillBnplAffirmOrZipSuggestion",
+@@ -985,7 +985,7 @@ BASE_FEATURE(kIPHScalableIphGamingFeatur
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif
  

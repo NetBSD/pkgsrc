@@ -1,12 +1,12 @@
-$NetBSD: patch-src_3rdparty_chromium_build_rust_rust__bindgen.gni,v 1.1 2025/12/21 09:38:17 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_build_rust_rust__bindgen.gni,v 1.2 2026/04/30 06:39:35 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/build/rust/rust_bindgen.gni.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/build/rust/rust_bindgen.gni.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/build/rust/rust_bindgen.gni
-@@ -11,14 +11,14 @@ if (is_win) {
+@@ -12,17 +12,17 @@ if (is_win && !is_mingw && !is_robolectr
    import("//build/toolchain/win/win_toolchain_data.gni")
  }
  
@@ -16,10 +16,14 @@ $NetBSD: patch-src_3rdparty_chromium_build_rust_rust__bindgen.gni,v 1.1 2025/12/
    _bindgen_path = "${_bindgen_path}.exe"
  }
  
- # On Windows, the libclang.dll is beside the bindgen.exe, otherwise it is in
- # ../lib.
--_libclang_path = rust_bindgen_root
-+_libclang_path = "@PREFIX@"
- if (host_os == "win") {
-   _libclang_path += "/bin"
+ if (is_qtwebengine) {
+-  _libclang_path = libclang_path
++  _libclang_path = "@PREFIX@"
  } else {
+   # On Windows, the libclang.dll is beside the bindgen.exe, otherwise it is in
+   # ../lib.
+-  _libclang_path = rust_bindgen_root
++  _libclang_path = "@PREFIX@"
+   if (host_os == "win") {
+     _libclang_path += "/bin"
+   } else {

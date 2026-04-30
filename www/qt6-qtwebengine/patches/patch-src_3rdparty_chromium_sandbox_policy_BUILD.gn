@@ -1,12 +1,12 @@
-$NetBSD: patch-src_3rdparty_chromium_sandbox_policy_BUILD.gn,v 1.1 2025/12/21 09:38:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_sandbox_policy_BUILD.gn,v 1.2 2026/04/30 06:39:42 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/sandbox/policy/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/sandbox/policy/BUILD.gn.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/sandbox/policy/BUILD.gn
-@@ -50,7 +50,7 @@ component("policy") {
+@@ -45,7 +45,7 @@ component("policy") {
        "//third_party/jni_zero",
      ]
    }
@@ -15,7 +15,7 @@ $NetBSD: patch-src_3rdparty_chromium_sandbox_policy_BUILD.gn,v 1.1 2025/12/21 09
      sources += [
        "linux/bpf_audio_policy_linux.cc",
        "linux/bpf_audio_policy_linux.h",
-@@ -129,6 +129,38 @@ component("policy") {
+@@ -115,6 +115,38 @@ component("policy") {
        "//sandbox/linux:suid_sandbox_client",
      ]
    }
@@ -51,6 +51,6 @@ $NetBSD: patch-src_3rdparty_chromium_sandbox_policy_BUILD.gn,v 1.1 2025/12/21 09
 +      "//ui/gfx/x",
 +    ]
 +  }
-   if (is_chromeos_ash) {
+   if (is_chromeos) {
      sources += [
        "linux/bpf_ime_policy_linux.cc",

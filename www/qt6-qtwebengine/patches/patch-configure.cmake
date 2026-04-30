@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.cmake,v 1.1 2025/12/21 09:38:12 markd Exp $
+$NetBSD: patch-configure.cmake,v 1.2 2026/04/30 06:39:34 adam Exp $
 
 * Based on OpenBSD's qt6-qtwebengine patches, and
   pkgsrc's qt5-qtwebengine patches
@@ -61,7 +61,7 @@ $NetBSD: patch-configure.cmake,v 1.1 2025/12/21 09:38:12 markd Exp $
  qt_webengine_configure_check("mesa-headers"
      MODULES QtWebEngine
 -    CONDITION NOT LINUX OR TEST_khr
-+    CONDITION NOT UNIX OR TEST_khr
++    CONDITION NOT UNIX OR APPLE OR TEST_khr
      MESSAGE "Build requires Khronos development headers for build - see mesa/libegl1-mesa-dev"
      DOCUMENTATION "Mesa development headers."
      TAGS LINUX_PLATFORM
