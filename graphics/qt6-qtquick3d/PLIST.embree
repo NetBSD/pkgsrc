@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.embree,v 1.2 2024/10/25 10:41:59 adam Exp $
+@comment $NetBSD: PLIST.embree,v 1.3 2026/04/30 06:38:39 adam Exp $
 qt6/lib/cmake/Qt6/FindWrapBundledEmbreeConfigExtra.cmake
 qt6/lib/cmake/Qt6BundledEmbree/Qt6BundledEmbreeAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6BundledEmbree/Qt6BundledEmbreeConfig.cmake
@@ -6,6 +6,7 @@ qt6/lib/cmake/Qt6BundledEmbree/Qt6BundledEmbreeConfigVersion.cmake
 qt6/lib/cmake/Qt6BundledEmbree/Qt6BundledEmbreeConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6BundledEmbree/Qt6BundledEmbreeTargets-release.cmake
 qt6/lib/cmake/Qt6BundledEmbree/Qt6BundledEmbreeTargets.cmake
+qt6/lib/cmake/Qt6BundledEmbree/Qt6BundledEmbreeTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6BundledEmbree/Qt6BundledEmbreeVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6BundledEmbree/Qt6BundledEmbreeVersionlessTargets.cmake
 qt6/lib/libQt6BundledEmbree.a

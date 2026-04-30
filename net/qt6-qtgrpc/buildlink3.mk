@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.32 2026/02/06 10:05:37 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2026/04/30 06:38:38 adam Exp $
 
 BUILDLINK_TREE+=	qt6-qtgrpc
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qtgrpc
 QT6_QTGRPC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qtgrpc+=	qt6-qtgrpc>=6.5.0
-BUILDLINK_ABI_DEPENDS.qt6-qtgrpc+=	qt6-qtgrpc>=6.10.2nb1
+BUILDLINK_ABI_DEPENDS.qt6-qtgrpc+=	qt6-qtgrpc>=6.11.0
 BUILDLINK_PKGSRCDIR.qt6-qtgrpc?=	../../net/qt6-qtgrpc
 
 BUILDLINK_FILES.qt6-qtgrpc+=	libexec/qtgrpcgen

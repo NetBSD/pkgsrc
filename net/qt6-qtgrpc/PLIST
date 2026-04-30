@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2025/11/20 12:36:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/04/30 06:38:38 adam Exp $
 lib/pkgconfig/Qt6Grpc.pc
 lib/pkgconfig/Qt6GrpcQuick.pc
 lib/pkgconfig/Qt6Protobuf.pc
@@ -8,6 +8,8 @@ lib/pkgconfig/Qt6ProtobufQuick.pc
 lib/pkgconfig/Qt6ProtobufWellKnownTypes.pc
 qt6/include/QtGrpc/${PKGVERSION}/QtGrpc/private/qabstractgrpcchannel_p.h
 qt6/include/QtGrpc/${PKGVERSION}/QtGrpc/private/qgrpccommonoptions_p.h
+qt6/include/QtGrpc/${PKGVERSION}/QtGrpc/private/qgrpcinterceptorchain_p.h
+qt6/include/QtGrpc/${PKGVERSION}/QtGrpc/private/qgrpcinterceptorengine_p.h
 qt6/include/QtGrpc/${PKGVERSION}/QtGrpc/private/qgrpcoperation_p.h
 qt6/include/QtGrpc/${PKGVERSION}/QtGrpc/private/qgrpcoperationcontext_p.h
 qt6/include/QtGrpc/${PKGVERSION}/QtGrpc/private/qtgrpc-config_p.h
@@ -16,15 +18,26 @@ qt6/include/QtGrpc/QAbstractGrpcChannel
 qt6/include/QtGrpc/QGrpcBidiStream
 qt6/include/QtGrpc/QGrpcCallOptions
 qt6/include/QtGrpc/QGrpcCallReply
+qt6/include/QtGrpc/QGrpcCancelInterceptor
 qt6/include/QtGrpc/QGrpcChannelOptions
 qt6/include/QtGrpc/QGrpcClientBase
 qt6/include/QtGrpc/QGrpcClientStream
+qt6/include/QtGrpc/QGrpcFinishedInterceptor
 qt6/include/QtGrpc/QGrpcHttp2Channel
+qt6/include/QtGrpc/QGrpcInitialMetadataInterceptor
+qt6/include/QtGrpc/QGrpcInterceptionContext
+qt6/include/QtGrpc/QGrpcInterceptor
+qt6/include/QtGrpc/QGrpcInterceptorChain
+qt6/include/QtGrpc/QGrpcMessageReceivedInterceptor
 qt6/include/QtGrpc/QGrpcOperation
 qt6/include/QtGrpc/QGrpcOperationContext
 qt6/include/QtGrpc/QGrpcSerializationFormat
 qt6/include/QtGrpc/QGrpcServerStream
+qt6/include/QtGrpc/QGrpcStartInterceptor
 qt6/include/QtGrpc/QGrpcStatus
+qt6/include/QtGrpc/QGrpcTrailingMetadataInterceptor
+qt6/include/QtGrpc/QGrpcWriteMessageInterceptor
+qt6/include/QtGrpc/QGrpcWritesDoneInterceptor
 qt6/include/QtGrpc/QtGrpc
 qt6/include/QtGrpc/QtGrpcDepends
 qt6/include/QtGrpc/QtGrpcNamespace
@@ -35,6 +48,8 @@ qt6/include/QtGrpc/qgrpccallreply.h
 qt6/include/QtGrpc/qgrpcchanneloptions.h
 qt6/include/QtGrpc/qgrpcclientbase.h
 qt6/include/QtGrpc/qgrpchttp2channel.h
+qt6/include/QtGrpc/qgrpcinterceptor.h
+qt6/include/QtGrpc/qgrpcinterceptorchain.h
 qt6/include/QtGrpc/qgrpcoperation.h
 qt6/include/QtGrpc/qgrpcoperationcontext.h
 qt6/include/QtGrpc/qgrpcserializationformat.h
@@ -169,6 +184,7 @@ qt6/lib/cmake/Qt6Grpc/Qt6GrpcConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Grpc/Qt6GrpcDependencies.cmake
 qt6/lib/cmake/Qt6Grpc/Qt6GrpcTargets-release.cmake
 qt6/lib/cmake/Qt6Grpc/Qt6GrpcTargets.cmake
+qt6/lib/cmake/Qt6Grpc/Qt6GrpcTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Grpc/Qt6GrpcVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Grpc/Qt6GrpcVersionlessTargets.cmake
 qt6/lib/cmake/Qt6GrpcPrivate/Qt6GrpcPrivateAdditionalTargetInfo.cmake
@@ -177,6 +193,7 @@ qt6/lib/cmake/Qt6GrpcPrivate/Qt6GrpcPrivateConfigVersion.cmake
 qt6/lib/cmake/Qt6GrpcPrivate/Qt6GrpcPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6GrpcPrivate/Qt6GrpcPrivateDependencies.cmake
 qt6/lib/cmake/Qt6GrpcPrivate/Qt6GrpcPrivateTargets.cmake
+qt6/lib/cmake/Qt6GrpcPrivate/Qt6GrpcPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6GrpcPrivate/Qt6GrpcPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6GrpcPrivate/Qt6GrpcPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6GrpcQuick/Qt6GrpcQuickAdditionalTargetInfo.cmake
@@ -186,6 +203,7 @@ qt6/lib/cmake/Qt6GrpcQuick/Qt6GrpcQuickConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6GrpcQuick/Qt6GrpcQuickDependencies.cmake
 qt6/lib/cmake/Qt6GrpcQuick/Qt6GrpcQuickTargets-release.cmake
 qt6/lib/cmake/Qt6GrpcQuick/Qt6GrpcQuickTargets.cmake
+qt6/lib/cmake/Qt6GrpcQuick/Qt6GrpcQuickTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6GrpcQuick/Qt6GrpcQuickVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6GrpcQuick/Qt6GrpcQuickVersionlessTargets.cmake
 qt6/lib/cmake/Qt6GrpcQuickPrivate/Qt6GrpcQuickPrivateAdditionalTargetInfo.cmake
@@ -194,6 +212,7 @@ qt6/lib/cmake/Qt6GrpcQuickPrivate/Qt6GrpcQuickPrivateConfigVersion.cmake
 qt6/lib/cmake/Qt6GrpcQuickPrivate/Qt6GrpcQuickPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6GrpcQuickPrivate/Qt6GrpcQuickPrivateDependencies.cmake
 qt6/lib/cmake/Qt6GrpcQuickPrivate/Qt6GrpcQuickPrivateTargets.cmake
+qt6/lib/cmake/Qt6GrpcQuickPrivate/Qt6GrpcQuickPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6GrpcQuickPrivate/Qt6GrpcQuickPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6GrpcQuickPrivate/Qt6GrpcQuickPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6GrpcTools/Qt6GrpcToolsAdditionalTargetInfo.cmake
@@ -204,6 +223,7 @@ qt6/lib/cmake/Qt6GrpcTools/Qt6GrpcToolsDependencies.cmake
 qt6/lib/cmake/Qt6GrpcTools/Qt6GrpcToolsMacros.cmake
 qt6/lib/cmake/Qt6GrpcTools/Qt6GrpcToolsTargets-release.cmake
 qt6/lib/cmake/Qt6GrpcTools/Qt6GrpcToolsTargets.cmake
+qt6/lib/cmake/Qt6GrpcTools/Qt6GrpcToolsTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6GrpcTools/Qt6GrpcToolsVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Protobuf/Qt6ProtobufAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Protobuf/Qt6ProtobufBuildInternals.cmake
@@ -213,6 +233,7 @@ qt6/lib/cmake/Qt6Protobuf/Qt6ProtobufConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Protobuf/Qt6ProtobufDependencies.cmake
 qt6/lib/cmake/Qt6Protobuf/Qt6ProtobufTargets-release.cmake
 qt6/lib/cmake/Qt6Protobuf/Qt6ProtobufTargets.cmake
+qt6/lib/cmake/Qt6Protobuf/Qt6ProtobufTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Protobuf/Qt6ProtobufVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Protobuf/Qt6ProtobufVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Protobuf/QtProtobufProperties.cmake.in
@@ -222,6 +243,7 @@ qt6/lib/cmake/Qt6ProtobufPrivate/Qt6ProtobufPrivateConfigVersion.cmake
 qt6/lib/cmake/Qt6ProtobufPrivate/Qt6ProtobufPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6ProtobufPrivate/Qt6ProtobufPrivateDependencies.cmake
 qt6/lib/cmake/Qt6ProtobufPrivate/Qt6ProtobufPrivateTargets.cmake
+qt6/lib/cmake/Qt6ProtobufPrivate/Qt6ProtobufPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6ProtobufPrivate/Qt6ProtobufPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6ProtobufPrivate/Qt6ProtobufPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6ProtobufQtCoreTypes/Qt6ProtobufQtCoreTypesAdditionalTargetInfo.cmake
@@ -232,6 +254,7 @@ qt6/lib/cmake/Qt6ProtobufQtCoreTypes/Qt6ProtobufQtCoreTypesDependencies.cmake
 qt6/lib/cmake/Qt6ProtobufQtCoreTypes/Qt6ProtobufQtCoreTypesProtobufProperties.cmake
 qt6/lib/cmake/Qt6ProtobufQtCoreTypes/Qt6ProtobufQtCoreTypesTargets-release.cmake
 qt6/lib/cmake/Qt6ProtobufQtCoreTypes/Qt6ProtobufQtCoreTypesTargets.cmake
+qt6/lib/cmake/Qt6ProtobufQtCoreTypes/Qt6ProtobufQtCoreTypesTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6ProtobufQtCoreTypes/Qt6ProtobufQtCoreTypesVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6ProtobufQtCoreTypes/Qt6ProtobufQtCoreTypesVersionlessTargets.cmake
 qt6/lib/cmake/Qt6ProtobufQtCoreTypesPrivate/Qt6ProtobufQtCoreTypesPrivateAdditionalTargetInfo.cmake
@@ -240,6 +263,7 @@ qt6/lib/cmake/Qt6ProtobufQtCoreTypesPrivate/Qt6ProtobufQtCoreTypesPrivateConfigV
 qt6/lib/cmake/Qt6ProtobufQtCoreTypesPrivate/Qt6ProtobufQtCoreTypesPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6ProtobufQtCoreTypesPrivate/Qt6ProtobufQtCoreTypesPrivateDependencies.cmake
 qt6/lib/cmake/Qt6ProtobufQtCoreTypesPrivate/Qt6ProtobufQtCoreTypesPrivateTargets.cmake
+qt6/lib/cmake/Qt6ProtobufQtCoreTypesPrivate/Qt6ProtobufQtCoreTypesPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6ProtobufQtCoreTypesPrivate/Qt6ProtobufQtCoreTypesPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6ProtobufQtCoreTypesPrivate/Qt6ProtobufQtCoreTypesPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6ProtobufQtGuiTypes/Qt6ProtobufQtGuiTypesAdditionalTargetInfo.cmake
@@ -250,6 +274,7 @@ qt6/lib/cmake/Qt6ProtobufQtGuiTypes/Qt6ProtobufQtGuiTypesDependencies.cmake
 qt6/lib/cmake/Qt6ProtobufQtGuiTypes/Qt6ProtobufQtGuiTypesProtobufProperties.cmake
 qt6/lib/cmake/Qt6ProtobufQtGuiTypes/Qt6ProtobufQtGuiTypesTargets-release.cmake
 qt6/lib/cmake/Qt6ProtobufQtGuiTypes/Qt6ProtobufQtGuiTypesTargets.cmake
+qt6/lib/cmake/Qt6ProtobufQtGuiTypes/Qt6ProtobufQtGuiTypesTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6ProtobufQtGuiTypes/Qt6ProtobufQtGuiTypesVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6ProtobufQtGuiTypes/Qt6ProtobufQtGuiTypesVersionlessTargets.cmake
 qt6/lib/cmake/Qt6ProtobufQtGuiTypesPrivate/Qt6ProtobufQtGuiTypesPrivateAdditionalTargetInfo.cmake
@@ -258,6 +283,7 @@ qt6/lib/cmake/Qt6ProtobufQtGuiTypesPrivate/Qt6ProtobufQtGuiTypesPrivateConfigVer
 qt6/lib/cmake/Qt6ProtobufQtGuiTypesPrivate/Qt6ProtobufQtGuiTypesPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6ProtobufQtGuiTypesPrivate/Qt6ProtobufQtGuiTypesPrivateDependencies.cmake
 qt6/lib/cmake/Qt6ProtobufQtGuiTypesPrivate/Qt6ProtobufQtGuiTypesPrivateTargets.cmake
+qt6/lib/cmake/Qt6ProtobufQtGuiTypesPrivate/Qt6ProtobufQtGuiTypesPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6ProtobufQtGuiTypesPrivate/Qt6ProtobufQtGuiTypesPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6ProtobufQtGuiTypesPrivate/Qt6ProtobufQtGuiTypesPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6ProtobufQuick/Qt6ProtobufQuickAdditionalTargetInfo.cmake
@@ -267,6 +293,7 @@ qt6/lib/cmake/Qt6ProtobufQuick/Qt6ProtobufQuickConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6ProtobufQuick/Qt6ProtobufQuickDependencies.cmake
 qt6/lib/cmake/Qt6ProtobufQuick/Qt6ProtobufQuickTargets-release.cmake
 qt6/lib/cmake/Qt6ProtobufQuick/Qt6ProtobufQuickTargets.cmake
+qt6/lib/cmake/Qt6ProtobufQuick/Qt6ProtobufQuickTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6ProtobufQuick/Qt6ProtobufQuickVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6ProtobufQuick/Qt6ProtobufQuickVersionlessTargets.cmake
 qt6/lib/cmake/Qt6ProtobufQuickPrivate/Qt6ProtobufQuickPrivateAdditionalTargetInfo.cmake
@@ -275,6 +302,7 @@ qt6/lib/cmake/Qt6ProtobufQuickPrivate/Qt6ProtobufQuickPrivateConfigVersion.cmake
 qt6/lib/cmake/Qt6ProtobufQuickPrivate/Qt6ProtobufQuickPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6ProtobufQuickPrivate/Qt6ProtobufQuickPrivateDependencies.cmake
 qt6/lib/cmake/Qt6ProtobufQuickPrivate/Qt6ProtobufQuickPrivateTargets.cmake
+qt6/lib/cmake/Qt6ProtobufQuickPrivate/Qt6ProtobufQuickPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6ProtobufQuickPrivate/Qt6ProtobufQuickPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6ProtobufQuickPrivate/Qt6ProtobufQuickPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsAdditionalTargetInfo.cmake
@@ -285,6 +313,7 @@ qt6/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsDependencies.cmake
 qt6/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsMacros.cmake
 qt6/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsTargets-release.cmake
 qt6/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsTargets.cmake
+qt6/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsVersionlessTargets.cmake
 qt6/lib/cmake/Qt6ProtobufTools/QtProtocCommandWrapper.cmake
 qt6/lib/cmake/Qt6ProtobufWellKnownTypes/Qt6ProtobufWellKnownTypesAdditionalTargetInfo.cmake
@@ -297,6 +326,7 @@ qt6/lib/cmake/Qt6ProtobufWellKnownTypes/Qt6ProtobufWellKnownTypesExtras.cmake
 qt6/lib/cmake/Qt6ProtobufWellKnownTypes/Qt6ProtobufWellKnownTypesProtobufProperties.cmake
 qt6/lib/cmake/Qt6ProtobufWellKnownTypes/Qt6ProtobufWellKnownTypesTargets-release.cmake
 qt6/lib/cmake/Qt6ProtobufWellKnownTypes/Qt6ProtobufWellKnownTypesTargets.cmake
+qt6/lib/cmake/Qt6ProtobufWellKnownTypes/Qt6ProtobufWellKnownTypesTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6ProtobufWellKnownTypes/Qt6ProtobufWellKnownTypesVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6ProtobufWellKnownTypes/Qt6ProtobufWellKnownTypesVersionlessTargets.cmake
 qt6/lib/cmake/Qt6ProtobufWellKnownTypesPrivate/Qt6ProtobufWellKnownTypesPrivateAdditionalTargetInfo.cmake
@@ -305,6 +335,7 @@ qt6/lib/cmake/Qt6ProtobufWellKnownTypesPrivate/Qt6ProtobufWellKnownTypesPrivateC
 qt6/lib/cmake/Qt6ProtobufWellKnownTypesPrivate/Qt6ProtobufWellKnownTypesPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6ProtobufWellKnownTypesPrivate/Qt6ProtobufWellKnownTypesPrivateDependencies.cmake
 qt6/lib/cmake/Qt6ProtobufWellKnownTypesPrivate/Qt6ProtobufWellKnownTypesPrivateTargets.cmake
+qt6/lib/cmake/Qt6ProtobufWellKnownTypesPrivate/Qt6ProtobufWellKnownTypesPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6ProtobufWellKnownTypesPrivate/Qt6ProtobufWellKnownTypesPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6ProtobufWellKnownTypesPrivate/Qt6ProtobufWellKnownTypesPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6grpcquickpluginAdditionalTargetInfo.cmake
@@ -313,12 +344,14 @@ qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6grpcquickpluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6grpcquickpluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6grpcquickpluginTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6grpcquickpluginTargets.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6grpcquickpluginTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6protobufquickpluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6protobufquickpluginConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6protobufquickpluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6protobufquickpluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6protobufquickpluginTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6protobufquickpluginTargets.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6protobufquickpluginTargetsPrecheck.cmake
 qt6/lib/libQt6Grpc.prl
 qt6/lib/libQt6Grpc.so
 qt6/lib/libQt6Grpc.so.${PKGVERSION}
