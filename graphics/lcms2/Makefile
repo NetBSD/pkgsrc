@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2026/04/30 05:13:07 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/04/30 13:16:04 gdt Exp $
 
 DISTNAME=	lcms2-2.19
 CATEGORIES=	graphics
@@ -9,6 +9,13 @@ HOMEPAGE=	http://www.littlecms.com/
 COMMENT=	Little Color Management System - a color management library
 LICENSE=	mit
 
+# Upstream added cmake support in 2.19, but that has not been declared
+# official/favored.  Pending upstream commentary (requested 20260430)
+# or some compelling reason, the package will remain on autoconf,
+# because the of the usual pattern of cmake build systems having
+# regressions from autoconf in various areas, typically cross
+# compilation and testing non-installed versions, at least until those
+# are assessed.
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	lcms2.pc.in
