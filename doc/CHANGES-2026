@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2704 2026/04/30 11:52:57 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2705 2026/04/30 12:08:34 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4170,3 +4170,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/ripdrag to 0.4.12 [pin 2026-04-30]
 	Updated net/sniffnet to 1.5.0 [pin 2026-04-30]
 	Updated textproc/rumdl to 0.1.84 [pin 2026-04-30]
+	Updated ham/hamlib to 4.7.1 [gdt 2026-04-30]
