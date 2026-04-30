@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2700 2026/04/30 11:45:22 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2701 2026/04/30 11:47:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4166,3 +4166,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/hexpatch to 1.12.6 [pin 2026-04-30]
 	Updated devel/mise to 2026.4.28 [pin 2026-04-30]
 	Updated emulators/jgenesis to 0.12.0 [pin 2026-04-30]
+	Updated misc/tailspin to 6.0.0 [pin 2026-04-30]
