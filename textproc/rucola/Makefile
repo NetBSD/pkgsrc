@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2026/01/05 11:05:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/04/30 11:51:35 pin Exp $
 
-DISTNAME=	rucola-0.8.2
+DISTNAME=	rucola-0.9.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Linus-Mussmaecher/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,6 +15,9 @@ LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
+#RUST_REQ=	1.96.0-beta.4
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.96.0-beta.4 on amd64
 USE_TOOLS+=	pkg-config
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
 
