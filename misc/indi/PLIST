@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2026/04/02 10:05:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/04/30 10:16:52 adam Exp $
 bin/indi_Excalibur
 bin/indi_aaf2_focus
 bin/indi_aagsolo_weather
@@ -75,6 +75,7 @@ bin/indi_lx200_16
 bin/indi_lx200_OnStep
 bin/indi_lx200_OpenAstroTech
 bin/indi_lx200_TeenAstro
+bin/indi_lx200_esp32go
 bin/indi_lx200_pegasus_nyx101
 bin/indi_lx200am5
 bin/indi_lx200ap_legacy
@@ -143,6 +144,7 @@ bin/indi_script_dome
 bin/indi_script_telescope
 bin/indi_seestar_ccd
 bin/indi_sestosenso2_focus
+bin/indi_sestosenso3_focus
 bin/indi_sestosenso_focus
 bin/indi_setprop
 bin/indi_siefs_focus
@@ -195,6 +197,7 @@ bin/indi_wanderer_eclipse
 bin/indi_wanderer_lite_rotator
 bin/indi_wanderer_rotator_lite_v2
 bin/indi_wanderer_rotator_mini
+bin/indi_wanderer_snowflake_wheel
 bin/indi_wandererbox_plus_v3
 bin/indi_wandererbox_pro_v3
 bin/indi_wanderercover_v4_ec
@@ -331,19 +334,19 @@ lib/indi/MathPlugins/libindi_Nearest_MathPlugin.so
 lib/indi/MathPlugins/libindi_SVD_MathPlugin.so
 lib/libindiAlignmentClient.a
 lib/libindiAlignmentDriver.so
-lib/libindiAlignmentDriver.so.${PKGVERSION}
 lib/libindiAlignmentDriver.so.2
+lib/libindiAlignmentDriver.so.2.2.1
 lib/libindiclient.a
 lib/libindiclient.so
-lib/libindiclient.so.${PKGVERSION}
 lib/libindiclient.so.2
+lib/libindiclient.so.2.2.1
 lib/libindidriver.a
 lib/libindidriver.so
-lib/libindidriver.so.${PKGVERSION}
 lib/libindidriver.so.2
+lib/libindidriver.so.2.2.1
 lib/libindilx200.so
-lib/libindilx200.so.${PKGVERSION}
 lib/libindilx200.so.2
+lib/libindilx200.so.2.2.1
 lib/pkgconfig/libindi.pc
 share/indi/drivers.xml
 share/indi/indi_tcfs_sk.xml
