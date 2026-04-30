@@ -1,17 +1,19 @@
-$NetBSD: patch-src_3rdparty_chromium_services_resource__coordinator_public_cpp_memory__instrumentation_os__metrics__bsd.cc,v 1.1 2025/12/21 09:38:38 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_services_resource__coordinator_public_cpp_memory__instrumentation_os__metrics__bsd.cc,v 1.2 2026/04/30 06:39:42 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_bsd.cc.orig	2024-12-21 10:25:10.608586521 +0000
+--- src/3rdparty/chromium/services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_bsd.cc.orig	2026-04-22 12:29:50.511795406 +0000
 +++ src/3rdparty/chromium/services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_bsd.cc
-@@ -0,0 +1,66 @@
+@@ -0,0 +1,69 @@
 +// Copyright 2022 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +
 +#include "services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics.h"
++
++#include "base/notimplemented.h"
 +
 +#include "base/memory/page_size.h"
 +#include "base/process/process.h"
@@ -32,6 +34,7 @@ $NetBSD: patch-src_3rdparty_chromium_services_resource__coordinator_public_cpp_m
 +
 +// static
 +bool OSMetrics::FillOSMemoryDump(base::ProcessId pid,
++                                 const MemDumpFlagSet& flags,
 +                                 mojom::RawOSMemDump* dump) {
 +  base::Process process = pid == base::kNullProcessId
 +                              ? base::Process::Current()

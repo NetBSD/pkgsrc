@@ -1,4 +1,4 @@
-$NetBSD: patch-src_3rdparty_chromium_services_device_hid_hid__service__freebsd.cc,v 1.1 2025/12/21 09:38:37 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_services_device_hid_hid__service__freebsd.cc,v 1.2 2026/04/30 06:39:42 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
@@ -112,7 +112,7 @@ $NetBSD: patch-src_3rdparty_chromium_services_device_hid_hid__service__freebsd.c
 +
 +  bool HaveReadWritePermissions(std::string device_id) {
 +    std::string device_node = "/dev/" + device_id;
-+    base::internal::AssertBlockingAllowed();
++    base::AssertBlockingAllowed();
 +
 +    base::FilePath device_path(device_node);
 +    base::File device_file;
@@ -136,7 +136,7 @@ $NetBSD: patch-src_3rdparty_chromium_services_device_hid_hid__service__freebsd.c
 +
 +    std::vector<uint8_t> report_descriptor;
 +
-+    base::internal::AssertBlockingAllowed();
++    base::AssertBlockingAllowed();
 +
 +    base::FilePath device_path(device_node);
 +    base::File device_file;
@@ -202,7 +202,7 @@ $NetBSD: patch-src_3rdparty_chromium_services_device_hid_hid__service__freebsd.c
 + private:
 +
 +  void CheckPendingPermissionChange() {
-+    base::internal::AssertBlockingAllowed();
++    base::AssertBlockingAllowed();
 +    std::map<std::string, int>::iterator it;
 +    for (it = permissions_checks_attempts_.begin(); it != permissions_checks_attempts_.end();) {
 +      std::string device_name = it->first;
@@ -228,7 +228,7 @@ $NetBSD: patch-src_3rdparty_chromium_services_device_hid_hid__service__freebsd.c
 +  }
 +
 +  void SetupDevdMonitor() {
-+    base::internal::AssertBlockingAllowed();
++    base::AssertBlockingAllowed();
 +
 +    int devd_fd = socket(AF_UNIX, SOCK_SEQPACKET, 0);
 +    if (devd_fd < 0)

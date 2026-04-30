@@ -1,10 +1,10 @@
-$NetBSD: patch-src_3rdparty_chromium_base_process_process__iterator__openbsd.cc,v 1.1 2025/12/21 09:38:15 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_process_process__iterator__openbsd.cc,v 1.2 2026/04/30 06:39:35 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/process/process_iterator_openbsd.cc.orig	2025-10-02 00:36:39.000000000 +0000
+--- src/3rdparty/chromium/base/process/process_iterator_openbsd.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/base/process/process_iterator_openbsd.cc
 @@ -6,6 +6,9 @@
  
@@ -21,8 +21,9 @@ $NetBSD: patch-src_3rdparty_chromium_base_process_process__iterator__openbsd.cc,
      : filter_(filter) {
    int mib[] = {
 -      CTL_KERN, KERN_PROC, KERN_PROC_UID, getuid(), sizeof(struct kinfo_proc),
-+      CTL_KERN, KERN_PROC, KERN_PROC_UID, static_cast<int>(getuid()), sizeof(struct kinfo_proc),
-       0};
+-      0};
++      CTL_KERN, KERN_PROC, KERN_PROC_UID, static_cast<int>(getuid()),
++      sizeof(struct kinfo_proc), 0};
  
    bool done = false;
    int try_num = 1;

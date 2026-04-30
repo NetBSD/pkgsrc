@@ -1,10 +1,10 @@
-$NetBSD: patch-src_3rdparty_chromium_media_ffmpeg_scripts_robo__lib_config.py,v 1.1 2025/12/21 09:38:32 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_media_ffmpeg_scripts_robo__lib_config.py,v 1.2 2026/04/30 06:39:41 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/media/ffmpeg/scripts/robo_lib/config.py.orig	2025-10-02 00:36:39.000000000 +0000
+--- src/3rdparty/chromium/media/ffmpeg/scripts/robo_lib/config.py.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/media/ffmpeg/scripts/robo_lib/config.py
 @@ -56,19 +56,13 @@ class RoboConfiguration:
          self._llvm_path = os.path.join(self.chrome_src(), "third_party",
@@ -34,11 +34,11 @@ $NetBSD: patch-src_3rdparty_chromium_media_ffmpeg_scripts_robo__lib_config.py,v 
 +        elif platform.machine() == "x86_64" or platform.machine() == "AMD64" or platform.machine() == "amd64":
              self._host_architecture = "x64"
 -        elif platform.machine() == "aarch64":
-+        elif platform.machine() == "aarch64" or platform.machine() == "arm64":
++        elif platform.machine() == "aarch64" or platform.machine() == "arm64" or platform.machine() == "evbarm":
              self._host_architecture = "arm64"
          elif platform.machine() == "mips32":
              self._host_architecture = "mipsel"
-@@ -224,6 +218,12 @@ class RoboConfiguration:
+@@ -230,6 +224,12 @@ class RoboConfiguration:
          elif platform.system() == "Windows" or "CYGWIN_NT" in platform.system(
          ):
              self._host_operating_system = "win"
@@ -51,7 +51,7 @@ $NetBSD: patch-src_3rdparty_chromium_media_ffmpeg_scripts_robo__lib_config.py,v 
          else:
              raise ValueError(f"Unsupported platform: {platform.system()}")
  
-@@ -232,8 +232,8 @@ class RoboConfiguration:
+@@ -238,8 +238,8 @@ class RoboConfiguration:
          wd = os.getcwd()
          # Walk up the tree until we find src/AUTHORS
          while wd != "/":

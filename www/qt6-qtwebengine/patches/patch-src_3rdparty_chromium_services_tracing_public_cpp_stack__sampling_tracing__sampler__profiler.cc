@@ -1,17 +1,44 @@
-$NetBSD: patch-src_3rdparty_chromium_services_tracing_public_cpp_stack__sampling_tracing__sampler__profiler.cc,v 1.1 2025/12/21 09:38:38 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_services_tracing_public_cpp_stack__sampling_tracing__sampler__profiler.cc,v 1.2 2026/04/30 06:39:43 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc
-@@ -38,7 +38,7 @@
+@@ -41,7 +41,7 @@
  #include "third_party/perfetto/protos/perfetto/trace/track_event/process_descriptor.pbzero.h"
  #include "third_party/perfetto/protos/perfetto/trace/track_event/thread_descriptor.pbzero.h"
  
--#if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_NACL) && !BUILDFLAG(IS_APPLE)
-+#if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_NACL) && !BUILDFLAG(IS_APPLE) && !BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_APPLE)
++#if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_APPLE) && !BUILDFLAG(IS_BSD)
  #include "base/profiler/thread_delegate_posix.h"
  #define INITIALIZE_THREAD_DELEGATE_POSIX 1
- #else  // BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_NACL) && !BUILDFLAG(IS_APPLE)
+ #else  // BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_APPLE)
+@@ -263,7 +263,7 @@ struct FrameDetails {
+     ANDROID_ARM64_UNWINDING_SUPPORTED || ANDROID_CFI_UNWINDING_SUPPORTED || \
+     (BUILDFLAG(IS_CHROMEOS) &&                                              \
+      (defined(ARCH_CPU_X86_64) || defined(ARCH_CPU_ARM64))) ||              \
+-    BUILDFLAG(IS_LINUX)
++    BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // Returns whether stack sampling is supported on the current platform.
+ bool IsStackSamplingSupported() {
+   return base::StackSamplingProfiler::IsSupportedForCurrentPlatform();
+@@ -381,7 +381,7 @@ void TracingSamplerProfiler::TracingProf
+     thread_descriptor->set_reference_timestamp_us(
+         last_timestamp_.since_origin().InMicroseconds());
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_AIX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_AIX) || BUILDFLAG(IS_BSD)
+     if (base::GetCurrentProcId() !=
+         base::trace_event::TraceLog::GetInstance()->process_id()) {
+       auto* chrome_thread = track_descriptor->set_chrome_thread();
+@@ -653,7 +653,7 @@ bool TracingSamplerProfiler::IsStackUnwi
+     ANDROID_ARM64_UNWINDING_SUPPORTED || ANDROID_CFI_UNWINDING_SUPPORTED || \
+     (BUILDFLAG(IS_CHROMEOS) &&                                              \
+      (defined(ARCH_CPU_X86_64) || defined(ARCH_CPU_ARM64))) ||              \
+-    BUILDFLAG(IS_LINUX)
++    BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   return IsStackSamplingSupported();
+ #else
+   return false;

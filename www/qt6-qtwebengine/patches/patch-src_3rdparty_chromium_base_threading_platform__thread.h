@@ -1,17 +1,17 @@
-$NetBSD: patch-src_3rdparty_chromium_base_threading_platform__thread.h,v 1.1 2025/12/21 09:38:16 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_threading_platform__thread.h,v 1.2 2026/04/30 06:39:35 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/threading/platform_thread.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/base/threading/platform_thread.h.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/base/threading/platform_thread.h
-@@ -49,6 +49,8 @@ typedef DWORD PlatformThreadId;
- typedef zx_koid_t PlatformThreadId;
+@@ -55,6 +55,8 @@ class BASE_EXPORT PlatformThreadId {
+   using UnderlyingType = zx_koid_t;
  #elif BUILDFLAG(IS_APPLE)
- typedef mach_port_t PlatformThreadId;
+   using UnderlyingType = uint64_t;
 +#elif BUILDFLAG(IS_BSD)
-+typedef uint64_t PlatformThreadId;
++  using UnderlyingType = uint64_t;
  #elif BUILDFLAG(IS_POSIX)
- typedef pid_t PlatformThreadId;
+   using UnderlyingType = pid_t;
  #endif

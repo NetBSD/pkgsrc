@@ -1,10 +1,10 @@
-$NetBSD: patch-src_3rdparty_chromium_base_process_process__iterator__freebsd.cc,v 1.1 2025/12/21 09:38:15 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_process_process__iterator__freebsd.cc,v 1.2 2026/04/30 06:39:35 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/process/process_iterator_freebsd.cc.orig	2025-10-02 00:36:39.000000000 +0000
+--- src/3rdparty/chromium/base/process/process_iterator_freebsd.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/base/process/process_iterator_freebsd.cc
 @@ -18,7 +18,7 @@ namespace base {
  
@@ -29,7 +29,7 @@ $NetBSD: patch-src_3rdparty_chromium_base_process_process__iterator__freebsd.cc,
        } else {
          // Got the list, just make sure we're sized exactly right
 -        size_t num_of_kinfo_proc = len / sizeof(struct kinfo_proc);
-+	num_of_kinfo_proc = len / sizeof(struct kinfo_proc);
++        num_of_kinfo_proc = len / sizeof(struct kinfo_proc);
          kinfo_procs_.resize(num_of_kinfo_proc);
          done = true;
        }
@@ -38,7 +38,7 @@ $NetBSD: patch-src_3rdparty_chromium_base_process_process__iterator__freebsd.cc,
      size_t length;
      struct kinfo_proc kinfo = kinfo_procs_[index_of_kinfo_proc_];
 -    int mib[] = {CTL_KERN, KERN_PROC_ARGS, kinfo.ki_pid};
-+    int mib[] = {CTL_KERN, KERN_PROC, KERN_PROC_ARGS, kinfo.ki_pid};
++    int mib[] = { CTL_KERN, KERN_PROC, KERN_PROC_ARGS, kinfo.ki_pid };
  
      if ((kinfo.ki_pid > 0) && (kinfo.ki_stat == SZOMB)) {
        continue;

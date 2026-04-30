@@ -1,10 +1,10 @@
-$NetBSD: patch-src_3rdparty_chromium_media_ffmpeg_scripts_build__ffmpeg.py,v 1.1 2025/12/21 09:38:32 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_media_ffmpeg_scripts_build__ffmpeg.py,v 1.2 2026/04/30 06:39:41 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/media/ffmpeg/scripts/build_ffmpeg.py.orig	2025-09-25 11:10:42.000000000 +0000
+--- src/3rdparty/chromium/media/ffmpeg/scripts/build_ffmpeg.py.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/media/ffmpeg/scripts/build_ffmpeg.py
 @@ -33,7 +33,7 @@ NDK_ROOT_DIR = os.path.abspath(
  SUCCESS_TOKEN = 'THIS_BUILD_WORKED'
@@ -18,14 +18,14 @@ $NetBSD: patch-src_3rdparty_chromium_media_ffmpeg_scripts_build__ffmpeg.py,v 1.1
 @@ -43,6 +43,9 @@ BRANDINGS = [
  ARCH_MAP = {
      'android': ['ia32', 'x64', 'arm-neon', 'arm64'],
-     'linux': ['ia32', 'x64', 'noasm-x64', 'arm', 'arm-neon', 'arm64'],
+     'linux': ['ia32', 'x64', 'noasm-x64', 'arm', 'arm-neon', 'arm64', 'riscv64'],
 +    'openbsd': ['x64', 'arm64', 'ia32'],
 +    'freebsd': ['x64', 'arm64', 'ia32'],
 +    'netbsd': ['x64', 'arm64', 'ia32'],
      'mac': ['x64', 'arm64'],
      'win': ['ia32', 'x64', 'arm64'],
  }
-@@ -122,7 +125,7 @@ def PrintAndCheckCall(argv, *args, **kwa
+@@ -124,7 +127,7 @@ def PrintAndCheckCall(argv, *args, **kwa
  
  
  def GetDsoName(target_os, dso_name, dso_version):
@@ -71,7 +71,7 @@ $NetBSD: patch-src_3rdparty_chromium_media_ffmpeg_scripts_build__ffmpeg.py,v 1.1
                      # See crbug.com/1467681. These could be removed eventually
                      '--disable-dotprod',
                      '--disable-i8mm',
-@@ -921,7 +921,7 @@ def ConfigureAndBuild(target_arch, targe
+@@ -935,7 +935,7 @@ def ConfigureAndBuild(target_arch, targe
          # typically be the system one, so explicitly configure use of Clang's
          # ld.lld, to ensure that things like cross-compilation and LTO work.
          # This does not work for ia32 and is always used on mac.

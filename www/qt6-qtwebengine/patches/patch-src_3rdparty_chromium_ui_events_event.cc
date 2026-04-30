@@ -1,12 +1,12 @@
-$NetBSD: patch-src_3rdparty_chromium_ui_events_event.cc,v 1.1 2025/12/21 09:38:47 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_ui_events_event.cc,v 1.2 2026/04/30 06:39:45 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/ui/events/event.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/ui/events/event.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/ui/events/event.cc
-@@ -366,7 +366,7 @@ std::string LocatedEvent::ToString() con
+@@ -375,7 +375,7 @@ std::string LocatedEvent::ToString() con
  MouseEvent::MouseEvent(const PlatformEvent& native_event)
      : LocatedEvent(native_event),
        changed_button_flags_(GetChangedMouseButtonFlagsFromNative(native_event)),
@@ -15,7 +15,7 @@ $NetBSD: patch-src_3rdparty_chromium_ui_events_event.cc,v 1.1 2025/12/21 09:38:4
        movement_(GetMouseMovementFromNative(native_event)),
  #endif
        pointer_details_(GetMousePointerDetailsFromNative(native_event)) {
-@@ -622,7 +622,7 @@ std::unique_ptr<Event> MouseWheelEvent::
+@@ -631,7 +631,7 @@ std::unique_ptr<Event> MouseWheelEvent::
    return std::make_unique<MouseWheelEvent>(*this);
  }
  
@@ -24,9 +24,9 @@ $NetBSD: patch-src_3rdparty_chromium_ui_events_event.cc,v 1.1 2025/12/21 09:38:4
  // This value matches Windows, Fuchsia WHEEL_DELTA, and (roughly) Firefox on
  // Linux.
  // static
-@@ -882,7 +882,7 @@ void KeyEvent::InitializeNative() {
-   if (synthesize_key_repeat_enabled_ && IsRepeated(GetLastKeyEvent()))
+@@ -894,7 +894,7 @@ void KeyEvent::InitializeNative() {
      SetFlags(flags() | EF_IS_REPEAT);
+   }
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

@@ -1,10 +1,10 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_perfetto_include_perfetto_base_build__config.h,v 1.1 2025/12/21 09:38:43 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_perfetto_include_perfetto_base_build__config.h,v 1.2 2026/04/30 06:39:44 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/third_party/perfetto/include/perfetto/base/build_config.h.orig	2025-10-02 00:36:39.000000000 +0000
+--- src/3rdparty/chromium/third_party/perfetto/include/perfetto/base/build_config.h.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/third_party/perfetto/include/perfetto/base/build_config.h
 @@ -27,6 +27,7 @@
  #if defined(__ANDROID__)
@@ -14,7 +14,7 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_perfetto_include_perfetto_base
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX_BUT_NOT_QNX() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WIN() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_APPLE() 0
-@@ -40,6 +41,7 @@
+@@ -41,6 +42,7 @@
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_ANDROID() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_APPLE() 1
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX() 0
@@ -22,19 +22,20 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_perfetto_include_perfetto_base
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX_BUT_NOT_QNX() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WIN() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WASM() 0
-@@ -55,9 +57,10 @@
- #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_MAC() 1
+@@ -62,10 +64,11 @@
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_IOS() 0
+ #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_APPLE_TVOS() 0
  #endif
 -#elif defined(__linux__)
 +#elif defined(__linux__) || defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__NetBSD__)
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_ANDROID() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX() 1
-+#define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_BSD() 1
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX_BUT_NOT_QNX() 1
++#define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_BSD() 1
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WIN() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_APPLE() 0
-@@ -70,6 +73,7 @@
+ #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_MAC() 0
+@@ -78,6 +81,7 @@
  #elif defined(__QNXNTO__)
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_ANDROID() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX() 1
@@ -42,7 +43,7 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_perfetto_include_perfetto_base
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX_BUT_NOT_QNX() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WIN() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_APPLE() 0
-@@ -82,6 +86,7 @@
+@@ -91,6 +95,7 @@
  #elif defined(_WIN32)
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_ANDROID() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX() 0
@@ -50,7 +51,7 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_perfetto_include_perfetto_base
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX_BUT_NOT_QNX() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WIN() 1
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_APPLE() 0
-@@ -94,6 +99,7 @@
+@@ -104,6 +109,7 @@
  #elif defined(__EMSCRIPTEN__)
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_ANDROID() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX() 0
@@ -58,7 +59,7 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_perfetto_include_perfetto_base
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX_BUT_NOT_QNX() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WIN() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_APPLE() 0
-@@ -109,6 +115,7 @@
+@@ -120,6 +126,7 @@
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_MAC() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_IOS() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX() 0
@@ -66,7 +67,7 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_perfetto_include_perfetto_base
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX_BUT_NOT_QNX() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WIN() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WASM() 0
-@@ -118,6 +125,7 @@
+@@ -130,6 +137,7 @@
  #elif defined(__native_client__)
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_ANDROID() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX() 0

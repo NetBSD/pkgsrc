@@ -1,12 +1,12 @@
-$NetBSD: patch-src_3rdparty_chromium_content_utility_utility__main.cc,v 1.1 2025/12/21 09:38:28 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_content_utility_utility__main.cc,v 1.2 2026/04/30 06:39:40 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/content/utility/utility_main.cc.orig	2025-10-02 00:36:39.000000000 +0000
+--- src/3rdparty/chromium/content/utility/utility_main.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/content/utility/utility_main.cc
-@@ -38,18 +38,22 @@
+@@ -42,17 +42,21 @@
  #include "services/tracing/public/cpp/trace_startup.h"
  #include "services/video_effects/public/cpp/buildflags.h"
  
@@ -21,16 +21,15 @@ $NetBSD: patch-src_3rdparty_chromium_content_utility_utility__main.cc,v 1.1 2025
 +#endif
  #include "content/public/common/content_descriptor_keys.h"
  #include "content/utility/speech/speech_recognition_sandbox_hook_linux.h"
- #include "gpu/config/gpu_info_collector.h"
- #include "media/gpu/sandbox/hardware_video_decoding_sandbox_hook_linux.h"
- #include "media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.h"
+ #include "media/gpu/buildflags.h"
+ #include "media/media_buildflags.h"
 +#if !BUILDFLAG(IS_BSD)
  #include "sandbox/policy/linux/sandbox_linux.h"
 +#endif
  #include "services/audio/audio_sandbox_hook_linux.h"
  #include "services/network/network_sandbox_hook_linux.h"
  #include "services/screen_ai/buildflags/buildflags.h"
-@@ -68,7 +72,12 @@
+@@ -87,7 +91,12 @@
  
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
@@ -42,9 +41,9 @@ $NetBSD: patch-src_3rdparty_chromium_content_utility_utility__main.cc,v 1.1 2025
 +
 +#if BUILDFLAG(ENABLE_VIDEO_EFFECTS) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD))
  #include "services/video_effects/video_effects_sandbox_hook_linux.h"  // nogncheck
- #endif  // BUILDFLAG(ENABLE_VIDEO_EFFECTS) && BUILDFLAG(IS_LINUX)
+ #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -103,7 +112,7 @@
+@@ -124,7 +133,7 @@
  sandbox::TargetServices* g_utility_target_services = nullptr;
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -53,7 +52,7 @@ $NetBSD: patch-src_3rdparty_chromium_content_utility_utility__main.cc,v 1.1 2025
  #include "components/services/on_device_translation/sandbox_hook.h"
  #endif  // BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION) && BUILDFLAG(IS_LINUX)
  
-@@ -111,7 +120,7 @@ namespace content {
+@@ -132,7 +141,7 @@ namespace content {
  
  namespace {
  
@@ -62,26 +61,27 @@ $NetBSD: patch-src_3rdparty_chromium_content_utility_utility__main.cc,v 1.1 2025
  std::vector<std::string> GetNetworkContextsParentDirectories() {
    base::MemoryMappedFile::Region region;
    base::ScopedFD read_pipe_fd = base::FileDescriptorStore::GetInstance().TakeFD(
-@@ -251,7 +261,8 @@ int UtilityMain(MainFunctionParams param
+@@ -289,7 +298,7 @@ int UtilityMain(MainFunctionParams param
    }
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+// XXX BSD
-+#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && !BUILDFLAG(IS_BSD)
-   // Thread type delegate of the process should be registered before first
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ 
+ #if BUILDFLAG(USE_LINUX_VIDEO_ACCELERATION) && BUILDFLAG(USE_VAAPI)
+   // Regardless of the sandbox status, the VaapiWrapper needs to be initialized
+@@ -304,7 +313,10 @@ int UtilityMain(MainFunctionParams param
    // thread type change in ChildProcess constructor. It also needs to be
    // registered before the process has multiple threads, which may race with
-@@ -259,7 +270,7 @@ int UtilityMain(MainFunctionParams param
+   // application of the sandbox.
++// XXX BSD
++#if !BUILDFLAG(IS_BSD) 
    SandboxedProcessThreadTypeHandler::Create();
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#endif
  
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    // Initializes the sandbox before any threads are created.
    // TODO(jorgelo): move this after GTK initialization when we enable a strict
-   // Seccomp-BPF policy.
-@@ -295,7 +306,7 @@ int UtilityMain(MainFunctionParams param
+@@ -340,7 +352,7 @@ int UtilityMain(MainFunctionParams param
            base::BindOnce(&speech::SpeechRecognitionPreSandboxHook);
  #endif
        break;
@@ -90,23 +90,25 @@ $NetBSD: patch-src_3rdparty_chromium_content_utility_utility__main.cc,v 1.1 2025
      case sandbox::mojom::Sandbox::kOnDeviceTranslation:
        pre_sandbox_hook = base::BindOnce(
            &on_device_translation::OnDeviceTranslationSandboxHook);
-@@ -311,13 +322,13 @@ int UtilityMain(MainFunctionParams param
+@@ -356,7 +368,7 @@ int UtilityMain(MainFunctionParams param
  #else
        NOTREACHED();
  #endif
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
      case sandbox::mojom::Sandbox::kVideoEffects:
+ #if BUILDFLAG(ENABLE_VIDEO_EFFECTS)
        pre_sandbox_hook =
-           base::BindOnce(&video_effects::VideoEffectsPreSandboxHook);
+@@ -364,7 +376,7 @@ int UtilityMain(MainFunctionParams param
+ #endif
        break;
  #endif  // BUILDFLAG(IS_LINUX)
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-     case sandbox::mojom::Sandbox::kHardwareVideoDecoding:
+     case sandbox::mojom::Sandbox::kShapeDetection:
        pre_sandbox_hook =
-           base::BindOnce(&media::HardwareVideoDecodingPreSandboxHook);
-@@ -344,6 +355,7 @@ int UtilityMain(MainFunctionParams param
+           base::BindOnce(&shape_detection::ShapeDetectionPreSandboxHook);
+@@ -399,6 +411,7 @@ int UtilityMain(MainFunctionParams param
      default:
        break;
    }
@@ -114,7 +116,7 @@ $NetBSD: patch-src_3rdparty_chromium_content_utility_utility__main.cc,v 1.1 2025
    if (!sandbox::policy::IsUnsandboxedSandboxType(sandbox_type) &&
        (parameters.zygote_child || !pre_sandbox_hook.is_null())) {
      sandbox_options.use_amd_specific_policies =
-@@ -351,6 +363,11 @@ int UtilityMain(MainFunctionParams param
+@@ -406,6 +419,11 @@ int UtilityMain(MainFunctionParams param
      sandbox::policy::Sandbox::Initialize(
          sandbox_type, std::move(pre_sandbox_hook), sandbox_options);
    }
@@ -124,5 +126,5 @@ $NetBSD: patch-src_3rdparty_chromium_content_utility_utility__main.cc,v 1.1 2025
 +      sandbox::policy::SandboxLinux::Options());
 +#endif
  
-   // Start the HangWatcher now that the sandbox is engaged, if it hasn't
-   // already been started.
+   // Startup tracing creates a tracing thread, which is incompatible on
+   // platforms that require single-threaded sandbox initialization. In these

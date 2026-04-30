@@ -1,12 +1,20 @@
-$NetBSD: patch-src_3rdparty_chromium_base_posix_unix__domain__socket.cc,v 1.1 2025/12/21 09:38:14 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_posix_unix__domain__socket.cc,v 1.2 2026/04/30 06:39:35 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/posix/unix_domain_socket.cc.orig	2025-10-02 00:36:39.000000000 +0000
+--- src/3rdparty/chromium/base/posix/unix_domain_socket.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/base/posix/unix_domain_socket.cc
-@@ -47,7 +47,7 @@ bool CreateSocketPair(ScopedFD* one, Sco
+@@ -20,6 +20,7 @@
+ #include "base/files/scoped_file.h"
+ #include "base/logging.h"
+ #include "base/notreached.h"
++#include "base/notimplemented.h"
+ #include "base/numerics/safe_conversions.h"
+ #include "base/pickle.h"
+ #include "base/posix/eintr_wrapper.h"
+@@ -47,7 +48,7 @@ bool CreateSocketPair(ScopedFD* one, Sco
  
  // static
  bool UnixDomainSocket::EnableReceiveProcessId(int fd) {
@@ -15,7 +23,7 @@ $NetBSD: patch-src_3rdparty_chromium_base_posix_unix__domain__socket.cc,v 1.1 20
    const int enable = 1;
    return setsockopt(fd, SOL_SOCKET, SO_PASSCRED, &enable, sizeof(enable)) == 0;
  #else
-@@ -73,7 +73,7 @@ bool UnixDomainSocket::SendMsg(int fd,
+@@ -73,7 +74,7 @@ bool UnixDomainSocket::SendMsg(int fd,
  
      struct cmsghdr* cmsg;
      msg.msg_control = control_buffer;
@@ -24,7 +32,7 @@ $NetBSD: patch-src_3rdparty_chromium_base_posix_unix__domain__socket.cc,v 1.1 20
      msg.msg_controllen = checked_cast<socklen_t>(control_len);
  #else
      msg.msg_controllen = control_len;
-@@ -81,7 +81,7 @@ bool UnixDomainSocket::SendMsg(int fd,
+@@ -81,7 +82,7 @@ bool UnixDomainSocket::SendMsg(int fd,
      cmsg = CMSG_FIRSTHDR(&msg);
      cmsg->cmsg_level = SOL_SOCKET;
      cmsg->cmsg_type = SCM_RIGHTS;
@@ -33,7 +41,7 @@ $NetBSD: patch-src_3rdparty_chromium_base_posix_unix__domain__socket.cc,v 1.1 20
      cmsg->cmsg_len = checked_cast<u_int>(CMSG_LEN(sizeof(int) * fds.size()));
  #else
      cmsg->cmsg_len = CMSG_LEN(sizeof(int) * fds.size());
-@@ -133,7 +133,7 @@ ssize_t UnixDomainSocket::RecvMsgWithFla
+@@ -133,7 +134,7 @@ ssize_t UnixDomainSocket::RecvMsgWithFla
  
    const size_t kControlBufferSize =
        CMSG_SPACE(sizeof(int) * kMaxFileDescriptors)
@@ -42,7 +50,7 @@ $NetBSD: patch-src_3rdparty_chromium_base_posix_unix__domain__socket.cc,v 1.1 20
        // macOS does not support ucred.
        // macOS supports xucred, but this structure is insufficient.
        + CMSG_SPACE(sizeof(struct ucred))
-@@ -162,7 +162,7 @@ ssize_t UnixDomainSocket::RecvMsgWithFla
+@@ -162,7 +163,7 @@ ssize_t UnixDomainSocket::RecvMsgWithFla
          wire_fds = reinterpret_cast<int*>(CMSG_DATA(cmsg));
          wire_fds_len = payload_len / sizeof(int);
        }
@@ -51,7 +59,7 @@ $NetBSD: patch-src_3rdparty_chromium_base_posix_unix__domain__socket.cc,v 1.1 20
        // macOS does not support SCM_CREDENTIALS.
        if (cmsg->cmsg_level == SOL_SOCKET &&
            cmsg->cmsg_type == SCM_CREDENTIALS) {
-@@ -199,6 +199,9 @@ ssize_t UnixDomainSocket::RecvMsgWithFla
+@@ -199,6 +200,9 @@ ssize_t UnixDomainSocket::RecvMsgWithFla
      if (getsockopt(fd, SOL_LOCAL, LOCAL_PEERPID, &pid, &pid_size) != 0) {
        pid = -1;
      }
