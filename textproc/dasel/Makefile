@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2026/04/30 18:37:30 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/04/30 21:42:59 wiz Exp $
 
 DISTNAME=	dasel-3.8.1
 CATEGORIES=	textproc
@@ -17,12 +17,13 @@ INSTALLATION_DIRS+=	share/bash-completion/completions
 INSTALLATION_DIRS+=	share/fish/vendor_completions.d
 INSTALLATION_DIRS+=	share/zsh/site-functions
 
-# dasel binary not available before 'install'
+post-build:
+	${WRKDIR}/.gopath/bin/dasel man > ${WRKSRC}/dasel.1
+	${WRKDIR}/.gopath/bin/dasel completion bash > ${WRKSRC}/dasel.bash
+	${WRKDIR}/.gopath/bin/dasel completion fish > ${WRKSRC}/dasel.fish
+	${WRKDIR}/.gopath/bin/dasel completion zsh > ${WRKSRC}/dasel.zsh
+
 post-install:
-	${DESTDIR}${PREFIX}/bin/dasel man > ${WRKSRC}/dasel.1
-	${DESTDIR}${PREFIX}/bin/dasel completion bash > ${WRKSRC}/dasel.bash
-	${DESTDIR}${PREFIX}/bin/dasel completion fish > ${WRKSRC}/dasel.fish
-	${DESTDIR}${PREFIX}/bin/dasel completion zsh > ${WRKSRC}/dasel.zsh
 	${INSTALL_DATA} ${WRKSRC}/dasel.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/dasel.bash ${DESTDIR}${PREFIX}/share/bash-completion/completions/dasel
 	${INSTALL_DATA} ${WRKSRC}/dasel.fish ${DESTDIR}${PREFIX}/share/fish/vendor_completions.d/dasel.fish
