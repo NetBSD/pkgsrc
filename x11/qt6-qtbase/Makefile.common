@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2026/03/29 16:50:30 tnn Exp $
+# $NetBSD: Makefile.common,v 1.44 2026/04/30 06:38:37 adam Exp $
 # used by audio/qt6-qtspeech/Makefile
 # used by comms/qt6-qtconnectivity/Makefile
 # used by databases/qt6-odbc/Makefile
@@ -44,7 +44,7 @@ USE_TOOLS+=		cmake gmake perl:build pkg-config
 #TOOL_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
 
 # https://doc.qt.io/qt-6/supported-platforms.html
-GCC_REQD+=		9
+GCC_REQD+=	10
 
 # required for -msse2
 .if ${MACHINE_ARCH} == "i386"

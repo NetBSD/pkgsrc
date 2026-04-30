@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST.Darwin,v 1.11 2025/11/17 11:04:53 wiz Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.12 2026/04/30 06:38:37 adam Exp $
 qt6/bin/macdeployqt
 qt6/bin/macdeployqt6
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcfsocketnotifier_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcore_mac_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qdarwinpermissionplugin_p.h
+qt6/include/QtCore/${PKGVERSION}/QtCore/private/qdarwinsecurityscopedfileengine_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qeventdispatcher_cf_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfilesystemwatcher_fsevents_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfutex_mac_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qmachparser_p.h
 qt6/include/QtDeviceDiscoverySupport/${PKGVERSION}/QtDeviceDiscoverySupport/private/qdevicediscovery_dummy_p.h
+qt6/include/QtGui/${PKGVERSION}/QtGui/private/qapplefileiconengine_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qappleiconengine_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qapplekeymapper_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qcoregraphics_p.h
@@ -18,7 +20,6 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgraphicsframecapture_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgraphicsframecapture_p_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgraphicsframecapturemetal_p_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qmacmimeregistry_p.h
-qt6/include/QtGui/${PKGVERSION}/QtGui/private/qmacstyle_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qmacstyle_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qmetallayer_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrasterbackingstore_p.h
@@ -45,6 +46,7 @@ qt6/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginDependencies.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginTargets.cmake
+qt6/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginConfig.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginConfigVersion.cmake
@@ -52,6 +54,7 @@ qt6/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginDependencies.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginTargets.cmake
+qt6/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginConfig.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginConfigVersion.cmake
@@ -59,6 +62,7 @@ qt6/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginDependencies.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginTargets.cmake
+qt6/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginConfig.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginConfigVersion.cmake
@@ -66,6 +70,7 @@ qt6/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginDependencies.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginTargets.cmake
+qt6/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginConfig.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginConfigVersion.cmake
@@ -73,6 +78,7 @@ qt6/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginDependencies.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginTargets.cmake
+qt6/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginConfig.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginConfigVersion.cmake
@@ -80,30 +86,35 @@ qt6/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginConfigVersionImpl.cmak
 qt6/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginDependencies.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginTargets.cmake
+qt6/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginConfig.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginTargets.cmake
+qt6/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginConfig.cmake
 qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginTargets.cmake
+qt6/lib/cmake/Qt6Network/Qt6QAppleNetworkInformationPluginTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Network/Qt6QSecureTransportBackendPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Network/Qt6QSecureTransportBackendPluginConfig.cmake
 qt6/lib/cmake/Qt6Network/Qt6QSecureTransportBackendPluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Network/Qt6QSecureTransportBackendPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Network/Qt6QSecureTransportBackendPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Network/Qt6QSecureTransportBackendPluginTargets.cmake
+qt6/lib/cmake/Qt6Network/Qt6QSecureTransportBackendPluginTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Widgets/Qt6QMacStylePluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Widgets/Qt6QMacStylePluginConfig.cmake
 qt6/lib/cmake/Qt6Widgets/Qt6QMacStylePluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Widgets/Qt6QMacStylePluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets-release.cmake
 qt6/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets.cmake
+qt6/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargetsPrecheck.cmake
 qt6/mkspecs/modules/qt_plugin_qdarwinbluetoothpermission.pri
 qt6/mkspecs/modules/qt_plugin_qdarwincalendarpermission.pri
 qt6/mkspecs/modules/qt_plugin_qdarwincamerapermission.pri

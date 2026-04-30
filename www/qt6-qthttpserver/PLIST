@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/11/11 12:34:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/04/30 06:38:38 adam Exp $
 lib/pkgconfig/Qt6HttpServer.pc
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qabstracthttpserver_p.h
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserver_p.h
@@ -48,6 +48,7 @@ qt6/lib/cmake/Qt6HttpServer/Qt6HttpServerConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6HttpServer/Qt6HttpServerDependencies.cmake
 qt6/lib/cmake/Qt6HttpServer/Qt6HttpServerTargets-release.cmake
 qt6/lib/cmake/Qt6HttpServer/Qt6HttpServerTargets.cmake
+qt6/lib/cmake/Qt6HttpServer/Qt6HttpServerTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6HttpServer/Qt6HttpServerVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6HttpServer/Qt6HttpServerVersionlessTargets.cmake
 qt6/lib/cmake/Qt6HttpServerPrivate/Qt6HttpServerPrivateAdditionalTargetInfo.cmake
@@ -56,6 +57,7 @@ qt6/lib/cmake/Qt6HttpServerPrivate/Qt6HttpServerPrivateConfigVersion.cmake
 qt6/lib/cmake/Qt6HttpServerPrivate/Qt6HttpServerPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6HttpServerPrivate/Qt6HttpServerPrivateDependencies.cmake
 qt6/lib/cmake/Qt6HttpServerPrivate/Qt6HttpServerPrivateTargets.cmake
+qt6/lib/cmake/Qt6HttpServerPrivate/Qt6HttpServerPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6HttpServerPrivate/Qt6HttpServerPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6HttpServerPrivate/Qt6HttpServerPrivateVersionlessTargets.cmake
 qt6/lib/libQt6HttpServer.prl

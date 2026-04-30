@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2025/11/11 12:34:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/04/30 06:38:42 adam Exp $
 lib/pkgconfig/Qt6WebSockets.pc
 qt6/include/QtWebSockets/${PKGVERSION}/QtWebSockets/private/qdefaultmaskgenerator_p.h
+qt6/include/QtWebSockets/${PKGVERSION}/QtWebSockets/private/qtwebsockets-config_p.h
 qt6/include/QtWebSockets/${PKGVERSION}/QtWebSockets/private/qwebsocket_p.h
 qt6/include/QtWebSockets/${PKGVERSION}/QtWebSockets/private/qwebsocketcorsauthenticator_p.h
 qt6/include/QtWebSockets/${PKGVERSION}/QtWebSockets/private/qwebsocketdataprocessor_p.h
@@ -20,6 +21,7 @@ qt6/include/QtWebSockets/QtWebSockets
 qt6/include/QtWebSockets/QtWebSocketsDepends
 qt6/include/QtWebSockets/QtWebSocketsVersion
 qt6/include/QtWebSockets/qmaskgenerator.h
+qt6/include/QtWebSockets/qtwebsockets-config.h
 qt6/include/QtWebSockets/qtwebsocketsexports.h
 qt6/include/QtWebSockets/qtwebsocketsversion.h
 qt6/include/QtWebSockets/qwebsocket.h
@@ -35,6 +37,7 @@ qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsConfigVersion.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsTargets.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6WebSockets/Qt6WebSocketsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfig.cmake
 qt6/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfigVersion.cmake
@@ -42,6 +45,7 @@ qt6/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6WebSockets/Qt6WebSocketsDependencies.cmake
 qt6/lib/cmake/Qt6WebSockets/Qt6WebSocketsTargets-release.cmake
 qt6/lib/cmake/Qt6WebSockets/Qt6WebSocketsTargets.cmake
+qt6/lib/cmake/Qt6WebSockets/Qt6WebSocketsTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6WebSockets/Qt6WebSocketsVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6WebSockets/Qt6WebSocketsVersionlessTargets.cmake
 qt6/lib/cmake/Qt6WebSocketsPrivate/Qt6WebSocketsPrivateAdditionalTargetInfo.cmake
@@ -50,6 +54,7 @@ qt6/lib/cmake/Qt6WebSocketsPrivate/Qt6WebSocketsPrivateConfigVersion.cmake
 qt6/lib/cmake/Qt6WebSocketsPrivate/Qt6WebSocketsPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6WebSocketsPrivate/Qt6WebSocketsPrivateDependencies.cmake
 qt6/lib/cmake/Qt6WebSocketsPrivate/Qt6WebSocketsPrivateTargets.cmake
+qt6/lib/cmake/Qt6WebSocketsPrivate/Qt6WebSocketsPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6WebSocketsPrivate/Qt6WebSocketsPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6WebSocketsPrivate/Qt6WebSocketsPrivateVersionlessTargets.cmake
 qt6/lib/libQt6WebSockets.prl

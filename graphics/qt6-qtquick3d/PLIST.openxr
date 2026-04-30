@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.openxr,v 1.4 2025/11/11 12:34:15 adam Exp $
+@comment $NetBSD: PLIST.openxr,v 1.5 2026/04/30 06:38:39 adam Exp $
 lib/pkgconfig/Qt6Quick3DXr.pc
 qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qabstractopenxrgraphics_p.h
 qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qopenxrgraphics_metal_p.h
@@ -30,15 +30,13 @@ qt6/include/QtQuick3DXr/QtQuick3DXrVersion
 qt6/include/QtQuick3DXr/qtquick3dxrexports.h
 qt6/include/QtQuick3DXr/qtquick3dxrglobal.h
 qt6/include/QtQuick3DXr/qtquick3dxrversion.h
-qt6/lib/cmake/Qt6/FindWrapBundledOpenXRConfigExtra.cmake
-qt6/lib/cmake/Qt6/FindWrapOpenXR.cmake
-qt6/lib/cmake/Qt6/FindWrapSystemOpenXR.cmake
 qt6/lib/cmake/Qt6BundledOpenXR/Qt6BundledOpenXRAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6BundledOpenXR/Qt6BundledOpenXRConfig.cmake
 qt6/lib/cmake/Qt6BundledOpenXR/Qt6BundledOpenXRConfigVersion.cmake
 qt6/lib/cmake/Qt6BundledOpenXR/Qt6BundledOpenXRConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6BundledOpenXR/Qt6BundledOpenXRTargets-release.cmake
 qt6/lib/cmake/Qt6BundledOpenXR/Qt6BundledOpenXRTargets.cmake
+qt6/lib/cmake/Qt6BundledOpenXR/Qt6BundledOpenXRTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6BundledOpenXR/Qt6BundledOpenXRVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6BundledOpenXR/Qt6BundledOpenXRVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6Quick3DXrpluginAdditionalTargetInfo.cmake
@@ -47,6 +45,7 @@ qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6Quick3DXrpluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6Quick3DXrpluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6Quick3DXrpluginTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6Quick3DXrpluginTargets.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6Quick3DXrpluginTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Quick3DXr/Qt6Quick3DXrAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Quick3DXr/Qt6Quick3DXrConfig.cmake
 qt6/lib/cmake/Qt6Quick3DXr/Qt6Quick3DXrConfigVersion.cmake
@@ -54,6 +53,7 @@ qt6/lib/cmake/Qt6Quick3DXr/Qt6Quick3DXrConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Quick3DXr/Qt6Quick3DXrDependencies.cmake
 qt6/lib/cmake/Qt6Quick3DXr/Qt6Quick3DXrTargets-release.cmake
 qt6/lib/cmake/Qt6Quick3DXr/Qt6Quick3DXrTargets.cmake
+qt6/lib/cmake/Qt6Quick3DXr/Qt6Quick3DXrTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Quick3DXr/Qt6Quick3DXrVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Quick3DXr/Qt6Quick3DXrVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Quick3DXrPrivate/Qt6Quick3DXrPrivateAdditionalTargetInfo.cmake
@@ -62,6 +62,7 @@ qt6/lib/cmake/Qt6Quick3DXrPrivate/Qt6Quick3DXrPrivateConfigVersion.cmake
 qt6/lib/cmake/Qt6Quick3DXrPrivate/Qt6Quick3DXrPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Quick3DXrPrivate/Qt6Quick3DXrPrivateDependencies.cmake
 qt6/lib/cmake/Qt6Quick3DXrPrivate/Qt6Quick3DXrPrivateTargets.cmake
+qt6/lib/cmake/Qt6Quick3DXrPrivate/Qt6Quick3DXrPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Quick3DXrPrivate/Qt6Quick3DXrPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Quick3DXrPrivate/Qt6Quick3DXrPrivateVersionlessTargets.cmake
 qt6/lib/libQt6BundledOpenXR.a

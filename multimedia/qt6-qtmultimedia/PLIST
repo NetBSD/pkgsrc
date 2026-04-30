@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2025/11/25 06:12:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.31 2026/04/30 06:38:39 adam Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
@@ -133,7 +133,6 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediarecorder_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediastoragelocation_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmemory_resource_tlsf_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmemoryvideobuffer_p.h
-qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmultimedia_assume_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmultimedia_enum_to_string_converter_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmultimedia_ranges_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmultimediautils_p.h
@@ -357,6 +356,7 @@ qt6/lib/cmake/Qt6BundledResonanceAudio/Qt6BundledResonanceAudioConfigVersion.cma
 qt6/lib/cmake/Qt6BundledResonanceAudio/Qt6BundledResonanceAudioConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6BundledResonanceAudio/Qt6BundledResonanceAudioTargets-release.cmake
 qt6/lib/cmake/Qt6BundledResonanceAudio/Qt6BundledResonanceAudioTargets.cmake
+qt6/lib/cmake/Qt6BundledResonanceAudio/Qt6BundledResonanceAudioTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6BundledResonanceAudio/Qt6BundledResonanceAudioVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6BundledResonanceAudio/Qt6BundledResonanceAudioVersionlessTargets.cmake
 ${PLIST.ffmpeg}qt6/lib/cmake/Qt6FFmpegMediaPluginImplPrivate/Qt6FFmpegMediaPluginImplPrivateAdditionalTargetInfo.cmake
@@ -366,6 +366,7 @@ ${PLIST.ffmpeg}qt6/lib/cmake/Qt6FFmpegMediaPluginImplPrivate/Qt6FFmpegMediaPlugi
 ${PLIST.ffmpeg}qt6/lib/cmake/Qt6FFmpegMediaPluginImplPrivate/Qt6FFmpegMediaPluginImplPrivateDependencies.cmake
 ${PLIST.ffmpeg}qt6/lib/cmake/Qt6FFmpegMediaPluginImplPrivate/Qt6FFmpegMediaPluginImplPrivateTargets-release.cmake
 ${PLIST.ffmpeg}qt6/lib/cmake/Qt6FFmpegMediaPluginImplPrivate/Qt6FFmpegMediaPluginImplPrivateTargets.cmake
+${PLIST.ffmpeg}qt6/lib/cmake/Qt6FFmpegMediaPluginImplPrivate/Qt6FFmpegMediaPluginImplPrivateTargetsPrecheck.cmake
 ${PLIST.ffmpeg}qt6/lib/cmake/Qt6FFmpegMediaPluginImplPrivate/Qt6FFmpegMediaPluginImplPrivateVersionlessAliasTargets.cmake
 ${PLIST.ffmpeg}qt6/lib/cmake/Qt6FFmpegMediaPluginImplPrivate/Qt6FFmpegMediaPluginImplPrivateVersionlessTargets.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6GstreamerMediaPluginImplPrivate/Qt6GstreamerMediaPluginImplPrivateAdditionalTargetInfo.cmake
@@ -375,6 +376,7 @@ ${PLIST.gstreamer}qt6/lib/cmake/Qt6GstreamerMediaPluginImplPrivate/Qt6GstreamerM
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6GstreamerMediaPluginImplPrivate/Qt6GstreamerMediaPluginImplPrivateDependencies.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6GstreamerMediaPluginImplPrivate/Qt6GstreamerMediaPluginImplPrivateTargets-release.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6GstreamerMediaPluginImplPrivate/Qt6GstreamerMediaPluginImplPrivateTargets.cmake
+${PLIST.gstreamer}qt6/lib/cmake/Qt6GstreamerMediaPluginImplPrivate/Qt6GstreamerMediaPluginImplPrivateTargetsPrecheck.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6GstreamerMediaPluginImplPrivate/Qt6GstreamerMediaPluginImplPrivateVersionlessAliasTargets.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6GstreamerMediaPluginImplPrivate/Qt6GstreamerMediaPluginImplPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaAdditionalTargetInfo.cmake
@@ -386,6 +388,7 @@ qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaMacros.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaPlugins.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets-release.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets.cmake
+qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaVersionlessTargets.cmake
 ${PLIST.ffmpeg}qt6/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginAdditionalTargetInfo.cmake
@@ -394,18 +397,21 @@ ${PLIST.ffmpeg}qt6/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginConfigVersion.cm
 ${PLIST.ffmpeg}qt6/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginConfigVersionImpl.cmake
 ${PLIST.ffmpeg}qt6/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets-release.cmake
 ${PLIST.ffmpeg}qt6/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets.cmake
+${PLIST.ffmpeg}qt6/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargetsPrecheck.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6Multimedia/Qt6QGstreamerMediaPluginAdditionalTargetInfo.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6Multimedia/Qt6QGstreamerMediaPluginConfig.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6Multimedia/Qt6QGstreamerMediaPluginConfigVersion.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6Multimedia/Qt6QGstreamerMediaPluginConfigVersionImpl.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6Multimedia/Qt6QGstreamerMediaPluginTargets-release.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6Multimedia/Qt6QGstreamerMediaPluginTargets.cmake
+${PLIST.gstreamer}qt6/lib/cmake/Qt6Multimedia/Qt6QGstreamerMediaPluginTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateConfig.cmake
 qt6/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateConfigVersion.cmake
 qt6/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateDependencies.cmake
 qt6/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateTargets.cmake
+qt6/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateAdditionalTargetInfo.cmake
@@ -415,6 +421,7 @@ qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateConfigVersionIm
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateDependencies.cmake
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateTargets-release.cmake
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateTargets.cmake
+qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6MultimediaTestLibPrivate/Qt6MultimediaTestLibPrivateAdditionalTargetInfo.cmake
@@ -424,6 +431,7 @@ qt6/lib/cmake/Qt6MultimediaTestLibPrivate/Qt6MultimediaTestLibPrivateConfigVersi
 qt6/lib/cmake/Qt6MultimediaTestLibPrivate/Qt6MultimediaTestLibPrivateDependencies.cmake
 qt6/lib/cmake/Qt6MultimediaTestLibPrivate/Qt6MultimediaTestLibPrivateTargets-release.cmake
 qt6/lib/cmake/Qt6MultimediaTestLibPrivate/Qt6MultimediaTestLibPrivateTargets.cmake
+qt6/lib/cmake/Qt6MultimediaTestLibPrivate/Qt6MultimediaTestLibPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6MultimediaTestLibPrivate/Qt6MultimediaTestLibPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6MultimediaTestLibPrivate/Qt6MultimediaTestLibPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsAdditionalTargetInfo.cmake
@@ -433,6 +441,7 @@ qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsDependencies.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsTargets-release.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsTargets.cmake
+qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsVersionlessTargets.cmake
 qt6/lib/cmake/Qt6MultimediaWidgetsPrivate/Qt6MultimediaWidgetsPrivateAdditionalTargetInfo.cmake
@@ -441,6 +450,7 @@ qt6/lib/cmake/Qt6MultimediaWidgetsPrivate/Qt6MultimediaWidgetsPrivateConfigVersi
 qt6/lib/cmake/Qt6MultimediaWidgetsPrivate/Qt6MultimediaWidgetsPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6MultimediaWidgetsPrivate/Qt6MultimediaWidgetsPrivateDependencies.cmake
 qt6/lib/cmake/Qt6MultimediaWidgetsPrivate/Qt6MultimediaWidgetsPrivateTargets.cmake
+qt6/lib/cmake/Qt6MultimediaWidgetsPrivate/Qt6MultimediaWidgetsPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6MultimediaWidgetsPrivate/Qt6MultimediaWidgetsPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6MultimediaWidgetsPrivate/Qt6MultimediaWidgetsPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dspatialaudioAdditionalTargetInfo.cmake
@@ -449,12 +459,14 @@ qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dspatialaudioConfigVersion.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dspatialaudioConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dspatialaudioTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dspatialaudioTargets.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dspatialaudioTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaConfigVersion.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaTargets.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Quick3DSpatialAudioPrivate/Qt6Quick3DSpatialAudioPrivateAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Quick3DSpatialAudioPrivate/Qt6Quick3DSpatialAudioPrivateConfig.cmake
 qt6/lib/cmake/Qt6Quick3DSpatialAudioPrivate/Qt6Quick3DSpatialAudioPrivateConfigVersion.cmake
@@ -462,6 +474,7 @@ qt6/lib/cmake/Qt6Quick3DSpatialAudioPrivate/Qt6Quick3DSpatialAudioPrivateConfigV
 qt6/lib/cmake/Qt6Quick3DSpatialAudioPrivate/Qt6Quick3DSpatialAudioPrivateDependencies.cmake
 qt6/lib/cmake/Qt6Quick3DSpatialAudioPrivate/Qt6Quick3DSpatialAudioPrivateTargets-release.cmake
 qt6/lib/cmake/Qt6Quick3DSpatialAudioPrivate/Qt6Quick3DSpatialAudioPrivateTargets.cmake
+qt6/lib/cmake/Qt6Quick3DSpatialAudioPrivate/Qt6Quick3DSpatialAudioPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Quick3DSpatialAudioPrivate/Qt6Quick3DSpatialAudioPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Quick3DSpatialAudioPrivate/Qt6Quick3DSpatialAudioPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioAdditionalTargetInfo.cmake
@@ -471,6 +484,7 @@ qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioDependencies.cmake
 qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioTargets-release.cmake
 qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioTargets.cmake
+qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioVersionlessTargets.cmake
 qt6/lib/cmake/Qt6SpatialAudioPrivate/Qt6SpatialAudioPrivateAdditionalTargetInfo.cmake
@@ -479,6 +493,7 @@ qt6/lib/cmake/Qt6SpatialAudioPrivate/Qt6SpatialAudioPrivateConfigVersion.cmake
 qt6/lib/cmake/Qt6SpatialAudioPrivate/Qt6SpatialAudioPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6SpatialAudioPrivate/Qt6SpatialAudioPrivateDependencies.cmake
 qt6/lib/cmake/Qt6SpatialAudioPrivate/Qt6SpatialAudioPrivateTargets.cmake
+qt6/lib/cmake/Qt6SpatialAudioPrivate/Qt6SpatialAudioPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6SpatialAudioPrivate/Qt6SpatialAudioPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6SpatialAudioPrivate/Qt6SpatialAudioPrivateVersionlessTargets.cmake
 qt6/lib/libQt6BundledResonanceAudio.a

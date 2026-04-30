@@ -1,8 +1,8 @@
-$NetBSD: patch-src_corelib_thread_qyieldcpu.h,v 1.1 2026/03/27 17:24:05 tnn Exp $
+$NetBSD: patch-src_corelib_thread_qyieldcpu.h,v 1.2 2026/04/30 06:38:37 adam Exp $
 
 Xcode 26.4 build fix
 
---- src/corelib/thread/qyieldcpu.h.orig	2026-01-13 10:18:17.000000000 +0000
+--- src/corelib/thread/qyieldcpu.h.orig	2026-03-05 07:51:49.000000000 +0000
 +++ src/corelib/thread/qyieldcpu.h
 @@ -10,6 +10,12 @@
  #include <QtCore/qprocessordetection.h>
@@ -14,6 +14,6 @@ Xcode 26.4 build fix
 +#  endif
 +#endif
 +
- #ifdef Q_CC_MSVC_ONLY
+ #if defined(Q_CC_MSVC_ONLY) && defined(Q_PROCESSOR_X86)
  // MSVC defines _YIELD_PROCESSOR() in <xatomic.h>, but as that is a private
  // header, we include the public ones
