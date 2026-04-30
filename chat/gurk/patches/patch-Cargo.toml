@@ -1,23 +1,21 @@
-$NetBSD: patch-Cargo.toml,v 1.1 2026/04/13 09:43:10 wiz Exp $
+$NetBSD: patch-Cargo.toml,v 1.2 2026/04/30 08:36:58 wiz Exp $
 
 Depends on unpublished crates. Can't use cargo.mk to fetch it.
 
---- Cargo.toml.orig	2026-03-19 13:34:29.000000000 +0000
+--- Cargo.toml.orig	2026-04-27 07:28:18.000000000 +0000
 +++ Cargo.toml
-@@ -29,9 +29,10 @@ dev = ["prost", "base64", "serde_json"]
+@@ -29,8 +29,8 @@ dev = ["prost", "base64", "serde_json"]
  dev = ["prost", "base64", "serde_json"]
  
  [dependencies]
--presage = { git = "https://github.com/whisperfish/presage", rev = "fe3ed54c4844ae51c3a9fa49cf80a7816a31a425", default-features = false }
--presage-store-sqlite = { git = "https://github.com/whisperfish/presage", rev = "fe3ed54c4844ae51c3a9fa49cf80a7816a31a425", default-features = false }
-+presage = { path = "../presage-fe3ed54c4844ae51c3a9fa49cf80a7816a31a425/presage", default-features = false }
-+presage-store-sqlite = { path = "../presage-fe3ed54c4844ae51c3a9fa49cf80a7816a31a425/presage-store-sqlite", default-features = false }
+-presage = { git = "https://github.com/whisperfish/presage", rev = "600c4ede51865f7de6ca21507e738a7bd70cc7ae", default-features = false }
+-presage-store-sqlite = { git = "https://github.com/whisperfish/presage", rev = "600c4ede51865f7de6ca21507e738a7bd70cc7ae", default-features = false }
++presage = { path = "../presage-600c4ede51865f7de6ca21507e738a7bd70cc7ae/presage", default-features = false }
++presage-store-sqlite = { path = "../presage-600c4ede51865f7de6ca21507e738a7bd70cc7ae/presage-store-sqlite", default-features = false }
  
-+
  # dev feature dependenciestoml
  prost = { version = "0.13.4", optional = true }
- base64 = { version = "0.22.1", optional = true }
-@@ -125,6 +126,6 @@ harness = false
+@@ -125,6 +125,6 @@ harness = false
  [patch.crates-io]
  # signal-protocol uses a fork of this library via the patch mechanism of cargo.
  # Since it is not transitive, we have to add the patch here explicitly.
