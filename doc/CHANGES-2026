@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2697 2026/04/30 11:25:30 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2698 2026/04/30 11:43:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4163,3 +4163,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated biology/py-pydicom to 3.0.2 [adam 2026-04-30]
 	Updated mail/exim to 4.99.2 [adam 2026-04-30]
 	Updated mail/exim-html to 4.99.2 [adam 2026-04-30]
+	Updated devel/hexpatch to 1.12.6 [pin 2026-04-30]
