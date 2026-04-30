@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.106 2026/04/28 11:53:22 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.107 2026/04/30 11:44:01 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -29,7 +29,7 @@ CARGO_CRATE_DEPENDS+=	asn1-rs-0.7.1
 CARGO_CRATE_DEPENDS+=	asn1-rs-derive-0.6.0
 CARGO_CRATE_DEPENDS+=	asn1-rs-impl-0.2.0
 CARGO_CRATE_DEPENDS+=	assert-json-diff-2.0.2
-CARGO_CRATE_DEPENDS+=	astral-tokio-tar-0.6.0
+CARGO_CRATE_DEPENDS+=	astral-tokio-tar-0.6.1
 CARGO_CRATE_DEPENDS+=	astral_async_zip-0.0.17
 CARGO_CRATE_DEPENDS+=	async-backtrace-0.2.7
 CARGO_CRATE_DEPENDS+=	async-backtrace-attributes-0.2.7
