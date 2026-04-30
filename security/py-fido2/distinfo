@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2026/01/20 08:45:50 adam Exp $
+$NetBSD: distinfo,v 1.15 2026/04/30 12:11:14 adam Exp $
 
-BLAKE2s (fido2-2.1.1.tar.gz) = 0e969b17101519a69f1bf827af2cf258c2deaf44d3c43de787441436e7f4edb6
-SHA512 (fido2-2.1.1.tar.gz) = 883cfaf0c0cd304f467fcd515417c456fde353fcd991fa6aaf74fb12ba97a378d082f2fe0ae435bcf14a8c284e0b4665c721410ad2315bc8922e2f09d16d7cac
-Size (fido2-2.1.1.tar.gz) = 4455940 bytes
+BLAKE2s (fido2-2.2.0.tar.gz) = b8958bf2dd8223413975f0a34458dc13391cc3596e219823a3be58d6c434ef6f
+SHA512 (fido2-2.2.0.tar.gz) = bd250e77ff239256240b153da61c525232bb83c056becdce588ef8c287bfccb0ebdfc6d2ac1b7f50a857abc229f9c8a46d99092d26579f68649de5cdd1e15fa2
+Size (fido2-2.2.0.tar.gz) = 294167 bytes
