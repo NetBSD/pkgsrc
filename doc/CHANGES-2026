@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2707 2026/04/30 12:23:17 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2708 2026/04/30 12:31:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4175,3 +4175,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pip to 26.1 [adam 2026-04-30]
 	Updated devel/buf to 1.69.0 [adam 2026-04-30]
 	Updated devel/mimalloc to 3.3.2 [adam 2026-04-30]
+	Updated www/py-scrapy to 2.15.2 [adam 2026-04-30]
+	Updated devel/py-test-codspeed to 4.5.0 [adam 2026-04-30]
+	Updated devel/py-test-order to 1.4.0 [adam 2026-04-30]
