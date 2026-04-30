@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.89 2026/02/08 21:55:13 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2026/04/30 12:14:52 adam Exp $
 
-DISTNAME=	pip-26.0.1
+DISTNAME=	pip-26.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip/}
@@ -11,6 +11,9 @@ COMMENT=	Installs Python packages as an easy_install replacement
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-rerunfailures>=0:../../devel/py-test-rerunfailures
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=0:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-test_socket>=0:../../devel/py-test_socket
 
 USE_LANGUAGES=	# none
