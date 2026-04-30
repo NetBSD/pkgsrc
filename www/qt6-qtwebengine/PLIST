@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/12/21 09:38:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/04/30 06:39:34 adam Exp $
 lib/pkgconfig/Qt6Pdf.pc
 lib/pkgconfig/Qt6PdfQuick.pc
 lib/pkgconfig/Qt6PdfWidgets.pc
@@ -209,11 +209,14 @@ qt6/include/QtWebEngineWidgets/QtWebEngineWidgetsVersion
 qt6/include/QtWebEngineWidgets/qtwebenginewidgetsglobal.h
 qt6/include/QtWebEngineWidgets/qtwebenginewidgetsversion.h
 qt6/include/QtWebEngineWidgets/qwebengineview.h
+qt6/lib/cmake/Qt6/FindBindgen.cmake
 qt6/lib/cmake/Qt6/FindGPerf.cmake
 qt6/lib/cmake/Qt6/FindGn.cmake
 qt6/lib/cmake/Qt6/FindNinja.cmake
 qt6/lib/cmake/Qt6/FindNodejs.cmake
 qt6/lib/cmake/Qt6/FindPkgConfigHost.cmake
+qt6/lib/cmake/Qt6/FindQWELibClang.cmake
+qt6/lib/cmake/Qt6/FindRust.cmake
 qt6/lib/cmake/Qt6/FindSnappy.cmake
 qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtWebEngineTestsConfig.cmake
 qt6/lib/cmake/Qt6Designer/Qt6QWebEngineViewPluginAdditionalTargetInfo.cmake
@@ -222,12 +225,14 @@ qt6/lib/cmake/Qt6Designer/Qt6QWebEngineViewPluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Designer/Qt6QWebEngineViewPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Designer/Qt6QWebEngineViewPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Designer/Qt6QWebEngineViewPluginTargets.cmake
+qt6/lib/cmake/Qt6Designer/Qt6QWebEngineViewPluginTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QPdfPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QPdfPluginConfig.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QPdfPluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QPdfPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QPdfPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QPdfPluginTargets.cmake
+qt6/lib/cmake/Qt6Gui/Qt6QPdfPluginTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Pdf/Qt6PdfAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Pdf/Qt6PdfConfig.cmake
 qt6/lib/cmake/Qt6Pdf/Qt6PdfConfigVersion.cmake
@@ -235,6 +240,7 @@ qt6/lib/cmake/Qt6Pdf/Qt6PdfConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Pdf/Qt6PdfDependencies.cmake
 qt6/lib/cmake/Qt6Pdf/Qt6PdfTargets-release.cmake
 qt6/lib/cmake/Qt6Pdf/Qt6PdfTargets.cmake
+qt6/lib/cmake/Qt6Pdf/Qt6PdfTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Pdf/Qt6PdfVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Pdf/Qt6PdfVersionlessTargets.cmake
 qt6/lib/cmake/Qt6PdfPrivate/Qt6PdfPrivateAdditionalTargetInfo.cmake
@@ -243,6 +249,7 @@ qt6/lib/cmake/Qt6PdfPrivate/Qt6PdfPrivateConfigVersion.cmake
 qt6/lib/cmake/Qt6PdfPrivate/Qt6PdfPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6PdfPrivate/Qt6PdfPrivateDependencies.cmake
 qt6/lib/cmake/Qt6PdfPrivate/Qt6PdfPrivateTargets.cmake
+qt6/lib/cmake/Qt6PdfPrivate/Qt6PdfPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6PdfPrivate/Qt6PdfPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6PdfPrivate/Qt6PdfPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6PdfQuick/Qt6PdfQuickAdditionalTargetInfo.cmake
@@ -252,6 +259,7 @@ qt6/lib/cmake/Qt6PdfQuick/Qt6PdfQuickConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6PdfQuick/Qt6PdfQuickDependencies.cmake
 qt6/lib/cmake/Qt6PdfQuick/Qt6PdfQuickTargets-release.cmake
 qt6/lib/cmake/Qt6PdfQuick/Qt6PdfQuickTargets.cmake
+qt6/lib/cmake/Qt6PdfQuick/Qt6PdfQuickTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6PdfQuick/Qt6PdfQuickVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6PdfQuick/Qt6PdfQuickVersionlessTargets.cmake
 qt6/lib/cmake/Qt6PdfQuickPrivate/Qt6PdfQuickPrivateAdditionalTargetInfo.cmake
@@ -260,6 +268,7 @@ qt6/lib/cmake/Qt6PdfQuickPrivate/Qt6PdfQuickPrivateConfigVersion.cmake
 qt6/lib/cmake/Qt6PdfQuickPrivate/Qt6PdfQuickPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6PdfQuickPrivate/Qt6PdfQuickPrivateDependencies.cmake
 qt6/lib/cmake/Qt6PdfQuickPrivate/Qt6PdfQuickPrivateTargets.cmake
+qt6/lib/cmake/Qt6PdfQuickPrivate/Qt6PdfQuickPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6PdfQuickPrivate/Qt6PdfQuickPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6PdfQuickPrivate/Qt6PdfQuickPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6PdfWidgets/Qt6PdfWidgetsAdditionalTargetInfo.cmake
@@ -269,6 +278,7 @@ qt6/lib/cmake/Qt6PdfWidgets/Qt6PdfWidgetsConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6PdfWidgets/Qt6PdfWidgetsDependencies.cmake
 qt6/lib/cmake/Qt6PdfWidgets/Qt6PdfWidgetsTargets-release.cmake
 qt6/lib/cmake/Qt6PdfWidgets/Qt6PdfWidgetsTargets.cmake
+qt6/lib/cmake/Qt6PdfWidgets/Qt6PdfWidgetsTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6PdfWidgets/Qt6PdfWidgetsVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6PdfWidgets/Qt6PdfWidgetsVersionlessTargets.cmake
 qt6/lib/cmake/Qt6PdfWidgetsPrivate/Qt6PdfWidgetsPrivateAdditionalTargetInfo.cmake
@@ -277,6 +287,7 @@ qt6/lib/cmake/Qt6PdfWidgetsPrivate/Qt6PdfWidgetsPrivateConfigVersion.cmake
 qt6/lib/cmake/Qt6PdfWidgetsPrivate/Qt6PdfWidgetsPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6PdfWidgetsPrivate/Qt6PdfWidgetsPrivateDependencies.cmake
 qt6/lib/cmake/Qt6PdfWidgetsPrivate/Qt6PdfWidgetsPrivateTargets.cmake
+qt6/lib/cmake/Qt6PdfWidgetsPrivate/Qt6PdfWidgetsPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6PdfWidgetsPrivate/Qt6PdfWidgetsPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6PdfWidgetsPrivate/Qt6PdfWidgetsPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6PdfQuickpluginAdditionalTargetInfo.cmake
@@ -285,18 +296,21 @@ qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6PdfQuickpluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6PdfQuickpluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6PdfQuickpluginTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6PdfQuickpluginTargets.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6PdfQuickpluginTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickdelegatespluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickdelegatespluginConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickdelegatespluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickdelegatespluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickdelegatespluginTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickdelegatespluginTargets.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickdelegatespluginTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickpluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickpluginConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickpluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickpluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickpluginTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickpluginTargets.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickpluginTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreConfig.cmake
 qt6/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreConfigVersion.cmake
@@ -306,6 +320,7 @@ qt6/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreDeploySupport.cmake
 qt6/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreMacros.cmake
 qt6/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreTargets-release.cmake
 qt6/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreTargets.cmake
+qt6/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreVersionlessTargets.cmake
 qt6/lib/cmake/Qt6WebEngineCorePrivate/Qt6WebEngineCorePrivateAdditionalTargetInfo.cmake
@@ -314,6 +329,7 @@ qt6/lib/cmake/Qt6WebEngineCorePrivate/Qt6WebEngineCorePrivateConfigVersion.cmake
 qt6/lib/cmake/Qt6WebEngineCorePrivate/Qt6WebEngineCorePrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6WebEngineCorePrivate/Qt6WebEngineCorePrivateDependencies.cmake
 qt6/lib/cmake/Qt6WebEngineCorePrivate/Qt6WebEngineCorePrivateTargets.cmake
+qt6/lib/cmake/Qt6WebEngineCorePrivate/Qt6WebEngineCorePrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6WebEngineCorePrivate/Qt6WebEngineCorePrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6WebEngineCorePrivate/Qt6WebEngineCorePrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsAdditionalTargetInfo.cmake
@@ -323,6 +339,7 @@ qt6/lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsDependencies.cmake
 qt6/lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsTargets-release.cmake
 qt6/lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsTargets.cmake
+qt6/lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsVersionlessTargets.cmake
 qt6/lib/cmake/Qt6WebEngineQuick/Qt6WebEngineQuickAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6WebEngineQuick/Qt6WebEngineQuickConfig.cmake
@@ -331,6 +348,7 @@ qt6/lib/cmake/Qt6WebEngineQuick/Qt6WebEngineQuickConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6WebEngineQuick/Qt6WebEngineQuickDependencies.cmake
 qt6/lib/cmake/Qt6WebEngineQuick/Qt6WebEngineQuickTargets-release.cmake
 qt6/lib/cmake/Qt6WebEngineQuick/Qt6WebEngineQuickTargets.cmake
+qt6/lib/cmake/Qt6WebEngineQuick/Qt6WebEngineQuickTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6WebEngineQuick/Qt6WebEngineQuickVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6WebEngineQuick/Qt6WebEngineQuickVersionlessTargets.cmake
 qt6/lib/cmake/Qt6WebEngineQuickDelegatesQml/Qt6WebEngineQuickDelegatesQmlAdditionalTargetInfo.cmake
@@ -339,6 +357,7 @@ qt6/lib/cmake/Qt6WebEngineQuickDelegatesQml/Qt6WebEngineQuickDelegatesQmlConfigV
 qt6/lib/cmake/Qt6WebEngineQuickDelegatesQml/Qt6WebEngineQuickDelegatesQmlConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6WebEngineQuickDelegatesQml/Qt6WebEngineQuickDelegatesQmlTargets-release.cmake
 qt6/lib/cmake/Qt6WebEngineQuickDelegatesQml/Qt6WebEngineQuickDelegatesQmlTargets.cmake
+qt6/lib/cmake/Qt6WebEngineQuickDelegatesQml/Qt6WebEngineQuickDelegatesQmlTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6WebEngineQuickDelegatesQml/Qt6WebEngineQuickDelegatesQmlVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6WebEngineQuickDelegatesQml/Qt6WebEngineQuickDelegatesQmlVersionlessTargets.cmake
 qt6/lib/cmake/Qt6WebEngineQuickPrivate/Qt6WebEngineQuickPrivateAdditionalTargetInfo.cmake
@@ -347,6 +366,7 @@ qt6/lib/cmake/Qt6WebEngineQuickPrivate/Qt6WebEngineQuickPrivateConfigVersion.cma
 qt6/lib/cmake/Qt6WebEngineQuickPrivate/Qt6WebEngineQuickPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6WebEngineQuickPrivate/Qt6WebEngineQuickPrivateDependencies.cmake
 qt6/lib/cmake/Qt6WebEngineQuickPrivate/Qt6WebEngineQuickPrivateTargets.cmake
+qt6/lib/cmake/Qt6WebEngineQuickPrivate/Qt6WebEngineQuickPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6WebEngineQuickPrivate/Qt6WebEngineQuickPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6WebEngineQuickPrivate/Qt6WebEngineQuickPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6WebEngineWidgets/Qt6WebEngineWidgetsAdditionalTargetInfo.cmake
@@ -356,6 +376,7 @@ qt6/lib/cmake/Qt6WebEngineWidgets/Qt6WebEngineWidgetsConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6WebEngineWidgets/Qt6WebEngineWidgetsDependencies.cmake
 qt6/lib/cmake/Qt6WebEngineWidgets/Qt6WebEngineWidgetsTargets-release.cmake
 qt6/lib/cmake/Qt6WebEngineWidgets/Qt6WebEngineWidgetsTargets.cmake
+qt6/lib/cmake/Qt6WebEngineWidgets/Qt6WebEngineWidgetsTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6WebEngineWidgets/Qt6WebEngineWidgetsVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6WebEngineWidgets/Qt6WebEngineWidgetsVersionlessTargets.cmake
 qt6/lib/cmake/Qt6WebEngineWidgetsPrivate/Qt6WebEngineWidgetsPrivateAdditionalTargetInfo.cmake
@@ -364,6 +385,7 @@ qt6/lib/cmake/Qt6WebEngineWidgetsPrivate/Qt6WebEngineWidgetsPrivateConfigVersion
 qt6/lib/cmake/Qt6WebEngineWidgetsPrivate/Qt6WebEngineWidgetsPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6WebEngineWidgetsPrivate/Qt6WebEngineWidgetsPrivateDependencies.cmake
 qt6/lib/cmake/Qt6WebEngineWidgetsPrivate/Qt6WebEngineWidgetsPrivateTargets.cmake
+qt6/lib/cmake/Qt6WebEngineWidgetsPrivate/Qt6WebEngineWidgetsPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6WebEngineWidgetsPrivate/Qt6WebEngineWidgetsPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6WebEngineWidgetsPrivate/Qt6WebEngineWidgetsPrivateVersionlessTargets.cmake
 qt6/lib/libQt6Pdf.prl

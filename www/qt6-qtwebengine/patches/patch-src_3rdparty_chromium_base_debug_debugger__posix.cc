@@ -1,12 +1,12 @@
-$NetBSD: patch-src_3rdparty_chromium_base_debug_debugger__posix.cc,v 1.1 2025/12/21 09:38:13 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_debug_debugger__posix.cc,v 1.2 2026/04/30 06:39:35 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/debug/debugger_posix.cc.orig	2025-10-02 00:36:39.000000000 +0000
+--- src/3rdparty/chromium/base/debug/debugger_posix.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/base/debug/debugger_posix.cc
-@@ -41,6 +41,10 @@
+@@ -38,6 +38,10 @@
  #include <sys/sysctl.h>
  #endif
  
@@ -17,28 +17,25 @@ $NetBSD: patch-src_3rdparty_chromium_base_debug_debugger__posix.cc,v 1.1 2025/12
  #if BUILDFLAG(IS_FREEBSD)
  #include <sys/user.h>
  #endif
-@@ -86,7 +90,8 @@ bool BeingDebugged() {
+@@ -83,6 +87,7 @@ bool BeingDebugged() {
  
    // Initialize mib, which tells sysctl what info we want.  In this case,
    // we're looking for information about a specific process ID.
--  int mib[] = {CTL_KERN,
 +#if !BUILDFLAG(IS_NETBSD)
-+   int mib[] = {CTL_KERN,
+   int mib[] = {CTL_KERN,
                 KERN_PROC,
                 KERN_PROC_PID,
-                getpid()
-@@ -96,37 +101,76 @@ bool BeingDebugged() {
+@@ -93,37 +98,75 @@ bool BeingDebugged() {
                 0
  #endif
    };
 +#else
-+  int mib[] = {
-+    CTL_KERN,
-+    KERN_PROC2,
-+    KERN_PROC_PID,
-+    getpid(),
-+    sizeof(struct kinfo_proc2),
-+    1
++  int mib[] = {CTL_KERN,
++               KERN_PROC2,
++               KERN_PROC_PID,
++               getpid(),
++               sizeof(struct kinfo_proc2),
++               1
 +  };
 +#endif
  
@@ -76,9 +73,8 @@ $NetBSD: patch-src_3rdparty_chromium_base_debug_debugger__posix.cc,v 1.1 2025/12
 +  mib[5] = (info_size / sizeof(struct kinfo_proc2));
  #endif
  
--  int sysctl_result = sysctl(mib, std::size(mib), &info, &info_size, NULL, 0);
 +#if !BUILDFLAG(IS_OPENBSD)
-+   int sysctl_result = sysctl(mib, std::size(mib), &info, &info_size, NULL, 0);
+   int sysctl_result = sysctl(mib, std::size(mib), &info, &info_size, NULL, 0);
 +#endif
    DCHECK_EQ(sysctl_result, 0);
    if (sysctl_result != 0) {

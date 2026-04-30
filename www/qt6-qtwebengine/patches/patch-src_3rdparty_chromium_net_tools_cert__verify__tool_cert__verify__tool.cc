@@ -1,10 +1,10 @@
-$NetBSD: patch-src_3rdparty_chromium_net_tools_cert__verify__tool_cert__verify__tool.cc,v 1.1 2025/12/21 09:38:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_net_tools_cert__verify__tool_cert__verify__tool.cc,v 1.2 2026/04/30 06:39:41 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/net/tools/cert_verify_tool/cert_verify_tool.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/net/tools/cert_verify_tool/cert_verify_tool.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/net/tools/cert_verify_tool/cert_verify_tool.cc
 @@ -35,7 +35,7 @@
  #include "third_party/boringssl/src/pki/trust_store.h"
@@ -24,12 +24,3 @@ $NetBSD: patch-src_3rdparty_chromium_net_tools_cert__verify__tool_cert__verify__
    // On Linux, use a fixed ProxyConfigService, since the default one
    // depends on glib.
    //
-@@ -580,7 +580,7 @@ int main(int argc, char** argv) {
-   std::string impls_str = command_line.GetSwitchValueASCII("impls");
-   if (impls_str.empty()) {
-     // Default value.
--#if !(BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_LINUX) || \
-+#if !(BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD) || \
-       BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(CHROME_ROOT_STORE_ONLY))
-     impls_str = "platform,";
- #endif

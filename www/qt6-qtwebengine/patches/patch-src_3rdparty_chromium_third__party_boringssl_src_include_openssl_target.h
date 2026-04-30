@@ -1,8 +1,8 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_boringssl_src_include_openssl_target.h,v 1.1 2026/03/29 16:57:04 tnn Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_boringssl_src_include_openssl_target.h,v 1.2 2026/04/30 06:39:43 adam Exp $
 
 Add NetBSD support.
 
---- src/3rdparty/chromium/third_party/boringssl/src/include/openssl/target.h.orig	2026-03-28 15:03:26.265395108 +0000
+--- src/3rdparty/chromium/third_party/boringssl/src/include/openssl/target.h.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/third_party/boringssl/src/include/openssl/target.h
 @@ -175,6 +175,10 @@
  #define OPENSSL_OPENBSD

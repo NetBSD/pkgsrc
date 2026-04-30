@@ -1,12 +1,12 @@
-$NetBSD: patch-src_3rdparty_chromium_services_device_usb_usb__service__fake.cc,v 1.1 2025/12/21 09:38:37 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_services_device_usb_usb__service__fake.cc,v 1.2 2026/04/30 06:39:42 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/services/device/usb/usb_service_fake.cc.orig	2024-12-21 10:25:10.592547281 +0000
+--- src/3rdparty/chromium/services/device/usb/usb_service_fake.cc.orig	2026-04-22 12:29:50.407636967 +0000
 +++ src/3rdparty/chromium/services/device/usb/usb_service_fake.cc
-@@ -0,0 +1,49 @@
+@@ -0,0 +1,50 @@
 +// Copyright 2014 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -23,6 +23,7 @@ $NetBSD: patch-src_3rdparty_chromium_services_device_usb_usb__service__fake.cc,v
 +#include "base/barrier_closure.h"
 +#include "base/containers/contains.h"
 +#include "base/location.h"
++#include "base/notimplemented.h"
 +#include "base/memory/ref_counted_memory.h"
 +#include "base/memory/weak_ptr.h"
 +#include "base/strings/string_number_conversions.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-src_3rdparty_chromium_tools_v8__context__snapshot_BUILD.gn,v 1.1 2025/12/21 09:38:46 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_tools_v8__context__snapshot_BUILD.gn,v 1.2 2026/04/30 06:39:44 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/tools/v8_context_snapshot/BUILD.gn.orig	2025-10-02 00:36:39.000000000 +0000
+--- src/3rdparty/chromium/tools/v8_context_snapshot/BUILD.gn.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/tools/v8_context_snapshot/BUILD.gn
 @@ -38,6 +38,26 @@ buildflag_header("buildflags") {
  }
@@ -37,9 +37,9 @@ $NetBSD: patch-src_3rdparty_chromium_tools_v8__context__snapshot_BUILD.gn,v 1.1 
        ":v8_context_snapshot_generator($v8_snapshot_toolchain)",
        "//v8:run_mksnapshot_default",
      ]
-+    if (target_os == "netbsd") {
-+      deps += [ ":run_paxctl_v8_context_snapshot_generator" ]
-+    }
++      if (target_os == "netbsd") {
++        deps += [ ":run_paxctl_v8_context_snapshot_generator" ]
++      }
  
      # TODO(sky): figure out why this doesn't work on android cross compile.
      # In the case of compiling for the snapshot `shlib_extension` is ".so"

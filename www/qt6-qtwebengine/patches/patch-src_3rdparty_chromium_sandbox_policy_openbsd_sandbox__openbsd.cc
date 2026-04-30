@@ -1,12 +1,12 @@
-$NetBSD: patch-src_3rdparty_chromium_sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.1 2025/12/21 09:38:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.2 2026/04/30 06:39:42 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2025-04-24 23:51:17.243910682 +0000
+--- src/3rdparty/chromium/sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2026-04-22 12:29:50.161791699 +0000
 +++ src/3rdparty/chromium/sandbox/policy/openbsd/sandbox_openbsd.cc
-@@ -0,0 +1,423 @@
+@@ -0,0 +1,393 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -44,7 +44,6 @@ $NetBSD: patch-src_3rdparty_chromium_sandbox_policy_openbsd_sandbox__openbsd.cc,
 +#include "base/time/time.h"
 +#include "build/build_config.h"
 +#include "crypto/crypto_buildflags.h"
-+#include "ppapi/buildflags/buildflags.h"
 +#include "sandbox/constants.h"
 +#include "sandbox/linux/services/credentials.h"
 +#include "sandbox/linux/services/namespace_sandbox.h"
@@ -69,7 +68,8 @@ $NetBSD: patch-src_3rdparty_chromium_sandbox_policy_openbsd_sandbox__openbsd.cc,
 +
 +#include "third_party/boringssl/src/include/openssl/crypto.h"
 +
-+#include "ui/gfx/font_util.h"
++#include <fontconfig/fontconfig.h>
++#include "ui/gfx/linux/fontconfig_util.h"
 +
 +#define MAXTOKENS	3
 +
@@ -152,8 +152,11 @@ $NetBSD: patch-src_3rdparty_chromium_sandbox_policy_openbsd_sandbox__openbsd.cc,
 +      break;
 +    }
 +    case sandbox::mojom::Sandbox::kRenderer:
-+      gfx::InitializeFonts();
++    {
++      FcConfig* config = gfx::GetGlobalFontConfig();
++      DCHECK(config);
 +      break;
++    }
 +    default:
 +      break;
 +  }
@@ -196,6 +199,7 @@ $NetBSD: patch-src_3rdparty_chromium_sandbox_policy_openbsd_sandbox__openbsd.cc,
 +bool SandboxLinux::SetUnveil(const std::string process_type, sandbox::mojom::Sandbox sandbox_type) {
 +  FILE *fp;
 +  char *s = NULL, *cp = NULL, *home = NULL, **ap, *tokens[MAXTOKENS];
++  char *xdg_var = NULL;
 +  char path[PATH_MAX];
 +  const char *ufile;
 +  size_t len = 0, lineno = 0;
@@ -205,6 +209,7 @@ $NetBSD: patch-src_3rdparty_chromium_sandbox_policy_openbsd_sandbox__openbsd.cc,
 +      ufile = _UNVEIL_MAIN;
 +      break;
 +    case sandbox::mojom::Sandbox::kGpu:
++    case sandbox::mojom::Sandbox::kOnDeviceModelExecution:
 +      ufile = _UNVEIL_GPU;
 +      break;
 +    case sandbox::mojom::Sandbox::kNetwork:
@@ -259,6 +264,13 @@ $NetBSD: patch-src_3rdparty_chromium_sandbox_policy_openbsd_sandbox__openbsd.cc,
 +        strncpy(path, home, sizeof(path) - 1);
 +        path[sizeof(path) - 1] = '\0';
 +        strncat(path, tokens[0], sizeof(path) - 1 - strlen(path));
++      } else if (strncmp(tokens[0], "XDG_", 4) == 0) {
++        if ((xdg_var = getenv(tokens[0])) == NULL || *xdg_var == '\0') {
++          LOG(ERROR) << "failed to get " << tokens[0];
++          continue;
++	}
++        strncpy(path, xdg_var, sizeof(path) - 1);
++        path[sizeof(path) - 1] = '\0';
 +      } else {
 +        strncpy(path, tokens[0], sizeof(path) - 1);
 +        path[sizeof(path) - 1] = '\0';
@@ -301,7 +313,7 @@ $NetBSD: patch-src_3rdparty_chromium_sandbox_policy_openbsd_sandbox__openbsd.cc,
 +    return true;
 +
 +  VLOG(1) << "SandboxLinux::InitializeSandbox: process_type="
-+      << process_type << " sandbox_type=" << GetSandboxTypeInEnglish(sandbox_type);
++      << process_type << " sandbox_type=" << sandbox_type;
 +
 +  // Only one thread is running, pre-initialize if not already done.
 +  if (!pre_initialized_)
@@ -320,8 +332,6 @@ $NetBSD: patch-src_3rdparty_chromium_sandbox_policy_openbsd_sandbox__openbsd.cc,
 +  if (hook)
 +    CHECK(std::move(hook).Run(options));
 +
-+  /**
-+   * XXX no pledge, unveil support in QtWebEngine
 +  if (!command_line->HasSwitch(switches::kDisableUnveil))
 +    SetUnveil(process_type, sandbox_type);
 +
@@ -335,14 +345,9 @@ $NetBSD: patch-src_3rdparty_chromium_sandbox_policy_openbsd_sandbox__openbsd.cc,
 +      SetPledge("stdio rpath flock prot_exec recvfd sendfd ps", NULL);
 +      break;
 +    case sandbox::mojom::Sandbox::kGpu:
-+      SetPledge("stdio drm rpath flock cpath wpath prot_exec recvfd sendfd tmppath", NULL);
++    case sandbox::mojom::Sandbox::kOnDeviceModelExecution:
++      SetPledge("stdio drm inet rpath flock cpath wpath prot_exec recvfd sendfd tmppath unix", NULL);
 +      break;
-+#if BUILDFLAG(ENABLE_PPAPI)
-+    case sandbox::mojom::Sandbox::kPpapi:
-+      // prot_exec needed by v8
-+      SetPledge("stdio rpath prot_exec recvfd sendfd", NULL);
-+      break;
-+#endif
 +    case sandbox::mojom::Sandbox::kAudio:
 +      SetPledge(NULL, "@PKG_SYSCONFBASE@/chromium/pledge.utility_audio");
 +      break;
@@ -357,10 +362,9 @@ $NetBSD: patch-src_3rdparty_chromium_sandbox_policy_openbsd_sandbox__openbsd.cc,
 +      SetPledge("stdio rpath cpath wpath fattr flock sendfd recvfd prot_exec", NULL);
 +      break;
 +    default:
-+      LOG(ERROR) << "non-pledge()'d process: " << GetSandboxTypeInEnglish(sandbox_type);
++      LOG(ERROR) << "non-pledge()'d process: " << sandbox_type;
 +      break;
 +  }
-+  XXX */
 +
 +  return true;
 +}
@@ -392,40 +396,6 @@ $NetBSD: patch-src_3rdparty_chromium_sandbox_policy_openbsd_sandbox__openbsd.cc,
 +  return false;
 +#endif  // !defined(ADDRESS_SANITIZER) && !defined(MEMORY_SANITIZER) &&
 +        // !defined(THREAD_SANITIZER) && !defined(LEAK_SANITIZER)
-+}
-+
-+// static
-+std::string SandboxLinux::GetSandboxTypeInEnglish(sandbox::mojom::Sandbox sandbox_type) {
-+  switch (sandbox_type) {
-+    case sandbox::mojom::Sandbox::kNoSandbox:
-+      return "Unsandboxed";
-+    case sandbox::mojom::Sandbox::kRenderer:
-+      return "Renderer";
-+    case sandbox::mojom::Sandbox::kUtility:
-+      return "Utility";
-+    case sandbox::mojom::Sandbox::kGpu:
-+      return "GPU";
-+#if BUILDFLAG(ENABLE_PPAPI)
-+    case sandbox::mojom::Sandbox::kPpapi:
-+      return "PPAPI";
-+#endif
-+    case sandbox::mojom::Sandbox::kNetwork:
-+      return "Network";
-+    case sandbox::mojom::Sandbox::kCdm:
-+      return "CDM";
-+    case sandbox::mojom::Sandbox::kPrintCompositor:
-+      return "Print Compositor";
-+    case sandbox::mojom::Sandbox::kAudio:
-+      return "Audio";
-+    case sandbox::mojom::Sandbox::kSpeechRecognition:
-+      return "Speech Recognition";
-+    case sandbox::mojom::Sandbox::kService:
-+      return "Service";
-+    case sandbox::mojom::Sandbox::kVideoCapture:
-+      return "Video Capture";
-+    default:
-+      return "Unknown";
-+  }
 +}
 +
 +}  // namespace policy

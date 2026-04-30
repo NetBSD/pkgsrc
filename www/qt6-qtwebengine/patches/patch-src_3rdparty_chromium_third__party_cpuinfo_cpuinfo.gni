@@ -1,14 +1,14 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_cpuinfo_cpuinfo.gni,v 1.1 2025/12/21 09:38:41 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_cpuinfo_cpuinfo.gni,v 1.2 2026/04/30 06:39:43 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/third_party/cpuinfo/cpuinfo.gni.orig	2025-05-29 01:27:28.000000000 +0000
+--- src/3rdparty/chromium/third_party/cpuinfo/cpuinfo.gni.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/third_party/cpuinfo/cpuinfo.gni
-@@ -8,7 +8,7 @@ use_cpuinfo =
+@@ -7,7 +7,7 @@ use_cpuinfo =
+     current_cpu != "ppc64" && current_cpu != "ppc64le" &&
      current_cpu != "s390" && current_cpu != "s390x" &&
-     current_cpu != "riscv64" &&
      # cpuinfo is not supported on fuchsia.
 -    !is_fuchsia &&
 +    !is_fuchsia && !is_bsd &&

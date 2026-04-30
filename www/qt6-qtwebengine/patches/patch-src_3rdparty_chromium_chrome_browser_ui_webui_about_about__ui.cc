@@ -1,21 +1,21 @@
-$NetBSD: patch-src_3rdparty_chromium_chrome_browser_ui_webui_about_about__ui.cc,v 1.1 2025/12/21 09:38:19 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_chrome_browser_ui_webui_about_about__ui.cc,v 1.2 2026/04/30 06:39:36 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/chrome/browser/ui/webui/about/about_ui.cc.orig	2025-09-25 11:10:42.000000000 +0000
+--- src/3rdparty/chromium/chrome/browser/ui/webui/about/about_ui.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/chrome/browser/ui/webui/about/about_ui.cc
-@@ -596,7 +596,7 @@ std::string ChromeURLs(content::BrowserC
-   return html;
- }
+@@ -415,7 +415,7 @@ using about_ui::AppendHeader;
+ 
+ namespace {
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OPENBSD)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  std::string AboutLinuxProxyConfig() {
    std::string data;
    AppendHeader(&data,
-@@ -629,7 +629,7 @@ TermsUIConfig::TermsUIConfig()
+@@ -445,7 +445,7 @@ TermsUIConfig::TermsUIConfig()
      : AboutUIConfigBase(chrome::kChromeUITermsHost) {}
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD: patch-src_3rdparty_chromium_chrome_browser_ui_webui_about_about__ui.cc,
  LinuxProxyConfigUI::LinuxProxyConfigUI()
      : AboutUIConfigBase(chrome::kChromeUILinuxProxyConfigHost) {}
  #endif
-@@ -681,7 +681,7 @@ void AboutUIHTMLSource::StartDataRequest
+@@ -495,7 +495,7 @@ void AboutUIHTMLSource::StartDataRequest
        response =
            ui::ResourceBundle::GetSharedInstance().LoadDataResourceString(idr);
      }

@@ -1,12 +1,12 @@
-$NetBSD: patch-src_3rdparty_chromium_base_allocator_partition__allocator_src_partition__alloc_spinning__mutex.cc,v 1.1 2025/12/21 09:38:12 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_allocator_partition__allocator_src_partition__alloc_spinning__mutex.cc,v 1.2 2026/04/30 06:39:35 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc
-@@ -17,7 +17,16 @@
+@@ -24,7 +24,16 @@
  #endif
  
  #if PA_CONFIG(HAS_LINUX_KERNEL)
@@ -23,43 +23,23 @@ $NetBSD: patch-src_3rdparty_chromium_base_allocator_partition__allocator_src_par
  #include <sys/syscall.h>
  #include <unistd.h>
  
-@@ -106,8 +115,19 @@ void SpinningMutex::FutexWait() {
-   // |kLockedContended| anymore. Note that even without spurious wakeups, the
-   // value of |state_| is not guaranteed when this returns, as another thread
-   // may get the lock before we get to run.
-+#if defined(OS_FREEBSD)
-+  int err = _umtx_op(&state_, UMTX_OP_WAIT_UINT_PRIVATE,
-+                    kLockedContended, nullptr, nullptr);
-+#elif defined(OS_OPENBSD)
-+  int err = futex(reinterpret_cast<volatile unsigned int *>(&state_), FUTEX_WAIT | FUTEX_PRIVATE_FLAG,
-+                    kLockedContended, nullptr, nullptr);
-+#elif defined(OS_NETBSD)
-+  int err = syscall(SYS___futex, reinterpret_cast<int *>(&state_), FUTEX_WAIT | FUTEX_PRIVATE_FLAG,
-+                     kLockedContended, nullptr, nullptr, 0, 0);
-+#else
-   int err = syscall(SYS_futex, &state_, FUTEX_WAIT | FUTEX_PRIVATE_FLAG,
-                     kLockedContended, nullptr, nullptr, 0);
-+#endif
- 
-   if (err) {
-     // These are programming error, check them.
-@@ -119,8 +139,19 @@ void SpinningMutex::FutexWait() {
- 
- void SpinningMutex::FutexWake() {
+@@ -97,8 +106,19 @@ PA_ALWAYS_INLINE long FutexSyscall(volat
    int saved_errno = errno;
+   errno = 0;
+ 
 +#if defined(OS_FREEBSD)
-+  long retval = _umtx_op(&state_, UMTX_OP_WAKE_PRIVATE,
-+                         1 /* wake up a single waiter */, nullptr, nullptr);
++  long retval = _umtx_op(&state_, UMTX_OP_WAIT_UINT_PRIVATE,
++                    kLockedContended, nullptr, nullptr);
 +#elif defined(OS_OPENBSD)
-+  long retval = futex(reinterpret_cast<volatile unsigned int *>(&state_), FUTEX_WAKE | FUTEX_PRIVATE_FLAG,
-+                        1 /* wake up a single waiter */, nullptr, nullptr);
++  long retval = futex(reinterpret_cast<volatile unsigned int *>(&state_), FUTEX_WAIT | FUTEX_PRIVATE_FLAG,
++                    kLockedContended, nullptr, nullptr);
 +#elif defined(OS_NETBSD)
-+  long retval = syscall(SYS___futex, reinterpret_cast<int *>(&state_), FUTEX_WAKE | FUTEX_PRIVATE_FLAG,
-+                         1 /* wake up a single waiter */, nullptr, nullptr, 0, 0);
++  long retval = syscall(SYS___futex, reinterpret_cast<volatile int *>(&state_), op | FUTEX_PRIVATE_FLAG,
++                     value, nullptr, nullptr, 0, 0);
 +#else
-   long retval = syscall(SYS_futex, &state_, FUTEX_WAKE | FUTEX_PRIVATE_FLAG,
-                         1 /* wake up a single waiter */, nullptr, nullptr, 0);
+   long retval = syscall(SYS_futex, ftx, op | FUTEX_PRIVATE_FLAG, value, nullptr,
+                         nullptr, 0);
 +#endif
-   PA_CHECK(retval != -1);
-   errno = saved_errno;
- }
+   if (retval == -1) {
+     // These are programming errors, check them.
+     PA_DCHECK((errno != EPERM) || (errno != EACCES) || (errno != EINVAL) ||

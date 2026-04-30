@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2026/03/29 16:54:28 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2026/04/30 06:39:34 adam Exp $
 
 DISTNAME=	qtwebengine-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtwebengine-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	Qt6 webengine module
 CATEGORIES=	www
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
@@ -29,6 +28,7 @@ USE_TOOLS+=		bison
 UNLIMIT_RESOURCES+=	datasize
 
 EXTRA_CXXFLAGS=		-I${BUILDLINK_DIR}/include/libepoll-shim
+EXTRA_CXXFLAGS+=	-I${BUILDLINK_DIR}/include/opus
 
 # kill fatal warnings or QtPdf fails to build because of
 #  warning: libstdc++.so.9, needed by ... may conflict with libstdc++.so.7
@@ -72,6 +72,7 @@ CMAKE_CONFIGURE_ARGS+=		-DQT_FEATURE_webengine_system_sndio=ON
 CONFIGURE_ENV+=			NINJAFLAGS=-j${_MAKE_JOBS_N:U1}
 
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/dawn/third_party/dxc/utils/buildit/build_llvm
+CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/fontconfig/src/.gitlab-ci/fedora-cross.sh
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/nearby/src/embedded/build.sh
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/openscreen/src/third_party/protobuf/src/google/protobuf/compiler/zip_output_unittest.sh
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/perfetto/tools/mm_events
@@ -89,17 +90,20 @@ SUBST_MESSAGE.path=	Fixing pathes
 SUBST_FILES.path+=	src/3rdparty/chromium/base/base_paths_posix.cc
 SUBST_FILES.path+=	src/3rdparty/chromium/base/process/process_handle_openbsd.cc
 SUBST_FILES.path+=	src/3rdparty/chromium/build/rust/rust_bindgen.gni
+SUBST_FILES.path+=	src/3rdparty/chromium/build/rust/rust_bindgen_generator.gni
 SUBST_FILES.path+=	src/3rdparty/chromium/chrome/common/chrome_paths.cc
 SUBST_FILES.path+=	src/3rdparty/chromium/components/policy/core/common/policy_paths.cc
 SUBST_FILES.path+=	src/3rdparty/chromium/sandbox/policy/openbsd/sandbox_openbsd.cc
 SUBST_FILES.path+=	src/3rdparty/chromium/services/device/hid/hid_service_freebsd.cc
 SUBST_FILES.path+=	src/3rdparty/chromium/services/device/time_zone_monitor/time_zone_monitor_linux.cc
+SUBST_FILES.path+=	src/3rdparty/chromium/third_party/fontconfig/include/meson-config.h
 SUBST_FILES.path+=	src/3rdparty/chromium/third_party/perfetto/src/base/utils.cc
 #SUBST_FILES.path+=	src/3rdparty/chromium/ui/qt/qt.gni
 SUBST_FILES.path+=	src/3rdparty/chromium/v8/tools/run-paxctl.py
+SUBST_FILES.path+=	src/3rdparty/chromium/v8/tools/run.py
 SUBST_FILES.path+=	src/core/CMakeLists.txt
 SUBST_FILES.path+=	src/pdf/CMakeLists.txt
-SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE PYTHONBIN EXTRA_CXXFLAGS
+SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE PYTHONBIN EXTRA_CXXFLAGS WRKSRC
 
 NOT_PAX_MPROTECT_SAFE+=	qt6/libexec/QtWebEngineProcess
 

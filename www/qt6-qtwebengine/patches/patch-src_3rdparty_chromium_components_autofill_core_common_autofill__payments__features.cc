@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_components_autofill_core_common_autofill__payments__features.cc,v 1.1 2025/12/21 09:38:21 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_components_autofill_core_common_autofill__payments__features.cc,v 1.2 2026/04/30 06:39:37 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/components/autofill/core/common/autofill_payments_features.cc.orig	2025-11-14 07:55:10.000000000 +0000
+--- src/3rdparty/chromium/components/autofill/core/common/autofill_payments_features.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/components/autofill/core/common/autofill_payments_features.cc
-@@ -304,7 +304,7 @@ BASE_FEATURE(kAutofillSyncEwalletAccount
- #endif  // BUILDFLAG(IS_ANDROID)
+@@ -355,7 +355,7 @@ BASE_FEATURE(kDisableAutofillStrikeSyste
+              base::FEATURE_DISABLED_BY_DEFAULT);
  
  bool ShouldShowImprovedUserConsentForCreditCardSave() {
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX)

@@ -1,4 +1,4 @@
-$NetBSD: patch-src_3rdparty_chromium_components_power__metrics_energy__metrics__provider.cc,v 1.1 2025/12/21 09:38:24 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_components_power__metrics_energy__metrics__provider.cc,v 1.2 2026/04/30 06:39:39 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
@@ -11,7 +11,7 @@ $NetBSD: patch-src_3rdparty_chromium_components_power__metrics_energy__metrics__
  #elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  #include "components/power_metrics/energy_metrics_provider_linux.h"
 +#elif BUILDFLAG(IS_BSD)
-+#include "base/notreached.h"
++#include "base/notimplemented.h"
  #endif  // BUILDFLAG(IS_WIN)
  
  namespace power_metrics {

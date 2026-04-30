@@ -1,4 +1,4 @@
-$NetBSD: patch-src_3rdparty_chromium_services_network_public_cpp_BUILD.gn,v 1.1 2025/12/21 09:38:37 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_services_network_public_cpp_BUILD.gn,v 1.2 2026/04/30 06:39:42 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
@@ -20,7 +20,7 @@ $NetBSD: patch-src_3rdparty_chromium_services_network_public_cpp_BUILD.gn,v 1.1 
    ]
  
 -  if (is_linux) {
-+  if (is_linux && !is_bsd) {
++  if ((is_linux) && !is_bsd) {
      sources += [ "network_interface_change_listener_mojom_traits_unittest.cc" ]
    }
  

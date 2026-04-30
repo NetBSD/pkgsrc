@@ -1,4 +1,4 @@
-$NetBSD: patch-src_3rdparty_chromium_base_compiler__specific.h,v 1.1 2025/12/21 09:38:13 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_compiler__specific.h,v 1.2 2026/04/30 06:39:35 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
@@ -10,8 +10,8 @@ $NetBSD: patch-src_3rdparty_chromium_base_compiler__specific.h,v 1.1 2025/12/21 
  #if __has_cpp_attribute(clang::preserve_most) &&             \
      (defined(ARCH_CPU_ARM64) || defined(ARCH_CPU_X86_64)) && \
      !defined(COMPONENT_BUILD) &&                             \
-+    !defined(IS_OPENBSD) &&                                  \
-+    !defined(IS_NETBSD) &&                                   \
++    !BUILDFLAG(IS_OPENBSD) &&                                  \
++    !BUILDFLAG(IS_NETBSD) &&                                   \
      !(BUILDFLAG(IS_WIN) && defined(ARCH_CPU_ARM64))
  #define PRESERVE_MOST [[clang::preserve_most]]
  #else

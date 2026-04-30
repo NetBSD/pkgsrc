@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2026/02/06 10:06:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2026/04/30 06:39:34 adam Exp $
 
 BUILDLINK_TREE+=	qt6-qtwebengine
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qtwebengine
 QT6_QTWEBENGINE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qtwebengine+=	qt6-qtwebengine>=6.8.2
-BUILDLINK_ABI_DEPENDS.qt6-qtwebengine?=	qt6-qtwebengine>=6.10.2nb1
+BUILDLINK_ABI_DEPENDS.qt6-qtwebengine+=	qt6-qtwebengine>=6.11.0
 BUILDLINK_PKGSRCDIR.qt6-qtwebengine?=	../../www/qt6-qtwebengine
 
 .include "../../geography/qt6-qtpositioning/buildlink3.mk"

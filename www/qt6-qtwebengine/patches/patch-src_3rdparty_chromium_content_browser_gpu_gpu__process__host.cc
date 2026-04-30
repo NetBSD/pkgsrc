@@ -1,12 +1,12 @@
-$NetBSD: patch-src_3rdparty_chromium_content_browser_gpu_gpu__process__host.cc,v 1.1 2025/12/21 09:38:26 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_content_browser_gpu_gpu__process__host.cc,v 1.2 2026/04/30 06:39:40 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/content/browser/gpu/gpu_process_host.cc.orig	2025-10-02 00:36:39.000000000 +0000
+--- src/3rdparty/chromium/content/browser/gpu/gpu_process_host.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/content/browser/gpu/gpu_process_host.cc
-@@ -246,7 +246,7 @@ static const char* const kSwitchNames[] 
+@@ -248,7 +248,7 @@ static const char* const kSwitchNames[] 
  #if BUILDFLAG(IS_WIN)
      sandbox::policy::switches::kAllowThirdPartyModules,
  #endif
@@ -15,7 +15,7 @@ $NetBSD: patch-src_3rdparty_chromium_content_browser_gpu_gpu__process__host.cc,v
      switches::kDisableDevShmUsage,
  #endif
  #if BUILDFLAG(IS_WIN)
-@@ -275,6 +275,7 @@ static const char* const kSwitchNames[] 
+@@ -277,6 +277,7 @@ static const char* const kSwitchNames[] 
      switches::kDisableSkiaGraphite,
      switches::kDisableSkiaGraphitePrecompilation,
      switches::kDisableLowEndDeviceMode,
@@ -23,9 +23,9 @@ $NetBSD: patch-src_3rdparty_chromium_content_browser_gpu_gpu__process__host.cc,v
      switches::kProfilingAtStart,
      switches::kProfilingFile,
      switches::kProfilingFlush,
-@@ -303,7 +304,7 @@ static const char* const kSwitchNames[] 
-     switches::kOzoneDumpFile,
+@@ -305,7 +306,7 @@ static const char* const kSwitchNames[] 
      switches::kEnableNativeGpuMemoryBuffers,
+     switches::kRenderNodeOverride,
  #endif
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

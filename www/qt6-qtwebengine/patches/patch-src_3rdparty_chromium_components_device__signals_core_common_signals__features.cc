@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_components_device__signals_core_common_signals__features.cc,v 1.1 2025/12/21 09:38:21 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_components_device__signals_core_common_signals__features.cc,v 1.2 2026/04/30 06:39:37 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/components/device_signals/core/common/signals_features.cc.orig	2025-11-14 07:55:10.000000000 +0000
+--- src/3rdparty/chromium/components/device_signals/core/common/signals_features.cc.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/components/device_signals/core/common/signals_features.cc
-@@ -11,7 +11,7 @@ BASE_FEATURE(kAllowClientCertificateRepo
-              base::FEATURE_ENABLED_BY_DEFAULT);
+@@ -55,7 +55,7 @@ bool IsDetectedAgentSignalCollectionEnab
+ }
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \
 -    BUILDFLAG(IS_CHROMEOS)

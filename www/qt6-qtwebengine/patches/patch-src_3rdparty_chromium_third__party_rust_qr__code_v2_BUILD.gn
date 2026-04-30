@@ -1,0 +1,19 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_rust_qr__code_v2_BUILD.gn,v 1.1 2026/04/30 06:39:44 adam Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- src/3rdparty/chromium/third_party/rust/qr_code/v2/BUILD.gn.orig	2026-03-16 11:40:07.000000000 +0000
++++ src/3rdparty/chromium/third_party/rust/qr_code/v2/BUILD.gn
+@@ -40,6 +40,10 @@ cargo_crate("lib") {
+   cargo_pkg_repository = "https://github.com/RCasatta/qr_code"
+   cargo_pkg_version = "2.0.0"
+ 
++  rustflags = [
++    "--cap-lints=allow",
++  ]
++
+   allow_unsafe = false
+ 
+   #####################################################################

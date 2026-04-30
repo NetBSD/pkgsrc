@@ -1,4 +1,4 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_libc++abi_src_src_cxa__guard__impl.h,v 1.1 2025/12/21 09:38:42 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_libc++abi_src_src_cxa__guard__impl.h,v 1.2 2026/04/30 06:39:43 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
@@ -10,7 +10,7 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_libc++abi_src_src_cxa__guard__
    __tsan_release(addr);
    futex(reinterpret_cast<volatile uint32_t*>(addr), WAKE, INT_MAX, NULL, NULL);
  }
-+#elif defined(__NetBSD__)
++/*#elif defined(__NetBSD__)
 +void PlatformFutexWait(int* addr, int expect) {
 +  constexpr int WAIT = 0;
 +  syscall(SYS___futex, addr, WAIT, expect, NULL, NULL, 0, 0);
@@ -20,7 +20,7 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_libc++abi_src_src_cxa__guard__
 +  constexpr int WAKE = 1;
 +  __tsan_release(addr);
 +  syscall(SYS___futex, addr, WAKE, INT_MAX, NULL, NULL, 0, 0);
-+}
++}*/
  #elif defined(SYS_futex)
  void PlatformFutexWait(int* addr, int expect) {
    constexpr int WAIT = 0;

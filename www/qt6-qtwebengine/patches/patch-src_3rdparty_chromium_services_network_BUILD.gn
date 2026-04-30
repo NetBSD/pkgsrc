@@ -1,16 +1,16 @@
-$NetBSD: patch-src_3rdparty_chromium_services_network_BUILD.gn,v 1.1 2025/12/21 09:38:37 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_services_network_BUILD.gn,v 1.2 2026/04/30 06:39:42 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/services/network/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/services/network/BUILD.gn.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/services/network/BUILD.gn
-@@ -401,7 +401,6 @@ if (is_linux || is_chromeos) {
+@@ -422,7 +422,6 @@ if (is_linux || is_chromeos) {
      ]
      deps = [
-       "//base:base",
+       "//base",
 -      "//sandbox/linux:sandbox_services",
-       "//sandbox/policy:policy",
+       "//sandbox/policy",
      ]
      configs += [ "//build/config/compiler:wexit_time_destructors" ]

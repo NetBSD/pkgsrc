@@ -1,9 +1,9 @@
-$NetBSD: patch-cmake_QtToolchainHelpers.cmake,v 1.1 2025/12/21 09:38:12 markd Exp $
+$NetBSD: patch-cmake_QtToolchainHelpers.cmake,v 1.2 2026/04/30 06:39:34 adam Exp $
 
 add OPENBSD, NETBSD
 is_gcc valid for all UNIX types
 
---- cmake/QtToolchainHelpers.cmake.orig	2025-05-29 01:27:28.000000000 +0000
+--- cmake/QtToolchainHelpers.cmake.orig	2026-03-16 11:40:07.000000000 +0000
 +++ cmake/QtToolchainHelpers.cmake
 @@ -91,6 +91,10 @@ function(get_gn_os result)
          set(${result} "win" PARENT_SCOPE)
@@ -16,7 +16,7 @@ is_gcc valid for all UNIX types
      elseif(MACOS)
          set(${result} "mac" PARENT_SCOPE)
      elseif(IOS)
-@@ -354,7 +358,7 @@ macro(append_compiler_linker_sdk_setup)
+@@ -384,7 +388,7 @@ macro(append_compiler_linker_sdk_setup)
      extend_gn_list(gnArgArg ARGS is_clang CONDITION CLANG)
      extend_gn_list(gnArgArg ARGS is_mingw CONDITION MINGW)
      extend_gn_list(gnArgArg ARGS is_msvc CONDITION MSVC)
@@ -24,8 +24,26 @@ is_gcc valid for all UNIX types
 +    extend_gn_list(gnArgArg ARGS is_gcc CONDITION UNIX AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
  
      if(CLANG)
-         if(MACOS)
-@@ -548,7 +552,7 @@ macro(append_toolchain_setup)
+         get_clang_runtime_path_version(clang_runtime_path_version)
+@@ -456,7 +460,7 @@ macro(append_compiler_linker_sdk_setup)
+         list(APPEND gnArgArg libclang_path="${QWELibClang_LIBRARY_DIR}")
+ 
+         #TODO: This is Linux specific for now.
+-        if(LINUX)
++        if(UNIX)
+             list(APPEND gnArgArg clang_resource_dir="${QWELibClang_RESOURCE_PATH}")
+         endif()
+     endif()
+@@ -478,7 +482,7 @@ macro(append_compiler_linker_sdk_setup)
+         )
+     endif()
+     get_gn_arch(cpu ${TEST_architecture_arch})
+-    if(LINUX AND CMAKE_CROSSCOMPILING AND cpu STREQUAL "arm")
++    if(UNIX AND CMAKE_CROSSCOMPILING AND cpu STREQUAL "arm")
+ 
+         extend_gn_list_cflag(gnArgArg
+             ARG arm_tune
+@@ -587,7 +591,7 @@ macro(append_toolchain_setup)
          endif()
          unset(host_cpu)
          unset(target_cpu)

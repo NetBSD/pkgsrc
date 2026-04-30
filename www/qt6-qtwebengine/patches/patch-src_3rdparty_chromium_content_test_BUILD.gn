@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_content_test_BUILD.gn,v 1.1 2025/12/21 09:38:28 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_content_test_BUILD.gn,v 1.2 2026/04/30 06:39:40 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/content/test/BUILD.gn.orig	2025-05-29 01:27:28.000000000 +0000
+--- src/3rdparty/chromium/content/test/BUILD.gn.orig	2026-03-16 11:40:07.000000000 +0000
 +++ src/3rdparty/chromium/content/test/BUILD.gn
-@@ -1731,7 +1731,7 @@ test("content_browsertests") {
-     "../test/url_loader_interceptor_browsertest.cc",
+@@ -1814,7 +1814,7 @@ test("content_browsertests") {
+     "--disable-crashpad-for-testing",
    ]
  
 -  if (is_linux) {
