@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.46 2026/04/08 12:27:19 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/04/30 12:28:20 gdt Exp $
 
 DISTNAME=	lcms-1.19
 PKGREVISION=	7
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lcms/}
 
-MAINTAINER=	gdt@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.littlecms.com/
 COMMENT=	Little Color Management System -- a color management library
 # This is very MIT-like, but perhaps not the exact text.
