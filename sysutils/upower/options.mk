@@ -1,13 +1,24 @@
-# $NetBSD: options.mk,v 1.4 2025/05/04 05:55:49 vins Exp $
+# $NetBSD: options.mk,v 1.5 2026/04/30 16:24:01 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.upower
 
-PKG_SUPPORTED_OPTIONS+=	introspection polkit
+PKG_SUPPORTED_OPTIONS+=	doc introspection polkit
 PKG_SUGGESTED_OPTIONS=	introspection polkit
 
-PLIST_VARS+=		introspection polkit
+PLIST_VARS+=		doc introspection polkit
 
 .include "../../mk/bsd.options.mk"
+
+##
+## Build developer documentation
+##
+.if !empty(PKG_OPTIONS:Mdoc)
+TOOL_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
+MESON_ARGS+=	-Dgtk-doc=true
+PLIST.doc=	yes
+.else
+MESON_ARGS+=	-Dgtk-doc=false
+.endif
 
 ###
 ### Build GObject Introspection data
