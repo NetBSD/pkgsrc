@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2023/12/04 15:06:10 gdt Exp $
+$NetBSD: distinfo,v 1.17 2026/04/30 05:13:07 wiz Exp $
 
-BLAKE2s (lcms2-2.16.tar.gz) = 5ea4a695482fec953cc3c148f39304e1a61a4083f212cb26d0f0b20b52d3d879
-SHA512 (lcms2-2.16.tar.gz) = 638dd6ad6787456c8145510d18b2d0727bd0a446a13ac2934aabc9531d1156eca2a2c0fd780a453823fbd35a1895f9d8de5dc4b3cab505459dd3f0535b4e837d
-Size (lcms2-2.16.tar.gz) = 7632822 bytes
+BLAKE2s (lcms2-2.19.tar.gz) = 9adc299bc77781ba450a6101ddf84e0c0868214f662410e681009a4bd24b329b
+SHA512 (lcms2-2.19.tar.gz) = 0d282fae9ca16b9cbc75ef8845d6ad1062aca8c8783e39c09ad294050e0574da8ee437b9ac58771f259e3b2dea702d8d094dcc7dba4eeba8453d82f54d06ab9c
+Size (lcms2-2.19.tar.gz) = 5726199 bytes
