@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2026/01/20 08:45:50 adam Exp $
+# $NetBSD: Makefile,v 1.18 2026/04/30 12:11:14 adam Exp $
 
-DISTNAME=	fido2-2.1.1
+DISTNAME=	fido2-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fido2/}
@@ -18,9 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-scard>=2.0.0:../../devel/py-scard
 # as of 1.2.0
 # check fido2/hid/__init__.py for supported platforms
 BROKEN_ON_PLATFORM+=	SunOS-*-*
-
-post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/fido2/hid/__init__.py.orig
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
