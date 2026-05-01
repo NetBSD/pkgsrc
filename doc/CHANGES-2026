@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2728 2026/05/01 15:44:29 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2729 2026/05/01 15:45:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4198,3 +4198,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/w3m-img to 0.5.6nb1 [wiz 2026-05-01]
 	Updated audio/kew to 4.0.0 [ktnb 2026-05-01]
 	Updated devel/cargo-c to 0.10.22 [pin 2026-05-01]
+	Updated net/xfr to 0.9.11 [pin 2026-05-01]
