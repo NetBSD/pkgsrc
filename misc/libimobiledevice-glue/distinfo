@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2026/05/01 19:49:47 vins Exp $
+
+BLAKE2s (libimobiledevice-glue-1.3.2.tar.bz2) = 21da3cc0fa1a80616f87fb28ef0b00c1d6301be335f469a7f2d1ba3777d22f95
+SHA512 (libimobiledevice-glue-1.3.2.tar.bz2) = d12b853dedec39a28c34c19dc1a2d26e81d9aba0e64d9c7ed03aa921feee5613598a30e9c51bd79d9ec840399a97091525fc5e4c5ac4b20d68ea8c96a35fc7d1
+Size (libimobiledevice-glue-1.3.2.tar.bz2) = 338101 bytes
+SHA1 (patch-src_socket.c) = c02428ce4e09a096a44046c6159add59222a6893
+SHA1 (patch-src_utils.c) = b762d108d635e8ababe485f987dc87cb13b15cc6
