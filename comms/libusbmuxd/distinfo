@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/05/01 19:58:51 vins Exp $
+
+BLAKE2s (libusbmuxd-2.1.1.tar.bz2) = e9f40f932124a59703285044dbf0d1f9d83389e418383a7552317678097624a7
+SHA512 (libusbmuxd-2.1.1.tar.bz2) = f1327a64e0a1dc0f08d2e2355271feb34194753de1d622a0259e23fc751d2720af9b4a06555e0d5f7e86d00765e7400cdc246727cceb0715bf991a278c0dedb9
+Size (libusbmuxd-2.1.1.tar.bz2) = 325055 bytes
+SHA1 (patch-src_libusbmuxd.c) = 4aae8951f957dccea424a29595883357bcb8bfe4
