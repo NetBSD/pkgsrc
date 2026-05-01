@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1629 2026/04/08 14:37:21 taca Exp $
+# $NetBSD: Makefile,v 1.1630 2026/05/01 19:45:29 vins Exp $
 #
 
 COMMENT=	Networking tools
@@ -349,6 +349,7 @@ SUBDIR+=	libktorrent
 SUBDIR+=	liblive
 SUBDIR+=	libmicrodns
 SUBDIR+=	libmms
+SUBDIR+=	libnfs
 SUBDIR+=	libnice
 SUBDIR+=	libnids
 SUBDIR+=	libnipper
