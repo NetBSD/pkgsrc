@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2026/04/12 16:02:12 wiz Exp $
+$NetBSD: distinfo,v 1.11 2026/05/01 05:40:43 wiz Exp $
 
 BLAKE2s (kakoune-2026.04.12.tar.bz2) = 359b1669b1ac55e972364d97f6fb36b6868c711e0fa55dedf55b2f0ef12521a1
 SHA512 (kakoune-2026.04.12.tar.bz2) = 248bf8c7faec91ab2a99ea3cbb8b9b5d646f5f3eb249399796d35b00f4026f5d3bf4b4d6fbd8d0510b5f9b894f1f85e7346a1448f6b074686fc2a8ff19005c5c
 Size (kakoune-2026.04.12.tar.bz2) = 638734 bytes
+SHA1 (patch-src_changes.hh) = 5fabdf9d10353b23de57fe70a5e2cd11e2bcf9c5
