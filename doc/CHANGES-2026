@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2719 2026/05/01 08:57:02 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2720 2026/05/01 10:11:22 fox Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4189,3 +4189,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/starship to 1.25.1 [pin 2026-05-01]
 	Updated security/mozilla-rootcerts to 1.1.20260412 [wiz 2026-05-01]
 	Updated security/mozilla-rootcerts-openssl to 2.22 [wiz 2026-05-01]
+	Updated editors/msedit to 2.0.0 [fox 2026-05-01]
