@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2738 2026/05/01 20:05:16 vins Exp $
+$NetBSD: CHANGES-2026,v 1.2739 2026/05/01 21:27:46 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4208,3 +4208,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/ntvcm to 0.0.20260329 [hauke 2026-05-01]
 	Added comms/libusbmuxd version 2.1.1 [vins 2026-05-01]
 	Added security/libtatsu version 1.0.5 [vins 2026-05-01]
+	Updated security/uacme to 1.8.1 [hauke 2026-05-01]
