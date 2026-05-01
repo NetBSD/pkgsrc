@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/12/28 02:25:17 fox Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/05/01 17:49:02 fox Exp $
 bin/btop
 man/man1/btop.1
 share/applications/btop.desktop
@@ -15,6 +15,8 @@ share/btop/themes/everforest-dark-medium.theme
 share/btop/themes/everforest-light-medium.theme
 share/btop/themes/flat-remix-light.theme
 share/btop/themes/flat-remix.theme
+share/btop/themes/flexoki-dark.theme
+share/btop/themes/flexoki-light.theme
 share/btop/themes/gotham.theme
 share/btop/themes/greyscale.theme
 share/btop/themes/gruvbox_dark.theme
@@ -22,6 +24,7 @@ share/btop/themes/gruvbox_dark_v2.theme
 share/btop/themes/gruvbox_light.theme
 share/btop/themes/gruvbox_material_dark.theme
 share/btop/themes/horizon.theme
+share/btop/themes/kanagawa-dragon.theme
 share/btop/themes/kanagawa-lotus.theme
 share/btop/themes/kanagawa-wave.theme
 share/btop/themes/kyli0x.theme
@@ -30,6 +33,7 @@ share/btop/themes/monokai.theme
 share/btop/themes/night-owl.theme
 share/btop/themes/nord.theme
 share/btop/themes/onedark.theme
+share/btop/themes/orange.theme
 share/btop/themes/paper.theme
 share/btop/themes/phoenix-night.theme
 share/btop/themes/solarized_dark.theme
@@ -37,6 +41,7 @@ share/btop/themes/solarized_light.theme
 share/btop/themes/tokyo-night.theme
 share/btop/themes/tokyo-storm.theme
 share/btop/themes/tomorrow-night.theme
+share/btop/themes/twilight.theme
 share/btop/themes/whiteout.theme
 share/doc/btop/README.md
 share/icons/hicolor/48x48/apps/btop.png
