@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2026/03/30 15:11:36 ktnb Exp $
+# $NetBSD: Makefile,v 1.25 2026/05/01 14:39:21 ktnb Exp $
 
-DISTNAME=	mu-1.14.0
+DISTNAME=	mu-1.14.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=djcb/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
