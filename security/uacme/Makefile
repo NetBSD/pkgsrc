@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.14 2026/02/06 10:05:51 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/05/01 21:27:35 hauke Exp $
 
-PKGNAME=	uacme-${PKGVER}
-PKGREVISION=	11
 DISTNAME=	v${PKGVER}
-PKGVER=		1.7.5
+PKGNAME=	uacme-${PKGVER}
+PKGVER=		1.8.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ndilieto/uacme/archive/refs/tags/}
 
 MAINTAINER=	hauke@NetBSD.org
-COMMENT=	Lightweight C ACMEv2 client which uses external authenticators
 HOMEPAGE=	https://github.com/ndilieto/uacme
+COMMENT=	Lightweight C ACMEv2 client which uses external authenticators
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
