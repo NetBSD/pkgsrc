@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2714 2026/05/01 00:27:22 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.2715 2026/05/01 00:41:04 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4184,3 +4184,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox140 to 140.10.1 [gutteridge 2026-04-30]
 	Updated www/firefox140-l10n to 140.10.1 [gutteridge 2026-04-30]
 	Updated geography/py-ubx2 to 1.3.0 [gdt 2026-05-01]
+	Updated net/unison to 2.54.0 [gdt 2026-05-01]
