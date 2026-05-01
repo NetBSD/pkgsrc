@@ -1,4 +1,4 @@
-# $NetBSD: udev.buildlink3.mk,v 1.1 2026/04/25 19:17:43 vins Exp $
+# $NetBSD: udev.buildlink3.mk,v 1.2 2026/05/01 20:06:30 vins Exp $
 #
 # This Makefile fragment is meant to be included in packages that
 # require an implementation of the udev user-space library for querying
@@ -9,7 +9,7 @@
 # User-settable variables:
 #
 # UDEV_TYPE
-#	The name of the libusb implementation to default to, either 
+#	The name of the libudev implementation to default to, either 
 #	'eudev' or 'bsd'.
 #
 #	* 'eudev' uses the portable standalone version of the eudev library.
