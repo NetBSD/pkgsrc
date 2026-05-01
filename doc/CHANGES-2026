@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2726 2026/05/01 14:45:46 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2727 2026/05/01 15:09:52 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4196,3 +4196,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/chafa to 1.18.2 [ktnb 2026-05-01]
 	Updated mail/mu to 1.14.1 [ktnb 2026-05-01]
 	Updated www/w3m-img to 0.5.6nb1 [wiz 2026-05-01]
+	Updated audio/kew to 4.0.0 [ktnb 2026-05-01]
