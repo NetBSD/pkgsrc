@@ -1,9 +1,16 @@
-@comment $NetBSD: PLIST,v 1.9 2025/11/05 00:21:39 gdt Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/05/01 00:40:59 gdt Exp $
 bin/unison
 ${PLIST.monitor}bin/unison-fsmonitor
 ${PLIST.gtk3}bin/unison-gui
 man/man1/unison.1
+${PLIST.gtk3}share/applications/unison-gui.desktop
 share/doc/unison/CONTRIBUTING.md
 share/doc/unison/COPYING
 share/doc/unison/INSTALL.md
 share/doc/unison/NEWS.md
+${PLIST.gtk3}share/icons/hicolor/16x16/apps/unison-gui.png
+${PLIST.gtk3}share/icons/hicolor/24x24/apps/unison-gui.png
+${PLIST.gtk3}share/icons/hicolor/256x256/apps/unison-gui.png
+${PLIST.gtk3}share/icons/hicolor/32x32/apps/unison-gui.png
+${PLIST.gtk3}share/icons/hicolor/48x48/apps/unison-gui.png
+${PLIST.gtk3}share/icons/hicolor/scalable/apps/unison-gui.svg
