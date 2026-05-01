@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2026/05/01 19:43:30 vins Exp $
+bin/nfs-cat
+bin/nfs-cp
+bin/nfs-ls
+bin/nfs-stat
+include/nfsc/libnfs-raw-mount.h
+include/nfsc/libnfs-raw-nfs.h
+include/nfsc/libnfs-raw-nfs4.h
+include/nfsc/libnfs-raw-nlm.h
+include/nfsc/libnfs-raw-nsm.h
+include/nfsc/libnfs-raw-portmap.h
+include/nfsc/libnfs-raw-rquota.h
+include/nfsc/libnfs-raw.h
+include/nfsc/libnfs-zdr.h
+include/nfsc/libnfs.h
+lib/cmake/libnfs/FindNFS.cmake
+lib/cmake/libnfs/libnfs-config-release.cmake
+lib/cmake/libnfs/libnfs-config-version.cmake
+lib/cmake/libnfs/libnfs-config.cmake
+lib/libnfs.so
+lib/libnfs.so.16.2.0
+lib/pkgconfig/libnfs.pc
+man/man1/nfs-cat.1
+man/man1/nfs-cp.1
+man/man1/nfs-ls.1
