@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2025/07/04 16:30:11 hauke Exp $
+$NetBSD: distinfo,v 1.2 2026/05/01 19:52:47 hauke Exp $
 
-BLAKE2s (ntvcm-1ef7d7f7d6a2a80ea177e11543dc8def773fe0bc.tar.gz) = 35598c913f3dbea3b04884fe4a203edfb37b0530b578d8d1b1470d3f2b23826d
-SHA512 (ntvcm-1ef7d7f7d6a2a80ea177e11543dc8def773fe0bc.tar.gz) = 74eafc7b916bc7f1d45f768e7142f9b0e6f88c68dbade77b6a25f4e0e75a2f1db64ce78db4e7e7df1c300ffe340a023851b6e5caae9e1369c97580e08f62efca
-Size (ntvcm-1ef7d7f7d6a2a80ea177e11543dc8def773fe0bc.tar.gz) = 89665 bytes
-SHA1 (patch-djl__os.hxx) = e32f1b9b466b6e5fa763e66a561c487ae2308c42
+BLAKE2s (ntvcm-5f3897b6239836ade2d1089664874c52e117c0ac.tar.gz) = fa72cf87a177cd92a9cb65d0d4da53c9c50ed67c68a2bb55724e1f95b4ef200c
+SHA512 (ntvcm-5f3897b6239836ade2d1089664874c52e117c0ac.tar.gz) = 83abaf172730e4c1f865cd7d514c0b8d7c3bc609b93cce6d7a51209a89487e7b40ac40939be0d4db3ffae83ba6f2ba6b971433bd1b87f921cc44d01f5e73b2be
+Size (ntvcm-5f3897b6239836ade2d1089664874c52e117c0ac.tar.gz) = 91964 bytes
+SHA1 (patch-djl__os.hxx) = e43093ead5e8ba5198d5b42eb349fcd359cd73cb
 SHA1 (patch-makefile) = b89d09ec2c9887c62b3496ecabdc38410d79c2cb
