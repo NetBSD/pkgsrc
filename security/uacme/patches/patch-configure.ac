@@ -1,11 +1,11 @@
-$NetBSD: patch-configure.ac,v 1.1 2025/01/27 13:37:07 riastradh Exp $
+$NetBSD: patch-configure.ac,v 1.2 2026/05/01 21:27:35 hauke Exp $
 
 Wrap autoconf runtime test (AC_RUN_IFELSE) in AC_CACHE_CHECK so we can
 override it on the command-line when cross-compiling.
 
---- configure.ac.orig	2024-01-28 20:03:31.000000000 +0000
+--- configure.ac.orig	2026-04-05 08:20:43.000000000 +0000
 +++ configure.ac
-@@ -336,26 +336,35 @@ if test "x$OPT_UALPN" != "xno"; then
+@@ -336,27 +336,35 @@ if test "x$OPT_UALPN" != "xno"; then
                       AC_MSG_ERROR([ualpn requires sys/un.h]))
      AC_CHECK_FUNCS([mmap],[],
                     AC_MSG_ERROR([ualpn requires mmap]))
@@ -43,14 +43,15 @@ override it on the command-line when cross-compiling.
                  AC_DEFINE(HAVE_MAP_DEVZERO, 1, [if mmap("/dev/zero", MAP_SHARED) works])
 -                AC_MSG_RESULT([yes]),
 -                AC_MSG_RESULT([no])
--                AC_MSG_ERROR([ualpn requires MAP_ANON or mmap("/dev/zero", MAP_SHARED)])),
+-                AC_MSG_ERROR([ualpn requires MAP_ANON or mmap("/dev/zero", MAP_SHARED)]))
+-        ], [
 +            else
 +                AC_MSG_ERROR([ualpn requires MAP_ANON or mmap("/dev/zero", MAP_SHARED)])
 +            fi
              AC_COMPILE_IFELSE([AC_LANG_SOURCE([#include <sys/mman.h>
                               int main() {return mmap(0, 4096, PROT_READ|PROT_WRITE,
                                  MAP_ANON|MAP_SHARED, -1, 0) == MAP_FAILED;}])],
-@@ -364,7 +373,8 @@ if test "x$OPT_UALPN" != "xno"; then
+@@ -365,7 +373,8 @@ if test "x$OPT_UALPN" != "xno"; then
                  AC_MSG_RESULT([no])
                  AC_MSG_NOTICE([falling back to mmap("/dev/zero", MAP_SHARED)])
                  AC_DEFINE(HAVE_MAP_DEVZERO, 1, [if mmap("/dev/zero", MAP_SHARED) works]))
