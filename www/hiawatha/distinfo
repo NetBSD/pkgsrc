@@ -1,13 +1,9 @@
-$NetBSD: distinfo,v 1.19 2026/03/14 13:03:20 hauke Exp $
+$NetBSD: distinfo,v 1.20 2026/05/01 19:28:09 hauke Exp $
 
-BLAKE2s (hiawatha-v12.0.tar.gz) = 279523f35cb81184bb7babd579c4aee0de35e528967ebd30aeeed1c3879ba95d
-SHA512 (hiawatha-v12.0.tar.gz) = 6a1e6a26546240706d2fb92026ef12bca549c916156c698b0e60eefe796821bbf5653a14833294f6466ce5d8514b8f99988f8b35cd8873693c019a8d9ace0775
-Size (hiawatha-v12.0.tar.gz) = 2334978 bytes
-BLAKE2s (mbedtls-4.0.0.tar.bz2) = d7a973c6eefab652e590f680612b644a6d0c6f1c0d0f7d0d69dc01278620dc66
-SHA512 (mbedtls-4.0.0.tar.bz2) = cc62c99a82f2f85ee4caa6488804648e81358e59f1498b6a97b034114e531bf44b05ae3d50db797ada939b6d4ac90bde29cd2363a36631af9e5fdfef57bfb267
-Size (mbedtls-4.0.0.tar.bz2) = 6342607 bytes
-SHA1 (patch-CMakeLists.txt) = a96e51545ab31e5ceb4a520bb4757787088c8174
+BLAKE2s (hiawatha-v12.1.tar.gz) = d5fc7f91c9a9c612a5fc2c67c88c18a54e8c013f4c0c164b34c15a8f8ab7e540
+SHA512 (hiawatha-v12.1.tar.gz) = fede4dd569838fa0afc379342b38a47811213cfed13334505cb1a8a941dd63674d4d8fa2585fd72a050c3eb0a0a56552533555246801e50f59fe2b255e04f546
+Size (hiawatha-v12.1.tar.gz) = 2943626 bytes
+SHA1 (patch-CMakeLists.txt) = 3e319e4d12a45903e3a6b1cc8c523bfebe482d76
 SHA1 (patch-config_hiawatha.conf.in) = 8a58402b0201ec6cd661f5d949e127edfe4b693a
 SHA1 (patch-extra_letsencrypt_letsencrypt.conf.in) = 718d44e883f8206fd88480c5503d962198992347
-SHA1 (patch-mbedtls_tf-psa-crypto_drivers_builtin_src_platform__util.c) = 07c2b982b89df1ff2b0673593b07e4c7f5c1d7d1
-SHA1 (patch-src_hiawatha.c) = 4302f7f959799fc79bda6eda63901fb5b0fc3993
+SHA1 (patch-src_hiawatha.c) = 8e8498ce5287c319adfab0eebbcff273acc6031a

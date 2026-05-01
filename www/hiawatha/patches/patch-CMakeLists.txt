@@ -1,27 +1,25 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2024/04/26 09:18:00 hauke Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2026/05/01 19:28:09 hauke Exp $
 
 setuid binaries should not be writable by anyone.
 
 Keep build system from installing to PKG_SYSCONFDIR - we handle
 preference files ourselves.
 
---- CMakeLists.txt.orig	2023-10-13 13:21:31.000000000 +0000
+--- CMakeLists.txt.orig	2026-04-04 17:21:19.000000000 +0000
 +++ CMakeLists.txt
-@@ -154,16 +154,9 @@ endif()
+@@ -182,14 +182,7 @@ endif()
  # Installation
  install(TARGETS hiawatha wigwam DESTINATION ${CMAKE_INSTALL_SBINDIR})
  install(TARGETS cgi-wrapper DESTINATION ${CMAKE_INSTALL_SBINDIR}
 -	PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE SETUID)
-+	PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE SETUID)
- install(TARGETS ssi-cgi DESTINATION ${CMAKE_INSTALL_BINDIR})
- 
+-
 -foreach(configfile ${config_files})
 -	install(CODE "copy_if_not_exists(\"${CMAKE_SOURCE_DIR}/${configfile}\" \"${CONFIG_DIR}\")")
 -endforeach()
 -foreach(configfile ${config_files_in})
 -	install(CODE "copy_if_not_exists(\"${CMAKE_CURRENT_BINARY_DIR}/${configfile}\" \"${CONFIG_DIR}\")")
 -endforeach()
--
++	PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE SETUID)
+ 
  install(FILES ${manual_pages} DESTINATION ${CMAKE_INSTALL_FULL_MANDIR}/man1)
  foreach(manpage ${manual_pages_in})
- 	install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${manpage} DESTINATION ${CMAKE_INSTALL_FULL_MANDIR}/man1)

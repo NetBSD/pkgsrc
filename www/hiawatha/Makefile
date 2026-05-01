@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2026/03/14 13:05:36 hauke Exp $
+# $NetBSD: Makefile,v 1.56 2026/05/01 19:28:09 hauke Exp $
 
 PKGNAME=	hiawatha-${PKGVER}
 DISTNAME=	hiawatha-v${PKGVER}
-PKGVER=		12.0
-PKGREVISION=	1
+PKGVER=		12.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITLAB:=hsleisink/hiawatha/-/archive/v${PKGVER}/}
 EXTRACT_SUFX=	.tar.gz
@@ -15,7 +14,6 @@ HOMEPAGE=	https://hiawatha.leisink.net/
 COMMENT=	Advanced and secure webserver
 LICENSE=	gnu-gpl-v2
 
-HIAWATHA_CGIDIR=	libexec/ssi-cgi
 HIAWATHA_DATADIR=	${VARBASE}/db/hiawatha
 HIAWATHA_LOGDIR=	${VARBASE}/log/hiawatha
 HIAWATHA_PIDDIR=	${VARBASE}/run
@@ -28,7 +26,6 @@ LDFLAGS.SunOS+=		-lsocket -lnsl
 # Config file processing
 CMAKE_BUILD_DIR=	.
 
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_BINDIR=${PREFIX}/${HIAWATHA_CGIDIR}
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_LOCALSTATEDIR=${VARBASE}
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_MANDIR=${PREFIX}/${PKGMANDIR}
 CMAKE_CONFIGURE_ARGS+=	-DWORK_DIR=${VARBASE}/db/${PKGBASE}
@@ -61,7 +58,6 @@ EGDIR=			share/examples/hiawatha
 CONFIG_FILES=		hiawatha.conf mimetype.conf cgi-wrapper.conf
 
 INSTALLATION_DIRS+=	sbin ${PKGMANDIR}/man8
-INSTALLATION_DIRS+=	${HIAWATHA_CGIDIR}
 INSTALLATION_DIRS+=	share/examples/hiawatha/conf
 INSTALLATION_DIRS+=	share/examples/hiawatha/html
 
