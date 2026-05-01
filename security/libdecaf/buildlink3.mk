@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/08/14 05:25:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2026/05/01 10:56:38 fox Exp $
 
 BUILDLINK_TREE+=	libdecaf
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libdecaf
 LIBDECAF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libdecaf+=	libdecaf>=1.0.0
-BUILDLINK_ABI_DEPENDS.libdecaf+=	libdecaf>=1.0.2nb1
+BUILDLINK_ABI_DEPENDS.libdecaf+=	libdecaf>=1.0.3
 BUILDLINK_PKGSRCDIR.libdecaf?=		../../security/libdecaf
 
 .endif # LIBDECAF_BUILDLINK3_MK

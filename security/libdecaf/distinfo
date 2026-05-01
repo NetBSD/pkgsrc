@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.5 2022/11/12 15:19:03 fox Exp $
+$NetBSD: distinfo,v 1.6 2026/05/01 10:56:38 fox Exp $
 
-BLAKE2s (ed448goldilocks-code-da2f2f9b2ab1bce9a2bb77e4f37037ee135fdd72.zip) = 2aa571960f926183744850ab8cf9dfbbd679680081b666f40152e66eaf264c92
-SHA512 (ed448goldilocks-code-da2f2f9b2ab1bce9a2bb77e4f37037ee135fdd72.zip) = a98e43f3efbc2b69c48786353fa1ebd7d008813f547f683d9e544b90d8e29a43ff4cf9490ca9f308b87e4bc135b560186941cea57851d6ec117213cb5ba20c48
-Size (ed448goldilocks-code-da2f2f9b2ab1bce9a2bb77e4f37037ee135fdd72.zip) = 288423 bytes
-SHA1 (patch-CMakeLists.txt) = 66a8818bd34c91da92253af54ba33f051387e3b7
+BLAKE2s (libdecaf-1.0.3.tgz) = 5789f5491c94fa423487428c36d7721506374a6d639f41add1ed7583ef0c56ff
+SHA512 (libdecaf-1.0.3.tgz) = 30db1f889497413d88267a8ca3f751c7c52651e6aaa9ad008b01da66695dbecc6a75a553aed8abd3c5d5b174f87f0b32ad62e6ca53acc36f750eb4c746885c17
+Size (libdecaf-1.0.3.tgz) = 237326 bytes
+SHA1 (patch-CMakeLists.txt) = 6fc8aaa1afd412d1a759c1345e238c79513715de
 SHA1 (patch-src_CMakeLists.txt) = f9ddfd9e6d3e334d310bfed9f2542477ba2cf9a6
-SHA1 (patch-src_per__curve_eddsa.tmpl.h) = dc7c715b29fe077d8ae5c41385af7245f1f21817
