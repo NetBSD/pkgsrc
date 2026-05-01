@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2729 2026/05/01 15:45:37 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2730 2026/05/01 16:37:43 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4199,3 +4199,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/kew to 4.0.0 [ktnb 2026-05-01]
 	Updated devel/cargo-c to 0.10.22 [pin 2026-05-01]
 	Updated net/xfr to 0.9.11 [pin 2026-05-01]
+	Updated www/chromium to 147.0.7727.137 [kikadf 2026-05-01]
