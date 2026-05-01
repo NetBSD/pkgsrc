@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2734 2026/05/01 19:46:07 vins Exp $
+$NetBSD: CHANGES-2026,v 1.2735 2026/05/01 19:52:09 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4204,3 +4204,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/hiawatha to 12.1 [hauke 2026-05-01]
 	Updated net/netatalk4 to 4.4.2 [hauke 2026-05-01]
 	Added net/libnfs version 6.0.2 [vins 2026-05-01]
+	Added misc/libimobiledevice-glue version 1.3.2 [vins 2026-05-01]
