@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1002 2026/04/23 09:25:05 adam Exp $
+# $NetBSD: Makefile,v 1.1003 2026/05/01 20:04:39 vins Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -226,6 +226,7 @@ SUBDIR+=	libssh
 SUBDIR+=	libssh2
 SUBDIR+=	libstark
 SUBDIR+=	libtasn1
+SUBDIR+=	libtatsu
 SUBDIR+=	libtcpa
 SUBDIR+=	libtomcrypt
 SUBDIR+=	libuecc
