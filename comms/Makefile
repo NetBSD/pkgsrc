@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2025/10/27 06:59:36 jnemeth Exp $
+# $NetBSD: Makefile,v 1.147 2026/05/01 20:00:06 vins Exp $
 #
 
 COMMENT=	Telephony and serial communication utilities
@@ -42,6 +42,7 @@ SUBDIR+=	libticables2
 SUBDIR+=	libticalcs2
 SUBDIR+=	libticonv
 SUBDIR+=	libtifiles2
+SUBDIR+=	libusbmuxd
 SUBDIR+=	lirc
 SUBDIR+=	lrzsz
 SUBDIR+=	malsync
