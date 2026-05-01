@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2026/05/01 19:49:47 vins Exp $
+include/libimobiledevice-glue/cbuf.h
+include/libimobiledevice-glue/collection.h
+include/libimobiledevice-glue/glue.h
+include/libimobiledevice-glue/nskeyedarchive.h
+include/libimobiledevice-glue/opack.h
+include/libimobiledevice-glue/sha.h
+include/libimobiledevice-glue/socket.h
+include/libimobiledevice-glue/termcolors.h
+include/libimobiledevice-glue/thread.h
+include/libimobiledevice-glue/tlv.h
+include/libimobiledevice-glue/utils.h
+lib/libimobiledevice-glue-1.0.la
+lib/pkgconfig/libimobiledevice-glue-1.0.pc
