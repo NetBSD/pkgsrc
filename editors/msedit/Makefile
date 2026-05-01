@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/12/13 09:23:52 fox Exp $
+# $NetBSD: Makefile,v 1.3 2026/05/01 10:11:05 fox Exp $
 
-DISTNAME=	edit-1.2.1
+DISTNAME=	edit-2.0.0
 PKGNAME=	ms${DISTNAME}
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=microsoft/}
@@ -14,13 +14,18 @@ LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-RUST_REQ=	1.87
+RUST_REQ=	1.93
+
+INSTALLATION_DIRS=	bin
+
 MAKE_ENV+=	RUSTC_BOOTSTRAP=1
 
 .include "cargo-depends.mk"
 
-post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/edit ${DESTDIR}${PREFIX}/bin/msedit
+do-install:
+	cargo install --path ${WRKSRC}/crates/edit
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/edit \
+		${DESTDIR}${PREFIX}/bin/msedit
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
