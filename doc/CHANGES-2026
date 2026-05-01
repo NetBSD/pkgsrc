@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2723 2026/05/01 14:23:56 vins Exp $
+$NetBSD: CHANGES-2026,v 1.2724 2026/05/01 14:24:29 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4193,3 +4193,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/fasttracker2 to 2.18 [fox 2026-05-01]
 	Updated security/libdecaf to 1.0.3 [fox 2026-05-01]
 	Updated security/gcr to 3.41.2 [vins 2026-05-01]
+	Updated graphics/chafa to 1.18.2 [ktnb 2026-05-01]
