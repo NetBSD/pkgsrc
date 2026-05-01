@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2025/01/27 13:37:06 riastradh Exp $
+$NetBSD: distinfo,v 1.3 2026/05/01 21:27:35 hauke Exp $
 
-BLAKE2s (v1.7.5.tar.gz) = 1947951f05e8b61a896394d1f67367446969dc14205440514ad679e1951bf208
-SHA512 (v1.7.5.tar.gz) = c219e3ade3a81e3088cc95ecc6422022d18bffd11f26aa1618d7e4bdbf492034ae886ad6d4428ba9bbe64dbe6e6576945f50ea8ae9d6f85098758a20ff82051c
-Size (v1.7.5.tar.gz) = 258398 bytes
+BLAKE2s (v1.8.1.tar.gz) = 0d1520dea6599c1e70b112ddada33e79bc483d9e5923409a214fbe4f46882fbe
+SHA512 (v1.8.1.tar.gz) = 96c6f9f54b412d8aa6f339ffc6616e7b1ce372cf1d796ade088adbd18d0d0a9e046363925315458a5ba1ccce8bbf5795453b5185869ed80aed668338c8adbf7d
+Size (v1.8.1.tar.gz) = 252881 bytes
 SHA1 (patch-Makefile.am) = 562ca9e346d95771798c8fab146f59aaefb57b52
-SHA1 (patch-configure.ac) = da767baba9ddac9548d9790c16580c99931acd9d
-SHA1 (patch-uacme.c) = da6815cfd867637703501660109b05599c6b708d
-SHA1 (patch-uacme.sh) = 24da3e33aac08634d61287d1fb971f0b4095de8e
+SHA1 (patch-configure.ac) = 6bc5ddca5c45b50d34fb8c32366e7f6d59cf9fdc
+SHA1 (patch-uacme.c) = 31a41a05cab1d053232ce182d3d63d3e9a70afd9
+SHA1 (patch-uacme.sh) = dab3857c5f866672a9c0f73d51513832f1cf853c

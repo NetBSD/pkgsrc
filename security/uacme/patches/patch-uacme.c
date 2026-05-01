@@ -1,12 +1,12 @@
-$NetBSD: patch-uacme.c,v 1.2 2025/01/27 13:37:07 riastradh Exp $
+$NetBSD: patch-uacme.c,v 1.3 2026/05/01 21:27:35 hauke Exp $
 
 1. Set CONFDIR default - we prefer not to write under /etc
 
 2. Fix ctype(3) abuse.
 
---- uacme.c.orig	2024-01-28 20:03:31.000000000 +0000
+--- uacme.c.orig	2026-04-05 08:20:43.000000000 +0000
 +++ uacme.c
-@@ -46,7 +46,7 @@
+@@ -48,7 +48,7 @@
  
  #define PRODUCTION_URL "https://acme-v02.api.letsencrypt.org/directory"
  #define STAGING_URL "https://acme-staging-v02.api.letsencrypt.org/directory"
@@ -15,16 +15,16 @@ $NetBSD: patch-uacme.c,v 1.2 2025/01/27 13:37:07 riastradh Exp $
  
  typedef struct acme {
      privkey_t key;
-@@ -866,7 +866,7 @@ bool authorize(acme_t *a)
-                     goto out;
-                 }
-                 for (const char *t = token; *t; t++)
--                    if (!isalnum(*t) && *t != '-' && *t != '_') {
-+                    if (!isalnum((unsigned char)*t) && *t != '-' && *t != '_') {
-                         warnx("failed to validate token");
+@@ -937,7 +937,7 @@ bool authorize(acme_t *a)
                          goto out;
                      }
-@@ -1301,7 +1301,7 @@ bool validate_identifier_str(const char 
+                     for (const char *t = token; *t; t++)
+-                        if (!isalnum(*t) && *t != '-' && *t != '_') {
++                        if (!isalnum((unsigned char)*t) && *t != '-' && *t != '_') {
+                             warnx("failed to validate token");
+                             goto out;
+                         }
+@@ -1388,7 +1388,7 @@ bool validate_identifier_str(const char 
                  }
                  break;
              default:
@@ -33,7 +33,7 @@ $NetBSD: patch-uacme.c,v 1.2 2025/01/27 13:37:07 riastradh Exp $
                      warnx("invalid character '%c' in %s", s[j], s);
                      return false;
                  }
-@@ -1359,7 +1359,7 @@ bool alt_parse(acme_t *a, char *alt)
+@@ -1460,7 +1460,7 @@ bool alt_parse(acme_t *a, char *alt)
      size_t len = 0;
      char *tok = strtok(alt, ":");
      while (tok && len < sizeof(a->alt_fp)) {
