@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/08/11 16:47:52 fox Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/05/01 10:56:38 fox Exp $
 include/decaf.h
 include/decaf.hxx
 include/decaf/common.h
