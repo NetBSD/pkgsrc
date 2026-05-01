@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2026/01/27 08:40:29 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2026/05/01 14:23:28 vins Exp $
 
 BUILDLINK_TREE+=	gcr
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gcr
 GCR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gcr+=	gcr>=3.18.0
-BUILDLINK_ABI_DEPENDS.gcr+=	gcr>=3.40.0nb8
+BUILDLINK_ABI_DEPENDS.gcr+=	gcr>=3.41.2
 BUILDLINK_PKGSRCDIR.gcr?=	../../security/gcr
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38

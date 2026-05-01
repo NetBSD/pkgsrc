@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.7 2024/08/14 08:58:42 adam Exp $
+$NetBSD: distinfo,v 1.8 2026/05/01 14:23:28 vins Exp $
 
-BLAKE2s (gcr-3.40.0.tar.xz) = 8d9c790f71ef75d81f56d1f18f42874d5d983b064d64844ad4a6c05a54870cb9
-SHA512 (gcr-3.40.0.tar.xz) = 7118608e7bef7d0cf2eea33cb3286b7f9c3622a38892ce88cf33ed453d343cc33e070831e7b4d0c5cdb43c2e57b3f0b91c7cbd6aa8463982d3af8844b59bcb81
-Size (gcr-3.40.0.tar.xz) = 1011044 bytes
-SHA1 (patch-gck_meson.build) = 7fe90ef3859a401a2be2f9a92f3e8b2c9fe731fd
-SHA1 (patch-gcr_meson.build) = 34a5abe3ce2e0e63aaa7f0b6eeaf6cf735ad79f7
+BLAKE2s (gcr-3.41.2.tar.xz) = e1ac700fe6f78c3d4f789f66c4a7769a7ab03a8cf3425ff3fecd04c229aeee27
+SHA512 (gcr-3.41.2.tar.xz) = 056c6c6a3910dae6997cef34fc95d22510ddea37be0ccc329996575a95e20582fa428bd491389aa77f8b6ffbd8674a2b3ba444cb83bdf3a2be5fd7aed276606d
+Size (gcr-3.41.2.tar.xz) = 1034532 bytes
 SHA1 (patch-gcr_test-secure-memory.c) = e8002f64467d001e06c8af28f16b0c1ffe7211ad
-SHA1 (patch-ui_meson.build) = cb1a3647878695a1da66e0ef0886a25357c5cd41
