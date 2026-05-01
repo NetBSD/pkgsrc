@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2025/12/02 00:05:45 gdt Exp $
+# $NetBSD: options.mk,v 1.12 2026/05/01 00:40:59 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unison
 PKG_SUPPORTED_OPTIONS=	lablgtk inotify
@@ -22,6 +22,8 @@ PKG_SUGGESTED_OPTIONS+=	inotify
 BUILD_TARGET+=	gui
 
 PLIST.gtk3=	yes
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 DEPENDS+=	font-schumacher-misc>=1.0:../../fonts/font-schumacher-misc
 .include "../../x11/ocaml-lablgtk3/buildlink3.mk"
