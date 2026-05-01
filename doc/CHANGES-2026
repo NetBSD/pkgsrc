@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2731 2026/05/01 17:49:20 fox Exp $
+$NetBSD: CHANGES-2026,v 1.2732 2026/05/01 19:28:20 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4201,3 +4201,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/xfr to 0.9.11 [pin 2026-05-01]
 	Updated www/chromium to 147.0.7727.137 [kikadf 2026-05-01]
 	Updated sysutils/btop to 1.4.7 [fox 2026-05-01]
+	Updated www/hiawatha to 12.1 [hauke 2026-05-01]
