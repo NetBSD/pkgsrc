@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.675 2026/03/31 13:58:20 khorben Exp $
+# $NetBSD: Makefile,v 1.676 2026/05/01 19:51:19 vins Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -189,6 +189,7 @@ SUBDIR+=	libcdio-paranoia
 SUBDIR+=	libcec
 SUBDIR+=	libdivecomputer
 SUBDIR+=	libgravatar
+SUBDIR+=	libimobiledevice-glue
 SUBDIR+=	libjaylink
 SUBDIR+=	libkdepim
 SUBDIR+=	libkeduvocdocument
