@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2026/01/27 08:40:29 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2026/05/01 14:23:28 vins Exp $
 
-DISTNAME=	gcr-3.40.0
-PKGREVISION=	8
+DISTNAME=	gcr-3.41.2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -22,10 +21,13 @@ CPPFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 LDFLAGS.SunOS+=		-lsocket
 
-PKGCONFIG_OVERRIDE+=	gck-1.pc.in
-PKGCONFIG_OVERRIDE+=	gcr-base-3.pc.in
-PKGCONFIG_OVERRIDE+=	gcr-ui.pc.in
-PKGCONFIG_OVERRIDE+=	gcr-3.pc.in
+MESON_ARGS=		-Dsystemd=disabled
+
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+PKGCONFIG_OVERRIDE+=		output/meson-private/gck-1.pc \
+				output/meson-private/gcr-base-3.pc \
+				output/meson-private/gcr-ui-3.pc \
+				output/meson-private/gcr-3.pc
 
 REPLACE_PYTHON=		meson_post_install.py
 
@@ -37,6 +39,7 @@ REPLACE_PYTHON=		meson_post_install.py
 .include "../../lang/python/application.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
+.include "../../security/libsecret/buildlink3.mk"
 .include "../../security/p11-kit/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
