@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2733 2026/05/01 19:35:57 hauke Exp $
+$NetBSD: CHANGES-2026,v 1.2734 2026/05/01 19:46:07 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4203,3 +4203,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/btop to 1.4.7 [fox 2026-05-01]
 	Updated www/hiawatha to 12.1 [hauke 2026-05-01]
 	Updated net/netatalk4 to 4.4.2 [hauke 2026-05-01]
+	Added net/libnfs version 6.0.2 [vins 2026-05-01]
