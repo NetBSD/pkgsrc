@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2721 2026/05/01 10:15:23 fox Exp $
+$NetBSD: CHANGES-2026,v 1.2722 2026/05/01 10:56:57 fox Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4191,3 +4191,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/mozilla-rootcerts-openssl to 2.22 [wiz 2026-05-01]
 	Updated editors/msedit to 2.0.0 [fox 2026-05-01]
 	Updated audio/fasttracker2 to 2.18 [fox 2026-05-01]
+	Updated security/libdecaf to 1.0.3 [fox 2026-05-01]
