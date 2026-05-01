@@ -1,13 +1,13 @@
-$NetBSD: patch-src_hiawatha.c,v 1.1 2024/12/18 16:44:36 hauke Exp $
+$NetBSD: patch-src_hiawatha.c,v 1.2 2026/05/01 19:28:09 hauke Exp $
 
 Solarish are missing RLIMIT_NPROC
 
---- src/hiawatha.c.orig	2024-12-18 16:38:01.001436946 +0000
+--- src/hiawatha.c.orig	2026-04-04 17:21:19.000000000 +0000
 +++ src/hiawatha.c
-@@ -791,10 +791,11 @@ int run_webserver(t_settings *settings) 
- 	 */
- 	if (config->set_rlimits) {
- 		resource_limit.rlim_max = resource_limit.rlim_cur = config->total_connections + 3;
+@@ -844,10 +844,11 @@ int run_webserver(t_settings *settings) 
+ 			H2_MAX_WORKERS +
+ #endif
+ 			config->total_connections + 3;
 +#ifdef RLIMIT_NPROC
  		if (setrlimit(RLIMIT_NPROC, &resource_limit) != 0) {
  			fprintf(stderr, "Error setting RLIMIT_NPROC.\n");

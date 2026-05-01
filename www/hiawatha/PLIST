@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/04/15 14:52:33 hauke Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/05/01 19:28:09 hauke Exp $
 ${PLIST.letsencrypt}lib/hiawatha/letsencrypt/acmev2.php
 ${PLIST.letsencrypt}lib/hiawatha/letsencrypt/config.php
 ${PLIST.letsencrypt}lib/hiawatha/letsencrypt/hiawatha_config.php
@@ -9,11 +9,9 @@ ${PLIST.letsencrypt}lib/hiawatha/letsencrypt/letsencrypt.php
 ${PLIST.letsencrypt}lib/hiawatha/letsencrypt/logfile.php
 ${PLIST.letsencrypt}lib/hiawatha/letsencrypt/openssl.conf
 ${PLIST.letsencrypt}lib/hiawatha/letsencrypt/rsa.php
-libexec/ssi-cgi/ssi-cgi
 man/man1/cgi-wrapper.1
 man/man1/hiawatha.1
 ${PLIST.letsencrypt}man/man1/lefh.1
-man/man1/ssi-cgi.1
 man/man1/wigwam.1
 sbin/cgi-wrapper
 sbin/hiawatha
