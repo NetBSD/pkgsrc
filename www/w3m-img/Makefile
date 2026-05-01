@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2026/01/25 08:02:06 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/05/01 14:45:28 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/w3m-v/w3m-img-/}
+PKGREVISION=	1
 COMMENT=	Multilingualized version of w3m with inline image support
 
 CONFLICTS+=	w3m-[0-9]*
