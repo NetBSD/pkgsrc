@@ -1,0 +1,12 @@
+This project is a client library to multiplex connections from and to iOS
+devices alongside command-line utilities. It is primarily used by
+applications which use the libimobiledevice library to communicate with
+services running on iOS devices.
+
+The library does not establish a direct connection with a device but
+requires connecting to a socket provided by the usbmuxd daemon.
+
+The usbmuxd daemon is running upon installing iTunes on Windows and Mac OS
+X. The libimobiledevice project provides an open-source reimplementation of
+the usbmuxd daemon to use on Linux or as an alternative to communicate with
+iOS devices without the need to install iTunes.
