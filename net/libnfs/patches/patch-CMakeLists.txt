@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/05/01 19:43:30 vins Exp $
+
+Improve portability: make GSSAPI support platform independent.
+
+--- CMakeLists.txt.orig	2024-12-14 08:03:11.000000000 +0000
++++ CMakeLists.txt
+@@ -35,7 +35,7 @@ endif()
+ 
+ include(cmake/Macros.cmake)
+ 
+-if(IOS)
++if(ENABLE_GSSAPI)
+     find_package(GSSAPI)
+ 
+     if(GSSAPI_FOUND)
