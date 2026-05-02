@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2026/05/01 20:00:06 vins Exp $
+# $NetBSD: Makefile,v 1.148 2026/05/02 07:02:33 vins Exp $
 #
 
 COMMENT=	Telephony and serial communication utilities
@@ -33,6 +33,7 @@ SUBDIR+=	jpilot-syncmal
 SUBDIR+=	kermit
 SUBDIR+=	kyopon
 SUBDIR+=	libhidapi
+SUBDIR+=	libimobiledevice
 SUBDIR+=	libmal
 SUBDIR+=	libopensync
 SUBDIR+=	libopensync-plugin-file
