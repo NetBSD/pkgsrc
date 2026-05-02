@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/05/01 19:58:51 vins Exp $
+# $NetBSD: Makefile,v 1.2 2026/05/02 05:49:35 vins Exp $
 
 DISTNAME=	libusbmuxd-2.1.1
 CATEGORIES=	comms
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=libimobiledevice/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	weabot@protonmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.libimobiledevice.org/
 COMMENT=	Communication interface library for usbmuxd
 LICENSE=	gnu-lgpl-v2.1
