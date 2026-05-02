@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.23 2026/04/11 05:24:28 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.24 2026/05/02 19:44:01 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -33,9 +33,9 @@ CARGO_CRATE_DEPENDS+=	cfg-if-1.0.4
 CARGO_CRATE_DEPENDS+=	cfg_aliases-0.1.1
 CARGO_CRATE_DEPENDS+=	cfg_aliases-0.2.1
 CARGO_CRATE_DEPENDS+=	chrono-0.4.44
-CARGO_CRATE_DEPENDS+=	clap-4.6.0
+CARGO_CRATE_DEPENDS+=	clap-4.6.1
 CARGO_CRATE_DEPENDS+=	clap_builder-4.6.0
-CARGO_CRATE_DEPENDS+=	clap_derive-4.6.0
+CARGO_CRATE_DEPENDS+=	clap_derive-4.6.1
 CARGO_CRATE_DEPENDS+=	clap_lex-1.0.0
 CARGO_CRATE_DEPENDS+=	clipboard-win-5.4.0
 CARGO_CRATE_DEPENDS+=	colorchoice-1.0.1
@@ -273,7 +273,7 @@ CARGO_CRATE_DEPENDS+=	toml_write-0.1.0
 CARGO_CRATE_DEPENDS+=	toml_writer-1.1.1+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	tree_magic_mini-3.2.0
 CARGO_CRATE_DEPENDS+=	ttf-parser-0.25.1
-CARGO_CRATE_DEPENDS+=	tui-input-0.15.1
+CARGO_CRATE_DEPENDS+=	tui-input-0.15.3
 CARGO_CRATE_DEPENDS+=	tui-tree-widget-0.24.0
 CARGO_CRATE_DEPENDS+=	typenum-1.19.0
 CARGO_CRATE_DEPENDS+=	ucd-trie-0.1.7
@@ -284,7 +284,7 @@ CARGO_CRATE_DEPENDS+=	unicode-ccc-0.4.0
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.14
 CARGO_CRATE_DEPENDS+=	unicode-properties-0.1.4
 CARGO_CRATE_DEPENDS+=	unicode-script-0.5.6
-CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.11.0
+CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.13.2
 CARGO_CRATE_DEPENDS+=	unicode-truncate-2.0.0
 CARGO_CRATE_DEPENDS+=	unicode-vo-0.1.0
 CARGO_CRATE_DEPENDS+=	unicode-width-0.2.2
