@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2741 2026/05/02 07:03:09 vins Exp $
+$NetBSD: CHANGES-2026,v 1.2742 2026/05/02 13:04:14 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4211,3 +4211,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/uacme to 1.8.1 [hauke 2026-05-01]
 	Added wayland/lxqt-wayland-session version 0.4.0 [pin 2026-05-02]
 	Added comms/libimobiledevice version 1.4.0 [vins 2026-05-02]
+	Updated lang/sbcl to 2.6.4 [ktnb 2026-05-02]
