@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2026/05/02 07:01:15 vins Exp $
+
+BLAKE2s (libimobiledevice-1.4.0.tar.bz2) = 9571a0f57d206760f52948b75799e4279a27f65892cba37238a858cd34eae815
+SHA512 (libimobiledevice-1.4.0.tar.bz2) = b71ad9ce9c79e13e5b0e39f451770399bf71837581ab4a5e5c695f3c33511b45df79e8ad58d71bde28a97c3f032b64669e078e6d1417f3db006f4afd74c48c89
+Size (libimobiledevice-1.4.0.tar.bz2) = 714628 bytes
+SHA1 (patch-src_lockdown.c) = 0c82d15c3385b81287ea99e983a6203864f4bdeb
+SHA1 (patch-src_sbservices.c) = 31b16854c739812c8aca9c63123c3f146a3f1600
