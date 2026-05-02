@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2026/04/16 06:11:27 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/05/02 04:26:43 pin Exp $
 #
 
 COMMENT=	Packages to support the Wayland protocol
@@ -11,6 +11,7 @@ SUBDIR+=	kanshi
 SUBDIR+=	labwc
 SUBDIR+=	labwc-tweaks
 SUBDIR+=	lswt
+SUBDIR+=	lxqt-wayland-session
 SUBDIR+=	sfwbar
 SUBDIR+=	slurp
 SUBDIR+=	swappy
