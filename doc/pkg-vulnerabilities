@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.759 2026/04/27 08:18:32 jperkin Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.760 2026/05/02 04:29:30 pin Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30314,7 +30314,7 @@ opensmtpd<7.8.0p1	denial-of-service	https://www.openbsd.org/errata78.html
 arti-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 asuka-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 bulletty-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
-cargo-c-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
+cargo-c<0.10.22	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 cargo-licenses-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 cargo-nextest-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 cargo-outdated-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
@@ -30351,7 +30351,7 @@ sccache-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag
 seaward-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 sequoia-chameleon-gnupg-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 sequoia-sq-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
-sniffnet-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
+sniffnet<1.5.0	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 so-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 spotify-player-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 spotifyd-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
