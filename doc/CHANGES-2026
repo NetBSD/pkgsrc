@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2740 2026/05/02 04:27:12 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2741 2026/05/02 07:03:09 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4210,3 +4210,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added security/libtatsu version 1.0.5 [vins 2026-05-01]
 	Updated security/uacme to 1.8.1 [hauke 2026-05-01]
 	Added wayland/lxqt-wayland-session version 0.4.0 [pin 2026-05-02]
+	Added comms/libimobiledevice version 1.4.0 [vins 2026-05-02]
