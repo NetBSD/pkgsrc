@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.5 2026/04/30 16:24:01 vins Exp $
+# $NetBSD: options.mk,v 1.6 2026/05/02 07:27:23 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.upower
 
-PKG_SUPPORTED_OPTIONS+=	doc introspection polkit
+PKG_SUPPORTED_OPTIONS+=	doc idevice introspection polkit
 PKG_SUGGESTED_OPTIONS=	introspection polkit
 
 PLIST_VARS+=		doc introspection polkit
@@ -31,6 +31,17 @@ PLIST.introspection=	yes
 .else
 MESON_ARGS+=    -Dintrospection=disabled
 .endif
+
+###
+### Enable libimobiledevice support
+###
+.if !empty(PKG_OPTIONS:Midevice)
+.include "../../comms/libimobiledevice/buildlink3.mk"
+MESON_ARGS+=    -Didevice=enabled
+.else
+MESON_ARGS+=    -Didevice=disabled
+.endif
+
 
 ###
 ### Polkit support in UPower Daemon

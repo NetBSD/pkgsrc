@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2026/04/30 16:24:01 vins Exp $
+# $NetBSD: Makefile,v 1.32 2026/05/02 07:27:23 vins Exp $
 
 DISTNAME=	upower-v1.91.2
 PKGNAME=	${DISTNAME:S/v//}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://gitlab.freedesktop.org/upower/upower/-/archive/v${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -26,8 +27,6 @@ EGDIR=			${PREFIX}/share/examples/upower
 CONF_FILES+=		${EGDIR}/UPower.conf ${PKG_SYSCONFDIR}/UPower.conf
 CONF_FILES+=		${EGDIR}/org.freedesktop.UPower.conf \
 			${PKG_SYSCONFBASE}/dbus-1/system.d/org.freedesktop.UPower.conf
-
-PKGCONFIG_OVERRIDE+=	upower-glib.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
