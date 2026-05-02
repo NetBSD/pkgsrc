@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2026/04/26 08:53:07 adam Exp $
+# $NetBSD: Makefile,v 1.27 2026/05/02 21:14:04 leot Exp $
 
 DISTNAME=	neovim-0.12.2
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -45,8 +46,11 @@ DEPENDS+=	${LUA_PKGPREFIX}-mpack-[0-9]*:../../devel/lua-mpack
 CFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/lua/5.1
 
 TOOL_DEPENDS+=	patchelf-[0-9]*:../../devel/patchelf
+.endif
 
 post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/share/nvim/runtime/lua/vim/pack.lua.orig
+.if ${SHLIB_TYPE} == "ELF"
 	${TOOLBASE}/bin/patchelf ${DESTDIR}${PREFIX}/bin/nvim \
 		--replace-needed ${BUILDLINK_DIR.lua-lpeg}/lib/lua/5.1/lpeg.so lpeg.so
 .endif
