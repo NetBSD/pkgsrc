@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2026/04/08 05:45:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.72 2026/05/02 07:31:35 vins Exp $
 
 DISTNAME=	fvwm3-1.1.4
 PKGREVISION=	7
@@ -51,12 +51,6 @@ MESON_ARGS+=	-Dpython=${PYTHONBIN:Q}
 MESON_ARGS+=	-Dperl=${PERL5:Q}
 
 .include "options.mk"
-
-#INSTALLATION_DIRS+=	share/xsessions
-
-#pre-install:
-#	${INSTALL_DATA} ${FILESDIR}/fvwm3.desktop	\
-#	${DESTDIR}${PREFIX}/share/xsessions/fvwm3.desktop
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
