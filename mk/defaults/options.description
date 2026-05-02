@@ -384,6 +384,7 @@ iconv			Use iconv for character encoding conversion.
 icu			Enable icu support.
 id3			Enable id3 tagging support.
 idea			Enable support for the IDEA cryptographic algorithm (possible license+patent problems).
+idevice			Enable support for the imobiledevice library to communicate with iOS devices.
 idn			Internationalized Domain Names (IDN) support.
 ikiwiki-amazon-s3	Enable publishing rendered pages to Amazon S3 servers.
 ikiwiki-discount	Use Text::Markdown::Discount to rendering HTML-pages.
