@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/05/02 07:01:14 vins Exp $
+# $NetBSD: Makefile,v 1.2 2026/05/02 07:19:01 vins Exp $
 
 DISTNAME=	libimobiledevice-1.4.0
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libimobiledevice/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -15,6 +16,8 @@ USE_LANGUAGES+=	c c++
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	aclocal autoconf automake bash pkg-config
+
+PKGCONFIG_OVERRIDE=	src/libimobiledevice-1.0.pc.in
 
 GNU_CONFIGURE=	yes
 CONFIG_SHELL=	bash
