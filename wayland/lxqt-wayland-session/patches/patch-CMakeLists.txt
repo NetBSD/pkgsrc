@@ -1,0 +1,17 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/05/02 04:25:55 pin Exp $
+
+* Fix pathes, see x11/lxqt-session/patches/patch-CMakeLists.txt
+
+--- CMakeLists.txt.orig	2026-03-05 17:53:50.000000000 +0000
++++ CMakeLists.txt
+@@ -43,8 +43,8 @@ set(PREDEF_XDG_DATA_DIRS "$XDG_DATA_HOME
+ if(NOT("${LXQT_DATA_DIR}" MATCHES "^/usr(/local)?/share$"))
+     set(PREDEF_XDG_DATA_DIRS "${PREDEF_XDG_DATA_DIRS}:${LXQT_DATA_DIR}")
+ endif()
+-set(PREDEF_XDG_DATA_DIRS "${PREDEF_XDG_DATA_DIRS}:/usr/local/share:/usr/share")
+-set(PREDEF_XDG_CONFIG_DIRS "/etc:${LXQT_ETC_XDG_DIR}:/usr/share")
++set(PREDEF_XDG_DATA_DIRS "${PREDEF_XDG_DATA_DIRS}:/usr/local/share:${CMAKE_INSTALL_PREFIX}/share")
++set(PREDEF_XDG_CONFIG_DIRS "@PKG_SYSCONFDIR@:${LXQT_ETC_XDG_DIR}:${CMAKE_INSTALL_PREFIX}/share")
+ configure_file(startlxqtwayland.in startlxqtwayland @ONLY)
+ set(DEFAULT_AUDIO_SINK "@DEFAULT_AUDIO_SINK@")
+ configure_file(lxqt-qdbus.in lxqt-qdbus @ONLY)

@@ -1,0 +1,97 @@
+$NetBSD: patch-startlxqtwayland.in,v 1.1 2026/05/02 04:25:55 pin Exp $
+
+* Set fallback XDG_RUNTIME_DIR and create if not exist
+* Launch to compositors with seatd-launch 
+
+--- startlxqtwayland.in.orig	2026-04-03 07:03:01.439375253 +0000
++++ startlxqtwayland.in
+@@ -11,6 +11,14 @@ if [ -z "$XDG_DATA_HOME" ]; then
+     export XDG_DATA_HOME="$HOME/.local/share"
+ fi
+ 
++if [ -z "$XDG_RUNTIME_DIR" ]; then
++    export XDG_RUNTIME_DIR="/tmp/$(id -un)-runtime"
++fi
++
++if [ ! -d "$XDG_RUNTIME_DIR" ]; then
++    mkdir -p -m 700 "$XDG_RUNTIME_DIR"
++fi
++
+ if [ -z "$XDG_CONFIG_HOME" ]; then
+     export XDG_CONFIG_HOME="$HOME/.config"
+ fi
+@@ -96,7 +104,7 @@ if  [ -z "$COMPOSITOR" ]; then
+         export WLR_NO_HARDWARE_CURSORS=1
+         echo "Running on virtualized hardware"
+     fi
+-    exec $COMPOSITOR -C "$share_dir"/lxqt/wayland/firstrun -S lxqt-config-session
++    exec seatd-launch $COMPOSITOR -C "$share_dir"/lxqt/wayland/firstrun -S lxqt-config-session
+ 
+ elif [ "$COMPOSITOR" = "labwc" ]; then
+     # Copy default configuration if not existing and set keyboard layout if different from us
+@@ -113,14 +121,14 @@ elif [ "$COMPOSITOR" = "labwc" ]; then
+         echo "Running on virtualized hardware"
+     fi
+ 
+-    exec $COMPOSITOR -C $XDG_CONFIG_HOME/labwc -S lxqt-session
++    exec seatd-launch $COMPOSITOR -C $XDG_CONFIG_HOME/labwc -S lxqt-session
+ 
+ elif [ "$COMPOSITOR" = "niri" ]; then
+     if [ ! -f "$XDG_CONFIG_HOME/lxqt/wayland/lxqt-niri.kdl" ]; then
+         cp -v "$share_dir"/lxqt/wayland/lxqt-niri.kdl "$XDG_CONFIG_HOME"/lxqt/wayland/
+         cp -av "$share_dir"/lxqt/wayland/niri "$XDG_CONFIG_HOME"/lxqt/wayland/
+     fi
+-    exec $COMPOSITOR -c $XDG_CONFIG_HOME/lxqt/wayland/lxqt-niri.kdl
++    exec seatd-launch $COMPOSITOR -c $XDG_CONFIG_HOME/lxqt/wayland/lxqt-niri.kdl
+ 
+ elif [ "$COMPOSITOR" = "kwin_wayland" ]; then
+     # Style KDE's QML apps like systemsettings
+@@ -139,7 +147,7 @@ elif [ "$COMPOSITOR" = "kwin_wayland" ];
+         fi
+     fi
+     # WARNING: Option '--no-kactivities' can result in crashes with animations and corner actions.
+-    exec ${COMPOSITOR}_wrapper --exit-with-session lxqt-session --xwayland
++    exec seatd-launch ${COMPOSITOR}_wrapper --exit-with-session lxqt-session --xwayland
+ 
+ elif [ "$COMPOSITOR" = "wayfire" ]; then
+     if [ ! -f "$XDG_CONFIG_HOME/lxqt/wayland/lxqt-wayfire.ini" ]; then
+@@ -150,7 +158,7 @@ elif [ "$COMPOSITOR" = "wayfire" ]; then
+         sed -i "/\[input\]/a $layout" $XDG_CONFIG_HOME/lxqt/wayland/lxqt-wayfire.ini
+         fi
+     fi
+-    exec $COMPOSITOR -c $XDG_CONFIG_HOME/lxqt/wayland/lxqt-wayfire.ini
++    exec seatd-launch $COMPOSITOR -c $XDG_CONFIG_HOME/lxqt/wayland/lxqt-wayfire.ini
+ 
+ elif [ "$COMPOSITOR" = "sway" ]; then
+     if [ ! -f "$XDG_CONFIG_HOME/lxqt/wayland/lxqt-sway.config" ]; then
+@@ -161,7 +169,7 @@ elif [ "$COMPOSITOR" = "sway" ]; then
+         sed -i "/input \"type\:keyboard\"/a $layout" $XDG_CONFIG_HOME/lxqt/wayland/lxqt-sway.config
+         fi
+     fi
+-    exec $COMPOSITOR -c $XDG_CONFIG_HOME/lxqt/wayland/lxqt-sway.config
++    exec seatd-launch $COMPOSITOR -c $XDG_CONFIG_HOME/lxqt/wayland/lxqt-sway.config
+ 
+ elif [ "$COMPOSITOR" = "Hyprland" ]; then
+     if [ ! -f "$XDG_CONFIG_HOME/lxqt/wayland/lxqt-hyprland.conf" ]; then
+@@ -174,7 +182,7 @@ elif [ "$COMPOSITOR" = "Hyprland" ]; the
+     # workaround for cursor
+     export X$(cat $XDG_CONFIG_HOME/lxqt/session.conf|grep cursor_size| tr 'a-z' 'A-Z')
+     export X$(cat $XDG_CONFIG_HOME/lxqt/session.conf|grep cursor_theme| tr 'a-z' 'A-Z')
+-    exec start-hyprland -- -c $XDG_CONFIG_HOME/lxqt/wayland/lxqt-hyprland.conf
++    exec seatd-launch start-hyprland -- -c $XDG_CONFIG_HOME/lxqt/wayland/lxqt-hyprland.conf
+ 
+ elif [ "$COMPOSITOR" = "river" ]; then
+     if [ ! -f "$XDG_CONFIG_HOME/lxqt/wayland/lxqt-river-init" ]; then
+@@ -185,10 +193,10 @@ elif [ "$COMPOSITOR" = "river" ]; then
+             sed -i "s/riverctl keyboard-layout us/$layout/" "$XDG_CONFIG_HOME/lxqt/wayland/lxqt-river-init"
+         fi
+     fi
+-    exec $COMPOSITOR -c $XDG_CONFIG_HOME/lxqt/wayland/lxqt-river-init
++    exec seatd-launch $COMPOSITOR -c $XDG_CONFIG_HOME/lxqt/wayland/lxqt-river-init
+ 
+ # unknown compositor
+ else
+     echo "Trying to start $COMPOSITOR..."
+-    exec $COMPOSITOR
++    exec seatd-launch $COMPOSITOR
+ fi

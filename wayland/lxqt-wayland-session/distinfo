@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2026/05/02 04:25:54 pin Exp $
+
+BLAKE2s (lxqt-wayland-session-0.4.0.tar.xz) = aa5634cc52df6d5c48802b98f6bf9b84bc929e225966d0bb4a6e1c450497c319
+SHA512 (lxqt-wayland-session-0.4.0.tar.xz) = 625a618a44c7fa664b06ffd3d46940f46fb228e5d639b7864040456aedb626947aac82d7af0a1e44c18e6d26e28fe2eabda1b6e44daa1862c4fd79a42211e09d
+Size (lxqt-wayland-session-0.4.0.tar.xz) = 362516 bytes
+SHA1 (patch-CMakeLists.txt) = 811adcb99934f2c4dc239b898ceed3113abd1eb9
+SHA1 (patch-startlxqtwayland.in) = 451ddce6ca9e13cd293a49967df899e43ec24072
