@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.34 2026/01/06 11:18:16 wiz Exp $
 
-DISTNAME=	fail2ban-1.0.2
-PKGREVISION=	2
+DISTNAME=	fail2ban-1.1.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fail2ban/}
 
