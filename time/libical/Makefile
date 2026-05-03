@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2026/01/07 08:49:12 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2026/05/03 14:17:39 wiz Exp $
 
 DISTNAME=	libical-3.0.20
 PKGREVISION=	4
@@ -8,7 +8,7 @@ GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/libical/libical
-COMMENT=	Reference implementation of the iCalendar data type and format
+COMMENT=	Reference implementation of the iCalendar data type and format (v3)
 LICENSE=	gnu-lgpl-v2.1 OR mpl-2.0
 
 USE_TOOLS+=	perl pkg-config
