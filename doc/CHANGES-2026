@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2752 2026/05/03 10:01:50 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2753 2026/05/03 12:47:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4220,3 +4220,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/p5-Module-Signature to 0.96 [wiz 2026-05-03]
 	Added security/gcr4 version 4.4.0.1 [vins 2026-05-03]
 	Updated multimedia/assimp to 6.0.5 [wiz 2026-05-03]
+	Updated www/palemoon-gtk3 to 34.2.2 [nia 2026-05-03]
+	Updated www/palemoon to 34.2.2 [nia 2026-05-03]
