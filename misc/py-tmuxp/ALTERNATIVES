@@ -1,0 +1,1 @@
+bin/tmuxp @PREFIX@/bin/tmuxp-@PYVERSSUFFIX@

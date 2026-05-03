@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/03 20:34:45 kim Exp $
+
+BLAKE2s (tmuxp-1.67.0.tar.gz) = 5d79dde55bf3b4b7ae44a1318112490dd888da51d2368669a5a89abe78f5fa87
+SHA512 (tmuxp-1.67.0.tar.gz) = b0d68796f323b449a5abf6c1cc64e21d1faadbc69a0b26696fd4456fbe871ea6c2408e7e18d002128d7576be3ef36988e4fceccf16200e53d1f021cc73c88165
+Size (tmuxp-1.67.0.tar.gz) = 1096493 bytes

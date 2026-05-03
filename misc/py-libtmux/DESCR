@@ -1,0 +1,2 @@
+Typed Python API for tmux. Control servers, sessions, windows, and panes
+as Python objects.
