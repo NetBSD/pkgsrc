@@ -1,14 +1,14 @@
-$NetBSD: patch-configure,v 1.1 2025/09/10 11:08:57 jperkin Exp $
+$NetBSD: patch-configure,v 1.2 2026/05/03 16:39:13 gdt Exp $
 
 Disable special manual page handling on SunOS.
 
---- configure.orig	2025-09-10 10:50:55.717222074 +0000
+--- configure.orig	2026-04-26 11:40:29.191919966 +0000
 +++ configure
-@@ -25118,8 +25118,6 @@ DEFAULT_MAN_DIR_AS_BASE="yes"
+@@ -27390,8 +27390,6 @@ DEFAULT_MAN_DIR_AS_BASE='yes'
  
  case "${target_os}" in
      solaris*|sunos*|SunOS*|illumos*)
--        DEFAULT_MAN_SECTION_CMD_SYS="1m"
+-                                                                        DEFAULT_MAN_SECTION_CMD_SYS="1m"
 -        DEFAULT_MAN_DIR_AS_BASE="no"
          ;;
  esac
