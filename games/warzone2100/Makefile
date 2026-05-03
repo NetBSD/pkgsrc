@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2026/02/10 13:30:17 triaxx Exp $
+# $NetBSD: Makefile,v 1.104 2026/05/03 07:35:53 wiz Exp $
 
 DISTNAME=	warzone2100_src
 PKGNAME=	warzone2100-4.6.3
@@ -68,6 +68,7 @@ PLIST_SRC=	PLIST.bundle
 .include "../../devel/cmake/build.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
+.include "../../audio/libopus/buildlink3.mk"
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
