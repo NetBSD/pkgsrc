@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/05/03 14:16:56 wiz Exp $
+
+BLAKE2s (libical-4.0.0.tar.gz) = 8a66e5821800091550bedbaf996863d3a23da3a3112fbef406fc6bc496d5bf97
+SHA512 (libical-4.0.0.tar.gz) = c0cb6793a8a745252df33348d8e7476ad8ff85ac84a9fef75a8b694a488a944856d56e564ec8e75c0da547eb3ed29d78a6d79fc0a449ab57c7ef6f1f3d82a3c0
+Size (libical-4.0.0.tar.gz) = 1871749 bytes
+SHA1 (patch-src_libical_CMakeLists.txt) = ea7c07a4dca826a7c7e13a252811723ea1f45825
