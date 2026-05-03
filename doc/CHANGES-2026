@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2750 2026/05/03 08:18:34 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2751 2026/05/03 09:53:13 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4218,3 +4218,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/tree-sitter-cli to 0.26.8 [leot 2026-05-02]
 	Updated emulators/nono to 1.7.1 [jun 2026-05-03]
 	Updated security/p5-Module-Signature to 0.96 [wiz 2026-05-03]
+	Added security/gcr4 version 4.4.0.1 [vins 2026-05-03]
