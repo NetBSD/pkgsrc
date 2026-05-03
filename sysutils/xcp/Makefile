@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2026/02/17 13:58:17 pin Exp $
+# $NetBSD: Makefile,v 1.28 2026/05/03 15:00:14 pin Exp $
 
-DISTNAME=	xcp-0.24.7
+DISTNAME=	xcp-0.24.8
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tarka/}
 GITHUB_TAG=	xcp-v${PKGVERSION_NOREV}
