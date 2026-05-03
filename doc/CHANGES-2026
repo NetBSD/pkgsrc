@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2753 2026/05/03 12:47:36 nia Exp $
+$NetBSD: CHANGES-2026,v 1.2754 2026/05/03 13:09:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4222,3 +4222,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/assimp to 6.0.5 [wiz 2026-05-03]
 	Updated www/palemoon-gtk3 to 34.2.2 [nia 2026-05-03]
 	Updated www/palemoon to 34.2.2 [nia 2026-05-03]
+	Updated textproc/enchant2 to 2.8.16 [wiz 2026-05-03]
