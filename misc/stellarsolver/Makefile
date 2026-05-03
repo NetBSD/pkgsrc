@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/02/17 18:41:01 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/05/03 06:38:33 wiz Exp $
 
 DISTNAME=	stellarsolver-2.7
 CATEGORIES=	misc
@@ -22,6 +22,9 @@ SUBST_STAGE.bl3=	post-build
 SUBST_MESSAGE.bl3=	Fix paths to buildlink directories in installed files.
 
 PKGCONFIG_OVERRIDE+=	stellarsolver.pc.cmake
+
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/include/libstellarsolver/astrometry/*.orig
 
 .include "../../devel/cmake/build.mk"
 
