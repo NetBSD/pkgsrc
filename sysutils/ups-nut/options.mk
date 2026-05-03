@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2025/05/16 16:55:21 martin Exp $
+# $NetBSD: options.mk,v 1.5 2026/05/03 16:39:13 gdt Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ups-nut
 PKG_SUPPORTED_OPTIONS=		python
@@ -7,6 +7,8 @@ PKG_OPTIONS_GROUP.ssl=		nss openssl
 PKG_SUGGESTED_OPTIONS=		python openssl
 
 .include "../../mk/bsd.options.mk"
+
+## NSS
 
 .if !empty(PKG_OPTIONS:Mnss)
 CONFIGURE_ARGS+=	--with-ssl=nss --with-nss --without-openssl
@@ -18,12 +20,14 @@ CONFIGURE_ARGS+=	--with-ssl=openssl --without-nss --with-openssl
 CONFIGURE_ARGS+=	--without-ssl
 .endif
 
+## PYTHON
+
+PLIST_VARS+=		python
 .if !empty(PKG_OPTIONS:Mpython)
-# Force only our chosen python3 (see Makefile comment for --without-python2)
 CONFIGURE_ARGS+=	--with-python3=${PYTHONBIN}
-CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
 PLIST.python=		yes
-# \todo Move to split package.
+# While this could be moved to a split package, so far nobody has said
+# they would like that.
 .else
 CONFIGURE_ARGS+=	--without-python3
 .endif

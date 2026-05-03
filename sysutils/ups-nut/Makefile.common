@@ -1,18 +1,13 @@
-# $NetBSD: Makefile.common,v 1.22 2025/09/18 16:27:28 gdt Exp $
+# $NetBSD: Makefile.common,v 1.23 2026/05/03 16:39:13 gdt Exp $
 # used by sysutils/ups-nut/Makefile
 # used by sysutils/ups-nut-cgi/Makefile
 # used by sysutils/ups-nut-snmp/Makefile
 # used by sysutils/ups-nut-usb/Makefile
 # used by sysutils/p5-UPS-Nut/Makefile
 
-DISTNAME=		nut-2.8.4
+DISTNAME=		nut-2.8.5
 CATEGORIES=		sysutils
 MASTER_SITES=		https://networkupstools.org/source/${PKGVERSION_NOREV:R}/
-# Upstream placed an rc1 distfile at nut-2.8.4.tar.gz, and later
-# replaced it with a distfile corresponding to rc4 (which was the
-# actual release).
-# This is temporary until the next update.
-DIST_SUBDIR=		ups-nut-2.8.4bis
 
 MAINTAINER?=		gdt@NetBSD.org
 HOMEPAGE=		http://www.networkupstools.org/
@@ -29,7 +24,9 @@ USE_TOOLS=		pkg-config
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-cgipath=${NUT_CGIDIR:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${NUT_CONFDIR:Q}
+CONFIGURE_ARGS+=	--with-confdir-examples=${NUT_EGDIR:Q}
 CONFIGURE_ARGS+=	--datadir=${NUT_DATADIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${NUT_STATEDIR:Q}
 CONFIGURE_ARGS+=	--with-statepath=${NUT_STATEDIR:Q}
