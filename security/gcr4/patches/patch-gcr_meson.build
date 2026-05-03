@@ -1,0 +1,15 @@
+$NetBSD: patch-gcr_meson.build,v 1.1 2026/05/03 09:51:11 vins Exp $
+
+Prevent PLIST conflict with gcr-3.
+
+--- gcr/meson.build.orig	2026-05-03 07:32:47.935548756 +0000
++++ gcr/meson.build
+@@ -257,7 +257,7 @@ if get_option('ssh_agent')
+     'gcr-ssh-agent-util.c',
+   ]
+ 
+-  gcr_ssh_agent = executable('gcr-ssh-agent',
++  gcr_ssh_agent = executable('gcr4-ssh-agent',
+     gcr_ssh_agent_lib_sources + [ 'gcr-ssh-agent.c' ],
+     dependencies: [ gcr_deps, gcr_dep, libsecret_dep, libsystemd_deps ],
+     c_args: [

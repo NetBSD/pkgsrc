@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2026/05/03 09:51:11 vins Exp $
+
+BLAKE2s (gcr-4.4.0.1.tar.xz) = f1a927bb0f6766e0fb8171e1e3708d9734cdea66a6af786aa6c779dfe0cf7e49
+SHA512 (gcr-4.4.0.1.tar.xz) = f84724e0e9850c6150ec93430a0c3a714f4b4376df2fd3fd68340463acf04d89de236510b40bab4f3dc8fd82a2e8dc98b53c2684df07fdb9a6a3528ed35652d1
+Size (gcr-4.4.0.1.tar.xz) = 745244 bytes
+SHA1 (patch-gcr_gcr-ssh-agent.c) = 924877650d01231c44dbc76bb84b59540c10a92e
+SHA1 (patch-gcr_meson.build) = 316e015e9c330fb9ac93e0683dd9068898527788
+SHA1 (patch-gcr_test-secure-memory.c) = e8002f64467d001e06c8af28f16b0c1ffe7211ad
