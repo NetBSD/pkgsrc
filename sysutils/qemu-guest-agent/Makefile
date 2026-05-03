@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/01/06 11:18:16 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/05/03 06:43:35 wiz Exp $
 
 .include "../../emulators/qemu/version.mk"
 
@@ -17,8 +17,12 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 NOT_FOR_PLATFORM=	Darwin-*-*
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-distlib-[0-9]*:../../devel/py-distlib
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 TOOL_DEPENDS+=	meson-[0-9]*:../../devel/meson
 TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+DEPENDS+=	${PYPKGPREFIX}-qemu.qmp-[0-9]*:../../emulators/py-qemu.qmp
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
