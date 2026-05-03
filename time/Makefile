@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.288 2026/04/08 15:06:44 taca Exp $
+# $NetBSD: Makefile,v 1.289 2026/05/03 14:17:50 wiz Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -71,6 +71,7 @@ SUBDIR+=	kronolith
 SUBDIR+=	ktimer
 SUBDIR+=	leapsunpack
 SUBDIR+=	libical
+SUBDIR+=	libical4
 SUBDIR+=	lmclock
 SUBDIR+=	logtime
 SUBDIR+=	lua-chronos
