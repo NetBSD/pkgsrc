@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2776 2026/05/03 15:00:34 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2777 2026/05/03 15:56:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4245,3 +4245,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-wcwidth to 0.7.0 [wiz 2026-05-03]
 	Updated net/xfr to 0.9.12 [pin 2026-05-03]
 	Updated sysutils/xcp to 0.24.8 [pin 2026-05-03]
+	Updated textproc/rumdl to 0.1.87 [wiz 2026-05-03]
