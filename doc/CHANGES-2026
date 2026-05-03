@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2762 2026/05/03 14:29:52 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2763 2026/05/03 14:31:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4231,3 +4231,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/libcups to 2.4.19 [wiz 2026-05-03]
 	Updated print/cups-base to 2.4.19 [wiz 2026-05-03]
 	Updated print/cups to 2.4.19 [wiz 2026-05-03]
+	Updated graphics/openexr to 3.4.11 [wiz 2026-05-03]
