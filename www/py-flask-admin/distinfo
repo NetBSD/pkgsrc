@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2025/12/15 09:50:04 wiz Exp $
+$NetBSD: distinfo,v 1.30 2026/05/03 14:40:41 wiz Exp $
 
-BLAKE2s (flask_admin-2.0.2.tar.gz) = 5ddc1e0a418d14a90d1ee7f3ef1fb987be64888496a9593c665b12838a182def
-SHA512 (flask_admin-2.0.2.tar.gz) = 02c0de7cfd3a34e1bc048b6029ce3a4c46438a41c317fa1e17ead8ae3d14df1db00f48d6a432616c51b6bcda3755fabf81c5ac0208f9848c2211abee3d91aa10
-Size (flask_admin-2.0.2.tar.gz) = 5528977 bytes
+BLAKE2s (flask_admin-2.1.0.tar.gz) = 25a5659af94b63579a73bbbd5b571a2946f5e8092a04b3514d0f1617ce002765
+SHA512 (flask_admin-2.1.0.tar.gz) = 1b20ee100a750e122156098d0f3b3a3bca24bea2141cb9f918386721ed34568bac4821c26f3498b85320bc34934eb5b197b541803bc13322da05af368fefd997
+Size (flask_admin-2.1.0.tar.gz) = 5140750 bytes
