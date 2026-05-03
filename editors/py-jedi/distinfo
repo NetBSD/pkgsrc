@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/11/11 16:31:22 adam Exp $
+$NetBSD: distinfo,v 1.13 2026/05/03 14:51:25 wiz Exp $
 
-BLAKE2s (jedi-0.19.2.tar.gz) = 16b05d056d64a8290c752ae1c15358b12d750344c606c5a5427a9fea6a0e915e
-SHA512 (jedi-0.19.2.tar.gz) = 670bfcbde6b5a0fdcf761679e40ce23c5640bb9cc185df6e500c379281de78a8430d74d7e4cc85dd26d5c233a6e3f016f058312beddbb99c6767bb7b8c6b95a9
-Size (jedi-0.19.2.tar.gz) = 1231287 bytes
+BLAKE2s (jedi-0.20.0.tar.gz) = 73648a63739d227fdb8a3b0bcabafb811dd8e5a97e27c1d173821e31cb5d0a8b
+SHA512 (jedi-0.20.0.tar.gz) = 17775ab845b661dd3b93963b12055013a54314680d717087d49f64cb03332a5b5716dbfeb59e821aba34e2962c8bd01b86e8de881fb64dd31b374ef58b50ff00
+Size (jedi-0.20.0.tar.gz) = 3119416 bytes
