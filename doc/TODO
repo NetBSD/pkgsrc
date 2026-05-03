@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27182 2026/05/03 08:18:34 wiz Exp $
+$NetBSD: TODO,v 1.27183 2026/05/03 09:48:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -396,6 +396,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-RSQLite-2.6
 	o R-mapproj-3
 	o R-ncdf-1.6.9
+	o SDL3-3.4.8
 	o SQLiteCpp-2.5.0
 	o Sigil-2.7.6
 	o SOGo-5.12.7
@@ -455,6 +456,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
+	o assimp-6.0.5
 	o asymptote-3.01
 	o audacity-3.7.5
 	o authelia-4.28.0
@@ -590,6 +592,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emerillon-0.1.90
+	o enchant2-2.8.16
 	o endless-sky-0.10.2
 	o enigma-1.30
 	o enlightenment-0.27.1
@@ -655,6 +658,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ftplibpp-2.0.2
 	o fuse-ntfs-3g-2026.2.25
 	o fuse-unionfs-2.1
+	o fzf-0.72.0
 	o gallery3-3.0.9
 	o ganglia-3.7.5
 	o ganglia-webfrontend-3.7.5
@@ -805,6 +809,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jetty7-7.6.17
 	o jetty9-9.3.7
 	o jgenesis-0.12.0 [needs rust 1.95]
+	o jjui-0.10.4
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -844,6 +849,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libcap-2.49
 	o libcarddav-14.0.13
 	o libcec-6.0.2
+	o libcups-2.4.19
 	o libdevq-0.0.4
 	o libdsk-1.5.19
 	o libfakekey-0.3
@@ -852,6 +858,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
+	o libical-4.0.0
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -941,7 +948,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mono-nat-1.1.0
 	o monocypher-3.1.2
 	o moodle-4.5.2 (LTS)
-	o moor-2.12.1
+	o moor-2.12.3
 	o mopher-0.6.0
 	o moserial-2.30.0
 	o mserv-devel-0.41
@@ -1006,6 +1013,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencpn-plugin-draw-1.8.5.2
 	o opencsg-1.4.2
 	o opendnssec-2.1.8
+	o openexr-3.4.11
 	o openfst-1.8.4
 	o opengrok-1.7.1
 	o openh323-1.19.1
@@ -1132,6 +1140,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-build-1.5.0
 	o py-cassa-1.11.0
 	o py-chardet-7.0.1 [we need to decide how to handle https://github.com/chardet/chardet/issues/327]
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
@@ -1140,20 +1149,32 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
+	o py-flask-admin-2.1.0
+	o py-google-api-python-client-2.195.0
+	o py-google-auth-2.50.0
 	o py-hgview-1.9.0
+	o py-icalendar-7.1.0
 	o py-input-pad-1.4.2
+	o py-jedi-0.20.0
+	o py-mako-1.3.12
 	o py-omniORBpy-3.7
 	o py-pandas-3.0.1
+	o py-parso-0.8.7
 	o py-pdf-parser-0.7.4
 	o py-pdm-2.26.8
 	o py-postgresql-5.1.2
+	o py-pspdfutils-3.3.15
 	o py-simpletal-5.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
+	o py-textual-8.2.5
 	o py-tokyocabinet-0.6
 	o py-torch-2.10
+	o py-typer-0.25.1
 	o py-uliweb-0.6
+	o py-uv-build-0.11.8
 	o py-wat-0.6.0
+	o py-wcwidth-0.7.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
 	o q5go-2.1.3
@@ -1191,6 +1212,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
 	o rucola-0.9.0
+	o rumdl-0.1.87
 	o rust-1.95.0 [wip]
 	o rvault-0.4
 	o rvm-1.20
