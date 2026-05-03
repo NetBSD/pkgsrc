@@ -1,0 +1,2 @@
+Session manager for tmux, which allows users to save and load tmux
+sessions through simple configuration files. Powered by libtmux.
