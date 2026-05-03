@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.78 2024/02/04 06:13:49 mrg Exp $
+$NetBSD: distinfo,v 1.79 2026/05/03 22:04:04 mrg Exp $
 
-BLAKE2s (bozohttpd-20240126.tar.bz2) = d6aeb1cd3b3d1ddf16e33d9f822c7dc42f897495bbe785fdab4d4e581193ef54
-SHA512 (bozohttpd-20240126.tar.bz2) = 7ebd4f9f26004b7c24a668ff9e9442dc0f3b50bf4b217c38b6194ce067ebb6525bb97e449161952671c95bf126629ef3f8df7575c75126074eefd97a589b0aa6
-Size (bozohttpd-20240126.tar.bz2) = 62621 bytes
+BLAKE2s (bozohttpd-20260503.tar.bz2) = 1d04959fbaa717307597960d2d19557affd17569ca5ccf8eb68c55efd42ec03a
+SHA512 (bozohttpd-20260503.tar.bz2) = a4af7667d4264d6751d20a79e928d97ac13089bcf7acb4a16dd88f7c0caa2ab2c24b73e9410a5e2d7bffc2abd1ecdf3f1b26e6ccce81a7c4938fa64ed488ea13
+Size (bozohttpd-20260503.tar.bz2) = 63355 bytes
 SHA1 (patch-Makefile.boot) = f90cf22f867132a6a967d579346e970e9544cbf4
 SHA1 (patch-auth-bozo.c) = fb3fa40bee34d156cf91d615d905bb908eb70e4d
 SHA1 (patch-cgi-bozo.c) = 420f981575d7fa1a96ac7049116b9bf64de719df
