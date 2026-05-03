@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2773 2026/05/03 14:57:48 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2774 2026/05/03 14:59:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4242,3 +4242,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py-parso to 0.8.7 [wiz 2026-05-03]
 	Updated print/py-pspdfutils to 3.3.15 [wiz 2026-05-03]
 	Updated devel/py-typer to 0.25.1 [wiz 2026-05-03]
+	Updated devel/py-wcwidth to 0.7.0 [wiz 2026-05-03]
