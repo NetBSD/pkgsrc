@@ -1,0 +1,5 @@
+
+Sesh is a CLI that helps you create and manage tmux sessions quickly.
+It unifies active tmux sessions, configured sessions, and zoxide
+directory history into a single picker, and integrates well with fzf,
+gum, and tmux popups.

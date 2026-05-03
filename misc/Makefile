@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.677 2026/05/03 20:34:45 kim Exp $
+# $NetBSD: Makefile,v 1.678 2026/05/03 22:10:13 kim Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -360,6 +360,7 @@ SUBDIR+=	screen
 SUBDIR+=	screen4
 SUBDIR+=	sd-mux-ctrl
 SUBDIR+=	send-pr
+SUBDIR+=	sesh
 SUBDIR+=	siag
 SUBDIR+=	since
 SUBDIR+=	sleepto
