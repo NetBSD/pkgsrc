@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.676 2026/05/01 19:51:19 vins Exp $
+# $NetBSD: Makefile,v 1.677 2026/05/03 20:34:45 kim Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -297,12 +297,14 @@ SUBDIR+=	py-icecream
 SUBDIR+=	py-immutables
 SUBDIR+=	py-installer
 SUBDIR+=	py-lazy_loader
+SUBDIR+=	py-libtmux
 SUBDIR+=	py-pbs-installer
 SUBDIR+=	py-pep440
 SUBDIR+=	py-platformdirs
 SUBDIR+=	py-shellingham
 SUBDIR+=	py-sniffio
 SUBDIR+=	py-stdnum
+SUBDIR+=	py-tmuxp
 SUBDIR+=	py-tqdm
 SUBDIR+=	py-trove-classifiers
 SUBDIR+=	py-watchfiles
@@ -376,6 +378,7 @@ SUBDIR+=	team
 SUBDIR+=	teseq
 SUBDIR+=	tmate
 SUBDIR+=	tmux
+SUBDIR+=	tmuxp
 SUBDIR+=	todoman
 SUBDIR+=	toilet
 SUBDIR+=	topless

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/03 20:34:45 kim Exp $
+
+BLAKE2s (libtmux-0.55.1.tar.gz) = 8c4a8dcdc856ff1722b08092f639ab358797cd4db62b88855d491596506e088e
+SHA512 (libtmux-0.55.1.tar.gz) = bbd1c3b01fab3ff22fbd898de3fad8577804dd5d2010ed68996063046dc03207b6dc647fbe840b25677a99908c9c97ed72e4fcda324f39e782c716cfa28bdd03
+Size (libtmux-0.55.1.tar.gz) = 445016 bytes
