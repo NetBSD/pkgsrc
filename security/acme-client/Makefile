@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2026/04/27 18:51:24 vins Exp $
+# $NetBSD: Makefile,v 1.4 2026/05/03 18:08:19 vins Exp $
 
-DISTNAME=	acme-client-1.3.6
+DISTNAME=	acme-client-1.3.7
 CATEGORIES=	security
 # repo at	https://git.wolfsden.cz/acme-client-portable
 MASTER_SITES=	https://files.wolfsden.cz/releases/acme-client/
