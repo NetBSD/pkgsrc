@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/02/01 18:26:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/05/03 14:58:57 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -6,6 +6,24 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/wcwidth/__init__.py
 ${PYSITELIB}/wcwidth/__init__.pyc
 ${PYSITELIB}/wcwidth/__init__.pyo
+${PYSITELIB}/wcwidth/_clip.py
+${PYSITELIB}/wcwidth/_clip.pyc
+${PYSITELIB}/wcwidth/_clip.pyo
+${PYSITELIB}/wcwidth/_constants.py
+${PYSITELIB}/wcwidth/_constants.pyc
+${PYSITELIB}/wcwidth/_constants.pyo
+${PYSITELIB}/wcwidth/_wcswidth.py
+${PYSITELIB}/wcwidth/_wcswidth.pyc
+${PYSITELIB}/wcwidth/_wcswidth.pyo
+${PYSITELIB}/wcwidth/_wcwidth.py
+${PYSITELIB}/wcwidth/_wcwidth.pyc
+${PYSITELIB}/wcwidth/_wcwidth.pyo
+${PYSITELIB}/wcwidth/_width.py
+${PYSITELIB}/wcwidth/_width.pyc
+${PYSITELIB}/wcwidth/_width.pyo
+${PYSITELIB}/wcwidth/align.py
+${PYSITELIB}/wcwidth/align.pyc
+${PYSITELIB}/wcwidth/align.pyo
 ${PYSITELIB}/wcwidth/bisearch.py
 ${PYSITELIB}/wcwidth/bisearch.pyc
 ${PYSITELIB}/wcwidth/bisearch.pyo
@@ -18,6 +36,9 @@ ${PYSITELIB}/wcwidth/escape_sequences.pyo
 ${PYSITELIB}/wcwidth/grapheme.py
 ${PYSITELIB}/wcwidth/grapheme.pyc
 ${PYSITELIB}/wcwidth/grapheme.pyo
+${PYSITELIB}/wcwidth/hyperlink.py
+${PYSITELIB}/wcwidth/hyperlink.pyc
+${PYSITELIB}/wcwidth/hyperlink.pyo
 ${PYSITELIB}/wcwidth/py.typed
 ${PYSITELIB}/wcwidth/sgr_state.py
 ${PYSITELIB}/wcwidth/sgr_state.pyc
@@ -40,6 +61,9 @@ ${PYSITELIB}/wcwidth/table_wide.pyo
 ${PYSITELIB}/wcwidth/table_zero.py
 ${PYSITELIB}/wcwidth/table_zero.pyc
 ${PYSITELIB}/wcwidth/table_zero.pyo
+${PYSITELIB}/wcwidth/text_sizing.py
+${PYSITELIB}/wcwidth/text_sizing.pyc
+${PYSITELIB}/wcwidth/text_sizing.pyo
 ${PYSITELIB}/wcwidth/textwrap.py
 ${PYSITELIB}/wcwidth/textwrap.pyc
 ${PYSITELIB}/wcwidth/textwrap.pyo
