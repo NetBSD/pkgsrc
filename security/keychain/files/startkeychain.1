@@ -1,14 +1,14 @@
 .\" Written by Paolo Vincenzo Olivo <vins@NetBSD.org> (2025)
-.\" License: public domain 
+.\" License: public domain
 .Dd November 8, 2025
 .Dt STARTKEYCHAIN 1
 .Os
 .Sh NAME
-.Nm startkeychain 
-.Nd keychain launcher  
+.Nm startkeychain
+.Nd keychain launcher
 .Sh SYNOPSIS
 .Nm
-.Op Fl cefh 
+.Op Fl cefh
 .Sh DESCRIPTION
 .Pp
 .Xr keychain 1 is a manager for both ssh-agent and gpg-agent. It allows
@@ -22,9 +22,9 @@ script loads all SSH and GPG keys requested by the user, and updates the
 environment by sourcing the generated files found in the
 ~/.keychain directory.
 .Sh OPTIONS
- When used interactively, startkeychain accepts a number of options: 
+ When used interactively, startkeychain accepts a number of options:
 .Bl -tag -width Ds
-.It Fl c 
+.It Fl c
 wipes all existing cached keys/passphrases first.
 .It Fl e
 ensures that only the specified keys are loaded.
@@ -48,14 +48,14 @@ startkeychain will attempt to load all user's ssh keys found in ~/.ssh,
 to an ssh-agent process
 .It Ev GPKEYS
 gpg keys to be loaded by keychain have to be specified by their key ID.
-The user can get a full list of keys and IDs in his secret keyring by
+The user can get a full list of keys and IDs in their secret keyring by
 running `gpg --list-secret-keys'. GPGKEYS defines a single key ID or a
 space separated list of key IDs. If GPGKEYS is unset, startkeychain will
 not attempt to load any.
 .El
 .Pp
-Defaults my be overridden by either setting these variables on the
-command line or inside a dedicated ~/.keychainrc configuration file.
+Defaults may be overridden by either setting these variables on the
+command line, or inside a dedicated ~/.keychainrc configuration file.
 An example ~/.keychainrc may look as follows:
 
 .Bd -literal -offset indent
