@@ -44,7 +44,10 @@ fi
 #
 # Source extentions (pushd, popd and others) provided with ksh93u+m
 #
-for fun in @PREFIX@/libexec/ksh93/*; do
+fundir="@FUNDIR@"
+funcs=(cd dirs man mcd popd pushd)
+
+for fun in  ${funcs[@]/*/$fundir/\0}; do
 	[[ ! -f "${fun}" ]] || source $fun
 done
 
