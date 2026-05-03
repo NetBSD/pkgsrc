@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1003 2026/05/01 20:04:39 vins Exp $
+# $NetBSD: Makefile,v 1.1004 2026/05/03 09:52:30 vins Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -112,6 +112,7 @@ SUBDIR+=	flawz
 SUBDIR+=	fprint-demo
 SUBDIR+=	fsh
 SUBDIR+=	gcr
+SUBDIR+=	gcr4
 SUBDIR+=	git-crypt
 SUBDIR+=	git-secret
 SUBDIR+=	gnome-keyring
