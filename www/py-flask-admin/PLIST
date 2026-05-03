@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2025/12/15 09:50:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2026/05/03 14:40:41 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -136,6 +136,12 @@ ${PYSITELIB}/flask_admin/contrib/rediscli.pyo
 ${PYSITELIB}/flask_admin/contrib/sqla/__init__.py
 ${PYSITELIB}/flask_admin/contrib/sqla/__init__.pyc
 ${PYSITELIB}/flask_admin/contrib/sqla/__init__.pyo
+${PYSITELIB}/flask_admin/contrib/sqla/_compat.py
+${PYSITELIB}/flask_admin/contrib/sqla/_compat.pyc
+${PYSITELIB}/flask_admin/contrib/sqla/_compat.pyo
+${PYSITELIB}/flask_admin/contrib/sqla/_types.py
+${PYSITELIB}/flask_admin/contrib/sqla/_types.pyc
+${PYSITELIB}/flask_admin/contrib/sqla/_types.pyo
 ${PYSITELIB}/flask_admin/contrib/sqla/ajax.py
 ${PYSITELIB}/flask_admin/contrib/sqla/ajax.pyc
 ${PYSITELIB}/flask_admin/contrib/sqla/ajax.pyo
@@ -231,14 +237,6 @@ ${PYSITELIB}/flask_admin/static/admin/js/filters.js
 ${PYSITELIB}/flask_admin/static/admin/js/form.js
 ${PYSITELIB}/flask_admin/static/admin/js/helpers.js
 ${PYSITELIB}/flask_admin/static/admin/js/rediscli.js
-${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/bootstrap.min.css
-${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/bootstrap.min.js
-${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/css/bootstrap-grid.css.map
-${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/css/bootstrap-grid.min.css
-${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/css/bootstrap-grid.min.css.map
-${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/css/bootstrap-reboot.css.map
-${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/css/bootstrap-reboot.min.css
-${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/css/bootstrap-reboot.min.css.map
 ${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/css/bootstrap.min.css
 ${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/css/bootstrap.min.css.map
 ${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/css/font-awesome.min.css
@@ -248,16 +246,10 @@ ${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/fonts/fontawesome-webfont.s
 ${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/fonts/fontawesome-webfont.ttf
 ${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/fonts/fontawesome-webfont.woff
 ${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/fonts/fontawesome-webfont.woff2
-${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/js/bootstrap.bundle.js
-${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/js/bootstrap.bundle.js.map
-${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/js/bootstrap.bundle.min.js
-${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/js/bootstrap.bundle.min.js.map
-${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/js/bootstrap.js
-${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/js/bootstrap.js.map
 ${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/js/bootstrap.min.js
 ${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/js/bootstrap.min.js.map
 ${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/js/popper.min.js
-${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/popper.min.js
+${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/js/popper.min.js.map
 ${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/swatch/cerulean/bootstrap.min.css
 ${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/swatch/cosmo/bootstrap.min.css
 ${PYSITELIB}/flask_admin/static/bootstrap/bootstrap4/swatch/cyborg/bootstrap.min.css
@@ -1667,7 +1659,6 @@ ${PYSITELIB}/flask_admin/static/vendor/multi-level-dropdowns-bootstrap/README.md
 ${PYSITELIB}/flask_admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack-hover.css
 ${PYSITELIB}/flask_admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack-hover.js
 ${PYSITELIB}/flask_admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js
-${PYSITELIB}/flask_admin/static/vendor/popper.min.js
 ${PYSITELIB}/flask_admin/static/vendor/select2/LICENSE
 ${PYSITELIB}/flask_admin/static/vendor/select2/select2-bootstrap4.css
 ${PYSITELIB}/flask_admin/static/vendor/select2/select2-spinner.gif
@@ -1706,6 +1697,9 @@ ${PYSITELIB}/flask_admin/templates/bootstrap4/admin/static.html
 ${PYSITELIB}/flask_admin/tests/__init__.py
 ${PYSITELIB}/flask_admin/tests/__init__.pyc
 ${PYSITELIB}/flask_admin/tests/__init__.pyo
+${PYSITELIB}/flask_admin/tests/bootstrap4/test_renders.py
+${PYSITELIB}/flask_admin/tests/bootstrap4/test_renders.pyc
+${PYSITELIB}/flask_admin/tests/bootstrap4/test_renders.pyo
 ${PYSITELIB}/flask_admin/tests/conftest.py
 ${PYSITELIB}/flask_admin/tests/conftest.pyc
 ${PYSITELIB}/flask_admin/tests/conftest.pyo
@@ -1736,9 +1730,6 @@ ${PYSITELIB}/flask_admin/tests/geoa/conftest.pyo
 ${PYSITELIB}/flask_admin/tests/geoa/test_basic.py
 ${PYSITELIB}/flask_admin/tests/geoa/test_basic.pyc
 ${PYSITELIB}/flask_admin/tests/geoa/test_basic.pyo
-${PYSITELIB}/flask_admin/tests/mock.py
-${PYSITELIB}/flask_admin/tests/mock.pyc
-${PYSITELIB}/flask_admin/tests/mock.pyo
 ${PYSITELIB}/flask_admin/tests/mongoengine/__init__.py
 ${PYSITELIB}/flask_admin/tests/mongoengine/__init__.pyc
 ${PYSITELIB}/flask_admin/tests/mongoengine/__init__.pyo
@@ -1772,6 +1763,7 @@ ${PYSITELIB}/flask_admin/tests/sqla/__init__.pyo
 ${PYSITELIB}/flask_admin/tests/sqla/conftest.py
 ${PYSITELIB}/flask_admin/tests/sqla/conftest.pyc
 ${PYSITELIB}/flask_admin/tests/sqla/conftest.pyo
+${PYSITELIB}/flask_admin/tests/sqla/files/dummy.txt
 ${PYSITELIB}/flask_admin/tests/sqla/templates/another_macro.html
 ${PYSITELIB}/flask_admin/tests/sqla/templates/macro.html
 ${PYSITELIB}/flask_admin/tests/sqla/test_basic.py
