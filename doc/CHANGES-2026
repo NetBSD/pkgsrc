@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2778 2026/05/03 15:58:06 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2779 2026/05/03 16:39:28 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4247,3 +4247,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/xcp to 0.24.8 [pin 2026-05-03]
 	Updated textproc/rumdl to 0.1.87 [wiz 2026-05-03]
 	Updated textproc/moor to 2.12.3 [wiz 2026-05-03]
+	Updated sysutils/ups-nut to 2.8.5 [gdt 2026-05-03]
