@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2749 2026/05/03 05:23:54 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2750 2026/05/03 08:18:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4165,7 +4165,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/exim-html to 4.99.2 [adam 2026-04-30]
 	Updated devel/hexpatch to 1.12.6 [pin 2026-04-30]
 	Updated devel/mise to 2026.4.28 [pin 2026-04-30]
-	Updated emulators/jgenesis to 0.12.0 [pin 2026-04-30]
 	Updated misc/tailspin to 6.0.0 [pin 2026-04-30]
 	Updated sysutils/ripdrag to 0.4.12 [pin 2026-04-30]
 	Updated net/sniffnet to 1.5.0 [pin 2026-04-30]
