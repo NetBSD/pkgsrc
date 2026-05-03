@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2026/03/06 13:48:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/05/03 14:57:35 wiz Exp $
 bin/typer-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/typer/.agents/skills/typer/SKILL.md
 ${PYSITELIB}/typer/__init__.py
 ${PYSITELIB}/typer/__init__.pyc
 ${PYSITELIB}/typer/__init__.pyo
