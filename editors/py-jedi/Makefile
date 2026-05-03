@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2025/04/13 08:39:31 adam Exp $
+# $NetBSD: Makefile,v 1.18 2026/05/03 14:51:25 wiz Exp $
 
-DISTNAME=	jedi-0.19.2
+DISTNAME=	jedi-0.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	editors python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jedi/}
 
@@ -20,6 +19,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-colorama-[0-9]*:../../comms/py-colorama
 TEST_DEPENDS+=	${PYPKGPREFIX}-docopt-[0-9]*:../../devel/py-docopt
 
 USE_LANGUAGES=	# none
+
+# as of 0.20.0
+# 6 failed, 3874 passed, 107 skipped, 5 xfailed
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
