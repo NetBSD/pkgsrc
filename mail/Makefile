@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.689 2026/04/08 14:11:20 taca Exp $
+# $NetBSD: Makefile,v 1.690 2026/05/03 13:18:24 kim Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -333,6 +333,7 @@ SUBDIR+=	postfix
 SUBDIR+=	postfix-cdb
 SUBDIR+=	postfix-ldap
 SUBDIR+=	postfix-lmdb
+SUBDIR+=	postfix-mta-sts-resolver
 SUBDIR+=	postfix-mysql
 SUBDIR+=	postfix-pcre
 SUBDIR+=	postfix-pgsql
