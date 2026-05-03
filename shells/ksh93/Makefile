@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2025/11/04 18:21:46 vins Exp $
+# $NetBSD: Makefile,v 1.18 2026/05/03 06:21:25 vins Exp $
 
 DISTNAME=	ksh93-1.0.10
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ksh93/}
 GITHUB_PROJECT=	ksh
@@ -21,6 +21,7 @@ CFLAGS.SunOS+=		-D__EXTENSIONS__
 
 PKG_SYSCONFSUBDIR=	ksh93
 
+FUNDIR=			${PREFIX}/libexec/ksh93
 EGDIR=			${PREFIX}/share/examples/ksh93
 CONF_FILES+=		${EGDIR}/kshrc ${PKG_SYSCONFDIR}/kshrc
 
@@ -31,7 +32,7 @@ SUBST_FILES.conf=	src/cmd/ksh93/Mamfile src/cmd/ksh93/SHOPT.sh \
 			src/cmd/ksh93/data/msg.c src/cmd/ksh93/kshrc
 SUBST_SED.conf+=	-e "s:/etc/ksh.kshrc:${PKG_SYSCONFDIR}/kshrc:g"
 SUBST_SED.conf+=	-e "s:/etc/ksh_audit:${PKG_SYSCONFDIR}/ksh_audit:g"
-SUBST_VARS.conf+=	PREFIX
+SUBST_VARS.conf+=	FUNDIR
 SUBST_MESSAGE.conf=	Setting configuration file path
 
 MAKE_FLAGS+=		SHELL=${SH:Q} CC=${CC:Q}	\
