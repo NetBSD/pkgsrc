@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2026/05/02 21:14:04 leot Exp $
+$NetBSD: distinfo,v 1.25 2026/05/03 18:21:52 leot Exp $
 
 BLAKE2s (neovim-0.12.2.tar.gz) = 20b33dc20434cc34f63fde7bf79c702e81bfb4165a8b83777d27fc4aaa97dd9c
 SHA512 (neovim-0.12.2.tar.gz) = 5e05ea39d8c166a41384c8c453b51333554601beb6decccd7bc01943c5c656c5c72abf17a75aa693c2ef6446abb9f3490d2a19233a1bdb9ebd5817d60954d70e
 Size (neovim-0.12.2.tar.gz) = 13689620 bytes
-SHA1 (patch-runtime_lua_vim_pack.lua) = 7d4be9a61ec74ea01aab20694b078811058d2084
+SHA1 (patch-runtime_lua_vim_pack.lua) = 9a3890f7faebb169b26679884e0c7e687627cac6

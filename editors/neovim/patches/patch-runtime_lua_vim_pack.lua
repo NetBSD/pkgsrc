@@ -1,9 +1,11 @@
-$NetBSD: patch-runtime_lua_vim_pack.lua,v 1.1 2026/05/02 21:14:04 leot Exp $
+$NetBSD: patch-runtime_lua_vim_pack.lua,v 1.2 2026/05/03 18:21:52 leot Exp $
 
 Avoid calling possible unavailable uv.available_parallelism().
 
 At least on NetBSD with libuv-1.52.1 and lua51-luv-1.43.0.0nb1 seems
-not available and it can be triggered by using vim.pack.add().
+not available. It can be easily triggered via:
+
+ :lua =vim.uv.available_parallelism()
 
 --- runtime/lua/vim/pack.lua.orig	2026-05-02 20:51:52.218912310 +0000
 +++ runtime/lua/vim/pack.lua
