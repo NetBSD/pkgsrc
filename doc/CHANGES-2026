@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2760 2026/05/03 14:29:30 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2761 2026/05/03 14:29:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4229,3 +4229,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/SDL3 to 3.4.8 [wiz 2026-05-03]
 	Updated sysutils/fzf to 0.72.0 [wiz 2026-05-03]
 	Updated print/libcups to 2.4.19 [wiz 2026-05-03]
+	Updated print/cups-base to 2.4.19 [wiz 2026-05-03]
