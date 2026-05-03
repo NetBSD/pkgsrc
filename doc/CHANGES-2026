@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2748 2026/05/03 04:25:26 jun Exp $
+$NetBSD: CHANGES-2026,v 1.2749 2026/05/03 05:23:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4218,3 +4218,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/lla to 0.5.5 [pin 2026-05-02]
 	Updated textproc/tree-sitter-cli to 0.26.8 [leot 2026-05-02]
 	Updated emulators/nono to 1.7.1 [jun 2026-05-03]
+	Updated security/p5-Module-Signature to 0.96 [wiz 2026-05-03]
