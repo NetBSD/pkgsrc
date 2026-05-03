@@ -1,0 +1,19 @@
+$NetBSD: patch-src_libical_CMakeLists.txt,v 1.1 2026/05/03 14:16:56 wiz Exp $
+
+* Do not export WRKREF to .cmake files like libical.pc.
+
+--- src/libical/CMakeLists.txt.orig	2026-04-30 15:42:21.000000000 +0000
++++ src/libical/CMakeLists.txt
+@@ -290,10 +290,10 @@ if(DEFINED CMAKE_THREAD_LIBS_INIT)
+ target_include_directories(ical INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}>")
+ 
+ if(DEFINED CMAKE_THREAD_LIBS_INIT)
+-  target_link_libraries(ical ${CMAKE_THREAD_LIBS_INIT})
++  target_link_libraries(ical PUBLIC ${CMAKE_THREAD_LIBS_INIT})
+ endif()
+ if(ICU_FOUND)
+-  target_link_libraries(ical ${ICU_LIBRARIES})
++  target_link_libraries(ical PRIVATE ${ICU_LIBRARIES})
+   if(VCPKG_MANIFEST_MODE)
+     if(NOT APPLE AND NOT WIN32)
+       target_link_libraries(ical "m;stdc++")
