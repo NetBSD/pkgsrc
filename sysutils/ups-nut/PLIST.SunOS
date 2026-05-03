@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST.SunOS,v 1.5 2025/09/26 14:12:42 jperkin Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.6 2026/05/03 16:39:13 gdt Exp $
 libexec/nut-driver-enumerator.sh
 man/man8/nut-driver-enumerator.8
 man/man8/upsdrvsvcctl.8
 sbin/upsdrvsvcctl
-share/doc/nut/html-man/nut-driver-enumerator.html
-share/doc/nut/html-man/upsdrvsvcctl.html
 share/nut/solaris-init/nut
 share/nut/solaris-init/reset-ups-usb-solaris.sh.sample
 share/nut/solaris-smf/manifest/nut-driver-enumerator.xml

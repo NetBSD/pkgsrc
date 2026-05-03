@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.83 2025/09/16 12:23:20 gdt Exp $
+# $NetBSD: Makefile,v 1.84 2026/05/03 16:39:13 gdt Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		ups-${DISTNAME}
-PKGREVISION=		1
 COMMENT=		Network UPS Tools
-
-PLIST_VARS+=		python
 
 SUBST_CLASSES+=		man-so
 SUBST_MESSAGE.man-so=	Fixing manpage .so references.
@@ -87,7 +84,6 @@ INSTALLATION_DIRS+=	${NUT_DOCDIR}/drivers
 CHECK_INTERPRETER_SKIP+=	share/nut/solaris-init/nut
 
 post-install:
-	${MV} ${DESTDIR}${NUT_CONFDIR}/*.sample ${DESTDIR}${NUT_EGDIR}
 	for f in AUTHORS COPYING ChangeLog NEWS.adoc README.adoc UPGRADING.adoc; do \
 		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${NUT_DOCDIR}; \
 	done
