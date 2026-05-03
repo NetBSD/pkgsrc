@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2755 2026/05/03 13:19:27 kim Exp $
+$NetBSD: CHANGES-2026,v 1.2756 2026/05/03 14:17:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4224,3 +4224,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/palemoon to 34.2.2 [nia 2026-05-03]
 	Updated textproc/enchant2 to 2.8.16 [wiz 2026-05-03]
 	Added mail/postfix-mta-sts-resolver version 1.5.1 [kim 2026-05-03]
+	Added time/libical4 version 4.0.0 [wiz 2026-05-03]
