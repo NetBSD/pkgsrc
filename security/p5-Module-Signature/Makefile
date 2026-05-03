@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2025/07/04 08:48:04 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2026/05/03 05:23:45 wiz Exp $
 
-DISTNAME=	Module-Signature-0.93
+DISTNAME=	Module-Signature-0.96
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TI/TIMLEGGE/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Module-Signature
