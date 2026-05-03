@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2770 2026/05/03 14:52:41 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2771 2026/05/03 14:53:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4239,3 +4239,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/py-icalendar to 7.1.0 [wiz 2026-05-03]
 	Updated editors/py-jedi to 0.20.0 [wiz 2026-05-03]
 	Updated devel/py-mako to 1.3.12 [wiz 2026-05-03]
+	Updated lang/py-parso to 0.8.7 [wiz 2026-05-03]
