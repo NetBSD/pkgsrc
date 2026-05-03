@@ -1,3 +1,8 @@
-LIBICAL -- an implementation of iCalendar protocols and data formats
+Libical — an implementation of iCalendar protocols and data formats
+
+Libical is an Open Source implementation of the iCalendar protocols
+and protocol data units. The iCalendar specification describes how
+calendar clients can communicate with calendar servers so users
+can store their calendar data and arrange meetings with other users.
 
 This contains the old major version 3 of the library.
