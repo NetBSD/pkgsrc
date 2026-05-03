@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2026/05/03 22:10:14 kim Exp $
+bin/sesh
+man/man1/sesh.1
