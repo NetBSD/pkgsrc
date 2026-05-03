@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2026/02/09 19:11:34 adam Exp $
+$NetBSD: distinfo,v 1.22 2026/05/03 14:53:23 wiz Exp $
 
-BLAKE2s (parso-0.8.6.tar.gz) = 49ee16dbaa1c6f08008830babeb5efdc8f0410b5e844bfeeed7bda983a251651
-SHA512 (parso-0.8.6.tar.gz) = 1e48ec6c391f0f7fc13d96946ad61b1c6645c556cb875fbc382dea312ac724d7c9125b5853f9983ffda4f600cadd2ab93428d3e67fef6ad74aa0099380339f4e
-Size (parso-0.8.6.tar.gz) = 401621 bytes
+BLAKE2s (parso-0.8.7.tar.gz) = e509179b112e369139f890351d77b8452ed0d9481ad7b17f2cc4a57b195f505b
+SHA512 (parso-0.8.7.tar.gz) = 3509f75bfa2407867f1d9b1895440586bcbda67daaa2c60faa11323560e216041878abd22e14932ce0227a953f93e2a484fd5f4fb39300ba5a3c244d3dced7b4
+Size (parso-0.8.7.tar.gz) = 401824 bytes
