@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1189 2026/04/13 15:50:30 kikadf Exp $
+# $NetBSD: Makefile,v 1.1190 2026/05/04 11:42:26 markd Exp $
 #
 
 COMMENT=	System utilities
@@ -584,6 +584,7 @@ SUBDIR+=	plasma6-kinfocenter
 SUBDIR+=	plasma6-kmenuedit
 SUBDIR+=	plasma6-libksysguard
 SUBDIR+=	plasma6-milou
+SUBDIR+=	plasma6-powerdevil
 SUBDIR+=	plasma6-systemsettings
 SUBDIR+=	pluged
 SUBDIR+=	podman
