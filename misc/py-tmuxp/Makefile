@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/05/04 06:22:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/05/04 06:37:19 wiz Exp $
 
 DISTNAME=	tmuxp-${VERSION}
 PKGREVISION=	1
@@ -25,7 +25,12 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-rerunfailures>=0:../../devel/py-test-rerunfai
 TEST_DEPENDS+=	${PYPKGPREFIX}-docutils>=0:../../textproc/py-docutils
 TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx>=0:../../textproc/py-sphinx
 
+# as of 1.67.0
+# 66 failed, 897 passed, 2 skipped, 59 errors, 25 rerun
+
 USE_LANGUAGES=	# none
+
+TEST_ENV+=	PYTHONPATH=${WRKSRC}/src
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
