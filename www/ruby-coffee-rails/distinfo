@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:30:54 nia Exp $
-
-BLAKE2s (coffee-rails-5.0.0.gem) = 806438c0483bc45fd65e47d455978bcdb2fdb37047ca8e7690ff5ec91204c4fe
-SHA512 (coffee-rails-5.0.0.gem) = 49904d49061a417419e58d8a2bfc73ab1fca53c94855b3824181f7331b506b32d9ae2ea029f51d95afdb4437e865666da971eb853c35e85aef118d206efde192
-Size (coffee-rails-5.0.0.gem) = 7168 bytes

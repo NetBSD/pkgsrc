@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1915 2026/05/04 06:05:21 taca Exp $
+# $NetBSD: Makefile,v 1.1916 2026/05/04 06:08:01 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1008,7 +1008,6 @@ SUBDIR+=	ruby-borges
 SUBDIR+=	ruby-bullet
 SUBDIR+=	ruby-capybara
 SUBDIR+=	ruby-cgi
-SUBDIR+=	ruby-coffee-rails
 SUBDIR+=	ruby-compass
 SUBDIR+=	ruby-compass-core
 SUBDIR+=	ruby-compass-import-once
