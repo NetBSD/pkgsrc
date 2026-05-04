@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2792 2026/05/04 13:01:47 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2793 2026/05/04 19:52:14 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4273,3 +4273,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added games/jfsw version 20260105 [nia 2026-05-04]
 	Updated multimedia/ffmpeg8 to 8.1.1 [adam 2026-05-04]
 	Updated multimedia/ffplay8 to 8.1.1 [adam 2026-05-04]
+	Updated x11/mlterm to 3.9.4nb7 [tsutsui 2026-05-04]
