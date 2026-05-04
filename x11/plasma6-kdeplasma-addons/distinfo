@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/04 11:27:38 markd Exp $
+
+BLAKE2s (kdeplasma-addons-6.5.2.tar.xz) = 0c0ef171cbef70c753c0b154c1b27a55f7ad0f6a4b4c5ab6fcc2768978ea4433
+SHA512 (kdeplasma-addons-6.5.2.tar.xz) = 8b0ac040b4afdf1c350c8450b143edf5026449d989867327bdb773082b474e68ea8b1ed8aefd8abce7709af4053b3109dce7690f0742661ca251e5a078100644
+Size (kdeplasma-addons-6.5.2.tar.xz) = 1096604 bytes
