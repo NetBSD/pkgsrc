@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2790 2026/05/04 12:27:59 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2791 2026/05/04 12:29:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4270,3 +4270,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added sysutils/plasma6-powerdevil version 6.5.2 [markd 2026-05-04]
 	Updated www/py-curl to 7.46.0 [adam 2026-05-04]
 	Updated www/py-uritools to 6.1.0 [adam 2026-05-04]
+	Added games/jfsw version 20260105 [nia 2026-05-04]
