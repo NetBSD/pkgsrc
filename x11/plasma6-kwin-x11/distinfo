@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2026/05/04 11:08:21 markd Exp $
+
+BLAKE2s (kwin-x11-6.5.2.tar.xz) = f84454e8ae733c823fc3f89b4d1b82d2a69da53092bfa026447dda57dbb9dc05
+SHA512 (kwin-x11-6.5.2.tar.xz) = 3ca88c8212482dd3920c007edd81552fbcc9adb1b6969ae4f60f943875bbaa27282ed3f7ccb760af532ae1eba343049cb0047d02bc2b58ecc91da8be26a95a24
+Size (kwin-x11-6.5.2.tar.xz) = 6860264 bytes
+SHA1 (patch-cmake_modules_Findhwdata.cmake) = bcd738a30acc86a95787da05bcd7e8630043de81
+SHA1 (patch-src_plugins_qpa_integration.cpp) = 1d535e7ac99f4ea2bd71872eeca1338ef5e016c6
+SHA1 (patch-src_utils_CMakeLists.txt) = 70c474c5d6d50530be5ca2c0bf31eb7165098ac1
+SHA1 (patch-src_utils_ramfile.cpp) = c7dc38ba2cc2fb5ccdb4a5c77a0361cddfcf7b6f

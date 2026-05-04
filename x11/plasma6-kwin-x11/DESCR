@@ -1,0 +1,15 @@
+KWin/X11 is an X11 window manager and a compositing manager. Its primary
+usage is in conjunction with a Desktop Shell (e.g. KDE Plasma Desktop).
+KWin/X11 is designed to go out of the way; users should not notice that
+they use a window manager at all. Nevertheless KWin/X11 provides a steep
+learning curve for advanced features, which are available, if they do not
+conflict with the primary mission. KWin does not have a dedicated targeted
+user group, but follows the targeted user group of the Desktop Shell using
+KWin/X11 as it's window manager.
+
+KWin is not...
+ * a standalone window manager (c.f. openbox, i3) and does not provide any
+   functionality belonging to a Desktop Shell.
+ * a replacement for window managers designed for use with a specific
+   Desktop Shell (e.g. GNOME Shell)
+ * a minimalistic window manager
