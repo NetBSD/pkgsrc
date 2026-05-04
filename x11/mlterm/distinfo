@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.102 2025/04/03 16:33:06 tsutsui Exp $
+$NetBSD: distinfo,v 1.103 2026/05/04 19:51:32 tsutsui Exp $
 
 BLAKE2s (mlterm-3.9.4.tar.gz) = 3fff2f4110196b1cf592c0cb2f73e131d8434eda1f21288cecc7c5552255aab5
 SHA512 (mlterm-3.9.4.tar.gz) = f03ce24b89f74510cd8924a2cd9ab795c6ebf7f7ef2b69fb8a17bf3f5855c255cf86558b0e5abc7db64175f7c909b165cf96663825b98f4a2df4371d5e4a9469
 Size (mlterm-3.9.4.tar.gz) = 4227568 bytes
 SHA1 (patch-configure) = bc36ec849b8fa3ee7e9fff971e75f9078b0b738a
 SHA1 (patch-etc_font-fb) = 52c18f512c67ff530c0c326394fdf43956d71cb0
+SHA1 (patch-uitoolkit_ui__display.h) = 0e2fad6a0cc7968d546bdd2972e986e35c3495c7
+SHA1 (patch-uitoolkit_xlib_ui__display.c) = 895645afe4ed3687c3638ea826a0a38347fc9441
+SHA1 (patch-uitoolkit_xlib_ui__window.c) = cd842e6da8b9b4fdbefa70a1401f2079fa733169
