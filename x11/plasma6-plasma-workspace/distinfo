@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/05/04 11:18:46 markd Exp $
+
+BLAKE2s (plasma-workspace-6.5.2.tar.xz) = 2aa6361b7d370bc8aeb1b76692a3c7ae8739e238803cbef24a4bda9557385098
+SHA512 (plasma-workspace-6.5.2.tar.xz) = 53d23c0b9e98a23c7189b9a83bc9a21290e94d741a5e8f8f793b5a4742d8c46b2e1fdd9e0b143e153440a26219d0edc46e55acabe93cac07b988e323f2829ecc
+Size (plasma-workspace-6.5.2.tar.xz) = 20271688 bytes
+SHA1 (patch-startkde_config-startplasma.h.cmake) = 2bc4eddd714a77c5d7d8b9a64babb7ebcb01ef96
