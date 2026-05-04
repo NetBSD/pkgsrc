@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/04 11:36:34 markd Exp $
+
+BLAKE2s (plasma-desktop-6.5.2.tar.xz) = ad96b186dccca91d707f5e260a1eeaa36b6a27a515fa8ab484b3fac03f2f8206
+SHA512 (plasma-desktop-6.5.2.tar.xz) = 1d5228a728c217465597ca7ac2cd5055e31343ec730ad63ae60b1e41d4a274122f95c25ba529dea071ffd365352789faf73ac67541042264ee04d8cea25d45e5
+Size (plasma-desktop-6.5.2.tar.xz) = 16758456 bytes
