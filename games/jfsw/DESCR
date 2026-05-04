@@ -1,0 +1,6 @@
+JFShadowWarrior is 3D Realms' 1997 shooter Shadow Warrior updated
+for modern computers. An OpenGL 2 implementation is required.
+
+Game data is required from a copy of Shadow Warrior (e.g. from
+GOG.com, Humble Store, or the shareware version). If using
+the shareware version, extract SWSW12.SHR to $HOME/.jfsw.

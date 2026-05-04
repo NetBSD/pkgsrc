@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.563 2026/04/29 19:14:22 wiz Exp $
+# $NetBSD: Makefile,v 1.564 2026/05/04 12:28:51 nia Exp $
 #
 
 COMMENT=	Games
@@ -203,6 +203,7 @@ SUBDIR+=	iortcw
 SUBDIR+=	ironwail
 SUBDIR+=	ivan
 SUBDIR+=	jetpack
+SUBDIR+=	jfsw
 SUBDIR+=	jin
 SUBDIR+=	jools
 SUBDIR+=	julius
