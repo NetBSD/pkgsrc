@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/05/04 06:10:04 kim Exp $
+# $NetBSD: Makefile,v 1.3 2026/05/04 06:22:48 wiz Exp $
 
 DISTNAME=	tmuxp-${VERSION}
 PKGREVISION=	1
@@ -17,11 +17,13 @@ DEPENDS+=	${PYPKGPREFIX}-libtmux>=0.55:../../misc/py-libtmux
 DEPENDS+=	${PYPKGPREFIX}-yaml>=6:../../textproc/py-yaml
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.29:../../devel/py-hatchling
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 # codecov
 # coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=7:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-rerunfailures>=0:../../devel/py-test-rerunfailures
+TEST_DEPENDS+=	${PYPKGPREFIX}-docutils>=0:../../textproc/py-docutils
+TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx>=0:../../textproc/py-sphinx
 
 USE_LANGUAGES=	# none
 
