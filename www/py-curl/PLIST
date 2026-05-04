@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.22 2025/04/14 13:30:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2026/05/04 12:26:28 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING-LGPL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING-MIT
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
@@ -28,10 +27,6 @@ share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/file_upload_real_fancy.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/follow_redirect.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/form_post.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/get.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/get_python2.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/get_python2_https.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/get_python3.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/get_python3_https.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/put_buffer.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/put_file.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/response_headers.py
@@ -42,4 +37,8 @@ share/doc/pycurl${PYVERSSUFFIX}/examples/retriever.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/sfquery.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/smtp.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/ssh_keyfunction.py
+share/doc/pycurl${PYVERSSUFFIX}/examples/ws_callback.py
+share/doc/pycurl${PYVERSSUFFIX}/examples/ws_echo.py
+share/doc/pycurl${PYVERSSUFFIX}/examples/ws_fragmented.py
+share/doc/pycurl${PYVERSSUFFIX}/examples/ws_multi.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/xmlrpc_curl.py
