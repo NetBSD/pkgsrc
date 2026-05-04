@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/02/11 07:49:58 taca Exp $
+# $NetBSD: Makefile,v 1.6 2026/05/04 06:11:46 taca Exp $
 
 DISTNAME=	actionpack-xml_parser-2.0.1
 CATEGORIES=	textproc
@@ -13,7 +13,7 @@ LICENSE=	mit
 # To shared by multiple rails, omit dependency here.
 #DEPENDS+=	${RUBY_ACTIONPACK_DEPENDS}
 #DEPENDS+=	${RUBY_RAILTIES_DEPENDS}
-#RUBY_RAILS_ACCEPTED=	61 72
+#RUBY_RAILS_ACCEPTED=	72
 
 CONFLICTS+=	${RUBY_PKGPREFIX}-actionpack[67][0-2]-xml_parser-[0-9]*
 
