@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2791 2026/05/04 12:29:04 nia Exp $
+$NetBSD: CHANGES-2026,v 1.2792 2026/05/04 13:01:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4271,3 +4271,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-curl to 7.46.0 [adam 2026-05-04]
 	Updated www/py-uritools to 6.1.0 [adam 2026-05-04]
 	Added games/jfsw version 20260105 [nia 2026-05-04]
+	Updated multimedia/ffmpeg8 to 8.1.1 [adam 2026-05-04]
+	Updated multimedia/ffplay8 to 8.1.1 [adam 2026-05-04]
