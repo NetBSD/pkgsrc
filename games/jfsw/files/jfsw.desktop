@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=JFShadowWarrior
+Comment=1997 first-person shooter
+Icon=jfsw
+Exec=jfsw
+Terminal=false
+Categories=Game;Shooter;
