@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1083 2026/04/21 21:15:35 wiz Exp $
+# $NetBSD: Makefile,v 1.1084 2026/05/04 11:08:21 markd Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -293,6 +293,7 @@ SUBDIR+=	plasma6-kgamma
 SUBDIR+=	plasma6-kglobalacceld
 SUBDIR+=	plasma6-kscreen
 SUBDIR+=	plasma6-kscreenlocker
+SUBDIR+=	plasma6-kwin-x11
 SUBDIR+=	plasma6-layer-shell-qt
 SUBDIR+=	plasma6-libkscreen
 SUBDIR+=	plasma6-libplasma
