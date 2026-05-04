@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/04 11:42:26 markd Exp $
+
+BLAKE2s (powerdevil-6.5.2.tar.xz) = 0dc811788c9b2e6471017bfe067ab38e9c5e0a7d2f0e2a067f66b3fa4fe4d671
+SHA512 (powerdevil-6.5.2.tar.xz) = 9ffde1f0f6e8a6e618ec95148e3a2e72f9f9b19e163b09119d253d4dfc19a74ddebbcc37902fbbda7a9d4e857615ed8d0de277b9da93293308db0e84d274967d
+Size (powerdevil-6.5.2.tar.xz) = 1231124 bytes
