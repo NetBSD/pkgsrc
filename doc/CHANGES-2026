@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2785 2026/05/04 06:08:22 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2786 2026/05/04 08:06:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4256,3 +4256,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added misc/sesh version 2.26.1 [kim 2026-05-03]
 	Removed www/ruby-jekyll-coffeescript [taca 2026-05-04]
 	Removed www/ruby-coffee-rails [taca 2026-05-04]
+	Updated net/openvpn to 2.7.4 [adam 2026-05-04]
+	Updated net/haproxy to 3.3.8 [adam 2026-05-04]
