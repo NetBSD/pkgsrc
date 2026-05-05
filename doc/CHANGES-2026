@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2800 2026/05/05 05:01:38 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2801 2026/05/05 08:19:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4292,3 +4292,16 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/rtorrent to 0.16.11 [adam 2026-05-05]
 	Updated devel/py-dulwich to 1.2.1 [adam 2026-05-05]
 	Updated www/py-zope.proxy to 7.2 [adam 2026-05-05]
+	Removed www/ruby-rails61 [taca 2026-05-05]
+	Removed textproc/ruby-actiontext61 [taca 2026-05-05]
+	Removed devel/ruby-railties61 [taca 2026-05-05]
+	Removed www/ruby-actioncable61 [taca 2026-05-05]
+	Removed mail/ruby-actionmailbox61 [taca 2026-05-05]
+	Removed mail/ruby-actionmailer61 [taca 2026-05-05]
+	Removed devel/ruby-activestorage61 [taca 2026-05-05]
+	Removed databases/ruby-activerecord61 [taca 2026-05-05]
+	Removed www/ruby-actionpack61 [taca 2026-05-05]
+	Removed www/ruby-actionview61 [taca 2026-05-05]
+	Removed devel/ruby-activejob61 [taca 2026-05-05]
+	Removed devel/ruby-activemodel61 [taca 2026-05-05]
+	Removed devel/ruby-activesupport61 [taca 2026-05-05]
