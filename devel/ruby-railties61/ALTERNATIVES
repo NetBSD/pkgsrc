@@ -1,1 +1,0 @@
-bin/rails @PREFIX@/bin/rails@RUBY_RAILS@@RUBY_SUFFIX@

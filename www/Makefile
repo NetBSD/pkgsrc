@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1916 2026/05/04 06:08:01 taca Exp $
+# $NetBSD: Makefile,v 1.1917 2026/05/05 08:17:45 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -988,13 +988,10 @@ SUBDIR+=	ramaze
 SUBDIR+=	reader
 SUBDIR+=	redlib
 SUBDIR+=	restish
-SUBDIR+=	ruby-actioncable61
 SUBDIR+=	ruby-actioncable72
 SUBDIR+=	ruby-actioncable80
-SUBDIR+=	ruby-actionpack61
 SUBDIR+=	ruby-actionpack72
 SUBDIR+=	ruby-actionpack80
-SUBDIR+=	ruby-actionview61
 SUBDIR+=	ruby-actionview72
 SUBDIR+=	ruby-actionview80
 SUBDIR+=	ruby-aws-eventstream
@@ -1107,7 +1104,6 @@ SUBDIR+=	ruby-rack-test
 SUBDIR+=	ruby-rack2
 SUBDIR+=	ruby-rackup
 SUBDIR+=	ruby-rails-html-sanitizer
-SUBDIR+=	ruby-rails61
 SUBDIR+=	ruby-rails72
 SUBDIR+=	ruby-rails80
 SUBDIR+=	ruby-raindrops
