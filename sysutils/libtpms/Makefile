@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2024/12/09 13:46:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2026/05/05 10:20:02 jperkin Exp $
 
-GITHUB_PROJECT=	libtpms
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	libtpms-0.10.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stefanberger/}
+GITHUB_PROJECT=	libtpms
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/stefanberger/libtpms/

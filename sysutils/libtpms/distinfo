@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.3 2024/12/09 13:46:47 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2026/05/05 10:20:02 jperkin Exp $
 
 BLAKE2s (libtpms-0.10.0.tar.gz) = 1ee1e501f97179db5f73e3f6cb503455f06558a29dc86121d27eaabab76b28d9
 SHA512 (libtpms-0.10.0.tar.gz) = a728188c26447656f43298d1475ebccf0f074d9474780a71fc64baf1ac8b6f6569c90e5ad07098dddc711ba1080eef409c1ac5334d054e7f144e48fa21b66df9
 Size (libtpms-0.10.0.tar.gz) = 1397526 bytes
+SHA1 (patch-src_tpm2_RuntimeProfile.c) = d8d77a1a2d749c080abe1614e6383d18a98a3166
+SHA1 (patch-src_tpm2_TpmProfile__Common.h) = 2c269176127475b3c9897c6a2b636b8cfe08d49b
