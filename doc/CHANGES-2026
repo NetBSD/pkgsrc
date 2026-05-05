@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2820 2026/05/05 13:11:47 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2821 2026/05/05 13:15:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4325,3 +4325,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/ruby-image_size to 3.5.0 [taca 2026-05-05]
 	Updated math/ruby-spreadsheet to 1.3.5 [taca 2026-05-05]
 	Updated net/ruby-amq-protocol to 2.8.0 [taca 2026-05-05]
+	Updated net/ruby-ruby_smb to 3.3.19 [taca 2026-05-05]
