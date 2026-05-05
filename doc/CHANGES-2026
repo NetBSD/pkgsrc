@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2812 2026/05/05 12:39:43 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2813 2026/05/05 12:42:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4317,3 +4317,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-cucumber-messages to 32.3.1 [taca 2026-05-05]
 	Updated devel/ruby-ffi-compiler to 1.4.2 [taca 2026-05-05]
 	Updated devel/ruby-hoe to 4.7.0 [taca 2026-05-05]
+	Removed devel/ruby-gemcutter [taca 2026-05-05]
