@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2024/02/03 15:53:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/05/05 12:55:27 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/dependabot.yml
 ${GEM_LIBDIR}/.github/workflows/check.yml
 ${GEM_LIBDIR}/.github/workflows/rubocop.yml
 ${GEM_LIBDIR}/.gitignore
@@ -59,6 +60,7 @@ ${GEM_LIBDIR}/spec/images/pnm/ascii.22x25.pgm
 ${GEM_LIBDIR}/spec/images/pnm/ascii.22x25.ppm
 ${GEM_LIBDIR}/spec/images/psd/16x20.psd
 ${GEM_LIBDIR}/spec/images/svg/72x100.svg
+${GEM_LIBDIR}/spec/images/svg/768b.430x430.svg
 ${GEM_LIBDIR}/spec/images/svg/crlf.72x100.svg
 ${GEM_LIBDIR}/spec/images/svg/long.72x100.svg
 ${GEM_LIBDIR}/spec/images/svg/long.crlf.72x100.svg
