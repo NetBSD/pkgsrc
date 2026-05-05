@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2814 2026/05/05 12:44:11 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2815 2026/05/05 12:47:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4319,3 +4319,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-hoe to 4.7.0 [taca 2026-05-05]
 	Removed devel/ruby-gemcutter [taca 2026-05-05]
 	Updated devel/ruby-rake-compiler-dock to 1.12.0 [taca 2026-05-05]
+	Updated devel/ruby-rb_sys to 0.9.128 [taca 2026-05-05]
