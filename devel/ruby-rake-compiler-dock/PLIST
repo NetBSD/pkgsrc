@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/01/17 16:29:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/05/05 12:44:00 taca Exp $
 bin/rake-compiler-dock${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.dockerignore
@@ -60,6 +60,7 @@ ${GEM_LIBDIR}/test/rcd_test/test/test_basic.rb
 ${GEM_LIBDIR}/test/test_environment_variables.rb
 ${GEM_LIBDIR}/test/test_mig.rb
 ${GEM_LIBDIR}/test/test_parallel_docker_build.rb
+${GEM_LIBDIR}/test/test_rubygems_plugins.rb
 ${GEM_LIBDIR}/test/test_starter.rb
 ${GEM_LIBDIR}/test/test_versions.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
