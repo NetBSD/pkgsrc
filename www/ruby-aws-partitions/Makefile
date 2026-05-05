@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.110 2026/04/19 14:34:32 taca Exp $
+# $NetBSD: Makefile,v 1.111 2026/05/05 13:31:00 taca Exp $
 
-DISTNAME=	aws-partitions-1.1240.0
+DISTNAME=	aws-partitions-1.1244.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
