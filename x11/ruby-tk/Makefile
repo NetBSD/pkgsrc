@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2025/02/09 15:33:42 taca Exp $
+# $NetBSD: Makefile,v 1.70 2026/05/05 13:58:28 taca Exp $
 
-DISTNAME=		tk-0.5.1
+DISTNAME=		tk-0.6.0
 CATEGORIES=		x11
 
 MAINTAINER=		taca@NetBSD.org
