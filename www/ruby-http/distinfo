@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2026/03/29 13:42:24 taca Exp $
+$NetBSD: distinfo,v 1.22 2026/05/05 13:44:56 taca Exp $
 
-BLAKE2s (http-6.0.2.gem) = fc1959e8fb403cd8ff92a8d726e41595c907818274f73257ab0787557f8a0ce4
-SHA512 (http-6.0.2.gem) = a94f407eed64236f7ff24d0e06d2a2110eb4ae5ecf988e4643d8cb6d70679dcd5f80bf66ece5063a9b5f430689173fc498c5edf26f55eb629bede71c9e57ef79
-Size (http-6.0.2.gem) = 78336 bytes
+BLAKE2s (http-6.0.3.gem) = f227d9146f6a5a370d1bdc1247ae19a88a1d912e9e1ddb1fe536cf8bbe4f8bce
+SHA512 (http-6.0.3.gem) = 5527b7d853b25a6f247b387dbb63907c94e7da3777ce26b32792cf895f8bff2752bd8bfe840182c7ec81a2df678e917bc534f4f173ee9da8c466ad8086156163
+Size (http-6.0.3.gem) = 78336 bytes

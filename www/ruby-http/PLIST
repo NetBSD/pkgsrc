@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2026/03/29 13:42:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/05/05 13:44:56 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
@@ -65,4 +65,6 @@ ${GEM_LIBDIR}/lib/http/uri/normalizer.rb
 ${GEM_LIBDIR}/lib/http/uri/parsing.rb
 ${GEM_LIBDIR}/lib/http/version.rb
 ${GEM_LIBDIR}/sig/http.rbs
+${GEM_LIBDIR}/sig/llhttp.rbs
+${GEM_LIBDIR}/sig/manifest.yaml
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
