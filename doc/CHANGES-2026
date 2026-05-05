@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2799 2026/05/05 04:33:06 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2800 2026/05/05 05:01:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4290,3 +4290,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/libjwt to 3.3.3 [adam 2026-05-05]
 	Updated net/libtorrent to 0.16.11 [adam 2026-05-05]
 	Updated net/rtorrent to 0.16.11 [adam 2026-05-05]
+	Updated devel/py-dulwich to 1.2.1 [adam 2026-05-05]
+	Updated www/py-zope.proxy to 7.2 [adam 2026-05-05]
