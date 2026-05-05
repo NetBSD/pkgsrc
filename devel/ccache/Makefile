@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.95 2026/04/20 13:05:22 adam Exp $
+# $NetBSD: Makefile,v 1.96 2026/05/05 04:20:19 adam Exp $
 
-DISTNAME=	ccache-4.13.4
+DISTNAME=	ccache-4.13.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ccache/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
