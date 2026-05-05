@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2026/03/29 13:42:24 taca Exp $
+# $NetBSD: Makefile,v 1.20 2026/05/05 13:44:56 taca Exp $
 #
 
-DISTNAME=	http-6.0.2
+DISTNAME=	http-6.0.3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
