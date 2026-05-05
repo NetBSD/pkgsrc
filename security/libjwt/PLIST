@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2026/03/11 11:03:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/05/05 04:28:44 adam Exp $
 bin/jwk2key
 bin/jwt-generate
 bin/jwt-verify
@@ -10,7 +10,7 @@ lib/cmake/LibJWT/LibJWTConfig.cmake
 lib/libjwt.a
 lib/libjwt.so
 lib/libjwt.so.14
-lib/libjwt.so.14.2.6
+lib/libjwt.so.14.2.7
 lib/pkgconfig/libjwt.pc
 man/man1/jwk2key.1
 man/man1/jwt-generate.1
