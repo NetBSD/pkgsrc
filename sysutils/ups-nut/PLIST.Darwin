@@ -1,0 +1,3 @@
+$NetBSD: PLIST.Darwin,v 1.1 2026/05/05 12:25:59 gdt Exp $
+libexec/nut/macosx-ups
+share/man/man8/macosx-ups.8
