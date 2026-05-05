@@ -1,13 +1,14 @@
-$NetBSD: patch-dillo-install-hyphenation,v 1.1 2025/01/31 14:33:17 micha Exp $
+$NetBSD: patch-dillo-install-hyphenation,v 1.2 2026/05/05 15:20:13 ktnb Exp $
 
 Unimplemented: POSIX::tmpnam():
   use File::Temp instead at /usr/pkg/bin/dillo-install-hyphenation line 110.
 
---- dillo-install-hyphenation.orig	2024-05-04 19:53:29.000000000 +0000
+--- dillo-install-hyphenation.orig	2026-04-26 15:52:25.000000000 +0000
 +++ dillo-install-hyphenation
 @@ -1,5 +1,6 @@
- #!/usr/bin/env perl
+-#!/usr/bin/env perl
 -use POSIX;
++#!/usr/pkg/bin/perl
 +#use POSIX;
 +use File::Temp;
  use File::Basename;
