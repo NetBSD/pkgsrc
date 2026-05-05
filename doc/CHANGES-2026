@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2801 2026/05/05 08:19:11 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2802 2026/05/05 08:20:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4305,3 +4305,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/ruby-activejob61 [taca 2026-05-05]
 	Removed devel/ruby-activemodel61 [taca 2026-05-05]
 	Removed devel/ruby-activesupport61 [taca 2026-05-05]
+	Updated mail/neomutt to 20260504 [wiz 2026-05-05]
