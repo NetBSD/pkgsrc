@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.760 2026/05/02 04:29:30 pin Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.761 2026/05/05 10:09:38 pin Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30324,7 +30324,7 @@ castor-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/
 chess-tui-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 crates-io-cli-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 defguard-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
-eilmeldung-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
+eilmeldung<1.5.0	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 endbasic-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 flawz-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 gitnr-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
