@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2807 2026/05/05 10:08:05 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2808 2026/05/05 10:11:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4312,3 +4312,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/ruby-sequel to 5.104.0 [taca 2026-05-05]
 	Updated net/xfr to 0.9.14 [pin 2026-05-05]
 	Updated news/eilmeldung to 1.5.0 [pin 2026-05-05]
+	Updated devel/mise to 2026.5.0 [pin 2026-05-05]
