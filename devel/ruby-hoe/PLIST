@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/01/13 15:20:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/05/05 12:39:21 taca Exp $
 bin/sow${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
@@ -17,7 +17,6 @@ ${GEM_LIBDIR}/lib/hoe/deps.rb
 ${GEM_LIBDIR}/lib/hoe/flay.rb
 ${GEM_LIBDIR}/lib/hoe/flog.rb
 ${GEM_LIBDIR}/lib/hoe/gem_prelude_sucks.rb
-${GEM_LIBDIR}/lib/hoe/gemcutter.rb
 ${GEM_LIBDIR}/lib/hoe/git.rb
 ${GEM_LIBDIR}/lib/hoe/inline.rb
 ${GEM_LIBDIR}/lib/hoe/newb.rb
@@ -38,7 +37,6 @@ ${GEM_LIBDIR}/template/lib/file_name.rb.erb
 ${GEM_LIBDIR}/template/test/test_file_name.rb.erb
 ${GEM_LIBDIR}/test/test_hoe.rb
 ${GEM_LIBDIR}/test/test_hoe_debug.rb
-${GEM_LIBDIR}/test/test_hoe_gemcutter.rb
 ${GEM_LIBDIR}/test/test_hoe_package.rb
 ${GEM_LIBDIR}/test/test_hoe_publish.rb
 ${GEM_LIBDIR}/test/test_hoe_test.rb
