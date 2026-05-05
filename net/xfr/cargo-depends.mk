@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.11 2026/05/03 14:59:11 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.12 2026/05/05 10:05:00 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -42,7 +42,7 @@ CARGO_CRATE_DEPENDS+=	ciborium-io-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-ll-0.2.2
 CARGO_CRATE_DEPENDS+=	clap-4.6.1
 CARGO_CRATE_DEPENDS+=	clap_builder-4.6.0
-CARGO_CRATE_DEPENDS+=	clap_complete-4.6.2
+CARGO_CRATE_DEPENDS+=	clap_complete-4.6.3
 CARGO_CRATE_DEPENDS+=	clap_derive-4.6.1
 CARGO_CRATE_DEPENDS+=	clap_lex-1.0.0
 CARGO_CRATE_DEPENDS+=	cmov-0.5.3
@@ -264,7 +264,7 @@ CARGO_CRATE_DEPENDS+=	rustc-hash-2.1.1
 CARGO_CRATE_DEPENDS+=	rustc_version-0.4.1
 CARGO_CRATE_DEPENDS+=	rusticata-macros-4.1.0
 CARGO_CRATE_DEPENDS+=	rustix-1.1.4
-CARGO_CRATE_DEPENDS+=	rustls-0.23.39
+CARGO_CRATE_DEPENDS+=	rustls-0.23.40
 CARGO_CRATE_DEPENDS+=	rustls-native-certs-0.8.3
 CARGO_CRATE_DEPENDS+=	rustls-pki-types-1.14.0
 CARGO_CRATE_DEPENDS+=	rustls-platform-verifier-0.6.2
