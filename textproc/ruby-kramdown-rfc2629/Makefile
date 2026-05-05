@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.48 2026/03/29 13:19:45 taca Exp $
+# $NetBSD: Makefile,v 1.49 2026/05/05 13:19:59 taca Exp $
 
-DISTNAME=	kramdown-rfc2629-1.7.35
+DISTNAME=	kramdown-rfc2629-1.7.38
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/cabo/kramdown-rfc2629
+HOMEPAGE=	https://github.com/cabo/kramdown-rfc
 COMMENT=	IETF RFC 2629 back end for kramdown
 LICENSE=	mit
 
