@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2025/05/30 17:31:48 jschauma Exp $
+$NetBSD: distinfo,v 1.2 2026/05/05 10:19:42 tm Exp $
 
 BLAKE2s (mod_evasive-2.4.0.tar.gz) = 07b3a67d6f1c4a8728ad11e5c776f836298d5696ad4830d3b2aec14ff2939725
 SHA512 (mod_evasive-2.4.0.tar.gz) = ca3a10e3b18f077100066a44fb8cb9d1f308af341347ba0145d27dbfe7933823aaacd027157c1db761faa5a1b53f0c0595bf5a50f760f046d99d06414790bbef
 Size (mod_evasive-2.4.0.tar.gz) = 101716 bytes
-SHA1 (patch-mod_evasive24.c) = 634a7ec5dafb42669fadf49f1ffd11cb2bcad9ec
+SHA1 (patch-mod_evasive24.c) = 0102c3a8ed2793f6bc7ba616c5d6817f8b742630
