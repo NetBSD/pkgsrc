@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2798 2026/05/05 04:23:35 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2799 2026/05/05 04:33:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4287,3 +4287,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/fasttracker2 to 2.19 [fox 2026-05-05]
 	Updated devel/ccache to 4.13.6 [adam 2026-05-05]
 	Updated devel/libgit2 to 1.9.3 [adam 2026-05-05]
+	Updated security/libjwt to 3.3.3 [adam 2026-05-05]
+	Updated net/libtorrent to 0.16.11 [adam 2026-05-05]
+	Updated net/rtorrent to 0.16.11 [adam 2026-05-05]
