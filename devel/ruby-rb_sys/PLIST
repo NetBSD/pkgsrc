@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/11/03 05:38:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/05/05 12:47:02 taca Exp $
 bin/rb-sys-dock${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
@@ -9,6 +9,7 @@ ${GEM_LIBDIR}/certs/ianks.pem
 ${GEM_LIBDIR}/exe/rb-sys-dock
 ${GEM_LIBDIR}/lib/rb_sys.rb
 ${GEM_LIBDIR}/lib/rb_sys/cargo.rb
+${GEM_LIBDIR}/lib/rb_sys/cargo/config.rb
 ${GEM_LIBDIR}/lib/rb_sys/cargo/metadata.rb
 ${GEM_LIBDIR}/lib/rb_sys/cargo_builder.rb
 ${GEM_LIBDIR}/lib/rb_sys/cargo_builder/link_flag_converter.rb
