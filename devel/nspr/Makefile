@@ -1,21 +1,13 @@
-# $NetBSD: Makefile,v 1.128 2025/11/11 08:59:30 wiz Exp $
+# $NetBSD: Makefile,v 1.129 2026/05/05 14:00:36 wiz Exp $
 
-DISTNAME=	nspr-${NSPR_RELEASE:S/.0$//}
-NSPR_RELEASE=	4.38.2
+DISTNAME=	nspr-4.39
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=nspr/releases/v${NSPR_RELEASE:S/.0$//}/src/}
+MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=nspr/releases/v${PKGVERSION_NOREV}/src/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR
 COMMENT=	Platform-neutral API for system level and libc like functions
 LICENSE=	mpl-2.0
-
-CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
-CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
-CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}js/src/configure
-CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}configure
-
-OVERRIDE_DIRDEPTH=	3
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_LIBSUBDIR= nspr
@@ -64,6 +56,8 @@ SUBST_STAGE.nspr-rpath=		pre-configure
 SUBST_FILES.nspr-rpath=		nspr/lib/libc/src/Makefile.in nspr/lib/ds/Makefile.in
 SUBST_SED.nspr-rpath=		-e 's|$$$$ORIGIN|${PREFIX}/lib/nspr|g'
 
+PKGCONFIG_OVERRIDE+=	nspr/config/nspr.pc.in
+
 .if ${OPSYS} == "OpenBSD"
 CHECK_SHLIBS_SUPPORTED=	no
 .endif
@@ -83,45 +77,25 @@ SO_SUFFIX=		so.1.0
 .endif
 PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 
-.if ${OPSYS} == "SunOS"
-.  if defined(ABI) && ${ABI} == "64"
-CONFIGURE_ARGS+=	--enable-64bit
-.  endif
-.endif
-
-.if ${OPSYS} == "Linux"
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux" || ${OPSYS} == "Darwin"
 .  if defined(ABI) && ${ABI} == "64"
 CONFIGURE_ARGS+=	--enable-64bit
 .  endif
 .endif
 
 .if ${OPSYS} == "Darwin"
-.  if defined(ABI) && ${ABI} == "64"
-CONFIGURE_ARGS+=		--enable-64bit
-.  endif
 .  if exists(/Developer/Headers/FlatCarbon)
 BUILDLINK_PASSTHRU_DIRS+=	Developer/Headers/FlatCarbon
 .  endif
 .endif
 
+INSTALLATION_DIRS+=	lib/pkgconfig
+
 pre-configure:
 	cd ${WRKSRC}/nspr && autoconf
 
-post-build:
-	set -e; ( \
-	  ${ECHO} "Name: NSPR"; \
-	  ${ECHO} "Description: The Netscape Portable Runtime";	\
-	  ${ECHO} "Version: ${NSPR_RELEASE}";			\
-	  ${ECHO} "Cflags: -I${PREFIX}/include/nspr";		\
-	  ${ECHO} "Libs: -L${PREFIX}/lib/nspr"			\
-	    "${COMPILER_RPATH_FLAG}${PREFIX}/lib/nspr"		\
-	    "-lplds4 -lplc4 -lnspr4 "${BUILDLINK_LIBS.pthread:Q};	\
-	) > ${WRKDIR}/nspr.pc
-
-INSTALLATION_DIRS+=	lib/pkgconfig
-
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/nspr.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
+	${LN} -s ../nspr/pkgconfig/nspr.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
