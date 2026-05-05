@@ -1,6 +1,6 @@
 EDE (Equinox Desktop Environment) is a simple and fast desktop
 environment with familiar look and feel.  EDE uses the FLTK toolkit
-for GUI presentation and the UNIX philosophy for it's design, where
+for GUI presentation and the UNIX philosophy for its design, where
 EDE splits each component in a separate executable entity to do
-one job, and do it good.  This makes EDE very easy to alter for
+one job, and do it well.  This makes EDE very easy to alter for
 user needs and requirements.
