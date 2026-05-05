@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2025/11/19 13:38:28 adam Exp $
+$NetBSD: distinfo,v 1.15 2026/05/05 05:01:20 adam Exp $
 
-BLAKE2s (zope_proxy-7.1.tar.gz) = 591155fb789c05b8c66bec61979157b7cd1d4a36ea43ecb8a133ae42a01d0336
-SHA512 (zope_proxy-7.1.tar.gz) = fe2e2580fc3adc0e3e9346530135a8875534f0f01d2cb6fc4a52adb9924d28d1ea3895dbabb7d16af54c6cc340bf21a3d27e8532de9879b21099e640b1665850
-Size (zope_proxy-7.1.tar.gz) = 37672 bytes
+BLAKE2s (zope_proxy-7.2.tar.gz) = 2e40545b8a4903ab417e62bb27b24611bff555e1358dd914f1eab1c771be4c6f
+SHA512 (zope_proxy-7.2.tar.gz) = 349b7b24a7afa3b113936c6ab4aa14a9d5cedbdbfc40c102c889e5ca5e781d7b59089ef1460162780a3aad5e085c39472d035fa4e4831bb5dbf1b69d1d0e49e9
+Size (zope_proxy-7.2.tar.gz) = 40933 bytes
