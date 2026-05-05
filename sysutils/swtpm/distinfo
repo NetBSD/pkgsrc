@@ -1,8 +1,13 @@
-$NetBSD: distinfo,v 1.2 2024/12/09 13:48:40 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2026/05/05 10:21:45 jperkin Exp $
 
 BLAKE2s (swtpm-0.10.0.tar.gz) = 4e78603298ccfdd77ca821c3c4d81100f771b1f15f93f82d6727c9e9d58720ac
 SHA512 (swtpm-0.10.0.tar.gz) = 6f1848b0514799417582c1a5bedf9b7110e3627ab14f02ea193ad76ce8a188eba596494f410405c5f7226e2daf7d9ee889983a2265285839e72de12e6368180d
 Size (swtpm-0.10.0.tar.gz) = 414698 bytes
 SHA1 (patch-configure.ac) = 00a5e52528150a356926a07b816268304456047c
+SHA1 (patch-include_swtpm_tpm__ioctl.h) = a817b926caf57a45291414f7c55d9568cd0e2578
+SHA1 (patch-include_sys__dependencies.h) = 2e1695a66296b918428ceeeddcbb4a6a456d0c42
 SHA1 (patch-samples_Makefile.am) = 4c2559decb43286f431dfabcec703e65f1a3ace2
-SHA1 (patch-tests_sed-inplace) = 85242ad8cc799238888942cd6e0305d6c58f68c7
+SHA1 (patch-src_swtpm__ioctl_tpm__ioctl.c) = 766bed322284839e5b263d55d6b98c10905b4ea5
+SHA1 (patch-src_swtpm_check__algos.c) = 0cdfdcd7c22b39144d45006779e34b03563c8dd4
+SHA1 (patch-src_swtpm_common.c) = 3fcabfdccd2a83ea2b68cb13ae1d0e2e0aeb9eac
+SHA1 (patch-tests_sed-inplace) = 395cc1c75690ac07cf2c53ad0997f00453a0b124
