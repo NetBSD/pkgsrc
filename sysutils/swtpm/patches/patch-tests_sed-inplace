@@ -1,4 +1,6 @@
-$NetBSD: patch-tests_sed-inplace,v 1.1 2024/12/09 13:48:40 ryoon Exp $
+$NetBSD: patch-tests_sed-inplace,v 1.2 2026/05/05 10:21:46 jperkin Exp $
+
+Support sed -i on more OS.
 
 --- tests/sed-inplace.orig	2024-12-04 15:21:18.719762588 +0000
 +++ tests/sed-inplace
@@ -6,7 +8,7 @@ $NetBSD: patch-tests_sed-inplace,v 1.1 2024/12/09 13:48:40 ryoon Exp $
  #!/usr/bin/env bash
  
 -if [[ "$(uname -s)" =~ (Linux|CYGWIN_NT-) ]]; then
-+if [[ "$(uname -s)" =~ (Linux|CYGWIN_NT-|BSD) ]]; then
++if [[ "$(uname -s)" =~ (Linux|CYGWIN_NT-|BSD|SunOS) ]]; then
  	sed -i "$1" "$2"
  else
  	sed -i '' "$1" "$2"
