@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2794 2026/05/04 23:42:14 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.2795 2026/05/05 00:01:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4275,3 +4275,11 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/ffplay8 to 8.1.1 [adam 2026-05-04]
 	Updated x11/mlterm to 3.9.4nb7 [tsutsui 2026-05-04]
 	Updated geography/pdal-lib to 2.10.1 [gdt 2026-05-04]
+	Updated mail/postfix to 3.11.2 [taca 2026-05-05]
+	Updated mail/postfix-cdb to 3.11.2 [taca 2026-05-05]
+	Updated mail/postfix-ldap to 3.11.2 [taca 2026-05-05]
+	Updated mail/postfix-lmdb to 3.11.2 [taca 2026-05-05]
+	Updated mail/postfix-mysql to 3.11.2 [taca 2026-05-05]
+	Updated mail/postfix-pcre to 3.11.2 [taca 2026-05-05]
+	Updated mail/postfix-pgsql to 3.11.2 [taca 2026-05-05]
+	Updated mail/postfix-sqlite to 3.11.2 [taca 2026-05-05]
