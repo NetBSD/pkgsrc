@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4627 2026/05/05 08:17:45 taca Exp $
+# $NetBSD: Makefile,v 1.4628 2026/05/05 12:42:01 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3449,7 +3449,6 @@ SUBDIR+=	ruby-fiber-storage
 SUBDIR+=	ruby-filesize
 SUBDIR+=	ruby-flexmock
 SUBDIR+=	ruby-forwardable-extended
-SUBDIR+=	ruby-gemcutter
 SUBDIR+=	ruby-generator
 SUBDIR+=	ruby-getopt
 SUBDIR+=	ruby-gettext
