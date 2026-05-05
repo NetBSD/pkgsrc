@@ -5,7 +5,7 @@ they use a window manager at all. Nevertheless KWin/X11 provides a steep
 learning curve for advanced features, which are available, if they do not
 conflict with the primary mission. KWin does not have a dedicated targeted
 user group, but follows the targeted user group of the Desktop Shell using
-KWin/X11 as it's window manager.
+KWin/X11 as its window manager.
 
 KWin is not...
  * a standalone window manager (c.f. openbox, i3) and does not provide any
