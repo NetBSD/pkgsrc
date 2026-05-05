@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2803 2026/05/05 08:26:13 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2804 2026/05/05 09:55:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4308,3 +4308,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/neomutt to 20260504 [wiz 2026-05-05]
 	Updated www/py-nbconvert to 7.17.1 [adam 2026-05-05]
 	Updated www/py-jupyter-lsp to 2.3.1 [adam 2026-05-05]
+	Updated archivers/ruby-zip to 3.3.0 [taca 2026-05-05]
