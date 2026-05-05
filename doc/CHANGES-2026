@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2817 2026/05/05 12:54:01 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2818 2026/05/05 12:55:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4322,3 +4322,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-rb_sys to 0.9.128 [taca 2026-05-05]
 	Updated devel/ruby-tins to 1.53.0 [taca 2026-05-05]
 	Updated graphics/ruby-RMagick to 7.0.0 [taca 2026-05-05]
+	Updated graphics/ruby-image_size to 3.5.0 [taca 2026-05-05]
