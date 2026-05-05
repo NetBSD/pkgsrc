@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2025/05/18 01:02:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.23 2026/05/05 13:15:45 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/metasploit-framework_acceptance.yml
 ${GEM_LIBDIR}/.github/workflows/verify.yml
@@ -303,6 +303,8 @@ ${GEM_LIBDIR}/lib/ruby_smb/nbss/session_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/ntlm.rb
 ${GEM_LIBDIR}/lib/ruby_smb/ntlm/client.rb
 ${GEM_LIBDIR}/lib/ruby_smb/peer_info.rb
+${GEM_LIBDIR}/lib/ruby_smb/rap.rb
+${GEM_LIBDIR}/lib/ruby_smb/rap/net_share_enum.rb
 ${GEM_LIBDIR}/lib/ruby_smb/server.rb
 ${GEM_LIBDIR}/lib/ruby_smb/server/cli.rb
 ${GEM_LIBDIR}/lib/ruby_smb/server/server_client.rb
@@ -374,6 +376,8 @@ ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/nt_trans/create_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/nt_trans/request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/nt_trans/response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/nt_trans/subcommands.rb
+${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/open_andx_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/open_andx_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/read_andx_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/read_andx_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/session_setup_legacy_request.rb
@@ -396,6 +400,7 @@ ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/find_first2_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/find_information_level.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/find_information_level/find_file_both_directory_info.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/find_information_level/find_file_full_directory_info.rb
+${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/find_information_level/find_info_standard.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/find_next2_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/find_next2_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/open2_request.rb
@@ -417,6 +422,7 @@ ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/set_file_information_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/set_file_information_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/subcommands.rb
+${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/win9x_framing.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/tree_connect_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/tree_connect_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/tree_disconnect_request.rb
@@ -674,6 +680,7 @@ ${GEM_LIBDIR}/spec/lib/ruby_smb/nbss/session_header_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/nbss/session_request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/ntlm/client/session_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/ntlm/client_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/rap/net_share_enum_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/server/server_client_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/server/session_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/server/share/provider/disk_spec.rb
@@ -753,6 +760,7 @@ ${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/packet/trans2/request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/packet/trans2/response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/packet/trans2/set_file_information_request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/packet/trans2/set_file_information_response_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/packet/trans2/win9x_framing_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/packet/tree_connect_request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/packet/tree_connect_response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/packet/tree_disconnect_request_spec.rb
