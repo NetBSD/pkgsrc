@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2025/05/17 08:01:36 taca Exp $
+# $NetBSD: Makefile,v 1.61 2026/05/05 12:57:03 taca Exp $
 
-DISTNAME=	spreadsheet-1.3.4
+DISTNAME=	spreadsheet-1.3.5
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
