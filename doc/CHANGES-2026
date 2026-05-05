@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2835 2026/05/05 18:01:06 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2836 2026/05/05 18:10:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4344,3 +4344,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/defguard to 2.0.0 [adam 2026-05-05]
 	Updated security/defguard-proxy to 2.0.0 [adam 2026-05-05]
 	Updated security/defguard-gateway to 2.0.1 [adam 2026-05-05]
+	Updated mail/py-checkdmarc to 5.15.3 [adam 2026-05-05]
+	Updated textproc/py-pugjs to 6.0.3 [adam 2026-05-05]
+	Updated textproc/py-parse to 1.22.0 [adam 2026-05-05]
