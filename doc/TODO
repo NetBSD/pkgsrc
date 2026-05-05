@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27209 2026/05/05 17:47:31 ktnb Exp $
+$NetBSD: TODO,v 1.27210 2026/05/05 20:27:43 ktnb Exp $
 
 Suggested new packages
 ======================
@@ -899,7 +899,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o makeztxt-1.60
 	o man-pages-5.11
 	o manedit-1.2.1
-	o mariadb-10.6.25
 	o mariadb-10.11.16
 	o mariadb-11.4.10
 	o mariadb-11.8.6
