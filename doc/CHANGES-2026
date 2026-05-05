@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2810 2026/05/05 12:29:15 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2811 2026/05/05 12:36:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4315,3 +4315,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/mise to 2026.5.0 [pin 2026-05-05]
 	Updated textproc/rumdl to 0.1.88 [pin 2026-05-05]
 	Updated devel/ruby-cucumber-messages to 32.3.1 [taca 2026-05-05]
+	Updated devel/ruby-ffi-compiler to 1.4.2 [taca 2026-05-05]
