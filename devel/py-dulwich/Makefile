@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2026/04/24 11:07:18 adam Exp $
+# $NetBSD: Makefile,v 1.79 2026/05/05 05:00:18 adam Exp $
 
-DISTNAME=	dulwich-1.2.0
+DISTNAME=	dulwich-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dulwich/}
