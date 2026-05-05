@@ -1,20 +1,7 @@
-@comment $NetBSD: PLIST,v 1.41 2026/04/12 14:46:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.42 2026/05/05 12:53:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/RMagick2.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
-${GEM_LIBDIR}/.devcontainer/Dockerfile
-${GEM_LIBDIR}/.devcontainer/ImageMagick6/devcontainer.json
-${GEM_LIBDIR}/.devcontainer/devcontainer.json
-${GEM_LIBDIR}/.devcontainer/setup-repo.sh
-${GEM_LIBDIR}/.devcontainer/setup-user.sh
-${GEM_LIBDIR}/.editorconfig
-${GEM_LIBDIR}/.github/ISSUE_TEMPLATE/report.yml
-${GEM_LIBDIR}/.github/dependabot.yml
-${GEM_LIBDIR}/.github/workflows/ci.yml
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.rspec
-${GEM_LIBDIR}/.rubocop.yml
-${GEM_LIBDIR}/.rubocop_todo.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CODE_OF_CONDUCT.md
@@ -23,8 +10,6 @@ ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/before_install_linux.sh
-${GEM_LIBDIR}/before_install_osx.sh
 ${GEM_LIBDIR}/ext/RMagick/extconf.rb
 ${GEM_LIBDIR}/ext/RMagick/rmagick.cpp
 ${GEM_LIBDIR}/ext/RMagick/rmagick.h
