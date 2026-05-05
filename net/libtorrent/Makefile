@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.85 2026/04/23 13:51:33 adam Exp $
+# $NetBSD: Makefile,v 1.86 2026/05/05 04:32:33 adam Exp $
 
-DISTNAME=	libtorrent-0.16.10
+DISTNAME=	libtorrent-0.16.11
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rakshasa/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
