@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2833 2026/05/05 14:09:23 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2834 2026/05/05 15:20:39 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4340,3 +4340,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/ruby-tk to 0.6.0 [taca 2026-05-05]
 	Updated devel/nspr to 4.39 [wiz 2026-05-05]
 	Updated lang/ruby40 to 4.0.3 [taca 2026-05-05]
+	Updated www/dillo to 3.3.0 [ktnb 2026-05-05]
