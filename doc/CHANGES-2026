@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2831 2026/05/05 13:58:38 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2832 2026/05/05 14:00:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4338,3 +4338,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-http to 6.0.3 [taca 2026-05-05]
 	Updated www/ruby-http-cookie to 1.1.6 [taca 2026-05-05]
 	Updated x11/ruby-tk to 0.6.0 [taca 2026-05-05]
+	Updated devel/nspr to 4.39 [wiz 2026-05-05]
