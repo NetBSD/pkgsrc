@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2026/05/03 14:59:11 pin Exp $
+$NetBSD: distinfo,v 1.12 2026/05/05 10:05:00 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -126,9 +126,9 @@ Size (clap-4.6.1.crate) = 61836 bytes
 BLAKE2s (clap_builder-4.6.0.crate) = 5d7686f002e18c9bb10f76b283fde443f2c2c50eb9a221f796e085bafe2a231f
 SHA512 (clap_builder-4.6.0.crate) = 43b26377a8f15d29f8fdc9ada914888d87111084c5e205308d166789a27d91c2d8db6756b24d48ef8a293c92ca4c27dbf5433db21e336b2116d51377116fabd7
 Size (clap_builder-4.6.0.crate) = 171122 bytes
-BLAKE2s (clap_complete-4.6.2.crate) = 2247bcd01d5044e6fe84a7a737c7785eec2cd1ad803a5b9e31bf7f6ee2a12306
-SHA512 (clap_complete-4.6.2.crate) = c031870668dad42f2dd789daee2a45017ef3adbed2dc4acdca9d004bfb1a5488eb2f4efab0ce3773102c834315d7d88deb9ae2963dab7c90d9f18089735e267a
-Size (clap_complete-4.6.2.crate) = 50291 bytes
+BLAKE2s (clap_complete-4.6.3.crate) = 79bb46e210d8e4680c918f22134500f84576e8294b93f807594be936708c71ed
+SHA512 (clap_complete-4.6.3.crate) = 27d0440eec2970b05a339f94bf9568ec3896a28928366c574a17db5e6f22e80ac7362aef2a535ec4a764e4ba44c4fc0697624ad278598fb303df13517b66798d
+Size (clap_complete-4.6.3.crate) = 50627 bytes
 BLAKE2s (clap_derive-4.6.1.crate) = 945495dc8a3310d4f2fdb25a5060fd4d3ba238575b3eb16bd0076fc62979c053
 SHA512 (clap_derive-4.6.1.crate) = ed210527cecfe3791b9d5af7279b337890b46b61fa05fa6979c88db1693ddf0ee5a4eb0904dd93e2da76f5c870963cc79b90d87cfc3cecf166a65364c16ffd06
 Size (clap_derive-4.6.1.crate) = 33512 bytes
@@ -792,9 +792,9 @@ Size (rusticata-macros-4.1.0.crate) = 11746 bytes
 BLAKE2s (rustix-1.1.4.crate) = 47b462406ba74a3225cf16b2e8b75855857edd58915f4033d7387b67cc694948
 SHA512 (rustix-1.1.4.crate) = 33619ed2434963a98b0846414656bcc4945ca0e9b883821869fe0cc86db4a74c6961ce1375963ae49c6b5044ad0536eda807dac1320209739c9d669bd80fd75c
 Size (rustix-1.1.4.crate) = 425241 bytes
-BLAKE2s (rustls-0.23.39.crate) = 689117f5209f243d0a7c9fbcc6c54e3f50baf05f5e572d2b4c6a46efdf6a7b7e
-SHA512 (rustls-0.23.39.crate) = e53b5186cada311bada9f685db668fd607286952c99739b4018d90f8b49ea081bd7cdd26d0faa8481b2c93dd08bf794b959ead1b21c63b1f5e245337f5c57993
-Size (rustls-0.23.39.crate) = 372747 bytes
+BLAKE2s (rustls-0.23.40.crate) = 30e4093040e02358ec1bae8ff70890611db5893fdd861b8e014a8ad1ec7321ad
+SHA512 (rustls-0.23.40.crate) = d16484fd4904f4cf61e3a3612da54d91c1617d63725debceae56b46686a7fde6d5720961e7778dc3a17085c9e5fcd0ac3f2da2ed05f353ef071090dc86505aab
+Size (rustls-0.23.40.crate) = 373839 bytes
 BLAKE2s (rustls-native-certs-0.8.3.crate) = 54b2e636a90d1b4e1d949adb15cfb9844a23c2cd689d9e4d75adbaf2b3ae2f22
 SHA512 (rustls-native-certs-0.8.3.crate) = ffca026a5365a97e7a254faac2ceab188bd1cf51876a32e99b16bdf5902363c6416e8e28247f53864609d0f492646fead7b19328e376d0b8b2073e6fb3bc60a8
 Size (rustls-native-certs-0.8.3.crate) = 30380 bytes
@@ -1311,9 +1311,9 @@ Size (writeable-0.6.2.crate) = 25181 bytes
 BLAKE2s (x509-parser-0.18.1.crate) = a5f2838a9880a6e075ead6b25c4078314403bbd5f9d59df631663b87ee4edee4
 SHA512 (x509-parser-0.18.1.crate) = a30af92885d157b837832b7a3242fc8dbe5eacbce97ce5cb92a8c5e948324ec38150ca709734eb191a914f4f34d4d521ba313b72a57541a62cb254e8808535ef
 Size (x509-parser-0.18.1.crate) = 102625 bytes
-BLAKE2s (xfr-0.9.12.tar.gz) = fd123eb4d3b80b3e59bd94ed5beed625325a960b4c52efa1a3fbc8830970cca1
-SHA512 (xfr-0.9.12.tar.gz) = 0656a86dcab065b4313f8fa6982e7e513b13e89fd35fe5e2f6f6ec85c501dbd9955630c4323efeea350d4d5ee709ec632acf707893ae1e5938726969a0896cb8
-Size (xfr-0.9.12.tar.gz) = 800865 bytes
+BLAKE2s (xfr-0.9.14.tar.gz) = c22b38187a8ecf5b1a6083d6f802183836df6f1aa7178cd0a525df04ec12130b
+SHA512 (xfr-0.9.14.tar.gz) = b8269a626bda125be580722daaa5083c4a3f8cdc2bdf96717f5c6eb4c4fd379a501b87f817eb8b9864dcf25f953215b75d7bf9b33048e910a37c13f2acd4878c
+Size (xfr-0.9.14.tar.gz) = 829652 bytes
 BLAKE2s (yasna-0.5.2.crate) = 25391034f1d4c9715add3175629a012024dc2a34fa85b4dc85c4dce2c100742a
 SHA512 (yasna-0.5.2.crate) = 7532b6d06b34b0a5e2b769c5d2647f910bec481d98482bf9cea212f1bd1466336d7cb117d0c2e240e7673b2825f1d091619f79814bad836d25cf3a6ca2be63e5
 Size (yasna-0.5.2.crate) = 34859 bytes
