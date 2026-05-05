@@ -1,8 +1,10 @@
-$NetBSD: patch-ae,v 1.1.1.1 2012/04/13 18:50:49 ryoon Exp $
+$NetBSD: patch-ae,v 1.2 2026/05/05 00:12:30 taca Exp $
 
---- docs/conf/httpd.conf.in.orig	2012-02-06 16:55:22.000000000 +0000
+Directory structure for pkgsrc.
+
+--- docs/conf/httpd.conf.in.orig	2026-03-16 06:19:31.000000000 +0000
 +++ docs/conf/httpd.conf.in
-@@ -361,42 +361,42 @@ LogLevel warn
+@@ -370,42 +370,42 @@ LogLevel warn
  # necessary.
  
  # Server-pool management (MPM specific)
@@ -55,5 +57,5 @@ $NetBSD: patch-ae,v 1.1.1.1 2012/04/13 18:50:49 ryoon Exp $
 -#Include @rel_sysconfdir@/extra/httpd-ssl.conf
 +#Include @rel_sysconfdir@/httpd-ssl.conf
  #
- # Note: The following must must be present to support
+ # Note: The following must be present to support
  #       starting without SSL on platforms with no /dev/random equivalent
