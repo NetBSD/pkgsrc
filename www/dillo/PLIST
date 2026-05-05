@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.21 2025/01/31 14:33:17 micha Exp $
+@comment $NetBSD: PLIST,v 1.22 2026/05/05 15:20:13 ktnb Exp $
 bin/dillo
+bin/dilloc
 bin/dillo-install-hyphenation
 bin/dpid
 bin/dpidc

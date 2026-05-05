@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.99 2026/01/27 08:40:48 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2026/05/05 15:20:13 ktnb Exp $
 
-DISTNAME=	dillo-3.2.0
-PKGREVISION=	5
+DISTNAME=	v3.3.0
+PKGNAME=	dillo-${DISTNAME:S/v//}
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_GITHUB:=dillo-browser/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	https://git.sr.ht/~dillo/dillo/archive/
+DIST_SUBDIR=	dillo
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://dillo-browser.org/
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+# x11/fltk is >1.3, which requires this flag
+CONFIGURE_ARGS+=	--enable-experimental-fltk
 USE_FEATURES+=		snprintf vsnprintf
 USE_TOOLS+=		aclocal autoconf automake autoreconf gmake perl:run
 
@@ -33,6 +35,8 @@ INSTALLATION_DIRS=	share/doc/dillo ${EGDIR}
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 
 .include "options.mk"
+
+WRKSRC=		${WRKDIR}/dillo-${DISTNAME}
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fiv
