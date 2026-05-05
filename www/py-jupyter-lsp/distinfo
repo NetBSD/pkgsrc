@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/09/03 14:32:59 adam Exp $
+$NetBSD: distinfo,v 1.8 2026/05/05 08:25:56 adam Exp $
 
-BLAKE2s (jupyter_lsp-2.3.0.tar.gz) = 01cc6eb9569b5b536b39abb4d6c72e0a232e2c199ff28e63a377ce8b31921223
-SHA512 (jupyter_lsp-2.3.0.tar.gz) = 7f3ee59cf0a42dc426c9084624f8c5314a294939df73a74e7822cc0f67b4394682b2375434074b2d0a5d7d44bee1286170367e9762c06bb2bc7b8cd7ba078963
-Size (jupyter_lsp-2.3.0.tar.gz) = 54823 bytes
+BLAKE2s (jupyter_lsp-2.3.1.tar.gz) = 4efadbf1f07d33cd15999d59bfc1691529b708934ce76f12d3f654d820a39010
+SHA512 (jupyter_lsp-2.3.1.tar.gz) = f7d13fdf4cbcec048b2a7fbf865994af6789f406cb7d9388999f42c873c144a663626d6cfe53b3bb4138e58abef724198719f69ea92a4284b22890fad3cc13e2
+Size (jupyter_lsp-2.3.1.tar.gz) = 55677 bytes
