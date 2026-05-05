@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2836 2026/05/05 18:10:01 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2837 2026/05/05 20:25:40 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4347,3 +4347,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/py-checkdmarc to 5.15.3 [adam 2026-05-05]
 	Updated textproc/py-pugjs to 6.0.3 [adam 2026-05-05]
 	Updated textproc/py-parse to 1.22.0 [adam 2026-05-05]
+	Updated databases/mariadb106-client to 10.6.25 [ktnb 2026-05-05]
