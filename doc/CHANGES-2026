@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2823 2026/05/05 13:25:59 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2824 2026/05/05 13:28:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4328,3 +4328,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ruby-ruby_smb to 3.3.19 [taca 2026-05-05]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.7.38 [taca 2026-05-05]
 	Updated textproc/ruby-multi_json to 1.21.1 [taca 2026-05-05]
+	Updated time/ruby-tzinfo-data to 1.2026.2 [taca 2026-05-05]
