@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2839 2026/05/06 05:15:48 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2840 2026/05/06 05:28:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4350,3 +4350,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/mariadb106-client to 10.6.25 [ktnb 2026-05-05]
 	Updated databases/mariadb106-server to 10.6.25 [ktnb 2026-05-05]
 	Updated lang/ruby34 to 3.4.9nb1 [taca 2026-05-06]
+	Updated lang/ruby33 to 3.3.11nb1 [taca 2026-05-06]
