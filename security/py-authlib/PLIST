@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2026/04/23 09:28:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/05/06 11:01:02 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -19,6 +19,9 @@ ${PYSITELIB}/authlib/common/encoding.pyo
 ${PYSITELIB}/authlib/common/errors.py
 ${PYSITELIB}/authlib/common/errors.pyc
 ${PYSITELIB}/authlib/common/errors.pyo
+${PYSITELIB}/authlib/common/language.py
+${PYSITELIB}/authlib/common/language.pyc
+${PYSITELIB}/authlib/common/language.pyo
 ${PYSITELIB}/authlib/common/security.py
 ${PYSITELIB}/authlib/common/security.pyc
 ${PYSITELIB}/authlib/common/security.pyo
