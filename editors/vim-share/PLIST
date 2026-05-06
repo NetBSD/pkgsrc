@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.87 2026/04/23 22:24:03 morr Exp $
+@comment $NetBSD: PLIST,v 1.88 2026/05/06 20:26:50 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -415,6 +415,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/abap.vim
 share/vim/${VIM_SUBDIR}/ftplugin/abaqus.vim
 share/vim/${VIM_SUBDIR}/ftplugin/abnf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/ada.vim
+share/vim/${VIM_SUBDIR}/ftplugin/algol68.vim
 share/vim/${VIM_SUBDIR}/ftplugin/alsaconf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/ant.vim
 share/vim/${VIM_SUBDIR}/ftplugin/antlr4.vim
@@ -1191,6 +1192,7 @@ share/vim/${VIM_SUBDIR}/syntax/ada.vim
 share/vim/${VIM_SUBDIR}/syntax/aflex.vim
 share/vim/${VIM_SUBDIR}/syntax/ahdl.vim
 share/vim/${VIM_SUBDIR}/syntax/aidl.vim
+share/vim/${VIM_SUBDIR}/syntax/algol68.vim
 share/vim/${VIM_SUBDIR}/syntax/alsaconf.vim
 share/vim/${VIM_SUBDIR}/syntax/amiga.vim
 share/vim/${VIM_SUBDIR}/syntax/aml.vim
