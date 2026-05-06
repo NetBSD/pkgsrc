@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2024/08/14 00:13:20 gutteridge Exp $
+# $NetBSD: Makefile,v 1.4 2026/05/06 19:17:19 vins Exp $
 
-DISTNAME=	liburing-2.6
+DISTNAME=	liburing-2.14
 CATEGORIES=	devel
-MASTER_SITES=	https://git.kernel.dk/cgit/liburing/snapshot/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=axboe/}
+GITHUB_TAG=	${PKGBASE}-${PKGVERSION_NOREV}
 
 MAINTAINER=	als@thangorodrim.ch
 HOMEPAGE=	https://git.kernel.dk/cgit/liburing/
@@ -24,10 +25,13 @@ PKGCONFIG_OVERRIDE+=	liburing.pc.in
 # Provides access to the Linux kernel io_uring interface
 ONLY_FOR_PLATFORM=	Linux-*-*
 
-do-build:
-	${RUN} cd ${WRKSRC}/ && ./configure --prefix=${PREFIX} && ${GMAKE}
+CONFIGURE_ARGS+=	--prefix=${PREFIX} \
+			--mandir=${PREFIX}/${PKGMANDIR}
 
-do-test:
-	${RUN} cd ${WRKSRC}/ && ${GMAKE} runtests
+# Do not hard-code compiler
+CONFIGURE_ARGS+=	--cc=${CC:Q} \
+			--cxx=${CXX:Q}
+
+TEST_TARGET=		runtests
 
 .include "../../mk/bsd.pkg.mk"
