@@ -1,0 +1,21 @@
+$NetBSD: patch-test_meson.build,v 1.1 2026/05/06 17:08:49 vins Exp $
+
+Requires O_PATH and other Linuxisms. 
+
+--- test/meson.build.orig	2026-05-06 15:59:19.869945743 +0000
++++ test/meson.build
+@@ -7,9 +7,11 @@ foreach prog: [ 'test_write_cache', 'tes
+                      dependencies: thread_dep,
+                      install: false)
+ endforeach
+-td += executable('test_syscalls', 'test_syscalls.c',
+-                 include_directories: include_dirs,
+-                 install: false)
++if platform == 'linux'
++  td += executable('test_syscalls', 'test_syscalls.c',
++                   include_directories: include_dirs,
++                   install: false)
++endif
+ td += executable('readdir_inode', 'readdir_inode.c',
+                  include_directories: include_dirs,
+                  install: false)
