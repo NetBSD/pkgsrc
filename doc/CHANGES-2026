@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2844 2026/05/06 08:24:41 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2845 2026/05/06 08:45:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4361,3 +4361,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/ruby-sqlite3 to 2.9.4 [taca 2026-05-06]
 	Updated lang/nodejs to 26.0.0 [adam 2026-05-06]
 	Updated databases/py-apsw to 3.53.1.0 [adam 2026-05-06]
+	Updated textproc/py-ujson to 5.12.1 [adam 2026-05-06]
+	Updated www/py-python-multipart to 0.0.27 [adam 2026-05-06]
+	Updated graphics/py-tifffile to 2026.5.2 [adam 2026-05-06]
