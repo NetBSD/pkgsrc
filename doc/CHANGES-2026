@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2847 2026/05/06 09:28:06 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2848 2026/05/06 09:31:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4366,3 +4366,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/py-tifffile to 2026.5.2 [adam 2026-05-06]
 	Updated audio/termusic to 0.13.2 [pin 2026-05-06]
 	Updated sysutils/pciutils to 3.15.0 [pin 2026-05-06]
+	Updated x11/xterm to 410 [pin 2026-05-06]
