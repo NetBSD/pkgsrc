@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2842 2026/05/06 07:04:57 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2843 2026/05/06 08:03:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4358,3 +4358,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/lemon to 1.0.3.53.1 [adam 2026-05-06]
 	Updated devel/py-uv to 0.11.10 [adam 2026-05-06]
 	Updated devel/py-uv-build to 0.11.10 [adam 2026-05-06]
+	Updated databases/ruby-sqlite3 to 2.9.4 [taca 2026-05-06]
