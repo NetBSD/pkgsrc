@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2026/05/06 17:08:48 vins Exp $
+# $NetBSD: Makefile,v 1.18 2026/05/06 19:19:39 vins Exp $
 #
 
 DISTNAME=	fuse-3.18.2
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libfuse/}
 GITHUB_PROJECT=	libfuse
@@ -31,6 +32,7 @@ SUBST_MESSAGE.conf=	Setting default configuration file path for FUSE
 PKG_DOCS=	doc/README.* doc/*.txt
 DOCDIR=		share/doc/${PKGBASE}
 EGDIR=		share/examples/${PKGBASE}
+INCLUDEDIR=	include/fuse
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -51,7 +53,10 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/fuse3.pc
 
 CONF_FILES+=		${EGDIR}/fuse.conf ${PKG_SYSCONFDIR}/fuse.conf
 
-AUTO_MKDIRS=	yes
+INSTALLATION_DIRS+=	${DOCDIR} ${INCLUDEDIR}
+
+SPECIAL_PERMS+=		bin/fusermount3 ${SETUID_ROOT_PERMS}
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/include/fuse_kernel.h	\
 		${DESTDIR}${PREFIX}/include/fuse
@@ -62,7 +67,6 @@ post-install:
 
 .if ${OPSYS} == "Linux"
 .  include "../../devel/liburing/buildlink3.mk"
-	${RUN}${CHMOD} -w	${DESTDIR}${PREFIX}/bin/fusermount
 .elif ${OPSYS} == "NetBSD"
 .  include "../../filesystems/perfuse/buildlink3.mk"
 .endif
