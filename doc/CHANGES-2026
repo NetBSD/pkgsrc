@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2855 2026/05/06 19:18:04 vins Exp $
+$NetBSD: CHANGES-2026,v 1.2856 2026/05/06 20:27:09 morr Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4376,3 +4376,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-aws-partitions to 1.1245.0 [taca 2026-05-06]
 	Updated filesystems/fuse to 3.18.2 [vins 2026-05-06]
 	Updated devel/liburing to 2.14 [vins 2026-05-06]
+	Updated editors/vim-share to 9.2.0449 [sh 2026-05-06]
