@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.10 2023/09/08 06:01:04 vins Exp $
+$NetBSD: distinfo,v 1.11 2026/05/06 17:08:48 vins Exp $
 
-BLAKE2s (fuse-2.9.9.tar.gz) = 5b851aa97441a9e13a4718a0775e01cbfff8020d7f4a0656adfca439f8d42d95
-SHA512 (fuse-2.9.9.tar.gz) = 1acd51a647ec3dbf9eaafb80cec92bd8542bcbb2cf4510fc8b079b4f8aaa8f4b301e469ddefe4f1cc4ae2bf941e028077601c20d97f187cc618cea8710cbe331
-Size (fuse-2.9.9.tar.gz) = 212017 bytes
-SHA1 (patch-configure.ac) = 1e8d0081c8dc48e126d1cde856178c39f358ee37
-SHA1 (patch-doc_Makefile.am) = ffe16fc87e03772ca2e1124549177e999806dbd9
-SHA1 (patch-lib_fuse.c) = af4b7c90b43ddba66b7ae25f4b11cc9a4bbfc58e
-SHA1 (patch-lib_mount__bsd.c) = 6b00d0950e0146321a575a2f90c83d8aa7d3cc07
-SHA1 (patch-util_Makefile.am) = b3c79ad1e7390ba313476efb5ba3b67a214a8006
-SHA1 (patch-util_ulockmgr__server.c) = 2ec86dc8eca5e24952738171eb0937d822b8c657
+BLAKE2s (fuse-3.18.2.tar.gz) = 8b88c248fb97b0977c38bb4502ffa66749bb0fad1e218bb10f62a82a2a3f265b
+SHA512 (fuse-3.18.2.tar.gz) = b2ca702b74788230981d05dc85458ee3582970dcb1526e7eda8f46e23d0373b361ef1438874a7caa46aaf02a5b84f7e5341fbe61e856cfbce849d1209b4aabbe
+Size (fuse-3.18.2.tar.gz) = 4933779 bytes
+SHA1 (patch-example_cuse__client.c) = 9afb374114362b7b0875dde56aa9f0bbb1c96ef8
+SHA1 (patch-example_meson.build) = 41ef502dca57649fb90bbde25721e03514d8527d
+SHA1 (patch-test_meson.build) = bf0cf20007b753cb295514aa349f879ca2df6661
