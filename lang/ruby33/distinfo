@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2026/03/27 10:38:43 kikadf Exp $
+$NetBSD: distinfo,v 1.17 2026/05/06 05:28:22 taca Exp $
 
 BLAKE2s (ruby-3.3.11.tar.xz) = 2a6996052aae975b7e3aa34849ae11efdb7fdbf8594c9f6cb9e7f0338c361c21
 SHA512 (ruby-3.3.11.tar.xz) = 1f8eb206a90121015b294dada7ea61ebd136e7e7dbb1c4bb7df21b85f359a2e733f438153bf07c57815a963e4ef3f766081fd4226caa6547f4c263b33ed7726e
@@ -7,6 +7,8 @@ SHA1 (patch-common.mk) = c23eed58427b2fd4ba8fdb3692f609701a666c6d
 SHA1 (patch-configure) = 031792cb999e3624236f8afc3363492b437e35d7
 SHA1 (patch-ext_openssl_openssl__missing.h) = 3f8d79736fd14806dfaf76e333eec63ff3ff5890
 SHA1 (patch-include_ruby_internal_static__assert.h) = 7d5c3ae7ff674b9b34639924fcf08237164de9f8
+SHA1 (patch-lib_erb.rb) = f28a0318017b90409e71d4b80e0c2fd7faec07ae
+SHA1 (patch-lib_erb_version.rb) = 6704dceeb27d582c648fdaa3988ae3ea69607ffb
 SHA1 (patch-lib_mkmf.rb) = 4a3cd18548dbdf43a13695d4e76f817c0347e335
 SHA1 (patch-lib_rdoc_encoding.rb) = 0e82d2942d9bfcb67dc7c994889d7bc5ec2ae85a
 SHA1 (patch-lib_rubygems.rb) = 81af71ae9b0c3fef2ad1de88a542b3ece14b4519
@@ -16,6 +18,7 @@ SHA1 (patch-lib_rubygems_dependency__installer.rb) = d143128b21a3803136c2d0000d7
 SHA1 (patch-lib_rubygems_install__update__options.rb) = 0cd0816e1cd7c84c1dab1e091787c4dc38d28273
 SHA1 (patch-lib_rubygems_installer.rb) = 4ef74b4f79837a929e81bcd0e7eba9061a442304
 SHA1 (patch-lib_rubygems_platform.rb) = bde36a8fc1ba2fbf4d6fb8829bc116fb4d09b404
+SHA1 (patch-test_erb_test__erb.rb) = 4acc8a98f7051b05e2c7d0859068f2ca75bdbc20
 SHA1 (patch-test_rubygems_test__gem.rb) = 32f7c7d7f8a024c045d78c2bce93944fc3113d04
 SHA1 (patch-thread__pthread.c) = 7c1231933a2d6ce9d56891ab512371841697fbca
 SHA1 (patch-tool_ifchange) = 1814cd41f0b0a93b181799cb117bd1f57068cf33
