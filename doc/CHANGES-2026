@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2850 2026/05/06 10:21:40 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2851 2026/05/06 11:04:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4370,3 +4370,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-gitpython to 3.1.50 [adam 2026-05-06]
 	Updated sysutils/py-fsspec to 2026.4.0 [adam 2026-05-06]
 	Updated devel/memcached to 1.6.41 [adam 2026-05-06]
+	Updated security/py-authlib to 1.7.2 [adam 2026-05-06]
+	Updated databases/py-pymysql to 1.1.3 [adam 2026-05-06]
