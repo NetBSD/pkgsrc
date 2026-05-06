@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2848 2026/05/06 09:31:45 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2849 2026/05/06 10:07:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4367,3 +4367,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/termusic to 0.13.2 [pin 2026-05-06]
 	Updated sysutils/pciutils to 3.15.0 [pin 2026-05-06]
 	Updated x11/xterm to 410 [pin 2026-05-06]
+	Updated devel/py-gitpython to 3.1.50 [adam 2026-05-06]
+	Updated sysutils/py-fsspec to 2026.4.0 [adam 2026-05-06]
