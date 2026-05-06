@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27212 2026/05/06 07:04:57 adam Exp $
+$NetBSD: TODO,v 1.27213 2026/05/06 16:42:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -873,7 +873,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
-	o llvm-22.1.4 [wip]
+	o llvm-22.1.5 [wip]
 	o lmbench-3
 	o lnav-0.12.4 [wip]
 	o log4cxx-0.11.0
@@ -1396,6 +1396,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o yahttp-0.2.1
 	o yarn-3.2.4
 	o yaz-5.30.3
+	o yazi-26.5.6 [needs rust 1.95]
 	o yices2-2.6.2
 	o yodl-4.03.03
 	o yorick-2.1.05
