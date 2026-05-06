@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2851 2026/05/06 11:04:12 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2852 2026/05/06 13:36:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4372,3 +4372,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/memcached to 1.6.41 [adam 2026-05-06]
 	Updated security/py-authlib to 1.7.2 [adam 2026-05-06]
 	Updated databases/py-pymysql to 1.1.3 [adam 2026-05-06]
+	Updated finance/ruby-braintree to 4.36.0 [taca 2026-05-06]
