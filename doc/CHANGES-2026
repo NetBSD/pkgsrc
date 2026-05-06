@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2845 2026/05/06 08:45:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2846 2026/05/06 09:25:51 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4364,3 +4364,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-ujson to 5.12.1 [adam 2026-05-06]
 	Updated www/py-python-multipart to 0.0.27 [adam 2026-05-06]
 	Updated graphics/py-tifffile to 2026.5.2 [adam 2026-05-06]
+	Updated audio/termusic to 0.13.2 [pin 2026-05-06]
