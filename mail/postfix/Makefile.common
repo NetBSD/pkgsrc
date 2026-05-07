@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.63 2026/03/11 15:25:57 taca Exp $
+# $NetBSD: Makefile.common,v 1.63.2.1 2026/05/07 22:40:07 maya Exp $
 # used by mail/postfix/Makefile
 # used by mail/postfix/Makefile.module
 
-DISTNAME=	postfix-3.11.1
+DISTNAME=	postfix-3.11.2
 CATEGORIES=	mail
 MASTER_SITES=	https://ftp.fu-berlin.de/unix/mail/postfix/official/
 MASTER_SITES+=	https://ghostarchive.org/postfix/postfix-release/official/
