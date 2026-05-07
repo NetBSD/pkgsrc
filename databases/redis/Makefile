@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.101 2026/02/09 10:09:27 adam Exp $
+# $NetBSD: Makefile,v 1.101.2.1 2026/05/07 18:45:09 maya Exp $
 
-DISTNAME=	redis-8.4.1
+DISTNAME=	redis-8.6.2
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 
