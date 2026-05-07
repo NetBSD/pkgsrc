@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2026/05/03 09:51:11 vins Exp $
+# $NetBSD: options.mk,v 1.2 2026/05/07 17:52:39 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcr4
 
@@ -6,7 +6,7 @@ PKG_OPTIONS_OPTIONAL_GROUPS=	crypto
 PKG_OPTIONS_GROUP.crypto=	libgcrypt gnutls
 
 PKG_SUPPORTED_OPTIONS=	doc gtk4 introspection vapi
-PKG_SUGGESTED_OPTIONS+=	gtk4 introspection vapi libgcrypt
+PKG_SUGGESTED_OPTIONS+=	introspection vapi libgcrypt
 
 .include "../../mk/bsd.options.mk"
 
