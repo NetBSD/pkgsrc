@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2864 2026/05/07 13:42:18 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2865 2026/05/07 16:35:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4384,3 +4384,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/rust to 1.95.0 [wiz 2026-05-07]
 	Updated lang/rust-bin to 1.95.0 [wiz 2026-05-07]
 	Updated graphics/geeqie to 2.7nb3 [wiz 2026-05-07]
+	Updated devel/wabt to 1.0.41 [adam 2026-05-07]
+	Updated textproc/hunspell to 1.7.3 [adam 2026-05-07]
