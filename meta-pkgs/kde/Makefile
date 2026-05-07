@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/12/21 21:46:13 markd Exp $
+# $NetBSD: Makefile,v 1.3 2026/05/07 21:05:47 markd Exp $
 
-DISTNAME=	kde-20251221
+DISTNAME=	kde-20260507
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -8,21 +8,6 @@ DISTFILES=	# empty
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	https://www.kde.org/
 COMMENT=	"meta-package" for KDE applications
-
-DEPENDS+=	kdelibs4-[0-9]*:../../x11/kdelibs4
-DEPENDS+=	kde-runtime4-[0-9]*:../../x11/kde-runtime4
-DEPENDS+=	kde-workspace4-[0-9]*:../../x11/kde-workspace4
-DEPENDS+=	kde-wallpapers4-[0-9]*:../../misc/kde-wallpapers4
-DEPENDS+=	kde-baseapps4-[0-9]*:../../x11/kde-baseapps4
-DEPENDS+=	kaccessible-[0-9]*:../../misc/kaccessible
-DEPENDS+=	kdeartwork4-[0-9]*:../../misc/kdeartwork4
-DEPENDS+=	kde-base-artwork-[0-9]*:../../graphics/kde-base-artwork
-#DEPENDS+=	kdegraphics-strigi-analyzer-[0-9]:../../graphics/kdegraphics-strigi-analyzer
-DEPENDS+=	mplayerthumbs-[0-9]*:../../multimedia/mplayerthumbs
-DEPENDS+=	kdenetwork-strigi-analyzers-[0-9]*:../../net/kdenetwork-strigi-analyzers
-DEPENDS+=	kdesdk-strigi-analyzers-[0-9]*:../../devel/kdesdk-strigi-analyzers
-DEPENDS+=	kdeplasma-addons4-[0-9]*:../../misc/kdeplasma-addons4
-DEPENDS+=	zeroconf-ioslave-[0-9]*:../../net/zeroconf-ioslave
 
 DEPENDS+=	akonadiconsole-[0-9]*:../../misc/akonadiconsole
 DEPENDS+=	akregator-[0-9]*:../../www/akregator
@@ -65,13 +50,9 @@ DEPENDS+=	kde-dev-scripts-[0-9]*:../../devel/kde-dev-scripts
 DEPENDS+=	kde-dev-utils-[0-9]*:../../devel/kde-dev-utils
 DEPENDS+=	kdegraphics-mobipocket-[0-9]*:../../graphics/kdegraphics-mobipocket
 DEPENDS+=	kdegraphics-thumbnailers-[0-9]*:../../graphics/kdegraphics-thumbnailers
-DEPENDS+=	kdenetwork-filesharing-[0-9]*:../../net/kdenetwork-filesharing
-#DEPENDS+=	kdesdk-kioslaves-[0-9]*:../../devel/kdesdk-kioslaves
-DEPENDS+=	kdesdk-thumbnailers-[0-9]*:../../devel/kdesdk-thumbnailers
 DEPENDS+=	kdf-[0-9]*:../../sysutils/kdf
 DEPENDS+=	kdiamond-[0-9]*:../../games/kdiamond
 DEPENDS+=	kfourinline-[0-9]*:../../games/kfourinline
-DEPENDS+=	kgamma-4.14.3{,nb[0-9]*}:../../graphics/kgamma
 DEPENDS+=	kgeography-[0-9]*:../../misc/kgeography
 DEPENDS+=	kget-[0-9]*:../../net/kget
 DEPENDS+=	kgoldrunner-[0-9]*:../../games/kgoldrunner
@@ -137,7 +118,6 @@ DEPENDS+=	poxml-[0-9]*:../../devel/poxml
 #DEPENDS+=	rocs-[0-9]*:../../misc/rocs
 DEPENDS+=	step-[0-9]*:../../misc/step
 DEPENDS+=	svgpart-[0-9]*:../../graphics/svgpart
-DEPENDS+=	sweeper-[0-9]*:../../misc/sweeper
 DEPENDS+=	umbrello-[0-9]*:../../devel/umbrello
 
 META_PACKAGE=	yes
