@@ -1,11 +1,11 @@
-$NetBSD: patch-src_bootstrap_src_core_builder_cargo.rs,v 1.3 2025/08/25 17:51:12 wiz Exp $
+$NetBSD: patch-src_bootstrap_src_core_builder_cargo.rs,v 1.4 2026/05/07 13:16:15 wiz Exp $
 
 Find external libunwind and libLLVM in pkgsrc (not just Linux).
 Use @PREFIX@ in rpath.
 
---- src/bootstrap/src/core/builder/cargo.rs.orig	2025-01-27 23:20:59.000000000 +0000
+--- src/bootstrap/src/core/builder/cargo.rs.orig	2026-04-14 19:55:32.000000000 +0000
 +++ src/bootstrap/src/core/builder/cargo.rs
-@@ -251,7 +251,7 @@ impl Cargo {
+@@ -299,7 +299,7 @@ impl Cargo {
                  && !target.contains("xous")
              {
                  self.rustflags.arg("-Clink-args=-Wl,-z,origin");
@@ -14,9 +14,9 @@ Use @PREFIX@ in rpath.
              } else {
                  None
              };
-@@ -1249,6 +1249,9 @@ impl Builder<'_> {
-             // cargo bench/install do not accept `--release` and miri doesn't want it
-             !matches!(cmd_kind, Kind::Bench | Kind::Install | Kind::Miri | Kind::MiriSetup | Kind::MiriTest);
+@@ -1422,6 +1422,9 @@ impl Builder<'_> {
+                 }
+             };
  
 +        // added for pkgsrc libunwind or external LLVM
 +        rustflags.arg("-Clink-args=-Wl,-rpath,@PREFIX@/lib,-L@PREFIX@/lib");
