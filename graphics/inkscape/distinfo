@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.106 2026/02/01 07:09:03 ryoon Exp $
+$NetBSD: distinfo,v 1.107 2026/05/07 08:46:54 wiz Exp $
 
-BLAKE2s (inkscape-1.4.3.tar.xz) = 19cc86eb5e27d77251adbc6801c3df81d433c4b38c354ae9204259973a795e7c
-SHA512 (inkscape-1.4.3.tar.xz) = 8bf8047f656f472ecac7a35badf83765873688901e94e93ec8388f920e1b8370e8c8c88d06ba91c26d668714b912f444b49bed59a8d1cf3e14d3ab206c3aff60
-Size (inkscape-1.4.3.tar.xz) = 53907460 bytes
+BLAKE2s (inkscape-1.4.4.tar.xz) = ae725108a91a427e3f6425f27d846663f35e1109160823ee6374f8289dba8f55
+SHA512 (inkscape-1.4.4.tar.xz) = 6ccaad4c63f8f654529a801dfe649501afd8b1243094e0222afbf8141258ab139f418efc112c0a2061a1bba7230ae13a0fc9fdc55ce9052630607a94500c9edd
+Size (inkscape-1.4.4.tar.xz) = 53861940 bytes
 SHA1 (patch-CMakeScripts_DefineDependsandFlags.cmake) = 6638a97615ca37bcdc20463b37cd859d723f66d6
 SHA1 (patch-src_extension_implementation_script.cpp) = da46549f688da5c9c0ecbeaeac7962e4f261cae4
 SHA1 (patch-src_path_splinefit_splinefit.c) = 6c4482891567215a9b2cb5b2a4fb63ca54b24f9f
