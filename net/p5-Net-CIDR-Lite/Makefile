@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2025/07/04 08:47:41 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.33.6.1 2026/05/07 18:41:54 maya Exp $
 
-DISTNAME=		Net-CIDR-Lite-0.22
+DISTNAME=		Net-CIDR-Lite-0.23
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		4
 CATEGORIES=		net perl5
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/S/ST/STIGTSP/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://metacpan.org/release/Net-CIDR-Lite
