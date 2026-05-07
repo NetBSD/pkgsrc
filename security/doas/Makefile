@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2021/12/09 18:46:38 nikita Exp $
+# $NetBSD: Makefile,v 1.16 2026/05/07 00:24:51 gutteridge Exp $
 
 DISTNAME=	doas-6.3p2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=slicer69/}
 
