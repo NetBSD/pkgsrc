@@ -1,12 +1,12 @@
-$NetBSD: patch-src_tools_Makefile.am,v 1.2 2018/11/16 13:02:20 bsiegert Exp $
+$NetBSD: patch-src_tools_Makefile.am,v 1.3 2026/05/07 16:34:35 adam Exp $
 
---- src/tools/Makefile.am.orig	2018-11-12 20:38:56.000000000 +0000
+--- src/tools/Makefile.am.orig	2026-05-05 07:19:07.000000000 +0000
 +++ src/tools/Makefile.am
 @@ -1,4 +1,4 @@
 -bin_PROGRAMS=analyze chmorph hunspell munch unmunch hzip hunzip
 +bin_PROGRAMS=hunspell-analyze chmorph hunspell hunspell-munch hunspell-unmunch hzip hunzip
  
- AM_CPPFLAGS=-I${top_builddir}/src/hunspell -I${top_srcdir}/src/hunspell -I${top_srcdir}/src/parsers
+ AM_CPPFLAGS=-I${top_builddir}/src/hunspell -I${top_srcdir}/src/hunspell -I${top_srcdir}/src/parsers  -DDATADIR=\"$(datadir)\" $(HUNSPELL_STATIC_DEFINE)
  
 @@ -6,8 +6,8 @@ hzip_SOURCES=hzip.cxx
  hunzip_SOURCES=hunzip.cxx
