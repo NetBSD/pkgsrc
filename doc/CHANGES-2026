@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2867 2026/05/07 17:16:51 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2868 2026/05/07 18:52:58 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4389,3 +4389,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/ait to 1.15 [ktnb 2026-05-07]
 	Added graphics/libsquish version 1.15.1.3 [adam 2026-05-07]
 	Updated games/vcmi to 1.7.3 [adam 2026-05-07]
+	Updated lang/go125 to 1.25.10 [bsiegert 2026-05-07]
+	Updated lang/go126 to 1.26.3 [bsiegert 2026-05-07]
