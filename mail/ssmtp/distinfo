@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.11 2026/04/22 23:26:37 cheusov Exp $
+$NetBSD: distinfo,v 1.12 2026/05/07 05:16:24 wiz Exp $
 
 BLAKE2s (ssmtp_2.64.orig.tar.bz2) = af9152db8317b41d689188e9d2b8c38a9c93a95138da92198d9ea5b086658363
 SHA512 (ssmtp_2.64.orig.tar.bz2) = 911752e744420adf58552b9cf3a6e558d8b39103e5ad33a9ed4429b9a3a2091f7674aac11fe9bbd66747a61cdabe6bd638b80efcaadc86b057c12e2e235cca72
 Size (ssmtp_2.64.orig.tar.bz2) = 52501 bytes
 SHA1 (patch-ab) = 9f5d137818c68a9adfbabff77d9cce3c39afb424
 SHA1 (patch-ac) = c348a88e31ab4962e8e325e5a17a4511fcd84bb7
+SHA1 (patch-ae) = 009618ceb22c7970ae96411bf101932b6d2dd96f
 SHA1 (patch-configure.in) = 8d00a03614fe88ff9972c7479303d6c715419ce5
