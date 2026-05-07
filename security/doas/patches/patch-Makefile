@@ -1,10 +1,12 @@
-$NetBSD: patch-Makefile,v 1.1 2020/10/21 17:34:09 kim Exp $
+$NetBSD: patch-Makefile,v 1.2 2026/05/07 00:24:51 gutteridge Exp $
 
 Enable HAVE_LOGIN_CAP_H and reallocarray() on NetBSD.
 
---- Makefile
+Add pkgsrc-specific paths to GLOBAL_PATH and SAFE_PATH.
+
+--- Makefile.orig	2020-08-07 21:42:52.000000000 +0000
 +++ Makefile
-@@ -24,6 +24,11 @@ ifeq ($(UNAME_S),FreeBSD)
+@@ -24,6 +24,11 @@ endif
      CFLAGS+=-DHAVE_LOGIN_CAP_H
      LDFLAGS+=-lutil
  endif
@@ -16,3 +18,16 @@ Enable HAVE_LOGIN_CAP_H and reallocarray() on NetBSD.
  ifeq ($(UNAME_S),SunOS)
      SAFE_PATH?=/bin:/sbin:/usr/bin:/usr/sbin:$(PREFIX)/bin:$(PREFIX)/sbin
      GLOBAL_PATH?=/bin:/sbin:/usr/bin:/usr/sbin:$(PREFIX)/bin:$(PREFIX)/sbin
+@@ -31,6 +36,12 @@ ifeq ($(UNAME_S),SunOS)
+     CFLAGS+=-DSOLARIS_PAM -DSAFE_PATH=\"$(SAFE_PATH)\" -DGLOBAL_PATH=\"$(GLOBAL_PATH)\"
+     COMPAT=errc.o pm_pam_conv.o setresuid.o verrc.o
+     OBJECTS+=$(COMPAT:%.o=compat/%.o)
++# Add pkgsrc-specific paths; follow the ordering approach for each used in doas.h,
++# rather than what's done for SunOS above.
++else
++    SAFE_PATH?=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:$(PREFIX)/bin:$(PREFIX)/sbin
++    GLOBAL_PATH?=$(PREFIX)/sbin:$(PREFIX)/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
++    CFLAGS+=-DSAFE_PATH=\"$(SAFE_PATH)\" -DGLOBAL_PATH=\"$(GLOBAL_PATH)\"
+ endif
+ ifeq ($(UNAME_S),Darwin)
+     CPPFLAGS+=-Icompat
