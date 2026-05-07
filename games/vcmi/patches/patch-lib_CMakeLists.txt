@@ -1,0 +1,14 @@
+$NetBSD: patch-lib_CMakeLists.txt,v 1.1 2026/05/07 17:16:19 adam Exp $
+
+On Darwin, use correct install_name.
+
+--- lib/CMakeLists.txt.orig	2026-05-07 12:27:09.430852745 +0000
++++ lib/CMakeLists.txt
+@@ -838,6 +838,7 @@ else()
+ endif()
+ 
+ set_target_properties(vcmi PROPERTIES COMPILE_DEFINITIONS "VCMI_DLL=1")
++set_target_properties(vcmi PROPERTIES INSTALL_NAME_DIR "${CMAKE_INSTALL_PREFIX}/${LIB_DIR}")
+ target_link_libraries(vcmi PUBLIC
+ 	minizip::minizip ZLIB::ZLIB TBB::tbb
+ 	${SYSTEM_LIBS} Boost::boost Boost::filesystem Boost::program_options Boost::locale Boost::date_time

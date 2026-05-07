@@ -1,0 +1,14 @@
+$NetBSD: patch-AI_Nullkiller_CMakeLists.txt,v 1.1 2026/05/07 17:16:19 adam Exp $
+
+On Darwin, use correct install_name.
+
+--- AI/Nullkiller/CMakeLists.txt.orig	2026-05-07 12:37:14.287341160 +0000
++++ AI/Nullkiller/CMakeLists.txt
+@@ -156,6 +156,7 @@ else()
+ 	install(TARGETS Nullkiller RUNTIME DESTINATION ${AI_LIB_DIR} LIBRARY DESTINATION ${AI_LIB_DIR})
+ endif()
+ 
++set_target_properties(Nullkiller PROPERTIES INSTALL_NAME_DIR "${CMAKE_INSTALL_PREFIX}/${AI_LIB_DIR}")
+ target_include_directories(Nullkiller PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+ target_link_libraries(Nullkiller PUBLIC vcmi fuzzylite::fuzzylite TBB::tbb)
+ 

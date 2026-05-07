@@ -1,17 +1,26 @@
-$NetBSD: distinfo,v 1.4 2025/10/16 20:21:55 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/05/07 17:16:19 adam Exp $
 
 BLAKE2s (fuzzylite-fuzzylite-13b3122f5c353c0389ed4e66041d548c44ec9df6.tar.gz) = 18e7168f6ebeb87875d4009c28ca853c7d6c131e1c404de8672c294ddefc7925
 SHA512 (fuzzylite-fuzzylite-13b3122f5c353c0389ed4e66041d548c44ec9df6.tar.gz) = b0f052a4b55605c4f49b9f6b85c84e8c58e3861ce57b8d99b8426f6a952541650469415fd6baff0218eb54858b9bee6989deddd72a4f85538b5b051f7cbec891
 Size (fuzzylite-fuzzylite-13b3122f5c353c0389ed4e66041d548c44ec9df6.tar.gz) = 3957398 bytes
-BLAKE2s (vcmi-1.6.8.tar.gz) = 1e3c69071f9c35a4eccd38f8aca8338660ee4433142d84488d3814166db074fd
-SHA512 (vcmi-1.6.8.tar.gz) = a9e9a458d10aeb3094792bd21c4c73a7a4861af9a7df29e7870ca1a7e82839a7f7a05cecfa6c1139aa91cffba0be93035a27a485d4d687dbe88b6440a48746c2
-Size (vcmi-1.6.8.tar.gz) = 12109092 bytes
-BLAKE2s (vcmi-innoextract-98bb55798a77c0346b12a1dbb53fe4d3e0379d66.tar.gz) = f6e76d60f988d1ba4fcb2036d77c8ede815f401a84d4518099cf14071384fcf1
-SHA512 (vcmi-innoextract-98bb55798a77c0346b12a1dbb53fe4d3e0379d66.tar.gz) = f1d87d464622d77dbeea76a4731f9126f339b2d15e36cc87b8495f7dc6a1d0b971d5d28dc5b9e0c40e898fbc0c2399e631e4ed723ecf6b5cb731a8fdbffbe412
-Size (vcmi-innoextract-98bb55798a77c0346b12a1dbb53fe4d3e0379d66.tar.gz) = 205383 bytes
-SHA1 (patch-CMakeLists.txt) = 4e1a01e5d9fa04263cf3e3c03636ea1c8a9acb0b
+BLAKE2s (vcmi-1.7.3.tar.gz) = 075e56794a4ea935068fbf668a5bb92f1d55872b9e5ec9094be63c98c698fe30
+SHA512 (vcmi-1.7.3.tar.gz) = 5da8da6f4ad0c463115aaaf1a9ebacd7f8f05387882e29a9e640be2a4d0573163406e9f1e94ff0cd58a365cabc0b8725c40241efcfcb7668590a6075637ddf06
+Size (vcmi-1.7.3.tar.gz) = 13353623 bytes
+BLAKE2s (vcmi-innoextract-96e9566a35fb51ebf13ffbdadfd49a93c1ae5c1a.tar.gz) = 7c30b026037cef82f5f6306a78bc08baa63d996e3c4a92317486ad9733ba0696
+SHA512 (vcmi-innoextract-96e9566a35fb51ebf13ffbdadfd49a93c1ae5c1a.tar.gz) = e5359a7755e80be73949ed28b0d37a718aa283fb349add1526be914ea4fae62208e4c0490a58af0f3b135c7ee4df6235f9430827ab3a65d4d1cd129954ed4af9
+Size (vcmi-innoextract-96e9566a35fb51ebf13ffbdadfd49a93c1ae5c1a.tar.gz) = 216127 bytes
+SHA1 (patch-AI_BattleAI_CMakeLists.txt) = 5db507e6924e5f3abca368f09f6a6c5b471716dc
+SHA1 (patch-AI_EmptyAI_CMakeLists.txt) = 97bc0f581f5c2c578deb5cd0255ee646f2184801
+SHA1 (patch-AI_Nullkiller2_CMakeLists.txt) = 6fdb719d4b22ce10b06e45aa7220c5fd3bf1f46e
+SHA1 (patch-AI_Nullkiller_CMakeLists.txt) = 5ccd53999d520797b7cdae1e1b332e7a055953a2
+SHA1 (patch-AI_StupidAI_CMakeLists.txt) = 76dea342b5b7be935fd44c0b51e07cadba497170
+SHA1 (patch-CMakeLists.txt) = fc9aa8e94c8174a1d647cc5f00ff62b5c17ec172
 SHA1 (patch-Global.h) = 7a587fa006fb4cb2ab3c9a48c303027a8baa6ed3
+SHA1 (patch-client_render_hdEdition_DdsFormat.cpp) = 4a281d6304b20f0e571c355813a2c301359a29a2
+SHA1 (patch-cmake__modules_Findlibsquish.cmake) = c4b8d7af961fb42e505015dcde6b7f4f2a091d96
 SHA1 (patch-launcher_lib_innoextract_CMakeLists.txt) = 1df24702ad1de1a4360d5d889d794c3818af161f
+SHA1 (patch-lib_CMakeLists.txt) = e5f574108e8ab3834d4923adc9b0304796ef756b
 SHA1 (patch-lib_CStopWatch.h) = a5c75887c1fed973a46478de19b9c4f85838cb21
 SHA1 (patch-lib_CThreadHelper.cpp) = bcbbf7c6cedaea3e5a763882618d71e7849289f9
 SHA1 (patch-lib_modding_CModVersion.h) = 470f65e441bb8627e5b0bb53442015fa2cb91bd2
+SHA1 (patch-vcmiqt_CMakeLists.txt) = d6d87ddb58c526cc8b6479015c5a070875eb460c
