@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2025/02/12 09:29:19 adam Exp $
+$NetBSD: distinfo,v 1.4 2026/05/07 20:50:31 wiz Exp $
 
 BLAKE2s (postorius-1.3.13.tar.gz) = 112b8008515941c5a00cdf861213dfafe8bcf590458f0a5a21c5a2defc19619c
 SHA512 (postorius-1.3.13.tar.gz) = 088bb578f9d33d38252b9e9cf578d5d2e8920cb67e73b7ae040dc30097d3a294e660f445419a681888820b01c16a940fe375c53a28344bb3e024a614e411a2ac
 Size (postorius-1.3.13.tar.gz) = 3508385 bytes
+SHA1 (patch-src_postorius_static_postorius_js_held__messages.js) = 69b3aa62e89b240a58970e6767f173045fdc607f
