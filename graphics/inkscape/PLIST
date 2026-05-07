@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.41 2026/02/01 07:09:03 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.42 2026/05/07 08:46:54 wiz Exp $
+@pkgdir share/inkscape/extensions/inkex/colors/spaces
 bin/inkscape
 bin/inkview
 include/2geom-1.4.0/2geom/2geom.h
@@ -102,6 +103,7 @@ lib/lib2geom.so.1.4.0
 lib/pkgconfig/2geom.pc
 man/de/man1/inkscape.1
 man/de/man1/inkview.1
+man/es/man1/inkscape.1
 man/es/man1/inkview.1
 man/fr/man1/inkscape.1
 man/fr/man1/inkview.1
@@ -4158,6 +4160,7 @@ share/inkscape/palettes/Tango-Palette.gpl
 share/inkscape/palettes/Topographic.gpl
 share/inkscape/palettes/Ubuntu.gpl
 share/inkscape/palettes/echo-palette.gpl
+share/inkscape/palettes/elementary.gpl
 share/inkscape/palettes/inkscape.gpl
 share/inkscape/palettes/svg.gpl
 share/inkscape/palettes/webhex.gpl
@@ -4678,6 +4681,7 @@ share/inkscape/tutorials/tutorial-tracing-pixelart.sl.svg
 share/inkscape/tutorials/tutorial-tracing-pixelart.sr.svg
 share/inkscape/tutorials/tutorial-tracing-pixelart.sv.svg
 share/inkscape/tutorials/tutorial-tracing-pixelart.svg
+share/inkscape/tutorials/tutorial-tracing-pixelart.tr.svg
 share/inkscape/tutorials/tutorial-tracing-pixelart.uk.svg
 share/inkscape/tutorials/tutorial-tracing-pixelart.zh_CN.svg
 share/inkscape/tutorials/tutorial-tracing-pixelart.zh_TW.svg
@@ -4704,6 +4708,7 @@ share/inkscape/tutorials/tutorial-tracing.sl.svg
 share/inkscape/tutorials/tutorial-tracing.sr.svg
 share/inkscape/tutorials/tutorial-tracing.sv.svg
 share/inkscape/tutorials/tutorial-tracing.svg
+share/inkscape/tutorials/tutorial-tracing.tr.svg
 share/inkscape/tutorials/tutorial-tracing.uk.svg
 share/inkscape/tutorials/tutorial-tracing.vi.svg
 share/inkscape/tutorials/tutorial-tracing.zh_CN.svg
@@ -4898,4 +4903,3 @@ share/locale/vi/LC_MESSAGES/inkscape.mo
 share/locale/zh_CN/LC_MESSAGES/inkscape.mo
 share/locale/zh_TW/LC_MESSAGES/inkscape.mo
 share/metainfo/org.inkscape.Inkscape.appdata.xml
-@pkgdir share/inkscape/extensions/inkex/colors/spaces
