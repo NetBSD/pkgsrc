@@ -1,10 +1,11 @@
-$NetBSD: patch-src_tools_cargo_src_bin_cargo_commands_help.rs,v 1.1 2026/04/19 20:53:35 wiz Exp $
+$NetBSD: patch-src_tools_cargo_src_bin_cargo_commands_help.rs,v 1.2 2026/05/07 13:16:15 wiz Exp $
 
 NetBSD's man(1) command only accepts ./*.[0-9] as man pages.
+https://github.com/rust-lang/rust/issues/155548
 
---- src/tools/cargo/src/bin/cargo/commands/help.rs.orig	2026-04-19 19:43:27.728526123 +0000
+--- src/tools/cargo/src/bin/cargo/commands/help.rs.orig	2026-04-14 19:55:32.000000000 +0000
 +++ src/tools/cargo/src/bin/cargo/commands/help.rs
-@@ -141,7 +141,11 @@ fn write_and_spawn(name: &str, contents: &[u8], comman
+@@ -125,7 +125,11 @@ fn write_and_spawn(name: &str, contents: &[u8], comman
  /// display it.
  fn write_and_spawn(name: &str, contents: &[u8], command: &str) -> CargoResult<()> {
      let prefix = format!("cargo-{}.", name);
