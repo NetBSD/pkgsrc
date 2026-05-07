@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2025/11/22 20:25:05 leot Exp $
+# $NetBSD: Makefile,v 1.46 2026/05/07 16:34:35 adam Exp $
 
-DISTNAME=	hunspell-1.7.2
-PKGREVISION=	3
+DISTNAME=	hunspell-1.7.3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hunspell/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,19 +10,19 @@ HOMEPAGE=	https://hunspell.github.io/
 COMMENT=	Improved spellchecker
 LICENSE=	mpl-1.1 OR gnu-lgpl-v2.1 OR gnu-gpl-v2
 
-GNU_CONFIGURE=		yes
+USE_CXX_FEATURES=	c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config perl:run autoreconf autoconf automake autopoint
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-ui
+PKGCONFIG_OVERRIDE+=	hunspell.pc.in
+
 GCC_REQD+=		7
 FAKE_NCURSES=		yes
 
 CPPFLAGS.SunOS+=	-D_XPG6
-
-CONFIGURE_ARGS+=	--with-ui
-
-PKGCONFIG_OVERRIDE+=	hunspell.pc.in
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing default path to dictionaries.
