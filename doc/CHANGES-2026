@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2865 2026/05/07 16:35:03 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2866 2026/05/07 16:49:11 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4386,3 +4386,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/geeqie to 2.7nb3 [wiz 2026-05-07]
 	Updated devel/wabt to 1.0.41 [adam 2026-05-07]
 	Updated textproc/hunspell to 1.7.3 [adam 2026-05-07]
+	Updated editors/ait to 1.15 [ktnb 2026-05-07]
