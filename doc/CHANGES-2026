@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2859 2026/05/07 03:06:05 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2860 2026/05/07 06:16:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4379,3 +4379,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/vim-share to 9.2.0449 [morr 2026-05-06]
 	Updated security/doas to 6.3p2nb2 [gutteridge 2026-05-07]
 	Updated shells/oh-my-posh to 29.13.0 [pin 2026-05-07]
+	Updated net/tor to 0.4.8.24 [wiz 2026-05-07]
