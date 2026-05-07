@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2021/03/30 14:45:36 cirnatdan Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/05/07 21:14:49 markd Exp $
 bin/compiz
 bin/gtk-window-decorator
 include/compiz/compiz-common.h
@@ -59,7 +59,6 @@ share/compiz/gnomecompat.xml
 share/compiz/icon.png
 share/compiz/ini.xml
 share/compiz/inotify.xml
-${PLIST.kde}share/compiz/kcfg.xslt
 share/compiz/kconfig.xml
 share/compiz/minimize.xml
 share/compiz/move.xml
@@ -111,38 +110,6 @@ share/gconf/schemas/compiz-water.schemas
 share/gconf/schemas/compiz-wobbly.schemas
 share/gconf/schemas/compiz-zoom.schemas
 share/gconf/schemas/gwd.schemas
-${PLIST.kde}share/kde/config.kcfg/compiz-annotate.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-blur.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-clone.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-commands.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-core.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-cube.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-dbus.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-decoration.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-fade.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-fs.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-gconf.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-glib.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-gnomecompat.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-ini.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-inotify.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-minimize.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-move.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-obs.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-place.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-png.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-regex.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-resize.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-rotate.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-scale.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-screenshot.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-svg.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-switcher.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-video.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-water.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-wobbly.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-zoom.kcfg
-${PLIST.kde}share/kde/config/compizrc
 share/locale/af/LC_MESSAGES/compiz.mo
 share/locale/ar/LC_MESSAGES/compiz.mo
 share/locale/bg/LC_MESSAGES/compiz.mo
