@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2026/04/08 05:44:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2026/05/07 18:49:53 bsiegert Exp $
 
 DISTNAME=	golds-0.8.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=go101/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}

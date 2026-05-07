@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2026/04/08 05:45:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.15 2026/05/07 18:50:01 bsiegert Exp $
 
 DISTNAME=	cli-0.37.0
 PKGNAME=	tektoncd-${DISTNAME}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tektoncd/}
 GITHUB_PROJECT=	cli

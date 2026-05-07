@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.101 2026/04/08 05:45:01 bsiegert Exp $
+# $NetBSD: Makefile,v 1.102 2026/05/07 18:49:58 bsiegert Exp $
 
 PKGNAME=	dnscrypt-proxy2-2.0.45
-PKGREVISION=	55
+PKGREVISION=	56
 DISTNAME=	dnscrypt-proxy-${PKGVERSION_NOREV}
 CATEGORIES=	net security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jedisct1/}

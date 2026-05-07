@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2026/04/08 05:44:57 bsiegert Exp $
+# $NetBSD: Makefile,v 1.16 2026/05/07 18:49:55 bsiegert Exp $
 
 DISTNAME=	protobuf-go-1.34.1
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=protocolbuffers/}
 

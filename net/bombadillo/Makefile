@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2026/04/08 05:45:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.48 2026/05/07 18:49:58 bsiegert Exp $
 
 DISTNAME=	2.4.0
 PKGNAME=	bombadillo-${DISTNAME}
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	net
 MASTER_SITES=	https://tildegit.org/sloum/bombadillo/archive/
 DIST_SUBDIR=	bombadillo

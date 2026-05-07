@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2026/04/08 05:44:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.40 2026/05/07 18:49:53 bsiegert Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	gomodifytags-1.16.0
-PKGREVISION=	38
+PKGREVISION=	39
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fatih/}
 
