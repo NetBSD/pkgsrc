@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2856 2026/05/06 20:27:09 morr Exp $
+$NetBSD: CHANGES-2026,v 1.2857 2026/05/07 00:25:05 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4377,3 +4377,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated filesystems/fuse to 3.18.2 [vins 2026-05-06]
 	Updated devel/liburing to 2.14 [vins 2026-05-06]
 	Updated editors/vim-share to 9.2.0449 [sh 2026-05-06]
+	Updated security/doas to 6.3p2nb2 [gutteridge 2026-05-07]
