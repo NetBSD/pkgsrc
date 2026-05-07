@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.274 2026/02/09 19:35:36 adam Exp $
+# $NetBSD: Makefile,v 1.274.2.1 2026/05/07 22:32:20 maya Exp $
 
-DISTNAME=	gnutls-3.8.12
+DISTNAME=	gnutls-3.8.13
 CATEGORIES=	security devel
 MASTER_SITES=	${MASTER_SITE_GNUPG:=gnutls/v${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -36,8 +36,8 @@ CONFIGURE_ARGS.FreeBSD+=	ac_cv_type_max_align_t=yes
 
 .include "options.mk"
 
-# Failures on NetBSD 11 as of 3.8.11:
-# test-parse-datetime, test-realloc-posix
+# Failures on NetBSD 11 as of 3.8.13:
+# test-parse-datetime
 TEST_TARGET=		check
 
 INFO_FILES=		yes

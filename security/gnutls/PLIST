@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.84 2025/11/20 20:55:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.84.4.1 2026/05/07 22:32:20 maya Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -12,6 +12,7 @@ include/gnutls/crypto.h
 include/gnutls/dtls.h
 include/gnutls/gnutls.h
 include/gnutls/gnutlsxx.h
+include/gnutls/hpke.h
 include/gnutls/ocsp.h
 include/gnutls/openpgp.h
 include/gnutls/pkcs11.h
@@ -346,6 +347,14 @@ man/man3/gnutls_hmac_get_len.3
 man/man3/gnutls_hmac_init.3
 man/man3/gnutls_hmac_output.3
 man/man3/gnutls_hmac_set_nonce.3
+man/man3/gnutls_hpke_decap.3
+man/man3/gnutls_hpke_deinit.3
+man/man3/gnutls_hpke_derive_keypair.3
+man/man3/gnutls_hpke_encap.3
+man/man3/gnutls_hpke_export.3
+man/man3/gnutls_hpke_init.3
+man/man3/gnutls_hpke_open.3
+man/man3/gnutls_hpke_seal.3
 man/man3/gnutls_idna_map.3
 man/man3/gnutls_idna_reverse_map.3
 man/man3/gnutls_init.3
@@ -465,6 +474,7 @@ man/man3/gnutls_pkcs11_obj_flags_get_str.3
 man/man3/gnutls_pkcs11_obj_get_exts.3
 man/man3/gnutls_pkcs11_obj_get_flags.3
 man/man3/gnutls_pkcs11_obj_get_info.3
+man/man3/gnutls_pkcs11_obj_get_pk_algorithm.3
 man/man3/gnutls_pkcs11_obj_get_ptr.3
 man/man3/gnutls_pkcs11_obj_get_type.3
 man/man3/gnutls_pkcs11_obj_import_url.3
