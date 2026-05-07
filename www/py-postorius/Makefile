@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2025/02/12 09:29:19 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/05/07 20:50:31 wiz Exp $
 
 DISTNAME=	postorius-1.3.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/postorius/}
 
@@ -19,6 +20,9 @@ DEPENDS+=	${PYPKGPREFIX}-readme_renderer-[0-9]*:../../textproc/py-readme_rendere
 DEPENDS+=	${PYPKGPREFIX}-cmarkgfm>=0.8.0:../../textproc/py-cmarkgfm
 
 USE_LANGUAGES=	# none
+
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/postorius/static/postorius/js/held_messages.js.orig
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
