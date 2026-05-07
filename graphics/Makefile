@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1119 2026/04/13 15:44:41 kikadf Exp $
+# $NetBSD: Makefile,v 1.1120 2026/05/07 17:13:47 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -348,6 +348,7 @@ SUBDIR+=	librsvg
 SUBDIR+=	librsvg-c
 SUBDIR+=	libsixel
 SUBDIR+=	libspiro
+SUBDIR+=	libsquish
 SUBDIR+=	libv4l
 SUBDIR+=	libvideogfx
 SUBDIR+=	libvips

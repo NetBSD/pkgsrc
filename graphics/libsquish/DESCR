@@ -1,0 +1,3 @@
+The squish library (primarily known by libsquish) is an open source DXT/S3TC
+compression library written in C++ that is commonly used with OpenGL and
+DirectX for the lossy compression of RGBA textures.
