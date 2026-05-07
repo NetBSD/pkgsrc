@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2866 2026/05/07 16:49:11 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.2867 2026/05/07 17:16:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4387,3 +4387,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/wabt to 1.0.41 [adam 2026-05-07]
 	Updated textproc/hunspell to 1.7.3 [adam 2026-05-07]
 	Updated editors/ait to 1.15 [ktnb 2026-05-07]
+	Added graphics/libsquish version 1.15.1.3 [adam 2026-05-07]
+	Updated games/vcmi to 1.7.3 [adam 2026-05-07]
