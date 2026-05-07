@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.166.2.2 2026/04/12 10:08:48 bsiegert Exp $
+$NetBSD: distinfo,v 1.166.2.3 2026/05/07 22:24:04 maya Exp $
 
 BLAKE2s (apng-20260116.patch) = b60bc1c57608e79afb87ba55fb152137d1910ba986d6aacad6d600392096b48a
 SHA512 (apng-20260116.patch) = f8de2168a1a8ed546de7eb6c3da993f99139f385ceaf008ecd8dc64869bb86a4cf61b749ee4060fa207a89917ead7c61d35e409ff477b6240e1a7bc141e2de24
 Size (apng-20260116.patch) = 49195 bytes
-BLAKE2s (libpng-1.6.57.tar.xz) = ab0bb253e9a4d33520f861b00bb4038865d9ebbadbb393ed05a9eb7b4bbdf7f5
-SHA512 (libpng-1.6.57.tar.xz) = 9e7a691b96dd2c2c2ab66666685685a6c29824653aa85b15e764ff4afcebf02cfe776d58881a88d91e9cf60b11958079c923e2ea16bc5374b01a7f3edf56a71d
-Size (libpng-1.6.57.tar.xz) = 1069484 bytes
+BLAKE2s (libpng-1.6.58.tar.xz) = c53b047d1fe8e03f7414951d234c9b88bb5fa2a9a1d5f6e2ce955e67f936658c
+SHA512 (libpng-1.6.58.tar.xz) = 5937d6409d7ad564c9dba7969c5d39eea8bbc01936f433bf5936c872ec290dea353783f89bded91e124b3b3b15518320097de365acd3b0bcc922a0e90c94adc8
+Size (libpng-1.6.58.tar.xz) = 1070096 bytes
 SHA1 (patch-libpng-config.in) = 04f8d6af31114017ce9d1280e62f1768c35c289d
 SHA1 (patch-pngpriv.h) = 16f80df18a2f58eec784e2d821e8bb93c3e81747
