@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2026/05/07 17:13:47 adam Exp $
+
+BLAKE2s (libsquish-1.15.1.3.tar.gz) = 595fd1fffd9e70bbcec80901f3fa33c3ca2a69fb7d5847c8b67e0ec566cd8383
+SHA512 (libsquish-1.15.1.3.tar.gz) = e94ad7fff9a1e35b24ee03721797dd98ebc7ed7e76f5a6add63b61637c2a0f84eed51b983deb8a701ffa5b27cdd7862a017f957a560cef22c885c01cf8be3aad
+Size (libsquish-1.15.1.3.tar.gz) = 51344 bytes
+BLAKE2s (oblivioncth-OBCMake-v0.3.11.tar.gz) = fbbd49dd465b93b904c06348c6b3835d71ad9d997d5582b4fafa2989601e0002
+SHA512 (oblivioncth-OBCMake-v0.3.11.tar.gz) = 9600142da95cd2ac7089a9d75974997f1b0f8300e65a8ad80de5d9f686a5f31ab41c3a6cef5b5be272c84d955508952685a7d457f46b31c10b41eabce81a53d7
+Size (oblivioncth-OBCMake-v0.3.11.tar.gz) = 57594 bytes
+SHA1 (patch-lib_CMakeLists.txt) = 04f981c405283608671c5e00cf3e45e54dc50d5c

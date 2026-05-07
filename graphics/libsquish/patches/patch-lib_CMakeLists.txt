@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_CMakeLists.txt,v 1.1 2026/05/07 17:13:48 adam Exp $
+
+Fix build on Darwin.
+
+--- lib/CMakeLists.txt.orig	2026-05-07 04:43:18.605866482 +0000
++++ lib/CMakeLists.txt
+@@ -78,8 +78,3 @@ ob_add_standard_library(${LIB_TARGET_NAM
+     CONFIG STANDARD
+ )
+ 
+-# Extra target modifications
+-set_target_properties(${LIB_TARGET_NAME} PROPERTIES
+-    OSX_ARCHITECTURES "i386;ppc"
+-)
+-

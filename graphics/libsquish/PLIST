@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2026/05/07 17:13:47 adam Exp $
+LICENSE
+README.md
+cmake/Squish/libsquishSquishConfig.cmake
+cmake/Squish/libsquishSquishTargets-noconfig.cmake
+cmake/Squish/libsquishSquishTargets.cmake
+cmake/libsquishConfig.cmake
+cmake/libsquishConfigVersion.cmake
+include/squish/squish/squish.h
+include/squish/squish/squish_export.h
+lib/libsquish.so
+lib/libsquish.so.1.15.1.3
