@@ -1,4 +1,4 @@
-$NetBSD: patch-media_ffvpx_libavcodec_parser__list.c,v 1.2 2026/04/30 21:47:25 gutteridge Exp $
+$NetBSD: patch-media_ffvpx_libavcodec_parser__list.c,v 1.3 2026/05/07 21:01:30 gutteridge Exp $
 
 Fix build failure due to incompatible pointer types.
 https://github.com/mozilla-firefox/firefox/commit/930757b47bf1ce3522468f384570634032f0500b
