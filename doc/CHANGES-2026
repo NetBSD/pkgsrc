@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2857 2026/05/07 00:25:05 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.2858 2026/05/07 00:30:00 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -3947,7 +3947,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/freenginx-devel to 1.30.0nb1 [osa 2026-04-23]
 	Added news/bulletty version 0.2.2 [pin 2026-04-23]
 	Added news/eilmeldung version 1.4.3 [pin 2026-04-23]
-	Updated editors/vim-share to 9.2.0390 [sh 2026-04-23]
+	Updated editors/vim-share to 9.2.0390 [morr 2026-04-23]
 	Updated graphics/jbig2enc to 0.31 [adam 2026-04-24]
 	Updated net/haproxy to 3.3.7 [adam 2026-04-24]
 	Updated devel/py-virtualenv to 21.2.4 [adam 2026-04-24]
@@ -4376,5 +4376,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-aws-partitions to 1.1245.0 [taca 2026-05-06]
 	Updated filesystems/fuse to 3.18.2 [vins 2026-05-06]
 	Updated devel/liburing to 2.14 [vins 2026-05-06]
-	Updated editors/vim-share to 9.2.0449 [sh 2026-05-06]
+	Updated editors/vim-share to 9.2.0449 [morr 2026-05-06]
 	Updated security/doas to 6.3p2nb2 [gutteridge 2026-05-07]
