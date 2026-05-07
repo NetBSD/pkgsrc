@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27214 2026/05/07 00:21:42 gutteridge Exp $
+$NetBSD: TODO,v 1.27215 2026/05/07 08:25:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -388,7 +388,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-25.2.7 [wip]
-	o MesaLib-26.0.2
+	o MesaLib-26.1
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o PageEdit-2.7.6
