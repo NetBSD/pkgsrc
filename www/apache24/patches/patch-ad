@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.2 2013/02/25 21:16:38 ryoon Exp $
+$NetBSD: patch-ad,v 1.2.106.1 2026/05/07 22:47:02 maya Exp $
+
+Add layout for NetBSD.
 
 --- config.layout.orig	2012-04-17 14:01:41.000000000 +0000
 +++ config.layout

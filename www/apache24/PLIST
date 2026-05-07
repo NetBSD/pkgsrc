@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2025/12/07 15:55:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.38.4.1 2026/05/07 22:47:02 maya Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -553,6 +553,8 @@ share/httpd/manual/developer/hooks.html.en
 share/httpd/manual/developer/index.html
 share/httpd/manual/developer/index.html.en
 share/httpd/manual/developer/index.html.zh-cn.utf8
+share/httpd/manual/developer/mod_example_1.c
+share/httpd/manual/developer/mod_example_2.c
 share/httpd/manual/developer/modguide.html
 share/httpd/manual/developer/modguide.html.en
 share/httpd/manual/developer/modules.html
@@ -1377,10 +1379,6 @@ share/httpd/manual/platform/netware.html
 share/httpd/manual/platform/netware.html.en
 share/httpd/manual/platform/netware.html.fr.utf8
 share/httpd/manual/platform/netware.html.ko.euc-kr
-share/httpd/manual/platform/perf-hp.html
-share/httpd/manual/platform/perf-hp.html.en
-share/httpd/manual/platform/perf-hp.html.fr.utf8
-share/httpd/manual/platform/perf-hp.html.ko.euc-kr
 share/httpd/manual/platform/rpm.html
 share/httpd/manual/platform/rpm.html.en
 share/httpd/manual/platform/rpm.html.fr.utf8
