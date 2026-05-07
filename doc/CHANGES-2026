@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2869 2026/05/07 20:23:32 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2870 2026/05/07 20:25:57 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4392,3 +4392,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/go125 to 1.25.10 [bsiegert 2026-05-07]
 	Updated lang/go126 to 1.26.3 [bsiegert 2026-05-07]
 	Updated textproc/py-orjson to 3.11.9 [wiz 2026-05-07]
+	Updated www/firefox140 to 140.10.2 [gutteridge 2026-05-07]
