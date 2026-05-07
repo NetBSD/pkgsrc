@@ -1,0 +1,14 @@
+$NetBSD: patch-vcmiqt_CMakeLists.txt,v 1.1 2026/05/07 17:16:19 adam Exp $
+
+On Darwin, use correct install_name.
+
+--- vcmiqt/CMakeLists.txt.orig	2026-05-07 12:33:49.242045154 +0000
++++ vcmiqt/CMakeLists.txt
+@@ -41,6 +41,7 @@ if(WIN32)
+ 	)
+ endif()
+ 
++set_target_properties(vcmiqt PROPERTIES INSTALL_NAME_DIR "${CMAKE_INSTALL_PREFIX}/${LIB_DIR}")
+ target_link_libraries(vcmiqt vcmi Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Widgets)
+ 
+ target_include_directories(vcmiqt PUBLIC

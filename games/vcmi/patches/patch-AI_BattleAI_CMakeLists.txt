@@ -1,0 +1,14 @@
+$NetBSD: patch-AI_BattleAI_CMakeLists.txt,v 1.1 2026/05/07 17:16:19 adam Exp $
+
+On Darwin, use correct install_name.
+
+--- AI/BattleAI/CMakeLists.txt.orig	2026-05-07 12:35:20.203378040 +0000
++++ AI/BattleAI/CMakeLists.txt
+@@ -36,6 +36,7 @@ else()
+ 	install(TARGETS BattleAI RUNTIME DESTINATION ${AI_LIB_DIR} LIBRARY DESTINATION ${AI_LIB_DIR})
+ endif()
+ 
++set_target_properties(BattleAI PROPERTIES INSTALL_NAME_DIR "${CMAKE_INSTALL_PREFIX}/${AI_LIB_DIR}")
+ target_include_directories(BattleAI PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+ target_link_libraries(BattleAI PRIVATE vcmi)
+ 
