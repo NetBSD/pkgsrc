@@ -1,18 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2025/10/02 13:26:29 ktnb Exp $
+# $NetBSD: Makefile,v 1.6 2026/05/07 16:48:59 ktnb Exp $
 
-DISTNAME=	1.13
-PKGNAME=	ait-${DISTNAME}
+DISTNAME=	ait-1.15
 CATEGORIES=	editors
-MASTER_SITES=	https://notabug.org/nuclearkev/ait/archive/
-DIST_SUBDIR=	ait
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/ktnb/
 
 MAINTAINER=	ktnb@NetBSD.org
 HOMEPAGE=	https://notabug.org/nuclearkev/ait/
 COMMENT=	Small but mighty GNU Emacs style editor
 LICENSE=	modified-bsd
-
-# termbox doesn't compile on these systems
-BROKEN_ON_PLATFORM=	SmartOS-*-*
 
 WRKSRC=		${WRKDIR}/ait
 MAKE_FILE=	makefile
