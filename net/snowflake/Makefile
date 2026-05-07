@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2026/04/08 05:45:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.21 2026/05/07 18:50:01 bsiegert Exp $
 
 DISTNAME=	snowflake-v2.8.1
 PKGNAME=	${DISTNAME:S,-v,-,}
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	net security
 MASTER_SITES=	https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/archive/v${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
