@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2893 2026/05/08 13:55:45 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.2894 2026/05/08 14:24:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4424,3 +4424,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/py-gdal to 3.13.0 [gdt 2026-05-08]
 	Updated geography/gdal-lib to 3.13.0 [gdt 2026-05-08]
 	Updated lang/joker to 1.7.2 [ktnb 2026-05-08]
+	Updated security/libksba to 1.7.0 [adam 2026-05-08]
+	Updated security/libgpg-error to 1.61 [adam 2026-05-08]
+	Updated lang/nodejs to 26.1.0 [adam 2026-05-08]
+	Updated net/qbittorrent to 5.2.0 [adam 2026-05-08]
