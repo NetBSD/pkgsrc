@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:06:04 nia Exp $
+$NetBSD: distinfo,v 1.4 2026/05/08 02:52:30 khorben Exp $
 
-BLAKE2s (picocom-2.1.tar.gz) = 41497c357f6ae6172c45957515f3da84e06f9a6986ef19a527ed5e7c5ca4f132
-SHA512 (picocom-2.1.tar.gz) = 0df692118e3cfa27edd8ff9d5abbde8a9dc02fb015476ab1469337d616eb69411db125a967107276fb50bc58e7b9748429b9ded4943712a082a10827d595c03e
-Size (picocom-2.1.tar.gz) = 89281 bytes
+BLAKE2s (picocom-3.1.tar.gz) = ccb21a4da0217c3e8c4649fef7030d9df0aad67a99ff3a8c073f6f55046b80ab
+SHA512 (picocom-3.1.tar.gz) = ff1888494ae0e24a151e19ac3abcdbb499e42eb1abcea401a7c6c3b532be3d64ddd81a511641d1ce0119dc5da3d2804ce8eaff262a9d578bfe8e22fdf6e55ad1
+Size (picocom-3.1.tar.gz) = 121686 bytes
+SHA1 (patch-picocom.c) = ebff5811c338bd53443715e0aeafcbe69ba12718
