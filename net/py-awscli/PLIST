@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2026/02/27 06:52:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.57 2026/05/08 12:07:33 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -126,6 +126,9 @@ ${PYSITELIB}/awscli/customizations/cloudtrail/utils.pyo
 ${PYSITELIB}/awscli/customizations/cloudtrail/validation.py
 ${PYSITELIB}/awscli/customizations/cloudtrail/validation.pyc
 ${PYSITELIB}/awscli/customizations/cloudtrail/validation.pyo
+${PYSITELIB}/awscli/customizations/cloudwatch.py
+${PYSITELIB}/awscli/customizations/cloudwatch.pyc
+${PYSITELIB}/awscli/customizations/cloudwatch.pyo
 ${PYSITELIB}/awscli/customizations/codeartifact/__init__.py
 ${PYSITELIB}/awscli/customizations/codeartifact/__init__.pyc
 ${PYSITELIB}/awscli/customizations/codeartifact/__init__.pyo
@@ -3170,6 +3173,7 @@ ${PYSITELIB}/awscli/examples/emr/list-instance-fleets.rst
 ${PYSITELIB}/awscli/examples/emr/list-instances.rst
 ${PYSITELIB}/awscli/examples/emr/list-security-configurations.rst
 ${PYSITELIB}/awscli/examples/emr/list-steps.rst
+${PYSITELIB}/awscli/examples/emr/list-studios.rst
 ${PYSITELIB}/awscli/examples/emr/modify-cluster-attributes.rst
 ${PYSITELIB}/awscli/examples/emr/modify-instance-fleet.rst
 ${PYSITELIB}/awscli/examples/emr/put.rst
