@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.16 2026/05/02 19:27:19 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.17 2026/05/08 18:57:42 maya Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -128,3 +128,45 @@ Pullup ticket #7087 - requested by gutteridge
 www/firefox140: security fix
 www/firefox140-l10n: dependent update
 
+Pullup ticket #7088 - requested by taca
+chat/icb: Build fix
+
+Pullup ticket #7089 - requested by taca
+net/p5-Net-CIDR-Lite: security fix
+
+Pullup ticket #7090 - requested by taca
+www/ruby-rack-session: Security fix
+
+Pullup ticket #7091 - requested by taca
+databases/redis: Security fix
+
+Pullup ticket #7092 - requested by taca
+net/powerdns: Security fix
+
+Pullup ticket #7093 - requested by taca
+textproc/ruby-nokogiri: Security fix
+
+Pullup ticket #7094 - requested by taca
+graphics/png: bug fix
+
+Pullup ticket #7095 - requested by taca
+security/gnutls: Security fix
+
+Pullup ticket #7096 - requested by taca
+www/curl: Security fix
+
+Pullup ticket #7097 - requested by taca
+net/inetutils: Security fix
+
+Pullup ticket #7098 - requested by taca
+mail/postfix: Security fix
+
+Pullup ticket #7099 - requested by taca
+www/apache24: Security fix
+
+Pullup ticket #7101 - requested by nia
+www/palemoon: Security fix
+
+Pullup ticket #7102 - requested by gutteridge
+www/firefox140: Security fix
+www/firefox140-l10n: Security fix
