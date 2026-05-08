@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/08/17 12:54:20 gdt Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/05/08 19:59:04 gdt Exp $
 bin/coshp
 bin/legend
 bin/map2img
@@ -45,6 +45,7 @@ include/mapserver/mapraster.h
 include/mapserver/mapregex.h
 include/mapserver/mapresample.h
 include/mapserver/mapserv-config.h
+include/mapserver/mapserv-index.h
 include/mapserver/mapserv.h
 include/mapserver/mapserver-api.h
 include/mapserver/mapserver-config.h
@@ -68,6 +69,24 @@ share/mapserver/cmake/mapserver-config-version.cmake
 share/mapserver/cmake/mapserver-config.cmake
 share/mapserver/cmake/mapserverTargets-noconfig.cmake
 share/mapserver/cmake/mapserverTargets.cmake
+share/mapserver/ogcapi/templates/html-bootstrap/collection-item.html
+share/mapserver/ogcapi/templates/html-bootstrap/collection-items.html
+share/mapserver/ogcapi/templates/html-bootstrap/collection.html
+share/mapserver/ogcapi/templates/html-bootstrap/collections.html
+share/mapserver/ogcapi/templates/html-bootstrap/conformance.html
+share/mapserver/ogcapi/templates/html-bootstrap/debug.html
+share/mapserver/ogcapi/templates/html-bootstrap/footer.html
+share/mapserver/ogcapi/templates/html-bootstrap/header.html
+share/mapserver/ogcapi/templates/html-bootstrap/landing.html
+share/mapserver/ogcapi/templates/html-bootstrap/openapi.html
+share/mapserver/ogcapi/templates/html-index-bootstrap/footer.html
+share/mapserver/ogcapi/templates/html-index-bootstrap/header.html
+share/mapserver/ogcapi/templates/html-index-bootstrap/landing.html
+share/mapserver/ogcapi/templates/html-index-bootstrap/map.html
+share/mapserver/ogcapi/templates/html-index-plain/footer.html
+share/mapserver/ogcapi/templates/html-index-plain/header.html
+share/mapserver/ogcapi/templates/html-index-plain/landing.html
+share/mapserver/ogcapi/templates/html-index-plain/map.html
 share/mapserver/ogcapi/templates/html-plain/collection-item.html
 share/mapserver/ogcapi/templates/html-plain/collection-items.html
 share/mapserver/ogcapi/templates/html-plain/collection.html
@@ -78,3 +97,4 @@ share/mapserver/ogcapi/templates/html-plain/footer.html
 share/mapserver/ogcapi/templates/html-plain/header.html
 share/mapserver/ogcapi/templates/html-plain/landing.html
 share/mapserver/ogcapi/templates/html-plain/openapi.html
+@pkgdir etc
