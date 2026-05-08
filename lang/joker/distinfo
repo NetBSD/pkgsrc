@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2026/02/09 14:20:40 ktnb Exp $
+$NetBSD: distinfo,v 1.14 2026/05/08 13:55:28 ktnb Exp $
 
 BLAKE2s (dario.cat_mergo_@v_v1.0.0.mod) = 0af2e8f4417b8a004650a071a3fcd9716e3bb01ac60f24dc579155e301d2911f
 SHA512 (dario.cat_mergo_@v_v1.0.0.mod) = 706f0038b07866385f4d91a8a28e4b9648c1bd45f0f7124f97069bfa1af16ce6ea77fadd0585c050996c9a36001151b68bdd1d6a6c44fd8645865ef76a7c0c57
@@ -51,6 +51,12 @@ Size (github.com_emirpasic_gods_@v_v1.18.1.mod) = 41 bytes
 BLAKE2s (github.com_emirpasic_gods_@v_v1.18.1.zip) = 9d55cb5c8de441a578674e42bc46d3bf92092aa59261aceb36f87541ef0ae8ec
 SHA512 (github.com_emirpasic_gods_@v_v1.18.1.zip) = 852c8327553544c2d902cc718226c75c76d8732852e060d6a8ad85c87be2477a380cd912db5f7064031dfdb1b6c902eab9c26f8be26d21dca1d6dd9e8b20cead
 Size (github.com_emirpasic_gods_@v_v1.18.1.zip) = 191646 bytes
+BLAKE2s (github.com_fsnotify_fsnotify_@v_v1.10.0.mod) = 36289d1a98fc3201f26aad2e302fadcef11e0c4f4510475de1478ce88497c2f9
+SHA512 (github.com_fsnotify_fsnotify_@v_v1.10.0.mod) = dcfd4ac1503b20b0c8f5872aefe82358d8d187da418e065232a35a4bac4c0969c00076b093c4516fd791fb90961d3a70bddfe2ede4fb357b32e8cecda7fbe8d2
+Size (github.com_fsnotify_fsnotify_@v_v1.10.0.mod) = 279 bytes
+BLAKE2s (github.com_fsnotify_fsnotify_@v_v1.10.0.zip) = bc416df9ac4a6f37786d940128a0fc1a8d6f2fafc084b179b7243cbb3f6197cc
+SHA512 (github.com_fsnotify_fsnotify_@v_v1.10.0.zip) = 37f20fa3e3ea65edb2c357056ad18dde3f05fbaf09d2da7a0476c40aaa34c74b9ed92dff976b3b2794054993628003431dc9cf22c2e6fbf5dc8bfb27a9a0efbf
+Size (github.com_fsnotify_fsnotify_@v_v1.10.0.zip) = 117736 bytes
 BLAKE2s (github.com_go-git_gcfg_@v_v1.5.1-0.20230307220236-3a3c6141e376.mod) = 977350137e278e75587791d8f11f38a916fe8102ae5ae7a3239009fa4a92fb52
 SHA512 (github.com_go-git_gcfg_@v_v1.5.1-0.20230307220236-3a3c6141e376.mod) = ffa5bfe7708542022e9867ac1f88586b139b1ba69d54bb536139426d1671e77ddee0aeeb0942a628396ed464bd8b94b399f46a8620fd4f143a0607f682fcccd0
 Size (github.com_go-git_gcfg_@v_v1.5.1-0.20230307220236-3a3c6141e376.mod) = 111 bytes
@@ -261,6 +267,6 @@ Size (gopkg.in_yaml.v2_@v_v2.4.0.zip) = 81183 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 17da54ba1894b4653d4c1ab1ae6e9fe03928a96c69cdc8db6b6ea9e34d673991
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 307ca9123efc577ca04828996ee9d8edbb51794ccb4b8d9f169ba689e7276aa5f6ae106a04b22b7fab853ffacfebcbf74468b64eaefd57445864c1fbc77fad9d
 Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
-BLAKE2s (joker-1.7.1.tar.gz) = 0564aff6cd67fcfb87624f006cf1be78cb2764aec167c4d7f9653e8fd66b0861
-SHA512 (joker-1.7.1.tar.gz) = 56cda23958ffc1d42f500a0a34bf1e2c07898d50149aa9d5f7b67e386e86739fe4d864885ca4762fcb87cfc62ecfda2c54c3e073067ac835ee6868e06fe1cdfd
-Size (joker-1.7.1.tar.gz) = 518948 bytes
+BLAKE2s (joker-1.7.2.tar.gz) = b13fa2bb5d890e4702900ca905019bd9aff6f0f04b249bc6c4651f6a9a38bbda
+SHA512 (joker-1.7.2.tar.gz) = b08feeaeff2e0ba44080cafb43d56880236d14879a24c79b95329f06d0deef4815b698a54b6938e464560338722903082cb0b9de472d5faba7804402d3250d00
+Size (joker-1.7.2.tar.gz) = 524795 bytes
