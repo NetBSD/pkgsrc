@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2892 2026/05/08 13:12:57 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.2893 2026/05/08 13:55:45 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4423,3 +4423,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-awscli to 1.45.6 [adam 2026-05-08]
 	Updated geography/py-gdal to 3.13.0 [gdt 2026-05-08]
 	Updated geography/gdal-lib to 3.13.0 [gdt 2026-05-08]
+	Updated lang/joker to 1.7.2 [ktnb 2026-05-08]
