@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/02/14 07:54:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2026/05/08 02:52:30 khorben Exp $
 
-DISTNAME=	picocom-2.1
+DISTNAME=	picocom-3.1
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_GITHUB:=npat-efault/}
 GITHUB_PROJECT=	picocom
