@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2026/05/06 07:04:26 adam Exp $
+$NetBSD: distinfo,v 1.22 2026/05/08 08:24:53 adam Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -1734,9 +1734,9 @@ Size (utf8parse-0.2.2.crate) = 13499 bytes
 BLAKE2s (uuid-1.23.0.crate) = 9df040bc979803772fcc6474ab5dbd7133b6a90118e124da3c63be4a03542d0a
 SHA512 (uuid-1.23.0.crate) = 60e476dcbc407a0447f362ee019abb128c0441503e0adacdcac5685ecc16aa680faa575b25fcce147e9c49bfb5b8fa04964a25c5d7e4e9870e0078bf8f18fabf
 Size (uuid-1.23.0.crate) = 63006 bytes
-BLAKE2s (uv_build-0.11.10.tar.gz) = e8caafccc839db9ae838293efc317fd2468de1335ca11cf570c0a390c32d3722
-SHA512 (uv_build-0.11.10.tar.gz) = ab1e10e9c23bfd90ef12a274695076a2e9756da3b13b062a9f4ab073fc8789a2faee3a8b87af1abeb071de84f245a26ebf896b31825b753acdd32ba74df6f1d0
-Size (uv_build-0.11.10.tar.gz) = 376745 bytes
+BLAKE2s (uv_build-0.11.11.tar.gz) = f2191f949ad6fc288a27f3c8ce509bebce1ae647af13fe2f145133e23838a8d9
+SHA512 (uv_build-0.11.11.tar.gz) = ed612caee074c756c8ab242e3e0bf64e76dfddfefa383c3587b675b07e61621504ccaea653733c27ef2dd9b8bef1aa6d21ba1b9b39102d49c9ec3e9d7d13e758
+Size (uv_build-0.11.11.tar.gz) = 376722 bytes
 BLAKE2s (valuable-0.1.1.crate) = df7602da20aa0212438759173532cf82c56ba05307e036b22bfddb318e2f82b7
 SHA512 (valuable-0.1.1.crate) = d8a4bffdc8a166d1ee11b87dd91cd68e5c898916b14db7039ad2faaad34f4bfef76f3fc3d17d6e7bf05e495778f7c9d5223fbf45331bd114f93fb6ec950eadbf
 Size (valuable-0.1.1.crate) = 28679 bytes
