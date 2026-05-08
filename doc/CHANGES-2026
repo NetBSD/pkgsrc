@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2891 2026/05/08 12:08:21 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2892 2026/05/08 13:12:57 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4421,3 +4421,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-s3transfer to 0.17.0 [adam 2026-05-08]
 	Updated net/py-boto3 to 1.43.6 [adam 2026-05-08]
 	Updated net/py-awscli to 1.45.6 [adam 2026-05-08]
+	Updated geography/py-gdal to 3.13.0 [gdt 2026-05-08]
+	Updated geography/gdal-lib to 3.13.0 [gdt 2026-05-08]
