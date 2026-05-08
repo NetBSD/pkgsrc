@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2024/10/14 06:45:53 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2026/05/08 03:42:39 riastradh Exp $
 
 DISTNAME=	netbsd-www-1.11
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -16,7 +16,7 @@ DEPENDS+=	ImageMagick>=5.5.7.11nb1:../../graphics/ImageMagick
 DEPENDS+=	docbook-website>=2.6.0nb1:../../textproc/docbook-website
 DEPENDS+=	docbook-xsl>=1.68.1:../../textproc/docbook-xsl
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
-DEPENDS+=	libxslt>=1.0.20:../../textproc/libxslt
+DEPENDS+=	libxslt>=1.1.45:../../textproc/libxslt
 DEPENDS+=	netbsd-doc-print>=1.4:../../meta-pkgs/netbsd-doc-print
 DEPENDS+=	opensp>=1.1:../../textproc/opensp
 DEPENDS+=	${PYPKGPREFIX}-pspdfutils-[0-9]*:../../print/py-pspdfutils
