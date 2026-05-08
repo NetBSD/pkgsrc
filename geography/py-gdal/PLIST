@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/11/08 00:52:41 gdt Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/05/08 13:12:41 gdt Exp $
 bin/gdal2tiles
 bin/gdal2tiles.py
 bin/gdal2xyz
@@ -292,15 +292,9 @@ ${PYSITELIB}/osgeo_utils/samples/ogr2vrt.pyo
 ${PYSITELIB}/osgeo_utils/samples/ogr_build_junction_table.py
 ${PYSITELIB}/osgeo_utils/samples/ogr_build_junction_table.pyc
 ${PYSITELIB}/osgeo_utils/samples/ogr_build_junction_table.pyo
-${PYSITELIB}/osgeo_utils/samples/ogr_dispatch.py
-${PYSITELIB}/osgeo_utils/samples/ogr_dispatch.pyc
-${PYSITELIB}/osgeo_utils/samples/ogr_dispatch.pyo
 ${PYSITELIB}/osgeo_utils/samples/ogrinfo.py
 ${PYSITELIB}/osgeo_utils/samples/ogrinfo.pyc
 ${PYSITELIB}/osgeo_utils/samples/ogrinfo.pyo
-${PYSITELIB}/osgeo_utils/samples/ogrupdate.py
-${PYSITELIB}/osgeo_utils/samples/ogrupdate.pyc
-${PYSITELIB}/osgeo_utils/samples/ogrupdate.pyo
 ${PYSITELIB}/osgeo_utils/samples/rel.py
 ${PYSITELIB}/osgeo_utils/samples/rel.pyc
 ${PYSITELIB}/osgeo_utils/samples/rel.pyo
@@ -328,6 +322,15 @@ ${PYSITELIB}/osgeo_utils/samples/validate_gpkg.pyo
 ${PYSITELIB}/osgeo_utils/samples/validate_jp2.py
 ${PYSITELIB}/osgeo_utils/samples/validate_jp2.pyc
 ${PYSITELIB}/osgeo_utils/samples/validate_jp2.pyo
+${PYSITELIB}/osgeo_utils/samples/validate_s102.py
+${PYSITELIB}/osgeo_utils/samples/validate_s102.pyc
+${PYSITELIB}/osgeo_utils/samples/validate_s102.pyo
+${PYSITELIB}/osgeo_utils/samples/validate_s104.py
+${PYSITELIB}/osgeo_utils/samples/validate_s104.pyc
+${PYSITELIB}/osgeo_utils/samples/validate_s104.pyo
+${PYSITELIB}/osgeo_utils/samples/validate_s111.py
+${PYSITELIB}/osgeo_utils/samples/validate_s111.pyc
+${PYSITELIB}/osgeo_utils/samples/validate_s111.pyo
 ${PYSITELIB}/osgeo_utils/samples/vec_tr.py
 ${PYSITELIB}/osgeo_utils/samples/vec_tr.pyc
 ${PYSITELIB}/osgeo_utils/samples/vec_tr.pyo
