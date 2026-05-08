@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.75 2026/04/26 08:25:12 adam Exp $
+$NetBSD: distinfo,v 1.76 2026/05/08 14:22:45 adam Exp $
 
-BLAKE2s (libgpg-error-1.60.tar.bz2) = d32e8d6eed2584dc2dbc0d2efc64ff88fc4a7ef9128ad10209141c0997de4761
-SHA512 (libgpg-error-1.60.tar.bz2) = e8beaa63ce56a34070b2e6b0978a9b91c5e8fa094a957c8dd6fec42cc02cbd47670b94fc19fdcec474358cc2ebb28f6fc21b3465e992fbd9c04eec576717b8ca
-Size (libgpg-error-1.60.tar.bz2) = 1125272 bytes
+BLAKE2s (libgpg-error-1.61.tar.bz2) = 3445f6ee7a8808bc2daa66552bf3707cf5fb00384e9772fc5c4ce0e566fc9ce9
+SHA512 (libgpg-error-1.61.tar.bz2) = 3e59eb52d061709fd8dfe56a4b36d2d5b49dd5e0c90c283899669d6a355286cb3a3f851631f8456c78c48b652bb31a4c1f8b081ccdf87e5db64b313d141a7670
+Size (libgpg-error-1.61.tar.bz2) = 1124751 bytes
 SHA1 (patch-doc_yat2m.c) = c5c497f6bcd110ca8dbd050cb74f3f537f6404a8
 SHA1 (patch-src_argparse.c) = f33ca8a2ede86d11f1098d71a712c093d478181d
 SHA1 (patch-src_estream.c) = 0502a55403062abeab22c83a6d919c57ff1c5d82
