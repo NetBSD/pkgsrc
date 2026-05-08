@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.43 2026/04/25 22:45:50 gdt Exp $
+# $NetBSD: Makefile.common,v 1.44 2026/05/08 13:12:41 gdt Exp $
 #
 # used by geography/gdal-lib/Makefile
 # used by geography/py-gdal/Makefile
 
-VERSION_BASE=	3.12.4
+VERSION_BASE=	3.13.0
 #   beta1 unpacks to directory *with* beta1, and is placed in VERSION_BASE.
 PLIST_SUBST+=	VERSION_BASE=${VERSION_BASE}
-#VERSION_RC=	rc1
+#VERSION_RC=	rc2
 #   rc1 unpacks to directory *without* rc1, and is placed in VERSION_RC.
 VERSION=	${VERSION_BASE}${VERSION_RC}
 DISTNAME=	gdal-${VERSION}
