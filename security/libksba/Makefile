@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2026/02/24 08:35:46 adam Exp $
+# $NetBSD: Makefile,v 1.48 2026/05/08 14:22:06 adam Exp $
 
-DISTNAME=	libksba-1.6.8
+DISTNAME=	libksba-1.7.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG:=libksba/}
 EXTRACT_SUFX=	.tar.bz2
@@ -24,6 +24,6 @@ CONFIGURE_ARGS+=	CC_FOR_BUILD=${NATIVE_CC:Q}
 .endif
 
 .include "../../security/libgcrypt/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.2
+BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.28
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
