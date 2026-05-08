@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2890 2026/05/08 11:36:16 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2891 2026/05/08 12:08:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4416,3 +4416,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-OpenSSL to 26.2.0 [adam 2026-05-08]
 	Updated devel/mise to 2026.5.3 [pin 2026-05-08]
 	Updated sysutils/lla to 0.5.6 [pin 2026-05-08]
+	Updated www/py-urllib3 to 2.7.0 [adam 2026-05-08]
+	Updated net/py-botocore to 1.43.6 [adam 2026-05-08]
+	Updated net/py-s3transfer to 0.17.0 [adam 2026-05-08]
+	Updated net/py-boto3 to 1.43.6 [adam 2026-05-08]
+	Updated net/py-awscli to 1.45.6 [adam 2026-05-08]
