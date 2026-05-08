@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.117 2026/03/12 15:58:43 taca Exp $
+# $NetBSD: Makefile,v 1.118 2026/05/08 02:02:06 jklos Exp $
 
 DISTNAME=		wordpress-${VERSION}
 PKGNAME=		${PHP_PKG_PREFIX}-${DISTNAME}
-VERSION=		6.9.2
+VERSION=		6.9.4
 CATEGORIES=		www
 MASTER_SITES=		https://wordpress.org/
 
-MAINTAINER=		morr@NetBSD.org
+MAINTAINER=		taca@NetBSD.org
 HOMEPAGE=		https://wordpress.org/
 COMMENT=		Blogging tool written in php
 LICENSE=		gnu-gpl-v2
