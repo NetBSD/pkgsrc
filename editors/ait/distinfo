@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2026/05/07 16:48:59 ktnb Exp $
+$NetBSD: distinfo,v 1.6 2026/05/08 14:45:39 ktnb Exp $
 
-BLAKE2s (ait-1.15.tar.gz) = 124ba40e19f9910d20456464d0eee8ae1121e7c51945b10b825036477818c35c
-SHA512 (ait-1.15.tar.gz) = 56ee52b2da66063ebe996f0589bc174350b9ded3319ca529ba4e6955c80833f4b4b6e12c1bc4cc9dabf2b0909f207bb0119cd56ff6d7e6173706240d9474c9e9
-Size (ait-1.15.tar.gz) = 138503 bytes
+BLAKE2s (ait-1.15.tar.gz) = 6f91ec9d306df2b4711be669fb16b268a8b4f2e1ea6f761871bba9f0a03821a5
+SHA512 (ait-1.15.tar.gz) = 223884ff51ed77144aba33ae79c09890c9250077a704ec81046d5ed6f59a3e1e12603fae45796753b78587dafb2c99a8ebfcadf2efaf0a2dae85a83abbb15532
+Size (ait-1.15.tar.gz) = 156695 bytes
