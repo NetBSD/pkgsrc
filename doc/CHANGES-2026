@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2895 2026/05/08 16:59:11 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2896 2026/05/08 19:59:10 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4429,3 +4429,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nodejs to 26.1.0 [adam 2026-05-08]
 	Updated net/qbittorrent to 5.2.0 [adam 2026-05-08]
 	Updated biology/py-biopython to 1.87 [wiz 2026-05-08]
+	Updated geography/mapserver to 8.6.3 [gdt 2026-05-08]
