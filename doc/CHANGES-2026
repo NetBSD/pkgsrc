@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2876 2026/05/08 02:04:46 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2877 2026/05/08 02:06:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4399,3 +4399,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/jj-docs to 0.41.0 [wiz 2026-05-07]
 	Updated www/wordpress to 6.9.4 [jklos 2026-05-08]
 	Updated lang/php83 to 8.3.31 [taca 2026-05-08]
+	Updated lang/php84 to 8.4.21 [taca 2026-05-08]
