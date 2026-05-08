@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.41 2026/04/26 09:03:23 adam Exp $
+$NetBSD: distinfo,v 1.42 2026/05/08 10:04:35 adam Exp $
 
-BLAKE2s (pyopenssl-26.1.0.tar.gz) = 0a65ae109f0595bd60c22c3e5cb3ece7135e1c931b6af25ec0dc5599df4166a5
-SHA512 (pyopenssl-26.1.0.tar.gz) = 084117296b7013d665d7f30705b26ad5dd2758febfc7080ae656328d40a2e992b74c52abcc39b9243bc9a918b4611f1f497e56928a5789ffc63c0b521357eb9c
-Size (pyopenssl-26.1.0.tar.gz) = 186181 bytes
+BLAKE2s (pyopenssl-26.2.0.tar.gz) = 3dae985efdb1e42b308f85c56cc226e37bacdc46badababa1f0c6eae4601120c
+SHA512 (pyopenssl-26.2.0.tar.gz) = 701f205adad7384731710f572b48a41af87ea4ba7c7111421962e01079407f3e7b289dd5972feec80a6d182b818ee39e45c88464108589b16fe8239c19080265
+Size (pyopenssl-26.2.0.tar.gz) = 182195 bytes
