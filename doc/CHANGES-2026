@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2883 2026/05/08 08:06:07 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2884 2026/05/08 08:07:01 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4406,3 +4406,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/arti to 2.3.0 [wiz 2026-05-08]
 	Updated devel/mise to 2026.5.2 [pin 2026-05-08]
 	Updated emulators/jgenesis to 0.12.0 [pin 2026-05-08]
+	Updated shells/oh-my-posh to 29.13.1 [pin 2026-05-08]
