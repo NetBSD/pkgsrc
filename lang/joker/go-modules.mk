@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.8 2026/02/09 14:20:40 ktnb Exp $
+# $NetBSD: go-modules.mk,v 1.9 2026/05/08 13:55:28 ktnb Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.0.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.0.zip
@@ -17,6 +17,8 @@ GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.mod
 GO_MODULE_FILES+=	github.com/emirpasic/gods/@v/v1.18.1.mod
 GO_MODULE_FILES+=	github.com/emirpasic/gods/@v/v1.18.1.zip
+GO_MODULE_FILES+=	github.com/fsnotify/fsnotify/@v/v1.10.0.mod
+GO_MODULE_FILES+=	github.com/fsnotify/fsnotify/@v/v1.10.0.zip
 GO_MODULE_FILES+=	github.com/go-git/gcfg/@v/v1.5.1-0.20230307220236-3a3c6141e376.mod
 GO_MODULE_FILES+=	github.com/go-git/gcfg/@v/v1.5.1-0.20230307220236-3a3c6141e376.zip
 GO_MODULE_FILES+=	github.com/go-git/go-billy/v5/@v/v5.6.0.mod
