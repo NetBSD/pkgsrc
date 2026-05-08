@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.109 2026/05/08 08:04:45 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.110 2026/05/08 11:34:57 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -180,8 +180,7 @@ CARGO_CRATE_DEPENDS+=	crypto-bigint-0.5.5
 CARGO_CRATE_DEPENDS+=	crypto-common-0.1.7
 CARGO_CRATE_DEPENDS+=	crypto-common-0.2.1
 CARGO_CRATE_DEPENDS+=	crypto_secretbox-0.1.1
-CARGO_CRATE_DEPENDS+=	ctor-0.10.1
-CARGO_CRATE_DEPENDS+=	ctor-proc-macro-0.0.13
+CARGO_CRATE_DEPENDS+=	ctor-0.12.0
 CARGO_CRATE_DEPENDS+=	ctr-0.9.2
 CARGO_CRATE_DEPENDS+=	ctutils-0.4.2
 CARGO_CRATE_DEPENDS+=	curve25519-dalek-4.1.3
@@ -220,8 +219,6 @@ CARGO_CRATE_DEPENDS+=	dirs-sys-0.5.0
 CARGO_CRATE_DEPENDS+=	displaydoc-0.2.5
 CARGO_CRATE_DEPENDS+=	document-features-0.2.12
 CARGO_CRATE_DEPENDS+=	dotenvy-0.15.7
-CARGO_CRATE_DEPENDS+=	dtor-0.8.1
-CARGO_CRATE_DEPENDS+=	dtor-proc-macro-0.0.13
 CARGO_CRATE_DEPENDS+=	duct-1.1.1
 CARGO_CRATE_DEPENDS+=	dunce-1.0.5
 CARGO_CRATE_DEPENDS+=	dyn-clone-1.0.20
@@ -473,7 +470,8 @@ CARGO_CRATE_DEPENDS+=	libloading-0.8.9
 CARGO_CRATE_DEPENDS+=	libloading-0.9.0
 CARGO_CRATE_DEPENDS+=	libm-0.2.16
 CARGO_CRATE_DEPENDS+=	libredox-0.1.16
-CARGO_CRATE_DEPENDS+=	link-section-0.2.1
+CARGO_CRATE_DEPENDS+=	link-section-0.12.0
+CARGO_CRATE_DEPENDS+=	linktime-proc-macro-0.1.0
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.4.15
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.12.1
 CARGO_CRATE_DEPENDS+=	litemap-0.8.2
