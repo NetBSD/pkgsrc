@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/09 14:07:30 wiz Exp $
+
+BLAKE2s (xnecview-1.37.tgz) = bda28b52d1e41ef244c35434c0b4937ad968e2561f2ac661685d41ef3a5e522c
+SHA512 (xnecview-1.37.tgz) = 6fc4beec1b9502d6084d4e412b8bb89d1deeaab5bfa6c0341cba1a899fb9a59eb1e7f9dfc61a97f2853ecff57c241dc9af993b176410799a07f113e3a60f75d7
+Size (xnecview-1.37.tgz) = 79005 bytes
