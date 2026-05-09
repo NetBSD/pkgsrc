@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2908 2026/05/09 19:57:33 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2909 2026/05/09 20:03:57 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4374,7 +4374,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/py-pymysql to 1.1.3 [adam 2026-05-06]
 	Updated finance/ruby-braintree to 4.36.0 [taca 2026-05-06]
 	Updated www/ruby-aws-partitions to 1.1245.0 [taca 2026-05-06]
-	Updated filesystems/fuse to 3.18.2 [vins 2026-05-06]
 	Updated devel/liburing to 2.14 [vins 2026-05-06]
 	Updated editors/vim-share to 9.2.0449 [morr 2026-05-06]
 	Updated security/doas to 6.3p2nb2 [gutteridge 2026-05-07]
