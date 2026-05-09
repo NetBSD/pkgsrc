@@ -1,4 +1,36 @@
-@comment $NetBSD: PLIST,v 1.1 2026/05/09 11:23:59 gdt Exp $
-@comment TODO: to fill this file with the file listing:
-@comment TODO: 1. run "/usr/bin/make package"
-@comment TODO: 2. run "/usr/bin/make print-PLIST"
+@comment $NetBSD: PLIST,v 1.2 2026/05/09 11:29:36 gdt Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/pyqgc/__init__.py
+${PYSITELIB}/pyqgc/__init__.pyc
+${PYSITELIB}/pyqgc/__init__.pyo
+${PYSITELIB}/pyqgc/_version.py
+${PYSITELIB}/pyqgc/_version.pyc
+${PYSITELIB}/pyqgc/_version.pyo
+${PYSITELIB}/pyqgc/exceptions.py
+${PYSITELIB}/pyqgc/exceptions.pyc
+${PYSITELIB}/pyqgc/exceptions.pyo
+${PYSITELIB}/pyqgc/qgchelpers.py
+${PYSITELIB}/pyqgc/qgchelpers.pyc
+${PYSITELIB}/pyqgc/qgchelpers.pyo
+${PYSITELIB}/pyqgc/qgcmessage.py
+${PYSITELIB}/pyqgc/qgcmessage.pyc
+${PYSITELIB}/pyqgc/qgcmessage.pyo
+${PYSITELIB}/pyqgc/qgcreader.py
+${PYSITELIB}/pyqgc/qgcreader.pyc
+${PYSITELIB}/pyqgc/qgcreader.pyo
+${PYSITELIB}/pyqgc/qgctypes_core.py
+${PYSITELIB}/pyqgc/qgctypes_core.pyc
+${PYSITELIB}/pyqgc/qgctypes_core.pyo
+${PYSITELIB}/pyqgc/qgctypes_get.py
+${PYSITELIB}/pyqgc/qgctypes_get.pyc
+${PYSITELIB}/pyqgc/qgctypes_get.pyo
+${PYSITELIB}/pyqgc/qgctypes_poll.py
+${PYSITELIB}/pyqgc/qgctypes_poll.pyc
+${PYSITELIB}/pyqgc/qgctypes_poll.pyo
+${PYSITELIB}/pyqgc/qgctypes_set.py
+${PYSITELIB}/pyqgc/qgctypes_set.pyc
+${PYSITELIB}/pyqgc/qgctypes_set.pyo
