@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2905 2026/05/09 14:07:55 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2906 2026/05/09 14:24:28 fox Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4438,3 +4438,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed www/librest07 successor www/librest [vins 2026-05-09]
 	Updated net/gnome-online-accounts to 3.58.1 [vins 2026-05-09]
 	Added ham/xnecview version 1.37 [wiz 2026-05-09]
+	Updated audio/din to 64.1 [fox 2026-05-09]
