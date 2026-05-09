@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2911 2026/05/09 20:27:47 vins Exp $
+$NetBSD: CHANGES-2026,v 1.2912 2026/05/09 21:59:09 morr Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4442,3 +4442,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/uriparser to 1.0.2 [wiz 2026-05-09]
 	Added filesystems/fuse3 version 3.18.2 [vins 2026-05-09]
 	Updated filesystems/libntfs to 2026.2.25 [vins 2026-05-09]
+	Updated editors/vim-share to 9.2.0461 [sh 2026-05-09]
