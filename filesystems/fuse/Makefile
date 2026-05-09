@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.19 2026/05/09 13:47:13 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/05/09 19:21:36 vins Exp $
 #
 
-DISTNAME=	fuse-3.18.2
-PKGREVISION=	1
+DISTNAME=	fuse-2.9.9
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libfuse/}
 GITHUB_PROJECT=	libfuse
-GITHUB_RELEASE=	${PKGBASE}-${PKGVERSION_NOREV}
+GITHUB_TAG=	${PKGBASE}-${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/libfuse/libfuse
 COMMENT=		Filesystem in Userspace
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1
+
+GNU_CONFIGURE=		yes
 
 # FUSE the implementation only builds on Linux and FreeBSD.
 ONLY_FOR_PLATFORM=	Linux-*-* FreeBSD-*-* NetBSD-*-*
@@ -20,60 +21,55 @@ ONLY_FOR_PLATFORM=	Linux-*-* FreeBSD-*-* NetBSD-*-*
 # implementation is not needed. This FUSE implementation can also be
 # used with the perfuse package on NetBSD.
 
-USE_LANGUAGES+=	c c++
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	gmake pkg-config gettext
+USE_TOOLS+=	autoconf automake autoreconf
+USE_LIBTOOL=	yes
 
-SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	pre-configure
-SUBST_FILES.conf=	doc/mount.fuse3.8 util/fuse.conf
-SUBST_SED.conf+=	-e "s:/etc/fuse.conf:${PKG_SYSCONFDIR}/fuse.conf:g"
-SUBST_MESSAGE.conf=	Setting default configuration file path for FUSE
+TOOL_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 
-PKG_DOCS=	doc/README.* doc/*.txt
+CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
+CONFIGURE_ARGS+=	--with-pkgconfigdir=${PREFIX}/lib/pkgconfig
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+CONFIGURE_ENV+=	MOUNT_FUSE_PATH=${PREFIX}/sbin
+CONFIGURE_ENV+=	UDEV_RULES_PATH=${PREFIX}/${EGDIR}
+CONFIGURE_ENV+=	INIT_D_PATH=${PREFIX}/${EGDIR}
+.endif
+
+PKG_DOCS=	doc/how-fuse-works doc/kernel.txt
 DOCDIR=		share/doc/${PKGBASE}
 EGDIR=		share/examples/${PKGBASE}
 INCLUDEDIR=	include/fuse
 
-.include "../../mk/bsd.prefs.mk"
-
-MESON_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
-		-Dexamples=true \
-		-Dtests=true \
-		-Dutils=true
+INSTALL_TARGET=		install-strip
+INSTALLATION_DIRS+=	${DOCDIR} ${INCLUDEDIR}
 
 .if ${OPSYS} == "Linux"
-MESON_ARGS+=	-Dinitscriptdir=${PREFIX}/${EGDIR} \
-		-Dudevrulesdir=${PREFIX}/${EGDIR} \
-		-Denable-io-uring=true
+INSTALLATION_DIRS+=	sbin ${EGDIR}
 .endif
 
-
-PKGCONFIG_OVERRIDE_STAGE=	pre-install
-PKGCONFIG_OVERRIDE+=		output/meson-private/fuse3.pc
-
-CONF_FILES+=		${EGDIR}/fuse.conf ${PKG_SYSCONFDIR}/fuse.conf
-
-INSTALLATION_DIRS+=	${DOCDIR}
-INSTALLATION_DIRS+=	${EGDIR}
-INSTALLATION_DIRS+=	${INCLUDEDIR}
-
-SPECIAL_PERMS+=		bin/fusermount3 ${SETUID_ROOT_PERMS}
+pre-configure:
+	${RUN}${CP} ${FILESDIR}/config.rpath ${WRKSRC}
+	${RUN}cd ${WRKSRC} && \
+	${SETENV} ${CONFIGURE_ENV} ${SH} ./makeconf.sh
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/include/fuse_kernel.h	\
-		${DESTDIR}${PREFIX}/include/fuse
+		${DESTDIR}${PREFIX}/${INCLUDEDIR}
 	${INSTALL_DATA} ${PKG_DOCS:S|^|${WRKSRC}/|}	\
 		${DESTDIR}${PREFIX}/${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/util/fuse.conf \
-		${DESTDIR}${PREFIX}/${EGDIR}
 
 .if ${OPSYS} == "Linux"
-.  include "../../devel/liburing/buildlink3.mk"
-.elif ${OPSYS} == "NetBSD"
-.  include "../../filesystems/perfuse/buildlink3.mk"
+	${RUN}${CHMOD} -w	${DESTDIR}${PREFIX}/bin/fusermount
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD"
+.include "../../filesystems/perfuse/buildlink3.mk"
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"

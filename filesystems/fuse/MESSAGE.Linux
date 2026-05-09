@@ -1,8 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE.Linux,v 1.3 2026/05/06 19:19:39 vins Exp $
+$NetBSD: MESSAGE.Linux,v 1.4 2026/05/09 19:21:36 vins Exp $
 
-Linux users must create the device node by typing:
-
-  $ [ -e "/dev/fuse" ] || mknod "/dev/fuse" -m 0666 c 10 229
+Linux users must create the device by typing:
+  $ mknod /dev/fuse -m 0666 c 10 229
 
 ===========================================================================
