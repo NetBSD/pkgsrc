@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2900 2026/05/09 11:43:07 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.2901 2026/05/09 13:11:19 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4434,3 +4434,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/py-gnssutils to 1.2.0 [gdt 2026-05-09]
 	Added geography/py-qgc version 0.2.2 [gdt 2026-05-09]
 	Added geography/py-unigps version 1.0.0 [gdt 2026-05-09]
+	Added www/librest version 0.10.2 [vins 2026-05-09]
