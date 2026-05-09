@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2025/11/01 12:54:29 gdt Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/05/09 11:14:08 gdt Exp $
 bin/gnssmqttclient
 bin/gnssntripclient
 bin/gnssserver
 bin/gnssstreamer
+bin/pyrinexconv
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -54,6 +55,33 @@ ${PYSITELIB}/pygnssutils/helpers.pyo
 ${PYSITELIB}/pygnssutils/mqttmessage.py
 ${PYSITELIB}/pygnssutils/mqttmessage.pyc
 ${PYSITELIB}/pygnssutils/mqttmessage.pyo
+${PYSITELIB}/pygnssutils/rawnav.py
+${PYSITELIB}/pygnssutils/rawnav.pyc
+${PYSITELIB}/pygnssutils/rawnav.pyo
+${PYSITELIB}/pygnssutils/rinex_conv.py
+${PYSITELIB}/pygnssutils/rinex_conv.pyc
+${PYSITELIB}/pygnssutils/rinex_conv.pyo
+${PYSITELIB}/pygnssutils/rinex_conv_cli.py
+${PYSITELIB}/pygnssutils/rinex_conv_cli.pyc
+${PYSITELIB}/pygnssutils/rinex_conv_cli.pyo
+${PYSITELIB}/pygnssutils/rinex_conv_met.py
+${PYSITELIB}/pygnssutils/rinex_conv_met.pyc
+${PYSITELIB}/pygnssutils/rinex_conv_met.pyo
+${PYSITELIB}/pygnssutils/rinex_conv_nav.py
+${PYSITELIB}/pygnssutils/rinex_conv_nav.pyc
+${PYSITELIB}/pygnssutils/rinex_conv_nav.pyo
+${PYSITELIB}/pygnssutils/rinex_conv_obs.py
+${PYSITELIB}/pygnssutils/rinex_conv_obs.pyc
+${PYSITELIB}/pygnssutils/rinex_conv_obs.pyo
+${PYSITELIB}/pygnssutils/rinex_globals.py
+${PYSITELIB}/pygnssutils/rinex_globals.pyc
+${PYSITELIB}/pygnssutils/rinex_globals.pyo
+${PYSITELIB}/pygnssutils/rinex_helpers.py
+${PYSITELIB}/pygnssutils/rinex_helpers.pyc
+${PYSITELIB}/pygnssutils/rinex_helpers.pyo
+${PYSITELIB}/pygnssutils/rinex_subframes_gps.py
+${PYSITELIB}/pygnssutils/rinex_subframes_gps.pyc
+${PYSITELIB}/pygnssutils/rinex_subframes_gps.pyo
 ${PYSITELIB}/pygnssutils/socket_server.py
 ${PYSITELIB}/pygnssutils/socket_server.pyc
 ${PYSITELIB}/pygnssutils/socket_server.pyo
