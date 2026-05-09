@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/08/17 00:06:23 nia Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/05/09 11:50:04 ktnb Exp $
 bin/aria_chk
 bin/aria_dump_log
 bin/aria_ftdump
@@ -229,6 +229,7 @@ include/mysql/server/private/sql_plugin.h
 include/mysql/server/private/sql_plugin_compat.h
 include/mysql/server/private/sql_prepare.h
 include/mysql/server/private/sql_priv.h
+include/mysql/server/private/sql_command.h
 include/mysql/server/private/sql_profile.h
 include/mysql/server/private/sql_reload.h
 include/mysql/server/private/sql_rename.h
