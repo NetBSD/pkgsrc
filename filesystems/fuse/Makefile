@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2026/05/06 19:19:39 vins Exp $
+# $NetBSD: Makefile,v 1.19 2026/05/09 13:47:13 wiz Exp $
 #
 
 DISTNAME=	fuse-3.18.2
@@ -53,7 +53,9 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/fuse3.pc
 
 CONF_FILES+=		${EGDIR}/fuse.conf ${PKG_SYSCONFDIR}/fuse.conf
 
-INSTALLATION_DIRS+=	${DOCDIR} ${INCLUDEDIR}
+INSTALLATION_DIRS+=	${DOCDIR}
+INSTALLATION_DIRS+=	${EGDIR}
+INSTALLATION_DIRS+=	${INCLUDEDIR}
 
 SPECIAL_PERMS+=		bin/fusermount3 ${SETUID_ROOT_PERMS}
 
