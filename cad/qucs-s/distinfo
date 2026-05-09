@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/09 15:57:36 wiz Exp $
+
+BLAKE2s (qucs_s/qucs-s-25.2.0.tar.gz) = 25d6270e1ca9999a63797c3a38e8d19778849f6a9806bf9998ee7999e9c22b2c
+SHA512 (qucs_s/qucs-s-25.2.0.tar.gz) = 21161864a03fd120218657403caf51c962f612ee249d8635939eb1b225ae502b5e5f59ef8bcde417aa1783328dba406e2abbe37f75988a789b70d99529986172
+Size (qucs_s/qucs-s-25.2.0.tar.gz) = 4804075 bytes
