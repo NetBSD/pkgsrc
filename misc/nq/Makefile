@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/02/13 13:49:03 vins Exp $
+# $NetBSD: Makefile,v 1.4 2026/05/09 17:33:07 vins Exp $
 
 DISTNAME=	nq-1.0
+PKGREVISION=	1
 CATEGORIES=	misc sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leahneukirchen/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,6 +12,12 @@ COMMENT=	Command line queueing utility
 LICENSE=	public-domain
 
 USE_TOOLS+=	perl:test
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS" && ${OPSYS_VERSION} >= 051100
+CPPFLAGS+=	-DHAVE_DPRINTF
+.endif
 
 REPLACE_SH=	nqterm
 
