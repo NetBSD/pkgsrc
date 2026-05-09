@@ -1,0 +1,15 @@
+$NetBSD: patch-example_meson.build,v 1.1 2026/05/09 20:00:28 vins Exp $
+
+Requires O_PATH and other Linuxisms.
+
+--- example/meson.build.orig	2026-05-06 16:42:00.707753842 +0000
++++ example/meson.build
+@@ -31,7 +31,7 @@ foreach ex : threaded_examples
+                install: false)
+ endforeach
+ 
+-if platform != 'dragonfly' and add_languages('cpp', required : false)
++if platform == 'linux' and add_languages('cpp', required : false)
+     executable('passthrough_hp', 'passthrough_hp.cc',
+                dependencies: [ thread_dep, libfuse_dep ],
+                install: false)
