@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2906 2026/05/09 14:24:28 fox Exp $
+$NetBSD: CHANGES-2026,v 1.2907 2026/05/09 15:58:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4439,3 +4439,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/gnome-online-accounts to 3.58.1 [vins 2026-05-09]
 	Added ham/xnecview version 1.37 [wiz 2026-05-09]
 	Updated audio/din to 64.1 [fox 2026-05-09]
+	Added cad/qucs-s version 25.2.0 [wiz 2026-05-09]
