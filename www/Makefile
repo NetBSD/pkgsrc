@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1917 2026/05/05 08:17:45 taca Exp $
+# $NetBSD: Makefile,v 1.1918 2026/05/09 13:15:13 vins Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -239,7 +239,7 @@ SUBDIR+=	libmicrohttpd
 SUBDIR+=	libmrss
 SUBDIR+=	libproxy
 SUBDIR+=	libpsl
-SUBDIR+=	librest07
+SUBDIR+=	librest
 SUBDIR+=	libsass
 SUBDIR+=	libwebsockets
 SUBDIR+=	libwww
