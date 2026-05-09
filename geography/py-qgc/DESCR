@@ -1,0 +1,8 @@
+`pyqgc` is a Python 3 parser for the QGC protocol. QGC is a
+proprietary binary protocol implemented on Quectel GNSS receiver
+modules. `pyqgc` can also parse NMEA 0183 and RTCM3 protocols - hence
+it covers all the protocols that Quectel QGC GNSS receivers are
+capable of outputting.
+
+This is an independent project and we have no affiliation whatsoever
+with Quectel.

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/09 11:24:00 gdt Exp $
+
+BLAKE2s (pyqgc-0.2.2.tar.gz) = 5a79824c804837f3bf0e50253d7cc882d1b389bacfc5ceb43b20806f6fa71702
+SHA512 (pyqgc-0.2.2.tar.gz) = 6cb54fe27a723f1c00b1c3f98b51b8b6d8b0c2b6c5e75c6a1bdea61cd1521e43cd73269db6e7cb307d35353bfca96f02dfe2b97ca80537ec3586cc58d8502fb1
+Size (pyqgc-0.2.2.tar.gz) = 40087 bytes
