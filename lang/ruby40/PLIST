@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/02/03 16:00:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.1.2.1 2026/05/09 16:21:05 bsiegert Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -2897,7 +2897,6 @@ ${RUBY_DOC}/BSDL
 ${RUBY_DOC}/CONTRIBUTING.md
 ${RUBY_DOC}/COPYING
 ${RUBY_DOC}/COPYING.ja
-${RUBY_DOC}/ChangeLog
 ${RUBY_DOC}/ChangeLog.prev/ChangeLog-0.06_to_0.52
 ${RUBY_DOC}/ChangeLog.prev/ChangeLog-0.50_to_0.60
 ${RUBY_DOC}/ChangeLog.prev/ChangeLog-0.60_to_1.1
