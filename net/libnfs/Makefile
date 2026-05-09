@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/05/01 19:43:30 vins Exp $
+# $NetBSD: Makefile,v 1.2 2026/05/09 16:19:56 vins Exp $
 
 DISTNAME=	libnfs-6.0.2
+PKGREVISION=	1
 CATEGORIES=	net filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sahlberg/}
 GITHUB_TAG=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
@@ -13,6 +14,8 @@ COMMENT=	NFS client library
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v3 AND 2-clause-bsd
 
 PKGCONFIG_OVERRIDE=	cmake/libnfs.pc.cmake
+
+LDFLAGS.SunOS+=		-lsocket
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release \
 			-DCMAKE_INSTALL_PREFIX='${PREFIX}' \
