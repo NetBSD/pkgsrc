@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST.common,v 1.1 2026/05/09 20:01:32 vins Exp $
+include/fuse3/cuse_lowlevel.h
+include/fuse3/fuse.h
+include/fuse3/fuse_common.h
+include/fuse3/fuse_kernel.h
+include/fuse3/fuse_log.h
+include/fuse3/fuse_lowlevel.h
+include/fuse3/fuse_opt.h
+include/fuse3/libfuse_config.h
+lib/libfuse3.so
+lib/libfuse3.so.${PKGVERSION}
+lib/libfuse3.so.4
+lib/pkgconfig/fuse3.pc
+share/doc/fuse3/README.NFS
+share/doc/fuse3/README.fuse-io-uring
+share/doc/fuse3/README.fuse_reply_errors
+share/doc/fuse3/README.notifications
+share/doc/fuse3/kernel.txt
+share/doc/fuse3/libfuse-operations.txt
+share/examples/fuse3/fuse.conf

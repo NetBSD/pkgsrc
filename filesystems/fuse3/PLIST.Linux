@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2026/05/09 20:01:32 vins Exp $
+bin/fusermount3
+man/man1/fusermount3.1
+man/man8/mount.fuse3.8
+sbin/mount.fuse3
+share/examples/fuse3/99-fuse3.rules
+share/examples/fuse3/init.d.fuse3
