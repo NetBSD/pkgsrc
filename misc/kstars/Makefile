@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.92 2026/04/11 17:09:11 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2026/05/09 15:45:26 wiz Exp $
 
 DISTNAME=	kstars-3.8.1
 PKGREVISION=	1
 CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_KDE:=kstars/3.8.1/}
+MASTER_SITES=	${MASTER_SITE_KDE:=kstars/${PKGVERSION_NOREV}/}
 
 HOMEPAGE=	https://kstars.kde.org/
 COMMENT=	KDE desktop planetarium
