@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.314.2.4 2026/05/09 16:21:05 bsiegert Exp $
+# $NetBSD: rubyversion.mk,v 1.314.2.5 2026/05/09 16:39:11 bsiegert Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
