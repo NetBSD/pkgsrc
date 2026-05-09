@@ -6,4 +6,5 @@ userspace program.  Features include:
 * Secure implementation
 * Userspace - kernel interface is very efficient
 * Usable by non privileged users
+* Runs on Linux kernels 2.4.X and 2.6.X
 * Has proven very stable over time
