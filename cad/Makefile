@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2026/01/15 11:31:33 adam Exp $
+# $NetBSD: Makefile,v 1.113 2026/05/09 15:57:51 wiz Exp $
 #
 
 COMMENT=	Computer Aided Design tools
@@ -61,6 +61,7 @@ SUBDIR+=	py-gdstk
 SUBDIR+=	py-simpy
 SUBDIR+=	qcad
 SUBDIR+=	qcad-partlibrary
+SUBDIR+=	qucs-s
 SUBDIR+=	sci-wcalc
 SUBDIR+=	solvespace
 SUBDIR+=	spice
