@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.7 2026/01/13 07:35:16 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2026/05/09 20:26:47 vins Exp $
 # used by filesystems/fuse-ntfs-3g/Makefile
 # used by sysutils/ntfsprogs/Makefile
 
-DISTNAME=	ntfs-3g_ntfsprogs-2022.10.3
+DISTNAME=	ntfs-3g_ntfsprogs-2026.2.25
 CATEGORIES=	filesystems sysutils
 MASTER_SITES=	https://download.tuxera.com/opensource/
 EXTRACT_SUFX=	.tgz
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=	${.CURDIR}/../../filesystems/libntfs/distinfo
 PATCHDIR=	${.CURDIR}/../../filesystems/libntfs/patches
+
+WRKSRC=		${WRKDIR}/${DISTNAME:S/_ntfsprogs//}
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2026/04/26 04:29:44 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/05/09 20:26:47 vins Exp $
 
 .include "../../filesystems/libntfs/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/ntfs-3g_//}
-PKGREVISION=	1
 CATEGORIES=	sysutils
 
 COMMENT=	Linux-NTFS project utilities for the Windows NT Filesystem

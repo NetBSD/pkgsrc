@@ -1,15 +1,10 @@
-$NetBSD: patch-configure,v 1.2 2026/04/26 04:29:44 wiz Exp $
+$NetBSD: patch-configure,v 1.3 2026/05/09 20:26:47 vins Exp $
 
-Avoid test "==" operator.
+Allow ntfs-3g on NetBSD.
 
---- configure.orig	2022-10-20 15:35:11.000000000 +0000
+--- configure.orig	2026-05-09 18:01:25.850768653 +0000
 +++ configure
-@@ -14104,11 +14104,11 @@ if test "x${enable_ntfs_3g}" != "xyes"; then
- 
- if test "x${enable_ntfs_3g}" != "xyes"; then
- 	with_fuse="none"
--elif test "x${with_fuse}" == "x"; then
-+elif test "x${with_fuse}" = "x"; then
+@@ -15268,7 +15268,7 @@ elif test "x${with_fuse}" = "x"; then
  	{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking fuse compatibility" >&5
  printf %s "checking fuse compatibility... " >&6; }
  	case "${target_os}" in
