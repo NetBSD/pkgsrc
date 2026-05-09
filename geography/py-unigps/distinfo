@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/09 11:42:54 gdt Exp $
+
+BLAKE2s (pyunigps-1.0.0.tar.gz) = faaaf37f7b96f43316e8f79a3af1044e55d806c9d5fd82c48d3f68c5a92fadd0
+SHA512 (pyunigps-1.0.0.tar.gz) = be1d60d95243d1d3f91e240695d77e32f46267e18e12503babeeba2e5b604a8c2b27c9b5e15eebfd280f1d0186bbdbefcb8f8724e7d3ea5ee93a850060a4fb8b
+Size (pyunigps-1.0.0.tar.gz) = 108979 bytes
