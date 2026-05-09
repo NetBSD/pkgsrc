@@ -1,0 +1,8 @@
+pyunigps is a Python 3 parser for the UNI protocol. UNI is our term
+for the proprietary binary data output protocol implemented on Unicore
+GNSS receiver modules.  pyunigps can also parse NMEA 0183 and RTCM3
+protocols, covering all the protocols that Unicore UNI GNSS receivers
+are capable of outputting.
+
+This is an independent project and we have no affiliation whatsoever
+with Unicore.
