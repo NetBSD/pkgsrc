@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.14 2026/01/28 03:23:45 fox Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/05/09 14:24:05 fox Exp $
 bin/din
 share/applications/din.desktop
-share/din/factory/2${PKGVERSION}0
-share/din/factory/2${PKGVERSION}0.help.tcl
-share/din/factory/2${PKGVERSION}0.patch.tcl
+share/din/factory/2600
+share/din/factory/2600.help.tcl
+share/din/factory/2600.patch.tcl
 share/din/factory/CDGB
 share/din/factory/Makefile.am
 share/din/factory/Sine_Mixer
@@ -329,7 +329,6 @@ share/din/factory/decay.ed
 share/din/factory/decay.lib
 share/din/factory/delay.ed
 share/din/factory/din.hlp
-share/din/factory/din_info
 share/din/factory/dot.crv
 share/din/factory/dp_bpm.crv
 share/din/factory/dp_depth.crv
@@ -371,7 +370,6 @@ share/din/factory/i8n_morse_code
 share/din/factory/init.tcl
 share/din/factory/inner.crv
 share/din/factory/inner_space.crv
-share/din/factory/jag.fnt
 share/din/factory/just-intonation.tuning
 share/din/factory/key.help.tcl
 share/din/factory/keyboard-keyboard-waveform.crv
@@ -390,6 +388,7 @@ share/din/factory/microtonal-keyboard-waveform.crv
 share/din/factory/microtonal-keyboard-waveform.ed
 share/din/factory/midimap.help.tcl
 share/din/factory/midimap.patch.tcl
+share/din/factory/mkb_info
 share/din/factory/modulation.ed
 share/din/factory/modv.crv
 share/din/factory/modv.ed
@@ -447,6 +446,7 @@ share/din/factory/rose_milker_radius.crv
 share/din/factory/rose_milker_radius.ed
 share/din/factory/rose_milker_sin.crv
 share/din/factory/rose_milker_sin.ed
+share/din/factory/sampath.fnt
 share/din/factory/save_settings.tcl
 share/din/factory/scalelist
 share/din/factory/scope.osc
