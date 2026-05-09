@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.149 2025/09/04 13:58:30 gdt Exp $
+# $NetBSD: Makefile,v 1.150 2026/05/09 11:23:59 gdt Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -111,6 +111,7 @@ SUBDIR+=	py-nmeagps
 SUBDIR+=	py-obspy
 SUBDIR+=	py-owslib
 SUBDIR+=	py-proj
+SUBDIR+=	py-qgc
 SUBDIR+=	py-rtcm
 SUBDIR+=	py-sbf2
 SUBDIR+=	py-spartn
