@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2026/05/03 16:39:13 gdt Exp $
+# $NetBSD: Makefile,v 1.85 2026/05/09 13:51:31 wiz Exp $
 
 .include "../../sysutils/ups-nut/Makefile.common"
 
@@ -42,7 +42,7 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/conf/$$f ${DESTDIR}${NUT_EGDIR}; \
 	done
 	for f in bottom.html header.html index.html nut-banner.png; do \
-		${INSTALL_DATA} ${WRKSRC}/data/html/$$f \
+		${INSTALL_DATA} ${WRKSRC}/data/htmlcgi/$$f \
 		    ${DESTDIR}${PREFIX}/share/nut/html; \
 	done
 	for f in hosts.conf.5 upsset.conf.5 upsstats.html.5; do \
