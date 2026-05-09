@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2026/04/27 18:07:10 vins Exp $
+# $NetBSD: options.mk,v 1.3 2026/05/09 12:22:24 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libgudev
 PKG_SUPPORTED_OPTIONS=	introspection vapi
-PKG_SUGGESTED_OPTIONS=	${PKG_SUPPORTED_OPTIONS}
+PKG_SUGGESTED_OPTIONS=	introspection
 
 .include "../../mk/bsd.options.mk"
 
@@ -12,6 +12,7 @@ PLIST_VARS+=		introspection vapi
 # Build GObject Introspection data
 #
 .if !empty(PKG_OPTIONS:Mintrospection)
+BUILDLINK_DEPMETHOD.gobject-introspection=	build
 MESON_ARGS+=	-Dintrospection=enabled
 .  include "../../devel/gobject-introspection/buildlink3.mk"
 PLIST.introspection=	yes
