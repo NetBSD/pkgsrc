@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/05/04 11:08:21 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/05/09 17:03:03 wiz Exp $
 
 DISTNAME=	kwin-x11-${PLASMAVER}
 CATEGORIES=	x11
@@ -23,6 +23,7 @@ SUBST_FILES.fix-moc=	_KDE_build/*/CMakeFiles/*_autogen.dir/AutogenInfo.json
 SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
+.include "../../lang/python/tool.mk"
 .include "../../devel/input-headers/buildlink3.mk"
 .include "../../devel/kf6-kcmutils/buildlink3.mk"
 .include "../../devel/kf6-kconfig/buildlink3.mk"
