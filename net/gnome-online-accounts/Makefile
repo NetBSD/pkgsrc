@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2026/05/09 13:20:56 vins Exp $
+# $NetBSD: Makefile,v 1.73 2026/05/09 16:36:31 vins Exp $
 
 DISTNAME=	gnome-online-accounts-3.58.1
 CATEGORIES=	net gnome
@@ -10,7 +10,7 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/GnomeOnlineAccounts
 COMMENT=	Service that allows online accounts to be used with GNOME
 LICENSE=	gnu-lgpl-v2
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		gdbus-codegen pkg-config
 USE_PKGLOCALEDIR=	yes
 
 # required to generate man pages
