@@ -1,0 +1,15 @@
+$NetBSD: patch-doc_meson.build,v 1.1 2026/05/09 13:20:56 vins Exp $
+
+Fix detection of docbook. 
+
+--- doc/meson.build.orig	2026-05-09 10:02:27.945703375 +0000
++++ doc/meson.build
+@@ -79,7 +79,7 @@ if enable_man
+     '--nonet',
+     '--stringparam', 'man.output.quietly', '1',
+     '--stringparam', 'funcsynopsis.style', 'ansi',
+-    'http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl',
++    '@DOCBOOK_MANPAGE_XSL@',
+     '@INPUT@'
+   ]
+ 

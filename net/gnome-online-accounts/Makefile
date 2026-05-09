@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2026/01/27 08:40:20 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2026/05/09 13:20:56 vins Exp $
 
-DISTNAME=	gnome-online-accounts-3.36.0
-PKGREVISION=	33
+DISTNAME=	gnome-online-accounts-3.58.1
 CATEGORIES=	net gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-online-accounts/3.36/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,26 +10,43 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/GnomeOnlineAccounts
 COMMENT=	Service that allows online accounts to be used with GNOME
 LICENSE=	gnu-lgpl-v2
 
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config gmake
-USE_TOOLS+=		msgfmt msgmerge xgettext
-USE_TOOLS+=		gdbus-codegen
+USE_TOOLS+=		pkg-config
+USE_PKGLOCALEDIR=	yes
 
-CONFIGURE_ENV+=	GLIB_COMPILE_SCHEMAS=glib-compile-schemas
+# required to generate man pages
+TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+DOCBOOK_MANPAGE_XSL=	${PREFIX}/share/xsl/docbook/manpages/docbook.xsl
 
-PKGCONFIG_OVERRIDE+=	src/goabackend/goa-backend-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	src/goa/goa-1.0.pc.in
+SUBST_CLASSES+=		man
+SUBST_STAGE.man=	pre-configure
+SUBST_FILES.man=	doc/meson.build
+SUBST_VARS.man+=	DOCBOOK_MANPAGE_XSL
 
-.include "../../chat/telepathy-glib/buildlink3.mk"
+MESON_ARGS+=		--localedir=${PKGLOCALEDIR}/locale
+
+.include "options.mk"
+
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+PKGCONFIG_OVERRIDE+=		output/meson-private/goa-1.0.pc \
+				output/meson-private/goa-backend-1.0.pc
+
+.for dep in gobject-introspection vala
+BUILDLINK_DEPMETHOD.${dep}=	build
+.endfor
+
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../net/libsoup/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
+.include "../../net/libsoup3/buildlink3.mk"
+.include "../../security/gcr4/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
-.include "../../www/librest07/buildlink3.mk"
-.include "../../www/webkit-gtk/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
+.include "../../textproc/libxslt/xsltproc-nonet.mk"
+.include "../../www/librest/buildlink3.mk"
+.include "../../x11/gtk4/buildlink3.mk"
+
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
