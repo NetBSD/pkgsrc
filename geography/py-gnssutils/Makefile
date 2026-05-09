@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2026/05/09 11:14:08 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2026/05/09 11:47:05 gdt Exp $
 
 VERSION=	1.2.0
 DISTTAIL=	gnssutils
 DISTNAME=	py${DISTTAIL}-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTTAIL}-${VERSION}
+PKGREVISION=	1
 GITHUB_PROJECT=	py${DISTTAIL}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	geography
@@ -33,8 +34,9 @@ DEPENDS+=	${PYPKGPREFIX}-ubx2>=1.3.0:../../geography/py-ubx2
 DEPENDS+=	${PYPKGPREFIX}-sbf2>=1.0.4:../../geography/py-sbf2
 #   todo 1.0.6
 DEPENDS+=	${PYPKGPREFIX}-ubxutils>=1.0.5:../../geography/py-ubxutils
-#   todo pyqgc>=0.2.2
-#   todo pyunigps>=1.0.0
+DEPENDS+=	${PYPKGPREFIX}-qgc>=0.2.2:../../geography/py-qgc
+DEPENDS+=	${PYPKGPREFIX}-unigps>=1.0.0:../../geography/py-unigps
+
 #   missing from pyproject.toml, but imported
 DEPENDS+=	${PYPKGPREFIX}-nmeagps-[0-9]*:../../geography/py-nmeagps
 # TEST
