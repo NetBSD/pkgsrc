@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2026/01/07 08:47:12 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2026/05/09 14:28:16 gdt Exp $
 #
 
 GITHUB_PROJECT=	gpsbabel
@@ -7,7 +7,7 @@ GH_VERSION=	1_9_0
 GITHUB_TAG=	refs/tags/gpsbabel_${GH_VERSION}
 DISTNAME=	gpsbabel_${GH_VERSION}
 PKGNAME=	gpsbabel-${VERSION}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GPSBabel/}
 
@@ -35,6 +35,8 @@ do-install:
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtserialport/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
-.include "../../x11/qt5-qtwebengine/buildlink3.mk"
+# \todo Consider option 
+CMAKE_CONFIGURE_ARGS+=	-DGPSBABEL_MAPPREVIEW=OFF
+#.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
