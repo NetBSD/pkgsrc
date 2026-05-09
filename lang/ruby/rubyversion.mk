@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.314.2.3 2026/04/01 21:16:41 maya Exp $
+# $NetBSD: rubyversion.mk,v 1.314.2.4 2026/05/09 16:21:05 bsiegert Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -215,7 +215,7 @@ RUBY_VERSION_REQD?=	${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
 RUBY32_VERSION=		3.2.11
 RUBY33_VERSION=		3.3.11
 RUBY34_VERSION=		3.4.9
-RUBY40_VERSION=		4.0.2
+RUBY40_VERSION=		4.0.3
 
 # current API compatible version; used for version of shared library
 RUBY32_API_VERSION=	3.2.0
@@ -572,7 +572,7 @@ RUBY_CGI_VER=			0.4.2	#
 RUBY_DELEGATE_VER=		0.6.1
 RUBY_DID_YOU_MEAN_VER=		2.0.0
 RUBY_ENGLISH_VER=		0.8.1
-RUBY_ERB_VER=			6.0.1
+RUBY_ERB_VER=			6.0.1.1
 RUBY_ERROR_HIGHLIGHT_VER=	0.7.1
 RUBY_FILEUTILS_VER=		1.8.0
 RUBY_FIND_VER=			0.2.0
