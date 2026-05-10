@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2026/04/15 17:49:49 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2026/05/10 07:40:11 adam Exp $
 
-DISTNAME=	maturin-1.13.1
+DISTNAME=	maturin-1.13.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/maturin/}
@@ -20,9 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
 
 MAKE_ENV+=	CARGO_BUILD_JOBS=${_MAKE_JOBS_N:U1}
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} maturin maturin-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	maturin
 
 .include "cargo-depends.mk"
 
