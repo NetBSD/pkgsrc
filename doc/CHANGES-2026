@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2939 2026/05/10 13:05:11 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2940 2026/05/10 13:06:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4474,3 +4474,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-flask-admin to 2.2.0 [wiz 2026-05-10]
 	Updated www/py-google-api-python-client to 2.196.0 [wiz 2026-05-10]
 	Updated security/py-google-auth to 2.52.0 [wiz 2026-05-10]
+	Updated security/py-google-auth-httplib2 to 0.4.0 [wiz 2026-05-10]
