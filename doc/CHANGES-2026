@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2918 2026/05/10 07:34:46 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2919 2026/05/10 07:46:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4449,3 +4449,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/redox to 0.6.0 [pin 2026-05-10]
 	Updated sysutils/lla to 0.5.7 [pin 2026-05-10]
 	Updated sysutils/treegrep to 2.0.0 [pin 2026-05-10]
+	Updated devel/py-maturin to 1.13.2 [adam 2026-05-10]
+	Updated textproc/py-sphinxcontrib-bibtex to 2.7.0 [adam 2026-05-10]
