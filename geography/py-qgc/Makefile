@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/05/09 11:23:59 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2026/05/10 10:54:59 gdt Exp $
 
+# \todo Drop DISTFILE_SUBDIR on update.
 VERSION=	0.2.2
 DISTTAIL=	qgc
 DISTNAME=	py${DISTTAIL}-${VERSION}
@@ -8,6 +9,13 @@ GITHUB_PROJECT=	py${DISTTAIL}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=semuconsulting/}
+
+# The package was originally 'make fetched' from pypi, and then moved
+# to github.  While that was a bug, this shows that pypi distfiles
+# omit a lot that is in the repository.  Some of that is ok (.github!)
+# but some (tests) is not.  Allow the pypi distfile and the github one
+# to coexist for 0.2.2, to be dropped on update.
+DIST_SUBDIR=	qgc-0_2_2_github
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/semuconsulting/pyqgc/
