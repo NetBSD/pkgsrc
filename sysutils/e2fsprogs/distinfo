@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.32 2025/03/30 21:10:47 wiz Exp $
+$NetBSD: distinfo,v 1.33 2026/05/10 07:52:13 vins Exp $
 
-BLAKE2s (e2fsprogs-1.47.2.tar.xz) = 22ad92fbe4786671ff677cf218f1e9834fb7f52f241b35f04f36b37df67c06ca
-SHA512 (e2fsprogs-1.47.2.tar.xz) = a32632e072e535bf164503cf9992a4da7ea971e80f8f84ead4e7bc8899a92c27e4670bdebef1de0187596672e44af7b96078888e0cd4eefa3e3f551344d434d8
-Size (e2fsprogs-1.47.2.tar.xz) = 7299932 bytes
+BLAKE2s (e2fsprogs-1.47.4.tar.xz) = c58f55a108f0e71f4b67076d45a58a85b9e03a8789bfe7e52471e1bb5dafbdd0
+SHA512 (e2fsprogs-1.47.4.tar.xz) = c316ce38d73786fb45b3728cd31991fe81b14a1e61dae645f3471c3f35983c4394e4606b47194c3e607897b7ae5a5ef1d376adb204383afa8c4219db8617d970
+Size (e2fsprogs-1.47.4.tar.xz) = 7337236 bytes
 SHA1 (patch-ab) = 364f7b0692b8085ad9d4323f2702bdd26e5652d3
 SHA1 (patch-ac) = 474e733c4c4fda8a48ea4285c62a56f31846fc94
 SHA1 (patch-af) = 91a694ca53c2bbfa77e7e4edbde4a892cb6ca62a
@@ -15,7 +15,8 @@ SHA1 (patch-lib_ext2fs_bitops.c) = f641da9106c6a7e4314122d4b1f9d4067fc07f10
 SHA1 (patch-lib_ext2fs_bitops.h) = 4dd18ad892dbf91437e4996e7fcb7fd3a61758e8
 SHA1 (patch-lib_ext2fs_ext2fs.h) = 597435441fc537ec20f79d191181876ecdaa7b21
 SHA1 (patch-lib_ext2fs_ext2fsP.h) = 4ba2ef6c492dc61ae7c1e4b5b82a2406eea28a61
+SHA1 (patch-lib_ext2fs_getsectsize.c) = ad319070d5594f689c540cee0eac245f989a26ed
 SHA1 (patch-lib_ext2fs_unix__io.c) = 78dcc99e04a981727d71271b5f4c69b426c6ada9
 SHA1 (patch-lib_uuid_gen__uuid.c) = 2f679453457522a10b90c489ce52e59b6e3909c5
-SHA1 (patch-misc_create__inode.c) = 43a9a2d3d53bfe055be3fd47f5db2990594a9faa
-SHA1 (patch-scrub_Makefile.in) = 76080c14fa8590a3c350ce241d62cc9da356146b
+SHA1 (patch-misc_create__inode.c) = 034113a52f5264c41ff2b44040b3f5a4f011a289
+SHA1 (patch-scrub_Makefile.in) = 775654768521adc8aeb0cdf97d3b1bd64e79ae33
