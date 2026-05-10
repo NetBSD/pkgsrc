@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/08/20 19:38:26 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/05/10 13:10:38 wiz Exp $
 
-DISTNAME=	markdown_it_py-4.0.0
+DISTNAME=	markdown_it_py-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/markdown-it-py/}
@@ -16,9 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-linkify-it-py>=0:../../textproc/py-linkify-it-py
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} markdown-it markdown-it-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	markdown-it
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
