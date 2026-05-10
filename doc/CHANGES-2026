@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2927 2026/05/10 12:03:59 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2928 2026/05/10 12:05:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4460,3 +4460,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated filesystems/fuse-sshfs to 3.7.5 [vins 2026-05-10]
 	Updated graphics/OpenJPH to 0.27.2 [wiz 2026-05-10]
 	Updated sysutils/hwdata to 0.407 [wiz 2026-05-10]
+	Updated devel/jjui to 0.10.5 [wiz 2026-05-10]
