@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2026/03/28 10:22:32 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/05/10 12:15:20 wiz Exp $
 
 .include "../../devel/ocaml-dune/Makefile.common"
 
@@ -16,6 +16,8 @@ DUNE_BUILD_PACKAGES=	dune-configurator
 # https://github.com/ocaml/dune/issues/6156
 post-extract:
 	cd ${WRKSRC} && ${RM} -r vendor/csexp vendor/pp
+
+BUILDLINK_API_DEPENDS.ocaml-dune+=	ocaml-dune>=3.23.0
 
 .include "../../lang/ocaml/ocaml.mk"
 .include "../../devel/ocaml-csexp/buildlink3.mk"
