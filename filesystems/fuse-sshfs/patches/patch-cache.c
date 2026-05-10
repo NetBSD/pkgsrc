@@ -1,4 +1,4 @@
-$NetBSD: patch-cache.c,v 1.3 2026/05/10 11:40:18 vins Exp $
+$NetBSD: patch-cache.c,v 1.4 2026/05/10 12:30:36 vins Exp $
 
 Impedance adjustment with librefuse which used to provide an old API
 incompatible with FUSE 3.1. This patch can go away when NetBSD 9
@@ -6,7 +6,25 @@ reaches its EOL, except for one thing (see comments).
 
 --- cache.c.orig	2025-11-11 19:46:43.000000000 +0000
 +++ cache.c
-@@ -269,6 +269,12 @@ uint64_t cache_get_write_ctr(void)
+@@ -21,6 +21,17 @@
+ #define DEFAULT_CACHE_CLEAN_INTERVAL_SECS 60
+ #define DEFAULT_MIN_CACHE_CLEAN_INTERVAL_SECS 5
+ 
++/*
++ ReFuse sets FUSE_H_ to a numerical value, while libfuse leaves it empty.
++ This workaround is only required as long as the patches for NetBSD-9
++ stay in place.
++*/
++
++#if !(FUSE_H_ + 0)
++#  undef  FUSE_H_
++#  define FUSE_H_ 1
++#endif
++
+ struct cache {
+ 	int on;
+ 	unsigned int stat_timeout_secs;
+@@ -269,6 +280,12 @@ uint64_t cache_get_write_ctr(void)
  	return res;
  }
  
@@ -19,7 +37,7 @@ reaches its EOL, except for one thing (see comments).
  static void *cache_init(struct fuse_conn_info *conn,
                          struct fuse_config *cfg)
  {
-@@ -280,14 +286,23 @@ static void *cache_init(struct fuse_conn
+@@ -280,14 +297,23 @@ static void *cache_init(struct fuse_conn
  
  	return res;
  }
@@ -43,7 +61,7 @@ reaches its EOL, except for one thing (see comments).
  		if (!err)
  			cache_add_attr(path, stbuf, wrctr);
  	}
-@@ -349,15 +364,24 @@ static int cache_releasedir(const char *
+@@ -349,15 +375,24 @@ static int cache_releasedir(const char *
  	return err;
  }
  
@@ -68,7 +86,7 @@ reaches its EOL, except for one thing (see comments).
  	if (!err) {
  		struct cache_dirent *cdent = g_malloc(sizeof(struct cache_dirent));
  		cdent->name = g_strdup(name);
-@@ -375,9 +399,14 @@ static int cache_dirfill (void *buf, con
+@@ -375,9 +410,14 @@ static int cache_dirfill (void *buf, con
  	return err;
  }
  
@@ -83,7 +101,7 @@ reaches its EOL, except for one thing (see comments).
  {
  	struct readdir_handle ch;
  	struct file_handle *cfi;
-@@ -394,7 +423,11 @@ static int cache_readdir(const char *pat
+@@ -394,7 +434,11 @@ static int cache_readdir(const char *pat
  		time_t now = time(NULL);
  		if (node->dir_valid - now >= 0) {
  			for(cdent = (struct cache_dirent**)node->dir->pdata; *cdent != NULL; cdent++) {
@@ -95,7 +113,7 @@ reaches its EOL, except for one thing (see comments).
        }
  			pthread_mutex_unlock(&cache.lock);
  			return 0;
-@@ -421,7 +454,19 @@ static int cache_readdir(const char *pat
+@@ -421,7 +465,19 @@ static int cache_readdir(const char *pat
  	ch.dir = g_ptr_array_new();
  	g_ptr_array_set_free_func(ch.dir, free_cache_dirent);
  	ch.wrctr = cache_get_write_ctr();
@@ -115,7 +133,7 @@ reaches its EOL, except for one thing (see comments).
  	g_ptr_array_add(ch.dir, NULL);
  	dir = ch.dir;
  	if (!err) {
-@@ -473,6 +518,15 @@ static int cache_symlink(const char *fro
+@@ -473,6 +529,15 @@ static int cache_symlink(const char *fro
  	return err;
  }
  
@@ -131,7 +149,7 @@ reaches its EOL, except for one thing (see comments).
  static int cache_rename(const char *from, const char *to, unsigned int flags)
  {
  	int err = cache.next_oper->rename(from, to, flags);
-@@ -480,6 +534,7 @@ static int cache_rename(const char *from
+@@ -480,6 +545,7 @@ static int cache_rename(const char *from
  		cache_do_rename(from, to);
  	return err;
  }
@@ -139,7 +157,7 @@ reaches its EOL, except for one thing (see comments).
  
  static int cache_link(const char *from, const char *to)
  {
-@@ -491,6 +546,15 @@ static int cache_link(const char *from, 
+@@ -491,6 +557,15 @@ static int cache_link(const char *from,
  	return err;
  }
  
@@ -155,7 +173,7 @@ reaches its EOL, except for one thing (see comments).
  static int cache_chmod(const char *path, mode_t mode,
                         struct fuse_file_info *fi)
  {
-@@ -499,7 +563,17 @@ static int cache_chmod(const char *path,
+@@ -499,7 +574,17 @@ static int cache_chmod(const char *path,
  		cache_invalidate(path);
  	return err;
  }
@@ -173,7 +191,7 @@ reaches its EOL, except for one thing (see comments).
  static int cache_chown(const char *path, uid_t uid, gid_t gid,
                         struct fuse_file_info *fi)
  {
-@@ -508,7 +582,17 @@ static int cache_chown(const char *path,
+@@ -508,7 +593,17 @@ static int cache_chown(const char *path,
  		cache_invalidate(path);
  	return err;
  }
@@ -191,7 +209,7 @@ reaches its EOL, except for one thing (see comments).
  static int cache_utimens(const char *path, const struct timespec tv[2],
  			 struct fuse_file_info *fi)
  {
-@@ -517,6 +601,7 @@ static int cache_utimens(const char *pat
+@@ -517,6 +612,7 @@ static int cache_utimens(const char *pat
  		cache_invalidate(path);
  	return err;
  }
@@ -199,7 +217,7 @@ reaches its EOL, except for one thing (see comments).
  
  static int cache_write(const char *path, const char *buf, size_t size,
                         off_t offset, struct fuse_file_info *fi)
-@@ -536,6 +621,15 @@ static int cache_create(const char *path
+@@ -536,6 +632,15 @@ static int cache_create(const char *path
  	return err;
  }
  
@@ -215,7 +233,7 @@ reaches its EOL, except for one thing (see comments).
  static int cache_truncate(const char *path, off_t size,
  			  struct fuse_file_info *fi)
  {
-@@ -544,6 +638,7 @@ static int cache_truncate(const char *pa
+@@ -544,6 +649,7 @@ static int cache_truncate(const char *pa
  		cache_invalidate(path);
  	return err;
  }
