@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2026/04/22 08:08:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2026/05/10 12:21:47 wiz Exp $
 bin/beet-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -469,6 +469,18 @@ ${PYSITELIB}/beetsplug/the.pyo
 ${PYSITELIB}/beetsplug/thumbnails.py
 ${PYSITELIB}/beetsplug/thumbnails.pyc
 ${PYSITELIB}/beetsplug/thumbnails.pyo
+${PYSITELIB}/beetsplug/tidal/__init__.py
+${PYSITELIB}/beetsplug/tidal/__init__.pyc
+${PYSITELIB}/beetsplug/tidal/__init__.pyo
+${PYSITELIB}/beetsplug/tidal/api.py
+${PYSITELIB}/beetsplug/tidal/api.pyc
+${PYSITELIB}/beetsplug/tidal/api.pyo
+${PYSITELIB}/beetsplug/tidal/api_types.py
+${PYSITELIB}/beetsplug/tidal/api_types.pyc
+${PYSITELIB}/beetsplug/tidal/api_types.pyo
+${PYSITELIB}/beetsplug/tidal/session.py
+${PYSITELIB}/beetsplug/tidal/session.pyc
+${PYSITELIB}/beetsplug/tidal/session.pyo
 ${PYSITELIB}/beetsplug/titlecase.py
 ${PYSITELIB}/beetsplug/titlecase.pyc
 ${PYSITELIB}/beetsplug/titlecase.pyo

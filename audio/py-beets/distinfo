@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.33 2026/04/22 08:08:37 adam Exp $
+$NetBSD: distinfo,v 1.34 2026/05/10 12:21:47 wiz Exp $
 
-BLAKE2s (beets-2.10.0.tar.gz) = 3e19b657ca185c3b067fe2afa060a983dc14a98ef3564e56fdc50ec023ae7b42
-SHA512 (beets-2.10.0.tar.gz) = 9a34720f7d851b769f74bf573d8a8d8324f443b20dd6ec5c91f18457144a9ab5a912cb24d58a1da4d50ba3438f1a58f7763cb7268f1db134195369b07064e5d6
-Size (beets-2.10.0.tar.gz) = 2282966 bytes
+BLAKE2s (beets-2.11.0.tar.gz) = 810ede3dba8e8e2ad96b46c70492aac54ebcfd2ba03591b788c3e22946e79499
+SHA512 (beets-2.11.0.tar.gz) = 54e077d893485786f3448e04c956b74aa247e731b85f6359dc208cf993bf2b7f4a4139dec6e8bc81bca05a79326314ba4a0427256eee63b56fe29085b972cf3a
+Size (beets-2.11.0.tar.gz) = 2298259 bytes
