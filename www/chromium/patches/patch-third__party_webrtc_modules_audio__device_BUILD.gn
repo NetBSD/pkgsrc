@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_webrtc_modules_audio__device_BUILD.gn,v 1.18 2026/04/21 15:21:22 kikadf Exp $
+$NetBSD: patch-third__party_webrtc_modules_audio__device_BUILD.gn,v 1.19 2026/05/10 15:30:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/modules/audio_device/BUILD.gn.orig	2026-04-14 23:31:37.000000000 +0200
+--- third_party/webrtc/modules/audio_device/BUILD.gn.orig	2026-04-28 23:05:57.000000000 +0200
 +++ third_party/webrtc/modules/audio_device/BUILD.gn
-@@ -337,7 +337,7 @@ rtc_library("audio_device_impl") {
+@@ -327,7 +327,7 @@ rtc_library("audio_device_impl") {
      if (rtc_use_dummy_audio_file_devices) {
        defines += [ "WEBRTC_DUMMY_FILE_DEVICES" ]
      } else {

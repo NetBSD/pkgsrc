@@ -1,10 +1,10 @@
-$NetBSD: patch-services_device_public_cpp_generic__sensor_sensor__reading.h,v 1.18 2026/04/21 15:21:19 kikadf Exp $
+$NetBSD: patch-services_device_public_cpp_generic__sensor_sensor__reading.h,v 1.19 2026/05/10 15:30:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/public/cpp/generic_sensor/sensor_reading.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- services/device/public/cpp/generic_sensor/sensor_reading.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ services/device/public/cpp/generic_sensor/sensor_reading.h
 @@ -8,6 +8,8 @@
  #include <stddef.h>

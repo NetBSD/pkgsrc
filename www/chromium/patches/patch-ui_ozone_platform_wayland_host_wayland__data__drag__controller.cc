@@ -1,20 +1,20 @@
-$NetBSD: patch-ui_ozone_platform_wayland_host_wayland__data__drag__controller.cc,v 1.3 2026/04/21 15:21:24 kikadf Exp $
+$NetBSD: patch-ui_ozone_platform_wayland_host_wayland__data__drag__controller.cc,v 1.4 2026/05/10 15:30:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_data_drag_controller.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- ui/ozone/platform/wayland/host/wayland_data_drag_controller.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ ui/ozone/platform/wayland/host/wayland_data_drag_controller.cc
-@@ -49,7 +49,7 @@
+@@ -48,7 +48,7 @@
  #include "ui/ozone/platform/wayland/host/wayland_window.h"
  #include "ui/ozone/platform/wayland/host/wayland_window_manager.h"
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "base/time/time.h"
  #include "ui/base/clipboard/clipboard_util_linux.h"
  #endif
- 
 @@ -70,7 +70,7 @@ using mojom::DragOperation;
  constexpr char kMimeTypeEmptyDragData[] = "chromium/x-empty-drag-data";
  
@@ -24,21 +24,30 @@ $NetBSD: patch-ui_ozone_platform_wayland_host_wayland__data__drag__controller.cc
    return mime_type == kMimeTypePortalFileTransfer ||
           mime_type == kMimeTypePortalFiles;
  #else
-@@ -189,7 +189,7 @@ bool WaylandDataDragController::StartSes
-   offered_exchange_data_provider_ = data.provider().Clone();
+@@ -205,7 +205,7 @@ void WaylandDataDragController::StartSes
+   }
+ 
    auto mime_types = GetOfferedExchangeDataProvider()->BuildMimeTypesList();
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   if (GetOfferedExchangeDataProvider()->HasFile()) {
+     mime_types.push_back(kMimeTypePortalFileTransfer);
+     mime_types.push_back(kMimeTypePortalFiles);
+@@ -623,7 +623,7 @@ void WaylandDataDragController::OnDataSo
+   CHECK_EQ(data_source_.get(), source);
+   VLOG(1) << __FUNCTION__ << " mime=" << mime_type;
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   // If we are dragging files, register them with the portal.
-   if (data.HasFile()) {
-     std::optional<std::vector<FileInfo>> filenames = data.GetFilenames();
-@@ -699,7 +699,7 @@ void WaylandDataDragController::PostData
-         return {};
-       }
+   if (mime_type == kMimeTypePortalFileTransfer ||
+       mime_type == kMimeTypePortalFiles) {
+     std::optional<std::vector<FileInfo>> filenames =
+@@ -745,7 +745,7 @@ void WaylandDataDragController::OnDataFe
+     return;
+   }
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-       // Handle file transfer via portal
-       if (IsPortalMimeType(mime_type)) {
-         std::vector<uint8_t> key_vec;
+   // Check for portal data. We read the raw portal key from the FD on the
+   // background thread, and now we resolve it to actual paths on the UI thread.
+   for (const char* mime : {kMimeTypePortalFileTransfer, kMimeTypePortalFiles}) {

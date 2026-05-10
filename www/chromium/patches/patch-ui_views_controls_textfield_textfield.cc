@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.18 2026/04/21 15:21:24 kikadf Exp $
+$NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.19 2026/05/10 15:30:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/controls/textfield/textfield.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- ui/views/controls/textfield/textfield.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ ui/views/controls/textfield/textfield.cc
-@@ -87,7 +87,7 @@
+@@ -88,7 +88,7 @@
  #include "base/win/win_util.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.18 2026/04/21 15:21:
  #include "ui/base/ime/linux/text_edit_command_auralinux.h"
  #include "ui/base/ime/text_input_flags.h"
  #include "ui/linux/linux_ui.h"
-@@ -184,7 +184,7 @@ bool IsControlKeyModifier(int flags) {
+@@ -185,7 +185,7 @@ bool IsControlKeyModifier(int flags) {
  // Control-modified key combination, but we cannot extend it to other platforms
  // as Control has different meanings and behaviors.
  // https://crrev.com/2580483002/#msg46
@@ -24,7 +24,7 @@ $NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.18 2026/04/21 15:21:
    return flags & ui::EF_CONTROL_DOWN;
  #else
    return false;
-@@ -795,7 +795,7 @@ bool Textfield::OnKeyPressed(const ui::K
+@@ -796,7 +796,7 @@ bool Textfield::OnKeyPressed(const ui::K
      return handled;
    }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.18 2026/04/21 15:21:
    if (!handled) {
      if (auto* linux_ui = ui::LinuxUi::instance()) {
        const auto command =
-@@ -980,7 +980,7 @@ void Textfield::AboutToRequestFocusFromT
+@@ -981,7 +981,7 @@ void Textfield::AboutToRequestFocusFromT
  }
  
  bool Textfield::SkipDefaultKeyEventProcessing(const ui::KeyEvent& event) {
@@ -42,7 +42,7 @@ $NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.18 2026/04/21 15:21:
    // Skip any accelerator handling that conflicts with custom keybindings.
    if (auto* linux_ui = ui::LinuxUi::instance()) {
      if (IsTextEditCommandEnabled(linux_ui->GetTextEditCommandForEvent(
-@@ -2073,7 +2073,7 @@ bool Textfield::ShouldDoLearning() {
+@@ -2092,7 +2092,7 @@ bool Textfield::ShouldDoLearning() {
    return false;
  }
  
@@ -51,7 +51,7 @@ $NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.18 2026/04/21 15:21:
  // TODO(crbug.com/41452689): Implement this method to support Korean IME
  // reconversion feature on native text fields (e.g. find bar).
  bool Textfield::SetCompositionFromExistingText(
-@@ -2600,7 +2600,7 @@ ui::TextEditCommand Textfield::GetComman
+@@ -2619,7 +2619,7 @@ ui::TextEditCommand Textfield::GetComman
  #endif
          return ui::TextEditCommand::DELETE_BACKWARD;
        }
@@ -60,7 +60,7 @@ $NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.18 2026/04/21 15:21:
        // Only erase by line break on Linux and ChromeOS.
        if (shift) {
          return ui::TextEditCommand::DELETE_TO_BEGINNING_OF_LINE;
-@@ -2608,7 +2608,7 @@ ui::TextEditCommand Textfield::GetComman
+@@ -2627,7 +2627,7 @@ ui::TextEditCommand Textfield::GetComman
  #endif
        return ui::TextEditCommand::DELETE_WORD_BACKWARD;
      case ui::VKEY_DELETE:
