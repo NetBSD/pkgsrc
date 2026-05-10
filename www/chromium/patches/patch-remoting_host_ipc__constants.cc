@@ -1,21 +1,21 @@
-$NetBSD: patch-remoting_host_ipc__constants.cc,v 1.18 2026/04/21 15:21:19 kikadf Exp $
+$NetBSD: patch-remoting_host_ipc__constants.cc,v 1.19 2026/05/10 15:30:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/ipc_constants.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- remoting/host/ipc_constants.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ remoting/host/ipc_constants.cc
-@@ -17,7 +17,7 @@ namespace remoting {
- 
- namespace {
+@@ -13,7 +13,7 @@
+ #include "mojo/public/cpp/platform/named_platform_channel.h"
+ #include "remoting/base/username.h"
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- 
- #if !defined(NDEBUG)
- // Use a different IPC name for debug builds so that we can run the host
-@@ -48,7 +48,7 @@ constexpr char kAgentProcessBrokerIpcNam
+ #include "base/nix/xdg_util.h"
+ #include "remoting/base/file_path_util_linux.h"
+ #endif
+@@ -46,7 +46,7 @@ constexpr char kAgentProcessBrokerIpcNam
  
  #endif
  
@@ -24,16 +24,25 @@ $NetBSD: patch-remoting_host_ipc__constants.cc,v 1.18 2026/04/21 15:21:19 kikadf
  
  #if !defined(NDEBUG)
  constexpr char kLoginSessionReporterIpcName[] =
-@@ -93,7 +93,7 @@ GetChromotingHostServicesServerName() {
-   static const base::NoDestructor<mojo::NamedPlatformChannel::ServerName>
-       server_name(
-           named_mojo_ipc_server::WorkingDirectoryIndependentServerNameFromUTF8(
+@@ -63,7 +63,7 @@ constexpr char kLoginSessionServerIpcNam
+ #endif
+ 
+ mojo::NamedPlatformChannel::ServerName GetServerName(std::string_view name) {
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-               // Linux host creates the socket file in /tmp, and it won't be
-               // deleted until reboot, so we put username in the path in case
-               // the user switches the host owner.
-@@ -126,7 +126,7 @@ GetAgentProcessBrokerServerName() {
+   return GetVarLibDir().Append(name).value();
+ #else
+   return mojo::NamedPlatformChannel::ServerNameFromUTF8(name);
+@@ -105,7 +105,7 @@ GetChromotingHostServicesServerName() {
+   return *server_name;
+ }
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ const mojo::NamedPlatformChannel::ServerName&
+ GetLegacyChromotingHostServicesServerName() {
+   static const base::NoDestructor<mojo::NamedPlatformChannel::ServerName>
+@@ -137,7 +137,7 @@ GetAgentProcessBrokerServerName() {
  
  #endif
  

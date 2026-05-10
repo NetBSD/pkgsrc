@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_x_x11__display__manager.cc,v 1.18 2026/04/21 15:21:23 kikadf Exp $
+$NetBSD: patch-ui_base_x_x11__display__manager.cc,v 1.19 2026/05/10 15:30:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_display_manager.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- ui/base/x/x11_display_manager.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ ui/base/x/x11_display_manager.cc
 @@ -16,7 +16,7 @@
  #include "ui/gfx/x/randr.h"

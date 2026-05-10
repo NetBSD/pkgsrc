@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_core_editing_editing__behavior.cc,v 1.18 2026/04/21 15:21:20 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_core_editing_editing__behavior.cc,v 1.19 2026/05/10 15:30:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/editing/editing_behavior.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- third_party/blink/renderer/core/editing/editing_behavior.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ third_party/blink/renderer/core/editing/editing_behavior.cc
 @@ -138,7 +138,7 @@ const KeyboardCodeKeyDownEntry kKeyboard
      {VKEY_DELETE, 0, "DeleteForward"},

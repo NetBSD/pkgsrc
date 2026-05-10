@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gl_gl__context.cc,v 1.18 2026/04/21 15:21:24 kikadf Exp $
+$NetBSD: patch-ui_gl_gl__context.cc,v 1.19 2026/05/10 15:30:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/gl_context.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- ui/gl/gl_context.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ ui/gl/gl_context.cc
 @@ -153,7 +153,7 @@ bool GLContext::MakeCurrent(GLSurface* s
      recorded_max_gles_version_if_feasible = true;

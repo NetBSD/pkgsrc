@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_perfetto_include_perfetto_base_time.h,v 1.18 2026/04/21 15:21:22 kikadf Exp $
+$NetBSD: patch-third__party_perfetto_include_perfetto_base_time.h,v 1.19 2026/05/10 15:30:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/include/perfetto/base/time.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- third_party/perfetto/include/perfetto/base/time.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ third_party/perfetto/include/perfetto/base/time.h
 @@ -228,6 +228,7 @@ inline TimeNanos GetTimeInternalNs(clock
  // Return ns from boot. Conversely to GetWallTimeNs, this clock counts also time
