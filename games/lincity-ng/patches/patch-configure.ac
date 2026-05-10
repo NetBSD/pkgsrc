@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2026/05/10 05:57:42 dholland Exp $
+
+Fix wrong configure test that breaks the build with gcc14
+
+--- configure.ac~	2009-01-25 20:21:25.000000000 +0000
++++ configure.ac
+@@ -86,7 +86,7 @@ AM_BINRELOC
+ 
+ NP_FINDLIB([ZLIB], [zlib], [zlib],
+ 	NP_LANG_PROGRAM([[#include <zlib.h>]],
+-            [[gzFile* file = gzopen("", "");]]),
++            [[gzFile file = gzopen("", "");]]),
+ 	[], [-lz],
+ 	[],
+ 	[AC_MSG_ERROR([Please install zlib])])
