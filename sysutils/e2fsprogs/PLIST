@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.13 2025/01/21 18:13:56 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/05/10 08:20:29 vins Exp $
 bin/chattr
-bin/compile_et
+bin/e2compile_et
 bin/lsattr
 bin/mk_cmds
 include/com_err.h
@@ -42,7 +42,7 @@ lib/pkgconfig/e2p.pc
 lib/pkgconfig/ext2fs.pc
 lib/pkgconfig/ss.pc
 man/man1/chattr.1
-man/man1/compile_et.1
+man/man1/e2compile_et.1
 man/man1/lsattr.1
 man/man1/mk_cmds.1
 man/man3/com_err.3
@@ -98,5 +98,29 @@ sbin/tune2fs
 share/et/et_c.awk
 share/et/et_h.awk
 share/examples/ext2fs/mke2fs.conf
+share/locale/ca/LC_MESSAGES/e2fsprogs.mo
+share/locale/cs/LC_MESSAGES/e2fsprogs.mo
+share/locale/da/LC_MESSAGES/e2fsprogs.mo
+share/locale/de/LC_MESSAGES/e2fsprogs.mo
+share/locale/eo/LC_MESSAGES/e2fsprogs.mo
+share/locale/es/LC_MESSAGES/e2fsprogs.mo
+share/locale/fi/LC_MESSAGES/e2fsprogs.mo
+share/locale/fr/LC_MESSAGES/e2fsprogs.mo
+share/locale/fur/LC_MESSAGES/e2fsprogs.mo
+share/locale/hu/LC_MESSAGES/e2fsprogs.mo
+share/locale/id/LC_MESSAGES/e2fsprogs.mo
+share/locale/it/LC_MESSAGES/e2fsprogs.mo
+share/locale/ka/LC_MESSAGES/e2fsprogs.mo
+share/locale/ms/LC_MESSAGES/e2fsprogs.mo
+share/locale/nl/LC_MESSAGES/e2fsprogs.mo
+share/locale/pl/LC_MESSAGES/e2fsprogs.mo
+share/locale/pt/LC_MESSAGES/e2fsprogs.mo
+share/locale/ro/LC_MESSAGES/e2fsprogs.mo
+share/locale/sr/LC_MESSAGES/e2fsprogs.mo
+share/locale/sv/LC_MESSAGES/e2fsprogs.mo
+share/locale/tr/LC_MESSAGES/e2fsprogs.mo
+share/locale/uk/LC_MESSAGES/e2fsprogs.mo
+share/locale/vi/LC_MESSAGES/e2fsprogs.mo
+share/locale/zh_CN/LC_MESSAGES/e2fsprogs.mo
 share/ss/ct_c.awk
 share/ss/ct_c.sed
