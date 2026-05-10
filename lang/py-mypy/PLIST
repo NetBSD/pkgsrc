@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2026/04/02 07:53:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.44 2026/05/10 13:27:39 wiz Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -167,6 +167,9 @@ ${PYSITELIB}/mypy/ipc.pyo
 ${PYSITELIB}/mypy/join.py
 ${PYSITELIB}/mypy/join.pyc
 ${PYSITELIB}/mypy/join.pyo
+${PYSITELIB}/mypy/known_modules.py
+${PYSITELIB}/mypy/known_modules.pyc
+${PYSITELIB}/mypy/known_modules.pyo
 ${PYSITELIB}/mypy/literals.py
 ${PYSITELIB}/mypy/literals.pyc
 ${PYSITELIB}/mypy/literals.pyo
@@ -203,6 +206,9 @@ ${PYSITELIB}/mypy/modulefinder.pyo
 ${PYSITELIB}/mypy/moduleinspect.py
 ${PYSITELIB}/mypy/moduleinspect.pyc
 ${PYSITELIB}/mypy/moduleinspect.pyo
+${PYSITELIB}/mypy/modules_state.py
+${PYSITELIB}/mypy/modules_state.pyc
+${PYSITELIB}/mypy/modules_state.pyo
 ${PYSITELIB}/mypy/mro.py
 ${PYSITELIB}/mypy/mro.pyc
 ${PYSITELIB}/mypy/mro.pyo
@@ -626,6 +632,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/_thread.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_threading_local.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_tkinter.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_tracemalloc.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/_typeshed/README.md
 ${PYSITELIB}/mypy/typeshed/stdlib/_typeshed/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_typeshed/_type_checker_internals.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_typeshed/dbapi.pyi
@@ -1573,6 +1580,8 @@ ${PYSITELIB}/mypyc/lib-rt/base64/lib_openmp.c
 ${PYSITELIB}/mypyc/lib-rt/base64/libbase64.h
 ${PYSITELIB}/mypyc/lib-rt/base64/librt_base64.c
 ${PYSITELIB}/mypyc/lib-rt/base64/librt_base64.h
+${PYSITELIB}/mypyc/lib-rt/base64/librt_base64_api.c
+${PYSITELIB}/mypyc/lib-rt/base64/librt_base64_api.h
 ${PYSITELIB}/mypyc/lib-rt/base64/tables/table_dec_32bit.h
 ${PYSITELIB}/mypyc/lib-rt/base64/tables/table_enc_12bit.h
 ${PYSITELIB}/mypyc/lib-rt/base64/tables/tables.c
@@ -1598,6 +1607,8 @@ ${PYSITELIB}/mypyc/lib-rt/init.c
 ${PYSITELIB}/mypyc/lib-rt/int_ops.c
 ${PYSITELIB}/mypyc/lib-rt/internal/librt_internal.c
 ${PYSITELIB}/mypyc/lib-rt/internal/librt_internal.h
+${PYSITELIB}/mypyc/lib-rt/internal/librt_internal_api.c
+${PYSITELIB}/mypyc/lib-rt/internal/librt_internal_api.h
 ${PYSITELIB}/mypyc/lib-rt/list_ops.c
 ${PYSITELIB}/mypyc/lib-rt/misc_ops.c
 ${PYSITELIB}/mypyc/lib-rt/module_shim.tmpl
@@ -1614,14 +1625,20 @@ ${PYSITELIB}/mypyc/lib-rt/str_extra_ops.h
 ${PYSITELIB}/mypyc/lib-rt/str_ops.c
 ${PYSITELIB}/mypyc/lib-rt/strings/librt_strings.c
 ${PYSITELIB}/mypyc/lib-rt/strings/librt_strings.h
+${PYSITELIB}/mypyc/lib-rt/strings/librt_strings_api.c
+${PYSITELIB}/mypyc/lib-rt/strings/librt_strings_api.h
 ${PYSITELIB}/mypyc/lib-rt/strings/librt_strings_common.h
 ${PYSITELIB}/mypyc/lib-rt/stringwriter_extra_ops.c
 ${PYSITELIB}/mypyc/lib-rt/stringwriter_extra_ops.h
 ${PYSITELIB}/mypyc/lib-rt/time/librt_time.c
 ${PYSITELIB}/mypyc/lib-rt/time/librt_time.h
+${PYSITELIB}/mypyc/lib-rt/time/librt_time_api.c
+${PYSITELIB}/mypyc/lib-rt/time/librt_time_api.h
 ${PYSITELIB}/mypyc/lib-rt/tuple_ops.c
 ${PYSITELIB}/mypyc/lib-rt/vecs/librt_vecs.c
 ${PYSITELIB}/mypyc/lib-rt/vecs/librt_vecs.h
+${PYSITELIB}/mypyc/lib-rt/vecs/librt_vecs_api.c
+${PYSITELIB}/mypyc/lib-rt/vecs/librt_vecs_api.h
 ${PYSITELIB}/mypyc/lib-rt/vecs/vec_bool.c
 ${PYSITELIB}/mypyc/lib-rt/vecs/vec_float.c
 ${PYSITELIB}/mypyc/lib-rt/vecs/vec_i16.c
