@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2026/05/10 21:17:35 wiz Exp $
-${PYINC}/pygobject/pygobject-3.0/pygobject-types.h
+@comment $NetBSD: PLIST,v 1.18 2026/05/10 22:00:47 wiz Exp $
 ${PYSITELIB}/gi/__init__.py
 ${PYSITELIB}/gi/__init__.pyc
 ${PYSITELIB}/gi/__init__.pyo

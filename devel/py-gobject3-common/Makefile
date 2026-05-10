@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2020/03/22 18:36:17 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/05/10 22:00:47 wiz Exp $
 
 .include "../../devel/py-gobject3/Makefile.common"
 
 PKGNAME=	py-${DISTNAME:S/^py//:S/-/3-common-/}
+PKGREVISION=	1
 
 COMMENT=	Python version independent files for glib2 gobject bindings
 
@@ -23,7 +24,9 @@ do-build:
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/gi/pygobject.h \
-		${DESTDIR}${PREFIX}/include/pygobject-3.0/pygobject.h
+		${DESTDIR}${PREFIX}/include/pygobject-3.0
+	${INSTALL_DATA} ${WRKSRC}/gi/pygobject-types.h \
+		${DESTDIR}${PREFIX}/include/pygobject-3.0
 	${INSTALL_DATA} ${WRKSRC}/pygobject-3.0.pc.in \
 		${DESTDIR}${PREFIX}/lib/pkgconfig/pygobject-3.0.pc
 
