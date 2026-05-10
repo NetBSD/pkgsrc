@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2025/11/17 11:01:25 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/05/10 07:52:13 vins Exp $
 
-DISTNAME=	e2fsprogs-1.47.2
+DISTNAME=	e2fsprogs-1.47.4
 CATEGORIES=	sysutils
 MASTER_SITES=	https://www.kernel.org/pub/linux/kernel/people/tytso/e2fsprogs/v${PKGVERSION_NOREV}/
 #MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=e2fsprogs/}
