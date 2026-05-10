@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2026/05/10 06:26:41 vins Exp $
+# $NetBSD: Makefile,v 1.62 2026/05/10 16:34:23 vins Exp $
 #
 
 COMMENT=	File systems, and file system related packages
@@ -22,6 +22,7 @@ SUBDIR+=	fuse-exfat
 SUBDIR+=	fuse-ext2
 SUBDIR+=	fuse-gmailfs
 SUBDIR+=	fuse-gphotofs
+SUBDIR+=	fuse-httpdirfs
 SUBDIR+=	fuse-httpfs
 SUBDIR+=	fuse-loggedfs
 SUBDIR+=	fuse-lzofs
