@@ -1,12 +1,9 @@
-$NetBSD: distinfo,v 1.27 2021/10/26 11:19:40 nia Exp $
+$NetBSD: distinfo,v 1.28 2026/05/10 17:38:14 vins Exp $
 
-BLAKE2s (gvfs-1.6.7.tar.bz2) = 0a9d41a0c5974b4b66f705a4fa5b1fd11a15cfa79b1bad1a9c796c41cf26a5aa
-SHA512 (gvfs-1.6.7.tar.bz2) = 68fa29bb2c272e4167f17b1383d7758b5eb235e566df0e11a2413503e5b3052ed02e0101228f5f668631480ad2fd18fa682e3c1d38b7b65a34122b1271fd3218
-Size (gvfs-1.6.7.tar.bz2) = 1404372 bytes
-SHA1 (patch-aa) = 37691e13b1c2edbcf1af301bfae22c6b1943efdf
-SHA1 (patch-ac) = 2168ed0d5883747e9b4e1b938ee818e6aefb8e56
-SHA1 (patch-ad) = 45e7d172fe4839018b64babdca2f8c60c7eeec70
-SHA1 (patch-ae) = 07b631786e89f38f831a1cc926818c15520fcd3b
-SHA1 (patch-ag) = 8474aed53e07f2c3899bafc278d886c41ccd04a5
-SHA1 (patch-ai) = 2246232efe91c36be8c577c1db16e80ebb45a515
-SHA1 (patch-metadata_metatree.c) = 952352af28299c92403932ef38d281611427b654
+BLAKE2s (gvfs-1.60.0.tar.xz) = 7592f6c6545146f4eedb3cc2339ab36a9d1e47246ade9fa688409f228fd127c0
+SHA512 (gvfs-1.60.0.tar.xz) = 4897f8bcaa4e8d1eb73f797080e30bc6a442729d93f1ab958add719fe8cd7a30777a1ff26ef807f86fa62edd15529426fa974f01c0081bd3b72af8ae03c01385
+Size (gvfs-1.60.0.tar.xz) = 1297324 bytes
+SHA1 (patch-client_gdaemonvfs.c) = c4833ffcec2b6d1b93beb12b7405fdc3e171beb0
+SHA1 (patch-daemon_ParseFTPList.c) = 50c38494cabb67c4c5047a1dc5a34f487f7349cf
+SHA1 (patch-man_meson.build) = e49cca1e56248625ce111168807425df4fd2e9f9
+SHA1 (patch-meson.build) = f223d6dc97791da7ef96cf4cc099c1599c0e39b2

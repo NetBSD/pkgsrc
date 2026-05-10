@@ -1,0 +1,18 @@
+$NetBSD: patch-meson.build,v 1.1 2026/05/10 17:38:14 vins Exp $
+
+Work around a build failure on NetBSD. Not sure if this is the right thing
+though. No software should use statfs(2) in the first place.
+
+--- meson.build.orig	2025-11-14 15:34:15.578508432 +0000
++++ meson.build
+@@ -122,6 +122,10 @@ if cc.compiles(statfs_code.format('statf
+   config_h.set('STATFS_ARGS', 2)
+ elif cc.compiles(statfs_code.format('statfs("/", &st, sizeof (st), 0)'))
+   config_h.set('STATFS_ARGS', 4)
++elif host_machine.system().contains('netbsd')
++  # NetBSD has statfs(2) as a compatibility symbol without a function
++  # declaration, which makes it impossible to determine its type.
++  config_h.set('STATFS_ARGS', 2)
+ else
+   error('unable to determine number of arguments to statfs()')
+ endif
