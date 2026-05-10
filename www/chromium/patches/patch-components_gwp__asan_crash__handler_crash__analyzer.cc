@@ -1,12 +1,12 @@
-$NetBSD: patch-components_gwp__asan_crash__handler_crash__analyzer.cc,v 1.18 2026/04/21 15:21:13 kikadf Exp $
+$NetBSD: patch-components_gwp__asan_crash__handler_crash__analyzer.cc,v 1.19 2026/05/10 15:29:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/gwp_asan/crash_handler/crash_analyzer.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- components/gwp_asan/crash_handler/crash_analyzer.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ components/gwp_asan/crash_handler/crash_analyzer.cc
-@@ -36,7 +36,7 @@
+@@ -32,7 +32,7 @@
  #include "third_party/crashpad/crashpad/snapshot/process_snapshot.h"
  #include "third_party/crashpad/crashpad/util/process/process_memory.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-components_gwp__asan_crash__handler_crash__analyzer.cc,v 1.18 202
  #include <signal.h>
  #elif BUILDFLAG(IS_APPLE)
  #include <mach/exception_types.h>
-@@ -114,7 +114,7 @@ bool CrashAnalyzer::GetExceptionInfo(
+@@ -110,7 +110,7 @@ bool CrashAnalyzer::GetExceptionInfo(
  
  crashpad::VMAddress CrashAnalyzer::GetAccessAddress(
      const crashpad::ExceptionSnapshot& exception) {

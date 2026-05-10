@@ -1,12 +1,12 @@
-$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_partition__alloc__constants.h,v 1.18 2026/04/21 15:21:07 kikadf Exp $
+$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_partition__alloc__constants.h,v 1.19 2026/05/10 15:29:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h
-@@ -310,7 +310,7 @@ PA_DEFINE_OPERATORS_FOR_FLAGS(PoolHandle
+@@ -316,7 +316,7 @@ PA_DEFINE_OPERATORS_FOR_FLAGS(PoolHandle
  // 8GB for each of the glued pools).
  #if PA_BUILDFLAG(HAS_64_BIT_POINTERS)
  #if PA_BUILDFLAG(IS_ANDROID) || PA_BUILDFLAG(IS_IOS) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_partitio
  constexpr size_t kPoolMaxSize = 8 * kGiB;
  #else
  constexpr size_t kPoolMaxSize = 16 * kGiB;
-@@ -394,7 +394,7 @@ PA_ALWAYS_INLINE constexpr size_t MaxDir
+@@ -400,7 +400,7 @@ PA_ALWAYS_INLINE constexpr size_t MaxDir
  // TODO(casey.smalley@arm.com): under 64k pages we can end up in a situation
  // where a normal slot span will be large enough to contain multiple items,
  // but the address will go over the final partition page after being aligned.

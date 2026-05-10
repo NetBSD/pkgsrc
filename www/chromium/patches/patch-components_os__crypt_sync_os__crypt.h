@@ -1,10 +1,10 @@
-$NetBSD: patch-components_os__crypt_sync_os__crypt.h,v 1.18 2026/04/21 15:21:14 kikadf Exp $
+$NetBSD: patch-components_os__crypt_sync_os__crypt.h,v 1.19 2026/05/10 15:29:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/os_crypt/sync/os_crypt.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- components/os_crypt/sync/os_crypt.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ components/os_crypt/sync/os_crypt.h
 @@ -25,7 +25,7 @@ class KeychainV2;
  }

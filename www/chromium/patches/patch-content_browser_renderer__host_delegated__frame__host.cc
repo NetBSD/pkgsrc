@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_renderer__host_delegated__frame__host.cc,v 1.18 2026/04/21 15:21:15 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_delegated__frame__host.cc,v 1.19 2026/05/10 15:29:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/delegated_frame_host.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- content/browser/renderer_host/delegated_frame_host.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ content/browser/renderer_host/delegated_frame_host.cc
-@@ -348,7 +348,7 @@ void DelegatedFrameHost::EmbedSurface(
+@@ -346,7 +346,7 @@ void DelegatedFrameHost::EmbedSurface(
  
    if (!primary_surface_id ||
        primary_surface_id->local_surface_id() != local_surface_id_) {

@@ -1,10 +1,10 @@
-$NetBSD: patch-media_base_media__switches.cc,v 1.19 2026/04/21 15:21:17 kikadf Exp $
+$NetBSD: patch-media_base_media__switches.cc,v 1.20 2026/05/10 15:29:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/media_switches.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- media/base/media_switches.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ media/base/media_switches.cc
 @@ -20,7 +20,7 @@
  #include "ui/gl/gl_features.h"
@@ -24,7 +24,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.19 2026/04/21 15:21:17 kikadf E
  // The Alsa device to use when opening an audio input stream.
  const char kAlsaInputDevice[] = "alsa-input-device";
  // The Alsa device to use when opening an audio stream.
-@@ -428,13 +428,38 @@ BASE_FEATURE(kApplicationAudioCaptureMac
+@@ -434,13 +434,38 @@ BASE_FEATURE(kApplicationAudioCaptureMac
  
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -64,7 +64,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.19 2026/04/21 15:21:17 kikadf E
  #endif  // BUILDFLAG(IS_LINUX)
  
  // When enabled, MediaCapabilities will check with GPU Video Accelerator
-@@ -681,7 +706,7 @@ BASE_FEATURE(kGlobalMediaControlsAutoDis
+@@ -713,7 +738,7 @@ BASE_FEATURE(kGlobalMediaControlsAutoDis
  #if !BUILDFLAG(IS_ANDROID)
  // If enabled, users can request Media Remoting without fullscreen-in-tab.
  BASE_FEATURE(kMediaRemotingWithoutFullscreen,
@@ -73,7 +73,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.19 2026/04/21 15:21:17 kikadf E
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -704,7 +729,7 @@ BASE_FEATURE(kSuspendMediaForFrozenFrame
+@@ -736,7 +761,7 @@ BASE_FEATURE(kSuspendMediaForFrozenFrame
  // autoplay policy.
  BASE_FEATURE(kUnifiedAutoplay, base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -82,7 +82,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.19 2026/04/21 15:21:17 kikadf E
  // Enable vaapi/v4l2 video decoding on linux. This is already enabled by default
  // on chromeos, but needs an experiment on linux.
  BASE_FEATURE(kAcceleratedVideoDecodeLinux,
-@@ -760,7 +785,7 @@ BASE_FEATURE(kVaapiVp9SModeHWEncoding, b
+@@ -792,7 +817,7 @@ BASE_FEATURE(kVaapiVp9SModeHWEncoding, b
  // Enables VSync aligned MJPEG decoding.
  BASE_FEATURE(kVSyncMjpegDecoding, base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // defined(ARCH_CPU_X86_FAMILY) && BUILDFLAG(IS_CHROMEOS)
@@ -91,7 +91,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.19 2026/04/21 15:21:17 kikadf E
  // Enable H264 temporal layer encoding with V4L2 HW encoder on ChromeOS.
  BASE_FEATURE(kV4L2H264TemporalLayerHWEncoding,
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -947,7 +972,7 @@ BASE_FEATURE(kHardwareSecureDecryptionRe
+@@ -976,7 +1001,7 @@ BASE_FEATURE(kHardwareSecureDecryptionRe
  BASE_FEATURE(kHardwareMediaKeyHandling,
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
               base::FEATURE_ENABLED_BY_DEFAULT
@@ -100,7 +100,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.19 2026/04/21 15:21:17 kikadf E
  #if BUILDFLAG(USE_MPRIS)
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
-@@ -1284,7 +1309,7 @@ BASE_FEATURE(kUseOutOfProcessVideoDecodi
+@@ -1334,7 +1359,7 @@ BASE_FEATURE(kUseOutOfProcessVideoDecodi
  BASE_FEATURE(kUseSharedImageInOOPVDProcess, base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(ALLOW_OOP_VIDEO_DECODER)
  
@@ -109,7 +109,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.19 2026/04/21 15:21:17 kikadf E
  // Spawn utility processes to perform hardware encode acceleration instead of
  // using the GPU process.
  BASE_FEATURE(kUseOutOfProcessVideoEncoding, base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -1346,7 +1371,7 @@ BASE_FEATURE(kRecordMediaEngagementScore
+@@ -1396,7 +1421,7 @@ BASE_FEATURE(kRecordMediaEngagementScore
  // Enables Media Engagement Index recording for Web Audio playbacks.
  BASE_FEATURE(kRecordWebAudioEngagement, base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -118,7 +118,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.19 2026/04/21 15:21:17 kikadf E
  // Reduces the number of buffers needed in the output video frame pool to
  // populate the Renderer pipeline for hardware accelerated VideoDecoder in
  // non-low latency scenarios.
-@@ -1667,7 +1692,7 @@ bool IsSystemLoopbackCaptureSupported() 
+@@ -1719,7 +1744,7 @@ bool IsSystemLoopbackCaptureSupported() 
  #elif BUILDFLAG(IS_MAC)
    return (IsMacSckSystemLoopbackCaptureSupported() ||
            IsMacCatapSystemLoopbackCaptureSupported());

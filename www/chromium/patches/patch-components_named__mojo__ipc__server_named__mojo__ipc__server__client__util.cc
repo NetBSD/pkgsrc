@@ -1,10 +1,10 @@
-$NetBSD: patch-components_named__mojo__ipc__server_named__mojo__ipc__server__client__util.cc,v 1.18 2026/04/21 15:21:14 kikadf Exp $
+$NetBSD: patch-components_named__mojo__ipc__server_named__mojo__ipc__server__client__util.cc,v 1.19 2026/05/10 15:29:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/named_mojo_ipc_server/named_mojo_ipc_server_client_util.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- components/named_mojo_ipc_server/named_mojo_ipc_server_client_util.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ components/named_mojo_ipc_server/named_mojo_ipc_server_client_util.cc
 @@ -23,7 +23,7 @@ namespace named_mojo_ipc_server {
  // static

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_device__signals_core_browser_user__permission__service__impl.h,v 1.18 2026/04/21 15:21:13 kikadf Exp $
+$NetBSD: patch-components_device__signals_core_browser_user__permission__service__impl.h,v 1.19 2026/05/10 15:29:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/browser/user_permission_service_impl.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- components/device_signals/core/browser/user_permission_service_impl.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ components/device_signals/core/browser/user_permission_service_impl.h
 @@ -38,7 +38,7 @@ class UserPermissionServiceImpl : public
  

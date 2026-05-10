@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_file__system__access_file__system__access__local__path__watcher.cc,v 1.18 2026/04/21 15:21:15 kikadf Exp $
+$NetBSD: patch-content_browser_file__system__access_file__system__access__local__path__watcher.cc,v 1.19 2026/05/10 15:29:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/file_system_access/file_system_access_local_path_watcher.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- content/browser/file_system_access/file_system_access_local_path_watcher.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ content/browser/file_system_access/file_system_access_local_path_watcher.cc
 @@ -67,7 +67,7 @@ void FileSystemAccessLocalPathWatcher::I
        .type = scope().IsRecursive() ? FilePathWatcher::Type::kRecursive

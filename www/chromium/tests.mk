@@ -1,4 +1,4 @@
-# $NetBSD: tests.mk,v 1.8 2026/04/21 15:21:07 kikadf Exp $
+# $NetBSD: tests.mk,v 1.9 2026/05/10 15:29:46 kikadf Exp $
 
 # Distfiles for test
 REGRESS_DISTFILE=		chromium-${VERSION}-testdata${EXTRACT_SUFX_C}
@@ -7,7 +7,7 @@ SITES.${FONTS_DISTFILE}=	https://nerd.hu/distfiles/
 DISTFILES+=			${REGRESS_DISTFILE} ${FONTS_DISTFILE}
 
 EXTRACT_ONLY=			${DISTNAME}-lite${EXTRACT_SUFX_C}
-EXTRACT_ONLY+=			${PROFILE_DISTFILES}
+#EXTRACT_ONLY+=			${PROFILE_DISTFILES}
 EXTRACT_ONLY+=			${_GITHUB_DEFAULT_DISTFILES}
 .for crate in ${CARGO_CRATE_DEPENDS}
 EXTRACT_ONLY+=			${crate}.crate

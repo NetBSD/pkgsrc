@@ -1,10 +1,10 @@
-$NetBSD: patch-media_audio_sndio_sndio__output.h,v 1.18 2026/04/21 15:21:17 kikadf Exp $
+$NetBSD: patch-media_audio_sndio_sndio__output.h,v 1.19 2026/05/10 15:29:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/sndio/sndio_output.h.orig	2026-04-21 12:38:57.479568172 +0200
+--- media/audio/sndio/sndio_output.h.orig	2026-05-10 14:15:01.167742662 +0200
 +++ media/audio/sndio/sndio_output.h
 @@ -0,0 +1,88 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.

@@ -1,21 +1,21 @@
-$NetBSD: patch-media_capture_video_linux_video__capture__device__factory__v4l2.cc,v 1.18 2026/04/21 15:21:17 kikadf Exp $
+$NetBSD: patch-media_capture_video_linux_video__capture__device__factory__v4l2.cc,v 1.19 2026/05/10 15:30:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/linux/video_capture_device_factory_v4l2.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- media/capture/video/linux/video_capture_device_factory_v4l2.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ media/capture/video/linux/video_capture_device_factory_v4l2.cc
-@@ -24,7 +24,7 @@
- #include "media/capture/video/linux/scoped_v4l2_device_fd.h"
+@@ -27,7 +27,7 @@
+ #include "media/capture/video/linux/v4l2_capture_device_impl.h"
  #include "media/capture/video/linux/video_capture_device_linux.h"
  
 -#if BUILDFLAG(IS_OPENBSD)
-+#if BUILDFLAG(IS_OPENBSD) || BUILDFLAG(IS_NETBSD)
++#if BUILDFLAG(IS_OPENBSD) || defined(OS_NETBSD)
  #include <sys/videoio.h>
  #else
  #include <linux/videodev2.h>
-@@ -39,6 +39,7 @@ bool CompareCaptureDevices(const VideoCa
+@@ -42,6 +42,7 @@ bool CompareCaptureDevices(const VideoCa
    return a.descriptor < b.descriptor;
  }
  
@@ -23,7 +23,7 @@ $NetBSD: patch-media_capture_video_linux_video__capture__device__factory__v4l2.c
  // USB VID and PID are both 4 bytes long.
  const size_t kVidPidSize = 4;
  const size_t kMaxInterfaceNameSize = 256;
-@@ -71,11 +72,24 @@ std::string ExtractFileNameFromDeviceId(
+@@ -74,11 +75,24 @@ std::string ExtractFileNameFromDeviceId(
    DCHECK(base::StartsWith(device_id, kDevDir, base::CompareCase::SENSITIVE));
    return device_id.substr(UNSAFE_TODO(strlen(kDevDir)), device_id.length());
  }
@@ -48,7 +48,7 @@ $NetBSD: patch-media_capture_video_linux_video__capture__device__factory__v4l2.c
      const base::FilePath path("/dev/");
      base::FileEnumerator enumerator(path, false, base::FileEnumerator::FILES,
                                      "video*");
-@@ -83,9 +97,13 @@ class DevVideoFilePathsDeviceProvider
+@@ -86,9 +100,13 @@ class DevVideoFilePathsDeviceProvider
        const base::FileEnumerator::FileInfo info = enumerator.GetInfo();
        target_container->emplace_back(path.value() + info.GetName().value());
      }
@@ -62,7 +62,7 @@ $NetBSD: patch-media_capture_video_linux_video__capture__device__factory__v4l2.c
      const std::string file_name = ExtractFileNameFromDeviceId(device_id);
      std::string usb_id;
      const std::string vid_path =
-@@ -102,9 +120,13 @@ class DevVideoFilePathsDeviceProvider
+@@ -105,9 +123,13 @@ class DevVideoFilePathsDeviceProvider
      }
  
      return usb_id;
@@ -76,7 +76,7 @@ $NetBSD: patch-media_capture_video_linux_video__capture__device__factory__v4l2.c
      const std::string file_name = ExtractFileNameFromDeviceId(device_id);
      const std::string interface_path =
          base::StringPrintf(kInterfacePathTemplate, file_name.c_str());
-@@ -115,6 +137,7 @@ class DevVideoFilePathsDeviceProvider
+@@ -118,6 +140,7 @@ class DevVideoFilePathsDeviceProvider
        return std::string();
      }
      return display_name;
@@ -84,7 +84,7 @@ $NetBSD: patch-media_capture_video_linux_video__capture__device__factory__v4l2.c
    }
  };
  
-@@ -220,7 +243,7 @@ void VideoCaptureDeviceFactoryV4L2::GetD
+@@ -223,7 +246,7 @@ void VideoCaptureDeviceFactoryV4L2::GetD
    std::move(callback).Run(std::move(devices_info));
  }
  
@@ -93,7 +93,7 @@ $NetBSD: patch-media_capture_video_linux_video__capture__device__factory__v4l2.c
    return HANDLE_EINTR(v4l2_->ioctl(fd, request, argp));
  }
  
-@@ -280,6 +303,11 @@ std::vector<float> VideoCaptureDeviceFac
+@@ -283,6 +306,11 @@ std::vector<float> VideoCaptureDeviceFac
          frame_rates.push_back(
              frame_interval.discrete.denominator /
              static_cast<float>(frame_interval.discrete.numerator));

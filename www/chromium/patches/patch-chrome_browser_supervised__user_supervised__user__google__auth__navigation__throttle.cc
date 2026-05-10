@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_supervised__user_supervised__user__google__auth__navigation__throttle.cc,v 1.18 2026/04/21 15:21:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_supervised__user_supervised__user__google__auth__navigation__throttle.cc,v 1.19 2026/05/10 15:29:51 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_google_auth_navigation_throttle.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/supervised_user/supervised_user_google_auth_navigation_throttle.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/supervised_user/supervised_user_google_auth_navigation_throttle.cc
 @@ -33,13 +33,13 @@
  #include "chrome/browser/supervised_user/child_accounts/child_account_service_android.h"

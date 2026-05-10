@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_renderer_chrome__content__renderer__client.cc,v 1.10 2026/04/21 15:21:12 kikadf Exp $
+$NetBSD: patch-chrome_renderer_chrome__content__renderer__client.cc,v 1.11 2026/05/10 15:29:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/renderer/chrome_content_renderer_client.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/renderer/chrome_content_renderer_client.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/renderer/chrome_content_renderer_client.cc
 @@ -185,7 +185,7 @@
  #include "v8/include/v8-isolate.h"
@@ -15,17 +15,17 @@ $NetBSD: patch-chrome_renderer_chrome__content__renderer__client.cc,v 1.10 2026/
  #include "components/webapps/isolated_web_apps/scheme.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -428,7 +428,7 @@ void ChromeContentRendererClient::Render
+@@ -429,7 +429,7 @@ void ChromeContentRendererClient::Render
    WebSecurityPolicy::RegisterURLSchemeAsExtension(
-       WebString::FromASCII(extensions::kExtensionScheme));
+       WebString::FromAscii(extensions::kExtensionScheme));
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    WebSecurityPolicy::RegisterURLSchemeAsIsolatedApp(
-       WebString::FromASCII(webapps::kIsolatedAppScheme));
+       WebString::FromAscii(webapps::kIsolatedAppScheme));
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
-@@ -497,7 +497,7 @@ void ChromeContentRendererClient::Render
-       WebString::FromASCII(chrome::kChromeSearchScheme));
+@@ -498,7 +498,7 @@ void ChromeContentRendererClient::Render
+       WebString::FromAscii(chrome::kChromeSearchScheme));
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)

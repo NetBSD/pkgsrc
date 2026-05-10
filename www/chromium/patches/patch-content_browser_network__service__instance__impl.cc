@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_network__service__instance__impl.cc,v 1.18 2026/04/21 15:21:15 kikadf Exp $
+$NetBSD: patch-content_browser_network__service__instance__impl.cc,v 1.19 2026/05/10 15:29:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/network_service_instance_impl.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- content/browser/network_service_instance_impl.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ content/browser/network_service_instance_impl.cc
 @@ -94,7 +94,7 @@
  #include "content/browser/network/network_service_process_tracker_win.h"

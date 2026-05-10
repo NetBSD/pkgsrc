@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_renderer__host_render__process__host__impl.cc,v 1.18 2026/04/21 15:21:15 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_render__process__host__impl.cc,v 1.19 2026/05/10 15:29:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_process_host_impl.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- content/browser/renderer_host/render_process_host_impl.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ content/browser/renderer_host/render_process_host_impl.cc
 @@ -225,7 +225,7 @@
  #include "third_party/blink/public/mojom/android_font_lookup/android_font_lookup.mojom.h"
@@ -33,7 +33,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl.cc,v 1
    child_thread_type_switcher_.SetPid(child_pid);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  }
-@@ -3660,7 +3660,7 @@ void RenderProcessHostImpl::AppendRender
+@@ -3686,7 +3686,7 @@ void RenderProcessHostImpl::AppendRender
              base::TimeTicks::UnixEpoch().since_origin().InMicroseconds()));
    }
  
@@ -42,7 +42,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl.cc,v 1
    // Append `kDisableVideoCaptureUseGpuMemoryBuffer` flag if there is no support
    // for NV12 GPU memory buffer.
    if (switches::IsVideoCaptureUseGpuMemoryBufferEnabled() &&
-@@ -3715,6 +3715,7 @@ void RenderProcessHostImpl::PropagateBro
+@@ -3741,6 +3741,7 @@ void RenderProcessHostImpl::PropagateBro
        switches::kDisableSkiaRuntimeOpts,
        switches::kDisableSpeechAPI,
        switches::kDisableThreadedCompositing,
@@ -50,7 +50,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl.cc,v 1
        switches::kDisableV8IdleTasks,
        switches::kDisableVideoCaptureUseGpuMemoryBuffer,
        switches::kDomAutomationController,
-@@ -5607,7 +5608,7 @@ uint64_t RenderProcessHostImpl::GetPriva
+@@ -5668,7 +5669,7 @@ uint64_t RenderProcessHostImpl::GetPriva
    // - Win: https://crbug.com/707022 .
    uint64_t total_size = 0;
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \

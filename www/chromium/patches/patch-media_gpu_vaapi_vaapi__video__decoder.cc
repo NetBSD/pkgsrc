@@ -1,12 +1,12 @@
-$NetBSD: patch-media_gpu_vaapi_vaapi__video__decoder.cc,v 1.18 2026/04/21 15:21:17 kikadf Exp $
+$NetBSD: patch-media_gpu_vaapi_vaapi__video__decoder.cc,v 1.19 2026/05/10 15:30:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/vaapi/vaapi_video_decoder.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- media/gpu/vaapi/vaapi_video_decoder.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ media/gpu/vaapi/vaapi_video_decoder.cc
-@@ -785,7 +785,7 @@ void VaapiVideoDecoder::ApplyResolutionC
+@@ -790,7 +790,7 @@ void VaapiVideoDecoder::ApplyResolutionC
    const gfx::Size decoder_natural_size =
        aspect_ratio_.GetNaturalSize(decoder_visible_rect);
  

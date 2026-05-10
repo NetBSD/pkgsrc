@@ -1,10 +1,10 @@
-$NetBSD: patch-components_sync_service_sync__service__impl.cc,v 1.11 2026/04/21 15:21:14 kikadf Exp $
+$NetBSD: patch-components_sync_service_sync__service__impl.cc,v 1.12 2026/05/10 15:29:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync/service/sync_service_impl.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- components/sync/service/sync_service_impl.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ components/sync/service/sync_service_impl.cc
 @@ -1393,7 +1393,7 @@ void SyncServiceImpl::ReconfigureDataTyp
  
