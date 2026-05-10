@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2917 2026/05/10 07:33:47 pin Exp $
+$NetBSD: CHANGES-2026,v 1.2918 2026/05/10 07:34:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4448,3 +4448,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/din to 64.2 [fox 2026-05-10]
 	Updated editors/redox to 0.6.0 [pin 2026-05-10]
 	Updated sysutils/lla to 0.5.7 [pin 2026-05-10]
+	Updated sysutils/treegrep to 2.0.0 [pin 2026-05-10]
