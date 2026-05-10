@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2921 2026/05/10 08:38:23 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2922 2026/05/10 09:53:56 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4454,3 +4454,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/e2fsprogs to 1.47.4 [vins 2026-05-10]
 	Updated net/py-lexicon to 3.25.1 [adam 2026-05-10]
 	Updated lang/py-librt to 0.10.0 [adam 2026-05-10]
+	Updated filesystems/fuse-ext2 to 0.0.11 [vins 2026-05-10]
