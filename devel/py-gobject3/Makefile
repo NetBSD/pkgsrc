@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.58 2026/05/10 21:17:35 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2026/05/10 22:00:47 wiz Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/-/3-/}
+PKGREVISION=	1
 
 COMMENT=	Python bindings for glib2 gobject
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.12.1:../../devel/py-meson_python
 
-# Leave for py-gobject3-common:
+# Installed by py-gobject3-common:
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/include/python${PYVERSSUFFIX}/pygobject/pygobject-3.0/pygobject.h
+	${RM} ${DESTDIR}${PREFIX}/include/python${PYVERSSUFFIX}/pygobject/pygobject-3.0/pygobject-types.h
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.88.0
 .include "../../devel/glib2/buildlink3.mk"
