@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2928 2026/05/10 12:05:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2929 2026/05/10 12:06:50 osa Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4461,3 +4461,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/OpenJPH to 0.27.2 [wiz 2026-05-10]
 	Updated sysutils/hwdata to 0.407 [wiz 2026-05-10]
 	Updated devel/jjui to 0.10.5 [wiz 2026-05-10]
+	Updated www/freenginx to 1.30.0nb2 [osa 2026-05-10]
+	Updated www/freenginx-devel to 1.31.0 [osa 2026-05-10]
+	Updated www/freenginx-devel to 1.31.0nb1 [osa 2026-05-10]
