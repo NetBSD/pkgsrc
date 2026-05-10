@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2026/04/30 09:30:47 adam Exp $
+# $NetBSD: Makefile,v 1.49 2026/05/10 13:59:39 wiz Exp $
 
-DISTNAME=	trove_classifiers-2026.4.28.13
+DISTNAME=	trove_classifiers-2026.5.7.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trove-classifiers/}
@@ -17,8 +17,11 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	trove-classifiers
 
-# as of 2025.11.14.15
-# 2 failed, 16 passed
+SUBST_CLASSES+=		test
+SUBST_FILES.test+=	tests/test_cli.py
+SUBST_SED.test+=	-e "s,trove-classifiers,trove-classifiers-${PYVERSSUFFIX},"
+SUBST_MESSAGE.test=	Fixing binary name.
+SUBST_STAGE.test=	pre-test
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
