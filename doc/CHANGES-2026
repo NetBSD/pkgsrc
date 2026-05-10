@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2959 2026/05/10 21:17:51 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2960 2026/05/10 21:20:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4494,3 +4494,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/py-mcomix to 3.1.1 [wiz 2026-05-10]
 	Updated shells/fish to 4.7.1 [vins 2026-05-10]
 	Updated devel/py-gobject3-common to 3.56.3 [wiz 2026-05-10]
+	Updated devel/py-gobject3 to 3.56.3 [wiz 2026-05-10]
