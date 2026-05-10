@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2950 2026/05/10 13:57:02 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2951 2026/05/10 13:59:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4485,3 +4485,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-propcache to 0.5.2 [wiz 2026-05-10]
 	Updated devel/py-proto-plus to 1.28.0 [wiz 2026-05-10]
 	Updated time/py-pytz to 2026.2 [wiz 2026-05-10]
+	Updated misc/py-trove-classifiers to 2026.5.7.17 [wiz 2026-05-10]
