@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2025/11/13 13:32:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.53 2026/05/10 08:35:59 adam Exp $
 bin/lexicon-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -143,6 +143,9 @@ ${PYSITELIB}/lexicon/_private/providers/hostingde.pyo
 ${PYSITELIB}/lexicon/_private/providers/hover.py
 ${PYSITELIB}/lexicon/_private/providers/hover.pyc
 ${PYSITELIB}/lexicon/_private/providers/hover.pyo
+${PYSITELIB}/lexicon/_private/providers/httpnet.py
+${PYSITELIB}/lexicon/_private/providers/httpnet.pyc
+${PYSITELIB}/lexicon/_private/providers/httpnet.pyo
 ${PYSITELIB}/lexicon/_private/providers/infoblox.py
 ${PYSITELIB}/lexicon/_private/providers/infoblox.pyc
 ${PYSITELIB}/lexicon/_private/providers/infoblox.pyo
