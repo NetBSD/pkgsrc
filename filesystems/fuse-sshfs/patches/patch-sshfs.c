@@ -1,12 +1,13 @@
-$NetBSD: patch-sshfs.c,v 1.3 2022/08/24 22:26:33 wiz Exp $
+$NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
 
-Impedance adjustment with librefuse which used to provide an old API
-incompatible with FUSE 3.1. This patch can go away when NetBSD 9
-reaches its EOL.
+* Impedance adjustment with librefuse which used to provide an old API
+  incompatible with FUSE 3.1. This patch can go away when NetBSD 9
+  reaches its EOL.
+* Use posix_openpt.
 
---- sshfs.c.orig	2022-05-26 13:23:35.000000000 +0000
+--- sshfs.c.orig	2025-11-11 19:46:43.000000000 +0000
 +++ sshfs.c
-@@ -980,7 +980,11 @@ static int buf_get_entries(struct buffer
+@@ -982,7 +982,11 @@ static int buf_get_entries(struct buffer
  				    S_ISLNK(stbuf.st_mode)) {
  					stbuf.st_mode = 0;
  				}
@@ -18,7 +19,16 @@ reaches its EOL.
  			}
  		}
  		free(name);
-@@ -1884,6 +1888,21 @@ static int start_processing_thread(struc
+@@ -1110,7 +1114,7 @@ static int pty_master(char **name)
+ {
+ 	int mfd;
+ 
+-	mfd = open("/dev/ptmx", O_RDWR | O_NOCTTY);
++	mfd = posix_openpt(O_RDWR | O_NOCTTY);
+ 	if (mfd == -1) {
+ 		perror("failed to open pty");
+ 		return -1;
+@@ -1953,6 +1957,21 @@ static int start_processing_thread(struc
  	return 0;
  }
  
@@ -40,7 +50,7 @@ reaches its EOL.
  static void *sshfs_init(struct fuse_conn_info *conn,
                          struct fuse_config *cfg)
  {
-@@ -1909,6 +1928,7 @@ static void *sshfs_init(struct fuse_conn
+@@ -1978,6 +1997,7 @@ static void *sshfs_init(struct fuse_conn
  
  	return NULL;
  }
@@ -48,7 +58,7 @@ reaches its EOL.
  
  static int sftp_request_wait(struct request *req, uint8_t type,
                               uint8_t expect_type, struct buffer *outbuf)
-@@ -2069,7 +2089,11 @@ static int sshfs_access(const char *path
+@@ -2138,7 +2158,11 @@ static int sshfs_access(const char *path
  	int err = 0;
  
  	if (mask & X_OK) {
@@ -60,7 +70,7 @@ reaches its EOL.
  		if (!err) {
  			if (S_ISREG(stbuf.st_mode) &&
  			    !(stbuf.st_mode & (S_IXUSR|S_IXGRP|S_IXOTH)))
-@@ -2323,11 +2347,15 @@ static int sshfs_opendir(const char *pat
+@@ -2392,11 +2416,15 @@ static int sshfs_opendir(const char *pat
  	return err;
  }
  
@@ -79,7 +89,7 @@ reaches its EOL.
  	int err;
  	struct dir_handle *handle;
  
-@@ -2491,13 +2519,19 @@ static void random_string(char *str, int
+@@ -2560,13 +2588,19 @@ static void random_string(char *str, int
  	*str = '\0';
  }
  
@@ -99,7 +109,7 @@ reaches its EOL.
  
  	if (sshfs.ext_posix_rename)
  		err = sshfs_ext_posix_rename(from, to);
-@@ -2572,19 +2606,24 @@ static inline struct sshfs_file *get_ssh
+@@ -2641,19 +2675,24 @@ static inline struct sshfs_file *get_ssh
  	return (struct sshfs_file *) (uintptr_t) fi->fh;
  }
  
@@ -125,7 +135,7 @@ reaches its EOL.
  
  	buf_init(&buf, 0);
  	if (sf == NULL)
-@@ -2605,19 +2644,24 @@ static int sshfs_chmod(const char *path,
+@@ -2674,19 +2713,24 @@ static int sshfs_chmod(const char *path,
  	return err;
  }
  
@@ -151,7 +161,7 @@ reaches its EOL.
  
  	if (sshfs.remote_uid_detected) {
  		if (uid == sshfs.local_uid)
-@@ -2650,8 +2694,12 @@ static int sshfs_chown(const char *path,
+@@ -2719,8 +2763,12 @@ static int sshfs_chown(const char *path,
  	return err;
  }
  
@@ -164,7 +174,7 @@ reaches its EOL.
  
  static void sshfs_inc_modifver(void)
  {
-@@ -2660,10 +2708,13 @@ static void sshfs_inc_modifver(void)
+@@ -2729,10 +2777,13 @@ static void sshfs_inc_modifver(void)
  	pthread_mutex_unlock(&sshfs.lock);
  }
  
@@ -179,7 +189,7 @@ reaches its EOL.
  	int err;
  	struct buffer buf;
  	struct sshfs_file *sf = NULL;
-@@ -2676,11 +2727,13 @@ static int sshfs_utimens(const char *pat
+@@ -2745,11 +2796,13 @@ static int sshfs_utimens(const char *pat
  	if (msec == 0)
  		msec = now.tv_sec;
  
@@ -193,7 +203,7 @@ reaches its EOL.
  
  	buf_init(&buf, 0);
  	if (sf == NULL)
-@@ -3338,22 +3391,32 @@ static int sshfs_create(const char *path
+@@ -3407,22 +3460,32 @@ static int sshfs_create(const char *path
  	return sshfs_open_common(path, mode, fi);
  }
  
@@ -226,7 +236,7 @@ reaches its EOL.
  
  	buf_init(&buf, 0);
  
-@@ -3372,19 +3435,37 @@ static int sshfs_truncate(const char *pa
+@@ -3441,19 +3504,37 @@ static int sshfs_truncate(const char *pa
  	return err;
  }
  
@@ -264,7 +274,7 @@ reaches its EOL.
  
  	buf_init(&buf, 0);
  	if(sf == NULL) {
-@@ -3508,15 +3589,23 @@ static int sshfs_truncate_extend(const c
+@@ -3577,15 +3658,23 @@ static int sshfs_truncate_extend(const c
   * If new size is greater than current size, then write a zero byte to
   * the new end of the file.
   */
@@ -288,7 +298,7 @@ reaches its EOL.
  		if (err)
  			return err;
  		if (stbuf.st_size == size)
-@@ -3524,7 +3613,11 @@ static int sshfs_truncate_workaround(con
+@@ -3593,7 +3682,11 @@ static int sshfs_truncate_workaround(con
  		else if (stbuf.st_size > size)
  			return sshfs_truncate_shrink(path, size);
  		else
@@ -300,7 +310,7 @@ reaches its EOL.
  	}
  }
  
-@@ -4156,7 +4249,9 @@ int main(int argc, char *argv[])
+@@ -4236,7 +4329,9 @@ int main(int argc, char *argv[])
  	char *fsname;
  	const char *sftp_server;
  	struct fuse *fuse;
@@ -310,7 +320,7 @@ reaches its EOL.
  	int i;
  
  #ifdef __APPLE__
-@@ -4216,7 +4311,11 @@ int main(int argc, char *argv[])
+@@ -4296,7 +4391,11 @@ int main(int argc, char *argv[])
  
  	if (sshfs.show_version) {
  		printf("SSHFS version %s\n", PACKAGE_VERSION);
@@ -322,7 +332,7 @@ reaches its EOL.
  #if !defined(__CYGWIN__)
  		fuse_lowlevel_version();
  #endif
-@@ -4225,7 +4324,11 @@ int main(int argc, char *argv[])
+@@ -4305,7 +4404,11 @@ int main(int argc, char *argv[])
  
  	if (sshfs.show_help) {
  		usage(args.argv[0]);
@@ -334,7 +344,7 @@ reaches its EOL.
  		exit(0);
  	} else if (!sshfs.host) {
  		fprintf(stderr, "missing host\n");
-@@ -4359,20 +4462,16 @@ int main(int argc, char *argv[])
+@@ -4439,20 +4542,16 @@ int main(int argc, char *argv[])
  			sizeof(struct fuse_operations), NULL);
  	if(fuse == NULL)
  		exit(1);
@@ -358,7 +368,7 @@ reaches its EOL.
  	res = fcntl(fuse_session_fd(se), F_SETFD, FD_CLOEXEC);
  	if (res == -1)
  		perror("WARNING: failed to set FD_CLOEXEC on fuse device");
-@@ -4384,29 +4483,58 @@ int main(int argc, char *argv[])
+@@ -4464,29 +4563,58 @@ int main(int argc, char *argv[])
  	 */
  	res = ssh_connect();
  	if (res == -1) {
