@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:25:27 nia Exp $
+$NetBSD: distinfo,v 1.10 2026/05/10 09:53:23 vins Exp $
 
-BLAKE2s (fuse-ext2-0.0.10.tar.gz) = d73b29e31c13a54700543ec12da81ae99bc2cc7ca7a112efb9c5c290e81e70ab
-SHA512 (fuse-ext2-0.0.10.tar.gz) = b884c0f92b706ae3f03dd75f489990e7cea31fd68526ade48ab5a11e1c9f78ec02a4dbb82450ce2aca12742a799c334a3ab8f2443a96ad003a76f0a86567fa24
-Size (fuse-ext2-0.0.10.tar.gz) = 122746 bytes
+BLAKE2s (fuse-ext2-0.0.11.tar.gz) = 42d4ec70239debe0041f21b888e6531461ce76c9bffaffa581f9c3f4f29f06eb
+SHA512 (fuse-ext2-0.0.11.tar.gz) = 2307eb7db8a9f52cbab3fa4b0dfac0d6804d476002661cc0a97b870bbac1e80dfc92bf8759612e5fe2919af2214d921cc43764252739f336060cc91f08179b06
+Size (fuse-ext2-0.0.11.tar.gz) = 123410 bytes
 SHA1 (patch-aa) = d9f8189f4bbed569cc2b4bb8f160dcf231cc76ff
 SHA1 (patch-ab) = 830bc968c55b13125700a6fbeff9808610d065f0
 SHA1 (patch-ac) = 253561f1e6a67b5d66d7409af3bf26477ad57b2c

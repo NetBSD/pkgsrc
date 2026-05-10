@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2022/01/22 18:34:51 pho Exp $
+# $NetBSD: Makefile,v 1.13 2026/05/10 09:53:23 vins Exp $
 
-DISTNAME=	fuse-ext2-0.0.10
+DISTNAME=	fuse-ext2-0.0.11
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alperakcan/}
 GITHUB_PROJECT=	fuse-ext2
@@ -27,7 +27,7 @@ SUBST_FILES.fuse-ver=	configure.ac
 SUBST_SED.fuse-ver=	-e 's/FUSE_VERSION/27/g'
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf -fi
+	cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../mk/fuse.buildlink3.mk"
 .include "../../sysutils/e2fsprogs/buildlink3.mk"
