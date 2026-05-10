@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2026/03/30 08:53:01 adam Exp $
+# $NetBSD: Makefile,v 1.22 2026/05/10 13:54:19 wiz Exp $
 
-DISTNAME=	poetry_core-2.3.2
+DISTNAME=	poetry_core-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/poetry-core/}
@@ -22,8 +22,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.21:../../devel/py-virtualenv
 # for tests only
 USE_LANGUAGES=	c
 
-# as of 2.3.0
-# 2805 passed, 5 skipped, 9 deselected
+# as of 2.4.0
+# 2825 passed, 5 skipped, 9 deselected
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
