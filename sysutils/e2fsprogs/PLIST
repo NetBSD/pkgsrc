@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.14 2026/05/10 08:20:29 vins Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/05/10 09:28:12 vins Exp $
 bin/chattr
-bin/e2compile_et
+bin/compile_et
 bin/lsattr
 bin/mk_cmds
 include/com_err.h
@@ -42,7 +42,7 @@ lib/pkgconfig/e2p.pc
 lib/pkgconfig/ext2fs.pc
 lib/pkgconfig/ss.pc
 man/man1/chattr.1
-man/man1/e2compile_et.1
+man/man1/compile_et.1
 man/man1/lsattr.1
 man/man1/mk_cmds.1
 man/man3/com_err.3

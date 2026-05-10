@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2026/05/10 08:20:29 vins Exp $
+# $NetBSD: Makefile,v 1.43 2026/05/10 09:28:12 vins Exp $
 
 DISTNAME=	e2fsprogs-1.47.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://www.kernel.org/pub/linux/kernel/people/tytso/e2fsprogs/v${PKGVERSION_NOREV}/
 #MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=e2fsprogs/}
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://e2fsprogs.sourceforge.net/
 COMMENT=	Second extended file system (ext2fs) management programs
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND modified-bsd AND mit
+
+CONFLICTS=	mit-krb5-[0-9]*		# com_err
 
 USE_LANGUAGES=		c
 USE_CC_FEATURES=	c99
