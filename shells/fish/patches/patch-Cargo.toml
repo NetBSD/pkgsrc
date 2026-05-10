@@ -1,15 +1,22 @@
-$NetBSD: patch-Cargo.toml,v 1.1 2025/12/13 17:47:21 vins Exp $
+$NetBSD: patch-Cargo.toml,v 1.2 2026/05/10 18:46:49 vins Exp $
 
 Do not attempt to fetch sources at build time.
 
---- Cargo.toml.orig	2025-10-07 20:56:06.000000000 +0000
+--- Cargo.toml.orig	2026-05-07 16:02:14.000000000 +0000
 +++ Cargo.toml
-@@ -31,7 +31,7 @@ nix = { version = "0.30.1", default-feat
+@@ -56,7 +56,7 @@ nix = { version = "0.31.1", default-feat
  ] }
  num-traits = "0.2.19"
  once_cell = "1.19.0"
 -pcre2 = { git = "https://github.com/fish-shell/rust-pcre2", tag = "0.2.9-utf32", default-features = false, features = [
 +pcre2 = { path = "../rust-pcre2-0.2.9-utf32", default-features = false, features = [
-     "utf32",
+   "utf32",
  ] }
- phf = { version = "0.12", default-features = false }
+ phf = { version = "0.13", default-features = false }
+@@ -234,4 +234,4 @@ print_stdout = "deny"
+ print_stderr = "deny"
+ 
+ [lints]
+-workspace = true
+\ No newline at end of file
++workspace = true
