@@ -1,4 +1,4 @@
-# $NetBSD: fuse.buildlink3.mk,v 1.26 2024/01/13 20:26:47 riastradh Exp $
+# $NetBSD: fuse.buildlink3.mk,v 1.27 2026/05/10 06:58:49 vins Exp $
 #
 # Makefile fragment for packages using the FUSE framework.
 #
@@ -44,7 +44,11 @@ BUILDLINK_PASSTHRU_DIRS+=	/usr/local/lib
 
 .  elif ${OPSYS} == "Linux"
 
-.    include "../../filesystems/fuse/buildlink3.mk"
+.    if ${USE_FUSE3:tl} != yes
+.      include "../../filesystems/fuse/buildlink3.mk"
+.    else
+.      include "../../filesystems/fuse3/buildlink3.mk"
+.    endif
 
 .  elif !empty(MACHINE_PLATFORM:MSunOS-5.11-*)
 
