@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2953 2026/05/10 14:41:28 vins Exp $
+$NetBSD: CHANGES-2026,v 1.2954 2026/05/10 15:30:33 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4488,3 +4488,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-trove-classifiers to 2026.5.7.17 [wiz 2026-05-10]
 	Updated www/py-wtforms to 3.2.2 [wiz 2026-05-10]
 	Updated filesystems/fuse-s3fs to 1.97 [vins 2026-05-10]
+	Updated www/chromium to 148.0.7778.96 [kikadf 2026-05-10]
