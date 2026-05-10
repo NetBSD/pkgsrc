@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2026/01/06 11:18:18 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/05/10 07:45:54 adam Exp $
 
-DISTNAME=	sphinxcontrib_bibtex-2.6.5
+DISTNAME=	sphinxcontrib_bibtex-2.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-bibtex/}
@@ -12,9 +12,9 @@ LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.20:../../textproc/py-docutils
-DEPENDS+=	${PYPKGPREFIX}-sphinx>=3.5:../../textproc/py-sphinx
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=7.4:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-pybtex>=0.25:../../textproc/py-pybtex
-DEPENDS+=	${PYPKGPREFIX}-pybtex-docutils>=1.0.0:../../textproc/py-pybtex-docutils
+DEPENDS+=	${PYPKGPREFIX}-pybtex-docutils>=1.0.2:../../textproc/py-pybtex-docutils
 
 USE_LANGUAGES=	# none
 
