@@ -1,4 +1,4 @@
-$NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
+$NetBSD: patch-sshfs.c,v 1.5 2026/05/10 12:30:36 vins Exp $
 
 * Impedance adjustment with librefuse which used to provide an old API
   incompatible with FUSE 3.1. This patch can go away when NetBSD 9
@@ -7,7 +7,25 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
 
 --- sshfs.c.orig	2025-11-11 19:46:43.000000000 +0000
 +++ sshfs.c
-@@ -982,7 +982,11 @@ static int buf_get_entries(struct buffer
+@@ -53,6 +53,17 @@
+ 
+ #include "cache.h"
+ 
++/*
++ ReFuse sets FUSE_H_ to a numerical value, while libfuse leaves it empty.
++ This workaround is only required as long as the patches for NetBSD-9 
++ stay in place.
++*/
++
++#if !(FUSE_H_ + 0)
++#  undef  FUSE_H_
++#  define FUSE_H_ 1
++#endif
++
+ #ifndef MAP_LOCKED
+ #  define MAP_LOCKED 0
+ #endif
+@@ -982,7 +993,11 @@ static int buf_get_entries(struct buffer
  				    S_ISLNK(stbuf.st_mode)) {
  					stbuf.st_mode = 0;
  				}
@@ -19,7 +37,7 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
  			}
  		}
  		free(name);
-@@ -1110,7 +1114,7 @@ static int pty_master(char **name)
+@@ -1110,7 +1125,7 @@ static int pty_master(char **name)
  {
  	int mfd;
  
@@ -28,7 +46,7 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
  	if (mfd == -1) {
  		perror("failed to open pty");
  		return -1;
-@@ -1953,6 +1957,21 @@ static int start_processing_thread(struc
+@@ -1953,6 +1968,21 @@ static int start_processing_thread(struc
  	return 0;
  }
  
@@ -50,7 +68,7 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
  static void *sshfs_init(struct fuse_conn_info *conn,
                          struct fuse_config *cfg)
  {
-@@ -1978,6 +1997,7 @@ static void *sshfs_init(struct fuse_conn
+@@ -1978,6 +2008,7 @@ static void *sshfs_init(struct fuse_conn
  
  	return NULL;
  }
@@ -58,7 +76,7 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
  
  static int sftp_request_wait(struct request *req, uint8_t type,
                               uint8_t expect_type, struct buffer *outbuf)
-@@ -2138,7 +2158,11 @@ static int sshfs_access(const char *path
+@@ -2138,7 +2169,11 @@ static int sshfs_access(const char *path
  	int err = 0;
  
  	if (mask & X_OK) {
@@ -70,7 +88,7 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
  		if (!err) {
  			if (S_ISREG(stbuf.st_mode) &&
  			    !(stbuf.st_mode & (S_IXUSR|S_IXGRP|S_IXOTH)))
-@@ -2392,11 +2416,15 @@ static int sshfs_opendir(const char *pat
+@@ -2392,11 +2427,15 @@ static int sshfs_opendir(const char *pat
  	return err;
  }
  
@@ -89,7 +107,7 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
  	int err;
  	struct dir_handle *handle;
  
-@@ -2560,13 +2588,19 @@ static void random_string(char *str, int
+@@ -2560,13 +2599,19 @@ static void random_string(char *str, int
  	*str = '\0';
  }
  
@@ -109,7 +127,7 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
  
  	if (sshfs.ext_posix_rename)
  		err = sshfs_ext_posix_rename(from, to);
-@@ -2641,19 +2675,24 @@ static inline struct sshfs_file *get_ssh
+@@ -2641,19 +2686,24 @@ static inline struct sshfs_file *get_ssh
  	return (struct sshfs_file *) (uintptr_t) fi->fh;
  }
  
@@ -135,7 +153,7 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
  
  	buf_init(&buf, 0);
  	if (sf == NULL)
-@@ -2674,19 +2713,24 @@ static int sshfs_chmod(const char *path,
+@@ -2674,19 +2724,24 @@ static int sshfs_chmod(const char *path,
  	return err;
  }
  
@@ -161,7 +179,7 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
  
  	if (sshfs.remote_uid_detected) {
  		if (uid == sshfs.local_uid)
-@@ -2719,8 +2763,12 @@ static int sshfs_chown(const char *path,
+@@ -2719,8 +2774,12 @@ static int sshfs_chown(const char *path,
  	return err;
  }
  
@@ -174,7 +192,7 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
  
  static void sshfs_inc_modifver(void)
  {
-@@ -2729,10 +2777,13 @@ static void sshfs_inc_modifver(void)
+@@ -2729,10 +2788,13 @@ static void sshfs_inc_modifver(void)
  	pthread_mutex_unlock(&sshfs.lock);
  }
  
@@ -189,7 +207,7 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
  	int err;
  	struct buffer buf;
  	struct sshfs_file *sf = NULL;
-@@ -2745,11 +2796,13 @@ static int sshfs_utimens(const char *pat
+@@ -2745,11 +2807,13 @@ static int sshfs_utimens(const char *pat
  	if (msec == 0)
  		msec = now.tv_sec;
  
@@ -203,7 +221,7 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
  
  	buf_init(&buf, 0);
  	if (sf == NULL)
-@@ -3407,22 +3460,32 @@ static int sshfs_create(const char *path
+@@ -3407,22 +3471,32 @@ static int sshfs_create(const char *path
  	return sshfs_open_common(path, mode, fi);
  }
  
@@ -236,7 +254,7 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
  
  	buf_init(&buf, 0);
  
-@@ -3441,19 +3504,37 @@ static int sshfs_truncate(const char *pa
+@@ -3441,19 +3515,37 @@ static int sshfs_truncate(const char *pa
  	return err;
  }
  
@@ -274,7 +292,7 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
  
  	buf_init(&buf, 0);
  	if(sf == NULL) {
-@@ -3577,15 +3658,23 @@ static int sshfs_truncate_extend(const c
+@@ -3577,15 +3669,23 @@ static int sshfs_truncate_extend(const c
   * If new size is greater than current size, then write a zero byte to
   * the new end of the file.
   */
@@ -298,7 +316,7 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
  		if (err)
  			return err;
  		if (stbuf.st_size == size)
-@@ -3593,7 +3682,11 @@ static int sshfs_truncate_workaround(con
+@@ -3593,7 +3693,11 @@ static int sshfs_truncate_workaround(con
  		else if (stbuf.st_size > size)
  			return sshfs_truncate_shrink(path, size);
  		else
@@ -310,7 +328,7 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
  	}
  }
  
-@@ -4236,7 +4329,9 @@ int main(int argc, char *argv[])
+@@ -4236,7 +4340,9 @@ int main(int argc, char *argv[])
  	char *fsname;
  	const char *sftp_server;
  	struct fuse *fuse;
@@ -320,7 +338,7 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
  	int i;
  
  #ifdef __APPLE__
-@@ -4296,7 +4391,11 @@ int main(int argc, char *argv[])
+@@ -4296,7 +4402,11 @@ int main(int argc, char *argv[])
  
  	if (sshfs.show_version) {
  		printf("SSHFS version %s\n", PACKAGE_VERSION);
@@ -332,7 +350,7 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
  #if !defined(__CYGWIN__)
  		fuse_lowlevel_version();
  #endif
-@@ -4305,7 +4404,11 @@ int main(int argc, char *argv[])
+@@ -4305,7 +4415,11 @@ int main(int argc, char *argv[])
  
  	if (sshfs.show_help) {
  		usage(args.argv[0]);
@@ -344,7 +362,7 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
  		exit(0);
  	} else if (!sshfs.host) {
  		fprintf(stderr, "missing host\n");
-@@ -4439,20 +4542,16 @@ int main(int argc, char *argv[])
+@@ -4439,20 +4553,16 @@ int main(int argc, char *argv[])
  			sizeof(struct fuse_operations), NULL);
  	if(fuse == NULL)
  		exit(1);
@@ -368,7 +386,7 @@ $NetBSD: patch-sshfs.c,v 1.4 2026/05/10 11:40:18 vins Exp $
  	res = fcntl(fuse_session_fd(se), F_SETFD, FD_CLOEXEC);
  	if (res == -1)
  		perror("WARNING: failed to set FD_CLOEXEC on fuse device");
-@@ -4464,29 +4563,58 @@ int main(int argc, char *argv[])
+@@ -4464,29 +4574,58 @@ int main(int argc, char *argv[])
  	 */
  	res = ssh_connect();
  	if (res == -1) {
