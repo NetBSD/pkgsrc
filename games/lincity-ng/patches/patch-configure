@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2026/05/10 05:57:42 dholland Exp $
+
+Fix wrong configure test that breaks the build with gcc14
+
+--- configure~	2009-01-25 20:21:25.000000000 +0000
++++ configure
+@@ -5680,7 +5680,7 @@ echo $ECHO_N "checking for zlib... $ECHO
+ int
+ main(int argc, char** argv)
+ {
+-gzFile* file = gzopen("", "");
++gzFile file = gzopen("", "");
+   ;
+   return 0;
+ }
