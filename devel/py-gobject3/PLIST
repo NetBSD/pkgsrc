@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST,v 1.16 2026/01/05 16:06:30 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+@comment $NetBSD: PLIST,v 1.17 2026/05/10 21:17:35 wiz Exp $
+${PYINC}/pygobject/pygobject-3.0/pygobject-types.h
 ${PYSITELIB}/gi/__init__.py
 ${PYSITELIB}/gi/__init__.pyc
 ${PYSITELIB}/gi/__init__.pyo
@@ -20,9 +17,6 @@ ${PYSITELIB}/gi/_gi_cairo.so
 ${PYSITELIB}/gi/_gtktemplate.py
 ${PYSITELIB}/gi/_gtktemplate.pyc
 ${PYSITELIB}/gi/_gtktemplate.pyo
-${PYSITELIB}/gi/_option.py
-${PYSITELIB}/gi/_option.pyc
-${PYSITELIB}/gi/_option.pyo
 ${PYSITELIB}/gi/_ossighelper.py
 ${PYSITELIB}/gi/_ossighelper.pyc
 ${PYSITELIB}/gi/_ossighelper.pyo
@@ -53,6 +47,9 @@ ${PYSITELIB}/gi/overrides/GIMarshallingTests.pyo
 ${PYSITELIB}/gi/overrides/GLib.py
 ${PYSITELIB}/gi/overrides/GLib.pyc
 ${PYSITELIB}/gi/overrides/GLib.pyo
+${PYSITELIB}/gi/overrides/GLibUnix.py
+${PYSITELIB}/gi/overrides/GLibUnix.pyc
+${PYSITELIB}/gi/overrides/GLibUnix.pyo
 ${PYSITELIB}/gi/overrides/GObject.py
 ${PYSITELIB}/gi/overrides/GObject.pyc
 ${PYSITELIB}/gi/overrides/GObject.pyo
@@ -77,18 +74,13 @@ ${PYSITELIB}/gi/overrides/Pango.pyo
 ${PYSITELIB}/gi/overrides/__init__.py
 ${PYSITELIB}/gi/overrides/__init__.pyc
 ${PYSITELIB}/gi/overrides/__init__.pyo
-${PYSITELIB}/gi/pygtkcompat.py
-${PYSITELIB}/gi/pygtkcompat.pyc
-${PYSITELIB}/gi/pygtkcompat.pyo
 ${PYSITELIB}/gi/repository/__init__.py
 ${PYSITELIB}/gi/repository/__init__.pyc
 ${PYSITELIB}/gi/repository/__init__.pyo
 ${PYSITELIB}/gi/types.py
 ${PYSITELIB}/gi/types.pyc
 ${PYSITELIB}/gi/types.pyo
-${PYSITELIB}/pygtkcompat/__init__.py
-${PYSITELIB}/pygtkcompat/__init__.pyc
-${PYSITELIB}/pygtkcompat/__init__.pyo
-${PYSITELIB}/pygtkcompat/pygtkcompat.py
-${PYSITELIB}/pygtkcompat/pygtkcompat.pyc
-${PYSITELIB}/pygtkcompat/pygtkcompat.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
