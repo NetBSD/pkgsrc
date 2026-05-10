@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/04/15 17:28:05 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/05/10 12:07:48 wiz Exp $
 
-DISTNAME=	libzim-9.6.0
+DISTNAME=	libzim-9.7.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openzim/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
