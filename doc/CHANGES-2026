@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2935 2026/05/10 12:21:55 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2936 2026/05/10 12:56:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4470,3 +4470,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ocaml-dune to 3.23.0 [wiz 2026-05-10]
 	Updated devel/ocaml-dune-configurator to 3.23.0 [wiz 2026-05-10]
 	Updated audio/py-beets to 2.11.0 [wiz 2026-05-10]
+	Updated textproc/tabiew to 0.13.1 [wiz 2026-05-10]
