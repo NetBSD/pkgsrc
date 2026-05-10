@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.90 2026/04/30 12:14:52 adam Exp $
+# $NetBSD: Makefile,v 1.91 2026/05/10 13:50:11 wiz Exp $
 
-DISTNAME=	pip-26.1
+DISTNAME=	pip-26.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip/}
@@ -20,13 +20,14 @@ USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	src/pip/_vendor/requests/certs.py
 
+PY_RENAME_BINARIES+=	pip
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/${PYSITELIB}/pip/_internal && \
 	${RM} build_env.py.orig commands/install.py.orig \
 		operations/install/wheel.py.orig \
 		req/__init__.py.orig req/req_install.py.orig
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${RM} -f pip3 && ${MV} pip pip${PYVERSSUFFIX} || ${TRUE}
+	${RM} -f ${DESTDIR}${PREFIX}/bin/pip3
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
