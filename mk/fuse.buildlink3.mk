@@ -1,4 +1,4 @@
-# $NetBSD: fuse.buildlink3.mk,v 1.27 2026/05/10 06:58:49 vins Exp $
+# $NetBSD: fuse.buildlink3.mk,v 1.28 2026/05/10 09:44:09 vins Exp $
 #
 # Makefile fragment for packages using the FUSE framework.
 #
@@ -7,6 +7,8 @@
 # so use something else for our include guard.
 .if !defined(MK_FUSE_BUILDLINK3_MK)
 MK_FUSE_BUILDLINK3_MK=	# defined
+
+USE_FUSE3?=		# empty
 
 .include "bsd.fast.prefs.mk"
 
