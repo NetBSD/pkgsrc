@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2026/01/06 11:18:16 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2026/05/10 18:46:48 vins Exp $
 
-DISTNAME=	fish-4.3.2
+DISTNAME=	fish-4.7.1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fish-shell/}
 GITHUB_PROJECT=	fish-shell
@@ -15,9 +15,6 @@ COMMENT=	User friendly command line shell for UNIX-like operating systems
 LICENSE=	gnu-gpl-v2
 
 .include "cargo-depends.mk"
-
-VENDORSRC=	${WRKDIR}/vendor
-VENDORPATCH=	patch-libc.rs patch-nix.rs
 
 USE_TOOLS+=		msgfmt patch pkg-config pax
 USE_PKGLOCALEDIR=	yes
@@ -41,10 +38,10 @@ REPLACE_PYTHON+=	share/tools/*.py
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_SYSCONFDIR=${PKG_SYSCONFDIR}
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_MANDIR=${PREFIX}/${PKGMANDIR}
-# Disable dynamic linking with pcre2 to prevent missing dshare objects.
+# Disable dynamic linking with pcre2 to prevent missing shared objects.
 # See https://mail-index.netbsd.org/tech-pkg/2025/12/15/msg031761.html
 CMAKE_CONFIGURE_ARGS+=	-DFISH_USE_SYSTEM_PCRE2=OFF
-CMAKE_CONFIGURE_ARGS+=	-DWITH_GETTEXT=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_MESSAGE_LOCALIZATION=ON
 CMAKE_CONFIGURE_ARGS+=	-DWITH_DOCS=ON
 CMAKE_CONFIGURE_ARGS+=	-DSPHINX_EXECUTABLE=${PREFIX}/bin/sphinx-build-${PYVERSSUFFIX}
 
@@ -57,18 +54,11 @@ TEST_TARGET=		fish_run_tests
 TEST_DEPENDS+=		${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
 TEST_ENV+=		LC_ALL=C.UTF-8		# requires a UTF-8 locale
 
-post-patch:
-	@${STEP_MSG} "Patching vendor crates"
-.for i in ${VENDORPATCH}
-	@${STEP_MSG} "Applying pkgsrc patch ${PATCHDIR}/vendor/${i}"
-	${RUN}${CP} ${PATCHDIR}/vendor/${i} ${VENDORSRC}
-	${RUN}cd ${VENDORSRC} && \
-		${PATCH} -b -p0 < ${VENDORSRC}/${i}
-.endfor
-
 post-install:
-	cd ${WRKSRC}/share/themes && ${PAX} -wr * ${DESTDIR}/${PREFIX}/share/themes
-	cd ${WRKSRC}/share/prompts && ${PAX} -wr * ${DESTDIR}/${PREFIX}/share/prompts
+	cd ${WRKSRC}/share/themes && ${PAX} -wr * \
+		${DESTDIR}/${PREFIX}/share/themes
+	cd ${WRKSRC}/share/prompts && ${PAX} -wr * \
+		${DESTDIR}/${PREFIX}/share/prompts
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"

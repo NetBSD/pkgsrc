@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2026/01/04 14:58:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2026/05/10 18:46:48 vins Exp $
 bin/fish
 bin/fish_indent
 bin/fish_key_reader
@@ -344,6 +344,7 @@ share/fish/completions/cjxl.fish
 share/fish/completions/clang++.fish
 share/fish/completions/clang.fish
 share/fish/completions/clasp.fish
+share/fish/completions/claude.fish
 share/fish/completions/clean.fish
 share/fish/completions/cleanmgr.fish
 share/fish/completions/climate.fish
@@ -440,6 +441,7 @@ share/fish/completions/dotnet.fish
 share/fish/completions/downgrade.fish
 share/fish/completions/dpkg-reconfigure.fish
 share/fish/completions/dpkg.fish
+share/fish/completions/dput.fish
 share/fish/completions/dropdb.fish
 share/fish/completions/dscacheutil.fish
 share/fish/completions/du.fish
@@ -614,6 +616,7 @@ share/fish/completions/ifdata.fish
 share/fish/completions/ifdown.fish
 share/fish/completions/iftop.fish
 share/fish/completions/ifup.fish
+share/fish/completions/ijq.fish
 share/fish/completions/ikdasm.fish
 share/fish/completions/ilasm.fish
 share/fish/completions/import.fish
@@ -1051,6 +1054,7 @@ share/fish/completions/test-spice.fish
 share/fish/completions/test.fish
 share/fish/completions/tex-fmt.fish
 share/fish/completions/tex.fish
+share/fish/completions/tflint.fish
 share/fish/completions/tig.fish
 share/fish/completions/time.fish
 share/fish/completions/timedatectl.fish
@@ -1282,6 +1286,7 @@ share/fish/functions/__fish_complete_ppp_peer.fish
 share/fish/functions/__fish_complete_proc.fish
 share/fish/functions/__fish_complete_ssh.fish
 share/fish/functions/__fish_complete_subcommand.fish
+share/fish/functions/__fish_complete_sudo.fish
 share/fish/functions/__fish_complete_suffix.fish
 share/fish/functions/__fish_complete_user_at_hosts.fish
 share/fish/functions/__fish_complete_user_ids.fish
@@ -1300,6 +1305,7 @@ share/fish/functions/__fish_contains_opt.fish
 share/fish/functions/__fish_crux_packages.fish
 share/fish/functions/__fish_cursor_konsole.fish
 share/fish/functions/__fish_cursor_xterm.fish
+share/fish/functions/__fish_cygwin_noacl.fish
 share/fish/functions/__fish_data_with_directory.fish
 share/fish/functions/__fish_describe_command.fish
 share/fish/functions/__fish_echo.fish
@@ -1309,6 +1315,7 @@ share/fish/functions/__fish_git_prompt.fish
 share/fish/functions/__fish_gnu_complete.fish
 share/fish/functions/__fish_hg_prompt.fish
 share/fish/functions/__fish_indent.fish
+share/fish/functions/__fish_is_cygwin.fish
 share/fish/functions/__fish_is_first_arg.fish
 share/fish/functions/__fish_is_first_token.fish
 share/fish/functions/__fish_is_git_repository.fish
@@ -1628,6 +1635,44 @@ share/fish/man/man1/umask.1
 share/fish/man/man1/vared.1
 share/fish/man/man1/wait.1
 share/fish/man/man1/while.1
+share/fish/prompts/acidhub.fish
+share/fish/prompts/arrow.fish
+share/fish/prompts/astronaut.fish
+share/fish/prompts/default.fish
+share/fish/prompts/disco.fish
+share/fish/prompts/informative.fish
+share/fish/prompts/informative_vcs.fish
+share/fish/prompts/minimalist.fish
+share/fish/prompts/nim.fish
+share/fish/prompts/pythonista.fish
+share/fish/prompts/scales.fish
+share/fish/prompts/simple.fish
+share/fish/prompts/terlar.fish
+share/fish/themes/ayu-mirage.theme
+share/fish/themes/ayu.theme
+share/fish/themes/base16-default.theme
+share/fish/themes/base16-eighties.theme
+share/fish/themes/bay-cruise.theme
+share/fish/themes/catppuccin-frappe.theme
+share/fish/themes/catppuccin-macchiato.theme
+share/fish/themes/catppuccin-mocha.theme
+share/fish/themes/coolbeans.theme
+share/fish/themes/default-rgb.theme
+share/fish/themes/default.theme
+share/fish/themes/dracula.theme
+share/fish/themes/fairground.theme
+share/fish/themes/just-a-touch.theme
+share/fish/themes/lava.theme
+share/fish/themes/mono-lace.theme
+share/fish/themes/mono-smoke.theme
+share/fish/themes/none.theme
+share/fish/themes/nord.theme
+share/fish/themes/old-school.theme
+share/fish/themes/seaweed.theme
+share/fish/themes/snow-day.theme
+share/fish/themes/solarized.theme
+share/fish/themes/tomorrow-night-bright.theme
+share/fish/themes/tomorrow.theme
 share/fish/tools/create_manpage_completions.py
 share/fish/tools/web_config/favicon.png
 share/fish/tools/web_config/fishconfig.css
@@ -1655,6 +1700,9 @@ share/themes/ayu.theme
 share/themes/base16-default.theme
 share/themes/base16-eighties.theme
 share/themes/bay-cruise.theme
+share/themes/catppuccin-frappe.theme
+share/themes/catppuccin-macchiato.theme
+share/themes/catppuccin-mocha.theme
 share/themes/coolbeans.theme
 share/themes/default-rgb.theme
 share/themes/default.theme
@@ -1672,3 +1720,11 @@ share/themes/snow-day.theme
 share/themes/solarized.theme
 share/themes/tomorrow-night-bright.theme
 share/themes/tomorrow.theme
+@pkgdir share/pkgconfig
+@pkgdir share/fish/vendor_functions.d
+@pkgdir share/fish/vendor_conf.d
+@pkgdir share/fish/vendor_completions.d
+@pkgdir share/doc/fish/_sources
+@pkgdir etc/fish/functions
+@pkgdir etc/fish/conf.d
+@pkgdir etc/fish/completions
