@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2025/02/07 09:27:02 adam Exp $
+# $NetBSD: Makefile,v 1.22 2026/05/10 14:01:00 wiz Exp $
 
-DISTNAME=	wtforms-3.2.1
+DISTNAME=	wtforms-3.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/WTForms/}
