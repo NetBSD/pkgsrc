@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2026/02/06 10:04:54 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/05/10 11:39:01 wiz Exp $
 
 R_PKGNAME=	terra
-R_PKGVER=	1.8-80
-PKGREVISION=	2
+R_PKGVER=	1.9-27
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,7 +16,8 @@ TEST_DEPENDS+=	R-deldir-[0-9]*:../../geography/R-deldir
 TEST_DEPENDS+=	R-XML-[0-9]*:../../math/R-XML
 TEST_DEPENDS+=	R-htmlwidgets-[0-9]*:../../www/R-htmlwidgets
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++17
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
