@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2925 2026/05/10 11:40:52 vins Exp $
+$NetBSD: CHANGES-2026,v 1.2926 2026/05/10 12:01:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4458,3 +4458,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated filesystems/fuse-bindfs to 1.18.4 [vins 2026-05-10]
 	Updated geography/R-terra to 1.9.27 [wiz 2026-05-10]
 	Updated filesystems/fuse-sshfs to 3.7.5 [vins 2026-05-10]
+	Updated graphics/OpenJPH to 0.27.2 [wiz 2026-05-10]
