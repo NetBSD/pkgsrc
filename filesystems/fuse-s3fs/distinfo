@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.1 2024/04/18 04:02:26 pho Exp $
+$NetBSD: distinfo,v 1.2 2026/05/10 14:40:43 vins Exp $
 
-BLAKE2s (fuse-s3fs-1.94.tar.gz) = ae5f3ffe65c07a16ceaeccb1658c51d332816f1da4d0eda3abb44ac4df6121ad
-SHA512 (fuse-s3fs-1.94.tar.gz) = 1a29d4f0b73f844ea1d4ad6e0b36d601fb7ab5818af0a90564b77182564c04fbef308362a9a749038b17f28f07f79b6debb661610f69c039a405b931361abe9c
-Size (fuse-s3fs-1.94.tar.gz) = 291170 bytes
-SHA1 (patch-configure.ac) = d761cf011cccfc378458a65457d22ca656244e97
-SHA1 (patch-src_s3fs.cpp) = 86a513c3e312761b2c4031196f5489f1c4e63209
-SHA1 (patch-src_s3fs.h) = 93329f55fb01a77821c7d33bd3f799972ca75c19
-SHA1 (patch-test_mknod__test.cc) = 5f03e8bd3a44c43f612cfb13a149c4322bd09035
+BLAKE2s (fuse-s3fs-1.97.tar.gz) = 41c9d055ca40cbaebcb560583ba0f12eb2f55a94f9b3fb15f9027ca1236711ee
+SHA512 (fuse-s3fs-1.97.tar.gz) = 24b70877a5c162252f08e55176a9e9fa2fd380ed3bbe8f51306f0e1489038a80cbd2a07699689431e3294661fa8d0f2434e7fc94cd14e6c9b4b8fa8be2e1f8a7
+Size (fuse-s3fs-1.97.tar.gz) = 307251 bytes
+SHA1 (patch-configure.ac) = 67480342f57efe1cdcde070db0ed3841cd4cd276
+SHA1 (patch-src_s3fs.cpp) = 0e2afb2f0e5d1f98d57b2e7ee2713e785e614f37
+SHA1 (patch-test_mknod__test.cc) = ba284eb87141b5dc5413655294856bfa5875bda9
