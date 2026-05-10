@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2914 2026/05/10 06:20:41 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2915 2026/05/10 06:26:33 fox Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4445,3 +4445,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/vim-share to 9.2.0461 [sh 2026-05-09]
 	Updated emulators/qemu to 11.0.0nb1 [thorpej 2026-05-09]
 	Updated www/p5-CGI to 4.72 [wiz 2026-05-10]
+	Updated audio/din to 64.2 [fox 2026-05-10]
