@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/04/15 17:34:56 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/05/10 08:38:04 adam Exp $
 
-DISTNAME=	librt-0.9.0
+DISTNAME=	librt-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/librt/}
@@ -11,7 +11,6 @@ COMMENT=	Mypyc runtime library
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-mypy_extensions-[0-9]*:../../lang/py-mypy_extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 do-test:
