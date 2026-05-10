@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2026/04/22 08:08:37 adam Exp $
+# $NetBSD: Makefile,v 1.55 2026/05/10 12:21:46 wiz Exp $
 
-DISTNAME=	beets-2.10.0
+DISTNAME=	beets-2.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beets/}
@@ -29,6 +29,8 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-last-[0-9]*:../../audio/py-last
 # scrub
 DEPENDS+=	${PYPKGPREFIX}-mutagen>=1.33:../../audio/py-mutagen
+# ffprobe
+DEPENDS+=	ffmpeg8-[0-9]*:../../multimedia/ffmpeg8
 TEST_DEPENDS+=	${PYPKGPREFIX}-discogs-client-[0-9]*:../../audio/py-discogs-client
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-mpd2-[0-9]*:../../audio/py-mpd2
@@ -43,8 +45,13 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
-# as of 2.8.0
-# 1 failed, 849 passed, 100 skipped
+SUBST_CLASSES+=		ffprobe
+SUBST_FILES.ffprobe+=	beets/util/extension.py
+SUBST_FILES.ffprobe+=	test/test_importer.py
+SUBST_SED.ffprobe+=	-e 's,ffprobe,ffprobe8,'
+SUBST_STAGE.ffprobe=	pre-configure
+SUBST_MESSAGE.ffprobe=	Fixing ffprobe file name.
+
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
