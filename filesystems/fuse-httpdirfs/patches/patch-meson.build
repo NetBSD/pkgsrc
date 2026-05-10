@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2026/05/10 16:32:05 vins Exp $
+
+Install man page by default.
+
+--- meson.build.orig	2026-05-10 02:41:37.000000000 +0000
++++ meson.build
+@@ -49,7 +49,7 @@ httpdirfs = executable('httpdirfs',
+     install_dir: get_option('bindir'),
+ )
+ 
+-if (host_machine.system() == 'linux')
++if (host_machine.system() != 'dummy')
+     help2man = find_program('help2man', required: false)
+ 	if help2man.found()
+ 		help2man_opts = [

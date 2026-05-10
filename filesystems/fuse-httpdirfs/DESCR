@@ -1,0 +1,9 @@
+HTTPDirFS stands for Hyper Text Transfer Protocol Directory Filesystem.
+It allows to mount HTTP directory listings or a single file, using the
+FUSE API.
+
+The performance of the program is excellent. HTTP connections are reused
+through curl-multi interface. The FUSE component runs in the
+multithreaded mode. A permanent cache system caches all the file
+segments you have downloaded, so you don't need to these segments again
+if you access them later.
