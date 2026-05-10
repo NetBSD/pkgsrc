@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2026/01/27 08:39:48 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/05/10 18:46:11 wiz Exp $
 
-DISTNAME=	mcomix-2.1.0
+DISTNAME=	mcomix-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	8
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcomix/}
 
@@ -19,12 +18,50 @@ USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
 
-MANCOMPRESSED=	yes
+EXTRA_INSTALL+=	share/applications/mcomix.desktop
+EXTRA_INSTALL+=	share/icons/hicolor/16x16/apps/mcomix.png
+EXTRA_INSTALL+=	share/icons/hicolor/16x16/mimetypes/application-x-cbr.png
+EXTRA_INSTALL+=	share/icons/hicolor/16x16/mimetypes/application-x-cbt.png
+EXTRA_INSTALL+=	share/icons/hicolor/16x16/mimetypes/application-x-cbz.png
+EXTRA_INSTALL+=	share/icons/hicolor/22x22/apps/mcomix.png
+EXTRA_INSTALL+=	share/icons/hicolor/22x22/mimetypes/application-x-cbr.png
+EXTRA_INSTALL+=	share/icons/hicolor/22x22/mimetypes/application-x-cbt.png
+EXTRA_INSTALL+=	share/icons/hicolor/22x22/mimetypes/application-x-cbz.png
+EXTRA_INSTALL+=	share/icons/hicolor/24x24/apps/mcomix.png
+EXTRA_INSTALL+=	share/icons/hicolor/24x24/mimetypes/application-x-cbr.png
+EXTRA_INSTALL+=	share/icons/hicolor/24x24/mimetypes/application-x-cbt.png
+EXTRA_INSTALL+=	share/icons/hicolor/24x24/mimetypes/application-x-cbz.png
+EXTRA_INSTALL+=	share/icons/hicolor/32x32/apps/mcomix.png
+EXTRA_INSTALL+=	share/icons/hicolor/32x32/mimetypes/application-x-cbr.png
+EXTRA_INSTALL+=	share/icons/hicolor/32x32/mimetypes/application-x-cbt.png
+EXTRA_INSTALL+=	share/icons/hicolor/32x32/mimetypes/application-x-cbz.png
+EXTRA_INSTALL+=	share/icons/hicolor/48x48/apps/mcomix.png
+EXTRA_INSTALL+=	share/icons/hicolor/48x48/mimetypes/application-x-cbr.png
+EXTRA_INSTALL+=	share/icons/hicolor/48x48/mimetypes/application-x-cbt.png
+EXTRA_INSTALL+=	share/icons/hicolor/48x48/mimetypes/application-x-cbz.png
+EXTRA_INSTALL+=	share/metainfo/mcomix.metainfo.xml
+EXTRA_INSTALL+=	share/mime/packages/mcomix.xml
 
-SUBST_CLASSES+=		path
-SUBST_STAGE.path=	pre-configure
-SUBST_FILES.path=	setup.py
-SUBST_SED.path=		-e s,share/man,${PKGMANDIR},g
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	share/applications
+INSTALLATION_DIRS+=	share/icons/hicolor/16x16/apps
+INSTALLATION_DIRS+=	share/icons/hicolor/16x16/mimetypes
+INSTALLATION_DIRS+=	share/icons/hicolor/22x22/apps
+INSTALLATION_DIRS+=	share/icons/hicolor/22x22/mimetypes
+INSTALLATION_DIRS+=	share/icons/hicolor/24x24/apps
+INSTALLATION_DIRS+=	share/icons/hicolor/24x24/mimetypes
+INSTALLATION_DIRS+=	share/icons/hicolor/32x32/apps
+INSTALLATION_DIRS+=	share/icons/hicolor/32x32/mimetypes
+INSTALLATION_DIRS+=	share/icons/hicolor/48x48/apps
+INSTALLATION_DIRS+=	share/icons/hicolor/48x48/mimetypes
+INSTALLATION_DIRS+=	share/metainfo
+INSTALLATION_DIRS+=	share/mime/packages
+
+post-install:
+	zcat ${WRKSRC}/share/man/man1/mcomix.1.gz > ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/mcomix.1
+.for f in ${EXTRA_INSTALL}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${f}
+.endfor
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../graphics/py-cairo/buildlink3.mk"
