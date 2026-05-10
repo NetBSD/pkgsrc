@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2026/04/05 11:38:34 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2026/05/10 13:09:14 wiz Exp $
 
-DISTNAME=	googleapis_common_protos-1.74.0
+DISTNAME=	googleapis_common_protos-1.75.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/googleapis-common-protos/}
@@ -12,6 +12,8 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=4.21.6:../../devel/py-protobuf
+# would lead to dependency cycle
+#DEPENDS+=	${PYPKGPREFIX}-google-api-core>=0:../../devel/py-google-api-core
 
 USE_LANGUAGES=	# none
 
