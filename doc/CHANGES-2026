@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2955 2026/05/10 16:35:24 vins Exp $
+$NetBSD: CHANGES-2026,v 1.2956 2026/05/10 17:41:49 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4490,3 +4490,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated filesystems/fuse-s3fs to 1.97 [vins 2026-05-10]
 	Updated www/chromium to 148.0.7778.96 [kikadf 2026-05-10]
 	Added filesystems/fuse-httpdirfs version 1.2.8 [vins 2026-05-10]
+	Updated sysutils/gvfs to 1.60.0 [vins 2026-05-10]
