@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/02/07 09:27:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/05/10 14:01:00 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -100,8 +100,12 @@ ${PYSITELIB}/wtforms/locale/ru/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/ru/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/sk/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/sk/LC_MESSAGES/wtforms.po
+${PYSITELIB}/wtforms/locale/sr/LC_MESSAGES/wtforms.mo
+${PYSITELIB}/wtforms/locale/sr/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/sv/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/sv/LC_MESSAGES/wtforms.po
+${PYSITELIB}/wtforms/locale/ta/LC_MESSAGES/wtforms.mo
+${PYSITELIB}/wtforms/locale/ta/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/tr/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/tr/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/uk/LC_MESSAGES/wtforms.mo

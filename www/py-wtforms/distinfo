@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2025/02/07 09:27:02 adam Exp $
+$NetBSD: distinfo,v 1.18 2026/05/10 14:01:00 wiz Exp $
 
-BLAKE2s (wtforms-3.2.1.tar.gz) = 9192fa797354de0a3492caf02096772d0ab5c05b57c1b7a8d3cf004543343a1f
-SHA512 (wtforms-3.2.1.tar.gz) = 96aa2934e39f95f2a2d0db4cd8026215cb0adea2df9bd235305b2857f2e5eecc3ea4e959ff1c1d46090213d348bccf70df19efaf73059074d1f02c577cbb1fdf
-Size (wtforms-3.2.1.tar.gz) = 137801 bytes
+BLAKE2s (wtforms-3.2.2.tar.gz) = 8cff890ffcfb362829bbfec50b9af62a21c396879ce8199f0c37846a958eefc4
+SHA512 (wtforms-3.2.2.tar.gz) = c14737aa7503a1fee361e00854d7905b170429789b80f7b22f609065c3a41dcd80040b7c09305142a73f3aed0763e861a39b7058c11421418c0b1397d7b45663
+Size (wtforms-3.2.2.tar.gz) = 139583 bytes
