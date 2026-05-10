@@ -1,0 +1,15 @@
+$NetBSD: patch-man_meson.build,v 1.1 2026/05/10 17:38:14 vins Exp $
+
+Fix detection of docbook.
+
+--- man/meson.build.orig	2026-05-03 13:29:08.697502288 +0000
++++ man/meson.build
+@@ -10,7 +10,7 @@ xsltproc_cmd = [
+   '--stringparam', 'man.th.extra1.suppress', '1',
+   '--stringparam', 'man.authors.section.enabled', '0',
+   '--stringparam', 'man.copyright.section.enabled', '0',
+-  'http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl',
++  '@DOCBOOK_MANPAGE_XSL@',
+   '@INPUT@',
+ ]
+ 
