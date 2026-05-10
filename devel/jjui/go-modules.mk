@@ -1,21 +1,21 @@
-# $NetBSD: go-modules.mk,v 1.10 2026/04/19 14:44:58 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.11 2026/05/10 12:05:14 wiz Exp $
 
 GO_MODULE_FILES+=	charm.land/bubbles/v2/@v/v2.1.0.mod
 GO_MODULE_FILES+=	charm.land/bubbles/v2/@v/v2.1.0.zip
-GO_MODULE_FILES+=	charm.land/bubbletea/v2/@v/v2.0.2.mod
-GO_MODULE_FILES+=	charm.land/bubbletea/v2/@v/v2.0.2.zip
-GO_MODULE_FILES+=	charm.land/lipgloss/v2/@v/v2.0.2.mod
-GO_MODULE_FILES+=	charm.land/lipgloss/v2/@v/v2.0.2.zip
+GO_MODULE_FILES+=	charm.land/bubbletea/v2/@v/v2.0.6.mod
+GO_MODULE_FILES+=	charm.land/bubbletea/v2/@v/v2.0.6.zip
+GO_MODULE_FILES+=	charm.land/lipgloss/v2/@v/v2.0.3.mod
+GO_MODULE_FILES+=	charm.land/lipgloss/v2/@v/v2.0.3.zip
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.6.0.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.6.0.zip
 GO_MODULE_FILES+=	github.com/atotto/clipboard/@v/v0.1.4.mod
 GO_MODULE_FILES+=	github.com/atotto/clipboard/@v/v0.1.4.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/colorprofile/@v/v0.4.3.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/colorprofile/@v/v0.4.3.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/ultraviolet/@v/v0.0.0-20260330092749-0f94982c930b.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/ultraviolet/@v/v0.0.0-20260330092749-0f94982c930b.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.11.6.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.11.6.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/ultraviolet/@v/v0.0.0-20260422141423-a0f1f21775f7.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/ultraviolet/@v/v0.0.0-20260422141423-a0f1f21775f7.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.11.7.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.11.7.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/x/term/@v/v0.2.2.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/x/term/@v/v0.2.2.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/x/termios/@v/v0.1.1.mod
