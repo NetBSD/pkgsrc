@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2947 2026/05/10 13:54:27 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2948 2026/05/10 13:55:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4482,3 +4482,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-pdf to 6.11.0 [wiz 2026-05-10]
 	Updated devel/py-pip to 26.1.1 [wiz 2026-05-10]
 	Updated devel/py-poetry-core to 2.4.0 [wiz 2026-05-10]
+	Updated devel/py-propcache to 0.5.2 [wiz 2026-05-10]
