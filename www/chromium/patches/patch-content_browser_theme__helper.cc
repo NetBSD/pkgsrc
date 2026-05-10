@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_theme__helper.cc,v 1.11 2026/04/21 15:21:15 kikadf Exp $
+$NetBSD: patch-content_browser_theme__helper.cc,v 1.12 2026/05/10 15:29:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/theme_helper.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- content/browser/theme_helper.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ content/browser/theme_helper.cc
 @@ -27,7 +27,7 @@ mojom::UpdateSystemColorInfoParamsPtr Ma
      ui::NativeTheme* native_theme) {

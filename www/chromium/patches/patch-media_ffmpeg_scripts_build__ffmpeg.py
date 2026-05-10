@@ -1,10 +1,10 @@
-$NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.18 2026/04/21 15:21:17 kikadf Exp $
+$NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.19 2026/05/10 15:30:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/ffmpeg/scripts/build_ffmpeg.py.orig	2026-04-14 23:31:37.000000000 +0200
+--- media/ffmpeg/scripts/build_ffmpeg.py.orig	2026-04-28 23:05:57.000000000 +0200
 +++ media/ffmpeg/scripts/build_ffmpeg.py
 @@ -33,7 +33,7 @@ NDK_ROOT_DIR = os.path.abspath(
  SUCCESS_TOKEN = 'THIS_BUILD_WORKED'
@@ -18,7 +18,7 @@ $NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.18 2026/04/21 15:21:17 
 @@ -43,6 +43,9 @@ BRANDINGS = [
  ARCH_MAP = {
      'android': ['ia32', 'x64', 'arm-neon', 'arm64'],
-     'linux': ['ia32', 'x64', 'noasm-x64', 'arm', 'arm-neon', 'arm64', 'riscv64'],
+     'linux': ['ia32', 'x64', 'noasm-x64', 'arm-neon', 'arm64', 'riscv64'],
 +    'openbsd': ['x64', 'arm64', 'ia32'],
 +    'freebsd': ['x64', 'arm64', 'ia32'],
 +    'netbsd': ['x64', 'arm64', 'ia32'],
@@ -61,7 +61,7 @@ $NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.18 2026/04/21 15:21:17 
          if target_arch == 'x64':
              if target_os == 'android':
                  configure_flags['Common'].extend([
-@@ -827,9 +830,6 @@ def ConfigureAndBuild(target_arch, targe
+@@ -808,9 +811,6 @@ def ConfigureAndBuild(target_arch, targe
  
                  configure_flags['Common'].extend([
                      '--target-os=linux',
@@ -71,7 +71,7 @@ $NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.18 2026/04/21 15:21:17 
                      # See crbug.com/1467681. These could be removed eventually
                      '--disable-dotprod',
                      '--disable-i8mm',
-@@ -935,7 +935,7 @@ def ConfigureAndBuild(target_arch, targe
+@@ -916,7 +916,7 @@ def ConfigureAndBuild(target_arch, targe
          # typically be the system one, so explicitly configure use of Clang's
          # ld.lld, to ensure that things like cross-compilation and LTO work.
          # This does not work for ia32 and is always used on mac.

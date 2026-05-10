@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.54 2026/05/01 16:37:25 kikadf Exp $
+# $NetBSD: Makefile,v 1.55 2026/05/10 15:29:46 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			147.0.7727.137
+VERSION=			148.0.7778.96
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
 
-PROFILE_DISTFILES=		chromium-${VERSION}-profdata${EXTRACT_SUFX_C}
-SITES.${PROFILE_DISTFILES}=	https://nerd.hu/distfiles/
+#PROFILE_DISTFILES=		chromium-${VERSION}-profdata${EXTRACT_SUFX_C}
+#SITES.${PROFILE_DISTFILES}=	https://nerd.hu/distfiles/
 DISTFILES+=			${DISTNAME}-lite${EXTRACT_SUFX_C}
-DISTFILES+=			${PROFILE_DISTFILES}
+#DISTFILES+=			${PROFILE_DISTFILES}
 
 # Sources to build on NetBSD
-NB_VERSION=			v145.1
+NB_VERSION=			v148.0
 GITHUB_SUBMODULES=		kikadf chromium-nb ${NB_VERSION} ./
 
 # rollup
@@ -162,8 +162,8 @@ GN_SYSTEM_LIBS+=	libxslt
 GN_SYSTEM_LIBS+=	openh264
 GN_SYSTEM_LIBS+=	opus
 
-# llvm-21 compatible
-#GN_ARGS+=	chrome_pgo_phase=0
+# Need llvm-22
+GN_ARGS+=	chrome_pgo_phase=0
 
 GN_ARGS+=	clang_use_chrome_plugins=false
 GN_ARGS+=	disable_fieldtrial_testing_config=true
@@ -280,11 +280,20 @@ pre-configure:
 .endfor
 
 	# Prepare profdata
-	cd ${WRKSRC}/chrome/build/pgo_profiles && \
-		_p=$$(echo *.profdata) && \
-		llvm-profdata merge $${_p}.txt --output=$${_p}
+#	cd ${WRKSRC}/chrome/build/pgo_profiles && \
+#		_p=$$(echo *.profdata) && \
+#		llvm-profdata merge $${_p}.txt --output=$${_p}
 
-	# Create symlink to NetBSD nodejs command.
+	# Prepare rust-toolchain
+	${MKDIR} ${WRKSRC}/third_party/rust-toolchain/bin
+	${LN} -sf ${PREFIX}/bin/rustc \
+		${WRKSRC}/third_party/rust-toolchain/bin/rustc
+
+	# Prepare gperf
+	${LN} -sf ${PREFIX}/bin/gperf \
+		${WRKSRC}/third_party/gperf/cipd/bin/gperf
+
+	# Prepare nodejs
 	${MKDIR} ${WRKSRC}/third_party/node/${LOWER_OPSYS}/node-${LOWER_OPSYS}/bin
 	${LN} -sf ${PREFIX}/bin/node \
 		${WRKSRC}/third_party/node/${LOWER_OPSYS}/node-${LOWER_OPSYS}/bin/node

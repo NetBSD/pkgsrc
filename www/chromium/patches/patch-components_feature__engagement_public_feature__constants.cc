@@ -1,10 +1,10 @@
-$NetBSD: patch-components_feature__engagement_public_feature__constants.cc,v 1.18 2026/04/21 15:21:13 kikadf Exp $
+$NetBSD: patch-components_feature__engagement_public_feature__constants.cc,v 1.19 2026/05/10 15:29:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_constants.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- components/feature_engagement/public/feature_constants.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ components/feature_engagement/public/feature_constants.cc
 @@ -32,7 +32,7 @@ bool IsOnDeviceStorageEnabled() {
  }
@@ -15,7 +15,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__constants.cc,v 1.1
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
  BASE_FEATURE(kEsbDownloadRowPromoFeature,
               "EsbDownloadRowPromo",
-@@ -896,7 +896,7 @@ BASE_FEATURE(kIPHiOSActiveDaysTrackingFe
+@@ -901,7 +901,7 @@ BASE_FEATURE(kIPHiOSActiveDaysTrackingFe
  #endif  // BUILDFLAG(IS_IOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \

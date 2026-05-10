@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_web__apps_web__app__integration__test__driver.cc,v 1.18 2026/04/21 15:21:12 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_web__apps_web__app__integration__test__driver.cc,v 1.19 2026/05/10 15:29:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc
 @@ -564,7 +564,7 @@ std::string GetFileExtension(FileExtensi
  }
@@ -60,7 +60,7 @@ $NetBSD: patch-chrome_browser_ui_views_web__apps_web__app__integration__test__dr
    if (!BeforeStateCheckAction(__FUNCTION__)) {
      return;
    }
-@@ -4483,7 +4483,7 @@ base::FilePath WebAppIntegrationTestDriv
+@@ -4465,7 +4465,7 @@ base::FilePath WebAppIntegrationTestDriv
      base::FilePath shortcut_dir,
      const std::string& app_name,
      const webapps::AppId& app_id) {
@@ -69,7 +69,7 @@ $NetBSD: patch-chrome_browser_ui_views_web__apps_web__app__integration__test__dr
    return override_registration_->test_override().GetShortcutPath(
        profile(), shortcut_dir, app_id, app_name);
  #else
-@@ -4690,7 +4690,7 @@ bool WebAppIntegrationTestDriver::IsShor
+@@ -4670,7 +4670,7 @@ bool WebAppIntegrationTestDriver::IsShor
      const webapps::AppId& id) {
    base::ScopedAllowBlockingForTesting allow_blocking;
    bool is_shortcut_and_icon_correct = false;
@@ -78,7 +78,7 @@ $NetBSD: patch-chrome_browser_ui_views_web__apps_web__app__integration__test__dr
    bool is_shortcut_correct =
        override_registration_->test_override().IsShortcutCreated(profile, id,
                                                                  name);
-@@ -4734,7 +4734,7 @@ bool WebAppIntegrationTestDriver::DoIcon
+@@ -4714,7 +4714,7 @@ bool WebAppIntegrationTestDriver::DoIcon
      do_icon_colors_match =
          (expected_icon_pixel_color == shortcut_pixel_color_apps_folder.value());
    }

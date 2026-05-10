@@ -1,10 +1,10 @@
-$NetBSD: patch-ipc_ipc__channel.h,v 1.18 2026/04/21 15:21:17 kikadf Exp $
+$NetBSD: patch-ipc_ipc__channel.h,v 1.19 2026/05/10 15:29:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ipc/ipc_channel.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- ipc/ipc_channel.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ ipc/ipc_channel.h
 @@ -168,7 +168,7 @@ class COMPONENT_EXPORT(IPC) Channel fina
    // Generates a channel ID that's non-predictable and unique.

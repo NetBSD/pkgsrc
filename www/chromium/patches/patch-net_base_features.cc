@@ -1,12 +1,12 @@
-$NetBSD: patch-net_base_features.cc,v 1.18 2026/04/21 15:21:18 kikadf Exp $
+$NetBSD: patch-net_base_features.cc,v 1.19 2026/05/10 15:30:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/features.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- net/base/features.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ net/base/features.cc
-@@ -33,7 +33,7 @@ BASE_FEATURE(kCapReferrerToOriginOnCross
+@@ -36,7 +36,7 @@ BASE_FEATURE(kCapReferrerToOriginOnCross
  
  BASE_FEATURE(kAsyncDns,
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_ANDROID) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-net_base_features.cc,v 1.18 2026/04/21 15:21:18 kikadf Exp $
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -302,7 +302,7 @@ inline constexpr auto kMigrateSessionsOn
+@@ -308,7 +308,7 @@ inline constexpr auto kMigrateSessionsOn
  BASE_FEATURE(kMigrateSessionsOnNetworkChangeV2,
               kMigrateSessionsOnNetworkChangeV2Default);
  
@@ -24,7 +24,7 @@ $NetBSD: patch-net_base_features.cc,v 1.18 2026/04/21 15:21:18 kikadf Exp $
  BASE_FEATURE(kAddressTrackerLinuxIsProxied, base::FEATURE_ENABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -423,7 +423,7 @@ BASE_FEATURE(kReportingApiEnableEnterpri
+@@ -427,7 +427,7 @@ BASE_FEATURE(kReportingApiEnableEnterpri
               base::FEATURE_DISABLED_BY_DEFAULT);
  
  BASE_FEATURE(kSimdutfBase64Support,

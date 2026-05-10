@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__override__impl.h,v 1.18 2026/04/21 15:21:12 kikadf Exp $
+$NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__override__impl.h,v 1.19 2026/05/10 15:29:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/test/os_integration_test_override_impl.h.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/web_applications/test/os_integration_test_override_impl.h.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/web_applications/test/os_integration_test_override_impl.h
-@@ -40,7 +40,7 @@ class ShellLinkItem;
+@@ -41,7 +41,7 @@ class ShellLinkItem;
  
  namespace web_app {
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__over
  struct LinuxFileRegistration {
    base::FilePath file_name;
    std::string xdg_command;
-@@ -122,7 +122,7 @@ class OsIntegrationTestOverrideImpl : pu
+@@ -138,7 +138,7 @@ class OsIntegrationTestOverrideImpl : pu
    bool DeleteApplicationMenuDirOnWin();
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__over
    bool DeleteDesktopDirOnLinux();
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -250,7 +250,7 @@ class OsIntegrationTestOverrideImpl : pu
+@@ -271,7 +271,7 @@ class OsIntegrationTestOverrideImpl : pu
    base::FilePath chrome_apps_folder() override;
    void EnableOrDisablePathOnLogin(const base::FilePath& file_path,
                                    bool enable_on_login) override;
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__over
    base::FilePath desktop();
    base::FilePath startup();
    base::FilePath applications();
-@@ -323,7 +323,7 @@ class OsIntegrationTestOverrideImpl : pu
+@@ -344,7 +344,7 @@ class OsIntegrationTestOverrideImpl : pu
    base::ScopedTempDir chrome_apps_folder_;
    std::map<base::FilePath, bool> startup_enabled_;
  

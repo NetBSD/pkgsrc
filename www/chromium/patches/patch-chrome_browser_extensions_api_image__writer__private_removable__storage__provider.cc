@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_extensions_api_image__writer__private_removable__storage__provider.cc,v 1.18 2026/04/21 15:21:09 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_api_image__writer__private_removable__storage__provider.cc,v 1.19 2026/05/10 15:29:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/image_writer_private/removable_storage_provider.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/extensions/api/image_writer_private/removable_storage_provider.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/extensions/api/image_writer_private/removable_storage_provider.cc
 @@ -9,6 +9,8 @@
  #include "base/task/thread_pool.h"

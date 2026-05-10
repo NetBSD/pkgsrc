@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_window__sizer_window__sizer.cc,v 1.18 2026/04/21 15:21:12 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_window__sizer_window__sizer.cc,v 1.19 2026/05/10 15:29:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/window_sizer/window_sizer.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/ui/window_sizer/window_sizer.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/ui/window_sizer/window_sizer.cc
 @@ -226,7 +226,7 @@ void WindowSizer::GetBrowserWindowBounds
        browser, window_bounds, show_state);

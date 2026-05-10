@@ -1,10 +1,10 @@
-$NetBSD: patch-components_autofill_core_browser_integrators_optimization__guide_autofill__optimization__guide__decider.cc,v 1.11 2026/04/21 15:21:13 kikadf Exp $
+$NetBSD: patch-components_autofill_core_browser_integrators_optimization__guide_autofill__optimization__guide__decider.cc,v 1.12 2026/05/10 15:29:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/integrators/optimization_guide/autofill_optimization_guide_decider.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- components/autofill/core/browser/integrators/optimization_guide/autofill_optimization_guide_decider.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ components/autofill/core/browser/integrators/optimization_guide/autofill_optimization_guide_decider.cc
 @@ -207,7 +207,7 @@ void AddOptimizationTypesForBnplIssuers(
      base::flat_set<optimization_guide::proto::OptimizationType>&

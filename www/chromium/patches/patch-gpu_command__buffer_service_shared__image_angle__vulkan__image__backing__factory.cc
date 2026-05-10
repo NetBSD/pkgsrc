@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__image_angle__vulkan__image__backing__factory.cc,v 1.18 2026/04/21 15:21:16 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__image_angle__vulkan__image__backing__factory.cc,v 1.19 2026/05/10 15:29:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.cc
 @@ -20,7 +20,7 @@ namespace {
  // TODO(penghuang): verify the scanout is the right usage for video playback.

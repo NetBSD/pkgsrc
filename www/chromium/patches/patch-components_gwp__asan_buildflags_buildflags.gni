@@ -1,10 +1,10 @@
-$NetBSD: patch-components_gwp__asan_buildflags_buildflags.gni,v 1.17 2026/04/21 15:21:13 kikadf Exp $
+$NetBSD: patch-components_gwp__asan_buildflags_buildflags.gni,v 1.18 2026/05/10 15:29:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/gwp_asan/buildflags/buildflags.gni.orig	2026-04-14 23:31:37.000000000 +0200
+--- components/gwp_asan/buildflags/buildflags.gni.orig	2026-04-28 23:05:57.000000000 +0200
 +++ components/gwp_asan/buildflags/buildflags.gni
 @@ -11,10 +11,10 @@ import("//build/config/compiler/compiler
  # Android requires frame pointers for unwinding, unwind tables aren't shipped in

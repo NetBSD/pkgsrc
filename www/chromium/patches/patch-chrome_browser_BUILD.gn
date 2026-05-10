@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_BUILD.gn,v 1.18 2026/04/21 15:21:08 kikadf Exp $
+$NetBSD: patch-chrome_browser_BUILD.gn,v 1.19 2026/05/10 15:29:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/BUILD.gn.orig	2026-04-14 23:31:37.000000000 +0200
+--- chrome/browser/BUILD.gn.orig	2026-04-28 23:05:57.000000000 +0200
 +++ chrome/browser/BUILD.gn
-@@ -6952,6 +6952,13 @@ static_library("browser") {
+@@ -6580,6 +6580,13 @@ static_library("browser") {
            [ "//third_party/webrtc/modules/desktop_capture:pipewire_config" ]
      }
  

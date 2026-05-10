@@ -1,12 +1,12 @@
-$NetBSD: patch-base_allocator_partition__allocator_partition__alloc.gni,v 1.18 2026/04/21 15:21:07 kikadf Exp $
+$NetBSD: patch-base_allocator_partition__allocator_partition__alloc.gni,v 1.19 2026/05/10 15:29:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/partition_alloc.gni.orig	2026-04-14 23:31:37.000000000 +0200
+--- base/allocator/partition_allocator/partition_alloc.gni.orig	2026-04-28 23:05:57.000000000 +0200
 +++ base/allocator/partition_allocator/partition_alloc.gni
-@@ -92,7 +92,7 @@ if (current_cpu == "x64" || current_cpu 
+@@ -99,7 +99,7 @@ if (current_cpu == "x64" || current_cpu 
  # TODO(crbug.com/329199197): Clean this up when experiments are complete.
  use_large_empty_slot_span_ring = true
  
@@ -15,7 +15,7 @@ $NetBSD: patch-base_allocator_partition__allocator_partition__alloc.gni,v 1.18 2
                       !is_hwasan && (is_linux || is_android)
  
  declare_args() {
-@@ -496,7 +496,7 @@ assert(!use_asan_backup_ref_ptr || use_r
+@@ -512,7 +512,7 @@ assert(!use_asan_backup_ref_ptr || use_r
  # dependencies that use partition_allocator are compiled in AOSP against a
  # version of glibc that does not include pkeys syscall numbers.
  is_pkeys_available =

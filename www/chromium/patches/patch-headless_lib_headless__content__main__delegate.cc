@@ -1,12 +1,12 @@
-$NetBSD: patch-headless_lib_headless__content__main__delegate.cc,v 1.18 2026/04/21 15:21:17 kikadf Exp $
+$NetBSD: patch-headless_lib_headless__content__main__delegate.cc,v 1.19 2026/05/10 15:29:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/lib/headless_content_main_delegate.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- headless/lib/headless_content_main_delegate.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ headless/lib/headless_content_main_delegate.cc
-@@ -400,7 +400,7 @@ void HeadlessContentMainDelegate::InitCr
+@@ -404,7 +404,7 @@ void HeadlessContentMainDelegate::InitCr
    if (process_type != ::switches::kZygoteProcess) {
      g_headless_crash_client.Pointer()->set_crash_dumps_dir(
          command_line.GetSwitchValuePath(switches::kCrashDumpsDir));
@@ -14,4 +14,4 @@ $NetBSD: patch-headless_lib_headless__content__main__delegate.cc,v 1.18 2026/04/
 +#if !BUILDFLAG(IS_WIN) && !BUILDFLAG(IS_BSD)
      crash_reporter::InitializeCrashpad(process_type.empty(), process_type);
  #endif  // !BUILDFLAG(IS_WIN)
-     crash_keys::SetSwitchesFromCommandLine(command_line, nullptr);
+ #if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_MAC) && !BUILDFLAG(IS_ANDROID)

@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_devtools_devtools__frontend__host__impl.cc,v 1.18 2026/04/21 15:21:15 kikadf Exp $
+$NetBSD: patch-content_browser_devtools_devtools__frontend__host__impl.cc,v 1.19 2026/05/10 15:29:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/devtools/devtools_frontend_host_impl.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- content/browser/devtools/devtools_frontend_host_impl.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ content/browser/devtools/devtools_frontend_host_impl.cc
-@@ -25,7 +25,7 @@
+@@ -26,7 +26,7 @@
  #include "third_party/blink/public/common/associated_interfaces/associated_interface_provider.h"
  #include "ui/base/webui/resource_path.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-content_browser_devtools_devtools__frontend__host__impl.cc,v 1.18
  #include "components/crash/content/browser/error_reporting/javascript_error_report.h"  // nogncheck
  #include "components/crash/content/browser/error_reporting/js_error_report_processor.h"  // nogncheck
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -37,7 +37,7 @@ const char kCompatibilityScriptSourceURL
+@@ -38,7 +38,7 @@ const char kCompatibilityScriptSourceURL
      "\n//# "
      "sourceURL=devtools://devtools/bundled/devtools_compatibility.js";
  
@@ -24,7 +24,7 @@ $NetBSD: patch-content_browser_devtools_devtools__frontend__host__impl.cc,v 1.18
  // Remove the pieces of the URL we don't want to send back with the error
  // reports. In particular, do not send query or fragments as those can have
  // privacy-sensitive information in them.
-@@ -133,7 +133,7 @@ void DevToolsFrontendHostImpl::DispatchE
+@@ -134,7 +134,7 @@ void DevToolsFrontendHostImpl::DispatchE
    handle_message_callback_.Run(std::move(message));
  }
  

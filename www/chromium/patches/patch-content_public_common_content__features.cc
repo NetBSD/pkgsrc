@@ -1,10 +1,10 @@
-$NetBSD: patch-content_public_common_content__features.cc,v 1.18 2026/04/21 15:21:16 kikadf Exp $
+$NetBSD: patch-content_public_common_content__features.cc,v 1.19 2026/05/10 15:29:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/common/content_features.cc.orig	2026-04-14 23:31:37.000000000 +0200
+--- content/public/common/content_features.cc.orig	2026-04-28 23:05:57.000000000 +0200
 +++ content/public/common/content_features.cc
 @@ -140,7 +140,7 @@ BASE_FEATURE(kAudioServiceLaunchOnStartu
  
@@ -15,7 +15,16 @@ $NetBSD: patch-content_public_common_content__features.cc,v 1.18 2026/04/21 15:2
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -1159,10 +1159,10 @@ BASE_FEATURE(kWebAssemblyTiering, base::
+@@ -150,7 +150,7 @@ BASE_FEATURE(kAudioServiceOutOfProcess,
+ // Enables the audio-service sandbox. This feature has an effect only when the
+ // kAudioServiceOutOfProcess feature is enabled.
+ BASE_FEATURE(kAudioServiceSandbox,
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_FUCHSIA)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+              base::FEATURE_ENABLED_BY_DEFAULT
+ #else
+              base::FEATURE_DISABLED_BY_DEFAULT
+@@ -1152,10 +1152,10 @@ BASE_FEATURE(kWebAssemblyTiering, base::
  
  // Enable WebAssembly trap handler.
  BASE_FEATURE(kWebAssemblyTrapHandler,
@@ -28,7 +37,7 @@ $NetBSD: patch-content_public_common_content__features.cc,v 1.18 2026/04/21 15:2
       defined(ARCH_CPU_ARM64))
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
-@@ -1223,7 +1223,11 @@ BASE_FEATURE(kWebUIInProcessResourceLoad
+@@ -1216,7 +1216,11 @@ BASE_FEATURE(kWebUIInProcessResourceLoad
  
  // Controls whether the WebUSB API is enabled:
  // https://wicg.github.io/webusb
