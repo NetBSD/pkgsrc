@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2026/04/19 14:56:11 wiz Exp $
+$NetBSD: distinfo,v 1.30 2026/05/10 12:06:55 wiz Exp $
 
-BLAKE2s (libsixel-1.8.7-r1.tar.gz) = 36a53e64d34ee4c1a0ef7367a3aa393e09c9d7e70a1475b2f15861e1e18a12f8
-SHA512 (libsixel-1.8.7-r1.tar.gz) = 6e12f405b96f896d9f5bde8b1ae4feb4c051d8576b68c34bbf294c5eacfd2b1b8b54e44580a98417c3b318467ded3b44534ddbab319d0f9317bbabf3fdb0c51a
-Size (libsixel-1.8.7-r1.tar.gz) = 4901699 bytes
+BLAKE2s (libsixel-1.8.7-r2.tar.gz) = 5fbf49a5feca73b7f30ddc0267335b582aeebc8bcea94f40bc80fbb99ffb7e9e
+SHA512 (libsixel-1.8.7-r2.tar.gz) = 4f9d779732385af9cc81e7d9d823e6999a3cf653e6ce5e7eb19e7a7319736f960a31c9cd502e63c85f78907ab5375b0a310bb2deecd95b6f35769cff998a31b5
+Size (libsixel-1.8.7-r2.tar.gz) = 4909793 bytes
