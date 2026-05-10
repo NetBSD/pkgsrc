@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2025/11/17 11:01:36 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2026/05/10 23:01:44 gutteridge Exp $
 
 DISTNAME=	fluxbox-1.3.7
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fluxbox/}
 EXTRACT_SUFX=	.tar.bz2
