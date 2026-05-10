@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2026/05/10 16:32:05 vins Exp $
+
+BLAKE2s (httpdirfs-1.2.8.tar.gz) = ac0bcfa6d0a1253274218915fccf7b37fbcb13b0ebd7bb60a4e33bc9cfb494e7
+SHA512 (httpdirfs-1.2.8.tar.gz) = 7628e85ab81b100f151a50b2b54cde67e73c32f24f2335df5d3b239b44ea28011e54f632ab13b397ade931124b1008bd46b2baed556467c0657d0315acb4f50c
+Size (httpdirfs-1.2.8.tar.gz) = 90590 bytes
+SHA1 (patch-meson.build) = 9c902ed4432c2ad98f759d406054119fed646f62
+SHA1 (patch-src_link.c) = aae5ae015988f2a4a1a9e25fd0c532a60410c4ea

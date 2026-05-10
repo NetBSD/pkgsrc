@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2026/05/10 16:32:05 vins Exp $
+bin/httpdirfs
+man/man1/httpdirfs.1
+share/doc/README.md
