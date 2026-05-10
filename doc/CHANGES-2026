@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2933 2026/05/10 12:14:58 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2934 2026/05/10 12:15:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4468,3 +4468,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/libzim to 9.7.0 [wiz 2026-05-10]
 	Updated textproc/moor to 2.13.0 [wiz 2026-05-10]
 	Updated devel/ocaml-dune to 3.23.0 [wiz 2026-05-10]
+	Updated devel/ocaml-dune-configurator to 3.23.0 [wiz 2026-05-10]
