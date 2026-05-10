@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27221 2026/05/09 15:58:02 wiz Exp $
+$NetBSD: TODO,v 1.27222 2026/05/10 10:18:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -390,6 +390,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o MesaLib-25.2.7 [wip]
 	o MesaLib-26.1
 	o OdfConverter-4.0
+	o OpenJPH-0.27.2
 	o PACK-0.0.4
 	o PageEdit-2.7.6
 	o R-GRASS-0.3.9
@@ -759,6 +760,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o horde-5.2.9
 	o hplip-3.25.6
 	o html2wml-0.4.11
+	o hwdata-0.407
 	o hydrogen-1.2.6
 	o ibus-hangul-1.5.4
 	o icdprog-0.5
@@ -800,6 +802,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jdom-2.0.6
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jjui-0.10.5
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -866,10 +869,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o librelp-1.10.0
 	o libreoffice-26.2.3
 	o libretro-core-info-1.9.1
+	o libsixel-1.8.7r2
 	o libthai-0.2.2
 	o libtrace-4.0.16
 	o libvirt-12.0
 	o libxdg-basedir-1.2.3
+	o libzim-9.7.0
 	o lima-2.1.1
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
@@ -936,6 +941,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mono-nat-1.1.0
 	o monocypher-3.1.2
 	o moodle-4.5.2 (LTS)
+	o moor-2.13.0
 	o mopher-0.6.0
 	o moserial-2.30.0
 	o mserv-devel-0.41
@@ -977,6 +983,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-bz2-0.8.0
 	o ocaml-cppo-1.6.9
 	o ocaml-cudf-0.10
+	o ocaml-dune-3.23.0
 	o ocaml-encore-0.8
 	o ocaml-eqaf-0.7
 	o ocaml-expat-1.1.0
@@ -1114,7 +1121,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o profanity-0.15.1
 	o profit-2.5.3
 	o proftpd-1.3.9a
-	o prometheus-3.11.2
+	o prometheus-3.11.3
 	o prosody-13.0.5
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1125,6 +1132,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-beets-2.11.0
 	o py-cassa-1.11.0
 	o py-chardet-7.0.1 [we need to decide how to handle https://github.com/chardet/chardet/issues/327]
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
@@ -1133,21 +1141,38 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
+	o py-flask-admin-2.2.0
+	o py-google-api-python-client-2.196.0
+	o py-google-auth-2.52.0
+	o py-google-auth-httplib2-0.4.0
+	o py-googleapis-common-protos-1.75.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
+	o py-markdown-it-py-4.2.0
+	o py-mistune-3.2.1
+	o py-mypy-2.0.0
 	o py-omniORBpy-3.7
 	o py-pandas-3.0.1
+	o py-pdf-6.11.0
 	o py-pdf-parser-0.7.4
 	o py-pdm-2.26.8
+	o py-pip-26.1.1
+	o py-poetry-core-2.4.0
 	o py-postgresql-5.1.2
+	o py-propcache-0.5.2
+	o py-proto-plus-1.28.0
+	o py-pytz-2026.2
 	o py-simpletal-5.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-textual-8.2.5
 	o py-tokyocabinet-0.6
 	o py-torch-2.10
+	o py-trove-classifiers-2026.5.7.17
 	o py-uliweb-0.6
+	o py-uv-build-0.11.12
 	o py-wat-0.6.0
+	o py-wtforms-3.2.2
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
 	o q5go-2.1.3
@@ -1254,6 +1279,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
 	o systrace-1.6e
+	o tabiew-0.13.1
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-4.0.4.29a
 	o tads-3.0.16
