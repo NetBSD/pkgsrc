@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2026/03/07 11:37:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2026/05/11 13:10:46 adam Exp $
 bin/taglib-config
 include/taglib/aifffile.h
 include/taglib/aiffproperties.h
@@ -51,16 +51,21 @@ include/taglib/matroskafile.h
 include/taglib/matroskaproperties.h
 include/taglib/matroskasimpletag.h
 include/taglib/matroskatag.h
+include/taglib/matroskawritestyle.h
 include/taglib/modfile.h
 include/taglib/modfilebase.h
 include/taglib/modproperties.h
 include/taglib/modtag.h
 include/taglib/mp4atom.h
+include/taglib/mp4chapter.h
+include/taglib/mp4chapterholder.h
 include/taglib/mp4coverart.h
 include/taglib/mp4file.h
 include/taglib/mp4item.h
 include/taglib/mp4itemfactory.h
+include/taglib/mp4nerochapterlist.h
 include/taglib/mp4properties.h
+include/taglib/mp4qtchapterlist.h
 include/taglib/mp4stem.h
 include/taglib/mp4tag.h
 include/taglib/mpcfile.h
@@ -134,9 +139,9 @@ lib/cmake/taglib/taglib-targets-noconfig.cmake
 lib/cmake/taglib/taglib-targets.cmake
 lib/libtag.so
 lib/libtag.so.2
-lib/libtag.so.2.2.1
+lib/libtag.so.2.3.0
 lib/libtag_c.so
 lib/libtag_c.so.2
-lib/libtag_c.so.2.2.1
+lib/libtag_c.so.2.3.0
 lib/pkgconfig/taglib.pc
 lib/pkgconfig/taglib_c.pc
