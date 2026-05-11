@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2026/05/07 17:13:47 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/05/11 13:11:43 adam Exp $
 
-DISTNAME=	libsquish-1.15.1.3
+DISTNAME=	libsquish-1.15.1.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=oblivioncth/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-GITHUB_SUBMODULES=	oblivioncth OBCMake v0.3.11 ${CMAKE_BUILD_DIR}/_deps/obcmake-src
+GITHUB_SUBMODULES=	oblivioncth OBCMake v0.3.12 ${CMAKE_BUILD_DIR}/_deps/obcmake-src
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://oblivioncth.github.io/libsquish
