@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.19 2026/05/06 07:04:26 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.20 2026/05/11 05:22:51 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aes-0.8.4
@@ -86,9 +86,9 @@ CARGO_CRATE_DEPENDS+=	clap_complete_nushell-4.6.0
 CARGO_CRATE_DEPENDS+=	clap_derive-4.6.1
 CARGO_CRATE_DEPENDS+=	clap_lex-1.1.0
 CARGO_CRATE_DEPENDS+=	cmake-0.1.57
-CARGO_CRATE_DEPENDS+=	codspeed-4.5.0
-CARGO_CRATE_DEPENDS+=	codspeed-criterion-compat-4.5.0
-CARGO_CRATE_DEPENDS+=	codspeed-criterion-compat-walltime-4.5.0
+CARGO_CRATE_DEPENDS+=	codspeed-4.6.0
+CARGO_CRATE_DEPENDS+=	codspeed-criterion-compat-4.6.0
+CARGO_CRATE_DEPENDS+=	codspeed-criterion-compat-walltime-4.6.0
 CARGO_CRATE_DEPENDS+=	color_quant-1.1.0
 CARGO_CRATE_DEPENDS+=	colorchoice-1.0.5
 CARGO_CRATE_DEPENDS+=	colored-2.2.0
