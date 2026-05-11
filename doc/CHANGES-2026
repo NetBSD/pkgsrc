@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2980 2026/05/11 16:14:06 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2981 2026/05/11 17:39:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4537,3 +4537,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-regex to 2026.5.9 [adam 2026-05-11]
 	Updated security/py-joserfc to 1.6.5 [adam 2026-05-11]
 	Updated www/py-hishel to 1.2.1 [adam 2026-05-11]
+	Updated textproc/p5-XML-LibXML to 2.0210nb10 [wiz 2026-05-11]
