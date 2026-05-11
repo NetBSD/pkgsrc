@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.169 2026/04/15 08:50:52 adam Exp $
+# $NetBSD: Makefile,v 1.170 2026/05/11 05:38:13 adam Exp $
 #
 # Changelog: https://hypothesis.readthedocs.io/en/latest/changes.html
 
-DISTNAME=	hypothesis-6.152.1
+DISTNAME=	hypothesis-6.152.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hypothesis/}
@@ -23,9 +23,7 @@ USE_LANGUAGES=	# none
 DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.0.0:../../devel/py-exceptiongroup
 .endif
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} hypothesis hypothesis-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	hypothesis
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
