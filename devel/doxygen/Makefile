@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.205 2026/02/12 01:25:08 gutteridge Exp $
+# $NetBSD: Makefile,v 1.206 2026/05/11 15:54:05 adam Exp $
 
-DISTNAME=	doxygen-1.16.1.src
+DISTNAME=	doxygen-1.17.0.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://doxygen.nl/files/
 
@@ -32,7 +31,7 @@ TEST_TARGET=		tests
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
-# GCC < 8 doesn't support -Wextra-semi. 
+# GCC < 8 doesn't support -Wextra-semi.
 BUILDLINK_TRANSFORM+=	rm:-Wextra-semi
 
 # Case Insensitive or Case Sensitive File System
