@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2973 2026/05/11 11:54:19 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2974 2026/05/11 12:47:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4519,3 +4519,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/mew to 6.11 [taca 2026-05-11]
 	Updated lang/python314 to 3.14.5 [adam 2026-05-11]
 	Updated lang/py314-html-docs to 3.14.5 [adam 2026-05-11]
+	Updated security/py-gssapi to 1.11.1 [adam 2026-05-11]
+	Updated security/py-asyncssh to 2.23.0 [adam 2026-05-11]
