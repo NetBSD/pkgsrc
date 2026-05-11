@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2026/01/06 08:02:06 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/05/11 12:51:19 adam Exp $
 
-DISTNAME=	guppy3-3.1.6
+DISTNAME=	guppy3-3.1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/guppy3/}
