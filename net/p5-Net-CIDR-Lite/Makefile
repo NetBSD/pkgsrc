@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2026/04/11 05:08:37 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/05/11 06:20:58 wiz Exp $
 
-DISTNAME=		Net-CIDR-Lite-0.23
+DISTNAME=		Net-CIDR-Lite-0.24
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/S/ST/STIGTSP/}
