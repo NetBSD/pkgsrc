@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2972 2026/05/11 09:56:14 taca Exp $
+$NetBSD: CHANGES-2026,v 1.2973 2026/05/11 11:54:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4517,3 +4517,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/sqlmap to 1.10.5 [adam 2026-05-11]
 	Updated benchmarks/sysbench to 1.0.20 [adam 2026-05-11]
 	Updated mail/mew to 6.11 [taca 2026-05-11]
+	Updated lang/python314 to 3.14.5 [adam 2026-05-11]
+	Updated lang/py314-html-docs to 3.14.5 [adam 2026-05-11]
