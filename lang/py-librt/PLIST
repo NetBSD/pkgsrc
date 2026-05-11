@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/02/16 11:29:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/05/11 05:27:08 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -10,6 +10,8 @@ ${PYSITELIB}/librt/base64.so
 ${PYSITELIB}/librt/internal.pyi
 ${PYSITELIB}/librt/internal.so
 ${PYSITELIB}/librt/py.typed
+${PYSITELIB}/librt/random.pyi
+${PYSITELIB}/librt/random.so
 ${PYSITELIB}/librt/strings.pyi
 ${PYSITELIB}/librt/strings.so
 ${PYSITELIB}/librt/time.pyi
