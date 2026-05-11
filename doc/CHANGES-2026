@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2979 2026/05/11 15:56:06 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2980 2026/05/11 16:14:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4533,3 +4533,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/expat to 2.8.1 [adam 2026-05-11]
 	Updated devel/doxygen to 1.17.0 [adam 2026-05-11]
 	Updated databases/redis to 8.6.3 [adam 2026-05-11]
+	Updated net/py-subunit to 1.4.6 [adam 2026-05-11]
+	Updated textproc/py-regex to 2026.5.9 [adam 2026-05-11]
+	Updated security/py-joserfc to 1.6.5 [adam 2026-05-11]
+	Updated www/py-hishel to 1.2.1 [adam 2026-05-11]
