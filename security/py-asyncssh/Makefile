@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2025/12/26 09:00:02 adam Exp $
+# $NetBSD: Makefile,v 1.57 2026/05/11 12:47:04 adam Exp $
 
-DISTNAME=	asyncssh-2.22.0
+DISTNAME=	asyncssh-2.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asyncssh/}
@@ -11,8 +11,9 @@ COMMENT=	Asynchronous SSHv2 client and server library
 LICENSE=	epl-v2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-gssapi>=1.2.0:../../security/py-gssapi
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0:../../devel/py-typing-extensions
+# gssapi
+DEPENDS+=	${PYPKGPREFIX}-gssapi>=1.2.0:../../security/py-gssapi
 
 USE_LANGUAGES=	# none
 
