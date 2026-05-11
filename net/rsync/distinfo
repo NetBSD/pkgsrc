@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.64 2026/03/16 16:05:56 kim Exp $
+$NetBSD: distinfo,v 1.65 2026/05/11 06:21:51 adam Exp $
 
-BLAKE2s (rsync-3.4.1.tar.gz) = 7a433af3dc309baa0573a8d204ae492da6a49d7b7aa19d31675d2717c4b5c2c8
-SHA512 (rsync-3.4.1.tar.gz) = a3ecde4843ddb795308dca88581b868ac0221eb6f88a1477d7a9a2ecb4e4686042966bdddbab40866f90a4715d3104daa7b83222ddf0f3387b796a86bde8e5c2
-Size (rsync-3.4.1.tar.gz) = 1172739 bytes
+BLAKE2s (rsync-3.4.2.tar.gz) = 45b332162e527bcc84e577be98e134a8645e2e15482ddb91d7cd02934161eb45
+SHA512 (rsync-3.4.2.tar.gz) = 74f623e7f5234ffc12fc60d30f4439bc18796404c866365b7c3bfda87f42b33fc01ce6060187534b6b47d799f5b47fcdb84717faff88b6ce30eb230f1b93afe7
+Size (rsync-3.4.2.tar.gz) = 1190383 bytes
 SHA1 (patch-Makefile.in) = 34c3cc57846e451a0adbd19fcb19ae682b7e1ae3
 SHA1 (patch-acls.c) = 9be60c0c1abedc961fa95bba2bb23d802a09bc62
-SHA1 (patch-sender.c) = 81324c3ff32a12f27e0e95657f440752fe6e87d0
