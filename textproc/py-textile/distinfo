@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2024/10/21 09:27:00 adam Exp $
+$NetBSD: distinfo,v 1.14 2026/05/11 05:41:46 adam Exp $
 
-BLAKE2s (textile-4.0.3.tar.gz) = 71d6b47d2cf546c7353f23504336e7cf75f30835ca457aea564edaadae082745
-SHA512 (textile-4.0.3.tar.gz) = 2dc835f15be92ce44c1f05e81205395e060fa704680746f577c5899dd23a6eddd8b87ec823a0e1348feba527b9d6cc2b89dad5955f417eef949957b91c0bd1cb
-Size (textile-4.0.3.tar.gz) = 56908 bytes
+BLAKE2s (textile-4.0.4.tar.gz) = 61bb8bf173ad70ef873f00302a84a212627e39405eea1d328a8cb1838114bf19
+SHA512 (textile-4.0.4.tar.gz) = 7058595cc2497c7106bfd7d9e2fff638faae40656508b49c4e447db46db36077fdfbab6ebe673d8dd1c92af2b237b94c9f2038b5ca64abc3fb8dc9280b9ba39e
+Size (textile-4.0.4.tar.gz) = 57322 bytes
