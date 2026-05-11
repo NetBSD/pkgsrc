@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2969 2026/05/11 06:24:14 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.2970 2026/05/11 06:26:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4511,3 +4511,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/rclone to 1.74.1 [adam 2026-05-11]
 	Updated net/p5-Net-CIDR-Lite to 0.24 [wiz 2026-05-11]
 	Updated textproc/p5-XML-LibXML to 2.0210nb9 [wiz 2026-05-11]
+	Updated net/rsync to 3.4.2 [adam 2026-05-11]
+	Updated converters/py-bidi to 0.6.9 [adam 2026-05-11]
+	Updated devel/py-traitlets to 5.15.0 [adam 2026-05-11]
