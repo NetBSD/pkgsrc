@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2026/02/02 10:39:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2026/05/11 09:23:17 adam Exp $
 bin/sqlmap
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -1042,6 +1042,27 @@ ${PYSITELIB}/sqlmap/plugins/dbms/snowflake/syntax.pyo
 ${PYSITELIB}/sqlmap/plugins/dbms/snowflake/takeover.py
 ${PYSITELIB}/sqlmap/plugins/dbms/snowflake/takeover.pyc
 ${PYSITELIB}/sqlmap/plugins/dbms/snowflake/takeover.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/__init__.py
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/__init__.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/__init__.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/connector.py
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/connector.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/connector.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/enumeration.py
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/enumeration.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/enumeration.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/filesystem.py
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/filesystem.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/filesystem.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/fingerprint.py
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/fingerprint.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/fingerprint.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/syntax.py
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/syntax.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/syntax.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/takeover.py
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/takeover.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/spanner/takeover.pyo
 ${PYSITELIB}/sqlmap/plugins/dbms/sqlite/__init__.py
 ${PYSITELIB}/sqlmap/plugins/dbms/sqlite/__init__.pyc
 ${PYSITELIB}/sqlmap/plugins/dbms/sqlite/__init__.pyo
