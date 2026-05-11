@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2974 2026/05/11 12:47:20 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2975 2026/05/11 12:51:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4521,3 +4521,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py314-html-docs to 3.14.5 [adam 2026-05-11]
 	Updated security/py-gssapi to 1.11.1 [adam 2026-05-11]
 	Updated security/py-asyncssh to 2.23.0 [adam 2026-05-11]
+	Updated devel/py-maturin to 1.13.3 [adam 2026-05-11]
+	Updated devel/py-guppy3 to 3.1.7 [adam 2026-05-11]
