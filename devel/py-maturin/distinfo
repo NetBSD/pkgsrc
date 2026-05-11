@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.53 2026/05/10 07:40:11 adam Exp $
+$NetBSD: distinfo,v 1.54 2026/05/11 12:49:19 adam Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -546,9 +546,9 @@ Size (mailparse-0.16.1.crate) = 37588 bytes
 BLAKE2s (matchers-0.2.0.crate) = 5f760d533da84d08dab5ad87517fdcb160cdb1409d11f34ac292edac3af19bce
 SHA512 (matchers-0.2.0.crate) = d75be87dd3954b62e67b34021fbc318204eebd192f0f9b5f3de29e477550e2e2198697e7b22b9588279a98a49690cb4d885e5eca49600d70efce8adaeae46d53
 Size (matchers-0.2.0.crate) = 7075 bytes
-BLAKE2s (maturin-1.13.2.tar.gz) = aa5718c663d0ae0e4fbc41de6e8d8227301503dde50ac79da711e0dff70b59d5
-SHA512 (maturin-1.13.2.tar.gz) = 6a878ce44997c95009188758dc3c2f49228424749e6372070b887720e4de9b185587c966b62910c712ca96917c457c069a3c0c3ed471f0664c63a700c1988d65
-Size (maturin-1.13.2.tar.gz) = 357392 bytes
+BLAKE2s (maturin-1.13.3.tar.gz) = 6be2e64d4f55d46b4f1c17ef22b67e2182fc96279cc4f81bf8409007fa2d2acd
+SHA512 (maturin-1.13.3.tar.gz) = b3fdab42378743ff144455ca59c37a5034a9af61b4a3c7016485c763dd1d7de193cf98f28344891adef5988c21f88443d7876c27662a22a1814f9e11fecc5a0d
+Size (maturin-1.13.3.tar.gz) = 357934 bytes
 BLAKE2s (memchr-2.8.0.crate) = 9d6dade02bc948818801a90933500c8aecf86116a976d3c68dfc7e427b027efd
 SHA512 (memchr-2.8.0.crate) = 8089238153493a0ff6adf980efd1ea2ba10eeff9f33fff200268692662d24152a8c14a4dac37fbc6a55dca741701fd256174f10a9838ca66f038f08e090de12f
 Size (memchr-2.8.0.crate) = 97780 bytes
