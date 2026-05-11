@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.106 2026/05/11 06:24:02 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2026/05/11 17:39:13 wiz Exp $
 
 DISTNAME=	XML-LibXML-2.0210
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
@@ -22,6 +22,9 @@ CONFLICTS+=	p5-XML-LibXML-Common-[0-9]*
 # since version 1.61 the XML::LibXML Perl module
 # includes XML::LibXML::XPathContext module
 CONFLICTS+=	p5-XML-LibXML-XPathContext-[0-9]*
+
+# as of 2.0210
+# Failed 8/78 test programs. 11/2612 subtests failed.
 
 PERL5_PACKLIST=		auto/XML/LibXML/.packlist
 

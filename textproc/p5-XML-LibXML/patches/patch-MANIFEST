@@ -1,0 +1,15 @@
+$NetBSD: patch-MANIFEST,v 1.1 2026/05/11 17:39:13 wiz Exp $
+
+fix: validate UTF-8 continuation bytes in domParseChar
+https://github.com/cpan-authors/XML-LibXML/pull/149
+
+--- MANIFEST.orig	2024-01-24 15:17:45.000000000 +0000
++++ MANIFEST
+@@ -169,6 +169,7 @@ t/48_rt93429_recover_2_in_html_parsing.t
+ t/48_rt123379_setNamespace.t
+ t/48_rt55000.t
+ t/48_rt93429_recover_2_in_html_parsing.t
++t/48_security_oob_utf8_gh146.t
+ t/48importing_nodes_IDs_rt_69520.t
+ t/49_load_html.t
+ t/49callbacks_returning_undef.t

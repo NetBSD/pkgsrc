@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.56 2026/05/11 06:24:02 wiz Exp $
+$NetBSD: distinfo,v 1.57 2026/05/11 17:39:13 wiz Exp $
 
 BLAKE2s (XML-LibXML-2.0210.tar.gz) = 93c95821f009eb1272ee2cb483c85e14318f3260ef78a4a7cc5265db86e1b0a6
 SHA512 (XML-LibXML-2.0210.tar.gz) = ae72b25ac6362152fa85ec9fed03fad694382bde29f459e1bd95b3ca4d1b0dffb76d2f8319bc6fbc6e291583696c3b95b41a23cc2bb509ce6f3fd7d74666fd77
 Size (XML-LibXML-2.0210.tar.gz) = 466316 bytes
-SHA1 (patch-dom.c) = b54099c9fe7c879b8d74ddf1cb3ba18d6fb296b4
+SHA1 (patch-LibXML.xs) = b264148c7a3e0407017b773698f6d0a513e8b2f9
+SHA1 (patch-MANIFEST) = a93d88f8acb10c994efa1a209a446f7682692c83
+SHA1 (patch-dom.c) = d22ff372ed0da741f160de897fe797719173aa7f
+SHA1 (patch-dom.h) = 525cf1b057662cdc29440617f867c1c4bb2c7960
 SHA1 (patch-t_06elements.t) = 67c124556766e2afa0c9e364efc68d6815344963
+SHA1 (patch-t_48__security__oob__utf8__gh146.t) = b1b9f0462da2d77008cd3ea8d8aa7866612caa5a

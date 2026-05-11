@@ -1,4 +1,7 @@
-$NetBSD: patch-dom.c,v 1.1 2026/05/11 06:24:02 wiz Exp $
+$NetBSD: patch-dom.c,v 1.2 2026/05/11 17:39:13 wiz Exp $
+
+fix: validate UTF-8 continuation bytes in domParseChar
+https://github.com/cpan-authors/XML-LibXML/pull/149
 
 From 15652bd905a6c9dda59a81b14d4766adbbae2ea8 Mon Sep 17 00:00:00 2001
 From: Toddr Bot <toddbot@rinaldo.us>
@@ -27,7 +30,35 @@ Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>
 
 --- dom.c.orig	2017-10-23 08:52:55.000000000 +0000
 +++ dom.c
-@@ -292,6 +292,13 @@ domParseChar( xmlChar *cur, int *len )
+@@ -239,7 +239,7 @@ domReconcileNs(xmlNodePtr tree)
+  * NAME domParseChar
+  * TYPE function
+  * SYNOPSIS
+- *   int utf8char = domParseChar( curchar, &len );
++ *   int utf8char = domParseChar( curchar, &len, remaining );
+  *
+  * The current char value, if using UTF-8 this may actually span
+  * multiple bytes in the given string. This function parses an utf8
+@@ -260,12 +260,14 @@ domReconcileNs(xmlNodePtr tree)
+  *
+  * Returns the current char value and its length
+  *
+- * NOTE: If the character passed to this function is not a UTF
+- * character, the return value will be 0 and the length of the
+- * character is -1!
++ * NOTE: If the character passed to this function is not a valid UTF-8
++ * character (truncated sequence, invalid continuation byte, or
++ * codepoint not allowed by IS_CHAR), the return value will be 0 and
++ * the length will be set to 1 so callers can safely advance past the
++ * bad byte.
+  */
+ int
+-domParseChar( xmlChar *cur, int *len )
++domParseChar( xmlChar *cur, int *len, int remaining )
+ {
+     unsigned char c;
+         unsigned int val;
+@@ -292,6 +294,13 @@ domParseChar( xmlChar *cur, int *len )
          if ((c & 0xe0) == 0xe0) {
              if ((c & 0xf0) == 0xf0) {
                  /* 4-byte code */
@@ -41,7 +72,7 @@ Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>
                  *len = 4;
                  val = (cur[0] & 0x7) << 18;
                  val |= (cur[1] & 0x3f) << 12;
-@@ -299,6 +306,12 @@ domParseChar( xmlChar *cur, int *len )
+@@ -299,6 +308,12 @@ domParseChar( xmlChar *cur, int *len )
                  val |= cur[3] & 0x3f;
              } else {
                  /* 3-byte code */
@@ -54,7 +85,7 @@ Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>
                  *len = 3;
                  val = (cur[0] & 0xf) << 12;
                  val |= (cur[1] & 0x3f) << 6;
-@@ -306,6 +319,11 @@ domParseChar( xmlChar *cur, int *len )
+@@ -306,6 +321,11 @@ domParseChar( xmlChar *cur, int *len )
              }
              } else {
              /* 2-byte code */
