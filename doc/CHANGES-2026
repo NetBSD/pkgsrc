@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2971 2026/05/11 09:24:15 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2972 2026/05/11 09:56:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4516,3 +4516,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-traitlets to 5.15.0 [adam 2026-05-11]
 	Updated security/sqlmap to 1.10.5 [adam 2026-05-11]
 	Updated benchmarks/sysbench to 1.0.20 [adam 2026-05-11]
+	Updated mail/mew to 6.11 [taca 2026-05-11]
