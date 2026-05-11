@@ -1,17 +1,14 @@
-# $NetBSD: Makefile,v 1.62 2026/05/07 18:49:50 bsiegert Exp $
+# $NetBSD: Makefile,v 1.63 2026/05/11 05:48:51 adam Exp $
 
-DISTNAME=	timescaledb-tune-0.18.2
+DISTNAME=	timescaledb-tune-0.19.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=timescale/}
-PKGREVISION=	5
 CATEGORIES=	databases
-GITHUB_TAG=	v.${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/timescale/timescaledb-tune
 COMMENT=	Tune timescaledb to match system's CPU and memory resources
 LICENSE=	apache-2.0
-
-WRKSRC=		${WRKDIR}/timescaledb-tune-${GITHUB_TAG}
 
 .include "go-modules.mk"
 

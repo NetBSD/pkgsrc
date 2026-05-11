@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2025/12/26 09:23:43 adam Exp $
+$NetBSD: distinfo,v 1.11 2026/05/11 05:48:51 adam Exp $
 
 BLAKE2s (github.com_fatih_color_@v_v1.17.0.mod) = 30ec61a740297b578fc86980fe56be5cf90c9d8aba9e559b4d0186fd045abdfc
 SHA512 (github.com_fatih_color_@v_v1.17.0.mod) = 6e8676c6d3c1f4d7a2c1cd23cf345302a32cf0b86bf0ffca4e906b12a456d85b1fdf62a1040e3b8722bcad9bdf886fed2d0c91e6076e523034d8ebcdf347a7a0
@@ -39,6 +39,6 @@ Size (golang.org_x_sys_@v_v0.25.0.zip) = 1967714 bytes
 BLAKE2s (golang.org_x_sys_@v_v0.6.0.mod) = 66613eb38a59b8a7f75e1aaeb294a1c4ea290d4e9ae699137566025e50ed741c
 SHA512 (golang.org_x_sys_@v_v0.6.0.mod) = 85e511b1261c1935f5ee4754ad31d1d946f9e10f0af9905f44c4348d6ce5104319c03fb38517dde616698f6487b0c62788cfa96bc0ffb3b6db80accd7e552655
 Size (golang.org_x_sys_@v_v0.6.0.mod) = 33 bytes
-BLAKE2s (timescaledb-tune-0.18.2.tar.gz) = 216ddc01d79af578ede4daa638630122896e62d39b37004a1ae1fbc8ba8ff98b
-SHA512 (timescaledb-tune-0.18.2.tar.gz) = 8d1d7b128f1475b7a31d1ec5f6c492114b154dc410b342132e2d2e9c49a8669f138a9b1796c95157e3bc28dab59cb704b15be1c320210c4e4c19eab55d115267
-Size (timescaledb-tune-0.18.2.tar.gz) = 65787 bytes
+BLAKE2s (timescaledb-tune-0.19.0.tar.gz) = 806ab12eb4c44611732d402f0030cefd6a74e0ffdd6e600609a59ca0fc2a7b67
+SHA512 (timescaledb-tune-0.19.0.tar.gz) = 244ee66293057b0852829d260a02cc86947a4c66290220a505f3be74d0ea019cc680ca20b99e3e2508bc8b341033f4b82bb2942411d3e4a602c293639728b87f
+Size (timescaledb-tune-0.19.0.tar.gz) = 65362 bytes
