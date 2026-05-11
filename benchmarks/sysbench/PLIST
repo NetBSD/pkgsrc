@@ -1,3 +1,15 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:33:12 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/05/11 09:23:51 adam Exp $
 bin/sysbench
 share/doc/sysbench/manual.html
+share/sysbench/bulk_insert.lua
+share/sysbench/oltp_common.lua
+share/sysbench/oltp_delete.lua
+share/sysbench/oltp_insert.lua
+share/sysbench/oltp_point_select.lua
+share/sysbench/oltp_read_only.lua
+share/sysbench/oltp_read_write.lua
+share/sysbench/oltp_update_index.lua
+share/sysbench/oltp_update_non_index.lua
+share/sysbench/oltp_write_only.lua
+share/sysbench/select_random_points.lua
+share/sysbench/select_random_ranges.lua

@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.6 2023/06/06 12:40:18 riastradh Exp $
+# $NetBSD: options.mk,v 1.7 2026/05/11 09:23:51 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sysbench
-PKG_SUPPORTED_OPTIONS+=	mysql pgsql doc
+PKG_SUPPORTED_OPTIONS+=	mysql pgsql
 
 .include "../../mk/bsd.options.mk"
 
@@ -17,9 +17,4 @@ CONFIGURE_ARGS+=	--with-pgsql=${PGSQL_PREFIX}
 .  include "../../mk/pgsql.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-pgsql
-.endif
-
-.if !empty(PKG_OPTIONS:Mdoc)
-.  include "../../textproc/libxslt/buildlink3.mk"
-TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 .endif
