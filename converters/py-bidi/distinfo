@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2025/10/26 22:12:53 wiz Exp $
+$NetBSD: distinfo,v 1.6 2026/05/11 06:23:49 adam Exp $
 
 BLAKE2s (autocfg-1.3.0.crate) = 4b8d612ff5e388a3a839ce0211c16422cce28b2bf8a607944c90de0737f97850
 SHA512 (autocfg-1.3.0.crate) = a5570b955d57a7183ba148b335837dc5af24b202e80681027536d33fe2822509ba644fc70c29f018c893285ced2bf6774f44ca6c59f7c7e2226d5349cf7c3635
@@ -48,9 +48,9 @@ Size (pyo3-macros-backend-0.27.1.crate) = 82521 bytes
 BLAKE2s (python3-dll-a-0.2.14.crate) = f963cf95d888699943a3c17a44fd8df8c05f02be526de2750756ff5866ff5ecd
 SHA512 (python3-dll-a-0.2.14.crate) = fde53bac2b7009d409d5dfab991b431aea7c16c5e0227a7bb143e73a043cd0490cec2647f73cfc34f73a192e9b365a70fd5b42d969beb2e3251dff44230a2040
 Size (python3-dll-a-0.2.14.crate) = 103489 bytes
-BLAKE2s (python_bidi-0.6.7.tar.gz) = 138a7f944bbcde6a9afc40ee7512453265c6a0e1b9579827273f93f94c811d07
-SHA512 (python_bidi-0.6.7.tar.gz) = c08e55f6ad45624345d2d48005e2a0b96eed3bd78b0d7b211c7f88a2dee5834de8a9726abd3598fe33251e0ae8cca748d5f73bb911509888943d079f43ff97f9
-Size (python_bidi-0.6.7.tar.gz) = 45503 bytes
+BLAKE2s (python_bidi-0.6.9.tar.gz) = 9b39bbb4413c6a492d8973f91841a5c0d537c4f84c71936652ba8ae739e0bfff
+SHA512 (python_bidi-0.6.9.tar.gz) = f3835e94510d6c2b2f55fd295ad280916fc9c467e6d032a420d5e7bd2d16a9714f285f081810b04fccfbd9d323764dc0fecf63970acdc5c93ee989a34d143c0c
+Size (python_bidi-0.6.9.tar.gz) = 57902 bytes
 BLAKE2s (quote-1.0.36.crate) = 9f7777159f1dce98b3d75c4080f5513185ed124a911edec785e5349ba70541fd
 SHA512 (quote-1.0.36.crate) = f1f002a912692f7ffd4912ca980ec57ff4aca3a7d9e2e42e9e3409e2105c9f59d86c05719f6af309bccaef2f8843b0848a6e3afda3356e045d8e7cc5956ae685
 Size (quote-1.0.36.crate) = 28507 bytes

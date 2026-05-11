@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2025/10/26 22:12:53 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/05/11 06:23:49 adam Exp $
 
-DISTNAME=	python_bidi-0.6.7
+DISTNAME=	python_bidi-0.6.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python_//}
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-bidi/}
@@ -12,9 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1:../../devel/py-maturin
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} pybidi pybidi-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	pybidi
 
 .include "cargo-depends.mk"
 
