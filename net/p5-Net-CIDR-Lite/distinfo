@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2026/04/11 05:08:37 wiz Exp $
+$NetBSD: distinfo,v 1.11 2026/05/11 06:20:58 wiz Exp $
 
-BLAKE2s (Net-CIDR-Lite-0.23.tar.gz) = b001a8fac5f7dbace95ffa06919f3216aa823af4d1c361ba9e4befb3dcd584a5
-SHA512 (Net-CIDR-Lite-0.23.tar.gz) = fb411fa69c6ef9b67194ea2c072bc5e2aa5d3389595575a2dd8dc262d827fe94edf7594d0b42fb134014d38d52a69662fab8553fbca75c8ecc18f39d7d5f7122
-Size (Net-CIDR-Lite-0.23.tar.gz) = 11089 bytes
+BLAKE2s (Net-CIDR-Lite-0.24.tar.gz) = 0964ba1f8879a03a570c2ead7edd587dea000984e695ec109243956dcf880192
+SHA512 (Net-CIDR-Lite-0.24.tar.gz) = ef93d8c9ca4beadb033a19df7e26438120a2070dd408cefe1313e3d251b54f90987c7a8fbd172ead8ded3e5ef8fb3b01c5186671c25c832a9cc70155934543b4
+Size (Net-CIDR-Lite-0.24.tar.gz) = 11386 bytes
