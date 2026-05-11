@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2978 2026/05/11 13:55:58 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.2979 2026/05/11 15:56:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4529,3 +4529,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ugrep to 7.8.1 [adam 2026-05-11]
 	Updated net/haproxy to 3.3.9 [adam 2026-05-11]
 	Updated games/luanti to 5.16.1 [ktnb 2026-05-11]
+	Updated net/unbound to 1.25.0 [adam 2026-05-11]
+	Updated textproc/expat to 2.8.1 [adam 2026-05-11]
+	Updated devel/doxygen to 1.17.0 [adam 2026-05-11]
+	Updated databases/redis to 8.6.3 [adam 2026-05-11]
