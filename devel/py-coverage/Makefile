@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.88 2026/03/26 06:31:24 adam Exp $
+# $NetBSD: Makefile,v 1.89 2026/05/11 05:39:38 adam Exp $
 
-DISTNAME=	coverage-7.13.5
+DISTNAME=	coverage-7.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/coverage/}
