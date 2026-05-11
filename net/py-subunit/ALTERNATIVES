@@ -1,5 +1,8 @@
+bin/gojson2subunit @PREFIX@/bin/gojson2subunit-@PYVERSSUFFIX@
+bin/junitxml2subunit @PREFIX@/bin/junitxml2subunit-@PYVERSSUFFIX@
 bin/subunit-1to2 @PREFIX@/bin/subunit-1to2-@PYVERSSUFFIX@
 bin/subunit-2to1 @PREFIX@/bin/subunit-2to1-@PYVERSSUFFIX@
+bin/subunit-combine @PREFIX@/bin/subunit-combine-@PYVERSSUFFIX@
 bin/subunit-filter @PREFIX@/bin/subunit-filter-@PYVERSSUFFIX@
 bin/subunit-ls @PREFIX@/bin/subunit-ls-@PYVERSSUFFIX@
 bin/subunit-notify @PREFIX@/bin/subunit-notify-@PYVERSSUFFIX@
