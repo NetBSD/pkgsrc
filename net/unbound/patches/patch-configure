@@ -1,11 +1,23 @@
-$NetBSD: patch-configure,v 1.6 2024/05/08 11:16:49 he Exp $
+$NetBSD: patch-configure,v 1.7 2026/05/11 15:49:04 adam Exp $
+
+Properly detect pthread_set_name_np() by linking, not compiling, as
+-Wno-implicit-function-declaration can result with false positive.
 
 Pretend expat.h is found: it is guaranteed by PkgSrc, but on Darwin it might
 be buried inside an SDK; we don't want the SDK path being exposed in CFLAGS.
 
---- configure.orig	2017-07-09 07:41:42.000000000 +0000
+--- configure.orig	2026-04-29 08:48:39.000000000 +0000
 +++ configure
-@@ -21900,7 +21900,7 @@ fi
+@@ -19226,7 +19226,7 @@ main (void)
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"
++if ac_fn_c_try_link "$LINENO"
+ then :
+ 
+ 	    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+@@ -22353,7 +22353,7 @@ fi
  
  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for libexpat" >&5
  printf %s "checking for libexpat... " >&6; }
