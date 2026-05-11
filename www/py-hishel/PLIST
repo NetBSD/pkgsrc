@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/11/25 08:07:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/05/11 16:13:44 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -21,6 +21,9 @@ ${PYSITELIB}/hishel/_core/_spec.pyo
 ${PYSITELIB}/hishel/_core/_storages/_async_base.py
 ${PYSITELIB}/hishel/_core/_storages/_async_base.pyc
 ${PYSITELIB}/hishel/_core/_storages/_async_base.pyo
+${PYSITELIB}/hishel/_core/_storages/_async_redis.py
+${PYSITELIB}/hishel/_core/_storages/_async_redis.pyc
+${PYSITELIB}/hishel/_core/_storages/_async_redis.pyo
 ${PYSITELIB}/hishel/_core/_storages/_async_sqlite.py
 ${PYSITELIB}/hishel/_core/_storages/_async_sqlite.pyc
 ${PYSITELIB}/hishel/_core/_storages/_async_sqlite.pyo
@@ -30,6 +33,9 @@ ${PYSITELIB}/hishel/_core/_storages/_packing.pyo
 ${PYSITELIB}/hishel/_core/_storages/_sync_base.py
 ${PYSITELIB}/hishel/_core/_storages/_sync_base.pyc
 ${PYSITELIB}/hishel/_core/_storages/_sync_base.pyo
+${PYSITELIB}/hishel/_core/_storages/_sync_redis.py
+${PYSITELIB}/hishel/_core/_storages/_sync_redis.pyc
+${PYSITELIB}/hishel/_core/_storages/_sync_redis.pyo
 ${PYSITELIB}/hishel/_core/_storages/_sync_sqlite.py
 ${PYSITELIB}/hishel/_core/_storages/_sync_sqlite.pyc
 ${PYSITELIB}/hishel/_core/_storages/_sync_sqlite.pyo
