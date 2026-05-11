@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2026/02/10 02:06:36 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/05/11 13:55:42 ktnb Exp $
 bin/luanti
 bin/luantiserver
 bin/minetest
@@ -47,11 +47,13 @@ share/locale/it/LC_MESSAGES/luanti.mo
 share/locale/ja/LC_MESSAGES/luanti.mo
 share/locale/jbo/LC_MESSAGES/luanti.mo
 share/locale/jv/LC_MESSAGES/luanti.mo
+share/locale/ka/LC_MESSAGES/luanti.mo
 share/locale/kab/LC_MESSAGES/luanti.mo
 share/locale/kk/LC_MESSAGES/luanti.mo
 share/locale/kmr/LC_MESSAGES/luanti.mo
 share/locale/ko/LC_MESSAGES/luanti.mo
 share/locale/kv/LC_MESSAGES/luanti.mo
+share/locale/kw/LC_MESSAGES/luanti.mo
 share/locale/ky/LC_MESSAGES/luanti.mo
 share/locale/lt/LC_MESSAGES/luanti.mo
 share/locale/lv/LC_MESSAGES/luanti.mo
@@ -115,8 +117,10 @@ share/luanti/builtin/common/tests/after_spec.lua
 share/luanti/builtin/common/tests/math_spec.lua
 share/luanti/builtin/common/tests/misc_helpers_spec.lua
 share/luanti/builtin/common/tests/serialize_spec.lua
+share/luanti/builtin/common/tests/vector2_spec.lua
 share/luanti/builtin/common/tests/vector_spec.lua
 share/luanti/builtin/common/vector.lua
+share/luanti/builtin/common/vector2.lua
 share/luanti/builtin/emerge/env.lua
 share/luanti/builtin/emerge/init.lua
 share/luanti/builtin/emerge/register.lua
@@ -243,6 +247,9 @@ share/luanti/builtin/profiler/instrumentation.lua
 share/luanti/builtin/profiler/reporter.lua
 share/luanti/builtin/profiler/sampling.lua
 share/luanti/builtin/settingtypes.txt
+share/luanti/builtin/sscsm_client/init.lua
+share/luanti/builtin/sscsm_client/register.lua
+share/luanti/builtin/sscsm_server/init.lua
 share/luanti/client/shaders/3d_interlaced_merge/opengl_fragment.glsl
 share/luanti/client/shaders/3d_interlaced_merge/opengl_vertex.glsl
 share/luanti/client/shaders/Irrlicht/OneTextureBlend.fsh

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2026/04/15 01:48:45 ktnb Exp $
+# $NetBSD: Makefile,v 1.18 2026/05/11 13:55:42 ktnb Exp $
 
-DISTNAME=	luanti-5.15.2
+DISTNAME=	luanti-5.16.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=luanti-org/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
