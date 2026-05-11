@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2025/07/26 07:28:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.21 2026/05/11 09:55:58 taca Exp $
 bin/cmew
 bin/incm
 bin/mew-pinentry
@@ -62,6 +62,8 @@ ${EMACS_LISPPREFIX}/mew/mew-func.el
 ${EMACS_LISPPREFIX}/mew/mew-func.elc
 ${EMACS_LISPPREFIX}/mew/mew-gemacs.el
 ${EMACS_LISPPREFIX}/mew/mew-gemacs.elc
+${EMACS_LISPPREFIX}/mew/mew-gnutls.el
+${EMACS_LISPPREFIX}/mew/mew-gnutls.elc
 ${EMACS_LISPPREFIX}/mew/mew-header.el
 ${EMACS_LISPPREFIX}/mew/mew-header.elc
 ${EMACS_LISPPREFIX}/mew/mew-highlight.el
@@ -122,8 +124,8 @@ ${EMACS_LISPPREFIX}/mew/mew-sort.el
 ${EMACS_LISPPREFIX}/mew/mew-sort.elc
 ${EMACS_LISPPREFIX}/mew/mew-ssh.el
 ${EMACS_LISPPREFIX}/mew/mew-ssh.elc
-${EMACS_LISPPREFIX}/mew/mew-ssl.el
-${EMACS_LISPPREFIX}/mew/mew-ssl.elc
+${EMACS_LISPPREFIX}/mew/mew-stunnel.el
+${EMACS_LISPPREFIX}/mew/mew-stunnel.elc
 ${EMACS_LISPPREFIX}/mew/mew-summary.el
 ${EMACS_LISPPREFIX}/mew/mew-summary.elc
 ${EMACS_LISPPREFIX}/mew/mew-summary2.el
@@ -149,7 +151,6 @@ ${EMACS_LISPPREFIX}/mew/mew-varsx.elc
 ${EMACS_LISPPREFIX}/mew/mew-virtual.el
 ${EMACS_LISPPREFIX}/mew/mew-virtual.elc
 ${EMACS_LISPPREFIX}/mew/mew-win32.el
-${EMACS_LISPPREFIX}/mew/mew-win32.elc
 ${EMACS_LISPPREFIX}/mew/mew.el
 ${EMACS_LISPPREFIX}/mew/mew.elc
 share/mew/Mew.img
