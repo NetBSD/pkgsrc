@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2966 2026/05/11 05:42:20 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2967 2026/05/11 05:56:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4507,3 +4507,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-hypothesis to 6.152.5 [adam 2026-05-11]
 	Updated devel/py-coverage to 7.14.0 [adam 2026-05-11]
 	Updated textproc/py-textile to 4.0.4 [adam 2026-05-11]
+	Updated databases/timescaledb-tune to 0.19.0 [adam 2026-05-11]
+	Updated net/rclone to 1.74.1 [adam 2026-05-11]
