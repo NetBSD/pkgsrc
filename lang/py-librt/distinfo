@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2026/05/10 08:38:04 adam Exp $
+$NetBSD: distinfo,v 1.6 2026/05/11 05:27:08 adam Exp $
 
-BLAKE2s (librt-0.10.0.tar.gz) = 0e455e3aaa39dffd9722d02aa1c6503317a28eaac995512dcea32e1108a1b44f
-SHA512 (librt-0.10.0.tar.gz) = 0cb251c8595d711b90434b7f6bb95b577cf3231bf72d7de75c98db47326dbbdb193cdf69c5bcd165282483c211738ad982bdda2538b62e7ed2eb1de8025f413d
-Size (librt-0.10.0.tar.gz) = 191799 bytes
+BLAKE2s (librt-0.11.0.tar.gz) = c30f86fcd2cd25e9d45bb9171448a189e26ec73c5aec93f7b4f0b284ad31d0ad
+SHA512 (librt-0.11.0.tar.gz) = 5575adcdbe88da23eebb771a33597948cc8dd6f7fc36016daf87f89186bdc02cae572f9e46d3fbdba15d77fb2ee4e130ea06d2ff643227dafcacf77184cb7755
+Size (librt-0.11.0.tar.gz) = 200139 bytes
