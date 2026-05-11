@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2025/04/14 12:56:30 adam Exp $
+# $NetBSD: Makefile,v 1.31 2026/05/11 05:41:46 adam Exp $
 
-DISTNAME=	textile-4.0.3
+DISTNAME=	textile-4.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/textile/}
 
@@ -19,9 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} pytextile pytextile-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	pytextile
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
