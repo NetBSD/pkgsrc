@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2026/05/08 08:24:53 adam Exp $
+$NetBSD: distinfo,v 1.23 2026/05/11 05:22:51 adam Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -258,15 +258,15 @@ Size (clap_lex-1.1.0.crate) = 13470 bytes
 BLAKE2s (cmake-0.1.57.crate) = cdcbf97fd5e24546681a1f2c904bbd9cdf84caef0c4fdba0303c395e12b16f0b
 SHA512 (cmake-0.1.57.crate) = 34ff920c0f866bcc5fa8ba385b1945629c9174b6f3b006ada9f73fef945f67111f17342304ff74f69630bba4ff7450a402e1017a99fabc1296d276df4e4b633b
 Size (cmake-0.1.57.crate) = 20376 bytes
-BLAKE2s (codspeed-4.5.0.crate) = bf4cfd8b4d4bfa986bcb0e156b3104ac95123574eb8893619ffd2baef554d371
-SHA512 (codspeed-4.5.0.crate) = a8ea197186dcaa3f98b5ec8e828123e3212c9c24731c89008612353a76da19d62c5da4b15d3c56cb045480b3a318810bf00281fa8c7b8355809af502d250e2f7
-Size (codspeed-4.5.0.crate) = 402146 bytes
-BLAKE2s (codspeed-criterion-compat-4.5.0.crate) = acd110adfc2aa624468d9d435338a3843c9b014ca41dee5c7f5a46e6a66e6036
-SHA512 (codspeed-criterion-compat-4.5.0.crate) = d0194fdb0b5cebffc5a107c05dc1bb51f91c3c7e169229acbaddc35d06ef368bd474529c1246a836a53a88e3f88c83de0798df6134aebeb106bae81d805053ed
-Size (codspeed-criterion-compat-4.5.0.crate) = 22711 bytes
-BLAKE2s (codspeed-criterion-compat-walltime-4.5.0.crate) = e4340ce60a6090e6db97c5eadf925570f947e41a223b42fc0639fcd5d3cd5894
-SHA512 (codspeed-criterion-compat-walltime-4.5.0.crate) = 3b302009b14bff7433879b8387eff2b59ab343ecbba971a667ddd148d9c51c3830d226ef565a64ee48d2db2f6c5a2287560b2b0b0ff32f5da10424d57a5de5bc
-Size (codspeed-criterion-compat-walltime-4.5.0.crate) = 123866 bytes
+BLAKE2s (codspeed-4.6.0.crate) = b45c8ee31e109bc460076a58c01de79981bd203ac7a9214b424bb0f4829c9856
+SHA512 (codspeed-4.6.0.crate) = f6303958d1dec231b4e48a32d6d1ee3ff6b4b419ede54fdee051aecf543e483ae205b2b5fee685f2e1f67e8c71ded68df26c7c7f6b04d37cef0d014992cb6425
+Size (codspeed-4.6.0.crate) = 420484 bytes
+BLAKE2s (codspeed-criterion-compat-4.6.0.crate) = 4a83de9deadb97182a673a9e910dc2fb10c7c123fb3f565705585395bd4fc174
+SHA512 (codspeed-criterion-compat-4.6.0.crate) = 6f60a9ce30abbb7adf82f0194420ce228df4cb809d985e116911ece05a96fd898731d7acc8c985bcd899cb1a5db5fc79de98c02a991ca15dce1124e9fc3dbcc0
+Size (codspeed-criterion-compat-4.6.0.crate) = 22716 bytes
+BLAKE2s (codspeed-criterion-compat-walltime-4.6.0.crate) = a00d9452dcc37a2689d41e164e31e46fe5c9b016ed1914d115bad547080a6f37
+SHA512 (codspeed-criterion-compat-walltime-4.6.0.crate) = 1964f89066a5b5efe86598ed14f94790d4349bf639f50de84062716819dc95b05a990ae6a41082a98ed6512c1799706d2d8a2e74b9497a286ffd9af80e1c97c7
+Size (codspeed-criterion-compat-walltime-4.6.0.crate) = 123869 bytes
 BLAKE2s (color_quant-1.1.0.crate) = 1aecde4105fac2b5caed5200763780f18edfcf9ddcbad72d63b41e149d1885ea
 SHA512 (color_quant-1.1.0.crate) = 690c928bda4b7b57425f38ea68ac89cde2473b7a91b7e62c04a8f2c5a0fa3505e26b065d48b7ad0a8bb491f92f600f896fefdad3ce0e86e43cbf4f9a89e94201
 Size (color_quant-1.1.0.crate) = 6649 bytes
@@ -1734,9 +1734,9 @@ Size (utf8parse-0.2.2.crate) = 13499 bytes
 BLAKE2s (uuid-1.23.0.crate) = 9df040bc979803772fcc6474ab5dbd7133b6a90118e124da3c63be4a03542d0a
 SHA512 (uuid-1.23.0.crate) = 60e476dcbc407a0447f362ee019abb128c0441503e0adacdcac5685ecc16aa680faa575b25fcce147e9c49bfb5b8fa04964a25c5d7e4e9870e0078bf8f18fabf
 Size (uuid-1.23.0.crate) = 63006 bytes
-BLAKE2s (uv_build-0.11.11.tar.gz) = f2191f949ad6fc288a27f3c8ce509bebce1ae647af13fe2f145133e23838a8d9
-SHA512 (uv_build-0.11.11.tar.gz) = ed612caee074c756c8ab242e3e0bf64e76dfddfefa383c3587b675b07e61621504ccaea653733c27ef2dd9b8bef1aa6d21ba1b9b39102d49c9ec3e9d7d13e758
-Size (uv_build-0.11.11.tar.gz) = 376722 bytes
+BLAKE2s (uv_build-0.11.13.tar.gz) = 0574266266d40ee8072aca28c9c8b5138ef86e8e51aaec663650bf0cf8cfd66b
+SHA512 (uv_build-0.11.13.tar.gz) = d6e2986b16d0dc78a9e03261d70a847186672fbc737be54d6263c2b7992d39561817c2e97e2cd82d64349ed402bbc8b907bd9782ff104988fba9f32504dc9d51
+Size (uv_build-0.11.13.tar.gz) = 377955 bytes
 BLAKE2s (valuable-0.1.1.crate) = df7602da20aa0212438759173532cf82c56ba05307e036b22bfddb318e2f82b7
 SHA512 (valuable-0.1.1.crate) = d8a4bffdc8a166d1ee11b87dd91cd68e5c898916b14db7039ad2faaad34f4bfef76f3fc3d17d6e7bf05e495778f7c9d5223fbf45331bd114f93fb6ec950eadbf
 Size (valuable-0.1.1.crate) = 28679 bytes
