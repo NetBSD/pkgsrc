@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.402 2026/05/10 04:12:37 thorpej Exp $
+# $NetBSD: Makefile,v 1.403 2026/05/11 14:01:35 jakllsch Exp $
 
 .include "../../emulators/qemu/version.mk"
 
@@ -131,7 +131,7 @@ UE_ARCHS+=		alpha arm armeb
 UE_ARCHS+=		hexagon hppa
 UE_ARCHS+=		i386
 UE_ARCHS+=		loongarch64
-UE_ARCHS+=		m68k microblaze
+UE_ARCHS+=		m68k microblaze microblazeel
 UE_ARCHS+=		mips mips64 mips64el mipsel mipsn32 mipsn32el
 UE_ARCHS+=		or1k ppc ppc64 ppc64le
 UE_ARCHS+=		riscv32 riscv64
