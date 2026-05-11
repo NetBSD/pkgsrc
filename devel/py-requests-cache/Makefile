@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/03/05 07:20:48 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/05/11 05:31:08 adam Exp $
 
-DISTNAME=	requests_cache-1.3.1
+DISTNAME=	requests_cache-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests-cache/}
@@ -19,14 +19,16 @@ DEPENDS+=	${PYPKGPREFIX}-url-normalize>=2.0:../../www/py-url-normalize
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.25.5:../../www/py-urllib3
 
 # Optional dependencies
+# dynamodb
 DEPENDS+=	${PYPKGPREFIX}-boto3>=1.15:../../net/py-boto3
 DEPENDS+=	${PYPKGPREFIX}-botocore>=1.18:../../net/py-botocore
+# mongodb
 DEPENDS+=	${PYPKGPREFIX}-mongo>=3:../../databases/py-mongo
+# redis
 DEPENDS+=	${PYPKGPREFIX}-redis>=3:../../databases/py-redis
-
-#DEPENDS+=	${PYPKGPREFIX}-bson>=0.5:../../wip/py-bson
+# security
 DEPENDS+=	${PYPKGPREFIX}-itsdangerous>=2.0:../../security/py-itsdangerous
-DEPENDS+=	${PYPKGPREFIX}-ujson>=5.4:../../textproc/py-ujson
+# yaml
 DEPENDS+=	${PYPKGPREFIX}-yaml>=6.0.1:../../textproc/py-yaml
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7.2:../../devel/py-coverage
