@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/04/10 04:06:21 adam Exp $
+# $NetBSD: Makefile,v 1.7 2026/05/12 06:25:34 adam Exp $
 
-DISTNAME=	pytest_subprocess-1.5.4
+DISTNAME=	pytest_subprocess-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-subprocess/}
