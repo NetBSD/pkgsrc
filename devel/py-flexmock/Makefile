@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/09/28 19:26:16 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/05/12 05:57:16 adam Exp $
 
-DISTNAME=	flexmock-0.12.2
+DISTNAME=	flexmock-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flexmock/}
 
