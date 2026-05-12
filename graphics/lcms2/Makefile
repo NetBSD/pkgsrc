@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2026/04/30 13:16:04 gdt Exp $
+# $NetBSD: Makefile,v 1.26 2026/05/12 16:09:35 gdt Exp $
 
-DISTNAME=	lcms2-2.19
+DISTNAME=	lcms2-2.19.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lcms/}
 
@@ -20,6 +20,10 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	lcms2.pc.in
 TEST_TARGET=		check
+
+# Don't switch to cmake yet as upstream has no declared it to be the
+# official build system.
+#.include "../../devel/cmake/build.mk"
 
 # lcms does not need zlib, but will look for it and link it to tifficc
 # if present.  Therefore, we don't enjoin lcms from finding zlib, but
