@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2996 2026/05/12 16:09:41 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.2997 2026/05/12 18:06:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4570,3 +4570,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added lang/py-ast-serialize version 0.3.0 [adam 2026-05-12]
 	Updated lang/py-mypy to 2.1.0 [adam 2026-05-12]
 	Updated graphics/lcms2 to 2.19.1 [gdt 2026-05-12]
+	Updated games/greed to 5.0 [wiz 2026-05-12]
