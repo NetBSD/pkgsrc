@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2990 2026/05/12 07:57:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2991 2026/05/12 08:13:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4562,3 +4562,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/p5-HTTP-Tiny to 0.092 [wiz 2026-05-12]
 	Updated converters/py-arabic-reshaper to 3.0.1 [adam 2026-05-12]
 	Updated misc/py-installer to 1.0.1 [adam 2026-05-12]
+	Updated lang/py-cxxheaderparser to 1.7.1 [adam 2026-05-12]
+	Updated net/py-pamqp to 4.0.0 [adam 2026-05-12]
