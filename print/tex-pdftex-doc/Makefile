@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2026/04/03 06:08:20 markd Exp $
+# $NetBSD: Makefile,v 1.31 2026/05/12 13:25:37 mef Exp $
 
 DISTNAME=	pdftex.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2026
@@ -13,6 +13,7 @@ TEXLIVE_IGNORE_PATTERNS=	texmf-dist/doc/man
 
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	texmf-dist/doc/pdftex/manual/syntaxform.pl
+REPLACE_BASH+=	texmf-dist/doc/pdftex/tests/38-interword-space-at-font-switch/postpdf.sh
 
 CHECK_INTERPRETER_SKIP+=	share/texmf-dist/doc/pdftex/tests/38-interword-space-at-font-switch/compare_pdfs.rb
 
