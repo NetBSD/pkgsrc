@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2026/04/26 21:01:14 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2026/05/12 09:59:22 adam Exp $
 
 DISTNAME=	ruff-0.15.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Extremely fast Python linter, written in Rust
 LICENSE=	mit
 
 USE_LANGUAGES=	c c++
-RUST_REQ=	1.92
+RUST_REQ=	1.93
 
 # for tikv-jemalloc-sys
 USE_TOOLS+=	gmake
@@ -20,10 +20,10 @@ CARGO_GITHUB_CRATES+=	astral-sh lsp-types e15db0593f0ecbbd80599c3f5880e4bf5da1ca
 
 MAKE_ENV+=	CARGO_NET_OFFLINE=true
 
+PY_RENAME_BINARIES=	ruff
+
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/ruff/_find_ruff.py.orig
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} ruff ruff-${PYVERSSUFFIX} || ${TRUE}
 
 .include "cargo-depends.mk"
 
