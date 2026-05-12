@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2991 2026/05/12 08:13:50 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2992 2026/05/12 09:16:31 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4564,3 +4564,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-installer to 1.0.1 [adam 2026-05-12]
 	Updated lang/py-cxxheaderparser to 1.7.1 [adam 2026-05-12]
 	Updated net/py-pamqp to 4.0.0 [adam 2026-05-12]
+	Updated sysutils/packer to 1.15.3 [jperkin 2026-05-12]
