@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2025/04/12 09:39:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/05/12 05:26:41 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.rst
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/cachelib/__init__.py
 ${PYSITELIB}/cachelib/__init__.pyc
 ${PYSITELIB}/cachelib/__init__.pyo
@@ -26,6 +25,9 @@ ${PYSITELIB}/cachelib/py.typed
 ${PYSITELIB}/cachelib/redis.py
 ${PYSITELIB}/cachelib/redis.pyc
 ${PYSITELIB}/cachelib/redis.pyo
+${PYSITELIB}/cachelib/redis_base.py
+${PYSITELIB}/cachelib/redis_base.pyc
+${PYSITELIB}/cachelib/redis_base.pyo
 ${PYSITELIB}/cachelib/serializers.py
 ${PYSITELIB}/cachelib/serializers.pyc
 ${PYSITELIB}/cachelib/serializers.pyo
@@ -35,3 +37,6 @@ ${PYSITELIB}/cachelib/simple.pyo
 ${PYSITELIB}/cachelib/uwsgi.py
 ${PYSITELIB}/cachelib/uwsgi.pyc
 ${PYSITELIB}/cachelib/uwsgi.pyo
+${PYSITELIB}/cachelib/valkey.py
+${PYSITELIB}/cachelib/valkey.pyc
+${PYSITELIB}/cachelib/valkey.pyo
