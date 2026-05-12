@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.144 2026/05/08 10:03:20 adam Exp $
+# $NetBSD: Makefile,v 1.145 2026/05/12 22:02:05 wiz Exp $
 
 DISTNAME=	cryptography-48.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -32,5 +32,6 @@ pre-build:
 .include "../../devel/py-maturin/tool.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../lang/rust/cargo.mk"
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=3.0
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
