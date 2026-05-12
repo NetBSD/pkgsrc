@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2026/03/30 20:48:55 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/05/12 18:06:06 wiz Exp $
 
-DISTNAME=		greed-4.5
-CATEGORIES=		games
-MASTER_SITES=		http://www.catb.org/~esr/greed/
+DISTNAME=	greed-5.0
+CATEGORIES=	games
+MASTER_SITES=	http://www.catb.org/~esr/greed/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.catb.org/~esr/greed/
-COMMENT=		Strategy game: eat as much as possible
-LICENSE=		2-clause-bsd
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.catb.org/~esr/greed/
+COMMENT=	Strategy game: eat as much as possible
+LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=		${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciidoctor
 
@@ -17,12 +17,9 @@ MAKE_FLAGS+=		PREFIX=${PREFIX}
 MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=		SFILE=${PREFIX}/share/games/greed.hs
 
-SUBST_CLASSES+=		ad
-SUBST_SED.ad+=		-e "s,asciidoctor,asciidoctor${RUBY_SUFFIX},"
-SUBST_STAGE.ad=		pre-build
-SUBST_FILES.ad+=	Makefile
-SUBST_MESSAGE.ad=	Fixing asciidoctor name.
+pre-configure:
+	${LN} -s ${PREFIX}/bin/asciidoctor${RUBY_SUFFIX} ${TOOLS_DIR}/bin/asciidoctor
 
 .include "../../lang/ruby/rubyversion.mk"
-.include "../../mk/curses.buildlink3.mk"
+.include "../../lang/rust/rust.mk"
 .include "../../mk/bsd.pkg.mk"
