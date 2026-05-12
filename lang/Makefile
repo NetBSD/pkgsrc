@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.786 2026/04/26 08:46:05 adam Exp $
+# $NetBSD: Makefile,v 1.787 2026/05/12 10:40:16 adam Exp $
 #
 
 COMMENT=	Programming languages
@@ -259,6 +259,7 @@ SUBDIR+=	pnut
 SUBDIR+=	polyml
 SUBDIR+=	purescript
 SUBDIR+=	py-annotated-types
+SUBDIR+=	py-ast-serialize
 SUBDIR+=	py-asttokens
 SUBDIR+=	py-basicproperty
 SUBDIR+=	py-byterun
