@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.40 2025/07/04 08:48:44 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/05/12 18:35:42 wiz Exp $
 
-DISTNAME=	YAML-Syck-1.34
+DISTNAME=	YAML-Syck-1.45
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	textproc perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=YAML/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TO/TODDR/}
 
 MAINTAINER=	bad@NetBSD.org
-HOMEPAGE=	https://metacpan.org/release/AUDREYT/YAML-Syck-1.07
+HOMEPAGE=	https://metacpan.org/pod/YAML::Syck
 COMMENT=	Fast, lightweight YAML loader and dumper
 LICENSE=	mit AND 2-clause-bsd
 
