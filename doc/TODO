@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27251 2026/05/12 06:52:38 wiz Exp $
+$NetBSD: TODO,v 1.27252 2026/05/12 14:00:02 taca Exp $
 
 Suggested new packages
 ======================
@@ -398,8 +398,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-ncdf-1.6.9
 	o SQLiteCpp-2.5.0
 	o Sigil-2.7.6
-	o SOGo-5.12.7
-	o SOPE-5.12.7
+	o SOGo-5.12.8
+	o SOPE-5.12.8
 	o TiffIO-140a
 	o aarch64-none-elf-binutils-2.45
 	o aarch64-none-elf-gcc-14.3.0
@@ -564,8 +564,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dnsbl-milter-6.78
 	o doas-6.4 [project migrated to Codeberg]
 	o dotclear-2.53
-	o dovecot-2.4.2 [CVE-2025-30189]
-	o dovecot2-pigeonhole-2.4.2 [needs dovecot2 2.4]
+	o dovecot-2.4.4 [CVE-2025-30189]
+	o dovecot2-pigeonhole-2.4.4 [needs dovecot2 2.4]
 	o drawpile-2.1.20
 	o drivel-3.0.5
 	o drupal-10.0.5
