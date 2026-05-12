@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2026/05/10 13:27:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.45 2026/05/12 10:53:50 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -1325,6 +1325,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/zoneinfo/_tzpath.pyi
 ${PYSITELIB}/mypy/typeshed/stubs/librt/librt/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stubs/librt/librt/base64.pyi
 ${PYSITELIB}/mypy/typeshed/stubs/librt/librt/internal.pyi
+${PYSITELIB}/mypy/typeshed/stubs/librt/librt/random.pyi
 ${PYSITELIB}/mypy/typeshed/stubs/librt/librt/strings.pyi
 ${PYSITELIB}/mypy/typeshed/stubs/librt/librt/time.pyi
 ${PYSITELIB}/mypy/typeshed/stubs/librt/librt/vecs.pyi
@@ -1617,6 +1618,10 @@ ${PYSITELIB}/mypyc/lib-rt/mypyc_util.h
 ${PYSITELIB}/mypyc/lib-rt/pythoncapi_compat.h
 ${PYSITELIB}/mypyc/lib-rt/pythonsupport.c
 ${PYSITELIB}/mypyc/lib-rt/pythonsupport.h
+${PYSITELIB}/mypyc/lib-rt/random/librt_random.c
+${PYSITELIB}/mypyc/lib-rt/random/librt_random.h
+${PYSITELIB}/mypyc/lib-rt/random/librt_random_api.c
+${PYSITELIB}/mypyc/lib-rt/random/librt_random_api.h
 ${PYSITELIB}/mypyc/lib-rt/set_ops.c
 ${PYSITELIB}/mypyc/lib-rt/static_data.c
 ${PYSITELIB}/mypyc/lib-rt/static_data.h
@@ -1696,6 +1701,9 @@ ${PYSITELIB}/mypyc/primitives/generic_ops.pyo
 ${PYSITELIB}/mypyc/primitives/int_ops.py
 ${PYSITELIB}/mypyc/primitives/int_ops.pyc
 ${PYSITELIB}/mypyc/primitives/int_ops.pyo
+${PYSITELIB}/mypyc/primitives/librt_random_ops.py
+${PYSITELIB}/mypyc/primitives/librt_random_ops.pyc
+${PYSITELIB}/mypyc/primitives/librt_random_ops.pyo
 ${PYSITELIB}/mypyc/primitives/librt_strings_ops.py
 ${PYSITELIB}/mypyc/primitives/librt_strings_ops.pyc
 ${PYSITELIB}/mypyc/primitives/librt_strings_ops.pyo
@@ -1772,6 +1780,9 @@ ${PYSITELIB}/mypyc/test/test_emitclass.pyo
 ${PYSITELIB}/mypyc/test/test_emitfunc.py
 ${PYSITELIB}/mypyc/test/test_emitfunc.pyc
 ${PYSITELIB}/mypyc/test/test_emitfunc.pyo
+${PYSITELIB}/mypyc/test/test_emitmodule.py
+${PYSITELIB}/mypyc/test/test_emitmodule.pyc
+${PYSITELIB}/mypyc/test/test_emitmodule.pyo
 ${PYSITELIB}/mypyc/test/test_emitwrapper.py
 ${PYSITELIB}/mypyc/test/test_emitwrapper.pyc
 ${PYSITELIB}/mypyc/test/test_emitwrapper.pyo
