@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2025/07/22 10:54:12 adam Exp $
+$NetBSD: distinfo,v 1.19 2026/05/12 09:29:53 adam Exp $
 
-BLAKE2s (tempora-5.8.1.tar.gz) = c062afce476c4c3517397840a83bedb076e4d2b0e6c0a25a60e35559ae463b2d
-SHA512 (tempora-5.8.1.tar.gz) = d53c44f613c6897b3fee09a4e127e261bfc1b63373b0465fce6d8cc21f9fd38a45c1c32ed33acc23a32f1959ca1b88f9377af4b8267ede2a6504a64e208f9d15
-Size (tempora-5.8.1.tar.gz) = 23072 bytes
+BLAKE2s (tempora-5.9.0.tar.gz) = 63ce20381a5d936a45f1745f5ab52a5704e9d37061474e87e137e0a1bba8937e
+SHA512 (tempora-5.9.0.tar.gz) = f515a35345968b765d7bd61d6828d9e1761d2b9ab8915015804597e9f4204942da3801de01e80ab1ed93be604bd4011f650a8bd970f09c14abad3e4af8e586eb
+Size (tempora-5.9.0.tar.gz) = 24490 bytes
