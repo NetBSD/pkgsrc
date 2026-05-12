@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.19 2026/05/12 19:22:29 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.20 2026/05/12 19:22:49 bsiegert Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -191,6 +191,7 @@ lang/php83: security fix
 
 Pullup ticket #7109 - requested by taca
 lang/php82: security fix
+
 Pullup ticket #7110 - requested by taca
 graphics/lcms2: security fix
 
