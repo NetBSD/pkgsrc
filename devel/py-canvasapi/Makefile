@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2025/11/16 11:58:11 adam Exp $
+# $NetBSD: Makefile,v 1.7 2026/05/12 05:53:52 adam Exp $
 
-DISTNAME=	canvasapi-3.4.0
+DISTNAME=	canvasapi-3.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/canvasapi/}
