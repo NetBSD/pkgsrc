@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.21 2026/05/12 05:43:58 wiz Exp $
+$NetBSD: distinfo,v 1.22 2026/05/12 06:52:27 wiz Exp $
 
-BLAKE2s (kstars-3.8.1.tar.xz) = 00ec270d78e5ede66417ba9196c47f267d34091c667efac30cf9d724fe2914bb
-SHA512 (kstars-3.8.1.tar.xz) = c8d564c6ddcb36cd478759045545bc9ac8d31c23277f2d99f779028d086a2def28eb684f35db642624ccb6db5c183fa701f3d085fb773f0c0be98cf29a8d7cdc
-Size (kstars-3.8.1.tar.xz) = 51894280 bytes
+BLAKE2s (kstars-3.8.2.tar.xz) = 9d1b54c2e6890ba2a000f7ae86faab76b51f2918686885576c3c7737c98a972c
+SHA512 (kstars-3.8.2.tar.xz) = 81f468d779055f7a38b4d6e204f0e51663a845197d7ab31a2e7343c8885494398628da2627794082e107d4472a4370a9447956beaddbbbb7055fc67cb9bd56a3
+Size (kstars-3.8.2.tar.xz) = 52049284 bytes
 SHA1 (patch-kstars_ekos_focus_curvefit.cpp) = 6b90358ab6e717efff2075cf73e6f91fd7783171
 SHA1 (patch-kstars_indi_servermanager.cpp) = 6d59d0d9703d77f375f69ccf4da8d844cfafef6a
+SHA1 (patch-kstars_skyobjects_mosaictiles.cpp) = 84180d22b6bbe8c4a70285c24df9e375dbb2cbee
 SHA1 (patch-kstars_skyqpainter.cpp) = ce0ad0119feb333faf05790b81159883fe2424f4
