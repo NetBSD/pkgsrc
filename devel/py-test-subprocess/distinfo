@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/04/10 04:06:21 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/05/12 06:25:34 adam Exp $
 
-BLAKE2s (pytest_subprocess-1.5.4.tar.gz) = 9b79f5b3e073d9a322e79a8c0fa3a059bcfbc05d89b3090b5700258f6432b8b2
-SHA512 (pytest_subprocess-1.5.4.tar.gz) = 3cc2acf6e44c230eaf46ab8dc1d541ac5911bf76b9bcbee39ac335496cd0f2081970e35d0d5c969b4e9236468301638cc9d2220c89acc85d2d82874e5155778b
-Size (pytest_subprocess-1.5.4.tar.gz) = 44908 bytes
+BLAKE2s (pytest_subprocess-1.6.0.tar.gz) = a143fe23aaf6af4be38d168fbc4af32dfc30481c6ce7d2acbd9a4fc3a040fa5e
+SHA512 (pytest_subprocess-1.6.0.tar.gz) = eebcadbb4e5de4ddf1c20e3e231b344dc29065aecd3d00174b72a7410dfaedf966b48b94aa34f274334a52719fd407121dfd8c16aa990916757fe69fe8539853
+Size (pytest_subprocess-1.6.0.tar.gz) = 47910 bytes
