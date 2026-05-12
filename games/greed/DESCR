@@ -1,2 +1,6 @@
-The strategy game of Greed. Try to eat as much as possible of the
-board before munching yourself into a corner.
+Eat as much as you can before munching yourself into a corner.
+
+When you move in a direction, you erase N grid squares in that
+direction, N being the first number in that direction and your
+score for the move. You cannot move onto a space you have already
+eaten, and the game ends when you cannot move.
