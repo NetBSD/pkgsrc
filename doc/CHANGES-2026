@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2994 2026/05/12 09:44:08 jperkin Exp $
+$NetBSD: CHANGES-2026,v 1.2995 2026/05/12 10:54:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4567,3 +4567,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/packer to 1.9.5nb22 [jperkin 2026-05-12]
 	Updated print/py-reportlab to 4.5.0 [adam 2026-05-12]
 	Updated time/py-tempora to 5.9.0 [adam 2026-05-12]
+	Added lang/py-ast-serialize version 0.3.0 [adam 2026-05-12]
+	Updated lang/py-mypy to 2.1.0 [adam 2026-05-12]
