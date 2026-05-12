@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2999 2026/05/12 18:34:01 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3000 2026/05/12 18:35:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4573,3 +4573,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/greed to 5.0 [wiz 2026-05-12]
 	Updated www/cgit to 1.3nb1 [wiz 2026-05-12]
 	Updated www/p5-libwww to 6.83 [wiz 2026-05-12]
+	Updated textproc/p5-YAML-Syck to 1.45 [wiz 2026-05-12]
