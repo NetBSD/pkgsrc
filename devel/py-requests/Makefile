@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2026/03/31 04:33:45 adam Exp $
+# $NetBSD: Makefile,v 1.71 2026/05/12 06:22:39 adam Exp $
 
-DISTNAME=	requests-2.33.1
+DISTNAME=	requests-2.34.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests/}

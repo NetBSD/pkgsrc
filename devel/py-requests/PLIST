@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2026/03/29 18:34:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/05/12 06:22:39 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -14,6 +14,9 @@ ${PYSITELIB}/requests/__version__.pyo
 ${PYSITELIB}/requests/_internal_utils.py
 ${PYSITELIB}/requests/_internal_utils.pyc
 ${PYSITELIB}/requests/_internal_utils.pyo
+${PYSITELIB}/requests/_types.py
+${PYSITELIB}/requests/_types.pyc
+${PYSITELIB}/requests/_types.pyo
 ${PYSITELIB}/requests/adapters.py
 ${PYSITELIB}/requests/adapters.pyc
 ${PYSITELIB}/requests/adapters.pyo
@@ -47,6 +50,7 @@ ${PYSITELIB}/requests/models.pyo
 ${PYSITELIB}/requests/packages.py
 ${PYSITELIB}/requests/packages.pyc
 ${PYSITELIB}/requests/packages.pyo
+${PYSITELIB}/requests/py.typed
 ${PYSITELIB}/requests/sessions.py
 ${PYSITELIB}/requests/sessions.pyc
 ${PYSITELIB}/requests/sessions.pyo
