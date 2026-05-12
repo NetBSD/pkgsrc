@@ -1,10 +1,10 @@
-$NetBSD: patch-popupwin.c,v 1.3 2025/12/03 22:52:01 morr Exp $
+$NetBSD: patch-popupwin.c,v 1.3.4.1 2026/05/12 19:22:01 bsiegert Exp $
 
 Fix Tiger build.
 
---- src/popupwin.c.orig	2025-12-03 21:01:37.000000000 +0000
+--- src/popupwin.c.orig	2026-05-06 18:17:00.000000000 +0000
 +++ src/popupwin.c
-@@ -4774,7 +4774,9 @@ popup_hide_info(void)
+@@ -5892,7 +5892,9 @@ popup_hide_info(void)
  
      if (wp != NULL)
      {
@@ -12,9 +12,9 @@ Fix Tiger build.
  	popup_on_cmdline = wp->w_popup_flags & POPF_ON_CMDLINE;
 +#endif
  	popup_hide(wp);
-     }
- }
-@@ -4798,7 +4800,11 @@ popup_close_info(void)
+ 	if (State & MODE_CMDLINE)
+ 	    // Cmdline mode doesn't normally call update_screen(), so it's
+@@ -5920,7 +5922,11 @@ popup_close_info(void)
      int
  popup_overlaps_cmdline(void)
  {
