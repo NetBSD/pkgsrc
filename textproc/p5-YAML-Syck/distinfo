@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 11:22:55 nia Exp $
+$NetBSD: distinfo,v 1.23 2026/05/12 18:35:42 wiz Exp $
 
-BLAKE2s (YAML-Syck-1.34.tar.gz) = 7aa5335d535baff1f786ab7c0df191076d091ee24f06afd6991d7713f0e537ea
-SHA512 (YAML-Syck-1.34.tar.gz) = 18288f54026823e84b2d642d880d7758c5d95ba4b56d3fcf758efe59303ea71a49822d7c000b4c7b0629eccd4dcf3c940bc1c26f2b2ef89e4fdba78a35c04760
-Size (YAML-Syck-1.34.tar.gz) = 166886 bytes
+BLAKE2s (YAML-Syck-1.45.tar.gz) = 168d225b3aab55af244c876c8c2c306c07ab44031ba7c5525ffa260bcead35f4
+SHA512 (YAML-Syck-1.45.tar.gz) = ed719ef609c1a3f938cee8e03b41a989805d7681ba7e44bc6326162c285ff542fce77f3f3ea3ba6e576ad1a9bfa762b7af8cf009041ed312f5bd01b5635d125a
+Size (YAML-Syck-1.45.tar.gz) = 264328 bytes
