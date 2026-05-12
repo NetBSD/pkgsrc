@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.314.2.6 2026/05/09 16:52:07 bsiegert Exp $
+# $NetBSD: rubyversion.mk,v 1.314.2.7 2026/05/12 18:38:42 bsiegert Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -474,7 +474,7 @@ RUBY_CGI_VER=			0.4.2
 RUBY_DELEGATE_VER=		0.4.0
 RUBY_DID_YOU_MEAN_VER=		2.0.0
 RUBY_ENGLISH_VER=		0.8.0
-RUBY_ERB_VER=			4.0.4
+RUBY_ERB_VER=			4.0.4.1
 RUBY_ERROR_HIGHLIGHT_VER=	0.7.0
 RUBY_FILEUTILS_VER=		1.7.3
 RUBY_FIND_VER=			0.2.0
