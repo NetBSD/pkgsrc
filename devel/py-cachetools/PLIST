@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/06/07 21:38:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/05/12 05:28:20 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -6,6 +6,7 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/cachetools/__init__.py
 ${PYSITELIB}/cachetools/__init__.pyc
+${PYSITELIB}/cachetools/__init__.pyi
 ${PYSITELIB}/cachetools/__init__.pyo
 ${PYSITELIB}/cachetools/_cached.py
 ${PYSITELIB}/cachetools/_cached.pyc
@@ -15,7 +16,10 @@ ${PYSITELIB}/cachetools/_cachedmethod.pyc
 ${PYSITELIB}/cachetools/_cachedmethod.pyo
 ${PYSITELIB}/cachetools/func.py
 ${PYSITELIB}/cachetools/func.pyc
+${PYSITELIB}/cachetools/func.pyi
 ${PYSITELIB}/cachetools/func.pyo
 ${PYSITELIB}/cachetools/keys.py
 ${PYSITELIB}/cachetools/keys.pyc
+${PYSITELIB}/cachetools/keys.pyi
 ${PYSITELIB}/cachetools/keys.pyo
+${PYSITELIB}/cachetools/py.typed
