@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.2995 2026/05/12 10:54:10 adam Exp $
+$NetBSD: CHANGES-2026,v 1.2996 2026/05/12 16:09:41 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4569,3 +4569,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/py-tempora to 5.9.0 [adam 2026-05-12]
 	Added lang/py-ast-serialize version 0.3.0 [adam 2026-05-12]
 	Updated lang/py-mypy to 2.1.0 [adam 2026-05-12]
+	Updated graphics/lcms2 to 2.19.1 [gdt 2026-05-12]
