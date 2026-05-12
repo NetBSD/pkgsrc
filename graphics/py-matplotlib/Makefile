@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.112 2025/12/11 09:43:09 adam Exp $
+# $NetBSD: Makefile,v 1.113 2026/05/12 05:10:14 adam Exp $
 
-DISTNAME=	matplotlib-3.10.8
+DISTNAME=	matplotlib-3.10.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matplotlib/}
@@ -14,14 +14,13 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-certifi>=2020.06.20:../../security/py-certifi
 TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0:../../devel/py-meson_python
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=8.0:../../graphics/py-Pillow
-#DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-contourpy>=1.0.1:../../graphics/py-contourpy
 DEPENDS+=	${PYPKGPREFIX}-cycler>=0.10:../../graphics/py-cycler
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.7:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-fonttools>=4.22.0:../../fonts/py-fonttools
 DEPENDS+=	${PYPKGPREFIX}-kiwisolver>=1.3.1:../../math/py-kiwisolver
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.3.1:../../devel/py-pyparsing
+DEPENDS+=	${PYPKGPREFIX}-pyparsing>=3:../../devel/py-pyparsing
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
 
 USE_LANGUAGES=	c c++
