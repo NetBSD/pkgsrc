@@ -1,8 +1,24 @@
-@comment $NetBSD: PLIST,v 1.2 2026/02/24 21:06:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/05/12 18:29:24 wiz Exp $
 libexec/cgi-bin/cgit.cgi
+libexec/cgit/filters/about-formatting.sh
 libexec/cgit/filters/commit-links.sh
+libexec/cgit/filters/email-gravatar.lua
+libexec/cgit/filters/email-gravatar.py
+libexec/cgit/filters/email-libravatar.lua
+libexec/cgit/filters/file-authentication.lua
+libexec/cgit/filters/gentoo-ldap-authentication.lua
+libexec/cgit/filters/html-converters/man2html
+libexec/cgit/filters/html-converters/md2html
+libexec/cgit/filters/html-converters/rst2html
+libexec/cgit/filters/html-converters/txt2html
+libexec/cgit/filters/owner-example.lua
+libexec/cgit/filters/simple-authentication.lua
+libexec/cgit/filters/syntax-highlighting.py
 libexec/cgit/filters/syntax-highlighting.sh
-share/examples/cgitrc
+man/man5/cgitrc.5
+share/examples/cgit/cgitrc
 share/httpd/htdocs/cgit/cgit.css
 share/httpd/htdocs/cgit/cgit.js
 share/httpd/htdocs/cgit/cgit.png
+share/httpd/htdocs/cgit/favicon.ico
+share/httpd/htdocs/cgit/robots.txt
