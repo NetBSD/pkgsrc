@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/12/28 14:24:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2026/05/12 09:26:23 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -279,9 +279,6 @@ ${PYSITELIB}/reportlab/lib/corp.pyo
 ${PYSITELIB}/reportlab/lib/enums.py
 ${PYSITELIB}/reportlab/lib/enums.pyc
 ${PYSITELIB}/reportlab/lib/enums.pyo
-${PYSITELIB}/reportlab/lib/extformat.py
-${PYSITELIB}/reportlab/lib/extformat.pyc
-${PYSITELIB}/reportlab/lib/extformat.pyo
 ${PYSITELIB}/reportlab/lib/fontfinder.py
 ${PYSITELIB}/reportlab/lib/fontfinder.pyc
 ${PYSITELIB}/reportlab/lib/fontfinder.pyo
