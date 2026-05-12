@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/12/26 12:48:22 adam Exp $
+$NetBSD: distinfo,v 1.6 2026/05/12 08:10:19 adam Exp $
 
-BLAKE2s (cxxheaderparser-1.6.2.tar.gz) = 7604e2a2b44b175cc3b073868fda8f637276bfb335159cc94715ec69bef26be3
-SHA512 (cxxheaderparser-1.6.2.tar.gz) = 57ad6dc6b373649a43d1912e3e1fce591db11f69286bbe4d133d2e7c3d04470b88697f3470e81ebe0c1c4df41986cb652b39ffa55ee3730b1b23369926cb2e40
-Size (cxxheaderparser-1.6.2.tar.gz) = 52562 bytes
+BLAKE2s (cxxheaderparser-1.7.1.tar.gz) = 3533e05ba8965ad799dfe88c5cbdb9d034ce2c6da726019ce6cfa89d4d564a6c
+SHA512 (cxxheaderparser-1.7.1.tar.gz) = 028974d7e24dc08bd1b334f43d7da97dc71497122ca65983e0036406b0e13ae6a8b65a91ef7bb191fc3dff967551df23914c2ab117753a1b14f146600a570334
+Size (cxxheaderparser-1.7.1.tar.gz) = 54157 bytes
