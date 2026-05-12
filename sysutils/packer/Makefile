@@ -1,6 +1,10 @@
-# $NetBSD: Makefile,v 1.37 2026/05/12 09:16:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.38 2026/05/12 09:43:13 jperkin Exp $
+#
+# XXX: Note that newer versions use an unacceptable license.
+#
 
-DISTNAME=	packer-1.15.3
+DISTNAME=	packer-1.9.5
+PKGREVISION=	22
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
