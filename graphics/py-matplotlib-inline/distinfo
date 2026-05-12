@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/10/28 10:07:05 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/05/12 05:11:30 adam Exp $
 
-BLAKE2s (matplotlib_inline-0.2.1.tar.gz) = a6ee5fdfc6b92d00599431c8c9f2b71eb1db778497c4e7962ec2ff64a944a9f6
-SHA512 (matplotlib_inline-0.2.1.tar.gz) = 709acf0011f673a5e40da4b5441e3ba2b12f0baf04ed9a1ccfc3151832ff75125dbd98b0d4635880d7e2fc170b8d6696474f7bd765c61c19fbb723c063e59077
-Size (matplotlib_inline-0.2.1.tar.gz) = 8110 bytes
+BLAKE2s (matplotlib_inline-0.2.2.tar.gz) = edd87be94e6d6b624e4731638d2e07f014e5b463900da9dd06be8f56b288de01
+SHA512 (matplotlib_inline-0.2.2.tar.gz) = a0ebe28d935bde5df70baa70d105d0551c5ffb11609f43b2cd8e3583318b45e3a166b39bf7362ea66edbf1ca3c148202300be414c340a6dfeffbc196652c425d
+Size (matplotlib_inline-0.2.2.tar.gz) = 8150 bytes

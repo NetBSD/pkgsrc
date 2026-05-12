@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2025/10/28 10:07:05 adam Exp $
+# $NetBSD: Makefile,v 1.7 2026/05/12 05:11:30 adam Exp $
 
-DISTNAME=	matplotlib_inline-0.2.1
+DISTNAME=	matplotlib_inline-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matplotlib-inline/}
