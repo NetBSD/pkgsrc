@@ -1,0 +1,21 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2026/05/12 10:40:16 adam Exp $
+
+Set local paths to ruff crates.
+
+--- Cargo.toml.orig	2026-05-12 10:01:11.031591105 +0000
++++ Cargo.toml
+@@ -19,10 +19,10 @@ crate-type = ["cdylib"]
+ pyo3 = { version = "0.28.2", features = ["extension-module"] }
+ 
+ # Ruff dependencies for parsing Python - pinned to release tag
+-ruff_python_ast = { git = "https://github.com/astral-sh/ruff", tag = "0.15.5" }
+-ruff_python_parser = { git = "https://github.com/astral-sh/ruff", tag = "0.15.5" }
+-ruff_source_file = { git = "https://github.com/astral-sh/ruff", tag = "0.15.5" }
+-ruff_text_size = { git = "https://github.com/astral-sh/ruff", tag = "0.15.5" }
++ruff_python_ast = { path = "../ruff-0.15.5/crates/ruff_python_ast" }
++ruff_python_parser = { path = "../ruff-0.15.5/crates/ruff_python_parser" }
++ruff_source_file = { path = "../ruff-0.15.5/crates/ruff_source_file" }
++ruff_text_size = { path = "../ruff-0.15.5/crates/ruff_text_size" }
+ 
+ # Error handling
+ anyhow = "1.0"
