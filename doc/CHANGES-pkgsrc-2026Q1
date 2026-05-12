@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.17 2026/05/08 18:57:42 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.18 2026/05/12 18:40:02 bsiegert Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -170,3 +170,24 @@ www/palemoon: Security fix
 Pullup ticket #7102 - requested by gutteridge
 www/firefox140: Security fix
 www/firefox140-l10n: Security fix
+
+Pullup ticket #7103 - requested by taca
+lang/ruby40: security fix
+
+Pullup ticket #7104 - requested by taca
+lang/ruby34: security fix
+
+Pullup ticket #7105 - requested by taca
+lang/ruby33: security fix
+
+Pullup ticket #7106 - requested by taca
+lang/php85: security fix
+
+Pullup ticket #7107 - requested by taca
+lang/php84: security fix
+
+Pullup ticket #7108 - requested by taca
+lang/php83: security fix
+
+Pullup ticket #7109 - requested by taca
+lang/php82: security fix
