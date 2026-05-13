@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2026/04/30 06:38:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2026/05/13 05:31:21 adam Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -3038,11 +3038,13 @@ qt6/lib/cmake/Qt6/QtPublicGitHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicPluginHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicPluginHelpers_v2.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomAttributionHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicSbomBuildToolHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomCommonGenerationHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomCpeHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomCycloneDXHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomDepHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomDocumentNamespaceHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicSbomExternalReferenceHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomFileHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomGenerationCycloneDXHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake
@@ -3052,6 +3054,7 @@ qt6/lib/cmake/Qt6/QtPublicSbomOpsHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomPurlHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomPythonHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomQtEntityHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicSbomRelationshipHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomSystemDepHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicTargetHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicTestHelpers.cmake
@@ -3640,7 +3643,6 @@ qt6/lib/cmake/Qt6TestInternalsPrivate/Qt6TestInternalsPrivateVersionlessAliasTar
 qt6/lib/cmake/Qt6TestInternalsPrivate/Qt6TestInternalsPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6TestInternalsPrivate/QtRunCMake.cmake
 qt6/lib/cmake/Qt6TestInternalsPrivate/QtRunCMakeTestWrappers.cmake
-qt6/lib/cmake/Qt6TestInternalsPrivate/RunCMake.cmake
 qt6/lib/cmake/Qt6TestPrivate/Qt6TestPrivateAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6TestPrivate/Qt6TestPrivateConfig.cmake
 qt6/lib/cmake/Qt6TestPrivate/Qt6TestPrivateConfigVersion.cmake

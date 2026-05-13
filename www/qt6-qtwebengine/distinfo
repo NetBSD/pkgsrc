@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.6 2026/04/30 06:39:34 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/05/13 05:31:24 adam Exp $
 
 BLAKE2s (kikadf-chromium-audioio-v130.0.tar.gz) = 45fe07cb8280f81b8ef490059002da426b59fe69b5ebd53951fe1dc3e9495a10
 SHA512 (kikadf-chromium-audioio-v130.0.tar.gz) = 840aed119dc69982f14fd5f4767e144bfc8a66672b660f0f05f5459070d7f6a36b8719ae7c0de049f7345dec39266759aedcdd5ee37aa4e98bcd2b44d06a3a4c
 Size (kikadf-chromium-audioio-v130.0.tar.gz) = 7824 bytes
-BLAKE2s (qtwebengine-everywhere-src-6.11.0.tar.xz) = a0bf54138782f3b4b1d8b8d557c9e00e8ad8b792e58a3d232c6fb67113e84e1f
-SHA512 (qtwebengine-everywhere-src-6.11.0.tar.xz) = a3e6138ecc1d0a19faf97975341547214ebdb61eee89bec96cfc7d09b2da621569d7c6aadc392ac683e1d18e3b01fe1d9949b3726633aaf5a6edafd8015db4a0
-Size (qtwebengine-everywhere-src-6.11.0.tar.xz) = 578861916 bytes
-SHA1 (patch-cmake_Functions.cmake) = 506432ca1c208c32154b34fc93c38864ae0a84bf
+BLAKE2s (qtwebengine-everywhere-src-6.11.1.tar.xz) = 5eeda3f8adc7ad69b753c8c91073d299d5c1fd621bc21e1d101e25835f62184c
+SHA512 (qtwebengine-everywhere-src-6.11.1.tar.xz) = 145c55b5288766a94d51f5c8f1a28537d2c9a9c368f55d9b9e7a67ba07a0d43335f65759e41f76528a7ddd78a86deca38fbe407876fc5a322a326dd7f6e56fc2
+Size (qtwebengine-everywhere-src-6.11.1.tar.xz) = 578914356 bytes
+SHA1 (patch-cmake_Functions.cmake) = 1120b7c256f1c98e893060923147f732bfb3c30f
 SHA1 (patch-cmake_QtConfigureHelpers.cmake) = a2ba24b20ef5ac8a0b8e5e04e8fad8aaea3fc04d
 SHA1 (patch-cmake_QtToolchainHelpers.cmake) = 933101b5af4cc29e4eb0547f9cfe2dad4c8da778
 SHA1 (patch-configure.cmake) = 6572904a8a67cc7a22af0224d5d78491ff0f09c8
@@ -493,7 +493,7 @@ SHA1 (patch-src_3rdparty_chromium_content_child_child__process.cc) = f3daf6ea203
 SHA1 (patch-src_3rdparty_chromium_content_child_child__process.h) = 6cf29096e181fb917c624946daf82ea150934035
 SHA1 (patch-src_3rdparty_chromium_content_common_BUILD.gn) = b33ae8c91ad4ac49fa8909651e11e407aa0f78dc
 SHA1 (patch-src_3rdparty_chromium_content_common_features.cc) = ef39df73232f8056696d5b9efcf6b255f33d724b
-SHA1 (patch-src_3rdparty_chromium_content_common_features.h) = 93c0655b5bafdf1d11f24717672cc3b3c05ea43e
+SHA1 (patch-src_3rdparty_chromium_content_common_features.h) = dd0143c129905a6fe3f37b626918462883bee70e
 SHA1 (patch-src_3rdparty_chromium_content_common_font__list__unittest.cc) = 4147d40cafcb87b12f6c04be8d948a4d726dcb72
 SHA1 (patch-src_3rdparty_chromium_content_common_gpu__pre__sandbox__hook__bsd.cc) = 4ad2f26ecef58291ab1ef25929a491fc18cf8575
 SHA1 (patch-src_3rdparty_chromium_content_common_gpu__pre__sandbox__hook__bsd.h) = 6547f9becfe13fb22d441edc1655900992c8df9c
@@ -821,7 +821,7 @@ SHA1 (patch-src_3rdparty_chromium_third__party_angle_src_gpu__info__util_SystemI
 SHA1 (patch-src_3rdparty_chromium_third__party_angle_src_gpu__info__util_SystemInfo__libpci.cpp) = b742d7b6a08f231a916ad9d961145439abb45449
 SHA1 (patch-src_3rdparty_chromium_third__party_angle_src_gpu__info__util_SystemInfo__linux.cpp) = c41650e26450372e6b04f4ff49738bb72e7e1f74
 SHA1 (patch-src_3rdparty_chromium_third__party_angle_src_gpu__info__util_SystemInfo__x11.cpp) = 809071fd924c50cd99d15a69004d87f852b85da4
-SHA1 (patch-src_3rdparty_chromium_third__party_angle_src_libANGLE_Display.cpp) = 3d39738b425a51f88b0a9b5ee1aded23a25d1473
+SHA1 (patch-src_3rdparty_chromium_third__party_angle_src_libANGLE_Display.cpp) = f03f1a434c43ff1880d5e7654291190a5326d7da
 SHA1 (patch-src_3rdparty_chromium_third__party_angle_src_libANGLE_renderer_gl_glx_FunctionsGLX.cpp) = 9ef698da8165aef6a36acf9995cbe34ece2b813c
 SHA1 (patch-src_3rdparty_chromium_third__party_angle_src_libANGLE_renderer_vulkan_DisplayVk__api.h) = 909eb8c6699e19b7afb53c01cf0063246ebc0856
 SHA1 (patch-src_3rdparty_chromium_third__party_angle_util_BUILD.gn) = 937b534ac694f70c6455575db8f922e38fda9f9d
@@ -1181,7 +1181,7 @@ SHA1 (patch-src_3rdparty_gn_src_gn_args.cc) = f88e3c9b4112c402515fc8a804d6ffa64b
 SHA1 (patch-src_3rdparty_gn_src_gn_c__tool.cc) = 6167583fe68fd1238fcca76dc66a3e89fd494c25
 SHA1 (patch-src_3rdparty_gn_src_gn_ninja__binary__target__writer.cc) = 2cc5e43ab3c87ee7d965f1c88c6aac158c993e1d
 SHA1 (patch-src_3rdparty_gn_src_gn_tool.h) = c136d13d8be6e21d6d3441b3f8cae35245ef1081
-SHA1 (patch-src_core_CMakeLists.txt) = bb9c8c34d27586b7b853a74558a91ce562000430
+SHA1 (patch-src_core_CMakeLists.txt) = dc298b55cb85985afcb7f7deb48dc84f0e287611
 SHA1 (patch-src_core_api_configure.cmake) = 5e1f28f915bb2c125a4c15963e11268ae6f8b69e
 SHA1 (patch-src_core_api_qt__cmdline.cmake) = d957a928116d0b848331fe4d023a8baf89dc86d7
 SHA1 (patch-src_pdf_CMakeLists.txt) = e6aa31e20e486a903a2b365c976c31b2e5728152

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2026/04/30 06:38:38 adam Exp $
+$NetBSD: distinfo,v 1.24 2026/05/13 05:31:22 adam Exp $
 
-BLAKE2s (qtlanguageserver-everywhere-src-6.11.0.tar.xz) = 294c11f562ea5fdb7c2ec752045c8f85bd683a98de5b787f9f1e215156de8190
-SHA512 (qtlanguageserver-everywhere-src-6.11.0.tar.xz) = 43dee77d2405858ffa85e59cb148349594e16575b4166f1f4dc91d12b7f1529eaf1ff15fe131db57f58534395dd712f634c0a8ea1a13fb465793fc40ca88fe23
-Size (qtlanguageserver-everywhere-src-6.11.0.tar.xz) = 137240 bytes
+BLAKE2s (qtlanguageserver-everywhere-src-6.11.1.tar.xz) = 3e9ee7bf7f645d77fed74553999aff05d422c8f9292140a0655c3dd1132f762a
+SHA512 (qtlanguageserver-everywhere-src-6.11.1.tar.xz) = 600da7641dea82621ddf24ea69b718d213e083f481300544b70aa41a7d89101d00b2b38bf963df19c0a4756614b2d93814bfe86c3320744e16593630beb33660
+Size (qtlanguageserver-everywhere-src-6.11.1.tar.xz) = 137276 bytes

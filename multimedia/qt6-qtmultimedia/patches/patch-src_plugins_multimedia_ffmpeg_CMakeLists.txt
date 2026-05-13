@@ -1,18 +1,18 @@
-$NetBSD: patch-src_plugins_multimedia_ffmpeg_CMakeLists.txt,v 1.2 2025/03/31 16:38:07 adam Exp $
+$NetBSD: patch-src_plugins_multimedia_ffmpeg_CMakeLists.txt,v 1.3 2026/05/13 05:31:23 adam Exp $
 
 FFmpeg stubs are only available on Linux and Android.
 
---- src/plugins/multimedia/ffmpeg/CMakeLists.txt.orig	2025-03-18 20:15:11.000000000 +0000
+--- src/plugins/multimedia/ffmpeg/CMakeLists.txt.orig	2026-05-08 03:28:44.000000000 +0000
 +++ src/plugins/multimedia/ffmpeg/CMakeLists.txt
-@@ -107,6 +107,7 @@ if (QT_FEATURE_vaapi)
+@@ -118,6 +118,7 @@ if (QT_FEATURE_vaapi)
              EGL::EGL
      )
  
 +if (LINUX OR ANDROID)
      list(FIND FFMPEG_STUBS "va" va_stub_index)
-     if (NOT QT_LINK_STUBS_TO_FFMPEG_PLUGIN AND (FFMPEG_SHARED_LIBRARIES OR ${va_stub_index} EQUAL -1))
-         target_compile_definitions(FFmpegMediaPluginImplPrivate PRIVATE Q_FFMPEG_PLUGIN_STUBS_ONLY)
-@@ -114,6 +115,7 @@ if (QT_FEATURE_vaapi)
+     if (${va_stub_index} EQUAL -1)
+         # va is not provided via the stub mechanism: link directly to libva
+@@ -129,6 +130,7 @@ if (QT_FEATURE_vaapi)
          qt_internal_multimedia_add_private_stub_to_plugin("va")
      endif()
  endif()

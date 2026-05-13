@@ -1,11 +1,11 @@
-$NetBSD: patch-src_core_CMakeLists.txt,v 1.1 2025/12/21 09:38:51 markd Exp $
+$NetBSD: patch-src_core_CMakeLists.txt,v 1.2 2026/05/13 05:31:25 adam Exp $
 
 * Based on OpenBSD's qt6-qtwebengine patches, and
   pkgsrc's qt5-qtwebengine patches
   - add sndio
   - add audioio
 
---- src/core/CMakeLists.txt.orig	2025-11-14 07:55:10.000000000 +0000
+--- src/core/CMakeLists.txt.orig	2026-05-08 07:54:08.000000000 +0000
 +++ src/core/CMakeLists.txt
 @@ -21,7 +21,7 @@ add_subdirectory(tools/qwebengine_conver
  #   TOOLCHAIN SETUP
@@ -16,7 +16,7 @@ $NetBSD: patch-src_core_CMakeLists.txt,v 1.1 2025/12/21 09:38:51 markd Exp $
      setup_toolchains()
  endif()
  
-@@ -212,7 +212,7 @@ foreach(arch ${archs})
+@@ -216,7 +216,7 @@ foreach(arch ${archs})
                  accessibility_activation_observer.cpp accessibility_activation_observer.h
          )
  
@@ -25,7 +25,7 @@ $NetBSD: patch-src_core_CMakeLists.txt,v 1.1 2025/12/21 09:38:51 markd Exp $
              SOURCES
                  ozone/gl_ozone_qt.cpp ozone/gl_ozone_qt.h
                  ozone/ozone_util_qt.cpp ozone/ozone_util_qt.h
-@@ -220,17 +220,17 @@ foreach(arch ${archs})
+@@ -224,17 +224,17 @@ foreach(arch ${archs})
                  ozone/surface_factory_qt.cpp ozone/surface_factory_qt.h
          )
  
@@ -46,7 +46,7 @@ $NetBSD: patch-src_core_CMakeLists.txt,v 1.1 2025/12/21 09:38:51 markd Exp $
              SOURCES
                  ozone/egl_helper.cpp ozone/egl_helper.h
          )
-@@ -342,6 +342,8 @@ foreach(arch ${archs})
+@@ -345,6 +345,8 @@ foreach(arch ${archs})
          append_pkg_config_setup(gnArgArg)
  
          list(APPEND gnArgArg
@@ -55,16 +55,16 @@ $NetBSD: patch-src_core_CMakeLists.txt,v 1.1 2025/12/21 09:38:51 markd Exp $
              qtwebengine_target="${buildDir}/${config}/${arch}:QtWebEngineCore"
              build_dawn_tests=false
              build_with_tflite_lib=false
-@@ -461,7 +462,7 @@ foreach(arch ${archs})
+@@ -452,7 +454,7 @@ foreach(arch ${archs})
              CONDITION QT_FEATURE_webenginedriver
          )
  
 -        if(LINUX)
 +        if(UNIX)
              list(APPEND gnArgArg
-                 angle_enable_gl=true
                  use_gtk=false # GTK toolkit bindings
-@@ -530,6 +531,14 @@ foreach(arch ${archs})
+                 use_qt5=false # Qt5 toolkit bindings
+@@ -524,6 +526,14 @@ foreach(arch ${archs})
                  CONDITION QT_FEATURE_webengine_system_pulseaudio
              )
              extend_gn_list(gnArgArg
