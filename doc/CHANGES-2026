@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3005 2026/05/13 09:31:13 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3006 2026/05/13 12:13:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4614,3 +4614,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/qtcreator to 19.0.1 [adam 2026-05-13]
 	Updated net/samba4 to 4.24.2 [adam 2026-05-13]
 	Updated net/freeradius to 3.2.8 [adam 2026-05-13]
+	Updated www/py-django to 6.0.5 [adam 2026-05-13]
+	Updated www/py-django5 to 5.2.14 [adam 2026-05-13]
