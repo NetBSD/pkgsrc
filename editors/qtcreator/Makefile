@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2026/02/06 10:04:39 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2026/05/13 06:50:50 adam Exp $
 
-DISTNAME=	qt-creator-opensource-src-18.0.2
+DISTNAME=	qt-creator-opensource-src-19.0.1
 PKGNAME=	${DISTNAME:S/qt-/qt/:S/-opensource-src//}
-PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://download.qt.io/official_releases/${PKGBASE}/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/
 MASTER_SITES+=	http://download.qt.io/archive/${PKGBASE}/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/
@@ -56,9 +55,13 @@ PLIST_VARS+=	nodarwin
 PLIST.nodarwin=	yes
 .endif
 
+.include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/qt6-qt5compat/buildlink3.mk"
+.include "../../devel/qt6-qttools/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/qt6-qtcharts/buildlink3.mk"
+.include "../../graphics/qt6-qtquick3d/buildlink3.mk"
 .include "../../graphics/qt6-qtsvg/buildlink3.mk"
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/python/application.mk"
