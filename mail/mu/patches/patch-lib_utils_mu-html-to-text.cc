@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_utils_mu-html-to-text.cc,v 1.1 2026/05/13 17:46:13 ktnb Exp $
+$NetBSD: patch-lib_utils_mu-html-to-text.cc,v 1.2 2026/05/13 19:12:43 ktnb Exp $
 
 ctype(3) for NetBSD 11
 
---- lib/utils/mu-html-to-text.cc.orig	2026-05-13 17:22:59.975533319 +0000
+--- lib/utils/mu-html-to-text.cc.orig	2026-04-27 19:03:29.000000000 +0000
 +++ lib/utils/mu-html-to-text.cc
 @@ -36,7 +36,7 @@ starts_with(std::string_view haystack, std::string_vie
  		return false;
@@ -13,6 +13,15 @@ ctype(3) for NetBSD 11
  			return false;
  
  	return true;
+@@ -143,7 +143,7 @@ class Context { (public)
+ 	std::string_view eat_head_word() {
+ 		size_t start_pos{pos_};
+ 		while (!done()) {
+-			if (!::isalpha(html_.at(pos_)))
++			if (!::isalpha(static_cast<unsigned char>(html_.at(pos_))))
+ 				break;
+ 			++pos_;
+ 		}
 @@ -440,7 +440,7 @@ html_escape_char(Context& ctx)
  	auto unescape=[escs](std::string_view esc)->char {
  		if (esc.empty())
