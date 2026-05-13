@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.116 2026/04/14 10:33:41 jperkin Exp $
+$NetBSD: distinfo,v 1.117 2026/05/13 21:57:26 mef Exp $
 
-BLAKE2s (R-4.5.2.tar.gz) = 89aaf25d047df226ec7340bf5550db5223163bec0b5ff1d5a3bfae691aa2106a
-SHA512 (R-4.5.2.tar.gz) = abc4ff1a1b18a1f480e7bceb3267074e30453b5a571034b4c2a1c53e1650a1bafaf86bc6ca37f117a2e4f6617039dedeedef4ba8743f38720fc70e4bed2ff0a4
-Size (R-4.5.2.tar.gz) = 40546249 bytes
+BLAKE2s (R-4.5.3.tar.gz) = 587e35a109716f1521c896d772b19d5d3af06c4ea82c3a0e45af2c49fd52bc89
+SHA512 (R-4.5.3.tar.gz) = 9481ba6a8584954954d754116d45cbaec4f7003e2f1b1b450b05df6487e0f87950949e20c6a6805e5429b55a0f00208c1c1ef9a05fa3cc8c8d220fe9963cc56b
+Size (R-4.5.3.tar.gz) = 40518619 bytes
 SHA1 (patch-configure.ac) = 17caa1621e93a04be23fc037805fd7240a52d17b
 SHA1 (patch-src_extra_xdr_xdr__mem.c) = 2e607b070db8b24a6ad5501e9c7c1549bf1b1d82
 SHA1 (patch-src_extra_xdr_xdr__stdio.c) = 91ea16599693e9dc14e631880fbe1c52f0f2009f

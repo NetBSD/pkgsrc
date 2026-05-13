@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2026/03/12 11:22:57 mef Exp $
+@comment $NetBSD: PLIST,v 1.46 2026/05/13 21:57:26 mef Exp $
 bin/R
 bin/Rscript
 info/R-FAQ.info.gz
@@ -229,6 +229,7 @@ lib/R/library/KernSmooth/po/fr/LC_MESSAGES/R-KernSmooth.mo
 lib/R/library/KernSmooth/po/it/LC_MESSAGES/R-KernSmooth.mo
 lib/R/library/KernSmooth/po/ko/LC_MESSAGES/R-KernSmooth.mo
 lib/R/library/KernSmooth/po/pl/LC_MESSAGES/R-KernSmooth.mo
+lib/R/library/lattice/help/figures/logo.svg
 lib/R/library/MASS/CITATION
 lib/R/library/MASS/DESCRIPTION
 lib/R/library/MASS/INDEX
