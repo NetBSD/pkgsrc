@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3004 2026/05/13 07:10:55 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3005 2026/05/13 09:31:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4612,3 +4612,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated meta-pkgs/qt6 to 6.11.1 [adam 2026-05-13]
 	Updated textproc/gsed to 4.10 [wiz 2026-05-13]
 	Updated editors/qtcreator to 19.0.1 [adam 2026-05-13]
+	Updated net/samba4 to 4.24.2 [adam 2026-05-13]
+	Updated net/freeradius to 3.2.8 [adam 2026-05-13]
