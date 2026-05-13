@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2026/04/04 01:29:42 js Exp $
+$NetBSD: distinfo,v 1.4 2026/05/13 23:25:14 js Exp $
 
 BLAKE2s (gcc-15.1.0.tar.xz) = 260d64654fbfc0ee06540cc4604cd7071be53d616069a9dd57e5359a0b0ecf46
 SHA512 (gcc-15.1.0.tar.xz) = ddd35ca6c653dffa88f7c7ef9ee4cd806e156e0f3b30f4d63e75a8363361285cd566ee73127734cde6a934611de815bee3e32e24bfd2e0ab9f7ff35c929821c1
@@ -8,6 +8,10 @@ SHA1 (patch-gcc_config_rs6000_morphos.h) = c788e480f3f510b61292f5b1ec5b84646b33a
 SHA1 (patch-gcc_config_rs6000_rs6000.cc) = d032b17ae563e45476ca3b1114c0f233d01a8a8b
 SHA1 (patch-gcc_plugin.cc) = 85facfdab177478fa423fafd0b4f7c1704e2f270
 SHA1 (patch-libcc1_configure.ac) = ca40be7af4a4ffc3a4fba1a0dbda76fcde1fa2d9
+SHA1 (patch-libcody_buffer.cc) = e214878a48c4ab9688d2a0dbe21bb43d81bc9ef2
+SHA1 (patch-libcody_client.cc) = 910fecb286993259597521a684dc561379e906e6
+SHA1 (patch-libcody_cody.hh) = 027ddbddf2c8c64c08a3ebce40d8eb7172ef848e
+SHA1 (patch-libcody_server.cc) = b21d32444ca6fc1637a5318d519c671d6a8aff66
 SHA1 (patch-libgcc_config_rs6000_gthr-morphos.c) = 0fae90d02ce28f8191ef2e4eb4fdbfe2ee7c23d3
 SHA1 (patch-libiberty_fibheap.c) = f11678ec725c773a18d03236ab4387d9ec9eef7d
 SHA1 (patch-libiberty_filedescriptor.c) = 51ad6812739b459d8cb37b6bd8afd5afb92dabd3
