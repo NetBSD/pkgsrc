@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3002 2026/05/13 05:33:07 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3003 2026/05/13 06:02:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4610,3 +4610,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/qt6-qttranslations to 6.11.1 [adam 2026-05-13]
 	Updated devel/qt6-qtwayland to 6.11.1 [adam 2026-05-13]
 	Updated meta-pkgs/qt6 to 6.11.1 [adam 2026-05-13]
+	Updated textproc/gsed to 4.10 [wiz 2026-05-13]
