@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2026/05/10 17:38:14 vins Exp $
+# $NetBSD: hacks.mk,v 1.2 2026/05/13 18:48:28 vins Exp $
 
 .if !defined(GVFS_HACKS_MK)
 GVFS_HACKS_MK=	defined
@@ -20,5 +20,10 @@ GVFS_HACKS_MK=	defined
 ### hack:
 PKG_HACKS+=	rpath-fixup
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/gvfs
+
+### [Wed May 13 18:43 UTC 2026 : vins]
+### Disable meson's default of using "-Wl,--as-needed" on ld.bfd arches,
+### to prevent build failures due to undefined references.
+MESON_ARGS+=	-Db_asneeded=false
 
 .endif # GVFS_HACKS_MK
