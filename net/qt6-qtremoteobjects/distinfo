@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2026/04/30 06:38:40 adam Exp $
+$NetBSD: distinfo,v 1.24 2026/05/13 05:31:23 adam Exp $
 
-BLAKE2s (qtremoteobjects-everywhere-src-6.11.0.tar.xz) = 53b7638b53b806779d193164d1e780b1dca33c06ef807a3a2fb2da1105e125cd
-SHA512 (qtremoteobjects-everywhere-src-6.11.0.tar.xz) = 5ddf78a43e06677fa302da4f231ab24de59547ad56f8fd01a3d8836c6c8f29de84ef2fd62086744c9649538b46091b8382fe7958cd8484dd957ce818e143789d
-Size (qtremoteobjects-everywhere-src-6.11.0.tar.xz) = 529140 bytes
+BLAKE2s (qtremoteobjects-everywhere-src-6.11.1.tar.xz) = d136677d188b1ee05257e7cfba7e0d7d1cfa1da6ba02a0cb7a12ebc76a1c7f4e
+SHA512 (qtremoteobjects-everywhere-src-6.11.1.tar.xz) = fb701012065aa1be4bdbb61bb6907fab012e679b4dd3ba028a984d462c2671aff52031759e9b6cb359a9eb67314be8260db5f352113c07a1a92eae723a8d8e40
+Size (qtremoteobjects-everywhere-src-6.11.1.tar.xz) = 529300 bytes

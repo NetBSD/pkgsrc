@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2026/04/30 06:38:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2026/05/13 05:31:23 adam Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
@@ -321,6 +321,7 @@ qt6/include/QtSpatialAudio/${PKGVERSION}/QtSpatialAudio/private/qambientsound_p.
 qt6/include/QtSpatialAudio/${PKGVERSION}/QtSpatialAudio/private/qambisonicdecoder_p.h
 qt6/include/QtSpatialAudio/${PKGVERSION}/QtSpatialAudio/private/qambisonicdecoderdata_p.h
 qt6/include/QtSpatialAudio/${PKGVERSION}/QtSpatialAudio/private/qaudioengine_p.h
+qt6/include/QtSpatialAudio/${PKGVERSION}/QtSpatialAudio/private/qaudioengine_threaded_p.h
 qt6/include/QtSpatialAudio/${PKGVERSION}/QtSpatialAudio/private/qaudioroom_p.h
 qt6/include/QtSpatialAudio/${PKGVERSION}/QtSpatialAudio/private/qspatialsound_p.h
 qt6/include/QtSpatialAudio/${PKGVERSION}/QtSpatialAudio/private/qtspatialaudioglobal_p.h

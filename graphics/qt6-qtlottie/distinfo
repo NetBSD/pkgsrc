@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2026/04/30 06:38:39 adam Exp $
+$NetBSD: distinfo,v 1.24 2026/05/13 05:31:22 adam Exp $
 
-BLAKE2s (qtlottie-everywhere-src-6.11.0.tar.xz) = a9930556de9e7670a645a0f9b2892fdb9119fcb5b08f0a8978a0526ae58dd50a
-SHA512 (qtlottie-everywhere-src-6.11.0.tar.xz) = 55a6c09e12d89b5db5e718f6dbf33aba37dfc5bb4cbaace583d214609b7051c3f85532903510b4129c51a03a686af92634839ad5c656dcb671a242cca2677052
-Size (qtlottie-everywhere-src-6.11.0.tar.xz) = 663348 bytes
+BLAKE2s (qtlottie-everywhere-src-6.11.1.tar.xz) = a263106833f214447c5e02e5d58702195452983e1801130ef9e93ecbee07fdfc
+SHA512 (qtlottie-everywhere-src-6.11.1.tar.xz) = 35ae220170c784db60f68b709b32c9d75949868de21fa2f75220a8a6b8c6c76ae819769046c32118560b9060a91ad1beb4fa0ea54a7e162b192536c1c48af386
+Size (qtlottie-everywhere-src-6.11.1.tar.xz) = 663580 bytes
