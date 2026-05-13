@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.16 2025/05/06 12:07:33 wiz Exp $
+# $NetBSD: Makefile.common,v 1.17 2026/05/13 09:30:42 adam Exp $
 # used by net/freeradius/Makefile.module
 
-DISTNAME=	freeradius-server-3.2.5
+DISTNAME=	freeradius-server-3.2.8
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.freeradius.org/pub/freeradius/
+MASTER_SITES=	https://www.freeradius.org/ftp/pub/freeradius/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
