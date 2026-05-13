@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2026/04/22 07:26:16 adam Exp $
+$NetBSD: distinfo,v 1.2 2026/05/13 12:12:58 adam Exp $
 
-BLAKE2s (django-5.2.13.tar.gz) = 9c82d97eacc8a67c7085de27651db74468e0b2b8251ec99d773f2dfe159ecfe3
-SHA512 (django-5.2.13.tar.gz) = dfe3bcc9cf8cfcacf832e7968687605bb06590d1c77f89373bdf4228baefa857faa441e757a5bf1b7b8b75027daec86f88f5fd7a37d579f26918cdb54448581f
-Size (django-5.2.13.tar.gz) = 10890368 bytes
+BLAKE2s (django-5.2.14.tar.gz) = 585a415d15c36f680977ee4c30c2c2520508dae6a253f573d0b958b57de9dab4
+SHA512 (django-5.2.14.tar.gz) = e6e05195d4693209de15be99fc6621cc23b5a0d28fbcf2516b271274aa1637be4f55a6b607fb1c5dc8e913a78eca99d76645bce1cc71468a8dfed7e16c129a84
+Size (django-5.2.14.tar.gz) = 10895118 bytes
