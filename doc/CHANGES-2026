@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3025 2026/05/14 16:29:33 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.3026 2026/05/14 17:10:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4639,3 +4639,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-jupyter_events to 0.12.1 [adam 2026-05-14]
 	Updated devel/py-ruff to 0.15.13 [adam 2026-05-14]
 	Updated security/nettle to 4.0 [ryoon 2026-05-14]
+	Updated devel/at-spi2-core to 2.60.3 [ryoon 2026-05-14]
