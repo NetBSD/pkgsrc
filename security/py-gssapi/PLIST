@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2026/05/11 12:45:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/05/14 14:43:58 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -33,7 +33,7 @@ ${PYSITELIB}/gssapi/raw/_enum_extensions/__init__.py
 ${PYSITELIB}/gssapi/raw/_enum_extensions/__init__.pyc
 ${PYSITELIB}/gssapi/raw/_enum_extensions/__init__.pyo
 ${PYSITELIB}/gssapi/raw/_enum_extensions/ext_dce.abi3.so
-${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/_enum_extensions/ext_iov_mic.so
+${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/_enum_extensions/ext_iov_mic.abi3.so
 ${PYSITELIB}/gssapi/raw/chan_bindings.abi3.so
 ${PYSITELIB}/gssapi/raw/chan_bindings.pyi
 ${PYSITELIB}/gssapi/raw/creds.abi3.so
@@ -44,7 +44,7 @@ ${PYSITELIB}/gssapi/raw/exceptions.pyi
 ${PYSITELIB}/gssapi/raw/ext_cred_imp_exp.abi3.so
 ${PYSITELIB}/gssapi/raw/ext_cred_imp_exp.pyi
 ${PYSITELIB}/gssapi/raw/ext_cred_store.pyi
-${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/ext_cred_store.so
+${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/ext_cred_store.abi3.so
 ${PYSITELIB}/gssapi/raw/ext_dce.abi3.so
 ${PYSITELIB}/gssapi/raw/ext_dce.pyi
 ${PLIST.posix}${PYSITELIB}/gssapi/raw/ext_dce_aead.abi3.so
@@ -52,7 +52,7 @@ ${PYSITELIB}/gssapi/raw/ext_dce_aead.pyi
 ${PYSITELIB}/gssapi/raw/ext_ggf.abi3.so
 ${PYSITELIB}/gssapi/raw/ext_ggf.pyi
 ${PYSITELIB}/gssapi/raw/ext_iov_mic.pyi
-${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/ext_iov_mic.so
+${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/ext_iov_mic.abi3.so
 ${PYSITELIB}/gssapi/raw/ext_krb5.abi3.so
 ${PYSITELIB}/gssapi/raw/ext_krb5.pyi
 ${PYSITELIB}/gssapi/raw/ext_password.abi3.so
@@ -60,7 +60,7 @@ ${PYSITELIB}/gssapi/raw/ext_password.pyi
 ${PLIST.posix}${PYSITELIB}/gssapi/raw/ext_password_add.abi3.so
 ${PYSITELIB}/gssapi/raw/ext_password_add.pyi
 ${PYSITELIB}/gssapi/raw/ext_rfc4178.pyi
-${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/ext_rfc4178.so
+${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/ext_rfc4178.abi3.so
 ${PYSITELIB}/gssapi/raw/ext_rfc5587.abi3.so
 ${PYSITELIB}/gssapi/raw/ext_rfc5587.pyi
 ${PLIST.posix}${PYSITELIB}/gssapi/raw/ext_rfc5588.abi3.so
@@ -70,9 +70,9 @@ ${PYSITELIB}/gssapi/raw/ext_rfc5801.pyi
 ${PLIST.posix}${PYSITELIB}/gssapi/raw/ext_rfc6680.abi3.so
 ${PYSITELIB}/gssapi/raw/ext_rfc6680.pyi
 ${PYSITELIB}/gssapi/raw/ext_rfc6680_comp_oid.pyi
-${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/ext_rfc6680_comp_oid.so
+${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/ext_rfc6680_comp_oid.abi3.so
 ${PYSITELIB}/gssapi/raw/ext_s4u.pyi
-${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/ext_s4u.so
+${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/ext_s4u.abi3.so
 ${PYSITELIB}/gssapi/raw/ext_set_cred_opt.abi3.so
 ${PYSITELIB}/gssapi/raw/ext_set_cred_opt.pyi
 ${PYSITELIB}/gssapi/raw/mech_krb5.abi3.so
