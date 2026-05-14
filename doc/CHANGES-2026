@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3007 2026/05/13 21:58:17 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3008 2026/05/14 01:53:32 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4617,3 +4617,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-django to 6.0.5 [adam 2026-05-13]
 	Updated www/py-django5 to 5.2.14 [adam 2026-05-13]
 	Updated math/R to 4.5.3 [mef 2026-05-13]
+	Updated sysutils/intel-microcode-netbsd to 20260512 [msaitoh 2026-0514]
