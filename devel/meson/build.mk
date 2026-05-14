@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.32 2025/04/22 15:57:17 nia Exp $
+# $NetBSD: build.mk,v 1.33 2026/05/14 08:16:05 wiz Exp $
 
 MESON_REQD?=	0
 .for version in ${MESON_REQD}
@@ -9,6 +9,8 @@ CONFIGURE_DIRS?=	.
 BUILD_DIRS?=		${CONFIGURE_DIRS}
 INSTALL_DIRS?=		${CONFIGURE_DIRS}
 TEST_DIRS?=		${CONFIGURE_DIRS}
+
+MESON_BUILD_TARGET?=	# empty
 
 .PHONY: meson-configure meson-build meson-install meson-test
 
@@ -173,7 +175,7 @@ meson-build:
 	@${STEP_MSG} Building with ninja in ${d}
 .  endif
 	${RUN}cd ${WRKSRC} && cd ${d} && ${SETENV} ${MAKE_ENV} \
-	    ninja -j ${_MAKE_JOBS_N:U1} -C output
+	    ninja -j ${_MAKE_JOBS_N:U1} -C output ${MESON_BUILD_TARGET}
 .endfor
 
 .if empty(MESON_INSTALL:Mno)
