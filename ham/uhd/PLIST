@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2025/11/10 08:51:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2026/05/14 13:27:31 adam Exp $
 bin/rfnoc_image_builder
 bin/rfnoc_modtool
 bin/uhd_adc_self_cal
@@ -22,6 +22,8 @@ include/uhd/cal/dsa_cal.hpp
 include/uhd/cal/dsa_cal_generated.h
 include/uhd/cal/iq_cal.hpp
 include/uhd/cal/iq_cal_generated.h
+include/uhd/cal/iq_dc_cal.hpp
+include/uhd/cal/iq_dc_cal_generated.h
 include/uhd/cal/pwr_cal.hpp
 include/uhd/cal/pwr_cal_generated.h
 include/uhd/config.h
@@ -35,9 +37,11 @@ include/uhd/experts/expert_factory.hpp
 include/uhd/experts/expert_nodes.hpp
 include/uhd/extension/extension.hpp
 include/uhd/features/adc_self_calibration_iface.hpp
+include/uhd/features/complex_gain_iface.hpp
 include/uhd/features/discoverable_feature.hpp
 include/uhd/features/discoverable_feature_getter_iface.hpp
 include/uhd/features/gpio_power_iface.hpp
+include/uhd/features/gps_iface.hpp
 include/uhd/features/internal_sync_iface.hpp
 include/uhd/features/ref_clk_calibration_iface.hpp
 include/uhd/features/spi_getter_iface.hpp
@@ -120,6 +124,7 @@ include/uhd/types/direction.hpp
 include/uhd/types/eeprom.hpp
 include/uhd/types/endianness.hpp
 include/uhd/types/filters.hpp
+include/uhd/types/iq_dc_cal_coeffs.hpp
 include/uhd/types/mac_addr.hpp
 include/uhd/types/memmap_iface.hpp
 include/uhd/types/metadata.h
@@ -147,6 +152,8 @@ include/uhd/usrp/dboard_iface.hpp
 include/uhd/usrp/dboard_manager.hpp
 include/uhd/usrp/fe_connection.hpp
 include/uhd/usrp/gpio_defs.hpp
+include/uhd/usrp/hbx_gain_map_item.hpp
+include/uhd/usrp/hbx_tune_map_item.hpp
 include/uhd/usrp/mboard_eeprom.h
 include/uhd/usrp/mboard_eeprom.hpp
 include/uhd/usrp/multi_usrp.hpp
@@ -198,6 +205,8 @@ lib/cmake/uhd/UHDConfig.cmake
 lib/cmake/uhd/UHDConfigVersion.cmake
 lib/cmake/uhd/UHDMinDepVersions.cmake
 lib/cmake/uhd/UHDPython.cmake
+lib/cmake/uhd/UHDTargets-release.cmake
+lib/cmake/uhd/UHDTargets.cmake
 lib/cmake/uhd/UHDUnitTest.cmake
 lib/libuhd.so
 lib/libuhd.so.${MODULE_VERSION}
@@ -234,15 +243,18 @@ ${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/descriptor.yml.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/functions.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/grc_bindings_template.block.yml.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/modules/axis_chdr_connect_template.mako
+${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/modules/axis_chdr_loopback_template.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/modules/axis_chdr_modules_template.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/modules/axis_chdr_wires_template.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/modules/axis_ctrl_connect_template.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/modules/axis_ctrl_modules_template.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/modules/axis_ctrl_wires_template.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/modules/axis_data_connect_template.mako
+${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/modules/axis_data_loopback_template.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/modules/axis_data_modules_template.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/modules/axis_data_wires_template.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/modules/axis_pyld_ctxt_connect_template.mako
+${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/modules/axis_pyld_ctxt_loopback_template.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/modules/axis_pyld_ctxt_modules_template.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/modules/axis_pyld_ctxt_wires_template.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/modules/ctrlport_connect_template.mako
@@ -254,6 +266,7 @@ ${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/rfnoc_block_template_tb.sv.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/template_block_control.cpp.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/template_block_control.hpp.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/template_block_control_python.hpp.mako
+${PYSITELIB}/uhd/rfnoc_utils/templates/blocktool/template_block_test.cpp.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/device_tree.dts.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/keyfile.v.mako
 ${PYSITELIB}/uhd/rfnoc_utils/templates/modules/chdr_xb_sep_transport.v.mako
@@ -279,6 +292,7 @@ ${PYSITELIB}/uhd/rfnoc_utils/yaml_utils.py
 ${PYSITELIB}/uhd/types.py
 ${PYSITELIB}/uhd/usrp/__init__.py
 ${PYSITELIB}/uhd/usrp/cal/__init__.py
+${PYSITELIB}/uhd/usrp/cal/iq_dc_compensation.py
 ${PYSITELIB}/uhd/usrp/cal/libtypes.py
 ${PYSITELIB}/uhd/usrp/cal/meas_device.py
 ${PYSITELIB}/uhd/usrp/cal/ni_rf_instr.py
@@ -301,7 +315,9 @@ ${PYSITELIB}/uhd/usrpctl/commands/probe.py
 ${PYSITELIB}/uhd/usrpctl/commands/reset.py
 ${PYSITELIB}/uhd/utils/__init__.py
 ${PYSITELIB}/uhd/utils/convert_cal_data.py
+${PYSITELIB}/uhd/utils/dram.py
 ${PYSITELIB}/uhd/utils/mpmtools.py
+${PYSITELIB}/uhd/utils/uhd_iq_dc_correction.py
 ${PYSITELIB}/uhd/utils/uhd_power_cal.py
 ${PYSITELIB}/uhd/utils/version_check.py
 ${PYSITELIB}/usrp_mpm/__init__.py
@@ -336,6 +352,7 @@ ${PYSITELIB}/usrp_mpm/dboard_manager/empty_slot.py
 ${PYSITELIB}/usrp_mpm/dboard_manager/fbx.py
 ${PYSITELIB}/usrp_mpm/dboard_manager/gain_rh.py
 ${PYSITELIB}/usrp_mpm/dboard_manager/gaintables_rh.py
+${PYSITELIB}/usrp_mpm/dboard_manager/hbx.py
 ${PYSITELIB}/usrp_mpm/dboard_manager/lmk_mg.py
 ${PYSITELIB}/usrp_mpm/dboard_manager/lmk_rh.py
 ${PYSITELIB}/usrp_mpm/dboard_manager/magnesium.py
@@ -351,10 +368,10 @@ ${PYSITELIB}/usrp_mpm/dboard_manager/test.py
 ${PYSITELIB}/usrp_mpm/dboard_manager/unknown.py
 ${PYSITELIB}/usrp_mpm/dboard_manager/x4xx_db.py
 ${PYSITELIB}/usrp_mpm/dboard_manager/x4xx_db_iface.py
+${PYSITELIB}/usrp_mpm/dboard_manager/x4xx_db_update_cpld.py
 ${PYSITELIB}/usrp_mpm/dboard_manager/x4xx_debug_db.py
 ${PYSITELIB}/usrp_mpm/dboard_manager/x4xx_if_test_cca.py
 ${PYSITELIB}/usrp_mpm/dboard_manager/zbx.py
-${PYSITELIB}/usrp_mpm/dboard_manager/zbx_update_cpld.py
 ${PYSITELIB}/usrp_mpm/discovery.py
 ${PYSITELIB}/usrp_mpm/e31x_legacy_eeprom.py
 ${PYSITELIB}/usrp_mpm/eeprom.py
@@ -412,6 +429,8 @@ ${PYSITELIB}/usrp_mpm/sys_utils/dtoverlay.py
 ${PYSITELIB}/usrp_mpm/sys_utils/ectool.py
 ${PYSITELIB}/usrp_mpm/sys_utils/filesystem_status.py
 ${PYSITELIB}/usrp_mpm/sys_utils/gpio.py
+${PYSITELIB}/usrp_mpm/sys_utils/gpio_v1_x.py
+${PYSITELIB}/usrp_mpm/sys_utils/gpio_v2_x.py
 ${PYSITELIB}/usrp_mpm/sys_utils/i2c_dev.py
 ${PYSITELIB}/usrp_mpm/sys_utils/mount.py
 ${PYSITELIB}/usrp_mpm/sys_utils/net.py
@@ -464,25 +483,31 @@ lib/uhd/examples/tx_samples_c
 lib/uhd/examples/tx_samples_from_file
 lib/uhd/examples/tx_timed_samples
 lib/uhd/examples/tx_waveforms
+lib/uhd/examples/txrx_complex_gain
 lib/uhd/examples/txrx_loopback_to_file
 lib/uhd/examples/usrp_list_sensors
 lib/uhd/tests/actions_test
 lib/uhd/tests/addr_test
 lib/uhd/tests/adf535x_test
+lib/uhd/tests/admv1320_test
+lib/uhd/tests/admv1420_test
 lib/uhd/tests/block_id_test
 lib/uhd/tests/buffer_test
 lib/uhd/tests/byteswap_test
 lib/uhd/tests/cal_data_dsa_test
 lib/uhd/tests/cal_data_gain_pwr_test
+lib/uhd/tests/cal_data_iq_dc_test
 lib/uhd/tests/cal_data_iq_test
 lib/uhd/tests/cal_database_test
 lib/uhd/tests/cast_test
 lib/uhd/tests/chdr_parse_test
 lib/uhd/tests/client_zero_test
 lib/uhd/tests/compat_test
+lib/uhd/tests/complex_gain_3000_test
 lib/uhd/tests/config_parser_test
 lib/uhd/tests/constrained_device_args_test
 lib/uhd/tests/convert_test
+lib/uhd/tests/ctrlport_endpoint_test
 lib/uhd/tests/custom_reg_test
 lib/uhd/tests/device_addr_test.py
 lib/uhd/tests/devtest/benchmark_rate_test.py
@@ -493,6 +518,7 @@ lib/uhd/tests/devtest/devtest_e3xx.py
 lib/uhd/tests/devtest/devtest_n3x0.py
 lib/uhd/tests/devtest/devtest_x3x0.py
 lib/uhd/tests/devtest/devtest_x410.py
+lib/uhd/tests/devtest/devtest_x420.py
 lib/uhd/tests/devtest/devtest_x440.py
 lib/uhd/tests/devtest/gpio_test.py
 lib/uhd/tests/devtest/list_sensors_test.py
@@ -507,6 +533,7 @@ lib/uhd/tests/devtest/rx_samples_to_file_test.py
 lib/uhd/tests/devtest/rx_stream_cmds_test.py
 lib/uhd/tests/devtest/test_messages_test.py
 lib/uhd/tests/devtest/test_pps_test.py
+lib/uhd/tests/devtest/trigger_test.py
 lib/uhd/tests/devtest/tx_bursts_test.py
 lib/uhd/tests/devtest/tx_multi_spc_timed_commands_test.py
 lib/uhd/tests/devtest/tx_waveforms_test.py
@@ -524,6 +551,7 @@ lib/uhd/tests/fe_conn_test
 lib/uhd/tests/fp_compare_delta_test
 lib/uhd/tests/fp_compare_epsilon_test
 lib/uhd/tests/gain_group_test
+lib/uhd/tests/hbx_lo_pd_test
 lib/uhd/tests/interpolation_test
 lib/uhd/tests/isatty_test
 lib/uhd/tests/link_test
@@ -623,13 +651,13 @@ man/man1/uhd_image_loader.1
 man/man1/uhd_images_downloader.1
 man/man1/uhd_usrp_probe.1
 man/man1/usrp2_card_burner.1
-man/man1/usrp_n2xx_simple_net_burner.1
 man/man1/usrpctl.1
 share/doc/uhd/LICENSE
 share/doc/uhd/README.md
 share/uhd/cal/cal_metadata.fbs
 share/uhd/cal/dsa_cal.fbs
 share/uhd/cal/iq_cal.fbs
+share/uhd/cal/iq_dc_cal.fbs
 share/uhd/cal/pwr_cal.fbs
 share/uhd/rfnoc-newmod/.gitignore
 share/uhd/rfnoc-newmod/CMakeLists.txt
@@ -652,8 +680,6 @@ share/uhd/rfnoc-newmod/rfnoc/CMakeLists.txt
 share/uhd/rfnoc-newmod/rfnoc/blocks/CMakeLists.txt
 share/uhd/rfnoc-newmod/rfnoc/fpga/newmod/CMakeLists.txt
 share/uhd/rfnoc-newmod/tests/CMakeLists.txt
-share/uhd/rfnoc-newmod/tests/newmod_block_test.cpp
-share/uhd/rfnoc-newmod/tests/newmod_math_test.cpp
 share/uhd/rfnoc/blocks/addsub.yml
 share/uhd/rfnoc/blocks/axi_ram_fifo.yml
 share/uhd/rfnoc/blocks/ddc.yml
@@ -683,6 +709,7 @@ share/uhd/rfnoc/core/rfnoc_imagebuilder_args.json
 share/uhd/rfnoc/core/x300_bsp.yml
 share/uhd/rfnoc/core/x310_bsp.yml
 share/uhd/rfnoc/core/x410_bsp.yml
+share/uhd/rfnoc/core/x420_bsp.yml
 share/uhd/rfnoc/core/x440_bsp.yml
 share/uhd/rfnoc/modules/device_dna.yml
 share/uhd/rfnoc/transport_adapters/chdr_dma.yml
