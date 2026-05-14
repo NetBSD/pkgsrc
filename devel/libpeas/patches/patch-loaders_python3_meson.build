@@ -1,0 +1,17 @@
+$NetBSD: patch-loaders_python3_meson.build,v 1.1 2026/05/14 15:04:27 wiz Exp $
+
+Micro version in pkgsrc sometimes contains '3nb1' etc; only take first
+integer part to avoid exception.
+
+--- loaders/python3/meson.build.orig	2026-05-14 14:57:13.569206597 +0000
++++ loaders/python3/meson.build
+@@ -4,7 +4,8 @@ pygobject_version_minor = pygobject_version_arr[1].to_
+ pygobject_version_arr = pygobject_version.split('.')
+ pygobject_version_major = pygobject_version_arr[0].to_int()
+ pygobject_version_minor = pygobject_version_arr[1].to_int()
+-pygobject_version_micro = pygobject_version_arr[2].to_int()
++pygobject_version_micro_arr = pygobject_version_arr[2].split('nb')
++pygobject_version_micro = pygobject_version_micro_arr[0].to_int()
+ 
+ python3_loader_c = files(
+   '../python/peas-plugin-loader-python.c',

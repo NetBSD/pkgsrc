@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:15:26 nia Exp $
+$NetBSD: distinfo,v 1.14 2026/05/14 15:04:27 wiz Exp $
 
 BLAKE2s (libpeas-1.26.0.tar.xz) = 15c09eda67c82c5a546b84507ea06ac19638e25ac971efc05afe8014eef91675
 SHA512 (libpeas-1.26.0.tar.xz) = 86157da14d17c16df2ef3f44ab48822ea1a8be8aec8f5419bc421bd475113f686cd16f9616ac53cbf3dc6f31f521384ac63eb8e9f1a46ea21b5cda8ba21e855f
 Size (libpeas-1.26.0.tar.xz) = 191708 bytes
+SHA1 (patch-loaders_python3_meson.build) = 5b5824a3a39ae07380ed74aa4be525c2ef1e60ff
 SHA1 (patch-peas-demo_peas-demo.c) = c9411235c3aa6a7ff20934f64361abf89b9dfc41
