@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2026/02/06 10:06:13 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2026/05/14 16:42:26 ryoon Exp $
 
 BUILDLINK_TREE+=	kf6-kconfigwidgets
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kconfigwidgets
 KF6_KCONFIGWIDGETS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kconfigwidgets+=	kf6-kconfigwidgets>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-kconfigwidgets?=	kf6-kconfigwidgets>=6.18.0nb3
+BUILDLINK_ABI_DEPENDS.kf6-kconfigwidgets?=	kf6-kconfigwidgets>=6.18.0nb4
 BUILDLINK_PKGSRCDIR.kf6-kconfigwidgets?=	../../x11/kf6-kconfigwidgets
 
 .include "../../devel/kf6-kcolorscheme/buildlink3.mk"

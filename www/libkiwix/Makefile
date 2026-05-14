@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2026/03/09 16:35:38 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/05/14 16:42:21 ryoon Exp $
 
 DISTNAME=	libkiwix-14.2.0
+PKGREVISION=	1
 CATEGORIES=	www textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kiwix/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/04/22 17:47:50 vins Exp $
+# $NetBSD: Makefile,v 1.2 2026/05/14 16:40:53 ryoon Exp $
 
 DISTNAME=	avfs-1.3.0
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=avf/}
 EXTRACT_SUFX=	.tar.bz2

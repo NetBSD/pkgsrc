@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/04/14 12:46:17 kikadf Exp $
+# $NetBSD: Makefile,v 1.2 2026/05/14 16:40:38 ryoon Exp $
 
 DISTNAME=	chrono-date-3.0.4
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=HowardHinnant/}
 GITHUB_PROJECT=	date

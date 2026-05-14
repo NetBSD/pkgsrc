@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2026/02/06 10:04:33 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2026/05/14 16:40:44 ryoon Exp $
 
 BUILDLINK_TREE+=	libadapta
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libadapta
 LIBADAPTA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libadapta+=	libadapta>=1.5.0
-BUILDLINK_ABI_DEPENDS.libadapta?=		libadapta>=1.5.0nb8
+BUILDLINK_ABI_DEPENDS.libadapta?=		libadapta>=1.5.0nb9
 BUILDLINK_PKGSRCDIR.libadapta?=		../../devel/libadapta
 
 .include "../../devel/appstream/buildlink3.mk"

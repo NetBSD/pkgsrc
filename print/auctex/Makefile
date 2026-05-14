@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.88 2026/02/06 14:43:20 chuck Exp $
+# $NetBSD: Makefile,v 1.89 2026/05/14 16:41:53 ryoon Exp $
 
 DISTNAME=		auctex-13.3
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNU:=auctex/}
 

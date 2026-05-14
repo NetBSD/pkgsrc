@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2026/04/30 06:38:38 adam Exp $
+# $NetBSD: Makefile,v 1.27 2026/05/14 16:41:08 ryoon Exp $
 
 DISTNAME=	qtlocation-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtlocation-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt6 location module
 CATEGORIES=	geography
 LICENSE=	gnu-gpl-v3 OR gnu-gpl-v2

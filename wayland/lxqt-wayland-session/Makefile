@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/05/02 04:25:54 pin Exp $
+# $NetBSD: Makefile,v 1.2 2026/05/14 16:42:17 ryoon Exp $
 
+PKGREVISION= 1
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	lxqt-wayland-session-0.4.0

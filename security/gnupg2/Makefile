@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.176 2026/05/14 12:38:11 adam Exp $
+# $NetBSD: Makefile,v 1.177 2026/05/14 16:41:59 ryoon Exp $
 
 DISTNAME=	gnupg-2.5.20
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG:=gnupg/}
 EXTRACT_SUFX=	.tar.bz2

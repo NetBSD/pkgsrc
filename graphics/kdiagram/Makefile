@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2026/02/06 10:05:00 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/05/14 16:41:12 ryoon Exp $
 
 DISTNAME=	kdiagram-3.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics kde
 MASTER_SITES=	${MASTER_SITE_KDE:=kdiagram/3.0.1/}
 EXTRACT_SUFX=	.tar.xz

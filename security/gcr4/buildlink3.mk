@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2026/05/03 09:51:11 vins Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2026/05/14 16:41:59 ryoon Exp $
 
 BUILDLINK_TREE+=	gcr4
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	gcr4
 GCR4_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gcr4+=	gcr4>=4.4.0
+BUILDLINK_ABI_DEPENDS.gcr4?=	gcr4>=4.4.0.1nb1
 BUILDLINK_PKGSRCDIR.gcr4?=	../../security/gcr4
 
 .include "../../devel/glib2/buildlink3.mk"

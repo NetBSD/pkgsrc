@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2026/02/06 10:05:19 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2026/05/14 16:41:31 ryoon Exp $
 
 DISTNAME=	kcharselect-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/utilities/kcharselect/

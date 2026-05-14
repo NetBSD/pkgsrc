@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2026/03/30 16:06:23 adam Exp $
+# $NetBSD: Makefile,v 1.24 2026/05/14 16:40:52 ryoon Exp $
 
+PKGREVISION= 1
 .include "../../emulators/ppsspp/Makefile.common"
 
 PKGNAME=	libretro-${DISTNAME}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2026/02/06 10:04:32 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2026/05/14 16:40:43 ryoon Exp $
 
 BUILDLINK_TREE+=	kf6-krunner
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-krunner
 KF6_KRUNNER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-krunner+=	kf6-krunner>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-krunner?=	kf6-krunner>=6.18.0nb3
+BUILDLINK_ABI_DEPENDS.kf6-krunner?=	kf6-krunner>=6.18.0nb4
 BUILDLINK_PKGSRCDIR.kf6-krunner?=	../../devel/kf6-krunner
 
 .include "../../devel/kf6-kconfig/buildlink3.mk"

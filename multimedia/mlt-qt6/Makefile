@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2026/02/06 10:05:27 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/05/14 16:41:39 ryoon Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../multimedia/mlt/Makefile.common"
 
 PKGNAME=	mlt-qt6-7.34.1

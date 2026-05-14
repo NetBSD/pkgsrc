@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2026/02/06 10:06:03 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2026/05/14 16:42:16 ryoon Exp $
 
 DISTNAME=	kcalutils-${KAPPSVER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	time
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM

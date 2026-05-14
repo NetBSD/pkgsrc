@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2026/02/06 10:05:17 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2026/05/14 16:41:29 ryoon Exp $
 
 BUILDLINK_TREE+=	akonadi-contacts
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	akonadi-contacts
 AKONADI_CONTACTS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.akonadi-contacts+=	akonadi-contacts>=25.08.3
-BUILDLINK_ABI_DEPENDS.akonadi-contacts?=	akonadi-contacts>=25.08.3nb3
+BUILDLINK_ABI_DEPENDS.akonadi-contacts?=	akonadi-contacts>=25.08.3nb4
 BUILDLINK_PKGSRCDIR.akonadi-contacts?=		../../misc/akonadi-contacts
 
 .include "../../devel/kf6-kcmutils/buildlink3.mk"

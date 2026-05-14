@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.141 2026/02/06 10:05:40 wiz Exp $
+# $NetBSD: Makefile,v 1.142 2026/05/14 16:41:52 ryoon Exp $
 
 DISTNAME=	vinagre-3.22.0
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	net x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vinagre/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

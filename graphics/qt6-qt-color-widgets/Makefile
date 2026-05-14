@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2026/03/04 00:20:26 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2026/05/14 16:41:16 ryoon Exp $
 
 DISTNAME=	Qt-Color-Widgets-3.0.0
 PKGNAME=	${DISTNAME:S/Qt-Color-Widgets/qt6-qt-color-widgets/}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITLAB:=mattbas/}
 GITLAB_PROJECT=	Qt-Color-Widgets

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2026/05/03 06:38:33 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/05/14 16:41:36 ryoon Exp $
 
 DISTNAME=	stellarsolver-2.7
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rlancaste/}
 

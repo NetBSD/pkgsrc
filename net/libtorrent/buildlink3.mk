@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2026/02/06 10:05:34 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2026/05/14 16:41:47 ryoon Exp $
 
 BUILDLINK_TREE+=	libtorrent
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libtorrent
 LIBTORRENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libtorrent+=	libtorrent>=0.14.0
-BUILDLINK_ABI_DEPENDS.libtorrent+=	libtorrent>=0.16.6nb2
+BUILDLINK_ABI_DEPENDS.libtorrent+=	libtorrent>=0.16.11nb1
 BUILDLINK_PKGSRCDIR.libtorrent?=	../../net/libtorrent
 
 .include "../../security/openssl/buildlink3.mk"

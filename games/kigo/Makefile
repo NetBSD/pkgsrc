@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2026/02/06 10:04:48 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2026/05/14 16:40:59 ryoon Exp $
 
 DISTNAME=	kigo-${KAPPSVER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kigo/

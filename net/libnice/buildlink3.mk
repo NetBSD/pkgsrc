@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.58 2026/02/06 10:05:34 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.59 2026/05/14 16:41:46 ryoon Exp $
 
 BUILDLINK_TREE+=	libnice
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libnice
 LIBNICE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libnice+=	libnice>=0.0.9
-BUILDLINK_ABI_DEPENDS.libnice+=	libnice>=0.1.23nb2
+BUILDLINK_ABI_DEPENDS.libnice+=	libnice>=0.1.23nb3
 BUILDLINK_PKGSRCDIR.libnice?=	../../net/libnice
 
 .include "../../devel/glib2/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2026/02/19 09:55:00 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/05/14 16:42:11 ryoon Exp $
 
 UBOOT_TARGET=		visionfive2
 UBOOT_VERSION=		2024.10
-PKGREVISION=		4
+PKGREVISION=		5
 UBOOT_CONFIG=		starfive_visionfive2_defconfig
 UBOOT_BIN=		spl/u-boot-spl.bin.normal.out u-boot.itb
 

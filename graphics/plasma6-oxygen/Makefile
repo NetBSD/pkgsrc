@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2026/02/06 10:05:04 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/05/14 16:41:16 ryoon Exp $
 
 DISTNAME=	oxygen-${PLASMAVER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://kde.org/plasma-desktop/
