@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3009 2026/05/14 11:25:37 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3010 2026/05/14 12:22:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4620,3 +4620,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/intel-microcode-netbsd to 20260512 [msaitoh 2026-0514]
 	Updated graphics/opencolorio to 2.5.2 [adam 2026-05-14]
 	Updated graphics/openimageio to 3.1.13.1 [adam 2026-05-14]
+	Updated devel/py-pydantic-core to 2.46.4 [adam 2026-05-14]
+	Updated devel/py-pydantic to 2.13.4 [adam 2026-05-14]
