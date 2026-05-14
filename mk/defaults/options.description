@@ -288,6 +288,7 @@ gcc-multilib		Build libraries for multiple ABI's.
 gcc-objc		Build the gcc Objective-C frontend and libraries.
 gcc-objc++		Build the gcc Objective-C++ frontend and libraries.
 gconf			Use GConf to store preferences.
+gcr			Use GCR to access PKCS#11 key stores.
 gd			Use GD to render graphical output.
 gdal			Use the GDAL library.
 gdbm			Use the GNU gdbm database library.
@@ -330,9 +331,11 @@ gnuplot			Enable gnuplot support.
 gnuplot-pdf-doc		Install PDF document.
 gnutls			Enable GNU TLS support.
 go			Enable Go language support.
+goa			Enable Gnome Online Accounts (GOA) support.
 goffice			Enable goffice support.
 gopher			Enable support for the Gopher information system.
 gpgme			Enable gpg support, by using the gpgme library.
+gphoto			Use libgphoto2 to access digital cameras. 
 gpsd			Enable GPS service daemon support.
 gqmpeg-japanese		Japanese ID3 tag support.
 gqmpeg-russian		Russian ID3 tag support.
@@ -538,6 +541,7 @@ libdrm			Enable libdrm support.
 libelf			Enable libelf support.
 libgccjit		Enable JIT (just-in-time compilation) support using libgccjit.
 libgcrypt		Use GNU cryptographic library.
+libgdata		Use libgdata to access Google services.
 libgme			Enable Game_Music_Emu video game music file library support.
 libgpod			Enable libgpod support.
 libiconv-cp932		Add supplemental support for CP932.
