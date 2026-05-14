@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/11/13 11:27:34 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/05/14 17:34:02 ryoon Exp $
 bin/aomdec
 bin/aomenc
 include/aom/aom.h
@@ -11,6 +11,10 @@ include/aom/aom_image.h
 include/aom/aom_integer.h
 include/aom/aomcx.h
 include/aom/aomdx.h
+lib/cmake/AOM/AOMConfig.cmake
+lib/cmake/AOM/AOMConfigVersion.cmake
+lib/cmake/AOM/AOMTargets-release.cmake
+lib/cmake/AOM/AOMTargets.cmake
 lib/libaom.a
 lib/libaom.so
 lib/libaom.so.3
