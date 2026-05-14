@@ -1,0 +1,21 @@
+$NetBSD: patch-docs_CMakeLists.txt,v 1.4 2026/05/14 13:27:32 adam Exp $
+
+Fix man page installation.
+https://github.com/EttusResearch/uhd/issues/921
+
+--- docs/CMakeLists.txt.orig	2026-05-14 12:56:32.758885886 +0000
++++ docs/CMakeLists.txt
+@@ -89,8 +89,12 @@ if(ENABLE_MAN_PAGES)
+         UHD_INSTALL(FILES ${man_page_gz_files} DESTINATION ${PKG_MAN_DIR} COMPONENT manpages)
+         add_custom_target(man_page_gzips ALL DEPENDS ${man_page_gz_files})
+     else(ENABLE_MAN_PAGE_COMPRESSION)
++        foreach(manfile ${man_page_sources})
++            set(manfile "${CMAKE_CURRENT_SOURCE_DIR}/manpages/${manfile}")
++            list(APPEND man_page_files ${manfile})
++        endforeach(manfile ${man_page_sources})
+         # uncompressed man pages; just install them
+-        UHD_INSTALL(FILES ${man_page_sources} DESTINATION ${PKG_MAN_DIR} COMPONENT manpages)
++        UHD_INSTALL(FILES ${man_page_files} DESTINATION ${PKG_MAN_DIR} COMPONENT manpages)
+     endif(ENABLE_MAN_PAGE_COMPRESSION)
+ endif(ENABLE_MAN_PAGES)
+ 
