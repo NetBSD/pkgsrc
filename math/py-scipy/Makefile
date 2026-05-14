@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2026/02/24 10:05:18 adam Exp $
+# $NetBSD: Makefile,v 1.106 2026/05/14 13:52:11 gdt Exp $
 
 DISTNAME=	scipy-1.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -48,6 +48,13 @@ SUBST_STAGE.pythran=	pre-configure
 SUBST_MESSAGE.pythran=	Fixing pythran binary name.
 SUBST_FILES.pythran=	meson.build
 SUBST_SED.pythran=	-e "s,'pythran','pythran-${PYVERSSUFFIX}',"
+
+# meson apparently lacks --with-cython=
+SUBST_CLASSES+=		cython
+SUBST_STAGE.cython=	pre-configure
+SUBST_MESSAGE.cython=	Fixing cython binary name.
+SUBST_FILES.cython=	meson.build
+SUBST_SED.cython=	-e "s,cython = find_program.*,cython=find_program('cython-${PYVERSSUFFIX}'),"
 
 # XXX Avoid picking up other compilers when installed
 .include "../../mk/compiler.mk"
