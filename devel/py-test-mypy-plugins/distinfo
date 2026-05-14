@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2026/04/20 12:51:16 adam Exp $
+$NetBSD: distinfo,v 1.10 2026/05/14 13:22:30 adam Exp $
 
-BLAKE2s (pytest_mypy_plugins-4.0.2.tar.gz) = 21facd863d3134768fd146021e1bc4c7aa426c5a26b28c87bdb4c24702db964b
-SHA512 (pytest_mypy_plugins-4.0.2.tar.gz) = 8389e6ad98d218d56e8c7d67565e1f22f18879d218fc4f53a1e88c5897b76dc37e715161ddfad8fc151caa8545100e89784ae638612919b11cdba193c60c3006
-Size (pytest_mypy_plugins-4.0.2.tar.gz) = 30303 bytes
+BLAKE2s (pytest_mypy_plugins-4.0.3.tar.gz) = 5007603ed0e15cac5bb0e34fa5543ca69f0da025de4d9bea4fb236243d3950ac
+SHA512 (pytest_mypy_plugins-4.0.3.tar.gz) = b060cc50093e87de1df98c495ede14a369576a7fca8e561fb5e4ce058295991e052977ea9f3259fb81d66721d0f788bb84777000f98e52390f0bf919c8f02776
+Size (pytest_mypy_plugins-4.0.3.tar.gz) = 30583 bytes
