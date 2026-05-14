@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.16 2026/04/14 10:33:41 jperkin Exp $
+$NetBSD: patch-configure.ac,v 1.17 2026/05/14 13:50:46 mef Exp $
 
 Do not add any system paths to R_LD_LIBRARY_PATH, it conflicts at runtime
 with what has been correctly written to the RPATH.
@@ -25,8 +25,8 @@ release    line #
 10.99.12   4770   withval=$with_blas; if test "${withval}" = no; then
  9.3       4392   withval=$with_blas; R_ARG_USE(blas)
 
---- configure.ac.orig	2025-04-20 22:15:02.000000000 +0000
-+++ configure.ac
+--- configure.ac.orig	2026-03-27 08:02:02.000000000 +0900
++++ configure.ac	2026-05-14 21:35:51.308108681 +0900
 @@ -33,6 +33,7 @@ m4_define([R_VERSION],
  AC_INIT([R],[R_VERSION],[https://bugs.r-project.org],[R],[https://www.r-project.org])
  AC_CONFIG_SRCDIR([src/include/Defn.h])
@@ -64,6 +64,15 @@ release    line #
      ## don't use version in libRblas so we can replace it with any BLAS implementation
      RBLAS_LDFLAGS="-install_name libRblas.dylib -headerpad_max_install_names"
      ;;
+@@ -1961,7 +1964,7 @@ if test -z "${CXX20}"; then
+   use_CXX20=no
+ fi
+ if test -n "${CXX}" && test -z "${CXXSTD}"; then
+-  if test "$use_CXX20" == "yes"; then
++  if test "$use_CXX20" = "yes"; then
+ dnl Set default C++ compiler to C++20 as available
+     CXX=${CXX20}
+     CXXSTD=${CXX20STD}
 @@ -2895,7 +2898,7 @@ for arg in ${LDFLAGS} ${FLIBS} ${BLAS_LI
    case "${arg}" in
      -L*)
