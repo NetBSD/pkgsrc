@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2026/03/13 15:11:48 msaitoh Exp $
+# $NetBSD: Makefile,v 1.72 2026/05/14 01:51:57 msaitoh Exp $
 
-VERSION=	20260227
+VERSION=	20260512
 DISTNAME=	microcode-${VERSION}
 PKGNAME=	intel-microcode-netbsd-${VERSION}
 CATEGORIES=	sysutils
