@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/11/04 00:12:55 wiz Exp $
+$NetBSD: distinfo,v 1.2 2026/05/14 17:54:10 ryoon Exp $
 
-BLAKE2s (gtksourceview-5.10.0.tar.xz) = 70c4328fb8ed4086f58fd21077f387dd2e84dcaf5a71165142864f0a29159270
-SHA512 (gtksourceview-5.10.0.tar.xz) = c8fb377c0f65fff35fe764c98d40a399b2f3982bfb7e25512b50f4f3c31b226d4775e136fc4be682b2e44a3b643cefd01d195c9a61f5c3ca81d15bef0093e47a
-Size (gtksourceview-5.10.0.tar.xz) = 1255564 bytes
+BLAKE2s (gtksourceview-5.20.0.tar.xz) = 4d6c9c90947b335049775e90f8e3e8a286c183f145adf65838d1905a6e0ad037
+SHA512 (gtksourceview-5.20.0.tar.xz) = d0d25ab7098d6626bde49bbd5c29986838f0958cd3e31b5cab74016eb37a4caea3351be9ce4268464a8d1cb42b10b698aa819b215f652c8c97382e0900df7893
+Size (gtksourceview-5.20.0.tar.xz) = 1264672 bytes
