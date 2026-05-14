@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2026/03/17 03:07:01 maya Exp $
+# $NetBSD: Makefile,v 1.21 2026/05/14 11:15:01 adam Exp $
 
-DISTNAME=	OpenColorIO-2.5.1
+DISTNAME=	OpenColorIO-2.5.2
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AcademySoftwareFoundation/}
