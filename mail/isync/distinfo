@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.26 2023/05/13 08:49:27 ryoon Exp $
+$NetBSD: distinfo,v 1.27 2026/05/14 13:15:13 ktnb Exp $
 
-BLAKE2s (isync-1.4.4.tar.gz) = 50e873ff3d213b137b125ad0b8aca5774ee921867fb8c5481ffec5e5f45f51ca
-SHA512 (isync-1.4.4.tar.gz) = b769f474f2296764cabaae7e2b23e47c22714fca5919e9f1c916ed70b18c71c0bc9301fff0f64434f4f0ae28c9d16216e72556b48014ec94d1b7646de7183011
-Size (isync-1.4.4.tar.gz) = 340544 bytes
-SHA1 (patch-ae) = a3bdbdd05e32474bf76f8110561bdcea9b72b0c3
-SHA1 (patch-src_Makefile.in) = b989a7627dbb7c989dd26c3e20beeceb000a7a47
-SHA1 (patch-src_drv__imap.c) = cf838ac77a3c1e50311e2e00d78028c50689a0b3
-SHA1 (patch-src_socket.c) = 0397c9f41a4140d674761bd9fd1f57239120b6e1
-SHA1 (patch-src_socket.h) = d52684ebe95f085d11f8f30d442f06691b1d8315
+BLAKE2s (isync-1.5.1.tar.gz) = 4376d497aad83715fa952fbb333af8f686badf0109f4935ecb1aa908e6111ea6
+SHA512 (isync-1.5.1.tar.gz) = 3ccc37b9f902841e244acb16d574991062090770b5d8efb0079cee507f4352752e248f28cb6da63d21987f5c616e36d0dc6b8a7b20a89bcf805cd37429473d02
+Size (isync-1.5.1.tar.gz) = 324364 bytes
+SHA1 (patch-src_Makefile.in) = 7625c42f06bb3a9d5ce612593b8c8138f8b3603f
+SHA1 (patch-src_config.c) = 3c667a67dc8f5d460928af543b191353f1eda8d4

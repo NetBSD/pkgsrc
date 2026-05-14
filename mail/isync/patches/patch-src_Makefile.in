@@ -1,15 +1,15 @@
-$NetBSD: patch-src_Makefile.in,v 1.3 2018/09/19 13:08:14 schmonz Exp $
+$NetBSD: patch-src_Makefile.in,v 1.4 2026/05/14 13:15:14 ktnb Exp $
 
 Install example config files in pkgsrc hierarchy.
 
---- src/Makefile.in.orig	2017-10-01 08:46:50.000000000 +0000
+--- src/Makefile.in.orig	2026-05-13 18:06:05.736573667 +0000
 +++ src/Makefile.in
-@@ -359,7 +359,7 @@ mdconvert_LDADD = $(DB_LIBS)
- @with_mdconvert_TRUE@mdconvert_man = mdconvert.1
+@@ -581,7 +581,7 @@ tst_timers_SOURCES = tst_timers.c util.c
+ tst_msg_cvt_CFLAGS = -DQPRINTF_BUFF=10000
+ TESTS = $(check_PROGRAMS)
  tst_timers_SOURCES = tst_timers.c util.c
- man_MANS = mbsync.1 $(mdconvert_man)
 -exampledir = $(docdir)/examples
 +exampledir = $(datadir)/examples/isync
  example_DATA = mbsyncrc.sample
- EXTRA_DIST = drv_proxy_gen.pl run-tests.pl $(example_DATA) $(man_MANS)
+ EXTRA_DIST = drv_proxy_gen.pl run-tests.pl $(example_DATA) $(in_man)
  CLEANFILES = drv_proxy.inc
