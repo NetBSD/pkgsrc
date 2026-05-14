@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2026/05/10 16:34:23 vins Exp $
+# $NetBSD: Makefile,v 1.63 2026/05/14 04:23:58 jnemeth Exp $
 #
 
 COMMENT=	File systems, and file system related packages
@@ -8,7 +8,6 @@ SUBDIR+=	cloudfuse
 SUBDIR+=	cocofs
 SUBDIR+=	fsx
 SUBDIR+=	fuse
-SUBDIR+=	fuse3
 SUBDIR+=	fuse-afpfs-ng
 SUBDIR+=	fuse-archivemount
 SUBDIR+=	fuse-bindfs
@@ -37,6 +36,7 @@ SUBDIR+=	fuse-svnfs
 SUBDIR+=	fuse-unionfs
 SUBDIR+=	fuse-wdfs
 SUBDIR+=	fuse-wikipediafs
+SUBDIR+=	fuse3
 SUBDIR+=	glusterfs
 SUBDIR+=	glusterfs8
 SUBDIR+=	gnunet-fuse
