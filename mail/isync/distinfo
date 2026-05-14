@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.27 2026/05/14 13:15:13 ktnb Exp $
+$NetBSD: distinfo,v 1.28 2026/05/14 14:38:05 ktnb Exp $
 
 BLAKE2s (isync-1.5.1.tar.gz) = 4376d497aad83715fa952fbb333af8f686badf0109f4935ecb1aa908e6111ea6
 SHA512 (isync-1.5.1.tar.gz) = 3ccc37b9f902841e244acb16d574991062090770b5d8efb0079cee507f4352752e248f28cb6da63d21987f5c616e36d0dc6b8a7b20a89bcf805cd37429473d02
 Size (isync-1.5.1.tar.gz) = 324364 bytes
 SHA1 (patch-src_Makefile.in) = 7625c42f06bb3a9d5ce612593b8c8138f8b3603f
 SHA1 (patch-src_config.c) = 3c667a67dc8f5d460928af543b191353f1eda8d4
+SHA1 (patch-src_util.c) = caed7eba69e019e52d329c945c24b7ba1fe5594c
