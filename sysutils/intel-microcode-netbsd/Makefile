@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2026/05/14 01:51:57 msaitoh Exp $
+# $NetBSD: Makefile,v 1.73 2026/05/14 13:24:06 gdt Exp $
 
 VERSION=	20260512
 DISTNAME=	microcode-${VERSION}
@@ -13,6 +13,7 @@ HOMEPAGE=	https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/
 COMMENT=	Firmware updates for Intel x86 processors
 LICENSE=	intel-microcode-license
 
+# Use of this package relies on NetBSD's cpuctl(8).
 ONLY_FOR_PLATFORM+=	NetBSD-*-i386 NetBSD-*-x86_64
 
 WRKSRC=		${WRKDIR}
