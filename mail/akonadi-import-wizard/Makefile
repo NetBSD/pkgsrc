@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2026/02/06 10:05:10 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/05/14 16:41:22 ryoon Exp $
 
 DISTNAME=	akonadi-import-wizard-${KAPPSVER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 
 HOMEPAGE=	https://kontact.kde.org/

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2026/02/06 10:04:51 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/05/14 16:41:03 ryoon Exp $
 
 DISTNAME=	manaplus-2.1.3.17
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	games
 MASTER_SITES=	https://absinthe.tuxfamily.org/manaplus/download/latest/
 EXTRACT_SUFX=	.tar.xz

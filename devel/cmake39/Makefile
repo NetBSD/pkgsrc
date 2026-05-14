@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2026/02/06 10:04:28 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/05/14 16:40:39 ryoon Exp $
 
-PKGREVISION= 4
+PKGREVISION= 5
 .include "Makefile.version"
 
 DISTNAME=	cmake-${CMAKE_VERSION}

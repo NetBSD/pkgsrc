@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.81 2026/03/12 06:02:45 adam Exp $
+# $NetBSD: Makefile,v 1.82 2026/05/14 16:40:46 ryoon Exp $
 
 DISTNAME=	netcdf-c-4.10.0
 PKGNAME=	${DISTNAME:S/-c-/-/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Unidata/}
 GITHUB_PROJECT=	netcdf-c

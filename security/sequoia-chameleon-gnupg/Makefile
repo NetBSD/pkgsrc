@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2026/02/06 10:05:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/05/14 16:42:03 ryoon Exp $
 
 DISTNAME=	sequoia-chameleon-gnupg-0.13.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITLAB:=sequoia-pgp/}
 GITLAB_PROJECT=	sequoia-chameleon-gnupg

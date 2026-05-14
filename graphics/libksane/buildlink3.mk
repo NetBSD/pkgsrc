@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.78 2026/02/06 10:05:02 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.79 2026/05/14 16:41:14 ryoon Exp $
 
 BUILDLINK_TREE+=	libksane
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libksane
 LIBKSANE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libksane+=	libksane>=25.08.2
-BUILDLINK_ABI_DEPENDS.libksane?=	libksane>=25.08.3nb3
+BUILDLINK_ABI_DEPENDS.libksane?=	libksane>=25.08.3nb4
 BUILDLINK_PKGSRCDIR.libksane?=		../../graphics/libksane
 
 .include "../../graphics/ksanecore/buildlink3.mk"

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2026/05/09 13:03:11 vins Exp $
+# $NetBSD: Makefile,v 1.37 2026/05/14 16:42:21 ryoon Exp $
 
 DISTNAME=	librest-0.10.2
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

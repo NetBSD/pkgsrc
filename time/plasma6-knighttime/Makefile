@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2026/02/06 10:06:04 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/05/14 16:42:17 ryoon Exp $
 
 DISTNAME=	knighttime-${PLASMAVER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	time
 
 HOMEPAGE=	https://kde.org/plasma-desktop/

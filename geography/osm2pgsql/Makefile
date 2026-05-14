@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2026/02/06 10:04:55 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2026/05/14 16:41:07 ryoon Exp $
 
 DISTNAME=	osm2pgsql-1.11.0
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openstreetmap/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

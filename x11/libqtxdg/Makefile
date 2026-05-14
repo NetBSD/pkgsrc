@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2026/04/28 07:50:15 pin Exp $
+# $NetBSD: Makefile,v 1.52 2026/05/14 16:42:28 ryoon Exp $
 
+PKGREVISION= 1
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	libqtxdg-4.4.0

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.148 2026/02/06 10:04:45 wiz Exp $
+# $NetBSD: Makefile,v 1.149 2026/05/14 16:40:57 ryoon Exp $
 
 PKGNAME=	${DISTNAME:S/-/-client-/}
-PKGREVISION=	32
+PKGREVISION=	33
 COMMENT=	Freeciv client
 
 DEPENDS+=	freeciv-share>=${FC_VERS}:../../games/freeciv-share

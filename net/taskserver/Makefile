@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2026/02/06 10:05:39 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/05/14 16:41:51 ryoon Exp $
 
 DISTNAME=	taskd-1.1.0
 PKGNAME=	${DISTNAME:S/taskd/taskserver/}
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	net
 MASTER_SITES=	https://taskwarrior.org/download/
 

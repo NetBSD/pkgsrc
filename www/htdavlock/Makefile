@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2026/02/06 10:06:07 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2026/05/14 16:42:20 ryoon Exp $
 
 DISTNAME=	htdavlock-0.2
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	www
 MASTER_SITES=	https://ftp.espci.fr/pub/htdavlock/
 

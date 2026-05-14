@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2026/02/06 10:04:32 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2026/05/14 16:40:43 ryoon Exp $
 
 BUILDLINK_TREE+=	kf6-kpackage
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kpackage
 KF6_KPACKAGE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kpackage+=	kf6-kpackage>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-kpackage?=	kf6-kpackage>=6.18.0nb3
+BUILDLINK_ABI_DEPENDS.kf6-kpackage?=	kf6-kpackage>=6.18.0nb4
 BUILDLINK_PKGSRCDIR.kf6-kpackage?=	../../devel/kf6-kpackage
 
 BUILDLINK_FILES.kf6-kpackage+=		bin/kpackagetool6

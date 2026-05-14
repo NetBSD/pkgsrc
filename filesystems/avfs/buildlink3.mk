@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2026/04/22 17:47:50 vins Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2026/05/14 16:40:53 ryoon Exp $
 
 BUILDLINK_TREE+=	avfs
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	avfs
 AVFS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.avfs+=	avfs>=1.3.0
+BUILDLINK_ABI_DEPENDS.avfs?=	avfs>=1.3.0nb1
 BUILDLINK_PKGSRCDIR.avfs?=	../../filesystems/avfs
 
 .include "../../archivers/bzip2/buildlink3.mk"

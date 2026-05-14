@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2026/02/06 10:05:26 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2026/05/14 16:41:38 ryoon Exp $
 
 DISTNAME=	ffmpegthumbs-${KAPPSVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	multimedia
 
 HOMEPAGE=	https://kde.org/applications/multimedia/

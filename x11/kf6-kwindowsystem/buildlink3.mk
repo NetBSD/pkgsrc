@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2026/02/06 10:06:14 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2026/05/14 16:42:27 ryoon Exp $
 
 BUILDLINK_TREE+=	kf6-kwindowsystem
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kwindowsystem
 KF6_KWINDOWSYSTEM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kwindowsystem+=	kf6-kwindowsystem>=6.0.0
-BUILDLINK_ABI_DEPENDS.kf6-kwindowsystem?=	kf6-kwindowsystem>=6.18.0nb3
+BUILDLINK_ABI_DEPENDS.kf6-kwindowsystem?=	kf6-kwindowsystem>=6.18.0nb4
 BUILDLINK_PKGSRCDIR.kf6-kwindowsystem?=		../../x11/kf6-kwindowsystem
 
 USE_CXX_FEATURES+=	c++20

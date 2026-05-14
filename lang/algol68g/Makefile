@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2026/02/06 10:05:09 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/05/14 16:41:21 ryoon Exp $
 
 DISTNAME=	algol68g-3.10.9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	http://jmvdveer.home.xs4all.nl/
 

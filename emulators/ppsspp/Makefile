@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/03/11 08:13:42 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/05/14 16:40:52 ryoon Exp $
 
+PKGREVISION= 1
 .include "Makefile.common"
 
 HOMEPAGE=	https://www.ppsspp.org/

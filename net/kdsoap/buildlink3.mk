@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2026/02/06 10:05:32 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2026/05/14 16:41:45 ryoon Exp $
 
 BUILDLINK_TREE+=	kdsoap
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdsoap
 KDSOAP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdsoap+=	kdsoap>=2.2.0
-BUILDLINK_ABI_DEPENDS.kdsoap?=	kdsoap>=2.2.0nb2
+BUILDLINK_ABI_DEPENDS.kdsoap?=	kdsoap>=2.2.0nb3
 BUILDLINK_PKGSRCDIR.kdsoap?=	../../net/kdsoap
 
 BUILDLINK_FILES.kdsoap+=	bin/kdwsdl2cpp-qt6

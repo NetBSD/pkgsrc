@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2026/02/06 10:06:20 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/05/14 16:42:33 ryoon Exp $
 
 DISTNAME=	sddm-0.21.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sddm/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}

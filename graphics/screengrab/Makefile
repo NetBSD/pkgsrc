@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2026/04/28 08:37:54 pin Exp $
+# $NetBSD: Makefile,v 1.46 2026/05/14 16:41:18 ryoon Exp $
 
+PKGREVISION= 1
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	screengrab-3.2.0

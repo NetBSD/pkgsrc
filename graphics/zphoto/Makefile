@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.121 2026/04/20 18:14:09 adam Exp $
+# $NetBSD: Makefile,v 1.122 2026/05/14 16:41:18 ryoon Exp $
 
 DISTNAME=	zphoto-1.2
-PKGREVISION=	111
+PKGREVISION=	112
 CATEGORIES=	graphics
 MASTER_SITES=	http://0xcc.net/zphoto/
 

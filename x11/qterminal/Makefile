@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2026/04/28 08:06:17 pin Exp $
+# $NetBSD: Makefile,v 1.51 2026/05/14 16:42:33 ryoon Exp $
 
+PKGREVISION= 1
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	qterminal-2.4.0

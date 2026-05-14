@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2026/02/06 10:05:22 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/05/14 16:41:34 ryoon Exp $
 
 DISTNAME=	libgravatar-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kontact.kde.org/

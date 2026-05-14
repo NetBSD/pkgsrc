@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2026/02/06 10:04:43 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2026/05/14 16:40:55 ryoon Exp $
 
 DISTNAME=	7kaa-2.15.6
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=skfans/}
 

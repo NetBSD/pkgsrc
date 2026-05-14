@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.106 2026/03/05 06:55:33 taca Exp $
+# $NetBSD: Makefile,v 1.107 2026/05/14 16:41:59 ryoon Exp $
 
+PKGREVISION= 1
 .include "cargo-depends.mk"
 .include "Makefile.common"
 

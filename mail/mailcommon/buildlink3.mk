@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2026/02/06 10:05:13 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2026/05/14 16:41:24 ryoon Exp $
 
 BUILDLINK_TREE+=	mailcommon
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mailcommon
 MAILCOMMON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mailcommon+=	mailcommon>=25.08.3
-BUILDLINK_ABI_DEPENDS.mailcommon?=	mailcommon>=25.08.3nb3
+BUILDLINK_ABI_DEPENDS.mailcommon?=	mailcommon>=25.08.3nb4
 BUILDLINK_PKGSRCDIR.mailcommon?=	../../mail/mailcommon
 
 .include "../../mail/mailimporter/buildlink3.mk"

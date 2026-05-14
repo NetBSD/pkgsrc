@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2026/02/06 10:04:54 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/05/14 16:41:06 ryoon Exp $
 
 R_PKGNAME=	proj4
 R_PKGVER=	1.0-14
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

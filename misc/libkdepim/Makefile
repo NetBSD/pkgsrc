@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2026/02/06 10:05:22 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/05/14 16:41:35 ryoon Exp $
 
 DISTNAME=	libkdepim-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM
