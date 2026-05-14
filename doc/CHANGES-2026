@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3011 2026/05/14 12:38:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3012 2026/05/14 13:27:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4624,3 +4624,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pydantic to 2.13.4 [adam 2026-05-14]
 	Updated security/libksba to 1.8.0 [adam 2026-05-14]
 	Updated security/gnupg2 to 2.5.20 [adam 2026-05-14]
+	Updated devel/py-test-mypy-plugins to 4.0.3 [adam 2026-05-14]
+	Updated ham/uhd to 4.10.0.0 [adam 2026-05-14]
