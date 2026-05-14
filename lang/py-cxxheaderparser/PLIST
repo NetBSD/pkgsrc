@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2026/05/12 08:10:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/05/14 14:56:07 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -49,9 +49,6 @@ ${PYSITELIB}/cxxheaderparser/tokfmt.pyo
 ${PYSITELIB}/cxxheaderparser/types.py
 ${PYSITELIB}/cxxheaderparser/types.pyc
 ${PYSITELIB}/cxxheaderparser/types.pyo
-${PYSITELIB}/cxxheaderparser/version.py
-${PYSITELIB}/cxxheaderparser/version.pyc
-${PYSITELIB}/cxxheaderparser/version.pyo
 ${PYSITELIB}/cxxheaderparser/visitor.py
 ${PYSITELIB}/cxxheaderparser/visitor.pyc
 ${PYSITELIB}/cxxheaderparser/visitor.pyo
