@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.22 2026/04/28 13:05:53 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.23 2026/05/14 12:22:00 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
@@ -38,7 +38,7 @@ CARGO_CRATE_DEPENDS+=	js-sys-0.3.77
 CARGO_CRATE_DEPENDS+=	lexical-parse-float-1.0.5
 CARGO_CRATE_DEPENDS+=	lexical-parse-integer-1.0.5
 CARGO_CRATE_DEPENDS+=	lexical-util-1.0.6
-CARGO_CRATE_DEPENDS+=	libc-0.2.155
+CARGO_CRATE_DEPENDS+=	libc-0.2.185
 CARGO_CRATE_DEPENDS+=	litemap-0.7.3
 CARGO_CRATE_DEPENDS+=	log-0.4.27
 CARGO_CRATE_DEPENDS+=	lru-0.16.3
