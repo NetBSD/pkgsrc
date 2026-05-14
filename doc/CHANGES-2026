@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3015 2026/05/14 13:50:56 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3016 2026/05/14 14:38:46 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4629,3 +4629,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/msmtp to 1.8.32 [ktnb 2026-05-14]
 	Updated www/chromium to 148.0.7778.167 [kikadf 2026-05-14]
 	Updated math/R to 4.6.0 [mef 2026-05-14]
+	Updated mail/isync to 1.5.1 [ktnb 2026-05-14]
+	Updated mail/isync to 1.5.1 [ktnb 2026-05-14]
