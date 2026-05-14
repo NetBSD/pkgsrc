@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3023 2026/05/14 16:06:59 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.3024 2026/05/14 16:11:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4636,3 +4636,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated parallel/spirv-headers to 1.4.350.0 [kikadf 2026-05-14]
 	Updated parallel/spirv-tools to 1.4.350.0 [kikadf 2026-05-14]
 	Updated graphics/vulkan-loader to 1.4.350.0 [kikadf 2026-05-14]
+	Updated devel/py-jupyter_events to 0.12.1 [adam 2026-05-14]
+	Updated devel/py-ruff to 0.15.13 [adam 2026-05-14]
