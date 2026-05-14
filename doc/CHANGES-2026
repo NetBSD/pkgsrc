@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3010 2026/05/14 12:22:27 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3011 2026/05/14 12:38:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4622,3 +4622,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/openimageio to 3.1.13.1 [adam 2026-05-14]
 	Updated devel/py-pydantic-core to 2.46.4 [adam 2026-05-14]
 	Updated devel/py-pydantic to 2.13.4 [adam 2026-05-14]
+	Updated security/libksba to 1.8.0 [adam 2026-05-14]
+	Updated security/gnupg2 to 2.5.20 [adam 2026-05-14]
