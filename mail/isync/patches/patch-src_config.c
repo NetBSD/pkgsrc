@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.7 2021/02/17 15:10:11 ryoon Exp $
+$NetBSD: patch-src_config.c,v 1.1 2026/05/14 13:15:14 ktnb Exp $
 
 Avoid segfault when parsing configuration file under NetBSD.
 
---- src/config.c.orig	2021-01-01 13:46:36.000000000 +0000
+--- src/config.c.orig	2026-05-13 18:02:57.689819229 +0000
 +++ src/config.c
-@@ -320,7 +320,7 @@ int
+@@ -433,7 +433,7 @@ load_config( const char *where )
  load_config( const char *where )
  {
  	conffile_t cfile;
