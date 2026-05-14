@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2026/01/05 18:19:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2026/05/14 17:10:03 ryoon Exp $
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-accessible.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-action.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-application.h
@@ -13,7 +13,6 @@ ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-document.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-editabletext.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-enum-types.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-event-listener.h
-${PLIST.dbus}include/at-spi-2.0/atspi/atspi-gmain.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-hyperlink.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-hypertext.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-image.h
@@ -73,7 +72,7 @@ ${PLIST.dbus}lib/gnome-settings-daemon-3.0/gtk-modules/at-spi2-atk.desktop
 ${PLIST.dbus}lib/gtk-2.0/modules/libatk-bridge.so
 lib/libatk-1.0.so
 lib/libatk-1.0.so.0
-lib/libatk-1.0.so.0.25812.1
+lib/libatk-1.0.so.0.26012.1
 ${PLIST.dbus}lib/libatk-bridge-2.0.so
 ${PLIST.dbus}lib/libatk-bridge-2.0.so.0
 ${PLIST.dbus}lib/libatk-bridge-2.0.so.0.0.0
@@ -149,6 +148,7 @@ share/locale/kn/LC_MESSAGES/at-spi2-core.mo
 share/locale/ko/LC_MESSAGES/at-spi2-core.mo
 share/locale/ku/LC_MESSAGES/at-spi2-core.mo
 share/locale/li/LC_MESSAGES/at-spi2-core.mo
+share/locale/lo/LC_MESSAGES/at-spi2-core.mo
 share/locale/lt/LC_MESSAGES/at-spi2-core.mo
 share/locale/lv/LC_MESSAGES/at-spi2-core.mo
 share/locale/mai/LC_MESSAGES/at-spi2-core.mo
