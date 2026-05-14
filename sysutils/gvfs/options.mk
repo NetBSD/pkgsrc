@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.7 2026/05/10 17:38:14 vins Exp $
+# $NetBSD: options.mk,v 1.8 2026/05/14 18:19:48 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gvfs
-PKG_SUPPORTED_OPTIONS=	bluray cdda dnssd fuse goa gcr gphoto idevice libgdata \
+PKG_SUPPORTED_OPTIONS=	bluray cdparanoia dnssd fuse goa gcr gphoto idevice libgdata \
 			libmtp polkit samba secret udev
 PKG_SUGGESTED_OPTIONS=	gcr dnssd secret
 
@@ -18,7 +18,7 @@ PKG_SUGGESTED_OPTIONS+=	fuse
 .include "../../mk/udev.buildlink3.mk"
 .if ${UDEV_TYPE} != "none"
 PKG_SUGGESTED_OPTIONS+=	udev
-PKG_SUGGESTED_OPTIONS+=	cdda libmtp
+PKG_SUGGESTED_OPTIONS+=	cdparanoia libmtp
 .endif
 
 .if ${OPSYS} == "Linux"
@@ -77,14 +77,14 @@ MESON_ARGS+=    -Dbluray=false
 
 ###
 ###  cdda://{DEVICE}
-###    Access audio discs.
+###    Access audio discs through cdparanoia.
 ###
-PLIST_VARS+=    cdda
-.if !empty(PKG_OPTIONS:Mcdda)
+PLIST_VARS+=    cdparanoia
+.if !empty(PKG_OPTIONS:Mcdparanoia)
 MESON_ARGS+=    -Dcdda=true
 GUDEV_REQUIRED= yes
 .  include "../../misc/libcdio-paranoia/buildlink3.mk"
-PLIST.cdda=     yes
+PLIST.cdparanoia=     yes
 .else
 MESON_ARGS+=    -Dcdda=false
 .endif

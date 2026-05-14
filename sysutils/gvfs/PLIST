@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2026/05/10 17:38:14 vins Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/05/14 18:19:48 vins Exp $
 lib/gio/modules/libgioremote-volume-monitor.so
 lib/gio/modules/libgvfsdbus.so
 lib/gvfs/libgvfscommon.so
@@ -13,7 +13,7 @@ libexec/gvfsd-afp
 libexec/gvfsd-afp-browse
 libexec/gvfsd-archive
 libexec/gvfsd-burn
-${PLIST.cdda}libexec/gvfsd-cdda
+${PLIST.cdparanoia}libexec/gvfsd-cdda
 libexec/gvfsd-computer
 libexec/gvfsd-dav
 ${PLIST.dnssd}libexec/gvfsd-dnssd
@@ -54,7 +54,7 @@ share/gvfs/mounts/afp-browse.mount
 share/gvfs/mounts/afp.mount
 share/gvfs/mounts/archive.mount
 share/gvfs/mounts/burn.mount
-${PLIST.cdda}share/gvfs/mounts/cdda.mount
+${PLIST.cdparanoia}share/gvfs/mounts/cdda.mount
 share/gvfs/mounts/computer.mount
 share/gvfs/mounts/dav+sd.mount
 share/gvfs/mounts/dav.mount
