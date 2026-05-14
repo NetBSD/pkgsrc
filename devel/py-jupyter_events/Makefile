@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/10/09 07:57:33 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/05/14 16:04:59 adam Exp $
 
-DISTNAME=	jupyter_events-0.12.0
+DISTNAME=	jupyter_events-0.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter-events/}
