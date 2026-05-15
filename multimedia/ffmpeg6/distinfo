@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2025/12/04 16:23:55 adam Exp $
+$NetBSD: distinfo,v 1.13 2026/05/15 11:48:22 adam Exp $
 
-BLAKE2s (ffmpeg-6.1.4.tar.xz) = c2d070751e2409a2472bce6749aa66ef068d7ab7798ac1ad95aedab1c0579716
-SHA512 (ffmpeg-6.1.4.tar.xz) = 0d7d29fb170947805eb531f6c66641d0977d18831923d5a9c0442c160b02f94b890ccd04ecf350bb3dce59fe7bb64a426cab02bd65c05416c0d153f50104065f
-Size (ffmpeg-6.1.4.tar.xz) = 10479060 bytes
+BLAKE2s (ffmpeg-6.1.5.tar.xz) = cce67d13f9fc981edb5010498fe981c7a1a572a126a1ea8b6d21741703a91ca3
+SHA512 (ffmpeg-6.1.5.tar.xz) = e05fbf5ae80cefbf11da50bc53120e956a500b447bd998716daac890dc68c5d9ebd712cb69eb16f156845924ef89bd27f10b8a14decef9a9bd91f7231778e764
+Size (ffmpeg-6.1.5.tar.xz) = 10489924 bytes
 SHA1 (patch-Makefile) = 2d27f218ee49179fdea14bb5c86c506dfb64dbd6
 SHA1 (patch-configure) = 965ed15ef809d8a5a9e1a4deae8d7bcfe9bef723
 SHA1 (patch-doc_Makefile) = c513af183e374bff4fa5945d374ddae472d51bad
