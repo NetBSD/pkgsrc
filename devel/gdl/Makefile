@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2026/01/27 08:39:10 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2026/05/15 14:55:27 wiz Exp $
 
 DISTNAME=	gdl-3.34.0
 PKGREVISION=	35
@@ -17,6 +17,9 @@ USE_TOOLS+=	pkg-config perl intltool msgfmt gmake
 
 USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	gdl-3.0.pc.in
+
+CFLAGS+=	-Wno-implicit-function-declaration
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
