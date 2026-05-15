@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3036 2026/05/15 07:50:13 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3037 2026/05/15 07:50:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4651,3 +4651,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added net/fzssh version 1.2.1 [wiz 2026-05-15]
 	Updated net/filezilla to 3.70.5 [wiz 2026-05-15]
 	Added devel/p5-File-XDG version 1.03 [wiz 2026-05-15]
+	Updated www/p5-WWW-Mechanize-Cached to 2.00 [wiz 2026-05-15]
