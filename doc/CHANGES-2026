@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3033 2026/05/15 07:31:45 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3034 2026/05/15 07:41:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4648,3 +4648,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-django-treebeard to 5.1.0 [adam 2026-05-15]
 	Updated www/py-django-reversion to 6.2.0 [adam 2026-05-15]
 	Updated net/libfilezilla to 0.55.5 [wiz 2026-05-15]
+	Added net/fzssh version 1.2.1 [wiz 2026-05-15]
