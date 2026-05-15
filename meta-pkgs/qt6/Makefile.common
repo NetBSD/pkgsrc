@@ -1,6 +1,8 @@
-# $NetBSD: Makefile.common,v 1.25 2026/05/13 05:31:25 adam Exp $
+# $NetBSD: Makefile.common,v 1.26 2026/05/15 12:32:28 wiz Exp $
 # used by x11/qt6-qtbase/Makefile.common
 
+# When bumping the minor version (e.g., from 6.11 to 6.12), please
+# always run a recursive revbump.
 QTVERSION=	6.11.1
 
 .include "../../mk/bsd.prefs.mk"
