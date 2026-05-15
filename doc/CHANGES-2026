@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3056 2026/05/15 19:04:37 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.3057 2026/05/15 19:57:51 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4684,3 +4684,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/glib2-introspection version 2.88.1 [wiz 2026-05-15]
 	Updated devel/nss to 3.124 [wiz 2026-05-15]
 	Updated mail/mairix to 0.24 [ktnb 2026-05-15]
+	Updated net/tailscale to 1.94.4 [ktnb 2026-05-15]
