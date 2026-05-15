@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/15 07:41:34 wiz Exp $
+
+BLAKE2s (fzssh-1.2.1.tar.xz) = 48c0b1571e3cbd9c503ed0d2cf64c167801d5a293f885b5c5ccfeaf4150ee468
+SHA512 (fzssh-1.2.1.tar.xz) = cf0483badc5cbdf0303fdc72647ea77e54937c1dd68bf997e1d8c7609d8424afb58649a21a94b319d51d60aaf03a755fd3ab95cf27543465360eaff1c95a8602
+Size (fzssh-1.2.1.tar.xz) = 111228 bytes
