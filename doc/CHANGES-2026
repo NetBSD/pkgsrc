@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3050 2026/05/15 14:32:57 he Exp $
+$NetBSD: CHANGES-2026,v 1.3051 2026/05/15 16:01:31 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4678,3 +4678,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/qtcreator to 19.0.2 [adam 2026-05-15]
 	Updated devel/cargo-nextest to 0.9.135 [pin 2026-05-15]
 	Updated net/nsd to 4.14.2 [he 2026-05-15]
+	Updated filesystems/fuse-unionfs to 3.7 [vins 2026-05-15]
