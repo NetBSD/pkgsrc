@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2007/06/12 15:23:48 tonio Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2026/05/15 19:04:22 ktnb Exp $
 
---- Makefile.in.orig	2007-02-09 00:03:48.000000000 +0100
+Use proper install commands
+
+--- Makefile.in.orig	2017-08-13 21:55:52.000000000 +0000
 +++ Makefile.in
-@@ -90,17 +90,13 @@ distclean: clean
+@@ -99,17 +99,13 @@ install:
  	-rm -f Makefile config.log
  
  install:
@@ -25,5 +27,5 @@ $NetBSD: patch-aa,v 1.1 2007/06/12 15:23:48 tonio Exp $
 +	${BSD_INSTALL_MAN} mairix.1 $(man1dir)
 +	${BSD_INSTALL_MAN} mairixrc.5 $(man5dir)
  
- .PHONY : all install clean distclean
- 
+ check: mairix
+ 	if [ -d test ]; then cd test ; $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" check ; else echo "No test subdirectory?" ; exit 1 ; fi

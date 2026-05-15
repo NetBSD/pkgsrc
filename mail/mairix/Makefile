@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.17 2016/04/01 16:44:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2026/05/15 19:04:22 ktnb Exp $
 #
 
-DISTNAME=		mairix-0.21
-CATEGORIES=		mail
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mairix/}
+DISTNAME=	mairix-0.24
+CATEGORIES=	mail
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mairix/}
 
-MAINTAINER=		simonb@NetBSD.org
-HOMEPAGE=		http://www.rc0.org.uk/mairix/
-COMMENT=		Program for indexing and searching email messages
+MAINTAINER=	simonb@NetBSD.org
+HOMEPAGE=	http://www.rc0.org.uk/mairix/
+COMMENT=	Program for indexing and searching email messages
+LICENSE=	gnu-gpl-v2
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
