@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3031 2026/05/14 20:29:59 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3032 2026/05/15 06:07:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4645,3 +4645,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/gtksourceview5 to 5.20.0 [ryoon 2026-05-14]
 	Updated news/eilmeldung to 1.5.2 [pin 2026-05-14]
 	Updated sysutils/broot to 1.56.4 [pin 2026-05-14]
+	Updated www/py-django-treebeard to 5.1.0 [adam 2026-05-15]
+	Updated www/py-django-reversion to 6.2.0 [adam 2026-05-15]
