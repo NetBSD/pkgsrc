@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2026/05/15 16:46:58 wiz Exp $
+lib/girepository-1.0/GIRepository-3.0.typelib
+lib/girepository-1.0/GLib-2.0.typelib
+lib/girepository-1.0/GLibUnix-2.0.typelib
+lib/girepository-1.0/GModule-2.0.typelib
+lib/girepository-1.0/GObject-2.0.typelib
+lib/girepository-1.0/Gio-2.0.typelib
+lib/girepository-1.0/GioUnix-2.0.typelib
+share/gir-1.0/GIRepository-3.0.gir
+share/gir-1.0/GLib-2.0.gir
+share/gir-1.0/GLibUnix-2.0.gir
+share/gir-1.0/GModule-2.0.gir
+share/gir-1.0/GObject-2.0.gir
+share/gir-1.0/Gio-2.0.gir
+share/gir-1.0/GioUnix-2.0.gir
