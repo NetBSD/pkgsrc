@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3038 2026/05/15 08:35:19 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3039 2026/05/15 09:02:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4657,3 +4657,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/postgresql16 to 16.14 [adam 2026-05-15]
 	Updated databases/postgresql17 to 17.10 [adam 2026-05-15]
 	Updated databases/postgresql18 to 18.4 [adam 2026-05-15]
+	Updated security/defguard to 2.0.1 [adam 2026-05-15]
+	Updated security/defguard-proxy to 2.0.1 [adam 2026-05-15]
