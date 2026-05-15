@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.224 2026/04/29 07:05:49 wiz Exp $
+$NetBSD: distinfo,v 1.225 2026/05/15 12:32:20 kikadf Exp $
 
 BLAKE2s (curl-8.20.0.tar.xz) = 76a07a514760771d7fbde7a8337763cfd95859d9265a0712e25b41a8826773f8
 SHA512 (curl-8.20.0.tar.xz) = edfa5882aaeefcf2226fe03b19246151c0377c3656f9c8cc385bdaf34565e1354e762005b58780917a6d98039ae34085e4a4bcb44255c77e3b0e1d94090c010b
 Size (curl-8.20.0.tar.xz) = 2834456 bytes
+SHA1 (patch-lib_multi.c) = 5e2b700175d1724c4c4fe3fbc6dc07d197df8170
