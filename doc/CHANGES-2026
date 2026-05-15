@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3037 2026/05/15 07:50:33 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3038 2026/05/15 08:35:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4652,3 +4652,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/filezilla to 3.70.5 [wiz 2026-05-15]
 	Added devel/p5-File-XDG version 1.03 [wiz 2026-05-15]
 	Updated www/p5-WWW-Mechanize-Cached to 2.00 [wiz 2026-05-15]
+	Updated databases/postgresql14 to 14.23 [adam 2026-05-15]
+	Updated databases/postgresql15 to 15.18 [adam 2026-05-15]
+	Updated databases/postgresql16 to 16.14 [adam 2026-05-15]
+	Updated databases/postgresql17 to 17.10 [adam 2026-05-15]
+	Updated databases/postgresql18 to 18.4 [adam 2026-05-15]
