@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3048 2026/05/15 13:29:49 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3049 2026/05/15 13:51:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4676,3 +4676,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/curl to 8.20.0nb2 [kikadf 2026-05-15]
 	Updated www/libcurl-gnutls to 8.20.0nb2 [kikadf 2026-05-15]
 	Updated editors/qtcreator to 19.0.2 [adam 2026-05-15]
+	Updated devel/cargo-nextest to 0.9.135 [pin 2026-05-15]
