@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2026/01/27 08:40:36 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2026/05/15 15:00:05 wiz Exp $
 
 DISTNAME=	libfm-1.3.2
 PKGREVISION=	15
@@ -17,6 +17,8 @@ USE_TOOLS+=		intltool msgfmt pkg-config
 
 # needed for correct getgrgid_r() prototype
 CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
+
+CFLAGS+=		-Wno-incompatible-pointer-types
 
 CONFIGURE_ARGS+=	--with-gtk=2
 
