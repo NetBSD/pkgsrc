@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/10/23 20:37:31 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/05/15 17:00:59 wiz Exp $
 
 DISTNAME=	graphene-1.10.8
 PKGREVISION=	3
@@ -10,6 +10,8 @@ MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	https://ebassi.github.io/graphene/
 COMMENT=	Thin layer of graphic data types
 LICENSE=	mit
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_TOOLS+=	pkg-config
 

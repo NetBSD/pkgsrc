@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2026/01/27 08:39:44 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/05/15 17:00:59 wiz Exp $
 
 DISTNAME=	librsvg-2.40.21
 PKGREVISION=	30
@@ -36,6 +36,7 @@ PLIST_VARS+=	introspection
 .if !empty(PKG_OPTIONS:Mintrospection)
 PLIST.introspection=	yes
 CONFIGURE_ARGS+=	--enable-introspection
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .else

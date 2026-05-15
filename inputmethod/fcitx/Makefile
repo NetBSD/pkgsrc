@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2026/01/27 08:39:54 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.63 2026/05/15 17:00:59 wiz Exp $
 
 DISTNAME=		fcitx-4.2.9.6
 PKGREVISION=		39
@@ -25,6 +24,8 @@ DISTFILES+=		${f}
 MAINTAINER=		rxg@NetBSD.org
 HOMEPAGE=		https://www.fcitx-im.org/
 COMMENT=		Free Chinese Input Toy of X
+
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_LANGUAGES+=		c c++
 

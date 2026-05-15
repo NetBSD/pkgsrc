@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2026/05/14 16:42:06 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.146 2026/05/15 17:01:03 wiz Exp $
 
 DISTNAME=	gvfs-1.60.0
 PKGREVISION=	2
@@ -11,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Projects/gvfs
 COMMENT=	Userspace virtual filesystem
 LICENSE=	gnu-lgpl-v2
+
+TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 USE_TOOLS+=	pkg-config
 

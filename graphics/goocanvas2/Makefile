@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2026/01/27 08:39:41 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2026/05/15 17:00:58 wiz Exp $
 
 DISTNAME=	goocanvas-2.0.4
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -12,6 +12,8 @@ HOMEPAGE=	https://live.gnome.org/GooCanvas
 COMMENT=	Cairo-based canvas widget for GTK+3.0
 LICENSE=	gnu-lgpl-v2
 
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
+
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config msgfmt gmake
@@ -19,6 +21,8 @@ TOOLS_BROKEN+=		perl
 USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	goocanvas-2.0.pc.in
+
+CFLAGS+=		-Wno-incompatible-pointer-types
 
 TOOLS_NOOP+=		python
 CONFIGURE_ARGS+=	--enable-python=no

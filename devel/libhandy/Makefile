@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2026/01/27 08:39:14 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/05/15 17:00:55 wiz Exp $
 
 DISTNAME=	libhandy-1.8.0
 PKGREVISION=	17
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gnome.pages.gitlab.gnome.org/libhandy/
 COMMENT=	Building blocks for modern adaptive GNOME apps
 LICENSE=	gnu-lgpl-v2.1
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_TOOLS+=	msgfmt pkg-config
 

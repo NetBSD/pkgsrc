@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2026/04/26 16:55:31 vins Exp $
+# $NetBSD: options.mk,v 1.2 2026/05/15 17:00:58 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.colord-gtk
 
@@ -52,6 +52,7 @@ MESON_ARGS+=    -Dgtk4=false
 #
 .if !empty(PKG_OPTIONS:Mintrospection)
 MESON_ARGS+=    -Dintrospection=true
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 .  include "../../devel/gobject-introspection/buildlink3.mk"
 PLIST.introspection=    yes
 .else

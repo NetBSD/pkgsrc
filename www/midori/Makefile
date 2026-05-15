@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2026/05/01 14:30:34 vins Exp $
+# $NetBSD: Makefile,v 1.173 2026/05/15 17:01:06 wiz Exp $
 
 DISTNAME=	midori-v9.0
 PKGNAME=	${DISTNAME:S/v//}
@@ -12,6 +12,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://midori-browser.org/
 COMMENT=		Lightweight web browser using WebKit
 LICENSE=		gnu-lgpl-v2.1
+
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
+
 USE_GCC_RUNTIME=	yes
 
 USE_CMAKE=	yes
@@ -21,11 +24,15 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 
 CONFIGURE_ENV+=	VALAC=${VALAC}
 
+CFLAGS+=	-Wno-int-conversion
+
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gobject-introspection=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libpeas/buildlink3.mk"
 .include "../../graphics/adwaita-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

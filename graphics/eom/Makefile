@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2026/01/27 08:39:39 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2026/05/15 17:00:58 wiz Exp $
 
 # XXX: meta-pkgs/mate/Makefile.common includes pyversion.mk which sets the
 # python version too early and clashes with PYTHON_VERSIONS_INCOMPATIBLE
@@ -13,6 +13,8 @@ CATEGORIES=	graphics
 
 COMMENT=	Eye of MATE: an image viewing and cataloging program
 
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
+
 PKGCONFIG_OVERRIDE+=	data/eom.pc.in
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-lutil
@@ -21,6 +23,8 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-lutil
 
 .include "../../devel/glib2/schemas.mk"
 
+BUILDLINK_DEPMETHOD.gobject-introspection=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../x11/mate-desktop/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

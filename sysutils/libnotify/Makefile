@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2026/01/27 08:40:36 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2026/05/15 17:01:04 wiz Exp $
 
 DISTNAME=	libnotify-0.8.4
 PKGREVISION=	5
@@ -12,6 +12,7 @@ COMMENT=	Desktop notification framework
 LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 CONFLICTS+=	libnotify07-[0-9]*

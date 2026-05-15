@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2025/10/30 15:35:35 adam Exp $
+# $NetBSD: Makefile,v 1.73 2026/05/15 17:01:00 wiz Exp $
 
 .include "version.mk"
 
@@ -7,6 +7,8 @@ PKGNAME=	${DISTNAME:S/gstreamer/gstreamer1/}
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gstreamer/
 EXTRACT_SUFX=	.tar.xz
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 COMMENT=	Open source multimedia framework
 

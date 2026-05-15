@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2025/09/12 07:26:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.31 2026/05/15 17:00:56 wiz Exp $
 bin/certutil
 bin/cmsutil
 bin/crlutil
@@ -29,13 +29,9 @@ include/nss/cert.h
 include/nss/certdb.h
 include/nss/certt.h
 include/nss/ciferfam.h
-include/nss/cmmf.h
-include/nss/cmmft.h
 include/nss/cms.h
 include/nss/cmsreclist.h
 include/nss/cmst.h
-include/nss/crmf.h
-include/nss/crmft.h
 include/nss/cryptohi.h
 include/nss/cryptoht.h
 include/nss/eccutil.h
@@ -127,7 +123,6 @@ include/nss/utilmodt.h
 include/nss/utilpars.h
 include/nss/utilparst.h
 include/nss/utilrename.h
-lib/nss/libcrmf.a
 lib/nss/libfreebl3.so
 lib/nss/libnss3.so
 lib/nss/libnssckbi-testlib.so

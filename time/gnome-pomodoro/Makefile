@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2026/01/27 08:40:43 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/05/15 17:01:05 wiz Exp $
 
 DISTNAME=	gnome-pomodoro-0.17.0
 PKGREVISION=	29
@@ -13,11 +13,13 @@ COMMENT=	Pomodoro timer for Gnome
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=		autoconf-archive-[0-9]*:../../devel/autoconf-archive
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
 TOOL_DEPENDS+=		vala-[0-9]*:../../lang/vala
 
 # Broken generated code uses g_return_if_fail when g_return_val_if_fail
 # is necessary
 CFLAGS+=	-Wno-return-type
+CFLAGS+=	-Wno-return-mismatch
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/01/07 08:48:51 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2026/05/15 17:01:03 wiz Exp $
 
 DISTNAME=	tracker-3.0.1
 PKGNAME=	gnome-${DISTNAME}
@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 USE_TOOLS+=	pkg-config xgettext
 
 TOOL_DEPENDS+=	asciidoc>=10.1.4:../../textproc/asciidoc
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt # xsltproc
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3

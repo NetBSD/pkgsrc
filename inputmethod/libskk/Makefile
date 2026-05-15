@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/10/23 20:37:59 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.22 2026/05/15 17:01:00 wiz Exp $
 
 DISTNAME=	libskk-1.0.5
 PKGREVISION=	5
@@ -14,6 +13,8 @@ HOMEPAGE=	https://github.com/ueno/libskk/
 COMMENT=	Library to deal with Japnese kana-to-kanji conversion method
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
+
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool pkg-config msgfmt
@@ -25,6 +26,9 @@ CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 CONFIGURE_ARGS+=	--enable-introspection=yes
 
 TEST_TARGET=		check
+
+CFLAGS+=		-Wno-incompatible-pointer-types
+CFLAGS+=		-Wno-int-conversion
 
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.0

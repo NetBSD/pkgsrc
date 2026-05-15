@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2026/01/27 08:39:20 wiz Exp $
+# $NetBSD: Makefile,v 1.196 2026/05/15 17:00:56 wiz Exp $
 
 DISTNAME=	gedit-3.36.2
 PKGREVISION=	37
@@ -11,12 +11,15 @@ HOMEPAGE=	https://wiki.gnome.org/Apps/Gedit
 COMMENT=	Lightweight GNOME UTF-8 text editor
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
+DEPENDS+=	adwaita-icon-theme-[0-9]*:../../graphics/adwaita-icon-theme
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+
 PREV_PKGPATH=	editors/gedit3
 
 USE_TOOLS+=			gettext msgfmt perl pkg-config
 USE_TOOLS+=			itstool
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 PY_PATCHPLIST=			yes
 REPLACE_PYTHON+=		plugins/externaltools/data/send-to-fpaste.tool.in
 REPLACE_PYTHON+=		build-aux/meson/post_install.py
@@ -24,12 +27,8 @@ REPLACE_PYTHON+=		build-aux/meson/post_install.py
 MESON_ARGS+=	-Dvapi=false
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gedit
 
-DEPENDS+=	adwaita-icon-theme-[0-9]*:../../graphics/adwaita-icon-theme
-DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
-
 pre-configure:
 	${FIND} ${WRKSRC}/help -type f -exec ${CHMOD} 644 {} \;
-
 
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"

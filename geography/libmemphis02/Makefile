@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2026/01/27 08:39:34 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/05/15 17:00:57 wiz Exp $
 
 DISTNAME=	memphis-0.2.3
 PKGNAME=	libmemphis02-0.2.3
@@ -12,6 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jiuka/memphis
 COMMENT=	Library for OpenStreetMap
 LICENSE=	gnu-lgpl-v2.1
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

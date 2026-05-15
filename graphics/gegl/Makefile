@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2026/03/29 17:02:21 wiz Exp $
+# $NetBSD: Makefile,v 1.161 2026/05/15 17:00:58 wiz Exp $
 
 DISTNAME=	gegl-0.4.70
 CATEGORIES=	graphics
@@ -9,6 +9,8 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://gegl.org/
 COMMENT=	Graph based image processing framework
 LICENSE=	gnu-gpl-v3
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 MESON_ARGS+=	-Dlibv4l=disabled
 MESON_ARGS+=	-Dlibv4l2=disabled

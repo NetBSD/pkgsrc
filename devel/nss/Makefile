@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.295 2026/04/24 09:52:17 wiz Exp $
+# $NetBSD: Makefile,v 1.296 2026/05/15 17:00:56 wiz Exp $
 #
 # release notes
 # https://firefox-source-docs.mozilla.org/security/nss/releases/index.html
 
-DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
-NSS_RELEASE=		3.123.1
-PKGNAME=		nss-${NSS_RELEASE}
+DISTNAME=		nss-3.124
 CATEGORIES=		devel security
-MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_DIST_DIR_VERSION:S/_0$//}_RTM/src/}
+MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${PKGVERSION_NOREV:S/./_/g}_RTM/src/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://firefox-source-docs.mozilla.org/security/nss/
@@ -135,11 +133,6 @@ MAKE_ENV+=	NSS_ENABLE_TLS_1_3=1
 CFLAGS+=	-DNSS_NO_GCC48
 .endif
 
-MOD_MAJOR_VERSION=	${NSS_RELEASE:C/\.[0-9.]*//}
-MOD_MINOR_VERSION=	${NSS_RELEASE:S/3.//:C/\.[0-9]*//}
-MOD_PATCH_VERSION=	${NSS_RELEASE:C/[0-9.]*\.//}
-NSS_DIST_DIR_VERSION=	${MOD_MAJOR_VERSION}_${MOD_MINOR_VERSION}_${MOD_PATCH_VERSION}
-
 NSPR_MINIMUM_VERSION=	4.38.2
 
 PKGCONFIG_OVERRIDE=	nss.pc
@@ -179,8 +172,6 @@ do-install:
 	(cd ${WRKSRC}/dist/public/nss && pax -Lrw . ${DESTDIR}${PREFIX}/include/nss )
 	(cd ${WRKSRC}/dist/*_OPT.OBJ/lib && \
 		pax -Lrw *.${SO_SUFFIX} ${DESTDIR}${PREFIX}/lib/nss/ )
-	${INSTALL_DATA} ${WRKSRC}/dist/*_OPT.OBJ/lib/libcrmf.a \
-		${DESTDIR}${PREFIX}/lib/nss/
 	${INSTALL_DATA} ${WRKSRC}/nss.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/nss.pc
 	${INSTALL_SCRIPT} ${WRKSRC}/nss-config ${DESTDIR}${PREFIX}/bin/nss-config
 .for cmd in ${INSTALL_CMDS}

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2025/07/18 08:38:18 adam Exp $
+# $NetBSD: options.mk,v 1.24 2026/05/15 17:00:56 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pango
 PKG_SUPPORTED_OPTIONS=	introspection libthai x11
@@ -34,6 +34,7 @@ MESON_ARGS+=	-Dxft=disabled
 .if !empty(PKG_OPTIONS:Mintrospection)
 PLIST.introspection=	yes
 MESON_ARGS+=	-Dintrospection=enabled
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 BUILDLINK_DEPMETHOD.gobject-introspection=	build
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.84.0
 .include "../../devel/gobject-introspection/buildlink3.mk"

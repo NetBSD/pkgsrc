@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2026/01/07 08:48:16 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2026/05/15 17:01:01 wiz Exp $
 
 DISTNAME=	grilo-0.3.16
 PKGREVISION=	8
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Projects/Grilo
 COMMENT=	Media browser framework
 LICENSE=	gnu-lgpl-v2
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_TOOLS+=	pkg-config xgettext
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2026/01/27 08:38:54 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/05/15 17:00:52 wiz Exp $
 
 DISTNAME=	gnome-autoar-0.4.4
 PKGREVISION=	10
@@ -10,6 +10,8 @@ MAINTAINER=	cirnatdan@NetBSD.org
 HOMEPAGE=	https://gitlab.gnome.org/GNOME/gnome-autoar
 COMMENT=	GLib wrapper around libarchive
 LICENSE=	gnu-lgpl-v2.1
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes

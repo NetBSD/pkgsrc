@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2026/01/07 08:46:08 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/05/15 17:00:53 wiz Exp $
 
 DISTNAME=	gom-0.4
 PKGREVISION=	23
@@ -11,14 +11,13 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/Gom
 COMMENT=	Object mapper from GObjects to SQLite
 LICENSE=	gnu-lgpl-v2.1
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 TOOL_DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 USE_LANGUAGES+=	c
 USE_TOOLS+=	pkg-config
 
 PY_PATCHPLIST=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"

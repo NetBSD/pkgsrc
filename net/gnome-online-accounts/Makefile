@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2026/05/14 16:41:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.75 2026/05/15 17:01:01 wiz Exp $
 
 DISTNAME=	gnome-online-accounts-3.58.1
 PKGREVISION=	1
@@ -14,6 +14,7 @@ LICENSE=	gnu-lgpl-v2
 USE_TOOLS+=		gdbus-codegen pkg-config
 USE_PKGLOCALEDIR=	yes
 
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
 # required to generate man pages
 TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 DOCBOOK_MANPAGE_XSL=	${PREFIX}/share/xsl/docbook/manpages/docbook.xsl
@@ -36,6 +37,7 @@ BUILDLINK_DEPMETHOD.${dep}=	build
 .endfor
 
 .include "../../devel/glib2/schemas.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"

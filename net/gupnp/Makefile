@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2026/01/07 08:48:18 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2026/05/15 17:01:01 wiz Exp $
 
 DISTNAME=	gupnp-1.6.9
 PKGREVISION=	3
@@ -11,6 +11,7 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/GUPnP
 COMMENT=	Framework for UPnP devices
 LICENSE=	gnu-lgpl-v2
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 

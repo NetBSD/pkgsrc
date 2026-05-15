@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2026/01/27 08:41:01 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/05/15 17:01:08 wiz Exp $
 
 PKGREVISION= 13
 .include "../../meta-pkgs/mate/Makefile.common"
@@ -7,6 +7,8 @@ DISTNAME=	mate-menus-${VERSION:R}.1
 CATEGORIES=	x11
 
 COMMENT=	Implementation of the desktop menu specification for MATE
+
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 PKGCONFIG_OVERRIDE+=	libmenu/libmate-menu.pc.in
 

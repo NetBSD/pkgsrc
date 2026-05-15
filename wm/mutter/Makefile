@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2026/01/27 08:40:46 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/05/15 17:01:05 wiz Exp $
 
 DISTNAME=	mutter-40.2
 PKGREVISION=	17
@@ -10,6 +10,8 @@ MAINTAINER=	cirnatdan@NetBSD.org
 HOMEPAGE=	https://gitlab.gnome.org/GNOME/mutter
 COMMENT=	GNOME window manager
 LICENSE=	gnu-gpl-v2
+
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_TOOLS+=		msgfmt pkg-config gdbus-codegen
 BUILD_DEFS+=		PKG_SYSCONFBASE

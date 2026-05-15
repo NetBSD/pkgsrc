@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/01/27 08:40:32 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/05/15 17:01:03 wiz Exp $
 
 DISTNAME=	ayatana-ido-0.10.2
 PKGREVISION=	8
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/AyatanaIndicators/ayatana-ido/
 COMMENT=	Ayatana Indicator Display Objects
 LICENSE=	gnu-lgpl-v2 AND gnu-lgpl-v2.1 AND gnu-lgpl-v3 AND gnu-gpl-v3
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++

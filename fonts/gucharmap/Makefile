@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2026/01/27 08:39:27 wiz Exp $
+# $NetBSD: Makefile,v 1.133 2026/05/15 17:00:56 wiz Exp $
 
 DISTNAME=	gucharmap-15.1.2
 PKGREVISION=	12
@@ -11,6 +11,7 @@ HOMEPAGE=	https://wiki.gnome.org/Apps/Gucharmap
 COMMENT=	Unicode/ISO10646 character map and font viewer
 LICENSE=	gnu-gpl-v3 AND unicode
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 TOOL_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
 DEPENDS+=	unicode-character-database-[0-9]*:../../textproc/unicode-character-database
 

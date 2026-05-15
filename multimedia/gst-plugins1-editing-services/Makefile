@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2026/02/13 18:50:22 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2026/05/15 17:01:00 wiz Exp $
 
 .include "../../multimedia/gstreamer1/version.mk"
 
@@ -12,6 +12,7 @@ HOMEPAGE=	https://gstreamer.freedesktop.org/modules/gst-editing-services.html
 COMMENT=	Open source multimedia framework - editing services plugin
 LICENSE=	gnu-lgpl-v2.1
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 USE_TOOLS+=	flex pkg-config

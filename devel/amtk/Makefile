@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2026/01/27 08:39:09 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/05/15 17:00:53 wiz Exp $
 
 DISTNAME=	amtk-5.0.2
 PKGREVISION=	18
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Projects/Amtk
 COMMENT=	Actions, Menus and Toolbars Kit for GTK applications
 LICENSE=	gnu-lgpl-v2.1
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

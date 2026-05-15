@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4629 2026/05/15 07:50:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4630 2026/05/15 17:00:53 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -477,6 +477,7 @@ SUBDIR+=	glade
 SUBDIR+=	glasgow
 SUBDIR+=	glib
 SUBDIR+=	glib2
+SUBDIR+=	glib2-introspection
 SUBDIR+=	glib2-tools
 SUBDIR+=	glibmm
 SUBDIR+=	glibmm2.68

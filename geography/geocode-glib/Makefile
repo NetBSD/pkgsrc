@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2026/01/07 08:47:11 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/05/15 17:00:57 wiz Exp $
 
 DISTNAME=	geocode-glib-3.26.2
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -12,6 +12,7 @@ COMMENT=	GNOME convenience library for geocoding
 LICENSE=	gnu-lgpl-v2
 
 TOOL_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_TOOLS+=	pkg-config xgettext
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/04/25 13:08:55 vins Exp $
+# $NetBSD: Makefile,v 1.2 2026/05/15 17:00:55 wiz Exp $
 
 DISTNAME=	libgusb-0.4.9
 CATEGORIES=	devel
@@ -12,6 +12,7 @@ LICENSE=	gnu-lgpl-v2
 
 USE_TOOLS+=	pkg-config tar
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 PYTHON_FOR_BUILD_ONLY=	tool

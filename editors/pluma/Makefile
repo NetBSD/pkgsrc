@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2026/01/27 08:39:21 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2026/05/15 17:00:56 wiz Exp $
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -10,8 +10,10 @@ CATEGORIES=	editors
 
 COMMENT=	Small and lightweight UTF-8 text editor for MATE
 
-USE_TOOLS+=	bash:run perl
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
+
+USE_TOOLS+=	bash:run perl
 
 CFLAGS+=	-Wno-incompatible-pointer-types
 
@@ -30,6 +32,8 @@ post-install:
 
 .include "options.mk"
 
+BUILDLINK_DEPMETHOD.gobject-introspection=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libpeas/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../lang/python/application.mk"

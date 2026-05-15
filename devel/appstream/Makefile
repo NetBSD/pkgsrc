@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2026/05/14 16:40:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2026/05/15 17:00:53 wiz Exp $
 
 DISTNAME=	appstream-1.1.2
 PKGREVISION=	2
@@ -11,6 +11,7 @@ HOMEPAGE=	https://github.com/ximion/appstream
 COMMENT=	Tools and libraries to work with AppStream metadata
 LICENSE=	gnu-lgpl-v2.1
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl

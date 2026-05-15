@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2026/05/14 16:42:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.101 2026/05/15 17:01:08 wiz Exp $
 
 # The 0.80 branch is tracked currently because the newer stable branch
 # requires C++23 for seemingly little that would benefit pkgsrc's
@@ -15,6 +15,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Apps/Terminal/VTE
 COMMENT=	Terminal widget with improved accessibility and I18N support
 LICENSE=	gnu-lgpl-v2
+
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
 PKGCONFIG_OVERRIDE+=		output/meson-private/vte-2.91.pc

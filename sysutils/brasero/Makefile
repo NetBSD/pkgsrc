@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2026/01/27 08:40:32 wiz Exp $
+# $NetBSD: Makefile,v 1.126 2026/05/15 17:01:03 wiz Exp $
 
 DISTNAME=	brasero-3.12.3
 PKGREVISION=	2
@@ -11,13 +11,14 @@ HOMEPAGE=	https://wiki.gnome.org/Apps/Brasero
 COMMENT=	CD/DVD burning application
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
+TOOL_DEPENDS+=	p5-XML-LibXML>=1.58:../../textproc/p5-XML-LibXML
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	intltool pkg-config perl
 USE_TOOLS+=	msgfmt xgettext itstool
 USE_TOOLS+=	gmake
-
-TOOL_DEPENDS+=	p5-XML-LibXML>=1.58:../../textproc/p5-XML-LibXML
 
 CONFIGURE_ARGS+=	--disable-nautilus
 CONFIGURE_ARGS+=	--enable-compile-warnings=minimum # Disable Werror

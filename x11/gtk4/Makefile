@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2026/05/14 16:42:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.74 2026/05/15 17:01:07 wiz Exp $
 
 DISTNAME=	gtk-4.20.3
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
@@ -12,6 +12,7 @@ HOMEPAGE=	https://www.gtk.org/
 COMMENT=	Multi-platform toolkit for creating GUIs, version 4
 LICENSE=	gnu-lgpl-v2.1
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 # TEST_DEPENDS, but meson fails if it's not found
 TOOL_DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 # TODO: add more python dependencies?

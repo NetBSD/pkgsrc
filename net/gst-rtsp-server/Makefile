@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/10/30 15:35:43 adam Exp $
+# $NetBSD: Makefile,v 1.20 2026/05/15 17:01:01 wiz Exp $
 
 .include "../../multimedia/gstreamer1/version.mk"
 
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.xz
 HOMEPAGE=	https://gstreamer.freedesktop.org/modules/gst-rtsp-server.html
 COMMENT=	GStreamer RTSP server
 LICENSE=	gnu-lgpl-v2
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 PYTHON_FOR_BUILD_ONLY=		tool
 

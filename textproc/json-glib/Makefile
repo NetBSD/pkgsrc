@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2025/10/23 20:39:33 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2026/05/15 17:01:04 wiz Exp $
 
 DISTNAME=	json-glib-1.10.6
 PKGREVISION=	2
@@ -12,6 +12,7 @@ COMMENT=	JSON parser for GLib-based libraries and applications
 LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 

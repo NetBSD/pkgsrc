@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.279 2026/02/14 07:41:01 taca Exp $
+# $NetBSD: Makefile,v 1.280 2026/05/15 17:01:06 wiz Exp $
 
 DISTNAME=	webkitgtk-2.36.8
 PKGREVISION=	1
@@ -17,6 +17,7 @@ LICENSE=	2-clause-bsd AND gnu-lgpl-v2
 NOT_FOR_PLATFORM=	NetBSD-[1-6].*-*
 
 TOOL_DEPENDS+=	gettext-tools>=0.18:../../devel/gettext-tools
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++17

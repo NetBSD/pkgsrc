@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.46 2026/01/27 08:39:14 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/05/15 17:00:55 wiz Exp $
 
 PKGREVISION= 12
 .include "../../meta-pkgs/libdbusmenu/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-gtk3-/}
 COMMENT=	GTK3+ library created by pulling some code from indicator-applet
+
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 CONFIGURE_ARGS+=	--enable-gtk
 CONFIGURE_ARGS+=	--with-gtk=3

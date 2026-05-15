@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2026/02/13 18:50:22 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/05/15 17:01:00 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/}
 CATEGORIES=	multimedia gnome
 
 COMMENT=	Open source multimedia framework - bad plugins
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_TOOLS+=	xgettext
 

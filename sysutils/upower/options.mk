@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2026/05/02 07:27:23 vins Exp $
+# $NetBSD: options.mk,v 1.7 2026/05/15 17:01:04 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.upower
 
@@ -24,6 +24,7 @@ MESON_ARGS+=	-Dgtk-doc=false
 ### Build GObject Introspection data
 ###
 .if !empty(PKG_OPTIONS:Mintrospection)
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 BUILDLINK_DEPMETHOD.gobject-introspection+= build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 MESON_ARGS+=    -Dintrospection=enabled

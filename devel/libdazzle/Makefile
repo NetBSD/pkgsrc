@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2026/01/27 08:39:14 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2026/05/15 17:00:54 wiz Exp $
 
 DISTNAME=	libdazzle-3.38.0
 PKGREVISION=	23
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.gnome.org/GNOME/libdazzle
 COMMENT=	Companion library to GObject and Gtk+
 LICENSE=	gnu-gpl-v3
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_TOOLS+=	pkg-config
 

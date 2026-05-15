@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2025/10/23 20:37:56 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2026/05/15 17:00:59 wiz Exp $
 
 DISTNAME=	ibus-anthy-1.5.15
 PKGREVISION=	2
@@ -11,6 +11,7 @@ HOMEPAGE=	https://github.com/ibus/ibus/wiki
 COMMENT=	Anthy engine for IBus input platform
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 DEPENDS+=	kasumi>=2.1:../../inputmethod/kasumi
 DEPENDS+=	ibus>=1.5.4:../../inputmethod/ibus
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
@@ -25,8 +26,6 @@ CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 CONFIGURE_ARGS+=	--with-kasumi-exec=${LOCALBASE}/bin/kasumi
 CONFIGURE_ARGS+=	--with-kasumi-icon=${LOCALBASE}/share/pixmaps/kasumi.png
 CONFIGURE_ARGS+=	--with-layout=default
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2026/01/27 08:39:15 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2026/05/15 17:00:56 wiz Exp $
 
 DISTNAME=	libpeas-1.26.0
 PKGREVISION=	21
@@ -11,6 +11,7 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/Libpeas
 COMMENT=	GObject-based plugins engine
 LICENSE=	gnu-lgpl-v2.1
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 USE_TOOLS+=	msgfmt pkg-config

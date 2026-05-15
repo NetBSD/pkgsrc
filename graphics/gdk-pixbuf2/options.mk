@@ -1,5 +1,4 @@
-#	$NetBSD: options.mk,v 1.2 2024/10/26 07:35:54 nia Exp $
-#
+#	$NetBSD: options.mk,v 1.3 2026/05/15 17:00:58 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gdk-pixbuf2
 PKG_SUPPORTED_OPTIONS=	introspection tests
@@ -13,6 +12,8 @@ PLIST.introspection=	yes
 MESON_ARGS+=		-Dintrospection=enabled
 BUILDLINK_DEPMETHOD.gobject-introspection:= build
 .include "../../devel/gobject-introspection/buildlink3.mk"
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
+#.include "../../devel/glib2-introspection/buildlink3.mk"
 .else
 MESON_ARGS+=		-Dintrospection=disabled
 .endif

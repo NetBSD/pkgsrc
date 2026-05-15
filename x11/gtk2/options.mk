@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2024/04/12 19:40:24 riastradh Exp $
+# $NetBSD: options.mk,v 1.21 2026/05/15 17:01:06 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gtk2
 PKG_SUPPORTED_OPTIONS=		cups debug introspection
@@ -31,6 +31,7 @@ PLIST_VARS+=		introspection
 .if !empty(PKG_OPTIONS:Mintrospection)
 CONFIGURE_ARGS+=	--enable-introspection=yes
 PLIST.introspection=	yes
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
 BUILDLINK_DEPMETHOD.gobject-introspection:=	build
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.3
 .include "../../devel/gobject-introspection/buildlink3.mk"

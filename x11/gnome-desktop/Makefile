@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.180 2026/01/27 08:40:53 wiz Exp $
+# $NetBSD: Makefile,v 1.181 2026/05/15 17:01:06 wiz Exp $
 
 DISTNAME=		gnome-desktop-44.0
 PKGREVISION=		13
@@ -12,6 +12,7 @@ COMMENT=		Common GNOME2 desktop files and libgnome-desktop library
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 
 TOOL_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 #USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
 USE_TOOLS+=		itstool msgfmt pkg-config

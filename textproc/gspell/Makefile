@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2026/01/27 08:40:41 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2026/05/15 17:01:04 wiz Exp $
 
 DISTNAME=	gspell-1.8.4
 PKGREVISION=	13
@@ -36,6 +36,7 @@ SUBST_MESSAGE.tests=    Disabling tests.
 SUBST_FILES.tests=      Makefile.in
 SUBST_SED.tests=        -e 's,tests testsuite,,'
 .else
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
 .include "../../devel/gobject-introspection/buildlink3.mk"
 PLIST.gir=		yes
 .endif

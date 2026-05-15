@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2026/05/09 13:43:15 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2026/05/15 17:01:02 wiz Exp $
 
 DISTNAME=	gcr-3.41.2
 CATEGORIES=	security
@@ -11,6 +11,7 @@ COMMENT=	Library for crypto UI and related tasks
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 TOOL_DEPENDS+=	${PYPKGPREFIX}-gi-docgen-[0-9]*:../../devel/py-gi-docgen
 DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
 

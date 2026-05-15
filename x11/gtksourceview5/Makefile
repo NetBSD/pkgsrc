@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2026/05/14 17:54:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2026/05/15 17:01:07 wiz Exp $
 
 DISTNAME=	gtksourceview-5.20.0
 PKGNAME=	${DISTNAME:S/gtksourceview/gtksourceview5/}
@@ -10,6 +10,8 @@ MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	https://wiki.gnome.org/Projects/GtkSourceView
 COMMENT=	Text widget that extends GTK4's GtkTextView widget (v5)
 LICENSE=	gnu-lgpl-v2.1
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_TOOLS+=		msgfmt pkg-config itstool
 

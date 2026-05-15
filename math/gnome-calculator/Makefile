@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2026/05/14 16:41:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.89 2026/05/15 17:01:00 wiz Exp $
 
 DISTNAME=		gnome-calculator-45.0.2
 PKGREVISION=		22
@@ -11,6 +11,7 @@ HOMEPAGE=		https://wiki.gnome.org/Apps/Calculator
 COMMENT=		Desktop calculator for GNOME
 LICENSE=		gnu-gpl-v2
 
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
 DEPENDS+=		gnome-icon-theme-symbolic-[0-9]*:../../graphics/gnome-icon-theme-symbolic
 
 CONFLICTS+=		gcalctool-[0-9]*

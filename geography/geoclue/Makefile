@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2026/01/07 08:47:11 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2026/05/15 17:00:57 wiz Exp $
 
 DISTNAME=	geoclue-2.5.7
 PKGREVISION=	20
@@ -10,6 +10,7 @@ HOMEPAGE=	https://gitlab.freedesktop.org/geoclue/geoclue/-/wikis/home
 COMMENT=	Geoinformation service API and base providers
 LICENSE=	gnu-lgpl-v2
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 TOOL_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 

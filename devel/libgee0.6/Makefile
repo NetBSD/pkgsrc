@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/10/23 20:36:30 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/05/15 17:00:55 wiz Exp $
 
 DISTNAME=	libgee-0.6.8
 PKGNAME=	${DISTNAME:S/libgee/libgee0.6/}
@@ -12,6 +12,8 @@ HOMEPAGE=	https://live.gnome.org/Libgee
 COMMENT=	Library providing GObject-based interfaces and classes (v0.6)
 LICENSE=	gnu-lgpl-v2.1
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
@@ -20,6 +22,8 @@ USE_TOOLS+=	pkg-config gmake
 #.include "../../lang/vala/buildlink3.mk"
 
 PKGCONFIG_OVERRIDE+=	gee-1.0.pc.in
+
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 TEST_TARGET=	check
 

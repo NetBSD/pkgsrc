@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2026/05/14 16:41:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.130 2026/05/15 17:01:01 wiz Exp $
 
 DISTNAME=	gtk-vnc-1.3.1
 PKGREVISION=	19
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.gnome.org/GNOME/gtk-vnc/
 COMMENT=	VNC viewer widget for GTK
 LICENSE=	gnu-lgpl-v2.1
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_TOOLS+=	intltool msgfmt pkg-config
 

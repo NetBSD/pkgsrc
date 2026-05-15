@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2026/03/25 22:51:24 gutteridge Exp $
+# $NetBSD: Makefile,v 1.125 2026/05/15 17:01:08 wiz Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -9,6 +9,7 @@ MASTER_SITES+=		https://archive.xfce.org/src/xfce/xfce4-panel/${PKGVERSION_NOREV
 HOMEPAGE=		https://docs.xfce.org/xfce/xfce4-panel/start
 COMMENT=		Xfce panel
 
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
 TOOL_DEPENDS+=		xfce4-dev-tools-[0-9]*:../../devel/xfce4-dev-tools
 
 USE_TOOLS+=		gdbus-codegen
@@ -25,6 +26,8 @@ CONFIGURE_ARGS+=	--enable-x11
 CONF_FILES+=	${EGDIR}/default.xml ${PKG_SYSCONFDIR}/default.xml
 
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
+BUILDLINK_DEPMETHOD.gobject-introspection=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libdbusmenu-gtk3/buildlink3.mk"
 .include "../../devel/libwnck3/buildlink3.mk"
 .include "../../lang/python/application.mk"

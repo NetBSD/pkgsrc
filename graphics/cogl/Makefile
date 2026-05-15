@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2026/01/27 08:39:38 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/05/15 17:00:58 wiz Exp $
 
 DISTNAME=	cogl-1.22.0
 PKGREVISION=	24
@@ -12,6 +12,8 @@ COMMENT=	Modern 3D graphics API
 LICENSE=	mit AND sgi-free-software-b-v2.0 AND modified-bsd
 # if --standalone
 # LICENSE += AND gnu-lgpl-v2.1
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 CONFLICTS+=	clutter<1.8
 
