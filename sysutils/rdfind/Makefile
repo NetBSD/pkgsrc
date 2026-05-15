@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2026/05/14 16:42:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2026/05/15 11:15:36 abs Exp $
 
-DISTNAME=	rdfind-1.5.0
-PKGREVISION=	2
+DISTNAME=	rdfind-1.8.0
 CATEGORIES=	sysutils
 MASTER_SITES=	https://rdfind.pauldreik.se/
 
