@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.294 2026/05/01 14:30:33 vins Exp $
+# $NetBSD: Makefile,v 1.295 2026/05/15 16:36:37 wiz Exp $
 
 DISTNAME=	evolution-3.44.4
 PKGREVISION=	9
@@ -16,6 +16,8 @@ USE_TOOLS+=	intltool msgfmt msgmerge xgettext
 USE_TOOLS+=	gdbus-codegen
 
 DEPENDS+=	highlight-[0-9]*:../../textproc/highlight
+
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/evolution
 
