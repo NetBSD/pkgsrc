@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.761 2026/05/05 10:09:38 pin Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.762 2026/05/15 13:52:36 pin Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30316,7 +30316,7 @@ asuka-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/o
 bulletty-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 cargo-c<0.10.22	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 cargo-licenses-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
-cargo-nextest-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
+cargo-nextest<0.9.135	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 cargo-outdated-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 cargo-upgrades-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 carwash-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
