@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2026/05/14 16:42:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.61 2026/05/15 16:16:37 wiz Exp $
 
 DISTNAME=	gnome-control-center-40.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -11,6 +11,8 @@ HOMEPAGE=	https://gitlab.gnome.org/GNOME/gnome-control-center
 COMMENT=	Interface to configure various aspects of the GNOME desktop
 LICENSE=	gnu-gpl-v2
 
+BROKEN=		"Needs update to work with gnome-online-accounts."
+
 USE_TOOLS+=	pkg-config msgfmt xgettext
 USE_TOOLS+=	gdbus-codegen
 
@@ -22,6 +24,8 @@ PYTHON_FOR_BUILD_ONLY=	tool
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/panels/keyboard/gnome-keybindings.pc
+
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
