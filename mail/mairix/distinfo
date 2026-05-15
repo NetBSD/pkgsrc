@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.11 2026/03/18 17:03:53 nia Exp $
+$NetBSD: distinfo,v 1.12 2026/05/15 19:04:22 ktnb Exp $
 
-BLAKE2s (mairix-0.21.tar.gz) = e1ecc5bc8137ff23354f52561ab1b827fc0b898e3ad4366611cebb3123eebaaa
-SHA512 (mairix-0.21.tar.gz) = 82a7f5bc92efb7d6960922e8c05b075619b7072e90a0f3c0d3477ff5fb3cf9607e81748e1394f599e5049033207fbe72a373aaf872ac8db0f5e88ef17a5de1bc
-Size (mairix-0.21.tar.gz) = 159089 bytes
-SHA1 (patch-aa) = bc87571018a2470b09dd7f096794439ba8244025
+BLAKE2s (mairix-0.24.tar.gz) = 0cff9d9ca0e4c7c1e3eea59f7fa2156e49b6aa9c758ee0ef38e73b03f86ad398
+SHA512 (mairix-0.24.tar.gz) = 3e0af50c2c5857c5e1661e1be131c9c184377947b2ed884d1d9faa6d8bd88c17a7b7a29e105e65c990d2ede5d9fff679e57e83c4b8eedf2870493395e3ec8cf3
+Size (mairix-0.24.tar.gz) = 206903 bytes
+SHA1 (patch-Makefile.in) = c77f313e94d37f04016c27a26ed57a5e75397063
 SHA1 (patch-db.c) = 53f0539f76ccb8d9b4285bccd2219bec6b53d888
-SHA1 (patch-dfasyn_Makefile) = 303257019b16e5c715e4fad0e9e45e1c9e4d8cf9
+SHA1 (patch-dfasyn_compdfa.c) = 7a3c105e732c088ec74bd56ca3dea41ac6151ad9
+SHA1 (patch-imap.c) = 48f0c4633b8a5d5d1f106068f26b6e270f268c23
