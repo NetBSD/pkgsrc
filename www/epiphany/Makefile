@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.242 2026/05/15 16:07:51 wiz Exp $
+# $NetBSD: Makefile,v 1.243 2026/05/15 16:30:39 wiz Exp $
 
 DISTNAME=	epiphany-40.6
 PKGREVISION=	32
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Apps/Web
 COMMENT=	Web browser for the GNOME desktop
 LICENSE=	gnu-gpl-v2
+
+BROKEN=		"Needs fixes for nettle 4.x"
 
 USE_TOOLS+=	pkg-config msgfmt xgettext itstool
 USE_TOOLS+=	gdbus-codegen
