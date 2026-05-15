@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3045 2026/05/15 11:55:11 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.3046 2026/05/15 12:35:21 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4673,3 +4673,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/ffplay4 to 4.4.7 [adam 2026-05-15]
 	Removed graphics/cheese [wiz 2026-05-15]
 	Updated ham/chirp to 20260508 [gdt 2026-05-15]
+	Updated www/curl to 8.20.0nb2 [kikadf 2026-05-15]
