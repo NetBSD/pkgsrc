@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1630 2026/05/01 19:45:29 vins Exp $
+# $NetBSD: Makefile,v 1.1631 2026/05/15 07:41:48 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -180,6 +180,7 @@ SUBDIR+=	fstrm
 SUBDIR+=	ftplibpp
 SUBDIR+=	ftpproxy
 SUBDIR+=	fwknop
+SUBDIR+=	fzssh
 SUBDIR+=	gallery-dl
 SUBDIR+=	get-flash-videos
 SUBDIR+=	get_iplayer
