@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.89 2026/05/14 16:41:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.90 2026/05/15 08:07:54 wiz Exp $
 
-DISTNAME=		tigervnc-1.16.2
-PKGREVISION=		1
+DISTNAME=		tigervnc-1.16.2.20260506
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=TigerVNC/}
-GITHUB_TAG=		v${DISTNAME:S/tigervnc-//}
+#GITHUB_TAG=		v${DISTNAME:S/tigervnc-//}
 XORG_SERVER_FILE=	xorg-server-1.20.13
 SITES.${XORG_SERVER_FILE}.tar.xz=	${MASTER_SITE_XORG:=xserver/}
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${XORG_SERVER_FILE}.tar.xz
+#DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${XORG_SERVER_FILE}.tar.xz
+# post 1.16.2 release commit which has the nettle 4.0 fixes
+# revert next two lines on update and uncomment MASTER_SITES above
+GITHUB_TAG=		84e930679d831bcf51d5f95733689ada68dfd52a
+DISTFILES=		tigervnc-1.16.2.20260506-${GITHUB_TAG}${EXTRACT_SUFX} ${XORG_SERVER_FILE}.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://tigervnc.org/
@@ -24,7 +27,8 @@ DEPENDS+=	xkeyboard-config-[0-9]*:../../x11/xkeyboard-config
 REPLACE_BASH+=	unix/vncserver/vncsession-start.in
 REPLACE_PERL+=	unix/vncserver/vncserver.in
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
+#WRKSRC=		${WRKDIR}/${DISTNAME}
+WRKSRC=			${WRKDIR}/tigervnc-${GITHUB_TAG}
 
 USE_CMAKE=	yes
 USE_LIBTOOL=	yes
