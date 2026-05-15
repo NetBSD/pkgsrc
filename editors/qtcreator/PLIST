@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/05/13 06:50:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/05/15 13:29:33 adam Exp $
 bin/qtcreator
 bin/qtcreator.sh
 lib/qtcreator/libAdvancedDockingSystem.so.${PKGVERSION}
@@ -36,7 +36,7 @@ lib/qtcreator/libQmlEditorWidgets.so.19
 lib/qtcreator/libQmlJS.so.${PKGVERSION}
 lib/qtcreator/libQmlJS.so.19
 lib/qtcreator/libQtTaskTree.so.19
-lib/qtcreator/libQtTaskTree.so.19.0.1
+lib/qtcreator/libQtTaskTree.so.${PKGVERSION}
 lib/qtcreator/libSqlite.so.${PKGVERSION}
 lib/qtcreator/libSqlite.so.19
 lib/qtcreator/libTerminalLib.so.${PKGVERSION}
@@ -201,6 +201,7 @@ share/qtcreator/changelog/changes-18.0.1.md
 share/qtcreator/changelog/changes-18.0.2.md
 share/qtcreator/changelog/changes-19.0.0.md
 share/qtcreator/changelog/changes-19.0.1.md
+share/qtcreator/changelog/changes-19.0.2.md
 share/qtcreator/changelog/changes-2.0.0
 share/qtcreator/changelog/changes-2.0.1
 share/qtcreator/changelog/changes-2.1.0
