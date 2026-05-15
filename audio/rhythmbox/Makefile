@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.222 2026/01/27 08:39:01 wiz Exp $
+# $NetBSD: Makefile,v 1.223 2026/05/15 20:08:42 wiz Exp $
 
 DISTNAME=	rhythmbox-3.4.6
 PKGREVISION=	29
@@ -11,6 +11,7 @@ HOMEPAGE=	https://wiki.gnome.org/Apps/Rhythmbox
 COMMENT=	Music management application for GNOME
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../wip/glib2-introspection
 DEPENDS+=	gst-plugins1-libav-[0-9]*:../../multimedia/gst-plugins1-libav
 DEPENDS+=	gst-plugins1-good-[0-9]*:../../multimedia/gst-plugins1-good
 DEPENDS+=	gst-plugins1-oss-[0-9]*:../../audio/gst-plugins1-oss
@@ -20,8 +21,8 @@ DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 USE_TOOLS+=		intltool itstool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
+BUILDLINK_DEPMETHOD.gobject-introspection=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../audio/libgpod/buildlink3.mk"
 .include "../../sysutils/brasero/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"

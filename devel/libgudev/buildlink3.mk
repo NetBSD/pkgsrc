@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2026/04/25 19:35:46 vins Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2026/05/15 20:08:42 wiz Exp $
 
 BUILDLINK_TREE+=	libgudev
 
@@ -15,14 +15,6 @@ BUILDLINK_INCDIRS.libgudev?=	include/gudev-1.0/gudev
 
 .include "../../mk/udev.buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-
-pkgbase :=      libgudev
-.include "../../mk/pkg-build-options.mk"
-
-.if ${PKG_BUILD_OPTIONS.libgudev:Mintrospection}
-.  include "../../devel/gobject-introspection/buildlink3.mk"
-.endif
-
 .endif	# LIBGUDEV_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libgudev

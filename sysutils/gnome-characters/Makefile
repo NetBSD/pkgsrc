@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2026/01/27 08:40:34 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/05/15 20:08:43 wiz Exp $
 
 DISTNAME=	gnome-characters-3.34.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Design/Apps/CharacterMap
 COMMENT=	Utility application to find and insert unusual characters
 LICENSE=	gnu-gpl-v2
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../wip/glib2-introspection
 
 USE_TOOLS+=	pkg-config msgfmt xgettext
 
