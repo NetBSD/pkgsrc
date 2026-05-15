@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.296 2026/05/15 17:00:56 wiz Exp $
+# $NetBSD: Makefile,v 1.297 2026/05/15 17:02:47 wiz Exp $
 #
-# release notes
+# Release Notes
 # https://firefox-source-docs.mozilla.org/security/nss/releases/index.html
 
 DISTNAME=		nss-3.124
