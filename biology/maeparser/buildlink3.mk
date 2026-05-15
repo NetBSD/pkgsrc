@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2025/09/27 09:57:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2026/05/15 09:58:41 adam Exp $
 
 BUILDLINK_TREE+=	maeparser
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	maeparser
 MAEPARSER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.maeparser+=	maeparser>=1.2.4
-BUILDLINK_ABI_DEPENDS.maeparser?=	maeparser>=1.3.2nb1
+BUILDLINK_ABI_DEPENDS.maeparser?=	maeparser>=1.3.2nb2
 BUILDLINK_PKGSRCDIR.maeparser?=		../../biology/maeparser
 
 .include "../../devel/boost-libs/buildlink3.mk"

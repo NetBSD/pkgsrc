@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/12/25 16:32:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2026/05/15 09:58:47 adam Exp $
 
 COMMENT=	A portable FPGA place and route tool for Lattice iCE40 devices
+PKGREVISION=	1
 
 NEXTPNR_TARGET=		ice40
 NEXTPNR_TARGET_ARGS=	-DICESTORM_INSTALL_PREFIX=${PREFIX}

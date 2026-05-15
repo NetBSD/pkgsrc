@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2025/09/27 09:57:27 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/05/15 09:58:56 adam Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "Makefile.common"
 
 CONFIGURE_ARGS+=	--disable-python

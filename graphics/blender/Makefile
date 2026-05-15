@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.243 2026/01/05 18:01:07 adam Exp $
+# $NetBSD: Makefile,v 1.244 2026/05/15 09:58:51 adam Exp $
 
 DISTNAME=	blender-4.2.16
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.blender.org/source/
 EXTRACT_SUFX=	.tar.xz

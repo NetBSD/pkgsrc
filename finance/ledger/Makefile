@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2026/01/06 07:54:22 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2026/05/15 09:58:48 adam Exp $
 
 DISTNAME=	ledger-3.3.2
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ledger/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 CONFLICTS+=	ledger32>=0
 
-USE_CXX_FEATURES+=	c++11
+USE_CXX_FEATURES=	c++11
 
 USE_LANGUAGES=	c c++
 TEST_TARGET=	check
