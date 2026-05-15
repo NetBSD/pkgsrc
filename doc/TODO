@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27259 2026/05/15 16:01:32 vins Exp $
+$NetBSD: TODO,v 1.27260 2026/05/15 16:54:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -684,6 +684,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gnome-chess-3.12.3
 	o gnome-color-manager-2.32.0
 	o gnome-commander-1.6.4
+	o gnome-control-center-49.7
 	o gnome-devel-docs-2.30.0
 	o gnome-disk-utility-2.32.0
 	o gnome-media-3.4.0
