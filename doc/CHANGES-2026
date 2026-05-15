@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3041 2026/05/15 10:04:08 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3042 2026/05/15 11:15:59 abs Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4662,3 +4662,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated meta-pkgs/boost to 1.91.0 [adam 2026-05-15]
 	Updated finance/bitcoin to 31.0 [adam 2026-05-15]
 	Updated www/R-curl to 7.1.0 [wiz 2026-05-15]
+	Updated sysutils/rdfind to 1.8.0 [abs 2026-05-15]
