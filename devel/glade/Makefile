@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2026/01/27 08:39:11 wiz Exp $
+# $NetBSD: Makefile,v 1.137 2026/05/15 17:00:54 wiz Exp $
 
 DISTNAME=		glade-3.40.0
 PKGREVISION=		24
@@ -11,8 +11,9 @@ HOMEPAGE=		https://glade.gnome.org/
 COMMENT=		User interface builder for the GTK3+ toolkit
 LICENSE=		gnu-gpl-v2
 
-TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
+TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 
 USE_TOOLS+=		itstool msgfmt pkg-config
 

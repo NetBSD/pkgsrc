@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2026/05/14 16:40:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.53 2026/05/15 17:00:53 wiz Exp $
 
 DISTNAME=	appstream-glib-0.8.3
 PKGREVISION=	17
@@ -12,6 +12,7 @@ COMMENT=	GObjects and helper methods for AppStream metadata
 LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 USE_TOOLS+=		pkg-config msgfmt xgettext

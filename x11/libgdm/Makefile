@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2026/01/27 08:40:59 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/05/15 17:01:07 wiz Exp $
 
 DISTNAME=	gdm-40.0
 PKGNAME=	lib${DISTNAME}
@@ -12,6 +12,7 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Gnome Display Manager - client library
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 DEPENDS+=	zenity>=3.32.0:../../x11/zenity
 
 USE_PKGLOCALEDIR=	YES
@@ -80,6 +81,8 @@ do-install:
 		${DESTDIR}${PREFIX}/share/glib-2.0/schemas
 
 .include "../../devel/meson/build.mk"
+BUILDLINK_DEPMETHOD.gobject-introspection=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
 #.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 BUILDLINK_DEPMETHOD.openpam=	build
 .include "../../security/openpam/buildlink3.mk"

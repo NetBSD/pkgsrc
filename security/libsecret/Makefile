@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2026/01/17 21:13:49 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/05/15 17:01:03 wiz Exp $
 
 DISTNAME=	libsecret-0.20.5
 PKGREVISION=	3
@@ -12,6 +12,7 @@ COMMENT=	GObject based library for accessing the Secret Service API
 LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 TEST_DEPENDS+=	${PYPKGPREFIX}-dbus-[0-9]*:../../sysutils/py-dbus
 

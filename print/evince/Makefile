@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.199 2026/05/14 16:41:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.200 2026/05/15 17:01:02 wiz Exp $
 
 DISTNAME=	evince-48.1
 PKGREVISION=	4
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Apps/Evince
 COMMENT=	Document viewer for multiple document formats
 LICENSE=	gnu-gpl-v2
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS=		itstool msgfmt pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2026/02/14 08:33:35 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2026/05/15 17:01:00 wiz Exp $
 
 DISTNAME=	totem-pl-parser-3.26.6
 PKGREVISION=	7
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.gnome.org/bugzilla-migration/totem-pl-parser
 COMMENT=	Totem playlist parser
 LICENSE=	gnu-lgpl-v2
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_TOOLS+=	pkg-config xgettext
 

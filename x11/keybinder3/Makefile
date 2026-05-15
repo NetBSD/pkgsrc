@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2026/01/27 08:40:58 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/05/15 17:01:07 wiz Exp $
 
 DISTNAME=	keybinder-3.0-0.3.2
 PKGNAME=	keybinder3-0.3.2
@@ -10,6 +10,8 @@ MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	https://github.com/engla/keybinder
 COMMENT=	Library for registering keyboard shortcuts
 LICENSE=	gnu-gpl-v2
+
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 PKGCONFIG_OVERRIDE+=	libkeybinder/keybinder-3.0.pc.in
 

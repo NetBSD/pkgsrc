@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2026/05/14 16:40:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2026/05/15 17:00:54 wiz Exp $
 
 DISTNAME=	libadwaita-1.8.0
 PKGREVISION=	1
@@ -11,6 +11,7 @@ HOMEPAGE=	https://gitlab.gnome.org/GNOME/libadwaita/
 COMMENT=	Building blocks for modern GNOME applications
 LICENSE=	gnu-lgpl-v2.1
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 TOOL_DEPENDS+=	sassc-[0-9]*:../../www/sassc
 
 USE_TOOLS+=	msgfmt pkg-config

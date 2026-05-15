@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2026/01/07 08:48:17 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2026/05/15 17:01:01 wiz Exp $
 
 DISTNAME=	gssdp-1.6.2
 PKGREVISION=	11
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Projects/GUPnP
 COMMENT=	Simple Service Discovery Protocol library and device sniffer
 LICENSE=	gnu-lgpl-v2
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_TOOLS+=	pkg-config
 

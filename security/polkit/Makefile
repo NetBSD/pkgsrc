@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2026/02/02 16:47:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.60 2026/05/15 17:01:03 wiz Exp $
 
 DISTNAME=	polkit-127
 CATEGORIES=	security
@@ -12,6 +12,7 @@ LICENSE=	gnu-lgpl-v2
 TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 TOOL_DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 NOT_PAX_MPROTECT_SAFE=	lib/polkit-1/polkitd

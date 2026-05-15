@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.175 2026/01/27 08:39:10 wiz Exp $
+# $NetBSD: Makefile,v 1.176 2026/05/15 17:00:54 wiz Exp $
 
 DISTNAME=	devhelp-3.34.0
 PKGREVISION=	38
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Apps/Devhelp
 COMMENT=	Tool for browsing and searching API documentation from GNOME
 LICENSE=	gnu-gpl-v3
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_TOOLS+=	pkg-config msgfmt xgettext itstool
 

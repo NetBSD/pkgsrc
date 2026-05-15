@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2026/01/27 08:39:15 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2026/05/15 17:00:56 wiz Exp $
 
 DISTNAME=	libwnck-3.36.0
 PKGNAME=	${DISTNAME:S/libwnck/libwnck3/}
@@ -11,6 +11,8 @@ MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Library to write pagers and tasklists
 LICENSE=	gnu-lgpl-v2
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_TOOLS+=	pkg-config xgettext
 

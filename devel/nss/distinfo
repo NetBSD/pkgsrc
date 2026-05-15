@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.210 2026/04/24 09:52:17 wiz Exp $
+$NetBSD: distinfo,v 1.211 2026/05/15 17:00:56 wiz Exp $
 
-BLAKE2s (nss-3.123.1.tar.gz) = 9eceec78e8262305cba8df2d7c9335e6eb06d31f67cfc54edaac9ebfcacf2904
-SHA512 (nss-3.123.1.tar.gz) = 988927a07d1ac4533e7e89d01a08504e6ff70a7b111c1267e54a9cfe0a3a5674bb8b25e14ad6dca0d8765da3ca591a9be4f977ca172be3cf7af95a52f2e19214
-Size (nss-3.123.1.tar.gz) = 77762541 bytes
+BLAKE2s (nss-3.124.tar.gz) = f013376f9e7a9f2d3078acdce7113a11a21ec5c6ddb21a05428afce3b3163278
+SHA512 (nss-3.124.tar.gz) = 9959977b3cbcb0306c8aeba2c059d4f3646b3144c6401fbc73c14aea364caa92331875354afa79c095b6482b29ae743228d35c1bd510c5124cad5e7c37c5daa2
+Size (nss-3.124.tar.gz) = 78530189 bytes
 SHA1 (patch-md) = ebc903bb19456bfa111fad3c101e3f18168b43b3
 SHA1 (patch-me) = 30aa8b8e22bb687b9c71da40ea9e76b56885d1f8
 SHA1 (patch-mf) = 40e58385fb6f944f463bf00b9aad72bc4ea229d0

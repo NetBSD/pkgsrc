@@ -1,7 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2026/01/27 08:40:32 wiz Exp $
-
-# Makefile.common already includes python .mk files, so need to set this here
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+# $NetBSD: Makefile,v 1.50 2026/05/15 17:01:03 wiz Exp $
 
 PKGREVISION= 15
 .include "../../meta-pkgs/mate/Makefile.common"

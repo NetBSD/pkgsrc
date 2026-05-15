@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2026/01/27 08:39:34 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2026/05/15 17:00:57 wiz Exp $
 
 DISTNAME=	libchamplain-0.12.20
 PKGNAME=	${DISTNAME:S/ain/ain012/}
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://projects.gnome.org/libchamplain
 COMMENT=	Map widget
 LICENSE=	gnu-lgpl-v2.1
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_TOOLS+=	pkg-config
 MESON_ARGS+=	-Dmemphis=true

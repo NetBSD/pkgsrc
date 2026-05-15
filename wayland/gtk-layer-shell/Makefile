@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/04/14 12:41:02 kikadf Exp $
+# $NetBSD: Makefile,v 1.2 2026/05/15 17:01:05 wiz Exp $
 
 DISTNAME=	gtk-layer-shell-0.10.1
 CATEGORIES=	wayland
@@ -9,6 +9,8 @@ MAINTAINER=	kikadf.01@gmail.com
 HOMEPAGE=	https://github.com/wmww/gtk4-layer-shell/
 COMMENT=	Library to create desktop components for Wayland
 LICENSE=	gnu-gpl-v3
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_TOOLS+=	pkg-config
 

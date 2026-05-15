@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2024/04/13 00:48:57 riastradh Exp $
+# $NetBSD: options.mk,v 1.7 2026/05/15 17:00:59 wiz Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.input-pad
@@ -33,6 +33,7 @@ PLIST.xtest=		yes
 # Introspection support
 #
 .if !empty(PKG_OPTIONS:Mintrospection)
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
 BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 PLIST.introspection=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2026/04/26 20:02:40 vins Exp $
+# $NetBSD: Makefile,v 1.23 2026/05/15 17:00:58 wiz Exp $
 
 DISTNAME=	colord-gtk-0.3.1
 PKGREVISION=	1
@@ -11,13 +11,14 @@ HOMEPAGE=	https://www.freedesktop.org/software/colord/
 COMMENT=	Manage color profiles to accurately color input/output devices
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	pkg-config xgettext
+TOOL_DEPENDS+=		docbook-xsl-ns-[0-9]*:../../textproc/docbook-xsl-ns
+
+USE_TOOLS+=		pkg-config xgettext
 
 USE_PKGLOCALEDIR=	yes
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
-TOOL_DEPENDS+=		docbook-xsl-ns-[0-9]*:../../textproc/docbook-xsl-ns
 DOCBOOK_MANPAGE_XSL=	${PREFIX}/share/xsl/docbook-ns/manpages/docbook.xsl
 
 SUBST_CLASSES+=		man

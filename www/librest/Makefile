@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2026/05/14 16:42:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2026/05/15 17:01:05 wiz Exp $
 
 DISTNAME=	librest-0.10.2
 PKGREVISION=	1
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.gnome.org/GNOME/librest
 COMMENT=	Library for "RESTful" web services
 LICENSE=	gnu-lgpl-v2.1
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 CONFLICTS+=	librest07-[0-9]*
 SUPERSEDES+=	librest07-[0-9]*

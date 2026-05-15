@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2026/05/14 16:41:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2026/05/15 17:01:02 wiz Exp $
 
 DISTNAME=	libsoup-3.6.6
 PKGNAME=	${DISTNAME:S/soup/soup3/}
@@ -12,6 +12,7 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/libsoup
 COMMENT=	HTTP library implementation in C (major version 3)
 LICENSE=	gnu-lgpl-v2
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 DEPENDS+=	glib-networking-[0-9]*:../../net/glib-networking
 # not found by meson
 #TOOL_DEPENDS+=	${PYPKGPREFIX}-gi-docgen-[0-9]*:../../devel/py-gi-docgen
@@ -40,7 +41,7 @@ PYTHON_FOR_BUILD_ONLY=		tool
 
 .include "options.mk"
 
-# prevent sprurious git cloning of gi-docgen in configure stage
+# prevent spurious git cloning of gi-docgen in configure stage
 post-extract:
 	rm -f ${WRKSRC}/subprojects/*.wrap
 

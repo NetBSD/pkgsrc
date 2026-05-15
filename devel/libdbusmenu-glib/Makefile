@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.24 2025/10/23 20:36:29 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/05/15 17:00:55 wiz Exp $
 
 PKGREVISION= 3
 .include "../../meta-pkgs/libdbusmenu/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-glib-/}
 COMMENT=	Glib2 library created by pulling some code from indicator-applet
+
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 CONFIGURE_ARGS+=	--disable-gtk
 CONFIGURE_ARGS+=	--disable-dumper

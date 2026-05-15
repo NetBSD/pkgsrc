@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/01/27 08:40:38 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2026/05/15 17:01:04 wiz Exp $
 
 DISTNAME=	spice-gtk-0.42
 PKGREVISION=	4
@@ -11,10 +11,11 @@ HOMEPAGE=	https://www.spice-space.org/spice-gtk.html
 COMMENT=	GTK+ widget for SPICE clients
 LICENSE=	gnu-lgpl-v2.1
 
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
+TOOL_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
 DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-TOOL_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
-TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 USE_TOOLS+=		msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes

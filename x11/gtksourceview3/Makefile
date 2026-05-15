@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2026/01/27 08:40:57 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2026/05/15 17:01:07 wiz Exp $
 
 DISTNAME=	gtksourceview-3.24.11
 PKGNAME=	${DISTNAME:S/gtksourceview/gtksourceview3/}
@@ -11,6 +11,8 @@ MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	https://wiki.gnome.org/Projects/GtkSourceView
 COMMENT=	Text widget that extends GTK3's GtkTextView widget (v3)
 LICENSE=	gnu-lgpl-v2.1
+
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

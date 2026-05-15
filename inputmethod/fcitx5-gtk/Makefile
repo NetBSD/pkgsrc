@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2026/05/15 16:12:04 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/05/15 17:00:59 wiz Exp $
 
 DISTNAME=	fcitx5-gtk-5.1.6
 CATEGORIES=	inputmethod
@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/fcitx/fcitx5-gtk
 COMMENT=	GTK input method module for fcitx5
 LICENSE=	gnu-lgpl-v2.1
 
-#TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../wip/glib2-introspection
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++

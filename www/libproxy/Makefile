@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2026/05/14 16:42:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.72 2026/05/15 17:01:05 wiz Exp $
 
 DISTNAME=	libproxy-0.5.12
 PKGREVISION=	3
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://libproxy.github.io/libproxy/
 COMMENT=	Library that provides automatic proxy configuration management
 LICENSE=	gnu-lgpl-v2.1
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_CC_FEATURES=	c99
 USE_CXX_FEATURES=	c++11

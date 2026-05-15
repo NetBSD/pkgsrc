@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2026/05/14 16:40:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2026/05/15 17:00:54 wiz Exp $
 
 DISTNAME=	libadapta-1.5.0
 PKGREVISION=	9
@@ -11,6 +11,7 @@ HOMEPAGE=	https://github.com/xapp-project/libadapta/
 COMMENT=	libAdwaita with theme support and a few extras
 LICENSE=	gnu-lgpl-v2.1
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 TOOL_DEPENDS+=	sassc-[0-9]*:../../www/sassc
 
 USE_PKGLOCALEDIR=	yes

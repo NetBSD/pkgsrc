@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2026/05/14 16:41:59 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2026/05/15 17:01:02 wiz Exp $
 
 BUILDLINK_TREE+=	gcr4
 
@@ -18,10 +18,6 @@ pkgbase :=      gcr4
 
 .if ${PKG_BUILD_OPTIONS.gcr4:Mgtk4}
 .  include "../../x11/gtk4/buildlink3.mk"
-.endif
-
-.if ${PKG_BUILD_OPTIONS.gcr4:Mintrospection}
-.  include "../../devel/gobject-introspection/buildlink3.mk"
 .endif
 
 .if ${PKG_BUILD_OPTIONS.gcr4:Mlibgcrypt}

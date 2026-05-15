@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2025/12/21 14:06:30 prlw1 Exp $
+# $NetBSD: Makefile,v 1.56 2026/05/15 17:00:55 wiz Exp $
 
 DISTNAME=	libgee-0.20.8
 CATEGORIES=	devel gnome
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Projects/Libgee
 COMMENT=	Library providing GObject-based interfaces and classes
 LICENSE=	gnu-lgpl-v2.1
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake

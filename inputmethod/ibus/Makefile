@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2026/04/30 06:17:25 tsutsui Exp $
+# $NetBSD: Makefile,v 1.122 2026/05/15 17:00:59 wiz Exp $
 
 DISTNAME=	ibus-1.5.34
 PKGNAME=	${DISTNAME:S/-rc/rc/:S/-beta/beta/}
@@ -10,15 +10,13 @@ GITHUB_RELEASE=	${DISTNAME:S/${PKGBASE}-//}
 MAINTAINER=	tsutsui@NetBSD.org
 HOMEPAGE=	https://github.com/ibus/ibus/wiki
 LICENSE=	gnu-lgpl-v2.1
-
 COMMENT=	Intelligent Input Bus
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 TOOL_DEPENDS+=	cldr-emoji-annotation>=37.0.13.0.0.2:../../textproc/cldr-emoji-annotation
 TOOL_DEPENDS+=	unicode-character-database>=15.0.0:../../textproc/unicode-character-database
 TOOL_DEPENDS+=	unicode-emoji>=15.0:../../textproc/unicode-emoji
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 GNU_CONFIGURE=			yes
 USE_LIBTOOL=			yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2025/10/23 20:37:29 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/05/15 17:00:58 wiz Exp $
 
 DISTNAME=	gexiv2-0.14.3
 PKGREVISION=	2
@@ -11,6 +11,7 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/gexiv2
 COMMENT=	GObject-based wrapper around the Exiv2 library
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 # "error: 'for' loop initial declarations are only allowed in C99 mode"

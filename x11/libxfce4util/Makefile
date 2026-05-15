@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2026/01/27 08:40:59 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2026/05/15 17:01:07 wiz Exp $
 
 PKGREVISION= 5
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -6,6 +6,8 @@ PKGREVISION= 5
 DISTNAME=	libxfce4util-4.20.1
 CATEGORIES=	x11
 MASTER_SITES+=	https://archive.xfce.org/src/xfce/libxfce4util/${PKGVERSION_NOREV:R}/
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 COMMENT=	Xfce basic library
 

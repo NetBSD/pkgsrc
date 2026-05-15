@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2026/01/27 08:39:37 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2026/05/15 17:00:57 wiz Exp $
 
 DISTNAME=	clutter-gtk-1.8.4
 PKGREVISION=	20
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Projects/Clutter
 COMMENT=	GTK+ Integration library for Clutter
 LICENSE=	gnu-lgpl-v2.1
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

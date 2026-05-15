@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2025/01/12 19:23:00 riastradh Exp $
+# $NetBSD: options.mk,v 1.4 2026/05/15 17:00:54 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.at-spi2-core
 
@@ -45,6 +45,8 @@ MESON_ARGS+=	-Datk_only=true
 
 .if ${PKG_OPTIONS:Mintrospection}
 PLIST.introspection=	yes
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
+
 BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .  include "../../devel/gobject-introspection/buildlink3.mk"
 .endif

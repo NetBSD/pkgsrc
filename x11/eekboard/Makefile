@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2026/01/27 08:40:53 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2026/05/15 17:01:06 wiz Exp $
 
 DISTNAME=	eekboard-1.0.8
 PKGREVISION=	64
@@ -12,12 +12,16 @@ HOMEPAGE=	https://github.com/ueno/eekboard
 COMMENT=	Virtual keyboard for GNOME
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
+
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config intltool msgfmt msgmerge xgettext
 
 CONFIGURE_ARGS+=	--enable-introspection=yes
+
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 

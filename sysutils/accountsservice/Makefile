@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/10/23 20:39:13 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/05/15 17:01:03 wiz Exp $
 
 DISTNAME=	accountsservice-0.6.42
 PKGREVISION=	6
@@ -11,12 +11,16 @@ HOMEPAGE=	https://www.freedesktop.org/software/accountsservice/
 COMMENT=	Set of D-Bus interfaces for accessing account information
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool gmake autoconf autoreconf automake msgfmt
 USE_TOOLS+=	gdbus-codegen
 
 EGDIR=		${PREFIX}/share/examples/accountsservice
+
+CFLAGS+=	-Wno-implicit-function-declaration
 
 CONFIGURE_ARGS+=	--disable-systemd \
 			--sysconfdir=${EGDIR}

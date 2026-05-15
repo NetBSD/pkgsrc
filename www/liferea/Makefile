@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2026/01/27 08:40:50 wiz Exp $
+# $NetBSD: Makefile,v 1.212 2026/05/15 17:01:05 wiz Exp $
 
 DISTNAME=	liferea-1.12.8
 PKGREVISION=	36
@@ -12,6 +12,8 @@ HOMEPAGE=	https://lzone.de/liferea/
 COMMENT=	Simple FeedReader clone for reading RSS/RDF feeds
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
+
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
@@ -20,6 +22,8 @@ GNU_CONFIGURE=		yes
 SHLIBTOOL_OVERRIDE=	# empty
 
 GLIB_SCHEMAS=		net.sf.liferea.gschema.xml
+
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"

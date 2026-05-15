@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/04/19 14:57:23 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/05/15 17:01:04 wiz Exp $
 
 DISTNAME=	libxmlb-0.3.26
 CATEGORIES=	textproc
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/hughsie/libxmlb
 COMMENT=	Library to help create and query binary XML blobs
 LICENSE=	gnu-lgpl-v2.1
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_TOOLS+=	pkg-config
 

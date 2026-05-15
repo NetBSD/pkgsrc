@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2026/01/27 08:39:35 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2026/05/15 17:00:57 wiz Exp $
 
 DISTNAME=	osm-gps-map-1.2.0
 PKGREVISION=	29
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/nzjrs/osm-gps-map/
 COMMENT=	Gtk+ Widget for Displaying OpenStreetMap tiles
 LICENSE=	gnu-gpl-v2
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

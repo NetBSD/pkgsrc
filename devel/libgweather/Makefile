@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2026/01/27 08:39:14 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2026/05/15 17:00:55 wiz Exp $
 
 DISTNAME=	libgweather-40.0
 PKGREVISION=	36
@@ -11,15 +11,15 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/LibGWeather
 COMMENT=	Weather information access library
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
+TOOL_DEPENDS+=	py${PYTHON_VERSION_DEFAULT}-gobject3-[0-9]*:../../devel/py-gobject3
+
 USE_TOOLS+=	pkg-config xgettext
 
 PYTHON_FOR_BUILD_ONLY=	tool
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/gweather-3.0.pc
-
-TOOL_DEPENDS+=		py${PYTHON_VERSION_DEFAULT}-gobject3-[0-9]*:../../devel/py-gobject3
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
