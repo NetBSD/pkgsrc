@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.40 2026/01/07 08:46:09 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.41 2026/05/15 12:49:36 wiz Exp $
 
 BUILDLINK_TREE+=	libgda
 
@@ -14,7 +14,7 @@ BUILDLINK_PKGSRCDIR.libgda?=	../../databases/libgda
 pkgbase := libgda
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.libgda:Mfam)
+.if ${PKG_BUILD_OPTIONS.libgda:Mfam}
 .include "../../mk/fam.buildlink3.mk"
 .endif
 
