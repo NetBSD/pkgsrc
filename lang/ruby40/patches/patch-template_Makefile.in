@@ -6,6 +6,8 @@ Try fixing make parallelism/submake problems.
 2. ruby-glommed and probes.stamp depend on the same files, make sure
    they don't trigger the same objects twice.
 
+https://bugs.ruby-lang.org/issues/22059
+
 --- template/Makefile.in.orig	2026-05-07 20:25:14.644318083 +0000
 +++ template/Makefile.in
 @@ -523,7 +523,7 @@ probes.stamp: $(DTRACE_REBUILD_OBJS)
