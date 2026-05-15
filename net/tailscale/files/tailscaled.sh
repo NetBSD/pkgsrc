@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: tailscaled.sh,v 1.1 2025/02/11 08:55:15 ryoon Exp $
+# $NetBSD: tailscaled.sh,v 1.2 2026/05/15 19:57:33 ktnb Exp $
 #
 # PROVIDE: tailscaled
 # REQUIRE: DAEMON
@@ -33,7 +33,7 @@ tailscaled_precmd()
 
 tailscaled_start()
 {
-	${command} -tun userspace-networking &
+	${command} &
 }
 
 tailscaled_poststart() {
