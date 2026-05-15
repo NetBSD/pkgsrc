@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST,v 1.28 2025/06/07 21:32:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2026/05/15 07:43:32 wiz Exp $
 bin/filezilla
-bin/fzputtygen
-bin/fzsftp
 lib/libfzclient-commonui-private.la
 lib/libfzclient-private.la
 man/man1/filezilla.1
-man/man1/fzputtygen.1
-man/man1/fzsftp.1
 man/man5/fzdefaults.xml.5
 share/appdata/filezilla.appdata.xml
 share/applications/filezilla.desktop
