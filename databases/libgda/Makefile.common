@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.60 2021/05/02 10:24:47 nia Exp $
+# $NetBSD: Makefile.common,v 1.61 2026/05/15 12:49:36 wiz Exp $
 #
 # used by databases/libgda/Makefile
 # used by databases/libgda-mysql/Makefile
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--without-mysql
 CONFIGURE_ARGS+=	--without-postgres
 .endif
 
-.if defined(LIBGDA_PROVIDER) && !empty(LIBGDA_PROVIDER)
+.if !empty(LIBGDA_PROVIDER)
 PKGNAME=		${DISTNAME:S/libgda-/libgda-${LIBGDA_PROVIDER}-/}
 COMMENT+=		- ${LIBGDA_PROVIDER} provider
 
