@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4628 2026/05/05 12:42:01 taca Exp $
+# $NetBSD: Makefile,v 1.4629 2026/05/15 07:50:04 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1761,6 +1761,7 @@ SUBDIR+=	p5-File-Type
 SUBDIR+=	p5-File-Util
 SUBDIR+=	p5-File-Valet
 SUBDIR+=	p5-File-Which
+SUBDIR+=	p5-File-XDG
 SUBDIR+=	p5-File-chdir
 SUBDIR+=	p5-File-pushd
 SUBDIR+=	p5-FileHandle-Fmode
