@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3055 2026/05/15 17:03:00 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3056 2026/05/15 19:04:37 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4683,3 +4683,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/gobject-introspection to 1.86.0nb2 [wiz 2026-05-15]
 	Added devel/glib2-introspection version 2.88.1 [wiz 2026-05-15]
 	Updated devel/nss to 3.124 [wiz 2026-05-15]
+	Updated mail/mairix to 0.24 [ktnb 2026-05-15]
