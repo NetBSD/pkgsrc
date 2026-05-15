@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2026/05/14 16:42:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.45 2026/05/15 10:03:55 wiz Exp $
 
 R_PKGNAME=	curl
-R_PKGVER=	6.2.0
-PKGREVISION=	6
+R_PKGVER=	7.1.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -24,5 +23,6 @@ USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config
 
 .include "../../math/R/Makefile.extension"
+BUILDLINK_API_DEPENDS.curl+=	curl>=7.73
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
