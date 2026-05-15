@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.26 2026/01/15 15:43:32 adam Exp $
+$NetBSD: distinfo,v 1.27 2026/05/15 09:32:41 adam Exp $
 
-BLAKE2s (bitcoin-30.2.tar.gz) = fc0bd5d016f4a3a0a22cb565e2ec26ec6c9e8d5ebd5c657cec832b0942444350
-SHA512 (bitcoin-30.2.tar.gz) = 4fcdb70a016f9ad1b44539f19d61d4c9ce06d92f947be156f8d5de29026aa90a17cea8dcd0bd9bf2f7ad959a4b79d851de95a1c0d2ab87862e04c26cf89f493b
-Size (bitcoin-30.2.tar.gz) = 12684500 bytes
+BLAKE2s (bitcoin-31.0.tar.gz) = cfe2f7d9b8eff64da5d8564fe1b981f27e8e55c7cae37ccc7f95e2ee7cfebb57
+SHA512 (bitcoin-31.0.tar.gz) = 3bfbd8155e56c165551af892d47846c92242ebfd70c11c61d7c7dfc457e51216b6ccabddd4eb5a3fe684eba7a69a306cc69767c8efe7bdc0eb19de1a7ddc5100
+Size (bitcoin-31.0.tar.gz) = 14637699 bytes
 SHA1 (patch-src_netbase.cpp) = d160078c9a7aedc5b569a89ebf9afa98b0d2022b
+SHA1 (patch-src_node_txorphanage.cpp) = f02504f3cd9caec5ecea254904d3636aee5c8d30
+SHA1 (patch-src_txmempool.h) = f3c7479232aad3130580703a19f22ebc675d7233
+SHA1 (patch-src_txrequest.cpp) = f60f7321446939b535f7322d5b178d28faa976de
