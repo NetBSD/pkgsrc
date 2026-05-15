@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2026/01/07 08:46:09 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2026/05/15 12:49:17 wiz Exp $
 
 PKGREVISION= 18
 .include "Makefile.common"
@@ -11,6 +11,8 @@ CONFIGURE_ARGS+=	--with-bdb=no
 CONFIGURE_ARGS+=	--with-oracle=no
 
 TEST_TARGET=		check
+
+CFLAGS+=			-Wno-incompatible-pointer-types
 
 CHECK_INTERPRETER_SKIP=		share/libgda-5.0/gda_trml2html/trml2html.py
 CHECK_INTERPRETER_SKIP+=	share/libgda-5.0/gda_trml2pdf/trml2pdf.py
