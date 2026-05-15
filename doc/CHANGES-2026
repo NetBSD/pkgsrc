@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3040 2026/05/15 09:33:22 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3041 2026/05/15 10:04:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4661,3 +4661,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/defguard-proxy to 2.0.1 [adam 2026-05-15]
 	Updated meta-pkgs/boost to 1.91.0 [adam 2026-05-15]
 	Updated finance/bitcoin to 31.0 [adam 2026-05-15]
+	Updated www/R-curl to 7.1.0 [wiz 2026-05-15]
