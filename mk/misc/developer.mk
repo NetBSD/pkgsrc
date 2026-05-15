@@ -1,4 +1,4 @@
-# $NetBSD: developer.mk,v 1.27 2026/05/15 12:01:48 gdt Exp $
+# $NetBSD: developer.mk,v 1.28 2026/05/15 12:56:45 gdt Exp $
 #
 # Targets for pkgsrc developers for updating doc/CHANGES, doc/TODO, and for
 # uploading distfiles to NetBSD's backup location.
@@ -57,13 +57,11 @@
 #
 #
 # upload-distfiles:
-#	Upload distribution files to a project archive so that others may fetch
+#	When run from pkgsrc/category/dir, upload this package's
+#	distribution files to ftp.netbsd.org so that others may fetch
 #	them from there. It only uploads distfiles that are freely
-#	re-distributable by setting NO_SKIP (see mk/fetch/bsd.fetch-vars.mk).
-#
-#       When run from pksgrc/category/dir, uploads the distfiles used
-#       by that package.  When run from pkgsrc, uploads the union of
-#       distfiles used by any package.
+#	re-distributable by setting NO_SKIP (see
+#	mk/fetch/bsd.fetch-vars.mk).
 #
 # Keywords: commit update changes todo upload
 # Keywords: add added update updated rename renamed move moved remove removed
