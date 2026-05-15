@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.14 2026/05/07 18:50:01 bsiegert Exp $
+# $NetBSD: Makefile,v 1.15 2026/05/15 19:57:33 ktnb Exp $
 
 DISTNAME=	tailscale
-PKGNAME=	tailscale-1.81.0pre20250210
-PKGREVISION=	13
+PKGNAME=	tailscale-1.94.4
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=ryoon/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=NuclearKev/}
 GITHUB_PROJECT=	tailscale
-GITHUB_TAG=	1534583f2484f75450dd73f67949f61f26dbf340
+GITHUB_TAG=	f86a9ab65341bbaabc330bd3bc9063b753f45304
 
-MAINTAINER=	ryoon@NetBSD.org
+MAINTAINER=	ktnb@NetBSD.org
 HOMEPAGE=	https://tailscale.com/
 COMMENT=	Wireguard-based VPN client for tailscale
 LICENSE=	modified-bsd
