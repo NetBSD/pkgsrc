@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2025/12/25 22:45:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.38 2026/05/15 09:13:48 adam Exp $
 share/b2/build-system.jam
 share/b2/build/ac.jam
 share/b2/build/alias.jam
@@ -65,6 +65,7 @@ share/b2/tools/features/build-feature.jam
 share/b2/tools/features/cflags-feature.jam
 share/b2/tools/features/compileflags-feature.jam
 share/b2/tools/features/conditional-feature.jam
+share/b2/tools/features/contracts-feature.jam
 share/b2/tools/features/coverage-feature.jam
 share/b2/tools/features/cxx-template-depth-feature.jam
 share/b2/tools/features/cxxabi-feature.jam
@@ -197,6 +198,7 @@ share/b2/tools/types/rsp.jam
 share/b2/tools/types/sass-type.jam
 share/b2/tools/types/xml.jam
 share/b2/tools/unix.jam
+share/b2/tools/vcpkg.jam
 share/b2/tools/vmsdecc.jam
 share/b2/tools/whale.jam
 share/b2/tools/xlf.jam

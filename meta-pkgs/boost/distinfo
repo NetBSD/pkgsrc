@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.163 2026/02/26 10:21:00 wiz Exp $
+$NetBSD: distinfo,v 1.164 2026/05/15 09:13:49 adam Exp $
 
-BLAKE2s (boost_1_90_0.tar.bz2) = 9fb979657f9c196fa279e8bb05aa5b9bc1dc05f6d856679934abcb250d764758
-SHA512 (boost_1_90_0.tar.bz2) = 1c81b60f63367d7249f277f0a569c181926dcf5a725e30433dd336205f1782880489dd00df6a1a74fd107765d3ca2cd49f806788cabb7d5700a8a55927a9a199
-Size (boost_1_90_0.tar.bz2) = 170662122 bytes
+BLAKE2s (boost_1_91_0.tar.bz2) = 60c7a38dff009350fa69f8977972016d36184211866acc038f89b5b2966f25c9
+SHA512 (boost_1_91_0.tar.bz2) = 25b3c1434d4c561ff568581356d1f240ef12218be62281f34fe7482487c5328ee6902ef158b7cf8daafe84943cf6f46485a8710a6da74475f11da023ec7b5559
+Size (boost_1_91_0.tar.bz2) = 204579466 bytes
 SHA1 (patch-boost_archive_basic__archive.hpp) = 1f809170538f83252dc2f368825622f7a9df96f9
-SHA1 (patch-boost_asio_detail_config.hpp) = 209c69d09be90de2a69250fe9ec73412cc9c04d5
+SHA1 (patch-boost_asio_detail_config.hpp) = 493de647c6832027bac563549653ba2b8f75b83c
 SHA1 (patch-boost_config_detail_posix__features.hpp) = 7d310574e7020c79c8bfa87cff4db0a2edc5b0bc
 SHA1 (patch-boost_config_detail_suffix.hpp) = 12e22085e7c292b2451ea8bc581beaddcb936252
 SHA1 (patch-boost_config_platform_bsd.hpp) = 7fb633809dcb4ac1c76d9f43fb4e9e288a83ff34
@@ -17,7 +17,6 @@ SHA1 (patch-boost_math_tools_config.hpp) = 1b467a38081fe5e2e3004bca9a6aec7106edb
 SHA1 (patch-boost_math_tools_promotion.hpp) = d1079940594f7ffe7e70db6f61bba633b8fb31e5
 SHA1 (patch-boost_numeric_ublas_storage.hpp) = 282b5a3b5d09216ded14fae166169d64db72590e
 SHA1 (patch-boost_property__tree_detail_xml__parser__read__rapidxml.hpp) = 3499fcc37e72396d23a9fce0f1c97891adf12a9f
-SHA1 (patch-boost_range_detail_any__iterator__interface.hpp) = 7a9949f18fa7c5eb8d35366e65950bd9d49ff844
 SHA1 (patch-boost_stacktrace_detail_collect__unwind.ipp) = a5922dffd929f596b6e7d71b11f32d17e0bbd806
 SHA1 (patch-boost_test_impl_execution__monitor.ipp) = ffd449576d00b7e6ea3081421e3e70decf5d7de8
 SHA1 (patch-boost_thread_pthread_thread__data.hpp) = d048867f0ed98720cc375e949e5c92b92f3ce1ac
