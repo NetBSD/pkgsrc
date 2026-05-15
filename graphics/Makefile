@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1120 2026/05/07 17:13:47 adam Exp $
+# $NetBSD: Makefile,v 1.1121 2026/05/15 11:52:22 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -82,7 +82,6 @@ SUBDIR+=	cdlabelgen
 SUBDIR+=	cglm
 SUBDIR+=	chafa
 SUBDIR+=	charls
-SUBDIR+=	cheese
 SUBDIR+=	cinepaint
 SUBDIR+=	circos
 SUBDIR+=	claraocr
