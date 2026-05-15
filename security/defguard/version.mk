@@ -1,6 +1,6 @@
-# $NetBSD: version.mk,v 1.4 2026/05/05 18:00:35 adam Exp $
+# $NetBSD: version.mk,v 1.5 2026/05/15 09:02:08 adam Exp $
 
-DEFGUARD_VERSION=	2.0.0
+DEFGUARD_VERSION=	2.0.1
 
 CATEGORIES=	security net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=defguard/}

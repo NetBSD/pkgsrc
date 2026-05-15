@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2026/05/05 18:00:35 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/05/15 09:02:08 adam Exp $
 
 .include "../../security/defguard/version.mk"
 
-DISTNAME=	defguard-proxy-2.0.0
+DISTNAME=	defguard-proxy-2.0.1
 GITHUB_PROJECT=	proxy
 
 COMMENT=	True Zero-Trust WireGuard VPN with 2FA/MFA
