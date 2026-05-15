@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2026/01/06 07:54:22 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/05/15 09:58:48 adam Exp $
 
 DISTNAME=	ledger-3.2.1
-PKGREVISION=	6
+PKGREVISION=	7
 PKGNAME=	${DISTNAME:C/^ledger-/ledger32-/}
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ledger/}

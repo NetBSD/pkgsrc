@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2025/10/16 15:01:51 adam Exp $
+# $NetBSD: Makefile,v 1.30 2026/05/15 09:59:02 adam Exp $
 
 DISTNAME=	lucene++-3.0.9
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=luceneplusplus/}
 GITHUB_PROJECT=	LucenePlusPlus

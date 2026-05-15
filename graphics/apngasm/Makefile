@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/09/27 09:57:19 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/05/15 09:58:51 adam Exp $
 
 DISTNAME=		apngasm-3.1.10
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_GITHUB:=apngasm/}
 GITHUB_PROJECT=		${DISTNAME:S/-${PKGVERSION_NOREV}//}

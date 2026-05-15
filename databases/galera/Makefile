@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2025/09/27 09:57:10 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/05/15 09:58:44 adam Exp $
 
 DISTNAME=	galera-26.4.13
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=codership/}
 GITHUB_TAG=	release_${PKGVERSION_NOREV}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2026/05/14 16:41:31 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2026/05/15 09:58:57 adam Exp $
 
 BUILDLINK_TREE+=	kdepim-runtime
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdepim-runtime
 KDEPIM_RUNTIME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdepim-runtime+=	kdepim-runtime>=20.04.1
-BUILDLINK_ABI_DEPENDS.kdepim-runtime?=	kdepim-runtime>=25.08.3nb4
+BUILDLINK_ABI_DEPENDS.kdepim-runtime?=	kdepim-runtime>=25.08.3nb5
 BUILDLINK_PKGSRCDIR.kdepim-runtime?=	../../misc/kdepim-runtime
 
 .include "../../devel/kf6-knotifyconfig/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/09/27 09:57:15 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/05/15 09:58:47 adam Exp $
 
 # XXX Yosys changed their release tag format in 0.45 to just a bare
 # XXX number, sigh.
@@ -8,7 +8,7 @@ ABC_TAG=	yosys-${YOSYS_VERSION}
 ABC_DISTNAME=	abc-${ABC_TAG}
 DISTNAME=	yosys-${YOSYS_TAG}
 #PKGREVISION=	1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=YosysHQ/}
 GITHUB_TAG=	${YOSYS_TAG}

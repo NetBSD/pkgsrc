@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/09/27 09:57:11 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/05/15 09:58:45 adam Exp $
 
 PKGNAME=		${DISTNAME:S/-gpl//}
-PKGREVISION=		10
+PKGREVISION=		11
 #PKGREVISION=		7
 COMMENT=		MySQL Cluster 7.5, a free SQL clustered database
 

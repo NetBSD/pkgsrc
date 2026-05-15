@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/09/27 09:57:07 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/05/15 09:58:41 adam Exp $
 
 DISTNAME=	haplohseq-0.1.2.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_PROJECT=	haplohseq

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2026/05/10 06:26:14 fox Exp $
+# $NetBSD: Makefile,v 1.60 2026/05/15 09:58:40 adam Exp $
 
 DISTNAME=	din-64.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://dinisnoise.org/files/
 

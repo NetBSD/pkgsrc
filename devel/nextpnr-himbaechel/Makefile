@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2026/03/08 12:45:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2026/05/15 09:58:47 adam Exp $
 
 COMMENT=	Portable FPGA place and route tool
 
-PKGREVISION=	1
+PKGREVISION=	2
 
 NEXTPNR_TARGET=		himbaechel
 NEXTPNR_TARGET_ARGS=	-DICESTORM_INSTALL_PREFIX=${PREFIX}

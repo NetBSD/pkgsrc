@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2026/05/14 16:40:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.48 2026/05/15 09:58:49 adam Exp $
 
 DISTNAME=	AlephOne-20250829
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	games
 MASTER_SITES+=	${MASTER_SITE_GITHUB:=Aleph-One-Marathon/}
 GITHUB_PROJECT=	alephone
