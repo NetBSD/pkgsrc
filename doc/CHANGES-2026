@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3046 2026/05/15 12:35:21 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.3047 2026/05/15 12:37:27 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4674,3 +4674,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed graphics/cheese [wiz 2026-05-15]
 	Updated ham/chirp to 20260508 [gdt 2026-05-15]
 	Updated www/curl to 8.20.0nb2 [kikadf 2026-05-15]
+	Updated www/libcurl-gnutls to 8.20.0nb2 [kikadf 2026-05-15]
