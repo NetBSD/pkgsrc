@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3054 2026/05/15 17:01:39 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3055 2026/05/15 17:03:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4682,3 +4682,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated inputmethod/fcitx5-gtk to 5.1.6 [wiz 2026-05-15]
 	Updated devel/gobject-introspection to 1.86.0nb2 [wiz 2026-05-15]
 	Added devel/glib2-introspection version 2.88.1 [wiz 2026-05-15]
+	Updated devel/nss to 3.124 [wiz 2026-05-15]
