@@ -1,0 +1,3 @@
+This module has been built as a replacement for the aging
+mod_auth_kerb.  Its aim is to use only GSSAPI calls and be as much as
+possible agnostic of the actual mechanism used.

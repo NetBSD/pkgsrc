@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1918 2026/05/09 13:15:13 vins Exp $
+# $NetBSD: Makefile,v 1.1919 2026/05/16 03:47:28 riastradh Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -58,6 +58,7 @@ SUBDIR+=	ap2-xsendfile
 SUBDIR+=	ap22-auth-ofba
 SUBDIR+=	ap22-authz-ldap
 SUBDIR+=	ap22-dnssd
+SUBDIR+=	ap24-auth-gssapi
 SUBDIR+=	ap24-authnz-external
 SUBDIR+=	apache-roller
 SUBDIR+=	apache-tomcat10
