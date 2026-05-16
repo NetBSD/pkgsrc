@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.223 2026/05/15 20:08:42 wiz Exp $
+# $NetBSD: Makefile,v 1.224 2026/05/16 04:31:14 ryoon Exp $
 
 DISTNAME=	rhythmbox-3.4.6
 PKGREVISION=	29
@@ -11,7 +11,7 @@ HOMEPAGE=	https://wiki.gnome.org/Apps/Rhythmbox
 COMMENT=	Music management application for GNOME
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../wip/glib2-introspection
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 DEPENDS+=	gst-plugins1-libav-[0-9]*:../../multimedia/gst-plugins1-libav
 DEPENDS+=	gst-plugins1-good-[0-9]*:../../multimedia/gst-plugins1-good
 DEPENDS+=	gst-plugins1-oss-[0-9]*:../../audio/gst-plugins1-oss

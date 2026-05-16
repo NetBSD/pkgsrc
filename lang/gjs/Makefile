@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2026/05/15 20:08:42 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/05/16 04:31:14 ryoon Exp $
 
 DISTNAME=	gjs-1.68.4
 PKGREVISION=	27
@@ -11,7 +11,7 @@ HOMEPAGE=	https://gitlab.gnome.org/GNOME/gjs
 COMMENT=	Javascript binding for GNOME based on Spidermonkey
 LICENSE=	mit
 
-TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../wip/glib2-introspection
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
