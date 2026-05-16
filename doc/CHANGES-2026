@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3061 2026/05/16 12:40:20 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.3062 2026/05/16 20:34:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4693,3 +4693,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/xenstoretools to 20260515 [bouyer 2026-05-16]
 	Updated geography/py-ubxutils to 1.0.6 [gdt 2026-05-16]
 	Updated geography/py-gnssutils to 1.2.1 [gdt 2026-05-16]
+	Updated textproc/rumdl to 0.1.93 [pin 2026-05-16]
