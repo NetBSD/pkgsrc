@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.762 2026/05/15 13:52:36 pin Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.763 2026/05/16 11:49:42 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28518,7 +28518,7 @@ glib2<2.82.1	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-52533
 glib2<2.82.5	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-3360
 glib2<2.84.2	buffer-underflow	https://nvd.nist.gov/vuln/detail/CVE-2025-4373
 global<6.6.13	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-38448
-glslang-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-3010
+glslang<1.4.350.0	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-3010
 # disputed by upstream, considered a feature
 #gnome-settings-daemon-[0-9]*	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2024-38394
 gnome-shell<44.5	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-43090
