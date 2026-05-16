@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.20 2026/05/12 19:22:49 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.21 2026/05/16 15:27:27 bsiegert Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -197,4 +197,10 @@ graphics/lcms2: security fix
 
 Pullup ticket #7111 - requested by morr
 editors/vim: security fix
+
+Pullup ticket #7113 - requested by bouyer
+sysutils/xen{kernel,tools}418: security fix
+
+Pullup ticket #7114 - requested by bouyer
+sysutils/xen{kernel,tools}/420: security fix
 
