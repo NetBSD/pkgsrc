@@ -1,0 +1,62 @@
+$NetBSD: patch-configure.ac,v 1.1 2026/05/16 03:47:28 riastradh Exp $
+
+1. Fix shell portability.
+
+2. Use <gssapi/gssapi_ext.h> conditionally: mit-krb5 has it, heimdal
+   does not (even newer versions with the GSSAPI extensions).
+
+3. Use libgssapi, not libgssapi_krb5.
+
+4. Don't override caller's LIBTOOL.
+
+--- configure.ac.orig	2020-11-30 18:30:59.746815280 +0000
++++ configure.ac
+@@ -44,7 +44,7 @@ AC_TYPE_UINT32_T
+ AC_CHECK_FUNCS([strcasecmp])
+ 
+ AC_PATH_PROGS(APACHE, [apache2 httpd apache])
+-if test x"$APACHE" == x; then
++if test x"$APACHE" = x; then
+ 	AC_MSG_ERROR([Can't find the apache2/httpd executable!])
+ fi
+ chk="$(objdump -d "$APACHE" | grep ap_log_rdata)"
+@@ -97,8 +97,9 @@ AC_CHECK_FUNCS(EVP_CIPHER_CTX_new HMAC_C
+ LIBS=$save_LIBS
+ 
+ # GSSAPI availability and presence of specific functions
+-AC_CHECK_HEADERS([gssapi/gssapi.h gssapi/gssapi_ext.h gssapi/gssapi_krb5.h],
++AC_CHECK_HEADERS([gssapi/gssapi.h gssapi/gssapi_krb5.h],
+                  ,[AC_MSG_ERROR([Could not find GSSAPI headers])])
++AC_CHECK_HEADERS([gssapi/gssapi_ext.h])
+ AC_CHECK_HEADERS([gssapi/gssapi_ntlmssp.h])
+ AC_PATH_PROG(KRB5_CONFIG, krb5-config, failed)
+ if test x$KRB5_CONFIG = xfailed; then
+@@ -107,7 +108,7 @@ else
+     GSSAPI_CFLAGS="`$KRB5_CONFIG --cflags gssapi`"
+     GSSAPI_LIBS="`$KRB5_CONFIG --libs gssapi`"
+ fi
+-AC_CHECK_LIB([gssapi_krb5], [gss_accept_sec_context], [],
++AC_CHECK_LIB([gssapi], [gss_accept_sec_context], [],
+              [AC_MSG_ERROR([GSSAPI library check failed])])
+ AC_CHECK_FUNCS(gss_krb5_ccache_name, [],
+                [AC_MSG_ERROR([gss_krb5_ccache_name() not found])])
+@@ -115,13 +116,18 @@ AC_CHECK_FUNCS(gss_acquire_cred_with_pas
+                [AC_MSG_ERROR([gss_acquire_with_password() not found])])
+ AC_CHECK_FUNCS(gss_acquire_cred_from)
+ AC_CHECK_FUNCS(gss_store_cred_into)
++AC_CHECK_FUNCS(gss_set_neg_mechs)
++AC_CHECK_FUNCS(gss_str_to_oid)
++AC_CHECK_FUNCS(gss_mech_krb5_old)
++AC_CHECK_FUNCS(gss_mech_krb5_wrong)
++AC_CHECK_FUNCS(gss_mech_iakerb)
+ 
+ AC_SUBST([GSSAPI_CFLAGS])
+ AC_SUBST([GSSAPI_LIBS])
+ 
+ MAG_CFLAGS="`${APXS} -q CFLAGS` `${APXS} -q EXTRA_CPPFLAGS` `${APR} --cflags` ${GSSAPI_CFLAGS} ${OPENSSL_CFLAGS} -I`${APXS} -q INCLUDEDIR` `${APR} --includes` -fPIC"
+ MAG_LIBS="`${APR} --libs` ${GSSAPI_LIBS} ${OPENSSL_LIBS}"
+-LIBTOOL="`${APXS} -q LIBTOOL`"
++: ${LIBTOOL:=`${APXS} -q LIBTOOL`}
+ 
+ AC_SUBST([MAG_CFLAGS])
+ AC_SUBST([MAG_LIBS])

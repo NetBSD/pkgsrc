@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2026/05/16 03:47:28 riastradh Exp $
+
+BLAKE2s (mod_auth_gssapi-1.6.5.tar.gz) = 5f03b2e7b46ffc17ed88b52a22f173c621ec83b29cda0c0f1999ccdcc05c70b5
+SHA512 (mod_auth_gssapi-1.6.5.tar.gz) = 97eb6dff90e686cd5d25c2925987bf51dbdf627720e74105204ec4625455255548414a03599cfd5a85734f5496f6a7b1f09760771a8278e8348e6ca35b6c48d0
+Size (mod_auth_gssapi-1.6.5.tar.gz) = 513260 bytes
+SHA1 (patch-configure.ac) = 5eed9d745c021f4b52916eb1c156a5e364fda0bb
+SHA1 (patch-src_mod__auth__gssapi.c) = 7d8181842dbb06faec5ea34faa84d4a2a80b41e8
+SHA1 (patch-src_mod__auth__gssapi.h) = 168109cfcfdbd71afe77a77d196e3bf0d1abcd61
+SHA1 (patch-tests_httpd.conf) = 6f5eadcf33e32311a49cd809fb04017fbb1355a4
+SHA1 (patch-tests_magtests.py) = 0e5beea9acd982a8a8d57bca4a6396f6d2517be5
+SHA1 (patch-tests_t__file__check.py) = b955529b5f8603d447df71a8dc3e3efd1fe86507
+SHA1 (patch-tests_t__mech__name.py) = 5eb8e37300d41e4eadbfdbf88eec3c2eebe73712
