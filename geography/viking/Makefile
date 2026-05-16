@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.164 2026/05/16 13:40:23 gdt Exp $
+# $NetBSD: Makefile,v 1.165 2026/05/16 13:42:55 gdt Exp $
 
 VERSION=		1.11
 DISTNAME=		viking-${VERSION}
@@ -43,7 +43,7 @@ CONFIGURE_ARGS+=	--disable-mapnik
 # dependency of mapnik, not necessarily actually used by viking.
 
 # uses md5-compat.h, no longer present in nettle
-# \todo Report upstream.
+# https://github.com/viking-gps/viking/issues/359
 CONFIGURE_ARGS+=	--disable-nettle
 
 # \todo RESOLVE
