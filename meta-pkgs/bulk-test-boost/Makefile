@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2026/01/30 08:58:48 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/05/16 17:56:35 gdt Exp $
 
-DISTNAME=	bulk-test-boost-20260130
+DISTNAME=	bulk-test-boost-20260516
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -31,6 +31,8 @@ DEPENDS+=	dnsdist-[0-9]*:../../net/dnsdist
 DEPENDS+=	emulationstation-[0-9]*:../../emulators/emulationstation
 DEPENDS+=	gnucash-[0-9]*:../../finance/gnucash
 DEPENDS+=	gnuradio-core-[0-9]*:../../ham/gnuradio-core
+DEPENDS+=	gnuradio-uhd-[0-9]*:../../ham/gnuradio-uhd
+DEPENDS+=	gr-osmosdr-[0-9]*:../../ham/gr-osmosdr
 DEPENDS+=	gource-[0-9]*:../../graphics/gource
 DEPENDS+=	gpick-[0-9]*:../../graphics/gpick
 DEPENDS+=	gr-osmosdr-[0-9]*:../../ham/gr-osmosdr
