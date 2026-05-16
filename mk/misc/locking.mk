@@ -1,4 +1,4 @@
-# $NetBSD: locking.mk,v 1.1 2020/05/10 06:52:50 rillig Exp $
+# $NetBSD: locking.mk,v 1.2 2026/05/16 13:14:19 rillig Exp $
 #
 # User-settable variables:
 #
@@ -39,36 +39,27 @@ LOCALBASE_LOCKTYPE?=	${PKGSRC_LOCKTYPE}
 
 _WRKDIR_LOCKFILE=	${WRKDIR}/.lockfile
 _LOCALBASE_LOCKFILE=	${LOCALBASE}/.lockfile
-_LOCKVARS=		WRKDIR_LOCKTYPE LOCALBASE_LOCKTYPE
 
-#
-# Sanity checks.
-#
 
-.for v in ${_LOCKVARS}
-_OK=	no
-.  for t in none once sleep
-.    if ${${v}} == "${t}"
-_OK=	yes
-.    endif
-.  endfor
-.  if ${_OK} != "yes"
-PKG_FAIL_REASON+=	"[locking.mk] ${v} must be one of { none once sleep }, not ${${v}}."
-.  endif
-.endfor
+.if ${WRKDIR_LOCKTYPE} != "none" \
+    && ${WRKDIR_LOCKTYPE} != "once" \
+    && ${WRKDIR_LOCKTYPE} != "sleep"
+PKG_FAIL_REASON+=	"[mk/misc/locking.mk] WRKDIR_LOCKTYPE must be one of { none once sleep }, not ${WRKDIR_LOCKTYPE}."
+.endif
 
-#
-# Needed tools.
-#
+.if ${LOCALBASE_LOCKTYPE} != "none" \
+    && ${LOCALBASE_LOCKTYPE} != "once" \
+    && ${LOCALBASE_LOCKTYPE} != "sleep"
+PKG_FAIL_REASON+=	"[mk/misc/locking.mk] LOCALBASE_LOCKTYPE must be one of { none once sleep }, not ${LOCALBASE_LOCKTYPE}."
+.endif
 
-.for v in ${_LOCKVARS}
-.  if ${${v}} != "none"
+
+.if ${WRKDIR_LOCKTYPE} != "none" || ${LOCALBASE_LOCKTYPE} != "none"
 USE_TOOLS+=		shlock
-.  endif
-.  if ${${v}} == "sleep"
+.endif
+.if ${WRKDIR_LOCKTYPE} == "sleep" || ${LOCALBASE_LOCKTYPE} != "sleep"
 USE_TOOLS+=		sleep
-.  endif
-.endfor
+.endif
 
 #
 # The commands.
