@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/05/15 16:46:58 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/05/16 06:15:03 adam Exp $
 
 .include "../../devel/glib2/Makefile.common"
 
@@ -19,6 +19,12 @@ MESON_ARGS+=	-Dinstalled_tests=false
 MESON_ARGS+=	-Dlibmount=disabled
 MESON_ARGS+=	-Dlocalstatedir=${VARBASE}
 MESON_ARGS+=	-Druntime_dir=${VARBASE}/run
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(PKG_OPTIONS.glib2:Mcocoa)
+MESON_ARGS+=	-Duse_cocoa=true
+.endif
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/girepository:${WRKSRC}/output/gio:${WRKSRC}/output/glib:${WRKSRC}/output/gobject:${WRKSRC}/output/gmodule:${WRKSRC}/output/gthread
 # For Darwin
@@ -76,14 +82,14 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/output/${f} ${DESTDIR}${PREFIX}/lib/girepository-1.0/
 .endfor
 
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../devel/libffi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
