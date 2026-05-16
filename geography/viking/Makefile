@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.163 2026/05/14 16:41:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.164 2026/05/16 13:40:23 gdt Exp $
 
 VERSION=		1.11
 DISTNAME=		viking-${VERSION}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		geography
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=viking/}${VERSION}/
 EXTRACT_SUFX=		.tar.bz2
@@ -41,6 +41,10 @@ CONFIGURE_ARGS+=	--disable-magic
 CONFIGURE_ARGS+=	--disable-mapnik
 # \todo README says icu is required.  However, it seems to be
 # dependency of mapnik, not necessarily actually used by viking.
+
+# uses md5-compat.h, no longer present in nettle
+# \todo Report upstream.
+CONFIGURE_ARGS+=	--disable-nettle
 
 # \todo RESOLVE
 CONFIGURE_ARGS+=	--disable-oauth
