@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2026/04/15 09:58:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2026/05/16 07:20:49 adam Exp $
 include/gstreamer-1.0/gst/analytics/analytics-meta-prelude.h
 include/gstreamer-1.0/gst/analytics/analytics.h
 include/gstreamer-1.0/gst/analytics/gstanalytics_image_util.h
@@ -54,13 +54,6 @@ include/gstreamer-1.0/gst/mpegts/gstmpegtsdescriptor.h
 include/gstreamer-1.0/gst/mpegts/gstmpegtssection.h
 include/gstreamer-1.0/gst/mpegts/mpegts-prelude.h
 include/gstreamer-1.0/gst/mpegts/mpegts.h
-include/gstreamer-1.0/gst/mse/gstmediasource.h
-include/gstreamer-1.0/gst/mse/gstmsesrc.h
-include/gstreamer-1.0/gst/mse/gstsourcebuffer.h
-include/gstreamer-1.0/gst/mse/gstsourcebufferlist.h
-include/gstreamer-1.0/gst/mse/mse-enumtypes.h
-include/gstreamer-1.0/gst/mse/mse-prelude.h
-include/gstreamer-1.0/gst/mse/mse.h
 include/gstreamer-1.0/gst/play/gstplay-media-info.h
 include/gstreamer-1.0/gst/play/gstplay-signal-adapter.h
 include/gstreamer-1.0/gst/play/gstplay-types.h
@@ -111,7 +104,6 @@ lib/girepository-1.0/GstCodecs-1.0.typelib
 lib/girepository-1.0/GstDxva-1.0.typelib
 lib/girepository-1.0/GstInsertBin-1.0.typelib
 lib/girepository-1.0/GstMpegts-1.0.typelib
-lib/girepository-1.0/GstMse-1.0.typelib
 lib/girepository-1.0/GstPlay-1.0.typelib
 lib/girepository-1.0/GstPlayer-1.0.typelib
 lib/girepository-1.0/GstTranscoder-1.0.typelib
@@ -211,9 +203,6 @@ lib/libgstisoff-1.0.so.0.${SHLIBVER}.0
 lib/libgstmpegts-1.0.so
 lib/libgstmpegts-1.0.so.0
 lib/libgstmpegts-1.0.so.0.${SHLIBVER}.0
-lib/libgstmse-1.0.so
-lib/libgstmse-1.0.so.0
-lib/libgstmse-1.0.so.0.${SHLIBVER}.0
 lib/libgstphotography-1.0.so
 lib/libgstphotography-1.0.so.0
 lib/libgstphotography-1.0.so.0.${SHLIBVER}.0
@@ -239,7 +228,6 @@ lib/pkgconfig/gstreamer-bad-audio-1.0.pc
 lib/pkgconfig/gstreamer-codecparsers-1.0.pc
 lib/pkgconfig/gstreamer-insertbin-1.0.pc
 lib/pkgconfig/gstreamer-mpegts-1.0.pc
-lib/pkgconfig/gstreamer-mse-1.0.pc
 lib/pkgconfig/gstreamer-photography-1.0.pc
 lib/pkgconfig/gstreamer-play-1.0.pc
 lib/pkgconfig/gstreamer-player-1.0.pc
@@ -254,7 +242,6 @@ share/gir-1.0/GstCodecs-1.0.gir
 share/gir-1.0/GstDxva-1.0.gir
 share/gir-1.0/GstInsertBin-1.0.gir
 share/gir-1.0/GstMpegts-1.0.gir
-share/gir-1.0/GstMse-1.0.gir
 share/gir-1.0/GstPlay-1.0.gir
 share/gir-1.0/GstPlayer-1.0.gir
 share/gir-1.0/GstTranscoder-1.0.gir
