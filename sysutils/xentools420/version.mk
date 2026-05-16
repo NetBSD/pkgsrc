@@ -1,10 +1,10 @@
-# $NetBSD: version.mk,v 1.3 2026/03/17 19:00:00 bouyer Exp $
+# $NetBSD: version.mk,v 1.4 2026/05/16 09:38:16 bouyer Exp $
 #
 # Version number is used by xenkernel420, xentools420 and xenstoretools
 
-VERSION=		20260317
-XEN_COMMIT=		e046cf1b059586838d36440492dec06d39c088f2
-XEN_SHORTCOMMIT=	e046cf1
+VERSION=		20260515
+XEN_COMMIT=		3ed365e3f9ee281a8b34d65b6f5a4bf04bc871e4
+XEN_SHORTCOMMIT=	3ed365e
 
 DIST_SUBDIR=		xen420
 DISTNAME=		xen-${XEN_COMMIT}
