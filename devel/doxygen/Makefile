@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.206 2026/05/11 15:54:05 adam Exp $
+# $NetBSD: Makefile,v 1.207 2026/05/16 07:33:28 adam Exp $
 
 DISTNAME=	doxygen-1.17.0.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -27,6 +27,9 @@ MAKE_FLAGS+=		MAN1DIR=${PKGMANDIR}/man1
 
 CMAKE_CONFIGURE_ARGS+=	-DDOC_INSTALL_DIR=share/doc/doxygen
 CMAKE_CONFIGURE_ARGS+=	-DGIT_EXECUTABLE=git # avoid searching for git executable
+CMAKE_CONFIGURE_ARGS+=	-Duse_sys_fmt=ON
+CMAKE_CONFIGURE_ARGS+=	-Duse_sys_spdlog=ON
+CMAKE_CONFIGURE_ARGS+=	-Duse_sys_sqlite3=ON
 TEST_TARGET=		tests
 
 PYTHON_FOR_BUILD_ONLY=	tool
@@ -80,8 +83,11 @@ post-install:
 # ninja: error: manifest 'build.ninja' still dirty after 100 tries, perhaps system time is not set
 CMAKE_GENERATORS_INCOMPATIBLE=	ninja
 
-.include "../../devel/cmake/build.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
+.include "../../devel/spdlog/buildlink3.mk"
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/pyversion.mk"
+.include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
