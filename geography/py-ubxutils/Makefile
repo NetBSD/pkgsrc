@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/10/25 13:18:16 gdt Exp $
+# $NetBSD: Makefile,v 1.5 2026/05/16 12:29:31 gdt Exp $
 
-VERSION=	1.0.5
+VERSION=	1.0.6
 DISTTAIL=	ubxutils
 DISTNAME=	py${DISTTAIL}-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTTAIL}-${VERSION}
@@ -18,7 +18,8 @@ USE_LANGUAGES=	# none
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
 
-DEPENDS+=	${PYPKGPREFIX}-ubx2-[0-9]*:../../geography/py-ubx2
+DEPENDS+=	${PYPKGPREFIX}-serial>=3.5:../../comms/py-serial
+DEPENDS+=	${PYPKGPREFIX}-ubx2>=1.2.58:../../geography/py-ubx2
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
