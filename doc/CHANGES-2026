@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3058 2026/05/16 07:22:42 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3059 2026/05/16 09:39:54 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4686,3 +4686,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/mairix to 0.24 [ktnb 2026-05-15]
 	Updated net/tailscale to 1.94.4 [ktnb 2026-05-15]
 	Updated multimedia/gstreamer1 to 1.28.3 [adam 2026-05-16]
+	Updated sysutils/xenkernel418 to 20260515 [bouyer 2026-05-16]
+	Updated sysutils/xentools418 to 20260515 [bouyer 2026-05-16]
+	Updated sysutils/xenkernel420 to 20260515 [bouyer 2026-05-16]
+	Updated sysutils/xentools420 to 20260515 [bouyer 2026-05-16]
+	Updated sysutils/xenstoretools to 20260515 [bouyer 2026-05-16]
