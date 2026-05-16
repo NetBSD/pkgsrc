@@ -46,7 +46,7 @@ EOT
 	rm -f /tmp/.mkcert.cfg
 }
 
-uasselcore_prestart()
+quasselcore_prestart()
 {
 	install -d -o ${quasselcore_user} -g ${quasselcore_group} ${quasselcore_data}
 	install -d -o ${quasselcore_user} -g ${quasselcore_group} @VARBASE@/run/${name}
