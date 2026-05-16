@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.13 2026/04/30 11:52:32 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.14 2026/05/16 20:34:17 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -191,6 +191,7 @@ CARGO_CRATE_DEPENDS+=	outref-0.5.2
 CARGO_CRATE_DEPENDS+=	page_size-0.6.0
 CARGO_CRATE_DEPENDS+=	parking_lot-0.12.5
 CARGO_CRATE_DEPENDS+=	parking_lot_core-0.9.12
+CARGO_CRATE_DEPENDS+=	paste-1.0.15
 CARGO_CRATE_DEPENDS+=	percent-encoding-2.3.2
 CARGO_CRATE_DEPENDS+=	phf-0.13.1
 CARGO_CRATE_DEPENDS+=	phf_generator-0.13.1
