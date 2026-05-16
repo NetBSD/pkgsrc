@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3059 2026/05/16 09:39:54 bouyer Exp $
+$NetBSD: CHANGES-2026,v 1.3060 2026/05/16 12:29:37 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4691,3 +4691,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/xenkernel420 to 20260515 [bouyer 2026-05-16]
 	Updated sysutils/xentools420 to 20260515 [bouyer 2026-05-16]
 	Updated sysutils/xenstoretools to 20260515 [bouyer 2026-05-16]
+	Updated geography/py-ubxutils to 1.0.6 [gdt 2026-05-16]
