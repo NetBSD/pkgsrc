@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2026/05/17 07:09:37 vins Exp $
+# $NetBSD: Makefile,v 1.39 2026/05/17 08:06:58 vins Exp $
 
 DISTNAME=	plan-1.12
+PKGREVISION=	1
 CATEGORIES=	time x11
 MASTER_SITES=	https://bitrot.de/
 
@@ -11,6 +12,8 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_TOOLS+=	yacc lex
+
+FORCE_C_STD=	c89
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
