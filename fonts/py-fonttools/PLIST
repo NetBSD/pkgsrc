@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2026/03/15 13:18:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.61 2026/05/17 15:55:21 wiz Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
@@ -267,6 +267,9 @@ ${PYSITELIB}/fontTools/misc/filesystem/_zipfs.pyo
 ${PYSITELIB}/fontTools/misc/fixedTools.py
 ${PYSITELIB}/fontTools/misc/fixedTools.pyc
 ${PYSITELIB}/fontTools/misc/fixedTools.pyo
+${PYSITELIB}/fontTools/misc/iftSparseBitSet.py
+${PYSITELIB}/fontTools/misc/iftSparseBitSet.pyc
+${PYSITELIB}/fontTools/misc/iftSparseBitSet.pyo
 ${PYSITELIB}/fontTools/misc/intTools.py
 ${PYSITELIB}/fontTools/misc/intTools.pyc
 ${PYSITELIB}/fontTools/misc/intTools.pyo
@@ -596,6 +599,12 @@ ${PYSITELIB}/fontTools/ttLib/tables/G__l_o_c.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/H_V_A_R_.py
 ${PYSITELIB}/fontTools/ttLib/tables/H_V_A_R_.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/H_V_A_R_.pyo
+${PYSITELIB}/fontTools/ttLib/tables/I_F_T_.py
+${PYSITELIB}/fontTools/ttLib/tables/I_F_T_.pyc
+${PYSITELIB}/fontTools/ttLib/tables/I_F_T_.pyo
+${PYSITELIB}/fontTools/ttLib/tables/I_F_T_X_.py
+${PYSITELIB}/fontTools/ttLib/tables/I_F_T_X_.pyc
+${PYSITELIB}/fontTools/ttLib/tables/I_F_T_X_.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/J_S_T_F_.py
 ${PYSITELIB}/fontTools/ttLib/tables/J_S_T_F_.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/J_S_T_F_.pyo
@@ -686,6 +695,9 @@ ${PYSITELIB}/fontTools/ttLib/tables/_a_n_k_r.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/_a_v_a_r.py
 ${PYSITELIB}/fontTools/ttLib/tables/_a_v_a_r.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/_a_v_a_r.pyo
+${PYSITELIB}/fontTools/ttLib/tables/_b_g_c_l.py
+${PYSITELIB}/fontTools/ttLib/tables/_b_g_c_l.pyc
+${PYSITELIB}/fontTools/ttLib/tables/_b_g_c_l.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/_b_s_l_n.py
 ${PYSITELIB}/fontTools/ttLib/tables/_b_s_l_n.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/_b_s_l_n.pyo
@@ -800,6 +812,9 @@ ${PYSITELIB}/fontTools/ttLib/tables/otConverters.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/otData.py
 ${PYSITELIB}/fontTools/ttLib/tables/otData.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/otData.pyo
+${PYSITELIB}/fontTools/ttLib/tables/otDataSchema.py
+${PYSITELIB}/fontTools/ttLib/tables/otDataSchema.pyc
+${PYSITELIB}/fontTools/ttLib/tables/otDataSchema.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/otTables.py
 ${PYSITELIB}/fontTools/ttLib/tables/otTables.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/otTables.pyo
