@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2026/04/21 21:14:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/05/17 06:53:18 wiz Exp $
 share/doc/libxkbcommon/html/annotated.html
 share/doc/libxkbcommon/html/classes.html
 share/doc/libxkbcommon/html/clipboard.js
+share/doc/libxkbcommon/html/codefolding.js
 share/doc/libxkbcommon/html/cookie.js
 share/doc/libxkbcommon/html/darkmode_toggle.js
 share/doc/libxkbcommon/html/debugging.html
@@ -24,7 +25,6 @@ share/doc/libxkbcommon/html/doxygen-extra.css
 share/doc/libxkbcommon/html/doxygen.css
 share/doc/libxkbcommon/html/doxygen.svg
 share/doc/libxkbcommon/html/doxygen_crawl.html
-share/doc/libxkbcommon/html/dynsections.js
 share/doc/libxkbcommon/html/error-index.html
 share/doc/libxkbcommon/html/faq.html
 share/doc/libxkbcommon/html/files.html
@@ -38,6 +38,7 @@ share/doc/libxkbcommon/html/globals_enum.html
 share/doc/libxkbcommon/html/globals_eval.html
 share/doc/libxkbcommon/html/globals_func.html
 share/doc/libxkbcommon/html/globals_type.html
+share/doc/libxkbcommon/html/graph_legend.dot.cmapx
 share/doc/libxkbcommon/html/graph_legend.html
 share/doc/libxkbcommon/html/graph_legend.md5
 share/doc/libxkbcommon/html/graph_legend.svg
@@ -73,7 +74,6 @@ share/doc/libxkbcommon/html/group__virtual-modifier-names.md5
 share/doc/libxkbcommon/html/group__virtual-modifier-names.svg
 share/doc/libxkbcommon/html/group__x11.html
 share/doc/libxkbcommon/html/index.html
-share/doc/libxkbcommon/html/jquery.js
 share/doc/libxkbcommon/html/keymap-text-format-v1-v2.html
 share/doc/libxkbcommon/html/md_doc_2quick-guide.html
 share/doc/libxkbcommon/html/menu.js
