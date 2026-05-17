@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3074 2026/05/17 14:16:04 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3075 2026/05/17 14:17:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4708,3 +4708,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/dasel to 3.10.1 [wiz 2026-05-17]
 	Updated www/libkiwix to 14.2.1 [wiz 2026-05-17]
 	Updated print/libpaper to 2.2.8 [wiz 2026-05-17]
+	Updated textproc/moor to 2.13.2 [wiz 2026-05-17]
