@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2026/05/06 08:45:05 adam Exp $
+# $NetBSD: Makefile,v 1.72 2026/05/17 09:03:12 adam Exp $
 
-DISTNAME=	tifffile-2026.5.2
+DISTNAME=	tifffile-2026.5.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tifffile/}
