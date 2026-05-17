@@ -1,0 +1,48 @@
+$NetBSD: patch-al,v 1.1 2026/05/17 07:09:37 vins Exp $
+
+--- daemon.c.orig	2017-10-17 07:39:06.000000000 +0000
++++ daemon.c
+@@ -42,7 +42,11 @@ typedef int		Boolean;		/* open Motif */
+ #ifdef __EMX__
+ #include <io.h>
+ #else
++#ifndef NOUTMPX
++#include <utmpx.h>
++#else
+ #include <utmp.h>
++#endif /* UTMPX */
+ #endif
+ #ifdef AIXV3
+ struct utmp *getutent();
+@@ -266,12 +270,12 @@ int main(
+ 		refresh_lock(resolve_tilde(PLANDLOCK));
+ 		logged_in = FALSE;
+ 		if (pw) {
+-#if defined(SUN) || defined(BSD) || defined(__FreeBSD__)
++#ifdef NOUTMPX 
+ 		    struct utmp	ut;
+ 		    int		fd;
+ 		    int		l;
+ 
+-		    fd = open("/etc/utmp", 0);
++		    fd = open("/var/run/utmp", 0);
+ 		    if (fd >= 0) {
+ 			while ((l = read(fd, &ut, sizeof(ut))) == sizeof(ut)) {
+ 			    if (ut.ut_name[0]			&&
+@@ -285,13 +289,11 @@ int main(
+ 			}
+ 			close(fd);
+ 		    }
+-#elif defined(ULTRIX) || defined(MACOSX)
+-		    logged_in = TRUE;
+ #else
+ 		    short pid = getpid();
+-		    struct utmp *u;
+-		    setutent();
+-		    while ((u = getutent()))
++		    struct utmpx *u;
++		    setutxent();
++		    while ((u = getutxent()))
+ 			if (u->ut_type == USER_PROCESS &&
+ 			    u->ut_pid != pid &&
+ 			    !strncmp(pw->pw_name, u->ut_user, 8)) {
