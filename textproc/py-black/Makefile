@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2026/03/12 05:12:30 adam Exp $
+# $NetBSD: Makefile,v 1.42 2026/05/17 15:52:32 wiz Exp $
 
-DISTNAME=	black-26.3.1
+DISTNAME=	black-26.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/black/}
@@ -26,13 +26,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
-post-install:
-.for bin in black blackd
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
-.endfor
-
-TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
+PY_RENAME_BINARIES=	black blackd
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
