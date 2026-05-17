@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2025/12/08 10:20:26 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/05/17 14:15:52 wiz Exp $
 
-DISTNAME=	libpaper-2.2.7
+DISTNAME=	libpaper-2.2.8
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rrthomas/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

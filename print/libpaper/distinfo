@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2025/12/08 10:20:26 wiz Exp $
+$NetBSD: distinfo,v 1.22 2026/05/17 14:15:52 wiz Exp $
 
-BLAKE2s (libpaper-2.2.7.tar.gz) = ae9a1e1609c2fae357754b03cd27325419828886edccd622f04e8a5c99a26008
-SHA512 (libpaper-2.2.7.tar.gz) = f79e22af39f241773d6c0418c356ccd7783d12346c24532d9c66d6343fefcb6933238927f66519b248ebd2c0bab2c46dacada3ae1c4fb582cdf1743bca5e534d
-Size (libpaper-2.2.7.tar.gz) = 1347036 bytes
+BLAKE2s (libpaper-2.2.8.tar.gz) = a683d37b168e33c6c27d3f0959af05969b806f5f542be94b7711bad73bd4ce42
+SHA512 (libpaper-2.2.8.tar.gz) = f216c35624cc4d0a5f947880943028f03d3ecfe445b71630ab680ef4c63ee1ad8e6a8852ab469d9e416f5283db2468eb1f52ed82ae47600949d0312ce9250afd
+Size (libpaper-2.2.8.tar.gz) = 1353814 bytes
