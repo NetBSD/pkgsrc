@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3082 2026/05/17 15:52:44 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3083 2026/05/17 15:55:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4723,3 +4723,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/gtk4 to 4.22.4 [wiz 2026-05-17]
 	Updated net/py-aiodns to 4.0.3 [wiz 2026-05-17]
 	Updated textproc/py-black to 26.5.0 [wiz 2026-05-17]
+	Updated fonts/py-fonttools to 4.63.0 [wiz 2026-05-17]
