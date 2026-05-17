@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3084 2026/05/17 15:58:13 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3085 2026/05/17 15:59:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4725,3 +4725,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-black to 26.5.0 [wiz 2026-05-17]
 	Updated fonts/py-fonttools to 4.63.0 [wiz 2026-05-17]
 	Updated security/py-google-auth to 2.53.0 [wiz 2026-05-17]
+	Updated www/py-idna to 3.15 [wiz 2026-05-17]
