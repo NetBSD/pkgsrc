@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2026/01/08 09:27:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.59 2026/05/17 08:56:09 adam Exp $
 bin/f2py-${PYVERSSUFFIX}
 bin/numpy-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -813,6 +813,9 @@ ${PYSITELIB}/numpy/f2py/tests/test_block_docstring.pyo
 ${PYSITELIB}/numpy/f2py/tests/test_callback.py
 ${PYSITELIB}/numpy/f2py/tests/test_callback.pyc
 ${PYSITELIB}/numpy/f2py/tests/test_callback.pyo
+${PYSITELIB}/numpy/f2py/tests/test_capi_maps.py
+${PYSITELIB}/numpy/f2py/tests/test_capi_maps.pyc
+${PYSITELIB}/numpy/f2py/tests/test_capi_maps.pyo
 ${PYSITELIB}/numpy/f2py/tests/test_character.py
 ${PYSITELIB}/numpy/f2py/tests/test_character.pyc
 ${PYSITELIB}/numpy/f2py/tests/test_character.pyo
