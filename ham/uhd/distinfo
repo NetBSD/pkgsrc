@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.47 2026/05/14 13:27:31 adam Exp $
+$NetBSD: distinfo,v 1.48 2026/05/17 09:24:43 adam Exp $
 
 BLAKE2s (uhd-4.10.0.0.tar.gz) = 51dd8b7550ab2a986ee87e0d0c8149ade5f42f47f938ad6576330d4fa3d6def8
 SHA512 (uhd-4.10.0.0.tar.gz) = 600b6c8b1d5e37643e086d00e3c594b6b83a467b097576625dd4a949b3aab81cbbc221f2649a639fef67dfc0dce3bb919abee3cfb6ca266ad547262a16cdbd0e
 Size (uhd-4.10.0.0.tar.gz) = 55662890 bytes
 SHA1 (patch-CMakeLists.txt) = 3a150d645b44c54037d5bf7a9287426f18067426
+SHA1 (patch-cmake_Modules_UHDConfig.cmake.in) = 372b6530dcf46252ac4b50b6bac65a66b228cc13
 SHA1 (patch-docs_CMakeLists.txt) = e253875aabdaa172c221708cb0b01205b024ef34
 SHA1 (patch-examples_getopt_getopt.c) = f9c7297cb1dcc9438baed9dcdaf0f52b83297e01
 SHA1 (patch-examples_getopt_getopt.h) = 7f01c9385644dbf2b61dfd8bebac8016b46000c5
