@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3081 2026/05/17 15:50:43 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3082 2026/05/17 15:52:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4722,3 +4722,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-nextest to 0.9.136 [pin 2026-05-17]
 	Updated x11/gtk4 to 4.22.4 [wiz 2026-05-17]
 	Updated net/py-aiodns to 4.0.3 [wiz 2026-05-17]
+	Updated textproc/py-black to 26.5.0 [wiz 2026-05-17]
