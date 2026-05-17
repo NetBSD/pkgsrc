@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3078 2026/05/17 15:05:11 taca Exp $
+$NetBSD: CHANGES-2026,v 1.3079 2026/05/17 15:38:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4719,3 +4719,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/postfix-pcre to 3.11.3 [taca 2026-05-17]
 	Updated mail/postfix-pgsql to 3.11.3 [taca 2026-05-17]
 	Updated mail/postfix-sqlite to 3.11.3 [taca 2026-05-17]
+	Updated devel/cargo-nextest to 0.9.136 [pin 2026-05-17]
