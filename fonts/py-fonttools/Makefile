@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.131 2026/03/15 13:18:48 wiz Exp $
+# $NetBSD: Makefile,v 1.132 2026/05/17 15:55:21 wiz Exp $
 
-DISTNAME=	fonttools-4.62.1
+DISTNAME=	fonttools-4.63.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	fonts python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/FontTools/}
@@ -21,9 +21,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0:../../devel/py-test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
-# as of 4.62.1
+# as of 4.63.0
 # https://github.com/fonttools/fonttools/issues/3660
-# 8 failed, 4581 passed, 65 skipped, 2 xfailed, 28 warnings
+# 8 failed, 4611 passed, 65 skipped, 2 xfailed, 29 warnings
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
@@ -31,11 +31,9 @@ SUBST_MESSAGE.man=	Fixing man page installation path.
 SUBST_FILES.man+=	setup.py
 SUBST_SED.man+=		-e "s,share/man,${PKGMANDIR},"
 
+PY_RENAME_BINARIES=	fonttools pyftmerge pyftsubset ttx
+
 post-install:
-.for bin in fonttools pyftmerge pyftsubset ttx
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
-.endfor
 	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 && \
 	${MV} ttx.1 ttx-${PYVERSSUFFIX}.1 || ${TRUE}
 
