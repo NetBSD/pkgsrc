@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2026/05/13 05:31:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2026/05/17 15:40:24 leot Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -3169,7 +3169,7 @@ ${PLIST.dbus}qt6/lib/cmake/Qt6DBus/Qt6DBusDependencies.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBus/Qt6DBusMacros.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBus/Qt6DBusTargets-release.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBus/Qt6DBusTargets.cmake
-qt6/lib/cmake/Qt6DBus/Qt6DBusTargetsPrecheck.cmake
+${PLIST.dbus}qt6/lib/cmake/Qt6DBus/Qt6DBusTargetsPrecheck.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBus/Qt6DBusVersionlessAliasTargets.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBus/Qt6DBusVersionlessTargets.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateAdditionalTargetInfo.cmake
@@ -3178,7 +3178,7 @@ ${PLIST.dbus}qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateConfigVersion.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateConfigVersionImpl.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateDependencies.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateTargets.cmake
-qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateTargetsPrecheck.cmake
+${PLIST.dbus}qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateTargetsPrecheck.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateVersionlessAliasTargets.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateVersionlessTargets.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake
@@ -3188,7 +3188,7 @@ ${PLIST.dbus}qt6/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets-release.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake
-qt6/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargetsPrecheck.cmake
+${PLIST.dbus}qt6/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargetsPrecheck.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake
 qt6/lib/cmake/Qt6DeviceDiscoverySupportPrivate/Qt6DeviceDiscoverySupportPrivateAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6DeviceDiscoverySupportPrivate/Qt6DeviceDiscoverySupportPrivateConfig.cmake
