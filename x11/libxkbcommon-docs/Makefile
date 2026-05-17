@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2026/05/17 06:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/05/17 09:07:55 wiz Exp $
 
 .include "../../x11/libxkbcommon/Makefile.common"
 
-PKGNAME=		${DISTNAME:S/common/common-docs/}
+PKGNAME=		${DISTNAME:S/common/common-docs/:S/^/lib/}
 PKGREVISION=		1
 
 TOOL_DEPENDS+=		doxygen>=1.17:../../devel/doxygen
