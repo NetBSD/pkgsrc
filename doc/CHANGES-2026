@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3069 2026/05/17 09:56:31 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3070 2026/05/17 14:08:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4703,3 +4703,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-typeguard to 4.5.2 [adam 2026-05-17]
 	Added meta-pkgs/bulk-test-doxygen version 20260517 [wiz 2026-05-17]
 	Updated www/miniflux to 2.3.0 [wiz 2026-05-17]
+	Updated graphics/OpenJPH to 0.27.3 [wiz 2026-05-17]
