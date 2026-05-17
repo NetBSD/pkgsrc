@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2025/12/26 11:52:24 adam Exp $
+# $NetBSD: Makefile,v 1.25 2026/05/17 15:59:56 wiz Exp $
 
-DISTNAME=	jaraco_functools-4.4.0
+DISTNAME=	jaraco_functools-4.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco.functools/}
@@ -16,6 +16,9 @@ DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools
 TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.classes-[0-9]*:../../devel/py-jaraco.classes
 
 USE_LANGUAGES=	# none
+
+# as of 4.5.0
+# 1 failed, 16 passed, 2 xfailed
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
