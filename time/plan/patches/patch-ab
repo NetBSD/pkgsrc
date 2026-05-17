@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/17 23:32:23 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2026/05/17 07:09:37 vins Exp $
 
---- time.c.orig	Mon Oct 11 21:11:36 1999
+--- time.c.orig	2026-05-17 04:34:41.541583739 +0000
 +++ time.c
-@@ -244,7 +244,7 @@
- 			zone += 24;
+@@ -246,7 +246,7 @@ void guess_tzone(void)
+ 			zone -= 24;
  		zone *= 3600;
  #else
 -#if defined(bsdi) || defined(SUN) || defined(SVR4) || defined(convex)

@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:17:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/05/17 07:09:37 vins Exp $
 bin/plan
 libexec/plan/netplan
 libexec/plan/notifier
 libexec/plan/plan_cal.ps
 libexec/plan/pland
 @exec ${MKDIR} %D/libexec/plan/netplan.dir && ${CHMOD} 700 %D/libexec/plan/netplan.dir && ${CHOWN} 32767:39 %D/libexec/plan/netplan.dir
-@unexec ${RMDIR} %D/libexec/plan/netplan.dir 2>/dev/null || echo "==> %D/libexec/plan/netplan.dir not empty. You should remove it manually if it's no longer needed."
 @unexec ${RMDIR} %D/libexec/plan 2>/dev/null || ${TRUE}
 man/man1/netplan.1
 man/man1/plan.1
@@ -44,4 +43,5 @@ share/plan/plan.lang.english
 share/plan/plan.lang.french
 share/plan/plan.lang.german
 share/plan/plan.lang.italian
+share/plan/plan.lang.polish
 share/plan/plan.lang.spanish

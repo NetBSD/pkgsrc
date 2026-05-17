@@ -1,0 +1,68 @@
+$NetBSD: patch-am,v 1.1 2026/05/17 07:09:37 vins Exp $
+
+--- sublist.c.orig	2017-10-17 06:29:05.000000000 +0000
++++ sublist.c
+@@ -20,21 +20,9 @@
+ #define CHUNK		100			/* sublist allocation unit */
+ 
+ #ifndef NOREGEX
+-#if defined(linux)
+ #include <regex.h>
+-#else
+-#define regex_t char
+-#endif
+-#if defined(SUN) && !defined(SOLARIS2)
+-#define regcmp re_comp
+-#define regex re_exec
+-extern char		*regcmp(), *regex(), *__loc1;
+-#endif
+-#if defined(__EMX__) || defined(__FreeBSD_kernel__)
+-#define regcmp regcomp
++#define regcmp(a, b) regcomp(a, b, REG_BASIC)
+ #define regex regexec
+-extern char		*regcmp(), *regex(), *__loc1;
+-#endif
+ #endif
+ extern int		search_mode;		/* 0=case, 1=lit, 2=regex */
+ extern struct user	*user;			/* user list (from file_r.c) */
+@@ -93,12 +81,8 @@ void create_sublist(
+ #ifndef NOREGEX
+ 		regex_t *preg = 0;
+ 		if (search_mode == 2) {
+-#if defined(linux)
+ 			preg = (regex_t *)malloc(sizeof(regex_t));
+ 			if (regcomp(preg, key, 0)) {
+-#else
+-			if (!(key = regcmp(key, 0))) {
+-#endif
+ 				free(preg);
+ 				list->locked--;
+ 				return;
+@@ -114,12 +98,8 @@ void create_sublist(
+ 			    append_entry(&w->sublist, ep);
+ #ifndef NOREGEX
+ 		if (search_mode == 2) {
+-#if defined(linux)
+ 			regfree(preg);
+ 			free(preg);
+-#else
+-			free(key);
+-#endif
+ 		}
+ #endif
+ 		if (search_mode == 1)
+@@ -215,14 +195,7 @@ static BOOL keymatch(
+ 
+ #ifndef NOREGEX
+ 	  case 2: {
+-#if defined(linux)
+ 		return(regexec(preg, string, 0, 0, 0) == 0);
+-#else
+-		char dummy[1024];
+-		return(regex(key, string,
+-				dummy, dummy, dummy, dummy, dummy,
+-				dummy, dummy, dummy, dummy, dummy) != 0);
+-#endif
+ 		}
+ #endif
+ 	}
