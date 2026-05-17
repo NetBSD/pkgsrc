@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2026/05/10 18:46:11 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/05/17 07:18:03 wiz Exp $
 
 DISTNAME=	mcomix-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -58,7 +58,7 @@ INSTALLATION_DIRS+=	share/metainfo
 INSTALLATION_DIRS+=	share/mime/packages
 
 post-install:
-	zcat ${WRKSRC}/share/man/man1/mcomix.1.gz > ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/mcomix.1
+	gzcat ${WRKSRC}/share/man/man1/mcomix.1.gz > ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/mcomix.1
 .for f in ${EXTRA_INSTALL}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${f}
 .endfor
