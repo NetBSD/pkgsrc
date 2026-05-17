@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3077 2026/05/17 14:21:07 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3078 2026/05/17 15:05:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4711,3 +4711,11 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/moor to 2.13.2 [wiz 2026-05-17]
 	Updated devel/ocaml-dune to 3.23.1 [wiz 2026-05-17]
 	Updated textproc/utf8-cpp to 4.1.0 [wiz 2026-05-17]
+	Updated mail/postfix to 3.11.3 [taca 2026-05-17]
+	Updated mail/postfix-cdb to 3.11.3 [taca 2026-05-17]
+	Updated mail/postfix-ldap to 3.11.3 [taca 2026-05-17]
+	Updated mail/postfix-lmdb to 3.11.3 [taca 2026-05-17]
+	Updated mail/postfix-mysql to 3.11.3 [taca 2026-05-17]
+	Updated mail/postfix-pcre to 3.11.3 [taca 2026-05-17]
+	Updated mail/postfix-pgsql to 3.11.3 [taca 2026-05-17]
+	Updated mail/postfix-sqlite to 3.11.3 [taca 2026-05-17]
