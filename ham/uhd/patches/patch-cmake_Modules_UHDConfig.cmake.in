@@ -1,0 +1,14 @@
+$NetBSD: patch-cmake_Modules_UHDConfig.cmake.in,v 1.1 2026/05/17 09:24:43 adam Exp $
+
+Don't look for boost system library.
+
+--- cmake/Modules/UHDConfig.cmake.in.orig	2026-05-17 09:17:31.556224048 +0000
++++ cmake/Modules/UHDConfig.cmake.in
+@@ -30,7 +30,6 @@ find_dependency(Boost ${UHD_BOOST_MIN_VE
+   date_time
+   filesystem
+   program_options
+-  system
+   serialization
+   thread
+   unit_test_framework
