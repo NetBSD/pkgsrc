@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3075 2026/05/17 14:17:33 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3076 2026/05/17 14:19:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4709,3 +4709,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/libkiwix to 14.2.1 [wiz 2026-05-17]
 	Updated print/libpaper to 2.2.8 [wiz 2026-05-17]
 	Updated textproc/moor to 2.13.2 [wiz 2026-05-17]
+	Updated devel/ocaml-dune to 3.23.1 [wiz 2026-05-17]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27270 2026/05/17 14:17:33 wiz Exp $
+$NetBSD: TODO,v 1.27271 2026/05/17 14:19:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -972,7 +972,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-bz2-0.8.0
 	o ocaml-cppo-1.6.9
 	o ocaml-cudf-0.10
-	o ocaml-dune-3.23.1
 	o ocaml-encore-0.8
 	o ocaml-eqaf-0.7
 	o ocaml-expat-1.1.0
