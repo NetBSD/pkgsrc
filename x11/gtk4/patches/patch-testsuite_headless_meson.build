@@ -1,0 +1,26 @@
+$NetBSD: patch-testsuite_headless_meson.build,v 1.1 2026/05/17 15:49:05 wiz Exp $
+
+waylandsocket is 'if os_linux' in testsuite/gdk/meson.build
+https://gitlab.gnome.org/GNOME/gtk/-/work_items/8210
+
+--- testsuite/headless/meson.build.orig	2026-04-29 22:39:35.000000000 +0000
++++ testsuite/headless/meson.build
+@@ -20,10 +20,12 @@ if get_option('b_sanitize') != 'address'
+     env: env,
+   )
+ 
+-  test('waylandsocket',
+-    find_program('run-headless-wayland-tests.sh', dirs: meson.current_source_dir()),
+-    args: [test_executables['waylandsocket'].full_path()],
+-    suite: ['headless'],
+-    env: env,
+-  )
++  if os_linux
++    test('waylandsocket',
++      find_program('run-headless-wayland-tests.sh', dirs: meson.current_source_dir()),
++      args: [test_executables['waylandsocket'].full_path()],
++      suite: ['headless'],
++      env: env,
++    )
++  endif
+ endif

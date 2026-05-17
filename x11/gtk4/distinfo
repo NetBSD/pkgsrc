@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.32 2026/02/24 18:05:00 kikadf Exp $
+$NetBSD: distinfo,v 1.33 2026/05/17 15:49:05 wiz Exp $
 
-BLAKE2s (gtk-4.20.3.tar.xz) = ded1e613ce985ec1723496fe9a3d6a78dbf727047242e2e389de183c148a5baa
-SHA512 (gtk-4.20.3.tar.xz) = 9ae8d2fb6fc6b3780587e70cbf4bff972dd36eedce79d91de874cc813ba3cb100ce6cce076e063e4606e0e32aa51d05c625dd272d5766190045f32b3754368f1
-Size (gtk-4.20.3.tar.xz) = 16003020 bytes
-SHA1 (patch-gdk_wayland_gdkseat-wayland.c) = e5ec092e35a8de1e0080a9648e9f836b0c965dbe
+BLAKE2s (gtk-4.22.4.tar.xz) = 3bbb825561d00e0f801f433a99ffaedee7c6440864b8a2b379d8aab23965af6d
+SHA512 (gtk-4.22.4.tar.xz) = f474174c27fec97b26809ae28ded2923f37e82fd25783ce31bbee40a99a02e5f9ce517583f0e499d91289e6b0ebae8e2dc249cba721d827ee35c7b867378797d
+Size (gtk-4.22.4.tar.xz) = 17006720 bytes
+SHA1 (patch-gdk_wayland_gdkseat-wayland.c) = 6065b568716089b6323058183ee4af2eeab044a0
 SHA1 (patch-meson.build) = ed697477ebfa2b06559877170cc5b05079c61ceb
 SHA1 (patch-testsuite_gdk_colorstate.c) = 7a6d441f91332bffbd4e170809d8ad7ec51773bd
+SHA1 (patch-testsuite_headless_meson.build) = 1f8102c65544bf2d36b3d55b90f7148eb053fb12
