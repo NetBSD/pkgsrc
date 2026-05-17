@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.12 2026/05/15 19:04:22 ktnb Exp $
+$NetBSD: distinfo,v 1.13 2026/05/17 18:22:28 wiz Exp $
 
 BLAKE2s (mairix-0.24.tar.gz) = 0cff9d9ca0e4c7c1e3eea59f7fa2156e49b6aa9c758ee0ef38e73b03f86ad398
 SHA512 (mairix-0.24.tar.gz) = 3e0af50c2c5857c5e1661e1be131c9c184377947b2ed884d1d9faa6d8bd88c17a7b7a29e105e65c990d2ede5d9fff679e57e83c4b8eedf2870493395e3ec8cf3
 Size (mairix-0.24.tar.gz) = 206903 bytes
 SHA1 (patch-Makefile.in) = c77f313e94d37f04016c27a26ed57a5e75397063
-SHA1 (patch-db.c) = 53f0539f76ccb8d9b4285bccd2219bec6b53d888
 SHA1 (patch-dfasyn_compdfa.c) = 7a3c105e732c088ec74bd56ca3dea41ac6151ad9
 SHA1 (patch-imap.c) = 48f0c4633b8a5d5d1f106068f26b6e270f268c23
