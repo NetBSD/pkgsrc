@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3076 2026/05/17 14:19:37 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3077 2026/05/17 14:21:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4710,3 +4710,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/libpaper to 2.2.8 [wiz 2026-05-17]
 	Updated textproc/moor to 2.13.2 [wiz 2026-05-17]
 	Updated devel/ocaml-dune to 3.23.1 [wiz 2026-05-17]
+	Updated textproc/utf8-cpp to 4.1.0 [wiz 2026-05-17]
