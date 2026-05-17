@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2026/05/11 05:33:41 adam Exp $
+$NetBSD: distinfo,v 1.24 2026/05/17 15:58:57 wiz Exp $
 
-BLAKE2s (idna-3.14.tar.gz) = 8630fef52e09d312b9f76dfdc7620a300deb5b58626ffb78fd643014efc2243c
-SHA512 (idna-3.14.tar.gz) = be45700d70b8527445c00c9f760311a448d1a38116883e69549405ebc89b78dded0a939625564841c44c51efaad03e2054ba883f284b152552b9fe84ffdb229b
-Size (idna-3.14.tar.gz) = 198272 bytes
+BLAKE2s (idna-3.15.tar.gz) = 2e053f997404ee955751ebef628fbe7c1dca85decb1f44d1dddf798d827db4ff
+SHA512 (idna-3.15.tar.gz) = 8cd0efd9f82d1e5ec73b06202fed42c54e9aee4ebf5612fe29cb6c76f459d24027e545339dc3e79ad9abd0849b0e31bca42bf41f36c87391d9707f92b8326e26
+Size (idna-3.15.tar.gz) = 199245 bytes
