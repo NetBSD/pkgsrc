@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2026/05/17 08:06:58 vins Exp $
+# $NetBSD: Makefile,v 1.40 2026/05/17 08:11:04 vins Exp $
 
 DISTNAME=	plan-1.12
 PKGREVISION=	1
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_TOOLS+=	yacc lex
 
-FORCE_C_STD=	c89
+FORCE_C_STD=	gnu89
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
