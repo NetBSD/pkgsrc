@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.165 2026/05/16 13:42:55 gdt Exp $
+# $NetBSD: Makefile,v 1.166 2026/05/17 00:28:53 wiz Exp $
 
 VERSION=		1.11
 DISTNAME=		viking-${VERSION}
@@ -81,7 +81,7 @@ DEPENDS+=		vim-share-[0-9]*:../../editors/vim-share
 .include "../../geography/gpsd/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 # Avoids internal MD5, and betterintegration with thumbmail cache.
-.include "../../security/nettle/buildlink3.mk"
+#.include "../../security/nettle/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
