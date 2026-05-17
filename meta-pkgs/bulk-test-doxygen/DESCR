@@ -1,0 +1,3 @@
+Meta-package for testing doxygen updates.
+
+Do not forget to turn on the 'doxygen' option when testing this.
