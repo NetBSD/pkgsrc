@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2026/05/17 07:09:37 vins Exp $
+$NetBSD: patch-aa,v 1.8 2026/05/17 08:06:58 vins Exp $
 
 --- Makefile.orig	2017-10-25 14:17:42.000000000 +0000
 +++ Makefile
@@ -59,7 +59,7 @@ $NetBSD: patch-aa,v 1.7 2026/05/17 07:09:37 vins Exp $
  LYNX_C  = -DNOREGEX -D__NO_INCLUDE_WARN__ -DBSD -mthreads
  MACOSX_C= -W -Wall -I/usr/X11R6/include -I/usr/OpenMotif/include -DNOLOCK -DMACOSX -DNOREGEX
 -
-+PKGSRC_C  = $(CFLAGS) -I$(X11BASE)/include -ansi -DSTDLIBMALLOC
++PKGSRC_C  = $(CFLAGS) -I$(X11BASE)/include -DSTDLIBMALLOC -DLOCKF
  
  #
  # loader flags. Requires X11, Xt, and Motif libraries. PW is for regcmp/regex.
