@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2026/05/17 21:17:32 khorben Exp $
+share/examples/openldap/schema/RoundCube.schema
+share/examples/openldap/schema/courier.schema
+share/examples/openldap/schema/dovecot.schema
+share/examples/openldap/schema/postfix-book.schema
+share/examples/openldap/schema/postfix.schema
+share/examples/openldap/schema/postfix2.schema
+share/examples/openldap/schema/quota.schema

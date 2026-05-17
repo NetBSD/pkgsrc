@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/17 21:17:32 khorben Exp $
+
+BLAKE2s (openldap-mail-schemas-20180701-1fe6c77604b772b07eb6dca0d26bcb862ae11176.tar.gz) = 42de71dc53b862f7e85d8420a0e0408e168cf9636dcba74a04daca08d537d091
+SHA512 (openldap-mail-schemas-20180701-1fe6c77604b772b07eb6dca0d26bcb862ae11176.tar.gz) = a351ec6b2d87a79244ac0dc9dd9589d6dada72f6a5f060c1490b8cf45ebb1933ba0353df90aab910d3baa07b5e420540787cc0f6184a3c7068f1d5b7c484961b
+Size (openldap-mail-schemas-20180701-1fe6c77604b772b07eb6dca0d26bcb862ae11176.tar.gz) = 5078 bytes
