@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.748 2026/05/05 08:17:45 taca Exp $
+# $NetBSD: Makefile,v 1.749 2026/05/17 21:18:32 khorben Exp $
 
 COMMENT=	Databases
 
@@ -141,6 +141,7 @@ SUBDIR+=	openldap-client
 SUBDIR+=	openldap-cloak
 SUBDIR+=	openldap-doc
 SUBDIR+=	openldap-extra-schemas
+SUBDIR+=	openldap-mail-schemas
 SUBDIR+=	openldap-memberof
 SUBDIR+=	openldap-nops
 SUBDIR+=	openldap-server
