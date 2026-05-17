@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3067 2026/05/17 09:04:33 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3068 2026/05/17 09:13:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4701,3 +4701,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-cachetools to 7.1.2 [adam 2026-05-17]
 	Updated graphics/py-tifffile to 2026.5.15 [adam 2026-05-17]
 	Updated devel/py-typeguard to 4.5.2 [adam 2026-05-17]
+	Added meta-pkgs/bulk-test-doxygen version 20260517 [wiz 2026-05-17]
