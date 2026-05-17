@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2026/05/05 04:28:44 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/05/17 06:52:11 wiz Exp $
 
 DISTNAME=	libjwt-3.3.3
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=benmcollins/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/benmcollins/libjwt
 COMMENT=	JWT C library
 LICENSE=	mpl-2.0
 
-TOOL_DEPENDS+=	doxygen>0:../../devel/doxygen
+TOOL_DEPENDS+=	doxygen>=1.17:../../devel/doxygen
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash pkg-config
