@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27277 2026/05/17 15:58:14 wiz Exp $
+$NetBSD: TODO,v 1.27278 2026/05/17 15:59:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1128,7 +1128,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-hgview-1.9.0
-	o py-idna-3.15
 	o py-input-pad-1.4.2
 	o py-jaraco.functools-4.5.0
 	o py-omniORBpy-3.7
