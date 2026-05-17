@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2026/05/05 04:28:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/05/17 06:52:11 wiz Exp $
 bin/jwk2key
 bin/jwt-generate
 bin/jwt-verify
@@ -206,6 +206,7 @@ share/doc/LibJWT/html/Tokens.xml
 share/doc/LibJWT/html/annotated.html
 share/doc/LibJWT/html/classes.html
 share/doc/LibJWT/html/clipboard.js
+share/doc/LibJWT/html/codefolding.js
 share/doc/LibJWT/html/cookie.js
 share/doc/LibJWT/html/dir_d436eb0fd9de10b54a828ce6435f7e81.html
 share/doc/LibJWT/html/doxygen-awesome-fragment-copy-button.js
@@ -216,10 +217,10 @@ share/doc/LibJWT/html/doxygen-awesome.css
 share/doc/LibJWT/html/doxygen.css
 share/doc/LibJWT/html/doxygen.svg
 share/doc/LibJWT/html/doxygen_crawl.html
-share/doc/LibJWT/html/dynsections.js
 share/doc/LibJWT/html/favicon.ico
 share/doc/LibJWT/html/functions.html
 share/doc/LibJWT/html/functions_vars.html
+share/doc/LibJWT/html/graph_legend.dot.cmapx
 share/doc/LibJWT/html/graph_legend.html
 share/doc/LibJWT/html/graph_legend.md5
 share/doc/LibJWT/html/graph_legend.svg
@@ -328,7 +329,6 @@ share/doc/LibJWT/html/group__jwt__object__grp_org.svg
 share/doc/LibJWT/html/index.html
 share/doc/LibJWT/html/index.js
 share/doc/LibJWT/html/index.qhp
-share/doc/LibJWT/html/jquery.js
 share/doc/LibJWT/html/libjwt.css
 share/doc/LibJWT/html/maclara-pill.svg
 share/doc/LibJWT/html/navtree.css
