@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3087 2026/05/17 16:03:34 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3088 2026/05/17 16:15:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4728,3 +4728,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-idna to 3.15 [wiz 2026-05-17]
 	Updated devel/py-jaraco.functools to 4.5.0 [wiz 2026-05-17]
 	Updated devel/py-requests to 2.34.2 [wiz 2026-05-17]
+	Updated net/slumber to 5.3.0 [wiz 2026-05-17]
