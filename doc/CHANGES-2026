@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3088 2026/05/17 16:15:43 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3089 2026/05/17 17:24:32 morr Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4729,3 +4729,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-jaraco.functools to 4.5.0 [wiz 2026-05-17]
 	Updated devel/py-requests to 2.34.2 [wiz 2026-05-17]
 	Updated net/slumber to 5.3.0 [wiz 2026-05-17]
+	Updated editors/vim-share to 9.2.0491 [sh 2026-05-17]
