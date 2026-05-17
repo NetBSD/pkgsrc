@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2026/01/21 09:18:19 tnn Exp $
+# $NetBSD: options.mk,v 1.5 2026/05/17 13:45:31 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.png
 PKG_SUPPORTED_OPTIONS=	apng
@@ -7,9 +7,9 @@ PKG_SUGGESTED_OPTIONS=	# do not suggest apng without consulting tech-pkg@
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mapng) || make(distinfo) || make(mdi)
-APNGPATCHVERSION=		20260116
-APNGPATCH=			apng-${APNGPATCHVERSION}.patch
+APNGPATCHVERSION=		1.6.58
+APNGPATCH=			libpng-${APNGPATCHVERSION}-apng.patch.gz
 PATCHFILES+=			${APNGPATCH}
-SITES.${APNGPATCH}=		-https://hg-edge.mozilla.org/mozilla-central/raw-file/d19a323e9b878d874ee71f46f4277c68e69b7822/media/libpng/apng.patch
+SITES.${APNGPATCH}=		${MASTER_SITE_SOURCEFORGE:=libpng-apng/libpng16/${APNGPATCHVERSION}/}
 PATCH_DIST_STRIP.${APNGPATCH}=	-p1
 .endif
