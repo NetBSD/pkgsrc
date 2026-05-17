@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3066 2026/05/17 08:57:52 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3067 2026/05/17 09:04:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4699,3 +4699,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/plan to 1.12 [vins 2026-05-17]
 	Updated math/py-numpy to 2.4.5 [adam 2026-05-17]
 	Updated devel/py-cachetools to 7.1.2 [adam 2026-05-17]
+	Updated graphics/py-tifffile to 2026.5.15 [adam 2026-05-17]
+	Updated devel/py-typeguard to 4.5.2 [adam 2026-05-17]
