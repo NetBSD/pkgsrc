@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3109 2026/05/18 17:51:22 morr Exp $
+$NetBSD: CHANGES-2026,v 1.3110 2026/05/18 20:47:08 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4755,3 +4755,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-nihtest to 1.11.1 [wiz 2026-05-18]
 	Updated editors/vim-share to 9.2.0496 [sh 2026-05-18]
 	Updated editors/vim-share to 9.2.0496 [sh 2026-05-18]
+	Updated net/tailscale to 1.98.2 [ktnb 2026-05-18]
