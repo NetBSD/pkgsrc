@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2026/05/14 16:41:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.51 2026/05/18 23:22:10 ktnb Exp $
 
 DISTNAME=		naev-0.12.6
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_GITHUB:=naev/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -21,7 +21,7 @@ HOMEPAGE=	https://github.com/naev/naev
 COMMENT=	2D space trading and combat game
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	doxygen>=1.14:../../devel/doxygen
+TOOL_DEPENDS+=	doxygen>=1.17:../../devel/doxygen
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_TOOLS+=	bash:run pkg-config cmake
