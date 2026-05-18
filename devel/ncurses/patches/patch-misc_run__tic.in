@@ -1,4 +1,4 @@
-$NetBSD: patch-misc_run__tic.in,v 1.2 2026/01/05 02:01:15 wiz Exp $
+$NetBSD: patch-misc_run__tic.in,v 1.3 2026/05/18 21:20:14 wiz Exp $
 
 Run the built tic with the built libncurses, not the installed one, as
 the build system intends (but fails) to do. This fixes "make package",
@@ -23,7 +23,7 @@ as intended will be more widely effective than this patch.
 +			#tic_path="$SHLIB tic"
 +			# shlib is supposed to set this (or OPSYS equivalent)
 +			# for its child, but sure seems not to
-+			TIC_PATH="@SETENV@ LD_LIBRARY_PATH=${DESTDIR}${prefix}/lib tic"
++			tic_path="@SETENV@ LD_LIBRARY_PATH=${DESTDIR}${prefix}/lib tic"
  		else
  			tic_path="tic"
  		fi
