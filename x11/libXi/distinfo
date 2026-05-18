@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.34 2024/09/05 07:32:23 wiz Exp $
+$NetBSD: distinfo,v 1.35 2026/05/18 05:57:47 wiz Exp $
 
-BLAKE2s (libXi-1.8.2.tar.xz) = 20775d21741dc31aafb15b5edf7ac8978cc7ee0741e8e26ea579ce97c7fb88fb
-SHA512 (libXi-1.8.2.tar.xz) = 6348aae8f595217e26f348184dd594d83af800949f649bfd11b6aef7387faa5624ed18551fe2c3a38c8deab9d7473f72fd7e3e8472cff3ff30d4bb3fb2e6dc31
-Size (libXi-1.8.2.tar.xz) = 405200 bytes
+BLAKE2s (libXi-1.8.3.tar.xz) = 55e0f50c525e8143a72ac7b0f7724f7e0747a2dc6ff5dab89d6ff7983f9151d2
+SHA512 (libXi-1.8.3.tar.xz) = 5fb8273424467c102d3bab01cb273169038ff6fae739f6873ca357be8890c4fd30ba2952bca2759249458796df53ad130e2c9c3674b385602afd13c718faf79a
+Size (libXi-1.8.3.tar.xz) = 411684 bytes
