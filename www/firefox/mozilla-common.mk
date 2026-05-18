@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.309 2026/02/26 13:23:09 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.310 2026/05/18 16:07:04 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -21,6 +21,7 @@ OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
 OVERRIDE_DIRDEPTH=		4
 
 USE_LANGUAGES+=		c c++
+USE_CXX_FEATURES+=	c++20
 
 # XXX: As of 145.0
 GCC_REQD+=		10
@@ -95,6 +96,7 @@ CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}intl/icu/source/configure
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}browser/components/loop/run-all-loop-tests.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}browser/extensions/loop/run-all-loop-tests.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}third_party/libwebrtc/tools_webrtc/iwyu/apply-iwyu
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}third_party/rust/dogear/.github/workflows/upload-to-codecov.sh
 
 CONFIGURE_ARGS+=	--enable-release
 # Disable Rust SIMD option to fix build with lang/rust-1.33.0

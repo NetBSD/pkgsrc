@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.580 2026/03/19 14:57:43 ryoon Exp $
+$NetBSD: distinfo,v 1.581 2026/05/18 16:07:04 ryoon Exp $
 
-BLAKE2s (firefox-148.0.2.source.tar.xz) = d62a7a44e2b492f9b526b1208e2191a70e1a7314b73ee272d01b02d12e15239c
-SHA512 (firefox-148.0.2.source.tar.xz) = 56a93ae5235f38704f2f56b6246daddadd3bcef1db797cca10202fb919ba2f0e1459defaaa41cf188f269108efaef1b76ccbfae33d50ecbd52765176b4320bef
-Size (firefox-148.0.2.source.tar.xz) = 664519028 bytes
-BLAKE2s (nodejs-output-148.0.tgz) = f67838f30f27cd499d638f32ce6271c2bdec15b853b6e39d5a75b8e67a8d119d
-SHA512 (nodejs-output-148.0.tgz) = 003027b283110e1aca1d46ec3f576c7d9d6be03eeead93ffde47cc2ac0f01a533d3409d8caf2671a9473d7479b3d7d61030d287cbbb01480a0668a4fc4d1c40e
-Size (nodejs-output-148.0.tgz) = 249268 bytes
+BLAKE2s (firefox-150.0.3.source.tar.xz) = 2659a96c77521ab1a9d651b1088f55e646b4dd60b8f288f0b6f6da600f4ad0cd
+SHA512 (firefox-150.0.3.source.tar.xz) = 8452da61200f8ee66790d3fff230ca84b2ac9291af2b57e018486c50f938c53c6fb4943fe6cfe1e99b9783466fb00bf707fa006293753ac698618fc1e3b70a4a
+Size (firefox-150.0.3.source.tar.xz) = 709676888 bytes
+BLAKE2s (nodejs-output-150.0.3.tgz) = 3e0e5acaf50c536f28d95cbaa4c62bcbeab7803d4bf95a9a01b2567e8e2c15ab
+SHA512 (nodejs-output-150.0.3.tgz) = f6d10ccf84953cd85b85cb92f1cd57de6de3e100220e9239540dd809299ac5e9d309c8502cf05e0758cf2793bc1da23ebeb297c5787bbfcf242652d6e7292d10
+Size (nodejs-output-150.0.3.tgz) = 247807 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = 1eaa674c0aa8279e2f9dc2eda582650a08156d65
 SHA1 (patch-build_gn__processor.py) = 078f773104bf4c1b30584564aefe365db6ba6daf
 SHA1 (patch-build_moz.configure_init.configure) = 65deb3c233df0aab81eb1fca05d708e5a4ed169a
 SHA1 (patch-build_moz.configure_rust.configure) = 25ddfacd29cebbc6db005dbe61a2a7446d480678
-SHA1 (patch-config_gcc-stl-wrapper.template.h) = 9d1f15ff487efa9202114d19ed5668b4e7aa032a
+SHA1 (patch-config_gcc-stl-wrapper.template.h) = f2d19349e2e93c0f82db0a76124103e6ae6bba9d
 SHA1 (patch-config_makefiles_rust.mk) = 25eb2d4c99ace2b215917490f28ceb90ab90145f
 SHA1 (patch-config_system-headers.mozbuild) = 8a628765291085efe6a22da28c0ff99fbc3c5e6f
 SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49
@@ -23,10 +23,12 @@ SHA1 (patch-gfx_ots_src_name.cc) = 35ae5b2689eae8fab1ea351612f3628c14001f9e
 SHA1 (patch-gfx_skia_skia_src_sksl_codegen_SkSLSPIRVCodeGenerator.cpp) = 3eb9855e20fe8b7784a9620fce4ffb96f4736f82
 SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 298642a3527804115b398fb7904a3596962932e3
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = ee40764b100728d8fb73b8c6f1251456e368bd53
+SHA1 (patch-ipc_glue_ForkServer.cpp) = 91d3141795ba19c27c6e46fc205f97bfef1fdd6c
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 00bd08bb68b9aad3c4478c8849b53341da4a0d29
 SHA1 (patch-js-src-jit-arm64-vixl-MozCpu-vixl.cpp) = d90fca47d79551fd74214d47f8184670b901b792
 SHA1 (patch-js_public_Utility.h) = bb5464a0398b91693ab362e6b9b06d48429b9e7d
 SHA1 (patch-js_src_editline_editline.c) = ba44a33cc19d19aeaa777548ac74fc7144ea7d70
+SHA1 (patch-js_src_intgemm_moz.build) = 460d64d188e145dae2a917cef116e0483d86552e
 SHA1 (patch-js_src_jit_FlushICache.cpp) = f5d1fcb391c36a29fb71a78dbf731ee6a1cb17b6
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
 SHA1 (patch-js_src_vm_TypedArrayObject-inl.h) = e7913c8d4b2b05b67040baa64dae62d6ba40390e
@@ -37,6 +39,8 @@ SHA1 (patch-modules_fdlibm_src_math__private.h) = e20b6c23011d7123cbbd64a500eb8c
 SHA1 (patch-netwerk_protocol_http_nsHttpHandler.cpp) = 67493b4635041d21ff9fbfda80b3197fed542a26
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 753fd4d62088c870aefe7c4b739286259848446e
 SHA1 (patch-python_mozbuild_mozbuild_backend_recursivemake.py) = 5be4183d9075f5a3a3c6b3e0338473af185fb50e
+SHA1 (patch-python_sites_build.txt) = f60f28480179edb47c8dcf84e3247aa6704c2610
+SHA1 (patch-python_sites_mach.txt) = 4892a2d492b8faf243594e19104ec38c0890ca47
 SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc) = b1067a6804470f7e365f347683b7d505853fd799
 SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_vdso__support.cc) = f9c44d0d6fd952296f23c24f56053958b30d8e5c
 SHA1 (patch-third__party_js_cfworker_build.sh) = 46cdf97b99cf01080f290ae8d9a33b5f869fc3e4
