@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2026/05/18 12:20:35 nia Exp $
+bin/cbonsai
+man/man6/cbonsai.6
+share/bash-completion/completions/cbonsai

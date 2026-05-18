@@ -1,0 +1,4 @@
+cbonsai is a bonsai tree generator. It intelligently creates,
+colors, and positions a bonsai tree, and is entirely configurable
+via CLI options. There are 2 modes of operation: static (see
+finished bonsai tree), and live (see growth step-by-step).
