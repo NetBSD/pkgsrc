@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3104 2026/05/18 15:36:50 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.3105 2026/05/18 16:07:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4750,3 +4750,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/exim to 4.99.3 [adam 2026-05-18]
 	Updated mail/exim-html to 4.99.3 [adam 2026-05-18]
 	Updated geography/spatialindex to 2.0.0 [gdt 2026-05-18]
+	Updated www/firefox-150 to 150.0.3 [ryoon 2026-05-18]
