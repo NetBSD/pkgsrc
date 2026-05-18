@@ -1,0 +1,19 @@
+# $NetBSD: Makefile.common,v 1.1 2026/05/18 09:24:19 wiz Exp $
+# used by textproc/tree-sitter-markdown-inline/Makefile
+
+DISTNAME=	tree-sitter-markdown-0.5.3
+CATEGORIES=	textproc devel
+MASTER_SITES=	${MASTER_SITE_GITHUB:=tree-sitter-grammars/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/tree-sitter-grammars/tree-sitter-markdown
+COMMENT=	Markdown grammar for tree-sitter
+LICENSE=	mit
+
+DISTINFO_FILE=	${.CURDIR}/../../textproc/tree-sitter-markdown/distinfo
+#PATCHDIR=	${.CURDIR}/../../textproc/tree-sitter-markdown/patches
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
+
+.include "../../textproc/tree-sitter/grammar.mk"
