@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2026/05/18 12:09:03 jperkin Exp $
+
+Fix parallel builds.  This line gets expanded to multiple for each subdir.
+
+--- Makefile.in.orig	2026-05-18 12:05:35.732575210 +0000
++++ Makefile.in
+@@ -35,7 +35,7 @@ SHELL = /bin/sh
+ VPATH = $(srcdir)
+ 
+ all : force
+-	cd @subdir@; $(MAKE) all
++	(cd @subdir@; $(MAKE) all)
+ 
+ install : force
+ 	cd @subdir@; $(MAKE) install
