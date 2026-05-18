@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3090 2026/05/17 21:18:50 khorben Exp $
+$NetBSD: CHANGES-2026,v 1.3091 2026/05/18 05:51:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4731,3 +4731,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/slumber to 5.3.0 [wiz 2026-05-17]
 	Updated editors/vim-share to 9.2.0491 [sh 2026-05-17]
 	Added databases/openldap-mail-schemas version 20180701 [khorben 2026-05-17]
+	Updated devel/gobject-introspection to 1.86.0nb3 [wiz 2026-05-18]
