@@ -1,8 +1,8 @@
-$NetBSD: patch-config_gcc-stl-wrapper.template.h,v 1.4 2021/09/30 14:18:28 ryoon Exp $
+$NetBSD: patch-config_gcc-stl-wrapper.template.h,v 1.5 2026/05/18 16:07:04 ryoon Exp $
 
---- config/gcc-stl-wrapper.template.h.orig	2021-09-04 13:24:51.000000000 +0000
+--- config/gcc-stl-wrapper.template.h.orig	2026-04-15 13:12:19.000000000 +0000
 +++ config/gcc-stl-wrapper.template.h
-@@ -32,8 +32,8 @@
+@@ -27,8 +27,8 @@
  // limits) and bug 1694575 (iosfwd).
  // Please be careful when adding more exceptions, especially regarding
  // the header not directly or indirectly including <new>.
@@ -13,7 +13,7 @@ $NetBSD: patch-config_gcc-stl-wrapper.template.h,v 1.4 2021/09/30 14:18:28 ryoon
  #endif
  
  #ifndef moz_dont_include_mozalloc_for_cmath
-@@ -55,7 +55,7 @@
+@@ -50,7 +50,7 @@
  // Include mozalloc after the STL header and all other headers it includes
  // have been preprocessed.
  #if !defined(MOZ_INCLUDE_MOZALLOC_H) && \
@@ -22,10 +22,11 @@ $NetBSD: patch-config_gcc-stl-wrapper.template.h,v 1.4 2021/09/30 14:18:28 ryoon
  #  define MOZ_INCLUDE_MOZALLOC_H
  #  define MOZ_INCLUDE_MOZALLOC_H_FROM_${HEADER}
  #endif
-@@ -84,4 +84,6 @@
+@@ -78,5 +78,7 @@
+ #ifndef mozilla_throw_gcc_h
  #  include "mozilla/throw_gcc.h"
  #endif
- 
-+#undef moz_dont_include_mzalloc_for_${HEADER}
 +
++#undef moz_dont_include_mzalloc_for_${HEADER}
+ 
  #endif  // if mozilla_${HEADER}_h
