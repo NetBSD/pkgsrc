@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3093 2026/05/18 05:57:56 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3094 2026/05/18 06:31:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4734,3 +4734,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/gobject-introspection to 1.86.0nb3 [wiz 2026-05-18]
 	Updated devel/glib2-introspection to 2.88.1nb1 [wiz 2026-05-18]
 	Updated x11/libXi to 1.8.3 [wiz 2026-05-18]
+	Updated devel/py-gobject3 to 3.56.3nb2 [wiz 2026-05-18]
