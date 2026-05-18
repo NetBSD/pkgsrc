@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3099 2026/05/18 11:24:44 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3100 2026/05/18 12:09:11 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4743,3 +4743,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-aiormq to 6.9.4 [adam 2026-05-18]
 	Updated devel/py-test-codspeed to 5.0.2 [adam 2026-05-18]
 	Updated devel/py-test-rerunfailures to 16.2 [adam 2026-05-18]
+	Updated devel/gperf to 3.3 [jperkin 2026-05-18]
