@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.32 2026/05/10 21:17:35 wiz Exp $
+$NetBSD: distinfo,v 1.33 2026/05/18 06:31:37 wiz Exp $
 
 BLAKE2s (pygobject-3.56.3.tar.gz) = 999f1438c01950b6c5814436546b85e0a92faba922949b33137a9340deffd8b7
 SHA512 (pygobject-3.56.3.tar.gz) = 7267e04c02436fb88eddac463546275c7ebda7295f4d250c27a37114a589676d340c0876ad953523c20dd52cfd7d8883cefd5c1b3dd7115a96645f1a32ba0d99
 Size (pygobject-3.56.3.tar.gz) = 1411853 bytes
+SHA1 (patch-gi_overrides_____init____.py) = 21285fc4f19c85b295b69a80f1d123392bcb70df
