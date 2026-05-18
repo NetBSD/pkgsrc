@@ -1,4 +1,4 @@
-$NetBSD: patch-Cargo.toml,v 1.4 2026/05/05 18:00:35 adam Exp $
+$NetBSD: patch-Cargo.toml,v 1.5 2026/05/18 06:38:05 adam Exp $
 
 Paths to local crates.
 
@@ -11,9 +11,9 @@ Paths to local crates.
 -defguard_certs = { git = "https://github.com/DefGuard/defguard.git", rev = "dc0b70e69335c4be98d5b17615003922c9464994" }
 -defguard_grpc_tls = { git = "https://github.com/DefGuard/defguard.git", rev = "dc0b70e69335c4be98d5b17615003922c9464994" }
 -defguard_version = { git = "https://github.com/DefGuard/defguard.git", rev = "dc0b70e69335c4be98d5b17615003922c9464994" }
-+defguard_certs = { path = "../defguard-2.0.0/crates/defguard_certs" }
-+defguard_grpc_tls = { path = "../defguard-2.0.0/crates/defguard_grpc_tls" }
-+defguard_version = { path = "../defguard-2.0.0/crates/defguard_version" }
++defguard_certs = { path = "../defguard-2.0.1/crates/defguard_certs" }
++defguard_grpc_tls = { path = "../defguard-2.0.1/crates/defguard_grpc_tls" }
++defguard_version = { path = "../defguard-2.0.1/crates/defguard_version" }
  rustls = { version = "0.23", default-features = false, features = ["ring"] }
  rustls-pki-types = "1"
  rustls-webpki = { version = "0.103", features = ["ring", "std"] }
