@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/06/16 15:14:40 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/05/18 18:17:39 ktnb Exp $
 bin/naev
 man/man6/naev.6
 share/applications/org.naev.Naev.desktop
@@ -71,6 +71,7 @@ share/doc/naev/c/classshaders__c__gen_1_1SimpleShader__inherit__graph.png
 share/doc/naev/c/clipboard.js
 share/doc/naev/c/cmark__wrap_8c_source.html
 share/doc/naev/c/cmark__wrap_8h_source.html
+share/doc/naev/c/codefolding.js
 share/doc/naev/c/collision_8c.html
 share/doc/naev/c/collision_8c__incl.map
 share/doc/naev/c/collision_8c__incl.md5
@@ -187,7 +188,6 @@ share/doc/naev/c/distance__field_8h_source.html
 share/doc/naev/c/doxygen.css
 share/doc/naev/c/doxygen.svg
 share/doc/naev/c/doxygen_crawl.html
-share/doc/naev/c/dynsections.js
 share/doc/naev/c/economy_8c.html
 share/doc/naev/c/economy_8c__incl.map
 share/doc/naev/c/economy_8c__incl.md5
@@ -413,6 +413,7 @@ share/doc/naev/c/glue__macos_8m__incl.map
 share/doc/naev/c/glue__macos_8m__incl.md5
 share/doc/naev/c/glue__macos_8m__incl.png
 share/doc/naev/c/glue__macos_8m_source.html
+share/doc/naev/c/graph_legend.dot.cmapx
 share/doc/naev/c/graph_legend.html
 share/doc/naev/c/graph_legend.md5
 share/doc/naev/c/graph_legend.png
@@ -1356,7 +1357,6 @@ share/doc/naev/c/joystick_8c__incl.md5
 share/doc/naev/c/joystick_8c__incl.png
 share/doc/naev/c/joystick_8c_source.html
 share/doc/naev/c/joystick_8h_source.html
-share/doc/naev/c/jquery.js
 share/doc/naev/c/khrplatform_8h_source.html
 share/doc/naev/c/land_8c.html
 share/doc/naev/c/land_8c__incl.map
