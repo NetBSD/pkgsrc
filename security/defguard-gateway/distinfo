@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2026/05/05 18:00:35 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/05/18 06:38:05 adam Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -246,12 +246,12 @@ Size (darling_macro-0.23.0.crate) = 2480 bytes
 BLAKE2s (data-encoding-2.11.0.crate) = 56f6ef12fc494fcd46699128d79332448e70d1e6efbedf786df4c96e8a817e95
 SHA512 (data-encoding-2.11.0.crate) = 2e70bca84d0545e59d4ae4ad1ef61afef6c55a09a2056dd8f88bbc1ddd22318eba6faf1be4e0529d4e89bc7b3094798cf4597a1efcff1a4e9b7f3f3d037e5bb3
 Size (data-encoding-2.11.0.crate) = 22677 bytes
-BLAKE2s (defguard-2.0.0-proto.tar.gz) = 10c05eb63c635ca38aff91560fd432d51b49e7d4807572b196c86800cd2c3376
-SHA512 (defguard-2.0.0-proto.tar.gz) = 6f57939c2fc654cd7ed3c57f15cb8474a019c206f59b3f57e7fb18659c5a49089f56cbf3c20b58e5aae10b90780f2dd8c4b5be449670a56e0ff681f439a8008e
-Size (defguard-2.0.0-proto.tar.gz) = 26221 bytes
-BLAKE2s (defguard-2.0.0.tar.gz) = c0e715efd162fce3aa0382ffed0230bf416978a5c5ed99984e29fdbfb48e7367
-SHA512 (defguard-2.0.0.tar.gz) = 555a7d37d87b76796d84972303b40d78df069385ff2033761b6c551366d7c1a556f6c594a997149b62331ab0b7fdf11a54869cbc40aa760db01135de7c2a184c
-Size (defguard-2.0.0.tar.gz) = 6515810 bytes
+BLAKE2s (defguard-2.0.1-proto.tar.gz) = db547290f080838ecdb2a235ff8fb3af96337781982fbdfe3df8955634ff10ef
+SHA512 (defguard-2.0.1-proto.tar.gz) = d7636f0ee44311684bb4dda275fbbc17825b65dfaa275d7e1eabaa5654e225b9c0cc0d4821a823ca23d5637abcba957bb2ea60c8514d0937453b1df9ee6f26d4
+Size (defguard-2.0.1-proto.tar.gz) = 26216 bytes
+BLAKE2s (defguard-2.0.1.tar.gz) = 44fec0788ef7bcab05272721c3f5d1ec36d02962ae54a4e7575754075abf13f6
+SHA512 (defguard-2.0.1.tar.gz) = fd42644859eeece64080dfb77a72d35b09e0521d7b7a535c9070eb1e9ec8677142a039dd2744c5119a315eb5f08fc337dc0b9a8c4a48d062b028527e98251601
+Size (defguard-2.0.1.tar.gz) = 6522837 bytes
 BLAKE2s (defguard-gateway-2.0.1.tar.gz) = 2b47b7f5a5395756e581eefbf00f5ff9669e5eca3b8b2d0737e8bfb5f4dee6aa
 SHA512 (defguard-gateway-2.0.1.tar.gz) = bf83caff577b7eac2c096b3485a9ed33d0f79d21785d4c924dbaab7460f12b3a87aa76e84dda98b09e8de94a4cce5dc96d94b4c27a6daa3176ae5849da1ed88b
 Size (defguard-gateway-2.0.1.tar.gz) = 134029 bytes
@@ -1632,4 +1632,4 @@ Size (zerovec-derive-0.11.3.crate) = 22115 bytes
 BLAKE2s (zmij-1.0.21.crate) = a2d1e7214230c8f4e8c946d28215765c131da3aac89f1001daf534335307648e
 SHA512 (zmij-1.0.21.crate) = a488f11ec8721ddfe42e61d028a128818551de8fccd69d7824504e4ae2efccdc38f716fa5a10ef4de07a8a087e75e819c4a1e0790817e8539b5db697bde14585
 Size (zmij-1.0.21.crate) = 26665 bytes
-SHA1 (patch-Cargo.toml) = 989c13082350cf49d62314e2f59434307bdeb4ba
+SHA1 (patch-Cargo.toml) = f7478e7f9ed91553f78cdf0982eea8330060bdf8
