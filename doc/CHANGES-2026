@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3098 2026/05/18 11:18:30 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3099 2026/05/18 11:24:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4741,3 +4741,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed lang/nodejs20 [adam 2026-05-18]
 	Updated textproc/ugrep to 7.8.2 [adam 2026-05-18]
 	Updated net/py-aiormq to 6.9.4 [adam 2026-05-18]
+	Updated devel/py-test-codspeed to 5.0.2 [adam 2026-05-18]
+	Updated devel/py-test-rerunfailures to 16.2 [adam 2026-05-18]
