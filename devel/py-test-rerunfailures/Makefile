@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2025/10/20 09:39:25 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/05/18 11:24:19 adam Exp $
 
-DISTNAME=	pytest_rerunfailures-16.1
+DISTNAME=	pytest_rerunfailures-16.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pytest_/test-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-rerunfailures/}
@@ -12,7 +12,7 @@ LICENSE=	mpl-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-packaging>=17.1:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-test>=7.4:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-test>=8.2.3:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
