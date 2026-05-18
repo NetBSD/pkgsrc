@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2026/05/16 06:15:03 adam Exp $
+# $NetBSD: Makefile,v 1.3 2026/05/18 05:53:26 wiz Exp $
 
 .include "../../devel/glib2/Makefile.common"
 
 PKGNAME=	glib2-introspection-${DISTNAME:S/^glib-//}
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 
 COMMENT=	Introspection data for glib2
@@ -84,6 +85,7 @@ do-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.86.0nb3
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/meson/build.mk"
