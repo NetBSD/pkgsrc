@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3102 2026/05/18 13:20:23 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3103 2026/05/18 13:38:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4747,3 +4747,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added games/cbonsai version 1.4.2 [nia 2026-05-18]
 	Updated archivers/py-zipstream-ng to 1.9.2 [adam 2026-05-18]
 	Updated misc/py-watchfiles to 1.2.0 [adam 2026-05-18]
+	Updated mail/exim to 4.99.3 [adam 2026-05-18]
+	Updated mail/exim-html to 4.99.3 [adam 2026-05-18]
