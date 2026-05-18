@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2026/04/30 12:28:56 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/05/18 11:22:35 adam Exp $
 
-DISTNAME=	pytest_codspeed-4.5.0
+DISTNAME=	pytest_codspeed-5.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-codspeed/}
@@ -10,8 +10,7 @@ HOMEPAGE=	https://github.com/CodSpeedHQ/pytest-codspeed
 COMMENT=	Pytest plugin to create CodSpeed benchmarks
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-cffi>=1.17.1:../../devel/py-cffi
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-rich>=13.8.1:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-test>=3.8:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
