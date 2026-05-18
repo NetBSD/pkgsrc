@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3097 2026/05/18 10:36:04 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3098 2026/05/18 11:18:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4739,3 +4739,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv to 0.11.14 [adam 2026-05-18]
 	Updated devel/py-uv-build to 0.11.14 [adam 2026-05-18]
 	Removed lang/nodejs20 [adam 2026-05-18]
+	Updated textproc/ugrep to 7.8.2 [adam 2026-05-18]
+	Updated net/py-aiormq to 6.9.4 [adam 2026-05-18]
