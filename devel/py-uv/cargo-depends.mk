@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.20 2026/05/11 05:22:51 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.21 2026/05/18 10:14:44 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aes-0.8.4
@@ -253,7 +253,7 @@ CARGO_CRATE_DEPENDS+=	jni-sys-macros-0.4.1
 CARGO_CRATE_DEPENDS+=	jobserver-0.1.34
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.91
 CARGO_CRATE_DEPENDS+=	jsonwebtoken-10.3.0
-CARGO_CRATE_DEPENDS+=	junction-1.4.2
+CARGO_CRATE_DEPENDS+=	junction-2.0.0
 CARGO_CRATE_DEPENDS+=	kurbo-0.13.0
 CARGO_CRATE_DEPENDS+=	lazy_static-1.5.0
 CARGO_CRATE_DEPENDS+=	leb128fmt-0.1.0
@@ -397,7 +397,7 @@ CARGO_CRATE_DEPENDS+=	reqsign-core-3.0.0
 CARGO_CRATE_DEPENDS+=	reqsign-file-read-tokio-3.0.0
 CARGO_CRATE_DEPENDS+=	reqsign-google-3.0.0
 CARGO_CRATE_DEPENDS+=	reqsign-http-send-reqwest-4.0.0
-CARGO_CRATE_DEPENDS+=	reqwest-0.13.2
+CARGO_CRATE_DEPENDS+=	reqwest-0.13.3
 CARGO_CRATE_DEPENDS+=	resvg-0.47.0
 CARGO_CRATE_DEPENDS+=	retry-policies-0.5.1
 CARGO_CRATE_DEPENDS+=	rgb-0.8.53
