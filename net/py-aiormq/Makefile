@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2026/02/23 15:01:32 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/05/18 11:17:57 adam Exp $
 
-DISTNAME=	aiormq-6.9.3
+DISTNAME=	aiormq-6.9.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiormq/}
