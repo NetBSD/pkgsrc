@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2026/05/15 20:26:35 ktnb Exp $
+# $NetBSD: Makefile,v 1.17 2026/05/18 20:46:51 ktnb Exp $
 
 DISTNAME=	tailscale
-PKGNAME=	tailscale-1.96.4
+PKGNAME=	tailscale-1.98.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NuclearKev/}
 GITHUB_PROJECT=	tailscale
-GITHUB_TAG=	f86a9ab65341bbaabc330bd3bc9063b753f45304
+GITHUB_TAG=	1fdd2939b5c79620e7f0a00bdd411a061dcef9ac
 
 MAINTAINER=	ktnb@NetBSD.org
 HOMEPAGE=	https://tailscale.com/
