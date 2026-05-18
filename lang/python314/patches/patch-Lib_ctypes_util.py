@@ -1,4 +1,4 @@
-$NetBSD: patch-Lib_ctypes_util.py,v 1.1 2025/10/08 07:13:08 adam Exp $
+$NetBSD: patch-Lib_ctypes_util.py,v 1.2 2026/05/18 21:22:56 wiz Exp $
 
 Fallback to clang.
 
@@ -7,9 +7,9 @@ Note: /usr/local will get replaced by SUBST.
 
 Pull in patch for http://bugs.python.org/issue23287 for SunOS
 
---- Lib/ctypes/util.py.orig	2021-07-10 00:51:07.000000000 +0000
+--- Lib/ctypes/util.py.orig	2026-05-10 10:21:34.000000000 +0000
 +++ Lib/ctypes/util.py
-@@ -108,6 +108,8 @@ elif os.name == "posix":
+@@ -220,6 +220,8 @@ elif os.name == "posix":
  
          c_compiler = shutil.which('gcc')
          if not c_compiler:
@@ -18,7 +18,7 @@ Pull in patch for http://bugs.python.org/issue23287 for SunOS
              c_compiler = shutil.which('cc')
          if not c_compiler:
              # No C compiler available, give up
-@@ -226,34 +228,15 @@ elif os.name == "posix":
+@@ -338,35 +340,16 @@ elif os.name == "posix":
  
      elif sys.platform == "sunos5":
  
@@ -35,7 +35,8 @@ Pull in patch for http://bugs.python.org/issue23287 for SunOS
 +                paths = "/lib/64:/usr/lib/64:/usr/local/lib"
              else:
 -                args = ('/usr/bin/crle',)
--
++                paths = "/lib:/usr/lib:/usr/local/lib"
+ 
 -            paths = None
 -            try:
 -                proc = subprocess.Popen(args,
@@ -52,11 +53,11 @@ Pull in patch for http://bugs.python.org/issue23287 for SunOS
 -
 -            if not paths:
 -                return None
-+                paths = "/lib:/usr/lib:/usr/local/lib"
- 
+-
              for dir in paths.split(":"):
                  libfile = os.path.join(dir, "lib%s.so" % name)
-@@ -263,7 +246,7 @@ elif os.name == "posix":
+                 if os.path.exists(libfile):
+@@ -375,7 +358,7 @@ elif os.name == "posix":
              return None
  
          def find_library(name, is64 = False):
@@ -65,7 +66,7 @@ Pull in patch for http://bugs.python.org/issue23287 for SunOS
  
      else:
  
-@@ -300,7 +283,7 @@ elif os.name == "posix":
+@@ -412,7 +395,7 @@ elif os.name == "posix":
          def _findLib_ld(name):
              # See issue #9998 for why this is needed
              expr = r'[^\(\)\s]*lib%s\.[^\(\)\s]*' % re.escape(name)
