@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2026/05/18 12:20:35 nia Exp $
+
+BLAKE2s (cbonsai-1.4.2.tar.gz) = 8e3b0ac3d48bd2fc901e24f011080ce93a8a47ebbc89e15d254c80277fbc3c05
+SHA512 (cbonsai-1.4.2.tar.gz) = e7abe46f027a74d4b8958066839ece870499124fa874f8507b775eb1cdc55d59134835ee573c6820de1a8b5db2ded50b4bdada5127f73851d1a4ff5ca05cc71c
+Size (cbonsai-1.4.2.tar.gz) = 24393 bytes
+SHA1 (patch-Makefile) = d7990bd1ebde2b590587775666ea3c8020055bbd
+SHA1 (patch-cbonsai.c) = dc91328308b4475061b4aec8b48a8798e2f94fe3

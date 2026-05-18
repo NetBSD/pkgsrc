@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.564 2026/05/04 12:28:51 nia Exp $
+# $NetBSD: Makefile,v 1.565 2026/05/18 12:20:35 nia Exp $
 #
 
 COMMENT=	Games
@@ -64,6 +64,7 @@ SUBDIR+=	burgerspace
 SUBDIR+=	bzflag
 SUBDIR+=	cataclysm-dda
 SUBDIR+=	cataclysm-dda-sdl
+SUBDIR+=	cbonsai
 SUBDIR+=	cbzone
 SUBDIR+=	ccgo
 SUBDIR+=	ccleste
