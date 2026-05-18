@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/02/10 19:30:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/05/18 11:22:35 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -19,10 +19,6 @@ ${PYSITELIB}/pytest_codspeed/instruments/analysis.pyo
 ${PYSITELIB}/pytest_codspeed/instruments/hooks/__init__.py
 ${PYSITELIB}/pytest_codspeed/instruments/hooks/__init__.pyc
 ${PYSITELIB}/pytest_codspeed/instruments/hooks/__init__.pyo
-${PYSITELIB}/pytest_codspeed/instruments/hooks/build.py
-${PYSITELIB}/pytest_codspeed/instruments/hooks/build.pyc
-${PYSITELIB}/pytest_codspeed/instruments/hooks/build.pyo
-${PYSITELIB}/pytest_codspeed/instruments/hooks/dist_instrument_hooks.pyi
 ${PYSITELIB}/pytest_codspeed/instruments/hooks/instrument-hooks/dist/core.c
 ${PYSITELIB}/pytest_codspeed/instruments/hooks/instrument-hooks/includes/callgrind.h
 ${PYSITELIB}/pytest_codspeed/instruments/hooks/instrument-hooks/includes/compat.h
@@ -32,6 +28,7 @@ ${PYSITELIB}/pytest_codspeed/instruments/hooks/instrument-hooks/includes/zig.h
 ${PYSITELIB}/pytest_codspeed/instruments/hooks/instrument-hooks/scripts/release.py
 ${PYSITELIB}/pytest_codspeed/instruments/hooks/instrument-hooks/scripts/release.pyc
 ${PYSITELIB}/pytest_codspeed/instruments/hooks/instrument-hooks/scripts/release.pyo
+${PYSITELIB}/pytest_codspeed/instruments/hooks/instrument_hooks_module.c
 ${PYSITELIB}/pytest_codspeed/instruments/walltime.py
 ${PYSITELIB}/pytest_codspeed/instruments/walltime.pyc
 ${PYSITELIB}/pytest_codspeed/instruments/walltime.pyo
