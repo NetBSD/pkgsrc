@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/09/16 00:56:01 gdt Exp $
+# $NetBSD: Makefile,v 1.5 2026/05/18 15:36:44 gdt Exp $
 
 # Do not update to >= 2.1, because of an upstream bug that causes
 # incorrect results in qgis (and arguably, any other user of the
@@ -6,7 +6,7 @@
 #   https://github.com/libspatialindex/libspatialindex/issues/276
 #   https://lists.osgeo.org/pipermail/qgis-developer/2025-September/067804.html
 #   https://lists.osgeo.org/pipermail/qgis-developer/2025-September/067804.html
-DISTNAME=	spatialindex-src-1.9.3
+DISTNAME=	spatialindex-src-2.0.0
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libspatialindex/}
@@ -20,6 +20,26 @@ COMMENT=	Robust spatial indexing methods
 LICENSE=	mit
 
 USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	c++11
+
+# Remediate upstream spelling /bin/sh as /bin/bash.
+# https://github.com/libspatialindex/libspatialindex/issues/299
+SUBST_CLASSES+=		bash
+SUBST_STAGE.bash=	pre-test
+SUBST_FILES.bash=	test/*.sh test/*/*/run
+SUBST_SED.bash=		-e 's,/bin/bash,/bin/sh,g'
+
+# Testing is not documented and googletest is not described.
+# So far, testing does not seem useful, so left off.
+# https://github.com/libspatialindex/libspatialindex/issues/298
+#TEST_TARGET=	test
+#TEST_DEPENDS+=		googletest-[0-9]*:../../devel/googletest
 
 .include "../../devel/cmake/build.mk"
+
+# \todo Only for tests.
+#.include "../../devel/googletest/buildlink3.mk"
+# \todo Change googletest?  Other reason?
+#USE_CXX_FEATURES+=	c++17
+
 .include "../../mk/bsd.pkg.mk"

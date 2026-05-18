@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/02/15 23:17:32 wiz Exp $
+$NetBSD: distinfo,v 1.5 2026/05/18 15:36:44 gdt Exp $
 
-BLAKE2s (spatialindex-src-1.9.3.tar.bz2) = 8acafd9a2d4af01695a94ff5b19d48036a028477f2269685c6aec83585dd9e3b
-SHA512 (spatialindex-src-1.9.3.tar.bz2) = 7922807a2f7026542a014d3d7943da5410429b291cf469267ffea5b8075eab2a94e68b6c013425615d221b930fd319c403f3bf43404c9b1d2c92d0e2baae3066
-Size (spatialindex-src-1.9.3.tar.bz2) = 520817 bytes
+BLAKE2s (spatialindex-src-2.0.0.tar.bz2) = c5c383b17515953de9322df499def6dc609472105565b6c5c2bde3ed6571c15a
+SHA512 (spatialindex-src-2.0.0.tar.bz2) = 5838c8845ccfe4cf3b527414332d62d6cdacaf690b43b95162493e29b026b5e28630ea6cac732ad3ab0d2ac53ee13d1f021cf0e4b25735e87ba8f5b49380235b
+Size (spatialindex-src-2.0.0.tar.bz2) = 504814 bytes
