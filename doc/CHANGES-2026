@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3101 2026/05/18 12:20:58 nia Exp $
+$NetBSD: CHANGES-2026,v 1.3102 2026/05/18 13:20:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4745,3 +4745,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-test-rerunfailures to 16.2 [adam 2026-05-18]
 	Updated devel/gperf to 3.3 [jperkin 2026-05-18]
 	Added games/cbonsai version 1.4.2 [nia 2026-05-18]
+	Updated archivers/py-zipstream-ng to 1.9.2 [adam 2026-05-18]
+	Updated misc/py-watchfiles to 1.2.0 [adam 2026-05-18]
