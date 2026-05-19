@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.11 2025/05/01 16:58:48 tnn Exp $
+$NetBSD: distinfo,v 1.12 2026/05/19 07:57:55 jperkin Exp $
 
 BLAKE2s (getopt-1.1.6.tar.gz) = d6be5df3bedf765fe4b4e8a287bf8578d2cb22330f1e3016d665cf03ab963754
 SHA512 (getopt-1.1.6.tar.gz) = aa5476e729f33ddd3f32f38b2565da319fdfe034f11549218d5d9953e70dad764e0d9a82bb10efe4043c86ae87f944619b8a2f29a197f592bd855699961d8e10
 Size (getopt-1.1.6.tar.gz) = 58926 bytes
-SHA1 (patch-aa) = 5967a6ec48a7a69078fc1e0fca26645fd9870f77
-SHA1 (patch-ab) = 8591f15916b47d3569c79639e6ee9aa82df07f6a
-SHA1 (patch-gnu_getopt.c) = f27194128abce7901232a5d24cdcab225af369d2
+SHA1 (patch-aa) = 6062d6b15990142ba8d5556eb0588f948674b4ae
+SHA1 (patch-ab) = bd00147c65577de29cd935a714b8ae0852bff0fb
+SHA1 (patch-gnu_getopt.c) = caae6177c2c70d5dcd764e7299135a6efb410d73
+SHA1 (patch-gnu_getopt.h) = 3d8c015786c6e4b451efc7cd294977250a05df9d
+SHA1 (patch-gnu_getopt1.c) = fc22b9f5778fa2ea8953c028991455937d3c8e91
