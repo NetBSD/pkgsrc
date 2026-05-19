@@ -1,8 +1,90 @@
-$NetBSD: patch-ak,v 1.4 2006/10/14 19:33:45 schwarz Exp $
+$NetBSD: patch-ak,v 1.5 2026/05/19 18:38:10 spz Exp $
 
---- db.c.orig	2005-04-03 06:29:15.000000000 +0200
-+++ db.c	2006-10-14 20:13:27.000000000 +0200
-@@ -1139,7 +1139,7 @@
+deal with ctype functions faulting on invalid input on NetBSD 11
+
+use long instead of off_t
+
+--- db.c.orig	2005-04-03 04:29:15.000000000 +0000
++++ db.c
+@@ -9,7 +9,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <strings.h>
+-#include <ctype.h>
++#include "ctypeconv.h"
+ #include <errno.h>
+ #include "config.h"
+ #include "global.h"
+@@ -313,11 +313,11 @@ mk_archive_file(register group_header * 
+ {
+     char           *name;
+ 
+-    while (*cp && (*cp == '>' || isspace(*cp)))
++    while (*cp && (*cp == '>' || ISSPACE(*cp)))
+ 	cp++;
+ 
+     name = cp;
+-    while (*cp && !isspace(*cp))
++    while (*cp && !ISSPACE(*cp))
+ 	cp++;
+     if (*cp)
+ 	*cp++ = NUL;
+@@ -353,7 +353,7 @@ db_parse_group(register group_header * g
+     do {
+ 	if (fgets(line, 256, group_file) == NULL)
+ 	    return 0;
+-	for (cp = line; *cp && isspace(*cp); cp++);
++	for (cp = line; *cp && ISSPACE(*cp); cp++);
+     } while (*cp == NUL || *cp == '#');
+ 
+     gh->archive_file = NULL;
+@@ -366,7 +366,7 @@ db_parse_group(register group_header * g
+ 	    return 1;
+ 	}
+ 	cp = name + gh->group_name_length;
+-	if (*cp == NUL || !isspace(*cp))
++	if (*cp == NUL || !ISSPACE(*cp))
+ 	    sys_error("MASTER/GROUPS conflict: %d/%s", gh->group_num, line);
+     } else {
+ 	/* parse GROUPS line */
+@@ -378,12 +378,12 @@ db_parse_group(register group_header * g
+ 	    goto ignore_group;
+ 	}
+ 	if (gh->group_name_length == 0) {
+-	    while (*cp && !isspace(*cp))
++	    while (*cp && !ISSPACE(*cp))
+ 		cp++;
+ 	    gh->group_name_length = cp - name;
+ 	} else {
+ 	    cp = name + gh->group_name_length;
+-	    if (*cp == NUL || !isspace(*cp)) {
++	    if (*cp == NUL || !ISSPACE(*cp)) {
+ 		sys_error("MASTER/GROUPS conflict: %d/%s", gh->group_num, line);
+ 	    }
+ 	}
+@@ -405,17 +405,17 @@ db_parse_group(register group_header * g
+ 	}
+ 	return 1;
+     }
+-    while (*cp && isspace(*cp))
++    while (*cp && ISSPACE(*cp))
+ 	cp++;
+ 
+-    if (*cp && isdigit(*cp)) {
++    if (*cp && ISDIGIT(*cp)) {
+ 	gh->creation_time = atol(cp);
+-	while (*cp && isdigit(*cp))
++	while (*cp && ISDIGIT(*cp))
+ 	    cp++;
+     } else
+ 	gh->creation_time = 0;
+ 
+-    while (*cp && isspace(*cp))
++    while (*cp && ISSPACE(*cp))
+ 	cp++;
+ 
+     ignore = 0;
+@@ -1139,7 +1139,7 @@ db_read_group(register group_header * gh
  
      if (!db_sequential)
  	fseek(master_file,
@@ -11,7 +93,7 @@ $NetBSD: patch-ak,v 1.4 2006/10/14 19:33:45 schwarz Exp $
  		       GROUP_FIELDS * sizeof(net_long) * gh->group_num), 0);
  
      if (fread((char *) buf, sizeof(net_long), GROUP_FIELDS, master_file) != GROUP_FIELDS)
-@@ -1181,7 +1181,7 @@
+@@ -1181,7 +1181,7 @@ db_write_group(register group_header * g
  
      if (!db_sequential)
  	fseek(master_file,
@@ -20,7 +102,23 @@ $NetBSD: patch-ak,v 1.4 2006/10/14 19:33:45 schwarz Exp $
  		       GROUP_FIELDS * sizeof(net_long) * gh->group_num), 0);
  
      buf[0] = gh->first_db_article;
-@@ -1386,10 +1386,10 @@
+@@ -1335,13 +1335,13 @@ cache_purpose(void)
+     }
+     for (i = 0, plp = purp_list, stp = sthead; stp; stp = stp->n.next) {
+ 	p = stp->str;
+-	while (!isspace(*p)) {	/* skip newsgroup name */
++	while (!ISSPACE(*p)) {	/* skip newsgroup name */
+ 	    if (*++p == NUL)
+ 		goto next;
+ 	}
+ 	*p++ = NUL;
+ 
+-	while (isspace(*p)) {	/* skip to group description */
++	while (ISSPACE(*p)) {	/* skip to group description */
+ 	    if (*++p == NUL)
+ 		goto next;
+ 	}
+@@ -1386,10 +1386,10 @@ purp_lookup(char *group)
  
  
  #ifndef NOV
@@ -33,7 +131,16 @@ $NetBSD: patch-ak,v 1.4 2006/10/14 19:33:45 schwarz Exp $
  
  #ifdef NETWORK_DATABASE
      net_long        buf[ARTICLE_FIELDS];
-@@ -1594,7 +1594,7 @@
+@@ -1511,7 +1511,7 @@ db_init_active(register group_header * g
+ 
+     p = actlist[gh->group_num];
+     if (p != NULL) {
+-	while (isspace(*p))
++	while (ISSPACE(*p))
+ 	    ++p;
+ 	gh->last_a_article = atol(p);
+ 	p = strchr(p, ' ');
+@@ -1594,7 +1594,7 @@ db_read_group(register group_header * gh
   * fill in db_hdr and db_data from the overview data for the next
   * article in this group.  does weirdo nn encodings of header fields.
   */
@@ -42,7 +149,25 @@ $NetBSD: patch-ak,v 1.4 2006/10/14 19:33:45 schwarz Exp $
  db_read_art(FILE * f)
  {
      register data_header *dhp = &db_hdr;
-@@ -1820,9 +1820,9 @@
+@@ -1617,7 +1617,7 @@ db_read_art(FILE * f)
+     dhp->dh_lpos = 1L << 30;	/* last article byte */
+     dhp->dh_fpos = 0;		/* 1st article text byte */
+     dhp->dh_lines = -1;		/* -1 == "unknown" */
+-    if (isascii(artp->a_lines[0]) && isdigit(artp->a_lines[0]))
++    if (ISASCII(artp->a_lines[0]) && ISDIGIT(artp->a_lines[0]))
+ 	dhp->dh_lines = atoi(artp->a_lines);
+     dhp->dh_replies = 0;	/* # of References: */
+     if (artp->a_refs != NULL) {
+@@ -1728,7 +1728,7 @@ db_fixup_cross_postings(data_header * dh
+ 	    ddp->dh_cross[numgrps++] = gh->group_num;
+ 	}
+ 	curg = tmp + 1;
+-	while (isdigit(*curg))
++	while (ISDIGIT(*curg))
+ 	    ++curg;		/* Skip over the article number */
+     }
+     if (numgrps > 1) {
+@@ -1820,9 +1820,9 @@ get_index_offset(group_header * gh, arti
  {
  
  #ifdef NETWORK_DATABASE
@@ -54,7 +179,7 @@ $NetBSD: patch-ak,v 1.4 2006/10/14 19:33:45 schwarz Exp $
  #endif				/* NETWORK_DATABASE */
  }
  
-@@ -1833,11 +1833,11 @@
+@@ -1833,11 +1833,11 @@ get_data_offset(group_header * gh, artic
      long            data_offset;
  
      if (gh->first_db_article == art_num)
@@ -68,7 +193,7 @@ $NetBSD: patch-ak,v 1.4 2006/10/14 19:33:45 schwarz Exp $
  
      fseek(index, get_index_offset(gh, art_num), 0);
      if (!db_read_offset(index, &data_offset))
-@@ -1866,7 +1866,7 @@
+@@ -1866,7 +1866,7 @@ db_read_offset(FILE * f, long *offset)
      *offset = temp;
  #else				/* NETWORK_DATABASE */
  
@@ -77,7 +202,7 @@ $NetBSD: patch-ak,v 1.4 2006/10/14 19:33:45 schwarz Exp $
  	                return 0;
  #endif				/* NETWORK_DATABASE */
  
-@@ -1891,7 +1891,7 @@
+@@ -1891,7 +1891,7 @@ db_write_offset(FILE * f, long *offset)
  
  #else				/* NETWORK_DATABASE */
  

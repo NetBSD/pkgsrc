@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2026/01/13 07:31:03 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2026/05/19 18:38:10 spz Exp $
 
 DISTNAME=	nn-6.7.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	news
 MASTER_SITES=	http://www.nndev.org/pub/nn-6.7/
 EXTRACT_SUFX=	.tar.Z
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.nndev.org/
 COMMENT=	Text-based newsreader
+LICENSE=	nn-license
 
 PKG_SYSCONFSUBDIR=	nntp
 

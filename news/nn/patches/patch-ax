@@ -1,7 +1,20 @@
-$NetBSD: patch-ax,v 1.9 2006/12/01 13:54:27 joerg Exp $
+$NetBSD: patch-ax,v 1.10 2026/05/19 18:38:11 spz Exp $
+
+deal with ctype functions faulting on invalid input on NetBSD 11
+
+always use NNTP
 
 --- nntp.c.orig	2005-04-19 23:06:51.000000000 +0000
 +++ nntp.c
+@@ -18,7 +18,7 @@
+ #include <unistd.h>
+ #include <stdarg.h>
+ #include <sys/param.h>
+-#include <ctype.h>
++#include "ctypeconv.h"
+ #include "config.h"
+ #include "global.h"
+ #include "fullname.h"
 @@ -57,10 +57,9 @@
  #endif
  
@@ -14,6 +27,24 @@ $NetBSD: patch-ax,v 1.9 2006/12/01 13:54:27 joerg Exp $
  
  #ifdef EXCELAN
  
+@@ -275,7 +274,7 @@ get_server(char *string, int size)
+     if (nntp_debug)
+ 	debug_msg("<<<", string);
+ 
+-    return isdigit(*string) ? atoi(string) : 0;
++    return ISDIGIT(*string) ? atoi(string) : 0;
+ }
+ 
+ /*
+@@ -861,7 +860,7 @@ set_domain(void)
+ 	    line[MAXHOSTNAMELEN] = '\0';
+ 	    while (fgets(line, MAXHOSTNAMELEN, resolv)) {
+ 		if (strncmp(line, "domain", 6) == 0) {
+-		    for (p = &line[6]; *p && isspace(*p); p++);
++		    for (p = &line[6]; *p && ISSPACE(*p); p++);
+ 		    (void) strncpy(domain, p, MAXHOSTNAMELEN);
+ 		    p = domain + strlen(domain) - 1;
+ 		    while ((p >= domain) && (*p == ' ' || *p == '\t' || *p == '\r' || *p == '\n'))
 @@ -915,7 +914,11 @@ nntp_check(void)
  	server_real_name = hp->h_name;
      else
@@ -26,3 +57,21 @@ $NetBSD: patch-ax,v 1.9 2006/12/01 13:54:27 joerg Exp $
  
      if (use_nntp) {
  	freeobj(news_active);
+@@ -1528,7 +1531,7 @@ gen_frompath(void)
+ static char
+ lower(register char c)
+ {
+-    if (isascii(c) && isupper(c))
++    if (ISASCII(c) && ISUPPER(c))
+ 	c = c - 'A' + 'a';
+     return (c);
+ }
+@@ -1591,7 +1594,7 @@ valid_header(register char *h)
+      */
+     colon = index(h, ':');
+     space = index(h, ' ');
+-    if (isalpha(h[0]) && colon && space == colon + 1)
++    if (ISALPHA(h[0]) && colon && space == colon + 1)
+ 	return (1);
+ 
+     /*

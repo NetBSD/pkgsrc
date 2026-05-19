@@ -1,8 +1,21 @@
-$NetBSD: patch-at,v 1.3 2006/10/14 19:33:45 schwarz Exp $
+$NetBSD: patch-at,v 1.4 2026/05/19 18:38:11 spz Exp $
 
---- more.c.orig	2005-04-20 01:44:29.000000000 +0200
-+++ more.c	2006-10-14 20:28:07.000000000 +0200
-@@ -380,7 +380,7 @@
+deal with ctype functions faulting on invalid input on NetBSD 11
+
+use long instead of off_t
+
+--- more.c.orig	2005-04-19 23:44:29.000000000 +0000
++++ more.c
+@@ -7,7 +7,7 @@
+ 
+ #include <stdlib.h>
+ #include <string.h>
+-#include <ctype.h>
++#include "ctypeconv.h"
+ #include "config.h"
+ #include "global.h"
+ #include "articles.h"
+@@ -380,7 +380,7 @@ more(article_header * ah, int mode, int 
      struct digest_header digest_save;
      int             linenum, maxline, topline, print_lines, lno1;
      int             scroll_lines, scroll_from;
@@ -11,3 +24,14 @@ $NetBSD: patch-at,v 1.3 2006/10/14 19:33:45 schwarz Exp $
      int             underline_line, fake_underline;
      int             match_lines, match_redraw, match_topline = 0, match_botline;
      int             goto_line, prev_goto, stop_line, extra_lines;
+@@ -620,8 +620,8 @@ print_header:
+ 		    CALL(hdrattr) (1);
+ 
+ 		while (*lp && c < Columns) {
+-		    if (isspace(*lp)) {
+-			while (lp[1] && isspace(lp[1]))
++		    if (ISSPACE(*lp)) {
++			while (lp[1] && ISSPACE(lp[1]))
+ 			    lp++;
+ 			if (wrap_headers > 0 &&
+ 			    (c + wrap_headers) >= Columns &&

@@ -1,8 +1,21 @@
-$NetBSD: patch-az,v 1.2 2006/10/14 19:33:45 schwarz Exp $
+$NetBSD: patch-az,v 1.3 2026/05/19 18:38:11 spz Exp $
 
---- sort.c.orig	2005-03-30 21:24:35.000000000 +0200
-+++ sort.c	2006-10-14 20:38:02.000000000 +0200
-@@ -51,6 +51,29 @@
+deal with ctype functions faulting on invalid input on NetBSD 11
+
+deal with 8bit chars
+
+--- sort.c.orig	2005-03-30 19:24:35.000000000 +0000
++++ sort.c
+@@ -7,7 +7,7 @@
+ 
+ #include <stdlib.h>
+ #include <string.h>
+-#include <ctype.h>
++#include "ctypeconv.h"
+ #include "config.h"
+ #include "global.h"
+ #include "articles.h"
+@@ -51,6 +51,29 @@ extern int      bypass_consolidation;
   *	before MATCH_?? (t, a, b) is used.
   */
  
@@ -32,7 +45,7 @@ $NetBSD: patch-az,v 1.2 2006/10/14 19:33:45 schwarz Exp $
  #define	MATCH_DROP(table, c) ( c & 0200 || table[c] == 0 )
  #define MATCH_EQ(table, a, b) ( a == b || table[a] == table[b] )
  #define MATCH_LS_EQ(table, a, b) ( a <= b || table[a] <= table[b] )
-@@ -85,6 +108,7 @@
+@@ -85,6 +108,7 @@ static char     match_subject[128] = {
      26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 00, 00
  };
  
@@ -40,3 +53,36 @@ $NetBSD: patch-az,v 1.2 2006/10/14 19:33:45 schwarz Exp $
  
  static int
  order_subj_date(article_header ** ah1, article_header ** ah2)
+@@ -113,9 +137,9 @@ order_subj_date(article_header ** ah1, a
+     for (len = subject_match_limit; --len >= 0; a++, b++) {
+ #endif
+ 
+-	while ((ca = *a) && MATCH_DROP(match_subject, ((int8) ca)))
++	while ((ca = *a) && MATCH_DROP(match_subject, ((int8)((unsigned char) ca))))
+ 	    a++;
+-	while ((cb = *b) && MATCH_DROP(match_subject, ((int8) cb)))
++	while ((cb = *b) && MATCH_DROP(match_subject, ((int8)((unsigned char) cb))))
+ 	    b++;
+ 
+ 	if (ca == NUL) {
+@@ -212,9 +236,9 @@ article_equal(article_header ** ah1, art
+ 	}
+     }
+     for (len = 0;; len++, a++, b++) {
+-	while (*a && MATCH_DROP(match_subject, (int8) * a))
++	while (*a && MATCH_DROP(match_subject, (int8)((unsigned char) *a)))
+ 	    a++;
+-	while (*b && MATCH_DROP(match_subject, (int8) * b))
++	while (*b && MATCH_DROP(match_subject, (int8)((unsigned char) *b)))
+ 	    b++;
+ 
+ 	if (*a == NUL) {
+@@ -233,7 +257,7 @@ article_equal(article_header ** ah1, art
+ 	    if (len >= subject_match_limit)
+ 		return A_ALMOST_SAME;
+ 	    if (len >= match_parts_begin && match_parts_equal &&
+-		isdigit(*a) && isdigit(*b))
++		ISDIGIT(*a) && ISDIGIT(*b))
+ 		return A_ALMOST_SAME;
+ 	    return 0;
+ 	}
