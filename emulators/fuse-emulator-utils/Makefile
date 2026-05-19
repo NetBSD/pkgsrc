@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2026/03/26 13:35:20 adam Exp $
+# $NetBSD: Makefile,v 1.18 2026/05/19 12:58:38 adam Exp $
 
-DISTNAME=	fuse-utils-1.4.4
+DISTNAME=	fuse-utils-1.4.5
 PKGNAME=	${DISTNAME:S/fuse/fuse-emulator/}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fuse-emulator/}
@@ -10,9 +10,9 @@ HOMEPAGE=	https://fuse-emulator.sourceforge.net/
 COMMENT=	ZX Spectrum Emulator utilities
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		pkg-config
-GNU_CONFIGURE=		yes
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
+GNU_CONFIGURE=	yes
 
 .include "../../emulators/libspectrum/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
