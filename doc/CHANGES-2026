@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3115 2026/05/19 07:35:57 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3116 2026/05/19 11:27:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4766,3 +4766,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/xev to 1.2.7 [wiz 2026-05-19]
 	Updated math/py-numpy to 2.4.6 [adam 2026-05-19]
 	Updated devel/py-stevedore to 5.8.0 [adam 2026-05-19]
+	Updated net/libtorrent to 0.16.12 [adam 2026-05-19]
+	Updated net/rtorrent to 0.16.12 [adam 2026-05-19]
