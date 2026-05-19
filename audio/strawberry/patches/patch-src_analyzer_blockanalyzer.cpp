@@ -1,8 +1,8 @@
-$NetBSD: patch-src_analyzer_blockanalyzer.cpp,v 1.1 2022/04/25 15:19:48 tnn Exp $
+$NetBSD: patch-src_analyzer_blockanalyzer.cpp,v 1.2 2026/05/19 14:36:35 adam Exp $
 
-avoid ambiguous math functions
+Avoid ambiguous math functions.
 
---- src/analyzer/blockanalyzer.cpp.orig	2022-03-26 20:21:03.329168404 +0000
+--- src/analyzer/blockanalyzer.cpp.orig	2026-04-17 18:27:01.902890881 +0000
 +++ src/analyzer/blockanalyzer.cpp
 @@ -36,6 +36,8 @@
  #include "analyzerbase.h"
@@ -10,6 +10,6 @@ avoid ambiguous math functions
  
 +using std::log10;
 +
- const int BlockAnalyzer::kHeight = 2;
- const int BlockAnalyzer::kWidth = 4;
- const int BlockAnalyzer::kMinRows = 3;       // arbitrary
+ namespace {
+ constexpr int kHeight = 2;
+ constexpr int kWidth = 4;

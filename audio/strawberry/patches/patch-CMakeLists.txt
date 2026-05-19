@@ -1,20 +1,40 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2023/08/22 20:26:30 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2026/05/19 14:36:35 adam Exp $
 
 We don't need another packaging system.
+Don't make app bundle on Darwin.
 
---- CMakeLists.txt.orig	2023-06-29 17:49:42.000000000 +0000
+--- CMakeLists.txt.orig	2026-04-17 18:27:01.841352595 +0000
 +++ CMakeLists.txt
-@@ -28,13 +28,6 @@ if(CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
-   set(OPENBSD ON)
+@@ -26,12 +26,12 @@ if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+   set(LINUX ON)
  endif()
  
 -if(LINUX)
--  include(cmake/Rpm.cmake)
--  include(cmake/Deb.cmake)
--endif()
--if(APPLE)
--  include(cmake/Dmg.cmake)
--endif()
++if(FALSE)
+   include(cmake/Rpm.cmake)
+   include(cmake/Deb.cmake)
+ endif()
  
- set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
+-if(APPLE)
++if(FALSE)
+   include(cmake/Dmg.cmake)
+ endif()
+ 
+@@ -406,7 +406,7 @@ endif()
+ 
+ add_executable(strawberry)
+ 
+-if(APPLE)
++if(FALSE)
+   set_target_properties(strawberry PROPERTIES MACOSX_BUNDLE TRUE)
+   set_target_properties(strawberry PROPERTIES MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_BINARY_DIR}/dist/macos/Info.plist")
+ endif()
+@@ -1588,7 +1588,7 @@ endif()
+ 
+ target_link_libraries(strawberry PUBLIC strawberry_lib)
+ 
+-if(NOT APPLE)
++if(TRUE)
+   install(TARGETS strawberry RUNTIME DESTINATION bin)
+ endif()
  

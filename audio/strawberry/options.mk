@@ -1,35 +1,13 @@
-# $NetBSD: options.mk,v 1.3 2024/08/25 06:18:25 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2026/05/19 14:36:35 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.strawberry
 PKG_SUPPORTED_OPTIONS=		pulseaudio
-PKG_OPTIONS_OPTIONAL_GROUPS=	gui
-PKG_OPTIONS_GROUP.gui=		qt5 qt6
-PKG_SUGGESTED_OPTIONS=		qt5
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
-CMAKE_CONFIGURE_ARGS+=	-DLIBPULSE=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_PULSE=ON
 .  include "../../audio/pulseaudio/buildlink3.mk"
 .else
-CMAKE_CONFIGURE_ARGS+=	-DLIBPULSE=OFF
-.endif
-
-.if !empty(PKG_OPTIONS:Mqt5) || !empty(PKG_OPTIONS:Mqt6)
-.  if !empty(PKG_OPTIONS:Mqt5)
-TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
-CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_QT5=ON
-CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_QT6=OFF
-.    include "../../x11/qt5-qtbase/buildlink3.mk"
-.    if ${OPSYS} != "Darwin"
-.      include "../../x11/qt5-qtx11extras/buildlink3.mk"
-.    else
-.      include "../../x11/qt5-qtmacextras/buildlink3.mk"
-.    endif
-.  elif !empty(PKG_OPTIONS:Mqt6)
-TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
-CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_QT5=OFF
-CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_QT6=ON
-.    include "../../x11/qt6-qtbase/buildlink3.mk"
-.  endif
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_PULSE=OFF
 .endif
