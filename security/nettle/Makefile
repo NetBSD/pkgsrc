@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2026/05/14 16:29:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2026/05/19 09:47:11 jperkin Exp $
 
 DISTNAME=	nettle-4.0
 CATEGORIES=	security
@@ -18,6 +18,8 @@ GNU_CONFIGURE=		yes
 SET_LIBDIR=		yes
 CONFIGURE_ARGS+=	--disable-openssl
 CONFIGURE_ARGS+=	--disable-shared
+
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
 .include "../../mk/bsd.prefs.mk"
 
