@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.87 2026/05/07 18:50:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.88 2026/05/19 14:59:16 ktnb Exp $
 
-DISTNAME=	kitty-0.46.2
-PKGREVISION=	2
+DISTNAME=	kitty-0.47.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kovidgoyal/}
 GITHUB_PROJECT=	kitty
@@ -44,10 +43,10 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 PY_PATCHPLIST=			yes
 
 SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=		pre-configure
+SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	Point to pkgsrc fonts always
 SUBST_FILES.prefix+=	setup.py
-SUBST_VARS.prefix+=		PREFIX
+SUBST_VARS.prefix+=	PREFIX
 
 
 .include "../../mk/bsd.prefs.mk"
