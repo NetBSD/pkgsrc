@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2026/03/26 13:34:39 adam Exp $
+# $NetBSD: Makefile,v 1.68 2026/05/19 12:58:01 adam Exp $
 
-DISTNAME=	fuse-1.7.0
+DISTNAME=	fuse-1.8.0
 PKGNAME=	${DISTNAME:S/fuse/fuse-emulator/}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fuse-emulator/}
@@ -10,11 +10,11 @@ HOMEPAGE=	https://fuse-emulator.sourceforge.net/
 COMMENT=	ZX Spectrum Emulator
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		perl pkg-config
-GNU_CONFIGURE=		yes
+USE_TOOLS+=	gmake perl pkg-config
+GNU_CONFIGURE=	yes
 
-CPPFLAGS+=		-DDEVOSSAUDIO=\"${DEVOSSAUDIO}\"
-LIBS+=			${LIBOSSAUDIO}
+CPPFLAGS+=	-DDEVOSSAUDIO=\"${DEVOSSAUDIO}\"
+LIBS+=		${LIBOSSAUDIO}
 
 .include "options.mk"
 
