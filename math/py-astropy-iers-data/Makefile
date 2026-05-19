@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2026/03/12 09:38:40 adam Exp $
+# $NetBSD: Makefile,v 1.19 2026/05/19 05:20:24 adam Exp $
 
-DISTNAME=	astropy_iers_data-0.2026.3.9.0.47.45
+DISTNAME=	astropy_iers_data-0.2026.5.18.1.11.28
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astropy-iers-data/}
