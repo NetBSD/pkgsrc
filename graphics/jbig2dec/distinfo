@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.15 2023/10/19 14:46:00 wiz Exp $
+$NetBSD: distinfo,v 1.16 2026/05/19 09:25:21 jperkin Exp $
 
 BLAKE2s (jbig2dec-0.20.tar.gz) = 1e06a46c7e4586385f4f96a6e8edb0f1f45c2c0630b287211ec388e4d79d1b4a
 SHA512 (jbig2dec-0.20.tar.gz) = 8b8a28b93b23e4284ca229e6c8935fd161ce5c597f7470a46ec06a3241d0ac23cf921aecdd4e0c1bd3c904591409054236f2ce25b6d8ae40db742559c7f4dbe9
 Size (jbig2dec-0.20.tar.gz) = 149782 bytes
+SHA1 (patch-getopt.h) = a557943ef1055f241842603ab04dfde2f31d3255
