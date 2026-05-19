@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3131 2026/05/19 18:16:57 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3132 2026/05/19 19:13:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4793,3 +4793,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/py-mail-parser to 4.2.1 [adam 2026-05-19]
 	Updated shells/dash to 0.5.13.4 [adam 2026-05-19]
 	Updated security/adguardhome to 0.107.75 [adam 2026-05-19]
+	Updated devel/bacon to 3.23.0 [pin 2026-05-19]
