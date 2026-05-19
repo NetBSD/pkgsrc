@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3120 2026/05/19 13:09:20 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3121 2026/05/19 13:16:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4777,3 +4777,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/fuse-emulator-utils to 1.4.5 [adam 2026-05-19]
 	Updated devel/py-click to 8.4.0 [adam 2026-05-19]
 	Updated devel/py-rich-click to 1.9.7 [adam 2026-05-19]
+	Updated textproc/py-black to 26.5.1 [adam 2026-05-19]
+	Updated converters/py-bidi to 0.6.10 [adam 2026-05-19]
