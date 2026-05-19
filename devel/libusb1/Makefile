@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2025/06/02 07:24:45 adam Exp $
+# $NetBSD: Makefile,v 1.37 2026/05/19 13:30:19 adam Exp $
 
-DISTNAME=	libusb-1.0.29
+DISTNAME=	libusb-1.0.30
 PKGNAME=	${DISTNAME:S/libusb/libusb1/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libusb/}
@@ -19,19 +19,11 @@ NOT_FOR_PLATFORM=	DragonFly-*-*
 
 USE_CC_FEATURES=	c11
 
-GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	autoconf automake autoreconf
-USE_TOOLS+=	pkg-config
-MAKE_JOBS_SAFE=	no
+USE_TOOLS+=	autoconf automake autoreconf pkg-config
+GNU_CONFIGURE=	yes
 
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-# Uses undefined behaviour
-BUILDLINK_TRANSFORM+=	opt:-O2:-O1
-CFLAGS+=		-fno-strict-aliasing
-.endif
-
+.include "../../mk/bsd.prefs.mk"
 # XXX should be only illumos
 .if ${OPSYS} == "SunOS" && ${OPSYS_VERSION} >= 051100
 LDFLAGS+=	-lnvpair
