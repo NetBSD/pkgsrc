@@ -1,8 +1,67 @@
-$NetBSD: patch-au,v 1.3 2006/10/14 19:33:45 schwarz Exp $
+$NetBSD: patch-au,v 1.4 2026/05/19 18:38:11 spz Exp $
 
---- news.c.orig	2005-04-20 01:56:27.000000000 +0200
-+++ news.c	2006-10-14 20:30:52.000000000 +0200
-@@ -255,7 +255,7 @@
+deal with ctype functions faulting on invalid input on NetBSD 11
+
+use long instead of off_t
+
+--- news.c.orig	2005-04-19 23:56:27.000000000 +0000
++++ news.c
+@@ -6,7 +6,7 @@
+  */
+ 
+ #include <stdlib.h>
+-#include <ctype.h>
++#include "ctypeconv.h"
+ #include "config.h"
+ #include "global.h"
+ #include "digest.h"
+@@ -65,11 +65,11 @@ parse_header(FILE * f, char **(*hdr_fiel
+ 	if (date_only && *bp != 'D')
+ 	    fptr = NULL;
+ 	else if ((fptr = (*hdr_field) (bp, all))) {
+-	    while (*bp && *bp != ':' && isascii(*bp) && !isspace(*bp))
++	    while (*bp && *bp != ':' && ISASCII(*bp) && !ISSPACE(*bp))
+ 		bp++;
+ 	    if (*bp)
+ 		bp++;
+-	    while (*bp && isascii(*bp) && isspace(*bp) && *bp != NL)
++	    while (*bp && ISASCII(*bp) && ISSPACE(*bp) && *bp != NL)
+ 		bp++;
+ 	    *fptr = bp;
+ 	}
+@@ -77,11 +77,11 @@ parse_header(FILE * f, char **(*hdr_fiel
+ #ifdef NO_HEADER_SEPARATION_HACK
+ 	else {
+ 	    for (cp = bp; *cp && *cp != ':'; cp++) {
+-		if (!isascii(*cp))
++		if (!ISASCII(*cp))
+ 		    break;
+ 		if (*cp == '_' || *cp == '-')
+ 		    continue;
+-		if (isalnum(*cp))
++		if (ISALNUM(*cp))
+ 		    continue;
+ 		break;
+ 	    }
+@@ -103,7 +103,7 @@ parse_header(FILE * f, char **(*hdr_fiel
+ 	while (*bp) {		/* look for continued lines */
+ 	    cp = bp + 1;
+ 
+-	    if (!(*cp && isascii(*cp) && isspace(*cp) && *cp != NL)) {
++	    if (!(*cp && ISASCII(*cp) && ISSPACE(*cp) && *cp != NL)) {
+ 		/* next line is empty or not indented */
+ 		*bp++ = NUL;
+ 		break;
+@@ -123,7 +123,7 @@ art_hdr_field(register char *lp, int all
+ {
+ 
+ #define check(name, lgt, field) \
+-    if (isascii(lp[lgt]) && isspace(lp[lgt]) \
++    if (ISASCII(lp[lgt]) && ISSPACE(lp[lgt]) \
+ 	&& strncasecmp(name, lp, lgt) == 0)\
+ 	return &news.field
+ 
+@@ -255,7 +255,7 @@ open_news_article(article_header * art, 
  
  #ifndef DONT_COUNT_LINES
      int             c;
@@ -11,7 +70,7 @@ $NetBSD: patch-au,v 1.3 2006/10/14 19:33:45 schwarz Exp $
  #endif				/* DONT_COUNT_LINES */
  
  #ifdef NNTP
-@@ -301,9 +301,9 @@
+@@ -301,9 +301,9 @@ open_news_article(article_header * art, 
  	if (fstat(fileno(f), &statb) < 0 ||
  
  #ifdef NOV

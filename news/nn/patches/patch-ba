@@ -1,7 +1,20 @@
-$NetBSD: patch-ba,v 1.5 2006/10/15 16:43:37 schwarz Exp $
+$NetBSD: patch-ba,v 1.6 2026/05/19 18:38:11 spz Exp $
 
---- term.c.orig	2005-06-29 23:40:27.000000000 +0200
-+++ term.c	2006-10-15 15:22:58.000000000 +0200
+deal with ctype functions faulting on invalid input on NetBSD 11
+
+add more OS variance handling
+
+--- term.c.orig	2005-06-29 21:40:27.000000000 +0000
++++ term.c
+@@ -14,7 +14,7 @@
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ #include <string.h>
+-#include <ctype.h>
++#include "ctypeconv.h"
+ #include "config.h"
+ #include "global.h"
+ #include "execute.h"
 @@ -25,7 +25,7 @@
  #include "regexp.h"
  #include "nn_term.h"
@@ -11,7 +24,7 @@ $NetBSD: patch-ba,v 1.5 2006/10/15 16:43:37 schwarz Exp $
  #include <stropts.h>
  #else
  #include <sys/ioctl.h>
-@@ -60,7 +60,7 @@
+@@ -60,7 +60,7 @@ extern int      s_resized;
  #else
  #define USE_TERMCAP
  
@@ -20,7 +33,7 @@ $NetBSD: patch-ba,v 1.5 2006/10/15 16:43:37 schwarz Exp $
  #include <termcap.h>
  #endif				/* SUNOS4 */
  
-@@ -74,9 +74,9 @@
+@@ -74,9 +74,9 @@ extern int      s_resized;
  
  #else
  
@@ -32,7 +45,7 @@ $NetBSD: patch-ba,v 1.5 2006/10/15 16:43:37 schwarz Exp $
  
  #endif
  
-@@ -456,6 +456,12 @@
+@@ -456,6 +456,12 @@ siginterrupt(signo, on)
  #endif				/* FAKE_INTERRUPT */
  
  static unsigned sp_table[] = {
