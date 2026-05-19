@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:19:56 nia Exp $
+$NetBSD: distinfo,v 1.9 2026/05/19 14:17:41 adam Exp $
 
-BLAKE2s (sparsehash-2.0.3.tar.gz) = 0938dd27794eff723c00f393a4549c540f074712794662b48e9380da56483b54
-SHA512 (sparsehash-2.0.3.tar.gz) = bb00d0acb8eba65f7da8015ea4f6bebf8bba36ed6777881960ee215f22b7be17b069c59838d210551ce67a34baccfc7b2fed603677ec53c0c32714d8e76f5d6c
-Size (sparsehash-2.0.3.tar.gz) = 322046 bytes
+BLAKE2s (sparsehash-2.0.4.tar.gz) = f681b744fc8f53df4bdc8ffc4ca3f54c089a69d97bfc8baf56c1b893779e8b26
+SHA512 (sparsehash-2.0.4.tar.gz) = 40c007bc5814dd5f2bdacd5ec884bc5424f7126f182d4c7b34371f88b674456fc193b947fdd283dbd0c7eb044d8f06baf8caec6c93e73b1b587282b9026ea877
+Size (sparsehash-2.0.4.tar.gz) = 323154 bytes
