@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/19 14:32:28 adam Exp $
+
+BLAKE2s (KDSingleApplication-1.2.1.tar.gz) = cb6f6eb8a0bc33550382787c7f8e89deee7352d20850d5e80c71e53e6bd760f1
+SHA512 (KDSingleApplication-1.2.1.tar.gz) = 7c8aa168a3183805f6fc5a4e5675527f9c14de0b7c0924333c8cc29b092000d35ed46044c4b8f4b2e68ee59e64fcb4ae04df83f4899ffa5128f8871eb3929a25
+Size (KDSingleApplication-1.2.1.tar.gz) = 87731 bytes
