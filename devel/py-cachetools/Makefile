@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2026/05/17 08:57:21 adam Exp $
+# $NetBSD: Makefile,v 1.37 2026/05/19 05:00:18 adam Exp $
 
-DISTNAME=	cachetools-7.1.2
+DISTNAME=	cachetools-7.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cachetools/}
@@ -11,6 +11,7 @@ COMMENT=	Extensible memoizing collections and decorators
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8.2:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	# none
 
