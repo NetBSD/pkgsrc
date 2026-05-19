@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3122 2026/05/19 13:32:45 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3123 2026/05/19 14:25:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4781,3 +4781,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/py-bidi to 0.6.10 [adam 2026-05-19]
 	Updated devel/libusb1 to 1.0.30 [adam 2026-05-19]
 	Updated devel/libmtp to 1.1.23 [adam 2026-05-19]
+	Updated devel/sparsehash to 2.0.4 [adam 2026-05-19]
