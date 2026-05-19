@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.37 2026/05/17 15:52:32 wiz Exp $
+$NetBSD: distinfo,v 1.38 2026/05/19 13:13:12 adam Exp $
 
-BLAKE2s (black-26.5.0.tar.gz) = ec81ba1c3d44d7647c15190417e8a79dbd46c284d251f009f729e3845431b87e
-SHA512 (black-26.5.0.tar.gz) = 8477c4cb87c25056772b636b4e5aba38821812ef5a746438a3dbd1de72e37af5e03372389db20aa45678ed560bc8f61ae7c0e3f28c86d14b6ad0ef3956cccaa0
-Size (black-26.5.0.tar.gz) = 677762 bytes
+BLAKE2s (black-26.5.1.tar.gz) = aec3cc8d7f395b282cca533714c053aed349886554fc51793660424751d9876e
+SHA512 (black-26.5.1.tar.gz) = 8e17234aeffb5f7a66f1d9d9e2672796ec8ef0c660a3a8c0668061632591aee626a5f8a1a5210900c154ef2ae63919a690512e2d8fe789ac6bcf5d6eaaa055f0
+Size (black-26.5.1.tar.gz) = 679439 bytes
