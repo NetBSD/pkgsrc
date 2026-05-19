@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/08/19 12:22:40 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/05/19 17:52:56 adam Exp $
 
-DISTNAME=	mail_parser-4.1.4
+DISTNAME=	mail_parser-4.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mail-parser/}
@@ -10,16 +10,13 @@ HOMEPAGE=	https://github.com/SpamScope/mail-parser
 COMMENT=	Wrapper for email standard library
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-six>0:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>0:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>0:../../devel/py-test-mock
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=6.0.0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.14.0:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} mail-parser mail-parser-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	mail-parser
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/14 09:56:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/05/19 17:52:56 adam Exp $
 bin/mail-parser-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -6,7 +6,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/NOTICE.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/mailparser/__init__.py
 ${PYSITELIB}/mailparser/__init__.pyc
 ${PYSITELIB}/mailparser/__init__.pyo
