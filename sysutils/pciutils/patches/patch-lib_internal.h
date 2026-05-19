@@ -1,24 +1,15 @@
-$NetBSD: patch-lib_internal.h,v 1.8 2026/05/06 09:27:01 pin Exp $
+$NetBSD: patch-lib_internal.h,v 1.9 2026/05/19 08:41:36 jperkin Exp $
 
-No symbol versioning available on SunOS.
+Fix symbol versioning on illumos.
 
---- lib/internal.h.orig	2026-05-06 05:05:48.454312571 +0000
+--- lib/internal.h.orig	2026-04-05 18:16:44.000000000 +0000
 +++ lib/internal.h
-@@ -23,6 +23,17 @@
+@@ -19,7 +19,7 @@
+ // mechanism, have to be declared as VERSIONED. Otherwise, GCC with global
+ // optimizations is happy to optimize them away, leading to linker failures.
+ #define VERSIONED_ABI __attribute__((used)) PCI_ABI
+-#ifdef __APPLE__
++#if defined(__APPLE__) || defined(__illumos__)
  #define STATIC_ALIAS(_decl, _for) VERSIONED_ABI _decl { return _for; }
  #define DEFINE_ALIAS(_decl, _for)
  #define SYMBOL_VERSION(_int, _ext)
-+#elif defined(__sun__)
-+#define STATIC_ALIAS(_decl, _for)
-+#define DEFINE_ALIAS(_decl, _for)
-+#define SYMBOL_VERSION(_int, _ext)
-+#define pci_fill_info_v313 pci_fill_info
-+#define pci_filter_init_v38 pci_filter_init
-+#define pci_fill_info_v38 pci_fill_info
-+#define pci_init_v35 pci_init
-+#define pci_filter_parse_slot_v38 pci_filter_parse_slot
-+#define pci_filter_parse_id_v38 pci_filter_parse_id
-+#define pci_filter_match_v38 pci_filter_match
- #else
- #define DEFINE_ALIAS(_decl, _for) extern _decl __attribute__((alias(#_for))) VERSIONED_ABI
- #ifdef _WIN32
