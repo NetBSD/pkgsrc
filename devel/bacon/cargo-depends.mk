@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.35 2026/01/17 20:56:29 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.36 2026/05/19 19:12:48 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -170,8 +170,8 @@ CARGO_CRATE_DEPENDS+=	jni-sys-0.3.0
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.83
 CARGO_CRATE_DEPENDS+=	kqueue-1.1.1
 CARGO_CRATE_DEPENDS+=	kqueue-sys-1.0.4
-CARGO_CRATE_DEPENDS+=	lazy-regex-3.5.1
-CARGO_CRATE_DEPENDS+=	lazy-regex-proc_macros-3.5.1
+CARGO_CRATE_DEPENDS+=	lazy-regex-3.6.0
+CARGO_CRATE_DEPENDS+=	lazy-regex-proc_macros-3.6.0
 CARGO_CRATE_DEPENDS+=	lazy_static-1.5.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.180
 CARGO_CRATE_DEPENDS+=	libredox-0.1.12
@@ -218,6 +218,7 @@ CARGO_CRATE_DEPENDS+=	parking_lot-0.12.5
 CARGO_CRATE_DEPENDS+=	parking_lot_core-0.9.12
 CARGO_CRATE_DEPENDS+=	paste-1.0.15
 CARGO_CRATE_DEPENDS+=	percent-encoding-2.3.2
+CARGO_CRATE_DEPENDS+=	pin-project-lite-0.2.17
 CARGO_CRATE_DEPENDS+=	pkg-config-0.3.32
 CARGO_CRATE_DEPENDS+=	portable-atomic-1.13.0
 CARGO_CRATE_DEPENDS+=	portable-atomic-util-0.2.4
@@ -284,6 +285,9 @@ CARGO_CRATE_DEPENDS+=	toml_datetime-0.7.5+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	toml_edit-0.23.10+spec-1.0.0
 CARGO_CRATE_DEPENDS+=	toml_parser-1.0.6+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	toml_writer-1.0.6+spec-1.1.0
+CARGO_CRATE_DEPENDS+=	tracing-0.1.44
+CARGO_CRATE_DEPENDS+=	tracing-attributes-0.1.31
+CARGO_CRATE_DEPENDS+=	tracing-core-0.1.36
 CARGO_CRATE_DEPENDS+=	typenum-1.19.0
 CARGO_CRATE_DEPENDS+=	unicode-bom-2.0.3
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.22
