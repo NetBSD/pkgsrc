@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/05/11 06:23:49 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/05/19 13:14:23 adam Exp $
 
-DISTNAME=	python_bidi-0.6.9
+DISTNAME=	python_bidi-0.6.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python_//}
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-bidi/}
