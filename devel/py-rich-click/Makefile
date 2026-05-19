@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2025/12/26 16:38:09 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/05/19 13:09:02 adam Exp $
 
-DISTNAME=	rich_click-1.9.5
+DISTNAME=	rich_click-1.9.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rich-click/}
@@ -21,9 +21,7 @@ USE_LANGUAGES=	# none
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4:../../devel/py-typing-extensions
 .endif
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} rich-click rich-click-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	rich-click
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
