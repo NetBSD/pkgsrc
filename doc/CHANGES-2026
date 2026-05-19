@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3111 2026/05/18 21:23:40 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3112 2026/05/19 05:00:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4757,3 +4757,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/vim-share to 9.2.0496 [sh 2026-05-18]
 	Updated net/tailscale to 1.98.2 [ktnb 2026-05-18]
 	Updated lang/python314 to 3.14.5nb1 [wiz 2026-05-18]
+	Updated textproc/py-lxml to 6.1.1 [adam 2026-05-19]
+	Updated www/py-uritools to 6.1.1 [adam 2026-05-19]
+	Updated devel/py-setuptools-gettext to 0.1.17 [adam 2026-05-19]
+	Updated devel/py-cachetools to 7.1.3 [adam 2026-05-19]
