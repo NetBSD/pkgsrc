@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2016/04/09 10:09:14 richard Exp $
+# $NetBSD: options.mk,v 1.2 2026/05/19 13:32:22 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libmtp
 PKG_SUPPORTED_OPTIONS=	mtpz
-PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
