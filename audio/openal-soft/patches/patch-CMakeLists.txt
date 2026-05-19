@@ -1,5 +1,6 @@
-$NetBSD: patch-CMakeLists.txt,v 1.10 2026/01/20 13:47:49 kikadf Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.11 2026/05/19 05:18:45 adam Exp $
 
+Silence "error: attribute 'nonblocking' should not be added".
 Disable libsndfile.
 Fix ld error on NetBSD<11:
 [ 97%] Linking CXX shared library libopenal.so
@@ -7,9 +8,19 @@ Fix ld error on NetBSD<11:
 `alcCreateContext' can not be used when making a shared object
 /usr/bin/ld: final link failed: bad value
 
---- CMakeLists.txt.orig	2025-12-22 09:17:45.000000000 +0000
+--- CMakeLists.txt.orig	2026-05-12 02:21:07.000000000 +0000
 +++ CMakeLists.txt
-@@ -501,6 +501,9 @@ if(NOT LIBTYPE STREQUAL "STATIC")
+@@ -407,9 +407,6 @@ else()
+         list(APPEND C_FLAGS -Werror=undef -Werror=format-security
+             $<$<COMPILE_LANGUAGE:C>:-Werror=implicit -Werror=incompatible-pointer-types
+                 -Werror=int-conversion>)
+-        if(HAVE_WFUNCTION_EFFECTS)
+-            list(APPEND C_FLAGS $<$<COMPILE_LANGUAGE:CXX>:-Werror=function-effects>)
+-        endif()
+     endif()
+ 
+     # NOTE: This essentially provides the equivalent of the C++26 feature to
+@@ -506,6 +503,9 @@ if(NOT LIBTYPE STREQUAL "STATIC")
              set(CMAKE_C_VISIBILITY_PRESET hidden)
              set(CMAKE_CXX_VISIBILITY_PRESET hidden)
          endif()
@@ -17,23 +28,23 @@ Fix ld error on NetBSD<11:
 +            set(EXPORT_DECL "__attribute__((visibility(\"default\")))")
 +        endif()
  
-         set(CMAKE_REQUIRED_FLAGS "${OLD_REQUIRED_FLAGS}")
+         set(CMAKE_REQUIRED_FLAGS ${OLD_REQUIRED_FLAGS})
      endif()
-@@ -1910,7 +1913,7 @@ if(ALSOFT_UTILS)
-         set(EXTRA_INSTALLS ${EXTRA_INSTALLS} openal-info)
+@@ -2057,7 +2057,7 @@ if(ALSOFT_UTILS)
+         install(TARGETS openal-info)
      endif()
  
 -    if(SNDFILE_FOUND)
-+    if(SNDFILE_FOUND AND False)
++    if(FALSE)
          add_executable(uhjdecoder utils/uhjdecoder.cpp)
-         target_compile_definitions(uhjdecoder PRIVATE ${CPP_DEFS})
-         target_include_directories(uhjdecoder
-@@ -2050,7 +2053,7 @@ if(ALSOFT_EXAMPLES)
+         target_link_libraries(uhjdecoder PRIVATE alsoft::common SndFile::SndFile ${UNICODE_FLAG})
+         set_target_properties(uhjdecoder PROPERTIES ${ALSOFT_STD_VERSION_PROPS})
+@@ -2166,7 +2166,7 @@ if(ALSOFT_EXAMPLES)
  
      message(STATUS "Building example programs")
  
 -    if(SNDFILE_FOUND)
-+    if(SNDFILE_FOUND AND False)
++    if(FALSE)
          add_executable(alplay examples/alplay.c)
          target_link_libraries(alplay PRIVATE ${LINKER_FLAGS} SndFile::SndFile alsoft.excommon
              ${UNICODE_FLAG})

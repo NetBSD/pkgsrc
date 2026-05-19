@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2026/02/17 23:46:09 gutteridge Exp $
+# $NetBSD: Makefile,v 1.54 2026/05/19 05:18:45 adam Exp $
 
-DISTNAME=	openal-soft-1.25.1
+DISTNAME=	openal-soft-1.25.2
 CATEGORIES=	audio
 MASTER_SITES=	https://openal-soft.org/openal-releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -52,9 +52,6 @@ SUBST_SED.oss=		-e 's,/dev/dsp,${DEVOSSAUDIO},'
 .endif
 
 .include "options.mk"
-
-post-install:
-	${RM} ${DESTDIR}${PREFIX}/include/AL/al.h.orig
 
 .include "../../devel/cmake/build.mk"
 .include "../../audio/libmysofa/buildlink3.mk"
