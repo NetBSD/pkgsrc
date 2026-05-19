@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3114 2026/05/19 07:11:56 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3115 2026/05/19 07:35:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4764,3 +4764,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/openal-soft to 1.25.2 [adam 2026-05-19]
 	Updated math/py-astropy-iers-data to 0.2026.5.18.1.11.28 [adam 2026-05-19]
 	Updated x11/xev to 1.2.7 [wiz 2026-05-19]
+	Updated math/py-numpy to 2.4.6 [adam 2026-05-19]
+	Updated devel/py-stevedore to 5.8.0 [adam 2026-05-19]
