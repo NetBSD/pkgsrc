@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/05/05 14:09:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/05/19 14:58:52 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -421,6 +421,7 @@ ${RUBY_LIB}/bundler/templates/newgem/bin/setup.tt
 ${RUBY_LIB}/bundler/templates/newgem/circleci/config.yml.tt
 ${RUBY_LIB}/bundler/templates/newgem/exe/newgem.tt
 ${RUBY_LIB}/bundler/templates/newgem/ext/newgem/Cargo.toml.tt
+${RUBY_LIB}/bundler/templates/newgem/ext/newgem/build.rs.tt
 ${RUBY_LIB}/bundler/templates/newgem/ext/newgem/extconf-c.rb.tt
 ${RUBY_LIB}/bundler/templates/newgem/ext/newgem/extconf-go.rb.tt
 ${RUBY_LIB}/bundler/templates/newgem/ext/newgem/extconf-rust.rb.tt
@@ -430,6 +431,7 @@ ${RUBY_LIB}/bundler/templates/newgem/ext/newgem/newgem.c.tt
 ${RUBY_LIB}/bundler/templates/newgem/ext/newgem/newgem.go.tt
 ${RUBY_LIB}/bundler/templates/newgem/ext/newgem/newgem.h.tt
 ${RUBY_LIB}/bundler/templates/newgem/ext/newgem/src/lib.rs.tt
+${RUBY_LIB}/bundler/templates/newgem/github/workflows/build-gems.yml.tt
 ${RUBY_LIB}/bundler/templates/newgem/github/workflows/main.yml.tt
 ${RUBY_LIB}/bundler/templates/newgem/gitignore.tt
 ${RUBY_LIB}/bundler/templates/newgem/gitlab-ci.yml.tt

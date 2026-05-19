@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.7 2026/05/15 16:58:55 wiz Exp $
+$NetBSD: distinfo,v 1.8 2026/05/19 14:58:52 taca Exp $
 
-BLAKE2s (ruby-4.0.3.tar.xz) = 0d31978571c4c160cce72d1bab331681206800c6ec1fb61f63f9947c9d2186be
-SHA512 (ruby-4.0.3.tar.xz) = 5816fb264ce76df59f4bfe0cadceb45025fada2e61f2c14024d6b03f63d304820cddf94afcf82a4951fd12f3b0d9148683f856f3f2245d56042fc8407b6cbff5
-Size (ruby-4.0.3.tar.xz) = 17878572 bytes
+BLAKE2s (ruby-4.0.4.tar.xz) = a696d1728a4e9cc6ee48408c4a43046f181fd5e690a870ea416c5c3c3e2622a7
+SHA512 (ruby-4.0.4.tar.xz) = cccc041379fd4e46a736a5c10ccf81627766a7175113c34754797b915bebcd0ce821d9cd7b42cc616b0a1f9ee38eee5ab7560c1840fa6672819c293e498a3f6f
+Size (ruby-4.0.4.tar.xz) = 17899740 bytes
 SHA1 (patch-.bundle_gems_rdoc-7.0.3_lib_rdoc_encoding.rb) = e46514327db9c2fb7f6eccd9c8af52e85c6310cd
-SHA1 (patch-.bundle_gems_rdoc-7.0.3_lib_rdoc_generator_template_aliki___header.rhtml) = e8752b12058f5e71e31d696de65da9360dc5d12d
+SHA1 (patch-.bundle_gems_rdoc-7.0.3_lib_rdoc_parser_c.rb) = faca1639f7efde71ab297861667192cb6ddf41d6
 SHA1 (patch-common.mk) = c23eed58427b2fd4ba8fdb3692f609701a666c6d
 SHA1 (patch-configure) = ff1b1e659ddc7cb1d62a71e1447df55f1f7b07c2
 SHA1 (patch-include_ruby_internal_static__assert.h) = 7d5c3ae7ff674b9b34639924fcf08237164de9f8
