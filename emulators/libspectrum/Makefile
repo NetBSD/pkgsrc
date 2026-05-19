@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2026/03/26 13:33:48 adam Exp $
+# $NetBSD: Makefile,v 1.61 2026/05/19 12:56:44 adam Exp $
 
-DISTNAME=	libspectrum-1.6.0
+DISTNAME=	libspectrum-1.6.1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fuse-emulator/}
 
@@ -9,9 +9,9 @@ HOMEPAGE=	https://fuse-emulator.sourceforge.net/libspectrum.php
 COMMENT=	ZX Spectrum emulator file format library
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		gmake perl pkg-config
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
+USE_TOOLS+=	gmake perl pkg-config
+USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
 
 DOCDIR=			${PREFIX}/share/doc/libspectrum
 INSTALLATION_DIRS=	${DOCDIR}
