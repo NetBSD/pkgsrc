@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3121 2026/05/19 13:16:35 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3122 2026/05/19 13:32:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4779,3 +4779,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-rich-click to 1.9.7 [adam 2026-05-19]
 	Updated textproc/py-black to 26.5.1 [adam 2026-05-19]
 	Updated converters/py-bidi to 0.6.10 [adam 2026-05-19]
+	Updated devel/libusb1 to 1.0.30 [adam 2026-05-19]
+	Updated devel/libmtp to 1.1.23 [adam 2026-05-19]
