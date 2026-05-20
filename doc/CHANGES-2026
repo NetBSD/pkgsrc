@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3150 2026/05/20 12:46:50 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3151 2026/05/20 12:49:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4826,3 +4826,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/chess-tui to 2.7.0 [pin 2026-05-20]
 	Updated news/eilmeldung to 1.5.3 [pin 2026-05-20]
 	Updated graphics/feh to 3.12.2 [pin 2026-05-20]
+	Updated www/py-scrapy to 2.16.0 [adam 2026-05-20]
+	Updated lang/py-findpython to 0.8.0 [adam 2026-05-20]
