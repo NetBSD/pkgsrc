@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2026/04/30 12:27:26 adam Exp $
+# $NetBSD: Makefile,v 1.40 2026/05/20 12:47:09 adam Exp $
 
-DISTNAME=	scrapy-2.15.2
+DISTNAME=	scrapy-2.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Scrapy/}
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-parsel>=1.5.0:../../www/py-parsel
 DEPENDS+=	${PYPKGPREFIX}-protego>=0.1.15:../../www/py-protego
 DEPENDS+=	${PYPKGPREFIX}-pydispatcher>=2.0.5:../../devel/py-pydispatcher
 DEPENDS+=	${PYPKGPREFIX}-queuelib>=1.4.2:../../devel/py-queuelib
-DEPENDS+=	${PYPKGPREFIX}-service_identity>=18.1.0:../../security/py-service_identity
+DEPENDS+=	${PYPKGPREFIX}-service_identity>=23.1.0:../../security/py-service_identity
 DEPENDS+=	${PYPKGPREFIX}-tldextract-[0-9]*:../../net/py-tldextract
 DEPENDS+=	${PYPKGPREFIX}-twisted>=21.7.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-w3lib>=1.17.0:../../www/py-w3lib
