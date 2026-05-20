@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3144 2026/05/20 09:43:20 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3145 2026/05/20 10:00:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4815,3 +4815,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-bitstring to 4.4.0 [adam 2026-05-20]
 	Updated devel/py-greenlet to 3.5.0 [adam 2026-05-20]
 	Updated devel/py-setuptools-gettext to 0.1.18 [adam 2026-05-20]
+	Updated www/py-django-polymorphic to 4.11.3 [adam 2026-05-20]
+	Updated www/py-django-import-export to 4.4.1 [adam 2026-05-20]
+	Updated www/py-django-modelcluster to 6.5 [adam 2026-05-20]
+	Updated www/py-django-formtools to 2.6.1 [adam 2026-05-20]
