@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3139 2026/05/20 05:27:57 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3140 2026/05/20 06:01:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4805,3 +4805,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/ghostscript-agpl to 10.07.1 [adam 2026-05-20]
 	Updated fonts/ghostscript-cidfonts-ryumin to 10.07.1 [adam 2026-05-20]
 	Updated net/dhcpcd to 10.3.2 [adam 2026-05-20]
+	Updated devel/py-syrupy to 5.2.0 [adam 2026-05-20]
+	Updated graphics/py-strich to 0.14 [adam 2026-05-20]
