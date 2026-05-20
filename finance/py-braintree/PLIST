@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2026/02/15 12:59:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.34 2026/05/20 11:32:54 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -268,9 +268,15 @@ ${PYSITELIB}/braintree/graphql/enums/recommended_payment_option.pyo
 ${PYSITELIB}/braintree/graphql/inputs/__init__.py
 ${PYSITELIB}/braintree/graphql/inputs/__init__.pyc
 ${PYSITELIB}/braintree/graphql/inputs/__init__.pyo
+${PYSITELIB}/braintree/graphql/inputs/billing_address_input.py
+${PYSITELIB}/braintree/graphql/inputs/billing_address_input.pyc
+${PYSITELIB}/braintree/graphql/inputs/billing_address_input.pyo
 ${PYSITELIB}/braintree/graphql/inputs/create_customer_session_input.py
 ${PYSITELIB}/braintree/graphql/inputs/create_customer_session_input.pyc
 ${PYSITELIB}/braintree/graphql/inputs/create_customer_session_input.pyo
+${PYSITELIB}/braintree/graphql/inputs/create_local_payment_context_input.py
+${PYSITELIB}/braintree/graphql/inputs/create_local_payment_context_input.pyc
+${PYSITELIB}/braintree/graphql/inputs/create_local_payment_context_input.pyo
 ${PYSITELIB}/braintree/graphql/inputs/customer_recommendations_input.py
 ${PYSITELIB}/braintree/graphql/inputs/customer_recommendations_input.pyc
 ${PYSITELIB}/braintree/graphql/inputs/customer_recommendations_input.pyo
@@ -280,6 +286,9 @@ ${PYSITELIB}/braintree/graphql/inputs/customer_session_input.pyo
 ${PYSITELIB}/braintree/graphql/inputs/monetary_amount_input.py
 ${PYSITELIB}/braintree/graphql/inputs/monetary_amount_input.pyc
 ${PYSITELIB}/braintree/graphql/inputs/monetary_amount_input.pyo
+${PYSITELIB}/braintree/graphql/inputs/payer_info_input.py
+${PYSITELIB}/braintree/graphql/inputs/payer_info_input.pyc
+${PYSITELIB}/braintree/graphql/inputs/payer_info_input.pyo
 ${PYSITELIB}/braintree/graphql/inputs/paypal_payee_input.py
 ${PYSITELIB}/braintree/graphql/inputs/paypal_payee_input.pyc
 ${PYSITELIB}/braintree/graphql/inputs/paypal_payee_input.pyo
@@ -289,6 +298,9 @@ ${PYSITELIB}/braintree/graphql/inputs/paypal_purchase_unit_input.pyo
 ${PYSITELIB}/braintree/graphql/inputs/phone_input.py
 ${PYSITELIB}/braintree/graphql/inputs/phone_input.pyc
 ${PYSITELIB}/braintree/graphql/inputs/phone_input.pyo
+${PYSITELIB}/braintree/graphql/inputs/shipping_address_input.py
+${PYSITELIB}/braintree/graphql/inputs/shipping_address_input.pyc
+${PYSITELIB}/braintree/graphql/inputs/shipping_address_input.pyo
 ${PYSITELIB}/braintree/graphql/inputs/update_customer_session_input.py
 ${PYSITELIB}/braintree/graphql/inputs/update_customer_session_input.pyc
 ${PYSITELIB}/braintree/graphql/inputs/update_customer_session_input.pyo
@@ -325,6 +337,12 @@ ${PYSITELIB}/braintree/local_payment.pyo
 ${PYSITELIB}/braintree/local_payment_completed.py
 ${PYSITELIB}/braintree/local_payment_completed.pyc
 ${PYSITELIB}/braintree/local_payment_completed.pyo
+${PYSITELIB}/braintree/local_payment_context.py
+${PYSITELIB}/braintree/local_payment_context.pyc
+${PYSITELIB}/braintree/local_payment_context.pyo
+${PYSITELIB}/braintree/local_payment_context_gateway.py
+${PYSITELIB}/braintree/local_payment_context_gateway.pyc
+${PYSITELIB}/braintree/local_payment_context_gateway.pyo
 ${PYSITELIB}/braintree/local_payment_expired.py
 ${PYSITELIB}/braintree/local_payment_expired.pyc
 ${PYSITELIB}/braintree/local_payment_expired.pyo
@@ -334,6 +352,9 @@ ${PYSITELIB}/braintree/local_payment_funded.pyo
 ${PYSITELIB}/braintree/local_payment_reversed.py
 ${PYSITELIB}/braintree/local_payment_reversed.pyc
 ${PYSITELIB}/braintree/local_payment_reversed.pyo
+${PYSITELIB}/braintree/local_payment_type.py
+${PYSITELIB}/braintree/local_payment_type.pyc
+${PYSITELIB}/braintree/local_payment_type.pyo
 ${PYSITELIB}/braintree/masterpass_card.py
 ${PYSITELIB}/braintree/masterpass_card.pyc
 ${PYSITELIB}/braintree/masterpass_card.pyo
