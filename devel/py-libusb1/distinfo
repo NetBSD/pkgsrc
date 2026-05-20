@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2025/04/12 11:27:07 adam Exp $
+$NetBSD: distinfo,v 1.10 2026/05/20 06:20:23 adam Exp $
 
-BLAKE2s (libusb1-3.3.1.tar.gz) = d7f30c24eb9cfc73144c701619a042b14947ff4064de3678bccf62931e983b9c
-SHA512 (libusb1-3.3.1.tar.gz) = a565130a81751b5927bb5c9023e3236314bbf9fbc5c3bbdd7ae21f45197bb545ad189af034e9f187ffe626659d2bf65a5ecb9d323c99837fbae0a7ff0dac99ce
-Size (libusb1-3.3.1.tar.gz) = 107600 bytes
+BLAKE2s (libusb1-3.4.0.tar.gz) = 97d00b525aa26a9992a757d0dcb245f32904c1ad3258a48363f3aa369f336981
+SHA512 (libusb1-3.4.0.tar.gz) = d8a66a08f9737aa071d083efa7a41d52093e5efe7997e29df84552a70b201e034b16c8646f1647128092b8d6063a7ad020b1a49ad3f895cd2c102d76e3268bc8
+Size (libusb1-3.4.0.tar.gz) = 91206 bytes
