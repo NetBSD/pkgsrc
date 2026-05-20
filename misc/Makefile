@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.680 2026/05/20 07:58:33 adam Exp $
+# $NetBSD: Makefile,v 1.681 2026/05/20 14:22:02 pin Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -422,6 +422,7 @@ SUBDIR+=	xygrib
 SUBDIR+=	xygrib-devel
 SUBDIR+=	yelp3
 SUBDIR+=	yrolo
+SUBDIR+=	zellij
 SUBDIR+=	zorro
 SUBDIR+=	zyGrib
 SUBDIR+=	zyGrib-maps
