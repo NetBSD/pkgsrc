@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.679 2026/05/19 14:32:28 adam Exp $
+# $NetBSD: Makefile,v 1.680 2026/05/20 07:58:33 adam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -305,6 +305,7 @@ SUBDIR+=	py-platformdirs
 SUBDIR+=	py-shellingham
 SUBDIR+=	py-sniffio
 SUBDIR+=	py-stdnum
+SUBDIR+=	py-tibs
 SUBDIR+=	py-tmuxp
 SUBDIR+=	py-tqdm
 SUBDIR+=	py-trove-classifiers
