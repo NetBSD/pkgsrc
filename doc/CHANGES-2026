@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3157 2026/05/20 14:16:08 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3158 2026/05/20 14:17:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4836,3 +4836,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated parallel/py-ipyparallel to 9.2.0 [adam 2026-05-20]
 	Updated textproc/inlyne to 0.5.2 [pin 2026-05-20]
 	Updated devel/mise to 2026.5.12 [pin 2026-05-20]
+	Updated textproc/rumdl to 0.1.95 [pin 2026-05-20]
