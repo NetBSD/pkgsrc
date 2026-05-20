@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2025/04/10 19:36:03 pin Exp $
+# $NetBSD: Makefile,v 1.16 2026/05/20 12:49:13 pin Exp $
 
-DISTNAME=	inlyne-0.5.0
+DISTNAME=	inlyne-0.5.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Inlyne-Project/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/Inlyne-Project/inlyne
 COMMENT=	GPU powered, browserless, markdown and html viewer
 LICENSE=	mit
@@ -17,7 +17,7 @@ TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.81.0
+RUST_REQ=	1.88.0
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config
 
