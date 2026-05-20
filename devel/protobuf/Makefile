@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2026/04/16 09:56:13 adam Exp $
+# $NetBSD: Makefile,v 1.105 2026/05/20 09:31:34 jperkin Exp $
 #
 # When updating this, please also update devel/py-protobuf.
 #
@@ -31,6 +31,11 @@ CMAKE_CONFIGURE_ARGS+=	-Dprotobuf_ABSL_PROVIDER=package
 CMAKE_CONFIGURE_ARGS+=	-Dprotobuf_BUILD_SHARED_LIBS=ON
 # requires googletest to be checked out in third_party/googletest
 CMAKE_CONFIGURE_ARGS+=	-Dprotobuf_BUILD_TESTS=OFF
+
+# illumos ld.so lazy PLT binding can invoke .init_array mid-init, re-entering
+# a __cxa_guard-protected singleton and deadlocking.  protobuf generates these
+# in .pb.cc files, so force BIND_NOW to resolve all PLT entries before init.
+LDFLAGS.SunOS+=		-Wl,-z,now
 
 # the [[ command will skip a test that would otherwise run
 CHECK_PORTABILITY_SKIP+=	src/google/protobuf/compiler/zip_output_unittest.sh
