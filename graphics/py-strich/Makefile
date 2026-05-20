@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/10/03 11:12:10 adam Exp $
+# $NetBSD: Makefile,v 1.10 2026/05/20 06:01:16 adam Exp $
 
-DISTNAME=	pystrich-0.10
+DISTNAME=	pystrich-0.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyStrich/}
@@ -10,9 +10,11 @@ HOMEPAGE=	https://github.com/mmulqueen/pyStrich
 COMMENT=	1D and 2D barcode generator
 LICENSE=	2-clause-bsd AND apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=10.3:../../graphics/py-Pillow
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=12.2:../../graphics/py-Pillow
 TEST_DEPENDS+=	dmtx-utils-[0-9]*:../../graphics/dmtx-utils
+
+PY_RENAME_BINARIES=	pystrich
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
