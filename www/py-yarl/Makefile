@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2026/03/02 08:09:55 adam Exp $
+# $NetBSD: Makefile,v 1.57 2026/05/20 04:52:15 adam Exp $
 
-DISTNAME=	yarl-1.23.0
+DISTNAME=	yarl-1.24.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yarl/}
@@ -11,7 +11,7 @@ COMMENT=	Yet another URL library
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-expandvars-[0-9]*:../../misc/py-expandvars
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=82.0.1:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.0:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-multidict>=4.0:../../databases/py-multidict
 DEPENDS+=	${PYPKGPREFIX}-propcache>=0.2.1:../../devel/py-propcache
