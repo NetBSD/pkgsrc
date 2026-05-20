@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3133 2026/05/19 21:43:31 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3134 2026/05/20 02:02:41 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4442,7 +4442,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/uriparser to 1.0.2 [wiz 2026-05-09]
 	Added filesystems/fuse3 version 3.18.2 [vins 2026-05-09]
 	Updated filesystems/libntfs to 2026.2.25 [vins 2026-05-09]
-	Updated editors/vim-share to 9.2.0461 [sh 2026-05-09]
+	Updated editors/vim-share to 9.2.0461 [morr 2026-05-09]
 	Updated emulators/qemu to 11.0.0nb1 [thorpej 2026-05-09]
 	Updated www/p5-CGI to 4.72 [wiz 2026-05-10]
 	Updated audio/din to 64.2 [fox 2026-05-10]
@@ -4729,7 +4729,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-jaraco.functools to 4.5.0 [wiz 2026-05-17]
 	Updated devel/py-requests to 2.34.2 [wiz 2026-05-17]
 	Updated net/slumber to 5.3.0 [wiz 2026-05-17]
-	Updated editors/vim-share to 9.2.0491 [sh 2026-05-17]
+	Updated editors/vim-share to 9.2.0491 [morr 2026-05-17]
 	Added databases/openldap-mail-schemas version 20180701 [khorben 2026-05-17]
 	Updated devel/gobject-introspection to 1.86.0nb3 [wiz 2026-05-18]
 	Updated devel/glib2-introspection to 2.88.1nb1 [wiz 2026-05-18]
@@ -4753,8 +4753,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox to 150.0.3 [ryoon 2026-05-18]
 	Updated www/firefox-l10n to 150.0.3 [ryoon 2026-05-18]
 	Updated devel/py-nihtest to 1.11.1 [wiz 2026-05-18]
-	Updated editors/vim-share to 9.2.0496 [sh 2026-05-18]
-	Updated editors/vim-share to 9.2.0496 [sh 2026-05-18]
+	Updated editors/vim-share to 9.2.0496 [morr 2026-05-18]
 	Updated net/tailscale to 1.98.2 [ktnb 2026-05-18]
 	Updated lang/python314 to 3.14.5nb1 [wiz 2026-05-18]
 	Updated textproc/py-lxml to 6.1.1 [adam 2026-05-19]
