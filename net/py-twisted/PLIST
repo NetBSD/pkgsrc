@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2025/06/13 06:56:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.43 2026/05/20 06:32:56 adam Exp $
 bin/cftp-${PYVERSSUFFIX}
 bin/ckeygen-${PYVERSSUFFIX}
 bin/conch-${PYVERSSUFFIX}
@@ -295,6 +295,9 @@ ${PYSITELIB}/twisted/conch/test/keydata.pyo
 ${PYSITELIB}/twisted/conch/test/loopback.py
 ${PYSITELIB}/twisted/conch/test/loopback.pyc
 ${PYSITELIB}/twisted/conch/test/loopback.pyo
+${PYSITELIB}/twisted/conch/test/sk_dummy.py
+${PYSITELIB}/twisted/conch/test/sk_dummy.pyc
+${PYSITELIB}/twisted/conch/test/sk_dummy.pyo
 ${PYSITELIB}/twisted/conch/test/test_address.py
 ${PYSITELIB}/twisted/conch/test/test_address.pyc
 ${PYSITELIB}/twisted/conch/test/test_address.pyo
@@ -490,6 +493,9 @@ ${PYSITELIB}/twisted/internet/_producer_helpers.pyo
 ${PYSITELIB}/twisted/internet/_resolver.py
 ${PYSITELIB}/twisted/internet/_resolver.pyc
 ${PYSITELIB}/twisted/internet/_resolver.pyo
+${PYSITELIB}/twisted/internet/_service_identity.py
+${PYSITELIB}/twisted/internet/_service_identity.pyc
+${PYSITELIB}/twisted/internet/_service_identity.pyo
 ${PYSITELIB}/twisted/internet/_signals.py
 ${PYSITELIB}/twisted/internet/_signals.pyc
 ${PYSITELIB}/twisted/internet/_signals.pyo
@@ -1266,6 +1272,12 @@ ${PYSITELIB}/twisted/positioning/test/test_sentence.pyo
 ${PYSITELIB}/twisted/protocols/__init__.py
 ${PYSITELIB}/twisted/protocols/__init__.pyc
 ${PYSITELIB}/twisted/protocols/__init__.pyo
+${PYSITELIB}/twisted/protocols/_sni.py
+${PYSITELIB}/twisted/protocols/_sni.pyc
+${PYSITELIB}/twisted/protocols/_sni.pyo
+${PYSITELIB}/twisted/protocols/_tls_legacy.py
+${PYSITELIB}/twisted/protocols/_tls_legacy.pyc
+${PYSITELIB}/twisted/protocols/_tls_legacy.pyo
 ${PYSITELIB}/twisted/protocols/amp.py
 ${PYSITELIB}/twisted/protocols/amp.pyc
 ${PYSITELIB}/twisted/protocols/amp.pyo
@@ -1690,6 +1702,9 @@ ${PYSITELIB}/twisted/tap/socks.pyo
 ${PYSITELIB}/twisted/test/__init__.py
 ${PYSITELIB}/twisted/test/__init__.pyc
 ${PYSITELIB}/twisted/test/__init__.pyo
+${PYSITELIB}/twisted/test/_ca_with_intermediate.py
+${PYSITELIB}/twisted/test/_ca_with_intermediate.pyc
+${PYSITELIB}/twisted/test/_ca_with_intermediate.pyo
 ${PYSITELIB}/twisted/test/cert.pem.no_trailing_newline
 ${PYSITELIB}/twisted/test/crash_test_dummy.py
 ${PYSITELIB}/twisted/test/crash_test_dummy.pyc
@@ -1930,6 +1945,9 @@ ${PYSITELIB}/twisted/test/test_shortcut.pyo
 ${PYSITELIB}/twisted/test/test_sip.py
 ${PYSITELIB}/twisted/test/test_sip.pyc
 ${PYSITELIB}/twisted/test/test_sip.pyo
+${PYSITELIB}/twisted/test/test_sni.py
+${PYSITELIB}/twisted/test/test_sni.pyc
+${PYSITELIB}/twisted/test/test_sni.pyo
 ${PYSITELIB}/twisted/test/test_sob.py
 ${PYSITELIB}/twisted/test/test_sob.pyc
 ${PYSITELIB}/twisted/test/test_sob.pyo
