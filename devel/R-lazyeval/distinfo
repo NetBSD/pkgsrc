@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/05/20 03:48:06 mef Exp $
 
-BLAKE2s (R/lazyeval_0.2.2.tar.gz) = f78da3e1fce575147482915aef40d5837780aa5d010fd25ae61c8ed0e9165ebf
-SHA512 (R/lazyeval_0.2.2.tar.gz) = b1115386f76b14e9e718ff2234de1dcdd8d11f2f06b9490e901c0496a0780f96d543c6ccd6552791f1e004e379cdeeccec7c9075db9def639664bd9370ea889e
-Size (R/lazyeval_0.2.2.tar.gz) = 83482 bytes
+BLAKE2s (R/lazyeval_0.2.3.tar.gz) = 815d9e3ed5a79e422a6d1a1c948b91209cad477b6e43f40d078625a2d9ae54b7
+SHA512 (R/lazyeval_0.2.3.tar.gz) = 4a92d172e92f7812998d08122914dfa1ad1affc94b4e5587b3491ea60b82f32506869f644cb06f136812c557ac2c3fd2e8c8b0f5240004a1e0aa9eff60cc0fd6
+Size (R/lazyeval_0.2.3.tar.gz) = 130115 bytes
