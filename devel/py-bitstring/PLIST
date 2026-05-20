@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/12 09:31:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/05/20 08:01:09 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -19,12 +19,21 @@ ${PYSITELIB}/bitstring/bitarray_.pyo
 ${PYSITELIB}/bitstring/bits.py
 ${PYSITELIB}/bitstring/bits.pyc
 ${PYSITELIB}/bitstring/bits.pyo
-${PYSITELIB}/bitstring/bitstore.py
-${PYSITELIB}/bitstring/bitstore.pyc
-${PYSITELIB}/bitstring/bitstore.pyo
-${PYSITELIB}/bitstring/bitstore_helpers.py
-${PYSITELIB}/bitstring/bitstore_helpers.pyc
-${PYSITELIB}/bitstring/bitstore_helpers.pyo
+${PYSITELIB}/bitstring/bitstore_bitarray.py
+${PYSITELIB}/bitstring/bitstore_bitarray.pyc
+${PYSITELIB}/bitstring/bitstore_bitarray.pyo
+${PYSITELIB}/bitstring/bitstore_bitarray_helpers.py
+${PYSITELIB}/bitstring/bitstore_bitarray_helpers.pyc
+${PYSITELIB}/bitstring/bitstore_bitarray_helpers.pyo
+${PYSITELIB}/bitstring/bitstore_common_helpers.py
+${PYSITELIB}/bitstring/bitstore_common_helpers.pyc
+${PYSITELIB}/bitstring/bitstore_common_helpers.pyo
+${PYSITELIB}/bitstring/bitstore_tibs.py
+${PYSITELIB}/bitstring/bitstore_tibs.pyc
+${PYSITELIB}/bitstring/bitstore_tibs.pyo
+${PYSITELIB}/bitstring/bitstore_tibs_helpers.py
+${PYSITELIB}/bitstring/bitstore_tibs_helpers.pyc
+${PYSITELIB}/bitstring/bitstore_tibs_helpers.pyo
 ${PYSITELIB}/bitstring/bitstream.py
 ${PYSITELIB}/bitstring/bitstream.pyc
 ${PYSITELIB}/bitstring/bitstream.pyo
@@ -40,6 +49,9 @@ ${PYSITELIB}/bitstring/exceptions.pyo
 ${PYSITELIB}/bitstring/fp8.py
 ${PYSITELIB}/bitstring/fp8.pyc
 ${PYSITELIB}/bitstring/fp8.pyo
+${PYSITELIB}/bitstring/helpers.py
+${PYSITELIB}/bitstring/helpers.pyc
+${PYSITELIB}/bitstring/helpers.pyo
 ${PYSITELIB}/bitstring/luts.py
 ${PYSITELIB}/bitstring/luts.pyc
 ${PYSITELIB}/bitstring/luts.pyo
