@@ -1,12 +1,5 @@
-@comment $NetBSD: PLIST,v 1.9 2026/04/01 13:00:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/05/20 14:31:07 abs Exp $
 bin/zenmap
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING_HIGWIDGETS
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/radialnet/__init__.py
 ${PYSITELIB}/radialnet/__init__.pyc
 ${PYSITELIB}/radialnet/__init__.pyo
@@ -109,6 +102,13 @@ ${PYSITELIB}/radialnet/util/integration.pyo
 ${PYSITELIB}/radialnet/util/misc.py
 ${PYSITELIB}/radialnet/util/misc.pyc
 ${PYSITELIB}/radialnet/util/misc.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING_HIGWIDGETS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/zenmapCore/BasePaths.py
 ${PYSITELIB}/zenmapCore/BasePaths.pyc
 ${PYSITELIB}/zenmapCore/BasePaths.pyo
@@ -185,9 +185,21 @@ ${PYSITELIB}/zenmapCore/data/config/scan_profile.usp
 ${PYSITELIB}/zenmapCore/data/config/zenmap.conf
 ${PYSITELIB}/zenmapCore/data/config/zenmap_version
 ${PYSITELIB}/zenmapCore/data/docs/help.html
+${PYSITELIB}/zenmapCore/data/locale/de.po
+${PYSITELIB}/zenmapCore/data/locale/es.po
+${PYSITELIB}/zenmapCore/data/locale/fr.po
+${PYSITELIB}/zenmapCore/data/locale/hi.po
+${PYSITELIB}/zenmapCore/data/locale/hr.po
+${PYSITELIB}/zenmapCore/data/locale/it.po
+${PYSITELIB}/zenmapCore/data/locale/ja.po
+${PYSITELIB}/zenmapCore/data/locale/pl.po
+${PYSITELIB}/zenmapCore/data/locale/pt_BR.po
+${PYSITELIB}/zenmapCore/data/locale/ru.po
 ${PYSITELIB}/zenmapCore/data/locale/xgettext-profile_editor.py
 ${PYSITELIB}/zenmapCore/data/locale/xgettext-profile_editor.pyc
 ${PYSITELIB}/zenmapCore/data/locale/xgettext-profile_editor.pyo
+${PYSITELIB}/zenmapCore/data/locale/zenmap.pot
+${PYSITELIB}/zenmapCore/data/locale/zh.po
 ${PYSITELIB}/zenmapCore/data/misc/profile_editor.xml
 ${PYSITELIB}/zenmapCore/data/pixmaps/default_32.png
 ${PYSITELIB}/zenmapCore/data/pixmaps/default_75.png
