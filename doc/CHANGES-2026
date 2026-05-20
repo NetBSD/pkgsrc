@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3135 2026/05/20 03:45:25 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3136 2026/05/20 03:48:14 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4795,3 +4795,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/bacon to 3.23.0 [pin 2026-05-19]
 	Updated converters/R-base64enc to 0.1.6 [mef 2026-05-19]
 	Updated devel/ast-grep to 0.42.3 [pin 2026-05-20]
+	Updated devel/R-lazyeval to 0.2.3 [mef 2026-05-20]
