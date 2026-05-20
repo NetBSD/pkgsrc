@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2025/04/14 13:30:02 adam Exp $
+# $NetBSD: Makefile,v 1.17 2026/05/20 10:00:17 adam Exp $
 
-DISTNAME=	django-formtools-2.5.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	django_formtools-2.6.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-formtools/}
 
@@ -13,7 +12,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
 
 USE_LANGUAGES=	# none
 
