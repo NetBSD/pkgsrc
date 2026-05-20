@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2026/04/08 20:24:27 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/05/20 19:54:55 buhrow Exp $
 
-DISTNAME=	window-20260407
+DISTNAME=	window-20260520
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
