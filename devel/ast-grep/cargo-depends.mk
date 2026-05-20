@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.76 2026/05/17 14:11:47 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.77 2026/05/20 03:45:03 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	Inflector-0.11.4
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -44,8 +44,8 @@ CARGO_CRATE_DEPENDS+=	crossbeam-queue-0.3.12
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.21
 CARGO_CRATE_DEPENDS+=	crossterm-0.29.0
 CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.9.1
-CARGO_CRATE_DEPENDS+=	ctor-0.11.1
-CARGO_CRATE_DEPENDS+=	dashmap-6.1.0
+CARGO_CRATE_DEPENDS+=	ctor-1.0.5
+CARGO_CRATE_DEPENDS+=	dashmap-6.2.1
 CARGO_CRATE_DEPENDS+=	derive_more-2.1.1
 CARGO_CRATE_DEPENDS+=	derive_more-impl-2.1.1
 CARGO_CRATE_DEPENDS+=	difflib-0.4.0
@@ -100,9 +100,9 @@ CARGO_CRATE_DEPENDS+=	memchr-2.8.0
 CARGO_CRATE_DEPENDS+=	minicov-0.3.8
 CARGO_CRATE_DEPENDS+=	minimad-0.14.0
 CARGO_CRATE_DEPENDS+=	mio-1.1.1
-CARGO_CRATE_DEPENDS+=	napi-3.8.6
-CARGO_CRATE_DEPENDS+=	napi-build-2.3.1
-CARGO_CRATE_DEPENDS+=	napi-derive-3.5.5
+CARGO_CRATE_DEPENDS+=	napi-3.9.0
+CARGO_CRATE_DEPENDS+=	napi-build-2.3.2
+CARGO_CRATE_DEPENDS+=	napi-derive-3.5.6
 CARGO_CRATE_DEPENDS+=	napi-derive-backend-5.0.4
 CARGO_CRATE_DEPENDS+=	napi-sys-3.2.1
 CARGO_CRATE_DEPENDS+=	nix-0.29.0
@@ -110,7 +110,7 @@ CARGO_CRATE_DEPENDS+=	nohash-hasher-0.2.0
 CARGO_CRATE_DEPENDS+=	normalize-line-endings-0.3.0
 CARGO_CRATE_DEPENDS+=	nu-ansi-term-0.50.3
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.19
-CARGO_CRATE_DEPENDS+=	once_cell-1.21.3
+CARGO_CRATE_DEPENDS+=	once_cell-1.21.4
 CARGO_CRATE_DEPENDS+=	once_cell_polyfill-1.70.2
 CARGO_CRATE_DEPENDS+=	oorandom-11.1.5
 CARGO_CRATE_DEPENDS+=	parking_lot-0.12.5
