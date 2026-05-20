@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.15 2026/05/12 05:17:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/05/20 20:44:21 gutteridge Exp $
 ${PYSITELIB}/music21-${PKGVERSION}.dist-info/METADATA
 ${PYSITELIB}/music21-${PKGVERSION}.dist-info/RECORD
 ${PYSITELIB}/music21-${PKGVERSION}.dist-info/WHEEL
 ${PYSITELIB}/music21-${PKGVERSION}.dist-info/licenses/LICENSE
 ${PYSITELIB}/music21/.claude/settings.local.json
-${PYSITELIB}/music21/LICENSE
 ${PYSITELIB}/music21/__init__.py
 ${PYSITELIB}/music21/__init__.pyc
 ${PYSITELIB}/music21/__init__.pyo
@@ -354,9 +353,9 @@ ${PYSITELIB}/music21/humdrum/Missa_Sine_nomine-Kyrie.krn
 ${PYSITELIB}/music21/humdrum/__init__.py
 ${PYSITELIB}/music21/humdrum/__init__.pyc
 ${PYSITELIB}/music21/humdrum/__init__.pyo
-${PYSITELIB}/music21/humdrum/harmparser.py
-${PYSITELIB}/music21/humdrum/harmparser.pyc
-${PYSITELIB}/music21/humdrum/harmparser.pyo
+${PYSITELIB}/music21/humdrum/harmParser.py
+${PYSITELIB}/music21/humdrum/harmParser.pyc
+${PYSITELIB}/music21/humdrum/harmParser.pyo
 ${PYSITELIB}/music21/humdrum/instruments.py
 ${PYSITELIB}/music21/humdrum/instruments.pyc
 ${PYSITELIB}/music21/humdrum/instruments.pyo
@@ -369,6 +368,9 @@ ${PYSITELIB}/music21/humdrum/spineParser.pyo
 ${PYSITELIB}/music21/humdrum/testFiles.py
 ${PYSITELIB}/music21/humdrum/testFiles.pyc
 ${PYSITELIB}/music21/humdrum/testFiles.pyo
+${PYSITELIB}/music21/humdrum/tests.py
+${PYSITELIB}/music21/humdrum/tests.pyc
+${PYSITELIB}/music21/humdrum/tests.pyo
 ${PYSITELIB}/music21/instrument.py
 ${PYSITELIB}/music21/instrument.pyc
 ${PYSITELIB}/music21/instrument.pyo
@@ -409,7 +411,6 @@ ${PYSITELIB}/music21/languageExcerpts/trainingData/nl.txt
 ${PYSITELIB}/music21/layout.py
 ${PYSITELIB}/music21/layout.pyc
 ${PYSITELIB}/music21/layout.pyo
-${PYSITELIB}/music21/license.txt
 ${PYSITELIB}/music21/lily/__init__.py
 ${PYSITELIB}/music21/lily/__init__.pyc
 ${PYSITELIB}/music21/lily/__init__.pyo
@@ -734,6 +735,9 @@ ${PYSITELIB}/music21/noteworthy/cuthbert_test1.nwc
 ${PYSITELIB}/music21/noteworthy/cuthbert_test1.nwctxt
 ${PYSITELIB}/music21/noteworthy/cuthbert_test1_uncompressed.nwc
 ${PYSITELIB}/music21/noteworthy/cuthbert_test1_v175.nwc
+${PYSITELIB}/music21/noteworthy/dictionaries.py
+${PYSITELIB}/music21/noteworthy/dictionaries.pyc
+${PYSITELIB}/music21/noteworthy/dictionaries.pyo
 ${PYSITELIB}/music21/noteworthy/jingle_v175.nwc
 ${PYSITELIB}/music21/noteworthy/translate.py
 ${PYSITELIB}/music21/noteworthy/translate.pyc
@@ -4833,6 +4837,9 @@ ${PYSITELIB}/music21/test/memoryUsage.pyo
 ${PYSITELIB}/music21/test/multiprocessTest.py
 ${PYSITELIB}/music21/test/multiprocessTest.pyc
 ${PYSITELIB}/music21/test/multiprocessTest.pyo
+${PYSITELIB}/music21/test/pytest_plugin.py
+${PYSITELIB}/music21/test/pytest_plugin.pyc
+${PYSITELIB}/music21/test/pytest_plugin.pyo
 ${PYSITELIB}/music21/test/testDefault.py
 ${PYSITELIB}/music21/test/testDefault.pyc
 ${PYSITELIB}/music21/test/testDefault.pyo
@@ -4857,6 +4864,9 @@ ${PYSITELIB}/music21/test/testSingleCoreAll.pyo
 ${PYSITELIB}/music21/test/test_base.py
 ${PYSITELIB}/music21/test/test_base.pyc
 ${PYSITELIB}/music21/test/test_base.pyo
+${PYSITELIB}/music21/test/test_beam.py
+${PYSITELIB}/music21/test/test_beam.pyc
+${PYSITELIB}/music21/test/test_beam.pyo
 ${PYSITELIB}/music21/test/test_chord.py
 ${PYSITELIB}/music21/test/test_chord.pyc
 ${PYSITELIB}/music21/test/test_chord.pyo
@@ -4914,6 +4924,9 @@ ${PYSITELIB}/music21/tree/analysis.pyo
 ${PYSITELIB}/music21/tree/core.py
 ${PYSITELIB}/music21/tree/core.pyc
 ${PYSITELIB}/music21/tree/core.pyo
+${PYSITELIB}/music21/tree/examples.py
+${PYSITELIB}/music21/tree/examples.pyc
+${PYSITELIB}/music21/tree/examples.pyo
 ${PYSITELIB}/music21/tree/fromStream.py
 ${PYSITELIB}/music21/tree/fromStream.pyc
 ${PYSITELIB}/music21/tree/fromStream.pyo
