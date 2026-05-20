@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3138 2026/05/20 04:54:02 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3139 2026/05/20 05:27:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4802,3 +4802,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/wireshark to 4.6.6 [adam 2026-05-20]
 	Updated www/py-yarl to 1.24.2 [adam 2026-05-20]
 	Updated archivers/py-zipp to 4.1.0 [adam 2026-05-20]
+	Updated print/ghostscript-agpl to 10.07.1 [adam 2026-05-20]
+	Updated fonts/ghostscript-cidfonts-ryumin to 10.07.1 [adam 2026-05-20]
+	Updated net/dhcpcd to 10.3.2 [adam 2026-05-20]
