@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3140 2026/05/20 06:01:41 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3141 2026/05/20 06:02:47 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4807,3 +4807,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/dhcpcd to 10.3.2 [adam 2026-05-20]
 	Updated devel/py-syrupy to 5.2.0 [adam 2026-05-20]
 	Updated graphics/py-strich to 0.14 [adam 2026-05-20]
+	Updated textproc/R-stringi to 1.8.7 [mef 2026-05-20]
