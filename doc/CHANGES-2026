@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3156 2026/05/20 14:14:50 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3157 2026/05/20 14:16:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4835,3 +4835,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-eliot to 1.18.0 [adam 2026-05-20]
 	Updated parallel/py-ipyparallel to 9.2.0 [adam 2026-05-20]
 	Updated textproc/inlyne to 0.5.2 [pin 2026-05-20]
+	Updated devel/mise to 2026.5.12 [pin 2026-05-20]
