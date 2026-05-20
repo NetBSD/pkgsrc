@@ -1,0 +1,1 @@
+bin/pystrich @PREFIX@/bin/pystrich-@PYVERSSUFFIX@
