@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2026/02/26 11:07:12 adam Exp $
+# $NetBSD: Makefile,v 1.65 2026/05/20 11:14:22 adam Exp $
 
-DISTNAME=	django_cms-5.0.6
+DISTNAME=	django_cms-5.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-cms/}
@@ -21,9 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} djangocms djangocms-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	djangocms
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
