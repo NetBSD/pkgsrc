@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/04/12 09:31:51 adam Exp $
+# $NetBSD: Makefile,v 1.13 2026/05/20 08:01:09 adam Exp $
 
-DISTNAME=	bitstring-4.3.1
+DISTNAME=	bitstring-4.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bitstring/}
@@ -12,6 +12,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-bitarray>=3.0.0:../../devel/py-bitarray
+DEPENDS+=	${PYPKGPREFIX}-tibs>=0.5.6:../../misc/py-tibs
 
 USE_LANGUAGES=	# none
 
