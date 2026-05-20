@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2026/04/09 07:44:36 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/05/20 09:29:55 jperkin Exp $
 
 DISTNAME=	protobuf-c-1.5.2
 PKGREVISION=	3
@@ -23,8 +23,9 @@ TEST_TARGET=		check
 # <various>: fatal error: protobuf-c/protobuf-c.pb.h: No such file or directory
 MAKE_JOBS_SAFE=	no
 
-# XXX: Not a great fix, some issue with abseil vs protobuf vs SunOS ld.so is
-# causing a mutex to be recursively locked during init, but it works for now.
+# illumos ld.so lazy PLT binding can invoke .init_array mid-init, re-entering
+# a __cxa_guard-protected singleton and deadlocking.  protobuf generates these
+# in .pb.cc files, so force BIND_NOW to resolve all PLT entries before init.
 LDFLAGS.SunOS+=	-Wl,-z,now
 
 pre-configure:
