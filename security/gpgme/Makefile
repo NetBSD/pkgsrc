@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.128 2026/01/29 13:27:47 wiz Exp $
+# $NetBSD: Makefile,v 1.129 2026/05/20 11:30:31 adam Exp $
 
-DISTNAME=	gpgme-2.0.1
+DISTNAME=	gpgme-2.1.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG:=gpgme/}
 EXTRACT_SUFX=	.tar.bz2
@@ -42,7 +42,7 @@ PKGCONFIG_OVERRIDE_STAGE=	post-configure
 .include "options.mk"
 
 .include "../../security/libassuan2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.28
+BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.47
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
