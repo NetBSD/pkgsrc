@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3136 2026/05/20 03:48:14 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3137 2026/05/20 04:45:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4796,3 +4796,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/R-base64enc to 0.1.6 [mef 2026-05-19]
 	Updated devel/ast-grep to 0.42.3 [pin 2026-05-20]
 	Updated devel/R-lazyeval to 0.2.3 [mef 2026-05-20]
+	Updated textproc/mdbook to 0.5.3 [adam 2026-05-20]
+	Updated textproc/py-sphinx-gallery to 0.21.0 [adam 2026-05-20]
+	Updated devel/memcached to 1.6.42 [adam 2026-05-20]
