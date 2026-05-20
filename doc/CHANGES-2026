@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3147 2026/05/20 11:33:12 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3148 2026/05/20 12:42:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4823,3 +4823,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-djangocms-link to 5.1.1 [adam 2026-05-20]
 	Updated security/gpgme to 2.1.0 [adam 2026-05-20]
 	Updated finance/py-braintree to 4.43.0 [adam 2026-05-20]
+	Updated games/chess-tui to 2.7.0 [pin 2026-05-20]
