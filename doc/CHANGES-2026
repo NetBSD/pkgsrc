@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3145 2026/05/20 10:00:40 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3146 2026/05/20 11:15:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4819,3 +4819,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-django-import-export to 4.4.1 [adam 2026-05-20]
 	Updated www/py-django-modelcluster to 6.5 [adam 2026-05-20]
 	Updated www/py-django-formtools to 2.6.1 [adam 2026-05-20]
+	Updated www/py-django-cms to 5.0.7 [adam 2026-05-20]
+	Updated www/py-djangocms-link to 5.1.1 [adam 2026-05-20]
