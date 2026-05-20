@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2025/06/13 06:56:56 adam Exp $
+# $NetBSD: Makefile,v 1.59 2026/05/20 06:32:56 adam Exp $
 
 .include "../../net/py-twisted/Makefile.common"
 
@@ -33,13 +33,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.56:../../devel/py-hypothesis
 REPLACE_PYTHON+=	src/twisted/mail/test/pop3testserver.py
 REPLACE_PYTHON+=	src/twisted/trial/test/scripttest.py
 
-USE_LANGUAGES=	c99
+USE_CC_FEATURES=	c99
+USE_LANGUAGES=		c
 
-post-install:
-.for bin in cftp ckeygen conch mailmail pyhtmlizer tkconch trial twist twistd
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
-.endfor
+PY_RENAME_BINARIES=	cftp ckeygen conch mailmail pyhtmlizer tkconch trial twist twistd
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
