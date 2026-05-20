@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3159 2026/05/20 14:18:48 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3160 2026/05/20 14:22:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4838,3 +4838,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/mise to 2026.5.12 [pin 2026-05-20]
 	Updated textproc/rumdl to 0.1.95 [pin 2026-05-20]
 	Updated misc/tailspin to 6.1.0 [pin 2026-05-20]
+	Added misc/zellij version 0.44.3 [pin 2026-05-20]
