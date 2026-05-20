@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3143 2026/05/20 08:01:30 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3144 2026/05/20 09:43:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4813,3 +4813,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-hypothesis to 6.152.9 [adam 2026-05-20]
 	Added misc/py-tibs version 0.7.0 [adam 2026-05-20]
 	Updated devel/py-bitstring to 4.4.0 [adam 2026-05-20]
+	Updated devel/py-greenlet to 3.5.0 [adam 2026-05-20]
+	Updated devel/py-setuptools-gettext to 0.1.18 [adam 2026-05-20]
