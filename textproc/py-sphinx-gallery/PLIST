@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/12/26 10:25:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/05/20 04:42:54 adam Exp $
 bin/sphinx_gallery_py2jupyter-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -19,10 +19,14 @@ ${PYSITELIB}/sphinx_gallery/_static/binder_badge_logo.svg
 ${PYSITELIB}/sphinx_gallery/_static/broken_example.png
 ${PYSITELIB}/sphinx_gallery/_static/jupyterlite_badge_logo.svg
 ${PYSITELIB}/sphinx_gallery/_static/no_image.png
+${PYSITELIB}/sphinx_gallery/_static/sg-tags.js
 ${PYSITELIB}/sphinx_gallery/_static/sg_gallery-binder.css
 ${PYSITELIB}/sphinx_gallery/_static/sg_gallery-dataframe.css
 ${PYSITELIB}/sphinx_gallery/_static/sg_gallery-rendered-html.css
 ${PYSITELIB}/sphinx_gallery/_static/sg_gallery.css
+${PYSITELIB}/sphinx_gallery/_testing.py
+${PYSITELIB}/sphinx_gallery/_testing.pyc
+${PYSITELIB}/sphinx_gallery/_testing.pyo
 ${PYSITELIB}/sphinx_gallery/backreferences.py
 ${PYSITELIB}/sphinx_gallery/backreferences.pyc
 ${PYSITELIB}/sphinx_gallery/backreferences.pyo
@@ -264,6 +268,9 @@ ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples_with_rst/rst_example2.rst
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/utils.py
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/utils.pyc
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/utils.pyo
+${PYSITELIB}/sphinx_gallery/typing.py
+${PYSITELIB}/sphinx_gallery/typing.pyc
+${PYSITELIB}/sphinx_gallery/typing.pyo
 ${PYSITELIB}/sphinx_gallery/utils.py
 ${PYSITELIB}/sphinx_gallery/utils.pyc
 ${PYSITELIB}/sphinx_gallery/utils.pyo
