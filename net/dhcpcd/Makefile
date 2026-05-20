@@ -1,27 +1,27 @@
-# $NetBSD: Makefile,v 1.129 2026/03/16 12:13:07 roy Exp $
+# $NetBSD: Makefile,v 1.130 2026/05/20 05:27:36 adam Exp $
 
-DISTNAME=		dhcpcd-10.3.1
-CATEGORIES=		net
-MASTER_SITES=		${MASTER_SITE_GITHUB:=NetworkConfiguration/}
-GITHUB_PROJECT=		dhcpcd
-#GITHUB_TAG=		v${PKGVERSION_NOREV}
-GITHUB_RELEASE=		v${PKGVERSION_NOREV}
-EXTRACT_SUFX=		.tar.xz
+DISTNAME=	dhcpcd-10.3.2
+CATEGORIES=	net
+MASTER_SITES=	${MASTER_SITE_GITHUB:=NetworkConfiguration/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=		roy@NetBSD.org
-HOMEPAGE=		https://roy.marples.name/projects/dhcpcd/
-COMMENT=		DHCP / IPv4LL / IPv6RA / DHCPv6 client
-LICENSE=		modified-bsd
+MAINTAINER=	roy@NetBSD.org
+HOMEPAGE=	https://roy.marples.name/projects/dhcpcd/
+COMMENT=	DHCP / IPv4LL / IPv6RA / DHCPv6 client
+LICENSE=	modified-bsd
 
 .include "../../mk/bsd.prefs.mk"
+
+NOT_FOR_PLATFORM+=	Darwin-*-*
 
 # Use the system _dhcpcd user introduced in NetBSD-9.99.53
 # Don't use the _dhcp user in other BSDs as their home directory
 # is /var/empty and that shouldn't be used as a chroot.
-.if !empty(MACHINE_PLATFORM:MNetBSD-*) && \
-    (empty(MACHINE_PLATFORM:MNetBSD-[0-9].*) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-9.99.5[3-9]-*) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-9.99.[6-9]*-*))
+.if ${MACHINE_PLATFORM:MNetBSD-*} && \
+    (!${MACHINE_PLATFORM:MNetBSD-[0-9].*} || \
+    ${MACHINE_PLATFORM:MNetBSD-9.99.5[3-9]-*} || \
+    ${MACHINE_PLATFORM:MNetBSD-9.99.[6-9]*-*})
 DHCPCD_USER?=		_dhcpcd
 DHCPCD_GROUP?=		_dhcpcd
 .endif
@@ -45,7 +45,8 @@ PKG_HOME.${DHCPCD_USER}=	${DHCPCD_CHROOTDIR}
 PKG_SHELL.${DHCPCD_USER}=	${NOLOGIN}
 .endif
 
-USE_LANGUAGES=		c99
+USE_CC_FEATURES=	c99
+USE_LANGUAGES=		c
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -54,7 +55,7 @@ CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/examples
 CONFIGURE_ARGS+=	--privsepuser=${DHCPCD_USER}
 
 .if ${USE_CROSS_COMPILE:tl} == "yes"
-CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
+CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--build=${NATIVE_MACHINE_GNU_PLATFORM:Q}
 .endif
 
