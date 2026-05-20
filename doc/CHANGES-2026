@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3134 2026/05/20 02:02:41 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.3135 2026/05/20 03:45:25 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4794,3 +4794,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/adguardhome to 0.107.75 [adam 2026-05-19]
 	Updated devel/bacon to 3.23.0 [pin 2026-05-19]
 	Updated converters/R-base64enc to 0.1.6 [mef 2026-05-19]
+	Updated devel/ast-grep to 0.42.3 [pin 2026-05-20]
