@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2026/05/14 16:40:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2026/05/21 08:25:06 markd Exp $
 
 DISTNAME=	karchive-${KF6VER}
-PKGREVISION=	4
 CATEGORIES=	archivers
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -11,6 +10,9 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 .include "../../meta-pkgs/kde/kf6.mk"
 
 USE_TOOLS+=	pkg-config
+
+PKGCONFIG_OVERRIDE+=		_KDE_build/KF6Archive.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"

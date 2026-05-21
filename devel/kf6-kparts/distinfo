@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/10/06 09:56:01 markd Exp $
+$NetBSD: distinfo,v 1.4 2026/05/21 08:25:08 markd Exp $
 
-BLAKE2s (kparts-6.18.0.tar.xz) = 621edfbf54a58438231061ad27ea97c5a90bca88a42a902503c55127ae0d9c6d
-SHA512 (kparts-6.18.0.tar.xz) = c68fc8f97c35fc8aca667a001771c0366493cd7ebec8573ceee37842d13fe8ac2f619efac8f3d2ed87d67376d46fa124dbc81144ea05245370ca45f5556b97ba
-Size (kparts-6.18.0.tar.xz) = 2400928 bytes
+BLAKE2s (kparts-6.26.0.tar.xz) = a9e2680f2ccde9dbf5ef5d084cdc8263defc0f98ede76bb483900f368d8b7fbf
+SHA512 (kparts-6.26.0.tar.xz) = 14c7b9ad020574ccbbc70a86e4404ad1535e07a653147ca1e9fe5748591ebcf8ad0722751c54855be74dee09094948a1f27368f3e2666c8788d6bd6747fca99b
+Size (kparts-6.26.0.tar.xz) = 2357096 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/12/05 09:43:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/05/21 08:25:07 markd Exp $
 include/KF6/KI18n/KLazyLocalizedString
 include/KF6/KI18n/KLocalization
 include/KF6/KI18n/KLocalizedContext
@@ -46,6 +46,10 @@ qt6/qml/org/kde/i18n/localeData/kde-qmlmodule.version
 qt6/qml/org/kde/i18n/localeData/ki18nlocaledataqmlplugin.qmltypes
 qt6/qml/org/kde/i18n/localeData/libki18nlocaledataqmlplugin.so
 qt6/qml/org/kde/i18n/localeData/qmldir
+qt6/qml/org/kde/ki18n/KF6I18nQml.qmltypes
+qt6/qml/org/kde/ki18n/kde-qmlmodule.version
+qt6/qml/org/kde/ki18n/libKF6I18nQmlplugin.so
+qt6/qml/org/kde/ki18n/qmldir
 share/locale/af/LC_MESSAGES/ki18n6.mo
 share/locale/ar/LC_MESSAGES/ki18n6.mo
 share/locale/as/LC_MESSAGES/ki18n6.mo

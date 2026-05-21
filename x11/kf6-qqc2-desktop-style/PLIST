@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/10/06 09:56:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/05/21 08:25:15 markd Exp $
 lib/cmake/KF6QQC2DesktopStyle/KF6QQC2DesktopStyleConfig.cmake
 lib/cmake/KF6QQC2DesktopStyle/KF6QQC2DesktopStyleConfigVersion.cmake
 qt6/plugins/kf6/kirigami/platform/org.kde.desktop.so
@@ -35,6 +35,7 @@ qt6/qml/org/kde/desktop/RangeSlider.qml
 qt6/qml/org/kde/desktop/RoundButton.qml
 qt6/qml/org/kde/desktop/ScrollBar.qml
 qt6/qml/org/kde/desktop/ScrollView.qml
+qt6/qml/org/kde/desktop/SearchField.qml
 qt6/qml/org/kde/desktop/Slider.qml
 qt6/qml/org/kde/desktop/SpinBox.qml
 qt6/qml/org/kde/desktop/SplitView.qml
@@ -87,11 +88,13 @@ share/locale/es/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/eu/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/fi/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/fr/LC_MESSAGES/qqc2desktopstyle_qt.qm
+share/locale/ga/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/gl/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/he/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/hi/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/hu/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/ia/LC_MESSAGES/qqc2desktopstyle_qt.qm
+share/locale/is/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/it/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/ka/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/ko/LC_MESSAGES/qqc2desktopstyle_qt.qm

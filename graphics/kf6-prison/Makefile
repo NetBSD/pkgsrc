@@ -1,31 +1,15 @@
-# $NetBSD: Makefile,v 1.16 2026/05/14 16:41:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2026/05/21 08:25:10 markd Exp $
 
 DISTNAME=	prison-${KF6VER}
-PKGREVISION=	1
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Barcode API to produce QRCode barcodes and DataMatrix barcodes
 LICENSE=	mit
 
-# Temporarily expand out kde/kf6.mk
-#.include "../../meta-pkgs/kde/kf6.mk"
-KF6VER=6.24.0
-CATEGORIES+=	kde
-MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${KF6VER:R}/}
-EXTRACT_SUFX=	.tar.xz
-PKGNAME?=	kf6-${DISTNAME}
+.include "../../meta-pkgs/kde/kf6.mk"
 
-.include "../../devel/extra-cmake-modules/buildlink3.mk"
-
-CMAKE_CONFIGURE_ARGS+=	-DKF_IGNORE_PLATFORM_CHECK=true
-
-USE_CXX_FEATURES+=	c++20
-
-.include "../../meta-pkgs/kde/Makefile.common"
-
-TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
-#TOOL_DEPENDS+=	kf6-kdoctools>=${KF6VER}:../../devel/kf6-kdoctools
+TOOL_DEPENDS+=	kf6-kdoctools>=${KF6VER}:../../devel/kf6-kdoctools
 
 USE_TOOLS+=	pkg-config
 

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/11/27 22:32:25 wiz Exp $
+$NetBSD: distinfo,v 1.5 2026/05/21 08:25:09 markd Exp $
 
-BLAKE2s (ktexteditor-6.18.0.tar.xz) = e45a1b337f65cebac2f1686622d52dc075ac0a13f44bb90cbf7356c13350f1d0
-SHA512 (ktexteditor-6.18.0.tar.xz) = dc55c37744c5f851561dde4753248c9dfd4c0fed787de5543d3b861c41033239cda0948c5124e82ccfc903bde3ee5417b632fcfa2d356642606cf7ec159dfd8f
-Size (ktexteditor-6.18.0.tar.xz) = 2947728 bytes
-SHA1 (patch-autotests_src_vimode_keys.cpp) = a60e4518e593fc92e1ba8adba03aec8f0917ba04
+BLAKE2s (ktexteditor-6.26.0.tar.xz) = 541b327e9ad2ee46158db6814b045d8b4e5a0a9fa453a87c00382e3d0cdba569
+SHA512 (ktexteditor-6.26.0.tar.xz) = 5369bddff5e1001b7cec17f83d040f8935f0e3e92451a8bc15519daaaf2e1e4e9d4987edd241c8e8c2d5dae83c33c19eddc1d5e7ab3d0901ec22e25e17ccadde
+Size (ktexteditor-6.26.0.tar.xz) = 2948876 bytes

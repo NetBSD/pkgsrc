@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/10/06 09:55:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/05/21 08:25:06 markd Exp $
 include/KF6/KArchive/K7Zip
 include/KF6/KArchive/KAr
 include/KF6/KArchive/KArchive
@@ -32,6 +32,7 @@ lib/cmake/KF6Archive/KF6ArchiveTargets.cmake
 lib/libKF6Archive.so
 lib/libKF6Archive.so.6
 lib/libKF6Archive.so.${PKGVERSION}
+lib/pkgconfig/KF6Archive.pc
 share/locale/ar/LC_MESSAGES/karchive6_qt.qm
 share/locale/ast/LC_MESSAGES/karchive6_qt.qm
 share/locale/bg/LC_MESSAGES/karchive6_qt.qm
@@ -45,6 +46,7 @@ share/locale/es/LC_MESSAGES/karchive6_qt.qm
 share/locale/eu/LC_MESSAGES/karchive6_qt.qm
 share/locale/fi/LC_MESSAGES/karchive6_qt.qm
 share/locale/fr/LC_MESSAGES/karchive6_qt.qm
+share/locale/ga/LC_MESSAGES/karchive6_qt.qm
 share/locale/gl/LC_MESSAGES/karchive6_qt.qm
 share/locale/he/LC_MESSAGES/karchive6_qt.qm
 share/locale/hi/LC_MESSAGES/karchive6_qt.qm

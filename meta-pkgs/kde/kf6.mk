@@ -1,4 +1,4 @@
-# $NetBSD: kf6.mk,v 1.10 2025/11/02 10:00:15 markd Exp $
+# $NetBSD: kf6.mk,v 1.11 2026/05/21 08:25:16 markd Exp $
 # used by archivers/kf6-karchive/Makefile
 # used by devel/kf6-kbookmarks/Makefile
 # used by devel/kf6-kcmutils/Makefile
@@ -67,7 +67,7 @@
 # used by x11/kf6-kxmlgui/Makefile
 # used by x11/kf6-qqc2-desktop-style/Makefile
 
-KF6VER=		6.18.0
+KF6VER=		6.26.0
 CATEGORIES+=	kde
 MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${KF6VER:R}/}
 EXTRACT_SUFX=	.tar.xz

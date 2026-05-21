@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/10/06 09:56:03 markd Exp $
+$NetBSD: distinfo,v 1.4 2026/05/21 08:25:10 markd Exp $
 
-BLAKE2s (ksvg-6.18.0.tar.xz) = 59a252c9802cf97b0b5fc29a0d6f2f93d93ced404c2823f17d1e3c4e589c29c3
-SHA512 (ksvg-6.18.0.tar.xz) = 63f9b4771f9d960742e62839c3fb933c59cbee14781eb275c94111eccef62e3b0172177c64b7b91f34b6016d8d1aea09985958731d5544ac9b428e801837b575
-Size (ksvg-6.18.0.tar.xz) = 84056 bytes
+BLAKE2s (ksvg-6.26.0.tar.xz) = 029d37df02de6ab92e77e71b7869e333e073222de979806c41cf1e2167830c73
+SHA512 (ksvg-6.26.0.tar.xz) = 9e66d93b8582de5620f8b0e91d8a8b3fb6017afbe745f1de1ad9a2fe7756bad461dfe569d7505c1bf2b25c6b4563b46e9c68ad5fa8c7aa08f5211211d2ca2a25
+Size (ksvg-6.26.0.tar.xz) = 85400 bytes

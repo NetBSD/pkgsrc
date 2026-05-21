@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/10/06 09:55:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/05/21 08:25:06 markd Exp $
 bin/kcmshell6
 include/KF6/KCMUtils/KCModule
 include/KF6/KCMUtils/KCModuleLoader
@@ -110,6 +110,7 @@ share/locale/fi/LC_MESSAGES/kcmutils6.mo
 share/locale/fr/LC_MESSAGES/kcmshell6.mo
 share/locale/fr/LC_MESSAGES/kcmutils6.mo
 share/locale/fy/LC_MESSAGES/kcmutils6.mo
+share/locale/ga/LC_MESSAGES/kcmshell6.mo
 share/locale/ga/LC_MESSAGES/kcmutils6.mo
 share/locale/gd/LC_MESSAGES/kcmutils6.mo
 share/locale/gl/LC_MESSAGES/kcmshell6.mo
@@ -130,6 +131,7 @@ share/locale/ia/LC_MESSAGES/kcmshell6.mo
 share/locale/ia/LC_MESSAGES/kcmutils6.mo
 share/locale/id/LC_MESSAGES/kcmshell6.mo
 share/locale/id/LC_MESSAGES/kcmutils6.mo
+share/locale/is/LC_MESSAGES/kcmshell6.mo
 share/locale/is/LC_MESSAGES/kcmutils6.mo
 share/locale/it/LC_MESSAGES/kcmshell6.mo
 share/locale/it/LC_MESSAGES/kcmutils6.mo

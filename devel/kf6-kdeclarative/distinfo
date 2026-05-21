@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/10/06 09:55:59 markd Exp $
+$NetBSD: distinfo,v 1.4 2026/05/21 08:25:07 markd Exp $
 
-BLAKE2s (kdeclarative-6.18.0.tar.xz) = 1bd0782a634fd5d86f73780eeb2edbef4e4c6f4d454ee05a3a91e20064545502
-SHA512 (kdeclarative-6.18.0.tar.xz) = 95f8fe38ba8e683e667f6595b6aee2633d430cb915a3196fc310bfc31a2a2e6d1fb384049b0222612284de25886693b392e1d528e0b513248eca8a743ee29a4c
-Size (kdeclarative-6.18.0.tar.xz) = 2408844 bytes
+BLAKE2s (kdeclarative-6.26.0.tar.xz) = 43594dcffd0784ebc06cf7060ec68ee4aedd994e450afd7874949c4fd0fcb547
+SHA512 (kdeclarative-6.26.0.tar.xz) = 83c0f24785fa1aef36b80d649a788d85b9c068bdba20f22e68a3100552ddfc115a1cdf928859eee58f387142d6c3a51bca3062917abe8a50b8bf812e36f412a8
+Size (kdeclarative-6.26.0.tar.xz) = 2365416 bytes
