@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3174 2026/05/21 12:45:54 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3175 2026/05/21 13:14:09 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4924,3 +4924,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/jgenesis to 0.12.1 [pin 2026-05-21]
 	Updated lang/nodejs to 26.2.0 [adam 2026-05-21]
 	Updated net/icinga2 to 2.16.1 [adam 2026-05-21]
+	Updated sysutils/R-later to 1.4.8 [mef 2026-05-21]
