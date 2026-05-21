@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.32 2026/01/07 08:47:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2026/05/21 12:42:10 adam Exp $
 
 BUILDLINK_TREE+=	nodejs
 
@@ -14,6 +14,8 @@ BUILDLINK_PKGSRCDIR.nodejs?=	../../lang/nodejs
 .if ${OPSYS} != "Darwin"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 # Stated by the changelog
 BUILDLINK_API_DEPENDS.libuv+=	libuv>=1.23
 .include "../../devel/libuv/buildlink3.mk"
