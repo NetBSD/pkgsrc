@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2026/05/08 08:05:42 pin Exp $
+$NetBSD: distinfo,v 1.14 2026/05/21 12:32:26 pin Exp $
 
 BLAKE2s (ab_glyph-0.2.32.crate) = a1bd2a114f0cae7af4e1dc5f86421476ddc0abc68c8cc8f85baffa7375db8c88
 SHA512 (ab_glyph-0.2.32.crate) = aa28fc87201abc6cd14bfb2371420be102e82f9317d952db5e0f576e867dcee61e3a54d65e39489459e3dd238baef77b46418ff20a2a9c9cf9e4a6ddf1277fb0
@@ -705,9 +705,9 @@ Size (itertools-0.14.0.crate) = 152715 bytes
 BLAKE2s (itoa-1.0.18.crate) = b4c525cfe99837e3afd95733435e0353ba9116ecebc7a2ec73f3b84db383ba91
 SHA512 (itoa-1.0.18.crate) = 8dbad156e2863c28e2b380901a92414ef00e39f1fcdb06d91a0f3fb73108c2f7f36b699ccd93287808c24c29cca7f1783d48d5ca95f2173502963c0abcb2d09c
 Size (itoa-1.0.18.crate) = 15935 bytes
-BLAKE2s (jgenesis-0.12.0.tar.gz) = 68f2cf7e674aad27399654e7b4c2bf9a9b67ca9ebd27d5b6a431a557e334db3f
-SHA512 (jgenesis-0.12.0.tar.gz) = db4129ada7743f0b5b30d5b6bfe1ba774c34e1de6fb990f4b9e08ea6469c46451c6c8bc5edccd31db8d94427e3ac63ff309d63fd9eca012d22ea584d0bd00dbd
-Size (jgenesis-0.12.0.tar.gz) = 1234635 bytes
+BLAKE2s (jgenesis-0.12.1.tar.gz) = 6fd4c10023cbbe262996a071e014fcae600185b18b558eb9bc36f9893ea4734d
+SHA512 (jgenesis-0.12.1.tar.gz) = 03e0c1fd3d86768da7b8a59b534dcb73170714c645f1156ce167d761395a0ac1506e1b3956f7614c8a9773993500b39313af0e7625780e6d526f0ea816f54853
+Size (jgenesis-0.12.1.tar.gz) = 1240174 bytes
 BLAKE2s (jiff-0.2.23.crate) = d1e7c381d3eacd81aa59729bbf16d5dba18eb8fdd7ff88fe4a42d94d5e036c7d
 SHA512 (jiff-0.2.23.crate) = 523461f14e5ddff5f9d883469a227f142ab83c5e953434027207e7b9fe70ad4d86fae8e0ae59adb11768597dfb1480be945c1b44794eaa446ecdaf7acf472881
 Size (jiff-0.2.23.crate) = 759789 bytes
