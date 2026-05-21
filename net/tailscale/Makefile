@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2026/05/18 20:46:51 ktnb Exp $
+# $NetBSD: Makefile,v 1.18 2026/05/21 13:40:25 ktnb Exp $
 
 DISTNAME=	tailscale
 PKGNAME=	tailscale-1.98.2
@@ -16,6 +16,9 @@ GO_BUILD_PATTERN+=	tailscale.com/cmd/tailscale
 GO_BUILD_PATTERN+=	tailscale.com/cmd/tailscaled
 
 RCD_SCRIPTS+=	tailscaled
+
+GOFLAGS=      -ldflags "-X tailscale.com/version.longStamp=${PKGVERSION} \
+	    -X tailscale.com/version.shortStamp=${PKGVERSION}"
 
 .include "go-modules.mk"
 
