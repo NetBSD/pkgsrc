@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.23 2026/05/21 03:08:23 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.24 2026/05/21 14:47:22 maya Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -230,3 +230,9 @@ net/bind918: Security fix
 
 Pullup ticket #7124 - requested by taca
 lang/ruby40: Security fix
+
+Pullup ticket #7125 - requested by taca
+net/unbound: Security fix
+
+Pullup ticket #7126 - requested by taca
+net/rsync: Security fix
