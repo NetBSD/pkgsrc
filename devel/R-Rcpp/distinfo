@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.29 2025/02/03 13:24:24 mef Exp $
+$NetBSD: distinfo,v 1.30 2026/05/21 09:11:08 mef Exp $
 
-BLAKE2s (R/Rcpp_1.0.14.tar.gz) = c2e70382bdf746ee3dd5dfb9fdec9d750927a9b3cb94ffdeab76a05ac253188c
-SHA512 (R/Rcpp_1.0.14.tar.gz) = fa59b5c2446c1cea7cb9ba432c31060a6c54092ac9a9fac76fb45dc8805aabba8fdca019ba4c020f40d5e794c7550afb36313c4a477ffc6d81d53d30aee6333d
-Size (R/Rcpp_1.0.14.tar.gz) = 3013288 bytes
-SHA1 (patch-inst_include_Rcpp_exceptions.h) = 15bf2b84e1fcb0828b8231632b0178880fcfa331
-SHA1 (patch-inst_include_Rcpp_exceptions_cpp11_exceptions.h) = 37aeaa6907ec9b576f2655caddd98e45f991e198
-SHA1 (patch-inst_include_Rcpp_exceptions_cpp98_exceptions.h) = f507c1982b0dc3de7ab6884fd6c903cbf4926efc
-SHA1 (patch-inst_include_Rcpp_utils_tinyformat.h) = a9dc28bfa8e12298c03901fa89527b24d634f917
+BLAKE2s (R/Rcpp_1.1.1-1.1.tar.gz) = 76ad2a8553456a12d7e05f77d8b258c983699bea68bf6ba39f0ad46159c3f125
+SHA512 (R/Rcpp_1.1.1-1.1.tar.gz) = 11f3d6936d7a1fdd053e0820bf4973b560450b49f74d4f9c9257e0298bf7eb9bfb02c886816a24877fe292b34f5fd1016d50e9582d5205d4ea4b1876a5d71cd4
+Size (R/Rcpp_1.1.1-1.1.tar.gz) = 1883279 bytes
+SHA1 (patch-inst_include_Rcpp_utils_tinyformat.h) = 8927fe1ff226ceae6732c115c6e4c6a5cedd26ef
+SHA1 (patch-src_Makevars) = 224e06a25fa845779a42b99affb2e400dc5b9510

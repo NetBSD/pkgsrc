@@ -1,0 +1,27 @@
+$NetBSD: patch-src_Makevars,v 1.1 2026/05/21 09:11:08 mef Exp $
+
+Rcpp needs the function backtrace_symbols which may be found at
+/usr/lib/libexecinfo.* ( in *BSD OS, I assume) as shown below,
+
+---------------------------------------
+** testing if installed package can be loaded from temporary location
+Error: package or namespace load failed for 'Rcpp' in dyn.load(file, DLLpath = DLLpath, ...):
+ unable to load shared object '/tmp/devel/R-Rcpp/work/.destdir/usr/pkg/lib/R/library/00LOCK-Rcpp/00new/Rcpp/libs/Rcpp.so':
+  /tmp/devel/R-Rcpp/work/.destdir/usr/pkg/lib/R/library/00LOCK-Rcpp/00new/Rcpp/libs/Rcpp.so: Undefined PLT symbol "backtrace_symbols" (symnum = 376)
+Error: loading failed
+Execution halted
+ERROR: loading failed
+---------------------------------------
+But because of R building system, LIBS+= -lexecinfo does not work,
+so the patch
+
+--- src/Makevars.orig	2023-02-07 11:10:15.000000000 +0900
++++ src/Makevars	2026-05-21 17:17:44.950656859 +0900
+@@ -1,2 +1,7 @@
++UNAME := $(shell uname) 
++
+ PKG_CPPFLAGS =	-I../inst/include/
+ 
++.if $(UNAME) != "Linux" && $(UNAME) != "SunOS"
++PKG_LIBS = -lexecinfo
++.endif
