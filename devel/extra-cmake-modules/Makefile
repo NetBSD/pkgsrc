@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2025/10/06 09:55:58 markd Exp $
+# $NetBSD: Makefile,v 1.31 2026/05/21 08:25:16 markd Exp $
 
-DISTNAME=	extra-cmake-modules-6.18.0
+DISTNAME=	extra-cmake-modules-6.26.0
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,6 +11,8 @@ COMMENT=	Extra modules and scripts for CMake
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c++
+
+TOOLS_DEPEND+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_HTML_DOCS=OFF

@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/03/20 22:14:27 markd Exp $
+$NetBSD: distinfo,v 1.5 2026/05/21 08:25:10 markd Exp $
 
-BLAKE2s (prison-6.24.0.tar.xz) = 178327d01e1fc96cdfefff55c871fcd60206fd8a5802b4a06f74608c7932ad13
-SHA512 (prison-6.24.0.tar.xz) = a78be4d093303a03e007ae130b123ce8d0dbd7f7f546ca67b334760e6788c0c307e0374c44ed8e195f2c08265f6aabe54e3fcb93b32d35e6a18295d536234a9d
-Size (prison-6.24.0.tar.xz) = 57932 bytes
-SHA1 (patch-CMakeLists.txt) = c72e821ad7ee923556728154c37ded9c99f1f30a
-SHA1 (patch-src_lib_CMakeLists.txt) = 4a7f5b41c0f061b716071fe7d27835993b16f195
-SHA1 (patch-src_scanner_CMakeLists.txt) = aa9350fe5986768a49903b5e2b2b62a82b6d16d1
+BLAKE2s (prison-6.26.0.tar.xz) = 0186a7ae65e535fb73dba27cdae6a106e51fe9425389e1aefa73c67bbaf5538c
+SHA512 (prison-6.26.0.tar.xz) = 5dcbc1920209d85c135741d2906a24121bec05203df011a55b1443160aa08455740e497485b6b303c6737ea0d8e71063467be08596033cba152aa38dc7de5ad5
+Size (prison-6.26.0.tar.xz) = 57928 bytes

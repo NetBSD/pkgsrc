@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/10/06 09:55:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/05/21 08:25:07 markd Exp $
 bin/checkXML6
 bin/meinproc6
 include/KF6/KDocTools/docbookxslt.h
@@ -38,6 +38,10 @@ man/nl/man1/checkXML6.1
 man/nl/man1/meinproc6.1
 man/nl/man7/kf6options.7
 man/nl/man7/qt6options.7
+man/pt_BR/man1/checkXML6.1
+man/pt_BR/man1/meinproc6.1
+man/pt_BR/man7/kf6options.7
+man/pt_BR/man7/qt6options.7
 man/sl/man1/checkXML6.1
 man/sl/man1/meinproc6.1
 man/sl/man7/kf6options.7
@@ -51,6 +55,7 @@ man/uk/man1/meinproc6.1
 man/uk/man7/kf6options.7
 man/uk/man7/qt6options.7
 share/doc/HTML/af/kdoctools6-common/kde-localised.css
+share/doc/HTML/ar/kdoctools6-common/kde-localised.css
 share/doc/HTML/ca/kdoctools6-common/kde-localised.css
 share/doc/HTML/cs/kdoctools6-common/kde-localised.css
 share/doc/HTML/da/kdoctools6-common/kde-localised.css
@@ -145,6 +150,26 @@ share/kf6/kdoctools/customization/af/entities/update-doc.docbook
 share/kf6/kdoctools/customization/af/lang.entities
 share/kf6/kdoctools/customization/af/strings.entities
 share/kf6/kdoctools/customization/af/user.entities
+share/kf6/kdoctools/customization/ar/catalog.xml
+share/kf6/kdoctools/customization/ar/entities/ccbysa4-notice.docbook
+share/kf6/kdoctools/customization/ar/entities/fdl-notice.docbook
+share/kf6/kdoctools/customization/ar/entities/gpl-notice.docbook
+share/kf6/kdoctools/customization/ar/entities/help-menu.docbook
+share/kf6/kdoctools/customization/ar/entities/install-compile.docbook
+share/kf6/kdoctools/customization/ar/entities/install-intro.docbook
+share/kf6/kdoctools/customization/ar/entities/lgpl-notice.docbook
+share/kf6/kdoctools/customization/ar/entities/report-bugs.docbook
+share/kf6/kdoctools/customization/ar/entities/underArtisticLicense.docbook
+share/kf6/kdoctools/customization/ar/entities/underBSDLicense.docbook
+share/kf6/kdoctools/customization/ar/entities/underCCBYSA4.docbook
+share/kf6/kdoctools/customization/ar/entities/underFDL.docbook
+share/kf6/kdoctools/customization/ar/entities/underGPL.docbook
+share/kf6/kdoctools/customization/ar/entities/underLGPL.docbook
+share/kf6/kdoctools/customization/ar/entities/underX11License.docbook
+share/kf6/kdoctools/customization/ar/entities/update-doc.docbook
+share/kf6/kdoctools/customization/ar/lang.entities
+share/kf6/kdoctools/customization/ar/strings.entities
+share/kf6/kdoctools/customization/ar/user.entities
 share/kf6/kdoctools/customization/bg/catalog.xml
 share/kf6/kdoctools/customization/bg/contributor.entities
 share/kf6/kdoctools/customization/bg/entities/fdl-notice.docbook

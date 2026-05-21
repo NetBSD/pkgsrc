@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/10/06 09:56:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/05/21 08:25:08 markd Exp $
 bin/ktelnetservice6
 bin/ktrash6
 include/KF6/KIO/kio_version.h
@@ -671,6 +671,7 @@ share/kf6/searchproviders/ruby_application_archive.desktop
 share/kf6/searchproviders/rust.desktop
 share/kf6/searchproviders/soundcloud.desktop
 share/kf6/searchproviders/sourceforge.desktop
+share/kf6/searchproviders/startpage.desktop
 share/kf6/searchproviders/technorati.desktop
 share/kf6/searchproviders/technoratitags.desktop
 share/kf6/searchproviders/thesaurus.desktop
