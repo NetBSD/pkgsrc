@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3162 2026/05/20 23:06:53 js Exp $
+$NetBSD: CHANGES-2026,v 1.3163 2026/05/21 00:18:08 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4841,3 +4841,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added misc/zellij version 0.44.3 [pin 2026-05-20]
 	Updated audio/py-music21 to 10.1.0 [gutteridge 2026-05-20]
 	Updated devel/objfw to 1.5.3 [js 2026-05-20]
+	Added sysutils/seednaut version 0.1.1 [gdt 2026-05-21]
