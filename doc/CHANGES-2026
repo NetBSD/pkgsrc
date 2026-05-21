@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3184 2026/05/21 20:03:43 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3185 2026/05/21 20:48:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4940,3 +4940,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox140 to 140.11.0 [gutteridge 2026-05-21]
 	Updated www/firefox140-l10n to 140.11.0 [gutteridge 2026-05-21]
 	Updated math/R-proxy to 0.4.29 [mef 2026-05-21]
+	Updated time/R-tzdb to 0.5.0 [mef 2026-05-21]
