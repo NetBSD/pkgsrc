@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2026/05/21 10:27:50 osa Exp $
+# $NetBSD: options.mk,v 1.6 2026/05/21 10:37:15 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -311,7 +311,7 @@ CONFIGURE_ARGS+=	--without-http_uwsgi_module
 .endif
 
 .if !empty(PKG_OPTIONS:Mnginx-push) || make(makesum) || make(mdi) || make(distclean)
-PUSH_VERSION=		1.3.7
+PUSH_VERSION=		1.3.8
 PUSH_DISTNAME=		nchan-${PUSH_VERSION}
 PUSH_DISTFILE=		${PUSH_DISTNAME}.tar.gz
 SITES.${PUSH_DISTFILE}=	-${MASTER_SITE_GITHUB:=slact/nchan/archive/}v${PUSH_VERSION}.tar.gz
