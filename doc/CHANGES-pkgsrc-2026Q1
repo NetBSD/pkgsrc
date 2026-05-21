@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.22 2026/05/18 09:47:35 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.23 2026/05/21 03:08:23 maya Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -213,3 +213,20 @@ databases/redis: security fix
 Pullup ticket #7117 - requested by taca
 databases/postgresql{14,15,16,17,18}: security fix
 
+Pullup ticket #7119 - requested by morr
+editors/vim-share: Security fix
+
+Pullup ticket #7120 - requested by taca
+net/rsync: Security fix
+
+Pullup ticket #7121 - requested by nia
+www/palemoon: Build fix
+
+Pullup ticket #7122 - requested by taca
+graphics/png: Security fix
+
+Pullup ticket #7123 - requested by taca
+net/bind918: Security fix
+
+Pullup ticket #7124 - requested by taca
+lang/ruby40: Security fix
