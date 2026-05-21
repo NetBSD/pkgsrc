@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3165 2026/05/21 08:33:59 markd Exp $
+$NetBSD: CHANGES-2026,v 1.3166 2026/05/21 09:11:17 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4912,3 +4912,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/kf6-kwindowsystem to 6.26.0 [markd 2026-05-21]
 	Updated x11/kf6-kxmlgui to 6.26.0 [markd 2026-05-21]
 	Updated x11/kf6-qqc2-desktop-style to 6.26.0 [markd 2026-05-21]
+	Updated devel/R-Rcpp to 1.1.1.1.1 [mef 2026-05-21]
