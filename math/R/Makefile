@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.285 2026/05/14 16:41:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.286 2026/05/21 13:28:34 adam Exp $
 
 #
 # If updating this package, please try to ensure PLIST.Darwin is kept in sync
@@ -39,6 +39,7 @@ PTHREAD_AUTO_VARS=	yes
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_ICONV=	no
+CONFIGURE_ARGS+=	--disable-java
 CONFIGURE_ARGS+=	--enable-R-shlib
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-tcltk
@@ -56,8 +57,8 @@ CONFIGURE_ARGS+=	--enable-long-double=no
 CONFIGURE_ARGS+=	--disable-nls
 .endif
 
-.if ${OPSYS} != "Linux"
-USE_GNU_ICONV=		yes		# latin1 support, iconvlist
+.if ${OPSYS} != "Darwin" && ${OPSYS} != "Linux"
+USE_GNU_ICONV=		yes	# latin1 support, iconvlist
 .endif
 
 PLIST_VARS+=		x11
