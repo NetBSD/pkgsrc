@@ -1,0 +1,10 @@
+Seednaut is an inspection, verification, and extraction utility for
+[Seedvault](https://github.com/seedvault-app/seedvault) backups.
+
+Various Android distributions like CalyxOS, LineageOS, /e/OS and
+GrapheneOS integrate Seedvault as their main backup mechanism. There
+are currently no official tools for inspecting such backups
+off-device.  To help fill that gap, Seednaut is a desktop command-line
+utility that lets you:
+  - Verify that backups are intact
+  - Explore backup contents before relying on them
