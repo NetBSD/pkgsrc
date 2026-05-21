@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3163 2026/05/21 00:18:08 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.3164 2026/05/21 05:05:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4842,3 +4842,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/py-music21 to 10.1.0 [gutteridge 2026-05-20]
 	Updated devel/objfw to 1.5.3 [js 2026-05-20]
 	Added sysutils/seednaut version 0.1.1 [gdt 2026-05-21]
+	Updated textproc/utf8-cpp to 4.1.1 [adam 2026-05-21]
+	Updated misc/py-trove-classifiers to 2026.5.20.19 [adam 2026-05-21]
