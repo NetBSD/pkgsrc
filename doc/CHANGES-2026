@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3179 2026/05/21 13:52:21 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.3180 2026/05/21 14:44:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4930,3 +4930,9 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv to 0.11.15 [adam 2026-05-21]
 	Updated devel/py-uv-build to 0.11.15 [adam 2026-05-21]
 	Updated chat/toxic to 0.16.2 [ktnb 2026-05-21]
+	Updated textproc/py-types-docutils to 0.22.3.20260518 [adam 2026-05-21]
+	Updated devel/py-types-gdb to 16.3.0.20260518 [adam 2026-05-21]
+	Updated time/py-types-python-dateutil to 2.9.0.20260518 [adam 2026-05-21]
+	Updated devel/py-types-setuptools to 82.0.0.20260518 [adam 2026-05-21]
+	Updated devel/py-types-toml to 0.10.8.20260518 [adam 2026-05-21]
+	Updated textproc/py-types-yaml to 6.0.12.20260518 [adam 2026-05-21]
