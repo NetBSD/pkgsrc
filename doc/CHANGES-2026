@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3178 2026/05/21 13:43:54 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3179 2026/05/21 13:52:21 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4929,3 +4929,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/R-rlang to 1.2.0 [mef 2026-05-21]
 	Updated devel/py-uv to 0.11.15 [adam 2026-05-21]
 	Updated devel/py-uv-build to 0.11.15 [adam 2026-05-21]
+	Updated chat/toxic to 0.16.2 [ktnb 2026-05-21]
