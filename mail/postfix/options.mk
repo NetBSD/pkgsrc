@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.44 2025/09/26 08:10:45 jperkin Exp $
+# $NetBSD: options.mk,v 1.45 2026/05/21 15:14:20 jakllsch Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postfix
 PKG_SUPPORTED_OPTIONS=	blocklist sasl tls eai
-PKG_SUGGESTED_OPTIONS=	blocklist tls
+PKG_SUGGESTED_OPTIONS=	blocklist sasl tls
 
 .include "../../mk/bsd.options.mk"
 
