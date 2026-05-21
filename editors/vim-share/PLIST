@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.85.2.3 2026/05/12 19:22:00 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.85.2.4 2026/05/21 02:27:36 maya Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -242,6 +242,7 @@ share/vim/${VIM_SUBDIR}/compiler/yamllint.vim
 share/vim/${VIM_SUBDIR}/compiler/zig.vim
 share/vim/${VIM_SUBDIR}/compiler/zig_build.vim
 share/vim/${VIM_SUBDIR}/compiler/zig_build_exe.vim
+share/vim/${VIM_SUBDIR}/compiler/zig_cc.vim
 share/vim/${VIM_SUBDIR}/compiler/zig_test.vim
 share/vim/${VIM_SUBDIR}/compiler/zsh.vim
 share/vim/${VIM_SUBDIR}/defaults.vim
