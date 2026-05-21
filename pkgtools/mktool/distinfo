@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2026/04/27 08:17:24 jperkin Exp $
+$NetBSD: distinfo,v 1.28 2026/05/21 13:22:44 jperkin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -360,9 +360,9 @@ Size (miniz_oxide-0.8.9.crate) = 67132 bytes
 BLAKE2s (mio-1.2.0.crate) = 88603c233b46aa8b99c929835bd8a89619591ff0b9b98557075c4b73b12c6ee1
 SHA512 (mio-1.2.0.crate) = 148daec8a99b63ad5742695ce7b5306d32dfcb484fc819b1220079c59219695d2892bbf83b65aa2dd76b68272fa195d353ecb28d9de795e176c4a38be729b04c
 Size (mio-1.2.0.crate) = 106403 bytes
-BLAKE2s (mktool-1.5.8.tar.gz) = bcff11123958c4be15a60d57415c86b308eeb0e82ada8d9a3a35d8c7650c044b
-SHA512 (mktool-1.5.8.tar.gz) = 7e6cd7c2a7091372f4901844e910bd654c134d8ce4d5e8534358fc50a3a2847150056b8434d06996884b64d585f0d2fe887ecb8e6d3e20877deaed83fdc3579e
-Size (mktool-1.5.8.tar.gz) = 53529 bytes
+BLAKE2s (mktool-1.5.9.tar.gz) = 402dfc9dd79eb51aff1fe77e46b79a9a2c3d946e0cd7413fe4c033b982e9610c
+SHA512 (mktool-1.5.9.tar.gz) = 3d662f01150ef0034af491fcbbfb336fb80b6e65439dcff160bb4ed1e07eba2ed3a3c24d6c04d23524f71287f48b7e12b32854b10d1e752b5dbd37b7f742162c
+Size (mktool-1.5.9.tar.gz) = 54603 bytes
 BLAKE2s (native-tls-0.2.18.crate) = d7d0aa0eea3e983770f13ff52b01e2d666926e3f55182bebdc5b439f11966393
 SHA512 (native-tls-0.2.18.crate) = 6e2ef9055a938cdf17cff126b29b57ea4c80df70b160dad49804b2c190703c1fbb93c8c6a2a9b89c95fc3ede1068dacd175ad8100990bebab90b919b30aefbae
 Size (native-tls-0.2.18.crate) = 29967 bytes
