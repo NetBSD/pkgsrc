@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3173 2026/05/21 12:32:49 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3174 2026/05/21 12:45:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4922,3 +4922,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/freenginx to 1.30.0nb4 [osa 2026-05-21]
 	Updated games/chess-tui to 2.7.1 [pin 2026-05-21]
 	Updated emulators/jgenesis to 0.12.1 [pin 2026-05-21]
+	Updated lang/nodejs to 26.2.0 [adam 2026-05-21]
+	Updated net/icinga2 to 2.16.1 [adam 2026-05-21]
