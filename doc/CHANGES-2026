@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3170 2026/05/21 10:28:44 osa Exp $
+$NetBSD: CHANGES-2026,v 1.3171 2026/05/21 10:38:24 osa Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4918,3 +4918,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/freenginx-devel to 1.31.0nb2 [osa 2026-05-21]
 	Updated www/freenginx-devel to 1.31.1 [osa 2026-05-21]
 	Updated www/freenginx to 1.30.0nb3 [osa 2026-05-21]
+	Updated www/freenginx-devel to 1.31.1nb1 [osa 2026-05-21]
+	Updated www/freenginx to 1.30.0nb4 [osa 2026-05-21]
