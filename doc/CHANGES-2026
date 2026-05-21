@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3176 2026/05/21 13:22:53 jperkin Exp $
+$NetBSD: CHANGES-2026,v 1.3177 2026/05/21 13:29:34 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4926,3 +4926,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/icinga2 to 2.16.1 [adam 2026-05-21]
 	Updated sysutils/R-later to 1.4.8 [mef 2026-05-21]
 	Updated pkgtools/mktool to 1.5.9 [jperkin 2026-05-21]
+	Updated devel/R-rlang to 1.2.0 [mef 2026-05-21]
