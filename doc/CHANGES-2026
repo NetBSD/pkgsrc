@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3181 2026/05/21 15:14:48 jakllsch Exp $
+$NetBSD: CHANGES-2026,v 1.3182 2026/05/21 15:34:24 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4937,3 +4937,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-types-toml to 0.10.8.20260518 [adam 2026-05-21]
 	Updated textproc/py-types-yaml to 6.0.12.20260518 [adam 2026-05-21]
 	Updated mail/postfix to 3.11.3nb1 [jakllsch 2026-05-21]
+	Updated www/firefox140 to 140.11.0 [gutteridge 2026-05-21]
