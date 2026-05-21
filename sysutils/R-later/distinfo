@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2024/12/07 05:59:14 mef Exp $
+$NetBSD: distinfo,v 1.9 2026/05/21 13:13:45 mef Exp $
 
-BLAKE2s (R/later_1.4.1.tar.gz) = 0c0928cdef67b64e08ad80af3b560381ac83791eff1943c64d48317fd9d204a4
-SHA512 (R/later_1.4.1.tar.gz) = 7ab445c59ea9383eef654edcc55af190317f9c82da5098e5cc37be621aee4cb7b63721170dd4273b8cfb13319cc8d16b2d825ae8763c15039b3a31367a07ace4
-Size (R/later_1.4.1.tar.gz) = 69832 bytes
+BLAKE2s (R/later_1.4.8.tar.gz) = 51fc0d3e9ec3f2c551191001e45de1db1d1424c8326acf53afecd4dc5298c4ed
+SHA512 (R/later_1.4.8.tar.gz) = eda0e97017d188f26528c559d2150e326865c3896d696f92c585cbd829388c0ef5eccde75b485b88a46234bf62bca2d6d5d0eea5e8c3875b1c69f956e8721a8c
+Size (R/later_1.4.8.tar.gz) = 70250 bytes
+SHA1 (patch-src_Makevars.in) = 808a94a079bce08ead8100ab0da94572a822aca8
