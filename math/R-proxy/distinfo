@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/06/04 03:35:25 mef Exp $
+$NetBSD: distinfo,v 1.5 2026/05/21 20:03:32 mef Exp $
 
-BLAKE2s (R/proxy_0.4-27.tar.gz) = 45d2b496248ae4f77d3959ce4a2b6114255bf4e74fcc2e71a5ec2de7559f0e94
-SHA512 (R/proxy_0.4-27.tar.gz) = 32c5245279d8dba8bef33d6a3bcd7a88f8ebf20773ae8929aeac40a37d763a3fce7d4307719b57bc0461e1d144a0cbb035ecd2bd1a68de9126bff5956815b4c2
-Size (R/proxy_0.4-27.tar.gz) = 74622 bytes
+BLAKE2s (R/proxy_0.4-29.tar.gz) = bbe7ad6f279d07e1bf89eeec059d28c23d39b29976d150de84b654a321ba114b
+SHA512 (R/proxy_0.4-29.tar.gz) = 51496ac2b4551bbca49c0c53b8ab955ff99f8e977addbf7bacc0ec3bf01fa0d1f39053ad516c70b8de8b710f00c3f32f6d5db6546a39fef180259deb32251cbf
+Size (R/proxy_0.4-29.tar.gz) = 71437 bytes
