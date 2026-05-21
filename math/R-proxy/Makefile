@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/06/04 03:35:25 mef Exp $
+# $NetBSD: Makefile,v 1.3 2026/05/21 20:03:32 mef Exp $
 
 R_PKGNAME=	proxy
-R_PKGVER=	0.4-27
+R_PKGVER=	0.4-29
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Distance and Similarity Measures
