@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2026/05/21 08:25:09 markd Exp $
+# $NetBSD: Makefile,v 1.21 2026/05/22 20:01:35 wiz Exp $
 
 DISTNAME=	purpose-${KF6VER}
 CATEGORIES=	devel
@@ -11,13 +11,16 @@ USE_TOOLS+=	msgmerge
 
 .include "../../meta-pkgs/kde/kf6.mk"
 
+.include "../../devel/kf6-kcmutils/buildlink3.mk"
 .include "../../devel/kf6-kconfig/buildlink3.mk"
 .include "../../devel/kf6-kcoreaddons/buildlink3.mk"
 .include "../../devel/kf6-ki18n/buildlink3.mk"
 .include "../../devel/kf6-kio/buildlink3.mk"
+.include "../../devel/kf6-kitemmodels/buildlink3.mk"
 .include "../../devel/kf6-knotifications/buildlink3.mk"
 .include "../../devel/kf6-kservice/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/kf6-prison/buildlink3.mk"
 .include "../../x11/kf6-kirigami/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
