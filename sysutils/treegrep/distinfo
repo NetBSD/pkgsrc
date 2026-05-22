@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2026/05/10 07:34:28 pin Exp $
+$NetBSD: distinfo,v 1.8 2026/05/22 08:10:51 pin Exp $
 
 BLAKE2s (aho-corasick-1.1.4.crate) = 1419308c5b0745af6cfa18dd4c9639f7078f564e9dacbe2b17b03df42c393409
 SHA512 (aho-corasick-1.1.4.crate) = c77e35191b00546f5e499fab154170cedd619599e7250f92db9fba0a41c833eb426f214e58b00c5c39f8757406b33492b3241cb8cb233ce384ad0683c3ee4b62
@@ -33,9 +33,9 @@ Size (clap-4.6.1.crate) = 61836 bytes
 BLAKE2s (clap_builder-4.6.0.crate) = 5d7686f002e18c9bb10f76b283fde443f2c2c50eb9a221f796e085bafe2a231f
 SHA512 (clap_builder-4.6.0.crate) = 43b26377a8f15d29f8fdc9ada914888d87111084c5e205308d166789a27d91c2d8db6756b24d48ef8a293c92ca4c27dbf5433db21e336b2116d51377116fabd7
 Size (clap_builder-4.6.0.crate) = 171122 bytes
-BLAKE2s (clap_complete-4.6.4.crate) = 1ca54dbb66f53b9b6b520f5a5938c90a881a720c02dc357ac42a4b8f758a5de5
-SHA512 (clap_complete-4.6.4.crate) = 244f7c2929553c35ed28033e41adc8f22c67595e5418ea93b42cc317a0271faa476cf060f52c71a18727450a0f2ccb6ee467abe94af74acb3da5133433da0210
-Size (clap_complete-4.6.4.crate) = 50634 bytes
+BLAKE2s (clap_complete-4.6.5.crate) = 7f77ba2db5a6dfb8af7daa3a0d2d6d2bdb6f0e0c893d759945edd05d10eba330
+SHA512 (clap_complete-4.6.5.crate) = 7162684e1d6ac8b0ab339a8f0f3cc07751d7a6e11b9cc556f28432f278095200f47f5825c4485b5ed2637d90da60a0f85444f2f8e361ed0eeb8ea28e9de71364
+Size (clap_complete-4.6.5.crate) = 51377 bytes
 BLAKE2s (clap_derive-4.6.1.crate) = 945495dc8a3310d4f2fdb25a5060fd4d3ba238575b3eb16bd0076fc62979c053
 SHA512 (clap_derive-4.6.1.crate) = ed210527cecfe3791b9d5af7279b337890b46b61fa05fa6979c88db1693ddf0ee5a4eb0904dd93e2da76f5c870963cc79b90d87cfc3cecf166a65364c16ffd06
 Size (clap_derive-4.6.1.crate) = 33512 bytes
@@ -198,9 +198,9 @@ Size (serde_core-1.0.228.crate) = 63111 bytes
 BLAKE2s (serde_derive-1.0.228.crate) = 96ba1b9a1d86ef1d6189da828e4acb22c58e4c75bb851d67131f2b85dd11d75c
 SHA512 (serde_derive-1.0.228.crate) = 8bfdfeee10ee7ef0670972aa963ef63b13e8eb2c8a09b9e0b717f92551aa89b3dd2a0dcbae6ccf20a1caece07e6adb18f0db56fdac020e4e0281b0d24e376003
 Size (serde_derive-1.0.228.crate) = 59605 bytes
-BLAKE2s (serde_json-1.0.149.crate) = 2d8799691eba81211f3c93711b5afe6f051948eb7ed4d813d2e4dba1b4e95ed0
-SHA512 (serde_json-1.0.149.crate) = 85fa8cb7b479f8241a4fd2255dd80e346fa5cde103aa7f25c14ccbcdf0e3276578fd0645e1d2542ee07c7e08c32058ff662bbf03926cd796c38622a12f423d43
-Size (serde_json-1.0.149.crate) = 155994 bytes
+BLAKE2s (serde_json-1.0.150.crate) = 1110211f149c7d628e804aad8cec575b5102027113f6714a2d80a5db011f80d8
+SHA512 (serde_json-1.0.150.crate) = f980f8f4ccc122db36b82de4ecb9aafccec7162f7fe49e6c7c58e2d26d49d36c650af33c7f0d66b057f0d2870daed0cf85d4567b10b64b1a9e10b7df61e1921b
+Size (serde_json-1.0.150.crate) = 155574 bytes
 BLAKE2s (shlex-1.3.0.crate) = 00a54f2882a7a2c2170fca55bd1acd51eea79f115f972ce143b5f4c9c974ee43
 SHA512 (shlex-1.3.0.crate) = 5c8cedbe666a14b8a0874defb9208146ce64579cde52ed483e4a794cac5dde6a24bf8d684404edff582f842e1fd4fa3fbeddbe074f191e4ec4aa517aa456fe8a
 Size (shlex-1.3.0.crate) = 18713 bytes
@@ -234,9 +234,9 @@ Size (thiserror-1.0.69.crate) = 22198 bytes
 BLAKE2s (thiserror-impl-1.0.69.crate) = 2555e9c945653b810be9ffa5bf34b2cc4104000a988b9a341be5703a56dd92ba
 SHA512 (thiserror-impl-1.0.69.crate) = 579eb796c8885feb01d27638862823acd96c79440655bb444c3445ac00121852603396ce7439aed617c0a0ac69f62102167fde5845411c906997574a46d6d9e3
 Size (thiserror-impl-1.0.69.crate) = 18365 bytes
-BLAKE2s (treegrep-2.0.0.tar.gz) = 43f43aa316845f3d2b5d9d4ce952bb26938d93360e23ffb0dec2e9c140ffa1f0
-SHA512 (treegrep-2.0.0.tar.gz) = 40838343eda131a4df41ffb958441213bbe2b26518426791d01e1778be9fc1b3cdd0b8b0454647f7e1dd756864b3829f6a8fd3202181c9739195af10e26050e3
-Size (treegrep-2.0.0.tar.gz) = 145557 bytes
+BLAKE2s (treegrep-2.1.0.tar.gz) = 7be9f936755e9c3db4ee908ed17cfdccade63498b9e4eba66130cf8c3c108ca4
+SHA512 (treegrep-2.1.0.tar.gz) = 6801cae5ef927b5d707db83fa76fcc9bfc36bf498a860456e996d33ac29e5efb02fc19e3f31194f4d2a427e89e0b80794caad5f6da618952bc107023c857fbf5
+Size (treegrep-2.1.0.tar.gz) = 149702 bytes
 BLAKE2s (unicode-ident-1.0.24.crate) = 48314ea8c9272549000bbd39fab6a52df9a467bedfcdcda02f183d7549b620b2
 SHA512 (unicode-ident-1.0.24.crate) = 7be712d8d0075ac9341790180e312f66264d3e0255c91b38df0951baa5e446dec24551bb2125a66a1cb9b6ca2f1ea37c0cc15fa3dd74f398ecf4d5302c7dc259
 Size (unicode-ident-1.0.24.crate) = 49298 bytes

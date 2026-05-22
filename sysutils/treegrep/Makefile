@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2026/05/10 07:34:28 pin Exp $
+# $NetBSD: Makefile,v 1.9 2026/05/22 08:10:51 pin Exp $
 
-DISTNAME=	treegrep-2.0.0
+DISTNAME=	treegrep-2.1.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=4imothy/}
 
