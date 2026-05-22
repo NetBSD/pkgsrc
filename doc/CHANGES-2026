@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3194 2026/05/22 10:43:14 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3195 2026/05/22 11:03:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4970,3 +4970,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-django-q2 to 1.10.0 [adam 2026-05-22]
 	Updated devel/py-wrapt to 2.2.0 [adam 2026-05-22]
 	Updated net/py-zeroconf to 0.149.16 [adam 2026-05-22]
+	Updated sysutils/ansible-core to 2.20.6 [adam 2026-05-22]
+	Updated sysutils/ansible to 13.7.0 [adam 2026-05-22]
