@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2025/02/14 15:15:10 mef Exp $
+# $NetBSD: Makefile,v 1.3 2026/05/22 13:39:31 mef Exp $
 
 R_PKGNAME=	fastmatch
-R_PKGVER=	1.1-6
+R_PKGVER=	1.1-8
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Fast 'match()' Function
