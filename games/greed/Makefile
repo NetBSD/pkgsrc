@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2026/05/12 18:06:06 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/05/22 06:40:24 wiz Exp $
 
-DISTNAME=	greed-5.0
+DISTNAME=	greed-5.1
 CATEGORIES=	games
 MASTER_SITES=	http://www.catb.org/~esr/greed/
 
@@ -13,13 +13,18 @@ TOOL_DEPENDS+=		${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciido
 
 USE_TOOLS+=		gmake
 
-MAKE_FLAGS+=		PREFIX=${PREFIX}
-MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}
-MAKE_FLAGS+=		SFILE=${PREFIX}/share/games/greed.hs
+INSTALLATION_DIRS=	${PKGMANDIR}/man6
 
 pre-configure:
 	${LN} -s ${PREFIX}/bin/asciidoctor${RUBY_SUFFIX} ${TOOLS_DIR}/bin/asciidoctor
 
+post-build:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} make greed.6
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/greed.6 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
+
+.include "cargo-depends.mk"
 .include "../../lang/ruby/rubyversion.mk"
-.include "../../lang/rust/rust.mk"
+.include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
