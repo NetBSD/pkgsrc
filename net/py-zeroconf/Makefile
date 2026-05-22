@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2025/10/09 07:57:53 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2026/05/22 10:42:28 adam Exp $
 
-DISTNAME=	zeroconf-0.148.0
+DISTNAME=	zeroconf-0.149.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zeroconf/}
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.8:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=65.4.1:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-ifaddr>=0.1.7:../../net/py-ifaddr
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.20.3:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-codspeed>=3.1.0:../../devel/py-test-codspeed
