@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.8 2025/10/23 09:13:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/05/22 10:37:07 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/wrapt-stubs/__init__.pyi
 ${PYSITELIB}/wrapt/__init__.py
 ${PYSITELIB}/wrapt/__init__.pyc
-${PYSITELIB}/wrapt/__init__.pyi
 ${PYSITELIB}/wrapt/__init__.pyo
 ${PYSITELIB}/wrapt/__wrapt__.py
 ${PYSITELIB}/wrapt/__wrapt__.pyc
@@ -16,6 +16,9 @@ ${PYSITELIB}/wrapt/_wrappers.so
 ${PYSITELIB}/wrapt/arguments.py
 ${PYSITELIB}/wrapt/arguments.pyc
 ${PYSITELIB}/wrapt/arguments.pyo
+${PYSITELIB}/wrapt/caching.py
+${PYSITELIB}/wrapt/caching.pyc
+${PYSITELIB}/wrapt/caching.pyo
 ${PYSITELIB}/wrapt/decorators.py
 ${PYSITELIB}/wrapt/decorators.pyc
 ${PYSITELIB}/wrapt/decorators.pyo
@@ -28,7 +31,12 @@ ${PYSITELIB}/wrapt/patches.pyo
 ${PYSITELIB}/wrapt/proxies.py
 ${PYSITELIB}/wrapt/proxies.pyc
 ${PYSITELIB}/wrapt/proxies.pyo
-${PYSITELIB}/wrapt/py.typed
+${PYSITELIB}/wrapt/signature.py
+${PYSITELIB}/wrapt/signature.pyc
+${PYSITELIB}/wrapt/signature.pyo
+${PYSITELIB}/wrapt/synchronization.py
+${PYSITELIB}/wrapt/synchronization.pyc
+${PYSITELIB}/wrapt/synchronization.pyo
 ${PYSITELIB}/wrapt/weakrefs.py
 ${PYSITELIB}/wrapt/weakrefs.pyc
 ${PYSITELIB}/wrapt/weakrefs.pyo
