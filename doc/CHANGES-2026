@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3197 2026/05/22 12:33:43 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3198 2026/05/22 12:38:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4975,3 +4975,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/greed to 5.2 [wiz 2026-05-22]
 	Updated devel/catch2 to 3.15.0 [adam 2026-05-22]
 	Updated net/py-aiohappyeyeballs to 2.6.2 [adam 2026-05-22]
+	Updated databases/py-peewee to 4.0.6 [adam 2026-05-22]
+	Updated devel/py-greenlet to 3.5.1 [adam 2026-05-22]
+	Updated textproc/py-pdf to 6.12.0 [adam 2026-05-22]
