@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2026/01/10 17:38:34 bsiegert Exp $
+$NetBSD: distinfo,v 1.8 2026/05/22 16:42:20 ryoon Exp $
 
 BLAKE2s (al.essio.dev_pkg_shellescape_@v_v1.6.0.mod) = 6b700bc0ea1a5a9070b79e2df5ee41bda8994973fbf2a4deac2a482ec151279b
 SHA512 (al.essio.dev_pkg_shellescape_@v_v1.6.0.mod) = 6e2becc6b0294a2ce097ef7bb8ddedfc9793e9e5281620bf920644fb9bef3bb69ad0367e7ffb706acf955c48bf46b118360107241014555562985337a0bbd051
@@ -6,9 +6,9 @@ Size (al.essio.dev_pkg_shellescape_@v_v1.6.0.mod) = 113 bytes
 BLAKE2s (al.essio.dev_pkg_shellescape_@v_v1.6.0.zip) = f4ae9bc566614fbd5cb79005682b5a5854d9481b019b2be01c028e9091b81d79
 SHA512 (al.essio.dev_pkg_shellescape_@v_v1.6.0.zip) = 11b50ef421f8c618e0a7bb448a771cd11da851eafe6679d848d19725f37c71b0c61936fd0b0c2668624a40beba31a40971e50fbce7fc23aaac3c9ac1236e0460
 Size (al.essio.dev_pkg_shellescape_@v_v1.6.0.zip) = 16137 bytes
-BLAKE2s (anubis-src-vendor-npm-1.24.0.tar.gz) = ac6ab0d4375a9ed47785685a1401395fc9345d5f16619baac25901772f0ef6bb
-SHA512 (anubis-src-vendor-npm-1.24.0.tar.gz) = 3ac75178ce56ed2194f359fbed607b8322494adac709ea8c6c2378b51da0c04fbfc54753457229ddad02e34c93c32ef0d85f020869ed58f48482c52e0f9c4fe0
-Size (anubis-src-vendor-npm-1.24.0.tar.gz) = 16531937 bytes
+BLAKE2s (anubis-src-vendor-npm-1.25.0.tar.gz) = 4b9a1005bdde27f15dc5128cdb4958fa71486bfdae22eb2206c261e6f79d722c
+SHA512 (anubis-src-vendor-npm-1.25.0.tar.gz) = e97f0c4d08b8fbd6bf69bb3b275215a4609ac229d2d3a3da41bda02aebd0fb06fd8f36525279911969880f2a53ceb2c2b995068ec015559fb5ea18da8429ad1f
+Size (anubis-src-vendor-npm-1.25.0.tar.gz) = 16608919 bytes
 BLAKE2s (buf.build_gen_go_bufbuild_protovalidate_protocolbuffers_go_@v_v1.36.11-20251209175733-2a1774d88802.1.mod) = fed5fd7a70778e00e8634cf66d37da9d261314e4d1141f604cab46a0f69cc91e
 SHA512 (buf.build_gen_go_bufbuild_protovalidate_protocolbuffers_go_@v_v1.36.11-20251209175733-2a1774d88802.1.mod) = 51c619f5360d3735235fc110bfb321054e5f9e10a0ec552f93a96d068049601d64aae228ee3223e9b7e1d5dd5c134d01fe00a7e081946999ace9bf758b551b16
 Size (buf.build_gen_go_bufbuild_protovalidate_protocolbuffers_go_@v_v1.36.11-20251209175733-2a1774d88802.1.mod) = 120 bytes
