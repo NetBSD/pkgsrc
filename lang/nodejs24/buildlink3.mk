@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2026/01/07 08:47:39 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2026/05/22 08:07:17 adam Exp $
 
 BUILDLINK_TREE+=	nodejs
 
@@ -11,6 +11,7 @@ BUILDLINK_PKGSRCDIR.nodejs?=	../../lang/nodejs24
 
 .include "../../mk/bsd.fast.prefs.mk"
 
+.include "../../databases/sqlite3/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
