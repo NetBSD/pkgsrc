@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2026/03/04 13:47:59 adam Exp $
+# $NetBSD: Makefile,v 1.20 2026/05/22 12:51:44 adam Exp $
 
-DISTNAME=	wand-0.7.0
+DISTNAME=	wand-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/Wand/}
