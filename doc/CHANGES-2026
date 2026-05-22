@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3200 2026/05/22 12:52:01 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3201 2026/05/22 13:00:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4982,3 +4982,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-responses to 0.26.1 [adam 2026-05-22]
 	Updated textproc/py-lxml-html-clean to 0.4.5 [adam 2026-05-22]
 	Updated graphics/py-wand to 0.7.1 [adam 2026-05-22]
+	Updated devel/py-click to 8.4.1 [adam 2026-05-22]
+	Updated devel/py-cachetools to 7.1.4 [adam 2026-05-22]
