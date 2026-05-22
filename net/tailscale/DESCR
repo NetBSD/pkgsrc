@@ -1,6 +1,5 @@
-Private WireGuard VPN
+Tailscale is a mesh VPN alternative, based on WireGuard, that
+connects your computers, databases, and services together securely
+without any proxies.
 
 This package includes tailscaled daemon and tailscale CLI tool.
-
-FOr NetBSD, you can use userspace-networking support only.
-tun(4) backend does not work properly yet.
