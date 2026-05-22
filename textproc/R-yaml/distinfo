@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/01/04 01:08:36 mef Exp $
+$NetBSD: distinfo,v 1.9 2026/05/22 13:53:47 mef Exp $
 
-BLAKE2s (R/yaml_2.3.10.tar.gz) = 8327e2702a6d40a2d7bfc078d88a0875e1b7d8b744913fb7bd12e73509f6fcb6
-SHA512 (R/yaml_2.3.10.tar.gz) = 4d14f70dfdca270b408aae9803e924ad580d604576b375d6ae1842b7f4644a8463c7b9b54f8372dae0fbf3c8f4568ffd3e9bb8fb2677848754dd48804fd82009
-Size (R/yaml_2.3.10.tar.gz) = 94556 bytes
+BLAKE2s (R/yaml_2.3.12.tar.gz) = 911c8f9639b28ea6a98942633071dec90a6c467beff0623eac88539f684147e8
+SHA512 (R/yaml_2.3.12.tar.gz) = 396b3ff79ae33ec57e0754fbfa08133d5c78b25e4c3048917fdcfb0f90531656eb03f062e35f95921e9b9140b717a5b7b4a36ac90bcf9fd548443ef0a3b31130
+Size (R/yaml_2.3.12.tar.gz) = 108975 bytes
