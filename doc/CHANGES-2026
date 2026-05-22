@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3203 2026/05/22 13:07:44 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3204 2026/05/22 13:12:49 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4986,3 +4986,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-cachetools to 7.1.4 [adam 2026-05-22]
 	Updated textproc/R-data.table to 1.18.4 [mef 2026-05-22]
 	Updated math/R-gss to 2.2.10 [mef 2026-05-22]
+	Updated devel/R-checkmate to 2.3.4 [mef 2026-05-22]
