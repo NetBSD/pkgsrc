@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3196 2026/05/22 11:17:19 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3197 2026/05/22 12:33:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4973,3 +4973,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/ansible-core to 2.20.6 [adam 2026-05-22]
 	Updated sysutils/ansible to 13.7.0 [adam 2026-05-22]
 	Updated games/greed to 5.2 [wiz 2026-05-22]
+	Updated devel/catch2 to 3.15.0 [adam 2026-05-22]
+	Updated net/py-aiohappyeyeballs to 2.6.2 [adam 2026-05-22]
