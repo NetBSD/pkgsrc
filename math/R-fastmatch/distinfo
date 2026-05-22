@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2025/02/14 15:15:10 mef Exp $
+$NetBSD: distinfo,v 1.3 2026/05/22 13:39:31 mef Exp $
 
-BLAKE2s (R/fastmatch_1.1-6.tar.gz) = cdd1939ff24492b12aa7623bb76b03e878790f0d855bb79238f9373af0ca98df
-SHA512 (R/fastmatch_1.1-6.tar.gz) = 686aff924914fafb72a18aa8816f5c499c3cfd2b7298af465026f552796d60bca38627f354f0de643b73704538d4b8d055fe549c6b195f7876dc0f771646a984
-Size (R/fastmatch_1.1-6.tar.gz) = 15655 bytes
+BLAKE2s (R/fastmatch_1.1-8.tar.gz) = cdec0d57411c5dd09b34e516a80f4001699bfd871767b66fa7154833575550db
+SHA512 (R/fastmatch_1.1-8.tar.gz) = 0482b1097c656c80b2b1440aca979b2f183867cbe9a6fdc300c0cdcce7860f551ccd3564752ec0121bde9128804182667263a841b4fdc955df36a395081da140
+Size (R/fastmatch_1.1-8.tar.gz) = 17943 bytes
