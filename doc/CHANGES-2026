@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3195 2026/05/22 11:03:19 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3196 2026/05/22 11:17:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4972,3 +4972,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-zeroconf to 0.149.16 [adam 2026-05-22]
 	Updated sysutils/ansible-core to 2.20.6 [adam 2026-05-22]
 	Updated sysutils/ansible to 13.7.0 [adam 2026-05-22]
+	Updated games/greed to 5.2 [wiz 2026-05-22]
