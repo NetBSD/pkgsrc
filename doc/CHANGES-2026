@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3206 2026/05/22 13:32:17 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3207 2026/05/22 13:36:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4989,3 +4989,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/R-checkmate to 2.3.4 [mef 2026-05-22]
 	Updated math/R-gsl to 2.1.9 [mef 2026-05-22]
 	Updated time/R-timechange to 0.4.0 [mef 2026-05-22]
+	Updated graphics/R-Cairo to 1.7.0 [mef 2026-05-22]
