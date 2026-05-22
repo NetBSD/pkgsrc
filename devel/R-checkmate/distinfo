@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/10/18 11:51:21 mef Exp $
+$NetBSD: distinfo,v 1.10 2026/05/22 13:12:39 mef Exp $
 
-BLAKE2s (R/checkmate_2.3.2.tar.gz) = 84ce44997307ea8a9158a128847520b454cb3f5767ef1b33ae83cd164269dc2a
-SHA512 (R/checkmate_2.3.2.tar.gz) = dab4121f1d5bd382dc8c125439cc438404f6930eb749515368d39ba10fcaf66f9fa313bb40922dab5deb2ad2ab007949befd3bbfa844696d98c128f8dace222e
-Size (R/checkmate_2.3.2.tar.gz) = 229874 bytes
+BLAKE2s (R/checkmate_2.3.4.tar.gz) = 8c7c1b00e36d802218ef1d81d1402c16c90fbca8280409e20055ee3a287c2e1c
+SHA512 (R/checkmate_2.3.4.tar.gz) = 9bda53ea747cf7de6b5522790ade17a1eb850f9199678b2b1db39bf028d7a2a4cee53a068d2a5fe8990e6f8fe7ee3e916494204766a1f915af592dcce69dafd7
+Size (R/checkmate_2.3.4.tar.gz) = 252516 bytes
