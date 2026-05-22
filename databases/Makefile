@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.749 2026/05/17 21:18:32 khorben Exp $
+# $NetBSD: Makefile,v 1.750 2026/05/22 16:55:58 ryoon Exp $
 
 COMMENT=	Databases
 
@@ -375,6 +375,7 @@ SUBDIR+=	py-duckdb
 SUBDIR+=	py-elastic-transport
 SUBDIR+=	py-elasticsearch
 SUBDIR+=	py-gdbm
+SUBDIR+=	py-influxdb
 SUBDIR+=	py-kb
 SUBDIR+=	py-ldap
 SUBDIR+=	py-ldap3
