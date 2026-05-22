@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2024/11/03 01:49:44 mef Exp $
+# $NetBSD: Makefile,v 1.10 2026/05/22 13:07:02 mef Exp $
 
 R_PKGNAME=	gss
-R_PKGVER=	2.2-8
+R_PKGVER=	2.2-10
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	General smoothing splines
