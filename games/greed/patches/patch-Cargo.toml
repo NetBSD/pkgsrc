@@ -1,4 +1,4 @@
-$NetBSD: patch-Cargo.toml,v 1.1 2026/05/22 06:40:25 wiz Exp $
+$NetBSD: patch-Cargo.toml,v 1.2 2026/05/22 06:42:55 wiz Exp $
 
 ===> Building for greed-5.1
 error: unexpected end of input while parsing minor version number
@@ -10,6 +10,8 @@ error: unexpected end of input while parsing minor version number
 
 
 https://doc.rust-lang.org/cargo/reference/manifest.html#the-version-field
+
+https://gitlab.com/esr/greed/-/work_items/6
 
 
 --- Cargo.toml.orig	2026-05-22 06:36:44.445007403 +0000
