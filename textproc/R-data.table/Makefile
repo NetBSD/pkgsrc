@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/01/02 10:06:55 mef Exp $
+# $NetBSD: Makefile,v 1.8 2026/05/22 13:00:50 mef Exp $
 
 R_PKGNAME=	data.table
-R_PKGVER=	1.16.4
+R_PKGVER=	1.18.4
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
