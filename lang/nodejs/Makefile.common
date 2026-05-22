@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.64 2026/01/11 11:44:10 wiz Exp $
+# $NetBSD: Makefile.common,v 1.65 2026/05/22 08:06:31 adam Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs18/Makefile
 # used by lang/nodejs20/Makefile
@@ -30,6 +30,7 @@ CONFIGURE_ARGS+=	--shared-brotli
 CONFIGURE_ARGS+=	--shared-cares
 CONFIGURE_ARGS+=	--shared-libuv
 CONFIGURE_ARGS+=	--shared-nghttp2
+CONFIGURE_ARGS+=	--shared-sqlite
 CONFIGURE_ARGS+=	--shared-zlib
 CONFIGURE_ARGS+=	--with-intl=system-icu
 PTHREAD_AUTO_VARS=	yes
@@ -87,6 +88,7 @@ paxctl:
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
 .include "../../archivers/brotli/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libuv+=	libuv>=1.49
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
