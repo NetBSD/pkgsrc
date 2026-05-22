@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3209 2026/05/22 13:53:55 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3210 2026/05/22 15:54:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4992,3 +4992,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/R-Cairo to 1.7.0 [mef 2026-05-22]
 	Updated math/R-fastmatch to 1.1.8 [mef 2026-05-22]
 	Updated textproc/R-yaml to 2.3.12 [mef 2026-05-22]
+	Updated devel/libgit2 to 1.9.4 [adam 2026-05-22]
+	Updated devel/py-wrapt to 2.2.1 [adam 2026-05-22]
+	Updated textproc/py-pdf to 6.12.1 [adam 2026-05-22]
