@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2026/02/16 10:16:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/05/22 12:31:57 adam Exp $
 include/catch2/benchmark/catch_benchmark.hpp
 include/catch2/benchmark/catch_benchmark_all.hpp
 include/catch2/benchmark/catch_chronometer.hpp
@@ -55,7 +55,6 @@ include/catch2/generators/catch_generators_throw.hpp
 include/catch2/interfaces/catch_interfaces_all.hpp
 include/catch2/interfaces/catch_interfaces_capture.hpp
 include/catch2/interfaces/catch_interfaces_config.hpp
-include/catch2/interfaces/catch_interfaces_enum_values_registry.hpp
 include/catch2/interfaces/catch_interfaces_exception.hpp
 include/catch2/interfaces/catch_interfaces_generatortracker.hpp
 include/catch2/interfaces/catch_interfaces_registry_hub.hpp
@@ -85,7 +84,7 @@ include/catch2/internal/catch_debugger.hpp
 include/catch2/internal/catch_decomposer.hpp
 include/catch2/internal/catch_deprecation_macro.hpp
 include/catch2/internal/catch_enforce.hpp
-include/catch2/internal/catch_enum_values_registry.hpp
+include/catch2/internal/catch_enum_info.hpp
 include/catch2/internal/catch_errno_guard.hpp
 include/catch2/internal/catch_exception_translator_registry.hpp
 include/catch2/internal/catch_fatal_condition_handler.hpp

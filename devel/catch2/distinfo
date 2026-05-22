@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.28 2026/04/10 12:53:27 adam Exp $
+$NetBSD: distinfo,v 1.29 2026/05/22 12:31:57 adam Exp $
 
-BLAKE2s (Catch2-3.14.0.tar.gz) = 79747be1d7f2449c49b7cb9834a546925249f10fc1da5b4c62ab9b284ef110b7
-SHA512 (Catch2-3.14.0.tar.gz) = 6eeeedc4e38b79a0a7253edfce3e29862a8761b6556f77aa3f77debd4e6631e0b57cdce7657eba2df01c4e2fd494c5b3f4bbf0dbdff32763387cf6c75d6e0c50
-Size (Catch2-3.14.0.tar.gz) = 1183590 bytes
+BLAKE2s (Catch2-3.15.0.tar.gz) = 77806f20618ced982b576f70cde6b89096970255ad2a40bb1598a31a4133dbb4
+SHA512 (Catch2-3.15.0.tar.gz) = 09df8b291d0c756c492871ce0a4fb5c703162d1364a9864470b227d4d19d9865a0ba5293a5f38d0117cbc7c230f42be35db9f6e0ca5d889dff02f1745807f380
+Size (Catch2-3.15.0.tar.gz) = 1191813 bytes
 SHA1 (patch-CMakeLists.txt) = 6e0f364c5931a03b0b6d5a26654e92070073778a
 SHA1 (patch-src_catch2_internal_catch__floating__point__helpers.hpp) = 32d9a0146f8a04cd203876e695c9a105b53a198f
 SHA1 (patch-src_catch2_matchers_catch__matchers__floating__point.cpp) = 855c7edee42b5befa4c4d70f3186809d5e0f3652
