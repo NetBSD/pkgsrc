@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/01/11 12:22:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/05/22 08:22:59 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -9,6 +9,9 @@ ${PYSITELIB}/_awscrt.abi3.so
 ${PYSITELIB}/awscrt/__init__.py
 ${PYSITELIB}/awscrt/__init__.pyc
 ${PYSITELIB}/awscrt/__init__.pyo
+${PYSITELIB}/awscrt/_aws_iot_metrics.py
+${PYSITELIB}/awscrt/_aws_iot_metrics.pyc
+${PYSITELIB}/awscrt/_aws_iot_metrics.pyo
 ${PYSITELIB}/awscrt/_test.py
 ${PYSITELIB}/awscrt/_test.pyc
 ${PYSITELIB}/awscrt/_test.pyo
@@ -48,6 +51,9 @@ ${PYSITELIB}/awscrt/http.pyo
 ${PYSITELIB}/awscrt/io.py
 ${PYSITELIB}/awscrt/io.pyc
 ${PYSITELIB}/awscrt/io.pyo
+${PYSITELIB}/awscrt/logging.py
+${PYSITELIB}/awscrt/logging.pyc
+${PYSITELIB}/awscrt/logging.pyo
 ${PYSITELIB}/awscrt/mqtt.py
 ${PYSITELIB}/awscrt/mqtt.pyc
 ${PYSITELIB}/awscrt/mqtt.pyo
