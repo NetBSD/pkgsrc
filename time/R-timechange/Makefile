@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2025/01/11 13:55:35 mef Exp $
+# $NetBSD: Makefile,v 1.3 2026/05/22 13:32:10 mef Exp $
 
 R_PKGNAME=	timechange
-R_PKGVER=	0.3.0
+R_PKGVER=	0.4.0
 CATEGORIES=	time
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

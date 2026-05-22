@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2025/01/11 13:55:35 mef Exp $
+$NetBSD: distinfo,v 1.3 2026/05/22 13:32:10 mef Exp $
 
-BLAKE2s (R/timechange_0.3.0.tar.gz) = bc7bc6a8f48546b9679caef0eb6a0702209d6c6b21ac7a2eb3264bce423dfb72
-SHA512 (R/timechange_0.3.0.tar.gz) = 99239f406317db69866dbd14977662704b609a1debeda9d50612ab3b2f7911c850a51f63113919db8fc0ba8e0210b2f653d48b73a729048dd790b5f5238ddac9
-Size (R/timechange_0.3.0.tar.gz) = 103439 bytes
+BLAKE2s (R/timechange_0.4.0.tar.gz) = bb08eed5a7f514b0be84f3297480d20b1db618657e4a6cceb7f30e66ad0767c1
+SHA512 (R/timechange_0.4.0.tar.gz) = 05bb8e681b1902f8d84b3e4b516b3b0b2f311eeb5126f261f834ecd0dc23f74aff89bf41544262a2839c2b0dc9338c3051ab7e8d6396a470019e12e5316f5782
+Size (R/timechange_0.4.0.tar.gz) = 103966 bytes
