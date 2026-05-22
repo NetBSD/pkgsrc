@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3210 2026/05/22 15:54:30 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3211 2026/05/22 16:42:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4995,3 +4995,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/libgit2 to 1.9.4 [adam 2026-05-22]
 	Updated devel/py-wrapt to 2.2.1 [adam 2026-05-22]
 	Updated textproc/py-pdf to 6.12.1 [adam 2026-05-22]
+	Updated www/anubis to 1.25.0 [ryoon 2026-05-22]
