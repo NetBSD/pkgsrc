@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/22 16:54:21 ryoon Exp $
+
+BLAKE2s (influxdb-5.3.2.tar.gz) = 8f19755901e66cac30b307dbab3d9a689f25c3207c90dbe27508ac314193fcca
+SHA512 (influxdb-5.3.2.tar.gz) = 6de0898d6c1e83f4f633e903c13dd1ab487a5de6d2e704eee234425bbbeddeb1d109571cbb4922c20843b2a92cb5cc313e9da86aa57587e0efa4a07ed23b072a
+Size (influxdb-5.3.2.tar.gz) = 70792 bytes
