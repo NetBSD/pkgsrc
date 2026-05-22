@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2026/05/10 07:32:32 pin Exp $
+$NetBSD: distinfo,v 1.9 2026/05/22 08:12:48 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -279,9 +279,9 @@ Size (quote-1.0.45.crate) = 31564 bytes
 BLAKE2s (r-efi-6.0.0.crate) = 43354cc640d5fc19106e09dd1841a1e8fa6504bbc8db6eaceeac64641c8f3b35
 SHA512 (r-efi-6.0.0.crate) = 65f8c75c0201c3b922e6bf032ba9e6c648840f60939615565287b9c64d44f3fccbde209d8fe691937949cd76307b59c53801e6bd43ed7b8ada46d5d8fccf7012
 Size (r-efi-6.0.0.crate) = 65303 bytes
-BLAKE2s (redox-0.6.0.tar.gz) = 2d86f64a00a10ff96b7f374959b6bda273549d449a28b6a25c3ec17e7fa1f8a8
-SHA512 (redox-0.6.0.tar.gz) = 86985ea20787ad30c4b72c29a5cccfc0f72739d6d157a3a704a3336ab3b1e533fd5c8938d99083df4518e423294004b3aec8eb1f87ea4ac6161f5b65a0fb22fe
-Size (redox-0.6.0.tar.gz) = 1026767 bytes
+BLAKE2s (redox-0.6.1.tar.gz) = 7e14fe30f9b24594833918ea2687ae033ff18a9c3bbd0d8a33429f411722fa8c
+SHA512 (redox-0.6.1.tar.gz) = 5b5da842f6e165006cb8d90bd54b780dc62cb7036bd50d55bdd976fc839ffa1f781757166ede1a5491c06f9c70694e206b236546dc3e0c7564e3416748890326
+Size (redox-0.6.1.tar.gz) = 1387691 bytes
 BLAKE2s (redox_syscall-0.5.18.crate) = 15142008cfcffdfe12059e4c1415d354d0a1f60e4fd392dcf9ac888821a0988b
 SHA512 (redox_syscall-0.5.18.crate) = 69f1cfb215666f1243616366711dbd8cadd6bb411121f48f6e4ffd7b25479efa6f900dd072d7cc6e6fb8130d95cdb42f4c0cb4ba9e05b09b1fa676ca32932101
 Size (redox_syscall-0.5.18.crate) = 30747 bytes
