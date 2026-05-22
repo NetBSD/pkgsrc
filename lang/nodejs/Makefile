@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.351 2026/05/21 12:42:10 adam Exp $
+# $NetBSD: Makefile,v 1.352 2026/05/22 08:06:31 adam Exp $
 
 DISTNAME=	node-v26.2.0
 EXTRACT_SUFX=	.tar.xz
@@ -15,7 +15,6 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${PREFIX}/lib
 CONFIGURE_ARGS+=	--shared-ffi
 CONFIGURE_ARGS+=	--shared-nghttp3
 CONFIGURE_ARGS+=	--shared-ngtcp2
-CONFIGURE_ARGS+=	--shared-sqlite
 
 CHECK_INTERPRETER_SKIP+=	lib/node_modules/corepack/shims/*.ps1
 CHECK_PORTABILITY_SKIP+=	deps/uv/autogen.sh
@@ -39,7 +38,6 @@ CXXFLAGS+=	-mstackrealign
 
 .include "../../lang/nodejs/Makefile.common"
 
-.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../net/ngtcp2/buildlink3.mk"
 .include "../../www/nghttp3/buildlink3.mk"
