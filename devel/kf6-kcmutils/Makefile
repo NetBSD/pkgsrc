@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2026/05/21 08:25:06 markd Exp $
+# $NetBSD: Makefile,v 1.22 2026/05/22 19:59:23 wiz Exp $
 
 DISTNAME=	kcmutils-${KF6VER}
 CATEGORIES=	devel
@@ -17,6 +17,7 @@ USE_TOOLS+=	msgmerge
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"
 .include "../../x11/kf6-kconfigwidgets/buildlink3.mk"
 .include "../../x11/kf6-kguiaddons/buildlink3.mk"
+.include "../../x11/kf6-kirigami/buildlink3.mk"
 .include "../../x11/kf6-kitemviews/buildlink3.mk"
 .include "../../x11/kf6-kwidgetsaddons/buildlink3.mk"
 .include "../../x11/kf6-kxmlgui/buildlink3.mk"
