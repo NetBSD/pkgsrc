@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.40 2026/02/24 12:34:46 adam Exp $
+$NetBSD: distinfo,v 1.41 2026/05/22 12:48:17 adam Exp $
 
-BLAKE2s (responses-0.26.0.tar.gz) = 8a14bf8966776e0978b013bb7a976f3ab0b67a0bb045065c197701d284807521
-SHA512 (responses-0.26.0.tar.gz) = 62807ad4276cf9236cfbed045d550530695e97f695a0ac94195e4d477fe446dd99f621f57e4ba8d346db2d774d2f2a7d905aab86472a201ba773fd49724c0edb
-Size (responses-0.26.0.tar.gz) = 81303 bytes
+BLAKE2s (responses-0.26.1.tar.gz) = fa67b2affa65b24dd8f011e0a6f90b0fabc7f3a3b29d81276b978ac6c4c9d11d
+SHA512 (responses-0.26.1.tar.gz) = 60eef8620fc89de35fe47eea4a3ae663e875765bdfa2d9f82a4b886533f244ded736bbc42c97e13edab41c725642cff9f4a95281db4a00bb3cdb2a80e4cef924
+Size (responses-0.26.1.tar.gz) = 83088 bytes
