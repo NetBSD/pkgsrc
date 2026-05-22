@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3202 2026/05/22 13:00:58 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3203 2026/05/22 13:07:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4985,3 +4985,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-click to 8.4.1 [adam 2026-05-22]
 	Updated devel/py-cachetools to 7.1.4 [adam 2026-05-22]
 	Updated textproc/R-data.table to 1.18.4 [mef 2026-05-22]
+	Updated math/R-gss to 2.2.10 [mef 2026-05-22]
