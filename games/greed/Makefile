@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2026/05/22 06:40:24 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/05/22 11:17:09 wiz Exp $
 
-DISTNAME=	greed-5.1
+DISTNAME=	greed-5.2
 CATEGORIES=	games
 MASTER_SITES=	http://www.catb.org/~esr/greed/
 

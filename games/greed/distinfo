@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2026/05/22 06:42:55 wiz Exp $
+$NetBSD: distinfo,v 1.17 2026/05/22 11:17:09 wiz Exp $
 
 BLAKE2s (bitflags-2.11.1.crate) = 8ee2524fdd029e0c4ea54bb386b8077da59a12bb7a668a1bcf884a09369a6b8b
 SHA512 (bitflags-2.11.1.crate) = c91b5a8b420d8e875a0906ef9b518a392487fba5399355aa5e908132149ddea7cc4222dd271cd5072e50dd9abd6e56420f4205652ba32a57af46bf07636604b7
@@ -27,9 +27,9 @@ Size (document-features-0.2.12.crate) = 14739 bytes
 BLAKE2s (errno-0.3.14.crate) = cafef097c25f2739c920a6502c9ef74021cd51742faa7b3ce7910fa561ec7d5a
 SHA512 (errno-0.3.14.crate) = 1de95c9806323d63e7cc95111e67b3ba1ee4b9d47b70cec33485194574d6b584d22ff877dfbc244317822721291d537d9509ae5e46f1b45169cb478a78322366
 Size (errno-0.3.14.crate) = 12002 bytes
-BLAKE2s (greed-5.1.tar.gz) = 0472cde13571bfc3ea0d3fc523f85716bb2c64beec2ade4a4ea911ac22c6ac17
-SHA512 (greed-5.1.tar.gz) = 02c65f1d905847c106c798f4de8759e43f02f5732941e699dfc39865d3c162842829cf77a53861e66bd5f3c54b9a4ac215919f22028fc27b26841fc9e14e1fe2
-Size (greed-5.1.tar.gz) = 18911 bytes
+BLAKE2s (greed-5.2.tar.gz) = 56c81b5045e94c6b370b07592a439213e78347d2c3bb9a7f4d4dade9f48beb82
+SHA512 (greed-5.2.tar.gz) = 6549ed020df7ded85177419809e59701eaaf96e13cf1ad3b1196604db8a29ce0d5f2a129770817f56acb6abe6f2e5e0482c3115b23960a6a9f8df4cf92e97579
+Size (greed-5.2.tar.gz) = 18954 bytes
 BLAKE2s (libc-0.2.186.crate) = e4ae2a7c2182c3a4f54e39cfed3d574220b3a6d54af5a40aadfd814bb8a12c6a
 SHA512 (libc-0.2.186.crate) = 6a58e671ec6811dff9a0d7d4db8f37d38bcbca9efff20dad4706190e5cdb77b426567754bcf0ef0f2d0c31d6506401f724f3ca500b9bed57bb8605b1141ed690
 Size (libc-0.2.186.crate) = 821883 bytes
@@ -114,4 +114,3 @@ Size (windows-link-0.2.1.crate) = 6133 bytes
 BLAKE2s (windows-sys-0.61.2.crate) = 88f1c3307e8ff43ad37316780e5d3e475be394aade0aacac6857e305c6120f6e
 SHA512 (windows-sys-0.61.2.crate) = e6c8f61f0724dafca7821ee9b9c07237ccfee69be269be2fa7318eb48b151285ecf63e860aa1fe303639222fe11268e3773f37c2dd79f923029af58c645edb3f
 Size (windows-sys-0.61.2.crate) = 2517186 bytes
-SHA1 (patch-Cargo.toml) = 04313a303418a89b0f402389a41bce7365662436
