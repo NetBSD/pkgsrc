@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2026/05/22 06:40:24 wiz Exp $
+$NetBSD: distinfo,v 1.16 2026/05/22 06:42:55 wiz Exp $
 
 BLAKE2s (bitflags-2.11.1.crate) = 8ee2524fdd029e0c4ea54bb386b8077da59a12bb7a668a1bcf884a09369a6b8b
 SHA512 (bitflags-2.11.1.crate) = c91b5a8b420d8e875a0906ef9b518a392487fba5399355aa5e908132149ddea7cc4222dd271cd5072e50dd9abd6e56420f4205652ba32a57af46bf07636604b7
@@ -114,4 +114,4 @@ Size (windows-link-0.2.1.crate) = 6133 bytes
 BLAKE2s (windows-sys-0.61.2.crate) = 88f1c3307e8ff43ad37316780e5d3e475be394aade0aacac6857e305c6120f6e
 SHA512 (windows-sys-0.61.2.crate) = e6c8f61f0724dafca7821ee9b9c07237ccfee69be269be2fa7318eb48b151285ecf63e860aa1fe303639222fe11268e3773f37c2dd79f923029af58c645edb3f
 Size (windows-sys-0.61.2.crate) = 2517186 bytes
-SHA1 (patch-Cargo.toml) = 934737a1e10a48e388914d48bda4fea71ae1563d
+SHA1 (patch-Cargo.toml) = 04313a303418a89b0f402389a41bce7365662436
