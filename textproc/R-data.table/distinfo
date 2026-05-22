@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2025/01/02 10:06:55 mef Exp $
+$NetBSD: distinfo,v 1.7 2026/05/22 13:00:50 mef Exp $
 
-BLAKE2s (R/data.table_1.16.4.tar.gz) = a344a3b8e95df37a730de94efd0011ca304ad84688b28aef73e5da141f9f1dc8
-SHA512 (R/data.table_1.16.4.tar.gz) = 00e89eba5d0566dc32edfd7355aa3cc3e5c094dc4e981b11f84d3289811eb56a106ac8cc2c9d7837b8563da190a2115dcf360177b255acf4b4cddb0a825fa9c5
-Size (R/data.table_1.16.4.tar.gz) = 5490632 bytes
+BLAKE2s (R/data.table_1.18.4.tar.gz) = 0d98086d3110738a02b05bb76a42a5c4c7bf5161672f4507737459119e4777a2
+SHA512 (R/data.table_1.18.4.tar.gz) = aece8dc03239f10c2ceb328500946f4c28e861ab3062516b8372cbd20caafae4b36f57c922503ef2efb2ef9db89c1b442ad7df72937243e2ff7be920264139be
+Size (R/data.table_1.18.4.tar.gz) = 6022884 bytes
