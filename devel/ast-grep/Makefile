@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2026/05/20 03:45:03 pin Exp $
+# $NetBSD: Makefile,v 1.83 2026/05/23 12:31:10 wiz Exp $
 
 DISTNAME=	ast-grep-0.42.3
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ast-grep/}
 
@@ -15,12 +16,26 @@ RUST_REQ=	1.79.0
 USE_LANGUAGES=	c c++
 
 INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	share/bash-completion/completions
+INSTALLATION_DIRS+=	share/fish/vendor_completions.d
+INSTALLATION_DIRS+=	share/zsh/site-functions
+
+post-build:
+	for shell in bash fish zsh; do \
+		${WRKSRC}/target/release/ast-grep completions $$shell > ${WRKDIR}/$$shell; \
+	done
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/sg \
 		${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/ast-grep \
 		${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKDIR}/bash \
+		${DESTDIR}${PREFIX}/share/bash-completion/completions/ast-grep
+	${INSTALL_DATA} ${WRKDIR}/fish \
+		${DESTDIR}${PREFIX}/share/fish/vendor_completions.d/ast-grep.fish
+	${INSTALL_DATA} ${WRKDIR}/zsh \
+		${DESTDIR}${PREFIX}/share/zsh/site-functions/_ast-grep
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
