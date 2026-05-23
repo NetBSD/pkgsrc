@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2024/01/13 19:30:50 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/05/23 12:31:10 wiz Exp $
 bin/ast-grep
 bin/sg
+share/bash-completion/completions/ast-grep
+share/fish/vendor_completions.d/ast-grep.fish
+share/zsh/site-functions/_ast-grep
