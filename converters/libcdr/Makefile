@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2026/05/15 09:58:42 adam Exp $
+# $NetBSD: Makefile,v 1.75 2026/05/23 18:07:58 yurix Exp $
 
 DISTNAME=	libcdr-0.1.7
 PKGREVISION=	22
@@ -19,6 +19,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-werror
 CONFIGURE_ARGS+=	--without-docs
 PKGCONFIG_OVERRIDE=	libcdr.pc.in
+LDFLAGS.Darwin += -licuuc
 
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/libwpg/buildlink3.mk"
