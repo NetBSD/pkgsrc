@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.40 2024/08/04 07:03:20 wiz Exp $
+$NetBSD: distinfo,v 1.41 2026/05/24 17:48:53 wiz Exp $
 
-BLAKE2s (HTML-Parser-3.83.tar.gz) = 6253d1ab254fcd3c6fce1ddcf729b1b77fee026ccbd4cf3f9a652fbdf22272e4
-SHA512 (HTML-Parser-3.83.tar.gz) = 1d90da3794adf6d226f4d4780dc2b79d0461f3f8d564a56a26f6a2a2cbc2f9175396af9735893181d3b2b21b02136b2995c399b7a520ea5f4ee498b2074291b5
-Size (HTML-Parser-3.83.tar.gz) = 151224 bytes
+BLAKE2s (HTML-Parser-3.85.tar.gz) = e340ad8e42cd17f230af0f94875b6863d1c3ab31685e67a8c1536857a665d16b
+SHA512 (HTML-Parser-3.85.tar.gz) = 01d852fbdbafa5ac83e3d1f025ec807ca5e7dd792d7466259afc9cdfbbb73591402df903d383181e84f1b8361171d6e167ffa9d52deff5bfa00fc4c3e54e5e92
+Size (HTML-Parser-3.85.tar.gz) = 151577 bytes
