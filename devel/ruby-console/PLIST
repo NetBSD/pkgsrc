@@ -1,6 +1,12 @@
-@comment $NetBSD: PLIST,v 1.7 2025/03/16 13:50:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/05/24 14:06:12 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/bake/console.rb
+${GEM_LIBDIR}/context/command-line.md
+${GEM_LIBDIR}/context/configuration.md
+${GEM_LIBDIR}/context/events.md
+${GEM_LIBDIR}/context/getting-started.md
+${GEM_LIBDIR}/context/index.yaml
+${GEM_LIBDIR}/context/integration.md
 ${GEM_LIBDIR}/lib/console.rb
 ${GEM_LIBDIR}/lib/console/adapter.rb
 ${GEM_LIBDIR}/lib/console/capture.rb
