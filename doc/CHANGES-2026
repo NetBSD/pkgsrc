@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3249 2026/05/24 18:38:15 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3250 2026/05/24 18:40:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5044,3 +5044,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-aiodns to 4.0.4 [wiz 2026-05-24]
 	Updated www/py-genshi to 0.7.11 [wiz 2026-05-24]
 	Updated time/py-icalendar to 7.1.2 [wiz 2026-05-24]
+	Updated www/py-idna to 3.16 [wiz 2026-05-24]
