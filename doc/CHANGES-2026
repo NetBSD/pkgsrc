@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3252 2026/05/24 20:04:10 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3253 2026/05/24 20:09:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5047,3 +5047,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-idna to 3.16 [wiz 2026-05-24]
 	Updated devel/py-more-itertools to 11.1.0 [wiz 2026-05-24]
 	Updated devel/py-poetry-core to 2.4.1 [wiz 2026-05-24]
+	Updated devel/py-ruff to 0.15.14 [wiz 2026-05-24]
