@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3254 2026/05/24 20:11:20 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3255 2026/05/24 20:56:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5049,3 +5049,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-poetry-core to 2.4.1 [wiz 2026-05-24]
 	Updated devel/py-ruff to 0.15.14 [wiz 2026-05-24]
 	Updated misc/py-trove-classifiers to 2026.5.22.10 [wiz 2026-05-24]
+	Updated databases/rrdtool to 1.10.2 [wiz 2026-05-24]
