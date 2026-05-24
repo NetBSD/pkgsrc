@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2026/05/12 07:01:06 wiz Exp $
+$NetBSD: distinfo,v 1.20 2026/05/24 08:16:31 wiz Exp $
 
-BLAKE2s (HTTP-Tiny-0.092.tar.gz) = 279e6f4d3dd9a2dc1bd21d71837e6832c9df79721f79bab716188171195f019c
-SHA512 (HTTP-Tiny-0.092.tar.gz) = ff1884ceac2a560eef0b1fab3f0b4dfd9b754b22b66158f1c5d1b4775f7f0f427f785e4c2c40a91aac3d7ee554007a70efa774c589c2ed7b8788bbf05e049133
-Size (HTTP-Tiny-0.092.tar.gz) = 79095 bytes
+BLAKE2s (HTTP-Tiny-0.094.tar.gz) = 97ddff340b13f1b52d235d9738f79bacf21b5478fa7e2eb51aa4f7467f7fa196
+SHA512 (HTTP-Tiny-0.094.tar.gz) = feda0ea525eb17c4241d8c82df0befdd0665afa12f5ed1ddb1d3e34a8df740a647cdcd37d4c2f91595b4d47e04b972768a47f1f9542af7687196f59df500c9f9
+Size (HTTP-Tiny-0.094.tar.gz) = 79487 bytes

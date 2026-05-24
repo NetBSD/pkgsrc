@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2026/05/12 07:01:06 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/05/24 08:16:31 wiz Exp $
 
-DISTNAME=		HTTP-Tiny-0.092
+DISTNAME=		HTTP-Tiny-0.094
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/H/HA/HAARG/}
