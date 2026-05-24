@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/08/10 16:15:58 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/05/24 06:18:48 adam Exp $
 
 DISTNAME=	setuptools-44.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,12 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/pypa/setuptools
 COMMENT=	New Python packaging system (python 2.x version)
 LICENSE=	python-software-foundation OR zpl-2.0
-
-#TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-#TEST_DEPENDS+=	${PYPKGPREFIX}-pathlib2-[0-9]*:../../devel/py-pathlib2
-#TEST_DEPENDS+=	${PYPKGPREFIX}-test-fixture-config-[0-9]*:../../devel/py-test-fixture-config
-#TEST_DEPENDS+=	${PYPKGPREFIX}-test-virtualenv-[0-9]*:../../devel/py-test-virtualenv
-#TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 REPLACE_PYTHON+=	setuptools/command/easy_install.py
 
