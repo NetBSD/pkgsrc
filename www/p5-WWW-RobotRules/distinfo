@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:30:21 nia Exp $
+$NetBSD: distinfo,v 1.6 2026/05/24 17:54:06 wiz Exp $
 
-BLAKE2s (WWW-RobotRules-6.02.tar.gz) = 426a76db9c6319b86703d9ec934776324d085048d77b78e83c38472d99013f69
-SHA512 (WWW-RobotRules-6.02.tar.gz) = 781a2fc90e4efed901a91ecf4f2aaac2684409c6a75a8434ff140654838bb05d11f8fa760642e20eee96450d3ced6815a4dab11a4245bc8120c69ca68ab49e44
-Size (WWW-RobotRules-6.02.tar.gz) = 9059 bytes
+BLAKE2s (WWW-RobotRules-6.03.tar.gz) = 36888d2584327d113a870b58a566d5317bf7b740de85f0e005fc6329a1683ace
+SHA512 (WWW-RobotRules-6.03.tar.gz) = 240cb65e90295722ad386f24543d13899350f988fe814c0f8d1afba628beed4d24a8e6b47c9c7a09249827aaf40b820d87d3cc769e414de26afe9ea030a4e9ae
+Size (WWW-RobotRules-6.03.tar.gz) = 29258 bytes
