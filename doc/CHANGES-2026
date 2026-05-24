@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3221 2026/05/24 14:08:21 taca Exp $
+$NetBSD: CHANGES-2026,v 1.3222 2026/05/24 14:10:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5016,3 +5016,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/roundcube-plugin-zipdownload to 1.6.16 [taca 2026-05-24]
 	Updated devel/ruby-console to 1.35.1 [taca 2026-05-24]
 	Updated devel/ruby-cucumber-expressions to 19.0.1 [taca 2026-05-24]
+	Updated devel/ruby-getopt to 1.7.1 [taca 2026-05-24]
