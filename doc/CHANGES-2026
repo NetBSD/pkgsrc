@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3234 2026/05/24 17:54:16 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3235 2026/05/24 17:56:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5029,3 +5029,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Role-Tiny to 2.002005 [wiz 2026-05-24]
 	Updated www/p5-Template-Toolkit to 3.103 [wiz 2026-05-24]
 	Updated www/p5-WWW-RobotRules to 6.03 [wiz 2026-05-24]
+	Updated textproc/p5-XML-LibXML to 2.0213 [wiz 2026-05-24]
