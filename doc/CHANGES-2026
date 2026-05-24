@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3244 2026/05/24 18:13:06 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3245 2026/05/24 18:19:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5039,3 +5039,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/libxmlb to 0.3.27 [wiz 2026-05-24]
 	Updated textproc/tree-sitter to 0.26.9 [wiz 2026-05-24]
 	Updated time/libical4 to 4.0.1 [wiz 2026-05-24]
+	Updated textproc/dasel to 3.11.0 [wiz 2026-05-24]
