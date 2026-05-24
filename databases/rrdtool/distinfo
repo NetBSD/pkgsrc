@@ -1,16 +1,14 @@
-$NetBSD: distinfo,v 1.62 2024/08/23 17:48:50 adam Exp $
+$NetBSD: distinfo,v 1.63 2026/05/24 20:55:28 wiz Exp $
 
-BLAKE2s (rrdtool-1.9.0.tar.gz) = e15783e13e6a500473792f01c92dd4911d3f06d861eaf6f2f7edd1af634b5ad5
-SHA512 (rrdtool-1.9.0.tar.gz) = ebeb1fd9e1eed8e01d4d08a4f07aa22c272cc95ac87852f81a892690e6f446b5398bf64689ea99622779cba490722d97b325bda2d2a6d4dfc0719929b2a4c041
-Size (rrdtool-1.9.0.tar.gz) = 2972593 bytes
+BLAKE2s (rrdtool-1.10.2.tar.gz) = 59c9f5b3dde7584a9575bd171d6df398bf9ff711b92c180052e1dde06761a3b0
+SHA512 (rrdtool-1.10.2.tar.gz) = b0c275475ac978c28fd6dac29a623412ea3ae52b2778a61356722886981eeb844a8a59cf92e630b11e992404dc4c92f2937b6f9ac0f7e7a0ab31425f9742a2b6
+Size (rrdtool-1.10.2.tar.gz) = 2996110 bytes
 SHA1 (patch-bindings_perl-shared_Makefile.PL) = 839b4474e89b59002d1629425c5839e4df3b8f5c
 SHA1 (patch-bindings_tcl_Makefile.in) = 0d2515d57ca6a541d1647308d55587046a0a80e8
-SHA1 (patch-configure) = 1766cb47d89b1134c6d3e98279e90c4b823444d8
+SHA1 (patch-configure) = b00e25841ed5d043feaa3bdc76435d82c273a626
 SHA1 (patch-doc_Makefile.in) = 749309b6532fff991a89c317a57e24f91a2804d1
 SHA1 (patch-examples_Makefile.in) = 985e90539340c8bac9788e897c4b7b899fe9f6b1
 SHA1 (patch-examples_rrdcached_Makefile.in) = be06ac61b314e225d62f9f27da28c24fb6a1b84b
-SHA1 (patch-src_compat-cloexec.c) = bf38548c453b8896394542717d1db75f5e25e431
-SHA1 (patch-src_compat-cloexec.h) = 69affed811fff14c332b5275c9c244142510e1b7
 SHA1 (patch-src_gettext.h) = 1254beedc267d901e154ea98599bdfddbe49ddc0
 SHA1 (patch-src_rrd__cgi.c) = f2004681d9d430b6d347627e029ce3c7a717bcd6
 SHA1 (patch-src_rrd__graph.c) = deed6d90fec23a9b400104da605a859436d2c2d9

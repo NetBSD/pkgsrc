@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.172 2026/01/27 08:39:08 wiz Exp $
+# $NetBSD: Makefile,v 1.173 2026/05/24 20:55:28 wiz Exp $
 
-PKGREVISION= 10
 .include "Makefile.common"
 
 DEPENDS+=		dejavu-ttf>=2.26:../../fonts/dejavu-ttf
@@ -27,9 +26,12 @@ TEST_TARGET=		check
 
 RCD_SCRIPTS=		rrdcached
 
-# rrd_config.h is needed for databases/ruby-rrdtool
+# These files are needed for databases/ruby-rrdtool
 post-install:
+	${INSTALL_DATA} ${WRKSRC}/src/optparse.h ${DESTDIR}${PREFIX}/include/
 	${INSTALL_DATA} ${WRKSRC}/src/rrd_config.h ${DESTDIR}${PREFIX}/include/
+	${INSTALL_DATA} ${WRKSRC}/src/rrd_config_bottom.h ${DESTDIR}${PREFIX}/include/
+	${INSTALL_DATA} ${WRKSRC}/src/rrd_tool.h ${DESTDIR}${PREFIX}/include/
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
