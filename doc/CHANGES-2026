@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3219 2026/05/24 13:06:29 taca Exp $
+$NetBSD: CHANGES-2026,v 1.3220 2026/05/24 14:06:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5014,3 +5014,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/roundcube-plugin-enigma to 1.6.16 [taca 2026-05-24]
 	Updated mail/roundcube-plugin-password to 1.6.16 [taca 2026-05-24]
 	Updated mail/roundcube-plugin-zipdownload to 1.6.16 [taca 2026-05-24]
+	Updated devel/ruby-console to 1.35.1 [taca 2026-05-24]
