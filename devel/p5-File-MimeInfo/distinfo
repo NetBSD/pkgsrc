@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2026/01/18 06:28:30 wiz Exp $
+$NetBSD: distinfo,v 1.21 2026/05/24 17:47:19 wiz Exp $
 
-BLAKE2s (File-MimeInfo-0.36.tar.gz) = a93dffcd084bf8ea8b48a7a1b155db231a72ccd2f0f6d3284a911635c85b1282
-SHA512 (File-MimeInfo-0.36.tar.gz) = b1087b2636246137c3e4cab9d8bbdcd0f32db288fba91029c218f13e8b9d88b16aa83d79d975fd659db5bf4a3393e4e36e03e4457c1e8fca294cb5166dee4d99
-Size (File-MimeInfo-0.36.tar.gz) = 36906 bytes
+BLAKE2s (File-MimeInfo-0.37.tar.gz) = 111d14c15d40336a99526a369f77a180f37a3d9966c88bb2cb286c354c8dedbc
+SHA512 (File-MimeInfo-0.37.tar.gz) = c7a5a06fc2561e6724f406142f31a4f440f813b8c8d02d7bbf26daa74a3fb9816d2001329785cd2c9b1469292b0bbeaf130a2d809a0d26514161ab11257219b4
+Size (File-MimeInfo-0.37.tar.gz) = 37763 bytes
