@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.46 2025/07/04 08:47:57 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/05/24 08:27:40 wiz Exp $
 
-DISTNAME=		Crypt-DSA-1.19
+DISTNAME=		Crypt-DSA-1.20
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		security perl5
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TI/TIMLEGGE/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://metacpan.org/release/Crypt-DSA
@@ -15,6 +14,7 @@ DEPENDS+=		p5-Data-Buffer>=0.01:../../devel/p5-Data-Buffer
 DEPENDS+=		p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=		p5-Convert-PEM>=0.13:../../textproc/p5-Convert-PEM
 DEPENDS+=		p5-File-Which>=0.05:../../devel/p5-File-Which
+DEPENDS+=		p5-Crypt-SysRandom>=0:../../security/p5-Crypt-SysRandom
 DEPENDS+=		p5-Crypt-URandom>=0:../../security/p5-Crypt-URandom
 
 USE_LANGUAGES=		# empty
