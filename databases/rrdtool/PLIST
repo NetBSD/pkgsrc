@@ -1,14 +1,17 @@
-@comment $NetBSD: PLIST,v 1.21 2025/05/06 12:07:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2026/05/24 20:55:28 wiz Exp $
 bin/rrdcached
 bin/rrdcgi
 bin/rrdcreate
 bin/rrdinfo
 bin/rrdtool
 bin/rrdupdate
+include/optparse.h
 include/rrd.h
 include/rrd_client.h
 include/rrd_config.h
+include/rrd_config_bottom.h
 include/rrd_format.h
+include/rrd_tool.h
 lib/librrd.la
 ${PLIST.lua}${LUA_CDIR}/rrd.la
 lib/pkgconfig/librrd.pc
@@ -158,3 +161,4 @@ share/examples/rrdtool/stripes.pl
 share/examples/rrdtool/stripes.py
 share/locale/fr/LC_MESSAGES/rrdtool.mo
 share/locale/hu/LC_MESSAGES/rrdtool.mo
+share/locale/ka/LC_MESSAGES/rrdtool.mo
