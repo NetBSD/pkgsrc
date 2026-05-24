@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.64 2026/01/19 07:48:49 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2026/05/24 17:52:40 wiz Exp $
 
-DISTNAME=	Template-Toolkit-3.102
+DISTNAME=	Template-Toolkit-3.103
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	www perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TO/TODDR/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://template-toolkit.org/
