@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.50 2026/05/03 14:27:06 wiz Exp $
+$NetBSD: distinfo,v 1.51 2026/05/24 18:07:06 wiz Exp $
 
-BLAKE2s (fzf-0.72.0.tar.gz) = 0f6d5424a1cab7aa77a9aa625c95391768d4871ac7fde56e0654becbdf226b2c
-SHA512 (fzf-0.72.0.tar.gz) = e1dbfd7c471e63c17ac46ae532201d5f740dc508e92a5cd4eb117cd6e13aff6f31e641402f99f78d11eeafd1f46fb0af2f9a607843cf9a4374facc65f0916af4
-Size (fzf-0.72.0.tar.gz) = 412234 bytes
+BLAKE2s (fzf-0.73.0.tar.gz) = 97a24b7f148b8bf288193ec885d3b88e7025e7978bd888d85aaa28fd23e5e262
+SHA512 (fzf-0.73.0.tar.gz) = 66f5bd9b149d0bace59174f8586fe024fde67a405462b970295f5b90b13a6f5c7e0ee5d055b6992e566bf95443c68d37bbd4fbcb32331d670326585b7e4914be
+Size (fzf-0.73.0.tar.gz) = 431221 bytes
 BLAKE2s (github.com_charlievieth_fastwalk_@v_v1.0.14.mod) = 8225a56cd73ef07f4f34aa10fb819ecd8b5334c43a456c4520977b5120f76512
 SHA512 (github.com_charlievieth_fastwalk_@v_v1.0.14.mod) = 3ce875eb677a95df738a185ba9af982e9e48162218a809b2af9e4237c2ad0d65d959c3930d99b960f6483d88930f597d222b71f6f339e694ce24fdb9e98199ff
 Size (github.com_charlievieth_fastwalk_@v_v1.0.14.mod) = 92 bytes
@@ -33,12 +33,12 @@ Size (github.com_lucasb-eyer_go-colorful_@v_v1.2.0.mod) = 51 bytes
 BLAKE2s (github.com_lucasb-eyer_go-colorful_@v_v1.2.0.zip) = 0f232c68cb4dd7dc05417a7ba38cab8dc8baa14e554cc49b2868ee9ecfdf9eed
 SHA512 (github.com_lucasb-eyer_go-colorful_@v_v1.2.0.zip) = 89b52255dd45791100b58a693036c772d27b26011754caa15df2badc4a93038b70060c7358aa12e01494e2f24e94533cd4ea7f7cb78686e61540383d1680ba2f
 Size (github.com_lucasb-eyer_go-colorful_@v_v1.2.0.zip) = 958042 bytes
-BLAKE2s (github.com_mattn_go-isatty_@v_v0.0.20.mod) = 779efb55fdcfefacdd39190c04ee6ce80f51999e7500c46db997722d7af26586
-SHA512 (github.com_mattn_go-isatty_@v_v0.0.20.mod) = 9f1baeff279dfddcbc2c93a65b56b432ae90fc360b59809ef755bb13c02b5beb87f8e70e6d4397a85c0f20e1ec50f572558535eb401b1a48d2b40f9f4aa2eaa2
-Size (github.com_mattn_go-isatty_@v_v0.0.20.mod) = 76 bytes
-BLAKE2s (github.com_mattn_go-isatty_@v_v0.0.20.zip) = 2d2cb2dfbdd0ab3966083e41da0935841137086e5ae572048732f45c92b2f532
-SHA512 (github.com_mattn_go-isatty_@v_v0.0.20.zip) = 55d1fca3591dfa9c350a1509c47be776186247adb5b43b6c047743ac265d4cff5252584fa76b4030f9c47bee9eedd610b1c90dbf690b2cdeeabc1f3a95fcd390
-Size (github.com_mattn_go-isatty_@v_v0.0.20.zip) = 8936 bytes
+BLAKE2s (github.com_mattn_go-isatty_@v_v0.0.22.mod) = 4b4dc0b8bec3aec5ccb634e8c47e07d1d21608ec72d1ae614c682802f81b99ca
+SHA512 (github.com_mattn_go-isatty_@v_v0.0.22.mod) = f41fd7659eefda9fbb7c7cadd24f94ae577911a243c437e17c0379575fad2e0adead4ea78b31ce073c3ba6995b7fb008a61262441466adf5167e553eeaefc05c
+Size (github.com_mattn_go-isatty_@v_v0.0.22.mod) = 77 bytes
+BLAKE2s (github.com_mattn_go-isatty_@v_v0.0.22.zip) = 9909f559991198a7f157d646f6210049fd25579847e926f00652fad9f229197a
+SHA512 (github.com_mattn_go-isatty_@v_v0.0.22.zip) = 54078a59a98866153a50eb341a85c11dc46aab993d568d678b5ccc53221d8d0190f73172d3ddde795f6460c76a6a0ee0a431774ba8e765cef5b7bfc90de714bd
+Size (github.com_mattn_go-isatty_@v_v0.0.22.zip) = 9030 bytes
 BLAKE2s (github.com_mattn_go-runewidth_@v_v0.0.16.mod) = 8df0af400904d313f84666016bb58fa961611b14296a6ee0b534ea7942608632
 SHA512 (github.com_mattn_go-runewidth_@v_v0.0.16.mod) = b96cca212a7024f0039ddd3a744fe818ab2e028b8ac2fd4472ce76ee9b496de3abb0960718c1106a98cf7e6df652dcf2884fe5ed95979bd9016399ea4abd324d
 Size (github.com_mattn_go-runewidth_@v_v0.0.16.mod) = 84 bytes
@@ -114,9 +114,6 @@ Size (golang.org_x_sys_@v_v0.35.0.zip) = 1998204 bytes
 BLAKE2s (golang.org_x_sys_@v_v0.5.0.mod) = 66613eb38a59b8a7f75e1aaeb294a1c4ea290d4e9ae699137566025e50ed741c
 SHA512 (golang.org_x_sys_@v_v0.5.0.mod) = 85e511b1261c1935f5ee4754ad31d1d946f9e10f0af9905f44c4348d6ce5104319c03fb38517dde616698f6487b0c62788cfa96bc0ffb3b6db80accd7e552655
 Size (golang.org_x_sys_@v_v0.5.0.mod) = 33 bytes
-BLAKE2s (golang.org_x_sys_@v_v0.6.0.mod) = 66613eb38a59b8a7f75e1aaeb294a1c4ea290d4e9ae699137566025e50ed741c
-SHA512 (golang.org_x_sys_@v_v0.6.0.mod) = 85e511b1261c1935f5ee4754ad31d1d946f9e10f0af9905f44c4348d6ce5104319c03fb38517dde616698f6487b0c62788cfa96bc0ffb3b6db80accd7e552655
-Size (golang.org_x_sys_@v_v0.6.0.mod) = 33 bytes
 BLAKE2s (golang.org_x_term_@v_v0.0.0-20201126162022-7de9c90e9dd1.mod) = ea6d2006c1c11da8c2174212a63865a04dec1775f98210c17f3a0cb8d4a1a80f
 SHA512 (golang.org_x_term_@v_v0.0.0-20201126162022-7de9c90e9dd1.mod) = a3401e3d20dc1aaaebbf3c296a783668003f2182ed77ec830431f97339e07eda1859fe8c3c7fdfb0125b3ed331d23208519df520f86e20c1a05c822b3d766b08
 Size (golang.org_x_term_@v_v0.0.0-20201126162022-7de9c90e9dd1.mod) = 95 bytes
