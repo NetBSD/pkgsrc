@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.6 2026/05/19 18:16:38 adam Exp $
+# $NetBSD: go-modules.mk,v 1.7 2026/05/24 05:41:36 adam Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.123.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.123.0.zip
@@ -6,10 +6,10 @@ GO_MODULE_FILES+=	cloud.google.com/go/auth/@v/v0.20.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/auth/@v/v0.20.0.zip
 GO_MODULE_FILES+=	cloud.google.com/go/compute/metadata/@v/v0.9.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/compute/metadata/@v/v0.9.0.zip
-GO_MODULE_FILES+=	github.com/!adguard!team/dnsproxy/@v/v0.81.3.mod
-GO_MODULE_FILES+=	github.com/!adguard!team/dnsproxy/@v/v0.81.3.zip
-GO_MODULE_FILES+=	github.com/!adguard!team/golibs/@v/v0.35.12.mod
-GO_MODULE_FILES+=	github.com/!adguard!team/golibs/@v/v0.35.12.zip
+GO_MODULE_FILES+=	github.com/!adguard!team/dnsproxy/@v/v0.81.4.mod
+GO_MODULE_FILES+=	github.com/!adguard!team/dnsproxy/@v/v0.81.4.zip
+GO_MODULE_FILES+=	github.com/!adguard!team/golibs/@v/v0.35.13.mod
+GO_MODULE_FILES+=	github.com/!adguard!team/golibs/@v/v0.35.13.zip
 GO_MODULE_FILES+=	github.com/!adguard!team/urlfilter/@v/v0.23.2.mod
 GO_MODULE_FILES+=	github.com/!adguard!team/urlfilter/@v/v0.23.2.zip
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.6.0.mod
