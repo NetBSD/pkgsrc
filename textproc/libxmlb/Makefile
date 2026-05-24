@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2026/05/15 17:01:04 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/05/24 18:09:44 wiz Exp $
 
-DISTNAME=	libxmlb-0.3.26
+DISTNAME=	libxmlb-0.3.27
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hughsie/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -22,6 +22,7 @@ PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.68
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/meson/build.mk"
