@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3214 2026/05/23 19:40:13 js Exp $
+$NetBSD: CHANGES-2026,v 1.3215 2026/05/24 05:51:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -4999,3 +4999,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Added databases/py-influxdb version 5.3.2 [ryoon 2026-05-22]
 	Updated devel/ast-grep to 0.42.3nb1 [wiz 2026-05-23]
 	Updated devel/objfw to 1.5.4 [js 2026-05-23]
+	Updated security/adguardhome to 0.107.76 [adam 2026-05-24]
+	Updated devel/py-cython to 3.2.5 [adam 2026-05-24]
+	Updated devel/py-test-codspeed to 5.0.3 [adam 2026-05-24]
+	Updated devel/py-bumpver to 2026.1132 [adam 2026-05-24]
