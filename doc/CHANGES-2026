@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3222 2026/05/24 14:10:37 taca Exp $
+$NetBSD: CHANGES-2026,v 1.3223 2026/05/24 14:15:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5017,3 +5017,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-console to 1.35.1 [taca 2026-05-24]
 	Updated devel/ruby-cucumber-expressions to 19.0.1 [taca 2026-05-24]
 	Updated devel/ruby-getopt to 1.7.1 [taca 2026-05-24]
+	Updated devel/ruby-gettext_i18n_rails to 2.1.0 [taca 2026-05-24]
