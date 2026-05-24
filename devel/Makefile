@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4630 2026/05/15 17:00:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4631 2026/05/24 06:24:13 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2890,8 +2890,6 @@ SUBDIR+=	py-parameterized
 SUBDIR+=	py-path
 SUBDIR+=	py-path.py
 SUBDIR+=	py-pathable
-SUBDIR+=	py-pathlib
-SUBDIR+=	py-pathlib2
 SUBDIR+=	py-pathspec
 SUBDIR+=	py-pathvalidate
 SUBDIR+=	py-pbr
