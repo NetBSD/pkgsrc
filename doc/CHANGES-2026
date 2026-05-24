@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3215 2026/05/24 05:51:47 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3216 2026/05/24 06:24:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5003,3 +5003,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-cython to 3.2.5 [adam 2026-05-24]
 	Updated devel/py-test-codspeed to 5.0.3 [adam 2026-05-24]
 	Updated devel/py-bumpver to 2026.1132 [adam 2026-05-24]
+	Updated misc/py-icecream to 2.2.0 [adam 2026-05-24]
+	Updated sysutils/fabric to 3.2.3 [adam 2026-05-24]
+	Updated security/py-paramiko to 5.0.0 [adam 2026-05-24]
+	Removed devel/py-pathlib2 [adam 2026-05-24]
+	Removed devel/py-pathlib [adam 2026-05-24]
