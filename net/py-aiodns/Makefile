@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2026/05/17 15:50:31 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/05/24 18:25:03 wiz Exp $
 
-DISTNAME=	aiodns-4.0.3
+DISTNAME=	aiodns-4.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiodns/}
@@ -15,8 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-cares>=5.0.0:../../net/py-cares
 
 USE_LANGUAGES=	# none
 
-# as of 4.0.3
-# 29 failed, 110 passed, 55 skipped, 63 warnings
+# as of 4.0.4
+# 30 failed, 122 passed, 55 skipped, 64 warnings
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
