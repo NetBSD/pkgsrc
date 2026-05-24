@@ -1,0 +1,1 @@
+bin/idna @PREFIX@/bin/idna-@PYVERSSUFFIX@

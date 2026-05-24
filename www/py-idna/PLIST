@@ -1,11 +1,19 @@
-@comment $NetBSD: PLIST,v 1.8 2025/02/23 18:29:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/05/24 18:39:57 wiz Exp $
+bin/idna-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.md
 ${PYSITELIB}/idna/__init__.py
 ${PYSITELIB}/idna/__init__.pyc
 ${PYSITELIB}/idna/__init__.pyo
+${PYSITELIB}/idna/__main__.py
+${PYSITELIB}/idna/__main__.pyc
+${PYSITELIB}/idna/__main__.pyo
+${PYSITELIB}/idna/cli.py
+${PYSITELIB}/idna/cli.pyc
+${PYSITELIB}/idna/cli.pyo
 ${PYSITELIB}/idna/codec.py
 ${PYSITELIB}/idna/codec.pyc
 ${PYSITELIB}/idna/codec.pyo
