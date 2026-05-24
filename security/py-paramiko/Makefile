@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2025/10/09 07:57:56 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2026/05/24 06:17:51 adam Exp $
 
-DISTNAME=	paramiko-4.0.0
+DISTNAME=	paramiko-5.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/paramiko/}
@@ -13,11 +13,9 @@ LICENSE=	gnu-lgpl-v2.1
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-invoke>=2.0:../../sysutils/py-invoke
 DEPENDS+=	${PYPKGPREFIX}-nacl>=1.5:../../security/py-nacl
-# gssapi
-DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.7:../../security/py-asn1
-DEPENDS+=	${PYPKGPREFIX}-gssapi>=1.4.1:../../security/py-gssapi
-TEST_DEPENDS+=	${PYPKGPREFIX}-icecream-[0-9]*:../../misc/py-icecream
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-relaxed>=1.1.5:../../devel/py-test-relaxed
+TEST_DEPENDS+=	${PYPKGPREFIX}-icecream>=2.1:../../misc/py-icecream
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-relaxed>=2:../../devel/py-test-relaxed
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 

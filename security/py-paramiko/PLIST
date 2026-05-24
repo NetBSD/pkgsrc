@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2025/08/22 07:27:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2026/05/24 06:17:51 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -61,18 +61,12 @@ ${PYSITELIB}/paramiko/kex_ecdh_nist.pyo
 ${PYSITELIB}/paramiko/kex_gex.py
 ${PYSITELIB}/paramiko/kex_gex.pyc
 ${PYSITELIB}/paramiko/kex_gex.pyo
-${PYSITELIB}/paramiko/kex_group1.py
-${PYSITELIB}/paramiko/kex_group1.pyc
-${PYSITELIB}/paramiko/kex_group1.pyo
 ${PYSITELIB}/paramiko/kex_group14.py
 ${PYSITELIB}/paramiko/kex_group14.pyc
 ${PYSITELIB}/paramiko/kex_group14.pyo
 ${PYSITELIB}/paramiko/kex_group16.py
 ${PYSITELIB}/paramiko/kex_group16.pyc
 ${PYSITELIB}/paramiko/kex_group16.pyo
-${PYSITELIB}/paramiko/kex_gss.py
-${PYSITELIB}/paramiko/kex_gss.pyc
-${PYSITELIB}/paramiko/kex_gss.pyo
 ${PYSITELIB}/paramiko/message.py
 ${PYSITELIB}/paramiko/message.pyc
 ${PYSITELIB}/paramiko/message.pyo
@@ -121,9 +115,6 @@ ${PYSITELIB}/paramiko/sftp_si.pyo
 ${PYSITELIB}/paramiko/ssh_exception.py
 ${PYSITELIB}/paramiko/ssh_exception.pyc
 ${PYSITELIB}/paramiko/ssh_exception.pyo
-${PYSITELIB}/paramiko/ssh_gss.py
-${PYSITELIB}/paramiko/ssh_gss.pyc
-${PYSITELIB}/paramiko/ssh_gss.pyo
 ${PYSITELIB}/paramiko/transport.py
 ${PYSITELIB}/paramiko/transport.pyc
 ${PYSITELIB}/paramiko/transport.pyo
