@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2026/03/29 14:31:58 taca Exp $
+# $NetBSD: Makefile,v 1.104 2026/05/24 14:01:51 taca Exp $
 
 DISTNAME=	roundcubemail-${RC_VERS}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/mail-/-/:S/-complete//}
@@ -50,16 +50,13 @@ CONF_PLUGINS=		acl additional_message_headers database_attachments \
 			redundant_attachments squirrelmail_usercopy
 RC_DOCS=		CHANGELOG.md INSTALL LICENSE README.md SECURITY.md \
 			UPGRADING
-REPLACE_PHP=		cleandb.sh decrypt.sh deluser.sh gc.sh \
+REPLACE_PHP_FILES=	cleandb.sh decrypt.sh deluser.sh gc.sh \
 			indexcontacts.sh initdb.sh installto.sh \
 			moduserprefs.sh msgexport.sh msgimport.sh \
 			update.sh updatecss.sh updatedb.sh
 
-REPLACE_INTERPRETER+=	php
-REPLACE.php.old=	.*php[^ ]*
-REPLACE.php.new=	${PREFIX}/bin/php
-.for f in ${REPLACE_PHP}
-REPLACE_FILES.php+=	bin/${f}
+.for f in ${REPLACE_PHP_FILES}
+REPLACE_PHP+=	bin/${f}
 .endfor
 
 SUBST_CLASSES+=		files
