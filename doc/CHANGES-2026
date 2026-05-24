@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3227 2026/05/24 17:28:44 morr Exp $
+$NetBSD: CHANGES-2026,v 1.3228 2026/05/24 17:46:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5022,3 +5022,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-io-event to 1.16.0 [taca 2026-05-24]
 	Updated devel/ruby-marcel to 1.2.1 [taca 2026-05-24]
 	Updated editors/vim-share to 9.2.0526 [sh 2026-05-24]
+	Updated security/p5-CryptX to 0.089 [wiz 2026-05-24]
