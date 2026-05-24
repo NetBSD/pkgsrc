@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.133 2025/06/18 20:48:11 wiz Exp $
+$NetBSD: distinfo,v 1.134 2026/05/24 10:12:27 tnn Exp $
 
 BLAKE2s (xorg-server-21.1.18.tar.xz) = bb95936718e7c554fd77e033a00f9b6a3c55a17793d0fd627d5c222a99d4e710
 SHA512 (xorg-server-21.1.18.tar.xz) = 839ce759fc0e5405599c4cff0acf381f278d22b465b9fb9e335b5fd1c63f6d546788e4e869854026eb4b1e1a77a83b60d6fef472cf8534d45630f31b587a50dd
@@ -19,3 +19,4 @@ SHA1 (patch-hw_xfree86_os-support_solaris_sun__init.c) = 6148072cfaf1cb8d0a2f465
 SHA1 (patch-hw_xfree86_os-support_xf86_OSproc.h) = e1c049857893d2f050d5fb297a3e8ef86f0b1d7e
 SHA1 (patch-hw_xfree86_os_support_bus_xf86Sbus.h) = 0e0a243b737f8f762c9f8f24a2265d1b6aefb544
 SHA1 (patch-os_backtrace.c) = 8cf93febb737dd850706d140b467b73f61ecd3ad
+SHA1 (patch-os_xsha1.c) = 2d33d8797056f3e77f6afa19f68bfe9a5dd3a315
