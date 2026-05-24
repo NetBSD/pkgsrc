@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3242 2026/05/24 18:09:56 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3243 2026/05/24 18:11:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5037,3 +5037,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/fzf to 0.73.0 [wiz 2026-05-24]
 	Updated multimedia/libde265 to 1.0.19 [wiz 2026-05-24]
 	Updated textproc/libxmlb to 0.3.27 [wiz 2026-05-24]
+	Updated textproc/tree-sitter to 0.26.9 [wiz 2026-05-24]
