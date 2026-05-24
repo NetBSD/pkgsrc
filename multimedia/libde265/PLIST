@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/03/26 13:54:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/05/24 18:08:08 wiz Exp $
 bin/dec265
 include/libde265/de265-version.h
 include/libde265/de265.h
@@ -7,5 +7,5 @@ lib/cmake/libde265/libde265-config-version.cmake
 lib/cmake/libde265/libde265-config.cmake
 lib/libde265.so
 lib/libde265.so.0
-lib/libde265.so.0.1.11
+lib/libde265.so.0.1.12
 lib/pkgconfig/libde265.pc
