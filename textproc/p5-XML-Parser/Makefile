@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2026/04/26 04:41:20 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2026/05/24 17:57:31 wiz Exp $
 
-DISTNAME=	XML-Parser-2.58
+DISTNAME=	XML-Parser-2.59
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TO/TODDR/}
