@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3256 2026/05/24 20:56:38 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3257 2026/05/24 20:56:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5051,3 +5051,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-trove-classifiers to 2026.5.22.10 [wiz 2026-05-24]
 	Updated databases/rrdtool to 1.10.2 [wiz 2026-05-24]
 	Updated databases/py-rrdtool to 1.10.2 [wiz 2026-05-24]
+	Updated databases/ruby-rrdtool to 1.10.2 [wiz 2026-05-24]
