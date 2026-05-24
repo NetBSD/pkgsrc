@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2025/12/03 12:04:03 adam Exp $
+# $NetBSD: Makefile,v 1.32 2026/05/24 18:25:49 wiz Exp $
 
-DISTNAME=	genshi-0.7.10
+DISTNAME=	genshi-0.7.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=G/Genshi/}
