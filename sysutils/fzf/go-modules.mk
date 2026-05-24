@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.28 2025/10/13 09:25:36 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.29 2026/05/24 18:07:06 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/charlievieth/fastwalk/@v/v1.0.14.mod
 GO_MODULE_FILES+=	github.com/charlievieth/fastwalk/@v/v1.0.14.zip
@@ -10,8 +10,8 @@ GO_MODULE_FILES+=	github.com/junegunn/go-shellwords/@v/v0.0.0-20250127100254-2aa
 GO_MODULE_FILES+=	github.com/junegunn/go-shellwords/@v/v0.0.0-20250127100254-2aa3b3277741.zip
 GO_MODULE_FILES+=	github.com/lucasb-eyer/go-colorful/@v/v1.2.0.mod
 GO_MODULE_FILES+=	github.com/lucasb-eyer/go-colorful/@v/v1.2.0.zip
-GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.20.mod
-GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.20.zip
+GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.22.mod
+GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.22.zip
 GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.16.mod
 GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.16.zip
 GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.2.0.mod
@@ -37,7 +37,6 @@ GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20220722155257-8c9f86f7a55f.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.35.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.35.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.5.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.6.0.mod
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.0.0-20201126162022-7de9c90e9dd1.mod
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.0.0-20210927222741-03fcf44c2211.mod
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.34.0.mod
