@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.34 2022/07/15 06:16:34 adam Exp $
+$NetBSD: distinfo,v 1.35 2026/05/24 06:11:24 adam Exp $
 
-BLAKE2s (fabric-2.7.1.tar.gz) = 97a020dfe8eed0cd5f8f412b5f22a577b40ea4e80bbf9690dd29d9fb8deef51f
-SHA512 (fabric-2.7.1.tar.gz) = aac98da8be951dd802ecf0f10d140079bda2284b33f6b72a2190ebd86c1123b7592a2b9b587d1f8656df5475c897baba8caedf53310f6eaae4b6232e1caeee2d
-Size (fabric-2.7.1.tar.gz) = 167922 bytes
+BLAKE2s (fabric-3.2.3.tar.gz) = 10307b0e53af556f9b0fbdd960748a49b6b4bde0baa99d92a0d922292cac67e0
+SHA512 (fabric-3.2.3.tar.gz) = 4505be72d4734cdd6ead10a403a2e726b1773c37f705cb975c78349bfcfefa775163750bd751c8f76e0d88dd499620066ffdb9c0fda4ed96020bdd0ea6ef6cf7
+Size (fabric-3.2.3.tar.gz) = 183497 bytes

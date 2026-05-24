@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.19 2022/07/13 12:13:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2026/05/24 06:11:24 adam Exp $
 bin/fab
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/fabric/__init__.py
 ${PYSITELIB}/fabric/__init__.pyc
 ${PYSITELIB}/fabric/__init__.pyo
@@ -15,6 +15,9 @@ ${PYSITELIB}/fabric/__main__.pyo
 ${PYSITELIB}/fabric/_version.py
 ${PYSITELIB}/fabric/_version.pyc
 ${PYSITELIB}/fabric/_version.pyo
+${PYSITELIB}/fabric/auth.py
+${PYSITELIB}/fabric/auth.pyc
+${PYSITELIB}/fabric/auth.pyo
 ${PYSITELIB}/fabric/config.py
 ${PYSITELIB}/fabric/config.pyc
 ${PYSITELIB}/fabric/config.pyo
