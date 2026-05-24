@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3231 2026/05/24 17:49:55 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3232 2026/05/24 17:50:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5026,3 +5026,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-File-MimeInfo to 0.37 [wiz 2026-05-24]
 	Updated www/p5-HTML-Parser to 3.85 [wiz 2026-05-24]
 	Updated www/p5-HTTP-Daemon to 6.17 [wiz 2026-05-24]
+	Updated devel/p5-Role-Tiny to 2.002005 [wiz 2026-05-24]
