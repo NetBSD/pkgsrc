@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2026/05/03 14:49:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.34 2026/05/24 18:38:05 wiz Exp $
 bin/icalendar-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -759,6 +759,9 @@ ${PYSITELIB}/icalendar/tests/test_pytz_zoneinfo_integration.pyo
 ${PYSITELIB}/icalendar/tests/test_recurrence.py
 ${PYSITELIB}/icalendar/tests/test_recurrence.pyc
 ${PYSITELIB}/icalendar/tests/test_recurrence.pyo
+${PYSITELIB}/icalendar/tests/test_repr_recursion.py
+${PYSITELIB}/icalendar/tests/test_repr_recursion.pyc
+${PYSITELIB}/icalendar/tests/test_repr_recursion.pyo
 ${PYSITELIB}/icalendar/tests/test_rfc_6868.py
 ${PYSITELIB}/icalendar/tests/test_rfc_6868.pyc
 ${PYSITELIB}/icalendar/tests/test_rfc_6868.pyo
