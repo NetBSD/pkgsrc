@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2026/01/20 22:34:36 wiz Exp $
+$NetBSD: distinfo,v 1.7 2026/05/24 05:51:19 adam Exp $
 
-BLAKE2s (bumpver-2025.1131.tar.gz) = b3574486f924de3d6743aaa7dddba7b983dede07b7866bfb56297a11b5e538e1
-SHA512 (bumpver-2025.1131.tar.gz) = 771b4e0d36473e39cc68ef69161a518d237eb7b995405b77c00ec9d916572f1a38dbbda32240aabd96140430731abcd32b007275244ba490c95127c957527322
-Size (bumpver-2025.1131.tar.gz) = 115372 bytes
+BLAKE2s (bumpver-2026.1132.tar.gz) = f999b279771cfc9e6492e6f1eec541a0a3f82f87353baed9ed67bd7589439ab1
+SHA512 (bumpver-2026.1132.tar.gz) = 0044c3b7f83b645a4ebdbe590939aa194af0db9577413fa03be13b0d5b7ba0daf9418ca50885e26bd58241f117ea6eb2efe05b954450d24bccaee32d4583ca68
+Size (bumpver-2026.1132.tar.gz) = 116784 bytes
 SHA1 (patch-setup.py) = 48d60dcc9655077363efa0b6eec1bee9a6a1a519
