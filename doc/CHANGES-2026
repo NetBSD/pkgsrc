@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3217 2026/05/24 08:16:44 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3218 2026/05/24 08:27:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5009,3 +5009,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/py-pathlib2 [adam 2026-05-24]
 	Removed devel/py-pathlib [adam 2026-05-24]
 	Updated www/p5-HTTP-Tiny to 0.094 [wiz 2026-05-24]
+	Updated security/p5-Crypt-DSA to 1.20 [wiz 2026-05-24]
