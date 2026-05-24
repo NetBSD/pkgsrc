@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.24 2026/05/21 14:47:22 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.25 2026/05/24 09:00:38 bsiegert Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -236,3 +236,8 @@ net/unbound: Security fix
 
 Pullup ticket #7126 - requested by taca
 net/rsync: Security fix
+
+Pullup ticket #7127 - requested by gutteridge
+www/firefox140: security fix
+www/firefox140-l10n: dependent update
+
