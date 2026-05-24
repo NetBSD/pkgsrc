@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3258 2026/05/24 21:00:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3259 2026/05/24 22:00:49 roy Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5053,3 +5053,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/py-rrdtool to 1.10.2 [wiz 2026-05-24]
 	Updated databases/ruby-rrdtool to 1.10.2 [wiz 2026-05-24]
 	Updated textproc/rumdl to 0.2.0 [wiz 2026-05-24]
+	Updated net/dhcpsd to 0.0.8 [roy 2026-05-24]
