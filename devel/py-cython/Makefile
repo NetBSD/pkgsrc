@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.115 2026/01/05 16:10:48 adam Exp $
+# $NetBSD: Makefile,v 1.116 2026/05/24 05:44:11 adam Exp $
 
-DISTNAME=	cython-3.2.4
+DISTNAME=	cython-3.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cython/}
@@ -17,6 +17,8 @@ REPLACE_PYTHON+=	Cython/Debugger/Cygdb.py
 REPLACE_PYTHON+=	Cython/Debugger/libpython.py
 REPLACE_PYTHON+=	cython.py
 
+PY_RENAME_BINARIES=	cython cythonize cygdb
+
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 USE_CC_FEATURES=	c99
@@ -25,12 +27,6 @@ FORCE_C_STD+=		c99
 
 # as of 3.2.2
 # 13 failed, 757 passed, 12 skipped, 2 warnings
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} cython cython-${PYVERSSUFFIX} && \
-	${MV} cythonize cythonize-${PYVERSSUFFIX} && \
-	${MV} cygdb cygdb-${PYVERSSUFFIX} || ${TRUE}
 
 # remove tests that are so broken they break collecting the other tests
 pre-test:
