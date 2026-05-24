@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3240 2026/05/24 18:07:16 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3241 2026/05/24 18:08:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5035,3 +5035,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/jjui to 0.10.6 [wiz 2026-05-24]
 	Updated devel/gopls to 0.22.0 [wiz 2026-05-24]
 	Updated sysutils/fzf to 0.73.0 [wiz 2026-05-24]
+	Updated multimedia/libde265 to 1.0.19 [wiz 2026-05-24]
