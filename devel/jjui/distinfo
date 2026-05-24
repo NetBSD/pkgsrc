@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2026/05/10 12:05:14 wiz Exp $
+$NetBSD: distinfo,v 1.20 2026/05/24 18:02:26 wiz Exp $
 
 BLAKE2s (charm.land_bubbles_v2_@v_v2.1.0.mod) = e47454973e55d97606d4d15c93d4ff8c8b56f5ff3b3a0aa9daea91aff7cf9740
 SHA512 (charm.land_bubbles_v2_@v_v2.1.0.mod) = 49349772d9bcebe91a66904bcf16e5559e2e4516283ead2f84a4cc080a82b14549eba3565fb9be3421f07a33e0142a99821f8532ce85bc9a13b91d48934df1b1
@@ -96,6 +96,12 @@ Size (github.com_mattn_go-runewidth_@v_v0.0.23.mod) = 95 bytes
 BLAKE2s (github.com_mattn_go-runewidth_@v_v0.0.23.zip) = 1b12a9ce1803bbff097a14ec4817e7464362c9d87f8bb96970fec2ecdd693101
 SHA512 (github.com_mattn_go-runewidth_@v_v0.0.23.zip) = 4640b3c0dab13198c193e65560aca9ac76c6bd0a19d4200122441f989ead17062cea4414dedb0ec878acec6388920a19557a2f8c2c057d1d1aad2a8903665cd7
 Size (github.com_mattn_go-runewidth_@v_v0.0.23.zip) = 25877 bytes
+BLAKE2s (github.com_mattn_go-shellwords_@v_v1.0.13.mod) = f30e6044a95a1d7c205a42356ff66be576f3764237dcc5f5a444e1322b0b6bd4
+SHA512 (github.com_mattn_go-shellwords_@v_v1.0.13.mod) = c1a6d910b914ceef7ffea53c61f2225ebffeba2fc87c290aebdb739bf520494e35fef046eb9ced4fc9a3767523efefcce41ef5026fe11bad97c005b8e55d96f8
+Size (github.com_mattn_go-shellwords_@v_v1.0.13.mod) = 47 bytes
+BLAKE2s (github.com_mattn_go-shellwords_@v_v1.0.13.zip) = 4df214b4b6c01e424fe35a5d67deb7b5f3b75ed3dad63d9fcf003a1eb902b355
+SHA512 (github.com_mattn_go-shellwords_@v_v1.0.13.zip) = dc12e564748bb6697180eec731a03f120183a74a1f6a0fd433348f414dec0825bae30e6d4c5538f434b0965393c6105eddaec82d65caecf60ff427a0e607d623
+Size (github.com_mattn_go-shellwords_@v_v1.0.13.zip) = 10488 bytes
 BLAKE2s (github.com_muesli_cancelreader_@v_v0.2.2.mod) = 55783c3403b5180fb9c219314d35d3a1972ba6d4985cf6d0250497ac8baa6c4e
 SHA512 (github.com_muesli_cancelreader_@v_v0.2.2.mod) = 7dd0d2ab29819cbd211eb6a21b6862f1edcafb6b10e7e35ee11fef1b93930d599e93679b860b0f33347b22abbe4965b5591fb4928bb0be470dc86f563e1db866
 Size (github.com_muesli_cancelreader_@v_v0.2.2.mod) = 108 bytes
@@ -183,6 +189,6 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (jjui-0.10.5.tar.gz) = 6621a5b93e578dd32526393ee81bb1e589a40e34ea83776aefefd126a2c61786
-SHA512 (jjui-0.10.5.tar.gz) = 36b42bb75fe5d2713c1efad31b891be4f01ba262e315fb15b7c2cf35546d8f0fc9b0352c9dd06b573dca25c9f03245a98c43f2ce51861a1dcf1503621992e2ff
-Size (jjui-0.10.5.tar.gz) = 242000 bytes
+BLAKE2s (jjui-0.10.6.tar.gz) = 5ef242de8dc18cd149a72dd01206d7358d5478b00fb482909407385d0bf26f09
+SHA512 (jjui-0.10.6.tar.gz) = 49d699561ab097b1fe54b71f1ccdbd660f3c0e61a61c275a5641969edb7edef8dd503671d545d6222b87fcd9ff67c0a87665c655577dc52880eef9bd225b32db
+Size (jjui-0.10.6.tar.gz) = 248595 bytes

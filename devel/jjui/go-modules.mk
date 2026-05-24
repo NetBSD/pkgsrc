@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.11 2026/05/10 12:05:14 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.12 2026/05/24 18:02:26 wiz Exp $
 
 GO_MODULE_FILES+=	charm.land/bubbles/v2/@v/v2.1.0.mod
 GO_MODULE_FILES+=	charm.land/bubbles/v2/@v/v2.1.0.zip
@@ -32,6 +32,8 @@ GO_MODULE_FILES+=	github.com/lucasb-eyer/go-colorful/@v/v1.4.0.mod
 GO_MODULE_FILES+=	github.com/lucasb-eyer/go-colorful/@v/v1.4.0.zip
 GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.23.mod
 GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.23.zip
+GO_MODULE_FILES+=	github.com/mattn/go-shellwords/@v/v1.0.13.mod
+GO_MODULE_FILES+=	github.com/mattn/go-shellwords/@v/v1.0.13.zip
 GO_MODULE_FILES+=	github.com/muesli/cancelreader/@v/v0.2.2.mod
 GO_MODULE_FILES+=	github.com/muesli/cancelreader/@v/v0.2.2.zip
 GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.mod
