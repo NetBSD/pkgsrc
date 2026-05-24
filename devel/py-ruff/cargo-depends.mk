@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.99 2026/05/14 16:10:34 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.100 2026/05/24 20:09:39 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -120,7 +120,7 @@ CARGO_CRATE_DEPENDS+=	etcetera-0.11.0
 CARGO_CRATE_DEPENDS+=	fancy-regex-0.14.0
 CARGO_CRATE_DEPENDS+=	fastrand-2.3.0
 CARGO_CRATE_DEPENDS+=	fern-0.7.1
-CARGO_CRATE_DEPENDS+=	filetime-0.2.27
+CARGO_CRATE_DEPENDS+=	filetime-0.2.29
 CARGO_CRATE_DEPENDS+=	find-msvc-tools-0.1.2
 CARGO_CRATE_DEPENDS+=	flate2-1.1.2
 CARGO_CRATE_DEPENDS+=	fnv-1.0.7
@@ -143,7 +143,7 @@ CARGO_CRATE_DEPENDS+=	globwalk-0.9.1
 CARGO_CRATE_DEPENDS+=	half-2.6.0
 CARGO_CRATE_DEPENDS+=	hashbrown-0.14.5
 CARGO_CRATE_DEPENDS+=	hashbrown-0.15.5
-CARGO_CRATE_DEPENDS+=	hashbrown-0.17.0
+CARGO_CRATE_DEPENDS+=	hashbrown-0.17.1
 CARGO_CRATE_DEPENDS+=	hashlink-0.10.0
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.5.2
@@ -325,8 +325,8 @@ CARGO_CRATE_DEPENDS+=	serde_json-1.0.149
 CARGO_CRATE_DEPENDS+=	serde_repr-0.1.20
 CARGO_CRATE_DEPENDS+=	serde_spanned-1.1.1
 CARGO_CRATE_DEPENDS+=	serde_test-1.0.177
-CARGO_CRATE_DEPENDS+=	serde_with-3.19.0
-CARGO_CRATE_DEPENDS+=	serde_with_macros-3.19.0
+CARGO_CRATE_DEPENDS+=	serde_with-3.20.0
+CARGO_CRATE_DEPENDS+=	serde_with_macros-3.20.0
 CARGO_CRATE_DEPENDS+=	sha2-0.10.9
 CARGO_CRATE_DEPENDS+=	sharded-slab-0.1.7
 CARGO_CRATE_DEPENDS+=	shellexpand-3.1.2
