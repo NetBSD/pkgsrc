@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3265 2026/05/25 08:11:49 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3266 2026/05/25 09:42:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5065,3 +5065,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-pbs-installer to 2026.5.10 [adam 2026-05-25]
 	Updated net/py-impacket to 0.13.1 [adam 2026-05-25]
 	Updated devel/py-testfixtures to 12.0.0 [adam 2026-05-25]
+	Updated databases/py-ldap to 3.4.7 [adam 2026-05-25]
+	Updated net/py-prometheus_client to 0.25.0 [adam 2026-05-25]
