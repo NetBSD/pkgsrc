@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3263 2026/05/25 07:07:54 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3264 2026/05/25 07:49:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5061,3 +5061,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-test-rerunfailures to 16.3 [adam 2026-05-25]
 	Updated databases/py-sqlalchemy to 2.0.50 [adam 2026-05-25]
 	Updated www/py-soupsieve to 2.8.4 [adam 2026-05-25]
+	Updated mail/py-checkdmarc to 5.16.2 [adam 2026-05-25]
+	Updated misc/py-pbs-installer to 2026.5.10 [adam 2026-05-25]
