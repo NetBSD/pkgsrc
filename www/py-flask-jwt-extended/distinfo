@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2025/02/04 13:14:31 adam Exp $
+$NetBSD: distinfo,v 1.17 2026/05/25 11:22:29 adam Exp $
 
-BLAKE2s (flask_jwt_extended-4.7.1.tar.gz) = f26498ac6e0118bc5934f91abf35167542669286a5e89fa4875d84c36a8cfe31
-SHA512 (flask_jwt_extended-4.7.1.tar.gz) = a16cdbcf8edff797978e0432064514919e86a25b4960ba748c688566569391005c2a9a02d0336583f958ca83fd82a49327f46ee7d481e30f9894dbfc3e63e09e
-Size (flask_jwt_extended-4.7.1.tar.gz) = 34411 bytes
+BLAKE2s (flask_jwt_extended-4.7.4.tar.gz) = 4b57ce66fb8901631cd8f7138eae22089f9d7844c99a20a357c060fa0bdc71d4
+SHA512 (flask_jwt_extended-4.7.4.tar.gz) = 78db5fa57bc07669c725857337ea8f0b10aed4cbcb3c4fd819813ae33069d8e87b7dd2dfe397769a7a742248bf4cbb4ec555d81f9f350071b553ccedbaeca57a
+Size (flask_jwt_extended-4.7.4.tar.gz) = 34672 bytes
