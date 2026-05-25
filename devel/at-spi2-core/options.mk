@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2026/05/15 17:00:54 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2026/05/25 15:50:45 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.at-spi2-core
 
@@ -23,6 +23,9 @@ PLIST_VARS+=	introspection
 
 .if ${PKG_OPTIONS:Mdbus}
 PLIST.dbus=	yes
+
+MESON_ARGS+=			-Duse_systemd=false
+MESON_ARGS+=			-Ddefault_bus=dbus-daemon
 
 #
 # These files only get installed when dbus is in use.
