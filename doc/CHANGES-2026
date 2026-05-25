@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3261 2026/05/25 06:26:00 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3262 2026/05/25 06:31:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5057,3 +5057,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/libheif to 1.22.0nb1 [wiz 2026-05-25]
 	Updated x11/qt5 to 5.15.19 [adam 2026-05-25]
 	Updated net/rclone to 1.74.2 [adam 2026-05-25]
+	Updated textproc/py-snowballstemmer to 3.1.0 [adam 2026-05-25]
+	Updated devel/py-test-rerunfailures to 16.3 [adam 2026-05-25]
