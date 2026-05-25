@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3279 2026/05/25 16:15:33 bsiegert Exp $
+$NetBSD: CHANGES-2026,v 1.3280 2026/05/25 16:19:49 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5087,3 +5087,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/powerdns to 5.0.5 [wiz 2026-05-25]
 	Updated databases/sqlc to 1.31.1 [bsiegert 2026-05-25]
 	Updated www/caddy to 2.11.3 [bsiegert 2026-05-25]
+	Updated x11/libxfce4windowing to 4.20.6 [gutteridge 2026-05-25]
