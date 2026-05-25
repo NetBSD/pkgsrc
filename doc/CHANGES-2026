@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3270 2026/05/25 11:22:46 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3271 2026/05/25 11:42:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5075,3 +5075,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py-ast-serialize to 0.5.0 [adam 2026-05-25]
 	Updated multimedia/mkvtoolnix to 99.0 [adam 2026-05-25]
 	Updated www/py-flask-jwt-extended to 4.7.4 [adam 2026-05-25]
+	Updated databases/py-barman to 3.19.0 [adam 2026-05-25]
+	Updated www/py-modelsearch to 1.3.1 [adam 2026-05-25]
