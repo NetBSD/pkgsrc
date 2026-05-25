@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3268 2026/05/25 10:16:09 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3269 2026/05/25 10:52:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5071,3 +5071,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-ephem to 4.2.1 [adam 2026-05-25]
 	Updated devel/py-dulwich to 1.2.4 [adam 2026-05-25]
 	Updated cad/py-simpy to 4.1.2 [adam 2026-05-25]
+	Updated sysutils/py-kubernetes to 36.0.0 [adam 2026-05-25]
+	Updated lang/py-ast-serialize to 0.5.0 [adam 2026-05-25]
