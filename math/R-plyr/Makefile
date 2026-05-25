@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/02/03 12:03:16 mef Exp $
+# $NetBSD: Makefile,v 1.14 2026/05/25 15:02:10 mef Exp $
 
 R_PKGNAME=	plyr
 R_PKGVER=	1.8.9
@@ -17,6 +17,8 @@ TEST_DEPENDS+=	R-itertools-[0-9]*:../../math/R-itertools
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 
 USE_LANGUAGES+=	c c++
+# make the patch works more portable
+USE_TOOLS+=	gmake
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
