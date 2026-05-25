@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2026/01/13 17:44:13 gutteridge Exp $
+$NetBSD: distinfo,v 1.7 2026/05/25 16:19:20 gutteridge Exp $
 
-BLAKE2s (libxfce4windowing-4.20.5.tar.bz2) = cab4707fc58e91ebecb67b518b0ee674f28bcf0ab0a9f5c1dd92b5459a0b4297
-SHA512 (libxfce4windowing-4.20.5.tar.bz2) = 357afc89d2ed146d65afaa7376c3aada78adae291ecfe602f0cb061d115b132024ee8a78eedc0ed77b91fc6bdaa8d3c3b107c1e21503053eda1e05bc81b15d9f
-Size (libxfce4windowing-4.20.5.tar.bz2) = 622438 bytes
+BLAKE2s (libxfce4windowing-4.20.6.tar.bz2) = 4854ffcf4d11a4c9e68c4b4a2fc286b6d7bc475e9d430d41f849afd6a3e429e2
+SHA512 (libxfce4windowing-4.20.6.tar.bz2) = 94d1c199aeac99d584453dc782c1fed39311b922ac2bbeafec4e099347f1eeaff72a853497e1e328325d73513fd0cbcc13b5533309b37e484057315343b3244a
+Size (libxfce4windowing-4.20.6.tar.bz2) = 595011 bytes
