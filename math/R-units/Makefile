@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/11/24 07:32:11 mef Exp $
+# $NetBSD: Makefile,v 1.7 2026/05/25 21:45:20 mef Exp $
 
 R_PKGNAME=	units
 R_PKGVER=	0.8-5
@@ -17,6 +17,8 @@ TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 TEST_DEPENDS+=	R-xml2-[0-9]*:../../textproc/R-xml2
 
 USE_LANGUAGES+=	c c++
+# make patch more portable
+USE_TOOLS+=	gmake
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"

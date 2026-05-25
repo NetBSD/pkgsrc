@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2024/11/24 07:32:11 mef Exp $
+$NetBSD: distinfo,v 1.9 2026/05/25 21:45:20 mef Exp $
 
 BLAKE2s (R/units_0.8-5.tar.gz) = a9db38d95c94ec3b6ab53a0953b80329af1423a797ac7252bf6dad1f855a1328
 SHA512 (R/units_0.8-5.tar.gz) = d01ca8e92a5cdb9e3b742ea1d4cdac622ce985c3f719f5e7d11b583cdae2666b49cf86a5be6d85764ed7c7c0c48a853b794406666b8ab3df7f53b9a860e00e40
 Size (R/units_0.8-5.tar.gz) = 247974 bytes
 SHA1 (patch-configure) = f57f2b7187678ba9f0973e2c90dd08d1fe4e752f
 SHA1 (patch-configure.ac) = 6f6dab407646bda4fc25abca4af1c730146a79be
+SHA1 (patch-src_Makevars.in) = 312e04fd627a059424b940bf8ef72e2eb513ce7e
