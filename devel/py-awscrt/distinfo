@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2026/05/22 08:22:59 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/05/25 12:31:02 adam Exp $
 
-BLAKE2s (awscrt-0.32.2.tar.gz) = 978b9e1045de605b690d8c5d83606a3b527ff0f8822b261f547d54a26cbee659
-SHA512 (awscrt-0.32.2.tar.gz) = 54660c48d9f3c5b330c61bd60ee6fcd3f00b6259d5064db48833a930400e817e7137c6facf097c89535acb839d24d545e54262d199d15b59687e1a737e916693
-Size (awscrt-0.32.2.tar.gz) = 36862073 bytes
+BLAKE2s (awscrt-0.33.0.tar.gz) = cce11462af0d63217eee7d26e3936539daf89efed46bc86d1a7ce5bde68d147f
+SHA512 (awscrt-0.33.0.tar.gz) = 56abc411005aa6220efb57e5179d439f507f69f41ea188eaef86ac6e6157b018458115d89c854c72845666b23a5b40d1b321192a5efea3f71cada973014b8dd2
+Size (awscrt-0.33.0.tar.gz) = 36964533 bytes
 SHA1 (patch-crt_aws-c-common_source_posix_thread.c) = 1fcfd2085e63992c9d1c57475f6005b8fdfde5ed
 SHA1 (patch-crt_aws-c-io_source_posix_host__resolver.c) = 4b5b8a30ba2a984673112eb190dc03a73514d230
