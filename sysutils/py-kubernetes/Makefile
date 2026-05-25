@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2026/02/18 09:25:32 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/05/25 10:38:06 adam Exp $
 
-DISTNAME=	kubernetes-35.0.0
+DISTNAME=	kubernetes-36.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kubernetes/}
@@ -11,6 +11,7 @@ COMMENT=	Kubernetes Python client
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.9.0:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-certifi>=14.05.14:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.5.3:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-durationpy>=0.7:../../time/py-durationpy
