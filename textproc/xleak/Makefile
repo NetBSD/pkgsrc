@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/12/05 20:35:49 pin Exp $
+# $NetBSD: Makefile,v 1.2 2026/05/25 14:02:59 wiz Exp $
 
-DISTNAME=	xleak-0.2.5
+DISTNAME=	xleak-0.2.6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bgreenwell/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
