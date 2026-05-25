@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.102 2026/05/14 16:42:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.103 2026/05/25 06:18:16 adam Exp $
 # FIXME: build fails when protobuf and abseil packages are installed.
 
 DISTNAME=	qtwebengine-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
-PKGREVISION=	4
 COMMENT=	Chromium-based web engine for Qt5
 
 MAKE_ENV+=		QTDIR=${QTDIR}
@@ -27,8 +26,6 @@ TOOL_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 .endif
 TOOL_DEPENDS+=	nodejs>=14:../../lang/nodejs
 
-#JPEG_ACCEPTED=	libjpeg-turbo
-
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-fgnu-inline-asm
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-Wl,--fatal-warnings
 
@@ -50,8 +47,9 @@ CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/v8/tools/run-llprof.sh
 # These libraries are used from the system and the build infrastructure
 # removes them from the bundled third_party directory and replaces them
 # with hooks to use them from the system.
-GN_SYSTEM_LIBS=	libevent libxslt #yasm
-CHROMESRC=	${WRKSRC}/src/3rdparty/chromium
+GN_SYSTEM_LIBS+=	ffmpeg flac fontconfig libevent libpng libxslt openh264 opus
+#GN_SYSTEM_LIBS+=	freetype libvpx libwebp re2 snappy zlib
+CHROMESRC=		${WRKSRC}/src/3rdparty/chromium
 
 pre-configure:
 	${CP} ${FILESDIR}/netbsd.pri ${WRKSRC}/src/core/config/
@@ -85,6 +83,7 @@ MAKE_ENV+=	OSX_VERSION=${OSX_VERSION}
 .if ${OPSYS} != "Darwin"
 .include "../../audio/alsa-lib/buildlink3.mk"
 .endif
+.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
@@ -95,15 +94,19 @@ MAKE_ENV+=	OSX_VERSION=${OSX_VERSION}
 # chromium insists on using its own protobuf
 # so don't include here as versions must match
 #.include "../../devel/protobuf/buildlink3.mk"
+#.include "../../devel/re2/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
-#.include "../../mk/jpeg.buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+#.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
 .include "../../multimedia/ffmpeg7/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
+.include "../../multimedia/openh264/buildlink3.mk"
 .include "../../print/libcups/buildlink3.mk"
 .include "../../print/poppler-cpp/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pciutils+=	pciutils>=3.8
@@ -127,4 +130,5 @@ BUILDLINK_TRANSFORM+=   l:pci:${PCIUTILS_LIBNAME}
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtwebchannel/buildlink3.mk"
 .include "../../mk/atomic64.mk"
+#.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

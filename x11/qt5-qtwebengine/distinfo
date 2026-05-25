@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.36 2026/01/03 03:38:56 ryoon Exp $
+$NetBSD: distinfo,v 1.37 2026/05/25 06:18:16 adam Exp $
 
-BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.18.tar.xz) = 87f711c279fb8a491167885cdc605a90c6b4e0d585d36baab7df8cf2561165e4
-SHA512 (qtwebengine-everywhere-opensource-src-5.15.18.tar.xz) = 731e9b01746efa0696bc89299fa4847157077bd21567a9d3358006d6bb7dddbadea5c085f9dfae12279e41619b4751d1d0009bfd0ee4f9ceab3bd1a567831ed2
-Size (qtwebengine-everywhere-opensource-src-5.15.18.tar.xz) = 319649100 bytes
+BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.19.tar.xz) = 017a224f994e81829cb694863aa28b9a97d6ad30201053fcd66c4189794b6ec6
+SHA512 (qtwebengine-everywhere-opensource-src-5.15.19.tar.xz) = 1b26848cd5a6720d6ad181cf05501f139686a0fbb8a6e6c2f525a9dc442a94befc88fa13c19b80dcec1d2b1cf4101e07805570911bef90064602bd9ecb488ef0
+Size (qtwebengine-everywhere-opensource-src-5.15.19.tar.xz) = 319548256 bytes
 SHA1 (patch-configure.pri) = 0fab6dfe52ae592aa1e9838974db16eac8be8dd0
 SHA1 (patch-mkspecs_features_functions.prf) = 6bf237521df3d60649b603b7cb7d21f793df1386
 SHA1 (patch-src_3rdparty_chromium_BUILD.gn) = 228416b6472c48727df1a6c86ac97814fd5cb3b5
@@ -90,7 +90,7 @@ SHA1 (patch-src_3rdparty_chromium_base_threading_platform__thread__unittest.cc) 
 SHA1 (patch-src_3rdparty_chromium_base_trace__event_malloc__dump__provider.cc) = a78683db60846cbf062daa1f3dac529d7605f72c
 SHA1 (patch-src_3rdparty_chromium_base_trace__event_process__memory__dump.cc) = 947b43c03171b2c98bc3341bf741ac729898129d
 SHA1 (patch-src_3rdparty_chromium_base_trace__event_process__memory__dump.h) = f8b25dc9f38c6c480f069c782ac15a45fa0a39aa
-SHA1 (patch-src_3rdparty_chromium_build_android_gyp_util_build__utils.py) = 472f5ffb8a1ffe61cb2327530b93d1b0f2819a96
+SHA1 (patch-src_3rdparty_chromium_build_android_gyp_util_build__utils.py) = 5694fd9cab85be306958ff3a9d62f4356d030504
 SHA1 (patch-src_3rdparty_chromium_build_config_BUILD.gn) = 9cfa982ba227cd999a379886181555a9e843c7a6
 SHA1 (patch-src_3rdparty_chromium_build_config_BUILDCONFIG.gn) = 0eee19642ef63e81ef2606692d6b731bdee4bf1c
 SHA1 (patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn) = 7fd99460056ad6dd5390e679f918f5dda4a9eedc
@@ -427,8 +427,6 @@ SHA1 (patch-src_3rdparty_chromium_mojo_public_cpp_platform_socket__utils__posix.
 SHA1 (patch-src_3rdparty_chromium_mojo_public_js_mojo__bindings__resources.grd) = b4f89fe9363ec995a42ee1d5f8ebb41466fef550
 SHA1 (patch-src_3rdparty_chromium_mojo_public_tools_BUILD.gn) = 53ceb7f6108dda2beb1e09c1b703de6e41dc36b2
 SHA1 (patch-src_3rdparty_chromium_mojo_public_tools_bindings_mojom.gni) = 96e9948b3ed1d4c340476c8741fc83f11ec0e653
-SHA1 (patch-src_3rdparty_chromium_mojo_public_tools_mojom_mojom_fileutil.py) = d39df04efd8b45093e6957b58a8a52858d2434f8
-SHA1 (patch-src_3rdparty_chromium_mojo_public_tools_mojom_mojom_parse_lexer.py) = b403ec7cdef77bdd9624ce8eba083acabadc2879
 SHA1 (patch-src_3rdparty_chromium_net_BUILD.gn) = 4a036ade442149bf589c64d61f6a9bc5963b10a8
 SHA1 (patch-src_3rdparty_chromium_net_base_address__tracker__linux.cc) = 72afa160768b5f79b8bf54d61e012cb39995568d
 SHA1 (patch-src_3rdparty_chromium_net_base_address__tracker__linux.h) = 1dc258c16a668e770e833cb74ae30eeff33b6d58

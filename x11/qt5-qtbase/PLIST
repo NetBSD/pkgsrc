@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2024/03/14 07:59:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2026/05/25 06:18:13 adam Exp $
 lib/pkgconfig/Qt5Concurrent.pc
 lib/pkgconfig/Qt5Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt5DBus.pc
@@ -705,6 +705,7 @@ qt5/include/QtCore/QtNumeric
 qt5/include/QtCore/QtPlugin
 qt5/include/QtCore/QtPluginInstanceFunction
 qt5/include/QtCore/QtPluginMetaDataFunction
+qt5/include/QtCore/QtStdLibDetection
 qt5/include/QtCore/qabstractanimation.h
 qt5/include/QtCore/qabstracteventdispatcher.h
 qt5/include/QtCore/qabstractitemmodel.h
@@ -862,6 +863,7 @@ qt5/include/QtCore/qstack.h
 qt5/include/QtCore/qstandardpaths.h
 qt5/include/QtCore/qstate.h
 qt5/include/QtCore/qstatemachine.h
+qt5/include/QtCore/qstdlibdetection.h
 qt5/include/QtCore/qstorageinfo.h
 qt5/include/QtCore/qstring.h
 qt5/include/QtCore/qstringalgorithms.h

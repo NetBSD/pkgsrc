@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.115 2026/01/07 08:49:43 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2026/05/25 06:18:14 adam Exp $
 
 DISTNAME=	qtmultimedia-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtmultimedia-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	Qt5 module for multimedia
 
 BUILD_TARGET=		sub-src
