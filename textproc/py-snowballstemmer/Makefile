@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/05/11 10:33:49 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/05/25 06:30:05 adam Exp $
 
-DISTNAME=	snowballstemmer-3.0.1
+DISTNAME=	snowballstemmer-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/snowballstemmer/}
