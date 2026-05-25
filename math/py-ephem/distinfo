@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/12/28 08:51:20 adam Exp $
+$NetBSD: distinfo,v 1.14 2026/05/25 09:51:59 adam Exp $
 
-BLAKE2s (ephem-4.2.tar.gz) = 40124c58fed42c1a747db764c5aed5f3b7d0340313f16b46f41cba52986a4837
-SHA512 (ephem-4.2.tar.gz) = fc0aacd15e080b57b9ee9c17cc50ba839b91968bc2787b7a4c018a7d3b16d07ee927b6e85ecf63cde294b99a3c4d6618876067bfecf661e9ba4e08e63513c81c
-Size (ephem-4.2.tar.gz) = 1261100 bytes
+BLAKE2s (ephem-4.2.1.tar.gz) = 7854aaabe57c8e995a2131b9334a3f61ff4aa5571e25af6003a94e293e10dec8
+SHA512 (ephem-4.2.1.tar.gz) = 3b5c01e7c1491ab5b7eb28676da74ebbb2235297a33cad5b91340e2056a34eda9075b6ca3f92b4bc1f8bc064ede84bc9c61bda71cb9af345e3969e0316405dfa
+Size (ephem-4.2.1.tar.gz) = 1261529 bytes
