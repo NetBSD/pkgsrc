@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3260 2026/05/25 03:32:55 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3261 2026/05/25 06:26:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5055,3 +5055,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/rumdl to 0.2.0 [wiz 2026-05-24]
 	Updated net/dhcpsd to 0.0.8 [roy 2026-05-24]
 	Updated graphics/libheif to 1.22.0nb1 [wiz 2026-05-25]
+	Updated x11/qt5 to 5.15.19 [adam 2026-05-25]
+	Updated net/rclone to 1.74.2 [adam 2026-05-25]
