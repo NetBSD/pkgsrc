@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2026/05/12 10:40:16 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2026/05/25 10:51:51 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.100
@@ -18,13 +18,13 @@ CARGO_CRATE_DEPENDS+=	digest-0.10.7
 CARGO_CRATE_DEPENDS+=	either-1.15.0
 CARGO_CRATE_DEPENDS+=	equivalent-1.0.2
 CARGO_CRATE_DEPENDS+=	generic-array-0.14.7
-CARGO_CRATE_DEPENDS+=	get-size-derive2-0.7.4
-CARGO_CRATE_DEPENDS+=	get-size2-0.7.4
+CARGO_CRATE_DEPENDS+=	get-size-derive2-0.8.0
+CARGO_CRATE_DEPENDS+=	get-size2-0.8.0
 CARGO_CRATE_DEPENDS+=	getopts-0.2.24
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.17
-CARGO_CRATE_DEPENDS+=	hashbrown-0.16.1
+CARGO_CRATE_DEPENDS+=	hashbrown-0.17.1
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
-CARGO_CRATE_DEPENDS+=	indexmap-2.13.0
+CARGO_CRATE_DEPENDS+=	indexmap-2.14.0
 CARGO_CRATE_DEPENDS+=	indoc-2.0.7
 CARGO_CRATE_DEPENDS+=	interpolator-0.5.0
 CARGO_CRATE_DEPENDS+=	is-macro-0.3.7
@@ -36,7 +36,7 @@ CARGO_CRATE_DEPENDS+=	manyhow-0.11.4
 CARGO_CRATE_DEPENDS+=	manyhow-macros-0.11.4
 CARGO_CRATE_DEPENDS+=	memchr-2.7.6
 CARGO_CRATE_DEPENDS+=	once_cell-1.21.3
-CARGO_CRATE_DEPENDS+=	ordermap-1.1.0
+CARGO_CRATE_DEPENDS+=	ordermap-1.2.0
 CARGO_CRATE_DEPENDS+=	phf-0.11.3
 CARGO_CRATE_DEPENDS+=	phf_codegen-0.11.3
 CARGO_CRATE_DEPENDS+=	phf_generator-0.11.3

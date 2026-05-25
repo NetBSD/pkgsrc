@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/05/12 10:40:16 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/05/25 10:51:51 adam Exp $
 
-DISTNAME=	ast_serialize-0.3.0
+DISTNAME=	ast_serialize-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ast-serialize/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/mypyc/ast_serialize
 COMMENT=	Python bindings for mypy AST serialization
 LICENSE=	mit
 
-CARGO_GITHUB_CRATES+=	astral-sh ruff 0.15.5
+CARGO_GITHUB_CRATES+=	astral-sh ruff 0.15.12
 # Done in patch-Cargo.toml
 SUBST_NOOP_OK.gitcrate=	yes
 
