@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3275 2026/05/25 14:03:11 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3276 2026/05/25 14:06:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5083,3 +5083,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-fixtures to 4.3.2 [adam 2026-05-25]
 	Updated net/tlrc to 1.13.1 [wiz 2026-05-25]
 	Updated textproc/xleak to 0.2.6 [wiz 2026-05-25]
+	Updated net/dnsdist to 2.0.6 [wiz 2026-05-25]
