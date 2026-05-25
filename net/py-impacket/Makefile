@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2025/11/11 14:09:00 adam Exp $
+# $NetBSD: Makefile,v 1.17 2026/05/25 08:04:47 adam Exp $
 
-DISTNAME=	impacket-0.13.0
+DISTNAME=	impacket-0.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/impacket/}
@@ -45,6 +45,7 @@ SUBST_FILES.crypto+=	impacket/krb5/crypto.py
 SUBST_FILES.crypto+=	impacket/krb5/gssapi.py
 SUBST_FILES.crypto+=	impacket/ntlm.py
 SUBST_FILES.crypto+=	impacket/smb3.py
+SUBST_FILES.crypto+=	impacket/spnego.py
 SUBST_FILES.crypto+=	tests/SMB_RPC/test_ntlm.py
 SUBST_FILES.crypto+=	tests/dcerpc/test_mimilib.py
 SUBST_FILES.crypto+=	tests/dcerpc/test_nrpc.py
@@ -53,15 +54,17 @@ SUBST_FILES.crypto+=	tests/misc/test_dpapi.py
 SUBST_SED.crypto=	-e 's,Cryptodome,Crypto,'
 
 post-install:
-.for bin in DumpNTLMInfo Get-GPPPassword GetADComputers GetADUsers GetLAPSPassword GetNPUsers \
-	GetUserSPNs addcomputer atexec changepasswd dacledit dcomexec describeTicket dpapi \
-	esentutl exchanger findDelegation getArch getPac getST getTGT \
-	goldenPac karmaSMB keylistattack kintercept lookupsid machine_role mimikatz mqtt_check \
-	mssqlclient mssqlinstance net netview nmapAnswerMachine ntfs-read ntlmrelayx owneredit \
-	ping ping6 \
-	psexec raiseChild rbcd rdp_check reg registry-read rpcdump rpcmap sambaPipe samrdump \
-	secretsdump services smbclient smbexec smbpasswd smbrelayx smbserver sniff sniffer \
-	split ticketConverter ticketer tstool wmiexec wmipersist wmiquery
+.for bin in CheckLDAPStatus DumpNTLMInfo Get-GPPPassword GetADComputers GetADUsers \
+	GetLAPSPassword GetNPUsers GetUserSPNs addcomputer atexec attrib \
+	badsuccessor changepasswd checkMSSQLStatus dacledit dcomexec \
+	describeTicket dpapi dpapidump esentutl exchanger filetime findDelegation \
+	getArch getPac getST getTGT goldenPac karmaSMB keylistattack kintercept \
+	lookupsid machine_role mimikatz mqtt_check mssqlclient mssqlinstance net \
+	netview nmapAnswerMachine ntfs-read ntlmrelayx owneredit ping ping6 \
+	psexec raiseChild rbcd rdp_check reg registry-read regsecrets rpcdump \
+	rpcmap sambaPipe samedit samrdump secretsdump services smbclient smbexec \
+	smbpasswd smbrelayx smbserver sniff sniffer split ticketConverter \
+	ticketer tstool wmiexec wmipersist wmiquery
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} ${bin}.py ${bin}-${PYVERSSUFFIX}.py || ${TRUE}
 .endfor

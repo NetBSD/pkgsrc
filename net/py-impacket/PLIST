@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.12 2025/11/11 14:09:00 adam Exp $
-bin/CheckLDAPStatus.py
+@comment $NetBSD: PLIST,v 1.13 2026/05/25 08:04:47 adam Exp $
+bin/CheckLDAPStatus-${PYVERSSUFFIX}.py
 bin/DumpNTLMInfo-${PYVERSSUFFIX}.py
 bin/Get-GPPPassword-${PYVERSSUFFIX}.py
 bin/GetADComputers-${PYVERSSUFFIX}.py
@@ -9,16 +9,18 @@ bin/GetNPUsers-${PYVERSSUFFIX}.py
 bin/GetUserSPNs-${PYVERSSUFFIX}.py
 bin/addcomputer-${PYVERSSUFFIX}.py
 bin/atexec-${PYVERSSUFFIX}.py
-bin/attrib.py
-bin/badsuccessor.py
+bin/attrib-${PYVERSSUFFIX}.py
+bin/badsuccessor-${PYVERSSUFFIX}.py
 bin/changepasswd-${PYVERSSUFFIX}.py
+bin/checkMSSQLStatus-3.14.py
 bin/dacledit-${PYVERSSUFFIX}.py
 bin/dcomexec-${PYVERSSUFFIX}.py
 bin/describeTicket-${PYVERSSUFFIX}.py
 bin/dpapi-${PYVERSSUFFIX}.py
+bin/dpapidump-${PYVERSSUFFIX}.py
 bin/esentutl-${PYVERSSUFFIX}.py
 bin/exchanger-${PYVERSSUFFIX}.py
-bin/filetime.py
+bin/filetime-${PYVERSSUFFIX}.py
 bin/findDelegation-${PYVERSSUFFIX}.py
 bin/getArch-${PYVERSSUFFIX}.py
 bin/getPac-${PYVERSSUFFIX}.py
@@ -47,11 +49,11 @@ bin/rbcd-${PYVERSSUFFIX}.py
 bin/rdp_check-${PYVERSSUFFIX}.py
 bin/reg-${PYVERSSUFFIX}.py
 bin/registry-read-${PYVERSSUFFIX}.py
-bin/regsecrets.py
+bin/regsecrets-${PYVERSSUFFIX}.py
 bin/rpcdump-${PYVERSSUFFIX}.py
 bin/rpcmap-${PYVERSSUFFIX}.py
 bin/sambaPipe-${PYVERSSUFFIX}.py
-bin/samedit.py
+bin/samedit-${PYVERSSUFFIX}.py
 bin/samrdump-${PYVERSSUFFIX}.py
 bin/secretsdump-${PYVERSSUFFIX}.py
 bin/services-${PYVERSSUFFIX}.py
@@ -102,6 +104,9 @@ ${PYSITELIB}/impacket/NDP.pyo
 ${PYSITELIB}/impacket/__init__.py
 ${PYSITELIB}/impacket/__init__.pyc
 ${PYSITELIB}/impacket/__init__.pyo
+${PYSITELIB}/impacket/acl.py
+${PYSITELIB}/impacket/acl.pyc
+${PYSITELIB}/impacket/acl.pyo
 ${PYSITELIB}/impacket/cdp.py
 ${PYSITELIB}/impacket/cdp.pyc
 ${PYSITELIB}/impacket/cdp.pyo
@@ -348,9 +353,15 @@ ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/__init__.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/httprelayserver.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/httprelayserver.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/httprelayserver.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/mssqlrelayserver.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/mssqlrelayserver.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/mssqlrelayserver.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/rawrelayserver.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/rawrelayserver.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/rawrelayserver.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/rdprelayserver.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/rdprelayserver.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/rdprelayserver.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/rpcrelayserver.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/rpcrelayserver.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/rpcrelayserver.pyo
@@ -411,6 +422,9 @@ ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/enum.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/identity_log.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/identity_log.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/identity_log.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/utils/rdp_ssl.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/utils/rdp_ssl.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/utils/rdp_ssl.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/shadow_credentials.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/shadow_credentials.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/shadow_credentials.pyo
