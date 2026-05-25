@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/12/04 07:47:49 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/05/25 12:27:22 adam Exp $
 
-DISTNAME=	sybil-9.3.0
+DISTNAME=	sybil-10.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sybil/}
@@ -10,11 +10,13 @@ HOMEPAGE=	https://github.com/simplistix/sybil
 COMMENT=	Automated testing for the examples in your code and documentation
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-testfixtures-[0-9]*:../../devel/py-testfixtures
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=6:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-testfixtures>=11:../../devel/py-testfixtures
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
