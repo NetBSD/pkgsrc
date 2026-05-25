@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3267 2026/05/25 09:52:19 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3268 2026/05/25 10:16:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5069,3 +5069,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-prometheus_client to 0.25.0 [adam 2026-05-25]
 	Updated security/py-joserfc to 1.6.7 [adam 2026-05-25]
 	Updated math/py-ephem to 4.2.1 [adam 2026-05-25]
+	Updated devel/py-dulwich to 1.2.4 [adam 2026-05-25]
+	Updated cad/py-simpy to 4.1.2 [adam 2026-05-25]
