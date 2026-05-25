@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2025/12/28 08:51:20 adam Exp $
+# $NetBSD: Makefile,v 1.22 2026/05/25 09:51:59 adam Exp $
 
-DISTNAME=	ephem-4.2
+DISTNAME=	ephem-4.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/ephem/}
