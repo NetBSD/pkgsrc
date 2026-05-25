@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2025/04/15 15:45:37 adam Exp $
+# $NetBSD: Makefile,v 1.29 2026/05/25 10:15:51 adam Exp $
 
-DISTNAME=	simpy-4.1.1
+DISTNAME=	simpy-4.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	cad math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/simpy/}
 

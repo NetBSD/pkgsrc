@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2025/01/22 09:30:16 adam Exp $
+$NetBSD: distinfo,v 1.15 2026/05/25 10:15:51 adam Exp $
 
-BLAKE2s (simpy-4.1.1.tar.gz) = 920911022b2460b09adf11039a75f3dc91d5ebce7350407d74525ca4e2a0fa83
-SHA512 (simpy-4.1.1.tar.gz) = f7e84ceb92285eb0f282892be5eba7bb6e2ba538ecb45221600c41a39aba77cfb0455c9e99ed2c688af0aca8d390f1afe9b6849b4a30be05fb5b7faec27b7253
-Size (simpy-4.1.1.tar.gz) = 408997 bytes
+BLAKE2s (simpy-4.1.2.tar.gz) = 53dc359cd0f357f78a2c6331a4cf440d3380c7c505dbfb32f48426b1a6c33544
+SHA512 (simpy-4.1.2.tar.gz) = 624bb636b738dfdc3ea4bb5d2454eee258303e4f4f1d6786b525d05ff6e20d6ac56397293911584e3f538f960ab2ca136e31cae4de6538c4c33a318371e09424
+Size (simpy-4.1.2.tar.gz) = 410129 bytes
