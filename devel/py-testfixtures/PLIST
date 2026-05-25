@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2026/04/26 08:19:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/05/25 08:11:32 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -6,6 +6,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/testfixtures/__init__.py
 ${PYSITELIB}/testfixtures/__init__.pyc
 ${PYSITELIB}/testfixtures/__init__.pyo
+${PYSITELIB}/testfixtures/comparers.py
+${PYSITELIB}/testfixtures/comparers.pyc
+${PYSITELIB}/testfixtures/comparers.pyo
 ${PYSITELIB}/testfixtures/comparison.py
 ${PYSITELIB}/testfixtures/comparison.pyc
 ${PYSITELIB}/testfixtures/comparison.pyo
@@ -24,12 +27,21 @@ ${PYSITELIB}/testfixtures/formats.pyo
 ${PYSITELIB}/testfixtures/logcapture.py
 ${PYSITELIB}/testfixtures/logcapture.pyc
 ${PYSITELIB}/testfixtures/logcapture.pyo
+${PYSITELIB}/testfixtures/loguru.py
+${PYSITELIB}/testfixtures/loguru.pyc
+${PYSITELIB}/testfixtures/loguru.pyo
 ${PYSITELIB}/testfixtures/mock.py
 ${PYSITELIB}/testfixtures/mock.pyc
 ${PYSITELIB}/testfixtures/mock.pyo
 ${PYSITELIB}/testfixtures/outputcapture.py
 ${PYSITELIB}/testfixtures/outputcapture.pyc
 ${PYSITELIB}/testfixtures/outputcapture.pyo
+${PYSITELIB}/testfixtures/pandas.py
+${PYSITELIB}/testfixtures/pandas.pyc
+${PYSITELIB}/testfixtures/pandas.pyo
+${PYSITELIB}/testfixtures/polars.py
+${PYSITELIB}/testfixtures/polars.pyc
+${PYSITELIB}/testfixtures/polars.pyo
 ${PYSITELIB}/testfixtures/popen.py
 ${PYSITELIB}/testfixtures/popen.pyc
 ${PYSITELIB}/testfixtures/popen.pyo
@@ -49,6 +61,9 @@ ${PYSITELIB}/testfixtures/shouldraise.pyo
 ${PYSITELIB}/testfixtures/shouldwarn.py
 ${PYSITELIB}/testfixtures/shouldwarn.pyc
 ${PYSITELIB}/testfixtures/shouldwarn.pyo
+${PYSITELIB}/testfixtures/structlog.py
+${PYSITELIB}/testfixtures/structlog.pyc
+${PYSITELIB}/testfixtures/structlog.pyo
 ${PYSITELIB}/testfixtures/sybil.py
 ${PYSITELIB}/testfixtures/sybil.pyc
 ${PYSITELIB}/testfixtures/sybil.pyo
