@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/12/27 22:02:50 adam Exp $
+$NetBSD: distinfo,v 1.2 2026/05/25 11:42:30 adam Exp $
 
-BLAKE2s (modelsearch-1.1.1.tar.gz) = 30aa8c3d87f0693e2eeb5ff974e827ce9121ad90be42ff43f50e309edf902365
-SHA512 (modelsearch-1.1.1.tar.gz) = d322c5ebfc35ab2ab9a0a0295312a1471fbbc95f298d31dc4ed72fcc89f13e67784e1a8345a89d02517b755c415ec93090c0e169c722557ecc4d44fbb3d42c86
-Size (modelsearch-1.1.1.tar.gz) = 87514 bytes
+BLAKE2s (modelsearch-1.3.1.tar.gz) = 51249fb147a268bcbc04e36b32768fad6a802cd849356608791dadecb3910b94
+SHA512 (modelsearch-1.3.1.tar.gz) = 98cc42620c721789ac1833de5b6dedc32cb84e6a328d603de7bcdb46d6525482571487f95a345cce1d81147e80d6e7b344c1fa38b70e22bfc26db96dff7d7a45
+Size (modelsearch-1.3.1.tar.gz) = 103935 bytes
