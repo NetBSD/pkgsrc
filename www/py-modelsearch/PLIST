@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/12/27 22:02:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/05/25 11:42:30 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -88,6 +88,15 @@ ${PYSITELIB}/modelsearch/management/__init__.pyo
 ${PYSITELIB}/modelsearch/management/commands/__init__.py
 ${PYSITELIB}/modelsearch/management/commands/__init__.pyc
 ${PYSITELIB}/modelsearch/management/commands/__init__.pyo
+${PYSITELIB}/modelsearch/management/commands/enable_fuzzystrmatch.py
+${PYSITELIB}/modelsearch/management/commands/enable_fuzzystrmatch.pyc
+${PYSITELIB}/modelsearch/management/commands/enable_fuzzystrmatch.pyo
+${PYSITELIB}/modelsearch/management/commands/enable_trigram.py
+${PYSITELIB}/modelsearch/management/commands/enable_trigram.pyc
+${PYSITELIB}/modelsearch/management/commands/enable_trigram.pyo
+${PYSITELIB}/modelsearch/management/commands/enable_unaccent.py
+${PYSITELIB}/modelsearch/management/commands/enable_unaccent.pyc
+${PYSITELIB}/modelsearch/management/commands/enable_unaccent.pyo
 ${PYSITELIB}/modelsearch/management/commands/rebuild_modelsearch_index.py
 ${PYSITELIB}/modelsearch/management/commands/rebuild_modelsearch_index.pyc
 ${PYSITELIB}/modelsearch/management/commands/rebuild_modelsearch_index.pyo
@@ -97,6 +106,12 @@ ${PYSITELIB}/modelsearch/migrations/0001_initial.pyo
 ${PYSITELIB}/modelsearch/migrations/0002_customise_indexentry.py
 ${PYSITELIB}/modelsearch/migrations/0002_customise_indexentry.pyc
 ${PYSITELIB}/modelsearch/migrations/0002_customise_indexentry.pyo
+${PYSITELIB}/modelsearch/migrations/0003_add_text_fields.py
+${PYSITELIB}/modelsearch/migrations/0003_add_text_fields.pyc
+${PYSITELIB}/modelsearch/migrations/0003_add_text_fields.pyo
+${PYSITELIB}/modelsearch/migrations/0004_rename_modelsear_autocom_476c89_gin_modelsearch_autocom_ea8581_gin_and_more.py
+${PYSITELIB}/modelsearch/migrations/0004_rename_modelsear_autocom_476c89_gin_modelsearch_autocom_ea8581_gin_and_more.pyc
+${PYSITELIB}/modelsearch/migrations/0004_rename_modelsear_autocom_476c89_gin_modelsearch_autocom_ea8581_gin_and_more.pyo
 ${PYSITELIB}/modelsearch/migrations/__init__.py
 ${PYSITELIB}/modelsearch/migrations/__init__.pyc
 ${PYSITELIB}/modelsearch/migrations/__init__.pyo
@@ -133,6 +148,18 @@ ${PYSITELIB}/modelsearch/test/testapp/migrations/0002_advertwithcustomuuidprimar
 ${PYSITELIB}/modelsearch/test/testapp/migrations/0003_m2m_test_models.py
 ${PYSITELIB}/modelsearch/test/testapp/migrations/0003_m2m_test_models.pyc
 ${PYSITELIB}/modelsearch/test/testapp/migrations/0003_m2m_test_models.pyo
+${PYSITELIB}/modelsearch/test/testapp/migrations/0004_meeting.py
+${PYSITELIB}/modelsearch/test/testapp/migrations/0004_meeting.pyc
+${PYSITELIB}/modelsearch/test/testapp/migrations/0004_meeting.pyo
+${PYSITELIB}/modelsearch/test/testapp/migrations/0005_enable_pg_extensions.py
+${PYSITELIB}/modelsearch/test/testapp/migrations/0005_enable_pg_extensions.pyc
+${PYSITELIB}/modelsearch/test/testapp/migrations/0005_enable_pg_extensions.pyo
+${PYSITELIB}/modelsearch/test/testapp/migrations/0006_alter_novel_protagonist.py
+${PYSITELIB}/modelsearch/test/testapp/migrations/0006_alter_novel_protagonist.pyc
+${PYSITELIB}/modelsearch/test/testapp/migrations/0006_alter_novel_protagonist.pyo
+${PYSITELIB}/modelsearch/test/testapp/migrations/0007_agendaitem_speaker.py
+${PYSITELIB}/modelsearch/test/testapp/migrations/0007_agendaitem_speaker.pyc
+${PYSITELIB}/modelsearch/test/testapp/migrations/0007_agendaitem_speaker.pyo
 ${PYSITELIB}/modelsearch/test/testapp/migrations/__init__.py
 ${PYSITELIB}/modelsearch/test/testapp/migrations/__init__.pyc
 ${PYSITELIB}/modelsearch/test/testapp/migrations/__init__.pyo
@@ -190,6 +217,9 @@ ${PYSITELIB}/modelsearch/tests/test_related_fields.pyo
 ${PYSITELIB}/modelsearch/tests/test_sqlite_backend.py
 ${PYSITELIB}/modelsearch/tests/test_sqlite_backend.pyc
 ${PYSITELIB}/modelsearch/tests/test_sqlite_backend.pyo
+${PYSITELIB}/modelsearch/tests/test_version.py
+${PYSITELIB}/modelsearch/tests/test_version.pyc
+${PYSITELIB}/modelsearch/tests/test_version.pyo
 ${PYSITELIB}/modelsearch/utils.py
 ${PYSITELIB}/modelsearch/utils.pyc
 ${PYSITELIB}/modelsearch/utils.pyo
