@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3264 2026/05/25 07:49:30 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3265 2026/05/25 08:11:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5063,3 +5063,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-soupsieve to 2.8.4 [adam 2026-05-25]
 	Updated mail/py-checkdmarc to 5.16.2 [adam 2026-05-25]
 	Updated misc/py-pbs-installer to 2026.5.10 [adam 2026-05-25]
+	Updated net/py-impacket to 0.13.1 [adam 2026-05-25]
+	Updated devel/py-testfixtures to 12.0.0 [adam 2026-05-25]
