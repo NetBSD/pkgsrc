@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3277 2026/05/25 14:07:25 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3278 2026/05/25 16:07:00 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5085,3 +5085,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/xleak to 0.2.6 [wiz 2026-05-25]
 	Updated net/dnsdist to 2.0.6 [wiz 2026-05-25]
 	Updated net/powerdns to 5.0.5 [wiz 2026-05-25]
+	Updated databases/sqlc to 1.31.1 [bsiegert 2026-05-25]
