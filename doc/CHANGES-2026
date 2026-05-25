@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3273 2026/05/25 13:07:34 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3274 2026/05/25 14:00:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5081,3 +5081,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-awscrt to 0.33.0 [adam 2026-05-25]
 	Updated net/py-pika to 1.4.1 [adam 2026-05-25]
 	Updated devel/py-fixtures to 4.3.2 [adam 2026-05-25]
+	Updated net/tlrc to 1.13.1 [wiz 2026-05-25]
