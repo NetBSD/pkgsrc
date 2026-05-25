@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2026/04/17 12:53:28 adam Exp $
+# $NetBSD: Makefile,v 1.18 2026/05/25 07:49:10 adam Exp $
 
-DISTNAME=	pbs_installer-2026.4.7
+DISTNAME=	pbs_installer-2026.5.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pbs-installer/}
@@ -18,9 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-zstandard>=0.21.0:../../archivers/py-zstandard
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} pbs-install pbs-install-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	pbs-install
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
