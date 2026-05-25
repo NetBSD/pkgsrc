@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2026/05/14 17:10:03 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.25 2026/05/25 15:50:45 bsiegert Exp $
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-accessible.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-action.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-application.h
@@ -84,7 +84,6 @@ lib/pkgconfig/atk.pc
 ${PLIST.dbus}lib/pkgconfig/atspi-2.pc
 ${PLIST.dbus}${PYSITELIB}/gi/overrides/Atspi.py
 ${PLIST.dbus}${PYSITELIB}/gi/overrides/Atspi.pyc
-${PLIST.dbus}lib/systemd/user/at-spi-dbus-bus.service
 ${PLIST.dbus}libexec/at-spi-bus-launcher
 ${PLIST.dbus}libexec/at-spi2-registryd
 ${PLIST.dbus}share/dbus-1/accessibility-services/org.a11y.atspi.Registry.service
