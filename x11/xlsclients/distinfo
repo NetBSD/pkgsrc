@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/11/13 21:20:52 wiz Exp $
+$NetBSD: distinfo,v 1.12 2026/05/25 19:19:29 wiz Exp $
 
-BLAKE2s (xlsclients-1.1.5.tar.xz) = 96cc35b96739fe508433102631e7884e33b29ffc8f77abe9fa45d91d620e2cf1
-SHA512 (xlsclients-1.1.5.tar.xz) = 3896643378603876438772475e89ad5c066f98c16593245db5fa066418ff793798247f976d2bf7aa401d2590fc9807b80c9758bcbcc91566f02ceb856d9702bf
-Size (xlsclients-1.1.5.tar.xz) = 125552 bytes
+BLAKE2s (xlsclients-1.1.6.tar.xz) = 659508872b10bbf5aa4a15096328ed56219e85bbbd775e31a3f065b7441b0aa5
+SHA512 (xlsclients-1.1.6.tar.xz) = bc330df0f56aa2c732a6d251494280839eb6a7c085e138e2f1d484e2ae580cdb562e1efb71257fa277f7a69f8a22317ef8419c5755661ed5155ea428a550a513
+Size (xlsclients-1.1.6.tar.xz) = 132260 bytes
