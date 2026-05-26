@@ -1,0 +1,21 @@
+$NetBSD: patch-src_Makevars,v 1.1 2026/05/26 21:33:01 mef Exp $
+
+symbol backtrace_symbols is defined in /usr/lib/libexecinfo
+
+--- src/Makevars.orig	2024-10-03 06:31:38.000000000 +0900
++++ src/Makevars	2026-05-27 06:28:29.894023422 +0900
+@@ -15,6 +15,14 @@ LIBHUNSPELL=parsers/textparser.o parsers
+ 
+ STATLIB = hunspell/libstathunspell.a
+ 
++UNAME := $(shell uname)
++
++ifneq ($(UNAME), Linux)
++ifneq ($(UNAME), SunOS)
++PKG_LIBS += -lexecinfo
++endif
++endif
++
+ $(SHLIB): $(STATLIB)
+ 
+ $(STATLIB): $(LIBHUNSPELL)
