@@ -1,0 +1,18 @@
+$NetBSD: patch-src_Makevars.in,v 1.1 2026/05/26 13:10:41 mef Exp $
+
+Add /usr/lib/libexecinfo for "backtrace_symbols"
+
+--- src/Makevars.in.orig	2025-11-22 04:39:39.000000000 +0900
++++ src/Makevars.in	2026-05-26 21:48:27.504953850 +0900
+@@ -2,3 +2,11 @@
+ PKG_CPPFLAGS = -I../inst/include -DARMA_USE_CURRENT
+ PKG_CXXFLAGS = @PKG_CXXFLAGS@ @OPENMP_FLAG@
+ PKG_LIBS= @PKG_LIBS@ @OPENMP_FLAG@ $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS)
++
++UNAME := $(shell uname)
++
++ifneq ($(UNAME), Linux)
++ifneq ($(UNAME), SunOS)
++PKG_LIBS += -lexecinfo
++endif
++endif
