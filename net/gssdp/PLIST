@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/08/29 19:28:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/05/26 12:22:32 adam Exp $
 include/gssdp-1.6/libgssdp/gssdp-client.h
 include/gssdp-1.6/libgssdp/gssdp-enums.h
 include/gssdp-1.6/libgssdp/gssdp-error.h
@@ -8,7 +8,7 @@ include/gssdp-1.6/libgssdp/gssdp.h
 lib/girepository-1.0/GSSDP-1.6.typelib
 lib/libgssdp-1.6.so
 lib/libgssdp-1.6.so.0
-lib/libgssdp-1.6.so.0.106.2
+lib/libgssdp-1.6.so.0.106.5
 lib/pkgconfig/gssdp-1.6.pc
 share/gir-1.0/GSSDP-1.6.gir
 share/vala/vapi/gssdp-1.6.deps
