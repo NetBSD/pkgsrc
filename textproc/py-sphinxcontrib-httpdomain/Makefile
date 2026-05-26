@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2026/01/06 11:18:19 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/05/26 09:12:08 adam Exp $
 
-DISTNAME=	sphinxcontrib-httpdomain-1.8.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	sphinxcontrib_httpdomain-2.0.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-httpdomain/}
 
@@ -12,8 +11,7 @@ COMMENT=	Sphinx domain for documenting HTTP APIs
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.6:../../textproc/py-sphinx
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=6.0:../../textproc/py-sphinx
 
 USE_LANGUAGES=	# none
 
