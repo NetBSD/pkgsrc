@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2026/05/14 16:42:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2026/05/26 13:38:14 adam Exp $
 
-DISTNAME=	vaultwarden-1.35.8
-PKGREVISION=	1
+DISTNAME=	vaultwarden-1.36.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dani-garcia/}
 
