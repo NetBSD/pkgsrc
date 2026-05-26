@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3281 2026/05/25 19:19:42 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3282 2026/05/26 05:39:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5089,3 +5089,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/caddy to 2.11.3 [bsiegert 2026-05-25]
 	Updated x11/libxfce4windowing to 4.20.6 [gutteridge 2026-05-25]
 	Updated x11/xlsclients to 1.1.6 [wiz 2026-05-25]
+	Updated net/qbittorrent to 5.2.1 [adam 2026-05-26]
+	Updated databases/redis to 8.8.0 [adam 2026-05-26]
