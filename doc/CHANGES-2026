@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3285 2026/05/26 08:59:12 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3286 2026/05/26 09:14:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5098,3 +5098,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-parse to 1.22.1 [adam 2026-05-26]
 	Updated www/py-httptools to 0.8.0 [adam 2026-05-26]
 	Updated www/py-uvicorn to 0.48.0 [adam 2026-05-26]
+	Updated textproc/py-sphinxcontrib-httpdomain to 2.0.0 [adam 2026-05-26]
+	Updated textproc/py-sphinxcontrib-phpdomain to 0.15.2 [adam 2026-05-26]
