@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2026/04/14 13:30:31 adam Exp $
+# $NetBSD: Makefile,v 1.34 2026/05/26 07:05:18 adam Exp $
 
-DISTNAME=	poetry-2.3.4
+DISTNAME=	poetry-2.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/poetry/}
@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-packaging>=24.2:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pbs-installer>=2025.6.10:../../misc/py-pbs-installer
 DEPENDS+=	${PYPKGPREFIX}-pkginfo>=1.12:../../devel/py-pkginfo
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.0.0:../../misc/py-platformdirs
-DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.3.2:../../devel/py-poetry-core
+DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.4.0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-pyproject_hooks>=1.0.0:../../devel/py-pyproject_hooks
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.26:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=1.0.0:../../devel/py-requests-toolbelt
@@ -41,16 +41,14 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.1:../../devel/py-test-xdist
 # for tests
 USE_LANGUAGES=	c
 
+PY_RENAME_BINARIES=	poetry
+
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
 DEPENDS+=	${PYPKGPREFIX}-xattr>=1.0.0:../../sysutils/py-xattr
 .endif
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} poetry poetry-${PYVERSSUFFIX} || ${TRUE}
 
 # some tests use 'python'
 .include "../../lang/python/tool.mk"
