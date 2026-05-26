@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1005 2026/05/26 20:52:27 markd Exp $
+# $NetBSD: Makefile,v 1.1006 2026/05/26 20:59:30 markd Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -537,6 +537,7 @@ SUBDIR+=	py-omemo-dr
 SUBDIR+=	py-openid
 SUBDIR+=	py-oscrypto
 SUBDIR+=	py-otp
+SUBDIR+=	py-pamela
 SUBDIR+=	py-paramiko
 SUBDIR+=	py-passlib
 SUBDIR+=	py-pbkdf2
