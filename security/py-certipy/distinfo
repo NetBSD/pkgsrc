@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/26 20:52:27 markd Exp $
+
+BLAKE2s (certipy-0.2.3.tar.gz) = 0097eac2724fcc9bea7382b6508e7eb80c24e3ffabb1ffa4fc2e6f347e79a50e
+SHA512 (certipy-0.2.3.tar.gz) = 7d45b4f4b143629c49941a5c51095e0af076c7c3297d2f377a12592cc07626c2cd73ca2d0627bd7c60dfe4dd082f325143fddbcbfcda3e642cf8b1337dca8daa
+Size (certipy-0.2.3.tar.gz) = 20650 bytes
