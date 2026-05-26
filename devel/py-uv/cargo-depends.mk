@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.22 2026/05/21 13:42:55 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.23 2026/05/26 06:43:58 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aes-0.8.4
@@ -532,7 +532,6 @@ CARGO_CRATE_DEPENDS+=	tracing-attributes-0.1.31
 CARGO_CRATE_DEPENDS+=	tracing-core-0.1.36
 CARGO_CRATE_DEPENDS+=	tracing-durations-export-0.3.3
 CARGO_CRATE_DEPENDS+=	tracing-log-0.2.0
-CARGO_CRATE_DEPENDS+=	tracing-serde-0.2.0
 CARGO_CRATE_DEPENDS+=	tracing-subscriber-0.3.23
 CARGO_CRATE_DEPENDS+=	tracing-test-0.2.6
 CARGO_CRATE_DEPENDS+=	tracing-test-macro-0.2.6
