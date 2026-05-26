@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2025/10/09 08:01:59 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/05/26 09:27:24 adam Exp $
 
-DISTNAME=	mdit_py_plugins-0.5.0
+DISTNAME=	mdit_py_plugins-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mdit-py-plugins/}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-markdown-it-py>=2.0.0:../../textproc/py-markdown-it-py
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
