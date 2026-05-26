@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3289 2026/05/26 13:10:51 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3290 2026/05/26 13:39:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5106,3 +5106,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/gupnp to 1.6.10 [adam 2026-05-26]
 	Updated net/gupnp-av to 0.14.5 [adam 2026-05-26]
 	Updated math/R-RcppArmadillo to 15.2.6.1 [mef 2026-05-26]
+	Updated devel/py-cbor2 to 6.1.1 [adam 2026-05-26]
+	Updated security/vaultwarden to 1.36.0 [adam 2026-05-26]
+	Updated devel/buf to 1.70.0 [adam 2026-05-26]
