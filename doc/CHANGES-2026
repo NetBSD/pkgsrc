@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3287 2026/05/26 09:27:46 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3288 2026/05/26 12:23:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5102,3 +5102,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-sphinxcontrib-phpdomain to 0.15.2 [adam 2026-05-26]
 	Updated www/py-python-multipart to 0.0.29 [adam 2026-05-26]
 	Updated textproc/py-mdit-py-plugins to 0.6.1 [adam 2026-05-26]
+	Updated net/gssdp to 1.6.5 [adam 2026-05-26]
+	Updated net/gupnp to 1.6.10 [adam 2026-05-26]
+	Updated net/gupnp-av to 0.14.5 [adam 2026-05-26]
