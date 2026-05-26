@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3290 2026/05/26 13:39:10 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3291 2026/05/26 20:37:48 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5109,3 +5109,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-cbor2 to 6.1.1 [adam 2026-05-26]
 	Updated security/vaultwarden to 1.36.0 [adam 2026-05-26]
 	Updated devel/buf to 1.70.0 [adam 2026-05-26]
+	Updated pkgtools/texlive2pkg to 1.15 [markd 2026-05-26]
