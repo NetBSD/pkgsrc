@@ -1,15 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2024/11/05 18:18:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/05/26 18:42:25 bsiegert Exp $
 include/sratom-0/sratom/sratom.h
 lib/libsratom-0.so
 lib/libsratom-0.so.${PKGVERSION}
 lib/libsratom-0.so.0
 lib/pkgconfig/sratom-0.pc
+${PLIST.doc}share/doc/sratom-0/html/_static/base-stemmer.js
+${PLIST.doc}share/doc/sratom-0/html/_static/english-stemmer.js
 ${PLIST.doc}share/doc/sratom-0/html/_static/pygments.css
 ${PLIST.doc}share/doc/sratom-0/html/_static/sphinx_lv2_theme.css
 ${PLIST.doc}share/doc/sratom-0/html/api/sratom.html
 ${PLIST.doc}share/doc/sratom-0/html/genindex.html
 ${PLIST.doc}share/doc/sratom-0/html/index.html
 ${PLIST.doc}share/doc/sratom-0/html/overview.html
+${PLIST.doc}share/doc/sratom-0/singlehtml/_static/base-stemmer.js
+${PLIST.doc}share/doc/sratom-0/singlehtml/_static/english-stemmer.js
 ${PLIST.doc}share/doc/sratom-0/singlehtml/_static/pygments.css
 ${PLIST.doc}share/doc/sratom-0/singlehtml/_static/sphinx_lv2_theme.css
 ${PLIST.doc}share/doc/sratom-0/singlehtml/index.html
