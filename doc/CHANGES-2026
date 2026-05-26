@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3282 2026/05/26 05:39:53 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3283 2026/05/26 06:44:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5091,3 +5091,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/xlsclients to 1.1.6 [wiz 2026-05-25]
 	Updated net/qbittorrent to 5.2.1 [adam 2026-05-26]
 	Updated databases/redis to 8.8.0 [adam 2026-05-26]
+	Updated misc/py-tibs to 0.8.0 [adam 2026-05-26]
+	Updated devel/py-uv to 0.11.16 [adam 2026-05-26]
+	Updated devel/py-uv-build to 0.11.16 [adam 2026-05-26]
