@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2026/03/10 07:53:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/05/26 09:14:30 adam Exp $
 
-DISTNAME=	sphinxcontrib_phpdomain-0.13.2
+DISTNAME=	sphinxcontrib_phpdomain-0.15.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-phpdomain/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/sphinx-contrib/phpdomain/
+HOMEPAGE=	https://github.com/markstory/sphinxcontrib-phpdomain
 COMMENT=	Extension for documenting PHP projects
 LICENSE=	2-clause-bsd
 
