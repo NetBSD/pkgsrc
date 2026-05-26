@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1004 2026/05/03 09:52:30 vins Exp $
+# $NetBSD: Makefile,v 1.1005 2026/05/26 20:52:27 markd Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -489,6 +489,7 @@ SUBDIR+=	py-certbot-dns-route53
 SUBDIR+=	py-certbot-dns-sakuracloud
 SUBDIR+=	py-certbot-nginx
 SUBDIR+=	py-certifi
+SUBDIR+=	py-certipy
 SUBDIR+=	py-crack
 SUBDIR+=	py-crcmod
 SUBDIR+=	py-cryptkit
