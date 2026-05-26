@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3284 2026/05/26 07:07:12 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3285 2026/05/26 08:59:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5096,3 +5096,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv-build to 0.11.16 [adam 2026-05-26]
 	Updated devel/py-poetry to 2.4.1 [adam 2026-05-26]
 	Updated textproc/py-parse to 1.22.1 [adam 2026-05-26]
+	Updated www/py-httptools to 0.8.0 [adam 2026-05-26]
+	Updated www/py-uvicorn to 0.48.0 [adam 2026-05-26]
