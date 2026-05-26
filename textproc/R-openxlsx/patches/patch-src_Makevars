@@ -1,0 +1,14 @@
+$NetBSD: patch-src_Makevars,v 1.1 2026/05/26 13:59:19 mef Exp $
+
+symbol backtrace_symbols is defined in /usr/lib/libexecinfo
+
+--- /dev/null	2026-05-26 22:47:47.632682502 +0900
++++ src/Makevars	2026-05-26 22:51:21.120566478 +0900
+@@ -0,0 +1,7 @@
++UNAME := $(shell uname)
++
++ifneq ($(UNAME), Linux)
++ifneq ($(UNAME), SunOS)
++PKG_LIBS += -lexecinfo
++endif
++endif
