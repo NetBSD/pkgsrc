@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/07/14 16:09:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/05/26 12:23:31 adam Exp $
 include/gupnp-av-1.0/libgupnp-av/gupnp-av-enums.h
 include/gupnp-av-1.0/libgupnp-av/gupnp-av-error.h
 include/gupnp-av-1.0/libgupnp-av/gupnp-av.h
@@ -22,7 +22,7 @@ include/gupnp-av-1.0/libgupnp-av/gupnp-search-criteria-parser.h
 lib/girepository-1.0/GUPnPAV-1.0.typelib
 lib/libgupnp-av-1.0.so
 lib/libgupnp-av-1.0.so.3
-lib/libgupnp-av-1.0.so.3.14.4
+lib/libgupnp-av-1.0.so.3.14.5
 lib/pkgconfig/gupnp-av-1.0.pc
 share/gir-1.0/GUPnPAV-1.0.gir
 share/gupnp-av/av.xsd
