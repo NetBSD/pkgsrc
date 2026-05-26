@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2025/04/14 12:56:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/05/26 09:12:08 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/sphinxcontrib/autohttp/__init__.py
 ${PYSITELIB}/sphinxcontrib/autohttp/__init__.pyc
 ${PYSITELIB}/sphinxcontrib/autohttp/__init__.pyo
@@ -26,12 +24,11 @@ ${PYSITELIB}/sphinxcontrib/autohttp/flaskqref.pyo
 ${PYSITELIB}/sphinxcontrib/autohttp/tornado.py
 ${PYSITELIB}/sphinxcontrib/autohttp/tornado.pyc
 ${PYSITELIB}/sphinxcontrib/autohttp/tornado.pyo
-${PYSITELIB}/sphinxcontrib/httpdomain.py
-${PYSITELIB}/sphinxcontrib/httpdomain.pyc
-${PYSITELIB}/sphinxcontrib/httpdomain.pyo
+${PYSITELIB}/sphinxcontrib/httpdomain/__init__.py
+${PYSITELIB}/sphinxcontrib/httpdomain/__init__.pyc
+${PYSITELIB}/sphinxcontrib/httpdomain/__init__.pyo
 ${PYSITELIB}/sphinxcontrib/locale/es_ES/LC_MESSAGES/httpdomain.mo
 ${PYSITELIB}/sphinxcontrib/locale/es_ES/LC_MESSAGES/httpdomain.po
 ${PYSITELIB}/sphinxcontrib/locale/fr_FR/LC_MESSAGES/httpdomain.mo
 ${PYSITELIB}/sphinxcontrib/locale/fr_FR/LC_MESSAGES/httpdomain.po
 ${PYSITELIB}/sphinxcontrib/locale/httpdomain.pot
-${PYSITELIB}/sphinxcontrib_httpdomain-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
