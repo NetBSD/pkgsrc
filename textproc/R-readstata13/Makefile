@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/01/03 11:14:49 mef Exp $
+# $NetBSD: Makefile,v 1.5 2026/05/26 13:46:53 mef Exp $
 
 R_PKGNAME=	readstata13
 R_PKGVER=	0.10.1
@@ -17,6 +17,8 @@ TEST_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
 USE_LANGUAGES=	c c++ fortran
+# only for ifne in patch-src_Makevars
+USE_TOOLS+=	gmake
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
