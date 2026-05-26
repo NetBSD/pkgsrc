@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/12 09:50:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/05/26 13:37:11 adam Exp $
 bin/cbor2-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -6,29 +6,12 @@ ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/_cbor2.so
 ${PYSITELIB}/cbor2/__init__.py
 ${PYSITELIB}/cbor2/__init__.pyc
+${PYSITELIB}/cbor2/__init__.pyi
 ${PYSITELIB}/cbor2/__init__.pyo
-${PYSITELIB}/cbor2/_decoder.py
-${PYSITELIB}/cbor2/_decoder.pyc
-${PYSITELIB}/cbor2/_decoder.pyo
-${PYSITELIB}/cbor2/_encoder.py
-${PYSITELIB}/cbor2/_encoder.pyc
-${PYSITELIB}/cbor2/_encoder.pyo
-${PYSITELIB}/cbor2/_types.py
-${PYSITELIB}/cbor2/_types.pyc
-${PYSITELIB}/cbor2/_types.pyo
-${PYSITELIB}/cbor2/decoder.py
-${PYSITELIB}/cbor2/decoder.pyc
-${PYSITELIB}/cbor2/decoder.pyo
-${PYSITELIB}/cbor2/encoder.py
-${PYSITELIB}/cbor2/encoder.pyc
-${PYSITELIB}/cbor2/encoder.pyo
+${PYSITELIB}/cbor2/_cbor2.so
 ${PYSITELIB}/cbor2/py.typed
 ${PYSITELIB}/cbor2/tool.py
 ${PYSITELIB}/cbor2/tool.pyc
 ${PYSITELIB}/cbor2/tool.pyo
-${PYSITELIB}/cbor2/types.py
-${PYSITELIB}/cbor2/types.pyc
-${PYSITELIB}/cbor2/types.pyo
