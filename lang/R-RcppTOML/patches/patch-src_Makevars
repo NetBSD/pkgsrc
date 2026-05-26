@@ -1,0 +1,18 @@
+$NetBSD: patch-src_Makevars,v 1.1 2026/05/26 21:40:14 mef Exp $
+
+symbol backtrace_symbols is defined in /usr/lib/libexecinfo
+
+--- src/Makevars.orig	2023-01-29 09:03:42.000000000 +0900
++++ src/Makevars	2026-05-27 06:36:20.233827202 +0900
+@@ -2,3 +2,11 @@
+ CXX_STD = CXX17
+ 
+ PKG_CPPFLAGS = -I../inst/include -DTOML_ENABLE_FLOAT16=0
++
++UNAME := $(shell uname)
++
++ifneq ($(UNAME), Linux)
++ifneq ($(UNAME), SunOS)
++PKG_LIBS += -lexecinfo
++endif
++endif
