@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/08/22 05:35:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/05/26 09:27:24 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -78,6 +78,18 @@ ${PYSITELIB}/mdit_py_plugins/front_matter/index.py
 ${PYSITELIB}/mdit_py_plugins/front_matter/index.pyc
 ${PYSITELIB}/mdit_py_plugins/front_matter/index.pyo
 ${PYSITELIB}/mdit_py_plugins/front_matter/port.yaml
+${PYSITELIB}/mdit_py_plugins/gfm/__init__.py
+${PYSITELIB}/mdit_py_plugins/gfm/__init__.pyc
+${PYSITELIB}/mdit_py_plugins/gfm/__init__.pyo
+${PYSITELIB}/mdit_py_plugins/gfm_autolink/__init__.py
+${PYSITELIB}/mdit_py_plugins/gfm_autolink/__init__.pyc
+${PYSITELIB}/mdit_py_plugins/gfm_autolink/__init__.pyo
+${PYSITELIB}/mdit_py_plugins/gfm_autolink/_match.py
+${PYSITELIB}/mdit_py_plugins/gfm_autolink/_match.pyc
+${PYSITELIB}/mdit_py_plugins/gfm_autolink/_match.pyo
+${PYSITELIB}/mdit_py_plugins/gfm_autolink/index.py
+${PYSITELIB}/mdit_py_plugins/gfm_autolink/index.pyc
+${PYSITELIB}/mdit_py_plugins/gfm_autolink/index.pyo
 ${PYSITELIB}/mdit_py_plugins/myst_blocks/__init__.py
 ${PYSITELIB}/mdit_py_plugins/myst_blocks/__init__.pyc
 ${PYSITELIB}/mdit_py_plugins/myst_blocks/__init__.pyo
@@ -98,6 +110,12 @@ ${PYSITELIB}/mdit_py_plugins/subscript/port.yaml
 ${PYSITELIB}/mdit_py_plugins/substitution.py
 ${PYSITELIB}/mdit_py_plugins/substitution.pyc
 ${PYSITELIB}/mdit_py_plugins/substitution.pyo
+${PYSITELIB}/mdit_py_plugins/superscript/__init__.py
+${PYSITELIB}/mdit_py_plugins/superscript/__init__.pyc
+${PYSITELIB}/mdit_py_plugins/superscript/__init__.pyo
+${PYSITELIB}/mdit_py_plugins/superscript/index.py
+${PYSITELIB}/mdit_py_plugins/superscript/index.pyc
+${PYSITELIB}/mdit_py_plugins/superscript/index.pyo
 ${PYSITELIB}/mdit_py_plugins/tasklists/__init__.py
 ${PYSITELIB}/mdit_py_plugins/tasklists/__init__.pyc
 ${PYSITELIB}/mdit_py_plugins/tasklists/__init__.pyo
