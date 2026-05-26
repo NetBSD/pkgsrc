@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: gitea.sh,v 1.5 2022/03/23 23:41:14 khorben Exp $
+# $NetBSD: gitea.sh,v 1.6 2026/05/26 01:01:15 khorben Exp $
 #
 # PROVIDE: gitea
 # REQUIRE: DAEMON
@@ -20,6 +20,7 @@ command_args="--config @PKG_SYSCONFDIR@/conf/app.ini web > /dev/null &"
 gitea_env="GITEA_WORK_DIR=@GITEA_SHARE_DIR@"
 gitea_env="${gitea_env} GITEA_CUSTOM=@PKG_SYSCONFDIR@"
 gitea_env="${gitea_env} HOME=@GITEA_USER_HOME@"
+gitea_env="${gitea_env} PATH=$PATH:@PREFIX@/bin"
 gitea_env="${gitea_env} USER=@GITEA_USER@"
 
 gitea_user="@GITEA_USER@"
