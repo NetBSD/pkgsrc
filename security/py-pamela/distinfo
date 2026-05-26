@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/26 20:59:30 markd Exp $
+
+BLAKE2s (pamela-1.2.0.tar.gz) = bfd1abc33bae1475513c4b01d9573e3fca8b9093f4c3b7d852dee9477b81b5c3
+SHA512 (pamela-1.2.0.tar.gz) = 2691b362d2f7f6275545c5044eb44b4eb7d290026c036a11bab5529dc8c2f61a02ba17a9a3a030e87e115991d14d211cdecb6ba5b33e9015440de040e77b57e1
+Size (pamela-1.2.0.tar.gz) = 7824 bytes
