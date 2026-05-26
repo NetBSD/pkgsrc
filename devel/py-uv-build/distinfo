@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2026/05/21 13:42:55 adam Exp $
+$NetBSD: distinfo,v 1.26 2026/05/26 06:43:58 adam Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -1596,9 +1596,6 @@ Size (tracing-durations-export-0.3.3.crate) = 138678 bytes
 BLAKE2s (tracing-log-0.2.0.crate) = 4088d47200a12bd915adaf7bae97ae2d7d803880a29874bf1beb6cfae373a00b
 SHA512 (tracing-log-0.2.0.crate) = 0c1f060e8ffb9ff24cee7b85cc2d7d42c69b2f7623a7faecd7422b23b11ae8d5c7691e4635bae76861d444c369d9701ccb147904668023642b223e442e3c8285
 Size (tracing-log-0.2.0.crate) = 17561 bytes
-BLAKE2s (tracing-serde-0.2.0.crate) = 5de704dd76431ff3def2e8961190f1f6bafb6b295596c9356d3c25f7cf7765bc
-SHA512 (tracing-serde-0.2.0.crate) = d5914943ca8a80959287117d5d5f3fee0f01baa49cef02002bbd00507743e06c3c5df31a346dce54b9d5d20358fd512d4ae54a0956f1dd334b9bf0c7e7594823
-Size (tracing-serde-0.2.0.crate) = 7755 bytes
 BLAKE2s (tracing-subscriber-0.3.23.crate) = 29d9591aa60e5817ad5cb49ca0de1203d21ea408badceee74a7f36650613b032
 SHA512 (tracing-subscriber-0.3.23.crate) = 9d69512c39fe2a4d9f4e27f373e3c79d2b23dc6a8e10e8388c5bba87d6f80048edd1e70541fb4311b9708d53510a53dfe69f32c1e3e36ea85c6dfaafc2c01f74
 Size (tracing-subscriber-0.3.23.crate) = 213773 bytes
@@ -1701,9 +1698,9 @@ Size (utf8parse-0.2.2.crate) = 13499 bytes
 BLAKE2s (uuid-1.23.1.crate) = ed23e10afa3a5eb3bff30d07f384a71e6af046cd4d855e10a9cd796ce41a4c48
 SHA512 (uuid-1.23.1.crate) = 7f9222285c9e6635d9ed0b03ae945c2037bd7f7486bb05214355c19eb3fc0f7685b3f6b3bb58e158e1dd26cbf4772af7180420305f2ff001a69e90ea6f2c428e
 Size (uuid-1.23.1.crate) = 62932 bytes
-BLAKE2s (uv_build-0.11.15.tar.gz) = 6ef344faaeea58a5d02a42fa96e4f75d568507353f96868403c40fad02dc3463
-SHA512 (uv_build-0.11.15.tar.gz) = 968948d3428655fbbeb2322e28e411e7b3d7639c1d10ed0738b0a2e497284c78357053eb7dc6590bd39ff57875adfba56f3439fcd48515ba4a0fe1b10dcdff6b
-Size (uv_build-0.11.15.tar.gz) = 390571 bytes
+BLAKE2s (uv_build-0.11.16.tar.gz) = dc909ca515cfa77d273d2afbcff42cf35b0e58c209a26e3814dc725f90a95780
+SHA512 (uv_build-0.11.16.tar.gz) = fcc8bdf72e6d1769bc37668e8cbb3f8444f05ce3cb6eca6f949ec02d4adbe638b8f89b143a8af445c7c55ea5f9cffe1ea796ee49a6fdc1f60a07e9642cf9bd4e
+Size (uv_build-0.11.16.tar.gz) = 390555 bytes
 BLAKE2s (valuable-0.1.1.crate) = df7602da20aa0212438759173532cf82c56ba05307e036b22bfddb318e2f82b7
 SHA512 (valuable-0.1.1.crate) = d8a4bffdc8a166d1ee11b87dd91cd68e5c898916b14db7039ad2faaad34f4bfef76f3fc3d17d6e7bf05e495778f7c9d5223fbf45331bd114f93fb6ec950eadbf
 Size (valuable-0.1.1.crate) = 28679 bytes
