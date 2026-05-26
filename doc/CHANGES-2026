@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3288 2026/05/26 12:23:54 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3289 2026/05/26 13:10:51 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5105,3 +5105,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/gssdp to 1.6.5 [adam 2026-05-26]
 	Updated net/gupnp to 1.6.10 [adam 2026-05-26]
 	Updated net/gupnp-av to 0.14.5 [adam 2026-05-26]
+	Updated math/R-RcppArmadillo to 15.2.6.1 [mef 2026-05-26]
