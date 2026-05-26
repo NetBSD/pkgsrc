@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2025/01/11 13:34:03 mef Exp $
+# $NetBSD: Makefile,v 1.5 2026/05/26 21:19:47 mef Exp $
 
 R_PKGNAME=	RcppCCTZ
-R_PKGVER=	0.2.13
+R_PKGVER=	0.2.14
 CATEGORIES=	time
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,6 +17,9 @@ TEST_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
 USE_LANGUAGES=		c c++
+# only for patch-src_Makevars
+USE_TOOLS+=		gmake
+
 .include "../../mk/bsd.prefs.mk"
 
 # https://mail-index.netbsd.org/pkgsrc-users/2025/01/02/msg040775.html
