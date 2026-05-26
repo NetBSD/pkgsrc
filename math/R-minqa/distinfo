@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2024/11/05 03:55:41 mef Exp $
+$NetBSD: distinfo,v 1.8 2026/05/26 12:42:35 mef Exp $
 
 BLAKE2s (R/minqa_1.2.8.tar.gz) = 8230b005cfe3f548588b5d2ae546ec16c75a9814e81df2ec1ef3845c444ebd38
 SHA512 (R/minqa_1.2.8.tar.gz) = e26ab71455b4f2b2de443cc4545b556ba88124d1b4057fbd58d123a305df9625149064df6c3ff60e6122ae60b2b70282c4df903c6a00ce719f5949fd89bd48f4
 Size (R/minqa_1.2.8.tar.gz) = 54644 bytes
+SHA1 (patch-src_Makevars) = 763b1600cbdb60546b3ec43044b606ea6e6a0f04
