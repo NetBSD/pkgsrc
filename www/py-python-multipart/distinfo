@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2026/05/06 08:41:32 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/05/26 09:22:56 adam Exp $
 
-BLAKE2s (python_multipart-0.0.27.tar.gz) = 5d6b3a4bc8f5025ce4cc6ad05686571dae7d233a506e804b5c473f3717de511e
-SHA512 (python_multipart-0.0.27.tar.gz) = 5938c99d16211edd04a92ed529dc21a13f039936568a07c57d42b2cbe99938d356446c9a8293b445b4e90f4295fb68e387c7b10b1d7def1141a608b7212ab286
-Size (python_multipart-0.0.27.tar.gz) = 44043 bytes
+BLAKE2s (python_multipart-0.0.29.tar.gz) = c8fab7c8594da1ffcd87e6e4bc47e7b154e0413f64d894bc8e531cac50416637
+SHA512 (python_multipart-0.0.29.tar.gz) = 9108358fefefba6f2f30bdba611cf91973bc5954f4a74412c6618b273520d63f2d745b66e0c6f4a47c074ac44a49f33d2ac91bd0e80aa2d1b8cf5006ad69ce44
+Size (python_multipart-0.0.29.tar.gz) = 45678 bytes
