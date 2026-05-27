@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2025/09/28 19:42:20 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/05/27 12:48:02 adam Exp $
 
-DISTNAME=	pycountry-24.6.1
+DISTNAME=	pycountry-26.2.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	1
 CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycountry/}
 
@@ -12,7 +11,7 @@ COMMENT=	ISO country, subdivision, language, currency and script
 LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 

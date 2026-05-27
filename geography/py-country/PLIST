@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/09/28 19:42:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/05/27 12:48:02 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -48,7 +48,13 @@ ${PYSITELIB}/pycountry/locales/az/LC_MESSAGES/iso3166-1.mo
 ${PYSITELIB}/pycountry/locales/az/LC_MESSAGES/iso3166-2.mo
 ${PYSITELIB}/pycountry/locales/az/LC_MESSAGES/iso3166-3.mo
 ${PYSITELIB}/pycountry/locales/az/LC_MESSAGES/iso639-3.mo
+${PYSITELIB}/pycountry/locales/ba/LC_MESSAGES/iso15924.mo
 ${PYSITELIB}/pycountry/locales/ba/LC_MESSAGES/iso3166-1.mo
+${PYSITELIB}/pycountry/locales/ba/LC_MESSAGES/iso3166-2.mo
+${PYSITELIB}/pycountry/locales/ba/LC_MESSAGES/iso3166-3.mo
+${PYSITELIB}/pycountry/locales/ba/LC_MESSAGES/iso4217.mo
+${PYSITELIB}/pycountry/locales/ba/LC_MESSAGES/iso639-3.mo
+${PYSITELIB}/pycountry/locales/ba/LC_MESSAGES/iso639-5.mo
 ${PYSITELIB}/pycountry/locales/bar/LC_MESSAGES/iso3166-1.mo
 ${PYSITELIB}/pycountry/locales/be/LC_MESSAGES/iso15924.mo
 ${PYSITELIB}/pycountry/locales/be/LC_MESSAGES/iso3166-1.mo
@@ -75,6 +81,7 @@ ${PYSITELIB}/pycountry/locales/bn_IN/LC_MESSAGES/iso3166-1.mo
 ${PYSITELIB}/pycountry/locales/bn_IN/LC_MESSAGES/iso3166-3.mo
 ${PYSITELIB}/pycountry/locales/br/LC_MESSAGES/iso15924.mo
 ${PYSITELIB}/pycountry/locales/br/LC_MESSAGES/iso3166-1.mo
+${PYSITELIB}/pycountry/locales/br/LC_MESSAGES/iso3166-2.mo
 ${PYSITELIB}/pycountry/locales/br/LC_MESSAGES/iso3166-3.mo
 ${PYSITELIB}/pycountry/locales/br/LC_MESSAGES/iso4217.mo
 ${PYSITELIB}/pycountry/locales/br/LC_MESSAGES/iso639-3.mo
@@ -94,7 +101,9 @@ ${PYSITELIB}/pycountry/locales/ca/LC_MESSAGES/iso639-3.mo
 ${PYSITELIB}/pycountry/locales/ce/LC_MESSAGES/iso3166-1.mo
 ${PYSITELIB}/pycountry/locales/ch/LC_MESSAGES/iso3166-1.mo
 ${PYSITELIB}/pycountry/locales/chr/LC_MESSAGES/iso3166-1.mo
+${PYSITELIB}/pycountry/locales/ckb/LC_MESSAGES/iso15924.mo
 ${PYSITELIB}/pycountry/locales/ckb/LC_MESSAGES/iso3166-1.mo
+${PYSITELIB}/pycountry/locales/ckb/LC_MESSAGES/iso639-3.mo
 ${PYSITELIB}/pycountry/locales/crh/LC_MESSAGES/iso3166-1.mo
 ${PYSITELIB}/pycountry/locales/crh/LC_MESSAGES/iso3166-2.mo
 ${PYSITELIB}/pycountry/locales/crh/LC_MESSAGES/iso3166-3.mo
@@ -224,8 +233,11 @@ ${PYSITELIB}/pycountry/locales/he/LC_MESSAGES/iso3166-1.mo
 ${PYSITELIB}/pycountry/locales/he/LC_MESSAGES/iso3166-2.mo
 ${PYSITELIB}/pycountry/locales/he/LC_MESSAGES/iso3166-3.mo
 ${PYSITELIB}/pycountry/locales/he/LC_MESSAGES/iso639-3.mo
+${PYSITELIB}/pycountry/locales/hi/LC_MESSAGES/iso15924.mo
 ${PYSITELIB}/pycountry/locales/hi/LC_MESSAGES/iso3166-1.mo
+${PYSITELIB}/pycountry/locales/hi/LC_MESSAGES/iso3166-2.mo
 ${PYSITELIB}/pycountry/locales/hi/LC_MESSAGES/iso3166-3.mo
+${PYSITELIB}/pycountry/locales/hi/LC_MESSAGES/iso4217.mo
 ${PYSITELIB}/pycountry/locales/hi/LC_MESSAGES/iso639-3.mo
 ${PYSITELIB}/pycountry/locales/hi/LC_MESSAGES/iso639-5.mo
 ${PYSITELIB}/pycountry/locales/hr/LC_MESSAGES/iso15924.mo
@@ -288,6 +300,7 @@ ${PYSITELIB}/pycountry/locales/ka/LC_MESSAGES/iso639-5.mo
 ${PYSITELIB}/pycountry/locales/kab/LC_MESSAGES/iso15924.mo
 ${PYSITELIB}/pycountry/locales/kab/LC_MESSAGES/iso3166-1.mo
 ${PYSITELIB}/pycountry/locales/kab/LC_MESSAGES/iso3166-2.mo
+${PYSITELIB}/pycountry/locales/kab/LC_MESSAGES/iso3166-3.mo
 ${PYSITELIB}/pycountry/locales/kab/LC_MESSAGES/iso4217.mo
 ${PYSITELIB}/pycountry/locales/kab/LC_MESSAGES/iso639-3.mo
 ${PYSITELIB}/pycountry/locales/kab/LC_MESSAGES/iso639-5.mo
@@ -316,7 +329,13 @@ ${PYSITELIB}/pycountry/locales/kv/LC_MESSAGES/iso3166-1.mo
 ${PYSITELIB}/pycountry/locales/kw/LC_MESSAGES/iso3166-1.mo
 ${PYSITELIB}/pycountry/locales/ky/LC_MESSAGES/iso3166-1.mo
 ${PYSITELIB}/pycountry/locales/ky/LC_MESSAGES/iso3166-2.mo
+${PYSITELIB}/pycountry/locales/lo/LC_MESSAGES/iso15924.mo
 ${PYSITELIB}/pycountry/locales/lo/LC_MESSAGES/iso3166-1.mo
+${PYSITELIB}/pycountry/locales/lo/LC_MESSAGES/iso3166-2.mo
+${PYSITELIB}/pycountry/locales/lo/LC_MESSAGES/iso3166-3.mo
+${PYSITELIB}/pycountry/locales/lo/LC_MESSAGES/iso4217.mo
+${PYSITELIB}/pycountry/locales/lo/LC_MESSAGES/iso639-3.mo
+${PYSITELIB}/pycountry/locales/lo/LC_MESSAGES/iso639-5.mo
 ${PYSITELIB}/pycountry/locales/lt/LC_MESSAGES/iso15924.mo
 ${PYSITELIB}/pycountry/locales/lt/LC_MESSAGES/iso3166-1.mo
 ${PYSITELIB}/pycountry/locales/lt/LC_MESSAGES/iso3166-2.mo
@@ -393,6 +412,13 @@ ${PYSITELIB}/pycountry/locales/oc/LC_MESSAGES/iso639-5.mo
 ${PYSITELIB}/pycountry/locales/or/LC_MESSAGES/iso3166-1.mo
 ${PYSITELIB}/pycountry/locales/or/LC_MESSAGES/iso3166-3.mo
 ${PYSITELIB}/pycountry/locales/or/LC_MESSAGES/iso639-3.mo
+${PYSITELIB}/pycountry/locales/ota/LC_MESSAGES/iso15924.mo
+${PYSITELIB}/pycountry/locales/ota/LC_MESSAGES/iso3166-1.mo
+${PYSITELIB}/pycountry/locales/ota/LC_MESSAGES/iso3166-2.mo
+${PYSITELIB}/pycountry/locales/ota/LC_MESSAGES/iso3166-3.mo
+${PYSITELIB}/pycountry/locales/ota/LC_MESSAGES/iso4217.mo
+${PYSITELIB}/pycountry/locales/ota/LC_MESSAGES/iso639-3.mo
+${PYSITELIB}/pycountry/locales/ota/LC_MESSAGES/iso639-5.mo
 ${PYSITELIB}/pycountry/locales/pa/LC_MESSAGES/iso3166-1.mo
 ${PYSITELIB}/pycountry/locales/pa/LC_MESSAGES/iso3166-3.mo
 ${PYSITELIB}/pycountry/locales/pa/LC_MESSAGES/iso639-3.mo
@@ -413,6 +439,7 @@ ${PYSITELIB}/pycountry/locales/ps/LC_MESSAGES/iso3166-3.mo
 ${PYSITELIB}/pycountry/locales/ps/LC_MESSAGES/iso639-3.mo
 ${PYSITELIB}/pycountry/locales/pt/LC_MESSAGES/iso15924.mo
 ${PYSITELIB}/pycountry/locales/pt/LC_MESSAGES/iso3166-1.mo
+${PYSITELIB}/pycountry/locales/pt/LC_MESSAGES/iso3166-2.mo
 ${PYSITELIB}/pycountry/locales/pt/LC_MESSAGES/iso3166-3.mo
 ${PYSITELIB}/pycountry/locales/pt/LC_MESSAGES/iso4217.mo
 ${PYSITELIB}/pycountry/locales/pt/LC_MESSAGES/iso639-3.mo
@@ -459,6 +486,7 @@ ${PYSITELIB}/pycountry/locales/sk/LC_MESSAGES/iso3166-2.mo
 ${PYSITELIB}/pycountry/locales/sk/LC_MESSAGES/iso3166-3.mo
 ${PYSITELIB}/pycountry/locales/sk/LC_MESSAGES/iso4217.mo
 ${PYSITELIB}/pycountry/locales/sk/LC_MESSAGES/iso639-3.mo
+${PYSITELIB}/pycountry/locales/sk/LC_MESSAGES/iso639-5.mo
 ${PYSITELIB}/pycountry/locales/sl/LC_MESSAGES/iso15924.mo
 ${PYSITELIB}/pycountry/locales/sl/LC_MESSAGES/iso3166-1.mo
 ${PYSITELIB}/pycountry/locales/sl/LC_MESSAGES/iso3166-2.mo
@@ -544,8 +572,13 @@ ${PYSITELIB}/pycountry/locales/tt@iqtelif/LC_MESSAGES/iso639-3.mo
 ${PYSITELIB}/pycountry/locales/tzm/LC_MESSAGES/iso15924.mo
 ${PYSITELIB}/pycountry/locales/tzm/LC_MESSAGES/iso3166-1.mo
 ${PYSITELIB}/pycountry/locales/tzm/LC_MESSAGES/iso4217.mo
+${PYSITELIB}/pycountry/locales/ug/LC_MESSAGES/iso15924.mo
 ${PYSITELIB}/pycountry/locales/ug/LC_MESSAGES/iso3166-1.mo
+${PYSITELIB}/pycountry/locales/ug/LC_MESSAGES/iso3166-2.mo
 ${PYSITELIB}/pycountry/locales/ug/LC_MESSAGES/iso3166-3.mo
+${PYSITELIB}/pycountry/locales/ug/LC_MESSAGES/iso4217.mo
+${PYSITELIB}/pycountry/locales/ug/LC_MESSAGES/iso639-3.mo
+${PYSITELIB}/pycountry/locales/ug/LC_MESSAGES/iso639-5.mo
 ${PYSITELIB}/pycountry/locales/uk/LC_MESSAGES/iso15924.mo
 ${PYSITELIB}/pycountry/locales/uk/LC_MESSAGES/iso3166-1.mo
 ${PYSITELIB}/pycountry/locales/uk/LC_MESSAGES/iso3166-2.mo
@@ -583,18 +616,18 @@ ${PYSITELIB}/pycountry/locales/zh_CN/LC_MESSAGES/iso3166-2.mo
 ${PYSITELIB}/pycountry/locales/zh_CN/LC_MESSAGES/iso3166-3.mo
 ${PYSITELIB}/pycountry/locales/zh_CN/LC_MESSAGES/iso4217.mo
 ${PYSITELIB}/pycountry/locales/zh_CN/LC_MESSAGES/iso639-3.mo
+${PYSITELIB}/pycountry/locales/zh_CN/LC_MESSAGES/iso639-5.mo
 ${PYSITELIB}/pycountry/locales/zh_HK/LC_MESSAGES/iso15924.mo
 ${PYSITELIB}/pycountry/locales/zh_HK/LC_MESSAGES/iso3166-1.mo
 ${PYSITELIB}/pycountry/locales/zh_HK/LC_MESSAGES/iso3166-3.mo
 ${PYSITELIB}/pycountry/locales/zh_HK/LC_MESSAGES/iso4217.mo
-${PYSITELIB}/pycountry/locales/zh_Hans/LC_MESSAGES/iso639-5.mo
-${PYSITELIB}/pycountry/locales/zh_Hant/LC_MESSAGES/iso639-5.mo
 ${PYSITELIB}/pycountry/locales/zh_TW/LC_MESSAGES/iso15924.mo
 ${PYSITELIB}/pycountry/locales/zh_TW/LC_MESSAGES/iso3166-1.mo
 ${PYSITELIB}/pycountry/locales/zh_TW/LC_MESSAGES/iso3166-2.mo
 ${PYSITELIB}/pycountry/locales/zh_TW/LC_MESSAGES/iso3166-3.mo
 ${PYSITELIB}/pycountry/locales/zh_TW/LC_MESSAGES/iso4217.mo
 ${PYSITELIB}/pycountry/locales/zh_TW/LC_MESSAGES/iso639-3.mo
+${PYSITELIB}/pycountry/locales/zh_TW/LC_MESSAGES/iso639-5.mo
 ${PYSITELIB}/pycountry/locales/zu/LC_MESSAGES/iso3166-1.mo
 ${PYSITELIB}/pycountry/locales/zu/LC_MESSAGES/iso3166-3.mo
 ${PYSITELIB}/pycountry/locales/zu/LC_MESSAGES/iso639-3.mo
