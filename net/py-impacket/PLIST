@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2026/05/25 08:04:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/05/27 22:52:18 wiz Exp $
 bin/CheckLDAPStatus-${PYVERSSUFFIX}.py
 bin/DumpNTLMInfo-${PYVERSSUFFIX}.py
 bin/Get-GPPPassword-${PYVERSSUFFIX}.py
@@ -12,7 +12,7 @@ bin/atexec-${PYVERSSUFFIX}.py
 bin/attrib-${PYVERSSUFFIX}.py
 bin/badsuccessor-${PYVERSSUFFIX}.py
 bin/changepasswd-${PYVERSSUFFIX}.py
-bin/checkMSSQLStatus-3.14.py
+bin/checkMSSQLStatus-${PYVERSSUFFIX}.py
 bin/dacledit-${PYVERSSUFFIX}.py
 bin/dcomexec-${PYVERSSUFFIX}.py
 bin/describeTicket-${PYVERSSUFFIX}.py
