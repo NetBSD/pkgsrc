@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2026/04/29 16:19:38 gdt Exp $
+@comment $NetBSD: PLIST,v 1.38 2026/05/27 22:21:52 gdt Exp $
 bin/qgis
 bin/qgis_bench
 bin/qgis_mapserver
@@ -3223,6 +3223,7 @@ share/qgis/python/qgis/PyQt/QtGui.py
 share/qgis/python/qgis/PyQt/QtMultimedia.py
 share/qgis/python/qgis/PyQt/QtNetwork.py
 share/qgis/python/qgis/PyQt/QtPrintSupport.py
+share/qgis/python/qgis/PyQt/QtQuick.py
 share/qgis/python/qgis/PyQt/QtQuickWidgets.py
 share/qgis/python/qgis/PyQt/QtSerialPort.py
 share/qgis/python/qgis/PyQt/QtSql.py

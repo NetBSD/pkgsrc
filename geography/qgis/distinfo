@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.90 2026/05/09 12:01:06 gdt Exp $
+$NetBSD: distinfo,v 1.91 2026/05/27 22:21:52 gdt Exp $
 
-BLAKE2s (qgis-3.44.9.tar.bz2) = 78b853c09620b28ffd74e0ec615dd3da276da541f409bc0ba599b32a8bdcdc74
-SHA512 (qgis-3.44.9.tar.bz2) = 1843849b45a8bea68d749db7af906bf9447e9e6daff00759b33357cef0f765d07916de5d4a40bcd572dfe74482d6fb5c99d1a2a765aba1122b234e3623a52057
-Size (qgis-3.44.9.tar.bz2) = 191550241 bytes
+BLAKE2s (qgis-3.44.10.tar.bz2) = e20b984ed03bf133a083a4a4648220bc23b8730b5c3a2ba343b7df13185186cf
+SHA512 (qgis-3.44.10.tar.bz2) = 0cf3bd7c56c82afe3d7f3844669b7fd257c7af84631669f8cec70e5347cc6e1930a33b33072a0e5985c6201b13209a704d6ac2641b976627952b08f7e6aebf5d
+Size (qgis-3.44.10.tar.bz2) = 191960210 bytes
 SHA1 (patch-cmake_FindQwt.cmake) = 245463bc44fb4f2cb4aa61a8b86931e95e4ac820
 SHA1 (patch-external_mdal_frmts_mdal__gdal.cpp) = 82a1b5257087efcbe3aabd5e8fa9b0e17399c033
 SHA1 (patch-external_nmea_tok.c) = 94b9ce398787170250fc5fbd8835d7d7fa1cd013
