@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3295 2026/05/27 04:31:10 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3296 2026/05/27 04:58:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5119,3 +5119,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/libavif to 1.4.2 [adam 2026-05-27]
 	Updated devel/py-coverage to 7.14.1 [adam 2026-05-27]
 	Updated sysutils/py-kubernetes to 36.0.1 [adam 2026-05-27]
+	Updated shells/nushell to 0.113.0 [adam 2026-05-27]
+	Updated devel/lazygit to 0.62.0 [adam 2026-05-27]
