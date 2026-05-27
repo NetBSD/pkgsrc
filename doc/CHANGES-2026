@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3308 2026/05/27 13:03:43 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.3309 2026/05/27 22:22:00 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5143,3 +5143,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/py-country to 26.2.16 [adam 2026-05-27]
 	Updated devel/py-test-asyncio to 1.4.0 [adam 2026-05-27]
 	Updated lang/joker to 1.8.0 [ktnb 2026-05-27]
+	Updated geography/qgis to 3.44.10 [gdt 2026-05-27]
