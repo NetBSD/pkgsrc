@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2025/10/09 07:58:10 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/05/27 09:58:12 adam Exp $
 
-DISTNAME=	jupyter_server-2.17.0
+DISTNAME=	jupyter_server-2.18.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter-server/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://jupyter-server.readthedocs.io/
 COMMENT=	Backend for Jupyter web applications
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-jupyter-builder>=0.8.1:../../devel/py-hatch-jupyter-builder
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.11:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-Send2Trash>=1.8.2:../../sysutils/py-Send2Trash
 DEPENDS+=	${PYPKGPREFIX}-anyio>=3.1.0:../../devel/py-anyio
 DEPENDS+=	${PYPKGPREFIX}-argon2-cffi>=21.1:../../security/py-argon2-cffi
@@ -38,11 +38,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PY_RENAME_BINARIES=	jupyter-server
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} jupyter-server jupyter-server-${PYVERSSUFFIX} || ${TRUE}
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
