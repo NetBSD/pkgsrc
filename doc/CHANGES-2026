@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3311 2026/05/27 22:35:38 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3312 2026/05/27 22:38:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5146,3 +5146,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/qgis to 3.44.10 [gdt 2026-05-27]
 	Updated lang/perl5 to 5.42.2nb1 [wiz 2026-05-27]
 	Updated lang/perl5 to 5.42.2nb2 [wiz 2026-05-27]
+	Updated misc/tmux to 3.6b [wiz 2026-05-27]
