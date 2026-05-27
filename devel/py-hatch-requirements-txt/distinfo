@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/27 10:52:47 markd Exp $
+
+BLAKE2s (hatch_requirements_txt-0.4.1.tar.gz) = 3a81f87aa7bbf6c63a6550924aa4187878fa64d9065813d897f21cc83aae804b
+SHA512 (hatch_requirements_txt-0.4.1.tar.gz) = 175001d25217c79448dbe2aba6cd9477e5f7d54b703c41405ecddb6452864af4d53fd22a8a2568e263c4a9bafe52048a58408c7aefce743a2f26723cd23e8d49
+Size (hatch_requirements_txt-0.4.1.tar.gz) = 6454 bytes

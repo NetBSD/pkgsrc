@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2026/05/27 10:52:47 markd Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/hatch_requirements_txt/__init__.py
+${PYSITELIB}/hatch_requirements_txt/__init__.pyc
+${PYSITELIB}/hatch_requirements_txt/__init__.pyo
+${PYSITELIB}/hatch_requirements_txt/py.typed
