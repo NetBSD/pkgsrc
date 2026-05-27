@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3307 2026/05/27 12:50:44 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3308 2026/05/27 13:03:43 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5142,3 +5142,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-tox to 4.54.0 [adam 2026-05-27]
 	Updated geography/py-country to 26.2.16 [adam 2026-05-27]
 	Updated devel/py-test-asyncio to 1.4.0 [adam 2026-05-27]
+	Updated lang/joker to 1.8.0 [ktnb 2026-05-27]
