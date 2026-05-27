@@ -1,0 +1,2 @@
+bin/jupyterhub @PREFIX@/bin/jupyterhub-@PYVERSSUFFIX@
+bin/jupyterhub-singleuser @PREFIX@/bin/jupyterhub-singleuser-@PYVERSSUFFIX@
