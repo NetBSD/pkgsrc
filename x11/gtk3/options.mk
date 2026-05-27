@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.35 2026/05/15 17:01:06 wiz Exp $
+# $NetBSD: options.mk,v 1.36 2026/05/27 12:39:08 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
 PKG_SUPPORTED_OPTIONS+=	doc introspection gtk3-atk-bridge cups
@@ -11,7 +11,11 @@ PKG_SUGGESTED_OPTIONS+=	x11
 .endif
 .include "../../devel/wayland/platform.mk"
 .if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
+# workaround for PR pkg/60295
+.  if ${OPSYS} != "NetBSD" || ${X11_TYPE} != "native" || \
+      exists(${X11BASE}/lib/modules/libglamoregl.so)
 PKG_SUGGESTED_OPTIONS+=	wayland
+.  endif
 .endif
 PKG_SUGGESTED_OPTIONS+=	gtk3-atk-bridge cups
 PKG_SUGGESTED_OPTIONS+=	${${USE_CROSS_COMPILE:tl} == "yes":?:introspection}
