@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/27 11:00:10 markd Exp $
+
+BLAKE2s (jupyterhub-5.4.6.tar.gz) = 4e41842fac207fee2cf5358bf815ebb8ca800a11ca0f6d20408ec738fc9dd658
+SHA512 (jupyterhub-5.4.6.tar.gz) = c6cbcf5646d6c55254474a1500a774cac6760b5c779f1342cfc40d0db5497bbf6f4ff3df2d502dbc6b467f79f08a028e8ce133cd4345cc0508fa648c89ff43af
+Size (jupyterhub-5.4.6.tar.gz) = 18145445 bytes
