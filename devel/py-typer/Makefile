@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/05/03 14:57:35 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/05/27 04:01:53 adam Exp $
 
-DISTNAME=	typer-0.25.1
+DISTNAME=	typer-0.26.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/typer/}
@@ -12,8 +12,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend>0:../../devel/py-pdm_backend
 DEPENDS+=	${PYPKGPREFIX}-annotated-doc>=0.0.2:../../textproc/py-annotated-doc
-DEPENDS+=	${PYPKGPREFIX}-click>=8.2.1:../../devel/py-click
-DEPENDS+=	${PYPKGPREFIX}-rich>=12.3.0:../../comms/py-rich
+DEPENDS+=	${PYPKGPREFIX}-rich>=13.8.0:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-shellingham>=1.3.0:../../misc/py-shellingham
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar>=0.9.5:../../devel/py-test-sugar
