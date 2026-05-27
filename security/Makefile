@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1007 2026/05/27 11:10:17 markd Exp $
+# $NetBSD: Makefile,v 1.1008 2026/05/27 11:23:12 markd Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -291,6 +291,7 @@ SUBDIR+=	opensc
 SUBDIR+=	openssh
 SUBDIR+=	openssl
 SUBDIR+=	oqs-provider
+SUBDIR+=	ory-hydra
 SUBDIR+=	osv-scanner
 SUBDIR+=	otpCalc
 SUBDIR+=	p0f

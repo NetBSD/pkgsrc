@@ -1,0 +1,10 @@
+Ory Hydra is a server implementation of the OAuth 2.0 authorization framework
+and the OpenID Connect Core 1.0. It follows cloud architecture best practices
+and focuses on:
+
+ * OAuth 2.0 and OpenID Connect flows
+ * Token issuance and validation
+ * Client management
+ * Consent and login flow orchestration
+ * JWKS management
+ * Low latency and high throughput
