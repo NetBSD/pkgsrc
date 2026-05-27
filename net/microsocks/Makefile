@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/01/21 18:26:43 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2026/05/27 10:54:46 tm Exp $
 
 DISTNAME=	microsocks-1.0.5
 CATEGORIES=	net
@@ -14,6 +14,9 @@ WRKSRC=			${WRKDIR}/${DISTNAME}
 
 USE_LANGUAGES=		c
 USE_CC_FEATURES=	c99
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__        # getopt()
+LDFLAGS.SunOS+=	-lsocket -lnsl -lresolv
 
 pre-configure:
 	${ECHO} prefix=${PREFIX} > ${WRKSRC}/config.mak
