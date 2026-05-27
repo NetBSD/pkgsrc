@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.91 2026/04/24 09:41:14 adam Exp $
+$NetBSD: distinfo,v 1.92 2026/05/27 12:42:35 adam Exp $
 
-BLAKE2s (virtualenv-21.2.4.tar.gz) = df86de9bbabb910610756fcc546f38c9a7de854551d79e98ed811120e49a06fd
-SHA512 (virtualenv-21.2.4.tar.gz) = 59cd373c7b149ab83609f2a331fb6ffa95792647d939d129b661cb12aa02686e1b789ccdf2ecf9ab959e3645c42df303ddb5a277e0600b156f6567f797fc49ff
-Size (virtualenv-21.2.4.tar.gz) = 5850742 bytes
+BLAKE2s (virtualenv-21.3.3.tar.gz) = bd3609880f83da9e05389ce12a0352dd4b34c2dad63b5c9dbd22ba3909a1c534
+SHA512 (virtualenv-21.3.3.tar.gz) = f3e7c71f2fafa0bff05aba89bc0cb2e2eede0c6ed5373fb253a6ac59f103505108671e5c19866562146723ea9630fc472dade53498c4fb97d6ec5c8e1c125d19
+Size (virtualenv-21.3.3.tar.gz) = 7613784 bytes

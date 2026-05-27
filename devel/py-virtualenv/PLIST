@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.80 2026/04/24 09:41:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.81 2026/05/27 12:42:35 adam Exp $
 bin/virtualenv-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -52,6 +52,10 @@ ${PYSITELIB}/virtualenv/activation/python/activate_this.pyo
 ${PYSITELIB}/virtualenv/activation/via_template.py
 ${PYSITELIB}/virtualenv/activation/via_template.pyc
 ${PYSITELIB}/virtualenv/activation/via_template.pyo
+${PYSITELIB}/virtualenv/activation/xonsh/__init__.py
+${PYSITELIB}/virtualenv/activation/xonsh/__init__.pyc
+${PYSITELIB}/virtualenv/activation/xonsh/__init__.pyo
+${PYSITELIB}/virtualenv/activation/xonsh/activate.xsh
 ${PYSITELIB}/virtualenv/app_data/__init__.py
 ${PYSITELIB}/virtualenv/app_data/__init__.pyc
 ${PYSITELIB}/virtualenv/app_data/__init__.pyo
@@ -253,6 +257,7 @@ ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.pyc
 ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.pyo
 ${PYSITELIB}/virtualenv/seed/wheels/embed/pip-25.0.1-py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/pip-26.0.1-py3-none-any.whl
+${PYSITELIB}/virtualenv/seed/wheels/embed/pip-26.1.1-py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-75.3.4-py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-82.0.1-py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/wheel-0.45.1-py3-none-any.whl
