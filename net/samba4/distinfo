@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.125 2026/05/13 09:29:20 adam Exp $
+$NetBSD: distinfo,v 1.126 2026/05/27 06:06:20 adam Exp $
 
-BLAKE2s (samba-4.24.2.tar.gz) = 1aa6813b03c518cadd7a70ada9d495507441271e88a39d4c4774120d51394ce5
-SHA512 (samba-4.24.2.tar.gz) = 54f65c200815f7f05eca5ee1e69e554acd93be912913d5e8fde1f8ed9b1b809dad4b47559053e4ce9780f271cf61b0abc3a25dce331ca237730574417cf5c5e7
-Size (samba-4.24.2.tar.gz) = 43409510 bytes
+BLAKE2s (samba-4.24.3.tar.gz) = 41e24d03c7d01d9ed00d99efd6d51c5c161bc148e0bd0ce8e14e5f5e1083bb68
+SHA512 (samba-4.24.3.tar.gz) = 769445f861bfd978bc8eccc53135c03d94b5e2b402f45df8c3ae202999d6f8e35a2a78bb4bada34f09cf177cfe8be4013ffd6da8d311cf6a7ff2a4a8222c6b4f
+Size (samba-4.24.3.tar.gz) = 43446520 bytes
 SHA1 (patch-buildtools_wafsamba_samba__conftests.py) = d927db17124d2bb5b382885e70a41f84c3929926
 SHA1 (patch-buildtools_wafsamba_samba__install.py) = d801340617da325e3bb70a90350e45cc8e383c2d
 SHA1 (patch-buildtools_wafsamba_samba__pidl.py) = b9015694b80c0e6382d75c806fd6e0eb92e5f998
