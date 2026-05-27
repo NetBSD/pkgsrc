@@ -1,16 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2022/03/24 19:13:00 wiz Exp $
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+@comment $NetBSD: PLIST,v 1.3 2026/05/27 08:10:11 adam Exp $
 ${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/repoze/lru/__init__.py
 ${PYSITELIB}/repoze/lru/__init__.pyc
 ${PYSITELIB}/repoze/lru/__init__.pyo
-${PYSITELIB}/repoze/lru/tests.py
-${PYSITELIB}/repoze/lru/tests.pyc
-${PYSITELIB}/repoze/lru/tests.pyo
