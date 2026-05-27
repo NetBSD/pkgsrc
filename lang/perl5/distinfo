@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.197 2026/05/27 22:28:20 wiz Exp $
+$NetBSD: distinfo,v 1.198 2026/05/27 22:35:30 wiz Exp $
 
 BLAKE2s (perl-5.42.2.tar.gz) = a2e271ef18aa3cadeed75cf6bf48cfc30b8a9f6675053194f285cd13d97e0791
 SHA512 (perl-5.42.2.tar.gz) = c17925b1146270310fbefd82a98bd94532b499a547f5be005ece204918bfc0034e473a97df643925625a940209f81a65acdd99857b3b18911461571230262c0f
 Size (perl-5.42.2.tar.gz) = 20609653 bytes
 SHA1 (patch-Configure) = 7e04b70aefcb66399679582a2f2e95306cf1e47b
 SHA1 (patch-Makefile.SH) = 56203aea57c429a94760f039a978463b8859b0a9
+SHA1 (patch-cpan_Archive-Tar_lib_Archive_Tar.pm) = af896b3c8770d03c851fe1022ed1348857b1b4cc
 SHA1 (patch-cpan_ExtUtils-MakeMaker_lib_ExtUtils_MM__BeOS.pm) = 79e5aeccfa272ca5ec08bffc616d8053ae90ac51
 SHA1 (patch-cpan_ExtUtils-MakeMaker_lib_ExtUtils_MM__Unix.pm) = 996556f221eb0c75c316315462bf6cea6746e030
 SHA1 (patch-cpan_ExtUtils-MakeMaker_t_MM__BeOS.t) = 9b0e7ab85fdab4887b1754599a8879bd7d9f36cc
