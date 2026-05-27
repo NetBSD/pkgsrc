@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/27 11:10:17 markd Exp $
+
+BLAKE2s (oauthenticator-17.4.0.tar.gz) = ba6339a0d90359b1598fe60074b0fb4c04a01990209dbb752e14a52096ef1cf4
+SHA512 (oauthenticator-17.4.0.tar.gz) = 55f04c70d28d59a0c8f3d124edf574a6125331dab552b13458b42af406e26d22932efde2ea00796965f346cd7664c9fd8aac62ef635e3b6c1481ffd65a0adc50
+Size (oauthenticator-17.4.0.tar.gz) = 208707 bytes

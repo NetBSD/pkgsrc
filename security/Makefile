@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1006 2026/05/26 20:59:30 markd Exp $
+# $NetBSD: Makefile,v 1.1007 2026/05/27 11:10:17 markd Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -531,6 +531,7 @@ SUBDIR+=	py-noiseprotocol
 SUBDIR+=	py-nvdlib
 SUBDIR+=	py-oath
 SUBDIR+=	py-oauth2client
+SUBDIR+=	py-oauthenticator
 SUBDIR+=	py-oauthlib
 SUBDIR+=	py-olm
 SUBDIR+=	py-omemo-dr
