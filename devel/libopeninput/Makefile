@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2026/04/13 15:19:36 kikadf Exp $
+# $NetBSD: Makefile,v 1.2 2026/05/27 17:14:19 kikadf Exp $
 
 .include "Makefile.common"
 
+PKGREVISION=	1
 COMMENT=	Wscons(4) and kqueue(2) based port of libinput
 
 USE_TOOLS+=	pkg-config
+UDEV_REQUIRED=	yes
 
 # wscons
 ONLY_FOR_PLATFORM=	NetBSD-*-*
@@ -19,6 +21,6 @@ PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
-.include "../../devel/libudev-bsd/buildlink3.mk"
 .include "../../devel/input-headers/buildlink3.mk"
+.include "../../mk/udev.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
