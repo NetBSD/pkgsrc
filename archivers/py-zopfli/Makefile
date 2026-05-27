@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2026/02/15 13:52:55 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/05/27 07:35:38 adam Exp $
 
-DISTNAME=	zopfli-0.4.1
+DISTNAME=	zopfli-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/post//}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zopfli/}
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	c c++
 
