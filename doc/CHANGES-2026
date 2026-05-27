@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3303 2026/05/27 10:01:38 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3304 2026/05/27 11:12:27 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5134,3 +5134,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-django-tasks to 0.12.0 [adam 2026-05-27]
 	Updated www/py-jupyter_server to 2.18.2 [adam 2026-05-27]
 	Updated www/py-jupyterlab to 4.5.7 [adam 2026-05-27]
+	Added devel/py-hatch-requirements-txt version 0.4.1 [markd 2026-05-27]
+	Added www/py-jupyterhub version 5.4.6 [markd 2026-05-27]
+	Added security/py-oauthenticator version 17.4.0 [markd 2026-05-27]
