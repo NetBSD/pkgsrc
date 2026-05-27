@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3302 2026/05/27 08:38:23 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3303 2026/05/27 10:01:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5132,3 +5132,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-repoze.lru to 0.8 [adam 2026-05-27]
 	Updated textproc/py-nltk to 3.9.4 [adam 2026-05-27]
 	Updated www/py-django-tasks to 0.12.0 [adam 2026-05-27]
+	Updated www/py-jupyter_server to 2.18.2 [adam 2026-05-27]
+	Updated www/py-jupyterlab to 4.5.7 [adam 2026-05-27]
