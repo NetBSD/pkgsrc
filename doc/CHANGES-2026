@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3296 2026/05/27 04:58:30 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3297 2026/05/27 05:15:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5121,3 +5121,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-kubernetes to 36.0.1 [adam 2026-05-27]
 	Updated shells/nushell to 0.113.0 [adam 2026-05-27]
 	Updated devel/lazygit to 0.62.0 [adam 2026-05-27]
+	Updated www/py-flask-caching to 2.4.0 [adam 2026-05-27]
+	Updated www/py-flask-security to 5.8.1 [adam 2026-05-27]
