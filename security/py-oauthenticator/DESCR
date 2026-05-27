@@ -1,0 +1,13 @@
+OAuth is a token based login mechanism that doesn't rely on a username and
+password mapping. In order to use this login mechanism with JupyerHub the
+login handlers need to be overridden. OAuthenticator overrides these handlers
+for the common OAuth2 identity providers allowing them to be plugged in and
+used with JupyterHub.
+
+The following authentication services are supported through their own
+authenticator: Auth0, Azure AD, Bitbucket, CILogon, FeiShu, GitHub, GitLab,
+Globus, Google, MediaWiki, OpenShift.
+
+There is also a GenericAuthenticator that can be configured with any OAuth 2.0
+identity provider or can be used to create a new authenticator class when
+additional customization is needed.
