@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.140 2026/05/25 06:18:17 adam Exp $
+# $NetBSD: Makefile,v 1.141 2026/05/27 22:54:33 wiz Exp $
 
 QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
 PKGNAME=	qt5-qtwebkit-${QTWKVERSION:S/-/./}
+PKGREVISION=	35
+CATEGORIES=	x11 www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qtwebkit/}
 GITHUB_PROJECT=	qtwebkit
 GITHUB_RELEASE=	${DISTNAME}
@@ -76,7 +78,7 @@ LDFLAGS+=	-Wl,--no-keep-memory
 
 .if ${OPSYS} == "SunOS"
 CMAKE_CONFIGURE_ARGS+=	-DUSE_LINKER_VERSION_SCRIPT=OFF
-LDFLAGS+=	-lsocket -lnsl
+LDFLAGS+=		-lsocket -lnsl
 .endif
 
 # JavaScriptCore requires at least MIPS32.
