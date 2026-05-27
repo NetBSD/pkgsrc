@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3300 2026/05/27 07:51:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3301 2026/05/27 08:10:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5128,3 +5128,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-zope.interface to 8.5 [adam 2026-05-27]
 	Updated archivers/py-zopfli to 0.4.2 [adam 2026-05-27]
 	Updated databases/rrdtool to 1.10.3 [adam 2026-05-27]
+	Updated textproc/py-json-logger to 4.1.0 [adam 2026-05-27]
+	Updated devel/py-repoze.lru to 0.8 [adam 2026-05-27]
