@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4631 2026/05/24 06:24:13 adam Exp $
+# $NetBSD: Makefile,v 1.4632 2026/05/27 10:52:47 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -2757,6 +2757,7 @@ SUBDIR+=	py-hamcrest
 SUBDIR+=	py-hatch-fancy-pypi-readme
 SUBDIR+=	py-hatch-jupyter-builder
 SUBDIR+=	py-hatch-nodejs-version
+SUBDIR+=	py-hatch-requirements-txt
 SUBDIR+=	py-hatch-vcs
 SUBDIR+=	py-hatchling
 SUBDIR+=	py-hexbytes
