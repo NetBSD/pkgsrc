@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/06/14 18:54:20 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/05/27 12:48:02 adam Exp $
 
-BLAKE2s (pycountry-24.6.1.tar.gz) = fc44f0df0a005f24dac65e3201dab1b3ee684193e112cdff1df1c204b2c94c93
-SHA512 (pycountry-24.6.1.tar.gz) = 36d8f68b830d74259a5f9ac1c9c97c1b228b0072613229e6f579ea5af587ab1cd25f0637a2cdd1dbf2ae8225e2aa2958d25f1e6df42d577da821d85c4c49ae93
-Size (pycountry-24.6.1.tar.gz) = 6043910 bytes
+BLAKE2s (pycountry-26.2.16.tar.gz) = 3a4cdb726547c22099e0315fbe6511e2e605ad16834cde7f48c238458f317f8a
+SHA512 (pycountry-26.2.16.tar.gz) = 2d7bbeace6caa2aee9fc2747e9333cf33a4a0161ac6955fce7f07e9ba2eaf8deb79796b59a9a9802c19c7c293b0b0ae1a693d7e824cf90697f14fb2106e38f03
+Size (pycountry-26.2.16.tar.gz) = 7711342 bytes
