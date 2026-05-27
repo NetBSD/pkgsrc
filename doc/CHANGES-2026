@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3305 2026/05/27 11:24:30 markd Exp $
+$NetBSD: CHANGES-2026,v 1.3306 2026/05/27 12:44:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5138,3 +5138,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added www/py-jupyterhub version 5.4.6 [markd 2026-05-27]
 	Added security/py-oauthenticator version 17.4.0 [markd 2026-05-27]
 	Added security/ory-hydra version 26.2.0 [markd 2026-05-27]
+	Updated devel/py-virtualenv to 21.3.3 [adam 2026-05-27]
+	Updated devel/py-tox to 4.54.0 [adam 2026-05-27]
