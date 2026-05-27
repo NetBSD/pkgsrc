@@ -1,7 +1,13 @@
-# $NetBSD: options.mk,v 1.4 2024/11/13 11:36:08 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2026/05/27 17:20:12 kikadf Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.quassel
-PKG_SUPPORTED_OPTIONS=	quassel-audio quassel-webengine
+PKG_SUPPORTED_OPTIONS=	quassel-audio quassel-webengine wayland
+
+.include "../../devel/wayland/platform.mk"
+
+.if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
+PKG_SUGGESTED_OPTIONS+=	wayland
+.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -16,4 +22,8 @@ CMAKE_CONFIGURE_ARGS+=	-DWITH_WEBENGINE=ON
 # Required for audio notifications
 .if !empty(PKG_OPTIONS:Mquassel-audio)
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mwayland)
+.include "../../x11/qt5-qtwayland/buildlink3.mk"
 .endif
