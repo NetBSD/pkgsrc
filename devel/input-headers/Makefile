@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2026/04/13 15:24:45 kikadf Exp $
+# $NetBSD: Makefile,v 1.2 2026/05/27 17:15:13 kikadf Exp $
 
 .include "../../devel/libopeninput/Makefile.common"
 
+PKGREVISION=	1
 PKGNAME=	input-headers-${VERSION}
 COMMENT=	Input headers from libopeninput
 
