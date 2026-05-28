@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2026/02/06 11:16:59 adam Exp $
+# $NetBSD: Makefile,v 1.53 2026/05/28 06:43:45 adam Exp $
 
-DISTNAME=	ccid-1.7.1
+DISTNAME=	ccid-1.8.0
 CATEGORIES=	security
 MASTER_SITES=	https://ccid.apdu.fr/files/
 EXTRACT_SUFX=	.tar.xz
@@ -15,13 +15,9 @@ LICENSE=	gnu-lgpl-v2.1
 BUILD_DEFS+=	VARBASE
 
 USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
-USE_TOOLS+=		autoconf automake autoreconf flex perl pkg-config
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-
-TOOL_DEPENDS+=		autoconf-archive-[0-9]*:../../devel/autoconf-archive
+USE_TOOLS+=		flex perl pkg-config
+MESON_ARGS+=		-Denable-extras=true
+MESON_ARGS+=		-Dudev-rules=false
 
 .if ${OPSYS} == "Darwin"
 PLIST_SUBST+=		OSNAME=MacOS
@@ -40,37 +36,26 @@ REPLACE_PERL=		src/convert_version.pl src/create_Info_plist.pl
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 INSTALLATION_DIRS+=	sbin share/doc/ccid
 
-pre-configure:
-	cd ${WRKSRC} && autoreconf -fi
-
-.if ${OPSYS} == "Darwin"
-.PHONY: fix-darwin-install-name
-post-install: fix-darwin-install-name
-fix-darwin-install-name:
-	install_name_tool -id \
-		${PREFIX}/lib/pcsc-lite/drivers/ifd-ccid.bundle/Contents/MacOS/libccid.dylib \
-		${DESTDIR}${PREFIX}/lib/pcsc-lite/drivers/ifd-ccid.bundle/Contents/MacOS/libccid.dylib
-.endif
-
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/ccid/README.md
-	${INSTALL_PROGRAM} ${WRKSRC}/contrib/RSA_SecurID/RSA_SecurID_getpasswd \
-	${DESTDIR}${PREFIX}/bin/RSA_SecurID_getpasswd
+	${INSTALL_PROGRAM} ${WRKSRC}/output/RSA_SecurID_getpasswd \
+		${DESTDIR}${PREFIX}/bin/RSA_SecurID_getpasswd
 	${INSTALL_DATA} ${WRKSRC}/contrib/RSA_SecurID/RSA_SecurID_getpasswd.1 \
-	${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/RSA_SecurID_getpasswd.1
-	${INSTALL_PROGRAM} ${WRKSRC}/contrib/Kobil_mIDentity_switch/Kobil_mIDentity_switch \
-	${DESTDIR}${PREFIX}/sbin/Kobil_mIDentity_switch
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/RSA_SecurID_getpasswd.1
+	${INSTALL_PROGRAM} ${WRKSRC}/output/Kobil_mIDentity_switch \
+		${DESTDIR}${PREFIX}/sbin/Kobil_mIDentity_switch
 	${INSTALL_DATA} ${WRKSRC}/contrib/Kobil_mIDentity_switch/Kobil_mIDentity_switch.8 \
-	${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/Kobil_mIDentity_switch.8
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/Kobil_mIDentity_switch.8
 	${INSTALL_DATA} ${WRKSRC}/contrib/Kobil_mIDentity_switch/README_Kobil_mIDentity_switch.txt \
-	${DESTDIR}${PREFIX}/share/doc/ccid/README_Kobil_mIDentity_switch.txt
+		${DESTDIR}${PREFIX}/share/doc/ccid/README_Kobil_mIDentity_switch.txt
 
-.include "../../security/pcsc-lite/buildlink3.mk"
 .if ${OPSYS} == "Linux"
 BUILDLINK_DEPMETHOD.flex=	full
 .include "../../devel/flex/buildlink3.mk"
 .endif
+.include "../../devel/meson/build.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/pcsc-lite/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
