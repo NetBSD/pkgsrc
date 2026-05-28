@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.16 2017/08/30 10:41:24 kamil Exp $
+$NetBSD: patch-ad,v 1.17 2026/05/28 23:16:38 thorpej Exp $
 
---- dialects/n+obsd/dnode.c.orig	2007-04-24 16:22:06.000000000 +0000
-+++ dialects/n+obsd/dnode.c
-@@ -38,6 +38,9 @@ static char *rcsid = "$Id: dnode.c,v 1.3
+--- dialects/n+obsd/dnode.c.orig	2007-04-24 16:22:06
++++ dialects/n+obsd/dnode.c	2026-05-28 15:14:13
+@@ -38,6 +38,9 @@ static char *rcsid = "$Id: dnode.c,v 1.38 2007/04/24 1
  
  #include "lsof.h"
  
@@ -12,7 +12,21 @@ $NetBSD: patch-ad,v 1.16 2017/08/30 10:41:24 kamil Exp $
  
  #if	defined(HAS_DINODE_U)
  #define	DINODE_U	dinode_u
-@@ -194,12 +197,17 @@ process_node(va)
+@@ -84,13 +87,8 @@ getmemsz(pid)
+ 		if (!p->P_VMSPACE
+ 		||  kread((KA_T)p->P_VMSPACE, (char *)&vm, sizeof(vm)))
+ 		    return;
+-# if	defined(OPENBSDV)
+ 		Lf->sz = (SZOFFTYPE)((vm.vm_tsize + vm.vm_dsize
+ 		       + vm.vm_ssize) * sysconf(_SC_PAGESIZE));
+-# else	/* !defined(OPENBSDV */
+-		Lf->sz = (SZOFFTYPE)ctob(vm.vm_tsize + vm.vm_dsize
+-						     + vm.vm_ssize);
+-# endif	/* defined(OPENBSDV) */
+ 
+ 		Lf->sz_def = 1;
+ 		return;
+@@ -194,12 +192,17 @@ process_node(va)
  	unsigned char ns;
  	unsigned char rdevs;
  	char *ep, *ty;
@@ -31,7 +45,7 @@ $NetBSD: patch-ad,v 1.16 2017/08/30 10:41:24 kamil Exp $
  	enum vtype type;
  	struct vnode *v, vb;
  	struct l_vfs *vfs;
-@@ -276,6 +284,11 @@ process_node(va)
+@@ -276,6 +279,11 @@ process_node(va)
  
  #if	defined(HASPTYFS)
  	struct ptyfsnode pt;
@@ -43,7 +57,7 @@ $NetBSD: patch-ad,v 1.16 2017/08/30 10:41:24 kamil Exp $
  	struct specinfo si;
  #endif	/* defined(HASPTYFS) */
  
-@@ -414,7 +427,7 @@ process_overlaid_node:
+@@ -414,7 +422,7 @@ process_overlaid_node:
  	 */
  	    if (!v->v_data
  	    ||  kread((KA_T)v->v_data, (char *)&kn, sizeof(kn))) {
@@ -52,7 +66,7 @@ $NetBSD: patch-ad,v 1.16 2017/08/30 10:41:24 kamil Exp $
  		    (void) snpf(Namech, Namechl,
  			"can't read kernfs_node at: %s",
  			print_kptr((KA_T)v->v_data, (char *)NULL, 0));
-@@ -449,7 +462,7 @@ process_overlaid_node:
+@@ -449,7 +457,7 @@ process_overlaid_node:
  	 * size are fixed; otherwise, safely stat() the file to get the
  	 * inode number and size.
  	 */
@@ -61,10 +75,12 @@ $NetBSD: patch-ad,v 1.16 2017/08/30 10:41:24 kamil Exp $
  		(void) snpf(Namech, Namechl, "%s", _PATH_KERNFS);
  		ksb.st_ino = (ino_t)2;
  		ksb.st_size = DEV_BSIZE;
-@@ -471,6 +484,19 @@ process_overlaid_node:
+@@ -469,7 +477,20 @@ process_overlaid_node:
+ 		return;
+ 	    }
  	    nty = MFSNODE;
- 	    break;
- 
++	    break;
++
 +#if	defined(HASTMPFS)
 +	case VT_TMPFS:
 +	    if (!v->v_data
@@ -75,13 +91,12 @@ $NetBSD: patch-ad,v 1.16 2017/08/30 10:41:24 kamil Exp $
 +		return;
 +	    }
 +	    nty = TMPFSNODE;
-+	    break;
+ 	    break;
 +#endif	/* defined(HASTMPFS) */
-+
+ 
  #if	defined(HASMSDOSFS)
  	case VT_MSDOSFS:
- 	    if (!v->v_data
-@@ -619,6 +645,7 @@ process_overlaid_node:
+@@ -619,6 +640,7 @@ process_overlaid_node:
  
  	    }
  
@@ -89,7 +104,7 @@ $NetBSD: patch-ad,v 1.16 2017/08/30 10:41:24 kamil Exp $
  	    if ((lff = i.i_lockf)) {
  
  	    /*
-@@ -667,6 +694,7 @@ process_overlaid_node:
+@@ -667,6 +689,7 @@ process_overlaid_node:
  		    break;
  		} while ((lfp = lf.lf_next) && lfp != lff);
  	    }
@@ -97,7 +112,7 @@ $NetBSD: patch-ad,v 1.16 2017/08/30 10:41:24 kamil Exp $
  	    break;
  	default:
  	    if (v->v_type == VBAD || v->v_type == VNON)
-@@ -900,6 +928,13 @@ process_overlaid_node:
+@@ -900,6 +923,13 @@ process_overlaid_node:
  	    break;
  #endif	/* defined(HASPTYFS) */
  
@@ -111,7 +126,7 @@ $NetBSD: patch-ad,v 1.16 2017/08/30 10:41:24 kamil Exp $
  	}
  
  /*
-@@ -1019,6 +1054,13 @@ process_overlaid_node:
+@@ -1019,6 +1049,13 @@ process_overlaid_node:
  			Lf->sz_def = 1;
  			break;
  
@@ -125,7 +140,7 @@ $NetBSD: patch-ad,v 1.16 2017/08/30 10:41:24 kamil Exp $
  #if	defined(HASEXT2FS)
  		    case EXT2NODE:
  # if	defined(HASI_E2FS_PTR)
-@@ -1221,6 +1263,9 @@ process_overlaid_node:
+@@ -1221,6 +1258,9 @@ process_overlaid_node:
  	    Lf->dev_def = Lf->rdev_def = 0;
  	    (void) snpf(Namech, Namechl, "%#x", m.mfs_baseoff);
  	    enter_dev_ch("memory");
@@ -135,7 +150,7 @@ $NetBSD: patch-ad,v 1.16 2017/08/30 10:41:24 kamil Exp $
  	}
  
  #if	defined(HASPROCFS)
-@@ -1262,11 +1307,15 @@ process_overlaid_node:
+@@ -1262,11 +1302,15 @@ process_overlaid_node:
  		(void) snpf(ep, sz, "/%d/fpregs", p.pfs_pid);
  		ty = "PFPR";
  		break;
