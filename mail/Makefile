@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.691 2026/05/05 08:17:45 taca Exp $
+# $NetBSD: Makefile,v 1.692 2026/05/28 16:15:19 ryoon Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -70,6 +70,7 @@ SUBDIR+=	demime
 SUBDIR+=	distribute
 SUBDIR+=	dk-milter
 SUBDIR+=	dkimproxy
+SUBDIR+=	dmarc-report-viewer
 SUBDIR+=	dnsbl-milter
 SUBDIR+=	dot-forward
 SUBDIR+=	dovecot2
