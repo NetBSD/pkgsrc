@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2025/12/22 08:41:05 adam Exp $
+# $NetBSD: Makefile,v 1.47 2026/05/28 12:34:50 adam Exp $
 
-DISTNAME=	dropbear-2025.89
+DISTNAME=	dropbear-2026.91
 CATEGORIES=	security
 MASTER_SITES=	https://matt.ucc.asn.au/dropbear/releases/
 EXTRACT_SUFX=	.tar.bz2

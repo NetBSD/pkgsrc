@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.38 2025/12/22 08:41:05 adam Exp $
+$NetBSD: distinfo,v 1.39 2026/05/28 12:34:50 adam Exp $
 
-BLAKE2s (dropbear-2025.89.tar.bz2) = 84ec99f426e966d0441c4420a1ca8f3311e10ed68fc8b684bd877ba02b8d7255
-SHA512 (dropbear-2025.89.tar.bz2) = 5420b0c6de08c2e796abe9d0819ce322e244a0d9670678dc750aa07da8426a782b7f8685fa65c8fe053fc5ae0118cc5f31fe7b60d817e6c57000a189f2c97176
-Size (dropbear-2025.89.tar.bz2) = 2374006 bytes
+BLAKE2s (dropbear-2026.91.tar.bz2) = 602b7266aa179a305a51f013f2af4e19246ab32e55c9ff9f834361a8befdfa75
+SHA512 (dropbear-2026.91.tar.bz2) = f335bffb18f6e4a261732b80d6887d1b2891a96a0eb5be0cc6bd96a8803eeea337967a2a9196bec78ac3f0d2cdb31e4b64598efb7f7ad97c652d51c458ccc5df
+Size (dropbear-2026.91.tar.bz2) = 2382176 bytes
 SHA1 (patch-Makefile.in) = 0bb649ed8688666513c35e139e7e349fd83b3a1b
 SHA1 (patch-configure) = b17f647043b212adda53aad7fb8dc7e639be9494
 SHA1 (patch-localoptions.h) = 59ddfe3717e7fb961f597be7645557e11bd6e9fb
 SHA1 (patch-src_default__options.h) = c0be06f186a4fb07ad0aedc26047f7077847e75a
+SHA1 (patch-src_scp.c) = 82cf3046099b80626a9cb6ce35d5e157598a4831
