@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2026/02/16 12:28:56 adam Exp $
+$NetBSD: distinfo,v 1.16 2026/05/28 11:38:48 adam Exp $
 
-BLAKE2s (apache_libcloud-3.9.0.tar.gz) = 96a07bd56d1e4166a259b5ccbbf41f15f87bbc04732aebc1420a578b3516ab9e
-SHA512 (apache_libcloud-3.9.0.tar.gz) = dd803435ab5a33492dc54ccd0799a718167912cdbd772a2e532efc360208b19908323c58c9d728ff5792c2172f9f27ba5c5e09945171021bcc1b8980ca472824
-Size (apache_libcloud-3.9.0.tar.gz) = 2579758 bytes
+BLAKE2s (apache_libcloud-3.9.1.tar.gz) = 4cfcfcd973bb4839b362a3245ac5a5961e94fd9d5b6b0b158bcffa0e20ced26e
+SHA512 (apache_libcloud-3.9.1.tar.gz) = e0d8cf84efaba4e01b7f76fa9e7246fba7fab780201ff2484d97666e350d3d56bc883ada68539f6ef263942b65958d89aa30f3fa6cce2dc3548cbe5e0c3a648e
+Size (apache_libcloud-3.9.1.tar.gz) = 2582796 bytes
