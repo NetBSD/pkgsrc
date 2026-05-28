@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3320 2026/05/28 12:29:51 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3321 2026/05/28 12:35:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5165,3 +5165,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-sphinx-issues to 6.0.0 [adam 2026-05-28]
 	Updated textproc/py-myst-parser to 5.1.0 [adam 2026-05-28]
 	Updated security/py-google-auth-oauthlib to 1.4.0 [adam 2026-05-28]
+	Updated security/pcsc-lite to 2.5.0 [adam 2026-05-28]
+	Updated security/dropbear to 2026.91 [adam 2026-05-28]
