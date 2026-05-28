@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2026/02/16 12:28:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/05/28 11:38:48 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -2097,6 +2097,8 @@ ${PYSITELIB}/libcloud/test/compute/fixtures/openstack_v1_1/_images_f24a3c1b-d52a
 ${PYSITELIB}/libcloud/test/compute/fixtures/openstack_v1_1/_images_v2.json
 ${PYSITELIB}/libcloud/test/compute/fixtures/openstack_v1_1/_images_v2_invalid_next.json
 ${PYSITELIB}/libcloud/test/compute/fixtures/openstack_v1_1/_images_v2_page2.json
+${PYSITELIB}/libcloud/test/compute/fixtures/openstack_v1_1/_leases.json
+${PYSITELIB}/libcloud/test/compute/fixtures/openstack_v1_1/_os_hosts.json
 ${PYSITELIB}/libcloud/test/compute/fixtures/openstack_v1_1/_os_keypairs.json
 ${PYSITELIB}/libcloud/test/compute/fixtures/openstack_v1_1/_os_keypairs_create.json
 ${PYSITELIB}/libcloud/test/compute/fixtures/openstack_v1_1/_os_keypairs_create_import.json
