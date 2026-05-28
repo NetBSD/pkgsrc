@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3316 2026/05/28 08:59:13 osa Exp $
+$NetBSD: CHANGES-2026,v 1.3317 2026/05/28 11:31:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5157,3 +5157,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/libde265 to 1.1.0 [adam 2026-05-28]
 	Updated security/ccid to 1.8.0 [adam 2026-05-28]
 	Updated www/freenginx-devel to 1.31.2 [osa 2026-05-28]
+	Added security/cargo-deny version 0.19.8 [adam 2026-05-28]
+	Updated devel/py-test_socket to 0.8.0 [adam 2026-05-28]
