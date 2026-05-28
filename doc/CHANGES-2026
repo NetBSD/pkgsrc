@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3313 2026/05/28 04:06:34 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3314 2026/05/28 05:07:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5151,3 +5151,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py-python-discovery to 1.4.0 [adam 2026-05-28]
 	Updated devel/py-virtualenv to 21.4.0 [adam 2026-05-28]
 	Updated finance/py-stripe to 15.2.0 [adam 2026-05-28]
+	Updated emulators/qemu to 11.0.1 [adam 2026-05-28]
+	Updated sysutils/qemu-guest-agent to 11.0.1 [adam 2026-05-28]
+	Updated devel/py-typer to 0.26.2 [adam 2026-05-28]
