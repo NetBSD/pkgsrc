@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3314 2026/05/28 05:07:55 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3315 2026/05/28 06:44:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5154,3 +5154,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/qemu to 11.0.1 [adam 2026-05-28]
 	Updated sysutils/qemu-guest-agent to 11.0.1 [adam 2026-05-28]
 	Updated devel/py-typer to 0.26.2 [adam 2026-05-28]
+	Updated multimedia/libde265 to 1.1.0 [adam 2026-05-28]
+	Updated security/ccid to 1.8.0 [adam 2026-05-28]
