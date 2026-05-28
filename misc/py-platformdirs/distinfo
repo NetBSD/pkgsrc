@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.40 2026/04/13 13:33:10 adam Exp $
+$NetBSD: distinfo,v 1.41 2026/05/28 04:01:34 adam Exp $
 
-BLAKE2s (platformdirs-4.9.6.tar.gz) = cbc22a60b6e99b2f84c0db1d086eb6eadb7d7c6105f9d64f8f3502a07b137a81
-SHA512 (platformdirs-4.9.6.tar.gz) = 90030693cbe91f05702902787ac35c61aa4818189dbb5742f1d662b501584bd63d9b978367d826b58ca30d42e8479db86b479a0a6549c66a10a6409b96329ff5
-Size (platformdirs-4.9.6.tar.gz) = 29400 bytes
+BLAKE2s (platformdirs-4.10.0.tar.gz) = 016139b5532826cfbf0d9251ea4996168ec57d308bf5adb08b497b5149d34934
+SHA512 (platformdirs-4.10.0.tar.gz) = ad3c2dd1d65522be5b5cbd7e22447681ee0a9de80fd3716b64205c229995118ace7e9bd0282e98f9d83106df5d1332bcbebea97bc6433156de22d1e1ef2756f4
+Size (platformdirs-4.10.0.tar.gz) = 31224 bytes
