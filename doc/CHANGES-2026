@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3321 2026/05/28 12:35:29 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3322 2026/05/28 16:14:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5167,3 +5167,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-google-auth-oauthlib to 1.4.0 [adam 2026-05-28]
 	Updated security/pcsc-lite to 2.5.0 [adam 2026-05-28]
 	Updated security/dropbear to 2026.91 [adam 2026-05-28]
+	Added mail/dmarc-report-viewer version 2.5.1 [ryoon 2026-05-28]
