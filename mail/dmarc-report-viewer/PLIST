@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2026/05/28 16:13:39 ryoon Exp $
+bin/dmarc-report-viewer

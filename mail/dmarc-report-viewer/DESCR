@@ -1,0 +1,9 @@
+A lightweight selfhosted standalone DMARC report viewer that
+automatically fetches input data periodically from an IMAP mailbox.
+Ideal for smaller selfhosted mailservers to browse, visualize and
+analyze the DMARC reports.
+
+The application is a single fully statically linked executable
+written in Rust.  It combines a DMARC report parser with an IMAP
+client and an HTTP server.  The embedded HTTP server offers a web
+UI for easy access and filtering of the reports.
