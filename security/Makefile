@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1008 2026/05/27 11:23:12 markd Exp $
+# $NetBSD: Makefile,v 1.1009 2026/05/28 11:26:51 adam Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -50,6 +50,7 @@ SUBDIR+=	ca-certificates
 SUBDIR+=	caff
 SUBDIR+=	cargo-audit
 SUBDIR+=	cargo-auditable
+SUBDIR+=	cargo-deny
 SUBDIR+=	ccid
 SUBDIR+=	cfs
 SUBDIR+=	cfssl

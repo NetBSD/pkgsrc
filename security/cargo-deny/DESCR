@@ -1,0 +1,2 @@
+cargo-deny is a cargo plugin that lets you lint your project's dependency graph
+to ensure all your dependencies conform to your expectations and requirements.
