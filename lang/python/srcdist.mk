@@ -1,4 +1,4 @@
-# $NetBSD: srcdist.mk,v 1.46 2025/09/30 16:07:37 wiz Exp $
+# $NetBSD: srcdist.mk,v 1.47 2026/05/28 03:58:33 adam Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -17,12 +17,12 @@ BUILDLINK_ABI_DEPENDS.${PYPACKAGE}+=	${PYPACKAGE}>=${PY_DISTVERSION}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${USE_CROSS_COMPILE:tl} == "yes"
+.  if ${USE_CROSS_COMPILE:tl} == "yes"
 TOOL_DEPENDS+=	${PYDEPENDENCY}
 DEPENDS+=	${PYDEPENDENCY}
-ALL_ENV+=	_PYTHON_PROJECT_BASE=${WRKSRC:Q}
-CPPFLAGS+=	-I${LOCALBASE:Q}/${PYINC:Q}
-.endif
+ALL_ENV+=	_PYTHON_PROJECT_BASE=${WRKSRC}
+CPPFLAGS+=	-I${LOCALBASE}/${PYINC:Q}
+.  endif
 
 python-std-patchsetup:
 	${SED} ${PY_SETUP_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/} \

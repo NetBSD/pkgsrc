@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.25 2026/04/27 22:38:34 gdt Exp $
+# $NetBSD: wheel.mk,v 1.26 2026/05/28 03:58:33 adam Exp $
 #
 # Build and install Python wheels
 #
@@ -80,13 +80,13 @@ do-install:
 	${RUN} cd ${WRKSRC}/${PYSETUPSUBDIR} && \
 	${SETENV} ${INSTALL_ENV} ${TOOL_PYTHONBIN} \
 		-m installer \
-		--destdir ${DESTDIR:Q} \
-		--prefix ${PREFIX:Q} \
+		--destdir ${DESTDIR} \
+		--prefix ${PREFIX} \
 		${PYINSTALL_EXEC} \
 		${WHEELFILE}
-.for f in ${PY_RENAME_BINARIES}
+.  for f in ${PY_RENAME_BINARIES}
 	cd ${DESTDIR}/${PREFIX}/bin && ${MV} ${f} ${f}-${PYVERSSUFFIX} || ${TRUE}
-.endfor
+.  endfor
 .endif
 
 USE_PYTEST?=	yes
