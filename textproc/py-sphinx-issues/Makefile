@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2026/01/06 11:18:18 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/05/28 11:53:37 adam Exp $
 
-DISTNAME=	sphinx_issues-5.0.1
+DISTNAME=	sphinx_issues-6.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-issues/}
@@ -11,7 +11,7 @@ COMMENT=	Sphinx extension for linking to an issue tracker
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
-DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=8.1.0:../../textproc/py-sphinx
 
 USE_LANGUAGES=	# none
 
