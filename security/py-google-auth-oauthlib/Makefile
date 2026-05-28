@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2026/04/20 13:23:33 adam Exp $
+# $NetBSD: Makefile,v 1.29 2026/05/28 12:29:30 adam Exp $
 
-DISTNAME=	google_auth_oauthlib-1.3.1
+DISTNAME=	google_auth_oauthlib-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-auth-oauthlib/}
@@ -13,12 +13,12 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-google-auth>=2.46.0:../../security/py-google-auth
 DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib>=0.7.0:../../security/py-requests-oauthlib
+# tool
+DEPENDS+=	${PYPKGPREFIX}-click>=6.0.0:../../devel/py-click
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} google-oauthlib-tool google-oauthlib-tool-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	google-oauthlib-tool
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
