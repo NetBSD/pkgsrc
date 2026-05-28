@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2026/01/17 08:47:58 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/05/28 12:26:39 adam Exp $
 
-DISTNAME=	myst_parser-5.0.0
+DISTNAME=	myst_parser-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/myst-parser/}
@@ -13,21 +13,18 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.20:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-markdown-it-py>=4.0:../../textproc/py-markdown-it-py
-DEPENDS+=	${PYPKGPREFIX}-mdit-py-plugins>=0.5:../../textproc/py-mdit-py-plugins
+DEPENDS+=	${PYPKGPREFIX}-markdown-it-py>=4.2:../../textproc/py-markdown-it-py
+DEPENDS+=	${PYPKGPREFIX}-mdit-py-plugins>=0.6.1:../../textproc/py-mdit-py-plugins
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=8:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
+PY_RENAME_BINARIES=	myst-anchors myst-docutils-demo myst-docutils-html
+PY_RENAME_BINARIES+=	myst-docutils-html5 myst-docutils-latex myst-docutils-pseudoxml
+PY_RENAME_BINARIES+=	myst-docutils-xml myst-inv
 
-post-install:
-.for bin in myst-anchors myst-docutils-demo myst-docutils-html myst-docutils-html5 \
-	myst-docutils-latex myst-docutils-pseudoxml myst-docutils-xml myst-inv
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
-.endfor
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
