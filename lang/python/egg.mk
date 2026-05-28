@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.46 2025/02/02 10:38:01 he Exp $
+# $NetBSD: egg.mk,v 1.47 2026/05/28 03:58:33 adam Exp $
 #
 # The method used in this Makefile fragment is obsolete.
 # Please use wheel.mk instead.
@@ -29,8 +29,8 @@ PY_PATCHPLIST?=		yes
 # be prefixed with ${PLIST.py3x} - please always test with both
 # python 2.7 and the current python 3.x default!
 
-PLIST_SUBST+=	EGG_NAME=${EGG_NAME}-py${PYVERSSUFFIX}
-PLIST_SUBST+=	EGG_INFODIR=${EGG_INFODIR}
+PLIST_SUBST+=		EGG_NAME=${EGG_NAME}-py${PYVERSSUFFIX}
+PLIST_SUBST+=		EGG_INFODIR=${EGG_INFODIR}
 PRINT_PLIST_AWK+=	{ gsub(/${EGG_NAME}-py${PYVERSSUFFIX:S,.,\.,g}.egg-info/, \
 			       "$${EGG_INFODIR}") }
 PRINT_PLIST_AWK+=	{ gsub(/${EGG_NAME}-py${PYVERSSUFFIX:S,.,\.,g}-nspkg.pth/, \
@@ -70,7 +70,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:${SETUPTOOLS_PATH}
 .endif
 
 .if ${USE_CROSS_COMPILE:tl} == "yes"
-.if ${PYTHON_FOR_BUILD_ONLY:Uno:tl} == "no" || \
+.  if ${PYTHON_FOR_BUILD_ONLY:Uno:tl} == "no" || \
     ${PYTHON_FOR_BUILD_ONLY:Uno:tl} == "build"
 _COOKIE.pysetupcross=	${WRKDIR}/.pysetupcross_done
 pre-configure: ${_COOKIE.pysetupcross}
@@ -78,8 +78,8 @@ ${_COOKIE.pysetupcross}:
 	@${STEP_MSG} "Adjusting Python setup.cfg for cross-compiling"
 	${RUN} ${PRINTF} "\\n[build]\\nexecutable = '%s'\\n" ${PYTHONBIN:Q} \
 		>>${WRKSRC}/setup.cfg
-	${RUN} touch $@
-.endif
+	${RUN} touch ${.TARGET}
+.  endif
 .endif
 
 INSTALLATION_DIRS+=	${PYSITELIB}

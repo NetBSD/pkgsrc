@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.176 2025/10/08 07:17:07 adam Exp $
+# $NetBSD: pyversion.mk,v 1.177 2026/05/28 03:58:33 adam Exp $
 
 # This file provides an interface to decide which version of python
 # should be used in building a package.  It should be directly
@@ -56,7 +56,7 @@
 #	The preferred Python version to use.  Typical use is to move
 #	to a newer version before pkgsrc moves.  Another possible use
 #	is to stay on an older version when pkgsrc advances.
-#	
+#
 #	Reasonable values: Default value of PYTHON_VERSIONS_ACCEPTED.
 #	Possible values: Reasonable values and "old 3.x".
 #	Default: 313
@@ -143,17 +143,17 @@ PYTHON_PYVERSION_MK=	defined
 
 # derive a python version from the package name if possible
 # optionally handled quoted package names
-.if defined(PKGNAME_REQD) && !empty(PKGNAME_REQD:Mpy[0-9][0-9]-*) || \
-    defined(PKGNAME_REQD) && !empty(PKGNAME_REQD:M*-py[0-9][0-9]-*)
+.if !empty(PKGNAME_REQD:Mpy[0-9][0-9]-*) || \
+    !empty(PKGNAME_REQD:M*-py[0-9][0-9]-*)
 PYTHON_VERSION_REQD?=	${PKGNAME_REQD:C/(^.*-|^)py([0-9][0-9])-.*/\2/}
-.elif defined(PKGNAME_REQD) && !empty(PKGNAME_REQD:Mpy[0-9][0-9][0-9]-*) || \
-    defined(PKGNAME_REQD) && !empty(PKGNAME_REQD:M*-py[0-9][0-9][0-9]-*)
+.elif !empty(PKGNAME_REQD:Mpy[0-9][0-9][0-9]-*) || \
+      !empty(PKGNAME_REQD:M*-py[0-9][0-9][0-9]-*)
 PYTHON_VERSION_REQD?=	${PKGNAME_REQD:C/(^.*-|^)py([0-9][0-9][0-9])-.*/\2/}
-.elif defined(PKGNAME_OLD) && !empty(PKGNAME_OLD:Mpy[0-9][0-9]-*) || \
-      defined(PKGNAME_OLD) && !empty(PKGNAME_OLD:M*-py[0-9][0-9]-*)
+.elif !empty(PKGNAME_OLD:Mpy[0-9][0-9]-*) || \
+      !empty(PKGNAME_OLD:M*-py[0-9][0-9]-*)
 PYTHON_VERSION_REQD?=	${PKGNAME_OLD:C/(^.*-|^)py([0-9][0-9])-.*/\2/}
-.elif defined(PKGNAME_OLD) && !empty(PKGNAME_OLD:Mpy[0-9][0-9][0-9]-*) || \
-      defined(PKGNAME_OLD) && !empty(PKGNAME_OLD:M*-py[0-9][0-9][0-9]-*)
+.elif !empty(PKGNAME_OLD:Mpy[0-9][0-9][0-9]-*) || \
+      !empty(PKGNAME_OLD:M*-py[0-9][0-9][0-9]-*)
 PYTHON_VERSION_REQD?=	${PKGNAME_OLD:C/(^.*-|^)py([0-9][0-9][0-9])-.*/\2/}
 .endif
 
@@ -253,12 +253,12 @@ PTHREAD_OPTS+=	require
 
 PYTHON_FOR_BUILD_ONLY?=		no
 .if defined(PYPKGSRCDIR)
-.  if !empty(PYTHON_FOR_BUILD_ONLY:M[tT][oO][oO][lL])
+.  if ${PYTHON_FOR_BUILD_ONLY:tl} == tool
 TOOL_DEPENDS+=			${PYDEPENDENCY}
-.  elif !empty(PYTHON_FOR_BUILD_ONLY:M[tT][eE][sS][tT])
+.  elif ${PYTHON_FOR_BUILD_ONLY:tl} == test
 TEST_DEPENDS+=			${PYDEPENDENCY}
 .  else
-.    if !empty(PYTHON_FOR_BUILD_ONLY:M[yY][eE][sS])
+.    if ${PYTHON_FOR_BUILD_ONLY:tl} == yes
 BUILDLINK_DEPMETHOD.python?=	build
 .    else
 BUILDLINK_DEPMETHOD.python?=	full
@@ -266,7 +266,7 @@ BUILDLINK_DEPMETHOD.python?=	full
 .    include "${PYPKGSRCDIR}/buildlink3.mk"
 .    if ${USE_CROSS_COMPILE:tl} == "yes"
 TOOL_DEPENDS+=			${PYDEPENDENCY}
-MAKE_ENV+=			PYTHONPATH=${WRKDIR:Q}/.pysite:${_CROSS_DESTDIR:Q}${LOCALBASE:Q}/${PYLIB:Q}
+MAKE_ENV+=			PYTHONPATH=${WRKDIR}/.pysite:${_CROSS_DESTDIR:Q}${LOCALBASE}/${PYLIB:Q}
 pre-configure: ${WRKDIR}/.pysite/sitecustomize.py
 .include "${PYPKGSRCDIR}/platname.mk"
 ${WRKDIR}/.pysite/sitecustomize.py:
@@ -281,7 +281,7 @@ ${WRKDIR}/.pysite/sitecustomize.py:
 			sys.exec_prefix \
 			sys.prefix \
 		; do \
-			${PRINTF} "%s = '%s'\\n" "$$v" ${LOCALBASE:Q}; \
+			${PRINTF} "%s = '%s'\\n" "$$v" ${LOCALBASE}; \
 		done; \
 	) >${.TARGET}.tmp
 	${RUN} ${MV} -f ${.TARGET}.tmp ${.TARGET}
@@ -296,7 +296,7 @@ PYTHONCONFIG=	${TOOLBASE}/bin/python${PYVERSSUFFIX}m-config
 .else
 PYTHONCONFIG=	${TOOLBASE}/bin/python${PYVERSSUFFIX}-config
 .endif
-PY_COMPILE_ALL= \
+PY_COMPILE_ALL=	\
 	${TOOL_PYTHONBIN} ${PREFIX}/lib/python${PYVERSSUFFIX}/compileall.py -q
 PY_COMPILE_O_ALL= \
 	${TOOL_PYTHONBIN} -O ${PREFIX}/lib/python${PYVERSSUFFIX}/compileall.py -q
@@ -316,25 +316,25 @@ PRINT_PLIST_AWK+=	/(^|^\$$.+\})${PYLIB:S|/|\\/|g}/ \
 ALL_ENV+=		PYTHON=${TOOL_PYTHONBIN}
 .if defined(USE_CMAKE) || defined(BUILD_USES_CMAKE)
 # used by FindPython
-CMAKE_CONFIGURE_ARGS+=		-DPython_EXECUTABLE:FILEPATH=${TOOL_PYTHONBIN}
-CMAKE_CONFIGURE_ARGS+=		-DPython_INCLUDE_DIR:PATH=${BUILDLINK_DIR}/${PYINC}
+CMAKE_CONFIGURE_ARGS+=	-DPython_EXECUTABLE:FILEPATH=${TOOL_PYTHONBIN}
+CMAKE_CONFIGURE_ARGS+=	-DPython_INCLUDE_DIR:PATH=${BUILDLINK_DIR}/${PYINC}
 # used by FindPython2
 .  if !empty(_PYTHON_VERSION:M2*)
-CMAKE_CONFIGURE_ARGS+=		-DPython2_EXECUTABLE:FILEPATH=${TOOL_PYTHONBIN}
-CMAKE_CONFIGURE_ARGS+=		-DPython2_INCLUDE_DIR:PATH=${BUILDLINK_DIR}/${PYINC}
+CMAKE_CONFIGURE_ARGS+=	-DPython2_EXECUTABLE:FILEPATH=${TOOL_PYTHONBIN}
+CMAKE_CONFIGURE_ARGS+=	-DPython2_INCLUDE_DIR:PATH=${BUILDLINK_DIR}/${PYINC}
 .  endif
 # used by FindPython3
 .  if !empty(_PYTHON_VERSION:M3*)
-CMAKE_CONFIGURE_ARGS+=		-DPython3_EXECUTABLE:FILEPATH=${TOOL_PYTHONBIN}
-CMAKE_CONFIGURE_ARGS+=		-DPython3_INCLUDE_DIR:PATH=${BUILDLINK_DIR}/${PYINC}
+CMAKE_CONFIGURE_ARGS+=	-DPython3_EXECUTABLE:FILEPATH=${TOOL_PYTHONBIN}
+CMAKE_CONFIGURE_ARGS+=	-DPython3_INCLUDE_DIR:PATH=${BUILDLINK_DIR}/${PYINC}
 .  endif
 # used by FindPythonInterp.cmake and FindPythonLibs.cmake
-CMAKE_CONFIGURE_ARGS+=		-DPYVERSSUFFIX:STRING=${PYVERSSUFFIX}
+CMAKE_CONFIGURE_ARGS+=	-DPYVERSSUFFIX:STRING=${PYVERSSUFFIX}
 # set this explicitly, as by default it will prefer the built in framework
 # on Darwin
-CMAKE_CONFIGURE_ARGS+=		-DPYTHON_INCLUDE_DIR:PATH=${BUILDLINK_DIR}/${PYINC}
-CMAKE_CONFIGURE_ARGS+=		-DPYTHON_INCLUDE_PATH:PATH=${BUILDLINK_DIR}/${PYINC}
-CMAKE_CONFIGURE_ARGS+=		-DPYTHON_EXECUTABLE:FILEPATH=${TOOL_PYTHONBIN}
+CMAKE_CONFIGURE_ARGS+=	-DPYTHON_INCLUDE_DIR:PATH=${BUILDLINK_DIR}/${PYINC}
+CMAKE_CONFIGURE_ARGS+=	-DPYTHON_INCLUDE_PATH:PATH=${BUILDLINK_DIR}/${PYINC}
+CMAKE_CONFIGURE_ARGS+=	-DPYTHON_EXECUTABLE:FILEPATH=${TOOL_PYTHONBIN}
 .endif
 
 _VARGROUPS+=		pyversion
@@ -345,7 +345,7 @@ _PKG_VARS.pyversion=	\
 _SYS_VARS.pyversion=	\
 	PYTHON_VERSION PYTHON_VERSION_REQD PYPACKAGE PYVERSSUFFIX	\
 	PYPKGSRCDIR PYPKGPREFIX PYTHONBIN PYTHONCONFIG PY_COMPILE_ALL	\
-	PY_COMPILE_O_ALL PYINC PYLIB PYSITELIB CMAKE_CONFIGURE_ARGS		\
+	PY_COMPILE_O_ALL PYINC PYLIB PYSITELIB CMAKE_CONFIGURE_ARGS \
 	TOOL_PYTHONBIN
 _USE_VARS.pyversion=	\
 	PKGNAME_REQD PKGNAME_OLD LOCALBASE PREFIX BUILDLINK_DIR PKGNAME

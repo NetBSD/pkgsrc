@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.4 2025/02/23 17:30:26 wiz Exp $
+# $NetBSD: bootstrap.mk,v 1.5 2026/05/28 03:58:33 adam Exp $
 #
 # Initial mk for building and installing Python packages that
 # are on the module install bootstrap path.
@@ -31,8 +31,8 @@ TOOL_DEPENDS+= ${PYPKGPREFIX}-installer>=0.7.0nb1:../../misc/py-installer
 do-install:
 	${RUN} cd ${WRKSRC} && \
 	${SETENV} ${INSTALL_ENV} \
-	${TOOL_PYTHONBIN} -m installer --destdir ${DESTDIR:Q} \
-		--prefix ${PREFIX:Q} ${WHEELFILE}
+	${TOOL_PYTHONBIN} -m installer --destdir ${DESTDIR} \
+		--prefix ${PREFIX} ${WHEELFILE}
 .endif
 
 .include "../../lang/python/extension.mk"

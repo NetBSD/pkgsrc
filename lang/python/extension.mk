@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.68 2025/05/07 10:36:09 tnn Exp $
+# $NetBSD: extension.mk,v 1.69 2026/05/28 03:58:33 adam Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -17,7 +17,7 @@ PYSETUPBUILDTARGET?=	build
 PYSETUPBUILDARGS?=	# empty
 # Python 3.5+ supports parallel building
 .  if defined(MAKE_JOBS) && ${_PYTHON_VERSION} != 27
-.    if !defined(MAKE_JOBS_SAFE) || empty(MAKE_JOBS_SAFE:M[nN][oO])
+.    if !defined(MAKE_JOBS_SAFE) || ${MAKE_JOBS_SAFE:U:tl} != no
 PYSETUPBUILDARGS+=	-j${MAKE_JOBS}
 .    endif
 .  endif
@@ -44,7 +44,7 @@ do-install:
 	 ${TOOL_PYTHONBIN} ${PYSETUP} ${PYSETUPARGS} "install" \
 	 ${_PYSETUPINSTALLARGS})
 
-.  if !target(do-test) && !(defined(TEST_TARGET) && !empty(TEST_TARGET))
+.  if !target(do-test) && !(!empty(TEST_TARGET))
 do-test:
 	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${TEST_ENV} \
 	 ${TOOL_PYTHONBIN} ${PYSETUP} ${PYSETUPARGS} ${PYSETUPTESTTARGET} \
@@ -95,5 +95,5 @@ DISTUTILS_BUILDDIR_IN_TEST_ENV?=	no
 
 .if ${DISTUTILS_BUILDDIR_IN_TEST_ENV} == "yes"
 DISTUTILS_BUILDDIR_CMD=	cd ${WRKSRC} && ${TOOL_PYTHONBIN} ${.CURDIR}/../../lang/python/distutils-builddir.py
-TEST_ENV+=	PYTHONPATH=${DISTUTILS_BUILDDIR_CMD:sh}
+TEST_ENV+=		PYTHONPATH=${DISTUTILS_BUILDDIR_CMD:sh:Q}
 .endif
