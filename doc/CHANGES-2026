@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3317 2026/05/28 11:31:45 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3318 2026/05/28 11:39:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5159,3 +5159,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/freenginx-devel to 1.31.2 [osa 2026-05-28]
 	Added security/cargo-deny version 0.19.8 [adam 2026-05-28]
 	Updated devel/py-test_socket to 0.8.0 [adam 2026-05-28]
+	Updated textproc/py-sphinx-autodoc-typehints to 3.10.3 [adam 2026-05-28]
+	Updated net/py-apache-libcloud to 3.9.1 [adam 2026-05-28]
