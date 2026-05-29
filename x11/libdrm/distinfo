@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.126 2025/12/11 21:51:33 wiz Exp $
+$NetBSD: distinfo,v 1.127 2026/05/29 09:02:25 wiz Exp $
 
-BLAKE2s (libdrm-2.4.131.tar.xz) = 2b75d7ebf4c187332920fb8e507f5f8ea2c789bc27fd427d55b752f6ac91b0d0
-SHA512 (libdrm-2.4.131.tar.xz) = d75894215600b648e25bbe13422901b650fb94bba8276d77971a49db7dc001819c9fc4b7e90ed82275f170a331687960ca5752cbb12064b2eec9c5c8eb60bf3c
-Size (libdrm-2.4.131.tar.xz) = 435808 bytes
+BLAKE2s (libdrm-2.4.134.tar.xz) = fa6f0d7a5221411f131fb512b255811b0d7364123f0b901e778e1735ae68fdbe
+SHA512 (libdrm-2.4.134.tar.xz) = ef2abddea59d1e93c83a48de920431b839ab50d6071ef4da3cf126e7d64ba7b235f2e34e1169d49ad9de2937a0a18acd66bb8d324b067239b1136e0ddbe792a1
+Size (libdrm-2.4.134.tar.xz) = 437244 bytes
 SHA1 (patch-ac) = 8c5ca991174e3673e17cd67aa8d1e58c2f8907d8
 SHA1 (patch-amdgpu_amdgpu__cs.c) = b48780dd51d1386e194c8142702605380ceefb7d
 SHA1 (patch-include_drm_drm.h) = fb28cb7fee68f773275c8b5572c3bd231cbb88d9
 SHA1 (patch-libsync.h) = a7d2f4757ce4c26db1b689c8746829ccb522337e
-SHA1 (patch-omap_omap__drm.c) = 2fee4863c4304bc2144356581766efbbddb3486a
 SHA1 (patch-tests_nouveau_threaded.c) = 8ebef22d66308f55b4b018c21568a41a8e62d147
 SHA1 (patch-xf86drm.c) = f5bb9a1c468470bd5101ff7481f1d67bc0d5aac1
 SHA1 (patch-xf86drmMode.c) = 0ff766ae071391c57b08c45ff769ca6f8e2134b0
