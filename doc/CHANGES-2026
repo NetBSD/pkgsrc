@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3324 2026/05/28 23:17:37 thorpej Exp $
+$NetBSD: CHANGES-2026,v 1.3325 2026/05/29 08:58:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5170,3 +5170,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added mail/dmarc-report-viewer version 2.5.1 [ryoon 2026-05-28]
 	Updated audio/py-music21 to 10.3.0 [gutteridge 2026-05-28]
 	Updated sysutils/lsof to 4.91nb10 [thorpej 2026-05-28]
+	Updated databases/lmdb to 0.9.35nb1 [wiz 2026-05-29]
