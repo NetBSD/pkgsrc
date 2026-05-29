@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/10/03 11:51:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/05/29 13:01:37 adam Exp $
 bin/rich-click-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -18,6 +18,9 @@ ${PYSITELIB}/rich_click/_click_types_cache.pyo
 ${PYSITELIB}/rich_click/_compat_click.py
 ${PYSITELIB}/rich_click/_compat_click.pyc
 ${PYSITELIB}/rich_click/_compat_click.pyo
+${PYSITELIB}/rich_click/_compat_typer.py
+${PYSITELIB}/rich_click/_compat_typer.pyc
+${PYSITELIB}/rich_click/_compat_typer.pyo
 ${PYSITELIB}/rich_click/_internal_types.py
 ${PYSITELIB}/rich_click/_internal_types.pyc
 ${PYSITELIB}/rich_click/_internal_types.pyo
