@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2026/04/21 04:55:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2026/05/29 13:23:54 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -6,6 +6,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/redis/__init__.py
 ${PYSITELIB}/redis/__init__.pyc
 ${PYSITELIB}/redis/__init__.pyo
+${PYSITELIB}/redis/_defaults.py
+${PYSITELIB}/redis/_defaults.pyc
+${PYSITELIB}/redis/_defaults.pyo
 ${PYSITELIB}/redis/_parsers/__init__.py
 ${PYSITELIB}/redis/_parsers/__init__.pyc
 ${PYSITELIB}/redis/_parsers/__init__.pyo
@@ -30,6 +33,9 @@ ${PYSITELIB}/redis/_parsers/resp2.pyo
 ${PYSITELIB}/redis/_parsers/resp3.py
 ${PYSITELIB}/redis/_parsers/resp3.pyc
 ${PYSITELIB}/redis/_parsers/resp3.pyo
+${PYSITELIB}/redis/_parsers/response_callbacks.py
+${PYSITELIB}/redis/_parsers/response_callbacks.pyc
+${PYSITELIB}/redis/_parsers/response_callbacks.pyo
 ${PYSITELIB}/redis/_parsers/socket.py
 ${PYSITELIB}/redis/_parsers/socket.pyc
 ${PYSITELIB}/redis/_parsers/socket.pyo
@@ -51,6 +57,9 @@ ${PYSITELIB}/redis/asyncio/http/__init__.pyo
 ${PYSITELIB}/redis/asyncio/http/http_client.py
 ${PYSITELIB}/redis/asyncio/http/http_client.pyc
 ${PYSITELIB}/redis/asyncio/http/http_client.pyo
+${PYSITELIB}/redis/asyncio/keyspace_notifications.py
+${PYSITELIB}/redis/asyncio/keyspace_notifications.pyc
+${PYSITELIB}/redis/asyncio/keyspace_notifications.pyo
 ${PYSITELIB}/redis/asyncio/lock.py
 ${PYSITELIB}/redis/asyncio/lock.pyc
 ${PYSITELIB}/redis/asyncio/lock.pyo
@@ -267,6 +276,9 @@ ${PYSITELIB}/redis/http/__init__.pyo
 ${PYSITELIB}/redis/http/http_client.py
 ${PYSITELIB}/redis/http/http_client.pyc
 ${PYSITELIB}/redis/http/http_client.pyo
+${PYSITELIB}/redis/keyspace_notifications.py
+${PYSITELIB}/redis/keyspace_notifications.pyc
+${PYSITELIB}/redis/keyspace_notifications.pyo
 ${PYSITELIB}/redis/lock.py
 ${PYSITELIB}/redis/lock.pyc
 ${PYSITELIB}/redis/lock.pyo
