@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3327 2026/05/29 09:13:39 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3328 2026/05/29 10:18:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5174,3 +5174,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/libdrm to 2.4.134 [wiz 2026-05-29]
 	Updated devel/cmake to 4.3.3 [adam 2026-05-29]
 	Updated devel/cmake-gui to 4.3.3 [adam 2026-05-29]
+	Updated devel/lazygit to 0.62.1 [adam 2026-05-29]
+	Updated devel/py-dulwich to 1.2.5 [adam 2026-05-29]
