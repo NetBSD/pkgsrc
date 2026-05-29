@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.71 2026/04/24 10:17:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.72 2026/05/29 13:26:28 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -253,6 +253,9 @@ ${PYSITELIB}/faker/providers/automotive/__init__.pyo
 ${PYSITELIB}/faker/providers/automotive/ar_BH/__init__.py
 ${PYSITELIB}/faker/providers/automotive/ar_BH/__init__.pyc
 ${PYSITELIB}/faker/providers/automotive/ar_BH/__init__.pyo
+${PYSITELIB}/faker/providers/automotive/ar_DZ/__init__.py
+${PYSITELIB}/faker/providers/automotive/ar_DZ/__init__.pyc
+${PYSITELIB}/faker/providers/automotive/ar_DZ/__init__.pyo
 ${PYSITELIB}/faker/providers/automotive/ar_JO/__init__.py
 ${PYSITELIB}/faker/providers/automotive/ar_JO/__init__.pyc
 ${PYSITELIB}/faker/providers/automotive/ar_JO/__init__.pyo
@@ -319,6 +322,9 @@ ${PYSITELIB}/faker/providers/automotive/fi_FI/__init__.pyo
 ${PYSITELIB}/faker/providers/automotive/fil_PH/__init__.py
 ${PYSITELIB}/faker/providers/automotive/fil_PH/__init__.pyc
 ${PYSITELIB}/faker/providers/automotive/fil_PH/__init__.pyo
+${PYSITELIB}/faker/providers/automotive/fr_DZ/__init__.py
+${PYSITELIB}/faker/providers/automotive/fr_DZ/__init__.pyc
+${PYSITELIB}/faker/providers/automotive/fr_DZ/__init__.pyo
 ${PYSITELIB}/faker/providers/automotive/fr_FR/__init__.py
 ${PYSITELIB}/faker/providers/automotive/fr_FR/__init__.pyc
 ${PYSITELIB}/faker/providers/automotive/fr_FR/__init__.pyo
@@ -1732,9 +1738,15 @@ ${PYSITELIB}/faker/providers/person/zu_ZA/__init__.pyo
 ${PYSITELIB}/faker/providers/phone_number/__init__.py
 ${PYSITELIB}/faker/providers/phone_number/__init__.pyc
 ${PYSITELIB}/faker/providers/phone_number/__init__.pyo
+${PYSITELIB}/faker/providers/phone_number/am_ET/__init__.py
+${PYSITELIB}/faker/providers/phone_number/am_ET/__init__.pyc
+${PYSITELIB}/faker/providers/phone_number/am_ET/__init__.pyo
 ${PYSITELIB}/faker/providers/phone_number/ar_AE/__init__.py
 ${PYSITELIB}/faker/providers/phone_number/ar_AE/__init__.pyc
 ${PYSITELIB}/faker/providers/phone_number/ar_AE/__init__.pyo
+${PYSITELIB}/faker/providers/phone_number/ar_DZ/__init__.py
+${PYSITELIB}/faker/providers/phone_number/ar_DZ/__init__.pyc
+${PYSITELIB}/faker/providers/phone_number/ar_DZ/__init__.pyo
 ${PYSITELIB}/faker/providers/phone_number/ar_JO/__init__.py
 ${PYSITELIB}/faker/providers/phone_number/ar_JO/__init__.pyc
 ${PYSITELIB}/faker/providers/phone_number/ar_JO/__init__.pyo
