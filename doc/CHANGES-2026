@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3326 2026/05/29 09:02:35 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3327 2026/05/29 09:13:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5172,3 +5172,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/lsof to 4.91nb10 [thorpej 2026-05-28]
 	Updated databases/lmdb to 0.9.35nb1 [wiz 2026-05-29]
 	Updated x11/libdrm to 2.4.134 [wiz 2026-05-29]
+	Updated devel/cmake to 4.3.3 [adam 2026-05-29]
+	Updated devel/cmake-gui to 4.3.3 [adam 2026-05-29]
