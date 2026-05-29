@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27318 2026/05/29 00:51:03 gutteridge Exp $
+$NetBSD: TODO,v 1.27319 2026/05/29 08:49:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -988,6 +988,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o olvwm-4.5
 	o oo2c-2.1.11
 	o opal-3.16.2
+	o openbabel-3.2.0
 	o openblas-0.3.33
 	o opencl-3.0.19
 	o opencpn-5.12.4
