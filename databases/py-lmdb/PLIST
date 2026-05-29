@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/14 11:31:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/05/29 12:36:36 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -6,6 +6,7 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/lmdb/__init__.py
 ${PYSITELIB}/lmdb/__init__.pyc
+${PYSITELIB}/lmdb/__init__.pyi
 ${PYSITELIB}/lmdb/__init__.pyo
 ${PYSITELIB}/lmdb/__main__.py
 ${PYSITELIB}/lmdb/__main__.pyc
@@ -13,10 +14,14 @@ ${PYSITELIB}/lmdb/__main__.pyo
 ${PYSITELIB}/lmdb/_config.py
 ${PYSITELIB}/lmdb/_config.pyc
 ${PYSITELIB}/lmdb/_config.pyo
+${PYSITELIB}/lmdb/aio.py
+${PYSITELIB}/lmdb/aio.pyc
+${PYSITELIB}/lmdb/aio.pyo
 ${PYSITELIB}/lmdb/cffi.py
 ${PYSITELIB}/lmdb/cffi.pyc
 ${PYSITELIB}/lmdb/cffi.pyo
 ${PYSITELIB}/lmdb/cpython.so
+${PYSITELIB}/lmdb/py.typed
 ${PYSITELIB}/lmdb/tool.py
 ${PYSITELIB}/lmdb/tool.pyc
 ${PYSITELIB}/lmdb/tool.pyo

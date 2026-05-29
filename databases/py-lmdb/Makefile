@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/12/09 12:03:38 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/05/29 12:36:36 adam Exp $
 
-DISTNAME=	lmdb-1.7.5
+DISTNAME=	lmdb-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lmdb/}
