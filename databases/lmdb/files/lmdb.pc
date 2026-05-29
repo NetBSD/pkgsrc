@@ -1,0 +1,11 @@
+prefix=@PREFIX@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: LMDB
+Description:  Lightning Memory-mapped key-value database
+Version: @PKGVERSION@
+Libs: -Wl,-R${libdir} -L${libdir} -llmdb
+Libs.private: -lm -lpthread
+Cflags: -I${includedir}
