@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.117 2026/04/24 10:17:28 adam Exp $
+# $NetBSD: Makefile,v 1.118 2026/05/29 13:26:28 adam Exp $
 
-DISTNAME=	faker-40.15.0
+DISTNAME=	faker-40.19.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Faker/}
@@ -11,6 +11,7 @@ COMMENT=	Python package that generates fake data for you
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+# tzdata
 DEPENDS+=	${PYPKGPREFIX}-tzdata-[0-9]*:../../time/py-tzdata
 TEST_DEPENDS+=	${PYPKGPREFIX}-email_validator>=1.0.0:../../mail/py-email_validator
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
@@ -19,12 +20,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-validators>=0.13.0:../../textproc/py-validators
 
 USE_LANGUAGES=	# none
 
+PY_RENAME_BINARIES=	faker
+
 # as of 40.4.0
 # 341 passed, 10 skipped, 13 warnings, 1858 errors
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} faker faker-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
