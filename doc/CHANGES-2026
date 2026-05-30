@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3333 2026/05/29 13:26:46 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3334 2026/05/30 12:37:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5186,3 +5186,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-jsonpickle to 4.1.2 [adam 2026-05-29]
 	Updated databases/py-redis to 8.0.0 [adam 2026-05-29]
 	Updated devel/py-faker to 40.19.1 [adam 2026-05-29]
+	Updated multimedia/libaom to 3.14.1 [ryoon 2026-05-30]
