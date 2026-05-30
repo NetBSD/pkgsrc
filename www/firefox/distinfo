@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.581 2026/05/18 16:07:04 ryoon Exp $
+$NetBSD: distinfo,v 1.582 2026/05/30 17:06:09 ryoon Exp $
 
-BLAKE2s (firefox-150.0.3.source.tar.xz) = 2659a96c77521ab1a9d651b1088f55e646b4dd60b8f288f0b6f6da600f4ad0cd
-SHA512 (firefox-150.0.3.source.tar.xz) = 8452da61200f8ee66790d3fff230ca84b2ac9291af2b57e018486c50f938c53c6fb4943fe6cfe1e99b9783466fb00bf707fa006293753ac698618fc1e3b70a4a
-Size (firefox-150.0.3.source.tar.xz) = 709676888 bytes
-BLAKE2s (nodejs-output-150.0.3.tgz) = 3e0e5acaf50c536f28d95cbaa4c62bcbeab7803d4bf95a9a01b2567e8e2c15ab
-SHA512 (nodejs-output-150.0.3.tgz) = f6d10ccf84953cd85b85cb92f1cd57de6de3e100220e9239540dd809299ac5e9d309c8502cf05e0758cf2793bc1da23ebeb297c5787bbfcf242652d6e7292d10
-Size (nodejs-output-150.0.3.tgz) = 247807 bytes
+BLAKE2s (firefox-151.0.2.source.tar.xz) = f222da7bbef5f86e1b21395c46f39a3f6c05cc2d9ca19c1280738dd6e7b59ff8
+SHA512 (firefox-151.0.2.source.tar.xz) = 87308953ed354a2799a9a45be40033bf9ff8d80fa220f034aacfbd6e754716901d4164c37fa56032c659b259116603e0ba2b566c1f3651ab9cc0835d502cd739
+Size (firefox-151.0.2.source.tar.xz) = 784076112 bytes
+BLAKE2s (nodejs-output-151.0.2.tgz) = 3fcfc5072cb31b2e5fbdbd78178700ee6eac110e2a1070e29dec5ce62ce851b4
+SHA512 (nodejs-output-151.0.2.tgz) = 49bcb42140037e512ecf15889bcca4cd59f67f3bebacdf781b52afd6a2f87770baf340052f786aed80146ba649a8409d6cf5d61963867577099b3c3cb3fa0847
+Size (nodejs-output-151.0.2.tgz) = 248196 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = 1eaa674c0aa8279e2f9dc2eda582650a08156d65
 SHA1 (patch-build_gn__processor.py) = 078f773104bf4c1b30584564aefe365db6ba6daf
 SHA1 (patch-build_moz.configure_init.configure) = 65deb3c233df0aab81eb1fca05d708e5a4ed169a
@@ -35,12 +35,11 @@ SHA1 (patch-js_src_vm_TypedArrayObject-inl.h) = e7913c8d4b2b05b67040baa64dae62d6
 SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = d0bdc30d23447bd56185eb9dc5c86de591f9cc02
 SHA1 (patch-media_libpng_pngpriv.h) = ee952a703ee08e8ff2269c7178e55e00b12faa29
 SHA1 (patch-memory_build_mozjemalloc__types.h) = af87ef935653cb845a6b702af2f5645a6ada27db
-SHA1 (patch-modules_fdlibm_src_math__private.h) = e20b6c23011d7123cbbd64a500eb8ce8c426620e
 SHA1 (patch-netwerk_protocol_http_nsHttpHandler.cpp) = 67493b4635041d21ff9fbfda80b3197fed542a26
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 753fd4d62088c870aefe7c4b739286259848446e
 SHA1 (patch-python_mozbuild_mozbuild_backend_recursivemake.py) = 5be4183d9075f5a3a3c6b3e0338473af185fb50e
 SHA1 (patch-python_sites_build.txt) = f60f28480179edb47c8dcf84e3247aa6704c2610
-SHA1 (patch-python_sites_mach.txt) = 4892a2d492b8faf243594e19104ec38c0890ca47
+SHA1 (patch-python_sites_mach.txt) = a4950e1b5ad66231b723eef8f9e7ecce9127d9d3
 SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc) = b1067a6804470f7e365f347683b7d505853fd799
 SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_vdso__support.cc) = f9c44d0d6fd952296f23c24f56053958b30d8e5c
 SHA1 (patch-third__party_js_cfworker_build.sh) = 46cdf97b99cf01080f290ae8d9a33b5f869fc3e4

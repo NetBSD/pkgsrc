@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_glue_ForkServer.cpp,v 1.1 2026/05/18 16:07:04 ryoon Exp $
+$NetBSD: patch-ipc_glue_ForkServer.cpp,v 1.2 2026/05/30 17:06:09 ryoon Exp $
 
 * Fix build for signal(3).
 
