@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/28 13:09:28 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/05/30 16:58:17 ryoon Exp $
 bin/notmuch-emacs-mua
 ${PLIST.doc}info/notmuch-emacs.info
 share/applications/notmuch-emacs-mua.desktop
@@ -6,6 +6,7 @@ share/emacs/site-lisp/coolj.el
 share/emacs/site-lisp/coolj.elc
 share/emacs/site-lisp/notmuch-address.el
 share/emacs/site-lisp/notmuch-address.elc
+share/emacs/site-lisp/notmuch-autoloads.el
 share/emacs/site-lisp/notmuch-company.el
 share/emacs/site-lisp/notmuch-company.elc
 share/emacs/site-lisp/notmuch-compat.el

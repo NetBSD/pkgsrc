@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/10/23 20:38:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/05/30 16:58:17 ryoon Exp $
 
 PYTHON_FOR_BUILD_ONLY=		no
 
-PKGREVISION= 1
 .include "../../mail/notmuch/Makefile.common"
 
 WHEEL_NAME=	${DISTNAME:S/notmuch-/notmuch2-/}

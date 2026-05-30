@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.10 2025/08/14 03:28:19 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.11 2026/05/30 16:58:17 ryoon Exp $
 #
 # used by mail/notmuch-emacs/Makefile
 # used by mail/py-notmuch2/Makefile
 
-DISTNAME=	notmuch-0.39
+DISTNAME=	notmuch-0.40
 CATEGORIES=	mail
 MASTER_SITES=	https://notmuchmail.org/releases/
 EXTRACT_SUFX=	.tar.xz
