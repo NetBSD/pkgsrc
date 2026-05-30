@@ -1,11 +1,11 @@
-$NetBSD: patch-build_cmake_aom__configure.cmake,v 1.8 2025/02/26 15:58:57 ryoon Exp $
+$NetBSD: patch-build_cmake_aom__configure.cmake,v 1.9 2026/05/30 12:37:21 ryoon Exp $
 
 - Don't disable fortify just because it's a release build.
 - Set CPU correctly on SunOS.
 - Add support for NetBSD/*arm*
 
---- build/cmake/aom_configure.cmake.orig	2025-02-10 20:59:13.000000000 +0000
-+++ build/cmake/aom_configure.cmake
+--- cmake/aom_configure.cmake.orig	2025-02-10 20:59:13.000000000 +0000
++++ cmake/aom_configure.cmake
 @@ -69,11 +69,16 @@ if(NOT AOM_TARGET_CPU)
      endif()
    elseif(cpu_lowercase STREQUAL "i386" OR cpu_lowercase STREQUAL "x86")

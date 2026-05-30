@@ -1,9 +1,9 @@
-$NetBSD: patch-build_cmake_version.cmake,v 1.3 2022/05/17 21:44:11 nia Exp $
+$NetBSD: patch-build_cmake_version.cmake,v 1.4 2026/05/30 12:37:21 ryoon Exp $
 
 Write the correct version number in the aom.pc file.
 
---- build/cmake/version.cmake.orig	2022-02-15 07:20:42.000000000 +0000
-+++ build/cmake/version.cmake
+--- cmake/version.cmake.orig	2022-02-15 07:20:42.000000000 +0000
++++ cmake/version.cmake
 @@ -23,30 +23,7 @@ include("${AOM_ROOT}/build/cmake/util.cm
  
  # Generate the version string for this run.
