@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3341 2026/05/30 16:58:34 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.3342 2026/05/30 16:58:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5194,3 +5194,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/py-duckdb to 1.5.3 [ryoon 2026-05-30]
 	Updated editors/vim-share to 9.2.0564 [sh 2026-05-30]
 	Updated mail/notmuch to 0.40 [ryoon 2026-05-30]
+	Updated mail/notmuch-emacs to 0.40 [ryoon 2026-05-30]
