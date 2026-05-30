@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/07/15 10:52:59 bsiegert Exp $
+# $NetBSD: Makefile,v 1.8 2026/05/30 15:13:13 gdt Exp $
 
 PKGREVISION= 1
 .include "../../lang/go/version.mk"
@@ -101,9 +101,14 @@ PRINT_PLIST_AWK+=	/x\/net\/route\.a/ { printf "%s", "$${PLIST.route}"; }
 post-extract:
 	${RM} -r -f ${WRKSRC}/test/fixedbugs/issue27836*
 
+# By default, go build invokes unreasonable parallelism.  Rather than
+# ${MAKE_JOBS} of 1 thread as with make, we run just "go build" (1
+# job) and tell it to not exceed ${MAKE_JOBS} threads.  This is sound
+# because there is no make with -jN args also.
 do-build:
 	cd ${WRKSRC}/src && \
 		env \
+		GOMAXPROCS=${MAKE_JOBS:U1} \
 		GOROOT_BOOTSTRAP=${GOROOT_BOOTSTRAP:Q} \
 		GOROOT_FINAL=${GOROOT_FINAL:Q} \
 		${GOOPT} \
