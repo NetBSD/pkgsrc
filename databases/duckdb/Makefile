@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2026/02/01 08:40:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2026/05/30 15:37:31 ryoon Exp $
 
-DISTNAME=	duckdb-1.4.4
+DISTNAME=	duckdb-1.5.3
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=duckdb/}
 GITHUB_PROJECT=	duckdb
@@ -17,7 +17,7 @@ USE_TOOLS+=	gmake
 # for alloca(3)
 FORCE_CXX_STD+=	gnu++11
 
-CMAKE_CONFIGURE_ARGS+=	-DBUILD_EXTENSIONS='autocomplete;core_functions;icu;jemalloc;json;parquet;tpcds;tpch'
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_EXTENSIONS='autocomplete;core_functions;icu;json;parquet;tpcds;tpch'
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_BENCHMARKS=ON
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TPCE=ON
 CMAKE_CONFIGURE_ARGS+=	-DWITH_INTERNAL_ICU=True
