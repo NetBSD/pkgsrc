@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3338 2026/05/30 15:37:43 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.3339 2026/05/30 15:37:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5191,3 +5191,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/py-ubx2 to 1.3.1 [gdt 2026-05-30]
 	Added www/php-pmwiki version 2.6.0 [ryoon 2026-05-30]
 	Updated databases/duckdb to 1.5.3 [ryoon 2026-05-30]
+	Updated databases/py-duckdb to 1.5.3 [ryoon 2026-05-30]
