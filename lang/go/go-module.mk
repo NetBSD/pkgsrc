@@ -1,4 +1,4 @@
-# $NetBSD: go-module.mk,v 1.25 2026/01/24 16:50:59 bsiegert Exp $
+# $NetBSD: go-module.mk,v 1.26 2026/05/30 14:04:55 adam Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -67,10 +67,6 @@ MAKE_ENV+=	GOHOSTARCH=${GOHOSTARCH}
 MAKE_ENV+=	GOARCH=${GOARCH}
 MAKE_ENV+=	GOOS=${GOOS}
 
-# TOOLBASE-relative .go source code paths get baked into binaries.
-# Pooh.
-CHECK_WRKREF_SKIP+=	bin/*
-
 GOPATH_BIN=	bin/${GO_PLATFORM}
 
 .else
@@ -90,7 +86,7 @@ do-build:
 	${RUN} cd ${WRKSRC} && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} \
 		${GO} telemetry off >/dev/null 2>&1 || ${TRUE}
 	${RUN} cd ${WRKSRC} && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} \
-		${GO} install -v ${GOFLAGS} ${GO_BUILD_PATTERN}
+		${GO} install -v -trimpath ${GOFLAGS} ${GO_BUILD_PATTERN}
 .endif
 
 .if !target(do-test)
