@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/30 12:59:58 ryoon Exp $
+
+BLAKE2s (pmwiki-2.6.0.tgz) = f2cc63926c2defb9939eb30de9092c28e933cef02f5c4aca553572d8ab583758
+SHA512 (pmwiki-2.6.0.tgz) = a9ee42366cc7470e4248aa370fa7e3c064c9d305084e3d400f15c991e04aa63c5ec3fb108597b72a0f11ebff803fda731df7adb4acc3f6315143e8fcd3e59c26
+Size (pmwiki-2.6.0.tgz) = 596259 bytes
