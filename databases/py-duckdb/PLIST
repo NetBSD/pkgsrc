@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2026/02/01 08:40:05 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/05/30 15:37:31 ryoon Exp $
 ${PYSITELIB}/_duckdb-stubs/__init__.pyi
+${PYSITELIB}/_duckdb-stubs/_enums.pyi
+${PYSITELIB}/_duckdb-stubs/_expression.pyi
 ${PYSITELIB}/_duckdb-stubs/_func.pyi
 ${PYSITELIB}/_duckdb-stubs/_sqltypes.pyi
+${PYSITELIB}/_duckdb-stubs/_typing.pyi
 ${PYSITELIB}/_duckdb.so
 ${PYSITELIB}/adbc_driver_duckdb/__init__.py
 ${PYSITELIB}/adbc_driver_duckdb/__init__.pyc
@@ -110,22 +113,19 @@ ${PYSITELIB}/duckdb/filesystem.pyo
 ${PYSITELIB}/duckdb/func/__init__.py
 ${PYSITELIB}/duckdb/func/__init__.pyc
 ${PYSITELIB}/duckdb/func/__init__.pyo
-${PYSITELIB}/duckdb/functional/__init__.py
-${PYSITELIB}/duckdb/functional/__init__.pyc
-${PYSITELIB}/duckdb/functional/__init__.pyo
 ${PYSITELIB}/duckdb/polars_io.py
 ${PYSITELIB}/duckdb/polars_io.pyc
 ${PYSITELIB}/duckdb/polars_io.pyo
 ${PYSITELIB}/duckdb/py.typed
+${PYSITELIB}/duckdb/query_graph/__init__.py
+${PYSITELIB}/duckdb/query_graph/__init__.pyc
+${PYSITELIB}/duckdb/query_graph/__init__.pyo
 ${PYSITELIB}/duckdb/query_graph/__main__.py
 ${PYSITELIB}/duckdb/query_graph/__main__.pyc
 ${PYSITELIB}/duckdb/query_graph/__main__.pyo
 ${PYSITELIB}/duckdb/sqltypes/__init__.py
 ${PYSITELIB}/duckdb/sqltypes/__init__.pyc
 ${PYSITELIB}/duckdb/sqltypes/__init__.pyo
-${PYSITELIB}/duckdb/typing/__init__.py
-${PYSITELIB}/duckdb/typing/__init__.pyc
-${PYSITELIB}/duckdb/typing/__init__.pyo
 ${PYSITELIB}/duckdb/udf.py
 ${PYSITELIB}/duckdb/udf.pyc
 ${PYSITELIB}/duckdb/udf.pyo
