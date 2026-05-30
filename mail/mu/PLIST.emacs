@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.emacs,v 1.2 2024/05/06 12:05:52 ktnb Exp $
+@comment $NetBSD: PLIST.emacs,v 1.3 2026/05/30 12:56:30 ryoon Exp $
 info/mu4e.info
 man/man1/mu-add.1
 man/man1/mu-cfind.1
@@ -8,9 +8,11 @@ man/man1/mu-help.1
 man/man1/mu-index.1
 man/man1/mu-info.1
 man/man1/mu-init.1
+man/man1/mu-labels.1
 man/man1/mu-mkdir.1
 man/man1/mu-move.1
 man/man1/mu-remove.1
+man/man1/mu-scm.1
 man/man1/mu-server.1
 man/man1/mu-verify.1
 man/man1/mu-view.1
@@ -18,7 +20,6 @@ man/man1/mu.1
 man/man5/mu-bookmarks.5
 man/man7/mu-easy.7
 man/man7/mu-query.7
-share/doc/mu/NEWS.org
 share/doc/mu/mu4e-about.org
 ${EMACS_LISPPREFIX}/mu4e/mu4e-actions.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-actions.elc
@@ -34,6 +35,8 @@ ${EMACS_LISPPREFIX}/mu4e/mu4e-context.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-context.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-contrib.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-contrib.elc
+${EMACS_LISPPREFIX}/mu4e/mu4e-dbus.el
+${EMACS_LISPPREFIX}/mu4e/mu4e-dbus.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-draft.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-draft.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-folders.el
@@ -44,6 +47,8 @@ ${EMACS_LISPPREFIX}/mu4e/mu4e-helpers.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-helpers.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-icalendar.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-icalendar.elc
+${EMACS_LISPPREFIX}/mu4e/mu4e-labels.el
+${EMACS_LISPPREFIX}/mu4e/mu4e-labels.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-lists.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-lists.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-main.el
@@ -73,6 +78,8 @@ ${EMACS_LISPPREFIX}/mu4e/mu4e-speedbar.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-speedbar.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-thread.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-thread.elc
+${EMACS_LISPPREFIX}/mu4e/mu4e-transient.el
+${EMACS_LISPPREFIX}/mu4e/mu4e-transient.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-update.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-update.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-vars.el
