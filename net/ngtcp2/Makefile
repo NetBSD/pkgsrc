@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2026/04/16 12:35:12 adam Exp $
+# $NetBSD: Makefile,v 1.37 2026/05/30 19:00:52 ryoon Exp $
 
 DISTNAME=	ngtcp2-1.22.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ngtcp2/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -13,8 +14,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c c++
 
-# Require QUIC support in OpenSSL. Only needed for examples.
-CMAKE_CONFIGURE_ARGS+=	-DENABLE_OPENSSL=OFF
-
 .include "../../devel/cmake/build.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../www/nghttp3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
