@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3345 2026/05/30 17:07:04 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.3346 2026/05/30 17:51:04 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5198,3 +5198,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/py-notmuch2 to 0.40 [ryoon 2026-05-30]
 	Updated www/firefox to 151.0.2 [ryoon 2026-05-30]
 	Updated www/firefox-l10n to 151.0.2 [ryoon 2026-05-30]
+	Updated net/sayaka to 3.8.7 [tsutsui 2026-05-30]
