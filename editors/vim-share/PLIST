@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.89 2026/05/17 17:23:38 morr Exp $
+@comment $NetBSD: PLIST,v 1.90 2026/05/30 16:32:21 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -794,6 +794,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/thrift.vim
 share/vim/${VIM_SUBDIR}/ftplugin/tiasm.vim
 share/vim/${VIM_SUBDIR}/ftplugin/tidy.vim
 share/vim/${VIM_SUBDIR}/ftplugin/tmux.vim
+share/vim/${VIM_SUBDIR}/ftplugin/tolk.vim
 share/vim/${VIM_SUBDIR}/ftplugin/toml.vim
 share/vim/${VIM_SUBDIR}/ftplugin/treetop.vim
 share/vim/${VIM_SUBDIR}/ftplugin/tt2html.vim
@@ -927,6 +928,7 @@ share/vim/${VIM_SUBDIR}/indent/jsonc.vim
 share/vim/${VIM_SUBDIR}/indent/jsp.vim
 share/vim/${VIM_SUBDIR}/indent/julia.vim
 share/vim/${VIM_SUBDIR}/indent/just.vim
+share/vim/${VIM_SUBDIR}/indent/karel.vim
 share/vim/${VIM_SUBDIR}/indent/kdl.vim
 share/vim/${VIM_SUBDIR}/indent/kotlin.vim
 share/vim/${VIM_SUBDIR}/indent/krl.vim
@@ -1866,6 +1868,7 @@ share/vim/${VIM_SUBDIR}/syntax/tidy.vim
 share/vim/${VIM_SUBDIR}/syntax/tilde.vim
 share/vim/${VIM_SUBDIR}/syntax/tli.vim
 share/vim/${VIM_SUBDIR}/syntax/tmux.vim
+share/vim/${VIM_SUBDIR}/syntax/tolk.vim
 share/vim/${VIM_SUBDIR}/syntax/toml.vim
 share/vim/${VIM_SUBDIR}/syntax/tpp.vim
 share/vim/${VIM_SUBDIR}/syntax/trasys.vim
