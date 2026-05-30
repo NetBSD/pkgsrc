@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/05/01 00:27:17 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2026/05/30 12:57:12 gdt Exp $
 
-VERSION=	1.3.0
+VERSION=	1.3.1
 DISTTAIL=	ubx2
 DISTNAME=	py${DISTTAIL}-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTTAIL}-${VERSION}
@@ -20,6 +20,10 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
 
 DEPENDS+=	${PYPKGPREFIX}-nmeagps-[0-9]*:../../geography/py-nmeagps
 DEPENDS+=	${PYPKGPREFIX}-rtcm-[0-9]*:../../geography/py-rtcm
+
+# not documented, but observed in running tests
+TEST_DEPENDS+=	${PYPKGPREFIX}-libtmux>=0.55:../../misc/py-libtmux
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
