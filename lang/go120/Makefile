@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/09/14 23:48:02 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/05/30 15:13:14 gdt Exp $
 
 .include "../../lang/go/version.mk"
 # Minimum Go version for bootstrapping is 1.17.13.
@@ -95,9 +95,14 @@ PRINT_PLIST_AWK+=	/^bin\/gofmt${GOVERSSUFFIX}/ { print "bin/gofmt$${GOVERSSUFFIX
 post-extract:
 	${RM} -r -f ${WRKSRC}/test/fixedbugs/issue27836*
 
+# By default, go build invokes unreasonable parallelism.  Rather than
+# ${MAKE_JOBS} of 1 thread as with make, we run just "go build" (1
+# job) and tell it to not exceed ${MAKE_JOBS} threads.  This is sound
+# because there is no make with -jN args also.
 do-build:
 	cd ${WRKSRC}/src && \
 		env \
+		GOMAXPROCS=${MAKE_JOBS:U1} \
 		GOROOT_BOOTSTRAP=${GOROOT_BOOTSTRAP:Q} \
 		GOROOT_FINAL=${GOROOT_FINAL:Q} \
 		${GOOPT} \
