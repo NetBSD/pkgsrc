@@ -1,4 +1,4 @@
-$NetBSD: patch-python_sites_build.txt,v 1.1 2026/05/18 16:07:04 ryoon Exp $
+$NetBSD: patch-python_sites_build.txt,v 1.2 2026/05/30 17:06:09 ryoon Exp $
 
 * We are offline, so do not try to download from pypi.
   No need to wait a timeout.
