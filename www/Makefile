@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1920 2026/05/27 11:00:10 markd Exp $
+# $NetBSD: Makefile,v 1.1921 2026/05/30 13:01:02 ryoon Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -682,6 +682,7 @@ SUBDIR+=	php-phalcon
 SUBDIR+=	php-phalcon4
 SUBDIR+=	php-phrasea2
 SUBDIR+=	php-piwigo
+SUBDIR+=	php-pmwiki
 SUBDIR+=	php-propro
 SUBDIR+=	php-propro2
 SUBDIR+=	php-soycms
