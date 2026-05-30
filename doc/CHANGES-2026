@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3346 2026/05/30 17:51:04 tsutsui Exp $
+$NetBSD: CHANGES-2026,v 1.3347 2026/05/30 19:01:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5199,3 +5199,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox to 151.0.2 [ryoon 2026-05-30]
 	Updated www/firefox-l10n to 151.0.2 [ryoon 2026-05-30]
 	Updated net/sayaka to 3.8.7 [tsutsui 2026-05-30]
+	Updated net/ngtcp2 to 1.22.1nb1 [ryoon 2026-05-30]
