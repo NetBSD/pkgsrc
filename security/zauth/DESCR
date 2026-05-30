@@ -1,0 +1,10 @@
+zauth is a 2FA (Two-Factor Authentication) application for terminal
+written in Go.
+
+Features
+  * Supports both TOTP and HOTP codes.
+  * Add new entries directly from CLI.
+      * support setting custom digits (default: 6)
+      * support setting a custom period (TOTP) (default: 30)
+      * support SHA1, SHA256 and SHA512 algorithms (TOTP)
+  * Import/Export andOTP backups (encrypted files supported).
