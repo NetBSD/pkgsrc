@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/10/19 06:02:59 mef Exp $
+# $NetBSD: Makefile,v 1.3 2026/05/31 14:07:12 mef Exp $
 
-DISTNAME=	RUnit_0.4.33
+DISTNAME=	RUnit_0.4.33.1
 CATEGORIES=	devel
 MASTER_SITES=	https://cran.rstudio.com/src/contrib/
 
