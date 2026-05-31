@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/31 12:15:32 yurix Exp $
+
+BLAKE2s (erlpack-1.0.1.tar.gz) = d7e6c644384c726d07f282ce32d722fbe3b9969418b1e7404b86552acfd53d0d
+SHA512 (erlpack-1.0.1.tar.gz) = 76490b2557bcd3babc6d36ee3e52ec4dd886b6669f20984da4db34a27d60a8131257ec6553a8b030d9bae026fd050bee63ffe69f0b68479c4c393ad2387fe946
+Size (erlpack-1.0.1.tar.gz) = 191587 bytes

@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2026/05/31 12:15:31 yurix Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/erlpack/__init__.py
+${PYSITELIB}/erlpack/__init__.pyc
+${PYSITELIB}/erlpack/__init__.pyo
+${PYSITELIB}/erlpack/_packer.so
+${PYSITELIB}/erlpack/_unpacker.so
+${PYSITELIB}/erlpack/constants.py
+${PYSITELIB}/erlpack/constants.pyc
+${PYSITELIB}/erlpack/constants.pyo
+${PYSITELIB}/erlpack/types.py
+${PYSITELIB}/erlpack/types.pyc
+${PYSITELIB}/erlpack/types.pyo
