@@ -1,0 +1,17 @@
+$NetBSD: patch-simd_CMakeLists.txt,v 1.1 2026/05/31 09:40:08 spz Exp $
+
+make the package build for cpu-types not supporting simd:
+https://github.com/libjpeg-turbo/libjpeg-turbo/commit/7cdbf9144d40d68d97c498f54d
+d88a68aee4e36d
+this patch can probably be removed at the next version update
+
+--- simd/CMakeLists.txt.orig	2026-05-31 09:11:17.483951428 +0000
++++ simd/CMakeLists.txt
+@@ -3,6 +3,7 @@ macro(simd_fail message)
+     message(FATAL_ERROR "${message}.")
+   else()
+     message(WARNING "${message}.  Performance will suffer.")
++    set(WITH_SIMD 0)
+     set(WITH_SIMD 0 PARENT_SCOPE)
+   endif()
+ endmacro()
