@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2026/03/30 03:41:24 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/05/31 10:47:48 jnemeth Exp $
 bin/comp_err
 bin/ibd2sdi
 bin/innochecksum
@@ -112,7 +112,7 @@ include/mysql/storage/ndb/ndbapi/ndberror.h
 lib/libmysqlclient.a
 lib/libmysqlclient.so
 lib/libmysqlclient.so.21
-lib/libmysqlclient.so.21.2.45
+lib/libmysqlclient.so.21.2.46
 lib/libmysqlservices.a
 lib/libndbclient.so
 lib/libndbclient.so.6.1.0
@@ -10225,6 +10225,7 @@ share/mysql/test/suite/innodb/t/innodb_ctype_ldml-master.opt
 share/mysql/test/suite/innodb/t/innodb_ctype_ldml.test
 share/mysql/test/suite/innodb/t/innodb_deadlock_with_autoinc-master.opt
 share/mysql/test/suite/innodb/t/innodb_deadlock_with_autoinc.test
+share/mysql/test/suite/innodb/t/innodb_dirty_pages_at_shutdown-master.opt
 share/mysql/test/suite/innodb/t/innodb_dirty_pages_at_shutdown.test
 share/mysql/test/suite/innodb/t/innodb_doublewrite_dir_01-master.opt
 share/mysql/test/suite/innodb/t/innodb_doublewrite_dir_01.test
@@ -10807,6 +10808,7 @@ share/mysql/test/suite/innodb_fts/include/tablespace_location.inc
 share/mysql/test/suite/innodb_fts/include/tablespace_location_alter.inc
 share/mysql/test/suite/innodb_fts/include/tablespace_location_error.inc
 share/mysql/test/suite/innodb_fts/r/alter.result
+share/mysql/test/suite/innodb_fts/r/articles_fts_words.result
 share/mysql/test/suite/innodb_fts/r/basic.result
 share/mysql/test/suite/innodb_fts/r/bug_32831765.result
 share/mysql/test/suite/innodb_fts/r/bug_34846823.result
@@ -10867,6 +10869,7 @@ share/mysql/test/suite/innodb_fts/r/transaction.result
 share/mysql/test/suite/innodb_fts/r/truncate.result
 share/mysql/test/suite/innodb_fts/r/zip.result
 share/mysql/test/suite/innodb_fts/t/alter.test
+share/mysql/test/suite/innodb_fts/t/articles_fts_words.test
 share/mysql/test/suite/innodb_fts/t/basic.test
 share/mysql/test/suite/innodb_fts/t/bug_32831765.test
 share/mysql/test/suite/innodb_fts/t/bug_34846823.test
@@ -11139,6 +11142,7 @@ share/mysql/test/suite/innodb_undo/r/i_s_files_32k.result
 share/mysql/test/suite/innodb_undo/r/i_s_files_4k.result
 share/mysql/test/suite/innodb_undo/r/i_s_files_64k.result
 share/mysql/test/suite/innodb_undo/r/i_s_files_8k.result
+share/mysql/test/suite/innodb_undo/r/purge_on_replica.result
 share/mysql/test/suite/innodb_undo/r/trunc_multi_client_01.result
 share/mysql/test/suite/innodb_undo/r/trunc_multi_client_02.result
 share/mysql/test/suite/innodb_undo/r/truncate.result
@@ -11183,6 +11187,8 @@ share/mysql/test/suite/innodb_undo/t/i_s_files_64k-master.opt
 share/mysql/test/suite/innodb_undo/t/i_s_files_64k.test
 share/mysql/test/suite/innodb_undo/t/i_s_files_8k-master.opt
 share/mysql/test/suite/innodb_undo/t/i_s_files_8k.test
+share/mysql/test/suite/innodb_undo/t/purge_on_replica-master.opt
+share/mysql/test/suite/innodb_undo/t/purge_on_replica.test
 share/mysql/test/suite/innodb_undo/t/trunc_multi_client_01-master.opt
 share/mysql/test/suite/innodb_undo/t/trunc_multi_client_01.test
 share/mysql/test/suite/innodb_undo/t/trunc_multi_client_02-master.opt
@@ -12443,6 +12449,7 @@ share/mysql/test/suite/ndb/r/ndb_gsl_ddl_kill.result
 share/mysql/test/suite/ndb/r/ndb_gsl_mdl_deadlock.result
 share/mysql/test/suite/ndb/r/ndb_hashmap.result
 share/mysql/test/suite/ndb/r/ndb_hidden_pk.result
+share/mysql/test/suite/ndb/r/ndb_high_api_node_id.result
 share/mysql/test/suite/ndb/r/ndb_import0.result
 share/mysql/test/suite/ndb/r/ndb_import1.result
 share/mysql/test/suite/ndb/r/ndb_import2.result
@@ -12594,6 +12601,7 @@ share/mysql/test/suite/ndb/r/ndb_transaction_memory_shortage.result
 share/mysql/test/suite/ndb/r/ndb_transaction_memory_shortage_dbacc.result
 share/mysql/test/suite/ndb/r/ndb_transaction_pending_abort.result
 share/mysql/test/suite/ndb/r/ndb_trigger.result
+share/mysql/test/suite/ndb/r/ndb_trp_activity.result
 share/mysql/test/suite/ndb/r/ndb_truncate.result
 share/mysql/test/suite/ndb/r/ndb_truncate_fail.result
 share/mysql/test/suite/ndb/r/ndb_truncate_nologging.result
@@ -12888,6 +12896,8 @@ share/mysql/test/suite/ndb/t/ndb_gsl_mdl_deadlock.test
 share/mysql/test/suite/ndb/t/ndb_hashmap.cnf
 share/mysql/test/suite/ndb/t/ndb_hashmap.test
 share/mysql/test/suite/ndb/t/ndb_hidden_pk.test
+share/mysql/test/suite/ndb/t/ndb_high_api_node_id.cnf
+share/mysql/test/suite/ndb/t/ndb_high_api_node_id.test
 share/mysql/test/suite/ndb/t/ndb_import.pl
 share/mysql/test/suite/ndb/t/ndb_import0.test
 share/mysql/test/suite/ndb/t/ndb_import1.test
@@ -13106,6 +13116,8 @@ share/mysql/test/suite/ndb/t/ndb_transaction_memory_shortage_dbacc.test
 share/mysql/test/suite/ndb/t/ndb_transaction_pending_abort.cnf
 share/mysql/test/suite/ndb/t/ndb_transaction_pending_abort.test
 share/mysql/test/suite/ndb/t/ndb_trigger.test
+share/mysql/test/suite/ndb/t/ndb_trp_activity.cnf
+share/mysql/test/suite/ndb/t/ndb_trp_activity.test
 share/mysql/test/suite/ndb/t/ndb_truncate.test
 share/mysql/test/suite/ndb/t/ndb_truncate_fail.test
 share/mysql/test/suite/ndb/t/ndb_truncate_nologging.cnf
@@ -16712,6 +16724,7 @@ share/mysql/test/suite/rpl/r/rpl_relay_log_locking.result
 share/mysql/test/suite/rpl/r/rpl_relay_log_rotation_on_worker_failure.result
 share/mysql/test/suite/rpl/r/rpl_relay_log_space_limit.result
 share/mysql/test/suite/rpl/r/rpl_relay_log_space_limit_net_write_timeout.result
+share/mysql/test/suite/rpl/r/rpl_relay_log_space_limit_with_backup_lock.result
 share/mysql/test/suite/rpl/r/rpl_relay_log_space_synchronization.result
 share/mysql/test/suite/rpl/r/rpl_relay_space_innodb.result
 share/mysql/test/suite/rpl/r/rpl_relay_space_myisam.result
@@ -17597,6 +17610,8 @@ share/mysql/test/suite/rpl/t/rpl_relay_log_space_limit.test
 share/mysql/test/suite/rpl/t/rpl_relay_log_space_limit_net_write_timeout-master.opt
 share/mysql/test/suite/rpl/t/rpl_relay_log_space_limit_net_write_timeout-slave.opt
 share/mysql/test/suite/rpl/t/rpl_relay_log_space_limit_net_write_timeout.test
+share/mysql/test/suite/rpl/t/rpl_relay_log_space_limit_with_backup_lock-slave.opt
+share/mysql/test/suite/rpl/t/rpl_relay_log_space_limit_with_backup_lock.test
 share/mysql/test/suite/rpl/t/rpl_relay_log_space_synchronization.test
 share/mysql/test/suite/rpl/t/rpl_relay_space_innodb.test
 share/mysql/test/suite/rpl/t/rpl_relay_space_myisam.test
@@ -21359,6 +21374,7 @@ share/mysql/test/suite/x/include/sample_tables.inc
 share/mysql/test/suite/x/include/show_xpl_debug_info.inc
 share/mysql/test/suite/x/include/stored_procedures.inc
 share/mysql/test/suite/x/include/system_variable_timeout.inc
+share/mysql/test/suite/x/include/test_caching_sha2_password_digest_rounds.inc
 share/mysql/test/suite/x/include/test_flow_resultset_crud_document.inc
 share/mysql/test/suite/x/include/test_flow_resultset_crud_table.inc
 share/mysql/test/suite/x/include/test_flow_resultset_cursors.inc
@@ -21403,6 +21419,7 @@ share/mysql/test/suite/x/r/admin_xkill.result
 share/mysql/test/suite/x/r/binary_log.result
 share/mysql/test/suite/x/r/blob_partial_update.result
 share/mysql/test/suite/x/r/bug_23028052.result
+share/mysql/test/suite/x/r/caching_sha2_password_digest_rounds.result
 share/mysql/test/suite/x/r/capabilities.result
 share/mysql/test/suite/x/r/capabilities_compression.result
 share/mysql/test/suite/x/r/charset_default.result
@@ -21604,6 +21621,7 @@ share/mysql/test/suite/x/r/message_compressed_empty.result
 share/mysql/test/suite/x/r/message_compressed_payload.result
 share/mysql/test/suite/x/r/message_empty_payload.result
 share/mysql/test/suite/x/r/message_io_error.result
+share/mysql/test/suite/x/r/message_large_payload.result
 share/mysql/test/suite/x/r/message_not_initialized.result
 share/mysql/test/suite/x/r/message_not_parsed_data.result
 share/mysql/test/suite/x/r/message_protobuf_nested.result
@@ -21730,6 +21748,7 @@ share/mysql/test/suite/x/t/binary_log.test
 share/mysql/test/suite/x/t/blob_partial_update-master.opt
 share/mysql/test/suite/x/t/blob_partial_update.test
 share/mysql/test/suite/x/t/bug_23028052.test
+share/mysql/test/suite/x/t/caching_sha2_password_digest_rounds.test
 share/mysql/test/suite/x/t/capabilities-master.opt
 share/mysql/test/suite/x/t/capabilities.test
 share/mysql/test/suite/x/t/capabilities_compression.test
@@ -21977,6 +21996,7 @@ share/mysql/test/suite/x/t/message_compressed_empty.test
 share/mysql/test/suite/x/t/message_compressed_payload.test
 share/mysql/test/suite/x/t/message_empty_payload.test
 share/mysql/test/suite/x/t/message_io_error.test
+share/mysql/test/suite/x/t/message_large_payload.test
 share/mysql/test/suite/x/t/message_not_initialized.test
 share/mysql/test/suite/x/t/message_not_parsed_data.test
 share/mysql/test/suite/x/t/message_protobuf_nested.test
