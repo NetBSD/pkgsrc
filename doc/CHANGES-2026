@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3366 2026/05/31 06:14:16 taca Exp $
+$NetBSD: CHANGES-2026,v 1.3367 2026/05/31 10:47:57 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5219,3 +5219,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ruby-snaky_hash to 2.0.4 [taca 2026-05-31]
 	Updated security/ruby-oauth to 1.1.5 [taca 2026-05-31]
 	Updated sysutils/ruby-capistrano to 3.20.1 [taca 2026-05-31]
+	Updated databases/mysql80-cluster to 8.0.46 [jnemeth 2026-05-31]
