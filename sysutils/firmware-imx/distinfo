@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/05/31 13:26:22 rxg Exp $
+
+BLAKE2s (firmware-imx-8.31-4fa5b46.bin) = 343093e8dc99f6d2817f49f4d4dde71ddbc3f315b353dd84d70b9150cffb7254
+SHA512 (firmware-imx-8.31-4fa5b46.bin) = 1c3594d5fa6ad6a352e404aeb04cc8d00dce50e23ab7428a015ecc414d5fb1e0fad71f7e28a84f78db6d419902a4dd54f796249b0f37be6b633b71934eea2ab1
+Size (firmware-imx-8.31-4fa5b46.bin) = 2014793 bytes
