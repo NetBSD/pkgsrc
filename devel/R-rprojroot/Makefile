@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/01/22 23:35:47 mef Exp $
+# $NetBSD: Makefile,v 1.6 2026/05/31 13:55:18 mef Exp $
 
 R_PKGNAME=	rprojroot
-R_PKGVER=	2.0.4
+R_PKGVER=	2.1.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
