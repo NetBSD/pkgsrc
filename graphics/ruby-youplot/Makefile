@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/07/20 15:28:19 taca Exp $
+# $NetBSD: Makefile,v 1.3 2026/05/31 05:56:52 taca Exp $
 
-DISTNAME=	youplot-0.4.6
+DISTNAME=	youplot-0.5.0
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

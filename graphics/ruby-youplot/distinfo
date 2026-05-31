@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/07/20 15:28:19 taca Exp $
+$NetBSD: distinfo,v 1.3 2026/05/31 05:56:52 taca Exp $
 
-BLAKE2s (youplot-0.4.6.gem) = 06a47febb4ac4bb5805e69320d8c8921114a57bc5c05153f5a8fb51fea31a332
-SHA512 (youplot-0.4.6.gem) = 5ca1adfd6a6fa287f8dacde061e0789be4122f68ca069c1086f11abfe2e60e203c1cc5cf999cb14b2a91623d46226ef39dbb0f1b7dd3745c6d09790fd4a30aad
-Size (youplot-0.4.6.gem) = 16896 bytes
+BLAKE2s (youplot-0.5.0.gem) = 7df108a8a2b93c6b03e47b417b4afeeb06d2953dd34775cb1914129d81e624de
+SHA512 (youplot-0.5.0.gem) = 282f0da64105096a990f5eb3fc1f427ff89ede121febb551327d76d90047e7a10c5503e791e6e7687b0c1da4a7d2a9048f15d7412c10535c5684ed3209d5395b
+Size (youplot-0.5.0.gem) = 24064 bytes
