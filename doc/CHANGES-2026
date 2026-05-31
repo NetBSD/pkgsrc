@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3380 2026/05/31 14:07:21 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3381 2026/05/31 14:08:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5233,3 +5233,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/R-R.oo to 1.27.1 [mef 2026-05-31]
 	Updated textproc/ruby-commonmarker to 2.8.2 [taca 2026-05-31]
 	Updated devel/R-RUnit to 0.4.33.1 [mef 2026-05-31]
+	Updated textproc/ruby-rchardet to 1.10.2 [taca 2026-05-31]
