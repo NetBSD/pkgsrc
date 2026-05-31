@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/04/02 11:37:22 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2026/05/31 13:25:27 gdt Exp $
 
 .include "../../lang/go/version.mk"
 GO_BOOTSTRAP_REQD=	120
@@ -97,6 +97,19 @@ PRINT_PLIST_AWK+=	/^bin\/gofmt${GOVERSSUFFIX}/ { print "bin/gofmt$${GOVERSSUFFIX
 post-extract:
 	${RM} -r -f ${WRKSRC}/test/fixedbugs/issue27836*
 
+# By default, go build invokes unreasonable parallelism.  Rather than
+# ${MAKE_JOBS} of 1 thread as with make, we run just "go build" (1
+# job) and tell it to not exceed ${MAKE_JOBS} threads.  This is sound
+# because there is no make with -jN args also.
+#
+# go122 is buggy on some systems, at least NetBSD, and the build fails
+# (probababilistically) if GOMAXPROCS is above 1.   This might be
+#   https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=278953
+# in which case the scope of failure is more or less *BSD.
+# To work around this, we set GOMAXPROCS to 1, unconditionally,
+# rather than the proper "GOMAXPROCS=${MAKE_JOBS:U1}".
+# \todo File/fix upstream.
+# \todo Limit workaround to necessary platforms.
 do-build:
 	cd ${WRKSRC}/src && \
 		env \
