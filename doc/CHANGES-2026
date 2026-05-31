@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3374 2026/05/31 13:30:48 rxg Exp $
+$NetBSD: CHANGES-2026,v 1.3375 2026/05/31 13:42:09 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5227,3 +5227,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated ham/trustedQSL to 2.8.4 [mef 2026-05-31]
 	Updated ham/trustedQSL to 2.8.5 [mef 2026-05-31]
 	Added sysutils/firmware-imx version 8.31 [rxg 2026-05-31]
+	Updated devel/R-cli to 3.6.6 [mef 2026-05-31]
