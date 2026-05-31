@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.98 2026/05/14 16:41:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.99 2026/05/31 12:40:58 mef Exp $
 
-DISTNAME=		tqsl-2.8.1
-PKGREVISION=		7
+DISTNAME=		tqsl-2.8.4
 CATEGORIES=		ham
 MASTER_SITES=		http://www.arrl.org/files/file/LoTW%20Instructions/
 
@@ -16,8 +15,8 @@ LICENSE=		arrl-license
 USE_TOOLS+=		perl gmake cmake
 # \todo tqsl is not documented to require c++11, but uses c++11 constructs
 # \todo tqsl does not add --std=c++11
-USE_LANGUAGES+=		c c++11
-#SE_CXX_FEATURES+=	c++11
+USE_LANGUAGES+=		c c++
+USE_CXX_FEATURES+=	c++11
 USE_LIBTOOL=		yes
 
 CHECK_PORTABILITY_SKIP+=	osx_createdmg.sh
