@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2026/03/07 13:50:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/05/31 14:21:39 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -152,6 +152,7 @@ ${GEM_LIBDIR}/sig/object.rbs
 ${GEM_LIBDIR}/sig/object_acl.rbs
 ${GEM_LIBDIR}/sig/object_summary.rbs
 ${GEM_LIBDIR}/sig/object_version.rbs
+${GEM_LIBDIR}/sig/params.rbs
 ${GEM_LIBDIR}/sig/resource.rbs
 ${GEM_LIBDIR}/sig/types.rbs
 ${GEM_LIBDIR}/sig/waiters.rbs
