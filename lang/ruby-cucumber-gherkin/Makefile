@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2026/03/07 13:26:46 taca Exp $
+# $NetBSD: Makefile,v 1.14 2026/05/31 05:59:16 taca Exp $
 
-DISTNAME=	cucumber-gherkin-39.0.0
+DISTNAME=	cucumber-gherkin-39.1.0
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
