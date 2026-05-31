@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/09/23 03:29:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/05/31 06:11:11 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CITATION.cff
@@ -11,6 +11,7 @@ ${GEM_LIBDIR}/REEK
 ${GEM_LIBDIR}/RUBOCOP.md
 ${GEM_LIBDIR}/SECURITY.md
 ${GEM_LIBDIR}/lib/oauth.rb
+${GEM_LIBDIR}/lib/oauth/auth_sanitizer.rb
 ${GEM_LIBDIR}/lib/oauth/client.rb
 ${GEM_LIBDIR}/lib/oauth/client/action_controller_request.rb
 ${GEM_LIBDIR}/lib/oauth/client/em_http.rb
@@ -51,4 +52,7 @@ ${GEM_LIBDIR}/lib/oauth/tokens/request_token.rb
 ${GEM_LIBDIR}/lib/oauth/tokens/server_token.rb
 ${GEM_LIBDIR}/lib/oauth/tokens/token.rb
 ${GEM_LIBDIR}/lib/oauth/version.rb
+${GEM_LIBDIR}/sig/oauth/consumer.rbs
+${GEM_LIBDIR}/sig/oauth/signature/base.rbs
+${GEM_LIBDIR}/sig/oauth/tokens/token.rbs
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
