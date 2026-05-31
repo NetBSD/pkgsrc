@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3368 2026/05/31 10:52:54 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3369 2026/05/31 11:02:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5221,3 +5221,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/ruby-capistrano to 3.20.1 [taca 2026-05-31]
 	Updated databases/mysql80-cluster to 8.0.46 [jnemeth 2026-05-31]
 	Updated devel/MoarVM to 2026.05 [mef 2026-05-31]
+	Updated lang/nqp to 2026.05 [mef 2026-05-31]
