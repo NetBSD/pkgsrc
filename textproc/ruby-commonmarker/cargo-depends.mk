@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2026/04/19 14:28:39 taca Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2026/05/31 14:04:50 taca Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -80,8 +80,8 @@ CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.105
 CARGO_CRATE_DEPENDS+=	quick-xml-0.38.4
 CARGO_CRATE_DEPENDS+=	quote-1.0.43
 CARGO_CRATE_DEPENDS+=	rb-allocator-0.9.6
-CARGO_CRATE_DEPENDS+=	rb-sys-0.9.126
-CARGO_CRATE_DEPENDS+=	rb-sys-build-0.9.126
+CARGO_CRATE_DEPENDS+=	rb-sys-0.9.127
+CARGO_CRATE_DEPENDS+=	rb-sys-build-0.9.127
 CARGO_CRATE_DEPENDS+=	rb-sys-env-0.2.3
 CARGO_CRATE_DEPENDS+=	rctree-0.6.0
 CARGO_CRATE_DEPENDS+=	regex-1.12.2
