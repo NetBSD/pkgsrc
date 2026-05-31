@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.31 2025/05/25 22:32:34 mef Exp $
+$NetBSD: distinfo,v 1.32 2026/05/31 12:40:58 mef Exp $
 
-BLAKE2s (tqsl-2.8.1.tar.gz) = fb2907b043dbc44639634d597adeab2030217f05d2e0c38d6471ab6cab10a3ee
-SHA512 (tqsl-2.8.1.tar.gz) = 3ffcf82ed90a03863da5286ddcb2c4da32062f34be65f8124c101b4a125039b97be0380ef5a1f42128a4cdf04c84da1c31983a01f7edcef1a4bb7cc2b641ffa1
-Size (tqsl-2.8.1.tar.gz) = 4125568 bytes
+BLAKE2s (tqsl-2.8.4.tar.gz) = b214bae109ed72fb338f9502128db5cdee10540f0b6eca6621a645e0408477f7
+SHA512 (tqsl-2.8.4.tar.gz) = cca93d2dd044c144fedafb773345638c7e31d9a1bd25e7d8adb492777e494583ebfb26e00895d338b5fd7985567bd4af907ecc88b1738b61715a691979401c10
+Size (tqsl-2.8.4.tar.gz) = 4213586 bytes
