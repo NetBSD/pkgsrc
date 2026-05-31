@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3398 2026/05/31 14:41:31 taca Exp $
+$NetBSD: CHANGES-2026,v 1.3399 2026/05/31 14:43:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5251,3 +5251,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-faraday-net_http to 3.4.3 [taca 2026-05-31]
 	Updated www/ruby-jekyll-seo-tag to 2.9.0 [taca 2026-05-31]
 	Updated www/ruby-selenium-webdriver to 4.44.0 [taca 2026-05-31]
+	Updated archivers/ruby-zip to 3.3.1 [taca 2026-05-31]
