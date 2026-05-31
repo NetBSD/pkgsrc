@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2026/05/28 08:58:01 osa Exp $
+$NetBSD: distinfo,v 1.14 2026/05/31 15:24:37 osa Exp $
 
 BLAKE2s (array-var-nginx-module-0.06.tar.gz) = fa6ad2a2ce3c3eba3f69287b224e9c01fcaca29a083394ab74f2f655d3e2138b
 SHA512 (array-var-nginx-module-0.06.tar.gz) = bc72158856a1be18a26ee04c6b5b0f0a20bcce688610a493bf31e2a133e7eb12e11f7c18197a09a72b1513f6a08348ee5281b9d5b84cf43603539040ebd23c26
@@ -33,9 +33,9 @@ Size (nginx-dav-ext-module-3.0.0.tar.gz) = 14558 bytes
 BLAKE2s (nginx-rtmp-module-1.2.2.tar.gz) = 5de03b71bb16b4129f1a2a99446f65ef6eeb3fd48bfc925e94fc27e99da3c069
 SHA512 (nginx-rtmp-module-1.2.2.tar.gz) = 3f8c803221854c4b1a06aadc6313fbfec74bd7179c0ee51d4365b26ffa8875881a6e1e48f777a9c9efbb9170ab7478a82920d5448a2c2df485503d37bb03ab81
 Size (nginx-rtmp-module-1.2.2.tar.gz) = 519934 bytes
-BLAKE2s (ngx_cache_purge-2.5.3.tar.gz) = c10c8c9b61b0c993fe62f8ab89e0d6f34d47a041878e32ce4fd9c228a2b7221e
-SHA512 (ngx_cache_purge-2.5.3.tar.gz) = aebc9b19a3e7dda3b57e6bd6d86a5ab66d25e05cf5c6c99c71234c789700eb9da8e29529b8b2abf3d775ff3c2610e695fc88e647738769f0d3730bcafc3be38b
-Size (ngx_cache_purge-2.5.3.tar.gz) = 17156 bytes
+BLAKE2s (ngx_cache_purge-3.0.2.tar.gz) = 60254aefca5ea6d366a00e8b0c8fa7aa83c5bfc843dded727a0d5addff050519
+SHA512 (ngx_cache_purge-3.0.2.tar.gz) = e59c3215df6a3a9036e8ba41a24b91ca2b2d2fe6cd62cfe5108b68328e1df597b77e4015fa4940ee9dd0c47f18d696d54aceb5a0a35e1c101491f9cbadb8b6bb
+Size (ngx_cache_purge-3.0.2.tar.gz) = 42151 bytes
 BLAKE2s (ngx_devel_kit-0.3.4.tar.gz) = f9436d20966f090c6e0b50dd5a28151e2cd27f825d46c12f860a1b61ab7d43bd
 SHA512 (ngx_devel_kit-0.3.4.tar.gz) = 6bc2f4d3b7ad22527e6c7c343884f8b0d5810ae9b7b09d6c2988b50afbd9c7a79e387667bfb980e93c5e204c163544f79634b2862895d8ee004a4393245ee185
 Size (ngx_devel_kit-0.3.4.tar.gz) = 66474 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2026/05/21 10:37:15 osa Exp $
+# $NetBSD: options.mk,v 1.8 2026/05/31 15:24:37 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -357,7 +357,7 @@ CONFIGURE_ARGS+=	--with-http_auth_request_module
 .endif
 
 .if !empty(PKG_OPTIONS:Mnginx-cache-purge) || make(makesum) || make(mdi) || make(distclean)
-CPRG_VERSION=		2.5.3
+CPRG_VERSION=		3.0.2
 CPRG_DISTNAME=		ngx_cache_purge-${CPRG_VERSION}
 CPRG_DISTFILE=		${CPRG_DISTNAME}.tar.gz
 SITES.${CPRG_DISTFILE}=	-${MASTER_SITE_GITHUB:=nginx-modules/ngx_cache_purge/archive/}${CPRG_VERSION}.tar.gz
