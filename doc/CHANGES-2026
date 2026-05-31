@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3360 2026/05/31 05:57:15 taca Exp $
+$NetBSD: CHANGES-2026,v 1.3361 2026/05/31 05:59:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5213,3 +5213,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/ruby-RMagick to 7.0.2 [taca 2026-05-31]
 	Updated graphics/ruby-image_size to 3.6.0 [taca 2026-05-31]
 	Updated graphics/ruby-youplot to 0.5.0 [taca 2026-05-31]
+	Updated lang/ruby-cucumber-gherkin to 39.1.0 [taca 2026-05-31]
