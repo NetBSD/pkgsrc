@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3378 2026/05/31 14:03:45 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3379 2026/05/31 14:05:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5231,3 +5231,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/R-rprojroot to 2.1.1 [mef 2026-05-31]
 	Updated devel/R-magrittr to 2.0.5 [mef 2026-05-31]
 	Updated devel/R-R.oo to 1.27.1 [mef 2026-05-31]
+	Updated textproc/ruby-commonmarker to 2.8.2 [taca 2026-05-31]
