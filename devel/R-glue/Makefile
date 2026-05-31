@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2024/10/18 22:33:18 mef Exp $
+# $NetBSD: Makefile,v 1.10 2026/05/31 13:49:34 mef Exp $
 
 R_PKGNAME=	glue
-R_PKGVER=	1.8.0
+R_PKGVER=	1.8.1
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
