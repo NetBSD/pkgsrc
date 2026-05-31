@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/05/05 12:55:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/05/31 05:54:45 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/dependabot.yml
 ${GEM_LIBDIR}/.github/workflows/check.yml
@@ -41,6 +41,11 @@ ${GEM_LIBDIR}/spec/images/heif/maxar_mariupol.400x300.avif
 ${GEM_LIBDIR}/spec/images/heif/multiple.169x83.heic
 ${GEM_LIBDIR}/spec/images/heif/rotate.73x173.avif
 ${GEM_LIBDIR}/spec/images/heif/sequence.7x5.avif
+${GEM_LIBDIR}/spec/images/icns/16x12.icns
+${GEM_LIBDIR}/spec/images/icns/afp_scanpix_leta_pilipey_kyiv.256x256@1x.icns
+${GEM_LIBDIR}/spec/images/icns/reuters_scanpix_leta_garanich_kyiv.256x256@2x.icns
+${GEM_LIBDIR}/spec/images/icns/toc.512x512@1x.icns
+${GEM_LIBDIR}/spec/images/icns/toc.512x512@2x.icns
 ${GEM_LIBDIR}/spec/images/ico/32x256.ico
 ${GEM_LIBDIR}/spec/images/jp2/163x402.jp2
 ${GEM_LIBDIR}/spec/images/jp2/176x373.jpx
