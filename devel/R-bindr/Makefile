@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2025/01/12 11:53:01 mef Exp $
+# $NetBSD: Makefile,v 1.5 2026/05/31 14:09:08 mef Exp $
 
 R_PKGNAME=	bindr
-R_PKGVER=	0.1.2
+R_PKGVER=	0.1.3
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
