@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3355 2026/05/31 05:44:12 taca Exp $
+$NetBSD: CHANGES-2026,v 1.3356 2026/05/31 05:48:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5208,3 +5208,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-rgl to 0.6.7 [taca 2026-05-31]
 	Updated devel/ruby-stream to 0.5.6 [taca 2026-05-31]
 	Updated devel/ruby-tins to 1.54.0 [taca 2026-05-31]
+	Updated devel/ruby-zeitwerk to 2.8.2 [taca 2026-05-31]
