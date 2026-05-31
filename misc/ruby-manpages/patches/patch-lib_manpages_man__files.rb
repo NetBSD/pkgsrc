@@ -1,10 +1,12 @@
-$NetBSD: patch-lib_manpages_man__files.rb,v 1.1 2022/12/31 16:20:39 taca Exp $
+$NetBSD: patch-lib_manpages_man__files.rb,v 1.2 2026/05/31 06:01:00 taca Exp $
 
 * Install manual page with RUBY_VER style.
 
---- lib/manpages/man_files.rb.orig	2022-12-30 09:50:10.725925400 +0000
+--- lib/manpages/man_files.rb.orig	2026-05-24 01:59:08.965762417 +0000
 +++ lib/manpages/man_files.rb
-@@ -1,7 +1,9 @@
+@@ -1,9 +1,11 @@
+ # frozen_string_literal: true
+ 
  require "pathname"
 +require "rbconfig"
  
@@ -14,7 +16,7 @@ $NetBSD: patch-lib_manpages_man__files.rb,v 1.1 2022/12/31 16:20:39 taca Exp $
      attr_reader :man_dir
  
      def initialize(gem_dir, target_dir = "")
-@@ -23,7 +25,9 @@ module Manpages
+@@ -25,7 +27,9 @@ module Manpages
  
      def man_file_path(file)
        man_section = file.extname.match(/\.(\d*)/)

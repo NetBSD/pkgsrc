@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/12/31 16:20:39 taca Exp $
+# $NetBSD: Makefile,v 1.5 2026/05/31 06:01:00 taca Exp $
 
-DISTNAME=	manpages-0.6.1
-PKGREVISION=	2
+DISTNAME=	manpages-0.7.0
 CATEGORIES=	misc
 
 MAINTAINER=	taca@NetBSD.org
