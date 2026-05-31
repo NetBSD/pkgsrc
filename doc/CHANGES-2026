@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3372 2026/05/31 12:41:08 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3373 2026/05/31 12:46:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5225,3 +5225,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/rakudo to 2026.05 [mef 2026-05-31]
 	Added converters/py-erlpack version 1.0.1 [yurix 2026-05-31]
 	Updated ham/trustedQSL to 2.8.4 [mef 2026-05-31]
+	Updated ham/trustedQSL to 2.8.5 [mef 2026-05-31]
