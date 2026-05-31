@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3387 2026/05/31 14:15:35 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3388 2026/05/31 14:16:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5240,3 +5240,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/ruby-hitimes to 3.2.0 [taca 2026-05-31]
 	Updated devel/R-bit to 4.6.0 [mef 2026-05-31]
 	Updated devel/R-glue to 1.8.1 [mef 2026-05-31]
+	Updated www/ruby-aws-partitions to 1.1255.0 [taca 2026-05-31]
