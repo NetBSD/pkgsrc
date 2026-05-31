@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3363 2026/05/31 06:08:09 taca Exp $
+$NetBSD: CHANGES-2026,v 1.3364 2026/05/31 06:09:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5216,3 +5216,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/ruby-cucumber-gherkin to 39.1.0 [taca 2026-05-31]
 	Updated misc/ruby-manpages to 0.7.0 [taca 2026-05-31]
 	Updated security/ruby-oauth-tty to 1.0.8 [taca 2026-05-31]
+	Updated security/ruby-snaky_hash to 2.0.4 [taca 2026-05-31]
