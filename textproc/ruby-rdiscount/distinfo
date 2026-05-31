@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2026/04/12 15:17:04 taca Exp $
+$NetBSD: distinfo,v 1.9 2026/05/31 14:10:10 taca Exp $
 
-BLAKE2s (rdiscount-2.2.7.4.gem) = 4c3c713422205b9a511a890025fcf13c5350f6d1565d6ef57e37f01002266fae
-SHA512 (rdiscount-2.2.7.4.gem) = 83108dad15cca3bad30fe40442aaadd4cdfc9bc9872309be3ce0c6cdc8efd9d73617bfcf66abac12218772c633bee38761aed631f9c45b6115a31a3f75070e51
-Size (rdiscount-2.2.7.4.gem) = 76288 bytes
+BLAKE2s (rdiscount-2.2.7.5.gem) = 5182379029893f7932590e83827daf5f57915de4eded97f3aaa1209ecc984163
+SHA512 (rdiscount-2.2.7.5.gem) = fe02aa62cc5624959a8e8b86484ab7a531b25cb98cc7451c6292d51985602d619966277dcabb7cced1f19f24778b44f3fb075830e08883f3db98b3a9f0dabcd6
+Size (rdiscount-2.2.7.5.gem) = 76288 bytes
