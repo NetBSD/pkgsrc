@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.33 2025/05/17 13:20:53 mef Exp $
+$NetBSD: distinfo,v 1.34 2026/05/31 11:17:48 mef Exp $
 
-BLAKE2s (rakudo-2025.04.tar.gz) = 2dc8f2e049cdfb6e403bd6718777a81eb8427e06fb83cba2f3669210e8aa119e
-SHA512 (rakudo-2025.04.tar.gz) = 9b14e5e3981e229add066c3d1259d70e30cc15c4ce255ad4194d8a8c50506f781df17a55e1e0b5e840a02c9d5f2299f85418af25ca81ca749a28a0325149f6cc
-Size (rakudo-2025.04.tar.gz) = 4567850 bytes
+BLAKE2s (rakudo-2026.05.tar.gz) = d0ed51b2ae0439b6b0d3fdbecdfac0c81c1dfc7b7d684c0646885d4ccfce50f5
+SHA512 (rakudo-2026.05.tar.gz) = 568f9b655cd61b643cd700f20a122bbf1c3f98708fed5bedebb187290671f3255c5188eed85a514ee8ae1090f47c9dba0cc540645d2a3d24d0fe8a75e915b021
+Size (rakudo-2026.05.tar.gz) = 5069120 bytes
