@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3369 2026/05/31 11:02:48 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3370 2026/05/31 11:17:56 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5222,3 +5222,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/mysql80-cluster to 8.0.46 [jnemeth 2026-05-31]
 	Updated devel/MoarVM to 2026.05 [mef 2026-05-31]
 	Updated lang/nqp to 2026.05 [mef 2026-05-31]
+	Updated lang/rakudo to 2026.05 [mef 2026-05-31]
