@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/10/19 06:02:59 mef Exp $
+$NetBSD: distinfo,v 1.5 2026/05/31 14:07:12 mef Exp $
 
-BLAKE2s (R/RUnit_0.4.33.tar.gz) = 32381b27214f689666ef588ba0f74b958dabc97c8c744da1e63b5417928c145b
-SHA512 (R/RUnit_0.4.33.tar.gz) = e22eb268134a26692f7246b09d04f66fb28373d47afb1af062c954d34a76e0425bb7a81a1ef35a84a999d39e852ed2ed2639f19735ebfbc89a406e61a442aaee
-Size (R/RUnit_0.4.33.tar.gz) = 430737 bytes
+BLAKE2s (R/RUnit_0.4.33.1.tar.gz) = 481dd4d26a67a3ef495a0cd74fcaf8fc2825edc51b41f4e73def0a8c8f12d009
+SHA512 (R/RUnit_0.4.33.1.tar.gz) = d37cd2f4c4acfb28b71964c5203de587b2cd0c3d8338b0d753373f7cbd0c4deffd5bd007245296be42f011d7b8f2b03f58056f8107fd765914dd14a437ee0770
+Size (R/RUnit_0.4.33.1.tar.gz) = 180317 bytes
