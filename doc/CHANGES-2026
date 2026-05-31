@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3370 2026/05/31 11:17:56 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3371 2026/05/31 12:27:22 yurix Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5223,3 +5223,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/MoarVM to 2026.05 [mef 2026-05-31]
 	Updated lang/nqp to 2026.05 [mef 2026-05-31]
 	Updated lang/rakudo to 2026.05 [mef 2026-05-31]
+	Added converters/py-erlpack version 1.0.1 [yurix 2026-05-31]
