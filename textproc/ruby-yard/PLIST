@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2026/04/19 14:32:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/05/31 14:11:39 taca Exp $
 bin/yard${RUBY_SUFFIX}
 bin/yardoc${RUBY_SUFFIX}
 bin/yri${RUBY_SUFFIX}
@@ -241,6 +241,7 @@ ${GEM_LIBDIR}/lib/yard/templates/helpers/base_helper.rb
 ${GEM_LIBDIR}/lib/yard/templates/helpers/filter_helper.rb
 ${GEM_LIBDIR}/lib/yard/templates/helpers/html_helper.rb
 ${GEM_LIBDIR}/lib/yard/templates/helpers/html_syntax_highlight_helper.rb
+${GEM_LIBDIR}/lib/yard/templates/helpers/markup/html_entities.rb
 ${GEM_LIBDIR}/lib/yard/templates/helpers/markup/hybrid_markdown.rb
 ${GEM_LIBDIR}/lib/yard/templates/helpers/markup/rdoc_markdown.rb
 ${GEM_LIBDIR}/lib/yard/templates/helpers/markup/rdoc_markup.rb
