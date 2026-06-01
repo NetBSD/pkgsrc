@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.29 2026/06/01 03:36:08 ryoon Exp $
+# $NetBSD: options.mk,v 1.30 2026/06/01 10:10:12 leot Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.curl
 PKG_SUPPORTED_OPTIONS=		inet6 openssl libssh2 gssapi ldap rtmp idn http2
@@ -72,6 +72,7 @@ TEST_DEPENDS+=		nghttp2-tools-[0-9]*:../../www/nghttp2-tools
 CONFIGURE_ARGS+=	--without-nghttp2
 .endif
 
+# XXX: nghttp3, cmake and curl cause circular dependency
 #.if !empty(PKG_OPTIONS:Mhttp3)
 #USE_TOOLS+=		pkg-config
 #CONFIGURE_ARGS+=	--with-nghttp3=${BUILDLINK_PREFIX.nghttp3}
