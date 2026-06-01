@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/10/23 09:44:28 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/06/01 19:37:09 adam Exp $
 
-DISTNAME=	pyproject_api-1.10.0
+DISTNAME=	pyproject_api-1.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyproject_api/}
@@ -11,7 +11,7 @@ COMMENT=	API to interact with the python pyproject.toml based projects
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.5:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.28:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-packaging>=25:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-covdefaults>=2.3:../../devel/py-covdefaults
 TEST_DEPENDS+=	${PYPKGPREFIX}-setuptools>=80.9:../../devel/py-setuptools
