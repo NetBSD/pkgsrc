@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_dawn_third__party_renderdoc_renderdoc_api_app_renderdoc__app.h,v 1.5 2026/05/10 15:30:04 kikadf Exp $
+$NetBSD: patch-third__party_dawn_third__party_renderdoc_renderdoc_api_app_renderdoc__app.h,v 1.6 2026/06/01 10:09:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/dawn/third_party/renderdoc/renderdoc/api/app/renderdoc_app.h.orig	2026-04-28 23:05:57.000000000 +0200
+--- third_party/dawn/third_party/renderdoc/renderdoc/api/app/renderdoc_app.h.orig	2026-05-26 20:39:02.000000000 +0000
 +++ third_party/dawn/third_party/renderdoc/renderdoc/api/app/renderdoc_app.h
 @@ -35,7 +35,7 @@
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-media_gpu_sandbox_hardware__video__decoding__sandbox__hook__linux.cc,v 1.19 2026/05/10 15:30:00 kikadf Exp $
+$NetBSD: patch-media_gpu_sandbox_hardware__video__decoding__sandbox__hook__linux.cc,v 1.20 2026/06/01 10:09:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/sandbox/hardware_video_decoding_sandbox_hook_linux.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- media/gpu/sandbox/hardware_video_decoding_sandbox_hook_linux.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ media/gpu/sandbox/hardware_video_decoding_sandbox_hook_linux.cc
 @@ -17,7 +17,9 @@
  #include "media/gpu/vaapi/vaapi_wrapper.h"

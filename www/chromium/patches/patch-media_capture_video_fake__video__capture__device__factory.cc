@@ -1,10 +1,10 @@
-$NetBSD: patch-media_capture_video_fake__video__capture__device__factory.cc,v 1.19 2026/05/10 15:29:59 kikadf Exp $
+$NetBSD: patch-media_capture_video_fake__video__capture__device__factory.cc,v 1.20 2026/06/01 10:09:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/fake_video_capture_device_factory.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- media/capture/video/fake_video_capture_device_factory.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ media/capture/video/fake_video_capture_device_factory.cc
 @@ -229,7 +229,7 @@ void FakeVideoCaptureDeviceFactory::GetD
    int entry_index = 0;

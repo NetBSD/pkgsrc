@@ -1,10 +1,10 @@
-$NetBSD: patch-base_files_file__path__watcher__unittest.cc,v 1.19 2026/05/10 15:29:47 kikadf Exp $
+$NetBSD: patch-base_files_file__path__watcher__unittest.cc,v 1.20 2026/06/01 10:09:04 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/file_path_watcher_unittest.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- base/files/file_path_watcher_unittest.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ base/files/file_path_watcher_unittest.cc
 @@ -902,7 +902,7 @@ TEST_F(FilePathWatcherTest, WatchDirecto
    }

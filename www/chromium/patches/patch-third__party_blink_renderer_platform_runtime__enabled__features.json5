@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.json5,v 1.19 2026/05/10 15:30:04 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.json5,v 1.20 2026/06/01 10:09:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2026-04-28 23:05:57.000000000 +0200
+--- third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2026-05-26 20:39:02.000000000 +0000
 +++ third_party/blink/renderer/platform/runtime_enabled_features.json5
 @@ -411,7 +411,7 @@
        name: "AIPromptAPILegacyParams",
@@ -96,7 +96,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        public: true,
        base_feature_status: "enabled",
        copied_from_base_feature_if: "overridden",
-@@ -5992,7 +5992,7 @@
+@@ -6000,7 +6000,7 @@
        name: "UnrestrictedSharedArrayBuffer",
        base_feature: "none",
        origin_trial_feature_name: "UnrestrictedSharedArrayBuffer",
@@ -105,7 +105,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
      },
      // Enables using policy-controlled feature "usb-unrestricted" to allow
      // isolated context to access protected USB interface classes and to
-@@ -6089,7 +6089,7 @@
+@@ -6097,7 +6097,7 @@
        status: "experimental",
        origin_trial_feature_name: "UserMediaElement",
        public: true,
@@ -114,7 +114,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        base_feature_status: "enabled",
        copied_from_base_feature_if: "overridden",
      },
-@@ -6200,7 +6200,7 @@
+@@ -6208,7 +6208,7 @@
        name: "WebAppInstallation",
        status: {"Android": "", "default": "test"},
        origin_trial_feature_name: "WebAppInstallation",
@@ -123,7 +123,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        public: true,
        base_feature_status: "enabled",
        copied_from_base_feature_if: "overridden",
-@@ -6214,7 +6214,7 @@
+@@ -6222,7 +6222,7 @@
      {
        name: "WebAppScopeExtensions",
        origin_trial_feature_name: "WebAppScopeExtensions",

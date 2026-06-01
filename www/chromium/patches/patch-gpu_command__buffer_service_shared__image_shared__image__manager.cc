@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__manager.cc,v 1.19 2026/05/10 15:29:59 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__manager.cc,v 1.20 2026/06/01 10:09:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/shared_image_manager.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- gpu/command_buffer/service/shared_image/shared_image_manager.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/shared_image_manager.cc
 @@ -641,7 +641,7 @@ bool SharedImageManager::SupportsScanout
    return true;

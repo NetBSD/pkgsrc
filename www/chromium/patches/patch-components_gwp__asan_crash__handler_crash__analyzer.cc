@@ -1,10 +1,10 @@
-$NetBSD: patch-components_gwp__asan_crash__handler_crash__analyzer.cc,v 1.19 2026/05/10 15:29:55 kikadf Exp $
+$NetBSD: patch-components_gwp__asan_crash__handler_crash__analyzer.cc,v 1.20 2026/06/01 10:09:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/gwp_asan/crash_handler/crash_analyzer.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- components/gwp_asan/crash_handler/crash_analyzer.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ components/gwp_asan/crash_handler/crash_analyzer.cc
 @@ -32,7 +32,7 @@
  #include "third_party/crashpad/crashpad/snapshot/process_snapshot.h"

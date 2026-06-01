@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_views_widget_desktop__aura_desktop__window__tree__host__platform.cc,v 1.19 2026/05/10 15:30:09 kikadf Exp $
+$NetBSD: patch-ui_views_widget_desktop__aura_desktop__window__tree__host__platform.cc,v 1.20 2026/06/01 10:09:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/widget/desktop_aura/desktop_window_tree_host_platform.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- ui/views/widget/desktop_aura/desktop_window_tree_host_platform.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ ui/views/widget/desktop_aura/desktop_window_tree_host_platform.cc
 @@ -51,7 +51,7 @@
  #include "ui/wm/core/window_util.h"
@@ -24,7 +24,7 @@ $NetBSD: patch-ui_views_widget_desktop__aura_desktop__window__tree__host__platfo
        std::make_unique<DesktopDragDropClientOzoneLinux>(window(), drag_handler);
  #else
        std::make_unique<DesktopDragDropClientOzone>(window(), drag_handler);
-@@ -1231,7 +1231,7 @@ bool DesktopWindowTreeHostPlatform::Rota
+@@ -1239,7 +1239,7 @@ bool DesktopWindowTreeHostPlatform::Rota
  // DesktopWindowTreeHost:
  
  // Linux subclasses this host and adds some Linux specific bits.

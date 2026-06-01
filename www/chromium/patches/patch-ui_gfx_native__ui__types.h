@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gfx_native__ui__types.h,v 1.11 2026/05/10 15:30:08 kikadf Exp $
+$NetBSD: patch-ui_gfx_native__ui__types.h,v 1.12 2026/06/01 10:09:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/native_ui_types.h.orig	2026-04-28 23:05:57.000000000 +0200
+--- ui/gfx/native_ui_types.h.orig	2026-05-26 20:39:02.000000000 +0000
 +++ ui/gfx/native_ui_types.h
 @@ -106,7 +106,7 @@ class ViewAndroid;
  }  // namespace ui

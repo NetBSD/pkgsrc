@@ -1,18 +1,20 @@
-$NetBSD: patch-third__party_wayland_include_config.h,v 1.19 2026/05/10 15:30:06 kikadf Exp $
+$NetBSD: patch-third__party_wayland_include_config.h,v 1.20 2026/06/01 10:09:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/wayland/include/config.h.orig	2026-04-28 23:05:57.000000000 +0200
+--- third_party/wayland/include/config.h.orig	2026-05-26 20:39:02.000000000 +0000
 +++ third_party/wayland/include/config.h
-@@ -9,7 +9,14 @@
+@@ -9,13 +9,26 @@
  
  #define HAVE_BROKEN_MSG_CMSG_CLOEXEC 0
  
 +#if defined(__FreeBSD__)
 +#include <osreldate.h>
 +#if defined(__FreeBSD_version) && __FreeBSD_version < 1300048
++#undef HAVE_MEMFD_CREATE
++#elif defined(__NetBSD__)
 +#undef HAVE_MEMFD_CREATE
 +#else
  #define HAVE_MEMFD_CREATE
@@ -21,7 +23,17 @@ $NetBSD: patch-third__party_wayland_include_config.h,v 1.19 2026/05/10 15:30:06 
  
  #define HAVE_MKOSTEMP
  
-@@ -25,7 +32,11 @@
+ #define HAVE_MREMAP
+ 
++#if defined(__NetBSD__)
++#undef HAVE_POSIX_FALLOCATE
++#else
+ #define HAVE_POSIX_FALLOCATE
++#endif
+ 
+ #define HAVE_PRCTL
+ 
+@@ -25,7 +38,11 @@
  
  #undef HAVE_SYS_PROCCTL_H
  

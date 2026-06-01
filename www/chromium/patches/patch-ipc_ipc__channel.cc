@@ -1,10 +1,10 @@
-$NetBSD: patch-ipc_ipc__channel.cc,v 1.11 2026/05/10 15:29:59 kikadf Exp $
+$NetBSD: patch-ipc_ipc__channel.cc,v 1.12 2026/06/01 10:09:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ipc/ipc_channel.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- ipc/ipc_channel.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ ipc/ipc_channel.cc
 @@ -41,7 +41,7 @@ namespace {
  // Global atomic used to guarantee channel IDs are unique.

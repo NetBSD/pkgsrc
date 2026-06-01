@@ -1,10 +1,10 @@
-$NetBSD: patch-components_viz_service_gl_gpu__service__impl.cc,v 1.17 2026/05/10 15:29:57 kikadf Exp $
+$NetBSD: patch-components_viz_service_gl_gpu__service__impl.cc,v 1.18 2026/06/01 10:09:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/gl/gpu_service_impl.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- components/viz/service/gl/gpu_service_impl.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ components/viz/service/gl/gpu_service_impl.cc
 @@ -454,7 +454,7 @@ void GpuServiceImpl::InitializeWithHostI
  

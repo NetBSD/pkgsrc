@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_core_exported_web__view__impl.cc,v 1.19 2026/05/10 15:30:03 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_core_exported_web__view__impl.cc,v 1.20 2026/06/01 10:09:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/exported/web_view_impl.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- third_party/blink/renderer/core/exported/web_view_impl.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ third_party/blink/renderer/core/exported/web_view_impl.cc
 @@ -405,7 +405,7 @@ void RecordPrerenderActivationSignalDela
  #if !BUILDFLAG(IS_MAC) && !BUILDFLAG(IS_WIN)

@@ -1,10 +1,10 @@
-$NetBSD: patch-net_dns_dns__util.cc,v 1.19 2026/05/10 15:30:00 kikadf Exp $
+$NetBSD: patch-net_dns_dns__util.cc,v 1.20 2026/06/01 10:09:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/dns_util.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- net/dns/dns_util.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ net/dns/dns_util.cc
 @@ -27,6 +27,8 @@
  #include "net/dns/public/util.h"
