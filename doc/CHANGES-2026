@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3423 2026/06/01 13:50:35 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3424 2026/06/01 13:52:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5286,3 +5286,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-google-api-python-client to 2.197.0 [wiz 2026-06-01]
 	Updated www/py-idna to 3.17 [wiz 2026-06-01]
 	Updated devel/py-rpds-py to 2026.5.1 [wiz 2026-06-01]
+	Updated devel/py-typer to 0.26.4 [wiz 2026-06-01]
