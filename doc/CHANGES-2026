@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3432 2026/06/01 19:37:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3433 2026/06/01 19:44:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5297,3 +5297,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-commonmark to 0.9.2 [adam 2026-06-01]
 	Updated devel/py-typer to 0.26.5 [adam 2026-06-01]
 	Updated devel/py-project-api to 1.10.1 [adam 2026-06-01]
+	Updated sysutils/py-invoke to 3.0.3 [adam 2026-06-01]
+	Updated finance/py-braintree to 4.44.0 [adam 2026-06-01]
