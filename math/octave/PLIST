@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2026/02/26 15:45:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.46 2026/06/01 10:51:03 adam Exp $
 bin/${PKGNAME}
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
@@ -1080,6 +1080,8 @@ share/octave/${PKGVERSION}/etc/tests/fixed/classdef/class_bug50011_2B.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classdef/class_bug52614A.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classdef/class_bug52614B.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classdef/class_bug55766.m
+share/octave/${PKGVERSION}/etc/tests/fixed/classdef/class_bug59775A.m
+share/octave/${PKGVERSION}/etc/tests/fixed/classdef/class_bug59775B.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classdef/class_bug60723A.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classdef/class_bug60723B.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classdef/class_bug60723C.m
