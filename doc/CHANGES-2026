@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3401 2026/05/31 19:45:15 js Exp $
+$NetBSD: CHANGES-2026,v 1.3402 2026/06/01 01:10:17 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5254,3 +5254,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/ruby-zip to 3.3.1 [taca 2026-05-31]
 	Updated www/freenginx-devel to 1.31.2nb1 [osa 2026-05-31]
 	Updated devel/objfw to 1.5.5 [js 2026-05-31]
+	Updated lang/racket to 9.2 [ktnb 2026-06-01]
