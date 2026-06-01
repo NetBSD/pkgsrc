@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3411 2026/06/01 10:34:52 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3412 2026/06/01 10:45:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5270,3 +5270,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added sysutils/u-boot-imx8mq-phanbell version 2022.01 [rxg 2026-06-01]
 	Updated www/chromium to 148.0.7778.215 [kikadf 2026-06-01]
 	Removed databases/rrdtool12 successor databases/rrdtool [wiz 2026-06-01]
+	Updated www/p5-Template-Toolkit to 3.106 [wiz 2026-06-01]
