@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/11/29 10:47:58 mef Exp $
+# $NetBSD: Makefile,v 1.4 2026/06/01 22:03:58 mef Exp $
 
 R_PKGNAME=	diffobj
-R_PKGVER=	0.3.5
+R_PKGVER=	0.3.6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
