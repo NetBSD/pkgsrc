@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2026/05/29 11:59:19 adam Exp $
+# $NetBSD: Makefile,v 1.107 2026/06/01 00:02:45 gdt Exp $
 #
 # When updating this, please also update devel/py-protobuf.
 #
@@ -23,8 +23,13 @@ USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 FORCE_CXX_STD=		c++17
 
-# https://github.com/protocolbuffers/protobuf/issues/26383
-GCC_REQD+=	13
+# protobuf 34.1 failed to build with gcc <=12 and new abseil:
+#   https://github.com/protocolbuffers/protobuf/issues/26383
+# and thus we set GCC_REQD+=13.  As of 35.0, this is marked fixed in
+# upstream NEWS, and the bug shows that fixes were merged.  Builds on
+# NetBSD 10 with gcc10, which resolves linking failures in qgis4
+# because of varying libstdc++, the usual tale of woe.
+# Leaving this note for gc on July 1, in case this resurfaces somehow.
 
 CMAKE_CONFIGURE_ARGS+=	-Dprotobuf_ABSL_PROVIDER=package
 CMAKE_CONFIGURE_ARGS+=	-Dprotobuf_BUILD_SHARED_LIBS=ON
