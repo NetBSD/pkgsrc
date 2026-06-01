@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.6 2026/02/10 18:53:11 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/06/01 14:14:20 wiz Exp $
 
 BLAKE2s (libjxl-0.11.2.tar.gz) = 8ff719e98e85811e64a66f12755180436baeaab1bc99d2cc9acfd8e49d5dda55
 SHA512 (libjxl-0.11.2.tar.gz) = a7e1f7d060b358f4382e84367d66aa2850aef3b4524a0fdfe3f22dd258fb9e35dda7540f859d8bf4c32f31c61a7a03db677f4490a9f472cd25869a9d00797336
 Size (libjxl-0.11.2.tar.gz) = 1882762 bytes
 SHA1 (patch-CMakeLists.txt) = 9c23c2d137fe4f554abe8dc11ef50b6526444bcb
+SHA1 (patch-lib_extras_dec_pnm.cc) = f1d95b16477702942968bf18c318cf6f2423cc82
 SHA1 (patch-lib_jxl.cmake) = 80edf776f9abc31f972daf081bddd313643ddf19
 SHA1 (patch-lib_jxl__cms.cmake) = 071732162728c9a426dcfd207dc088b42463455b
 SHA1 (patch-lib_jxl__threads.cmake) = a18c85c6ab0111bad03eaa52b005d8f3204fcf58
