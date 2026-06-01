@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3404 2026/06/01 02:37:19 rxg Exp $
+$NetBSD: CHANGES-2026,v 1.3405 2026/06/01 07:15:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5257,3 +5257,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/racket to 9.2 [ktnb 2026-06-01]
 	Updated lang/racket-textual to 9.2 [ktnb 2026-06-01]
 	Added sysutils/trusted-firmware-a-imx8mq version 2.6 [rxg 2026-06-01]
+	Updated net/ngtcp2 to 1.23.0 [adam 2026-06-01]
+	Updated www/nghttp3 to 1.16.0 [adam 2026-06-01]
