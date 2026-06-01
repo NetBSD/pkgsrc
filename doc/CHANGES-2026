@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3407 2026/06/01 07:47:59 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3408 2026/06/01 08:06:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5265,3 +5265,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-sphinx-autodoc-typehints to 3.10.4 [adam 2026-06-01]
 	Updated graphics/py-tifffile to 2026.6.1 [adam 2026-06-01]
 	Updated misc/py-tibs to 0.9.0 [adam 2026-06-01]
+	Updated net/py-txtorcon to 26.6.0 [adam 2026-06-01]
+	Updated net/py-pyrate-limiter to 4.2.0 [adam 2026-06-01]
