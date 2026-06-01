@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3440 2026/06/01 22:04:06 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3441 2026/06/01 22:12:22 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5310,3 +5310,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/R-clipr to 0.8.1 [mef 2026-06-01]
 	Updated devel/R-bit64 to 4.8.2 [mef 2026-06-01]
 	Updated devel/R-diffobj to 0.3.6 [mef 2026-06-01]
+	Updated devel/R-fs to 2.1.0 [mef 2026-06-01]
