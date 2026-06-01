@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/04/14 15:19:13 mef Exp $
+# $NetBSD: Makefile,v 1.5 2026/06/01 21:50:21 mef Exp $
 
 R_PKGNAME=	clipr
-R_PKGVER=	0.8.0
+R_PKGVER=	0.8.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
