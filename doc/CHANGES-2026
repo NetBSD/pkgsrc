@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3434 2026/06/01 19:51:51 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3435 2026/06/01 19:58:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5302,3 +5302,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/exim to 4.99.4 [adam 2026-06-01]
 	Updated mail/exim-html to 4.99.4 [adam 2026-06-01]
 	Updated net/bird to 3.3.0 [adam 2026-06-01]
+	Updated devel/py-cucumber-expressions to 19.0.1 [adam 2026-06-01]
+	Updated devel/py-cucumber-tag-expressions to 9.1.0 [adam 2026-06-01]
