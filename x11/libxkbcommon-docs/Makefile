@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2026/05/17 09:07:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/06/01 13:32:01 wiz Exp $
 
 .include "../../x11/libxkbcommon/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/common/common-docs/:S/^/lib/}
-PKGREVISION=		1
 
 TOOL_DEPENDS+=		doxygen>=1.17:../../devel/doxygen
 MESON_ARGS+=		-Denable-docs=true
