@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2025/11/13 12:04:41 adam Exp $
+# $NetBSD: Makefile,v 1.27 2026/06/01 20:21:03 adam Exp $
 
-DISTNAME=	ncclient-0.7.0
+DISTNAME=	ncclient-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/ncclient/}
@@ -10,7 +10,8 @@ HOMEPAGE=	https://github.com/ncclient/ncclient
 COMMENT=	NETCONF Python client
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.4:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.3.0:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-paramiko>=3.2.0:../../security/py-paramiko
 
