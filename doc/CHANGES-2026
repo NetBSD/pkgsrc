@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3408 2026/06/01 08:06:18 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3409 2026/06/01 08:57:17 rxg Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5267,3 +5267,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-tibs to 0.9.0 [adam 2026-06-01]
 	Updated net/py-txtorcon to 26.6.0 [adam 2026-06-01]
 	Updated net/py-pyrate-limiter to 4.2.0 [adam 2026-06-01]
+	Added sysutils/u-boot-imx8mq-phanbell version 2022.01 [rxg 2026-06-01]
