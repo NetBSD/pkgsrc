@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.28 2026/05/30 19:01:34 ryoon Exp $
+# $NetBSD: options.mk,v 1.29 2026/06/01 03:36:08 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.curl
 PKG_SUPPORTED_OPTIONS=		inet6 openssl libssh2 gssapi ldap rtmp idn http2
-PKG_SUPPORTED_OPTIONS+=		http3 brotli zstd
+PKG_SUPPORTED_OPTIONS+=		brotli zstd
 PKG_SUGGESTED_OPTIONS=		http2 inet6 idn
 .if ${OPSYS} != "QNX"
 PKG_SUGGESTED_OPTIONS+=		openssl
@@ -72,16 +72,16 @@ TEST_DEPENDS+=		nghttp2-tools-[0-9]*:../../www/nghttp2-tools
 CONFIGURE_ARGS+=	--without-nghttp2
 .endif
 
-.if !empty(PKG_OPTIONS:Mhttp3)
-USE_TOOLS+=		pkg-config
-CONFIGURE_ARGS+=	--with-nghttp3=${BUILDLINK_PREFIX.nghttp3}
-CONFIGURE_ARGS+=	--with-ngtcp2=${BUILDLINK_PREFIX.ngtcp2}
-TEST_DEPENDS+=		nghttp3-tools-[0-9]*:../../www/nghttp3-tools
-.include "../../net/ngtcp2/buildlink3.mk"
-.include "../../www/nghttp3/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-nghttp3
-.endif
+#.if !empty(PKG_OPTIONS:Mhttp3)
+#USE_TOOLS+=		pkg-config
+#CONFIGURE_ARGS+=	--with-nghttp3=${BUILDLINK_PREFIX.nghttp3}
+#CONFIGURE_ARGS+=	--with-ngtcp2=${BUILDLINK_PREFIX.ngtcp2}
+#TEST_DEPENDS+=		nghttp3-tools-[0-9]*:../../www/nghttp3-tools
+#.include "../../net/ngtcp2/buildlink3.mk"
+#.include "../../www/nghttp3/buildlink3.mk"
+#.else
+#CONFIGURE_ARGS+=	--without-nghttp3
+#.endif
 
 .if !empty(PKG_OPTIONS:Mbrotli)
 .include "../../archivers/brotli/buildlink3.mk"
