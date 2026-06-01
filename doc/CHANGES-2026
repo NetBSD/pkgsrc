@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3438 2026/06/01 21:50:38 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3439 2026/06/01 21:58:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5308,3 +5308,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-python-multipart to 0.0.30 [adam 2026-06-01]
 	Updated net/py-ncclient to 0.7.1 [adam 2026-06-01]
 	Updated devel/R-clipr to 0.8.1 [mef 2026-06-01]
+	Updated devel/R-bit64 to 4.8.2 [mef 2026-06-01]
