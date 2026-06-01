@@ -1,9 +1,9 @@
-$NetBSD: patch-.._vendor_memchr-2.8.0_src_vector.rs,v 1.1 2026/04/07 18:38:35 pin Exp $
+$NetBSD: patch-.._vendor_memchr-2.8.1_src_vector.rs,v 1.1 2026/06/01 13:04:38 pin Exp $
 
 Do not try to use neon on big-endian aarch64.
 
---- ../vendor/memchr-2.8.0/src/vector.rs.orig	2025-02-15 09:24:32.108467529 +0000
-+++ ../vendor/memchr-2.8.0/src/vector.rs
+--- ../vendor/memchr-2.8.1/src/vector.rs.orig	2025-02-15 09:24:32.108467529 +0000
++++ ../vendor/memchr-2.8.1/src/vector.rs
 @@ -293,7 +293,7 @@ mod x86avx2 {
      }
  }
