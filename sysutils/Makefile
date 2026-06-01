@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1192 2026/05/31 13:29:20 rxg Exp $
+# $NetBSD: Makefile,v 1.1193 2026/06/01 02:36:12 rxg Exp $
 #
 
 COMMENT=	System utilities
@@ -802,6 +802,7 @@ SUBDIR+=	tre-command
 SUBDIR+=	tree
 SUBDIR+=	treegrep
 SUBDIR+=	trusted-firmware-a-fiptool
+SUBDIR+=	trusted-firmware-a-imx8mq
 SUBDIR+=	trusted-firmware-a-rk3328
 SUBDIR+=	trusted-firmware-a-rk3399
 SUBDIR+=	ts
