@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/02/16 19:06:25 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/06/01 19:58:09 adam Exp $
 
-DISTNAME=	cucumber_tag_expressions-9.0.0
+DISTNAME=	cucumber_tag_expressions-9.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cucumber_tag_expressions/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/cucumber/tag-expressions
 COMMENT=	Provides a tag-expression parser and evaluation logic for cucumber/behave
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-build>=0.9.0:../../devel/py-uv-build
+TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-build>=0.10.0:../../devel/py-uv-build
 
 USE_LANGUAGES=	# none
 
