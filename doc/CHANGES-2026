@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3410 2026/06/01 10:24:53 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.3411 2026/06/01 10:34:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5269,3 +5269,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-pyrate-limiter to 4.2.0 [adam 2026-06-01]
 	Added sysutils/u-boot-imx8mq-phanbell version 2022.01 [rxg 2026-06-01]
 	Updated www/chromium to 148.0.7778.215 [kikadf 2026-06-01]
+	Removed databases/rrdtool12 successor databases/rrdtool [wiz 2026-06-01]
