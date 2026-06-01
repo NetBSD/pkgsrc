@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/04/14 15:19:13 mef Exp $
+$NetBSD: distinfo,v 1.6 2026/06/01 21:50:21 mef Exp $
 
-BLAKE2s (R/clipr_0.8.0.tar.gz) = 6a5a007df435664ed7195098149ef9317f91518042eb57320152b75075129285
-SHA512 (R/clipr_0.8.0.tar.gz) = e3fad72072bd4d380cb69133d359a8f3b48aae3fc3eed78fd53fb23d35bdf4e2e4e43afecca4fb8870695c84198c065c0da216e68dd1ac17152c70ee8e698c85
-Size (R/clipr_0.8.0.tar.gz) = 21898 bytes
+BLAKE2s (R/clipr_0.8.1.tar.gz) = cb1c2fe58e9ed45af8b185468e7234278341f4dec1accba6da09a4f13e1e9a5e
+SHA512 (R/clipr_0.8.1.tar.gz) = b69aeb8ea8993c94b6b49c8d8ec77ce3583dfcd4f632f4502a2d0cc8b4bc744a0c9942a25ca4d6550f10774e566eb0c30f9e5e035b329ea2d32452c26f3ab45a
+Size (R/clipr_0.8.1.tar.gz) = 20835 bytes
