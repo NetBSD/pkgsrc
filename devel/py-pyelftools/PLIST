@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/04/12 20:03:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/06/01 10:59:46 adam Exp $
 bin/readelf-${PYVERSSUFFIX}.py
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -47,9 +47,6 @@ ${PYSITELIB}/elftools/construct/lib/container.pyo
 ${PYSITELIB}/elftools/construct/lib/hex.py
 ${PYSITELIB}/elftools/construct/lib/hex.pyc
 ${PYSITELIB}/elftools/construct/lib/hex.pyo
-${PYSITELIB}/elftools/construct/lib/py3compat.py
-${PYSITELIB}/elftools/construct/lib/py3compat.pyc
-${PYSITELIB}/elftools/construct/lib/py3compat.pyo
 ${PYSITELIB}/elftools/construct/macros.py
 ${PYSITELIB}/elftools/construct/macros.pyc
 ${PYSITELIB}/elftools/construct/macros.pyo
