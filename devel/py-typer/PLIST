@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2026/05/27 04:01:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/06/01 13:52:24 wiz Exp $
 bin/typer-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -53,9 +53,6 @@ ${PYSITELIB}/typer/_click/shell_completion.pyo
 ${PYSITELIB}/typer/_click/termui.py
 ${PYSITELIB}/typer/_click/termui.pyc
 ${PYSITELIB}/typer/_click/termui.pyo
-${PYSITELIB}/typer/_click/testing.py
-${PYSITELIB}/typer/_click/testing.pyc
-${PYSITELIB}/typer/_click/testing.pyo
 ${PYSITELIB}/typer/_click/types.py
 ${PYSITELIB}/typer/_click/types.pyc
 ${PYSITELIB}/typer/_click/types.pyo
