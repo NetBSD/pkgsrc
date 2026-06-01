@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2025/04/15 09:51:04 adam Exp $
+# $NetBSD: Makefile,v 1.13 2026/06/01 07:53:26 adam Exp $
 
-DISTNAME=	txtorcon-24.8.0
+DISTNAME=	txtorcon-26.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/txtorcon/}
 
