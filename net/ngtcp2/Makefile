@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2026/06/01 07:14:23 adam Exp $
+# $NetBSD: Makefile,v 1.39 2026/06/01 13:54:34 ryoon Exp $
 
 DISTNAME=	ngtcp2-1.23.0
 CATEGORIES=	net
@@ -14,6 +14,8 @@ LICENSE=	mit
 USE_LANGUAGES=	c c++
 
 .include "../../devel/cmake/build.mk"
+# SSL_set_quic_tls_cbs() is required.
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=3.5.0
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/nghttp3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
