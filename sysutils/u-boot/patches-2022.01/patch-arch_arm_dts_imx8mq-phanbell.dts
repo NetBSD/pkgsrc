@@ -1,0 +1,14 @@
+$NetBSD: patch-arch_arm_dts_imx8mq-phanbell.dts,v 1.1 2026/06/01 08:56:16 rxg Exp $
+
+MMC... *** Warning - No block device
+
+--- arch/arm/dts/imx8mq-phanbell.dts.orig	2026-05-28 09:11:12.836643690 +0000
++++ arch/arm/dts/imx8mq-phanbell.dts
+@@ -34,6 +34,7 @@
+ 		regulator-max-microvolt = <3300000>;
+ 		gpio = <&gpio2 19 GPIO_ACTIVE_HIGH>;
+ 		enable-active-high;
++		startup-delay-us = <2000>;
+ 	};
+ };
+ 

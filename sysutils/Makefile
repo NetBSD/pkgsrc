@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1193 2026/06/01 02:36:12 rxg Exp $
+# $NetBSD: Makefile,v 1.1194 2026/06/01 08:56:16 rxg Exp $
 #
 
 COMMENT=	System utilities
@@ -838,6 +838,7 @@ SUBDIR+=	u-boot-d1-nezha
 SUBDIR+=	u-boot-de0-nanosoc
 SUBDIR+=	u-boot-hifive-unleashed
 SUBDIR+=	u-boot-hummingbird-a31
+SUBDIR+=	u-boot-imx8mq-phanbell
 SUBDIR+=	u-boot-jetson-nano
 SUBDIR+=	u-boot-jetson-tk1
 SUBDIR+=	u-boot-jetson-tx1
