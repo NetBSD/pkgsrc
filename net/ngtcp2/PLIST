@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2026/05/30 19:00:52 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.34 2026/06/01 07:14:23 adam Exp $
 include/ngtcp2/ngtcp2.h
 include/ngtcp2/ngtcp2_crypto.h
 include/ngtcp2/ngtcp2_crypto_ossl.h
@@ -10,11 +10,11 @@ lib/cmake/ngtcp2/ngtcp2Targets.cmake
 lib/libngtcp2.a
 lib/libngtcp2.so
 lib/libngtcp2.so.16
-lib/libngtcp2.so.16.8.1
+lib/libngtcp2.so.16.9.0
 lib/libngtcp2_crypto_ossl.a
 lib/libngtcp2_crypto_ossl.so
 lib/libngtcp2_crypto_ossl.so.0
-lib/libngtcp2_crypto_ossl.so.0.2.0
+lib/libngtcp2_crypto_ossl.so.0.2.1
 lib/pkgconfig/libngtcp2.pc
 lib/pkgconfig/libngtcp2_crypto_ossl.pc
 share/doc/ngtcp2/README.rst
