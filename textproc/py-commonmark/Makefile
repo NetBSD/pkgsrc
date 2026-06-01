@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/05/13 10:47:58 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/06/01 19:33:43 adam Exp $
 
-DISTNAME=	commonmark-0.9.1
+DISTNAME=	commonmark-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	3
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/commonmark/}
 
@@ -15,9 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} cmark cmark-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	cmark
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
