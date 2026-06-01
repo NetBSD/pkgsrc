@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/10/18 15:12:06 mef Exp $
+$NetBSD: distinfo,v 1.10 2026/06/01 22:18:37 mef Exp $
 
-BLAKE2s (R/gert_2.1.4.tar.gz) = 7b43d2f436d76628d745d6a87ae44d7e80e9e1056bdc340a6c4e49e933076670
-SHA512 (R/gert_2.1.4.tar.gz) = 81a426dad91373fa82f4f287d3089fb2de680887280e8098a81a678e725a1aab9027d7eb2ef10a1f49e3a5c336590df2fa19ac1043748a5d685298f63bbe5e6f
-Size (R/gert_2.1.4.tar.gz) = 122659 bytes
+BLAKE2s (R/gert_2.3.1.tar.gz) = 222ced5414d9aea2a7b97943c1dafc98beb21eeb2366cca47fd63ec03ffda8ea
+SHA512 (R/gert_2.3.1.tar.gz) = 45792eae15f84ab105f7acbb5a74030235613f3c92227d46163d867946154104ab29e25a08b2163c0508c44fc438049fe4e440cb14d30bc0ea3a84530f4f9d2b
+Size (R/gert_2.3.1.tar.gz) = 130066 bytes
