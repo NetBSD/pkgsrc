@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3427 2026/06/01 14:05:40 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3428 2026/06/01 14:10:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5290,3 +5290,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/openexr to 3.4.12 [wiz 2026-06-01]
 	Updated devel/MoarVM to 2026.05.1 [mef 2026-06-01]
 	Updated sysutils/fzf to 0.73.1 [wiz 2026-06-01]
+	Updated textproc/p5-Unicode-LineBreak to 2019.001nb8 [wiz 2026-06-01]
