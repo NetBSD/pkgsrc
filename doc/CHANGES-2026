@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3406 2026/06/01 07:28:39 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3407 2026/06/01 07:47:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5261,3 +5261,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/nghttp3 to 1.16.0 [adam 2026-06-01]
 	Updated devel/SDL3 to 3.4.10 [adam 2026-06-01]
 	Updated misc/indi to 2.2.2 [adam 2026-06-01]
+	Updated devel/py-pip to 26.1.2 [adam 2026-06-01]
+	Updated textproc/py-sphinx-autodoc-typehints to 3.10.4 [adam 2026-06-01]
+	Updated graphics/py-tifffile to 2026.6.1 [adam 2026-06-01]
+	Updated misc/py-tibs to 0.9.0 [adam 2026-06-01]
