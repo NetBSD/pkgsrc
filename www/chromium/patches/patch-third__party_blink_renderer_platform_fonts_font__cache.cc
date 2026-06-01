@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.cc,v 1.19 2026/05/10 15:30:04 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.cc,v 1.20 2026/06/01 10:09:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_cache.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- third_party/blink/renderer/platform/fonts/font_cache.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/font_cache.cc
 @@ -80,7 +80,7 @@ const char kMonoEmojiLocale[] = "und-Zsy
  extern const char kNotoColorEmojiCompat[] = "Noto Color Emoji Compat";

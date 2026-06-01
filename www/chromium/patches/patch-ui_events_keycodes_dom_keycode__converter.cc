@@ -1,17 +1,17 @@
-$NetBSD: patch-ui_events_keycodes_dom_keycode__converter.cc,v 1.19 2026/05/10 15:30:07 kikadf Exp $
+$NetBSD: patch-ui_events_keycodes_dom_keycode__converter.cc,v 1.20 2026/06/01 10:09:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/events/keycodes/dom/keycode_converter.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- ui/events/keycodes/dom/keycode_converter.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ ui/events/keycodes/dom/keycode_converter.cc
 @@ -14,7 +14,7 @@
  #include "ui/events/keycodes/dom/dom_code.h"
  #include "ui/events/keycodes/dom/dom_key.h"
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FREEBSD)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FREEBSD) || BUILDFLAG(IS_NETBSD)
  #include <linux/input.h>
  #endif
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ui_events_keycodes_dom_keycode__converter.cc,v 1.19 2026/05/10 15
  #undef DOM_KEY_MAP_DECLARATION_END
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FREEBSD)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FREEBSD)  || BUILDFLAG(IS_NETBSD)
  
  // The offset between XKB Keycode and evdev code.
  constexpr int kXkbKeycodeOffset = 8;
@@ -38,7 +38,7 @@ $NetBSD: patch-ui_events_keycodes_dom_keycode__converter.cc,v 1.19 2026/05/10 15
  }
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FREEBSD)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FREEBSD) || BUILDFLAG(IS_NETBSD)
  // static
  DomCode KeycodeConverter::XkbKeycodeToDomCode(uint32_t xkb_keycode) {
    // Currently XKB keycode is the native keycode.

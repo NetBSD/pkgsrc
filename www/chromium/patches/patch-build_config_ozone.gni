@@ -1,10 +1,10 @@
-$NetBSD: patch-build_config_ozone.gni,v 1.19 2026/05/10 15:29:48 kikadf Exp $
+$NetBSD: patch-build_config_ozone.gni,v 1.20 2026/06/01 10:09:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/ozone.gni.orig	2026-04-28 23:05:57.000000000 +0200
+--- build/config/ozone.gni.orig	2026-05-26 20:39:02.000000000 +0000
 +++ build/config/ozone.gni
 @@ -80,7 +80,19 @@ declare_args() {
        ozone_platform = "x11"
@@ -21,7 +21,7 @@ $NetBSD: patch-build_config_ozone.gni,v 1.19 2026/05/10 15:29:48 kikadf Exp $
 +      ozone_platform_x11 = true
 +    } else if (is_netbsd) {
 +      ozone_platform = "x11"
-+      ozone_platform_wayland = false
++      ozone_platform_wayland = true
 +      ozone_platform_x11 = true
 +    } else if (is_freebsd) {
        ozone_platform = "x11"

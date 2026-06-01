@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2026/05/14 16:42:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.58 2026/06/01 10:09:03 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			148.0.7778.167
-PKGREVISION=			1
+VERSION=			148.0.7778.215
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -13,7 +12,7 @@ DISTFILES+=			${DISTNAME}-lite${EXTRACT_SUFX_C}
 #DISTFILES+=			${PROFILE_DISTFILES}
 
 # Sources to build on NetBSD
-NB_VERSION=			v148.0
+NB_VERSION=			v148.2
 GITHUB_SUBMODULES=		kikadf chromium-nb ${NB_VERSION} ./
 
 # rollup
@@ -125,6 +124,7 @@ SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
 SUBST_FILES.path+=	third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp
 SUBST_FILES.path+=	third_party/perfetto/src/base/utils.cc
 SUBST_FILES.path+=	third_party/test_fonts/fontconfig/BUILD.gn
+SUBST_FILES.path+=	third_party/wayland/BUILD.gn
 SUBST_FILES.path+=	v8/tools/run-paxctl.py
 SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE PYTHONBIN
 
@@ -201,6 +201,7 @@ GN_ARGS+=	use_sysroot=false
 GN_ARGS+=	use_system_freetype=true
 GN_ARGS+=	use_system_harfbuzz=true
 GN_ARGS+=	use_system_libdrm=true
+GN_ARGS+=	use_system_libffi=true
 GN_ARGS+=	use_system_libjpeg=true #libjpeg-turbo
 GN_ARGS+=	use_thin_lto=false
 GN_ARGS+=	use_udev=true
@@ -389,7 +390,9 @@ do-install:
 .include "../../audio/speech-dispatcher/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
+.include "../../devel/input-headers/buildlink3.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/libudev-bsd/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"

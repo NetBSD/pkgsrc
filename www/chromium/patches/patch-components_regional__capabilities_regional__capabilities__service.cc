@@ -1,10 +1,10 @@
-$NetBSD: patch-components_regional__capabilities_regional__capabilities__service.cc,v 1.8 2026/05/10 15:29:56 kikadf Exp $
+$NetBSD: patch-components_regional__capabilities_regional__capabilities__service.cc,v 1.9 2026/06/01 10:09:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/regional_capabilities/regional_capabilities_service.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- components/regional_capabilities/regional_capabilities_service.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ components/regional_capabilities/regional_capabilities_service.cc
 @@ -413,7 +413,7 @@ bool RegionalCapabilitiesService::IsInSe
        .choice_screen_eligibility_config.has_value();

@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_sandbox__host__linux.cc,v 1.19 2026/05/10 15:29:57 kikadf Exp $
+$NetBSD: patch-content_browser_sandbox__host__linux.cc,v 1.20 2026/06/01 10:09:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/sandbox_host_linux.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- content/browser/sandbox_host_linux.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ content/browser/sandbox_host_linux.cc
 @@ -45,6 +45,7 @@ void SandboxHostLinux::Init() {
    // Instead, it replies on a temporary socket provided by the caller.

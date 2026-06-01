@@ -1,10 +1,10 @@
-$NetBSD: patch-rollup_rust_bindings__napi_src_lib.rs,v 1.5 2026/05/10 15:30:02 kikadf Exp $
+$NetBSD: patch-rollup_rust_bindings__napi_src_lib.rs,v 1.6 2026/06/01 10:09:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- rollup/rust/bindings_napi/src/lib.rs.orig	2024-09-21 08:00:56.000000000 +0200
+--- rollup/rust/bindings_napi/src/lib.rs.orig	2024-09-21 06:00:56.000000000 +0000
 +++ rollup/rust/bindings_napi/src/lib.rs
 @@ -4,6 +4,9 @@ use parse_ast::parse_ast;
  

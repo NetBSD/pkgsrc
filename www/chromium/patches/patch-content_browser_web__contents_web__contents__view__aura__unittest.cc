@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_web__contents_web__contents__view__aura__unittest.cc,v 1.19 2026/05/10 15:29:58 kikadf Exp $
+$NetBSD: patch-content_browser_web__contents_web__contents__view__aura__unittest.cc,v 1.20 2026/06/01 10:09:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/web_contents/web_contents_view_aura_unittest.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- content/browser/web_contents/web_contents_view_aura_unittest.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ content/browser/web_contents/web_contents_view_aura_unittest.cc
 @@ -42,7 +42,7 @@
  #include "ui/base/dragdrop/os_exchange_data_provider_win.h"

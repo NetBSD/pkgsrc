@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_ui__base__features.cc,v 1.19 2026/05/10 15:30:07 kikadf Exp $
+$NetBSD: patch-ui_base_ui__base__features.cc,v 1.20 2026/06/01 10:09:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_features.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- ui/base/ui_base_features.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ ui/base/ui_base_features.cc
 @@ -169,7 +169,7 @@ BASE_FEATURE(kUiCompositorUsesLayerLists
  // Enables the use of a touch fling curve that is based on the behavior of

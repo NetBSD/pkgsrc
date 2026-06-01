@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_api_api.cc,v 1.19 2026/05/10 15:30:09 kikadf Exp $
+$NetBSD: patch-v8_src_api_api.cc,v 1.20 2026/06/01 10:09:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/api/api.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- v8/src/api/api.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ v8/src/api/api.cc
 @@ -167,7 +167,7 @@
  

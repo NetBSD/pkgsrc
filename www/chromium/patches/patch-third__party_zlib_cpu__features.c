@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_zlib_cpu__features.c,v 1.20 2026/05/10 15:30:06 kikadf Exp $
+$NetBSD: patch-third__party_zlib_cpu__features.c,v 1.21 2026/06/01 10:09:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/zlib/cpu_features.c.orig	2026-04-28 23:05:57.000000000 +0200
+--- third_party/zlib/cpu_features.c.orig	2026-05-26 20:39:02.000000000 +0000
 +++ third_party/zlib/cpu_features.c
 @@ -39,7 +39,9 @@ int ZLIB_INTERNAL riscv_cpu_enable_vclmu
  #ifndef CPU_NO_SIMD

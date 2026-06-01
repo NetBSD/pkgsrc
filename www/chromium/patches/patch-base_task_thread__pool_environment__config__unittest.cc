@@ -1,10 +1,10 @@
-$NetBSD: patch-base_task_thread__pool_environment__config__unittest.cc,v 1.19 2026/05/10 15:29:48 kikadf Exp $
+$NetBSD: patch-base_task_thread__pool_environment__config__unittest.cc,v 1.20 2026/06/01 10:09:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/task/thread_pool/environment_config_unittest.cc.orig	2026-04-28 23:05:57.000000000 +0200
+--- base/task/thread_pool/environment_config_unittest.cc.orig	2026-05-26 20:39:02.000000000 +0000
 +++ base/task/thread_pool/environment_config_unittest.cc
 @@ -14,7 +14,7 @@ TEST(ThreadPoolEnvironmentConfig, CanUse
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE)
