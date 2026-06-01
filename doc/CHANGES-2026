@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3420 2026/06/01 13:34:14 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3421 2026/06/01 13:43:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5283,3 +5283,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/libxkbcommon to 1.13.2 [wiz 2026-06-01]
 	Updated x11/libxkbcommon-docs to 1.13.2 [wiz 2026-06-01]
 	Updated textproc/py-docutils to 0.23 [wiz 2026-06-01]
+	Updated www/py-google-api-python-client to 2.197.0 [wiz 2026-06-01]
