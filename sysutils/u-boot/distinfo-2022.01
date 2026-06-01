@@ -1,8 +1,9 @@
-$NetBSD: distinfo-2022.01,v 1.7 2025/12/13 01:10:23 gutteridge Exp $
+$NetBSD: distinfo-2022.01,v 1.8 2026/06/01 08:56:16 rxg Exp $
 
 BLAKE2s (u-boot-2022.01.tar.bz2) = 54855aa008e78886dd48a25042eebedb1aee301571e578325131ed93d248c329
 SHA512 (u-boot-2022.01.tar.bz2) = d83c62bd8f0f51664d2aca329a3ce1379cfd1dfff439dccd6cfc2cb33cfef89a2b01855c97716f591b5550bfdf99e2f3aef7efa33f2e7834c820648f9eef3825
 Size (u-boot-2022.01.tar.bz2) = 17449627 bytes
+SHA1 (patch-arch_arm_dts_imx8mq-phanbell.dts) = e6c825a2bb3da2751d84f120fb8e6ff9a346965c
 SHA1 (patch-arch_arm_dts_rk3399-nanopi-r4s-u-boot.dtsi) = b7897443ab3800c1dfd2eeb32d6f155a87bd8776
 SHA1 (patch-arch_arm_lib_interrupts__64.c) = 09100688f4ba5848de5c3ed301a36d9e66a1fab7
 SHA1 (patch-arch_arm_mach-rockchip_rk3399_rk3399.c) = caa4068c635eaef5997501e154ec5cb11dcbf490
@@ -15,6 +16,7 @@ SHA1 (patch-configs_rockpro64-rk3399_defconfig) = d42aba165cb4aca635e514177f43bf
 SHA1 (patch-drivers_pci_pcie__rockchip.c) = 5ead0933261b2cef81cd317df478e47ecc0382d4
 SHA1 (patch-drivers_usb_host_usb-uclass.c) = 754504a9dc08f888a4ef09f5ccc3cb56b5ce297a
 SHA1 (patch-include_config_distro_bootcmd.h) = d37da930903d9d80829ac3cd0da98334057b6188
+SHA1 (patch-include_configs_imx8mq__phanbell.h) = 9b4fda48dcb22c0491cbf746e69d4ea908a0dcdd
 SHA1 (patch-include_configs_rockchip-common.h) = d9aa111ec38f2f8ad64c45d42d3bc5519e27382d
 SHA1 (patch-include_configs_rockpro64_rk3399.h) = 7efd0b09cbf627dc59d2a23a76dd6506c9efc4c9
 SHA1 (patch-scripts_dtc_pylibfdt_Makefile) = fc3fb6c2aa6ad8e71aecb30839c9e474adcf5229
