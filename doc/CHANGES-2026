@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3429 2026/06/01 14:14:28 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3430 2026/06/01 14:16:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5292,3 +5292,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/fzf to 0.73.1 [wiz 2026-06-01]
 	Updated textproc/p5-Unicode-LineBreak to 2019.001nb8 [wiz 2026-06-01]
 	Updated graphics/libjxl to 0.11.2nb1 [wiz 2026-06-01]
+	Updated converters/p5-Sereal-Decoder to 5.006 [wiz 2026-06-01]
