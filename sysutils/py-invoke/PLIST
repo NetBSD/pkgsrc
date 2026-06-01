@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/10/20 07:59:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/06/01 19:42:52 adam Exp $
 bin/inv-${PYVERSSUFFIX}
 bin/invoke-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -13,9 +13,6 @@ ${PYSITELIB}/invoke/__init__.pyo
 ${PYSITELIB}/invoke/__main__.py
 ${PYSITELIB}/invoke/__main__.pyc
 ${PYSITELIB}/invoke/__main__.pyo
-${PYSITELIB}/invoke/_version.py
-${PYSITELIB}/invoke/_version.pyc
-${PYSITELIB}/invoke/_version.pyo
 ${PYSITELIB}/invoke/collection.py
 ${PYSITELIB}/invoke/collection.pyc
 ${PYSITELIB}/invoke/collection.pyo
