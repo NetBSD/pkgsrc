@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2026/05/24 17:52:40 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2026/06/01 10:45:12 wiz Exp $
 
-DISTNAME=	Template-Toolkit-3.103
+DISTNAME=	Template-Toolkit-3.106
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TO/TODDR/}
