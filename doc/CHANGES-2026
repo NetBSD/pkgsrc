@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3437 2026/06/01 20:21:26 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3438 2026/06/01 21:50:38 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5307,3 +5307,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nodejs to 26.3.0 [adam 2026-06-01]
 	Updated www/py-python-multipart to 0.0.30 [adam 2026-06-01]
 	Updated net/py-ncclient to 0.7.1 [adam 2026-06-01]
+	Updated devel/R-clipr to 0.8.1 [mef 2026-06-01]
