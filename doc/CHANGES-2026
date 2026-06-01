@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3413 2026/06/01 10:54:00 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3414 2026/06/01 11:00:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5273,3 +5273,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/p5-Template-Toolkit to 3.106 [wiz 2026-06-01]
 	Updated math/octave to 11.2.0 [adam 2026-06-01]
 	Updated devel/py-test-run-parallel to 0.9.0 [adam 2026-06-01]
+	Updated devel/py-serpent to 1.43 [adam 2026-06-01]
+	Updated devel/py-pyelftools to 0.33 [adam 2026-06-01]
