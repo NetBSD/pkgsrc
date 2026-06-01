@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3415 2026/06/01 11:05:51 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3416 2026/06/01 12:03:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5276,3 +5276,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-serpent to 1.43 [adam 2026-06-01]
 	Updated devel/py-pyelftools to 0.33 [adam 2026-06-01]
 	Updated graphics/libheif to 1.23.0 [wiz 2026-06-01]
+	Updated devel/py-ruff to 0.15.15 [adam 2026-06-01]
+	Updated devel/py-uv to 0.11.17 [adam 2026-06-01]
+	Updated devel/py-uv-build to 0.11.17 [adam 2026-06-01]

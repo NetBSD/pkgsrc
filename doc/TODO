@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27326 2026/06/01 11:05:51 wiz Exp $
+$NetBSD: TODO,v 1.27327 2026/06/01 12:03:03 adam Exp $
 
 Suggested new packages
 ======================
@@ -1153,7 +1153,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pdm-2.26.8
 	o py-postgresql-5.1.2
 	o py-rpds-py-2026.5.1
-	o py-ruff-0.15.15
 	o py-simpletal-5.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
@@ -1162,7 +1161,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-torch-2.10
 	o py-typer-0.26.4
 	o py-uliweb-0.6
-	o py-uv-build-0.11.17
 	o py-wat-0.6.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
