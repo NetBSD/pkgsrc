@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1 2026/04/21 21:15:13 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2026/06/01 13:31:40 wiz Exp $
 # used by x11/libxkbcommon-docs/Makefile
 
-DISTNAME=	xkbcommon-1.13.1
+DISTNAME=	xkbcommon-1.13.2
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xkbcommon/}

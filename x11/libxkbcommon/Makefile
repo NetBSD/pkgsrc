@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2026/04/22 06:26:19 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2026/06/01 13:31:40 wiz Exp $
 
 .include "Makefile.common"
-
-PKGREVISION=	2
 
 MESON_ARGS+=	-Denable-docs=false
 
