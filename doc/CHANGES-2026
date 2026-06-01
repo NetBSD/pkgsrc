@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3422 2026/06/01 13:43:59 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3423 2026/06/01 13:50:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5285,3 +5285,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-docutils to 0.23 [wiz 2026-06-01]
 	Updated www/py-google-api-python-client to 2.197.0 [wiz 2026-06-01]
 	Updated www/py-idna to 3.17 [wiz 2026-06-01]
+	Updated devel/py-rpds-py to 2026.5.1 [wiz 2026-06-01]
