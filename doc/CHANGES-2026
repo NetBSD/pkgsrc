@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3455 2026/06/02 11:43:33 jun Exp $
+$NetBSD: CHANGES-2026,v 1.3456 2026/06/02 11:52:28 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5327,3 +5327,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/pingy to 0.1.10 [pin 2026-06-02]
 	Added devel/yaks version 0.2.0 [schmonz 2026-06-02]
 	Updated emulators/nono to 1.8.0 [jun 2026-06-02]
+	Updated wayland/xwayland to 24.1.12 [kikadf 2026-06-02]
