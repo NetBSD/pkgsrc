@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3444 2026/06/02 05:11:20 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3445 2026/06/02 09:15:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5315,3 +5315,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/R-git2r to 0.36.2 [mef 2026-06-01]
 	Updated math/fast_float to 8.2.6 [adam 2026-06-02]
 	Updated www/py-aiohttp to 3.14.0 [adam 2026-06-02]
+	Updated net/freeradius to 3.2.9 [adam 2026-06-02]
+	Updated devel/py-debugpy to 1.8.21 [adam 2026-06-02]
