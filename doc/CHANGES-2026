@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3467 2026/06/02 17:39:54 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.3468 2026/06/02 18:05:00 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5339,3 +5339,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated meta-pkgs/lxqt to 2.4.0nb1 [pin 2026-06-02]
 	Updated lang/sbcl to 2.6.5 [ktnb 2026-06-02]
 	Updated geography/qgis to 3.44.11 [gdt 2026-06-02]
+	Updated geography/py-gnssutils to 1.2.2 [gdt 2026-06-02]
