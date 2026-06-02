@@ -1,0 +1,7 @@
+yx (yaks) is a command-line tool for managing a shared TODO list as a
+tree of nested goals. It's designed for teams -- humans and AI agents
+working together on the same codebase.
+
+Everyone on the team works from the same yak map. Changes sync through
+git with zero merge conflicts, so you never have to coordinate who's
+updating the plan.
