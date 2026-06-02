@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3464 2026/06/02 14:03:15 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3465 2026/06/02 14:04:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5336,3 +5336,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/tailscale to 1.98.5 [ktnb 2026-06-02]
 	Updated wayland/lxqt-wayland-session to 0.4.1 [pin 2026-06-02]
 	Updated x11/lxqt-panel to 2.4.1 [pin 2026-06-02]
+	Updated meta-pkgs/lxqt to 2.4.0nb1 [pin 2026-06-02]
