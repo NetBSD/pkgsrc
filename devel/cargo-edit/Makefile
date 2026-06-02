@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2026/04/19 17:35:10 pin Exp $
+# $NetBSD: Makefile,v 1.13 2026/06/02 11:01:49 pin Exp $
 
-DISTNAME=	cargo-edit-0.13.10
+DISTNAME=	cargo-edit-0.13.11
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=killercup/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/killercup/cargo-edit/
 COMMENT=	Utility for managing cargo dependencies from the command line
 LICENSE=	mit
@@ -17,9 +17,8 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
-#RUST_REQ=	1.95.0
-#Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.95.0 on amd64
+RUST_REQ=	1.92.0
+
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 
