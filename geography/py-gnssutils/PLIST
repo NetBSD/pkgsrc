@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/05/09 11:47:05 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/06/02 18:04:55 gdt Exp $
 bin/gnssmqttclient
 bin/gnssntripclient
 bin/gnssserver
@@ -79,6 +79,12 @@ ${PYSITELIB}/pygnssutils/rinex_globals.pyo
 ${PYSITELIB}/pygnssutils/rinex_helpers.py
 ${PYSITELIB}/pygnssutils/rinex_helpers.pyc
 ${PYSITELIB}/pygnssutils/rinex_helpers.pyo
+${PYSITELIB}/pygnssutils/rinex_subframes_bds.py
+${PYSITELIB}/pygnssutils/rinex_subframes_bds.pyc
+${PYSITELIB}/pygnssutils/rinex_subframes_bds.pyo
+${PYSITELIB}/pygnssutils/rinex_subframes_gal.py
+${PYSITELIB}/pygnssutils/rinex_subframes_gal.pyc
+${PYSITELIB}/pygnssutils/rinex_subframes_gal.pyo
 ${PYSITELIB}/pygnssutils/rinex_subframes_gps.py
 ${PYSITELIB}/pygnssutils/rinex_subframes_gps.pyc
 ${PYSITELIB}/pygnssutils/rinex_subframes_gps.pyo
