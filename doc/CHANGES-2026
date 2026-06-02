@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3462 2026/06/02 13:48:51 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.3463 2026/06/02 14:01:54 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5334,3 +5334,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added security/p5-Crypt-OpenSSL-X509 version 2.0.1 [taca 2026-06-02]
 	Added security/p5-Data-Password version 1.12 [taca 2026-06-02]
 	Updated net/tailscale to 1.98.5 [ktnb 2026-06-02]
+	Updated wayland/lxqt-wayland-session to 0.4.1 [pin 2026-06-02]
