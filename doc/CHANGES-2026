@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3452 2026/06/02 11:07:22 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3453 2026/06/02 11:08:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5324,3 +5324,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/broot to 1.57.0 [pin 2026-06-02]
 	Updated sysutils/parallel-disk-usage to 0.24.0 [pin 2026-06-02]
 	Updated textproc/rumdl to 0.2.5 [pin 2026-06-02]
+	Updated net/pingy to 0.1.10 [pin 2026-06-02]
