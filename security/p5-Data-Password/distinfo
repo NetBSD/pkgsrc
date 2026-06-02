@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/06/02 13:26:17 taca Exp $
+
+BLAKE2s (Data-Password-1.12.tar.gz) = 2b19ce5dd23e74aebf1815c4a1ef2a0820bff88dcd8203d32919be1c9038a0c5
+SHA512 (Data-Password-1.12.tar.gz) = bc7e8c31d1b9f6e986cd012a26f268f1c5924fa6743b32d2ed5770f6749390325874ce4bb01888b239cdcc8df85a714796a3adc2b2b5ffb70770435687b7cbcf
+Size (Data-Password-1.12.tar.gz) = 6008 bytes
