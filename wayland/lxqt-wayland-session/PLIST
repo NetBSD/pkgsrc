@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/05/02 04:25:54 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/06/02 14:01:31 pin Exp $
 bin/lxqt-qdbus
 bin/startlxqtwayland
 man/man1/lxqt-wayland-session.1
@@ -13,7 +13,7 @@ share/lxqt/wayland/labwc/menu.xml
 share/lxqt/wayland/labwc/rc.xml
 share/lxqt/wayland/labwc/themerc
 share/lxqt/wayland/labwc/themerc-override
-share/lxqt/wayland/lxqt-hyprland.conf
+share/lxqt/wayland/lxqt-hyprland.lua
 share/lxqt/wayland/lxqt-niri.kdl
 share/lxqt/wayland/lxqt-niri.kdl.full
 share/lxqt/wayland/lxqt-river-init

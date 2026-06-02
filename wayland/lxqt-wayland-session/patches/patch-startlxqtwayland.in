@@ -1,11 +1,11 @@
-$NetBSD: patch-startlxqtwayland.in,v 1.1 2026/05/02 04:25:55 pin Exp $
+$NetBSD: patch-startlxqtwayland.in,v 1.2 2026/06/02 14:01:31 pin Exp $
 
 * Set fallback XDG_RUNTIME_DIR and create if not exist
-* Launch to compositors with seatd-launch 
+* Launch to compositors with seatd-launch
 
---- startlxqtwayland.in.orig	2026-04-03 07:03:01.439375253 +0000
+--- startlxqtwayland.in.orig	2026-06-02 12:09:16.561707532 +0000
 +++ startlxqtwayland.in
-@@ -11,6 +11,14 @@ if [ -z "$XDG_DATA_HOME" ]; then
+@@ -11,6 +11,14 @@ fi
      export XDG_DATA_HOME="$HOME/.local/share"
  fi
  
@@ -46,7 +46,7 @@ $NetBSD: patch-startlxqtwayland.in,v 1.1 2026/05/02 04:25:55 pin Exp $
  
  elif [ "$COMPOSITOR" = "kwin_wayland" ]; then
      # Style KDE's QML apps like systemsettings
-@@ -139,7 +147,7 @@ elif [ "$COMPOSITOR" = "kwin_wayland" ];
+@@ -139,7 +147,7 @@ elif [ "$COMPOSITOR" = "kwin_wayland" ]; then
          fi
      fi
      # WARNING: Option '--no-kactivities' can result in crashes with animations and corner actions.
@@ -64,7 +64,7 @@ $NetBSD: patch-startlxqtwayland.in,v 1.1 2026/05/02 04:25:55 pin Exp $
  
  elif [ "$COMPOSITOR" = "sway" ]; then
      if [ ! -f "$XDG_CONFIG_HOME/lxqt/wayland/lxqt-sway.config" ]; then
-@@ -161,7 +169,7 @@ elif [ "$COMPOSITOR" = "sway" ]; then
+@@ -161,14 +169,14 @@ elif [ "$COMPOSITOR" = "sway" ]; then
          sed -i "/input \"type\:keyboard\"/a $layout" $XDG_CONFIG_HOME/lxqt/wayland/lxqt-sway.config
          fi
      fi
@@ -72,17 +72,25 @@ $NetBSD: patch-startlxqtwayland.in,v 1.1 2026/05/02 04:25:55 pin Exp $
 +    exec seatd-launch $COMPOSITOR -c $XDG_CONFIG_HOME/lxqt/wayland/lxqt-sway.config
  
  elif [ "$COMPOSITOR" = "Hyprland" ]; then
-     if [ ! -f "$XDG_CONFIG_HOME/lxqt/wayland/lxqt-hyprland.conf" ]; then
-@@ -174,7 +182,7 @@ elif [ "$COMPOSITOR" = "Hyprland" ]; the
-     # workaround for cursor
-     export X$(cat $XDG_CONFIG_HOME/lxqt/session.conf|grep cursor_size| tr 'a-z' 'A-Z')
-     export X$(cat $XDG_CONFIG_HOME/lxqt/session.conf|grep cursor_theme| tr 'a-z' 'A-Z')
--    exec start-hyprland -- -c $XDG_CONFIG_HOME/lxqt/wayland/lxqt-hyprland.conf
-+    exec seatd-launch start-hyprland -- -c $XDG_CONFIG_HOME/lxqt/wayland/lxqt-hyprland.conf
+     if [  -f "$XDG_CONFIG_HOME/lxqt/wayland/lxqt-hyprland.conf" ]; then
+         # workaround for cursor
+         export X$(cat $XDG_CONFIG_HOME/lxqt/session.conf|grep cursor_size| tr 'a-z' 'A-Z')
+         export X$(cat $XDG_CONFIG_HOME/lxqt/session.conf|grep cursor_theme| tr 'a-z' 'A-Z')
+-        exec start-hyprland -- -c $XDG_CONFIG_HOME/lxqt/wayland/lxqt-hyprland.conf
++        exec seatd-launch start-hyprland -- -c $XDG_CONFIG_HOME/lxqt/wayland/lxqt-hyprland.conf
+     else
+         if [ ! -f "$XDG_CONFIG_HOME/lxqt/wayland/lxqt-hyprland.lua" ]; then
+             cp "$share_dir"/lxqt/wayland/lxqt-hyprland.lua "$XDG_CONFIG_HOME"/lxqt/wayland/
+@@ -176,7 +184,7 @@ elif [ "$COMPOSITOR" = "Hyprland" ]; then
+                 sed -i "s/= \"us\",/= \"$trylayout\",/g" "$XDG_CONFIG_HOME/lxqt/wayland/lxqt-hyprland.lua"
+             fi
+         fi
+-        exec start-hyprland -- -c $XDG_CONFIG_HOME/lxqt/wayland/lxqt-hyprland.lua
++        exec seatd-launch start-hyprland -- -c $XDG_CONFIG_HOME/lxqt/wayland/lxqt-hyprland.lua
+     fi
  
  elif [ "$COMPOSITOR" = "river" ]; then
-     if [ ! -f "$XDG_CONFIG_HOME/lxqt/wayland/lxqt-river-init" ]; then
-@@ -185,10 +193,10 @@ elif [ "$COMPOSITOR" = "river" ]; then
+@@ -188,10 +196,10 @@ elif [ "$COMPOSITOR" = "river" ]; then
              sed -i "s/riverctl keyboard-layout us/$layout/" "$XDG_CONFIG_HOME/lxqt/wayland/lxqt-river-init"
          fi
      fi
