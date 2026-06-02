@@ -1,21 +1,11 @@
-$NetBSD: distinfo,v 1.91 2026/05/27 22:21:52 gdt Exp $
+$NetBSD: distinfo,v 1.92 2026/06/02 17:39:47 gdt Exp $
 
-BLAKE2s (qgis-3.44.10.tar.bz2) = e20b984ed03bf133a083a4a4648220bc23b8730b5c3a2ba343b7df13185186cf
-SHA512 (qgis-3.44.10.tar.bz2) = 0cf3bd7c56c82afe3d7f3844669b7fd257c7af84631669f8cec70e5347cc6e1930a33b33072a0e5985c6201b13209a704d6ac2641b976627952b08f7e6aebf5d
-Size (qgis-3.44.10.tar.bz2) = 191960210 bytes
+BLAKE2s (qgis-3.44.11.tar.bz2) = ff2c2403fc51f88a4273b211e2e3265b7044d476361755ec8f5de65894a4ded2
+SHA512 (qgis-3.44.11.tar.bz2) = 527655432f0569ec5c7e5da7b5bd53d038857d37462bae2c178a49779a62089102c538fc359daf789ad1fc7b848aa8a28d9374a7618a1bd1860b2158a938e6b5
+Size (qgis-3.44.11.tar.bz2) = 192129869 bytes
 SHA1 (patch-cmake_FindQwt.cmake) = 245463bc44fb4f2cb4aa61a8b86931e95e4ac820
-SHA1 (patch-external_mdal_frmts_mdal__gdal.cpp) = 82a1b5257087efcbe3aabd5e8fa9b0e17399c033
 SHA1 (patch-external_nmea_tok.c) = 94b9ce398787170250fc5fbd8835d7d7fa1cd013
 SHA1 (patch-mac_CMakeLists.txt) = 09986d53737b2825bf53e03173e3eab55d6d19c0
 SHA1 (patch-mac_cmake_1qt.cmake.in) = d74f7201849ef6dd83f39251e466eb04c791c0e6
-SHA1 (patch-src_analysis_processing_qgsalgorithmimportphotos.cpp) = 6d092b020d4e5a410cef8a02cf6dc0f3019552f5
-SHA1 (patch-src_core_providers_gdal_qgsgdalprovider.cpp) = 695af870aa61a125cbd7badfc2afa2b6343a5a10
-SHA1 (patch-src_core_providers_ogr_qgsogrproviderconnection.cpp) = 5809502247da91d6fb0dda1ca471b49049f3261f
-SHA1 (patch-src_core_providers_ogr_qgsogrprovidermetadata.cpp) = dbdd672e8ccfba8626420e54c627918869365742
 SHA1 (patch-src_core_qgsapplication.cpp) = ca9e193cc4c7b275463e6e74b80594e6390187b8
-SHA1 (patch-src_core_qgsgdalutils.cpp) = 4eff702ced62ec4abfc12372575b046a37f3c818
-SHA1 (patch-src_core_qgsogrutils.cpp) = 0c2118461c5e4a810e55e179b91d96d079650b78
-SHA1 (patch-src_core_qgsogrutils.h) = d60ac451db8202c60f3ed2f8873dd2be324e9d32
-SHA1 (patch-src_core_qgsvectorfilewriter.cpp) = 2f7249ebffa9e61f7ee0199a5485acc9fb55202e
-SHA1 (patch-src_core_raster_qgsrasterfilewriter.cpp) = b193a227822e09943adea1962bc9c0f53a5b2118
 SHA1 (patch-src_crssync_CMakeLists.txt) = 7269ba6dce3ca41f5d63d36ffc02ffc6d0cea5d8
