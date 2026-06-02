@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2024/06/05 22:44:57 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/06/02 23:41:28 gdt Exp $
 
 VERSION=		1.0.4
 DISTNAME=		fuse-python-${VERSION}
 PKGNAME=		${PYPKGPREFIX}-fuse-bindings-${VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		filesystems python
 MASTER_SITES=		${MASTER_SITE_PYPI:=f/fuse-python/}
 
@@ -27,7 +27,10 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/example/xmp.py \
 		${DESTDIR}${PREFIX}/${EGDIR}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
+
+# \todo Explain what's going on and why.
 .include "../../mk/fuse.buildlink3.mk"
 #.include "../../filesystems/fuse/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
