@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3450 2026/06/02 11:05:18 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3451 2026/06/02 11:06:21 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5322,3 +5322,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/feluda to 1.13.0 [pin 2026-06-02]
 	Updated sysutils/treegrep to 2.1.1 [pin 2026-06-02]
 	Updated sysutils/broot to 1.57.0 [pin 2026-06-02]
+	Updated sysutils/parallel-disk-usage to 0.24.0 [pin 2026-06-02]
