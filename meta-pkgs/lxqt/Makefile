@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2026/05/02 12:41:52 pin Exp $
+# $NetBSD: Makefile,v 1.49 2026/06/02 14:03:52 pin Exp $
 
 PKGNAME=	lxqt-2.4.0
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -36,13 +37,13 @@ DEPENDS+=	lxqt-session>=2.4.0:../../x11/lxqt-session
 DEPENDS+=	lxqt-sudo>=2.4.0:../../security/lxqt-sudo
 DEPENDS+=	pcmanfm-qt>=2.4.0:../../sysutils/pcmanfm-qt
 DEPENDS+=	qterminal>=2.4.0:../../x11/qterminal
-DEPENDS+=	lxqt-panel>=2.4.0:../../x11/lxqt-panel
+DEPENDS+=	lxqt-panel>=2.4.1:../../x11/lxqt-panel
 DEPENDS+=	lxqt-runner>=2.4.0:../../x11/lxqt-runner
 DEPENDS+=	screengrab>=3.2.0:../../graphics/screengrab
 DEPENDS+=	lxqt-archiver>=1.4.0:../../archivers/lxqt-archiver
 # This needs to be commented out for now as wayland only works on NetBSD >=11.
 # If you want to use LXQt under wayland this is needed.
-#DEPENDS+=	lxqt-wayland-session>=0.4.0:../../wayland/lxqt-wayland-session
+#DEPENDS+=	lxqt-wayland-session>=0.4.1:../../wayland/lxqt-wayland-session
 # The Breeze icon set is the default that LXQt expects, and a compatible icon
 # theme must be present for the DE to be fully usable.
 DEPENDS+=	breeze-icons-[0-9]*:../../graphics/breeze-icons
