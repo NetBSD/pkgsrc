@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1011 2026/06/02 13:23:41 taca Exp $
+# $NetBSD: Makefile,v 1.1012 2026/06/02 13:26:54 taca Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -361,6 +361,7 @@ SUBDIR+=	p5-Crypt-URandom
 SUBDIR+=	p5-Crypt-X509
 SUBDIR+=	p5-CryptX
 SUBDIR+=	p5-Dancer-Plugin-Auth-RBAC
+SUBDIR+=	p5-Data-Password
 SUBDIR+=	p5-Data-Password-passwdqc
 SUBDIR+=	p5-Data-SimplePassword
 SUBDIR+=	p5-Digest-BubbleBabble
