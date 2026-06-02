@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3443 2026/06/01 22:21:31 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3444 2026/06/02 05:11:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5313,3 +5313,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/R-fs to 2.1.0 [mef 2026-06-01]
 	Updated devel/R-gert to 2.3.1 [mef 2026-06-01]
 	Updated devel/R-git2r to 0.36.2 [mef 2026-06-01]
+	Updated math/fast_float to 8.2.6 [adam 2026-06-02]
+	Updated www/py-aiohttp to 3.14.0 [adam 2026-06-02]
