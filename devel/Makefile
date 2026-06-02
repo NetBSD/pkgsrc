@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4632 2026/05/27 10:52:47 markd Exp $
+# $NetBSD: Makefile,v 1.4633 2026/06/02 11:11:54 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3809,6 +3809,7 @@ SUBDIR+=	xsd
 SUBDIR+=	xxgdb
 SUBDIR+=	xxhash
 SUBDIR+=	yajl
+SUBDIR+=	yaks
 SUBDIR+=	yarn
 SUBDIR+=	yasm
 SUBDIR+=	yosys
