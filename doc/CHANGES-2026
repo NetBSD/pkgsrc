@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3445 2026/06/02 09:15:26 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3446 2026/06/02 11:01:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5317,3 +5317,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-aiohttp to 3.14.0 [adam 2026-06-02]
 	Updated net/freeradius to 3.2.9 [adam 2026-06-02]
 	Updated devel/py-debugpy to 1.8.21 [adam 2026-06-02]
+	Updated devel/ast-grep to 0.43.0 [pin 2026-06-02]
