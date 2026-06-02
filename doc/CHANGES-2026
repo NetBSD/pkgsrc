@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3453 2026/06/02 11:08:24 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3454 2026/06/02 11:12:01 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5325,3 +5325,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/parallel-disk-usage to 0.24.0 [pin 2026-06-02]
 	Updated textproc/rumdl to 0.2.5 [pin 2026-06-02]
 	Updated net/pingy to 0.1.10 [pin 2026-06-02]
+	Added devel/yaks version 0.2.0 [schmonz 2026-06-02]
