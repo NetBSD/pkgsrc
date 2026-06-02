@@ -1,0 +1,14 @@
+$NetBSD: patch-src_Makevars,v 1.1 2026/06/02 22:11:07 mef Exp $
+
+-lexecinfo is required for LIB+= parameter
+
+--- src/Makevars.orig	2015-08-26 03:36:45.000000000 +0900
++++ src/Makevars	2026-06-03 06:54:32.057336937 +0900
+@@ -1,2 +1,7 @@
+ PKG_LIBS = $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS)
+ PKG_CPPFLAGS = -I../inst/include/
++UNAME:= (shell uname)
++
++ifneq ($(UNAME),Linux)
++PKG_LIBS+= -lexecinfo
++endif

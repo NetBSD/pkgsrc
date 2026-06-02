@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2025/01/04 14:38:30 mef Exp $
+$NetBSD: distinfo,v 1.7 2026/06/02 22:11:07 mef Exp $
 
 BLAKE2s (R/bayesm_3.1-6.tar.gz) = 827a7068a8b69af8e57e989949e5ec0d16ec0f7ab76db371d60bac95db4bca89
 SHA512 (R/bayesm_3.1-6.tar.gz) = d953b44153bec423554e08562aca8f49cbb361a0b2931d555a611dc510b232a452107c6573dd17047bb2eaf10d81dd53689ec8fe444dc0c22d66bb00ba919734
 Size (R/bayesm_3.1-6.tar.gz) = 2267618 bytes
+SHA1 (patch-src_Makevars) = 57e00bdce3a5dbe173e82af41fdcfedddc71ccda
