@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_perfetto_src_tracing_platform__posix.cc,v 1.20 2026/06/01 10:09:21 kikadf Exp $
+$NetBSD: patch-third__party_perfetto_src_tracing_platform__posix.cc,v 1.21 2026/06/02 23:06:43 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
@@ -22,7 +22,7 @@ $NetBSD: patch-third__party_perfetto_src_tracing_platform__posix.cc,v 1.20 2026/
 -    PERFETTO_BUILDFLAG(PERFETTO_OS_FREEBSD)
 +    PERFETTO_BUILDFLAG(PERFETTO_OS_FREEBSD) || \
 +    PERFETTO_BUILDFLAG(PERFETTO_OS_OPENBSD) || \
-+    PERFETTO_BUILDFLAG(PERFETTO_OS_NETBSD
++    PERFETTO_BUILDFLAG(PERFETTO_OS_NETBSD)
    return std::string(getprogname());
  #else
    return "unknown_producer";
