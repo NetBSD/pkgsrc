@@ -1,4 +1,4 @@
-$NetBSD: patch-src_Makevars,v 1.1 2026/05/21 09:11:08 mef Exp $
+$NetBSD: patch-src_Makevars,v 1.2 2026/06/02 14:26:19 mef Exp $
 
 Rcpp needs the function backtrace_symbols which may be found at
 /usr/lib/libexecinfo.* ( in *BSD OS, I assume) as shown below,
@@ -22,6 +22,6 @@ so the patch
 +
  PKG_CPPFLAGS =	-I../inst/include/
  
-+.if $(UNAME) != "Linux" && $(UNAME) != "SunOS"
++.if $(UNAME) != "Linux"
 +PKG_LIBS = -lexecinfo
 +.endif
