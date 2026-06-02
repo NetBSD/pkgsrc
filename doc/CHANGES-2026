@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3457 2026/06/02 11:52:53 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.3458 2026/06/02 12:18:57 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5329,3 +5329,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/nono to 1.8.0 [jun 2026-06-02]
 	Updated wayland/xwayland to 24.1.12 [kikadf 2026-06-02]
 	Updated x11/copyq to 16.0.0 [kikadf 2026-06-02]
+	Updated net/scaleway-cli to 2.56.1 [leot 2026-06-02]
