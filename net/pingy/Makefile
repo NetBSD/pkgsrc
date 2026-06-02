@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2025/08/06 06:35:44 pin Exp $
+# $NetBSD: Makefile,v 1.2 2026/06/02 11:08:04 pin Exp $
 
-DISTNAME=	pingy-0.1.9
+DISTNAME=	pingy-0.1.10
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=trinhminhtriet/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	https://static.crates.io/crates/pingy/
+EXTRACT_SUFX=	.crate
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/trinhminhtriet/pingy/
