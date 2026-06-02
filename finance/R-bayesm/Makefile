@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/01/04 14:38:30 mef Exp $
+# $NetBSD: Makefile,v 1.5 2026/06/02 22:11:07 mef Exp $
 
 R_PKGNAME=	bayesm
 R_PKGVER=	3.1-6
@@ -18,6 +18,9 @@ TEST_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
 USE_LANGUAGES=	c c++ fortran
+# only for bmake/gmake compatibility on patch-src_Makevars
+USE_TOOLS+=	gmake
+GCC_REQD+=	8
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
