@@ -1,18 +1,14 @@
-$NetBSD: patch-fuseparts___fusemodule.c,v 1.4 2026/06/02 23:41:29 gdt Exp $
+$NetBSD: patch-fuseparts___fusemodule.c,v 1.5 2026/06/02 23:52:47 gdt Exp $
 
 Hunk #0:
     Workaround for NetBSD librefuse that had an API incompatible with
     FUSE. Already fixed in HEAD.
 
 Hunk #1:
-    Replace deprecated procedure per
-      https://docs.python.org/3.10/whatsnew/3.3.html?highlight#deprecated-functions-and-types-of-the-c-api
-
-Hunk #2:
     "os.stat()" doesn't always return st_rdev on all platforms. Do not
     assume it exists.
 
-Hunk #3, #4:
+Hunk #2, #3:
     The polling support has appeared on FUSE 2.8 but this module
     defines FUSE_USE_VERSION to 26. ReFUSE doesn't expose the polling
     API in this case. Eligible for upstreaming but haven't been done.
@@ -153,15 +149,6 @@ Hunk #3, #4:
  #define _IOC_NRBITS     8
  #define _IOC_TYPEBITS   8
  
-@@ -98,7 +225,7 @@
-     #define PyString_AsString PyUnicode_AsUTF8
- #endif
-     #define PyString_Check PyUnicode_Check
--    #define PyString_Size PyUnicode_GET_SIZE
-+    #define PyString_Size PyUnicode_GET_LENGTH
- #endif
- 
- #ifdef FIX_PATH_DECODING
 @@ -309,7 +436,7 @@ fi_to_py(struct fuse_file_info *fi)
  	 * autotools so we just dare to throw these in as is.		\
  	 */								\
