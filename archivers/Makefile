@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.223 2026/03/29 13:50:15 taca Exp $
+# $NetBSD: Makefile,v 1.224 2026/06/02 13:19:47 taca Exp $
 #
 
 COMMENT=	Archivers and compression tools
@@ -95,6 +95,7 @@ SUBDIR+=	p5-Archive-Extract
 SUBDIR+=	p5-Archive-Peek
 SUBDIR+=	p5-Archive-Tar-Wrapper
 SUBDIR+=	p5-Archive-Zip
+SUBDIR+=	p5-Archive-Zip-SimpleZip
 SUBDIR+=	p5-Compress-Bzip2
 SUBDIR+=	p5-Compress-LZMA-Simple
 SUBDIR+=	p7zip
