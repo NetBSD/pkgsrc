@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3466 2026/06/02 14:47:44 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.3467 2026/06/02 17:39:54 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5338,3 +5338,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/lxqt-panel to 2.4.1 [pin 2026-06-02]
 	Updated meta-pkgs/lxqt to 2.4.0nb1 [pin 2026-06-02]
 	Updated lang/sbcl to 2.6.5 [ktnb 2026-06-02]
+	Updated geography/qgis to 3.44.11 [gdt 2026-06-02]
