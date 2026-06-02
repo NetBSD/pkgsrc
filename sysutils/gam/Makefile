@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2026/04/28 09:18:53 sborrill Exp $
+# $NetBSD: Makefile,v 1.27 2026/06/02 15:06:30 sborrill Exp $
 
-DISTNAME=	gam-7.42.00
+DISTNAME=	gam-7.44.03
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GAM-team/}
 GITHUB_PROJECT=	GAM
