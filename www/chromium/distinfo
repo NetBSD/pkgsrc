@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.43 2026/06/01 10:09:03 kikadf Exp $
+$NetBSD: distinfo,v 1.44 2026/06/02 23:06:43 kikadf Exp $
 
 BLAKE2s (Inflector-0.11.4.crate) = 2f8b4a805230be3b58267c7fb6b9c26c2ec966378d195673d1128a851cca515d
 SHA512 (Inflector-0.11.4.crate) = f1f6463e033b6d3c16c51dc1e1a3f5569954308b95b59058294b7f9310919bbda797e99e6a07529071bb83f0688867a243997d33795a7136b0af73977004296e
@@ -1867,7 +1867,7 @@ SHA1 (patch-third__party_perfetto_src_base_unix__socket.cc) = b53bd44dccc14241c6
 SHA1 (patch-third__party_perfetto_src_base_utils.cc) = 330246d9fcb03e8e8c6842cd6be4d8cdc1d6c5e4
 SHA1 (patch-third__party_perfetto_src_trace__processor_importers_ftrace_v4l2__tracker.cc) = b90462b7a10e945feb78c46ed338c82860c53685
 SHA1 (patch-third__party_perfetto_src_tracing_ipc_memfd.cc) = a5700181133a6a74e789b71d1ffddbe0331136b0
-SHA1 (patch-third__party_perfetto_src_tracing_platform__posix.cc) = 73ca7dd821852b1c17b44de02db3d5a3198485fd
+SHA1 (patch-third__party_perfetto_src_tracing_platform__posix.cc) = f0196d4cba1910cbb346d6b8f9ef3df43a2d9287
 SHA1 (patch-third__party_perfetto_src_tracing_track.cc) = a0eab4240b057e146ef60de3b4d0e255b631136c
 SHA1 (patch-third__party_protobuf_proto__library.gni) = 966a18beb6334c71b6e54a4a7c2adff23b7fb0aa
 SHA1 (patch-third__party_protobuf_src_google_protobuf_stubs_platform__macros.h) = 98d0d4aa04d1141ef7c9911e2662c59750738147
