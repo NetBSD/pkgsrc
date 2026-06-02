@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2026/02/09 19:41:38 adam Exp $
+# $NetBSD: Makefile,v 1.25 2026/06/02 09:15:05 adam Exp $
 
-DISTNAME=	debugpy-1.8.20
+DISTNAME=	debugpy-1.8.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/debugpy/}
@@ -11,6 +11,8 @@ COMMENT=	Implementation of the Debug Adapter Protocol for Python
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+
+PY_RENAME_BINARIES=	debugpy debugpy-adapter
 
 PLIST_VARS+=	frame_eval pydevd_cython
 .include "../../lang/python/pyversion.mk"
@@ -27,12 +29,6 @@ PLIST.pydevd_cython=	yes
 post-extract:
 	${FIND} ${WRKSRC} -type d -exec ${CHMOD} 755 {} +
 	${FIND} ${WRKSRC} -type f -exec ${CHMOD} 644 {} +
-
-post-install:
-.for bin in debugpy debugpy-adapter
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
-.endfor
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
