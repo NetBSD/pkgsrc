@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.105 2026/04/01 05:57:17 adam Exp $
+# $NetBSD: Makefile,v 1.106 2026/06/02 05:11:04 adam Exp $
 
-DISTNAME=	aiohttp-3.13.5
+DISTNAME=	aiohttp-3.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp/}
@@ -10,9 +10,8 @@ HOMEPAGE=	https://github.com/aio-libs/aiohttp
 COMMENT=	Async http client/server framework
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pkgconfig>=0:../../devel/py-pkgconfig
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-aiodns>=3.2.0:../../net/py-aiodns
 DEPENDS+=	${PYPKGPREFIX}-aiohappyeyeballs>=2.5.0:../../net/py-aiohappyeyeballs
 DEPENDS+=	${PYPKGPREFIX}-aiosignal>=1.4.0:../../devel/py-aiosignal
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.3.0:../../devel/py-attrs
@@ -20,11 +19,14 @@ DEPENDS+=	${PYPKGPREFIX}-frozenlist>=1.1.1:../../devel/py-frozenlist
 DEPENDS+=	${PYPKGPREFIX}-multidict>=4.5:../../databases/py-multidict
 DEPENDS+=	${PYPKGPREFIX}-propcache>=0.2.0:../../devel/py-propcache
 DEPENDS+=	${PYPKGPREFIX}-yarl>=1.17.0:../../www/py-yarl
+# speedups
+DEPENDS+=	${PYPKGPREFIX}-aiodns>=3.3.0:../../net/py-aiodns
 TEST_DEPENDS+=	${PYPKGPREFIX}-brotli-[0-9]*:../../archivers/py-brotli
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-gunicorn-[0-9]*:../../www/py-gunicorn
 TEST_DEPENDS+=	${PYPKGPREFIX}-re-assert-[0-9]*:../../devel/py-re-assert
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 #TEST_DEPENDS+=	${PYPKGPREFIX}-isal-[0-9]*:../../wip/py-isal
