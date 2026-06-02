@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.8 2026/05/22 08:10:51 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.9 2026/06/02 11:04:02 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
 CARGO_CRATE_DEPENDS+=	anstream-1.0.0
@@ -67,7 +67,7 @@ CARGO_CRATE_DEPENDS+=	serde-1.0.228
 CARGO_CRATE_DEPENDS+=	serde_core-1.0.228
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.228
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.150
-CARGO_CRATE_DEPENDS+=	shlex-1.3.0
+CARGO_CRATE_DEPENDS+=	shlex-2.0.1
 CARGO_CRATE_DEPENDS+=	signal-hook-0.3.18
 CARGO_CRATE_DEPENDS+=	signal-hook-0.4.4
 CARGO_CRATE_DEPENDS+=	signal-hook-mio-0.2.5
