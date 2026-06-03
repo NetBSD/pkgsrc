@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.62 2026/05/27 04:53:05 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.63 2026/06/03 07:09:23 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -212,10 +212,10 @@ CARGO_CRATE_DEPENDS+=	fax-0.2.6
 CARGO_CRATE_DEPENDS+=	fax_derive-0.2.0
 CARGO_CRATE_DEPENDS+=	fd-lock-4.0.4
 CARGO_CRATE_DEPENDS+=	fdeflate-0.3.7
-CARGO_CRATE_DEPENDS+=	fff-grep-0.8.1
+CARGO_CRATE_DEPENDS+=	fff-grep-0.8.4
 CARGO_CRATE_DEPENDS+=	fff-notify-debouncer-full-0.9.4
-CARGO_CRATE_DEPENDS+=	fff-query-parser-0.8.1
-CARGO_CRATE_DEPENDS+=	fff-search-0.8.1
+CARGO_CRATE_DEPENDS+=	fff-query-parser-0.8.4
+CARGO_CRATE_DEPENDS+=	fff-search-0.8.4
 CARGO_CRATE_DEPENDS+=	file-id-0.2.3
 CARGO_CRATE_DEPENDS+=	filedescriptor-0.8.3
 CARGO_CRATE_DEPENDS+=	filesize-0.2.0
