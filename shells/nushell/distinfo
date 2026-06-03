@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.72 2026/05/27 04:53:05 adam Exp $
+$NetBSD: distinfo,v 1.73 2026/06/03 07:09:23 adam Exp $
 
 BLAKE2s (addr2line-0.25.1.crate) = cc5c422ec48ccef5c2c46379d2f600644609490afafea5020f2020815d1146e6
 SHA512 (addr2line-0.25.1.crate) = c400f3b6ccaff8a1c0d7d82c708a1784b8fd5ba64b6e420e85819d59b1cadb55fa59c852925093b921469f272d1d5140cf12f013ae75d1e1bc85021097df8fc2
@@ -636,18 +636,18 @@ Size (fd-lock-4.0.4.crate) = 15522 bytes
 BLAKE2s (fdeflate-0.3.7.crate) = 32858de3c334f68d13c1c034509791d5d8eb9d3e5878a443ee8bdfe6d90fcc88
 SHA512 (fdeflate-0.3.7.crate) = 7418eb5e55736788fbc3637e0ff4ee84e3b1d833684862049b3025991a5449cea6131bb04911d541178b0a91e0600546b8f2b646fc468dba6e631501b202c306
 Size (fdeflate-0.3.7.crate) = 27188 bytes
-BLAKE2s (fff-grep-0.8.1.crate) = 225fb4cc3e5341501b430aefe55730a791cb1187fc4d7031cb8058f4ecc2ff24
-SHA512 (fff-grep-0.8.1.crate) = 6b7ee68c9b328fc40c2f6a98b85ef3b42bf683fedc3064bf3c9ca4c8ed53b0902f6c0868743193ecff3fde82b3cf19e5af19a93ac298381eaad9f668234399f9
-Size (fff-grep-0.8.1.crate) = 8808 bytes
+BLAKE2s (fff-grep-0.8.4.crate) = 37d4df4a9f7a63c6c7922f0115d06d4efbc3ebbad8de40ffb0b658fd1a4d41a6
+SHA512 (fff-grep-0.8.4.crate) = 6c2aaa6975aa8e5577eed2d192257adb203f148b68961fabdba61baef51985b2fbc49d6f0649bf4bf9a1fe4f3f71a5bc57dc78acf4c007f5c6ca0f00f6651e2d
+Size (fff-grep-0.8.4.crate) = 8804 bytes
 BLAKE2s (fff-notify-debouncer-full-0.9.4.crate) = 686db240330d2525f4976d37810122d39bb17acc01faf06a06c697fe29e229de
 SHA512 (fff-notify-debouncer-full-0.9.4.crate) = 4b1be48c60864bc78fe5cf29c0e050b375ca3f7368e138ac4fa9987ecf679e58a89e2a95b454bfeb12794093f5f326a913e14ceafad45d362099bdff00bf3e15
 Size (fff-notify-debouncer-full-0.9.4.crate) = 34298 bytes
-BLAKE2s (fff-query-parser-0.8.1.crate) = adfbf2067edcfe786903452eafa4eb3072dee330c4684a20ab604566119ad5eb
-SHA512 (fff-query-parser-0.8.1.crate) = 20a826f3e9a52b23c8868b2ec627fc9f6bb4cac4167d5b51eee0dd88431d40af5b02784c3636ed2ce6e226ed01d1e96b4a220ae2d45ef943305022b83e736a90
-Size (fff-query-parser-0.8.1.crate) = 21282 bytes
-BLAKE2s (fff-search-0.8.1.crate) = ecd156b1b6800ce8003893b743324043afa17fe26ca0e207328a6de4b35cfa3b
-SHA512 (fff-search-0.8.1.crate) = 93f9b457289533de4bc211d9b53f7db350cc1167bfe4d1cef64676394d25b24408cc33f76f948353854d189c88b2a02d5044a5f9ae1820d0878c4f48b4890186
-Size (fff-search-0.8.1.crate) = 236934 bytes
+BLAKE2s (fff-query-parser-0.8.4.crate) = b791aed46d27457c59ad84a6cc990b11d3bd6cfae2e2e55e769b66838b3fa68b
+SHA512 (fff-query-parser-0.8.4.crate) = 6bfa26f44796b88598e9586374edf31e71da6a4e7e1bc71bf3c92cafab5bbbe5e41ac02a645649764bc36660fe0bccea362287f6c3849c1916e7cf178eda5ded
+Size (fff-query-parser-0.8.4.crate) = 21966 bytes
+BLAKE2s (fff-search-0.8.4.crate) = 649f0f581613440a2bf6dde0a9d64ef2bb0579301e93d2fd8a9cdeede2613653
+SHA512 (fff-search-0.8.4.crate) = 6c41963c0409583455569f4d98f095a414012a39a8634114b45e2b670d024fae6ec3b6d8c8009b1786bec780ff3c95cd7093229e73127bc9eaa56d7e6f5237a7
+Size (fff-search-0.8.4.crate) = 238319 bytes
 BLAKE2s (file-id-0.2.3.crate) = 160e63673d45f219fccb0a1e1caeeb078a8f72ff4afb1619fdd2f76be4818b53
 SHA512 (file-id-0.2.3.crate) = c132f6e2e09b9f303800adadd98468ac37e320de2ac0f66ba7d146052498bd28942e1dee38f5735f40d9953fa70233ce6ad32f16806aaf89d35f9487005e28b9
 Size (file-id-0.2.3.crate) = 10148 bytes
@@ -1299,9 +1299,9 @@ Size (num-traits-0.2.19.crate) = 51631 bytes
 BLAKE2s (num_threads-0.1.7.crate) = 40dc4f59622c31f0e84e4c744bbe548f8803fd4fe0bbebf503125b10cc6670f1
 SHA512 (num_threads-0.1.7.crate) = 60eecfe49c1afca8efa320c5f4d0cd794f6adf8924193682c903307f484ca0a1ddb56102a772232aca040f29651bbe26ddc1c4939e1f030e229d179837e06bda
 Size (num_threads-0.1.7.crate) = 7455 bytes
-BLAKE2s (nushell-0.113.0.tar.gz) = 609546574ca5671310ee203caeb1672abe16ff5a3a4e38ec2aafe4c20516a99c
-SHA512 (nushell-0.113.0.tar.gz) = e2c10d6f10fc439a058502757e2c0461e56ba1b4b5479c986e2f0234bd06a266259a495eb9306767e871e3822f7a11b36d1d103b37f9715ff64413943dcd9ff1
-Size (nushell-0.113.0.tar.gz) = 4020157 bytes
+BLAKE2s (nushell-0.113.1.tar.gz) = b6fcf04dac6008f25b12991864ab62611316e34068689c5a3838f2c05d3e52b9
+SHA512 (nushell-0.113.1.tar.gz) = 77d2b3f4a2c3eea1f509f6c423b606c60617230d9448e48be4b0e798477b57f1b6a3cb95a10480a402a0d1297ff4cf553ad888dd0ee2aadbe31ad382a6367375
+Size (nushell-0.113.1.tar.gz) = 4026930 bytes
 BLAKE2s (objc2-0.6.4.crate) = 03984ea4800cf1d8a2e90069a61b8f49d271f19910bbab0ac7d493f6d1646fc4
 SHA512 (objc2-0.6.4.crate) = 3176d8f44a3245d08972404b8c544962c02e6bb8f198660ee3bd532b376b5a2f7a5f5585f126968c414e58347011dc6ee919f881b78854a7a3d9bb3b190abae9
 Size (objc2-0.6.4.crate) = 275200 bytes
