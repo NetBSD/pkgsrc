@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/12/30 14:18:17 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/06/03 11:44:04 adam Exp $
 
-BLAKE2s (pyobjc_framework_coremediaio-12.1.tar.gz) = dc805b444cb3df7587b2e5ed7fc8f10318ef44eaa05bd5dc39d56b010429f2f4
-SHA512 (pyobjc_framework_coremediaio-12.1.tar.gz) = 2f9fadf181df7c9e584689f61674f111333fc8f7dd7e7eab689cc1924063ab5c42b2aeaa8ed06543f452ef11644424e3d0013e9582779f3dbfa0c68e3ee460ea
-Size (pyobjc_framework_coremediaio-12.1.tar.gz) = 51100 bytes
+BLAKE2s (pyobjc_framework_coremediaio-12.2.tar.gz) = 909a41273f3fae498cf79d51e3971ddc6dbd593b44345a9497515c7fa7bfc37c
+SHA512 (pyobjc_framework_coremediaio-12.2.tar.gz) = 867c19818dc6a91d36f35606dc83683e228b6f2c3f0a693153ad933220216cc21624161a589431c4e98662dcfba0c952c770d11691d9b5063a2b1364b6458d6e
+Size (pyobjc_framework_coremediaio-12.2.tar.gz) = 56592 bytes

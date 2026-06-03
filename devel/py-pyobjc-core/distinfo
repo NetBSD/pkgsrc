@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2025/12/30 14:18:13 adam Exp $
+$NetBSD: distinfo,v 1.26 2026/06/03 11:44:00 adam Exp $
 
-BLAKE2s (pyobjc_core-12.1.tar.gz) = ef2f2f6c368f940f0a870273876cb453ea0f374744ac6f103d986e53eb5d56b6
-SHA512 (pyobjc_core-12.1.tar.gz) = 93a57ca785eeabb668dcc81b4143737a18bfa6bbcd4af45b3f4fce3511c8dc4f592bce40c79c0987f092ef627331ac7aee264909d56d2d3d86f3089cbe89ae72
-Size (pyobjc_core-12.1.tar.gz) = 1000532 bytes
-SHA1 (patch-setup.py) = 108b99c4296f62e1f504f8cadffa8b870a6c2f76
+BLAKE2s (pyobjc_core-12.2.tar.gz) = 411b899e7258f1ee07c4a9c13690f6d8f955b39b2d0f7929f2467daa404f47ef
+SHA512 (pyobjc_core-12.2.tar.gz) = 7627cb1e84f40d47002f12249c8eb95b2af54e36c89008af236241498b37dc89b35c5d7ebf8b8b60f15090990f6ae710f1fe149ddfeef066fb1009d68abcf468
+Size (pyobjc_core-12.2.tar.gz) = 1062064 bytes
+SHA1 (patch-setup.py) = 90e4ac9d6934d6fa8560766bc85b40051aff9388

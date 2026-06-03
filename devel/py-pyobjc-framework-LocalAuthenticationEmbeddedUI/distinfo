@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/12/30 14:18:22 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/06/03 11:44:10 adam Exp $
 
-BLAKE2s (pyobjc_framework_localauthenticationembeddedui-12.1.tar.gz) = 252a9ae1423ff8671369cf18ab7129f8acf0da80327ac2b24c0196e46382f506
-SHA512 (pyobjc_framework_localauthenticationembeddedui-12.1.tar.gz) = 0ba22d53a2355b42a16b51eeb0b5aaa3ad6fdbcd8aab8d5fa09b6ae63d5299da122240c0647b8de82dda45bc0d94ce0038d325194b0c004e1d08b2bbb7c35e4b
-Size (pyobjc_framework_localauthenticationembeddedui-12.1.tar.gz) = 13611 bytes
+BLAKE2s (pyobjc_framework_localauthenticationembeddedui-12.2.tar.gz) = 7c0c46fc458a41b5c4a000053d0f258655983dd2f0e9a9bc226824cff22fb137
+SHA512 (pyobjc_framework_localauthenticationembeddedui-12.2.tar.gz) = 1ac2d8fd277858a9a0a2e73c781ba8de4d8e71da8e124965e32a43958b57503fe97b29a4cf2427312b852bd8c57b7aa2965554dd6a21adca8a364fb73f6bccb2
+Size (pyobjc_framework_localauthenticationembeddedui-12.2.tar.gz) = 14134 bytes

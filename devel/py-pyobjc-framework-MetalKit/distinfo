@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2025/12/30 14:18:24 adam Exp $
+$NetBSD: distinfo,v 1.18 2026/06/03 11:44:11 adam Exp $
 
-BLAKE2s (pyobjc_framework_metalkit-12.1.tar.gz) = 04060f1252ac88200b715e70420cee2bbec1804625ceb7c12ad4f4d92c6d732c
-SHA512 (pyobjc_framework_metalkit-12.1.tar.gz) = caa823a5f041c0bf5c13981bbbc124c7174c3495fc99d0555b7b4584a1cf12b7b41239558cd3a5fed45a13c72319d010efa174ee098f305afa3c56a208ed9d2b
-Size (pyobjc_framework_metalkit-12.1.tar.gz) = 25473 bytes
+BLAKE2s (pyobjc_framework_metalkit-12.2.tar.gz) = 556ffae21666d3ef3c42c14cc2445403643dee09973648eec47cd5afc763fa48
+SHA512 (pyobjc_framework_metalkit-12.2.tar.gz) = e8c29d68cfef9500adec289ac13d34e59bcadadc9dab9b719b5ff41d1d710fde51ff0ae23a4f1c052ffcbaf42d12d7dde1f3ca2b96b5b0a2330871633020f415
+Size (pyobjc_framework_metalkit-12.2.tar.gz) = 28168 bytes
