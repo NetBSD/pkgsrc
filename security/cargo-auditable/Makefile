@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.1 2026/03/10 16:29:34 pin Exp $
+# $NetBSD: Makefile,v 1.2 2026/06/03 20:09:26 pin Exp $
 
-DISTNAME=	cargo-auditable-0.7.4
+DISTNAME=	cargo-auditable-0.7.5
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rust-secure-code/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/rust-secure-code/cargo-auditable/
 COMMENT=	Make production Rust binaries auditable
 LICENSE=	apache-2.0 OR mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=		1.91.1
+#RUST_REQ=	1.97.0-beta.2
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.91.0 and Rust 1.94.0 on amd64
+#This package is confirmed to build with Rust 1.97.0-beta.2 on amd64
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
