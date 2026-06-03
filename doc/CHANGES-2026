@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3472 2026/06/03 07:11:46 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3473 2026/06/03 07:54:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5347,3 +5347,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-distlib to 0.4.1 [adam 2026-06-03]
 	Updated textproc/py-snowballstemmer to 3.1.1 [adam 2026-06-03]
 	Updated databases/postgresql-timescaledb to 2.27.2 [adam 2026-06-03]
+	Updated net/grpc to 1.81.0 [adam 2026-06-03]
+	Updated net/py-grpcio to 1.81.0 [adam 2026-06-03]
+	Updated net/py-grpcio-testing to 1.81.0 [adam 2026-06-03]
+	Updated net/py-grpcio-tools to 1.81.0 [adam 2026-06-03]
