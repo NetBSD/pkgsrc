@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2026/03/10 16:29:34 pin Exp $
+$NetBSD: distinfo,v 1.2 2026/06/03 20:09:26 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -30,9 +30,9 @@ Size (byteorder-0.5.3.crate) = 8643 bytes
 BLAKE2s (camino-1.2.1.crate) = 91402c87e073d3ee3c2a58834ec28645fec5acf4e5a6d6b735c5593c241f8f40
 SHA512 (camino-1.2.1.crate) = baeba86b21f4b720f09ad65fbaa39f9ec32662577844647bc0d63482a1bf2d6c9cf04a997d7452d65d4edbd94185cf5c6b93aac274c6d3b4c0b29ff498af5df4
 Size (camino-1.2.1.crate) = 41364 bytes
-BLAKE2s (cargo-auditable-0.7.4.tar.gz) = 3782b901a1c983af0bfa85ea193d75e292db7388b95b711b9e35dd58b5a31791
-SHA512 (cargo-auditable-0.7.4.tar.gz) = ae4b485d10c1c7bc67cd50891c8fa706d14b4777bb09c054b474efafe22cbff1c197b137cfdd3a16ff95aa5ad63c3672dff1a8dcddefbf5ee31b8e703bfe679d
-Size (cargo-auditable-0.7.4.tar.gz) = 82512 bytes
+BLAKE2s (cargo-auditable-0.7.5.tar.gz) = aa3796180ab4b62009449b47dbb92c9d9640692489416be51d8b620ed08b00f6
+SHA512 (cargo-auditable-0.7.5.tar.gz) = 6a1130989d1efeb4ed28c0ddced4062bff2099daa093b2830d0aab99d2cff06c1d38a3a00ec2000770bacc7b34fcd00e9f6da6c9162bc2c17a80dc8b77722197
+Size (cargo-auditable-0.7.5.tar.gz) = 83282 bytes
 BLAKE2s (cargo-platform-0.3.1.crate) = b6cf281fea8935562f7d0847ff111786781c1b1d9dee26a8eb8d63fa4b6c428d
 SHA512 (cargo-platform-0.3.1.crate) = 2f707dfcbd5ce5724992c98cb0730ea00fd0cae679b14d66b96d0dcb0a6b415b3a91a427ab9094008a8db8a0f6a006ec6c676591d2576c2025a0be0c76231f5f
 Size (cargo-platform-0.3.1.crate) = 13321 bytes
