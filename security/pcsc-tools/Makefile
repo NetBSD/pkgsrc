@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2026/02/27 23:08:12 mef Exp $
+# $NetBSD: Makefile,v 1.31 2026/06/03 15:49:06 adam Exp $
 
-DISTNAME=	pcsc-tools-1.7.4
+DISTNAME=	pcsc-tools-1.7.5
 CATEGORIES=	security
 MASTER_SITES=	https://pcsc-tools.apdu.fr/
 EXTRACT_SUFX=	.tar.bz2
-DIST_SUBDIR=	pcsc-tools-1.7.4
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pcsc-tools.apdu.fr/
