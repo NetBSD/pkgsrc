@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/12/30 14:18:19 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/06/03 11:44:06 adam Exp $
 
-BLAKE2s (pyobjc_framework_dvdplayback-12.1.tar.gz) = 043209a608236209b51f3c44ea0767feac04f29339a6cf91c69a9e9610e5be61
-SHA512 (pyobjc_framework_dvdplayback-12.1.tar.gz) = d45354841a8afdac4a5d8bcad33938f33bffd85dc9e7672aea133685908eef8fcf4d7d22968f637e4a8f1198ea331cfa9914e8299c5c1930886ab0783f4493a4
-Size (pyobjc_framework_dvdplayback-12.1.tar.gz) = 32332 bytes
+BLAKE2s (pyobjc_framework_dvdplayback-12.2.tar.gz) = bb159d568e7f0a8b30f53317a921119443f21b04f2cfb9743aa1c2ea8ed8785f
+SHA512 (pyobjc_framework_dvdplayback-12.2.tar.gz) = 8754fdcbc50d02031574e15db2267cc9ed9a39bf757d293f52c4daf766fbdf521205d36b335d5828387497faac169a86177d28ebdf31f1cc0148942695cd0b17
+Size (pyobjc_framework_dvdplayback-12.2.tar.gz) = 34810 bytes
