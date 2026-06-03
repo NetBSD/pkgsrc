@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3469 2026/06/02 23:52:56 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.3470 2026/06/03 05:15:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5341,3 +5341,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/qgis to 3.44.11 [gdt 2026-06-02]
 	Updated geography/py-gnssutils to 1.2.2 [gdt 2026-06-02]
 	Updated filesystems/py-fuse-bindings to 1.0.9 [gdt 2026-06-02]
+	Updated security/adguardhome to 0.107.77 [adam 2026-06-03]
+	Updated fonts/harfbuzz to 14.2.1 [adam 2026-06-03]
+	Updated fonts/harfbuzz-icu to 14.2.1 [adam 2026-06-03]
