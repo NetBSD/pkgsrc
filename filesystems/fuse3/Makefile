@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/05/09 20:01:32 vins Exp $
+# $NetBSD: Makefile,v 1.2 2026/06/03 23:27:17 gdt Exp $
 #
 
 DISTNAME=	fuse-3.18.2
@@ -10,15 +10,11 @@ GITHUB_RELEASE=	${PKGBASE}-${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/libfuse/libfuse
-COMMENT=		Filesystem in Userspace
+COMMENT=		Filesystem in Userspace (version 3)
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-# FUSE the implementation only builds on Linux and FreeBSD.
+# The FUSE library requires operating system support for /dev/fuse.
 ONLY_FOR_PLATFORM=	Linux-*-* FreeBSD-*-* NetBSD-*-*
-# On NetBSD 4.99 after 2007-02, /usr/lib/librefuse provides the FUSE
-# interface expected by filesystem implementations and therefore this
-# implementation is not needed. This FUSE implementation can also be
-# used with the perfuse package on NetBSD.
 
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config
@@ -46,7 +42,6 @@ MESON_ARGS+=	-Dinitscriptdir=${PREFIX}/${EGDIR} \
 		-Dudevrulesdir=${PREFIX}/${EGDIR} \
 		-Denable-io-uring=true
 .endif
-
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/fuse3.pc
