@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.10 2024/01/13 20:35:21 riastradh Exp $
+$NetBSD: patch-configure,v 1.11 2026/06/03 13:11:56 wiz Exp $
 
 Use USE_AMD64_IOPL (actually x86_64_iopl) on NetBSD/amd64.
 (c.f. patch-hw_xfree86_os-support_bsd_i386.c)
@@ -7,9 +7,9 @@ for netbsd, force pass pthread configure checks (pthread not needed)
 
 For NetBSD, on m68k, sh3, and mips, use ppc_video.c as we do in xsrc.
 
---- configure.orig	2023-12-13 01:31:14.000000000 +0000
+--- configure.orig	2026-06-02 00:10:39.000000000 +0000
 +++ configure
-@@ -24672,7 +24672,7 @@ printf "%s\n" "#define USE_ALPHA_PIO 1" 
+@@ -26175,7 +26175,7 @@ printf "%s\n" "#define USE_ALPHA_PIO 1" >>confdefs.h
  	esac
  	GLX_ARCH_DEFINES="-D__GLX_ALIGN64 -mieee"
  	;;
@@ -18,7 +18,7 @@ For NetBSD, on m68k, sh3, and mips, use ppc_video.c as we do in xsrc.
  	ARM_VIDEO=yes
  	DEFAULT_INT10="stub"
  	;;
-@@ -24693,7 +24693,7 @@ printf "%s\n" "#define USE_ALPHA_PIO 1" 
+@@ -26196,7 +26196,7 @@ printf "%s\n" "#define USE_ALPHA_PIO 1" >>confdefs.h
  				;;
  	esac
          ;;
@@ -27,17 +27,18 @@ For NetBSD, on m68k, sh3, and mips, use ppc_video.c as we do in xsrc.
  	PPC_VIDEO=yes
  	case $host_os in
  		*freebsd*)	DEFAULT_INT10=stub ;;
-@@ -24714,7 +24714,8 @@ printf "%s\n" "#define USE_DEV_IO 1" >>c
+@@ -26217,8 +26217,9 @@ printf "%s\n" "#define USE_DEV_IO 1" >>confdefs.h
  printf "%s\n" "#define USE_DEV_IO 1" >>confdefs.h
   ;;
  		*netbsd*)
 -printf "%s\n" "#define USE_I386_IOPL 1" >>confdefs.h
 +printf "%s\n" "#define USE_AMD64_IOPL 1" >>confdefs.h
-+
  
++
  				SYS_LIBS=-lx86_64
  				;;
-@@ -26588,7 +26589,8 @@ case ${host_os} in
+ 		*openbsd*)
+@@ -28234,7 +28235,8 @@ case ${host_os} in
  	netbsd*)
  	# use libc stubs, don't link against libpthread, to allow
  	# dynamic loading

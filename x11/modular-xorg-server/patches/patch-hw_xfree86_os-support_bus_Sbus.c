@@ -1,8 +1,8 @@
-$NetBSD: patch-hw_xfree86_os-support_bus_Sbus.c,v 1.5 2022/07/15 20:39:49 wiz Exp $
+$NetBSD: patch-hw_xfree86_os-support_bus_Sbus.c,v 1.6 2026/06/03 13:11:56 wiz Exp $
 
 Merge most of netbsdSbus.c from xsrc, but leave the Solaris support in place.
 
---- hw/xfree86/os-support/bus/Sbus.c.orig	2022-07-12 13:27:57.000000000 +0000
+--- hw/xfree86/os-support/bus/Sbus.c.orig	2026-06-02 00:10:30.000000000 +0000
 +++ hw/xfree86/os-support/bus/Sbus.c
 @@ -34,6 +34,9 @@
  #ifdef __sun
@@ -24,7 +24,7 @@ Merge most of netbsdSbus.c from xsrc, but leave the Solaris support in place.
  
  sbusDevicePtr *xf86SbusInfo = NULL;
  
-@@ -68,15 +73,27 @@ struct sbus_devtable sbusDeviceTable[] =
+@@ -68,15 +73,27 @@ struct sbus_devtable sbusDeviceTable[] = {
      {SBUS_DEVICE_GT, FBTYPE_SUNGT, "gt", NULL, "Sun Graphics Tower"},
      {SBUS_DEVICE_MGX, -1, "mgx", NULL, "Quantum 3D MGXplus"},
      {SBUS_DEVICE_LEO, FBTYPE_SUNLEO, "leo", "sunleo", "Sun ZX or Turbo ZX"},
@@ -182,16 +182,14 @@ Merge most of netbsdSbus.c from xsrc, but leave the Solaris support in place.
      promRootNode = promGetSibling(0);
      if (!promRootNode) {
          sparcPromClose();
-@@ -399,9 +468,9 @@ sparcPromAssignNodes(void)
+@@ -399,8 +468,8 @@ sparcPromAssignNodes(void)
           * were the types of the cards missed. */
          char buffer[64];
          int fbNum, devId;
 -        static struct {
 -            int devId;
--            char *prefix;
 +        static const struct {
 +            const int devId;
-+            const char *prefix;
+             const char *prefix;
          } procFbPrefixes[] = {
              {SBUS_DEVICE_BW2, "BWtwo"},
-             {SBUS_DEVICE_CG14, "CGfourteen"},
