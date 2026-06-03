@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2026/05/25 06:30:05 adam Exp $
+$NetBSD: distinfo,v 1.11 2026/06/03 05:21:49 adam Exp $
 
-BLAKE2s (snowballstemmer-3.1.0.tar.gz) = ff599bde738bd536e05a10e3beaa2c6f4a43d7781a5fdf344208680d971ab3b8
-SHA512 (snowballstemmer-3.1.0.tar.gz) = 02d3022c76c3e6da37c599b9a58855e538ce5bddf0533c4b32ffeb44e426cbf998f20746c9563a5e05956c3118ce985a5129573f4342bdc94ed2dc1d1d62214d
-Size (snowballstemmer-3.1.0.tar.gz) = 122523 bytes
+BLAKE2s (snowballstemmer-3.1.1.tar.gz) = fb1f505f4f30c7b8dbccadc701936dcf914383735f1d4073f6647e09c62a4ee2
+SHA512 (snowballstemmer-3.1.1.tar.gz) = a36320c5c21b91137b6924025edac292891d3141a12cfe84fb1ee44f19980eeb35494bebf6c8cb9879c9633e06e27aa73f850157fbc074e926713ad47368b269
+Size (snowballstemmer-3.1.1.tar.gz) = 123314 bytes
