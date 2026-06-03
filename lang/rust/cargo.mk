@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.46 2026/05/03 13:55:03 wiz Exp $
+# $NetBSD: cargo.mk,v 1.47 2026/06/03 09:06:11 adam Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -31,7 +31,7 @@
 #
 # will fetch https://github.com/foo/bar/ revision 12345
 
-MASTER_SITES?=	-${MASTER_SITE_CRATESIO}${PKGBASE}/${PKGVERSION_NOREV}/download
+MASTER_SITES?=	${MASTER_SITE_CRATESIO}${PKGBASE}/
 
 CHECK_SSP_SUPPORTED=	no
 
@@ -58,13 +58,7 @@ SUBST_SED.gitcrate+=		-E -e 's!git.*github.com/${user}/${name}.*${hash}(.)!path 
 
 .for crate in ${CARGO_CRATE_DEPENDS}
 DISTFILES+=			${crate}.crate
-.  if ${crate:M*+*}
-# E.g., for `curl-sys-0.4.75+curl-8.10.0', we use the URL:
-# https://crates.io/api/v1/crates/curl-sys/0.4.77+curl-8.10.1/download
-SITES.${crate}.crate+=		-${MASTER_SITE_CRATESIO}${crate:C/-[0-9]+\.[0-9.]+.*$//}/${crate:C/^.*-([0-9]+\.[0-9.]+.*\+.*)$/\1/}/download
-.  else
-SITES.${crate}.crate+=		-${MASTER_SITE_CRATESIO}${crate:C/-[0-9]+\.[0-9.]+.*$//}/${crate:C/^.*-([0-9]+\.[0-9.]+.*)$/\1/}/download
-.  endif
+SITES.${crate}.crate+=		-${MASTER_SITE_CRATESIO}${crate:C/-[0-9]+\.[0-9.]+.*$//}/${crate}.crate
 EXTRACT_DIR.${crate}.crate?=	${CARGO_VENDOR_DIR}
 .endfor
 
