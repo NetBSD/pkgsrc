@@ -9,3 +9,7 @@ of files. GlusterFS has a fully distributed design, with no single
 point of failure.
 
 Please visit http://www.gluster.org/glusterfs.php for more info.
+
+This package provides an old version of glusterfs, probably because it
+still works on 32-bit CPUs.  It only works with old versions of
+python.
