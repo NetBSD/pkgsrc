@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3479 2026/06/03 13:12:09 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3480 2026/06/03 13:13:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5360,3 +5360,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/tigervnc to 1.16.2.20260506nb1 [wiz 2026-06-03]
 	Updated devel/py-pyobjc to 12.2 [adam 2026-06-03]
 	Updated x11/modular-xorg-server to 21.1.23 [wiz 2026-06-03]
+	Updated x11/modular-xorg-xephyr to 21.1.23 [wiz 2026-06-03]
