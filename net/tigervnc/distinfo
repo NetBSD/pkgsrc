@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2026/05/15 08:07:54 wiz Exp $
+$NetBSD: distinfo,v 1.34 2026/06/03 11:28:53 wiz Exp $
 
 BLAKE2s (tigervnc-1.16.2.20260506-84e930679d831bcf51d5f95733689ada68dfd52a.tar.gz) = 982ce879ae06c85e75330e05890643c44157fa880e0b3e6740b05710846f493b
 SHA512 (tigervnc-1.16.2.20260506-84e930679d831bcf51d5f95733689ada68dfd52a.tar.gz) = 4990a5aca9d16ff9683ced2c91c320ba022be9f0fa8a24a7b31fe3130d95cd64b5739ad331f9add74f8f36d565e1a9a28dbc6b514740a6b47337362ba2a5a4a3
@@ -11,6 +11,7 @@ SHA1 (patch-media_CMakeLists.txt) = e6455ee29679ee99f7457a9471928aa10284e971
 SHA1 (patch-unix_tx_TXDialog.h) = ba35a1ff22c1c42cafb4ad1ef14b53ff2faba47a
 SHA1 (patch-unix_vncserver_vncserver.in) = 6b72c2b3a23428b2a752d956b83f227247fd8da7
 SHA1 (patch-unix_xserver_hw_vnc_Makefile.am) = 91877d615f0ef08484723f8d699980055e1382a8
+SHA1 (patch-unix_xserver_hw_vnc_XserverDesktop.cc) = 0c78185ff90e03ef1eedd3ece08ce5d5c4c9edc7
 SHA1 (patch-unix_xserver_hw_vnc_vncBlockHandler.c) = b40191967d55b8556afbef3954763e11c3cbc9ee
 SHA1 (patch-unix_xserver_hw_xfree86_common_xf86Opt.h) = 65f6954c8d948ab0b905572153860e0cb0b8dfc4
 SHA1 (patch-unix_xserver_os_inputthread.c) = f7d4fb868f31f54b8593ef55261ee0f4da158775
