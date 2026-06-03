@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3476 2026/06/03 10:52:20 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3477 2026/06/03 11:29:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5357,3 +5357,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-jsonschema-path to 0.5.0 [adam 2026-06-03]
 	Updated misc/py-trove-classifiers to 2026.6.1.19 [adam 2026-06-03]
 	Updated www/py-idna to 3.18 [adam 2026-06-03]
+	Updated net/tigervnc to 1.16.2.20260506nb1 [wiz 2026-06-03]
