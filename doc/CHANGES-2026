@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3485 2026/06/03 20:32:33 rillig Exp $
+$NetBSD: CHANGES-2026,v 1.3486 2026/06/03 22:33:20 morr Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5366,3 +5366,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/pcsc-tools to 1.7.5 [adam 2026-06-03]
 	Updated security/cargo-auditable to 0.7.5 [pin 2026-06-03]
 	Updated pkgtools/pkglint to 23.21.0 [rillig 2026-06-03]
+	Updated editors/vim-share to 9.2.0593 [sh 2026-06-03]
