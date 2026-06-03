@@ -1,4 +1,11 @@
 FUSE (Filesystem in Userspace) is a simple interface for userspace
-programs to export a virtual filesystem to the Linux kernel. Fuse also
-aims to provide a secure method for non privileged users to create and
-mount their own filesystem implementations.
+programs to export a virtual filesystem to a kernel, originally Linux.
+Fuse also aims to provide a secure method for non privileged users to
+create and mount their own filesystem implementations.
+
+This package provides FUSE version 3.
+
+This package provides libfuse, a library translating procedure calls
+to messages on /dev/fuse.  On Linux, it additionally provides the
+fusermount3 and mount.fuse3 utilities.  On NetBSD, see also
+perfused(8).
