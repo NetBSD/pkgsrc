@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.5 2026/05/07 17:16:19 adam Exp $
+$NetBSD: distinfo,v 1.6 2026/06/03 15:43:06 adam Exp $
 
 BLAKE2s (fuzzylite-fuzzylite-13b3122f5c353c0389ed4e66041d548c44ec9df6.tar.gz) = 18e7168f6ebeb87875d4009c28ca853c7d6c131e1c404de8672c294ddefc7925
 SHA512 (fuzzylite-fuzzylite-13b3122f5c353c0389ed4e66041d548c44ec9df6.tar.gz) = b0f052a4b55605c4f49b9f6b85c84e8c58e3861ce57b8d99b8426f6a952541650469415fd6baff0218eb54858b9bee6989deddd72a4f85538b5b051f7cbec891
 Size (fuzzylite-fuzzylite-13b3122f5c353c0389ed4e66041d548c44ec9df6.tar.gz) = 3957398 bytes
-BLAKE2s (vcmi-1.7.3.tar.gz) = 075e56794a4ea935068fbf668a5bb92f1d55872b9e5ec9094be63c98c698fe30
-SHA512 (vcmi-1.7.3.tar.gz) = 5da8da6f4ad0c463115aaaf1a9ebacd7f8f05387882e29a9e640be2a4d0573163406e9f1e94ff0cd58a365cabc0b8725c40241efcfcb7668590a6075637ddf06
-Size (vcmi-1.7.3.tar.gz) = 13353623 bytes
+BLAKE2s (vcmi-1.7.4.tar.gz) = de6edeccdf616628571bf35a139255e1ca3c7537fa3bc6faf1afff963fb65afe
+SHA512 (vcmi-1.7.4.tar.gz) = b770e7512ce30bb6b309de37c6762946b39aac475d3aeab21af7709975e2b3063055694ad85b35d33f5713ba883a8d094dbc7b15a2fc1a76b206ca854e433d4c
+Size (vcmi-1.7.4.tar.gz) = 13523198 bytes
 BLAKE2s (vcmi-innoextract-96e9566a35fb51ebf13ffbdadfd49a93c1ae5c1a.tar.gz) = 7c30b026037cef82f5f6306a78bc08baa63d996e3c4a92317486ad9733ba0696
 SHA512 (vcmi-innoextract-96e9566a35fb51ebf13ffbdadfd49a93c1ae5c1a.tar.gz) = e5359a7755e80be73949ed28b0d37a718aa283fb349add1526be914ea4fae62208e4c0490a58af0f3b135c7ee4df6235f9430827ab3a65d4d1cd129954ed4af9
 Size (vcmi-innoextract-96e9566a35fb51ebf13ffbdadfd49a93c1ae5c1a.tar.gz) = 216127 bytes
@@ -19,7 +19,7 @@ SHA1 (patch-Global.h) = 7a587fa006fb4cb2ab3c9a48c303027a8baa6ed3
 SHA1 (patch-client_render_hdEdition_DdsFormat.cpp) = 4a281d6304b20f0e571c355813a2c301359a29a2
 SHA1 (patch-cmake__modules_Findlibsquish.cmake) = c4b8d7af961fb42e505015dcde6b7f4f2a091d96
 SHA1 (patch-launcher_lib_innoextract_CMakeLists.txt) = 1df24702ad1de1a4360d5d889d794c3818af161f
-SHA1 (patch-lib_CMakeLists.txt) = e5f574108e8ab3834d4923adc9b0304796ef756b
+SHA1 (patch-lib_CMakeLists.txt) = ef4de94dbd684a0361719ff9ba65e715ebd26abd
 SHA1 (patch-lib_CStopWatch.h) = a5c75887c1fed973a46478de19b9c4f85838cb21
 SHA1 (patch-lib_CThreadHelper.cpp) = bcbbf7c6cedaea3e5a763882618d71e7849289f9
 SHA1 (patch-lib_modding_CModVersion.h) = 470f65e441bb8627e5b0bb53442015fa2cb91bd2
