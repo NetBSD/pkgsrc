@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2025/09/27 01:19:55 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2026/06/03 06:45:40 wiz Exp $
 
 BLAKE2s (pytorch-v2.8.0.tar.gz) = 3f03dc30835f2e81fc4b676c10f74487d5ca995fe0e6f11c7031070042991b30
 SHA512 (pytorch-v2.8.0.tar.gz) = 791e658eab87fb957f025558cb9f925078d2426ab7b6f60771d9841dfb691f67d905ba1330a800008efe7c938b6c69bdc52232bccfe8d4860e795a532cd69d28
@@ -14,7 +14,7 @@ SHA1 (patch-third__party_cpuinfo_src_init.c) = c57d05229b4eaa0287ed567478de33834
 SHA1 (patch-third__party_cpuinfo_src_netbsd_api.h) = 018be10b2cb520f870fcc479610bf5200b977bc9
 SHA1 (patch-third__party_cpuinfo_src_netbsd_topology.c) = 5138bf2355bc70042f5ce9f7a019d315be038bca
 SHA1 (patch-third__party_cpuinfo_src_x86_netbsd_init.c) = 52bcc18d780736b6f56f478b90dd81eede2fb499
-SHA1 (patch-third__party_fbgemm_external_cpuinfo_src_init.c) = e80d9b9aaf26cfa2871495c9e9c82cedad4c7660
+SHA1 (patch-third__party_fbgemm_external_cpuinfo_src_init.c) = 8f75ada97904b6d904686d94d93a3caafae8cacf
 SHA1 (patch-third__party_kineto_libkineto_src_ThreadUtil.cpp) = e3084e19835b5b0d7c33fe181f2608bea8b62623
 SHA1 (patch-third__party_protobuf_cmake_CMakeLists.txt) = 20926b73cb40cde56170dd15c0abd9830ec50c3e
 SHA1 (patch-third__party_protobuf_post__process__dist.sh) = b27d6497f8649491441ef3a2bfc9eb5fa22ba474
@@ -23,5 +23,8 @@ SHA1 (patch-third__party_tensorpipe_tensorpipe_common_system.cc) = 6f714d89681c2
 SHA1 (patch-third__party_tensorpipe_third__party_libuv_CMakeLists.txt) = a22fc6bd450c2b52a774543c3785107580eec980
 SHA1 (patch-tools_build__pytorch__libs.py) = 4385fac04bc5a80fc31fadcddd405bb89eded062
 SHA1 (patch-torch_csrc_distributed_c10d_ProcessGroupGloo.cpp) = beb79ca2567df69d4d3020644b8760c2b3ec30dd
+SHA1 (patch-torch_csrc_distributed_c10d_init.cpp) = d98c60c8749bfbc6cb8f4c040e26674bb5d37bfc
 SHA1 (patch-torch_csrc_distributed_c10d_socket.cpp) = cace5d33d59bb8fec1933e74223049e5d63aa0a9
+SHA1 (patch-torch_csrc_jit_python_init.cpp) = 0cd5ef965fd720916465ea1d3a1e85be0119c39b
 SHA1 (patch-torch_csrc_utils_byte__order.h) = 089495773fbd7e7340dbd7545341c56d2f4de9b3
+SHA1 (patch-torch_csrc_utils_python__arg__parser.cpp) = f242e46c3bfed2413e6f23c98f05fa4f2a23d9c8
