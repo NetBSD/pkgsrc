@@ -1,5 +1,9 @@
-perfuse brings full FUSE support to NetBSD. It has two components:
-- a daemon that creates a /dev/fuse socket and that performs PUFFS
-relay to FUSE.
-- a library and a header file to use in file systems and libraries that
-open /dev/fuse, so that they are directed to the socket.
+perfuse brings full FUSE support to NetBSD.  It has two components:
+  - a daemon that creates a /dev/fuse socket and that performs PUFFS
+    relay to FUSE.
+  - a library and a header file to use in file systems and libraries
+    that open /dev/fuse, so that they are directed to the socket.
+
+Because perfuse has been part of the NetBSD base system since NetBSD
+6, this package usually redirects to builtin and is thus almost never
+installed.
