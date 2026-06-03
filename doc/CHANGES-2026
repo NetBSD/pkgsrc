@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3484 2026/06/03 20:10:03 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3485 2026/06/03 20:32:33 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5365,3 +5365,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/vcmi to 1.7.4 [adam 2026-06-03]
 	Updated security/pcsc-tools to 1.7.5 [adam 2026-06-03]
 	Updated security/cargo-auditable to 0.7.5 [pin 2026-06-03]
+	Updated pkgtools/pkglint to 23.21.0 [rillig 2026-06-03]
