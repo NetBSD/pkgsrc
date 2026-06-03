@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3483 2026/06/03 15:50:31 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3484 2026/06/03 20:10:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5364,3 +5364,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/freenginx to 1.30.1 [osa 2026-06-03]
 	Updated games/vcmi to 1.7.4 [adam 2026-06-03]
 	Updated security/pcsc-tools to 1.7.5 [adam 2026-06-03]
+	Updated security/cargo-auditable to 0.7.5 [pin 2026-06-03]
