@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.90 2026/05/30 16:32:21 morr Exp $
+@comment $NetBSD: PLIST,v 1.91 2026/06/03 22:33:11 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -1761,6 +1761,7 @@ share/vim/${VIM_SUBDIR}/syntax/sensors.vim
 share/vim/${VIM_SUBDIR}/syntax/services.vim
 share/vim/${VIM_SUBDIR}/syntax/setserial.vim
 share/vim/${VIM_SUBDIR}/syntax/sexplib.vim
+share/vim/${VIM_SUBDIR}/syntax/sgf.vim
 share/vim/${VIM_SUBDIR}/syntax/sgml.vim
 share/vim/${VIM_SUBDIR}/syntax/sgmldecl.vim
 share/vim/${VIM_SUBDIR}/syntax/sgmllnx.vim
