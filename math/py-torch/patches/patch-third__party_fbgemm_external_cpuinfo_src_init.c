@@ -1,4 +1,6 @@
-$NetBSD: patch-third__party_fbgemm_external_cpuinfo_src_init.c,v 1.1 2025/09/27 01:19:55 ryoon Exp $
+$NetBSD: patch-third__party_fbgemm_external_cpuinfo_src_init.c,v 1.2 2026/06/03 06:45:40 wiz Exp $
+
+Add NetBSD support.
 
 --- third_party/fbgemm/external/cpuinfo/src/init.c.orig	2025-08-16 20:50:13.480312485 +0000
 +++ third_party/fbgemm/external/cpuinfo/src/init.c
