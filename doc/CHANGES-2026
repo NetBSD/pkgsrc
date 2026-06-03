@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3473 2026/06/03 07:54:49 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3474 2026/06/03 08:10:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5351,3 +5351,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-grpcio to 1.81.0 [adam 2026-06-03]
 	Updated net/py-grpcio-testing to 1.81.0 [adam 2026-06-03]
 	Updated net/py-grpcio-tools to 1.81.0 [adam 2026-06-03]
+	Updated sysutils/py-kubernetes to 36.0.2 [adam 2026-06-03]
+	Updated devel/py-syrupy to 5.3.1 [adam 2026-06-03]
