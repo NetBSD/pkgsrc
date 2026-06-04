@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/09/08 10:23:07 vins Exp $
+# $NetBSD: Makefile,v 1.25 2026/06/04 16:44:25 gdt Exp $
 
 .include "../../filesystems/libntfs/Makefile.common"
 
@@ -20,8 +20,7 @@ USE_TOOLS+=	pkg-config
 
 .include "../../filesystems/libntfs/buildlink3.mk"
 .if ${OPSYS} == "NetBSD"
-.include "../../filesystems/perfuse/buildlink3.mk"
-# fuse-ntfs-3g does not build with librefuse from netbsd-8.
+# fuse-ntfs-3g does not build with librefuse, confirmed on netbsd-10.
 # \todo Add a mechanism in mk/fuse.buildlink3.mk to declare this, rather
 # than open-coding the changing of which bl3 line is used.
 .include "../../filesystems/fuse/buildlink3.mk"
