@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3488 2026/06/04 03:48:13 scole Exp $
+$NetBSD: CHANGES-2026,v 1.3489 2026/06/04 06:25:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5369,3 +5369,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/vim-share to 9.2.0593 [sh 2026-06-03]
 	Updated lang/joker to 1.8.1 [ktnb 2026-06-04]
 	Updated graphics/tkimg to 2.1.1 [scole 2026-06-04]
+	Updated net/freeradius to 3.2.10 [adam 2026-06-04]
