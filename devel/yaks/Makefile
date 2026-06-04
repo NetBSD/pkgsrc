@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/06/02 11:11:49 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2026/06/04 14:07:54 schmonz Exp $
 
 DISTNAME=		yaks-0.2.0
 CATEGORIES=		devel
@@ -11,6 +11,9 @@ COMMENT=		Shared Discovery Trees in the CLI for teams of humans and robots
 LICENSE=		mit
 
 USE_LANGUAGES=		c
+USE_TOOLS+=		pkg-config
+
+RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${SSLBASE}/lib
 
 AUTO_MKDIRS=		yes
 
@@ -19,8 +22,6 @@ post-install:
 		${DESTDIR}${PREFIX}/share/bash-completion/completions/yx
 	${INSTALL_DATA} ${WRKSRC}/completions/yx.zsh \
 		${DESTDIR}${PREFIX}/share/zsh/site-functions/_yx
-
-# XXX README.md
 
 .include "cargo-depends.mk"
 
