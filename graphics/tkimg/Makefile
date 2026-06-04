@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/05/22 17:29:13 scole Exp $
+# $NetBSD: Makefile,v 1.3 2026/06/04 03:43:55 scole Exp $
 
-PKGVERSION=	2.0.1
+PKGVERSION=	2.1.1
 DISTNAME=	Img-${PKGVERSION_NOREV}
 PKGNAME=	tkimg-${PKGVERSION}
 CATEGORIES=	graphics
