@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/06/03 23:27:17 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2026/06/04 17:04:20 gdt Exp $
 #
 
 DISTNAME=	fuse-3.18.2
@@ -64,8 +64,6 @@ post-install:
 
 .if ${OPSYS} == "Linux"
 .  include "../../devel/liburing/buildlink3.mk"
-.elif ${OPSYS} == "NetBSD"
-.  include "../../filesystems/perfuse/buildlink3.mk"
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
