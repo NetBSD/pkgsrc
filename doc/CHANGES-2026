@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3487 2026/06/04 01:09:46 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.3488 2026/06/04 03:48:13 scole Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5368,3 +5368,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated pkgtools/pkglint to 23.21.0 [rillig 2026-06-03]
 	Updated editors/vim-share to 9.2.0593 [sh 2026-06-03]
 	Updated lang/joker to 1.8.1 [ktnb 2026-06-04]
+	Updated graphics/tkimg to 2.1.1 [scole 2026-06-04]
