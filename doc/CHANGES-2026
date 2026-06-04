@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3493 2026/06/04 16:19:21 rhialto Exp $
+$NetBSD: CHANGES-2026,v 1.3494 2026/06/04 17:40:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5380,3 +5380,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/tcl to 8.6.18 [adam 2026-06-04]
 	Updated x11/tk to 8.6.18 [adam 2026-06-04]
 	Updated lang/algol68g to 3.12.2 [rhialto 2026-06-04]
+	Updated net/p5-Net-CIDR-Set to 0.21 [wiz 2026-06-04]
