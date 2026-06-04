@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.37 2025/08/27 15:08:20 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.38 2026/06/04 09:52:59 adam Exp $
 
 BUILDLINK_TREE+=	tcl
 
@@ -22,8 +22,8 @@ _TOOLS_USE_PKGSRC.tclsh=	yes
 TCLCONFIG_SH?=		${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 TCLSH=			${BUILDLINK_PREFIX.tcl}/bin/tclsh
 # Bundled library
-ITCL_VERSION=		4.3.4
-TDBC_VERSION=		1.1.12
+ITCL_VERSION=		4.3.7
+TDBC_VERSION=		1.1.13
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
