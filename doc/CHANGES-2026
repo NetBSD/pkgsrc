@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3491 2026/06/04 09:46:58 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3492 2026/06/04 09:55:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5377,3 +5377,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/sqlite3-diff to 3.53.2 [adam 2026-06-04]
 	Updated databases/sqlite3-tcl to 3.53.2 [adam 2026-06-04]
 	Updated devel/lemon to 1.0.3.53.2 [adam 2026-06-04]
+	Updated lang/tcl to 8.6.18 [adam 2026-06-04]
+	Updated x11/tk to 8.6.18 [adam 2026-06-04]
