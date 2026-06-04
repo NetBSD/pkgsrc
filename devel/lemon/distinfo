@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.95 2026/05/06 06:13:11 adam Exp $
+$NetBSD: distinfo,v 1.96 2026/06/04 09:46:25 adam Exp $
 
-BLAKE2s (sqlite-src-3530100.zip) = a8dbae68168a3b76549c1083559d111a0ef9e6aaac46c224151ef91d2dcb24d4
-SHA512 (sqlite-src-3530100.zip) = e6b429dbec2056e1e90557896940f46b0976b9c4a3cfa6890d23f690fcab4d7cff2f2dea3a3d2cfc5faf87d0d6feb318c70212ec101008416d106189c6bc0133
-Size (sqlite-src-3530100.zip) = 14515734 bytes
+BLAKE2s (sqlite-src-3530200.zip) = 8e01d2a18c89a13441dbc92306cada6cfac5b37c3c3c08f1a865e03f45bce931
+SHA512 (sqlite-src-3530200.zip) = ebb8f1d05c416f1e8962ea94b5e09a7d92df9ace3af6ff0c090d4bec244fff741861257b3cb79f14b7b38c16992f5b1495121266bd01e865fb377aa402e33332
+Size (sqlite-src-3530200.zip) = 14527073 bytes
