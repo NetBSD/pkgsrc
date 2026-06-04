@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2026/04/07 18:42:23 pin Exp $
+# $NetBSD: Makefile,v 1.2 2026/06/04 21:15:10 pin Exp $
 
-DISTNAME=	coreutils-0.8.0
+DISTNAME=	coreutils-0.9.0
 PKGNAME=	uutils-${DISTNAME}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uutils/}
 GITHUB_PROJECT=	coreutils
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://uutils.github.io/coreutils/
 COMMENT=	Cross-platform Rust rewrite of the GNU coreutils
 LICENSE=	mit
