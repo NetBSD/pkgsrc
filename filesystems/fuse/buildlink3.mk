@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2026/05/09 19:21:37 vins Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2026/06/04 17:04:20 gdt Exp $
 
 BUILDLINK_TREE+=	fuse
 
@@ -11,9 +11,6 @@ BUILDLINK_PKGSRCDIR.fuse?=	../../filesystems/fuse
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-.include "../../filesystems/perfuse/buildlink3.mk"
-.endif
 .endif # FUSE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-fuse
