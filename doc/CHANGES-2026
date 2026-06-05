@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3499 2026/06/05 10:09:44 bsiegert Exp $
+$NetBSD: CHANGES-2026,v 1.3500 2026/06/05 10:11:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5389,3 +5389,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/dnsmasq to 2.93 [adam 2026-06-05]
 	Updated math/octave to 11.3.0 [adam 2026-06-05]
 	Removed net/gini [bsiegert 2026-06-05]
+	Updated news/eilmeldung to 1.5.4 [pin 2026-06-05]
