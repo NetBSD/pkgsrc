@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2026/06/01 10:20:47 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/06/05 10:21:48 bsiegert Exp $
 
 DISTNAME=	hydra-26.2.0
 PKGNAME=	ory-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ory/}
 GITHUB_PROJECT=	hydra
