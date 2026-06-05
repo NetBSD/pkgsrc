@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2026/05/21 09:11:08 mef Exp $
+# $NetBSD: Makefile,v 1.37 2026/06/05 23:49:27 mef Exp $
 
 R_PKGNAME=	Rcpp
 R_PKGVER=	1.1.1-1.1
@@ -51,6 +51,18 @@ REPLACE_FILES.Rscript=	${REPLACE_RSCRIPT}
 
 CHECK_SSP_SKIP+=	lib/R/library/Rcpp/*/bin/*/*.deb
 CHECK_RELRO_SKIP+=	${CHECK_SSP_SKIP}
+
+.include "../../mk/bsd.prefs.mk"
+SUBST_CLASSES+=		pkglibs
+SUBST_STAGE.pkglibs=	pre-configure
+SUBST_FILES.pkglibs=	src/Makevars
+.if ${OPSYS} != SunOS
+SUBST_SED.pkglibs= 	-e s,@@PKGLIBS@@,PKG_LIBS+=-lexecinfo,
+.else
+SUBST_SED.pkglibs= 	-e s,@@PKGLIBS@@,,
+.endif
+SUBST_MESSAGE.pkglibs=	Add -lexecinfo for *BSD
+
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
