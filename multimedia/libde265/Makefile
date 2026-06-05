@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2026/05/28 06:41:34 adam Exp $
+# $NetBSD: Makefile,v 1.22 2026/06/05 08:19:13 adam Exp $
 
-DISTNAME=	libde265-1.1.0
+DISTNAME=	libde265-1.1.1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=strukturag/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -16,7 +16,7 @@ PKGCONFIG_OVERRIDE+=	libde265.pc.in
 
 BUILDLINK_TRANSFORM+=	opt:-std=c++17:-std=gnu++17	# alloca
 
-CMAKE_CONFIGURE_ARGS+=	-DENABLE_SDL=OFF
+.include "options.mk"
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
