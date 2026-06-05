@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2025/10/31 00:22:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.68 2026/06/05 10:41:53 adam Exp $
 
-DISTNAME=	pandas-2.3.3
+DISTNAME=	pandas-3.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pandas/}
 
@@ -11,18 +10,18 @@ HOMEPAGE=	https://pandas.pydata.org/
 COMMENT=	Python Data Analysis Library
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.33:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.1.0:../../devel/py-cython
 # Package directly expresses a meson minimum; we need higher to pick up our
 # multi-version build fixes.
 TOOL_DEPENDS+=	meson>=1.2.2nb1:../../devel/meson
-TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.13.1:../../devel/py-meson_python
+TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.17.1:../../devel/py-meson_python
 TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer-[0-9]*:../../devel/py-versioneer
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.2:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-pytz>=2020.1:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-tzdata>=2022.1:../../time/py-tzdata
-TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.34.2:../../devel/py-hypothesis
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.17.0:../../devel/py-test-asyncio
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=2.2.0:../../devel/py-test-xdist
+# timezone
+DEPENDS+=	${PYPKGPREFIX}-pytz>=2020.1:../../time/py-pytz
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.116.0:../../devel/py-hypothesis
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.6.1:../../devel/py-test-xdist
 
 USE_CXX_FEATURES=	c++11
 USE_LANGUAGES=		c c++
@@ -31,11 +30,7 @@ USE_TOOLS+=		pkg-config
 # __has_builtin
 GCC_REQD+=		10
 
-SUBST_CLASSES+=		python
-SUBST_STAGE.python=	pre-configure
-SUBST_MESSAGE.python=	Fixing python binary name.
-SUBST_FILES.python=	meson.build
-SUBST_VARS.python=	TOOL_PYTHONBIN
+REPLACE_PYTHON+=	generate_version.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
@@ -43,8 +38,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	310
 post-patch:
 	cd ${WRKSRC} && ${RM} -f pandas/_libs/window/aggregations.pyx.orig
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
-BUILDLINK_API_DEPENDS.py-numpy+= ${PYPKGPREFIX}-numpy>=1.23.2
+BUILDLINK_API_DEPENDS.py-numpy+= ${PYPKGPREFIX}-numpy>=2.3.3
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
