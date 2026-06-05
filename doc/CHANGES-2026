@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3498 2026/06/05 09:10:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3499 2026/06/05 10:09:44 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5388,3 +5388,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/libde265 to 1.1.1 [adam 2026-06-05]
 	Updated net/dnsmasq to 2.93 [adam 2026-06-05]
 	Updated math/octave to 11.3.0 [adam 2026-06-05]
+	Removed net/gini [bsiegert 2026-06-05]
