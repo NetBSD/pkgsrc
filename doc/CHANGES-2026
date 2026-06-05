@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3495 2026/06/04 21:15:40 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3496 2026/06/05 07:22:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5382,3 +5382,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/algol68g to 3.12.2 [rhialto 2026-06-04]
 	Updated net/p5-Net-CIDR-Set to 0.21 [wiz 2026-06-04]
 	Updated sysutils/uutils-coreutils to 0.9.0 [pin 2026-06-04]
+	Updated databases/py-apsw to 3.53.2.0 [adam 2026-06-05]
+	Updated devel/py-ruff to 0.15.16 [adam 2026-06-05]
