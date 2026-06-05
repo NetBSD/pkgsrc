@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2026/05/20 12:43:46 pin Exp $
+$NetBSD: distinfo,v 1.6 2026/06/05 10:11:12 pin Exp $
 
 BLAKE2s (addr2line-0.25.1.crate) = cc5c422ec48ccef5c2c46379d2f600644609490afafea5020f2020815d1146e6
 SHA512 (addr2line-0.25.1.crate) = c400f3b6ccaff8a1c0d7d82c708a1784b8fd5ba64b6e420e85819d59b1cadb55fa59c852925093b921469f272d1d5140cf12f013ae75d1e1bc85021097df8fc2
@@ -516,9 +516,9 @@ Size (dunce-1.0.5.crate) = 8244 bytes
 BLAKE2s (dyn-clone-1.0.20.crate) = 7231af3126aa2ebfd0a5bf5c1e248ace0ec3bfbbc32a153249c69da91018c828
 SHA512 (dyn-clone-1.0.20.crate) = 5910c39f1ce031fb89d4974530a60b66848038e2f2bc78bdb3d34e6f40075fb4457b8a604309bedc4012fa46b17212e81dfb376cc6b45fa2dee823a86264690f
 Size (dyn-clone-1.0.20.crate) = 13134 bytes
-BLAKE2s (eilmeldung-1.5.3.tar.gz) = 7a40088a5544642c70207f60528dcbf743fc47cdbf0fe836306d0b5179c2c152
-SHA512 (eilmeldung-1.5.3.tar.gz) = 514fb57c8eae298857d445bc48900eddb107daf5dcef5d2bae0153a7aae5b26df78d486e65130d994dec5170d8a0b6b2a7ae54d7b234da4565c0d4272c368f80
-Size (eilmeldung-1.5.3.tar.gz) = 5785964 bytes
+BLAKE2s (eilmeldung-1.5.4.tar.gz) = 69e9650ef5b3b307c546fd08445af86abe455da79411622819d218c7341747c1
+SHA512 (eilmeldung-1.5.4.tar.gz) = 6830fbdf741295ff3e8547fb2e47b3ed38f4cc420ea838dcda20c3cea41b1fda48fca941f10ec300bf57556bd77b104ff5e7fa5d85ddc67c0c9664ab7ef89cd5
+Size (eilmeldung-1.5.4.tar.gz) = 5789528 bytes
 BLAKE2s (either-1.15.0.crate) = 7c84d6a0e5f2b2ab835c6a5a557e2b80af4b533e6d792d546a42ac2f5b846e22
 SHA512 (either-1.15.0.crate) = d70c34d903e8e5088fd065a6da6673eadb569a20af183fa9bd6418940b37c8c2a777c44dbdab1b9960890cba5cb7464b805667ac42f4e05499ddcd4277d24e3f
 Size (either-1.15.0.crate) = 20114 bytes
