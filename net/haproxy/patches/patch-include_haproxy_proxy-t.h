@@ -1,15 +1,15 @@
-$NetBSD: patch-include_haproxy_proxy-t.h,v 1.5 2025/12/02 12:55:24 adam Exp $
+$NetBSD: patch-include_haproxy_proxy-t.h,v 1.6 2026/06/05 08:14:34 adam Exp $
 
 Avoid 'struct queue' conflict.
 
---- include/haproxy/proxy-t.h.orig	2025-11-26 14:55:57.000000000 +0000
+--- include/haproxy/proxy-t.h.orig	2026-06-03 13:01:51.000000000 +0000
 +++ include/haproxy/proxy-t.h
-@@ -302,7 +302,7 @@ struct error_snapshot {
+@@ -307,7 +307,7 @@ struct error_snapshot {
  
  /* Each proxy will have one occurrence of this structure per thread group */
  struct proxy_per_tgroup {
 -	struct queue queue;
 +	struct haqueue queue;
  	struct lbprm_per_tgrp lbprm;
- } THREAD_ALIGNED(64);
- 
+ 	char *extra_counters_fe_storage;        /* storage for extra_counters_fe */
+ 	char *extra_counters_be_storage;        /* storage for extra_counters_be */
