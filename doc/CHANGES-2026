@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3511 2026/06/05 22:16:19 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3512 2026/06/05 23:00:02 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5405,3 +5405,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/lazygit to 0.62.2 [adam 2026-06-05]
 	Updated www/py-django-polymorphic to 4.11.5 [adam 2026-06-05]
 	Updated net/arti to 2.4.0 [wiz 2026-06-05]
+	Updated geography/py-gdal to 3.13.1 [gdt 2026-06-05]
+	Updated geography/gdal-lib to 3.13.1 [gdt 2026-06-05]
