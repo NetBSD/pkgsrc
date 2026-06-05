@@ -1,18 +1,24 @@
-# $NetBSD: go-modules.mk,v 1.4 2025/04/13 15:25:48 pin Exp $
+# $NetBSD: go-modules.mk,v 1.5 2026/06/05 10:14:20 pin Exp $
 
 GO_MODULE_FILES+=	codeberg.org/emersion/go-scfg/@v/v0.1.0.mod
 GO_MODULE_FILES+=	codeberg.org/emersion/go-scfg/@v/v0.1.0.zip
-GO_MODULE_FILES+=	git.sr.ht/~rockorager/vaxis/@v/v0.13.0.mod
-GO_MODULE_FILES+=	git.sr.ht/~rockorager/vaxis/@v/v0.13.0.zip
+GO_MODULE_FILES+=	git.sr.ht/~rockorager/vaxis/@v/v0.15.1-0.20260305170555-c3371e09d426.mod
+GO_MODULE_FILES+=	git.sr.ht/~rockorager/vaxis/@v/v0.15.1-0.20260305170555-c3371e09d426.zip
 GO_MODULE_FILES+=	github.com/containerd/console/@v/v1.0.4.mod
 GO_MODULE_FILES+=	github.com/containerd/console/@v/v1.0.4.zip
+GO_MODULE_FILES+=	github.com/dave/jennifer/@v/v1.7.1.mod
+GO_MODULE_FILES+=	github.com/dave/jennifer/@v/v1.7.1.zip
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.mod
-GO_MODULE_FILES+=	github.com/delthas/go-libnp/@v/v0.1.0.mod
-GO_MODULE_FILES+=	github.com/delthas/go-libnp/@v/v0.1.0.zip
-GO_MODULE_FILES+=	github.com/delthas/go-localeinfo/@v/v0.1.0.mod
-GO_MODULE_FILES+=	github.com/delthas/go-localeinfo/@v/v0.1.0.zip
+GO_MODULE_FILES+=	github.com/delthas/go-libnp/@v/v0.2.0.mod
+GO_MODULE_FILES+=	github.com/delthas/go-libnp/@v/v0.2.0.zip
+GO_MODULE_FILES+=	github.com/delthas/go-localeinfo/@v/v0.2.0.mod
+GO_MODULE_FILES+=	github.com/delthas/go-localeinfo/@v/v0.2.0.zip
 GO_MODULE_FILES+=	github.com/disintegration/imaging/@v/v1.6.2.mod
 GO_MODULE_FILES+=	github.com/disintegration/imaging/@v/v1.6.2.zip
+GO_MODULE_FILES+=	github.com/emersion/go-varlink/@v/v0.0.0-20251006073247-e7ad9f7950c7.mod
+GO_MODULE_FILES+=	github.com/emersion/go-varlink/@v/v0.0.0-20251006073247-e7ad9f7950c7.zip
+GO_MODULE_FILES+=	github.com/go-ole/go-ole/@v/v1.3.0.mod
+GO_MODULE_FILES+=	github.com/go-ole/go-ole/@v/v1.3.0.zip
 GO_MODULE_FILES+=	github.com/godbus/dbus/v5/@v/v5.1.0.mod
 GO_MODULE_FILES+=	github.com/godbus/dbus/v5/@v/v5.1.0.zip
 GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.16.mod
