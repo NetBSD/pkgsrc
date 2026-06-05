@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3503 2026/06/05 10:14:41 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3504 2026/06/05 10:15:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5393,3 +5393,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/garden to 2.6.0 [pin 2026-06-05]
 	Updated audio/ncspot to 1.3.4 [pin 2026-06-05]
 	Updated chat/senpai to 0.5.0 [pin 2026-06-05]
+	Updated editors/tp-note to 1.26.1 [pin 2026-06-05]
