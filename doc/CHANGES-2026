@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3500 2026/06/05 10:11:38 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3501 2026/06/05 10:12:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5390,3 +5390,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/octave to 11.3.0 [adam 2026-06-05]
 	Removed net/gini [bsiegert 2026-06-05]
 	Updated news/eilmeldung to 1.5.4 [pin 2026-06-05]
+	Updated devel/garden to 2.6.0 [pin 2026-06-05]
