@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3508 2026/06/05 12:15:28 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.3509 2026/06/05 12:39:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5400,3 +5400,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-pandas to 3.0.3 [adam 2026-06-05]
 	Updated misc/py-pbs-installer to 2026.6.2 [adam 2026-06-05]
 	Updated chat/toxcore to 0.2.23 [ktnb 2026-06-05]
+	Updated net/libtorrent to 0.16.13 [adam 2026-06-05]
+	Updated net/rtorrent to 0.16.13 [adam 2026-06-05]
