@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2026/05/07 18:50:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.25 2026/06/05 10:21:49 bsiegert Exp $
 
 DISTNAME=	xhash-3.6.3
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ricardobranco777/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

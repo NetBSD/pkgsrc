@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/05/30 19:04:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2026/06/05 10:21:49 bsiegert Exp $
 
 DISTNAME=	zauth-0.0.0pre20230628
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=RijulGulati/}
 GITHUB_TAG=	aa4767a896c1f73ae58b0044ad78f2681d017680
