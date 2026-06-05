@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3496 2026/06/05 07:22:19 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3497 2026/06/05 08:19:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5384,3 +5384,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/uutils-coreutils to 0.9.0 [pin 2026-06-04]
 	Updated databases/py-apsw to 3.53.2.0 [adam 2026-06-05]
 	Updated devel/py-ruff to 0.15.16 [adam 2026-06-05]
+	Updated net/haproxy to 3.4.0 [adam 2026-06-05]
+	Updated multimedia/libde265 to 1.1.1 [adam 2026-06-05]
