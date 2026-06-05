@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3505 2026/06/05 10:16:54 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3506 2026/06/05 10:19:40 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5395,3 +5395,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated chat/senpai to 0.5.0 [pin 2026-06-05]
 	Updated editors/tp-note to 1.26.1 [pin 2026-06-05]
 	Updated textproc/xan to 0.58.0 [pin 2026-06-05]
+	Updated lang/go125 to 1.25.11 [bsiegert 2026-06-05]
+	Updated lang/go126 to 1.26.4 [bsiegert 2026-06-05]
