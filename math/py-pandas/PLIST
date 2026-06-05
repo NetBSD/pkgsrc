@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2025/08/21 13:44:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2026/06/05 10:41:53 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -25,6 +25,7 @@ ${PYSITELIB}/pandas/_config/localization.pyo
 ${PYSITELIB}/pandas/_libs/__init__.py
 ${PYSITELIB}/pandas/_libs/__init__.pyc
 ${PYSITELIB}/pandas/_libs/__init__.pyo
+${PYSITELIB}/pandas/_libs/_cyutility.so
 ${PYSITELIB}/pandas/_libs/algos.pyi
 ${PYSITELIB}/pandas/_libs/algos.so
 ${PYSITELIB}/pandas/_libs/arrays.pyi
@@ -149,6 +150,9 @@ ${PYSITELIB}/pandas/_version_meson.pyo
 ${PYSITELIB}/pandas/api/__init__.py
 ${PYSITELIB}/pandas/api/__init__.pyc
 ${PYSITELIB}/pandas/api/__init__.pyo
+${PYSITELIB}/pandas/api/executors/__init__.py
+${PYSITELIB}/pandas/api/executors/__init__.pyc
+${PYSITELIB}/pandas/api/executors/__init__.pyo
 ${PYSITELIB}/pandas/api/extensions/__init__.py
 ${PYSITELIB}/pandas/api/extensions/__init__.pyc
 ${PYSITELIB}/pandas/api/extensions/__init__.pyo
@@ -158,12 +162,18 @@ ${PYSITELIB}/pandas/api/indexers/__init__.pyo
 ${PYSITELIB}/pandas/api/interchange/__init__.py
 ${PYSITELIB}/pandas/api/interchange/__init__.pyc
 ${PYSITELIB}/pandas/api/interchange/__init__.pyo
+${PYSITELIB}/pandas/api/internals.py
+${PYSITELIB}/pandas/api/internals.pyc
+${PYSITELIB}/pandas/api/internals.pyo
 ${PYSITELIB}/pandas/api/types/__init__.py
 ${PYSITELIB}/pandas/api/types/__init__.pyc
 ${PYSITELIB}/pandas/api/types/__init__.pyo
 ${PYSITELIB}/pandas/api/typing/__init__.py
 ${PYSITELIB}/pandas/api/typing/__init__.pyc
 ${PYSITELIB}/pandas/api/typing/__init__.pyo
+${PYSITELIB}/pandas/api/typing/aliases.py
+${PYSITELIB}/pandas/api/typing/aliases.pyc
+${PYSITELIB}/pandas/api/typing/aliases.pyo
 ${PYSITELIB}/pandas/arrays/__init__.py
 ${PYSITELIB}/pandas/arrays/__init__.pyc
 ${PYSITELIB}/pandas/arrays/__init__.pyo
@@ -176,9 +186,6 @@ ${PYSITELIB}/pandas/compat/_constants.pyo
 ${PYSITELIB}/pandas/compat/_optional.py
 ${PYSITELIB}/pandas/compat/_optional.pyc
 ${PYSITELIB}/pandas/compat/_optional.pyo
-${PYSITELIB}/pandas/compat/compressors.py
-${PYSITELIB}/pandas/compat/compressors.pyc
-${PYSITELIB}/pandas/compat/compressors.pyo
 ${PYSITELIB}/pandas/compat/numpy/__init__.py
 ${PYSITELIB}/pandas/compat/numpy/__init__.pyc
 ${PYSITELIB}/pandas/compat/numpy/__init__.pyo
@@ -356,6 +363,9 @@ ${PYSITELIB}/pandas/core/arrays/timedeltas.pyo
 ${PYSITELIB}/pandas/core/base.py
 ${PYSITELIB}/pandas/core/base.pyc
 ${PYSITELIB}/pandas/core/base.pyo
+${PYSITELIB}/pandas/core/col.py
+${PYSITELIB}/pandas/core/col.pyc
+${PYSITELIB}/pandas/core/col.pyo
 ${PYSITELIB}/pandas/core/common.py
 ${PYSITELIB}/pandas/core/common.pyc
 ${PYSITELIB}/pandas/core/common.pyo
@@ -554,12 +564,6 @@ ${PYSITELIB}/pandas/core/internals/__init__.pyo
 ${PYSITELIB}/pandas/core/internals/api.py
 ${PYSITELIB}/pandas/core/internals/api.pyc
 ${PYSITELIB}/pandas/core/internals/api.pyo
-${PYSITELIB}/pandas/core/internals/array_manager.py
-${PYSITELIB}/pandas/core/internals/array_manager.pyc
-${PYSITELIB}/pandas/core/internals/array_manager.pyo
-${PYSITELIB}/pandas/core/internals/base.py
-${PYSITELIB}/pandas/core/internals/base.pyc
-${PYSITELIB}/pandas/core/internals/base.pyo
 ${PYSITELIB}/pandas/core/internals/blocks.py
 ${PYSITELIB}/pandas/core/internals/blocks.pyc
 ${PYSITELIB}/pandas/core/internals/blocks.pyo
@@ -647,9 +651,6 @@ ${PYSITELIB}/pandas/core/reshape/reshape.pyo
 ${PYSITELIB}/pandas/core/reshape/tile.py
 ${PYSITELIB}/pandas/core/reshape/tile.pyc
 ${PYSITELIB}/pandas/core/reshape/tile.pyo
-${PYSITELIB}/pandas/core/reshape/util.py
-${PYSITELIB}/pandas/core/reshape/util.pyc
-${PYSITELIB}/pandas/core/reshape/util.pyo
 ${PYSITELIB}/pandas/core/roperator.py
 ${PYSITELIB}/pandas/core/roperator.pyc
 ${PYSITELIB}/pandas/core/roperator.pyo
@@ -677,9 +678,6 @@ ${PYSITELIB}/pandas/core/strings/__init__.pyo
 ${PYSITELIB}/pandas/core/strings/accessor.py
 ${PYSITELIB}/pandas/core/strings/accessor.pyc
 ${PYSITELIB}/pandas/core/strings/accessor.pyo
-${PYSITELIB}/pandas/core/strings/base.py
-${PYSITELIB}/pandas/core/strings/base.pyc
-${PYSITELIB}/pandas/core/strings/base.pyo
 ${PYSITELIB}/pandas/core/strings/object_array.py
 ${PYSITELIB}/pandas/core/strings/object_array.pyc
 ${PYSITELIB}/pandas/core/strings/object_array.pyo
@@ -734,6 +732,9 @@ ${PYSITELIB}/pandas/core/window/rolling.pyo
 ${PYSITELIB}/pandas/errors/__init__.py
 ${PYSITELIB}/pandas/errors/__init__.pyc
 ${PYSITELIB}/pandas/errors/__init__.pyo
+${PYSITELIB}/pandas/errors/cow.py
+${PYSITELIB}/pandas/errors/cow.pyc
+${PYSITELIB}/pandas/errors/cow.pyo
 ${PYSITELIB}/pandas/io/__init__.py
 ${PYSITELIB}/pandas/io/__init__.pyc
 ${PYSITELIB}/pandas/io/__init__.pyo
@@ -831,15 +832,16 @@ ${PYSITELIB}/pandas/io/formats/templates/latex.tpl
 ${PYSITELIB}/pandas/io/formats/templates/latex_longtable.tpl
 ${PYSITELIB}/pandas/io/formats/templates/latex_table.tpl
 ${PYSITELIB}/pandas/io/formats/templates/string.tpl
+${PYSITELIB}/pandas/io/formats/templates/typst.tpl
 ${PYSITELIB}/pandas/io/formats/xml.py
 ${PYSITELIB}/pandas/io/formats/xml.pyc
 ${PYSITELIB}/pandas/io/formats/xml.pyo
-${PYSITELIB}/pandas/io/gbq.py
-${PYSITELIB}/pandas/io/gbq.pyc
-${PYSITELIB}/pandas/io/gbq.pyo
 ${PYSITELIB}/pandas/io/html.py
 ${PYSITELIB}/pandas/io/html.pyc
 ${PYSITELIB}/pandas/io/html.pyo
+${PYSITELIB}/pandas/io/iceberg.py
+${PYSITELIB}/pandas/io/iceberg.pyc
+${PYSITELIB}/pandas/io/iceberg.pyo
 ${PYSITELIB}/pandas/io/json/__init__.py
 ${PYSITELIB}/pandas/io/json/__init__.pyc
 ${PYSITELIB}/pandas/io/json/__init__.pyo
@@ -970,6 +972,9 @@ ${PYSITELIB}/pandas/tests/apply/__init__.pyo
 ${PYSITELIB}/pandas/tests/apply/common.py
 ${PYSITELIB}/pandas/tests/apply/common.pyc
 ${PYSITELIB}/pandas/tests/apply/common.pyo
+${PYSITELIB}/pandas/tests/apply/conftest.py
+${PYSITELIB}/pandas/tests/apply/conftest.pyc
+${PYSITELIB}/pandas/tests/apply/conftest.pyo
 ${PYSITELIB}/pandas/tests/apply/test_frame_apply.py
 ${PYSITELIB}/pandas/tests/apply/test_frame_apply.pyc
 ${PYSITELIB}/pandas/tests/apply/test_frame_apply.pyo
@@ -1009,6 +1014,9 @@ ${PYSITELIB}/pandas/tests/arithmetic/conftest.pyo
 ${PYSITELIB}/pandas/tests/arithmetic/test_array_ops.py
 ${PYSITELIB}/pandas/tests/arithmetic/test_array_ops.pyc
 ${PYSITELIB}/pandas/tests/arithmetic/test_array_ops.pyo
+${PYSITELIB}/pandas/tests/arithmetic/test_bool.py
+${PYSITELIB}/pandas/tests/arithmetic/test_bool.pyc
+${PYSITELIB}/pandas/tests/arithmetic/test_bool.pyo
 ${PYSITELIB}/pandas/tests/arithmetic/test_categorical.py
 ${PYSITELIB}/pandas/tests/arithmetic/test_categorical.pyc
 ${PYSITELIB}/pandas/tests/arithmetic/test_categorical.pyo
@@ -1027,6 +1035,9 @@ ${PYSITELIB}/pandas/tests/arithmetic/test_object.pyo
 ${PYSITELIB}/pandas/tests/arithmetic/test_period.py
 ${PYSITELIB}/pandas/tests/arithmetic/test_period.pyc
 ${PYSITELIB}/pandas/tests/arithmetic/test_period.pyo
+${PYSITELIB}/pandas/tests/arithmetic/test_string.py
+${PYSITELIB}/pandas/tests/arithmetic/test_string.pyc
+${PYSITELIB}/pandas/tests/arithmetic/test_string.pyo
 ${PYSITELIB}/pandas/tests/arithmetic/test_timedelta64.py
 ${PYSITELIB}/pandas/tests/arithmetic/test_timedelta64.pyc
 ${PYSITELIB}/pandas/tests/arithmetic/test_timedelta64.pyo
@@ -1396,6 +1407,9 @@ ${PYSITELIB}/pandas/tests/copy_view/index/test_datetimeindex.pyo
 ${PYSITELIB}/pandas/tests/copy_view/index/test_index.py
 ${PYSITELIB}/pandas/tests/copy_view/index/test_index.pyc
 ${PYSITELIB}/pandas/tests/copy_view/index/test_index.pyo
+${PYSITELIB}/pandas/tests/copy_view/index/test_intervalindex.py
+${PYSITELIB}/pandas/tests/copy_view/index/test_intervalindex.pyc
+${PYSITELIB}/pandas/tests/copy_view/index/test_intervalindex.pyo
 ${PYSITELIB}/pandas/tests/copy_view/index/test_periodindex.py
 ${PYSITELIB}/pandas/tests/copy_view/index/test_periodindex.pyc
 ${PYSITELIB}/pandas/tests/copy_view/index/test_periodindex.pyo
@@ -1417,6 +1431,9 @@ ${PYSITELIB}/pandas/tests/copy_view/test_clip.pyo
 ${PYSITELIB}/pandas/tests/copy_view/test_constructors.py
 ${PYSITELIB}/pandas/tests/copy_view/test_constructors.pyc
 ${PYSITELIB}/pandas/tests/copy_view/test_constructors.pyo
+${PYSITELIB}/pandas/tests/copy_view/test_copy_deprecation.py
+${PYSITELIB}/pandas/tests/copy_view/test_copy_deprecation.pyc
+${PYSITELIB}/pandas/tests/copy_view/test_copy_deprecation.pyo
 ${PYSITELIB}/pandas/tests/copy_view/test_core_functionalities.py
 ${PYSITELIB}/pandas/tests/copy_view/test_core_functionalities.pyc
 ${PYSITELIB}/pandas/tests/copy_view/test_core_functionalities.pyo
@@ -1453,6 +1470,9 @@ ${PYSITELIB}/pandas/tests/dtypes/__init__.pyo
 ${PYSITELIB}/pandas/tests/dtypes/cast/__init__.py
 ${PYSITELIB}/pandas/tests/dtypes/cast/__init__.pyc
 ${PYSITELIB}/pandas/tests/dtypes/cast/__init__.pyo
+${PYSITELIB}/pandas/tests/dtypes/cast/test_box_unbox.py
+${PYSITELIB}/pandas/tests/dtypes/cast/test_box_unbox.pyc
+${PYSITELIB}/pandas/tests/dtypes/cast/test_box_unbox.pyo
 ${PYSITELIB}/pandas/tests/dtypes/cast/test_can_hold_element.py
 ${PYSITELIB}/pandas/tests/dtypes/cast/test_can_hold_element.pyc
 ${PYSITELIB}/pandas/tests/dtypes/cast/test_can_hold_element.pyo
@@ -1480,9 +1500,6 @@ ${PYSITELIB}/pandas/tests/dtypes/cast/test_infer_datetimelike.pyo
 ${PYSITELIB}/pandas/tests/dtypes/cast/test_infer_dtype.py
 ${PYSITELIB}/pandas/tests/dtypes/cast/test_infer_dtype.pyc
 ${PYSITELIB}/pandas/tests/dtypes/cast/test_infer_dtype.pyo
-${PYSITELIB}/pandas/tests/dtypes/cast/test_maybe_box_native.py
-${PYSITELIB}/pandas/tests/dtypes/cast/test_maybe_box_native.pyc
-${PYSITELIB}/pandas/tests/dtypes/cast/test_maybe_box_native.pyo
 ${PYSITELIB}/pandas/tests/dtypes/cast/test_promote.py
 ${PYSITELIB}/pandas/tests/dtypes/cast/test_promote.pyc
 ${PYSITELIB}/pandas/tests/dtypes/cast/test_promote.pyo
@@ -1642,6 +1659,12 @@ ${PYSITELIB}/pandas/tests/extension/test_sparse.pyo
 ${PYSITELIB}/pandas/tests/extension/test_string.py
 ${PYSITELIB}/pandas/tests/extension/test_string.pyc
 ${PYSITELIB}/pandas/tests/extension/test_string.pyo
+${PYSITELIB}/pandas/tests/extension/uuid/__init__.py
+${PYSITELIB}/pandas/tests/extension/uuid/__init__.pyc
+${PYSITELIB}/pandas/tests/extension/uuid/__init__.pyo
+${PYSITELIB}/pandas/tests/extension/uuid/test_uuid.py
+${PYSITELIB}/pandas/tests/extension/uuid/test_uuid.pyc
+${PYSITELIB}/pandas/tests/extension/uuid/test_uuid.pyo
 ${PYSITELIB}/pandas/tests/frame/__init__.py
 ${PYSITELIB}/pandas/tests/frame/__init__.pyc
 ${PYSITELIB}/pandas/tests/frame/__init__.pyo
@@ -1792,9 +1815,6 @@ ${PYSITELIB}/pandas/tests/frame/methods/test_fillna.pyo
 ${PYSITELIB}/pandas/tests/frame/methods/test_filter.py
 ${PYSITELIB}/pandas/tests/frame/methods/test_filter.pyc
 ${PYSITELIB}/pandas/tests/frame/methods/test_filter.pyo
-${PYSITELIB}/pandas/tests/frame/methods/test_first_and_last.py
-${PYSITELIB}/pandas/tests/frame/methods/test_first_and_last.pyc
-${PYSITELIB}/pandas/tests/frame/methods/test_first_and_last.pyo
 ${PYSITELIB}/pandas/tests/frame/methods/test_first_valid_index.py
 ${PYSITELIB}/pandas/tests/frame/methods/test_first_valid_index.pyc
 ${PYSITELIB}/pandas/tests/frame/methods/test_first_valid_index.pyo
@@ -1900,9 +1920,6 @@ ${PYSITELIB}/pandas/tests/frame/methods/test_sort_index.pyo
 ${PYSITELIB}/pandas/tests/frame/methods/test_sort_values.py
 ${PYSITELIB}/pandas/tests/frame/methods/test_sort_values.pyc
 ${PYSITELIB}/pandas/tests/frame/methods/test_sort_values.pyo
-${PYSITELIB}/pandas/tests/frame/methods/test_swapaxes.py
-${PYSITELIB}/pandas/tests/frame/methods/test_swapaxes.pyc
-${PYSITELIB}/pandas/tests/frame/methods/test_swapaxes.pyo
 ${PYSITELIB}/pandas/tests/frame/methods/test_swaplevel.py
 ${PYSITELIB}/pandas/tests/frame/methods/test_swaplevel.pyc
 ${PYSITELIB}/pandas/tests/frame/methods/test_swaplevel.pyo
@@ -2053,9 +2070,6 @@ ${PYSITELIB}/pandas/tests/groupby/conftest.pyo
 ${PYSITELIB}/pandas/tests/groupby/methods/__init__.py
 ${PYSITELIB}/pandas/tests/groupby/methods/__init__.pyc
 ${PYSITELIB}/pandas/tests/groupby/methods/__init__.pyo
-${PYSITELIB}/pandas/tests/groupby/methods/test_corrwith.py
-${PYSITELIB}/pandas/tests/groupby/methods/test_corrwith.pyc
-${PYSITELIB}/pandas/tests/groupby/methods/test_corrwith.pyo
 ${PYSITELIB}/pandas/tests/groupby/methods/test_describe.py
 ${PYSITELIB}/pandas/tests/groupby/methods/test_describe.pyc
 ${PYSITELIB}/pandas/tests/groupby/methods/test_describe.pyo
@@ -2065,6 +2079,9 @@ ${PYSITELIB}/pandas/tests/groupby/methods/test_groupby_shift_diff.pyo
 ${PYSITELIB}/pandas/tests/groupby/methods/test_is_monotonic.py
 ${PYSITELIB}/pandas/tests/groupby/methods/test_is_monotonic.pyc
 ${PYSITELIB}/pandas/tests/groupby/methods/test_is_monotonic.pyo
+${PYSITELIB}/pandas/tests/groupby/methods/test_kurt.py
+${PYSITELIB}/pandas/tests/groupby/methods/test_kurt.pyc
+${PYSITELIB}/pandas/tests/groupby/methods/test_kurt.pyo
 ${PYSITELIB}/pandas/tests/groupby/methods/test_nlargest_nsmallest.py
 ${PYSITELIB}/pandas/tests/groupby/methods/test_nlargest_nsmallest.pyc
 ${PYSITELIB}/pandas/tests/groupby/methods/test_nlargest_nsmallest.pyo
@@ -2098,9 +2115,6 @@ ${PYSITELIB}/pandas/tests/groupby/test_api.pyo
 ${PYSITELIB}/pandas/tests/groupby/test_apply.py
 ${PYSITELIB}/pandas/tests/groupby/test_apply.pyc
 ${PYSITELIB}/pandas/tests/groupby/test_apply.pyo
-${PYSITELIB}/pandas/tests/groupby/test_apply_mutate.py
-${PYSITELIB}/pandas/tests/groupby/test_apply_mutate.pyc
-${PYSITELIB}/pandas/tests/groupby/test_apply_mutate.pyo
 ${PYSITELIB}/pandas/tests/groupby/test_bin_groupby.py
 ${PYSITELIB}/pandas/tests/groupby/test_bin_groupby.pyc
 ${PYSITELIB}/pandas/tests/groupby/test_bin_groupby.pyo
@@ -2503,6 +2517,9 @@ ${PYSITELIB}/pandas/tests/indexes/multi/test_sorting.pyo
 ${PYSITELIB}/pandas/tests/indexes/multi/test_take.py
 ${PYSITELIB}/pandas/tests/indexes/multi/test_take.pyc
 ${PYSITELIB}/pandas/tests/indexes/multi/test_take.pyo
+${PYSITELIB}/pandas/tests/indexes/multi/test_util.py
+${PYSITELIB}/pandas/tests/indexes/multi/test_util.pyc
+${PYSITELIB}/pandas/tests/indexes/multi/test_util.pyo
 ${PYSITELIB}/pandas/tests/indexes/numeric/__init__.py
 ${PYSITELIB}/pandas/tests/indexes/numeric/__init__.pyc
 ${PYSITELIB}/pandas/tests/indexes/numeric/__init__.pyo
@@ -2743,9 +2760,6 @@ ${PYSITELIB}/pandas/tests/indexing/__init__.pyo
 ${PYSITELIB}/pandas/tests/indexing/common.py
 ${PYSITELIB}/pandas/tests/indexing/common.pyc
 ${PYSITELIB}/pandas/tests/indexing/common.pyo
-${PYSITELIB}/pandas/tests/indexing/conftest.py
-${PYSITELIB}/pandas/tests/indexing/conftest.pyc
-${PYSITELIB}/pandas/tests/indexing/conftest.pyo
 ${PYSITELIB}/pandas/tests/indexing/interval/__init__.py
 ${PYSITELIB}/pandas/tests/indexing/interval/__init__.pyc
 ${PYSITELIB}/pandas/tests/indexing/interval/__init__.pyo
@@ -2857,9 +2871,6 @@ ${PYSITELIB}/pandas/tests/internals/test_api.pyo
 ${PYSITELIB}/pandas/tests/internals/test_internals.py
 ${PYSITELIB}/pandas/tests/internals/test_internals.pyc
 ${PYSITELIB}/pandas/tests/internals/test_internals.pyo
-${PYSITELIB}/pandas/tests/internals/test_managers.py
-${PYSITELIB}/pandas/tests/internals/test_managers.pyc
-${PYSITELIB}/pandas/tests/internals/test_managers.pyo
 ${PYSITELIB}/pandas/tests/io/__init__.py
 ${PYSITELIB}/pandas/tests/io/__init__.pyc
 ${PYSITELIB}/pandas/tests/io/__init__.pyo
@@ -2929,6 +2940,9 @@ ${PYSITELIB}/pandas/tests/io/formats/style/test_to_latex.pyo
 ${PYSITELIB}/pandas/tests/io/formats/style/test_to_string.py
 ${PYSITELIB}/pandas/tests/io/formats/style/test_to_string.pyc
 ${PYSITELIB}/pandas/tests/io/formats/style/test_to_string.pyo
+${PYSITELIB}/pandas/tests/io/formats/style/test_to_typst.py
+${PYSITELIB}/pandas/tests/io/formats/style/test_to_typst.pyc
+${PYSITELIB}/pandas/tests/io/formats/style/test_to_typst.pyo
 ${PYSITELIB}/pandas/tests/io/formats/style/test_tooltip.py
 ${PYSITELIB}/pandas/tests/io/formats/style/test_tooltip.pyc
 ${PYSITELIB}/pandas/tests/io/formats/style/test_tooltip.pyo
@@ -3040,9 +3054,6 @@ ${PYSITELIB}/pandas/tests/io/parser/common/test_iterator.pyo
 ${PYSITELIB}/pandas/tests/io/parser/common/test_read_errors.py
 ${PYSITELIB}/pandas/tests/io/parser/common/test_read_errors.pyc
 ${PYSITELIB}/pandas/tests/io/parser/common/test_read_errors.pyo
-${PYSITELIB}/pandas/tests/io/parser/common/test_verbose.py
-${PYSITELIB}/pandas/tests/io/parser/common/test_verbose.pyc
-${PYSITELIB}/pandas/tests/io/parser/common/test_verbose.pyo
 ${PYSITELIB}/pandas/tests/io/parser/conftest.py
 ${PYSITELIB}/pandas/tests/io/parser/conftest.pyc
 ${PYSITELIB}/pandas/tests/io/parser/conftest.pyo
@@ -3223,9 +3234,6 @@ ${PYSITELIB}/pandas/tests/io/test_feather.pyo
 ${PYSITELIB}/pandas/tests/io/test_fsspec.py
 ${PYSITELIB}/pandas/tests/io/test_fsspec.pyc
 ${PYSITELIB}/pandas/tests/io/test_fsspec.pyo
-${PYSITELIB}/pandas/tests/io/test_gbq.py
-${PYSITELIB}/pandas/tests/io/test_gbq.pyc
-${PYSITELIB}/pandas/tests/io/test_gbq.pyo
 ${PYSITELIB}/pandas/tests/io/test_gcs.py
 ${PYSITELIB}/pandas/tests/io/test_gcs.pyc
 ${PYSITELIB}/pandas/tests/io/test_gcs.pyo
@@ -3235,6 +3243,9 @@ ${PYSITELIB}/pandas/tests/io/test_html.pyo
 ${PYSITELIB}/pandas/tests/io/test_http_headers.py
 ${PYSITELIB}/pandas/tests/io/test_http_headers.pyc
 ${PYSITELIB}/pandas/tests/io/test_http_headers.pyo
+${PYSITELIB}/pandas/tests/io/test_iceberg.py
+${PYSITELIB}/pandas/tests/io/test_iceberg.pyc
+${PYSITELIB}/pandas/tests/io/test_iceberg.pyo
 ${PYSITELIB}/pandas/tests/io/test_orc.py
 ${PYSITELIB}/pandas/tests/io/test_orc.pyc
 ${PYSITELIB}/pandas/tests/io/test_orc.pyo
@@ -3256,6 +3267,9 @@ ${PYSITELIB}/pandas/tests/io/test_sql.pyo
 ${PYSITELIB}/pandas/tests/io/test_stata.py
 ${PYSITELIB}/pandas/tests/io/test_stata.pyc
 ${PYSITELIB}/pandas/tests/io/test_stata.pyo
+${PYSITELIB}/pandas/tests/io/test_util.py
+${PYSITELIB}/pandas/tests/io/test_util.pyc
+${PYSITELIB}/pandas/tests/io/test_util.pyo
 ${PYSITELIB}/pandas/tests/io/xml/__init__.py
 ${PYSITELIB}/pandas/tests/io/xml/__init__.pyc
 ${PYSITELIB}/pandas/tests/io/xml/__init__.pyo
@@ -3388,9 +3402,6 @@ ${PYSITELIB}/pandas/tests/reshape/__init__.pyo
 ${PYSITELIB}/pandas/tests/reshape/concat/__init__.py
 ${PYSITELIB}/pandas/tests/reshape/concat/__init__.pyc
 ${PYSITELIB}/pandas/tests/reshape/concat/__init__.pyo
-${PYSITELIB}/pandas/tests/reshape/concat/conftest.py
-${PYSITELIB}/pandas/tests/reshape/concat/conftest.pyc
-${PYSITELIB}/pandas/tests/reshape/concat/conftest.pyo
 ${PYSITELIB}/pandas/tests/reshape/concat/test_append.py
 ${PYSITELIB}/pandas/tests/reshape/concat/test_append.pyc
 ${PYSITELIB}/pandas/tests/reshape/concat/test_append.pyo
@@ -3433,6 +3444,9 @@ ${PYSITELIB}/pandas/tests/reshape/merge/test_join.pyo
 ${PYSITELIB}/pandas/tests/reshape/merge/test_merge.py
 ${PYSITELIB}/pandas/tests/reshape/merge/test_merge.pyc
 ${PYSITELIB}/pandas/tests/reshape/merge/test_merge.pyo
+${PYSITELIB}/pandas/tests/reshape/merge/test_merge_antijoin.py
+${PYSITELIB}/pandas/tests/reshape/merge/test_merge_antijoin.pyc
+${PYSITELIB}/pandas/tests/reshape/merge/test_merge_antijoin.pyo
 ${PYSITELIB}/pandas/tests/reshape/merge/test_merge_asof.py
 ${PYSITELIB}/pandas/tests/reshape/merge/test_merge_asof.pyc
 ${PYSITELIB}/pandas/tests/reshape/merge/test_merge_asof.pyo
@@ -3475,9 +3489,6 @@ ${PYSITELIB}/pandas/tests/reshape/test_qcut.pyo
 ${PYSITELIB}/pandas/tests/reshape/test_union_categoricals.py
 ${PYSITELIB}/pandas/tests/reshape/test_union_categoricals.pyc
 ${PYSITELIB}/pandas/tests/reshape/test_union_categoricals.pyo
-${PYSITELIB}/pandas/tests/reshape/test_util.py
-${PYSITELIB}/pandas/tests/reshape/test_util.pyc
-${PYSITELIB}/pandas/tests/reshape/test_util.pyo
 ${PYSITELIB}/pandas/tests/scalar/__init__.py
 ${PYSITELIB}/pandas/tests/scalar/__init__.pyc
 ${PYSITELIB}/pandas/tests/scalar/__init__.pyo
@@ -3865,15 +3876,15 @@ ${PYSITELIB}/pandas/tests/series/methods/test_value_counts.pyo
 ${PYSITELIB}/pandas/tests/series/methods/test_values.py
 ${PYSITELIB}/pandas/tests/series/methods/test_values.pyc
 ${PYSITELIB}/pandas/tests/series/methods/test_values.pyo
-${PYSITELIB}/pandas/tests/series/methods/test_view.py
-${PYSITELIB}/pandas/tests/series/methods/test_view.pyc
-${PYSITELIB}/pandas/tests/series/methods/test_view.pyo
 ${PYSITELIB}/pandas/tests/series/test_api.py
 ${PYSITELIB}/pandas/tests/series/test_api.pyc
 ${PYSITELIB}/pandas/tests/series/test_api.pyo
 ${PYSITELIB}/pandas/tests/series/test_arithmetic.py
 ${PYSITELIB}/pandas/tests/series/test_arithmetic.pyc
 ${PYSITELIB}/pandas/tests/series/test_arithmetic.pyo
+${PYSITELIB}/pandas/tests/series/test_arrow_interface.py
+${PYSITELIB}/pandas/tests/series/test_arrow_interface.pyc
+${PYSITELIB}/pandas/tests/series/test_arrow_interface.pyo
 ${PYSITELIB}/pandas/tests/series/test_constructors.py
 ${PYSITELIB}/pandas/tests/series/test_constructors.pyc
 ${PYSITELIB}/pandas/tests/series/test_constructors.pyo
@@ -3949,6 +3960,9 @@ ${PYSITELIB}/pandas/tests/test_aggregation.pyo
 ${PYSITELIB}/pandas/tests/test_algos.py
 ${PYSITELIB}/pandas/tests/test_algos.pyc
 ${PYSITELIB}/pandas/tests/test_algos.pyo
+${PYSITELIB}/pandas/tests/test_col.py
+${PYSITELIB}/pandas/tests/test_col.pyc
+${PYSITELIB}/pandas/tests/test_col.pyo
 ${PYSITELIB}/pandas/tests/test_common.py
 ${PYSITELIB}/pandas/tests/test_common.pyc
 ${PYSITELIB}/pandas/tests/test_common.pyo
@@ -4036,6 +4050,9 @@ ${PYSITELIB}/pandas/tests/tseries/offsets/common.pyo
 ${PYSITELIB}/pandas/tests/tseries/offsets/test_business_day.py
 ${PYSITELIB}/pandas/tests/tseries/offsets/test_business_day.pyc
 ${PYSITELIB}/pandas/tests/tseries/offsets/test_business_day.pyo
+${PYSITELIB}/pandas/tests/tseries/offsets/test_business_halfyear.py
+${PYSITELIB}/pandas/tests/tseries/offsets/test_business_halfyear.pyc
+${PYSITELIB}/pandas/tests/tseries/offsets/test_business_halfyear.pyo
 ${PYSITELIB}/pandas/tests/tseries/offsets/test_business_hour.py
 ${PYSITELIB}/pandas/tests/tseries/offsets/test_business_hour.pyc
 ${PYSITELIB}/pandas/tests/tseries/offsets/test_business_hour.pyo
@@ -4069,6 +4086,9 @@ ${PYSITELIB}/pandas/tests/tseries/offsets/test_easter.pyo
 ${PYSITELIB}/pandas/tests/tseries/offsets/test_fiscal.py
 ${PYSITELIB}/pandas/tests/tseries/offsets/test_fiscal.pyc
 ${PYSITELIB}/pandas/tests/tseries/offsets/test_fiscal.pyo
+${PYSITELIB}/pandas/tests/tseries/offsets/test_halfyear.py
+${PYSITELIB}/pandas/tests/tseries/offsets/test_halfyear.pyc
+${PYSITELIB}/pandas/tests/tseries/offsets/test_halfyear.pyo
 ${PYSITELIB}/pandas/tests/tseries/offsets/test_index.py
 ${PYSITELIB}/pandas/tests/tseries/offsets/test_index.pyc
 ${PYSITELIB}/pandas/tests/tseries/offsets/test_index.pyo
