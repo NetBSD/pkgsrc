@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.78 2026/06/01 10:51:03 adam Exp $
+$NetBSD: distinfo,v 1.79 2026/06/05 09:10:38 adam Exp $
 
-BLAKE2s (octave-11.2.0.tar.xz) = a7b1478bdb6fbc3ff66e01f92acb712d50d966abc14427243b72784420808f8f
-SHA512 (octave-11.2.0.tar.xz) = f6e1c6fa7f59399ae765572531e8753dca697116ab3b6ab6e8a2154fdea58373ae04f0e74a6b4249e372f33fc90ff5adb8260247177e374c678b9b23f577d076
-Size (octave-11.2.0.tar.xz) = 27920960 bytes
+BLAKE2s (octave-11.3.0.tar.xz) = a951b666f42d52eb43e3c4019904928cb1518c9741ee3f5b754f638a221d66e9
+SHA512 (octave-11.3.0.tar.xz) = 1714c584564743187d71cdb9df58bfcad943931f2b1774e520007722f3913c0a6115717a4ad9abe22ec75852e6d627ecf1b83fde3893e82d7ce57cf9eea4f841
+Size (octave-11.3.0.tar.xz) = 27919604 bytes
 SHA1 (patch-Makefile.in) = 7fe47cf88e4dff2eba360600f086f8361ec11535
 SHA1 (patch-configure.ac) = 0a128ce9c5dec33594fec30e269874c6a8b52e69
 SHA1 (patch-doc_interpreter_module.mk) = 4e9ec54aeebe5f476e88daf70474bbc016fa2ddd
