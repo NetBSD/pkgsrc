@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.87 2026/04/13 08:26:56 pin Exp $
+$NetBSD: distinfo,v 1.88 2026/06/05 10:15:16 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -1008,9 +1008,9 @@ Size (toml_parser-1.1.2+spec-1.1.0.crate) = 35485 bytes
 BLAKE2s (toml_writer-1.1.1+spec-1.1.0.crate) = b011339eeaee15cd549ac19561df67fced7b322a54c52039b5f6eedad015f593
 SHA512 (toml_writer-1.1.1+spec-1.1.0.crate) = f8114a147e81c99b7cfff81c9c337b04d27199259cfa853ff1df4f56fd65d7a2d845d90e21ec51c36069b11f7e4b7a6fbcc69a9594954ec032c75998b2480697
 Size (toml_writer-1.1.1+spec-1.1.0.crate) = 18841 bytes
-BLAKE2s (tp-note-1.26.0.tar.gz) = 703a308a7f676f62bf74745d86ee187fbf20e2ca409d26ff23c80b5158abd7d2
-SHA512 (tp-note-1.26.0.tar.gz) = dcf968b78750ba4548e28a8f54078201e5bd688de5b1e77433ac1bb7c27a620876e3aabfd6fbbe69d0a2da7d7f9dc7a26825ed9eb708973ccb43cdfd55328342
-Size (tp-note-1.26.0.tar.gz) = 3609258 bytes
+BLAKE2s (tp-note-1.26.1.tar.gz) = dea1d9cdfb47267f52188674c6732030bf522648fd73f5c90aeb4acb7f879f7b
+SHA512 (tp-note-1.26.1.tar.gz) = 65884081f20c50780063aa714ae63cd90ebbc7b01b9b8f3c4eb052dff2150a90ad9011ea4a57b797727a65fa0b933e69d46aad36a14e84bf5e22e2b6795ca5d6
+Size (tp-note-1.26.1.tar.gz) = 3611243 bytes
 BLAKE2s (tpnote-html2md-0.3.7.crate) = ab21a2907832e2b88fb2a129d557a004da532c3e46ef7f6edede5354c4de1e56
 SHA512 (tpnote-html2md-0.3.7.crate) = c5115dab5336867b7677886cdf015654121f752a26d17584bbbf81a9217e9d16bcd958a2b556e4fc9721ed77b5272a6901cb5909b5e4d75685ac648ebf0337f9
 Size (tpnote-html2md-0.3.7.crate) = 35613 bytes
