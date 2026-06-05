@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.17 2026/05/28 06:41:34 adam Exp $
+$NetBSD: distinfo,v 1.18 2026/06/05 08:19:13 adam Exp $
 
-BLAKE2s (libde265-1.1.0.tar.gz) = fe0afdd616d89aee0081eb0533fd7d8b6fc6d877df9f216e8a96de8461447a34
-SHA512 (libde265-1.1.0.tar.gz) = 46298017e2852c744cc0fa20225fc3f1d1cfb9730e54b1569b8fbfc68f7219c5e7dd8517ac6f80d1f338a439fc7f873126a9f61ecefe87418259cb453d3311d2
-Size (libde265-1.1.0.tar.gz) = 294030 bytes
+BLAKE2s (libde265-1.1.1.tar.gz) = 354ac3ae9cfc2fca6274ae2bd3e211aca23c7978a5af4e15776f645d001dad91
+SHA512 (libde265-1.1.1.tar.gz) = 7ecc2fc2d20bc85f2a117c16562e1abd6ad9ec92785f65dfb15a5c7038687b64ae885ad31d31beaf2fa5471b4ce4dbfee98191db9457b2a6b14eabda8c483cad
+Size (libde265-1.1.1.tar.gz) = 315566 bytes
 SHA1 (patch-CMakeLists.txt) = 8634ecedecea2da040ade750938cfb83c7171a70
 SHA1 (patch-cmake_config.h.in) = 5d37e8331db11c93cb31c2aaf9074f7b3f1a8877
