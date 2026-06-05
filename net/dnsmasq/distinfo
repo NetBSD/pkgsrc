@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.51 2026/01/15 18:30:21 adam Exp $
+$NetBSD: distinfo,v 1.52 2026/06/05 08:38:30 adam Exp $
 
-BLAKE2s (dnsmasq-2.92.tar.xz) = 3dc5d967d1fc258298e3bcc245f38d7f647e444f94718f1f79e2ce1066434ef1
-SHA512 (dnsmasq-2.92.tar.xz) = 14a4638f4819c88c1214f38ca66622ce618b800dcc0d271d4eec6fd97639611f2317b711f6342c62b1f132acc7c2dec657fbf26c004d0d55ef10786944ad0ad1
-Size (dnsmasq-2.92.tar.xz) = 637752 bytes
+BLAKE2s (dnsmasq-2.93.tar.xz) = 9cbe2a078f6e49e6f7a19f5a3dfa1012d5814c270af219735e5605c93debbf9d
+SHA512 (dnsmasq-2.93.tar.xz) = ee442c634c54f103e034ee5259f1802895f9e9d172891f14c644e260519da73f5dd6f28b75cb84c0b1cc5f9ec464ba8f40c87095fa96719cb0df831eae0887ee
+Size (dnsmasq-2.93.tar.xz) = 642764 bytes
 SHA1 (patch-src_bpf.c) = 4115a5391f57564663bbfc448fbb865c370318a6
 SHA1 (patch-src_dump.c) = e5788d9e3112b1e5b2ef7ce500b0262b95c375c6
