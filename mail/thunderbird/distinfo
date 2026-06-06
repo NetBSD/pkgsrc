@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.295 2026/02/26 13:38:43 ryoon Exp $
+$NetBSD: distinfo,v 1.296 2026/06/06 14:51:30 ryoon Exp $
 
-BLAKE2s (thunderbird-148.0.source.tar.xz) = 6f95f845fb3137f4b042d902dcc37169eab35d70d358659a48c0fe01ab4f4113
-SHA512 (thunderbird-148.0.source.tar.xz) = ec5e586206ef217f37eb6985356994e7e7c9db6090f57d5b4c43a3a5dc0e1f5a56c0e7080d86fb895446845f9c9b948284f7417afebcf6e6120eca0e1ed238f3
-Size (thunderbird-148.0.source.tar.xz) = 796239120 bytes
+BLAKE2s (thunderbird-151.0.1.source.tar.xz) = 5d048eb19e4698ddee169d0f998798fe5efbc4659182beaba092c7f51842efaa
+SHA512 (thunderbird-151.0.1.source.tar.xz) = a09c1e18faa8d7fdccf39e905542c21e817230e68c7cc6050beec048d0fec0f8eb92e51278d2ccd8d8cfa842762662235517e20238b555a4ad48ee5648dc3589
+Size (thunderbird-151.0.1.source.tar.xz) = 917255144 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = 1eaa674c0aa8279e2f9dc2eda582650a08156d65
 SHA1 (patch-build_gn__processor.py) = 078f773104bf4c1b30584564aefe365db6ba6daf
 SHA1 (patch-build_moz.configure_init.configure) = 65deb3c233df0aab81eb1fca05d708e5a4ed169a
 SHA1 (patch-build_moz.configure_rust.configure) = 25ddfacd29cebbc6db005dbe61a2a7446d480678
+SHA1 (patch-comm_build_moz.configure_gecko__source.configure) = ce7b668d632d6bad71bf97b14d237eacfb6bb6ab
 SHA1 (patch-comm_mailnews_compose_src_nsMsgCompUtils.cpp) = c3e38828803536879baf2934aa1bfa50cfba0112
 SHA1 (patch-comm_mailnews_search_src_nsMsgSearchNews.cpp) = 84624c6752de1f56848a202b3a2179a2d8098e4e
 SHA1 (patch-comm_third__party_libgcrypt_configure) = c5ca8a8b44c485f81139b54d341ac044189d98d3
 SHA1 (patch-comm_third__party_openpgp.configure) = 674e8a741d82f576549aa0bb44465d3a2577a212
-SHA1 (patch-comm_third__party_rust_dogear_.github_workflows_upload-to-codecov.sh) = 9d243aa5507752404816d38ae132c9fa1d6488f8
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = af24d07b6852caa6f1f2c8f5da3cd31e9446b6cf
 SHA1 (patch-config_makefiles_rust.mk) = 25eb2d4c99ace2b215917490f28ceb90ab90145f
 SHA1 (patch-config_system-headers.mozbuild) = 8a628765291085efe6a22da28c0ff99fbc3c5e6f
@@ -26,6 +26,7 @@ SHA1 (patch-gfx_skia_skia_src_sksl_codegen_SkSLSPIRVCodeGenerator.cpp) = 3eb9855
 SHA1 (patch-gfx_wr_swgl_build.rs) = 959420365cdfb64bb5967d01d31378967753d6de
 SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 298642a3527804115b398fb7904a3596962932e3
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = ee40764b100728d8fb73b8c6f1251456e368bd53
+SHA1 (patch-ipc_glue_ForkServer.cpp) = 91d3141795ba19c27c6e46fc205f97bfef1fdd6c
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 00bd08bb68b9aad3c4478c8849b53341da4a0d29
 SHA1 (patch-js-src-jit-arm64-vixl-MozCpu-vixl.cpp) = d90fca47d79551fd74214d47f8184670b901b792
 SHA1 (patch-js_public_Utility.h) = bb5464a0398b91693ab362e6b9b06d48429b9e7d
@@ -37,10 +38,11 @@ SHA1 (patch-js_src_vm_TypedArrayObject-inl.h) = e7913c8d4b2b05b67040baa64dae62d6
 SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = d0bdc30d23447bd56185eb9dc5c86de591f9cc02
 SHA1 (patch-media_libpng_pngpriv.h) = ee952a703ee08e8ff2269c7178e55e00b12faa29
 SHA1 (patch-memory_build_mozjemalloc__types.h) = af87ef935653cb845a6b702af2f5645a6ada27db
-SHA1 (patch-modules_fdlibm_src_math__private.h) = e20b6c23011d7123cbbd64a500eb8ce8c426620e
 SHA1 (patch-netwerk_protocol_http_nsHttpHandler.cpp) = 67493b4635041d21ff9fbfda80b3197fed542a26
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 753fd4d62088c870aefe7c4b739286259848446e
 SHA1 (patch-python_mozbuild_mozbuild_backend_recursivemake.py) = 5be4183d9075f5a3a3c6b3e0338473af185fb50e
+SHA1 (patch-python_sites_build.txt) = f60f28480179edb47c8dcf84e3247aa6704c2610
+SHA1 (patch-python_sites_mach.txt) = a4950e1b5ad66231b723eef8f9e7ecce9127d9d3
 SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = 6cac13bc120d52b2c3628938d2fc1cba628b3a31
 SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc) = cc68e46f1b98bbcc064a4c61fc96a3c7ede8e6ba
 SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_vdso__support.cc) = f9c44d0d6fd952296f23c24f56053958b30d8e5c

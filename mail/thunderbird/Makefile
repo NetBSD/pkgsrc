@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.360 2026/02/26 13:38:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.361 2026/06/06 14:51:30 ryoon Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER:S/esr//}
-TB_VER=		148.0
+TB_VER=		151.0.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -57,29 +57,23 @@ CHECK_WRKREF_SKIP+=	lib/${MOZILLA_NAME}/omni.ja
 # updating and verification.
 #
 
-CKSUM_CRATES+=	comm/third_party/rust/minimal-lexical
+#CKSUM_CRATES+=	comm/third_party/rust/minimal-lexical
+#
+## touch comm/third_party/rust/minimal-lexical/.gitmodules
+#CKSUMS+=	6976207a02c7160a3a1d076c5fae10fe4b78f58cdc0aa66ae47f3855b3c392fb
+#CKSUMS+=	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 
-# touch comm/third_party/rust/minimal-lexical/.gitmodules
-CKSUMS+=	6976207a02c7160a3a1d076c5fae10fe4b78f58cdc0aa66ae47f3855b3c392fb
-CKSUMS+=	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+#CKSUM_CRATES+=	comm/third_party/rust/sfv
+#
+## touch comm/third_party/rust/sfv/.gitmodules
+#CKSUMS+=	caa4f75b6a87c4a0f2e7d8d0d5fa2ef3f726fb0ae7797af09bfa3d57c4721148
+#CKSUMS+=	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 
-CKSUM_CRATES+=	comm/third_party/rust/dogear
-
-# patch-comm_third__party_rust_dogear_.github_workflows_upload-to-codecov.sh
-CKSUMS+=	bb2cb096519bc76a5bb4fb217165686b27a6d08920d61dfc0a13d301fbe140c9
-CKSUMS+=	61478eeb1ad8fface3596cedf42bfa4762da19ce84f2f1a33b9197bb93d35262
-
-CKSUM_CRATES+=	comm/third_party/rust/sfv
-
-# touch comm/third_party/rust/sfv/.gitmodules
-CKSUMS+=	caa4f75b6a87c4a0f2e7d8d0d5fa2ef3f726fb0ae7797af09bfa3d57c4721148
-CKSUMS+=	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-
-CKSUM_CRATES+=	comm/third_party/rust/glslopt
-
-# touch comm/third_party/rust/glslopt/.gitmodules
-CKSUMS+=	ffc0cce90e856d4f4bdb3bd3c950c9e59501a45ebd5022b91cfe8c07c79ef1ac
-CKSUMS+=	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+#CKSUM_CRATES+=	comm/third_party/rust/glslopt
+#
+## touch comm/third_party/rust/glslopt/.gitmodules
+#CKSUMS+=	ffc0cce90e856d4f4bdb3bd3c950c9e59501a45ebd5022b91cfe8c07c79ef1ac
+#CKSUMS+=	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 
 SUBST_CLASSES+=		cksum
 SUBST_STAGE.cksum=	pre-configure
@@ -91,9 +85,9 @@ SUBST_SED.cksum+=	-e 's,${from},${to},g'
 .endfor
 
 post-extract:
-	${TOUCH} ${WRKSRC}/comm/third_party/rust/minimal-lexical/.gitmodules
-	${TOUCH} ${WRKSRC}/comm/third_party/rust/sfv/.gitmodules
-	${TOUCH} ${WRKSRC}/comm/third_party/rust/glslopt/.gitmodules
+	#${TOUCH} ${WRKSRC}/comm/third_party/rust/minimal-lexical/.gitmodules
+	#${TOUCH} ${WRKSRC}/comm/third_party/rust/sfv/.gitmodules
+	#${TOUCH} ${WRKSRC}/comm/third_party/rust/glslopt/.gitmodules
 	#${CP} ${FILESDIR}/cubeb_sun.c ${WRKSRC}/media/libcubeb/src/cubeb_sun.c
 
 pre-patch:

@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.27 2026/02/26 13:38:43 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.28 2026/06/06 14:51:30 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -79,6 +79,8 @@ CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}intl/icu/source/configure
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}browser/components/loop/run-all-loop-tests.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}browser/extensions/loop/run-all-loop-tests.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}third_party/libwebrtc/tools_webrtc/iwyu/apply-iwyu
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}comm/third_party/rust/dogear/.github/workflows/upload-to-codecov.sh
+CHECK_PORTABILITY_SKIP+=	third_party/rust/dogear/.github/workflows/upload-to-codecov.sh
 
 CONFIGURE_ARGS+=	--enable-release
 # Disable Rust SIMD option to fix build with lang/rust-1.33.0
@@ -248,7 +250,7 @@ BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.34
 .include "../../devel/nspr/buildlink3.mk"
 #.include "../../textproc/icu/buildlink3.mk"
 # See build/moz.configure/nss.configure
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.116
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.122.2
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
