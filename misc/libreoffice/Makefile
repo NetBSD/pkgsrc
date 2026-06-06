@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.383 2026/05/15 09:58:57 adam Exp $
+# $NetBSD: Makefile,v 1.384 2026/06/06 15:04:31 ryoon Exp $
 
-VERREL=		26.2.0
-VERRC=		3
+VERREL=		26.2.3
+VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -115,7 +114,7 @@ MORE_DISTFILES= \
 	rhino-1.7.15.1.zip \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
 	language-subtag-registry-2021-08-06.tar.bz2 \
-	postgresql-15.15.tar.bz2 \
+	postgresql-15.17.tar.bz2 \
 	graphite2-minimal-1.3.14.tgz \
 	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
 	EmojiOneColor-SVGinOT-1.3.tar.gz \
@@ -138,7 +137,7 @@ MORE_DISTFILES= \
 	NotoSansHebrew-v3.001.zip \
 	NotoSansArabic-v2.010.zip \
 	NotoKufiArabic-v2.110.zip \
-	NotoNaskhArabic-v2.020.zip \
+	NotoNaskhArabic-v2.021.zip \
 	NotoSerifHebrew-v2.004.zip \
 	NotoSansArmenian-v2.008.zip \
 	NotoSerifArmenian-v2.008.zip \
