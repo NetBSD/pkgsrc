@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/06/06 18:39:55 wiz Exp $
+
+BLAKE2s (tuptime-5.2.6.tar.gz) = 24320b9c47730c75584e63c783925595c11cf6950ad305d68cec6dbe7530bb66
+SHA512 (tuptime-5.2.6.tar.gz) = 456b57efbacdb2cbbd4cac3bbe19b5f1fe96a07275d4dadc5e6d4be34b795cc966081e908407367521ba4430d74b644657e0b80c0b055c5cc13873f0b01be2aa
+Size (tuptime-5.2.6.tar.gz) = 64113 bytes

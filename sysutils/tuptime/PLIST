@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2026/06/06 18:39:55 wiz Exp $
+bin/tuptime
+man/man1/tuptime.1
+share/doc/tuptime/README.pkgsrc
+share/doc/tuptime/tuptime-manual.txt
+share/examples/rc.d/tuptime
