@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:14:31 nia Exp $
+$NetBSD: distinfo,v 1.8 2026/06/06 05:15:17 adam Exp $
 
 BLAKE2s (darts-0.32.tar.gz) = f94321c3239781c51b5c7bd8fea047d265f0453508c38b89513718909d489c45
 SHA512 (darts-0.32.tar.gz) = b9af8ce60688f5858dac2cac35a8666848dba6729f9f4364786123a1c0484e56c8b981ec04e59653afbcf20cce3b326a49243095213efb525b5669472ac7358e
 Size (darts-0.32.tar.gz) = 234001 bytes
+SHA1 (patch-darts.h.in) = 899072b28f9e2c8b33adef87219156b19d9e3f31
