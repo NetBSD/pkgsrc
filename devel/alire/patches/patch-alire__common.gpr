@@ -1,17 +1,17 @@
-$NetBSD: patch-alire__common.gpr,v 1.3 2025/04/27 10:43:42 dkazankov Exp $
+$NetBSD: patch-alire__common.gpr,v 1.4 2026/06/06 06:20:24 dkazankov Exp $
 
 Add NetBSD support, fix switches for release build (avoiding runtime exceptions)
 
---- alire_common.gpr.orig	2025-03-04 10:02:00.000000000 +0000
+--- alire_common.gpr.orig	2026-05-25 15:21:25.000000000 +0300
 +++ alire_common.gpr
-@@ -5,6 +5,7 @@
+@@ -3,6 +3,7 @@
+    for Create_Missing_Dirs use "True";
+ 
     type Host_OSes is ("linux",
++                      "netbsd",
                        "freebsd",
                        "openbsd",
-+                      "netbsd",
                        "macos",
-                       "windows");
- 
 @@ -108,7 +109,7 @@
                 "-fPIC",
  
