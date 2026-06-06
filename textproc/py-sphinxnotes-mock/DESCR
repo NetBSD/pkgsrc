@@ -1,0 +1,4 @@
+Sphinx extension for masking unsupported directives and roles without modifying
+documents. It is especially useful when a certain directive/role is provided by
+an incompatible extension, or the directive/roles is incompatible with your
+current buidler or theme.
