@@ -1,10 +1,10 @@
-$NetBSD: patch-gcc_ada_libgnarl_s-osinte____netbsd.ads,v 1.1 2025/07/17 05:00:17 dkazankov Exp $
+$NetBSD: patch-gcc_ada_libgnarl_s-osinte____netbsd.ads,v 1.2 2026/06/06 06:15:50 dkazankov Exp $
 
 Add NetBSD interface
 
 --- /dev/null
 +++ gcc/ada/libgnarl/s-osinte__netbsd.ads
-@@ -0,0 +1,640 @@
+@@ -0,0 +1,753 @@
 +------------------------------------------------------------------------------
 +--                                                                          --
 +--                  GNAT RUN-TIME LIBRARY (GNARL) COMPONENTS                --
@@ -49,6 +49,7 @@ Add NetBSD interface
 +with Ada.Unchecked_Conversion;
 +
 +with Interfaces.C;
++with System.OS_Constants;
 +with System.OS_Locks;
 +with System.Parameters;
 +
@@ -65,8 +66,8 @@ Add NetBSD interface
 +   subtype unsigned_long  is Interfaces.C.unsigned_long;
 +   subtype unsigned_char  is Interfaces.C.unsigned_char;
 +   subtype plain_char     is Interfaces.C.plain_char;
-+   subtype size_t         is Interfaces.C.size_t;
 +   subtype char_array     is Interfaces.C.char_array;
++   subtype size_t         is Interfaces.C.size_t;
 +   subtype int64          is Interfaces.Integer_64;
 +
 +   -----------
@@ -86,7 +87,7 @@ Add NetBSD interface
 +   -- Signals --
 +   -------------
 +
-+   Max_Interrupt : constant := 31;
++   Max_Interrupt : constant := 32;
 +   type Signal is new int range 0 .. Max_Interrupt;
 +   for Signal'Size use int'Size;
 +
@@ -123,6 +124,7 @@ Add NetBSD interface
 +   SIGINFO    : constant := 29; --  information request (NetBSD/FreeBSD)
 +   SIGUSR1    : constant := 30; --  user defined signal 1
 +   SIGUSR2    : constant := 31; --  user defined signal 2
++   SIGPWR     : constant := 32; --  Power fail/restart
 +
 +   SIGADAABORT : constant := SIGABRT;
 +   --  Change this if you want to use another signal for task abort.
@@ -206,7 +208,7 @@ Add NetBSD interface
 +   function nanosleep (rqtp, rmtp : access timespec) return int;
 +   pragma Import (C, nanosleep, "__gnat_nanosleep");
 +
-+   type clockid_t is new unsigned;
++   type clockid_t is new int;
 +
 +   function clock_getres
 +     (clock_id : clockid_t;
@@ -285,9 +287,11 @@ Add NetBSD interface
 +   subtype Thread_Id        is pthread_t;
 +
 +   subtype pthread_mutex_t  is System.OS_Locks.pthread_mutex_t;
++   type pthread_rwlock_t    is limited private;
 +   type pthread_cond_t      is limited private;
 +   type pthread_attr_t      is limited private;
 +   type pthread_mutexattr_t is limited private;
++   type pthread_rwlockattr_t is limited private;
 +   type pthread_condattr_t  is limited private;
 +   type pthread_key_t       is private;
 +
@@ -296,9 +300,6 @@ Add NetBSD interface
 +
 +   PTHREAD_SCOPE_PROCESS : constant := 0;
 +   PTHREAD_SCOPE_SYSTEM  : constant := 1;
-+
-+   subtype pthread_rwlock_t     is pthread_mutex_t;
-+   subtype pthread_rwlockattr_t is pthread_mutexattr_t;
 +
 +   -----------
 +   -- Stack --
@@ -334,7 +335,7 @@ Add NetBSD interface
 +   --  when Stack_Base_Available is True.
 +
 +   function Get_Page_Size return int;
-+   pragma Import (C, Get_Page_Size, "_getpagesize");
++   pragma Import (C, Get_Page_Size, "getpagesize");
 +   --  Returns the size of a page
 +
 +   PROT_NONE  : constant := 0;
@@ -404,6 +405,32 @@ Add NetBSD interface
 +
 +   function pthread_mutex_unlock (mutex : access pthread_mutex_t) return int;
 +   pragma Import (C, pthread_mutex_unlock, "pthread_mutex_unlock");
++
++   function pthread_rwlockattr_init
++     (attr : access pthread_rwlockattr_t) return int;
++   pragma Import (C, pthread_rwlockattr_init, "pthread_rwlockattr_init");
++
++   function pthread_rwlockattr_destroy
++     (attr : access pthread_rwlockattr_t) return int;
++   pragma Import (C, pthread_rwlockattr_destroy, "pthread_rwlockattr_destroy");
++
++   function pthread_rwlock_init
++     (mutex : access pthread_rwlock_t;
++      attr  : access pthread_rwlockattr_t) return int;
++   pragma Import (C, pthread_rwlock_init, "pthread_rwlock_init");
++
++   function pthread_rwlock_destroy
++     (mutex : access pthread_rwlock_t) return int;
++   pragma Import (C, pthread_rwlock_destroy, "pthread_rwlock_destroy");
++
++   function pthread_rwlock_rdlock (mutex : access pthread_rwlock_t) return int;
++   pragma Import (C, pthread_rwlock_rdlock, "pthread_rwlock_rdlock");
++
++   function pthread_rwlock_wrlock (mutex : access pthread_rwlock_t) return int;
++   pragma Import (C, pthread_rwlock_wrlock, "pthread_rwlock_wrlock");
++
++   function pthread_rwlock_unlock (mutex : access pthread_rwlock_t) return int;
++   pragma Import (C, pthread_rwlock_unlock, "pthread_rwlock_unlock");
 +
 +   function pthread_condattr_init
 +     (attr : access pthread_condattr_t) return int;
@@ -607,6 +634,45 @@ Add NetBSD interface
 +      destructor : destructor_pointer) return int;
 +   pragma Import (C, pthread_key_create, "pthread_key_create");
 +
++   ----------------
++   -- Extensions --
++   ----------------
++
++   type cpuset_t is private;
++
++   function pthread_setaffinity_np
++     (thread     : pthread_t;
++      cpusetsize : size_t;
++      cpuset     : access cpuset_t) return int;
++   pragma Import (C, pthread_setaffinity_np, "pthread_setaffinity_np");
++
++   ----------------
++   -- CPU sets --
++   ----------------
++
++   subtype cpuid_t is unsigned_long;
++
++   function cpuset_create return access cpuset_t;
++   pragma Import (C, cpuset_create, "_cpuset_create");
++
++   procedure cpuset_destroy (set : access cpuset_t);
++   pragma Import (C, cpuset_destroy, "_cpuset_destroy");
++
++   procedure cpuset_zero (set : access cpuset_t);
++   pragma Import (C, cpuset_zero, "_cpuset_zero");
++
++   function cpuset_set (cpu : cpuid_t; set : access cpuset_t) return int;
++   pragma Import (C, cpuset_set, "_cpuset_set");
++
++   function cpuset_clr (cpu : cpuid_t; set : access cpuset_t) return int;
++   pragma Import (C, cpuset_clr, "_cpuset_clr");
++
++   function cpuset_isset (cpu : cpuid_t; set : access cpuset_t) return int;
++   pragma Import (C, cpuset_isset, "_cpuset_isset");
++
++   function cpuset_size (set : access cpuset_t) return size_t;
++   pragma Import (C, cpuset_size, "_cpuset_size");
++
 +private
 +
 +   type sigset_t is array (1 .. 4) of unsigned;
@@ -638,10 +704,57 @@ Add NetBSD interface
 +   pragma Convention (C, timespec);
 +
 +   type pthread_t           is new System.Address;
-+   type pthread_attr_t      is new System.Address;
-+   type pthread_mutexattr_t is new System.Address;
-+   type pthread_cond_t      is new System.Address;
-+   type pthread_condattr_t  is new System.Address;
 +   type pthread_key_t       is new int;
++
++   type pthread_attr_t is record
++      Data : char_array (1 .. OS_Constants.PTHREAD_ATTR_SIZE);
++   end record;
++   pragma Convention (C, pthread_attr_t);
++   for pthread_attr_t'Alignment use
++      Integer'Max (Interfaces.C.unsigned'Alignment,
++                   System.Address'Alignment);
++
++   type pthread_condattr_t is record
++      Data : char_array (1 .. OS_Constants.PTHREAD_CONDATTR_SIZE);
++   end record;
++   pragma Convention (C, pthread_condattr_t);
++   for pthread_condattr_t'Alignment use
++     Integer'Max (Interfaces.C.unsigned'Alignment,
++                  System.Address'Alignment);
++
++   type pthread_mutexattr_t is record
++      Data : char_array (1 .. OS_Constants.PTHREAD_MUTEXATTR_SIZE);
++   end record;
++   pragma Convention (C, pthread_mutexattr_t);
++   for pthread_mutexattr_t'Alignment use
++     Integer'Max (Interfaces.C.unsigned'Alignment,
++                  System.Address'Alignment);
++
++   type pthread_rwlockattr_t is record
++      Data : char_array (1 .. OS_Constants.PTHREAD_RWLOCKATTR_SIZE);
++   end record;
++   pragma Convention (C, pthread_rwlockattr_t);
++   for pthread_rwlockattr_t'Alignment use
++     Integer'Max (Interfaces.C.unsigned'Alignment,
++                  System.Address'Alignment);
++
++   type pthread_rwlock_t is record
++      Data : char_array (1 .. OS_Constants.PTHREAD_RWLOCK_SIZE);
++   end record;
++   pragma Convention (C, pthread_rwlock_t);
++   for pthread_rwlock_t'Alignment use
++     Integer'Max (Interfaces.C.unsigned'Alignment,
++                  System.Address'Alignment);
++
++   type pthread_cond_t is record
++      Data : char_array (1 .. OS_Constants.PTHREAD_COND_SIZE);
++   end record;
++   pragma Convention (C, pthread_cond_t);
++   for pthread_cond_t'Alignment use
++     Integer'Max (Interfaces.C.unsigned'Alignment,
++                  System.Address'Alignment);
++
++   type cpuset_t is null record;
++   pragma Convention (C, cpuset_t);
 +
 +end System.OS_Interface;
