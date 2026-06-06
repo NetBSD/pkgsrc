@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3527 2026/06/06 11:54:29 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3528 2026/06/06 12:50:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5429,3 +5429,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/OpenJPH to 0.27.4 [adam 2026-06-06]
 	Updated databases/ruby-sequel to 5.105.0 [taca 2026-06-06]
 	Added devel/gitpane version 0.7.12 [pin 2026-06-06]
+	Updated www/palemoon to 34.3.0 [nia 2026-06-06]
