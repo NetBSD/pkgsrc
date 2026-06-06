@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2025/10/20 14:26:20 dkazankov Exp $
+# $NetBSD: Makefile,v 1.7 2026/06/06 06:15:50 dkazankov Exp $
 
 DISTNAME=	gcc-${PKGVERSION_NOREV}
 PKGNAME=	gcc15-gnat-15.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/${DISTNAME}/}
 EXTRACT_SUFX=	.tar.xz
@@ -93,24 +93,39 @@ BUILD_DEFS+=		GCC_TARGET_MACHINE
 
 # Use C preprocessed symbols on NetBSD
 .if ${OPSYS} == "NetBSD"
-SUBST_CLASSES+=		patch1
-SUBST_MESSAGE.patch1=	Replace nanosleep, gettimeofday in ${SUBST_FILES.patch1}
-SUBST_STAGE.patch1=	pre-configure
-SUBST_FILES.patch1=	gcc/ada/libgnat/s-osprim__posix.adb
-SUBST_SED.patch1=	-e "s,\"nanosleep\",\"__gnat_nanosleep\","
-SUBST_SED.patch1+=	-e "s,\"gettimeofday\",\"__gnat_gettimeofday\","
+#SUBST_CLASSES+=		patch1
+#SUBST_MESSAGE.patch1=	Replace nanosleep, gettimeofday in ${SUBST_FILES.patch1}
+#SUBST_STAGE.patch1=	pre-configure
+#SUBST_FILES.patch1=	gcc/ada/libgnat/s-osprim__posix.adb
+#SUBST_SED.patch1=	-e "s,\"nanosleep\",\"__gnat_nanosleep\","
+#SUBST_SED.patch1+=	-e "s,\"gettimeofday\",\"__gnat_gettimeofday\","
 
 SUBST_CLASSES+=		patch2
 SUBST_MESSAGE.patch2=	Replace select with __gnat_select in ${SUBST_FILES.patch2}
 SUBST_STAGE.patch2=	pre-configure
-SUBST_FILES.patch2=	gcc/ada/libgnat/g-socthi.ads
+SUBST_FILES.patch2=	gcc/ada/libgnat/g-socthi__bsd.ads
 SUBST_SED.patch2=	-e "s,\"select\",\"__gnat_select\","
 
 SUBST_CLASSES+=		patch3
 SUBST_MESSAGE.patch3=	Replace socket with __gnat_socket in ${SUBST_FILES.patch3}
 SUBST_STAGE.patch3=	pre-configure
-SUBST_FILES.patch3=	gcc/ada/libgnat/g-socthi.adb
+SUBST_FILES.patch3=	gcc/ada/libgnat/g-socthi__bsd.adb
 SUBST_SED.patch3=	-e "s,\"socket\",\"__gnat_socket\","
+
+SUBST_CLASSES+=		patch4
+SUBST_MESSAGE.patch4=	Replace nanosleep, clock_gettime in ${SUBST_FILES.patch4}
+SUBST_STAGE.patch4=	pre-configure
+SUBST_FILES.patch4+=	gcc/ada/libgnat/s-osprim__posix2008.adb
+SUBST_SED.patch4=	-e "s,\"nanosleep\",\"__gnat_nanosleep\","
+SUBST_SED.patch4+=	-e "s,\"clock_gettime\",\"__gnat_clock_gettime\","
+
+.if ${OPSYS_VERSION} > 109999
+SUBST_CLASSES+=		patch5
+SUBST_MESSAGE.patch5=	Lower default stack size in ${SUBST_FILES.patch5}
+SUBST_STAGE.patch5=	pre-configure
+SUBST_FILES.patch5+=	gcc/ada/libgnat/s-parame__posix2008.ads
+SUBST_SED.patch5=	-e "s,8_192_000,4_096_000,"
+.endif
 .endif
 
 .if ${OS_VARIANT} == "SmartOS"
@@ -226,11 +241,29 @@ MAKE_ENV+=		ac_cv_path_SED=${TOOLS_SED}
 MAKE_ENV+=		lt_cv_path_SED=${TOOLS_SED}
 
 # GCC 15 requires latest binutils
+.if ${OPSYS} == "NetBSD"
+# NetBSD >= 11.0 has it
+.if ${OPSYS_VERSION} > 109999
+CONFIGURE_ARGS+=	--with-gnu-ld --with-ld=/usr/bin/ld
+CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/bin/as
+.else
 BUILDLINK_API_DEPENDS.binutils+=	binutils>=2.35
 .include "../../devel/binutils/buildlink3.mk"
-
+.endif
+.else
+CHECK_BUILTIN.binutils:= yes
+.include "../../devel/binutils/builtin.mk"
+CHECK_BUILTIN.binutils:= no
+.if ${USE_BUILTIN.binutils:tl} == yes
+CONFIGURE_ARGS+=	--with-ld=/usr/bin/ld
+CONFIGURE_ARGS+=	--with-as=/usr/bin/as
+.else
+BUILDLINK_API_DEPENDS.binutils+=	binutils>=2.35
+.include "../../devel/binutils/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gnu-ld --with-ld=${PREFIX}/bin/gld
 CONFIGURE_ARGS+=	--with-gnu-as --with-as=${PREFIX}/bin/gas
+.endif
+.endif
 
 .if ${OPSYS} == "Linux"
 # glibc limitations, needs at least -O1

@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.4 2025/10/19 03:53:33 dkazankov Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2026/06/06 06:15:50 dkazankov Exp $
 
 BUILDLINK_TREE+=	gcc15-gnat
 
 .if !defined(GCC15_GNAT_BUILDLINK3_MK)
 GCC15_GNAT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gcc15-gnat+=	gcc15-gnat>=15.1.0
+BUILDLINK_API_DEPENDS.gcc15-gnat+=	gcc15-gnat>=${_GCC_REQD}
 BUILDLINK_ABI_DEPENDS.gcc15-gnat+=	gcc15-gnat>=15.2.0
 BUILDLINK_PKGSRCDIR.gcc15-gnat?=	../../lang/gcc15-gnat
 BUILDLINK_DEPMETHOD.gcc15-gnat?=	build

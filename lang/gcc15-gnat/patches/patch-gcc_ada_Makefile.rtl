@@ -1,19 +1,21 @@
-$NetBSD: patch-gcc_ada_Makefile.rtl,v 1.1 2025/07/17 05:00:17 dkazankov Exp $
+$NetBSD: patch-gcc_ada_Makefile.rtl,v 1.2 2026/06/06 06:15:50 dkazankov Exp $
 
 Add NetBSD as a target and generate the required files correctly.
+Do not use alternate stack due to limitations in the current pthread
+implementation https://man.netbsd.org/pthread.3 (CAVEATS)
 
---- gcc/ada/Makefile.rtl.orig	2025-04-25 08:18:00.000000000 +0000
+--- gcc/ada/Makefile.rtl.orig	2025-08-08 09:51:40.100341900 +0300
 +++ gcc/ada/Makefile.rtl
-@@ -1991,6 +1991,151 @@
+@@ -1992,6 +1992,86 @@
  endif
  endif
  
-+# x86 NetBSD
++# NetBSD
 +ifeq ($(SELECTED_PAIRS),PAIRS_NONE)
-+ifeq ($(strip $(filter-out %86 netbsd%,$(target_cpu) $(target_os))),)
++ifeq ($(strip $(filter-out netbsd%,$(target_os))),)
 +
-+  SELECTED_PAIRS=x86-netbsd
-+
++  SELECTED_PAIRS=netbsd
++  
 +  LIBGNAT_TARGET_PAIRS = \
 +  a-intnam.ads<libgnarl/a-intnam__bsd.ads \
 +  s-inmaop.adb<libgnarl/s-inmaop__posix.adb \
@@ -22,130 +24,65 @@ Add NetBSD as a target and generate the required files correctly.
 +  s-osinte.adb<libgnarl/s-osinte__netbsd.adb \
 +  s-osinte.ads<libgnarl/s-osinte__netbsd.ads \
 +  s-oslock.ads<libgnat/s-oslock__posix.ads \
-+  s-osprim.adb<libgnat/s-osprim__posix.adb \
-+  s-taprop.adb<libgnarl/s-taprop__posix.adb \
-+  s-taspri.ads<libgnarl/s-taspri__posix.ads \
-+  s-tpopsp.adb<libgnarl/s-tpopsp__posix.adb \
-+  $(TRASYM_DWARF_UNIX_PAIRS) \
++  s-parame.ads<libgnat/s-parame__posix2008.ads \
++  s-osprim.adb<libgnat/s-osprim__posix2008.adb \
++  s-taprop.adb<libgnarl/s-taprop__netbsd.adb \
++  s-taspri.ads<libgnarl/s-taspri__posix-noaltstack.ads \
++  s-tpopsp.adb<libgnarl/s-tpopsp__posix-foreign.adb \
++  g-socthi.ads<libgnat/g-socthi__bsd.ads \
++  g-socthi.adb<libgnat/g-socthi__bsd.adb \
 +  $(ATOMICS_TARGET_PAIRS) \
-+  $(X86_TARGET_PAIRS) \
 +  system.ads<libgnat/system-freebsd.ads
++
++  ifeq ($(strip $(filter-out %86, $(target_cpu))),)
++    SELECTED_PAIRS=x86-netbsd
++    
++    LIBGNAT_TARGET_PAIRS += \
++    $(TRASYM_DWARF_UNIX_PAIRS) \
++    $(X86_TARGET_PAIRS)
++    
++    EXTRA_GNATRTL_NONTASKING_OBJS += g-sse.o g-ssvety.o
++    EXTRA_GNATRTL_NONTASKING_OBJS += $(TRASYM_DWARF_UNIX_OBJS)
++  endif
++  ifeq ($(strip $(filter-out %86_64, $(target_cpu))),)
++    SELECTED_PAIRS=x86_64-netbsd
++    
++    LIBGNAT_TARGET_PAIRS += \
++    $(TRASYM_DWARF_UNIX_PAIRS) \
++    $(X86_64_TARGET_PAIRS) \
++    $(GNATRTL_128BIT_PAIRS)
++    
++    EXTRA_GNATRTL_NONTASKING_OBJS += g-sse.o g-ssvety.o
++    EXTRA_GNATRTL_NONTASKING_OBJS += $(TRASYM_DWARF_UNIX_OBJS)
++    EXTRA_GNATRTL_NONTASKING_OBJS += $(GNATRTL_128BIT_OBJS)
++  endif
++  ifeq ($(strip $(filter-out %arm, $(target_cpu))),)
++    SELECTED_PAIRS=arm-netbsd
++    
++    LIBGNAT_TARGET_PAIRS += \
++    $(ATOMICS_BUILTINS_TARGET_PAIRS)
++  endif
++  ifeq ($(strip $(filter-out %aarch64, $(target_cpu))),)
++    SELECTED_PAIRS=aarch64-netbsd
++    
++    LIBGNAT_TARGET_PAIRS += \
++    a-nallfl.ads<libgnat/a-nallfl__wraplf.ads \
++    s-dorepr.adb<libgnat/s-dorepr__fma.adb \
++    $(TRASYM_DWARF_UNIX_PAIRS) \
++    $(ATOMICS_BUILTINS_TARGET_PAIRS) \
++    $(GNATRTL_128BIT_PAIRS)
++    
++    EXTRA_GNATRTL_NONTASKING_OBJS += $(GNATRTL_128BIT_OBJS)
++    EXTRA_GNATRTL_NONTASKING_OBJS += $(TRASYM_DWARF_UNIX_OBJS)
++  endif
 +
 +  GNATLIB_SHARED = gnatlib-shared-dual
 +
-+  EXTRA_GNATRTL_NONTASKING_OBJS += g-sse.o g-ssvety.o
-+  EXTRA_GNATRTL_NONTASKING_OBJS += $(TRASYM_DWARF_UNIX_OBJS)
-+
-+  EH_MECHANISM=-gcc
-+  THREADSLIB= -lpthread -lrt
-+  GMEM_LIB = gmemlib
-+  LIBRARY_VERSION := $(LIB_VERSION)
-+  MISCLIB = -lutil
-+endif
-+endif
-+
-+# x86-64 NetBSD
-+ifeq ($(SELECTED_PAIRS),PAIRS_NONE)
-+ifeq ($(strip $(filter-out %86_64 netbsd%,$(target_cpu) $(target_os))),)
-+
-+  SELECTED_PAIRS=x86_64-netbsd
-+
-+  LIBGNAT_TARGET_PAIRS = \
-+  a-intnam.ads<libgnarl/a-intnam__bsd.ads \
-+  s-inmaop.adb<libgnarl/s-inmaop__posix.adb \
-+  s-intman.adb<libgnarl/s-intman__posix.adb \
-+  s-mudido.adb<libgnarl/s-mudido__affinity.adb \
-+  s-osinte.adb<libgnarl/s-osinte__netbsd.adb \
-+  s-osinte.ads<libgnarl/s-osinte__netbsd.ads \
-+  s-oslock.ads<libgnat/s-oslock__posix.ads \
-+  s-osprim.adb<libgnat/s-osprim__posix.adb \
-+  s-taprop.adb<libgnarl/s-taprop__posix.adb \
-+  s-taspri.ads<libgnarl/s-taspri__posix.ads \
-+  s-tpopsp.adb<libgnarl/s-tpopsp__posix.adb \
-+  $(TRASYM_DWARF_UNIX_PAIRS) \
-+  $(ATOMICS_TARGET_PAIRS) \
-+  $(X86_64_TARGET_PAIRS) \
-+  $(GNATRTL_128BIT_PAIRS) \
-+  system.ads<libgnat/system-freebsd.ads
-+
-+  GNATLIB_SHARED = gnatlib-shared-dual
-+
-+  EXTRA_GNATRTL_NONTASKING_OBJS += g-sse.o g-ssvety.o
-+  EXTRA_GNATRTL_NONTASKING_OBJS += $(TRASYM_DWARF_UNIX_OBJS)
-+  EXTRA_GNATRTL_NONTASKING_OBJS += $(GNATRTL_128BIT_OBJS)
-+
-+  EH_MECHANISM=-gcc
-+  THREADSLIB= -lpthread -lrt
-+  GMEM_LIB = gmemlib
-+  LIBRARY_VERSION := $(LIB_VERSION)
-+  MISCLIB = -lutil
-+endif
-+endif
-+
-+# arm NetBSD
-+ifeq ($(SELECTED_PAIRS),PAIRS_NONE)
-+ifeq ($(strip $(filter-out %arm netbsd%,$(target_cpu) $(target_os))),)
-+
-+  SELECTED_PAIRS=arm-netbsd
-+
-+  LIBGNAT_TARGET_PAIRS = \
-+  a-intnam.ads<libgnarl/a-intnam__bsd.ads \
-+  s-inmaop.adb<libgnarl/s-inmaop__posix.adb \
-+  s-intman.adb<libgnarl/s-intman__posix.adb \
-+  s-mudido.adb<libgnarl/s-mudido__affinity.adb \
-+  s-osinte.adb<libgnarl/s-osinte__netbsd.adb \
-+  s-osinte.ads<libgnarl/s-osinte__netbsd.ads \
-+  s-oslock.ads<libgnat/s-oslock__posix.ads \
-+  s-osprim.adb<libgnat/s-osprim__posix.adb \
-+  s-taprop.adb<libgnarl/s-taprop__posix.adb \
-+  s-taspri.ads<libgnarl/s-taspri__posix.ads \
-+  s-tpopsp.adb<libgnarl/s-tpopsp__posix.adb \
-+  $(ATOMICS_TARGET_PAIRS) \
-+  $(ATOMICS_BUILTINS_TARGET_PAIRS) \
-+  system.ads<libgnat/system-freebsd.ads
-+
-+  GNATLIB_SHARED = gnatlib-shared-dual
-+
-+  EH_MECHANISM=-arm
-+  THREADSLIB= -lpthread -lrt
-+  GMEM_LIB = gmemlib
-+  LIBRARY_VERSION := $(LIB_VERSION)
-+  MISCLIB = -lutil
-+endif
-+endif
-+
-+# aarch64 NetBSD
-+ifeq ($(SELECTED_PAIRS),PAIRS_NONE)
-+ifeq ($(strip $(filter-out %aarch64 netbsd%,$(target_cpu) $(target_os))),)
-+
-+  SELECTED_PAIRS=aarch64-netbsd
-+
-+  LIBGNAT_TARGET_PAIRS = \
-+  a-intnam.ads<libgnarl/a-intnam__bsd.ads \
-+  a-nallfl.ads<libgnat/a-nallfl__wraplf.ads \
-+  s-dorepr.adb<libgnat/s-dorepr__fma.adb \
-+  s-inmaop.adb<libgnarl/s-inmaop__posix.adb \
-+  s-intman.adb<libgnarl/s-intman__posix.adb \
-+  s-mudido.adb<libgnarl/s-mudido__affinity.adb \
-+  s-osinte.adb<libgnarl/s-osinte__netbsd.adb \
-+  s-osinte.ads<libgnarl/s-osinte__netbsd.ads \
-+  s-oslock.ads<libgnat/s-oslock__posix.ads \
-+  s-osprim.adb<libgnat/s-osprim__posix.adb \
-+  s-taprop.adb<libgnarl/s-taprop__posix.adb \
-+  s-taspri.ads<libgnarl/s-taspri__posix.ads \
-+  s-tpopsp.adb<libgnarl/s-tpopsp__posix.adb \
-+  $(TRASYM_DWARF_UNIX_PAIRS) \
-+  $(ATOMICS_TARGET_PAIRS) \
-+  $(ATOMICS_BUILTINS_TARGET_PAIRS) \
-+  $(GNATRTL_128BIT_PAIRS) \
-+  system.ads<libgnat/system-freebsd.ads
-+
-+  EXTRA_GNATRTL_NONTASKING_OBJS = $(GNATRTL_128BIT_OBJS)
-+  EXTRA_GNATRTL_NONTASKING_OBJS += $(TRASYM_DWARF_UNIX_OBJS)
-+
-+  GNATLIB_SHARED = gnatlib-shared-dual
-+
-+  EH_MECHANISM=-gcc
++  ifeq ($(strip $(filter-out %arm, $(target_cpu))),)
++    EH_MECHANISM=-arm
++  else
++    EH_MECHANISM=-gcc
++  endif
 +  THREADSLIB= -lpthread -lrt
 +  GMEM_LIB = gmemlib
 +  LIBRARY_VERSION := $(LIB_VERSION)
