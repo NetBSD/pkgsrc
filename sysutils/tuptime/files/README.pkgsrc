@@ -1,0 +1,25 @@
+tuptime on NetBSD
+=================
+
+tuptime records the system uptime each time it is run, keeping the
+history across reboots in /var/lib/tuptime.
+
+Recording boot and shutdown
+---------------------------
+
+An rc.d script is provided.  Copy it into place and enable it:
+
+    cp /usr/pkg/share/examples/rc.d/tuptime /etc/rc.d/tuptime
+    echo "tuptime=YES" >> /etc/rc.conf
+    /etc/rc.d/tuptime start
+
+It records a startup (tuptime -q) at boot and a graceful shutdown
+(tuptime -qg) at system shutdown, both with the _tuptime user.
+
+Periodic recording
+-------------------
+
+To keep the stored value current even after an unclean shutdown, add a
+periodic entry to the _tuptime user's crontab ("crontab -u _tuptime -e"):
+
+    */5 * * * * /usr/pkg/bin/tuptime -q
