@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.14 2024/08/10 13:18:58 adam Exp $
+$NetBSD: distinfo,v 1.15 2026/06/06 07:20:37 adam Exp $
 
-BLAKE2s (srain-1.7.0.tar.gz) = 63b0ac6a81ba12bb3b1318ea84664dbd26000575bdc06c2c85c9f62fb0068215
-SHA512 (srain-1.7.0.tar.gz) = 0549a08379946cc4ea0c331f212f03b08a0c7248964984d01a64744058d116ec1af05b2aefd0d689438dafa9df4e70179bb8957d9992f02414a462577c5d99dc
-Size (srain-1.7.0.tar.gz) = 2760861 bytes
+BLAKE2s (srain-1.8.1.tar.gz) = 51fbe0a1398bde603a6bd0e8f36d307d7e8698e1956310e22baa62a7b2b4df8c
+SHA512 (srain-1.8.1.tar.gz) = 1cb9b953ec3747217a360082accb36252485e8ab1cd7e836e6b1aa2eb659570a0654e157a3c2352dc71d94e24d392f7ad032201c6eb06afdbfe104c436455fff
+Size (srain-1.8.1.tar.gz) = 2765196 bytes
 SHA1 (patch-data_meson.build) = d24ed2caa3cd36bde4d808014c7bfb309366b6bf
 SHA1 (patch-src_lib_path.c) = d73af5814198eb60c953fd62bff28717d107a75a
