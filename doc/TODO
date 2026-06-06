@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27347 2026/06/06 15:04:45 ryoon Exp $
+$NetBSD: TODO,v 1.27348 2026/06/06 18:16:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -862,6 +862,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librdkafka-1.6.1
 	o librelp-1.10.0
+	o libreoffice-26.2.4
 	o libretro-core-info-1.9.1
 	o libthai-0.2.2
 	o libtrace-4.0.16
