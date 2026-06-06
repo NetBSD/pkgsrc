@@ -1,0 +1,3 @@
+A Rust-powered flamegraph generator with additional support for Cargo projects!
+It can be used to profile anything, not just Rust projects! No perl or pipes
+required <3
