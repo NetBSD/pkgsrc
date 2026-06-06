@@ -1,0 +1,12 @@
+Monitor all your repos at a glance. See branch, dirty state, ahead/behind,
+active worktrees, changed files, and commit history without leaving the
+terminal.
+
+If you work across multiple repositories, such as microservices, monorepos with
+submodules, or a mix of projects, you know the pain of checking status one
+directory at a time. Existing TUI tools focus on one repo at a time.
+
+lazygit and gitui are excellent for deep single repo work like staging hunks,
+interactive rebase, and conflict resolution. gitpane is the workspace level
+dashboard. It shows every repo at once, lets you drill into anything, and keeps
+you in the terminal. They complement each other.
