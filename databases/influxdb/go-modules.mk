@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.2 2026/05/30 19:11:48 ryoon Exp $
+# $NetBSD: go-modules.mk,v 1.3 2026/06/06 12:00:26 ryoon Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.34.0.mod

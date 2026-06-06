@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2026/05/30 19:11:48 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2026/06/06 12:00:26 ryoon Exp $
 
 BLAKE2s (cloud.google.com_go_@v_v0.26.0.mod) = 53d181aacbf96ec4f9cdd051466576dbb6959ca71a825bc6672046c7c53a2b43
 SHA512 (cloud.google.com_go_@v_v0.26.0.mod) = 5132f3438533427c0ab0fbb7a12112a7830ea9122662ed46019ff89c71d9cf80c02edc32dd5c892da572031b5a2cce100f2602fa6a19bea6be7c02781f701273
@@ -1674,5 +1674,7 @@ Size (rsc.io_pdf_@v_v0.1.1.mod) = 18 bytes
 BLAKE2s (rsc.io_pdf_@v_v0.1.1.zip) = 509e572f0149e1aa7bc67991ab79350cf7a749174d8ad599514873c73cde36c5
 SHA512 (rsc.io_pdf_@v_v0.1.1.zip) = 4da2a0bb95b6f720c78fb1d53a75262c797cab80a8436e29e6b87ea0a99f1340ed3a033192ba26eaeedf743f3972f4cf0633cefff0799d4f23ddbb2f05c102a5
 Size (rsc.io_pdf_@v_v0.1.1.zip) = 50919 bytes
+SHA1 (patch-.._github.com__influxdata__flux__@v__v0.65.1.mod) = 71015932887c29929ee5151d29b4d86c74d9dc97
+SHA1 (patch-.._github.com_influxdata_flux@v0.65.1_go.mod) = 08ed994c6a3d59ba56f3910f8146a0c4199e6598
 SHA1 (patch-go.mod) = 94c2b454b653a6395924e722b6f7e4e2da14f91f
 SHA1 (patch-go.sum) = 234c928fcd65d22067b0c4c298ad92eb39bb479e
