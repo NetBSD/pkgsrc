@@ -1,5 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2021/01/21 18:10:05 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/06/06 06:46:19 adam Exp $
 bin/bandcamp-dl
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.rst
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/bandcamp_dl/__init__.py
 ${PYSITELIB}/bandcamp_dl/__init__.pyc
 ${PYSITELIB}/bandcamp_dl/__init__.pyo
@@ -15,21 +22,6 @@ ${PYSITELIB}/bandcamp_dl/bandcampdownloader.pyo
 ${PYSITELIB}/bandcamp_dl/bandcampjson.py
 ${PYSITELIB}/bandcamp_dl/bandcampjson.pyc
 ${PYSITELIB}/bandcamp_dl/bandcampjson.pyo
-${PYSITELIB}/bandcamp_dl/utils/__init__.py
-${PYSITELIB}/bandcamp_dl/utils/__init__.pyc
-${PYSITELIB}/bandcamp_dl/utils/__init__.pyo
-${PYSITELIB}/bandcamp_dl/utils/clean_print.py
-${PYSITELIB}/bandcamp_dl/utils/clean_print.pyc
-${PYSITELIB}/bandcamp_dl/utils/clean_print.pyo
-${PYSITELIB}/bandcamp_dl/utils/requests_patch.py
-${PYSITELIB}/bandcamp_dl/utils/requests_patch.pyc
-${PYSITELIB}/bandcamp_dl/utils/requests_patch.pyo
-${PYSITELIB}/bandcamp_dl/utils/unicode_slugify.py
-${PYSITELIB}/bandcamp_dl/utils/unicode_slugify.pyc
-${PYSITELIB}/bandcamp_dl/utils/unicode_slugify.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/bandcamp_dl/config.py
+${PYSITELIB}/bandcamp_dl/config.pyc
+${PYSITELIB}/bandcamp_dl/config.pyo

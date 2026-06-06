@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/10/26 13:27:54 adam Exp $
+$NetBSD: distinfo,v 1.6 2026/06/06 06:46:19 adam Exp $
 
-BLAKE2s (bandcamp-downloader-0.0.13.tar.gz) = 708a7763687d80f17e24a4b2c1b1d79361803e2f72b343a2ef55339ea5a3fe5d
-SHA512 (bandcamp-downloader-0.0.13.tar.gz) = 4c8635e69f0db77b826be0a5083a9fd3bd17e17ee84b85eee10bfb0ead37a3a9ae6751f0d5eb678d985428f62cd3816794038bf8d590eea36a5ac852952aa3db
-Size (bandcamp-downloader-0.0.13.tar.gz) = 18619 bytes
+BLAKE2s (bandcamp_downloader-0.0.17.tar.gz) = 9ad57f952ec680e0acf01b296442d0f425aaaeb6168ed6efec8ac96bb08165af
+SHA512 (bandcamp_downloader-0.0.17.tar.gz) = fe10ed1b33d42e023f4476c89512e3b41b82efe808e915afea62e23ce826d62059abeda7ecfbefa5542ed8fa5fb7ef0fc11cfeac34ac5bf44426db56bb833418
+Size (bandcamp_downloader-0.0.17.tar.gz) = 18247 bytes
