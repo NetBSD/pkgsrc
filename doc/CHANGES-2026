@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3535 2026/06/06 18:27:45 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3536 2026/06/06 18:40:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5437,3 +5437,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/thunderbird-l10n to 151.0.1 [ryoon 2026-06-06]
 	Updated misc/libreoffice to 26.2.3.2 [ryoon 2026-06-06]
 	Updated databases/p5-DBI to 1.648 [wiz 2026-06-06]
+	Added sysutils/tuptime version 5.2.6 [wiz 2026-06-06]
