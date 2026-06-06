@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2026/02/10 08:07:28 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/06/06 07:20:37 adam Exp $
 
-DISTNAME=	srain-1.7.0
-PKGREVISION=	13
+DISTNAME=	srain-1.8.1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SrainApp/}
 
@@ -11,6 +10,7 @@ COMMENT=	Modern IRC client written in GTK
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinxnotes-mock-[0-9]*:../../textproc/py-sphinxnotes-mock
 
 USE_TOOLS+=	msgfmt msgmerge pkg-config xgettext
 
@@ -35,11 +35,11 @@ PYTHON_FOR_BUILD_ONLY=	tool
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/share/srain/themes/meson.build
 
-.include "../../lang/python/pyversion.mk"
-.include "../../devel/meson/build.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/libconfig/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../net/libsoup3/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
