@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2026/06/06 05:02:31 adam Exp $
+bin/cargo-flamegraph
+bin/flamegraph

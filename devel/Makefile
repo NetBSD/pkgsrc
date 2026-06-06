@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4633 2026/06/02 11:11:54 schmonz Exp $
+# $NetBSD: Makefile,v 1.4634 2026/06/06 05:02:31 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -243,6 +243,7 @@ SUBDIR+=	cargo-bloat
 SUBDIR+=	cargo-bundle-licenses
 SUBDIR+=	cargo-c
 SUBDIR+=	cargo-edit
+SUBDIR+=	cargo-flamegraph
 SUBDIR+=	cargo-licenses
 SUBDIR+=	cargo-modules
 SUBDIR+=	cargo-nextest
