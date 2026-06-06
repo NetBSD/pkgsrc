@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2026/05/17 14:08:48 wiz Exp $
+$NetBSD: distinfo,v 1.10 2026/06/06 07:28:07 adam Exp $
 
-BLAKE2s (OpenJPH-0.27.3.tar.gz) = 04dc88f0ec6df7ece38bf589ca7c155b9e0b9fbb65adcc2149383fa0e4651de3
-SHA512 (OpenJPH-0.27.3.tar.gz) = 91d8626decae8a09a7afabf387334e6e6501c277f7d3dd6ce7f2a707200c23c227945dad9fd739a4c07f6f0db090b345909068ee332dc5ac818fbfc0adf694c6
-Size (OpenJPH-0.27.3.tar.gz) = 486878 bytes
+BLAKE2s (OpenJPH-0.27.4.tar.gz) = 5f9d62cb222c99c81f24e80b2b6e89fd3175ca9425195959802b2d03e877324b
+SHA512 (OpenJPH-0.27.4.tar.gz) = e0a2959a61a7ccafbf6d6a4f0c536bcedaad972c1c81592c1501ac3b1dcd75fb89fbae37176d8160ed95e4fc4196635597e26c694795a0a6cc3b0021e6306c33
+Size (OpenJPH-0.27.4.tar.gz) = 487016 bytes
