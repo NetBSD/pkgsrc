@@ -1,14 +1,14 @@
-$NetBSD: patch-alire.toml,v 1.2 2025/04/27 10:43:42 dkazankov Exp $
+$NetBSD: patch-alire.toml,v 1.3 2026/06/06 06:20:24 dkazankov Exp $
 
 Add NetBSD support
 
---- alire.toml.orig	2025-03-04 10:02:00.000000000 +0000
+--- alire.toml.orig	2026-05-25 15:21:25.000000000 +0300
 +++ alire.toml
 @@ -44,6 +44,7 @@
+ # GNATCOLL_OS required by gnatcoll
+ # PRJ_TARGET required by templates_parser
  [gpr-set-externals."case(os)"]
- freebsd = { ALIRE_OS = "freebsd" }
- openbsd = { ALIRE_OS = "openbsd" }
-+netbsd = { ALIRE_OS = "netbsd" }
- linux   = { ALIRE_OS = "linux" }
- macos   = { ALIRE_OS = "macos" }
- windows = { ALIRE_OS = "windows" }
++netbsd = { ALIRE_OS = "netbsd", GNATCOLL_OS = "unix",    PRJ_TARGET = "NetBSD" }
+ freebsd = { ALIRE_OS = "freebsd", GNATCOLL_OS = "unix",    PRJ_TARGET = "FreeBSD" }
+ openbsd = { ALIRE_OS = "openbsd", GNATCOLL_OS = "unix",    PRJ_TARGET = "UNIX" }
+ linux   = { ALIRE_OS = "linux",   GNATCOLL_OS = "unix",    PRJ_TARGET = "Linux" }

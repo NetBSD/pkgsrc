@@ -1,10 +1,11 @@
-$NetBSD: patch-src_alire_os__netbsd_alire-platforms-current__netbsd.adb,v 1.2 2025/04/27 10:43:42 dkazankov Exp $
+$NetBSD: patch-src_alire_os__netbsd_alire-platforms-current__netbsd.adb,v 1.3 2026/06/06 06:20:24 dkazankov Exp $
 
 Add NetBSD support
 
 --- /dev/null
 +++ src/alire/os_netbsd/alire-platforms-current__netbsd.adb
-@@ -0,0 +1,40 @@
+@@ -0,0 +1,48 @@
++with Alire.Platforms.Posix;
 +
 +package body Alire.Platforms.Current is
 +
@@ -43,5 +44,12 @@ Add NetBSD support
 +   ----------------
 +
 +   procedure Initialize is null;
++
++   ---------------------
++   -- Running_As_Root --
++   ---------------------
++
++   function Running_As_Root return Boolean
++   is (Posix.Running_As_Root);
 +
 +end Alire.Platforms.Current;
