@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3517 2026/06/06 05:39:47 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3518 2026/06/06 06:04:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5415,3 +5415,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated inputmethod/librime to 1.17.0 [adam 2026-06-06]
 	Updated math/nlopt to 2.11.0 [adam 2026-06-06]
 	Updated misc/py-tqdm to 4.68.1 [adam 2026-06-06]
+	Updated sysutils/ansible-core to 2.21.0 [adam 2026-06-06]
+	Updated sysutils/ansible to 14.0.0 [adam 2026-06-06]
