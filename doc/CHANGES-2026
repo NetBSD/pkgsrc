@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3518 2026/06/06 06:04:54 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3519 2026/06/06 06:16:26 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5417,3 +5417,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-tqdm to 4.68.1 [adam 2026-06-06]
 	Updated sysutils/ansible-core to 2.21.0 [adam 2026-06-06]
 	Updated sysutils/ansible to 14.0.0 [adam 2026-06-06]
+	Updated lang/gcc15-gnat to 15.2.0nb2 [dkazankov 2026-06-06]
