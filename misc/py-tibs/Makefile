@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2026/06/01 07:47:33 adam Exp $
+# $NetBSD: Makefile,v 1.4 2026/06/06 06:34:35 adam Exp $
 
-DISTNAME=	tibs-0.9.0
+DISTNAME=	tibs-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tibs/}
