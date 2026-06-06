@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3523 2026/06/06 06:48:01 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3524 2026/06/06 07:20:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5424,3 +5424,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-uvicorn to 0.49.0 [adam 2026-06-06]
 	Updated net/bandcamp-dl to 0.0.17 [adam 2026-06-06]
 	Updated sysutils/py-sh to 2.2.3 [adam 2026-06-06]
+	Added textproc/py-sphinxnotes-mock version 1.1 [adam 2026-06-06]
+	Updated chat/srain to 1.8.1 [adam 2026-06-06]
