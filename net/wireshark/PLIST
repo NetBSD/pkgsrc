@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.110 2026/05/20 04:50:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.111 2026/06/06 10:31:11 leot Exp $
 bin/capinfos
 bin/captype
 bin/dumpcap
@@ -62,6 +62,7 @@ ${PLIST.doc}man/man1/randpkt.1
 ${PLIST.doc}man/man1/randpktdump.1
 ${PLIST.doc}man/man1/rawshark.1
 ${PLIST.doc}man/man1/reordercap.1
+${PLIST.doc}man/man1/sharkd.1
 ${PLIST.doc}man/man1/sshdig.1
 ${PLIST.doc}man/man1/sshdump.1
 ${PLIST.doc}man/man1/strato.1
@@ -94,6 +95,7 @@ ${PLIST.doc}share/doc/wireshark/randpkt.html
 ${PLIST.doc}share/doc/wireshark/randpktdump.html
 ${PLIST.doc}share/doc/wireshark/rawshark.html
 ${PLIST.doc}share/doc/wireshark/reordercap.html
+${PLIST.doc}share/doc/wireshark/sharkd.html
 ${PLIST.doc}share/doc/wireshark/sshdig.html
 ${PLIST.doc}share/doc/wireshark/sshdump.html
 ${PLIST.doc}share/doc/wireshark/strato.html
