@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27343 2026/06/05 22:16:19 wiz Exp $
+$NetBSD: TODO,v 1.27344 2026/06/06 12:27:38 pin Exp $
 
 Suggested new packages
 ======================
@@ -668,7 +668,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gens-2.15.5
 	o gettext-1.0
 	o gfract-0.33
-	o git-cinnabar-0.7.2
+	o git-cinnabar-0.7.3
 	o gitea-1.24.3
 	o gjs-1.70.1
 	o gleam-1.17.0
@@ -1084,7 +1084,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o phraseanet-4.1.15
 	o phraseanet-indexer-4.1.15
 	o pick-4.0.0
-	o picom-12.3
+	o picom-13 [in wip]
 	o picp-0.6.8
 	o picprg-3.01
 	o pidgin-icb-20100207
@@ -1188,6 +1188,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
 	o rucola-0.9.0
+	o rust-1.96.0 [in wip]
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
