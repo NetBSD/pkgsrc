@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4634 2026/06/06 05:02:31 adam Exp $
+# $NetBSD: Makefile,v 1.4635 2026/06/06 11:53:55 pin Exp $
 #
 
 COMMENT=	Development utilities
@@ -473,6 +473,7 @@ SUBDIR+=	git-svn
 SUBDIR+=	gitlogue
 SUBDIR+=	gitnr
 SUBDIR+=	gitolite
+SUBDIR+=	gitpane
 SUBDIR+=	gitui
 SUBDIR+=	glade
 SUBDIR+=	glasgow
