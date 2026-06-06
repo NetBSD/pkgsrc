@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1194 2026/06/01 08:56:16 rxg Exp $
+# $NetBSD: Makefile,v 1.1195 2026/06/06 18:40:11 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -808,6 +808,7 @@ SUBDIR+=	trusted-firmware-a-rk3399
 SUBDIR+=	ts
 SUBDIR+=	tsm8
 SUBDIR+=	ttyplot
+SUBDIR+=	tuptime
 #SUBDIR+=	u-boot			# only contains Makefile fragments
 SUBDIR+=	u-boot-a10-olinuxino-lime
 SUBDIR+=	u-boot-a20-olinuxino-lime2
