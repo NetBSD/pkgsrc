@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3514 2026/06/06 02:44:12 taca Exp $
+$NetBSD: CHANGES-2026,v 1.3515 2026/06/06 05:02:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5409,3 +5409,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/gdal-lib to 3.13.1 [gdt 2026-06-05]
 	Updated lang/php85 to 8.5.7 [taca 2026-06-06]
 	Updated lang/php84 to 8.4.22 [taca 2026-06-06]
+	Updated security/cargo-audit to 0.22.2 [adam 2026-06-06]
+	Added devel/cargo-flamegraph version 0.6.13 [adam 2026-06-06]
