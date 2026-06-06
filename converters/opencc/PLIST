@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/06/06 05:17:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/06/06 05:21:29 adam Exp $
 bin/opencc
 bin/opencc_dict
 bin/opencc_phrase_extract
@@ -40,7 +40,7 @@ lib/cmake/opencc/OpenCCTargets-noconfig.cmake
 lib/cmake/opencc/OpenCCTargets.cmake
 lib/libopencc.so
 lib/libopencc.so.${PKGVERSION}
-lib/libopencc.so.1.1
+lib/libopencc.so.1.3
 lib/pkgconfig/opencc.pc
 share/opencc/HKVariants.ocd2
 share/opencc/HKVariantsRev.ocd2
