@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/06/06 07:18:42 adam Exp $
+
+BLAKE2s (sphinxnotes_mock-1.1.tar.gz) = e2faf8bd6457810399591cda3fd17a23174a9e48987a61c8ece5d52ea5895cd5
+SHA512 (sphinxnotes_mock-1.1.tar.gz) = cd89ed27d51f486750a99dcd7aea40d5939f6a88f57a633ce24c83dec1508a43dfc2b056b30777aab632b51957455b007907165f57fd3460b6d3828016ff4a8a
+Size (sphinxnotes_mock-1.1.tar.gz) = 31351 bytes
