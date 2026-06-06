@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2018/01/07 21:16:05 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2026/06/06 05:15:17 adam Exp $
 
 DISTNAME=	darts-0.32
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://chasen.org/~taku/software/darts/src/
 
