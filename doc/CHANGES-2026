@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3532 2026/06/06 14:51:42 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.3533 2026/06/06 14:52:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5434,3 +5434,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/mise to 2026.6.0 [pin 2026-06-06]
 	Updated textproc/rumdl to 0.2.8 [pin 2026-06-06]
 	Updated mail/thunderbird to 151.0.1 [ryoon 2026-06-06]
+	Updated mail/thunderbird-l10n to 151.0.1 [ryoon 2026-06-06]
