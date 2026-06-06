@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3512 2026/06/05 23:00:02 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.3513 2026/06/06 02:42:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5407,3 +5407,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/arti to 2.4.0 [wiz 2026-06-05]
 	Updated geography/py-gdal to 3.13.1 [gdt 2026-06-05]
 	Updated geography/gdal-lib to 3.13.1 [gdt 2026-06-05]
+	Updated lang/php85 to 8.5.7 [taca 2026-06-06]
