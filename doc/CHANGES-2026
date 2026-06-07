@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3583 2026/06/07 15:14:48 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3584 2026/06/07 15:46:19 js Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5490,3 +5490,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/R-htmltools to 0.5.9 [mef 2026-06-07]
 	Updated graphics/R-isoband to 0.3.0 [mef 2026-06-07]
 	Updated devel/R-covr to 3.6.5 [mef 2026-06-07]
+	Updated cross/ppc-morphos-sdk to 20260529 [js 2026-06-07]
