@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/01/04 22:28:30 mef Exp $
+$NetBSD: distinfo,v 1.5 2026/06/07 14:27:46 mef Exp $
 
-BLAKE2s (R/fBasics_4041.97.tar.gz) = bf737d7d9259a730fec32e989e584cae10eb39d1139db79306eb7e74e661078b
-SHA512 (R/fBasics_4041.97.tar.gz) = e4d274d8206ad551d5606599a37f4b64d4625dc74e5a405ec05be3e0483bef4043f5d9288b0530b95c1a49add53981ad45873818186158b5a7e7b5784d11cc5a
-Size (R/fBasics_4041.97.tar.gz) = 938905 bytes
+BLAKE2s (R/fBasics_4052.98.tar.gz) = a9c1b773cf839eb4d0bccc347f6a5eacdd9671d1666ab07eac46f7c3fee91c4a
+SHA512 (R/fBasics_4052.98.tar.gz) = 0f57296534840b3013cacc9641d9187860aa8280f0cf29c2f771c175bece3fec64a961af7386f9f798f24041909fcc89a192fee2be7691fabc3320d0881b96d6
+Size (R/fBasics_4052.98.tar.gz) = 939038 bytes

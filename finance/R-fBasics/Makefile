@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/01/04 22:28:30 mef Exp $
+# $NetBSD: Makefile,v 1.6 2026/06/07 14:27:46 mef Exp $
 
 R_PKGNAME=	fBasics
-R_PKGVER=	4041.97
+R_PKGVER=	4052.98
 CATEGORIES=	finance
 
 MAINTAINER=	minskim@NetBSD.org
