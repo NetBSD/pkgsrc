@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/01/01 12:23:40 mef Exp $
+# $NetBSD: Makefile,v 1.5 2026/06/07 02:03:26 mef Exp $
 
 R_PKGNAME=	promises
 R_PKGVER=	1.3.2
@@ -24,7 +24,15 @@ TEST_DEPENDS+=	R-spelling-[0-9]*:../../textproc/R-spelling
 
 USE_LANGUAGES=	c c++
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != SunOS
+pre-configure:
+	${CP} ${FILESDIR}/Makevars ${WRKSRC}/src
+.endif
+
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
 .include "../../sysutils/R-later/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.prefs.mk"
