@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/01/01 12:23:40 mef Exp $
+$NetBSD: distinfo,v 1.6 2026/06/07 02:34:48 mef Exp $
 
-BLAKE2s (R/promises_1.3.2.tar.gz) = ab0a9fdf797fff4c55435d73ec2776b6d4d578266591f84037182d8e584988c6
-SHA512 (R/promises_1.3.2.tar.gz) = d57ff69f7ef5e0096143b45bd1bb9c67e0e4021e93434745f33ab375440b7a62dae337fd4047884092e5c0405ea88355d50b4945588d828a81addf678d016719
-Size (R/promises_1.3.2.tar.gz) = 3168224 bytes
+BLAKE2s (R/promises_1.5.0.tar.gz) = 13a3c7e5ce7986c618bdfbc7d1ed7b235675f34a14682da055b877cb90205139
+SHA512 (R/promises_1.5.0.tar.gz) = 6b3d26d16a0e9d130a07cec406f6534d97460eabd6a2ea46ea68787e790cc46ee0544e499d86907073dca8e6de75954b04f59034b3f5aff712f3c44152d79b4f
+Size (R/promises_1.5.0.tar.gz) = 3210294 bytes
