@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2025/01/12 14:22:09 mef Exp $
+$NetBSD: distinfo,v 1.21 2026/06/07 22:07:57 mef Exp $
 
-BLAKE2s (R/xfun_0.50.tar.gz) = f32eb7c19bbbe27e29e49327dd293784020c4996aea94cbd8ab4e49ac44809f0
-SHA512 (R/xfun_0.50.tar.gz) = 5cc57a3b746ead2328d2660530d24ebd55aa3d36957eea2f580b5088f77840ddfe0efb5a23867a2f7f7f52dabfc6c99eb5a5300c222ee74a8a256fc559d2d55c
-Size (R/xfun_0.50.tar.gz) = 173997 bytes
+BLAKE2s (R/xfun_0.58.tar.gz) = 2c90d9dcb71bbc0ac30b1b59ad7d2764c88c48a1d2fc8f8b7ab5c61711995d18
+SHA512 (R/xfun_0.58.tar.gz) = e781f5f4bde348bb2aa319f34919fbbede6cf435ddf0568542491b2daea194f50d1aa9a7c9fa8e6107fcecd83ed9c3cb5775fb0f23109b97879860f6a5b3ce4b
+Size (R/xfun_0.58.tar.gz) = 196402 bytes
