@@ -1,12 +1,11 @@
-# $NetBSD: options.mk,v 1.17 2026/04/05 21:13:52 maya Exp $
+# $NetBSD: options.mk,v 1.18 2026/06/07 08:08:21 vins Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fastfetch
-PKG_OPTIONS_OPTIONAL_GROUPS=	server sound
+PKG_OPTIONS_OPTIONAL_GROUPS=	server
 PKG_OPTIONS_GROUP.server=	wayland x11
-PKG_OPTIONS_GROUP.sound=	oss pulseaudio
 
-PKG_SUPPORTED_OPTIONS=	chafa dconf dbus glib2 imagemagick libelf opencl \
-			python sqlite3 threads xfce4-wm
+PKG_SUPPORTED_OPTIONS=	chafa dconf dbus glib2 imagemagick libelf lua opencl \
+			oss pulseaudio python sqlite3 threads xfce4-wm
 PKG_SUGGESTED_OPTIONS=	glib2 x11
 
 
@@ -70,7 +69,7 @@ CMAKE_CONFIGURE_ARGS+=  -DENABLE_CHAFA=OFF
 ##
 ## libdrm
 ## * Fallback if both wayland and x11 are not available
-## * AMD GPU properties detection)
+## * AMD GPU properties detection
 ##
 .if !empty(PKG_OPTIONS:Mlibdrm)
 .  include "../../x11/libdrm/buildlink3.mk"
@@ -97,6 +96,16 @@ CMAKE_CONFIGURE_ARGS+=  -DENABLE_GIO=OFF
 .  include "../../devel/libelf/buildlink3.mk"
 .else
 CMAKE_CONFIGURE_ARGS+=  -DENABLE_ELF=OFF
+.endif
+
+##
+## Lua
+## Adds lua scripting support.
+##
+.if !empty(PKG_OPTIONS:Mlua)
+.  include "../../lang/lua/buildlink3.mk"
+.else
+CMAKE_CONFIGURE_ARGS+=  -DENABLE_LUA=OFF
 .endif
 
 ##

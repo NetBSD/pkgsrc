@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2026/05/14 16:42:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.48 2026/06/07 08:08:21 vins Exp $
 
-DISTNAME=	fastfetch-2.62.1
-PKGREVISION=	1
+DISTNAME=	fastfetch-2.64.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fastfetch-cli/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
