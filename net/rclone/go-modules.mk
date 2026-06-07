@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.27 2026/05/25 06:25:39 adam Exp $
+# $NetBSD: go-modules.mk,v 1.28 2026/06/07 06:23:37 adam Exp $
 
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20230120002735-62a210ff1fd5.mod
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20230120002735-62a210ff1fd5.zip
@@ -522,8 +522,8 @@ GO_MODULE_FILES+=	github.com/rclone/!proton-!a!p!i-!bridge/@v/v1.0.3.mod
 GO_MODULE_FILES+=	github.com/rclone/!proton-!a!p!i-!bridge/@v/v1.0.3.zip
 GO_MODULE_FILES+=	github.com/rclone/go-proton-api/@v/v1.0.2.mod
 GO_MODULE_FILES+=	github.com/rclone/go-proton-api/@v/v1.0.2.zip
-GO_MODULE_FILES+=	github.com/rclone/gofakes3/@v/v0.0.4.mod
-GO_MODULE_FILES+=	github.com/rclone/gofakes3/@v/v0.0.4.zip
+GO_MODULE_FILES+=	github.com/rclone/gofakes3/@v/v0.0.6.mod
+GO_MODULE_FILES+=	github.com/rclone/gofakes3/@v/v0.0.6.zip
 GO_MODULE_FILES+=	github.com/relvacode/iso8601/@v/v1.7.0.mod
 GO_MODULE_FILES+=	github.com/relvacode/iso8601/@v/v1.7.0.zip
 GO_MODULE_FILES+=	github.com/rfjakob/eme/@v/v1.2.0.mod
