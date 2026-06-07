@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3596 2026/06/07 20:51:17 leot Exp $
+$NetBSD: CHANGES-2026,v 1.3597 2026/06/07 21:09:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5501,3 +5501,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/miniflux to 2.3.1 [wiz 2026-06-07]
 	Updated audio/alsa-lib to 1.2.16 [wiz 2026-06-07]
 	Updated devel/jj to 0.42.0 [wiz 2026-06-07]
+	Updated emulators/mame to 0.288 [wiz 2026-06-07]
