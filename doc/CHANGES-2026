@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3571 2026/06/07 08:32:31 vins Exp $
+$NetBSD: CHANGES-2026,v 1.3572 2026/06/07 11:54:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5478,3 +5478,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/fastfetch to 2.64.2 [vins 2026-06-07]
 	Updated devel/got to 0.126 [vins 2026-06-07]
 	Updated sysutils/xfile to 1.2.0 [vins 2026-06-07]
+	Updated www/p5-HTTP-Message to 7.02 [wiz 2026-06-07]
