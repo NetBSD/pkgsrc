@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3566 2026/06/07 06:15:58 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3567 2026/06/07 06:25:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5471,3 +5471,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/hiredis to 1.4.0 [adam 2026-06-07]
 	Updated graphics/openimageio to 3.1.14.0 [adam 2026-06-07]
 	Updated audio/mpg123 to 1.33.6 [adam 2026-06-07]
+	Updated net/rclone to 1.74.3 [adam 2026-06-07]
+	Updated security/sqlmap to 1.10.6 [adam 2026-06-07]
