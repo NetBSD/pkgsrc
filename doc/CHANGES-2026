@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3587 2026/06/07 18:26:34 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3588 2026/06/07 19:04:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5494,3 +5494,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/radsecproxy to 1.11.2 [adam 2026-06-07]
 	Updated net/kea to 3.1.9 [adam 2026-06-07]
 	Updated devel/wayland-protocols to 1.49 [wiz 2026-06-07]
+	Updated sysutils/hwdata to 0.408 [wiz 2026-06-07]
