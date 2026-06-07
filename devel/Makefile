@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4635 2026/06/06 11:53:55 pin Exp $
+# $NetBSD: Makefile,v 1.4636 2026/06/07 02:20:21 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -65,6 +65,7 @@ SUBDIR+=	R-magrittr
 SUBDIR+=	R-memoise
 SUBDIR+=	R-mockery
 SUBDIR+=	R-mockr
+SUBDIR+=	R-otel
 SUBDIR+=	R-pak
 SUBDIR+=	R-patrick
 SUBDIR+=	R-pkgKitten
