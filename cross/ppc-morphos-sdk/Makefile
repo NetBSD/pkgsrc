@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2024/03/24 10:48:09 js Exp $
+# $NetBSD: Makefile,v 1.10 2026/06/07 15:45:59 js Exp $
 
 PKGNAME=	ppc-morphos-${DISTNAME}
-DISTNAME=	sdk-20230510
+DISTNAME=	sdk-20260529
 CATEGORIES=	cross
 MASTER_SITES=	https://morphos-team.net/files/
 EXTRACT_SUFX=	.lha
