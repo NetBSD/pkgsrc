@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2025/11/13 06:50:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2026/06/07 13:04:30 wiz Exp $
 share/doc/libtheora/color.html
 share/doc/libtheora/doxygen-build.stamp
 share/doc/libtheora/draft-ietf-avt-rtp-theora-00.txt
@@ -11,6 +11,7 @@ share/doc/libtheora/html/clipboard.js
 share/doc/libtheora/html/closed.png
 share/doc/libtheora/html/codec_8h.html
 share/doc/libtheora/html/codec_8h_source.html
+share/doc/libtheora/html/codefolding.js
 share/doc/libtheora/html/dir_0f91760d62c578de767c41a0aaae5482.html
 share/doc/libtheora/html/dir_5b2027f988bb10104ff6bde3c5145ee6.html
 share/doc/libtheora/html/dir_d436eb0fd9de10b54a828ce6435f7e81.html
