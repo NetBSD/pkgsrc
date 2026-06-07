@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2026/05/11 09:23:17 adam Exp $
+# $NetBSD: Makefile,v 1.46 2026/06/07 06:25:34 adam Exp $
 
-DISTNAME=	sqlmap-1.10.5
+DISTNAME=	sqlmap-1.10.6
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlmap/}
 
@@ -22,7 +22,7 @@ REPLACE_PYTHON+=	sqlmap/plugins/dbms/clickhouse/*.py
 REPLACE_PYTHON+=	sqlmap/thirdparty/identywaf/identYwaf.py
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
