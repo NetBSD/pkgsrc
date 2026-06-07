@@ -1,2 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2021/11/23 15:28:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/06/07 21:32:58 wiz Exp $
 bin/restish
+bin/restish-bulk
+bin/restish-csv
+bin/restish-docgen
+bin/restish-mcp
+bin/restish-pkcs11
