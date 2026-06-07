@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/11/03 05:52:10 taca Exp $
+$NetBSD: distinfo,v 1.2 2026/06/07 04:14:55 taca Exp $
 
-BLAKE2s (doorkeeper-i18n-5.2.8.gem) = 256b3e65225bdca01858f09a2228a67edbd593b76ad3979840d9e2fa465500d6
-SHA512 (doorkeeper-i18n-5.2.8.gem) = 1288c83ff09b47d75a2de8801a2e8bbc1ebc1b6f1a290c48704dcf3c429177ca8724f8d849802c8b9187bec133a9478337932088f7388d838ba62d2adf6ea483
-Size (doorkeeper-i18n-5.2.8.gem) = 45568 bytes
+BLAKE2s (doorkeeper-i18n-5.2.9.gem) = bf0e0ad18a21b5310208a21768025180e7831146bfe8fcaf4c49885562d70b4a
+SHA512 (doorkeeper-i18n-5.2.9.gem) = 733410ea6e6da4042c2ab719e84ab925839793d19da8fb20168beaed4a065dcd7d5fbcf1e1457d0f0f8a90fca628e16eb7a6c8c7eb216abfe926860303cc75a6
+Size (doorkeeper-i18n-5.2.9.gem) = 45568 bytes
