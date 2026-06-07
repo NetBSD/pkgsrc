@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2025/10/09 07:57:23 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/06/07 04:57:31 adam Exp $
 
-DISTNAME=	soundfile-0.13.1
+DISTNAME=	soundfile-0.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/soundfile/}
 
@@ -14,6 +13,7 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.0:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
