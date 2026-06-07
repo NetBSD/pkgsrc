@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/11/03 05:52:10 taca Exp $
+# $NetBSD: Makefile,v 1.2 2026/06/07 04:14:55 taca Exp $
 
-DISTNAME=	doorkeeper-i18n-5.2.8
+DISTNAME=	doorkeeper-i18n-5.2.9
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
