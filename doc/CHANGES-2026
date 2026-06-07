@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3569 2026/06/07 08:09:50 vins Exp $
+$NetBSD: CHANGES-2026,v 1.3570 2026/06/07 08:14:03 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5476,3 +5476,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-wcwidth to 0.8.0 [adam 2026-06-07]
 	Updated devel/py-urwid to 4.0.2 [adam 2026-06-07]
 	Updated sysutils/fastfetch to 2.64.2 [vins 2026-06-07]
+	Updated devel/got to 0.126 [vins 2026-06-07]
