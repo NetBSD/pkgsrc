@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2026/05/14 16:41:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2026/06/07 17:30:05 adam Exp $
 
 DISTNAME=	rtmpdump-2.6-git-6f6bb1353fc84f4cc37138baa99f586750028a01
 PKGNAME=	${DISTNAME:C/-git-.*/.0.0.20240301/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net multimedia
 #MASTER_SITES=	# manually created tarball from https://git.ffmpeg.org/rtmpdump
 
@@ -18,11 +18,11 @@ MAKE_ENV+=	XCFLAGS=${CFLAGS:Q}
 MAKE_ENV+=	XLDFLAGS=${LDFLAGS:Q}
 
 WRKSRC=		${WRKDIR}/rtmpdump
+
 PKGCONFIG_OVERRIDE+=	librtmp/librtmp.pc.in
 
 LDFLAGS.SunOS+=	-lnsl -lsocket
 
-.include "../../security/libgcrypt/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
