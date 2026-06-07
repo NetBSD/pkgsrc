@@ -1,21 +1,20 @@
-# $NetBSD: Makefile,v 1.22 2026/05/15 09:58:59 adam Exp $
+# $NetBSD: Makefile,v 1.23 2026/06/07 18:26:00 adam Exp $
 
-DISTNAME=	kea-3.1.4
-COMMENT=	Next-generation ISC Dynamic Host Configuration Protocol (DHCP) Server
-PKGREVISION=	2
-
-.include "options.mk"
-
+DISTNAME=	kea-3.1.9
 CATEGORIES=	net
 MASTER_SITES=	https://ftp.isc.org/isc/kea/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.isc.org/kea/
+COMMENT=	Next-generation ISC Dynamic Host Configuration Protocol (DHCP) Server
 LICENSE=	mpl-2.0
 
-USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
+USE_LANGUAGES=	c c++
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
+
+.include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -47,4 +46,5 @@ post-install:
 .include "../../lang/python/tool.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/atomic64.mk"
+.include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2025/12/28 15:13:53 adam Exp $
+$NetBSD: distinfo,v 1.8 2026/06/07 18:26:00 adam Exp $
 
-BLAKE2s (kea-3.1.4.tar.xz) = 3451d4aafb1232f80746c6a799f42c401dbd7f1759a5d1cf810e5f6a162801a2
-SHA512 (kea-3.1.4.tar.xz) = b29012ad64f46f25890b7f4a67e6e8858eeae233d914f4135612b69fc94cb843cb702c91ca4b73edad51f1879b9cd0518fe85bc0b2f758a2343c28358d921cb5
-Size (kea-3.1.4.tar.xz) = 6681124 bytes
+BLAKE2s (kea-3.1.9.tar.xz) = 226802b8ba43ffd8e1de6e067f9193dc5f5ab448aec253589273e93f35ff4faa
+SHA512 (kea-3.1.9.tar.xz) = afcca7626937566b8aa756c47a9e0612d38ac84b91868a2b0b07065296f413ec99ba317920cb04fac4197d79026074762a95b01ed4bbb4eb242597cf133ab7a1
+Size (kea-3.1.9.tar.xz) = 6728372 bytes
 SHA1 (patch-src_bin_keactrl_meson.build) = 587941248217d989d04c5926feab1b601dce867b
 SHA1 (patch-src_lib_dhcp_pkt__filter__bpf.cc) = 6fbc86f9fcf9889027e3cbfce28b01f7acfe2de4
 SHA1 (patch-src_lib_log_logger__level__impl.cc) = c80c5e2641a12e269dd18d57bf3c61c535bd4064
