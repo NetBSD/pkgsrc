@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3563 2026/06/07 04:42:57 taca Exp $
+$NetBSD: CHANGES-2026,v 1.3564 2026/06/07 04:59:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5465,3 +5465,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-faraday-net_http to 3.4.4 [taca 2026-06-07]
 	Updated www/ruby-sass-embedded to 1.100.0 [taca 2026-06-07]
 	Updated www/php-contao-manager to 1.10.14 [taca 2026-06-07]
+	Updated sysutils/py-sh to 2.2.4 [adam 2026-06-07]
+	Updated audio/py-soundfile to 0.14.0 [adam 2026-06-07]
