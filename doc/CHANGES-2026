@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3576 2026/06/07 13:35:34 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3577 2026/06/07 13:53:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5483,3 +5483,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/libtheora-docs to 1.2.0nb3 [wiz 2026-06-07]
 	Updated comms/openobex to 1.7.2nb6 [wiz 2026-06-07]
 	Updated security/p5-Crypt-OpenSSL-X509 to 2.0.1nb1 [wiz 2026-06-07]
+	Updated shells/fish to 4.7.1nb1 [wiz 2026-06-07]
