@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3589 2026/06/07 19:04:44 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3590 2026/06/07 19:18:07 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5496,3 +5496,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/wayland-protocols to 1.49 [wiz 2026-06-07]
 	Updated sysutils/hwdata to 0.408 [wiz 2026-06-07]
 	Updated net/libcmis to 0.6.3 [wiz 2026-06-07]
+        Updated net/pdns-recursor update to 5.4.2 [drixter 2026-06-07]
