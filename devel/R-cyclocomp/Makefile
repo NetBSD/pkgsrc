@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2024/01/20 05:48:54 mef Exp $
+# $NetBSD: Makefile,v 1.3 2026/06/07 21:58:21 mef Exp $
 
 R_PKGNAME=	cyclocomp
-R_PKGVER=	1.1.1
+R_PKGVER=	1.1.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

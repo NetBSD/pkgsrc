@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/01/20 05:48:54 mef Exp $
+$NetBSD: distinfo,v 1.5 2026/06/07 21:58:21 mef Exp $
 
-BLAKE2s (R/cyclocomp_1.1.1.tar.gz) = a6db0760095fcc545bd609ee5a0d3eaa0eb3fef442e74993f8a0de85a8df746f
-SHA512 (R/cyclocomp_1.1.1.tar.gz) = d1c7b0956535dea98173eae55aa87fdf0de854cf56d27721938d586067491e4d51192e71335011c5e1a537ecbc99e9d8f29d816e7dc96276b06cef5a4db944fe
-Size (R/cyclocomp_1.1.1.tar.gz) = 8584 bytes
+BLAKE2s (R/cyclocomp_1.1.2.tar.gz) = f536be2ce09e3c63948e1bd99a63deae0f378f056a2441a8429572c05da208ff
+SHA512 (R/cyclocomp_1.1.2.tar.gz) = ab5183f25c99ede045ecb561ea6af94863680132217f603d856ad3230384a2ce50fe20d63ced400fb7d386c19ce9545ef6c0e2a6e82bf43e33af6ab713ac2269
+Size (R/cyclocomp_1.1.2.tar.gz) = 9246 bytes
