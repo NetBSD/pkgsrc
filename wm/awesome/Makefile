@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2026/01/27 08:40:44 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2026/06/07 13:03:30 wiz Exp $
 
 DISTNAME=	awesome-4.3
 PKGREVISION=	21
@@ -11,6 +11,8 @@ MAINTAINER=	pallegra@gmail.com
 HOMEPAGE=	https://awesomewm.org/
 COMMENT=	Window manager based on dwm, with Lua integration
 LICENSE=	gnu-gpl-v2
+
+TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 CONFLICTS+=	awesome<3.0
 
