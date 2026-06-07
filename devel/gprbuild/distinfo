@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.6 2025/10/09 15:46:43 dkazankov Exp $
+$NetBSD: distinfo,v 1.7 2026/06/07 03:54:41 dkazankov Exp $
 
-BLAKE2s (AdaCore-gprconfig_kb-25.2.tar.gz) = 549d321895fe6b915492c66e3ad82861bcbfae9de4e395d925b043643b8fb665
-SHA512 (AdaCore-gprconfig_kb-25.2.tar.gz) = be2345270a0cfe6f57d9431174f86d90a50fd6c2989047bdcd6cf20b92690443c0f7cc24f52dff292446ad0e26c23f12c1a19ee525bc03d9f29d31e73ab4554e
-Size (AdaCore-gprconfig_kb-25.2.tar.gz) = 44291 bytes
-BLAKE2s (gprbuild-25.2.tar.gz) = 677bddddb79366bc959bb4cf54eceba646880a7e946bf9b1f23f04d3a9d98379
-SHA512 (gprbuild-25.2.tar.gz) = 0d7d161392d00592b06ab8a2af21b610f60897d90aee2a3c51f001de0f1f9c338ef4059a3c20b99cd29a0587f8ba1a8e652f1b593f1d3033d9b7795a9f4a9aaa
-Size (gprbuild-25.2.tar.gz) = 940851 bytes
-SHA1 (patch-Makefile) = b64390f5a5b9821628223e423d8dcead28a0600a
+BLAKE2s (AdaCore-gprconfig_kb-v26.0.0.tar.gz) = 931a36353310fb1d5feced18cf2bcb3787c80e8b689e7be38bb4a35a7ab91bc6
+SHA512 (AdaCore-gprconfig_kb-v26.0.0.tar.gz) = 8125c05da4374b14aee34d429715dac4a08e21cf9c9a2b06931d619ccbf315e3b2e64f06d1b6f3ef6b7403b8d08c53210bf3dd79f5762fa1b1a62a0ea725c814
+Size (AdaCore-gprconfig_kb-v26.0.0.tar.gz) = 49684 bytes
+BLAKE2s (gprbuild-26.0.0.tar.gz) = 8645f2ff70d3d8d491cd5058a23a35b18b2aa1d63c67fd89e95274ca06d69905
+SHA512 (gprbuild-26.0.0.tar.gz) = e5a5dcaf0162154793b23655a9804453498b230a377ae45eabe67f51e15ff69194d98a6b6839fd2ebb0d136e3128e47d296da10ea7be67bec8dbed1d016a1777
+Size (gprbuild-26.0.0.tar.gz) = 922278 bytes
+SHA1 (patch-Makefile) = a55fcb80a8f06ca4c91aacc8d3e3af87642164c6
 SHA1 (patch-bootstrap.sh) = 49a80b50cb32245527e09c6859ad829cd2266445
-SHA1 (patch-deps_gprconfig__kb_db_linker.xml) = 6fdc8e78ba3651eae37a132fff8e53ad988b2a71
+SHA1 (patch-deps_gprconfig__kb_db_linker.xml) = 6e61f3ea5e704ee91ae4355af94906264b39bc64
 SHA1 (patch-gpr_gpr.gpr) = b18713da0795ebefd241414e5e9171ecfa9b79db
 SHA1 (patch-gpr_src_gpr_imports.c) = 1b72dd42355c7f7189d4a4a8a7bcf7153f206731
-SHA1 (patch-gprbuild.gpr) = 2940dc5235ddebdf8e2a486ef81cb38af7d001c9
+SHA1 (patch-gprbuild.gpr) = 91d5e19973e7a423c0482bd86ebf24cdf12e8c18

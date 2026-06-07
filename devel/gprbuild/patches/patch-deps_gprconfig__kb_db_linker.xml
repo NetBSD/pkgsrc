@@ -1,10 +1,10 @@
-$NetBSD: patch-deps_gprconfig__kb_db_linker.xml,v 1.1 2025/02/16 10:11:49 wiz Exp $
+$NetBSD: patch-deps_gprconfig__kb_db_linker.xml,v 1.2 2026/06/07 03:54:41 dkazankov Exp $
 
 Fix link time lto plugin warning
 
---- deps/gprconfig_kb/db/linker.xml.orig	2024-09-09 17:54:27.000000000 +0300
+--- deps/gprconfig_kb/db/linker.xml.orig	2025-09-19 00:21:22.000000000 +0300
 +++ deps/gprconfig_kb/db/linker.xml
-@@ -1000,9 +1000,9 @@
+@@ -1020,9 +1020,9 @@
        <target name="^cuda$" />
      </targets>
      <config>
