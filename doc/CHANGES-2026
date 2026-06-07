@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3573 2026/06/07 13:01:40 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3574 2026/06/07 13:04:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5480,3 +5480,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/xfile to 1.2.0 [vins 2026-06-07]
 	Updated www/p5-HTTP-Message to 7.02 [wiz 2026-06-07]
 	Updated devel/lua-gi to 0.9.2nb6 [wiz 2026-06-07]
+	Updated multimedia/libtheora-docs to 1.2.0nb3 [wiz 2026-06-07]
