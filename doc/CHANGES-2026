@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3581 2026/06/07 14:38:07 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3582 2026/06/07 14:43:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5488,3 +5488,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated finance/R-bayesm to 3.1.7 [mef 2026-06-07]
 	Updated finance/R-fBasics to 4052.98 [mef 2026-06-07]
 	Updated textproc/R-htmltools to 0.5.9 [mef 2026-06-07]
+	Updated graphics/R-isoband to 0.3.0 [mef 2026-06-07]
