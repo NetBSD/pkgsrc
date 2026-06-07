@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3565 2026/06/07 05:34:17 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3566 2026/06/07 06:15:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5469,3 +5469,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/py-soundfile to 0.14.0 [adam 2026-06-07]
 	Updated net/helm to 4.2.0 [adam 2026-06-07]
 	Updated databases/hiredis to 1.4.0 [adam 2026-06-07]
+	Updated graphics/openimageio to 3.1.14.0 [adam 2026-06-07]
+	Updated audio/mpg123 to 1.33.6 [adam 2026-06-07]
