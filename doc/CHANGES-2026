@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3549 2026/06/07 03:54:35 taca Exp $
+$NetBSD: CHANGES-2026,v 1.3550 2026/06/07 03:55:20 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5451,3 +5451,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added textproc/ada-xmlada26 version 26.0.0 [dkazankov 2026-06-07]
 	Updated security/ruby-rex-arch to 0.1.20 [taca 2026-06-07]
 	Updated security/ruby-rex-encoder to 0.1.10 [taca 2026-06-07]
+	Updated devel/gprbuild to 26.0.0 [dkazankov 2026-06-07]
