@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3597 2026/06/07 21:09:49 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3598 2026/06/07 21:11:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5502,3 +5502,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/alsa-lib to 1.2.16 [wiz 2026-06-07]
 	Updated devel/jj to 0.42.0 [wiz 2026-06-07]
 	Updated emulators/mame to 0.288 [wiz 2026-06-07]
+	Updated devel/py-hatchling to 1.30.1 [wiz 2026-06-07]
