@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3542 2026/06/07 03:20:33 taca Exp $
+$NetBSD: CHANGES-2026,v 1.3543 2026/06/07 03:21:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5444,3 +5444,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-console to 1.36.0 [taca 2026-06-07]
 	Updated devel/ruby-metasm to 1.0.6 [taca 2026-06-07]
 	Updated devel/ruby-version_gem to 1.1.10 [taca 2026-06-07]
+	Updated graphics/ruby-RMagick to 7.0.3 [taca 2026-06-07]
