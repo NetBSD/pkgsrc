@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/03/23 15:42:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/06/07 03:16:36 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.hgtags
@@ -10,6 +10,7 @@ ${GEM_LIBDIR}/LICENCE
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TODO
+${GEM_LIBDIR}/cortex.yaml
 ${GEM_LIBDIR}/doc/code_organisation.txt
 ${GEM_LIBDIR}/doc/const_missing.txt
 ${GEM_LIBDIR}/doc/core/DynLdr.txt
@@ -47,6 +48,7 @@ ${GEM_LIBDIR}/metasm/cpu/arm/render.rb
 ${GEM_LIBDIR}/metasm/cpu/arm64.rb
 ${GEM_LIBDIR}/metasm/cpu/arm64/debug.rb
 ${GEM_LIBDIR}/metasm/cpu/arm64/decode.rb
+${GEM_LIBDIR}/metasm/cpu/arm64/decompile.rb
 ${GEM_LIBDIR}/metasm/cpu/arm64/encode.rb
 ${GEM_LIBDIR}/metasm/cpu/arm64/main.rb
 ${GEM_LIBDIR}/metasm/cpu/arm64/opcodes.rb
@@ -66,6 +68,13 @@ ${GEM_LIBDIR}/metasm/cpu/dalvik.rb
 ${GEM_LIBDIR}/metasm/cpu/dalvik/decode.rb
 ${GEM_LIBDIR}/metasm/cpu/dalvik/main.rb
 ${GEM_LIBDIR}/metasm/cpu/dalvik/opcodes.rb
+${GEM_LIBDIR}/metasm/cpu/dwarf.rb
+${GEM_LIBDIR}/metasm/cpu/dwarf/debug.rb
+${GEM_LIBDIR}/metasm/cpu/dwarf/decode.rb
+${GEM_LIBDIR}/metasm/cpu/dwarf/decompile.rb
+${GEM_LIBDIR}/metasm/cpu/dwarf/encode.rb
+${GEM_LIBDIR}/metasm/cpu/dwarf/main.rb
+${GEM_LIBDIR}/metasm/cpu/dwarf/opcodes.rb
 ${GEM_LIBDIR}/metasm/cpu/ebpf.rb
 ${GEM_LIBDIR}/metasm/cpu/ebpf/debug.rb
 ${GEM_LIBDIR}/metasm/cpu/ebpf/decode.rb
@@ -139,6 +148,7 @@ ${GEM_LIBDIR}/metasm/cpu/x86_64.rb
 ${GEM_LIBDIR}/metasm/cpu/x86_64/compile_c.rb
 ${GEM_LIBDIR}/metasm/cpu/x86_64/debug.rb
 ${GEM_LIBDIR}/metasm/cpu/x86_64/decode.rb
+${GEM_LIBDIR}/metasm/cpu/x86_64/decompile.rb
 ${GEM_LIBDIR}/metasm/cpu/x86_64/encode.rb
 ${GEM_LIBDIR}/metasm/cpu/x86_64/main.rb
 ${GEM_LIBDIR}/metasm/cpu/x86_64/opcodes.rb
@@ -316,5 +326,6 @@ ${GEM_LIBDIR}/tests/mcs51.rb
 ${GEM_LIBDIR}/tests/mips.rb
 ${GEM_LIBDIR}/tests/parse_c.rb
 ${GEM_LIBDIR}/tests/preprocessor.rb
+${GEM_LIBDIR}/tests/shellcode.rb
 ${GEM_LIBDIR}/tests/x86_64.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
