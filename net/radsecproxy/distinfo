@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.12 2023/05/26 15:06:05 he Exp $
+$NetBSD: distinfo,v 1.13 2026/06/07 17:45:46 adam Exp $
 
-BLAKE2s (radsecproxy-1.10.0.tar.gz) = e753db6477a500802eb383fa19972a7db50a0c5295e10f375abd30f4ab87a9fe
-SHA512 (radsecproxy-1.10.0.tar.gz) = ba9967015561ef8ee3fbff68f58da785861d5213f5df9e1a27603dcb7688a26e927cbcb8b9845220bf436d99b170c5ce375cee6f5578ec193ac58e32e9c960df
-Size (radsecproxy-1.10.0.tar.gz) = 257188 bytes
-SHA1 (patch-rewrite.c) = 2b8b8f450b6591d3c21c19748dc4656b3b3d2646
+BLAKE2s (radsecproxy-1.11.2.tar.gz) = 978cac4e56fd0bdb6b42add866a4523e12c9da2155a6bc2cfcfc92742a010466
+SHA512 (radsecproxy-1.11.2.tar.gz) = 8de56c086afa270a7eabd97bca8c9d48f5ad2aca04b703820a523ce2f0a446d711714fe9d8f5ef479456e345b9fa04e9d9660d84de14c15097293e717187abf6
+Size (radsecproxy-1.11.2.tar.gz) = 273056 bytes
+SHA1 (patch-fticks__hashmac.c) = bc1777466e53c506fb098820eb6e94467b863cc1
+SHA1 (patch-radmsg.c) = d3b8facc29cbcd89ccdc7aaa0499ab86c68e83a4
+SHA1 (patch-radsecproxy.c) = e47c558da9ff935cf620fe0ce6977653517aa1a4
