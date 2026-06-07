@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2026/06/07 02:03:26 mef Exp $
+# $NetBSD: Makefile,v 1.6 2026/06/07 02:34:48 mef Exp $
 
 R_PKGNAME=	promises
-R_PKGVER=	1.3.2
+R_PKGVER=	1.5.0
 CATEGORIES=	parallel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,7 +9,9 @@ COMMENT=	Abstractions for promise-based asynchronous programming
 LICENSE=	mit
 
 DEPENDS+=	R-fastmap-[0-9]*:../../devel/R-fastmap
+DEPENDS+=	R-lifecycle-[0-9]*:../../devel/R-lifecycle
 DEPENDS+=	R-magrittr>=1.5:../../devel/R-magrittr
+DEPENDS+=	R-otel-[0-9]*:../../devel/R-otel
 DEPENDS+=	R-rlang>=0.4.0:../../devel/R-rlang
 DEPENDS+=	R-R6-[0-9]*:../../devel/R-R6
 
@@ -35,4 +37,3 @@ pre-configure:
 .include "../../devel/R-Rcpp/buildlink3.mk"
 .include "../../sysutils/R-later/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-.include "../../mk/bsd.prefs.mk"
