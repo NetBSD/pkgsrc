@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/06/07 02:17:52 mef Exp $
+
+BLAKE2s (R/otel_0.2.0.tar.gz) = 246666d70d5dbace169488b2e5fce4a7883bb98875c9712dd06d6c834c6605fd
+SHA512 (R/otel_0.2.0.tar.gz) = 99c42586e18660ac15941ecb38441b1054c8b7afeeeafdc847416437de1a3229ca1b8f3ed3bffb0f5b3ea040525625a9ae25892eef7235edbac1f30387f38769
+Size (R/otel_0.2.0.tar.gz) = 72585 bytes
