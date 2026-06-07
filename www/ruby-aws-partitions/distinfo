@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.115 2026/05/31 14:16:14 taca Exp $
+$NetBSD: distinfo,v 1.116 2026/06/07 04:06:12 taca Exp $
 
-BLAKE2s (aws-partitions-1.1255.0.gem) = a1b83fcb3df4c9c9a8a81064fd9546718437ec8dd4b422577fc0234a2c9b0915
-SHA512 (aws-partitions-1.1255.0.gem) = e27ba44f8078657cff27499b4603d16f369fc16750e675d58a66673357324c00d37b561ad7a7229f2f00da6de0698ba67d29f7d824b262896baa51bdab5132a4
-Size (aws-partitions-1.1255.0.gem) = 83456 bytes
+BLAKE2s (aws-partitions-1.1258.0.gem) = 62cbeecc9029849800a3a3ec5af41f298b72b83f50205c4382c79c637452340e
+SHA512 (aws-partitions-1.1258.0.gem) = f28336cc7c0ebbf2ac89407f6bb1962927b2be97283f2f02e5fa1c3ca50f94e7a800a5f0f3c9c6f603fde83c08d44bf4689c150899b29e5ebb410f09cb4c0e33
+Size (aws-partitions-1.1258.0.gem) = 83968 bytes
