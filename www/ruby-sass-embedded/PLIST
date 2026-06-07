@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2026/04/12 15:36:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/06/07 04:19:15 taca Exp $
 bin/sass${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -52,11 +52,6 @@ ${GEM_EXTSDIR}/sass/node_modules/@parcel/watcher/src/windows/win_utils.hh
 ${GEM_EXTSDIR}/sass/node_modules/@parcel/watcher/wrapper.js
 ${GEM_EXTSDIR}/sass/node_modules/chokidar/LICENSE
 ${GEM_EXTSDIR}/sass/node_modules/chokidar/README.md
-${GEM_EXTSDIR}/sass/node_modules/chokidar/esm/handler.d.ts
-${GEM_EXTSDIR}/sass/node_modules/chokidar/esm/handler.js
-${GEM_EXTSDIR}/sass/node_modules/chokidar/esm/index.d.ts
-${GEM_EXTSDIR}/sass/node_modules/chokidar/esm/index.js
-${GEM_EXTSDIR}/sass/node_modules/chokidar/esm/package.json
 ${GEM_EXTSDIR}/sass/node_modules/chokidar/handler.d.ts
 ${GEM_EXTSDIR}/sass/node_modules/chokidar/handler.js
 ${GEM_EXTSDIR}/sass/node_modules/chokidar/index.d.ts
@@ -117,9 +112,6 @@ ${GEM_EXTSDIR}/sass/node_modules/picomatch/package.json
 ${GEM_EXTSDIR}/sass/node_modules/picomatch/posix.js
 ${GEM_EXTSDIR}/sass/node_modules/readdirp/LICENSE
 ${GEM_EXTSDIR}/sass/node_modules/readdirp/README.md
-${GEM_EXTSDIR}/sass/node_modules/readdirp/esm/index.d.ts
-${GEM_EXTSDIR}/sass/node_modules/readdirp/esm/index.js
-${GEM_EXTSDIR}/sass/node_modules/readdirp/esm/package.json
 ${GEM_EXTSDIR}/sass/node_modules/readdirp/index.d.ts
 ${GEM_EXTSDIR}/sass/node_modules/readdirp/index.js
 ${GEM_EXTSDIR}/sass/node_modules/readdirp/package.json
@@ -189,13 +181,17 @@ ${GEM_EXTSDIR}/sass/node_modules/sync-message-port/dist/tsconfig.build.tsbuildin
 ${GEM_EXTSDIR}/sass/node_modules/sync-message-port/package.json
 ${GEM_EXTSDIR}/sass/package-lock.json
 ${GEM_EXTSDIR}/sass/package.json
-${GEM_EXTSDIR}/sass/sass-1.99.0.tgz
+${GEM_EXTSDIR}/sass/sass-1.100.0.tgz
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/exe/sass
 ${GEM_LIBDIR}/ext/sass/Rakefile
+${GEM_LIBDIR}/ext/sass/file_utils.rb
 ${GEM_LIBDIR}/ext/sass/package.json
-${GEM_LIBDIR}/ext/sass/sass-1.99.0.tgz
+${GEM_LIBDIR}/ext/sass/platform.rb
+${GEM_LIBDIR}/ext/sass/sass-1.100.0.tgz
+${GEM_LIBDIR}/ext/sass/sass_config.rb
+${GEM_LIBDIR}/ext/sass/utils.rb
 ${GEM_LIBDIR}/lib/sass-embedded.rb
 ${GEM_LIBDIR}/lib/sass/calculation_value.rb
 ${GEM_LIBDIR}/lib/sass/calculation_value/calculation_operation.rb
