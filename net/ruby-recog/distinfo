@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.36 2026/02/23 15:50:05 taca Exp $
+$NetBSD: distinfo,v 1.37 2026/06/07 03:30:15 taca Exp $
 
-BLAKE2s (recog-3.1.26.gem) = 8869269e77df918179c7ee05a7010667ed2cdcaeefecc4f6140ba7b6d844162d
-SHA512 (recog-3.1.26.gem) = 7e7534d06c61f3a2eeb79fdeff8f19dea4284b82a52333c4b65b09d3d8534a3e8d9d6c3582d9246dbb069ad71d6bd135e2b55226400e713e6aa10d81075890a0
-Size (recog-3.1.26.gem) = 394752 bytes
+BLAKE2s (recog-3.1.29.gem) = 0dd90e2f1f8c8402d37cd9eaccbaedd8900455884ea8256aa6e4e29f2ba96b3d
+SHA512 (recog-3.1.29.gem) = 421cdcb857c27f1efd6b498c456642d4c66ba9ef193a4e4718db5268e650f90cb877756d48af1a10ca58b6a02dc123d69a48d86e716ac3eab2d6dbf6e7cf3049
+Size (recog-3.1.29.gem) = 394752 bytes
