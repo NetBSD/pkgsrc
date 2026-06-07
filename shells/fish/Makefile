@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2026/05/10 18:46:48 vins Exp $
+# $NetBSD: Makefile,v 1.65 2026/06/07 13:53:03 wiz Exp $
 
 DISTNAME=	fish-4.7.1
+PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fish-shell/}
 GITHUB_PROJECT=	fish-shell
@@ -45,9 +46,6 @@ CMAKE_CONFIGURE_ARGS+=	-DWITH_MESSAGE_LOCALIZATION=ON
 CMAKE_CONFIGURE_ARGS+=	-DWITH_DOCS=ON
 CMAKE_CONFIGURE_ARGS+=	-DSPHINX_EXECUTABLE=${PREFIX}/bin/sphinx-build-${PYVERSSUFFIX}
 
-RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pcre2}/lib
-RUSTFLAGS+=		-C link-arg=-L${BUILDLINK_PREFIX.pcre2}/lib
-
 PKGSRC_MAKE_ENV+=	FISH_BUILD_VERSION=${PKGVERSION_NOREV}
 
 TEST_TARGET=		fish_run_tests
@@ -61,7 +59,6 @@ post-install:
 		${DESTDIR}/${PREFIX}/share/prompts
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/rust/cargo.mk"
