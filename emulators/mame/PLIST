@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.104 2026/03/31 11:14:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.105 2026/06/07 21:09:35 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -124,6 +124,7 @@ share/mame/hash/apple2_cass.xml
 share/mame/hash/apple2_flop_clcracked.xml
 share/mame/hash/apple2_flop_misc.xml
 share/mame/hash/apple2_flop_orig.xml
+share/mame/hash/apple2_rom.xml
 share/mame/hash/apple2gs_flop_clcracked.xml
 share/mame/hash/apple2gs_flop_misc.xml
 share/mame/hash/apple2gs_flop_orig.xml
@@ -366,6 +367,7 @@ share/mame/hash/jakks_gamekey_mv.xml
 share/mame/hash/jakks_gamekey_nk.xml
 share/mame/hash/jakks_gamekey_nm.xml
 share/mame/hash/jakks_gamekey_sw.xml
+share/mame/hash/jakks_gamekey_wp.xml
 share/mame/hash/jaminator.xml
 share/mame/hash/jazz.xml
 share/mame/hash/jb3000_flop.xml
@@ -454,6 +456,7 @@ share/mame/hash/mo6_flop.xml
 share/mame/hash/mobigo_cart.xml
 share/mame/hash/monon_color.xml
 share/mame/hash/mpc3000_flop.xml
+share/mame/hash/mpc60_flop.xml
 share/mame/hash/mpf1_rom.xml
 share/mame/hash/mpu1000.xml
 share/mame/hash/mpz80.xml
@@ -528,6 +531,8 @@ share/mame/hash/orion_flop.xml
 share/mame/hash/orionpro_flop.xml
 share/mame/hash/osborne1.xml
 share/mame/hash/osborne2.xml
+share/mame/hash/p2000_cart.xml
+share/mame/hash/p2000_cass.xml
 share/mame/hash/p500_flop.xml
 share/mame/hash/partner_cass.xml
 share/mame/hash/partner_flop.xml
@@ -553,6 +558,7 @@ share/mame/hash/pc8801_cass.xml
 share/mame/hash/pc8801_cdrom.xml
 share/mame/hash/pc8801_flop.xml
 share/mame/hash/pc88va.xml
+share/mame/hash/pc88va_flop_orig.xml
 share/mame/hash/pc98.xml
 share/mame/hash/pc98_cd.xml
 share/mame/hash/pc98_flop_orig.xml
@@ -591,6 +597,7 @@ share/mame/hash/pls1000_cart.xml
 share/mame/hash/plus4_cart.xml
 share/mame/hash/plus4_cass.xml
 share/mame/hash/plus4_flop.xml
+share/mame/hash/plus4_quik.xml
 share/mame/hash/pmd85_cass.xml
 share/mame/hash/pockchalv2.xml
 share/mame/hash/pockchalw.xml
@@ -599,6 +606,7 @@ share/mame/hash/poisk1_flop.xml
 share/mame/hash/pokemini.xml
 share/mame/hash/poly_flop.xml
 share/mame/hash/polysix.xml
+share/mame/hash/popstar_cart.xml
 share/mame/hash/precur2w_cart.xml
 share/mame/hash/princ.xml
 share/mame/hash/pro128_cart.xml
@@ -611,6 +619,7 @@ share/mame/hash/psi98.xml
 share/mame/hash/psion1.xml
 share/mame/hash/psion2.xml
 share/mame/hash/psion_flop.xml
+share/mame/hash/psion_quik.xml
 share/mame/hash/psion_ssd.xml
 share/mame/hash/psx.xml
 share/mame/hash/pt68k2.xml
@@ -816,10 +825,12 @@ share/mame/hash/x07_cass.xml
 share/mame/hash/x1_cass.xml
 share/mame/hash/x1_flop.xml
 share/mame/hash/x37_flop.xml
+share/mame/hash/x37_hdd.xml
 share/mame/hash/x68k_flop.xml
 share/mame/hash/xegs.xml
 share/mame/hash/xerox820.xml
 share/mame/hash/xerox820ii.xml
+share/mame/hash/yeno_laptop_cart.xml
 share/mame/hash/z80clock.xml
 share/mame/hash/z80ne_cass.xml
 share/mame/hash/z80ne_flop.xml

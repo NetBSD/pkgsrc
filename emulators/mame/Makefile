@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.230 2026/03/31 11:14:55 wiz Exp $
+# $NetBSD: Makefile,v 1.231 2026/06/07 21:09:35 wiz Exp $
 
-DISTNAME=	mame-0.287
+DISTNAME=	mame-0.288
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mamedev/}
 GITHUB_TAG=	${DISTNAME:S/-//S/.//}
@@ -19,23 +19,16 @@ INSTALLATION_DIRS+=	${SHAREDIR}/artwork/bgfx/chains/crt-geom ${SHAREDIR}/hash
 DEPENDS+=		liberation-ttf-[0-9]*:../../fonts/liberation-ttf
 
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES+=	c++17
+USE_CXX_FEATURES+=	c++20
 USE_TOOLS+=		gmake pkg-config
 UNLIMIT_RESOURCES+=	cputime datasize memorysize virtualsize
 MAKE_FILE=		makefile
 
 # complains with earlier versions:
-# "GCC version 10.3 or later needed"
-GCC_REQD+=		10
+# "GCC version 11.0 or later needed"
+GCC_REQD+=		11
 
 PYTHON_FOR_BUILD_ONLY=		tool
-
-.include "../../mk/bsd.prefs.mk"
-# error: invalid argument '-std=gnu++17' not allowed with 'Objective-C'
-.if ${OPSYS} != "Darwin"
-# Need to use gnu++ instead of c++ to get __builtin_alloca() (!)
-FORCE_CXX_STD=		gnu++17
-.endif
 
 MAKE_FLAGS+=		PRECOMPILE=0
 # TODO: set differently when debugging?
@@ -43,6 +36,8 @@ MAKE_FLAGS+=		OPTIMIZE=2
 MAKE_FLAGS+=		NO_USE_PORTAUDIO=1
 MAKE_FLAGS+=		NO_USE_PULSEAUDIO=1
 MAKE_FLAGS+=		OSD=sdl3
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "x86_64"
 # \todo Arch detection for aarch64 fails, investigate why
@@ -84,7 +79,7 @@ MAKE_ENV+=	USE_SYSTEM_LIB_RAPIDJSON=1
 MAKE_ENV+=	USE_SYSTEM_LIB_PUGIXML=1
 # find proper python binary
 MAKE_ENV+=	PYTHON_EXECUTABLE=${PYTHONBIN}
-# don't depend on qt5
+# don't depend on qt6
 MAKE_ENV+=	USE_QTDEBUG=0
 # avoid midi for now
 #MAKE_ENV+=	NO_USE_MIDI=1
