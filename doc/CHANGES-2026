@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3564 2026/06/07 04:59:15 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3565 2026/06/07 05:34:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5467,3 +5467,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/php-contao-manager to 1.10.14 [taca 2026-06-07]
 	Updated sysutils/py-sh to 2.2.4 [adam 2026-06-07]
 	Updated audio/py-soundfile to 0.14.0 [adam 2026-06-07]
+	Updated net/helm to 4.2.0 [adam 2026-06-07]
+	Updated databases/hiredis to 1.4.0 [adam 2026-06-07]
