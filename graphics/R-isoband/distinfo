@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/12/07 02:51:45 mef Exp $
+$NetBSD: distinfo,v 1.5 2026/06/07 14:43:03 mef Exp $
 
-BLAKE2s (R/isoband_0.2.7.tar.gz) = bd21cbb6f106d86605673cf47b729c1ab5d64cd754249565efee9b30d2cdac99
-SHA512 (R/isoband_0.2.7.tar.gz) = 0eb31cd6636abc80f82b8427e3796e159cb3a77997c172c766d410cab798a2a4abe75ca5c034883cc5a2bd1b70369fa34e3f1d6f868c8faa4a91aaa52698f2db
-Size (R/isoband_0.2.7.tar.gz) = 1591812 bytes
+BLAKE2s (R/isoband_0.3.0.tar.gz) = 612b1735b4c2297403f10c660f54355f70d7a8cfaed189b9b6b287a772c823bf
+SHA512 (R/isoband_0.3.0.tar.gz) = 501211b2d2da7814f1e7aa360d18475981429c631f8d2d39a6197d2009263c35519453aedc6adbe8657d312e6203ed28c67ac605ffc5dfe4009691020c93b0fe
+Size (R/isoband_0.3.0.tar.gz) = 1593511 bytes
