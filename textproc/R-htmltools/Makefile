@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2024/12/15 07:39:53 mef Exp $
+# $NetBSD: Makefile,v 1.11 2026/06/07 14:37:58 mef Exp $
 
 R_PKGNAME=	htmltools
-R_PKGVER=	0.5.8.1
+R_PKGVER=	0.5.9
 CATEGORIES=	textproc
 
 MAINTAINER=	minskim@NetBSD.org
@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 DEPENDS+=	R-digest>=0.6.20:../../security/R-digest
 DEPENDS+=	R-base64enc-[0-9]*:../../converters/R-base64enc
-DEPENDS+=	R-rlang-[0-9]*:../../devel/R-rlang
+DEPENDS+=	R-rlang>=1.2.0:../../devel/R-rlang
 DEPENDS+=	R-fastmap-[0-9]*:../../devel/R-fastmap
 DEPENDS+=	R-ellipsis-[0-9]*:../../math/R-ellipsis
 
