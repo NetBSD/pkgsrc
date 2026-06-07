@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3604 2026/06/07 21:23:39 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3605 2026/06/07 21:24:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5509,3 +5509,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-pdf to 6.13.0 [wiz 2026-06-07]
 	Updated textproc/py-sphinx-autodoc-typehints to 3.10.5 [wiz 2026-06-07]
 	Updated devel/py-pdm_backend to 2.4.9 [wiz 2026-06-07]
+	Updated devel/py-typer to 0.26.7 [wiz 2026-06-07]
