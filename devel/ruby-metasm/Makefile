@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/08/22 13:45:39 taca Exp $
+# $NetBSD: Makefile,v 1.4 2026/06/07 03:16:36 taca Exp $
 
-DISTNAME=	metasm-1.0.5
+DISTNAME=	metasm-1.0.6
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
