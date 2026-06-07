@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3606 2026/06/07 21:33:09 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3607 2026/06/07 21:55:18 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5511,3 +5511,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pdm_backend to 2.4.9 [wiz 2026-06-07]
 	Updated devel/py-typer to 0.26.7 [wiz 2026-06-07]
 	Updated www/restish to 2.2.0 [wiz 2026-06-07]
+	Updated devel/R-callr to 3.8.0 [mef 2026-06-07]
