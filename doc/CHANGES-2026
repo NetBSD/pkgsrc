@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3591 2026/06/07 19:21:09 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3592 2026/06/07 19:22:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5497,3 +5497,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/hwdata to 0.408 [wiz 2026-06-07]
 	Updated net/libcmis to 0.6.3 [wiz 2026-06-07]
 	Updated net/pdns-recursor update to 5.4.2 [drixter 2026-06-07]
+	Updated shells/zsh to 5.9.1 [wiz 2026-06-07]
