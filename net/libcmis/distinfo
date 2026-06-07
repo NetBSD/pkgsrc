@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/11/30 20:31:31 wiz Exp $
+$NetBSD: distinfo,v 1.10 2026/06/07 19:04:36 wiz Exp $
 
-BLAKE2s (libcmis-0.6.2.tar.gz) = 882b911ce871cfb56093fc8faa8158649982790cbf3bc95f0fc3c4055b743db3
-SHA512 (libcmis-0.6.2.tar.gz) = ed7a1a57ef39216767c2e7940a80d75f7582b8213a204df15aea0b3d80ff86bf53ccddc111c9ec77606ef9a0035bb04609e1042d474b6d03dbd12678af9cf3e4
-Size (libcmis-0.6.2.tar.gz) = 787697 bytes
-SHA1 (patch-src_libcmis_xml-utils.cxx) = f8a81b2467d2edd1162cd6b59fe5a424a1c8ad87
+BLAKE2s (libcmis-0.6.3.tar.gz) = 38601237a09c702c9aad523c1a9aba50b4d11aeae5ec8e77748bf9ad573cf14b
+SHA512 (libcmis-0.6.3.tar.gz) = 60622697e96c618e0f2790d75bbb1b66d21a3e09de00611afbea6a6aad6fe3e10e44df2f903d4c4ee3f41cc08cb6a10aaa65a3a1f7faf74840763fdc9324e69a
+Size (libcmis-0.6.3.tar.gz) = 818626 bytes
