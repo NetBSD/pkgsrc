@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.42 2026/05/14 11:25:19 adam Exp $
+$NetBSD: distinfo,v 1.43 2026/06/07 06:12:11 adam Exp $
 
-BLAKE2s (OpenImageIO-3.1.13.1.tar.gz) = b159e2895bae8313f8c71aa32a3f19e5fefd54032072f71eb86fd381dcdba91e
-SHA512 (OpenImageIO-3.1.13.1.tar.gz) = 199faba7fed3c59b8e625b5f06bcfa178a6efbfb3f2d160ae4bcba4b29b674e55ae78b47eef1839a451885693e0b5e0d1cc2be610351435736b8d703d22682b4
-Size (OpenImageIO-3.1.13.1.tar.gz) = 55338242 bytes
+BLAKE2s (OpenImageIO-3.1.14.0.tar.gz) = 1b0de44ea7f7df7529f41d68b9202bbbb8205cf4b841c99313fc93eac59b34c5
+SHA512 (OpenImageIO-3.1.14.0.tar.gz) = dd5cb30edf8d6c2d61260cc2d91a7a29bbad11b18f83af93527f9308bff0e24b218584635fdad6a154a2c32f0c8c12a458a86261c76c36d9aa41106af8533a39
+Size (OpenImageIO-3.1.14.0.tar.gz) = 55380851 bytes
 SHA1 (patch-src_cmake_compiler.cmake) = d261b70e5ff0984b386087be54aff55e2b36c274
