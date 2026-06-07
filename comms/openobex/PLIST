@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2025/06/14 05:55:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2026/06/07 13:07:35 wiz Exp $
 include/openobex/obex.h
 include/openobex/obex_const.h
 include/openobex/version.h
@@ -16,6 +16,7 @@ share/doc/openobex/html/api_8c.html
 share/doc/openobex/html/api_8c.js
 share/doc/openobex/html/classes.html
 share/doc/openobex/html/clipboard.js
+share/doc/openobex/html/codefolding.js
 share/doc/openobex/html/cookie.js
 share/doc/openobex/html/dir_9a09b4dfda82e3e665e31092d1c3ec8d.html
 share/doc/openobex/html/dir_9a09b4dfda82e3e665e31092d1c3ec8d.js
@@ -28,7 +29,6 @@ share/doc/openobex/html/dir_e8acc63b1e238f3255c900eed37254b8.js
 share/doc/openobex/html/doxygen.css
 share/doc/openobex/html/doxygen.svg
 share/doc/openobex/html/doxygen_crawl.html
-share/doc/openobex/html/dynsections.js
 share/doc/openobex/html/files.html
 share/doc/openobex/html/files_dup.js
 share/doc/openobex/html/functions.html
@@ -45,7 +45,6 @@ share/doc/openobex/html/globals_o.html
 share/doc/openobex/html/globals_t.html
 share/doc/openobex/html/globals_type.html
 share/doc/openobex/html/index.html
-share/doc/openobex/html/jquery.js
 share/doc/openobex/html/menu.js
 share/doc/openobex/html/menudata.js
 share/doc/openobex/html/navtree.css
