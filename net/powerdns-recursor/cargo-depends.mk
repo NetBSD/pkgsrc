@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2026/03/17 13:42:39 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2026/06/07 19:06:31 drixter Exp $
 
 CARGO_CRATE_DEPENDS+=	anstyle-1.0.13
 CARGO_CRATE_DEPENDS+=	atomic-waker-1.1.2
@@ -48,7 +48,7 @@ CARGO_CRATE_DEPENDS+=	quote-1.0.42
 CARGO_CRATE_DEPENDS+=	ring-0.17.14
 CARGO_CRATE_DEPENDS+=	rustls-0.23.35
 CARGO_CRATE_DEPENDS+=	rustls-pki-types-1.13.1
-CARGO_CRATE_DEPENDS+=	rustls-webpki-0.103.8
+CARGO_CRATE_DEPENDS+=	rustls-webpki-0.103.13
 CARGO_CRATE_DEPENDS+=	ryu-1.0.20
 CARGO_CRATE_DEPENDS+=	scratch-1.0.9
 CARGO_CRATE_DEPENDS+=	serde-1.0.228
