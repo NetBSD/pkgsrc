@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.109 2026/01/18 14:12:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.110 2026/06/07 19:22:44 wiz Exp $
 
-DISTNAME=	zsh-5.9
-PKGREVISION=	4
+DISTNAME=	zsh-5.9.1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zsh/}
 EXTRACT_SUFX=	.tar.xz
@@ -16,7 +15,7 @@ USE_CC_FEATURES=	c11
 USE_TOOLS+=		autoconf automake autoreconf makeinfo
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
-TEXINFO_REQD=		4.0
+TEXINFO_REQD+=		4.0
 
 CHECK_PORTABILITY_SKIP=	Misc/c2z # not used
 
