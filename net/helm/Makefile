@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2026/06/05 10:21:43 bsiegert Exp $
+# $NetBSD: Makefile,v 1.14 2026/06/07 05:28:09 adam Exp $
 
-DISTNAME=	helm-3.18.6
-PKGREVISION=	9
+DISTNAME=	helm-4.2.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=helm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,21 +10,12 @@ HOMEPAGE=	https://helm.sh/
 COMMENT=	The Kubernetes Package Manager
 LICENSE=	apache-2.0
 
-# XXX: To get K8S_MODULES_VERSION:
-# XXX:  $ make build-env
-# XXX:  $ go list -f '{{.Version}}' -m k8s.io/client-go
-K8S_MODULES_VERSION=		0.33.3 # <major>.<minor>.x
-K8S_MODULES_VERSION_MAJOR=	1 # <major> + 1
-K8S_MODULES_VERSION_MINOR=	33 # <minor>
-GOFLAGS+=		-ldflags ' \
-			-X helm.sh/helm/v3/internal/version.version=${PKGVERSION_NOREV} \
-			-X helm.sh/helm/v3/internal/version.metadata= \
-			-X helm.sh/helm/v3/internal/version.gitCommit= \
-			-X helm.sh/helm/v3/internal/version.gitTreeState= \
-			-X helm.sh/helm/v3/pkg/lint/rules.k8sVersionMajor=${K8S_MODULES_VERSION_MAJOR} \
-			-X helm.sh/helm/v3/pkg/lint/rules.k8sVersionMinor=${K8S_MODULES_VERSION_MINOR} \
-			-X helm.sh/helm/v3/pkg/chartutil.k8sVersionMajor=${K8S_MODULES_VERSION_MAJOR} \
-			-X helm.sh/helm/v3/pkg/chartutil.k8sVersionMinor=${K8S_MODULES_VERSION_MINOR}'
+GOFLAGS+=	-ldflags '-s -w \
+		-X helm.sh/helm/v3/internal/version.version=${PKGVERSION_NOREV} \
+		-X helm.sh/helm/v3/internal/version.metadata= \
+		-X helm.sh/helm/v3/internal/version.gitCommit= \
+		-X helm.sh/helm/v3/internal/version.gitTreeState='
+
 GO_BUILD_PATTERN=	./cmd/helm
 
 .include "go-modules.mk"
