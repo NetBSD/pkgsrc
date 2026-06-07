@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3536 2026/06/06 18:40:22 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3537 2026/06/07 02:08:52 iquiw Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5438,3 +5438,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/libreoffice to 26.2.3.2 [ryoon 2026-06-06]
 	Updated databases/p5-DBI to 1.648 [wiz 2026-06-06]
 	Added sysutils/tuptime version 5.2.6 [wiz 2026-06-06]
+	Updated devel/task to 3.51.1 [iquiw 2026-06-07]
