@@ -1,7 +1,10 @@
-$NetBSD: patch-configure,v 1.1 2021/03/12 09:57:18 nia Exp $
+$NetBSD: patch-configure,v 1.2 2026/06/07 17:36:03 adam Exp $
 
 NetBSD provides libedit-as-readline, but chrony wants libedit.
 just include the fake readline header.
+
+Add support for Nettle 4.0
+https://gitlab.com/chrony/chrony/-/commit/fee12ec914cce805cc704a4c2804d75b4933ad2f
 
 --- configure.orig	2020-10-07 15:27:34.000000000 +0000
 +++ configure
@@ -14,3 +17,12 @@ just include the fake readline header.
        'add_history(readline("prompt"));'
      then
        add_def FEAT_READLINE
+@@ -891,7 +891,7 @@ HASH_LINK=""
+ if [ $feat_sechash = "1" ] && [ "x$HASH_LINK" = "x" ]  && [ $try_nettle = "1" ]; then
+   test_cflags="`pkg_config --cflags nettle`"
+   test_link="`pkg_config --libs nettle`"
+-  if test_code 'nettle' 'nettle/nettle-meta.h nettle/sha2.h' \
++  if test_code 'nettle' 'nettle/nettle-meta.h nettle/sha2.h nettle/version.h' \
+     "$test_cflags" "$test_link" \
+     'return nettle_hashes[0]->context_size;'
+   then
