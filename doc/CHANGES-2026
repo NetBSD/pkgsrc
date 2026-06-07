@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3552 2026/06/07 04:01:55 taca Exp $
+$NetBSD: CHANGES-2026,v 1.3553 2026/06/07 04:04:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5454,3 +5454,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/gprbuild to 26.0.0 [dkazankov 2026-06-07]
 	Updated security/ruby-rex-socket to 0.1.67 [taca 2026-06-07]
 	Updated security/ruby-rex-text to 0.2.64 [taca 2026-06-07]
+	Updated textproc/ruby-kramdown-rfc2629 to 1.7.39 [taca 2026-06-07]
