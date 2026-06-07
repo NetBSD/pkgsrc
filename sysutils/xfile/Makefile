@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2026/04/20 16:06:01 vins Exp $
+# $NetBSD: Makefile,v 1.9 2026/06/07 08:30:46 vins Exp $
 
-DISTNAME=	xfile-src-1.1.0
+DISTNAME=	xfile-src-1.2.0
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	sysutils x11
 MASTER_SITES=	https://fastestcode.org/dl/
