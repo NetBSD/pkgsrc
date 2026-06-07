@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2025/08/20 11:34:48 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/06/07 13:07:35 wiz Exp $
 
 DISTNAME=	openobex-1.7.2-Source
 PKGNAME=	${DISTNAME:C/-Source//}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openobex/}
 
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Implementation of the Object Exchange (OBEX) protocol
 LICENSE=	gnu-lgpl-v2
 
-TOOL_DEPENDS+=	doxygen>=1.14.0:../../devel/doxygen
+TOOL_DEPENDS+=	doxygen>=1.17.0:../../devel/doxygen
 
 USE_TOOLS+=	pkg-config
 
