@@ -1,10 +1,10 @@
-$NetBSD: patch-configure.ac,v 1.4 2024/02/21 08:58:01 wiz Exp $
+$NetBSD: patch-configure.ac,v 1.5 2026/06/07 19:27:00 wiz Exp $
 
---- configure.ac.orig	2024-01-29 16:16:07.000000000 +0000
+--- configure.ac.orig	2026-06-01 08:04:24.000000000 +0000
 +++ configure.ac
-@@ -766,6 +766,15 @@ AC_CONFIG_FILES(Makefile doc/Makefile do
+@@ -774,6 +774,15 @@ AC_OUTPUT
  
- AC_OUTPUT()
+ AC_OUTPUT
  
 +case $host_os in
 +  netbsd*|freebsd*|dragonfly*)
