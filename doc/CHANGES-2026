@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3593 2026/06/07 19:24:30 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3594 2026/06/07 19:27:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5499,3 +5499,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/pdns-recursor update to 5.4.2 [drixter 2026-06-07]
 	Updated shells/zsh to 5.9.1 [wiz 2026-06-07]
 	Updated www/miniflux to 2.3.1 [wiz 2026-06-07]
+	Updated audio/alsa-lib to 1.2.16 [wiz 2026-06-07]
