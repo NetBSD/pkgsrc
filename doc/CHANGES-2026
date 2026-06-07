@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3602 2026/06/07 21:20:39 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3603 2026/06/07 21:22:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5507,3 +5507,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-filelock to 3.29.1 [wiz 2026-06-07]
 	Updated devel/py-google-api-core to 2.31.0 [wiz 2026-06-07]
 	Updated textproc/py-pdf to 6.13.0 [wiz 2026-06-07]
+	Updated textproc/py-sphinx-autodoc-typehints to 3.10.5 [wiz 2026-06-07]
