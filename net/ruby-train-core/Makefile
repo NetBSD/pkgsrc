@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2026/04/12 14:54:41 taca Exp $
+# $NetBSD: Makefile,v 1.27 2026/06/07 03:38:06 taca Exp $
 
-DISTNAME=	train-core-3.16.1
+DISTNAME=	train-core-3.16.3
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
