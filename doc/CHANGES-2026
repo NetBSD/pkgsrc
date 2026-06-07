@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3548 2026/06/07 03:51:43 taca Exp $
+$NetBSD: CHANGES-2026,v 1.3549 2026/06/07 03:54:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5450,3 +5450,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ruby-train-core to 3.16.3 [taca 2026-06-07]
 	Added textproc/ada-xmlada26 version 26.0.0 [dkazankov 2026-06-07]
 	Updated security/ruby-rex-arch to 0.1.20 [taca 2026-06-07]
+	Updated security/ruby-rex-encoder to 0.1.10 [taca 2026-06-07]
