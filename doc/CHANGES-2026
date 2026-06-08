@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3638 2026/06/08 16:19:06 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.3639 2026/06/08 16:29:10 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5551,3 +5551,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/R-processx to 3.9.0 [mef 2026-06-08]
 	Updated net/ddns-route53 to 2.15.0 [drixter 2026-06-08]
 	Updated net/dnscontrol to 4.41.0 [drixter 2026-06-08]
+	Updated net/powerdns to 5.1.1 [drixter 2026-06-08]
