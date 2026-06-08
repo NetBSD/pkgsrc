@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2026/03/30 16:06:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/06/08 04:24:21 adam Exp $
 bin/PPSSPPSDL
 share/applications/PPSSPPSDL.desktop
 share/icons/hicolor/128x128/apps/ppsspp.png
@@ -12,7 +12,6 @@ share/icons/hicolor/64x64/apps/ppsspp.png
 share/icons/hicolor/96x96/apps/ppsspp.png
 share/icons/hicolor/scalable/apps/ppsspp.svg
 share/mime/packages/ppsspp.xml
-share/ppsspp/assets/7z.png
 share/ppsspp/assets/Inconsolata-Regular.ttf
 share/ppsspp/assets/Roboto_Condensed-Bold.ttf
 share/ppsspp/assets/Roboto_Condensed-Italic.ttf
@@ -103,7 +102,6 @@ share/ppsspp/assets/lang/zh_TW.ini
 share/ppsspp/assets/langregion.ini
 share/ppsspp/assets/ppge_atlas.meta
 share/ppsspp/assets/ppge_atlas.zim
-share/ppsspp/assets/rargray.png
 share/ppsspp/assets/sfx_achievement_unlocked.wav
 share/ppsspp/assets/sfx_back.wav
 share/ppsspp/assets/sfx_confirm.wav
@@ -139,12 +137,24 @@ share/ppsspp/assets/shaders/persistence.fsh
 share/ppsspp/assets/shaders/psp_color.fsh
 share/ppsspp/assets/shaders/scanlines.fsh
 share/ppsspp/assets/shaders/sharpen.fsh
+share/ppsspp/assets/shaders/smiley.py
+share/ppsspp/assets/shaders/smiley_16x16_rgba.bin
 share/ppsspp/assets/shaders/stereo_red_blue.fsh
 share/ppsspp/assets/shaders/stereo_sbs.fsh
 share/ppsspp/assets/shaders/tex_2xbrz.csh
 share/ppsspp/assets/shaders/tex_4xbrz.csh
 share/ppsspp/assets/shaders/tex_mmpx.csh
 share/ppsspp/assets/shaders/tex_mmpx_adv.csh
+share/ppsspp/assets/shaders/tex_nnedi3_2x_single.csh
+share/ppsspp/assets/shaders/tex_nnedi3_4x_single.csh
+share/ppsspp/assets/shaders/tex_nnedi3_mp_cshift_2x.csh
+share/ppsspp/assets/shaders/tex_nnedi3_mp_cshift_4x.csh
+share/ppsspp/assets/shaders/tex_nnedi3_mp_nns16_pass1_buffer.csh
+share/ppsspp/assets/shaders/tex_nnedi3_mp_nns16_pass1_image.csh
+share/ppsspp/assets/shaders/tex_nnedi3_mp_nns16_pass2.csh
+share/ppsspp/assets/shaders/tex_smiley_2x.csh
+share/ppsspp/assets/shaders/tex_spline36_2x.csh
+share/ppsspp/assets/shaders/tex_spline36_4x.csh
 share/ppsspp/assets/shaders/upscale_bicubic.fsh
 share/ppsspp/assets/shaders/upscale_bicubic.vsh
 share/ppsspp/assets/shaders/upscale_sharp_bilinear.fsh
@@ -160,6 +170,7 @@ share/ppsspp/assets/themes/slateforest.ini
 share/ppsspp/assets/themes/strawberry.ini
 share/ppsspp/assets/themes/vinewood.ini
 share/ppsspp/assets/ui_images/bg.png
+share/ppsspp/assets/ui_images/buttons.svg
 share/ppsspp/assets/ui_images/drop_shadow.png
 share/ppsspp/assets/ui_images/icon.png
 share/ppsspp/assets/ui_images/icon_gold.png
@@ -184,4 +195,3 @@ share/ppsspp/assets/vfpu/vfpu_sin_lut_delta.dat
 share/ppsspp/assets/vfpu/vfpu_sin_lut_exceptions.dat
 share/ppsspp/assets/vfpu/vfpu_sin_lut_interval_delta.dat
 share/ppsspp/assets/vfpu/vfpu_sqrt_lut.dat
-share/ppsspp/assets/zip.png
