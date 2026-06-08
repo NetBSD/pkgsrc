@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/09/27 09:57:39 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/06/08 12:49:19 mef Exp $
 
 R_PKGNAME=	httpuv
 R_PKGVER=	1.6.11
@@ -19,6 +19,18 @@ TEST_DEPENDS+=	R-curl-[0-9]*:../../www/R-curl
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
+
+.include "../../mk/bsd.prefs.mk"
+
+SUBST_CLASSES+=		pkglibs
+SUBST_STAGE.pkglibs=	pre-configure
+SUBST_FILES.pkglibs=	src/Makevars
+.if ${OPSYS} != SunOS
+SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,-lexecinfo,
+.else
+SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,,
+.endif
+SUBST_MESSAGE.pkglibs=	Add -lexecinfo for *BSD
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"

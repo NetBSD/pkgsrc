@@ -1,4 +1,4 @@
-$NetBSD: patch-src_Makevars,v 1.5 2023/03/12 07:20:54 mef Exp $
+$NetBSD: patch-src_Makevars,v 1.6 2026/06/08 12:49:19 mef Exp $
 
 date: 2019-12-18 21:44:39 +0900;  author: joerg;  state: Exp;  commitid: UcBUFje0SklPFbPB;
 Use external libuv.
@@ -9,7 +9,7 @@ Use external libuv.
  UNAME := $(shell uname)
  
 -PKG_LIBS = ./libuv/.libs/libuv.a ./http-parser/http_parser.o ./sha1/sha1.o ./base64/base64.o -pthread
-+PKG_LIBS =                  -luv ./http-parser/http_parser.o ./sha1/sha1.o ./base64/base64.o -pthread
++PKG_LIBS =                  -luv ./http-parser/http_parser.o ./sha1/sha1.o ./base64/base64.o -pthread @@PKG_LIBS@@
  
  ifeq ($(UNAME), Darwin)
  PKG_LIBS += -framework CoreServices
