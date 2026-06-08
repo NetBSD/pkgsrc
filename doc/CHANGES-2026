@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3621 2026/06/08 12:20:55 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3622 2026/06/08 12:24:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5535,3 +5535,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/py-owslib to 0.36.0 [adam 2026-06-08]
 	Updated print/R-knitr to 1.51 [mef 2026-06-08]
 	Updated textproc/doxx to 0.1.4 [pin 2026-06-08]
+	Updated time/clock-rs to 0.2.1 [pin 2026-06-08]
+	Updated time/clock-rs to 0.2.1 [pin 2026-06-08]
