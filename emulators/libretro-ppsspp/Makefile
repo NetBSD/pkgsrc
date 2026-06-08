@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.24 2026/05/14 16:40:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2026/06/08 04:31:07 adam Exp $
 
-PKGREVISION= 1
 .include "../../emulators/ppsspp/Makefile.common"
 
 PKGNAME=	libretro-${DISTNAME}
@@ -22,7 +21,8 @@ SOEXT.*=	so
 post-install:
 	# clean up rubbish
 	${RM} -rf ${DESTDIR}${PREFIX}/share/applications
-	${RM} -rf ${DESTDIR}${PREFIX}/share/assets
+	${RM} -rf ${DESTDIR}${PREFIX}/share/mime/
+	${RM} -rf ${DESTDIR}${PREFIX}/share/ppsspp/assets
 	${RM} -rf ${DESTDIR}${PREFIX}/share/icons
 	${INSTALL_LIB} ${WRKSRC}/${CMAKE_BUILD_DIR}/lib/ppsspp_libretro.${SOEXT} \
 		${DESTDIR}${PREFIX}/lib/libretro/ppsspp_libretro.${SOEXT}
