@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2026/04/02 12:18:42 pin Exp $
+# $NetBSD: Makefile,v 1.8 2026/06/08 12:18:06 pin Exp $
 
-DISTNAME=	clock-rs-0.2.0
+DISTNAME=	clock-rs-0.2.1
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Oughie/}
-#GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Oughie/clock-rs/
