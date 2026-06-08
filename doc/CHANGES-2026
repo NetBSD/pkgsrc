@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3614 2026/06/08 08:12:33 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3615 2026/06/08 08:26:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5525,3 +5525,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added math/ada-adasat26 version 26.0.0 [dkazankov 2026-06-08]
 	Updated devel/py-traitlets to 5.15.1 [adam 2026-06-08]
 	Updated security/py-ecdsa to 0.19.2 [adam 2026-06-08]
+	Updated textproc/moor to 2.14.0 [wiz 2026-06-08]
