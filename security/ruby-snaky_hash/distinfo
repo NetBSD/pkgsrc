@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/05/31 06:09:19 taca Exp $
+$NetBSD: distinfo,v 1.5 2026/06/08 13:19:52 taca Exp $
 
-BLAKE2s (snaky_hash-2.0.4.gem) = 3c2131998914d1d6a36d7d7054fc336bedd46bf11059a039e435f4df7fcc347c
-SHA512 (snaky_hash-2.0.4.gem) = b8fd7745c3d583d5bee223ce0019e8432cf0578828ef7e9b6aac8707d8eea96564a2d1242880fde2c479a46373ca51966707f8a5246a23805c29cffc67fdfd02
-Size (snaky_hash-2.0.4.gem) = 34816 bytes
+BLAKE2s (snaky_hash-2.0.5.gem) = f952feb0e0218d276929355ef4394655c3efdd9445b3edec3c461956a41acbec
+SHA512 (snaky_hash-2.0.5.gem) = 7f1af8707f8a1189e02c7a2eec28f82ff4b1d84caeedb0ce9238a719ae102afeee8672de0c453076ac915615de0d8a576c31bda9cde1fdfd142c21efdb80cf20
+Size (snaky_hash-2.0.5.gem) = 38400 bytes
