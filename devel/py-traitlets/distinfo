@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2026/05/11 06:26:07 adam Exp $
+$NetBSD: distinfo,v 1.29 2026/06/08 08:04:30 adam Exp $
 
-BLAKE2s (traitlets-5.15.0.tar.gz) = 473c97fba1904d5a0c8de01b7d3855af7aad22e7216e8392bc5431559e87cf40
-SHA512 (traitlets-5.15.0.tar.gz) = 81d50489c4827f3a8654008a76d2cda5f397d79c80765f831cd275ed0c7c0cd64a90b9253f60ce26cbb1c000b0a76e15c4a8cf46cfe923417a436c02ff8d034e
-Size (traitlets-5.15.0.tar.gz) = 163197 bytes
+BLAKE2s (traitlets-5.15.1.tar.gz) = ed2725a7b4f61559bf8a7fb8a09f27aeb8e41a0921162bcb2c71c59a75be138d
+SHA512 (traitlets-5.15.1.tar.gz) = b46fae256eb86094fa0bd30342deb7bd2b120ebd19dc27b6d1cce1c6c58c8a522afc5c131dbccfb0f08de033f2f287a5ebd02e305ccb0dc6b2c6c7ae0499edc6
+Size (traitlets-5.15.1.tar.gz) = 163344 bytes
