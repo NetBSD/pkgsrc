@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/10/09 07:58:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/06/08 09:58:50 adam Exp $
 
-DISTNAME=	pytest_aiohttp-1.1.0
+DISTNAME=	pytest_aiohttp-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pytest_/test-/}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-aiohttp/}
 

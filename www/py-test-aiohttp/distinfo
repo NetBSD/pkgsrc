@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2025/01/25 11:31:58 adam Exp $
+$NetBSD: distinfo,v 1.3 2026/06/08 09:58:50 adam Exp $
 
-BLAKE2s (pytest_aiohttp-1.1.0.tar.gz) = 5ec29603416b8587f4836253431053da2bdc7b2bd5c591bdf37051527c92c71e
-SHA512 (pytest_aiohttp-1.1.0.tar.gz) = 891a379535f1ecc9e74282d813cfc11b74c79c852d08e94942e1bb29c0eafecdce73ffbf6aefce24c37315c502bdfe0861bc97b6be1489dd3dd59b2aa215f4e8
-Size (pytest_aiohttp-1.1.0.tar.gz) = 12842 bytes
+BLAKE2s (pytest_aiohttp-1.1.1.tar.gz) = bba0e4bc93b890fc6c1357851f4f436d769948cf1fdc66531ab977786498a4d1
+SHA512 (pytest_aiohttp-1.1.1.tar.gz) = d45f4e1116569c80c01b502871fbf38bfc9f6935feb30cd58e7631cde44231350b5849d508a8a6ebd44611203034aea95583bbaf0e39d834ca76531c1acce8c2
+Size (pytest_aiohttp-1.1.1.tar.gz) = 13704 bytes
