@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2026/05/14 04:23:58 jnemeth Exp $
+# $NetBSD: Makefile,v 1.64 2026/06/08 20:51:14 gdt Exp $
 #
 
 COMMENT=	File systems, and file system related packages
@@ -50,7 +50,6 @@ SUBDIR+=	ori
 SUBDIR+=	p5-Module-Path
 SUBDIR+=	p5-MooseX-Types-Path-Tiny
 SUBDIR+=	p5-Path-Tiny
-SUBDIR+=	perfuse
 SUBDIR+=	py-fs
 SUBDIR+=	py-fuse-bindings
 SUBDIR+=	squashfs

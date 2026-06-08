@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2010/09/06 12:12:40 wiz Exp $
-include/perfuse.h
-lib/libperfuse.so
-lib/libperfuse.so.0
-lib/libperfuse.so.0.0
-sbin/perfused
