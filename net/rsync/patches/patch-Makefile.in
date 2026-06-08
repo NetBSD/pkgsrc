@@ -1,25 +1,38 @@
-$NetBSD: patch-Makefile.in,v 1.6 2022/04/20 20:09:55 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.7 2026/06/08 05:45:28 wiz Exp $
 
 Fix installation.
 
---- Makefile.in.orig	2022-03-04 01:00:57.000000000 +0000
+--- Makefile.in.orig	2026-06-07 22:09:11.000000000 +0000
 +++ Makefile.in
-@@ -76,13 +76,13 @@ all: Makefile rsync$(EXEEXT) stunnel-rsy
+@@ -79,23 +79,23 @@ install: all
  .PHONY: install
  install: all
  	-$(MKDIR_P) $(DESTDIR)$(bindir)
 -	$(INSTALLCMD) $(INSTALL_STRIP) -m 755 rsync$(EXEEXT) $(DESTDIR)$(bindir)
 -	$(INSTALLCMD) -m 755 $(srcdir)/rsync-ssl $(DESTDIR)$(bindir)
-+	${BSD_INSTALL_PROGRAM} rsync$(EXEEXT) ${DESTDIR}${bindir}
-+	${BSD_INSTALL_SCRIPT} $(srcdir)/rsync-ssl ${DESTDIR}${bindir}
++	$(BSD_INSTALL_PROGRAM) rsync$(EXEEXT) $(DESTDIR)$(bindir)
++	$(BSD_INSTALL_SCRIPT) $(srcdir)/rsync-ssl $(DESTDIR)$(bindir)
  	-$(MKDIR_P) $(DESTDIR)$(mandir)/man1
  	-$(MKDIR_P) $(DESTDIR)$(mandir)/man5
--	if test -f rsync.1; then $(INSTALLMAN) -m 644 rsync.1 $(DESTDIR)$(mandir)/man1; fi
--	if test -f rsync-ssl.1; then $(INSTALLMAN) -m 644 rsync-ssl.1 $(DESTDIR)$(mandir)/man1; fi
--	if test -f rsyncd.conf.5; then $(INSTALLMAN) -m 644 rsyncd.conf.5 $(DESTDIR)$(mandir)/man5; fi
-+	if test -f rsync.1; then ${BSD_INSTALL_MAN} rsync.1 ${DESTDIR}${mandir}/man1; fi
-+	if test -f rsync-ssl.1; then ${BSD_INSTALL_MAN} rsync-ssl.1 ${DESTDIR}${mandir}/man1; fi
-+	if test -f rsyncd.conf.5; then ${BSD_INSTALL_MAN} rsyncd.conf.5 ${DESTDIR}${mandir}/man5; fi
+ 	for fn in rsync.1 rsync-ssl.1; do \
+-	    if test -f $$fn; then $(INSTALLMAN) -m 644 $$fn $(DESTDIR)$(mandir)/man1; \
+-	    elif test -f $(srcdir)/$$fn; then $(INSTALLMAN) -m 644 $(srcdir)/$$fn $(DESTDIR)$(mandir)/man1; fi; \
++	    if test -f $$fn; then $(BSD_INSTALL_MAN) $$fn $(DESTDIR)$(mandir)/man1; \
++	    elif test -f $(srcdir)/$$fn; then $(BSD_INSTALL_MAN) $(srcdir)/$$fn $(DESTDIR)$(mandir)/man1; fi; \
+ 	done
+ 	for fn in rsyncd.conf.5; do \
+-	    if test -f $$fn; then $(INSTALLMAN) -m 644 $$fn $(DESTDIR)$(mandir)/man5; \
+-	    elif test -f $(srcdir)/$$fn; then $(INSTALLMAN) -m 644 $(srcdir)/$$fn $(DESTDIR)$(mandir)/man5; fi; \
++	    if test -f $$fn; then $(BSD_INSTALL_MAN) $$fn $(DESTDIR)$(mandir)/man5; \
++	    elif test -f $(srcdir)/$$fn; then $(BSD_INSTALL_MAN) $(srcdir)/$$fn $(DESTDIR)$(mandir)/man5; fi; \
+ 	done
  	if test "$(with_rrsync)" = yes; then \
  	    $(INSTALLCMD) -m 755 rrsync $(DESTDIR)$(bindir); \
- 	    if test -f rrsync.1; then $(INSTALLMAN) -m 644 rrsync.1 $(DESTDIR)$(mandir)/man1; fi; \
+ 	    fn=rrsync.1; \
+-	    if test -f $$fn; then $(INSTALLMAN) -m 644 $$fn $(DESTDIR)$(mandir)/man1; \
+-	    elif test -f $(srcdir)/$$fn; then $(INSTALLMAN) -m 644 $(srcdir)/$$fn $(DESTDIR)$(mandir)/man1; fi; \
++	    if test -f $$fn; then $(BSD_INSTALL_MAN) $$fn $(DESTDIR)$(mandir)/man1; \
++	    elif test -f $(srcdir)/$$fn; then $(BSD_INSTALL_MAN) $(srcdir)/$$fn $(DESTDIR)$(mandir)/man1; fi; \
+ 	fi
+ 
+ install-ssl-daemon: stunnel-rsyncd.conf
