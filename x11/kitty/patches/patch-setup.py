@@ -1,10 +1,21 @@
-$NetBSD: patch-setup.py,v 1.5 2026/04/10 14:48:27 jperkin Exp $
+$NetBSD: patch-setup.py,v 1.6 2026/06/08 18:26:18 ktnb Exp $
 
 Only point to the pkgsrc fonts for Darwin.
+Don't crash on colored emoji render on NetBSD.
 
---- setup.py.orig	2026-03-27 19:19:48.618708465 +0000
+--- setup.py.orig	2026-06-07 04:07:24.000000000 +0000
 +++ setup.py
-@@ -924,7 +924,8 @@ def add_builtin_fonts(args: Options) ->
+@@ -544,6 +544,9 @@ def init_env(
+     )
+     ldflags = shlex.split(ldflags_)
+     ldflags.append('-shared')
++    if is_netbsd:
++        ldflags.insert(0, '-Wl,--no-as-needed')
++        ldflags.insert(1, '@PKGSRC_FREETYPE_LIB@')
+     cppflags += env_cppflags
+     cflags += env_cflags
+     if fortify_source:
+@@ -924,7 +927,8 @@ def add_builtin_fonts(args: Options) -> None:
          font_file = ''
          if is_macos:
              candidates = (
