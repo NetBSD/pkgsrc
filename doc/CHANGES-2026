@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3619 2026/06/08 10:45:06 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3620 2026/06/08 12:16:42 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5533,3 +5533,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-test-aiohttp to 1.1.1 [adam 2026-06-08]
 	Updated devel/py-cbor2 to 6.1.2 [adam 2026-06-08]
 	Updated geography/py-owslib to 0.36.0 [adam 2026-06-08]
+	Updated print/R-knitr to 1.51 [mef 2026-06-08]
