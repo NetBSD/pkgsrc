@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.13 2026/05/31 06:11:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/06/08 13:21:49 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CITATION.cff
 ${GEM_LIBDIR}/CODE_OF_CONDUCT.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/FUNDING.md
-${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/REEK
 ${GEM_LIBDIR}/RUBOCOP.md
 ${GEM_LIBDIR}/SECURITY.md
+${GEM_LIBDIR}/certs/pboling.pem
 ${GEM_LIBDIR}/lib/oauth.rb
 ${GEM_LIBDIR}/lib/oauth/auth_sanitizer.rb
 ${GEM_LIBDIR}/lib/oauth/client.rb
@@ -55,4 +55,5 @@ ${GEM_LIBDIR}/lib/oauth/version.rb
 ${GEM_LIBDIR}/sig/oauth/consumer.rbs
 ${GEM_LIBDIR}/sig/oauth/signature/base.rbs
 ${GEM_LIBDIR}/sig/oauth/tokens/token.rbs
+${GEM_LIBDIR}/sig/oauth/version.rbs
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
