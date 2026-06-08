@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2026/06/03 05:55:10 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2026/06/08 21:46:02 wiz Exp $
 
 VERSION=		1.0.9
 DISTNAME=		fuse_python-${VERSION}
@@ -17,8 +17,6 @@ USE_TOOLS+=		pkg-config
 
 PLIST_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
 PRINT_PLIST_AWK+=	{ gsub("${PYPKGPREFIX}-", "$${PYPKGPREFIX}-"); }
-
-PYTHON_27_ACCEPTED=	yes
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/fuse.buildlink3.mk"
