@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3615 2026/06/08 08:26:51 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3616 2026/06/08 08:29:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5526,3 +5526,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-traitlets to 5.15.1 [adam 2026-06-08]
 	Updated security/py-ecdsa to 0.19.2 [adam 2026-06-08]
 	Updated textproc/moor to 2.14.0 [wiz 2026-06-08]
+	Updated textproc/ov to 0.53.0 [wiz 2026-06-08]
