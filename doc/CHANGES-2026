@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3623 2026/06/08 12:26:06 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3624 2026/06/08 12:28:15 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5538,3 +5538,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/clock-rs to 0.2.1 [pin 2026-06-08]
 	Updated time/clock-rs to 0.2.1 [pin 2026-06-08]
 	Updated devel/gitpane to 0.7.13 [pin 2026-06-08]
+	Updated textproc/treemd to 0.5.12 [pin 2026-06-08]
