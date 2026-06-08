@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3610 2026/06/08 04:31:38 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3611 2026/06/08 05:45:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5518,3 +5518,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/ppsspp to 1.20.4 [adam 2026-06-08]
 	Updated emulators/ppsspp-qt to 1.20.4 [adam 2026-06-08]
 	Updated emulators/libretro-ppsspp to 1.20.4 [adam 2026-06-08]
+	Updated net/rsync to 3.4.4 [wiz 2026-06-08]
