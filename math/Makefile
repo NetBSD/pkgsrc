@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.634 2026/04/03 01:05:38 markd Exp $
+# $NetBSD: Makefile,v 1.635 2026/06/08 07:39:43 dkazankov Exp $
 
 COMMENT=	Mathematics
 
@@ -152,6 +152,7 @@ SUBDIR+=	aamath
 SUBDIR+=	abs
 SUBDIR+=	ada-adasat-24
 SUBDIR+=	ada-adasat-25
+SUBDIR+=	ada-adasat26
 SUBDIR+=	admesh
 SUBDIR+=	algae
 SUBDIR+=	amath
