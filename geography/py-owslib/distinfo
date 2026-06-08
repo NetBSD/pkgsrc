@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/11/02 20:20:22 adam Exp $
+$NetBSD: distinfo,v 1.9 2026/06/08 10:44:48 adam Exp $
 
-BLAKE2s (owslib-0.35.0.tar.gz) = 01381c7802bf79db775db9dbdfd83ff7f0cdecbde742d198a9a95c9ac7655c90
-SHA512 (owslib-0.35.0.tar.gz) = ddb6ff8efd9e7549ee3bde76f140a6cc818ddf4fb19fed6dccdee45996dfa6b6f9bb73f75789fdf9270024bd3d5f895711b545b0da9fa11621af4e739592e52c
-Size (owslib-0.35.0.tar.gz) = 194282 bytes
+BLAKE2s (owslib-0.36.0.tar.gz) = 0668c8a97e2450347edd4a597374bad3003f97e5ad083beb72a5e9a36aa21059
+SHA512 (owslib-0.36.0.tar.gz) = 801514c9cc903591e8800798631266d0522b26686971f9c855b6e9400ece23f9642fb05d22e1689a96f9f9cefc9d4eac730a4ed1682266d73ece47dcc771aa04
+Size (owslib-0.36.0.tar.gz) = 196090 bytes
