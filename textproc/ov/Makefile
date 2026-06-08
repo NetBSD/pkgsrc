@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2026/06/05 10:21:53 bsiegert Exp $
+# $NetBSD: Makefile,v 1.23 2026/06/08 08:29:47 wiz Exp $
 
-DISTNAME=		ov-0.52.0
-PKGREVISION=		2
+DISTNAME=		ov-0.53.0
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=noborus/}
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}
@@ -28,6 +27,7 @@ post-install:
 		${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}/; \
 	done; \
 	${INSTALL_DATA} README.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/
+	${RM} ${DESTDIR}${PREFIX}/bin/gen-keybind
 	${DESTDIR}${PREFIX}/bin/ov --completion bash > \
 		${DESTDIR}${PREFIX}/share/bash-completion/completions/${PKGBASE}
 	${DESTDIR}${PREFIX}/bin/ov --completion fish > \
