@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_connectors__internals_device__trust__utils.cc,v 1.20 2026/06/01 10:09:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_connectors__internals_device__trust__utils.cc,v 1.21 2026/06/08 13:12:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/connectors_internals/device_trust_utils.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ui/webui/connectors_internals/device_trust_utils.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ui/webui/connectors_internals/device_trust_utils.cc
 @@ -9,7 +9,7 @@
  #include "components/enterprise/connectors/core/connectors_internals_utils.h"

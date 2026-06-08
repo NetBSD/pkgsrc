@@ -1,12 +1,12 @@
-$NetBSD: patch-net_dns_BUILD.gn,v 1.20 2026/06/01 10:09:17 kikadf Exp $
+$NetBSD: patch-net_dns_BUILD.gn,v 1.21 2026/06/08 13:12:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/BUILD.gn.orig	2026-05-26 20:39:02.000000000 +0000
+--- net/dns/BUILD.gn.orig	2026-05-28 23:24:11.000000000 +0000
 +++ net/dns/BUILD.gn
-@@ -170,7 +170,7 @@ source_set("dns") {
+@@ -169,7 +169,7 @@ source_set("dns") {
        "dns_config_service_android.cc",
        "dns_config_service_android.h",
      ]
@@ -15,7 +15,7 @@ $NetBSD: patch-net_dns_BUILD.gn,v 1.20 2026/06/01 10:09:17 kikadf Exp $
      sources += [
        "dns_config_service_linux.cc",
        "dns_config_service_linux.h",
-@@ -204,6 +204,7 @@ source_set("dns") {
+@@ -203,6 +203,7 @@ source_set("dns") {
    }
  
    deps = [ "//net:net_deps" ]
@@ -23,7 +23,7 @@ $NetBSD: patch-net_dns_BUILD.gn,v 1.20 2026/06/01 10:09:17 kikadf Exp $
  
    public_deps = [
      ":dns_client",
-@@ -283,6 +284,7 @@ source_set("host_resolver") {
+@@ -281,6 +282,7 @@ source_set("host_resolver") {
    deps = [
      "//net:net_deps",
      "//net/dns/public",
@@ -31,7 +31,7 @@ $NetBSD: patch-net_dns_BUILD.gn,v 1.20 2026/06/01 10:09:17 kikadf Exp $
    ]
    public_deps = [ "//net:net_public_deps" ]
  
-@@ -493,9 +495,9 @@ source_set("tests") {
+@@ -484,9 +486,9 @@ source_set("tests") {
        "mock_dns_platform_android_attempt_delegate.cc",
        "mock_dns_platform_android_attempt_delegate.h",
      ]

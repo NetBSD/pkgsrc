@@ -1,10 +1,10 @@
-$NetBSD: patch-net_base_network__change__notifier.cc,v 1.20 2026/06/01 10:09:17 kikadf Exp $
+$NetBSD: patch-net_base_network__change__notifier.cc,v 1.21 2026/06/08 13:12:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/network_change_notifier.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- net/base/network_change_notifier.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ net/base/network_change_notifier.cc
 @@ -38,7 +38,7 @@
  #include "third_party/abseil-cpp/absl/container/flat_hash_set.h"

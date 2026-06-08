@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_leveldatabase_env__chromium.cc,v 1.20 2026/06/01 10:09:20 kikadf Exp $
+$NetBSD: patch-third__party_leveldatabase_env__chromium.cc,v 1.21 2026/06/08 13:12:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/leveldatabase/env_chromium.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- third_party/leveldatabase/env_chromium.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ third_party/leveldatabase/env_chromium.cc
 @@ -334,7 +334,8 @@ ChromiumWritableFile::ChromiumWritableFi
  

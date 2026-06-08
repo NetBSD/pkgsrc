@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_api_api.cc,v 1.20 2026/06/01 10:09:24 kikadf Exp $
+$NetBSD: patch-v8_src_api_api.cc,v 1.21 2026/06/08 13:12:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/api/api.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- v8/src/api/api.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ v8/src/api/api.cc
 @@ -167,7 +167,7 @@
  
@@ -15,7 +15,7 @@ $NetBSD: patch-v8_src_api_api.cc,v 1.20 2026/06/01 10:09:24 kikadf Exp $
  #include <signal.h>
  #include <unistd.h>
  
-@@ -6372,7 +6372,7 @@ bool v8::V8::Initialize(const int build_
+@@ -6384,7 +6384,7 @@ bool v8::V8::Initialize(const int build_
    return true;
  }
  

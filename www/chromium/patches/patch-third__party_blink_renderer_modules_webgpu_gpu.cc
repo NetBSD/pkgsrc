@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_modules_webgpu_gpu.cc,v 1.7 2026/06/01 10:09:20 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_modules_webgpu_gpu.cc,v 1.8 2026/06/08 13:12:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/webgpu/gpu.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- third_party/blink/renderer/modules/webgpu/gpu.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ third_party/blink/renderer/modules/webgpu/gpu.cc
 @@ -427,7 +427,7 @@ V8GPUTextureFormat GPU::getPreferredCanv
  }

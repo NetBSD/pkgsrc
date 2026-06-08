@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gfx_native__pixmap__handle.cc,v 1.20 2026/06/01 10:09:23 kikadf Exp $
+$NetBSD: patch-ui_gfx_native__pixmap__handle.cc,v 1.21 2026/06/08 13:12:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/native_pixmap_handle.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- ui/gfx/native_pixmap_handle.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ ui/gfx/native_pixmap_handle.cc
 @@ -11,7 +11,7 @@
  #include "components/viz/common/resources/shared_image_format_utils.h"
@@ -31,15 +31,15 @@ $NetBSD: patch-ui_gfx_native__pixmap__handle.cc,v 1.20 2026/06/01 10:09:23 kikad
                "gfx::NativePixmapHandle::kNoModifier should be an alias for"
                "DRM_FORMAT_MOD_INVALID");
 @@ -36,7 +40,7 @@ NativePixmapPlane::NativePixmapPlane() :
- NativePixmapPlane::NativePixmapPlane(int stride,
-                                      int offset,
+ NativePixmapPlane::NativePixmapPlane(uint32_t stride,
+                                      uint64_t offset,
                                       uint64_t size
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
                                       ,
                                       base::ScopedFD fd
  #elif BUILDFLAG(IS_FUCHSIA)
-@@ -47,7 +51,7 @@ NativePixmapPlane::NativePixmapPlane(int
+@@ -47,7 +51,7 @@ NativePixmapPlane::NativePixmapPlane(uin
      : stride(stride),
        offset(offset),
        size(size)

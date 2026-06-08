@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_multi__contents__view__drop__target__controller.cc,v 1.6 2026/06/01 10:09:09 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_multi__contents__view__drop__target__controller.cc,v 1.7 2026/06/08 13:12:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/multi_contents_view_drop_target_controller.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ui/views/frame/multi_contents_view_drop_target_controller.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ui/views/frame/multi_contents_view_drop_target_controller.cc
 @@ -35,7 +35,7 @@ static constexpr base::TimeDelta kShowNu
  static constexpr int kDropTargetHideForOSWidth =

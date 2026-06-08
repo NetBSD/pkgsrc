@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_snapshot_embedded_platform-embedded-file-writer-generic.cc,v 1.20 2026/06/01 10:09:24 kikadf Exp $
+$NetBSD: patch-v8_src_snapshot_embedded_platform-embedded-file-writer-generic.cc,v 1.21 2026/06/08 13:12:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/snapshot/embedded/platform-embedded-file-writer-generic.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- v8/src/snapshot/embedded/platform-embedded-file-writer-generic.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ v8/src/snapshot/embedded/platform-embedded-file-writer-generic.cc
 @@ -9,6 +9,10 @@
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_paint__preview_browser_paint__preview__client.cc,v 1.20 2026/06/01 10:09:12 kikadf Exp $
+$NetBSD: patch-components_paint__preview_browser_paint__preview__client.cc,v 1.21 2026/06/08 13:12:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/paint_preview/browser/paint_preview_client.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- components/paint_preview/browser/paint_preview_client.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ components/paint_preview/browser/paint_preview_client.cc
 @@ -464,8 +464,8 @@ void PaintPreviewClient::CapturePaintPre
    metadata->set_version(kPaintPreviewVersion);

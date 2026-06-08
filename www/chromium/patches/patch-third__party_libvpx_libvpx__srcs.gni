@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_libvpx_libvpx__srcs.gni,v 1.3 2026/06/01 10:09:21 kikadf Exp $
+$NetBSD: patch-third__party_libvpx_libvpx__srcs.gni,v 1.4 2026/06/08 13:12:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libvpx/libvpx_srcs.gni.orig	2026-05-26 20:39:02.000000000 +0000
+--- third_party/libvpx/libvpx_srcs.gni.orig	2026-05-28 23:24:11.000000000 +0000
 +++ third_party/libvpx/libvpx_srcs.gni
-@@ -1863,7 +1863,6 @@ libvpx_srcs_arm64_neon_dotprod = [
+@@ -1845,7 +1845,6 @@ libvpx_srcs_arm64_neon_dotprod = [
    "//third_party/libvpx/source/libvpx/vpx_dsp/arm/sad4d_neon_dotprod.c",
    "//third_party/libvpx/source/libvpx/vpx_dsp/arm/sad_neon_dotprod.c",
    "//third_party/libvpx/source/libvpx/vpx_dsp/arm/sse_neon_dotprod.c",
@@ -14,7 +14,7 @@ $NetBSD: patch-third__party_libvpx_libvpx__srcs.gni,v 1.3 2026/06/01 10:09:21 ki
    "//third_party/libvpx/source/libvpx/vpx_dsp/arm/variance_neon_dotprod.c",
    "//third_party/libvpx/source/libvpx/vpx_dsp/arm/vpx_convolve8_neon_dotprod.c",
  ]
-@@ -2799,7 +2798,6 @@ libvpx_srcs_arm64_highbd_neon_dotprod = 
+@@ -2773,7 +2772,6 @@ libvpx_srcs_arm64_highbd_neon_dotprod = 
    "//third_party/libvpx/source/libvpx/vpx_dsp/arm/sad4d_neon_dotprod.c",
    "//third_party/libvpx/source/libvpx/vpx_dsp/arm/sad_neon_dotprod.c",
    "//third_party/libvpx/source/libvpx/vpx_dsp/arm/sse_neon_dotprod.c",

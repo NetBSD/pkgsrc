@@ -1,12 +1,12 @@
-$NetBSD: patch-services_device_public_cpp_device__features.cc,v 1.19 2026/06/01 10:09:18 kikadf Exp $
+$NetBSD: patch-services_device_public_cpp_device__features.cc,v 1.20 2026/06/08 13:12:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/public/cpp/device_features.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- services/device/public/cpp/device_features.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ services/device/public/cpp/device_features.cc
-@@ -152,11 +152,11 @@ bool IsOsLevelGeolocationPermissionSuppo
+@@ -157,11 +157,11 @@ bool IsOsLevelGeolocationPermissionSuppo
  // a USB interface is busy.
  #if BUILDFLAG(IS_ANDROID)
  BASE_FEATURE(kAutomaticUsbDetach, base::FEATURE_ENABLED_BY_DEFAULT);

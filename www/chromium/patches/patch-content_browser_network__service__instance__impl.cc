@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_network__service__instance__impl.cc,v 1.20 2026/06/01 10:09:14 kikadf Exp $
+$NetBSD: patch-content_browser_network__service__instance__impl.cc,v 1.21 2026/06/08 13:12:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/network_service_instance_impl.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- content/browser/network_service_instance_impl.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ content/browser/network_service_instance_impl.cc
 @@ -94,7 +94,7 @@
  #include "content/browser/network/network_service_process_tracker_win.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-content_browser_network__service__instance__impl.cc,v 1.20 2026/0
  #include "content/browser/system_dns_resolution/system_dns_resolver.h"
  #include "services/network/public/mojom/system_dns_resolution.mojom-forward.h"
  #endif
-@@ -440,7 +440,7 @@ void CreateInProcessNetworkService(
+@@ -459,7 +459,7 @@ void CreateInProcessNetworkService(
        }));
  }
  
@@ -24,7 +24,7 @@ $NetBSD: patch-content_browser_network__service__instance__impl.cc,v 1.20 2026/0
  // Runs a self-owned SystemDnsResolverMojoImpl. This is meant to run on a
  // high-priority thread pool.
  void RunSystemDnsResolverOnThreadPool(
-@@ -506,7 +506,7 @@ network::mojom::NetworkServiceParamsPtr 
+@@ -525,7 +525,7 @@ network::mojom::NetworkServiceParamsPtr 
    }
  #endif  // BUILDFLAG(IS_POSIX)
  

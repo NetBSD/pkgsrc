@@ -1,10 +1,10 @@
-$NetBSD: patch-components_feature__engagement_public_feature__constants.cc,v 1.20 2026/06/01 10:09:11 kikadf Exp $
+$NetBSD: patch-components_feature__engagement_public_feature__constants.cc,v 1.21 2026/06/08 13:12:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_constants.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- components/feature_engagement/public/feature_constants.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ components/feature_engagement/public/feature_constants.cc
 @@ -32,7 +32,7 @@ bool IsOnDeviceStorageEnabled() {
  }
@@ -15,16 +15,17 @@ $NetBSD: patch-components_feature__engagement_public_feature__constants.cc,v 1.2
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
  BASE_FEATURE(kEsbDownloadRowPromoFeature,
               "EsbDownloadRowPromo",
-@@ -901,7 +901,7 @@ BASE_FEATURE(kIPHiOSActiveDaysTrackingFe
+@@ -896,7 +896,8 @@ BASE_FEATURE(kIPHiOSActiveDaysTrackingFe
  #endif  // BUILDFLAG(IS_IOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
- BASE_FEATURE(kIPHAutofillBnplAffirmOrZipSuggestionFeature,
-              "IPH_AutofillBnplAffirmOrZipSuggestion",
-              base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -968,7 +968,7 @@ BASE_FEATURE(kIPHLauncherSearchHelpUiFea
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || \
++    BUILDFLAG(IS_BSD)
+ BASE_FEATURE(kIPHAutofillAtMemoryFeature,
+              "IPH_AutofillAtMemory",
+              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -966,7 +967,7 @@ BASE_FEATURE(kIPHLauncherSearchHelpUiFea
               base::FEATURE_ENABLED_BY_DEFAULT);
  #endif
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_signin_internal_identity__manager_account__capabilities__list.h,v 1.2 2026/06/01 10:09:13 kikadf Exp $
+$NetBSD: patch-components_signin_internal_identity__manager_account__capabilities__list.h,v 1.3 2026/06/08 13:12:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/signin/internal/identity_manager/account_capabilities_list.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- components/signin/internal/identity_manager/account_capabilities_list.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ components/signin/internal/identity_manager/account_capabilities_list.h
 @@ -71,7 +71,7 @@ ACCOUNT_CAPABILITY(
      CAN_SHOW_HISTORY_SYNC_OPT_INS_WITHOUT_MINOR_MODE_RESTRICTIONS_CAPABILITY_NAME,

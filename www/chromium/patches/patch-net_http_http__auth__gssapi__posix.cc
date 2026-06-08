@@ -1,10 +1,10 @@
-$NetBSD: patch-net_http_http__auth__gssapi__posix.cc,v 1.20 2026/06/01 10:09:17 kikadf Exp $
+$NetBSD: patch-net_http_http__auth__gssapi__posix.cc,v 1.21 2026/06/08 13:12:43 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/http/http_auth_gssapi_posix.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- net/http/http_auth_gssapi_posix.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ net/http/http_auth_gssapi_posix.cc
 @@ -364,7 +364,9 @@ base::NativeLibrary GSSAPISharedLibrary:
    } else {

@@ -1,10 +1,10 @@
-$NetBSD: patch-content_renderer_renderer__main.cc,v 1.5 2026/06/01 10:09:15 kikadf Exp $
+$NetBSD: patch-content_renderer_renderer__main.cc,v 1.6 2026/06/08 13:12:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/renderer/renderer_main.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- content/renderer/renderer_main.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ content/renderer/renderer_main.cc
 @@ -179,7 +179,7 @@ int RendererMain(MainFunctionParams para
  

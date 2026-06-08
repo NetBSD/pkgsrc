@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_setup_me2me__native__messaging__host__main.cc,v 1.18 2026/06/01 10:09:18 kikadf Exp $
+$NetBSD: patch-remoting_host_setup_me2me__native__messaging__host__main.cc,v 1.19 2026/06/08 13:12:44 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/setup/me2me_native_messaging_host_main.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- remoting/host/setup/me2me_native_messaging_host_main.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ remoting/host/setup/me2me_native_messaging_host_main.cc
 @@ -41,7 +41,7 @@
  #include "base/apple/scoped_nsautorelease_pool.h"
@@ -13,9 +13,9 @@ $NetBSD: patch-remoting_host_setup_me2me__native__messaging__host__main.cc,v 1.1
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "remoting/base/crash/crash_reporting_crashpad.h"
- #endif  // BUILDFLAG(IS_LINUX)
- 
-@@ -99,7 +99,7 @@ int Me2MeNativeMessagingHostMain(int arg
+ #include "remoting/base/file_path_util_linux.h"
+ #include "remoting/host/pairing_registry_delegate_linux.h"
+@@ -101,7 +101,7 @@ int Me2MeNativeMessagingHostMain(int arg
    // needs to be initialized first, so that the preference for crash-reporting
    // can be looked up in the config file.
    if (IsUsageStatsAllowed()) {
@@ -24,3 +24,12 @@ $NetBSD: patch-remoting_host_setup_me2me__native__messaging__host__main.cc,v 1.1
      InitializeCrashpadReporting();
  #elif BUILDFLAG(IS_WIN)
      InitializeBreakpadReporting();
+@@ -268,7 +268,7 @@ int Me2MeNativeMessagingHostMain(int arg
+ 
+   pairing_registry =
+       new PairingRegistry(io_thread.task_runner(), std::move(delegate));
+-#elif BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   if (daemon_controller->is_multi_process()) {
+     pairing_registry = base::MakeRefCounted<PairingRegistry>(
+         io_thread.task_runner(),

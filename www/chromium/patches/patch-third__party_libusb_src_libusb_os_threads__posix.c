@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_libusb_src_libusb_os_threads__posix.c,v 1.20 2026/06/01 10:09:21 kikadf Exp $
+$NetBSD: patch-third__party_libusb_src_libusb_os_threads__posix.c,v 1.21 2026/06/08 13:12:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libusb/src/libusb/os/threads_posix.c.orig	2026-05-26 20:39:02.000000000 +0000
+--- third_party/libusb/src/libusb/os/threads_posix.c.orig	2026-05-28 23:24:11.000000000 +0000
 +++ third_party/libusb/src/libusb/os/threads_posix.c
 @@ -19,9 +19,11 @@
   * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA

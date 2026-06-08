@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_chrome__pages.h,v 1.20 2026/06/01 10:09:08 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_chrome__pages.h,v 1.21 2026/06/08 13:12:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/chrome_pages.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ui/chrome_pages.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ui/chrome_pages.h
 @@ -37,7 +37,7 @@ namespace signin {
  enum class ConsentLevel;

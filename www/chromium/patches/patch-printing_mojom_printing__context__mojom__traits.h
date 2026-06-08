@@ -1,10 +1,10 @@
-$NetBSD: patch-printing_mojom_printing__context__mojom__traits.h,v 1.20 2026/06/01 10:09:17 kikadf Exp $
+$NetBSD: patch-printing_mojom_printing__context__mojom__traits.h,v 1.21 2026/06/08 13:12:43 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/mojom/printing_context_mojom_traits.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- printing/mojom/printing_context_mojom_traits.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ printing/mojom/printing_context_mojom_traits.h
 @@ -166,7 +166,7 @@ struct StructTraits<printing::mojom::Pri
      return s.pages_per_sheet();

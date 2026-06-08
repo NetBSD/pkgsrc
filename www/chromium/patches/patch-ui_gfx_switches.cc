@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gfx_switches.cc,v 1.20 2026/06/01 10:09:23 kikadf Exp $
+$NetBSD: patch-ui_gfx_switches.cc,v 1.21 2026/06/08 13:12:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/switches.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- ui/gfx/switches.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ ui/gfx/switches.cc
 @@ -36,7 +36,7 @@ const char kHeadless[] = "headless";
  // See //components/headless/screen_info/README.md for more details.

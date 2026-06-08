@@ -1,10 +1,10 @@
-$NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.20 2026/06/01 10:09:18 kikadf Exp $
+$NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.21 2026/06/08 13:12:44 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/sandbox_type.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- sandbox/policy/sandbox_type.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ sandbox/policy/sandbox_type.cc
 @@ -13,7 +13,7 @@
  #include "sandbox/policy/mojom/sandbox.mojom.h"
@@ -24,7 +24,7 @@ $NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.20 2026/06/01 10:09:18 kikadf
  constexpr char kPrintBackendSandbox[] = "print_backend";
  constexpr char kScreenAISandbox[] = "screen_ai";
  #endif
-@@ -56,11 +56,11 @@ constexpr char kMirroringSandbox[] = "mi
+@@ -57,11 +57,11 @@ constexpr char kMirroringSandbox[] = "mi
  constexpr char kProxyResolverSandbox[] = "proxy_resolver";
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
  
@@ -38,7 +38,7 @@ $NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.20 2026/06/01 10:09:18 kikadf
  constexpr char kShapeDetectionSandbox[] = "shape_detection";
  // USE_LINUX_VIDEO_ACCELERATION implies IS_LINUX || IS_CHROMEOS, so this double
  // #if is redundant, however, we cannot include "media/gpu/buildflags.h" on all
-@@ -78,7 +78,7 @@ constexpr char kTtsSandbox[] = "tts";
+@@ -79,7 +79,7 @@ constexpr char kTtsSandbox[] = "tts";
  constexpr char kNearbySandbox[] = "nearby";
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -47,7 +47,7 @@ $NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.20 2026/06/01 10:09:18 kikadf
  constexpr char kOnDeviceTranslationSandbox[] = "on_device_translation";
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS)
  
-@@ -128,7 +128,7 @@ void SetCommandLineFlagsForSandboxType(b
+@@ -129,7 +129,7 @@ void SetCommandLineFlagsForSandboxType(b
      case Sandbox::kCdm:
      case Sandbox::kPrintCompositor:
      case Sandbox::kAudio:
@@ -56,7 +56,7 @@ $NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.20 2026/06/01 10:09:18 kikadf
      case Sandbox::kVideoCapture:
  #endif
  #if BUILDFLAG(IS_WIN)
-@@ -138,7 +138,7 @@ void SetCommandLineFlagsForSandboxType(b
+@@ -140,7 +140,7 @@ void SetCommandLineFlagsForSandboxType(b
      case Sandbox::kIconReader:
      case Sandbox::kMediaFoundationCdm:
  #endif  // BUILDFLAG(IS_WIN)
@@ -65,7 +65,7 @@ $NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.20 2026/06/01 10:09:18 kikadf
      case Sandbox::kShapeDetection:
  #if BUILDFLAG(USE_LINUX_VIDEO_ACCELERATION)
      case Sandbox::kHardwareVideoDecoding:
-@@ -157,12 +157,12 @@ void SetCommandLineFlagsForSandboxType(b
+@@ -159,12 +159,12 @@ void SetCommandLineFlagsForSandboxType(b
      case Sandbox::kProxyResolver:
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -80,7 +80,7 @@ $NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.20 2026/06/01 10:09:18 kikadf
      case Sandbox::kOnDeviceTranslation:
  #endif
        DCHECK(command_line->GetSwitchValueASCII(switches::kProcessType) ==
-@@ -172,7 +172,7 @@ void SetCommandLineFlagsForSandboxType(b
+@@ -174,7 +174,7 @@ void SetCommandLineFlagsForSandboxType(b
            switches::kServiceSandboxType,
            StringFromUtilitySandboxType(sandbox_type));
        return;
@@ -89,7 +89,7 @@ $NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.20 2026/06/01 10:09:18 kikadf
      case Sandbox::kZygoteIntermediateSandbox:
        return;
  #endif
-@@ -203,7 +203,7 @@ sandbox::mojom::Sandbox SandboxTypeFromC
+@@ -205,7 +205,7 @@ sandbox::mojom::Sandbox SandboxTypeFromC
      return Sandbox::kGpu;
    }
  
@@ -98,7 +98,7 @@ $NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.20 2026/06/01 10:09:18 kikadf
    // Intermediate process gains a sandbox later.
    if (process_type == switches::kZygoteProcessType)
      return Sandbox::kZygoteIntermediateSandbox;
-@@ -242,7 +242,7 @@ std::string StringFromUtilitySandboxType
+@@ -244,7 +244,7 @@ std::string StringFromUtilitySandboxType
        return kUtilitySandbox;
      case Sandbox::kAudio:
        return kAudioSandbox;
@@ -107,7 +107,7 @@ $NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.20 2026/06/01 10:09:18 kikadf
      case Sandbox::kVideoCapture:
        return kVideoCaptureSandbox;
  #endif
-@@ -253,13 +253,13 @@ std::string StringFromUtilitySandboxType
+@@ -255,13 +255,13 @@ std::string StringFromUtilitySandboxType
      case Sandbox::kSpeechRecognition:
        return kSpeechRecognitionSandbox;
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -123,7 +123,7 @@ $NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.20 2026/06/01 10:09:18 kikadf
      case Sandbox::kOnDeviceTranslation:
        return kOnDeviceTranslationSandbox;
  #endif
-@@ -281,7 +281,7 @@ std::string StringFromUtilitySandboxType
+@@ -285,7 +285,7 @@ std::string StringFromUtilitySandboxType
      case Sandbox::kProxyResolver:
        return kProxyResolverSandbox;
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
@@ -132,7 +132,7 @@ $NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.20 2026/06/01 10:09:18 kikadf
      case Sandbox::kShapeDetection:
        return kShapeDetectionSandbox;
  #if BUILDFLAG(ALLOW_OOP_VIDEO_DECODER)
-@@ -304,7 +304,7 @@ std::string StringFromUtilitySandboxType
+@@ -308,7 +308,7 @@ std::string StringFromUtilitySandboxType
        // The following are not utility processes so should not occur.
      case Sandbox::kRenderer:
      case Sandbox::kGpu:
@@ -141,7 +141,7 @@ $NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.20 2026/06/01 10:09:18 kikadf
      case Sandbox::kZygoteIntermediateSandbox:
  #endif
        NOTREACHED();
-@@ -380,7 +380,7 @@ sandbox::mojom::Sandbox UtilitySandboxTy
+@@ -387,7 +387,7 @@ sandbox::mojom::Sandbox UtilitySandboxTy
      return Sandbox::kSpeechRecognition;
    }
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -150,7 +150,7 @@ $NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.20 2026/06/01 10:09:18 kikadf
    if (sandbox_string == kPrintBackendSandbox) {
      return Sandbox::kPrintBackend;
    }
-@@ -388,17 +388,17 @@ sandbox::mojom::Sandbox UtilitySandboxTy
+@@ -395,17 +395,17 @@ sandbox::mojom::Sandbox UtilitySandboxTy
      return Sandbox::kScreenAI;
    }
  #endif

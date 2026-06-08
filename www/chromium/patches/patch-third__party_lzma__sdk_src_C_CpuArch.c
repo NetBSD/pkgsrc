@@ -1,11 +1,11 @@
-$NetBSD: patch-third__party_lzma__sdk_C_CpuArch.c,v 1.20 2026/06/01 10:09:21 kikadf Exp $
+$NetBSD: patch-third__party_lzma__sdk_src_C_CpuArch.c,v 1.1 2026/06/08 13:12:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/lzma_sdk/C/CpuArch.c.orig	2026-05-26 20:39:02.000000000 +0000
-+++ third_party/lzma_sdk/C/CpuArch.c
+--- third_party/lzma_sdk/src/C/CpuArch.c.orig	2026-05-28 23:24:11.000000000 +0000
++++ third_party/lzma_sdk/src/C/CpuArch.c
 @@ -854,6 +854,34 @@ BoolInt CPU_IsSupported_SHA1(void) { ret
  BoolInt CPU_IsSupported_SHA2(void) { return APPLE_CRYPTO_SUPPORT_VAL; }
  BoolInt CPU_IsSupported_AES (void) { return APPLE_CRYPTO_SUPPORT_VAL; }
@@ -17,10 +17,10 @@ $NetBSD: patch-third__party_lzma__sdk_C_CpuArch.c,v 1.20 2026/06/01 10:09:21 kik
 +#include <machine/cpu.h>
 +#include <machine/armreg.h>
 +
-+BoolInt CPU_IsSupported_NEON() { return 1; }
++BoolInt CPU_IsSupported_NEON() { return 1; } 
 +
 +#define MY_HWCAP_CHECK_FUNC_2(name1, name2) \
-+  BoolInt CPU_IsSupported_ ## name1() { \
++  BoolInt CPU_IsSupported_ ## name1() { \   
 +    int isar0_mib[] = { CTL_MACHDEP, CPU_ID_AA64ISAR0 }; \
 +    size_t len = sizeof(uint64_t); \
 +    uint64_t cpu_id = 0; \

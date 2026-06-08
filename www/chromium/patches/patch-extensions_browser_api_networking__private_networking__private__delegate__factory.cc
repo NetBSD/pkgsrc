@@ -1,10 +1,10 @@
-$NetBSD: patch-extensions_browser_api_networking__private_networking__private__delegate__factory.cc,v 1.20 2026/06/01 10:09:15 kikadf Exp $
+$NetBSD: patch-extensions_browser_api_networking__private_networking__private__delegate__factory.cc,v 1.21 2026/06/08 13:12:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/browser/api/networking_private/networking_private_delegate_factory.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- extensions/browser/api/networking_private/networking_private_delegate_factory.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ extensions/browser/api/networking_private/networking_private_delegate_factory.cc
 @@ -12,7 +12,7 @@
  
@@ -15,7 +15,7 @@ $NetBSD: patch-extensions_browser_api_networking__private_networking__private__d
  #include "extensions/browser/api/networking_private/networking_private_linux.h"
  #elif BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
  #include "components/wifi/wifi_service.h"
-@@ -63,7 +63,7 @@ NetworkingPrivateDelegateFactory::BuildS
+@@ -64,7 +64,7 @@ NetworkingPrivateDelegateFactory::BuildS
    std::unique_ptr<NetworkingPrivateDelegate> delegate;
  #if BUILDFLAG(IS_CHROMEOS)
    delegate = std::make_unique<NetworkingPrivateChromeOS>(browser_context);
@@ -24,7 +24,7 @@ $NetBSD: patch-extensions_browser_api_networking__private_networking__private__d
    delegate = std::make_unique<NetworkingPrivateLinux>();
  #elif BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
    std::unique_ptr<wifi::WiFiService> wifi_service(wifi::WiFiService::Create());
-@@ -74,7 +74,7 @@ NetworkingPrivateDelegateFactory::BuildS
+@@ -75,7 +75,7 @@ NetworkingPrivateDelegateFactory::BuildS
  #endif
  
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || \

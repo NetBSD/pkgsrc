@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_web__applications_icons_icon__masker.cc,v 1.13 2026/06/01 10:09:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_web__applications_icons_icon__masker.cc,v 1.14 2026/06/08 13:12:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/icons/icon_masker.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/web_applications/icons/icon_masker.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/web_applications/icons/icon_masker.cc
 @@ -12,7 +12,7 @@
  

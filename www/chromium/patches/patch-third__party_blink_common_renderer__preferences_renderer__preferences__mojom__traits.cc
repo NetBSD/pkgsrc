@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_common_renderer__preferences_renderer__preferences__mojom__traits.cc,v 1.20 2026/06/01 10:09:19 kikadf Exp $
+$NetBSD: patch-third__party_blink_common_renderer__preferences_renderer__preferences__mojom__traits.cc,v 1.21 2026/06/08 13:12:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/common/renderer_preferences/renderer_preferences_mojom_traits.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- third_party/blink/common/renderer_preferences/renderer_preferences_mojom_traits.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ third_party/blink/common/renderer_preferences/renderer_preferences_mojom_traits.cc
 @@ -78,7 +78,7 @@ bool StructTraits<blink::mojom::Renderer
  
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_blink_common_renderer__preferences_renderer__prefere
    if (!data.ReadSystemFontFamilyName(&out->system_font_family_name))
      return false;
  #endif
-@@ -117,7 +117,7 @@ bool StructTraits<blink::mojom::Renderer
+@@ -108,7 +108,7 @@ bool StructTraits<blink::mojom::Renderer
    out->selection_clipboard_buffer_available =
        data.selection_clipboard_buffer_available();
  #endif

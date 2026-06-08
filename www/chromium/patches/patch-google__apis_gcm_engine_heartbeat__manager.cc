@@ -1,10 +1,10 @@
-$NetBSD: patch-google__apis_gcm_engine_heartbeat__manager.cc,v 1.20 2026/06/01 10:09:15 kikadf Exp $
+$NetBSD: patch-google__apis_gcm_engine_heartbeat__manager.cc,v 1.21 2026/06/08 13:12:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- google_apis/gcm/engine/heartbeat_manager.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- google_apis/gcm/engine/heartbeat_manager.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ google_apis/gcm/engine/heartbeat_manager.cc
 @@ -31,7 +31,7 @@ const int kMinClientHeartbeatIntervalMs 
  // Minimum time spent sleeping before we force a new heartbeat.

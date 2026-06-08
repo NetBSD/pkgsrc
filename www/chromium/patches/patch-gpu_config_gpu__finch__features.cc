@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_config_gpu__finch__features.cc,v 1.20 2026/06/01 10:09:15 kikadf Exp $
+$NetBSD: patch-gpu_config_gpu__finch__features.cc,v 1.21 2026/06/08 13:12:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_finch_features.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- gpu/config/gpu_finch_features.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ gpu/config/gpu_finch_features.cc
 @@ -110,7 +110,7 @@ const base::FeatureParam<std::string>
  // of associating with an unused IPC::Channel.
@@ -24,17 +24,7 @@ $NetBSD: patch-gpu_config_gpu__finch__features.cc,v 1.20 2026/06/01 10:09:15 kik
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -132,7 +132,8 @@ BASE_FEATURE(kNvidiaWaylandYuvHardwareCo
- // Android and Linux.
- BASE_FEATURE(kDefaultEnableGpuRasterization,
- #if BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS) || \
--    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_LINUX)
-+    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_LINUX) || \
-+    BUILDFLAG(IS_BSD)
-              base::FEATURE_ENABLED_BY_DEFAULT
- #else
-              base::FEATURE_DISABLED_BY_DEFAULT
-@@ -468,7 +469,7 @@ BASE_FEATURE(kGPUDriverBugListTestGroup,
+@@ -470,7 +470,7 @@ BASE_FEATURE(kGPUDriverBugListTestGroup,
  const base::FeatureParam<int> kGPUDriverBugListTestGroupId{
      &kGPUDriverBugListTestGroup, "test_group", 0};
  

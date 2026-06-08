@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_blink_renderer_core_inspector_inspector__memory__agent.cc,v 1.20 2026/06/01 10:09:20 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_core_inspector_inspector__memory__agent.cc,v 1.21 2026/06/08 13:12:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/inspector/inspector_memory_agent.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- third_party/blink/renderer/core/inspector/inspector_memory_agent.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ third_party/blink/renderer/core/inspector/inspector_memory_agent.cc
-@@ -192,7 +192,7 @@ InspectorMemoryAgent::GetSamplingProfile
+@@ -198,7 +198,7 @@ InspectorMemoryAgent::GetSamplingProfile
  
  Vector<String> InspectorMemoryAgent::Symbolize(
      const std::vector<const void*>& addresses) {

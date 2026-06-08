@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_startup_startup__browser__creator.cc,v 1.20 2026/06/01 10:09:08 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_startup_startup__browser__creator.cc,v 1.21 2026/06/08 13:12:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/startup/startup_browser_creator.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ui/startup/startup_browser_creator.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ui/startup/startup_browser_creator.cc
 @@ -134,7 +134,7 @@
  #include "chrome/credential_provider/common/gcp_strings.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_startup_startup__browser__creator.cc,v 1.20 202
  #include "chrome/browser/headless/headless_mode_util.h"
  #include "chrome/browser/ui/startup/web_app_info_recorder_utils.h"
  #include "components/headless/policy/headless_mode_policy.h"
-@@ -977,7 +977,7 @@ bool StartupBrowserCreator::ProcessCmdLi
+@@ -980,7 +980,7 @@ bool StartupBrowserCreator::ProcessCmdLi
    TRACE_EVENT0("startup", "StartupBrowserCreator::ProcessCmdLineImpl");
    ComputeAndRecordLaunchMode(command_line);
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_startup_startup__browser__creator.cc,v 1.20 202
    if (headless::IsHeadlessMode() &&
        headless::HeadlessModePolicy::IsHeadlessModeDisabled(
            g_browser_process->local_state())) {
-@@ -1060,7 +1060,7 @@ bool StartupBrowserCreator::ProcessCmdLi
+@@ -1063,7 +1063,7 @@ bool StartupBrowserCreator::ProcessCmdLi
      silent_launch = true;
    }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_startup_startup__browser__creator.cc,v 1.20 202
    // Writes open and installed web apps to the specified file without
    // launching a new browser window or tab.
    if (base::FeatureList::IsEnabled(features::kListWebAppsSwitch) &&
-@@ -1277,7 +1277,7 @@ bool StartupBrowserCreator::ProcessCmdLi
+@@ -1284,7 +1284,7 @@ bool StartupBrowserCreator::ProcessCmdLi
      CHECK_EQ(profile_info.mode, StartupProfileMode::kBrowserWindow)
          << "Failed launch with app: couldn't pick a profile";
      std::string app_id = command_line.GetSwitchValueASCII(switches::kAppId);

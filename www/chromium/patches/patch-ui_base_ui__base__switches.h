@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_ui__base__switches.h,v 1.20 2026/06/01 10:09:23 kikadf Exp $
+$NetBSD: patch-ui_base_ui__base__switches.h,v 1.21 2026/06/08 13:12:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_switches.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- ui/base/ui_base_switches.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ ui/base/ui_base_switches.h
 @@ -37,13 +37,13 @@ inline constexpr char kDisableModalAnima
  inline constexpr char kShowMacOverlayBorders[] = "show-mac-overlay-borders";

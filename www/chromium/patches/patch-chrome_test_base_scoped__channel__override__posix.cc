@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_test_base_scoped__channel__override__posix.cc,v 1.20 2026/06/01 10:09:11 kikadf Exp $
+$NetBSD: patch-chrome_test_base_scoped__channel__override__posix.cc,v 1.21 2026/06/08 13:12:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/test/base/scoped_channel_override_posix.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/test/base/scoped_channel_override_posix.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/test/base/scoped_channel_override_posix.cc
 @@ -22,7 +22,7 @@ version_info::Channel GetBaseChannel(Sco
        return version_info::Channel::BETA;

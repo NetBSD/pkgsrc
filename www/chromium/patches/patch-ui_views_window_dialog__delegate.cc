@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_views_window_dialog__delegate.cc,v 1.20 2026/06/01 10:09:24 kikadf Exp $
+$NetBSD: patch-ui_views_window_dialog__delegate.cc,v 1.21 2026/06/08 13:12:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/window/dialog_delegate.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- ui/views/window/dialog_delegate.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ ui/views/window/dialog_delegate.cc
-@@ -128,7 +128,7 @@ Widget* DialogDelegate::CreateDialogWidg
+@@ -125,7 +125,7 @@ Widget* DialogDelegate::CreateDialogWidg
  
  // static
  bool DialogDelegate::CanSupportCustomFrame(gfx::NativeView parent) {

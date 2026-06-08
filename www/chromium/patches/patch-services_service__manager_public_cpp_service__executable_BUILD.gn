@@ -1,10 +1,10 @@
-$NetBSD: patch-services_service__manager_public_cpp_service__executable_BUILD.gn,v 1.20 2026/06/01 10:09:19 kikadf Exp $
+$NetBSD: patch-services_service__manager_public_cpp_service__executable_BUILD.gn,v 1.21 2026/06/08 13:12:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/service_manager/public/cpp/service_executable/BUILD.gn.orig	2026-05-26 20:39:02.000000000 +0000
+--- services/service_manager/public/cpp/service_executable/BUILD.gn.orig	2026-05-28 23:24:11.000000000 +0000
 +++ services/service_manager/public/cpp/service_executable/BUILD.gn
 @@ -22,7 +22,7 @@ source_set("support") {
      "//services/service_manager/public/mojom",

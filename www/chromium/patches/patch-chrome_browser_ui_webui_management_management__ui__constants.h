@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_management_management__ui__constants.h,v 1.20 2026/06/01 10:09:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_management_management__ui__constants.h,v 1.21 2026/06/08 13:12:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/management/management_ui_constants.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ui/webui/management/management_ui_constants.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ui/webui/management/management_ui_constants.h
 @@ -9,14 +9,14 @@
  #include "build/build_config.h"

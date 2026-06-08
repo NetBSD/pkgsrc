@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_public_common_renderer__preferences_renderer__preferences.h,v 1.20 2026/06/01 10:09:19 kikadf Exp $
+$NetBSD: patch-third__party_blink_public_common_renderer__preferences_renderer__preferences.h,v 1.21 2026/06/08 13:12:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/public/common/renderer_preferences/renderer_preferences.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- third_party/blink/public/common/renderer_preferences/renderer_preferences.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ third_party/blink/public/common/renderer_preferences/renderer_preferences.h
 @@ -66,7 +66,7 @@ struct BLINK_COMMON_EXPORT RendererPrefe
    UserAgentOverride user_agent_override;
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_blink_public_common_renderer__preferences_renderer__
    std::string system_font_family_name;
  #endif
  #if BUILDFLAG(IS_WIN)
-@@ -88,7 +88,7 @@ struct BLINK_COMMON_EXPORT RendererPrefe
+@@ -84,7 +84,7 @@ struct BLINK_COMMON_EXPORT RendererPrefe
  #if BUILDFLAG(IS_OZONE)
    bool selection_clipboard_buffer_available{false};
  #endif

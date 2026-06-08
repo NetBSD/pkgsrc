@@ -1,12 +1,12 @@
-$NetBSD: patch-content_test_BUILD.gn,v 1.20 2026/06/01 10:09:15 kikadf Exp $
+$NetBSD: patch-content_test_BUILD.gn,v 1.21 2026/06/08 13:12:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/test/BUILD.gn.orig	2026-05-26 20:39:02.000000000 +0000
+--- content/test/BUILD.gn.orig	2026-05-28 23:24:11.000000000 +0000
 +++ content/test/BUILD.gn
-@@ -1877,7 +1877,7 @@ test("content_browsertests") {
+@@ -1882,7 +1882,7 @@ test("content_browsertests") {
      "--disable-crashpad-for-testing",
    ]
  

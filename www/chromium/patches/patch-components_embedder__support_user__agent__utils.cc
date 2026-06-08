@@ -1,10 +1,10 @@
-$NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.20 2026/06/01 10:09:11 kikadf Exp $
+$NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.21 2026/06/08 13:12:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/embedder_support/user_agent_utils.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- components/embedder_support/user_agent_utils.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ components/embedder_support/user_agent_utils.cc
 @@ -283,7 +283,7 @@ std::string GetUserAgentPlatform() {
    return "";
@@ -15,25 +15,16 @@ $NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.20 2026/06
    return "X11; ";  // strange, but that's what Firefox uses
  #elif BUILDFLAG(IS_ANDROID)
    return "Linux; ";
-@@ -299,7 +299,7 @@ std::string GetUserAgentPlatform() {
- }
- 
- std::string GetUnifiedPlatform() {
--#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD) 
-   // This constant is only used on Android (desktop) and Linux.
-   constexpr char kUnifiedPlatformLinuxX64[] = "X11; Linux x86_64";
- #endif
-@@ -319,7 +319,7 @@ std::string GetUnifiedPlatform() {
+@@ -323,7 +323,7 @@ std::string GetUnifiedPlatform() {
    return "Windows NT 10.0; Win64; x64";
  #elif BUILDFLAG(IS_FUCHSIA)
    return "Fuchsia";
 -#elif BUILDFLAG(IS_LINUX)
-+#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD) 
-   return kUnifiedPlatformLinuxX64;
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   return "X11; Linux x86_64";
  #elif BUILDFLAG(IS_IOS)
    if (ui::GetDeviceFormFactor() == ui::DEVICE_FORM_FACTOR_TABLET) {
-@@ -579,7 +579,7 @@ bool GetMobileBitForUAMetadata() {
+@@ -583,7 +583,7 @@ bool GetMobileBitForUAMetadata() {
  }
  
  std::string GetPlatformVersion() {
@@ -42,7 +33,7 @@ $NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.20 2026/06
    // TODO(crbug.com/40245146): Remove this Blink feature
    if (base::FeatureList::IsEnabled(
            blink::features::kReduceUserAgentDataLinuxPlatformVersion)) {
-@@ -630,6 +630,9 @@ std::string GetPlatformForUAMetadata() {
+@@ -637,6 +637,9 @@ std::string GetPlatformForUAMetadata() {
  #else
    return "Chromium OS";
  #endif
@@ -52,7 +43,7 @@ $NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.20 2026/06
  #else
    return std::string(version_info::GetOSType());
  #endif
-@@ -812,6 +815,16 @@ std::string BuildOSCpuInfoFromOSVersionA
+@@ -819,6 +822,16 @@ std::string BuildOSCpuInfoFromOSVersionA
                        "Android %s", os_version.c_str()
  #elif BUILDFLAG(IS_FUCHSIA)
                        "Fuchsia"

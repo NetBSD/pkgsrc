@@ -1,12 +1,12 @@
-$NetBSD: patch-media_video_mappable__shared__image__video__frame__pool.cc,v 1.5 2026/06/01 10:09:17 kikadf Exp $
+$NetBSD: patch-media_video_mappable__shared__image__video__frame__pool.cc,v 1.6 2026/06/08 13:12:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/mappable_shared_image_video_frame_pool.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- media/video/mappable_shared_image_video_frame_pool.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ media/video/mappable_shared_image_video_frame_pool.cc
-@@ -686,7 +686,7 @@ void MappableSharedImageVideoFramePool::
+@@ -690,7 +690,7 @@ void MappableSharedImageVideoFramePool::
    }
  
    bool is_software_backed_video_frame = !video_frame->HasSharedImage();
@@ -15,7 +15,7 @@ $NetBSD: patch-media_video_mappable__shared__image__video__frame__pool.cc,v 1.5 
    is_software_backed_video_frame &= !video_frame->HasDmaBufs();
  #endif
  
-@@ -1099,7 +1099,7 @@ scoped_refptr<VideoFrame> MappableShared
+@@ -1118,7 +1118,7 @@ scoped_refptr<VideoFrame> MappableShared
            gpu::SHARED_IMAGE_USAGE_WEBGPU_READ);
  #endif
  

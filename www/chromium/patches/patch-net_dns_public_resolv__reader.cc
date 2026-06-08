@@ -1,10 +1,10 @@
-$NetBSD: patch-net_dns_public_resolv__reader.cc,v 1.20 2026/06/01 10:09:17 kikadf Exp $
+$NetBSD: patch-net_dns_public_resolv__reader.cc,v 1.21 2026/06/08 13:12:43 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/public/resolv_reader.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- net/dns/public/resolv_reader.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ net/dns/public/resolv_reader.cc
 @@ -30,7 +30,7 @@ std::unique_ptr<ScopedResState> ResolvRe
  }

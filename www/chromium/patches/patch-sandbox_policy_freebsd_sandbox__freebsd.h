@@ -1,10 +1,10 @@
-$NetBSD: patch-sandbox_policy_freebsd_sandbox__freebsd.h,v 1.20 2026/06/01 10:09:18 kikadf Exp $
+$NetBSD: patch-sandbox_policy_freebsd_sandbox__freebsd.h,v 1.21 2026/06/08 13:12:44 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/freebsd/sandbox_freebsd.h.orig	2026-05-31 17:28:56.978193242 +0000
+--- sandbox/policy/freebsd/sandbox_freebsd.h.orig	2026-06-06 07:58:20.368804515 +0000
 +++ sandbox/policy/freebsd/sandbox_freebsd.h
 @@ -0,0 +1,276 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.

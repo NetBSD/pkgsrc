@@ -1,10 +1,10 @@
-$NetBSD: patch-mojo_core_channel.h,v 1.10 2026/06/01 10:09:17 kikadf Exp $
+$NetBSD: patch-mojo_core_channel.h,v 1.11 2026/06/08 13:12:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/core/channel.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- mojo/core/channel.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ mojo/core/channel.h
 @@ -167,7 +167,7 @@ class MOJO_SYSTEM_IMPL_EXPORT Channel
        } v2;

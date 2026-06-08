@@ -1,12 +1,21 @@
-$NetBSD: patch-components_signin_public_base_signin__switches.cc,v 1.19 2026/06/01 10:09:13 kikadf Exp $
+$NetBSD: patch-components_signin_public_base_signin__switches.cc,v 1.20 2026/06/08 13:12:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/signin/public/base/signin_switches.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- components/signin/public/base/signin_switches.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ components/signin/public/base/signin_switches.cc
-@@ -80,7 +80,7 @@ base::TimeDelta GetAvatarSyncPromoFeatur
+@@ -28,7 +28,7 @@ const char kForceFreDefaultBrowserStep[]
+ #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)
+ 
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_ANDROID)
++    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
+ // Feature param to pass probability for identity surveys.
+ constexpr char kHatsSurveyProbabilityName[] = "probability";
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
+@@ -76,7 +76,7 @@ base::TimeDelta GetAvatarSyncPromoFeatur
  #endif
  }
  
@@ -15,16 +24,16 @@ $NetBSD: patch-components_signin_public_base_signin__switches.cc,v 1.19 2026/06/
  BASE_FEATURE(kBeforeFirstRunDesktopRefreshSurvey,
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-@@ -119,7 +119,7 @@ BASE_FEATURE(kChromeAndroidIdentitySurve
-              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -143,7 +143,7 @@ BASE_FEATURE_PARAM(double,
+                    0.42);
  #endif  // BUILDFLAG(IS_ANDROID)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- constexpr char kHatsSurveyProbabilityName[] = "probability";
  constexpr double kMediumSurveyProbability = 0.08;
  constexpr double kLowSurveyProbability = 0.008;
-@@ -212,7 +212,7 @@ BASE_FEATURE_PARAM(
+ BASE_FEATURE(kChromeIdentitySurveyAddressBubbleSignin,
+@@ -235,7 +235,7 @@ BASE_FEATURE_PARAM(
      kMediumSurveyProbability);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
@@ -33,16 +42,16 @@ $NetBSD: patch-components_signin_public_base_signin__switches.cc,v 1.19 2026/06/
  BASE_FEATURE(kChromeIdentitySurveyLaunchWithDelay,
               base::FEATURE_ENABLED_BY_DEFAULT);
  BASE_FEATURE_PARAM(base::TimeDelta,
-@@ -222,7 +222,7 @@ BASE_FEATURE_PARAM(base::TimeDelta,
-                    base::Milliseconds(3000));
- #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+@@ -251,7 +251,7 @@ const base::FeatureParam<std::string> kC
+                                                             "url", ""};
+ #endif  // BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_IOS)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  BASE_FEATURE(kDisableU18FeedbackDesktop, base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
-@@ -401,7 +401,7 @@ const base::FeatureParam<base::TimeDelta
+@@ -438,7 +438,7 @@ const base::FeatureParam<base::TimeDelta
          base::Hours(8)};
  #endif
  
@@ -51,7 +60,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.cc,v 1.19 2026/06/
  BASE_FEATURE(kFirstRunDesktopRefresh, base::FEATURE_DISABLED_BY_DEFAULT);
  BASE_FEATURE(kFirstRunDesktopChoiceScreenRefresh,
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -429,11 +429,11 @@ constexpr base::FeatureParam<FirstRunDes
+@@ -466,11 +466,11 @@ constexpr base::FeatureParam<FirstRunDes
          &kFirstRunDesktopSignInPromoVariations};
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
@@ -63,27 +72,27 @@ $NetBSD: patch-components_signin_public_base_signin__switches.cc,v 1.19 2026/06/
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  BASE_FEATURE(kFirstRunDesktopRevamp, base::FEATURE_DISABLED_BY_DEFAULT);
- #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
- 
-@@ -482,7 +482,7 @@ BASE_FEATURE(kMigrateAccountManagerDeleg
+ bool IsFirstRunDesktopRevampEnabled(bool is_in_search_engine_choice_region) {
+   return IsFirstRunDesktopRefreshEnabled(is_in_search_engine_choice_region) &&
+@@ -537,7 +537,7 @@ BASE_FEATURE(kNoAccountWebSignin, base::
  
  BASE_FEATURE(kNonDefaultGaiaOriginCheck, base::FEATURE_ENABLED_BY_DEFAULT);
- 
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- BASE_FEATURE(kOpenAllProfilesFromProfilePickerExperiment,
-              base::FEATURE_DISABLED_BY_DEFAULT);
- const base::FeatureParam<int>
-@@ -491,7 +491,7 @@ const base::FeatureParam<int>
-         "max_profiles_count_to_show_open_all_button_in_profile_picker", 5};
- #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  BASE_FEATURE(kPasswordUploadUiUpdate, base::FEATURE_DISABLED_BY_DEFAULT);
  
  BASE_FEATURE(kProfileCreationDeclineSigninCTAExperiment,
-@@ -537,7 +537,7 @@ BASE_FEATURE(kRestrictDeviceManagementSe
+@@ -548,7 +548,7 @@ BASE_FEATURE(kProfileCreationDeclineSign
+ BASE_FEATURE(kProfileDiscOnAllPages, base::FEATURE_DISABLED_BY_DEFAULT);
+ #endif  // BUILDFLAG(IS_ANDROID)
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ BASE_FEATURE(kProfilePickerTextVariations, base::FEATURE_DISABLED_BY_DEFAULT);
+ constexpr base::FeatureParam<ProfilePickerVariation>::Option
+     kProfilePickerVariations[] = {
+@@ -580,7 +580,7 @@ BASE_FEATURE(kRestrictDeviceManagementSe
               base::FEATURE_ENABLED_BY_DEFAULT);
  #endif  // !BUILDFLAG(IS_ANDROID)
  
@@ -92,7 +101,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.cc,v 1.19 2026/06/
  BASE_FEATURE(kShowProfilePickerToAllUsersExperiment,
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-@@ -558,7 +558,7 @@ const base::FeatureParam<int> kContextua
+@@ -601,7 +601,7 @@ const base::FeatureParam<int> kContextua
      "contextual_signin_promo_dismissed_threshold",
      2);
  
@@ -101,7 +110,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.cc,v 1.19 2026/06/
  BASE_FEATURE(kSignInPromoMaterialNextUI, base::FEATURE_ENABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
-@@ -628,7 +628,7 @@ BASE_FEATURE(kStableDeviceId, base::FEAT
+@@ -671,7 +671,7 @@ BASE_FEATURE(kStableDeviceId, base::FEAT
  BASE_FEATURE(kSupportAddSessionEmailPrefill, base::FEATURE_ENABLED_BY_DEFAULT);
  #endif
  

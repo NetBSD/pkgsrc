@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_ozone_platform_wayland_host_wayland__clipboard.cc,v 1.5 2026/06/01 10:09:24 kikadf Exp $
+$NetBSD: patch-ui_ozone_platform_wayland_host_wayland__clipboard.cc,v 1.6 2026/06/08 13:12:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_clipboard.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- ui/ozone/platform/wayland/host/wayland_clipboard.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ ui/ozone/platform/wayland/host/wayland_clipboard.cc
 @@ -34,7 +34,7 @@
  #include "ui/ozone/platform/wayland/host/zwp_primary_selection_device_manager.h"

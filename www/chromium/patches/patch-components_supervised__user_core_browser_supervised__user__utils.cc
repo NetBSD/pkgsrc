@@ -1,10 +1,10 @@
-$NetBSD: patch-components_supervised__user_core_browser_supervised__user__utils.cc,v 1.5 2026/06/01 10:09:13 kikadf Exp $
+$NetBSD: patch-components_supervised__user_core_browser_supervised__user__utils.cc,v 1.6 2026/06/08 13:12:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/browser/supervised_user_utils.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- components/supervised_user/core/browser/supervised_user_utils.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ components/supervised_user/core/browser/supervised_user_utils.cc
 @@ -42,7 +42,7 @@ constexpr char kParentAccessResultQueryP
  constexpr char kPacpOriginUrlHost[] = "families.google.com";
@@ -15,7 +15,7 @@ $NetBSD: patch-components_supervised__user_core_browser_supervised__user__utils.
  // Returns the text that will be shown as the PACP widget subtitle, containing
  // information about the blocked hostname and the blocking reason.
  std::string GetBlockingReasonSubtitle(
-@@ -187,7 +187,7 @@ GURL NormalizeUrl(const GURL& url) {
+@@ -186,7 +186,7 @@ GURL NormalizeUrl(const GURL& url) {
  }
  
  #if BUILDFLAG(IS_IOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-components_supervised__user_core_browser_supervised__user__utils.
  GURL GetParentAccessURL(
      const std::string& locale,
      const GURL& blocked_url,
-@@ -202,7 +202,7 @@ GURL GetParentAccessURL(
+@@ -201,7 +201,7 @@ GURL GetParentAccessURL(
    // Caller Ids for Desktop and iOS platforms.
  #if BUILDFLAG(IS_IOS)
    static constexpr char kCallerId[] = "qSTnVRdQ";

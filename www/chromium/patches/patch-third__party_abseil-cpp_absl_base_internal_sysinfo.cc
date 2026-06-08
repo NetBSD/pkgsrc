@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_abseil-cpp_absl_base_internal_sysinfo.cc,v 1.20 2026/06/01 10:09:19 kikadf Exp $
+$NetBSD: patch-third__party_abseil-cpp_absl_base_internal_sysinfo.cc,v 1.21 2026/06/08 13:12:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/abseil-cpp/absl/base/internal/sysinfo.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- third_party/abseil-cpp/absl/base/internal/sysinfo.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ third_party/abseil-cpp/absl/base/internal/sysinfo.cc
 @@ -30,7 +30,7 @@
  #include <sys/syscall.h>
@@ -31,7 +31,7 @@ $NetBSD: patch-third__party_abseil-cpp_absl_base_internal_sysinfo.cc,v 1.20 2026
  
  #if defined(ABSL_INTERNAL_UNSCALED_CYCLECLOCK_FREQUENCY_IS_CPU_FREQUENCY)
  
-@@ -329,9 +331,11 @@ static double GetNominalCPUFrequency() {
+@@ -328,9 +330,11 @@ static double GetNominalCPUFrequency() {
    // a new mode (turbo mode). Essentially, those frequencies cannot
    // always be relied upon. The same reasons apply to /proc/cpuinfo as
    // well.
@@ -43,7 +43,7 @@ $NetBSD: patch-third__party_abseil-cpp_absl_base_internal_sysinfo.cc,v 1.20 2026
  
  #if defined(ABSL_INTERNAL_UNSCALED_CYCLECLOCK_FREQUENCY_IS_CPU_FREQUENCY)
    // On these platforms, the TSC frequency is the nominal CPU
-@@ -350,10 +354,12 @@ static double GetNominalCPUFrequency() {
+@@ -349,10 +353,12 @@ static double GetNominalCPUFrequency() {
    // If CPU scaling is in effect, we want to use the *maximum*
    // frequency, not whatever CPU speed some random processor happens
    // to be using now.

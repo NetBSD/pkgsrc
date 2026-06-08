@@ -1,10 +1,10 @@
-$NetBSD: patch-media_base_audio__latency.cc,v 1.20 2026/06/01 10:09:16 kikadf Exp $
+$NetBSD: patch-media_base_audio__latency.cc,v 1.21 2026/06/08 13:12:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/audio_latency.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- media/base/audio_latency.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ media/base/audio_latency.cc
 @@ -110,7 +110,7 @@ int AudioLatency::GetRtcBufferSize(int s
    }

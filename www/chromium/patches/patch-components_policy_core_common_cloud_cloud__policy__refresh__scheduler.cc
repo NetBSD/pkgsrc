@@ -1,10 +1,10 @@
-$NetBSD: patch-components_policy_core_common_cloud_cloud__policy__refresh__scheduler.cc,v 1.20 2026/06/01 10:09:12 kikadf Exp $
+$NetBSD: patch-components_policy_core_common_cloud_cloud__policy__refresh__scheduler.cc,v 1.21 2026/06/08 13:12:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/common/cloud/cloud_policy_refresh_scheduler.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- components/policy/core/common/cloud/cloud_policy_refresh_scheduler.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ components/policy/core/common/cloud/cloud_policy_refresh_scheduler.cc
 @@ -26,7 +26,7 @@ namespace policy {
  

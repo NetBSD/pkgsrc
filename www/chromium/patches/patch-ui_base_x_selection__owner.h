@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_x_selection__owner.h,v 1.2 2026/06/01 10:09:23 kikadf Exp $
+$NetBSD: patch-ui_base_x_selection__owner.h,v 1.3 2026/06/08 13:12:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/selection_owner.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- ui/base/x/selection_owner.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ ui/base/x/selection_owner.h
 @@ -19,7 +19,7 @@
  #include "ui/gfx/x/connection.h"

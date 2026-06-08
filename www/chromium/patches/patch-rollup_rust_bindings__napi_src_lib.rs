@@ -1,4 +1,4 @@
-$NetBSD: patch-rollup_rust_bindings__napi_src_lib.rs,v 1.6 2026/06/01 10:09:18 kikadf Exp $
+$NetBSD: patch-rollup_rust_bindings__napi_src_lib.rs,v 1.7 2026/06/08 13:12:44 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

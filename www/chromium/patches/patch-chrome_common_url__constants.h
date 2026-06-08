@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_common_url__constants.h,v 1.20 2026/06/01 10:09:11 kikadf Exp $
+$NetBSD: patch-chrome_common_url__constants.h,v 1.21 2026/06/08 13:12:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/url_constants.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/common/url_constants.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/common/url_constants.h
-@@ -729,7 +729,7 @@ inline constexpr char kOutdatedPluginLea
+@@ -728,7 +728,7 @@ inline constexpr char kOutdatedPluginLea
      "https://support.google.com/chrome?p=ib_outdated_plugin";
  #endif
  
