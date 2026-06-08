@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_download_download__commands.h,v 1.20 2026/06/01 10:09:06 kikadf Exp $
+$NetBSD: patch-chrome_browser_download_download__commands.h,v 1.21 2026/06/08 13:12:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/download_commands.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/download/download_commands.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/download/download_commands.h
 @@ -66,7 +66,7 @@ class DownloadCommands {
    void ExecuteCommand(Command command);

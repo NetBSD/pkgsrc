@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.19 2026/06/01 10:09:05 kikadf Exp $
+$NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.20 2026/06/08 13:12:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/background/glic/glic_status_icon.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/background/glic/glic_status_icon.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/background/glic/glic_status_icon.cc
-@@ -95,7 +95,7 @@ GlicStatusIcon::GlicStatusIcon(GlicContr
+@@ -103,7 +103,7 @@ GlicStatusIcon::GlicStatusIcon(GlicContr
  GlicStatusIcon::~GlicStatusIcon() {
    context_menu_ = nullptr;
    if (status_icon_) {
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.19 2026/
      status_icon_->RemoveObserver(this);
  #endif
      std::unique_ptr<StatusIcon> removed_icon =
-@@ -116,7 +116,7 @@ void GlicStatusIcon::Init() {
+@@ -124,7 +124,7 @@ void GlicStatusIcon::Init() {
      return;
    }
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.19 2026/
    // Set a vector icon for proper theming on Linux.
    status_icon_->SetIcon(
        GlicVectorIconManager::GetVectorIcon(IDR_GLIC_BUTTON_VECTOR_ICON));
-@@ -214,7 +214,7 @@ void GlicStatusIcon::UpdateHotkey(const 
+@@ -222,7 +222,7 @@ void GlicStatusIcon::UpdateHotkey(const 
  }
  
  void GlicStatusIcon::UpdateVisibilityOfExitInContextMenu() {
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.19 2026/
    if (context_menu_) {
      const bool is_visible = GlobalBrowserCollection::GetInstance()->IsEmpty();
      const std::optional<size_t> index =
-@@ -276,7 +276,7 @@ std::unique_ptr<StatusIconMenuModel> Gli
+@@ -275,7 +275,7 @@ std::unique_ptr<StatusIconMenuModel> Gli
    menu->AddItem(IDC_GLIC_STATUS_ICON_MENU_SETTINGS,
                  l10n_util::GetStringUTF16(IDS_GLIC_STATUS_ICON_MENU_SETTINGS));
  

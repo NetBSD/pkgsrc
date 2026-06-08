@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_download_chrome__download__manager__delegate.cc,v 1.20 2026/06/01 10:09:06 kikadf Exp $
+$NetBSD: patch-chrome_browser_download_chrome__download__manager__delegate.cc,v 1.21 2026/06/08 13:12:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/chrome_download_manager_delegate.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/download/chrome_download_manager_delegate.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/download/chrome_download_manager_delegate.cc
-@@ -2034,7 +2034,7 @@ void ChromeDownloadManagerDelegate::OnDo
+@@ -2070,7 +2070,7 @@ void ChromeDownloadManagerDelegate::OnDo
  bool ChromeDownloadManagerDelegate::IsOpenInBrowserPreferredForFile(
      const base::FilePath& path) {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_download_chrome__download__manager__delegate.cc,v 
    if (path.MatchesExtension(FILE_PATH_LITERAL(".pdf"))) {
      return !download_prefs_->ShouldOpenPdfInSystemReader();
    }
-@@ -2170,7 +2170,7 @@ void ChromeDownloadManagerDelegate::Chec
+@@ -2207,7 +2207,7 @@ void ChromeDownloadManagerDelegate::Chec
      content::CheckDownloadAllowedCallback check_download_allowed_cb) {
    DCHECK_CURRENTLY_ON(BrowserThread::UI);
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_download_chrome__download__manager__delegate.cc,v 
    // Don't download pdf if it is a file URL, as that might cause an infinite
    // download loop if Chrome is not the system pdf viewer.
    if (url.SchemeIsFile() && download_prefs_->ShouldOpenPdfInSystemReader()) {
-@@ -2248,7 +2248,7 @@ void ChromeDownloadManagerDelegate::Chec
+@@ -2285,7 +2285,7 @@ void ChromeDownloadManagerDelegate::Chec
    DCHECK(download_item->IsSavePackageDownload());
  
  #if (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \

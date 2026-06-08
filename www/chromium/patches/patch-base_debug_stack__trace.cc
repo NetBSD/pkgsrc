@@ -1,10 +1,10 @@
-$NetBSD: patch-base_debug_stack__trace.cc,v 1.20 2026/06/01 10:09:04 kikadf Exp $
+$NetBSD: patch-base_debug_stack__trace.cc,v 1.21 2026/06/08 13:12:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/debug/stack_trace.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- base/debug/stack_trace.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ base/debug/stack_trace.cc
 @@ -293,7 +293,7 @@ bool StackTrace::WillSymbolizeToStreamFo
    // Symbols are not expected to be reliable when gn args specifies
@@ -33,7 +33,7 @@ $NetBSD: patch-base_debug_stack__trace.cc,v 1.20 2026/06/01 10:09:04 kikadf Exp 
 +#if !defined(__UCLIBC__) && !defined(_AIX) && !BUILDFLAG(IS_BSD)
    OutputToStreamWithPrefix(&stream, prefix_string);
  #endif
-   return stream.str();
+   return std::move(stream).str();
 @@ -393,7 +395,7 @@ bool StackTrace::ShouldSuppressOutput() 
  }
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-base_memory_protected__memory__posix.cc,v 1.20 2026/06/01 10:09:04 kikadf Exp $
+$NetBSD: patch-base_memory_protected__memory__posix.cc,v 1.21 2026/06/08 13:12:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/protected_memory_posix.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- base/memory/protected_memory_posix.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ base/memory/protected_memory_posix.cc
 @@ -6,7 +6,7 @@
  

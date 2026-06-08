@@ -1,10 +1,10 @@
-$NetBSD: patch-base_synchronization_cancelable__event.h,v 1.19 2026/06/01 10:09:05 kikadf Exp $
+$NetBSD: patch-base_synchronization_cancelable__event.h,v 1.20 2026/06/08 13:12:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/synchronization/cancelable_event.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- base/synchronization/cancelable_event.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ base/synchronization/cancelable_event.h
 @@ -11,7 +11,7 @@
  

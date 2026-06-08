@@ -1,10 +1,10 @@
-$NetBSD: patch-cc_base_features.cc,v 1.20 2026/06/01 10:09:05 kikadf Exp $
+$NetBSD: patch-cc_base_features.cc,v 1.21 2026/06/08 13:12:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- cc/base/features.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- cc/base/features.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ cc/base/features.cc
 @@ -33,7 +33,7 @@ const base::FeatureParam<int> kDeferImpl
  // Note that kUseDMSAAForTiles only controls vulkan launch on android. We will

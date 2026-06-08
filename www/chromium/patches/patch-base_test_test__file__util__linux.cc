@@ -1,10 +1,10 @@
-$NetBSD: patch-base_test_test__file__util__linux.cc,v 1.20 2026/06/01 10:09:05 kikadf Exp $
+$NetBSD: patch-base_test_test__file__util__linux.cc,v 1.21 2026/06/08 13:12:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/test/test_file_util_linux.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- base/test/test_file_util_linux.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ base/test/test_file_util_linux.cc
 @@ -57,9 +57,11 @@ bool EvictFileFromSystemCache(const File
    if (fdatasync(fd.get()) != 0) {

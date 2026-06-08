@@ -1,10 +1,10 @@
-$NetBSD: patch-base_memory_platform__shared__memory__region.h,v 1.20 2026/06/01 10:09:04 kikadf Exp $
+$NetBSD: patch-base_memory_platform__shared__memory__region.h,v 1.21 2026/06/08 13:12:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/platform_shared_memory_region.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- base/memory/platform_shared_memory_region.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ base/memory/platform_shared_memory_region.h
 @@ -104,7 +104,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
  #if BUILDFLAG(IS_FUCHSIA)

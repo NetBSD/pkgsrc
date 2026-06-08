@@ -1,12 +1,12 @@
-$NetBSD: patch-base_system_sys__info__freebsd.cc,v 1.20 2026/06/01 10:09:05 kikadf Exp $
+$NetBSD: patch-base_system_sys__info__freebsd.cc,v 1.21 2026/06/08 13:12:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_freebsd.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- base/system/sys_info_freebsd.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ base/system/sys_info_freebsd.cc
-@@ -10,20 +10,74 @@
+@@ -10,20 +10,72 @@
  
  #include "base/notreached.h"
  #include "base/numerics/safe_conversions.h"
@@ -48,7 +48,7 @@ $NetBSD: patch-base_system_sys__info__freebsd.cc,v 1.20 2026/06/01 10:09:05 kika
  
 +ByteSize SysInfo::AmountOfAvailablePhysicalMemoryImpl() {
 +  int page_size, r = 0;
-+  unsigned int pgfree, pginact, pgcache;
++  unsigned int pgfree, pginact;
 +  size_t size = sizeof(page_size);
 +  size_t szpg = sizeof(pgfree);
 +
@@ -58,15 +58,13 @@ $NetBSD: patch-base_system_sys__info__freebsd.cc,v 1.20 2026/06/01 10:09:05 kika
 +    r = sysctlbyname("vm.stats.vm.v_free_count", &pgfree, &szpg, NULL, 0);
 +  if (r == 0)
 +    r = sysctlbyname("vm.stats.vm.v_inactive_count", &pginact, &szpg, NULL, 0);
-+  if (r == 0)
-+    r = sysctlbyname("vm.stats.vm.v_cache_count", &pgcache, &szpg, NULL, 0);
 +
 +  if (r == -1) {
 +    NOTREACHED();
 +    return ByteSize(0);
 +  }
 +
-+  return ByteSize((pgfree + pginact + pgcache) * checked_cast<unsigned>(page_size));
++  return ByteSize((pgfree + pginact) * checked_cast<unsigned>(page_size));
 +}
 +
 +// static
@@ -85,7 +83,7 @@ $NetBSD: patch-base_system_sys__info__freebsd.cc,v 1.20 2026/06/01 10:09:05 kika
  // static
  uint64_t SysInfo::MaxSharedMemorySize() {
    size_t limit;
-@@ -34,4 +88,16 @@ uint64_t SysInfo::MaxSharedMemorySize() 
+@@ -34,4 +86,16 @@ uint64_t SysInfo::MaxSharedMemorySize() 
    return static_cast<uint64_t>(limit);
  }
  

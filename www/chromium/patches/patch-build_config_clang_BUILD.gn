@@ -1,12 +1,12 @@
-$NetBSD: patch-build_config_clang_BUILD.gn,v 1.20 2026/06/01 10:09:05 kikadf Exp $
+$NetBSD: patch-build_config_clang_BUILD.gn,v 1.21 2026/06/08 13:12:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/clang/BUILD.gn.orig	2026-05-26 20:39:02.000000000 +0000
+--- build/config/clang/BUILD.gn.orig	2026-05-28 23:24:11.000000000 +0000
 +++ build/config/clang/BUILD.gn
-@@ -240,7 +240,12 @@ template("clang_lib") {
+@@ -243,7 +243,12 @@ template("clang_lib") {
  
  # Adds a dependency on the Clang runtime library clang_rt.builtins.
  clang_lib("compiler_builtins") {

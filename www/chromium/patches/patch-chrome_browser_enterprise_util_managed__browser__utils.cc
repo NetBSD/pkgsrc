@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_util_managed__browser__utils.cc,v 1.19 2026/06/01 10:09:06 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_util_managed__browser__utils.cc,v 1.20 2026/06/08 13:12:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/util/managed_browser_utils.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/enterprise/util/managed_browser_utils.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/enterprise/util/managed_browser_utils.cc
 @@ -302,7 +302,7 @@ void SetUserAcceptedAccountManagement(Pr
    // The updated consent screen also ask the user for consent to share device

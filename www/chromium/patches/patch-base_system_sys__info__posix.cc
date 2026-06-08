@@ -1,12 +1,12 @@
-$NetBSD: patch-base_system_sys__info__posix.cc,v 1.20 2026/06/01 10:09:05 kikadf Exp $
+$NetBSD: patch-base_system_sys__info__posix.cc,v 1.21 2026/06/08 13:12:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_posix.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- base/system/sys_info_posix.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ base/system/sys_info_posix.cc
-@@ -58,7 +58,11 @@ base::ByteSize AmountOfVirtualMemory() {
+@@ -59,7 +59,11 @@ base::ByteSize AmountOfVirtualMemory() {
    if (result != 0) {
      NOTREACHED();
    }
@@ -18,7 +18,7 @@ $NetBSD: patch-base_system_sys__info__posix.cc,v 1.20 2026/06/01 10:09:05 kikadf
  }
  using LazyVirtualMemory =
      base::internal::LazySysInfoValue<base::ByteSize, AmountOfVirtualMemory>;
-@@ -140,7 +144,7 @@ void GetKernelVersionNumbers(int32_t* ma
+@@ -110,7 +114,7 @@ void GetKernelVersionNumbers(int32_t* ma
  
  namespace base {
  
@@ -27,7 +27,7 @@ $NetBSD: patch-base_system_sys__info__posix.cc,v 1.20 2026/06/01 10:09:05 kikadf
  // static
  int SysInfo::NumberOfProcessors() {
  #if BUILDFLAG(IS_MAC)
-@@ -196,7 +200,7 @@ int SysInfo::NumberOfProcessors() {
+@@ -166,7 +170,7 @@ int SysInfo::NumberOfProcessors() {
  
    return cached_num_cpus;
  }
@@ -36,7 +36,7 @@ $NetBSD: patch-base_system_sys__info__posix.cc,v 1.20 2026/06/01 10:09:05 kikadf
  
  // static
  ByteSize SysInfo::AmountOfVirtualMemory() {
-@@ -286,6 +290,8 @@ std::string SysInfo::OperatingSystemArch
+@@ -275,6 +279,8 @@ std::string SysInfo::OperatingSystemArch
      arch = "x86";
    } else if (arch == "amd64") {
      arch = "x86_64";

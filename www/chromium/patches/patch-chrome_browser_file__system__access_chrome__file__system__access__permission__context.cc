@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_file__system__access_chrome__file__system__access__permission__context.cc,v 1.20 2026/06/01 10:09:07 kikadf Exp $
+$NetBSD: patch-chrome_browser_file__system__access_chrome__file__system__access__permission__context.cc,v 1.21 2026/06/08 13:12:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc
-@@ -411,7 +411,7 @@ GenerateBlockPaths(bool should_normalize
+@@ -412,7 +412,7 @@ GenerateBlockPaths(bool should_normalize
            FILE_PATH_LITERAL("Library/Mobile Documents/com~apple~CloudDocs"),
            BlockType::kDontBlockChildren),
  #endif

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_devtools_remote__debugging__server.h,v 1.16 2026/06/01 10:09:06 kikadf Exp $
+$NetBSD: patch-chrome_browser_devtools_remote__debugging__server.h,v 1.17 2026/06/08 13:12:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/devtools/remote_debugging_server.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/devtools/remote_debugging_server.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/devtools/remote_debugging_server.h
 @@ -43,7 +43,7 @@ class RemoteDebuggingServer {
  
