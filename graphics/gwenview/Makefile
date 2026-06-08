@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2026/05/14 16:41:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.158 2026/06/08 11:04:25 markd Exp $
 
 DISTNAME=	gwenview-${KAPPSVER}
 PKGREVISION=	4
@@ -21,6 +21,7 @@ USE_TOOLS+=	msgmerge pkg-config
 .include "../../devel/kf6-kitemmodels/buildlink3.mk"
 .include "../../devel/kf6-kparts/buildlink3.mk"
 .include "../../devel/kf6-purpose/buildlink3.mk"
+.include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/kimageannotator/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
