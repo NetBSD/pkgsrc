@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2026/01/11 09:59:28 adam Exp $
+# $NetBSD: Makefile,v 1.49 2026/06/08 09:36:58 adam Exp $
 
-DISTNAME=	jupyter_client-8.8.0
+DISTNAME=	jupyter_client-8.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_client/}
@@ -15,6 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.2:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=5.1:../../devel/py-jupyter_core
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.4.1:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.3:../../devel/py-traitlets
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.13.0:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-zmq>=25.0:../../net/py-zmq
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel>=6.14:../../devel/py-ipykernel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
@@ -23,13 +24,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PY_RENAME_BINARIES=	jupyter-kernel jupyter-kernelspec jupyter-run
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} jupyter-kernel jupyter-kernel-${PYVERSSUFFIX} && \
-	${MV} jupyter-kernelspec jupyter-kernelspec-${PYVERSSUFFIX} && \
-	${MV} jupyter-run jupyter-run-${PYVERSSUFFIX} || ${TRUE}
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
