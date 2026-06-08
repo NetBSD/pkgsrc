@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3636 2026/06/08 14:38:58 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3637 2026/06/08 15:30:24 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5549,3 +5549,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/zsh-autosuggestions to 0.7.1 [wiz 2026-06-08]
 	Updated www/chromium to 149.0.7827.53 [kikadf 2026-06-08]
 	Updated sysutils/R-processx to 3.9.0 [mef 2026-06-08]
+	Updated net/ddns-route53 to 2.15.0 [drixter 2026-06-08]
