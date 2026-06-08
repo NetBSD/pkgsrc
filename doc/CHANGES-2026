@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3631 2026/06/08 13:20:03 taca Exp $
+$NetBSD: CHANGES-2026,v 1.3632 2026/06/08 13:21:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5544,3 +5544,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/ruby-sqlite3 to 2.9.5 [taca 2026-06-08]
 	Updated devel/ruby-version_gem to 1.1.11 [taca 2026-06-08]
 	Updated security/ruby-snaky_hash to 2.0.5 [taca 2026-06-08]
+	Updated security/ruby-oauth to 1.1.6 [taca 2026-06-08]
