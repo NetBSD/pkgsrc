@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3613 2026/06/08 07:40:29 dkazankov Exp $
+$NetBSD: CHANGES-2026,v 1.3614 2026/06/08 08:12:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5523,3 +5523,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv to 0.11.19 [adam 2026-06-08]
 	Updated devel/py-uv-build to 0.11.19 [adam 2026-06-08]
 	Added math/ada-adasat26 version 26.0.0 [dkazankov 2026-06-08]
+	Updated devel/py-traitlets to 5.15.1 [adam 2026-06-08]
+	Updated security/py-ecdsa to 0.19.2 [adam 2026-06-08]
