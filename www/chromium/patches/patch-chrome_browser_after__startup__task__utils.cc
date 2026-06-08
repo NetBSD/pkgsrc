@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_after__startup__task__utils.cc,v 1.20 2026/06/01 10:09:05 kikadf Exp $
+$NetBSD: patch-chrome_browser_after__startup__task__utils.cc,v 1.21 2026/06/08 13:12:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/after_startup_task_utils.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/after_startup_task_utils.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/after_startup_task_utils.cc
 @@ -112,7 +112,7 @@ void SetBrowserStartupIsComplete() {
                         TRACE_EVENT_SCOPE_GLOBAL, "BrowserCount", browser_count);

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_new__tab__page_modules_file__suggestion_drive__service.cc,v 1.20 2026/06/01 10:09:07 kikadf Exp $
+$NetBSD: patch-chrome_browser_new__tab__page_modules_file__suggestion_drive__service.cc,v 1.21 2026/06/08 13:12:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/new_tab_page/modules/file_suggestion/drive_service.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/new_tab_page/modules/file_suggestion/drive_service.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/new_tab_page/modules/file_suggestion/drive_service.cc
 @@ -37,7 +37,7 @@
  #include "services/network/public/cpp/resource_request.h"

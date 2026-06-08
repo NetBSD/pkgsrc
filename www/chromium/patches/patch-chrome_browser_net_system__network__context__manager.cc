@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.20 2026/06/01 10:09:07 kikadf Exp $
+$NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.21 2026/06/08 13:12:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/net/system_network_context_manager.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/net/system_network_context_manager.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/net/system_network_context_manager.cc
 @@ -138,7 +138,7 @@ enum class NetworkSandboxState {
  // The global instance of the SystemNetworkContextManager.
@@ -133,7 +133,7 @@ $NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.20 20
    gssapi_library_loader_observer_.Install(network_service);
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -1075,7 +1075,7 @@ bool SystemNetworkContextManager::IsNetw
+@@ -1069,7 +1069,7 @@ bool SystemNetworkContextManager::IsNetw
        break;
    }
  

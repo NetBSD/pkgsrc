@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.20 2026/06/01 10:09:07 kikadf Exp $
+$NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.21 2026/06/08 13:12:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/renderer_preferences_util.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/renderer_preferences_util.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/renderer_preferences_util.cc
 @@ -37,12 +37,12 @@
  #include "ui/base/ui_base_features.h"

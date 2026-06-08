@@ -1,10 +1,10 @@
-$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_spinning__mutex.cc,v 1.20 2026/06/01 10:09:04 kikadf Exp $
+$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_spinning__mutex.cc,v 1.21 2026/06/08 13:12:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc
 @@ -20,7 +20,16 @@
  #endif
@@ -42,4 +42,4 @@ $NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_spinning
 +#endif
    if (retval == -1) {
      // These are programming errors, check them.
-     PA_DCHECK((errno != EPERM) || (errno != EACCES) || (errno != EINVAL) ||
+     [[maybe_unused]] const int futex_errno = errno;

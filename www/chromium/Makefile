@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2026/06/01 10:09:03 kikadf Exp $
+# $NetBSD: Makefile,v 1.59 2026/06/08 13:12:28 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			148.0.7778.215
+VERSION=			149.0.7827.53
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -47,7 +47,7 @@ CHECK_PORTABILITY_SKIP+=	remoting/host/installer/mac/tools/ksunregister.sh
 CHECK_PORTABILITY_SKIP+=	remoting/tools/get_mac_crd_version.sh
 CHECK_PORTABILITY_SKIP+=	remoting/tools/register_local_nm_hosts.sh
 CHECK_PORTABILITY_SKIP+=	remoting/tools/set_android_flags.sh
-CHECK_PORTABILITY_SKIP+=	third_party/dawn/third_party/dxc/utils/buildit/build_llvm
+CHECK_PORTABILITY_SKIP+=	third_party/dawn/third_party/directx-shader-compiler/src/utils/buildit/build_llvm
 CHECK_PORTABILITY_SKIP+=	third_party/ffmpeg/configure
 CHECK_PORTABILITY_SKIP+=	third_party/flatbuffers/src/tests/KotlinTest.sh
 CHECK_PORTABILITY_SKIP+=	third_party/fontconfig/src/.gitlab-ci/fedora-cross.sh
@@ -397,6 +397,7 @@ do-install:
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
+.include "../../devel/wayland/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"

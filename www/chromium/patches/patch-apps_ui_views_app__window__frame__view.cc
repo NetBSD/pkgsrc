@@ -1,10 +1,10 @@
-$NetBSD: patch-apps_ui_views_app__window__frame__view.cc,v 1.20 2026/06/01 10:09:03 kikadf Exp $
+$NetBSD: patch-apps_ui_views_app__window__frame__view.cc,v 1.21 2026/06/08 13:12:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- apps/ui/views/app_window_frame_view.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- apps/ui/views/app_window_frame_view.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ apps/ui/views/app_window_frame_view.cc
 @@ -147,7 +147,7 @@ gfx::Rect AppWindowFrameView::GetBoundsF
  gfx::Rect AppWindowFrameView::GetWindowBoundsForClientBounds(

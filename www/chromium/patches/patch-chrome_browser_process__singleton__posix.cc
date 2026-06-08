@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_process__singleton__posix.cc,v 1.20 2026/06/01 10:09:07 kikadf Exp $
+$NetBSD: patch-chrome_browser_process__singleton__posix.cc,v 1.21 2026/06/08 13:12:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/process_singleton_posix.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/process_singleton_posix.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/process_singleton_posix.cc
 @@ -102,7 +102,7 @@
  #include "ui/base/l10n/l10n_util.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_process__singleton__posix.cc,v 1.20 2026/06/01 10:
  #include "chrome/browser/ui/process_singleton_dialog_linux.h"
  #endif
  
-@@ -365,7 +365,7 @@ bool DisplayProfileInUseError(const base
+@@ -367,7 +367,7 @@ bool DisplayProfileInUseError(const base
    if (g_disable_prompt)
      return g_user_opted_unlock_in_use_profile;
  

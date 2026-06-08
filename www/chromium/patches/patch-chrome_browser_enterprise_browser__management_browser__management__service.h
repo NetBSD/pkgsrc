@@ -1,12 +1,21 @@
-$NetBSD: patch-chrome_browser_enterprise_browser__management_browser__management__service.h,v 1.18 2026/06/01 10:09:06 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_browser__management_browser__management__service.h,v 1.19 2026/06/08 13:12:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/browser_management/browser_management_service.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/enterprise/browser_management/browser_management_service.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/enterprise/browser_management/browser_management_service.h
-@@ -41,7 +41,7 @@ class BrowserManagementService : public 
+@@ -17,7 +17,7 @@
+ #include "components/prefs/pref_change_registrar.h"
+ #include "ui/base/models/image_model.h"
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/policy/status_provider/user_cloud_policy_status_provider.h"  // nogncheck crbug.com/40147906
+ #endif
+ 
+@@ -45,7 +45,7 @@ class BrowserManagementService : public 
  
    void TriggerPolicyStatusChangedForTesting() override;
  
@@ -15,7 +24,7 @@ $NetBSD: patch-chrome_browser_enterprise_browser__management_browser__management
    void SetBrowserManagementIconForTesting(
        const gfx::Image& management_icon) override;
  #endif
-@@ -50,7 +50,7 @@ class BrowserManagementService : public 
+@@ -54,7 +54,7 @@ class BrowserManagementService : public 
    // PolicyStatusProvider::Observer:
    void OnPolicyStatusChanged() override;
  

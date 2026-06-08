@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_reporting_cloud__profile__reporting__service.cc,v 1.11 2026/06/01 10:09:06 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_reporting_cloud__profile__reporting__service.cc,v 1.12 2026/06/08 13:12:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/reporting/cloud_profile_reporting_service.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/enterprise/reporting/cloud_profile_reporting_service.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/enterprise/reporting/cloud_profile_reporting_service.cc
 @@ -41,7 +41,7 @@
  #include "chrome/browser/enterprise/reporting/reporting_delegate_factory_desktop.h"

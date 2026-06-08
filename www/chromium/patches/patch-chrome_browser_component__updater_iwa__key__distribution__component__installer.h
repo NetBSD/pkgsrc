@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_component__updater_iwa__key__distribution__component__installer.h,v 1.19 2026/06/01 10:09:06 kikadf Exp $
+$NetBSD: patch-chrome_browser_component__updater_iwa__key__distribution__component__installer.h,v 1.20 2026/06/08 13:12:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/iwa_key_distribution_component_installer.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/component_updater/iwa_key_distribution_component_installer.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/component_updater/iwa_key_distribution_component_installer.h
 @@ -26,7 +26,7 @@ class IwaKeyDistributionInfoProvider;
  
