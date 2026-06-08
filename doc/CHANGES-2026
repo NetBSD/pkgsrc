@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3635 2026/06/08 14:17:09 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.3636 2026/06/08 14:38:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5548,3 +5548,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/R-bslib to 0.11.0 [mef 2026-06-08]
 	Updated shells/zsh-autosuggestions to 0.7.1 [wiz 2026-06-08]
 	Updated www/chromium to 149.0.7827.53 [kikadf 2026-06-08]
+	Updated sysutils/R-processx to 3.9.0 [mef 2026-06-08]
