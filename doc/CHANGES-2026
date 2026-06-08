@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3626 2026/06/08 13:08:28 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3627 2026/06/08 13:12:34 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5539,3 +5539,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/gitpane to 0.7.13 [pin 2026-06-08]
 	Updated textproc/treemd to 0.5.12 [pin 2026-06-08]
 	Updated devel/R-pak to 0.9.5 [mef 2026-06-08]
+	Updated devel/R-usethis to 3.2.1 [mef 2026-06-08]
