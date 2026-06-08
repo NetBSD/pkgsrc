@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3632 2026/06/08 13:21:59 taca Exp $
+$NetBSD: CHANGES-2026,v 1.3633 2026/06/08 13:25:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5545,3 +5545,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-version_gem to 1.1.11 [taca 2026-06-08]
 	Updated security/ruby-snaky_hash to 2.0.5 [taca 2026-06-08]
 	Updated security/ruby-oauth to 1.1.6 [taca 2026-06-08]
+	Updated www/R-bslib to 0.11.0 [mef 2026-06-08]
