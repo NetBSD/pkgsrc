@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27371 2026/06/08 13:27:45 wiz Exp $
+$NetBSD: TODO,v 1.27372 2026/06/08 14:49:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -410,6 +410,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o adodb-5.20.19 [security]
 	o adom-3.3.3 (also see PR 40725)
 	o advi-2.0.0
+	o adwaita-icon-theme-50.0
 	o aegis-4.25
 	o aewm++-1.1.5
 	o afbinit-1.0.1
@@ -441,6 +442,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o apache-tomcat9-9.0.45
 	o apollo-1.7
 	o ardour-9.0
+	o argp-1.5.0
 	o argtable-2.9
 	o argus-20121202
 	o aribas-1.64
@@ -454,17 +456,22 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
 	o asymptote-3.01
+	o at-spi2-core-2.60.4
+	o atkmm-2.36.4
 	o atril-1.28.4
 	o audacity-3.7.5
 	o authelia-4.28.0
+	o autoconf-2.73
 	o autoconvert-0.3.16
 	o autojump-22.5.3
+	o automake-1.18.1
 	o autosetup-0.7.2
 	o avidemux-2.8.1
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o avr-gdb-10.1
 	o baci-20040415
 	o baloo-21.04.0
+	o bash-5.3.12
 	o basket-2.11b
 	o bbcim-1.0
 	o bbsload-0.2.8
@@ -485,11 +492,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o binutils-2.46
 	o binutils-mips-current-2.36.1
 	o bioperl-1.7.8
+	o bk-0.8.0
 	o blender-5.1
 	o bliz++-0.10
 	o blogbench-1.2
 	o bluefish-2.2.19
 	o blur6ex-0.3.462
+	o boehm-gc-8.2.12
 	o boolean-7.1
 	o bos-2.5
 	o bottlerocket-0.05b3
@@ -498,12 +507,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bugzilla3-3.6.13
 	o cacti-1.2.30
 	o cacti-spine-1.2.30
+	o cairomm-1.18.1
 	o calc-2.11.10.1
 	o calcoo-2.1.0
 	o calibre-9.8
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
 	o canna-3.7p5
+	o capstone-5.0.9
 	o carbons-purple-0.2.3
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -525,12 +536,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o classpath-0.99
 	o classpath-gui-0.99
 	o clusterssh-4.16
+	o cmocka-2.0.2
 	o colortail-0.3.3
 	o commit-patch-2.6
 	o compiz-0.9.14.2
 	o cone-0.92
 	o conserver8-8.2.6
 	o consul-1.9.5
+	o convmv-2.06
 	o cook-2.31
 	o coordgenlibs-2.0.3
 	o cross-binutils-2.36.1
@@ -551,8 +564,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ddrescue-1.30
 	o dega-1.12
 	o delegate-9.9.13
+	o desktop-file-utils-0.28
 	o di-6.2.1 [pkg/59884]
 	o di-6.2.2.2 [pkg/59938]
+	o dialog-1.3.20260107
 	o diction-1.14
 	o diesel-2.3.0
 	o direvent-5.2
@@ -565,12 +580,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dnsbl-milter-6.78
 	o doas-6.4 [project migrated to Codeberg]
 	o dotclear-2.53
+	o dotconf-1.4.1
 	o dovecot-2.4.4 [CVE-2025-30189]
 	o dovecot2-pigeonhole-2.4.4 [needs dovecot2 2.4]
 	o drawpile-2.1.20
 	o drivel-3.0.5
 	o drupal-10.0.5
 	o drupal-9.5.5
+	o dtc-1.8.1
 	o dvdisaster-0.79.10
 	o eagle-8.1.0
 	o easymenu-0.7.2p1
@@ -588,9 +605,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emerillon-0.1.90
+	o enca-1.22
 	o endless-sky-0.10.2
 	o enigma-1.30
 	o enlightenment-0.27.1
+	o entr-5.8
 	o eog-plugins-3.6.1
 	o epic4-2.10.6
 	o epiphany-extensions-3.2.0
@@ -627,11 +646,15 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o felt-3.07 [wip]
 	o fet-6.0.1
 	o fifengine-0.4.3
+	o fig2dev-3.2.9a
 	o filerunner-14.06.18.10
+	o filezilla-3.70.6
+	o firefox-151.0.3
 	o flashplayer-0.4.13
 	o flops-2.2
 	o flow-tools-0.411
 	o fluent-bit-1.7.4
+	o fontconfig-2.18.1
 	o fortunes-calvin-0.3
 	o fortunes-de-0.34
 	o fplll-5.4.0
@@ -652,6 +675,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ftplibpp-2.0.2
 	o fuse-ntfs-3g-2026.2.25
 	o fuse-sshfs-3.7.6
+	o fzssh-1.3.0
 	o gallery3-3.0.9
 	o ganglia-3.7.5
 	o ganglia-webfrontend-3.7.5
@@ -668,16 +692,20 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o geneweb-7.0.0
 	o gens-2.15.5
 	o gettext-1.0
+	o gexiv2-0.16.0
 	o gfract-0.33
+	o ghc-9.14.1
 	o git-cinnabar-0.7.3
 	o gitea-1.24.3
 	o gjs-1.70.1
 	o gleam-1.17.0
 	o gli2-2.70.0
 	o gli2-tools-2.70.0
+	o glibmm-2.88.0
 	o gliv-1.9.7
 	o global-6.6.5
 	o glom-1.14.2
+	o glslang-16.3.0
 	o glusterfs-11.1
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -703,6 +731,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnucap-20210107
+	o gnumeric112-1.12.61
 	o gnunet-0.27
 	o go-ffuf-1.3.0
 	o go-fsnotify-1.4.9
@@ -720,6 +749,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gp-grpconst-2.6.5
 	o gpac-26.02.0
 	o gperiodic-3.0.3
+	o gpgmepp-2.1.0
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o grafana-12.3.1 [wip]
@@ -727,8 +757,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grafx2-2.8.3137
 	o gramps-6.0.6
 	o grantlee-5.0.0
+	o graphite2-1.3.15
 	o gromacs-2021.1
 	o grub2-2.14
+	o gsettings-desktop-schemas-50.1
+	o gspell-1.14.3
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gtklevel9-5.1
@@ -752,6 +785,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o herisvm-0.8.2
 	o hesiod-3.2.1
 	o heyu-2.9.0
+	o hicolor-icon-theme-0.18
 	o hivex-1.3.19
 	o hmmer-3.1b2
 	o homebank-5.9.7
