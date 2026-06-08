@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.8 2026/04/15 18:53:12 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.9 2026/06/08 08:26:41 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/adrg/xdg/@v/v0.5.3.mod
 GO_MODULE_FILES+=	github.com/adrg/xdg/@v/v0.5.3.zip
@@ -11,6 +11,10 @@ GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.mod
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.zip
 GO_MODULE_FILES+=	github.com/dlclark/regexp2/@v/v1.11.5.mod
 GO_MODULE_FILES+=	github.com/dlclark/regexp2/@v/v1.11.5.zip
+GO_MODULE_FILES+=	github.com/go-enry/go-enry/v2/@v/v2.9.6.mod
+GO_MODULE_FILES+=	github.com/go-enry/go-enry/v2/@v/v2.9.6.zip
+GO_MODULE_FILES+=	github.com/go-enry/go-oniguruma/@v/v1.2.1.mod
+GO_MODULE_FILES+=	github.com/go-enry/go-oniguruma/@v/v1.2.1.zip
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.5.mod
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.9.mod
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.9.zip
@@ -23,7 +27,12 @@ GO_MODULE_FILES+=	github.com/sirupsen/logrus/@v/v1.8.3.mod
 GO_MODULE_FILES+=	github.com/sirupsen/logrus/@v/v1.8.3.zip
 GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.3.mod
 GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.1.0.mod
+GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.4.0.mod
+GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.5.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.7.0.mod
+GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.7.1.mod
+GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.0.mod
+GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.1.mod
 GO_MODULE_FILES+=	github.com/ulikunitz/xz/@v/v0.5.15.mod
 GO_MODULE_FILES+=	github.com/ulikunitz/xz/@v/v0.5.15.zip
 GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.2.1.mod
@@ -59,6 +68,8 @@ GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20191011141410-1b5146add898.mod
 GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20191204190536-9bdfabe68543.mod
 GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20200804184101-5ec99f83aff1.mod
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.mod
+GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.2.8.mod
 GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.0-20200313102051-9f266ea9e77c.mod
+GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.1.mod
 GO_MODULE_FILES+=	gotest.tools/v3/@v/v3.3.0.mod
 GO_MODULE_FILES+=	gotest.tools/v3/@v/v3.3.0.zip
