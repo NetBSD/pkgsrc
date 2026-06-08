@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3644 2026/06/08 20:52:22 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.3645 2026/06/08 20:55:33 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5557,3 +5557,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/py-ubx2 to 1.3.3 [gdt 2026-06-08]
 	Updated x11/kitty to 0.47.2 [ktnb 2026-06-08]
 	Removed filesystems/perfuse [gdt 2026-06-08]
+	Updated math/R-ellipsis to 0.3.3 [mef 2026-06-08]
