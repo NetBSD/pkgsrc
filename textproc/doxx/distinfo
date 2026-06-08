@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2025/12/05 20:32:17 pin Exp $
+$NetBSD: distinfo,v 1.2 2026/06/08 12:19:48 pin Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -228,9 +228,9 @@ Size (displaydoc-0.2.5.crate) = 24219 bytes
 BLAKE2s (docx-rs-0.4.18.crate) = d0bebf657dc54bec69e0a5ce1d1123445f3e39fd7be156a7260f2ba3d138369a
 SHA512 (docx-rs-0.4.18.crate) = 0c744d7fd12f2ce868eee8d73ea2d76b2958fceb8e6cb68f11261ceec573eeedfebec683af697f2c4f0ba4d747a24832170b732864192e7d24d9b9ebd23e16c9
 Size (docx-rs-0.4.18.crate) = 230272 bytes
-BLAKE2s (doxx-0.1.2.tar.gz) = 61cb860b802d4ec5f2caba77a7ac5f7ce52e516737cd7970e94d3159b082629d
-SHA512 (doxx-0.1.2.tar.gz) = 5f1742daeab3f8aba792a15f42bde52b398e18a125a6bcae5edef351d3ec2b4563df1ad900ac0457a1ab2d44b4d62d88053c43de10777aef398d6ab9bda82fd6
-Size (doxx-0.1.2.tar.gz) = 6574507 bytes
+BLAKE2s (doxx-0.1.4.tar.gz) = a4d009ce99099190214dbe29b8df1c61302229cc48fcbca0ae3043e0f183a30c
+SHA512 (doxx-0.1.4.tar.gz) = d85cb2912ce4706dffb63cdf45f3b65f8d63f40016b28c078de54db2682be9f914cad93da517d3d43208e5a49eac78b581cde0bc03580f958d616327aaef2b10
+Size (doxx-0.1.4.tar.gz) = 4517869 bytes
 BLAKE2s (either-1.15.0.crate) = 7c84d6a0e5f2b2ab835c6a5a557e2b80af4b533e6d792d546a42ac2f5b846e22
 SHA512 (either-1.15.0.crate) = d70c34d903e8e5088fd065a6da6673eadb569a20af183fa9bd6418940b37c8c2a777c44dbdab1b9960890cba5cb7464b805667ac42f4e05499ddcd4277d24e3f
 Size (either-1.15.0.crate) = 20114 bytes
