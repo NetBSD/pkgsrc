@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3627 2026/06/08 13:12:34 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3628 2026/06/08 13:13:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5540,3 +5540,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/treemd to 0.5.12 [pin 2026-06-08]
 	Updated devel/R-pak to 0.9.5 [mef 2026-06-08]
 	Updated devel/R-usethis to 3.2.1 [mef 2026-06-08]
+	Updated www/squid7 to 7.6 [taca 2026-06-08]
