@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.13 2025/10/23 20:39:13 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/06/08 14:38:49 mef Exp $
 
 R_PKGNAME=	processx
-R_PKGVER=	3.8.5
-PKGREVISION=	1
+R_PKGVER=	3.9.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Execute and control system processes
 LICENSE=	mit
 
-DEPENDS+=	R-R6>=2.4.0:../../devel/R-R6
+DEPENDS+=	R-R6>=2.6.0:../../devel/R-R6
 DEPENDS+=	R-ps>=1.2.0:../../sysutils/R-ps
 
 # Package suggested but not available: 'debugme'
