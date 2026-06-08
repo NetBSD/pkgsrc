@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2026/05/28 06:43:45 adam Exp $
+# $NetBSD: Makefile,v 1.54 2026/06/08 09:15:10 wiz Exp $
 
 DISTNAME=	ccid-1.8.0
 CATEGORIES=	security
@@ -21,8 +21,6 @@ MESON_ARGS+=		-Dudev-rules=false
 
 .if ${OPSYS} == "Darwin"
 PLIST_SUBST+=		OSNAME=MacOS
-.elif ${OPSYS} == "SunOS"
-PLIST_SUBST+=		OSNAME=Solaris
 .else
 PLIST_SUBST+=		OSNAME=${OPSYS}
 .endif
