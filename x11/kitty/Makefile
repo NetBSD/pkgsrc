@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.89 2026/06/05 10:21:55 bsiegert Exp $
+# $NetBSD: Makefile,v 1.90 2026/06/08 18:26:18 ktnb Exp $
 
-DISTNAME=	kitty-0.47.0
-PKGREVISION=	1
+DISTNAME=	kitty-0.47.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kovidgoyal/}
 GITHUB_PROJECT=	kitty
@@ -39,7 +38,6 @@ USE_NCURSES=	yes
 
 CHECK_INTERPRETER_SKIP=	lib/kitty/shell-integration/ssh/askpass.py
 
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PY_PATCHPLIST=			yes
 
@@ -48,6 +46,12 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	Point to pkgsrc fonts always
 SUBST_FILES.prefix+=	setup.py
 SUBST_VARS.prefix+=	PREFIX
+
+SUBST_CLASSES+=		ftlib
+SUBST_STAGE.ftlib=	pre-configure
+SUBST_MESSAGE.ftlib=	Force correct order for libs
+SUBST_FILES.ftlib+=	setup.py
+SUBST_SED.ftlib+=	-e 's,@PKGSRC_FREETYPE_LIB@,${BUILDLINK_PREFIX.freetype2}/lib/libfreetype.so,g'
 
 
 .include "../../mk/bsd.prefs.mk"
