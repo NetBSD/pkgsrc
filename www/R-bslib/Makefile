@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/02/01 12:14:39 mef Exp $
+# $NetBSD: Makefile,v 1.7 2026/06/08 13:24:56 mef Exp $
 
 R_PKGNAME=	bslib
-R_PKGVER=	0.9.0
+R_PKGVER=	0.11.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
