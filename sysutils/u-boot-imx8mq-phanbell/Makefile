@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/06/01 08:56:17 rxg Exp $
+# $NetBSD: Makefile,v 1.2 2026/06/08 09:17:36 wiz Exp $
 
 UBOOT_TARGET=		imx8mq-phanbell
 UBOOT_CONFIG=		imx8mq_phanbell_defconfig
@@ -22,4 +22,5 @@ post-extract:
 
 .include "../../sysutils/trusted-firmware-a-imx8mq/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
