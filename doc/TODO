@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27372 2026/06/08 14:49:20 wiz Exp $
+$NetBSD: TODO,v 1.27373 2026/06/08 21:58:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -440,6 +440,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o apache-cassandra2-2.2.19
 	o apache-tomcat85-8.5.65
 	o apache-tomcat9-9.0.45
+	o apache2-2.4.68
 	o apollo-1.7
 	o ardour-9.0
 	o argp-1.5.0
