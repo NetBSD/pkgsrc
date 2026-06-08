@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2026/06/05 10:21:42 bsiegert Exp $
+# $NetBSD: Makefile,v 1.21 2026/06/08 15:31:22 drixter Exp $
 
-DISTNAME=	ddns-route53-2.12.0
-PKGREVISION=	19
+DISTNAME=	ddns-route53-2.15.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=crazy-max/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://crazymax.dev/ddns-route53/
 COMMENT=	Dynamic DNS for Amazon Route 53 on a time-based schedule
 LICENSE=	mit
