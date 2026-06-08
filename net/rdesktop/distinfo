@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.30 2021/10/26 11:06:48 nia Exp $
+$NetBSD: distinfo,v 1.31 2026/06/08 04:45:46 adam Exp $
 
 BLAKE2s (rdesktop-1.9.0.tar.gz) = 9d4cca8219975403d90a9b5ddc5376694ca7760a72287692b631899645f5c724
 SHA512 (rdesktop-1.9.0.tar.gz) = e101147b496ae70118c2756bf120007d4748aad9d9917d9ebc0878ffaf35764500861c548ef0528722777555c78e1d3d146b6f3691daa2b8657b0d3a541094f5
 Size (rdesktop-1.9.0.tar.gz) = 368980 bytes
 SHA1 (patch-Makefile.in) = 46cec50c90b5e7aff2ae0f3f02df7b7a5b709f0a
-SHA1 (patch-ssl.c) = 07bb3e559432317af822dfb8ca06d6e0ac23ea27
+SHA1 (patch-ssl.c) = 4f0aa2effc9ca70da9053bded92a8d6c86fc4895
 SHA1 (patch-xwin.c) = 1910b5e237c66961061ef5a2e7404ad22444cee8
